@@ -959,7 +959,7 @@
 		<Tag>TXT_KEY_CONCEPT_FOOD_CARAVAN_PEDIA</Tag>
 		<English>Food merchants transport food from one city to another.</English>
 		<French>Les Marchands de nourriture transportent de la nourriture d'une ville à une autre</French>
-		<Polish>Handlarze żywności transportują pożywienie z jednego miasta do drugiego.</Polish>
+		<Polish>Handlarze &#191;ywno&#156;ci transportuj&#185; po&#191;ywienie z jednego miasta do drugiego.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CONCEPT_FOOD_PEDIA</Tag>
@@ -1127,7 +1127,7 @@
 		<Tag>TXT_KEY_CONCEPT_GREAT_STATESMAN_PEDIA</Tag>
 		<English>The [COLOR_UNIT_TEXT]Great Statesman[COLOR_REVERT] can improve international relations, prevent international disasters, start a golden age, and attach himself to a city.</English>
 		<Italian>Un [COLOR_UNIT_TEXT]Grande uomo di stato[COLOR_REVERT] può migliorare le relazioni internazionali, prevenire i disastri internazionali, iniziare un'età dell'oro o unirsi ad una città.</Italian>
-		<Polish>[COLOR_UNIT_TEXT]Wielki Ustawodawca[COLOR_REVERT] może poprawiać relacje międzynarodowe, zapobiegać konfliktom, rozpoczynać Złoty Wiek i dołączać do miasta.</Polish>
+		<Polish>[COLOR_UNIT_TEXT]Wielki Ustawodawca[COLOR_REVERT] mo&#191;e poprawia&#230; relacje mi&#234;dzynarodowe, zapobiega&#230; konfliktom, rozpoczyna&#230; Z&#179;oty Wiek i do&#179;&#185;cza&#230; do miasta.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CONCEPT_HAPPINESS</Tag>

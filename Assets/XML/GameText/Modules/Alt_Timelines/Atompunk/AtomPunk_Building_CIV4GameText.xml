@@ -17,14 +17,14 @@
 		<Tag>TXT_KEY_BUILDING_CLEAN_NUCLEAR_REACTOR</Tag>
 		<English>Clean Nuclear Reactor</English>
 		<French>Réacteur nucléaire propre</French>
-		<Polish>Czysty Reaktor Jądrowy</Polish>
+		<Polish>Czysty Reaktor J&#185;drowy</Polish>
 		<Russian>Безопасный ядерный реактор</Russian>
 		<Italian>Reattore nucleare ecologico</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CLEAN_NUCLEAR_REACTOR_PEDIA</Tag>
 		<English>After the discovery of clean and safe nuclear energy, many reactors were built to produce incredible amounts of energy.</English>
-		<Polish>Z uwagi na istotną rolę neutronów w pracy reaktora jądrowego, w teorii sterowania reaktorem wyróżnia się cykl życia neutronu jako jeden z elementów opisujących działanie reaktora. Cykl opisuje "historię życia" neutronów, od chwili ich powstania do wychwytu (pochłonięcia przez jądro) albo ucieczki z rdzenia. Cykl życia neutronu opisywany jest różnymi formułami.</Polish>
+		<Polish>Z uwagi na istotn&#185; rol&#234; neutron&#243;w w pracy reaktora j&#185;drowego, w teorii sterowania reaktorem wyr&#243;&#191;nia si&#234; cykl &#191;ycia neutronu jako jeden z element&#243;w opisuj&#185;cych dzia&#179;anie reaktora. Cykl opisuje "histori&#234; &#191;ycia" neutron&#243;w, od chwili ich powstania do wychwytu (poch&#179;oni&#234;cia przez j&#185;dro) albo ucieczki z rdzenia. Cykl &#191;ycia neutronu opisywany jest r&#243;&#191;nymi formu&#179;ami.</Polish>
 		<Russian>После открытия чистой и безопасной ядерной энергии было построено множество реакторов для вырабатывания невероятного количества энергии.</Russian>
 	</TEXT>
 	<TEXT>
@@ -38,7 +38,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_POWER_NUCLEAR_PEDIA</Tag>
 		<English>With the discovery of clean and safe nuclear power and the development of large reactor complexes, energy becomes available in such a big amount, that energy-intensive facilities are no longer an issue.</English>
-		<Polish>Energetyka jądrowa - zespół zagadnień związanych z uzyskiwaniem na skalę przemysłową energii z rozszczepienia ciężkich jąder pierwiastków (głównie uranu 235).</Polish>
+		<Polish>Energetyka j&#185;drowa - zesp&#243;&#179; zagadnie&#241; zwi&#185;zanych z uzyskiwaniem na skal&#234; przemys&#179;ow&#185; energii z rozszczepienia ci&#234;&#191;kich j&#185;der pierwiastk&#243;w (g&#179;&#243;wnie uranu 235).</Polish>
 		<Russian>С открытием чистой и безопасной ядерной энергии и созданием крупных реакторных комплексов, энергия становится доступной в таких больших количествах, что энергоемкие объекты перестают быть проблемой.</Russian>
 	</TEXT>
 	<TEXT>
@@ -52,21 +52,21 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HIGH_ENERGY_LAB_PEDIA</Tag>
 		<English>High Energy Labs use the immense amount of energy produced by nuclear reactors.</English>
-		<Polish>Instytut dysponuje siedmioma laboratoriami poświęconym różnym dziedzinom: fizyce teoretycznej, fizyce wysokich energii, fizyce ciężkich jonów, fizyce fazy skondensowanej, reakcjom jądrowym, neutronom i technikom informatycznym. Istnieją również wydziały zajmujące się badaniami nad promieniowaniem i radiobiologią oraz zespoły badawcze poświęcone konkretnym eksperymentom.</Polish>
+		<Polish>Instytut dysponuje siedmioma laboratoriami po&#156;wi&#234;conym r&#243;&#191;nym dziedzinom: fizyce teoretycznej, fizyce wysokich energii, fizyce ci&#234;&#191;kich jon&#243;w, fizyce fazy skondensowanej, reakcjom j&#185;drowym, neutronom i technikom informatycznym. Istniej&#185; r&#243;wnie&#191; wydzia&#179;y zajmuj&#185;ce si&#234; badaniami nad promieniowaniem i radiobiologi&#185; oraz zespo&#179;y badawcze po&#156;wi&#234;cone konkretnym eksperymentom.</Polish>
 		<Russian>Лаборатория высоких энергий использует мощнейшую подпитку от ядерных реаторов.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HI_TECH_NUCLEAR_REACTOR</Tag>
 		<English>Hi-Tech Nuclear Reactor</English>
 		<French>Réacteur nucléaire Hi-Tech</French>
-		<Polish>Nowoczesny Reaktor Jądrowy</Polish>
+		<Polish>Nowoczesny Reaktor J&#185;drowy</Polish>
 		<Russian>Высокотехнологичный ядерный реактор</Russian>
 		<Italian>Reattore nucleare ad alta tecnologia</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HI_TECH_NUCLEAR_REACTOR_PEDIA</Tag>
 		<English>After the discovery of clean and safe nuclear energy, many reactors were built to produce incredible amounts of energy. With advanced technology, the efficiency of reactors increased even more.</English>
-		<Polish>W przyszłości planuje się wykorzystywać jako paliwo jądrowe tor. W wyniku rozszczepienia toru powstają jądra atomowe o mniejszej masie niż przy rozszczepieniu uranu lub plutonu i jest wśród nich więcej jąder trwałych. Rozszczepienie toru wytwarza zbyt mało neutronów by uzyskać stan krytyczny, w związku z tym do reaktora takiego trzeba by wstrzeliwać neutrony pochodzące z zewnątrz. W celu uzyskania dużej ilości neutronów naukowcy pracują nad zastosowaniem zjawiska spalacji. W zjawisku tym jądra ciężkich pierwiastków np. ołowiu są bombardowane wiązką protonów o dużej energii (rzędu 1 GeV), w wyniku czego ulegają wzbudzeniu. Jądra pozbywają się energii wzbudzenia wyrzucając z siebie nukleony w tym i neutrony. Zjawisko spalacji może być stosowane w celu uczynienia bezpiecznymi i przedłużenia pracy paliwa obecnych reaktorów jądrowych, a także pomóc w utylizacji radioaktywnych odpadów.</Polish>
+		<Polish>W przysz&#179;o&#156;ci planuje si&#234; wykorzystywa&#230; jako paliwo j&#185;drowe tor. W wyniku rozszczepienia toru powstaj&#185; j&#185;dra atomowe o mniejszej masie ni&#191; przy rozszczepieniu uranu lub plutonu i jest w&#156;r&#243;d nich wi&#234;cej j&#185;der trwa&#179;ych. Rozszczepienie toru wytwarza zbyt ma&#179;o neutron&#243;w by uzyska&#230; stan krytyczny, w zwi&#185;zku z tym do reaktora takiego trzeba by wstrzeliwa&#230; neutrony pochodz&#185;ce z zewn&#185;trz. W celu uzyskania du&#191;ej ilo&#156;ci neutron&#243;w naukowcy pracuj&#185; nad zastosowaniem zjawiska spalacji. W zjawisku tym j&#185;dra ci&#234;&#191;kich pierwiastk&#243;w np. o&#179;owiu s&#185; bombardowane wi&#185;zk&#185; proton&#243;w o du&#191;ej energii (rz&#234;du 1 GeV), w wyniku czego ulegaj&#185; wzbudzeniu. J&#185;dra pozbywaj&#185; si&#234; energii wzbudzenia wyrzucaj&#185;c z siebie nukleony w tym i neutrony. Zjawisko spalacji mo&#191;e by&#230; stosowane w celu uczynienia bezpiecznymi i przed&#179;u&#191;enia pracy paliwa obecnych reaktor&#243;w j&#185;drowych, a tak&#191;e pom&#243;c w utylizacji radioaktywnych odpad&#243;w.</Polish>
 		<Russian>После открытия чистой и безопасной ядерной энергии было построено множество реакторов для вырабатывания невероятного количества энергии. С продвинутыми технологиями эффективность реакторов возросла еще больше.</Russian>
 	</TEXT>
 	<TEXT>
@@ -80,7 +80,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MID_CLASS_SKYPAD_APARTMENTS_PEDIA</Tag>
 		<English>Another architectural marvel from famed architect Mr. Elroy Jetson, these space age apartments rise into the clouds above all the muss and fuss and most of the weather of the world below. Convenient parking for your hovercars are found on the lowest level.</English>
-		<Polish>Jetsonowie żyją w odległej przyszłości. Według pierwotnego zamysłu producentów akcja miała się rozgrywać dokładnie 100 lat od premiery serialu, czyli w roku 2062.</Polish>
+		<Polish>Jetsonowie &#191;yj&#185; w odleg&#179;ej przysz&#179;o&#156;ci. Wed&#179;ug pierwotnego zamys&#179;u producent&#243;w akcja mia&#179;a si&#234; rozgrywa&#230; dok&#179;adnie 100 lat od premiery serialu, czyli w roku 2062.</Polish>
 		<Russian>Очередное архитектурное чудо знаменитого архитектора Элроя Джетсона. Эти апартаменты космического века поднимаются в облака над всеми заботами и суетой и большинством погодных невзгод мира снизу. Удобные парковки для ваших летающих автомобилей находятся на нижнем уровне.</Russian>
 	</TEXT>
 	<TEXT>
@@ -94,28 +94,28 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_NUCLEAR_POWERCOMPLEX_PEDIA</Tag>
 		<English>With advanced technology and longtime experience with nuclear reactors, it was possible to build a centralized, huge complex of thousands of reactors.</English>
-		<Polish>Potężna elektrownia jądrowa składająca się z tysięcy reaktorów.</Polish>
+		<Polish>Pot&#234;&#191;na elektrownia j&#185;drowa sk&#179;adaj&#185;ca si&#234; z tysi&#234;cy reaktor&#243;w.</Polish>
 		<Russian>Продвинутые технологии и продолжительный опыт использования ядерных реакторов позволили построить огромный централизованный комплекс из тысячи реакторов.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_PUSHBUTTON_AUTOMAT</Tag>
 		<English>Pushbutton Automat</English>
 		<French>Distributeurs Automatiques</French>
-		<Polish>Automat Sprzedający</Polish>
+		<Polish>Automat Sprzedaj&#185;cy</Polish>
 		<Russian>Торговый автомат</Russian>
 		<Italian>Distributore automatico</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_PUSHBUTTON_AUTOMAT_PEDIA</Tag>
 		<English>Insert money, push a button and out pops a meal. Where does it come from? Nobody knows! Aren't modern conveniences grand! Most people wouldn't even consider moving into a house if it didn't have it's very own Pushbutton Automat nearby.</English>
-		<Polish>Automat sprzedający (automat vendingowy, ang. vending machine) - urządzenie służące do sprzedaży samoobsługowej. Można wyróżnić automaty sprzedające towary i usługi. Do pierwszych należą różnego rodzaju maszyny do sprzedaży batonów, kanapek, zabawek, napojów, prezerwatyw, papierosów itp. Natomiast w drugiej grupie znajdują się np. parkometry, automaty piorące, automaty biletowe, automaty telefoniczne czy fotograficzne.</Polish>
+		<Polish>Automat sprzedaj&#185;cy (automat vendingowy, ang. vending machine) - urz&#185;dzenie s&#179;u&#191;&#185;ce do sprzeda&#191;y samoobs&#179;ugowej. Mo&#191;na wyr&#243;&#191;ni&#230; automaty sprzedaj&#185;ce towary i us&#179;ugi. Do pierwszych nale&#191;&#185; r&#243;&#191;nego rodzaju maszyny do sprzeda&#191;y baton&#243;w, kanapek, zabawek, napoj&#243;w, prezerwatyw, papieros&#243;w itp. Natomiast w drugiej grupie znajduj&#185; si&#234; np. parkometry, automaty pior&#185;ce, automaty biletowe, automaty telefoniczne czy fotograficzne.</Polish>
 		<Russian>Вставьте деньги, нажмите кнопку и выскочит еда. Откуда она взялась? Никто не знает! Разве современные удобства не восхитительны?! Большинство людей и не подумали бы о переезде в дом, если бы в нем не было торгового автомата.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SMALL_REACTOR_FACTORY</Tag>
 		<English>Small Reactor Factory</English>
 		<French>Usine de réacteurs miniatures</French>
-		<Polish>Fabryka Małych Reaktorów</Polish>
+		<Polish>Fabryka Ma&#179;ych Reaktor&#243;w</Polish>
 		<Russian>Фабрика мини-реакторов</Russian>
 		<Italian>Fabbrica di piccoli reattori</Italian>
 	</TEXT>
@@ -141,14 +141,14 @@
 		<Tag>TXT_KEY_BUILDING_VIDEOPHONE_NETWORK</Tag>
 		<English>Videophone Network</English>
 		<French>Réseau de Vidéophones</French>
-		<Polish>Sieć Wideofoniczna</Polish>
+		<Polish>Sie&#230; Wideofoniczna</Polish>
 		<Russian>Видеотелефонная сеть</Russian>
 		<Italian>Rete di videotelefoni</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_VIDEOPHONE_NETWORK_PEDIA</Tag>
 		<English>A videophone is a telephone with a video display, capable of simultaneous video and audio for communication between people in real-time. Videophone service provided the first form of videotelephony, later to be followed by videoconferencing, webcams, and finally high-definition telepresence. At the dawn of its commercial deployment from the 1950s through the 1990s, videotelephony also included 'image phones' which would exchange still images between units every few seconds over conventional POTS-type telephone lines, essentially the same as slow scan TV systems. The development of advanced technology video codecs and high bandwidth Internet telecommunication services allowed videophones to provide high quality colour service between users almost anyplace in the world that the Internet is available, often at low or nominal costs.</English>
-		<Polish>Wideofon (nazwa pełna: wideotelefon) - aparat telefoniczny wyposażony w mały monitor ekranowy. W czasie prowadzenia rozmowy, rozmówcy widzą się nawzajem na monitorach znajdujących się przy aparatach telefonicznych. Urządzenie pozwala na wymianę informacji audio-wizualnych.</Polish>
+		<Polish>Wideofon (nazwa pe&#179;na: wideotelefon) - aparat telefoniczny wyposa&#191;ony w ma&#179;y monitor ekranowy. W czasie prowadzenia rozmowy, rozm&#243;wcy widz&#185; si&#234; nawzajem na monitorach znajduj&#185;cych si&#234; przy aparatach telefonicznych. Urz&#185;dzenie pozwala na wymian&#234; informacji audio-wizualnych.</Polish>
 		<Russian>Видеофон - телефонный аппарат с экраном, способный одновременно передавать видео и звук для общения между людьми в режиме реального времени. Видеофонная связь стала первой формой видеотелефонии, за которой последовали видеоконференции, веб-камеры и, наконец, телеприсутствие высокой четкости. На заре своего коммерческого внедрения с 1950 по 1990-е года видеотелефония также включала в себя  "картинофоны", передававшие неподвижные изображения каждые несколько секунд по обычным телефонным линиям типа POTS - по сути - аналогично системам телевидения с замедленной разверткой. Развитие продвинутых технологий видеокодеков и телекоммуникационных услуг высокоскоростного Интернета позволило видеофонам предоставлять высококачественные услуги цветной связи между пользователями практически в любой точке мира, где есть Интернет, часто по низким или номинальным ценам.</Russian>
 	</TEXT>
 </Civ4GameText>

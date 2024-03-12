@@ -9,7 +9,7 @@
 			<Plural>0</Plural>
 		</French>
 		<Italian>Cannibalismo attivo (concezione del mondo)</Italian>
-		<Polish>Swiatopogląd - Kanibalizm aktywny</Polish>
+		<Polish>Swiatopogl&#185;d - Kanibalizm aktywny</Polish>
 		<Russian>Ëþäîåäû</Russian>
 	</TEXT>
 	<TEXT>
@@ -33,7 +33,7 @@
 			<Plural>0</Plural>
 		</French>
 		<Italian>Cannibalismo (concezione del mondo)</Italian>
-		<Polish>Swiatopogląd - Kanibalizm</Polish>
+		<Polish>Swiatopogl&#185;d - Kanibalizm</Polish>
 		<Russian>Êàííèáàëèçì</Russian>
 	</TEXT>
 	<TEXT>
@@ -41,7 +41,7 @@
 		<English>[ICON_BULLET]Allows you to butcher human and Neanderthal captives for food.</English>
 		<French>vous permet de consommer les hommes et néanderthaliens - ils sont convertis en nourriture.</French>
 		<Italian>Ti permette di uccidere i prigionieri umani e Neanderthal per usarli come cibo.</Italian>
-		<Polish>Pozwala na zarzynanie i zjadanie jeńców.</Polish>
+		<Polish>Pozwala na zarzynanie i zjadanie je&#241;c&#243;w.</Polish>
 		<Russian>Ïîçâîëÿåò óïîòðåáëÿòü ÷åëîâå÷åñêèõ è íåàíäåðòàëüñêèõ ïëåííèêîâ â êà÷åñòâå ïèùè.</Russian>
 	</TEXT>
 	<TEXT>
@@ -57,7 +57,7 @@
 		<English>Butcher a captive for food.</English>
 		<French>Dépecer un prisonnier pour sa nourriture.</French>
 		<Italian>Uccidi prigioniero</Italian>
-		<Polish>Zarżnij jeńców i przeznacz ich mięso do zjedzenia.</Polish>
+		<Polish>Zar&#191;nij je&#241;c&#243;w i przeznacz ich mi&#234;so do zjedzenia.</Polish>
 		<Russian>Îñâåæåâàòü òóøó ïëåííèêà â êà÷åñòâå çàïàñîâ ïèùè.</Russian>
 	</TEXT>
 	<TEXT>
@@ -65,7 +65,7 @@
 		<English>Butchering a captive adds food to your store.</English>
 		<French>Dépecer le prisonnier, pour ajouter de la nourriture à votre stock.</French>
 		<Italian>[NEWLINE]Uccidere un prigioniero aggiunge cibo alla tua riserva.</Italian>
-		<Polish>Mięso zarżniętych jeńców zostaje przekazani do zapasów żywności w mieście.</Polish>
+		<Polish>Mi&#234;so zar&#191;ni&#234;tych je&#241;c&#243;w zostaje przekazani do zapas&#243;w &#191;ywno&#156;ci w mie&#156;cie.</Polish>
 		<Russian>×àñòè òåëà ïëåííèêà äîáàâëåíû â àìáàð â êà÷åñòâå çàïàñîâ ïèùè.</Russian>
 	</TEXT>
 	<TEXT>
@@ -73,7 +73,7 @@
 		<English>Abandon Cannibalism World View</English>
 		<French>Abandonner la Vision du Monde Cannibalisme</French>
 		<Italian>Abbandona il cannibalismo (concezione del mondo)</Italian>
-		<Polish>Porzuć Swiatopogląd - Kanibalizm</Polish>
+		<Polish>Porzu&#230; Swiatopogl&#185;d - Kanibalizm</Polish>
 		<Russian>Îòêàçàòüñÿ îò òðàäèöèè êàííèáàëèçìà</Russian>
 	</TEXT>
 	<TEXT>
@@ -81,7 +81,7 @@
 		<English>Your nation has banned cannibalism.</English>
 		<French>Votre nation a banni le cannibalisme.</French>
 		<Italian>La tua nazione ha vietato il cannibalismo.</Italian>
-		<Polish>Twój naród zakazał kanibalizmu.</Polish>
+		<Polish>Tw&#243;j nar&#243;d zakaza&#179; kanibalizmu.</Polish>
 		<Russian>Â âàøåé ñòðàíå çàïðåùåíî ëþäîåäñòâî.</Russian>
 	</TEXT>
 	<TEXT>
@@ -89,7 +89,7 @@
 		<English>Butcher a captive for food.</English>
 		<French>Dépecer un prisonnier pour sa nourriture.</French>
 		<Italian>Uccidi un prigioniero per ricavarne cibo.</Italian>
-		<Polish>Zarżnij jeńców i przeznacz ich mięso do zjedzenia.</Polish>
+		<Polish>Zar&#191;nij je&#241;c&#243;w i przeznacz ich mi&#234;so do zjedzenia.</Polish>
 		<Russian>Ðàçäåëàòü òåëî ïëåííèêà â êà÷åñòâå ïðèïàñîâ.</Russian>
 	</TEXT>
 	<TEXT>
@@ -97,7 +97,7 @@
 		<English>Your people have butchered a captive.</English>
 		<French>Votre peuple a dépecé un prisonnier afin de le manger.</French>
 		<Italian>La tua gente ha ucciso un prigioniero.</Italian>
-		<Polish>Twoi ludzie zabili i zjedli jeńców.</Polish>
+		<Polish>Twoi ludzie zabili i zjedli je&#241;c&#243;w.</Polish>
 		<Russian>Âàøè ëþäè ðàçäåëàëè íà ìÿñî ïëåííèêà.</Russian>
 	</TEXT>
 	<TEXT>
@@ -105,7 +105,7 @@
 		<English>Your world view abandons eating people.</English>
 		<French>Vous abandonner le cannibalisme de votre vision du monde</French>
 		<Italian>Hai abbandonato il cannibalismo.</Italian>
-		<Polish>Twój Swiatopogląd nie akceptuje już kanibalizmu.</Polish>
+		<Polish>Tw&#243;j Swiatopogl&#185;d nie akceptuje ju&#191; kanibalizmu.</Polish>
 		<Russian>Òåïåðü ìèðîâîççðåíèå âàøèõ ëþäåé ïîðèöàåò êàííèáàëèçì.</Russian>
 	</TEXT>
 	<TEXT>
@@ -113,7 +113,7 @@
 		<English>Your nation has stopped eating people.</English>
 		<French>Votre nation a stopé de manger vos semblables.</French>
 		<Italian>Nella tua nazione la gente ha smesso di mangiare persone.</Italian>
-		<Polish>Twój naród przestał zjadać innych ludzi.</Polish>
+		<Polish>Tw&#243;j nar&#243;d przesta&#179; zjada&#230; innych ludzi.</Polish>
 		<Russian>Âàø íàðîä ïðåêðàòèë ïðàêòèêó êàííèáàëèçìà.</Russian>
 	</TEXT>
 </Civ4GameText>

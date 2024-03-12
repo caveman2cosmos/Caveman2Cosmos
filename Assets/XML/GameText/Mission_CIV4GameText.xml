@@ -25,7 +25,7 @@
 		<German>Wählen Sie eine Lufteinheit, die Luftbombardierungen durchführen kann, aktivieren Sie die Mission "Luftbombardierung Verteidigungen" und klicken Sie dann auf die Zielstadt, um deren Verteidigung zu schwächen, oder auf eine Modernisierung, um diese zu zerstören.</German>
 		<Italian>[NEWLINE]Seleziona "bombarda difese" e poi una città per abbatterne le difese oppure seleziona un miglioramento per distruggerlo.</Italian>
 		<Spanish>Selecciona una unidad que pueda realizar bombardeos aéreos, selecciona la misión "Bombardear defensas" y haz clic en la ciudad objetivo (para reducir su defensa) o en la mejora objetivo (para destruirla).</Spanish>
-		<Polish>Wybierz jednostkę powietrzną, która może wykonać bombardowanie, wybierz misję bombardowania umocnień, a następnie kliknij na mieście aby zredukować jego obronę lub na udoskonaleniu aby je zniszczyć.</Polish>
+		<Polish>Wybierz jednostk&#234; powietrzn&#185;, kt&#243;ra mo&#191;e wykona&#230; bombardowanie, wybierz misj&#234; bombardowania umocnie&#241;, a nast&#234;pnie kliknij na mie&#156;cie aby zredukowa&#230; jego obron&#234; lub na udoskonaleniu aby je zniszczy&#230;.</Polish>
 		<Russian>Выберите воздушный юнит, который может осуществлять бомбардировку, поручите ему бомбардировку укреплений, а затем щелкните либо город, чтобы уменьшить его показатель защиты, либо объект, чтобы уничтожить его.</Russian>
 	</TEXT>
 	<TEXT>
@@ -35,7 +35,7 @@
 		<German>Luftbombardierung Gebäude</German>
 		<Italian>Bombarda edifici</Italian>
 		<Spanish>Bombardear edificios</Spanish>
-		<Polish>Bombardowanie budynków</Polish>
+		<Polish>Bombardowanie budynk&#243;w</Polish>
 		<Russian>Здания</Russian>
 	</TEXT>
 	<TEXT>
@@ -45,7 +45,7 @@
 		<German>Wählen Sie eine Lufteinheit, die Luftbombardierungen durchführen kann, wählen Sie die Mission "Luftbombardierung Gebäude" und klicken Sie dann auf die Zielstadt, um zu versuchen, dort ein ziviles Gebäude zu zerstören.</German>
 		<Italian>[NEWLINE]Seleziona "bombarda edifici" e poi clicca su una città per cercare di distruggere un edificio civile.</Italian>
 		<Spanish>Selecciona una unidad que pueda realizar bombardeos aéreos, selecciona la misión "Bombardear edificios" y haz clic en la ciudad objetivo para intentar destruir un edificio civil.</Spanish>
-		<Polish>Wybierz jednostkę powietrzną, która może wykonać bombardowanie, wybierz misję bombardowania budynku, a następnie kliknij na mieście aby zniszczyć w nim jeden budynek cywilny.</Polish>
+		<Polish>Wybierz jednostk&#234; powietrzn&#185;, kt&#243;ra mo&#191;e wykona&#230; bombardowanie, wybierz misj&#234; bombardowania budynku, a nast&#234;pnie kliknij na mie&#156;cie aby zniszczy&#230; w nim jeden budynek cywilny.</Polish>
 		<Russian>Выберите воздушный юнит, который может осуществлять бомбардировку, поручите ему бомбардировку зданий, а затем щелкните город, в котором нужно уничтожить здание мирного назначения.</Russian>
 	</TEXT>
 	<TEXT>
@@ -65,7 +65,7 @@
 		<German>Wählen Sie eine Lufteinheit, die Luftbombardierungen durchführen kann, aktivieren Sie die Mission "Luftbombardierung Produktion" und klicken Sie dann auf die Zielstadt, um zu versuchen, dort eine Fabrik zu zerstören.</German>
 		<Italian>[NEWLINE]Seleziona "bombarda fabbriche" e poi clicca su una città per cercare di distruggere una fabbrica.</Italian>
 		<Spanish>Selecciona una unidad que pueda realizar bombardeos aéreos, selecciona la misión "Bombardear fábricas" y haz clic en la ciudad objetivo para intentar destruir una fábrica.</Spanish>
-		<Polish>Wybierz jednostkę powietrzną, która może wykonać bombardowanie, wybierz misję bombardowania fabryki, a następnie kliknij na mieście aby zniszczyć w nim jeden budynek produkcyjny.</Polish>
+		<Polish>Wybierz jednostk&#234; powietrzn&#185;, kt&#243;ra mo&#191;e wykona&#230; bombardowanie, wybierz misj&#234; bombardowania fabryki, a nast&#234;pnie kliknij na mie&#156;cie aby zniszczy&#230; w nim jeden budynek produkcyjny.</Polish>
 		<Russian>Выберите воздушный юнит, который может осуществлять бомбардировку, поручите ему бомбардировку заводов, а затем щелкните город, в котором нужно уничтожить производственную структуру.</Russian>
 	</TEXT>
 	<TEXT>
@@ -85,7 +85,7 @@
 		<German>Wählen Sie eine Lufteinheit, die Luftbombardierungen durchführen kann, aktivieren Sie die Mission "Luftbombardierung Häfen" und klicken Sie dann auf die Zielstadt, um zu versuchen, dort ein Schiff zu beschädigen oder zu versenken.</German>
 		<Italian>[NEWLINE]Seleziona "bombarda porto" e poi clicca su una città per cercare di danneggiare o affondare una nave.</Italian>
 		<Spanish>Selecciona una unidad que pueda realizar bombardeos aéreos, selecciona la misión "Bombardear puerto" y haz clic en la ciudad objetivo para intentar dañar o hundir un navío.</Spanish>
-		<Polish>Wybierz jednostkę powietrzną, która może wykonać bombardowanie, wybierz misję bombardowania portu, a następnie kliknij na mieście aby uszkodzić lub zatopić znajdujący się w nim statek.</Polish>
+		<Polish>Wybierz jednostk&#234; powietrzn&#185;, kt&#243;ra mo&#191;e wykona&#230; bombardowanie, wybierz misj&#234; bombardowania portu, a nast&#234;pnie kliknij na mie&#156;cie aby uszkodzi&#230; lub zatopi&#230; znajduj&#185;cy si&#234; w nim statek.</Polish>
 		<Russian>Выберите воздушный юнит, который может осуществлять бомбардировку, поручите ему бомбардировку портов, а затем щелкните город, в порту которого стоит корабль.</Russian>
 	</TEXT>
 	<TEXT>
@@ -105,7 +105,7 @@
 		<German>Wählen Sie eine Lufteinheit, die Luftbombardierungen durchführen kann, aktivieren Sie die Mission "Strategische Luftbombardierung" und klicken Sie dann auf die Zielstadt, um zu versuchen, dort die aktuelle Produktion zu zerstören.</German>
 		<Italian>[NEWLINE]Seleziona "bombardamento strategico" e poi clicca su una città per cercare di danneggiarne la produzione.</Italian>
 		<Spanish>Selecciona una unidad que pueda realizar bombardeos aéreos, selecciona la misión "Bombardeo estratégico" y haz clic en la ciudad objetivo para dañar la producción en curso.</Spanish>
-		<Polish>Wybierz jednostkę powietrzną, która może wykonać bombardowanie, wybierz misję bombardowania strategicznego, a następnie kliknij na mieście aby uszkodzić jego aktualną produkcję.</Polish>
+		<Polish>Wybierz jednostk&#234; powietrzn&#185;, kt&#243;ra mo&#191;e wykona&#230; bombardowanie, wybierz misj&#234; bombardowania strategicznego, a nast&#234;pnie kliknij na mie&#156;cie aby uszkodzi&#230; jego aktualn&#185; produkcj&#234;.</Polish>
 		<Russian>Выберите воздушный юнит, который может осуществлять бомбардировку, поручите ему бомбардировку стратегических целей и щелкните город, в котором создается важный объект.</Russian>
 	</TEXT>
 	<TEXT>
@@ -153,7 +153,7 @@
 		<German>Einheit ermorden</German>
 		<Italian>Assassina unità</Italian>
 		<Spanish>Asesinar unidad</Spanish>
-		<Polish>Skrytobójstwo</Polish>
+		<Polish>Skrytob&#243;jstwo</Polish>
 		<Russian>Отравить отряд</Russian>
 	</TEXT>
 	<TEXT>
@@ -209,7 +209,7 @@
 		<German>Einheit bestechen</German>
 		<Italian>Corrompi unità</Italian>
 		<Spanish>Sobornar unidad</Spanish>
-		<Polish>Przekup jednostkę</Polish>
+		<Polish>Przekup jednostk&#234;</Polish>
 		<Russian>Подкупить отряд</Russian>
 	</TEXT>
 	<TEXT>
@@ -226,7 +226,7 @@
 		<English>Select a Promotion Line and gain an additional auto-promotion from the next level on that line for each round (up to 5) that the unit stays building up the ability. Unit loses all Build Up promotions when it next moves. (An alternative form of Fortification.)</English>
 		<French>Permet de cumuler le retranchement tout en choisissant une Spécialisation permettant de développer des compétences (sous forme de promotion) à chaque tour tant que l'unité reste sur place. (Il s'agit d'une alternative à 'Se retrancher F'.)</French>
 		<German>Einheit zum Training in einer bestimmten Beförderungsreihe abstellen. Pro Runde Training erhält die Einheit eine Zusatzbeförderung (maximal 5 Runden lang). Diese Beförderungen sind nicht dauerhaft. Sie gehen verloren, sobald sich die Einheit bewegt.</German>
-		<Polish>Wybierz Linię Promocji i otrzymaj dodatkową auto-promocję z następnego poziomu tej linii promocji za każda turę Koncentracji na danym terenie (max 5 promocji). Jednostka traci Koncentrację kiedy się poruszy. (To jest alternatywa do Fortyfikacji jednostek).</Polish>
+		<Polish>Wybierz Lini&#234; Promocji i otrzymaj dodatkow&#185; auto-promocj&#234; z nast&#234;pnego poziomu tej linii promocji za ka&#191;da tur&#234; Koncentracji na danym terenie (max 5 promocji). Jednostka traci Koncentracj&#234; kiedy si&#234; poruszy. (To jest alternatywa do Fortyfikacji jednostek).</Polish>
 		<Russian>Выберите линейку Квалификации и получите возможность для доп. автоматического продвижения на следующий уровень в этой строке на каждый ход (до 5), т.е. прокачать навык для отряда. Юнит игнорирует все альт. линии прокачки, весь следующий ход. (Альтер. форма фортификации.)</Russian>
 		<Italian>[NEWLINE]Auto-promozione sulla linea selezionata (max 5 turni). Muovere l'unità fa perdere tutti i vantaggi dell'allenamento.</Italian>
 	</TEXT>
@@ -260,7 +260,7 @@
 		<French>Abattre l'Animal</French>
 		<Italian>Macella l'animale</Italian>
 		<Spanish>Descuartizar animal</Spanish>
-		<Polish>Zabij zwierzę</Polish>
+		<Polish>Zabij zwierz&#234;</Polish>
 		<Russian>Разделка животного</Russian>
 	</TEXT>
 	<TEXT>
@@ -269,7 +269,7 @@
 		<French>Abattre un animal apprivoisé donne davantage de ressources en territoire ami, et encore plus dans la ville.</French>
 		<Italian>[NEWLINE]Produce più risorse se si è in territorio amico e ancora di più nelle città.</Italian>
 		<Spanish>Descuartiza un animal domado; dará más recursos en el territorio propio, y aún más en una ciudad.</Spanish>
-		<Polish>Zabijanie oswojonych zwierząt, daje więcej surowców na swoim terytorium i jeszcze więcej w mieście.</Polish>
+		<Polish>Zabijanie oswojonych zwierz&#185;t, daje wi&#234;cej surowc&#243;w na swoim terytorium i jeszcze wi&#234;cej w mie&#156;cie.</Polish>
 		<Russian>Забивает прирученное животное и дает больше средств на дружественной территории и еще больше в городе.</Russian>
 	</TEXT>
 	<TEXT>
@@ -289,7 +289,7 @@
 		<German>%s1_civ_adjective Einheiten besetzten einen Teil Deines Territoriums!</German>
 		<Italian>Delle unità %s1_civ_adjective hanno occupato una parte del tuo territorio!</Italian>
 		<Spanish>Unidades %s1:4_civ_adjective han ocupado parte de tu territorio.</Spanish>
-		<Polish>Jednostki z %s1_civ_adjective okupują część Twojego terytorium!</Polish>
+		<Polish>Jednostki z %s1_civ_adjective okupuj&#185; cz&#234;&#156;&#230; Twojego terytorium!</Polish>
 		<Russian>Отряды %s1_civ_adjective заняли часть вашей территории!</Russian>
 	</TEXT>
 	<TEXT>
@@ -299,7 +299,7 @@
 		<German>%s1_civ_adjective Einheiten besetzten einen Teil Deines Territoriums in der Nähe von %s2_city</German>
 		<Italian>Delle unità %s1_civ_adjective hanno occupato una parte del tuo territorio vicino alla città di %s2_city</Italian>
 		<Spanish>Unidades %s1:4_civ_adjective han ocupado parte de tu territorio cercano a %s2_city.</Spanish>
-		<Polish>Jednostki z %s1_civ_adjective okupują część Twojego terytorium blisko miasta %s2_city</Polish>
+		<Polish>Jednostki z %s1_civ_adjective okupuj&#185; cz&#234;&#156;&#230; Twojego terytorium blisko miasta %s2_city</Polish>
 		<Russian>Отряды %s1_civ_adjective заняли часть вашей территории около города %s2_city</Russian>
 	</TEXT>
 	<TEXT>
@@ -309,7 +309,7 @@
 		<German>Die Einheit wird das Geländefeld besetzen und es Deinem Imperium hinzufügen. Die Effekte werden in der nächsten Runde sichtbar sein.</German>
 		<Italian>[NEWLINE]L'unità occuperà annetterà la casella su cui si trova al tuo impero. Gli effetti saranno visibili dal prossimo turno.</Italian>
 		<Spanish>La unidad ocupará la casilla en la que está y la anexionará a tu imperio. Los efectos serán apreciables el próximo turno.</Spanish>
-		<Polish>Jednostka będzie okupywać pole na którym stoi i przyłączy go do Twego imperium. Efekty będą widoczne w następnej turze.</Polish>
+		<Polish>Jednostka b&#234;dzie okupywa&#230; pole na kt&#243;rym stoi i przy&#179;&#185;czy go do Twego imperium. Efekty b&#234;d&#185; widoczne w nast&#234;pnej turze.</Polish>
 		<Russian>Отряд займет клетку, на которой он находится, и присоединит ее к вашей державе. Эффекты будут видны на следующем ходу.</Russian>
 	</TEXT>
 	<TEXT>
@@ -364,7 +364,7 @@
 		<English>Cure Next Unit in Stack of a Curable Affliction</English>
 		<French>Guérir la prochaine unité dans la pile d'une affection curable</French>
 		<Italian>Cura la prossima unità presente nel gruppo di un'afflizione curabile</Italian>
-		<Polish>Leczy następną jednostkę w grupie</Polish>
+		<Polish>Leczy nast&#234;pn&#185; jednostk&#234; w grupie</Polish>
 		<Russian>Вылечить указанный отряд в стеке от повреждений</Russian>
 	</TEXT>
 	<TEXT>
@@ -372,7 +372,7 @@
 		<English>This order will cause the healer to improve the condition of one Affliction from the first of your units sharing the same plot that is beset by an Affliction that the healer can cure.</English>
 		<French>Cet ordre amènera le guérisseur à améliorer l'état d'affliction de la première de vos unités partageant le même groupe, si elle est victime d'une Affliction que le guérisseur peut guérir.</French>
 		<Italian>[NEWLINE]Il guaritore migliora la condizione di un afflizione della prima unità presente nella stessa casella se l'afflizione è curabile.</Italian>
-		<Polish>Ten rozkaz spowoduje, że Lekarz wyleczy jedną dolegliwość, którą potrafi wyleczyć, pierwszej jednostce z grupy na tym samym polu.</Polish>
+		<Polish>Ten rozkaz spowoduje, &#191;e Lekarz wyleczy jedn&#185; dolegliwo&#156;&#230;, kt&#243;r&#185; potrafi wyleczy&#230;, pierwszej jednostce z grupy na tym samym polu.</Polish>
 		<Russian>Эта команда заставит медика исцелить от ранений один из ваших отрядов, расположенных на одном с лекарем участке, или от болезни, от которой медик может вылечить.</Russian>
 	</TEXT>
 	<TEXT>
@@ -414,7 +414,7 @@
 		<German>Sammle Informationen</German>
 		<Italian>Raccogli informazioni</Italian>
 		<Spanish>Recopilar información</Spanish>
-		<Polish>Zgromadź Dane</Polish>
+		<Polish>Zgromad&#159; Dane</Polish>
 		<Russian>Собирать разведданные</Russian>
 	</TEXT>
 	<TEXT>
@@ -424,7 +424,7 @@
 		<German>Diese Einheit wird Informationen sammeln und nicht aufwachen bis sie ihr Maximum an Spionagepunkten erreicht hat</German>
 		<Italian>[NEWLINE]L'unità raccoglierà informazioni e non si riattiverà finché non avrà raggiunto il massimo bonus di spionaggio.</Italian>
 		<Spanish>Esta unidad recopilará información y no se activará hasta que alcance la máxima bonificación por espionaje.</Spanish>
-		<Polish>Jednostka będzie zbierać dane i nie obudzi się dopóki nie zbierze kompletnych danych(maksymalnego bonusu do szpiegostwa).</Polish>
+		<Polish>Jednostka b&#234;dzie zbiera&#230; dane i nie obudzi si&#234; dop&#243;ki nie zbierze kompletnych danych(maksymalnego bonusu do szpiegostwa).</Polish>
 		<Russian>Этот юнит соберет сведения и не проснется, пока не достигает максимального бонуса шпионажа</Russian>
 	</TEXT>
 	<TEXT>
@@ -434,7 +434,7 @@
 		<German>Jägereinsatz</German>
 		<Italian>Battaglia</Italian>
 		<Spanish>Combate</Spanish>
-		<Polish>Angażowanie myśliwców</Polish>
+		<Polish>Anga&#191;owanie my&#156;liwc&#243;w</Polish>
 		<Russian>Бой истребителей</Russian>
 	</TEXT>
 	<TEXT>
@@ -444,7 +444,7 @@
 		<German>Wählen Sie eine Jägereinheit, wählen Sie die Jägereinsatzmission und anschließend die feindliche Einheit, die angegriffen werden soll.</German>
 		<Italian>[NEWLINE]Selezione l'unità nemica da attaccare.</Italian>
 		<Spanish>Selecciona un caza, selecciona la misión "Combate" y haz clic en la unidad enemiga para atacarla.</Spanish>
-		<Polish>Wybierz jednostkę myśliwca, wybierz misję angażowania myśliwców i wybierz jednostkę wroga do zaatakowania.</Polish>
+		<Polish>Wybierz jednostk&#234; my&#156;liwca, wybierz misj&#234; anga&#191;owania my&#156;liwc&#243;w i wybierz jednostk&#234; wroga do zaatakowania.</Polish>
 		<Russian>Выберите истребитель, отдайте ему приказ вступить в бой истребителей и укажите цель.</Russian>
 	</TEXT>
 	<TEXT>
@@ -469,7 +469,7 @@
 		<French>Aller à la Ville</French>
 		<German>Zielstadt</German>
 		<Spanish>Ir a ciudad</Spanish>
-		<Polish>Idź do Miasta</Polish>
+		<Polish>Id&#159; do Miasta</Polish>
 		<Russian>Идти к городу</Russian>
 		<Italian>Via a una città</Italian>
 	</TEXT>
@@ -479,7 +479,7 @@
 		<French>Sélectionner une ville où envoyer l'unité (n'a pas besoin d'être dans la fenêtre de vue).</French>
 		<German>Ausgewählte Einheit zu einer beliebigen Zielstadt (auch außerhalb des aktuellen Sichtfelds) beordern.</German>
 		<Spanish>Selecciona una ciudad a la que enviar la unidad. No es necesario que dicha ciudad se encuentre dentro de la Vista parcial actual.</Spanish>
-		<Polish>Wybierz miasto do którego się ma udać jednostka. Miasto nie musi znajdować się na bieżącym Viewporcie.</Polish>
+		<Polish>Wybierz miasto do kt&#243;rego si&#234; ma uda&#230; jednostka. Miasto nie musi znajdowa&#230; si&#234; na bie&#191;&#185;cym Viewporcie.</Polish>
 		<Russian>Выберите город, куда вы намерены отправить этот отряд. Города не должны быть внутри текущего видового экрана.</Russian>
 		<Italian>[NEWLINE]Manda l'unità a una città specifica.</Italian>
 	</TEXT>
@@ -575,7 +575,7 @@
 		<German>Feldkommandeur</German>
 		<Italian>Comandante da campo</Italian>
 		<Spanish>Comandante de tierra</Spanish>
-		<Polish>Dowódca Polowy</Polish>
+		<Polish>Dow&#243;dca Polowy</Polish>
 		<Russian>Полевой командир</Russian>
 	</TEXT>
 	<TEXT>
@@ -585,7 +585,7 @@
 		<German>Verwandelt den Großen General in einen Feldkommandeur, wodurch er seine normalen Fertigkeiten verliert. Dafür kann er nun Erfahrungspunkte und Beförderungen aus Schlachten erhalten, an denen er teilnimmt, und damit die Einheiten in seinem näheren Umfeld unterstützen.</German>
 		<Italian>[NEWLINE]Trasforma il gran generale in un comandante da campo: perderà l'abilità di unirsi a città ed unità e di costruire le Meraviglie, ma guadagnerà esperienza, promozioni e potrà condurre altre unità sul campo.</Italian>
 		<Spanish>Convierte al Gran general en un Comandante de tierra, que pierde sus habilidades para unirse a las ciudades y unidades, o construir maravillas, pero le otorga la capacidad de adquirir experiencia y ascensos, y liderar a las unidades en el campo de batalla.</Spanish>
-		<Polish>Zmień Wielkiego Generała w Dowódce Polowego, traci wówczas możliwość by dołączyć do miast, jednostek czy budować cuda, ale daje możliwość zdobywania doświadczenia, promocji oraz prowadzić jednostki na polu bitwy.</Polish>
+		<Polish>Zmie&#241; Wielkiego Genera&#179;a w Dow&#243;dce Polowego, traci w&#243;wczas mo&#191;liwo&#156;&#230; by do&#179;&#185;czy&#230; do miast, jednostek czy budowa&#230; cuda, ale daje mo&#191;liwo&#156;&#230; zdobywania do&#156;wiadczenia, promocji oraz prowadzi&#230; jednostki na polu bitwy.</Polish>
 		<Russian>Превращает Великого Генерала в Полевого командира, который теряет возможность присоединяются к городам, отрядам или чудесам, но дает ему способность заработать опыт, повышения и лидерство в поле.</Russian>
 	</TEXT>
 	<TEXT>
@@ -636,7 +636,7 @@
 		<German>Nahrungsproduktion beschleunigen</German>
 		<Italian>Accelera cibo</Italian>
 		<Spanish>Envío alimentario</Spanish>
-		<Polish>Przyśpiesz żywność</Polish>
+		<Polish>Przy&#156;piesz &#191;ywno&#156;&#230;</Polish>
 		<Russian>Быстрая еда</Russian>
 	</TEXT>
 	<TEXT>
@@ -646,7 +646,7 @@
 		<German>Dieser Befehl wird die Nahrungsmittelvorräte in der Stadt erhöhen. Die Einheit wird dabei verbraucht.</German>
 		<Italian>[NEWLINE]Incrementa le riserve di cibo della città. Consuma l'unità nel processo.</Italian>
 		<Spanish>Esta orden incrementará la comida almacenada en las ciudades. Consumirá a la unidad.</Spanish>
-		<Polish>Ten rozkaz zwiększy zaopatrzenie miasta w żywność. Jest to zużywane przez jednostki.</Polish>
+		<Polish>Ten rozkaz zwi&#234;kszy zaopatrzenie miasta w &#191;ywno&#156;&#230;. Jest to zu&#191;ywane przez jednostki.</Polish>
 		<Russian>Этот приказ увеличит городскую поставку продовольствия. Это потребляет отряд.</Russian>
 	</TEXT>
 	<TEXT>
@@ -698,7 +698,7 @@
 		<German>Ermöglicht der Einheit alle nichtstaatlichen Religionen zu entfernen.</German>
 		<Italian>[NEWLINE]Permette all'unità di rimuovere tutte le religioni non di stato.</Italian>
 		<Spanish>Permite a la unidad eliminar todas las religiones no oficiales.</Spanish>
-		<Polish>Pozwala jednostce, usunąć wszystkie niepaństwowe religie.</Polish>
+		<Polish>Pozwala jednostce, usun&#185;&#230; wszystkie niepa&#241;stwowe religie.</Polish>
 		<Russian>Позволяет подразделению удалить все негосударственные религии из города</Russian>
 	</TEXT>
 	<TEXT>
@@ -755,7 +755,7 @@
 		<French>[COLOR_HIGHLIGHT_TEXT]mettre en litige[COLOR_REVERT][NEWLINE]Prendre des mesures juridiques et conduire toutes les entreprises de la ville au procès.</French>
 		<Italian>[COLOR_HIGHLIGHT_TEXT]Querela[COLOR_REVERT]</Italian>
 		<Spanish>[COLOR_HIGHLIGHT_TEXT]Denunciar[COLOR_REVERT][NEWLINE]Tomar acciones legales para expulsar a todas las corporaciones de la ciudad.</Spanish>
-		<Polish>[COLOR_HIGHLIGHT_TEXT]Zaskarż[COLOR_REVERT][NEWLINE]Legalnym sposobem wypędź wszystkie korporacje ze swojego miasta.</Polish>
+		<Polish>[COLOR_HIGHLIGHT_TEXT]Zaskar&#191;[COLOR_REVERT][NEWLINE]Legalnym sposobem wyp&#234;d&#159; wszystkie korporacje ze swojego miasta.</Polish>
 		<Russian>[COLOR_HIGHLIGHT_TEXT]Судебный процесс[COLOR_REVERT][NEWLINE]Предъявите судебный иск от имени государства и изгоните все корпорации из города.</Russian>
 	</TEXT>
 	<TEXT>
@@ -764,7 +764,7 @@
 		<French>[COLOR_HIGHLIGHT_TEXT]mettre en litige[COLOR_REVERT][NEWLINE]Prendre des mesures juridiques et conduire toutes les entreprises de la ville au procès.</French>
 		<Italian>[NEWLINE]Tramite azioni legali rimuovi tutte le corporazioni dalla città.</Italian>
 		<Spanish>[ICON_BULLET]Puede tomar acciones legales</Spanish>
-		<Polish>[COLOR_HIGHLIGHT_TEXT]Zaskarż[COLOR_REVERT][NEWLINE]Legalnym sposobem wypędź wszystkie korporacje ze swojego miasta.</Polish>
+		<Polish>[COLOR_HIGHLIGHT_TEXT]Zaskar&#191;[COLOR_REVERT][NEWLINE]Legalnym sposobem wyp&#234;d&#159; wszystkie korporacje ze swojego miasta.</Polish>
 		<Russian>[COLOR_HIGHLIGHT_TEXT]Судебный процесс[COLOR_REVERT][NEWLINE]Предъявите судебный иск от имени государства и изгоните все корпорации из города.</Russian>
 	</TEXT>
 	<TEXT>
@@ -800,7 +800,7 @@
 		<German>Lässt eine sich bewegende Einheit aktiv werden, bis sie sich einer feindlichen Einheit desselben Einheitentyps nähert</German>
 		<Italian>[NEWLINE]L'unità si muove finché un'unità nemica dello stesso tipo non entra nel suo raggio di visibilità.</Italian>
 		<Spanish>La unidad se mueve hasta que una unidad enemiga del mismo tipo se sitúe en su campo de visión.</Spanish>
-		<Polish>Jednostka będzie poruszać się tak długo aż nie spotka wrogiej jednostki</Polish>
+		<Polish>Jednostka b&#234;dzie porusza&#230; si&#234; tak d&#179;ugo a&#191; nie spotka wrogiej jednostki</Polish>
 		<Russian>Подразделение будет двигаться, пока вражеские войска подобного типа не окажутся в зоне видимости.</Russian>
 	</TEXT>
 	<TEXT>
@@ -826,7 +826,7 @@
 		<German>Nuklearen Sprengkörper einschleusen</German>
 		<Italian>Lancia bomba atomica</Italian>
 		<Spanish>Colocar una bomba nuclear</Spanish>
-		<Polish>Podłóż Ładunek Nuklearny</Polish>
+		<Polish>Pod&#179;&#243;&#191; &#163;adunek Nuklearny</Polish>
 		<Russian>Ядерный удар</Russian>
 	</TEXT>
 	<TEXT>
@@ -876,7 +876,7 @@
 		<German>Die Einheit plündert und zerstört Landschaftsverbesserungen auf ihrem Geländefeld.</German>
 		<Italian>[NEWLINE]L'unità distrugge un miglioramento sulla casella che occupa.</Italian>
 		<Spanish>La unidad destruye una mejora en la casilla en que se encuentra.</Spanish>
-		<Polish>Jednostka zniszczyła udoskonalenie na okupowanym polu.</Polish>
+		<Polish>Jednostka zniszczy&#179;a udoskonalenie na okupowanym polu.</Polish>
 		<Russian>Отряд уничтожает улучшения клетки, на которой находится.</Russian>
 	</TEXT>
 	<TEXT>
@@ -902,7 +902,7 @@
 		<German>Energieversorgung lahmlegen</German>
 		<Italian>Disabilita rete elettrica</Italian>
 		<Spanish>Desactivar producción eléctrica</Spanish>
-		<Polish>Wyłącz Prąd</Polish>
+		<Polish>Wy&#179;&#185;cz Pr&#185;d</Polish>
 		<Russian>Повредите энергосистему</Russian>
 	</TEXT>
 	<TEXT>
@@ -927,7 +927,7 @@
 		<German>Wählen Sie eine Artillerieeinheit, aktivieren Sie die Mission "Bombardierung" und klicken Sie dann auf das Geländefeld, das bombardiert werden soll.</German>
 		<Italian>[NEWLINE]Seleziona attacco dalla distanza, quindi seleziona sulla casella da bombardare.</Italian>
 		<Spanish>Selecciona una unidad de ataque a distancia, selecciona la misión "Cañoneo de alcance" y haz clic en la casilla a bombardear.</Spanish>
-		<Polish>Wybierz jednostkę artyleryjską, wybierz misję ataku dystansowego a następnie kliknij na polu, które chcesz zbombardować.</Polish>
+		<Polish>Wybierz jednostk&#234; artyleryjsk&#185;, wybierz misj&#234; ataku dystansowego a nast&#234;pnie kliknij na polu, kt&#243;re chcesz zbombardowa&#230;.</Polish>
 		<Russian>Выбрав артиллерийский юнит, нажмите кнопку бомбардировки, а затем щелкните клетку для обстрела.</Russian>
 	</TEXT>
 	<TEXT>
@@ -1028,7 +1028,7 @@
 		<German>Wache (Landeinheiten)</German>
 		<Italian>Sentinella (unità terrestri)</Italian>
 		<Spanish>Vigilar (unidades terrestres)</Spanish>
-		<Polish>Warta (Jednostki lądowe)</Polish>
+		<Polish>Warta (Jednostki l&#185;dowe)</Polish>
 		<Russian>Сторожить (Наземные войска)</Russian>
 	</TEXT>
 	<TEXT>
@@ -1038,7 +1038,7 @@
 		<German>Einheit in den Wachmodus versetzen. Die Einheit wird erst wieder aktiv, wenn eine feindliche Landeinheit ihr Sichtfeld betritt.</German>
 		<Italian>[NEWLINE]Unità inattiva finché un'unità terrestre nemica non entra nel suo raggio di visibilità.</Italian>
 		<Spanish>La unidad permanecerá inactiva hasta que una unidad terrestre enemiga se sitúe en su campo de visión.</Spanish>
-		<Polish>Jednostka pozostaje bezczynna, dopóki wroga jednostka lądowa nie zbliży się do zasięgu.</Polish>
+		<Polish>Jednostka pozostaje bezczynna, dop&#243;ki wroga jednostka l&#185;dowa nie zbli&#191;y si&#234; do zasi&#234;gu.</Polish>
 		<Russian>Подразделение будет неактивно, пока вражеские наземные подразделения не появятся в зоне видимости.</Russian>
 	</TEXT>
 	<TEXT>
@@ -1058,7 +1058,7 @@
 		<German>Einheit in den Wachmodus versetzen. Die Einheit wird erst wieder aktiv, wenn eine feindliche Marineeinheit ihr Sichtfeld betritt.</German>
 		<Italian>[NEWLINE]Unità inattiva finché un'unità navale nemica non entra nel suo raggio di visibilità.</Italian>
 		<Spanish>La unidad permanecerá inactiva hasta que una unidad naval enemiga se sitúe en su campo de visión.</Spanish>
-		<Polish>Jednostka pozostaje bezczynna, dopóki wroga jednostka morska nie zbliży się do zasięgu.</Polish>
+		<Polish>Jednostka pozostaje bezczynna, dop&#243;ki wroga jednostka morska nie zbli&#191;y si&#234; do zasi&#234;gu.</Polish>
 		<Russian>Подразделение будет неактивно, пока вражеские корабли не появятся в зоне видимости.</Russian>
 	</TEXT>
 	<TEXT>
@@ -1078,7 +1078,7 @@
 		<German>Lässt eine Einheit inaktiv bleiben, bis sie vollständig geheilt ist oder sich eine feindliche Einheit nähert</German>
 		<Italian>[NEWLINE]L'unità rimane inattiva finché non ritorna a piena forza o un'unità nemica non entra nel suo raggio di visibilità.</Italian>
 		<Spanish>La unidad permanecerá inactiva hasta que recobre el total de su fuerza o una unidad enemiga se sitúe en su campo de visión.</Spanish>
-		<Polish>Jednostka pozostaje bezczynna, dopóki nie osiąga pełnej siły lub jednostka wroga nie zbliży się do zasięgu.</Polish>
+		<Polish>Jednostka pozostaje bezczynna, dop&#243;ki nie osi&#185;ga pe&#179;nej si&#179;y lub jednostka wroga nie zbli&#191;y si&#234; do zasi&#234;gu.</Polish>
 		<Russian>Подразделение будет неактивно до тех пор, пока не достигнет полной силы или вражеский отряд не появится в зоне видимости.</Russian>
 	</TEXT>
 	<TEXT>

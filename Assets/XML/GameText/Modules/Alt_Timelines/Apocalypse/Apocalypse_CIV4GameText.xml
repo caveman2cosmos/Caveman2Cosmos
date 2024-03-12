@@ -16,7 +16,7 @@
 		<Tag>TXT_KEY_UNIT_APOCALYPSE_URBAN_CROSSBOWMAN_PEDIA</Tag>
 		<English>In the years following the Great War, the United States devolved into a post-apocalyptic environment commonly dubbed "the Wasteland". The War and subsequent nuclear Armageddon has severely depopulated the country, leaving large expanses of property decaying from neglect. In addition, virtually all food and water is irradiated and radiation exposure, combined with a mutagenic bioweapon that was accidentally released into the atmosphere during the War, have caused mutation in nearly all forms of life. With a large portion of the country's infrastructure in ruins, basic necessities are scarce. Barter is the common method of exchange, with bottlecaps providing a more conventional form of currency. Most cities and towns are empty, having been looted and deserted in favor of smaller, makeshift communities scattered around the Wasteland.</English>
 		<Italian>Il [COLOR_UNIT_TEXT]balestriere urbano[COLOR_REVERT] è un'unità post-apocalittica.</Italian>
-		<Polish>Fantastyka postapokaliptyczna - wizja, konwencja traktująca o wydarzeniach bezpośrednio po kataklizmie, apokalipsie. W książkach lub filmach fabuła rozgrywa się zazwyczaj po wojnie jądrowej, pandemii lub katastrofie ekologicznej. Ziemia staje się wówczas areną dla ludzi czerpiących z resztek zniszczonej cywilizacji, starających się przetrwać i przystosować do niesprzyjających warunków.</Polish>
+		<Polish>Fantastyka postapokaliptyczna - wizja, konwencja traktuj&#185;ca o wydarzeniach bezpo&#156;rednio po kataklizmie, apokalipsie. W ksi&#185;&#191;kach lub filmach fabu&#179;a rozgrywa si&#234; zazwyczaj po wojnie j&#185;drowej, pandemii lub katastrofie ekologicznej. Ziemia staje si&#234; w&#243;wczas aren&#185; dla ludzi czerpi&#185;cych z resztek zniszczonej cywilizacji, staraj&#185;cych si&#234; przetrwa&#230; i przystosowa&#230; do niesprzyjaj&#185;cych warunk&#243;w.</Polish>
 		<Russian>В годы после Великой войны Соединенные Штаты превратились в постапокалиптическую территорию, обычно называемую "Пустошь". Война и последовавший за ней ядерный Армагеддон серьезной уменьшили население, и поэтому огромные территории приходят в упадок от запустения. Кроме того, практически вся еда и вода подверглась радиационному облучению. В сочетании с мутагенным действием биологического оружия, случайно попавшего в атмосферу во время Войны, это вызвало мутации практически всех форм жизни. Большая часть инфраструктуры страны превращена в руины, в дефиците все самое необходимое. Распространен способ обмена с пробками вместо обычных денег. Большинство городов безлюдны и разграблены. Их заменили небольшие, импровизированные общины, разбросанные по Пустоши.</Russian>
 	</TEXT>
 	<TEXT>
@@ -28,7 +28,7 @@
 			<Plural>0</Plural>
 		</French>
 		<Italian>Guardia con piede di porco</Italian>
-		<Polish>Strażnik z łomem</Polish>
+		<Polish>Stra&#191;nik z &#179;omem</Polish>
 		<Russian>Постапокалиптический стражник с гвоздодером</Russian>
 	</TEXT>
 	<TEXT>
@@ -40,7 +40,7 @@
 			<Plural>0</Plural>
 		</French>
 		<Italian>Guerriero con accetta</Italian>
-		<Polish>Wojownik z siekierą</Polish>
+		<Polish>Wojownik z siekier&#185;</Polish>
 		<Russian>Постапокалиптический боец с топориком</Russian>
 	</TEXT>
 	<TEXT>
@@ -52,7 +52,7 @@
 			<Plural>0</Plural>
 		</French>
 		<Italian>Guerriero con machete</Italian>
-		<Polish>Wojownik z maczetą</Polish>
+		<Polish>Wojownik z maczet&#185;</Polish>
 		<Russian>Постапокалиптический боец с мачете</Russian>
 	</TEXT>
 	<TEXT>
@@ -64,7 +64,7 @@
 			<Plural>0</Plural>
 		</French>
 		<Italian>Lanciatore di cocktail molotov</Italian>
-		<Polish>Miotacz koktajli Mołotowa</Polish>
+		<Polish>Miotacz koktajli Mo&#179;otowa</Polish>
 		<Russian>Постапокалиптический метатель коктейля Молотова</Russian>
 	</TEXT>
 	<TEXT>
@@ -83,7 +83,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_URBAN_HORSEMAN_PEDIA</Tag>
 		<English>Urban horsemen have resorted to using horses instead of mechanized vehicles, because computerized vehicles are vulnerable to cyber attacks and are more easily located by tracking devices and scanning equipment. The horse is a low tech solution to a problem created by advanced technology. These mounted urban soldiers are propelled by their desparation and their hope that any change will be for the better.</English>
-		<Polish>Nowoczesna Konnica to jednostka, którą możesz zwerbowac jeśli z jakiś powodów nie masz dostępu do nowoczesnych pojazdów.</Polish>
+		<Polish>Nowoczesna Konnica to jednostka, kt&#243;r&#185; mo&#191;esz zwerbowac je&#156;li z jaki&#156; powod&#243;w nie masz dost&#234;pu do nowoczesnych pojazd&#243;w.</Polish>
 		<Italian>I cavalieri urbani ricorrono all'uso di cavalli invece che ai veicoli meccanizzati, perché i veicoli computerizzati sono vulnerabili agli attacchi informatici e sono più facilmente individuabili dai dispositivi di tracciamento e dalle apparecchiature di scansione. Il cavallo è una soluzione low tech a un problema creato dalla tecnologia avanzata. Questi soldati urbani a cavallo sono spinti dalla loro disperazione e dalla loro speranza che ogni cambiamento sarà per il meglio.</Italian>
 		<Russian>Городские всадники стали использовать лошадей вместо механизированного транспорта, поскольку компьютеризированные машины уязвимы для кибератак и легче обнаруживаются сканерами и устройствами слежения. Лошадь - примитивное решение проблемы, созданной передовыми технологиями. Эти солдаты ведомы отчаянием и надеждой на то, что любые перемены будут к лучшему.</Russian>
 	</TEXT>

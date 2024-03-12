@@ -5,7 +5,7 @@
 		<English>Fatigue: Strength/rnd</English>
 		<French>Fatigue: Force/rnd</French>
 		<Italian>Fatica: Forza/turno</Italian>
-		<Polish>Zmęczenie: Siła/Runda</Polish>
+		<Polish>Zm&#234;czenie: Si&#179;a/Runda</Polish>
 		<Russian>Усталость: сила/ход</Russian>
 	</TEXT>
 	<TEXT>
@@ -13,7 +13,7 @@
 		<English>Rage: Strength/rnd</English>
 		<French>Rage: Force/rnd</French>
 		<Italian>Rabbia: Forza/turno</Italian>
-		<Polish>Wściekłość: Siła/Runda</Polish>
+		<Polish>W&#156;ciek&#179;o&#156;&#230;: Si&#179;a/Runda</Polish>
 		<Russian>Ярость: Сила/ход</Russian>
 	</TEXT>
 	<TEXT>
@@ -29,7 +29,7 @@
 		<English>Attacker Armor:</English>
 		<French>Armure de l'Attaquant:</French>
 		<Italian>Armatura degli attaccanti:</Italian>
-		<Polish>Pancerz Atakującego:</Polish>
+		<Polish>Pancerz Atakuj&#185;cego:</Polish>
 		<Russian>Броня атакующего:</Russian>
 	</TEXT>
 	<TEXT>
@@ -38,7 +38,7 @@
 		<French>Esquive de l'Attaquant:</French>
 		<German>Ausweichen (Angreifer):</German>
 		<Italian>Schivata degli attaccanti:</Italian>
-		<Polish>Unik Atakującego:</Polish>
+		<Polish>Unik Atakuj&#185;cego:</Polish>
 		<Russian>Уклонение атакующего:</Russian>
 	</TEXT>
 	<TEXT>
@@ -47,7 +47,7 @@
 		<French>Modificateur d'Attaque/Round:</French>
 		<German>Angriffsmodifikator pro Runde:</German>
 		<Italian>Modificatore d'attacco a turno:</Italian>
-		<Polish>Celność Atakującego / Runda:</Polish>
+		<Polish>Celno&#156;&#230; Atakuj&#185;cego / Runda:</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_COMBAT_ARMOR_COMPARE_ATTACKER_PRECISION</Tag>
@@ -55,7 +55,7 @@
 		<French>Précision de l'Attaquant:</French>
 		<German>Präzision (Angreifer):</German>
 		<Italian>Precisione degli attaccanti:</Italian>
-		<Polish>Celność Atakującego:</Polish>
+		<Polish>Celno&#156;&#230; Atakuj&#185;cego:</Polish>
 		<Russian>Точность атакующего:</Russian>
 	</TEXT>
 	<TEXT>
@@ -63,7 +63,7 @@
 		<English>Attacker Puncture:</English>
 		<French>Pénétration de l'Attaquant:</French>
 		<Italian>Perforazione degli attaccanti:</Italian>
-		<Polish>Przebicie Atakującego:</Polish>
+		<Polish>Przebicie Atakuj&#185;cego:</Polish>
 		<Russian>Бронебойность атакующего:</Russian>
 	</TEXT>
 	<TEXT>
@@ -71,7 +71,7 @@
 		<English>Defender Armor:</English>
 		<French>Armure du Défenseur:</French>
 		<Italian>Armatura dei difensori:</Italian>
-		<Polish>Pancerz Obrońcy:</Polish>
+		<Polish>Pancerz Obro&#241;cy:</Polish>
 		<Russian>Броня обороняющегося:</Russian>
 	</TEXT>
 	<TEXT>
@@ -80,7 +80,7 @@
 		<French>Esquive du défenseur:</French>
 		<German>Ausweichen (Verteidiger):</German>
 		<Italian>Schivata dei difensori:</Italian>
-		<Polish>Unik Obrońcy:</Polish>
+		<Polish>Unik Obro&#241;cy:</Polish>
 		<Russian>Уклонение обороняющегося:</Russian>
 	</TEXT>
 	<TEXT>
@@ -89,7 +89,7 @@
 		<French>Modificateur de Défense/Round:</French>
 		<German>Verteidigungsmodifikator pro Runde:</German>
 		<Italian>Modificatore di difesa a turno:</Italian>
-		<Polish>Celność Obrońcy / Runda:</Polish>
+		<Polish>Celno&#156;&#230; Obro&#241;cy / Runda:</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_COMBAT_ARMOR_COMPARE_DEFENDER_PRECISION</Tag>
@@ -97,49 +97,49 @@
 		<French>Précision du Défenseur:</French>
 		<German>Präzision (Verteidiger):</German>
 		<Italian>Precisione dei difensori:</Italian>
-		<Polish>Celność Obrońcy:</Polish>
+		<Polish>Celno&#156;&#230; Obro&#241;cy:</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_COMBAT_ARMOR_COMPARE_DEFENDER_PUNCTURE</Tag>
 		<English>Defender Puncture:</English>
 		<French>Pénétration du Défenseur:</French>
 		<Italian>Perforazione dei difensori:</Italian>
-		<Polish>Przebicie Obrońcy:</Polish>
+		<Polish>Przebicie Obro&#241;cy:</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_COMBAT_ARMOR_COMPARE_TOTAL_ATTACKER_ARMOR</Tag>
 		<English>Total Attacker Armor:</English>
 		<French>Total Armure de l'Attaquant:</French>
 		<Italian>Armatura totale degli attaccanti:</Italian>
-		<Polish>Cały Pancerz Atakującego:</Polish>
+		<Polish>Ca&#179;y Pancerz Atakuj&#185;cego:</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_COMBAT_ARMOR_COMPARE_TOTAL_DEFENDER_ARMOR</Tag>
 		<English>Total Defender Armor:</English>
 		<French>Total Armure du Défenseur:</French>
 		<Italian>Armatura totale dei difensori:</Italian>
-		<Polish>Cały Pancerz Obrońcy:</Polish>
+		<Polish>Ca&#179;y Pancerz Obro&#241;cy:</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_COMBAT_ATTACKER_CHANCE_CRITICAL</Tag>
 		<English>Attacker Chance to Inflict Critical per Hit:</English>
 		<French>Chances d'infliger un coup critique:</French>
 		<Italian>Chance di infliggere colpi critici:</Italian>
-		<Polish>Szansa Atakującego na Atak Krytyczny:</Polish>
+		<Polish>Szansa Atakuj&#185;cego na Atak Krytyczny:</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_COMBAT_ATTACKER_COLD_DAMAGE</Tag>
 		<English>Your Attacks inflict Cold Damage</English>
 		<French>Vos attaques infligent des dégâts liés au froid</French>
 		<Italian>I tuoi attacchi hanno inflitto danni legati al freddo</Italian>
-		<Polish>Twoje ataki zadają Obrażenia od Zimna</Polish>
+		<Polish>Twoje ataki zadaj&#185; Obra&#191;enia od Zimna</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_COMBAT_ATTACKER_CRITICAL_MODIFIER</Tag>
 		<English>Attacker Critical Modifier:</English>
 		<French>Modif. Coup critique de l'Attaquant:</French>
 		<Italian>Modificatori ai colpi critici degli attaccanti:</Italian>
-		<Polish>Szansa Atakującego na Atak Krytyczny:</Polish>
+		<Polish>Szansa Atakuj&#185;cego na Atak Krytyczny:</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_COMBAT_ATTACKER_DAMAGE_MODIFIER</Tag>
@@ -152,14 +152,14 @@
 		<English>Attacker May Afflict:</English>
 		<French>L'Attaquant va infliger:</French>
 		<Italian>L'attaccante può infliggere:</Italian>
-		<Polish>Atakujący Może Zadać:</Polish>
+		<Polish>Atakuj&#185;cy Mo&#191;e Zada&#230;:</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_COMBAT_ATTACKER_POWER_SHOTS</Tag>
 		<English>Attacker Power Shots:</English>
 		<French>Coups Puissants de l'Attaquant:</French>
 		<Italian>Colpi potenti degli attaccanti:</Italian>
-		<Polish>Silne Ataki Atakującego:</Polish>
+		<Polish>Silne Ataki Atakuj&#185;cego:</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_COMBAT_ATTACKER_POWER_SHOTS_COMBAT_MODIFIER</Tag>
@@ -181,7 +181,7 @@
 		<French>Modif. Précision du CP:</French>
 		<German>Präzisionsmodifikator bei Wuchtschüssen:</German>
 		<Italian>Modificatore di precisione durante Colpi potenti:</Italian>
-		<Polish>Modyfikator Celności podczas Silnego Ataku:</Polish>
+		<Polish>Modyfikator Celno&#156;ci podczas Silnego Ataku:</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_COMBAT_ATTACKER_POWER_SHOTS_PUNCTURE_MODIFIER</Tag>
@@ -194,13 +194,13 @@
 		<Tag>TXT_KEY_COMBAT_ATTACK_FROM_SIZE_MODIFIER</Tag>
 		<English>[ICON_BULLET]%D1_Bonus%% from Size Differential</English>
 		<French>[ICON_BULLET]%D1_Bonus%% de la différence de taille</French>
-		<Polish>[ICON_BULLET]%D1_Bonus%% za różnicę w wielkości</Polish>
+		<Polish>[ICON_BULLET]%D1_Bonus%% za r&#243;&#191;nic&#234; w wielko&#156;ci</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_COMBAT_ATTACK_FROM_VOLUME_MODIFIER</Tag>
 		<English>[ICON_BULLET]%D1_Bonus%% from Group Volume Differential</English>
 		<French>[ICON_BULLET]%D1_Bonus%% de la Différence de taille de groupe</French>
-		<Polish>[ICON_BULLET]%D1_Bonus%% za zagęszczenie grupy</Polish>
+		<Polish>[ICON_BULLET]%D1_Bonus%% za zag&#234;szczenie grupy</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_COMBAT_ATTACK_MODIFIER</Tag>
@@ -214,7 +214,7 @@
 		<English>Repeatedly attacks until damaged</English>
 		<French>Attaque indéfiniment tant que indemne</French>
 		<Italian>Attacco continuo, finché riceve danni</Italian>
-		<Polish>Powtarzaj Ataki póki nie otrzymasz Obrażeń</Polish>
+		<Polish>Powtarzaj Ataki p&#243;ki nie otrzymasz Obra&#191;e&#241;</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_COMBAT_BASE_CHANCE</Tag>
@@ -228,28 +228,28 @@
 		<Tag>TXT_KEY_COMBAT_BREAKDOWN_EFFECTS</Tag>
 		<English>Breakdown: %d1_chance%% chance per round of reducing city defenses by %d2_damage%%. Opponent Repel values modify this Chance. Damage modified by City Bombard Defense.</English>
 		<French>Démolition: %d1_chance%% Prob. par round de réduire les défense de la ville de %d2_damage%%. Les valeurs d'Expulsion de l'adversaire modifient cette probabilité.</French>
-		<Polish>Załamanie się: %d1_chance%% szansa za każdą turę redukowania obrony miasta. przez %d2_damage%%. Wrogie Odstraszanie modyfikuje tą szansę. Obrażenia zmodyfikowane przez Obroną Miasta przed Bombardowaniem.</Polish>
+		<Polish>Za&#179;amanie si&#234;: %d1_chance%% szansa za ka&#191;d&#185; tur&#234; redukowania obrony miasta. przez %d2_damage%%. Wrogie Odstraszanie modyfikuje t&#185; szans&#234;. Obra&#191;enia zmodyfikowane przez Obron&#185; Miasta przed Bombardowaniem.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_COMBAT_DEFENDER_CHANCE_CRITICAL</Tag>
 		<English>Defender Chance to Inflict Critical per Hit:</English>
 		<French>Chances d'infliger un coup critique:</French>
 		<Italian>Chance di infliggere colpi critici:</Italian>
-		<Polish>Szansa Obrońcy na Atak Krytyczny:</Polish>
+		<Polish>Szansa Obro&#241;cy na Atak Krytyczny:</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_COMBAT_DEFENDER_COLD_DAMAGE</Tag>
 		<English>Defender Attacks inflict Cold Damage</English>
 		<French>Les ripostes du Défenseur infligent des dégâts liés au froid</French>
 		<Italian>Gli attacchi dei difensori hanno inflitto danni legati al freddo</Italian>
-		<Polish>Ataki Obrońcy zadają Obrażenia od Zimna</Polish>
+		<Polish>Ataki Obro&#241;cy zadaj&#185; Obra&#191;enia od Zimna</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_COMBAT_DEFENDER_CRITICAL_MODIFIER</Tag>
 		<English>Defender Critical Modifier:</English>
 		<French>Modif. Coup critique du Défenseur:</French>
 		<Italian>Modificatore ai colpi critici dei difensori:</Italian>
-		<Polish>Szansa Obrońcy na Atak Krytyczny:</Polish>
+		<Polish>Szansa Obro&#241;cy na Atak Krytyczny:</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_COMBAT_DEFENDER_DAMAGE_MODIFIER</Tag>
@@ -263,14 +263,14 @@
 		<English>Defender May Afflict:</English>
 		<French>Le Défenseur va infliger:</French>
 		<Italian>Il difensore può infliggere:</Italian>
-		<Polish>Obrońcy Mogą Spowodować:</Polish>
+		<Polish>Obro&#241;cy Mog&#185; Spowodowa&#230;:</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_COMBAT_DEFENDER_POWER_SHOTS</Tag>
 		<English>Defender Power Shots:</English>
 		<French>Coups Puissants du Défenseur:</French>
 		<Italian>Colpi potenti dei difensori:</Italian>
-		<Polish>Silne Ataki Obrońcy:</Polish>
+		<Polish>Silne Ataki Obro&#241;cy:</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_COMBAT_DEFENDER_POWER_SHOTS_COMBAT_MODIFIER</Tag>
@@ -292,7 +292,7 @@
 		<French>Modif. Précision du CP:</French>
 		<German>Präzisionsmodifikator bei Wuchtschüssen:</German>
 		<Italian>Modificatore di precisione durante Colpi potenti:</Italian>
-		<Polish>Modyfikator Celności podczas Silnego Ataku:</Polish>
+		<Polish>Modyfikator Celno&#156;ci podczas Silnego Ataku:</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_COMBAT_DEFENDER_POWER_SHOTS_PUNCTURE_MODIFIER</Tag>
@@ -337,28 +337,28 @@
 		<English>vs Attacker Overrun:</English>
 		<French>contre Écrasement de l'Attaquant:</French>
 		<Italian>contro Invasione degli attaccanti:</Italian>
-		<Polish>przeciwko Inwazji Atakującego:</Polish>
+		<Polish>przeciwko Inwazji Atakuj&#185;cego:</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_COMBAT_FORTIFICATION_COMPARE_ATTACKER_UNYIELDING</Tag>
 		<English>vs Unyielding:</English>
 		<French>contre Attaquant Inflexible:</French>
 		<Italian>Contro Inflessibile degli attaccanti:</Italian>
-		<Polish>przeciwko nieustępliwości:</Polish>
+		<Polish>przeciwko nieust&#234;pliwo&#156;ci:</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_COMBAT_FORTIFICATION_COMPARE_DEFENDER_FORTIFICATION</Tag>
 		<English>Defender Fortification:</English>
 		<French>Fortification du Défenseur:</French>
 		<Italian>Fortificazione dei difensori:</Italian>
-		<Polish>Fortyfikacja Obrońcy:</Polish>
+		<Polish>Fortyfikacja Obro&#241;cy:</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_COMBAT_FORTIFICATION_COMPARE_DEFENDER_REPEL</Tag>
 		<English>Defender Repel:</English>
 		<French>Expulsion du Défenseur:</French>
 		<Italian>Respinta dei difensori:</Italian>
-		<Polish>Odepchnięcie Obrońcy:</Polish>
+		<Polish>Odepchni&#234;cie Obro&#241;cy:</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_COMBAT_FORTIFICATION_COMPARE_FORTIFIED_REPEL</Tag>
@@ -372,14 +372,14 @@
 		<English>Total Fortification:</English>
 		<French>Total Fortification:</French>
 		<Italian>Fortificazione totale:</Italian>
-		<Polish>Całkowita Fortyfikacja:</Polish>
+		<Polish>Ca&#179;kowita Fortyfikacja:</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_COMBAT_FORTIFICATION_COMPARE_TOTAL_REPEL</Tag>
 		<English>Total Repel:</English>
 		<French>Total Expulsion:</French>
 		<Italian>Respinta totale:</Italian>
-		<Polish>Całkowite Odepchnięcie:</Polish>
+		<Polish>Ca&#179;kowite Odepchni&#234;cie:</Polish>
 		<Russian>Полное Отражение:</Russian>
 	</TEXT>
 	<TEXT>
@@ -395,21 +395,21 @@
 		<English>Attacker Knockback:</English>
 		<French>Écrasement de l'Attaquant:</French>
 		<Italian>Sbaraglio degli attaccanti:</Italian>
-		<Polish>Odrzut Atakującego:</Polish>
+		<Polish>Odrzut Atakuj&#185;cego:</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_COMBAT_KNOCKBACK_DEFENDER_UNYIELDING</Tag>
 		<English>vs Defender Unyielding:</English>
 		<French>contre Inflexible du Défenseur:</French>
 		<Italian>contro Inflessibile dei difensori:</Italian>
-		<Polish>przeciwko nieustępliwości Obrońcy:</Polish>
+		<Polish>przeciwko nieust&#234;pliwo&#156;ci Obro&#241;cy:</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_COMBAT_KNOCKBACK_TOTAL_KNOCKBACK</Tag>
 		<English>Total Knockback:</English>
 		<French>Total Écrasement:</French>
 		<Italian>Sbaraglio totale:</Italian>
-		<Polish>Całkowity Odrzut:</Polish>
+		<Polish>Ca&#179;kowity Odrzut:</Polish>
 		<Russian>Общий Нокдаун:</Russian>
 	</TEXT>
 	<TEXT>
@@ -423,21 +423,21 @@
 		<English>Opponent Fortitude = Total Chance:</English>
 		<French>Fortitude de l'opposant = Total Chance:</French>
 		<Italian>Forza d'animo dell'avversario = Chance totali:</Italian>
-		<Polish>Wytrzymałość Wroga = Całkowita Szansa:</Polish>
+		<Polish>Wytrzyma&#179;o&#156;&#230; Wroga = Ca&#179;kowita Szansa:</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_COMBAT_MAY_AFFLICT_DELAYED</Tag>
 		<English>Will check affliction after battle if the enemy is damaged.</English>
 		<French>Vérifie l'affliction après le combat si l'ennemi est blessé.</French>
 		<Italian>Verifica l'afflizione dopo una battaglia se il nemico è ferito.</Italian>
-		<Polish>Sprawdzi osłabienia po bitwie jeśli wróg został ranny.</Polish>
+		<Polish>Sprawdzi os&#179;abienia po bitwie je&#156;li wr&#243;g zosta&#179; ranny.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_COMBAT_MAY_AFFLICT_IMMEDIATE</Tag>
 		<English>Will check affliction the first round enemy is damaged.</English>
 		<French>Vérifie l'affliction lors du premier round où l'ennemi est blessé.</French>
 		<Italian>Verifica l'afflizione nel primo turno in cui un nemico è danneggiato.</Italian>
-		<Polish>Sprawdzi osłabienia przy pierwszej rundzie z obrażeniami.</Polish>
+		<Polish>Sprawdzi os&#179;abienia przy pierwszej rundzie z obra&#191;eniami.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_COMBAT_MESSAGE_DEFEATED</Tag>
@@ -465,7 +465,7 @@
 		<German>(Hügel-Verteidigung: %D1%%)</German>
 		<Italian>(Difesa in collina: %D1%%)</Italian>
 		<Spanish>(Defender colinas: %D1%%)</Spanish>
-		<Polish>(Obrona na wzgórzach: %D1%%)</Polish>
+		<Polish>(Obrona na wzg&#243;rzach: %D1%%)</Polish>
 		<Russian>(Защита - холмы: %D1%%)</Russian>
 	</TEXT>
 	<TEXT>
@@ -550,7 +550,7 @@
 		<French>Retraite du Défenseur: %s1%%</French>
 		<German>Rückzugschance (Verteidiger): %s1%%</German>
 		<Italian>Probabilità di ritirata dei difensori: %s1%%</Italian>
-		<Polish>Szanse na Odwrót Obrońcy: %s1%%</Polish>
+		<Polish>Szanse na Odwr&#243;t Obro&#241;cy: %s1%%</Polish>
 		<Russian>Шансы на отступление защитника: %s1%%</Russian>
 	</TEXT>
 	<TEXT>
@@ -568,7 +568,7 @@
 		<French>Expulsion de l'Attaquant: %s1%%</French>
 		<German>Abwehr des Angreifers: %s1%%</German>
 		<Italian>Probabilità di respinta degli attaccanti: %s1%%</Italian>
-		<Polish>Szansa na Odepchnięcie: %s1%%</Polish>
+		<Polish>Szansa na Odepchni&#234;cie: %s1%%</Polish>
 		<Russian>Шанс отразить атаку противника: %s1%%</Russian>
 	</TEXT>
 	<TEXT>
@@ -598,7 +598,7 @@
 		<German>[ICON_BULLET]%D1_Bonus%% Verfolgung von %s2:3_Type</German>
 		<Italian>[ICON_BULLET]%D1_Bonus%% all'Inseguimento contro %s2_Type</Italian>
 		<Spanish>[ICON_BULLET]%D1_Bonus%% Pursuit contra %s2:2_Type</Spanish>
-		<Polish>[ICON_BULLET]%D1_Bonus%% Pościg za %s2_Type</Polish>
+		<Polish>[ICON_BULLET]%D1_Bonus%% Po&#156;cig za %s2_Type</Polish>
 		<Russian>[ICON_BULLET]%D1_Bonus%% к преследованию против %s2_Type</Russian>
 	</TEXT>
 	<TEXT>
@@ -608,7 +608,7 @@
 		<German>[ICON_BULLET]%D1_Bonus%% Repel gegen %s2_Type</German>
 		<Italian>[ICON_BULLET]%D1_Bonus%% alla Respinta contro %s2_Type</Italian>
 		<Spanish>[ICON_BULLET]%D1_Bonus%% Repel contra %s2:2_Type</Spanish>
-		<Polish>[ICON_BULLET]%D1_Bonus%% do Odepchnięcia vs: %s2_Type</Polish>
+		<Polish>[ICON_BULLET]%D1_Bonus%% do Odepchni&#234;cia vs: %s2_Type</Polish>
 		<Russian>[ICON_BULLET]%D1_Bonus%% к Отражению в бою с %s2_Type</Russian>
 	</TEXT>
 	<TEXT>
@@ -618,7 +618,7 @@
 		<German>[ICON_BULLET]%D1_Bonus%% Round Stun gegen %s2_Type</German>
 		<Italian>[ICON_BULLET]%D1_Bonus%% ai colpi stordenti contro %s2_Type</Italian>
 		<Spanish>[ICON_BULLET]%D1_Bonus%% Round Stun contra %s2:2_Type</Spanish>
-		<Polish>[ICON_BULLET]%D1_Bonus%% do Oszołomienia vs: %s2_Type</Polish>
+		<Polish>[ICON_BULLET]%D1_Bonus%% do Oszo&#179;omienia vs: %s2_Type</Polish>
 		<Russian>[ICON_BULLET]%D1_Bonus%% к круг. оглушению против %s2_Type</Russian>
 	</TEXT>
 	<TEXT>
@@ -628,7 +628,7 @@
 		<German>[ICON_BULLET]%D1_Bonus%% Withdraw gegen %s2_Type</German>
 		<Italian>[ICON_BULLET]%D1_Bonus%% alla Ritirata contro %s2_Type</Italian>
 		<Spanish>[ICON_BULLET]%D1_Bonus%% Withdraw contra %s2:2_Type</Spanish>
-		<Polish>[ICON_BULLET]%D1_Bonus%% Wycofanie się przed %s2_Type</Polish>
+		<Polish>[ICON_BULLET]%D1_Bonus%% Wycofanie si&#234; przed %s2_Type</Polish>
 		<Russian>[ICON_BULLET]Шанс отступить в бою с %s2_Type: %D1_Bonus%%</Russian>
 	</TEXT>
 	<TEXT>
@@ -636,28 +636,28 @@
 		<English>[ICON_BULLET]%D1_Bonus%% from Rampage bonus</English>
 		<French>[ICON_BULLET]%D1_Bonus%% Bonus (Frénésie)</French>
 		<Italian>[ICON_BULLET]%D1_Bonus%% dalla Frenesia</Italian>
-		<Polish>[ICON_BULLET]%D1_Bonus%% z Szału</Polish>
+		<Polish>[ICON_BULLET]%D1_Bonus%% z Sza&#179;u</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_COMBAT_ROUND_STUN_ATTACKER_GRAND_TOTAL</Tag>
 		<English>Total Attacker Chance for Round Stun:</English>
 		<French>Probabilité totale d'étourdissement par Round (Attaquant):</French>
 		<Italian>Probabilità totali di stordimento a turno (Attaccante):</Italian>
-		<Polish>Całkowita Szansa Atakującego na Oszołomienie:</Polish>
+		<Polish>Ca&#179;kowita Szansa Atakuj&#185;cego na Oszo&#179;omienie:</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_COMBAT_ROUND_STUN_ATTACKER_MINUS_DEFENDER_ENDURANCE</Tag>
 		<English>Minus Defender Endurance Modifier:</English>
 		<French>Modif. d'Endurance du Défenseur:</French>
 		<Italian>Modificatore dovuto alla Persistenza del difensore:</Italian>
-		<Polish>Minusowy Modyfikator Wytrzymałości Obrońcy:</Polish>
+		<Polish>Minusowy Modyfikator Wytrzyma&#179;o&#156;ci Obro&#241;cy:</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_COMBAT_ROUND_STUN_DEFENDER_GRAND_TOTAL</Tag>
 		<English>Total Defender Chance for Round Stun:</English>
 		<French>Probabilité Totale d'Etourdissement du Défenseur:</French>
 		<Italian>Probabilità totali di stordimento a turno (Difensore):</Italian>
-		<Polish>Całkowita Szansa Obrońcy na Oszołomienie:</Polish>
+		<Polish>Ca&#179;kowita Szansa Obro&#241;cy na Oszo&#179;omienie:</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_COMBAT_ROUND_STUN_PLUS_CRITICAL</Tag>
@@ -671,42 +671,42 @@
 		<English>Plus Electrical Damage Modifier:</English>
 		<French>Modif. Dégâts Électriques Pos.:</French>
 		<Italian>Modificatore dovuto a Danno elettrico:</Italian>
-		<Polish>Dodatkowy Modyfikator Obrażeń od Elektryczności:</Polish>
+		<Polish>Dodatkowy Modyfikator Obra&#191;e&#241; od Elektryczno&#156;ci:</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_COMBAT_ROUND_STUN_START</Tag>
 		<English>Chance to Stun is % of damage dealt each round</English>
 		<French>Probabilité d'Etourdissement en % des dégâts subis à chaque round</French>
 		<Italian>Le probabilità di Stordimento sono il % del danno inflitto ogni turno</Italian>
-		<Polish>Szansa na oszołomienie to % zadanych obrażeń w każdej rundzie</Polish>
+		<Polish>Szansa na oszo&#179;omienie to % zadanych obra&#191;e&#241; w ka&#191;dej rundzie</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_COMBAT_ROUND_STUN_TOTAL_ATTACKER_ROUND_STUN</Tag>
 		<English>Attacker Round Stun Chance:</English>
 		<French>Probabilité d'Etourdissement de l'Attaquant:</French>
 		<Italian>Probabilità di Stordimento (Attaccante):</Italian>
-		<Polish>Szansa Atakującego na Oszołomienie:</Polish>
+		<Polish>Szansa Atakuj&#185;cego na Oszo&#179;omienie:</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_COMBAT_ROUND_STUN_TOTAL_DEFENDER_ROUND_STUN</Tag>
 		<English>Defender Round Stun Chance:</English>
 		<French>Probabilité d'Etourdissement du Défenseur:</French>
 		<Italian>Probabilità di Stordimento (Difensore):</Italian>
-		<Polish>Szansa Obrońcy na Oszołomienie:</Polish>
+		<Polish>Szansa Obro&#241;cy na Oszo&#179;omienie:</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_COMBAT_ROUND_STUN_VS_ATTACKER_COMBAT_CLASS</Tag>
 		<English>Modified by Attacker Combat Class:</English>
 		<French>Modif. de la classe de combat de l'Attaquant:</French>
 		<Italian>Modificato dalle classi di combattimento dell'attaccante:</Italian>
-		<Polish>Modyfikator Klasy Atakującego:</Polish>
+		<Polish>Modyfikator Klasy Atakuj&#185;cego:</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_COMBAT_ROUND_STUN_VS_DEFENDER_COMBAT_CLASS</Tag>
 		<English>Modified by Defender Combat Class:</English>
 		<French>Modif. de la classe de combat du Défenseur:</French>
 		<Italian>Modificato dalle classi di combattimento del difensore:</Italian>
-		<Polish>Modyfikator Klasy Obrońcy:</Polish>
+		<Polish>Modyfikator Klasy Obro&#241;cy:</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_COMBAT_SURROUNDED_DEFENSE_MOD</Tag>
@@ -723,7 +723,7 @@
 		<English>[ICON_BULLET]%D1_Bonus%% from Tires penalty</English>
 		<French>[ICON_BULLET]%D1_Bonus%% Pénalité (Lassitude)</French>
 		<Italian>[ICON_BULLET]%D1_Bonus%% dalla Stanchezza</Italian>
-		<Polish>[ICON_BULLET]%D1_Bonus%% z Przemęczenia</Polish>
+		<Polish>[ICON_BULLET]%D1_Bonus%% z Przem&#234;czenia</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_COMBAT_TOLERANCE</Tag>
@@ -738,7 +738,7 @@
 		<English>Total Attacker Support Strength:</English>
 		<French>Total Force de Soutien de l'Attaquant:</French>
 		<Italian>Forza di supporto totale degli attaccanti:</Italian>
-		<Polish>Cała Siła Wsparcia Atakującego:</Polish>
+		<Polish>Ca&#179;a Si&#179;a Wsparcia Atakuj&#185;cego:</Polish>
 		<Russian>Суммарное увеличение силы атакующего от поддержки:</Russian>
 	</TEXT>
 	<TEXT>
@@ -746,7 +746,7 @@
 		<English>Total Defender Support Strength:</English>
 		<French>Total Force de Soutien du Défenseur:</French>
 		<Italian>Forza di supporto totale dei difensori:</Italian>
-		<Polish>Cała Siła Wsparcia Obrońcy:</Polish>
+		<Polish>Ca&#179;a Si&#179;a Wsparcia Obro&#241;cy:</Polish>
 		<Russian>Суммарное увеличение силы защищающегося от поддержки:</Russian>
 	</TEXT>
 	<TEXT>
@@ -756,7 +756,7 @@
 		<German>[ICON_BULLET]%d1_Bonus%% gegen Barbaren</German>
 		<Italian>[ICON_BULLET]%d1_Bonus%% contro i barbari non-animali</Italian>
 		<Spanish>[ICON_BULLET]%d1_Bonus%% contra Non-Animal Barbarians</Spanish>
-		<Polish>[ICON_BULLET]%D1_Bonus%% przeciwko nie-zwierzęcym Barbarzyńcom</Polish>
+		<Polish>[ICON_BULLET]%D1_Bonus%% przeciwko nie-zwierz&#234;cym Barbarzy&#241;com</Polish>
 		<Russian>[ICON_BULLET]%d1_Bonus%% против Варваров</Russian>
 	</TEXT>
 	<TEXT>
@@ -764,21 +764,21 @@
 		<English>Attacker Early Withdraw:</English>
 		<French>Retraite rapide de l'Attaquant:</French>
 		<Italian>Ritirata rapida degli attaccanti:</Italian>
-		<Polish>Wczesna Ucieczka Atakującego:</Polish>
+		<Polish>Wczesna Ucieczka Atakuj&#185;cego:</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_COMBAT_WITHDRAW_ODDS_ATTACKER_FRAYED</Tag>
 		<English>Frayed:</English>
 		<French>Confusion:</French>
 		<Italian>Confusione:</Italian>
-		<Polish>Znużenie:</Polish>
+		<Polish>Znu&#191;enie:</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_COMBAT_WITHDRAW_ODDS_ATTACKER_PURSUIT</Tag>
 		<English>Attacker Pursuit:</English>
 		<French>Poursuite de l'Attaquant:</French>
 		<Italian>Inseguimento degli attaccanti:</Italian>
-		<Polish>Pościg Atakującego:</Polish>
+		<Polish>Po&#156;cig Atakuj&#185;cego:</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_COMBAT_WITHDRAW_ODDS_ATTACKER_REFLEXES</Tag>
@@ -792,7 +792,7 @@
 		<English>Attacker Withdrawal:</English>
 		<French>Retraite de l'Attaquant:</French>
 		<Italian>Probabilità di ritirata degli attaccanti:</Italian>
-		<Polish>Ucieczka Atakującego:</Polish>
+		<Polish>Ucieczka Atakuj&#185;cego:</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_COMBAT_WITHDRAW_ODDS_DEFENDER_EARLY_WITHDRAW</Tag>
@@ -800,14 +800,14 @@
 		<French>Retraite rapide du Défenseur:</French>
 		<German>Früher Rückzug (Verteidiger):</German>
 		<Italian>Ritirata rapida dei difensori:</Italian>
-		<Polish>Wczesna Ucieczka Obrońcy:</Polish>
+		<Polish>Wczesna Ucieczka Obro&#241;cy:</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_COMBAT_WITHDRAW_ODDS_DEFENDER_PURSUIT</Tag>
 		<English>Defender Pursuit:</English>
 		<French>Poursuite du Défenseur:</French>
 		<Italian>Inseguimento dei difensori:</Italian>
-		<Polish>Pościg Obrońcy:</Polish>
+		<Polish>Po&#156;cig Obro&#241;cy:</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_COMBAT_WITHDRAW_ODDS_DEFENDER_WITHDRAWAL</Tag>
@@ -815,21 +815,21 @@
 		<French>Repli du Défenseur:</French>
 		<German>Rückzug (Verteidiger):</German>
 		<Italian>Ritirata del difensore:</Italian>
-		<Polish>Ucieczka Obrońcy: %s1</Polish>
+		<Polish>Ucieczka Obro&#241;cy: %s1</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_COMBAT_WITHDRAW_ODDS_PER_ROUND_ATTEMPTED</Tag>
 		<English>Withdraw Odds/rnd Attempted:</English>
 		<French>Tentatives de Retraite/round (Att.):</French>
 		<Italian>Probabilità di ritirata a turno effettiva:</Italian>
-		<Polish>Szanse na próbę ucieczki / rundę:</Polish>
+		<Polish>Szanse na pr&#243;b&#234; ucieczki / rund&#234;:</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_COMBAT_WITHDRAW_ODDS_WITHDRAW_PER_ROUND</Tag>
 		<English>Withdraw Odds/rnd Attempted:</English>
 		<French>Tentative de retraite/round (Def.):</French>
 		<Italian>Probabilità di ritirata a turno effettiva:</Italian>
-		<Polish>Szansa na próbę ucieczki / runda:</Polish>
+		<Polish>Szansa na pr&#243;b&#234; ucieczki / runda:</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DOMAIN_FREE_EXPERIENCE</Tag>
@@ -842,21 +842,21 @@
 		<Tag>TXT_KEY_RANGED_BOMBARD_DAMAGE</Tag>
 		<English>[ICON_BULLET]Ranged Assault Damage: %d1_Value%%</English>
 		<French>[ICON_BULLET]Dégâts d'attaque à distance: %d1_Value%%</French>
-		<Polish>[ICON_BULLET]Atak z dystansu - obrażenia: %d1_Value%%</Polish>
+		<Polish>[ICON_BULLET]Atak z dystansu - obra&#191;enia: %d1_Value%%</Polish>
 		<Russian>[ICON_BULLET]Штурмовой урон в дальнем бою: %d1_Value%%</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_RANGED_BOMBARD_DAMAGE_LIMIT</Tag>
 		<English>[ICON_BULLET]Ranged Assault Damage Limit: %d1_Value%%</English>
 		<French>[ICON_BULLET]Limite de Dégâts d'Attaque à distance: %d1_Value%%</French>
-		<Polish>[ICON_BULLET]Limit obrażeń przy ataku z dystansu: %d1_Value%%</Polish>
+		<Polish>[ICON_BULLET]Limit obra&#191;e&#241; przy ataku z dystansu: %d1_Value%%</Polish>
 		<Russian>[ICON_BULLET]Предел урона от штурма в дальнем бою: %d1_Value%%</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_RANGED_BOMBARD_DAMAGE_MAX_UNITS</Tag>
 		<English>[ICON_BULLET]Ranged Assault Max Targets: %d1_Value</English>
 		<French>[ICON_BULLET]Nb de cibles max pour l'Attaque à distance: %d1_Value</French>
-		<Polish>[ICON_BULLET]Atak z dystansu - maksymalna liczba celów: %d1_Value</Polish>
+		<Polish>[ICON_BULLET]Atak z dystansu - maksymalna liczba cel&#243;w: %d1_Value</Polish>
 		<Russian>[ICON_BULLET]Максимум целей для дальней атаки: %d1_Value</Russian>
 	</TEXT>
 	<TEXT>
@@ -864,7 +864,7 @@
 		<English>[ICON_BULLET]Units attacking the city from a river are %D1%% more penalized than normal.</English>
 		<French>[ICON_BULLET]Les Unités traversant une rivière pour attaquer une Ville sont plus pénalisées de %D1%%.</French>
 		<Italian>[ICON_BULLET]Le unità che attaccano la città da un fiume sono %D1%% più penalizzate del normale.</Italian>
-		<Polish>[ICON_BULLET]Jednostki atakujące miasto przez rzekę otrzymują %D1%% więcej kary niż normalnie</Polish>
+		<Polish>[ICON_BULLET]Jednostki atakuj&#185;ce miasto przez rzek&#234; otrzymuj&#185; %D1%% wi&#234;cej kary ni&#191; normalnie</Polish>
 		<Russian>[ICON_BULLET]Отряды, атакующие город через реку, получают штраф на %D1%% больше, чем обычно.</Russian>
 	</TEXT>
 	<TEXT>
@@ -872,7 +872,7 @@
 		<English>[ICON_BULLET]Units attacking the city from across a river are %D1%% less penalized than normal.</English>
 		<French>[ICON_BULLET]Les Unités traversant une rivière pour attaquer une Ville sont moins pénalisées de %D1%%.</French>
 		<Italian>[ICON_BULLET]Le unità che attaccano la città da un fiume sono %D1%% meno penalizzate del normale.</Italian>
-		<Polish>[ICON_BULLET]Jednostki atakujące miasto przez rzekę otrzymują %D1%% mniej kary niż normalnie.</Polish>
+		<Polish>[ICON_BULLET]Jednostki atakuj&#185;ce miasto przez rzek&#234; otrzymuj&#185; %D1%% mniej kary ni&#191; normalnie.</Polish>
 		<Russian>[ICON_BULLET]Отряды, атакующие город через реку, получают штраф на %D1%% меньше, чем обычно.</Russian>
 	</TEXT>
 	<TEXT>
@@ -922,7 +922,7 @@
 			<Gender>Male</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Płaz (Źaba)</Polish>
+		<Polish>P&#179;az (&#143;aba)</Polish>
 		<Russian>Ëÿãóøêè</Russian>
 		<Italian>Rana (anfibio)</Italian>
 	</TEXT>
@@ -939,7 +939,7 @@
 			<Gender>Female:Male</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Płaz (Salamandra)</Polish>
+		<Polish>P&#179;az (Salamandra)</Polish>
 		<Russian>Ñàëàìàíäðû</Russian>
 		<Italian>Salamandra (anfibio)</Italian>
 	</TEXT>
@@ -950,7 +950,7 @@
 		<German>Tiereinheiten</German>
 		<Italian>Unità animale</Italian>
 		<Spanish>Animales</Spanish>
-		<Polish>Zwierzęta</Polish>
+		<Polish>Zwierz&#234;ta</Polish>
 		<Russian>Æèâîòíûå</Russian>
 	</TEXT>
 	<TEXT>
@@ -967,7 +967,7 @@
 			<Gender>Male</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Zwierze (Płaz)</Polish>
+		<Polish>Zwierze (P&#179;az)</Polish>
 		<Russian>Àìôèáèè</Russian>
 		<Italian>Anfibio (animale)</Italian>
 	</TEXT>
@@ -1003,7 +1003,7 @@
 			<Gender>Male</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Natura (Drążenie)</Polish>
+		<Polish>Natura (Dr&#185;&#191;enie)</Polish>
 		<Russian>Ïðèðîäà(Ðîþùèé)</Russian>
 		<Italian>Capacità naturale infossamento</Italian>
 	</TEXT>
@@ -1021,7 +1021,7 @@
 			<Gender>Male</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Natura (Kamuflaż)</Polish>
+		<Polish>Natura (Kamufla&#191;)</Polish>
 		<Russian>Ïðèðîäà(Õàìåëåîí)</Russian>
 		<Italian>Capacità naturale camuffamento</Italian>
 	</TEXT>
@@ -1039,7 +1039,7 @@
 			<Gender>Female:Male</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Natura (Szarża)</Polish>
+		<Polish>Natura (Szar&#191;a)</Polish>
 		<Russian>Ïðèðîäà(Øòóðì.)</Russian>
 		<Italian>Capacità naturale carica</Italian>
 	</TEXT>
@@ -1057,7 +1057,7 @@
 			<Gender>Male</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Natura (Pościg)</Polish>
+		<Polish>Natura (Po&#156;cig)</Polish>
 		<Russian>Ïðèðîäà(Ïðåñëåäîâàòåëü)</Russian>
 		<Italian>Capacità naturale inseguimento</Italian>
 	</TEXT>
@@ -1093,7 +1093,7 @@
 			<Gender>Male</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Natura (Pożeranie)</Polish>
+		<Polish>Natura (Po&#191;eranie)</Polish>
 		<Russian>Ïðèðîäà(Ïîæèðàòåëü)</Russian>
 		<Italian>Capacità naturale divoramento</Italian>
 	</TEXT>
@@ -1183,7 +1183,7 @@
 			<Gender>Male</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Natura (Uderzenie głową)</Polish>
+		<Polish>Natura (Uderzenie g&#179;ow&#185;)</Polish>
 		<Russian>Ïðèðîäà(Ðîãà÷)</Russian>
 		<Italian>Capacità naturale testata</Italian>
 	</TEXT>
@@ -1219,7 +1219,7 @@
 			<Gender>Male</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Natura (Ukrywanie się)</Polish>
+		<Polish>Natura (Ukrywanie si&#234;)</Polish>
 		<Russian>Ïðèðîäà(Ñêðûòíûé)</Russian>
 		<Italian>Capacità naturale nascondiglio</Italian>
 	</TEXT>
@@ -1237,7 +1237,7 @@
 			<Gender>Male</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Natura (Ostre zmysły)</Polish>
+		<Polish>Natura (Ostre zmys&#179;y)</Polish>
 		<Russian>Ïðèðîäà(×óòêèé)</Russian>
 		<Italian>Capacità naturale sensi affilati</Italian>
 	</TEXT>
@@ -1255,7 +1255,7 @@
 			<Gender>Male</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Natura (Uszczypnięcie)</Polish>
+		<Polish>Natura (Uszczypni&#234;cie)</Polish>
 		<Russian>Ïðèðîäà(Êëûêàñòûé)</Russian>
 		<Italian>Capacità naturale morso</Italian>
 	</TEXT>
@@ -1273,7 +1273,7 @@
 			<Gender>Male</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Natura (Grupowy łowca)</Polish>
+		<Polish>Natura (Grupowy &#179;owca)</Polish>
 		<Russian>Ïðèðîäà(Ñòàéíàÿ îõîòà)</Russian>
 		<Italian>Capacità naturale caccia di branco</Italian>
 	</TEXT>
@@ -1291,7 +1291,7 @@
 			<Gender>Male</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Natura (Dziobnięcie)</Polish>
+		<Polish>Natura (Dziobni&#234;cie)</Polish>
 		<Russian>Ïðèðîäà(Êëþâ)</Russian>
 		<Italian>Capacità naturale beccata</Italian>
 	</TEXT>
@@ -1327,7 +1327,7 @@
 			<Gender>Male</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Natura (Silne kopnięcie)</Polish>
+		<Polish>Natura (Silne kopni&#234;cie)</Polish>
 		<Russian>Ïðèðîäà(Êîñòîëîì)</Russian>
 		<Italian>Capacità naturale calcio potente</Italian>
 	</TEXT>
@@ -1345,7 +1345,7 @@
 			<Gender>Male</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Natura (Okładanie)</Polish>
+		<Polish>Natura (Ok&#179;adanie)</Polish>
 		<Russian>Ïðèðîäà(Óäàð.)</Russian>
 		<Italian>Capacità naturale pugno</Italian>
 	</TEXT>
@@ -1363,7 +1363,7 @@
 			<Gender>Male</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Natura (Wściekłość)</Polish>
+		<Polish>Natura (W&#156;ciek&#179;o&#156;&#230;)</Polish>
 		<Russian>Ïðèðîäà(Ñâèðåïûé)</Russian>
 		<Italian>Capacità naturale rabbia</Italian>
 	</TEXT>
@@ -1381,7 +1381,7 @@
 			<Gender>Male</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Natura (Odstraszający smród)</Polish>
+		<Polish>Natura (Odstraszaj&#185;cy smr&#243;d)</Polish>
 		<Russian>Ïðèðîäà(Ðàçäðàæèòåëü)</Russian>
 		<Italian>Capacità naturale repulsività</Italian>
 	</TEXT>
@@ -1471,7 +1471,7 @@
 			<Gender>Male</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Natura (Ostre zęby)</Polish>
+		<Polish>Natura (Ostre z&#234;by)</Polish>
 		<Russian>Ïðèðîäà(Îñòð. çóáû)</Russian>
 		<Italian>Capacità naturale denti affilati</Italian>
 	</TEXT>
@@ -1507,7 +1507,7 @@
 			<Gender>Male</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Natura (Nadepnięcie)</Polish>
+		<Polish>Natura (Nadepni&#234;cie)</Polish>
 		<Russian>Ïðèðîäà(Äàâèòåëü)</Russian>
 		<Italian>Capacità naturale calpestamento</Italian>
 	</TEXT>
@@ -1561,7 +1561,7 @@
 			<Gender>Male</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Natura (Gróba skóra)</Polish>
+		<Polish>Natura (Gr&#243;ba sk&#243;ra)</Polish>
 		<Russian>Ïðèðîäà(Òîëñòîêîæèé)</Russian>
 		<Italian>Capacità naturale pelle spessa</Italian>
 	</TEXT>
@@ -1579,7 +1579,7 @@
 			<Gender>Male</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Natura (Tward skóra)</Polish>
+		<Polish>Natura (Tward sk&#243;ra)</Polish>
 		<Russian>Ïðèðîäà(Ìàëîçàìåòíûé)</Russian>
 		<Italian>Capacità naturale pelle resistente</Italian>
 	</TEXT>
@@ -1633,7 +1633,7 @@
 			<Gender>Male</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Natura (Ostrzeżenia)</Polish>
+		<Polish>Natura (Ostrze&#191;enia)</Polish>
 		<Russian>Ïðèðîäà(Îïàñíûé)</Russian>
 		<Italian>Capacità naturale circospezione</Italian>
 	</TEXT>
@@ -1687,7 +1687,7 @@
 			<Gender>Male</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Zwierze (Bezkręgowiec)</Polish>
+		<Polish>Zwierze (Bezkr&#234;gowiec)</Polish>
 		<Russian>Áåñïîçâîíî÷íûå</Russian>
 		<Italian>Invertebrato (animale)</Italian>
 	</TEXT>
@@ -1757,7 +1757,7 @@
 			<Gender>Female</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Statek Kosmiczny (Napęd AntyMaterii)</Polish>
+		<Polish>Statek Kosmiczny (Nap&#234;d AntyMaterii)</Polish>
 		<Russian>Ôîòîííûé çâåçäîëåò</Russian>
 		<Italian>Astronave ad antimateria</Italian>
 	</TEXT>
@@ -1776,7 +1776,7 @@
 			<Gender>Female</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Jednostki łucznicze</Polish>
+		<Polish>Jednostki &#179;ucznicze</Polish>
 		<Russian>Ëó÷íèêè</Russian>
 	</TEXT>
 	<TEXT>
@@ -1811,7 +1811,7 @@
 			<Gender>Female</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Pancerz (Ciężki)</Polish>
+		<Polish>Pancerz (Ci&#234;&#191;ki)</Polish>
 		<Russian>Òÿæåëàÿ áðîíÿ</Russian>
 		<Italian>Categoria armatura pesante</Italian>
 	</TEXT>
@@ -1846,7 +1846,7 @@
 			<Gender>Female</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Materiał Pancerza (Aluminum)</Polish>
+		<Polish>Materia&#179; Pancerza (Aluminum)</Polish>
 		<Russian>Ìàò. áðîíè(Àëþìèíèé)</Russian>
 		<Italian>Materiale armatura alluminio</Italian>
 	</TEXT>
@@ -1863,7 +1863,7 @@
 			<Gender>Female</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Materiał Pancerza (Bambus)</Polish>
+		<Polish>Materia&#179; Pancerza (Bambus)</Polish>
 		<Russian>Ìàò. áðîíè(Áàìáóê)</Russian>
 		<Italian>Materiale armatura bambù</Italian>
 	</TEXT>
@@ -1880,7 +1880,7 @@
 			<Gender>Female</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Materiał Pancerza (Kora)</Polish>
+		<Polish>Materia&#179; Pancerza (Kora)</Polish>
 		<Russian>Ìàò. áðîíè(Êîðà)</Russian>
 		<Italian>Materiale armatura corteccia</Italian>
 	</TEXT>
@@ -1897,7 +1897,7 @@
 			<Gender>Female</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Materiał Pancerza (Kość)</Polish>
+		<Polish>Materia&#179; Pancerza (Ko&#156;&#230;)</Polish>
 		<Russian>Ìàò. áðîíè(Êîñòü)</Russian>
 		<Italian>Materiale armatura osso</Italian>
 	</TEXT>
@@ -1914,7 +1914,7 @@
 			<Gender>Female</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Materiał Pancerza (Bronz)</Polish>
+		<Polish>Materia&#179; Pancerza (Bronz)</Polish>
 		<Russian>Ìàò. áðîíè(Áðîíçà)</Russian>
 		<Italian>Materiale armatura bronzo</Italian>
 	</TEXT>
@@ -1931,7 +1931,7 @@
 			<Gender>Female</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Materiał Pancerza (Ceramika)</Polish>
+		<Polish>Materia&#179; Pancerza (Ceramika)</Polish>
 		<Russian>Ìàò. áðîíè(Êåðàìèêà)</Russian>
 		<Italian>Materiale armatura ceramica</Italian>
 	</TEXT>
@@ -1948,7 +1948,7 @@
 			<Gender>Female</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Materiał Pancerza (Kompozyt)</Polish>
+		<Polish>Materia&#179; Pancerza (Kompozyt)</Polish>
 		<Russian>Ìàò. áðîíè(Êîìïîçèò)</Russian>
 		<Italian>Materiale armatura composita</Italian>
 	</TEXT>
@@ -1965,7 +1965,7 @@
 			<Gender>Female</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Materiał Pancerza (Miedź)</Polish>
+		<Polish>Materia&#179; Pancerza (Mied&#159;)</Polish>
 		<Russian>Ìàò. áðîíè(Ìåäü)</Russian>
 		<Italian>Materiale armatura rame</Italian>
 	</TEXT>
@@ -1982,7 +1982,7 @@
 			<Gender>Female</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Materiał Pancerza (Włókno)</Polish>
+		<Polish>Materia&#179; Pancerza (W&#179;&#243;kno)</Polish>
 		<Russian>Ìàò. áðîíè(Òêàíü)</Russian>
 		<Italian>Materiale armatura tessuto</Italian>
 	</TEXT>
@@ -1999,7 +1999,7 @@
 			<Gender>Female</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Materiał Pancerza (Źel Balistyczny)</Polish>
+		<Polish>Materia&#179; Pancerza (&#143;el Balistyczny)</Polish>
 		<Russian>Ìàò. áðîíè(Ñòåêëîâîëîêíî)</Russian>
 		<Italian>Materiale armatura gel da impatto</Italian>
 	</TEXT>
@@ -2016,7 +2016,7 @@
 			<Gender>Female</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Materiał Pancerza (Utwardzona Skóra)</Polish>
+		<Polish>Materia&#179; Pancerza (Utwardzona Sk&#243;ra)</Polish>
 		<Russian>Ìàò. áðîíè(Äóáëåíàÿ êîæà)</Russian>
 		<Italian>Materiale armatura cuoio indurito</Italian>
 	</TEXT>
@@ -2033,7 +2033,7 @@
 			<Gender>Female</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Materiał Pancerza (Źelazo)</Polish>
+		<Polish>Materia&#179; Pancerza (&#143;elazo)</Polish>
 		<Russian>Ìàò. áðîíè(Æåëåçî)</Russian>
 		<Italian>Materiale armatura ferro</Italian>
 	</TEXT>
@@ -2050,7 +2050,7 @@
 			<Gender>Female</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Materiał Pancerza (Kevlar)</Polish>
+		<Polish>Materia&#179; Pancerza (Kevlar)</Polish>
 		<Russian>Ìàò. áðîíè(Êåâëàð)</Russian>
 		<Italian>Materiale armatura kevlar</Italian>
 	</TEXT>
@@ -2067,7 +2067,7 @@
 			<Gender>Female</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Materiał Pancerza (Nanowłókna)</Polish>
+		<Polish>Materia&#179; Pancerza (Nanow&#179;&#243;kna)</Polish>
 		<Russian>Ìàò. áðîíè(Íàíîâîëîêíî)</Russian>
 		<Italian>Materiale armatura nanofibra</Italian>
 	</TEXT>
@@ -2084,7 +2084,7 @@
 			<Gender>Female</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Materiał Pancerza (Plastik)</Polish>
+		<Polish>Materia&#179; Pancerza (Plastik)</Polish>
 		<Russian>Ìàò. áðîíè(Ïëàñòèê)</Russian>
 		<Italian>Materiale armatura plastica</Italian>
 	</TEXT>
@@ -2101,7 +2101,7 @@
 			<Gender>Female</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Materiał Pancerza (Polietylen)</Polish>
+		<Polish>Materia&#179; Pancerza (Polietylen)</Polish>
 		<Russian>Ìàò. áðîíè(Ïîëèýòèëåí)</Russian>
 		<Italian>Materiale armatura polietilene</Italian>
 	</TEXT>
@@ -2118,7 +2118,7 @@
 			<Gender>Female</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Materiał Pancerza (Rattan)</Polish>
+		<Polish>Materia&#179; Pancerza (Rattan)</Polish>
 		<Russian>Ìàò. áðîíè(Ðîòàíã)</Russian>
 		<Italian>Materiale armatura vimini</Italian>
 	</TEXT>
@@ -2135,7 +2135,7 @@
 			<Gender>Female</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Materiał Pancerza (Mięka Skóra)</Polish>
+		<Polish>Materia&#179; Pancerza (Mi&#234;ka Sk&#243;ra)</Polish>
 		<Russian>Ìàò. áðîíè(Ìÿãêàÿ êîæà)</Russian>
 		<Italian>Materiale armatura cuoio morbido</Italian>
 	</TEXT>
@@ -2152,7 +2152,7 @@
 			<Gender>Female</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Materiał Pancerza (Stal)</Polish>
+		<Polish>Materia&#179; Pancerza (Stal)</Polish>
 		<Russian>Ìàò. áðîíè(Ñòàëü)</Russian>
 		<Italian>Materiale armatura acciaio</Italian>
 	</TEXT>
@@ -2169,7 +2169,7 @@
 			<Gender>Female</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Materiał Pancerza (Tytan)</Polish>
+		<Polish>Materia&#179; Pancerza (Tytan)</Polish>
 		<Russian>Ìàò. áðîíè(Òèòàí)</Russian>
 		<Italian>Materiale armatura titanio</Italian>
 	</TEXT>
@@ -2186,7 +2186,7 @@
 			<Gender>Female</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Materiał Pancerza (Twaron)</Polish>
+		<Polish>Materia&#179; Pancerza (Twaron)</Polish>
 		<Russian>Ìàò. áðîíè(Àðàìèä)</Russian>
 		<Italian>Materiale armatura aramide</Italian>
 	</TEXT>
@@ -2203,7 +2203,7 @@
 			<Gender>Female</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Materiał Pancerza (Uran)</Polish>
+		<Polish>Materia&#179; Pancerza (Uran)</Polish>
 		<Russian>Ìàò. áðîíè(Óðàí)</Russian>
 		<Italian>Materiale armatura uranio</Italian>
 	</TEXT>
@@ -2239,7 +2239,7 @@
 			<Gender>Female</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Pancerz (Współczesny)</Polish>
+		<Polish>Pancerz (Wsp&#243;&#179;czesny)</Polish>
 		<Russian>Ñîâðåìåííàÿ áðîíÿ</Russian>
 		<Italian>Categoria armatura moderna</Italian>
 	</TEXT>
@@ -2257,7 +2257,7 @@
 			<Gender>Female</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Pancerz (Okrętowy)</Polish>
+		<Polish>Pancerz (Okr&#234;towy)</Polish>
 		<Russian>Áðîíèð. ñóäà</Russian>
 		<Italian>Categoria armatura navale</Italian>
 	</TEXT>
@@ -2309,7 +2309,7 @@
 			<Gender>Female</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Rodzaj Pancerza (Pas Okrętowy)</Polish>
+		<Polish>Rodzaj Pancerza (Pas Okr&#234;towy)</Polish>
 		<Russian>Òèï áðîíè(Ôëîòñêèé)</Russian>
 		<Italian>Tipo armatura a cintura navale</Italian>
 	</TEXT>
@@ -2394,7 +2394,7 @@
 			<Gender>Female</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Rodzaj Pancerza (Zewnętrzny)</Polish>
+		<Polish>Rodzaj Pancerza (Zewn&#234;trzny)</Polish>
 		<Russian>Òèï áðîíè(Âíåøíÿÿ)</Russian>
 		<Italian>Tipo armatura esteriore</Italian>
 	</TEXT>
@@ -2411,7 +2411,7 @@
 			<Gender>Female</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Rodzaj Pancerza (Źelowy Kombinezon)</Polish>
+		<Polish>Rodzaj Pancerza (&#143;elowy Kombinezon)</Polish>
 		<Russian>Òèï áðîíè(Ìîäóëüíàÿ)</Russian>
 		<Italian>Tipo armatura di gel</Italian>
 	</TEXT>
@@ -2428,7 +2428,7 @@
 			<Gender>Female</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Rodzaj Pancerza (Skóra)</Polish>
+		<Polish>Rodzaj Pancerza (Sk&#243;ra)</Polish>
 		<Russian>Òèï áðîíè(Êîæà)</Russian>
 		<Italian>Tipo armatura di pelle</Italian>
 	</TEXT>
@@ -2462,7 +2462,7 @@
 			<Gender>Female</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Rodzaj Pancerza (Płytowy)</Polish>
+		<Polish>Rodzaj Pancerza (P&#179;ytowy)</Polish>
 		<Russian>Òèï áðîíè(Ëàòû)</Russian>
 		<Italian>Tipo armatura a piastre</Italian>
 	</TEXT>
@@ -2496,7 +2496,7 @@
 			<Gender>Female</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Rodzaj Pancerza (Łuskowy)</Polish>
+		<Polish>Rodzaj Pancerza (&#163;uskowy)</Polish>
 		<Russian>Òèï áðîíè(×åøóé÷àòàÿ)</Russian>
 		<Italian>Tipo armatura a scaglie</Italian>
 	</TEXT>
@@ -2599,7 +2599,7 @@
 			<Gender>Female</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Pomocnik: Bawół</Polish>
+		<Polish>Pomocnik: Baw&#243;&#179;</Polish>
 		<Russian>Ðàáî÷èå áûêè</Russian>
 		<Italian>Unità assistita da bufali</Italian>
 	</TEXT>
@@ -2616,7 +2616,7 @@
 			<Gender>Female</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Pomocnik: Wielbłąd</Polish>
+		<Polish>Pomocnik: Wielb&#179;&#185;d</Polish>
 		<Russian>Ðàáî÷èå âåðáëþäû</Russian>
 		<Italian>Unità assistita da cammelli</Italian>
 	</TEXT>
@@ -2650,7 +2650,7 @@
 			<Gender>Female</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Pomocnik: Słoń</Polish>
+		<Polish>Pomocnik: S&#179;o&#241;</Polish>
 		<Russian>Ðàáî÷èå ñëîíû</Russian>
 		<Italian>Unità assistita da elefanti</Italian>
 	</TEXT>
@@ -2701,7 +2701,7 @@
 			<Gender>Female</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Pomocnik: Muł</Polish>
+		<Polish>Pomocnik: Mu&#179;</Polish>
 		<Russian>Ðàáî÷èå ìóëû</Russian>
 		<Italian>Unità assistita da muli</Italian>
 	</TEXT>
@@ -2825,7 +2825,7 @@
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</French>
-		<Polish>Atak (Pow.-Ziem. Mróz)</Polish>
+		<Polish>Atak (Pow.-Ziem. Mr&#243;z)</Polish>
 		<Russian>Àòàêà(Âîçä. õîëîä)</Russian>
 		<Italian>Attacco aria terra congelante</Italian>
 	</TEXT>
@@ -2837,7 +2837,7 @@
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</French>
-		<Polish>Atak (Pow.-Ziem. Gorąco)</Polish>
+		<Polish>Atak (Pow.-Ziem. Gor&#185;co)</Polish>
 		<Russian>Àòàêà(Âîçä. òåïëîâàÿ)</Russian>
 		<Italian>Attacco aria terra di calore</Italian>
 	</TEXT>
@@ -2861,7 +2861,7 @@
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</French>
-		<Polish>Atak (Pow.-Ziem. Kłuty)</Polish>
+		<Polish>Atak (Pow.-Ziem. K&#179;uty)</Polish>
 		<Russian>Àòàêà(Âîçä. øðàïíåëü)</Russian>
 		<Italian>Attacco aria terra perforante</Italian>
 	</TEXT>
@@ -2897,7 +2897,7 @@
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</French>
-		<Polish>Atak (Pow.-Ziem. Cięty)</Polish>
+		<Polish>Atak (Pow.-Ziem. Ci&#234;ty)</Polish>
 		<Russian>Àòàêà(Âîçä. îñêîëî÷íàÿ)</Russian>
 		<Italian>Attacco aria terra tagliente</Italian>
 	</TEXT>
@@ -3074,7 +3074,7 @@
 			<Gender>Female</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Atak (Dyst. Zapasowy Mróz)</Polish>
+		<Polish>Atak (Dyst. Zapasowy Mr&#243;z)</Polish>
 		<Russian>Àòàêà(Äóáë. õîëîä)</Russian>
 		<Italian>Attacco secondario a distanza congelante</Italian>
 	</TEXT>
@@ -3091,7 +3091,7 @@
 			<Gender>Female</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Atak (Dyst. Zapasowy Gorąco)</Polish>
+		<Polish>Atak (Dyst. Zapasowy Gor&#185;co)</Polish>
 		<Russian>Àòàêà(Äóáë. òåïëîâàÿ)</Russian>
 		<Italian>Attacco secondario a distanza di calore</Italian>
 	</TEXT>
@@ -3125,7 +3125,7 @@
 			<Gender>Female</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Atak (Dyst. Zapasowy Kłuty)</Polish>
+		<Polish>Atak (Dyst. Zapasowy K&#179;uty)</Polish>
 		<Russian>Àòàêà(Äóáë. êîëþùàÿ)</Russian>
 		<Italian>Attacco secondario a distanza perforante</Italian>
 	</TEXT>
@@ -3176,7 +3176,7 @@
 			<Gender>Female</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Atak (Dyst. Zapasowy Cięty)</Polish>
+		<Polish>Atak (Dyst. Zapasowy Ci&#234;ty)</Polish>
 		<Russian>Àòàêà(Äóáë. ðóáÿùàÿ)</Russian>
 		<Italian>Attacco secondario a distanza tagliente</Italian>
 	</TEXT>
@@ -3244,7 +3244,7 @@
 			<Gender>Female</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Atak (Kłuta Zderzeniowa)</Polish>
+		<Polish>Atak (K&#179;uta Zderzeniowa)</Polish>
 		<Russian>Àòàêà(Êîëþùàÿ)</Russian>
 		<Italian>Attacco con collisione perforante</Italian>
 	</TEXT>
@@ -3329,7 +3329,7 @@
 			<Gender>Female</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Atak (Dystansowy Electriczność)</Polish>
+		<Polish>Atak (Dystansowy Electriczno&#156;&#230;)</Polish>
 		<Russian>Àòàêà(Äàë. ýëåêòðè÷åñòâî)</Russian>
 		<Italian>Attacco a distanza elettrico</Italian>
 	</TEXT>
@@ -3397,7 +3397,7 @@
 			<Gender>Female</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Atak (Dystansowy Mróż)</Polish>
+		<Polish>Atak (Dystansowy Mr&#243;&#191;)</Polish>
 		<Russian>Àòàêà(Äàë. õîëîä)</Russian>
 		<Italian>Attacco a distanza congelante</Italian>
 	</TEXT>
@@ -3414,7 +3414,7 @@
 			<Gender>Female</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Atak (Dystansowy Gorąco)</Polish>
+		<Polish>Atak (Dystansowy Gor&#185;co)</Polish>
 		<Russian>Àòàêà(Äàë. òåïëîâàÿ)</Russian>
 		<Italian>Attacco a distanza di calore</Italian>
 	</TEXT>
@@ -3448,7 +3448,7 @@
 			<Gender>Female</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Atak (Dystansowy Kłuta)</Polish>
+		<Polish>Atak (Dystansowy K&#179;uta)</Polish>
 		<Russian>Àòàêà(Äàë. êîëþùàÿ)</Russian>
 		<Italian>Attacco a distanza perforante</Italian>
 	</TEXT>
@@ -3499,7 +3499,7 @@
 			<Gender>Female</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Atak (Dystansowy Cięta)</Polish>
+		<Polish>Atak (Dystansowy Ci&#234;ta)</Polish>
 		<Russian>Àòàêà(Äàë. ðóáÿùàÿ)</Russian>
 		<Italian>Attacco a distanza tagliente</Italian>
 	</TEXT>
@@ -3550,7 +3550,7 @@
 			<Gender>Female</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Atak (W.Wręcz Biologiczna)</Polish>
+		<Polish>Atak (W.Wr&#234;cz Biologiczna)</Polish>
 		<Russian>Àòàêà(H2H Áèîîðóæèå)</Russian>
 		<Italian>Attacco corpo a corpo biologico</Italian>
 	</TEXT>
@@ -3567,7 +3567,7 @@
 			<Gender>Female</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Atak (W.Wręcz Obuchowa)</Polish>
+		<Polish>Atak (W.Wr&#234;cz Obuchowa)</Polish>
 		<Russian>Àòàêà(H2H Îãëóøåíèå)</Russian>
 		<Italian>Attacco corpo a corpo contundente</Italian>
 	</TEXT>
@@ -3584,7 +3584,7 @@
 			<Gender>Female</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Atak (W.Wręcz Cyber)</Polish>
+		<Polish>Atak (W.Wr&#234;cz Cyber)</Polish>
 		<Russian>Àòàêà(H2H Êèáåð)</Russian>
 		<Italian>Attacco corpo a corpo cibernetico</Italian>
 	</TEXT>
@@ -3601,7 +3601,7 @@
 			<Gender>Female</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Atak (W.Wręcz Dezintegracja)</Polish>
+		<Polish>Atak (W.Wr&#234;cz Dezintegracja)</Polish>
 		<Russian>Àòàêà(H2H Äåçèíòåãðàöèÿ)</Russian>
 		<Italian>Attacco corpo a corpo disintegrante</Italian>
 	</TEXT>
@@ -3618,7 +3618,7 @@
 			<Gender>Female</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Atak (W.Wręcz Electriczność)</Polish>
+		<Polish>Atak (W.Wr&#234;cz Electriczno&#156;&#230;)</Polish>
 		<Russian>Àòàêà(H2H Ýëåêòðè÷åñòâî)</Russian>
 		<Italian>Attacco corpo a corpo elettrico</Italian>
 	</TEXT>
@@ -3635,7 +3635,7 @@
 			<Gender>Female</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Atak (W.Wręcz Electromagnetyczna)</Polish>
+		<Polish>Atak (W.Wr&#234;cz Electromagnetyczna)</Polish>
 		<Russian>Àòàêà(H2H Ýëåêòðîìàãíèòíàÿ)</Russian>
 		<Italian>Attacco corpo a corpo elettromagnetico</Italian>
 	</TEXT>
@@ -3652,7 +3652,7 @@
 			<Gender>Female</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Atak (W.Wręcz Wybuchowa)</Polish>
+		<Polish>Atak (W.Wr&#234;cz Wybuchowa)</Polish>
 		<Russian>Àòàêà(H2H Âçðûâ÷àòêà)</Russian>
 		<Italian>Attacco corpo a corpo esplosivo</Italian>
 	</TEXT>
@@ -3669,7 +3669,7 @@
 			<Gender>Female</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Atak (W.Wręcz Ognista)</Polish>
+		<Polish>Atak (W.Wr&#234;cz Ognista)</Polish>
 		<Russian>Àòàêà(H2H Îãîíü)</Russian>
 		<Italian>Attacco corpo a corpo ardente</Italian>
 	</TEXT>
@@ -3686,7 +3686,7 @@
 			<Gender>Female</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Atak (W.Wręcz Mróż)</Polish>
+		<Polish>Atak (W.Wr&#234;cz Mr&#243;&#191;)</Polish>
 		<Russian>Àòàêà(H2H Çàìîðîçêà)</Russian>
 		<Italian>Attacco corpo a corpo congelante</Italian>
 	</TEXT>
@@ -3703,7 +3703,7 @@
 			<Gender>Female</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Atak (W.Wręcz Gorąco)</Polish>
+		<Polish>Atak (W.Wr&#234;cz Gor&#185;co)</Polish>
 		<Russian>Àòàêà(H2H Òåðìîáàðè÷åñêàÿ)</Russian>
 		<Italian>Attacco corpo a corpo di calore</Italian>
 	</TEXT>
@@ -3720,7 +3720,7 @@
 			<Gender>Female</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Atak (W.Wręcz Laser)</Polish>
+		<Polish>Atak (W.Wr&#234;cz Laser)</Polish>
 		<Russian>Àòàêà(H2H Ëàçåðíàÿ)</Russian>
 		<Italian>Attacco corpo a corpo laser</Italian>
 	</TEXT>
@@ -3737,7 +3737,7 @@
 			<Gender>Female</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Atak (W.Wręcz Kłuta)</Polish>
+		<Polish>Atak (W.Wr&#234;cz K&#179;uta)</Polish>
 		<Russian>Àòàêà(H2H Êîëþùàÿ)</Russian>
 		<Italian>Attacco corpo a corpo perforante</Italian>
 	</TEXT>
@@ -3754,7 +3754,7 @@
 			<Gender>Female</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Atak (W.Wręcz Trucizna)</Polish>
+		<Polish>Atak (W.Wr&#234;cz Trucizna)</Polish>
 		<Russian>Àòàêà(H2H ßä)</Russian>
 		<Italian>Attacco corpo a corpo velenoso</Italian>
 	</TEXT>
@@ -3771,7 +3771,7 @@
 			<Gender>Female</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Atak (W.Wręcz Psychologiczna)</Polish>
+		<Polish>Atak (W.Wr&#234;cz Psychologiczna)</Polish>
 		<Russian>Àòàêà(H2H Ìåíòàëüíàÿ)</Russian>
 		<Italian>Attacco corpo a corpo psicologico</Italian>
 	</TEXT>
@@ -3788,7 +3788,7 @@
 			<Gender>Female</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Atak (W.Wręcz Cięta)</Polish>
+		<Polish>Atak (W.Wr&#234;cz Ci&#234;ta)</Polish>
 		<Russian>Àòàêà(H2H Ðóáÿùàÿ)</Russian>
 		<Italian>Attacco corpo a corpo tagliente</Italian>
 	</TEXT>
@@ -3805,7 +3805,7 @@
 			<Gender>Female</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Atak (W.Wręcz Soniczna)</Polish>
+		<Polish>Atak (W.Wr&#234;cz Soniczna)</Polish>
 		<Russian>Àòàêà(H2H Çâóêîâàÿ)</Russian>
 		<Italian>Attacco corpo a corpo sonico</Italian>
 	</TEXT>
@@ -3822,7 +3822,7 @@
 			<Gender>Female</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Atak (W.Wręcz Termonuklearna)</Polish>
+		<Polish>Atak (W.Wr&#234;cz Termonuklearna)</Polish>
 		<Russian>Àòàêà(H2H Òåðìîÿäåðíàÿ)</Russian>
 		<Italian>Attacco corpo a corpo termonucleare</Italian>
 	</TEXT>
@@ -3856,7 +3856,7 @@
 			<Gender>Female</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Atak (Broń Boczna Biologiczna)</Polish>
+		<Polish>Atak (Bro&#241; Boczna Biologiczna)</Polish>
 		<Russian>Àòàêà(Òàá. áèî)</Russian>
 		<Italian>Attacco con arma da fianco biologico</Italian>
 	</TEXT>
@@ -3873,7 +3873,7 @@
 			<Gender>Female</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Atak (Broń Boczna Obuchowa)</Polish>
+		<Polish>Atak (Bro&#241; Boczna Obuchowa)</Polish>
 		<Russian>Àòàêà(Òàá. îãëóøåíèå)</Russian>
 		<Italian>Attacco con arma da fianco contundente</Italian>
 	</TEXT>
@@ -3890,7 +3890,7 @@
 			<Gender>Female</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Atak (Broń Boczna Cyber)</Polish>
+		<Polish>Atak (Bro&#241; Boczna Cyber)</Polish>
 		<Russian>Àòàêà(Òàá. êèáåð)</Russian>
 		<Italian>Attacco con arma da fianco cibernetico</Italian>
 	</TEXT>
@@ -3907,7 +3907,7 @@
 			<Gender>Female</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Atak (Broń Boczna Dezintegracja)</Polish>
+		<Polish>Atak (Bro&#241; Boczna Dezintegracja)</Polish>
 		<Russian>Àòàêà(Òàá. äèçåíòåãðàöèÿ)</Russian>
 		<Italian>Attacco con arma da fianco disintegrante</Italian>
 	</TEXT>
@@ -3924,7 +3924,7 @@
 			<Gender>Female</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Atak (Broń Boczna Electriczność)</Polish>
+		<Polish>Atak (Bro&#241; Boczna Electriczno&#156;&#230;)</Polish>
 		<Russian>Àòàêà(Òàá. ýëåêòðè÷åñòâî)</Russian>
 		<Italian>Attacco con arma da fianco elettrico</Italian>
 	</TEXT>
@@ -3941,7 +3941,7 @@
 			<Gender>Female</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Atak (Broń Boczna Electromagnetyczna)</Polish>
+		<Polish>Atak (Bro&#241; Boczna Electromagnetyczna)</Polish>
 		<Russian>Àòàêà(Òàá. ýëåêòðîìàãíèòíàÿ)</Russian>
 		<Italian>Attacco con arma da fianco elettromagnetico</Italian>
 	</TEXT>
@@ -3958,7 +3958,7 @@
 			<Gender>Female</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Atak (Broń Boczna Wybuchowa)</Polish>
+		<Polish>Atak (Bro&#241; Boczna Wybuchowa)</Polish>
 		<Russian>Àòàêà(Òàá. âçðûâ÷àòêà)</Russian>
 		<Italian>Attacco con arma da fianco esplosivo</Italian>
 	</TEXT>
@@ -3975,7 +3975,7 @@
 			<Gender>Female</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Atak (Broń Boczna Ognista)</Polish>
+		<Polish>Atak (Bro&#241; Boczna Ognista)</Polish>
 		<Russian>Àòàêà(Òàá. îãîíü)</Russian>
 		<Italian>Attacco con arma da fianco ardente</Italian>
 	</TEXT>
@@ -3992,7 +3992,7 @@
 			<Gender>Female</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Atak (Broń Boczna Mróż)</Polish>
+		<Polish>Atak (Bro&#241; Boczna Mr&#243;&#191;)</Polish>
 		<Russian>Àòàêà(Òàá. õîëîä)</Russian>
 		<Italian>Attacco con arma da fianco congelante</Italian>
 	</TEXT>
@@ -4009,7 +4009,7 @@
 			<Gender>Female</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Atak (Broń Boczna Gorąco)</Polish>
+		<Polish>Atak (Bro&#241; Boczna Gor&#185;co)</Polish>
 		<Russian>Àòàêà(Òàá. òåïëîâàÿ)</Russian>
 		<Italian>Attacco con arma da fianco di calore</Italian>
 	</TEXT>
@@ -4026,7 +4026,7 @@
 			<Gender>Female</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Atak (Broń Boczna Laser)</Polish>
+		<Polish>Atak (Bro&#241; Boczna Laser)</Polish>
 		<Russian>Àòàêà(Òàá. ëàçåðíàÿ)</Russian>
 		<Italian>Attacco con arma da fianco laser</Italian>
 	</TEXT>
@@ -4043,7 +4043,7 @@
 			<Gender>Female</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Atak (Broń Boczna Kłuta)</Polish>
+		<Polish>Atak (Bro&#241; Boczna K&#179;uta)</Polish>
 		<Russian>Àòàêà(Òàá. êîëþùåå)</Russian>
 		<Italian>Attacco con arma da fianco perforante</Italian>
 	</TEXT>
@@ -4060,7 +4060,7 @@
 			<Gender>Female</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Atak (Broń Boczna Trucizna)</Polish>
+		<Polish>Atak (Bro&#241; Boczna Trucizna)</Polish>
 		<Russian>Àòàêà(Òàá. ÿä)</Russian>
 		<Italian>Attacco con arma da fianco velenoso</Italian>
 	</TEXT>
@@ -4077,7 +4077,7 @@
 			<Gender>Female</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Atak (Broń Boczna Psychologiczna)</Polish>
+		<Polish>Atak (Bro&#241; Boczna Psychologiczna)</Polish>
 		<Russian>Àòàêà(Òàá. ìåíòàëüíàÿ)</Russian>
 		<Italian>Attacco con arma da fianco psicologico</Italian>
 	</TEXT>
@@ -4094,7 +4094,7 @@
 			<Gender>Female</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Atak (Broń Boczna Cięta)</Polish>
+		<Polish>Atak (Bro&#241; Boczna Ci&#234;ta)</Polish>
 		<Russian>Àòàêà(Òàá. ðóáÿùåå)</Russian>
 		<Italian>Attacco con arma da fianco tagliente</Italian>
 	</TEXT>
@@ -4111,7 +4111,7 @@
 			<Gender>Female</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Atak (Broń Boczna Soniczna)</Polish>
+		<Polish>Atak (Bro&#241; Boczna Soniczna)</Polish>
 		<Russian>Àòàêà(Òàá. çâóêîâàÿ)</Russian>
 		<Italian>Attacco con arma da fianco sonico</Italian>
 	</TEXT>
@@ -4128,7 +4128,7 @@
 			<Gender>Female</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Atak (Broń Boczna Termonuklearna)</Polish>
+		<Polish>Atak (Bro&#241; Boczna Termonuklearna)</Polish>
 		<Russian>Àòàêà(Òàá. òåðìîÿäåðíàÿ)</Russian>
 		<Italian>Attacco con arma da fianco termonucleare</Italian>
 	</TEXT>
@@ -4192,7 +4192,7 @@
 			<Gender>Male</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Okręty Wojenne</Polish>
+		<Polish>Okr&#234;ty Wojenne</Polish>
 		<Russian>Ëèíêîðû</Russian>
 		<Italian>Nave da guerra</Italian>
 	</TEXT>
@@ -4211,7 +4211,7 @@
 			<Gender>Female</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Broń biologiczna</Polish>
+		<Polish>Bro&#241; biologiczna</Polish>
 		<Russian>Áèîîðóæèå</Russian>
 	</TEXT>
 	<TEXT>
@@ -4246,7 +4246,7 @@
 			<Gender>Male:Female</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Ptak (Ptactwo Łowne)</Polish>
+		<Polish>Ptak (Ptactwo &#163;owne)</Polish>
 		<Russian>Êóðèíûå</Russian>
 		<Italian>Uccello da selvaggina</Italian>
 	</TEXT>
@@ -4318,7 +4318,7 @@
 			<Gender>Female</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Ptak (Gołąb)</Polish>
+		<Polish>Ptak (Go&#179;&#185;b)</Polish>
 		<Russian>Ãîëóáèíûå</Russian>
 		<Italian>Uccello piccione</Italian>
 	</TEXT>
@@ -4354,7 +4354,7 @@
 			<Gender>Female</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Ptak (Bezskrzydłowy)</Polish>
+		<Polish>Ptak (Bezskrzyd&#179;owy)</Polish>
 		<Russian>Áåãàþùèå ïòèöû</Russian>
 		<Italian>Uccello ratito</Italian>
 	</TEXT>
@@ -4390,7 +4390,7 @@
 			<Gender>Male:Female</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Ptak (Ptak Spiewający)</Polish>
+		<Polish>Ptak (Ptak Spiewaj&#185;cy)</Polish>
 		<Russian>Ïåâ÷èå ïòèöû</Russian>
 		<Italian>Uccello canterino</Italian>
 	</TEXT>
@@ -4559,7 +4559,7 @@
 			<Gender>Male</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Dowódca</Polish>
+		<Polish>Dow&#243;dca</Polish>
 		<Russian>Êîìàíäèðû</Russian>
 		<Italian>Unità comandante</Italian>
 	</TEXT>
@@ -4585,7 +4585,7 @@
 			<Gender>Male</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Przestępcy</Polish>
+		<Polish>Przest&#234;pcy</Polish>
 		<Russian>Ïðåñòóïíèêè</Russian>
 	</TEXT>
 	<TEXT>
@@ -4597,7 +4597,7 @@
 			<Gender>Male</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Krążowniki</Polish>
+		<Polish>Kr&#185;&#191;owniki</Polish>
 		<Russian>Êðåéñåðà</Russian>
 		<Italian>Incrociatore</Italian>
 	</TEXT>
@@ -4614,7 +4614,7 @@
 			<Gender>Female</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Kultura (Aborygenów)</Polish>
+		<Polish>Kultura (Aborygen&#243;w)</Polish>
 		<Russian>Êóëüòóðà(Àáîðèãåíû)</Russian>
 		<Italian>Cultura aborigena</Italian>
 	</TEXT>
@@ -4710,7 +4710,7 @@
 			<Gender>Female</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Kultura (Amerykańska)</Polish>
+		<Polish>Kultura (Ameryka&#241;ska)</Polish>
 		<Russian>Êóëüòóðà(Àìåðèêàíñêàÿ)</Russian>
 		<Italian>Cultura statunitense</Italian>
 	</TEXT>
@@ -4805,7 +4805,7 @@
 			<Gender>Female</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Kultura (Armeńska)</Polish>
+		<Polish>Kultura (Arme&#241;ska)</Polish>
 		<Russian>Êóëüòóðà(Àðìÿíñêàÿ)</Russian>
 		<Italian>Cultura armena</Italian>
 	</TEXT>
@@ -4925,7 +4925,7 @@
 			<Gender>Female</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Kultura (Babilońska)</Polish>
+		<Polish>Kultura (Babilo&#241;ska)</Polish>
 		<Russian>Êóëüòóðà(Âàâèëîíñêàÿ)</Russian>
 		<Italian>Cultura babilonese</Italian>
 	</TEXT>
@@ -4985,7 +4985,7 @@
 			<Gender>Female</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Kultura (Basków)</Polish>
+		<Polish>Kultura (Bask&#243;w)</Polish>
 		<Russian>Êóëüòóðà(Áàñêè)</Russian>
 		<Italian>Cultura basca</Italian>
 	</TEXT>
@@ -5164,7 +5164,7 @@
 			<Gender>Female</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Kultura (Birmańska)</Polish>
+		<Polish>Kultura (Birma&#241;ska)</Polish>
 		<Russian>Êóëüòóðà(Áèðìà)</Russian>
 		<Italian>Cultura birmana</Italian>
 	</TEXT>
@@ -5227,7 +5227,7 @@
 			<Gender>Female</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Kultura (Kantońska)</Polish>
+		<Polish>Kultura (Kanto&#241;ska)</Polish>
 		<Russian>Êóëüòóðà(Êàíòîíöû)</Russian>
 		<Italian>Cultura cantonese</Italian>
 	</TEXT>
@@ -5274,7 +5274,7 @@
 			<Gender>Female</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Kultura (Kartagińska)</Polish>
+		<Polish>Kultura (Kartagi&#241;ska)</Polish>
 		<Russian>Êóëüòóðà(Êàðôàãåí)</Russian>
 		<Italian>Cultura cartaginese</Italian>
 	</TEXT>
@@ -5339,7 +5339,7 @@
 			<Gender>Female</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Kultura (Cejlońska)</Polish>
+		<Polish>Kultura (Cejlo&#241;ska)</Polish>
 		<Russian>Êóëüòóðà(Öåéëîíñêàÿ)</Russian>
 		<Italian>Cultura ceylonese</Italian>
 	</TEXT>
@@ -5409,7 +5409,7 @@
 			<Gender>Female</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Kultura (Czejenów)</Polish>
+		<Polish>Kultura (Czejen&#243;w)</Polish>
 		<Russian>Êóëüòóðà(Øàéåíí)</Russian>
 		<Italian>Cultura cheyenne</Italian>
 	</TEXT>
@@ -5439,7 +5439,7 @@
 			<Gender>Female</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Kultura (Chińska)</Polish>
+		<Polish>Kultura (Chi&#241;ska)</Polish>
 		<Russian>Êóëüòóðà(Êèòàéñêàÿ)</Russian>
 		<Italian>Cultura cinese</Italian>
 	</TEXT>
@@ -5565,7 +5565,7 @@
 			<Gender>Female</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Kultura (Kubańska)</Polish>
+		<Polish>Kultura (Kuba&#241;ska)</Polish>
 		<Russian>Êóëüòóðà(Êóáèíñêàÿ)</Russian>
 		<Italian>Cultura cubana</Italian>
 	</TEXT>
@@ -5894,7 +5894,7 @@
 			<Gender>Female</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Kultura (Gotów)</Polish>
+		<Polish>Kultura (Got&#243;w)</Polish>
 		<Russian>Êóëüòóðà(Ãîòû)</Russian>
 		<Italian>Cultura gotica</Italian>
 	</TEXT>
@@ -5977,7 +5977,7 @@
 			<Gender>Female</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Kultura (Haitańska)</Polish>
+		<Polish>Kultura (Haita&#241;ska)</Polish>
 		<Russian>Êóëüòóðà(Ãàèòÿíñêàÿ)</Russian>
 		<Italian>Cultura haitiana</Italian>
 	</TEXT>
@@ -6110,7 +6110,7 @@
 			<Gender>Female</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Kultura (Hunów)</Polish>
+		<Polish>Kultura (Hun&#243;w)</Polish>
 		<Russian>Êóëüòóðà(Ãóííû)</Russian>
 		<Italian>Cultura unna</Italian>
 	</TEXT>
@@ -6127,7 +6127,7 @@
 			<Gender>Female</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Kultura (Węgierska)</Polish>
+		<Polish>Kultura (W&#234;gierska)</Polish>
 		<Russian>Êóëüòóðà(Âåíãåðñêàÿ)</Russian>
 		<Italian>Cultura ungherese</Italian>
 	</TEXT>
@@ -6144,7 +6144,7 @@
 			<Gender>Female</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Kultura (Huronów)</Polish>
+		<Polish>Kultura (Huron&#243;w)</Polish>
 		<Russian>Êóëüòóðà(Ãóðîíû)</Russian>
 		<Italian>Cultura urona</Italian>
 	</TEXT>
@@ -6244,7 +6244,7 @@
 			<Gender>Female</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Kultura (Inuitów)</Polish>
+		<Polish>Kultura (Inuit&#243;w)</Polish>
 		<Russian>Êóëüòóðà(Èíóèòû)</Russian>
 		<Italian>Cultura inuit</Italian>
 	</TEXT>
@@ -6309,7 +6309,7 @@
 			<Gender>Female</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Kultura (Źydowska)</Polish>
+		<Polish>Kultura (&#143;ydowska)</Polish>
 		<Russian>Êóëüòóðà(Èçðàèëü)</Russian>
 		<Italian>Cultura israeliana</Italian>
 	</TEXT>
@@ -6326,7 +6326,7 @@
 			<Gender>Female</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Kultura (Włoska)</Polish>
+		<Polish>Kultura (W&#179;oska)</Polish>
 		<Russian>Êóëüòóðà(Èòàëèÿ)</Russian>
 		<Italian>Cultura italiana</Italian>
 	</TEXT>
@@ -6343,7 +6343,7 @@
 			<Gender>Female</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Kultura (Japońska)</Polish>
+		<Polish>Kultura (Japo&#241;ska)</Polish>
 		<Russian>Êóëüòóðà(ßïîíñêàÿ)</Russian>
 		<Italian>Cultura giapponese</Italian>
 	</TEXT>
@@ -6466,7 +6466,7 @@
 			<Gender>Female</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Kultura (Khmerów)</Polish>
+		<Polish>Kultura (Khmer&#243;w)</Polish>
 		<Russian>Êóëüòóðà(Êõìåðû)</Russian>
 		<Italian>Cultura khmer</Italian>
 	</TEXT>
@@ -6535,7 +6535,7 @@
 			<Gender>Female</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Kultura (Koreańska)</Polish>
+		<Polish>Kultura (Korea&#241;ska)</Polish>
 		<Russian>Êóëüòóðà(Êîðåÿ)</Russian>
 		<Italian>Cultura coreana</Italian>
 	</TEXT>
@@ -6684,7 +6684,7 @@
 			<Gender>Female</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Kultura (Mandżurska)</Polish>
+		<Polish>Kultura (Mand&#191;urska)</Polish>
 		<Russian>Êóëüòóðà(Ìàíü÷æóðû)</Russian>
 		<Italian>Cultura manciuriana</Italian>
 	</TEXT>
@@ -6707,7 +6707,7 @@
 			<Gender>Female</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Kultura (Maorysów)</Polish>
+		<Polish>Kultura (Maorys&#243;w)</Polish>
 		<Russian>Êóëüòóðà(Ìàîðè)</Russian>
 		<Italian>Cultura maori</Italian>
 	</TEXT>
@@ -6758,7 +6758,7 @@
 			<Gender>Female</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Kultura (Majów)</Polish>
+		<Polish>Kultura (Maj&#243;w)</Polish>
 		<Russian>Êóëüòóðà(Ìàéÿ)</Russian>
 		<Italian>Cultura maya</Italian>
 	</TEXT>
@@ -6805,7 +6805,7 @@
 			<Gender>Female</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Kultura (Meksykańska)</Polish>
+		<Polish>Kultura (Meksyka&#241;ska)</Polish>
 		<Russian>Êóëüòóðà(Ìåêñèêà)</Russian>
 		<Italian>Cultura messicana</Italian>
 	</TEXT>
@@ -6910,7 +6910,7 @@
 			<Gender>Female</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Kultura (Marokańska)</Polish>
+		<Polish>Kultura (Maroka&#241;ska)</Polish>
 		<Russian>Êóëüòóðà(Ìàðîêêî)</Russian>
 		<Italian>Cultura marocchina</Italian>
 	</TEXT>
@@ -6927,7 +6927,7 @@
 			<Gender>Female</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Kultura (Mogołska)</Polish>
+		<Polish>Kultura (Mogo&#179;ska)</Polish>
 		<Russian>Êóëüòóðà(Ìîãîëû)</Russian>
 		<Italian>Cultura mogul</Italian>
 	</TEXT>
@@ -7121,7 +7121,7 @@
 			<Gender>Female</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Kultura (Olmeków)</Polish>
+		<Polish>Kultura (Olmek&#243;w)</Polish>
 		<Russian>Êóëüòóðà(Îëüìåê)</Russian>
 		<Italian>Cultura olmeca</Italian>
 	</TEXT>
@@ -7180,7 +7180,7 @@
 			<Gender>Female</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Kultura (Pakistańska)</Polish>
+		<Polish>Kultura (Pakista&#241;ska)</Polish>
 		<Russian>Êóëüòóðà(Ïàêèñòàí)</Russian>
 		<Italian>Cultura pakistana</Italian>
 	</TEXT>
@@ -7574,7 +7574,7 @@
 			<Gender>Female</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Kultura (Saksońska)</Polish>
+		<Polish>Kultura (Sakso&#241;ska)</Polish>
 		<Russian>Êóëüòóðà(Ñàêñû)</Russian>
 		<Italian>Cultura sassone</Italian>
 	</TEXT>
@@ -7744,7 +7744,7 @@
 			<Gender>Female</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Kultura (Siuksów)</Polish>
+		<Polish>Kultura (Siuks&#243;w)</Polish>
 		<Russian>Êóëüòóðà(Ñèó)</Russian>
 		<Italian>Cultura sioux</Italian>
 	</TEXT>
@@ -7785,7 +7785,7 @@
 			<Gender>Female</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Kultura (Południowo-afrykańska)</Polish>
+		<Polish>Kultura (Po&#179;udniowo-afryka&#241;ska)</Polish>
 		<Russian>Êóëüòóðà(Þæ. Àôðèêà)</Russian>
 		<Italian>Cultura sudafricana</Italian>
 	</TEXT>
@@ -7802,7 +7802,7 @@
 			<Gender>Female</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Kultura (Hiszpańska)</Polish>
+		<Polish>Kultura (Hiszpa&#241;ska)</Polish>
 		<Russian>Êóëüòóðà(Èñïàíñêàÿ)</Russian>
 		<Italian>Cultura spagnola</Italian>
 	</TEXT>
@@ -7819,7 +7819,7 @@
 			<Gender>Female</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Kultura (Spartańska)</Polish>
+		<Polish>Kultura (Sparta&#241;ska)</Polish>
 		<Russian>Êóëüòóðà(Ñïàðòà)</Russian>
 		<Italian>Cultura spartana</Italian>
 	</TEXT>
@@ -8061,7 +8061,7 @@
 			<Gender>Female</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Kultura (Tybetańska)</Polish>
+		<Polish>Kultura (Tybeta&#241;ska)</Polish>
 		<Russian>Êóëüòóðà(Òèáåò)</Russian>
 		<Italian>Cultura tibetana</Italian>
 	</TEXT>
@@ -8120,7 +8120,7 @@
 			<Gender>Female</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Kultura (Trojańska)</Polish>
+		<Polish>Kultura (Troja&#241;ska)</Polish>
 		<Russian>Êóëüòóðà(Òðîÿíñêàÿ)</Russian>
 		<Italian>Cultura troiana</Italian>
 	</TEXT>
@@ -8137,7 +8137,7 @@
 			<Gender>Female</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Kultura (Tuaregów)</Polish>
+		<Polish>Kultura (Tuareg&#243;w)</Polish>
 		<Russian>Êóëüòóðà(Òóàðåãè)</Russian>
 		<Italian>Cultura tuareg</Italian>
 	</TEXT>
@@ -8197,7 +8197,7 @@
 			<Gender>Female</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Kultura (Turkmeńska)</Polish>
+		<Polish>Kultura (Turkme&#241;ska)</Polish>
 		<Russian>Êóëüòóðà(Òóðêìåíû)</Russian>
 		<Italian>Cultura turkmena</Italian>
 	</TEXT>
@@ -8305,7 +8305,7 @@
 			<Gender>Female</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Kultura (Wikingów)</Polish>
+		<Polish>Kultura (Wiking&#243;w)</Polish>
 		<Russian>Êóëüòóðà(Âèêèíãè)</Russian>
 		<Italian>Cultura vichinga</Italian>
 	</TEXT>
@@ -8457,7 +8457,7 @@
 			<Gender>Female</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Kultura (Zulusów)</Polish>
+		<Polish>Kultura (Zulus&#243;w)</Polish>
 		<Russian>Êóëüòóðà(Çóëóñû)</Russian>
 		<Italian>Cultura zulù</Italian>
 	</TEXT>
@@ -8517,7 +8517,7 @@
 		<Tag>TXT_KEY_UNITCOMBAT_DISASSEMBLY</Tag>
 		<English>Nanodisassembler</English>
 		<French>Nano-désassembleurs</French>
-		<Polish>Nanorozkładacz</Polish>
+		<Polish>Nanorozk&#179;adacz</Polish>
 		<Russian>Íàíîðàçáîðùèê</Russian>
 		<Italian>Unità nanodisassemblatore</Italian>
 	</TEXT>
@@ -8561,7 +8561,7 @@
 		<Tag>TXT_KEY_UNITCOMBAT_DROID_SHIPS</Tag>
 		<English>Droid Ships</English>
 		<French>Vaisseaux Droïdes</French>
-		<Polish>Droid-Okręty</Polish>
+		<Polish>Droid-Okr&#234;ty</Polish>
 		<Russian>Äðîíî-ñóäà</Russian>
 		<Italian>Unità navale droide</Italian>
 	</TEXT>
@@ -8590,7 +8590,7 @@
 			<Gender>Male</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Wczesne Myśliwce</Polish>
+		<Polish>Wczesne My&#156;liwce</Polish>
 		<Russian>Ëåãêèå èñòðåáèòåëè</Russian>
 	</TEXT>
 	<TEXT>
@@ -8641,7 +8641,7 @@
 			<Gender>Female</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Era (Starożytność)</Polish>
+		<Polish>Era (Staro&#191;ytno&#156;&#230;)</Polish>
 		<Russian>Ýðà(Äðåâíèé ìèð)</Russian>
 		<Italian>Era antica</Italian>
 	</TEXT>
@@ -8690,7 +8690,7 @@
 			<Gender>Male:Female</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Era (Przyszłość)</Polish>
+		<Polish>Era (Przysz&#179;o&#156;&#230;)</Polish>
 		<Russian>Ýðà(Áóäóùåå)</Russian>
 		<Italian>Era futura</Italian>
 	</TEXT>
@@ -8726,7 +8726,7 @@
 			<Gender>Female</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Era (Przemysłowa)</Polish>
+		<Polish>Era (Przemys&#179;owa)</Polish>
 		<Russian>Ýðà(Íîâîå âðåìÿ)</Russian>
 		<Italian>Era industriale</Italian>
 	</TEXT>
@@ -8908,7 +8908,7 @@
 			<Gender>Male</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Ryba (Płaszczka)</Polish>
+		<Polish>Ryba (P&#179;aszczka)</Polish>
 		<Russian>Ñêàòû</Russian>
 		<Italian>Pesce manta</Italian>
 	</TEXT>
@@ -9095,7 +9095,7 @@
 			<Gender>Female</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Grupa (Mnóstwo (100k-1mil))</Polish>
+		<Polish>Grupa (Mn&#243;stwo (100k-1mil))</Polish>
 		<Russian>Àðìèÿ (100000-1ìëí)</Russian>
 		<Italian>Gruppo moltitudine (100k-1 milione)</Italian>
 	</TEXT>
@@ -9113,7 +9113,7 @@
 			<Gender>Female</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Grupa (Zespół (2-6))</Polish>
+		<Polish>Grupa (Zesp&#243;&#179; (2-6))</Polish>
 		<Russian>Ãðóïïà (2-6)</Russian>
 		<Italian>Gruppo squadra (2-6)</Italian>
 	</TEXT>
@@ -9149,7 +9149,7 @@
 			<Gender>Female</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Grupa (Drużyna (7-20))</Polish>
+		<Polish>Grupa (Dru&#191;yna (7-20))</Polish>
 		<Russian>Îòðÿä (7-20)</Russian>
 		<Italian>Gruppo squadrone (7-20)</Italian>
 	</TEXT>
@@ -9217,7 +9217,7 @@
 		<English>Heals (Animals)</English>
 		<French>(Soins) Animaux</French>
 		<German>(Versorgung) heilt Tiere</German>
-		<Polish>Leczy (Zwierzęta)</Polish>
+		<Polish>Leczy (Zwierz&#234;ta)</Polish>
 		<Russian>Ëå÷àò æèâîòíûõ</Russian>
 		<Italian>Cura le unità animali</Italian>
 	</TEXT>
@@ -9236,7 +9236,7 @@
 		<Italian>Categoria di guarigione animale</Italian>
 		<French>(Type de Soins) Animaux</French>
 		<German>(Regeneration) Tiere</German>
-		<Polish>Leczy Asyst. (Zwierzęta)</Polish>
+		<Polish>Leczy Asyst. (Zwierz&#234;ta)</Polish>
 		<Russian>Ëå÷èìûå æèâîòíûå</Russian>
 	</TEXT>
 	<TEXT>
@@ -9262,7 +9262,7 @@
 		<English>Heals As (Naval)</English>
 		<French>(Type de Répar.) Navires</French>
 		<German>(Regeneration) Schiffe</German>
-		<Polish>Leczy Asyst. (Okręty)</Polish>
+		<Polish>Leczy Asyst. (Okr&#234;ty)</Polish>
 		<Russian>×èíèìûå ñóäà</Russian>
 		<Italian>Categoria di guarigione navale</Italian>
 	</TEXT>
@@ -9316,7 +9316,7 @@
 		<English>Heals (Naval)</English>
 		<French>(Répar.) Navires</French>
 		<German>(Versorgung) repariert Schiffe</German>
-		<Polish>Leczy (Okręty)</Polish>
+		<Polish>Leczy (Okr&#234;ty)</Polish>
 		<Russian>×èíÿò ñóäà</Russian>
 		<Italian>Cura le unità navali</Italian>
 	</TEXT>
@@ -9383,7 +9383,7 @@
 			<Gender>Male</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Jednostki Bohaterów</Polish>
+		<Polish>Jednostki Bohater&#243;w</Polish>
 		<Russian>Ãåðîè</Russian>
 	</TEXT>
 	<TEXT>
@@ -9435,7 +9435,7 @@
 		<French>Chasseurs</French>
 		<Italian>Unità cacciatore</Italian>
 		<German>Jäger</German>
-		<Polish>Łowcy</Polish>
+		<Polish>&#163;owcy</Polish>
 		<Russian>Îõîòíèêè</Russian>
 	</TEXT>
 	<TEXT>
@@ -9475,7 +9475,7 @@
 			<Gender>Male</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Bezkręgowiec (Skorupiaki)</Polish>
+		<Polish>Bezkr&#234;gowiec (Skorupiaki)</Polish>
 		<Russian>Ðàêîîáðàçíûå</Russian>
 		<Italian>Crostaceo (invertebrato)</Italian>
 	</TEXT>
@@ -9492,7 +9492,7 @@
 			<Gender>Male</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Bezkręgowiec (Mięczaki)</Polish>
+		<Polish>Bezkr&#234;gowiec (Mi&#234;czaki)</Polish>
 		<Russian>Ìîëëþñêè</Russian>
 		<Italian>Mollusco (invertebrato)</Italian>
 	</TEXT>
@@ -9533,14 +9533,14 @@
 			<Gender>Female</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Strażnicy Prawa</Polish>
+		<Polish>Stra&#191;nicy Prawa</Polish>
 		<Russian>Ïðàâîîõðàíèòåëè</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_LEVITATION_SHIPS</Tag>
 		<English>Levitation Ships</English>
 		<French>Vaisseaux à Lévitation</French>
-		<Polish>Statki Lewitujące</Polish>
+		<Polish>Statki Lewituj&#185;ce</Polish>
 		<Russian>Ëåâèòèðóþùèå ñóäà</Russian>
 		<Italian>Navi spaziali a levitazione</Italian>
 	</TEXT>
@@ -9557,7 +9557,7 @@
 			<Gender>Male</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Ssak (Mrówkojad)</Polish>
+		<Polish>Ssak (Mr&#243;wkojad)</Polish>
 		<Russian>Ìóðàâüåäû</Russian>
 		<Italian>Formichiere (mammifero)</Italian>
 	</TEXT>
@@ -9615,7 +9615,7 @@
 			<Gender>Male</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Ssak (Wół)</Polish>
+		<Polish>Ssak (W&#243;&#179;)</Polish>
 		<Russian>Áûêè</Russian>
 		<Italian>Bovino (mammifero)</Italian>
 	</TEXT>
@@ -9632,7 +9632,7 @@
 			<Gender>Male</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Ssak (Wielbłąd)</Polish>
+		<Polish>Ssak (Wielb&#179;&#185;d)</Polish>
 		<Russian>Âåðáëþäû</Russian>
 		<Italian>Camelide (mammifero)</Italian>
 	</TEXT>
@@ -9666,7 +9666,7 @@
 			<Gender>Male</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Ssak (Koń)</Polish>
+		<Polish>Ssak (Ko&#241;)</Polish>
 		<Russian>Ñêàêóíû</Russian>
 		<Italian>Equino (mammifero)</Italian>
 	</TEXT>
@@ -9683,7 +9683,7 @@
 			<Gender>Male</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Ssak (Źyrafa)</Polish>
+		<Polish>Ssak (&#143;yrafa)</Polish>
 		<Russian>Æèðàôû</Russian>
 		<Italian>Giraffa (mammifero)</Italian>
 	</TEXT>
@@ -9809,7 +9809,7 @@
 			<Gender>Male</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Ssak (Łasica)</Polish>
+		<Polish>Ssak (&#163;asica)</Polish>
 		<Russian>Êóíüè</Russian>
 		<Italian>Mustelide (mammifero)</Italian>
 	</TEXT>
@@ -9826,7 +9826,7 @@
 			<Gender>Male</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Ssak (Gróboskóry)</Polish>
+		<Polish>Ssak (Gr&#243;bosk&#243;ry)</Polish>
 		<Russian>Òîëñòîêîæèå</Russian>
 		<Italian>Pachiderma (mammifero)</Italian>
 	</TEXT>
@@ -9843,7 +9843,7 @@
 			<Gender>Male</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Ssak (Płetwonogi)</Polish>
+		<Polish>Ssak (P&#179;etwonogi)</Polish>
 		<Russian>Ëàñòîíîãèå</Russian>
 		<Italian>Pinnipede (mammifero)</Italian>
 	</TEXT>
@@ -9884,7 +9884,7 @@
 			<Gender>Male</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Ssak (Nosorożec)</Polish>
+		<Polish>Ssak (Nosoro&#191;ec)</Polish>
 		<Russian>Íîñîðîãè</Russian>
 		<Italian>Rinoceronte (mammifero)</Italian> 
 	</TEXT>
@@ -9901,7 +9901,7 @@
 			<Gender>Male</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Ssak (Gryzoń)</Polish>
+		<Polish>Ssak (Gryzo&#241;)</Polish>
 		<Russian>Ãðûçóíû</Russian>
 		<Italian>Roditore (mammifero)</Italian>
 	</TEXT>
@@ -10005,7 +10005,7 @@
 			<Gender>Female</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Jednostki walczące wręcz</Polish>
+		<Polish>Jednostki walcz&#185;ce wr&#234;cz</Polish>
 		<Russian>Ðóêîïàøíûå</Russian>
 	</TEXT>
 	<TEXT>
@@ -10050,7 +10050,7 @@
 			<Gender>Male:Female</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Mobilność (Powietrzna)</Polish>
+		<Polish>Mobilno&#156;&#230; (Powietrzna)</Polish>
 		<Russian>Ëåòàþùèå</Russian>
 		<Italian>Mobilità aerea</Italian>
 	</TEXT>
@@ -10068,7 +10068,7 @@
 			<Gender>Female</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Mobilność (Zwierzęcy Zaprzęg)</Polish>
+		<Polish>Mobilno&#156;&#230; (Zwierz&#234;cy Zaprz&#234;g)</Polish>
 		<Russian>Ãóæåâîé òðàíñ-ò</Russian>
 		<Italian>Mobilità a trazione animale</Italian>
 	</TEXT>
@@ -10086,7 +10086,7 @@
 			<Gender>Male:Female</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Mobilność (Jazda Pojazdem)</Polish>
+		<Polish>Mobilno&#156;&#230; (Jazda Pojazdem)</Polish>
 		<Russian>Ìîáèëüíûå þíèòû</Russian>
 		<Italian>Mobilità motorizzata</Italian>
 	</TEXT>
@@ -10104,7 +10104,7 @@
 			<Gender>Female</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Mobilność (Piechotą)</Polish>
+		<Polish>Mobilno&#156;&#230; (Piechot&#185;)</Polish>
 		<Russian>Ïåøèå þíèòû</Russian>
 		<Italian>Mobilità a piedi</Italian>
 	</TEXT>
@@ -10122,7 +10122,7 @@
 			<Gender>Male</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Mobilność (Poduszkowcem)</Polish>
+		<Polish>Mobilno&#156;&#230; (Poduszkowcem)</Polish>
 		<Russian>Ïàðÿùèé òðàíñ-ò</Russian>
 		<Italian>Mobilità fluttuante</Italian>
 	</TEXT>
@@ -10140,7 +10140,7 @@
 			<Gender>Female</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Mobilność (Okrętem)</Polish>
+		<Polish>Mobilno&#156;&#230; (Okr&#234;tem)</Polish>
 		<Russian>Ìîðñêèå þíèòû</Russian>
 		<Italian>Mobilità navale</Italian>
 	</TEXT>
@@ -10158,7 +10158,7 @@
 			<Gender>Male:Female</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Mobilność (Pilotaż)</Polish>
+		<Polish>Mobilno&#156;&#230; (Pilota&#191;)</Polish>
 		<Russian>Âîçäóøíûé òðàíñ-ò</Russian>
 		<Italian>Mobilità con pilota</Italian>
 	</TEXT>
@@ -10176,7 +10176,7 @@
 			<Gender>Female</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Mobilność (Jazda Wierzchem)</Polish>
+		<Polish>Mobilno&#156;&#230; (Jazda Wierzchem)</Polish>
 		<Russian>Âåðõîâîé òðàíñ-ò</Russian>
 		<Italian>Mobilità su cavalcatura</Italian>
 	</TEXT>
@@ -10194,7 +10194,7 @@
 			<Gender>Male:Female</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Mobilność (Bezzałogowiec)</Polish>
+		<Polish>Mobilno&#156;&#230; (Bezza&#179;ogowiec)</Polish>
 		<Russian>Áåñïèëîòíèêè</Russian>
 		<Italian>Mobilità autonoma</Italian>
 	</TEXT>
@@ -10229,7 +10229,7 @@
 			<Gender>Female</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Wierzchowiec (Niedźwiedź)</Polish>
+		<Polish>Wierzchowiec (Nied&#159;wied&#159;)</Polish>
 		<Russian>Âåðõîì íà ìåäâåäå</Russian>
 		<Italian>Cavalcatura su orso</Italian>
 	</TEXT>
@@ -10263,7 +10263,7 @@
 			<Gender>Female</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Wierzchowiec (Wielbłąd)</Polish>
+		<Polish>Wierzchowiec (Wielb&#179;&#185;d)</Polish>
 		<Russian>Âåðõîì íà âåðáëþäå</Russian>
 		<Italian>Cavalcatura su cammello</Italian>
 	</TEXT>
@@ -10280,7 +10280,7 @@
 			<Gender>Female</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Wierzchowiec (Jeleń)</Polish>
+		<Polish>Wierzchowiec (Jele&#241;)</Polish>
 		<Russian>Âåðõîì íà îëåíå</Russian>
 		<Italian>Cavalcatura su cervo</Italian>
 	</TEXT>
@@ -10297,7 +10297,7 @@
 			<Gender>Female</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Wierzchowiec (Słoń)</Polish>
+		<Polish>Wierzchowiec (S&#179;o&#241;)</Polish>
 		<Russian>Âåðõîì íà ñëîíå</Russian>
 		<Italian>Cavalcatura su elefante</Italian>
 	</TEXT>
@@ -10314,7 +10314,7 @@
 			<Gender>Female</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Wierzchowiec (Źyrafa)</Polish>
+		<Polish>Wierzchowiec (&#143;yrafa)</Polish>
 		<Russian>Âåðõîì íà æèðàôå</Russian>
 		<Italian>Cavalcatura su giraffa</Italian>
 	</TEXT>
@@ -10331,7 +10331,7 @@
 			<Gender>Female</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Wierzchowiec (Koń)</Polish>
+		<Polish>Wierzchowiec (Ko&#241;)</Polish>
 		<Russian>Âåðõîì íà ëîøàäè</Russian>
 		<Italian>Cavalcatura su cavallo</Italian>
 	</TEXT>
@@ -10382,7 +10382,7 @@
 			<Gender>Female</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Wierzchowiec (Muł)</Polish>
+		<Polish>Wierzchowiec (Mu&#179;)</Polish>
 		<Russian>Âåðõîì íà ìóëå</Russian>
 		<Italian>Cavalcatura su mulo</Italian>
 	</TEXT>
@@ -10399,7 +10399,7 @@
 			<Gender>Female</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Wierzchowiec (Nosorożec)</Polish>
+		<Polish>Wierzchowiec (Nosoro&#191;ec)</Polish>
 		<Russian>Âåðõîì íà íîñîðîãå</Russian>
 		<Italian>Cavalcatura su rinoceronte</Italian>
 	</TEXT>
@@ -10487,7 +10487,7 @@
 			<Gender>Female</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Statek Kosmiczny (Napęd Nuklearny)</Polish>
+		<Polish>Statek Kosmiczny (Nap&#234;d Nuklearny)</Polish>
 		<Russian>ßäåðíûå çâåçäîëåòû</Russian>
 	</TEXT>
 	<TEXT>
@@ -10574,7 +10574,7 @@
 			<Gender>Female</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Awansowany (Ostrożny)</Polish>
+		<Polish>Awansowany (Ostro&#191;ny)</Polish>
 		<Russian>Ïðîäâ.(Îñòîðîæíî)</Russian>
 		<Italian>Unità con promozione cauto</Italian>
 	</TEXT>
@@ -10621,7 +10621,7 @@
 			<Gender>Female</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Awansowany (Transport Myśliwców)</Polish>
+		<Polish>Awansowany (Transport My&#156;liwc&#243;w)</Polish>
 		<Russian>Ïðîäâ.(Àâèàíîñåö)</Russian>
 		<Italian>Unità con promozione trasporto di caccia</Italian>
 	</TEXT>
@@ -10638,7 +10638,7 @@
 			<Gender>Female</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Awansowany (Transport Pocisków)</Polish>
+		<Polish>Awansowany (Transport Pocisk&#243;w)</Polish>
 		<Russian>Ïðîäâ.(Ðàêåòîíîñåö)</Russian>
 		<Italian>Unità con promozione trasporto di missili</Italian>
 	</TEXT>
@@ -10672,7 +10672,7 @@
 			<Gender>Female</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Awansowany (Transport Hydroplanów)</Polish>
+		<Polish>Awansowany (Transport Hydroplan&#243;w)</Polish>
 		<Russian>Ïðîäâ.(Òðàíñï. ãèäðîñàìîëåòû)</Russian>
 		<Italian>Unità con promozione trasporto di idrovolanti</Italian>
 	</TEXT>
@@ -10707,7 +10707,7 @@
 			<Gender>Female</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Sprawność Bojowa (Boska)</Polish>
+		<Polish>Sprawno&#156;&#230; Bojowa (Boska)</Polish>
 		<Russian>Áîæåñòâåííûå áîéöû</Russian>
 		<Italian>Livello di combattimento divino</Italian>
 	</TEXT>
@@ -10725,7 +10725,7 @@
 			<Gender>Female</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Sprawność Bojowa (Elitarna)</Polish>
+		<Polish>Sprawno&#156;&#230; Bojowa (Elitarna)</Polish>
 		<Russian>Ýëèòíûå áîéöû</Russian>
 		<Italian>Livello di combattimento élite</Italian>
 	</TEXT>
@@ -10743,7 +10743,7 @@
 			<Gender>Female</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Sprawność Bojowa (Epicka)</Polish>
+		<Polish>Sprawno&#156;&#230; Bojowa (Epicka)</Polish>
 		<Russian>Ýïè÷íûå áîéöû</Russian>
 		<Italian>Livello di combattimento epico</Italian>
 	</TEXT>
@@ -10761,7 +10761,7 @@
 			<Gender>Female</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Sprawność Bojowa (Ponadprzeciętna)</Polish>
+		<Polish>Sprawno&#156;&#230; Bojowa (Ponadprzeci&#234;tna)</Polish>
 		<Russian>Âûäàþùèåñÿ áîéöû</Russian>
 		<Italian>Livello di combattimento eccezionale</Italian>
 	</TEXT>
@@ -10779,7 +10779,7 @@
 			<Gender>Female</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Sprawność Bojowa (Niezdolność do walki)</Polish>
+		<Polish>Sprawno&#156;&#230; Bojowa (Niezdolno&#156;&#230; do walki)</Polish>
 		<Russian>Íåïîâòîðèìûå áîéöû</Russian>
 		<Italian>Livello di combattimento incapace</Italian>
 	</TEXT>
@@ -10797,7 +10797,7 @@
 			<Gender>Female</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Sprawność Bojowa (Niska)</Polish>
+		<Polish>Sprawno&#156;&#230; Bojowa (Niska)</Polish>
 		<Russian>Ñëàáûå áîéöû</Russian>
 		<Italian>Livello di combattimento inferiore</Italian>
 	</TEXT>
@@ -10815,7 +10815,7 @@
 			<Gender>Female</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Sprawność Bojowa (Srednia)</Polish>
+		<Polish>Sprawno&#156;&#230; Bojowa (Srednia)</Polish>
 		<Russian>Ïîñðåäñòâåííûå áîéöû</Russian>
 		<Italian>Livello di combattimento mediocre</Italian>
 	</TEXT>
@@ -10833,7 +10833,7 @@
 			<Gender>Female</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Sprawność Bojowa (Źałosna)</Polish>
+		<Polish>Sprawno&#156;&#230; Bojowa (&#143;a&#179;osna)</Polish>
 		<Russian>Áåññèëüíûå</Russian>
 		<Italian>Livello di combattimento patetico</Italian>
 	</TEXT>
@@ -10851,7 +10851,7 @@
 			<Gender>Female</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Sprawność Bojowa (Kiepska)</Polish>
+		<Polish>Sprawno&#156;&#230; Bojowa (Kiepska)</Polish>
 		<Russian>Çàóðÿäíûå áîéöû</Russian>
 		<Italian>Livello di combattimento povero</Italian>
 	</TEXT>
@@ -10869,7 +10869,7 @@
 			<Gender>Female</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Sprawność Bojowa (Standardowa)</Polish>
+		<Polish>Sprawno&#156;&#230; Bojowa (Standardowa)</Polish>
 		<Russian>Îáû÷íûå áîéöû</Russian>
 		<Italian>Livello di combattimento standard</Italian>
 	</TEXT>
@@ -10887,7 +10887,7 @@
 			<Gender>Female</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Sprawność Bojowa (Wysoka )</Polish>
+		<Polish>Sprawno&#156;&#230; Bojowa (Wysoka )</Polish>
 		<Russian>Õîðîøèå áîéöû</Russian>
 		<Italian>Livello di combattimento superiore</Italian>
 	</TEXT>
@@ -11389,7 +11389,7 @@
 			<Gender>Female:Male</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Gad (Wąż)</Polish>
+		<Polish>Gad (W&#185;&#191;)</Polish>
 		<Russian>Çìåè</Russian>
 		<Italian>Serpente (rettile)</Italian>
 	</TEXT>
@@ -11406,7 +11406,7 @@
 			<Gender>Female:Male</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Gad (Źółw)</Polish>
+		<Polish>Gad (&#143;&#243;&#179;w)</Polish>
 		<Russian>×åðåïàõè</Russian>
 		<Italian>Tartaruga (rettile)</Italian>
 	</TEXT>
@@ -11470,7 +11470,7 @@
 		<German>Meerestiereinheiten</German>
 		<Italian>Unità animale marino</Italian>
 		<Spanish>Animales</Spanish>
-		<Polish>Zwierzęta Morskie</Polish>
+		<Polish>Zwierz&#234;ta Morskie</Polish>
 		<Russian>Ðûáû</Russian>
 	</TEXT>
 	<TEXT>
@@ -11480,7 +11480,7 @@
 		<German>Meerestiereinheiten (Geschichten)</German>
 		<Italian>Storia di animale marino</Italian>
 		<Spanish>Sea Animales</Spanish>
-		<Polish>Zwierzęta Morskie (Opowieści)</Polish>
+		<Polish>Zwierz&#234;ta Morskie (Opowie&#156;ci)</Polish>
 		<Russian>Ñêàçû î ðûáàõ</Russian>
 	</TEXT>
 	<TEXT>
@@ -11490,7 +11490,7 @@
 		<German>Große Meerestiereinheiten</German>
 		<Italian>Grande animale marino</Italian>
 		<Spanish>Sea Animales</Spanish>
-		<Polish>Zwierzęta Morskie (Wielkie)</Polish>
+		<Polish>Zwierz&#234;ta Morskie (Wielkie)</Polish>
 		<Russian>Ìåëêèå ðûáû</Russian>
 	</TEXT>
 	<TEXT>
@@ -11500,7 +11500,7 @@
 		<German>Kleine Meerestiereinheiten</German>
 		<Italian>Piccolo animale marino</Italian>
 		<Spanish>Sea Animales</Spanish>
-		<Polish>Zwierzęta Morskie (Małe)</Polish>
+		<Polish>Zwierz&#234;ta Morskie (Ma&#179;e)</Polish>
 		<Russian>Áîëüøèå ðûáû</Russian>
 	</TEXT>
 	<TEXT>
@@ -11563,7 +11563,7 @@
 		<Tag>TXT_KEY_UNITCOMBAT_SHIELD_CRYSTAL</Tag>
 		<English>Shield (Crystal)</English>
 		<French>(Protection) Cristal</French>
-		<Polish>Tarcza (Kryształowa)</Polish>
+		<Polish>Tarcza (Kryszta&#179;owa)</Polish>
 		<Russian>Ùèò (Êðèñòàëë.)</Russian>
 		<Italian>Scudo di tipo cristallo</Italian>
 	</TEXT>
@@ -11596,7 +11596,7 @@
 		<Tag>TXT_KEY_UNITCOMBAT_SHIELD_FORCE_FIELD</Tag>
 		<English>Shield (Force Field)</English>
 		<French>(Protection) Champ de Force</French>
-		<Polish>Tarcza (Pole Siłowe)</Polish>
+		<Polish>Tarcza (Pole Si&#179;owe)</Polish>
 		<Russian>Ùèò (Ñèëîâîå ïîëå)</Russian>
 		<Italian>Scudo di tipo campo di forza</Italian>
 	</TEXT>
@@ -11621,7 +11621,7 @@
 			<Gender>Female</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Tarcza (Duża)</Polish>
+		<Polish>Tarcza (Du&#191;a)</Polish>
 		<Russian>Ùèò(Áîëüøîé)</Russian>
 		<Italian>Scudo di tipo grande</Italian>
 	</TEXT>
@@ -11638,7 +11638,7 @@
 			<Gender>Female</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Materiał Tarczy (Kość)</Polish>
+		<Polish>Materia&#179; Tarczy (Ko&#156;&#230;)</Polish>
 		<Russian>Ìàò. ùèòà(Êîñòü)</Russian>
 		<Italian>Materiale scudo osso</Italian>
 	</TEXT>
@@ -11655,7 +11655,7 @@
 			<Gender>Female</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Materiał Tarczy (Brąz)</Polish>
+		<Polish>Materia&#179; Tarczy (Br&#185;z)</Polish>
 		<Russian>Ìàò. ùèòà(Áðîíçà)</Russian>
 		<Italian>Materiale scudo bronzo</Italian>
 	</TEXT>
@@ -11672,7 +11672,7 @@
 			<Gender>Female</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Materiał Tarczy (Ceramika)</Polish>
+		<Polish>Materia&#179; Tarczy (Ceramika)</Polish>
 		<Russian>Ìàò. ùèòà(Êåðàìèêà)</Russian>
 		<Italian>Materiale scudo ceramica</Italian>
 	</TEXT>
@@ -11689,7 +11689,7 @@
 			<Gender>Female</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Materiał Tarczy (Miedź)</Polish>
+		<Polish>Materia&#179; Tarczy (Mied&#159;)</Polish>
 		<Russian>Ìàò. ùèòà(Ìåäü)</Russian>
 		<Italian>Materiale scudo rame</Italian>
 	</TEXT>
@@ -11706,7 +11706,7 @@
 			<Gender>Female</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Materiał Tarczy (Pole Elektromagnetyczne)</Polish>
+		<Polish>Materia&#179; Tarczy (Pole Elektromagnetyczne)</Polish>
 		<Russian>Ìàò. ùèòà(ÝÌÏ)</Russian>
 		<Italian>Materiale scudo campo elettromagnetico</Italian>
 	</TEXT>
@@ -11723,7 +11723,7 @@
 			<Gender>Female</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Materiał Tarczy (Utwardzona Skóra)</Polish>
+		<Polish>Materia&#179; Tarczy (Utwardzona Sk&#243;ra)</Polish>
 		<Russian>Ìàò. ùèòà(Êîæà)</Russian>
 		<Italian>Materiale scudo cuoio indurito</Italian>
 	</TEXT>
@@ -11740,7 +11740,7 @@
 			<Gender>Female</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Materiał Tarczy (Źelazo)</Polish>
+		<Polish>Materia&#179; Tarczy (&#143;elazo)</Polish>
 		<Russian>Ìàò. ùèòà(Æåëåçî)</Russian>
 		<Italian>Materiale scudo ferro</Italian>
 	</TEXT>
@@ -11757,7 +11757,7 @@
 			<Gender>Female</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Materiał Tarczy (Plastik)</Polish>
+		<Polish>Materia&#179; Tarczy (Plastik)</Polish>
 		<Russian>Ìàò. ùèòà(Ïëàñòèê)</Russian>
 		<Italian>Materiale scudo plastica</Italian>
 	</TEXT>
@@ -11774,7 +11774,7 @@
 			<Gender>Female</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Materiał Tarczy (Stal)</Polish>
+		<Polish>Materia&#179; Tarczy (Stal)</Polish>
 		<Russian>Ìàò. ùèòà(Ñòàëü)</Russian>
 		<Italian>Materiale scudo acciaio</Italian>
 	</TEXT>
@@ -11791,7 +11791,7 @@
 			<Gender>Female</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Materiał Tarczy (Drewno)</Polish>
+		<Polish>Materia&#179; Tarczy (Drewno)</Polish>
 		<Russian>Ìàò. ùèòà(Äåðåâî)</Russian>
 		<Italian>Materiale scudo legno</Italian>
 	</TEXT>
@@ -11815,7 +11815,7 @@
 		<Tag>TXT_KEY_UNITCOMBAT_SHIELD_REINFORCED_FORCE_FIELD</Tag>
 		<English>Shield (Reinforced Force Field)</English>
 		<French>(Protection) Champ de force renforcé</French>
-		<Polish>Tarcza (Wzmocnione Pole Siłowe)</Polish>
+		<Polish>Tarcza (Wzmocnione Pole Si&#179;owe)</Polish>
 		<Russian>Ùèò (Óñèë. ñèë. ïîëå)</Russian>
 		<Italian>Scudo di tipo campo di forza rinforzato</Italian>
 	</TEXT>
@@ -11840,7 +11840,7 @@
 			<Gender>Female</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Tarcza (Mała)</Polish>
+		<Polish>Tarcza (Ma&#179;a)</Polish>
 		<Russian>Ùèò(Ìàëûé)</Russian>
 		<Italian>Scudo di tipo piccolo</Italian>
 	</TEXT>
@@ -11873,7 +11873,7 @@
 			<Gender>Female</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Tarcza (Pawęż)</Polish>
+		<Polish>Tarcza (Paw&#234;&#191;)</Polish>
 		<Russian>Ùèò(Ðîñòîâîé)</Russian>
 		<Italian>Scudo di tipo torre</Italian>
 	</TEXT>
@@ -11908,7 +11908,7 @@
 			<Gender>Female</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Machiny oblężnicze</Polish>
+		<Polish>Machiny obl&#234;&#191;nicze</Polish>
 		<Russian>Îñàäíûå îðóäèÿ</Russian>
 	</TEXT>
 	<TEXT>
@@ -11924,7 +11924,7 @@
 			<Gender>Male:Female</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Oblężenie (Defensywne)</Polish>
+		<Polish>Obl&#234;&#191;enie (Defensywne)</Polish>
 		<Russian>Øòóðìîâîé(Êðåïîñòíîé)</Russian>
 		<Italian>Unità d'assedio difensivo</Italian>
 	</TEXT>
@@ -11941,7 +11941,7 @@
 			<Gender>Male:Female</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Styl Oblężenia (Energia)</Polish>
+		<Polish>Styl Obl&#234;&#191;enia (Energia)</Polish>
 		<Russian>Îñàäíîé(Ýíåðãî)</Russian>
 		<Italian>Unità d'assedio con armi a energia</Italian>
 	</TEXT>
@@ -11958,7 +11958,7 @@
 			<Gender>Male:Female</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Oblężenie (Obszarowe)</Polish>
+		<Polish>Obl&#234;&#191;enie (Obszarowe)</Polish>
 		<Russian>Øòóðìîâîé(Ïîëåâîé)</Russian>
 		<Italian>Unità d'assedio in campo aperto</Italian>
 	</TEXT>
@@ -11975,7 +11975,7 @@
 			<Gender>Male:Female</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Oblężenie (Niszczenie Bram)</Polish>
+		<Polish>Obl&#234;&#191;enie (Niszczenie Bram)</Polish>
 		<Russian>Øòóðìîâîé(Òàðàí)</Russian>
 		<Italian>Unità d'assedio con sfondamento</Italian>
 	</TEXT>
@@ -11992,7 +11992,7 @@
 			<Gender>Male:Female</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Styl Oblężenia (Proch Strzelniczy)</Polish>
+		<Polish>Styl Obl&#234;&#191;enia (Proch Strzelniczy)</Polish>
 		<Russian>Îñàäíîé(Îãíåñòðåëüíûé)</Russian>
 		<Italian>Unità d'assedio con armi da fuoco</Italian>
 	</TEXT>
@@ -12009,7 +12009,7 @@
 			<Gender>Male:Female</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Styl Oblężenia (Rakiety)</Polish>
+		<Polish>Styl Obl&#234;&#191;enia (Rakiety)</Polish>
 		<Russian>Îñàäíîé(Ðàêåòíûé)</Russian>
 		<Italian>Unità d'assedio con missili</Italian>
 	</TEXT>
@@ -12026,7 +12026,7 @@
 			<Gender>Male:Female</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Oblężenie (Miejskie)</Polish>
+		<Polish>Obl&#234;&#191;enie (Miejskie)</Polish>
 		<Russian>Øòóðìîâîé(Ãîðîä)</Russian>
 		<Italian>Unità d'assedio urbano</Italian>
 	</TEXT>
@@ -12043,7 +12043,7 @@
 			<Gender>Male:Female</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Styl Oblężenia (Drewniana)</Polish>
+		<Polish>Styl Obl&#234;&#191;enia (Drewniana)</Polish>
 		<Russian>Îñàäíîé(Äåðåâÿíûé)</Russian>
 		<Italian>Unità d'assedio con armi di legno</Italian>
 	</TEXT>
@@ -12079,7 +12079,7 @@
 			<Gender>Female</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Rozmiar (Maleńkie)</Polish>
+		<Polish>Rozmiar (Male&#241;kie)</Polish>
 		<Russian>Ìèíèàòþðíûå</Russian>
 		<Italian>Dimensione unità minuscola</Italian>
 	</TEXT>
@@ -12151,7 +12151,7 @@
 			<Gender>Female</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Rozmiar (Duże)</Polish>
+		<Polish>Rozmiar (Du&#191;e)</Polish>
 		<Russian>Áîëüøèå</Russian>
 		<Italian>Dimensione unità grande</Italian>
 	</TEXT>
@@ -12195,7 +12195,7 @@
 			<Gender>Female</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Rozmiar (Małe)</Polish>
+		<Polish>Rozmiar (Ma&#179;e)</Polish>
 		<Russian>Ìàëûå</Russian>
 		<Italian>Dimensione unità piccola</Italian>
 	</TEXT>
@@ -12230,7 +12230,7 @@
 			<Gender>Female</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Stakek Kosmiczny z Źaglem Słonecznym</Polish>
+		<Polish>Stakek Kosmiczny z &#143;aglem S&#179;onecznym</Polish>
 		<Russian>Ñîëíå÷íûé êîñìîëåò</Russian>
 		<Italian>Astronave a vela solare</Italian>
 	</TEXT>
@@ -12327,7 +12327,7 @@
 			<Gender>Female</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Szybkość (Szybkie)</Polish>
+		<Polish>Szybko&#156;&#230; (Szybkie)</Polish>
 		<Russian>Áûñòðûå</Russian>
 		<Italian>Unità veloce</Italian>
 	</TEXT>
@@ -12345,7 +12345,7 @@
 			<Gender>Female</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Szybkość (Wolne)</Polish>
+		<Polish>Szybko&#156;&#230; (Wolne)</Polish>
 		<Russian>Ìåäëåííûå</Russian>
 		<Italian>Unità lenta</Italian>
 	</TEXT>
@@ -12445,7 +12445,7 @@
 			<Gender>Male</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Okręty Podwodne</Polish>
+		<Polish>Okr&#234;ty Podwodne</Polish>
 		<Russian>Ñóáìàðèíû</Russian>
 	</TEXT>
 	<TEXT>
@@ -12463,7 +12463,7 @@
 			<Gender>Female</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Jednostki Naddźwiękowe</Polish>
+		<Polish>Jednostki Nadd&#159;wi&#234;kowe</Polish>
 		<Russian>Ñâåðõçâóê. ñàìîëåòû</Russian>
 	</TEXT>
 	<TEXT>
@@ -12479,7 +12479,7 @@
 			<Gender>Female</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Rój</Polish>
+		<Polish>R&#243;j</Polish>
 		<Russian>Ðîé</Russian>
 		<Italian>Unità sciame</Italian>
 	</TEXT>
@@ -12487,7 +12487,7 @@
 		<Tag>TXT_KEY_UNITCOMBAT_SWARMSHIP</Tag>
 		<English>Swarmship</English>
 		<French>Nuées</French>
-		<Polish>Statek-Rój</Polish>
+		<Polish>Statek-R&#243;j</Polish>
 		<Russian>Êîðàáëü-Óëåé</Russian>
 		<Italian>Unità nave spaziale sciame</Italian>
 	</TEXT>
@@ -12541,7 +12541,7 @@
 			<Gender>Female</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Pojazdy Gąsienicowe</Polish>
+		<Polish>Pojazdy G&#185;sienicowe</Polish>
 		<Russian>Ãóñåíè÷íûå</Russian>
 	</TEXT>
 	<TEXT>
@@ -12646,7 +12646,7 @@
 			<Gender>Female</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Uzbrojenie (P-Z Samokierująca)</Polish>
+		<Polish>Uzbrojenie (P-Z Samokieruj&#185;ca)</Polish>
 		<Russian>Îðóæèå(Â-Ç Guided)</Russian>
 		<Italian>Arma aria-terra teleguidata</Italian>
 	</TEXT>
@@ -12663,7 +12663,7 @@
 			<Gender>Female</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Uzbrojenie (P-Z Pociski Dalekiego Zasięgu)</Polish>
+		<Polish>Uzbrojenie (P-Z Pociski Dalekiego Zasi&#234;gu)</Polish>
 		<Russian>Îðóæèå(Â-Ç ÎÒÐ)</Russian>
 		<Italian>Arma aria-terra missile a lunga gittata</Italian>
 	</TEXT>
@@ -12680,7 +12680,7 @@
 			<Gender>Female</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Uzbrojenie (P-Z Pociski Sredniego Zasięgu)</Polish>
+		<Polish>Uzbrojenie (P-Z Pociski Sredniego Zasi&#234;gu)</Polish>
 		<Russian>Îðóæèå(Â-Ç ÐÑÄ)</Russian>
 		<Italian>Arma aria-terra missile a media gittata</Italian>
 	</TEXT>
@@ -12714,7 +12714,7 @@
 			<Gender>Female</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Uzbrojenie (P-Z Pociski Krótkiego Zasięgu)</Polish>
+		<Polish>Uzbrojenie (P-Z Pociski Kr&#243;tkiego Zasi&#234;gu)</Polish>
 		<Russian>Îðóæèå(Â-Ç ÐÌÄ)</Russian>
 		<Italian>Arma aria-terra missile a corta gittata</Italian>
 	</TEXT>
@@ -12739,7 +12739,7 @@
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_BACKUP_ACOUSTOPHORESIS</Tag>
 		<English>Wields (Backup Acoustophoresis)</English>
 		<French>(Équipement secondaire) Acoustophorèse</French>
-		<Polish>Uzbrojenie (Broń Zapasowa Acoustophoresis)</Polish>
+		<Polish>Uzbrojenie (Bro&#241; Zapasowa Acoustophoresis)</Polish>
 		<Russian>Îðóæèå(Àêóñòè÷. ëåâèòàöèÿ)</Russian>
 		<Italian>Arma secondaria acustoforesi</Italian>
 	</TEXT>
@@ -12747,7 +12747,7 @@
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_BACKUP_ADVANCED_PATHOGENS</Tag>
 		<English>Wields (Backup Advanced Pathogens)</English>
 		<French>(Équipement secondaire) Pathogènes Avancés</French>
-		<Polish>Uzbrojenie (Broń Zapasowa Zaawansowane Patogeny)</Polish>
+		<Polish>Uzbrojenie (Bro&#241; Zapasowa Zaawansowane Patogeny)</Polish>
 		<Russian>Îðóæèå(Ïðîäâ. ïàòîãåíû)</Russian>
 		<Italian>Arma secondaria patogeno avanzato</Italian>
 	</TEXT>
@@ -12755,7 +12755,7 @@
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_BACKUP_ANTIMATTER</Tag>
 		<English>Wields (Backup Antimatter)</English>
 		<French>(Équipement secondaire) Anti-matière</French>
-		<Polish>Uzbrojenie (Broń Zapasowa Antymateria)</Polish>
+		<Polish>Uzbrojenie (Bro&#241; Zapasowa Antymateria)</Polish>
 		<Russian>Îðóæèå(Àíòèìàòåðèÿ)</Russian>
 		<Italian>Arma secondaria a antimateria</Italian>
 	</TEXT>
@@ -12772,7 +12772,7 @@
 			<Gender>Female</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Uzbrojenie (Broń Zapasowa Dyst. Topór)</Polish>
+		<Polish>Uzbrojenie (Bro&#241; Zapasowa Dyst. Top&#243;r)</Polish>
 		<Russian>Îðóæèå(Äèñò. òîïîðû)</Russian>
 		<Italian>Arma secondaria a distanza ascia</Italian>
 	</TEXT>
@@ -12789,7 +12789,7 @@
 			<Gender>Female</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Uzbrojenie (Broń Zapasowa Dyst. Balista)</Polish>
+		<Polish>Uzbrojenie (Bro&#241; Zapasowa Dyst. Balista)</Polish>
 		<Russian>Îðóæèå(Äèñò. áàëëèñòà)</Russian>
 		<Italian>Arma secondaria a distanza ballista</Italian>
 	</TEXT>
@@ -12806,7 +12806,7 @@
 			<Gender>Female</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Uzbrojenie (Broń Zapasowa Dyst. Dmuchawka)</Polish>
+		<Polish>Uzbrojenie (Bro&#241; Zapasowa Dyst. Dmuchawka)</Polish>
 		<Russian>Îðóæèå(Dist Backup Blowgun)</Russian>
 		<Italian>Arma secondaria a distanza cerbottana</Italian>
 	</TEXT>
@@ -12823,7 +12823,7 @@
 			<Gender>Female</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Uzbrojenie (Broń Zapasowa Dyst. Bola)</Polish>
+		<Polish>Uzbrojenie (Bro&#241; Zapasowa Dyst. Bola)</Polish>
 		<Russian>Îðóæèå(Dist Backup Bola)</Russian>
 		<Italian>Arma secondaria a distanza bola</Italian>
 	</TEXT>
@@ -12840,7 +12840,7 @@
 			<Gender>Female</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Uzbrojenie (Broń Zapasowa Dyst. Boomerang )</Polish>
+		<Polish>Uzbrojenie (Bro&#241; Zapasowa Dyst. Boomerang )</Polish>
 		<Russian>Îðóæèå(Dist Backup Boomerang)</Russian>
 		<Italian>Arma secondaria a distanza boomerang</Italian>
 	</TEXT>
@@ -12857,7 +12857,7 @@
 			<Gender>Female</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Uzbrojenie (Broń Zapasowa Dyst. Działo)</Polish>
+		<Polish>Uzbrojenie (Bro&#241; Zapasowa Dyst. Dzia&#179;o)</Polish>
 		<Russian>Îðóæèå(Dist Backup Cannonball)</Russian>
 		<Italian>Arma secondaria a distanza palle di cannone</Italian>
 	</TEXT>
@@ -12874,7 +12874,7 @@
 			<Gender>Female</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Uzbrojenie (Broń Zapasowa Dyst. Pałka)</Polish>
+		<Polish>Uzbrojenie (Bro&#241; Zapasowa Dyst. Pa&#179;ka)</Polish>
 		<Russian>Îðóæèå(Dist Backup Club)</Russian>
 		<Italian>Arma secondaria a distanza clava</Italian>
 	</TEXT>
@@ -12882,7 +12882,7 @@
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_BACKUP_COILGUN</Tag>
 		<English>Wields (Backup Coilgun)</English>
 		<French>(Équipement secondaire) Canon magnétique</French>
-		<Polish>Uzbrojenie (Broń Zapasowa Działo Gaussa)</Polish>
+		<Polish>Uzbrojenie (Bro&#241; Zapasowa Dzia&#179;o Gaussa)</Polish>
 		<Russian>Îðóæèå(Ïóøêà Ãàóññà)</Russian>
 		<Italian>Arma secondaria cannone di Gauss</Italian>
 	</TEXT>
@@ -12890,7 +12890,7 @@
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_BACKUP_DISINTIGRATION</Tag>
 		<English>Wields (Backup Disintegration)</English>
 		<French>(Équipement secondaire) Désintégration</French>
-		<Polish>Uzbrojenie (Broń Zapasowa Dezintegrator)</Polish>
+		<Polish>Uzbrojenie (Bro&#241; Zapasowa Dezintegrator)</Polish>
 		<Russian>Îðóæèå(Äèçèíòåãðàöèÿ)</Russian>
 		<Italian>Arma secondaria disintegrante</Italian>
 	</TEXT>
@@ -12907,7 +12907,7 @@
 			<Gender>Female</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Uzbrojenie (Broń Zapasowa Dyst. Dynamit)</Polish>
+		<Polish>Uzbrojenie (Bro&#241; Zapasowa Dyst. Dynamit)</Polish>
 		<Russian>Îðóæèå(Dist Backup Dynamite)</Russian>
 		<Italian>Arma secondaria a distanza dinamite</Italian>
 	</TEXT>
@@ -12924,7 +12924,7 @@
 			<Gender>Female</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Uzbrojenie (Broń Zapasowa Dyst. Elektryczne)</Polish>
+		<Polish>Uzbrojenie (Bro&#241; Zapasowa Dyst. Elektryczne)</Polish>
 		<Russian>Îðóæèå(Dist Backup Electrical)</Russian>
 		<Italian>Arma secondaria a distanza elettrica</Italian>
 	</TEXT>
@@ -12941,7 +12941,7 @@
 			<Gender>Female</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Uzbrojenie (Broń Zapasowa Dyst. Elektromagnetyczna)</Polish>
+		<Polish>Uzbrojenie (Bro&#241; Zapasowa Dyst. Elektromagnetyczna)</Polish>
 		<Russian>Îðóæèå(Dist Backup Electromagnetic)</Russian>
 		<Italian>Arma secondaria a distanza a impulsi elettromagnetici</Italian>
 	</TEXT>
@@ -12958,7 +12958,7 @@
 			<Gender>Female</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Uzbrojenie (Broń Zapasowa Dyst. Mołotow)</Polish>
+		<Polish>Uzbrojenie (Bro&#241; Zapasowa Dyst. Mo&#179;otow)</Polish>
 		<Russian>Îðóæèå(Dist Backup Explosive Flask)</Russian>
 		<Italian>Arma secondaria a distanza bottiglia incendiaria</Italian>
 	</TEXT>
@@ -12975,7 +12975,7 @@
 			<Gender>Female</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Uzbrojenie (Broń Zapasowa Dyst. Fajerwerki )</Polish>
+		<Polish>Uzbrojenie (Bro&#241; Zapasowa Dyst. Fajerwerki )</Polish>
 		<Russian>Îðóæèå(Dist Backup Fireworks)</Russian>
 		<Italian>Arma secondaria a distanza petardo</Italian>
 	</TEXT>
@@ -12992,7 +12992,7 @@
 			<Gender>Female</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Uzbrojenie (Broń Zapasowa Płomień Jet Dyst.)</Polish>
+		<Polish>Uzbrojenie (Bro&#241; Zapasowa P&#179;omie&#241; Jet Dyst.)</Polish>
 		<Russian>Îðóæèå(Dist Backup Flame Jet)</Russian>
 		<Italian>Arma secondaria a distanza getto di fuoco</Italian>
 	</TEXT>
@@ -13009,7 +13009,7 @@
 			<Gender>Female</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Uzbrojenie (Broń Zapasowa Dyst. Mróz)</Polish>
+		<Polish>Uzbrojenie (Bro&#241; Zapasowa Dyst. Mr&#243;z)</Polish>
 		<Russian>Îðóæèå(Dist Backup Frost)</Russian>
 		<Italian>Arma secondaria a distanza congelante</Italian>
 	</TEXT>
@@ -13026,7 +13026,7 @@
 			<Gender>Female</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Uzbrojenie (Broń Zapasowa Dyst. Automatyczna)</Polish>
+		<Polish>Uzbrojenie (Bro&#241; Zapasowa Dyst. Automatyczna)</Polish>
 		<Russian>Îðóæèå(Dist Backup Fully-Automatic)</Russian>
 		<Italian>Arma secondaria a distanza totalmente autonoma</Italian>
 	</TEXT>
@@ -13034,7 +13034,7 @@
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_BACKUP_FUSION_CANNON</Tag>
 		<English>Wields (Backup Fusion Cannon)</English>
 		<French>(Équipement secondaire) Canon à Fusion</French>
-		<Polish>Uzbrojenie (Broń Zapasowa Działo Fuzyjne)</Polish>
+		<Polish>Uzbrojenie (Bro&#241; Zapasowa Dzia&#179;o Fuzyjne)</Polish>
 		<Russian>Îðóæèå(Òåðìîÿä. ïóøêà)</Russian>
 		<Italian>Arma secondaria cannone a fusione</Italian>
 	</TEXT>
@@ -13042,7 +13042,7 @@
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_BACKUP_GRAVITY</Tag>
 		<English>Wields (Backup Gravity)</English>
 		<French>(Équipement secondaire) Gravité</French>
-		<Polish>Uzbrojenie (Broń Zapasowa Grawitacyjna)</Polish>
+		<Polish>Uzbrojenie (Bro&#241; Zapasowa Grawitacyjna)</Polish>
 		<Russian>Îðóæèå(Ãðàâèòàöèÿ)</Russian>
 		<Italian>Arma secondaria a gravità</Italian>
 	</TEXT>
@@ -13059,7 +13059,7 @@
 			<Gender>Female</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Uzbrojenie (Broń Zapasowa Dyst. Granat)</Polish>
+		<Polish>Uzbrojenie (Bro&#241; Zapasowa Dyst. Granat)</Polish>
 		<Russian>Îðóæèå(Dist Backup Grenade)</Russian>
 		<Italian>Arma secondaria a distanza granata</Italian>
 	</TEXT>
@@ -13076,7 +13076,7 @@
 			<Gender>Female</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Uzbrojenie (Broń Zapasowa Dyst. Młot)</Polish>
+		<Polish>Uzbrojenie (Bro&#241; Zapasowa Dyst. M&#179;ot)</Polish>
 		<Russian>Îðóæèå(Dist Backup Hammer)</Russian>
 		<Italian>Arma secondaria a distanza martello</Italian>
 	</TEXT>
@@ -13093,7 +13093,7 @@
 			<Gender>Female</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Uzbrojenie (Broń Zapasowa Dyst. Pistolet)</Polish>
+		<Polish>Uzbrojenie (Bro&#241; Zapasowa Dyst. Pistolet)</Polish>
 		<Russian>Îðóæèå(Dist Backup Handgun)</Russian>
 		<Italian>Arma secondaria a distanza pistola</Italian>
 	</TEXT>
@@ -13101,7 +13101,7 @@
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_BACKUP_HANDHELD_RAILGUN</Tag>
 		<English>Wields (Backup Handheld Railgun)</English>
 		<French>(Équipement secondaire) Railgun</French>
-		<Polish>Uzbrojenie (Broń Zapasowa Dyst. Ręczny Railgun)</Polish>
+		<Polish>Uzbrojenie (Bro&#241; Zapasowa Dyst. R&#234;czny Railgun)</Polish>
 		<Russian>Îðóæèå(Ðó÷íîé ðåëüñîòðîí)</Russian>
 		<Italian>Arma secondaria cannone a rotaia portatile</Italian>
 	</TEXT>
@@ -13118,7 +13118,7 @@
 			<Gender>Female</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Uzbrojenie (Broń Zapasowa Dyst. Ciepło)</Polish>
+		<Polish>Uzbrojenie (Bro&#241; Zapasowa Dyst. Ciep&#179;o)</Polish>
 		<Russian>Îðóæèå(Dist Backup Heat)</Russian>
 		<Italian>Arma secondaria a distanza di calore</Italian>
 	</TEXT>
@@ -13135,7 +13135,7 @@
 			<Gender>Female</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Uzbrojenie (Broń Zapasowa Dyst. Ciężka Kusza )</Polish>
+		<Polish>Uzbrojenie (Bro&#241; Zapasowa Dyst. Ci&#234;&#191;ka Kusza )</Polish>
 		<Russian>Îðóæèå(Dist Backup Heavy Crossbow)</Russian>
 		<Italian>Arma secondaria a distanza balestra pesante</Italian>
 	</TEXT>
@@ -13143,7 +13143,7 @@
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_BACKUP_HEAVY_RAILGUN</Tag>
 		<English>Wields (Backup Heavy Railgun)</English>
 		<French>(Équipement secondaire) Railgun lourd</French>
-		<Polish>Uzbrojenie (Broń Zapasowa Ciężki Railgun)</Polish>
+		<Polish>Uzbrojenie (Bro&#241; Zapasowa Ci&#234;&#191;ki Railgun)</Polish>
 		<Russian>Îðóæèå(Òÿæ. ðåëüñîòðîí)</Russian>
 		<Italian>Arma secondaria cannone a rotaia pesante</Italian>
 	</TEXT>
@@ -13151,7 +13151,7 @@
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_BACKUP_IMPROVED_ELECTRIC</Tag>
 		<English>Wields (Backup Improved Electric)</English>
 		<French>(Équipement secondaire) Electricité</French>
-		<Polish>Uzbrojenie (Broń Zapasowa Ulepszona Elektryczna)</Polish>
+		<Polish>Uzbrojenie (Bro&#241; Zapasowa Ulepszona Elektryczna)</Polish>
 		<Russian>Îðóæèå(Óëó÷ø. ýëåêòðè÷åñòâî)</Russian>
 		<Italian>Arma secondaria elettrica migliorata</Italian>
 	</TEXT>
@@ -13159,7 +13159,7 @@
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_BACKUP_IMPROVED_EMP</Tag>
 		<English>Wields (Backup Improved EMP)</English>
 		<French>(Équipement secondaire) Impulsion Electro-magnétique</French>
-		<Polish>Uzbrojenie (Broń Zapasowa Ulepszone EMP)</Polish>
+		<Polish>Uzbrojenie (Bro&#241; Zapasowa Ulepszone EMP)</Polish>
 		<Russian>Îðóæèå(Ïðîäâ. ÝÌÈ)</Russian>
 		<Italian>Arma secondaria a impulsi elettromagnetici migliorata</Italian>
 	</TEXT>
@@ -13167,7 +13167,7 @@
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_BACKUP_IMPROVED_FROST</Tag>
 		<English>Wields (Backup Improved Frost)</English>
 		<French>(Équipement secondaire) Froid</French>
-		<Polish>Uzbrojenie (Broń Zapasowa Ulepszone Zimno)</Polish>
+		<Polish>Uzbrojenie (Bro&#241; Zapasowa Ulepszone Zimno)</Polish>
 		<Russian>Îðóæèå(Ïðîäâ. ìîðîç)</Russian>
 		<Italian>Arma secondaria congelante migliorata</Italian>
 	</TEXT>
@@ -13175,7 +13175,7 @@
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_BACKUP_IMPROVED_LASER</Tag>
 		<English>Wields (Backup Improved Laser)</English>
 		<French>(Équipement secondaire) Lasers améliorés</French>
-		<Polish>Uzbrojenie (Broń Zapasowa Ulepszony Laser)</Polish>
+		<Polish>Uzbrojenie (Bro&#241; Zapasowa Ulepszony Laser)</Polish>
 		<Russian>Îðóæèå(Òåðìîëàçåð)</Russian>
 		<Italian>Arma secondaria laser migliorata</Italian>
 	</TEXT>
@@ -13183,7 +13183,7 @@
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_BACKUP_IMPROVED_NANO</Tag>
 		<English>Wields (Backup Improved Nanospray)</English>
 		<French>(Équipement secondaire) Spray de nanites</French>
-		<Polish>Uzbrojenie (Broń Zapasowa Ulepszony Nanospraj)</Polish>
+		<Polish>Uzbrojenie (Bro&#241; Zapasowa Ulepszony Nanospraj)</Polish>
 		<Russian>Îðóæèå(Ïðîäâ. íàíîñïðåé)</Russian>
 		<Italian>Arma secondaria nanospray migliorata</Italian>
 	</TEXT>
@@ -13191,7 +13191,7 @@
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_BACKUP_IMPROVED_PATHOGENS</Tag>
 		<English>Wields (Backup Improved Pathogens)</English>
 		<French>(Équipement) Pathogènes améliorés de sauvegarde</French>
-		<Polish>Uzbrojenie (Broń Zapasowa Ulepszone Patogeny)</Polish>
+		<Polish>Uzbrojenie (Bro&#241; Zapasowa Ulepszone Patogeny)</Polish>
 		<Russian>Îðóæèå(Ïðîäâ. ïàòîãåíû)</Russian>
 		<Italian>Arma secondaria patogena migliorata</Italian>
 	</TEXT>
@@ -13199,7 +13199,7 @@
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_BACKUP_IMPROVED_SONIC</Tag>
 		<English>Wields (Backup Improved Sonic)</English>
 		<French>(Équipement) Sonique amélioré</French>
-		<Polish>Uzbrojenie (Broń Zapasowa Ulepszona Soniczna)</Polish>
+		<Polish>Uzbrojenie (Bro&#241; Zapasowa Ulepszona Soniczna)</Polish>
 		<Russian>Îðóæèå(Èíôðàçâóê)</Russian>
 		<Italian>Arma secondaria sonica migliorata</Italian>
 	</TEXT>
@@ -13216,7 +13216,7 @@
 			<Gender>Female</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Uzbrojenie (Broń Zapasowa Dyst. Jonowa)</Polish>
+		<Polish>Uzbrojenie (Bro&#241; Zapasowa Dyst. Jonowa)</Polish>
 		<Russian>Îðóæèå(Dist Backup Ion)</Russian>
 		<Italian>Arma secondaria a distanza ionica</Italian>
 	</TEXT>
@@ -13233,7 +13233,7 @@
 			<Gender>Female</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Uzbrojenie (Broń Zapasowa Dyst. Ostrzep)</Polish>
+		<Polish>Uzbrojenie (Bro&#241; Zapasowa Dyst. Ostrzep)</Polish>
 		<Russian>Îðóæèå(Dist Backup Javelin)</Russian>
 		<Italian>Arma secondaria a distanza giavellotto</Italian>
 	</TEXT>
@@ -13250,7 +13250,7 @@
 			<Gender>Female</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Uzbrojenie (Broń Zapasowa Dyst. Nóż)</Polish>
+		<Polish>Uzbrojenie (Bro&#241; Zapasowa Dyst. N&#243;&#191;)</Polish>
 		<Russian>Îðóæèå(Dist Backup Knife)</Russian>
 		<Italian>Arma secondaria a distanza coltello</Italian>
 	</TEXT>
@@ -13267,7 +13267,7 @@
 			<Gender>Female</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Uzbrojenie (Broń Zapasowa Dyst. Laser)</Polish>
+		<Polish>Uzbrojenie (Bro&#241; Zapasowa Dyst. Laser)</Polish>
 		<Russian>Îðóæèå(Dist Backup Laser)</Russian>
 		<Italian>Arma secondaria a distanza laser</Italian>
 	</TEXT>
@@ -13284,7 +13284,7 @@
 			<Gender>Female</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Uzbrojenie (Broń Zapasowa Dyst. Kamień Rozpoczęty)</Polish>
+		<Polish>Uzbrojenie (Bro&#241; Zapasowa Dyst. Kamie&#241; Rozpocz&#234;ty)</Polish>
 		<Russian>Îðóæèå(Dist Backup Launched Stone)</Russian>
 		<Italian>Arma secondaria a distanza pietra lanciata</Italian>
 	</TEXT>
@@ -13301,7 +13301,7 @@
 			<Gender>Female</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Uzbrojenie (Broń Zapasowa Dyst. Lekka Kusza )</Polish>
+		<Polish>Uzbrojenie (Bro&#241; Zapasowa Dyst. Lekka Kusza )</Polish>
 		<Russian>Îðóæèå(Dist Backup Light Crossbow)</Russian>
 		<Italian>Arma secondaria a distanza balestra leggera</Italian>
 	</TEXT>
@@ -13318,7 +13318,7 @@
 			<Gender>Female</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Uzbrojenie (Broń Zapasowa Dyst. Długi łuk)</Polish>
+		<Polish>Uzbrojenie (Bro&#241; Zapasowa Dyst. D&#179;ugi &#179;uk)</Polish>
 		<Russian>Îðóæèå(Dist Backup Longbow)</Russian>
 		<Italian>Arma secondaria a distanza arco lungo</Italian>
 	</TEXT>
@@ -13335,7 +13335,7 @@
 			<Gender>Female</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Uzbrojenie (Broń Zapasowa Dyst. Pociski Dalekiego Zasięgu)</Polish>
+		<Polish>Uzbrojenie (Bro&#241; Zapasowa Dyst. Pociski Dalekiego Zasi&#234;gu)</Polish>
 		<Russian>Îðóæèå(Dist Backup Long Range Missiles)</Russian>
 		<Italian>Arma secondaria a distanza missili a lungo raggio</Italian>
 	</TEXT>
@@ -13343,7 +13343,7 @@
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_BACKUP_MAGNETIC</Tag>
 		<English>Wields (Backup Magnetic)</English>
 		<French>(Équipement) Magnétique</French>
-		<Polish>Uzbrojenie (Broń Zapasowa Magnetyczna)</Polish>
+		<Polish>Uzbrojenie (Bro&#241; Zapasowa Magnetyczna)</Polish>
 		<Russian>Îðóæèå(Ìàãíèò)</Russian>
 		<Italian>Arma secondaria magnetica</Italian>
 	</TEXT>
@@ -13356,7 +13356,7 @@
 			<Gender>Female</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Uzbrojenie (Broń Zapasowa Dyst. Sztuki Walki)</Polish>
+		<Polish>Uzbrojenie (Bro&#241; Zapasowa Dyst. Sztuki Walki)</Polish>
 		<Russian>Îðóæèå(Dist Backup Martial Arts Weaponry)</Russian>
 		<Italian>Arma secondaria a distanza arti marziali</Italian>
 	</TEXT>
@@ -13364,7 +13364,7 @@
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_BACKUP_MASS_DRIVER</Tag>
 		<English>Wields (Backup Mass Driver)</English>
 		<French>(Équipement) Conducteur de masse</French>
-		<Polish>Uzbrojenie (Broń Zapasowa Tworzenie Sterowników Mass)</Polish>
+		<Polish>Uzbrojenie (Bro&#241; Zapasowa Tworzenie Sterownik&#243;w Mass)</Polish>
 		<Russian>Îðóæèå(Óëó÷ø. äâèæîê)</Russian>
 		<Italian>Arma secondaria catapulta elettromagnetica</Italian>
 	</TEXT>
@@ -13381,7 +13381,7 @@
 			<Gender>Female</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Uzbrojenie (Broń Zapasowa Dyst. Pociski Sredniego Zasięgu)</Polish>
+		<Polish>Uzbrojenie (Bro&#241; Zapasowa Dyst. Pociski Sredniego Zasi&#234;gu)</Polish>
 		<Russian>Îðóæèå(Dist Backup Medium Range Missiles)</Russian>
 		<Italian>Arma secondaria a distanza missili a medio raggio</Italian>
 	</TEXT>
@@ -13389,7 +13389,7 @@
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_BACKUP_NANOSPRAY</Tag>
 		<English>Wields (Backup Nanospray)</English>
 		<French>(Équipement) Spray Nanites de secours</French>
-		<Polish>Uzbrojenie (Broń Zapasowa Nanospraj)</Polish>
+		<Polish>Uzbrojenie (Bro&#241; Zapasowa Nanospraj)</Polish>
 		<Russian>Îðóæèå(Íàíîñïðåé)</Russian>
 		<Italian>Arma secondaria nanospray</Italian>
 	</TEXT>
@@ -13397,7 +13397,7 @@
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_BACKUP_PATHOGEN_DELIVERY</Tag>
 		<English>Wields (Backup Pathogen Delivery)</English>
 		<French>(Équipement) Projection de Pathogènes de secours</French>
-		<Polish>Uzbrojenie (Broń Zapasowa Pathogeny)</Polish>
+		<Polish>Uzbrojenie (Bro&#241; Zapasowa Pathogeny)</Polish>
 		<Russian>Îðóæèå(Ìèêðîôëîðà)</Russian>
 		<Italian>Arma secondaria patogeno di soccorso</Italian>
 	</TEXT>
@@ -13405,7 +13405,7 @@
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_BACKUP_PLASMA</Tag>
 		<English>Wields (Backup Plasma)</English>
 		<French>(Équipement) Plasma</French>
-		<Polish>Uzbrojenie (Broń Zapasowa Plazma)</Polish>
+		<Polish>Uzbrojenie (Bro&#241; Zapasowa Plazma)</Polish>
 		<Russian>Îðóæèå(Ïëàçìà)</Russian>
 		<Italian>Arma secondaria al plasma</Italian>
 	</TEXT>
@@ -13413,7 +13413,7 @@
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_BACKUP_PSYCHOKINESIS</Tag>
 		<English>Wields (Backup Psychokinesis)</English>
 		<French>(Équipement) Psychokinésie</French>
-		<Polish>Uzbrojenie (Broń Zapasowa Psychokineza)</Polish>
+		<Polish>Uzbrojenie (Bro&#241; Zapasowa Psychokineza)</Polish>
 		<Russian>Îðóæèå(Ïñèõîêèíåç)</Russian>
 		<Italian>Arma secondaria psicocinetica</Italian>
 	</TEXT>
@@ -13421,7 +13421,7 @@
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_BACKUP_RAPID_RAILGUN</Tag>
 		<English>Wields (Backup Rapid Railgun)</English>
 		<French>(Équipement) Railgun rapide</French>
-		<Polish>Uzbrojenie (Broń Zapasowa Szybka Railgun)</Polish>
+		<Polish>Uzbrojenie (Bro&#241; Zapasowa Szybka Railgun)</Polish>
 		<Russian>Îðóæèå(Áûñò. ðåëüñîòðîí)</Russian>
 		<Italian>Arma secondaria cannone a rotaia rapido</Italian>
 	</TEXT>
@@ -13438,7 +13438,7 @@
 			<Gender>Female</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Uzbrojenie (Broń Zapasowa Dyst. Powtarzanie Crossbow)</Polish>
+		<Polish>Uzbrojenie (Bro&#241; Zapasowa Dyst. Powtarzanie Crossbow)</Polish>
 		<Russian>Îðóæèå(Dist Backup Repeating Crossbow)</Russian>
 		<Italian>Arma secondaria a distanza balestra a ripetizione</Italian>
 	</TEXT>
@@ -13455,7 +13455,7 @@
 			<Gender>Female</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Uzbrojenie (Broń Zapasowa Dyst. Karabin)</Polish>
+		<Polish>Uzbrojenie (Bro&#241; Zapasowa Dyst. Karabin)</Polish>
 		<Russian>Îðóæèå(Dist Backup Rifle)</Russian>
 		<Italian>Arma secondaria a distanza fucile</Italian>
 	</TEXT>
@@ -13472,7 +13472,7 @@
 			<Gender>Female</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Uzbrojenie (Broń Zapasowa Dyst. Kamień)</Polish>
+		<Polish>Uzbrojenie (Bro&#241; Zapasowa Dyst. Kamie&#241;)</Polish>
 		<Russian>Îðóæèå(Dist Backup Rock)</Russian>
 		<Italian>Arma secondaria a distanza pietra</Italian>
 	</TEXT>
@@ -13489,7 +13489,7 @@
 			<Gender>Female</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Uzbrojenie (Broń Zapasowa Dyst. Półautomatyczne)</Polish>
+		<Polish>Uzbrojenie (Bro&#241; Zapasowa Dyst. P&#243;&#179;automatyczne)</Polish>
 		<Russian>Îðóæèå(Dist Backup Semi-Automatic)</Russian>
 		<Italian>Arma secondaria a distanza semi automatica</Italian>
 	</TEXT>
@@ -13506,7 +13506,7 @@
 			<Gender>Female</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Uzbrojenie (Broń Zapasowa Dyst. Ostrzał Artyleryjski)</Polish>
+		<Polish>Uzbrojenie (Bro&#241; Zapasowa Dyst. Ostrza&#179; Artyleryjski)</Polish>
 		<Russian>Îðóæèå(Dist Backup Shellfire)</Russian>
 		<Italian>Arma secondaria a distanza esplosiva</Italian>
 	</TEXT>
@@ -13523,7 +13523,7 @@
 			<Gender>Female</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Uzbrojenie (Broń Zapasowa Dyst. Krótki Łuk)</Polish>
+		<Polish>Uzbrojenie (Bro&#241; Zapasowa Dyst. Kr&#243;tki &#163;uk)</Polish>
 		<Russian>Îðóæèå(Dist Backup Shortbow)</Russian>
 		<Italian>Arma secondaria a distanza arco corto</Italian>
 	</TEXT>
@@ -13540,7 +13540,7 @@
 			<Gender>Female</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Uzbrojenie (Broń Zapasowa Dyst. Pociski Krótkiego Zasięgu)</Polish>
+		<Polish>Uzbrojenie (Bro&#241; Zapasowa Dyst. Pociski Kr&#243;tkiego Zasi&#234;gu)</Polish>
 		<Russian>Îðóæèå(Dist Backup Short Range Missiles)</Russian>
 		<Italian>Arma secondaria a distanza missili a corto raggio</Italian>
 	</TEXT>
@@ -13557,7 +13557,7 @@
 			<Gender>Female</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Uzbrojenie (Broń Zapasowa Dyst. Proca)</Polish>
+		<Polish>Uzbrojenie (Bro&#241; Zapasowa Dyst. Proca)</Polish>
 		<Russian>Îðóæèå(Dist Backup Sling)</Russian>
 		<Italian>Arma secondaria a distanza fionda</Italian>
 	</TEXT>
@@ -13574,7 +13574,7 @@
 			<Gender>Female</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Uzbrojenie (Broń Zapasowa Dyst. Soniczna)</Polish>
+		<Polish>Uzbrojenie (Bro&#241; Zapasowa Dyst. Soniczna)</Polish>
 		<Russian>Îðóæèå(Dist Backup Sonic)</Russian>
 		<Italian>Arma secondaria a distanza sonica</Italian>
 	</TEXT>
@@ -13582,7 +13582,7 @@
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_BACKUP_TECHNO_TELEPATHIC</Tag>
 		<English>Wields (Backup Technological Telepathy)</English>
 		<French>(Équipement) Télépathie - Soutien</French>
-		<Polish>Uzbrojenie (Broń Zapasowa Telepatia Technologiczna)</Polish>
+		<Polish>Uzbrojenie (Bro&#241; Zapasowa Telepatia Technologiczna)</Polish>
 		<Russian>Îðóæèå(Òåëåïàòèÿ)</Russian>
 		<Italian>Arma secondaria telepatia tecnologica</Italian>
 	</TEXT>
@@ -13590,7 +13590,7 @@
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_BACKUP_TELEPATHY</Tag>
 		<English>Wields (Backup Telepathy)</English>
 		<French>(Équipement) Télépathie</French>
-		<Polish>Uzbrojenie (Broń Zapasowa Telepatia)</Polish>
+		<Polish>Uzbrojenie (Bro&#241; Zapasowa Telepatia)</Polish>
 		<Russian>Îðóæèå(Âíóøåíèå)</Russian>
 		<Italian>Arma secondaria telepatia</Italian>
 	</TEXT>
@@ -13607,7 +13607,7 @@
 			<Gender>Female</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Uzbrojenie (Broń Zapasowa Dyst. Torpedy)</Polish>
+		<Polish>Uzbrojenie (Bro&#241; Zapasowa Dyst. Torpedy)</Polish>
 		<Russian>Îðóæèå(Dist Backup Torpedos)</Russian>
 		<Italian>Arma secondaria a distanza siluro</Italian>
 	</TEXT>
@@ -13675,7 +13675,7 @@
 			<Gender>Female</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Uzbrojenie (Wybuchowa Samokierująca)</Polish>
+		<Polish>Uzbrojenie (Wybuchowa Samokieruj&#185;ca)</Polish>
 		<Russian>Îðóæèå(Detonate Guided)</Russian>
 		<Italian>Arma di detonazione teleguidata</Italian>
 	</TEXT>
@@ -13750,7 +13750,7 @@
 			<Gender>Female</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Uzbrojenie (Dystansowa Topór)</Polish>
+		<Polish>Uzbrojenie (Dystansowa Top&#243;r)</Polish>
 		<Russian>Îðóæèå(Äèñò. ñåêèðû)</Russian>
 		<Italian>Arma a distanza ascia</Italian>
 	</TEXT>
@@ -13860,7 +13860,7 @@
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_DIST_COILGUN</Tag>
 		<English>Wields (Distance Coilgun)</English>
 		<French>(Équipement) Arme Magnétique - A Distance</French>
-		<Polish>Uzbrojenie (Dystansowa Działo Gaussa)</Polish>
+		<Polish>Uzbrojenie (Dystansowa Dzia&#179;o Gaussa)</Polish>
 		<Russian>Îðóæèå(Äèñò. ðåëüñîòðîí)</Russian>
 		<Italian>Arma a distanza cannone di Gauss</Italian>
 	</TEXT>
@@ -13936,7 +13936,7 @@
 			<Gender>Female</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Uzbrojenie (Dystansowa Mołotow)</Polish>
+		<Polish>Uzbrojenie (Dystansowa Mo&#179;otow)</Polish>
 		<Russian>Îðóæèå(Äèñò. âçðûâ÷àòêà)</Russian>
 		<Italian>Arma a distanza bottiglia incendiaria</Italian>
 	</TEXT>
@@ -13970,7 +13970,7 @@
 			<Gender>Female</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Uzbrojenie (Dystansowa Płomień Jet)</Polish>
+		<Polish>Uzbrojenie (Dystansowa P&#179;omie&#241; Jet)</Polish>
 		<Russian>Îðóæèå(Äèñò. îãíåìåò)</Russian>
 		<Italian>Arma a distanza getto di fuoco</Italian>
 	</TEXT>
@@ -14004,7 +14004,7 @@
 			<Gender>Female</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Uzbrojenie (Dystansowa Pełni Automatyczna)</Polish>
+		<Polish>Uzbrojenie (Dystansowa Pe&#179;ni Automatyczna)</Polish>
 		<Russian>Îðóæèå(Äèñò. àâòîìàò)</Russian>
 		<Italian>Arma a distanza totalmente automatica</Italian>
 	</TEXT>
@@ -14012,7 +14012,7 @@
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_DIST_FUSION_CANNON</Tag>
 		<English>Wields (Distance Fusion Cannon)</English>
 		<French>(Équipement) Canon à Fusion - A Distance</French>
-		<Polish>Uzbrojenie (Dystansowa Działo Fuzyjne)</Polish>
+		<Polish>Uzbrojenie (Dystansowa Dzia&#179;o Fuzyjne)</Polish>
 		<Russian>Îðóæèå(Äèñò. Òåðìîÿä.)</Russian>
 		<Italian>Arma a distanza cannone a fusione</Italian>
 	</TEXT>
@@ -14054,7 +14054,7 @@
 			<Gender>Female</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Uzbrojenie (Dystansowa Młot)</Polish>
+		<Polish>Uzbrojenie (Dystansowa M&#179;ot)</Polish>
 		<Russian>Îðóæèå(Äèñò. ìîëîòû)</Russian>
 		<Italian>Arma a distanza martello</Italian>
 	</TEXT>
@@ -14079,7 +14079,7 @@
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_DIST_HANDHELD_RAILGUN</Tag>
 		<English>Wields (Distance Handheld Railgun)</English>
 		<French>(Équipement) Railgun Portatif - A Distance</French>
-		<Polish>Uzbrojenie (Dystansowa Ręczny Railgun)</Polish>
+		<Polish>Uzbrojenie (Dystansowa R&#234;czny Railgun)</Polish>
 		<Russian>Îðóæèå(Äèñò. ðó÷. ðåëüñîòðîí)</Russian>
 		<Italian>Arma a distanza cannone a rotaia portatile</Italian>
 	</TEXT>
@@ -14096,7 +14096,7 @@
 			<Gender>Female</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Uzbrojenie (Dystansowa Ciepło)</Polish>
+		<Polish>Uzbrojenie (Dystansowa Ciep&#179;o)</Polish>
 		<Russian>Îðóæèå(Äèñò. òåïëîâîå)</Russian>
 		<Italian>Arma a distanza di calore</Italian>
 	</TEXT>
@@ -14113,7 +14113,7 @@
 			<Gender>Female</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Uzbrojenie (Dystansowa Ciężka Kusza)</Polish>
+		<Polish>Uzbrojenie (Dystansowa Ci&#234;&#191;ka Kusza)</Polish>
 		<Russian>Îðóæèå(Òÿæ. àðáàëåò)</Russian>
 		<Italian>Arma a distanza balestra pesante</Italian>
 	</TEXT>
@@ -14121,7 +14121,7 @@
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_DIST_HEAVY_RAILGUN</Tag>
 		<English>Wields (Distance Heavy Railgun)</English>
 		<French>(Équipement) Railgun Lourd - A Distance</French>
-		<Polish>Uzbrojenie (Dystansowa Ciężki Railgun)</Polish>
+		<Polish>Uzbrojenie (Dystansowa Ci&#234;&#191;ki Railgun)</Polish>
 		<Russian>Îðóæèå(Äèñò. òÿæ. ðåëüñîòðîí)</Russian>
 		<Italian>Arma a distanza cannone a rotaia pesante</Italian>
 	</TEXT>
@@ -14229,7 +14229,7 @@
 			<Gender>Female</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Uzbrojenie (Dystansowa Nóż)</Polish>
+		<Polish>Uzbrojenie (Dystansowa N&#243;&#191;)</Polish>
 		<Russian>Îðóæèå(Äèñò. íîæè)</Russian>
 		<Italian>Arma a distanza coltello</Italian>
 	</TEXT>
@@ -14263,7 +14263,7 @@
 			<Gender>Female</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Uzbrojenie (Dystansowa Rozpoczęty Kamień)</Polish>
+		<Polish>Uzbrojenie (Dystansowa Rozpocz&#234;ty Kamie&#241;)</Polish>
 		<Russian>Îðóæèå(Êàìíåìåò)</Russian>
 		<Italian>Arma a distanza pietra lanciata</Italian>
 	</TEXT>
@@ -14297,7 +14297,7 @@
 			<Gender>Female</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Uzbrojenie (Dystansowa Długi Łuk)</Polish>
+		<Polish>Uzbrojenie (Dystansowa D&#179;ugi &#163;uk)</Polish>
 		<Russian>Îðóæèå(Äëèííûé ëóê)</Russian>
 		<Italian>Arma a distanza arco lungo</Italian>
 	</TEXT>
@@ -14314,7 +14314,7 @@
 			<Gender>Female</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Uzbrojenie (Dystansowa Pociski Dalekiego Zasięgu)</Polish>
+		<Polish>Uzbrojenie (Dystansowa Pociski Dalekiego Zasi&#234;gu)</Polish>
 		<Russian>Îðóæèå(ÌÁÐ)</Russian>
 		<Italian>Arma a distanza missili a lunga gittata</Italian>
 	</TEXT>
@@ -14364,7 +14364,7 @@
 			<Gender>Female</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Uzbrojenie (Dystansowa Pociski Sredniego Zasięgu)</Polish>
+		<Polish>Uzbrojenie (Dystansowa Pociski Sredniego Zasi&#234;gu)</Polish>
 		<Russian>Îðóæèå(ÐÑÄ)</Russian>
 		<Italian>Arma a distanza missili a medio raggio</Italian>
 	</TEXT>
@@ -14380,7 +14380,7 @@
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_DIST_PATHOGEN_DELIVERY</Tag>
 		<English>Wields (Distance Pathogen Delivery)</English>
 		<French>(Équipement) Arme à Pathogène - A Distance</French>
-		<Polish>Uzbrojenie (Dystansowa Broń Biologiczna)</Polish>
+		<Polish>Uzbrojenie (Dystansowa Bro&#241; Biologiczna)</Polish>
 		<Russian>Îðóæèå(Äèñò. øòàììû)</Russian>
 		<Italian>Arma a distanza patogeno di soccorso</Italian>
 	</TEXT>
@@ -14473,7 +14473,7 @@
 			<Gender>Female</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Uzbrojenie (Dystansowa Półautomatyczne)</Polish>
+		<Polish>Uzbrojenie (Dystansowa P&#243;&#179;automatyczne)</Polish>
 		<Russian>Îðóæèå(Äèñò. ïîëóàâòîìàòè÷.)</Russian>
 		<Italian>Arma a distanza semi automatica</Italian>
 	</TEXT>
@@ -14490,7 +14490,7 @@
 			<Gender>Female</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Uzbrojenie (Dystansowa Ostrzał Artyleryjski)</Polish>
+		<Polish>Uzbrojenie (Dystansowa Ostrza&#179; Artyleryjski)</Polish>
 		<Russian>Îðóæèå(Äèñò. ñíàðÿäû)</Russian>
 		<Italian>Arma a distanza esplosiva</Italian>
 	</TEXT>
@@ -14507,7 +14507,7 @@
 			<Gender>Female</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Uzbrojenie (Dystansowa Krótki Łuk)</Polish>
+		<Polish>Uzbrojenie (Dystansowa Kr&#243;tki &#163;uk)</Polish>
 		<Russian>Îðóæèå(Êîðîòêèé ëóê)</Russian>
 		<Italian>Arma a distanza arco corto</Italian>
 	</TEXT>
@@ -14524,7 +14524,7 @@
 			<Gender>Female</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Uzbrojenie (Dystansowa Pociski Krótkiego Zasięgu)</Polish>
+		<Polish>Uzbrojenie (Dystansowa Pociski Kr&#243;tkiego Zasi&#234;gu)</Polish>
 		<Russian>Îðóæèå(ÐÌÄ)</Russian>
 		<Italian>Arma a distanza missile a corta distanza</Italian>
 	</TEXT>
@@ -14608,7 +14608,7 @@
 			<Gender>Female</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Uzbrojenie (W-W Topór)</Polish>
+		<Polish>Uzbrojenie (W-W Top&#243;r)</Polish>
 		<Russian>Îðóæèå(H2H Ñåêèðà)</Russian>
 		<Italian>Arma da corpo a corpo ascia</Italian>
 	</TEXT>
@@ -14643,7 +14643,7 @@
 			<Gender>Female</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Uzbrojenie (W-W Pałka)</Polish>
+		<Polish>Uzbrojenie (W-W Pa&#179;ka)</Polish>
 		<Russian>Îðóæèå(H2H Äóáèíêà)</Russian>
 		<Italian>Arma da corpo a corpo clava</Italian>
 	</TEXT>
@@ -14660,7 +14660,7 @@
 			<Gender>Female</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Uzbrojenie (W-W Łom)</Polish>
+		<Polish>Uzbrojenie (W-W &#163;om)</Polish>
 		<Russian>Îðóæèå(H2H Ëîì)</Russian>
 		<Italian>Arma da corpo a corpo piede di porco</Italian>
 	</TEXT>
@@ -14694,7 +14694,7 @@
 			<Gender>Female</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Uzbrojenie (W-W Rękawice Energetyczne)</Polish>
+		<Polish>Uzbrojenie (W-W R&#234;kawice Energetyczne)</Polish>
 		<Russian>Îðóæèå(H2H Ýíåðãîíàðó÷è)</Russian>
 		<Italian>Arma da corpo a corpo guanti energetici</Italian>
 	</TEXT>
@@ -14712,7 +14712,7 @@
 			<Gender>Female</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Uzbrojenie (W-W Pięści)</Polish>
+		<Polish>Uzbrojenie (W-W Pi&#234;&#156;ci)</Polish>
 		<Russian>Îðóæèå(H2H Êóëàêè)</Russian>
 		<Italian>Arma da corpo a corpo pugni</Italian>
 	</TEXT>
@@ -14763,7 +14763,7 @@
 			<Gender>Female</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Uzbrojenie (W-W Młot)</Polish>
+		<Polish>Uzbrojenie (W-W M&#179;ot)</Polish>
 		<Russian>Îðóæèå(H2H Ìîëîò)</Russian>
 		<Italian>Arma da corpo a corpo martello</Italian>
 	</TEXT>
@@ -14814,7 +14814,7 @@
 			<Gender>Female</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Uzbrojenie (W-W Nóż)</Polish>
+		<Polish>Uzbrojenie (W-W N&#243;&#191;)</Polish>
 		<Russian>Îðóæèå(H2H Êèíæàë)</Russian>
 		<Italian>Arma da corpo a corpo coltello</Italian>
 	</TEXT>
@@ -14848,7 +14848,7 @@
 			<Gender>Female</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Uzbrojenie (W-W Długe Ostrze)</Polish>
+		<Polish>Uzbrojenie (W-W D&#179;uge Ostrze)</Polish>
 		<Russian>Îðóæèå(H2H Äëèííûé ìå÷)</Russian>
 		<Italian>Arma da corpo a corpo spada lunga</Italian>
 	</TEXT>
@@ -14865,7 +14865,7 @@
 			<Gender>Female</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Uzbrojenie (W-W Długa Broń Drzewcowa)</Polish>
+		<Polish>Uzbrojenie (W-W D&#179;uga Bro&#241; Drzewcowa)</Polish>
 		<Russian>Îðóæèå(Äë. äðåâêîâîå)</Russian>
 		<Italian>Arma da corpo a corpo lancia lunga</Italian>
 	</TEXT>
@@ -14968,7 +14968,7 @@
 			<Gender>Female</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Uzbrojenie (W-W Krótkie Ostrze)</Polish>
+		<Polish>Uzbrojenie (W-W Kr&#243;tkie Ostrze)</Polish>
 		<Russian>Îðóæèå(H2H Êîðîòêèé ìå÷)</Russian>
 		<Italian>Arma da corpo a corpo spada corta</Italian>
 	</TEXT>
@@ -14985,7 +14985,7 @@
 			<Gender>Female</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Uzbrojenie (W-W Krótka Broń Drzewcowa)</Polish>
+		<Polish>Uzbrojenie (W-W Kr&#243;tka Bro&#241; Drzewcowa)</Polish>
 		<Russian>Îðóæèå(Êîð. äðåâêîâîå)</Russian>
 		<Italian>Arma da corpo a corpo lancia corta</Italian>
 	</TEXT>
@@ -15073,7 +15073,7 @@
 			<Gender>Female</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Główna Broń: Dystans</Polish>
+		<Polish>G&#179;&#243;wna Bro&#241;: Dystans</Polish>
 		<Russian>Ïåðâàÿ ëèíèÿ áîÿ</Russian>
 		<Italian>Metodo di combattimento principale a distanza</Italian>
 	</TEXT>
@@ -15091,7 +15091,7 @@
 			<Gender>Female</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Broń Dodatkowa: Dystans</Polish>
+		<Polish>Bro&#241; Dodatkowa: Dystans</Polish>
 		<Russian>Âòîðàÿ ëèíèÿ áîÿ</Russian>
 		<Italian>Tipo di combattimento secondario a distanza</Italian>
 	</TEXT>
@@ -15109,7 +15109,7 @@
 			<Gender>Female</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Tylko Wręcz</Polish>
+		<Polish>Tylko Wr&#234;cz</Polish>
 		<Russian>Áëèæíèé áîé</Russian>
 		<Italian>Metodo di combattimento solo corpo a corpo</Italian>
 	</TEXT>
@@ -15127,7 +15127,7 @@
 			<Gender>Female</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>System Przenoszenia Głowic</Polish>
+		<Polish>System Przenoszenia G&#179;owic</Polish>
 		<Russian>Áîåãîëîâêè</Russian>
 		<Italian>Metodo di combattimento consegna testate nucleari</Italian>
 	</TEXT>
@@ -15145,7 +15145,7 @@
 			<Gender>Female</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Używa (Broń Boczna Topór)</Polish>
+		<Polish>U&#191;ywa (Bro&#241; Boczna Top&#243;r)</Polish>
 		<Russian>Îðóæèå(Sidearm Axe)</Russian>
 		<Italian>Arma da fianco ascia</Italian>
 	</TEXT>
@@ -15163,7 +15163,7 @@
 			<Gender>Female</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Używa (Broń Boczna Bagnet)</Polish>
+		<Polish>U&#191;ywa (Bro&#241; Boczna Bagnet)</Polish>
 		<Russian>Îðóæèå(Sidearm Bayonette)</Russian>
 		<Italian>Arma secondaria da corpo a corpo baionetta</Italian>
 	</TEXT>
@@ -15181,7 +15181,7 @@
 			<Gender>Female</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Używa (Broń Boczna Pałka)</Polish>
+		<Polish>U&#191;ywa (Bro&#241; Boczna Pa&#179;ka)</Polish>
 		<Russian>Îðóæèå(Sidearm Club)</Russian>
 		<Italian>Arma da fianco clava</Italian>
 	</TEXT>
@@ -15199,7 +15199,7 @@
 			<Gender>Female</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Używa (Broń Boczna Łom)</Polish>
+		<Polish>U&#191;ywa (Bro&#241; Boczna &#163;om)</Polish>
 		<Russian>Îðóæèå(Sidearm Crowbar)</Russian>
 		<Italian>Arma da fianco piede di porco</Italian>
 	</TEXT>
@@ -15217,7 +15217,7 @@
 			<Gender>Female</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Używa (Broń Boczna Elektromagnetyczna)</Polish>
+		<Polish>U&#191;ywa (Bro&#241; Boczna Elektromagnetyczna)</Polish>
 		<Russian>Îðóæèå(Sidearm Electromagnetic)</Russian>
 		<Italian>Arma da fianco a impulsi elettromagnetici</Italian>
 	</TEXT>
@@ -15235,7 +15235,7 @@
 			<Gender>Female</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Używa (Broń Boczna Rękawica Energetyczna)</Polish>
+		<Polish>U&#191;ywa (Bro&#241; Boczna R&#234;kawica Energetyczna)</Polish>
 		<Russian>Îðóæèå(Sidearm Energy Gloves)</Russian>
 		<Italian>Arma da fianco guanti energetici</Italian>
 	</TEXT>
@@ -15253,7 +15253,7 @@
 			<Gender>Female</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Używa (Broń Boczna Pięści)</Polish>
+		<Polish>U&#191;ywa (Bro&#241; Boczna Pi&#234;&#156;ci)</Polish>
 		<Russian>Îðóæèå(Sidearm Fists)</Russian>
 		<Italian>Arma da fianco pugni</Italian>
 	</TEXT>
@@ -15271,7 +15271,7 @@
 			<Gender>Female</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Używa (Broń Boczna Korbacz)</Polish>
+		<Polish>U&#191;ywa (Bro&#241; Boczna Korbacz)</Polish>
 		<Russian>Îðóæèå(Sidearm Flail)</Russian>
 		<Italian>Arma da fianco mazzafrusto</Italian>
 	</TEXT>
@@ -15289,7 +15289,7 @@
 			<Gender>Female</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Używa (Broń Boczna Miotacz Ognia)</Polish>
+		<Polish>U&#191;ywa (Bro&#241; Boczna Miotacz Ognia)</Polish>
 		<Russian>Îðóæèå(Sidearm Flamethrower)</Russian>
 		<Italian>Arma da fianco lanciafiamme</Italian>
 	</TEXT>
@@ -15307,7 +15307,7 @@
 			<Gender>Female</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Używa (Broń Boczna Młot)</Polish>
+		<Polish>U&#191;ywa (Bro&#241; Boczna M&#179;ot)</Polish>
 		<Russian>Îðóæèå(Sidearm Hammer)</Russian>
 		<Italian>Arma da fianco martello</Italian>
 	</TEXT>
@@ -15325,7 +15325,7 @@
 			<Gender>Female</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Używa (Broń Boczna Pistolet)</Polish>
+		<Polish>U&#191;ywa (Bro&#241; Boczna Pistolet)</Polish>
 		<Russian>Îðóæèå(Sidearm Handgun)</Russian>
 		<Italian>Arma da fianco pistola</Italian>
 	</TEXT>
@@ -15343,7 +15343,7 @@
 			<Gender>Female</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Używa (Broń Boczna Hydrauliczny Kolec)</Polish>
+		<Polish>U&#191;ywa (Bro&#241; Boczna Hydrauliczny Kolec)</Polish>
 		<Russian>Îðóæèå(Sidearm Hydraulic Appendage)</Russian>
 		<Italian>Arma da fianco appendice idraulica</Italian>
 	</TEXT>
@@ -15361,7 +15361,7 @@
 			<Gender>Female</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Używa (Broń Boczna Nóż)</Polish>
+		<Polish>U&#191;ywa (Bro&#241; Boczna N&#243;&#191;)</Polish>
 		<Russian>Îðóæèå(Sidearm Knife)</Russian>
 		<Italian>Arma da fianco coltello</Italian>
 	</TEXT>
@@ -15379,7 +15379,7 @@
 			<Gender>Female</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Używa (Broń Boczna Laser)</Polish>
+		<Polish>U&#191;ywa (Bro&#241; Boczna Laser)</Polish>
 		<Russian>Îðóæèå(Sidearm Laser)</Russian>
 		<Italian>Arma da fianco laser</Italian>
 	</TEXT>
@@ -15397,7 +15397,7 @@
 			<Gender>Female</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Używa (Broń Boczna Długie Ostrze)</Polish>
+		<Polish>U&#191;ywa (Bro&#241; Boczna D&#179;ugie Ostrze)</Polish>
 		<Russian>Îðóæèå(Sidearm Long Blade)</Russian>
 		<Italian>Arma da fianco spada lunga</Italian>
 	</TEXT>
@@ -15415,7 +15415,7 @@
 			<Gender>Female</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Używa (Broń Boczna Drzewcowa)</Polish>
+		<Polish>U&#191;ywa (Bro&#241; Boczna Drzewcowa)</Polish>
 		<Russian>Îðóæèå(Sidearm Long Polearm)</Russian>
 		<Italian>Arma da fianco lancia lunga</Italian>
 	</TEXT>
@@ -15433,7 +15433,7 @@
 			<Gender>Female</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Używa (Broń Boczna Maczuga)</Polish>
+		<Polish>U&#191;ywa (Bro&#241; Boczna Maczuga)</Polish>
 		<Russian>Îðóæèå(Sidearm Mace)</Russian>
 		<Italian>Arma da fianco mazza</Italian>
 	</TEXT>
@@ -15451,7 +15451,7 @@
 			<Gender>Female</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Używa (Broń Boczna Sztuki Walki)</Polish>
+		<Polish>U&#191;ywa (Bro&#241; Boczna Sztuki Walki)</Polish>
 		<Russian>Îðóæèå(Sidearm Martial Arts)</Russian>
 		<Italian>Arma da fianco arti marziali</Italian>
 	</TEXT>
@@ -15469,7 +15469,7 @@
 			<Gender>Female</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Używa (Broń Boczna Wiosło)</Polish>
+		<Polish>U&#191;ywa (Bro&#241; Boczna Wios&#179;o)</Polish>
 		<Russian>Îðóæèå(Sidearm Oar)</Russian>
 		<Italian>Arma da fianco remo</Italian>
 	</TEXT>
@@ -15487,7 +15487,7 @@
 			<Gender>Female</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Używa (Broń Boczna Kolba)</Polish>
+		<Polish>U&#191;ywa (Bro&#241; Boczna Kolba)</Polish>
 		<Russian>Îðóæèå(Sidearm Rifle Butt)</Russian>
 		<Italian>Arma da fianco calcio del fucile</Italian>
 	</TEXT>
@@ -15505,7 +15505,7 @@
 			<Gender>Female</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Używa (Broń Boczna Kamienie)</Polish>
+		<Polish>U&#191;ywa (Bro&#241; Boczna Kamienie)</Polish>
 		<Russian>Îðóæèå(Sidearm Rocks)</Russian>
 		<Italian>Arma da fianco pietra</Italian>
 	</TEXT>
@@ -15523,7 +15523,7 @@
 			<Gender>Female</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Używa (Broń Boczna Krótkie Ostrze)</Polish>
+		<Polish>U&#191;ywa (Bro&#241; Boczna Kr&#243;tkie Ostrze)</Polish>
 		<Russian>Îðóæèå(Sidearm Short Blade)</Russian>
 		<Italian>Arma da fianco spada corta</Italian>
 	</TEXT>
@@ -15541,7 +15541,7 @@
 			<Gender>Female</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Używa (Broń Boczna Krótka Drzewcowa)</Polish>
+		<Polish>U&#191;ywa (Bro&#241; Boczna Kr&#243;tka Drzewcowa)</Polish>
 		<Russian>Îðóæèå(Sidearm Short Polearm)</Russian>
 		<Italian>Arma da fianco lancia corta</Italian>
 	</TEXT>
@@ -15559,7 +15559,7 @@
 			<Gender>Female</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Używa (Broń Boczna Karnister Spreju)</Polish>
+		<Polish>U&#191;ywa (Bro&#241; Boczna Karnister Spreju)</Polish>
 		<Russian>Îðóæèå(Sidearm Spray Cannister)</Russian>
 		<Italian>Arma da fianco spray</Italian>
 	</TEXT>
@@ -15577,7 +15577,7 @@
 			<Gender>Female</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Używa (Broń Boczna Laska)</Polish>
+		<Polish>U&#191;ywa (Bro&#241; Boczna Laska)</Polish>
 		<Russian>Îðóæèå(Sidearm Staff)</Russian>
 		<Italian>Arma da fianco bastone</Italian>
 	</TEXT>
@@ -15595,7 +15595,7 @@
 			<Gender>Female</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Używa (Broń Boczna Taser)</Polish>
+		<Polish>U&#191;ywa (Bro&#241; Boczna Taser)</Polish>
 		<Russian>Îðóæèå(Sidearm Taser)</Russian>
 		<Italian>Arma da fianco taser</Italian>
 	</TEXT>
@@ -15631,7 +15631,7 @@
 			<Gender>Female</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Styl (Dystansowy Zapas. Jedno Ręczny)</Polish>
+		<Polish>Styl (Dystansowy Zapas. Jedno R&#234;czny)</Polish>
 		<Russian>Ñòèëü(Äèñò. Backup One-Handed)</Russian>
 		<Italian>Stile secondario a distanza con arma a una mano</Italian>
 	</TEXT>
@@ -15649,7 +15649,7 @@
 			<Gender>Female</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Styl (Dystansowy Zapas. Jedno Ręczny z Tarczą)</Polish>
+		<Polish>Styl (Dystansowy Zapas. Jedno R&#234;czny z Tarcz&#185;)</Polish>
 		<Russian>Ñòèëü(Äèñò. Backup One-Hand w/Shield)</Russian>
 		<Italian>Stile secondario a distanza con arma a una mano e scudo</Italian>
 	</TEXT>
@@ -15667,7 +15667,7 @@
 			<Gender>Female</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Styl (Dystansowy Zapas. Dwuręczny)</Polish>
+		<Polish>Styl (Dystansowy Zapas. Dwur&#234;czny)</Polish>
 		<Russian>Ñòèëü(Äèñò. Backup Two-Handed)</Russian>
 		<Italian>Stile secondario a distanza con arma a due mani</Italian>
 	</TEXT>
@@ -15685,7 +15685,7 @@
 			<Gender>Female</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Styl (Dystansowy Zapas. Dwuręczny z Tarczą)</Polish>
+		<Polish>Styl (Dystansowy Zapas. Dwur&#234;czny z Tarcz&#185;)</Polish>
 		<Russian>Ñòèëü(Äèñò. Backup Two-Hand w/Shield)</Russian>
 		<Italian>Stile secondario a distanza con arma a due mani e scudo</Italian>
 	</TEXT>
@@ -15721,7 +15721,7 @@
 			<Gender>Female</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Styl (Dystansowy Jedno Ręczny)</Polish>
+		<Polish>Styl (Dystansowy Jedno R&#234;czny)</Polish>
 		<Russian>Ñòèëü(Äèñò. îäíîðó÷íîå)</Russian>
 		<Italian>Stile a distanza con arma a una mano</Italian>
 	</TEXT>
@@ -15739,7 +15739,7 @@
 			<Gender>Female</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Styl (Dystansowy Jedno Ręczny z Tarczą)</Polish>
+		<Polish>Styl (Dystansowy Jedno R&#234;czny z Tarcz&#185;)</Polish>
 		<Russian>Ñòèëü(Äèñò. Îðóæèå/Ùèò)</Russian>
 		<Italian>Stile a distanza con arma a una mano e scudo</Italian>
 	</TEXT>
@@ -15757,7 +15757,7 @@
 			<Gender>Female</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Styl (Dystansowy Dwuręczny)</Polish>
+		<Polish>Styl (Dystansowy Dwur&#234;czny)</Polish>
 		<Russian>Ñòèëü(Äèñò. Äâóðó÷íîå)</Russian>
 		<Italian>Stile a distanza con arma a due mani</Italian>
 	</TEXT>
@@ -15775,7 +15775,7 @@
 			<Gender>Female</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Styl (Dystansowy Dwuręczny z Tarczą)</Polish>
+		<Polish>Styl (Dystansowy Dwur&#234;czny z Tarcz&#185;)</Polish>
 		<Russian>Ñòèëü(Äèñò. Äâóðó÷íîå/Ùèò)</Russian>
 		<Italian>Stile a distanza con arma a due mani e scudo</Italian>
 	</TEXT>
@@ -15793,7 +15793,7 @@
 			<Gender>Female</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Styl (Dystansowy Broń Pokładowa)</Polish>
+		<Polish>Styl (Dystansowy Bro&#241; Pok&#179;adowa)</Polish>
 		<Russian>Ñòèëü(Äèñò. ìåõàíè÷åñêîå)</Russian>
 		<Italian>Stile a distanza con armamento del veicolo</Italian>
 	</TEXT>
@@ -15811,7 +15811,7 @@
 			<Gender>Female</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Styl (W.Wręcz Dwie Bronie)</Polish>
+		<Polish>Styl (W.Wr&#234;cz Dwie Bronie)</Polish>
 		<Russian>Ñòèëü(H2H Ïàðíîå îðóæèå)</Russian>
 		<Italian>Stile corpo a corpo con due armi</Italian>
 	</TEXT>
@@ -15829,7 +15829,7 @@
 			<Gender>Female</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Styl (W.Wręcz Jedno Ręczny)</Polish>
+		<Polish>Styl (W.Wr&#234;cz Jedno R&#234;czny)</Polish>
 		<Russian>Ñòèëü(H2H Îäíîðó÷íûé)</Russian>
 		<Italian>Stile corpo a corpo con arma a una mano</Italian>
 	</TEXT>
@@ -15847,7 +15847,7 @@
 			<Gender>Female</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Styl (W.Wręcz Jedno Ręczny z Tarczą)</Polish>
+		<Polish>Styl (W.Wr&#234;cz Jedno R&#234;czny z Tarcz&#185;)</Polish>
 		<Russian>Ñòèëü(H2H Îðóæèå/Ùèò)</Russian>
 		<Italian>Stile corpo a corpo con arma a una mano e scudo</Italian>
 	</TEXT>
@@ -15865,7 +15865,7 @@
 			<Gender>Female</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Styl (W.Wręcz Dwureczny)</Polish>
+		<Polish>Styl (W.Wr&#234;cz Dwureczny)</Polish>
 		<Russian>Ñòèëü(H2H Äâóðó÷íîå)</Russian>
 		<Italian>Stile corpo a corpo con arma a due mani</Italian>
 	</TEXT>
@@ -15883,7 +15883,7 @@
 			<Gender>Female</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Styl (W.Wręcz Dwureczny z Tarczą)</Polish>
+		<Polish>Styl (W.Wr&#234;cz Dwureczny z Tarcz&#185;)</Polish>
 		<Russian>Ñòèëü(H2H Äâóðó÷íèê/Ùèò)</Russian>
 		<Italian>Stile corpo a corpo con arma a due mani e scudo</Italian>
 	</TEXT>
@@ -15901,7 +15901,7 @@
 			<Gender>Female</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Styl (W.Wręcz Broń Pokładowa)</Polish>
+		<Polish>Styl (W.Wr&#234;cz Bro&#241; Pok&#179;adowa)</Polish>
 		<Russian>Ñòèëü(H2H Ìåõ. îðóæèå)</Russian>
 		<Italian>Stile corpo a corpo con armamento del veicolo</Italian>
 	</TEXT>
@@ -15919,7 +15919,7 @@
 			<Gender>Female</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Styl (W.Wręcz B.Boczna Dwie Bronie)</Polish>
+		<Polish>Styl (W.Wr&#234;cz B.Boczna Dwie Bronie)</Polish>
 		<Russian>Ñòèëü(H2H Sidearm Dual Weapons)</Russian>
 		<Italian>Stile corpo a corpo con due armi da fianco</Italian>
 	</TEXT>
@@ -15937,7 +15937,7 @@
 			<Gender>Female</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Styl (W.Wręcz B.Boczna Jedno Ręczny)</Polish>
+		<Polish>Styl (W.Wr&#234;cz B.Boczna Jedno R&#234;czny)</Polish>
 		<Russian>Ñòèëü(H2H Sidearm One-Handed)</Russian>
 		<Italian>Stile corpo a corpo con arma a da fianco una mano</Italian>
 	</TEXT>
@@ -15955,7 +15955,7 @@
 			<Gender>Female</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Styl (W.Wręcz B.Boczna Jedno Ręczny z Tarczą)</Polish>
+		<Polish>Styl (W.Wr&#234;cz B.Boczna Jedno R&#234;czny z Tarcz&#185;)</Polish>
 		<Russian>Ñòèëü(H2H Sidearm One-Hand w/Shield)</Russian>
 		<Italian>Stile corpo a corpo con arma da fianco a una mano e scudo</Italian>
 	</TEXT>
@@ -15973,7 +15973,7 @@
 			<Gender>Female</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Styl (W.Wręcz B.Boczna Dwureczny)</Polish>
+		<Polish>Styl (W.Wr&#234;cz B.Boczna Dwureczny)</Polish>
 		<Russian>Ñòèëü(H2H Sidearm Two-Handed)</Russian>
 		<Italian>Stile corpo a corpo con arma da fianco a due mani</Italian>
 	</TEXT>
@@ -15991,7 +15991,7 @@
 			<Gender>Female</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Styl (W.Wręcz B.Boczna Dwureczny z Tarczą)</Polish>
+		<Polish>Styl (W.Wr&#234;cz B.Boczna Dwureczny z Tarcz&#185;)</Polish>
 		<Russian>Ñòèëü(H2H Sidearm Two-Hand w/Shield)</Russian>
 		<Italian>Stile corpo a corpo con arma da fianco a due mani e scudo</Italian>
 	</TEXT>
@@ -16019,7 +16019,7 @@
 			<Gender>Female</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Pojazdy Kołowe</Polish>
+		<Polish>Pojazdy Ko&#179;owe</Polish>
 		<Russian>Êîëåñíûå</Russian>
 	</TEXT>
 	<TEXT>
