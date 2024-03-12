@@ -22400,6 +22400,7 @@ int CvPlayer::getEventCost(EventTypes eEvent, PlayerTypes eOtherPlayer, bool bRa
 	{
 		iGold += kEvent.getRandomGold();
 	}
+	iGold = iGold * GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getSpeedPercent() / 100;
 
 	const TechTypes eBestTech = getBestEventTech(eEvent, eOtherPlayer);
 
