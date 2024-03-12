@@ -7211,6 +7211,7 @@ public:
 	bool isGoldenAge() const;
 	bool isDeclareWar() const;
 	bool isDisbandUnit() const;
+	inline bool isGameSpeedScale() const { return m_bGameSpeedScale; }
 
 	int getGold() const;
 	int getRandomGold() const;
@@ -7220,7 +7221,7 @@ public:
 	int getTechPercent() const;
 	int getTechCostPercent() const;
 	int getTechMinTurnsLeft() const;
-	TechTypes getPrereqTech() const	{ return m_iPrereqTech; }
+	inline TechTypes getPrereqTech() const { return m_iPrereqTech; }
 	int getFreeUnit() const;
 	int getNumUnits() const;
 	int getBuilding() const;
@@ -7233,7 +7234,7 @@ public:
 	int getFoodPercent() const;
 	int getFeature() const;
 	int getFeatureChange() const;
-	ImprovementTypes getImprovement() const	{ return m_iImprovement; }
+	inline ImprovementTypes getImprovement() const { return m_iImprovement; }
 	int getImprovementChange() const;
 	int getCommerceModifier(int i) const;
 	int getYieldModifier(int i) const;
@@ -7340,6 +7341,7 @@ private:
 	bool m_bGoldenAge;
 	bool m_bDeclareWar;
 	bool m_bDisbandUnit;
+	bool m_bGameSpeedScale;
 
 	int m_iGold;
 	int m_iRandomGold;

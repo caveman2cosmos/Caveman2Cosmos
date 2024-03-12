@@ -22886,6 +22886,7 @@ CvEventInfo::CvEventInfo() :
 	m_bGoldenAge(false),
 	m_bDeclareWar(false),
 	m_bDisbandUnit(false),
+	m_bGameSpeedScale(false),
 	m_iGold(0),
 	m_iRandomGold(0),
 	m_iCulture(0),
@@ -23469,6 +23470,7 @@ void CvEventInfo::getCheckSum(uint32_t& iSum) const
 	CheckSum(iSum, m_bGoldenAge);
 	CheckSum(iSum, m_bDeclareWar);
 	CheckSum(iSum, m_bDisbandUnit);
+	CheckSum(iSum, m_bGameSpeedScale);
 	CheckSum(iSum, m_iGold);
 	CheckSum(iSum, m_iRandomGold);
 	CheckSum(iSum, m_iCulture);
@@ -23596,6 +23598,7 @@ bool CvEventInfo::read(CvXMLLoadUtility* pXML)
 	m_iFreeUnit = pXML->GetInfoClass(szTextVal);
 	pXML->GetOptionalChildXmlValByName(&m_iNumUnits, L"iNumFreeUnits");
 	pXML->GetOptionalChildXmlValByName(&m_bDisbandUnit, L"bDisbandUnit");
+	pXML->GetOptionalChildXmlValByName(&m_bGameSpeedScale, L"bGameSpeedScale");
 	pXML->GetOptionalChildXmlValByName(&m_iUnitExperience, L"iUnitExperience");
 	pXML->GetOptionalChildXmlValByName(&m_iUnitImmobileTurns, L"iUnitImmobileTurns");
 	pXML->GetOptionalChildXmlValByName(szTextVal, L"Building");
@@ -24041,7 +24044,8 @@ void CvEventInfo::copyNonDefaults(const CvEventInfo* pClassInfo)
 	if (getPrereqTech() == iTextDefault) m_iPrereqTech = pClassInfo->getPrereqTech();
 	if (getFreeUnit() == iTextDefault) m_iFreeUnit = pClassInfo->getFreeUnit();
 	if (getNumUnits() == iDefault) m_iNumUnits = pClassInfo->getNumUnits();
-	if (isDisbandUnit() == bDefault) m_bDisbandUnit = pClassInfo->isDisbandUnit();
+	if (m_bDisbandUnit == bDefault) m_bDisbandUnit = pClassInfo->isDisbandUnit();
+	if (m_bGameSpeedScale == bDefault) m_bGameSpeedScale = pClassInfo->isGameSpeedScale();
 	if (getUnitExperience() == iDefault) m_iUnitExperience = pClassInfo->getUnitExperience();
 	if (getUnitImmobileTurns() == iDefault) m_iUnitImmobileTurns = pClassInfo->getUnitImmobileTurns();
 	if (getBuilding() == iTextDefault) m_iBuilding = pClassInfo->getBuilding();
