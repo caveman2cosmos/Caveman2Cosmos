@@ -501,7 +501,7 @@
 				</TriggerText>
 			</TriggerTexts>
 			<EventArt>Art/Event_Images/FamineEvent.dds</EventArt>
-<!--			<bSinglePlayer>1</bSinglePlayer>-->
+			<bSinglePlayer>1</bSinglePlayer>
 			<iPercentGamesActive>100</iPercentGamesActive>
 			<iWeight>6</iWeight>
 			<bOwnPlot>1</bOwnPlot>
