@@ -481,7 +481,7 @@
 		<German>Superspion-Optionen:</German>
 		<Italian>[NEWLINE]Opzioni spie attive[NEWLINE](modificabili in opzioni BUG mod -> tab RevDCM -> opzioni spie)[NEWLINE]</Italian>
 		<Spanish>Opciones de Super Spies:</Spanish>
-		<Polish>Opcje Super Szpiegów:</Polish>
+		<Polish>Opcje Super Szpieg&#243;w:</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PER_POP</Tag>
@@ -724,7 +724,7 @@
 		<German>[COLOR_WARNING_TEXT]Veraltet: [LINK=%s1_TechType]%s2_TechName[\LINK][COLOR_REVERT]</German>
 		<Italian>[ICON_BULLET]Rende [COLOR_WARNING_TEXT]obsoleto[COLOR_REVERT]: [LINK=%s1_TechType]%s2_TechName[\LINK]</Italian> <!--tech Bark Working, Mountaineering -->
 		<Spanish>[COLOR_WARNING_TEXT]Deja [NUM1:obsoleto:obsoleta:obsoletos:obsoletas] [LINK=%s1_TechType]%s2:2_TechName[\LINK][COLOR_REVERT]</Spanish>
-		<Polish>[COLOR_WARNING_TEXT]Przestarzały: [LINK=%s1_TechType]%s2:2_TechName[\LINK][COLOR_REVERT]</Polish>
+		<Polish>[COLOR_WARNING_TEXT]Przestarza&#179;y: [LINK=%s1_TechType]%s2:2_TechName[\LINK][COLOR_REVERT]</Polish>
 		<Russian>[COLOR_WARNING_TEXT]Óñòàðåâàåò: [LINK=%s1_TechType]%s2_TechName[\LINK][COLOR_REVERT]</Russian>
 	</TEXT>
 	<TEXT>

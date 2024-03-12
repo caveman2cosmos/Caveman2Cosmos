@@ -31,21 +31,21 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_BONUS_BEAVERS</Tag>
 		<English>Place [LINK=BONUS_BEAVERS]Beavers Bonus[\LINK]</English>
-		<Polish>Umiesc Rodzine Bobrów</Polish>
+		<Polish>Umiesc Rodzine Bobr&#243;w</Polish>
 		<Russian>Разводить бобров</Russian>
 		<Italian>[LINK=BONUS_BEAVERS]Castoro[\LINK] (risorsa collocata)</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_BONUS_BISON</Tag>
 		<English>Place [LINK=BONUS_BISON]Bison Bonus[\LINK]</English>
-		<Polish>Umiesc Stado Bizonów</Polish>
+		<Polish>Umiesc Stado Bizon&#243;w</Polish>
 		<Russian>Разводить бизонов</Russian>
 		<Italian>[LINK=BONUS_BISON]Bisonte[\LINK] (risorsa collocata)</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_BONUS_CAMEL</Tag>
 		<English>Place [LINK=BONUS_CAMEL]Camel Bonus[\LINK]</English>
-		<Polish>Umiesc Stado Wielbladów</Polish>
+		<Polish>Umiesc Stado Wielblad&#243;w</Polish>
 		<Russian>Разводить верблюдов</Russian>
 		<Italian>[LINK=BONUS_CAMEL]Cammello[\LINK] (risorsa collocata)</Italian>
 	</TEXT>
@@ -94,7 +94,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_BONUS_COW</Tag>
 		<English>Place [LINK=BONUS_COW]Cow Bonus[\LINK]</English>
-		<Polish>Umiesc Stado Krów</Polish>
+		<Polish>Umiesc Stado Kr&#243;w</Polish>
 		<Russian>Разводить коров</Russian>
 		<Italian>[LINK=BONUS_COW]Mucca[\LINK] (risorsa collocata)</Italian>
 	</TEXT>
@@ -115,7 +115,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_BONUS_DONKEY</Tag>
 		<English>Place [LINK=BONUS_DONKEY]Donkey Bonus[\LINK]</English>
-		<Polish>Umiesc Stado Oslów</Polish>
+		<Polish>Umiesc Stado Osl&#243;w</Polish>
 		<Russian>Разводить ослов</Russian>
 		<Italian>[LINK=BONUS_DONKEY]Asino[\LINK] (risorsa collocata)</Italian>
 	</TEXT>
@@ -197,7 +197,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_BONUS_KANGAROO</Tag>
 		<English>Place [LINK=BONUS_KANGAROO]Kangaroo Bonus[\LINK]</English>
-		<Polish>Umiesc Stado Kangurów</Polish>
+		<Polish>Umiesc Stado Kangur&#243;w</Polish>
 		<Russian>Разводить кенгуру</Russian>
 		<Italian>[LINK=BONUS_KANGAROO]Canguro[\LINK] (risorsa collocata)</Italian>
 	</TEXT>
@@ -224,7 +224,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_BONUS_MAMMOTH</Tag>
 		<English>Place [LINK=BONUS_MAMMOTH]Mammoth Bonus[\LINK]</English>
-		<Polish>Umiesc Stado Mamutów</Polish>
+		<Polish>Umiesc Stado Mamut&#243;w</Polish>
 		<Russian>Разводить мамонтов</Russian>
 		<Italian>[LINK=BONUS_MAMMOTH]Mammut[\LINK] (risorsa collocata)</Italian>
 	</TEXT>
@@ -245,7 +245,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_BONUS_MUSHROOMS</Tag>
 		<English>Place [LINK=BONUS_MUSHROOMS]Mushrooms Bonus[\LINK]</English>
-		<Polish>Utwórz Grzybnie</Polish>
+		<Polish>Utw&#243;rz Grzybnie</Polish>
 		<Russian>Посадить грибы</Russian>
 		<Italian>[LINK=BONUS_MUSHROOMS]Fungo[\LINK] (risorsa collocata)</Italian>
 	</TEXT>
@@ -348,7 +348,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_BONUS_RABBIT</Tag>
 		<English>Place [LINK=BONUS_RABBIT]Rabbit Bonus[\LINK]</English>
-		<Polish>Umiesc Stado Królików</Polish>
+		<Polish>Umiesc Stado Kr&#243;lik&#243;w</Polish>
 		<Russian>Разводить кроликов</Russian>
 		<Italian>[LINK=BONUS_RABBIT]Coniglio[\LINK] (risorsa collocata)</Italian>
 	</TEXT>
@@ -376,7 +376,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_BONUS_SEA_LION_AND_SEAL</Tag>
 		<English>Place [LINK=BONUS_SEA_LION_AND_SEAL]Sea Lion and Seal Bonus[\LINK]</English>
-		<Polish>Umiesc Kolonie Lwów Morskich</Polish>
+		<Polish>Umiesc Kolonie Lw&#243;w Morskich</Polish>
 		<Russian>Разводить тюленей и морских львов</Russian>
 		<Italian>[LINK=BONUS_SEA_LION_AND_SEAL]Leone di mare e foca[\LINK] (risorsa collocata)</Italian>
 	</TEXT>
@@ -390,7 +390,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_BONUS_SILK</Tag>
 		<English>Place [LINK=BONUS_SILK]Silk Bonus[\LINK]</English>
-		<Polish>Stwórz Kolonie Jedwabników</Polish>
+		<Polish>Stw&#243;rz Kolonie Jedwabnik&#243;w</Polish>
 		<Russian>Производить шелк</Russian>
 		<Italian>[LINK=BONUS_SILK]Seta[\LINK] (risorsa collocata)</Italian>
 	</TEXT>
@@ -439,7 +439,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_BONUS_WALRUS</Tag>
 		<English>Place [LINK=BONUS_WALRUS]Walrus Bonus[\LINK]</English>
-		<Polish>Umiesc Kolonie Morsów</Polish>
+		<Polish>Umiesc Kolonie Mors&#243;w</Polish>
 		<Russian>Разводить моржей</Russian>
 		<Italian>[LINK=BONUS_WALRUS]Tricheco[\LINK] (risorsa collocata)</Italian>
 	</TEXT>
@@ -770,7 +770,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_BONUS_POULTRY</Tag>
 		<English>Bonus - Poultry</English>
-		<Polish>Bonus - Drób</Polish>
+		<Polish>Bonus - Dr&#243;b</Polish>
 		<Russian>Домашние птицы</Russian>
 		<Italian>Carne di pollo</Italian>
 	</TEXT>
@@ -798,7 +798,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_BONUS_RABBIT</Tag>
 		<English>Bonus - Rabbit</English>
-		<Polish>Bonus - Króliki</Polish>
+		<Polish>Bonus - Kr&#243;liki</Polish>
 		<Russian>Кролики</Russian>
 		<Italian>Coniglio</Italian>
 	</TEXT>

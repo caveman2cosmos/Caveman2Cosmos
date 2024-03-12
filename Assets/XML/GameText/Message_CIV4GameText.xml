@@ -22,7 +22,7 @@
 		<German>Some (%d1) of your slaves in %s2 have become population(%d3).</German>
 		<Italian>Alcuni (%d1) dei tuoi schiavi di %s2 sono diventati %d3 immigrati.</Italian>
 		<Spanish>Some (%d1) of your slaves in %s2 have become population(%d3).</Spanish>
-		<Polish>Niektórzy (%d1) sprośród Twoich niewolników w %s2 zostali imigrantami.</Polish>
+		<Polish>Niekt&#243;rzy (%d1) spro&#156;r&#243;d Twoich niewolnik&#243;w w %s2 zostali imigrantami.</Polish>
 		<Russian>Часть (%d1) ваших рабов в %s2 стали %d3 иммигрантами.</Russian>
 	</TEXT>
 	<TEXT>
@@ -36,7 +36,7 @@
 		<Tag>TXT_KEY_MSG_INDUSTRYESPIONAGE</Tag>
 		<English>[COLOR_SELECTED_TEXT]%s1 has plundered %d2 [ICON_RESEARCH] from you![COLOR_REVERT]</English>
 		<French>[COLOR_SELECTED_TEXT]%s1 vous a volé %d2 [ICON_RESEARCH]![COLOR_REVERT]</French>
-		<Polish>[COLOR_SELECTED_TEXT]%s1 złupił %d2 [ICON_RESEARCH] z Twojego imperium![COLOR_REVERT]</Polish>
+		<Polish>[COLOR_SELECTED_TEXT]%s1 z&#179;upi&#179; %d2 [ICON_RESEARCH] z Twojego imperium![COLOR_REVERT]</Polish>
 		<Russian>[COLOR_SELECTED_TEXT]%s1 похитил у вас %d2 [ICON_RESEARCH]![COLOR_REVERT]</Russian>
 		<Italian>[COLOR_SELECTED_TEXT]%s1 ha saccheggiato %d2 [ICON_RESEARCH] dal tuo impero![COLOR_REVERT]</Italian>
 	</TEXT>
@@ -44,7 +44,7 @@
 		<Tag>TXT_KEY_MSG_INDUSTRYESPIONAGE_YOU</Tag>
 		<English>[COLOR_SELECTED_TEXT]You have plundered %d2 [ICON_RESEARCH] from %s1![COLOR_REVERT]</English>
 		<French>[COLOR_SELECTED_TEXT]Vous avez pillé %d2 [ICON_RESEARCH] à %s1![COLOR_REVERT]</French>
-		<Polish>[COLOR_SELECTED_TEXT]Złupiłeś %d2 [ICON_RESEARCH] z Imperium %s1![COLOR_REVERT]</Polish>
+		<Polish>[COLOR_SELECTED_TEXT]Z&#179;upi&#179;e&#156; %d2 [ICON_RESEARCH] z Imperium %s1![COLOR_REVERT]</Polish>
 		<Russian>[COLOR_SELECTED_TEXT]Вы получили %d2 [ICON_RESEARCH] от %s1![COLOR_REVERT]</Russian>
 		<Italian>[COLOR_SELECTED_TEXT]Hai saccheggiato %d2 [ICON_RESEARCH] dall'impero di %s1![COLOR_REVERT]</Italian>
 	</TEXT>
@@ -55,7 +55,7 @@
 		<German>Eine Inquisition in %s1_city hat alle nicht-staatlichen Religionen erfolgreich eliminiert. Es wurde Gold von den Opfern konfisziert.</German>
 		<Italian>L'inquisizione nella città di %s1_city ha eliminato con successo tutte le religioni diverse da quella di Stato. L'oro è stato confiscato alle vittime</Italian>
 		<Spanish>Un Tribunal de la Fé convocado en %s1_city ha eliminado todas las religiones no oficiales. Se ha confiscado algo de oro de las víctimas.</Spanish>
-		<Polish>Inkwizytorowi w mieście %s1_city udało się odeprzeć wszystkie niepaństwowe religie i dodatkowo udało się skonfiskować złoto od ofiar.</Polish>
+		<Polish>Inkwizytorowi w mie&#156;cie %s1_city uda&#179;o si&#234; odeprze&#230; wszystkie niepa&#241;stwowe religie i dodatkowo uda&#179;o si&#234; skonfiskowa&#230; z&#179;oto od ofiar.</Polish>
 		<Russian>Инквизиция успешно очистила город %s1_city от всех негосударственных религий, а у неверных было конфисковано золото.</Russian>
 	</TEXT>
 	<TEXT>
@@ -65,7 +65,7 @@
 		<German>Einer Inquisition in %s1_city gelang es nicht, nicht-staatliche Religionen zu eliminieren.</German>
 		<Italian>L'inquisizione nella città di %s1_city ha fallito l'eliminazione delle religioni non di Stato.</Italian>
 		<Spanish>Un Tribunal de la Fé convocado en %s1_city ha fallado al intentar eliminar a los herejes.</Spanish>
-		<Polish>Inkwizytorowi w mieście %s1_city nie udało się odeprzeć wszystkich niepaństwowych religii.</Polish>
+		<Polish>Inkwizytorowi w mie&#156;cie %s1_city nie uda&#179;o si&#234; odeprze&#230; wszystkich niepa&#241;stwowych religii.</Polish>
 		<Russian>Инквизиция не сумела уничтожить в городе %s1_city все негосударственные религии.</Russian>
 	</TEXT>
 	<TEXT>
@@ -105,7 +105,7 @@
 		<English>The stars have favored a unit produced in %s1!</English>
 		<French>Les Astres ont favorisé l'unité produite à %s1!</French>
 		<Spanish>¡Parece que los astros han favorecido a una unidad entrenada en %s1!</Spanish>
-		<Polish>Gwiazdy sprzyjają zwerbowanej jednostce w %s1!</Polish>
+		<Polish>Gwiazdy sprzyjaj&#185; zwerbowanej jednostce w %s1!</Polish>
 		<Russian>Только что обученный отряд в городе %s1 родился под счастливой звездой!</Russian>
 		<Italian>Le stelle sorridono a un'unità prodotta in %s1!</Italian>
 	</TEXT>
@@ -114,7 +114,7 @@
 		<English>The stars have favored a newly created unit!</English>
 		<French>Les Astres favorisent l'unité nouvellement créé!</French>
 		<Spanish>¡Parece que los astros han favorecido a una unidad recién entrenada!</Spanish>
-		<Polish>Gwiazdy sprzyjają nowo zwerbowanej jednostce!</Polish>
+		<Polish>Gwiazdy sprzyjaj&#185; nowo zwerbowanej jednostce!</Polish>
 		<Russian>Звезды благоволят вновь созданному отряду!</Russian>
 		<Italian>Le stelle sorridono a un'unità appena creata</Italian>
 	</TEXT>
@@ -122,7 +122,7 @@
 		<Tag>TXT_KEY_MSG_TSUKIJI</Tag>
 		<English>[COLOR_HIGHLIGHT_TEXT]Tsukiji Fish Market [COLOR_SELECTED_TEXT]found a new source of [COLOR_HIGHLIGHT_TEXT]%s1[COLOR_SELECTED_TEXT]![COLOR_REVERT]</English>
 		<French>Le [COLOR_HIGHLIGHT_TEXT]Marché aux poissons de Tsukiji [COLOR_SELECTED_TEXT] donne accès ç une nouvelle source de [COLOR_HIGHLIGHT_TEXT]%s1[COLOR_SELECTED_TEXT]![COLOR_REVERT]</French>
-		<Polish>[COLOR_HIGHLIGHT_TEXT]Targ rybny Tsukiji [COLOR_SELECTED_TEXT] odkryl nowe zródlo [COLOR_HIGHLIGHT_TEXT]%s1[COLOR_SELECTED_TEXT]![COLOR_REVERT]</Polish>
+		<Polish>[COLOR_HIGHLIGHT_TEXT]Targ rybny Tsukiji [COLOR_SELECTED_TEXT] odkryl nowe zr&#243;dlo [COLOR_HIGHLIGHT_TEXT]%s1[COLOR_SELECTED_TEXT]![COLOR_REVERT]</Polish>
 		<Russian>Завершение строительства [COLOR_HIGHLIGHT_TEXT]Рынка Цукидзи [COLOR_SELECTED_TEXT]привело к открытию нового источника [COLOR_HIGHLIGHT_TEXT]%s1[COLOR_SELECTED_TEXT]![COLOR_REVERT]</Russian>
 		<Italian>[COLOR_HIGHLIGHT_TEXT]Il mercato del pesce di Tsukiji [COLOR_SELECTED_TEXT]ha trovato una nuova fonte di [COLOR_HIGHLIGHT_TEXT]%s1[COLOR_SELECTED_TEXT]![COLOR_REVERT]</Italian>
 	</TEXT>
@@ -162,7 +162,7 @@
 		<Tag>TXT_KEY_MSG_ZIZKOV_JAM</Tag>
 		<English>[COLOR_UNIT_TEXT]Zizkov Television Tower[COLOR_SELECTED_TEXT] has jammed the radio signals all over the world!</English>
 		<French>La[COLOR_UNIT_TEXT]Tour de Télévision de Zizkov[COLOR_SELECTED_TEXT] a brouillé tous les signaux radio!</French>
-		<Polish>[COLOR_UNIT_TEXT]Wieza Telewizyjna Zizkov[COLOR_SELECTED_TEXT] zaklócila sygnaly radiowe na calym swiecie!</Polish>
+		<Polish>[COLOR_UNIT_TEXT]Wieza Telewizyjna Zizkov[COLOR_SELECTED_TEXT] zakl&#243;cila sygnaly radiowe na calym swiecie!</Polish>
 		<Russian>[COLOR_UNIT_TEXT]Жижковская телебашня[COLOR_SELECTED_TEXT] заблокировала радиосигналы по всему миру!</Russian>
 		<Italian>[COLOR_UNIT_TEXT]La torre televisiva Zizkov[COLOR_SELECTED_TEXT] ha bloccato i segnali radio in tutto il mondo!</Italian>
 	</TEXT>

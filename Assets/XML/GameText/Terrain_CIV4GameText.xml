@@ -120,7 +120,7 @@
 			<Gender>Female</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Wybrzeże</Polish>
+		<Polish>Wybrze&#191;e</Polish>
 		<Russian>Побережье</Russian>
 	</TEXT>
 	<TEXT>
@@ -177,7 +177,7 @@
 			<Gender>Female</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Wybrzeże Polarne</Polish>
+		<Polish>Wybrze&#191;e Polarne</Polish>
 		<Russian>Полярное побережье</Russian>
 	</TEXT>
 	<TEXT>
@@ -195,7 +195,7 @@
 			<Gender>Female</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Wybrzeże Tropikalne</Polish>
+		<Polish>Wybrze&#191;e Tropikalne</Polish>
 		<Russian>Тропическое побережье</Russian>
 	</TEXT>
 	<TEXT>
@@ -278,7 +278,7 @@
 			<Gender>Female</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Łąka</Polish>
+		<Polish>&#163;&#185;ka</Polish>
 		<Russian>Луг</Russian>
 	</TEXT>
 	<TEXT>
@@ -303,7 +303,7 @@
 			<Gender>Female</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Wzgórza</Polish>
+		<Polish>Wzg&#243;rza</Polish>
 		<Russian>Холмы</Russian>
 	</TEXT>
 	<TEXT>
@@ -328,7 +328,7 @@
 			<Gender>Male</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Lód</Polish>
+		<Polish>L&#243;d</Polish>
 		<Russian>Лед</Russian>
 	</TEXT>
 	<TEXT>
@@ -355,7 +355,7 @@
 		<German>Dieses Wasserfeld wurde durch einen biologischen Kampfstoff vergiftet.</German>
 		<Italian>Questa casella acquatica è stata contaminata da una bomba biologica.</Italian>
 		<Spanish>Esta casilla acuática ha sido infectada por un arma biológica.</Spanish>
-		<Polish>To pole wody zostało zanieczyszczone przez biologiczną wersje rakiety</Polish>
+		<Polish>To pole wody zosta&#179;o zanieczyszczone przez biologiczn&#185; wersje rakiety</Polish>
 		<Russian>Этот участок воды был заражен «биооружием Судного дня».</Russian>
 	</TEXT>
 	<TEXT>
@@ -381,7 +381,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</Spanish>
-		<Polish>Bazalt Księżycowy</Polish>
+		<Polish>Bazalt Ksi&#234;&#191;ycowy</Polish>
 		<Russian>Лунный базальт</Russian>
 	</TEXT>
 	<TEXT>
@@ -404,7 +404,7 @@
 			<Gender>Male</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Skały Księżycowe</Polish>
+		<Polish>Ska&#179;y Ksi&#234;&#191;ycowe</Polish>
 		<Russian>Ëóííûå ñêàëû</Russian>
 	</TEXT>
 	<TEXT>
@@ -428,7 +428,7 @@
 			<Gender>Female</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Równiny Księżycowe</Polish>
+		<Polish>R&#243;wniny Ksi&#234;&#191;ycowe</Polish>
 		<Russian>Ëóííàÿ ðàâíèíà</Russian>
 	</TEXT>
 	<TEXT>
@@ -452,7 +452,7 @@
 			<Gender>Male</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Księżycowy Jałowy Teren</Polish>
+		<Polish>Ksi&#234;&#191;ycowy Ja&#179;owy Teren</Polish>
 		<Russian>Ëóííàÿ ïóñòîøü</Russian>
 	</TEXT>
 	<TEXT>
@@ -476,7 +476,7 @@
 			<Gender>Male</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Pustynia Księżycowa</Polish>
+		<Polish>Pustynia Ksi&#234;&#191;ycowa</Polish>
 		<Russian>Ëóííàÿ ïóñòûíÿ</Russian>
 	</TEXT>
 	<TEXT>
@@ -500,7 +500,7 @@
 			<Gender>Female</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Bujna Roślinność</Polish>
+		<Polish>Bujna Ro&#156;linno&#156;&#230;</Polish>
 		<Russian>×åðíîçåì</Russian>
 	</TEXT>
 	<TEXT>
@@ -551,7 +551,7 @@
 			<Gender>Male</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Marsjański Jałowy Teren</Polish>
+		<Polish>Marsja&#241;ski Ja&#179;owy Teren</Polish>
 		<Russian>Ìàðñèàíñêàÿ ïóñòîøü</Russian>
 	</TEXT>
 	<TEXT>
@@ -573,7 +573,7 @@
 			<Gender>Male</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Marsjańska Pustynia</Polish>
+		<Polish>Marsja&#241;ska Pustynia</Polish>
 		<Russian>Ìàðñèàíñêàÿ ïóñòûíÿ</Russian>
 	</TEXT>
 	<TEXT>
@@ -595,7 +595,7 @@
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</Spanish>
-		<Polish>Marsjańskie Wydmy</Polish>
+		<Polish>Marsja&#241;skie Wydmy</Polish>
 		<Russian>Ìàðñèàíñêèå äþíû</Russian>
 	</TEXT>
 	<TEXT>
@@ -617,7 +617,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</Spanish>
-		<Polish>Marsjański Lód</Polish>
+		<Polish>Marsja&#241;ski L&#243;d</Polish>
 		<Russian>Ìàðñèàíñêèé ëåä</Russian>
 	</TEXT>
 	<TEXT>
@@ -639,7 +639,7 @@
 			<Gender>Male</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Marsjańska Wieczna Zmarzlina</Polish>
+		<Polish>Marsja&#241;ska Wieczna Zmarzlina</Polish>
 		<Russian>Ìàðñèàíñêàÿ ìåðçëîòà</Russian>
 	</TEXT>
 	<TEXT>
@@ -661,7 +661,7 @@
 			<Gender>Female</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Marsjańskie Równiny</Polish>
+		<Polish>Marsja&#241;skie R&#243;wniny</Polish>
 		<Russian>Ìàðñèàíñêàÿ ðàâíèíà</Russian>
 	</TEXT>
 	<TEXT>
@@ -683,7 +683,7 @@
 			<Gender>Male</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Marsjańskie Skały</Polish>
+		<Polish>Marsja&#241;skie Ska&#179;y</Polish>
 		<Russian>Ìàðñèàíñêèå ñêàëû</Russian>
 	</TEXT>
 	<TEXT>
@@ -702,7 +702,7 @@
 			<Gender>Male</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Błotnisty Teren</Polish>
+		<Polish>B&#179;otnisty Teren</Polish>
 		<Russian>Ãðÿçü</Russian>
 	</TEXT>
 	<TEXT>
@@ -854,7 +854,7 @@
 		<French>En géologie, le pergélisol désigne un sous-sol gelé en permanence, au moins pendant deux ans.</French>
 		<German>Als [COLOR_HIGHLIGHT_TEXT]Permafrost[COLOR_REVERT] wird Dauerfrostboden bezeichnet, der mindestens zwei Jahre ununterbrochen gefroren ist. Die größten Permafrostgebiete der Erde befinden sich in den Polargebieten, im Hochgebirge und in großen Teilen der borealen Nadelwälder. Geografisch gesehen handelt es sich um große Teile Nordkanadas, Alaskas, Grönlands und Ostsibiriens sowie der Antarktis. Aktuell liegen etwa 20 bis 25 % der Landflächen der Erde innerhalb der Permafrostzone. Durch die globale Erwärmung verschiebt sich die Permafrostgrenze immer weiter in Richtung der Pole. Kritisch an diesem Rückgang der Permafrostböden ist besonders, dass in ihnen Unmengen an Kohlenstoff gespeichert sind, die beim Auftauen freigesetzt werden und die globale Erwärmung weiter beschleunigen.</German>
 		<Italian>In geologia, il permafrost è suolo alla temperature di congelamento dell'acqua (o inferiore) per due o più anni. Non sempre è presente del ghiaccio, ad esempio nella roccia non porosa, ma è spesso presente e potrebbe essere in ammassi che eccedono il potenziale di saturazione idraulica del suolo. La maggior parte del permafrost è situato ad alte latitudini (terreni vicini al polo nord e al polo sud), ma può esistere un permafrost alpino ad alte altitudini a latitudini più basse. Il permafrost costituisce lo 0.022% di tutta l'acqua e esiste nel 24% delle terre emerse nell'emisfero nord.</Italian>
-		<Polish>En gźologie, le pergźlisol dźsigne un sous-sol gelź en permanence, au moins pendant deux ans.</Polish>
+		<Polish>En g&#159;ologie, le perg&#159;lisol d&#159;signe un sous-sol gel&#159; en permanence, au moins pendant deux ans.</Polish>
 		<Russian>В геологии вечная мерзлота, криотическая почва или вечная мерзлота - это почва с температурой замерзания воды или ниже нее в течение двух или более лет. Лед не всегда присутствует, как это может быть в случае непористой коренной породы, но он часто встречается и может быть в количествах, превышающих потенциальное гидравлическое насыщение грунтового материала. Большая часть вечной мерзлоты находится в высоких широтах (то есть на суше вблизи северного и южного полюсов), но вечная мерзлота в Альпах может существовать на больших высотах в гораздо более низких широтах. Вечная мерзлота составляет 0,022% от общего объема воды и существует на 24% открытых земель в северном полушарии.</Russian>
 	</TEXT>
 	<TEXT>
@@ -864,7 +864,7 @@
 		<German>Verseuchtes Wasser</German>
 		<Italian>Acqua fortemente contaminata</Italian>
 		<Spanish>Agua contaminada</Spanish>
-		<Polish>Zarażona Woda</Polish>
+		<Polish>Zara&#191;ona Woda</Polish>
 		<Russian>×óìíàÿ âîäà</Russian>
 	</TEXT>
 	<TEXT>
@@ -874,7 +874,7 @@
 		<German>Dieses Wasserfeld wurde durch einen starken biologischen Kampfstoff verseucht.</German>
 		<Italian>Questa casella acquatica è stata contaminata da una potentissima bomba biologica.</Italian>
 		<Spanish>Esta casilla acuática ha sido infectada por una potente arma biológica.</Spanish>
-		<Polish>To pole wody zostało zanieczyszczone przez biologiczną wersje rakiety</Polish>
+		<Polish>To pole wody zosta&#179;o zanieczyszczone przez biologiczn&#185; wersje rakiety</Polish>
 		<Russian>Этот участок воды был заражен первоклассным «биооружием Судного дня».</Russian>
 	</TEXT>
 	<TEXT>
@@ -892,7 +892,7 @@
 			<Gender>Female</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Równina</Polish>
+		<Polish>R&#243;wnina</Polish>
 		<Russian>Ðàâíèíà</Russian>
 	</TEXT>
 	<TEXT>
@@ -963,7 +963,7 @@
 			<Gender>Male</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Zarośla</Polish>
+		<Polish>Zaro&#156;la</Polish>
 		<Russian>Êóñòàðíèê</Russian>
 	</TEXT>
 	<TEXT>
