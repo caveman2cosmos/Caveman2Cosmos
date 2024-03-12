@@ -16016,7 +16016,6 @@ CvWorldInfo::CvWorldInfo() :
 ,m_iGridHeight(0)
 ,m_iTerrainGrainChange(0)
 ,m_iFeatureGrainChange(0)
-,m_iResearchPercent(0)
 ,m_iTradeProfitPercent(0)
 ,m_iDistanceMaintenancePercent(0)
 ,m_iNumCitiesMaintenancePercent(0)
@@ -16089,11 +16088,6 @@ int CvWorldInfo::getFeatureGrainChange() const
 	return m_iFeatureGrainChange;
 }
 
-int CvWorldInfo::getResearchPercent() const
-{
-	return m_iResearchPercent;
-}
-
 int CvWorldInfo::getTradeProfitPercent() const
 {
 	return m_iTradeProfitPercent;
@@ -16161,7 +16155,6 @@ bool CvWorldInfo::read(CvXMLLoadUtility* pXML)
 	pXML->GetOptionalChildXmlValByName(&m_iGridHeight, L"iGridHeight");
 	pXML->GetOptionalChildXmlValByName(&m_iTerrainGrainChange, L"iTerrainGrainChange");
 	pXML->GetOptionalChildXmlValByName(&m_iFeatureGrainChange, L"iFeatureGrainChange");
-	pXML->GetOptionalChildXmlValByName(&m_iResearchPercent, L"iResearchPercent");
 	pXML->GetOptionalChildXmlValByName(&m_iTradeProfitPercent, L"iTradeProfitPercent");
 	pXML->GetOptionalChildXmlValByName(&m_iDistanceMaintenancePercent, L"iDistanceMaintenancePercent");
 	pXML->GetOptionalChildXmlValByName(&m_iNumCitiesMaintenancePercent, L"iNumCitiesMaintenancePercent");
@@ -16193,7 +16186,6 @@ void CvWorldInfo::copyNonDefaults(const CvWorldInfo* pClassInfo)
 	if (getGridHeight() == iDefault) m_iGridHeight = pClassInfo->getGridHeight();
 	if (getTerrainGrainChange() == iDefault) m_iTerrainGrainChange = pClassInfo->getTerrainGrainChange();
 	if (getFeatureGrainChange() == iDefault) m_iFeatureGrainChange = pClassInfo->getFeatureGrainChange();
-	if (getResearchPercent() == iDefault) m_iResearchPercent = pClassInfo->getResearchPercent();
 	if (getTradeProfitPercent() == iDefault) m_iTradeProfitPercent = pClassInfo->getTradeProfitPercent();
 	if (getDistanceMaintenancePercent() == iDefault) m_iDistanceMaintenancePercent = pClassInfo->getDistanceMaintenancePercent();
 	if (getNumCitiesMaintenancePercent() == iDefault) m_iNumCitiesMaintenancePercent = pClassInfo->getNumCitiesMaintenancePercent();
@@ -16219,7 +16211,6 @@ void CvWorldInfo::getCheckSum(uint32_t& iSum) const
 	CheckSum(iSum, m_iGridHeight);
 	CheckSum(iSum, m_iTerrainGrainChange);
 	CheckSum(iSum, m_iFeatureGrainChange);
-	CheckSum(iSum, m_iResearchPercent);
 	CheckSum(iSum, m_iTradeProfitPercent);
 	CheckSum(iSum, m_iDistanceMaintenancePercent);
 	CheckSum(iSum, m_iNumCitiesMaintenancePercent);

@@ -4831,7 +4831,6 @@ public:
 	int getGridHeight() const;
 	int getTerrainGrainChange() const;
 	int getFeatureGrainChange() const;
-	int getResearchPercent() const;
 	int getTradeProfitPercent() const;
 	int getDistanceMaintenancePercent() const;
 	int getNumCitiesMaintenancePercent() const;
@@ -4860,7 +4859,6 @@ private:
 	int m_iGridHeight;
 	int m_iTerrainGrainChange;
 	int m_iFeatureGrainChange;
-	int m_iResearchPercent;
 	int m_iTradeProfitPercent;
 	int m_iDistanceMaintenancePercent;
 	int m_iNumCitiesMaintenancePercent;
