@@ -1613,10 +1613,6 @@
 		<iDefineIntVal>100</iDefineIntVal>
 	</Define>
 	<Define>
-		<DefineName>FIRST_EVENT_DELAY_TURNS</DefineName>
-		<iDefineIntVal>20</iDefineIntVal>
-	</Define>
-	<Define>
 		<DefineName>USE_MODDERS_PLAYEROPTION_1</DefineName>
 		<iDefineIntVal>1</iDefineIntVal>
 	</Define>
