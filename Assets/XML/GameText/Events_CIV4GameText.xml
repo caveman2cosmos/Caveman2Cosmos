@@ -5513,6 +5513,10 @@
 		<Italian>Siamo troppo impegnati. Lasciate che del problema si occupino le autorità locali. (I furti potrebbero continuare)</Italian>
 		<Spanish>Estamos demasiado ocupados como para que se nos moleste. Dejad el asunto en manos de las autoridades locales. (Es posible que el bandidaje prosiga)</Spanish>
 	</TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_FAUX_PAS_2</Tag>
+        <English>Send gifts to apologise for our mistake.</English>
+    </TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_FAUX_PAS_1</Tag>
 		<English>This gaffe has adversely affected our relations.</English>
@@ -5529,6 +5533,10 @@
 		<Italian>L'ambasciatore %s1_civ_adjective ha commesso una gaffe. L'episodio ha influenzato negativamente le nostre relazioni col suo Paese.</Italian>
 		<Spanish>El embajador %s1:1_civ_adjective ha dado un paso en falso. Esta ofensiva metedura de pata ha afectado negativamente a nuestras relaciones con su país.</Spanish>
 	</TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_FAUX_PAS_OTHER_2</Tag>
+        <English>The %s1_civ_adjective ambassador has committed a faux pas. They have apologised and offed gifts to amend their mistake.</English>
+    </TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_FAVORITE_SON_1</Tag>
 		<English>No one survives forever. Cash in on the phenomenon before he meets the inevitable end.</English>
@@ -8739,6 +8747,10 @@
 		<Italian>È orribile.</Italian>
 		<Spanish>Es horrible.</Spanish>
 	</TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_PESTILENCE_2</Tag>
+        <English>Fund reconstruction immediately.</English>
+    </TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_PILLAGE</Tag>
 		<English>[ICON_BULLET]%d1 terrain [NUM1:improvement:improvements] destroyed</English>
@@ -10629,6 +10641,10 @@
 		<Italian>I locali hanno scoperto come ottenere un maggiore raccolto di perle nere. Mantengono il segreto con molta cura.</Italian>
 		<Spanish>Los lugareños han encontrado una manera de sacar más provecho de las perlas negras. Guardan con mucho celo su secreto.</Spanish>
 	</TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_TRIGGER_BLESSED_SEA</Tag>
+        <English>%s4_religion_adjective leaders have requested from the %s1_civ_adjective people to expand to other continents!</English>
+    </TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_TRIGGER_BLESSED_SEA_1</Tag>
 		<English>Our spiritual leaders are urging us to seek the blessings of the sea![PARAGRAPH:1]The wise masters have divined the way regarding our relationship with the sea. They urge us to embrace the sea, to broaden our influence over it and spread our traditions to new lands.</English>
@@ -11151,6 +11167,10 @@
 		<Italian>Il capitano di uno dei nostri migliori vascelli sta andando in pensione e ha offerto la propria saggezza e capacità per aiutare nella costruzione di navi presso il cantiere navale di %s2_city.</Italian>
 		<Spanish>Un capitán retirado de un destacado navío de élite ha puesto sus conocimientos y aptitudes al servicio de la construcción de barcos en el astillero de %s2_city.</Spanish>
 	</TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_TRIGGER_FAMINE</Tag>
+        <English>A dreadful harvest has happened to %s1_civ_adjective in their city of %s6_city.</English>
+    </TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_TRIGGER_FAMINE_1</Tag>
 		<English>A dreadful harvest for our %s1_civ_adjective neighbors in the city of %s6_city just across the border has left its people starving. We may have a chance to gain favor with them if we provide humanitarian assistance from %s2_city.</English>
@@ -11618,6 +11638,10 @@
 		<Italian>I prospettori hanno scoperto nuovi filoni ricchi di argento.</Italian>
 		<Spanish>Los prospectores han descubierto nuevos filones de plata.</Spanish>
 	</TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_TRIGGER_HOLY_MOUNTAIN</Tag>
+        <English>%s4_religion_adjective leaders have bestowed a quest upon the %s1_civ_adjective people to search for and find the holy mountain!</English>
+    </TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_TRIGGER_HOLY_MOUNTAIN_1</Tag>
 		<English>Our religious leaders believe our people can earn the blessings of the deity if we can reclaim the Holy Mountain![PARAGRAPH:1]They have studied the scriptures with an eye toward locating the holy mountain. They have so far not found it anywhere within our lands and believe that it must lie elsewhere. More study will be needed if we are to identify the sacred location.</English>
@@ -11976,6 +12000,10 @@
 		<Polish>Nasze statki zosta&#179;y zaatakowane przez [COLOR_NEGATIVE_TEXT]Malaka&#241;skich Pirat&#243;w[COLOR_REVERT]! Piraci u&#191;ywaj&#185; swojej floty porwanych okr&#234;t&#243;w do &#179;upienia handlowc&#243;w pod ich w&#179;asnym nosem.</Polish>
 		<Russian>Наши суда подверглись атаке [COLOR_NEGATIVE_TEXT]Малайских пиратов[COLOR_REVERT]! Они используют свой флот угнанных кораблей, чтобы охотиться на купеческие суда прямо у нас под носом.</Russian>
 	</TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_TRIGGER_MAN_NAMED_JED</Tag>
+        <English>%s1_civ_adjective scouts have discovered some flaming sticky black substance.</English>
+    </TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_TRIGGER_MAN_NAMED_JED_1</Tag>
 		<English>While hunting, our %s3_unit has discovered a rich supply of a black oil that burns rather hot.</English>
@@ -11984,6 +12012,10 @@
 		<Italian>Durante la caccia, %s3_unit ha scoperto una ricca riserva di un olio nero che brucia bene.</Italian>
 		<Spanish>Mientras estaba de caza, nuestra unidad de %s3_unit ha descubierto un rico suministro de aceite de roca que quema como la yesca.</Spanish>
 	</TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_TRIGGER_MAN_NAMED_JED_2</Tag>
+        <English>While walking, our %s3_unit has stepped into a black puddle of sticky substance.</English>
+    </TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_TRIGGER_MARATHON_1</Tag>
 		<English>A brave and hardy soldier has run over twenty-six miles on foot to warn of the invasion!</English>
