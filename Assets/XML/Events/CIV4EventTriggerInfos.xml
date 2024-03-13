@@ -592,6 +592,9 @@
 		-->
 		<EventTriggerInfo>
 			<Type>EVENTTRIGGER_BLESSED_SEA</Type>
+			<WorldNewsTexts>
+				<Text>TXT_KEY_EVENT_TRIGGER_BLESSED_SEA</Text>
+			</WorldNewsTexts>
 			<TriggerTexts>
 				<TriggerText>
 					<Text>TXT_KEY_EVENT_TRIGGER_BLESSED_SEA_1</Text>
@@ -663,7 +666,7 @@
 			<EventArt>Art/Event_Images/AirlinerCrashEvent.dds</EventArt>
 			<bSinglePlayer>1</bSinglePlayer>
 			<iPercentGamesActive>100</iPercentGamesActive>
-			<iWeight>300</iWeight>
+			<iWeight>3</iWeight>
 			<bOwnPlot>1</bOwnPlot>
 			<Events>
 				<Event>EVENT_AIRLINER_CRASH_1</Event>
@@ -698,7 +701,7 @@
 			</TriggerTexts>
 			<EventArt>Art/Event_Images/FarmBanditsEvent.dds</EventArt>
 			<iPercentGamesActive>100</iPercentGamesActive>
-			<iWeight>200</iWeight>
+			<iWeight>20</iWeight>
 			<iNumUnits>1</iNumUnits>
 			<iUnitDistanceWeight>-1</iUnitDistanceWeight>
 			<iNumPlotsRequired>1</iNumPlotsRequired>
@@ -786,6 +789,9 @@
 		</EventTriggerInfo>
 		<EventTriggerInfo>
 			<Type>EVENTTRIGGER_HOLY_MOUNTAIN</Type>
+			<WorldNewsTexts>
+				<Text>TXT_KEY_EVENT_TRIGGER_HOLY_MOUNTAIN</Text>
+			</WorldNewsTexts>
 			<TriggerTexts>
 				<TriggerText>
 					<Text>TXT_KEY_EVENT_TRIGGER_HOLY_MOUNTAIN_1</Text>
@@ -885,7 +891,7 @@
 			</TriggerTexts>
 			<EventArt>Art/Event_Images/HorticultureEvent.dds</EventArt>
 			<iPercentGamesActive>100</iPercentGamesActive>
-			<iWeight>200</iWeight>
+			<iWeight>100</iWeight>
 			<iNumPlotsRequired>1</iNumPlotsRequired>
 			<bOwnPlot>1</bOwnPlot>
 			<FeaturesRequired>
@@ -920,7 +926,7 @@
 			<EventArt>Art/Event_Images/FugitiveEvent.dds</EventArt>
 			<bSinglePlayer>1</bSinglePlayer>
 			<iPercentGamesActive>100</iPercentGamesActive>
-			<iWeight>200</iWeight>
+			<iWeight>10</iWeight>
 			<bOwnPlot>1</bOwnPlot>
 			<Events>
 				<Event>EVENT_FUGITIVE_1</Event>
@@ -930,7 +936,7 @@
 			<OrPreReqs>
 				<PrereqTech>TECH_FEUDALISM</PrereqTech>
 			</OrPreReqs>
-			<bGlobal>1</bGlobal>
+			<bRecurring>1</bRecurring>
 			<bPickPlayer>1</bPickPlayer>
 			<bShowPlot>0</bShowPlot>
 		</EventTriggerInfo>
@@ -955,14 +961,16 @@
 			</TriggerTexts>
 			<EventArt>Art/Event_Images/PestilenceEvent.dds</EventArt>
 			<iPercentGamesActive>100</iPercentGamesActive>
-			<iWeight>100</iWeight>
+			<iWeight>8</iWeight>
 			<iNumPlotsRequired>1</iNumPlotsRequired>
 			<bOwnPlot>1</bOwnPlot>
+			<bRecurring>1</bRecurring>
 			<ImprovementsRequired>
 				<ImprovementType>IMPROVEMENT_PASTURE</ImprovementType>
 			</ImprovementsRequired>
 			<Events>
 				<Event>EVENT_PESTILENCE_1</Event>
+				<Event>EVENT_PESTILENCE_2</Event>
 			</Events>
 			<bPickCity>1</bPickCity>
 		</EventTriggerInfo>
@@ -986,16 +994,47 @@
 				</TriggerText>
 			</TriggerTexts>
 			<iPercentGamesActive>100</iPercentGamesActive>
-			<iWeight>100</iWeight>
+			<iWeight>8</iWeight>
 			<iNumPlotsRequired>1</iNumPlotsRequired>
 			<bOwnPlot>1</bOwnPlot>
+			<bRecurring>1</bRecurring>
 			<ImprovementsRequired>
 				<ImprovementType>IMPROVEMENT_PLANTATION</ImprovementType>
 			</ImprovementsRequired>
 			<Events>
 				<Event>EVENT_PESTILENCE_1</Event>
+				<Event>EVENT_PESTILENCE_2</Event>
 			</Events>
 			<bPickCity>1</bPickCity>
+		</EventTriggerInfo>
+		<EventTriggerInfo>
+			<Type>EVENTTRIGGER_PESTILENCE_3</Type>
+			<WorldNewsTexts>
+				<Text>TXT_KEY_EVENTTRIGGER_PESTILENCE</Text>
+			</WorldNewsTexts>
+			<TriggerTexts>
+				<TriggerText>
+					<Text>TXT_KEY_EVENT_TRIGGER_PESTILENCE_4</Text>
+					<Era>NONE</Era>
+				</TriggerText>
+				<TriggerText>
+					<Text>TXT_KEY_EVENT_TRIGGER_PESTILENCE_6</Text>
+					<Era>NONE</Era>
+				</TriggerText>
+			</TriggerTexts>
+			<iPercentGamesActive>100</iPercentGamesActive>
+			<iWeight>8</iWeight>
+			<iNumPlotsRequired>1</iNumPlotsRequired>
+			<bOwnPlot>1</bOwnPlot>
+			<ImprovementsRequired>
+				<ImprovementType>IMPROVEMENT_FARM</ImprovementType>
+			</ImprovementsRequired>
+			<Events>
+				<Event>EVENT_PESTILENCE_1</Event>
+				<Event>EVENT_PESTILENCE_2</Event>
+			</Events>
+			<bPickCity>1</bPickCity>
+			<bRecurring>1</bRecurring>
 		</EventTriggerInfo>
 		<EventTriggerInfo>
 			<Type>EVENTTRIGGER_MARATHON</Type>
@@ -1035,12 +1074,13 @@
 			<EventArt>Art/Event_Images/FauxPasEvent.dds</EventArt>
 			<bSinglePlayer>1</bSinglePlayer>
 			<iPercentGamesActive>100</iPercentGamesActive>
-			<iWeight>100</iWeight>
+			<iWeight>12</iWeight>
 			<bOwnPlot>1</bOwnPlot>
 			<Events>
 				<Event>EVENT_FAUX_PAS_1</Event>
+				<Event>EVENT_FAUX_PAS_2</Event>
 			</Events>
-			<bGlobal>1</bGlobal>
+			<bRecurring>1</bRecurring>
 			<bPickPlayer>1</bPickPlayer>
 			<bShowPlot>0</bShowPlot>
 		</EventTriggerInfo>
@@ -7535,33 +7575,6 @@
 				<Event>EVENT_TANNERY_GLUE_1</Event>
 			</Events>
 			<bGlobal>1</bGlobal>
-			<bPickCity>1</bPickCity>
-		</EventTriggerInfo>
-		<EventTriggerInfo>
-			<Type>EVENTTRIGGER_PESTILENCE_3</Type>
-			<WorldNewsTexts>
-				<Text>TXT_KEY_EVENTTRIGGER_PESTILENCE</Text>
-			</WorldNewsTexts>
-			<TriggerTexts>
-				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_PESTILENCE_4</Text>
-					<Era>NONE</Era>
-				</TriggerText>
-				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_PESTILENCE_6</Text>
-					<Era>NONE</Era>
-				</TriggerText>
-			</TriggerTexts>
-			<iPercentGamesActive>100</iPercentGamesActive>
-			<iWeight>100</iWeight>
-			<iNumPlotsRequired>1</iNumPlotsRequired>
-			<bOwnPlot>1</bOwnPlot>
-			<ImprovementsRequired>
-				<ImprovementType>IMPROVEMENT_FARM</ImprovementType>
-			</ImprovementsRequired>
-			<Events>
-				<Event>EVENT_PESTILENCE_1</Event>
-			</Events>
 			<bPickCity>1</bPickCity>
 		</EventTriggerInfo>
 		<EventTriggerInfo>
