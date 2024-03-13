@@ -1,4 +1,8 @@
 <?xml version='1.0' encoding='UTF-8'?>
+<!-- 
+	iMaxNumReligions
+		Its value defaults to -1 if it is missing.
+-->
 <Civ4EventInfos xmlns="x-schema:../Schema/C2C_CIV4EventSchema.xml">
 	<EventInfos>
 		<EventInfo>
@@ -534,7 +538,6 @@
 			<Description>TXT_KEY_EVENT_BLESSED_SEA_DONE_1</Description>
 			<bGlobal>1</bGlobal>
 			<iConvertOwnCities>20</iConvertOwnCities>
-			<iMaxNumReligions>-1</iMaxNumReligions>
 			<ClearEvents>
 				<EventChance>
 					<Event>EVENT_BLESSED_SEA_1</Event>
@@ -641,7 +644,6 @@
 					<iEventChance>100</iEventChance>
 				</EventChance>
 			</ClearEvents>
-			<PythonHelp/>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<iAIValue>1</iAIValue>
 		</EventInfo>
@@ -1910,7 +1912,6 @@
 					<Promotion>PROMOTION_PINCH</Promotion>
 				</PromoteUnit>
 			</PromoteUnits>
-			<PythonCallback/>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<iAIValue>1000</iAIValue>
 		</EventInfo>
@@ -1931,7 +1932,6 @@
 					<Promotion>PROMOTION_COMBAT1</Promotion>
 				</PromoteUnit>
 			</PromoteUnits>
-			<PythonCallback/>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<iAIValue>1000</iAIValue>
 		</EventInfo>
@@ -1948,7 +1948,6 @@
 					<Promotion>PROMOTION_PINCH</Promotion>
 				</PromoteUnit>
 			</PromoteUnits>
-			<PythonCallback/>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<iAIValue>1000</iAIValue>
 		</EventInfo>
@@ -1969,7 +1968,6 @@
 					<Promotion>PROMOTION_COMBAT1</Promotion>
 				</PromoteUnit>
 			</PromoteUnits>
-			<PythonCallback/>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<iAIValue>1000</iAIValue>
 		</EventInfo>
@@ -1982,7 +1980,6 @@
 					<Promotion>PROMOTION_DRILL3</Promotion>
 				</PromoteUnit>
 			</PromoteUnits>
-			<PythonCallback/>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<iAIValue>1000</iAIValue>
 		</EventInfo>
@@ -1995,7 +1992,6 @@
 					<Promotion>PROMOTION_RANGE1</Promotion>
 				</PromoteUnit>
 			</PromoteUnits>
-			<PythonCallback/>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<iAIValue>1000</iAIValue>
 		</EventInfo>
@@ -2012,7 +2008,6 @@
 					<Promotion>PROMOTION_SHOCK</Promotion>
 				</PromoteUnit>
 			</PromoteUnits>
-			<PythonCallback/>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<iAIValue>1000</iAIValue>
 		</EventInfo>
@@ -2025,7 +2020,6 @@
 					<Promotion>PROMOTION_COMBAT1</Promotion>
 				</PromoteUnit>
 			</PromoteUnits>
-			<PythonCallback/>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<iAIValue>1000</iAIValue>
 		</EventInfo>
@@ -2181,7 +2175,6 @@
 			<Type>EVENT_THE_GOTHS_1</Type>
 			<Description>TXT_KEY_EVENT_BARBARIAN_UPRISING</Description>
 			<PythonCallback>applyTheGoths1</PythonCallback>
-			<PythonHelp/>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<iAIValue>1000</iAIValue>
 		</EventInfo>
@@ -2900,7 +2893,6 @@
 			<bPickCity>1</bPickCity>
 			<iGold>-30</iGold>
 			<iConvertOwnCities>2</iConvertOwnCities>
-			<iMaxNumReligions>-1</iMaxNumReligions>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<iAIValue>1000</iAIValue>
 		</EventInfo>
@@ -3142,7 +3134,6 @@
 			<bPickCity>1</bPickCity>
 			<iHurryAnger>1</iHurryAnger>
 			<iConvertOwnCities>2</iConvertOwnCities>
-			<iMaxNumReligions>-1</iMaxNumReligions>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<iAIValue>1000</iAIValue>
 		</EventInfo>
@@ -3158,7 +3149,6 @@
 			</TechFlavors>
 			<iTechPercent>15</iTechPercent>
 			<iTechMinTurnsLeft>4</iTechMinTurnsLeft>
-			<PythonCallback/>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<iAIValue>1000</iAIValue>
 		</EventInfo>
@@ -3364,7 +3354,6 @@
 			<Description>TXT_KEY_EVENT_WAR_CHARIOTS_DONE_2</Description>
 			<bGlobal>1</bGlobal>
 			<iConvertOwnCities>5</iConvertOwnCities>
-			<iMaxNumReligions>-1</iMaxNumReligions>
 			<ClearEvents>
 				<EventChance>
 					<Event>EVENT_WAR_CHARIOTS_1</Event>
@@ -3586,7 +3575,6 @@
 			<Description>TXT_KEY_EVENT_NOBLE_KNIGHTS_DONE_2</Description>
 			<bGlobal>1</bGlobal>
 			<iConvertOwnCities>5</iConvertOwnCities>
-			<iMaxNumReligions>-1</iMaxNumReligions>
 			<ClearEvents>
 				<EventChance>
 					<Event>EVENT_NOBLE_KNIGHTS_1</Event>
@@ -3658,9 +3646,6 @@
 					<iEventChance>100</iEventChance>
 				</EventChance>
 			</ClearEvents>
-			<PythonCallback/>
-			<PythonCanDo/>
-			<PythonHelp/>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<iAIValue>1000</iAIValue>
 		</EventInfo>
@@ -4096,7 +4081,6 @@
 			<bPickCity>1</bPickCity>
 			<iConvertOwnCities>5</iConvertOwnCities>
 			<iConvertOtherCities>3</iConvertOtherCities>
-			<iMaxNumReligions>-1</iMaxNumReligions>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<iAIValue>1000</iAIValue>
 		</EventInfo>
@@ -4560,7 +4544,6 @@
 					<iExtraCommerce>3</iExtraCommerce>
 				</BuildingExtraCommerce>
 			</BuildingExtraCommerces>
-			<PythonCanDo/>
 			<PythonHelp>getHelpBillionsandBillions2</PythonHelp>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<iAIValue>1000</iAIValue>
@@ -6645,8 +6628,6 @@
 			<Description>TXT_KEY_EVENT_DOCK_WORKERS_STRIKE_1</Description>
 			<bPickCity>1</bPickCity>
 			<iHappyTurns>15</iHappyTurns>
-			<PythonCallback/>
-			<PythonHelp/>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<iAIValue>2000</iAIValue>
 		</EventInfo>
@@ -6692,8 +6673,6 @@
 					<iExtraYield>3</iExtraYield>
 				</BuildingExtraYield>
 			</BuildingExtraYields>
-			<PythonCanDo/>
-			<PythonHelp/>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<iAIValue>4000</iAIValue>
 		</EventInfo>
@@ -6743,7 +6722,6 @@
 			<Type>EVENT_ADD_ONE_POPULATION</Type>
 			<Description>TXT_KEY_EVENT_ADD_ONE_POPULATION</Description>
 			<bPickCity>1</bPickCity>
-			<iMaxNumReligions>-1</iMaxNumReligions>
 			<iPopulationChange>1</iPopulationChange>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 		</EventInfo>
@@ -7568,7 +7546,6 @@
 			<Type>EVENT_BLARNEYVISIT_1</Type>
 			<Description>TXT_KEY_EVENT_BLARNEYVISIT_1</Description>
 			<OtherPlayerPopup>TXT_KEY_EVENT_BLARNEYVISIT_OTHER_1</OtherPlayerPopup>
-			<iMaxNumReligions>-1</iMaxNumReligions>
 			<AdditionalEvents>
 				<EventChance>
 					<Event>EVENT_BLARNEYVISIT_2</Event>
@@ -7582,7 +7559,6 @@
 			<Type>EVENT_BLARNEYVISIT_2</Type>
 			<Description>TXT_KEY_EVENT_BLARNEYVISIT_2</Description>
 			<OtherPlayerPopup>TXT_KEY_EVENT_BLARNEYVISIT_OTHER_2</OtherPlayerPopup>
-			<iMaxNumReligions>-1</iMaxNumReligions>
 			<iOurAttitudeModifier>1</iOurAttitudeModifier>
 			<iAttitudeModifier>1</iAttitudeModifier>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
@@ -7594,7 +7570,6 @@
 			<bPickCity>1</bPickCity>
 			<iGold>-600</iGold>
 			<iRandomGold>-300</iRandomGold>
-			<iMaxNumReligions>-1</iMaxNumReligions>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<iAIValue>1000</iAIValue>
 		</EventInfo>
@@ -7604,7 +7579,6 @@
 			<bPickCity>1</bPickCity>
 			<iHurryAnger>3</iHurryAnger>
 			<iRevoltTurns>2</iRevoltTurns>
-			<iMaxNumReligions>-1</iMaxNumReligions>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<iAIValue>1000</iAIValue>
 		</EventInfo>
@@ -7614,7 +7588,6 @@
 			<OtherPlayerPopup>TXT_KEY_EVENT_NSL_CHAMP_OTHER_1</OtherPlayerPopup>
 			<bPickCity>1</bPickCity>
 			<iHappy>1</iHappy>
-			<iMaxNumReligions>-1</iMaxNumReligions>
 			<AdditionalEvents>
 				<EventChance>
 					<Event>EVENT_NSL_CHAMP_2</Event>
@@ -7635,7 +7608,6 @@
 					<iExtraYield>5</iExtraYield>
 				</BuildingExtraYield>
 			</BuildingExtraYields>
-			<iMaxNumReligions>-1</iMaxNumReligions>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<iAIValue>1000</iAIValue>
 		</EventInfo>
@@ -7646,7 +7618,6 @@
 			<bPickCity>1</bPickCity>
 			<iGold>800</iGold>
 			<iRandomGold>300</iRandomGold>
-			<iMaxNumReligions>-1</iMaxNumReligions>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<iAIValue>1000</iAIValue>
 		</EventInfo>
@@ -7656,7 +7627,6 @@
 			<OtherPlayerPopup>TXT_KEY_EVENT_VEGAS_JACKPOT_OTHER_1</OtherPlayerPopup>
 			<bPickCity>1</bPickCity>
 			<iHappyTurns>20</iHappyTurns>
-			<iMaxNumReligions>-1</iMaxNumReligions>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<iAIValue>1000</iAIValue>
 		</EventInfo>
@@ -7667,7 +7637,6 @@
 			<bPickCity>1</bPickCity>
 			<iGold>600</iGold>
 			<iRandomGold>200</iRandomGold>
-			<iMaxNumReligions>-1</iMaxNumReligions>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<iAIValue>1000</iAIValue>
 		</EventInfo>
@@ -7677,7 +7646,6 @@
 			<OtherPlayerPopup>TXT_KEY_EVENT_BREAK_THE_BANK_OTHER_1</OtherPlayerPopup>
 			<bPickCity>1</bPickCity>
 			<iHappyTurns>20</iHappyTurns>
-			<iMaxNumReligions>-1</iMaxNumReligions>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<iAIValue>1000</iAIValue>
 		</EventInfo>
@@ -7687,7 +7655,6 @@
 			<bPickCity>1</bPickCity>
 			<iGold>-300</iGold>
 			<iRandomGold>-200</iRandomGold>
-			<iMaxNumReligions>-1</iMaxNumReligions>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<iAIValue>1000</iAIValue>
 		</EventInfo>
@@ -7697,7 +7664,6 @@
 			<bPickCity>1</bPickCity>
 			<iHurryAnger>2</iHurryAnger>
 			<iRevoltTurns>1</iRevoltTurns>
-			<iMaxNumReligions>-1</iMaxNumReligions>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<iAIValue>1000</iAIValue>
 		</EventInfo>
@@ -7708,7 +7674,6 @@
 			<iCulture>1000</iCulture>
 			<bGameSpeedScale>1</bGameSpeedScale>
 			<iHurryAnger>3</iHurryAnger>
-			<iMaxNumReligions>-1</iMaxNumReligions>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<iAIValue>1000</iAIValue>
 		</EventInfo>
@@ -7787,78 +7752,8 @@
 		<EventInfo>
 			<Type>EVENT_CIVIL_WAR</Type>
 			<Description>TXT_KEY_EVENT_CIVIL_WAR</Description>
-			<LocalInfoText/>
-			<WorldNewsTexts/>
-			<OtherPlayerPopup/>
-			<QuestFailText/>
-			<bQuest>0</bQuest>
-			<bGlobal>0</bGlobal>
-			<bTeam>0</bTeam>
 			<bPickCity>1</bPickCity>
-			<bPickOtherPlayerCity>0</bPickOtherPlayerCity>
-			<bDeclareWar>0</bDeclareWar>
-			<iGold>0</iGold>
-			<bGoldToPlayer>0</bGoldToPlayer>
-			<iRandomGold>0</iRandomGold>
-			<iCulture>0</iCulture>
-			<iEspionagePoints>0</iEspionagePoints>
-			<bGoldenAge>0</bGoldenAge>
-			<iFreeUnitSupport>0</iFreeUnitSupport>
-			<iInflationMod>0</iInflationMod>
-			<iSpaceProductionMod>0</iSpaceProductionMod>
-			<Tech>NONE</Tech>
-			<TechFlavors/>
-			<iTechPercent>0</iTechPercent>
-			<iTechCostPercent>0</iTechCostPercent>
-			<iTechMinTurnsLeft>0</iTechMinTurnsLeft>
-			<PrereqTech>NONE</PrereqTech>
-			<iNumFreeUnits>0</iNumFreeUnits>
-			<bDisbandUnit>0</bDisbandUnit>
-			<iUnitExperience>0</iUnitExperience>
-			<iUnitImmobileTurns>0</iUnitImmobileTurns>
-			<UnitName/>
-			<UnitCombatPromotions/>
-			<Building>NONE</Building>
-			<iBuildingChange>0</iBuildingChange>
-			<BuildingExtraYields/>
-			<BuildingExtraCommerces/>
-			<BuildingExtraHappies/>
-			<BuildingExtraHealths/>
-			<iHappy>0</iHappy>
-			<iHealth>0</iHealth>
-			<iHurryAnger>0</iHurryAnger>
-			<iHappyTurns>0</iHappyTurns>
-			<iRevoltTurns>0</iRevoltTurns>
-			<iMinPillage>0</iMinPillage>
-			<iMaxPillage>0</iMaxPillage>
-			<iFood>0</iFood>
-			<iFoodPercent>0</iFoodPercent>
-			<FreeSpecialistCounts/>
-			<FeatureType>NONE</FeatureType>
-			<iFeatureChange>0</iFeatureChange>
-			<ImprovementType>NONE</ImprovementType>
-			<iImprovementChange>0</iImprovementChange>
-			<BonusType>NONE</BonusType>
-			<iBonusChange>0</iBonusChange>
-			<RouteType>NONE</RouteType>
-			<iRouteChange>0</iRouteChange>
-			<BonusRevealed>NONE</BonusRevealed>
-			<BonusGift>NONE</BonusGift>
-			<PlotExtraYields/>
-			<iConvertOwnCities>0</iConvertOwnCities>
-			<iConvertOtherCities>0</iConvertOtherCities>
-			<iMaxNumReligions>-1</iMaxNumReligions>
-			<iOurAttitudeModifier>0</iOurAttitudeModifier>
-			<iAttitudeModifier>0</iAttitudeModifier>
-			<iTheirEnemyAttitudeModifier>0</iTheirEnemyAttitudeModifier>
-			<iPopulationChange>0</iPopulationChange>
-			<AdditionalEvents/>
-			<EventTimes/>
-			<ClearEvents/>
 			<PythonCallback>applyCivilWar</PythonCallback>
-			<PythonExpireCheck/>
-			<PythonCanDo/>
-			<PythonHelp/>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<iAIValue>1000</iAIValue>
 		</EventInfo>
@@ -7882,112 +7777,17 @@
 		<EventInfo>
 			<Type>EVENT_KNOWLEDGE_INHERITANCE_1</Type>
 			<Description>TXT_KEY_EVENT_KNOWLEDGE_INHERITANCE_1</Description>
-			<LocalInfoText/>
-			<WorldNewsTexts/>
-			<OtherPlayerPopup/>
-			<QuestFailText/>
-			<bQuest>0</bQuest>
-			<bGlobal>0</bGlobal>
-			<bTeam>0</bTeam>
 			<bPickCity>1</bPickCity>
-			<bPickOtherPlayerCity>0</bPickOtherPlayerCity>
-			<bDeclareWar>0</bDeclareWar>
-			<iGold>0</iGold>
-			<bGoldToPlayer>0</bGoldToPlayer>
-			<iRandomGold>0</iRandomGold>
-			<iCulture>0</iCulture>
-			<iEspionagePoints>0</iEspionagePoints>
-			<bGoldenAge>0</bGoldenAge>
-			<iFreeUnitSupport>0</iFreeUnitSupport>
-			<iInflationMod>0</iInflationMod>
-			<iSpaceProductionMod>0</iSpaceProductionMod>
-			<Tech>NONE</Tech>
-			<TechFlavors/>
 			<iTechPercent>15</iTechPercent>
-			<iTechCostPercent>0</iTechCostPercent>
 			<iTechMinTurnsLeft>5</iTechMinTurnsLeft>
-			<PrereqTech>NONE</PrereqTech>
-			<iNumFreeUnits>0</iNumFreeUnits>
-			<bDisbandUnit>0</bDisbandUnit>
-			<iUnitExperience>0</iUnitExperience>
-			<iUnitImmobileTurns>0</iUnitImmobileTurns>
-			<UnitName/>
-			<Building>NONE</Building>
-			<iBuildingChange>0</iBuildingChange>
-			<BuildingExtraYields/>
-			<BuildingExtraCommerces/>
-			<BuildingExtraHappies/>
-			<BuildingExtraHealths/>
-			<iHappy>0</iHappy>
-			<iHealth>0</iHealth>
-			<iHurryAnger>0</iHurryAnger>
-			<iHappyTurns>0</iHappyTurns>
-			<iRevoltTurns>0</iRevoltTurns>
-			<iMinPillage>0</iMinPillage>
-			<iMaxPillage>0</iMaxPillage>
-			<iFood>0</iFood>
-			<iFoodPercent>0</iFoodPercent>
-			<FreeSpecialistCounts/>
-			<FeatureType>NONE</FeatureType>
-			<iFeatureChange>0</iFeatureChange>
-			<ImprovementType>NONE</ImprovementType>
-			<iImprovementChange>0</iImprovementChange>
-			<BonusType>NONE</BonusType>
-			<iBonusChange>0</iBonusChange>
-			<RouteType>NONE</RouteType>
-			<iRouteChange>0</iRouteChange>
-			<BonusRevealed>NONE</BonusRevealed>
-			<BonusGift>NONE</BonusGift>
-			<PlotExtraYields/>
-			<iConvertOwnCities>0</iConvertOwnCities>
-			<iConvertOtherCities>0</iConvertOtherCities>
-			<iMaxNumReligions>-1</iMaxNumReligions>
-			<iOurAttitudeModifier>0</iOurAttitudeModifier>
-			<iAttitudeModifier>0</iAttitudeModifier>
-			<iTheirEnemyAttitudeModifier>0</iTheirEnemyAttitudeModifier>
-			<iPopulationChange>0</iPopulationChange>
-			<AdditionalEvents/>
-			<EventTimes/>
-			<ClearEvents/>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<iAIValue>1000</iAIValue>
 		</EventInfo>
 		<EventInfo>
 			<Type>EVENT_KNOWLEDGE_INHERITANCE_2</Type>
 			<Description>TXT_KEY_EVENT_KNOWLEDGE_INHERITANCE_2</Description>
-			<LocalInfoText/>
-			<WorldNewsTexts/>
-			<OtherPlayerPopup/>
-			<QuestFailText/>
-			<bQuest>0</bQuest>
-			<bGlobal>0</bGlobal>
-			<bTeam>0</bTeam>
 			<bPickCity>1</bPickCity>
-			<bPickOtherPlayerCity>0</bPickOtherPlayerCity>
-			<bDeclareWar>0</bDeclareWar>
-			<iGold>0</iGold>
-			<bGoldToPlayer>0</bGoldToPlayer>
-			<iRandomGold>0</iRandomGold>
-			<iCulture>0</iCulture>
-			<iEspionagePoints>0</iEspionagePoints>
-			<bGoldenAge>0</bGoldenAge>
-			<iFreeUnitSupport>0</iFreeUnitSupport>
-			<iInflationMod>0</iInflationMod>
-			<iSpaceProductionMod>0</iSpaceProductionMod>
-			<Tech>NONE</Tech>
-			<TechFlavors/>
-			<iTechPercent>0</iTechPercent>
-			<iTechCostPercent>0</iTechCostPercent>
-			<iTechMinTurnsLeft>0</iTechMinTurnsLeft>
 			<PrereqTech>TECH_TRIBALISM</PrereqTech>
-			<iNumFreeUnits>0</iNumFreeUnits>
-			<bDisbandUnit>0</bDisbandUnit>
-			<iUnitExperience>0</iUnitExperience>
-			<iUnitImmobileTurns>0</iUnitImmobileTurns>
-			<UnitName/>
-			<Building>NONE</Building>
-			<iBuildingChange>0</iBuildingChange>
-			<BuildingExtraYields/>
 			<BuildingExtraCommerces>
 				<BuildingExtraCommerce>
 					<Building>BUILDING_KNOWLEDGE_INHERITANCE</Building>
@@ -7995,241 +7795,34 @@
 					<iExtraCommerce>1</iExtraCommerce>
 				</BuildingExtraCommerce>
 			</BuildingExtraCommerces>
-			<BuildingExtraHappies/>
-			<BuildingExtraHealths/>
-			<iHappy>0</iHappy>
-			<iHealth>0</iHealth>
-			<iHurryAnger>0</iHurryAnger>
-			<iHappyTurns>0</iHappyTurns>
-			<iRevoltTurns>0</iRevoltTurns>
-			<iMinPillage>0</iMinPillage>
-			<iMaxPillage>0</iMaxPillage>
-			<iFood>0</iFood>
-			<iFoodPercent>0</iFoodPercent>
-			<FreeSpecialistCounts/>
-			<FeatureType>NONE</FeatureType>
-			<iFeatureChange>0</iFeatureChange>
-			<ImprovementType>NONE</ImprovementType>
-			<iImprovementChange>0</iImprovementChange>
-			<BonusType>NONE</BonusType>
-			<iBonusChange>0</iBonusChange>
-			<RouteType>NONE</RouteType>
-			<iRouteChange>0</iRouteChange>
-			<BonusRevealed>NONE</BonusRevealed>
-			<BonusGift>NONE</BonusGift>
-			<PlotExtraYields/>
-			<iConvertOwnCities>0</iConvertOwnCities>
-			<iConvertOtherCities>0</iConvertOtherCities>
-			<iMaxNumReligions>-1</iMaxNumReligions>
-			<iOurAttitudeModifier>0</iOurAttitudeModifier>
-			<iAttitudeModifier>0</iAttitudeModifier>
-			<iTheirEnemyAttitudeModifier>0</iTheirEnemyAttitudeModifier>
-			<iPopulationChange>0</iPopulationChange>
-			<AdditionalEvents/>
-			<EventTimes/>
-			<ClearEvents/>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<iAIValue>1000</iAIValue>
 		</EventInfo>
 		<EventInfo>
 			<Type>EVENT_PEAT_1</Type>
 			<Description>TXT_KEY_EVENT_PEAT_1</Description>
-			<LocalInfoText/>
-			<WorldNewsTexts/>
-			<OtherPlayerPopup/>
-			<QuestFailText/>
-			<bQuest>0</bQuest>
-			<bGlobal>0</bGlobal>
-			<bTeam>0</bTeam>
-			<bPickCity>0</bPickCity>
-			<bPickOtherPlayerCity>0</bPickOtherPlayerCity>
-			<bDeclareWar>0</bDeclareWar>
-			<iGold>0</iGold>
-			<bGoldToPlayer>0</bGoldToPlayer>
-			<iRandomGold>0</iRandomGold>
-			<iCulture>0</iCulture>
-			<iEspionagePoints>0</iEspionagePoints>
-			<bGoldenAge>0</bGoldenAge>
-			<iFreeUnitSupport>0</iFreeUnitSupport>
-			<iInflationMod>0</iInflationMod>
-			<iSpaceProductionMod>0</iSpaceProductionMod>
-			<Tech>NONE</Tech>
-			<TechFlavors/>
-			<iTechPercent>0</iTechPercent>
-			<iTechCostPercent>0</iTechCostPercent>
-			<iTechMinTurnsLeft>0</iTechMinTurnsLeft>
-			<PrereqTech>NONE</PrereqTech>
-			<iNumFreeUnits>0</iNumFreeUnits>
-			<bDisbandUnit>0</bDisbandUnit>
-			<iUnitExperience>0</iUnitExperience>
-			<iUnitImmobileTurns>0</iUnitImmobileTurns>
-			<UnitName/>
-			<UnitCombatPromotions/>
-			<Building>NONE</Building>
-			<iBuildingChange>0</iBuildingChange>
-			<BuildingExtraYields/>
-			<BuildingExtraCommerces/>
-			<BuildingExtraHappies/>
-			<BuildingExtraHealths/>
-			<iHappy>0</iHappy>
-			<iHealth>0</iHealth>
-			<iHurryAnger>0</iHurryAnger>
-			<iHappyTurns>0</iHappyTurns>
-			<iRevoltTurns>0</iRevoltTurns>
-			<iMinPillage>0</iMinPillage>
-			<iMaxPillage>0</iMaxPillage>
-			<iFood>0</iFood>
-			<iFoodPercent>0</iFoodPercent>
-			<FreeSpecialistCounts/>
-			<FeatureType>NONE</FeatureType>
-			<iFeatureChange>0</iFeatureChange>
-			<ImprovementType>NONE</ImprovementType>
-			<iImprovementChange>0</iImprovementChange>
-			<BonusType>NONE</BonusType>
-			<iBonusChange>0</iBonusChange>
-			<RouteType>NONE</RouteType>
-			<iRouteChange>0</iRouteChange>
-			<BonusRevealed>NONE</BonusRevealed>
-			<BonusGift>NONE</BonusGift>
 			<PlotExtraYields>
 				<PlotExtraYield>
 					<YieldType>YIELD_PRODUCTION</YieldType>
 					<iExtraYield>2</iExtraYield>
 				</PlotExtraYield>
 			</PlotExtraYields>
-			<iConvertOwnCities>0</iConvertOwnCities>
-			<iConvertOtherCities>0</iConvertOtherCities>
-			<iMaxNumReligions>-1</iMaxNumReligions>
-			<iOurAttitudeModifier>0</iOurAttitudeModifier>
-			<iAttitudeModifier>0</iAttitudeModifier>
-			<iTheirEnemyAttitudeModifier>0</iTheirEnemyAttitudeModifier>
-			<iPopulationChange>0</iPopulationChange>
-			<AdditionalEvents/>
-			<EventTimes/>
-			<ClearEvents/>
 			<PythonCallback>applyLandmarkFromEvent</PythonCallback>
-			<PythonExpireCheck/>
-			<PythonCanDo/>
-			<PythonHelp/>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<iAIValue>1000</iAIValue>
 		</EventInfo>
 		<EventInfo>
 			<Type>EVENT_SCHOLARS_1</Type>
 			<Description>TXT_KEY_EVENT_SCHOLARS_1</Description>
-			<LocalInfoText/>
-			<WorldNewsTexts/>
-			<OtherPlayerPopup/>
-			<QuestFailText/>
-			<bQuest>0</bQuest>
-			<bGlobal>0</bGlobal>
-			<bTeam>0</bTeam>
-			<bPickCity>0</bPickCity>
-			<bPickOtherPlayerCity>0</bPickOtherPlayerCity>
-			<bDeclareWar>0</bDeclareWar>
-			<iGold>0</iGold>
-			<bGoldToPlayer>0</bGoldToPlayer>
-			<iRandomGold>0</iRandomGold>
-			<iCulture>0</iCulture>
-			<iEspionagePoints>0</iEspionagePoints>
-			<bGoldenAge>0</bGoldenAge>
-			<iFreeUnitSupport>0</iFreeUnitSupport>
-			<iInflationMod>0</iInflationMod>
-			<iSpaceProductionMod>0</iSpaceProductionMod>
-			<Tech>NONE</Tech>
-			<TechFlavors/>
-			<iTechPercent>0</iTechPercent>
-			<iTechCostPercent>0</iTechCostPercent>
-			<iTechMinTurnsLeft>0</iTechMinTurnsLeft>
-			<PrereqTech>NONE</PrereqTech>
-			<iNumFreeUnits>0</iNumFreeUnits>
-			<bDisbandUnit>0</bDisbandUnit>
-			<iUnitExperience>0</iUnitExperience>
-			<iUnitImmobileTurns>0</iUnitImmobileTurns>
-			<UnitName/>
-			<UnitCombatPromotions/>
-			<Building>NONE</Building>
-			<iBuildingChange>0</iBuildingChange>
-			<BuildingExtraYields/>
-			<BuildingExtraCommerces/>
-			<BuildingExtraHappies/>
-			<BuildingExtraHealths/>
-			<iHappy>0</iHappy>
-			<iHealth>0</iHealth>
-			<iHurryAnger>0</iHurryAnger>
-			<iHappyTurns>0</iHappyTurns>
-			<iRevoltTurns>0</iRevoltTurns>
-			<iMinPillage>0</iMinPillage>
-			<iMaxPillage>0</iMaxPillage>
-			<iFood>0</iFood>
-			<iFoodPercent>0</iFoodPercent>
-			<FreeSpecialistCounts/>
-			<FeatureType>NONE</FeatureType>
-			<iFeatureChange>0</iFeatureChange>
-			<ImprovementType>NONE</ImprovementType>
-			<iImprovementChange>0</iImprovementChange>
-			<BonusType>NONE</BonusType>
-			<iBonusChange>0</iBonusChange>
-			<RouteType>NONE</RouteType>
-			<iRouteChange>0</iRouteChange>
-			<BonusRevealed>NONE</BonusRevealed>
-			<BonusGift>NONE</BonusGift>
-			<PlotExtraYields/>
-			<iConvertOwnCities>0</iConvertOwnCities>
-			<iConvertOtherCities>0</iConvertOtherCities>
-			<iMaxNumReligions>-1</iMaxNumReligions>
-			<iOurAttitudeModifier>0</iOurAttitudeModifier>
-			<iAttitudeModifier>0</iAttitudeModifier>
-			<iTheirEnemyAttitudeModifier>0</iTheirEnemyAttitudeModifier>
-			<iPopulationChange>0</iPopulationChange>
-			<AdditionalEvents/>
-			<EventTimes/>
-			<ClearEvents/>
-			<PythonCallback/>
-			<PythonExpireCheck/>
-			<PythonCanDo/>
-			<PythonHelp/>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<iAIValue>1000</iAIValue>
 		</EventInfo>
 		<EventInfo>
 			<Type>EVENT_SCHOLARS_2</Type>
 			<Description>TXT_KEY_EVENT_SCHOLARS_2</Description>
-			<LocalInfoText/>
-			<WorldNewsTexts/>
-			<OtherPlayerPopup/>
-			<QuestFailText/>
-			<bQuest>0</bQuest>
-			<bGlobal>0</bGlobal>
-			<bTeam>0</bTeam>
 			<bPickCity>1</bPickCity>
-			<bPickOtherPlayerCity>0</bPickOtherPlayerCity>
-			<bDeclareWar>0</bDeclareWar>
 			<iGold>-200</iGold>
 			<bGameSpeedScale>1</bGameSpeedScale>
-			<bGoldToPlayer>0</bGoldToPlayer>
-			<iRandomGold>0</iRandomGold>
-			<iCulture>0</iCulture>
-			<iEspionagePoints>0</iEspionagePoints>
-			<bGoldenAge>0</bGoldenAge>
-			<iFreeUnitSupport>0</iFreeUnitSupport>
-			<iInflationMod>0</iInflationMod>
-			<iSpaceProductionMod>0</iSpaceProductionMod>
-			<Tech>NONE</Tech>
-			<TechFlavors/>
-			<iTechPercent>0</iTechPercent>
-			<iTechCostPercent>0</iTechCostPercent>
-			<iTechMinTurnsLeft>0</iTechMinTurnsLeft>
-			<PrereqTech>NONE</PrereqTech>
-			<iNumFreeUnits>0</iNumFreeUnits>
-			<bDisbandUnit>0</bDisbandUnit>
-			<iUnitExperience>0</iUnitExperience>
-			<iUnitImmobileTurns>0</iUnitImmobileTurns>
-			<UnitName/>
-			<UnitCombatPromotions/>
-			<Building>NONE</Building>
-			<iBuildingChange>0</iBuildingChange>
-			<BuildingExtraYields/>
 			<BuildingExtraCommerces>
 				<BuildingExtraCommerce>
 					<Building>BUILDING_LIBRARY</Building>
@@ -8237,282 +7830,38 @@
 					<iExtraCommerce>4</iExtraCommerce>
 				</BuildingExtraCommerce>
 			</BuildingExtraCommerces>
-			<BuildingExtraHappies/>
-			<BuildingExtraHealths/>
-			<iHappy>0</iHappy>
-			<iHealth>0</iHealth>
-			<iHurryAnger>0</iHurryAnger>
-			<iHappyTurns>0</iHappyTurns>
-			<iRevoltTurns>0</iRevoltTurns>
-			<iMinPillage>0</iMinPillage>
-			<iMaxPillage>0</iMaxPillage>
-			<iFood>0</iFood>
-			<iFoodPercent>0</iFoodPercent>
-			<FreeSpecialistCounts/>
-			<FeatureType>NONE</FeatureType>
-			<iFeatureChange>0</iFeatureChange>
-			<ImprovementType>NONE</ImprovementType>
-			<iImprovementChange>0</iImprovementChange>
-			<BonusType>NONE</BonusType>
-			<iBonusChange>0</iBonusChange>
-			<RouteType>NONE</RouteType>
-			<iRouteChange>0</iRouteChange>
-			<BonusRevealed>NONE</BonusRevealed>
-			<BonusGift>NONE</BonusGift>
-			<PlotExtraYields/>
-			<iConvertOwnCities>0</iConvertOwnCities>
-			<iConvertOtherCities>0</iConvertOtherCities>
-			<iMaxNumReligions>-1</iMaxNumReligions>
-			<iOurAttitudeModifier>0</iOurAttitudeModifier>
-			<iAttitudeModifier>0</iAttitudeModifier>
-			<iTheirEnemyAttitudeModifier>0</iTheirEnemyAttitudeModifier>
-			<iPopulationChange>0</iPopulationChange>
-			<AdditionalEvents/>
-			<EventTimes/>
-			<ClearEvents/>
-			<PythonCallback/>
-			<PythonExpireCheck/>
-			<PythonCanDo/>
-			<PythonHelp/>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<iAIValue>1000</iAIValue>
 		</EventInfo>
 		<EventInfo>
 			<Type>EVENT_SCHOLARS_3</Type>
 			<Description>TXT_KEY_EVENT_SCHOLARS_3</Description>
-			<LocalInfoText/>
-			<WorldNewsTexts/>
-			<OtherPlayerPopup/>
-			<QuestFailText/>
-			<bQuest>0</bQuest>
-			<bGlobal>0</bGlobal>
-			<bTeam>0</bTeam>
 			<bPickCity>1</bPickCity>
-			<bPickOtherPlayerCity>0</bPickOtherPlayerCity>
-			<bDeclareWar>0</bDeclareWar>
 			<iGold>-150</iGold>
 			<bGameSpeedScale>1</bGameSpeedScale>
-			<bGoldToPlayer>0</bGoldToPlayer>
-			<iRandomGold>0</iRandomGold>
-			<iCulture>0</iCulture>
-			<iEspionagePoints>0</iEspionagePoints>
-			<bGoldenAge>0</bGoldenAge>
-			<iFreeUnitSupport>0</iFreeUnitSupport>
-			<iInflationMod>0</iInflationMod>
-			<iSpaceProductionMod>0</iSpaceProductionMod>
-			<Tech>NONE</Tech>
-			<TechFlavors/>
-			<iTechPercent>0</iTechPercent>
-			<iTechCostPercent>0</iTechCostPercent>
-			<iTechMinTurnsLeft>0</iTechMinTurnsLeft>
 			<PrereqTech>TECH_ALCHEMY</PrereqTech>
-			<iNumFreeUnits>0</iNumFreeUnits>
-			<bDisbandUnit>0</bDisbandUnit>
-			<iUnitExperience>0</iUnitExperience>
-			<iUnitImmobileTurns>0</iUnitImmobileTurns>
-			<UnitName/>
-			<UnitCombatPromotions/>
 			<Building>BUILDING_GUILD_APOTHECARIES</Building>
 			<iBuildingChange>1</iBuildingChange>
-			<BuildingExtraYields/>
-			<BuildingExtraCommerces/>
-			<BuildingExtraHappies/>
-			<BuildingExtraHealths/>
-			<iHappy>0</iHappy>
-			<iHealth>0</iHealth>
-			<iHurryAnger>0</iHurryAnger>
-			<iHappyTurns>0</iHappyTurns>
-			<iRevoltTurns>0</iRevoltTurns>
-			<iMinPillage>0</iMinPillage>
-			<iMaxPillage>0</iMaxPillage>
-			<iFood>0</iFood>
-			<iFoodPercent>0</iFoodPercent>
-			<FreeSpecialistCounts/>
-			<FeatureType>NONE</FeatureType>
-			<iFeatureChange>0</iFeatureChange>
-			<ImprovementType>NONE</ImprovementType>
-			<iImprovementChange>0</iImprovementChange>
-			<BonusType>NONE</BonusType>
-			<iBonusChange>0</iBonusChange>
-			<RouteType>NONE</RouteType>
-			<iRouteChange>0</iRouteChange>
-			<BonusRevealed>NONE</BonusRevealed>
-			<BonusGift>NONE</BonusGift>
-			<PlotExtraYields/>
-			<iConvertOwnCities>0</iConvertOwnCities>
-			<iConvertOtherCities>0</iConvertOtherCities>
-			<iMaxNumReligions>-1</iMaxNumReligions>
-			<iOurAttitudeModifier>0</iOurAttitudeModifier>
-			<iAttitudeModifier>0</iAttitudeModifier>
-			<iTheirEnemyAttitudeModifier>0</iTheirEnemyAttitudeModifier>
-			<iPopulationChange>0</iPopulationChange>
-			<AdditionalEvents/>
-			<EventTimes/>
-			<ClearEvents/>
-			<PythonCallback/>
-			<PythonExpireCheck/>
-			<PythonCanDo/>
-			<PythonHelp/>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<iAIValue>1000</iAIValue>
 		</EventInfo>
 		<EventInfo>
 			<Type>EVENT_SCHOLARS_4</Type>
 			<Description>TXT_KEY_EVENT_SCHOLARS_4</Description>
-			<LocalInfoText/>
-			<WorldNewsTexts/>
-			<OtherPlayerPopup/>
-			<QuestFailText/>
-			<bQuest>0</bQuest>
-			<bGlobal>0</bGlobal>
-			<bTeam>0</bTeam>
 			<bPickCity>1</bPickCity>
-			<bPickOtherPlayerCity>0</bPickOtherPlayerCity>
-			<bDeclareWar>0</bDeclareWar>
-			<iGold>0</iGold>
-			<bGoldToPlayer>0</bGoldToPlayer>
-			<iRandomGold>0</iRandomGold>
-			<iCulture>0</iCulture>
-			<iEspionagePoints>0</iEspionagePoints>
-			<bGoldenAge>0</bGoldenAge>
-			<iFreeUnitSupport>0</iFreeUnitSupport>
-			<iInflationMod>0</iInflationMod>
-			<iSpaceProductionMod>0</iSpaceProductionMod>
-			<Tech>NONE</Tech>
-			<TechFlavors/>
-			<iTechPercent>0</iTechPercent>
-			<iTechCostPercent>0</iTechCostPercent>
-			<iTechMinTurnsLeft>0</iTechMinTurnsLeft>
-			<PrereqTech>NONE</PrereqTech>
-			<iNumFreeUnits>0</iNumFreeUnits>
-			<bDisbandUnit>0</bDisbandUnit>
-			<iUnitExperience>0</iUnitExperience>
-			<iUnitImmobileTurns>0</iUnitImmobileTurns>
-			<UnitName/>
-			<UnitCombatPromotions/>
-			<Building>NONE</Building>
-			<iBuildingChange>0</iBuildingChange>
-			<BuildingExtraYields/>
-			<BuildingExtraHappies/>
-			<BuildingExtraHealths/>
-			<iHappy>0</iHappy>
-			<iHealth>0</iHealth>
-			<iHurryAnger>0</iHurryAnger>
-			<iHappyTurns>0</iHappyTurns>
-			<iRevoltTurns>0</iRevoltTurns>
-			<iMinPillage>0</iMinPillage>
-			<iMaxPillage>0</iMaxPillage>
-			<iFood>0</iFood>
-			<iFoodPercent>0</iFoodPercent>
-			<FreeSpecialistCounts/>
-			<FeatureType>NONE</FeatureType>
-			<iFeatureChange>0</iFeatureChange>
-			<ImprovementType>NONE</ImprovementType>
-			<iImprovementChange>0</iImprovementChange>
-			<BonusType>NONE</BonusType>
-			<iBonusChange>0</iBonusChange>
-			<RouteType>NONE</RouteType>
-			<iRouteChange>0</iRouteChange>
-			<BonusRevealed>NONE</BonusRevealed>
-			<BonusGift>NONE</BonusGift>
-			<PlotExtraYields/>
-			<iConvertOwnCities>0</iConvertOwnCities>
-			<iConvertOtherCities>0</iConvertOtherCities>
-			<iMaxNumReligions>-1</iMaxNumReligions>
-			<iOurAttitudeModifier>0</iOurAttitudeModifier>
-			<iAttitudeModifier>0</iAttitudeModifier>
-			<iTheirEnemyAttitudeModifier>0</iTheirEnemyAttitudeModifier>
-			<iPopulationChange>0</iPopulationChange>
-			<AdditionalEvents/>
-			<EventTimes/>
-			<ClearEvents/>
-			<PythonCallback/>
-			<PythonExpireCheck/>
-			<PythonCanDo/>
-			<PythonHelp/>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<iAIValue>1000</iAIValue>
 		</EventInfo>
 		<EventInfo>
 			<Type>EVENT_TUSK_1</Type>
 			<Description>TXT_KEY_EVENT_TUSK_1</Description>
-			<LocalInfoText/>
-			<WorldNewsTexts/>
-			<OtherPlayerPopup/>
-			<QuestFailText/>
-			<bQuest>0</bQuest>
-			<bGlobal>0</bGlobal>
-			<bTeam>0</bTeam>
-			<bPickCity>0</bPickCity>
-			<bPickOtherPlayerCity>0</bPickOtherPlayerCity>
-			<bDeclareWar>0</bDeclareWar>
-			<iGold>0</iGold>
-			<bGoldToPlayer>0</bGoldToPlayer>
-			<iRandomGold>0</iRandomGold>
-			<iCulture>0</iCulture>
-			<iEspionagePoints>0</iEspionagePoints>
-			<bGoldenAge>0</bGoldenAge>
-			<iFreeUnitSupport>0</iFreeUnitSupport>
-			<iInflationMod>0</iInflationMod>
-			<iSpaceProductionMod>0</iSpaceProductionMod>
-			<Tech>NONE</Tech>
-			<TechFlavors/>
-			<iTechPercent>0</iTechPercent>
-			<iTechCostPercent>0</iTechCostPercent>
-			<iTechMinTurnsLeft>0</iTechMinTurnsLeft>
-			<PrereqTech>NONE</PrereqTech>
-			<iNumFreeUnits>0</iNumFreeUnits>
-			<bDisbandUnit>0</bDisbandUnit>
-			<iUnitExperience>0</iUnitExperience>
-			<iUnitImmobileTurns>0</iUnitImmobileTurns>
-			<UnitName/>
-			<UnitCombatPromotions/>
-			<Building>NONE</Building>
-			<iBuildingChange>0</iBuildingChange>
-			<BuildingExtraYields/>
-			<BuildingExtraCommerces/>
-			<BuildingExtraHappies/>
-			<BuildingExtraHealths/>
-			<iHappy>0</iHappy>
-			<iHealth>0</iHealth>
-			<iHurryAnger>0</iHurryAnger>
-			<iHappyTurns>0</iHappyTurns>
-			<iRevoltTurns>0</iRevoltTurns>
-			<iMinPillage>0</iMinPillage>
-			<iMaxPillage>0</iMaxPillage>
-			<iFood>0</iFood>
-			<iFoodPercent>0</iFoodPercent>
-			<FreeSpecialistCounts/>
-			<FeatureType>NONE</FeatureType>
-			<iFeatureChange>0</iFeatureChange>
-			<ImprovementType>NONE</ImprovementType>
-			<iImprovementChange>0</iImprovementChange>
-			<BonusType>NONE</BonusType>
-			<iBonusChange>0</iBonusChange>
-			<RouteType>NONE</RouteType>
-			<iRouteChange>0</iRouteChange>
-			<BonusRevealed>NONE</BonusRevealed>
-			<BonusGift>NONE</BonusGift>
 			<PlotExtraYields>
 				<PlotExtraYield>
 					<YieldType>YIELD_COMMERCE</YieldType>
 					<iExtraYield>2</iExtraYield>
 				</PlotExtraYield>
 			</PlotExtraYields>
-			<iConvertOwnCities>0</iConvertOwnCities>
-			<iConvertOtherCities>0</iConvertOtherCities>
-			<iMaxNumReligions>-1</iMaxNumReligions>
-			<iOurAttitudeModifier>0</iOurAttitudeModifier>
-			<iAttitudeModifier>0</iAttitudeModifier>
-			<iTheirEnemyAttitudeModifier>0</iTheirEnemyAttitudeModifier>
-			<iPopulationChange>0</iPopulationChange>
-			<AdditionalEvents/>
-			<EventTimes/>
-			<ClearEvents/>
 			<PythonCallback>applyLandmarkFromEvent</PythonCallback>
-			<PythonExpireCheck/>
-			<PythonCanDo/>
-			<PythonHelp/>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<iAIValue>1000</iAIValue>
 		</EventInfo>
