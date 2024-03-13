@@ -21606,9 +21606,14 @@ void CvPlayer::applyEvent(EventTypes eEvent, int iEventTriggeredId, bool bUpdate
 
 		if (NO_PLAYER != pTriggeredData->m_eOtherPlayer)
 		{
-			if (kEvent.getEspionagePoints() != 0)
+			int iValue = kEvent.getEspionagePoints();
+			if (iValue != 0)
 			{
-				GET_TEAM(getTeam()).changeEspionagePointsAgainstTeam(GET_PLAYER(pTriggeredData->m_eOtherPlayer).getTeam(), kEvent.getEspionagePoints());
+				if (kEvent.isGameSpeedScale())
+				{
+					iValue = iValue * GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getSpeedPercent() / 100;
+				}
+				GET_TEAM(getTeam()).changeEspionagePointsAgainstTeam(GET_PLAYER(pTriggeredData->m_eOtherPlayer).getTeam(), iValue);
 			}
 		}
 
