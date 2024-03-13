@@ -3920,6 +3920,7 @@
 		<EventInfo>
 			<Type>EVENT_DEFECTING_AGENT_1</Type>
 			<Description>TXT_KEY_EVENT_DEFECTING_AGENT_1</Description>
+			<bGameSpeedScale>1</bGameSpeedScale>
 			<iEspionagePoints>-300</iEspionagePoints>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<iAIValue>1000</iAIValue>
@@ -4229,6 +4230,7 @@
 			<Type>EVENT_ROGUE_STATION_1</Type>
 			<Description>TXT_KEY_EVENT_ROGUE_STATION_1</Description>
 			<bPickCity>1</bPickCity>
+			<bGameSpeedScale>1</bGameSpeedScale>
 			<iEspionagePoints>-150</iEspionagePoints>
 			<Building>BUILDING_BROADCAST_TOWER</Building>
 			<iBuildingChange>-1</iBuildingChange>
