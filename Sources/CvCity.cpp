@@ -12829,7 +12829,10 @@ void CvCity::setCultureTimes100(PlayerTypes eIndex, int iNewValue, bool bPlots, 
 				m_aiCulture[eIndex] = 100 * GC.getGame().getCultureThreshold(getCultureLevel());
 			}
 		}
-		if (bPlots) doPlotCulture(eIndex, 0);
+		if (bPlots && iNewValue > iOldCulture)
+		{
+			doPlotCulture(eIndex, (iNewValue - iOldCulture) / 100);
+		}
 	}
 
 	if (!bNationalSet && iOldCulture < iNewValue)
@@ -12841,38 +12844,24 @@ void CvCity::setCultureTimes100(PlayerTypes eIndex, int iNewValue, bool bPlots, 
 
 void CvCity::changeCulture(PlayerTypes eIndex, int iChange, bool bPlots, bool bUpdatePlotGroups)
 {
-	if (iChange == 0) return;
-
-	GET_PLAYER(getOwner()).changeCulture(iChange);
-
-	const int iOld = getCultureTimes100(eIndex);
-
-	int iNew;
-	if (iChange < 0)
-	{
-		iNew = iOld + 100 * iChange;
-	}
-	else if (MAX_INT - 100 * iChange > iOld)
-	{
-		iNew = iOld + 100 * iChange;
-	}
-	else iNew = MAX_INT;
-
-	setCultureTimes100(eIndex, iNew, bPlots, bUpdatePlotGroups, true);
+	changeCultureTimes100(eIndex, 100 * iChange, bPlots, bUpdatePlotGroups);
 }
 
 void CvCity::changeCultureTimes100(PlayerTypes eIndex, int iChange, bool bPlots, bool bUpdatePlotGroups)
 {
 	if (iChange == 0) return;
 
-	GET_PLAYER(getOwner()).changeCulture(iChange / 100);
-
 	const int iOld = getCultureTimes100(eIndex);
+
+	if (iChange > 99)
+	{
+		GET_PLAYER(getOwner()).changeCulture(iChange / 100);
+	}
 
 	int iNew;
 	if (iChange < 0)
 	{
-		iNew = iOld + iChange;
+		iNew = std::max(0, iOld + iChange);
 	}
 	else if (MAX_INT - iChange > iOld)
 	{

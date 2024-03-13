@@ -7,7 +7,7 @@
 		<German>Auswirkungen auf</German>
 		<Italian>Edifici relazionati</Italian>
 		<Spanish>Edificios relacionados</Spanish>
-		<Polish>Wpływa na budynki</Polish>
+		<Polish>Wp&#179;ywa na budynki</Polish>
 		<Russian>Связанные постройки</Russian>
 	</TEXT>
 	<TEXT>
@@ -37,7 +37,7 @@
 		<German>Zufriedenheit: +%d1_Change[ICON_HAPPY]</German>
 		<Italian>Felicità: [COLOR_HIGHLIGHT_TEXT]+%d1_Change[COLOR_REVERT] [ICON_HAPPY]</Italian> <!-- city screen hover on a resource -->
 		<Spanish>Feliz: +%d1_Change[ICON_HAPPY]</Spanish>
-		<Polish>Szczęśliwy: +%d1_Change[ICON_HAPPY]</Polish>
+		<Polish>Szcz&#234;&#156;liwy: +%d1_Change[ICON_HAPPY]</Polish>
 		<Russian>Íàñòðîåíèå: +%d1_Change[ICON_HAPPY]</Russian>
 	</TEXT>
 	<TEXT>
@@ -181,7 +181,7 @@
 		<English>An [COLOR_HIGHLIGHT_TEXT]aircraft[COLOR_REVERT] is a vehicle that is able to fly by gaining support from the air, or in general the atmosphere of a planet. It counters the force of gravity by using either static lift or by using the dynamic lift of an airfoil, or in a few cases the downward thrust from jet engines.</English>
 		<French>Un [COLOR_HIGHLIGHT_TEXT]aéronef[COLOR_REVERT] est un véhicule qui est capable de voler en s'appuyant sur l'air, ou, en général, l'atmosphère d'une planète. Il s'extrait de la force de gravité grâce aux courants ascendants, au flux d'air généré par une hélice, ou par l'intermédiaire de la poussée de moteurs à réaction.</French>
 		<Italian>Un [COLOR_HIGHLIGHT_TEXT]aeroplano[COLOR_REVERT] è un veicolo in grado di volare sfruttando l'aria o, più in generale, l'atmosfera di un pianeta. Contrasta la forza di gravità usando spinte statiche o le spinte dinamiche create da una corrente d'aria oppure, in alcuni casi, dalle correnti discensionali create dai motori a reazione.</Italian>
-		<Polish>[COLOR_HIGHLIGHT_TEXT]Samolot[COLOR_REVERT] to pojazd, który jest w stanie latać dzięki uzyskaniu wsparcia z powietrza, albo w ogóle, atmosferę planety. Liczniki to siły grawitacji za pomocą jednej statycznej przy użyciu podnośnika lub dźwigu dynamiczny płata lub w kilku przypadkach ciąg dół od silników odrzutowych.</Polish>
+		<Polish>[COLOR_HIGHLIGHT_TEXT]Samolot[COLOR_REVERT] to pojazd, kt&#243;ry jest w stanie lata&#230; dzi&#234;ki uzyskaniu wsparcia z powietrza, albo w og&#243;le, atmosfer&#234; planety. Liczniki to si&#179;y grawitacji za pomoc&#185; jednej statycznej przy u&#191;yciu podno&#156;nika lub d&#159;wigu dynamiczny p&#179;ata lub w kilku przypadkach ci&#185;g d&#243;&#179; od silnik&#243;w odrzutowych.</Polish>
 		<Russian>Ñàìîëåò - ýòî òðàíñïîðòíîå ñðåäñòâî, êîòîðîå óìååò ëåòàòü, îïèðàÿñü íà âîçäóõ èëè, â öåëîì, íà àòìîñôåðó ïëàíåòû. Îí ïðîòèâîïîñòàâëÿåò ñèëó òÿæåñòè ñ ïîìîùüþ âîñõîäÿùèõ ïîòîêîâ èëè ïðè ïîìîùè àýðîäèíàìè÷åñêîé ïîäúåìíîé ñèëû, èëè â íåêîòîðûõ ñëó÷àÿõ îò òÿãè îò ðåàêòèâíûõ äâèãàòåëåé.</Russian>
 	</TEXT>
 	<TEXT>
@@ -285,7 +285,7 @@
 		</German>
 		<Italian>Mandorla</Italian>
 		<Spanish>Almendras</Spanish>
-		<Polish>Migdały</Polish>
+		<Polish>Migda&#179;y</Polish>
 		<Russian>Ìèíäàëü</Russian>
 	</TEXT>
 	<TEXT>
@@ -338,7 +338,7 @@
 		<English>American</English>
 		<French>Américain</French>
 		<Italian>Cittadino statunitense</Italian>
-		<Polish>Amerykańska</Polish>
+		<Polish>Ameryka&#241;ska</Polish>
 		<Russian>Àìåðèêàíöû</Russian>
 	</TEXT>
 	<TEXT>
@@ -376,7 +376,7 @@
 		<German>Alte Relikte</German>
 		<Italian>Reliquia antica</Italian>
 		<Spanish>Reliquias ancestrales</Spanish>
-		<Polish>Starożytne relikwie</Polish>
+		<Polish>Staro&#191;ytne relikwie</Polish>
 		<Russian>Äðåâíèå ðóèíû</Russian>
 	</TEXT>
 	<TEXT>
@@ -459,7 +459,7 @@
 		</German>
 		<Italian>Mela</Italian>
 		<Spanish>Manzana</Spanish>
-		<Polish>Jabłko</Polish>
+		<Polish>Jab&#179;ko</Polish>
 		<Russian>ßáëîêè</Russian>
 	</TEXT>
 	<TEXT>
@@ -495,7 +495,7 @@
 		<English>Argentinian</English>
 		<French>Argentin</French>
 		<Italian>Cittadino argentino</Italian>
-		<Polish>Argentyńska</Polish>
+		<Polish>Argenty&#241;ska</Polish>
 		<Russian>Àðãåíòèíöû</Russian>
 	</TEXT>
 	<TEXT>
@@ -503,7 +503,7 @@
 		<English>Armenian</English>
 		<French>Arménien</French>
 		<Italian>Cittadino armeno</Italian>
-		<Polish>Ormiańska</Polish>
+		<Polish>Ormia&#241;ska</Polish>
 		<Russian>Àðìÿíå</Russian>
 	</TEXT>
 	<TEXT>
@@ -546,7 +546,7 @@
 		<English>Athenian</English>
 		<French>Athénien</French>
 		<Italian>Cittadino ateniese</Italian>
-		<Polish>Ateńska</Polish>
+		<Polish>Ate&#241;ska</Polish>
 		<Russian>Àôèíöû</Russian>
 	</TEXT>
 	<TEXT>
@@ -634,7 +634,7 @@
 		<English>Babylonian</English>
 		<French>Babylonien</French>
 		<Italian>Cittadino babilonese</Italian>
-		<Polish>Babilońska</Polish>
+		<Polish>Babilo&#241;ska</Polish>
 		<Russian>Âàâèëîíÿíå</Russian>
 	</TEXT>
 	<TEXT>
@@ -730,7 +730,7 @@
 		</German>
 		<Italian>Orzo</Italian>
 		<Spanish>Cebada</Spanish>
-		<Polish>Jęczmień</Polish>
+		<Polish>J&#234;czmie&#241;</Polish>
 		<Russian>ß÷ìåíü</Russian>
 	</TEXT>
 	<TEXT>
@@ -1049,7 +1049,7 @@
 			<Plural>1</Plural>
 		</German>
 		<Italian>Osso</Italian>
-		<Polish>Kości</Polish>
+		<Polish>Ko&#156;ci</Polish>
 		<Russian>Êîñòè</Russian>
 	</TEXT>
 	<TEXT>
@@ -1064,7 +1064,7 @@
 		<English>Books</English>
 		<French>Livres</French>
 		<Italian>Libro</Italian>
-		<Polish>Książki</Polish>
+		<Polish>Ksi&#185;&#191;ki</Polish>
 		<Russian>Êíèãè</Russian>
 	</TEXT>
 	<TEXT>
@@ -1091,7 +1091,7 @@
 		<English>Brass Ingots</English>
 		<French>Lingots de laiton</French>
 		<Italian>Lingotto di ottone</Italian>
-		<Polish>Wlewki mosiężne</Polish>
+		<Polish>Wlewki mosi&#234;&#191;ne</Polish>
 		<Russian>Ëàòóííûå ñëèòêè</Russian>
 	</TEXT>
 	<TEXT>
@@ -1113,7 +1113,7 @@
 		<English>Brass Wares</English>
 		<French>Objets en laiton</French>
 		<Italian>Prodotto di ottone</Italian>
-		<Polish>Przedmioty z mosiądzu</Polish>
+		<Polish>Przedmioty z mosi&#185;dzu</Polish>
 		<Russian>Ëàòóííûå èçäåëèÿ</Russian>
 	</TEXT>
 	<TEXT>
@@ -1150,7 +1150,7 @@
 		<English>Bricks</English>
 		<French>Briques</French>
 		<Italian>Mattone</Italian>
-		<Polish>Cegły</Polish>
+		<Polish>Ceg&#179;y</Polish>
 		<Russian>Êèðïè÷è</Russian>
 	</TEXT>
 	<TEXT>
@@ -1171,7 +1171,7 @@
 		<English>Bronze Wares</English>
 		<French>Objets en bronze</French>
 		<Italian>Prodotto di bronzo</Italian>
-		<Polish>Przedmioty z brązu</Polish>
+		<Polish>Przedmioty z br&#185;zu</Polish>
 		<Russian>Áðîíçîâûå èçäåëèÿ</Russian>
 	</TEXT>
 	<TEXT>
@@ -1199,7 +1199,7 @@
 		<English>Bulgarian</English>
 		<French>Bulgare</French>
 		<Italian>Cittadino bulgaro</Italian>
-		<Polish>Bułgarska</Polish>
+		<Polish>Bu&#179;garska</Polish>
 		<Russian>Áîëãàðû</Russian>
 	</TEXT>
 	<TEXT>
@@ -1214,7 +1214,7 @@
 		<English>Burmese</English>
 		<French>Birman</French>
 		<Italian>Cittadino birmano</Italian>
-		<Polish>Birmańska</Polish>
+		<Polish>Birma&#241;ska</Polish>
 		<Russian>Áèðìàíöû</Russian>
 	</TEXT>
 	<TEXT>
@@ -1278,7 +1278,7 @@
 		</German>
 		<Italian>Cammello</Italian>
 		<Spanish>Camello</Spanish>
-		<Polish>Wielbłąd</Polish>
+		<Polish>Wielb&#179;&#185;d</Polish>
 		<Russian>Âåðáëþäû</Russian>
 	</TEXT>
 	<TEXT>
@@ -1321,7 +1321,7 @@
 		<English>Candy</English>
 		<French>Confiseries</French>
 		<Italian>Caramella</Italian>
-		<Polish>Słodycze</Polish>
+		<Polish>S&#179;odycze</Polish>
 		<Russian>Êîíôåòû</Russian>
 	</TEXT>
 	<TEXT>
@@ -1348,7 +1348,7 @@
 		<Tag>TXT_KEY_BONUS_CANTONESE</Tag>
 		<English>Cantonese</English>
 		<French>Cantonais</French>
-		<Polish>Kantońska</Polish>
+		<Polish>Kanto&#241;ska</Polish>
 		<Russian>Êàíòîíöû</Russian>
 		<Italian>Cittadino cantonese</Italian>
 	</TEXT>
@@ -1370,7 +1370,7 @@
 		<French>Neige carbonique</French>
 		<Italian>Ghiaccio secco</Italian>
 		<Spanish>Hielo seco</Spanish>
-		<Polish>Lód dwutlenku węgla</Polish>
+		<Polish>L&#243;d dwutlenku w&#234;gla</Polish>
 		<Russian>Ñóõîé ëåä</Russian>
 	</TEXT>
 	<TEXT>
@@ -1452,7 +1452,7 @@
 		<English>Carthaginian</English>
 		<French>Carthaginois</French>
 		<Italian>Cittadino cartaginese</Italian>
-		<Polish>Kartagińska</Polish>
+		<Polish>Kartagi&#241;ska</Polish>
 		<Russian>Êàðôàãåíÿíå</Russian>
 	</TEXT>
 	<TEXT>
@@ -1460,7 +1460,7 @@
 		<English>Carved Emu Eggs</English>
 		<French>Œufs d'émeu sculptés</French>
 		<Italian>Uovo di emù intagliato</Italian>
-		<Polish>Rzeźbione jajka emu</Polish>
+		<Polish>Rze&#159;bione jajka emu</Polish>
 		<Russian>Äåêîðàòèâíûå ÿéöà</Russian>
 	</TEXT>
 	<TEXT>
@@ -1495,7 +1495,7 @@
 		<English>Cellphones</English>
 		<French>Téléphones portables</French>
 		<Italian>Telefono cellulare</Italian>
-		<Polish>Telefony komórkowe</Polish>
+		<Polish>Telefony kom&#243;rkowe</Polish>
 		<Russian>Ìîáèëüíûå òåëåôîíû</Russian>
 	</TEXT>
 	<TEXT>
@@ -1509,7 +1509,7 @@
 		<English>Cellulase Capsules</English>
 		<French>Capsules de cellulase</French>
 		<Italian>Capsula di cellulasi</Italian>
-		<Polish>Kapsułki celulazy</Polish>
+		<Polish>Kapsu&#179;ki celulazy</Polish>
 		<Russian>Ïèùåâûå êàïñóëû</Russian>
 	</TEXT>
 	<TEXT>
@@ -1571,7 +1571,7 @@
 		<English>Ceylonese</English>
 		<French>Ceylonais</French>
 		<Italian>Cittadino ceylonese</Italian>
-		<Polish>Cejlońska</Polish>
+		<Polish>Cejlo&#241;ska</Polish>
 		<Russian>Öåéëîíöû</Russian>
 	</TEXT>
 	<TEXT>
@@ -1624,7 +1624,7 @@
 		<English>Charcoal</English>
 		<French>Charbon de bois</French>
 		<Italian>Carbone di legno</Italian>
-		<Polish>Węgiel drzewny</Polish>
+		<Polish>W&#234;giel drzewny</Polish>
 		<Russian>Äðåâåñíûé óãîëü</Russian>
 	</TEXT>
 	<TEXT>
@@ -1706,7 +1706,7 @@
 		<English>Chinese</English>
 		<French>Chinois</French>
 		<Italian>Cittadino cinese</Italian>
-		<Polish>Chińska</Polish>
+		<Polish>Chi&#241;ska</Polish>
 		<Russian>Êèòàéöû</Russian>
 	</TEXT>
 	<TEXT>
@@ -1792,7 +1792,7 @@
 		</German>
 		<Italian>Vongola</Italian>
 		<Spanish>Almejas</Spanish>
-		<Polish>Małże</Polish>
+		<Polish>Ma&#179;&#191;e</Polish>
 		<Russian>Ìîëëþñêè</Russian>
 	</TEXT>
 	<TEXT>
@@ -1858,7 +1858,7 @@
 		<English>Clothing</English>
 		<French>Vêtements</French>
 		<Italian>Vestito</Italian>
-		<Polish>Odzież</Polish>
+		<Polish>Odzie&#191;</Polish>
 		<Russian>Îäåæäà</Russian>
 	</TEXT>
 	<TEXT>
@@ -1884,7 +1884,7 @@
 		</German>
 		<Italian>Carbone</Italian>
 		<Spanish>Carbón</Spanish>
-		<Polish>Węgiel</Polish>
+		<Polish>W&#234;giel</Polish>
 		<Russian>Êàìåííûé óãîëü</Russian>
 	</TEXT>
 	<TEXT>
@@ -2137,7 +2137,7 @@
 		</German>
 		<Italian>Cotone</Italian>
 		<Spanish>Algodón</Spanish>
-		<Polish>Bawełna</Polish>
+		<Polish>Bawe&#179;na</Polish>
 		<Russian>Õëîïîê</Russian>
 	</TEXT>
 	<TEXT>
@@ -2145,7 +2145,7 @@
 		<English>Cotton Fibers</English>
 		<French>Fibres de coton</French>
 		<Italian>Fibra di cotone</Italian>
-		<Polish>Włókna bawełniane</Polish>
+		<Polish>W&#179;&#243;kna bawe&#179;niane</Polish>
 		<Russian>Õëîïêîâîå âîëîêíî</Russian>
 	</TEXT>
 	<TEXT>
@@ -2245,7 +2245,7 @@
 		<English>Cuban</English>
 		<French>Cubain</French>
 		<Italian>Cittadino cubano</Italian>
-		<Polish>Kubańska</Polish>
+		<Polish>Kuba&#241;ska</Polish>
 		<Russian>Êóáèíöû</Russian>
 	</TEXT>
 	<TEXT>
@@ -2254,7 +2254,7 @@
 		<French>Les ressources Culture sont requises pour accéder aux unités et bâtiments culturels.</French>
 		<German>Kulturressourcen werden benötigt, um die jeweiligen Spezialeinheiten und -gebäude der Kultur bauen zu können.</German>
 		<Italian>[NEWLINE][NEWLINE][H1]Le risorse di tipo culturale servono per addestrare [COLOR_HIGHLIGHT_TEXT]unità[COLOR_REVERT] ed [COLOR_HIGHLIGHT_TEXT]eroi[COLOR_REVERT] unici.[\H1]</Italian>
-		<Polish>Kulturowe zasoby są potrzebne do budowy jednostek kulturowych i budynków.</Polish>
+		<Polish>Kulturowe zasoby s&#185; potrzebne do budowy jednostek kulturowych i budynk&#243;w.</Polish>
 		<Russian>Êóëüòóðíûå ðåñóðñû íåîáõîäèìû äëÿ íàöèîíàëüíûõ îòðÿäîâ è çäàíèé.</Russian>
 	</TEXT>
 	<TEXT>
@@ -2308,7 +2308,7 @@
 		<English>Danish</English>
 		<French>Danois</French>
 		<Italian>Cittadino danese</Italian>
-		<Polish>Duńska</Polish>
+		<Polish>Du&#241;ska</Polish>
 		<Russian>Äàò÷àíå</Russian>
 	</TEXT>
 	<TEXT>
@@ -2512,7 +2512,7 @@
 		</German>
 		<Italian>Asino</Italian>
 		<Spanish>Asnos</Spanish>
-		<Polish>Osły</Polish>
+		<Polish>Os&#179;y</Polish>
 		<Russian>Îñëû</Russian>
 	</TEXT>
 	<TEXT>
@@ -2565,7 +2565,7 @@
 		<French>Viande séchée</French>
 		<German>Getrocknetes Fleisch</German>
 		<Italian>Carne essiccata</Italian>
-		<Polish>Suszone mięso</Polish>
+		<Polish>Suszone mi&#234;so</Polish>
 		<Russian>Âÿëåíîå ìÿñî</Russian>
 	</TEXT>
 	<TEXT>
@@ -2741,7 +2741,7 @@
 		<English>Energy Drink</English>
 		<French>Boisson énergétique</French>
 		<Italian>Bevanda energetica</Italian>
-		<Polish>Napój energetyczny</Polish>
+		<Polish>Nap&#243;j energetyczny</Polish>
 		<Russian>Ýíåðãåòèêè</Russian>
 	</TEXT>
 	<TEXT>
@@ -2867,7 +2867,7 @@
 		<English>Feathers</English>
 		<French>Plumes</French>
 		<Italian>Piuma</Italian>
-		<Polish>Pióra</Polish>
+		<Polish>Pi&#243;ra</Polish>
 		<Russian>Ïåðüÿ</Russian>
 	</TEXT>
 	<TEXT>
@@ -2909,7 +2909,7 @@
 		<English>Fiberglass</English>
 		<French>Fibre de verre</French>
 		<Italian>Fibra di vetro</Italian>
-		<Polish>Włókno szklane</Polish>
+		<Polish>W&#179;&#243;kno szklane</Polish>
 		<Russian>Ñòåêëîâîëîêíî</Russian>
 	</TEXT>
 	<TEXT>
@@ -2923,7 +2923,7 @@
 		<English>Fiber Optic Cables</English>
 		<French>Cables en fibre optique</French>
 		<Italian>Cavo in fibra ottica</Italian>
-		<Polish>Światłowodowe kable</Polish>
+		<Polish>&#140;wiat&#179;owodowe kable</Polish>
 		<Russian>Îïòîâîëîêíî</Russian>
 	</TEXT>
 	<TEXT>
@@ -2958,7 +2958,7 @@
 		<English>Fijian</English>
 		<French>Fidjien</French>
 		<Italian>Cittadino fijiano</Italian>
-		<Polish>Fidżi</Polish>
+		<Polish>Fid&#191;i</Polish>
 		<Russian>Ôèäæèéöû</Russian>
 	</TEXT>
 	<TEXT>
@@ -3004,7 +3004,7 @@
 		<English>Finnish</English>
 		<French>Finnois</French>
 		<Italian>Cittadino finlandese</Italian>
-		<Polish>Fińska</Polish>
+		<Polish>Fi&#241;ska</Polish>
 		<Russian>Ôèííû</Russian>
 	</TEXT>
 	<TEXT>
@@ -3012,7 +3012,7 @@
 		<English>Firearms</English>
 		<French>Armes à feu</French>
 		<Italian>Arma da fuoco</Italian>
-		<Polish>Broń palna</Polish>
+		<Polish>Bro&#241; palna</Polish>
 		<Russian>Ðóæüÿ</Russian>
 	</TEXT>
 	<TEXT>
@@ -3077,7 +3077,7 @@
 		<English>Flash Memory Devices</English>
 		<French>Périphériques de mémoire flash</French>
 		<Italian>Dispositivo di memoria flash</Italian>
-		<Polish>Urządzenia pamięci flash</Polish>
+		<Polish>Urz&#185;dzenia pami&#234;ci flash</Polish>
 		<Russian>Ôëýø-íàêîïèòåëè</Russian>
 	</TEXT>
 	<TEXT>
@@ -3105,7 +3105,7 @@
 		<English>Flax Fibers</English>
 		<French>Fibres de lin</French>
 		<Italian>Fibra di lino</Italian>
-		<Polish>Włókna lniane</Polish>
+		<Polish>W&#179;&#243;kna lniane</Polish>
 		<Russian>Ëüíÿíîå âîëîêíî</Russian>
 	</TEXT>
 	<TEXT>
@@ -3138,7 +3138,7 @@
 			<Plural>0</Plural>
 		</German>
 		<Italian>Selce</Italian>
-		<Polish>Krzemień</Polish>
+		<Polish>Krzemie&#241;</Polish>
 		<Russian>Êðåìåíü</Russian>
 	</TEXT>
 	<TEXT>
@@ -3153,7 +3153,7 @@
 		<English>Flour</English>
 		<French>Farine</French>
 		<Italian>Farina</Italian>
-		<Polish>Mąka</Polish>
+		<Polish>M&#185;ka</Polish>
 		<Russian>Ìóêà</Russian>
 	</TEXT>
 	<TEXT>
@@ -3455,7 +3455,7 @@
 			<Plural>0</Plural>
 		</German>
 		<Italian>Lingotto d'oro</Italian>
-		<Polish>Wlewki złota</Polish>
+		<Polish>Wlewki z&#179;ota</Polish>
 		<Russian>Çîëîòûå ñëèòêè</Russian>
 	</TEXT>
 	<TEXT>
@@ -3468,7 +3468,7 @@
 			<Plural>0</Plural>
 		</German>
 		<Italian>Oro</Italian>
-		<Polish>Ruda złota</Polish>
+		<Polish>Ruda z&#179;ota</Polish>
 		<Russian>Çîëîòàÿ ðóäà</Russian>
 	</TEXT>
 	<TEXT>
@@ -3483,7 +3483,7 @@
 		<English>Gold Wares</English>
 		<French>Objets en or</French>
 		<Italian>Prodotto d'oro</Italian>
-		<Polish>Przedmioty ze złota</Polish>
+		<Polish>Przedmioty ze z&#179;ota</Polish>
 		<Russian>Çîëîòûå èçäåëèÿ</Russian>
 	</TEXT>
 	<TEXT>
@@ -3648,7 +3648,7 @@
 		</German>
 		<Italian>Porcellino d'india</Italian>
 		<Spanish>Cobayos</Spanish>
-		<Polish>Świnki morskie</Polish>
+		<Polish>&#140;winki morskie</Polish>
 		<Russian>Ìîðñêèå ñâèíêè</Russian>
 	</TEXT>
 	<TEXT>
@@ -3691,7 +3691,7 @@
 		<English>Haitian</English>
 		<French>Haïtien</French>
 		<Italian>Cittadino haitiano</Italian>
-		<Polish>Haitańska</Polish>
+		<Polish>Haita&#241;ska</Polish>
 		<Russian>Ãàèòÿíå</Russian>
 	</TEXT>
 	<TEXT>
@@ -3742,7 +3742,7 @@
 		<English>Heavy Water</English>
 		<French>Eau lourde</French>
 		<Italian>Acqua pesante</Italian>
-		<Polish>Ciężka woda</Polish>
+		<Polish>Ci&#234;&#191;ka woda</Polish>
 		<Russian>Äåéòåðèé</Russian>
 	</TEXT>
 	<TEXT>
@@ -3756,7 +3756,7 @@
 		<English>Helicopters</English>
 		<French>Hélicoptères</French>
 		<Italian>Elicottero</Italian>
-		<Polish>Śmigłowce</Polish>
+		<Polish>&#140;mig&#179;owce</Polish>
 		<Russian>Âåðòîëåòû</Russian>
 	</TEXT>
 	<TEXT>
@@ -3806,7 +3806,7 @@
 		<English>Hemp Fibers</English>
 		<French>Fibres de chanvre</French>
 		<Italian>Fibra di canapa</Italian>
-		<Polish>Włókna konopne</Polish>
+		<Polish>W&#179;&#243;kna konopne</Polish>
 		<Russian>Êîíîïëÿíîå âîëîêíî</Russian>
 	</TEXT>
 	<TEXT>
@@ -3859,7 +3859,7 @@
 		<English>Hide</English>
 		<French>Peaux</French>
 		<Italian>Pelle animale</Italian>
-		<Polish>Skórki traktowane</Polish>
+		<Polish>Sk&#243;rki traktowane</Polish>
 		<Russian>Øêóðû</Russian>
 	</TEXT>
 	<TEXT>
@@ -3983,7 +3983,7 @@
 		<German>Honig</German>
 		<Italian>Miele</Italian>
 		<Spanish>Miel</Spanish>
-		<Polish>Miód</Polish>
+		<Polish>Mi&#243;d</Polish>
 		<Russian>Ìåä</Russian>
 	</TEXT>
 	<TEXT>
@@ -4267,7 +4267,7 @@
 		<Tag>TXT_KEY_BONUS_HUN</Tag>
 		<English>Hun</English>
 		<Italian>Cittadino unno</Italian>
-		<Polish>Huńska</Polish>
+		<Polish>Hu&#241;ska</Polish>
 		<Russian>Ãóííû</Russian>
 	</TEXT>
 	<TEXT>
@@ -4275,7 +4275,7 @@
 		<English>Hungarian</English>
 		<French>Hongrois</French>
 		<Italian>Cittadino ungherese</Italian>
-		<Polish>Węgierska</Polish>
+		<Polish>W&#234;gierska</Polish>
 		<Russian>Âåíãðû</Russian>
 	</TEXT>
 	<TEXT>
@@ -4296,7 +4296,7 @@
 		<English>Hydrogen</English>
 		<French>Hydrogène</French>
 		<Italian>Idrogeno</Italian>
-		<Polish>Wodór</Polish>
+		<Polish>Wod&#243;r</Polish>
 		<Russian>Âîäîðîä</Russian>
 	</TEXT>
 	<TEXT>
@@ -4379,7 +4379,7 @@
 		<English>Immunity Drugs</English>
 		<French>Médicaments immunitaires</French>
 		<Italian>Farmaco immunitario</Italian>
-		<Polish>Leki odpornościowe</Polish>
+		<Polish>Leki odporno&#156;ciowe</Polish>
 		<Russian>Èììóííûå ïðåïàðàòû</Russian>
 	</TEXT>
 	<TEXT>
@@ -4393,7 +4393,7 @@
 		<English>Incan</English>
 		<French>Inca</French>
 		<Italian>Cittadino inca</Italian>
-		<Polish>Inków</Polish>
+		<Polish>Ink&#243;w</Polish>
 		<Russian>Èíêè</Russian>
 	</TEXT>
 	<TEXT>
@@ -4407,7 +4407,7 @@
 		</German>
 		<Italian>Incenso</Italian>
 		<Spanish>Incienso</Spanish>
-		<Polish>Kadzidło</Polish>
+		<Polish>Kadzid&#179;o</Polish>
 		<Russian>Áëàãîâîíèÿ</Russian>
 	</TEXT>
 	<TEXT>
@@ -4502,7 +4502,7 @@
 			<Plural>0</Plural>
 		</German>
 		<Italian>Lingotto di ferro</Italian>
-		<Polish>Wlewki żelaza</Polish>
+		<Polish>Wlewki &#191;elaza</Polish>
 		<Russian>Æåëåçíûå ñëèòêè</Russian>
 	</TEXT>
 	<TEXT>
@@ -4515,7 +4515,7 @@
 			<Plural>0</Plural>
 		</German>
 		<Italian>Ferro</Italian>
-		<Polish>Ruda żelaza</Polish>
+		<Polish>Ruda &#191;elaza</Polish>
 		<Russian>Æåëåçíàÿ ðóäà</Russian>
 	</TEXT>
 	<TEXT>
@@ -4530,14 +4530,14 @@
 		<English>Iron Wares</English>
 		<French>Objets en fer</French>
 		<Italian>Prodotto di ferro</Italian>
-		<Polish>Przedmioty z żelaza</Polish>
+		<Polish>Przedmioty z &#191;elaza</Polish>
 		<Russian>Æåëåçíûå èçäåëèÿ</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_IROQUOIS</Tag>
 		<English>Iroquois</English>
 		<Italian>Cittadino irochese</Italian>
-		<Polish>Irokezów</Polish>
+		<Polish>Irokez&#243;w</Polish>
 		<Russian>Èðîêåçû</Russian>
 	</TEXT>
 	<TEXT>
@@ -4553,7 +4553,7 @@
 		<English>Italian</English>
 		<French>Italien</French>
 		<Italian>Cittadino italiano</Italian>
-		<Polish>Włoska</Polish>
+		<Polish>W&#179;oska</Polish>
 		<Russian>Èòàëüÿíöû</Russian>
 	</TEXT>
 	<TEXT>
@@ -4567,7 +4567,7 @@
 		</German>
 		<Italian>Avorio</Italian>
 		<Spanish>Marfil</Spanish>
-		<Polish>Kość słoniowa</Polish>
+		<Polish>Ko&#156;&#230; s&#179;oniowa</Polish>
 		<Russian>Ñëîíû</Russian>
 	</TEXT>
 	<TEXT>
@@ -4602,7 +4602,7 @@
 		<English>Jade Death Masks</English>
 		<French>Masques de mort en jade</French>
 		<Italian>Maschera mortuaria di giada</Italian>
-		<Polish>Jadeitowe maski śmierci</Polish>
+		<Polish>Jadeitowe maski &#156;mierci</Polish>
 		<Russian>Íåôðèòîâûå ìàñêè</Russian>
 	</TEXT>
 	<TEXT>
@@ -4642,7 +4642,7 @@
 		<English>Japanese</English>
 		<French>Japonais</French>
 		<Italian>Cittadino giapponese</Italian>
-		<Polish>Japońska</Polish>
+		<Polish>Japo&#241;ska</Polish>
 		<Russian>ßïîíöû</Russian>
 	</TEXT>
 	<TEXT>
@@ -4671,7 +4671,7 @@
 		<English>Jewelry</English>
 		<French>Bijoux</French>
 		<Italian>Gioielleria</Italian>
-		<Polish>Biżuteria</Polish>
+		<Polish>Bi&#191;uteria</Polish>
 		<Russian>Þâåëèðíûå èçäåëèÿ</Russian>
 	</TEXT>
 	<TEXT>
@@ -4697,7 +4697,7 @@
 		<English>Jordanian</English>
 		<French>Jordanien</French>
 		<Italian>Cittadino giordano</Italian>
-		<Polish>Jordańska</Polish>
+		<Polish>Jorda&#241;ska</Polish>
 		<Russian>Èîðäàíöû</Russian>
 	</TEXT>
 	<TEXT>
@@ -4869,7 +4869,7 @@
 		<English>Korean</English>
 		<French>Koréen</French>
 		<Italian>Cittadino coreano</Italian>
-		<Polish>Koreańska</Polish>
+		<Polish>Korea&#241;ska</Polish>
 		<Russian>Êîðåéöû</Russian>
 	</TEXT>
 	<TEXT>
@@ -4934,7 +4934,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_LARD_PEDIA</Tag>
 		<English>Lard is pig fat in both its rendered and unrendered forms. Lard was commonly used in many cuisines as a cooking fat or shortening, or as a spread similar to butter. Its use in contemporary cuisine has diminished; however, many contemporary cooks and bakers favor it over other fats for select uses. The culinary qualities of lard vary somewhat depending on the part of the pig from which the fat was taken and how the lard was processed.</English>
-		<Polish>Smalec - tłuszcz zwierzęcy wykorzystywany w sztuce kulinarnej do przyrządzania potraw, jak również bezpośredniego spożywania.</Polish>
+		<Polish>Smalec - t&#179;uszcz zwierz&#234;cy wykorzystywany w sztuce kulinarnej do przyrz&#185;dzania potraw, jak r&#243;wnie&#191; bezpo&#156;redniego spo&#191;ywania.</Polish>
 		<Russian>Ñàëî - ýòî ñâèíîé æèð ñ íàëè÷èåì èëè îòñóòñòâèåì ìÿñíûõ ïðîñëîåê. Ñâèíîå ñàëî øèðîêî èñïîëüçóåòñÿ â êóõíÿõ ìíîãèõ íàðîäîâ â êà÷åñòâå êóëèíàðíîãî æèðà èëè ìàñëà, ïîäîáíîãî ñëèâî÷íîìó. Åãî èñïîëüçîâàíèå â ñîâðåìåííîé êóõíå óìåíüøèëàñü; òåì íå ìåíåå, ìíîãèå ñîâðåìåííûå ïîâàðà è ïåêàðè îòìå÷àþò åãî ïîëüçó ïî ñðàâíåíèþ ñ äðóãèìè æèðàìè ïðè âûáîðå èíãðåäèåíòîâ. Êóëèíàðíûå êà÷åñòâà ñàëà íåñêîëüêî ðàçëè÷àþòñÿ â çàâèñèìîñòè îò ÷àñòåé ñâèíüè, èç êîòîðîé áûë èçâëå÷åí æèð è ñàëî, è êàêèì îáðàçîì îí áûë îáðàáîòàí.</Russian>
 		<Italian>Il lardo è grasso di maiale sia nella sua forma fusa che in quella non fusa. Il lardo era comunemente usato in molte cucine come grasso da cucina o accorciamento, o come crema da spalmare simile al burro. Il suo utilizzo nella cucina contemporanea è diminuito; tuttavia, molti cuochi e fornai contemporanei lo preferiscono ad altri grassi per usi selezionati. Le qualità culinarie del lardo variano leggermente a seconda della parte del maiale da cui è stato prelevato il grasso e di come è stato lavorato il lardo.</Italian>
 	</TEXT>
@@ -4956,7 +4956,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_LAZULITE_ORE_PEDIA</Tag>
 		<English>Lazulite is a blue, phosphate mineral containing magnesium, iron, and aluminium phosphate. Lazulite forms one endmember of a solid solution series with the darker iron rich scorzalite.</English>
-		<Polish>Lazulit - rzadki minerał z gromady fosforanów. Nazwa pochodzi od arab. azul = niebo; pers. lazhward = niebieski oraz łac. lazulum = błękit, połączonego z gr. lithos = kamień (skała), nawiązując do charakterystycznej barwy tego minerału.</Polish>
+		<Polish>Lazulit - rzadki minera&#179; z gromady fosforan&#243;w. Nazwa pochodzi od arab. azul = niebo; pers. lazhward = niebieski oraz &#179;ac. lazulum = b&#179;&#234;kit, po&#179;&#185;czonego z gr. lithos = kamie&#241; (ska&#179;a), nawi&#185;zuj&#185;c do charakterystycznej barwy tego minera&#179;u.</Polish>
 		<Russian>Ëàçóðèò ÿâëÿåòñÿ ñèíèì ìèíåðàëîì, ñîäåðæàùèì ôîñôàò ìàãíèÿ, æåëåçà è ôîñôàò àëþìèíèÿ. Óçîðû ëàçóðèòà áîëüøå âñåãî íàïîìèíàþò áîãàòûå æåëåçîì ñ áîëåå òåìíûìè ïðîæèëêàìè ñêîðçàëèòû.</Russian>
 		<Italian>La lazulite è un minerale fosfato blu contenente magnesio, ferro e fosfato di alluminio. La lazulite forma un membro terminale di una serie di soluzioni solide con la scorzalite più scura ricca di ferro</Italian>
 	</TEXT>
@@ -4971,7 +4971,7 @@
 		<English>Lead Ingots</English>
 		<French>Lingots de plomb</French>
 		<Italian>Lingotto di piombo</Italian>
-		<Polish>Wlewki ołowiu</Polish>
+		<Polish>Wlewki o&#179;owiu</Polish>
 		<Russian>Ñâèíöîâûå ñëèòêè</Russian>
 	</TEXT>
 	<TEXT>
@@ -4979,7 +4979,7 @@
 		<English>Lead Ore</English>
 		<French>Minerai de plomb</French>
 		<Italian>Piombo</Italian>
-		<Polish>Ruda ołowiu</Polish>
+		<Polish>Ruda o&#179;owiu</Polish>
 		<Russian>Ñâèíöîâàÿ ðóäà</Russian>
 	</TEXT>
 	<TEXT>
@@ -4994,7 +4994,7 @@
 		<English>Lead Wares</English>
 		<French>Objets en plomb</French>
 		<Italian>Lingotto di piombo</Italian>
-		<Polish>Przedmioty z ołowiu</Polish>
+		<Polish>Przedmioty z o&#179;owiu</Polish>
 		<Russian>Ñâèíöîâûå èçäåëèÿ</Russian>
 	</TEXT>
 	<TEXT>
@@ -5002,7 +5002,7 @@
 		<English>Leather</English>
 		<French>Cuir</French>
 		<Italian>Cuoio</Italian>
-		<Polish>Skórzany</Polish>
+		<Polish>Sk&#243;rzany</Polish>
 		<Russian>Êîæà</Russian>
 	</TEXT>
 	<TEXT>
@@ -5083,7 +5083,7 @@
 		<English>Liquid Metal</English>
 		<French>Métal liquide</French>
 		<Italian>Metallo liquido</Italian>
-		<Polish>Płynny metal</Polish>
+		<Polish>P&#179;ynny metal</Polish>
 		<Russian>Æèäêèå ìåòàëëû</Russian>
 	</TEXT>
 	<TEXT>
@@ -5173,7 +5173,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_LSD_PEDIA</Tag>
 		<English>Lysergic acid diethylamide, abbreviated LSD or LSD-25, also known as lysergide (INN) and colloquially as acid, is a semisynthetic psychedelic drug of the ergoline family, well known for its psychological effects which can include altered thinking processes, closed and open eye visuals, synesthesia, an altered sense of time and spiritual experiences, as well as for its key role in 1960s counterculture. It is used mainly as an entheogen, recreational drug, and as an agent in psychedelic therapy. LSD is non-addictive, is not known to cause brain damage, and has extremely low toxicity relative to dose. However, adverse psychiatric reactions such as anxiety, paranoia, and delusions are possible.</English>
-		<Polish>Dietyloamid kwasu D-lizergowego (LSD, LSD-25) - organiczny związek chemiczny, psychodeliczna substancja psychoaktywna, pochodna ergoliny.</Polish>
+		<Polish>Dietyloamid kwasu D-lizergowego (LSD, LSD-25) - organiczny zwi&#185;zek chemiczny, psychodeliczna substancja psychoaktywna, pochodna ergoliny.</Polish>
 		<Russian>Äèýòèëàìèä ëèçåðãèíîâîé êèñëîòû, ñîêðàùåííî ËÑÄ èëè ËÑÄ-25, òàêæå èçâåñòíûé êàê ëèçåðãèä (ÈÍÍ), - ïîëóñèíòåòè÷åñêèé ïñèõîäåëè÷åñêèé íàðêîòèê èç ñåìåéñòâà ýðãîëàéí, õîðîøî èçâåñòíûé çà åãî ïñèõîëîãè÷åñêèå ýôôåêòû, êîòîðûå ìîãóò âêëþ÷àòü èçìåíåííûå ìûñëèòåëüíûå ïðîöåññû, íåðâíûé òèê, ñèíåñòåçèÿ, èñêàæåííîå ÷óâñòâî âðåìåíè è äóøåâíûå ïåðåæèâàíèÿ, êîòîðûé èãðàë êëþ÷åâóþ ðîëü â êîíòðêóëüòóðå 1960-õ ãîäîâ. Â îñíîâíîì îí èñïîëüçóåòñÿ êàê ãàëëþöèíîãåí, íàðêîòèê, è êàê ïðåïàðàò â ïñèõîäåëè÷åñêîé òåðàïèè. ËÑÄ íå âûçûâàåò ïðèâûêàíèÿ, íå âûçûâàþò ïîâðåæäåíèå ìîçãà, è îáëàäàåò êðàéíå íèçêîé òîêñè÷íîñòüþ ïî îòíîøåíèþ ê äîçå. Îäíàêî íå èñêëþ÷åíû íåáëàãîïðèÿòíûå ïñèõèàòðè÷åñêèå ðåàêöèè, òàêèå êàê òðåâîæíîñòü, ïàðàíîéÿ è ãàëëþöèíàöèè.</Russian>
 	</TEXT>
 	<TEXT>
@@ -5214,7 +5214,7 @@
 		<English>Lye</English>
 		<French>Lessive</French>
 		<Italian>Liscivia</Italian>
-		<Polish>Ług</Polish>
+		<Polish>&#163;ug</Polish>
 		<Russian>Ùåëî÷ü</Russian>
 	</TEXT>
 	<TEXT>
@@ -5227,7 +5227,7 @@
 		<English>Macedonian</English>
 		<French>Macédonien</French>
 		<Italian>Cittadino macedone</Italian>
-		<Polish>Macedońska</Polish>
+		<Polish>Macedo&#241;ska</Polish>
 		<Russian>Ìàêåäîíöû</Russian>
 	</TEXT>
 	<TEXT>
@@ -5243,7 +5243,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_MADAN</Tag>
 		<English>Madan</English>
-		<Polish>Madańska</Polish>
+		<Polish>Mada&#241;ska</Polish>
 		<Russian>Ìàäàíöû</Russian>
 		<Italian>Cittadino mandan</Italian>
 	</TEXT>
@@ -5258,7 +5258,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_MAGNESIUM_ORE_PEDIA</Tag>
 		<English>The free element (metal) is not found naturally on Earth, as it is highly reactive (though once produced, it is coated in a thin layer of oxide (see passivation), which partly masks this reactivity). Magnesium is the eighth-most-abundant element in the Earth's crust by mass and tied in seventh place with iron in terms of molarity. It is found in large deposits of magnesite, dolomite, and other minerals, and in mineral waters, where magnesium ion is soluble.</English>
-		<Polish>Proszek błyskowy (też fotobłysk) - proszek składający się z pyłu aluminiowego lub magnezowego i substancji utleniającej (na przykład chloranu potasu), podczas spalania której uzyskuje się bardzo jasny błysk białego światła. Służy do wytworzenia światła magnezowego. Używany w pirotechnice do uzyskania efektów świetlnych w fajerwerkach.</Polish>
+		<Polish>Proszek b&#179;yskowy (te&#191; fotob&#179;ysk) - proszek sk&#179;adaj&#185;cy si&#234; z py&#179;u aluminiowego lub magnezowego i substancji utleniaj&#185;cej (na przyk&#179;ad chloranu potasu), podczas spalania kt&#243;rej uzyskuje si&#234; bardzo jasny b&#179;ysk bia&#179;ego &#156;wiat&#179;a. S&#179;u&#191;y do wytworzenia &#156;wiat&#179;a magnezowego. U&#191;ywany w pirotechnice do uzyskania efekt&#243;w &#156;wietlnych w fajerwerkach.</Polish>
 		<Russian>Ñâîáîäíûé ýëåìåíò (ìåòàëë) íå âñòðå÷àþùèéñÿ â ÷èñòîì âèäå â ïðèðîäå, òàê êàê îí îáëàäàåò âûñîêîé ðåàêöèîííîé ñïîñîáíîñòüþ (õîòÿ íà îòêðûòîì âîçäóõå îí ïîêðûâàåòñÿ òîíêèì ñëîåì îêèñè (ñì. âîññòàíîâëåíèå), êîòîðûé ÷àñòè÷íî ñíèæàåò ýòó ðåàêòèâíîñòè). Ìàãíèé - âîñüìîé èç ñàìûõ ðàñïðîñòðàíåííûõ ýëåìåíòîâ â çåìíîé êîðå ïî ìàññå è çàâÿçûâàåòñÿ íà ñåäüìîì ìåñòå ñ æåëåçíîé òî÷êè çðåíèÿ ìîëÿðíîñòè. Îí ñîäåðæèòñÿ â áîëüøèõ ìåñòîðîæäåíèé ìàãíåçèòà, äîëîìèòà è äðóãèõ ìèíåðàëîâ, è â ìèíåðàëüíûõ âîäàõ, ãäå ðàñòâîðåíû èîíû ìàãíèÿ.</Russian>
 	</TEXT>
 	<TEXT>
@@ -5327,7 +5327,7 @@
 		<English>Manchurian</English>
 		<French>Manchurien</French>
 		<Italian>Cittadino manciuriano</Italian>
-		<Polish>Mandżurska</Polish>
+		<Polish>Mand&#191;urska</Polish>
 		<Russian>Ìàíü÷æóðû</Russian>
 	</TEXT>
 	<TEXT>
@@ -5340,7 +5340,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_MANGANESE_PEDIA</Tag>
 		<English>Manganese is a chemical element, designated by the symbol Mn. It has the atomic number 25. It is found as a free element in nature (often in combination with iron), and in many minerals. Manganese is a metal with important industrial metal alloy uses, particularly in stainless steels. Historically, manganese is named for various black minerals (such as pyrolusite) from the same region of Magnesia in Greece which gave names to similar-sounding magnesium, Mg, and magnetite, an ore of the element iron, Fe. By the mid-18th century, Swedish chemist Carl Wilhelm Scheele had used pyrolusite to produce chlorine. Scheele and others were aware that pyrolusite (now known to be manganese dioxide) contained a new element, but they were not able to isolate it. Johan Gottlieb Gahn was the first to isolate an impure sample of manganese metal in 1774, by reducing the dioxide with carbon.</English>
-		<Polish>Mangan (Mn, łac. manganum) - pierwiastek chemiczny należący w układzie okresowym do grupy metali przejściowych. Ma 15 izotopów z przedziału mas 49-62 i izomery jądrowe 51m, 52m, 54m. Trwały jest tylko izotop 55, który stanowi niemal 100% składu izotopowego manganu występującego w naturze.</Polish>
+		<Polish>Mangan (Mn, &#179;ac. manganum) - pierwiastek chemiczny nale&#191;&#185;cy w uk&#179;adzie okresowym do grupy metali przej&#156;ciowych. Ma 15 izotop&#243;w z przedzia&#179;u mas 49-62 i izomery j&#185;drowe 51m, 52m, 54m. Trwa&#179;y jest tylko izotop 55, kt&#243;ry stanowi niemal 100% sk&#179;adu izotopowego manganu wyst&#234;puj&#185;cego w naturze.</Polish>
 		<Russian>Ìàðãàíåö - ýòî õèìè÷åñêèé ýëåìåíò, îáîçíà÷åííûé ñèìâîëîì Mn. Îí èìååò àòîìíûé íîìåð 25. Îí âñòðå÷àåòñÿ êàê ñâîáîäíûé ýëåìåíò â ïðèðîäå (÷àñòî â ñî÷åòàíèè ñ æåëåçîì) è âî ìíîãèõ ìèíåðàëàõ. Ìåòàëëè÷åñêèé ìàðãàíåö èñïîëüçóåòñÿ ñ âàæíûìè ïðîìûøëåííûìè ìåòàëëè÷åñêèìè ñïëàâàìè, â ÷àñòíîñòè ñ íåðæàâåþùèìè ñòàëÿìè.
 Èñòîðè÷åñêè, ìàðãàíåö íàçâàí â ÷åñòü ÷åðíûõ ìèíåðàëîâ (òàêèõ êàê ïèðîëþçèò) èç òîé æå îáëàñòè Ìàãíåçèÿ â Ãðåöèè, êîòîðûé äàë èìåíà áëèçêèå ïî çâó÷àíèþ ìàãíèÿ, Mg, è ìàãíåòèòó, ðóäû ýëåìåíòà æåëåçà, FE. Ê ñåðåäèíå 18 âåêà øâåäñêèé õèìèê Êàðë Âèëüãåëüì Øååëå èñïîëüçóåò ïèðîëþçèò äëÿ ïðîèçâîäñòâà õëîðà. Øååëå è äðóãèå õèìèêè áûëè â êóðñå, ÷òî â ïèðîëþçèòå (òåïåðü èçâåñòåí, êàê äèîêñèä ìàðãàíöà), ñîäåðæàùèòñÿ íîâûé ýëåìåíò, íî îíè áûëè íå â ñîñòîÿíèè âûäåëèòü åãî. Éîõàí Ãîòòëèá Ãàí áûë ïåðâûì, âûäåëèâøèé íåî÷èùåííûé îáðàçåö ìåòàëëè÷åñêîãî ìàðãàíöà â 1774 ãîäó çà ñ÷åò âûìûâàíèÿ äèîêñèäà óãëåðîäà.</Russian>
 	</TEXT>
@@ -5492,7 +5492,7 @@
 		<French>Roches martiennes</French>
 		<Italian>Roccia marziana</Italian>
 		<Spanish>Rocas marcianas</Spanish>
-		<Polish>Skały marsjańskie</Polish>
+		<Polish>Ska&#179;y marsja&#241;skie</Polish>
 		<Russian>Ìàðñ. ìèíåðàëû</Russian>
 	</TEXT>
 	<TEXT>
@@ -5525,7 +5525,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_MARZIPAN_PEDIA</Tag>
 		<English>Marzipan is a confection consisting primarily of sugar or honey and almond meal, sometimes augmented with almond oil or extract. It is often made into sweets; common uses are marzipan-filled chocolate and small marzipan imitations of fruits and vegetables. It is also rolled into thin sheets and glazed for icing cakes, primarily birthday and wedding cakes and Christmas cakes. This use is particularly common in England, on large fruitcakes. Marzipan (or almond paste) may also be used as a cake ingredient, as in stollen. In some countries, it is shaped into small figures of animals as a traditional treat for New Year's Day. Marzipan is also used in Tortell, and in some versions of king cake eaten during the Carnival season. Traditional Swedish Princess Cake is typically covered with a layer of marzipan that has been tinted pale green.</English>
-		<Polish>Marcepan - słodka masa cukiernicza utworzona głównie z prażonych i zmielonych migdałów i cukru z dodatkiem olejku migdałowego. Pod wpływem ciepła (wystarczy ogrzanie w dłoni) masa staje się plastyczna, dlatego bywa używana do wyrobu ozdobnych, skomplikowanych kształtów.</Polish>
+		<Polish>Marcepan - s&#179;odka masa cukiernicza utworzona g&#179;&#243;wnie z pra&#191;onych i zmielonych migda&#179;&#243;w i cukru z dodatkiem olejku migda&#179;owego. Pod wp&#179;ywem ciep&#179;a (wystarczy ogrzanie w d&#179;oni) masa staje si&#234; plastyczna, dlatego bywa u&#191;ywana do wyrobu ozdobnych, skomplikowanych kszta&#179;t&#243;w.</Polish>
 		<Russian>Ìàðöèïàí - ýòî êîíäèòåðñêîå èçäåëèå, ñîñòîÿùåå â îñíîâíîì èç ñàõàðà èëè ìåäà è ìèíäàëüíîé ìóêè, èíîãäà ïðèïðàâëåííîå ìèíäàëüíûì ìàñëîì èëè ýêñòðàêòîì. Ýòî ÷àñòî äåëàåòñÿ â ñëàäîñòÿõ; îáû÷íî èñïîëüçóþòñÿ ìàðöèïàíû è øîêîëàäíûå ìàëåíüêèå èìèòàöèè ôðóêòîâ è îâîùåé. Èõ òàêæå ðàñêàòûâàþò â òîíêèå ëèñòû èç ãëàçóðè äëÿ òîðòîâ, â ïåðâóþ î÷åðåäü, ê äíÿì ðîæäåíèÿ, äëÿ ñâàäåáíûõ ïèðîãîâ è Ðîæäåñòâåíñêèõ òîðòû. Ýòî ïðèìåíåíèå îñîáåííî ðàñïðîñòðàíåíî â Àíãëèè íà áîëüøèå êåêñû. Ìàðöèïàí (èëè ìèíäàëüíîé ïàñòà) ìîæåò òàêæå èñïîëüçîâàòüñÿ êàê èíãðåäèåíò äëÿ òîðòà. Â íåêîòîðûõ ñòðàíàõ îíî ôîðìèðóåòñÿ â íåáîëüøèå ôèãóðêè æèâîòíûõ, êàê òðàäèöèîííîå ëàêîìñòâî íà Íîâûé Ãîä. Ìàðöèïàí òàêæå èñïîëüçóåòñÿ â ðóëåòàõ, è â íåêîòîðûõ âåðñèÿõ êîðîëü ñüåäàåò òîðò âî âðåìÿ êàðíàâàëüíîãî ñåçîíà. Òðàäèöèîííûé òîðò øâåäñêàÿ Ïðèíöåññà îáû÷íî ïîêðûò ñëîåì ìàðöèïàíà, êîòîðûé òîíèðîâàí â áëåäíî-çåëåíûé öâåò.</Russian>
 	</TEXT>
 	<TEXT>
@@ -5558,7 +5558,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_MASKS_PEDIA</Tag>
 		<English>A mask is an object normally worn on the face, typically for protection, disguise, performance or entertainment. Masks have been used since antiquity for both ceremonial and practical purposes. They are usually worn on the face, although they may also be positioned for effect elsewhere on the wearer's body, so in parts of Australia giant totem masks cover the body, whilst Inuit women use finger masks during storytelling and dancing</English>
-		<Polish>Maska - przykrycie twarzy lub jej części, z otworami na oczy, początkowo używane w celach magicznych lub obrzędowych. Maski mogą mieć różne kształty, czasami przedstawiają emocje, innym razem zwierzę, demona lub potwora. Maski występują w różnych kulturach i obszarach geograficznych. W Europie znane np. w starożytnym teatrze greckim, od średniowiecza używane w czasie zabaw karnawałowych zwanych maskaradami. Od XVI w. wprowadzone do teatru dworskiego, później do commedii dell'arte.</Polish>
+		<Polish>Maska - przykrycie twarzy lub jej cz&#234;&#156;ci, z otworami na oczy, pocz&#185;tkowo u&#191;ywane w celach magicznych lub obrz&#234;dowych. Maski mog&#185; mie&#230; r&#243;&#191;ne kszta&#179;ty, czasami przedstawiaj&#185; emocje, innym razem zwierz&#234;, demona lub potwora. Maski wyst&#234;puj&#185; w r&#243;&#191;nych kulturach i obszarach geograficznych. W Europie znane np. w staro&#191;ytnym teatrze greckim, od &#156;redniowiecza u&#191;ywane w czasie zabaw karnawa&#179;owych zwanych maskaradami. Od XVI w. wprowadzone do teatru dworskiego, p&#243;&#159;niej do commedii dell'arte.</Polish>
 		<Russian>Ìàñêà - ýòî ïðåäìåò îáû÷íî íîñèìûé íà ëèöå, êàê ïðàâèëî, äëÿ çàùèòû, ìàñêèðîâêè èëè ðàçâëå÷åíèÿ. Ìàñêè èñïîëüçîâàëèñü ñ äðåâíîñòè äëÿ öåðåìîíèàëüíûõ è ïðàêòè÷åñêèõ öåëåé. Èõ îáû÷íî íîñèëè íà ëèöå, õîòÿ îíè òàêæå ìîãëè áûòü ðàçìåùåíû è íà äðóãèõ ìåñòàõ äëÿ ïóùåãî ýôôåêòà, ïîýòîìó â íåêîòîðûõ ÷àñòÿõ Àâñòðàëèè ãèãàíòñêèå òîòåìíûå ìàñêè ïîêðûâàþò âñå òåëî, à æåíùèíû-èííóèòîâ èñïîëüçîâàëè ïàëüöû ìàñêè âî âðåìÿ ñêàçàíèé è òàíöåâ.</Russian>
 	</TEXT>
 	<TEXT>
@@ -5588,7 +5588,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_MECHS_PEDIA</Tag>
 		<English>The majority of Mechs are bipedal and can be classed as either humanoid or reverse-joint ("chicken walker"). Humanoid-type BattleMechs are the most common and include the iconic Atlas and Summoner (Thor). Reverse-joint 'Mechs are slightly less common on the field of battle, but include such famous models as the Supernova, Marauder, Catapult, Timber Wolf (Mad Cat) and the Dire Wolf (Daishi). There are a few, however, with digitigrade legs that have a raised ankle and stand on their toes, like the legs of a dog, cat, etc. Examples include the Thanatos and Nova Cat.</English>
-		<Polish>Mecha - duże, najczęściej humanoidalne roboty, sterowane przez umieszczonego w jego wnętrzu pilota, autonomiczne bądź też zdalnie.</Polish>
+		<Polish>Mecha - du&#191;e, najcz&#234;&#156;ciej humanoidalne roboty, sterowane przez umieszczonego w jego wn&#234;trzu pilota, autonomiczne b&#185;d&#159; te&#191; zdalnie.</Polish>
 		<Russian>Большинство шагоходов - двуногие и могут быть классифицированы как гуманоидные меха или обратносочлененные («куриные ходунки»). Боевые роботы гуманоидного типа являются наиболее распространенными и включают в себя культовый «Атлас» и «Призыватель» (Тор). Механоиды с обратным приводом немного реже встречаются на поле боя, но включают такие известные модели, как «Супернова», «Мародер», «Катапульта», «Волк» («Бешеный кот») и «Ужасный волк». Тем не менее, есть несколько серийных образцов с пальцевидными опорами, с приподнятой щиколоткой и стоящими на носках, как например, у собачьих или кошачьих лап и т. д. В качестве примера можно привести «Танатоса».</Russian>
 	</TEXT>
 	<TEXT>
@@ -5701,7 +5701,7 @@
 		<English>Metamaterials</English>
 		<French>Métamatériaux</French>
 		<Italian>Meta-materiale</Italian>
-		<Polish>Metamateriały</Polish>
+		<Polish>Metamateria&#179;y</Polish>
 		<Russian>Ìåòàìàòåðèàëû</Russian>
 	</TEXT>
 	<TEXT>
@@ -5731,7 +5731,7 @@
 		<German>Methanhydrat</German>
 		<Italian>Ghiaccio di metano</Italian>
 		<Spanish>Hielo de metano</Spanish>
-		<Polish>Lód metanowy</Polish>
+		<Polish>L&#243;d metanowy</Polish>
 		<Russian>Ìåòàíîâûé ëåä</Russian>
 	</TEXT>
 	<TEXT>
@@ -5744,7 +5744,7 @@
 		<English>Mexican</English>
 		<French>Mexicain</French>
 		<Italian>Cittadino messicano</Italian>
-		<Polish>Meksykańska</Polish>
+		<Polish>Meksyka&#241;ska</Polish>
 		<Russian>Ìåêñèêàíöû</Russian>
 	</TEXT>
 	<TEXT>
@@ -5753,7 +5753,7 @@
 		<French>Microprocesseurs</French>
 		<Italian>Microprocessore</Italian>
 		<Spanish>Microcircuitos</Spanish>
-		<Polish>Półprzewodniki</Polish>
+		<Polish>P&#243;&#179;przewodniki</Polish>
 		<Russian>Ïîëóïðîâîäíèêè</Russian>
 	</TEXT>
 	<TEXT>
@@ -5793,7 +5793,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_MICROWAVE_OVENS_PEDIA</Tag>
 		<English>A microwave oven, often colloquially shortened to microwave, is a kitchen appliance that heats food by bombarding it with electromagnetic radiation in the microwave spectrum causing polarized molecules in the food to rotate and build up thermal energy in a process known as dielectric heating. Microwave ovens heat foods quickly and efficiently because excitation is fairly uniform in the outer 25 - 38 mm of a dense (high water content) food item; food is more evenly heated throughout (except in thick, dense objects) than generally occurs in other cooking techniques.</English>
-		<Polish>Kuchenka mikrofalowa (potoczna nazwa: mikrofalówka, mikrofala) - urządzenie kuchenne służące do ogrzewania przedmiotów znajdujących się w jej wnętrzu poprzez poddanie ich działaniu mikrofal. Za wynalazcę kuchenki mikrofalowej uważa się Percy'ego Spencera. Pierwszą komercyjnie dostępną kuchenką mikrofalową była wyprodukowana w 1947 Radarange.</Polish>
+		<Polish>Kuchenka mikrofalowa (potoczna nazwa: mikrofal&#243;wka, mikrofala) - urz&#185;dzenie kuchenne s&#179;u&#191;&#185;ce do ogrzewania przedmiot&#243;w znajduj&#185;cych si&#234; w jej wn&#234;trzu poprzez poddanie ich dzia&#179;aniu mikrofal. Za wynalazc&#234; kuchenki mikrofalowej uwa&#191;a si&#234; Percy'ego Spencera. Pierwsz&#185; komercyjnie dost&#234;pn&#185; kuchenk&#185; mikrofalow&#185; by&#179;a wyprodukowana w 1947 Radarange.</Polish>
 		<Russian>Ìèêðîâîëíîâàÿ ïå÷ü, â ðàçãîâîðíîé ðå÷è ÷àñòî ñîêðàùàåòñÿ äî ÑÂ×, êóõîííûé ïðèáîð, êîòîðûé íàãðåâàåò ïèùó ïðè îáëó÷åíèè ýëåêòðîìàãíèòíûì èçëó÷åíèåì â ìèêðîâîëíîâîì ñïåêòðå âûçûâàÿ ñâåðòûâàíèå ïîëÿðèçîâàííûõ ìîëåêóë â ïèùå è íàðàùèâàÿ òåïëîâóþ ýíåðãèþ â ïðîöåññå, êîòîðàÿ íàçûâàåòñÿ äèýëåêòðè÷åñêèì íàãðåâîì. Ìèêðîâîëíîâûå ïå÷è ðàçîãðåâàþò ïðîäóêòû áûñòðî è ýôôåêòèâíî, òàê êàê âîçáóæäåíèå ÿâëÿåòñÿ äîâîëüíî ðàâíîìåðíûì âî âíåøíåì 25-38 ìì ïëîòíîì (ñ âûñîêèì ñîäåðæàíèåì âîäû) ïèùåâîì ïðîäóêòå; åäà áîëåå ðàâíîìåðíî íàãðåâàåòñÿ ïî âñåé ïðîòÿæåííîñòè (çà èñêëþ÷åíèåì òîëñòûõ, ïëîòíûõ îáúåêòîâ), ÷åì ïðè äðóãèõ ñïîñîáàõ ãîòîâêè.</Russian>
 	</TEXT>
 	<TEXT>
@@ -5866,7 +5866,7 @@
 		<English>Mixtec</English>
 		<French>Mixtèque</French>
 		<Italian>Cittadino misteco</Italian>
-		<Polish>Mixteków</Polish>
+		<Polish>Mixtek&#243;w</Polish>
 		<Russian>Ìèøòåêè</Russian>
 	</TEXT>
 	<TEXT>
@@ -5908,7 +5908,7 @@
 		<French>Roches lunaires</French>
 		<Italian>Roccia lunare</Italian>
 		<Spanish>Rocas lunares</Spanish>
-		<Polish>Skały księżycowe</Polish>
+		<Polish>Ska&#179;y ksi&#234;&#191;ycowe</Polish>
 		<Russian>Ëóííàÿ ðóäà</Russian>
 	</TEXT>
 	<TEXT>
@@ -5922,7 +5922,7 @@
 		<English>Moroccan</English>
 		<French>Marocain</French>
 		<Italian>Cittadino marocchino</Italian>
-		<Polish>Marokańska</Polish>
+		<Polish>Maroka&#241;ska</Polish>
 		<Russian>Ìàðîêàíöû</Russian>
 	</TEXT>
 	<TEXT>
@@ -6002,13 +6002,13 @@
 		<English>Nanoactuators</English>
 		<French>Nano-actionneurs</French>
 		<Italian>Nano-attuatore</Italian>
-		<Polish>Nanosiłowniki</Polish>
+		<Polish>Nanosi&#179;owniki</Polish>
 		<Russian>Íàíîïðèâîäû</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_NANOACTUATORS_PEDIA</Tag>
 		<English>An actuator is a type of motor for moving or controlling a mechanism or system. It is operated by a source of energy, typically electric current, hydraulic fluid pressure, or pneumatic pressure, and converts that energy into motion. An actuator is the mechanism by which a control system acts upon an environment. The control system can be simple (a fixed mechanical or electronic system), software-based (e.g. a printer driver, robot control system), or a human or other agent. Nanoactuators do basically the same - just in nanoscale.</English>
-		<Polish>Nanosiłowniki to małe nanokonstrukty napędzające.</Polish>
+		<Polish>Nanosi&#179;owniki to ma&#179;e nanokonstrukty nap&#234;dzaj&#185;ce.</Polish>
 		<Russian>Íàíîàêòèâàòîð - òèï ìîòîðà äëÿ ïåðåìåùåíèÿ èëè óïðàâëåíèÿ ìåõàíèçìîì èëè ñèñòåìîé. Îí ôóíêöèîíèðóåò ñ ïîìîùüþ èñòî÷íèêà ýíåðãèè, êàê ïðàâèëî, ýëåêòðè÷åñêîãî òîêà, äàâëåíèÿ ãèäðàâëè÷åñêîé æèäêîñòè, èëè ïíåâìàòè÷åñêîãî äàâëåíèÿ, ïðåîáðàçóÿ ýòó ýíåðãèþ â äâèæåíèå. Àêòèâàòîð - ýòî ìåõàíèçì, ïîñðåäñòâîì êîòîðîãî ñèñòåìà óïðàâëåíèÿ âîçäåéñòâóåò íà ñðåäó. Ñèñòåìà óïðàâëåíèÿ ìîæåò áûòü ïðîñòîé (ôèêñèðîâàííûé ìåõàíè÷åñêèå èëè ýëåêòðîííûå ñèñòåìû), íà îñíîâå ïðîãðàììíîãî îáåñïå÷åíèÿ (íàïðèìåð, äðàéâåð ïðèíòåðà, ñèñòåìà óïðàâëåíèÿ ðîáîòîì), èëè ÷åëîâåêà èëè äðóãîãî àãåíòà. Íàíîàêòèâàòîðû äåëàþò â ïðèíöèïå òî æå ñàìîå - òîëüêî â íàíîìàñøòàáå.</Russian>
 	</TEXT>
 	<TEXT>
@@ -6022,7 +6022,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_NANOBOTS_PEDIA</Tag>
 		<English>Nanorobotics is the emerging technology field creating machines or robots whose components are at or close to the scale of a nanometer (10^-9 meters). More specifically, nanorobotics refers to the nanotechnology engineering discipline of designing and building nanorobots, with devices ranging in size from 0.1-10 micrometers and constructed of nanoscale or molecular components. The names nanobots, nanoids, nanites, nanomachines, or nanomites have also been used to describe these devices currently under research and development.</English>
-		<Polish>Nanoroboty są hipotetycznymi maszynami, skonstruowanymi dzięki nanotechnologii w nanoskali z komponentów nanometrycznych. Bardzo rzadko stosuje się inną definicję nanorobota. Jest to urządzenie, które pozwala na precyzyjną interakcję z obiektami w nanoskali. Taką definicję można przypisać zarówno małym robotom poruszającym się z nanometrową precyzją, jak i dużym urządzeniem, np. mikroskopowi sił atomowych. W niedalekiej przyszłości prawdopodobnie nanoboty będą mieć wiele zastosowań. W medycynie, nanoroboty mogą być użyteczne do identyfikowania komórek rakowych i ich niszczenia oraz prawdopodobnie, wprowadzone do organizmu byłyby wstanie znacznie wydłużyć czas życia naszego gatunku likwidując inne zagrożenia życia (choroby genetyczne) a nawet zapewnić nam nieśmiertelność (nieustanie "naprawiając" DNA- lecz to jedynie plotki). Innym potencjalnym zastosowaniem, jest detekcja toksycznych chemikaliów i pomiar ich koncentracji w środowisku.</Polish>
+		<Polish>Nanoroboty s&#185; hipotetycznymi maszynami, skonstruowanymi dzi&#234;ki nanotechnologii w nanoskali z komponent&#243;w nanometrycznych. Bardzo rzadko stosuje si&#234; inn&#185; definicj&#234; nanorobota. Jest to urz&#185;dzenie, kt&#243;re pozwala na precyzyjn&#185; interakcj&#234; z obiektami w nanoskali. Tak&#185; definicj&#234; mo&#191;na przypisa&#230; zar&#243;wno ma&#179;ym robotom poruszaj&#185;cym si&#234; z nanometrow&#185; precyzj&#185;, jak i du&#191;ym urz&#185;dzeniem, np. mikroskopowi si&#179; atomowych. W niedalekiej przysz&#179;o&#156;ci prawdopodobnie nanoboty b&#234;d&#185; mie&#230; wiele zastosowa&#241;. W medycynie, nanoroboty mog&#185; by&#230; u&#191;yteczne do identyfikowania kom&#243;rek rakowych i ich niszczenia oraz prawdopodobnie, wprowadzone do organizmu by&#179;yby wstanie znacznie wyd&#179;u&#191;y&#230; czas &#191;ycia naszego gatunku likwiduj&#185;c inne zagro&#191;enia &#191;ycia (choroby genetyczne) a nawet zapewni&#230; nam nie&#156;miertelno&#156;&#230; (nieustanie "naprawiaj&#185;c" DNA- lecz to jedynie plotki). Innym potencjalnym zastosowaniem, jest detekcja toksycznych chemikali&#243;w i pomiar ich koncentracji w &#156;rodowisku.</Polish>
 		<Russian>Наноробототехника - это развивающаяся область технологий, в которой создаются машины или роботы, компоненты которых имеют масштаб нанометра (10^-9 метров) или близки к нему. Более конкретно, наноробототехника относится к дисциплине нанотехнологической инженерии, связанной с проектированием и созданием нанороботов, с устройствами размером от 0,1 до 10 микрометров и построенными из наноразмерных или молекулярных компонентов. Названия наноботов, наноидов, нанитов, наномашин или наномитов также использовались для описания этих устройств, которые в настоящее время находятся в стадии исследований и разработок.</Russian>
 	</TEXT>
 	<TEXT>
@@ -6036,7 +6036,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_NANOGENERATORS_PEDIA</Tag>
 		<English>Nanogenerator is a technology that converts mechanical/thermal energy as produced by small-scale physical change into electricity. Nanogenerator has three typical approaches: piezoelectric, triboelectric, and pyroelectric nanogenerators. Both the piezoelectric and triboelectric nanogenerators can convert the mechanical energy into electricity. However, the pyroelectric nanogenerators can be used to harvest thermal energy from a time-dependent temperature fluctuation.</English>
-		<Polish>Nanogeneratory to mikrogeneratory oparte o nanotechnologię.</Polish>
+		<Polish>Nanogeneratory to mikrogeneratory oparte o nanotechnologi&#234;.</Polish>
 		<Russian>Наногенератор - это технология, которая преобразует механическую/тепловую энергию, полученную в результате небольших физических изменений, в электричество. Наногенераторы имеют три типичных подхода: пьезоэлектрические, трибоэлектрические и пироэлектрические наногенераторы. И пьезоэлектрические, и трибоэлектрические наногенераторы могут преобразовывать механическую энергию в электричество. Однако пироэлектрические наногенераторы можно использовать для сбора тепловой энергии из зависящих от времени колебаний температуры.</Russian>
 	</TEXT>
 	<TEXT>
@@ -6159,7 +6159,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_NEUROIMPLANTS_PEDIA</Tag>
 		<English>Brain implants, often referred to as neural implants, are technological devices that connect directly to a biological subject's brain - usually placed on the surface of the brain, or attached to the brain's cortex. A common purpose of modern brain implants and the focus of much current research is establishing a biomedical prosthesis circumventing areas in the brain that have become dysfunctional after a stroke or other head injuries. This includes sensory substitution, e.g., in vision. Other brain implants are used in animal experiments simply to record brain activity for scientific reasons. Some brain implants involve creating interfaces between neural systems and computer chips. This work is part of a wider research field called brain-computer interfaces. (Brain-computer interface research also includes technology such as EEG arrays that allow interface between mind and machine but do not require direct implantation of a device.)</English>
-		<Polish>Neuroimplanty - urządzenie techniczne łączące się bezpośrednio z mózgiem ludzkim lub zwierzęcym zwykle umieszczone na powierzchni mózgu lub podłączone do kory mózgowej (implantowane elektrody domózgowe). Obecnie badania neurobiologów i inżynierów biomedycznych koncentrują się na zbudowaniu takich implantów mózgowych, które byłyby zdolne zastąpić obszary mózgu uszkodzone po udarze lub urazie mózgowym. Obejmuje to także zastąpienie czynności uszkodzonych układów czuciowych, np. wzrokowego (proteza wzroku). Inne implanty mózgowe są wykorzystywane w doświadczeniach na zwierzętach w celu bezpośredniej rejestracji czynności elektrycznej mózgu dla celów naukowych. Niektóre implanty mózgowe umożliwiają stworzenie interfejsu pomiędzy układem nerwowym i układem scalonym komputera, co jest częścią szerszych badań nad interfejsami mózg-komputer.</Polish>
+		<Polish>Neuroimplanty - urz&#185;dzenie techniczne &#179;&#185;cz&#185;ce si&#234; bezpo&#156;rednio z m&#243;zgiem ludzkim lub zwierz&#234;cym zwykle umieszczone na powierzchni m&#243;zgu lub pod&#179;&#185;czone do kory m&#243;zgowej (implantowane elektrody dom&#243;zgowe). Obecnie badania neurobiolog&#243;w i in&#191;ynier&#243;w biomedycznych koncentruj&#185; si&#234; na zbudowaniu takich implant&#243;w m&#243;zgowych, kt&#243;re by&#179;yby zdolne zast&#185;pi&#230; obszary m&#243;zgu uszkodzone po udarze lub urazie m&#243;zgowym. Obejmuje to tak&#191;e zast&#185;pienie czynno&#156;ci uszkodzonych uk&#179;ad&#243;w czuciowych, np. wzrokowego (proteza wzroku). Inne implanty m&#243;zgowe s&#185; wykorzystywane w do&#156;wiadczeniach na zwierz&#234;tach w celu bezpo&#156;redniej rejestracji czynno&#156;ci elektrycznej m&#243;zgu dla cel&#243;w naukowych. Niekt&#243;re implanty m&#243;zgowe umo&#191;liwiaj&#185; stworzenie interfejsu pomi&#234;dzy uk&#179;adem nerwowym i uk&#179;adem scalonym komputera, co jest cz&#234;&#156;ci&#185; szerszych bada&#241; nad interfejsami m&#243;zg-komputer.</Polish>
 		<Russian>Ìîçãîâûå èìïëàíòàòû, ÷àñòî íàçûâàåìûå íåéðîííûìè èìïëàíòàòàìè, ÿâëÿþòñÿ òåõíîëîãè÷åñêèìè óñòðîéñòâàìè, êîòîðûå ïîäêëþ÷àþòñÿ íåïîñðåäñòâåííî ê áèîëîãè÷åñêîé òêàíè ìîçãà - îáû÷íî ðàçìåùàþòñÿ íà êîðå ãîëîâíîãî ìîçãà, èëè ïðèêðåïëÿþòñÿ ê ýíäîêðàíó. Îáùåé öåëüþ ñîâðåìåííîãî èìïëàíòàíòà ìîçãà è ñîñðåäîòî÷åíèåì âíèìàíèÿ ìíîãèõ ñîâðåìåííûõ èññëåäîâàíèé ÿâëÿåòñÿ ñîçäàíèå áèîìåäèöèíñêèõ ïðîòåçîâ îáõîä çîí â ìîçãå, êîòîðûå ïåðåñòàëè ôóíêöèîíèðîâàòü ïîñëå èíñóëüòà èëè äðóãèõ òðàâì ãîëîâû. Ýòî âêëþ÷àåò è ñåíñîðíîå çàìåùåíèÿ, íàïðèìåð, â çðåíèè. Äðóãèå ìîçãîâûå èìïëàíòû èñïîëüçóþòñÿ â îïûòàõ íà æèâîòíûõ ïðîñòî äëÿ çàïèñè àêòèâíîñòè ìîçãà äëÿ íàó÷íûõ öåëåé. Íåêîòîðûå ìîçãîâûå èìïëàíòû âêëþ÷àòü â ñåáÿ ñîçäàíèå èíòåðôåéñîâ ìåæäó íåéðîííûìè ñèñòåìàìè è êîìïüþòåðíûìè ÷èïàìè. Ýòà ðàáîòà ÿâëÿåòñÿ ÷àñòüþ áîëåå øèðîêîãî èññëåäîâàòåëüñêîãî ïîëÿ ìîçãî-êîìïüþòåðíûõ èíòåðôåéñîâ. (Èññëåäîâàíèå èîçãî-êîìïüþòåðíûõ èíòåðôåéñîâ òàêæå âêëþ÷àåò â ñåáÿ òåõíîëîãèè, òàêèå êàê ÝÝÃ ìàññèâû, ïîçâîëÿþùèå ôóíêöèîíèðîâàòü èíòåðôåéñó ìåæäó ðàçóìîì è ìàøèíîé, íî íå òðåáóþò ïðÿìîé èìïëàíòàöèè óñòðîéñòâà.)</Russian>
 	</TEXT>
 	<TEXT>
@@ -6207,7 +6207,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_NICKEL_ORE_PEDIA</Tag>
 		<English>Because of nickel's slow rate of oxidation at room temperature, it is considered corrosion-resistant. Historically, this has led to its use for plating metals such as iron and brass, in chemical apparatus, and in certain alloys that retain a high silvery polish, such as German silver.</English>
-		<Polish>Nikiel (Ni, łac. niccolum) - pierwiastek chemiczny z grupy metali przejściowych w układzie okresowym. Został odkryty w roku 1751 przez szwedzkiego chemika, Axela Cronstedta. W 1804 r. otrzymano go po raz pierwszy w stanie czystym. Przed naszą erą był używany w stopach z miedzią i cynkiem.</Polish>
+		<Polish>Nikiel (Ni, &#179;ac. niccolum) - pierwiastek chemiczny z grupy metali przej&#156;ciowych w uk&#179;adzie okresowym. Zosta&#179; odkryty w roku 1751 przez szwedzkiego chemika, Axela Cronstedta. W 1804 r. otrzymano go po raz pierwszy w stanie czystym. Przed nasz&#185; er&#185; by&#179; u&#191;ywany w stopach z miedzi&#185; i cynkiem.</Polish>
 		<Russian>Èç-çà ìåäëåííîé ñêîðîñòè îêèñëåíèÿ íèêåëÿ ïðè êîìíàòíîé òåìïåðàòóðå, îí ñ÷èòàåòñÿ êîððîçèîííîñòîéêèì ìåòàëëîì. Èñòîðè÷åñêè ñëîæèëîñü òàê, ÷òî ýòî ïðèâåëî ê åãî ïðèìåíåíèþ äëÿ îáøèâêè ìåòàëëîâ, òàêèõ êàê æåëåçî è ìåäü, â õèìè÷åñêîé àïïàðàòóðå, è â îïðåäåëåííûõ ñïëàâàõ, êîòîðûå ñîõðàíÿþò âûñîêóþ ñåðåáðèñòî-ïîëèðîâàííóþ ïîâåðõíîñòü, òàêèå êàê Íåìåöêîå Ñåðåáðî.</Russian>
 	</TEXT>
 	<TEXT>
@@ -6228,7 +6228,7 @@
 		<English>Nok Sculptures</English>
 		<French>Sculptures Nok</French>
 		<Italian>Sculture nok</Italian>
-		<Polish>Rzeźby Nok</Polish>
+		<Polish>Rze&#159;by Nok</Polish>
 		<Russian>Òåððàêîò. ñêóëüïòóðû</Russian>
 	</TEXT>
 	<TEXT>
@@ -6443,7 +6443,7 @@
 		<English>Omega Fatty Acid</English>
 		<French>Acides gras oméga</French>
 		<Italian>Acido grasso omega</Italian>
-		<Polish>Omega kwasy tłuszczowy</Polish>
+		<Polish>Omega kwasy t&#179;uszczowy</Polish>
 		<Russian>Æèðíûå êèñëîòû</Russian>
 	</TEXT>
 	<TEXT>
@@ -6542,7 +6542,7 @@
 		<English>Ostrich Feathers</English>
 		<French>Plumes d'autruche</French>
 		<Italian>Piuma di struzzo</Italian>
-		<Polish>Strusie pióra</Polish>
+		<Polish>Strusie pi&#243;ra</Polish>
 		<Russian>Ñòðàóñèíûå ïåðüÿ</Russian>
 	</TEXT>
 	<TEXT>
@@ -6571,7 +6571,7 @@
 		<English>Pakistani</English>
 		<French>Pakistanais</French>
 		<Italian>Cittadino pakistano</Italian>
-		<Polish>Pakistańska</Polish>
+		<Polish>Pakista&#241;ska</Polish>
 		<Russian>Ïàêèñòàíöû</Russian>
 	</TEXT>
 	<TEXT>
@@ -6599,7 +6599,7 @@
 		</German>
 		<Italian>Papaia</Italian>
 		<Spanish>Papayas</Spanish>
-		<Polish>Papajów</Polish>
+		<Polish>Papaj&#243;w</Polish>
 		<Russian>Ïàïàéà</Russian>
 	</TEXT>
 	<TEXT>
@@ -6627,7 +6627,7 @@
 		<English>Papuan</English>
 		<French>Papou</French>
 		<Italian>Cittadino papuano</Italian>
-		<Polish>Papuasów</Polish>
+		<Polish>Papuas&#243;w</Polish>
 		<Russian>Ïàïóàñû</Russian>
 	</TEXT>
 	<TEXT>
@@ -6689,7 +6689,7 @@
 		<English>Parts</English>
 		<French>Pièces détachées</French>
 		<Italian>Parte di ricambio</Italian>
-		<Polish>Części zamienne</Polish>
+		<Polish>Cz&#234;&#156;ci zamienne</Polish>
 		<Russian>Çàï÷àñòè</Russian>
 	</TEXT>
 	<TEXT>
@@ -6715,7 +6715,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_PASTA_PEDIA</Tag>
 		<English>Pasta is a type of noodle and is a staple food of traditional Italian cuisine, with the first reference dating to 1154 in Sicily. It is also commonly used to refer to the variety of pasta dishes. Typically pasta is made from an unleavened dough of a durum wheat flour mixed with water and formed into sheets or various shapes, then cooked and served in any number of dishes. It can be made with flour from other cereals or grains, and eggs may be used instead of water. Pastas may be divided into two broad categories, dried (pasta secca) and fresh (pasta fresca). Chicken eggs frequently dominate as the source of the liquid component in fresh pasta.</English>
-		<Polish>Makaron - produkt żywnościowy wytwarzany na bazie mąki, wody i niekiedy jaj (mówimy wtedy o makaronie jajecznym) oraz innych składników, o szerokiej gamie kształtów i zastosowań.</Polish>
+		<Polish>Makaron - produkt &#191;ywno&#156;ciowy wytwarzany na bazie m&#185;ki, wody i niekiedy jaj (m&#243;wimy wtedy o makaronie jajecznym) oraz innych sk&#179;adnik&#243;w, o szerokiej gamie kszta&#179;t&#243;w i zastosowa&#241;.</Polish>
 		<Russian>Макароны - это разновидность лапши, которая является основным продуктом традиционной итальянской кухни, первое упоминание о которой датируется 1154 годом на Сицилии. Они также часто используются для обозначения разнообразных блюд из пасты. Обычно макаронные изделия изготавливаются из пресного теста из муки твердых сортов пшеницы, смешанной с водой и формующихся в листы или различные формы, а затем готовятся и подаются в любом количестве блюд. Их можно приготовить из муки из других злаков или зерен, а вместо воды можно использовать яйца. Макароны можно разделить на две большие категории: сушеные (pasta secca) и свежие (pasta fresca). Куриные яйца часто являются источником жидких компонентов свежих макаронных изделий.</Russian>
 	</TEXT>
 	<TEXT>
@@ -6725,7 +6725,7 @@
 		<German>Perlen</German>
 		<Italian>Perla</Italian>
 		<Spanish>Perlas</Spanish>
-		<Polish>Perły</Polish>
+		<Polish>Per&#179;y</Polish>
 		<Russian>Æåì÷óã</Russian>
 	</TEXT>
 	<TEXT>
@@ -6765,7 +6765,7 @@
 		<English>Pelts</English>
 		<French>Peaux</French>
 		<Italian>Pelliccia</Italian>
-		<Polish>Skóry</Polish>
+		<Polish>Sk&#243;ry</Polish>
 		<Russian>Ïóøíèíà</Russian>
 	</TEXT>
 	<TEXT>
@@ -6779,7 +6779,7 @@
 		<English>Pencils</English>
 		<French>Stylos</French>
 		<Italian>Matita</Italian>
-		<Polish>Ołówki</Polish>
+		<Polish>O&#179;&#243;wki</Polish>
 		<Russian>Êàðàíäàøè</Russian>
 	</TEXT>
 	<TEXT>
@@ -6833,7 +6833,7 @@
 		<English>Personal Electronics</English>
 		<French>Equipement électronique personnel</French>
 		<Italian>Apparecchiatura elettronica personale</Italian>
-		<Polish>Osobisty sprzęt elektroniczny</Polish>
+		<Polish>Osobisty sprz&#234;t elektroniczny</Polish>
 		<Russian>Áûòîâàÿ ýëåêòðîíèêà</Russian>
 	</TEXT>
 	<TEXT>
@@ -6933,7 +6933,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_PHARMACEUTICALS_PEDIA</Tag>
 		<English>A pharmaceutical drug, also referred to as a medicine or medication, can be loosely defined as any chemical substance - or product comprising such - intended for use in the medical diagnosis, cure, treatment, or prevention of disease. The word pharmaceutical comes from the Greek word Pharmakeia. The modern transliteration of Pharmakeia is Pharmacia.</English>
-		<Polish>Lek - każda substancja, niezależnie od pochodzenia (naturalnego lub syntetycznego), nadająca się do bezpośredniego wprowadzania do organizmu w odpowiedniej postaci farmaceutycznej w celu osiągnięcia pożądanego efektu terapeutycznego, lub w celu zapobiegania chorobie, często podawana w ściśle określonej dawce. Lekiem jest substancja modyfikująca procesy fizjologiczne w taki sposób, że hamuje przyczyny lub objawy choroby, lub zapobiega jej rozwojowi. Określenie lek stosuje się też w stosunku do substancji stosowanych w celach diagnostycznych (np. metoklopramid w diagnostyce hiperprolaktynemii) oraz środków modyfikujących nie zmienione chorobowo funkcje organizmu (np. środki antykoncepcyjne).</Polish>
+		<Polish>Lek - ka&#191;da substancja, niezale&#191;nie od pochodzenia (naturalnego lub syntetycznego), nadaj&#185;ca si&#234; do bezpo&#156;redniego wprowadzania do organizmu w odpowiedniej postaci farmaceutycznej w celu osi&#185;gni&#234;cia po&#191;&#185;danego efektu terapeutycznego, lub w celu zapobiegania chorobie, cz&#234;sto podawana w &#156;ci&#156;le okre&#156;lonej dawce. Lekiem jest substancja modyfikuj&#185;ca procesy fizjologiczne w taki spos&#243;b, &#191;e hamuje przyczyny lub objawy choroby, lub zapobiega jej rozwojowi. Okre&#156;lenie lek stosuje si&#234; te&#191; w stosunku do substancji stosowanych w celach diagnostycznych (np. metoklopramid w diagnostyce hiperprolaktynemii) oraz &#156;rodk&#243;w modyfikuj&#185;cych nie zmienione chorobowo funkcje organizmu (np. &#156;rodki antykoncepcyjne).</Polish>
 		<Russian>Ôàðìàöåâòè÷åñêèå ïðåïàðàòû, íàçûâàåìûå òàêæå â îáèõîäå ëåêàðñòâàìè, ìîæíî óñëîâíî îïðåäåëèòü êàê ëþáîå õèìè÷åñêîå âåùåñòâî èëè ïðîäóêò, âêëþ÷àþùèé òàêîâûå - ïðåäíàçíà÷åííûå äëÿ èñïîëüçîâàíèÿ â ìåäèöèíñêîé äèàãíîñòèêè, ëå÷åíèè, ïðîôèëàêòèêå èëè ïðåäîòâðàùåíèÿ áîëåçíè. Ñëîâî ôàðìàöåâòè÷åñêîé ïðîèñõîäèò îò ãðå÷åñêîãî ñëîâà Pharmakeia. Â ñîâðåìåííîé òðàíñëèòåðàöèè Pharmakeia - ýòî Ôàðìàöèÿ.</Russian>
 	</TEXT>
 	<TEXT>
@@ -6974,7 +6974,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_PHONOGRAPHS_PEDIA</Tag>
 		<English>The phonograph, record player, or gramophone is a device introduced in 1877 for the recording and reproduction of sound recordings. The recordings played on such a device consist of waveforms that are engraved onto a rotating cylinder or disc. As the cylinder or disc rotates, a stylus or needle traces the waveforms and vibrates to reproduce the recorded sound waves.</English>
-		<Polish>Fonograf - jedno z pierwszych urządzeń służących do zapisu i odtwarzania dźwięku, poprzednik gramofonu. Został skonstruowany przez Thomasa Alva Edisona. Edison swój wynalazek zademonstrował 29 listopada 1877 r., a opatentował 19 lutego 1878 r. W fonografie dźwięk zapisywany był przy pomocy igły na cylindrze zakładanym na walec napędzany początkowo korbką, później mechanizmem sprężynowym. Odtwarzanie przebiegało w analogiczny sposób. Igła (rylec) wykonana była z diamentu. Dźwięk zapisywano rzeźbiąc rowek na folii cynowej nawiniętej na stalowy walec.</Polish>
+		<Polish>Fonograf - jedno z pierwszych urz&#185;dze&#241; s&#179;u&#191;&#185;cych do zapisu i odtwarzania d&#159;wi&#234;ku, poprzednik gramofonu. Zosta&#179; skonstruowany przez Thomasa Alva Edisona. Edison sw&#243;j wynalazek zademonstrowa&#179; 29 listopada 1877 r., a opatentowa&#179; 19 lutego 1878 r. W fonografie d&#159;wi&#234;k zapisywany by&#179; przy pomocy ig&#179;y na cylindrze zak&#179;adanym na walec nap&#234;dzany pocz&#185;tkowo korbk&#185;, p&#243;&#159;niej mechanizmem spr&#234;&#191;ynowym. Odtwarzanie przebiega&#179;o w analogiczny spos&#243;b. Ig&#179;a (rylec) wykonana by&#179;a z diamentu. D&#159;wi&#234;k zapisywano rze&#159;bi&#185;c rowek na folii cynowej nawini&#234;tej na stalowy walec.</Polish>
 		<Russian>Ôîíîãðàô, ãðàììîôîí, èëè ïàòåôîí - ýòî óñòðîéñòâî, ââåäåííîå â 1877 ãîäó äëÿ çàïèñè è âîñïðîèçâåäåíèÿ çâóêîçàïèñåé. Âî âðåìÿ çàïèñè îñîáîå óñòðîéñòâî ðàñ÷åð÷èâàëî áîðîçäêè, êîòîðûå ãðàâèðîâàëèñü íà âðàùàþùåìñÿ öèëèíäðå èëè äèñêå. Êîãäà öèëèíäð èëè äèñê âðàùàëèñü, ïåðî èëè èãëà îòñëåæèâàëè ñèãíàëû è âèáðèðîâàëè âîñïðîèçâîäÿ çàïèñàííûå çâóêîâûå âîëíû.</Russian>
 	</TEXT>
 	<TEXT>
@@ -7196,13 +7196,13 @@
 		<English>Potash</English>
 		<French>Potasse</French>
 		<Italian>Potassa</Italian>
-		<Polish>Potaż</Polish>
+		<Polish>Pota&#191;</Polish>
 		<Russian>Ïîòàø</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_POTASH_PEDIA</Tag>
 		<English>Potash is any of various mined and manufactured salts that contain potassium in water-soluble form. The name derives from "pot ash", which refers to plant ashes soaked in water in a pot, the primary means of manufacturing the product before the industrial era.</English>
-		<Polish>Potaż (historyczna, regionalna pisownia również potasz od niem. Potasche) - zanieczyszczona postać węglanu potasu K2CO3, rozpuszczalna w wodzie część popiołu pochodzącego ze spalania węgla drzewnego, zawierająca również zmienne ilości innych związków potasu. Nazwa potaż używana jest czasami na określenie dowolnego minerału zawierającego potas, zwłaszcza w krajach anglojęzycznych.</Polish>
+		<Polish>Pota&#191; (historyczna, regionalna pisownia r&#243;wnie&#191; potasz od niem. Potasche) - zanieczyszczona posta&#230; w&#234;glanu potasu K2CO3, rozpuszczalna w wodzie cz&#234;&#156;&#230; popio&#179;u pochodz&#185;cego ze spalania w&#234;gla drzewnego, zawieraj&#185;ca r&#243;wnie&#191; zmienne ilo&#156;ci innych zwi&#185;zk&#243;w potasu. Nazwa pota&#191; u&#191;ywana jest czasami na okre&#156;lenie dowolnego minera&#179;u zawieraj&#185;cego potas, zw&#179;aszcza w krajach angloj&#234;zycznych.</Polish>
 		<Russian>Ïîòàø - ýòî ëþáàÿ ðàçíîâèäíîñòü èñêîïàåìîé è âûâàðåííîé ñîëè, êîòîðàÿ ñîäåðæèò êàëèé â âîäîðàñòâîðèìîé ôîðìå. Íàçâàíèå ïðîèñõîäèò îò "ãîðøîê çîëû", êîòîðàÿ îòíîñèòñÿ ê äðåâåñíîé çîëå çàìà÷èâàåìîé â âîäå â êàçàíêå, îñíîâíûì ñðåäñòâîì ïðîèçâîäñòâà ïðîäóêòà äî ïðîìûøëåííîé ýðû.</Russian>
 	</TEXT>
 	<TEXT>
@@ -7239,7 +7239,7 @@
 		<Tag>TXT_KEY_BONUS_POTATO_CHIPS_PEDIA</Tag>
 		<English>A potato chip (known as a crisp in British English and Hiberno-English, and as either a chip or wafer in Indian English) is a thin slice of potato that is deep fried or baked until crunchy. Potato chips are commonly served as an appetizer, side dish, or snack. The basic chips are cooked and salted; additional varieties are manufactured using various flavorings and ingredients including seasonings, herbs, spices, cheeses, and artificial additives.</English>
 		<German>Kartoffelchips, kurz Chips, in der Schweiz auch Pommes-Chips, in (Ost-)Österreich früher, heute nur noch gelegentlich, Rohscheiben genannt, sind in dünne Scheiben geschnittene und frittierte oder gebackene Kartoffeln. Sie dienen als Beilage oder Snack. Kartoffelchips gehören zu den beliebtesten Snacks und werden weltweit in vielen Geschmacksvarianten angeboten. In den USA werden sie Chips genannt, in Großbritannien und Irland jedoch Crisps, da dort Pommes frites Chips genannt werden (vgl. "Fish and Chips").</German>
-		<Polish>Chipsy (lub czipsy) - popularna przekąska w postaci cienkich, osuszonych plastrów ziemniaków (najczęściej) lub innych warzyw, zazwyczaj obsmażonych w głębokim, gorącym tłuszczu. Ze względu na wysoką wartość energetyczną chipsów, do ich produkcji stosowane są również zamienniki tłuszczu oraz nowoczesne technologie produkcji, takie jak na przykład gotowanie z zastosowaniem mikrofal, a następnie spryskiwanie niewielką ilością oleju (bez zanurzenia w tłuszczu). Poszczególne smaki uzyskuje się dzięki doborowi przypraw i aromatów, rzadziej ziół.</Polish>
+		<Polish>Chipsy (lub czipsy) - popularna przek&#185;ska w postaci cienkich, osuszonych plastr&#243;w ziemniak&#243;w (najcz&#234;&#156;ciej) lub innych warzyw, zazwyczaj obsma&#191;onych w g&#179;&#234;bokim, gor&#185;cym t&#179;uszczu. Ze wzgl&#234;du na wysok&#185; warto&#156;&#230; energetyczn&#185; chips&#243;w, do ich produkcji stosowane s&#185; r&#243;wnie&#191; zamienniki t&#179;uszczu oraz nowoczesne technologie produkcji, takie jak na przyk&#179;ad gotowanie z zastosowaniem mikrofal, a nast&#234;pnie spryskiwanie niewielk&#185; ilo&#156;ci&#185; oleju (bez zanurzenia w t&#179;uszczu). Poszczeg&#243;lne smaki uzyskuje si&#234; dzi&#234;ki doborowi przypraw i aromat&#243;w, rzadziej zi&#243;&#179;.</Polish>
 		<Russian>×èïñû - ýòî òîíêèå ëîìòèêè êàðòîôåëÿ, ñîñòîÿùèå èç îáæàðåííûõ âî ôðèòþðå èëè çàïå÷åííûå äî õðóñòÿùåé êîðî÷êè. Êàðòîôåëüíûå ÷èïñû îáû÷íî ïîäàþòñÿ â êà÷åñòâå äåñåðòà, ãàðíèðà èëè çàêóñêè. Îñíîâó ÷èïñîâ âàðÿò è ñîëÿò; äîïîëíèòåëüíûå ðàçíîâèäíîñòè ïðîèçâîäÿòñÿ ñ èñïîëüçîâàíèåì ðàçëè÷íûõ èíãðåäèåíòîâ, âêëþ÷àÿ àðîìàòèçàòîðû è ïðèïðàâû, òðàâû, ñïåöèè, ñûðû, è èñêóññòâåííûå äîáàâêè.</Russian>
 	</TEXT>
 	<TEXT>
@@ -7268,14 +7268,14 @@
 		</German>
 		<Italian>Carne di pollo</Italian>
 		<Spanish>Aves de corral</Spanish>
-		<Polish>Drób</Polish>
+		<Polish>Dr&#243;b</Polish>
 		<Russian>Ïòèöû</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_POULTRY_PEDIA</Tag>
 		<English>Poultry are domesticated birds kept by humans for the eggs they produce, their meat, their feathers, or sometimes as pets. These birds are most typically members of the superorder Galloanserae (fowl), especially the order Galliformes (which includes chickens, quails and turkeys) and the family Anatidae, in order Anseriformes, commonly known as "waterfowl" and including domestic ducks and domestic geese. Poultry also includes other birds that are killed for their meat, such as the young of pigeons (known as squabs) but does not include similar wild birds hunted for sport or food and known as game. The word "poultry" comes from the French/Norman word poule, itself derived from the Latin word pullus, which means small animal.</English>
 		<German>Als [COLOR_HIGHLIGHT_TEXT]Geflügel[COLOR_REVERT] bezeichnet man alle Vogelarten, die als Nutz- oder Haustiere gezüchtet werden. Da alle diese Vogelarten zunächst als Nahrung gejagt wurden, ist Geflügel grundsätzlich zum Verzehr geeignet. Zu Geflügel zählen Hühner, Puten, Gänse, Enten, Tauben und diverse Wildvogelarten wie Wachteln, Fasane, Reb-, Perl- und Birkhühner und sogar Strauße. Neben dem Fleisch werden besonders von Hühnern, Wachteln und Straußen auch die Eier verwertet. Hühnereier dienen heutzutage auch zur Gewinnung von Impfstoffen.</German>
-		<Polish>Drób - zbiorcze określenie udomowionych ptaków hodowanych ze względu na mięso, jaja, pierze oraz w celach dekoracyjnych. Do drobiu zalicza się między innymi kury, gęsi, indyki, kaczki, gołębie i perliczki. Do drobiu w sensie kulinarnym zaliczane bywają też potrawy z dzikich ptaków.</Polish>
+		<Polish>Dr&#243;b - zbiorcze okre&#156;lenie udomowionych ptak&#243;w hodowanych ze wzgl&#234;du na mi&#234;so, jaja, pierze oraz w celach dekoracyjnych. Do drobiu zalicza si&#234; mi&#234;dzy innymi kury, g&#234;si, indyki, kaczki, go&#179;&#234;bie i perliczki. Do drobiu w sensie kulinarnym zaliczane bywaj&#185; te&#191; potrawy z dzikich ptak&#243;w.</Polish>
 		<Russian>Домашняя птица - это птицы, которых люди содержат из-за яиц, которые они производят, мяса, перьев или иногда в качестве комнатных питомцев. Эти птицы чаще всего являются членами надотряда Galloanserae (домашняя птица), особенно отряда Galliformes (который включает кур, перепелов и индюков) и семейства Anatidae, отряда Anseriformes, широко известного как «водоплавающие птицы», включая домашних уток и домашних гусей. К домашней птице также относятся другие птицы, которых убивают ради мяса, например, молодняк голубей (известный как косяк), но не включает подобных диких птиц, на которых охотятся для спорта или еды и известные как дичь. Английское слово «poultry» происходит от франко-нормандского слова poule, которое происходит от латинского слова pullus, что означает маленькое животное.</Russian>
 	</TEXT>
 	<TEXT>
@@ -7290,13 +7290,13 @@
 		<English>Power Tools</English>
 		<French>Outils électriques</French>
 		<Italian>Utensile elettrico</Italian>
-		<Polish>Elektronarzędzia</Polish>
+		<Polish>Elektronarz&#234;dzia</Polish>
 		<Russian>Ýëåêòðîèíñòðóìåíòû</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_POWER_TOOLS_PEDIA</Tag>
 		<English>A power tool is a tool that is actuated by an additional power source and mechanism other than the solely manual labour used with hand tools. The most common types of power tools use electric motors. Internal combustion engines and compressed air are also commonly used. Other power sources include steam engines, direct burning of fuels and propellants, or even natural power sources like wind or moving water. Tools directly driven by animal power are not generally considered power tools.</English>
-		<Polish>Elektronarzędzia są to narzędzia zasilane prądem elektrycznym, najczęściej o napięciu 230 V. Ułatwiają prace, których wykonywanie narzędziami ręcznymi byłoby uciążliwe, czasochłonne lub niewygodne.</Polish>
+		<Polish>Elektronarz&#234;dzia s&#185; to narz&#234;dzia zasilane pr&#185;dem elektrycznym, najcz&#234;&#156;ciej o napi&#234;ciu 230 V. U&#179;atwiaj&#185; prace, kt&#243;rych wykonywanie narz&#234;dziami r&#234;cznymi by&#179;oby uci&#185;&#191;liwe, czasoch&#179;onne lub niewygodne.</Polish>
 		<Russian>Ýëåêòðîèíñòðóìåíò - ýòî èíñòðóìåíò, êîòîðûé ïðèâîäèòñÿ â äåéñòâèå äîïîëíèòåëüíûì èñòî÷íèêîì ïèòàíèÿ è äð. ìåõàíèçìîì, òåì ñàìûì èñêëþ÷àÿ ðó÷íîé òðóä. Íàèáîëåå ðàñïðîñòðàíåííûå òèïû ýëåêòðîèíñòðóìåíòîâ èñïîëüçóþòñÿ ñ ýëåêòðîäâèãàòåëÿìè. Òàêæå øèðîêî èñïîëüçóþòñÿ äâèãàòåëè âíóòðåííåãî ñãîðàíèÿ è ñæàòîãî âîçäóõà. Äðóãèå èñòî÷íèêè ýíåðãèè âêëþ÷àþò ïàðîâûå äâèãàòåëè, íåïîñðåäñòâåííîå ñæèãàíèå òîïëèâà è ãîðþ÷èõ ìàòåðèàëîâ èëè äàæå ïðèðîäíûå èñòî÷íèêè ýíåðãèè, òàêèå êàê âåòåð èëè äâèæóùàÿñÿ âîäà. Àãðåãàòû, äâèæèìûå ìóñêóëüíîé ñèëîé æèâîòíûõ, êàê ïðàâèëî, íå ñ÷èòàþòñÿ ýëåêòðîèíñòðóìåíòàìè.</Russian>
 	</TEXT>
 	<TEXT>
@@ -7343,7 +7343,7 @@
 		<Tag>TXT_KEY_BONUS_PRIME_TIMBER_PEDIA</Tag>
 		<English>Lumber or timber is wood that is used in any of its stages from felling through readiness for use as structural material for construction, or wood pulp for paper production. Lumber is supplied either rough or finished. Besides pulpwood, rough lumber is the raw material for furniture-making and other items requiring additional cutting and shaping. It is available in many species, usually hardwoods. Finished lumber is supplied in standard sizes, mostly for the construction industry, primarily softwood from coniferous species including pine, fir and spruce (collectively known as Spruce-pine-fir), cedar, hemlock, but also some hardwood, for high-grade flooring.</English>
 		<German>Unter [COLOR_HIGHLIGHT_TEXT]Edelholz[COLOR_REVERT] versteht man Holzsorten, die sich durch bestimmte Eigenschaften von weit verbreiteten Hölzern wie Birke oder Buche unterscheiden. Dazu zählen eine ausdrucksvolle Farbgebung, markante Kontraste, schöne Maserungen und andere Auffälligkeiten, aber auch seltenes Vorkommen und dementsprechend hoher Wert oder eine besondere Resistenz gegen Schädlingsbefall. Letzten Endes kann die Einklassifizierung als Edelholz auch von einer rein subjektiven Wertschätzung herrühren. Einige bekannte Beispiele für Edelhölzer sind Mahagoni, Palisander, Teak und Ebenholz. Edelholz wird gern für Kunstwerke und Musikinstrumente verwendet. Außerdem werden häufig Furniere und Intarsien für Möbel und Automobilausstattung aus Edelhölzern hergestellt.</German>
-		<Polish>Drewno - surowiec drzewny otrzymywany ze ściętych drzew i formowany przez obróbkę w różnego rodzaju sortymenty. Zajmuje przestrzeń pomiędzy rdzeniem a warstwą łyka i kory. Pod względem technicznym drewno jest naturalnym materiałem kompozytowym o osnowie polimerowej wzmacniany ciągłymi włóknami polimerowymi, którymi są podłużne komórki zorientowane jednoosiowo.</Polish>
+		<Polish>Drewno - surowiec drzewny otrzymywany ze &#156;ci&#234;tych drzew i formowany przez obr&#243;bk&#234; w r&#243;&#191;nego rodzaju sortymenty. Zajmuje przestrze&#241; pomi&#234;dzy rdzeniem a warstw&#185; &#179;yka i kory. Pod wzgl&#234;dem technicznym drewno jest naturalnym materia&#179;em kompozytowym o osnowie polimerowej wzmacniany ci&#185;g&#179;ymi w&#179;&#243;knami polimerowymi, kt&#243;rymi s&#185; pod&#179;u&#191;ne kom&#243;rki zorientowane jednoosiowo.</Polish>
 		<Russian>Ëåñîìàòåðèàë èëè ïèëîìàòåðèàë - òåðìèí, èñïîëüçóåìûé, ÷òîáû îïèñàòü äðåâåñèíó, îáðàáîòàííóþ äëÿ èñïîëüçîâàíèÿ èç âûäåðæàíûõ ñðóáëåííûõ äåðåâüåâ, äëÿ êîíå÷íîãî ïðîäóêòà êàê ìàòåðèàëà, ïîäõîäÿùåãî äëÿ èíäóñòðèàëüíîãî èñïîëüçîâàíèÿ êàê êîíñòðóêòèâíîãî ìàòåðèàë äëÿ ñòðîèòåëüñòâà èëè äðåâåñíàÿ ìàññà äëÿ áóìàæíîãî ïðîèçâîäñòâà. Â Âåëèêîáðèòàíèè è Àâñòðàëèè "äðåâåñèíà" - òåðìèí, òàêæå èñïîëüçóåìûé äëÿ ðàñïèëåííûõ äåðåâÿííûõ èçäåëèé (òî åñòü, äîñîê), òîãäà êàê âîîáùå â Ñîåäèíåííûõ Øòàòàõ è Êàíàäå, ïðîäóêò îáðåçêè äðåâåñèíû íàçûâàåòñÿ äðåâåñèíà. Â Ñîåäèíåííûõ Øòàòàõ è Êàíàäå ðàñïèëåííûå äåðåâÿííûå èçäåëèÿ ïÿòè äþéìîâ (127 ìèëëèìåòðîâ) (íîìèíàëüíûé ðàçìåð) äèàìåòðà èëè áîëüøå èíîãäà íàçûâàþòñÿ "ïèëîìàòåðèàë". Äðåâåñèíà ïîñòàâëÿåòñÿ èëè íåñòðîãàíîé èëè îáðàáîòàííîé. Ãðóáàÿ äðåâåñèíà - ñûðüå äëÿ ñîçäàíèÿ ìåáåëè è äðóãèõ èçäåëèé, òðåáóþùèõ äîïîëíèòåëüíîé ðåçêè è ñòðîãàíèÿ. Îíà äîñòóïíà âî ìíîãèõ ðàçíîâèäíîñòÿõ, îáû÷íî òâåðäîé äðåâåñèíû. Îáðàáîòàííàÿ äðåâåñèíà ïîñòàâëÿåòñÿ â ñòàíäàðòíûõ ðàçìåðàõ, ãëàâíûì îáðàçîì äëÿ ñòðîèòåëüíîé ïðîìûøëåííîñòè, è ïðåæäå âñåãî õâîéíûå (èìåþùèå èãëû) ðàçíîâèäíîñòè, òèïà ñîñíû, êåäðà, ïèõòû èëè åëè. - Wikipedia</Russian>
 	</TEXT>
 	<TEXT>
@@ -7377,7 +7377,7 @@
 		<Tag>TXT_KEY_BONUS_PUMICE_STONE_PEDIA</Tag>
 		<English>Pumice, called pumicite in its powdered or dust form, is a volcanic rock that consists of highly vesicular rough textured volcanic glass, which may or may not contain crystals. It is typically light colored. Scoria is another vesicular volcanic rock that differs from pumice in having larger vesicles and thicker vesicle walls and being dark colored and denser.</English>
 		<German>[COLOR_HIGHLIGHT_TEXT]Bimsstein[COLOR_REVERT] oder kurz Bims ist ein stark poröses vulkanisches Gestein, das entsteht, wenn zähflüssige Lava bei Eruptionen durch Gase aufgeschäumt wird. Seine Farbe kann je nach Lavaart und Einschlüssen stark variieren. Es gibt nahezu schwarzen und weißen Bims, aber auch sämtliche Zwischentöne. Bimsstein geht nicht unter, sondern schwimmt auf Wasser, was an seinen vielen Poren und der daraus resultierenden sehr geringen Dichte liegt.[NEWLINE]Bims wurde bereits seit Vorzeiten in Kreta als Baumaterial, Opfergabe, Reinigungs- und Heilmittel und für diverse andere Zwecke eingesetzt. Das Gestein wird dort häufig über die Strömung von den vulkanischen Nachbarinseln angespült. In der Antike nutzte man den Bimsstein bereits zur Körperpflege, zum Schärfen von Schreibfedern und zum Glätten von Pergamentleder. Auch heute wird das Material noch vielseitig eingesetzt, z.B. für die Herstellung von Leichtbetonsteinen und Dämmstoffen und zum Filtern von Wasser. Bimsstein ist für den Stone-washed-Effekt von Jeans verantwortlich und stellt einen Grundstoff für viele gärtnerische Substrate dar.</German>
-		<Polish>Pumeks (z łac. pumex), dawniej pemza - to wulkaniczna skała magmowa zbudowana z porowatego (ponad 50% porów) szkliwa wulkanicznego powstałego z silnie gazującej, pienistej lawy. Ma szklistą, drobnoziarnistą strukturę. Powstaje głównie z kwaśnych odmian lawy (riolitowej).</Polish>
+		<Polish>Pumeks (z &#179;ac. pumex), dawniej pemza - to wulkaniczna ska&#179;a magmowa zbudowana z porowatego (ponad 50% por&#243;w) szkliwa wulkanicznego powsta&#179;ego z silnie gazuj&#185;cej, pienistej lawy. Ma szklist&#185;, drobnoziarnist&#185; struktur&#234;. Powstaje g&#179;&#243;wnie z kwa&#156;nych odmian lawy (riolitowej).</Polish>
 		<Russian>Ïåìçà, íàçûâàåìàÿ ïîðèñòûì ïóìèöèòîì, ýòî âóëêàíè÷åñêàÿ ïîðîäà, êîòîðàÿ ñîñòîèò èç âûñîêîâåçèêóëÿðíîãî ãðóáîãî òåêñòóðèðîâàííîãî âóëêàíè÷åñêîãî ñòåêëà, êîòîðîå ìîæåò ñîäåðæàòü èëè íå ñîäåðæàòü êðèñòàëëû. Îíè, êàê ïðàâèëî, ñâåòëîãî öâåòà. Øëàê - ýòî äðóãàÿ âåçèêóëÿðíà âóëêàíè÷åñêàÿ ïîðîäà, êîòîðàÿ îòëè÷àåòñÿ îò ïåìçû íàëè÷èåì êðóïíûõ ïóçûðüêîâ è âåçèêóë â òîëùå ñòåí, òåìíûì öâåòîì è áîëüøåé ïëîòíîñòüþ.</Russian>
 	</TEXT>
 	<TEXT>
@@ -7428,7 +7428,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_PYRITE_PEDIA</Tag>
 		<English>The mineral pyrite, or iron pyrite, also known as fool's gold, is an iron sulfide with the formula FeS2. This mineral's metallic luster and pale brass-yellow hue give it a superficial resemblance to gold, hence the well-known nickname of fool's gold. The color has also led to the nicknames brass, brazzle, and Brazil, primarily used to refer to pyrite found in coal.</English>
-		<Polish>Piryt - minerał żelaza z gromady siarczków, nadsiarczek żelaza(II), FeS2. Nazwa pochodzi od gr. pyr = ogień oraz pyrites = iskrzący, gdyż minerał ten iskrzy się pod wpływem uderzeń krzesiwa (krzemienia, twardego metalu).</Polish>
+		<Polish>Piryt - minera&#179; &#191;elaza z gromady siarczk&#243;w, nadsiarczek &#191;elaza(II), FeS2. Nazwa pochodzi od gr. pyr = ogie&#241; oraz pyrites = iskrz&#185;cy, gdy&#191; minera&#179; ten iskrzy si&#234; pod wp&#179;ywem uderze&#241; krzesiwa (krzemienia, twardego metalu).</Polish>
 		<Russian>Ìèíåðàë ïèðèò, èëè æåëåçíûé ïèðèò, òàêæå èçâåñòíûé êàê çîëîòî äëÿ ãëóïöîâ, ïðåäñòàâëÿåò ñîáîé ñóëüôèä æåëåçà ñ ôîðìóëîé FeS2. Ýòîò ìèíåðàë ñ ìåòàëëè÷åñêèì áëåñêîì è ñâåòëî-ëàòóííî-æåëòûì îòòåíêîì èìååò âíåøíåå ñõîäñòâî ñ çîëîòîì, îòñþäà è õîðîøî èçâåñòíîå ïðîçâèùå çîëîòî äëÿ ãëóïöîâ. Èç-çà öâåòà òàêæå îáÿçàíû ñâîèì ñóùåòâîâàíèåì òàêèå íàçâàíèÿ êàê ëàòóíü, áðàçèëü è èñïîëüçóåòñÿ äëÿ îáîçíà÷åíèÿ ïèðèòà, íàéäåííîãî â óãëå.</Russian>
 	</TEXT>
 	<TEXT>
@@ -7468,7 +7468,7 @@
 		<French>Cristaux de quantonium</French>
 		<Italian>Cristallo di quantonio</Italian>
 		<Spanish>Cristal de cuantonio</Spanish>
-		<Polish>Kryształ kwantowy</Polish>
+		<Polish>Kryszta&#179; kwantowy</Polish>
 		<Russian>Êâàíòîíèóì</Russian>
 	</TEXT>
 	<TEXT>
@@ -7538,7 +7538,7 @@
 		</German>
 		<Italian>Coniglio</Italian>
 		<Spanish>Conejos</Spanish>
-		<Polish>Króliki</Polish>
+		<Polish>Kr&#243;liki</Polish>
 		<Russian>Êðîëèêè</Russian>
 	</TEXT>
 	<TEXT>
@@ -7612,7 +7612,7 @@
 		<English>Raw Meat</English>
 		<French>Viande crue</French>
 		<Italian>Carne cruda</Italian>
-		<Polish>Surowe mięso</Polish>
+		<Polish>Surowe mi&#234;so</Polish>
 		<Russian>Ìÿñî</Russian>
 	</TEXT>
 	<TEXT>
@@ -7658,7 +7658,7 @@
 		<Tag>TXT_KEY_BONUS_REEDS_PEDIA</Tag>
 		<English>In polyphyletic botany, a reed is a type of tall, grass-like plant of wet places, it is also very flammable; the namesake vegetation of reed beds.</English>
 		<German>Schilfrohr (Phragmites australis oder Phragmites communis) oder kurz [COLOR_HIGHLIGHT_TEXT]Schilf[COLOR_REVERT] ist eine weltweit verbreitete Sumpfpflanze, die zu den Süßgräsern gehört. Schilfhalme können bis zu 4 m hoch werden. Sie bilden rispenförmige Blütenstände aus, die bis zu 50 cm groß sein können. Schilf verdrängt bei günstigen Nährstoffangebot andere Wildgräser und -kräuter, weshalb an stehenden und langsam fließenden Gewässern in der Regel natürliche Monokulturen entstehen. Schilf kann vielseitig verwendet werden. Als Naturbaustoff eignet es sich besonders in Form von Reet als Dachabdeckung, es kam aber auch beim Bau früher Schiffe zum Einsatz. Von Vorteil war hierbei der hohe Gehalt an Kieselsäure, durch den es eine brandhemmende Wirkung hatte. Schilf kann als Gemüse verzehrt und aus seinen getrockneten Wurzeln kann ein Mehl zum Brotbacken gewonnen werden. In der Antike war es als Schreibrohr jahrhundertelang das wichtigste Schreibgerät. Heute wird Schilf als Dämmstoff, in Pflanzenkläranlagen und als natürlicher Bodenfilter verwendet.</German>
-		<Polish>Trzcina (Phragmites L.) - rodzaj roślin należący do rodziny wiechlinowatych. Należy do niego 4-5 gatunków. W Polsce w środowisku naturalnym rośnie jeden tylko gatunek - trzcina pospolita (Phragmites australis), jest to zarazem gatunek typowy rodzaju.</Polish>
+		<Polish>Trzcina (Phragmites L.) - rodzaj ro&#156;lin nale&#191;&#185;cy do rodziny wiechlinowatych. Nale&#191;y do niego 4-5 gatunk&#243;w. W Polsce w &#156;rodowisku naturalnym ro&#156;nie jeden tylko gatunek - trzcina pospolita (Phragmites australis), jest to zarazem gatunek typowy rodzaju.</Polish>
 		<Russian>В полифилетической ботанике тростник - это тип высокого травоподобного растения влажных мест, он также очень легко воспламеняется; одноименная растительность тростниковых зарослей.</Russian>
 	</TEXT>
 	<TEXT>
@@ -7667,14 +7667,14 @@
 		<French>Réfrigérateurs</French>
 		<German>Kühlschränke</German>
 		<Italian>Frigorifero</Italian>
-		<Polish>Lodówki</Polish>
+		<Polish>Lod&#243;wki</Polish>
 		<Russian>Õîëîäèëüíèêè</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_REFRIGERATORS_PEDIA</Tag>
 		<English>A refrigerator (colloquially fridge) is a common household appliance that consists of a thermally insulated compartment and a heat pump (mechanical, electronic, or chemical) that transfers heat from the inside of the fridge to its external environment so that the inside of the fridge is cooled to a temperature below the ambient temperature of the room. Refrigeration is an essential food storage technique in developed countries. Lower temperatures in a confined volume lowers the reproduction rate of bacteria, so the refrigerator reduces the rate of spoilage.</English>
 		<German>Ein Kühlschrank ist ein elektrisches oder gasbetriebenes schrankförmiges Gerät, das die Temperatur in seinem Inneren selbstständig niedrig hält. Mittels eines üblicherweise an der Rückseite befindlichen und per Temperaturregler geregelten Kühlaggregates wird das Kühlschrankinnere gekühlt. Kühlschränke finden Verwendung für die Lagerung von Nahrungsmitteln, Medikamenten, Chemikalien usw. Durch die niedrigere Temperatur laufen chemische Reaktionen und biologische Prozesse, die beispielsweise Lebensmittel ungenießbar und Medikamente unbrauchbar werden lassen, langsamer ab.</German>
-		<Polish>Chłodziarka (zwycz. lodówka) - urządzenie (maszyna cieplna), którego zadaniem jest obniżenie temperatury środowiska chłodzonego, kosztem doprowadzonej energii. W chłodziarkach absorpcyjnych energia dostarczana jest w postaci ciepła, natomiast w pozostałych (sprężarkowych, strumienicowych, termoelektrycznych) w postaci pracy. Chłodzonym czynnikiem może być powietrze, woda lub inny czynnik pośredniczący (chłodziwo).</Polish>
+		<Polish>Ch&#179;odziarka (zwycz. lod&#243;wka) - urz&#185;dzenie (maszyna cieplna), kt&#243;rego zadaniem jest obni&#191;enie temperatury &#156;rodowiska ch&#179;odzonego, kosztem doprowadzonej energii. W ch&#179;odziarkach absorpcyjnych energia dostarczana jest w postaci ciep&#179;a, natomiast w pozosta&#179;ych (spr&#234;&#191;arkowych, strumienicowych, termoelektrycznych) w postaci pracy. Ch&#179;odzonym czynnikiem mo&#191;e by&#230; powietrze, woda lub inny czynnik po&#156;rednicz&#185;cy (ch&#179;odziwo).</Polish>
 		<Russian>Ðåôðèæåðàòîð (â ïðîñòîðå÷èè õîëîäèëüíèê) - ýòî ðàñïðîñòðàíåííûé áûòîâîé ïðèáîð, êîòîðûé ñîñòîèò èç òåïëîèçîëèðîâàííîãî îòñåêà è òåïëîâîãî íàñîñà (ìåõàíè÷åñêîãî, ýëåêòðîííîãî èëè õèìè÷åñêîãî), êîòîðûé ïåðåíîñèò òåïëî èç âíóòðåííåé ÷àñòè õîëîäèëüíèêà âî âíåøíþþ ñðåäó òàê, ÷òî âíóòðè õîëîäèëüíèêà îõëàæäàåòñÿ äî òåìïåðàòóðû íèæå òåìïåðàòóðû îêðóæàþùåé ñðåäû ïîìåùåíèÿ. Õîëîäèëüíîå îáîðóäîâàíèå ÿâëÿåòñÿ íåîòúåìëåìîé õðàíåíèÿ ïðîäóêòîâ òåõíèêè â ðàçâèòûõ ñòðàíàõ. Áîëåå íèçêèå òåìïåðàòóðû â çàìêíóòîì îáúåìå ïîíèæàåò ñêîðîñòü ðàçìíîæåíèÿ áàêòåðèé, ïîýòîìó õîëîäèëüíèê çàìåäëÿåò òåìïû ïîð÷è.</Russian>
 	</TEXT>
 	<TEXT>
@@ -7683,7 +7683,7 @@
 		<French>Organes de substitution</French>
 		<German>Ersatzorgane</German>
 		<Italian>Organo di ricambio</Italian>
-		<Polish>Organy zastępcze</Polish>
+		<Polish>Organy zast&#234;pcze</Polish>
 		<Russian>Îðãàíû</Russian>
 	</TEXT>
 	<TEXT>
@@ -7719,14 +7719,14 @@
 		</German>
 		<Italian>Resina</Italian>
 		<Spanish>Resina</Spanish>
-		<Polish>Żywica</Polish>
+		<Polish>&#175;ywica</Polish>
 		<Russian>Ñìîëà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_RESIN_PEDIA</Tag>
 		<English>Resin in the most specific use of the term is a hydrocarbon secretion of many plants, particularly coniferous trees. Resins are valued for their chemical properties and associated uses, such as the production of varnishes, adhesives, and food glazing agents; as an important source of raw materials for organic synthesis; and as constituents of incense and perfume. Plant resins have a very long history that was documented in ancient Greece by Theophrastus, in ancient Rome by Pliny the Elder, and especially in the resins known as frankincense and myrrh, prized in ancient Egypt. These were highly prized substances, and required as incense in some religious rites. Amber is a hard fossilized resin from ancient trees.</English>
 		<German>[COLOR_HIGHLIGHT_TEXT]Harz[COLOR_REVERT] werden verschiedene von Pflanzen oder Tieren abgesonderte zähe Flüssigkeiten genannt, die nicht wasserlöslich sind. Vor allem von Bäumen lässt sich Harz leicht gewinnen, denn sie produzieren es z.B. nach Verletzungen, um die Wunde schnell zu verschließen. Als einziger tierischer Lieferant gilt die Lackschildlaus (Kerria laccifera) aus Südostasien, die den Schellack liefert. Naturharz wurde früher vielseitig verwendet, unter anderem in der Kunst, der Medizin und im Schiffbau. Das bekannteste Produkt ist wohl das Kolophonium, ein Destillationsrückstand aus dem Harz von Kiefern und Fichten, der z.B. als Klebstoff für Heftpflaster, in Kaugummi und zur Behandlung der Bogenhaare bei Streichinstrumenten verwendet wird. Heute werden statt Naturharzen weitestgehend Kunstharze verwendet.</German>
-		<Polish>Żywica - substancja wytwarzana w niektórych roślinach, najczęściej w drzewach, szczególnie iglastych. Znajduje się w specjalnych przestrzeniach międzykomórkowych, lub przewodach żywicznych, i wytwarzana jest przez otaczające je komórki wydzielnicze (żywicorodne). U sosny przewody żywiczne są liczne, długie, biegną wzdłuż pnia i konarów, ponadto połączone są przewodami poprzecznymi, wskutek czego z miejsca uszkodzonego wypływają duże ilości żywicy przez długi czas. Żywica służy do zabezpieczania miejsc będących ranami drzewa. Barwa żywicy zależna jest od gatunku drzewa, z którego została pozyskana (od białej, przezroczystej do szarej).</Polish>
+		<Polish>&#175;ywica - substancja wytwarzana w niekt&#243;rych ro&#156;linach, najcz&#234;&#156;ciej w drzewach, szczeg&#243;lnie iglastych. Znajduje si&#234; w specjalnych przestrzeniach mi&#234;dzykom&#243;rkowych, lub przewodach &#191;ywicznych, i wytwarzana jest przez otaczaj&#185;ce je kom&#243;rki wydzielnicze (&#191;ywicorodne). U sosny przewody &#191;ywiczne s&#185; liczne, d&#179;ugie, biegn&#185; wzd&#179;u&#191; pnia i konar&#243;w, ponadto po&#179;&#185;czone s&#185; przewodami poprzecznymi, wskutek czego z miejsca uszkodzonego wyp&#179;ywaj&#185; du&#191;e ilo&#156;ci &#191;ywicy przez d&#179;ugi czas. &#175;ywica s&#179;u&#191;y do zabezpieczania miejsc b&#234;d&#185;cych ranami drzewa. Barwa &#191;ywicy zale&#191;na jest od gatunku drzewa, z kt&#243;rego zosta&#179;a pozyskana (od bia&#179;ej, przezroczystej do szarej).</Polish>
 		<Russian>Смола в наиболее частном использовании этого термина - это секреция углеводородов многих растений, особенно хвойных деревьев. Смолы ценятся за их химические свойства и связанные с ними применения, такие как производство лаков, клеев и продуктов для глазирования; как важный источник сырья для органического синтеза; и как составные части ладана и духов. Растительные смолы имеют очень долгую историю, что было задокументировано в Древней Греции Теофрастом, в Древнем Риме Плинием Старшим, и особенно в смолах, известных как ладан и мирра, ценимых в Древнем Египте. Это были очень ценные вещества и использовались в качестве ладана в некоторых религиозных обрядах. Янтарь - это твердая окаменелая смола древних деревьев.
 				[PARAGRAPH:2]В более широком смысле термин «смола» также охватывает множество синтетических веществ с аналогичными механическими свойствами (густые жидкости, которые затвердевают в прозрачные твердые частицы), а также шеллаки насекомых надсемейства Coccoidea.
 				[PARAGRAPH:2]Другие жидкие соединения, обнаруженные в растениях или выделяемые растениями, такие как сок, латекс или слизь, иногда путают со смолой, но химически они не идентичны. В частности, соки выполняют питательную функцию, а смолы - нет. Нет единого мнения о том, почему растения выделяют смолы. Однако смолы состоят в основном из вторичных метаболитов или соединений, которые, по-видимому, не играют никакой роли в первичной физиологии растения. Хотя некоторые ученые рассматривают смолы только как отходы, их защитные свойства для растений широко задокументированы. Токсичные смолистые соединения могут поражать широкий круг травоядных, насекомых и патогенов; в то время как летучие фенольные соединения могут привлекать таких благодетелей, как паразитоиды или хищники травоядных, нападающих на растения.
@@ -7751,7 +7751,7 @@
 		</German>
 		<Italian>Riso</Italian>
 		<Spanish>Arroz</Spanish>
-		<Polish>Ryż</Polish>
+		<Polish>Ry&#191;</Polish>
 		<Russian>Ðèñ</Russian>
 	</TEXT>
 	<TEXT>
@@ -7768,13 +7768,13 @@
 		<English>Roasted Coffee</English>
 		<French>Café torréfié</French>
 		<Italian>Caffè tostato</Italian>
-		<Polish>Prażona kawa</Polish>
+		<Polish>Pra&#191;ona kawa</Polish>
 		<Russian>Ìîëîòûé êîôå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_ROASTED_COFFEE_PEDIA</Tag>
 		<English>Coffee is usually sold in a roasted state, and with rare exceptions all coffee is roasted before it is consumed. It can be sold roasted by the supplier, or it can be home roasted. The roasting process influences the taste of the beverage by changing the coffee seed both physically and chemically. The seed decreases in weight as moisture is lost and increases in volume, causing it to become less dense. The density of the seed also influences the strength of the coffee and requirements for packaging. The actual roasting begins when the temperature inside the seed reaches approximately 200 °C (392 °F), though different varieties of seeds differ in moisture and density and therefore roast at different rates. During roasting, caramelization occurs as intense heat breaks down starches, changing them to simple sugars that begin to brown, which alters the color of the seed. Sucrose is rapidly lost during the roasting process and may disappear entirely in darker roasts. During roasting, aromatic oils and acids weaken, changing the flavor; at 205 °C (401 °F), other oils start to develop. One of these oils, caffeol, is created at about 200 °C (392 °F), which is largely responsible for coffee's aroma and flavor.</English>
-		<Polish>Kawa - napój sporządzany z palonych, a następnie zmielonych lub poddanych instantyzacji ziaren kawowca, zwykle podawana na gorąco. Pochodzi z Etiopii, w Europie pojawiła się około XVI wieku. Jedna z najpopularniejszych używek na świecie i główne źródło kofeiny. Działa pobudzająco i orzeźwiająco oraz przyspiesza przemianę materii. Zawiera przeciwutleniacze, które zapobiegają powstawaniu wolnych rodników. Spożywana w dużych ilościach może jednak być szkodliwa dla zdrowia. Rocznie produkuje się około 6,7 miliona ton kawy.</Polish>
+		<Polish>Kawa - nap&#243;j sporz&#185;dzany z palonych, a nast&#234;pnie zmielonych lub poddanych instantyzacji ziaren kawowca, zwykle podawana na gor&#185;co. Pochodzi z Etiopii, w Europie pojawi&#179;a si&#234; oko&#179;o XVI wieku. Jedna z najpopularniejszych u&#191;ywek na &#156;wiecie i g&#179;&#243;wne &#159;r&#243;d&#179;o kofeiny. Dzia&#179;a pobudzaj&#185;co i orze&#159;wiaj&#185;co oraz przyspiesza przemian&#234; materii. Zawiera przeciwutleniacze, kt&#243;re zapobiegaj&#185; powstawaniu wolnych rodnik&#243;w. Spo&#191;ywana w du&#191;ych ilo&#156;ciach mo&#191;e jednak by&#230; szkodliwa dla zdrowia. Rocznie produkuje si&#234; oko&#179;o 6,7 miliona ton kawy.</Polish>
 		<Russian>Êîôå îáû÷íî âûâîçèòñÿ èç æàðêèõ ñòðàí, è çà ðåäêèì èñêëþ÷åíèåì âñå êîôå îáæàðèâàåòñÿ äî åãî óïîòðåáëåíèÿ. Îí ìîæåò ïðîäàâàòüñÿ óæå î÷èùåííûì è îáæàðåííûì, ëèáî îí îáæàðèâàåòñÿ â äîìàøíèõ óñëîâèÿõ. Ïðîöåññ æàðêè âëèÿåò íà âêóñ íàïèòêà, èçìåíÿÿ êîôåéíûå ñåìÿíà, êàê ôèçè÷åñêè, òàê è õèìè÷åñêè. Ñåìÿ ïàäàåò â âåñå ïî ìåðå èñïàðåíèÿ âëàãè è óâåëè÷èâàåòñÿ â îáúåìå, âñëåäñòâèå ÷åãî îí ñòàíîâèòñÿ ìåíåå ïëîòíîé. Ïëîòíîñòü ñåìÿí òàêæå âëèÿåò íà êðåïîñòü êîôå è òðåáîâàíèÿ ê óïàêîâêå. Ôàêòè÷åñêàÿ æàðêà íà÷èíàåòñÿ, êîãäà òåìïåðàòóðà âíóòðè ñåìåíè äîñòèãàåò ïðèìåðíî 200 Ñ (392 F), ïðàâäà ó ðàçíûõ ñîðòîâ ñåìåíà îòëè÷àþòñÿ ïî âëàæíîñòè è ïëîòíîñòè, è, ñëåäîâàòåëüíî, çàïåêàþòñÿ ñ ðàçíîé ñêîðîñòüþ. Â ïðîöåññå îáæàðêè, êàðàìåëèçàöèè ïðîèñõîäèò êàê èíòåíñèâíîå ðàñùåïëåíèå êðàõìàëîâ, èçìåíÿÿ èõ íà ïðîñòûå ñàõàðà, êîòîðûå ñòàíîâÿòñÿ êîðè÷íåâîãî öâåòà, êîòîðûé èçìåíÿåò öâåò ñåìÿí. Ñàõàðîçà æå áûñòðî òåðÿåòñÿ âî âðåìÿ ïðîöåññà æàðêè è ìîæåò èñ÷åçíóòü ïîëíîñòüþ. Â ïðîöåññå îáæàðêè, àðîìàòè÷åñêèå ìàñëà è êèñëîòû ðàñùåïëÿþòñÿ, ìåíÿÿ âêóñ; ïðè 205 C (401 F), äðóãèå ìàñëà íà÷èíàþò ðàçðóøàòüñÿ. Îäíî èç ýòèõ ìàñåë, êàôôåîëü, ñîçäàåòñÿ ïðè òåìïåðàòóðå îêîëî 200 C (392 F), êîòîðîå â çíà÷èòåëüíîé ñòåïåíè îòâåòñòâåííî çà àðîìàò è âêóñ êîôå.</Russian>
 	</TEXT>
 	<TEXT>
@@ -7885,13 +7885,13 @@
 		<French>Selles</French>
 		<German>Sattel</German>
 		<Italian>Sella</Italian>
-		<Polish>Siodła</Polish>
+		<Polish>Siod&#179;a</Polish>
 		<Russian>Ñåäëà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_SADDLES_PEDIA</Tag>
 		<English>The saddle is a supportive structure for a rider or other load, fastened to an animal's back by a girth. The most common type is the equestrian saddle designed for a horse, but specialized saddles have been created for camels and other creatures.</English>
-		<Polish>Siodło - część rzędu końskiego stanowiąca siedzenie przeznaczone dla jeźdźca. Rusztowanie siodła to tzw. stelaż lub terlica, wykonany z drewna, metalu lub tworzywa sztucznego. Jego pokrycie to część wykonana z wyściółki (najczęściej z plastikowej pianki, dawniej ze słomy lub filcu) i obciągnięta skórą lub sztucznym materiałem. Chroni ona kręgosłup konia przed urazami oraz umożliwia mu swobodę poruszania. Kształt i wyprofilowanie siodła wpływa na dosiad i sylwetkę jeźdźca. Siodła są wytwarzane w różnych rozmiarach oraz ciężarach, tak, aby pasowały do różnych rodzajów koni i jeźdźców.</Polish>
+		<Polish>Siod&#179;o - cz&#234;&#156;&#230; rz&#234;du ko&#241;skiego stanowi&#185;ca siedzenie przeznaczone dla je&#159;d&#159;ca. Rusztowanie siod&#179;a to tzw. stela&#191; lub terlica, wykonany z drewna, metalu lub tworzywa sztucznego. Jego pokrycie to cz&#234;&#156;&#230; wykonana z wy&#156;ci&#243;&#179;ki (najcz&#234;&#156;ciej z plastikowej pianki, dawniej ze s&#179;omy lub filcu) i obci&#185;gni&#234;ta sk&#243;r&#185; lub sztucznym materia&#179;em. Chroni ona kr&#234;gos&#179;up konia przed urazami oraz umo&#191;liwia mu swobod&#234; poruszania. Kszta&#179;t i wyprofilowanie siod&#179;a wp&#179;ywa na dosiad i sylwetk&#234; je&#159;d&#159;ca. Siod&#179;a s&#185; wytwarzane w r&#243;&#191;nych rozmiarach oraz ci&#234;&#191;arach, tak, aby pasowa&#179;y do r&#243;&#191;nych rodzaj&#243;w koni i je&#159;d&#159;c&#243;w.</Polish>
 		<Russian>Ñåäëî - âñïîìîãàòåëüíàÿ êîíñòðóêöèÿ äëÿ âñàäíèêà èëè èíîé ïîêëàæè, êîòîðàÿ êðåïèòñÿ íà îáõâàò òóëîâèùà ê æèâîòíîìó. Íàèáîëåå ðàñïðîñòðàíåííûì òèïîì ÿâëÿåòñÿ êîííîå ñåäëî ïðåäíàçíà÷åííîå äëÿ ëîøàäè, íî òàêæå áûëè ñîçäàíû ñïåöèàëèçèðîâàííûå ñåäëà äëÿ âåðáëþäîâ è äðóãèõ ñóùåñòâ.</Russian>
 	</TEXT>
 	<TEXT>
@@ -7912,7 +7912,7 @@
 		<English>Sails</English>
 		<French>Voiles</French>
 		<Italian>Vela</Italian>
-		<Polish>Żagle</Polish>
+		<Polish>&#175;agle</Polish>
 		<Russian>Ïàðóñà</Russian>
 	</TEXT>
 	<TEXT>
@@ -7934,7 +7934,7 @@
 		<German>Salz</German>
 		<Italian>Sale</Italian>
 		<Spanish>Sal</Spanish>
-		<Polish>Sól</Polish>
+		<Polish>S&#243;l</Polish>
 		<Russian>Ñîëü</Russian>
 	</TEXT>
 	<TEXT>
@@ -8012,7 +8012,7 @@
 		<English>Sausage</English>
 		<French>Charcuterie</French>
 		<Italian>Salsiccia</Italian>
-		<Polish>Kiełbasa</Polish>
+		<Polish>Kie&#179;basa</Polish>
 		<Russian>Êîëáàñû</Russian>
 	</TEXT>
 	<TEXT>
@@ -8048,21 +8048,21 @@
 		<Tag>TXT_KEY_BONUS_SCROLLS_PEDIA</Tag>
 		<English>A scroll is a roll of papyrus, parchment, or paper which has been written, drawn or painted upon for the purpose of transmitting information or using as a decoration. It is distinguished from a roll by virtue of being intended for repeated use rather than continuous, but once-only use of the roll.</English>
 		<Italian>Una pergamena è fatta di papiro, pelle animale o carta sulla quale viene scritto, disegnato o dipinto per lo scopo di trasmettere informazioni o creare una decorazione. Viene distinta dai rotoli perché la pergamena è creata per un uso ripetuto.</Italian>
-		<Polish>Zwój - pierwotna postać książki w formie długiej wstęgi nawiniętej na dwa drążki (umbilicus). Drążki te (wykonane najczęściej z drewna lub kości słoniowej) były dłuższe niż szerokość zwoju i nie były do niego przymocowane. Nadawały one zwojowi pożądaną sztywność. Przed rozpoczęciem czytania drążki te wysuwano. Wystające końce tych drążków wiązano ze sobą tasiemkami, a zwój owijano w obwolutę pergaminową, najczęściej koloru purpurowego i obwiązywano czerwonymi rzemykami. Zaopatrywano go dodatkowo w tytuł wypisany na skrawku pergaminu doczepionego do rękopisu. Po łacinie nazywany był on index lub titulus. W przypadku zwojów wytworniejszych miał kolor czerwony lub szafirowy. Taki doczepiony tytuł ułatwiał odszukiwanie konkretnego zwoju wśród wielu innych. Zwój czytano rozwijając sukcesywnie jego kolejne partie z jednej strony, zwijając je jednocześnie z drugiej strony (najczęściej już wtedy był to układ od lewej do prawej).</Polish>
+		<Polish>Zw&#243;j - pierwotna posta&#230; ksi&#185;&#191;ki w formie d&#179;ugiej wst&#234;gi nawini&#234;tej na dwa dr&#185;&#191;ki (umbilicus). Dr&#185;&#191;ki te (wykonane najcz&#234;&#156;ciej z drewna lub ko&#156;ci s&#179;oniowej) by&#179;y d&#179;u&#191;sze ni&#191; szeroko&#156;&#230; zwoju i nie by&#179;y do niego przymocowane. Nadawa&#179;y one zwojowi po&#191;&#185;dan&#185; sztywno&#156;&#230;. Przed rozpocz&#234;ciem czytania dr&#185;&#191;ki te wysuwano. Wystaj&#185;ce ko&#241;ce tych dr&#185;&#191;k&#243;w wi&#185;zano ze sob&#185; tasiemkami, a zw&#243;j owijano w obwolut&#234; pergaminow&#185;, najcz&#234;&#156;ciej koloru purpurowego i obwi&#185;zywano czerwonymi rzemykami. Zaopatrywano go dodatkowo w tytu&#179; wypisany na skrawku pergaminu doczepionego do r&#234;kopisu. Po &#179;acinie nazywany by&#179; on index lub titulus. W przypadku zwoj&#243;w wytworniejszych mia&#179; kolor czerwony lub szafirowy. Taki doczepiony tytu&#179; u&#179;atwia&#179; odszukiwanie konkretnego zwoju w&#156;r&#243;d wielu innych. Zw&#243;j czytano rozwijaj&#185;c sukcesywnie jego kolejne partie z jednej strony, zwijaj&#185;c je jednocze&#156;nie z drugiej strony (najcz&#234;&#156;ciej ju&#191; wtedy by&#179; to uk&#179;ad od lewej do prawej).</Polish>
 		<Russian>Ñâèòîê - ýòî ñêðó÷åííûé ëèñò ïàïèðóñà, ïåðãàìåíòà èëè áóìàãè, íà êîòîðîì èìåþòñÿ òåêñòû, ÷åðòåæè èëè ðèñóíêè ñ öåëüþ ïåðåäà÷è èíôîðìàöèè èëè èñïîëüçîâàíèÿ â êà÷åñòâå óêðàøåíèÿ. Îí îòëè÷àåòñÿ îò ðóëîíà â ñèëó òîãî, ÷òî ïðåäíàçíà÷åí äëÿ ìíîãîêðàòíîãî ÷òåíèÿ, à íå ïîñòîÿííîãî, íî îäíîðàçîâîãî åãî èñïîëüçîâàíèÿ.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_SCULPTURES</Tag>
 		<English>Sculptures</English>
 		<Italian>Scultura</Italian>
-		<Polish>Rzeźby</Polish>
+		<Polish>Rze&#159;by</Polish>
 		<Russian>Ñêóëüïòóðû</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_SCULPTURES_PEDIA</Tag>
 		<English>Sculpture is three-dimensional artwork created by shaping or combining hard materials - typically stone such as marble - or metal, glass, or wood.</English>
 		<Italian>Una scultura è un'opera d'arte in tre dimensioni creata scolpendo o intagliando vari materiali, come pietra, marmo, metallo, vetro o legno.</Italian>
-		<Polish>Rzeźba jest trójwymiarową kompozycją utworzoną przez kształtowanie lub łączenie twarde materiały - zazwyczaj kamień, taki jak marmur lub - metal, szkło lub drewno.</Polish>
+		<Polish>Rze&#159;ba jest tr&#243;jwymiarow&#185; kompozycj&#185; utworzon&#185; przez kszta&#179;towanie lub &#179;&#185;czenie twarde materia&#179;y - zazwyczaj kamie&#241;, taki jak marmur lub - metal, szk&#179;o lub drewno.</Polish>
 		<Russian>Ñêóëüïòóðà - ýòî òðåõìåðíîå õóäîæåñòâåííîå ïðîèçâåäåíèå ñîçäàííîå ïóòåì ëåïêè èëè âûòà÷èâàíèÿ òâåðäûõ ìàòåðèàëîâ - îáû÷íî êàìíåé, òàêèõ êàê ìðàìîð èëè ìåòàëëà, ñòåêëà èëè äåðåâà.</Russian>
 	</TEXT>
 	<TEXT>
@@ -8157,7 +8157,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_SERVICE_BOTS_PEDIA</Tag>
 		<English>Service robots assist human beings, typically by performing a job that is dirty, dull, distant, dangerous or repetitive, including household chores. They typically are autonomous and/or operated by a build in control system, with manual override options. The term "service robot" is less well-defined. The International Federation of Robotics (IFR) has proposed a tentative definition, "A service robot is a robot which operates semi- or fully autonomously to perform services useful to the well-being of humans and equipment, excluding manufacturing operations."</English>
-		<Polish>Robot - mechaniczne urządzenie wykonujące automatycznie pewne zadania. Działanie robota może być sterowane przez człowieka, przez wprowadzony wcześniej program, bądź przez zbiór ogólnych reguł, które zostają przełożone na działanie robota przy pomocy technik sztucznej inteligencji. Roboty często zastępują człowieka przy monotonnych, złożonych z powtarzających się kroków czynnościach, które mogą wykonywać znacznie szybciej od ludzi. Domeną ich zastosowań są też te zadania, które są niebezpieczne dla człowieka, na przykład związane z manipulacją szkodliwymi dla zdrowia substancjami lub przebywaniem w nieprzyjaznym środowisku.</Polish>
+		<Polish>Robot - mechaniczne urz&#185;dzenie wykonuj&#185;ce automatycznie pewne zadania. Dzia&#179;anie robota mo&#191;e by&#230; sterowane przez cz&#179;owieka, przez wprowadzony wcze&#156;niej program, b&#185;d&#159; przez zbi&#243;r og&#243;lnych regu&#179;, kt&#243;re zostaj&#185; prze&#179;o&#191;one na dzia&#179;anie robota przy pomocy technik sztucznej inteligencji. Roboty cz&#234;sto zast&#234;puj&#185; cz&#179;owieka przy monotonnych, z&#179;o&#191;onych z powtarzaj&#185;cych si&#234; krok&#243;w czynno&#156;ciach, kt&#243;re mog&#185; wykonywa&#230; znacznie szybciej od ludzi. Domen&#185; ich zastosowa&#241; s&#185; te&#191; te zadania, kt&#243;re s&#185; niebezpieczne dla cz&#179;owieka, na przyk&#179;ad zwi&#185;zane z manipulacj&#185; szkodliwymi dla zdrowia substancjami lub przebywaniem w nieprzyjaznym &#156;rodowisku.</Polish>
 		<Russian>Ñåðâèñíûå ðîáîòû ïîìîãàþò ëþäÿì, êàê ïðàâèëî, âûïîëíÿÿ çàäàíèÿ, ïî î÷èñòêå, óáîðêå, äèñòàíöèîííûì, îïàñíûì îïåðàöèÿì èëè ðóòèííîé ðàáîòîé, âðîäå äîìîõîçÿéñòâà. Îíè îáû÷íî ÿâëÿþòñÿ àâòîíîìíûìè è/èëè ïðîðàììèðóåìûå â ñèñòåìå óïðàâëåíèÿ, ñ âîçìîæíîñòüþ ðó÷íîé ðåãóëèðîâêè ïàðàìåòðîâ. Ïîíÿòèå "ñåðâîðîáîò" ÿâëÿåòñÿ ìåíåå ÷åòêî îïðåäåëåííûì. Ìåæäóíàðîäíàÿ ôåäåðàöèÿ ðîáîòîòåõíèêè (ÌÔÐ) ïðåäëîæèëà ïðåäâàðèòåëüíîå îïðåäåëåíèå, "ñåðâîðîáîò - ýòî ðîáîò, êîòîðûé ðàáîòàåò â ïîëóàâòîìàòè÷åñêîì ðåæèìå èëè ïîëíîñòüþ àâòîíîìíî îêàçûâàåò óñëóãè, ïîëåçíûå äëÿ áëàãîñîñòîÿíèÿ ëþäåé è îáîðóäîâàíèÿ, áåç ó÷åòà ïðîèçâîäñòâåííûõ îïåðàöèé."</Russian>
 	</TEXT>
 	<TEXT>
@@ -8178,7 +8178,7 @@
 		<Tag>TXT_KEY_BONUS_SHANG_JADE_RITUAL_ITEMS_PEDIA</Tag>
 		<English>Used in religion and government rituals. Also used as burial goods.</English>
 		<French>Utilisés pour les rituels religieux. Ces objets sont également enterrés avec les morts.</French>
-		<Polish>Używane w religii i rytuałach. Stosowany również jako dobra pochówku.</Polish>
+		<Polish>U&#191;ywane w religii i rytua&#179;ach. Stosowany r&#243;wnie&#191; jako dobra poch&#243;wku.</Polish>
 		<Russian>Используются в религиозных и государственных ритуалах. Также используются в качестве погребального инвентаря.</Russian>
 	</TEXT>
 	<TEXT>
@@ -8214,7 +8214,7 @@
 		<Tag>TXT_KEY_BONUS_SHELLFISH_PEDIA</Tag>
 		<English>Shellfish is a culinary and fisheries term for exoskeleton-bearing aquatic invertebrates used as food, including various species of molluscs, crustaceans, and echinoderms.</English>
 		<Italian>Frutto di mare è il nome usato per indicare gli animali invertebrati acquatici dotati di esoscheletro, tra cui ci sono varie specie di molluschi, crostacei ed echinodermi.</Italian>
-		<Polish>Skorupiaki (Crustacea) - podtyp stawonogów, w większości wodnych. Wiele gatunków wchodzi w skład planktonu. Znanych jest ponad 50 tysięcy gatunków. Badaniem skorupiaków zajmuje się karcynologia.</Polish>
+		<Polish>Skorupiaki (Crustacea) - podtyp stawonog&#243;w, w wi&#234;kszo&#156;ci wodnych. Wiele gatunk&#243;w wchodzi w sk&#179;ad planktonu. Znanych jest ponad 50 tysi&#234;cy gatunk&#243;w. Badaniem skorupiak&#243;w zajmuje si&#234; karcynologia.</Polish>
 		<Russian>Óñòðèöû - ýòî êóëèíàðíûé òåðìèí â ðûáîëîâñòâå è îáîçíà÷åíèå âîäíûõ áåñïîçâîíî÷íûõ ñ âíåøíèì ñêåëåòîì, èñïîëüçóåìûõ â êà÷åñòâå ïèùè, â ÷èñëå êîòîðûõ ðàçëè÷íûå âèäû ìîëëþñêîâ, ðàêîîáðàçíûõ è èãëîêîæèõ.</Russian>
 	</TEXT>
 	<TEXT>
@@ -8228,7 +8228,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_SHOCKWAVE_ENGINES_PEDIA</Tag>
 		<English>A wave disk engine or wave disk generator is a type of pistonless rotary engine being developed at Michigan State University and Warsaw Institute of Technology. The engine has a spinning disk with curved blades. Once fuel and air enter the engine, the rotation of the disk creates shockwaves that compress the mixture. When ignited, the burning mixture expands, pushing against the blades, causing them to spin. The spinning of the disk itself opens and closes intake and exhaust ports. The proposed concept was called a radial internal combustion wave rotor.</English>
-		<Polish>Głównym elementem silnika o roboczej nazwie Wave Disk Engine jest rotor, którego łopatki wraz z bocznymi ściankami tworzą komory promieniście rozłożone wokół środka. Gdy rotor się obraca, mieszanka paliwowo-powietrzna dociera do komór przez centralnie umiejscowione kanały. Jednak nie udaje się jej opuścić komór przez kanały wylotowe, gdyż rotor zdąży się obrócić i wyloty zostają zablokowane przez ścianki boczne rotora. W efekcie w rotorze gwałtownie rośnie ciśnienie i dochodzi do pojawienia się fali uderzeniowej, która kompresuje mieszankę paliwowo-powietrzną. Bezpośrednio przed tym, jak fala uderzeniowa dotrze do centralnych kanałów, rotor zdąży się obrócić i zostają one zamknięte. Wówczas skompresowana mieszanka jest podpalana, a w tym czasie obrót rotora sprawia, że zostają otwarte kanały wylotowe. Dochodzi wtedy do gwałtownego wyrzutu gorących gazów, które obracają łopatki rotora, utrzymując go w ciągłym ruchu, dzięki czemu wytwarza on elektryczność.</Polish>
+		<Polish>G&#179;&#243;wnym elementem silnika o roboczej nazwie Wave Disk Engine jest rotor, kt&#243;rego &#179;opatki wraz z bocznymi &#156;ciankami tworz&#185; komory promieni&#156;cie roz&#179;o&#191;one wok&#243;&#179; &#156;rodka. Gdy rotor si&#234; obraca, mieszanka paliwowo-powietrzna dociera do kom&#243;r przez centralnie umiejscowione kana&#179;y. Jednak nie udaje si&#234; jej opu&#156;ci&#230; kom&#243;r przez kana&#179;y wylotowe, gdy&#191; rotor zd&#185;&#191;y si&#234; obr&#243;ci&#230; i wyloty zostaj&#185; zablokowane przez &#156;cianki boczne rotora. W efekcie w rotorze gwa&#179;townie ro&#156;nie ci&#156;nienie i dochodzi do pojawienia si&#234; fali uderzeniowej, kt&#243;ra kompresuje mieszank&#234; paliwowo-powietrzn&#185;. Bezpo&#156;rednio przed tym, jak fala uderzeniowa dotrze do centralnych kana&#179;&#243;w, rotor zd&#185;&#191;y si&#234; obr&#243;ci&#230; i zostaj&#185; one zamkni&#234;te. W&#243;wczas skompresowana mieszanka jest podpalana, a w tym czasie obr&#243;t rotora sprawia, &#191;e zostaj&#185; otwarte kana&#179;y wylotowe. Dochodzi wtedy do gwa&#179;townego wyrzutu gor&#185;cych gaz&#243;w, kt&#243;re obracaj&#185; &#179;opatki rotora, utrzymuj&#185;c go w ci&#185;g&#179;ym ruchu, dzi&#234;ki czemu wytwarza on elektryczno&#156;&#230;.</Polish>
 		<Russian>Двигатель с волновым диском или генератор с волновым диском - это тип бесшумного роторного двигателя, разрабатываемый в Мичиганском государственном университете и Варшавском технологическом институте. Двигатель имеет вращающийся диск с изогнутыми лопастями. Когда топливо и воздух попадают в двигатель, вращение диска создает ударные волны, сжимающие смесь. При воспламенении горящая смесь расширяется, давя на лезвия, заставляя их вращаться. Вращение самого диска открывает и закрывает впускные и выпускные отверстия. Предложенная концепция получила название ротор с радиальной волной внутреннего сгорания.</Russian>
 	</TEXT>
 	<TEXT>
@@ -8243,7 +8243,7 @@
 		<Tag>TXT_KEY_BONUS_SHOES_PEDIA</Tag>
 		<English>A shoe is an item of footwear intended to protect and comfort the human foot while doing various activities. Shoes are also used as an item of decoration.</English>
 		<Italian>Una calzatura è un qualsiasi indumento progettato per proteggere e rendere comodo il piede umano mentre compie varie attività; le scarpe sono anche usate come oggetto decorativo.</Italian>
-		<Polish>Przeznaczeniem obuwia jest ochrona stóp przed urazami ze strony podłoża i zapewnienie komfortu podczas chodzenia. W zależności od typu, obuwie pełni również dodatkowe funkcje, takie jak zabezpieczenie przed zimnem i wodą, zapewnienie odpowiedniej przyczepności na śliskich powierzchniach, ochrona przed substancjami szkodliwymi i inne. Ważną rolą obuwia, czasami wręcz dominującą, jest uzyskanie odpowiedniego efektuestetycznego w połączeniu z całym ubiorem.</Polish>
+		<Polish>Przeznaczeniem obuwia jest ochrona st&#243;p przed urazami ze strony pod&#179;o&#191;a i zapewnienie komfortu podczas chodzenia. W zale&#191;no&#156;ci od typu, obuwie pe&#179;ni r&#243;wnie&#191; dodatkowe funkcje, takie jak zabezpieczenie przed zimnem i wod&#185;, zapewnienie odpowiedniej przyczepno&#156;ci na &#156;liskich powierzchniach, ochrona przed substancjami szkodliwymi i inne. Wa&#191;n&#185; rol&#185; obuwia, czasami wr&#234;cz dominuj&#185;c&#185;, jest uzyskanie odpowiedniego efektuestetycznego w po&#179;&#185;czeniu z ca&#179;ym ubiorem.</Polish>
 		<Russian>Îáóâü ÿâëÿåòñÿ ýëåìåíòîì îäåÿíèÿ, ïðåäíàçíà÷åííàÿ äëÿ çàùèòû è êîìôîðòà ÷åëîâå÷åñêîé íîãè, âî âðåìÿ çàíÿòèé ðàçëè÷íûìè âèäàìè äåÿòåëüíîñòè. Îáóâü òàêæå èñïîëüçóþòñÿ êàê ýëåìåíò äåêîðà.</Russian>
 	</TEXT>
 	<TEXT>
@@ -8259,7 +8259,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_SHRIMP_PEDIA</Tag>
 		<English>The term shrimp is used to refer to some decapod crustaceans, although the exact animals covered can vary. Used broadly, it may cover any of the groups with elongated bodies and a primarily swimming mode of locomotion - chiefly Caridea and Dendrobranchiata. In some fields, however, the term is used more narrowly, and may be restricted to Caridea, to smaller species of either group, or to only the marine species. Under the broader definition, shrimp may be synonymous with prawn, covering stalk-eyed swimming crustaceans with long narrow muscular tails (abdomens), long whiskers (antennae) and slender legs. They swim forward by paddling with swimmerets on the underside of their abdomens. Crabs and lobsters have strong walking legs, whereas shrimp have thin fragile legs which they use primarily for perching.</English>
-		<Polish>Krewetki, krewetki właściwe (Caridea) - morskie i słodkowodne skorupiaki zaliczane do podrzędu Pleocyemata z rzędu dziesięcionogów. Zwyczajową nazwą krewetki określana jest też zaliczana do Caridea nadrodzina Palaemonoidea. Opisano około 2500 gatunków klasyfikowanych w kilkunastu nadrodzinach. Wiele z nich poławia się w celach konsumpcyjnych.</Polish>
+		<Polish>Krewetki, krewetki w&#179;a&#156;ciwe (Caridea) - morskie i s&#179;odkowodne skorupiaki zaliczane do podrz&#234;du Pleocyemata z rz&#234;du dziesi&#234;cionog&#243;w. Zwyczajow&#185; nazw&#185; krewetki okre&#156;lana jest te&#191; zaliczana do Caridea nadrodzina Palaemonoidea. Opisano oko&#179;o 2500 gatunk&#243;w klasyfikowanych w kilkunastu nadrodzinach. Wiele z nich po&#179;awia si&#234; w celach konsumpcyjnych.</Polish>
 		<Russian>Термин креветка используется для обозначения некоторых десятиногих ракообразных, хотя точные охватываемые животные могут варьироваться. В широком смысле он может охватывать любую из групп с удлиненным телом и преимущественно плавательным способом передвижения - в основном Caridea и Dendrobranchiata. Однако в некоторых областях этот термин используется более узко и может быть ограничен Caridea, более мелкими видами любой группы или только морскими видами. В более широком смысле креветка может быть синонимом креветки, покрывая стебельчатых плавающих ракообразных с длинными узкими мускулистыми хвостами (брюшками), длинными усами (антеннами) и тонкими ногами. Они плывут вперед, гребя плавниками на нижней стороне живота. У крабов и омаров сильные ходячие ноги, тогда как у креветок тонкие хрупкие ноги, которые они используют в основном для сидения.</Russian>
 	</TEXT>
 	<TEXT>
@@ -8309,14 +8309,14 @@
 		<Tag>TXT_KEY_BONUS_SILK_FIBERS</Tag>
 		<English>Silk Fibers</English>
 		<French>Fibres de soie</French>
-		<Polish>Włókna jedwabne</Polish>
+		<Polish>W&#179;&#243;kna jedwabne</Polish>
 		<Russian>Øåëêîâîå âîëîêíî</Russian>
 		<Italian>Fibra di seta</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_SILK_FIBERS_PEDIA</Tag>
 		<English>A single thread filament is too thin to use on its own so women combine many threads to produce a thicker, usable fiber. They do this by hand-reeling the threads onto a wooden spindle to produce a uniform strand of raw silk. The process takes around 40 hours to produce a half kilogram of silk.</English>
-		<Polish>Jedwab - włókno pochodzenia zwierzęcego (białkowe) uzyskiwane z kokonu jedwabnika morwowego lub jedwabnika dębowego. Swiatowa produkcja jedwabiu na poziomie ok. 50 000 ton rocznie stanowi 0,2% całej produkcjiwłókien.</Polish>
+		<Polish>Jedwab - w&#179;&#243;kno pochodzenia zwierz&#234;cego (bia&#179;kowe) uzyskiwane z kokonu jedwabnika morwowego lub jedwabnika d&#234;bowego. Swiatowa produkcja jedwabiu na poziomie ok. 50 000 ton rocznie stanowi 0,2% ca&#179;ej produkcjiw&#179;&#243;kien.</Polish>
 		<Russian>Åäèíàÿ òîí÷àéøàÿ íèòü, äëÿ èñïîëüçîâàíèÿ ñàìîé ïî ñåáå, ïîýòîìó æåíùèíàì ïðèõîäèòñÿ ñî÷åòàòü ìíîãî óòîêîâ, ÷òîáû ñîçäàòü áîëåå ïëîòíóþ ìàòåðèþ. Îíè äåëàþò ýòî ïóòåì ðó÷íîé íàìîòêè íèòè íà äåðåâÿííóþ ìàòðèöó äëÿ ïîëó÷åíèÿ ðàâíîìåðíîé íèòè øåëêà-ñûðöà. Ïðîöåññ çàíèìàåò îêîëî 40 ÷àñîâ, ÷òîáû ïðîèçâåñòè ïîëêèëî øåëêà.</Russian>
 	</TEXT>
 	<TEXT>
@@ -8389,7 +8389,7 @@
 		<Tag>TXT_KEY_BONUS_SKIS_PEDIA</Tag>
 		<English>A ski is a long, narrow, flat plank like device worn under foot, usually attached via boots that click into bindings, designed to help the wearer slide smoothly over snow. Originally intended as an aid to travel in snowy regions, they are now mainly used for recreational and sporting purposes.</English>
 		<Italian>Uno sci è una lunga tavola stretta e piatta indossata sotto al piede, legata ad esso con uno stivale fissato con degli attacchi, creata per permettere all'uomo di muoversi velocemente sulla neve. Creati come mezzo di trasporto nelle regioni nevose, vengono oggi usati per divertimento e per sport.</Italian>
-		<Polish>Narty - długie, płaskie płozy mocowane do nóg poprzez system butów i wiązań, które umożliwiają ślizganie się po powierzchni śniegu. Narty ślizgają się po powierzchni śniegu ponieważ ciepło wytworzone tarciem nart powoduje, że topi się śnieg znajdujący się bezpośrednio pod nartą, co wytwarza bardzo cienką warstwę wody na powierzchni której mogą ślizgać się narty. Specjalne smary które są używane do smarowania nart obniżają temperaturę topnienia śniegu znajdującego się w styczności z nartą, ułatwiając tworzenie warstwy wody. Narty montowane są do butów narciarskich za pomocą specjalnych wiązań.</Polish>
+		<Polish>Narty - d&#179;ugie, p&#179;askie p&#179;ozy mocowane do n&#243;g poprzez system but&#243;w i wi&#185;za&#241;, kt&#243;re umo&#191;liwiaj&#185; &#156;lizganie si&#234; po powierzchni &#156;niegu. Narty &#156;lizgaj&#185; si&#234; po powierzchni &#156;niegu poniewa&#191; ciep&#179;o wytworzone tarciem nart powoduje, &#191;e topi si&#234; &#156;nieg znajduj&#185;cy si&#234; bezpo&#156;rednio pod nart&#185;, co wytwarza bardzo cienk&#185; warstw&#234; wody na powierzchni kt&#243;rej mog&#185; &#156;lizga&#230; si&#234; narty. Specjalne smary kt&#243;re s&#185; u&#191;ywane do smarowania nart obni&#191;aj&#185; temperatur&#234; topnienia &#156;niegu znajduj&#185;cego si&#234; w styczno&#156;ci z nart&#185;, u&#179;atwiaj&#185;c tworzenie warstwy wody. Narty montowane s&#185; do but&#243;w narciarskich za pomoc&#185; specjalnych wi&#185;za&#241;.</Polish>
 		<Russian>Ëûæè - äëèííûå, óçêèå, ïëîñêèå äîùå÷êè, êîòîðûå êðåïÿòñÿ ïîä íîãè, êàê ïðàâèëî, ÷åðåç ñàïîãè, ðàçðàáîòàííûå, äëÿ âîçìîæíîñòè âëàäåëüöà ïëàâíî ñêîëüçèòü ïî ñíåãó. Ïåðâîíà÷àëüíî çàäóìûâàëîñü êàê ïîìîùü äëÿ ïîåçäêè â ñíåæíûõ ðåãèîíàõ, à ñåé÷àñ îíè â îñíîâíîì èñïîëüçóþòñÿ äëÿ ðàçâëåêàòåëüíûõ è ñïîðòèâíûõ öåëåé.</Russian>
 	</TEXT>
 	<TEXT>
@@ -8397,7 +8397,7 @@
 		<English>Slovakian</English>
 		<French>Slovaques</French>
 		<Italian>Cittadino slovacco</Italian>
-		<Polish>Słowacka</Polish>
+		<Polish>S&#179;owacka</Polish>
 		<Russian>Ñëîâàêè</Russian>
 	</TEXT>
 	<TEXT>
@@ -8420,7 +8420,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_SMART_MEDICINE_PEDIA</Tag>
 		<English>Smart Medicine, sometimes called smart drug delivery, is a method of delivering medication to a patient in a manner that increases the concentration of the medication in some parts of the body relative to others. The goal of a targeted drug delivery system is to prolong, localize, target and have a protected drug interaction with the diseased tissue. The conventional drug delivery system is the absorption of the drug across a biological membrane, whereas the targeted release system releases the drug in a dosage form. The advantages to the targeted release system is the reduction in the frequency of the dosages taken by the patient, having a more uniform effect of the drug, reduction of drug side-effects, and reduced fluctuation in circulating drug levels. The disadvantage of the system is high cost, which makes productivity more difficult and the reduced ability to adjust the dosages.</English>
-		<Polish>Lek - każda substancja, niezależnie od pochodzenia (naturalnego lub syntetycznego), nadająca się do bezpośredniego wprowadzania do organizmu w odpowiedniej postaci farmaceutycznej w celu osiągnięcia pożądanego efektu terapeutycznego, lub w celu zapobiegania chorobie, często podawana w ściśle określonej dawce. Lekiem jest substancja modyfikująca procesy fizjologiczne w taki sposób, że hamuje przyczyny lub objawy choroby, lub zapobiega jej rozwojowi. Określenie lek stosuje się też w stosunku do substancji stosowanych w celach diagnostycznych (np. metoklopramid w diagnostyce hiperprolaktynemii) oraz środków modyfikujących nie zmienione chorobowo funkcje organizmu (np. środki antykoncepcyjne).</Polish>
+		<Polish>Lek - ka&#191;da substancja, niezale&#191;nie od pochodzenia (naturalnego lub syntetycznego), nadaj&#185;ca si&#234; do bezpo&#156;redniego wprowadzania do organizmu w odpowiedniej postaci farmaceutycznej w celu osi&#185;gni&#234;cia po&#191;&#185;danego efektu terapeutycznego, lub w celu zapobiegania chorobie, cz&#234;sto podawana w &#156;ci&#156;le okre&#156;lonej dawce. Lekiem jest substancja modyfikuj&#185;ca procesy fizjologiczne w taki spos&#243;b, &#191;e hamuje przyczyny lub objawy choroby, lub zapobiega jej rozwojowi. Okre&#156;lenie lek stosuje si&#234; te&#191; w stosunku do substancji stosowanych w celach diagnostycznych (np. metoklopramid w diagnostyce hiperprolaktynemii) oraz &#156;rodk&#243;w modyfikuj&#185;cych nie zmienione chorobowo funkcje organizmu (np. &#156;rodki antykoncepcyjne).</Polish>
 		<Russian>Умные медикаменты подразумевают под собой совокупность методов доставки лечебных препаратов пациенту таким образом, чтобы концентрация лекарства в одних частях тела увеличивалась по сравнению с другими. Целью системы адресной доставки лекарственного средства является продление, локализация, нацеливание и обеспечение защищенного взаимодействия лекарственного средства с пораженной тканью. Обычная система доставки лекарственного средства представляет собой абсорбцию лекарственного средства через биологическую мембрану, тогда как система направленного высвобождения высвобождает лекарство в лекарственной форме. Преимущества системы нацеленного высвобождения заключаются в уменьшении частоты приема пациентом доз, более равномерном действии лекарства, уменьшении побочных эффектов лекарства и уменьшении колебаний уровней циркулирующего лекарства. Недостатком системы является высокая стоимость, затрудняющая производительность, и ограниченная возможность регулировки дозировок.</Russian>
 	</TEXT>
 	<TEXT>
@@ -8428,13 +8428,13 @@
 		<English>Soap</English>
 		<French>Savon</French>
 		<Italian>Sapone</Italian>
-		<Polish>Mydło</Polish>
+		<Polish>Myd&#179;o</Polish>
 		<Russian>Ìûëî</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_SOAP_PEDIA</Tag>
 		<English>In chemistry, soap is a salt of a fatty acid. Soaps are mainly used as surfactants for washing, bathing, and cleaning, but they are also used in textile spinning and are important components of lubricants. Soaps for cleansing are obtained by treating vegetable or animal oils and fats with a strongly alkaline solution. Fats and oils are composed of triglycerides; three molecules of fatty acids are attached to a single molecule of glycerol. The alkaline solution, which is often called lye (although the term "lye soap" refers almost exclusively to soaps made with sodium hydroxide), brings about a chemical reaction known as saponification. In saponification, the fats are first hydrolyzed into free fatty acids, which then combine with the alkali to form crude soap. Glycerol (glycerine) is liberated and is either left in or washed out and recovered as a useful byproduct, depending on the process employed.</English>
-		<Polish>W chemii, mydło jest solą kwasu tłuszczowego. Mydła są głównie stosowane jako środki powierzchniowo czynne do mycia, mycia i czyszczenia, ale są również stosowane w przędzenie włókien i są ważnymi składnikami środków smarujących. Mydła do oczyszczania uzyskuje się, traktując roślinne lub zwierzęce tłuszcze i oleje z silnie alkalicznego roztworu. Tłuszcze i oleje składają się z triglicerydów; trzy cząsteczki kwasów tłuszczowych są dołączone do jednej cząsteczki gliceryny.Alkaliczny roztwór, który jest często nazywany ług (choć określenie "ług mydło" odnosi się prawie wyłącznie z mydła wykonane z wodorotlenkiem sodu), doprowadza do reakcji chemicznej zwanej zmydlania. W zmydleniu tłuszcze najpierw hydrolizuje się do wolnych kwasów tłuszczowych, które następnie łączą się z zasadą z wytworzeniem surowego mydła. Glicerol (gliceryna), uwalnia się i jest albo w lewo lub wypłukiwane i odzyskiwane w postaci użytecznego produktu ubocznego, w zależności od procesu stosowanego.</Polish>
+		<Polish>W chemii, myd&#179;o jest sol&#185; kwasu t&#179;uszczowego. Myd&#179;a s&#185; g&#179;&#243;wnie stosowane jako &#156;rodki powierzchniowo czynne do mycia, mycia i czyszczenia, ale s&#185; r&#243;wnie&#191; stosowane w prz&#234;dzenie w&#179;&#243;kien i s&#185; wa&#191;nymi sk&#179;adnikami &#156;rodk&#243;w smaruj&#185;cych. Myd&#179;a do oczyszczania uzyskuje si&#234;, traktuj&#185;c ro&#156;linne lub zwierz&#234;ce t&#179;uszcze i oleje z silnie alkalicznego roztworu. T&#179;uszcze i oleje sk&#179;adaj&#185; si&#234; z trigliceryd&#243;w; trzy cz&#185;steczki kwas&#243;w t&#179;uszczowych s&#185; do&#179;&#185;czone do jednej cz&#185;steczki gliceryny.Alkaliczny roztw&#243;r, kt&#243;ry jest cz&#234;sto nazywany &#179;ug (cho&#230; okre&#156;lenie "&#179;ug myd&#179;o" odnosi si&#234; prawie wy&#179;&#185;cznie z myd&#179;a wykonane z wodorotlenkiem sodu), doprowadza do reakcji chemicznej zwanej zmydlania. W zmydleniu t&#179;uszcze najpierw hydrolizuje si&#234; do wolnych kwas&#243;w t&#179;uszczowych, kt&#243;re nast&#234;pnie &#179;&#185;cz&#185; si&#234; z zasad&#185; z wytworzeniem surowego myd&#179;a. Glicerol (gliceryna), uwalnia si&#234; i jest albo w lewo lub wyp&#179;ukiwane i odzyskiwane w postaci u&#191;ytecznego produktu ubocznego, w zale&#191;no&#156;ci od procesu stosowanego.</Polish>
 		<Russian>Â õèìèè ìûëî - ýòî ñîëè æèðíûõ êèñëîò. Ìûëî â îñíîâíîì èñïîëüçóåòñÿ â êà÷åñòâå ïîâåðõíîñòíî-àêòèâíîãî âåùåñòâà äëÿ ìûòüÿ, êóïàíèÿ è óáîðêè, íî îíî òàêæå èñïîëüçóåòñÿ â òåêñòèëüíîì äåëå è ÿâëÿåòñÿ âàæíûì êîìïîíåíòàì â ñìàçî÷íûõ ìàòåðèàëàõ. Õîçÿéñòâåííîå ìûëî ïîëó÷àåòñÿ ïóòåì îáðàáîòêè ðàñòèòåëüíûõ èëè æèâîòíûõ ìàñåë è æèðîâ ñ ñèëüíî ùåëî÷íîé ðàñòâîð. Æèðû è ìàñëà ñîñòîÿò èç òðèãëèöåðèäîâ; òðè ìîëåêóëû æèðíûõ êèñëîò, ïðèñîåäèíåííûõ ê îäíîé ìîëåêóëå ãëèöåðèíà. Ùåëî÷íîé ðàñòâîð, êîòîðûé ÷àñòî íàçûâàþò ùåëî÷üþ (õîòÿ òåðìèí "ùåëî÷íîå ìûëî" ññûëàåòñÿ ïî÷òè èñêëþ÷èòåëüíî íà ìûëî ñäåëàíîå èç ãèäðîêñèäîì íàòðèÿ), ïðèâîäèò ê õèìè÷åñêîé ðåàêöèè, èçâåñòíîé êàê îìûëåíèå. Ïðè îìûëåíèè, æèðû ñíà÷àëà ãèäðîëèçóþòñÿ â ñâîáîäíûå æèðíûå êèñëîòû, êîòîðûå çàòåì ñîâìåùàþòñÿ ñ ùåëî÷üþ â âèäå ñûðîãî ìûëà. Ãëèöåðîë (ãëèöåðèí) âûñâîáîæäàåòñÿ è ëèáî îñòàåòñÿ èëè âûìûâàåòñ è âîññòàíîâëèâàåòñÿ â êà÷åñòâå ïîëåçíîãî ïîáî÷íîãî ïðîäóêòà, â çàâèñèìîñòè îò ïðîõîäÿùåãî ïðîöåññà.</Russian>
 	</TEXT>
 	<TEXT>
@@ -8443,7 +8443,7 @@
 		<French>Sodas</French>
 		<German>Erfrischungsgetränk</German>
 		<Italian>Bibita analcolica</Italian>
-		<Polish>Napój bezalkoholowy</Polish>
+		<Polish>Nap&#243;j bezalkoholowy</Polish>
 		<Russian>Ñîäîâàÿ</Russian>
 	</TEXT>
 	<TEXT>
@@ -8471,7 +8471,7 @@
 		<English>South African</English>
 		<French>Sud-africain</French>
 		<Italian>Cittadino sudafricano</Italian>
-		<Polish>Południowa Afryka</Polish>
+		<Polish>Po&#179;udniowa Afryka</Polish>
 		<Russian>Þæíîàôðèêàíöû</Russian>
 	</TEXT>
 	<TEXT>
@@ -8487,7 +8487,7 @@
 		<English>Soylent Green</English>
 		<French>Soylent vert</French>
 		<Italian>Soylent verde</Italian>
-		<Polish>Zielona pożywka</Polish>
+		<Polish>Zielona po&#191;ywka</Polish>
 		<Russian>Çåëåíûé ñîéëåíò</Russian>
 	</TEXT>
 	<TEXT>
@@ -8511,7 +8511,7 @@
 		<English>Spanish</English>
 		<French>Espagnol</French>
 		<Italian>Cittadino spagnolo</Italian>
-		<Polish>Hiszpańska</Polish>
+		<Polish>Hiszpa&#241;ska</Polish>
 		<Russian>Èñïàíöû</Russian>
 	</TEXT>
 	<TEXT>
@@ -8519,7 +8519,7 @@
 		<English>Spartan</English>
 		<French>Spartiate</French>
 		<Italian>Cittadino spartano</Italian>
-		<Polish>Spartańska</Polish>
+		<Polish>Sparta&#241;ska</Polish>
 		<Russian>Ñïàðòàíöû</Russian>
 	</TEXT>
 	<TEXT>
@@ -8551,13 +8551,13 @@
 		<French>Éponges</French>
 		<German>Schwämme</German>
 		<Italian>Spugna</Italian>
-		<Polish>Gąbki</Polish>
+		<Polish>G&#185;bki</Polish>
 		<Russian>Ãóáêè</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_SPONGES_PEDIA</Tag>
 		<English>Sponges are animals of the phylum Porifera (meaning "pore bearer"). They are multicellular organisms which have bodies full of pores and channels allowing water to circulate through them, consisting of jelly-like mesohyl sandwiched between two thin layers of cells. Sponges have unspecialized cells that can transform into other types and which often migrate between the main cell layers and the mesohyl in the process. Sponges do not have nervous, digestive or circulatory systems. Instead, most rely on maintaining a constant water flow through their bodies to obtain food and oxygen and to remove wastes.</English>
-		<Polish>Gąbki są to zwierzęta z gromady Porifera (czyli "porów nośnika"). Są to organizmy wielokomórkowe, które mają pełne ciał kanałów umożliwiających porów i cyrkulację wody w nich, składający się z galaretowatej mesohyl umieszczonej pomiędzy dwoma cienkimi warstwami komórek. Gąbki niewyspecjalizowanych komórek, które można przekształcić do innych typów i które często migrują pomiędzy głównymi warstw komórek i mesohyl procesu. Gąbki nie mają nerwowego, pokarmowego lub układu krążenia. Zamiast tego, w większości opierają się na utrzymanie stałego przepływu wody przez ich ciała, aby zdobyć żywność i tlen i usunięcia odpadów.</Polish>
+		<Polish>G&#185;bki s&#185; to zwierz&#234;ta z gromady Porifera (czyli "por&#243;w no&#156;nika"). S&#185; to organizmy wielokom&#243;rkowe, kt&#243;re maj&#185; pe&#179;ne cia&#179; kana&#179;&#243;w umo&#191;liwiaj&#185;cych por&#243;w i cyrkulacj&#234; wody w nich, sk&#179;adaj&#185;cy si&#234; z galaretowatej mesohyl umieszczonej pomi&#234;dzy dwoma cienkimi warstwami kom&#243;rek. G&#185;bki niewyspecjalizowanych kom&#243;rek, kt&#243;re mo&#191;na przekszta&#179;ci&#230; do innych typ&#243;w i kt&#243;re cz&#234;sto migruj&#185; pomi&#234;dzy g&#179;&#243;wnymi warstw kom&#243;rek i mesohyl procesu. G&#185;bki nie maj&#185; nerwowego, pokarmowego lub uk&#179;adu kr&#185;&#191;enia. Zamiast tego, w wi&#234;kszo&#156;ci opieraj&#185; si&#234; na utrzymanie sta&#179;ego przep&#179;ywu wody przez ich cia&#179;a, aby zdoby&#230; &#191;ywno&#156;&#230; i tlen i usuni&#234;cia odpad&#243;w.</Polish>
 		<Russian>Ãóáêè ÿâëÿþòñÿ æèâîòíûìè òèïà Porifera (÷òî îçíà÷àåò "ïîðîíîñèòåëü"). Îíè ìíîãîêëåòî÷íûå îðãàíèçìû, êîòîðûå èìåþò îðãàíû ïîëîí ïîðû è êàíàëû, ïîçâîëÿÿ âîäå öèðêóëèðîâàòü ÷åðåç íèõ, ñîñòîÿùèå èç æåëåîáðàçíîé ìåìáðàíû çàæàòîé ìåæäó äâóìÿ òîíêèìè ñëîÿìè êëåòîê. Ãóáêè èìåþò íåñïåöèàëèçèðîâàííûå êëåòêè, êîòîðûå ìîãóò ïðåâðàùàòüñÿ â äðóãèå âèäû è êîòîðûå ÷àñòî ìèãðèðóþò ìåæäó îñíîâíûìè ñëîÿìè êëåòîê è ìåìáðàíîé â ïðîöåññå. Ãóáêè íå èìåþò íåðâíîé, ïèùåâàðèòåëüíîé èëè êðîâåíîñíîé ñèñòåìû. Âìåñòî ýòîãî, áîëüøèíñòâî ïîëàãàåòñÿ íà ïîääåðæàíèå ïîñòîÿííîãî ïðîöåæèâàíèÿ âîäû ÷åðåç ñâîè îðãàíû, ÷òîáû ïîëó÷àòü ïèòàíèå è êèñëîðîä è óäàëåíèå îòõîäîâ.</Russian>
 	</TEXT>
 	<TEXT>
@@ -8578,7 +8578,7 @@
 		<Tag>TXT_KEY_BONUS_SQUASH_PEDIA</Tag>
 		<English>Squashes generally refer to four species of the genus Cucurbita native to Mexico and Central America, also called marrows depending on variety or the nationality of the speaker. These species include C. maxima (hubbard squash, buttercup squash, some varieties of prize pumpkins, such as Big Max), C. mixta (cushaw squash), C. moschata (butternut squash), and C. pepo (most pumpkins, acorn squash, summer squash, zucchini). In North America, squash is loosely grouped into summer squash or winter squash, depending on whether they are harvested as immature fruit (summer squash) or mature fruit (autumn squash or winter squash). Gourds are from the same family as squashes. Well known types of squash include the pumpkin and zucchini. Giant squash are derived from Cucurbita maxima and are routinely grown to weights nearing those of giant pumpkins.</English>
 		<German>[COLOR_HIGHLIGHT_TEXT]Zucchini[COLOR_REVERT] (Cucurbita pepo subsp. pepo convar. giromontiina), in der Deutschschweiz Zucchetti, gehören zur Familie der Kürbisgewächse (Cucurbitaceae). Die Pflanzen sehen Kürbispflanzen sehr ähnlich, haben aber deutlich kleinere Blätter und ranken nicht so stark. Der Farbton der Zucchini kann von weiß über gelb bis hin zu dunkelgrün reichen. Es gibt einfarbige und gestreifte Früchte. Es handelt sich um eine europäische Züchtung aus dem amerikanischen Gartenkürbis, die seit dem Ende des 17. Jahrhunderts bekannt ist. Wie am Namen leicht erkennbar, wurden Zucchini zuerst in Italien vermarktet. Dort wird auch heute noch am 7. Mai der Tag der Zucchini gefeiert.</German>
-		<Polish>Dynie na ogół odnoszą się do czterech gatunków z rodzaju Cucurbita native do Meksyku i Ameryki Srodkowej, zwany także dynie w zależności od odmiany i obywatelstwa głośnika. Gatunki te obejmują C. maxima (Hubbard squash, squash, kilka jaskier odmian dyni nagród, takich jak Big Max), C (cushaw squash mixta), C. moschata (piżmowa) i C. pepo (większość dyni, Żołądź squash, squash lato, cukinia). W Ameryce Północnej, squash jest luźno zgrupowane w dyni lub dyni olbrzymiej, w zależności od tego, czy są one zbierane jako niedojrzałe owoce (latem) lub squasha owoców dojrzałych (squash jesieni lub zimą squash). Tykwy pochodzą z tej samej rodziny co kabaczki. Dobrze znane typy squash to dyni i cukinii. Giant squash pochodzą z dynia olbrzymia i są rutynowo wzrosła do ciężarów zbliża tych olbrzymich dyni.</Polish>
+		<Polish>Dynie na og&#243;&#179; odnosz&#185; si&#234; do czterech gatunk&#243;w z rodzaju Cucurbita native do Meksyku i Ameryki Srodkowej, zwany tak&#191;e dynie w zale&#191;no&#156;ci od odmiany i obywatelstwa g&#179;o&#156;nika. Gatunki te obejmuj&#185; C. maxima (Hubbard squash, squash, kilka jaskier odmian dyni nagr&#243;d, takich jak Big Max), C (cushaw squash mixta), C. moschata (pi&#191;mowa) i C. pepo (wi&#234;kszo&#156;&#230; dyni, &#175;o&#179;&#185;d&#159; squash, squash lato, cukinia). W Ameryce P&#243;&#179;nocnej, squash jest lu&#159;no zgrupowane w dyni lub dyni olbrzymiej, w zale&#191;no&#156;ci od tego, czy s&#185; one zbierane jako niedojrza&#179;e owoce (latem) lub squasha owoc&#243;w dojrza&#179;ych (squash jesieni lub zim&#185; squash). Tykwy pochodz&#185; z tej samej rodziny co kabaczki. Dobrze znane typy squash to dyni i cukinii. Giant squash pochodz&#185; z dynia olbrzymia i s&#185; rutynowo wzros&#179;a do ci&#234;&#191;ar&#243;w zbli&#191;a tych olbrzymich dyni.</Polish>
 		<Russian>Кабачки обычно относятся к четырем видам рода Cucurbita, произрастающим в Мексике и Центральной Америке, также называемым кабачками в зависимости от разновидности или национальности говорящего. К этим видам относятся C. maxima (тыква хаббард, тыква лютик, некоторые разновидности призовых тыкв, такие как Big Max), C. mixta (тыква кушоу), C. moschata (тыква мускатная) и C. pepo (большинство тыкв, желудь кабачки, кабачки летние, кабачки). В Северной Америке кабачки условно подразделяются на летние или зимние, в зависимости от того, собирают ли они незрелые плоды (летние кабачки) или зрелые (осенние или зимние). Тыквы принадлежат к той же семье, что и кабачки. Хорошо известные виды кабачков включают тыкву и кабачки. Гигантские тыквы получают из Cucurbita maxima и обычно выращивают до веса, близкого к весу гигантских тыкв.</Russian>
 	</TEXT>
 	<TEXT>
@@ -8642,7 +8642,7 @@
 		</German>
 		<Italian>Pietra</Italian>
 		<Spanish>Piedra</Spanish>
-		<Polish>Kamień</Polish>
+		<Polish>Kamie&#241;</Polish>
 		<Russian>Êàìåíü</Russian>
 	</TEXT>
 	<TEXT>
@@ -8664,7 +8664,7 @@
 			<Plural>1</Plural>
 		</German>
 		<Italian>Utensile in pietra</Italian>
-		<Polish>Narzędzia kamienne</Polish>
+		<Polish>Narz&#234;dzia kamienne</Polish>
 		<Russian>Êàìåííûå îðóäèÿ</Russian>
 	</TEXT>
 	<TEXT>
@@ -8672,7 +8672,7 @@
 		<English>A stone tool is, in the most general sense, any tool made either partially or entirely out of stone. Although stone tool-dependent societies and cultures still exist today, most stone tools are associated with prehistoric, particularly Stone Age cultures that have become extinct.</English>
 		<German>Als [COLOR_HIGHLIGHT_TEXT]Steinwerkzeuge[COLOR_REVERT] bezeichnen Archäologen alle von Menschen oder ihren Vorfahren bearbeiteten Steine, die als Werkzeuge genutzt wurden. Dazu zählen die ersten einfachsten Geröllgeräte, die vielseitigen Faustkeile und die Stichel und Mikrolithen des Jungpaläolithikums genauso wie Mahlsteine, Zündsteine und Mörser, die auch heute noch Verwendung finden.</German>
 		<Italian>Un utensile in pietra è un qualsiasi utensile fatto parzialmente o interamente in pietra. Anche se esistono ancora culture dipendenti dagli utensili in pietra, la maggior parte di essi sono associati all'era preistorica.</Italian>
-		<Polish>Narzędzie kamienne, w najbardziej ogólnym sensie, jakieś narzędzie, wykonane w całości lub częściowo z kamienia. Chociaż kamienne narzędzie społeczeństw i kultur nadal istnieją zależne od dziś, większość narzędzi kamiennych są związane z prehistorycznych kultur, zwłaszcza z epoki kamienia, które wymarły.</Polish>
+		<Polish>Narz&#234;dzie kamienne, w najbardziej og&#243;lnym sensie, jakie&#156; narz&#234;dzie, wykonane w ca&#179;o&#156;ci lub cz&#234;&#156;ciowo z kamienia. Chocia&#191; kamienne narz&#234;dzie spo&#179;ecze&#241;stw i kultur nadal istniej&#185; zale&#191;ne od dzi&#156;, wi&#234;kszo&#156;&#230; narz&#234;dzi kamiennych s&#185; zwi&#185;zane z prehistorycznych kultur, zw&#179;aszcza z epoki kamienia, kt&#243;re wymar&#179;y.</Polish>
 		<Russian>Êàìåííûå îðóäèÿ - ýòî, â ñàìîì îáùåì ñìûñëå, ëþáûå èíñòðóìåíòû èçãîòîâëåí ÷àñòè÷íî èëè ïîëíîñòüþ èç êàìíÿ. Õîòÿ çàâèñèìûå îáùåñòâà è êóëüòóðû îò êàìåííûõ îðóäèé ïî-ïðåæíåìó ñóùåñòâóþò íà ñåãîäíÿøíèé äåíü, áîëüøèíñòâî êàìåííûõ îðóäèé, ñâÿçàíû ñ äîèñòîðè÷åñêîé ýïîõîé, îñîáåííî ñ êóëüòóðàìè ïàëåîëèòà è íåîëèòà, êîòîðûå ïðåêðàòèëè ñâîå ñóùåñòâîâàíèå.</Russian>
 	</TEXT>
 	<TEXT>
@@ -8680,13 +8680,13 @@
 		<English>Straw</English>
 		<French>Paille</French>
 		<Italian>Paglia</Italian>
-		<Polish>Słoma</Polish>
+		<Polish>S&#179;oma</Polish>
 		<Russian>Ñîëîìà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_STRAW_PEDIA</Tag>
 		<English>Straw is an agricultural by-product, the dry stalks of cereal plants, after the grain and chaff have been removed. Straw makes up about half of the yield of cereal crops such as barley, oats, rice, rye and wheat. It has many uses, including fuel, livestock bedding and fodder, thatching and basket-making. It is usually gathered and stored in a straw bale, which is a bundle of straw tightly bound with twine or wire. Bales may be square, rectangular, or round, depending on the type of baler used.</English>
-		<Polish>Słoma to uboczny produkt rolny, suche łodygi zbóż, ziarna i po plewy zostały usunięte. Słoma stanowi około połowy wydajności upraw zbóż takich jak jęczmień, owies, ryż, żyto i pszenica. Ma wiele zastosowań, w tym paliwa, ściółkę dla zwierząt gospodarskich i pasz, strzechy i koszyk decyzji. Jest to zwykle gromadzone i zapisywane w beli słomy, który jest wiązka słomy ściśle związana ze sznurka lub drutu. Bele może być kwadratowy, prostokątny, okrągły lub, w zależności od rodzaju prasy używany.</Polish>
+		<Polish>S&#179;oma to uboczny produkt rolny, suche &#179;odygi zb&#243;&#191;, ziarna i po plewy zosta&#179;y usuni&#234;te. S&#179;oma stanowi oko&#179;o po&#179;owy wydajno&#156;ci upraw zb&#243;&#191; takich jak j&#234;czmie&#241;, owies, ry&#191;, &#191;yto i pszenica. Ma wiele zastosowa&#241;, w tym paliwa, &#156;ci&#243;&#179;k&#234; dla zwierz&#185;t gospodarskich i pasz, strzechy i koszyk decyzji. Jest to zwykle gromadzone i zapisywane w beli s&#179;omy, kt&#243;ry jest wi&#185;zka s&#179;omy &#156;ci&#156;le zwi&#185;zana ze sznurka lub drutu. Bele mo&#191;e by&#230; kwadratowy, prostok&#185;tny, okr&#185;g&#179;y lub, w zale&#191;no&#156;ci od rodzaju prasy u&#191;ywany.</Polish>
 		<Russian>Солома - это побочный продукт сельского хозяйства, сухие стебли злаковых растений после удаления зерна и соломы. Солома составляет около половины урожая таких зерновых культур, как ячмень, овес, рис, рожь и пшеница. Он имеет множество применений, в том числе топливо, подстилку и корм для скота, покрытие соломы и изготовление корзин. Обычно его собирают и хранят в тюке соломы, который представляет собой пучок соломы, плотно связанный шпагатом или проволокой. Тюки могут быть квадратными, прямоугольными или круглыми, в зависимости от типа используемого пресс-подборщика.</Russian>
 	</TEXT>
 	<TEXT>
@@ -8701,7 +8701,7 @@
 		<Tag>TXT_KEY_BONUS_STRING_INSTRUMENTS_PEDIA</Tag>
 		<English>A string instrument is a musical instrument that produces sound by means of vibrating strings.</English>
 		<Italian>Uno strumento a corde è uno strumento musicale che produce suoni facendo vibrare le corde.</Italian>
-		<Polish>Instrument strunowy instrument muzyczny jest który produkuje dźwięk za pomocą wibrujących strun.</Polish>
+		<Polish>Instrument strunowy instrument muzyczny jest kt&#243;ry produkuje d&#159;wi&#234;k za pomoc&#185; wibruj&#185;cych strun.</Polish>
 		<Russian>Ñòðóííûé èíñòðóìåíò - ýòî ìóçûêàëüíûé èíñòðóìåíò, êîòîðûé ïðîèçâîäèò çâóê ñ ïîìîùüþ âèáðèðóþùèõ ñòðóí.</Russian>
 	</TEXT>
 	<TEXT>
@@ -8748,7 +8748,7 @@
 		<Tag>TXT_KEY_BONUS_SULPHUR_PEDIA</Tag>
 		<English>Sulfur, in its native form, is a yellow crystaline solid. In nature, it can be found as the pure element or as sulfide and sulfate minerals. It is an essential element for life and is found in two amino acids. Its commercial uses are primarily in fertilizers but it is also widely used in gunpowder, matches, insecticides and fungicides. Gunpowder, whether black powder or smokeless powder, is a substance that burns very rapidly and is used as a propellant in firearms. As it burns, a subsonic deflagration wave is produced rather than the supersonic detonation wave which high explosives would produce. The first type of gunpowder was black powder. Historians of various cultures have postulated that it was invented between the seventh or ninth centuries by either the Arabs or the Chinese. It is also possible that black powder was invented by many cultures at around the same time. Regardless of origin, it was the first chemical propellant and the first explosive recorded in history. Black powder is a mix of sulphur, charcoal, and potassium or sodium nitrate, (sodium nitrate makes a less powerful compound), at a ratio of approximately 10:15:75. Historically, potassium nitrate was extracted from manure by a process superficially similar to composting. Nitre beds took about a year to produce crystallized potassium nitrate.</English>
 		<German>Schwefel wird sowohl in der chemischen als auch in der pharmazeutischen Industrie genutzt, unter anderem zur Produktion von Schwefelsäure, Farbstoffen, Insektiziden und Kunstdüngern. Schwefel findet auch bei der Herstellung von Schwarzpulver oder bei anderen Sprengstoffen Verwendung. Der pharmazeutische Nutzen von Schwefel war bereits im Altertum bekannt. Nach wie vor gibt es pharmazeutische Zubereitungen, die als Wirk- bzw. Hilfsstoff Schwefel enthalten. Schwarzpulver besteht aus einer Mischung von 75% Kaliumnitrat, 15% Holzkohle, vornehmlich aus dem Holz des Faulbaums gewonnen, und 10% Schwefel, welcher absolut säurefrei sein muss. Salpeter dient als Sauerstofflieferant, Kohlepulver als Brennstoff und Schwefel als Brennstoff und Sensibilisierer, damit es bei kleinster Berührung mit Funken zu brennen anfängt. Diese Bestandteile müssen fein zermahlen und gleichmäßig vermischt werden, wobei jeder Vorgang mehrere Stunden dauert und meistens in einer Pulvermühle geschieht. Danach wird das Gemisch in so genannte Kuchen feucht verpresst und getrocknet, die wiederum zerstoßen bzw. gekörnt werden. So erlangt man eine größere Oberfläche und Abbrandgeschwindigkeit. Das fertige Pulver wird noch getrocknet und kann dann abgefüllt bzw. verpackt werden. Es kann verhältnismäßig lange (luftdicht) gelagert werden.</German>
-		<Polish>Siarka to minerał z gromady pierwiastków rodzimych. Należy do grupy minerałów rzadkich. Siarka jako minerał jest w kolorze żółtym z odcieniami – zielonymi, czerwonymi i czarnej. Powstaje wskutek rozpadu siarkowodoru lub siarczanów (głównie gipsu). Niewielkie ilości siarki powstają w wyniku ekshalacji wulkanicznych. Używana w przemyśle: farmaceutycznym, chemicznym (do produkcji kwasu siarkowego), drzewnym, papierniczym, nawozów sztucznych.Zazwyczaj tworzy kryształy o pokroju bipiramidalnym, grubotabliczkowe. Występuje w skupieniach zbitych, ziemistych, ziarnistych, naciekowych, nerkowych. Tworzy też naskorupienia, impregnacje i zbliźniaczenia. Najładniejsze kryształy spotykane są w druzach powstałych w kawernach i szczelinach. Jest krucha, przezroczysta. Występuje w przyrodzie w trzech odmianach polformicznych m.in. siarka rodzima (sulfuryt), rosickyit. W temperaturze powyżej 95,3oC przechodzi w siarkę jednoskośną, w temperaturze powyżej 119, 3oC topi się. Łatwo elektryzuje się, jest złym przewodnikiem ciepła, pali się. Pod względem chemicznym jest dość czysta, bywa zanieczyszczona związkami organicznymi oraz mechanicznymi domieszkami kalcytu i gipsu. Niekiedy zawiera domieszkę selenu (siarka selenowa).</Polish>
+		<Polish>Siarka to minera&#179; z gromady pierwiastk&#243;w rodzimych. Nale&#191;y do grupy minera&#179;&#243;w rzadkich. Siarka jako minera&#179; jest w kolorze &#191;&#243;&#179;tym z odcieniami – zielonymi, czerwonymi i czarnej. Powstaje wskutek rozpadu siarkowodoru lub siarczan&#243;w (g&#179;&#243;wnie gipsu). Niewielkie ilo&#156;ci siarki powstaj&#185; w wyniku ekshalacji wulkanicznych. U&#191;ywana w przemy&#156;le: farmaceutycznym, chemicznym (do produkcji kwasu siarkowego), drzewnym, papierniczym, nawoz&#243;w sztucznych.Zazwyczaj tworzy kryszta&#179;y o pokroju bipiramidalnym, grubotabliczkowe. Wyst&#234;puje w skupieniach zbitych, ziemistych, ziarnistych, naciekowych, nerkowych. Tworzy te&#191; naskorupienia, impregnacje i zbli&#159;niaczenia. Naj&#179;adniejsze kryszta&#179;y spotykane s&#185; w druzach powsta&#179;ych w kawernach i szczelinach. Jest krucha, przezroczysta. Wyst&#234;puje w przyrodzie w trzech odmianach polformicznych m.in. siarka rodzima (sulfuryt), rosickyit. W temperaturze powy&#191;ej 95,3oC przechodzi w siark&#234; jednosko&#156;n&#185;, w temperaturze powy&#191;ej 119, 3oC topi si&#234;. &#163;atwo elektryzuje si&#234;, jest z&#179;ym przewodnikiem ciep&#179;a, pali si&#234;. Pod wzgl&#234;dem chemicznym jest do&#156;&#230; czysta, bywa zanieczyszczona zwi&#185;zkami organicznymi oraz mechanicznymi domieszkami kalcytu i gipsu. Niekiedy zawiera domieszk&#234; selenu (siarka selenowa).</Polish>
 		<Russian>Сера в своей природной форме представляет собой желтое кристаллическое твердое вещество. В природе он встречается в чистом виде или в виде сульфидов и сульфатов. Это незаменимый элемент для жизни, он содержится в двух аминокислотах. Его коммерческое использование в основном связано с удобрениями, но оно также широко используется в порохе, спичках, инсектицидах и фунгицидах. Порох, будь то черный порох или бездымный порох, - это вещество, которое очень быстро горит и используется в качестве топлива в огнестрельном оружии. Когда он горит, образуется дозвуковая волна дефлаграции, а не сверхзвуковая волна детонации, которую производят взрывчатые вещества. Первым типом пороха был черный порох. Историки различных культур предположили, что он был изобретен между седьмым или девятым веками либо арабами, либо китайцами. Также возможно, что черный порошок был изобретен многими культурами примерно в одно и то же время. Независимо от происхождения, это было первое химическое топливо и первое взрывчатое вещество, зарегистрированное в истории. Черный порошок представляет собой смесь серы, древесного угля и нитрата калия или натрия (нитрат натрия - менее мощное соединение) в соотношении примерно 10:15:75. Исторически сложилось так, что нитрат калия извлекался из навоза способом, внешне похожим на компостирование. Для получения кристаллизованного нитрата калия слоям селитры потребовалось около года.</Russian>
 	</TEXT>
 	<TEXT>
@@ -8887,7 +8887,7 @@
 		<Tag>TXT_KEY_BONUS_TABLETS_PEDIA</Tag>
 		<English>In the Ancient Near East, clay tablets were used as a writing medium, especially for writing in cuneiform, throughout the Bronze Age and well into the Iron Age.</English>
 		<French>Dans le Proche-Orient ancien, des tablettes d'argile ont été utilisés comme support d'écriture, en caractères cunéiformes, tout au long de l'âge du bronze et de l'âge de fer.</French>
-		<Polish>W starożytnym Bliskim Wschodzie, gliniane tabliczki były wykorzystywane jako nośnik zapisu, zwłaszcza do pisania w piśmie klinowym, w całej epoki brązu, a także w epoce żelaza.</Polish>
+		<Polish>W staro&#191;ytnym Bliskim Wschodzie, gliniane tabliczki by&#179;y wykorzystywane jako no&#156;nik zapisu, zw&#179;aszcza do pisania w pi&#156;mie klinowym, w ca&#179;ej epoki br&#185;zu, a tak&#191;e w epoce &#191;elaza.</Polish>
 		<Russian>Íà Äðåâíåì Âîñòîêå ãëèíÿíûå òàáëè÷êè èñïîëüçîâàëèñü êàê ìàòåðèàë äëÿ ïèñüìà, îñîáåííî äëÿ êëèíîïèñíûõ òåêñòîâ, íà ïðîòÿæåíèè ýïîõè Áðîíçû è Æåëåçíîãî Âåêà.</Russian>
 	</TEXT>
 	<TEXT>
@@ -8901,7 +8901,7 @@
 		<English>Tahitian</English>
 		<French>Tahitien</French>
 		<Italian>Cittadino tahitiano</Italian>
-		<Polish>Tahitańska</Polish>
+		<Polish>Tahita&#241;ska</Polish>
 		<Russian>Òàèòÿíå</Russian>
 	</TEXT>
 	<TEXT>
@@ -8914,7 +8914,7 @@
 		<Tag>TXT_KEY_BONUS_TAIWANESE</Tag>
 		<English>Taiwanese</English>
 		<French>Taiwanais</French>
-		<Polish>Tajwańska</Polish>
+		<Polish>Tajwa&#241;ska</Polish>
 		<Russian>Òàéâàíüöû</Russian>
 		<Italian>Cittadino taiwanese</Italian>
 	</TEXT>
@@ -8941,14 +8941,14 @@
 		<English>Tanks</English>
 		<French>Chars</French>
 		<Italian>Carro armato</Italian>
-		<Polish>Czołgi</Polish>
+		<Polish>Czo&#179;gi</Polish>
 		<Russian>Òàíêè</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_TANKS_PEDIA</Tag>
 		<English>A tank is a tracked, armoured fighting vehicle designed for front-line combat which combines operational mobility and tactical offensive and defensive capabilities. Firepower is normally provided by a large-calibre main gun in a rotating turret and secondary machine guns, while heavy armour and all-terrain mobility provide protection for the tank and its crew, allowing it to perform all primary tasks of the armoured troops on the battlefield.</English>
 		<Italian>Un carro armato è un veicolo cingolato da combattimento, progettato per il combattimento in prima linea; combina mobilità operazionale, offensiva tattica e capacità difensive. La potenza di fuoco è fornita da un cannone principale di grosso calibro posizionato su una torretta girevole e da molte mitragliatrici secondarie; una pesante corazza e una mobilità su tutti i terreni forniscono protezione al carro e all'equipaggio, permettendogli di svolgere i ruoli di truppe corazzate sul campo di battaglia.</Italian>
-		<Polish>Czołg - gąsienicowy wóz bojowy, przeznaczony do walki z siłami przeciwnika na krótkich i średnich dystansach za pomocą prowadzenia ognia na wprost. Ciężki pancerz i duża mobilność zapewniają czołgom przetrwanie na polu bitwy, a napęd gąsienicowy pozwala na przemieszczanie się z dużą prędkością w trudnym terenie. Czołg jest zasadniczym środkiem prowadzenia walki lądowej, zwłaszcza natarcia.</Polish>
+		<Polish>Czo&#179;g - g&#185;sienicowy w&#243;z bojowy, przeznaczony do walki z si&#179;ami przeciwnika na kr&#243;tkich i &#156;rednich dystansach za pomoc&#185; prowadzenia ognia na wprost. Ci&#234;&#191;ki pancerz i du&#191;a mobilno&#156;&#230; zapewniaj&#185; czo&#179;gom przetrwanie na polu bitwy, a nap&#234;d g&#185;sienicowy pozwala na przemieszczanie si&#234; z du&#191;&#185; pr&#234;dko&#156;ci&#185; w trudnym terenie. Czo&#179;g jest zasadniczym &#156;rodkiem prowadzenia walki l&#185;dowej, zw&#179;aszcza natarcia.</Polish>
 		<Russian>Òàíê - ýòî ãóñåíè÷íàÿ, áðîíèðîâàííàÿ áîåâàÿ ìàøèíà ïðåäíàçíà÷åííàÿ äëÿ ôðîíòàëüíîãî áîÿ, êîòîðàÿ ñî÷åòàåò â ñåáå îïåðàòèâíóþ ìîáèëüíîñòü è òàêòè÷åñêèå íàñòóïàòåëüíûå è îáîðîíèòåëüíûå âîçìîæíîñòè. Îãíåâàÿ ìîùü îáû÷íî îáåñïå÷èâàåòñÿ áîëüøèì êàëèáðîì îñíîâíîãî îðóäèÿ íà âðàùàþùåéñÿ áàøíå è âñïîìîãàòåëüíîãî ïóëåìåòà, â òî âðåìÿ êàê òÿæåëàÿ áðîíÿ, ïîäâèæíîñòü è íåïðèõîòëèâîñòü ê äîðîãàì îáåñïå÷èâàþò çàùèòó òàíêà è åãî ýêèïàæà, ÷òî ïîçâîëÿåò âûïîëíÿòü âñå îñíîâíûå çàäà÷è áðîíåòàíêîâûõ âîéñê íà ïîëå áîÿ.</Russian>
 	</TEXT>
 	<TEXT>
@@ -8962,7 +8962,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_TANNIN_PEDIA</Tag>
 		<English>A tannin is an astringent, bitter plant polyphenolic compound that binds to and precipitates proteins and various other organic compounds including amino acids and alkaloids.</English>
-		<Polish>Taniny, garbniki roślinne, garbniki naturalne (E181) - grupa organicznych związków chemicznych, pochodne fenoli, naturalnie wytwarzane przez rośliny. Masa cząsteczkowa tanin mieści się w zakresie od kilkuset do kilku tysięcy Da. Wyróżniane są taniny łatwo hydrolizujące oraz skondensowane. Pierwsza grupa to związki powstałe w wyniku polimeryzacji kwasu galusowego lub innych kwasów fenolowych oraz cukrów, zwykle glukozy. Grupa ta łatwo ulega hydrolizie kwasowej. Druga grupa ulega hydrolizie jedynie przy zastosowaniu silnych kwasów. Taniny skondensowane tworzone są przez łączenie flawonoidów. Taniny nadają roślinom cierpki, nieprzyjemny smak, wykazują też działanie toksyczne w tym powodują denaturację białek. Polimeryzowane i przechowywane są w tanosomach. W roślinie pełnią funkcję obronną odstraszając zwierzęta roślinożerne. Taniny wydzielane przez rośliny wykazują także działanie allelopatin. Zdolność denaturacji białek została wykorzystana przez człowieka w garbarstwie. Denaturacja włókien kolagenowych, obecnych w skórach zwierzęcych, powoduje, że białka te stają się trudno dostępne dla drobnoustrojów.</Polish>
+		<Polish>Taniny, garbniki ro&#156;linne, garbniki naturalne (E181) - grupa organicznych zwi&#185;zk&#243;w chemicznych, pochodne fenoli, naturalnie wytwarzane przez ro&#156;liny. Masa cz&#185;steczkowa tanin mie&#156;ci si&#234; w zakresie od kilkuset do kilku tysi&#234;cy Da. Wyr&#243;&#191;niane s&#185; taniny &#179;atwo hydrolizuj&#185;ce oraz skondensowane. Pierwsza grupa to zwi&#185;zki powsta&#179;e w wyniku polimeryzacji kwasu galusowego lub innych kwas&#243;w fenolowych oraz cukr&#243;w, zwykle glukozy. Grupa ta &#179;atwo ulega hydrolizie kwasowej. Druga grupa ulega hydrolizie jedynie przy zastosowaniu silnych kwas&#243;w. Taniny skondensowane tworzone s&#185; przez &#179;&#185;czenie flawonoid&#243;w. Taniny nadaj&#185; ro&#156;linom cierpki, nieprzyjemny smak, wykazuj&#185; te&#191; dzia&#179;anie toksyczne w tym powoduj&#185; denaturacj&#234; bia&#179;ek. Polimeryzowane i przechowywane s&#185; w tanosomach. W ro&#156;linie pe&#179;ni&#185; funkcj&#234; obronn&#185; odstraszaj&#185;c zwierz&#234;ta ro&#156;lino&#191;erne. Taniny wydzielane przez ro&#156;liny wykazuj&#185; tak&#191;e dzia&#179;anie allelopatin. Zdolno&#156;&#230; denaturacji bia&#179;ek zosta&#179;a wykorzystana przez cz&#179;owieka w garbarstwie. Denaturacja w&#179;&#243;kien kolagenowych, obecnych w sk&#243;rach zwierz&#234;cych, powoduje, &#191;e bia&#179;ka te staj&#185; si&#234; trudno dost&#234;pne dla drobnoustroj&#243;w.</Polish>
 		<Russian>Òàííèí - âÿæóùåå, ãîðüêîå ðàñòåíèå ñ ïîëèôåíîëüíûìè ñîåäèíåíèÿìè, êîòîðûå ñâÿçûâàþò è îñàæäàþò áåëêè è ðàçëè÷íûå äðóãèå îðãàíè÷åñêèå ñîåäèíåíèÿ, âêëþ÷àÿ àìèíîêèñëîòû è àëêàëîèäû.</Russian>
 	</TEXT>
 	<TEXT>
@@ -8983,7 +8983,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_TAPESTRIES_PEDIA</Tag>
 		<English>Tapestry is a form of textile art, traditionally woven on a vertical loom. However, it can also be woven on a floor loom as well. It is composed of two sets of interlaced threads, those running parallel to the length (called the warp) and those parallel to the width (called the weft); the warp threads are set up under tension on a loom, and the weft thread is passed back and forth across part or all of the warps.</English>
-		<Polish>Tapiseria (z franc. tapisserie) - ogólna nazwa określająca jednostronną tkaninę o różnorodnej dekoracji: figuralnej (np. ze scenami mitologicznymi, biblijnymi), heraldycznej bądź zwierzęco-roślinnej (tzw. werdiura), służącą do dekoracji ścian. Potocznie termin "tapiseria" stosowany jest wymiennie z nazwami: gobelin i arras.</Polish>
+		<Polish>Tapiseria (z franc. tapisserie) - og&#243;lna nazwa okre&#156;laj&#185;ca jednostronn&#185; tkanin&#234; o r&#243;&#191;norodnej dekoracji: figuralnej (np. ze scenami mitologicznymi, biblijnymi), heraldycznej b&#185;d&#159; zwierz&#234;co-ro&#156;linnej (tzw. werdiura), s&#179;u&#191;&#185;c&#185; do dekoracji &#156;cian. Potocznie termin "tapiseria" stosowany jest wymiennie z nazwami: gobelin i arras.</Polish>
 		<Russian>Ãîáåëåí - ýòî âèä òêàöêîãî èñêóññòâà, òðàäèöèîííî âûïîëíÿåìîãî íà âåðòèêàëüíîì òêàöêîì ñòàíêå. Îäíàêî, îí òàêæå ìîæåò áûòü ñïëåòåí íà ãîðèçîíòàëüíîì òêàöêîì ñòàíêå. Øïàëåðû ñîñòîÿò èç äâóõ íàáîðîâ èç ïåðåïëåòåííûõ íèòåé, òåõ, ÷òî èäóò ïàðàëëåëüíî äëèíå (òàê íàçûâàåìûé ñòåæîê) è òå, ÷òî ïàðàëëåëüíû øèðèíå (òàê íàçûâàåìûé óòîê); ïðîäîëüíûå íèòè óñòàíàâëèâàþòñÿ ïîä íàòÿæåíèåì íà òêàöêîì ñòàíêå, è óòî÷íûå íèòè ïðîïóñêàþòñÿ íàçàä è âïåðåä, ïîïåðåê ÷àñòè èëè ÷åðåç âñå ïîëîòíî.</Russian>
 	</TEXT>
 	<TEXT>
@@ -8991,14 +8991,14 @@
 		<English>Tar</English>
 		<French>Goudron</French>
 		<Italian>Pece</Italian>
-		<Polish>Smoła</Polish>
+		<Polish>Smo&#179;a</Polish>
 		<Russian>Äåãîòü</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_TARASCAN</Tag>
 		<English>Tarascan</English>
 		<Italian>Cittadino tarasco</Italian>
-		<Polish>Taraskańska</Polish>
+		<Polish>Taraska&#241;ska</Polish>
 		<Russian>Òàðàñêàíöû</Russian>
 	</TEXT>
 	<TEXT>
@@ -9012,7 +9012,7 @@
 		<English>Tasmanian</English>
 		<French>Tasmanien</French>
 		<Italian>Cittadino tasmaniano</Italian>
-		<Polish>Tasmańska</Polish>
+		<Polish>Tasma&#241;ska</Polish>
 		<Russian>Òàñìàíèéöû</Russian>
 	</TEXT>
 	<TEXT>
@@ -9055,7 +9055,7 @@
 		<Tag>TXT_KEY_BONUS_TELEVISIONS_PEDIA</Tag>
 		<English>A television set (also called a television, TV set, TV, or "Telly" (UK) ) is a device that combines a tuner, display, and speakers for the purpose of viewing television. Television sets became a popular consumer product after the Second World War, using vacuum tubes and cathode ray tube displays. The addition of color to broadcast television after 1953 further increased the popularity of television sets, and an outdoor antenna became a common feature of suburban homes. The ubiquitous television set became the display device for the first generation of home computers.</English>
 		<German>Ein Fernsehgerät oder Fernsehapparat, in den 1930er Jahren auch Ferntonkino oder das Telehor (von altgriechisch horaosehen), ist ein Gerät zum Empfang und zur Wiedergabe von Fernsehsignalen. Die Idee für einen ersten mechanischen Fernsehapparat wurde bereits 1886 von Paul Nipkow in einem Patent dargelegt. Er gilt damit als der eigentliche Erfinder des Fernsehens. Gebräuchlich für Fernsehgeräte ist auch die Bezeichnung Fernsehempfänger.</German>
-		<Polish>Telewizor (zwany także telewizor, TV, TV, lub "Telly" (UK)) jest urządzeniem, które łączy w tuner, wyświetlacz i głośniki w celu oglądania telewizji. Telewizory stał się popularnym produktem konsumpcyjnym po II wojnie światowej, za pomocą lamp próżniowych i rur wyświetlacze katodowych. Dodanie koloru do transmisji telewizji po 1953 dalszy wzrost popularności telewizorów i antena zewnętrzna stała się wspólną cechą podmiejskich domów. Wszechobecne telewizor stał wyświetlacz do pierwszej generacji komputerów domowych.</Polish>
+		<Polish>Telewizor (zwany tak&#191;e telewizor, TV, TV, lub "Telly" (UK)) jest urz&#185;dzeniem, kt&#243;re &#179;&#185;czy w tuner, wy&#156;wietlacz i g&#179;o&#156;niki w celu ogl&#185;dania telewizji. Telewizory sta&#179; si&#234; popularnym produktem konsumpcyjnym po II wojnie &#156;wiatowej, za pomoc&#185; lamp pr&#243;&#191;niowych i rur wy&#156;wietlacze katodowych. Dodanie koloru do transmisji telewizji po 1953 dalszy wzrost popularno&#156;ci telewizor&#243;w i antena zewn&#234;trzna sta&#179;a si&#234; wsp&#243;ln&#185; cech&#185; podmiejskich dom&#243;w. Wszechobecne telewizor sta&#179; wy&#156;wietlacz do pierwszej generacji komputer&#243;w domowych.</Polish>
 		<Russian>Òåëåâèçîð (òàêæå íàçûâàåìûé ÒÂ, òåëåê èëè "çîìáîÿùèê" (Ðîññèÿ) ) - ýòî óñòðîéñòâî, îáúåäèíÿþùåå òþíåð, äèñïëåé è äèíàìèêè ñ öåëüþ ïðîñìîòðà òåëåòðàíñëÿöèé. Òåëåâèçîðû ñòàëè ïîïóëÿðíûì ïîòðåáèòåëüñêèì ïðîäóêòîì ïîñëå Âòîðîé Ìèðîâîé Âîéíû, èñïîëüçóÿ âàêóóìíûå òðóáêè è ýëåêòðîííî-ëó÷åâûõ ýêðàíû. Ïîÿâëåíèÿ öâåòíîãî òåëåâèäåíèÿ ïîñëå 1953 ïðèâåëî ê äàëüíåéøåìó ðîñòó ïîïóëÿðíîñòè òåëåâèçîðîâ è ñ îé ïîðû âíåøíÿÿ àíòåííà ñòàëà õàðàêòåðíîé ÷åðòîé â çàãîðîäíûõ äîìàõ. Âåçäåñóùèé òåëåâèçîð òàêæå ñòàë ñàìûì ïåðâûì ìîíèòîðîì äëÿ ïåðâîãî ïîêîëåíèÿ äîìàøíèõ êîìïüþòåðîâ.</Russian>
 	</TEXT>
 	<TEXT>
@@ -9103,7 +9103,7 @@
 		<English>Texan</English>
 		<French>Texane</French>
 		<Italian>Cittadino texano</Italian>
-		<Polish>Teksańska</Polish>
+		<Polish>Teksa&#241;ska</Polish>
 		<Russian>Òåêñàí</Russian>
 	</TEXT>
 	<TEXT>
@@ -9142,7 +9142,7 @@
 		<English>Tibetan</English>
 		<French>Tibétain</French>
 		<Italian>Cittadino tibetano</Italian>
-		<Polish>Tybetańska</Polish>
+		<Polish>Tybeta&#241;ska</Polish>
 		<Russian>Òèáåòöû</Russian>
 	</TEXT>
 	<TEXT>
@@ -9219,7 +9219,7 @@
 		<Tag>TXT_KEY_BONUS_TIRES_PEDIA</Tag>
 		<English>The fundamental materials of modern tires are synthetic rubber, natural rubber, fabric and wire, along with other compound chemicals. They consist of a tread and a body. The tread provides traction while the body ensures support.</English>
 		<Italian>I materiali base dei pneumatici moderni sono gomma sintetica, gomma naturale, tessuto e fili, oltre ad altri prodotti chimici. Hanno un'anima e un corpo; l'anima fornisce trazione, mentre il corpo fornisce supporto.</Italian>
-		<Polish>Opona pneumatyczna - zewnętrzna część koła o przekroju otwartym, nakładana na felgę lub obręcz i wypełniana powietrzem (lub innym gazem) pod ciśnieniem. Jest elementem pojazdu kontaktującym się z podłożem, zapewnia przenoszenie ciężaru pojazdu, sił napędu, hamowania i skrętu, a także podstawową amortyzację w czasie jazdy.</Polish>
+		<Polish>Opona pneumatyczna - zewn&#234;trzna cz&#234;&#156;&#230; ko&#179;a o przekroju otwartym, nak&#179;adana na felg&#234; lub obr&#234;cz i wype&#179;niana powietrzem (lub innym gazem) pod ci&#156;nieniem. Jest elementem pojazdu kontaktuj&#185;cym si&#234; z pod&#179;o&#191;em, zapewnia przenoszenie ci&#234;&#191;aru pojazdu, si&#179; nap&#234;du, hamowania i skr&#234;tu, a tak&#191;e podstawow&#185; amortyzacj&#234; w czasie jazdy.</Polish>
 		<Russian>Îñíîâîïîëàãàþùèå ìàòåðèàëû ñîâðåìåííûõ øèí èç ñèíòåòè÷åñêîãî êàó÷óêà, íàòóðàëüíîãî êàó÷óêà, òêàíè è ïðîâîëîêè, íàðÿäó ñ äðóãèì ñîñòàâîì õèìè÷åñêèõ âåùåñòâ. Øèíû ñîñòîÿò èç ïðîòåêòîðà è êàìåðû. Ïðîòåêòîðû îáåñïå÷èâàþò ñöåïëåíèå â òî âðåìÿ êàê êàìåðà ïðèäàåò ôîðìó.</Russian>
 	</TEXT>
 	<TEXT>
@@ -9241,7 +9241,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_TITANIUM_ORE_PEDIA</Tag>
 		<English>Titanium is a precious metal. Titanium is Sometimes called the "space age" metal, as it is corrosion-resistant and has the highest strength-to-weight ratio of any metal. Titanium can be alloyed with iron, aluminium, vanadium, molybdenum, among other elements, to produce strong lightweight alloys for aerospace (jet engines, missiles, and spacecraft), military, industrial process (chemicals and petro-chemicals, desalination plants, pulp, and paper), automotive, agri-food, medical prostheses, orthopaedic implants, dental and endodontic instruments and files, dental implants, sporting goods, jewellery, mobile phones, and other applications. Titanium was discovered in England by William Gregor in 1791 and named by Martin Heinrich Klaproth for the Titans of Greek mythology.</English>
-		<Polish>Tytan jest metalem szlachetnym. Tytan jest czasami nazywany "ery kosmicznej" metalu, ponieważ jest odporny na korozję i ma najwyższy stosunek wytrzymałości do masy dowolnego metalu. Tytan może być stopiony z żelaza, aluminium, wanad, molibden, między innymi elementami, do produkcji stopów lekkich do mocnych lotniczym (silniki odrzutowe, rakiet kosmicznych), oraz, wojsko, procesów przemysłowych (chemikalia i Petro-chemicznych, zakładów odsalania wody, masy celulozowej, i papier), motoryzacyjny, rolno-spożywczy, protezy medyczne, implantów ortopedycznych, instrumenty i pliki stomatologiczne i endodontyczne, implanty stomatologiczne, artykuły sportowe, biżuteria, telefony komórkowe i inne aplikacje. Tytan został odkryty w Anglii przez Williama Gregora w 1791 roku i nazwany przez Martina Heinricha Klaproth dla tytanów z mitologii greckiej.</Polish>
+		<Polish>Tytan jest metalem szlachetnym. Tytan jest czasami nazywany "ery kosmicznej" metalu, poniewa&#191; jest odporny na korozj&#234; i ma najwy&#191;szy stosunek wytrzyma&#179;o&#156;ci do masy dowolnego metalu. Tytan mo&#191;e by&#230; stopiony z &#191;elaza, aluminium, wanad, molibden, mi&#234;dzy innymi elementami, do produkcji stop&#243;w lekkich do mocnych lotniczym (silniki odrzutowe, rakiet kosmicznych), oraz, wojsko, proces&#243;w przemys&#179;owych (chemikalia i Petro-chemicznych, zak&#179;ad&#243;w odsalania wody, masy celulozowej, i papier), motoryzacyjny, rolno-spo&#191;ywczy, protezy medyczne, implant&#243;w ortopedycznych, instrumenty i pliki stomatologiczne i endodontyczne, implanty stomatologiczne, artyku&#179;y sportowe, bi&#191;uteria, telefony kom&#243;rkowe i inne aplikacje. Tytan zosta&#179; odkryty w Anglii przez Williama Gregora w 1791 roku i nazwany przez Martina Heinricha Klaproth dla tytan&#243;w z mitologii greckiej.</Polish>
 		<Russian>Титан - чрезвычайно полезный металл. Титан иногда называют металлом «космической эры», поскольку он устойчив к коррозии и имеет самое высокое отношение прочности к весу среди всех металлов. Титан может быть легирован железом, алюминием, ванадием, молибденом и др. элементами для производства прочных легких сплавов для аэрокосмической промышленности (реактивные двигатели, ракеты и космические корабли), военной промышленности, промышленных процессов (химикаты и нефтехимия, опреснительные установки, целлюлоза, и бумага), автомобилестроение, агропищевая промышленность, медицинские протезы, ортопедические имплантаты, стоматологические и эндодонтические инструменты и файлы, зубные имплантаты, спортивные товары, ювелирные изделия, мобильные телефоны и другие приложения. Титан был открыт в Англии Уильямом Грегором в 1791 году и назван Мартином Генрихом Клапротом в честь титанов греческой мифологии.</Russian>
 	</TEXT>
 	<TEXT>
@@ -9317,13 +9317,13 @@
 		<English>Tools</English>
 		<French>Outils</French>
 		<Italian>Utensile primitivo</Italian>
-		<Polish>Narzędzia</Polish>
+		<Polish>Narz&#234;dzia</Polish>
 		<Russian>Èíñòðóìåíòû</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_TOOLS_PEDIA</Tag>
 		<English>A stone tool is, in the most general sense, any tool made either partially or entirely out of stone. Although stone tool-dependent societies and cultures still exist today, most stone tools are associated with prehistoric, particularly Stone Age cultures that have become extinct.</English>
-		<Polish>Narzędzie - przedmiot lub urządzenie służące do bezpośredniego oddziaływania w procesie pracy na przedmiot pracy stanowiące wyposażenie człowieka lub maszyny. Większość prostych narzędzi jest maszynami prostymi. Narzędzie pozwala wykonać to, czego przeciętny człowiek nie byłby w stanie wykonać "gołymi rękami", lub ułatwia to, co może wykonać sam. Narzędziami posługują się też niektóre gatunki zwierząt.</Polish>
+		<Polish>Narz&#234;dzie - przedmiot lub urz&#185;dzenie s&#179;u&#191;&#185;ce do bezpo&#156;redniego oddzia&#179;ywania w procesie pracy na przedmiot pracy stanowi&#185;ce wyposa&#191;enie cz&#179;owieka lub maszyny. Wi&#234;kszo&#156;&#230; prostych narz&#234;dzi jest maszynami prostymi. Narz&#234;dzie pozwala wykona&#230; to, czego przeci&#234;tny cz&#179;owiek nie by&#179;by w stanie wykona&#230; "go&#179;ymi r&#234;kami", lub u&#179;atwia to, co mo&#191;e wykona&#230; sam. Narz&#234;dziami pos&#179;uguj&#185; si&#234; te&#191; niekt&#243;re gatunki zwierz&#185;t.</Polish>
 		<Russian>Êàìåííûå îðóäèÿ òðóäà - ýòî, â ñàìîì îáùåì ñìûñëå, ëþáûå èíñòðóìåíòû, èçãîòîâëåííûå ÷àñòè÷íî èëè ïîëíîñòüþ èç êàìíÿ. Õîòÿ ïðèìèòèâíûå îáùåñòâà è êóëüòóðû, çàâèñèìûå îò êàìåííûõ îðóäèé, ñóùåñòâóþò è ïî ñåé äåíü, áîëüøèíñòâî êàìåííûõ îðóäèé âñå æå ñâÿçàíû ñ ïåðâîáûòíûìè êóëüòóðàìè, êîòîðûå íûíå ïðåêðàòèëè ñâîå ñóùåñòâîâàíèå.</Russian>
 	</TEXT>
 	<TEXT>
@@ -9345,7 +9345,7 @@
 		<Tag>TXT_KEY_BONUS_TOYS_PEDIA</Tag>
 		<English>A toy is any object that can be used for play. Toys are associated commonly with children and pets. Playing with toys is often thought to be an enjoyable means of training the young for life in human society. Many items are designed to serve as toys, but goods produced for other purposes can also be used.</English>
 		<Italian>Un giocattolo è qualunque oggetto che può essere usato per giocare. I giocattoli vengono generalmente associati con i bambini e gli animali da compagnia. I giocattoli sono ritenuti un ottimo mezzo educativo nella società umana; molti oggetti vengono creati come giocattoli, ma anche altri oggetti normali possono essere usati per giocare.</Italian>
-		<Polish>Zabawka - Jest przedmiotem wykorzystywanym głównie przez małe dzieci do gry i zabawy. Zabawka posiada wiele form np. lalki, samochody, domki, meble czy zwierzęta. Głównym założeniem zabawki jest szkolenie młodych ludzi do życia w społeczeństwie. Materiały z jakich wytwarzane są zabawki są odpowiednio dobierane do celów zabawki oraz wieku dziecka. Zabawki wspomagają rozwój dziecka już od pierwszych miesięcy jego życia.</Polish>
+		<Polish>Zabawka - Jest przedmiotem wykorzystywanym g&#179;&#243;wnie przez ma&#179;e dzieci do gry i zabawy. Zabawka posiada wiele form np. lalki, samochody, domki, meble czy zwierz&#234;ta. G&#179;&#243;wnym za&#179;o&#191;eniem zabawki jest szkolenie m&#179;odych ludzi do &#191;ycia w spo&#179;ecze&#241;stwie. Materia&#179;y z jakich wytwarzane s&#185; zabawki s&#185; odpowiednio dobierane do cel&#243;w zabawki oraz wieku dziecka. Zabawki wspomagaj&#185; rozw&#243;j dziecka ju&#191; od pierwszych miesi&#234;cy jego &#191;ycia.</Polish>
 		<Russian>Èãðóøêà - ýòî ëþáîé ïðåäìåò, êîòîðûé ìîæåò áûòü èñïîëüçîâàí äëÿ èãðû. Èãðóøêè ñâÿçàíû îáû÷íî ñ äåòüìè è äîìàøíèìè æèâîòíûìè. Íåðåäêî ñ÷èòàþò, ÷òî èãðóøêè - ýòî ïðèÿòíîå ñðåäñòâî â ïîäãîòîâêå ïîäðàñòàþùåãî ïîêîëåíèÿ ê æèçíè â ÷åëîâå÷åñêîì îáùåñòâå. Ìíîãèå ýëåìåíòû ïðèçâàíû ñëóæèòü â êà÷åñòâå èãðóøêè, îäíàêî è âåùè, ïðîèçâåäåííûå äëÿ äðóãèõ öåëåé, òàêæå ìîãóò èñïîëüçîâàòüñÿ â òàêîì êà÷åñòâå.</Russian>
 	</TEXT>
 	<TEXT>
@@ -9359,7 +9359,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_TRANSISTORS_PEDIA</Tag>
 		<English>A transistor is a semiconductor device used to amplify and switch electronic signals and electrical power. It is composed of semiconductor material with at least three terminals for connection to an external circuit. A voltage or current applied to one pair of the transistor's terminals changes the current through another pair of terminals. Because the controlled (output) power can be higher than the controlling (input) power, a transistor can amplify a signal. Today, some transistors are packaged individually, but many more are found embedded in integrated circuits.</English>
-		<Polish>Tranzystor - trójelektrodowy (rzadko czteroelektrodowy) półprzewodnikowy element elektroniczny, posiadający zdolność wzmacniania sygnału elektrycznego. Nazwa urządzenia wywodzi się od słów transkonduktancja(transconductance) z "półprzewodnikowym" przyrostkiem -stor jak w warystor.</Polish>
+		<Polish>Tranzystor - tr&#243;jelektrodowy (rzadko czteroelektrodowy) p&#243;&#179;przewodnikowy element elektroniczny, posiadaj&#185;cy zdolno&#156;&#230; wzmacniania sygna&#179;u elektrycznego. Nazwa urz&#185;dzenia wywodzi si&#234; od s&#179;&#243;w transkonduktancja(transconductance) z "p&#243;&#179;przewodnikowym" przyrostkiem -stor jak w warystor.</Polish>
 		<Russian>Òðàíçèñòîð - ïîëóïðîâîäíèêîâûé ïðèáîð, ïðåäíàçíà÷åííûé äëÿ óñèëåíèÿ è ïåðåêëþ÷åíèÿ ýëåêòðè÷åñêèõ ñèãíàëîâ è ýëåêòðè÷åñêîé ýíåðãèè. Îí ñîñòîèò èç ïîëóïðîâîäíèêîâîãî ìàòåðèàëà ñ, ïî êðàéíåé ìåðå, òðåìÿ êëåììàìè äëÿ ïîäêëþ÷åíèÿ ê âíåøíåé öåïè. Íàïðÿæåíèå èëè òîê, ïîäàâàåìîå íà îäíó ïàðó òðàíçèñòîðîâ òðàíñôîðìàòîðû èçìåíÿþò òîê ÷åðåç äðóãóþ ïàðó êëåìì. Ïîñêîëüêó êîíòðîëèðóåìàÿ (âûõîäíàÿ) ìîùíîñòü ìîæåò áûòü âûøå, ÷åì êîíòðîëüíàÿ (âõîäíàÿ) ìîùíîñòü, òðàíçèñòîð ñïîñîáåí óñèëèâàòü ñèãíàë. Ñåãîäíÿ, íåêîòîðûå òðàíçèñòîðû óïàêîâàíû âðó÷íóþ, íî åùå ìíîãèå ÿâëÿþòñÿ âñòðîåííûìè â èíòåãðàëüíûå ñõåìû.</Russian>
 	</TEXT>
 	<TEXT>
@@ -9386,7 +9386,7 @@
 		<English>Trojan</English>
 		<French>Troyen</French>
 		<Italian>Cittadino troiano</Italian>
-		<Polish>Trojańska</Polish>
+		<Polish>Troja&#241;ska</Polish>
 		<Russian>Òðîÿíöû</Russian>
 	</TEXT>
 	<TEXT>
@@ -9415,7 +9415,7 @@
 		<Tag>TXT_KEY_BONUS_TUNGSTEN_PEDIA</Tag>
 		<English>Tungsten is a very important metal for military applications.</English>
 		<Spanish>El tungsteno es un metal muy importante para aplicaciones militares.</Spanish>
-		<Polish>Wolfram (W, łac. wolframium) - pierwiastek chemiczny z grupy metali przejściowych w układzie okresowym. Nazwa pochodzi od wolframitu, minerału, z którego wolfram został wyodrębniony po raz pierwszy. Dawna nazwa polska tungsten pochodzi od szwedzkich słów tung ("ciężki") i sten ("kamień"); nazwa o takiej etymologii używana jest współcześnie w języku angielskim, francuskim i niektórych innych.</Polish>
+		<Polish>Wolfram (W, &#179;ac. wolframium) - pierwiastek chemiczny z grupy metali przej&#156;ciowych w uk&#179;adzie okresowym. Nazwa pochodzi od wolframitu, minera&#179;u, z kt&#243;rego wolfram zosta&#179; wyodr&#234;bniony po raz pierwszy. Dawna nazwa polska tungsten pochodzi od szwedzkich s&#179;&#243;w tung ("ci&#234;&#191;ki") i sten ("kamie&#241;"); nazwa o takiej etymologii u&#191;ywana jest wsp&#243;&#179;cze&#156;nie w j&#234;zyku angielskim, francuskim i niekt&#243;rych innych.</Polish>
 		<Russian>Вольфрам - очень важный металл для военной и аэрокосмической промышленности.</Russian>
 	</TEXT>
 	<TEXT>
@@ -9449,7 +9449,7 @@
 		<English>Turkmen</English>
 		<French>Turc</French>
 		<Italian>Cittadino turkmeno</Italian>
-		<Polish>Turkmeńska</Polish>
+		<Polish>Turkme&#241;ska</Polish>
 		<Russian>Òóðêìåíû</Russian>
 	</TEXT>
 	<TEXT>
@@ -9478,7 +9478,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_TYPEWRITERS_PEDIA</Tag>
 		<English>A typewriter is a mechanical or electromechanical machine for writing in characters similar to those produced by printer's type by means of keyboard-operated types striking a ribbon to transfer ink or carbon impressions onto the paper. Typically one character is printed per keypress. The machine prints characters by making ink impressions of type elements similar to the sorts used in movable type letterpress printing. After their invention in the 1860s, typewriters quickly became indispensable tools for practically all writing other than personal correspondence. They were widely used by professional writers, in offices, and for business correspondence in private homes. By the end of the 1980s, word processors and personal computers had largely displaced typewriters in most of these uses in the Western world, but as of the 2010s the typewriter is still prominent in many parts of the world including India.</English>
-		<Polish>Maszyna do pisania - urządzenie mechaniczne o napędzie ręcznym lub elektrycznym, posiadające klawisze, które naciskane powodują wydrukowanie metodą typograficzną określonych znaków na umieszczonym w maszynie podłożu drukowym (najczęściej papierze). Urządzenie może być również wspomagane modułem elektronicznym umożliwiającym zapamiętywanie wpisywanego tekstu.</Polish>
+		<Polish>Maszyna do pisania - urz&#185;dzenie mechaniczne o nap&#234;dzie r&#234;cznym lub elektrycznym, posiadaj&#185;ce klawisze, kt&#243;re naciskane powoduj&#185; wydrukowanie metod&#185; typograficzn&#185; okre&#156;lonych znak&#243;w na umieszczonym w maszynie pod&#179;o&#191;u drukowym (najcz&#234;&#156;ciej papierze). Urz&#185;dzenie mo&#191;e by&#230; r&#243;wnie&#191; wspomagane modu&#179;em elektronicznym umo&#191;liwiaj&#185;cym zapami&#234;tywanie wpisywanego tekstu.</Polish>
 		<Russian>Ïå÷àòíûå ìàøèíêè - ýòî ìåõàíè÷åñêèå èëè ýëåêòðîìåõàíè÷åñêèå ìàøèíû äëÿ çàïèñè â ñèìâîëû ïîõîæèå íà òå, êîòîðûå ïðîèçâîäÿòñÿ ïðèíòåðàìè ïðè ïîìîùè êëàâèàòóðû - èñïîëüçóåìûå ïî ñõåìå ïåðåíîñà ÷åðíèë ÷åðåç òðàôàðåòû íà áóìàãó. Îáû÷íî îäèí ñèìâîë ïå÷àòàåòñÿ çà îäíî íàæàòèå. Àïïàðàò ïå÷àòàåò ÷åðíèëàìè ñèìâîëû â çàâèñèìîñòè îò òèïà ýëåìåíòîâ, àíàëîãè÷íûõ ñîðòàì, èñïîëüçóåìûì â ïîäâèæíûõ ëèòåðàõ è ïå÷àòíûõ øàáëîíàõ. Ïîñëå èõ èçîáðåòåíèÿ â 1860-õ ãîäàõ, ïèøóùèå ìàøèíêè áûñòðî ñòàëè íåçàìåíèìûìè èíñòðóìåíòàìè ïðàêòè÷åñêè âî âñÿêîé ïåðåïèñêå è ëè÷íîé êîððåñïîíäåíöèè. Îíè øèðîêî èñïîëüçîâàëèñü ïðîôåññèîíàëüíûìè ïèñàòåëÿìè, â îôèñàõ, è äëÿ äåëîâîé ïåðåïèñêè â ÷àñòíûõ äîìàõ. Ê êîíöó 1980-õ ãîäîâ, ñ ðàñïðîñòðàíåíèåì òåêñòîâûõ ïðîöåññîðîâ è ïåðñîíàëüíûõ êîìïüþòåðîâ â çàïàäíîì ìèðå ïå÷àòíûå ìàøèíêè ïîñòåïåííî âûõîäèëè èç óïîòðåáëåíèÿ, íî ïî ñîñòîÿíèþ íà 2010-å ãîäû ïèøóùàÿ ìàøèíêà ïî-ïðåæíåìó íåðåäêî èñïîëüçóåòñÿ âî ìíîãèõ ÷àñòÿõ ìèðà, âêëþ÷àÿ Èíäèþ.</Russian>
 	</TEXT>
 	<TEXT>
@@ -9514,7 +9514,7 @@
 		<English>Unmanned Aircrafts</English>
 		<French>Avions sans pilotes</French>
 		<Italian>Velivolo senza pilota</Italian>
-		<Polish>Samoloty bezzałogowe</Polish>
+		<Polish>Samoloty bezza&#179;ogowe</Polish>
 		<Russian>Áåñïèëîòíèêè</Russian>
 	</TEXT>
 	<TEXT>
@@ -9692,7 +9692,7 @@
 		<Tag>TXT_KEY_BONUS_VIKING</Tag>
 		<English>Viking</English>
 		<Italian>Cittadino vichingo</Italian>
-		<Polish>Wikingów</Polish>
+		<Polish>Wiking&#243;w</Polish>
 		<Russian>Âèêèíãè</Russian>
 	</TEXT>
 	<TEXT>
@@ -9700,7 +9700,7 @@
 		<English>Vines</English>
 		<French>Lierres</French>
 		<Italian>Vite</Italian>
-		<Polish>Winorośl</Polish>
+		<Polish>Winoro&#156;l</Polish>
 		<Russian>Ëîçà</Russian>
 	</TEXT>
 	<TEXT>
@@ -9756,7 +9756,7 @@
 		<Tag>TXT_KEY_BONUS_WALRUS_PEDIA</Tag>
 		<English>The walrus (Odobenus rosmarus) is a large flippered marine mammal with a discontinuous distribution about the North Pole in the Arctic Ocean and subarctic seas of the Northern Hemisphere. The walrus is the only living species in the family Odobenidae and genus Odobenus. This species is subdivided into two subspecies: the Atlantic walrus (O. r. rosmarus) which lives in the Atlantic Ocean and the Pacific walrus (O. r. divergens) which lives in the Pacific Ocean.</English>
 		<German>Das [COLOR_HIGHLIGHT_TEXT]Walross[COLOR_REVERT] hat für den Menschen schon immer eine bedeutende Rolle gespielt. Die arktischen Völker verwendeten praktisch alle Körperteile eines erlegten Walrosses, sei es als Nahrung oder als Material zum Heizen (Tran), zum Hüttenbau (Knochen und Stoßzähne) oder zur Herstellung von Booten und Kleidung (Haut).[NEWLINE]Durch skrupellose intensive Bejagung mit modernen Waffen zur Gewinnung des Elfenbeins, aber auch durch die Verschmutzung des Lebensraums insbesondere durch Ölunglücke wurden die Populationen stark dezimiert. Nachdem vor allem die USA und Russland eine Reihe von Schutzmaßnahmen starteten, hat sich der Bestand aber wieder etwas erholt.</German>
-		<Polish>Mors (łac. Odobenus rosmarus) - gatunek dużego drapieżnego ssaka morskiego, jedyny współcześnie żyjący przedstawiciel dawniej licznej w gatunki rodziny morsowatych (Odobenidae) i jedyny gatunek z rodzaju Odobenus. Mors pełnił ważną rolę w życiu mieszkańców Arktyki, którzy polowali na niego dla mięsa, skór, tłuszczu, kłów i kości.</Polish>
+		<Polish>Mors (&#179;ac. Odobenus rosmarus) - gatunek du&#191;ego drapie&#191;nego ssaka morskiego, jedyny wsp&#243;&#179;cze&#156;nie &#191;yj&#185;cy przedstawiciel dawniej licznej w gatunki rodziny morsowatych (Odobenidae) i jedyny gatunek z rodzaju Odobenus. Mors pe&#179;ni&#179; wa&#191;n&#185; rol&#234; w &#191;yciu mieszka&#241;c&#243;w Arktyki, kt&#243;rzy polowali na niego dla mi&#234;sa, sk&#243;r, t&#179;uszczu, k&#179;&#243;w i ko&#156;ci.</Polish>
 		<Russian>В настоящее время представляет колонии тюленей, морских львов и моржей. К сожалению, система размещения ресурсов Civ IV не позволяет ограничиваться прибрежными участками.</Russian>
 	</TEXT>
 	<TEXT>
@@ -9800,7 +9800,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_WASHER_DRYER_PEDIA</Tag>
 		<English>A washing machine (laundry machine, clothes washer, or washer) is a machine to wash laundry, such as clothing and sheets. The term is mostly applied only to machines that use water as opposed to dry cleaning (which uses alternative cleaning fluids, and is performed by specialist businesses) or ultrasonic cleaners. Washing entails immersing, dipping, rubbing, or scrubbing in water usually accompanied by detergent, or bleach. The simplest machines may simply agitate clothes in water while switched on; automatic machines may fill, empty, wash, spin, and heat in a cycle. Most washing machines remove substantial amounts of water from the laundry at the end of a wash cycle, but do not completely dry it.</English>
-		<Polish>Suszarka do ubrań - współcześnie, ze względu na konstrukcję, zwane suszarką bębnową to urządzenie domowe lub profesjonalne służące do suszenia ubrań. Do takiej suszarki ubrania wkłada się do bębna, podobnie jak w pralce automatycznej, najczęściej po uprzednim ich upraniu.</Polish>
+		<Polish>Suszarka do ubra&#241; - wsp&#243;&#179;cze&#156;nie, ze wzgl&#234;du na konstrukcj&#234;, zwane suszark&#185; b&#234;bnow&#185; to urz&#185;dzenie domowe lub profesjonalne s&#179;u&#191;&#185;ce do suszenia ubra&#241;. Do takiej suszarki ubrania wk&#179;ada si&#234; do b&#234;bna, podobnie jak w pralce automatycznej, najcz&#234;&#156;ciej po uprzednim ich upraniu.</Polish>
 		<Russian>Ñòèðàëüíàÿ ìàøèíà - óñòðîéñòâî äëÿ ñòèðêè áåëüÿ, òàêîãî êàê îäåæäà è ïðîñòûíè. Íàçâàíèå â îñíîâíîì ïðèìåíÿåòñÿ òîëüêî ê ìàøèíàì, êîòîðûå èñïîëüçóþò âîäó â îòëè÷èå îò õèì÷èñòêè (êîòîðàÿ èñïîëüçóåò àëüòåðíàòèâíûé ñïîñîá î÷èñòêè æèäêîñòåé, è îñóùåñòâëÿåòñÿ ñïåöèàëèñòîì ïðåäïðèÿòèÿ) èëè óëüòðàçâóêîâûõ âàíí. Ñòèðêà âêëþ÷àåò â ñåáÿ ïîãðóæåíèå, çàìà÷èâàíèå, ñòèðàíèå â âîäå è âûæèìêó, îáû÷íî èñïîëüçóåòñÿ ñî ñòèðàëüíûì ïîðîøêîì èëè îòáåëèâàòåëåì. Ïðîñòåéøàÿ ìàøèíà ìîæåò ïðîñòî îòñòèðûâàòü îäåæäó â âîäå, ïîêà îíà âêëþ÷åíà; àâòîìàòè÷åñêèå ìàøèíû ìîãóò çàïîëíèòü ïóñòóþùóþ ñòèðàëêó, âðàùàòü, è íàãðåâàòü âîäó. Áîëüøèíñòâî ñòèðàëüíûõ ìàøèí ïîòðåáëÿþò çíà÷èòåëüíîå êîëè÷åñòâî âîäû äî êîíöà ñòèðêè, îòæèìàþò áåëüå, íî íå ïîëíîñòüþ âûñóøèâàåò åãî.</Russian>
 	</TEXT>
 	<TEXT>
@@ -9827,7 +9827,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_WATER_BOTTLES_PEDIA</Tag>
 		<English>A water bottle is a container used to hold water for consumption. This allows an individual to transport or carry the bottled water from one place to another. A water bottle is usually made of plastic, glass, or metal, and so most can be recycled.</English>
-		<Polish>Akratopega - woda podziemna, której mineralizacja wynosi 500-1000 mg/dm, a temperatura nie przekracza 20 C. W klasyfikacji wód ze względu na zawartość związków mineralnych znajduje się pomiędzy wodą słodką a mineralną. Produkowana jest w kilku rodzajach: silnie gazowana, gazowana, niegazowana, lekko gazowana oraz jako musująca Perlage.</Polish>
+		<Polish>Akratopega - woda podziemna, kt&#243;rej mineralizacja wynosi 500-1000 mg/dm, a temperatura nie przekracza 20 C. W klasyfikacji w&#243;d ze wzgl&#234;du na zawarto&#156;&#230; zwi&#185;zk&#243;w mineralnych znajduje si&#234; pomi&#234;dzy wod&#185; s&#179;odk&#185; a mineraln&#185;. Produkowana jest w kilku rodzajach: silnie gazowana, gazowana, niegazowana, lekko gazowana oraz jako musuj&#185;ca Perlage.</Polish>
 		<Russian>Áóòûëêè - ýòî êîíòåéíåðû èñïîëüçóåìûå äëÿ õðàíåíèÿ ïèòüåâîé âîäû è ïðî÷èõ æèäêîñòåé. Ýòî ïîçâîëÿåò ÷åëîâåêó ñâîáîäíî ïåðåâîçèòü âîäó â áóòûëêàõ èç îäíîãî ìåñòà â äðóãîå. Áóòûëêè îáû÷íî èçãîòàâëèâàþòñÿ èç ïëàñòèêà, ñòåêëà èëè ìåòàëëà, è ïîýòîìó áîëüøèíñòâî èç íèõ ìîãóò áûòü ïåðåðàáîòàíû.</Russian>
 	</TEXT>
 	<TEXT>
@@ -9841,7 +9841,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_WAX_PEDIA</Tag>
 		<English>The best known animal wax is beeswax, but other insects secrete waxes. A major component of beeswax is the ester myricyl palmitate substance which is used in constructing their honeycombs.</English>
-		<Polish>Wosk pszczeli (wosk żółty, łac. Cera flava) - wydzielina gruczołów woskowych pszczół służąca im do budowania plastrów w ulu. Gruczoły woskowe pszczół znajdują się na spodniej części odwłoka pszczoły robotnicy. Produkcja wosku zależy od jej wieku. Największa jest w trzecim tygodniu życia pszczoły.</Polish>
+		<Polish>Wosk pszczeli (wosk &#191;&#243;&#179;ty, &#179;ac. Cera flava) - wydzielina gruczo&#179;&#243;w woskowych pszcz&#243;&#179; s&#179;u&#191;&#185;ca im do budowania plastr&#243;w w ulu. Gruczo&#179;y woskowe pszcz&#243;&#179; znajduj&#185; si&#234; na spodniej cz&#234;&#156;ci odw&#179;oka pszczo&#179;y robotnicy. Produkcja wosku zale&#191;y od jej wieku. Najwi&#234;ksza jest w trzecim tygodniu &#191;ycia pszczo&#179;y.</Polish>
 		<Russian>Ñàìûé èçâåñòíûé âîñê æèâîòíîãî ïðîèñõîæäåíèÿ - ýòî ï÷åëèíûé âîñê, íî è äðóãèå íàñåêîìûå ñïîñîáíû åãî âûäåëÿòü. Îñíîâíûì êîìïîíåíòîì ÿâëÿåòñÿ ï÷åëèíûé âîñê èëè âåùåñòâî ïàëüìèòàò ìèðèöèëà, êîòîðîå èñïîëüçóåòñÿ ïðè ïîñòðîåíèè ñîòû.</Russian>
 	</TEXT>
 	<TEXT>
@@ -9943,7 +9943,7 @@
 		<English>Wine - Vintage White</English>
 		<French>Vin - Millésime blanc</French>
 		<Italian>Bianco d'annata (vino)</Italian>
-		<Polish>Wino - Vintage Białe</Polish>
+		<Polish>Wino - Vintage Bia&#179;e</Polish>
 		<Russian>Áåëîå âèíî</Russian>
 	</TEXT>
 	<TEXT>
@@ -9971,7 +9971,7 @@
 		<Tag>TXT_KEY_BONUS_WOODWIND_INSTRUMENTS_PEDIA</Tag>
 		<English>A [COLOR_HIGHLIGHT_TEXT]woodwind instrument[COLOR_REVERT] is a musical instrument which produces sound when the player blows air against a sharp edge or through a reed, causing the air within its resonator (usually a column of air) to vibrate. Most of these instruments are made of wood but can be made of other materials, such as metals or plastics.</English>
 		<Italian>Uno [COLOR_HIGHLIGHT_TEXT]strumento a fiato[COLOR_REVERT] è uno strumento musicale che produce suoni quando il musicista soffia attraverso un'apertura dello strumento, facendo vibrare l'aria all'interno della cassa di risonanza. La maggior parte di questi strumenti sono fatti in legno, ma possono essere costruiti anche in metallo o in plastica.</Italian>
-		<Polish>[COLOR_HIGHLIGHT_TEXT]Instrument dęty drewniany[COLOR_REVERT] - instrument dęty, w którym wibratorem jest drewniany stroik, bądź krawędź, o którą rozpraszany jest strumień powietrza. Sam instrument może być wykonany z dowolnego materiału, np. drewna, metalu, lub tworzywa sztucznego. Zródłem dźwięku w instrumentach dętych drewnianych są wibracje powietrza, których częstotliwość (wysokość dźwięku) jest regulowana przez zakrywanie otworów w korpusie instrumentu. Ponieważ przykrywanie wielu otworów naraz byłoby trudne lub nawet niewykonalne, w wielu instrumentach dętych drewnianych stosuje się mechanizm klapkowy.</Polish>
+		<Polish>[COLOR_HIGHLIGHT_TEXT]Instrument d&#234;ty drewniany[COLOR_REVERT] - instrument d&#234;ty, w kt&#243;rym wibratorem jest drewniany stroik, b&#185;d&#159; kraw&#234;d&#159;, o kt&#243;r&#185; rozpraszany jest strumie&#241; powietrza. Sam instrument mo&#191;e by&#230; wykonany z dowolnego materia&#179;u, np. drewna, metalu, lub tworzywa sztucznego. Zr&#243;d&#179;em d&#159;wi&#234;ku w instrumentach d&#234;tych drewnianych s&#185; wibracje powietrza, kt&#243;rych cz&#234;stotliwo&#156;&#230; (wysoko&#156;&#230; d&#159;wi&#234;ku) jest regulowana przez zakrywanie otwor&#243;w w korpusie instrumentu. Poniewa&#191; przykrywanie wielu otwor&#243;w naraz by&#179;oby trudne lub nawet niewykonalne, w wielu instrumentach d&#234;tych drewnianych stosuje si&#234; mechanizm klapkowy.</Polish>
 		<Russian>Деревянный духовой инструмент - это музыкальный инструмент, который издает звук, когда игрок направляет воздух на острый край или через язычок, вызывая колебания воздуха внутри резонатора (как правило, в виде струи воздуха). Большинство этих инструментов сделаны из дерева, но могут быть изготовлены и из других материалов, таких как металлы или пластмассы.</Russian>
 	</TEXT>
 	<TEXT>
@@ -9988,13 +9988,13 @@
 		<German>Wolle</German>
 		<Italian>Lana</Italian>
 		<Spanish>Lana</Spanish>
-		<Polish>Wełna</Polish>
+		<Polish>We&#179;na</Polish>
 		<Russian>Øåðñòü</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_WOOL_PEDIA</Tag>
 		<English>Wool is the textile fiber obtained from sheep and certain other animals, including cashmere from goats, mohair from goats, qiviut from muskoxen, angora from rabbits, and other types of wool from camelids. Wool has several qualities that distinguish it from hair or fur: it is crimped, it is elastic, and it grows in staples (clusters).</English>
-		<Polish>Wełna - włókno naturalne uzyskiwane z okrywy włosowej (sierści) owiec, lam, wielbłądów, kóz, królików i innych. Włókno wełniane posiada charakterystyczne cechy (karbikowatość, łuskowatość, zawiera lanolinę), dzięki którym nadaje się doskonale do wytwarzania wysokiej jakości, wyrobów włókienniczych.</Polish>
+		<Polish>We&#179;na - w&#179;&#243;kno naturalne uzyskiwane z okrywy w&#179;osowej (sier&#156;ci) owiec, lam, wielb&#179;&#185;d&#243;w, k&#243;z, kr&#243;lik&#243;w i innych. W&#179;&#243;kno we&#179;niane posiada charakterystyczne cechy (karbikowato&#156;&#230;, &#179;uskowato&#156;&#230;, zawiera lanolin&#234;), dzi&#234;ki kt&#243;rym nadaje si&#234; doskonale do wytwarzania wysokiej jako&#156;ci, wyrob&#243;w w&#179;&#243;kienniczych.</Polish>
 		<Russian>Шерсть - это текстильное волокно, полученное из овец и некоторых других животных, включая кашемир из коз, мохер из коз, кивиут из овцебыка, ангору из кроликов и другие типы шерсти верблюдовых. Шерсть имеет несколько качеств, которые отличают ее от волос или меха: она гофрированная, эластичная и растет в виде пучков.</Russian>
 	</TEXT>
 	<TEXT>
@@ -10070,7 +10070,7 @@
 		<English>Yemeni</English>
 		<French>Yéménite</French>
 		<Italian>Cittadino yemenita</Italian>
-		<Polish>Jemeńska</Polish>
+		<Polish>Jeme&#241;ska</Polish>
 		<Russian>Éåìåíöû</Russian>
 	</TEXT>
 	<TEXT>
@@ -10136,7 +10136,7 @@
 		<Tag>TXT_KEY_BONUS_ZULU</Tag>
 		<English>Zulu</English>
 		<French>Zoulou</French>
-		<Polish>Zulusów</Polish>
+		<Polish>Zulus&#243;w</Polish>
 		<Russian>Çóëóñû</Russian>
 		<Italian>Cittadino zulu</Italian>
 	</TEXT>

@@ -31,7 +31,7 @@
 		<French>Attitude: [BOLD]%d1%[\BOLD] (Base) + [BOLD]%d2%[\BOLD] (Respect du Seigneur de Guerre)[NEWLINE]</French>
 		<German>Attitüde: [BOLD]%d1%[\BOLD] (Basis) + [BOLD]%d2%[\BOLD] (gegenüber Kriegstreibern)[NEWLINE]</German>
 		<Spanish>Actitud: [BOLD]%d1%[\BOLD] (base) + [BOLD]%d2%[\BOLD] (estima bélica)[NEWLINE]</Spanish>
-		<Polish>Podstawa: [BOLD]%d1%%[\BOLD] (Baza) + [BOLD]%d2%[\BOLD] (Podżegacz Wojenny)[NEWLINE]</Polish>
+		<Polish>Podstawa: [BOLD]%d1%%[\BOLD] (Baza) + [BOLD]%d2%[\BOLD] (Pod&#191;egacz Wojenny)[NEWLINE]</Polish>
 		<Russian>Отношение: [BOLD]%d1%[\BOLD] (базовое) + [BOLD]%d2%[\BOLD] (отношение к разжигателям войны)[NEWLINE]</Russian>
 		<Italian>Attitudine: [BOLD]%d1%[\BOLD] base + [BOLD]%d2%[\BOLD] stima per la guerra[NEWLINE]</Italian>
 	</TEXT>
@@ -58,7 +58,7 @@
 		<French>Révélé et utilisable dès :</French>
 		<German>enthüllt/verfügbar</German>
 		<Spanish>Revelado y activado</Spanish>
-		<Polish>Odkryte i Włączone</Polish>
+		<Polish>Odkryte i W&#179;&#185;czone</Polish>
 		<Italian>Rivelata o resa disponibile</Italian>
 		<Russian>Открыть/Включить</Russian>
 	</TEXT>
@@ -83,7 +83,7 @@
 		<English>Obsolete</English>
 		<French>Obsolète</French>
 		<German>veraltet</German>
-		<Polish>Przestarzałe</Polish>
+		<Polish>Przestarza&#179;e</Polish>
 		<Italian>Obsoleta</Italian>
 		<Russian>Устаревший</Russian>
 	</TEXT>
@@ -126,7 +126,7 @@
 		<Italian>Alterazioni di stato</Italian>
 		<German>Beschwerden</German>
 		<Spanish>Alteraciones de estado</Spanish>
-		<Polish>Osłabienia</Polish>
+		<Polish>Os&#179;abienia</Polish>
 		<Russian>(П) Бедствия</Russian>
 	</TEXT>
 	<TEXT>
@@ -227,7 +227,7 @@
 		<German>Gebäude</German>
 		<Italian>Albero degli edifici</Italian>
 		<Spanish>Árbol de edificios</Spanish>
-		<Polish>Ulepszenia Budynków</Polish>
+		<Polish>Ulepszenia Budynk&#243;w</Polish>
 		<Russian>Древо зданий</Russian>
 	</TEXT>
 	<TEXT>
@@ -298,7 +298,7 @@
 			<Gender>Male</Gender>
 			<Plural>1</Plural>
 		</Spanish>
-		<Polish>Pojęcia gry</Polish>
+		<Polish>Poj&#234;cia gry</Polish>
 		<Russian>Игровые концепции</Russian>
 	</TEXT>
 	<TEXT>
@@ -442,7 +442,7 @@
 			<Gender>Male</Gender>
 			<Plural>1</Plural>
 		</Spanish>
-		<Polish>Przywódcy</Polish>
+		<Polish>Przyw&#243;dcy</Polish>
 		<Russian>Лидеры</Russian>
 	</TEXT>
 	<TEXT>
@@ -581,7 +581,7 @@
 		<German>Referenzen</German>
 		<Italian>Scorciatoie</Italian>
 		<Spanish>Atajos de teclado</Spanish>
-		<Polish>Skróty</Polish>
+		<Polish>Skr&#243;ty</Polish>
 		<Russian>Сочетания клавиш</Russian>
 	</TEXT>
 	<TEXT>
@@ -613,7 +613,7 @@
 			<Gender>Male</Gender>
 			<Plural>1</Plural>
 		</Spanish>
-		<Polish>Specjaliści</Polish>
+		<Polish>Specjali&#156;ci</Polish>
 		<Russian>Специалисты</Russian>
 	</TEXT>
 	<TEXT>
@@ -799,7 +799,7 @@
 		<French>Guerre Totale: [BOLD]%d1[\BOLD] (%d2%% Ratio Près, %d3%% Ratio Loin, %d4%% Adjacent)[NEWLINE]</French>
 		<German>Totaler Krieg: [BOLD]%d1[\BOLD] (Schlagkraft: %d2%% für nahe Gegner, %d3%% für ferne Gegner, %d4%% für Nachbarn)[NEWLINE]</German>
 		<Spanish>Guerra total: [BOLD]%d1[\BOLD] (Ratio cercano: %d2%%, ratio lejano: %d3%%, adyacente: %d4%%)[NEWLINE]</Spanish>
-		<Polish>Pełna Wojna: [BOLD]%d1[\BOLD] (%d2%% Stosunek Bliski, %d3%% Stosunek Daleki, %d4%% Sąsiadujące)[NEWLINE]</Polish>
+		<Polish>Pe&#179;na Wojna: [BOLD]%d1[\BOLD] (%d2%% Stosunek Bliski, %d3%% Stosunek Daleki, %d4%% S&#185;siaduj&#185;ce)[NEWLINE]</Polish>
 		<Russian>Полная война: [BOLD]%d1[\BOLD] (%d2%% ближнее соотношение, %d3%% дальнее соотношение, %d4%% смежное)[NEWLINE]</Russian>
 		<Italian>Guerra completa: [BOLD]%d1[\BOLD] (%d2%% tasso vicino, %d3%% tasso lontano, %d4%% adiacente)[NEWLINE]</Italian>
 	</TEXT>
@@ -830,7 +830,7 @@
 		<German>Kann außerhalb der Kulturgrenzen errichtet werden</German>
 		<Italian>Può essere costruito all'esterno dei confini culturali</Italian>
 		<Spanish>Se puede construir fuera de las fronteras de la civilización</Spanish>
-		<Polish>Może zostać zbudowany wewnątrz granic kulturowych</Polish>
+		<Polish>Mo&#191;e zosta&#230; zbudowany wewn&#185;trz granic kulturowych</Polish>
 		<Russian>Можно возвести за пределами культурных границ</Russian>
 	</TEXT>
 	<TEXT>
@@ -847,7 +847,7 @@
 		<French>Guerre Limitée: [BOLD]%d1[\BOLD] (%d2%% Power Ratio)[NEWLINE]</French>
 		<German>Eingeschränkter Krieg: [BOLD]%d1[\BOLD] (%d2%% Schlagkraft)[NEWLINE]</German>
 		<Spanish>Guerra limitada: [BOLD]%d1[\BOLD] (Ratio de poder del %d2%%)[NEWLINE]</Spanish>
-		<Polish>Limitowana Wojna: [BOLD]%d1[\BOLD] (%d2%% Stosunek sił)[NEWLINE]</Polish>
+		<Polish>Limitowana Wojna: [BOLD]%d1[\BOLD] (%d2%% Stosunek si&#179;)[NEWLINE]</Polish>
 		<Russian>Ограниченная война: [BOLD]%d1[\BOLD] (%d2%% соотношение силы)[NEWLINE]</Russian>
 		<Italian>Guerra limitata: [BOLD]%d1[\BOLD] (%d2%% tasso di potenza)[NEWLINE]</Italian>
 	</TEXT>
@@ -883,7 +883,7 @@
 		<French>Remplacé par</French>
 		<German>ersetzt durch</German>
 		<Spanish>Reemplazado por</Spanish>
-		<Polish>Zastąpione przez</Polish>
+		<Polish>Zast&#185;pione przez</Polish>
 		<Russian>Заменен на</Russian>
 		<Italian>Decade con la costruzione di:</Italian> <!-- pedia any building, city screen decaded automatic building hover -->
 	</TEXT>
@@ -909,7 +909,7 @@
 		<French>Source de Bonus</French>
 		<German>Ursprung</German>
 		<Spanish>Fuente del recurso</Spanish>
-		<Polish>Zródło surowca</Polish>
+		<Polish>Zr&#243;d&#179;o surowca</Polish>
 		<Russian>Источник бонуса</Russian>
 		<Italian>Fonte della risorsa</Italian>
 	</TEXT>
@@ -918,7 +918,7 @@
 		<English>Improvement Yield Change</English>
 		<French>Chang. taux de rendement</French>
 		<Spanish>Cambios al rendimiento de la mejora</Spanish>
-		<Polish>Wydajność ulepszenia uległa zmianie</Polish>
+		<Polish>Wydajno&#156;&#230; ulepszenia uleg&#179;a zmianie</Polish>
 		<Russian>Эффект улучшения изменен</Russian>
 		<Italian>Cambiamento di rendita</Italian>
 	</TEXT>
@@ -938,7 +938,7 @@
 		<German>Inhalt</German>
 		<Italian>Contenuti</Italian>
 		<Spanish>Contenido</Spanish>
-		<Polish>TreŚć</Polish>
+		<Polish>Tre&#140;&#230;</Polish>
 		<Russian>Содержание</Russian>
 	</TEXT>
 	<TEXT>
@@ -1006,7 +1006,7 @@
 		<German>[ICON_BULLET]kann gefangen werden</German>
 		<Italian>[ICON_BULLET]Quest'unità può essere [COLOR_HIGHLIGHT_TEXT]catturata[COLOR_REVERT]</Italian> <!-- unit Storyteller -->
 		<Spanish>[ICON_BULLET]Se puede capturar</Spanish>
-		<Polish>[ICON_BULLET]Może zostać przejęty</Polish>
+		<Polish>[ICON_BULLET]Mo&#191;e zosta&#230; przej&#234;ty</Polish>
 		<Russian>[ICON_BULLET]Можно захватить</Russian>
 	</TEXT>
 	<TEXT>
@@ -1016,7 +1016,7 @@
 		<German>[ICON_BULLET]Einheit kann rekrutiert werden, wenn die Bedingungen erfüllt sind</German>
 		<Italian>[ICON_BULLET]L'unità può [COLOR_HIGHLIGHT_TEXT]essere reclutata[COLOR_REVERT] con la [COLOR_HIGHLIGHT_TEXT]leva obbligatoria[COLOR_REVERT] quando i requisiti sono soddisfatti</Italian> <!-- unit Stones Thrower -->
 		<Spanish>[ICON_BULLET]Se puede reclutar cuando se cumplan las condiciones</Spanish>
-		<Polish>[ICON_BULLET]Może zostać zwerbowany gdy są spełnione wymagania</Polish>
+		<Polish>[ICON_BULLET]Mo&#191;e zosta&#230; zwerbowany gdy s&#185; spe&#179;nione wymagania</Polish>
 		<Russian>[ICON_BULLET]Можно подготовить при выполнении условий</Russian>
 	</TEXT>
 	<TEXT>
@@ -1026,7 +1026,7 @@
 		<German>[ICON_BULLET]Ignoriert Verteidigung durch Gebäude</German>
 		<Italian>[ICON_BULLET]L'unità [COLOR_HIGHLIGHT_TEXT]ignora le difese[COLOR_REVERT] degli edifici</Italian> <!-- unit Sloop of war -->
 		<Spanish>[ICON_BULLET]Ignora la defensa por edificios</Spanish>
-		<Polish>[ICON_BULLET]Ignoruje Obronę Budynku</Polish>
+		<Polish>[ICON_BULLET]Ignoruje Obron&#234; Budynku</Polish>
 		<Russian>[ICON_BULLET]Игнорирует защиту зданий</Russian>
 	</TEXT>
 	<TEXT>
@@ -1043,7 +1043,7 @@
 		<French>Construction de Merveilles: [BOLD]%d1%%[\BOLD] Chance[NEWLINE]</French>
 		<German>Weltwunder: [BOLD]%d1%%[\BOLD] Wahrscheinlichkeit[NEWLINE]</German>
 		<Spanish>Construcción de maravillas: probabilidad del [BOLD]%d1%%[\BOLD][NEWLINE]</Spanish>
-		<Polish>Ukończenie Cudu: [BOLD]%d1%%[\BOLD] Szans[NEWLINE]</Polish>
+		<Polish>Uko&#241;czenie Cudu: [BOLD]%d1%%[\BOLD] Szans[NEWLINE]</Polish>
 		<Russian>Строительство чуда: [BOLD]%d1%%[\BOLD] шанс[NEWLINE]</Russian>
 		<Italian>Costruzione delle meraviglie: [BOLD]%d1%%[\BOLD] di probabilità[NEWLINE]</Italian><!--Leaders in the pedia-->
 	</TEXT>

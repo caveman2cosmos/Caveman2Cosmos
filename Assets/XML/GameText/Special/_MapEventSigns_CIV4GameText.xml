@@ -68,7 +68,7 @@
 		<German>Dschungel von %s1</German>
 		<Italian>Giungla di %s1</Italian>
 		<Spanish>Jungla de %s1</Spanish>
-		<Polish>Dżungla %s1</Polish>
+		<Polish>D&#191;ungla %s1</Polish>
 		<Russian>Джунгли %s1</Russian>
 	</TEXT>
 	<TEXT>
@@ -78,7 +78,7 @@
 		<German>%s1-Dschungel</German>
 		<Italian>Giungla %s1</Italian>
 		<Spanish>Jungla %s1</Spanish>
-		<Polish>Dżungla %s1</Polish>
+		<Polish>D&#191;ungla %s1</Polish>
 		<Russian>%s1 джунгли</Russian>
 	</TEXT>
 	<TEXT>
@@ -128,7 +128,7 @@
 		<German>%s1-Gebirge</German>
 		<Italian>Montagne %s1</Italian>
 		<Spanish>Sierra %s1</Spanish>
-		<Polish>Góry %s1</Polish>
+		<Polish>G&#243;ry %s1</Polish>
 		<Russian>%s1 горы</Russian>
 	</TEXT>
 	<TEXT>
@@ -138,7 +138,7 @@
 		<German>%s1-Bergland</German>
 		<Italian>Catena montuosa %s1</Italian>
 		<Spanish>Cordillera %s1</Spanish>
-		<Polish>Pasmo Górskie %s1</Polish>
+		<Polish>Pasmo G&#243;rskie %s1</Polish>
 		<Russian>%s1 горная цепь</Russian>
 	</TEXT>
 	<TEXT>
@@ -148,7 +148,7 @@
 		<German>Großer %s1</German>
 		<Italian>Monte %s1</Italian>
 		<Spanish>Monte %s1</Spanish>
-		<Polish>Góra %s1</Polish>
+		<Polish>G&#243;ra %s1</Polish>
 		<Russian>Гора %s1</Russian>
 	</TEXT>
 	<TEXT>
@@ -158,7 +158,7 @@
 		<German>%s1-Berg</German>
 		<Italian>Montagna %s1</Italian>
 		<Spanish>Montaña %s1</Spanish>
-		<Polish>Góra %s1</Polish>
+		<Polish>G&#243;ra %s1</Polish>
 		<Russian>%s1 гора</Russian>
 	</TEXT>
 	<TEXT>
@@ -168,7 +168,7 @@
 		<German>Apfelbäume</German>
 		<Italian>alberi di melo</Italian>
 		<Spanish>manzanos</Spanish>
-		<Polish>jabłonie</Polish>
+		<Polish>jab&#179;onie</Polish>
 		<Russian>яблочные деревья</Russian>
 	</TEXT>
 	<TEXT>
@@ -188,7 +188,7 @@
 		<German>schwarze Perlen</German>
 		<Italian>perle nere</Italian>
 		<Spanish>perlas negras</Spanish>
-		<Polish>czarne perły</Polish>
+		<Polish>czarne per&#179;y</Polish>
 		<Russian>черный жемчуг</Russian>
 	</TEXT>
 	<TEXT>
@@ -208,7 +208,7 @@
 		<German>Baumwollbew#228;sserung</German>
 		<Italian>irrigazione del cotone</Italian>
 		<Spanish>irrigación del algodón</Spanish>
-		<Polish>irygacja bawełny</Polish>
+		<Polish>irygacja bawe&#179;ny</Polish>
 		<Russian>орошение хлопчатника</Russian>
 	</TEXT>
 	<TEXT>
@@ -238,7 +238,7 @@
 		<German>z#228;hes Getreide</German>
 		<Italian>colture robuste</Italian>
 		<Spanish>cosechas robustas</Spanish>
-		<Polish>wytrzymałe uprawy</Polish>
+		<Polish>wytrzyma&#179;e uprawy</Polish>
 		<Russian>выносливые сельскохозяйственные растения</Russian>
 	</TEXT>
 	<TEXT>
@@ -276,7 +276,7 @@
 		<German>lokale Mühlen</German>
 		<Italian>mulini locali</Italian>
 		<Spanish>molinos locales</Spanish>
-		<Polish>lokalne młyny</Polish>
+		<Polish>lokalne m&#179;yny</Polish>
 		<Russian>местные мельницы</Russian>
 	</TEXT>
 	<TEXT>
@@ -286,7 +286,7 @@
 		<German>über die Fischerei</German>
 		<Italian>sovrasfruttamento delle risorse ittiche</Italian>
 		<Spanish>sobre pesca</Spanish>
-		<Polish>przełowienia</Polish>
+		<Polish>prze&#179;owienia</Polish>
 		<Russian>перелов рыбы</Russian>
 	</TEXT>
 	<TEXT>
@@ -316,7 +316,7 @@
 		<German>erstklassiges Bauholz</German>
 		<Italian>legno pregiato</Italian>
 		<Spanish>madera de calidad</Spanish>
-		<Polish>pierwszorzędne drewno</Polish>
+		<Polish>pierwszorz&#234;dne drewno</Polish>
 		<Russian>первосортная древесина</Russian>
 	</TEXT>
 	<TEXT>
@@ -326,7 +326,7 @@
 		<German>Ferienort-Stadt</German>
 		<Italian>destinazione turistica</Italian>
 		<Spanish>zona turística</Spanish>
-		<Polish>miejscowość wypoczynkowa</Polish>
+		<Polish>miejscowo&#156;&#230; wypoczynkowa</Polish>
 		<Russian>курортный город</Russian>
 	</TEXT>
 	<TEXT>
@@ -356,7 +356,7 @@
 		<German>Meeresschildkröten</German>
 		<Italian>tartarughe di mare</Italian>
 		<Spanish>tortugas marinas</Spanish>
-		<Polish>żółwie morskie</Polish>
+		<Polish>&#191;&#243;&#179;wie morskie</Polish>
 		<Russian>морские черепахи</Russian>
 	</TEXT>
 	<TEXT>
@@ -396,7 +396,7 @@
 		<German>Wasser des Lebens</German>
 		<Italian>Acqua della vita</Italian>
 		<Spanish>Aguas de la Vida</Spanish>
-		<Polish>Woda Życia</Polish>
+		<Polish>Woda &#175;ycia</Polish>
 		<Russian>Живая вода</Russian>
 	</TEXT>
 </Civ4GameText>
