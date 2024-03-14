@@ -33,6 +33,7 @@
 		<Tag>CHANGED_TXT_KEY_MAIN_MENU_WARLORS</Tag>
 		<English>Space maps</English>
 		<Italian>Mappe dello spazio</Italian>
+		<Polish>Kosmiczne mapy</Polish>
 		<Russian>Космические карты</Russian>
 	</TEXT>
 	<TEXT>
@@ -42,6 +43,7 @@
 		<German>Spielt: "%s1_GameName"</German>
 		<Italian>Partita in corso: "%s1_GameName"</Italian>
 		<Spanish>Jugando a la partida: "%s1_GameName"</Spanish>
+		<Polish>W grze: "%s1_GameName"</Polish>
 		<Russian>Сейчас играет: "%s1_GameName"</Russian>
 	</TEXT>
 		<TEXT>
@@ -51,6 +53,7 @@
 		<German>Im Staging Room: "%s1_GameName"</German>
 		<Italian>Nella stanza di comunicazione: "%s1_GameName"</Italian>
 		<Spanish>En la sala de comunicaciones: "%s1_GameName"</Spanish>
+		<Polish>W poczekalni: "%s1_GameName"</Polish>
 		<Russian>В комнате: "%s1_GameName"</Russian>
 	</TEXT>
 	<TEXT>
@@ -60,6 +63,7 @@
 		<German>Laden</German>
 		<Italian>Carica</Italian>
 		<Spanish>Embarcar</Spanish>
+		<Polish>Wczytaj</Polish>
 		<Russian>Загрузить</Russian>
 	</TEXT>
 	<TEXT>
@@ -69,6 +73,7 @@
 		<German>Spiel laden</German>
 		<Italian>Carica partita</Italian>
 		<Spanish>Cargar partida</Spanish>
+		<Polish>Wczytaj gr&#234;</Polish>
 		<Russian>Загрузить игру</Russian>
 	</TEXT>
 	<TEXT>
@@ -78,6 +83,7 @@
 		<German>Speichern</German>
 		<Italian>Salva</Italian>
 		<Spanish>Guardar</Spanish>
+		<Polish>Zapisz</Polish>
 		<Russian>Сохранить</Russian>
 	</TEXT>
 	<TEXT>
@@ -87,6 +93,7 @@
 		<German>FREUNDESANFRAGE</German>
 		<Italian>RICHIESTA D'AMICIZIA</Italian>
 		<Spanish>SOLICITUD DE AMIGO</Spanish>
+		<Polish>ZAPROSZENIE DO GRONA ZNAJOMYCH</Polish>
 		<Russian>ЗАПРОС В ДРУЗЬЯ</Russian>
 	</TEXT>
 	<TEXT>
@@ -96,6 +103,7 @@
 		<German>Wollen Sie zur Freundesliste von [COLOR_SELECTED_TEXT]%s1_BuddyName[COLOR_SELECTED_TEXT] hinzugefügt werden?</German>
 		<Italian>Vuoi che %s1_BuddyName ti aggiunga alla sua lista amici?</Italian>
 		<Spanish>¿Quieres que se te agregue a la lista de amigos de %s1_BuddyName?</Spanish>
+		<Polish>Czy chcia&#179;by&#156; przyj&#185;&#230; zaproszenie do grona znajomych od %s1_BuddyName?</Polish>
 		<Russian>Хотите ли вы быть в списке друзей %s1_BuddyName's?</Russian>
 	</TEXT>
 	<TEXT>
@@ -105,6 +113,7 @@
 		<German>Freundesanfrage</German>
 		<Italian>Richiesta d'amicizia</Italian>
 		<Spanish>Solicitud de amigo</Spanish>
+		<Polish>Zaproszenie do grona znajomych</Polish>
 		<Russian>Запрос в друзья</Russian>
 	</TEXT>
 	<TEXT>
@@ -114,6 +123,7 @@
 		<German>Es ist eine gültige Internetadresse erforderlich.</German>
 		<Italian>È necessario un indirizzo Internet valido.</Italian>
 		<Spanish>Se necesita una dirección válida de Internet.</Spanish>
+		<Polish>Wymagany jest poprawny adres internetowy.</Polish>
 		<Russian>Требуется действующий интернет-адрес.</Russian>
 	</TEXT>
 	<TEXT>
@@ -123,6 +133,7 @@
 		<German>Fehlende Adresse</German>
 		<Italian>Indirizzo mancante</Italian>
 		<Spanish>Falta dirección</Spanish>
+		<Polish>Brak adresu</Polish>
 		<Russian>Адрес отсутствует</Russian>
 	</TEXT>
 	<TEXT>
@@ -132,6 +143,7 @@
 		<German>Nach dem Hinzufügen einer Person zu Ihrer Freundesliste können Sie sofort Nachrichten an sie versenden.</German>
 		<Italian>Quando aggiungi una persona alla lista amici, puoi inviargli messaggi personali diretti.</Italian>
 		<Spanish>Cuando agregas a alguien a la lista de amigos, puedes enviarle mensajes directos.</Spanish>
+		<Polish>Po dodaniu kogo&#156; do grona znajmoych, b&#234;dziesz m&#243;g&#179; wysy&#179;a&#230; mu prywatne wisadomo&#156;ci.</Polish>
 		<Russian>Отправлять пользователю прямые сообщения можно после добавления его в список друзей.</Russian>
 	</TEXT>
 	<TEXT>
@@ -141,6 +153,7 @@
 		<German>NEUEN FREUND HINZUFÜGEN</German>
 		<Italian>AGGIUNGI UN NUOVO AMICO</Italian>
 		<Spanish>AGREGAR NUEVO AMIGO</Spanish>
+		<Polish>DODAJ NOWEGO ZNAJOMEGO</Polish>
 		<Russian>ДОБАВИТЬ НОВОГО ДРУГА</Russian>
 	</TEXT>
 	<TEXT>
@@ -150,6 +163,7 @@
 		<German>Einen Freund hinzufügen</German>
 		<Italian>Aggiungi un amico</Italian>
 		<Spanish>Agregar a un amigo</Spanish>
+		<Polish>Dodaj znajomego</Polish>
 		<Russian>Добавить друга</Russian>
 	</TEXT>
 	<TEXT>
@@ -159,6 +173,7 @@
 		<German>FREUNDESANFRAGE</German>
 		<Italian>RICHIESTA D'AMICIZIA</Italian>
 		<Spanish>SOLICITUD DE AMIGO</Spanish>
+		<Polish>ZAPROSZENIE DO GRONA ZNAJOMYCH</Polish>
 		<Russian>ЗАПРОС В ДРУЗЬЯ</Russian>
 	</TEXT>
 	<TEXT>
@@ -168,6 +183,7 @@
 		<German>Freund hinzufügen</German>
 		<Italian>Aggiungi amico</Italian>
 		<Spanish>Agregar amigo</Spanish>
+		<Polish>Dodaj znajomego</Polish>
 		<Russian>Добавить друга</Russian>
 	</TEXT>
 	<TEXT>
@@ -177,6 +193,7 @@
 		<German>Wenn Sie direkt mit anderen Mitgliedern chatten wollen, müssen Sie diese in Ihre Freundesliste aufnehmen. Wollen Sie [COLOR_SELECTED_TEXT]%s1_Name[COLOR_REVERT] zu Ihrer Freundesliste hinzufügen?</German>
 		<Italian>Per chattare direttamente con qualcuno, prima devi aggiungerlo alla tua lista amici. Vuoi aggiungere %s1_Name alla tua lista?</Italian>
 		<Spanish>Para charlar directamente con un miembro, primero debes agregarlo a tu lista de amigos. ¿Quieres agregar a %s1_Name como amigo?</Spanish>
+		<Polish>Aby m&#243;c bezpo&#156;rednio czatowa&#230; z cz&#179;onkiem, musisz najpierw doda&#230; go do grona znajomych. Czy chcesz teraz doda&#230; %s1_Name do grona znajomych?</Polish>
 		<Russian>Чтобы напрямую общаться с пользователем %s1_Name, сперва необходимо добавить его в список друзей. Сделаете это сейчас?</Russian>
 	</TEXT>
 	<TEXT>
@@ -186,6 +203,7 @@
 		<German>Basispunkte für Fortgeschrittenen Start:</German>
 		<Italian>Punti base per l'avvio avanzato:</Italian>
 		<Spanish>Puntos base del Inicio avanzado:</Spanish>
+		<Polish>Punkty pocz&#185;tkowe we w&#179;asnym starcie:</Polish>
 		<Russian>Базовые очки для настраиваемого старта:</Russian>
 	</TEXT>
 	<TEXT>
@@ -195,6 +213,7 @@
 		<German>Gold, das Sie am Anfang erhalten, um Städte, Einheiten und Modernisierungen zu kaufen.</German>
 		<Italian>L'oro che ricevi a inizio gioco per acquistare città, unità e miglioramenti.</Italian>
 		<Spanish>El oro que recibes al inicio para comprar ciudades, unidades y mejoras.</Spanish>
+		<Polish>Z&#179;oto kt&#243;re otrzymasz na pocz&#185;tku rozgrywki i b&#234;dziesz m&#243;g&#179; przeznaczy&#230; na zakup miast, jednostek oraz ulepsze&#241;.</Polish>
 		<Russian>Золото, получаемое в начале игры для покупки городов, подразделений и улучшений.</Russian>
 	</TEXT>
 	<TEXT>
@@ -204,6 +223,7 @@
 		<German>Sie haben versucht, einen Freund hinzuzufügen, der bereits existiert.</German>
 		<Italian>Hai provato ad aggiungere un amico esistente.</Italian>
 		<Spanish>Se ha intentado agregar a un amigo ya existente.</Spanish>
+		<Polish>Nie mo&#191;esz doda&#230; do grona znajomych osoby, kt&#243;ra ju&#191; si&#234; w nim znajduje.</Polish>
 		<Russian>Вы попытались добавить пользователя, уже являющегося вашим другом.</Russian>
 	</TEXT>
 	<TEXT>
@@ -213,6 +233,7 @@
 		<German>Freund existiert bereits</German>
 		<Italian>È già presente nella lista amici</Italian>
 		<Spanish>Ya es amigo</Spanish>
+		<Polish>Ta osoba znajduje si&#234; ju&#191; w gronie znajomych</Polish>
 		<Russian>Это уже ваш друг</Russian>
 	</TEXT>
 	<TEXT>
@@ -222,6 +243,7 @@
 		<German>Automatisches Speichern ...</German>
 		<Italian>Salvataggio automatico...</Italian>
 		<Spanish>Guardado automático...</Spanish>
+		<Polish>Zapis automatyczny...</Polish>
 		<Russian>Автосохранение...</Russian>
 	</TEXT>
 	<TEXT>
@@ -231,6 +253,7 @@
 		<German>Der angegebene Benutzername ist ungültig.</German>
 		<Italian>L'username inserito non è valido.</Italian>
 		<Spanish>El nombre de usuario introducido no es válido.</Spanish>
+		<Polish>Niepoprawna nazwa u&#191;ytkownika.</Polish>
 		<Russian>Введенное имя пользователя недействительно.</Russian>
 	</TEXT>
 	<TEXT>
@@ -240,6 +263,7 @@
 		<German>Benutzername nicht gefunden</German>
 		<Italian>Username non trovato</Italian>
 		<Spanish>No se ha encontrado nombre de usuario</Spanish>
+		<Polish>U&#191;ytkownik nie istnieje</Polish>
 		<Russian>Пользователь не найден</Russian>
 	</TEXT>
 	<TEXT>
@@ -249,6 +273,7 @@
 		<German>Das Passwort für die angegebene E-Mail-Adresse ist nicht korrekt.</German>
 		<Italian>La password per l'indirizzo e-mail fornito è incorretta.</Italian>
 		<Spanish>La contraseña para la dirección de e-mail proporcionada no es correcta.</Spanish>
+		<Polish>Podane has&#179;o jest niepoprawne dla tego adresu e-mail.</Polish>
 		<Russian>Пароль неверен для указанной электронной почты.</Russian>
 	</TEXT>
 	<TEXT>
@@ -258,6 +283,7 @@
 		<German>Falsches Passwort</German>
 		<Italian>Password incorretta</Italian>
 		<Spanish>Contraseña errónea</Spanish>
+		<Polish>Z&#179;e has&#179;o</Polish>
 		<Russian>Неприемлемый пароль</Russian>
 	</TEXT>
 	<TEXT>
@@ -267,6 +293,7 @@
 		<German>Das angegebene Kennwort ist falsch.</German>
 		<Italian>La password inserita è sbagliata.</Italian>
 		<Spanish>La contraseña introducida es incorrecta.</Spanish>
+		<Polish>Wprowadzone has&#179;o jest niepoprawne.</Polish>
 		<Russian>Вы ввели неверный пароль</Russian>
 	</TEXT>
 	<TEXT>
@@ -276,6 +303,7 @@
 		<German>Falsches Kennwort</German>
 		<Italian>Password sbagliata</Italian>
 		<Spanish>Contraseña incorrecta</Spanish>
+		<Polish>Z&#179;e has&#179;o</Polish>
 		<Russian>Неправильный пароль</Russian>
 	</TEXT>
 	<TEXT>
@@ -285,6 +313,7 @@
 		<German>Ihr Computer erfüllt nicht die Mindestanforderungen. Civ4 wird mit diesem Hardware-Setup nicht laufen.</German>
 		<Italian>Il tuo computer non raggiunge i requisiti minimi. Civ4 non può funzionare su questa configurazione hardware.</Italian>
 		<Spanish>El ordenador no cumple los requisitos mínimos. Civilization 4 no puede funcionar con esta configuración de hardware.</Spanish>
+		<Polish>Tw&#243;j komputer nie spe&#179;nia minimalnych wymaga&#241;. Cywilizacja 4 nie mo&#191;e zosta&#230; uruchomiona na tym urz&#185;dzeniu.</Polish>
 		<Russian>Характеристики вашего компьютера ниже минимальных. "Цивилизация 4" не будет работать на данном оборудовании.</Russian>
 	</TEXT>
 	<TEXT>
@@ -294,6 +323,7 @@
 		<German>Sie müssen einen Freund-Namen angeben.</German>
 		<Italian>Devi inserire il nome di un amico.</Italian>
 		<Spanish>Hay que facilitar un nombre de amigo.</Spanish>
+		<Polish>Musisz poda&#230; nazw&#234; znajomego.</Polish>
 		<Russian>Вы должны указать имя друга.</Russian>
 	</TEXT>
 	<TEXT>
@@ -303,6 +333,7 @@
 		<German>Freund-Name erforderlich</German>
 		<Italian>Nome amico necessario</Italian>
 		<Spanish>Se requiere nombre de amigo</Spanish>
+		<Polish>Nazwa znajomego jest wymagana</Polish>
 		<Russian>Требуется имя друга</Russian>
 	</TEXT>
 	<TEXT>
@@ -312,6 +343,7 @@
 		<German>Es wurden mehrere übereinstimmende Profile gefunden. Geben Sie bitte weitere Suchkriterien an.</German>
 		<Italian>Trovati multipli profili corrispondenti. Affina il tuo criterio di ricerca.</Italian>
 		<Spanish>Se han encontrado varios perfiles que coinciden. Hay que reducir los criterios de búsqueda.</Spanish>
+		<Polish>Znaleziono wiele pasuj&#185;cych profil&#243;w. Spr&#243;buj zaw&#234;zi&#230; swoje kryteria.</Polish>
 		<Russian>Обнаружены несколько подходящих профилей. Пожалуйста, уточните критерии поиска.</Russian>
 	</TEXT>
 	<TEXT>
@@ -321,6 +353,7 @@
 		<German>Mehrfache Übereinstimmungen gefunden</German>
 		<Italian>Trovate corrispondenze multiple</Italian>
 		<Spanish>Halladas varias coincidencias</Spanish>
+		<Polish>Znaleziono wiele pasuj&#185;cych wynik&#243;w</Polish>
 		<Russian>Найдено множество совпадений</Russian>
 	</TEXT>
 	<TEXT>
@@ -330,6 +363,7 @@
 		<German>Es wurden keine Freundesprofile gefunden.</German>
 		<Italian>Nessun profilo amico trovato.</Italian>
 		<Spanish>No se ha encontrado ningún perfil de amigo que coincida.</Spanish>
+		<Polish>Nie znaleziono pasuj&#185;cego profilu znajomego.</Polish>
 		<Russian>Подходящий профиль друга не обнаружен.</Russian>
 	</TEXT>
 	<TEXT>
@@ -339,6 +373,7 @@
 		<German>Kein Freund gefunden</German>
 		<Italian>Nessun amico trovato</Italian>
 		<Spanish>Amigo no encontrado</Spanish>
+		<Polish>Nie znaleziono znajomego</Polish>
 		<Russian>Друг не найден</Russian>
 	</TEXT>
 	<TEXT>
@@ -348,6 +383,7 @@
 		<German>Auf dem Freundeslisten-Server ist ein Fehler aufgetreten.</German>
 		<Italian>Errore sul server della lista amici.</Italian>
 		<Spanish>Se ha producido un error en la lista de amigos del servidor.</Spanish>
+		<Polish>Wyst&#185;pi&#179; b&#179;&#185;d na serwerze zawieraj&#185;cym listy znajomych.</Polish>
 		<Russian>На сервере списка друзей произошла ошибка.</Russian>
 	</TEXT>
 	<TEXT>
@@ -357,6 +393,7 @@
 		<German>Serverfehler</German>
 		<Italian>Errore del server</Italian>
 		<Spanish>Error del servidor</Spanish>
+		<Polish>B&#179;&#185;d serwera</Polish>
 		<Russian>Ошибка сервера</Russian>
 	</TEXT>
 	<TEXT>
@@ -366,6 +403,7 @@
 		<German>Lobby</German>
 		<Italian>Sala d'attesa</Italian>
 		<Spanish>Sala</Spanish>
+		<Polish>Lobby</Polish>
 		<Russian>Лобби</Russian>
 	</TEXT>
 	<TEXT>
@@ -375,6 +413,7 @@
 		<German>Nicht verfügbar</German>
 		<Italian>Non disponibile</Italian>
 		<Spanish>No disponible</Spanish>
+		<Polish>Niedost&#234;pny</Polish>
 		<Russian>Недоступен</Russian>
 	</TEXT>
 	<TEXT>
@@ -384,6 +423,7 @@
 		<German>Offline</German>
 		<Italian>Offline</Italian>
 		<Spanish>Desconectado</Spanish>
+		<Polish>Offline</Polish>
 		<Russian>Офлайн</Russian>
 	</TEXT>
 	<TEXT>
@@ -393,6 +433,7 @@
 		<German>Spielt</German>
 		<Italian>In gioco</Italian>
 		<Spanish>Jugando</Spanish>
+		<Polish>W grze</Polish>
 		<Russian>В игре</Russian>
 	</TEXT>
 	<TEXT>
@@ -402,6 +443,7 @@
 		<German>Staging</German>
 		<Italian>In sala d'attesa</Italian>
 		<Spanish>En comunicaciones</Spanish>
+		<Polish>W poczekalni</Polish>
 		<Russian>В ожидании</Russian>
 	</TEXT>
 	<TEXT>
@@ -411,6 +453,7 @@
 		<German>Freund-Name: </German>
 		<Italian>Nome amico:</Italian>
 		<Spanish>Nombre de amigo: </Spanish>
+		<Polish>Nazwa znajomego:</Polish>
 		<Russian>Имя друга: </Russian>
 	</TEXT>
 	<TEXT>
@@ -420,6 +463,7 @@
 		<German>Die Freundesanfrage konnte nicht gesendet werden.</German>
 		<Italian>La richiesta d'amicizia non è stata inviata.</Italian>
 		<Spanish>No se ha podido enviar la solicitud de amigo.</Spanish>
+		<Polish>Nie uda&#179;o si&#234; wys&#179;a&#230; zaproszenia do grona znajomych.</Polish>
 		<Russian>Запрос в друзья не может быть отправлен.</Russian>
 	</TEXT>
 	<TEXT>
@@ -429,6 +473,7 @@
 		<German>Freundesanfrage fehlgeschlagen</German>
 		<Italian>Richiesta d'amicizia fallita</Italian>
 		<Spanish>Fallo en la solicitud de amigo</Spanish>
+		<Polish>Zaproszenie do grona znajomych si&#234; nie powiod&#179;o.</Polish>
 		<Russian>Запрос в друзья не удался</Russian>
 	</TEXT>
 	<TEXT>
@@ -438,6 +483,7 @@
 		<German>Freunde</German>
 		<Italian>Amici</Italian>
 		<Spanish>Amigos</Spanish>
+		<Polish>Znajomi</Polish>
 		<Russian>Друзья</Russian>
 	</TEXT>
 	<TEXT>
@@ -447,6 +493,7 @@
 		<German>Chat-Log</German>
 		<Italian>Registro chat</Italian>
 		<Spanish>Historial del chat</Spanish>
+		<Polish>Historia wiadomo&#156;ci</Polish>
 		<Russian>Журнал чата</Russian>
 	</TEXT>
 	<TEXT>
@@ -456,6 +503,7 @@
 		<German>Limit Stadt-Eliminierung:</German>
 		<Italian>Limite eliminazione città:</Italian>
 		<Spanish>Límite de eliminación de ciudades:</Spanish>
+		<Polish>Limit eliminacji miasta:</Polish>
 		<Russian>Лимит уничтожения города:</Russian>
 	</TEXT>
 	<TEXT>
@@ -465,6 +513,7 @@
 		<German>Diese Zivilisation ist bereits vergeben.</German>
 		<Italian>Questa civiltà è già stata scelta.</Italian>
 		<Spanish>Alguien ha escogido ya esta civilización.</Spanish>
+		<Polish>Ta cywilizacja jest ju&#191; zaj&#234;ta.</Polish>
 		<Russian>Данная цивилизация уже занята.</Russian>
 	</TEXT>
 	<TEXT>
@@ -474,6 +523,7 @@
 		<German>Wählen Sie Ihre Zivilisation</German>
 		<Italian>Scegli la tua civiltà</Italian>
 		<Spanish>Elige una civilización</Spanish>
+		<Polish>Wybierz swoj&#185; cywilizacj&#234;</Polish>
 		<Russian>Выберите цивилизацию</Russian>
 	</TEXT>
 	<TEXT>
@@ -483,6 +533,7 @@
 		<German>Zivilisation und Staatsoberhaupt werden zufällig ausgewählt.</German>
 		<Italian>Leader e civiltà verranno scelti casualmente.</Italian>
 		<Spanish>La civilización y el líder se elegirán al azar.</Spanish>
+		<Polish>Cywilizacja oraz przyw&#243;dca zostan&#185; wybrani losowo.</Polish>
 		<Russian>Цивилизация и предводитель будут выбраны случайно.</Russian>
 	</TEXT>
 	<TEXT>
@@ -492,6 +543,7 @@
 		<German>Das Staatsoberhaupt wird zufällig ausgewählt.</German>
 		<Italian>Il leader verrà scelto casualmente.</Italian>
 		<Spanish>El líder se elegirá al azar.</Spanish>
+		<Polish>Przyw&#243;dca zostanie wybrany losowo.</Polish>
 		<Russian>Предводитель будет выбран случайно.</Russian>
 	</TEXT>
 	<TEXT>
