@@ -829,62 +829,69 @@
 		<EventInfo>
 			<Type>EVENT_JOYOUS_WEDDING_1</Type>
 			<Description>TXT_KEY_EVENT_JOYOUS_WEDDING_1</Description>
+			<iGold>-50</iGold>
+			<bGoldToPlayer>1</bGoldToPlayer>
 			<OtherPlayerPopup>TXT_KEY_EVENT_JOYOUS_WEDDING_OTHER_1</OtherPlayerPopup>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
-			<iAIValue>1000</iAIValue>
+			<iAIValue>1</iAIValue>
 		</EventInfo>
 		<EventInfo>
 			<Type>EVENT_JOYOUS_WEDDING_2</Type>
 			<Description>TXT_KEY_EVENT_JOYOUS_WEDDING_2</Description>
 			<OtherPlayerPopup>TXT_KEY_EVENT_JOYOUS_WEDDING_OTHER_2</OtherPlayerPopup>
-			<iGold>-15</iGold>
+			<iGold>-200</iGold>
+			<bGoldToPlayer>1</bGoldToPlayer>
 			<iOurAttitudeModifier>1</iOurAttitudeModifier>
 			<iAttitudeModifier>1</iAttitudeModifier>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
-			<iAIValue>1000</iAIValue>
+			<iAIValue>1</iAIValue>
 		</EventInfo>
 		<EventInfo>
 			<Type>EVENT_JOYOUS_WEDDING_3</Type>
 			<Description>TXT_KEY_EVENT_JOYOUS_WEDDING_3</Description>
 			<OtherPlayerPopup>TXT_KEY_EVENT_JOYOUS_WEDDING_OTHER_3</OtherPlayerPopup>
-			<iGold>-60</iGold>
+			<iGold>-600</iGold>
 			<iOurAttitudeModifier>3</iOurAttitudeModifier>
 			<iAttitudeModifier>3</iAttitudeModifier>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
-			<iAIValue>1000</iAIValue>
+			<iAIValue>1</iAIValue>
 		</EventInfo>
 		<EventInfo>
 			<Type>EVENT_WEDDING_FEUD_1</Type>
 			<Description>TXT_KEY_EVENT_WEDDING_FEUD_1</Description>
 			<OtherPlayerPopup>TXT_KEY_EVENT_WEDDING_FEUD_OTHER_1</OtherPlayerPopup>
+			<iGold>-50</iGold>
+			<bGoldToPlayer>1</bGoldToPlayer>
 			<iOurAttitudeModifier>-1</iOurAttitudeModifier>
 			<iAttitudeModifier>-1</iAttitudeModifier>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
-			<iAIValue>1000</iAIValue>
+			<iAIValue>1</iAIValue>
 		</EventInfo>
 		<EventInfo>
 			<Type>EVENT_WEDDING_FEUD_2</Type>
 			<Description>TXT_KEY_EVENT_WEDDING_FEUD_2</Description>
 			<OtherPlayerPopup>TXT_KEY_EVENT_WEDDING_FEUD_OTHER_2</OtherPlayerPopup>
-			<iGold>-15</iGold>
+			<iGold>-200</iGold>
+			<bGoldToPlayer>1</bGoldToPlayer>
 			<iOurAttitudeModifier>-2</iOurAttitudeModifier>
 			<iAttitudeModifier>-2</iAttitudeModifier>
 			<PythonCallback>doWeddingFeud2</PythonCallback>
 			<PythonHelp>getHelpWeddingFeud2</PythonHelp>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
-			<iAIValue>1000</iAIValue>
+			<iAIValue>1</iAIValue>
 		</EventInfo>
 		<EventInfo>
 			<Type>EVENT_WEDDING_FEUD_3</Type>
 			<Description>TXT_KEY_EVENT_WEDDING_FEUD_3</Description>
-			<iGold>-60</iGold>
+			<iGold>-600</iGold>
+			<bGoldToPlayer>1</bGoldToPlayer>
 			<iOurAttitudeModifier>-3</iOurAttitudeModifier>
 			<iAttitudeModifier>-3</iAttitudeModifier>
 			<PythonCallback>doWeddingFeud3</PythonCallback>
 			<PythonCanDo>canDoWeddingFeud3</PythonCanDo>
 			<PythonHelp>getHelpWeddingFeud3</PythonHelp>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
-			<iAIValue>1000</iAIValue>
+			<iAIValue>1</iAIValue>
 		</EventInfo>
 		<EventInfo>
 			<Type>EVENT_LEFT_AT_ALTAR_1</Type>
@@ -892,7 +899,15 @@
 			<iOurAttitudeModifier>-1</iOurAttitudeModifier>
 			<iAttitudeModifier>-1</iAttitudeModifier>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
-			<iAIValue>1000</iAIValue>
+			<iAIValue>1</iAIValue>
+		</EventInfo>
+		<EventInfo>
+			<Type>EVENT_LEFT_AT_ALTAR_2</Type>
+			<Description>TXT_KEY_EVENT_LEFT_AT_ALTAR_2</Description>
+			<iGold>-200</iGold>
+			<bGoldToPlayer>1</bGoldToPlayer>
+			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
+			<iAIValue>1</iAIValue>
 		</EventInfo>
 		<EventInfo>
 			<Type>EVENT_SPICY_1</Type>

@@ -7634,6 +7634,10 @@
 		<Italian>Invia la tua solidarietà a entrambe le famiglie e invitale a trovare una soluzione pacifica ai loro problemi.</Italian>
 		<Spanish>Enviad nuestras condolencias a ambas familias y apremiadlas a buscar una solución pacífica a sus agravios.</Spanish>
 	</TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_LEFT_AT_ALTAR_2</Tag>
+        <English>Send gifts to try to apologise for this situation.</English>
+    </TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_LESS_DICTATOR_1</Tag>
 		<English>The High Minister for Finance, who also happens to be your brother, dismisses the claim. "What these people fail to realize is that you know what's best for them. The alternative is anarchy! I say stick to your course. And execute these wackos for treason."</English>
