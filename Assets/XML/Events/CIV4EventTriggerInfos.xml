@@ -1157,7 +1157,7 @@
 			<EventArt>Art/Event_Images/JoyousWeddingEvent.dds</EventArt>
 			<bSinglePlayer>1</bSinglePlayer>
 			<iPercentGamesActive>100</iPercentGamesActive>
-			<iWeight>200</iWeight>
+			<iWeight>10</iWeight>
 			<bOwnPlot>1</bOwnPlot>
 			<bPickReligion>1</bPickReligion>
 			<bStateReligion>1</bStateReligion>
@@ -1167,6 +1167,7 @@
 				<Event>EVENT_JOYOUS_WEDDING_3</Event>
 			</Events>
 			<bPickPlayer>1</bPickPlayer>
+			<bRecurring>1</bRecurring>
 			<bOtherPlayerHasReligion>1</bOtherPlayerHasReligion>
 			<iOtherPlayerShareBorders>1</iOtherPlayerShareBorders>
 			<bShowPlot>0</bShowPlot>
@@ -1233,7 +1234,8 @@
 			<EventArt>Art/Event_Images/WeddingFeudEvent.dds</EventArt>
 			<bSinglePlayer>1</bSinglePlayer>
 			<iPercentGamesActive>100</iPercentGamesActive>
-			<iWeight>200</iWeight>
+			<iWeight>10</iWeight>
+			<bRecurring>1</bRecurring>
 			<bOwnPlot>1</bOwnPlot>
 			<bPickReligion>1</bPickReligion>
 			<bStateReligion>1</bStateReligion>
@@ -1309,10 +1311,12 @@
 			<EventArt>Art/Event_Images/LeftAtTheAltarEvent.dds</EventArt>
 			<bSinglePlayer>1</bSinglePlayer>
 			<iPercentGamesActive>100</iPercentGamesActive>
-			<iWeight>100</iWeight>
+			<iWeight>10</iWeight>
+			<bRecurring>1</bRecurring>
 			<bOwnPlot>1</bOwnPlot>
 			<Events>
 				<Event>EVENT_LEFT_AT_ALTAR_1</Event>
+				<Event>EVENT_LEFT_AT_ALTAR_2</Event>
 			</Events>
 			<bPickPlayer>1</bPickPlayer>
 			<iOtherPlayerShareBorders>1</iOtherPlayerShareBorders>
