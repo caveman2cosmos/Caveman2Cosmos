@@ -108,11 +108,13 @@ CvPlayerAI::CvPlayerAI()
 		m_aaiContactTimer[i] = new int[NUM_CONTACT_TYPES];
 	}
 
+	// @SAVEBREAK - change to MAX_PC_PLAYERS, no need to have memory of NPC actions.
 	m_aaiMemoryCount = new int* [MAX_PLAYERS];
 	for (int i = 0; i < MAX_PLAYERS; i++)
 	{
 		m_aaiMemoryCount[i] = new int[NUM_MEMORY_TYPES];
 	}
+	// !SAVEBREAK
 
 	m_aiAverageYieldMultiplier = new int[NUM_YIELD_TYPES];
 	m_aiAverageCommerceMultiplier = new int[NUM_COMMERCE_TYPES];
@@ -20535,7 +20537,7 @@ void CvPlayerAI::read(FDataStreamBase* pStream)
 		}
 		for (int i = 0; i < MAX_PLAYERS; i++)
 		{
-			WRAPPER_READ_ARRAY(wrapper, "CvPlayerAI", NUM_MEMORY_TYPES, m_aaiMemoryCount[i]);
+			WRAPPER_READ_ARRAY_ALLOW_TRUNCATE(wrapper, "CvPlayerAI", NUM_MEMORY_TYPES, m_aaiMemoryCount[i]);
 		}
 		WRAPPER_READ(wrapper, "CvPlayerAI", &m_bWasFinancialTrouble);
 		WRAPPER_READ(wrapper, "CvPlayerAI", &m_iTurnLastProductionDirty);

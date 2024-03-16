@@ -441,16 +441,6 @@
 			<fArcValue>0.0</fArcValue>
 		</EffectInfo>
 		<EffectInfo>
-			<Type>EFFECT_JETFIGHTER_NUKE</Type>
-			<Description>Jet Fighter Nuke Animations</Description>
-			<fScale>1.0</fScale>
-			<fUpdateRate>1.0</fUpdateRate>
-			<Path>Art/Units/nukebomber/JetFighterBomb.kfm</Path>
-			<bIsProjectile>1</bIsProjectile>
-			<fSpeed>400.0</fSpeed>
-			<fArcValue>0.0</fArcValue>
-		</EffectInfo>
-		<EffectInfo>
 			<Type>EFFECT_BOMBER_BOMB</Type>
 			<Description>Bomber Bomb Animations</Description>
 			<fScale>1.0</fScale>
@@ -473,9 +463,9 @@
 		<EffectInfo>
 			<Type>EFFECT_JETFIGHTER_NUKE_EXPLODE</Type>
 			<Description>Nuke Bomb Explosion</Description>
-			<fScale>0.6</fScale>
-			<fUpdateRate>.6</fUpdateRate>
-			<Path>Art/Units/nukebomber/fx_explosion_nuke.nif</Path>
+			<fScale>0.25</fScale>
+			<fUpdateRate>.8</fUpdateRate>
+			<Path>Art/Effects/explosion_nuke/fx_explosion_nuke.nif</Path>
 			<bIsProjectile>0</bIsProjectile>
 		</EffectInfo>
 		<EffectInfo>

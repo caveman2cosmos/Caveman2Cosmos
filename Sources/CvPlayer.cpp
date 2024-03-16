@@ -16704,8 +16704,11 @@ bool CvPlayer::doEspionageMission(EspionageMissionTypes eMission, PlayerTypes eT
 		}
 	}
 	// Nuclear Bomb
-	const bool bNuked = pPlot && pSpyUnit
-		&& kMission.isNuke() && pSpyUnit->spyNuke(pPlot->getX(), pPlot->getY(), bCaught) ? true : false;
+	const bool bNuked = pPlot && pSpyUnit && kMission.isNuke();
+	if (bNuked)
+	{
+		pSpyUnit->spyNuke(pPlot->getX(), pPlot->getY(), bCaught);
+	}
 
 	int iHave = 0;
 	if (NO_TEAM != eTargetTeam)
@@ -16727,7 +16730,6 @@ bool CvPlayer::doEspionageMission(EspionageMissionTypes eMission, PlayerTypes eT
 
 	if (bSomethingHappened)
 	{
-
 		int iX = -1;
 		int iY = -1;
 		if (pPlot)

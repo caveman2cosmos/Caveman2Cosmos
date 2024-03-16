@@ -112,7 +112,7 @@ Base XP gained when defending
 			<iCost>1350</iCost>
 			<iBaseUpkeep>6</iBaseUpkeep>
 			<iMoves>1</iMoves>
-			<iNukeRange>1</iNukeRange>
+			<iNukeRange>0</iNukeRange>
 			<iAirRange>7</iAirRange>
 			<iAirCombat>1</iAirCombat>
 			<iAirCombatLimit>10</iAirCombatLimit>

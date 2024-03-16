@@ -12401,6 +12401,10 @@
 		<Spanish>"Compartisteis con nosotros vuestros descubrimientos tecnológicos."</Spanish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_MEMORY_USED_NUKE</Tag>
+		<English>"You used nukes!"</English>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_MEMORY_VOTED_AGAINST_US</Tag>
 		<English>"You voted against us!"</English>
 		<French>"Vous avez voté contre nous !"</French>

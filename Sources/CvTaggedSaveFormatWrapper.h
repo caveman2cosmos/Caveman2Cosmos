@@ -248,7 +248,7 @@ public:
 
 	void Read(const char* name, int32_t* i);
 	void Read(const char* name, uint32_t* i);
-	void Read(const char* name, int count, int32_t values[]);
+	void Read(const char* name, int count, int32_t values[], bool bAllowTruncation = false);
 	void Read(const char* name, int count, uint32_t values[]);
 
 	void Read(const char* name, long* l);

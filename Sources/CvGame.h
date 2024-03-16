@@ -266,10 +266,6 @@ public:
 	int getInitTech() const;
 	int getInitWonders() const;
 	DllExport void initScoreCalculation();
-	// < M.A.D. Nukes Start >
-	CvPlot* getLastNukeStrikePlot() const;
-	void setLastNukeStrikePlot(CvPlot* pPlot);
-	// < M.A.D. Nukes End   >
 
 	int getAIAutoPlay(PlayerTypes iPlayer) const;
 		void setAIAutoPlay(PlayerTypes iPlayer, int iNewValue, bool bForced = false);
