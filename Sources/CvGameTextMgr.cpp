@@ -34693,69 +34693,55 @@ void CvGameTextMgr::getGlobeLayerName(GlobeLayerTypes eType, int iOption, CvWStr
 	}
 }
 
-void CvGameTextMgr::getPlotHelp(CvPlot* pMouseOverPlot, CvCity* pCity, CvPlot* pFlagPlot, bool bAlt, CvWStringBuffer& strHelp)
+void CvGameTextMgr::getPlotHelp(CvPlot* mousePlot, CvCity* city, CvPlot* flagPlot, bool bAlt, CvWStringBuffer& strHelp)
 {
 	PROFILE_EXTRA_FUNC();
-	if (gDLL->getInterfaceIFace()->isCityScreenUp())
-	{
-		if (pMouseOverPlot)
-		{
-			const CvCity* pHeadSelectedCity = gDLL->getInterfaceIFace()->getHeadSelectedCity();
 
-			if (pHeadSelectedCity && pMouseOverPlot->getWorkingCity() == pHeadSelectedCity
-			&& pMouseOverPlot->isRevealed(GC.getGame().getActiveTeam(), true))
-			{
-				setPlotHelp(strHelp, pMouseOverPlot);
-			}
-		}
-		return;
+	if (city)
+	{
+		setCityBarHelp(strHelp, city);
+	}
+	else if (flagPlot)
+	{
+		setPlotListHelp(strHelp, flagPlot, false, true);
 	}
 
-	if (pCity)
-	{
-		setCityBarHelp(strHelp, pCity);
-	}
-	else if (pFlagPlot)
-	{
-		setPlotListHelp(strHelp, pFlagPlot, false, true);
-	}
-
-	if (pMouseOverPlot)
+	if (mousePlot)
 	{
 		if (strHelp.isEmpty()
-		&& (bAlt || pMouseOverPlot == gDLL->getInterfaceIFace()->getGotoPlot())
-		&& pMouseOverPlot->isVisiblePotentialEnemyDefender(gDLL->getInterfaceIFace()->getSelectionList()->getHeadUnit()))
+		&& (bAlt || mousePlot == gDLL->getInterfaceIFace()->getGotoPlot())
+		&& mousePlot->isVisiblePotentialEnemyDefender(gDLL->getInterfaceIFace()->getSelectionList()->getHeadUnit()))
 		{
-			setCombatPlotHelp(strHelp, pMouseOverPlot);
+			setCombatPlotHelp(strHelp, mousePlot);
 		}
 
-		if (strHelp.isEmpty() && pMouseOverPlot->isRevealed(GC.getGame().getActiveTeam(), true))
+		if (strHelp.isEmpty() && mousePlot->isRevealed(GC.getGame().getActiveTeam(), true))
 		{
-			if (pMouseOverPlot->isActiveVisible(true))
+			if (mousePlot->isActiveVisible(true))
 			{
-				setPlotListHelp(strHelp, pMouseOverPlot, true, false);
+				setPlotListHelp(strHelp, mousePlot, true, false);
 
 				if (!strHelp.isEmpty())
 				{
 					strHelp.append(L"\n");
 				}
 			}
-			setPlotHelp(strHelp, pMouseOverPlot);
+			setPlotHelp(strHelp, mousePlot);
 		}
 
-		if (pMouseOverPlot->isRevealed(GC.getGame().getActiveTeam(), true)
-		&& pMouseOverPlot->isActiveVisible(true) && pMouseOverPlot->getTeam() != NO_TEAM)
+		if (mousePlot->isRevealed(GC.getGame().getActiveTeam(), true)
+		&& mousePlot->isActiveVisible(true) && mousePlot->getTeam() != NO_TEAM)
 		{
 			const CvUnit* selectedUnit = gDLL->getInterfaceIFace()->getHeadSelectedUnit();
 			if (selectedUnit
-			&& GET_TEAM(pMouseOverPlot->getTeam()).isAtWar(selectedUnit->getTeam())
-			&& !selectedUnit->canEnterPlot(pMouseOverPlot))
+			&& GET_TEAM(mousePlot->getTeam()).isAtWar(selectedUnit->getTeam())
+			&& !selectedUnit->canEnterPlot(mousePlot))
 			{
 				CvWString szTempBuffer;
 				szTempBuffer.clear();
-				if (pMouseOverPlot->isCity())
+				if (mousePlot->isCity())
 				{
-					const CvCity* mouseOverCity = pMouseOverPlot->getPlotCity();
+					const CvCity* mouseOverCity = mousePlot->getPlotCity();
 					int iMinimumDefenseLevel = MAX_INT;
 					BuildingTypes eBestBuilding = NO_BUILDING;
 
@@ -34791,22 +34777,22 @@ void CvGameTextMgr::getPlotHelp(CvPlot* pMouseOverPlot, CvCity* pCity, CvPlot* p
 					if (eDefender != NO_PLAYER)
 					{
 						const CvPlot* pZoneOfControl = selectedUnit->plot()->isInFortControl(true, eDefender, selectedUnit->getOwner());
-						const CvPlot* pForwardZoneOfControl = pMouseOverPlot->isInFortControl(true, eDefender, selectedUnit->getOwner());
-						if (pZoneOfControl != NULL && pForwardZoneOfControl != NULL
-						&& pZoneOfControl == pMouseOverPlot->isInFortControl(true, eDefender, selectedUnit->getOwner(), pZoneOfControl))
+						const CvPlot* pForwardZoneOfControl = mousePlot->isInFortControl(true, eDefender, selectedUnit->getOwner());
+						if (pZoneOfControl && pForwardZoneOfControl
+						&& pZoneOfControl == mousePlot->isInFortControl(true, eDefender, selectedUnit->getOwner(), pZoneOfControl))
 						{
 							szTempBuffer.clear();
 							szTempBuffer.append(gDLL->getText("TXT_KEY_PLOT_HOVER_FORT_ZOC"));
 						}
 					}
 					// City ZoC
-					if (selectedUnit->plot()->isInCityZoneOfControl(selectedUnit->getOwner()) && pMouseOverPlot->isInCityZoneOfControl(selectedUnit->getOwner()))
+					if (selectedUnit->plot()->isInCityZoneOfControl(selectedUnit->getOwner()) && mousePlot->isInCityZoneOfControl(selectedUnit->getOwner()))
 					{
 						szTempBuffer.clear();
 						szTempBuffer.append(gDLL->getText("TXT_KEY_PLOT_HOVER_CITY_ZOC"));
 					}
 					// Promotion ZoC
-					if (selectedUnit->plot()->isInUnitZoneOfControl(selectedUnit->getOwner()) && pMouseOverPlot->isInUnitZoneOfControl(selectedUnit->getOwner()))
+					if (selectedUnit->plot()->isInUnitZoneOfControl(selectedUnit->getOwner()) && mousePlot->isInUnitZoneOfControl(selectedUnit->getOwner()))
 					{
 						szTempBuffer.clear();
 						szTempBuffer.append(gDLL->getText("TXT_KEY_PLOT_HOVER_UNIT_ZOC"));
@@ -34831,27 +34817,46 @@ void CvGameTextMgr::getPlotHelp(CvPlot* pMouseOverPlot, CvCity* pCity, CvPlot* p
 		{
 			case INTERFACEMODE_REBASE:
 			{
-				getRebasePlotHelp(pMouseOverPlot, szTempBuffer);
+				getRebasePlotHelp(mousePlot, szTempBuffer);
 				break;
 			}
 			case INTERFACEMODE_NUKE:
 			{
-				getNukePlotHelp(pMouseOverPlot, szTempBuffer);
+				if (mousePlot)
+				{
+					const CvUnit* unit = gDLL->getInterfaceIFace()->getHeadSelectedUnit();
+
+					if (unit)
+					{
+						const CvTeam& team = GET_TEAM(unit->getTeam());
+
+						for (int iI = 0; iI < MAX_PC_TEAMS; iI++)
+						{
+							if (!team.isAtWar(static_cast<TeamTypes>(iI))
+							&&  !team.canDeclareWar(static_cast<TeamTypes>(iI))
+							&&  unit->isNukeVictim(mousePlot, static_cast<TeamTypes>(iI), unit->nukeRange()))
+							{
+								szTempBuffer += gDLL->getText("TXT_KEY_CANT_NUKE_FRIENDS");
+								break;
+							}
+						}
+					}
+				}
 				break;
 			}
 			case INTERFACEMODE_SHADOW_UNIT:
 			{
-				if (pMouseOverPlot)
+				if (mousePlot)
 				{
 					const CvUnit* pHeadSelectedUnit = gDLL->getInterfaceIFace()->getHeadSelectedUnit();
 					if (pHeadSelectedUnit
-					&& !pHeadSelectedUnit->getGroup()->canDoInterfaceModeAt(eInterfaceMode, pMouseOverPlot))
+					&& !pHeadSelectedUnit->getGroup()->canDoInterfaceModeAt(eInterfaceMode, mousePlot))
 					{
 						strHelp.clear();
-						const CvUnit* pShadowUnit = pMouseOverPlot->getCenterUnit(false);
+						const CvUnit* pShadowUnit = mousePlot->getCenterUnit(false);
 						if (pShadowUnit)
 						{
-							const int iValidShadowUnits = algo::count_if(pMouseOverPlot->units(), bind(CvUnit::canShadowAt, pHeadSelectedUnit, pMouseOverPlot, _1));
+							const int iValidShadowUnits = algo::count_if(mousePlot->units(), bind(CvUnit::canShadowAt, pHeadSelectedUnit, mousePlot, _1));
 							if (iValidShadowUnits == 0)
 							{
 								bool bFirst = true;
@@ -34898,15 +34903,15 @@ void CvGameTextMgr::getPlotHelp(CvPlot* pMouseOverPlot, CvCity* pCity, CvPlot* p
 
 void CvGameTextMgr::getRebasePlotHelp(const CvPlot* pPlot, CvWString& strHelp) const
 {
-	if (NULL != pPlot)
+	if (pPlot)
 	{
 		const CvUnit* pHeadSelectedUnit = gDLL->getInterfaceIFace()->getHeadSelectedUnit();
-		if (NULL != pHeadSelectedUnit)
+		if (pHeadSelectedUnit)
 		{
 			if (pPlot->isFriendlyCity(*pHeadSelectedUnit, true))
 			{
 				const CvCity* pCity = pPlot->getPlotCity();
-				if (NULL != pCity)
+				if (pCity)
 				{
 					int iNumUnits = pCity->plot()->countNumAirUnits(GC.getGame().getActiveTeam());
 					bool bFull = (iNumUnits >= pCity->getAirUnitCapacity(GC.getGame().getActiveTeam()));
@@ -34942,29 +34947,6 @@ void CvGameTextMgr::getRebasePlotHelp(const CvPlot* pPlot, CvWString& strHelp) c
 	}
 }
 
-void CvGameTextMgr::getNukePlotHelp(const CvPlot* pPlot, CvWString& strHelp) const
-{
-	PROFILE_EXTRA_FUNC();
-	if (NULL != pPlot)
-	{
-		const CvUnit* pHeadSelectedUnit = gDLL->getInterfaceIFace()->getHeadSelectedUnit();
-
-		if (NULL != pHeadSelectedUnit)
-		{
-			for (int iI = 0; iI < MAX_TEAMS; iI++)
-			{
-				if (pHeadSelectedUnit->isNukeVictim(pPlot, ((TeamTypes)iI)))
-				{
-					if (!pHeadSelectedUnit->isEnemy((TeamTypes)iI))
-					{
-						strHelp +=  NEWLINE + gDLL->getText("TXT_KEY_CANT_NUKE_FRIENDS");
-						break;
-					}
-				}
-			}
-		}
-	}
-}
 
 void CvGameTextMgr::getInterfaceCenterText(CvWString& strText)
 {

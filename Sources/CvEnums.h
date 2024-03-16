@@ -2311,11 +2311,6 @@ enum MemoryTypes
 	MEMORY_EVENT_GOOD_TO_US,
 	MEMORY_EVENT_BAD_TO_US,
 	MEMORY_LIBERATED_CITIES,
-/************************************************************************************************/
-/* Afforess                                     12/7/09                                         */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
 	MEMORY_INQUISITION,
 	MEMORY_RECALLED_AMBASSADOR,
 	MEMORY_WARMONGER,
@@ -2325,9 +2320,7 @@ enum MemoryTypes
 	MEMORY_ENSLAVED_CITIZENS,
 	MEMORY_BACKSTAB,
 	MEMORY_BACKSTAB_FRIEND,
-/************************************************************************************************/
-/* Afforess	                         END                                                        */
-/************************************************************************************************/
+	MEMORY_USED_NUKE,
 
 	NUM_MEMORY_TYPES
 };

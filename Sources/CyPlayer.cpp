@@ -1522,11 +1522,6 @@ EventTriggeredData* CyPlayer::initTriggeredData(int /*EventTriggerTypes*/ eEvent
 	return m_pPlayer->initTriggeredData((EventTriggerTypes)eEventTrigger, bFire, iCityId, iPlotX, iPlotY, (PlayerTypes)eOtherPlayer, iOtherPlayerCityId, (ReligionTypes)eReligion, (CorporationTypes)eCorporation, iUnitId, (BuildingTypes)eBuilding);
 }
 
-int CyPlayer::getEventTriggerWeight(int /*EventTriggerTypes*/ eTrigger) const
-{
-	return m_pPlayer->getEventTriggerWeight((EventTriggerTypes)eTrigger);
-}
-
 void CyPlayer::AI_updateFoundValues(bool bStartingLoc)
 {
 	//	Koshling - found values are now calculated on demand, so clearing them

@@ -452,7 +452,6 @@ void CvPythonPlayerLoader::CyPlayerPythonInterface3(boost::python::class_<CyPlay
 		.def("resetEventOccured", &CyPlayer::resetEventOccured, "void (int /*EventTypes*/ eEvent)")
 		.def("getEventTriggered", &CyPlayer::getEventTriggered, boost::python::return_value_policy<boost::python::reference_existing_object>(), "EventTriggeredData* (int iID)")
 		.def("initTriggeredData", &CyPlayer::initTriggeredData, boost::python::return_value_policy<boost::python::reference_existing_object>(), "EventTriggeredData* (int eEventTrigger, bool bFire, int iCityId, int iPlotX, int iPlotY, PlayerTypes eOtherPlayer, int iOtherPlayerCityId, ReligionTypes eReligion, CorporationTypes eCorporation, int iUnitId, BuildingTypes eBuilding)")
-		.def("getEventTriggerWeight", &CyPlayer::getEventTriggerWeight, "int getEventTriggerWeight(int eEventTrigger)")
 		.def("hasHeritage", &CyPlayer::hasHeritage, "bool hasHeritage(int iType)")
 	;
 }

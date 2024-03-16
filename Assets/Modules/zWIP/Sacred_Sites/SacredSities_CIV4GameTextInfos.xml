@@ -7,7 +7,7 @@
 		<German>Bauen [LINK=IMPROVEMENT_ASIAN_TEMPLE]Asiatischen Tempel[\LINK]</German>
 		<Italian>Costruisci [LINK=IMPROVEMENT_ASIAN_TEMPLE]Tempio Asiatico[\LINK]</Italian>
 		<Spanish>Construir un [LINK=IMPROVEMENT_ASIAN_TEMPLE]Templo asiático[\LINK]</Spanish>
-		<Polish>Zbuduj [LINK=IMPROVEMENT_ASIAN_TEMPLE]Azjatycką Świątynię[\LINK]</Polish>
+		<Polish>Zbuduj [LINK=IMPROVEMENT_ASIAN_TEMPLE]Azjatyck&#185; &#140;wi&#185;tyni&#234;[\LINK]</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_MESOAMERICAN_TEMPLE</Tag>
@@ -16,7 +16,7 @@
 		<German>Bauen [LINK=IMPROVEMENT_MESOAMERICAN_TEMPLE]Mesoamerikanischen Tempel[\LINK]</German>
 		<Italian>Costruisci [LINK=IMPROVEMENT_MESOAMERICAN_TEMPLE]Temple Mesoamericana[\LINK]</Italian>
 		<Spanish>Construir un [LINK=IMPROVEMENT_MESOAMERICAN_TEMPLE]Templo mesoamericano[\LINK]</Spanish>
-		<Polish>Zbuduj [LINK=IMPROVEMENT_MESOAMERICAN_TEMPLE]Świątynię Mezoamerykańską[\LINK]</Polish>
+		<Polish>Zbuduj [LINK=IMPROVEMENT_MESOAMERICAN_TEMPLE]&#140;wi&#185;tyni&#234; Mezoameryka&#241;sk&#185;[\LINK]</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_PYRAMIDS</Tag>
@@ -34,7 +34,7 @@
 		<German>Bauen [LINK=IMPROVEMENT_STONE_CIRCLE]Steinkreis[\LINK]</German>
 		<Italian>Costruisci [LINK=IMPROVEMENT_STONE_CIRCLE]Cerchio di pietre[\LINK]</Italian>
 		<Spanish>Construir un [LINK=IMPROVEMENT_STONE_CIRCLE]Círculo de piedras[\LINK]</Spanish>
-		<Polish>Zbuduj [LINK=IMPROVEMENT_STONE_CIRCLE]Kamienny Krąg[\LINK]</Polish>
+		<Polish>Zbuduj [LINK=IMPROVEMENT_STONE_CIRCLE]Kamienny Kr&#185;g[\LINK]</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_ZIGGURAT</Tag>

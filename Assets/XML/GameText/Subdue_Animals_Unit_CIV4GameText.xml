@@ -84,7 +84,7 @@
 		<English>Big Game Hunter</English>
 		<French>Grand Chasseur</French>
 		<Italian>Cacciatore di grossi animali</Italian>
-		<Polish>Myśliwy Grubej Zwierzyny</Polish>
+		<Polish>My&#156;liwy Grubej Zwierzyny</Polish>
 		<Russian>Åãåðü</Russian>
 	</TEXT>
 	<TEXT>
@@ -106,7 +106,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</Spanish>
-		<Polish>Czarny Niedźwiedź</Polish>
+		<Polish>Czarny Nied&#159;wied&#159;</Polish>
 		<Russian>×åðíûé ìåäâåäü</Russian>
 	</TEXT>
 	<TEXT>
@@ -123,7 +123,7 @@
 			<Gender>Neuter</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
-		<Polish>Nosorożec Czarny</Polish>
+		<Polish>Nosoro&#191;ec Czarny</Polish>
 		<Russian>×åðíûé íîñîðîã</Russian>
 		<Italian>Rinoceronte nero</Italian>
 	</TEXT>
@@ -132,7 +132,7 @@
 		<English>The black rhinoceros or hook-lipped rhinoceros (Diceros bicornis) is a species of rhinoceros, native to eastern and central Africa including Kenya, Tanzania, Cameroon, South Africa, Namibia, Zimbabwe, and Angola. Although the rhinoceros is referred to as black, its colors vary from brown to grey.[PARAGRAPH:2]The other African rhinoceros is the white rhinoceros (Ceratotherium simum). The word "white" in the name "white rhinoceros" is a misinterpretation of the Afrikaans word wyd, itself derived from the Dutch word wijd for wide, referring to its square upper lip, as opposed to the pointed or hooked lip of the black rhinoceros. These species are now sometimes referred to as the square-lipped (for white) or hook-lipped (for black) rhinoceros.[PARAGRAPH:2]The species overall is classified as critically endangered, and one subspecies, the western black rhinoceros, was declared extinct by the IUCN in 2011.</English>
 		<French>Le rhinocéros noir (Diceros bicornis), qui vit en Afrique, est la seule espèce du genre Diceros, l'un des quatre genres de rhinocéros. Le rhinocéros noir d'Afrique de l'Ouest, sous-espèce Diceros bicornis longipes, est déclarée éteinte le 11 novembre 2011 par l'UICN</French>
 		<German>Das [COLOR_UNIT_TEXT]Spitzmaulnashorn[COLOR_REVERT] oder Schwarze Nashorn (Diceros bicornis) ist das zweitgrößte Nashorn Afrikas. Der friedliche Savannenbewohner ist ein Einzelgänger, der leicht an seinen zwei Hörnern (auf der Nase und auf der Stirn) zu erkennen ist.[NEWLINE]Ein Bulle kann bis zu 1,4 Tonnen wiegen. Wie alle Nashörner sieht auch das Spitzmaulnashorn schlecht, verfügt aber über einen guten Hör- und Geruchssinn Seine Lieblingsspeise sind Akazien. Während der Paarungszeit sind Bullen sehr aggressiv, Rivalitätskämpfe enden teilweise sogar tödlich.[NEWLINE]In der freien Wildbahn haben Spitzmaulnashörner kaum Feinde. Die Bestände sind dennoch stark gefährdet, denn dem Horn werden in der traditionellen chinesischen Medizin Heilkräfte nachgesagt. In einigen Ländern glaubt man auch an dessen potenzsteigernde Wirkung, weshalb das Nashorn gern von Wilderern gejagt wird. In vielen Zoos gehören Spitzmaulnashörner zum Bestand. Der Berliner Zoo ist berühmt für seine regelmäßige Aufzucht.</German>
-		<Polish>Nosorożec czarny, nosorożec wąskopyski, nosorożec zwyczajny, (Diceros bicornis) - nosorożec występujący w południowej i wschodniej Afryce, na obszarze Angoli, Kenii, Mozambiku, Namibii, Republiki Południowej Afryki, Tanzanii i Zimbabwe; dodatkowo reintrodukowany w Botswanie, Malawi, Suazi i Zambii. Wymarły w Czadzie, Kamerunie, Rwandzie i prawdopodobnie w Etiopii.</Polish>
+		<Polish>Nosoro&#191;ec czarny, nosoro&#191;ec w&#185;skopyski, nosoro&#191;ec zwyczajny, (Diceros bicornis) - nosoro&#191;ec wyst&#234;puj&#185;cy w po&#179;udniowej i wschodniej Afryce, na obszarze Angoli, Kenii, Mozambiku, Namibii, Republiki Po&#179;udniowej Afryki, Tanzanii i Zimbabwe; dodatkowo reintrodukowany w Botswanie, Malawi, Suazi i Zambii. Wymar&#179;y w Czadzie, Kamerunie, Rwandzie i prawdopodobnie w Etiopii.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_BOAR</Tag>
@@ -160,7 +160,7 @@
 		<Tag>TXT_KEY_UNIT_BOAR_PEDIA</Tag>
 		<English>Wild boar, also known as wild pig, (Sus scrofa) is a species of the pig genus Sus, part of the biological family Suidae. The species includes many subspecies. It is the wild ancestor of the domestic pig, an animal with which it freely hybridises. Wild boar are native across much of Northern and Central Europe, the Mediterranean Region (including North Africa's Atlas Mountains) and much of Asia as far south as Indonesia. Populations have also been artificially introduced in some parts of the world, most notably the Americas and Australasia, principally for hunting. Elsewhere, populations have also become established after escapes of wild boar from captivity.</English>
 		<German>Das [COLOR_UNIT_TEXT]Wildschwein[COLOR_REVERT] (Sus scrofa) ist die Stammform des Hausschweins. Die Tiere sind sehr anpassungsfähig und heute nahezu weltweit verbreitet.[NEWLINE]Das Winterkleid der Wildschweine ist dunkelgrau bis schwarz-braun gefärbt, weshalb sie in der Jägersprache als Schwarzwild bezeichnet werden. Die Jungtiere (Frischlinge) besitzen gelblich-braune Längsstreifen auf dem Rücken, wogegen Schultern und Hinterbeine gefleckt sind. Die Kleinen werden besonders in den ersten Wochen von der Bache beschützt und wenn nötig aggressiv verteidigt. Wildschweine sind Allesfresser, vertilgen Farne, Früchte, Kleinsäuger und je nach Region auch Muscheln oder Kokosnüsse. Bei der Nahrungssuche durchwühlen sie auch den Boden, um an Würmer oder Wurzeln zu gelangen.[NEWLINE]Schon in der Steinzeit waren Wildschweine eine wichtige Jagdbeute. Auch heute ist Wildschweinfleisch sehr beliebt. In der Landwirtschaft können sie durch Umwühlen oder Verzehr der Feldfrüchte großen Schaden anrichten. Sie sind zudem Überträger der Schweinepest. In Frankreich werden Wildschweine zur Trüffelsuche eingesetzt.</German>
-		<Polish>Dzik (Sus scrofa) gatunek dużego, lądowego ssaka łożyskowego z rzędu parzystokopytnych. Sus scrofa jest jedynym przedstawicielem dziko żyjących świniowatych w Europie. Jest przodkiem świni domowej. Gatunek inwazyjny poza naturalnym zasięgiem występowania. Dzik jest popularnym zwierzęciem łownym i jako taki doczekał się w języku myśliwych wielu szczegółowych określeń, pozwalających w krótkich słowach opisać zwierzę i jego zachowanie. Z czasem część tej terminologii weszła do języka codziennego, a także języka zoologów. W Polsce dzik jest pospolitym przedstawicielem tzw. zwierzyny czarnej, podlega sezonowej ochronie. Samica dzika nazywana jest lochą, samiec odyńcem, a młode warchlakiem, warchlak o charakterystycznym paskowym umaszczeniu pasiakiem. Obecny, naturalny zasięg występowania dzika obejmuje tereny od północnych krańców Afryki przez środkową i południową Eurazję. Gatunek nie występuje na północy Półwyspu Skandynawskiego, Finlandii i północnej części Rosji. Na Sachalinie odkryto jedynie jego kopalne pozostałości. Nie występuje również w suchych pustyniach Mongolii, wysokich górach Azji Środkowej, jak i na Wyżynie Tybetańskiej. W Polsce bardzo licznie występuje na terenie całego kraju, w Tatrach nieliczny, dochodzi do górnej granicy lasu, powyżej 1400 m n.p.m.. Największe odnotowane przez inspekcje lasów państwowych skupisko dzików w Polsce znajduje się w Siecieborzycach. Dzik jest eurytopem, unika tylko terenów otwartych i górskich. Zasiedla głównie obszary o dużej lesistości, ponieważ w lasach znajduje pokarm oraz schronienie. Idealnym siedliskiem dla niego są lasy liściaste i lasy mieszane, gdzie znajduje się najwięcej typowego dla niego pokarmu. Optymalnym środowiskiem dla tego gatunku są prawdopodobnie lasy łęgowe. Dzik dzięki swej plastyczności ekologicznej jest jednym z najważniejszych i najliczniejszych dużych ssaków naszej strefy klimatycznej. Obserwuje się pojawianie dzików, w tym loch z warchlakami, na terenie miast (np. Świnoujście), gdzie przychodzą, aby żerować w śmietnikach i na wysypiskach. Zwierzę stadne, żyjące w grupach rodzinnych nazywanych watahami. W skład gromady wchodzi od kilku do dwudziestu osobników obu płci: stara locha przewodniczka oraz lochy z warchlakami (młode od dnia urodzenia do dnia 31 marca roku następnego). Pozostałe osobniki są słabiej związane ze stadem. Odyńce rzadko wiążą się z grupą, zwykle bytują samotnie. Watahy przebywające na wspólnych żerowiskach tworzą zgrupowanie liczące do 100 osobników. Dziki w ciągu dnia odpoczywają w barłogach lub tarzają się w błocie. Wieczorem osobniki wyruszają na żer i pod osłoną nocy wychodzą z lasu na pola. Mogą być szkodnikami upraw. Biegają kłusem, galopem lub skokami. W galop zrywają się rzadko i potrafią nim przebiec tylko kilkaset metrów. Dobrze pływają, dlatego występują na jeziornych i rzecznych wyspach. Dziki czyszczą skórę z pasożytów ocierając się (czochrając się) o pnie drzew. Dzik jest agresywnym zwierzęciem i w niektórych sytuacjach odważnie szarżuje na wroga. Lochy z potomstwem są szczególnie niebezpieczne.</Polish>
+		<Polish>Dzik (Sus scrofa) gatunek du&#191;ego, l&#185;dowego ssaka &#179;o&#191;yskowego z rz&#234;du parzystokopytnych. Sus scrofa jest jedynym przedstawicielem dziko &#191;yj&#185;cych &#156;winiowatych w Europie. Jest przodkiem &#156;wini domowej. Gatunek inwazyjny poza naturalnym zasi&#234;giem wyst&#234;powania. Dzik jest popularnym zwierz&#234;ciem &#179;ownym i jako taki doczeka&#179; si&#234; w j&#234;zyku my&#156;liwych wielu szczeg&#243;&#179;owych okre&#156;le&#241;, pozwalaj&#185;cych w kr&#243;tkich s&#179;owach opisa&#230; zwierz&#234; i jego zachowanie. Z czasem cz&#234;&#156;&#230; tej terminologii wesz&#179;a do j&#234;zyka codziennego, a tak&#191;e j&#234;zyka zoolog&#243;w. W Polsce dzik jest pospolitym przedstawicielem tzw. zwierzyny czarnej, podlega sezonowej ochronie. Samica dzika nazywana jest loch&#185;, samiec ody&#241;cem, a m&#179;ode warchlakiem, warchlak o charakterystycznym paskowym umaszczeniu pasiakiem. Obecny, naturalny zasi&#234;g wyst&#234;powania dzika obejmuje tereny od p&#243;&#179;nocnych kra&#241;c&#243;w Afryki przez &#156;rodkow&#185; i po&#179;udniow&#185; Eurazj&#234;. Gatunek nie wyst&#234;puje na p&#243;&#179;nocy P&#243;&#179;wyspu Skandynawskiego, Finlandii i p&#243;&#179;nocnej cz&#234;&#156;ci Rosji. Na Sachalinie odkryto jedynie jego kopalne pozosta&#179;o&#156;ci. Nie wyst&#234;puje r&#243;wnie&#191; w suchych pustyniach Mongolii, wysokich g&#243;rach Azji &#140;rodkowej, jak i na Wy&#191;ynie Tybeta&#241;skiej. W Polsce bardzo licznie wyst&#234;puje na terenie ca&#179;ego kraju, w Tatrach nieliczny, dochodzi do g&#243;rnej granicy lasu, powy&#191;ej 1400 m n.p.m.. Najwi&#234;ksze odnotowane przez inspekcje las&#243;w pa&#241;stwowych skupisko dzik&#243;w w Polsce znajduje si&#234; w Siecieborzycach. Dzik jest eurytopem, unika tylko teren&#243;w otwartych i g&#243;rskich. Zasiedla g&#179;&#243;wnie obszary o du&#191;ej lesisto&#156;ci, poniewa&#191; w lasach znajduje pokarm oraz schronienie. Idealnym siedliskiem dla niego s&#185; lasy li&#156;ciaste i lasy mieszane, gdzie znajduje si&#234; najwi&#234;cej typowego dla niego pokarmu. Optymalnym &#156;rodowiskiem dla tego gatunku s&#185; prawdopodobnie lasy &#179;&#234;gowe. Dzik dzi&#234;ki swej plastyczno&#156;ci ekologicznej jest jednym z najwa&#191;niejszych i najliczniejszych du&#191;ych ssak&#243;w naszej strefy klimatycznej. Obserwuje si&#234; pojawianie dzik&#243;w, w tym loch z warchlakami, na terenie miast (np. &#140;winouj&#156;cie), gdzie przychodz&#185;, aby &#191;erowa&#230; w &#156;mietnikach i na wysypiskach. Zwierz&#234; stadne, &#191;yj&#185;ce w grupach rodzinnych nazywanych watahami. W sk&#179;ad gromady wchodzi od kilku do dwudziestu osobnik&#243;w obu p&#179;ci: stara locha przewodniczka oraz lochy z warchlakami (m&#179;ode od dnia urodzenia do dnia 31 marca roku nast&#234;pnego). Pozosta&#179;e osobniki s&#185; s&#179;abiej zwi&#185;zane ze stadem. Ody&#241;ce rzadko wi&#185;&#191;&#185; si&#234; z grup&#185;, zwykle bytuj&#185; samotnie. Watahy przebywaj&#185;ce na wsp&#243;lnych &#191;erowiskach tworz&#185; zgrupowanie licz&#185;ce do 100 osobnik&#243;w. Dziki w ci&#185;gu dnia odpoczywaj&#185; w bar&#179;ogach lub tarzaj&#185; si&#234; w b&#179;ocie. Wieczorem osobniki wyruszaj&#185; na &#191;er i pod os&#179;on&#185; nocy wychodz&#185; z lasu na pola. Mog&#185; by&#230; szkodnikami upraw. Biegaj&#185; k&#179;usem, galopem lub skokami. W galop zrywaj&#185; si&#234; rzadko i potrafi&#185; nim przebiec tylko kilkaset metr&#243;w. Dobrze p&#179;ywaj&#185;, dlatego wyst&#234;puj&#185; na jeziornych i rzecznych wyspach. Dziki czyszcz&#185; sk&#243;r&#234; z paso&#191;yt&#243;w ocieraj&#185;c si&#234; (czochraj&#185;c si&#234;) o pnie drzew. Dzik jest agresywnym zwierz&#234;ciem i w niekt&#243;rych sytuacjach odwa&#191;nie szar&#191;uje na wroga. Lochy z potomstwem s&#185; szczeg&#243;lnie niebezpieczne.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_BRAZILIAN_TAPIR</Tag>
@@ -198,7 +198,7 @@
 			<Gender>Male</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Niedźwiedź Brunatny</Polish>
+		<Polish>Nied&#159;wied&#159; Brunatny</Polish>
 		<Russian>Áóðûé ìåäâåäü</Russian>
 	</TEXT>
 	<TEXT>
@@ -220,7 +220,7 @@
 	[ICON_BULLET]Hokkaido Brown Bear (Ursus arctos yesoensis)
 [PARAGRAPH:2]Source: http://www.bearplanet.org</English>
 		<German>[COLOR_UNIT_TEXT]Braunbären[COLOR_REVERT] (Ursus arctos) sind Säugetiere, von denen mehrere Unterarten wie Europäischer Braunbär, Grizzly oder Kodiakbär existieren. Letztere sind aktuell die größten und schwersten bekannten Landraubtiere der Erde.[NEWLINE]Der Braunbär hat alle Merkmale eines Bären, sein Skelett ist jedoch stärker als das seiner Verwandten. Er besitzt zudem einen markanten Buckel über den Schultern. Braunbären geben nur wenige Laute von sich. Die Kommunikation erfolgt über Körperhaltung und Geruch. Sie sind Allesfresser, bevorzugen aber pflanzliche Nahrung und machen auch vor Honig nicht Halt. Ihren Fleischbedarf decken sie mit allem, was der Lebensraum zu bieten hat, auch Aas wird verwertet. Wenn im Winter das Nahrungsangebot zurückgeht, begeben sie sich in Winterruhe. In dieser Zeit werden die Jungtiere geboren. Während der Aufzucht verhält sich das Weibchen aggressiv, auch männlichen Artgenossen oder Menschen gegenüber.[NEWLINE]Durch Jagd und Zerstörung des Lebensraums ging die Verbreitung des Braunbären stark zurück. In Deutschland gilt er seit dem 19. Jahrhundert als ausgestorben. Kulturgeschichtlich spielt er eine große Rolle, er ist Bestandteil der Heraldik, taucht in Märchen und Mythen auf. So sind z.B. die Sternbilder Großer und Kleiner Bär auf die griechische Mythologie zurückzuführen.</German>
-		<Polish>Niedźwiedź brunatny (Ursus arctos) - gatunek drapieżnego ssaka z rodziny niedźwiedziowatych. Zamieszkuje Azję, Europę Północną i Amerykę Północną. Niezagrożony wyginięciem. Sierść niedźwiedzia brunatnego ma barwę ciemnobrązową, choć niektóre jego podgatunki mogą mieć futro jaśniejsze. W pozycji wyprostowanej Ursus arctos mierzy - w zależności od płci - od 1,8 m do 3 m. Masa ciała poszczególnych osobników waha się między 200 a 780 kg. Niedźwiedzica wydaje na świat co dwa lata dwoje-troje młodych. Ciąża trwa około 8 miesięcy. Poród następuje zwykle między grudniem a lutym.</Polish>
+		<Polish>Nied&#159;wied&#159; brunatny (Ursus arctos) - gatunek drapie&#191;nego ssaka z rodziny nied&#159;wiedziowatych. Zamieszkuje Azj&#234;, Europ&#234; P&#243;&#179;nocn&#185; i Ameryk&#234; P&#243;&#179;nocn&#185;. Niezagro&#191;ony wygini&#234;ciem. Sier&#156;&#230; nied&#159;wiedzia brunatnego ma barw&#234; ciemnobr&#185;zow&#185;, cho&#230; niekt&#243;re jego podgatunki mog&#185; mie&#230; futro ja&#156;niejsze. W pozycji wyprostowanej Ursus arctos mierzy - w zale&#191;no&#156;ci od p&#179;ci - od 1,8 m do 3 m. Masa cia&#179;a poszczeg&#243;lnych osobnik&#243;w waha si&#234; mi&#234;dzy 200 a 780 kg. Nied&#159;wiedzica wydaje na &#156;wiat co dwa lata dwoje-troje m&#179;odych. Ci&#185;&#191;a trwa oko&#179;o 8 miesi&#234;cy. Por&#243;d nast&#234;puje zwykle mi&#234;dzy grudniem a lutym.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_BUFFALO_CAPE</Tag>
@@ -241,7 +241,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</Spanish>
-		<Polish>Bawół Wodny</Polish>
+		<Polish>Baw&#243;&#179; Wodny</Polish>
 		<Russian>Àôð. áóéâîë</Russian>
 	</TEXT>
 	<TEXT>
@@ -265,7 +265,7 @@
 		<Tag>TXT_KEY_UNIT_CAIMAN_BLACK_PEDIA</Tag>
 		<English>The [COLOR_UNIT_TEXT] black caiman [COLOR_REVERT] (Melanosuchus niger), also black caiman, belongs to the alligator family like all caimans. With a maximum length of 6 meters, it is one of the largest predators in South America, along with the Orinoco crocodile. With its broad snout, it resembles the Mississippi alligator. [NEWLINE] Little is known about the black caimans. Most of the specimens live in the Amazon basin. Their mound nests made of earth and parts of plants are similar in shape to those of the crocodile caimans, but are larger. Young animals probably feed on insects and snails, later they also hunt fish, birds, mammals and lizards (also other caiman species). Like most crocodiles, they are nocturnal. [NEWLINE] The black caiman can hardly be found in open areas. Adult males were often hunted in the past because of the beautiful skin that, unlike other crocodile skins, does not contain small bones. Since the females live withdrawn to lay their eggs, the populations quickly recovered.</English>
 		<German>Der [COLOR_UNIT_TEXT]Mohrenkaiman[COLOR_REVERT] (Melanosuchus niger), auch Schwarzer Kaiman, gehört wie alle Kaimane zur Familie der Alligatoren. Mit einer Maximallänge von 6 Metern gehört er neben dem Orinoko-Krokodil zu den größten Räubern Südamerikas. Mit seiner breiten Schnauze ähnelt er dem Mississippi-Alligator.[NEWLINE]Über die Mohrenkaimane ist nur wenig bekannt. Die meisten Exemplare leben im Amazonasbecken. Ihre Hügelnester aus Erde und Pflanzenteilen ähneln in ihrer Form denen der Krokodilkaimane, sind allerdings größer. Jungtiere ernähren sich wahrscheinlich von Insekten und Schnecken, später jagen sie auch Fische, Vögel, Säugetiere sowie Echsen (auch andere Kaimanarten). Wie die meisten Krokodile sind sie nachtaktiv.[NEWLINE]In offenen Gegenden ist der Mohrenkaiman kaum noch zu finden. Ausgewachsene Männchen wurden in der Vergangenheit wegen der schönen Haut, die im Gegensatz zu anderen Krokodilhäuten keine kleinen Knochen enthält, oft gejagt. Da die Weibchen zur Eiablage zurückgezogen leben, erholten sich die Bestände jedoch schnell wieder.</German>
-		<Polish>Kajmany (Caimaninae) podrodzina gadów z rodziny aligatorów, obejmująca gatunki z rodzajów Caiman, Melanosuchus i Paleosuchus. Kajmany mają duże płytki kostne wzmacniające rogowe tarczki brzuszne. Długość dorosłych kajmanów od 1,5 kajman Schneidera (Paleosuchus trigonatus) do 4,5 m kajman czarny (Melanosuchus niger) (choć prehistoryczne kajmany, takie jak Purussaurus, osiągały nawet 11 m długości). Występują w Ameryce Zrodkowej i Południowej.</Polish>
+		<Polish>Kajmany (Caimaninae) podrodzina gad&#243;w z rodziny aligator&#243;w, obejmuj&#185;ca gatunki z rodzaj&#243;w Caiman, Melanosuchus i Paleosuchus. Kajmany maj&#185; du&#191;e p&#179;ytki kostne wzmacniaj&#185;ce rogowe tarczki brzuszne. D&#179;ugo&#156;&#230; doros&#179;ych kajman&#243;w od 1,5 kajman Schneidera (Paleosuchus trigonatus) do 4,5 m kajman czarny (Melanosuchus niger) (cho&#230; prehistoryczne kajmany, takie jak Purussaurus, osi&#185;ga&#179;y nawet 11 m d&#179;ugo&#156;ci). Wyst&#234;puj&#185; w Ameryce Zrodkowej i Po&#179;udniowej.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_COBRA_PEDIA</Tag>
@@ -418,7 +418,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</Spanish>
-		<Polish>Dziki Osioł</Polish>
+		<Polish>Dziki Osio&#179;</Polish>
 		<Russian>Îñåë</Russian>
 	</TEXT>
 	<TEXT>
@@ -440,7 +440,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</Spanish>
-		<Polish>Orzeł</Polish>
+		<Polish>Orze&#179;</Polish>
 		<Russian>Îðåë</Russian>
 	</TEXT>
 	<TEXT>
@@ -484,7 +484,7 @@
 		<English>Elasmotherium ("Thin Plate Beast"), also known as giant rhinoceros, is an extinct genus endemic to Eurasia during the Late Pliocene through the Pleistocene, documented from 2.6 Ma to as late as 50,000 years ago, possibly later, in the Late Pleistocene, an approximate span of slightly less than 2.6 million years. Three species are recognised. The best known, E. sibiricum was the size of a mammoth and is thought to have borne a large, thick horn on its forehead which was used for defense, attracting mates, driving away competitors, sweeping snow from the grass in winter and digging for water and plant roots. Like all rhinoceroses, elasmotheres were herbivorous. Unlike any others, its high-crowned molars were ever-growing. Its legs were longer than those of other rhinos and were adapted for galloping, giving it a horse-like gait.</English>
 		<French>LElasmotherium, ou « licorne géante », est un genre de rhinocérotidés éteints qui a vécu en Asie au Pliocène et au Pléistocène.</French>
 		<German>[COLOR_UNIT_TEXT]Elasmotherium[COLOR_REVERT] ist eine Nashorngattung des Pliozäns und Pleistozäns. Sie umfasste vier Arten, die im nördlichen Eurasien lebten. Markantes Merkmal war ein großes Horn auf der Stirn.[NEWLINE]Im Vergleich zu den heutigen Nashörnern war Elasmotherium recht groß, der größte Vertreter maß ca. 5 Meter. Die Tiere lebten vermutlich in Steppengebieten und Uferregionen. Möglicherweise besaßen sie ein Fell, um an das raue Klima des Nordens angepasst zu sein. Sie ernährten sich hauptsächlich von Gras und Wurzeln, was den Abrieb der Zähne und die nach unten geneigte Haltung des Kopfes erklären würde. Der Zweck des Horns ist nicht bekannt, für Territorialkämpfe oder zur Nahrungssuche war es aufgrund seiner Position ungeeignet.[NEWLINE]Ob Elasmotherium zur Beute des Homo erectus oder des Neandertalers zählte, ist unklar. Möglicherweise trugen die Tiere zur Entstehung der Einhorn-Legenden bei. Indizien dafür sind diverse Darstellungen z.B. in der griechischen Antike.</German>
-		<Polish>Elasmoterium (Elasmotherium sibiricum) - prehistoryczny nosorożec, żył od 1 mln - 10 tys. lat temu. Jednorożec był olbrzymim nosorożcem wysokim na około 2,5 metra i długim na 6 metrów. Jego masa dochodziła nawet do 5 ton. Posiadał pojedynczy, dwumetrowy róg na przodzie czaszki. Jego nogi były o wiele dłuższe niż u innych gatunków nosorożców, i pomimo jego masy pozwalały mu galopować z dość dużą prędkością. Zęby były zbliżone budową do końskich, przystosowane do spożywania nisko rosnącej roślinności. Nie miał siekaczy. Dobrze znosił chłody.</Polish>
+		<Polish>Elasmoterium (Elasmotherium sibiricum) - prehistoryczny nosoro&#191;ec, &#191;y&#179; od 1 mln - 10 tys. lat temu. Jednoro&#191;ec by&#179; olbrzymim nosoro&#191;cem wysokim na oko&#179;o 2,5 metra i d&#179;ugim na 6 metr&#243;w. Jego masa dochodzi&#179;a nawet do 5 ton. Posiada&#179; pojedynczy, dwumetrowy r&#243;g na przodzie czaszki. Jego nogi by&#179;y o wiele d&#179;u&#191;sze ni&#191; u innych gatunk&#243;w nosoro&#191;c&#243;w, i pomimo jego masy pozwala&#179;y mu galopowa&#230; z do&#156;&#230; du&#191;&#185; pr&#234;dko&#156;ci&#185;. Z&#234;by by&#179;y zbli&#191;one budow&#185; do ko&#241;skich, przystosowane do spo&#191;ywania nisko rosn&#185;cej ro&#156;linno&#156;ci. Nie mia&#179; siekaczy. Dobrze znosi&#179; ch&#179;ody.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_ELEPHANT_AFRICAN</Tag>
@@ -515,7 +515,7 @@
 			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
-		<Polish>Słoń</Polish>
+		<Polish>S&#179;o&#241;</Polish>
 		<Russian>Ñëîí</Russian>
 		<Italian>Elefante asiatico</Italian>
 	</TEXT>
@@ -574,7 +574,7 @@
 		<English>Game Hunter</English>
 		<French>Maître chasseur</French>
 		<Italian>Cacciatore di selvaggina</Italian>
-		<Polish>Myśliwy</Polish>
+		<Polish>My&#156;liwy</Polish>
 		<Russian>Îõîòíèê</Russian>
 	</TEXT>
 	<TEXT>
@@ -590,7 +590,7 @@
 			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
-		<Polish>Aligator Amerykański</Polish>
+		<Polish>Aligator Ameryka&#241;ski</Polish>
 		<Russian>Àëëèãàòîð</Russian>
 		<Italian>Alligatore americano</Italian>
 	</TEXT>
@@ -607,7 +607,7 @@
 			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
-		<Polish>Aligator Chiński</Polish>
+		<Polish>Aligator Chi&#241;ski</Polish>
 		<Russian>Êèòàéñêèé àëëèãàòîð</Russian>
 		<Italian>Alligatore cinese</Italian>
 	</TEXT>
@@ -615,13 +615,13 @@
 		<Tag>TXT_KEY_UNIT_GATOR_ASIAN_PEDIA</Tag>
 		<English>The Chinese alligator (Alligator sinensis) is one of two known living species of Alligator, a genus in the family Alligatoridae. Alligator sinensis is endemic to eastern China.[PARAGRAPH:2]While its appearance is very similar to the only other living member of the genus, the American alligator (Alligator mississippiensis), there are a few differences. Usually, this species only attains an adult length of 5 feet (1.5 m) and a mass of 80 pounds (36 kg). Exceptionally large males have reached 7 feet (2.1 m) in length and 100 pounds (45 kg) in weight. Reports are known of alligators in China reaching 10 feet (3.0 m) in centuries past, but these are now generally considered apocryphal. Unlike the American alligator, the Chinese alligator is fully armored; even its bellya feature of only a few crocodilians.</English>
 		<German>Der [COLOR_UNIT_TEXT]China-Alligator[COLOR_REVERT] (Alligator sinensis) gehört zu den Echten Alligatoren. Er lebt am Mündungslauf des Jangtsekiang und seinen Nebenflüssen.[NEWLINE]Der Panzer des China-Alligators ist gelblich-grau mit schwarzen Bänderungen auf Rücken und Schwanz. Die Füße besitzen je fünf Krallen und der Schwanz wird im Wasser als Ruder eingesetzt. Er verzehrt vor allem Wassertiere wie Fische, Wasservögel und Krebse, jedoch auch kleine Säugetiere. Zudem mögen die Jungtiere Schnecken und Insekten.[NEWLINE]China-Alligatoren sind schon seit Jahren ein beliebtes Souvenir, auch ihr Fleisch und Leder sind begehrt. Trotz der geringen Bestände werden sie immer noch illegal gejagt und ihre potenziellen Lebensräume zerstört. Die Art ist deshalb vom Aussterben bedroht, es gibt weltweit nur noch 120 frei lebende Exemplare. In China versucht man, Nachwuchs in "Breeding Centers" zu züchten. Auch in Europa gibt es ein Erhaltungsprogramm.</German>
-		<Polish>Aligator chiński (Alligator sinensis) gatunek gada z rodziny aligatorowatych. Grzbiet oliwkowo-brązowy, plamisty. Boki tułowia jasnobrązowe z deseniem ciemnych plam. Młode są czarne z jasnożółtymi paskami, podobnie jak młode aligatora amerykańskiego, które jednak mają więcej pasków. W przeciwieństwie też do niego mają kostne płyty powyżej każdej powieki. Koniec pyska ma też nieznacznie zadarty i bardziej zwężony. Zęby są lepiej przystosowane do miażdżenia mięczaków. Brzuszne płytki są skostniałe przez co ich skóra nie miała znaczenia gospodarczego.</Polish>
+		<Polish>Aligator chi&#241;ski (Alligator sinensis) gatunek gada z rodziny aligatorowatych. Grzbiet oliwkowo-br&#185;zowy, plamisty. Boki tu&#179;owia jasnobr&#185;zowe z deseniem ciemnych plam. M&#179;ode s&#185; czarne z jasno&#191;&#243;&#179;tymi paskami, podobnie jak m&#179;ode aligatora ameryka&#241;skiego, kt&#243;re jednak maj&#185; wi&#234;cej pask&#243;w. W przeciwie&#241;stwie te&#191; do niego maj&#185; kostne p&#179;yty powy&#191;ej ka&#191;dej powieki. Koniec pyska ma te&#191; nieznacznie zadarty i bardziej zw&#234;&#191;ony. Z&#234;by s&#185; lepiej przystosowane do mia&#191;d&#191;enia mi&#234;czak&#243;w. Brzuszne p&#179;ytki s&#185; skostnia&#179;e przez co ich sk&#243;ra nie mia&#179;a znaczenia gospodarczego.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_GATOR_PEDIA</Tag>
 		<English>An alligator is a crocodilian in the genus Alligator of the family Alligatoridae. There are two living alligator species: the American alligator (Alligator mississippiensis) and the Chinese alligator (Alligator sinensis). In addition, several extinct species of alligator are known from fossil remains. Alligators first appeared during the Oligocene epoch about 37 million years ago.[PARAGRAPH:2]The name alligator is an anglicized form of el lagarto, the Spanish term for "lizard", which early Spanish explorers and settlers in Florida called the alligator.</English>
 		<German>[COLOR_UNIT_TEXT]Alligatoren[COLOR_REVERT] sind eine Familie der Krokodile, die Echte Alligatoren und Kaimane umfasst. Im Gegensatz zu den Echten Krokodilen sind ihr Stoffwechsel und ihre allgemeine Entwicklung verlangsamt. Durch ihre ruhigere Lebensweise können sie deshalb doppelt so alt wie ihre Verwandten werden. Es gibt insgesamt acht Arten von Alligatoren, die in Amerika (Mississippi-Alligator und Kaimane) und China (China-Alligator) vorkommen.[NEWLINE]Alligatoren bewohnen Sümpfe, Seen und teilweise auch Flüsse. Zur Beute zählen alle Tiere, die sie schnappen können. Ein Alligatorweibchen kann bis zu 70 Eier auf einmal legen und ausbrüten. Sie werden von der Mutter stets streng bewacht. Die frisch geschlüpften Jungtiere trägt sie im Maul zum Wasser.[NEWLINE]Eine Zeit lang waren Taschen und Kleidungsstücke aus Krokodilleder modern, weswegen die Alligatoren stark dezimiert wurden. Heute stehen sie unter Schutz und ihre Bestände haben sich besonders in Amerika gut erholt. Das Wort "Alligator" stammt übrigens von den ersten spanischen Siedlern, die das Tier "el lagarto" (deutsch: Echse) nannten.</German>
-		<Polish>Aligatorowate (Alligatoridae) - rodzina gadów z rzędu krokodyli. Zaliczają się do niej aligatory (podrodzina Alligatorinae z jednym rodzajem Alligator) i kajmany (podrodzina Caimaninae). Zwierzęta te zamieszkują strefę gorącą obu Ameryk i wschodnie Chiny (Alligator sinensis). Południowo-wschodnią część USA zamieszkuje aligator missisipski (Alligator mississippiensis). Kajmany zamieszkują Amerykę Południową aż do Meksyku.</Polish>
+		<Polish>Aligatorowate (Alligatoridae) - rodzina gad&#243;w z rz&#234;du krokodyli. Zaliczaj&#185; si&#234; do niej aligatory (podrodzina Alligatorinae z jednym rodzajem Alligator) i kajmany (podrodzina Caimaninae). Zwierz&#234;ta te zamieszkuj&#185; stref&#234; gor&#185;c&#185; obu Ameryk i wschodnie Chiny (Alligator sinensis). Po&#179;udniowo-wschodni&#185; cz&#234;&#156;&#230; USA zamieszkuje aligator missisipski (Alligator mississippiensis). Kajmany zamieszkuj&#185; Ameryk&#234; Po&#179;udniow&#185; a&#191; do Meksyku.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_GAZELLE</Tag>
@@ -649,7 +649,7 @@
 		<Tag>TXT_KEY_UNIT_GAZELLE_PEDIA</Tag>
 		<English>A gazelle is any of many antelope species in the genus Gazella, or formerly considered to belong to it. Six species are included in two genera, Eudorcas and Nanger, which were formerly considered subgenera. The genus Procapra has also been considered a subgenus of Gazella, and its members are also referred to as gazelles; however they are not dealt with in this article.[PARAGRAPH:2]Gazelles are known as swift animals? some are able to run at bursts as high as 60 miles per hour (97 km/h), or run at a sustained speed of 30 miles per hour (48 km/h). Gazelles are mostly found in the deserts, grasslands and savannas of Africa, but they are also found in southwest and central Asia, and the Indian subcontinent. They tend to live in herds and will eat less coarse, easily digestible plants and leaves.[PARAGRAPH:2]Gazelles are rather small antelopes, most standing 2 - 3.5 feet (61 - 110 cm) high at the shoulder, and are generally fawn colored.[PARAGRAPH:2]The gazelle species are classified in the Gazella, Eudorcas and Nanger. The taxonomy of these genera is a confused one, and the classification of species and subspecies has been an unsettled issue. Currently, the genus Gazella is widely considered to contain about 13 species. Four further species are extinct? the Red Gazelle, the Arabian Gazelle, the Queen of Sheba's Gazelle, and the Saudi Gazelle. Most surviving gazelle species are considered threatened to varying degrees. Closely related to the true gazelles are the Tibetan and Mongolian gazelles (species of the genus Procapra), the blackbuck of Asia, and the African impala and Springbok.</English>
 		<German>[COLOR_UNIT_TEXT]Gazellen[COLOR_REVERT] sind schlanke und langbeinige Paarhufer aus der Familie der Hornträger. Sie können eine Kopf-Rumpf-Länge von 85 bis 170 Zentimeter und eine Schulterhöhe von 50 bis 110 Zentimeter erreichen und wiegen üblicherweise zwischen 12 und 85 Kilogramm. Ihr Fell ist gelblich-grau bis braun gefärbt, nur die Unterseite ist weiß. Viele Arten verfügen außerdem über einen schwarzen Streifen am Rumpf.[NEWLINE]Gazellen bevölkern den gesamten afrikanischen Kontinent (nur auf Madagaskar sind sie nicht vertreten) und weite Teile Asiens. Man findet sie hauptsächlich in Grassteppen und anderen nur spärlich bewachsenen, trockenen Regionen. Gazellen ernähren sich hauptsächlich von Gräsern und Kräutern. Sie sind hervorragende Läufer, die über längere Zeit Geschwindigkeiten von 50 km/h durchhalten können.[NEWLINE]Manche Gazellenarten sind durch die intensive motorisierte Bejagung inzwischen vom Aussterben bedroht. Ein weiterer Grund für den dramatischen Populationsrückgang ist die landwirtschaftliche Nutzung ihrer ehemaligen Weidegründe, die die Tiere dazu zwingt, in weniger geeignete Habitate umzusiedeln.</German>
-		<Polish>Gazela (Gazella) rodzaj antylop właściwych. Żyją przeciętnie 10 - 12 lat.[PARAGRAPH:2]Gazele zamieszkują północne i wschodnie tereny Afryki, zachodnią i środkową Azję oraz część Półwyspu Indyjskiego. Zamieszkują przeważnie tereny bezleśne, stepy i pustynie. Żyją na wysokości do 6000 m n.p.m. Żyją w stadach, w zależności od gatunku liczą od kilku do kilkuset osobników. przeważnie jednak stada liczą 5 - 10 sztuk. Największe wspólnoty międzygatunkowe obserwuje się jesienią, gdy małe stada łączą się ze sobą w celu odnalezienia nowych żerowisk.[PARAGRAPH:2]Są antylopami średniej wielkości. Długość ciała wynosi około 1 m. Mają różnorodne ubarwienie boków i grzbietu, od brązowego, poprzez popielate i szare do białego. U wielu gatunków wzdłuż boków występują dwa pasy: ciemny i biały, tuż nad biało ubarwionym brzuchem. Rogi występują zarówno u samic jak i u samców. Rogi samic są mniejsze i cieńsze. Jedynym wyjątkiem są gazele dżejran, u których rogi posiadają jedynie samce. Rogi mają około 35 cm długości od nasady do czubka zaopatrzone są w zachodzące na siebie pierścieniowate zgrubienia. Kształt rogów przypomina lirę, ale może się zmieniać u różnych gatunków.</Polish>
+		<Polish>Gazela (Gazella) rodzaj antylop w&#179;a&#156;ciwych. &#175;yj&#185; przeci&#234;tnie 10 - 12 lat.[PARAGRAPH:2]Gazele zamieszkuj&#185; p&#243;&#179;nocne i wschodnie tereny Afryki, zachodni&#185; i &#156;rodkow&#185; Azj&#234; oraz cz&#234;&#156;&#230; P&#243;&#179;wyspu Indyjskiego. Zamieszkuj&#185; przewa&#191;nie tereny bezle&#156;ne, stepy i pustynie. &#175;yj&#185; na wysoko&#156;ci do 6000 m n.p.m. &#175;yj&#185; w stadach, w zale&#191;no&#156;ci od gatunku licz&#185; od kilku do kilkuset osobnik&#243;w. przewa&#191;nie jednak stada licz&#185; 5 - 10 sztuk. Najwi&#234;ksze wsp&#243;lnoty mi&#234;dzygatunkowe obserwuje si&#234; jesieni&#185;, gdy ma&#179;e stada &#179;&#185;cz&#185; si&#234; ze sob&#185; w celu odnalezienia nowych &#191;erowisk.[PARAGRAPH:2]S&#185; antylopami &#156;redniej wielko&#156;ci. D&#179;ugo&#156;&#230; cia&#179;a wynosi oko&#179;o 1 m. Maj&#185; r&#243;&#191;norodne ubarwienie bok&#243;w i grzbietu, od br&#185;zowego, poprzez popielate i szare do bia&#179;ego. U wielu gatunk&#243;w wzd&#179;u&#191; bok&#243;w wyst&#234;puj&#185; dwa pasy: ciemny i bia&#179;y, tu&#191; nad bia&#179;o ubarwionym brzuchem. Rogi wyst&#234;puj&#185; zar&#243;wno u samic jak i u samc&#243;w. Rogi samic s&#185; mniejsze i cie&#241;sze. Jedynym wyj&#185;tkiem s&#185; gazele d&#191;ejran, u kt&#243;rych rogi posiadaj&#185; jedynie samce. Rogi maj&#185; oko&#179;o 35 cm d&#179;ugo&#156;ci od nasady do czubka zaopatrzone s&#185; w zachodz&#185;ce na siebie pier&#156;cieniowate zgrubienia. Kszta&#179;t rog&#243;w przypomina lir&#234;, ale mo&#191;e si&#234; zmienia&#230; u r&#243;&#191;nych gatunk&#243;w.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_GELADA</Tag>
@@ -666,7 +666,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</Spanish>
-		<Polish>Dżelada</Polish>
+		<Polish>D&#191;elada</Polish>
 		<Russian>Ãåëàäà</Russian>
 	</TEXT>
 	<TEXT>
@@ -721,7 +721,7 @@
 		<Tag>TXT_KEY_UNIT_GERENUK_PEDIA</Tag>
 		<English>The Gerenuk (Litocranius walleri), also known as the Waller's Gazelle, is a long-necked species of antelope found in dry bushy scrub and steppe in East Africa, from Somalia and eastern Ethiopia through northern and eastern Kenya to northeastern Tanzania. The word Gerenuk (pronounced with a hard g) comes from the Somali language, meaning "giraffe-necked." Gerenuk are sometimes also called the Giraffe-necked Antelope. It is the only member of the genus Litocranius.[PARAGRAPH:2]Gerenuks have a small head for their body, but their eyes and ears are big. Unlike females, males have horns and a more muscular neck. They are brown on their back, and lighter underneath. They have short, black tails. From head to tail, the gerenuk is around 150 cm long. Males are a little taller than females, ranging from 89-105 cm, and the females are 80-100 cm. The male is also heavier than the female, weighing at 45 kg, and females are 30 kg.[PARAGRAPH:2]Gerenuks eat food from higher places than most other gazelles and antelopes. They do this by standing up on their hind legs, and stretching out their long necks to get food off of tall bushes or small trees. Most of their diet is made up of leaves and shoots of shrubs and trees, but also includes buds, flowers, fruit, and herbaceous plants. Gerenuks do not appear to drink water; they get enough water from the plants they eat. Because of this, they can survive in very dry habitats. Gerenuks are often prey for Lions, Cheetahs, and Jackals.[PARAGRAPH:2]Gerenuk reproduce throughout the year. Females reach sexual maturity at around one year, and males reach sexual maturity at 1.5 years, although in the wild they may only be successful after acquiring a territory (perhaps 3.5 years). The gestation period is about seven months. They are born one at a time, weighing about 3 kg at birth. Gerenuk can live thirteen years or more in captivity, and at least eight years in the wild.</English>
 		<German>[COLOR_UNIT_TEXT]Giraffengazellen[COLOR_REVERT] oder Gerenuks (Litocranius) sind eine Antilopengattung aus der Gruppe der Gazellenartigen. Der Name Gerenuk ist abgeleitet aus dem Somali-Namen "Garanug". Es gibt zwei Arten, die Nördliche (Litocranius sclateri) und Südliche Giraffengazelle (Litocranius walleri). Beide Arten sind sich sehr ähnlich. Sie besitzen einen schlanken Hals und auf dem Rücken hellbraunes Fell mit einer dunkleren, sattelförmigen Zeichnung. Die Bauchseite ist weiß. Die Männchen haben zudem kurze, gedrehte Hörner und auffällige Voraugendrüsen, die ein Sekret absondern. Die Südliche Giraffengazelle weist zusätzlich ein Band aus Haaren am Nacken auf.[NEWLINE]Gerenuks leben heute in Äthiopien, Somalia, Kenia und im Norden Tansanias. Sie lieben trockenes Klima und halten sich meist in Dornbuschsavannen auf. Sie müssen nicht trinken, sondern nehmen die benötigte Flüssigkeit durch die Nahrung auf. Diese besteht vorwiegend aus Laub, das sie aufgrund ihres schlanken Körpers mit dem recht langen Hals gut erreichen können. Teilweise stellen sie sich dazu auch auf die Hinterbeine. Die Weibchen leben mit ihrem Nachwuchs in kleinen Gruppen, die Männchen sind Einzelgänger und nähern sich nur zur Paarungszeit.[NEWLINE]Bereits die alten Ägypter fertigten Abbildungen von Giraffengazellen an. Sie waren wahrscheinlich nie sehr häufig und fallen als Einzelgänger in großen Huftierherden kaum auf. Durch die Jagd sind die Bestände weiter geschrumpft. Es gibt heute schätzungsweise 70000 Tiere, die meisten in Äthiopien.</German>
-		<Polish>Gerenuk (Litocranius walleri) gatunek antylopy z rodziny krętorogich (Bovidae), jedyny przedstawiciel rodzaju Litocranius. Gerenuk żyje we wschodniej Afryce. Zamieszkuje półpustynie oraz busz.[PARAGRAPH:2]Gerenuk osiąga masę ciała dochodzącą do 50 kg oraz wysokość ciała dochodzącą do 105 cm. Antylopa ta ma jasnobrązową sierść. Brzuch, część piersi oraz obwódki wokół oczu są białe. Gerenuk charakteryzuje się wysmukłą budową ciała, długą szyją oraz długimi nogami, które ułatwiają gerenukowi żerowanie w wyżej położonych partiach drzew. Prowadzi dzienny tryb życia. Może obyć się bez wody nawet przez całe życie.[PARAGRAPH:2]Po około 7-miesięcznej ciąży samica rodzi jedno młode. W naturze gerenuk żyje ok. 8 lat, w niewoli do 13.</Polish>
+		<Polish>Gerenuk (Litocranius walleri) gatunek antylopy z rodziny kr&#234;torogich (Bovidae), jedyny przedstawiciel rodzaju Litocranius. Gerenuk &#191;yje we wschodniej Afryce. Zamieszkuje p&#243;&#179;pustynie oraz busz.[PARAGRAPH:2]Gerenuk osi&#185;ga mas&#234; cia&#179;a dochodz&#185;c&#185; do 50 kg oraz wysoko&#156;&#230; cia&#179;a dochodz&#185;c&#185; do 105 cm. Antylopa ta ma jasnobr&#185;zow&#185; sier&#156;&#230;. Brzuch, cz&#234;&#156;&#230; piersi oraz obw&#243;dki wok&#243;&#179; oczu s&#185; bia&#179;e. Gerenuk charakteryzuje si&#234; wysmuk&#179;&#185; budow&#185; cia&#179;a, d&#179;ug&#185; szyj&#185; oraz d&#179;ugimi nogami, kt&#243;re u&#179;atwiaj&#185; gerenukowi &#191;erowanie w wy&#191;ej po&#179;o&#191;onych partiach drzew. Prowadzi dzienny tryb &#191;ycia. Mo&#191;e oby&#230; si&#234; bez wody nawet przez ca&#179;e &#191;ycie.[PARAGRAPH:2]Po oko&#179;o 7-miesi&#234;cznej ci&#185;&#191;y samica rodzi jedno m&#179;ode. W naturze gerenuk &#191;yje ok. 8 lat, w niewoli do 13.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_GHARIAL</Tag>
@@ -764,7 +764,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</Spanish>
-		<Polish>Kałamarnica Olbrzymia</Polish>
+		<Polish>Ka&#179;amarnica Olbrzymia</Polish>
 		<Russian>Ãèãàíòñêèé êàëüìàð</Russian>
 	</TEXT>
 	<TEXT>
@@ -791,7 +791,7 @@
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</Spanish>
-		<Polish>Żyrafa</Polish>
+		<Polish>&#175;yrafa</Polish>
 		<Russian>Æèðàô</Russian>
 	</TEXT>
 	<TEXT>
@@ -799,7 +799,7 @@
 		<English>The giraffe (Giraffa camelopardalis) is an African even-toed ungulate mammal, the tallest of all extant land-living animal species, and the largest ruminant. Its scientific name, which is similar to its archaic English name of camelopard, refers to its irregular patches of color on a light background, which bear a token resemblance to a leopard's spots, and its face, which is similar to that of a camel. The average mass for an adult male giraffe is 1,200 kilograms (2,600 lb) while the average mass for an adult female is 830 kilograms (1,800 lb). It is approximately 4.3 metres (14 ft) to 5.2 metres (17 ft) tall, although the tallest male recorded stood almost 6 metres (20 ft).[PARAGRAPH:2]The giraffe is related to other even-toed ungulates, such as deer and cattle, but is placed in a separate family, the Giraffidae, consisting of only the giraffe and its closest relative, the okapi, and their extinct relatives. Its range extends from Chad in Central Africa to South Africa. Giraffes usually inhabit savannas, grasslands, or open woodlands. However, when food is scarce they will venture into areas with denser vegetation. They prefer areas with plenty of acacia growth. They will drink large quantities of water when available, which enables them to live for extended periods in arid areas.</English>
 		<German>[COLOR_UNIT_TEXT]Giraffen[COLOR_REVERT] (Giraffa) sind Paarhufer und die höchsten Landlebewesen. Sie werden auch Steppengiraffen genannt, un sie von den Okapis (Waldgiraffen) zu unterscheiden. Bis 2016 wurde vermutet, dass es nur eine einzige Art (Giraffa camelopardalis) gäbe. Untersuchungen zufolge existieren jedoch mindestens vier Arten mit sieben eigenständigen Populationen. Ihr Lebensraum sind afrikanische Savannen.[NEWLINE]Obwohl der Hals der Giraffe sehr lang ist, besteht er wie bei allen Säugern nur aus sieben Halswirbeln, die jedoch stark verlängert sind. Giraffenbullen können 6 Meter groß werden, Kühe 4,5 Meter. Widerlegt wurde die Theorie, dass der lange Hals sich durch das Strecken nach hohen Bäumen gebildet hat. Viemehr scheint die Größe im Kampf mit Rivalen eine Rolle zu spielen. Das Fell der Giraffe ist hell mit dunkelbraunen Flecken, die der Tarnung und der Temperaturregulierung dienen. Aufgrund der stärkeren Durchblutung braucht sie auch bei großer Hitze keinen Schatten. Der für Menschen unangenehme Geruch des Fells resultiert aus einem Gemisch verschiedener Stoffe, die das Pilz- und Bakterienwachstum hemmen und Zecken fernhalten. Giraffen verzehren am liebsten Akazien, deren Zweige sie mit ihrer bis zu 50 cm langen Zunge greifen und ins Maul holen. Durch Zurückziehen des Kopfes streifen sie die Blätter ab. Da eine Giraffe täglich ca. 30 kg Nahrung braucht, ist sie bis zu 20 Stunden mit Fressen beschäftigt. Auch den Flüssigkeitsbedarf deckt sie weitgehend über die Nahrung. Trinken ist für die Giraffe sehr anstrengend, denn es erfordert viel Kraft, Kopf und Hals bis auf den Boden zu bewegen.[NEWLINE]Bereits zwischen 10000 und 6000 v.Chr. wurden Giraffen auf Felsbildern in der heutigen Sahara dargestellt. Im Alten Ägypten galten sie als Orakel, die vor Unwettern und Raubtieren warnten. In Europa waren sie bis in die Neuzeit relativ unbekannt. In Afrika jedoch wurden sie vermutlich häufig gejagt, vor allem wegen der langen Sehnen, die für Bögen oder Musikinstrumente verwendet wurden. Die Bestände sind deshalb zurückgegangen und die Giraffen gelten in der Roten Liste als "gefährdet" (Stand 2017).</German>
 		<Italian>La giraffa (Giraffa camelopardalis) è un mammifero africano ungulato a uno zoccolo, il più alto di tutti gli animali viventi sulla terra, e il ruminante più grande. Il suo nome scientifico, simile al suo nome inglese arcaico camelopard, si riferisce alle sue macchie irregolari di colore su un fondo chiaro, che hanno una somiglianza con i pallini del leopardo, e la sua faccia, che è simile a quella del cammello. La massa media di una giraffa adulta maschio è 1,200 kg, mentre per una femmina è di 830 kg. È alta da 4,3 a 5,2 metri, anche se il maschio più alto registrato è stato di 6 metri.[PARAGRAPH:2]La giraffa è imparentata con altri ungulati, come il cervo, ma appartiene a una famiglia separata, le Giraffidae, comprendente solo le giraffe e l'okapi, il suo parente più vicino, oltre ai loro antenati estinti. La sua zona di vita va dal Ciad, in Africa centrale, al Sud Africa. Le giraffe abitano solitamente nella savana, nelle pianure o in piccoli boschi; in ogni caso, in scarsità di cibo esse si avventurano in aree con vegetazione più densa. Preferiscono le aree con molte acacie. Bevono grandi quantità d'acqua ogni volta che possono, il che permette loro di vivere a lungo in zone aride.</Italian>
-		<Polish>Żyrafa (Giraffa camelopardalis) - afrykański ssak parzystokopytny z rodziny żyrafowatych, najwyższe zwierzę lądowe i największy z przeżuwaczy żyjących w czasach nowożytnych. Jego epitet gatunkowy odnosi się do przypominającego wielbłąda wyglądu i łat na futrze, właściwych lampartowi (leopardowi, Panthera pardus). Gatunek ten wyróżnia się bardzo długą szyją, osiąga 5-6 m wysokości i masę (średnio) 1600 kg w przypadku samców i 830 kg w przypadku samic. Jego najbliższym żyjącym krewnym jest okapi (rodzina Giraffidae liczy na początku XXI w. tylko te dwa gatunki). Bazując na wzorze ubarwienia wyróżnia się 9 podgatunków.</Polish>
+		<Polish>&#175;yrafa (Giraffa camelopardalis) - afryka&#241;ski ssak parzystokopytny z rodziny &#191;yrafowatych, najwy&#191;sze zwierz&#234; l&#185;dowe i najwi&#234;kszy z prze&#191;uwaczy &#191;yj&#185;cych w czasach nowo&#191;ytnych. Jego epitet gatunkowy odnosi si&#234; do przypominaj&#185;cego wielb&#179;&#185;da wygl&#185;du i &#179;at na futrze, w&#179;a&#156;ciwych lampartowi (leopardowi, Panthera pardus). Gatunek ten wyr&#243;&#191;nia si&#234; bardzo d&#179;ug&#185; szyj&#185;, osi&#185;ga 5-6 m wysoko&#156;ci i mas&#234; (&#156;rednio) 1600 kg w przypadku samc&#243;w i 830 kg w przypadku samic. Jego najbli&#191;szym &#191;yj&#185;cym krewnym jest okapi (rodzina Giraffidae liczy na pocz&#185;tku XXI w. tylko te dwa gatunki). Bazuj&#185;c na wzorze ubarwienia wyr&#243;&#191;nia si&#234; 9 podgatunk&#243;w.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_GLYPTO</Tag>
@@ -871,7 +871,7 @@
 		<Tag>TXT_KEY_UNIT_HORNEDOWL_PEDIA</Tag>
 		<English>The Great Horned Owl, (Bubo virginianus), also known as the Tiger Owl, is a large owl native to the Americas. It is an adaptable bird with a vast range and is the most widely distributed true owl in the Americas.[PARAGRAPH:2]Great Horned Owls range in length from 18 - 27 in (46 - 69 cm) and have a wingspan of 40-60.5 in (101 - 153 cm); Females are larger than males, an average adult being 22 in (55 cm) long with a 49 in (124 cm) wingspan and weighing about 3.1 lbs (1400 g). Depending on subspecies, Great Horned Owls can weigh from 0.72 to 2.55 kg (1.6 to 5.6 lb).[PARAGRAPH:2]Adults have large ear tufts, a reddish, brown or gray face and a white patch on the throat. The iris is yellow, except the amber-eyed South American Great Horned Owl (B. V. nacurutu). Its "horns" are neither ears nor horns, simply tufts of feathers. The underparts are light with brown barring; the upper parts are mottled brown. The legs and feet are covered in feathers up to the talons. There are individual and regional variations in color; birds from the sub-Arctic are a washed-out, light-buff color, while those from Central America can be a dark chocolate brown.[PARAGRAPH:2]Their call is a low-pitched but loud ho-ho-hoo hoo hoo; sometimes it is only four syllables instead of five. The female's call is higher and rises in pitch at the end of the call. Young owls make hissing or screeching sounds that are often confused with the calls of Barn Owls.[PARAGRAPH:2]Great Horned Owls can be easily confused with the Magellanic Horned Owl (B. magellanicus) and other eagle-owls. They are all generally allopatric though.</English>
 		<German>Der [COLOR_UNIT_TEXT]Uhu[COLOR_REVERT] (Bubo bubo) ist die größte rezente Eulenart der Erde, wobei Weibchen noch deutlich größer als Männchen sind. Während letztere nur eine Spannweite von durchschnittlich 157 cm haben, beträgt die der Weibchen durchschnittlich 168 cm. Uhus haben eine markante Körperform. Besonders auffällig sind die langen Federohren, die schräg seitlich oder nach hinten wie Hörner abstehen. Ihr Gesichtsschleier ist hingegen weniger stark ausgeprägt als bei anderen Eulenarten.[NEWLINE]Der Uhu war einst weit verbreitet, aber durch menschliche Verfolgung wurde er aus den Kulturlandschaften in Mitteleuropa verdrängt. Lange Zeit war er nur noch in den Mittelgebirgen und in den Alpen zu finden, inzwischen besiedelt er aber auch wieder zunehmend das Flachland. Uhus sichern sich große Jagdreviere von durchschnittlich 40 m² Größe, die sich aber mit denen anderer Uhus überlappen können. Einzig die Bereiche rund um das Nest werden erbittert gegen Eindringlinge verteidigt.[NEWLINE]Der Uhu ist schon seit jeher Jagdkonkurrent des Menschen, da er begehrte Tiere wie Feldhasen und Rehe auf seinem Speiseplan hat. Deswegen wurde er bei jeder Gelegenheit bekämpft und in Mitteleuropa dadurch fast ausgerottet. Der Mensch verwendete Uhus aber auch als Köder bei der Jagd auf andere Raubvögel, die den Fressfeinden tagsüber aggressiv nachstellen.</German>
-		<Polish>Puchacz Wirginijski (Bubo virginianus), gatunek ptaka z rodziny puszczykowatych (Strigidae), zamieszkujący Amerykę Północną, Środkową i Południową. Teren lęgowy sięga od północnej granicy lasu na Alasce i w Kanadzie, przez Stany Zjednoczone, Meksyk, kraje Ameryki Środkowej. W Ameryce Południowej występuje w Wenezueli, Kolumbii, Peru, Boliwii, Brazylii, Paragwaju i Argentynie.[PARAGRAPH:2]Największa sowa na kontynentach amerykańskich. Upierzenie w zależności od podgatunku występuje w różnych kolorach, od brązowego do jasnoszarego z licznymi ciemnymi plamami i kreskami. Głowa o dużych oczach, czarno obrzeżonych bokach twarzy i dwóch uszach z piór. Długość ciała 46 - 63 cm, rozpiętość skrzydeł: 91 - 152 cm. Aktywny nocą, w dzień przeważnie odpoczywa na drzewach. Łączą się w pary na całe życie. Najczęstszym odgłosem jest wydawany od 3 do 8 razy dźwięk uhu.</Polish>
+		<Polish>Puchacz Wirginijski (Bubo virginianus), gatunek ptaka z rodziny puszczykowatych (Strigidae), zamieszkuj&#185;cy Ameryk&#234; P&#243;&#179;nocn&#185;, &#140;rodkow&#185; i Po&#179;udniow&#185;. Teren l&#234;gowy si&#234;ga od p&#243;&#179;nocnej granicy lasu na Alasce i w Kanadzie, przez Stany Zjednoczone, Meksyk, kraje Ameryki &#140;rodkowej. W Ameryce Po&#179;udniowej wyst&#234;puje w Wenezueli, Kolumbii, Peru, Boliwii, Brazylii, Paragwaju i Argentynie.[PARAGRAPH:2]Najwi&#234;ksza sowa na kontynentach ameryka&#241;skich. Upierzenie w zale&#191;no&#156;ci od podgatunku wyst&#234;puje w r&#243;&#191;nych kolorach, od br&#185;zowego do jasnoszarego z licznymi ciemnymi plamami i kreskami. G&#179;owa o du&#191;ych oczach, czarno obrze&#191;onych bokach twarzy i dw&#243;ch uszach z pi&#243;r. D&#179;ugo&#156;&#230; cia&#179;a 46 - 63 cm, rozpi&#234;to&#156;&#230; skrzyde&#179;: 91 - 152 cm. Aktywny noc&#185;, w dzie&#241; przewa&#191;nie odpoczywa na drzewach. &#163;&#185;cz&#185; si&#234; w pary na ca&#179;e &#191;ycie. Najcz&#234;stszym odg&#179;osem jest wydawany od 3 do 8 razy d&#159;wi&#234;k uhu.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_HORSE</Tag>
@@ -892,7 +892,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</Spanish>
-		<Polish>Koń</Polish>
+		<Polish>Ko&#241;</Polish>
 		<Russian>Ëîøàäü</Russian>
 	</TEXT>
 	<TEXT>
@@ -907,7 +907,7 @@
 		<German>Jäger</German>
 		<Italian>Cacciatore</Italian>
 		<Spanish>Cazador</Spanish>
-		<Polish>Łowca</Polish>
+		<Polish>&#163;owca</Polish>
 		<Russian>Çâåðîáîé</Russian>
 	</TEXT>
 	<TEXT>
@@ -915,7 +915,7 @@
 		<English>Years of living in the wilderness on their own terms have taught these men a thing or two about the importance of stealth, speed and senses. They specialise in the hunting and subduing of animal units.</English>
 		<French>Des années de vie dans la nature selon leurs propres termes ont enseigné à ces hommes une ou deux choses sur l'importance de la furtivité, de la vitesse et des sens. Ils se spécialisent dans la chasse et la maîtrise des unités animales.</French>
 		<Italian>Anni di vita nella natura e in solitudine hanno insegnato a questi uomini una cosa o due sull'importanza della silenziosità, della velocità e della percezione sensoriale. Sono specializzati nella caccia e nell'addomesticamento di animali selvaggi.</Italian>
-		<Polish>Łowy polowanie było jedną z najważniejszych czynności pierwotnych ludzi przez wiele tysiącleci. Nie było wówczas pojęcia "własności" i zwierzyna była niczyja. Polowania były głównym źródłem utrzymania i przeżycia ludzi oprócz pożywienia pozyskiwano w ten sposób skóry na okrycia, a kości i rogi na proste narzędzia. Na przestrzeni wieków, w wyniku zachodzących zmian cywilizacyjnych jak i społecznych, z powodu trzebienia puszcz, rozwoju rolnictwa, polowania przestały być głównym zajęciem człowieka, a stały się okazją do wykazania swojej siły, zręczności i męstwa w bezpośrednich spotkaniach z dzikim zwierzem. Poczynając od ok. X w. łowy zaczęły być w coraz większym stopniu przywilejem ludzi "dobrze urodzonych", cesarzy, królów, duchowieństwa i rycerstwa. Łowy stały się również głównym źródłem zaopatrzenia wojsk podczas wypraw wojennych.</Polish>
+		<Polish>&#163;owy polowanie by&#179;o jedn&#185; z najwa&#191;niejszych czynno&#156;ci pierwotnych ludzi przez wiele tysi&#185;cleci. Nie by&#179;o w&#243;wczas poj&#234;cia "w&#179;asno&#156;ci" i zwierzyna by&#179;a niczyja. Polowania by&#179;y g&#179;&#243;wnym &#159;r&#243;d&#179;em utrzymania i prze&#191;ycia ludzi opr&#243;cz po&#191;ywienia pozyskiwano w ten spos&#243;b sk&#243;ry na okrycia, a ko&#156;ci i rogi na proste narz&#234;dzia. Na przestrzeni wiek&#243;w, w wyniku zachodz&#185;cych zmian cywilizacyjnych jak i spo&#179;ecznych, z powodu trzebienia puszcz, rozwoju rolnictwa, polowania przesta&#179;y by&#230; g&#179;&#243;wnym zaj&#234;ciem cz&#179;owieka, a sta&#179;y si&#234; okazj&#185; do wykazania swojej si&#179;y, zr&#234;czno&#156;ci i m&#234;stwa w bezpo&#156;rednich spotkaniach z dzikim zwierzem. Poczynaj&#185;c od ok. X w. &#179;owy zacz&#234;&#179;y by&#230; w coraz wi&#234;kszym stopniu przywilejem ludzi "dobrze urodzonych", cesarzy, kr&#243;l&#243;w, duchowie&#241;stwa i rycerstwa. &#163;owy sta&#179;y si&#234; r&#243;wnie&#191; g&#179;&#243;wnym &#159;r&#243;d&#179;em zaopatrzenia wojsk podczas wypraw wojennych.</Polish>
 		<Russian>Ãîäû æèçíè â ïóñòûíå íà èõ ñîáñòâåííûõ óñëîâèÿõ íàó÷èëè ýòèõ ëþäåé îäíîé èëè äâóì âåùàì î âàæíîñòè ñêðûòíîñòè, ñêîðîñòè è ÷óâñòâ. Îíè ñïåöèàëèçèðóþòñÿ íà îõîòå è îäîìàøíèâàíèè çâåðåé.</Russian>
 	</TEXT>
 	<TEXT>
@@ -959,7 +959,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</Spanish>
-		<Polish>Koziorożec</Polish>
+		<Polish>Kozioro&#191;ec</Polish>
 		<Russian>Êîçåðîã</Russian>
 	</TEXT>
 	<TEXT>
@@ -982,7 +982,7 @@
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
 		<Italian>Rinoceronte indiano</Italian>
-		<Polish>Nosorożec Indyjski</Polish>
+		<Polish>Nosoro&#191;ec Indyjski</Polish>
 		<Russian>Èíäèéñêèé íîñîðîã</Russian>
 	</TEXT>
 	<TEXT>
@@ -991,7 +991,7 @@
 		<French>Le Rhinocéros indien (Rhinoceros unicornis) est un rhinocéros unicorne présent en Asie. Cest la plus grande et la moins rare des trois espèces que compte le continent. Ce mammifère vit plus particulièrement au nord de lInde et au Népal.</French>
 		<German>Das [COLOR_UNIT_TEXT]Panzernashorn[COLOR_REVERT] (Rhinoceros unicornis) ist ein einhörniges Nashorn, das auf dem indischen Subkontinent lebt, deshalb wird es auch Indisches (Panzer-)Nashorn genannt. Es handelt sich um die größte der drei in Asien beheimateten Arten.[NEWLINE]Das Panzernasorn ist von kräftiger Statur mit recht kurzen und breiten Gliedmaßen und einem durchschnittlich 66 cm langen Schwanz. Seine grau-braune Haut ist bis zu 4 cm dick. Mit seinen zahlreichen Hautfalten wirkt es schwer gepanzert, daher der deutsche Name. Wahrscheinlich dient die Faltenbildung der Wärmeregulierung. Auf der Nase sitzt ein einzelnes Horn. Der Sehsinn ist wie bei allen Nashörnern eher schlecht entwickelt, dafür sind Hör- und Geruchssinn hervorragend ausgebildet. Wie alle asiatischen Nashörner besitzt auch das Panzernashorn eine sehr bewegliche Oberlippe. Damit zupft es die Nahrung, die aus Gräsern, Blättern, Rinde und Früchten besteht, ab. Anders als die meisten anderen Nashörner ist es ein guter Schwimmer und vertilgt auch Wasserpflanzen. Besonders die Weibchen suhlen sich während der Tragzeit häufig in Schlammlöchern. In der Brunftzeit kommt es unter den Bullen oft zu Rivalitätskämpfen. Ansonsten sind die Tiere eher friedlich und dulden auch andere Arten wie Elefanten und diverse Rinder in der Nähe. Vögel dürfen auf dem Rücken des Nashorns sitzen und Parasiten aus der Haut picken.[NEWLINE]Bis zum 17. Jahrhundert umfasste der Lebensraum der Panzernashörner das heutige Indien und Pakistan. Durch die Trockenlegung von Sümpfen zur Gewinnung von Ackerland verlagerte sich das Gebiet nach Osten. Später hielt der Jagdtourismus Einzug. Da die Tiere für Verwüstungen der Teeplantagen verantwortlich gemacht wurden, gab es sogar Abschussprämien. Dies alles führte dazu, dass Anfang des 20. Jahrhunderts nur noch 200 Exemplare der Art existierten. Wilderei ist bis heute problematisch, weil das Horn in der Traditionellen Chinesischen Medizin begehrt ist. Dennoch haben sich die Bestände erholt und vor allem Zoos tragen weltweit durch Zucht dazu bei. Auch in der Kunst spielt das Panzernashorn eine Rolle. Albrecht Dürer fertigte z.B. einen Holzschnitt und eine Zeichnung des Tieres an. Beide Darstellungen wurden mehrfach kopiert und dienten u.a. als Vorlage für Figuren aus Meißener Porzellan.</German>
 		<Italian>Il rinoceronte indiano (Rhinoceros unicornis) è chiamato anche grande rinoceronte unicorno e rinoceronte unicorno asiatico, ed appartiene alla famiglia Rhinocerotidae. Incluso tra le specie in pericolo di estinzione, questo grande mammifero viene trovato spesso nell'India nordorientale e in alcune aree protette del Nepal, dove i branchi sono confinati nelle pianure ai piedi dell'Himalaya. Di norma pesa tra 1,600 e 3,500 kg, è il quarto animale terrestre più grande.[PARAGRAPH:2]Il rinoceronte indiano era una volta diffuso in tutta la pianura dell'Indo-Gange, ma la caccia eccessiva ha ridotto il suo habitat naturale. Al giorno d'oggi, circa 3000 rinoceronti vivono allo stato selvatico, 2000 dei quali nello stato indiano dell'Assam.</Italian>
-		<Polish>Nosorożec indyjski, nosorożec pancerny (Rhinoceros unicornis) - gatunek nosorożca o długości ciała dochodzącej do 4 m i wysokości w kłębie ok. 1,7 m. Waga ok. 2000 kg. Maksymalnie do 3000 kg. Na pysku ma tylko jeden róg. U osobników w niewoli zwykle starty i z tego powodu niewielki. U dorosłych samców w naturalnym środowisku może dorastać do 57,2 cm. Gruba skóra zwierzęcia tworzy charakterystyczne fałdy przypominające tarcze pancerza. Zamieszkuje podmokłe leśne obszary Nepalu i północno-wschodnich Indii.</Polish>
+		<Polish>Nosoro&#191;ec indyjski, nosoro&#191;ec pancerny (Rhinoceros unicornis) - gatunek nosoro&#191;ca o d&#179;ugo&#156;ci cia&#179;a dochodz&#185;cej do 4 m i wysoko&#156;ci w k&#179;&#234;bie ok. 1,7 m. Waga ok. 2000 kg. Maksymalnie do 3000 kg. Na pysku ma tylko jeden r&#243;g. U osobnik&#243;w w niewoli zwykle starty i z tego powodu niewielki. U doros&#179;ych samc&#243;w w naturalnym &#156;rodowisku mo&#191;e dorasta&#230; do 57,2 cm. Gruba sk&#243;ra zwierz&#234;cia tworzy charakterystyczne fa&#179;dy przypominaj&#185;ce tarcze pancerza. Zamieszkuje podmok&#179;e le&#156;ne obszary Nepalu i p&#243;&#179;nocno-wschodnich Indii.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_JAVA_RHINO</Tag>
@@ -1007,7 +1007,7 @@
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
 		<Italian>Rinoceronte di Giava</Italian>
-		<Polish>Nosorożec Jawajski</Polish>
+		<Polish>Nosoro&#191;ec Jawajski</Polish>
 		<Russian>ßâàíñêèé íîñîðîã</Russian>
 	</TEXT>
 	<TEXT>
@@ -1016,7 +1016,7 @@
 		<French>Le rhinocéros de Java (Rhinoceros sondaicus), encore appelé rhinocéros de la Sonde, est un rhinocéros unicorne vivant en Asie et faisant partie de la famille des Rhinocérotidés qui compte cinq espèces différentes. Il est apparenté au rhinocéros indien, leur peau à tous deux étant composée de larges plis et faisant penser à une armure, mais mesurant entre 3,1 m et 3,2 m de longueur et de 1,4 m à 1,7 m de hauteur, il est plus petit que ce dernier.</French>
 		<German>Das [COLOR_UNIT_TEXT]Java-Nashorn[COLOR_REVERT] (Rhinoceros sondaicus) ist die seltenste Nashornart und somit eines der seltensten Großsäugetiere. Es lebt in Asien und ist nahe mit dem Panzernashorn verwandt. Ursprünglich war die Art in Südostasien weit verbreitet, heute leben nur noch zwischen 60 und 70 Tiere im Ujung-Kulon-Nationalpark in Java.[NEWLINE]Mit einer Kopf-Rumpf-Länge von 3 bis 3,4 Metern ist das Java-Nashorn etwas kleiner als das Panzernashorn. Die Haut ist grau bis graubraun und bildet charakteristische Falten, die zwischen Nacken und Schultern eine Art Sattel formen. Auf der Nase befindet sich ein meist konisch geformtes Horn. Die oft weit nach oben gezogene Oberlippe dient zum Abzupfen von Pflanzennahrung. Bevorzugt werden Brennnesselgewächse, Hülsenfrüchtler und Feigen. Häufig wird zum Herausziehen von Pflanzen auch das Horn eingesetzt. Schlammbäder sind für die Tiere sehr wichtig und dienen zur Thermoregulierung und zur Entfernung von Parasiten. Java-Nashörner sind Einzelgänger und finden nur zur Paarungszeit zusammen. Sie pflegen enge Beziehungen zu Bantengs und Wasserbüffeln und nutzen die gleichen Pfade wie diese.[NEWLINE]In Europa war das Java-Nashorn lange Zeit unbekannt. Die erste zufällige Begegnung war vermutlich 1630 die eines niederländischen Arztes, dessen Gesellschaftsparty von einem der Tiere gestört wurde. Heute ist die Art stark gefährdet, z.T. durch die Verwendung ihrer Hörner in der Traditionellen Chinesischen Medizin. Die Ausdehnung menschlicher Siedlungen und die damit verbundene Landwirtschaft sind weitere Gründe. Tierschutzorganisationen wie der WWF begannen in den 1990er Jahren mit der Platzierung von Kamerafallen, um einerseits die Tiere zu studieren und andererseits Wilderei einzudämmen.</German>
 		<Italian>Il rinoceronte di Giava (Sunda rhinoceros) o piccolo rinoceronte unicorno (Rhinoceros sondaicus) è un membro della famiglia Rhinocerotidae, ed è una delle 5 specie estinte di rinoceronti. Appartiene allo stesso genere del rinoceronte indiano, ed ha una pelle simile che assomiglia ad un'armatura; tuttavia è più piccolo, essendo lungo 3.1–3 m e alto 1.4–1 m (infatti, è più simile al rinoceronte nero per quanto riguarda la sua dimensione). Il suo corno è solitamente meno di 25 cm, più piccolo rispetto agli altri rinoceronti.[PARAGRAPH:2]Una volta la specie di rinoceronte più diffusa, il rinoceronte di Giava viveva sulle isole di Giava e Sumatra, nel Sud-est asiatico, e anche in Cina e India. La specie è a grave rischio di estinzione, con un solo branco allo stato brado, e nessun esemplare in cattività. È probabilmente il mammifero più raro sulla faccia della Terra, con una popolazione inferiore ai 40 esemplari nello Ujung Kulon National Park di Giava, in Indonesia. Un secondo branco nel Cat Tien National Park in Vietnam fu dichiarata estinta nel 2011. Il declino del rinoceronte di Giava è dovuto al bracconaggio, principalmente per i loro corni, altamente valutati nella medicina tradizionale cinese, con un valore di 30000 $ al chilo sul mercato nero. La perdita del loro habitat a causa delle guerre, come la guerra del Vietnam, ha contribuito al declino di questa specie. La popolazione rimanente è confinata in un'area nazionale protetta, ma i rinoceronti sono ancora in pericolo a causa dei bracconieri, delle malattie e della perdita di diversità genetica, che portano a una limitazione della crescita.[PARAGRAPH:2]Il rinoceronte di Giava può vivere fino a 3045 anni allo stato brado; storicamente, abitava in foreste pluviali, pianure umide e grandi zone alluvionali. Il rinoceronte di Giava è principalmente solitario, eccetto per il corteggiamento e l'allevamento dei cuccioli, anche se si possono formare alcuni gruppi vicino alle fonti di cibo e di sale. A parte gli umani, il rinoceronte di Giava non ha predatori naturali; questo rinoceronte evita gli umani, ma se viene minacciato attacca. Gli scienziati studiano raramente quest'animale direttamente, a causa della sua rarità e del pericolo di interferire con questa specie in pericolo: i ricercatori si affidano a telecamere nascoste e a campioni di escrementi per studiare la salute e il comportamento; di conseguenza, il rinoceronte di Giava è la specie meno studiata. Due rinoceronti adulti furono filmati in un video pubblicato il 28 febbraio 2011 da WWF e Indonesia's National Park Authority, che conferma che il rinoceronte vive ancora allo stato brado.</Italian>
-		<Polish>Nosorożec jawajski (Rhinoceros sondaicus) - gatunek ssaka z rodziny nosorożcowatych, jeden z pięciu żyjących do dziś gatunków nosorożców. Należy do tego samego rodzaju, co nosorożec indyjski. Łączy je podobna, przypominająca mozaikę skóra stwarzająca wrażenie opancerzenia. Nosorożec jawajski, mierząc 3,1-3,2 m długości i 1,4-1,7 m wysokości, jest mniejszy od swego krewniaka, wielkością bardziej zbliża się do nosorożca czarnego. Jego rogi, mniejsze niż u innych nosorożców, osiągają zwykle poniżej 25 cm.</Polish>
+		<Polish>Nosoro&#191;ec jawajski (Rhinoceros sondaicus) - gatunek ssaka z rodziny nosoro&#191;cowatych, jeden z pi&#234;ciu &#191;yj&#185;cych do dzi&#156; gatunk&#243;w nosoro&#191;c&#243;w. Nale&#191;y do tego samego rodzaju, co nosoro&#191;ec indyjski. &#163;&#185;czy je podobna, przypominaj&#185;ca mozaik&#234; sk&#243;ra stwarzaj&#185;ca wra&#191;enie opancerzenia. Nosoro&#191;ec jawajski, mierz&#185;c 3,1-3,2 m d&#179;ugo&#156;ci i 1,4-1,7 m wysoko&#156;ci, jest mniejszy od swego krewniaka, wielko&#156;ci&#185; bardziej zbli&#191;a si&#234; do nosoro&#191;ca czarnego. Jego rogi, mniejsze ni&#191; u innych nosoro&#191;c&#243;w, osi&#185;gaj&#185; zwykle poni&#191;ej 25 cm.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_JUNGLE_TARANTULA</Tag>
@@ -1055,7 +1055,7 @@
 		<Tag>TXT_KEY_UNIT_LEMUR_PEDIA</Tag>
 		<English>Lemurs are a clade of strepsirrhine primates endemic to the island of Madagascar. They are named after the lemures (ghosts or spirits) of Roman mythology due to the ghostly vocalizations, reflective eyes, and the nocturnal habits of some species. Although lemurs often are confused with ancestral primates, the anthropoid primates (monkeys, apes, and humans) did not evolve from them; instead, lemurs merely share morphological and behavioral traits with basal primates. Lemurs arrived in Madagascar around 62 to 65 mya by rafting on mats of vegetation at a time when ocean currents favored oceanic dispersal to the island. Since that time, lemurs have evolved to cope with an extremely seasonal environment and their adaptations give them a level of diversity that rivals that of all other primate groups. Until shortly after humans arrived on the island around 2,000 years ago, there were lemurs as large as a male gorilla. Today, there are nearly 100 species of lemurs, and most of those species have been discovered or promoted to full species status since the 1990s; however, lemur taxonomic classification is controversial and depends on which species concept is used. Even the higher-level taxonomy is disputed, with some experts preferring to place most lemurs within the infraorder Lemuriformes, while others prefer Lemuriformes to contain all living strepsirrhines, placing all lemurs in superfamily Lemuroidea and all lorises and galagos in superfamily Lorisoidea.[PARAGRAPH:2]Ranging in size from 30 g (1.1 oz) to 9 kg (20 lb), lemurs share many common, basal primate traits, such as divergent digits on their hands and feet and nails instead of claws (in most species). However, their brain-to-body size ratio is smaller than that of anthropoid primates, and among many other traits they share with other strepsirrhine primates, they have a "wet nose" (rhinarium). Lemurs are generally the most social of the strepsirrhine primates and communicate more with scents and vocalizations than with visual signals. Many lemur adaptations are in response to Madagascar's highly seasonal environment. Lemurs have relatively low basal metabolic rates and may exhibit seasonal breeding, dormancy (such as hibernation or torpor), or female social dominance. Most eat a wide variety of fruits and leaves, while some are specialists. Although many share similar diets, different species of lemur share the same forests by differentiating niches.[PARAGRAPH:2]Lemur research focused on taxonomy and specimen collection during the 18th and 19th centuries. Although field observations trickled in from early explorers, modern studies of lemur ecology and behavior did not begin in earnest until the 1950s and 1960s. Initially hindered by political instability and turmoil on Madagascar during the mid-1970s, field studies resumed in the 1980s and have greatly increased our understanding of these primates. Research facilities like the Duke Lemur Center have provided research opportunities under more controlled settings. Lemurs are important for research because their mix of primitive characteristics and traits shared with anthropoid primates can yield insights on primate and human evolution. However, many lemur species are threatened with extinction due to habitat loss and hunting. Although local traditions generally help protect lemurs and their forests, illegal logging, widespread poverty, and political instability hinder and undermine conservation efforts.</English>
 		<German>Der [COLOR_UNIT_TEXT]Katta[COLOR_REVERT] (Lemur catta) aus der Gruppe der Lemuren ist ein Bewohner der trockenen Regionen im Südwesten Madagaskars. Mit einer Kopf-Rumpf-Länge von 39 bis 46 Zentimetern gehört der Katta zu den mittelgroßen Lemuren. Der charakteristisch schwarz-weiß geringelte Schwanz ist mit 56 bis 62 Zentimetern länger als der Rumpf. Der Rest des Körpers ist graubraun und auf der Bauchseite sowie im Gesicht weißlich. Beide Geschlechter besitzen Duftdrüsen u.a. an den Handgelenken, wobei dieser Bereich bei den Männchen unbehaart und mit einem Stachel versehen ist.[NEWLINE]Der Lebensraum der Kattas reicht von der Küste bis ins Bergland von über 2000 Metern Höhe. Die meisten Tiere leben in Dorn-, den trockenen Laub- und Galeriewäldern sowie in Savannen. Im Bergland bewohnen sie auch felsiges Gelände jenseits der Baumgrenze. Diese Vielfalt an Lebensräumen ist unter den Lemuren einzigartig. Im Gegensatz zu anderen Arten sind sie auch tagaktiv. Sie übernachten auf Bäumen bzw. im Gebirge auch in Höhlen und kuscheln sich dabei aneinander. Insgesamt halten sich Kattas auch häufiger am Boden auf als andere Lemuren. Der Tag beginnt mit einem Sonnenbad, indem sie sich aufrecht hinsetzen und ihre Unterseite der Sonne aussetzen. Den Rest des Tages verbringen sie vorwiegend mit der Nahrungsaufnahme, wobei sie hauptsächlich Früchte, je nach Lebensraum und Jahreszeit aber auch andere Pflanzenteile oder in Ausnahmefällen Kleintiere verzehren. Da sie sich ihren Lebensraum mit anderen Lemurenarten teilen, kommt es in Zeiten des Nahrungsmangels manchmal zu Auseinandersetzungen. Die Kommunikation in der Gruppe erfolgt, wie bei allen Feuchtnasenaffen, größtenteils über den Geruchssinn, aber auch durch Gestik (wobei der Schwanz eine wichtige Rolle spielt) und Akustik. Die teilweise katzenartigen Rufe brachten den Tieren den deutschen Namen "Katta" ein. Kattaweibchen gebären in freier Wildbahn meist nur ein einzelnes Jungtier, in Gefangenschaft häufig auch Zwillinge. Die Kleinen klammern sich in den ersten Wochen an den Bauch der Mutter, später sitzen sie auf deren Rücken, bis sie nach spätestens fünf Monaten entwöhnt sind. Der größte Fressfeind ist die Fossa (eine Frettkatze).[NEWLINE]Der Katta ist das Symboltier Madagaskars. Große Popularität erlangte er durch Filme wie "Madagascar" und "Wilde Kreaturen". Wild lebende Kattas sind durch die Jagd und den Verlust ihres Lebensraums durch Rodung zur Holzkohleerzeugung bedroht. Die Art gilt deshalb als stark gefährdet. Mehr als 2400 Kattas werden weltweit in Zoos gehalten (Stand 2009). Allein in Deutschland kann man sie in über 50 Zoos beobachten.</German>
-		<Polish>Lemury to drobne (od kilkunastu centymetrów) i średniej wielkości ssaki z długim ogonem i długimi kończynami, przy czym kończyny tylne są dłuższe od przednich. Lemury mają puszyste, miękkie futro, często kontrastowo ubarwione. Część twarzowa głowy jest zwykle wydłużona, uszy małe, zaostrzone, oczy duże, osadzone blisko siebie, skierowane do przodu. Dłonie i stopy chwytne z przeciwstawnymi palcami. Zupełny lub częściowy brak górnych siekaczy, górna warga podzielona, wilgotna, sztywny fałd w dolnej stronie języka (podjęzyk). Żywią się w zależności od gatunku - roślinnością lub owadami. Większość prowadzi nocny tryb życia. Żyją gromadnie. Prowadzą nadrzewny tryb życia.</Polish>
+		<Polish>Lemury to drobne (od kilkunastu centymetr&#243;w) i &#156;redniej wielko&#156;ci ssaki z d&#179;ugim ogonem i d&#179;ugimi ko&#241;czynami, przy czym ko&#241;czyny tylne s&#185; d&#179;u&#191;sze od przednich. Lemury maj&#185; puszyste, mi&#234;kkie futro, cz&#234;sto kontrastowo ubarwione. Cz&#234;&#156;&#230; twarzowa g&#179;owy jest zwykle wyd&#179;u&#191;ona, uszy ma&#179;e, zaostrzone, oczy du&#191;e, osadzone blisko siebie, skierowane do przodu. D&#179;onie i stopy chwytne z przeciwstawnymi palcami. Zupe&#179;ny lub cz&#234;&#156;ciowy brak g&#243;rnych siekaczy, g&#243;rna warga podzielona, wilgotna, sztywny fa&#179;d w dolnej stronie j&#234;zyka (podj&#234;zyk). &#175;ywi&#185; si&#234; w zale&#191;no&#156;ci od gatunku - ro&#156;linno&#156;ci&#185; lub owadami. Wi&#234;kszo&#156;&#230; prowadzi nocny tryb &#191;ycia. &#175;yj&#185; gromadnie. Prowadz&#185; nadrzewny tryb &#191;ycia.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_LION</Tag>
@@ -1097,7 +1097,7 @@
 		<English>Generic small to medium lizard</English>
 		<French>Lézard commun, petit à moyen</French>
 		<German>Der Begriff [COLOR_UNIT_TEXT]Echse[COLOR_REVERT] ist eine biologisch nicht eindeutige Bezeichnung für eine Gruppe von Reptilien. Gemeint ist entweder eine Unterordnung der Schuppenkriechtiere oder eine Zusammenfassung aller heute lebenden Reptilien (außer Schildkröten). Im weiteren Sinn sind Echsen also auf vier Beinen gehende Reptilien mit langem Schwanz und kurzem Hals, was dem typischen "Echsenhabitus" entspricht.</German>
-		<Polish>Jaszczurki (Lacertilia, dawniej Sauria) grupa gadów łuskonośnych obejmująca czworonożne lub beznogie zwierzęta lądowe o wydłużonym ciele, oczach posiadających powieki, mocnych szczękach i diapsydalnej czaszce. Występują na wszystkich kontynentach poza Antarktydą oraz na wielu wyspach oceanicznych. Są najliczniejszą grupą gadów obejmującą ponad 4000 gatunków.</Polish>
+		<Polish>Jaszczurki (Lacertilia, dawniej Sauria) grupa gad&#243;w &#179;uskono&#156;nych obejmuj&#185;ca czworono&#191;ne lub beznogie zwierz&#234;ta l&#185;dowe o wyd&#179;u&#191;onym ciele, oczach posiadaj&#185;cych powieki, mocnych szcz&#234;kach i diapsydalnej czaszce. Wyst&#234;puj&#185; na wszystkich kontynentach poza Antarktyd&#185; oraz na wielu wyspach oceanicznych. S&#185; najliczniejsz&#185; grup&#185; gad&#243;w obejmuj&#185;c&#185; ponad 4000 gatunk&#243;w.</Polish>
 		<Russian>Îáûêíîâåííûå ìàëûå è ñðåäíèå ïî ãàáàðèòàì ÿùåðèöû</Russian>
 	</TEXT>
 	<TEXT>
@@ -1154,7 +1154,7 @@
 			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
-		<Polish>Tapir Górski</Polish>
+		<Polish>Tapir G&#243;rski</Polish>
 		<Russian>Ãîðíûé òàïèð</Russian>
 		<Italian>Tapiro delle Ande</Italian>
 	</TEXT>
@@ -1251,14 +1251,14 @@
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</Spanish>
-		<Polish>Gołąb</Polish>
+		<Polish>Go&#179;&#185;b</Polish>
 		<Russian>Ãîëóáü</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_PIGEON_PEDIA</Tag>
 		<English>Pigeons and doves constitute the bird family Columbidae within the order Columbiformes, which include some 300 species of near passerines. In general the terms "dove" and "pigeon" are used somewhat interchangeably. In ornithological practice, there is a tendency for "dove" to be used for smaller species and "pigeon" for larger ones, but this is in no way consistently applied, and historically the common names for these birds involve a great deal of variation between the terms "dove" and "pigeon." This family occurs worldwide, but the greatest variety is in the Indomalaya and Australasia ecozones. Young doves and pigeons are called "squabs."[PARAGRAPH:2]Pigeons and doves are stout-bodied birds with short necks, and have short slender bills with a fleshy cere. The species commonly referred to just as "pigeon" is the Feral Rock Pigeon, common in many cities.[PARAGRAPH:2]Doves and pigeons build relatively flimsy nests from sticks and other debris, which may be placed in trees, on ledges or on the ground, depending on species. They lay one or two eggs, and both parents care for the young, which leave the nest after 7 to 28 days. Doves feed on seeds, fruit and plants. Unlike most other birds (but see flamingo), the doves and pigeons produce "crop milk", which is secreted by a sloughing of fluid-filled cells from the lining of the crop. Both sexes produce this highly nutritious substance to feed to the young.</English>
 		<German>Als [COLOR_UNIT_TEXT]Tauben[COLOR_REVERT] bezeichnet man eine Familie der Vögel, die zahlreiche Arten hervorbringt. Man findet sie fast überall auf der Welt, außer in der Arktis und Antarktis. Die größte Artenvielfalt herrscht in Südasien und Australien. Tauben besitzen einen kräftigen Körper und einen vergleichsweise kleinen Kopf, der beim Laufen vor und zurück bewegt wird. Das Gefieder ist meist grau, graublau oder braun. Einige Arten, besonders aus der Unterfamilie der Fruchttauben, sind farbenprächtiger. Je nach Art erreichen Tauben die Größe einer Lerche bis zu der eines Haushuhns. Sie haben typische Sitzfüße, bei denen drei Zehen nach vorn zeigen und eine nach hinten. Der Kropf ist zweiteilig, er dient nicht nur als Nahrungsspeicher, sondern hier wird auch die Kropfmilch für die Nestlinge gebildet.[NEWLINE]Tauben ernähren sich von Samen, Früchten und in seltenen Fällen auch von kleinen Wirbellosen. Mit Ausnahme der Zahntaube können sie jedoch keine Hülsen aufbrechen, sondern verschlucken die Nahrung ganz. Taubennester sind meist einfache Gebilde, mit deren Bau sich hauptsächlich das Weibchen befasst. Einige australische Arten brüten manchmal einfach auf dem Boden. Das Gelege besteht meist aus ein oder zwei Eiern. Die Jungen sind Nesthocker und werden in den ersten Tagen mit Kropfmilch ernährt.[NEWLINE]Obwohl Tauben weit verbreitet sind, gelten einige Arten als gefährdet. Dazu gehören vor allem jene, die auf kleinen Inselterritorien heimisch sind. Die Gründe sind unterschiedlich, teilweise liegt es an der Besiedelung oder der Einführung konkurrierender Arten. Für den Menschen haben Tauben heute vor allem symbolische Bedeutung. Der Grund ist die Annahme der antiken Naturwissenschaft, dass die Tiere keine Gallenblase hätten und somit frei von allem Bitteren und Bösen seien. So etablierten sich u.a. die von Pablo Picasso entworfene Friedenstaube sowie die Turteltaube als Symbol der Liebe. Im christlichen Glauben verkörpert die Taube den Heiligen Geist. Vor der Erfindung von Telegrafie und Telefonie stellten Brieftauben die einzige Möglichkeit dar, Informationen schneller zu übermitteln als durch einen Boten. Zudem konnten Tauben Nachrichten auch ohne Aufsehen über feindliche Stellungen hinweg transportieren.</German>
-		<Polish>Gołąb domowy (Columba livia), jest udomowioną formą dzikiego gołębia skalnego. Udomowienie tego gatunku nastąpiło prawdopodobnie ok. 4000 lat p.n.e. na Bliskim Wschodzie. Różnorodna hodowla tych ptaków doprowadziła do uzyskania ok. 300 różnych podgatunków i ras, różniących się między sobą wielkością, ubarwieniem, upierzeniem, rozmiarami dzioba i nóg itp. Należy wymienić tutaj najciekawsze pod względem wyglądu i zwyczajów: turkoty, latawce, prukarze, mewki, pawiki, olbrzymy, kuraki, brodawczaki, pocztowe oraz garłacze. Ta ostatnia rasa posiada niezwykle rozwinięte wole, które u samców w okresie godowym powiększają się do niebywałych rozmiarów po nadęciu powietrzem (mogą się powiększyć nawet do 8 cm).</Polish>
+		<Polish>Go&#179;&#185;b domowy (Columba livia), jest udomowion&#185; form&#185; dzikiego go&#179;&#234;bia skalnego. Udomowienie tego gatunku nast&#185;pi&#179;o prawdopodobnie ok. 4000 lat p.n.e. na Bliskim Wschodzie. R&#243;&#191;norodna hodowla tych ptak&#243;w doprowadzi&#179;a do uzyskania ok. 300 r&#243;&#191;nych podgatunk&#243;w i ras, r&#243;&#191;ni&#185;cych si&#234; mi&#234;dzy sob&#185; wielko&#156;ci&#185;, ubarwieniem, upierzeniem, rozmiarami dzioba i n&#243;g itp. Nale&#191;y wymieni&#230; tutaj najciekawsze pod wzgl&#234;dem wygl&#185;du i zwyczaj&#243;w: turkoty, latawce, prukarze, mewki, pawiki, olbrzymy, kuraki, brodawczaki, pocztowe oraz gar&#179;acze. Ta ostatnia rasa posiada niezwykle rozwini&#234;te wole, kt&#243;re u samc&#243;w w okresie godowym powi&#234;kszaj&#185; si&#234; do niebywa&#179;ych rozmiar&#243;w po nad&#234;ciu powietrzem (mog&#185; si&#234; powi&#234;kszy&#230; nawet do 8 cm).</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_PIG_NEW</Tag>
@@ -1279,14 +1279,14 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</Spanish>
-		<Polish>Świnia</Polish>
+		<Polish>&#140;winia</Polish>
 		<Russian>Ñâèíüÿ</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_PIG_PEDIA</Tag>
 		<English>The domestic pig (Sus scrofa domesticus or Sus domesticus), often called swine, hog, or pig when there is no need to distinguish it from other pigs, is a large, even-toed ungulate. It is variously considered a subspecies of the wild boar or a distinct species. Its head-plus-body-length ranges from 0.9 to 1.8 m, and the adult can weigh between 50 to 350 kg. Compared to other artiodactyls, its head is relatively long, pointed, and free of warts. Even-toed ungulates are generally herbivorous, but the domestic pig is an omnivore, like its wild relative.</English>
 		<German>[COLOR_UNIT_TEXT]Schweine[COLOR_REVERT], genauer gesagt Hausschweine (Sus scrofa domesticus), sind Paarhufer und bilden die domestizierte Form des Wildschweins. Wie alle Echten Schweine ist auch das Hausschwein ein Allesfresser. Es ist von kompakter Statur mit derber Haut, auf der borstenartige Haare wachsen. Der Kopf ist kegelförmig mit einer rüsselförmigen Nase. Des Weiteren besitzt es kleine, spitze Ohren und einen kurzen Schwanz. Es gibt zahlreiche Schweinerassen, bei einigen weisen die Ferkel noch die für Wildschwein-Frischlinge typische Zeichnung auf.[NEWLINE]Schweine können nicht schwitzen und sind entgegen der landläufigen Meinung saubere Tiere. Zudem haben sie recht gute kognitive Fähigkeiten. Sie sind jedoch stressanfällig und können Herz- und Kreislauferkrankungen bekommen, die denen der Menschen ähnlich sind. Deshalb werden sie auch als Labortiere gehalten. Auch die Beschaffenheit von Fleisch und Fettgewebe ähnelt dem der Menschen. In der Gerichtsmedizin verwendet man daher frisch geschlachtete Schweine zur Nachstellung von Stich- oder Schussverletzungen.[NEWLINE]Schweine wurden schon früh in der Zivilisationsgeschichte domestiziert und dienen vermutlich seit ca. 9000 Jahren als Fleischlieferant. In Europa und Ostasien wird Schweinefleisch häufiger konsumiert als andere Fleischsorten. In einigen Religionen gilt Schweinefleisch als unrein und darf deshalb nicht gegessen werden. Bei den Germanen war der Eber heilig und stand als Sinnbild für Wohlstand und Reichtum. Auch heute gilt in Deutschland das Schwein als Glücksbringer. Dafür steht auch die Redewendung "Schwein haben".</German>
-		<Polish>Świnia domowa (Sus scrofa f. domestica) zwierzę hodowlane udomowione między VII a VI tys. lat p.n.e. Dostarcza hodowcom mięsa, tłuszczu, skóry, podrobów, szczeciny. W stosunkowo długim procesie udomowienia, a później uszlachetniania zasadniczo zmienił się pokrój świń. Współczesna świnia zdecydowanie różni się proporcjami ciała w stosunku do dzikich przodków czy nawet do ras prymitywnych. Po pewnym czasie zwierzęta te przystosowały się do warunków bytowania stworzonych im przez człowieka. Nocny tryb życia zamienił się na dzienny, zdecydowanie zmienił się także rozród? w stosunku do dzikiego przodka, u którego występował tylko jeden okres rozrodu przypadający na grudzień, u świni współczesnej występują w miarę regularne cykle płciowe (rujowe) trwające zwykle 21 dni charakteryzujące się u loch gotowością do rozrodu w jednym dniu cyklu i popędem w tym dniu oraz ciągłym popędem płciowym u knurów.</Polish>
+		<Polish>&#140;winia domowa (Sus scrofa f. domestica) zwierz&#234; hodowlane udomowione mi&#234;dzy VII a VI tys. lat p.n.e. Dostarcza hodowcom mi&#234;sa, t&#179;uszczu, sk&#243;ry, podrob&#243;w, szczeciny. W stosunkowo d&#179;ugim procesie udomowienia, a p&#243;&#159;niej uszlachetniania zasadniczo zmieni&#179; si&#234; pokr&#243;j &#156;wi&#241;. Wsp&#243;&#179;czesna &#156;winia zdecydowanie r&#243;&#191;ni si&#234; proporcjami cia&#179;a w stosunku do dzikich przodk&#243;w czy nawet do ras prymitywnych. Po pewnym czasie zwierz&#234;ta te przystosowa&#179;y si&#234; do warunk&#243;w bytowania stworzonych im przez cz&#179;owieka. Nocny tryb &#191;ycia zamieni&#179; si&#234; na dzienny, zdecydowanie zmieni&#179; si&#234; tak&#191;e rozr&#243;d? w stosunku do dzikiego przodka, u kt&#243;rego wyst&#234;powa&#179; tylko jeden okres rozrodu przypadaj&#185;cy na grudzie&#241;, u &#156;wini wsp&#243;&#179;czesnej wyst&#234;puj&#185; w miar&#234; regularne cykle p&#179;ciowe (rujowe) trwaj&#185;ce zwykle 21 dni charakteryzuj&#185;ce si&#234; u loch gotowo&#156;ci&#185; do rozrodu w jednym dniu cyklu i pop&#234;dem w tym dniu oraz ci&#185;g&#179;ym pop&#234;dem p&#179;ciowym u knur&#243;w.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_PLATYPUS</Tag>
@@ -1348,7 +1348,7 @@
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</Spanish>
-		<Polish>Żmija Sykliwa</Polish>
+		<Polish>&#175;mija Sykliwa</Polish>
 		<Russian>Øóìÿùàÿ ãàäþêà</Russian>
 	</TEXT>
 	<TEXT>
@@ -1379,7 +1379,7 @@
 		<English>Ranger</English>
 		<French>Rôdeur</French>
 		<Italian>Ranger</Italian>
-		<Polish>Strażnik Lasu</Polish>
+		<Polish>Stra&#191;nik Lasu</Polish>
 		<Russian>Ðåéíäæåð</Russian>
 	</TEXT>
 	<TEXT>
@@ -1401,7 +1401,7 @@
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</Spanish>
-		<Polish>Płaszczka</Polish>
+		<Polish>P&#179;aszczka</Polish>
 		<Russian>Îðëÿêîâûé ñêàò</Russian>
 	</TEXT>
 	<TEXT>
@@ -1460,7 +1460,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</Spanish>
-		<Polish>Duży Krokodyl</Polish>
+		<Polish>Du&#191;y Krokodyl</Polish>
 		<Russian>Êðóïíûé êðîêîäèë</Russian>
 	</TEXT>
 	<TEXT>
@@ -1482,7 +1482,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</Spanish>
-		<Polish>Mały Krokodyl</Polish>
+		<Polish>Ma&#179;y Krokodyl</Polish>
 		<Russian>Ìåëêèé êðîêîäèë</Russian>
 	</TEXT>
 	<TEXT>
@@ -1498,7 +1498,7 @@
 			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
-		<Polish>Tygrys Szablozębny</Polish>
+		<Polish>Tygrys Szabloz&#234;bny</Polish>
 		<Russian>Ñàáëåçóáûé òèãð</Russian>
 		<Italian>Tigre dai denti a sciabola</Italian>
 	</TEXT>
@@ -1528,7 +1528,7 @@
 		<Tag>TXT_KEY_UNIT_SAIGA_PEDIA</Tag>
 		<English>The saiga (Saiga tatarica) is a Critically Endangered antelope which originally inhabited a vast area of the Eurasian steppe zone from the foothills of the Carpathians and Caucasus into Dzungaria and Mongolia. They also lived in North America during the Pleistocene. Today the nominate subspecies (Saiga tatarica tatarica) is only found in one location in Russia (steppes of the North-West Precaspian region) and three areas in Kazakhstan (the Ural, Ustiurt and Betpak-dala populations). A proportion of the Ustiurt population migrates south to Uzbekistan and occasionally Turkmenistan in winter. It is extinct in China and southwestern Mongolia. The Mongolian subspecies (Saiga tatarica mongolica) is found only in western Mongolia.</English>
 		<German>Die [COLOR_UNIT_TEXT]Saiga[COLOR_REVERT] (Saiga tatarica) ist eine eurasische Huftierart, die leicht an ihrer charaktaristischen Nase erkannt werden kann. Es gibt zwei Unterarten, die westliche Unterart (Saiga tatarica tatarica) und die Mongolische Saiga (Saiga tatarica mongolica). Saigas ähneln kleinen Schafen, haben aber einen vergleichsweise großen Kopf. Auffällig ist die rüsselartig vergrößerte, komplex aufgebaute Nase, deren genaue Funktion jedoch nicht eindeutig geklärt ist. Die Männchen tragen wachsfarbene, halbtransparente Hörner mit schwarzen Spitzen. Der Schwanz ist recht kurz. Die Mongolische Saiga ist die kleinere der beiden Arten. Das Fell der Saiga ist dicht und wollig, wobei das Winterfell etwa doppelt so lang ist wie das Sommerfell. Auch die Färbung unterscheidet sich je nach Jahreszeit und ist im Winter heller. Gelegentlich gibt es Albinos.[NEWLINE]Ihr Lebensraum sind Steppen und Halbwüsten. Da sie sich im Passgang bewegen, meiden Saigas felsiges Gelände. Hauptsächlich ernähren sie sich von Gräsern, zum Teil auch von Kräutern, Flechten und Sträuchern, mit denen sie im Frühjahr ihren gesamten Wasserbedarf decken. Im Sommer verzehren sie gezielt Sukkulenten oder suchen Wasserstellen auf. Saigas können sogar Salzwasser trinken. Sie sind gute Schwimmer und durchqueren auch breite Ströme wie die Wolga. Ihre aktive Zeit sind die Morgen- und Abendstunden. Sie können täglich bis zu 120 km zurücklegen, was besonders in harten Wintern bzw. bei Nahrungsknappheit notwendig ist. Saigaherden bestehen im Sommer aus 30 bis 40 Exemplaren, im Frühjahr und Herbst wandern oft Tausende Tiere gemeinsam. Zur Paarungszeit im Winter scharen die Böcke einen Harem von durchschnittlich fünf bis zehn Weibchen um sich. Der Nachwuchs kommt im April oder Mai zur Welt. Saigas sind Fluchttiere und können bis zu 80 km/h laufen. Das macht es Wölfen schwer, sie zu erbeuten. Viele Tiere sterben jedoch an Krankheiten, z.B. der Maul- und Klauenseuche.[NEWLINE]Im Pleistozän war die Saiga ein häufiges Tier in den Kältesteppen Europas und Asiens. Über die Beringstraße gelangte sie so auch nach Kanada. Durch verschiedene Einflüsse wie Klimaveränderungen, Krankheiten (2015 war das letzte Massensterben) und Bejagung sind heute beide Unterarten stark gefährdet. In Zoos sieht man sie mittlerweile selten. Eine große Zuchtgruppe gibt es in der Ukraine.</German>
-		<Polish>Suhak, sajga, sumak (Saiga tatarica) ssak z rodziny krętorogich (Bovidae). Pierwsze ślady suhaka pochodzą ze środkowego plejstocenu. Dawniej suhaki zamieszkiwały stepowe i półpustynne środowiska całej Eurazji. Dziś znacznie rzadsze, występują na stepach Azji Środkowej na terenie Rosji, Mongolii i Chin. W XVI i XVII wieku zachodnia granica występowania gatunku sięgała do przedgórza Karpat Wschodnich i do Bugu. W plejstocenie zamieszkiwały Amerykę Północną. Suhak mongolski, klasyfikowany jako podgatunek S. tatarica mongolica lub podgatunek S. borealis mongolica plejstoceńskiego S. borealis, jest endemitem występującym w Mongolii. Ma do 1,35 m długości, do ok. 75 cm wysokości i waży do ok. 45 kg. Latem ma krótką, płową sierść, zimą okrywa ją jaśniejsze, długie i gęste futro. Samce noszą spiczaste rogi długości 30 cm, samice są przeważnie bezrogie. Mięsiste zgrubienie pomiędzy nosem a czołem nadaje głowie łukowaty kształt. Prawdopodobnie jest to przystosowanie do oczyszczania wdychanego powietrza z pyłu i piasku, który wiatr miecie po jej ojczystych pustyniach i suchych stepach. Biegnąc, osiągają prędkość nawet do 35 km/h. Na przełomie XIX i XX wieku na skutek polowań gatunek prawie wyginął. Od roku 1919 został objęty ochroną. Zabijany głównie dla smacznego mięsa oraz rogów, z których wytwarzano afrodyzjaki. Liczebność populacji sajgi rosyjskiej (S. tatarica tatarica) zmniejszyła się gwałtownie z ok. 1,25 mln do mniej niż 50 tys., a suhaka mongolskiego (S. tatarica mongolica) z 5200 osobników w 2000 do 750 w styczniu 2004.</Polish>
+		<Polish>Suhak, sajga, sumak (Saiga tatarica) ssak z rodziny kr&#234;torogich (Bovidae). Pierwsze &#156;lady suhaka pochodz&#185; ze &#156;rodkowego plejstocenu. Dawniej suhaki zamieszkiwa&#179;y stepowe i p&#243;&#179;pustynne &#156;rodowiska ca&#179;ej Eurazji. Dzi&#156; znacznie rzadsze, wyst&#234;puj&#185; na stepach Azji &#140;rodkowej na terenie Rosji, Mongolii i Chin. W XVI i XVII wieku zachodnia granica wyst&#234;powania gatunku si&#234;ga&#179;a do przedg&#243;rza Karpat Wschodnich i do Bugu. W plejstocenie zamieszkiwa&#179;y Ameryk&#234; P&#243;&#179;nocn&#185;. Suhak mongolski, klasyfikowany jako podgatunek S. tatarica mongolica lub podgatunek S. borealis mongolica plejstoce&#241;skiego S. borealis, jest endemitem wyst&#234;puj&#185;cym w Mongolii. Ma do 1,35 m d&#179;ugo&#156;ci, do ok. 75 cm wysoko&#156;ci i wa&#191;y do ok. 45 kg. Latem ma kr&#243;tk&#185;, p&#179;ow&#185; sier&#156;&#230;, zim&#185; okrywa j&#185; ja&#156;niejsze, d&#179;ugie i g&#234;ste futro. Samce nosz&#185; spiczaste rogi d&#179;ugo&#156;ci 30 cm, samice s&#185; przewa&#191;nie bezrogie. Mi&#234;siste zgrubienie pomi&#234;dzy nosem a czo&#179;em nadaje g&#179;owie &#179;ukowaty kszta&#179;t. Prawdopodobnie jest to przystosowanie do oczyszczania wdychanego powietrza z py&#179;u i piasku, kt&#243;ry wiatr miecie po jej ojczystych pustyniach i suchych stepach. Biegn&#185;c, osi&#185;gaj&#185; pr&#234;dko&#156;&#230; nawet do 35 km/h. Na prze&#179;omie XIX i XX wieku na skutek polowa&#241; gatunek prawie wygin&#185;&#179;. Od roku 1919 zosta&#179; obj&#234;ty ochron&#185;. Zabijany g&#179;&#243;wnie dla smacznego mi&#234;sa oraz rog&#243;w, z kt&#243;rych wytwarzano afrodyzjaki. Liczebno&#156;&#230; populacji sajgi rosyjskiej (S. tatarica tatarica) zmniejszy&#179;a si&#234; gwa&#179;townie z ok. 1,25 mln do mniej ni&#191; 50 tys., a suhaka mongolskiego (S. tatarica mongolica) z 5200 osobnik&#243;w w 2000 do 750 w styczniu 2004.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SALTWATER_CROC_LARGE</Tag>
@@ -1549,7 +1549,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</Spanish>
-		<Polish>Krokodyl Różańcowy (Duży)</Polish>
+		<Polish>Krokodyl R&#243;&#191;a&#241;cowy (Du&#191;y)</Polish>
 		<Russian>Áîë. ìîð. êðîêîäèë</Russian>
 	</TEXT>
 	<TEXT>
@@ -1571,7 +1571,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</Spanish>
-		<Polish>Krokodyl Różańcowy (Mały)</Polish>
+		<Polish>Krokodyl R&#243;&#191;a&#241;cowy (Ma&#179;y)</Polish>
 		<Russian>Ìàë. ìîð. êðîêîäèë</Russian>
 	</TEXT>
 	<TEXT>
@@ -1595,7 +1595,7 @@
 		<Tag>TXT_KEY_UNIT_SEAEAGLE_PEDIA</Tag>
 		<English>The Steller's sea eagle (Haliaeetus pelagicus) is a large bird of prey in the family Accipitridae. It is an eagle that lives in coastal northeastern Asia and mainly preys on fish and water birds. On average, it is the heaviest eagle in the world, at about 5 to 9 kilograms (11 to 20 lb), but may lag behind the harpy eagle (Harpia harpyja) and Philippine eagle (Pithecophaga jefferyi) in some standard measurements. This bird is named after the German naturalist Georg Wilhelm Steller.</English>
 		<German>Der [COLOR_UNIT_TEXT]Riesenseeadler[COLOR_REVERT] (Haliaeetus pelagicus) gehört zu den Greifvögeln und ist der größte Seeadler. Die englische Bezeichnung lautet "Steller's Sea Eagle" nach dem deutschen Naturforscher Georg Wilhelm Steller, der diese Art entdeckte. Vom Körperbau lässt sich der Riesenseeadler gut von anderen Seeadlern unterscheiden. Seine breiten Flügel wirken recht kurz und der keilförmige Schwanz ist relativ lang. Charakteristisch ist auch der große und kräftige, orangegelbe Schnabel. Weibchen sind größer und deutlich schwerer als Männchen, in der Färbung unterscheiden sie sich jedoch nicht. Bis auf Beine und Schwanz ist das Gefieder dunkelbraun bis schwarz. Die maximale Flügelspannweite beträgt 2,80 Meter.[NEWLINE]Der Riesenseeadler lebt in den Küstenregionen im Nordosten Asiens. Je nach geografischer Lage ist er ein Stand- oder Zugvogel. Seine Brutgebiete sind heute vermutlich nur noch an der Küste der Beringsee. Seine bevorzugte Nahrung sind Lachsfische, Seevögel und Aas. Fische werden entweder beim Waten im seichten Wasser oder aus dem langsamen Suchflug heraus erbeutet. An größeren Kadavern gibt es zuweilen Nahrungsstreitigkeiten mit anderen Tieren. Riesenseeadler sind monogam. Ihre Brutsaison ist von April bis September, wobei ein Gelege meist aus zwei Eiern besteht. Frisch geschlüpfte Küken besitzen noch keine Fähigkeit zur Thermoregulation, weswegen sie von den Eltern unter den Flügeln oder mit dem Bauchgefieder gewärmt werden. Nach ca. 70 Tagen sind sie flügge.[NEWLINE]Die Zerstörung des Lebensraums vor allem durch Abholzung, Erschließungen für die Ölindustrie und den Bau von Wasserkraftwerken sowie Nahrungsmangel durch Überfischung und Umweltverschmutzung sind hauptsächlich dafür verantwortlich, dass die Bestände immer weiter abnehmen. Der Riesenseeadler ist mit ca. 5000 Exemplaren deshalb als gefährdet gelistet. In mehreren Ländern ist er gesetzlich geschützt, die Hauptüberwinterungsquartiere befinden sich z.B. in Naturschutzgebieten Japans.</German>
-		<Polish>Bielik olbrzymi (Haliaeetus pelagicus) - gatunek ptaka drapieżnego z rodziny jastrzębiowatych (Accipitridae). Największy ze wszystkich gatunków bielików - osiąga rozpiętość skrzydeł do 2,5 m. Występuje na północnopacyficznym wybrzeżu Azji. Żywi się rybami, ptakami i ssakami morskimi. Prowadzi dzienny tryb życia. Wyprowadza jeden lęg w roku - samica składa dwa jaja. Wysiadywanie jaj trwa 39 - 45 dni.</Polish>
+		<Polish>Bielik olbrzymi (Haliaeetus pelagicus) - gatunek ptaka drapie&#191;nego z rodziny jastrz&#234;biowatych (Accipitridae). Najwi&#234;kszy ze wszystkich gatunk&#243;w bielik&#243;w - osi&#185;ga rozpi&#234;to&#156;&#230; skrzyde&#179; do 2,5 m. Wyst&#234;puje na p&#243;&#179;nocnopacyficznym wybrze&#191;u Azji. &#175;ywi si&#234; rybami, ptakami i ssakami morskimi. Prowadzi dzienny tryb &#191;ycia. Wyprowadza jeden l&#234;g w roku - samica sk&#179;ada dwa jaja. Wysiadywanie jaj trwa 39 - 45 dni.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SEALION</Tag>
@@ -1666,7 +1666,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</Spanish>
-		<Polish>Jeleń</Polish>
+		<Polish>Jele&#241;</Polish>
 		<Russian>Îëåíü</Russian>
 	</TEXT>
 	<TEXT>
@@ -1674,7 +1674,7 @@
 		<English>Subdued Aardvark</English>
 		<French>Oryctérope (App.)</French>
 		<Italian>Oritteropo domato</Italian>
-		<Polish>Poskromiony Mrównik</Polish>
+		<Polish>Poskromiony Mr&#243;wnik</Polish>
 		<Russian>Òðóáêîçóá (ðó÷í.)</Russian>
 	</TEXT>
 	<TEXT>
@@ -1693,7 +1693,7 @@
 		<Tag>TXT_KEY_UNIT_SUBDUED_AFRICANGREY</Tag>
 		<English>Subdued African Grey Parrot</English>
 		<French>Perroquet gris d'Afrique (App.)</French>
-		<Polish>Poskromiona Papuga Żako</Polish>
+		<Polish>Poskromiona Papuga &#175;ako</Polish>
 		<Russian>Àôð. ïîïóãàé (ðó÷í.)</Russian>
 		<Italian>Pappagallo cinerino domato</Italian>
 	</TEXT>
@@ -1706,7 +1706,7 @@
 			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
-		<Polish>Poskromiony Pingwin Przylądkowy</Polish>
+		<Polish>Poskromiony Pingwin Przyl&#185;dkowy</Polish>
 		<Russian>Àôð. ïèíãâèí (ðó÷í.)</Russian>
 		<Italian>Pinguino africano domato</Italian>
 	</TEXT>
@@ -1725,7 +1725,7 @@
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
 		<Italian>Formichiere domato</Italian>
-		<Polish>Poskromiony Mrówkojad</Polish>
+		<Polish>Poskromiony Mr&#243;wkojad</Polish>
 		<Russian>Ìóðàâüåä (ðó÷í.)</Russian>
 	</TEXT>
 	<TEXT>
@@ -1757,7 +1757,7 @@
 		<English>Subdued Moon Bear</English>
 		<French>Ours Lune (App.)</French>
 		<Italian>Orso della luna domato</Italian>
-		<Polish>Poskromiony Niedźwiedź Himalajski</Polish>
+		<Polish>Poskromiony Nied&#159;wied&#159; Himalajski</Polish>
 		<Russian>Áåëîãðóäûé ìåäâåäü (ðó÷í.)</Russian>
 	</TEXT>
 	<TEXT>
@@ -1795,7 +1795,7 @@
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
 		<Italian>Pitone reale domato</Italian>
-		<Polish>Poskromiony Pyton Królewski</Polish>
+		<Polish>Poskromiony Pyton Kr&#243;lewski</Polish>
 		<Russian>Êîðîëåâñêèé ïèòîí (ðó÷í.)</Russian>
 	</TEXT>
 	<TEXT>
@@ -1824,7 +1824,7 @@
 			<Gender>Female</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
-		<Polish>Poskromiona Płomykówka Zwyczajna</Polish>
+		<Polish>Poskromiona P&#179;omyk&#243;wka Zwyczajna</Polish>
 		<Russian>Ñèïóõà (ðó÷í.)</Russian>
 		<Italian>Barbagianni comune domato</Italian>
 	</TEXT>
@@ -1850,7 +1850,7 @@
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
 		<Italian>Castoro domato</Italian>
-		<Polish>Poskromiony Bóbr</Polish>
+		<Polish>Poskromiony B&#243;br</Polish>
 		<Russian>Áîáåð (ðó÷í.)</Russian>
 	</TEXT>
 	<TEXT>
@@ -1863,7 +1863,7 @@
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
 		<Italian>Beluga domato</Italian>
-		<Polish>Poskromiona Bieługa</Polish>
+		<Polish>Poskromiona Bie&#179;uga</Polish>
 		<Russian>Áåëóõà (ðó÷í.)</Russian>
 	</TEXT>
 	<TEXT>
@@ -1909,7 +1909,7 @@
 			<Gender>Neuter</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
-		<Polish>Poskromiony Nosorożec Czarny</Polish>
+		<Polish>Poskromiony Nosoro&#191;ec Czarny</Polish>
 		<Russian>×åðíûé íîñîðîã (ðó÷í.)</Russian>
 		<Italian>Rinoceronte nero domato</Italian>
 	</TEXT>
@@ -1943,7 +1943,7 @@
 		<Tag>TXT_KEY_UNIT_SUBDUED_BOOBY</Tag>
 		<English>Subdued Blue-footed Booby</English>
 		<French>Fou à pieds bleus (App.)</French>
-		<Polish>Poskromiony Głuptak Niebieskonogi</Polish>
+		<Polish>Poskromiony G&#179;uptak Niebieskonogi</Polish>
 		<Russian>Îëóøà (ðó÷í.)</Russian>
 		<Italian>Sula piediazzurri domata</Italian>
 	</TEXT>
@@ -1969,7 +1969,7 @@
 		<English>Subdued Brown Bear</English>
 		<French>Ours brun (App.)</French>
 		<Italian>Orso bruno domato</Italian>
-		<Polish>Poskromiony Niedźwiedź Brunatny</Polish>
+		<Polish>Poskromiony Nied&#159;wied&#159; Brunatny</Polish>
 		<Russian>Áóðûé ìåäâåäü (ðó÷í.)</Russian>
 	</TEXT>
 	<TEXT>
@@ -1982,7 +1982,7 @@
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
 		<Italian>Bufalo africano domato</Italian>
-		<Polish>Poskromiony Bawół</Polish>
+		<Polish>Poskromiony Baw&#243;&#179;</Polish>
 		<Russian>Àçèàòñêèé áóéâîë (ðó÷í.)</Russian>
 	</TEXT>
 	<TEXT>
@@ -2013,7 +2013,7 @@
 		</German>
 		<Italian>Cammello domato</Italian>
 		<Spanish>Subdued Camello</Spanish>
-		<Polish>Poskromiony Wielbłąd</Polish>
+		<Polish>Poskromiony Wielb&#179;&#185;d</Polish>
 		<Russian>Âåðáëþä (ðó÷í.)</Russian>
 	</TEXT>
 	<TEXT>
@@ -2063,7 +2063,7 @@
 		<English>Subdued Cave Bear</English>
 		<French>Ours des cavernes (App.)</French>
 		<Italian>Orso delle caverne domato</Italian>
-		<Polish>Poskromiony Niedźwiedź Jaskiniowy</Polish>
+		<Polish>Poskromiony Nied&#159;wied&#159; Jaskiniowy</Polish>
 		<Russian>Ïåùåðíûé ìåäâåäü (ðó÷í.)</Russian>
 	</TEXT>
 	<TEXT>
@@ -2226,7 +2226,7 @@
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
 		<Italian>Tartaruga del deserto domata</Italian>
-		<Polish>Poskromiony Żółw Pustynny</Polish>
+		<Polish>Poskromiony &#175;&#243;&#179;w Pustynny</Polish>
 		<Russian>Ïóñòûííàÿ ÷åðåïàõà (ðó÷í.)</Russian>
 	</TEXT>
 	<TEXT>
@@ -2317,7 +2317,7 @@
 		<English>Subdued Eagle</English>
 		<French>Aigle (App.)</French>
 		<Italian>Aquila domata</Italian>
-		<Polish>Poskromiony Orzeł</Polish>
+		<Polish>Poskromiony Orze&#179;</Polish>
 		<Russian>Îðåë (ðó÷í.)</Russian>
 	</TEXT>
 	<TEXT>
@@ -2349,7 +2349,7 @@
 		<Tag>TXT_KEY_UNIT_SUBDUED_ELEPHANT</Tag>
 		<English>Subdued Asian Elephant</English>
 		<French>Éléphant d'Asie (App.)</French>
-		<Polish>Poskromiony Słoń Indyjski</Polish>
+		<Polish>Poskromiony S&#179;o&#241; Indyjski</Polish>
 		<Russian>Ñëîí (ðó÷í.)</Russian>
 		<Italian>Elefante asiatico domato</Italian>
 	</TEXT>
@@ -2407,7 +2407,7 @@
 			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
-		<Polish>Poskromiony Pingwin Równikowy</Polish>
+		<Polish>Poskromiony Pingwin R&#243;wnikowy</Polish>
 		<Russian>Î÷êîâûé ïèíãâèí (ðó÷í.)</Russian>
 		<Italian>Pinguino delle Galapagos domato</Italian>
 	</TEXT>
@@ -2425,7 +2425,7 @@
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
 		<Italian>Tartaruga delle Galapagos domata</Italian>
-		<Polish>Poskromiony Żółw Słoniowy</Polish>
+		<Polish>Poskromiony &#175;&#243;&#179;w S&#179;oniowy</Polish>
 		<Russian>Ãàëàïàãîñ. ÷åðåïàõà (ðó÷í.)</Russian>
 	</TEXT>
 	<TEXT>
@@ -2441,7 +2441,7 @@
 			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
-		<Polish>Subdued Aligator Amerykański</Polish>
+		<Polish>Subdued Aligator Ameryka&#241;ski</Polish>
 		<Russian>Àëëèãàòîð (ðó÷í.)</Russian>
 		<Italian>Alligatore americano domato</Italian>
 	</TEXT>
@@ -2458,7 +2458,7 @@
 			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
-		<Polish>Subdued Aligator Chiński</Polish>
+		<Polish>Subdued Aligator Chi&#241;ski</Polish>
 		<Russian>Êèòàéñêèé àëëèãàòîð (ðó÷í.)</Russian>
 		<Italian>Alligatore cinese domato</Italian>
 	</TEXT>
@@ -2489,7 +2489,7 @@
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
 		<Italian>Babbuino Gelada domato</Italian>
-		<Polish>Poskromiona Dżelada</Polish>
+		<Polish>Poskromiona D&#191;elada</Polish>
 		<Russian>Ãåëàäà (ðó÷í.)</Russian>
 	</TEXT>
 	<TEXT>
@@ -2544,7 +2544,7 @@
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
 		<Italian>Calamaro gigante domato</Italian>
-		<Polish>Poskromiona Wielka Kałamarnica</Polish>
+		<Polish>Poskromiona Wielka Ka&#179;amarnica</Polish>
 		<Russian>Ãèãàíòñêèé êàëüìàð (ðó÷í.)</Russian>
 	</TEXT>
 	<TEXT>
@@ -2561,7 +2561,7 @@
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
 		<Italian>Giraffa domata</Italian>
-		<Polish>Poskromiony Żyrafa</Polish>
+		<Polish>Poskromiony &#175;yrafa</Polish>
 		<Russian>Æèðàô (ðó÷í.)</Russian>
 	</TEXT>
 	<TEXT>
@@ -2599,7 +2599,7 @@
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
 		<Italian>Grande squalo bianco domato</Italian>
-		<Polish>Poskromiony Żarłacz Biały</Polish>
+		<Polish>Poskromiony &#175;ar&#179;acz Bia&#179;y</Polish>
 		<Russian>Áåëàÿ àêóëà (ðó÷í.)</Russian>
 	</TEXT>
 	<TEXT>
@@ -2644,7 +2644,7 @@
 		<English>Subdued Haast's Eagle</English>
 		<French>Aigle de Haast (App.)</French>
 		<Italian>Aquila di Haast domata</Italian>
-		<Polish>Poskromiony Orzeł Haasta</Polish>
+		<Polish>Poskromiony Orze&#179; Haasta</Polish>
 		<Russian>Îðåë Õààñòà (ðó÷í.)</Russian>
 	</TEXT>
 	<TEXT>
@@ -2657,7 +2657,7 @@
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
 		<Italian>Squalo martello domato</Italian>
-		<Polish>Poskromiony Rekin-Młot</Polish>
+		<Polish>Poskromiony Rekin-M&#179;ot</Polish>
 		<Russian>Àêóëà-ìîëîò (ðó÷í.)</Russian>
 	</TEXT>
 	<TEXT>
@@ -2677,7 +2677,7 @@
 		<English>Subdued Hawk</English>
 		<French>Faucon (App.)</French>
 		<Italian>Falco domato</Italian>
-		<Polish>Poskromiony Jastrząb</Polish>
+		<Polish>Poskromiony Jastrz&#185;b</Polish>
 		<Russian>ßñòðåá (ðó÷í.)</Russian>
 	</TEXT>
 	<TEXT>
@@ -2706,7 +2706,7 @@
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
 		<Italian>Cavallo domato</Italian>
-		<Polish>Poskromiony Koń</Polish>
+		<Polish>Poskromiony Ko&#241;</Polish>
 		<Russian>Ëîøàäü (ðó÷í.)</Russian>
 	</TEXT>
 	<TEXT>
@@ -2749,7 +2749,7 @@
 		<English>Subdued Walia Ibex</English>
 		<French>Bouquetin (App.)</French>
 		<Italian>Stambecco del Semien domato</Italian>
-		<Polish>Poskromiony Koziorożec</Polish>
+		<Polish>Poskromiony Kozioro&#191;ec</Polish>
 		<Russian>Êîçåðîã (ðó÷í.)</Russian>
 	</TEXT>
 	<TEXT>
@@ -2792,7 +2792,7 @@
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
 		<Italian>Rinoceronte indiano domato</Italian>
-		<Polish>Poskromiony Nosorożec Indyjski</Polish>
+		<Polish>Poskromiony Nosoro&#191;ec Indyjski</Polish>
 		<Russian>Èíäèéñêèé íîñîðîã (ðó÷í.)</Russian>
 	</TEXT>
 	<TEXT>
@@ -2822,7 +2822,7 @@
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
 		<Italian>Rinoceronte di Giava domato</Italian>
-		<Polish>Poskromiony Nosorożec Jawajski</Polish>
+		<Polish>Poskromiony Nosoro&#191;ec Jawajski</Polish>
 		<Russian>ßâàíñêèé íîñîðîã (ðó÷í.)</Russian>
 	</TEXT>
 	<TEXT>
@@ -2976,7 +2976,7 @@
 		<English>Subdued Lynx</English>
 		<French>Lynx (App.)</French>
 		<Italian>Lince domata</Italian>
-		<Polish>Poskromiony Ryś</Polish>
+		<Polish>Poskromiony Ry&#156;</Polish>
 		<Russian>Ðûñü (ðó÷í.)</Russian>
 	</TEXT>
 	<TEXT>
@@ -3078,7 +3078,7 @@
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
 		<Italian>Balenottera minore domata</Italian>
-		<Polish>Poskromiony Płetwal</Polish>
+		<Polish>Poskromiony P&#179;etwal</Polish>
 		<Russian>Ïîëîñàòèê (ðó÷í.)</Russian>
 	</TEXT>
 	<TEXT>
@@ -3102,7 +3102,7 @@
 		<English>Subdued Moose</English>
 		<French>Elan (App.)</French>
 		<Italian>Alce domato</Italian>
-		<Polish>Poskromiony Łoś</Polish>
+		<Polish>Poskromiony &#163;o&#156;</Polish>
 		<Russian>Ëîñü (ðó÷í.)</Russian>
 	</TEXT>
 	<TEXT>
@@ -3126,7 +3126,7 @@
 			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
-		<Polish>Poskromoiony Tapir Górski</Polish>
+		<Polish>Poskromoiony Tapir G&#243;rski</Polish>
 		<Russian>Ãîðíûé òàïèð (ðó÷í.)</Russian>
 		<Italian>Tapiro delle Ande domato</Italian>
 	</TEXT>
@@ -3135,7 +3135,7 @@
 		<English>Subdued Musk Ox</English>
 		<French>Boeuf musqué (App.)</French>
 		<Italian>Bue muschiato domato</Italian>
-		<Polish>Poskromiony Wół Piżmowy</Polish>
+		<Polish>Poskromiony W&#243;&#179; Pi&#191;mowy</Polish>
 		<Russian>Îâöåáûê (ðó÷í.)</Russian>
 	</TEXT>
 	<TEXT>
@@ -3241,7 +3241,7 @@
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
 		<Italian>Struzzo domato</Italian>
-		<Polish>Poskromiony Struś</Polish>
+		<Polish>Poskromiony Stru&#156;</Polish>
 		<Russian>Ñòðàóñ (ðó÷í.)</Russian>
 	</TEXT>
 	<TEXT>
@@ -3254,7 +3254,7 @@
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
 		<Italian>Bufaga domata</Italian>
-		<Polish>Poskromiony Bąkojad</Polish>
+		<Polish>Poskromiony B&#185;kojad</Polish>
 		<Russian>Ñêâîðåö (ðó÷í.)</Russian>
 	</TEXT>
 	<TEXT>
@@ -3324,7 +3324,7 @@
 		<English>Subdued Pheasant</English>
 		<French>Faisan (App.)</French>
 		<Italian>Fagiano domato</Italian>
-		<Polish>Poskromiony Bażant</Polish>
+		<Polish>Poskromiony Ba&#191;ant</Polish>
 		<Russian>Ôàçàí (ðó÷í.)</Russian>
 	</TEXT>
 	<TEXT>
@@ -3332,7 +3332,7 @@
 		<English>Subdued Pigeon</English>
 		<French>Pigeon (App.)</French>
 		<Italian>Piccione domato</Italian>
-		<Polish>Poskromiony Gołąb</Polish>
+		<Polish>Poskromiony Go&#179;&#185;b</Polish>
 		<Russian>Ãîëóáü (ðó÷í.)</Russian>
 	</TEXT>
 	<TEXT>
@@ -3360,7 +3360,7 @@
 		<English>Subdued Polar Bear</English>
 		<French>Ours polaire (App.)</French>
 		<Italian>Orso polare domato</Italian>
-		<Polish>Poskromiony Niedźwiedź Polarny</Polish>
+		<Polish>Poskromiony Nied&#159;wied&#159; Polarny</Polish>
 		<Russian>Áåëûé ìåäâåäü (ðó÷í.)</Russian>
 	</TEXT>
 	<TEXT>
@@ -3402,7 +3402,7 @@
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
 		<Italian>Vipera soffiante domata</Italian>
-		<Polish>Poskromiona Żmija Sykliwa</Polish>
+		<Polish>Poskromiona &#175;mija Sykliwa</Polish>
 		<Russian>Øóìÿùàÿ ãàäþêà (ðó÷í.)</Russian>
 	</TEXT>
 	<TEXT>
@@ -3449,7 +3449,7 @@
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
 		<Italian>Tasso del miele domato</Italian>
-		<Polish>Poskromiony Miodożer</Polish>
+		<Polish>Poskromiony Miodo&#191;er</Polish>
 		<Russian>Ìåäîåä (ðó÷í.)</Russian>
 	</TEXT>
 	<TEXT>
@@ -3470,7 +3470,7 @@
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
 		<Italian>Aquila di mare domata</Italian>
-		<Polish>Poskromiony Płaszczka</Polish>
+		<Polish>Poskromiony P&#179;aszczka</Polish>
 		<Russian>Îðëÿêîâûé ñêàò (ðó÷í.)</Russian>
 	</TEXT>
 	<TEXT>
@@ -3529,7 +3529,7 @@
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
 		<Italian>Squalo del reef domato</Italian>
-		<Polish>Poskromiony Żarłacz Karaibski</Polish>
+		<Polish>Poskromiony &#175;ar&#179;acz Karaibski</Polish>
 		<Russian>Ðèôîâàÿ àêóëà (ðó÷í.)</Russian>
 	</TEXT>
 	<TEXT>
@@ -3550,7 +3550,7 @@
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
 		<Italian>Coccodrillo di fiume (grande) domato</Italian>
-		<Polish>Poskromiony Krokodyl (duży)</Polish>
+		<Polish>Poskromiony Krokodyl (du&#191;y)</Polish>
 		<Russian>Êðóïíûé êðîêîäèë (ðó÷í.)</Russian>
 	</TEXT>
 	<TEXT>
@@ -3563,7 +3563,7 @@
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
 		<Italian>Coccodrillo di fiume (piccolo) domato</Italian>
-		<Polish>Poskromiony Krokodyl (mały)</Polish>
+		<Polish>Poskromiony Krokodyl (ma&#179;y)</Polish>
 		<Russian>Ìåëêèé êðîêîäèë (ðó÷í.)</Russian>
 	</TEXT>
 	<TEXT>
@@ -3588,7 +3588,7 @@
 			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
-		<Polish>Oswojony Tygrys Szablozębny</Polish>
+		<Polish>Oswojony Tygrys Szabloz&#234;bny</Polish>
 		<Russian>Ñàáëåçóáûé òèãð (ðó÷í.)</Russian>
 		<Italian>Tigre dai denti a sciabola domata</Italian>
 	</TEXT>
@@ -3610,7 +3610,7 @@
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
 		<Italian>Coccodrillo marino (grande) domato</Italian>
-		<Polish>Poskromiony Krokodyl Różańcowy (duży)</Polish>
+		<Polish>Poskromiony Krokodyl R&#243;&#191;a&#241;cowy (du&#191;y)</Polish>
 		<Russian>Áîë. ìîð. êðîêîäèë (ðó÷í.)</Russian>
 	</TEXT>
 	<TEXT>
@@ -3623,7 +3623,7 @@
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
 		<Italian>Coccodrillo marino (piccolo) domato</Italian>
-		<Polish>Poskromiony Krokodyl Różańcowy (mały)</Polish>
+		<Polish>Poskromiony Krokodyl R&#243;&#191;a&#241;cowy (ma&#179;y)</Polish>
 		<Russian>Ìàë. ìîð. êðîêîäèë (ðó÷í.)</Russian>
 	</TEXT>
 	<TEXT>
@@ -3686,7 +3686,7 @@
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
 		<Italian>Tartaruga di mare domata</Italian>
-		<Polish>Poskromiony Żółw Morski</Polish>
+		<Polish>Poskromiony &#175;&#243;&#179;w Morski</Polish>
 		<Russian>Ìîðñêàÿ ÷åðåïàõà (ðó÷í.)</Russian>
 	</TEXT>
 	<TEXT>
@@ -3743,7 +3743,7 @@
 		<English>Subdued Spectacled Bear</English>
 		<French>Ours à lunettes (App.)</French>
 		<Italian>Orso dagli occhiali domato</Italian>
-		<Polish>Poskromiony Niedźwiedź Andyjski</Polish>
+		<Polish>Poskromiony Nied&#159;wied&#159; Andyjski</Polish>
 		<Russian>Î÷êîâûé ìåäâåäü (ðó÷í.)</Russian>
 	</TEXT>
 	<TEXT>
@@ -3751,7 +3751,7 @@
 		<English>Subdued Deer</English>
 		<French>Cerf (App.)</French>
 		<Italian>Cervo domato</Italian>
-		<Polish>Poskromiony Jeleń</Polish>
+		<Polish>Poskromiony Jele&#241;</Polish>
 		<Russian>Îëåíü (ðó÷í.)</Russian>
 	</TEXT>
 	<TEXT>
@@ -3759,7 +3759,7 @@
 		<English>Subdued Sun Bear</English>
 		<French>Ours malais (App.)</French>
 		<Italian>Orso malese domato</Italian>
-		<Polish>Poskromiony Niedźwiedź Malajski</Polish>
+		<Polish>Poskromiony Nied&#159;wied&#159; Malajski</Polish>
 		<Russian>Ìàëàéñêèé ìåäâåäü (ðó÷í.)</Russian>
 	</TEXT>
 	<TEXT>
@@ -3785,7 +3785,7 @@
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
 		<Italian>Diavolo della Tasmania domato</Italian>
-		<Polish>Poskromiony Diabeł Tasmański</Polish>
+		<Polish>Poskromiony Diabe&#179; Tasma&#241;ski</Polish>
 		<Russian>Òàñìàíñêèé äüÿâîë (ðó÷í.)</Russian>
 	</TEXT>
 	<TEXT>
@@ -3842,7 +3842,7 @@
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
 		<Italian>Tonno domato</Italian>
-		<Polish>Poskromiony Tuńczyk</Polish>
+		<Polish>Poskromiony Tu&#241;czyk</Polish>
 		<Russian>Òóíåö (ðó÷í.)</Russian>
 	</TEXT>
 	<TEXT>
@@ -3871,7 +3871,7 @@
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
 		<Italian>Vipera domata</Italian>
-		<Polish>Poskromiona Żmija</Polish>
+		<Polish>Poskromiona &#175;mija</Polish>
 		<Russian>Ãàäþêà (ðó÷í.)</Russian>
 	</TEXT>
 	<TEXT>
@@ -3894,7 +3894,7 @@
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
 		<Italian>Avvoltoio domato</Italian>
-		<Polish>Poskromiony Sęp</Polish>
+		<Polish>Poskromiony S&#234;p</Polish>
 		<Russian>Ãðèô (ðó÷í.)</Russian>
 	</TEXT>
 	<TEXT>
@@ -3920,7 +3920,7 @@
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
 		<Italian>Wallaroo domato</Italian>
-		<Polish>Poskromiony Kangur Górski</Polish>
+		<Polish>Poskromiony Kangur G&#243;rski</Polish>
 		<Russian>Ãîðíûé êåíãóðó (ðó÷í.)</Russian>
 	</TEXT>
 	<TEXT>
@@ -3976,7 +3976,7 @@
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
 		<Italian>Rinoceronte bianco domato</Italian>
-		<Polish>Poskromiony Nosorożec Biały</Polish>
+		<Polish>Poskromiony Nosoro&#191;ec Bia&#179;y</Polish>
 		<Russian>Áåëûé íîñîðîã (ðó÷í.)</Russian>
 	</TEXT>
 	<TEXT>
@@ -4047,7 +4047,7 @@
 			<Plural>1</Plural>
 		</French>
 		<Italian>Epica del beluga</Italian>
-		<Polish>Opowieści o Biełudze</Polish>
+		<Polish>Opowie&#156;ci o Bie&#179;udze</Polish>
 		<Russian>Áåëóõà (ñêàç)</Russian>
 	</TEXT>
 	<TEXT>
@@ -4059,7 +4059,7 @@
 			<Plural>1</Plural>
 		</French>
 		<Italian>Epica del merluzzo</Italian>
-		<Polish>Opowieści o Dorszu</Polish>
+		<Polish>Opowie&#156;ci o Dorszu</Polish>
 		<Russian>Òðåñêà (ñêàç)</Russian>
 	</TEXT>
 	<TEXT>
@@ -4071,7 +4071,7 @@
 			<Plural>1</Plural>
 		</French>
 		<Italian>Epica del granchio</Italian>
-		<Polish>Opowieści o Krabie</Polish>
+		<Polish>Opowie&#156;ci o Krabie</Polish>
 		<Russian>Êðàá (ñêàç)</Russian>
 	</TEXT>
 	<TEXT>
@@ -4083,7 +4083,7 @@
 			<Plural>1</Plural>
 		</French>
 		<Italian>Epica del delfino</Italian>
-		<Polish>Opowieści o Delfinie</Polish>
+		<Polish>Opowie&#156;ci o Delfinie</Polish>
 		<Russian>Äåëüôèí (ñêàç)</Russian>
 	</TEXT>
 	<TEXT>
@@ -4095,7 +4095,7 @@
 			<Plural>1</Plural>
 		</French>
 		<Italian>Epica del dugongo</Italian>
-		<Polish>Opowieści o Dugongu</Polish>
+		<Polish>Opowie&#156;ci o Dugongu</Polish>
 		<Russian>Äþãîíü (ñêàç)</Russian>
 	</TEXT>
 	<TEXT>
@@ -4107,7 +4107,7 @@
 			<Plural>1</Plural>
 		</French>
 		<Italian>Epica del calamaro gigante</Italian>
-		<Polish>Opowieści o Wielkiej Kałamarnicy</Polish>
+		<Polish>Opowie&#156;ci o Wielkiej Ka&#179;amarnicy</Polish>
 		<Russian>Ãèãàíñêèé êàëüìàð (ñêàç)</Russian>
 	</TEXT>
 	<TEXT>
@@ -4119,7 +4119,7 @@
 			<Plural>1</Plural>
 		</French>
 		<Italian>Epica del grande squalo bianco</Italian>
-		<Polish>Opowieści o Żarłaczu Białym</Polish>
+		<Polish>Opowie&#156;ci o &#175;ar&#179;aczu Bia&#179;ym</Polish>
 		<Russian>Áåëàÿ àêóëà (ñêàç)</Russian>
 	</TEXT>
 	<TEXT>
@@ -4131,7 +4131,7 @@
 			<Plural>1</Plural>
 		</French>
 		<Italian>Epica dello squalo martello</Italian>
-		<Polish>Opowieści o Rekini-Młocie</Polish>
+		<Polish>Opowie&#156;ci o Rekini-M&#179;ocie</Polish>
 		<Russian>Àêóëà-ìîëîò (ñêàç)</Russian>
 	</TEXT>
 	<TEXT>
@@ -4153,7 +4153,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</Spanish>
-		<Polish>Opowieści o Humpbaku</Polish>
+		<Polish>Opowie&#156;ci o Humpbaku</Polish>
 		<Russian>Ãîðáàòûé êèò (ñêàç)</Russian>
 	</TEXT>
 	<TEXT>
@@ -4165,7 +4165,7 @@
 			<Plural>1</Plural>
 		</French>
 		<Italian>Epica dello sgombro</Italian>
-		<Polish>Opowieści o Makreli</Polish>
+		<Polish>Opowie&#156;ci o Makreli</Polish>
 		<Russian>Ìàêðåëü (ñêàç)</Russian>
 	</TEXT>
 	<TEXT>
@@ -4177,7 +4177,7 @@
 			<Plural>1</Plural>
 		</French>
 		<Italian>Epica del marlin</Italian>
-		<Polish>Opowieści o Marlinie</Polish>
+		<Polish>Opowie&#156;ci o Marlinie</Polish>
 		<Russian>Ìàðëèí (ñêàç)</Russian>
 	</TEXT>
 	<TEXT>
@@ -4189,7 +4189,7 @@
 			<Plural>1</Plural>
 		</French>
 		<Italian>Epica della balenottera minore</Italian>
-		<Polish>Opowieści o Płetwalu</Polish>
+		<Polish>Opowie&#156;ci o P&#179;etwalu</Polish>
 		<Russian>Ïîëîñàòèê (ñêàç)</Russian>
 	</TEXT>
 	<TEXT>
@@ -4201,7 +4201,7 @@
 			<Plural>1</Plural>
 		</French>
 		<Italian>Epica del narvalo</Italian>
-		<Polish>Opowieści o Narwalu</Polish>
+		<Polish>Opowie&#156;ci o Narwalu</Polish>
 		<Russian>Íàðâàë (ñêàç)</Russian>
 	</TEXT>
 	<TEXT>
@@ -4213,7 +4213,7 @@
 			<Plural>1</Plural>
 		</French>
 		<Italian>Epica dell'orca</Italian>
-		<Polish>Opowieści o Orce</Polish>
+		<Polish>Opowie&#156;ci o Orce</Polish>
 		<Russian>Êàñàòêà (ñêàç)</Russian>
 	</TEXT>
 	<TEXT>
@@ -4225,7 +4225,7 @@
 			<Plural>1</Plural>
 		</French>
 		<Italian>Epica dell'aquila di mare</Italian>
-		<Polish>Opowieści o Płaszczce</Polish>
+		<Polish>Opowie&#156;ci o P&#179;aszczce</Polish>
 		<Russian>Îðëÿêîâûé ñêàò (ñêàç)</Russian>
 	</TEXT>
 	<TEXT>
@@ -4237,7 +4237,7 @@
 			<Plural>1</Plural>
 		</French>
 		<Italian>Epica della manta</Italian>
-		<Polish>Opowieści o Mancie</Polish>
+		<Polish>Opowie&#156;ci o Mancie</Polish>
 		<Russian>Ìàíòà (ñêàç)</Russian>
 	</TEXT>
 	<TEXT>
@@ -4249,7 +4249,7 @@
 			<Plural>1</Plural>
 		</French>
 		<Italian>Epica dello squalo del reef</Italian>
-		<Polish>Opowieści o Żarłaczu Karaibskim</Polish>
+		<Polish>Opowie&#156;ci o &#175;ar&#179;aczu Karaibskim</Polish>
 		<Russian>Ðèôîâàÿ àêóëà (ñêàç)</Russian>
 	</TEXT>
 	<TEXT>
@@ -4261,7 +4261,7 @@
 			<Plural>1</Plural>
 		</French>
 		<Italian>Epica del coccodrillo marino (grande)</Italian>
-		<Polish>Opowieści o Krokodylu Różańcowym (dużym)</Polish>
+		<Polish>Opowie&#156;ci o Krokodylu R&#243;&#191;a&#241;cowym (du&#191;ym)</Polish>
 		<Russian>Áîë. ìîð. êðîêîäèë (ñêàç)</Russian>
 	</TEXT>
 	<TEXT>
@@ -4273,7 +4273,7 @@
 			<Plural>1</Plural>
 		</French>
 		<Italian>Epica del coccodrillo marino (piccolo)</Italian>
-		<Polish>Opowieści o Krokodylu Różańcowym (małym)</Polish>
+		<Polish>Opowie&#156;ci o Krokodylu R&#243;&#191;a&#241;cowym (ma&#179;ym)</Polish>
 		<Russian>Ìàë. ìîð. êðîêîäèë (ñêàç)</Russian>
 	</TEXT>
 	<TEXT>
@@ -4281,7 +4281,7 @@
 		<English>Tales of Sea Lion</English>
 		<French>Histoires de Lions de mer</French>
 		<Italian>Epica del leone di mare (mare)</Italian>
-		<Polish>Opowieści o Lwie Morskim</Polish>
+		<Polish>Opowie&#156;ci o Lwie Morskim</Polish>
 		<Russian>Ìîðñêîé ëåâ (ñêàç)</Russian>
 	</TEXT>
 	<TEXT>
@@ -4293,7 +4293,7 @@
 			<Plural>1</Plural>
 		</French>
 		<Italian>Epica della tartaruga di mare</Italian>
-		<Polish>Opowieści o Morskim Żółwiu</Polish>
+		<Polish>Opowie&#156;ci o Morskim &#175;&#243;&#179;wiu</Polish>
 		<Russian>Ìîðñêàÿ ÷åðåïàõà (ñêàç)</Russian>
 	</TEXT>
 	<TEXT>
@@ -4305,7 +4305,7 @@
 			<Plural>1</Plural>
 		</French>
 		<Italian>Epica del tonno</Italian>
-		<Polish>Opowieści o Tuńczyku</Polish>
+		<Polish>Opowie&#156;ci o Tu&#241;czyku</Polish>
 		<Russian>Òóíåö (ñêàç)</Russian>
 	</TEXT>
 	<TEXT>
@@ -4317,7 +4317,7 @@
 			<Plural>1</Plural>
 		</French>
 		<Italian>Epica dello squalo balena</Italian>
-		<Polish>Opowieści o Rekinie Wielorybim</Polish>
+		<Polish>Opowie&#156;ci o Rekinie Wielorybim</Polish>
 		<Russian>Êèòîâàÿ àêóëà (ñêàç)</Russian>
 	</TEXT>
 	<TEXT>
@@ -4328,7 +4328,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
-		<Polish>Oswojony Mrówkojad</Polish>
+		<Polish>Oswojony Mr&#243;wkojad</Polish>
 		<Russian>Òðóáêîçóá (äîì.)</Russian>
 		<Italian>Oritteropo addomesticato</Italian>
 	</TEXT>
@@ -4336,7 +4336,7 @@
 		<Tag>TXT_KEY_UNIT_TAMED_AMPHIBIAN</Tag>
 		<English>Tamed Amphibian Colony</English>
 		<French>Colonie d'Amphibiens</French>
-		<Polish>Kolonia Płazów</Polish>
+		<Polish>Kolonia P&#179;az&#243;w</Polish>
 		<Russian>Êîëîíèÿ àìôèáèé</Russian>
 		<Italian>Anfibio addomesticato</Italian>
 	</TEXT>
@@ -4353,7 +4353,7 @@
 		<Tag>TXT_KEY_UNIT_TAMED_ASIANBEAR</Tag>
 		<English>Tamed Moon Bear</English>
 		<French>Ours Lune (dompté)</French>
-		<Polish>Ujarzmiony Niedźwiedź Himalajski</Polish>
+		<Polish>Ujarzmiony Nied&#159;wied&#159; Himalajski</Polish>
 		<Russian>Áåëîãðóäûé ìåäâåäü (äîì.)</Russian>
 		<Italian>Orso della luna addomesticato</Italian>
 	</TEXT>
@@ -4395,7 +4395,7 @@
 		<Tag>TXT_KEY_UNIT_TAMED_BLACKBEAR</Tag>
 		<English>Tamed Black Bear</English>
 		<French>Ours Noir (dompté)</French>
-		<Polish>Ujarzmiony Niedźwiedź Czarny</Polish>
+		<Polish>Ujarzmiony Nied&#159;wied&#159; Czarny</Polish>
 		<Russian>×åðíûé ìåäâåäü (äîì.)</Russian>
 		<Italian>Orso nero addomesticato</Italian>
 	</TEXT>
@@ -4409,7 +4409,7 @@
 			<Gender>Neuter</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
-		<Polish>Oswojony Nosorożec Czarny</Polish>
+		<Polish>Oswojony Nosoro&#191;ec Czarny</Polish>
 		<Russian>Íîñîðîã (äîì.)</Russian>
 	</TEXT>
 	<TEXT>
@@ -4450,7 +4450,7 @@
 		<Tag>TXT_KEY_UNIT_TAMED_BROWN_BEAR</Tag>
 		<English>Tamed Brown Bear</English>
 		<French>Ours brun (dompté)</French>
-		<Polish>Ujarzmiony Niedźwiedź Brunatny</Polish>
+		<Polish>Ujarzmiony Nied&#159;wied&#159; Brunatny</Polish>
 		<Russian>Áóðûé ìåäâåäü (äîì.)</Russian>
 		<Italian>Orso bruno addomesticato</Italian>
 	</TEXT>
@@ -4467,7 +4467,7 @@
 			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
-		<Polish>Oswojony Żubr</Polish>
+		<Polish>Oswojony &#175;ubr</Polish>
 		<Russian>Áóéâîë</Russian>
 		<Italian>Bufalo africano addomesticato</Italian>
 	</TEXT>
@@ -4484,7 +4484,7 @@
 			<Gender>Neuter</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
-		<Polish>Oswojony Wielbłąd</Polish>
+		<Polish>Oswojony Wielb&#179;&#185;d</Polish>
 		<Russian>Âåðáëþä (äîì.)</Russian>
 		<Italian>Cammello addomesticato</Italian>
 	</TEXT>
@@ -4504,7 +4504,7 @@
 		<Tag>TXT_KEY_UNIT_TAMED_CAVE_BEAR</Tag>
 		<English>Tamed Cave Bear</English>
 		<French>Ours des cavernes (dompté)</French>
-		<Polish>Ujarzmiony Niedźwiedź Jaskiniowy</Polish>
+		<Polish>Ujarzmiony Nied&#159;wied&#159; Jaskiniowy</Polish>
 		<Russian>Ïåùåðíûé ìåäâåäü (äîì.)</Russian>
 		<Italian>Orso delle caverne addomesticato</Italian>
 	</TEXT>
@@ -4521,7 +4521,7 @@
 			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
-		<Polish>Oswojony Osioł</Polish>
+		<Polish>Oswojony Osio&#179;</Polish>
 		<Russian>Îñåë (äîì.)</Russian>
 		<Italian>Asino addomesticato</Italian>
 	</TEXT>
@@ -4540,7 +4540,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
-		<Polish>Oswojony Słoń</Polish>
+		<Polish>Oswojony S&#179;o&#241;</Polish>
 		<Russian>Ñëîí (äîì.)</Russian>
 		<Italian>Elefante addomesticato</Italian>
 	</TEXT>
@@ -4580,7 +4580,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
-		<Polish>Oswojony Koń</Polish>
+		<Polish>Oswojony Ko&#241;</Polish>
 		<Russian>Ëîøàäü (äîì.)</Russian>
 		<Italian>Cavallo addomesticato</Italian>
 	</TEXT>
@@ -4600,7 +4600,7 @@
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
 		<French>Rhinocéros Indien dompté</French>
-		<Polish>Oswojony Nosorożec Indyjski</Polish>
+		<Polish>Oswojony Nosoro&#191;ec Indyjski</Polish>
 		<Russian>Èíäèéñêèé íîñîðîã (äîì.)</Russian>
 		<Italian>Rinoceronte indiano addomesticato</Italian>
 	</TEXT>
@@ -4613,7 +4613,7 @@
 			<Gender>Neuter</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
-		<Polish>Oswojony Nosorożec Jawajski</Polish>
+		<Polish>Oswojony Nosoro&#191;ec Jawajski</Polish>
 		<Russian>ßâàíñêèé íîñîðîã (äîì.)</Russian>
 		<Italian>Rinoceronte di Giava addomesticato</Italian>
 	</TEXT>
@@ -4723,7 +4723,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
-		<Polish>Oswojony Wół Piżmowy</Polish>
+		<Polish>Oswojony W&#243;&#179; Pi&#191;mowy</Polish>
 		<Russian>Îâöåáûê (äîì.)</Russian>
 		<Italian>Bue muschiato addomesticato</Italian>
 	</TEXT>
@@ -4761,7 +4761,7 @@
 		<Tag>TXT_KEY_UNIT_TAMED_POLARBEAR</Tag>
 		<English>Tamed Polar Bear</English>
 		<French>Ours polaire (dompté)</French>
-		<Polish>Ujarzmiony Niedźwiedź Polarny</Polish>
+		<Polish>Ujarzmiony Nied&#159;wied&#159; Polarny</Polish>
 		<Russian>Áåëûé ìåäâåäü (äîì.)</Russian>
 		<Italian>Orso polare addomesticato</Italian>
 	</TEXT>
@@ -4797,7 +4797,7 @@
 		<Tag>TXT_KEY_UNIT_TAMED_SPECTACLEDBEAR</Tag>
 		<English>Tamed Spectacled Bear</English>
 		<French>Ours à lunettes (dompté)</French>
-		<Polish>Ujarzmiony Niedźwiedź Andyjski</Polish>
+		<Polish>Ujarzmiony Nied&#159;wied&#159; Andyjski</Polish>
 		<Russian>Î÷êîâûé ìåäâåäü (äîì.)</Russian>
 		<Italian>Orso dagli occhiali addomesticato</Italian>
 	</TEXT>
@@ -4805,7 +4805,7 @@
 		<Tag>TXT_KEY_UNIT_TAMED_SUNBEAR</Tag>
 		<English>Tamed Sun Bear</English>
 		<French>Ours malais (dompté)</French>
-		<Polish>Ujarzmiony Niedźwiedź Malajski</Polish>
+		<Polish>Ujarzmiony Nied&#159;wied&#159; Malajski</Polish>
 		<Russian>Ìàëàéñêèé ìåäâåäü (äîì.)</Russian>
 		<Italian>Orso malese addomesticato</Italian>
 	</TEXT>
@@ -4818,7 +4818,7 @@
 			<Gender>Neuter</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
-		<Polish>Oswojony Nosorożec Biały</Polish>
+		<Polish>Oswojony Nosoro&#191;ec Bia&#179;y</Polish>
 		<Russian>Áåëûé íîñîðîã (äîì.)</Russian>
 		<Italian>Rinoceronte bianco addomesticato</Italian>
 	</TEXT>
@@ -4877,7 +4877,7 @@
 		<Tag>TXT_KEY_UNIT_TAPIR_PEDIA</Tag>
 		<English>A Tapir is a large browsing mammal, similar in shape to a pig, with a short, prehensile snout. Tapirs inhabit jungle and forest regions of South America, Central America, and Southeast Asia. There are four species of Tapirs: the Brazilian Tapir, the Malayan Tapir, Baird's Tapir and the Mountain Tapir. All four species of tapir are classified as endangered or vulnerable. Their closest relatives are the other odd-toed ungulates, including horses and rhinoceroses.[PARAGRAPH:2]Attacks on humans: Tapirs are generally shy, but when they are scared they can defend themselves with their very powerful jaws. In 1998, a zookeeper in Oklahoma City was mauled and had an arm severed after opening the door to a female tapir's enclosure to push food inside. (The tapir's 2-month-old baby also occupied the cage at the time.) In 2006, Carlos Manuel Rodriguez Echandi (who was then the Costa Rican Environmental Minister) became lost in the Corcovado National Park and was found by a search party with a "nasty bite" from a wild tapir. However, such examples are rare; for the most part, tapirs are likely to avoid confrontation in favour of running from predators, hiding, or, if possible, submerging themselves in nearby water until a threat is gone.</English>
 		<German>Der [COLOR_UNIT_TEXT]Tapir[COLOR_REVERT] (Tapirus) gehört zu den Unpaarhufern. Die Tiere mit dem charakteristischen Rüssel existieren schon seit dem Miozän. Tapire leben in Mittel- und Südamerika sowie in Südostasien. Sie können bis zu 250 cm lang werden, besitzen einen Stummelschwanz und große Eckzähne. Das höchste Gewicht bringt der Schabrackentapir auf die Waage: Er kann bis zu 320 kg schwer werden. Der Rüssel hilft bei der Nahrungssuche und besitzt eine Greiffunktion. Tapire ernähren sich von Pflanzen und bevorzugen weiche Nahrung wie Blätter, Früchte oder auch Algen. Dabei nehmen sie teilweise auch Gifte auf, die sie an Salz- oder Minerallecken neutralisieren.[NEWLINE]Tapire sind Einzelgänger. Männchen und Weibchen treffen nur zur Paarungszeit aufeinander. Ihre Reviere markieren sie mit Kot und Urin. Tapire sind nachtaktiv und verbringen den Tag im dichten Unterholz. Auf ihrer nächtlichen Nahrungssuche halten sie sich gern an Gewässern auf und baden im Schlamm. Sie sind gute Schwimmer und können bei Gefahr ins Wasser flüchten. Die Eckzähne setzen sie manchmal als Waffen ein. Ihre Feinde sind Großkatzen, Bären und Krokodile.[NEWLINE]Auch der Mensch macht Jagd auf Tapire, um Fleisch und Haut zu verwerten. Eine noch größere Gefahr ist allerdings die Zerstörung der Lebensräume, meist Brandrodung der tropischen Wälder. In Südamerika werden Tapire teilweise als Haustiere gehalten.</German>
-		<Polish>Tapiry (Tapiridae) rodzina ssaków z rzędu nieparzystokopytnych, posiadających krótką trąbę, która powstała z przekształconego nosa i wargi górnej, oraz bardzo krótki ogon. Na kończynie tylnej posiadają trzy, a na przedniej cztery palce, każdy zakończony kopytem. Ciało okryte jest aksamitną sierścią. Tapiry żyją w podmokłych, bagnistych lasach tropikalnych. Są dobrymi pływakami. Mimo pewnego podobieństwa do świni tapir należy do tej samej grupy ssaków, co nosorożec i koń.[PARAGRAPH:2]Tapiry są aktywne głównie nocą, lecz na niektórych obszarach można je też spotkać za dnia. Poruszają się po stałych, wydeptanych ścieżkach, które mogą przetrwać kilkadziesiąt lat. Prowadzą samotniczy tryb życia. Areały osobnicze mogą się ze sobą wzajemnie pokrywać. Tapiry są dobrymi pływakami i nurkami, przed niebezpieczeństwem chronią się głównie w wodzie. Głównym zmysłem jest wrażliwy słuch. Żywią się roślinnością przybrzeżną, dzikim ryżem i innymi podobnymi roślinami. Zjadają też owoce i rośliny uprawne. Żerują głównie nad brzegami rzek. Nos służy jako organ chwytny, rośliny zrywa ostrymi siekaczami i rozciera zębami bocznymi o szerokich koronach. Ze względu na drapieżniki większość dnia spędza w ukryciu. Mimo sporej wagi dobrze wspina się na strome brzegi. Gruba skóra chroni tapira przed skaleczeniami podczas przedzierania się przez gęstą roślinność. Są płochliwe i zachowują się bardzo cicho. Podobnie jak spokrewnione z nimi konie jedzą dużo pokarmu, lecz nie trawią go całkowicie. W odchodach zostawianych przy brzegach rzek stwierdzono niestrawione nasiona. Występują na odludnych terenach lub w dobrze chronionych rezerwatach.</Polish>
+		<Polish>Tapiry (Tapiridae) rodzina ssak&#243;w z rz&#234;du nieparzystokopytnych, posiadaj&#185;cych kr&#243;tk&#185; tr&#185;b&#234;, kt&#243;ra powsta&#179;a z przekszta&#179;conego nosa i wargi g&#243;rnej, oraz bardzo kr&#243;tki ogon. Na ko&#241;czynie tylnej posiadaj&#185; trzy, a na przedniej cztery palce, ka&#191;dy zako&#241;czony kopytem. Cia&#179;o okryte jest aksamitn&#185; sier&#156;ci&#185;. Tapiry &#191;yj&#185; w podmok&#179;ych, bagnistych lasach tropikalnych. S&#185; dobrymi p&#179;ywakami. Mimo pewnego podobie&#241;stwa do &#156;wini tapir nale&#191;y do tej samej grupy ssak&#243;w, co nosoro&#191;ec i ko&#241;.[PARAGRAPH:2]Tapiry s&#185; aktywne g&#179;&#243;wnie noc&#185;, lecz na niekt&#243;rych obszarach mo&#191;na je te&#191; spotka&#230; za dnia. Poruszaj&#185; si&#234; po sta&#179;ych, wydeptanych &#156;cie&#191;kach, kt&#243;re mog&#185; przetrwa&#230; kilkadziesi&#185;t lat. Prowadz&#185; samotniczy tryb &#191;ycia. Area&#179;y osobnicze mog&#185; si&#234; ze sob&#185; wzajemnie pokrywa&#230;. Tapiry s&#185; dobrymi p&#179;ywakami i nurkami, przed niebezpiecze&#241;stwem chroni&#185; si&#234; g&#179;&#243;wnie w wodzie. G&#179;&#243;wnym zmys&#179;em jest wra&#191;liwy s&#179;uch. &#175;ywi&#185; si&#234; ro&#156;linno&#156;ci&#185; przybrze&#191;n&#185;, dzikim ry&#191;em i innymi podobnymi ro&#156;linami. Zjadaj&#185; te&#191; owoce i ro&#156;liny uprawne. &#175;eruj&#185; g&#179;&#243;wnie nad brzegami rzek. Nos s&#179;u&#191;y jako organ chwytny, ro&#156;liny zrywa ostrymi siekaczami i rozciera z&#234;bami bocznymi o szerokich koronach. Ze wzgl&#234;du na drapie&#191;niki wi&#234;kszo&#156;&#230; dnia sp&#234;dza w ukryciu. Mimo sporej wagi dobrze wspina si&#234; na strome brzegi. Gruba sk&#243;ra chroni tapira przed skaleczeniami podczas przedzierania si&#234; przez g&#234;st&#185; ro&#156;linno&#156;&#230;. S&#185; p&#179;ochliwe i zachowuj&#185; si&#234; bardzo cicho. Podobnie jak spokrewnione z nimi konie jedz&#185; du&#191;o pokarmu, lecz nie trawi&#185; go ca&#179;kowicie. W odchodach zostawianych przy brzegach rzek stwierdzono niestrawione nasiona. Wyst&#234;puj&#185; na odludnych terenach lub w dobrze chronionych rezerwatach.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_TARANTULA_PEDIA</Tag>
@@ -4952,7 +4952,7 @@
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</Spanish>
-		<Polish>Żmija</Polish>
+		<Polish>&#175;mija</Polish>
 		<Russian>Ãàäþêà</Russian>
 	</TEXT>
 	<TEXT>
@@ -4976,7 +4976,7 @@
 		<Tag>TXT_KEY_UNIT_VIPER_PEDIA</Tag>
 		<English>The Viperidae are a family of venomous snakes found all over the world, except in Antarctica, Australia, Ireland, Madagascar, Hawaii, various other isolated islands, and above the Arctic Circle. All have relatively long, hinged fangs that permit deep penetration and injection of venom. Four subfamilies are currently recognized. They are commonly known as vipers or viperids.[PARAGRAPH:2]All viperids have a pair of relatively long solenoglyphous (hollow) fangs that are used to inject venom from glands located towards the rear of the upper jaws. Each of the two fangs is at the front of the mouth on a short maxillary bone that can rotate back and forth. When not in use, the fangs fold back against the roof of the mouth and are enclosed in a membranous sheath. The left and right fangs can be rotated together or independently. During a strike, the mouth can open nearly 180° and the maxilla rotates forward, erecting the fangs as late as possible so as the fangs do not become damaged. The jaws close on impact and powerful muscles that surround the venom glands contract to inject the venom as the fangs penetrate. This action is very fast; in defensive strikes it can be more a stab than a bite. Viperids use this mechanism primarily for immobilization and digestion of prey. Secondarily it is used for self-defense, though in most cases with non-prey items such as humans they are more likely to give a dry bite (not inject any venom).[PARAGRAPH:2]Almost all vipers have keeled scales, a stocky build with a short tail, and, due to the location of the venom glands, a triangular-shaped head distinct from the neck. The great majority have vertically elliptical, or slit-shaped, pupils that can open wide to cover most of the eye or close almost completely, which helps them to see in a wide range of light levels. Typically, vipers are nocturnal and ambush their prey.[PARAGRAPH:2]Compared to many other snakes, vipers often appear rather sluggish. Most are ovoviviparous, giving birth to live young, but a few lay eggs; the word "viper" is derived from Latin vivo = "I live" and pario = "I give birth".</English>
 		<German>Mit Ottern oder [COLOR_UNIT_TEXT]Vipern[COLOR_REVERT] bezeichnet man eine über Amerika, Afrika und Eurasien verbreitete Familie von Schlangen, die allesamt giftig sind. Der in Deutschland häufigste Vertreter ist die Kreuzotter. Ottern erreichen Längen von 30 cm bis über 3 m. Sie haben einen gedrungenen, massigen Körper une einen auffälligen, dreieckigen Kopf, der sich deutlich vom Hals absetzt. Fast alle Vipern haben senkrecht geschlitzte Pupillen, die auf eine dämmerungs- und nachtaktive Lebensweise hindeuten. Sie sind meist unauffällig in Erd- und Olivtönen gefärbt.[NEWLINE]Ottern verfügen über einen komplexen Giftapparat mit beweglichen, röhrenartigen Giftzähnen. Solange das Maul geschlossen ist, liegen sie eingeklappt in einer Bindegewebsfalte im Gaumendach. Beim Aufreißen des Mauls werden sie durch die Drehung zweier Knochen aufgerichtet, wodurch ein tiefes Eindringen in das Beutetier ermöglicht wird. Gift wird aber nicht immer injiziert. Die Schlangen können auch einen sogenannten trockenen Biss anbringen, wenn sie Angreifer abschrecken wollen, die nicht als Beute geeignet sind. Die meisten Ottern gebären ihre Jungtiere lebend (ovovivipar), es gibt aber auch eierlegende Arten.[NEWLINE]Bei Viperngiften handelt es sich hauptsächlich um Blutgifte, die die Blutzellen und das umgebende Gewebe schädigen oder zerstören können und sehr schmerzhaft sind. Das Gift mancher Ottern greift auch das Nervensystem des Opfers an und kann Lähmungen hervorrufen.</German>
-		<Polish>Żmija właściwa (Viperinae) podrodzina w obrębie rodziny żmijowatych, w podrzędzie węży. Do podrodziny tej należy 12 rodzajów i około 60 gatunków stosunkowo niewielkich węży, o długości od kilkunastu do 200 centymetrów. W podrodzinie tej przeważa jajożyworodność, choć występują też gatunki jajorodne. Żmije zamieszkują różne środowiska i rejony geograficzne, również subarktyczny.</Polish>
+		<Polish>&#175;mija w&#179;a&#156;ciwa (Viperinae) podrodzina w obr&#234;bie rodziny &#191;mijowatych, w podrz&#234;dzie w&#234;&#191;y. Do podrodziny tej nale&#191;y 12 rodzaj&#243;w i oko&#179;o 60 gatunk&#243;w stosunkowo niewielkich w&#234;&#191;y, o d&#179;ugo&#156;ci od kilkunastu do 200 centymetr&#243;w. W podrodzinie tej przewa&#191;a jajo&#191;yworodno&#156;&#230;, cho&#230; wyst&#234;puj&#185; te&#191; gatunki jajorodne. &#175;mije zamieszkuj&#185; r&#243;&#191;ne &#156;rodowiska i rejony geograficzne, r&#243;wnie&#191; subarktyczny.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_WALLABY</Tag>
@@ -5004,7 +5004,7 @@
 		<Tag>TXT_KEY_UNIT_WALLABY_PEDIA</Tag>
 		<English>A wallaby is any of about thirty species of macropod (Family Macropodidae). It is an informal designation generally used for any macropod that is smaller than a kangaroo or wallaroo that has not been given some other name.[PARAGRAPH:2]Very small forest-dwelling wallabies are known as "pademelons" (genus Thylogale) and "dorcopsises" (genera Dorcopsis and Dorcopsulus). The name "wallaby" comes from the Eora, who were the first human inhabitants of the Sydney area. Young wallabies are known as "joeys," like many other marsupials. Adult male wallabies are referred to as "bucks," "boomers," or "jacks." An adult female wallaby is known as a "doe," "flyer," or "jill." A group or congregation of wallabies is called a "court," "mob," or "troup." Although members of most wallaby species are small, some can grow up to six feet in length (from head to tail).[PARAGRAPH:2]Wallabies are herbivores whose diet consists of a wide range of grasses, vegetables, leaves, and other foliage. Due to recent urbanization, many wallabies now feed in rural and urban areas. Wallabies cover vast distances for food and water, which is often scarce in their environment. Mobs of wallabies often congregate around the same water hole during the dry season.</English>
 		<German>Als [COLOR_UNIT_TEXT]Wallaby[COLOR_REVERT] bezeichnet man eine kleine Kängurugattung mit acht Arten. Ein erwachsenes Wallaby misst je nach Art maximal 70 bis 80 cm, der Schwanz ist mit 60 bis 70 cm fast genauso lang. Das Maximalgewicht beträgt 20 kg, die Weibchen sind deutlich leichter. Das Fell ist grau oder braun und bei einigen Arten mit Streifen oder anderen Mustern versehen. Wie bei allen Kängurus sind die Hinterbeine länger und kräftiger ausgebildet, der Schwanz dient als Stütze.[NEWLINE]Verbreitet sind Wallabys vor allem in den nördlichen und östlichen Küstenregionen Australiens, das Flinkwallaby zusätzlich in Neuguinea. Einzelne Wallaby-Populationen gibt es nahe der französischen Stadt Rambouillet sowie im Norden der Isle of Man. Es handelt sich dabei um Ausreißer von nahegelegenen Tierparks. Sie bevorzugen eher bewaldete Gebiete und sind in der Regel dämmerungs- oder nachtaktiv. Als Pflanzenfresser ernähren sie sich u.a. von Knospen, Rinde, Gräsern und Blättern. In Trockenperioden kauen sie saftige Wurzeln gegen den Durst. Wie alle Kängurus bringen auch Wallabys nicht vollständig entwickelte Junge zur Welt, die anschließend noch mehr als ein halbes Jahr im Beutel der Mutter verbringen.[NEWLINE]Der Lebensraum der Wallabys wird durch die Landwirtschaft zunehmend eingeschränkt. Auch Bejagung und eingeschleppte Raubtiere wie der Rotfuchs dezimieren die Bestände, wodurch das Östliche Irmawallaby bereits ausgestorben ist, zwei weitere Arten sind sehr selten. Beobachtungen zufolge treten Wallabys Kornkreise in Opiumfelder. Das ist die Folge des Mohnverzehrs, woraufhin die Tiere im Rausch bis zur Erschöpfung im Kreis laufen. Wallabys sind das Wappentier der Australischen Rugby-Union-Nationalmannschaft.</German>
-		<Polish>Walabia (Protemnodon), ssaki z rodzaju zaliczanego do rodziny kangurowatych, zamieszkujące zarośla, busz oraz zadrzewione stepy Australii, Tasmanii oraz niektórych przyległych wysp.[PARAGRAPH:2]Osiągają 60-90 cm długości, są przeważnie jaśniej ubarwione niż duże gatunki kangurowatych. Żyją parami. Niektóre gatunki, z uwagi na liczne występowanie, są tępione jako szkodniki upraw. Żywią się głównie trawą, ziołami i liśćmi. Aktywne głównie o wschodzie i o zachodzie słońca, podobnie jak większość kangurowatych.[PARAGRAPH:2]Do walabii zaliczanych jest 6 gatunków, m.in. walabia dama (Protemnodon eugenii), występująca w południowej części Australii, walabia pasmowa (Protemnodon dorsalis), zamieszkująca wschodnie rejony Australii, oraz walabia Bennetta (Protemnodon rufogrisea), występująca w południowo-wschodniej Australii oraz na Tasmanii, w niektórych rejonach tępiona jako szkodnik, stanowiąca także obiekt polowań dla cennego futra.</Polish>
+		<Polish>Walabia (Protemnodon), ssaki z rodzaju zaliczanego do rodziny kangurowatych, zamieszkuj&#185;ce zaro&#156;la, busz oraz zadrzewione stepy Australii, Tasmanii oraz niekt&#243;rych przyleg&#179;ych wysp.[PARAGRAPH:2]Osi&#185;gaj&#185; 60-90 cm d&#179;ugo&#156;ci, s&#185; przewa&#191;nie ja&#156;niej ubarwione ni&#191; du&#191;e gatunki kangurowatych. &#175;yj&#185; parami. Niekt&#243;re gatunki, z uwagi na liczne wyst&#234;powanie, s&#185; t&#234;pione jako szkodniki upraw. &#175;ywi&#185; si&#234; g&#179;&#243;wnie traw&#185;, zio&#179;ami i li&#156;&#230;mi. Aktywne g&#179;&#243;wnie o wschodzie i o zachodzie s&#179;o&#241;ca, podobnie jak wi&#234;kszo&#156;&#230; kangurowatych.[PARAGRAPH:2]Do walabii zaliczanych jest 6 gatunk&#243;w, m.in. walabia dama (Protemnodon eugenii), wyst&#234;puj&#185;ca w po&#179;udniowej cz&#234;&#156;ci Australii, walabia pasmowa (Protemnodon dorsalis), zamieszkuj&#185;ca wschodnie rejony Australii, oraz walabia Bennetta (Protemnodon rufogrisea), wyst&#234;puj&#185;ca w po&#179;udniowo-wschodniej Australii oraz na Tasmanii, w niekt&#243;rych rejonach t&#234;piona jako szkodnik, stanowi&#185;ca tak&#191;e obiekt polowa&#241; dla cennego futra.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_WALLAROO</Tag>
@@ -5024,14 +5024,14 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</Spanish>
-		<Polish>Kangur Górski</Polish>
+		<Polish>Kangur G&#243;rski</Polish>
 		<Russian>Ãîðíûé êåíãóðó</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_WALLAROO_PEDIA</Tag>
 		<English>A Wallaroo is any of three closely related species of moderately large macropod, intermediate in size between the kangaroos and the wallabies. The name "wallaroo" is a portmanteau of wallaby and kangaroo. The term is not generally used by Australians. In general, a large, slim-bodied macropod of the open plains is called a "kangaroo"; a small to medium-sized one, particularly if it is relatively thick-set, is a "wallaby": most wallaroos are only a little smaller than a kangaroo, fairly thickset, and are found in open country. All share a particular habit of stance: wrists raised, elbows tucked close into the body, and shoulders thrown back, and all have a large, black-skinned rhinarium.[PARAGRAPH:2]The best-known species is Macropus robustus, which is known as the Eastern Wallaroo, Common Wallaroo or just Wallaroo on the slopes of the Great Dividing Range (which runs for more than 3,000 km around the eastern and south-eastern coast of Australia), and as the Euro in most of the rest of the continent. There are four subspecies: the Eastern Wallaroo and the Euro, which are both widespread, and two of more restricted range, one from Barrow Island, the other from the Kimberley.[PARAGRAPH:2]The Black Wallaroo (Macropus bernardus) occupies an area of steep, rocky ground in Arnhem Land. At around 60 to 70 cm in length (excluding tail) it is the smallest wallaroo and the most heavily built. Males weigh 19 to 22 kg, females about 13 kg. Because it is very wary and is found only in a small area of remote and very rugged country, it is remarkably little known.[PARAGRAPH:2]The Antilopine Wallaroo (Macropus antilopinus) is the exception among wallaroos. It is, essentially, the far-northern equivalent of the Eastern and Western Grey Kangaroos. Like them, it is a creature of the grassy plains and woodlands, and gregarious, where the other wallaroos are solitary. Because of this difference, it is sometimes called the Antilopine Kangaroo.</English>
 		<German>Das [COLOR_UNIT_TEXT]Bergkänguru[COLOR_REVERT] (Osphranter robustus) ist ein in Australien beheimatetes Beuteltier. Auch der englische Name Wallaroo ist geläufig. Bergkängurus sind etwas kleiner und schwerfälliger gebaut als die Riesenkängurus. Das Fell ist meist dunkler und an der Oberseite dunkelgrau bis schwarz. Wie alle Kängurus haben sie gut ausgebildete Hinterbeine, kurze Vordergliedmaßen und einen kräftigen Schwanz. Die Männchen sind mit einer maximalen Kopf-Rumpf-Länge von 140 cm und bis zu 36 kg Gewicht deutlich größer und schwerer als die Weibchen.[NEWLINE]Die robusten Tiere besiedeln trockene und gebirgige Regionen und können auch mit spärlichem Pflanzenwuchs überleben. Sie begnügen sich mit Gestrüpp, Gräsern und Kräutern, was in der Regel ihren Wasserbedarf deckt. Da ihr Urin hochkonzentriert ist, verlieren sie wenig Flüssigkeit und können zwei bis drei Monate ohne Trinken auskommen. Die Einzelgänger sind eher nachtaktiv und verbringen den Tag in Felshöhlen oder -spalten. Manchmal graben sie Baue, in denen sie aufrecht ruhen. Bei den Bergkängurus erfolgt die für viele Kängurus übliche verzögerte Geburt, wobei sich das Weibchen gleich nach der Geburt des Jungtiers erneut paart. Der Embryo wächst aber erst heran, wenn das Jungtier entwöhnt ist.[NEWLINE]Durch den abgeschiedenen Lebensraum sind Bergkängurus im Gegensatz zu anderen Känguruarten kaum durch menschliche Einflüsse bedroht. Lediglich Schafe und andere eingeschleppte Tiere sind in geringem Maße Nahrungskonkurrenten.</German>
-		<Polish>Kangur górski (Macropus robustus) ssak z rodziny kangurowatych (Macropodidae). Długość ciała: 55-90 cm, masa 6-25 kg (samice), 7-46 kg (samce). Wierzch ciała ciemnoszary, spód jaśniejszy. Sierść kosmata.[PARAGRAPH:2]Występuje w prawie całej Australii. Istnieją dwa podgatunki - wallaroo (M. r. robustus) zamieszkujący wschodnie i zachodnie zbocza Gór Wododziałowych, o ubarwieniu ciemnoszarym, oraz euro (M. r. erubescens) występujący na zachód od tego regionu na całym kontynencie, o krótkim czerwonawym futrze.[PARAGRAPH:2]Wyruszają na żer wieczorem, kiedy temperatura powietrza jest niższa. Żyją pojedynczo. Kangury górskie doskonale obywają się bez wody, nawet podczas dużych upałów. Im mniej piją, tym lepiej mogą wykorzystać ubogi w azot pokarm roślinny. Z drugiej strony potrafią jednak kopać głębokie doły w poszukiwaniu wody, które wykorzystywane są przez inne gatunki zwierząt.</Polish>
+		<Polish>Kangur g&#243;rski (Macropus robustus) ssak z rodziny kangurowatych (Macropodidae). D&#179;ugo&#156;&#230; cia&#179;a: 55-90 cm, masa 6-25 kg (samice), 7-46 kg (samce). Wierzch cia&#179;a ciemnoszary, sp&#243;d ja&#156;niejszy. Sier&#156;&#230; kosmata.[PARAGRAPH:2]Wyst&#234;puje w prawie ca&#179;ej Australii. Istniej&#185; dwa podgatunki - wallaroo (M. r. robustus) zamieszkuj&#185;cy wschodnie i zachodnie zbocza G&#243;r Wododzia&#179;owych, o ubarwieniu ciemnoszarym, oraz euro (M. r. erubescens) wyst&#234;puj&#185;cy na zach&#243;d od tego regionu na ca&#179;ym kontynencie, o kr&#243;tkim czerwonawym futrze.[PARAGRAPH:2]Wyruszaj&#185; na &#191;er wieczorem, kiedy temperatura powietrza jest ni&#191;sza. &#175;yj&#185; pojedynczo. Kangury g&#243;rskie doskonale obywaj&#185; si&#234; bez wody, nawet podczas du&#191;ych upa&#179;&#243;w. Im mniej pij&#185;, tym lepiej mog&#185; wykorzysta&#230; ubogi w azot pokarm ro&#156;linny. Z drugiej strony potrafi&#185; jednak kopa&#230; g&#179;&#234;bokie do&#179;y w poszukiwaniu wody, kt&#243;re wykorzystywane s&#185; przez inne gatunki zwierz&#185;t.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_WALRUS</Tag>
@@ -5059,7 +5059,7 @@
 		<Tag>TXT_KEY_UNIT_WALRUS_PEDIA</Tag>
 		<English>The walrus (Odobenus rosmarus) is a large flippered marine mammal with a discontinuous circumpolar distribution in the Arctic Ocean and sub-Arctic seas of the Northern Hemisphere. The walrus is the only living species in the Odobenidae family and Odobenus genus. It is subdivided into three subspecies: the Atlantic walrus (O. rosmarus rosmarus) which lives in the Atlantic Ocean, the Pacific walrus (O. rosmarus divergens) which lives in the Pacific Ocean, and O. rosmarus laptevi, which lives in the Laptev Sea.[PARAGRAPH:2]The walrus is easily recognized by its prominent tusks, whiskers and great bulk. Adult Pacific males can weigh more than 1,700 kilograms (3,700 lb) and, among pinnipeds, are exceeded in size only by the two species of elephant seals. It resides primarily in shallow oceanic shelf habitat, spending a significant proportion of its life on sea ice in pursuit of its preferred diet of benthic bivalve mollusks. It is a relatively long-lived, social animal and is considered a keystone species in Arctic marine ecosystems.[PARAGRAPH:2]The walrus has played a prominent role in the cultures of many indigenous Arctic peoples, who have hunted the walrus for its meat, fat, skin, tusks and bone. In the 19th and early 20th centuries, the walrus was the object of heavy commercial exploitation for blubber and ivory and its numbers declined rapidly. Its global population has since rebounded, though the Atlantic and Laptev populations remain fragmented and at historically depressed levels.</English>
 		<German>Beim [COLOR_UNIT_TEXT]Walross[COLOR_REVERT] (Odobenus rosmarus) handelt es sich um eine große Robbenart, die in den kalten Meeren der nördlichen Hemisphäre heimisch ist. Walrossbullen können bis zu 3,5 m lang werden und ein Gewicht von über 1200 kg erreichen. Weibchen sind dagegen deutlich kleiner und leichter.[NEWLINE]Walrosse verfügen über markante Stoßzähne, die auch Hauer genannt werden. Sie sind bei beiden Geschlechtern vorhanden, bei Männchen aber in der Regel länger und voluminöser. Es wurden schon Stoßzähne von 1-m-Rekordlänge dokumentiert. Walrosshauer sind wahre Multifunktionswerkzeuge. Die Tiere verteidigen sich damit gegen Fressfeinde, brechen damit Atemlöcher ins Eis, nutzen sie zur Fortbewegung, zur Abstützung des Kopfes oder ziehen sich damit an Land. Außerdem sind die Stoßzähne auch Statussymbole, mit denen dominante Tiere beiderlei Geschlechts die Rangordnung untermauern. Walrosse leben in großen Herden an den Küsten von Inseln oder am Packeisrand, die meist nach Geschlechtern getrennt sind. Außergewöhnlich ist der zweijährige Fortpflanzungsrhythmus, der dadurch bedingt ist, dass nach der Paarung im Januar/Februar das Ei zunächst 5 Monate ruht, bis die eigentliche elfmonatige Tragezeit beginnt.</German>
-		<Polish>Mors (koń morski, łac. Odobenus rosmarus) gatunek dużego drapieżnego ssaka morskiego, jedyny współcześnie żyjący przedstawiciel dawniej licznej w gatunki rodziny morsowatych (Odobenidae) i jedyny gatunek z rodzaju Odobenus. Mors pełnił ważną rolę w życiu mieszkańców Arktyki, którzy polowali na niego dla mięsa, skór, tłuszczu, ciosów i kości.[PARAGRAPH:2]Morsy występują na wodach przybrzeżnych Arktyki, wzdłuż wybrzeży Ameryki Północnej i Rosji. Mors najbardziej lubi płytkie wody w pobliżu pływających pól lodowych, więc można go również zobaczyć jak pływa na krach lodowych.[PARAGRAPH:2]TMors ma ciężkie ciało osiągające długość od 2,5 do 4,2 m, osłonięte grubą na 3,5 cm niemal nagą (słabo owłosioną), pofałdowaną skórą. Masa ciała mieści się w przedziale od 400 do 1700 kg; samce są większe od samic. Morsy z Oceanu Spokojnego są większe od występujących w Atlantyku. Barwa skóry od jasnobrązowej do cynamonowobrązowej, podczas wygrzewania się na słońcu kolor zmienia się na różowy wskutek rozszerzania się naczyń krwionośnych. Na brzuchu i piersiach skóra jest ciemniejsza. Morsy żyjące w Oceanie Spokojnym mają więcej wąsów czuciowych od tych z Atlantyku. Wszystkie kończyny morsa są przekształcone w płetwy. Przednie kończyny są większe od tylnych i stanowią główny narząd ruchu. U młodych morsów dostrzega się rzadkie owłosienie skóry, dorosłe mają skórę bardzo słabo owłosioną. Na górnej wardze występują liczne włosy czuciowe. W uzębieniu wyróżniają się górne kły obecne u samców i u samic, szczególnie silnie rozwinięte u samców, mogą dorastać do metra długości, ale przeciętna ich długość wynosi ok. 50 cm. Masa największych kłów przekracza 5 kg. Kły morsów mają budowę podobną do ciosów słoni.[PARAGRAPH:2]Mors nie jest gatunkiem zagrożonym wyginięciem, ale liczebność jest poważnie obniżona w wyniku dawnych polowań. Nadal prowadzone jest kłusownictwo dla ich ciosów, odkąd zdobywanie kości słoniowej jest nielegalne. Głównym naturalnym wrogiem morsów jest orka i rzadko niedźwiedź polarny, który tylko w wyjątkowych sytuacjach jest zdolny upolować młodego bądź schorowanego morsa.</Polish>
+		<Polish>Mors (ko&#241; morski, &#179;ac. Odobenus rosmarus) gatunek du&#191;ego drapie&#191;nego ssaka morskiego, jedyny wsp&#243;&#179;cze&#156;nie &#191;yj&#185;cy przedstawiciel dawniej licznej w gatunki rodziny morsowatych (Odobenidae) i jedyny gatunek z rodzaju Odobenus. Mors pe&#179;ni&#179; wa&#191;n&#185; rol&#234; w &#191;yciu mieszka&#241;c&#243;w Arktyki, kt&#243;rzy polowali na niego dla mi&#234;sa, sk&#243;r, t&#179;uszczu, cios&#243;w i ko&#156;ci.[PARAGRAPH:2]Morsy wyst&#234;puj&#185; na wodach przybrze&#191;nych Arktyki, wzd&#179;u&#191; wybrze&#191;y Ameryki P&#243;&#179;nocnej i Rosji. Mors najbardziej lubi p&#179;ytkie wody w pobli&#191;u p&#179;ywaj&#185;cych p&#243;l lodowych, wi&#234;c mo&#191;na go r&#243;wnie&#191; zobaczy&#230; jak p&#179;ywa na krach lodowych.[PARAGRAPH:2]TMors ma ci&#234;&#191;kie cia&#179;o osi&#185;gaj&#185;ce d&#179;ugo&#156;&#230; od 2,5 do 4,2 m, os&#179;oni&#234;te grub&#185; na 3,5 cm niemal nag&#185; (s&#179;abo ow&#179;osion&#185;), pofa&#179;dowan&#185; sk&#243;r&#185;. Masa cia&#179;a mie&#156;ci si&#234; w przedziale od 400 do 1700 kg; samce s&#185; wi&#234;ksze od samic. Morsy z Oceanu Spokojnego s&#185; wi&#234;ksze od wyst&#234;puj&#185;cych w Atlantyku. Barwa sk&#243;ry od jasnobr&#185;zowej do cynamonowobr&#185;zowej, podczas wygrzewania si&#234; na s&#179;o&#241;cu kolor zmienia si&#234; na r&#243;&#191;owy wskutek rozszerzania si&#234; naczy&#241; krwiono&#156;nych. Na brzuchu i piersiach sk&#243;ra jest ciemniejsza. Morsy &#191;yj&#185;ce w Oceanie Spokojnym maj&#185; wi&#234;cej w&#185;s&#243;w czuciowych od tych z Atlantyku. Wszystkie ko&#241;czyny morsa s&#185; przekszta&#179;cone w p&#179;etwy. Przednie ko&#241;czyny s&#185; wi&#234;ksze od tylnych i stanowi&#185; g&#179;&#243;wny narz&#185;d ruchu. U m&#179;odych mors&#243;w dostrzega si&#234; rzadkie ow&#179;osienie sk&#243;ry, doros&#179;e maj&#185; sk&#243;r&#234; bardzo s&#179;abo ow&#179;osion&#185;. Na g&#243;rnej wardze wyst&#234;puj&#185; liczne w&#179;osy czuciowe. W uz&#234;bieniu wyr&#243;&#191;niaj&#185; si&#234; g&#243;rne k&#179;y obecne u samc&#243;w i u samic, szczeg&#243;lnie silnie rozwini&#234;te u samc&#243;w, mog&#185; dorasta&#230; do metra d&#179;ugo&#156;ci, ale przeci&#234;tna ich d&#179;ugo&#156;&#230; wynosi ok. 50 cm. Masa najwi&#234;kszych k&#179;&#243;w przekracza 5 kg. K&#179;y mors&#243;w maj&#185; budow&#234; podobn&#185; do cios&#243;w s&#179;oni.[PARAGRAPH:2]Mors nie jest gatunkiem zagro&#191;onym wygini&#234;ciem, ale liczebno&#156;&#230; jest powa&#191;nie obni&#191;ona w wyniku dawnych polowa&#241;. Nadal prowadzone jest k&#179;usownictwo dla ich cios&#243;w, odk&#185;d zdobywanie ko&#156;ci s&#179;oniowej jest nielegalne. G&#179;&#243;wnym naturalnym wrogiem mors&#243;w jest orka i rzadko nied&#159;wied&#159; polarny, kt&#243;ry tylko w wyj&#185;tkowych sytuacjach jest zdolny upolowa&#230; m&#179;odego b&#185;d&#159; schorowanego morsa.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_WHALESHARK_PEDIA</Tag>
@@ -5080,7 +5080,7 @@
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
 		<Italian>Rinoceronte bianco</Italian>
-		<Polish>Nosorożec Biały</Polish>
+		<Polish>Nosoro&#191;ec Bia&#179;y</Polish>
 		<Russian>Áåëûé íîñîðîã</Russian>
 	</TEXT>
 	<TEXT>

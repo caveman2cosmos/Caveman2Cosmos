@@ -3952,31 +3952,6 @@ void CvGame::changeForcedAIAutoPlay(PlayerTypes iPlayer, int iChange)
 }
 
 
-// Toffer - Unused, but I spared it in my M.A.D. purge as it looks somewhat useful
-CvPlot* CvGame::getLastNukeStrikePlot() const
-{
-	return GC.getMap().plotSorenINLINE(m_iLastNukeStrikeX, m_iLastNukeStrikeY);
-}
-
-void CvGame::setLastNukeStrikePlot(CvPlot* pPlot)
-{
-	if (getLastNukeStrikePlot() != pPlot)
-	{
-		if (pPlot != NULL)
-		{
-			m_iLastNukeStrikeX = pPlot->getX();
-			m_iLastNukeStrikeY = pPlot->getY();
-		}
-		else
-		{
-			m_iLastNukeStrikeX = INVALID_PLOT_COORD;
-			m_iLastNukeStrikeY = INVALID_PLOT_COORD;
-		}
-	}
-}
-// ! Toffer
-
-
 unsigned int CvGame::getInitialTime() const
 {
 	return m_uiInitialTime;

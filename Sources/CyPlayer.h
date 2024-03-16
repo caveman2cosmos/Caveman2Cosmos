@@ -378,8 +378,6 @@ public:
 	EventTriggeredData* getEventTriggered(int iID) const;
 	EventTriggeredData* initTriggeredData(int eEventTrigger, bool bFire, int iCityId, int iPlotX, int iPlotY, int eOtherPlayer, int iOtherPlayerCityId, int eReligion, int eCorporation, int iUnitId, int eBuilding);
 
-	int getEventTriggerWeight(int /*EventTriggerTypes*/ eTrigger) const;
-
 	void AI_updateFoundValues(bool bStartingLoc);
 	bool AI_isFinancialTrouble() const;
 	bool AI_demandRebukedWar(int /*PlayerTypes*/ ePlayer);

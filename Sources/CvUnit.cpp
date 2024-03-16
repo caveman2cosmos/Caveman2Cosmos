@@ -8076,7 +8076,80 @@ bool CvUnit::airlift(int iX, int iY)
 }
 
 
-bool CvUnit::isNukeVictim(const CvPlot* pPlot, TeamTypes eTeam) const
+void CvUnit::nukeDiplomacy(bool* nukedTeams)
+{
+	const PlayerTypes eMyOwner = getOwner();
+	const TeamTypes eMyTeam = getTeam();
+	CvTeam& myTeam = GET_TEAM(eMyTeam);
+
+	for (int iI = 0; iI < MAX_PC_TEAMS; iI++)
+	{
+		if (nukedTeams[iI])
+		{
+			const TeamTypes eNukedTeam = static_cast<TeamTypes>(iI);
+			CvTeam& nukedTeam = GET_TEAM(eNukedTeam);
+
+			if (!isEnemy(eNukedTeam))
+			{
+				myTeam.declareWar(eNukedTeam, false, WARPLAN_TOTAL);
+			}
+			nukedTeam.changeWarWeariness(eMyTeam, 100 * GC.getDefineINT("WW_HIT_BY_NUKE"));
+			myTeam.changeWarWeariness(eNukedTeam, 100 * GC.getDefineINT("WW_ATTACKED_WITH_NUKE"));
+			myTeam.AI_changeWarSuccess(eNukedTeam, GC.getDefineINT("WAR_SUCCESS_NUKE"));
+
+			for (int iJ = 0; iJ < MAX_PC_PLAYERS; iJ++)
+			{
+				CvPlayerAI& playerX = GET_PLAYER((PlayerTypes)iJ);
+
+				if (playerX.isAliveAndTeam(eNukedTeam))
+				{
+					playerX.AI_changeMemoryCount(eMyOwner, MEMORY_NUKED_US, 1);
+				}
+			}
+			for (int iJ = 0; iJ < MAX_PC_TEAMS; iJ++)
+			{
+				// If we are hit oureself we don't get further insulted if anyone else is too.
+				if (!nukedTeams[iJ] && iJ != eMyTeam)
+				{
+					const TeamTypes eTeamX = static_cast<TeamTypes>(iJ);
+
+					if (GET_TEAM(eTeamX).isAlive())
+					{
+						if (GET_TEAM(eTeamX).isHasMet(eNukedTeam)
+						&&  GET_TEAM(eTeamX).AI_getAttitude(eNukedTeam) >= ATTITUDE_CAUTIOUS)
+						{
+							for (int iK = 0; iK < MAX_PC_PLAYERS; iK++)
+							{
+								CvPlayerAI& playerX = GET_PLAYER((PlayerTypes)iK);
+
+								if (playerX.isAliveAndTeam(eTeamX))
+								{
+									playerX.AI_changeMemoryCount(eMyOwner, MEMORY_NUKED_FRIEND, 1);
+								}
+							}
+						}
+						else
+						{
+							for (int iK = 0; iK < MAX_PC_PLAYERS; iK++)
+							{
+								CvPlayerAI& playerX = GET_PLAYER((PlayerTypes)iK);
+
+								if (playerX.isAliveAndTeam(eTeamX)
+								&&  playerX.AI_getMemoryCount(eMyOwner, MEMORY_NUKED_US) == 0
+								&&  playerX.AI_getMemoryCount(eMyOwner, MEMORY_NUKED_FRIEND) == 0)
+								{
+									playerX.AI_changeMemoryCount(eMyOwner, MEMORY_USED_NUKE, 1);
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+bool CvUnit::isNukeVictim(const CvPlot* pPlot, const TeamTypes eTeam, const int iRange) const
 {
 	PROFILE_EXTRA_FUNC();
 	if (!GET_TEAM(eTeam).isAlive() || eTeam == getTeam())
@@ -8084,13 +8157,9 @@ bool CvUnit::isNukeVictim(const CvPlot* pPlot, TeamTypes eTeam) const
 		return false;
 	}
 
-	foreach_(const CvPlot* pLoopPlot, pPlot->rect(nukeRange(), nukeRange()))
+	foreach_(const CvPlot* plotX, pPlot->rect(iRange, iRange))
 	{
-		if (pLoopPlot->getTeam() == eTeam)
-		{
-			return true;
-		}
-		if (pLoopPlot->plotCheck(PUF_isCombatTeam, eTeam, getTeam()) != NULL)
+		if (plotX->getTeam() == eTeam || plotX->plotCheck(PUF_isCombatTeam, eTeam, getTeam()))
 		{
 			return true;
 		}
@@ -8098,12 +8167,10 @@ bool CvUnit::isNukeVictim(const CvPlot* pPlot, TeamTypes eTeam) const
 	return false;
 }
 
-
 bool CvUnit::canNuke() const
 {
 	return nukeRange() > -1;
 }
-
 
 bool CvUnit::canNukeAt(const CvPlot* pPlot, int iX, int iY) const
 {
@@ -8112,6 +8179,7 @@ bool CvUnit::canNukeAt(const CvPlot* pPlot, int iX, int iY) const
 	{
 		return false;
 	}
+	const int iNukeRange = nukeRange();
 	{
 		const int iDistance = plotDistance(pPlot->getX(), pPlot->getY(), iX, iY);
 
@@ -8120,11 +8188,14 @@ bool CvUnit::canNukeAt(const CvPlot* pPlot, int iX, int iY) const
 			return false;
 		}
 	}
-	const CvPlot* pTargetPlot = GC.getMap().plot(iX, iY);
+	const CvPlot* nukePlot = GC.getMap().plot(iX, iY);
+	const CvTeam& team = GET_TEAM(getTeam());
 
-	for (int iI = 0; iI < MAX_TEAMS; iI++)
+	for (int iI = 0; iI < MAX_PC_TEAMS; iI++)
 	{
-		if (iI != getTeam() && isNukeVictim(pTargetPlot, (TeamTypes)iI) && !isEnemy((TeamTypes)iI))
+		if (!team.isAtWar(static_cast<TeamTypes>(iI))
+		&&  !team.canDeclareWar(static_cast<TeamTypes>(iI))
+		&&  isNukeVictim(nukePlot, static_cast<TeamTypes>(iI), nukeRange()))
 		{
 			return false;
 		}
@@ -8135,71 +8206,70 @@ bool CvUnit::canNukeAt(const CvPlot* pPlot, int iX, int iY) const
 bool CvUnit::nuke(int iX, int iY, bool bTrap)
 {
 	PROFILE_EXTRA_FUNC();
+
 	if (!canNukeAt(plot(), iX, iY))
 	{
 		return false;
 	}
-	CvPlot* pPlot = GC.getMap().plot(iX, iY);
+	CvPlot* nukePlot = GC.getMap().plot(iX, iY);
 
-	bool abTeamsAffected[MAX_TEAMS];
-
-	for (int iI = 0; iI < MAX_TEAMS; iI++)
-	{
-		abTeamsAffected[iI] = isNukeVictim(pPlot, ((TeamTypes)iI));
-	}
-
-	for (int iI = 0; iI < MAX_PC_TEAMS; iI++)
-	{
-		if (abTeamsAffected[iI] && iI != getTeam() && !isEnemy((TeamTypes)iI))
-		{
-			GET_TEAM(getTeam()).declareWar(((TeamTypes)iI), false, WARPLAN_TOTAL);
-		}
-	}
-
-	if (!bTrap && airBaseCombatStr() != 0 && interceptTest(pPlot))
+	if (!bTrap && airBaseCombatStr() != 0 && interceptTest(nukePlot))
 	{
 		return true;
 	}
-	int iBestInterception = 0;
-	TeamTypes eBestTeam = NO_TEAM;
+	const PlayerTypes eMyOwner = getOwner();
+	CvPlayerAI& myOwner = GET_PLAYER(eMyOwner);
+
+	bool nukedTeams[MAX_PC_TEAMS];
+
+	for (int iI = 0; iI < MAX_PC_TEAMS; iI++)
+	{
+		nukedTeams[iI] = isNukeVictim(nukePlot, (TeamTypes)iI, nukeRange());
+	}
 
 	if (!bTrap)
 	{
-		for (int iI = 0; iI < MAX_TEAMS; iI++)
+		int iBestInterception = 0;
+		TeamTypes eBestTeam = NO_TEAM;
+
+		for (int iI = 0; iI < MAX_PC_TEAMS; iI++)
 		{
-			if (abTeamsAffected[iI] && GET_TEAM((TeamTypes)iI).getNukeInterception() > iBestInterception)
+			if (nukedTeams[iI] && GET_TEAM((TeamTypes)iI).getNukeInterception() > iBestInterception)
 			{
 				iBestInterception = GET_TEAM((TeamTypes)iI).getNukeInterception();
-				eBestTeam = ((TeamTypes)iI);
+				eBestTeam = (TeamTypes)iI;
 			}
 		}
 
-		iBestInterception *= (100 - m_pUnitInfo->getEvasionProbability());
+		iBestInterception *= 100 - m_pUnitInfo->getEvasionProbability();
 		iBestInterception /= 100;
 
-		setReconPlot(pPlot);
+		if (airBaseCombatStr() != 0)
+		{
+			setReconPlot(nukePlot);
+		}
 
 		if (GC.getGame().getSorenRandNum(100, "Nuke") < iBestInterception)
 		{
 			for (int iI = 0; iI < MAX_PC_PLAYERS; iI++)
 			{
-				if (GET_PLAYER((PlayerTypes)iI).isAlive() && GET_PLAYER((PlayerTypes)iI).isHumanPlayer())
+				if (GET_PLAYER((PlayerTypes)iI).isAlive())
 				{
 					AddDLLMessage(
-						(PlayerTypes)iI, iI == getOwner(), GC.getEVENT_MESSAGE_TIME(),
+						(PlayerTypes)iI, iI == eMyOwner, GC.getEVENT_MESSAGE_TIME(),
 						gDLL->getText(
 							"TXT_KEY_MISC_NUKE_INTERCEPTED",
-							GET_PLAYER(getOwner()).getNameKey(), getNameKey(),
+							myOwner.getNameKey(), getNameKey(),
 							GET_TEAM(eBestTeam).getName().GetCString()
 						),
 						"AS2D_NUKE_INTERCEPTED", MESSAGE_TYPE_MAJOR_EVENT, getButton(),
-						GC.getCOLOR_RED(), pPlot->getX(), pPlot->getY(), true, true
+						GC.getCOLOR_RED(), nukePlot->getX(), nukePlot->getY(), true, true
 					);
 				}
 			}
 			// Nuke entity mission
 			// Add the intercepted mission (defender is not NULL)
-			addMission(CvMissionDefinition(MISSION_NUKE, pPlot, this, this));
+			addMission(CvMissionDefinition(MISSION_NUKE, nukePlot, this, this));
 
 			kill(true, NO_PLAYER, true);
 
@@ -8207,87 +8277,47 @@ bool CvUnit::nuke(int iX, int iY, bool bTrap)
 		}
 	}
 
-	if (pPlot->isActiveVisible(false) && !isUsingDummyEntities() && isInViewport())
+	if (nukePlot->isActiveVisible(false) && !isUsingDummyEntities() && isInViewport())
 	{
 		if (airBaseCombatStr() != 0)
 		{
-			addMission(CvAirMissionDefinition(MISSION_AIRSTRIKE, pPlot, this));
+			addMission(CvAirMissionDefinition(MISSION_AIRSTRIKE, nukePlot, this));
+
+			if (GC.getInfoTypeForString("EFFECT_JETFIGHTER_NUKE_EXPLODE") != -1)
+			{
+				gDLL->getEngineIFace()->TriggerEffect((EffectTypes)GC.getInfoTypeForString("EFFECT_JETFIGHTER_NUKE_EXPLODE"), nukePlot->getPoint(), 0);
+				gDLL->getInterfaceIFace()->playGeneralSound("AS2D_NUKE_EXPLODES", nukePlot->getPoint());
+			}
 		}
 		else // Nuke entity mission
 		{
 			// Add the non-intercepted mission (defender is NULL)
-			addMission(CvMissionDefinition(MISSION_NUKE, pPlot, this));
-			CvMissionDefinition kDefiniton;
+			addMission(CvMissionDefinition(MISSION_NUKE, nukePlot, this));
 		}
 	}
 
 	setMadeAttack(true);
-	setAttackPlot(pPlot, false);
+	setAttackPlot(nukePlot, false);
 
-	for (int iI = 0; iI < MAX_PC_TEAMS; iI++)
-	{
-		if (abTeamsAffected[iI])
-		{
-			GET_TEAM((TeamTypes)iI).changeWarWeariness(getTeam(), 100 * GC.getDefineINT("WW_HIT_BY_NUKE"));
-			GET_TEAM(getTeam()).changeWarWeariness(((TeamTypes)iI), 100 * GC.getDefineINT("WW_ATTACKED_WITH_NUKE"));
-			GET_TEAM(getTeam()).AI_changeWarSuccess(((TeamTypes)iI), GC.getDefineINT("WAR_SUCCESS_NUKE"));
-		}
-	}
-
-	for (int iI = 0; iI < MAX_PC_TEAMS; iI++)
-	{
-		if (GET_TEAM((TeamTypes)iI).isAlive() && iI != getTeam())
-		{
-			if (abTeamsAffected[iI])
-			{
-				for (int iJ = 0; iJ < MAX_PC_PLAYERS; iJ++)
-				{
-					if (GET_PLAYER((PlayerTypes)iJ).isAliveAndTeam((TeamTypes)iI))
-					{
-						GET_PLAYER((PlayerTypes)iJ).AI_changeMemoryCount(getOwner(), MEMORY_NUKED_US, 1);
-					}
-				}
-			}
-			else
-			{
-				for (int iJ = 0; iJ < MAX_PC_TEAMS; iJ++)
-				{
-					if (abTeamsAffected[iJ] && GET_TEAM((TeamTypes)iJ).isAlive()
-					&& GET_TEAM((TeamTypes)iI).isHasMet((TeamTypes)iJ)
-					&& GET_TEAM((TeamTypes)iI).AI_getAttitude((TeamTypes)iJ) >= ATTITUDE_CAUTIOUS)
-					{
-						for (int iK = 0; iK < MAX_PC_PLAYERS; iK++)
-						{
-							if (GET_PLAYER((PlayerTypes)iK).isAliveAndTeam((TeamTypes)iI))
-							{
-								GET_PLAYER((PlayerTypes)iK).AI_changeMemoryCount(getOwner(), MEMORY_NUKED_FRIEND, 1);
-							}
-						}
-						break;
-					}
-				}
-			}
-		}
-	}
-	// XXX some AI should declare war here...
+	nukeDiplomacy(nukedTeams);
 
 	const CvWString szBuffer =
 	(
 		bTrap
 		?
-		gDLL->getText("TXT_KEY_MISC_NUKE_TRAP", getNameKey(), GET_PLAYER(getOwner()).getNameKey())
+		gDLL->getText("TXT_KEY_MISC_NUKE_TRAP", getNameKey(), myOwner.getNameKey())
 		:
-		gDLL->getText("TXT_KEY_MISC_NUKE_LAUNCHED", GET_PLAYER(getOwner()).getNameKey(), getNameKey())
+		gDLL->getText("TXT_KEY_MISC_NUKE_LAUNCHED", myOwner.getNameKey(), getNameKey())
 	);
 
 	for (int iI = 0; iI < MAX_PC_PLAYERS; iI++)
 	{
-		if (GET_PLAYER((PlayerTypes)iI).isAlive() && GET_PLAYER((PlayerTypes)iI).isHumanPlayer())
+		if (GET_PLAYER((PlayerTypes)iI).isAlive())
 		{
 			AddDLLMessage(
-				(PlayerTypes)iI, iI == getOwner(), GC.getEVENT_MESSAGE_TIME(),
+				(PlayerTypes)iI, iI == eMyOwner, GC.getEVENT_MESSAGE_TIME(),
 				szBuffer, "AS2D_NUKE_EXPLODES", MESSAGE_TYPE_MAJOR_EVENT,
-				getButton(), GC.getCOLOR_RED(), pPlot->getX(), pPlot->getY(), true, true
+				getButton(), GC.getCOLOR_RED(), nukePlot->getX(), nukePlot->getY(), true, true
 			);
 		}
 	}
@@ -8296,8 +8326,6 @@ bool CvUnit::nuke(int iX, int iY, bool bTrap)
 	{
 		kill(true);
 	}
-	GC.getGame().setLastNukeStrikePlot(pPlot);
-
 	return true;
 }
 
@@ -25136,83 +25164,54 @@ int CvUnit::computeWaveSize( bool bRangedRound, int iAttackerMax, int iDefenderM
 bool CvUnit::isTargetOf(const CvUnit& attacker) const
 {
 	PROFILE_EXTRA_FUNC();
-	const CvUnitInfo& attackerInfo = attacker.getUnitInfo();
-	const CvUnitInfo& ourInfo = getUnitInfo();
 
-	//if (!plot()->isCity(true, getTeam()) || (attacker.plot() == plot() && (attacker.isAssassin() || isAssassin())))
-	//{
+	const CvUnitInfo& attackerInfo = attacker.getUnitInfo();
 
 	if (getUnitType() != NO_UNIT && attackerInfo.isTargetUnit(getUnitType()))
 	{
 		return true;
 	}
 
+	const CvUnitInfo& ourInfo = getUnitInfo();
+
 	if (attacker.getUnitType() != NO_UNIT && ourInfo.isDefendAgainstUnit(attacker.getUnitType()))
 	{
 		return true;
 	}
 
-	// TB SubCombat Mod Begin - Original code:
 	for (std::map<UnitCombatTypes, UnitCombatKeyedInfo>::const_iterator it = m_unitCombatKeyedInfo.begin(), end = m_unitCombatKeyedInfo.end(); it != end; ++it)
 	{
-		if(it->second.m_bHasUnitCombat)
+		if (it->second.m_bHasUnitCombat && (attackerInfo.getTargetUnitCombat(it->first) || attacker.hasTargetUnitCombat(it->first)))
 		{
-			if (attackerInfo.getTargetUnitCombat(it->first) ||
-				attacker.hasTargetUnitCombat(it->first))
-			{
-				return true;
-			}
+			return true;
 		}
 	}
-	//TB SubCombat Mod End
-
-	//}
-
-
-	// TB SubCombat Mod Begin
 	for (std::map<UnitCombatTypes, UnitCombatKeyedInfo>::const_iterator it = attacker.m_unitCombatKeyedInfo.begin(), end = attacker.m_unitCombatKeyedInfo.end(); it != end; ++it)
 	{
-		if(it->second.m_bHasUnitCombat)
+		if (it->second.m_bHasUnitCombat && ourInfo.getDefenderUnitCombat(it->first))
 		{
-			if (ourInfo.getDefenderUnitCombat(it->first))
-			{
-				return true;
-			}
+			return true;
 		}
 	}
-	//TB SubCombat Mod End
-
 	return false;
 }
 
 bool CvUnit::isEnemy(TeamTypes eTeam, const CvPlot* pPlot, const CvUnit* pUnit) const
 {
-	if (pUnit != NULL && (isBarbCoExist() && pUnit->isHominid() || pUnit->isBarbCoExist() && isHominid()))
+	if (pUnit && (isBarbCoExist() && pUnit->isHominid() || pUnit->isBarbCoExist() && isHominid()))
 	{
 		return false;
 	}
-
-	if (pPlot == NULL)
-	{
-		pPlot = plot();
-	}
-
-	return atWar(GET_PLAYER(getCombatOwner(eTeam, pPlot)).getTeam(), eTeam);
+	return atWar(GET_PLAYER(getCombatOwner(eTeam, pPlot ? pPlot : plot())).getTeam(), eTeam);
 }
 
 bool CvUnit::isPotentialEnemy(TeamTypes eTeam, const CvPlot* pPlot, const CvUnit* pUnit) const
 {
-	if (pUnit != NULL && (isBarbCoExist() && pUnit->isHominid() || pUnit->isBarbCoExist() && isHominid()))
+	if (pUnit && (isBarbCoExist() && pUnit->isHominid() || pUnit->isBarbCoExist() && isHominid()))
 	{
 		return false;
 	}
-
-	if (pPlot == NULL)
-	{
-		pPlot = plot();
-	}
-
-	return ::isPotentialEnemy(GET_PLAYER(getCombatOwner(eTeam, pPlot)).getTeam(), eTeam);
+	return ::isPotentialEnemy(GET_PLAYER(getCombatOwner(eTeam, pPlot ? pPlot : plot())).getTeam(), eTeam);
 }
 
 bool CvUnit::isSuicide() const
@@ -27885,104 +27884,30 @@ void CvUnit::tradeUnit(PlayerTypes eReceivingPlayer)
 	}
 }
 
-bool CvUnit::spyNukeAffected(const CvPlot* pPlot, TeamTypes eTeam, int iRange) const
+void CvUnit::spyNuke(int iX, int iY, bool bCaught)
 {
 	PROFILE_EXTRA_FUNC();
-	if (!GET_TEAM(eTeam).isAlive() || eTeam == getTeam())
-	{
-		return false;
-	}
-	foreach_(const CvPlot* pLoopPlot, pPlot->rect(iRange, iRange))
-	{
-		if (pLoopPlot->getTeam() == eTeam)
-		{
-			return true;
-		}
-		if (pLoopPlot->plotCheck(PUF_isCombatTeam, eTeam, getTeam()) != NULL)
-		{
-			return true;
-		}
-	}
-	return false;
-}
 
-bool CvUnit::spyNuke(int iX, int iY, bool bCaught)
-{
-	PROFILE_EXTRA_FUNC();
-	bool abTeamsAffected[MAX_TEAMS];
-
+	CvWString szBuffer;
 	CvPlot* pPlot = GC.getMap().plot(iX, iY);
+	bool nukedTeams[MAX_PC_TEAMS];
 
-	for (int iI = 0; iI < MAX_TEAMS; iI++)
+	for (int iI = 0; iI < MAX_PC_TEAMS; iI++)
 	{
-		abTeamsAffected[iI] = spyNukeAffected(pPlot, (TeamTypes)iI, 1);
+		nukedTeams[iI] = isNukeVictim(pPlot, (TeamTypes)iI, 0);
 	}
 
 	if (bCaught)
 	{
-		const TeamTypes eTeam = getTeam();
-		CvTeamAI& team = GET_TEAM(eTeam);
-
-		for (int iI = 0; iI < MAX_PC_TEAMS; iI++)
-		{
-			if (abTeamsAffected[iI])
-			{
-				if (!isEnemy((TeamTypes)iI) && iI != eTeam)
-				{
-					team.declareWar((TeamTypes)iI, false, WARPLAN_TOTAL);
-				}
-				GET_TEAM((TeamTypes)iI).changeWarWeariness(eTeam, 100 * GC.getDefineINT("WW_HIT_BY_NUKE"));
-				team.changeWarWeariness((TeamTypes)iI, 100 * GC.getDefineINT("WW_ATTACKED_WITH_NUKE"));
-				team.AI_changeWarSuccess((TeamTypes)iI, GC.getDefineINT("WAR_SUCCESS_NUKE"));
-			}
-		}
-		for (int iI = 0; iI < MAX_PC_TEAMS; iI++)
-		{
-			if (GET_TEAM((TeamTypes)iI).isAlive() && iI != eTeam)
-			{
-				if (abTeamsAffected[iI])
-				{
-					for (int iJ = 0; iJ < MAX_PC_PLAYERS; iJ++)
-					{
-						if (GET_PLAYER((PlayerTypes)iJ).isAliveAndTeam((TeamTypes)iI))
-						{
-							GET_PLAYER((PlayerTypes)iJ).AI_changeMemoryCount(getOwner(), MEMORY_NUKED_US, 1);
-						}
-					}
-				}
-				else
-				{
-					for (int iJ = 0; iJ < MAX_PC_TEAMS; iJ++)
-					{
-						if (GET_TEAM((TeamTypes)iJ).isAlive() && abTeamsAffected[iJ]
-						&& GET_TEAM((TeamTypes)iI).isHasMet((TeamTypes)iJ)
-						&& GET_TEAM((TeamTypes)iI).AI_getAttitude((TeamTypes)iJ) >= ATTITUDE_CAUTIOUS)
-						{
-							for (int iK = 0; iK < MAX_PC_PLAYERS; iK++)
-							{
-								if (GET_PLAYER((PlayerTypes)iK).isAliveAndTeam((TeamTypes)iI))
-								{
-									GET_PLAYER((PlayerTypes)iK).AI_changeMemoryCount(getOwner(), MEMORY_NUKED_FRIEND, 1);
-								}
-							}
-							break;
-						}
-					}
-				}
-			}
-		}
+		nukeDiplomacy(nukedTeams);
+		szBuffer = gDLL->getText("TXT_KEY_MISC_NUKE_ENEMY_SPY", GET_PLAYER(getOwner()).getNameKey(), GET_PLAYER(pPlot->getOwner()).getNameKey());
 	}
-	const CvWString szBuffer =
-	(
-		bCaught
-		?
-		gDLL->getText("TXT_KEY_MISC_NUKE_ENEMY_SPY", GET_PLAYER(getOwner()).getNameKey(), GET_PLAYER(pPlot->getOwner()).getNameKey())
-		:
-		gDLL->getText("TXT_KEY_MISC_NUKE_UNKNOWN", GET_PLAYER(pPlot->getOwner()).getNameKey())
-	);
+	else szBuffer = gDLL->getText("TXT_KEY_MISC_NUKE_UNKNOWN", GET_PLAYER(pPlot->getOwner()).getNameKey());
+
+
 	for (int iI = 0; iI < MAX_PC_PLAYERS; iI++)
 	{
-		if (GET_PLAYER((PlayerTypes)iI).isAlive() && GET_PLAYER((PlayerTypes)iI).isHumanPlayer())
+		if (GET_PLAYER((PlayerTypes)iI).isAlive())
 		{
 			AddDLLMessage(
 				(PlayerTypes)iI, iI == getOwner(), GC.getEVENT_MESSAGE_TIME(),
@@ -27998,8 +27923,7 @@ bool CvUnit::spyNuke(int iX, int iY, bool bCaught)
 		gDLL->getEngineIFace()->TriggerEffect((EffectTypes)GC.getInfoTypeForString("EFFECT_ICBM_NUCLEAR_EXPLOSION"), pPlot->getPoint(), 0);
 		gDLL->getInterfaceIFace()->playGeneralSound("AS2D_NUKE_EXPLODES", pPlot->getPoint());
 	}
-	pPlot->nukeExplosion(1);
-	return true;
+	pPlot->nukeExplosion(0);
 }
 
 

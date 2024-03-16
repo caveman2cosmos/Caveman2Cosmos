@@ -4,14 +4,14 @@
 		<Tag>TXT_KEY_BUILDING_ANIMAL_DESIGNER</Tag>
 		<English>Animal Designer</English>
 		<French>Concepteur d'Animaux</French>
-		<Polish>Projektant Zwierząt</Polish>
+		<Polish>Projektant Zwierz&#185;t</Polish>
 		<Russian>Студия зоодизайна</Russian>
 		<Italian>Designer di animali</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ANIMAL_DESIGNER_PEDIA</Tag>
 		<English>Animals are designed by gene manipulation.</English>
-		<Polish>Zwierzęta tworzone przez manipulacje genami.</Polish>
+		<Polish>Zwierz&#234;ta tworzone przez manipulacje genami.</Polish>
 		<Russian>Создает животных с помощью генетических манипуляций.</Russian>
 	</TEXT>
 	<TEXT>
@@ -38,7 +38,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_BIOPUNK_LAB_PEDIA</Tag>
 		<English>Biopunk (a portmanteau synthesizing "biotechnology" and "punk") is a techno-progressive movement advocating open access to genetic information. Biopunk hobbyists or biohackers experiment with DNA and other aspects of genetics. The related biopunk science fiction genre focuses on biotechnology and subversives.</English>
-		<Polish>Laboratorium opracowujące technologie Biopunk</Polish>
+		<Polish>Laboratorium opracowuj&#185;ce technologie Biopunk</Polish>
 		<Russian>Биопанк - прогрессивное высокотехнологичное движение, в защиту открытого доступа к генетической информации. Сторонники биопанка или биохакеры экспериментируют с ДНК и другими аспектами генетики.</Russian>
 	</TEXT>
 	<TEXT>
@@ -52,42 +52,42 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CHIMERA_SURGERY_CLINIC_PEDIA</Tag>
 		<English>People come here to get some body parts of animals.</English>
-		<Polish>Ludzie w tej klinice przeszczepiają sobie części ciał zwierząt.</Polish>
+		<Polish>Ludzie w tej klinice przeszczepiaj&#185; sobie cz&#234;&#156;ci cia&#179; zwierz&#185;t.</Polish>
 		<Russian>Люди обращаются сюда для добавления себе различных органов животных.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_DESIGNED_ANIMAL_BATTLE_ARENA</Tag>
 		<English>Designed Animal Battle Arena</English>
 		<French>Arène de Combat pour Animaux élaborés</French>
-		<Polish>Arena Walk Projektowanych Zwierząt</Polish>
+		<Polish>Arena Walk Projektowanych Zwierz&#185;t</Polish>
 		<Russian>Арена зооморфов</Russian>
 		<Italian>Arena di combattimento per animali progettati</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_DESIGNED_ANIMAL_BATTLE_ARENA_PEDIA</Tag>
 		<English>Animal Designers come here to let their creations fight against each others.</English>
-		<Polish>Arena na której walczą zwierzęta zaprojektowane w laboratoriach.</Polish>
+		<Polish>Arena na kt&#243;rej walcz&#185; zwierz&#234;ta zaprojektowane w laboratoriach.</Polish>
 		<Russian>Зоодизайнеры приезжают сюда, чтобы их творения сражались друг с другом.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_DESIGNED_ANIMAL_SHOW</Tag>
 		<English>Designed Animal Show</English>
 		<French>Spectacle d'Animaux élaborés</French>
-		<Polish>Wystawa Projektowanych Zwierząt</Polish>
+		<Polish>Wystawa Projektowanych Zwierz&#185;t</Polish>
 		<Russian>Шоу зоодизайна</Russian>
 		<Italian>Spettacolo di animali progettati</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_DESIGNED_ANIMAL_SHOW_PEDIA</Tag>
 		<English>Animal Designer from the whole World come to this event to show their creations.</English>
-		<Polish>Wystawa projektowanych genetycznie zwierząt z całego świata.</Polish>
+		<Polish>Wystawa projektowanych genetycznie zwierz&#185;t z ca&#179;ego &#156;wiata.</Polish>
 		<Russian>Зоодизайнеры со всего мира приезжают на это мероприятие, чтобы показать свои творения.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_DESIGNED_ANIMAL_ZOO</Tag>
 		<English>Designed Animal Zoo</English>
 		<French>Zoo d'Animaux élaborés</French>
-		<Polish>Zoo Projektowanych Zwierząt</Polish>
+		<Polish>Zoo Projektowanych Zwierz&#185;t</Polish>
 		<Russian>Парк зооморфов</Russian>
 		<Italian>Zoo di animali progettati</Italian>
 	</TEXT>
@@ -107,14 +107,14 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MICROBIOLOGY_ARTIST_PEDIA</Tag>
 		<English>Microbiology Artists create new microorganisms whose only purpose is that they look beautiful under a microscope.</English>
-		<Polish>Artyści Mikrobiologii tworzą nowe mikroorganizmy, których celem jest wyglądanie pięknie pod mikroskopem.</Polish>
+		<Polish>Arty&#156;ci Mikrobiologii tworz&#185; nowe mikroorganizmy, kt&#243;rych celem jest wygl&#185;danie pi&#234;knie pod mikroskopem.</Polish>
 		<Russian>В студии микробиологии создают новые микроорганизмы, чье единственное предназначение состоит в том, чтобы красиво выглядеть под микроскопом.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_PHEROMONE_LAB</Tag>
 		<English>Pheromone Lab</English>
 		<French>Laboratoire de Phéromones</French>
-		<Polish>Laboratorium Fromonów</Polish>
+		<Polish>Laboratorium Fromon&#243;w</Polish>
 		<Russian>Лаборатория ферамонов</Russian>
 		<Italian>Laboratorio di feromoni</Italian>
 	</TEXT>
@@ -134,7 +134,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_PROTEIN_ARTIST_PEDIA</Tag>
 		<English>Protein Artists create new proteins whose only purpose is that they look beautiful under a microscope.</English>
-		<Polish>Artyści Protein tworzą nowe białka, których celem jest wyglądanie pięknie pod mikroskopem.</Polish>
+		<Polish>Arty&#156;ci Protein tworz&#185; nowe bia&#179;ka, kt&#243;rych celem jest wygl&#185;danie pi&#234;knie pod mikroskopem.</Polish>
 		<Russian>В белковой студии создают новые белки, чье единственное предназначение состоит в том, чтобы красиво выглядеть под микроскопом.</Russian>
 	</TEXT>
 	<TEXT>
@@ -148,14 +148,14 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_PURE_ORGANIC_CITY_PEDIA</Tag>
 		<English>The idea is to turn your whole city into green: You life in designed trees, use designed Animals for transport, basically everything is grown naturally.</English>
-		<Polish>Całe miasto zamienione w jeden wielki bio-organizm.</Polish>
+		<Polish>Ca&#179;e miasto zamienione w jeden wielki bio-organizm.</Polish>
 		<Russian>Идея состоит в том, чтобы сделать весь город зеленым: использовать деревянные конструкции для жизни, животных для транспорта, выращивать все натуральное.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SPECIES_REVIVAL_LAB</Tag>
 		<English>Species Revival Lab</English>
 		<French>Laboratoire de Résurrection d'espèces</French>
-		<Polish>Laboratorium Odtwarzania Wymarłych Zwierząt</Polish>
+		<Polish>Laboratorium Odtwarzania Wymar&#179;ych Zwierz&#185;t</Polish>
 		<Russian>Лаборатория возрождения</Russian>
 		<Italian>Laboratorio di risurrezione delle specie</Italian>
 	</TEXT>

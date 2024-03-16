@@ -2646,9 +2646,6 @@ int CvTeam::getResearchCost(TechTypes eTech) const
 	iCost *= GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getSpeedPercent();
 	iCost /= 100;
 
-	iCost *= GC.getWorldInfo(GC.getMap().getWorldSize()).getResearchPercent();
-	iCost /= 100;
-
 	iCost *= GC.getEraInfo((EraTypes)GC.getTechInfo(eTech).getEra()).getResearchPercent();
 	iCost /= 100;
 
@@ -2676,7 +2673,7 @@ int CvTeam::getResearchCost(TechTypes eTech) const
 	}
 	iCost /= 100;
 
-	return std::max(1, iCost < MAX_INT ? (int)iCost : MAX_INT);
+	return std::max(1, iCost < MAX_INT ? static_cast<int>(iCost) : MAX_INT);
 }
 
 

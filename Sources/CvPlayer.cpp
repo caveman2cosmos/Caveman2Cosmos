@@ -16704,8 +16704,11 @@ bool CvPlayer::doEspionageMission(EspionageMissionTypes eMission, PlayerTypes eT
 		}
 	}
 	// Nuclear Bomb
-	const bool bNuked = pPlot && pSpyUnit
-		&& kMission.isNuke() && pSpyUnit->spyNuke(pPlot->getX(), pPlot->getY(), bCaught) ? true : false;
+	const bool bNuked = pPlot && pSpyUnit && kMission.isNuke();
+	if (bNuked)
+	{
+		pSpyUnit->spyNuke(pPlot->getX(), pPlot->getY(), bCaught);
+	}
 
 	int iHave = 0;
 	if (NO_TEAM != eTargetTeam)
@@ -16727,7 +16730,6 @@ bool CvPlayer::doEspionageMission(EspionageMissionTypes eMission, PlayerTypes eT
 
 	if (bSomethingHappened)
 	{
-
 		int iX = -1;
 		int iY = -1;
 		if (pPlot)
@@ -21606,9 +21608,14 @@ void CvPlayer::applyEvent(EventTypes eEvent, int iEventTriggeredId, bool bUpdate
 
 		if (NO_PLAYER != pTriggeredData->m_eOtherPlayer)
 		{
-			if (kEvent.getEspionagePoints() != 0)
+			int iValue = kEvent.getEspionagePoints();
+			if (iValue != 0)
 			{
-				GET_TEAM(getTeam()).changeEspionagePointsAgainstTeam(GET_PLAYER(pTriggeredData->m_eOtherPlayer).getTeam(), kEvent.getEspionagePoints());
+				if (kEvent.isGameSpeedScale())
+				{
+					iValue = iValue * GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getSpeedPercent() / 100;
+				}
+				GET_TEAM(getTeam()).changeEspionagePointsAgainstTeam(GET_PLAYER(pTriggeredData->m_eOtherPlayer).getTeam(), iValue);
 			}
 		}
 
@@ -22133,127 +22140,134 @@ void CvPlayer::applyEvent(EventTypes eEvent, int iEventTriggeredId, bool bUpdate
 			}
 		}
 
-		if (kEvent.getHurryAnger() != 0 && !adjustModifiersOnly)
+		if (!adjustModifiersOnly)
 		{
-			foreach_(CvCity* pLoopCity, cities())
+			if (kEvent.getHurryAnger() != 0)
 			{
-				pLoopCity->changeHurryAngerTimer(kEvent.getHurryAnger() * pLoopCity->flatHurryAngerLength());
-			}
-		}
-
-		if (kEvent.getHappyTurns() > 0 && !adjustModifiersOnly)
-		{
-			foreach_(CvCity* pLoopCity, cities())
-			{
-				pLoopCity->changeHappinessTimer(kEvent.getHappyTurns());
-			}
-		}
-
-		/* Toffer - commented out, something is wrong here.
-
-		if (kEvent.getMaxPillage() > 0 && !adjustModifiersOnly)
-		{
-			FAssert(kEvent.getMaxPillage() >= kEvent.getMinPillage());
-			int iNumPillage = kEvent.getMinPillage() + GC.getGame().getSorenRandNum(kEvent.getMaxPillage() - kEvent.getMinPillage(), "Pick number of event pillaged plots");
-
-			int iNumPillaged = 0;
-			for (int i = 0; i < iNumPillage; ++i)
-			{
-				const int iRandOffset = GC.getGame().getSorenRandNum(GC.getMap().numPlots(), "Pick event pillage plot (any city)");
-
-				for (int j = 0; j < GC.getMap().numPlots(); ++j)
+				foreach_(CvCity* pLoopCity, cities())
 				{
-					CvPlot* pPlot = GC.getMap().plotByIndex((j + iRandOffset) % GC.getMap().numPlots());
+					pLoopCity->changeHurryAngerTimer(kEvent.getHurryAnger() * pLoopCity->flatHurryAngerLength());
+				}
+			}
 
-					// Toffer - Something is wrong here... pPlot->isCity() && pPlot->isImprovementDestructible() doesn't make much sense
-					//	I think it's looking for a plot that belong to a city rather than a plot with a city on it.
-					if (pPlot && pPlot->getOwner() == getID() && pPlot->isCity() && pPlot->isImprovementDestructible())
+			if (kEvent.getHappyTurns() > 0)
+			{
+				foreach_(CvCity* pLoopCity, cities())
+				{
+					pLoopCity->changeHappinessTimer(kEvent.getHappyTurns());
+				}
+			}
+
+			/* Toffer - commented out, something is wrong here.
+
+			if (kEvent.getMaxPillage() > 0)
+			{
+				FAssert(kEvent.getMaxPillage() >= kEvent.getMinPillage());
+				int iNumPillage = kEvent.getMinPillage() + GC.getGame().getSorenRandNum(kEvent.getMaxPillage() - kEvent.getMinPillage(), "Pick number of event pillaged plots");
+
+				int iNumPillaged = 0;
+				for (int i = 0; i < iNumPillage; ++i)
+				{
+					const int iRandOffset = GC.getGame().getSorenRandNum(GC.getMap().numPlots(), "Pick event pillage plot (any city)");
+
+					for (int j = 0; j < GC.getMap().numPlots(); ++j)
 					{
-						AddDLLMessage(
-							getID(), false, GC.getEVENT_MESSAGE_TIME(),
-							gDLL->getText("TXT_KEY_EVENT_CITY_IMPROVEMENT_DESTROYED", GC.getImprovementInfo(pPlot->getImprovementType()).getTextKeyWide()),
-							"AS2D_PILLAGED", MESSAGE_TYPE_INFO, GC.getImprovementInfo(pPlot->getImprovementType()).getButton(), GC.getCOLOR_RED(), pPlot->getX(), pPlot->getY(), true, true
-						);
-						pPlot->setImprovementType(NO_IMPROVEMENT);
-						++iNumPillaged;
-						break;
+						CvPlot* pPlot = GC.getMap().plotByIndex((j + iRandOffset) % GC.getMap().numPlots());
+
+						// Toffer - Something is wrong here... pPlot->isCity() && pPlot->isImprovementDestructible() doesn't make much sense
+						//	I think it's looking for a plot that belong to a city rather than a plot with a city on it.
+						if (pPlot && pPlot->getOwner() == getID() && pPlot->isCity() && pPlot->isImprovementDestructible())
+						{
+							AddDLLMessage(
+								getID(), false, GC.getEVENT_MESSAGE_TIME(),
+								gDLL->getText("TXT_KEY_EVENT_CITY_IMPROVEMENT_DESTROYED", GC.getImprovementInfo(pPlot->getImprovementType()).getTextKeyWide()),
+								"AS2D_PILLAGED", MESSAGE_TYPE_INFO, GC.getImprovementInfo(pPlot->getImprovementType()).getButton(), GC.getCOLOR_RED(), pPlot->getX(), pPlot->getY(), true, true
+							);
+							pPlot->setImprovementType(NO_IMPROVEMENT);
+							++iNumPillaged;
+							break;
+						}
+					}
+				}
+
+				if (NO_PLAYER != pTriggeredData->m_eOtherPlayer)
+				{
+
+					const CvWString szBuffer = gDLL->getText("TXT_KEY_EVENT_NUM_CITY_IMPROVEMENTS_DESTROYED", iNumPillaged, getCivilizationAdjectiveKey());
+					AddDLLMessage(pTriggeredData->m_eOtherPlayer, false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_PILLAGED", MESSAGE_TYPE_INFO);
+				}
+			}
+			*/
+
+			if (kEvent.getFood() != 0)
+			{
+				algo::for_each(cities(), CvCity::fn::changeFood(kEvent.getFood()));
+			}
+
+			if (kEvent.getFoodPercent() != 0)
+			{
+				foreach_(CvCity* pLoopCity, cities())
+				{
+					pLoopCity->changeFood(pLoopCity->getFood() * kEvent.getFoodPercent() / 100);
+				}
+			}
+
+			if (kEvent.getPopulationChange() != 0)
+			{
+				foreach_(CvCity* pLoopCity, cities())
+				{
+					if (pLoopCity->getPopulation() + kEvent.getPopulationChange() > 0)
+					{
+						pLoopCity->changePopulation(kEvent.getPopulationChange());
 					}
 				}
 			}
 
-			if (NO_PLAYER != pTriggeredData->m_eOtherPlayer)
+			if (kEvent.getCulture() != 0)
 			{
+				int iCulture = 100 * kEvent.getCulture();
 
-				const CvWString szBuffer = gDLL->getText("TXT_KEY_EVENT_NUM_CITY_IMPROVEMENTS_DESTROYED", iNumPillaged, getCivilizationAdjectiveKey());
-				AddDLLMessage(pTriggeredData->m_eOtherPlayer, false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_PILLAGED", MESSAGE_TYPE_INFO);
-			}
-		}
-		*/
-
-		if (kEvent.getFood() != 0 && !adjustModifiersOnly)
-		{
-			algo::for_each(cities(), CvCity::fn::changeFood(kEvent.getFood()));
-		}
-
-		if (kEvent.getFoodPercent() != 0 && !adjustModifiersOnly)
-		{
-			foreach_(CvCity* pLoopCity, cities())
-			{
-				pLoopCity->changeFood(pLoopCity->getFood() * kEvent.getFoodPercent() / 100);
-			}
-		}
-
-		if (kEvent.getPopulationChange() != 0 && !adjustModifiersOnly)
-		{
-			foreach_(CvCity* pLoopCity, cities())
-			{
-				if (pLoopCity->getPopulation() + kEvent.getPopulationChange() > 0)
+				if (kEvent.isGameSpeedScale())
 				{
-					pLoopCity->changePopulation(kEvent.getPopulationChange());
+					iCulture = iCulture * GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getSpeedPercent() / 100;
+				}
+
+				foreach_(CvCity* cityX, cities())
+				{
+					cityX->changeCultureTimes100(cityX->getOwner(), iCulture, true, true);
 				}
 			}
-		}
 
-		if (kEvent.getCulture() != 0 && !adjustModifiersOnly)
-		{
-			foreach_(CvCity* pLoopCity, cities())
+			if (kEvent.getRevolutionIndexChange() != 0)
 			{
-				if (pLoopCity->getCultureTimes100(pLoopCity->getOwner()) + 100 * kEvent.getCulture() > 0)
+				foreach_(CvCity* pLoopCity, cities())
 				{
-					pLoopCity->changeCulture(pLoopCity->getOwner(), kEvent.getCulture(), true, true);
+					if (kEvent.getRevolutionIndexChange() > 0)
+					{
+						pLoopCity->changeLocalRevIndex(kEvent.getRevolutionIndexChange());
+					}
+					else if (kEvent.getRevolutionIndexChange() < 0)
+					{
+						pLoopCity->changeLocalRevIndex(std::max(-(pLoopCity->getLocalRevIndex()), kEvent.getRevolutionIndexChange()));
+					}
 				}
 			}
-		}
 
-		if (kEvent.getRevolutionIndexChange() != 0 && !adjustModifiersOnly)
-		{
-			foreach_(CvCity* pLoopCity, cities())
+			if (kEvent.getFreeUnit() != NO_UNIT)
 			{
-				if (kEvent.getRevolutionIndexChange() > 0)
+				CvCity* pUnitCity = pCity;
+
+				if (!pUnitCity)
 				{
-					pLoopCity->changeLocalRevIndex(kEvent.getRevolutionIndexChange());
+					pUnitCity = getCapitalCity();
 				}
-				else if (kEvent.getRevolutionIndexChange() < 0)
+
+				if (pUnitCity)
 				{
-					pLoopCity->changeLocalRevIndex(std::max(-(pLoopCity->getLocalRevIndex()), kEvent.getRevolutionIndexChange()));
-				}
-			}
-		}
-
-		if (!adjustModifiersOnly && kEvent.getFreeUnit() != NO_UNIT)
-		{
-			CvCity* pUnitCity = pCity;
-
-			if (!pUnitCity)
-			{
-				pUnitCity = getCapitalCity();
-			}
-
-			if (pUnitCity)
-			{
-				for (int i = 0; i < kEvent.getNumUnits(); ++i)
-				{
-					initUnit((UnitTypes)kEvent.getFreeUnit(), pUnitCity->getX(), pUnitCity->getY(), NO_UNITAI, NO_DIRECTION, GC.getGame().getSorenRandNum(10000, "AI Unit Birthmark"));
+					for (int i = 0; i < kEvent.getNumUnits(); ++i)
+					{
+						initUnit((UnitTypes)kEvent.getFreeUnit(), pUnitCity->getX(), pUnitCity->getY(), NO_UNITAI, NO_DIRECTION, GC.getGame().getSorenRandNum(10000, "AI Unit Birthmark"));
+					}
 				}
 			}
 		}
@@ -22401,6 +22415,11 @@ int CvPlayer::getEventCost(EventTypes eEvent, PlayerTypes eOtherPlayer, bool bRa
 		iGold += kEvent.getRandomGold();
 	}
 
+	if (kEvent.isGameSpeedScale())
+	{
+		iGold = iGold * GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getSpeedPercent() / 100;
+	}
+
 	const TechTypes eBestTech = getBestEventTech(eEvent, eOtherPlayer);
 
 	if (NO_TECH != eBestTech)
@@ -22432,7 +22451,7 @@ void CvPlayer::doEvents()
 
 	const bool bNewEventEligible =
 	(
-		GC.getGame().getElapsedGameTurns() >= GC.getDefineINT("FIRST_EVENT_DELAY_TURNS")
+		GC.getGame().getElapsedGameTurns() > 0
 		&&
 		GC.getGame().getSorenRandNum(GC.getDefineINT("EVENT_PROBABILITY_ROLL_SIDES"), "Global event check") < GC.getEraInfo(getCurrentEra()).getEventChancePerTurn()
 	);
@@ -22835,12 +22854,15 @@ bool CvPlayer::isEventTriggerPossible(EventTriggerTypes eTrigger, bool bIgnoreAc
 {
 	PROFILE_EXTRA_FUNC();
 	const CvEventTriggerInfo& kTrigger = GC.getEventTriggerInfo(eTrigger);
-	if (NO_HANDICAP != kTrigger.getMinDifficulty())
+
+	if (kTrigger.getProbability() == 0)
 	{
-		if (GC.getGame().getHandicapType() < kTrigger.getMinDifficulty())
-		{
-			return false;
-		}
+		return false;
+	}
+
+	if (NO_HANDICAP != kTrigger.getMinDifficulty() && GC.getGame().getHandicapType() < kTrigger.getMinDifficulty())
+	{
+		return false;
 	}
 
 	if (kTrigger.isSinglePlayer() && GC.getGame().isGameMultiPlayer())
@@ -22864,12 +22886,9 @@ bool CvPlayer::isEventTriggerPossible(EventTriggerTypes eTrigger, bool bIgnoreAc
 		}
 	}
 
-	if (!kTrigger.isRecurring())
+	if (!kTrigger.isRecurring() && isTriggerFired(eTrigger))
 	{
-		if (isTriggerFired(eTrigger))
-		{
-			return false;
-		}
+		return false;
 	}
 
 	if (kTrigger.getNumPrereqOrTechs() > 0)
@@ -22884,7 +22903,6 @@ bool CvPlayer::isEventTriggerPossible(EventTriggerTypes eTrigger, bool bIgnoreAc
 				break;
 			}
 		}
-
 		if (!bFoundValid)
 		{
 			return false;
@@ -22894,38 +22912,23 @@ bool CvPlayer::isEventTriggerPossible(EventTriggerTypes eTrigger, bool bIgnoreAc
 
 	if (kTrigger.getNumPrereqAndTechs() > 0)
 	{
-		bool bFoundValid = true;
-
 		for (int iI = 0; iI < kTrigger.getNumPrereqAndTechs(); iI++)
 		{
 			if (!GET_TEAM(getTeam()).isHasTech((TechTypes)(kTrigger.getPrereqAndTechs(iI))))
 			{
-				bFoundValid = false;
-				break;
+				return false;
 			}
-		}
-
-		if (!bFoundValid)
-		{
-			return false;
 		}
 	}
 
 	if (kTrigger.getNumPrereqEvents() > 0)
 	{
-		bool bFoundValid = true;
 		for (int iI = 0; iI < kTrigger.getNumPrereqEvents(); iI++)
 		{
 			if (!getEventOccured((EventTypes)kTrigger.getPrereqEvent(iI)))
 			{
-				bFoundValid = false;
-				break;
+				return false;
 			}
-		}
-
-		if (!bFoundValid)
-		{
-			return false;
 		}
 	}
 
@@ -22941,7 +22944,6 @@ bool CvPlayer::isEventTriggerPossible(EventTriggerTypes eTrigger, bool bIgnoreAc
 				break;
 			}
 		}
-
 		if (!bFoundValid)
 		{
 			return false;
@@ -22990,19 +22992,15 @@ bool CvPlayer::isEventTriggerPossible(EventTriggerTypes eTrigger, bool bIgnoreAc
 int CvPlayer::getEventTriggerWeight(EventTriggerTypes eTrigger) const
 {
 	PROFILE_EXTRA_FUNC();
+
 	if (!isEventTriggerPossible(eTrigger))
 	{
 		return 0;
 	}
-
 	const CvEventTriggerInfo& kTrigger = GC.getEventTriggerInfo(eTrigger);
 
-	if (kTrigger.getProbability() < 0)
-	{
-		return kTrigger.getProbability();
-	}
-
 	int iProbability = kTrigger.getProbability();
+	if (iProbability < 0) return -1;
 
 	if (kTrigger.isProbabilityUnitMultiply() && kTrigger.getNumUnits() > 0)
 	{
@@ -23020,10 +23018,8 @@ int CvPlayer::getEventTriggerWeight(EventTriggerTypes eTrigger) const
 				iNumBuildings += getBuildingCount((BuildingTypes)kTrigger.getBuildingRequired(i));
 			}
 		}
-
 		iProbability *= iNumBuildings;
 	}
-
 	return iProbability;
 }
 

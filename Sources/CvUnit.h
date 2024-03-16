@@ -583,8 +583,7 @@ public:
 	bool canTradeUnit(PlayerTypes eReceivingPlayer) const;
 
 	void tradeUnit(PlayerTypes eReceivingPlayer);
-	bool spyNuke(int iX, int iY, bool bCaught);
-	bool spyNukeAffected(const CvPlot* pPlot, TeamTypes eTeam, int iRange) const;
+	void spyNuke(int iX, int iY, bool bCaught);
 	bool canClaimTerritory(const CvPlot* pPlot) const;
 	bool claimTerritory();
 	int getMaxHurryFood() const;
@@ -695,7 +694,8 @@ public:
 	bool canAirliftAt(const CvPlot* pPlot, int iX, int iY) const;
 	bool airlift(int iX, int iY);
 
-	bool isNukeVictim(const CvPlot* pPlot, TeamTypes eTeam) const;
+	void nukeDiplomacy(bool* nukedTeams);
+	bool isNukeVictim(const CvPlot* pPlot, const TeamTypes eTeam, int iRange) const;
 	bool canNuke() const;
 	bool canNukeAt(const CvPlot* pPlot, int iX, int iY) const;
 	bool nuke(int iX, int iY, bool bTrap = false);

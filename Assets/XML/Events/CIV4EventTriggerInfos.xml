@@ -1,4 +1,15 @@
 <?xml version='1.0' encoding='UTF-8'?>
+<!-- 
+	iWeight
+		A negative value means the event will trigger at the beginning of a turn the moment all its requirements are met.
+		A value of 0 (same as not having the tag at all) means the event will never trigger.
+		The higher this value is, the more likely it is to trigger on the beginning of a turn.
+	bShowPlot
+		Its value defaults to 1 (true) if it is missing,
+			so remember to set it to 0 (false) for events that should not highlight a plot.
+	iMaxOurLandmass
+		Its value defaults to -1 if it is missing.
+-->
 <Civ4EventTriggerInfos xmlns="x-schema:../Schema/C2C_CIV4EventSchema.xml">
 	<EventTriggerInfos>
 		<EventTriggerInfo>
@@ -283,7 +294,7 @@
 			</TriggerTexts>
 			<EventArt>Art/Event_Images/WashedOutEvent.dds</EventArt>
 			<iPercentGamesActive>100</iPercentGamesActive>
-			<iWeight>100</iWeight>
+			<iWeight>10</iWeight>
 			<iNumPlotsRequired>1</iNumPlotsRequired>
 			<bOwnPlot>1</bOwnPlot>
 			<RoutesRequired>
@@ -328,19 +339,25 @@
 			<ObsoleteTechs>
 				<ObsoleteTech>TECH_GUNPOWDER</ObsoleteTech>
 			</ObsoleteTechs>
-			<bGlobal>1</bGlobal>
 		</EventTriggerInfo>
 		<EventTriggerInfo>
 			<Type>EVENTTRIGGER_MAN_NAMED_JED</Type>
+			<WorldNewsTexts>
+				<Text>TXT_KEY_EVENT_TRIGGER_MAN_NAMED_JED</Text>
+			</WorldNewsTexts>
 			<TriggerTexts>
 				<TriggerText>
 					<Text>TXT_KEY_EVENT_TRIGGER_MAN_NAMED_JED_1</Text>
 					<Era>NONE</Era>
 				</TriggerText>
+				<TriggerText>
+					<Text>TXT_KEY_EVENT_TRIGGER_MAN_NAMED_JED_2</Text>
+					<Era>NONE</Era>
+				</TriggerText>
 			</TriggerTexts>
 			<EventArt>Art/Event_Images/JedEvent.dds</EventArt>
 			<iPercentGamesActive>100</iPercentGamesActive>
-			<iWeight>5000</iWeight>
+			<iWeight>200</iWeight>
 			<bProbabilityUnitMultiply>1</bProbabilityUnitMultiply>
 			<UnitsRequired>
 				<UnitType>UNIT_SCOUT</UnitType>
@@ -357,7 +374,6 @@
 				<Event>EVENT_MAN_NAMED_JED_1</Event>
 				<Event>EVENT_MAN_NAMED_JED_2</Event>
 			</Events>
-			<bGlobal>1</bGlobal>
 		</EventTriggerInfo>
 		<EventTriggerInfo>
 			<Type>EVENTTRIGGER_INSPIRED_MISSION</Type>
@@ -372,7 +388,7 @@
 			</TriggerTexts>
 			<EventArt>Art/Event_Images/InspiredMissionEvent.dds</EventArt>
 			<iPercentGamesActive>100</iPercentGamesActive>
-			<iWeight>100</iWeight>
+			<iWeight>5</iWeight>
 			<bOwnPlot>1</bOwnPlot>
 			<iNumReligions>2</iNumReligions>
 			<bPickReligion>1</bPickReligion>
@@ -403,7 +419,7 @@
 			</TriggerTexts>
 			<EventArt>Art/Event_Images/HymnsAndSculpturesEvent.dds</EventArt>
 			<iPercentGamesActive>100</iPercentGamesActive>
-			<iWeight>200</iWeight>
+			<iWeight>2</iWeight>
 			<bProbabilityBuildingMultiply>1</bProbabilityBuildingMultiply>
 			<BuildingsRequired>
 				<Building>BUILDING_JEWISH_SYNAGOGUE</Building>
@@ -434,7 +450,6 @@
 			<Events>
 				<Event>EVENT_HYMNS_AND_SCULPTURES_1</Event>
 			</Events>
-			<bGlobal>1</bGlobal>
 			<bPickCity>1</bPickCity>
 		</EventTriggerInfo>
 		<EventTriggerInfo>
@@ -458,7 +473,7 @@
 			</TriggerTexts>
 			<EventArt>Art/Event_Images/CarelessApprenticeEvent.dds</EventArt>
 			<iPercentGamesActive>100</iPercentGamesActive>
-			<iWeight>200</iWeight>
+			<iWeight>3</iWeight>
 			<bProbabilityBuildingMultiply>1</bProbabilityBuildingMultiply>
 			<BuildingsRequired>
 				<Building>BUILDING_FORGE</Building>
@@ -475,9 +490,13 @@
 				<ObsoleteTech>TECH_ECOLOGY</ObsoleteTech>
 			</ObsoleteTechs>
 			<bPickCity>1</bPickCity>
+			<bRecurring>1</bRecurring>
 		</EventTriggerInfo>
 		<EventTriggerInfo>
 			<Type>EVENTTRIGGER_FAMINE</Type>
+			<WorldNewsTexts>
+				<Text>TXT_KEY_EVENT_TRIGGER_FAMINE</Text>
+			</WorldNewsTexts>
 			<TriggerTexts>
 				<TriggerText>
 					<Text>TXT_KEY_EVENT_TRIGGER_FAMINE_1</Text>
@@ -495,7 +514,7 @@
 			<EventArt>Art/Event_Images/FamineEvent.dds</EventArt>
 			<bSinglePlayer>1</bSinglePlayer>
 			<iPercentGamesActive>100</iPercentGamesActive>
-			<iWeight>50</iWeight>
+			<iWeight>6</iWeight>
 			<bOwnPlot>1</bOwnPlot>
 			<Events>
 				<Event>EVENT_FAMINE_1</Event>
@@ -584,6 +603,9 @@
 		-->
 		<EventTriggerInfo>
 			<Type>EVENTTRIGGER_BLESSED_SEA</Type>
+			<WorldNewsTexts>
+				<Text>TXT_KEY_EVENT_TRIGGER_BLESSED_SEA</Text>
+			</WorldNewsTexts>
 			<TriggerTexts>
 				<TriggerText>
 					<Text>TXT_KEY_EVENT_TRIGGER_BLESSED_SEA_1</Text>
@@ -655,7 +677,7 @@
 			<EventArt>Art/Event_Images/AirlinerCrashEvent.dds</EventArt>
 			<bSinglePlayer>1</bSinglePlayer>
 			<iPercentGamesActive>100</iPercentGamesActive>
-			<iWeight>300</iWeight>
+			<iWeight>3</iWeight>
 			<bOwnPlot>1</bOwnPlot>
 			<Events>
 				<Event>EVENT_AIRLINER_CRASH_1</Event>
@@ -690,7 +712,7 @@
 			</TriggerTexts>
 			<EventArt>Art/Event_Images/FarmBanditsEvent.dds</EventArt>
 			<iPercentGamesActive>100</iPercentGamesActive>
-			<iWeight>200</iWeight>
+			<iWeight>20</iWeight>
 			<iNumUnits>1</iNumUnits>
 			<iUnitDistanceWeight>-1</iUnitDistanceWeight>
 			<iNumPlotsRequired>1</iNumPlotsRequired>
@@ -778,6 +800,9 @@
 		</EventTriggerInfo>
 		<EventTriggerInfo>
 			<Type>EVENTTRIGGER_HOLY_MOUNTAIN</Type>
+			<WorldNewsTexts>
+				<Text>TXT_KEY_EVENT_TRIGGER_HOLY_MOUNTAIN</Text>
+			</WorldNewsTexts>
 			<TriggerTexts>
 				<TriggerText>
 					<Text>TXT_KEY_EVENT_TRIGGER_HOLY_MOUNTAIN_1</Text>
@@ -877,7 +902,7 @@
 			</TriggerTexts>
 			<EventArt>Art/Event_Images/HorticultureEvent.dds</EventArt>
 			<iPercentGamesActive>100</iPercentGamesActive>
-			<iWeight>200</iWeight>
+			<iWeight>100</iWeight>
 			<iNumPlotsRequired>1</iNumPlotsRequired>
 			<bOwnPlot>1</bOwnPlot>
 			<FeaturesRequired>
@@ -912,7 +937,7 @@
 			<EventArt>Art/Event_Images/FugitiveEvent.dds</EventArt>
 			<bSinglePlayer>1</bSinglePlayer>
 			<iPercentGamesActive>100</iPercentGamesActive>
-			<iWeight>200</iWeight>
+			<iWeight>10</iWeight>
 			<bOwnPlot>1</bOwnPlot>
 			<Events>
 				<Event>EVENT_FUGITIVE_1</Event>
@@ -922,7 +947,7 @@
 			<OrPreReqs>
 				<PrereqTech>TECH_FEUDALISM</PrereqTech>
 			</OrPreReqs>
-			<bGlobal>1</bGlobal>
+			<bRecurring>1</bRecurring>
 			<bPickPlayer>1</bPickPlayer>
 			<bShowPlot>0</bShowPlot>
 		</EventTriggerInfo>
@@ -947,14 +972,16 @@
 			</TriggerTexts>
 			<EventArt>Art/Event_Images/PestilenceEvent.dds</EventArt>
 			<iPercentGamesActive>100</iPercentGamesActive>
-			<iWeight>100</iWeight>
+			<iWeight>8</iWeight>
 			<iNumPlotsRequired>1</iNumPlotsRequired>
 			<bOwnPlot>1</bOwnPlot>
+			<bRecurring>1</bRecurring>
 			<ImprovementsRequired>
 				<ImprovementType>IMPROVEMENT_PASTURE</ImprovementType>
 			</ImprovementsRequired>
 			<Events>
 				<Event>EVENT_PESTILENCE_1</Event>
+				<Event>EVENT_PESTILENCE_2</Event>
 			</Events>
 			<bPickCity>1</bPickCity>
 		</EventTriggerInfo>
@@ -978,16 +1005,47 @@
 				</TriggerText>
 			</TriggerTexts>
 			<iPercentGamesActive>100</iPercentGamesActive>
-			<iWeight>100</iWeight>
+			<iWeight>8</iWeight>
 			<iNumPlotsRequired>1</iNumPlotsRequired>
 			<bOwnPlot>1</bOwnPlot>
+			<bRecurring>1</bRecurring>
 			<ImprovementsRequired>
 				<ImprovementType>IMPROVEMENT_PLANTATION</ImprovementType>
 			</ImprovementsRequired>
 			<Events>
 				<Event>EVENT_PESTILENCE_1</Event>
+				<Event>EVENT_PESTILENCE_2</Event>
 			</Events>
 			<bPickCity>1</bPickCity>
+		</EventTriggerInfo>
+		<EventTriggerInfo>
+			<Type>EVENTTRIGGER_PESTILENCE_3</Type>
+			<WorldNewsTexts>
+				<Text>TXT_KEY_EVENTTRIGGER_PESTILENCE</Text>
+			</WorldNewsTexts>
+			<TriggerTexts>
+				<TriggerText>
+					<Text>TXT_KEY_EVENT_TRIGGER_PESTILENCE_4</Text>
+					<Era>NONE</Era>
+				</TriggerText>
+				<TriggerText>
+					<Text>TXT_KEY_EVENT_TRIGGER_PESTILENCE_6</Text>
+					<Era>NONE</Era>
+				</TriggerText>
+			</TriggerTexts>
+			<iPercentGamesActive>100</iPercentGamesActive>
+			<iWeight>8</iWeight>
+			<iNumPlotsRequired>1</iNumPlotsRequired>
+			<bOwnPlot>1</bOwnPlot>
+			<ImprovementsRequired>
+				<ImprovementType>IMPROVEMENT_FARM</ImprovementType>
+			</ImprovementsRequired>
+			<Events>
+				<Event>EVENT_PESTILENCE_1</Event>
+				<Event>EVENT_PESTILENCE_2</Event>
+			</Events>
+			<bPickCity>1</bPickCity>
+			<bRecurring>1</bRecurring>
 		</EventTriggerInfo>
 		<EventTriggerInfo>
 			<Type>EVENTTRIGGER_MARATHON</Type>
@@ -1027,12 +1085,13 @@
 			<EventArt>Art/Event_Images/FauxPasEvent.dds</EventArt>
 			<bSinglePlayer>1</bSinglePlayer>
 			<iPercentGamesActive>100</iPercentGamesActive>
-			<iWeight>100</iWeight>
+			<iWeight>12</iWeight>
 			<bOwnPlot>1</bOwnPlot>
 			<Events>
 				<Event>EVENT_FAUX_PAS_1</Event>
+				<Event>EVENT_FAUX_PAS_2</Event>
 			</Events>
-			<bGlobal>1</bGlobal>
+			<bRecurring>1</bRecurring>
 			<bPickPlayer>1</bPickPlayer>
 			<bShowPlot>0</bShowPlot>
 		</EventTriggerInfo>
@@ -1098,7 +1157,7 @@
 			<EventArt>Art/Event_Images/JoyousWeddingEvent.dds</EventArt>
 			<bSinglePlayer>1</bSinglePlayer>
 			<iPercentGamesActive>100</iPercentGamesActive>
-			<iWeight>200</iWeight>
+			<iWeight>10</iWeight>
 			<bOwnPlot>1</bOwnPlot>
 			<bPickReligion>1</bPickReligion>
 			<bStateReligion>1</bStateReligion>
@@ -1108,6 +1167,7 @@
 				<Event>EVENT_JOYOUS_WEDDING_3</Event>
 			</Events>
 			<bPickPlayer>1</bPickPlayer>
+			<bRecurring>1</bRecurring>
 			<bOtherPlayerHasReligion>1</bOtherPlayerHasReligion>
 			<iOtherPlayerShareBorders>1</iOtherPlayerShareBorders>
 			<bShowPlot>0</bShowPlot>
@@ -1174,7 +1234,8 @@
 			<EventArt>Art/Event_Images/WeddingFeudEvent.dds</EventArt>
 			<bSinglePlayer>1</bSinglePlayer>
 			<iPercentGamesActive>100</iPercentGamesActive>
-			<iWeight>200</iWeight>
+			<iWeight>10</iWeight>
+			<bRecurring>1</bRecurring>
 			<bOwnPlot>1</bOwnPlot>
 			<bPickReligion>1</bPickReligion>
 			<bStateReligion>1</bStateReligion>
@@ -1250,10 +1311,12 @@
 			<EventArt>Art/Event_Images/LeftAtTheAltarEvent.dds</EventArt>
 			<bSinglePlayer>1</bSinglePlayer>
 			<iPercentGamesActive>100</iPercentGamesActive>
-			<iWeight>100</iWeight>
+			<iWeight>10</iWeight>
+			<bRecurring>1</bRecurring>
 			<bOwnPlot>1</bOwnPlot>
 			<Events>
 				<Event>EVENT_LEFT_AT_ALTAR_1</Event>
+				<Event>EVENT_LEFT_AT_ALTAR_2</Event>
 			</Events>
 			<bPickPlayer>1</bPickPlayer>
 			<iOtherPlayerShareBorders>1</iOtherPlayerShareBorders>
@@ -7530,33 +7593,6 @@
 			<bPickCity>1</bPickCity>
 		</EventTriggerInfo>
 		<EventTriggerInfo>
-			<Type>EVENTTRIGGER_PESTILENCE_3</Type>
-			<WorldNewsTexts>
-				<Text>TXT_KEY_EVENTTRIGGER_PESTILENCE</Text>
-			</WorldNewsTexts>
-			<TriggerTexts>
-				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_PESTILENCE_4</Text>
-					<Era>NONE</Era>
-				</TriggerText>
-				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_PESTILENCE_6</Text>
-					<Era>NONE</Era>
-				</TriggerText>
-			</TriggerTexts>
-			<iPercentGamesActive>100</iPercentGamesActive>
-			<iWeight>100</iWeight>
-			<iNumPlotsRequired>1</iNumPlotsRequired>
-			<bOwnPlot>1</bOwnPlot>
-			<ImprovementsRequired>
-				<ImprovementType>IMPROVEMENT_FARM</ImprovementType>
-			</ImprovementsRequired>
-			<Events>
-				<Event>EVENT_PESTILENCE_1</Event>
-			</Events>
-			<bPickCity>1</bPickCity>
-		</EventTriggerInfo>
-		<EventTriggerInfo>
 			<Type>EVENTTRIGGER_SEGMENTED_ARMOR</Type>
 			<WorldNewsTexts>
 				<Text>TXT_KEY_EVENTTRIGGER_SEGMENTED_ARMOR_1</Text>
@@ -9871,7 +9907,6 @@
 			</AndPreReqs>
 			<bGlobal>1</bGlobal>
 			<bShowPlot>0</bShowPlot>
-			<PythonCanDo/>
 			<EventArt>Art/Event_Images/Harry_Potter.dds</EventArt>
 		</EventTriggerInfo>
 		<EventTriggerInfo>
@@ -9919,7 +9954,6 @@
 			</AndPreReqs>
 			<bPickCity>1</bPickCity>
 			<bShowPlot>0</bShowPlot>
-			<PythonCanDo/>
 			<EventArt>Art/Event_Images/Geothermal.dds</EventArt>
 		</EventTriggerInfo>
 		<EventTriggerInfo>
@@ -9953,7 +9987,6 @@
 			</AndPreReqs>
 			<bPickCity>1</bPickCity>
 			<bShowPlot>0</bShowPlot>
-			<PythonCanDo/>
 			<EventArt>Art/Event_Images/Super_Virus.dds</EventArt>
 		</EventTriggerInfo>
 		<EventTriggerInfo>
@@ -10023,7 +10056,6 @@
 			</ObsoleteTechs>
 			<bPickCity>1</bPickCity>
 			<bShowPlot>0</bShowPlot>
-			<PythonCanDo/>
 			<EventArt>Art/Event_Images/Strike.dds</EventArt>
 		</EventTriggerInfo>
 		<!-- Other -->
@@ -10604,7 +10636,6 @@
 			</TriggerTexts>
 			<iPercentGamesActive>100</iPercentGamesActive>
 			<iWeight>10</iWeight>
-			<iMaxOurLandmass>-1</iMaxOurLandmass>
 			<iNumPlotsRequired>1</iNumPlotsRequired>
 			<TerrainsRequired>
 				<TerrainType>TERRAIN_ROCKY</TerrainType>
@@ -11132,60 +11163,21 @@
 				</TriggerText>
 			</TriggerTexts>
 			<EventArt>Art/event_images/BlarneyVisit.dds</EventArt>
-			<bSinglePlayer>0</bSinglePlayer>
 			<iPercentGamesActive>100</iPercentGamesActive>
 			<iWeight>-1</iWeight>
-			<bProbabilityUnitMultiply>0</bProbabilityUnitMultiply>
-			<bProbabilityBuildingMultiply>0</bProbabilityBuildingMultiply>
-			<Civic>NONE</Civic>
-			<iMinTreasury>0</iMinTreasury>
-			<iMinPopulation>0</iMinPopulation>
-			<iMaxPopulation>0</iMaxPopulation>
-			<iMinMapLandmass>0</iMinMapLandmass>
-			<iMinOurLandmass>0</iMinOurLandmass>
-			<iMaxOurLandmass>-1</iMaxOurLandmass>
-			<MinDifficulty>NONE</MinDifficulty>
-			<iAngry>0</iAngry>
-			<iUnhealthy>0</iUnhealthy>
-			<iNumUnits>0</iNumUnits>
-			<iNumUnitsGlobal>0</iNumUnitsGlobal>
-			<iUnitDamagedWeight>0</iUnitDamagedWeight>
-			<iUnitDistanceWeight>0</iUnitDistanceWeight>
-			<iUnitExperienceWeight>0</iUnitExperienceWeight>
-			<bUnitsOnPlot>0</bUnitsOnPlot>
 			<BuildingsRequired>
 				<Building>BUILDING_BLARNEY_CASTLE</Building>
 			</BuildingsRequired>
-			<iNumBuildings>0</iNumBuildings>
 			<iNumBuildingsGlobal>1</iNumBuildingsGlobal>
-			<iNumPlotsRequired>0</iNumPlotsRequired>
-			<bOwnPlot>0</bOwnPlot>
-			<iPlotType>-1</iPlotType>
-			<iNumReligions>0</iNumReligions>
-			<iNumCorporations>0</iNumCorporations>
-			<bPickReligion>0</bPickReligion>
-			<bStateReligion>0</bStateReligion>
-			<bHolyCity>0</bHolyCity>
-			<bPickCorporation>0</bPickCorporation>
-			<bHeadquarters>0</bHeadquarters>
 			<Events>
 				<Event>EVENT_BLARNEYVISIT_1</Event>
 			</Events>
-			<bPrereqEventPlot>0</bPrereqEventPlot>
 			<ObsoleteTechs>
 				<ObsoleteTech>TECH_TELEGRAPH</ObsoleteTech>
 			</ObsoleteTechs>
 			<bRecurring>1</bRecurring>
-			<bTeam>0</bTeam>
-			<bGlobal>0</bGlobal>
 			<bPickPlayer>1</bPickPlayer>
-			<bOtherPlayerWar>0</bOtherPlayerWar>
-			<bOtherPlayerHasReligion>0</bOtherPlayerHasReligion>
-			<bOtherPlayerHasOtherReligion>0</bOtherPlayerHasOtherReligion>
 			<bOtherPlayerAI>1</bOtherPlayerAI>
-			<iOtherPlayerShareBorders>0</iOtherPlayerShareBorders>
-			<OtherPlayerHasTech>NONE</OtherPlayerHasTech>
-			<bPickCity>0</bPickCity>
 			<bShowPlot>0</bShowPlot>
 			<PythonCanDo>canTriggerBlarneyVisit</PythonCanDo>
 		</EventTriggerInfo>
@@ -11201,58 +11193,17 @@
 				</TriggerText>
 			</TriggerTexts>
 			<EventArt>Art/event_images/DinoAttack.dds</EventArt>
-			<bSinglePlayer>0</bSinglePlayer>
 			<iPercentGamesActive>100</iPercentGamesActive>
 			<iWeight>20</iWeight>
-			<bProbabilityUnitMultiply>0</bProbabilityUnitMultiply>
-			<bProbabilityBuildingMultiply>0</bProbabilityBuildingMultiply>
-			<Civic>NONE</Civic>
-			<iMinTreasury>0</iMinTreasury>
-			<iMinPopulation>0</iMinPopulation>
-			<iMaxPopulation>0</iMaxPopulation>
-			<iMinMapLandmass>0</iMinMapLandmass>
-			<iMinOurLandmass>0</iMinOurLandmass>
-			<iMaxOurLandmass>-1</iMaxOurLandmass>
-			<MinDifficulty>NONE</MinDifficulty>
-			<iAngry>0</iAngry>
-			<iUnhealthy>0</iUnhealthy>
-			<iNumUnits>0</iNumUnits>
-			<iNumUnitsGlobal>0</iNumUnitsGlobal>
-			<iUnitDamagedWeight>0</iUnitDamagedWeight>
-			<iUnitDistanceWeight>0</iUnitDistanceWeight>
-			<iUnitExperienceWeight>0</iUnitExperienceWeight>
-			<bUnitsOnPlot>0</bUnitsOnPlot>
 			<BuildingsRequired>
 				<Building>BUILDING_DINOSAUR_PARK</Building>
 			</BuildingsRequired>
 			<iNumBuildings>1</iNumBuildings>
-			<iNumBuildingsGlobal>0</iNumBuildingsGlobal>
-			<iNumPlotsRequired>0</iNumPlotsRequired>
-			<bOwnPlot>0</bOwnPlot>
-			<iPlotType>-1</iPlotType>
-			<iNumReligions>0</iNumReligions>
-			<iNumCorporations>0</iNumCorporations>
-			<bPickReligion>0</bPickReligion>
-			<bStateReligion>0</bStateReligion>
-			<bHolyCity>0</bHolyCity>
-			<bPickCorporation>0</bPickCorporation>
-			<bHeadquarters>0</bHeadquarters>
 			<Events>
 				<Event>EVENT_DINO_ATTACK_2</Event>
 			</Events>
-			<bPrereqEventPlot>0</bPrereqEventPlot>
 			<bRecurring>1</bRecurring>
-			<bTeam>0</bTeam>
-			<bGlobal>0</bGlobal>
-			<bPickPlayer>0</bPickPlayer>
-			<bOtherPlayerWar>0</bOtherPlayerWar>
-			<bOtherPlayerHasReligion>0</bOtherPlayerHasReligion>
-			<bOtherPlayerHasOtherReligion>0</bOtherPlayerHasOtherReligion>
-			<bOtherPlayerAI>0</bOtherPlayerAI>
-			<iOtherPlayerShareBorders>0</iOtherPlayerShareBorders>
-			<OtherPlayerHasTech>NONE</OtherPlayerHasTech>
 			<bPickCity>1</bPickCity>
-			<bShowPlot>1</bShowPlot>
 		</EventTriggerInfo>
 		<EventTriggerInfo>
 			<Type>EVENTTRIGGER_NSLCHAMP</Type>
@@ -11266,58 +11217,17 @@
 				</TriggerText>
 			</TriggerTexts>
 			<EventArt>Art/event_images/nslchamp.dds</EventArt>
-			<bSinglePlayer>0</bSinglePlayer>
 			<iPercentGamesActive>100</iPercentGamesActive>
 			<iWeight>20</iWeight>
-			<bProbabilityUnitMultiply>0</bProbabilityUnitMultiply>
-			<bProbabilityBuildingMultiply>0</bProbabilityBuildingMultiply>
-			<Civic>NONE</Civic>
-			<iMinTreasury>0</iMinTreasury>
-			<iMinPopulation>0</iMinPopulation>
-			<iMaxPopulation>0</iMaxPopulation>
-			<iMinMapLandmass>0</iMinMapLandmass>
-			<iMinOurLandmass>0</iMinOurLandmass>
-			<iMaxOurLandmass>-1</iMaxOurLandmass>
-			<MinDifficulty>NONE</MinDifficulty>
-			<iAngry>0</iAngry>
-			<iUnhealthy>0</iUnhealthy>
-			<iNumUnits>0</iNumUnits>
-			<iNumUnitsGlobal>0</iNumUnitsGlobal>
-			<iUnitDamagedWeight>0</iUnitDamagedWeight>
-			<iUnitDistanceWeight>0</iUnitDistanceWeight>
-			<iUnitExperienceWeight>0</iUnitExperienceWeight>
-			<bUnitsOnPlot>0</bUnitsOnPlot>
 			<BuildingsRequired>
 				<Building>BUILDING_DISNEYLAND</Building>
 			</BuildingsRequired>
-			<iNumBuildings>0</iNumBuildings>
 			<iNumBuildingsGlobal>2</iNumBuildingsGlobal>
-			<iNumPlotsRequired>0</iNumPlotsRequired>
-			<bOwnPlot>0</bOwnPlot>
-			<iPlotType>-1</iPlotType>
-			<iNumReligions>0</iNumReligions>
-			<iNumCorporations>0</iNumCorporations>
-			<bPickReligion>0</bPickReligion>
-			<bStateReligion>0</bStateReligion>
-			<bHolyCity>0</bHolyCity>
-			<bPickCorporation>0</bPickCorporation>
-			<bHeadquarters>0</bHeadquarters>
 			<Events>
 				<Event>EVENT_NSL_CHAMP_1</Event>
 			</Events>
-			<bPrereqEventPlot>0</bPrereqEventPlot>
 			<bRecurring>1</bRecurring>
-			<bTeam>0</bTeam>
-			<bGlobal>0</bGlobal>
-			<bPickPlayer>0</bPickPlayer>
-			<bOtherPlayerWar>0</bOtherPlayerWar>
-			<bOtherPlayerHasReligion>0</bOtherPlayerHasReligion>
-			<bOtherPlayerHasOtherReligion>0</bOtherPlayerHasOtherReligion>
-			<bOtherPlayerAI>0</bOtherPlayerAI>
-			<iOtherPlayerShareBorders>0</iOtherPlayerShareBorders>
-			<OtherPlayerHasTech>NONE</OtherPlayerHasTech>
 			<bPickCity>1</bPickCity>
-			<bShowPlot>1</bShowPlot>
 		</EventTriggerInfo>
 		<EventTriggerInfo>
 			<Type>EVENTTRIGGER_VEGAS_JACKPOT</Type>
@@ -11331,58 +11241,17 @@
 				</TriggerText>
 			</TriggerTexts>
 			<EventArt>Art/event_images/jackpot.dds</EventArt>
-			<bSinglePlayer>0</bSinglePlayer>
 			<iPercentGamesActive>100</iPercentGamesActive>
 			<iWeight>20</iWeight>
-			<bProbabilityUnitMultiply>0</bProbabilityUnitMultiply>
-			<bProbabilityBuildingMultiply>0</bProbabilityBuildingMultiply>
-			<Civic>NONE</Civic>
-			<iMinTreasury>0</iMinTreasury>
-			<iMinPopulation>0</iMinPopulation>
-			<iMaxPopulation>0</iMaxPopulation>
-			<iMinMapLandmass>0</iMinMapLandmass>
-			<iMinOurLandmass>0</iMinOurLandmass>
-			<iMaxOurLandmass>-1</iMaxOurLandmass>
-			<MinDifficulty>NONE</MinDifficulty>
-			<iAngry>0</iAngry>
-			<iUnhealthy>0</iUnhealthy>
-			<iNumUnits>0</iNumUnits>
-			<iNumUnitsGlobal>0</iNumUnitsGlobal>
-			<iUnitDamagedWeight>0</iUnitDamagedWeight>
-			<iUnitDistanceWeight>0</iUnitDistanceWeight>
-			<iUnitExperienceWeight>0</iUnitExperienceWeight>
-			<bUnitsOnPlot>0</bUnitsOnPlot>
 			<BuildingsRequired>
 				<Building>BUILDING_LAS_VEGAS_STRIP</Building>
 			</BuildingsRequired>
-			<iNumBuildings>0</iNumBuildings>
 			<iNumBuildingsGlobal>1</iNumBuildingsGlobal>
-			<iNumPlotsRequired>0</iNumPlotsRequired>
-			<bOwnPlot>0</bOwnPlot>
-			<iPlotType>-1</iPlotType>
-			<iNumReligions>0</iNumReligions>
-			<iNumCorporations>0</iNumCorporations>
-			<bPickReligion>0</bPickReligion>
-			<bStateReligion>0</bStateReligion>
-			<bHolyCity>0</bHolyCity>
-			<bPickCorporation>0</bPickCorporation>
-			<bHeadquarters>0</bHeadquarters>
 			<Events>
 				<Event>EVENT_VEGAS_JACKPOT_2</Event>
 			</Events>
-			<bPrereqEventPlot>0</bPrereqEventPlot>
 			<bRecurring>1</bRecurring>
-			<bTeam>0</bTeam>
-			<bGlobal>0</bGlobal>
-			<bPickPlayer>0</bPickPlayer>
-			<bOtherPlayerWar>0</bOtherPlayerWar>
-			<bOtherPlayerHasReligion>0</bOtherPlayerHasReligion>
-			<bOtherPlayerHasOtherReligion>0</bOtherPlayerHasOtherReligion>
-			<bOtherPlayerAI>0</bOtherPlayerAI>
-			<iOtherPlayerShareBorders>0</iOtherPlayerShareBorders>
-			<OtherPlayerHasTech>NONE</OtherPlayerHasTech>
 			<bPickCity>1</bPickCity>
-			<bShowPlot>1</bShowPlot>
 		</EventTriggerInfo>
 		<EventTriggerInfo>
 			<Type>EVENTTRIGGER_BREAK_THE_BANK</Type>
@@ -11396,58 +11265,17 @@
 				</TriggerText>
 			</TriggerTexts>
 			<EventArt>Art/event_images/jackpot.dds</EventArt>
-			<bSinglePlayer>0</bSinglePlayer>
 			<iPercentGamesActive>100</iPercentGamesActive>
 			<iWeight>20</iWeight>
-			<bProbabilityUnitMultiply>0</bProbabilityUnitMultiply>
-			<bProbabilityBuildingMultiply>0</bProbabilityBuildingMultiply>
-			<Civic>NONE</Civic>
-			<iMinTreasury>0</iMinTreasury>
-			<iMinPopulation>0</iMinPopulation>
-			<iMaxPopulation>0</iMaxPopulation>
-			<iMinMapLandmass>0</iMinMapLandmass>
-			<iMinOurLandmass>0</iMinOurLandmass>
-			<iMaxOurLandmass>-1</iMaxOurLandmass>
-			<MinDifficulty>NONE</MinDifficulty>
-			<iAngry>0</iAngry>
-			<iUnhealthy>0</iUnhealthy>
-			<iNumUnits>0</iNumUnits>
-			<iNumUnitsGlobal>0</iNumUnitsGlobal>
-			<iUnitDamagedWeight>0</iUnitDamagedWeight>
-			<iUnitDistanceWeight>0</iUnitDistanceWeight>
-			<iUnitExperienceWeight>0</iUnitExperienceWeight>
-			<bUnitsOnPlot>0</bUnitsOnPlot>
 			<BuildingsRequired>
 				<Building>BUILDING_MONTE_CARLO</Building>
 			</BuildingsRequired>
-			<iNumBuildings>0</iNumBuildings>
 			<iNumBuildingsGlobal>1</iNumBuildingsGlobal>
-			<iNumPlotsRequired>0</iNumPlotsRequired>
-			<bOwnPlot>0</bOwnPlot>
-			<iPlotType>-1</iPlotType>
-			<iNumReligions>0</iNumReligions>
-			<iNumCorporations>0</iNumCorporations>
-			<bPickReligion>0</bPickReligion>
-			<bStateReligion>0</bStateReligion>
-			<bHolyCity>0</bHolyCity>
-			<bPickCorporation>0</bPickCorporation>
-			<bHeadquarters>0</bHeadquarters>
 			<Events>
 				<Event>EVENT_BREAK_THE_BANK_2</Event>
 			</Events>
-			<bPrereqEventPlot>0</bPrereqEventPlot>
 			<bRecurring>1</bRecurring>
-			<bTeam>0</bTeam>
-			<bGlobal>0</bGlobal>
-			<bPickPlayer>0</bPickPlayer>
-			<bOtherPlayerWar>0</bOtherPlayerWar>
-			<bOtherPlayerHasReligion>0</bOtherPlayerHasReligion>
-			<bOtherPlayerHasOtherReligion>0</bOtherPlayerHasOtherReligion>
-			<bOtherPlayerAI>0</bOtherPlayerAI>
-			<iOtherPlayerShareBorders>0</iOtherPlayerShareBorders>
-			<OtherPlayerHasTech>NONE</OtherPlayerHasTech>
 			<bPickCity>1</bPickCity>
-			<bShowPlot>1</bShowPlot>
 		</EventTriggerInfo>
 		<EventTriggerInfo>
 			<Type>EVENTTRIGGER_MEGA_ATTACK</Type>
@@ -11461,58 +11289,17 @@
 				</TriggerText>
 			</TriggerTexts>
 			<EventArt>Art/event_images/MegaAttack.dds</EventArt>
-			<bSinglePlayer>0</bSinglePlayer>
 			<iPercentGamesActive>100</iPercentGamesActive>
 			<iWeight>20</iWeight>
-			<bProbabilityUnitMultiply>0</bProbabilityUnitMultiply>
-			<bProbabilityBuildingMultiply>0</bProbabilityBuildingMultiply>
-			<Civic>NONE</Civic>
-			<iMinTreasury>0</iMinTreasury>
-			<iMinPopulation>0</iMinPopulation>
-			<iMaxPopulation>0</iMaxPopulation>
-			<iMinMapLandmass>0</iMinMapLandmass>
-			<iMinOurLandmass>0</iMinOurLandmass>
-			<iMaxOurLandmass>-1</iMaxOurLandmass>
-			<MinDifficulty>NONE</MinDifficulty>
-			<iAngry>0</iAngry>
-			<iUnhealthy>0</iUnhealthy>
-			<iNumUnits>0</iNumUnits>
-			<iNumUnitsGlobal>0</iNumUnitsGlobal>
-			<iUnitDamagedWeight>0</iUnitDamagedWeight>
-			<iUnitDistanceWeight>0</iUnitDistanceWeight>
-			<iUnitExperienceWeight>0</iUnitExperienceWeight>
-			<bUnitsOnPlot>0</bUnitsOnPlot>
 			<BuildingsRequired>
 				<Building>BUILDING_PLEISTOCENE_PARK</Building>
 			</BuildingsRequired>
 			<iNumBuildings>1</iNumBuildings>
-			<iNumBuildingsGlobal>0</iNumBuildingsGlobal>
-			<iNumPlotsRequired>0</iNumPlotsRequired>
-			<bOwnPlot>0</bOwnPlot>
-			<iPlotType>-1</iPlotType>
-			<iNumReligions>0</iNumReligions>
-			<iNumCorporations>0</iNumCorporations>
-			<bPickReligion>0</bPickReligion>
-			<bStateReligion>0</bStateReligion>
-			<bHolyCity>0</bHolyCity>
-			<bPickCorporation>0</bPickCorporation>
-			<bHeadquarters>0</bHeadquarters>
 			<Events>
 				<Event>EVENT_MEGA_ATTACK_2</Event>
 			</Events>
-			<bPrereqEventPlot>0</bPrereqEventPlot>
 			<bRecurring>1</bRecurring>
-			<bTeam>0</bTeam>
-			<bGlobal>0</bGlobal>
-			<bPickPlayer>0</bPickPlayer>
-			<bOtherPlayerWar>0</bOtherPlayerWar>
-			<bOtherPlayerHasReligion>0</bOtherPlayerHasReligion>
-			<bOtherPlayerHasOtherReligion>0</bOtherPlayerHasOtherReligion>
-			<bOtherPlayerAI>0</bOtherPlayerAI>
-			<iOtherPlayerShareBorders>0</iOtherPlayerShareBorders>
-			<OtherPlayerHasTech>NONE</OtherPlayerHasTech>
 			<bPickCity>1</bPickCity>
-			<bShowPlot>1</bShowPlot>
 		</EventTriggerInfo>
 		<EventTriggerInfo>
 			<Type>EVENTTRIGGER_SUMMER_OF_LOVE</Type>
@@ -11526,57 +11313,15 @@
 				</TriggerText>
 			</TriggerTexts>
 			<EventArt>Art/event_images/summeroflove.dds</EventArt>
-			<bSinglePlayer>0</bSinglePlayer>
 			<iPercentGamesActive>100</iPercentGamesActive>
 			<iWeight>-1</iWeight>
-			<bProbabilityUnitMultiply>0</bProbabilityUnitMultiply>
-			<bProbabilityBuildingMultiply>0</bProbabilityBuildingMultiply>
-			<Civic>NONE</Civic>
-			<iMinTreasury>0</iMinTreasury>
-			<iMinPopulation>0</iMinPopulation>
-			<iMaxPopulation>0</iMaxPopulation>
-			<iMinMapLandmass>0</iMinMapLandmass>
-			<iMinOurLandmass>0</iMinOurLandmass>
-			<iMaxOurLandmass>-1</iMaxOurLandmass>
-			<MinDifficulty>NONE</MinDifficulty>
-			<iAngry>0</iAngry>
-			<iUnhealthy>0</iUnhealthy>
-			<iNumUnits>0</iNumUnits>
-			<iNumUnitsGlobal>0</iNumUnitsGlobal>
-			<iUnitDamagedWeight>0</iUnitDamagedWeight>
-			<iUnitDistanceWeight>0</iUnitDistanceWeight>
-			<iUnitExperienceWeight>0</iUnitExperienceWeight>
-			<bUnitsOnPlot>0</bUnitsOnPlot>
 			<BuildingsRequired>
 				<Building>BUILDING_WOODSTOCK</Building>
 			</BuildingsRequired>
-			<iNumBuildings>0</iNumBuildings>
 			<iNumBuildingsGlobal>1</iNumBuildingsGlobal>
-			<iNumPlotsRequired>0</iNumPlotsRequired>
-			<bOwnPlot>0</bOwnPlot>
-			<iPlotType>-1</iPlotType>
-			<iNumReligions>0</iNumReligions>
-			<iNumCorporations>0</iNumCorporations>
-			<bPickReligion>0</bPickReligion>
-			<bStateReligion>0</bStateReligion>
-			<bHolyCity>0</bHolyCity>
-			<bPickCorporation>0</bPickCorporation>
-			<bHeadquarters>0</bHeadquarters>
 			<Events>
 				<Event>EVENT_SUMMER_OF_LOVE</Event>
 			</Events>
-			<bPrereqEventPlot>0</bPrereqEventPlot>
-			<bRecurring>0</bRecurring>
-			<bTeam>0</bTeam>
-			<bGlobal>0</bGlobal>
-			<bPickPlayer>0</bPickPlayer>
-			<bOtherPlayerWar>0</bOtherPlayerWar>
-			<bOtherPlayerHasReligion>0</bOtherPlayerHasReligion>
-			<bOtherPlayerHasOtherReligion>0</bOtherPlayerHasOtherReligion>
-			<bOtherPlayerAI>0</bOtherPlayerAI>
-			<iOtherPlayerShareBorders>0</iOtherPlayerShareBorders>
-			<OtherPlayerHasTech>NONE</OtherPlayerHasTech>
-			<bPickCity>0</bPickCity>
 			<bShowPlot>0</bShowPlot>
 		</EventTriggerInfo>
 		<EventTriggerInfo>
@@ -11590,14 +11335,12 @@
 			<iPercentGamesActive>100</iPercentGamesActive>
 			<iWeight>20</iWeight>
 			<bProbabilityUnitMultiply>1</bProbabilityUnitMultiply>
-			<iMaxOurLandmass>-1</iMaxOurLandmass>
 			<UnitsRequired>
 				<UnitType>UNIT_CHASER</UnitType>
 				<UnitType>UNIT_TRACKER</UnitType>
 				<UnitType>UNIT_HUNTER</UnitType>
 			</UnitsRequired>
 			<iNumUnits>4</iNumUnits>
-			<iPlotType>-1</iPlotType>
 			<Events>
 				<Event>EVENT_BEST_HUNTERS_1</Event>
 				<Event>EVENT_BEST_HUNTERS_2</Event>
@@ -11609,7 +11352,6 @@
 			<ObsoleteTechs>
 				<ObsoleteTech>TECH_SEDENTARY_LIFESTYLE</ObsoleteTech>
 			</ObsoleteTechs>
-			<bShowPlot>1</bShowPlot>
 		</EventTriggerInfo>
 		<EventTriggerInfo>
 			<Type>EVENTTRIGGER_CIVIL_WAR</Type>
@@ -11622,73 +11364,17 @@
 					<Era>NONE</Era>
 				</TriggerText>
 			</TriggerTexts>
-			<bSinglePlayer>0</bSinglePlayer>
 			<iPercentGamesActive>0</iPercentGamesActive>
 			<iWeight>-1</iWeight>
-			<bProbabilityUnitMultiply>0</bProbabilityUnitMultiply>
-			<bProbabilityBuildingMultiply>0</bProbabilityBuildingMultiply>
-			<Civic>NONE</Civic>
-			<iMinTreasury>0</iMinTreasury>
-			<iMinPopulation>0</iMinPopulation>
-			<iMaxPopulation>0</iMaxPopulation>
-			<iMinMapLandmass>0</iMinMapLandmass>
-			<iMinOurLandmass>0</iMinOurLandmass>
-			<iMaxOurLandmass>-1</iMaxOurLandmass>
-			<MinDifficulty>NONE</MinDifficulty>
 			<iAngry>3</iAngry>
-			<iUnhealthy>0</iUnhealthy>
-			<iNumUnits>0</iNumUnits>
-			<iNumUnitsGlobal>0</iNumUnitsGlobal>
-			<iUnitDamagedWeight>0</iUnitDamagedWeight>
-			<iUnitDistanceWeight>0</iUnitDistanceWeight>
-			<iUnitExperienceWeight>0</iUnitExperienceWeight>
-			<bUnitsOnPlot>0</bUnitsOnPlot>
-			<BuildingsRequired/>
-			<iNumBuildings>0</iNumBuildings>
-			<iNumBuildingsGlobal>0</iNumBuildingsGlobal>
-			<iNumPlotsRequired>0</iNumPlotsRequired>
-			<bOwnPlot>0</bOwnPlot>
-			<iPlotType>-1</iPlotType>
-			<FeaturesRequired/>
-			<TerrainsRequired/>
-			<ImprovementsRequired/>
-			<BonusesRequired/>
-			<RoutesRequired/>
-			<ReligionsRequired/>
-			<iNumReligions>0</iNumReligions>
-			<CorporationsRequired/>
-			<iNumCorporations>0</iNumCorporations>
-			<bPickReligion>0</bPickReligion>
-			<bStateReligion>0</bStateReligion>
-			<bHolyCity>0</bHolyCity>
-			<bPickCorporation>0</bPickCorporation>
-			<bHeadquarters>0</bHeadquarters>
 			<Events>
 				<Event>EVENT_CIVIL_WAR</Event>
 			</Events>
-			<PrereqEvents/>
-			<bPrereqEventPlot>0</bPrereqEventPlot>
 			<OrPreReqs/>
-			<AndPreReqs/>
-			<ObsoleteTechs/>
 			<bRecurring>1</bRecurring>
-			<bTeam>0</bTeam>
-			<bGlobal>0</bGlobal>
-			<bPickPlayer>0</bPickPlayer>
-			<bOtherPlayerWar>0</bOtherPlayerWar>
-			<bOtherPlayerHasReligion>0</bOtherPlayerHasReligion>
-			<bOtherPlayerHasOtherReligion>0</bOtherPlayerHasOtherReligion>
-			<bOtherPlayerAI>0</bOtherPlayerAI>
-			<iOtherPlayerShareBorders>0</iOtherPlayerShareBorders>
-			<OtherPlayerHasTech>NONE</OtherPlayerHasTech>
 			<bPickCity>1</bPickCity>
-			<bPickOtherPlayerCity>0</bPickOtherPlayerCity>
 			<bShowPlot>0</bShowPlot>
-			<iCityFoodWeight>0</iCityFoodWeight>
 			<PythonCanDo>canTriggerCivilWar</PythonCanDo>
-			<PythonCanDoCity/>
-			<PythonCanDoUnit/>
-			<PythonCallback/>
 		</EventTriggerInfo>
 		<EventTriggerInfo>
 			<Type>EVENTTRIGGER_CLAY</Type>
@@ -11702,77 +11388,19 @@
 				</TriggerText>
 			</TriggerTexts>
 			<EventArt>Art/Event_Images/clayevent.dds</EventArt>
-			<bSinglePlayer>0</bSinglePlayer>
 			<iPercentGamesActive>100</iPercentGamesActive>
 			<iWeight>100</iWeight>
-			<bProbabilityUnitMultiply>0</bProbabilityUnitMultiply>
-			<bProbabilityBuildingMultiply>0</bProbabilityBuildingMultiply>
-			<Civic>NONE</Civic>
-			<iMinTreasury>0</iMinTreasury>
-			<iMinPopulation>0</iMinPopulation>
-			<iMaxPopulation>0</iMaxPopulation>
-			<iMinMapLandmass>0</iMinMapLandmass>
-			<iMinOurLandmass>0</iMinOurLandmass>
-			<iMaxOurLandmass>-1</iMaxOurLandmass>
-			<MinDifficulty>NONE</MinDifficulty>
-			<iAngry>0</iAngry>
-			<iUnhealthy>0</iUnhealthy>
-			<iNumUnits>0</iNumUnits>
-			<iNumUnitsGlobal>0</iNumUnitsGlobal>
-			<iUnitDamagedWeight>0</iUnitDamagedWeight>
-			<iUnitDistanceWeight>0</iUnitDistanceWeight>
-			<iUnitExperienceWeight>0</iUnitExperienceWeight>
-			<bUnitsOnPlot>0</bUnitsOnPlot>
-			<BuildingsRequired/>
-			<iNumBuildings>0</iNumBuildings>
-			<iNumBuildingsGlobal>0</iNumBuildingsGlobal>
-			<iNumPlotsRequired>0</iNumPlotsRequired>
 			<bOwnPlot>1</bOwnPlot>
-			<iPlotType>-1</iPlotType>
 			<FeaturesRequired>
 				<FeatureType>FEATURE_FLOOD_PLAINS</FeatureType>
 			</FeaturesRequired>
-			<TerrainsRequired/>
-			<ImprovementsRequired/>
-			<BonusesRequired/>
-			<RoutesRequired/>
-			<ReligionsRequired/>
-			<iNumReligions>0</iNumReligions>
-			<CorporationsRequired/>
-			<iNumCorporations>0</iNumCorporations>
-			<bPickReligion>0</bPickReligion>
-			<bStateReligion>0</bStateReligion>
-			<bHolyCity>0</bHolyCity>
-			<bPickCorporation>0</bPickCorporation>
-			<bHeadquarters>0</bHeadquarters>
 			<Events>
 				<Event>EVENT_CLAY_1</Event>
 			</Events>
-			<PrereqEvents/>
-			<bPrereqEventPlot>0</bPrereqEventPlot>
 			<OrPreReqs>
 				<PrereqTech>TECH_POTTERY</PrereqTech>
 			</OrPreReqs>
-			<AndPreReqs/>
-			<ObsoleteTechs/>
-			<bRecurring>0</bRecurring>
-			<bTeam>0</bTeam>
 			<bGlobal>1</bGlobal>
-			<bPickPlayer>0</bPickPlayer>
-			<bOtherPlayerWar>0</bOtherPlayerWar>
-			<bOtherPlayerHasReligion>0</bOtherPlayerHasReligion>
-			<bOtherPlayerHasOtherReligion>0</bOtherPlayerHasOtherReligion>
-			<bOtherPlayerAI>0</bOtherPlayerAI>
-			<iOtherPlayerShareBorders>0</iOtherPlayerShareBorders>
-			<OtherPlayerHasTech>NONE</OtherPlayerHasTech>
-			<bPickCity>0</bPickCity>
-			<bPickOtherPlayerCity>0</bPickOtherPlayerCity>
-			<bShowPlot>1</bShowPlot>
-			<iCityFoodWeight>0</iCityFoodWeight>
-			<PythonCanDo/>
-			<PythonCanDoCity/>
-			<PythonCanDoUnit/>
-			<PythonCallback/>
 		</EventTriggerInfo>
 		<EventTriggerInfo>
 			<Type>EVENTTRIGGER_COOKING</Type>
@@ -11788,12 +11416,10 @@
 			<iPercentGamesActive>100</iPercentGamesActive>
 			<iWeight>200</iWeight>
 			<bProbabilityBuildingMultiply>1</bProbabilityBuildingMultiply>
-			<iMaxOurLandmass>-1</iMaxOurLandmass>
 			<BuildingsRequired>
 				<Building>BUILDING_FIRE_PIT</Building>
 			</BuildingsRequired>
 			<iNumBuildings>1</iNumBuildings>
-			<iPlotType>-1</iPlotType>
 			<Events>
 				<Event>EVENT_COOKING</Event>
 			</Events>
@@ -11813,70 +11439,22 @@
 					<Era>NONE</Era>
 				</TriggerText>
 			</TriggerTexts>
-			<bSinglePlayer>0</bSinglePlayer>
 			<iPercentGamesActive>100</iPercentGamesActive>
 			<iWeight>200</iWeight>
-			<bProbabilityUnitMultiply>0</bProbabilityUnitMultiply>
-			<bProbabilityBuildingMultiply>0</bProbabilityBuildingMultiply>
 			<Civic>CIVIC_ORAL_TRADITION</Civic>
-			<iMinTreasury>0</iMinTreasury>
-			<iMinPopulation>0</iMinPopulation>
-			<iMaxPopulation>0</iMaxPopulation>
-			<iMinMapLandmass>0</iMinMapLandmass>
-			<iMinOurLandmass>0</iMinOurLandmass>
-			<iMaxOurLandmass>-1</iMaxOurLandmass>
-			<MinDifficulty>NONE</MinDifficulty>
-			<iAngry>0</iAngry>
-			<iUnhealthy>0</iUnhealthy>
-			<iNumUnits>0</iNumUnits>
-			<iNumUnitsGlobal>0</iNumUnitsGlobal>
-			<iUnitDamagedWeight>0</iUnitDamagedWeight>
-			<iUnitDistanceWeight>0</iUnitDistanceWeight>
-			<iUnitExperienceWeight>0</iUnitExperienceWeight>
-			<bUnitsOnPlot>0</bUnitsOnPlot>
 			<BuildingsRequired>
 				<Building>BUILDING_KNOWLEDGE_INHERITANCE</Building>
 			</BuildingsRequired>
 			<iNumBuildings>1</iNumBuildings>
-			<iNumBuildingsGlobal>0</iNumBuildingsGlobal>
-			<iNumPlotsRequired>0</iNumPlotsRequired>
 			<bOwnPlot>1</bOwnPlot>
-			<iPlotType>-1</iPlotType>
-			<FeaturesRequired/>
-			<TerrainsRequired/>
-			<ImprovementsRequired/>
-			<BonusesRequired/>
-			<RoutesRequired/>
-			<ReligionsRequired/>
-			<iNumReligions>0</iNumReligions>
-			<CorporationsRequired/>
-			<iNumCorporations>0</iNumCorporations>
-			<bPickReligion>0</bPickReligion>
-			<bStateReligion>0</bStateReligion>
-			<bHolyCity>0</bHolyCity>
-			<bPickCorporation>0</bPickCorporation>
-			<bHeadquarters>0</bHeadquarters>
 			<Events>
 				<Event>EVENT_KNOWLEDGE_INHERITANCE_1</Event>
 				<Event>EVENT_KNOWLEDGE_INHERITANCE_2</Event>
 			</Events>
-			<PrereqEvents/>
-			<bPrereqEventPlot>0</bPrereqEventPlot>
 			<OrPreReqs/>
-			<AndPreReqs/>
 			<ObsoleteTechs>
 				<ObsoleteTech>TECH_WRITING</ObsoleteTech>
 			</ObsoleteTechs>
-			<bRecurring>0</bRecurring>
-			<bTeam>0</bTeam>
-			<bGlobal>0</bGlobal>
-			<bPickPlayer>0</bPickPlayer>
-			<bOtherPlayerWar>0</bOtherPlayerWar>
-			<bOtherPlayerHasReligion>0</bOtherPlayerHasReligion>
-			<bOtherPlayerHasOtherReligion>0</bOtherPlayerHasOtherReligion>
-			<bOtherPlayerAI>0</bOtherPlayerAI>
-			<iOtherPlayerShareBorders>0</iOtherPlayerShareBorders>
-			<OtherPlayerHasTech>NONE</OtherPlayerHasTech>
 			<bPickCity>1</bPickCity>
 		</EventTriggerInfo>
 		<EventTriggerInfo>
@@ -11891,77 +11469,20 @@
 				</TriggerText>
 			</TriggerTexts>
 			<EventArt>Art/Event_Images/peatevent.dds</EventArt>
-			<bSinglePlayer>0</bSinglePlayer>
 			<iPercentGamesActive>100</iPercentGamesActive>
 			<iWeight>150</iWeight>
-			<bProbabilityUnitMultiply>0</bProbabilityUnitMultiply>
-			<bProbabilityBuildingMultiply>0</bProbabilityBuildingMultiply>
-			<Civic>NONE</Civic>
-			<iMinTreasury>0</iMinTreasury>
-			<iMinPopulation>0</iMinPopulation>
-			<iMaxPopulation>0</iMaxPopulation>
-			<iMinMapLandmass>0</iMinMapLandmass>
-			<iMinOurLandmass>0</iMinOurLandmass>
-			<iMaxOurLandmass>-1</iMaxOurLandmass>
-			<MinDifficulty>NONE</MinDifficulty>
-			<iAngry>0</iAngry>
-			<iUnhealthy>0</iUnhealthy>
-			<iNumUnits>0</iNumUnits>
-			<iNumUnitsGlobal>0</iNumUnitsGlobal>
-			<iUnitDamagedWeight>0</iUnitDamagedWeight>
-			<iUnitDistanceWeight>0</iUnitDistanceWeight>
-			<iUnitExperienceWeight>0</iUnitExperienceWeight>
-			<bUnitsOnPlot>0</bUnitsOnPlot>
-			<BuildingsRequired/>
-			<iNumBuildings>0</iNumBuildings>
-			<iNumBuildingsGlobal>0</iNumBuildingsGlobal>
 			<iNumPlotsRequired>1</iNumPlotsRequired>
 			<bOwnPlot>1</bOwnPlot>
-			<iPlotType>-1</iPlotType>
 			<FeaturesRequired>
 				<FeatureType>FEATURE_SWAMP</FeatureType>
 			</FeaturesRequired>
-			<TerrainsRequired/>
-			<ImprovementsRequired/>
-			<BonusesRequired/>
-			<RoutesRequired/>
-			<ReligionsRequired/>
-			<iNumReligions>0</iNumReligions>
-			<CorporationsRequired/>
-			<iNumCorporations>0</iNumCorporations>
-			<bPickReligion>0</bPickReligion>
-			<bStateReligion>0</bStateReligion>
-			<bHolyCity>0</bHolyCity>
-			<bPickCorporation>0</bPickCorporation>
-			<bHeadquarters>0</bHeadquarters>
 			<Events>
 				<Event>EVENT_PEAT_1</Event>
 			</Events>
-			<PrereqEvents/>
-			<bPrereqEventPlot>0</bPrereqEventPlot>
 			<OrPreReqs>
 				<PrereqTech>TECH_AGRICULTURAL_TOOLS</PrereqTech>
 			</OrPreReqs>
-			<AndPreReqs/>
-			<ObsoleteTechs/>
-			<bRecurring>0</bRecurring>
-			<bTeam>0</bTeam>
 			<bGlobal>1</bGlobal>
-			<bPickPlayer>0</bPickPlayer>
-			<bOtherPlayerWar>0</bOtherPlayerWar>
-			<bOtherPlayerHasReligion>0</bOtherPlayerHasReligion>
-			<bOtherPlayerHasOtherReligion>0</bOtherPlayerHasOtherReligion>
-			<bOtherPlayerAI>0</bOtherPlayerAI>
-			<iOtherPlayerShareBorders>0</iOtherPlayerShareBorders>
-			<OtherPlayerHasTech>NONE</OtherPlayerHasTech>
-			<bPickCity>0</bPickCity>
-			<bPickOtherPlayerCity>0</bPickOtherPlayerCity>
-			<bShowPlot>1</bShowPlot>
-			<iCityFoodWeight>0</iCityFoodWeight>
-			<PythonCanDo/>
-			<PythonCanDoCity/>
-			<PythonCanDoUnit/>
-			<PythonCallback/>
 		</EventTriggerInfo>
 		<EventTriggerInfo>
 			<Type>EVENTTRIGGER_SCHOLARS</Type>
@@ -11974,80 +11495,20 @@
 					<Era>NONE</Era>
 				</TriggerText>
 			</TriggerTexts>
-			<bSinglePlayer>0</bSinglePlayer>
 			<iPercentGamesActive>100</iPercentGamesActive>
 			<iWeight>400</iWeight>
-			<bProbabilityUnitMultiply>0</bProbabilityUnitMultiply>
-			<bProbabilityBuildingMultiply>0</bProbabilityBuildingMultiply>
-			<Civic>NONE</Civic>
-			<iMinTreasury>0</iMinTreasury>
-			<iMinPopulation>0</iMinPopulation>
-			<iMaxPopulation>0</iMaxPopulation>
-			<iMinMapLandmass>0</iMinMapLandmass>
-			<iMinOurLandmass>0</iMinOurLandmass>
-			<iMaxOurLandmass>-1</iMaxOurLandmass>
-			<MinDifficulty>NONE</MinDifficulty>
-			<iAngry>0</iAngry>
-			<iUnhealthy>0</iUnhealthy>
-			<iNumUnits>0</iNumUnits>
-			<iNumUnitsGlobal>0</iNumUnitsGlobal>
-			<iUnitDamagedWeight>0</iUnitDamagedWeight>
-			<iUnitDistanceWeight>0</iUnitDistanceWeight>
-			<iUnitExperienceWeight>0</iUnitExperienceWeight>
-			<bUnitsOnPlot>0</bUnitsOnPlot>
 			<BuildingsRequired>
 			</BuildingsRequired>
-			<iNumBuildings>0</iNumBuildings>
-			<iNumBuildingsGlobal>0</iNumBuildingsGlobal>
-			<iNumPlotsRequired>0</iNumPlotsRequired>
-			<bOwnPlot>0</bOwnPlot>
-			<iPlotType>-1</iPlotType>
-			<FeaturesRequired/>
-			<TerrainsRequired/>
-			<ImprovementsRequired/>
-			<BonusesRequired/>
-			<RoutesRequired/>
-			<ReligionsRequired/>
-			<iNumReligions>0</iNumReligions>
-			<CorporationsRequired/>
-			<iNumCorporations>0</iNumCorporations>
-			<bPickReligion>0</bPickReligion>
-			<bStateReligion>0</bStateReligion>
-			<bHolyCity>0</bHolyCity>
-			<bPickCorporation>0</bPickCorporation>
-			<bHeadquarters>0</bHeadquarters>
 			<Events>
 				<Event>EVENT_SCHOLARS_1</Event>
 				<Event>EVENT_SCHOLARS_2</Event>
 				<Event>EVENT_SCHOLARS_3</Event>
 				<Event>EVENT_SCHOLARS_4</Event>
 			</Events>
-			<PrereqEvents/>
-			<bPrereqEventPlot>0</bPrereqEventPlot>
 			<OrPreReqs>
 				<PrereqTech>TECH_WRITING</PrereqTech>
 			</OrPreReqs>
-			<AndPreReqs/>
-			<ObsoleteTechs>
-			</ObsoleteTechs>
-			<bRecurring>0</bRecurring>
-			<bTeam>0</bTeam>
-			<bGlobal>0</bGlobal>
-			<bPickPlayer>0</bPickPlayer>
-			<bOtherPlayerWar>0</bOtherPlayerWar>
-			<bOtherPlayerHasReligion>0</bOtherPlayerHasReligion>
-			<bOtherPlayerHasOtherReligion>0</bOtherPlayerHasOtherReligion>
-			<bOtherPlayerAI>0</bOtherPlayerAI>
-			<iOtherPlayerShareBorders>0</iOtherPlayerShareBorders>
-			<OtherPlayerHasTech>NONE</OtherPlayerHasTech>
 			<bPickCity>1</bPickCity>
-			<bPickOtherPlayerCity>0</bPickOtherPlayerCity>
-			<bShowPlot>1</bShowPlot>
-			<iCityFoodWeight>0</iCityFoodWeight>
-			<PythonCanDo/>
-			<PythonCanDoCity/>
-			<PythonCanDoUnit/>
-			<PythonCallback/>
 		</EventTriggerInfo>
 		<EventTriggerInfo>
 			<Type>EVENTTRIGGER_TUSK</Type>
@@ -12061,77 +11522,20 @@
 				</TriggerText>
 			</TriggerTexts>
 			<EventArt>Art/Event_Images/tuskevent.dds</EventArt>
-			<bSinglePlayer>0</bSinglePlayer>
 			<iPercentGamesActive>100</iPercentGamesActive>
 			<iWeight>150</iWeight>
-			<bProbabilityUnitMultiply>0</bProbabilityUnitMultiply>
-			<bProbabilityBuildingMultiply>0</bProbabilityBuildingMultiply>
-			<Civic>NONE</Civic>
-			<iMinTreasury>0</iMinTreasury>
-			<iMinPopulation>0</iMinPopulation>
-			<iMaxPopulation>0</iMaxPopulation>
-			<iMinMapLandmass>0</iMinMapLandmass>
-			<iMinOurLandmass>0</iMinOurLandmass>
-			<iMaxOurLandmass>-1</iMaxOurLandmass>
-			<MinDifficulty>NONE</MinDifficulty>
-			<iAngry>0</iAngry>
-			<iUnhealthy>0</iUnhealthy>
-			<iNumUnits>0</iNumUnits>
-			<iNumUnitsGlobal>0</iNumUnitsGlobal>
-			<iUnitDamagedWeight>0</iUnitDamagedWeight>
-			<iUnitDistanceWeight>0</iUnitDistanceWeight>
-			<iUnitExperienceWeight>0</iUnitExperienceWeight>
-			<bUnitsOnPlot>0</bUnitsOnPlot>
-			<BuildingsRequired/>
-			<iNumBuildings>0</iNumBuildings>
-			<iNumBuildingsGlobal>0</iNumBuildingsGlobal>
 			<iNumPlotsRequired>1</iNumPlotsRequired>
 			<bOwnPlot>1</bOwnPlot>
-			<iPlotType>-1</iPlotType>
-			<FeaturesRequired/>
-			<TerrainsRequired/>
-			<ImprovementsRequired/>
 			<BonusesRequired>
 				<BonusType>BONUS_WHALE</BonusType>
 			</BonusesRequired>
-			<RoutesRequired/>
-			<ReligionsRequired/>
-			<iNumReligions>0</iNumReligions>
-			<CorporationsRequired/>
-			<iNumCorporations>0</iNumCorporations>
-			<bPickReligion>0</bPickReligion>
-			<bStateReligion>0</bStateReligion>
-			<bHolyCity>0</bHolyCity>
-			<bPickCorporation>0</bPickCorporation>
-			<bHeadquarters>0</bHeadquarters>
 			<Events>
 				<Event>EVENT_TUSK_1</Event>
 			</Events>
-			<PrereqEvents/>
-			<bPrereqEventPlot>0</bPrereqEventPlot>
 			<OrPreReqs>
 				<PrereqTech>TECH_OPTICS</PrereqTech>
 			</OrPreReqs>
-			<AndPreReqs/>
-			<ObsoleteTechs/>
-			<bRecurring>0</bRecurring>
-			<bTeam>0</bTeam>
 			<bGlobal>1</bGlobal>
-			<bPickPlayer>0</bPickPlayer>
-			<bOtherPlayerWar>0</bOtherPlayerWar>
-			<bOtherPlayerHasReligion>0</bOtherPlayerHasReligion>
-			<bOtherPlayerHasOtherReligion>0</bOtherPlayerHasOtherReligion>
-			<bOtherPlayerAI>0</bOtherPlayerAI>
-			<iOtherPlayerShareBorders>0</iOtherPlayerShareBorders>
-			<OtherPlayerHasTech>NONE</OtherPlayerHasTech>
-			<bPickCity>0</bPickCity>
-			<bPickOtherPlayerCity>0</bPickOtherPlayerCity>
-			<bShowPlot>1</bShowPlot>
-			<iCityFoodWeight>0</iCityFoodWeight>
-			<PythonCanDo/>
-			<PythonCanDoCity/>
-			<PythonCanDoUnit/>
-			<PythonCallback/>
 		</EventTriggerInfo>
 	</EventTriggerInfos>
 </Civ4EventTriggerInfos>
