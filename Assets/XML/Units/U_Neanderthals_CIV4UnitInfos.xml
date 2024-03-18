@@ -3159,7 +3159,7 @@
 			<iXPValueAttack>2</iXPValueAttack>
 			<iXPValueDefense>1</iXPValueDefense>
 			<iCityAttack>-75</iCityAttack>
-			<iPursuit>40</iPursuit>
+			<iPursuit>30</iPursuit>
 			<iAnimalCombat>200</iAnimalCombat>
 			<iAsset>2</iAsset>
 			<iPower>2</iPower>
@@ -3248,7 +3248,7 @@
 			<iXPValueAttack>2</iXPValueAttack>
 			<iXPValueDefense>1</iXPValueDefense>
 			<iCityAttack>-75</iCityAttack>
-			<iPursuit>30</iPursuit>
+			<iPursuit>20</iPursuit>
 			<iAnimalCombat>200</iAnimalCombat>
 			<iAsset>2</iAsset>
 			<iPower>2</iPower>
@@ -3339,9 +3339,28 @@
 			<iCombat>2</iCombat>
 			<iXPValueAttack>2</iXPValueAttack>
 			<iXPValueDefense>1</iXPValueDefense>
-			<iPursuit>20</iPursuit>
+			<iPursuit>10</iPursuit>
 			<iCityAttack>-75</iCityAttack>
 			<iAnimalCombat>200</iAnimalCombat>
+			<iEarlyWithdraw>30</iEarlyWithdraw>
+			<UnitCombatMods>
+				<UnitCombatMod>
+					<UnitCombatType>UNITCOMBAT_ANIMAL_COMBAT_FLEEING</UnitCombatType>
+					<iUnitCombatMod>50</iUnitCombatMod>
+				</UnitCombatMod>
+				<UnitCombatMod>
+					<UnitCombatType>UNITCOMBAT_ANIMAL_COMBAT_RAGING</UnitCombatType>
+					<iUnitCombatMod>-50</iUnitCombatMod>
+				</UnitCombatMod>
+				<UnitCombatMod>
+					<UnitCombatType>UNITCOMBAT_ANIMAL_COMBAT_HERDING</UnitCombatType>
+					<iUnitCombatMod>-25</iUnitCombatMod>
+				</UnitCombatMod>
+				<UnitCombatMod>
+					<UnitCombatType>UNITCOMBAT_ANIMAL_COMBAT_HIDING</UnitCombatType>
+					<iUnitCombatMod>-25</iUnitCombatMod>
+				</UnitCombatMod>
+			</UnitCombatMods>
 			<iAsset>1</iAsset>
 			<iPower>1</iPower>
 			<UnitMeshGroups>

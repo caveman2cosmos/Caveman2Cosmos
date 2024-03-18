@@ -11,10 +11,11 @@
 			<Categories>
 				<Category>CATEGORY_UNITCOMBAT_GROUP_COMBAT</Category>
 			</Categories>
+			<iEarlyWithdrawChange>25</iEarlyWithdrawChange>
 			<iTauntChange>50</iTauntChange>
-			<iDodgeModifierChange>10</iDodgeModifierChange>
+			<iDodgeModifierChange>20</iDodgeModifierChange>
+			<iDamageModifierChange>-20</iDamageModifierChange>
 			<iPrecisionModifierChange>10</iPrecisionModifierChange>
-			<iDamageModifierChange>-10</iDamageModifierChange>
 			<iCaptureResistanceModifierChange>-20</iCaptureResistanceModifierChange>
 			<FeatureDoubleMoveChangeTypes>
 				<FeatureType>FEATURE_REEF</FeatureType>
@@ -36,6 +37,7 @@
 			<Categories>
 				<Category>CATEGORY_UNITCOMBAT_GROUP_PRIMARY_ROLE</Category>
 			</Categories>
+			<iEarlyWithdrawChange>100</iEarlyWithdrawChange>
 			<UnitCombatChangeModifiers>
 				<UnitCombatChangeModifier>
 					<UnitCombatType>UNITCOMBAT_COMBATANT</UnitCombatType>
@@ -430,6 +432,7 @@
 			<Categories>
 				<Category>CATEGORY_UNITCOMBAT_GROUP_SPECIES</Category>
 			</Categories>
+			<iEarlyWithdrawChange>20</iEarlyWithdrawChange>
 			<iCaptureResistanceModifierChange>1000</iCaptureResistanceModifierChange>
 			<Button>Art/Interface/Buttons/units/sparth/categories/animals.dds</Button>
 		</UnitCombatInfo>
@@ -631,9 +634,21 @@
 			</Categories>
 			<iCaptureProbabilityModifierChange>20</iCaptureProbabilityModifierChange>
 			<iCaptureResistanceModifierChange>-10</iCaptureResistanceModifierChange>
-			<bForMilitary>1</bForMilitary>
+			<iPursuitChange>10</iPursuitChange>
 			<iStealthStrikesChange>1</iStealthStrikesChange>
 			<iStealthCombatModifierChange>10</iStealthCombatModifierChange>
+			<PursuitVSUnitCombatTypesChanges>
+				<PursuitVSUnitCombatTypesChange>
+					<UnitCombatType>UNITCOMBAT_ANIMAL</UnitCombatType>
+					<iModifier>10</iModifier>
+				</PursuitVSUnitCombatTypesChange>
+			</PursuitVSUnitCombatTypesChanges>
+			<UnitCombatChangeModifiers>
+				<UnitCombatChangeModifier>
+					<UnitCombatType>UNITCOMBAT_ANIMAL</UnitCombatType>
+					<iModifier>20</iModifier>
+				</UnitCombatChangeModifier>
+			</UnitCombatChangeModifiers>
 			<VisibilityIntensityRangeChangeTypes>
 				<VisibilityIntensityRangeChangeType>
 					<InvisibleType>INVISIBLE_CAMOUFLAGE</InvisibleType>
@@ -836,6 +851,22 @@
 				<DefaultStatusType>PROMOTION_STANDOUT_STATUS_HS_SM</DefaultStatusType>
 			</DefaultStatusTypes>
 			<iCaptureResistanceModifierChange>10</iCaptureResistanceModifierChange>
+			<KnockbackVSUnitCombatTypesChanges>
+				<KnockbackVSUnitCombatTypesChange>
+					<UnitCombatType>UNITCOMBAT_WILD</UnitCombatType>
+					<iModifier>50</iModifier>
+				</KnockbackVSUnitCombatTypesChange>
+				<KnockbackVSUnitCombatTypesChange>
+					<UnitCombatType>UNITCOMBAT_CIVILIAN</UnitCombatType>
+					<iModifier>25</iModifier>
+				</KnockbackVSUnitCombatTypesChange>
+			</KnockbackVSUnitCombatTypesChanges>
+			<RepelVSUnitCombatTypesChanges>
+				<RepelVSUnitCombatTypesChange>
+					<UnitCombatType>UNITCOMBAT_WILD</UnitCombatType>
+					<iModifier>50</iModifier>
+				</RepelVSUnitCombatTypesChange>
+			</RepelVSUnitCombatTypesChanges>
 			<VisibilityIntensityChangeTypes>
 				<VisibilityIntensityChangeType>
 					<InvisibleType>INVISIBLE_CAMOUFLAGE</InvisibleType>
@@ -1073,15 +1104,25 @@
 			<Categories>
 				<Category>CATEGORY_UNITCOMBAT_GROUP_PRIMARY_ROLE</Category>
 			</Categories>
+			<iEarlyWithdrawChange>25</iEarlyWithdrawChange>
+			<iDodgeModifierChange>15</iDodgeModifierChange>
+			<iDamageModifierChange>-15</iDamageModifierChange>
+			<iCombatModifierPerVolumeMoreChange>-5</iCombatModifierPerVolumeMoreChange>
 			<GGptsforUnitTypes>
 				<UnitType>UNIT_GREAT_HUNTER</UnitType>
 			</GGptsforUnitTypes>
 			<PursuitVSUnitCombatTypesChanges>
 				<PursuitVSUnitCombatTypesChange>
-					<UnitCombatType>UNITCOMBAT_ANIMAL</UnitCombatType>
-					<iModifier>20</iModifier>
+					<UnitCombatType>UNITCOMBAT_WILD</UnitCombatType>
+					<iModifier>10</iModifier>
 				</PursuitVSUnitCombatTypesChange>
 			</PursuitVSUnitCombatTypesChanges>
+			<UnitCombatChangeModifiers>
+				<UnitCombatChangeModifier>
+					<UnitCombatType>UNITCOMBAT_WILD</UnitCombatType>
+					<iModifier>20</iModifier>
+				</UnitCombatChangeModifier>
+			</UnitCombatChangeModifiers>
 			<VisibilityIntensityChangeTypes>
 				<VisibilityIntensityChangeType>
 					<InvisibleType>INVISIBLE_SUBMARINE</InvisibleType>
@@ -1098,8 +1139,6 @@
 			</VisibilityIntensityChangeTypes>
 			<iCaptureProbabilityModifierChange>-30</iCaptureProbabilityModifierChange>
 			<iCaptureResistanceModifierChange>-20</iCaptureResistanceModifierChange>
-			<bCannotMergeSplit>1</bCannotMergeSplit>
-			<bForMilitary>1</bForMilitary>
 			<Button>Art/Interface/Buttons/units/sparth/categories/explorers2.dds</Button>
 		</UnitCombatInfo>
 		<UnitCombatInfo>
@@ -4186,6 +4225,7 @@
 			<Categories>
 				<Category>CATEGORY_UNITCOMBAT_GROUP_INVERTEBRATE</Category>
 			</Categories>
+			<iWithdrawalChange>10</iWithdrawalChange>
 			<Button>Art/Interface/Buttons/units/sparth/categories/invertebrate.dds</Button>
 		</UnitCombatInfo>
 		<UnitCombatInfo>
@@ -4194,6 +4234,7 @@
 			<Categories>
 				<Category>CATEGORY_UNITCOMBAT_GROUP_INVERTEBRATE</Category>
 			</Categories>
+			<iWithdrawalChange>15</iWithdrawalChange>
 			<Button>Art/Interface/Buttons/units/sparth/categories/invertebrate.dds</Button>
 		</UnitCombatInfo>
 		<UnitCombatInfo>
@@ -4202,6 +4243,7 @@
 			<Categories>
 				<Category>CATEGORY_UNITCOMBAT_GROUP_FISH</Category>
 			</Categories>
+			<iWithdrawalChange>15</iWithdrawalChange>
 			<Button>Art/Interface/Buttons/units/sparth/categories/fish.dds</Button>
 		</UnitCombatInfo>
 		<UnitCombatInfo>
@@ -4210,6 +4252,8 @@
 			<Categories>
 				<Category>CATEGORY_UNITCOMBAT_GROUP_FISH</Category>
 			</Categories>
+			<iWithdrawalChange>15</iWithdrawalChange>
+			<iPursuitChange>15</iPursuitChange>
 			<Button>Art/Interface/Buttons/units/sparth/categories/fish.dds</Button>
 		</UnitCombatInfo>
 		<UnitCombatInfo>
@@ -4218,6 +4262,7 @@
 			<Categories>
 				<Category>CATEGORY_UNITCOMBAT_GROUP_FISH</Category>
 			</Categories>
+			<iWithdrawalProb>30</iWithdrawalProb>
 			<Button>Art/Interface/Buttons/units/sparth/categories/fish.dds</Button>
 		</UnitCombatInfo>
 		<UnitCombatInfo>
@@ -4349,6 +4394,7 @@
 			<Categories>
 				<Category>CATEGORY_UNITCOMBAT_GROUP_BIRD</Category>
 			</Categories>
+			<iWithdrawalChange>25</iWithdrawalChange>
 			<Button>Art/Interface/Buttons/units/sparth/categories/birds.dds</Button>
 		</UnitCombatInfo>
 		<UnitCombatInfo>
@@ -4357,6 +4403,7 @@
 			<Categories>
 				<Category>CATEGORY_UNITCOMBAT_GROUP_BIRD</Category>
 			</Categories>
+			<iWithdrawalChange>5</iWithdrawalChange>
 			<iDamageModifierChange>-95</iDamageModifierChange>
 			<InvisibleTerrainChanges>
 				<InvisibleTerrainChange>
@@ -4385,7 +4432,10 @@
 			<Categories>
 				<Category>CATEGORY_UNITCOMBAT_GROUP_BIRD</Category>
 			</Categories>
+			<iDodgeModifierChange>15</iDodgeModifierChange>
+			<iPrecisionModifierChange>15</iPrecisionModifierChange>
 			<iDamageModifierChange>-95</iDamageModifierChange>
+			<iWithdrawalChange>60</iWithdrawalChange>
 			<Button>Art/Interface/Buttons/units/sparth/categories/birds.dds</Button>
 		</UnitCombatInfo>
 		<UnitCombatInfo>
@@ -4394,7 +4444,10 @@
 			<Categories>
 				<Category>CATEGORY_UNITCOMBAT_GROUP_BIRD</Category>
 			</Categories>
+			<iDodgeModifierChange>15</iDodgeModifierChange>
+			<iPrecisionModifierChange>15</iPrecisionModifierChange>
 			<iDamageModifierChange>-95</iDamageModifierChange>
+			<iWithdrawalChange>60</iWithdrawalChange>
 			<Button>Art/Interface/Buttons/units/sparth/categories/birds.dds</Button>
 		</UnitCombatInfo>
 		<UnitCombatInfo>
@@ -4403,7 +4456,10 @@
 			<Categories>
 				<Category>CATEGORY_UNITCOMBAT_GROUP_BIRD</Category>
 			</Categories>
+			<iDodgeModifierChange>5</iDodgeModifierChange>
+			<iPrecisionModifierChange>5</iPrecisionModifierChange>
 			<iDamageModifierChange>-95</iDamageModifierChange>
+			<iWithdrawalChange>20</iWithdrawalChange>
 			<Button>Art/Interface/Buttons/units/sparth/categories/birds.dds</Button>
 		</UnitCombatInfo>
 		<UnitCombatInfo>
@@ -4412,6 +4468,11 @@
 			<Categories>
 				<Category>CATEGORY_UNITCOMBAT_GROUP_BIRD</Category>
 			</Categories>
+			<iDodgeModifierChange>20</iDodgeModifierChange>
+			<iPrecisionModifierChange>20</iPrecisionModifierChange>
+			<iDamageModifierChange>-20</iDamageModifierChange>
+			<iWithdrawalChange>55</iWithdrawalChange>
+			<iPursuitChange>10</iPursuitChange>
 			<Button>Art/Interface/Buttons/units/sparth/categories/birds.dds</Button>
 		</UnitCombatInfo>
 		<UnitCombatInfo>
@@ -4420,7 +4481,9 @@
 			<Categories>
 				<Category>CATEGORY_UNITCOMBAT_GROUP_BIRD</Category>
 			</Categories>
+			<iDodgeModifierChange>20</iDodgeModifierChange>
 			<iDamageModifierChange>-95</iDamageModifierChange>
+			<iWithdrawalChange>50</iWithdrawalChange>
 			<Button>Art/Interface/Buttons/units/sparth/categories/birds.dds</Button>
 		</UnitCombatInfo>
 		<UnitCombatInfo>
@@ -4429,7 +4492,10 @@
 			<Categories>
 				<Category>CATEGORY_UNITCOMBAT_GROUP_BIRD</Category>
 			</Categories>
+			<iDodgeModifierChange>15</iDodgeModifierChange>
+			<iPrecisionModifierChange>15</iPrecisionModifierChange>
 			<iDamageModifierChange>-95</iDamageModifierChange>
+			<iWithdrawalChange>60</iWithdrawalChange>
 			<Button>Art/Interface/Buttons/units/sparth/categories/birds.dds</Button>
 		</UnitCombatInfo>
 		<UnitCombatInfo>
@@ -4438,7 +4504,10 @@
 			<Categories>
 				<Category>CATEGORY_UNITCOMBAT_GROUP_BIRD</Category>
 			</Categories>
+			<iDodgeModifierChange>15</iDodgeModifierChange>
+			<iPrecisionModifierChange>15</iPrecisionModifierChange>
 			<iDamageModifierChange>-95</iDamageModifierChange>
+			<iWithdrawalChange>65</iWithdrawalChange>
 			<Button>Art/Interface/Buttons/units/sparth/categories/birds.dds</Button>
 		</UnitCombatInfo>
 		<UnitCombatInfo>
@@ -4447,7 +4516,10 @@
 			<Categories>
 				<Category>CATEGORY_UNITCOMBAT_GROUP_BIRD</Category>
 			</Categories>
+			<iDodgeModifierChange>25</iDodgeModifierChange>
+			<iPrecisionModifierChange>25</iPrecisionModifierChange>
 			<iDamageModifierChange>-95</iDamageModifierChange>
+			<iWithdrawalChange>70</iWithdrawalChange>
 			<Button>Art/Interface/Buttons/units/sparth/categories/birds.dds</Button>
 		</UnitCombatInfo>
 		<UnitCombatInfo>
@@ -4456,6 +4528,12 @@
 			<Categories>
 				<Category>CATEGORY_UNITCOMBAT_GROUP_BIRD</Category>
 			</Categories>
+			<iWithdrawalChange>50</iWithdrawalChange>
+			<iEarlyWithdrawChange>-30</iEarlyWithdrawChange>
+			<iDodgeModifierChange>20</iDodgeModifierChange>
+			<iPrecisionModifierChange>20</iPrecisionModifierChange>
+			<iDamageModifierChange>-20</iDamageModifierChange>
+			<iPursuitChange>20</iPursuitChange>
 			<Button>Art/Interface/Buttons/units/sparth/categories/birds.dds</Button>
 		</UnitCombatInfo>
 		<UnitCombatInfo>
@@ -4464,6 +4542,7 @@
 			<Categories>
 				<Category>CATEGORY_UNITCOMBAT_GROUP_MAMMAL</Category>
 			</Categories>
+			<iWithdrawalChange>10</iWithdrawalChange>
 			<iDamageModifierChange>-95</iDamageModifierChange>
 			<Button>Art/Interface/Buttons/units/sparth/categories/mammal.dds</Button>
 		</UnitCombatInfo>
@@ -4473,6 +4552,7 @@
 			<Categories>
 				<Category>CATEGORY_UNITCOMBAT_GROUP_MAMMAL</Category>
 			</Categories>
+			<iWithdrawalChange>10</iWithdrawalChange>
 			<Button>Art/Interface/Buttons/units/sparth/categories/mammal.dds</Button>
 		</UnitCombatInfo>
 		<UnitCombatInfo>
@@ -4481,6 +4561,7 @@
 			<Categories>
 				<Category>CATEGORY_UNITCOMBAT_GROUP_MAMMAL</Category>
 			</Categories>
+			<iWithdrawalChange>10</iWithdrawalChange>
 			<Button>Art/Interface/Buttons/units/sparth/categories/mammal.dds</Button>
 		</UnitCombatInfo>
 		<UnitCombatInfo>
@@ -4497,6 +4578,7 @@
 			<Categories>
 				<Category>CATEGORY_UNITCOMBAT_GROUP_MAMMAL</Category>
 			</Categories>
+			<iEarlyWithdrawChange>-25</iEarlyWithdrawChange>
 			<Button>Art/Interface/Buttons/units/sparth/categories/mammal.dds</Button>
 		</UnitCombatInfo>
 		<UnitCombatInfo>
@@ -4506,6 +4588,7 @@
 				<Category>CATEGORY_UNITCOMBAT_GROUP_MAMMAL</Category>
 			</Categories>
 			<iWithdrawalChange>15</iWithdrawalChange>
+			<iEarlyWithdrawChange>-10</iEarlyWithdrawChange>
 			<InvisibleFeatureChanges>
 				<InvisibleFeatureChange>
 					<InvisibleType>INVISIBLE_CAMOUFLAGE</InvisibleType>
@@ -4597,6 +4680,7 @@
 			<Categories>
 				<Category>CATEGORY_UNITCOMBAT_GROUP_MAMMAL</Category>
 			</Categories>
+			<iWithdrawalChange>5</iWithdrawalChange>
 			<Button>Art/Interface/Buttons/units/sparth/categories/mammal.dds</Button>
 		</UnitCombatInfo>
 		<UnitCombatInfo>
@@ -4605,6 +4689,7 @@
 			<Categories>
 				<Category>CATEGORY_UNITCOMBAT_GROUP_MAMMAL</Category>
 			</Categories>
+			<iWithdrawalChange>10</iWithdrawalChange>
 			<InvisibleFeatureChanges>
 				<InvisibleFeatureChange>
 					<InvisibleType>INVISIBLE_CAMOUFLAGE</InvisibleType>
@@ -4635,6 +4720,9 @@
 			<Categories>
 				<Category>CATEGORY_UNITCOMBAT_GROUP_MAMMAL</Category>
 			</Categories>
+			<iWithdrawalChange>15</iWithdrawalChange>
+			<iEarlyWithdrawChange>-25</iEarlyWithdrawChange>
+			<iPursuitChange>15</iPursuitChange>
 			<Button>Art/Interface/Buttons/units/sparth/categories/mammal.dds</Button>
 		</UnitCombatInfo>
 		<UnitCombatInfo>
@@ -4643,6 +4731,7 @@
 			<Categories>
 				<Category>CATEGORY_UNITCOMBAT_GROUP_MAMMAL</Category>
 			</Categories>
+			<iWithdrawalChange>10</iWithdrawalChange>
 			<Button>Art/Interface/Buttons/units/sparth/categories/mammal.dds</Button>
 		</UnitCombatInfo>
 		<UnitCombatInfo>
@@ -4651,6 +4740,7 @@
 			<Categories>
 				<Category>CATEGORY_UNITCOMBAT_GROUP_MAMMAL</Category>
 			</Categories>
+			<iWithdrawalChange>15</iWithdrawalChange>
 			<Button>Art/Interface/Buttons/units/sparth/categories/mammal.dds</Button>
 		</UnitCombatInfo>
 		<UnitCombatInfo>
@@ -4659,6 +4749,7 @@
 			<Categories>
 				<Category>CATEGORY_UNITCOMBAT_GROUP_MAMMAL</Category>
 			</Categories>
+			<iWithdrawalChange>15</iWithdrawalChange>
 			<Button>Art/Interface/Buttons/units/sparth/categories/mammal.dds</Button>
 		</UnitCombatInfo>
 		<UnitCombatInfo>
@@ -4667,6 +4758,8 @@
 			<Categories>
 				<Category>CATEGORY_UNITCOMBAT_GROUP_MAMMAL</Category>
 			</Categories>
+			<iWithdrawalChange>10</iWithdrawalChange>
+			<iPursuitChange>5</iPursuitChange>
 			<Button>Art/Interface/Buttons/units/sparth/categories/mammal.dds</Button>
 		</UnitCombatInfo>
 		<UnitCombatInfo>
@@ -4675,6 +4768,7 @@
 			<Categories>
 				<Category>CATEGORY_UNITCOMBAT_GROUP_MAMMAL</Category>
 			</Categories>
+			<iWithdrawalChange>10</iWithdrawalChange>
 			<Button>Art/Interface/Buttons/units/sparth/categories/mammal.dds</Button>
 		</UnitCombatInfo>
 		<UnitCombatInfo>
@@ -4691,6 +4785,7 @@
 			<Categories>
 				<Category>CATEGORY_UNITCOMBAT_GROUP_MAMMAL</Category>
 			</Categories>
+			<iWithdrawalChange>10</iWithdrawalChange>
 			<InvisibleTerrainChanges>
 				<InvisibleTerrainChange>
 					<InvisibleType>INVISIBLE_CAMOUFLAGE</InvisibleType>
@@ -4711,6 +4806,7 @@
 			<Categories>
 				<Category>CATEGORY_UNITCOMBAT_GROUP_MAMMAL</Category>
 			</Categories>
+			<iWithdrawalChange>10</iWithdrawalChange>
 			<Button>Art/Interface/Buttons/units/sparth/categories/mammal.dds</Button>
 		</UnitCombatInfo>
 		<UnitCombatInfo>
@@ -4719,6 +4815,7 @@
 			<Categories>
 				<Category>CATEGORY_UNITCOMBAT_GROUP_MAMMAL</Category>
 			</Categories>
+			<iWithdrawalChange>10</iWithdrawalChange>
 			<Button>Art/Interface/Buttons/units/sparth/categories/mammal.dds</Button>
 		</UnitCombatInfo>
 		<UnitCombatInfo>
@@ -4727,6 +4824,7 @@
 			<Categories>
 				<Category>CATEGORY_UNITCOMBAT_GROUP_MAMMAL</Category>
 			</Categories>
+			<iWithdrawalChange>20</iWithdrawalChange>
 			<InvisibleFeatureChanges>
 				<InvisibleFeatureChange>
 					<InvisibleType>INVISIBLE_CAMOUFLAGE</InvisibleType>
@@ -4767,6 +4865,9 @@
 			<Categories>
 				<Category>CATEGORY_UNITCOMBAT_GROUP_MAMMAL</Category>
 			</Categories>
+			<iWithdrawalChange>10</iWithdrawalChange>
+			<iEarlyWithdrawChange>-75</iEarlyWithdrawChange>
+			<iPursuitChange>10</iPursuitChange>
 			<Button>Art/Interface/Buttons/units/sparth/categories/mammal.dds</Button>
 		</UnitCombatInfo>
 		<UnitCombatInfo>
@@ -4775,6 +4876,7 @@
 			<Categories>
 				<Category>CATEGORY_UNITCOMBAT_GROUP_MAMMAL</Category>
 			</Categories>
+			<iWithdrawalChange>30</iWithdrawalChange>
 			<Button>Art/Interface/Buttons/units/sparth/categories/mammal.dds</Button>
 		</UnitCombatInfo>
 		<UnitCombatInfo>
@@ -4783,6 +4885,9 @@
 			<Categories>
 				<Category>CATEGORY_UNITCOMBAT_GROUP_MAMMAL</Category>
 			</Categories>
+			<iWithdrawalChange>10</iWithdrawalChange>
+			<iEarlyWithdrawChange>-75</iEarlyWithdrawChange>
+			<iPursuitChange>10</iPursuitChange>
 			<Button>Art/Interface/Buttons/units/sparth/categories/mammal.dds</Button>
 		</UnitCombatInfo>
 		<UnitCombatInfo>
@@ -4799,6 +4904,7 @@
 			<Categories>
 				<Category>CATEGORY_UNITCOMBAT_GROUP_MAMMAL</Category>
 			</Categories>
+			<iWithdrawalChange>20</iWithdrawalChange>
 			<InvisibleTerrainChanges>
 				<InvisibleTerrainChange>
 					<InvisibleType>INVISIBLE_CAMOUFLAGE</InvisibleType>
@@ -4824,6 +4930,7 @@
 			<Categories>
 				<Category>CATEGORY_UNITCOMBAT_GROUP_NATURAL</Category>
 			</Categories>
+			<iArmorChange>20</iArmorChange>
 			<Button>Art/Interface/Buttons/units/sparth/categories/nature_shelled.dds</Button>
 		</UnitCombatInfo>
 		<UnitCombatInfo>
@@ -4832,6 +4939,7 @@
 			<Categories>
 				<Category>CATEGORY_UNITCOMBAT_GROUP_NATURAL</Category>
 			</Categories>
+			<iArmorChange>15</iArmorChange>
 			<Button>Art/Interface/Buttons/units/sparth/categories/nature_thick_skinned.dds</Button>
 		</UnitCombatInfo>
 		<UnitCombatInfo>
@@ -4840,6 +4948,7 @@
 			<Categories>
 				<Category>CATEGORY_UNITCOMBAT_GROUP_NATURAL</Category>
 			</Categories>
+			<iArmorChange>40</iArmorChange>
 			<Button>Art/Interface/Buttons/units/sparth/categories/nature_hard_platted.dds</Button>
 		</UnitCombatInfo>
 		<UnitCombatInfo>
@@ -4848,6 +4957,7 @@
 			<Categories>
 				<Category>CATEGORY_UNITCOMBAT_GROUP_NATURAL</Category>
 			</Categories>
+			<iPunctureChange>5</iPunctureChange>
 			<Button>Art/Interface/Buttons/units/sparth/categories/nature_sharp_clawed.dds</Button>
 		</UnitCombatInfo>
 		<UnitCombatInfo>
@@ -4856,6 +4966,7 @@
 			<Categories>
 				<Category>CATEGORY_UNITCOMBAT_GROUP_NATURAL</Category>
 			</Categories>
+			<iPunctureChange>10</iPunctureChange>
 			<Button>Art/Interface/Buttons/units/sparth/categories/nature_sharp_toothed.dds</Button>
 		</UnitCombatInfo>
 		<UnitCombatInfo>
@@ -4864,6 +4975,7 @@
 			<Categories>
 				<Category>CATEGORY_UNITCOMBAT_GROUP_NATURAL</Category>
 			</Categories>
+			<iPunctureChange>15</iPunctureChange>
 			<Button>Art/Interface/Buttons/units/sparth/categories/nature_sharp_horned.dds</Button>
 		</UnitCombatInfo>
 		<UnitCombatInfo>
@@ -5035,6 +5147,7 @@
 				<Category>CATEGORY_UNITCOMBAT_GROUP_NATURAL</Category>
 			</Categories>
 			<iTauntChange>30</iTauntChange>
+			<iRepelChange>5</iRepelChange>
 			<Button>Art/Interface/Buttons/units/sparth/categories/nature_roaring.dds</Button>
 		</UnitCombatInfo>
 		<UnitCombatInfo>
@@ -5044,6 +5157,7 @@
 				<Category>CATEGORY_UNITCOMBAT_GROUP_NATURAL</Category>
 			</Categories>
 			<iTauntChange>-10</iTauntChange>
+			<iRepelChange>5</iRepelChange>
 			<Button>Art/Interface/Buttons/units/sparth/categories/nature_warning.dds</Button>
 		</UnitCombatInfo>
 		<UnitCombatInfo>
@@ -5052,6 +5166,8 @@
 			<Categories>
 				<Category>CATEGORY_UNITCOMBAT_GROUP_NATURAL</Category>
 			</Categories>
+			<iRepelChange>10</iRepelChange>
+			<iRepelRetriesChange>2</iRepelRetriesChange>
 			<Button>Art/Interface/Buttons/units/sparth/categories/nature_repellent.dds</Button>
 		</UnitCombatInfo>
 		<UnitCombatInfo>
@@ -5382,6 +5498,7 @@
 			<Categories>
 				<Category>CATEGORY_UNITCOMBAT_GROUP_NATURAL</Category>
 			</Categories>
+			<iPunctureChange>2</iPunctureChange>
 			<Button>Art/Interface/Buttons/units/sparth/categories/nature_peck.dds</Button>
 		</UnitCombatInfo>
 		<UnitCombatInfo>
@@ -5401,6 +5518,7 @@
 			<iEarlyWithdrawChange>-25</iEarlyWithdrawChange>
 			<iPursuitChange>5</iPursuitChange>
 			<iUnyieldingChange>50</iUnyieldingChange>
+			<iRepelChange>10</iRepelChange>
 			<!-- Need to add the tag to UnitCombatInfos <iStrAdjperRndChange>3</iStrAdjperRndChange> -->
 			<Button>Art/Interface/Buttons/units/sparth/categories/nature_raging.dds</Button>
 		</UnitCombatInfo>
@@ -5410,6 +5528,7 @@
 			<Categories>
 				<Category>CATEGORY_UNITCOMBAT_GROUP_NATURAL</Category>
 			</Categories>
+			<iArmorChange>10</iArmorChange>
 			<Button>Art/Interface/Buttons/units/sparth/categories/nature_tough_hide.dds</Button>
 		</UnitCombatInfo>
 		<UnitCombatInfo>
@@ -5483,8 +5602,9 @@
 			<Categories>
 				<Category>CATEGORY_UNITCOMBAT_GROUP_NATURAL</Category>
 			</Categories>
-			<iCombatModifierPerVolumeMoreChange>-5</iCombatModifierPerVolumeMoreChange>
-			<iCombatModifierPerVolumeLessChange>5</iCombatModifierPerVolumeLessChange>
+			<iCombatModifierPerVolumeMoreChange>-15</iCombatModifierPerVolumeMoreChange>
+			<iCombatModifierPerVolumeLessChange>15</iCombatModifierPerVolumeLessChange>
+			<iRepelChange>10</iRepelChange>
 			<iOverrunChange>10</iOverrunChange>
 			<iGatherHerdChange>1</iGatherHerdChange>
 			<Button>Art/Interface/Buttons/units/sparth/categories/nature_herding.dds</Button>
@@ -5513,6 +5633,7 @@
 			<Categories>
 				<Category>CATEGORY_UNITCOMBAT_GROUP_NATURAL</Category>
 			</Categories>
+			<iRepelChange>5</iRepelChange>
 			<Button>Art/Interface/Buttons/units/sparth/categories/nature_fecal_flinging.dds</Button>
 		</UnitCombatInfo>
 		<UnitCombatInfo>
@@ -5521,6 +5642,8 @@
 			<Categories>
 				<Category>CATEGORY_UNITCOMBAT_GROUP_NATURAL</Category>
 			</Categories>
+			<iRepelChange>40</iRepelChange>
+			<iKnockbackChange>40</iKnockbackChange>
 			<Button>Art/Interface/Buttons/units/sparth/categories/nature_devour.dds</Button>
 		</UnitCombatInfo>
 		<UnitCombatInfo>
@@ -7330,7 +7453,7 @@
 			<Categories>
 				<Category>CATEGORY_UNITCOMBAT_GROUP_PRIMARY_ROLE</Category>
 			</Categories>
-			<bCannotMergeSplit>1</bCannotMergeSplit>
+			<iEarlyWithdrawChange>80</iEarlyWithdrawChange>
 			<iNoCaptureChange>1</iNoCaptureChange>
 			<iCaptureProbabilityModifierChange>-1000</iCaptureProbabilityModifierChange>
 			<VisibilityIntensityChangeTypes>
