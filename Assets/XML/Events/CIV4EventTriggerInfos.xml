@@ -1377,7 +1377,7 @@
 			<bOwnPlot>1</bOwnPlot>
 			<Events>
 				<Event>EVENT_BABY_BOOM_1</Event>
-				<Event>EVENT_BABY_BOOM_</Event>
+				<Event>EVENT_BABY_BOOM_2</Event>
 			</Events>
 			<AndPreReqs>
 				<PrereqTech>TECH_WARFARE</PrereqTech>
