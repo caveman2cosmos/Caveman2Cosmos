@@ -388,12 +388,12 @@ def canTriggerBabyBoom(argsList):
 def applyBardTale3(argsList):
 	data = argsList[1]
 	player = GC.getPlayer(data.ePlayer)
-	player.changeGold(-10 * player.getNumCities())
+	player.changeGold(-50 * player.getNumCities())
 
 def canApplyBardTale3(argsList):
 	data = argsList[1]
 	player = GC.getPlayer(data.ePlayer)
-	if player.getGold() - 10 * player.getNumCities() < 0:
+	if player.getGold() - 50 * player.getNumCities() < 0:
 		return False
 	return True
 
@@ -401,7 +401,7 @@ def canApplyBardTale3(argsList):
 def getHelpBardTale3(argsList):
 	data = argsList[1]
 	player = GC.getPlayer(data.ePlayer)
-	return TRNSLTR.getText("TXT_KEY_EVENT_GOLD_LOST", (10 * player.getNumCities(), ))
+	return TRNSLTR.getText("TXT_KEY_EVENT_GOLD_LOST", (50 * player.getNumCities(), ))
 
 ######## LOOTERS ###########
 
@@ -478,6 +478,8 @@ def canTriggerBrothersInNeed(argsList):
 
   listResources = []
   listResources.append(GC.getInfoTypeForString("BONUS_COPPER_ORE"))
+  listResources.append(GC.getInfoTypeForString("BONUS_OBSIDIAN"))
+  listResources.append(GC.getInfoTypeForString("BONUS_STONE"))
   listResources.append(GC.getInfoTypeForString("BONUS_IRON_ORE"))
   listResources.append(GC.getInfoTypeForString("BONUS_HORSE"))
   listResources.append(GC.getInfoTypeForString("BONUS_ELEPHANTS"))
