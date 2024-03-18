@@ -3014,6 +3014,7 @@ class BonusPlacer:
 		iWorldSize = mc.iWorldSize
 		fBonusMult = mc.fBonusMult
 		self.aBonusList = bonusList = []
+		self.iPass = 1
 		# Create and shuffle the bonus list.
 		n = 0
 		pOrderDict = {}
@@ -3089,17 +3090,35 @@ class BonusPlacer:
 				shufflePyList(placementList, mapRand)
 				for indeXML in placementList:
 					startAtIndex = self.AddBonusType(indeXML, plotIndexList, startAtIndex, iWorldSize)
-		# Now check to see that all resources have been placed at least once while ignoring area rules.
+		# Second pass where we do not scale unique spacing range between resources
+		self.iPass = 2
+		for iOrder, aList in pOrderList:
+			placementList = []
+			for indeXML in aList:
+				for n in xrange(bonusList[bonusDictLoc[indeXML]].desiredBonusCount - bonusList[bonusDictLoc[indeXML]].currentBonusCount):
+					placementList.append(indeXML)
+			if placementList:
+				shufflePyList(placementList, mapRand)
+				for indeXML in placementList:
+					startAtIndex = self.AddBonusType(indeXML, plotIndexList, startAtIndex, iWorldSize)
+		# Third pass that ignores area rules and class spacing entirely.
+		self.iPass = 3
+		for iOrder, aList in pOrderList:
+			placementList = []
+			for indeXML in aList:
+				if (
+					bonusList[bonusDictLoc[indeXML]].currentBonusCount == 0
+				and bonusList[bonusDictLoc[indeXML]].desiredBonusCount > 0
+				):
+					placementList.append(indeXML)
+			if placementList:
+				shufflePyList(placementList, mapRand)
+				for indeXML in placementList:
+					startAtIndex = self.AddBonusType(indeXML, plotIndexList, startAtIndex, iWorldSize)
 		for i in xrange(iNumBonuses):
 			bonus = bonusList[i]
 			if bonus.currentBonusCount == 0 and bonus.desiredBonusCount > 0:
-				startAtIndex = self.AddEmergencyBonus(bonus, False, plotIndexList, startAtIndex)
-		#now check again to see that all resources have been placed at least once,
-		#this time ignoring area rules and also class spacing
-		for i in xrange(iNumBonuses):
-			bonus = bonusList[i]
-			if bonus.currentBonusCount == 0 and bonus.desiredBonusCount > 0:
-				startAtIndex = self.AddEmergencyBonus(bonus, True, plotIndexList, startAtIndex)
+				startAtIndex = self.AddEmergencyBonus(bonus, plotIndexList, startAtIndex)
 		#now report resources that simply could not be placed
 		for iOrder, aList in pOrderList:
 			for indeXML in aList:
@@ -3135,6 +3154,8 @@ class BonusPlacer:
 			# Place bonus
 			CyPlot.setBonusType(indeXML)
 			bonus.currentBonusCount += 1
+			if self.iPass > 1: # No clustering for second pass
+				break
 			# Clustering
 			iGroupRange = bonusInfo.getGroupRange()
 			if iGroupRange < 1: break
@@ -3156,7 +3177,7 @@ class BonusPlacer:
 			for dx in xrange(-iGroupRange, iGroupRange + 1):
 				for dy in xrange(-iGroupRange, iGroupRange + 1):
 					CyPlotX = self.plotXY(x, y, dx, dy)
-					if CyPlotX and GAME.getSorenRandNum(100, "0-99") < iRand and self.PlotCanHaveBonus(CyPlotX, indeXML, False):
+					if CyPlotX and GAME.getSorenRandNum(100, "0-99") < iRand and self.PlotCanHaveBonus(CyPlotX, indeXML):
 						#place bonus
 						CyPlotX.setBonusType(indeXML)
 						bonus.currentBonusCount += 1
@@ -3171,7 +3192,7 @@ class BonusPlacer:
 
 
 	#AIAndy - Changed to start at the end of the last run in the plot list and not shuffle an extra plot list
-	def AddEmergencyBonus(self, bonus, ignoreClass, plotIndexList, startAtIndex):
+	def AddEmergencyBonus(self, bonus, plotIndexList, startAtIndex):
 		GC = CyGlobalContext()
 		MAP = GC.getMap()
 		bonusInfo = GC.getBonusInfo(bonus.indeXML)
@@ -3187,7 +3208,7 @@ class BonusPlacer:
 				index = plotIndexList[i]
 			plot = MAP.plotByIndex(index)
 
-			if ignoreClass and self.PlotCanHaveBonus(plot, bonus.indeXML, True) or self.CanPlaceBonus(plot, bonus.indeXML, True):
+			if self.CanPlaceBonus(plot, bonus.indeXML, True):
 				#temporarily remove any feature
 				featureEnum = plot.getFeatureType()
 				if featureEnum == featureForest:
@@ -3235,10 +3256,11 @@ class BonusPlacer:
 		iBonusClass = bonusInfo.getBonusClassType()
 		classInfo = GC.getBonusClassInfo(iBonusClass)
 		iRange0 = 0
-		if classInfo:
+		if classInfo and self.iPass < 3:
 			iRange0 = classInfo.getUniqueRange()
 			if iRange0 > 0:
-				iRange0 += (mc.iWorldSize + 1) / 2
+				if self.iPass == 1:
+					iRange0 += (mc.iWorldSize + 1) / 2
 				for dx in xrange(-iRange0, iRange0 + 1):
 					for dy in xrange(-iRange0, iRange0 + 1):
 						if dx or dy:
@@ -3252,7 +3274,8 @@ class BonusPlacer:
 		#Make sure there are no bonuses of the same type nearby:
 		iRange1 = bonusInfo.getUniqueRange()
 		if iRange1 > 0:
-			iRange1 += mc.iWorldSize
+			if self.iPass == 1:
+				iRange1 += mc.iWorldSize
 			if iRange1 > iRange0:
 				for dx in xrange(-iRange1, iRange1 + 1):
 					for dy in xrange(-iRange1, iRange1 + 1):
@@ -3263,7 +3286,7 @@ class BonusPlacer:
 		return True
 
 
-	def PlotCanHaveBonus(self, plot, indeXML, bIgnoreArea, bFree = True):
+	def PlotCanHaveBonus(self, plot, indeXML, bIgnoreArea = False, bFree = True):
 		#This function is like CvPlot::canHaveBonus but will ignore blocking features and checks for a valid area.
 		if bFree and plot.getBonusType(TeamTypes.NO_TEAM) != BonusTypes.NO_BONUS:
 			return False
@@ -3366,7 +3389,7 @@ class BonusPlacer:
 		iPossible = 0
 		for i in xrange(mc.iArea):
 			plot = MAP.plotByIndex(i)
-			if plot.getArea() == areaID and self.PlotCanHaveBonus(plot, indeXML, True):
+			if plot.getArea() == areaID and self.PlotCanHaveBonus(plot, indeXML, True, False):
 				iPossible += 1
 
 		iPossible /= uniqueTypesInArea + sameClassTypesInArea + 1
@@ -3720,7 +3743,7 @@ class StartingPlotFinder:
 					iTech = CvBonusInfo.getTechReveal()
 					if iTech != -1 and GC.getTechInfo(iTech).getEra() > startEra:
 						continue
-					if not bp.PlotCanHaveBonus(CyPlot, bonusEnum, False) and not bp.PlotCanHaveBonus(CyPlot, bonusEnum, True):
+					if not bp.PlotCanHaveBonus(CyPlot, bonusEnum):
 						continue
 					CyPlot.setBonusType(bonusEnum)
 					bonusCount += 1
