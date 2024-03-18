@@ -1790,7 +1790,7 @@
 			</TriggerTexts>
 			<EventArt>Art/Event_Images/ParrotsEvent.dds</EventArt>
 			<iPercentGamesActive>100</iPercentGamesActive>
-			<iWeight>10</iWeight>
+			<iWeight>5</iWeight>
 			<iNumPlotsRequired>1</iNumPlotsRequired>
 			<FeaturesRequired>
 				<FeatureType>FEATURE_JUNGLE</FeatureType>
@@ -1812,7 +1812,6 @@
 			</OrPreReqs>
 			<bOwnPlot>1</bOwnPlot>
 			<bRecurring>1</bRecurring>
-			<bGlobal>1</bGlobal>
 		</EventTriggerInfo>
 		<EventTriggerInfo>
 			<Type>EVENTTRIGGER_JADE</Type>
@@ -1827,7 +1826,7 @@
 			</TriggerTexts>
 			<EventArt>Art/Event_Images/JadeEvent.dds</EventArt>
 			<iPercentGamesActive>100</iPercentGamesActive>
-			<iWeight>50</iWeight>
+			<iWeight>3</iWeight>
 			<iNumPlotsRequired>1</iNumPlotsRequired>
 			<bOwnPlot>1</bOwnPlot>
 			<ImprovementsRequired>
@@ -1857,7 +1856,6 @@
 				<PrereqTech>TECH_MINING</PrereqTech>
 			</OrPreReqs>
 			<bRecurring>1</bRecurring>
-			<bGlobal>1</bGlobal>
 		</EventTriggerInfo>
 		<EventTriggerInfo>
 			<Type>EVENTTRIGGER_BLACK_PEARLS</Type>
@@ -1872,7 +1870,7 @@
 			</TriggerTexts>
 			<EventArt>Art/Event_Images/BlackPearlsEvent.dds</EventArt>
 			<iPercentGamesActive>100</iPercentGamesActive>
-			<iWeight>50</iWeight>
+			<iWeight>3</iWeight>
 			<iNumPlotsRequired>1</iNumPlotsRequired>
 			<bOwnPlot>1</bOwnPlot>
 			<ImprovementsRequired>
@@ -1900,7 +1898,7 @@
 			</TriggerTexts>
 			<EventArt>Art/Event_Images/SaltpeterEvent.dds</EventArt>
 			<iPercentGamesActive>100</iPercentGamesActive>
-			<iWeight>20</iWeight>
+			<iWeight>3</iWeight>
 			<iNumPlotsRequired>4</iNumPlotsRequired>
 			<bOwnPlot>1</bOwnPlot>
 			<iPlotType>1</iPlotType>
@@ -1928,7 +1926,7 @@
 			</TriggerTexts>
 			<EventArt>Art/Event_Images/ClunkerCoalEvent.dds</EventArt>
 			<iPercentGamesActive>100</iPercentGamesActive>
-			<iWeight>50</iWeight>
+			<iWeight>3</iWeight>
 			<iNumPlotsRequired>1</iNumPlotsRequired>
 			<bOwnPlot>1</bOwnPlot>
 			<ImprovementsRequired>
@@ -1968,7 +1966,7 @@
 			</TriggerTexts>
 			<EventArt>Art/Event_Images/SourCrudeEvent.dds</EventArt>
 			<iPercentGamesActive>100</iPercentGamesActive>
-			<iWeight>50</iWeight>
+			<iWeight>3</iWeight>
 			<iNumPlotsRequired>1</iNumPlotsRequired>
 			<bOwnPlot>1</bOwnPlot>
 			<ImprovementsRequired>
@@ -1996,7 +1994,7 @@
 			</TriggerTexts>
 			<EventArt>Art/Event_Images/TrufflesEvent.dds</EventArt>
 			<iPercentGamesActive>100</iPercentGamesActive>
-			<iWeight>10</iWeight>
+			<iWeight>3</iWeight>
 			<iNumPlotsRequired>2</iNumPlotsRequired>
 			<FeaturesRequired>
 				<FeatureType>FEATURE_FOREST</FeatureType>
@@ -2019,7 +2017,7 @@
 			<OrPreReqs>
 				<PrereqTech>TECH_GATHERING</PrereqTech>
 			</OrPreReqs>
-			<bGlobal>1</bGlobal>
+			<bRecurring>1</bRecurring>
 			<bOwnPlot>1</bOwnPlot>
 		</EventTriggerInfo>
 		<EventTriggerInfo>
@@ -2035,7 +2033,7 @@
 			</TriggerTexts>
 			<EventArt>Art/Event_Images/SeaTurtlesEvent.dds</EventArt>
 			<iPercentGamesActive>100</iPercentGamesActive>
-			<iWeight>20</iWeight>
+			<iWeight>3</iWeight>
 			<iNumPlotsRequired>1</iNumPlotsRequired>
 			<bOwnPlot>1</bOwnPlot>
 			<TerrainsRequired>
@@ -2070,7 +2068,7 @@
 			</TriggerTexts>
 			<EventArt>Art/Event_Images/TinEvent.dds</EventArt>
 			<iPercentGamesActive>100</iPercentGamesActive>
-			<iWeight>50</iWeight>
+			<iWeight>3</iWeight>
 			<iNumPlotsRequired>1</iNumPlotsRequired>
 			<bOwnPlot>1</bOwnPlot>
 			<iPlotType>1</iPlotType>
@@ -2088,7 +2086,7 @@
 			<OrPreReqs>
 				<PrereqTech>TECH_BRONZE_WORKING</PrereqTech>
 			</OrPreReqs>
-			<bGlobal>1</bGlobal>
+			<bRecurring>1</bRecurring>
 		</EventTriggerInfo>
 		<EventTriggerInfo>
 			<Type>EVENTTRIGGER_PRAIRIE_DOGS</Type>
@@ -2103,7 +2101,7 @@
 			</TriggerTexts>
 			<EventArt>Art/Event_Images/PrairieDogsEvent.dds</EventArt>
 			<iPercentGamesActive>100</iPercentGamesActive>
-			<iWeight>50</iWeight>
+			<iWeight>3</iWeight>
 			<iNumPlotsRequired>1</iNumPlotsRequired>
 			<bOwnPlot>1</bOwnPlot>
 			<iPlotType>2</iPlotType>
@@ -2134,7 +2132,7 @@
 			</TriggerTexts>
 			<EventArt>Art/Event_Images/IceSculptureEvent.dds</EventArt>
 			<iPercentGamesActive>100</iPercentGamesActive>
-			<iWeight>100</iWeight>
+			<iWeight>10</iWeight>
 			<iNumPlotsRequired>1</iNumPlotsRequired>
 			<bOwnPlot>1</bOwnPlot>
 			<iPlotType>2</iPlotType>
@@ -2168,7 +2166,7 @@
 			</TriggerTexts>
 			<EventArt>Art/Event_Images/AppleSeedEvent.dds</EventArt>
 			<iPercentGamesActive>100</iPercentGamesActive>
-			<iWeight>50</iWeight>
+			<iWeight>5</iWeight>
 			<iNumPlotsRequired>1</iNumPlotsRequired>
 			<bOwnPlot>1</bOwnPlot>
 			<iPlotType>2</iPlotType>
@@ -2185,9 +2183,9 @@
 				<Event>EVENT_APPLESEED_1</Event>
 			</Events>
 			<OrPreReqs>
-				<PrereqTech>TECH_CIVIL_SERVICE</PrereqTech>
+				<PrereqTech>TECH_GATHERING</PrereqTech>
 			</OrPreReqs>
-			<bGlobal>1</bGlobal>
+			<bRecurring>1</bRecurring>
 		</EventTriggerInfo>
 		<EventTriggerInfo>
 			<Type>EVENTTRIGGER_MINING_ACCIDENT</Type>
@@ -2210,7 +2208,7 @@
 			</TriggerTexts>
 			<EventArt>Art/Event_Images/MiningAccidentEvent.dds</EventArt>
 			<iPercentGamesActive>100</iPercentGamesActive>
-			<iWeight>200</iWeight>
+			<iWeight>12</iWeight>
 			<iNumPlotsRequired>1</iNumPlotsRequired>
 			<bOwnPlot>1</bOwnPlot>
 			<ImprovementsRequired>
@@ -2247,7 +2245,7 @@
 				</TriggerText>
 			</TriggerTexts>
 			<iPercentGamesActive>100</iPercentGamesActive>
-			<iWeight>200</iWeight>
+			<iWeight>10</iWeight>
 			<iNumPlotsRequired>1</iNumPlotsRequired>
 			<bOwnPlot>1</bOwnPlot>
 			<ImprovementsRequired>
@@ -2278,12 +2276,13 @@
 			</TriggerTexts>
 			<EventArt>Art/Event_Images/SetbackEvent.dds</EventArt>
 			<iPercentGamesActive>100</iPercentGamesActive>
-			<iWeight>50</iWeight>
+			<iWeight>3</iWeight>
 			<bOwnPlot>1</bOwnPlot>
 			<Events>
 				<Event>EVENT_BREAKTHROUGH_1</Event>
 			</Events>
 			<bShowPlot>0</bShowPlot>
+			<bRecurring>1</bRecurring>
 		</EventTriggerInfo>
 		<EventTriggerInfo>
 			<Type>EVENTTRIGGER_SETBACK</Type>
@@ -2298,12 +2297,13 @@
 				</TriggerText>
 			</TriggerTexts>
 			<iPercentGamesActive>100</iPercentGamesActive>
-			<iWeight>30</iWeight>
+			<iWeight>2</iWeight>
 			<bOwnPlot>1</bOwnPlot>
 			<Events>
 				<Event>EVENT_SETBACK_1</Event>
 			</Events>
 			<bShowPlot>0</bShowPlot>
+			<bRecurring>1</bRecurring>
 		</EventTriggerInfo>
 		<EventTriggerInfo>
 			<Type>EVENTTRIGGER_RUNNING_BULLS</Type>
@@ -2318,7 +2318,7 @@
 			</TriggerTexts>
 			<EventArt>Art/Event_Images/RunningBullsEvent.dds</EventArt>
 			<iPercentGamesActive>100</iPercentGamesActive>
-			<iWeight>200</iWeight>
+			<iWeight>20</iWeight>
 			<iNumPlotsRequired>1</iNumPlotsRequired>
 			<bOwnPlot>1</bOwnPlot>
 			<ImprovementsRequired>
@@ -2360,7 +2360,7 @@
 			</TriggerTexts>
 			<EventArt>Art/Event_Images/GreatDepressionEvent.dds</EventArt>
 			<iPercentGamesActive>100</iPercentGamesActive>
-			<iWeight>100</iWeight>
+			<iWeight>8</iWeight>
 			<bOwnPlot>1</bOwnPlot>
 			<iNumCorporations>2</iNumCorporations>
 			<bPickCorporation>1</bPickCorporation>
@@ -2368,7 +2368,7 @@
 			<Events>
 				<Event>EVENT_GREAT_DEPRESSION_1</Event>
 			</Events>
-			<bGlobal>1</bGlobal>
+			<bRecurring>1</bRecurring>
 		</EventTriggerInfo>
 		<EventTriggerInfo>
 			<Type>EVENTTRIGGER_LOST_AT_SEA</Type>
@@ -2380,7 +2380,7 @@
 			</TriggerTexts>
 			<EventArt>Art/Event_Images/BermudaTriangleEvent.dds</EventArt>
 			<iPercentGamesActive>100</iPercentGamesActive>
-			<iWeight>1</iWeight>
+			<iWeight>5</iWeight>
 			<iNumUnits>1</iNumUnits>
 			<iNumPlotsRequired>1</iNumPlotsRequired>
 			<bUnitsOnPlot>1</bUnitsOnPlot>
@@ -2415,7 +2415,7 @@
 			</TriggerTexts>
 			<EventArt>Art/Event_Images/PatronOfKnowledgeEvent.dds</EventArt>
 			<iPercentGamesActive>100</iPercentGamesActive>
-			<iWeight>200</iWeight>
+			<iWeight>30</iWeight>
 			<bProbabilityBuildingMultiply>1</bProbabilityBuildingMultiply>
 			<BuildingsRequired>
 				<Building>BUILDING_LIBRARY</Building>
