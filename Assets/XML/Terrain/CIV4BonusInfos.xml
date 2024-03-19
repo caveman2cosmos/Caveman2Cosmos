@@ -3612,8 +3612,6 @@
 			</Rands>
 			<iTilesPer>128</iTilesPer>
 			<iUniqueRange>6</iUniqueRange>
-			<iGroupRange>2</iGroupRange>
-			<iGroupRand>5</iGroupRand>
 			<bHills>1</bHills>
 			<bFlatlands>1</bFlatlands>
 			<bNormalize>1</bNormalize>
@@ -6506,7 +6504,10 @@
 				<iRandApp3>25</iRandApp3>
 				<iRandApp4>25</iRandApp4>
 			</Rands>
-			<iTilesPer>128</iTilesPer>
+			<iTilesPer>150</iTilesPer>
+			<iUniqueRange>6</iUniqueRange>
+			<iGroupRange>2</iGroupRange>
+			<iGroupRand>5</iGroupRand>
 			<bHills>1</bHills>
 			<bPeaks>1</bPeaks>
 			<bFlatlands>1</bFlatlands>
