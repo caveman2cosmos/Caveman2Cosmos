@@ -6036,11 +6036,11 @@ void enumSpawnPlots(const CvSpawnInfo& spawnInfo, std::vector<CvPlot*>* plots)
 namespace Game {
 	bool isGroupUpgradePromotion(const CvUnit* unit, PromotionTypes promotion)
 	{
-		return GC.getPromotionInfo(promotion).getGroupChange() > 0 && unit->canAcquirePromotion(promotion, PromotionRequirements::ForStatus);
+		return GC.getPromotionInfo(promotion).getGroupChange() > 0 && unit->canAcquirePromotion(promotion, PromotionRequirements::ForFree | PromotionRequirements::ForOffset);
 	}
 	bool isGroupDowngradePromotion(const CvUnit* unit, PromotionTypes promotion)
 	{
-		return GC.getPromotionInfo(promotion).getGroupChange() < 0 && unit->canAcquirePromotion(promotion, PromotionRequirements::ForStatus);
+		return GC.getPromotionInfo(promotion).getGroupChange() < 0 && unit->canAcquirePromotion(promotion, PromotionRequirements::ForFree | PromotionRequirements::ForOffset);
 	}
 }
 
@@ -6258,18 +6258,17 @@ void CvGame::doSpawns(PlayerTypes ePlayer)
 							//remove old group volume unitcombat
 							if (eGroupVolume != NO_UNITCOMBAT)
 							{
-								for (int iI = 0; iI < GC.getNumUnitCombatInfos(); iI++)
+								foreach_(const UnitCombatTypes eSubCombat, kUnit.getSubCombatTypes())
 								{
-									const UnitCombatTypes eUnitCombat = static_cast<UnitCombatTypes>(iI);
-
-									if (GC.getUnitCombatInfo(eUnitCombat).getGroupBase() != -10 && pUnit->isHasUnitCombat(eUnitCombat) && eUnitCombat != eGroupVolume)
+									if (GC.getUnitCombatInfo(eSubCombat).getGroupBase() != -10 && eSubCombat != eGroupVolume)
 									{
 										CvUnit::normalizeUnitPromotions(
 											pUnit,
-											GC.getUnitCombatInfo(eGroupVolume).getGroupBase() - GC.getUnitCombatInfo(eUnitCombat).getGroupBase(),
+											GC.getUnitCombatInfo(eGroupVolume).getGroupBase() - GC.getUnitCombatInfo(eSubCombat).getGroupBase(),
 											bind(Game::isGroupUpgradePromotion, pUnit, _2),
 											bind(Game::isGroupDowngradePromotion, pUnit, _2)
 										);
+										break;
 									}
 								}
 							}
