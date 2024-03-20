@@ -553,6 +553,7 @@
 		<German>Kampf-Log</German>
 		<Italian>Registro combattimenti</Italian>
 		<Spanish>Historial del combate</Spanish>
+		<Polish>Dziennik bitewny</Polish>
 		<Russian>Журнал сражений</Russian>
 	</TEXT>
 	<TEXT>
@@ -562,6 +563,7 @@
 		<German>Die Spieldaten konnten nicht komprimiert werden</German>
 		<Italian>Impossibile comprimere i dati di gioco</Italian>
 		<Spanish>No se han podido comprimir los datos del juego.</Spanish>
+		<Polish>Kompresja danych gry si&#234; nie powiod&#179;a.</Polish>
 		<Russian>Не удалось сжать данные игры</Russian>
 	</TEXT>
 	<TEXT>
@@ -571,6 +573,7 @@
 		<German>Es besteht bereits eine Verbindung zu diesem Host.</German>
 		<Italian>Siamo già connessi a questo host.</Italian>
 		<Spanish>Ya existe una conexión con el anfitrión.</Spanish>
+		<Polish>Jeste&#156;my ju&#191; po&#179;&#185;czeni z tym hostem.</Polish>
 		<Russian>Уже подключено к данному хосту</Russian>
 	</TEXT>
 	<TEXT>
@@ -580,6 +583,7 @@
 		<German>Bereits verbunden</German>
 		<Italian>Già connesso</Italian>
 		<Spanish>Ya conectado</Spanish>
+		<Polish>Ju&#191; po&#179;&#185;czony.</Polish>
 		<Russian>Уже подключено</Russian>
 	</TEXT>
 	<TEXT>
@@ -589,6 +593,7 @@
 		<German>Die angefragte Adresse ist ungültig.</German>
 		<Italian>L'indirizzo inserito non è valido.</Italian>
 		<Spanish>La dirección probada no era válida.</Spanish>
+		<Polish>Nieprawid&#179;owy adres.</Polish>
 		<Russian>Запрашиваемый адрес недействителен.</Russian>
 	</TEXT>
 	<TEXT>
@@ -598,6 +603,7 @@
 		<German>Verbindungsanfrage abgewiesen</German>
 		<Italian>Tentativo di connessione rifiutato</Italian>
 		<Spanish>Intento de conexión rechazado</Spanish>
+		<Polish>Pr&#243;ba po&#179;&#185;czenia zosta&#179;a odrzucona</Polish>
 		<Russian>Попытка подключения отклонена</Russian>
 	</TEXT>
 	<TEXT>
@@ -607,6 +613,7 @@
 		<German>Es konnte kein Verbindungsaufbau mit der Firewall des Hosts ausgehandelt werden.</German>
 		<Italian>Impossibile negoziare con il firewall dell'host.</Italian>
 		<Spanish>No se ha podido negociar con el firewall/servidor de seguridad del anfitrión.</Spanish>
+		<Polish>Negocjacje z zapor&#185; sieciow&#185; hosta si&#234; nie powiod&#179;y.</Polish>
 		<Russian>Невозможно установить соединение с брандмауэром хоста.</Russian>
 	</TEXT>
 	<TEXT>
@@ -616,6 +623,7 @@
 		<German>Verbindungsversuch gescheitert</German>
 		<Italian>Tentativo di connessione fallito</Italian>
 		<Spanish>Ha fallado el intento de conexión</Spanish>
+		<Polish>Pr&#243;ba po&#179;&#185;czenia si&#234; nie powiod&#179;a</Polish>
 		<Russian>Неудачная попытка подключения</Russian>
 	</TEXT>
 	<TEXT>
@@ -625,6 +633,7 @@
 		<German>Der Verbindungsversuch ist wegen eines unbekannten Netzwerkfehlers gescheitert.</German>
 		<Italian>Il nostro tentativo di connessione è fallito a causa di un errore di rete non specificato.</Italian>
 		<Spanish>El intento de conexión ha fallado debido a un error de red no especificado.</Spanish>
+		<Polish>Pr&#243;ba po&#179;&#185;czenia si&#234; nie powiod&#179;a z powodu niezidentyfikowanego b&#179;&#234;du sieci.</Polish>
 		<Russian>Не удалось подключиться из-за неопределенной ошибки сети.</Russian>
 	</TEXT>
 	<TEXT>
@@ -634,6 +643,7 @@
 		<German>Verbindungsversuch fehlgeschlagen</German>
 		<Italian>Tentativo di connessione fallito</Italian>
 		<Spanish>Ha fallado el intento de conexión</Spanish>
+		<Polish>Pr&#243;ba po&#179;&#185;czenia si&#234; nie powiod&#179;a</Polish>
 		<Russian>Неудачная попытка подключения</Russian>
 	</TEXT>
 	<TEXT>
@@ -643,6 +653,7 @@
 		<German>Zu wenig verfügbarer Speicher. Der Verbindungsversuch ist gescheitert.</German>
 		<Italian>Il nostro tentativo di connessione è fallito a causa della mancanza di memoria disponibile.</Italian>
 		<Spanish>El intento de conexión ha fallado debido a la falta de disponibilidad de memoria.</Spanish>
+		<Polish>Pr&#243;ba po&#179;&#185;czenia si&#234; nie powiod&#179;a z powodu niewystarczaj&#185;cej ilo&#156;ci dost&#234;pnej pami&#234;ci systemowej.</Polish>
 		<Russian>Не удалось подключиться из-за недостатка доступной памяти.</Russian>
 	</TEXT>
 	<TEXT>
@@ -652,6 +663,7 @@
 		<German>Verbindungsversuch gescheitert</German>
 		<Italian>Tentativo di connessione fallito</Italian>
 		<Spanish>Ha fallado el intento de conexión</Spanish>
+		<Polish>Pr&#243;ba po&#179;&#185;czenia si&#234; nie powiod&#179;a</Polish>
 		<Russian>Неудачная попытка подключения</Russian>
 	</TEXT>
 	<TEXT>
@@ -661,6 +673,7 @@
 		<German>Der Host dieses Spiels hat die Verbindungsanfrage abgewiesen.</German>
 		<Italian>L'host di questa partita ha rifiutato il tuo tentativo di connessione.</Italian>
 		<Spanish>El anfitrión de la partida ha rechazado el intento de conexión.</Spanish>
+		<Polish>Host tej gry odrzuci&#179; nasz&#185; pr&#243;b&#234; po&#179;&#185;czenia.</Polish>
 		<Russian>Хост данной игры отклонил наше подключение.</Russian>
 	</TEXT>
 	<TEXT>
@@ -670,6 +683,7 @@
 		<German>Verbindungsanfrage abgewiesen</German>
 		<Italian>Tentativo di connessione rifiutato</Italian>
 		<Spanish>Intento de conexión rechazado</Spanish>
+		<Polish>Pr&#243;ba po&#179;&#185;czenia zosta&#179;a odrzucona</Polish>
 		<Russian>В подключении отказано</Russian>
 	</TEXT>
 	<TEXT>
@@ -679,6 +693,7 @@
 		<German>Die Wartezeit für den Verbindungsaufbau zum Host ist abgelaufen.</German>
 		<Italian>Time out durante il tentativo di connessione all'host.</Italian>
 		<Spanish>Se ha agotado el tiempo de espera del intento de conexión con el anfitrión.</Spanish>
+		<Polish>Pr&#243;ba po&#179;&#185;czenia si&#234; z hostem przekroczy&#179;a limit czasu.</Polish>
 		<Russian>Время на попытку подключения к хосту истекло.</Russian>
 	</TEXT>
 	<TEXT>
@@ -688,6 +703,7 @@
 		<German>Wartezeit für Verbindungsaufbau abgelaufen</German>
 		<Italian>Time out della connessione</Italian>
 		<Spanish>Agotado el tiempo de espera de la conexión</Spanish>
+		<Polish>Pr&#243;ba po&#179;&#185;czenia si&#234; przekroczy&#179;a limit czasu</Polish>
 		<Russian>Подключение прервано по таймеру</Russian>
 	</TEXT>
 	<TEXT>
@@ -697,6 +713,7 @@
 		<German>Der Verbindungsversuch ist wegen eines unbekannten Fehlers gescheitert.</German>
 		<Italian>Il tentativo di connessione è fallito a causa di un errore non specificato.</Italian>
 		<Spanish>El intento de conexión ha fallado debido a un error no especificado.</Spanish>
+		<Polish>Pr&#243;ba po&#179;&#185;czenia si&#234; nie powiod&#179;a z nieznanego powodu.</Polish>
 		<Russian>Подключение не удалось из-за неопределенной ошибки.</Russian>
 	</TEXT>
 	<TEXT>
@@ -706,6 +723,7 @@
 		<German>Verbindungsversuch gescheitert</German>
 		<Italian>Tentativo di connessione fallito</Italian>
 		<Spanish>Ha fallado el intento de conexión</Spanish>
+		<Polish>Pr&#243;ba po&#179;&#185;czenia si&#234; nie powiod&#179;a</Polish>
 		<Russian>Неудачная попытка подключения</Russian>
 	</TEXT>
 	<TEXT>
@@ -715,6 +733,7 @@
 		<German>Verbindungsversuch zum Host ...</German>
 		<Italian>Connessione con l'host...</Italian>
 		<Spanish>Contactando con el anfitrión...</Spanish>
+		<Polish>&#163;&#185;czenie z hostem...</Polish>
 		<Russian>Идет подключение к хосту...</Russian>
 	</TEXT>
 	<TEXT>
@@ -724,6 +743,7 @@
 		<German>Verbindung zum Host hergestellt ...</German>
 		<Italian>Connesso all'host...</Italian>
 		<Spanish>Se ha conectado con el anfitrión...</Spanish>
+		<Polish>Po&#179;&#185;czono z hostem...</Polish>
 		<Russian>Подключение к хосту установлено...</Russian>
 	</TEXT>
 	<TEXT>
@@ -733,6 +753,7 @@
 		<German>Verbindungsaufbau mit etabliertem Peer "%s1_Name"</German>
 		<Italian>Contattando il peer "%s1_Name"</Italian>
 		<Spanish>Contactando con el interlocutor establecido "%s1_Name"</Spanish>
+		<Polish>&#163;&#185;czenie z ustalonym peerem "%s1_Name"</Polish>
 		<Russian>Идет подключение к узлу "%s1_Name"</Russian>
 	</TEXT>
 	<TEXT>
@@ -742,6 +763,7 @@
 		<German>Verbindungsaufbau mit Gegenstelle ...</German>
 		<Italian>Connessione al peer...</Italian>
 		<Spanish>Contactando con un interlocutor...</Spanish>
+		<Polish>&#163;&#185;czenie z peerem...</Polish>
 		<Russian>Идет подключение к узлу...</Russian>
 	</TEXT>
 	<TEXT>
@@ -751,6 +773,7 @@
 		<German>Verbindung zur Gegenstelle hergestellt ...</German>
 		<Italian>Connesso al peer...</Italian>
 		<Spanish>Se ha contactado con un interlocutor...</Spanish>
+		<Polish>Po&#179;&#185;czono z peerem</Polish>
 		<Russian>Подключение к узлу установлено...</Russian>
 	</TEXT>
 	<TEXT>
@@ -760,6 +783,7 @@
 		<German>%s1_Name hat sich dem Spiel angeschlossen.</German>
 		<Italian>%s1_Name si è unito alla partita.</Italian>
 		<Spanish>%s1_Name se ha unido a la partida.</Spanish>
+		<Polish>%s1_Name do&#179;&#185;czy&#179; do gry</Polish>
 		<Russian>%s1_Name присоединился к игре.</Russian>
 	</TEXT>
 	<TEXT>
@@ -769,6 +793,7 @@
 		<German>%s1_Name wurde aus dem Spiel geworfen.</German>
 		<Italian>%s1_Name è stato espulso dalla partita.</Italian>
 		<Spanish>%s1_Name ha sido expulsado de la partida.</Spanish>
+		<Polish>%s1_Name zosta&#179; wyrzucony z gry.</Polish>
 		<Russian>%s1_Name выкинут из игры.</Russian>
 	</TEXT>
 	<TEXT>
@@ -778,6 +803,7 @@
 		<German>%s1_Name hat das Spiel verlassen.</German>
 		<Italian>%s1_Name ha abbandonato la partita.</Italian>
 		<Spanish>%s1_Name ha abandonado la partida.</Spanish>
+		<Polish>%s1_Name opu&#156;ci&#179; gr&#234;.</Polish>
 		<Russian>%s1_Name покинул игру.</Russian>
 	</TEXT>
 	<TEXT>
@@ -787,6 +813,7 @@
 		<German>%s1_Name hat das Spiel verlassen.</German>
 		<Italian>%s1_Name si è ritirato dalla partita.</Italian>
 		<Spanish>%s1_Name se ha retirado de la partida.</Spanish>
+		<Polish>%s1_Name porzuci&#179; gr&#234;.</Polish>
 		<Russian>%s1_Name вышел из игры.</Russian>
 	</TEXT>
 	<TEXT>
@@ -796,6 +823,7 @@
 		<German>Speichern und beenden ...</German>
 		<Italian>Salvataggio e uscita...</Italian>
 		<Spanish>Guardando y abandonando...</Spanish>
+		<Polish>Zapisywanie i wychodzenie...</Polish>
 		<Russian>Сохранение и выход...</Russian>
 	</TEXT>
 	<TEXT>
@@ -805,6 +833,7 @@
 		<German>Spiel wird gespeichert und %s1_Names entfernt</German>
 		<Italian>Salvataggio della partita e espulsione di %s1_Names</Italian>
 		<Spanish>Guardando partida y eliminando a %s1_Names.</Spanish>
+		<Polish>Zapisywanie gry i usuwanie %s1_Names</Polish>
 		<Russian>Сохранение игры и удаление %s1_Names</Russian>
 	</TEXT>
 	<TEXT>
@@ -814,6 +843,7 @@
 		<German>Unerwartetes Abstimmungsergebnis.</German>
 		<Italian>Risultato della votazione inaspettato.</Italian>
 		<Spanish>Resultado inesperado de la votación.</Spanish>
+		<Polish>Niespodziewany wynik g&#179;osowania.</Polish>
 		<Russian>Неожиданный результат голосования.</Russian>
 	</TEXT>
 	<TEXT>
@@ -823,6 +853,7 @@
 		<German>EIGENES SPIEL</German>
 		<Italian>PERSONALIZZA PARTITA</Italian>
 		<Spanish>PERSONALIZAR PARTIDA</Spanish>
+		<Polish>W&#163;ASNA GRA</Polish>
 		<Russian>НАСТРАИВАЕМАЯ ИГРА</Russian>
 	</TEXT>
 	<TEXT>
@@ -832,6 +863,7 @@
 		<German>Mein Spiel</German>
 		<Italian>C2C Salvataggio standard</Italian>
 		<Spanish>Mi partida</Spanish>
+		<Polish>Moja gra</Polish>
 		<Russian>Моя игра</Russian>
 	</TEXT>
 	<TEXT>
@@ -841,6 +873,7 @@
 		<German>%s1_player ist beschäftigt. Versuchen Sie es später noch mal.</German>
 		<Italian>%s1_player è occupato. Riprova più tardi.</Italian>
 		<Spanish>%s1_player no está disponible. Intentadlo más tarde.</Spanish>
+		<Polish>%s1_player jest zaj&#234;ty. Spr&#243;buj ponownie p&#243;&#159;niej.</Polish>
 		<Russian>%s1_player занят. Попробуйте позже.</Russian>
 	</TEXT>
 	<TEXT>
@@ -850,6 +883,7 @@
 		<German>Der Server hat die Verbindung getrennt.</German>
 		<Italian>Il server ha interrotto la nostra connessione.</Italian>
 		<Spanish>El servidor ha interrumpido la conexión.</Spanish>
+		<Polish>Serwer przerwa&#179; nasze po&#179;&#185;czenie.</Polish>
 		<Russian>Сервер разорвал наше соединение.</Russian>
 	</TEXT>
 	<TEXT>
@@ -859,6 +893,7 @@
 		<German>Verbindung getrennt</German>
 		<Italian>Disconnesso</Italian>
 		<Spanish>Desconectado</Spanish>
+		<Polish>Roz&#179;&#185;czony</Polish>
 		<Russian>Разъединение</Russian>
 	</TEXT>
 	<TEXT>
@@ -868,6 +903,7 @@
 		<German>Die Verbindung zum Server wurde wegen eines unbekannten Fehlers getrennt.</German>
 		<Italian>Siamo stati disconnessi dal server a causa di un errore non specificato.</Italian>
 		<Spanish>Se ha producido la desconexión del servidor debido a un error no especificado.</Spanish>
+		<Polish>Zostali&#156;my roz&#179;&#185;czeni z serwerem z powodu niezidentyfikowanego b&#179;&#234;du.</Polish>
 		<Russian>Мы были отключены от сервера из-за неустановленной ошибки.</Russian>
 	</TEXT>
 	<TEXT>
@@ -877,6 +913,7 @@
 		<German>Verbindung getrennt</German>
 		<Italian>Disconnesso</Italian>
 		<Spanish>Desconectado</Spanish>
+		<Polish>Roz&#179;&#185;czony</Polish>
 		<Russian>Разъединение</Russian>
 	</TEXT>
 	<TEXT>
@@ -886,6 +923,7 @@
 		<German>WIRD HERUNTERGELADEN ...</German>
 		<Italian>DOWNLOAD IN CORSO...</Italian>
 		<Spanish>DESCARGANDO...</Spanish>
+		<Polish>POBIERANIE...</Polish>
 		<Russian>СКАЧИВАНИЕ...</Russian>
 	</TEXT>
 	<TEXT>
@@ -895,6 +933,7 @@
 		<German>Warten, dass Peers Kartentranfer abschließen</German>
 		<Italian>In attesa che i peer completino il trasferimento della mappa</Italian>
 		<Spanish>Esperando a que los interlocutores completen la transferencia del mapa</Spanish>
+		<Polish>Oczekiwanie na uko&#241;czenie przesy&#179;ania mapy</Polish>
 		<Russian>В ожидании узлов для завершения передачи карты</Russian>
 	</TEXT>
 	<TEXT>
@@ -904,6 +943,7 @@
 		<German>Download: %d1_Recv / %d2_Total Bytes</German>
 		<Italian>Download: %d1_Recv / %d2_Total byte</Italian>
 		<Spanish>Descarga: %d1_Recv / %d2_Total bytes</Spanish>
+		<Polish>Pobieranie: %d1_Recv / %d2_Total bajt&#243;w</Polish>
 		<Russian>Скачано: %d1_Recv / %d2_Total байт</Russian>
 	</TEXT>
 	<TEXT>
@@ -913,6 +953,7 @@
 		<German>und %s1_Name</German>
 		<Italian>e %s1_NamePROVA30</Italian>
 		<Spanish>y %s1_Name</Spanish>
+		<Polish>i %s1_Name</Polish>
 		<Russian>и %s1_Name</Russian>
 	</TEXT>
 	<TEXT>
@@ -922,6 +963,7 @@
 		<German> und %s1_Name</German>
 		<Italian>, e %s1_NamePROVA31</Italian>
 		<Spanish>, %s1_Name</Spanish>
+		<Polish>, oraz %s1_Name</Polish>
 		<Russian>, и %s1_Name</Russian>
 	</TEXT>
 	<TEXT>
@@ -931,6 +973,7 @@
 		<German>Aktuelles Spiel speichern und weiterspielen</German>
 		<Italian>Salva la partita in corso e continua a giocare</Italian>
 		<Spanish>Guardar la partida y seguir jugando</Spanish>
+		<Polish>Zapisz obecn&#185; gr&#234; i kontynuuj granie</Polish>
 		<Russian>Сохранить игру и продолжить</Russian>
 	</TEXT>
 	<TEXT>
@@ -940,6 +983,7 @@
 		<German>FORTFAHREN</German>
 		<Italian>CONTINUA</Italian>
 		<Spanish>CONTINUAR</Spanish>
+		<Polish>KONTYNUUJ</Polish>
 		<Russian>ПРОДОЛЖИТЬ</Russian>
 	</TEXT>
 	<TEXT>
@@ -949,6 +993,7 @@
 		<German>Warten auf erneute Spielverbindung von %s1_Names. Wählen Sie, wie Sie fortfahren wollen, wenn Sie nicht länger warten wollen.</German>
 		<Italian>Stiamo aspettando che %s1_Names si riconnetta alla partita. Se vuoi smettere di aspettare, vota su come procedere.</Italian>
 		<Spanish>Esperando que se reanude la conexión a la partida de %s1_Names. Si no quieres seguir esperando, vota acerca de cómo proceder.</Spanish>
+		<Polish>Czekamy na ponowne po&#179;&#185;czenie si&#234; %s1_Name z gr&#185;. Je&#191;eli chcia&#179;by&#156; przesta&#230; czeka&#230;, zag&#179;osuj nad dalszym dzia&#179;aniem. </Polish>
 		<Russian>Ожидание переподключения %s1_Names к игре. Если вы хотите прекратить это, пожалуйста, проголосуйте за дальнейшее действие.</Russian>
 	</TEXT>
 	<TEXT>
@@ -958,6 +1003,7 @@
 		<German>Es stehen noch immer Stimmabgaben aus.</German>
 		<Italian>In attesa dei voti mancanti.</Italian>
 		<Spanish>Esperando todavía votos importantes.</Spanish>
+		<Polish>Oczekiwanie na zako&#241;czenie g&#179;osowania.</Polish>
 		<Russian>Продолжаем ждать когда пролосуют все.</Russian>
 	</TEXT>
 	<TEXT>
@@ -967,6 +1013,7 @@
 		<German>Aktuelles Spiel speichern und später weiterspielen</German>
 		<Italian>Salva la partita in corso e riprendi più tardi</Italian>
 		<Spanish>Guardar la partida y seguir más tarde</Spanish>
+		<Polish>Zapisz obecn&#185; gr&#234; i kontynuuj p&#243;&#159;niej</Polish>
 		<Russian>Сохранить игру и продолжить позже</Russian>
 	</TEXT>
 	<TEXT>
@@ -976,6 +1023,7 @@
 		<German>ENDE</German>
 		<Italian>ESCI</Italian>
 		<Spanish>SALIR</Spanish>
+		<Polish>WYJD&#143;</Polish>
 		<Russian>ВЫЙТИ</Russian>
 	</TEXT>
 	<TEXT>
@@ -985,6 +1033,7 @@
 		<German>Das Abstimmungsergebnis war unentschieden.</German>
 		<Italian>La votazione è pari.</Italian>
 		<Spanish>La votación ha acabado en empate.</Spanish>
+		<Polish>Wynik g&#179;osowania to remis.</Polish>
 		<Russian>Результат голосования - ничья.</Russian>
 	</TEXT>
 	<TEXT>
@@ -994,6 +1043,7 @@
 		<German>Das Abstimmungsergebnis muss einstimmig sein.</German>
 		<Italian>La votazione deve essere unanime.</Italian>
 		<Spanish>La votación ha de ser unánime.</Spanish>
+		<Polish>G&#179;osowanie musi by&#230; jednomy&#156;lnne.</Polish>
 		<Russian>Голосование должно быть единогласным.</Russian>
 	</TEXT>
 	<TEXT>
@@ -1003,6 +1053,7 @@
 		<German>(Unentschlossen)</German>
 		<Italian>Indeciso</Italian>
 		<Spanish>(Indeciso)</Spanish>
+		<Polish>(Niezdecydowany)</Polish>
 		<Russian>(Неопределившийся)</Russian>
 	</TEXT>
 	<TEXT>
@@ -1012,6 +1063,7 @@
 		<German>Unbekannt!</German>
 		<Italian>Sconosciuto!</Italian>
 		<Spanish>Desconocido</Spanish>
+		<Polish>Nieznany!</Polish>
 		<Russian>Неизвестный!</Russian>
 	</TEXT>
 	<TEXT>
@@ -1021,6 +1073,7 @@
 		<German>Weiter warten</German>
 		<Italian>Continua ad aspettare</Italian>
 		<Spanish>Seguir esperando</Spanish>
+		<Polish>Kontynuuj oczekiwanie</Polish>
 		<Russian>Продолжать ждать</Russian>
 	</TEXT>
 	<TEXT>
@@ -1030,6 +1083,7 @@
 		<German>WARTEN</German>
 		<Italian>ATTESA</Italian>
 		<Spanish>ESPERAR</Spanish>
+		<Polish>CZEKAJ</Polish>
 		<Russian>ЖДАТЬ</Russian>
 	</TEXT>
 	<TEXT>
@@ -1039,6 +1093,7 @@
 		<German>Die Spieler haben beschlossen zu warten.</German>
 		<Italian>I giocatori hanno scelto di continuare ad aspettare.</Italian>
 		<Spanish>Los jugadores han decidido seguir esperando.</Spanish>
+		<Polish>Gracze zdecydowali aby kontynuowa&#230; oczekiwanie.</Polish>
 		<Russian>Игроки решили продолжить ожидание.</Russian>
 	</TEXT>
 	<TEXT>
@@ -1048,6 +1103,7 @@
 		<German>E-Mail-Versand fehlgeschlagen.[NEWLINE]SMTP-Host: %s1[NEWLINE]An: %s2[NEWLINE]Von: %s3</German>
 		<Italian>Invio dell'e-mail fallito.[NEWLINE]Host SMTP: %s1[NEWLINE]A: %s2[NEWLINE]Da: %s3</Italian>
 		<Spanish>No se ha conseguido enviar el e-mail.[NEWLINE]Anfitrión SMTP: %s1[NEWLINE]Para: %s2[NEWLINE]De: %s3</Spanish>
+		<Polish>Nie uda&#179;o si&#234; wys&#179;a&#230; wiadomo&#156;ci e-mail. [NEWLINE]SMTP host: %s1[NEWLINE]Do: %s2[NEWLINE]Od: %s3</Polish>
 		<Russian>Не удалось отправить письмо.[NEWLINE]SMTP хост: %s1[NEWLINE]Для: %s2[NEWLINE]От: %s3</Russian>
 	</TEXT>
 	<TEXT>
@@ -1057,6 +1113,7 @@
 		<German>Sie müssen eine gültige E-Mail-Adresse angeben.</German>
 		<Italian>Devi inserire un indirizzo e-mail valido.</Italian>
 		<Spanish>Hay que introducir una dirección válida de correo electrónico.</Spanish>
+		<Polish>Musisz poda&#230; poprawny adres e-mail.</Polish>
 		<Russian>Вы должны ввести действующий адрес электронной почты.</Russian>
 	</TEXT>
 	<TEXT>
@@ -1066,6 +1123,7 @@
 		<German>E-Mail-Adresse erforderlich</German>
 		<Italian>E-mail richiesta</Italian>
 		<Spanish>Se requiere e-mail</Spanish>
+		<Polish>Wymagany adres e-mail</Polish>
 		<Russian>Необходима электронная почта</Russian>
 	</TEXT>
 	<TEXT>
@@ -1075,6 +1133,7 @@
 		<German>E-Mail erfolgreich an %s1 gesendet.</German>
 		<Italian>E-mail a %s1 inviata con successo.</Italian>
 		<Spanish>Se ha enviado sin problemas el e-mail a %s1.</Spanish>
+		<Polish>Wiadomo&#156;&#230; e-mail do %s1 zosta&#179;a wys&#179;ana.</Polish>
 		<Russian>Письмо для %s1 успешно отправлено.</Russian>
 	</TEXT>
 	<TEXT>
@@ -1084,6 +1143,7 @@
 		<German>Fehler</German>
 		<Italian>Errore</Italian>
 		<Spanish>Error</Spanish>
+		<Polish>B&#179;&#185;d</Polish>
 		<Russian>Ошибка</Russian>
 	</TEXT>
 	<TEXT>
@@ -1093,6 +1153,7 @@
 		<German>Ereignis-Log</German>
 		<Italian>Registro eventi</Italian> <!-- changing font crashes the game -->
 		<Spanish>Historial de sucesos</Spanish>
+		<Polish>Dziennik wydarze&#241;</Polish>
 		<Russian>Журнал ошибок</Russian>
 	</TEXT>
 	<TEXT>
@@ -1102,6 +1163,7 @@
 		<German>Fataler Fehler</German>
 		<Italian>Errore critico</Italian>
 		<Spanish>Error crítico</Spanish>
+		<Polish>B&#179;&#185;d krytyczny</Polish>
 		<Russian>Критическая ошибка</Russian>
 	</TEXT>
 	<TEXT>
@@ -1111,6 +1173,7 @@
 		<German>Bei der Übertragung der Datei ist ein Fehler aufgetreten.</German>
 		<Italian>Errore critico durante il trasferimento dei file.</Italian>
 		<Spanish>Se ha producido un error crítico al transferir el archivo.</Spanish>
+		<Polish>Wyst&#185;pi&#179; krytyczny b&#179;&#185;d podczas przesy&#179;ania pliku.</Polish>
 		<Russian>При передаче файла произошла критическая ошибка.</Russian>
 	</TEXT>
 	<TEXT>
@@ -1120,6 +1183,7 @@
 		<German>Dateiübertragungsfehler</German>
 		<Italian>Errore di trasferimento file</Italian>
 		<Spanish>Error de transferencia de archivo</Spanish>
+		<Polish>B&#179;&#185;d podczas przesy&#179;ania pliku</Polish>
 		<Russian>Ошибка передачи файла</Russian>
 	</TEXT>
 	<TEXT>
@@ -1129,6 +1193,7 @@
 		<German>Account anlegen</German>
 		<Italian>Crea account</Italian>
 		<Spanish>Crear cuenta</Spanish>
+		<Polish>Utw&#243;rz konto</Polish>
 		<Russian>Создать учетную запись</Russian>
 	</TEXT>
 	<TEXT>
@@ -1138,6 +1203,7 @@
 		<German>Geben Sie zum Anlegen eines neuen GameSpy-Accounts Ihre E-Mail-Adresse, den gew&#252;nschten Benutzernamen und ein Kennwort ein.</German>
 		<Italian>Inserisci il tuo indirizzo e-mail, l'username desiderato e la password per creare un nuovo account di GameSpy.</Italian>
 		<Spanish>Introduce tu direcci&#243;n de e-mail, el nombre de usuario que desees y la contrase&#241;a para crear una nueva cuenta de GameSpy.</Spanish>
+		<Polish>Podaj sw&#243;j adres email, nazw&#234; u&#191;ytkownika, oraz has&#179;o, aby utworzy&#230; nowe konto GameSpy.</Polish>
 		<Russian>Введите свой адрес электронной почты, желаемое имя пользователя и пароль для создания новой учетной записи GameSpy.</Russian>
 	</TEXT>
 	<TEXT>
@@ -1147,6 +1213,7 @@
 		<German>NEUEN ACCOUNT ANLEGEN</German>
 		<Italian>CREA NUOVO ACCOUNT</Italian>
 		<Spanish>CREAR NUEVA CUENTA</Spanish>
+		<Polish>UTW&#211;RZ NOWE KONTO</Polish>
 		<Russian>СОЗДАТЬ НОВУЮ УЧЕТНУЮ ЗАПИСЬ</Russian>
 	</TEXT>
 	<TEXT>
@@ -1156,6 +1223,7 @@
 		<German>E-Mail-Adresse</German>
 		<Italian>Indirizzo E-Mail</Italian>
 		<Spanish>Dirección de e-mail</Spanish>
+		<Polish>Adres e-mail</Polish>
 		<Russian>Адрес электронной почты</Russian>
 	</TEXT>
 	<TEXT>
@@ -1165,6 +1233,7 @@
 		<German>Login</German>
 		<Italian>Login</Italian>
 		<Spanish>Iniciar sesión</Spanish>
+		<Polish>Login</Polish>
 		<Russian>Авторизироваться</Russian>
 	</TEXT>
 	<TEXT>
@@ -1174,6 +1243,7 @@
 		<German>LOGIN</German>
 		<Italian>LOGIN</Italian>
 		<Spanish>INICIAR SESIÓN</Spanish>
+		<Polish>ZALOGUJ SI&#202;</Polish>
 		<Russian>АВТОРИЗИРОВАТЬСЯ</Russian>
 	</TEXT>
 	<TEXT>
@@ -1183,6 +1253,7 @@
 		<German>Geben Sie Ihren vorhandenen GameSpy-Benutzernamen und Ihr Kennwort ein, um sich einzuloggen.</German>
 		<Italian>Inserisci il tuo GameSpy ID e la password per effettuare il login.</Italian>
 		<Spanish>Introduce tu ID de GameSpy y tu contrase&#241;a para iniciar sesi&#243;n.</Spanish>
+		<Polish>Podaj swoje GameSpy ID oraz has&#179;o, aby si&#234; zalogowa&#230;.</Polish>
 		<Russian>Введите существующее имя пользователя GameSpy и пароль для авторизации.</Russian>
 	</TEXT>
 	<TEXT>
@@ -1192,6 +1263,7 @@
 		<German>Login mit bestehendem Account</German>
 		<Italian>Login con un account già esistente</Italian>
 		<Spanish>Identificarse con una cuenta existente</Spanish>
+		<Polish>Zaloguj si&#234; przy u&#191;yciu istniej&#185;cego konta</Polish>
 		<Russian>Авторизироваться с существующей учетной записью</Russian>
 	</TEXT>
 	<TEXT>
@@ -1201,6 +1273,7 @@
 		<German>Login</German>
 		<Italian>Login</Italian>
 		<Spanish>Iniciar sesión</Spanish>
+		<Polish>Logowanie</Polish>
 		<Russian>Авторизироваться</Russian>
 	</TEXT>
 	<TEXT>
@@ -1210,6 +1283,7 @@
 		<German>Neuen Account anlegen</German>
 		<Italian>Crea nuovo account</Italian>
 		<Spanish>Crear nueva cuenta</Spanish>
+		<Polish>Stw&#243;rz nowe konto</Polish>
 		<Russian>Создать новую учетную запись</Russian>
 	</TEXT>
 	<TEXT>
@@ -1219,6 +1293,7 @@
 		<German>[Unbekannt]</German>
 		<Italian>[Sconosciuto]</Italian>
 		<Spanish>[Desconocido]</Spanish>
+		<Polish>[Nieznany]</Polish>
 		<Russian>[Неизвестно]</Russian>
 	</TEXT>
 	<TEXT>
@@ -1228,6 +1303,7 @@
 		<German>Fortgeschrittener Start</German>
 		<Italian>Avvio avanzato</Italian>
 		<Spanish>Inicio avanzado</Spanish>
+		<Polish>Zaawansowany start</Polish>
 		<Russian>Расширенный старт</Russian>
 	</TEXT>
 	<TEXT>
@@ -1237,6 +1313,7 @@
 		<German>Blendet die Strategieanzeige ein</German>
 		<Italian>Mostra il filtro strategico</Italian>
 		<Spanish>Muestra la capa de estrategia</Spanish>
+		<Polish>Pokazuje wartw&#234; strategiczn&#185;</Polish>
 		<Russian>Отображать стратегический слой</Russian>
 	</TEXT>
 	<TEXT>
@@ -1246,6 +1323,7 @@
 		<German>Zeigt detaillierte Informationen über Ihre Spielewelt.</German>
 		<Italian>[NEWLINE]Informazioni dettagliate sul mondo di gioco.</Italian>
 		<Spanish>Hace que aparezca información detallada sobre el mundo de la partida.</Spanish>
+		<Polish>Pokazuje szczeg&#243;&#179;owe informacje o twoim &#156;wiecie gry.</Polish>
 		<Russian>Выводить подробную информацию о мире вашей игры.</Russian>
 	</TEXT>
 	<TEXT>
@@ -1255,6 +1333,7 @@
 		<German>Der Spiele-Host ist nicht erreichbar.</German>
 		<Italian>Impossibile connettersi all'host della partita.</Italian>
 		<Spanish>No se ha podido acceder al anfitrión de la partida.</Spanish>
+		<Polish>Nie uda&#179;o si&#234; po&#179;&#185;czy&#230; z hostem.</Polish>
 		<Russian>Не удалось связаться с хостом игры.</Russian>
 	</TEXT>
 	<TEXT>
@@ -1264,6 +1343,7 @@
 		<German>Host nicht erreichbar</German>
 		<Italian>Host irraggiungibile</Italian>
 		<Spanish>No se puede acceder al anfitrión</Spanish>
+		<Polish>Host nieosi&#185;galny</Polish>
 		<Russian>Хост недоступен</Russian>
 	</TEXT>
 	<TEXT>
@@ -1273,6 +1353,7 @@
 		<German>Spiel erstellen</German>
 		<Italian>Ospita partita</Italian>
 		<Spanish>Alojar partida</Spanish>
+		<Polish>Zahostuj gr&#234;</Polish>
 		<Russian>Создать игру</Russian>
 	</TEXT>
 	<TEXT>
@@ -1282,6 +1363,7 @@
 		<German>Geben Sie ein Kennwort ein, um Ihr Spiel vor unbefugtem Zugriff zu schützen.[NEWLINE]Oder lassen Sie die Kennworteingabe leer, wenn Sie kein Kennwort nutzen wollen.</German>
 		<Italian>Inserisci una password se vuoi proteggere la tua partita.[NEWLINE]Lascia la password in bianco per non avere protezioni.</Italian>
 		<Spanish>Introduce una contraseña si deseas proteger la partida.[NEWLINE]Déjala en blanco para descartar la protección.</Spanish>
+		<Polish>Podaj has&#179;o, je&#191;eli chcesz, aby twoja gra by&#179;a chroniona. [NEWLINE]Pozostaw has&#179;o puste, je&#191;eli nie jest to potrzebne.</Polish>
 		<Russian>Введите пароль, если хотите защитить игру от несанкционированного доступа.[NEWLINE]Оставьте поле пустым, если вам это не требуется.</Russian>
 	</TEXT>
 	<TEXT>
@@ -1291,6 +1373,7 @@
 		<German>SCHÜTZEN SIE IHR SPIEL</German>
 		<Italian>PROTEGGI LA TUA PARTITA</Italian>
 		<Spanish>PROTEGE LA PARTIDA</Spanish>
+		<Polish>ZABEZPIECZ SWOJ&#165; GR&#202;</Polish>
 		<Russian>ЗАЩИТИТЬ СВОЮ ИГРУ</Russian>
 	</TEXT>
 	<TEXT>
@@ -1300,6 +1383,7 @@
 		<German>Spielkennwort</German>
 		<Italian>Password partita</Italian>
 		<Spanish>Contraseña de la partida</Spanish>
+		<Polish>Has&#179;o gry</Polish>
 		<Russian>Пароль игры</Russian>
 	</TEXT>
 	<TEXT>
@@ -1309,6 +1393,7 @@
 		<German>Es konnte kein Verbindungsaufbau mit der Firewall des Hosts ausgehandelt werden.</German>
 		<Italian>Impossibile negoziare con il firewall dell'host.</Italian>
 		<Spanish>No se ha podido negociar con el firewall/servidor de seguridad del anfitrión.</Spanish>
+		<Polish>Nie uda&#179;o si&#234; negocjowa&#230; z zapor&#185; sieciow&#185; hosta.</Polish>
 		<Russian>Не удалось связаться с брандмауэром хоста</Russian>
 	</TEXT>
 	<TEXT>
@@ -1318,6 +1403,7 @@
 		<German>Host nicht erreichbar</German>
 		<Italian>Host irraggiungibile</Italian>
 		<Spanish>No se puede acceder al anfitrión</Spanish>
+		<Polish>Host nieosi&#185;galny</Polish>
 		<Russian>Хост недоступен</Russian>
 	</TEXT>
 	<TEXT>
@@ -1327,6 +1413,7 @@
 		<German>Fertig</German>
 		<Italian>Caricamento completato</Italian>
 		<Spanish>Finalizado</Spanish>
+		<Polish>Ko&#241;czenie</Polish>
 		<Russian>Завершение</Russian>
 	</TEXT>
 	<TEXT>
@@ -1336,6 +1423,7 @@
 		<German>Grafiken initialisieren</German>
 		<Italian>Caricamento in corso...</Italian>
 		<Spanish>Inic. gráficos</Spanish>
+		<Polish>Inicjalizacja grafiki</Polish>
 		<Russian>Инициализация графики</Russian>
 	</TEXT>
 	<TEXT>
@@ -1345,6 +1433,7 @@
 		<German>Wird initialisiert</German>
 		<Italian>Caricamento in corso...</Italian>
 		<Spanish>Iniciando</Spanish>
+		<Polish>Inicjalizacja</Polish>
 		<Russian>Инициализация</Russian>
 	</TEXT>
 	<TEXT>
@@ -1354,6 +1443,7 @@
 		<German>Die Kartendatei konnte nicht übertragen werden.</German>
 		<Italian>Impossibile inizializzare il trasferimento della mappa.</Italian>
 		<Spanish>No se ha podido iniciar la transferencia del mapa.</Spanish>
+		<Polish>Nie uda&#179;o si&#234; zainicjalizowa&#230; transferu mapy.</Polish>
 		<Russian>Не удалось инициализировать передачу карты.</Russian>
 	</TEXT>
 	<TEXT>
@@ -1363,6 +1453,7 @@
 		<German>Dateiübertragungsfehler</German>
 		<Italian>Errore di trasferimento file</Italian>
 		<Spanish>Error de transferencia de archivo</Spanish>
+		<Polish>B&#179;&#185;d przesy&#179;ania pliku</Polish>
 		<Russian>Ошибка передачи файла</Russian>
 	</TEXT>
 	<TEXT>
@@ -1372,6 +1463,7 @@
 		<German>Die Spieldatendatei konnte nicht übertragen werden.</German>
 		<Italian>Impossibile inizializzare il trasferimento dei file dati di gioco.</Italian>
 		<Spanish>No se ha podido iniciar la transferencia del archivo de datos de la partida.</Spanish>
+		<Polish>Nie uda&#179;o si&#234; zainicjalizowa&#230; transferu plik&#243;w gry.</Polish>
 		<Russian>Не удалось инициализировать передачу файла игровых данных.</Russian>
 	</TEXT>
 	<TEXT>
@@ -1381,6 +1473,7 @@
 		<German>Dateiübertragungsfehler</German>
 		<Italian>Errore di trasferimento file</Italian>
 		<Spanish>Error de transferencia de archivo</Spanish>
+		<Polish>B&#179;&#185;d przesy&#179;ania pliku</Polish>
 		<Russian>Ошибка передачи файла</Russian>
 	</TEXT>
 	<TEXT>
@@ -1390,6 +1483,7 @@
 		<German>Interface-Setup</German>
 		<Italian>Impostazioni interfaccia</Italian>
 		<Spanish>Config. interfaz</Spanish>
+		<Polish>Konfiguracja interfejsu</Polish>
 		<Russian>Настройка интерфейса</Russian>
 	</TEXT>
 	<TEXT>
@@ -1399,6 +1493,7 @@
 		<German>Karten-Setup</German>
 		<Italian>Impostazioni mappa</Italian>
 		<Spanish>Config. mapa</Spanish>
+		<Polish>Konfiguracja mapy</Polish>
 		<Russian>Настройка карты</Russian>
 	</TEXT>
 	<TEXT>
@@ -1408,6 +1503,7 @@
 		<German>Spieler-Setup</German>
 		<Italian>Impostazioni giocatori</Italian>
 		<Spanish>Config. jugadores</Spanish>
+		<Polish>Konfiguracja graczy</Polish>
 		<Russian>Настройка игроков</Russian>
 	</TEXT>
 	<TEXT>
@@ -1417,6 +1513,7 @@
 		<German>INTERNET-LOBBY</German>
 		<Italian>SALA D'ATTESA INTERNET</Italian>
 		<Spanish>SALA DE INTERNET</Spanish>
+		<Polish>LOBBY INTERNETOWE</Polish>
 		<Russian>ИНТЕРНЕТ-ЛОББИ</Russian>
 	</TEXT>
 	<TEXT>
@@ -1425,6 +1522,7 @@
 		This message usually appears when game is freshly installed, or when INI file was corrupted or deleted.
 		To disable this message: Go to C:\Users\"your username"\Documents\My Games\Beyond the Sword, open CivilizationIV.ini, and change "enablevoice = 1" to "enablevoice = 0"</English>
 		<Italian>Hai selezionato un dispositivo di acquisizione vocale inutilizzabile. Acquisizione vocale disattivata. Questo messaggio di solito appare quando il gioco è stato appena installato o quando il file INI è stato danneggiato o cancellato. Per disabilitare questo messaggio: vai a C:\Users\"your username"\Documents\My Games\Beyond the Sword, apri CivilizationIV.ini e cambia "enablevoice = 1" in "enablevoice = 0"</Italian>
+		<Polish>Wybra&#179;e&#156; nieobs&#179;ugiwane urz&#185;dzenie do przechwytywania g&#179;osu. Przechwytywanie g&#179;osu zosta&#179;o wy&#179;&#185;czone. Ta wiadomo&#156;&#230; zazwyczaj pojawia si&#234; przy pierwszym uruchomieniu gry, lub gdy plik INI zosta&#179; uszkodzony, lub usuni&#234;ty. Aby wy&#179;&#185;czy&#230; te powiadomienie przejd&#159; do: C:\Users\"your username"\Documents\My Games\Beyond the Sword, otw&#243;rz plik CivilizationIV.ini, a nast&#234;pnie zmnie&#241; "enablevoice = 1" na "enablevoice = 0"</Polish>
 		<Russian>Неверное звукозаписывающее устройство. Запись звука невозможна.
 		Данное сообщение появляется после установки игры, либо когда файл конфигурации поврежден или удален.
 		Чтобы его отключить перейдите по C:\Users\"ваше имя пользователя"\Documents\My Games\Beyond the Sword, откройте с помощью блокнота "CivilizationIV.ini", и замените строчку "enablevoice = 1" на "enablevoice = 0"</Russian>
@@ -1434,6 +1532,7 @@
 		<English>Invalid Device</English>
 		<German>Unzulässiges Gerät</German>
 		<Italian>Dispositivo non valido</Italian>
+		<Polish>Nieprawid&#179;owe urz&#185;dzenie</Polish>
 		<Russian>Недопустимое устройство</Russian>
 	</TEXT>
 	<TEXT>
@@ -1443,6 +1542,7 @@
 		<German>Nicknames dürfen nicht mit einer Zahl oder den Zeichen '$', '#', '%%', '&amp;' und '@' beginnen</German>
 		<Italian>Il nickname non può iniziare con un numero, '$', '#', '%%', '&amp;', o '@'</Italian>
 		<Spanish>Los apodos no pueden empezar por un número, "$", "#", "%%", "&amp;" o "@".</Spanish>
+		<Polish>Nazwa u&#191;ytkownika nie mo&#191;e zaczyna&#230; si&#234; od cyfry, '$', '#', '%%', '&amp;', ani '@'</Polish>
 		<Russian>Имена пользователей не могут начинаться с цифры и знаков: '$', '#', '%%', '&amp;', or '@'</Russian>
 	</TEXT>
 	<TEXT>
@@ -1452,6 +1552,7 @@
 		<German>Ungültiger Login-Name</German>
 		<Italian>Nome di login non valido</Italian>
 		<Spanish>Nombre de inicio de sesión no válido</Spanish>
+		<Polish>Nieprawid&#179;owa nazwa u&#191;ytkownika</Polish>
 		<Russian>Недопустимое имя учетной записи</Russian>
 	</TEXT>
 	<TEXT>
@@ -1459,6 +1560,7 @@
 		<English>You have selected an unusable voice playback device. Voice playback disabled.</English>
 		<German>Es wurde ein ungeeignetes Gerät zur Sprachwiedergabe ausgewählt. Die Sprachwiedergabe wurde deaktiviert.</German>
 		<Italian>Hai selezionato un dispositivo di riproduzione vocale inutilizzabile. Riproduzione vocale disattivata.</Italian>
+		<Polish>Wybra&#179;e&#156; nieobs&#179;ugiwane urz&#185;dzenie do odtwarzania g&#179;osu. Odtwarzanie g&#179;osu zosta&#179;o wy&#179;&#185;czone.</Polish>
 		<Russian>Неверное устройство проигрывания звука. Воспроизведение звука отключено.</Russian>
 	</TEXT>
 	<TEXT>
@@ -1466,6 +1568,7 @@
 		<English>Invalid Device</English>
 		<German>Unzulässiges Gerät</German>
 		<Italian>Dispositivo non valido</Italian>
+		<Polish>Nieprawid&#179;owe urz&#185;dzenie</Polish>
 		<Russian>Недопустимое устройство</Russian>
 	</TEXT>
 	<TEXT>
@@ -1475,6 +1578,7 @@
 		<German>Wir konnten keine Verbindung zum Spieler "%s1_Name" aufbauen.[NEWLINE]Der Spieler hat seine Firewall-Umgebung eventuell nicht korrekt konfiguriert.</German>
 		<Italian>Impossibile connettersi al giocatore "%s1_Name".[NEWLINE]Il giocatore potrebbe non aver impostato correttamente il firewall.</Italian>
 		<Spanish>Ha sido imposible conectar con el jugador "%s1_Name".[NEWLINE]Puede que ese jugador no tenga configurado correctamente su entorno de firewall/servidor de seguridad.</Spanish>
+		<Polish>Nie uda&#179;o si&#234; po&#179;&#185;czy&#230; z u&#191;ytkownikiem "%s1_Name". [NEWLINE]Mo&#191;e to by&#230; spowodowane nieprawid&#179;owo skonfigurowan&#185; zapor&#185; sieciow&#185; danego gracza.</Polish>
 		<Russian>Не получилось подключиться к игроку "%s1_Name".[NEWLINE]Возможно, его брандмауэр настроен неправильно.</Russian>
 	</TEXT>
 	<TEXT>
@@ -1484,6 +1588,7 @@
 		<German>Peer-Verbindungsfehler!</German>
 		<Italian>Errore di connessione al peer!</Italian>
 		<Spanish>Fallo al conectar con interlocutor</Spanish>
+		<Polish>Po&#179;&#185;czenie z peerem si&#234; nie powiod&#179;o!</Polish>
 		<Russian>Ошибка подключения к узлу!</Russian>
 	</TEXT>
 	<TEXT>
@@ -1493,6 +1598,7 @@
 		<German>Geben Sie bitte das Kennwort für dieses Spiel ein.</German>
 		<Italian>Inserire una password per partecipare a questa partita.</Italian>
 		<Spanish>Introduce la contraseña necesaria para la partida.</Spanish>
+		<Polish>Podaj wymagane has&#179;o dla tej gry.</Polish>
 		<Russian>Пожалуйста, введите необходимый для этой игры пароль.</Russian>
 	</TEXT>
 	<TEXT>
@@ -1502,6 +1608,7 @@
 		<German>KENNWORTEINGABE ERFORDERLICH</German>
 		<Italian>PASSWORD RICHIESTA</Italian>
 		<Spanish>SE REQUIERE CONTRASEÑA</Spanish>
+		<Polish>HAS&#163;O WYMAGANE</Polish>
 		<Russian>ТРЕБУЕТСЯ ПАРОЛЬ</Russian>
 	</TEXT>
 	<TEXT>
@@ -1511,6 +1618,7 @@
 		<German>Spielkennwort</German>
 		<Italian>Password partita</Italian>
 		<Spanish>Contraseña de la partida</Spanish>
+		<Polish>Has&#179;o gry</Polish>
 		<Russian>Пароль игры</Russian>
 	</TEXT>
 	<TEXT>
@@ -1520,6 +1628,7 @@
 		<German>LAN-LOBBY</German>
 		<Italian>SALA D'ATTESA LAN</Italian>
 		<Spanish>SALA DE RED LOCAL</Spanish>
+		<Polish>LOBBY LOKALNE</Polish>
 		<Russian>Лобби локальной сети</Russian>
 	</TEXT>
 	<TEXT>
@@ -1529,6 +1638,7 @@
 		<German>Beschreibung Staatsoberhaupt</German>
 		<Italian>Descrizione del leader</Italian>
 		<Spanish>Descripción del líder</Spanish>
+		<Polish>Opis przyw&#243;dcy</Polish>
 		<Russian>Описание предводителя</Russian>
 	</TEXT>
 	<TEXT>
@@ -1538,6 +1648,7 @@
 		<German>Alle Dateien (*.*)</German>
 		<Italian>Tutti i file (*.*)</Italian>
 		<Spanish>Todos los archivos (*.*)</Spanish>
+		<Polish>Wszystkie pliki (*.*)</Polish>
 		<Russian>Все файлы (*.*)</Russian>
 	</TEXT>
 	<TEXT>
@@ -1547,6 +1658,7 @@
 		<German>Fehler beim Erstellen der Datei %s1</German>
 		<Italian>Errore nella creazione del file %s1</Italian>
 		<Spanish>Error al crear el archivo %s1.</Spanish>
+		<Polish>B&#179;&#185;d podczas tworzenia pliku %s1</Polish>
 		<Russian>Ошибка при создании файла %s1</Russian>
 	</TEXT>
 	<TEXT>
@@ -1556,6 +1668,7 @@
 		<German>Fehler beim Öffnen der Datei %s1</German>
 		<Italian>Errore nell'apertura del file %s1</Italian>
 		<Spanish>Error al abrir el archivo %s1.</Spanish>
+		<Polish>B&#179;&#185;d podczas otwierania pliku %s1</Polish>
 		<Russian>Ошибка при открытии файла %s1</Russian>
 	</TEXT>
 	<TEXT>
@@ -1565,6 +1678,7 @@
 		<German>Die angegebene Datei existiert nicht.[NEWLINE]Bitte wählen Sie einen gültigen Dateinamen.</German>
 		<Italian>Il file specificato non esiste.[NEWLINE]Seleziona un nome di file valido.</Italian>
 		<Spanish>El archivo indicado no existe.[NEWLINE]Selecciona un nombre de archivo válido.</Spanish>
+		<Polish>Podany plik nie istnieje. [NEWLINE]Wybierz poprawn&#185; nazw&#234; pliku.</Polish>
 		<Russian>Указанный файл не существует.[NEWLINE]Пожалуйста, выберите корректное имя файла.</Russian>
 	</TEXT>
 	<TEXT>
@@ -1574,6 +1688,7 @@
 		<German>Der von Ihnen gewählte Spielstand ist schreibgeschützt, um sicherzustellen, dass die Daten in Ihrem Mod-Verzeichnis nicht verändert wurden.</German>
 		<Italian>Il file di salvataggio selezionato è protetto, in modo da assicurarsi che gli assets nella cartella della mod non vengano modificati.</Italian>
 		<Spanish>El archivo guardado que has seleccionado está protegido para asegurar que no se modifiquen los parámetros de la carpeta mod.</Spanish>
+		<Polish>Wybrany przez Ciebie pliku zapisu jest chroniony, aby upewni&#230; si&#234;, &#191;e pliki &#159;r&#243;d&#179;owe znajduj&#185;ce si&#234; w folderze z modami nie zosta&#179;y zmnienione.</Polish>
 		<Russian>Выбранный файл сохранения защищен для предотвращений изменения игровых ресурсов в папке модов.</Russian>
 	</TEXT>
 	<TEXT>
@@ -1583,6 +1698,7 @@
 		<German>Ladefehler</German>
 		<Italian>Errore di caricamento</Italian>
 		<Spanish>Error de carga.</Spanish>
+		<Polish>B&#179;&#185;d wczytywania</Polish>
 		<Russian>Ошибка загрузки</Russian>
 	</TEXT>
 	<TEXT>
@@ -1592,6 +1708,7 @@
 		<German>Datei laden</German>
 		<Italian>Carica file</Italian>
 		<Spanish>Cargar archivo</Spanish>
+		<Polish>Wczytaj plik</Polish>
 		<Russian>Загрузка файла</Russian>
 	</TEXT>
 	<TEXT>
@@ -1600,6 +1717,7 @@
 		<French>Nom :</French>
 		<Italian>Nome:</Italian>
 		<Spanish>Nombre:</Spanish>
+		<Polish>Nazwa u&#191;ytkownika:</Polish>
 		<Russian>Имя:</Russian>
 	</TEXT>
 	<TEXT>
@@ -1609,6 +1727,7 @@
 		<German>Spieler %d1_ID: LoggingEnabled=1.[NEWLINE]Stellen Sie sicher, dass er vertrauenswürdig ist.</German>
 		<Italian>Giocatore %d1_ID: LoggingEnabled=1.[NEWLINE]Assicurati che il giocatore sia affidabile.</Italian>
 		<Spanish>Jugador %d1_ID: LoggingEnabled=1.[NEWLINE]Comprueba si se trata de un jugador de confianza.</Spanish>
+		<Polish>Gracz %d1_ID ma w&#179;&#185;czone zapisywanie log&#243;w. [NEWLINE]Upewnij si&#234;, &#191;e mo&#191;na temu graczowi ufa&#230;.</Polish>
 		<Russian>Включено ведение журнала игрока %d1_ID.[NEWLINE]Убедитесь, что этому игроку можно доверять.</Russian>
 	</TEXT>
 	<TEXT>
@@ -1618,6 +1737,7 @@
 		<German>Der Login-Versuch ist fehlgeschlagen.</German>
 		<Italian>Il tentativo di login è fallito.</Italian>
 		<Spanish>El intento de inicio de sesión ha fallado.</Spanish>
+		<Polish>Pr&#243;ba zalogowania si&#234; nie powiod&#179;a.</Polish>
 		<Russian>Попытка авторизации завершилась неудачо.</Russian>
 	</TEXT>
 	<TEXT>
@@ -1627,6 +1747,7 @@
 		<German>Login gescheitert</German>
 		<Italian>Login fallito</Italian>
 		<Spanish>Fallo al iniciar sesión</Spanish>
+		<Polish>Logowanie si&#234; nie powiod&#179;o</Polish>
 		<Russian>Авторизация не удалась</Russian>
 	</TEXT>
 	<TEXT>
@@ -1636,6 +1757,7 @@
 		<German>Dieser Account wird zurzeit benutzt.</German>
 		<Italian>Questo account è attualmente in uso.</Italian>
 		<Spanish>Esa cuenta ya se encuentra en uso.</Spanish>
+		<Polish>To konto jest obecnie w u&#191;yciu.</Polish>
 		<Russian>Этот аккаунт уже используется</Russian>
 	</TEXT>
 	<TEXT>
@@ -1645,6 +1767,7 @@
 		<German>Account in Benutzung</German>
 		<Italian>Account in uso</Italian>
 		<Spanish>Cuenta en uso</Spanish>
+		<Polish>Konto w u&#191;yciu</Polish>
 		<Russian>Аккаунт занят</Russian>
 	</TEXT>
 	<TEXT>
@@ -1654,6 +1777,7 @@
 		<German>Sie müssen einen Benutzernamen angeben.</German>
 		<Italian>Devi inserire un username.</Italian>
 		<Spanish>Hay que introducir un nombre de usuario.</Spanish>
+		<Polish>Musisz poda&#230; nazw&#234; u&#191;ytkownika.</Polish>
 		<Russian>Вы должны ввести имя пользователя.</Russian>
 	</TEXT>
 	<TEXT>
@@ -1663,6 +1787,7 @@
 		<German>Benutzername erforderlich</German>
 		<Italian>Username richiesto</Italian>
 		<Spanish>Se requiere nombre de usuario</Spanish>
+		<Polish>Nazwa u&#191;ytkownika jest wymagana</Polish>
 		<Russian>Требуется имя пользователя</Russian>
 	</TEXT>
 	<TEXT>
@@ -1672,6 +1797,7 @@
 		<German>Bei unserem Login-Versuch ist die Zeit abgelaufen. Der Authentifizierungsserver ist vielleicht nicht erreichbar.</German>
 		<Italian>Tentativo di login scaduto. Il server di autenticazione potrebbe essere disattivato.</Italian>
 		<Spanish>Agotado el tiempo de inicio de sesión. Puede que el servidor de autenticación no esté disponible.</Spanish>
+		<Polish>Pr&#243;ba zalogowania si&#234; przekroczy&#179;a limit czasu. Serwer uwierzytelniania mo&#191;e mie&#230; obecnie usterk&#234;.</Polish>
 		<Russian>Вышло время на попытку входа. Вероятно, сервер аутентификации не работает.</Russian>
 	</TEXT>
 	<TEXT>
@@ -1681,6 +1807,7 @@
 		<German>Login-Fehler</German>
 		<Italian>Errore di login</Italian>
 		<Spanish>Error de inicio de sesión</Spanish>
+		<Polish>B&#179;&#185;d logowania</Polish>
 		<Russian>Ошибка авторизации</Russian>
 	</TEXT>
 	<TEXT>
@@ -1690,6 +1817,7 @@
 		<German>Über Civ 4</German>
 		<Italian>Informazioni su Civ 4</Italian>
 		<Spanish>Acerca de Civilization IV</Spanish>
+		<Polish>Informacje o Cywilizacji 4</Polish>
 		<Russian>Об игре "Цивилизация IV"</Russian>
 	</TEXT>
 	<TEXT>
@@ -1699,6 +1827,7 @@
 		<German>Über diese Version</German>
 		<Italian>Informazioni build</Italian>
 		<Spanish>Acerca de esta build</Spanish>
+		<Polish>Informacje o obecnej wersji</Polish>
 		<Russian>О данной сборке</Russian>
 	</TEXT>
 	<TEXT>
@@ -1708,6 +1837,7 @@
 		<German>Sie müssen eine gültige Netzwerkadresse angeben.</German>
 		<Italian>Devi inserire un indirizzo di rete valido.</Italian>
 		<Spanish>Hay que facilitar una dirección de red válida.</Spanish>
+		<Polish>Musisz poda&#230; poprawny adres internetowy.</Polish>
 		<Russian>Необходим действующий сетевой адрес.</Russian>
 	</TEXT>
 	<TEXT>
@@ -1717,6 +1847,7 @@
 		<German>Netzwerkadresse erforderlich</German>
 		<Italian>Indirizzo di rete richiesto</Italian>
 		<Spanish>Se requiere dirección de red</Spanish>
+		<Polish>Adres internetowy jest wymagany</Polish>
 		<Russian>Требуется сетевой адрес</Russian>
 	</TEXT>
 	<TEXT>
@@ -1726,6 +1857,7 @@
 		<German>ERWEITERT</German>
 		<Italian>IMPOSTAZIONI AVANZATE</Italian>
 		<Spanish>AVANZADO</Spanish>
+		<Polish>ZAAWANSOWANE</Polish>
 		<Russian>Дополнительно</Russian>
 	</TEXT>
 	<TEXT>
@@ -1735,6 +1867,7 @@
 		<German>KI</German>
 		<Italian>IA</Italian>
 		<Spanish>IA</Spanish>
+		<Polish>SI</Polish>
 		<Russian>ИИ</Russian>
 	</TEXT>
 	<TEXT>
@@ -1744,6 +1877,7 @@
 		<German>Es läuft bereits ein Patch-Update.</German>
 		<Italian>Aggiornamento già in esecuzione.</Italian>
 		<Spanish>El parche de actualización ya se está aplicando.</Spanish>
+		<Polish>Trwa ju&#191; aktualizacja do najnowszej wersji.</Polish>
 		<Russian>Уже идет обновление.</Russian>
 	</TEXT>
 	<TEXT>
@@ -1753,11 +1887,13 @@
 		<German>Patch läuft bereits</German>
 		<Italian>Patch già in esecuzione</Italian>
 		<Spanish>Ya se está aplicando el parche</Spanish>
+		<Polish>Trwa ju&#191; aktualizacja</Polish>
 		<Russian>Патч уже установлен</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MAIN_MENU_BTS_MOD</Tag>
 		<English>Mod</English>
+		<Polish>Modyfikacja</Polish>
 		<Russian>Модификация</Russian>
 	</TEXT>
 	<TEXT>
@@ -1766,6 +1902,7 @@
 		<French>Scénario</French>
 		<German>Szenario</German>
 		<Spanish>Escenario</Spanish>
+		<Polish>Scenariusz</Polish>
 		<Russian>Сценарий</Russian>
 	</TEXT>
 	<TEXT>
@@ -1775,6 +1912,7 @@
 		<German>Freundesliste</German>
 		<Italian>Lista d'amici</Italian>
 		<Spanish>Lista de amigos</Spanish>
+		<Polish>Lista znajomych</Polish>
 		<Russian>Список друзей</Russian>
 	</TEXT>
 	<TEXT>
@@ -1784,6 +1922,7 @@
 		<German>Versionsdatum:</German>
 		<Italian>Data della build:</Italian>
 		<Spanish>Fecha de la build:</Spanish>
+		<Polish>Data kompilacji:</Polish>
 		<Russian>Время сборки:</Russian>
 	</TEXT>
 	<TEXT>
@@ -1793,6 +1932,7 @@
 		<German>Version:</German>
 		<Italian>Versione della build:</Italian>
 		<Spanish>Versión de la build:</Spanish>
+		<Polish>Wersja kompilacji:</Polish>
 		<Russian>Версия сборки:</Russian>
 	</TEXT>
 	<TEXT>
@@ -1802,6 +1942,7 @@
 		<German>Zu ladendes Spiel wählen!</German>
 		<Italian>Scegli un file da caricare</Italian>
 		<Spanish>Elegir la partida a cargar</Spanish>
+		<Polish>Wczytaj zapisan&#185; gr&#234;</Polish>
 		<Russian>Выберите игру для загрузки</Russian>
 	</TEXT>
 	<TEXT>
@@ -1817,6 +1958,7 @@
 		<German>Geben Sie bitte das Admin-Kennwort für dieses Spiel ein.</German>
 		<Italian>Inserire la password amministratore per questa partita.</Italian>
 		<Spanish>Introduce la contraseña del administrador necesaria para la partida.</Spanish>
+		<Polish>Podaj has&#179;o administratora dla tej gry.</Polish>
 		<Russian>Пожалуйста, введите пароль администратора для этой игры.</Russian>
 	</TEXT>
 	<TEXT>
@@ -1826,6 +1968,7 @@
 		<German>ADMIN-KENNWORT</German>
 		<Italian>PASSWORD AMMINISTRATORE</Italian>
 		<Spanish>CONTRASEÑA DEL ADMINISTRADOR</Spanish>
+		<Polish>HAS&#163;O ADMINISTRATORA</Polish>
 		<Russian>ПАРОЛЬ АДМИНИСТРАТОРА</Russian>
 	</TEXT>
 	<TEXT>
@@ -1835,6 +1978,7 @@
 		<German>Civ-Version:</German>
 		<Italian>Versione di Civ:</Italian>
 		<Spanish>Versión de Civilization:</Spanish>
+		<Polish>Wersja Cywilizacji:</Polish>
 		<Russian>Версия Цивилизации:</Russian>
 	</TEXT>
 	<TEXT>
@@ -1844,6 +1988,7 @@
 		<German>Geschlossen</German>
 		<Italian>Slot chiuso</Italian>
 		<Spanish>Cerrado</Spanish>
+		<Polish>Zamkni&#234;te</Polish>
 		<Russian>Закрыто</Russian>
 	</TEXT>
 	<TEXT>
@@ -1858,6 +2003,7 @@
 		<German>Verbinden</German>
 		<Italian>Connessione</Italian>
 		<Spanish>Conectar</Spanish>
+		<Polish>Po&#179;&#185;cz</Polish>
 		<Russian>Соединение</Russian>
 	</TEXT>
 	<TEXT>
@@ -1867,6 +2013,7 @@
 		<German>Ein Spiel erstellen!</German>
 		<Italian>Crea una partita</Italian>
 		<Spanish>Crear una partida</Spanish>
+		<Polish>Stw&#243;rz now&#185; gr&#234;!</Polish>
 		<Russian>Создать игру!</Russian>
 	</TEXT>
 	<TEXT>
@@ -1876,12 +2023,14 @@
 		<German>CREDITS</German>
 		<Italian>Crediti</Italian>
 		<Spanish>CRÉDITOS</Spanish>
+		<Polish>TW&#211;RCY</Polish>
 		<Russian>Титры</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MAIN_MENU_CUSTOM_GAME</Tag>
 		<English>Full Game</English>
 		<Italian>Personalizza partita</Italian>
+		<Polish>W&#179;asna gra</Polish>
 		<Russian>Настраиваемая игра</Russian>
 	</TEXT>
 	<TEXT>
@@ -1891,6 +2040,7 @@
 		<German>Eigenes Szenario</German>
 		<Italian>Personalizza scenario</Italian>
 		<Spanish>Escenario personalizado</Spanish>
+		<Polish>W&#179;asny scenariusz</Polish>
 		<Russian>Настраиваемый сценарий</Russian>
 	</TEXT>
 	<TEXT>
@@ -1900,6 +2050,7 @@
 		<German>[Standard]</German>
 		<Italian>Predefinito</Italian>
 		<Spanish>[predeterm.]</Spanish>
+		<Polish>[domy&#156;lne]</Polish>
 		<Russian>[по-умолчанию]</Russian>
 	</TEXT>
 	<TEXT>
@@ -1909,6 +2060,7 @@
 		<German>Kennwort (sofern erforderlich)</German>
 		<Italian>Password (se richiesta)</Italian>
 		<Spanish>Contraseña (si la hay)</Spanish>
+		<Polish>Has&#179;o (je&#191;eli wymagane)</Polish>
 		<Russian>Пароль (если требуется)</Russian>
 	</TEXT>
 	<TEXT>
@@ -1918,6 +2070,7 @@
 		<German>Spiel beenden</German>
 		<Italian>Esci dal gioco</Italian>
 		<Spanish>Salir del juego</Spanish>
+		<Polish>Wyj&#156;cie</Polish>
 		<Russian>Покинуть игру</Russian>
 	</TEXT>
 	<TEXT>
@@ -1927,6 +2080,7 @@
 		<German>Bitte warten. Spieldaten werden übertragen.</German>
 		<Italian>Attendere, trasferimento dei dati di gioco in corso.</Italian>
 		<Spanish>Un momento. Hay en curso transferencias de datos de la partida.</Spanish>
+		<Polish>Prosz&#234; czeka&#230;. Trwa przesy&#179;anie plik&#243;w gry.</Polish>
 		<Russian>Пожалуйста, подождите. Идет передача игровых данных.</Russian>
 	</TEXT>
 	<TEXT>
@@ -1936,6 +2090,7 @@
 		<German>Dateien werden übertragen ...</German>
 		<Italian>Trasferimento dei file...</Italian>
 		<Spanish>Transfiriendo archivos...</Spanish>
+		<Polish>Przesy&#179;anie plik&#243;w...</Polish>
 		<Russian>Передача файлов...</Russian>
 	</TEXT>
 	<TEXT>
@@ -1945,6 +2100,7 @@
 		<German>Es ist bereits jemand auf diesem Account eingeloggt.</German>
 		<Italian>Qualcun altro ha effettuato il login usando questo account.</Italian>
 		<Spanish>Otra persona ha iniciado sesión con esta cuenta.</Spanish>
+		<Polish>Kto&#156; inny zalogowa&#179; si&#234; przy u&#191;yciu tego konta.</Polish>
 		<Russian>Кто-то другой авторизировался под данным аккаунтом.</Russian>
 	</TEXT>
 	<TEXT>
@@ -1954,6 +2110,7 @@
 		<German>Account-Verletzung</German>
 		<Italian>Violazione dell'account</Italian>
 		<Spanish>Violación de cuenta</Spanish>
+		<Polish>Naruszenie konta</Polish>
 		<Russian>Нарушение авторизации</Russian>
 	</TEXT>
 	<TEXT>
@@ -1963,6 +2120,7 @@
 		<German>Sie müssen einen Spielnamen angeben.</German>
 		<Italian>Devi inserire il nome di una partita.</Italian>
 		<Spanish>Hay que facilitar el nombre de la partida.</Spanish>
+		<Polish>Musisz poda&#230; nazw&#234; gry.</Polish>
 		<Russian>Вы должны указать название игры.</Russian>
 	</TEXT>
 	<TEXT>
@@ -1972,6 +2130,7 @@
 		<German>Spielname erforderlich</German>
 		<Italian>Nome della partita richiesto</Italian>
 		<Spanish>Se requiere nombre de la partida</Spanish>
+		<Polish>Nazwa gry jest wymagana</Polish>
 		<Russian>Требуется название игры</Russian>
 	</TEXT>
 	<TEXT>
@@ -1981,6 +2140,7 @@
 		<German>Spielname:</German>
 		<Italian>Nome della partita</Italian>
 		<Spanish>Nombre de la partida</Spanish>
+		<Polish>Nazwa gry</Polish>
 		<Russian>Название игры.</Russian>
 	</TEXT>
 	<TEXT>
@@ -1990,6 +2150,7 @@
 		<German>Zurück</German>
 		<Italian>Indietro</Italian>
 		<Spanish>Volver</Spanish>
+		<Polish>Wr&#243;&#230;</Polish>
 		<Russian>Вернуться</Russian>
 	</TEXT>
 	<TEXT>
@@ -1999,6 +2160,7 @@
 		<German>Ruhmeshalle betrachten</German>
 		<Italian>Hall of fame</Italian>
 		<Spanish>Ver Salón de la Fama</Spanish>
+		<Polish>Odwied&#159; sal&#234; chwa&#179;y</Polish>
 		<Russian>Зал славы</Russian>
 	</TEXT>
 	<TEXT>
@@ -2008,6 +2170,7 @@
 		<German>Die Verbindung zum Host ist abgebrochen.</German>
 		<Italian>Abbiamo perso la connessione all'host.</Italian>
 		<Spanish>Se ha perdido la conexión con el anfitrión.</Spanish>
+		<Polish>Stracili&#156;my po&#179;&#185;czenie z hostem.</Polish>
 		<Russian>Потеряно соединение с хостом.</Russian>
 	</TEXT>
 	<TEXT>
@@ -2017,6 +2180,7 @@
 		<German>Verbindungsfehler</German>
 		<Italian>Errore durante la connessione</Italian>
 		<Spanish>Fallo en la conexión</Spanish>
+		<Polish>B&#179;&#185;d po&#179;&#185;czenia</Polish>
 		<Russian>Сбой соединения</Russian>
 	</TEXT>
 	<TEXT>
@@ -2026,6 +2190,7 @@
 		<German>Host anpingen</German>
 		<Italian>Ping dell'host</Italian>
 		<Spanish>Señalar (anfitrión)</Spanish>
+		<Polish>Ping hosta</Polish>
 		<Russian>Пинг хоста</Russian>
 	</TEXT>
 	<TEXT>
@@ -2034,6 +2199,7 @@
 		<French>2 joueurs</French>
 		<Italian>Multi in locale</Italian>
 		<Spanish>De uno en uno</Spanish>
+		<Polish>Gra wieloosobowa na jednym komputerze</Polish>
 		<Russian>Горячий стул</Russian>
 	</TEXT>
 	<TEXT>
@@ -2043,6 +2209,7 @@
 		<German>Menschlich</German>
 		<Italian>Giocatore</Italian>
 		<Spanish>Humano</Spanish>
+		<Polish>Cz&#179;owiek</Polish>
 		<Russian>Человек</Russian>
 	</TEXT>
 	<TEXT>
@@ -2052,6 +2219,7 @@
 		<German>Der gewählte Host ist nicht mehr gültig.</German>
 		<Italian>L'host selezionato non è più valido.</Italian>
 		<Spanish>El anfitrión seleccionado ya no es válido.</Spanish>
+		<Polish>Wybrany host nie jest ju&#191; poprawny.</Polish>
 		<Russian>Выбранный хост больше не действителен.</Russian>
 	</TEXT>
 	<TEXT>
@@ -2061,6 +2229,7 @@
 		<German>Ungültiger Host</German>
 		<Italian>Host non valido</Italian>
 		<Spanish>Anfitrión no válido</Spanish>
+		<Polish>Nieprawid&#179;owy host</Polish>
 		<Russian>Некорректный хост</Russian>
 	</TEXT>
 	<TEXT>
@@ -2070,6 +2239,7 @@
 		<German>Spielanschluss fehlgeschlagen bei</German>
 		<Italian>Impossibile unirsi alla partita a:</Italian>
 		<Spanish>Imposible unirse a la partida en </Spanish>
+		<Polish>Nie uda&#179;o si&#234; do&#179;&#185;czy&#230; do gry: </Polish>
 		<Russian>Не удалось присоединиться к игре на </Russian>
 	</TEXT>
 	<TEXT>
@@ -2079,6 +2249,7 @@
 		<German>Spielanschluss nicht möglich</German>
 		<Italian>Impossibile unirsi alla partita</Italian>
 		<Spanish>No es posible unirse a la partida</Spanish>
+		<Polish>Nie uda&#179;o si&#234; do&#179;&#185;czy&#230; do gry</Polish>
 		<Russian>Нельзя присоединиться к игре</Russian>
 	</TEXT>
 	<TEXT>
@@ -2088,6 +2259,7 @@
 		<German>Spielanschluss gescheitert</German>
 		<Italian>Partecipazione fallita</Italian>
 		<Spanish>Fallo al intentar unirse</Spanish>
+		<Polish>Do&#179;&#185;czenie nie udane</Polish>
 		<Russian>Присоединиться не удалось</Russian>
 	</TEXT>
 	<TEXT>
@@ -2097,6 +2269,7 @@
 		<German>Am Spiel teilnehmen</German>
 		<Italian>Partecipa alla partita</Italian>
 		<Spanish>Unirse a partida</Spanish>
+		<Polish>Do&#179;&#185;cz do gry</Polish>
 		<Russian>Присоединиться к игре</Russian>
 	</TEXT>
 	<TEXT>
@@ -2106,6 +2279,7 @@
 		<German>Start!</German>
 		<Italian>Avvia!</Italian>
 		<Spanish>Iniciar</Spanish>
+		<Polish>Start!</Polish>
 		<Russian>Старт!</Russian>
 	</TEXT>
 	<TEXT>
@@ -2115,6 +2289,7 @@
 		<German>STAATSOBERHÄUPTER</German>
 		<Italian>LEADER</Italian>
 		<Spanish>LÍDERES</Spanish>
+		<Polish>PRZYW&#211;DCY</Polish>
 		<Russian>ПРЕДВОДИТЕЛИ</Russian>
 	</TEXT>
 	<TEXT>
@@ -2124,6 +2299,7 @@
 		<German>Abbrechen</German>
 		<Italian>Annulla</Italian>
 		<Spanish>Cancelar</Spanish>
+		<Polish>Anuluj</Polish>
 		<Russian>Отмена</Russian>
 	</TEXT>
 	<TEXT>
@@ -2133,6 +2309,7 @@
 		<German>Erstellen</German>
 		<Italian>Crea</Italian>
 		<Spanish>Crear</Spanish>
+		<Polish>Stw&#243;rz</Polish>
 		<Russian>Создать</Russian>
 	</TEXT>
 	<TEXT>
@@ -2142,6 +2319,7 @@
 		<German>Dateityp</German>
 		<Italian>Tipo di file</Italian>
 		<Spanish>Tipo de archivo</Spanish>
+		<Polish>Typ pliku</Polish>
 		<Russian>Тип файла</Russian>
 	</TEXT>
 	<TEXT>
@@ -2151,6 +2329,7 @@
 		<German>Dateiname</German>
 		<Italian>Nome del file</Italian>
 		<Spanish>Nombre del archivo</Spanish>
+		<Polish>Nazwa pliku</Polish>
 		<Russian>Имя файла</Russian>
 	</TEXT>
 	<TEXT>
@@ -2160,6 +2339,7 @@
 		<German>Ordner</German>
 		<Italian>Cartella</Italian>
 		<Spanish>Carpeta</Spanish>
+		<Polish>Folder</Polish>
 		<Russian>Папка</Russian>
 	</TEXT>
 	<TEXT>
@@ -2169,6 +2349,7 @@
 		<German>Modifiziert</German>
 		<Italian>Ultima modifica</Italian>
 		<Spanish>Modificada</Spanish>
+		<Polish>Zmodyfikowany</Polish>
 		<Russian>Изменен</Russian>
 	</TEXT>
 	<TEXT>
@@ -2178,6 +2359,7 @@
 		<German>Neuer Ordner</German>
 		<Italian>Nuova cartella</Italian>
 		<Spanish>Nueva carpeta</Spanish>
+		<Polish>Nowy folder</Polish>
 		<Russian>Новая папка</Russian>
 	</TEXT>
 	<TEXT>
@@ -2187,6 +2369,7 @@
 		<German>Ordner auswählen</German>
 		<Italian>Seleziona una cartella</Italian>
 		<Spanish>Escoge una carpeta</Spanish>
+		<Polish>Wybierz folder</Polish>
 		<Russian>Пожалуйста, выберите папку</Russian>
 	</TEXT>
 	<TEXT>
@@ -2196,6 +2379,7 @@
 		<German>Größe</German>
 		<Italian>Dimensione</Italian>
 		<Spanish>Tamaño</Spanish>
+		<Polish>Rozmiar</Polish>
 		<Russian>Размер</Russian>
 	</TEXT>
 	<TEXT>
@@ -2205,6 +2389,7 @@
 		<German>Ladevorgang gescheitert.</German>
 		<Italian>Caricamento fallito.</Italian>
 		<Spanish>Fallo al cargar</Spanish>
+		<Polish>Wczytywanie nie udane.</Polish>
 		<Russian>Загрузка не удалась</Russian>
 	</TEXT>
 	<TEXT>
@@ -2214,6 +2399,7 @@
 		<German>Spiel laden</German>
 		<Italian>Carica partita</Italian>
 		<Spanish>Cargar partida</Spanish>
+		<Polish>Wczytaj gr&#234;</Polish>
 		<Russian>Загрузить игру</Russian>
 	</TEXT>
 	<TEXT>
@@ -2223,6 +2409,7 @@
 		<German>Ursprüngliche Spieldaten konnten nicht geladen werden.</German>
 		<Italian>Impossibile caricare i dati iniziali di gioco.</Italian>
 		<Spanish>No se han podido cargar los datos iniciales del juego.</Spanish>
+		<Polish>Nie uda&#179;o si&#234; wczyta&#230; danych pocz&#185;tkowych gry.</Polish>
 		<Russian>Не удалось загрузить исходные данные игры.</Russian>
 	</TEXT>
 	<TEXT>
@@ -2232,6 +2419,7 @@
 		<German>Ladevorgang fehlgeschlagen</German>
 		<Italian>Caricamento fallito</Italian>
 		<Spanish>Fallo al cargar</Spanish>
+		<Polish>B&#179;&#185;d wczytywania</Polish>
 		<Russian>Сбой загрузки</Russian>
 	</TEXT>
 	<TEXT>
