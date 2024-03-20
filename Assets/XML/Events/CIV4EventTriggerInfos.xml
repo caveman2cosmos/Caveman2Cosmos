@@ -2442,7 +2442,7 @@
 			</TriggerTexts>
 			<EventArt>Art/Event_Images/MasterSmithEvent.dds</EventArt>
 			<iPercentGamesActive>100</iPercentGamesActive>
-			<iWeight>100</iWeight>
+			<iWeight>30</iWeight>
 			<bProbabilityBuildingMultiply>1</bProbabilityBuildingMultiply>
 			<BuildingsRequired>
 				<Building>BUILDING_FORGE</Building>
@@ -2451,6 +2451,7 @@
 			<bOwnPlot>1</bOwnPlot>
 			<Events>
 				<Event>EVENT_MASTER_SMITH_1</Event>
+				<Event>EVENT_MASTER_SMITH_2</Event>
 			</Events>
 			<bGlobal>1</bGlobal>
 			<bPickCity>1</bPickCity>
@@ -2469,7 +2470,7 @@
 			</TriggerTexts>
 			<EventArt>Art/Event_Images/RuralFarmersEvent.dds</EventArt>
 			<iPercentGamesActive>100</iPercentGamesActive>
-			<iWeight>100</iWeight>
+			<iWeight>30</iWeight>
 			<bProbabilityBuildingMultiply>1</bProbabilityBuildingMultiply>
 			<BuildingsRequired>
 				<Building>BUILDING_GROCER</Building>
@@ -2478,6 +2479,7 @@
 			<bOwnPlot>1</bOwnPlot>
 			<Events>
 				<Event>EVENT_RURAL_FARMERS_1</Event>
+				<Event>EVENT_RURAL_FARMERS_2</Event>
 			</Events>
 			<bGlobal>1</bGlobal>
 			<bPickCity>1</bPickCity>
@@ -2496,7 +2498,7 @@
 			</TriggerTexts>
 			<EventArt>Art/Event_Images/MoneyChangersEvent.dds</EventArt>
 			<iPercentGamesActive>100</iPercentGamesActive>
-			<iWeight>100</iWeight>
+			<iWeight>30</iWeight>
 			<bProbabilityBuildingMultiply>1</bProbabilityBuildingMultiply>
 			<BuildingsRequired>
 				<Building>BUILDING_MARKET</Building>
@@ -2505,6 +2507,7 @@
 			<bOwnPlot>1</bOwnPlot>
 			<Events>
 				<Event>EVENT_MONEY_CHANGERS_1</Event>
+				<Event>EVENT_MONEY_CHANGERS_2</Event>
 			</Events>
 			<bGlobal>1</bGlobal>
 			<bPickCity>1</bPickCity>
@@ -2522,12 +2525,12 @@
 			</TriggerTexts>
 			<EventArt>Art/Event_Images/BowyerEvent.dds</EventArt>
 			<iPercentGamesActive>100</iPercentGamesActive>
-			<iWeight>70</iWeight>
+			<iWeight>3</iWeight>
 			<bProbabilityUnitMultiply>1</bProbabilityUnitMultiply>
 			<UnitsRequired>
 				<UnitType>UNIT_ARCHER</UnitType>
 			</UnitsRequired>
-			<iNumUnits>3</iNumUnits>
+			<iNumUnits>15</iNumUnits>
 			<bOwnPlot>1</bOwnPlot>
 			<Events>
 				<Event>EVENT_BOWYER_1</Event>
@@ -2554,7 +2557,7 @@
 			</TriggerTexts>
 			<EventArt>Art/Event_Images/HorseshoeEvent.dds</EventArt>
 			<iPercentGamesActive>100</iPercentGamesActive>
-			<iWeight>70</iWeight>
+			<iWeight>3</iWeight>
 			<iNumPlotsRequired>1</iNumPlotsRequired>
 			<bOwnPlot>1</bOwnPlot>
 			<ImprovementsRequired>
@@ -2596,8 +2599,8 @@
 			</TriggerTexts>
 			<EventArt>Art/Event_Images/ChampionEvent.dds</EventArt>
 			<iPercentGamesActive>100</iPercentGamesActive>
-			<iWeight>70</iWeight>
-			<iNumUnits>1</iNumUnits>
+			<iWeight>10</iWeight>
+			<iNumUnits>50</iNumUnits>
 			<iUnitExperienceWeight>1</iUnitExperienceWeight>
 			<Events>
 				<Event>EVENT_CHAMPION_1</Event>
@@ -2607,6 +2610,7 @@
 			</ObsoleteTechs>
 			<PythonCanDo>canTriggerChampion</PythonCanDo>
 			<PythonCanDoUnit>canTriggerChampionUnit</PythonCanDoUnit>
+			<bRecurring>1</bRecurring>
 		</EventTriggerInfo>
 		<EventTriggerInfo>
 			<Type>EVENTTRIGGER_MOTOR_OIL</Type>
@@ -2621,7 +2625,7 @@
 			</TriggerTexts>
 			<EventArt>Art/Event_Images/MotorOilEvent.dds</EventArt>
 			<iPercentGamesActive>100</iPercentGamesActive>
-			<iWeight>200</iWeight>
+			<iWeight>10</iWeight>
 			<iNumPlotsRequired>1</iNumPlotsRequired>
 			<bOwnPlot>1</bOwnPlot>
 			<ImprovementsRequired>
