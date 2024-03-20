@@ -2352,12 +2352,16 @@
 		<Spanish>Los mercaderes %s1:3_civ_adjective están ofreciendo descuentos por la compra al por mayor de crudo ácido, que está lleno de impurezas.</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_EVENTTRIGGER_SPICY</Tag>
+		<Tag>TXT_KEY_EVENTTRIGGER_SPICY_1</Tag>
 		<English>A %s1_civ_adjective chef has identified a new and valuable type of spice.</English>
 		<French>Un dirigeant %s1:1_civ_adjective a identifié une nouvelle sorte d'épice de grande valeur.</French>
 		<German>Ein Koch des %s1:2_civ_adjective Volkes hat eine neue, wertvolle Gewürzsorte entdeckt.</German>
 		<Italian>Uno chef %s1_civ_adjective ha scoperto un nuovo e prezioso tipo di spezia.</Italian>
 		<Spanish>Un cocinero %s1:1_civ_adjective ha identificado un tipo de especia nuevo y valioso.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_EVENTTRIGGER_SPICY_2</Tag>
+		<English>%s1_civ_adjective farmers have discovered a new herb that makes food more delicious.</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_SPOILED_GRAIN</Tag>
@@ -3218,6 +3222,10 @@
 		<Spanish>Nuestro pueblo progresa en tiempos de paz.</Spanish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_EVENT_BABY_BOOM_2</Tag>
+		<English>Let's help our people even more. Offer subsidies to every family that has more then three children</English>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_EVENT_BANANA_BLIGHT</Tag>
 		<English>The tastiest banana sub-species has been wiped out by the dreaded banana blight.</English>
 		<French>Les meilleurs variétés de nos bananes ont été décimées par une maladie.</French>
@@ -3750,6 +3758,18 @@
 		<Polish>Ich jednostki mechaniczne s&#185; s&#179;abe. Wy&#156;lij im kilka naszych android&#243;w!</Polish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_EVENT_BROTHERS_IN_NEED_14</Tag>
+		<English>We can send them stone, to build mighty walls.</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_EVENT_BROTHERS_IN_NEED_15</Tag>
+		<English>Send them obsidian to build durable weapons.</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_EVENT_BROTHERS_IN_NEED_16</Tag>
+		<English>We dont have much but we can always send them gold.</English>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_EVENT_BROTHERS_IN_NEED_2</Tag>
 		<English>Offer to send them a large supply of Copper for weapon making.</English>
 		<French>Proposer à nos frères de leur envoyer une grande quantité de cuivre pour la fabrication de leurs armes.</French>
@@ -3852,6 +3872,18 @@
 		<Italian>I nostri fratelli di fede %s1:2_civ_adjective ci hanno donato degli [COLOR_HIGHLIGHT_TEXT]androidi[COLOR_REVERT] per aiutarci nello sforzo bellico!</Italian>
 		<Polish>Nasi %s1_civ_adjective bracia w wierze podarowali nam [COLOR_HIGHLIGHT_TEXT]Androidy[COLOR_REVERT] by pom&#243;c nam w naszej w wojnie z niewiernymi.</Polish>
 		<Spanish>¡Nuestros hermanos %s1:3_civ_adjective nos han obsequiado con [COLOR_HIGHLIGHT_TEXT]Androides[COLOR_REVERT] para ayudarnos en la guerra!</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_EVENT_BROTHERS_IN_NEED_OTHER_14</Tag>
+		<English>Our %s1_civ_adjective religious brothers have gifted us with [COLOR_HIGHLIGHT_TEXT]Stone[COLOR_REVERT] to aid us in our war effort!</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_EVENT_BROTHERS_IN_NEED_OTHER_15</Tag>
+		<English>Our %s1_civ_adjective religious brothers have gifted us with [COLOR_HIGHLIGHT_TEXT]Obsidian[COLOR_REVERT] to aid us in our war effort!</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_EVENT_BROTHERS_IN_NEED_OTHER_16</Tag>
+		<English>Our %s1_civ_adjective religious brothers have gifted us with [COLOR_HIGHLIGHT_TEXT]Gold[COLOR_REVERT] to aid us in our war effort!</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_BROTHERS_IN_NEED_OTHER_2</Tag>
@@ -7634,10 +7666,10 @@
 		<Italian>Invia la tua solidarietà a entrambe le famiglie e invitale a trovare una soluzione pacifica ai loro problemi.</Italian>
 		<Spanish>Enviad nuestras condolencias a ambas familias y apremiadlas a buscar una solución pacífica a sus agravios.</Spanish>
 	</TEXT>
-    <TEXT>
-        <Tag>TXT_KEY_EVENT_LEFT_AT_ALTAR_2</Tag>
-        <English>Send gifts to try to apologise for this situation.</English>
-    </TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_EVENT_LEFT_AT_ALTAR_2</Tag>
+		<English>Send gifts to try to apologise for this situation.</English>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_LESS_DICTATOR_1</Tag>
 		<English>The High Minister for Finance, who also happens to be your brother, dismisses the claim. "What these people fail to realize is that you know what's best for them. The alternative is anarchy! I say stick to your course. And execute these wackos for treason."</English>
@@ -12650,6 +12682,10 @@
 		<German>Ein kreativer Koch hat eine neue Gewürzsorte entdeckt, die ausschließlich in einem Waldstück nahe der Stadt %s2_city wächst.</German>
 		<Italian>Un inventivo chef ha scoperto un nuovo tipo di spezia, che cresce solo in una foresta vicino a %s2_city.</Italian>
 		<Spanish>Un cocinero muy innovador ha descubierto un nuevo tipo de especia que solo crece en un bosque cerca de %s2_city.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_EVENT_TRIGGER_SPICY_2</Tag>
+		<English>A worker was farming near the city of %s2_city when he discovered an herb that makes food more delicious.</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_TRIGGER_SPOILED_GRAIN_1</Tag>

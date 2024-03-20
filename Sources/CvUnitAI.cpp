@@ -1651,31 +1651,27 @@ void CvUnitAI::AI_animalMove()
 				return;
 			}
 		}
-		else
+		// Recklessness based on animal aggression.
+		// 1% odds assessment is there to account for some small understanding of likelihood of success even in an aggressive action.
+		else if (
+			GC.getGame().getSorenRandNum(10, "Animal Attack")
+			<
+			getMyAggression(GC.getHandicapInfo(GC.getGame().getHandicapType()).getAnimalAttackProb()))
 		{
-			// Recklessness based on animal aggression.
-			// 1% odds assessment is there to account for some small understanding of likelihood of success even in an aggressive action.
-			if (GC.getGame().getSorenRandNum(10, "Animal Attack")
-				<
-				getMyAggression(GC.getHandicapInfo(GC.getGame().getHandicapType()).getAnimalAttackProb()))
+			if (AI_anyAttack(2, 1, 0, false))
 			{
-				if (AI_anyAttack(2, 1, 0, false))
-				{
-					return;
-				}
+				return;
 			}
-			else // not reckless.
+		}
+		// Animals are pretty good at assessing their chances of taking down prey, therefore 60% odds prereq.
+		else if (
+			GC.getGame().getSorenRandNum(100, "Animal Attack")
+			<
+			GC.getHandicapInfo(GC.getGame().getHandicapType()).getAnimalAttackProb())
+		{
+			if (AI_anyAttack(2, 60, 0, false))
 			{
-				// Animals are pretty good at assessing their chances of taking down prey, therefore 60% odds prereq.
-				if (GC.getGame().getSorenRandNum(100, "Animal Attack")
-					<
-					GC.getHandicapInfo(GC.getGame().getHandicapType()).getAnimalAttackProb())
-				{
-					if (AI_anyAttack(2, 60, 0, false))
-					{
-						return;
-					}
-				}
+				return;
 			}
 		}
 	}

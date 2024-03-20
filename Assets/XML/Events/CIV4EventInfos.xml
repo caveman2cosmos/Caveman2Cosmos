@@ -915,12 +915,12 @@
 			<BonusType>BONUS_SPICES</BonusType>
 			<iBonusChange>1</iBonusChange>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
-			<iAIValue>1000</iAIValue>
+			<iAIValue>1</iAIValue>
 		</EventInfo>
 		<EventInfo>
 			<Type>EVENT_SPICY_2</Type>
 			<Description>TXT_KEY_EVENT_SPICY_2</Description>
-			<iGold>-20</iGold>
+			<iGold>-500</iGold>
 			<FeatureType>FEATURE_FOREST</FeatureType>
 			<iFeatureChange>-1</iFeatureChange>
 			<BonusType>BONUS_SPICES</BonusType>
@@ -930,43 +930,51 @@
 			<PythonCallback>doSpicy2</PythonCallback>
 			<PythonHelp>getHelpSpicy2</PythonHelp>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
-			<iAIValue>1000</iAIValue>
+			<iAIValue>2</iAIValue>
 		</EventInfo>
 		<EventInfo>
 			<Type>EVENT_BABY_BOOM_1</Type>
 			<Description>TXT_KEY_EVENT_BABY_BOOM_1</Description>
-			<iFood>10</iFood>
+			<iFood>150</iFood>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
-			<iAIValue>1000</iAIValue>
+			<iAIValue>1</iAIValue>
+		</EventInfo>
+		<EventInfo>
+			<Type>EVENT_BABY_BOOM_2</Type>
+			<Description>TXT_KEY_EVENT_BABY_BOOM_2</Description>
+			<iGold>-1000</iGold>
+			<iFood>250</iFood>
+			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
+			<iAIValue>2</iAIValue>
 		</EventInfo>
 		<EventInfo>
 			<Type>EVENT_BARDS_TALE_1</Type>
 			<Description>TXT_KEY_EVENT_BARDS_TALE_1</Description>
 			<bPickCity>1</bPickCity>
-			<iCulture>100</iCulture>
+			<iCulture>500</iCulture>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
-			<iAIValue>1000</iAIValue>
+			<iAIValue>1</iAIValue>
 		</EventInfo>
 		<EventInfo>
 			<Type>EVENT_BARDS_TALE_2</Type>
 			<Description>TXT_KEY_EVENT_BARDS_TALE_2</Description>
 			<bPickCity>1</bPickCity>
-			<iGold>-25</iGold>
-			<iCulture>450</iCulture>
+			<iGold>-250</iGold>
+			<iCulture>900</iCulture>
 			<Building>BUILDING_THEATRE</Building>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
-			<iAIValue>1000</iAIValue>
+			<iAIValue>2</iAIValue>
 		</EventInfo>
 		<EventInfo>
 			<Type>EVENT_BARDS_TALE_3</Type>
 			<Description>TXT_KEY_EVENT_BARDS_TALE_3</Description>
-			<iCulture>250</iCulture>
+			<iCulture>2500</iCulture>
 			<PrereqTech>TECH_RADIO</PrereqTech>
 			<PythonCallback>applyBardTale3</PythonCallback>
 			<PythonCanDo>canApplyBardTale3</PythonCanDo>
 			<PythonHelp>getHelpBardTale3</PythonHelp>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
-			<iAIValue>1000</iAIValue>
+			<iAIValue>3</iAIValue>
 		</EventInfo>
 		<EventInfo>
 			<Type>EVENT_LOOTERS_1</Type>
@@ -974,29 +982,29 @@
 			<OtherPlayerPopup>TXT_KEY_EVENT_LOOTERS_OTHER_1</OtherPlayerPopup>
 			<bPickOtherPlayerCity>1</bPickOtherPlayerCity>
 			<iMinPillage>1</iMinPillage>
-			<iMaxPillage>1</iMaxPillage>
+			<iMaxPillage>2</iMaxPillage>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
-			<iAIValue>1000</iAIValue>
+			<iAIValue>1</iAIValue>
 		</EventInfo>
 		<EventInfo>
 			<Type>EVENT_LOOTERS_2</Type>
 			<Description>TXT_KEY_EVENT_LOOTERS_2</Description>
 			<OtherPlayerPopup>TXT_KEY_EVENT_LOOTERS_OTHER_2</OtherPlayerPopup>
 			<bPickOtherPlayerCity>1</bPickOtherPlayerCity>
-			<iGold>-40</iGold>
+			<iGold>-200</iGold>
 			<iMinPillage>2</iMinPillage>
 			<iMaxPillage>4</iMaxPillage>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
-			<iAIValue>1000</iAIValue>
+			<iAIValue>1</iAIValue>
 		</EventInfo>
 		<EventInfo>
 			<Type>EVENT_LOOTERS_3</Type>
 			<Description>TXT_KEY_EVENT_LOOTERS_3</Description>
 			<OtherPlayerPopup>TXT_KEY_EVENT_LOOTERS_OTHER_3</OtherPlayerPopup>
 			<bPickOtherPlayerCity>1</bPickOtherPlayerCity>
-			<iEspionagePoints>-50</iEspionagePoints>
-			<iMinPillage>3</iMinPillage>
-			<iMaxPillage>5</iMaxPillage>
+			<iEspionagePoints>-250</iEspionagePoints>
+			<iMinPillage>4</iMinPillage>
+			<iMaxPillage>6</iMaxPillage>
 			<AdditionalEvents>
 				<EventChance>
 					<Event>EVENT_LOOTERS_4</Event>
@@ -1007,7 +1015,7 @@
 			<PythonCanDo>canApplyLooters3</PythonCanDo>
 			<PythonHelp>getHelpLooters3</PythonHelp>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
-			<iAIValue>1000</iAIValue>
+			<iAIValue>1</iAIValue>
 		</EventInfo>
 		<EventInfo>
 			<Type>EVENT_LOOTERS_4</Type>
@@ -1016,7 +1024,7 @@
 			<iOurAttitudeModifier>-2</iOurAttitudeModifier>
 			<iAttitudeModifier>-2</iAttitudeModifier>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
-			<iAIValue>1000</iAIValue>
+			<iAIValue>1</iAIValue>
 		</EventInfo>
 		<EventInfo>
 			<Type>EVENT_BROTHERS_IN_NEED_1</Type>
@@ -1025,7 +1033,7 @@
 			<iAttitudeModifier>-5</iAttitudeModifier>
 			<PythonCanDo>canDoBrothersInNeed1</PythonCanDo>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
-			<iAIValue>1000</iAIValue>
+			<iAIValue>1</iAIValue>
 		</EventInfo>
 		<EventInfo>
 			<Type>EVENT_BROTHERS_IN_NEED_2</Type>
@@ -1035,7 +1043,7 @@
 			<iOurAttitudeModifier>3</iOurAttitudeModifier>
 			<iAttitudeModifier>3</iAttitudeModifier>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
-			<iAIValue>1000</iAIValue>
+			<iAIValue>2</iAIValue>
 		</EventInfo>
 		<EventInfo>
 			<Type>EVENT_BROTHERS_IN_NEED_3</Type>
@@ -1045,7 +1053,7 @@
 			<iAttitudeModifier>3</iAttitudeModifier>
 			<iTheirEnemyAttitudeModifier>3</iTheirEnemyAttitudeModifier>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
-			<iAIValue>1000</iAIValue>
+			<iAIValue>2</iAIValue>
 		</EventInfo>
 		<EventInfo>
 			<Type>EVENT_BROTHERS_IN_NEED_4</Type>
@@ -1055,7 +1063,7 @@
 			<iOurAttitudeModifier>3</iOurAttitudeModifier>
 			<iAttitudeModifier>3</iAttitudeModifier>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
-			<iAIValue>1000</iAIValue>
+			<iAIValue>2</iAIValue>
 		</EventInfo>
 		<EventInfo>
 			<Type>EVENT_BROTHERS_IN_NEED_5</Type>
@@ -1065,7 +1073,7 @@
 			<iOurAttitudeModifier>3</iOurAttitudeModifier>
 			<iAttitudeModifier>3</iAttitudeModifier>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
-			<iAIValue>1000</iAIValue>
+			<iAIValue>2</iAIValue>
 		</EventInfo>
 		<EventInfo>
 			<Type>EVENT_BROTHERS_IN_NEED_6</Type>
@@ -1075,7 +1083,7 @@
 			<iOurAttitudeModifier>3</iOurAttitudeModifier>
 			<iAttitudeModifier>3</iAttitudeModifier>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
-			<iAIValue>1000</iAIValue>
+			<iAIValue>2</iAIValue>
 		</EventInfo>
 		<EventInfo>
 			<Type>EVENT_BROTHERS_IN_NEED_7</Type>
@@ -1085,7 +1093,7 @@
 			<iOurAttitudeModifier>3</iOurAttitudeModifier>
 			<iAttitudeModifier>3</iAttitudeModifier>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
-			<iAIValue>1000</iAIValue>
+			<iAIValue>2</iAIValue>
 		</EventInfo>
 		<EventInfo>
 			<Type>EVENT_BROTHERS_IN_NEED_8</Type>
@@ -1095,7 +1103,7 @@
 			<iOurAttitudeModifier>3</iOurAttitudeModifier>
 			<iAttitudeModifier>3</iAttitudeModifier>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
-			<iAIValue>1000</iAIValue>
+			<iAIValue>2</iAIValue>
 		</EventInfo>
 		<EventInfo>
 			<Type>EVENT_BROTHERS_IN_NEED_9</Type>
@@ -1105,7 +1113,7 @@
 			<iOurAttitudeModifier>3</iOurAttitudeModifier>
 			<iAttitudeModifier>3</iAttitudeModifier>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
-			<iAIValue>1000</iAIValue>
+			<iAIValue>2</iAIValue>
 		</EventInfo>
 		<EventInfo>
 			<Type>EVENT_BROTHERS_IN_NEED_10</Type>
@@ -1115,7 +1123,7 @@
 			<iOurAttitudeModifier>3</iOurAttitudeModifier>
 			<iAttitudeModifier>3</iAttitudeModifier>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
-			<iAIValue>1000</iAIValue>
+			<iAIValue>2</iAIValue>
 		</EventInfo>
 		<EventInfo>
 			<Type>EVENT_BROTHERS_IN_NEED_11</Type>
@@ -1125,7 +1133,7 @@
 			<iOurAttitudeModifier>3</iOurAttitudeModifier>
 			<iAttitudeModifier>3</iAttitudeModifier>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
-			<iAIValue>1000</iAIValue>
+			<iAIValue>2</iAIValue>
 		</EventInfo>
 		<EventInfo>
 			<Type>EVENT_BROTHERS_IN_NEED_12</Type>
@@ -1135,7 +1143,7 @@
 			<iOurAttitudeModifier>3</iOurAttitudeModifier>
 			<iAttitudeModifier>3</iAttitudeModifier>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
-			<iAIValue>1000</iAIValue>
+			<iAIValue>2</iAIValue>
 		</EventInfo>
 		<EventInfo>
 			<Type>EVENT_BROTHERS_IN_NEED_13</Type>
@@ -1145,7 +1153,38 @@
 			<iOurAttitudeModifier>3</iOurAttitudeModifier>
 			<iAttitudeModifier>3</iAttitudeModifier>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
-			<iAIValue>1000</iAIValue>
+			<iAIValue>2</iAIValue>
+		</EventInfo>
+		<EventInfo>
+			<Type>EVENT_BROTHERS_IN_NEED_14</Type>
+			<Description>TXT_KEY_EVENT_BROTHERS_IN_NEED_14</Description>
+			<OtherPlayerPopup>TXT_KEY_EVENT_BROTHERS_IN_NEED_OTHER_14</OtherPlayerPopup>
+			<BonusGift>BONUS_STONE</BonusGift>
+			<iOurAttitudeModifier>3</iOurAttitudeModifier>
+			<iAttitudeModifier>3</iAttitudeModifier>
+			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
+			<iAIValue>2</iAIValue>
+		</EventInfo>
+		<EventInfo>
+			<Type>EVENT_BROTHERS_IN_NEED_15</Type>
+			<Description>TXT_KEY_EVENT_BROTHERS_IN_NEED_15</Description>
+			<OtherPlayerPopup>TXT_KEY_EVENT_BROTHERS_IN_NEED_OTHER_15</OtherPlayerPopup>
+			<BonusGift>BONUS_OBSIDIAN</BonusGift>
+			<iOurAttitudeModifier>3</iOurAttitudeModifier>
+			<iAttitudeModifier>3</iAttitudeModifier>
+			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
+			<iAIValue>2</iAIValue>
+		</EventInfo>
+		<EventInfo>
+			<Type>EVENT_BROTHERS_IN_NEED_16</Type>
+			<Description>TXT_KEY_EVENT_BROTHERS_IN_NEED_16</Description>
+			<OtherPlayerPopup>TXT_KEY_EVENT_BROTHERS_IN_NEED_OTHER_16</OtherPlayerPopup>
+			<iGold>-2000</iGold>
+			<bGoldToPlayer>1</bGoldToPlayer>
+			<iOurAttitudeModifier>3</iOurAttitudeModifier>
+			<iAttitudeModifier>3</iAttitudeModifier>
+			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
+			<iAIValue>2</iAIValue>
 		</EventInfo>
 		<EventInfo>
 			<Type>EVENT_HURRICANE_1</Type>
@@ -1154,7 +1193,7 @@
 			<PythonCallback>applyHurricane1</PythonCallback>
 			<PythonCanDo>canApplyHurricane1</PythonCanDo>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
-			<iAIValue>1000</iAIValue>
+			<iAIValue>2</iAIValue>
 		</EventInfo>
 		<EventInfo>
 			<Type>EVENT_HURRICANE_2</Type>
@@ -1163,7 +1202,7 @@
 			<iPopulationChange>-1</iPopulationChange>
 			<PythonCanDo>canApplyHurricane2</PythonCanDo>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
-			<iAIValue>1000</iAIValue>
+			<iAIValue>1</iAIValue>
 		</EventInfo>
 		<EventInfo>
 			<Type>EVENT_CYCLONE_1</Type>
@@ -1172,7 +1211,7 @@
 			<PythonCallback>applyHurricane1</PythonCallback>
 			<PythonCanDo>canApplyHurricane1</PythonCanDo>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
-			<iAIValue>1000</iAIValue>
+			<iAIValue>2</iAIValue>
 		</EventInfo>
 		<EventInfo>
 			<Type>EVENT_CYCLONE_2</Type>
@@ -1181,7 +1220,7 @@
 			<iPopulationChange>-1</iPopulationChange>
 			<PythonCanDo>canApplyHurricane2</PythonCanDo>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
-			<iAIValue>1000</iAIValue>
+			<iAIValue>1</iAIValue>
 		</EventInfo>
 		<EventInfo>
 			<Type>EVENT_TSUNAMI_1</Type>
@@ -1190,7 +1229,7 @@
 			<PythonCallback>applyTsunami1</PythonCallback>
 			<PythonCanDo>canApplyTsunami1</PythonCanDo>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
-			<iAIValue>1000</iAIValue>
+			<iAIValue>1</iAIValue>
 		</EventInfo>
 		<EventInfo>
 			<Type>EVENT_TSUNAMI_2</Type>
@@ -1201,7 +1240,7 @@
 			<PythonCanDo>canApplyTsunami2</PythonCanDo>
 			<PythonHelp>getHelpTsunami2</PythonHelp>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
-			<iAIValue>1000</iAIValue>
+			<iAIValue>2</iAIValue>
 		</EventInfo>
 		<EventInfo>
 			<Type>EVENT_MONSOON_1</Type>
@@ -1210,7 +1249,7 @@
 			<PythonCallback>applyHurricane1</PythonCallback>
 			<PythonCanDo>canApplyHurricane1</PythonCanDo>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
-			<iAIValue>1000</iAIValue>
+			<iAIValue>2</iAIValue>
 		</EventInfo>
 		<EventInfo>
 			<Type>EVENT_MONSOON_2</Type>
@@ -1219,7 +1258,7 @@
 			<iPopulationChange>-1</iPopulationChange>
 			<PythonCanDo>canApplyHurricane2</PythonCanDo>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
-			<iAIValue>1000</iAIValue>
+			<iAIValue>1</iAIValue>
 		</EventInfo>
 		<EventInfo>
 			<Type>EVENT_BLIZZARD_1</Type>
@@ -1227,20 +1266,20 @@
 			<iImprovementChange>-1</iImprovementChange>
 			<iRouteChange>-1</iRouteChange>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
-			<iAIValue>1000</iAIValue>
+			<iAIValue>1</iAIValue>
 		</EventInfo>
 		<EventInfo>
 			<Type>EVENT_BLIZZARD_2</Type>
 			<Description>TXT_KEY_EVENT_BLIZZARD_2</Description>
-			<iGold>-5</iGold>
+			<iGold>-50</iGold>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
-			<iAIValue>1000</iAIValue>
+			<iAIValue>2</iAIValue>
 		</EventInfo>
 		<EventInfo>
 			<Type>EVENT_DUSTBOWL_1</Type>
 			<Description>TXT_KEY_EVENT_DUSTBOWL_1</Description>
 			<bPickCity>1</bPickCity>
-			<iGold>-40</iGold>
+			<iGold>-300</iGold>
 			<iImprovementChange>-1</iImprovementChange>
 			<ClearEvents>
 				<EventChance>
@@ -1249,7 +1288,7 @@
 				</EventChance>
 			</ClearEvents>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
-			<iAIValue>1000</iAIValue>
+			<iAIValue>2</iAIValue>
 		</EventInfo>
 		<EventInfo>
 			<Type>EVENT_DUSTBOWL_2</Type>
@@ -1259,12 +1298,12 @@
 			<ClearEvents>
 				<EventChance>
 					<Event>EVENT_DUSTBOWL_2</Event>
-					<iEventChance>25</iEventChance>
+					<iEventChance>40</iEventChance>
 				</EventChance>
 			</ClearEvents>
 			<PythonHelp>getHelpDustBowl2</PythonHelp>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
-			<iAIValue>1000</iAIValue>
+			<iAIValue>1</iAIValue>
 		</EventInfo>
 		<EventInfo>
 			<Type>EVENT_PARROTS_1</Type>
@@ -1273,7 +1312,7 @@
 			<iBonusChange>1</iBonusChange>
 			<PythonCallback>applyLandmarkFromEvent</PythonCallback>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
-			<iAIValue>1000</iAIValue>
+			<iAIValue>1</iAIValue>
 		</EventInfo>
 		<EventInfo>
 			<Type>EVENT_JADE_1</Type>
@@ -1281,7 +1320,7 @@
 			<BonusType>BONUS_JADE</BonusType>
 			<iBonusChange>1</iBonusChange>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
-			<iAIValue>1000</iAIValue>
+			<iAIValue>1</iAIValue>
 		</EventInfo>
 		<EventInfo>
 			<Type>EVENT_BLACK_PEARLS_1</Type>
@@ -1289,12 +1328,12 @@
 			<PlotExtraYields>
 				<PlotExtraYield>
 					<YieldType>YIELD_COMMERCE</YieldType>
-					<iExtraYield>1</iExtraYield>
+					<iExtraYield>2</iExtraYield>
 				</PlotExtraYield>
 			</PlotExtraYields>
 			<PythonCallback>applyLandmarkFromEvent</PythonCallback>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
-			<iAIValue>1000</iAIValue>
+			<iAIValue>1</iAIValue>
 		</EventInfo>
 		<EventInfo>
 			<Type>EVENT_SALTPETER_1</Type>
@@ -1302,14 +1341,14 @@
 			<PlotExtraYields>
 				<PlotExtraYield>
 					<YieldType>YIELD_COMMERCE</YieldType>
-					<iExtraYield>1</iExtraYield>
+					<iExtraYield>2</iExtraYield>
 				</PlotExtraYield>
 			</PlotExtraYields>
 			<PythonCallback>applySaltpeter</PythonCallback>
 			<PythonCanDo>canApplySaltpeter</PythonCanDo>
 			<PythonHelp>getHelpSaltpeter</PythonHelp>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
-			<iAIValue>1000</iAIValue>
+			<iAIValue>1</iAIValue>
 		</EventInfo>
 		<EventInfo>
 			<Type>EVENT_CLUNKER_COAL_1</Type>
@@ -1322,7 +1361,7 @@
 			</PlotExtraYields>
 			<PythonCallback>applyLandmarkFromEvent</PythonCallback>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
-			<iAIValue>1000</iAIValue>
+			<iAIValue>1</iAIValue>
 		</EventInfo>
 		<EventInfo>
 			<Type>EVENT_SOUR_CRUDE_1</Type>
@@ -1335,7 +1374,7 @@
 			</PlotExtraYields>
 			<PythonCallback>applyLandmarkFromEvent</PythonCallback>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
-			<iAIValue>1000</iAIValue>
+			<iAIValue>1</iAIValue>
 		</EventInfo>
 		<EventInfo>
 			<Type>EVENT_TRUFFLES_1</Type>
@@ -1343,7 +1382,7 @@
 			<BonusType>BONUS_MUSHROOMS</BonusType>
 			<iBonusChange>1</iBonusChange>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
-			<iAIValue>1000</iAIValue>
+			<iAIValue>1</iAIValue>
 		</EventInfo>
 		<EventInfo>
 			<Type>EVENT_SEA_TURTLES</Type>
@@ -1351,12 +1390,12 @@
 			<PlotExtraYields>
 				<PlotExtraYield>
 					<YieldType>YIELD_FOOD</YieldType>
-					<iExtraYield>1</iExtraYield>
+					<iExtraYield>2</iExtraYield>
 				</PlotExtraYield>
 			</PlotExtraYields>
 			<PythonCallback>applyLandmarkFromEvent</PythonCallback>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
-			<iAIValue>1000</iAIValue>
+			<iAIValue>1</iAIValue>
 		</EventInfo>
 		<EventInfo>
 			<Type>EVENT_TIN_1</Type>
@@ -1364,7 +1403,7 @@
 			<BonusType>BONUS_TIN_ORE</BonusType>
 			<iBonusChange>1</iBonusChange>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
-			<iAIValue>1000</iAIValue>
+			<iAIValue>1</iAIValue>
 		</EventInfo>
 		<EventInfo>
 			<Type>EVENT_PRAIRIE_DOGS_1</Type>
@@ -1372,26 +1411,26 @@
 			<PlotExtraYields>
 				<PlotExtraYield>
 					<YieldType>YIELD_COMMERCE</YieldType>
-					<iExtraYield>1</iExtraYield>
+					<iExtraYield>2</iExtraYield>
 				</PlotExtraYield>
 			</PlotExtraYields>
 			<PythonCallback>applyLandmarkFromEvent</PythonCallback>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
-			<iAIValue>1000</iAIValue>
+			<iAIValue>1</iAIValue>
 		</EventInfo>
 		<EventInfo>
 			<Type>EVENT_ICE_SCULPTURE_1</Type>
 			<Description>TXT_KEY_EVENT_ICE_SCULPTURE_1</Description>
 			<bPickCity>1</bPickCity>
-			<iCulture>100</iCulture>
+			<iCulture>1000</iCulture>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
-			<iAIValue>1000</iAIValue>
+			<iAIValue>1</iAIValue>
 		</EventInfo>
 		<EventInfo>
 			<Type>EVENT_ICE_SCULPTURE_2</Type>
 			<Description>TXT_KEY_EVENT_ICE_SCULPTURE_2</Description>
 			<bPickCity>1</bPickCity>
-			<iGold>-120</iGold>
+			<iGold>-1200</iGold>
 			<FreeSpecialistCounts>
 				<FreeSpecialistCount>
 					<SpecialistType>SPECIALIST_GREAT_ARTIST</SpecialistType>
@@ -1399,7 +1438,7 @@
 				</FreeSpecialistCount>
 			</FreeSpecialistCounts>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
-			<iAIValue>1000</iAIValue>
+			<iAIValue>2</iAIValue>
 		</EventInfo>
 		<EventInfo>
 			<Type>EVENT_APPLESEED_1</Type>
@@ -1409,25 +1448,25 @@
 			<BonusType>BONUS_APPLE</BonusType>
 			<iBonusChange>1</iBonusChange>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
-			<iAIValue>1000</iAIValue>
+			<iAIValue>1</iAIValue>
 		</EventInfo>
 		<EventInfo>
 			<Type>EVENT_MINING_ACCIDENT_1</Type>
 			<Description>TXT_KEY_EVENT_MINING_ACCIDENT_1</Description>
 			<bPickCity>1</bPickCity>
-			<iGold>-20</iGold>
+			<iGold>-300</iGold>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
-			<iAIValue>1000</iAIValue>
+			<iAIValue>3</iAIValue>
 		</EventInfo>
 		<EventInfo>
 			<Type>EVENT_MINING_ACCIDENT_2</Type>
 			<Description>TXT_KEY_EVENT_MINING_ACCIDENT_2</Description>
 			<bPickCity>1</bPickCity>
-			<iGold>-5</iGold>
+			<iGold>-150</iGold>
 			<ImprovementType>IMPROVEMENT_MINE</ImprovementType>
 			<iImprovementChange>-1</iImprovementChange>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
-			<iAIValue>1000</iAIValue>
+			<iAIValue>2</iAIValue>
 		</EventInfo>
 		<EventInfo>
 			<Type>EVENT_MINING_ACCIDENT_3</Type>
@@ -1437,25 +1476,25 @@
 			<ImprovementType>IMPROVEMENT_MINE</ImprovementType>
 			<iImprovementChange>-1</iImprovementChange>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
-			<iAIValue>1000</iAIValue>
+			<iAIValue>1</iAIValue>
 		</EventInfo>
 		<EventInfo>
 			<Type>EVENT_SHAFT_MINING_ACCIDENT_1</Type>
 			<Description>TXT_KEY_EVENT_MINING_ACCIDENT_1</Description>
 			<bPickCity>1</bPickCity>
-			<iGold>-40</iGold>
+			<iGold>-400</iGold>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
-			<iAIValue>1000</iAIValue>
+			<iAIValue>3</iAIValue>
 		</EventInfo>
 		<EventInfo>
 			<Type>EVENT_SHAFT_MINING_ACCIDENT_2</Type>
 			<Description>TXT_KEY_EVENT_MINING_ACCIDENT_2</Description>
 			<bPickCity>1</bPickCity>
-			<iGold>-15</iGold>
+			<iGold>-250</iGold>
 			<ImprovementType>IMPROVEMENT_SHAFT_MINE</ImprovementType>
 			<iImprovementChange>-1</iImprovementChange>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
-			<iAIValue>1000</iAIValue>
+			<iAIValue>2</iAIValue>
 		</EventInfo>
 		<EventInfo>
 			<Type>EVENT_SHAFT_MINING_ACCIDENT_3</Type>
@@ -1465,40 +1504,40 @@
 			<ImprovementType>IMPROVEMENT_SHAFT_MINE</ImprovementType>
 			<iImprovementChange>-1</iImprovementChange>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
-			<iAIValue>1000</iAIValue>
+			<iAIValue>1</iAIValue>
 		</EventInfo>
 		<EventInfo>
 			<Type>EVENT_BREAKTHROUGH_1</Type>
 			<Description>TXT_KEY_EVENT_BREAKTHROUGH_1</Description>
-			<iTechPercent>10</iTechPercent>
-			<iTechMinTurnsLeft>4</iTechMinTurnsLeft>
+			<iTechPercent>50</iTechPercent>
+			<iTechMinTurnsLeft>5</iTechMinTurnsLeft>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
-			<iAIValue>1000</iAIValue>
+			<iAIValue>1</iAIValue>
 		</EventInfo>
 		<EventInfo>
 			<Type>EVENT_SETBACK_1</Type>
 			<Description>TXT_KEY_EVENT_SETBACK_1</Description>
-			<iTechPercent>-8</iTechPercent>
+			<iTechPercent>-12</iTechPercent>
 			<iTechMinTurnsLeft>2</iTechMinTurnsLeft>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
-			<iAIValue>1000</iAIValue>
+			<iAIValue>1</iAIValue>
 		</EventInfo>
 		<EventInfo>
 			<Type>EVENT_RUNNING_BULLS_1</Type>
 			<Description>TXT_KEY_EVENT_RUNNING_BULLS_1</Description>
 			<bPickCity>1</bPickCity>
-			<iCulture>100</iCulture>
+			<iCulture>1000</iCulture>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
-			<iAIValue>1000</iAIValue>
+			<iAIValue>1</iAIValue>
 		</EventInfo>
 		<EventInfo>
 			<Type>EVENT_RUNNING_BULLS_2</Type>
 			<Description>TXT_KEY_EVENT_RUNNING_BULLS_2</Description>
 			<bPickCity>1</bPickCity>
-			<iGold>-35</iGold>
-			<iCulture>300</iCulture>
+			<iGold>-350</iGold>
+			<iCulture>2000</iCulture>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
-			<iAIValue>1000</iAIValue>
+			<iAIValue>1</iAIValue>
 		</EventInfo>
 		<EventInfo>
 			<Type>EVENT_GREAT_DEPRESSION_1</Type>
@@ -1507,38 +1546,40 @@
 			<PythonCallback>applyGreatDepression</PythonCallback>
 			<PythonHelp>getHelpGreatDepression</PythonHelp>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
-			<iAIValue>1000</iAIValue>
+			<iAIValue>1</iAIValue>
 		</EventInfo>
 		<EventInfo>
 			<Type>EVENT_LOST_AT_SEA</Type>
 			<Description>TXT_KEY_EVENT_LOST_AT_SEA</Description>
 			<bDisbandUnit>1</bDisbandUnit>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
+			<iAIValue>1</iAIValue>
 		</EventInfo>
 		<EventInfo>
 			<Type>EVENT_PATRON_OF_KNOWLEDGE_1</Type>
 			<Description>TXT_KEY_EVENT_PATRON_OF_KNOWLEDGE_1</Description>
 			<bPickCity>1</bPickCity>
-			<iTechPercent>10</iTechPercent>
-			<iTechMinTurnsLeft>4</iTechMinTurnsLeft>
+			<iTechPercent>20</iTechPercent>
+			<iTechMinTurnsLeft>5</iTechMinTurnsLeft>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
-			<iAIValue>1000</iAIValue>
+			<iAIValue>1</iAIValue>
 		</EventInfo>
 		<EventInfo>
 			<Type>EVENT_PATRON_OF_KNOWLEDGE_2</Type>
 			<Description>TXT_KEY_EVENT_PATRON_OF_KNOWLEDGE_2</Description>
 			<bPickCity>1</bPickCity>
-			<iTechCostPercent>10</iTechCostPercent>
-			<iTechMinTurnsLeft>4</iTechMinTurnsLeft>
+			<iTechCostPercent>20</iTechCostPercent>
+			<iTechMinTurnsLeft>5</iTechMinTurnsLeft>
+			<iGold>-1000</iGold>
 			<BuildingExtraCommerces>
 				<BuildingExtraCommerce>
 					<Building>BUILDING_LIBRARY</Building>
 					<CommerceType>COMMERCE_RESEARCH</CommerceType>
-					<iExtraCommerce>2</iExtraCommerce>
+					<iExtraCommerce>3</iExtraCommerce>
 				</BuildingExtraCommerce>
 			</BuildingExtraCommerces>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
-			<iAIValue>1000</iAIValue>
+			<iAIValue>2</iAIValue>
 		</EventInfo>
 		<EventInfo>
 			<Type>EVENT_MASTER_SMITH_1</Type>
