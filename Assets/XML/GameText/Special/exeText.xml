@@ -53,7 +53,7 @@
 		<German>Im Staging Room: "%s1_GameName"</German>
 		<Italian>Nella stanza di comunicazione: "%s1_GameName"</Italian>
 		<Spanish>En la sala de comunicaciones: "%s1_GameName"</Spanish>
-		<Polish>W poczekalni: "%s1_GameName"</Polish>
+		<Polish>W pokoju przygotowania rozgrywki: "%s1_GameName"</Polish>
 		<Russian>В комнате: "%s1_GameName"</Russian>
 	</TEXT>
 	<TEXT>
@@ -1893,7 +1893,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_MAIN_MENU_BTS_MOD</Tag>
 		<English>Mod</English>
-		<Polish>Modyfikacja</Polish>
 		<Russian>Модификация</Russian>
 	</TEXT>
 	<TEXT>
@@ -1942,7 +1941,7 @@
 		<German>Zu ladendes Spiel wählen!</German>
 		<Italian>Scegli un file da caricare</Italian>
 		<Spanish>Elegir la partida a cargar</Spanish>
-		<Polish>Wczytaj zapisan&#185; gr&#234;</Polish>
+		<Polish>WCZYTAJ ZAPISAN&#165; GR&#202;</Polish>
 		<Russian>Выберите игру для загрузки</Russian>
 	</TEXT>
 	<TEXT>
@@ -2013,7 +2012,7 @@
 		<German>Ein Spiel erstellen!</German>
 		<Italian>Crea una partita</Italian>
 		<Spanish>Crear una partida</Spanish>
-		<Polish>Stw&#243;rz now&#185; gr&#234;!</Polish>
+		<Polish>STW&#211;RZ NOW&#165; GR&#202;!</Polish>
 		<Russian>Создать игру!</Russian>
 	</TEXT>
 	<TEXT>
@@ -2030,7 +2029,7 @@
 		<Tag>TXT_KEY_MAIN_MENU_CUSTOM_GAME</Tag>
 		<English>Full Game</English>
 		<Italian>Personalizza partita</Italian>
-		<Polish>W&#179;asna gra</Polish>
+		<Polish>W&#163;asna gra</Polish>
 		<Russian>Настраиваемая игра</Russian>
 	</TEXT>
 	<TEXT>
@@ -2040,7 +2039,7 @@
 		<German>Eigenes Szenario</German>
 		<Italian>Personalizza scenario</Italian>
 		<Spanish>Escenario personalizado</Spanish>
-		<Polish>W&#179;asny scenariusz</Polish>
+		<Polish>W&#163;asny scenariusz</Polish>
 		<Russian>Настраиваемый сценарий</Russian>
 	</TEXT>
 	<TEXT>
@@ -2070,7 +2069,7 @@
 		<German>Spiel beenden</German>
 		<Italian>Esci dal gioco</Italian>
 		<Spanish>Salir del juego</Spanish>
-		<Polish>Wyj&#156;cie</Polish>
+		<Polish>WYJ&#140;CIE</Polish>
 		<Russian>Покинуть игру</Russian>
 	</TEXT>
 	<TEXT>
@@ -2150,7 +2149,7 @@
 		<German>Zurück</German>
 		<Italian>Indietro</Italian>
 		<Spanish>Volver</Spanish>
-		<Polish>Wr&#243;&#230;</Polish>
+		<Polish>WR&#211;&#198;</Polish>
 		<Russian>Вернуться</Russian>
 	</TEXT>
 	<TEXT>
@@ -2160,7 +2159,7 @@
 		<German>Ruhmeshalle betrachten</German>
 		<Italian>Hall of fame</Italian>
 		<Spanish>Ver Salón de la Fama</Spanish>
-		<Polish>Odwied&#159; sal&#234; chwa&#179;y</Polish>
+		<Polish>ODWIED&#143; SAL&#202; CHWA&#163;Y</Polish>
 		<Russian>Зал славы</Russian>
 	</TEXT>
 	<TEXT>
@@ -2269,7 +2268,7 @@
 		<German>Am Spiel teilnehmen</German>
 		<Italian>Partecipa alla partita</Italian>
 		<Spanish>Unirse a partida</Spanish>
-		<Polish>Do&#179;&#185;cz do gry</Polish>
+		<Polish>DO&#163;&#165;CZ DO GRY</Polish>
 		<Russian>Присоединиться к игре</Russian>
 	</TEXT>
 	<TEXT>
@@ -2429,6 +2428,7 @@
 		<German>Mod laden</German>
 		<Italian>Carica una mod</Italian>
 		<Spanish>Cargar un mod</Spanish>
+		<Polish>Wczytaj mod</Polish>
 		<Russian>Включить модификацию</Russian>
 	</TEXT>
 	<TEXT>
@@ -2438,6 +2438,7 @@
 		<German>Lobby-Chat</German>
 		<Italian>Chat sala d'attesa</Italian>
 		<Spanish>Chat de la sala</Spanish>
+		<Polish>Lobby czat</Polish>
 		<Russian>Чат лобби</Russian>
 	</TEXT>
 	<TEXT>
@@ -2459,6 +2460,11 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</Spanish>
+		<Polish>
+			<Text>Mapa</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Polish>
 		<Russian>Карта</Russian>
 	</TEXT>
 	<TEXT>
@@ -2468,6 +2474,7 @@
 		<German>Die gewählte Kartenskriptdatei konnte nicht gefunden werden.</German>
 		<Italian>Impossibile trovare il file di script della mappa prescelta.</Italian>
 		<Spanish>No se ha podido encontrar el archivo escogido de secuencia de comandos del mapa.</Spanish>
+		<Polish>Nie uda&#179;o si&#234; znale&#159;&#230; pliku zawieraj&#185;cego skrypt wybranej mapy.</Polish>
 		<Russian>Не получается найти выбранный файл скриптов карты.</Russian>
 	</TEXT>
 	<TEXT>
@@ -2477,6 +2484,7 @@
 		<German>Kartenskript nicht gefunden</German>
 		<Italian>Script di mappa non trovato</Italian>
 		<Spanish>No se ha encontrado la secuencia de comandos del mapa</Spanish>
+		<Polish>Skrypt mapy nie zosta&#179; znaleziony</Polish>
 		<Russian>Скрипты карты не найдены</Russian>
 	</TEXT>
 	<TEXT>
@@ -2486,6 +2494,7 @@
 		<German>Mod-Name:</German>
 		<Italian>Nome della mod:</Italian>
 		<Spanish>Nombre del mod:</Spanish>
+		<Polish>Nazwa moda: </Polish>
 		<Russian>Название модификации:</Russian>
 	</TEXT>
 	<TEXT>
@@ -2495,6 +2504,7 @@
 		<German>Dieses Szenario erfordert das "%s1_ModName"-Mod.[NEWLINE]Das Spiel muss zum Laden dieses Mods neu gestartet werden.</German>
 		<Italian>Questo scenario necessita della mod "%s1_ModName".[NEWLINE]Per caricare questo mod il gioco deve essere riavviato.</Italian>
 		<Spanish>Este escenario requiere el mod "%s1_ModName".[NEWLINE]El juego debe reiniciarse para cargar este mod.</Spanish>
+		<Polish>Ten scenariusz wymaga aby "%s1_ModName" mod by&#179; aktywny.[NEWLINE] Gra musi zosta&#230; uruchomiona ponownie aby za&#179;adowa&#230; ten mod.</Polish>
 		<Russian>Данному сценарию требуется модификация "%s1_ModName".[NEWLINE]Для ее включения необходим перезапуск игры.</Russian>
 	</TEXT>
 	<TEXT>
@@ -2504,6 +2514,7 @@
 		<German>Messaging Engine kann nicht gestartet werden.</German>
 		<Italian>Impossibile avviare l'engine di messaggistica.</Italian>
 		<Spanish>No se ha podido iniciar el motor de mensajería.</Spanish>
+		<Polish>Nie uda&#179;o si&#234; uruchomi&#230; silnika wiadomo&#156;ci.</Polish>
 		<Russian>Невозможно запустить движок обмена сообщениями.</Russian>
 	</TEXT>
 	<TEXT>
@@ -2513,6 +2524,7 @@
 		<German>Fehler</German>
 		<Italian>Errore</Italian>
 		<Spanish>Error</Spanish>
+		<Polish>B&#179;&#185;d</Polish>
 		<Russian>Ошибка</Russian>
 	</TEXT>
 	<TEXT>
@@ -2522,6 +2534,7 @@
 		<German>Multiplayer</German>
 		<Italian>Multigiocatore</Italian>
 		<Spanish>Multijugador</Spanish>
+		<Polish>GRA WIELOOSOBOWA</Polish>
 		<Russian>Многопользовательская игра</Russian>
 	</TEXT>
 	<TEXT>
@@ -2531,6 +2544,7 @@
 		<German>Direkte IP-Verbindung</German>
 		<Italian>Connessione diretta IP</Italian>
 		<Spanish>Conexión directa con IP</Spanish>
+		<Polish>BEZPO&#140;REDNIE PO&#163;&#165;CZENIE IP</Polish>
 		<Russian>Прямое IP-соединение</Russian>
 	</TEXT>
 	<TEXT>
@@ -2540,6 +2554,7 @@
 		<German>Internet-Spiele</German>
 		<Italian>Multi via internet</Italian>
 		<Spanish>Partidas en Internet</Spanish>
+		<Polish>GRA PRZEZ INTERNET</Polish>
 		<Russian>Игра через Интернет</Russian>
 	</TEXT>
 	<TEXT>
@@ -2549,6 +2564,7 @@
 		<German>LAN-Spiele</German>
 		<Italian>Multi via LAN</Italian>
 		<Spanish>Partidas en red local</Spanish>
+		<Polish>GRA LOKALNA</Polish>
 		<Russian>Игра по локальной сети</Russian>
 	</TEXT>
 	<TEXT>
@@ -2558,6 +2574,7 @@
 		<German>Netzwerkadresse</German>
 		<Italian>Indirizzo di rete</Italian>
 		<Spanish>Dirección de red</Spanish>
+		<Polish>Adres internetowy</Polish>
 		<Russian>Сетевой адрес</Russian>
 	</TEXT>
 	<TEXT>
@@ -2567,6 +2584,7 @@
 		<German>Spiel-Hosting fehlgeschlagen. Prüfen Sie die Netzwerkverbindungen.</German>
 		<Italian>Host della partita fallito. Controlla le connessione di rete.</Italian>
 		<Spanish>No se ha podido alojar la partida. Comprueba la conexión de red.</Spanish>
+		<Polish>Hostowanie gry si&#234; nie powiod&#179;o. Sprawd&#159; czy masz dost&#234;p do internetu.</Polish>
 		<Russian>Хостинг игры не удался; проверьте сетевые подключения.</Russian>
 	</TEXT>
 	<TEXT>
@@ -2576,6 +2594,7 @@
 		<German>Neu</German>
 		<Italian>Nuovo</Italian>
 		<Spanish>Nueva</Spanish>
+		<Polish>Nowa</Polish>
 		<Russian>Новая</Russian>
 	</TEXT>
 	<TEXT>
@@ -2585,6 +2604,7 @@
 		<German>Neues Spiel</German>
 		<Italian>Nuova partita</Italian>
 		<Spanish>Nueva partida</Spanish>
+		<Polish>Nowa gra</Polish>
 		<Russian>Новая игра</Russian>
 	</TEXT>
 	<TEXT>
@@ -2594,6 +2614,7 @@
 		<German>Neues Szenario</German>
 		<Italian>Nuovo scenario</Italian>
 		<Spanish>Nuevo escenario</Spanish>
+		<Polish>Nowy scenariusz</Polish>
 		<Russian>Новый сценарий</Russian>
 	</TEXT>
 	<TEXT>
@@ -2603,6 +2624,7 @@
 		<German>Leer</German>
 		<Italian>Nessuna</Italian>
 		<Spanish>No</Spanish>
+		<Polish>&#175;aden</Polish>
 		<Russian>None</Russian>
 	</TEXT>
 	<TEXT>
@@ -2612,6 +2634,7 @@
 		<German>Das Spiel kann erst gestartet werden, wenn alle Spieler bereit sind.</German>
 		<Italian>Impossibile avviare la partita finché tutti i giocatori non pronti.</Italian>
 		<Spanish>No se puede iniciar la partida hasta que estén listos todos los jugadores.</Spanish>
+		<Polish>Nie mo&#191;na rozpocz&#185;&#230; nowej gry, dop&#243;ki wszyscy gracze nie s&#185; gotowi.</Polish>
 		<Russian>Невозможно запустить игру, пока все игроки не будут готовы.</Russian>
 	</TEXT>
 	<TEXT>
@@ -2621,6 +2644,7 @@
 		<German>Nicht bereit</German>
 		<Italian>Non pronto</Italian>
 		<Spanish>No está listo</Spanish>
+		<Polish>Nie gotowy</Polish>
 		<Russian>Не готов</Russian>
 	</TEXT>
 	<TEXT>
@@ -2630,6 +2654,7 @@
 		<German>%s1_leader wurde von mehr als einem Spieler gewählt. Im anonymen Spielmodus müssen alle Spieler einen einzigartigen Herrscher wählen.</German>
 		<Italian>%s1_leader è stato scelto da più di un giocatore. Tutti i giocatori devono scegliere un unico leader per giocare anonimamente.</Italian>
 		<Spanish>%s1_leader ha sido elegido por más de un jugador. Se deben escoger nombres únicos de líderes para permanecer en el anonimato.</Spanish>
+		<Polish>%s1_leader zosta&#179;/a wybrany/a przez wi&#234;cej ni&#191; jednego gracza. Ka&#191;dy z graczy musi wybra&#230; unikatowego przyw&#243;dc&#234; dla anonimowej gry.</Polish>
 		<Russian>%s1_leader выбран более чем одним игроком. Всем необходимо взять уникального предводителя для анонимной игры.</Russian>
 	</TEXT>
 	<TEXT>
@@ -2639,6 +2664,7 @@
 		<German>Doppelte Herrschernamen</German>
 		<Italian>Nomi leader duplicati</Italian>
 		<Spanish>Duplicar nombres de líderes</Spanish>
+		<Polish>Duplikat imion przyw&#243;dc&#243;w</Polish>
 		<Russian>Имя предводителя дублируется</Russian>
 	</TEXT>
 	<TEXT>
@@ -2648,6 +2674,7 @@
 		<German>Es sind keine Zivs zur Auswahl verfügbar.</German>
 		<Italian>Non ci sono civiltà disponibili da scegliere.</Italian>
 		<Spanish>No hay civilizaciones disponibles entre las que escoger.</Spanish>
+		<Polish>Nie ma &#191;adnych dost&#234;pnych cywilizacji do wyboru.</Polish>
 		<Russian>Нет цивилизаций, доступных для выбора.</Russian>
 	</TEXT>
 	<TEXT>
@@ -2657,6 +2684,7 @@
 		<German>Keine Zivs!</German>
 		<Italian>Nessuna civiltà!</Italian>
 		<Spanish>No hay civilizaciones</Spanish>
+		<Polish>Brak cywilizacji!</Polish>
 		<Russian>Никаких цивилизаций!</Russian>
 	</TEXT>
 	<TEXT>
@@ -2666,6 +2694,7 @@
 		<German>Keine Kartenskripte gefunden!</German>
 		<Italian>Impossibile trovare script della mappa!</Italian>
 		<Spanish>No se han encontrado secuencias de comandos de mapa.</Spanish>
+		<Polish>Nie uda&#179;o si&#234; znale&#159;&#230; zkryptu mapy!</Polish>
 		<Russian>Скрипты карты не найдены!</Russian>
 	</TEXT>
 	<TEXT>
@@ -2675,6 +2704,7 @@
 		<German>Fehler im Kartenskript</German>
 		<Italian>Errore nello script della mappa</Italian>
 		<Spanish>Error de secuencia de comandos del mapa</Spanish>
+		<Polish>B&#179;&#185;d skryptu mapy</Polish>
 		<Russian>Ошибка скриптов карты</Russian>
 	</TEXT>
 	<TEXT>
@@ -2690,6 +2720,7 @@
 		<German>Offen</German>
 		<Italian>Slot aperto</Italian>
 		<Spanish>Abierto</Spanish>
+		<Polish>Otw&#243;rz</Polish>
 		<Russian>Открыть</Russian>
 	</TEXT>
 	<TEXT>
@@ -2699,6 +2730,7 @@
 		<German>Optionen</German>
 		<Italian>Opzioni</Italian>
 		<Spanish>Opciones</Spanish>
+		<Polish>Opcje</Polish>
 		<Russian>Опции</Russian>
 	</TEXT>
 	<TEXT>
@@ -2708,6 +2740,7 @@
 		<German>Kennwort</German>
 		<Italian>Password</Italian>
 		<Spanish>Contraseña</Spanish>
+		<Polish>Has&#179;o</Polish>
 		<Russian>Пароль</Russian>
 	</TEXT>
 	<TEXT>
@@ -2717,6 +2750,7 @@
 		<German>Bei der Update-Überprüfung ist ein Fehler aufgetreten.</German>
 		<Italian>Durante la verifica degli aggiornamenti si è rilevato un errore.</Italian>
 		<Spanish>Se ha producido un error al comprobar las actualizaciones.</Spanish>
+		<Polish>Wyst&#185;pi&#179; b&#179;&#185;d podczas sprawdzania dost&#234;pno&#156;ci aktualizacji.</Polish>
 		<Russian>При проверке обновлений произошла ошибка.</Russian>
 	</TEXT>
 	<TEXT>
@@ -2726,6 +2760,7 @@
 		<German>Update-Fehler</German>
 		<Italian>Errore di aggiornamento</Italian>
 		<Spanish>Error de actualización</Spanish>
+		<Polish>B&#179;&#185;d aktualizacji</Polish>
 		<Russian>Ошибка обновления</Russian>
 	</TEXT>
 	<TEXT>
@@ -2735,6 +2770,7 @@
 		<German>Sie können erst nach Abschluss des Patching-Vorgangs fortfahren.</German>
 		<Italian>Non puoi continuare finché il processo di patch non è terminato.</Italian>
 		<Spanish>No puedes continuar hasta que se haya aplicado el parche.</Spanish>
+		<Polish>Nie mo&#191;esz kontynuowa&#230; dop&#243;ki trwa aktualizacja.</Polish>
 		<Russian>Вы не сможете продолжить до завершения обновления.</Russian>
 	</TEXT>
 	<TEXT>
@@ -2744,6 +2780,7 @@
 		<German>Patch läuft!</German>
 		<Italian>Patch in corso!</Italian>
 		<Spanish>Parche aplicándose</Spanish>
+		<Polish>Trwa aktualizacja!</Polish>
 		<Russian>Идет обновление!</Russian>
 	</TEXT>
 	<TEXT>
@@ -2753,6 +2790,7 @@
 		<German>Es sind zurzeit keine Updates verfügbar.</German>
 		<Italian>In questo momento non ci sono aggiornamenti disponibili</Italian>
 		<Spanish>En este momento no hay disponible ninguna actualización.</Spanish>
+		<Polish>Brak dost&#234;pnych aktualizacji.</Polish>
 		<Russian>Нет обновлений на данный момент.</Russian>
 	</TEXT>
 	<TEXT>
@@ -2760,6 +2798,7 @@
 		<English>Version OK!</English>
 		<Italian>Versione OK!</Italian>
 		<Spanish>Versión correcta</Spanish>
+		<Polish>Najnowsza wersja!</Polish>
 		<Russian>Версия корректна</Russian>
 	</TEXT>
 	<TEXT>
@@ -2769,6 +2808,7 @@
 		<German>Per E-Mail spielen</German>
 		<Italian>Multi via e-mail</Italian>
 		<Spanish>Juego por e-mail</Spanish>
+		<Polish>Graj przez e-mail</Polish>
 		<Russian>Играть по электронной почте</Russian>
 	</TEXT>
 	<TEXT>
@@ -2778,6 +2818,7 @@
 		<German> - Warten auf den PitBoss</German>
 		<Italian> - In attesa del Pitboss</Italian>
 		<Spanish> - Esperando Pitboss</Spanish>
+		<Polish> - Oczekiwanie na PitBossa</Polish>
 		<Russian> - В ожидании ПитБосса</Russian>
 	</TEXT>
 	<TEXT>
@@ -2787,6 +2828,7 @@
 		<German>Sie müssen einen Spielernamen angeben.</German>
 		<Italian>Devi specificare un nome di giocatore.</Italian>
 		<Spanish>Hay que facilitar el nombre del jugador.</Spanish>
+		<Polish>Musisz poda&#230; nazw&#234; gracza.</Polish>
 		<Russian>Необходимо указать имя игрока.</Russian>
 	</TEXT>
 	<TEXT>
@@ -2796,6 +2838,7 @@
 		<German>Spielername erforderlich</German>
 		<Italian>Nome del giocatore richiesto</Italian>
 		<Spanish>Se requiere nombre del jugador</Spanish>
+		<Polish>Wymagana nazwa gracza</Polish>
 		<Russian>Требуется имя игрока</Russian>
 	</TEXT>
 	<TEXT>
@@ -2805,6 +2848,7 @@
 		<German>Spieler</German>
 		<Italian>Giocatori</Italian>
 		<Spanish>Jugadores</Spanish>
+		<Polish>Gracze</Polish>
 		<Russian>Игроки</Russian>
 	</TEXT>
 	<TEXT>
@@ -2814,6 +2858,7 @@
 		<German>SPIELERDETAILS</German>
 		<Italian>DETTAGLI GIOCATORE</Italian>
 		<Spanish>DETALLES DEL JUGADOR</Spanish>
+		<Polish>SZCZEG&#211;&#163;Y GRACZA</Polish>
 		<Russian>СВЕДЕНИЯ ОБ ИГРОКЕ</Russian>
 	</TEXT>
 	<TEXT>
@@ -2823,6 +2868,7 @@
 		<German>Spielername</German>
 		<Italian>Nome giocatore</Italian>
 		<Spanish>Nombre del jugador</Spanish>
+		<Polish>Nazwa gracza</Polish>
 		<Russian>Имя игрока</Russian>
 	</TEXT>
 	<TEXT>
@@ -2832,6 +2878,7 @@
 		<German> - Warten auf </German>
 		<Italian> - In attesa di</Italian>
 		<Spanish> - Esperando a </Spanish>
+		<Polish> - Oczekiwanie na</Polish>
 		<Russian> - В ожидании </Russian>
 	</TEXT>
 	<TEXT>
@@ -2841,6 +2888,7 @@
 		<German>Jetzt spielen!</German>
 		<Italian>Partita veloce</Italian>
 		<Spanish>Jugar ya</Spanish>
+		<Polish>Prosta gra</Polish>
 		<Russian>Быстрая игра</Russian>
 	</TEXT>
 	<TEXT>
@@ -2850,6 +2898,7 @@
 		<German>Zufällig</German>
 		<Italian>Casuale</Italian>
 		<Spanish>Al azar</Spanish>
+		<Polish>Losowy/a</Polish>
 		<Russian>Случайный</Russian>
 	</TEXT>
 	<TEXT>
@@ -2859,6 +2908,7 @@
 		<German>Das Staatsoberhaupt wird zufällig ausgewählt.</German>
 		<Italian>Il tuo leader verrà scelto casualmente.</Italian>
 		<Spanish>Tu líder se elegirá al azar.</Spanish>
+		<Polish>Tw&#243;j przyw&#243;dca zostanie wybrany losowo.</Polish>
 		<Russian>Предводитель будет выбран случайным образом.</Russian>
 	</TEXT>
 	<TEXT>
@@ -2868,6 +2918,7 @@
 		<German>Es wird eine zufällige Wahl getroffen. Diese Option eignet sich nur für echte Draufgänger!</German>
 		<Italian>[BOLD]Verrà eseguita una [COLOR_HIGHLIGHT_TEXT]scelta casuale[COLOR_REVERT] (scegliendo questa opzione, dimostri di essere un vero duro)[\BOLD]</Italian>
 		<Spanish>La elección se realizará al azar. Con esta decisión se demuestra tu dureza.</Spanish>
+		<Polish>Wyb&#243;r zostanie dokonany przez los. Wyb&#243;r tej opcji dowodzi twojej odwagi.</Polish>
 		<Russian>Выбор будет отдан на волю случая. Такой вариант продемонстрирует вашу силу.</Russian>
 	</TEXT>
 	<TEXT>
@@ -2877,6 +2928,7 @@
 		<German>Liste aktualisieren </German>
 		<Italian>Aggiorna lista</Italian>
 		<Spanish>Actualizar lista</Spanish>
+		<Polish>Od&#156;wie&#191; list&#234;</Polish>
 		<Russian>Обновить лист</Russian>
 	</TEXT>
 	<TEXT>
@@ -2886,6 +2938,7 @@
 		<German>Wiederholen</German>
 		<Italian>Ripeti</Italian>
 		<Spanish>Repetir</Spanish>
+		<Polish>Powt&#243;rz</Polish>
 		<Russian>Повторить</Russian>
 	</TEXT>
 	<TEXT>
@@ -2895,6 +2948,7 @@
 		<German>Lobby-Mitglieder</German>
 		<Italian>Membri della sala d'attesa</Italian>
 		<Spanish>Miembros en la sala</Spanish>
+		<Polish>Cz&#179;onkowie lobby</Polish>
 		<Russian>Члены лобби</Russian>
 	</TEXT>
 	<TEXT>
@@ -2904,6 +2958,7 @@
 		<German>Spiel speichern</German>
 		<Italian>Salva partita</Italian>
 		<Spanish>Guardar partida</Spanish>
+		<Polish>Zapisz gr&#234;</Polish>
 		<Russian>Сохранить игру</Russian>
 	</TEXT>
 	<TEXT>
@@ -2913,6 +2968,7 @@
 		<German>Spielstandversion:</German>
 		<Italian>Versione dei salvataggi:</Italian>
 		<Spanish>Guardar versión:</Spanish>
+		<Polish>Wersja zapisu:</Polish>
 		<Russian>Версия сохранения:</Russian>
 	</TEXT>
 	<TEXT>
@@ -2922,6 +2978,7 @@
 		<German>Szenario</German>
 		<Spanish>Escenario</Spanish>
 		<Italian>Gioca uno scenario</Italian>
+		<Polish>Scenariusz</Polish>
 		<Russian>Сценарий</Russian>
 	</TEXT>
 	<TEXT>
@@ -2931,6 +2988,7 @@
 		<German>WÄhlen[SPACE]</German>
 		<Italian>Seleziona il[SPACE]</Italian>
 		<Spanish>Seleccionar [SPACE]</Spanish>
+		<Polish>Wybierz[SPACE]</Polish>
 		<Russian>Выберите[SPACE]</Russian>
 	</TEXT>
 	<TEXT>
@@ -2940,6 +2998,7 @@
 		<German>Zivilisation wÄhlen</German>
 		<Italian>Seleziona una civiltÀ</Italian>
 		<Spanish>Seleccionar una civilizaciÓn</Spanish>
+		<Polish>WYBIERZ CYWILIZACJ&#202;</Polish>
 		<Russian>Выберите цивилизацию</Russian>
 	</TEXT>
 	<TEXT>
@@ -2949,6 +3008,7 @@
 		<German>Schwierigkeitsgrad wählen</German>
 		<Italian>Seleziona il livello di difficoltà</Italian>
 		<Spanish>Seleccionar una dificultad</Spanish>
+		<Polish>Wybierz poziom trudno&#156;ci</Polish>
 		<Russian>Выберите сложность</Russian>
 	</TEXT>
 	<TEXT>
@@ -2958,6 +3018,7 @@
 		<German>Karte wÄhlen</German>
 		<Italian>Seleziona una mappa</Italian>
 		<Spanish>Seleccionar un mapa</Spanish>
+		<Polish>WYBIERZ MAP&#202;</Polish>
 		<Russian>Выберите карту</Russian>
 	</TEXT>
 	<TEXT>
@@ -2967,6 +3028,7 @@
 		<German>KLIMA</German>
 		<Italian>Clima</Italian>
 		<Spanish>CLIMA</Spanish>
+		<Polish>KLIMAT</Polish>
 		<Russian>КЛИМАТ</Russian>
 	</TEXT>
 	<TEXT>
@@ -2976,6 +3038,7 @@
 		<German>SCHWIERIGKEIT</German>
 		<Italian>DifficoltÀ</Italian>
 		<Spanish>DIFICULTAD</Spanish>
+		<Polish>POZIOM TRUDNO&#140;CI</Polish>
 		<Russian>СЛОЖНОСТЬ</Russian>
 	</TEXT>
 	<TEXT>
@@ -2985,6 +3048,7 @@
 		<German>Wie schnell soll das Spiel laufen?</German>
 		<Italian>Seleziona la velocità di gioco</Italian>
 		<Spanish>¿A qué velocidad ha de ir el juego?</Spanish>
+		<Polish>Jak d&#179;uga powinna by&#230; rozgrywka?</Polish>
 		<Russian>Какая длительность должна быть у игры?</Russian>
 	</TEXT>
 	<TEXT>
@@ -2994,6 +3058,7 @@
 		<German>SPIELGESCHWINDIGKEIT</German>
 		<Italian>VELOCITÀ DI GIOCO</Italian>
 		<Spanish>VELOCIDAD DE JUEGO</Spanish>
+		<Polish>D&#163;UGO&#140;&#198; ROZGRYWKI</Polish>
 		<Russian>СКОРОСТЬ ИГРЫ</Russian>
 	</TEXT>
 	<TEXT>
@@ -3003,6 +3068,7 @@
 		<German>MEERESSPIEGEL</German>
 		<Italian>Altezza del mare</Italian>
 		<Spanish>NIVEL DEL MAR</Spanish>
+		<Polish>POZIOM MORZA</Polish>
 		<Russian>УРОВЕНЬ МОРЯ</Russian>
 	</TEXT>
 	<TEXT>
@@ -3012,6 +3078,7 @@
 		<German>WELTGRÖSSE</German>
 		<Italian>Personalizza il mondo</Italian>
 		<Spanish>TAMAÑO DEL MUNDO</Spanish>
+		<Polish>WIELKO&#140;&#198; &#140;WIATA</Polish>
 		<Russian>РАЗМЕР МИРА</Russian>
 	</TEXT>
 	<TEXT>
@@ -3021,6 +3088,7 @@
 		<German>WELTGRÖSSE</German>
 		<Italian>Dimensioni della mappa</Italian>
 		<Spanish>TAMAÑO DEL MUNDO</Spanish>
+		<Polish>WIELKO&#140;&#198; &#140;WIATA</Polish>
 		<Russian>РАЗМЕР МИРА</Russian>
 	</TEXT>
 	<TEXT>
@@ -3030,6 +3098,7 @@
 		<German>Es ist ein Fehler im Staging Room auf dem Server aufgetreten.</German>
 		<Italian>Si è verificato un errore sul server della stanza di comunicazione.</Italian>
 		<Spanish>Se ha producido un error relacionado con la sala de comunicaciones del servidor.</Spanish>
+		<Polish>Na serwerze wyst&#185;pi&#179; b&#179;&#185;d z pokojem przygotowania rozgrywki.</Polish>
 		<Russian>С комнатой на сервере произошла ошибка.</Russian>
 	</TEXT>
 	<TEXT>
@@ -3039,6 +3108,7 @@
 		<German>Staging Room-Fehler</German>
 		<Italian>Errore nella stanza di comunicazione</Italian>
 		<Spanish>Error de la sala de comunicaciones</Spanish>
+		<Polish>B&#179;&#185;d pokoju przygotowania rozgrywki</Polish>
 		<Russian>Ошибка комнаты</Russian>
 	</TEXT>
 	<TEXT>
@@ -3048,6 +3118,7 @@
 		<German>Einstellungen</German>
 		<Italian>Impostazioni</Italian>
 		<Spanish>Configuración</Spanish>
+		<Polish>Ustawienia</Polish>
 		<Russian>Настройки</Russian>
 	</TEXT>
 	<TEXT>
@@ -3057,6 +3128,7 @@
 		<German>Benutzernamen müssen mindestens 3 Zeichen lang sein.</German>
 		<Italian>Gli username devono essere lunghi almeno tre caratteri.</Italian>
 		<Spanish>Los nombres de usuario deben tener una longitud de al menos 3 caracteres.</Spanish>
+		<Polish>Nazwa u&#191;ytkownika nie mo&#191;e by&#230; kr&#243;tsza ni&#191; 3 znaki.</Polish>
 		<Russian>Длина имени пользователя должна составлять не менее 3 символов.</Russian>
 	</TEXT>
 	<TEXT>
@@ -3066,6 +3138,7 @@
 		<German>Fehler beim Benutzernamen</German>
 		<Italian>Errore di username</Italian>
 		<Spanish>Error de nombre de usuario</Spanish>
+		<Polish>B&#179;&#185;d nazwy u&#191;ytkownika</Polish>
 		<Russian>Ошибка в имени пользователя</Russian>
 	</TEXT>
 	<TEXT>
@@ -3075,6 +3148,7 @@
 		<German>Einzelspieler</German>
 		<Italian>Giocatore singolo</Italian>
 		<Spanish>Un jugador</Spanish>
+		<Polish>Gra jednoosobowa</Polish>
 		<Russian>Одиночная игра</Russian>
 	</TEXT>
 	<TEXT>
@@ -3084,6 +3158,7 @@
 		<German>Staging Room</German>
 		<Italian>Stanza di comunicazione</Italian>
 		<Spanish>Sala de comunicaciones</Spanish>
+		<Polish>Pok&#243;j przygotowania rozgrywki</Polish>
 		<Russian>Комната</Russian>
 	</TEXT>
 	<TEXT>
@@ -3093,6 +3168,7 @@
 		<German>Mod deaktivieren</German>
 		<Italian>Disattiva C2C</Italian>
 		<Spanish>Descargar mod</Spanish>
+		<Polish>WY&#163;&#165;CZ MOD</Polish>
 		<Russian>Отключить модификацию</Russian>
 	</TEXT>
 	<TEXT>
@@ -3102,6 +3178,7 @@
 		<German>Auf Updates prüfen</German>
 		<Italian>Verifica aggiornamenti</Italian>
 		<Spanish>Comprobar actualizaciones</Spanish>
+		<Polish>SPRAWD&#143; AKTUALIZACJ&#202;</Polish>
 		<Russian>Проверить обновления</Russian>
 	</TEXT>
 	<TEXT>
@@ -3111,6 +3188,7 @@
 		<German>Ihre Kern-Spieldateien entsprechen nicht der auf dem Host verwendeten Version.[NEWLINE]Spielanschluss nicht möglich!</German>
 		<Italian>La versione dei nostri file critici è differente da quella dell'host.[NEWLINE]Impossibile partecipare alla partita!</Italian>
 		<Spanish>Aviso: la versión de los archivos críticos de la partida no coincide con la del anfitrión.[NEWLINE]No es posible unirse a la partida</Spanish>
+		<Polish>Wersja plik&#243;w koniecznych do dzia&#179;ania gry jest niezgodna z wersj&#185; hosta.[NEWLINE]Nie mo&#191;na do&#179;&#185;czy&#230; do gry!</Polish>
 		<Russian>Версия критически важных файлов игры не совпадает с версией файлов хоста.[NEWLINE]К игре нельзя присоединиться!</Russian>
 	</TEXT>
 	<TEXT>
@@ -3120,6 +3198,7 @@
 		<German>Versionskonflikt</German>
 		<Italian>Versione incompatibile</Italian>
 		<Spanish>Versión incompatible</Spanish>
+		<Polish>Niezgodno&#156;&#230; wersji</Polish>
 		<Russian>Несоответствие версий</Russian>
 	</TEXT>
 	<TEXT>
@@ -3129,6 +3208,7 @@
 		<German>Achtung: Ihre Spieldaten entsprechen nicht der vom Host verwendeten Version.</German>
 		<Italian>Attenzione: la versione dei file del nostro gioco è differente da quella dell'host.</Italian>
 		<Spanish>Aviso: la versión de los archivos de la partida no coincide con la del anfitrión.</Spanish>
+		<Polish>Ostrze&#191;enie: wersja niekt&#243;rych plik&#243;w gry nie jest zgodna z wersj&#185; hosta.</Polish>
 		<Russian>Внимание: версия файлов игры не совпадает с версией файлов хоста.</Russian>
 	</TEXT>
 	<TEXT>
@@ -3138,6 +3218,7 @@
 		<German>Versionskonflikt</German>
 		<Italian>Versione incompatibile</Italian>
 		<Spanish>Versión incompatible</Spanish>
+		<Polish>Niezgodno&#156;&#230; wersji</Polish>
 		<Russian>Несоответствие версий</Russian>
 	</TEXT>
 	<TEXT>
@@ -3147,6 +3228,7 @@
 		<German>Siege</German>
 		<Italian>Condizioni vittoria</Italian>
 		<Spanish>Victorias</Spanish>
+		<Polish>ZWYCI&#202;STWA</Polish>
 		<Russian>Победы</Russian>
 	</TEXT>
 	<TEXT>
@@ -3156,6 +3238,7 @@
 		<German>Warten auf Ziv-Auswahl ...</German>
 		<Italian>In attesa delle scelte delle civiltà...</Italian>
 		<Spanish>Esperando elección de civilizaciones...</Spanish>
+		<Polish>Oczekiwanie na wyb&#243;r cywilizacji</Polish>
 		<Russian>Ожидание выбора цивилизаций...</Russian>
 	</TEXT>
 	<TEXT>
@@ -3165,6 +3248,7 @@
 		<German>Kartenname: %s1_Name</German>
 		<Italian>Nome mappa: %s1_Name</Italian>
 		<Spanish>Nombre del mapa: %s1_Name</Spanish>
+		<Polish>Nazwa mapy: %s1_Name</Polish>
 		<Russian>Название карты: %s1_Name</Russian>
 	</TEXT>
 	<TEXT>
@@ -3174,6 +3258,7 @@
 		<German>KARTE WIRD ERHALTEN ...</German>
 		<Italian>RICEZIONE MAPPA IN CORSO...</Italian>
 		<Spanish>RECIBIENDO MAPA...</Spanish>
+		<Polish>OTRZYMYWANIE MAPY...</Polish>
 		<Russian>ПОЛУЧЕНИЕ КАРТЫ...</Russian>
 	</TEXT>
 	<TEXT>
@@ -3183,6 +3268,7 @@
 		<German>KARTE WIRD GESENDET ...</German>
 		<Italian>INVIO MAPPA IN CORSO...</Italian>
 		<Spanish>ENVIANDO MAPA...</Spanish>
+		<Polish>WYSY&#163;ANIE MAPY...</Polish>
 		<Russian>ОТПРАВКА КАРТЫ...</Russian>
 	</TEXT>
 	<TEXT>
@@ -3192,6 +3278,7 @@
 		<German>Kartentransfer</German>
 		<Italian>Trasferimento mappa</Italian>
 		<Spanish>Transferencia de mapa</Spanish>
+		<Polish>Transfer mapy</Polish>
 		<Russian>Передача карты</Russian>
 	</TEXT>
 	<TEXT>
@@ -3201,6 +3288,7 @@
 		<German>Der Verbindungsaufbau zum Spieleserver ist fehlgeschlagen.</German>
 		<Italian>La connessione al server per la ricerca di partite è fallita.</Italian>
 		<Spanish>Ha fallado la conexión con el servidor de búsqueda de partidas.</Spanish>
+		<Polish>Po&#179;&#185;czenie z serwerem wyboru gier zosta&#179;o przerwane.</Polish>
 		<Russian>Не удалось установить соединение с сервером просмотра игр.</Russian>
 	</TEXT>
 	<TEXT>
@@ -3210,6 +3298,7 @@
 		<German>Server nicht erreichbar</German>
 		<Italian>Server irraggiungibile</Italian>
 		<Spanish>No se puede acceder al servidor</Spanish>
+		<Polish>Serwer nieosi&#185;galny</Polish>
 		<Russian>Сервер недоступен</Russian>
 	</TEXT>
 	<TEXT>
@@ -3219,6 +3308,7 @@
 		<German>Der angegebene Benutzername ist ungültig.</German>
 		<Italian>L'username da te inserito non è valido.</Italian>
 		<Spanish>El nombre de usuario que has introducido no es válido.</Spanish>
+		<Polish>Podana nazwa u&#191;ytkownika jest niepoprawna.</Polish>
 		<Russian>Вы ввели неверное имя пользователя.</Russian>
 	</TEXT>
 	<TEXT>
@@ -3228,6 +3318,7 @@
 		<German>Ungültiger Login-Name</German>
 		<Italian>Nome di login non valido</Italian>
 		<Spanish>Nombre de inicio de sesión no válido</Spanish>
+		<Polish>Niepoprawna nazwa u&#191;ytkownika</Polish>
 		<Russian>Неверное имя</Russian>
 	</TEXT>
 	<TEXT>
@@ -3237,6 +3328,7 @@
 		<German>Aufgrund der eingestellten Firewall-Regeln konnten keine Internetspiele gefunden werden.</German>
 		<Italian>Impossibile cercare partite Internet a causa di problemi con il firewall.</Italian>
 		<Spanish>No se han podido encontrar partidas en Internet debido a problemas con el firewall/servidor de seguridad.</Spanish>
+		<Polish>Nie uda&#179;o si&#234; znale&#159;&#230; gier przez internet z powodu problemu z zapor&#185; sieciow&#185;.</Polish>
 		<Russian>Невозможно найти игры через Интернет из-за проблем с брандмауэром.</Russian>
 	</TEXT>
 	<TEXT>
@@ -3246,6 +3338,7 @@
 		<German>Server nicht erreichbar</German>
 		<Italian>Server irraggiungibile</Italian>
 		<Spanish>No se puede acceder al servidor</Spanish>
+		<Polish>Serwer nieosi&#185;galny</Polish>
 		<Russian>Сервер недоступен</Russian>
 	</TEXT>
 	<TEXT>
@@ -3255,6 +3348,7 @@
 		<German>Der Spieleserver antwortet nicht.</German>
 		<Italian>Il server per la ricerca di partite non risponde.</Italian>
 		<Spanish>El servidor de búsqueda de partidas no responde.</Spanish>
+		<Polish>Serwer wyboru gier nie odpowiada.</Polish>
 		<Russian>Сервер просмотра игр не отвечает.</Russian>
 	</TEXT>
 	<TEXT>
@@ -3264,6 +3358,7 @@
 		<German>Server nicht erreichbar</German>
 		<Italian>Server irraggiungibile</Italian>
 		<Spanish>No se puede acceder al servidor</Spanish>
+		<Polish>Serwer nieosi&#185;galny</Polish>
 		<Russian>Сервер недоступен</Russian>
 	</TEXT>
 	<TEXT>
@@ -3273,6 +3368,7 @@
 		<German>Es ist ein Fehler im Netzwerk-Socket aufgetreten. Die Verbindung zum Spieleserver wurde getrennt.</German>
 		<Italian>Il socket di rete ha rilevato un errore. Disconnesso dal server per la ricerca delle partite.</Italian>
 		<Spanish>El socket de red ha encontrado un error. Desconectado del servidor de búsqueda de partidas.</Spanish>
+		<Polish>Gniazdo internetowe napotka&#179;o b&#179;&#185;d. Roz&#179;&#185;czono z serwerem wyboru gier.</Polish>
 		<Russian>Сетевой сокет столкнулся с ошибкой. Отключние от сервера просмотра игр.</Russian>
 	</TEXT>
 	<TEXT>
@@ -3282,6 +3378,7 @@
 		<German>Netzwerkfehler</German>
 		<Italian>Errore di rete</Italian>
 		<Spanish>Error de red</Spanish>
+		<Polish>B&#179;&#185;d sieci</Polish>
 		<Russian>Ошибка сети</Russian>
 	</TEXT>
 	<TEXT>
@@ -3291,6 +3388,7 @@
 		<German>Der Spieleserver ist nicht verfügbar.</German>
 		<Italian>Il server Internet per la ricerca delle partite non è disponibile.</Italian>
 		<Spanish>El servidor de búsqueda de partidas en Internet no está disponible.</Spanish>
+		<Polish>Serwer wyboru gier jest niedost&#234;pny.</Polish>
 		<Russian>Сервер просмотра игр через Интернет недоступен.</Russian>
 	</TEXT>
 	<TEXT>
@@ -3300,6 +3398,7 @@
 		<German>Server nicht verfügbar</German>
 		<Italian>Server non disponibile</Italian>
 		<Spanish>Servidor no disponible</Spanish>
+		<Polish>Serwer niedost&#234;pny</Polish>
 		<Russian>Сервер недоступен</Russian>
 	</TEXT>
 	<TEXT>
@@ -3309,6 +3408,7 @@
 		<German>Der Spieleserver ist wegen eines unbekannten Fehlers nicht erreichbar.</German>
 		<Italian>Impossibile connettersi al server per la ricerca delle partite a causa di un problema non specificato.</Italian>
 		<Spanish>No se ha podido acceder al servidor de búsqueda de partidas debido a un problema sin especificar.</Spanish>
+		<Polish>Nie uda&#179;o si&#234; znale&#159;&#230; serwera wyboru gier z powodu nieznanego b&#179;&#234;du.</Polish>
 		<Russian>Не получается связаться с сервером просмотра игр из-за неустановленной проблемы.</Russian>
 	</TEXT>
 	<TEXT>
@@ -3318,6 +3418,7 @@
 		<German>Server nicht erreichbar</German>
 		<Italian>Server irraggiungibile</Italian>
 		<Spanish>No se puede acceder al servidor</Spanish>
+		<Polish>Serwer nieosi&#185;galny</Polish>
 		<Russian>Сервер недоступен</Russian>
 	</TEXT>
 	<TEXT>
@@ -3327,6 +3428,7 @@
 		<German>Zu Freundesliste hinzufügen</German>
 		<Italian>Aggiungi alla lista amici</Italian>
 		<Spanish>Agregar a amigos</Spanish>
+		<Polish>Dodaj do grona znajomych</Polish>
 		<Russian>Добавить в друзья</Russian>
 	</TEXT>
 	<TEXT>
@@ -3336,6 +3438,7 @@
 		<German>Benutzer ignorieren</German>
 		<Italian>Ignora l'utente</Italian>
 		<Spanish>Ignorar al usuario</Spanish>
+		<Polish>Ignoruj u&#191;ytkownika</Polish>
 		<Russian>Игнорировать пользователя</Russian>
 	</TEXT>
 	<TEXT>
@@ -3345,6 +3448,7 @@
 		<German>Aus Freundesliste entfernen</German>
 		<Italian>Elimina dalla lista amici</Italian>
 		<Spanish>Quitar de amigos</Spanish>
+		<Polish>Usu&#241; z grona znajomych</Polish>
 		<Russian>Убрать из друзей</Russian>
 	</TEXT>
 	<TEXT>
@@ -3354,6 +3458,7 @@
 		<German>Nachricht senden</German>
 		<Italian>Invia messaggio</Italian>
 		<Spanish>Enviar mensaje</Spanish>
+		<Polish>Wy&#156;lij wiadomo&#156;&#230;</Polish>
 		<Russian>Отправить сообщение</Russian>
 	</TEXT>
 	<TEXT>
@@ -3363,6 +3468,7 @@
 		<German>Benutzer nicht mehr ignorieren</German>
 		<Italian>Smetti di ignorare l'utente</Italian>
 		<Spanish>Dejar de ignorar al usuario</Spanish>
+		<Polish>Przesta&#241; ignorowa&#230; u&#191;ytkownika</Polish>
 		<Russian>Прекратить игнорировать пользователя</Russian>
 	</TEXT>
 	<TEXT>
@@ -3372,6 +3478,7 @@
 		<German>Die Verwendung der MemorySaver-Option in Ihrer Konfiguration setzt exklusiven Zugriff auf die Grafikkarte voraus. Programm wird verlassen.</German>
 		<Italian>L'opzione di salvataggio della memoria video non permette aprire un'altra applicazione in secondo piano. Uscita dal programma in corso.</Italian>
 		<Spanish>Al usar la opción AhorroMemoria en tu configuración no se puede abrir otra aplicación en segundo plano. Saliendo.</Spanish>
+		<Polish>U&#191;ycie opcji MemorySaver w pliku konfiguracyjnym nie pozwala na utrat&#234; urz&#185;dzenia. Zamykanie aplikacji. </Polish>
 		<Russian>Использование опции MemorySaver в конфигурационном файле не допускает потери устройства. Выход из программы.</Russian>
 	</TEXT>
 	<TEXT>
@@ -3381,6 +3488,7 @@
 		<German>Ziv.-Adjektiv:</German>
 		<Italian>Aggettivo:</Italian>
 		<Spanish>Adjetivo:</Spanish>
+		<Polish>Przymiotnik:</Polish>
 		<Russian>Прилагательное цивилизации:</Russian>
 	</TEXT>
 	<TEXT>
@@ -3390,6 +3498,7 @@
 		<German>Ziv.-Beschreibung:</German>
 		<Italian>Nome civiltà:</Italian>
 		<Spanish>Civilización:</Spanish>
+		<Polish>Opis cywilizacji:</Polish>
 		<Russian>Описание цивилизации:</Russian>
 	</TEXT>
 	<TEXT>
@@ -3399,6 +3508,7 @@
 		<German>E-Mail-Adresse:</German>
 		<Italian>Indirizzo e-mail:</Italian>
 		<Spanish>Dirección de e-mail:</Spanish>
+		<Polish>Adres e-mail:</Polish>
 		<Russian>Адрес электронной почты:</Russian>
 	</TEXT>
 	<TEXT>
@@ -3408,6 +3518,7 @@
 		<German>Civ-Kennwort:</German>
 		<Italian>Password civiltà:</Italian>
 		<Spanish>Contraseña de civilización:</Spanish>
+		<Polish>Has&#179;o cywilizacji:</Polish>
 		<Russian>Пароль цивилизации:</Russian>
 	</TEXT>
 	<TEXT>
@@ -3417,6 +3528,7 @@
 		<German>Kurzbeschreibung:</German>
 		<Italian>Nome breve:</Italian>
 		<Spanish>Descripción:</Spanish>
+		<Polish>Kr&#243;tki opis:</Polish>
 		<Russian>Краткое описание:</Russian>
 	</TEXT>
 	<TEXT>
@@ -3426,6 +3538,7 @@
 		<German>SMTP-Server:</German>
 		<Italian>Server SMTP:</Italian>
 		<Spanish>Servidor SMTP:</Spanish>
+		<Polish>Serwer SMTP:</Polish>
 		<Russian>SMTP-сервер:</Russian>
 	</TEXT>
 	<TEXT>
@@ -3435,6 +3548,7 @@
 		<German>Zivilisation:</German>
 		<Italian>Civiltà:</Italian>
 		<Spanish>Tipo de civilización:</Spanish>
+		<Polish>Rodzaj cywilizacji:</Polish>
 		<Russian>Тип цивилизации:</Russian>
 	</TEXT>
 	<TEXT>
@@ -3444,6 +3558,7 @@
 		<German>Klima:</German>
 		<Italian>Clima:</Italian>
 		<Spanish>Clima:</Spanish>
+		<Polish>Klimat:</Polish>
 		<Russian>Климат:</Russian>
 	</TEXT>
 	<TEXT>
@@ -3453,6 +3568,7 @@
 		<German>Zeitalter:</German>
 		<Italian>Era iniziale:</Italian>
 		<Spanish>Época:</Spanish>
+		<Polish>Epoka:</Polish>
 		<Russian>Эпоха:</Russian>
 	</TEXT>
 	<TEXT>
@@ -3462,6 +3578,7 @@
 		<German>SPIEL-SCHNAPPSCHUSS</German>
 		<Italian>Riassunto impostazioni</Italian>
 		<Spanish>FOTO DE LA PARTIDA</Spanish>
+		<Polish>PRZEGL&#165;D GRY</Polish>
 		<Russian>СНИМОК ИГРЫ</Russian>
 	</TEXT>
 	<TEXT>
@@ -3471,6 +3588,7 @@
 		<German>Staatsoberhauptes:</German>
 		<Italian>Nome giocatore:</Italian>
 		<Spanish>Nombre del líder:</Spanish>
+		<Polish>Imi&#234; przyw&#243;dcy:</Polish>
 		<Russian>Имя предводителя:</Russian>
 	</TEXT>
 	<TEXT>
@@ -3480,6 +3598,7 @@
 		<German>Staatsoberhaupt:</German>
 		<Italian>Personaggio leader:</Italian>
 		<Spanish>Tipo de líder:</Spanish>
+		<Polish>Rodzaj przyw&#243;dcy:</Polish>
 		<Russian>Тип предводителя:</Russian>
 	</TEXT>
 	<TEXT>
@@ -3489,6 +3608,7 @@
 		<German>Karte:</German>
 		<Italian>Mappa:</Italian>
 		<Spanish>Mapa:</Spanish>
+		<Polish>Mapa:</Polish>
 		<Russian>Карта:</Russian>
 	</TEXT>
 	<TEXT>
@@ -3498,6 +3618,7 @@
 		<German>Meeresspiegel:</German>
 		<Italian>Altezza mare:</Italian>
 		<Spanish>Nivel del mar:</Spanish>
+		<Polish>Poziom morza:</Polish>
 		<Russian>Уровень моря:</Russian>
 	</TEXT>
 	<TEXT>
@@ -3507,6 +3628,7 @@
 		<German>Größe:</German>
 		<Italian>Dimensione:</Italian>
 		<Spanish>Tamaño:</Spanish>
+		<Polish>Wielko&#156;&#230;:</Polish>
 		<Russian>Размер:</Russian>
 	</TEXT>
 	<TEXT>
@@ -3516,6 +3638,7 @@
 		<German>Geschwindigkeit:</German>
 		<Italian>Velocità:</Italian>
 		<Spanish>Velocidad:</Spanish>
+		<Polish>Szybko&#156;&#230;:</Polish>
 		<Russian>Скорость:</Russian>
 	</TEXT>
 	<TEXT>
@@ -3525,6 +3648,7 @@
 		<German>Euer Steckbrief:</German>
 		<Italian>Dettagli</Italian>
 		<Spanish>Detalles:</Spanish>
+		<Polish>Twoje informacje:</Polish>
 		<Russian>Информация о вас:</Russian>
 	</TEXT>
 	<TEXT>
@@ -3534,6 +3658,7 @@
 		<German>RIIIIIIIIING! Es ist jetzt %s1_TimeStr.</German>
 		<Italian>Avevi qualcosa da fare? Sono le %s1_TimeStr</Italian>
 		<Spanish>¡RIIIIIIIIING! Hora: %s1_TimeStr.</Spanish>
+		<Polish>Dzy&#241;! Dzy&#241;! Czas: %s1_TimeStr.</Polish>
 		<Russian>ВНИМАНИЕ! Настало %s1_TimeStr.</Russian>
 	</TEXT>
 	<TEXT>
@@ -3543,6 +3668,7 @@
 		<German>Der Alarm wird um %s1_TimeStr ausgelöst.</German>
 		<Italian>L'avviso si attiverà alle %s1_TimeStr</Italian>
 		<Spanish>La alarma se apagará a la/s %s1_TimeStr.</Spanish>
+		<Polish>Budzik zosta&#179; ustawiony na %s1_TimeStr.</Polish>
 		<Russian>Будильник сработает в %s1_TimeStr.</Russian>
 	</TEXT>
 	<TEXT>
@@ -3552,6 +3678,7 @@
 		<German>[SPACE]a.m.</German>
 		<Italian>[SPACE]am</Italian>
 		<Spanish>[SPACE]AM</Spanish>
+		<Polish>[SPACE]rano.</Polish>
 		<Russian>[SPACE]a.m.</Russian>
 	</TEXT>
 	<TEXT>
@@ -3561,6 +3688,7 @@
 		<German>***** NICHT SYNCHRON! MEIN RANDOM SEED = %d1_Num: MY OPTIONS SEED = %d2_Options *****[NEWLINE]</German>
 		<Italian>***** FUORI SINCRONIA! MY SYNC SEED = %d1_Num: MY OPTIONS SEED = %d2_Options *****[NEWLINE]</Italian>
 		<Spanish>***** OUT OF SYNC! MY RANDOM SEED = %d1_Num: MY OPTIONS SEED = %d2_Options *****[NEWLINE]</Spanish>
+		<Polish>***** DESYNCHRONIZACJA! ZIARNO SYNCHRONIZACJI = %d1_Sync : ZIARNO OPCJI = %d2_Options *****[NEWLINE]</Polish>
 		<Russian>***** РАССИНХРОНИЗАЦИЯ! МОЕ ЗЕРНО СИНХРОНИЗАЦИИ = %d1_Sync : ЗЕРНО МОИХ ОПЦИЙ = %d2_Options *****[NEWLINE]</Russian>
 	</TEXT>
 	<TEXT>
@@ -3570,6 +3698,7 @@
 		<German>[SPACE]p.m.</German>
 		<Italian>[SPACE]pm</Italian>
 		<Spanish>[SPACE]PM</Spanish>
+		<Polish>[SPACE]po po&#179;udniu.</Polish>
 		<Russian>[SPACE]p.m.</Russian>
 	</TEXT>
 	<TEXT>
@@ -3579,6 +3708,7 @@
 		<German>Alle ansprechen:[SPACE]</German>
 		<Italian>Parla a tutti:[SPACE]</Italian>
 		<Spanish>Decirles a todos:[SPACE]</Spanish>
+		<Polish>Wiadomo&#156;&#230; do wszystkich:[SPACE]</Polish>
 		<Russian>Сообщение всем:[SPACE]</Russian>
 	</TEXT>
 	<TEXT>
@@ -3588,6 +3718,7 @@
 		<German>%s1_PlyrName ansprechen</German>
 		<Italian>Parla a %s1_PlyrName</Italian>
 		<Spanish>Decirle a %s1_PlyrName</Spanish>
+		<Polish>Wiadomo&#156;&#230; do %s1_PlyrName</Polish>
 		<Russian>Сообщение для %s1_PlyrName</Russian>
 	</TEXT>
 	<TEXT>
@@ -3597,6 +3728,7 @@
 		<German>Team ansprechen:[SPACE]</German>
 		<Italian>Parla alla squadra:[SPACE]</Italian>
 		<Spanish>Decirle al equipo:[SPACE]</Spanish>
+		<Polish>Wiadomo&#156;&#230; do dru&#191;yny:[SPACE]</Polish>
 		<Russian>Сообщение команде:[SPACE]</Russian>
 	</TEXT>
 	<TEXT>
@@ -3606,6 +3738,7 @@
 		<German>Senden</German>
 		<Italian>Invia</Italian>
 		<Spanish>Enviar</Spanish>
+		<Polish>Wy&#156;lij</Polish>
 		<Russian>Отправить</Russian>
 	</TEXT>
 	<TEXT>
@@ -3615,6 +3748,7 @@
 		<German>%s1_PlyrName versucht Euch zu kontaktieren!</German>
 		<Italian>%s1_PlyrName sta cercando di contattarti!</Italian>
 		<Spanish>%s1_PlyrName quiere contactar contigo</Spanish>
+		<Polish>%s1_PlyrName pr&#243;buje si&#234; z tob&#185; skontaktowa&#230;!</Polish>
 		<Russian>%s1_PlyrName пытается связаться с вами!</Russian>
 	</TEXT>
 	<TEXT>
@@ -3624,6 +3758,7 @@
 		<German>Warnung!</German>
 		<Italian>Attenzione!</Italian>
 		<Spanish>¡Aviso!</Spanish>
+		<Polish>Uwaga!</Polish>
 		<Russian>Внимание!</Russian>
 	</TEXT>
 	<TEXT>
@@ -3633,6 +3768,7 @@
 		<German>Mod-Verzeichnis: %s1_Modname</German>
 		<Italian>Cartella della mod: %s1_Modname</Italian>
 		<Spanish>Carpeta del mod: %s1_Modname</Spanish>
+		<Polish>Folder z modem: %s1_Modname</Polish>
 		<Russian>Папка мода: %s1_Modname</Russian>
 	</TEXT>
 	<TEXT>
