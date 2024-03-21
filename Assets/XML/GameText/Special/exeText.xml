@@ -1942,7 +1942,7 @@
 		<German>Zu ladendes Spiel wählen!</German>
 		<Italian>Scegli un file da caricare</Italian>
 		<Spanish>Elegir la partida a cargar</Spanish>
-		<Polish>Wczytaj zapisan&#185; gr&#234;</Polish>
+		<Polish>WCZYTAJ ZAPISAN&#165; GR&#202;</Polish>
 		<Russian>Выберите игру для загрузки</Russian>
 	</TEXT>
 	<TEXT>
@@ -2030,7 +2030,7 @@
 		<Tag>TXT_KEY_MAIN_MENU_CUSTOM_GAME</Tag>
 		<English>Full Game</English>
 		<Italian>Personalizza partita</Italian>
-		<Polish>W&#179;asna gra</Polish>
+		<Polish>W&#163;asna gra</Polish>
 		<Russian>Настраиваемая игра</Russian>
 	</TEXT>
 	<TEXT>
@@ -2040,7 +2040,7 @@
 		<German>Eigenes Szenario</German>
 		<Italian>Personalizza scenario</Italian>
 		<Spanish>Escenario personalizado</Spanish>
-		<Polish>W&#179;asny scenariusz</Polish>
+		<Polish>W&#163;asny scenariusz</Polish>
 		<Russian>Настраиваемый сценарий</Russian>
 	</TEXT>
 	<TEXT>
@@ -2070,7 +2070,7 @@
 		<German>Spiel beenden</German>
 		<Italian>Esci dal gioco</Italian>
 		<Spanish>Salir del juego</Spanish>
-		<Polish>Wyj&#156;cie</Polish>
+		<Polish>WYJ&#140;CIE</Polish>
 		<Russian>Покинуть игру</Russian>
 	</TEXT>
 	<TEXT>
@@ -2150,7 +2150,7 @@
 		<German>Zurück</German>
 		<Italian>Indietro</Italian>
 		<Spanish>Volver</Spanish>
-		<Polish>Wr&#243;&#230;</Polish>
+		<Polish>WR&#211;&#198;</Polish>
 		<Russian>Вернуться</Russian>
 	</TEXT>
 	<TEXT>
@@ -2160,7 +2160,7 @@
 		<German>Ruhmeshalle betrachten</German>
 		<Italian>Hall of fame</Italian>
 		<Spanish>Ver Salón de la Fama</Spanish>
-		<Polish>Odwied&#159; sal&#234; chwa&#179;y</Polish>
+		<Polish>ODWIED&#143; SAL&#202; CHWA&#163;Y</Polish>
 		<Russian>Зал славы</Russian>
 	</TEXT>
 	<TEXT>
@@ -2429,6 +2429,7 @@
 		<German>Mod laden</German>
 		<Italian>Carica una mod</Italian>
 		<Spanish>Cargar un mod</Spanish>
+		<Polish>Wczytaj mod</Polish>
 		<Russian>Включить модификацию</Russian>
 	</TEXT>
 	<TEXT>
