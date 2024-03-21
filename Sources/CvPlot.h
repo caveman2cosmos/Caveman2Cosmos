@@ -789,7 +789,7 @@ public:
 	bool isAdjacentRevealed(TeamTypes eTeam, bool bDebug = false) const;
 	bool isAdjacentNonrevealed(TeamTypes eTeam) const;
 
-	ImprovementTypes getRevealedImprovementType(TeamTypes eTeam, bool bDebug) const;
+	ImprovementTypes getRevealedImprovementType(TeamTypes eTeam, bool bDebug = false) const;
 	void setRevealedImprovementType(TeamTypes eTeam, ImprovementTypes eNewValue);
 
 	RouteTypes getRevealedRouteType(TeamTypes eTeam, bool bDebug) const;

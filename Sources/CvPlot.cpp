@@ -3961,6 +3961,7 @@ int CvPlot::defenseModifier(TeamTypes eDefender, bool bIgnoreBuilding, bool bHel
 	FAssertMsg(getTerrainType() != NO_TERRAIN, "TerrainType is not assigned a valid value");
 
 	int iModifier = GC.getTerrainInfo(getTerrainType()).getDefenseModifier();
+
 	if (getFeatureType() != NO_FEATURE)
 	{
 		iModifier += GC.getFeatureInfo(getFeatureType()).getDefenseModifier();
@@ -3975,28 +3976,27 @@ int CvPlot::defenseModifier(TeamTypes eDefender, bool bIgnoreBuilding, bool bHel
 		iModifier += GC.getPEAK_EXTRA_DEFENSE();
 	}
 
-	ImprovementTypes eImprovement;
-	if (bHelp)
 	{
-		eImprovement = getRevealedImprovementType(GC.getGame().getActiveTeam(), false);
-	}
-	else
-	{
-		eImprovement = getImprovementType();
-	}
-
-	if (eImprovement != NO_IMPROVEMENT && eDefender != NO_TEAM
-	&& (getTeam() == NO_TEAM || GET_TEAM(eDefender).isFriendlyTerritory(getTeam())))
-	{
-		// Super Forts begin *bombard*
-		iModifier += GC.getImprovementInfo(eImprovement).getDefenseModifier() - getDefenseDamage();
+		const ImprovementTypes eImprovement = (
+			bHelp
+			?
+			getRevealedImprovementType(GC.getGame().getActiveTeam())
+			:
+			getImprovementType()
+		);
+		if (eImprovement != NO_IMPROVEMENT && eDefender != NO_TEAM
+		&& (getTeam() == NO_TEAM || GET_TEAM(eDefender).isFriendlyTerritory(getTeam())))
+		{
+			// Super Forts begin *bombard*
+			iModifier += GC.getImprovementInfo(eImprovement).getDefenseModifier() - getDefenseDamage();
+		}
 	}
 
 	if (!bHelp)
 	{
 		const CvCity* pCity = getPlotCity();
 
-		if (pCity != NULL)
+		if (pCity)
 		{
 			iModifier += pCity->getDefenseModifier(bIgnoreBuilding);
 		}
@@ -4754,7 +4754,7 @@ bool CvPlot::isRevealedGoody(TeamTypes eTeam) const
 		return false;
 	}
 
-	return ((getRevealedImprovementType(eTeam, false) == NO_IMPROVEMENT) ? false : GC.getImprovementInfo(getRevealedImprovementType(eTeam, false)).isGoody());
+	return ((getRevealedImprovementType(eTeam) == NO_IMPROVEMENT) ? false : GC.getImprovementInfo(getRevealedImprovementType(eTeam)).isGoody());
 }
 
 
@@ -7900,7 +7900,7 @@ int CvPlot::calculateYield(YieldTypes eYield, bool bDisplay) const
 
 		if (bDisplay)
 		{
-			eImprovement = getRevealedImprovementType(GC.getGame().getActiveTeam(), false);
+			eImprovement = getRevealedImprovementType(GC.getGame().getActiveTeam());
 			eRoute = getRevealedRouteType(GC.getGame().getActiveTeam(), false);
 		}
 		else
@@ -9234,17 +9234,17 @@ void CvPlot::setRevealed(const TeamTypes eTeam, const bool bNewValue, const bool
 		{
 			if (getRevealedOwner(eFromTeam, false) == getOwner())
 			{
-				setRevealedOwner(eTeam, getRevealedOwner(eFromTeam, false));
+				setRevealedOwner(eTeam, getOwner());
 			}
 
-			if (getRevealedImprovementType(eFromTeam, false) == getImprovementType())
+			if (getRevealedImprovementType(eFromTeam) == getImprovementType())
 			{
-				setRevealedImprovementType(eTeam, getRevealedImprovementType(eFromTeam, false));
+				setRevealedImprovementType(eTeam, getImprovementType());
 			}
 
 			if (getRevealedRouteType(eFromTeam, false) == getRouteType())
 			{
-				setRevealedRouteType(eTeam, getRevealedRouteType(eFromTeam, false));
+				setRevealedRouteType(eTeam, getRouteType());
 			}
 
 			if (pCity != NULL && pCity->isRevealed(eFromTeam, false))
@@ -9289,7 +9289,7 @@ void CvPlot::setRevealedImprovementType(TeamTypes eTeam, ImprovementTypes eNewVa
 	PROFILE_EXTRA_FUNC();
 	FASSERT_BOUNDS(0, MAX_TEAMS, eTeam);
 
-	if (getRevealedImprovementType(eTeam, false) != eNewValue)
+	if (getRevealedImprovementType(eTeam) != eNewValue)
 	{
 		if (NULL == m_aeRevealedImprovementType)
 		{
