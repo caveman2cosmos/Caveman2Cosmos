@@ -25174,7 +25174,7 @@ int CvUnitAI::AI_pillageValue(const CvPlot* pPlot, int iBonusValueThreshold) con
 			}
 		}
 	}
-	const ImprovementTypes eImprovement = pPlot->getRevealedImprovementType(getTeam(), false);
+	const ImprovementTypes eImprovement = pPlot->getRevealedImprovementType(getTeam());
 
 	if (eImprovement != NO_IMPROVEMENT)
 	{
@@ -26092,7 +26092,7 @@ bool CvUnitAI::AI_RbombardPlot(int iRange, int iBonusValueThreshold)
 			int iValue = 0;
 			if (iBonusValueThreshold > 0)
 			{
-				const ImprovementTypes eImprovement = plotX->getRevealedImprovementType(getTeam(), false);
+				const ImprovementTypes eImprovement = plotX->getRevealedImprovementType(getTeam());
 
 				if (eImprovement != NO_IMPROVEMENT)
 				{

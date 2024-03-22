@@ -1549,8 +1549,8 @@ int CvTeamAI::AI_mapTradeVal(TeamTypes eTeam) const
 				}
 				else
 				{
-					if (pLoopPlot->getRevealedImprovementType(eTeam, false) == pLoopPlot->getImprovementType()
-					&& pLoopPlot->getRevealedImprovementType(getID(), false) != pLoopPlot->getImprovementType())
+					if (pLoopPlot->getRevealedImprovementType(eTeam) == pLoopPlot->getImprovementType()
+					&& pLoopPlot->getRevealedImprovementType(getID()) != pLoopPlot->getImprovementType())
 					{
 						iValue += 2;
 					}
