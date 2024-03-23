@@ -9810,7 +9810,7 @@ void CvPlot::updateFlagSymbol()
 	PlayerTypes ePlayer = NO_PLAYER;
 	PlayerTypes ePlayerOffset = NO_PLAYER;
 
-	CvUnit* pCenterUnit = getCenterUnit(false);
+	CvUnit* pCenterUnit = getCenterUnit(GC.getGame().isDebugMode());
 
 	//get the plot's unit's flag
 	//The plot check is to account for units in the delayed-death cycle
@@ -9933,6 +9933,11 @@ void CvPlot::updateCenterUnit()
 		return;
 	}
 	CvUnit* newCenterUnit = isActiveVisible(true) ? getPreferredCenterUnit() : NULL;
+	if (!newCenterUnit && gDLL->GetWorldBuilderMode())
+	{
+		const CLLNode<IDInfo>* pUnitNode = headUnitNode();
+		newCenterUnit = pUnitNode ? ::getUnit(pUnitNode->m_data) : NULL;
+	}
 
 	if (newCenterUnit != m_pCenterUnit)
 	{
@@ -10519,9 +10524,10 @@ ColorTypes CvPlot::plotMinimapColor() const
 				return (ColorTypes) GC.getInfoTypeForString("COLOR_WHITE");
 			}
 		}
+
 		if (isActiveVisible(true))
 		{
-			const CvUnit* pCenterUnit = getCenterUnit(true);
+			const CvUnit* pCenterUnit = getCenterUnit(GC.getGame().isDebugMode());
 
 			if (pCenterUnit)
 			{
