@@ -7969,6 +7969,10 @@
 		<Italian>Applaudiamo le imprese del nostro onorato mastro fabbro.</Italian>
 		<Spanish>Loados sean los logros de nuestro reverenciado gran maestro herrero.</Spanish>
 	</TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_MASTER_SMITH_2</Tag>
+        <English>Give him everything he needs to expand his work.</English>
+    </TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_MEDIATOR_WORLD_2</Tag>
 		<English>A great mediator has attempted to broker peace between the %s1_civ_adjective and %s3_adjective Empires!</English>
@@ -8191,6 +8195,10 @@
 		<Italian>Questi scambi in valute straniere aumentano la redditività del Mercato? Sono ottime notizie.</Italian>
 		<Spanish>¿Y estos tratos en moneda extranjera aumentarán los rendimientos del mercado? Bienvenidas sean estas noticias.</Spanish>
 	</TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_MONEY_CHANGERS_2</Tag>
+        <English>Inject even more money, keep the economic boom going.</English>
+    </TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_MORE_FIAT_MONEY_1</Tag>
 		<English>We need to keep the economy growing and our coffers full. Lower interest rates and increase the money supply again, and hope that the increase in inflation is not too damaging.</English>
@@ -9317,6 +9325,10 @@
 		<Italian>Questo accordo fa arrivare più cibo in città? Eccellente.</Italian>
 		<Spanish>¿Y este acuerdo supondrá más alimentos para la ciudad? Excelente.</Spanish>
 	</TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_RURAL_FARMERS_2</Tag>
+        <English>Sponsor him to enable even bigger food import.</English>
+    </TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_SAILING_FOUNDED_1</Tag>
 		<English>Send congratulations to the boat builders who built this new ship.</English>

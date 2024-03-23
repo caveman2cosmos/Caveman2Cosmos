@@ -1570,7 +1570,8 @@
 			<bPickCity>1</bPickCity>
 			<iTechCostPercent>20</iTechCostPercent>
 			<iTechMinTurnsLeft>5</iTechMinTurnsLeft>
-			<iGold>-1000</iGold>
+			<iGold>-300</iGold>
+			<bGameSpeedScale>1</bGameSpeedScale>
 			<BuildingExtraCommerces>
 				<BuildingExtraCommerce>
 					<Building>BUILDING_LIBRARY</Building>
@@ -1593,7 +1594,23 @@
 				</BuildingExtraYield>
 			</BuildingExtraYields>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
-			<iAIValue>1000</iAIValue>
+			<iAIValue>1</iAIValue>
+		</EventInfo>
+		<EventInfo>
+			<Type>EVENT_MASTER_SMITH_2</Type>
+			<Description>TXT_KEY_EVENT_MASTER_SMITH_2</Description>
+			<bPickCity>1</bPickCity>
+			<iGold>-200</iGold>
+			<bGameSpeedScale>1</bGameSpeedScale>
+			<BuildingExtraYields>
+				<BuildingExtraYield>
+					<Building>BUILDING_FORGE</Building>
+					<YieldType>YIELD_PRODUCTION</YieldType>
+					<iExtraYield>2</iExtraYield>
+				</BuildingExtraYield>
+			</BuildingExtraYields>
+			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
+			<iAIValue>2</iAIValue>
 		</EventInfo>
 		<EventInfo>
 			<Type>EVENT_RURAL_FARMERS_1</Type>
@@ -1607,7 +1624,23 @@
 				</BuildingExtraYield>
 			</BuildingExtraYields>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
-			<iAIValue>1000</iAIValue>
+			<iAIValue>1</iAIValue>
+		</EventInfo>
+		<EventInfo>
+			<Type>EVENT_RURAL_FARMERS_2</Type>
+			<Description>TXT_KEY_EVENT_RURAL_FARMERS_2</Description>
+			<bPickCity>1</bPickCity>
+			<iGold>-200</iGold>
+			<bGameSpeedScale>1</bGameSpeedScale>
+			<BuildingExtraYields>
+				<BuildingExtraYield>
+					<Building>BUILDING_GROCER</Building>
+					<YieldType>YIELD_FOOD</YieldType>
+					<iExtraYield>2</iExtraYield>
+				</BuildingExtraYield>
+			</BuildingExtraYields>
+			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
+			<iAIValue>2</iAIValue>
 		</EventInfo>
 		<EventInfo>
 			<Type>EVENT_MONEY_CHANGERS_1</Type>
@@ -1621,7 +1654,23 @@
 				</BuildingExtraCommerce>
 			</BuildingExtraCommerces>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
-			<iAIValue>1000</iAIValue>
+			<iAIValue>1</iAIValue>
+		</EventInfo>
+		<EventInfo>
+			<Type>EVENT_MONEY_CHANGERS_2</Type>
+			<Description>TXT_KEY_EVENT_MONEY_CHANGERS_2</Description>
+			<bPickCity>1</bPickCity>
+			<iGold>-200</iGold>
+			<bGameSpeedScale>1</bGameSpeedScale>
+			<BuildingExtraCommerces>
+				<BuildingExtraCommerce>
+					<Building>BUILDING_MARKET</Building>
+					<CommerceType>COMMERCE_GOLD</CommerceType>
+					<iExtraCommerce>2</iExtraCommerce>
+				</BuildingExtraCommerce>
+			</BuildingExtraCommerces>
+			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
+			<iAIValue>2</iAIValue>
 		</EventInfo>
 		<EventInfo>
 			<Type>EVENT_BOWYER_1</Type>
@@ -1633,7 +1682,7 @@
 				</UnitCombatPromotion>
 			</UnitCombatPromotions>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
-			<iAIValue>1000</iAIValue>
+			<iAIValue>1</iAIValue>
 		</EventInfo>
 		<EventInfo>
 			<Type>EVENT_HORSESHOE_1</Type>
@@ -1645,7 +1694,7 @@
 				</UnitCombatPromotion>
 			</UnitCombatPromotions>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
-			<iAIValue>1000</iAIValue>
+			<iAIValue>1</iAIValue>
 		</EventInfo>
 		<EventInfo>
 			<Type>EVENT_CHAMPION_1</Type>
@@ -1653,22 +1702,24 @@
 			<PythonCallback>applyChampion</PythonCallback>
 			<PythonHelp>getHelpChampion</PythonHelp>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
-			<iAIValue>1000</iAIValue>
+			<iAIValue>1</iAIValue>
 		</EventInfo>
 		<EventInfo>
 			<Type>EVENT_MOTOR_OIL_1</Type>
 			<Description>TXT_KEY_EVENT_MOTOR_OIL_1</Description>
-			<iGold>50</iGold>
+			<iGold>500</iGold>
+			<bGameSpeedScale>1</bGameSpeedScale>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
-			<iAIValue>1000</iAIValue>
+			<iAIValue>1</iAIValue>
 		</EventInfo>
 		<EventInfo>
 			<Type>EVENT_MOTOR_OIL_2</Type>
 			<Description>TXT_KEY_EVENT_MOTOR_OIL_2</Description>
-			<iGold>-50</iGold>
-			<iFreeUnitSupport>15</iFreeUnitSupport>
+			<iGold>-1000</iGold>
+			<bGameSpeedScale>1</bGameSpeedScale>
+			<iFreeUnitSupport>30</iFreeUnitSupport>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
-			<iAIValue>1000</iAIValue>
+			<iAIValue>2</iAIValue>
 		</EventInfo>
 		<EventInfo>
 			<Type>EVENT_FEDERAL_RESERVE_1</Type>
