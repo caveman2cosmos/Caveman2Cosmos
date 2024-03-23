@@ -17,7 +17,7 @@
 		<German>schnellere Produktion</German>
 		<Italian>Produzione delle unità accelerata</Italian>
 		<Spanish>Unidades aceleradas</Spanish>
-		<Polish>Jednostki zbudowane szybciej</Polish>
+		<Polish>Jednostki rekrutowane szybciej</Polish>
 		<Russian>Ускоряет обучение отрядов</Russian>
 	</TEXT>
 	<TEXT>
@@ -37,7 +37,7 @@
 		<German>Zufriedenheit: +%d1_Change[ICON_HAPPY]</German>
 		<Italian>Felicità: [COLOR_HIGHLIGHT_TEXT]+%d1_Change[COLOR_REVERT] [ICON_HAPPY]</Italian> <!-- city screen hover on a resource -->
 		<Spanish>Feliz: +%d1_Change[ICON_HAPPY]</Spanish>
-		<Polish>Szcz&#234;&#156;liwy: +%d1_Change[ICON_HAPPY]</Polish>
+		<Polish>Szcz&#234;&#156;liwi: +%d1_Change[ICON_HAPPY]</Polish>
 		<Russian>Íàñòðîåíèå: +%d1_Change[ICON_HAPPY]</Russian>
 	</TEXT>
 	<TEXT>
@@ -73,6 +73,7 @@
 		<English>Abandoned Civilization</English>
 		<French>Civilization abandonnée</French>
 		<Italian>Civiltà abbandonata</Italian>
+		<Polish>Opuszczona cywilizacja</Polish>
 		<Russian>Çàòåðÿííàÿ öèâèëèçàöèÿ</Russian>
 	</TEXT>
 	<TEXT>
@@ -80,6 +81,7 @@
 		<English>The [COLOR_HIGHLIGHT_TEXT]ruins of a not-very-advanced civilization[COLOR_REVERT] lie here. Maybe they had a nuclear war, or collapsed from resources shortages, or didn't build enough policing units and crime got too high. You weren't surprised to find something awful in their history though - full of radicalism, bigotry, ignorance, and greed.</English>
 		<French>Les [COLOR_HIGHLIGHT_TEXT]ruines d'une civilisation peu avancée[COLOR_REVERT] se trouvent ici. Peut-être qu'ils ont eu une guerre nucléaire, ou qu'ils se sont effondrés à cause d'une pénurie de ressources, ou qu'ils n'ont pas construit suffisamment d'unités de police et que la criminalité est devenue trop élevée. Mais ne soyez pas surpris de trouver des traces de choses terribles dans leur histoire, pleines de radicalisme, de sectarisme, d'ignorance et de cupidité.</French>
 		<Italian>Le [COLOR_HIGHLIGHT_TEXT]rovine di una civiltà non troppo avanzata[COLOR_REVERT] si trovano qui. Magari sono stati spazzati via da una guerra nucleare, sono collassati in seguito a una carenza di risorse oppure non hanno costruito unità di polizia a sufficienza e sono stati soffocati dal crimine. Ma non ti stupisci di trovare tracce di cose orribili nella loro storia, piena di radicalismo, bigotteria, ignoranza e avidità.</Italian>
+		<Polish>Znajdują się tutaj [COLOR_HIGHLIGHT_TEXT]ruiny niezbyt zaawansowanej cywilizacji[COLOR_REVERT]. Być może jej upadek spowodowała wojna atomowa, wyczerpanie zasobów naturalnych, lub brak wystarczającej ilości jednostek policyjnych spowodował ogromny wzrost przestępczości. Jakakolwiek była przyczyna, nie jest zaskoczeniem, że historia tej cywilizacji pełna jest radykalizmu, uprzedzeń, ignorancji oraz chciwości.</Polish>
 		<Russian>Çäåñü ëåæàò ðóèíû íå î÷åíü ðàçâèòîé öèâèëèçàöèè. Âîçìîæíî, ó íèõ áûëà ÿäåðíàÿ âîéíà, èëè îíè ïîòåðïåëè êðàõ èç-çà íåõâàòêè ðåñóðñîâ, èëè îíè íå ïîñòðîèëè äîñòàòî÷íî ïîëèöåéñêèõ ïîäðàçäåëåíèé, è ïðåñòóïíîñòü ñòàëà ñëèøêîì âûñîêîé. Âû ìîæåòå íèêîãäà íå óçíàòü âñåé ïðàâäû.</Russian>
 	</TEXT>
 	<TEXT>
@@ -87,12 +89,14 @@
 		<English>Abandoned Megastructure</English>
 		<French>Mégastructure abandonnée</French>
 		<Italian>Megastruttura abbandonata</Italian>
+		<Polish>Opuszczona Megastruktura</Polish>
 		<Russian>Çàáðîøåííàÿ ìåãàñòðóêòóðà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_ABANDONED_MEGASTRUCTURE_PEDIA</Tag>
 		<English>The [COLOR_HIGHLIGHT_TEXT]ruins of a spacefaring civilization[COLOR_REVERT] lie here. It's not clear whether they died out or chose to abandon this structure. For that matter, you aren't entirely sure what it is, though it looks like some sort of Dyson Sphere.</English>
 		<Italian>Le [COLOR_HIGHLIGHT_TEXT]rovine di una civiltà spaziale[COLOR_REVERT] si trovano qui. Non è chiaro se si siano estinti o abbiano scelto di abbandonare questa struttura. Del resto, non sei del tutto sicuro di cosa sia la struttura, sebbene sembri una sorta di sfera di Dyson.</Italian>
+		<Polish>Znajdują się tutaj [COLOR_HIGHLIGHT_TEXT]cywilizacji przemierzającej kosmos[COLOR_REVERT]. Nie jest pewne, czy jej przedstawiciele wygineli, czy też zdecydowali się porzucić tę strukturę. W zasadzie, ciężko powiedzieć, czym ona właściwie jest, ale wygląda na jakiś rodzaj sfery Dysona.</Polish>
 		<Russian>Çäåñü îáíàðóæèëèñü ðóèíû äðåâíåé êîñìè÷åñêîé öèâèëèçàöèè. Íå ÿñíî, âûìåðëè ëè îíè èëè ðåøèëè áðîñèòü ýòî ñîîðóæåíèå. Âïðî÷åì, âû íå ñîâñåì óâåðåíû, ÷òî ýòî òàêîå, õîòÿ ïîõîæå, ÷òî ýòî êàêàÿ-òî ñôåðà Äàéñîíà.</Russian>
 	</TEXT>
 	<TEXT>
@@ -100,6 +104,7 @@
 		<English>Abbasid</English>
 		<French>Abbaside</French>
 		<Italian>Cittadino abbaside</Italian>
+		<Polish>Abbasydzka</Polish>
 		<Russian>Àááàñèäû</Russian>
 	</TEXT>
 	<TEXT>
@@ -107,7 +112,7 @@
 		<English>Aborigine</English>
 		<French>Aborigène</French>
 		<Italian>Cittadino aborigeno</Italian>
-		<Polish>Aborygen</Polish>
+		<Polish>Aborygeńska</Polish>
 		<Russian>Àáîðèãåíû</Russian>
 	</TEXT>
 	<TEXT>
@@ -115,18 +120,21 @@
 		<English>AB Matter</English>
 		<French>Matière AB</French>
 		<Italian>Materia AB</Italian>
+		<Polish>Materia AB</Polish>
 		<Russian>ÀÁ-ìàòåðèÿ</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_AB_MATTER_PEDIA</Tag>
 		<English>[COLOR_HIGHLIGHT_TEXT]AB Matter[COLOR_REVERT] is a form of matter that can be produced using femtotechnology, and held together using the strong nuclear force, rather than the electromagnetic forces of typical matter. This matter is then arranged in a mesh configuration, with the permeability of the AB Matter to various external objects depending on the mesh size. A sufficiently small mesh can block gamma radiation; a sufficiently large one can pass through matter, since the thickness of a string of AB Matter is on the order of a nucleon, much smaller than the spacing between molecules.</English>
 		<Italian>La [COLOR_HIGHLIGHT_TEXT]materia AB[COLOR_REVERT] è una forma di materia che può essere prodotta usando la femtotecnologia e tenuta insieme utilizzando la forza nucleare forte, piuttosto che le forze elettromagnetiche della materia normale. Questa materia può essere quindi riorganizzata in una configurazione a maglia, la cui permeabilità agli oggetti esterni dipende dalla grandezza della configurazione stessa. Una maglia sufficientemente ristretta può bloccare le radiazioni gamma; una più larga può passare attraverso la materia, poiché lo spessore della materia AB è dell'ordine di un nucleone, ossia più piccola dello spazio esistente fra le molecole.</Italian>
+		<Polish>[COLOR_HIGHLIGHT_TEXT]Materia AB[COLOR_REVERT] to rodzaj materii produkowany przy użyciu femtotechnologii, która jest spojona za pomocą odziaływania silnego, zamiast jak w zwykłej materii, sił elektromagnetycznych. Naztępnie materia ta jest ułożona w siatkę, z możliwością przepuszczania różnych obiektów zależną od wielkości oczek. Jeżeli będą one wystarczająco małe, jest w stanie blokować promieniowanie gamma. Natomiast wystarczająco duże pozwalają jej przenikać przez zwykłą materię, ponieważ grubość nici Materii AB jest rzędu nukleonów, a więc znacznie mniejsza, niż odległości pomiędzy cząsteczkami.</Polish>
 		<Russian>АБ-материя - гипотетическая форма ядерной материи, предложенная Александром Болонкиным.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_ADENAN</Tag>
 		<English>Adenan</English>
 		<Italian>Cittadino adenano</Italian>
+		<Polish>Adeńska</Polish>
 		<Russian>Àäåíöû</Russian>
 	</TEXT>
 	<TEXT>
@@ -134,24 +142,28 @@
 		<English>Advanced Replicators</English>
 		<French>Réplicateurs avancés</French>
 		<Italian>Duplicatore avanzato</Italian>
+		<Polish>Zaawansowane replikatory</Polish>
 		<Russian>Ïðîäâ. ðåïëèêàòîðû</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_ADVANCED_REPLICATORS_PEDIA</Tag>
 		<English>An [COLOR_HIGHLIGHT_TEXT]advanced replicator[COLOR_REVERT] is a highly intelligent and versatile replicator that, if instructed, can create manufactured goods, structures, and copies of itself.</English>
 		<Italian>Un [COLOR_HIGHLIGHT_TEXT]duplicatore avanzato[COLOR_REVERT] è un duplicatore altamente intelligente e versatile che, se programmato, può creare oggetti, strutture oppure altri duplicatori.</Italian>
+		<Polish>[COLOR_HIGHLIGHT_TEXT]Zaawansowany replikator[COLOR_REVERT], to niezwykle inteligentny oraz wszechstronny replikator zdolny do tworzenia zaawansowanych dóbr, struktur, oraz własnych kopii.</Polish>
 		<Russian>Эти высокоинтеллектуальные и универсальные репликаторы создают промышленные товары, постройки и самих себя.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_AEROGEL</Tag>
 		<English>Aerogel</English>
 		<French>Aérogel</French>
+		<Polish>Aerożel</Polish>
 		<Russian>Àýðîãåëü</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_AEROGEL_PEDIA</Tag>
 		<English>An [COLOR_HIGHLIGHT_TEXT]aerogel[COLOR_REVERT] is a synthetic porous ultralight material derived from a gel, in which the liquid component has been replaced with a gas. The result is a solid, rigid, and dry material with extremely low density and thermal conductivity, since it is 99.8% made up from air. Aerogels can be produced mostly out of silica, carbon, and metal oxides, but also organic polymers can be used.</English>
 		<Italian>Un [COLOR_HIGHLIGHT_TEXT]aerogel[COLOR_REVERT] è un materiale ultraleggero poroso sintetico derivato da un gel, in cui la componente liquida è stata sostituita con un gas. Il risultato è un materiale solido, rigido e asciutto con densità e conducibilità termica estremamente bassa, poiché è costituito al 99,8% da aria. Gli aerogel possono essere prodotti principalmente da silice, carbonio e ossidi di metallo, ma si possono usare anche polimeri organici.</Italian>
+		<Polish>[COLOR_HIGHLIGHT_TEXT]Aerożel[COLOR_REVERT], to materiał będący rodzajem sztywnej piany o wyjątkowo małej gęstości. Na jego masę składa się w 90–99,8% powietrze, resztę stanowi porowaty materiał tworzący jego strukturę.</Polish>
 		<Russian>Аэрогель представляет собой синтетический пористый сверхлегкий материал, полученный из геля, в котором жидкий компонент геля заменен газом. В результате получается твердый, жесткий и сухой материал с чрезвычайно низкой плотностью и теплопроводностью, поскольку он на 99,8% состоит из воздуха. Аэрогели можно производить в основном из оксидов кремния, углерода и металлов, но также можно использовать органические полимеры.</Russian>
 	</TEXT>
 	<TEXT>
@@ -159,6 +171,7 @@
 		<English>Afghan</English>
 		<French>Afghane</French>
 		<Italian>Cittadino afghano</Italian>
+		<Polish>Afgańska</Polish>
 		<Russian>Àôãàíöû</Russian>
 	</TEXT>
 	<TEXT>
@@ -167,6 +180,7 @@
 		<French>Aïnou</French>
 		<Russian>Àéíû</Russian>
 		<Italian>Cittadino ainu</Italian>
+		<Polish>Ajnu</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_AIRCRAFT</Tag>
@@ -181,7 +195,7 @@
 		<English>An [COLOR_HIGHLIGHT_TEXT]aircraft[COLOR_REVERT] is a vehicle that is able to fly by gaining support from the air, or in general the atmosphere of a planet. It counters the force of gravity by using either static lift or by using the dynamic lift of an airfoil, or in a few cases the downward thrust from jet engines.</English>
 		<French>Un [COLOR_HIGHLIGHT_TEXT]aéronef[COLOR_REVERT] est un véhicule qui est capable de voler en s'appuyant sur l'air, ou, en général, l'atmosphère d'une planète. Il s'extrait de la force de gravité grâce aux courants ascendants, au flux d'air généré par une hélice, ou par l'intermédiaire de la poussée de moteurs à réaction.</French>
 		<Italian>Un [COLOR_HIGHLIGHT_TEXT]aeroplano[COLOR_REVERT] è un veicolo in grado di volare sfruttando l'aria o, più in generale, l'atmosfera di un pianeta. Contrasta la forza di gravità usando spinte statiche o le spinte dinamiche create da una corrente d'aria oppure, in alcuni casi, dalle correnti discensionali create dai motori a reazione.</Italian>
-		<Polish>[COLOR_HIGHLIGHT_TEXT]Samolot[COLOR_REVERT] to pojazd, kt&#243;ry jest w stanie lata&#230; dzi&#234;ki uzyskaniu wsparcia z powietrza, albo w og&#243;le, atmosfer&#234; planety. Liczniki to si&#179;y grawitacji za pomoc&#185; jednej statycznej przy u&#191;yciu podno&#156;nika lub d&#159;wigu dynamiczny p&#179;ata lub w kilku przypadkach ci&#185;g d&#243;&#179; od silnik&#243;w odrzutowych.</Polish>
+		<Polish>[COLOR_HIGHLIGHT_TEXT]Samolot[COLOR_REVERT] to załogowy bądź bezzałogowy statek powietrzny cięższy od powietrza (aerodyna), utrzymujący się w powietrzu dzięki sile nośnej wytwarzanej za pomocą nieruchomych, w danych warunkach, względem statku skrzydeł. Ciąg potrzebny do utrzymania prędkości w locie poziomym wytwarzany jest przez jeden lub więcej silników.</Polish>
 		<Russian>Ñàìîëåò - ýòî òðàíñïîðòíîå ñðåäñòâî, êîòîðîå óìååò ëåòàòü, îïèðàÿñü íà âîçäóõ èëè, â öåëîì, íà àòìîñôåðó ïëàíåòû. Îí ïðîòèâîïîñòàâëÿåò ñèëó òÿæåñòè ñ ïîìîùüþ âîñõîäÿùèõ ïîòîêîâ èëè ïðè ïîìîùè àýðîäèíàìè÷åñêîé ïîäúåìíîé ñèëû, èëè â íåêîòîðûõ ñëó÷àÿõ îò òÿãè îò ðåàêòèâíûõ äâèãàòåëåé.</Russian>
 	</TEXT>
 	<TEXT>
@@ -189,25 +203,28 @@
 		<English>Aka</English>
 		<Russian>Àêà</Russian>
 		<Italian>Cittadino aka</Italian>
+		<Polish>ba-Aka</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_AKKADIAN</Tag>
 		<English>Akkadian</English>
 		<French>Akkadien</French>
 		<Italian>Cittadino accadico</Italian>
-		<Polish>Akadyjski</Polish>
+		<Polish>Akadyjska</Polish>
 		<Russian>Àêêàäöû</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_AKSUMITE</Tag>
 		<English>Aksumite</English>
 		<Italian>Cittadino aksumita</Italian>
+		<Polish>Aksumska</Polish>
 		<Russian>Àêñóìèòû</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_ALACALUFE</Tag>
 		<English>Alacalufe</English>
 		<Russian>Àëàêàëóôû</Russian>
+		<Polish>Alakalufska</Polish>
 		<Italian>Cittadino kaweshkar</Italian>
 	</TEXT>
 	<TEXT>
@@ -215,6 +232,7 @@
 		<English>Albanian</English>
 		<French>Albanaise</French>
 		<Italian>Cittadino albanese</Italian>
+		<Polish>Albańska</Polish>
 		<Russian>Àëáàíöû</Russian>
 	</TEXT>
 	<TEXT>
@@ -230,6 +248,7 @@
 		<Tag>TXT_KEY_BONUS_ALCOHOL_PEDIA</Tag>
 		<English>An [COLOR_HIGHLIGHT_TEXT]alcoholic beverage[COLOR_REVERT] is a drink which contains a substantial amount of the psychoactive drug ethanol (informally called "alcohol"). Despite drinking plays an important social role in most cultures, alcohol has potential for abuse and physical dependence. Almost all the countries of the world regulate its production, sale and consumption, from those that ban it completely to those that limit its sale and consumption to adults.</English>
 		<Italian>Una [COLOR_HIGHLIGHT_TEXT]bevanda alcolica[COLOR_REVERT] è una bevanda che contiene una quantità considerevole di etanolo (chiamato informalmente anche "alcool"). Nonostante bere bevande alcoliche rivesta un ruolo sociale molto importante in molte culture, l'alcool può generare dipendenza o il suo consumo può esserne abusato. Quasi tutti i paesi del mondo ne regolano la produzione, la vendita e il consumo, da quelli che lo bandiscono completamente a quelli che ne limitano vendita e consumo ai soli maggiorenni.</Italian>
+		<Polish>[COLOR_HIGHLIGHT_TEXT]Napój alkoholowy[COLOR_REVERT], to napój zawierający etanol, jedna z najpopularniejszych używek. Napoje alkoholowe dzielone są na piwa, wina oraz alkohole spirytusowe. Spożywanie napojów alkoholowych jest legalne w większości krajów, a ponad 100 państw posiada przepisy regulujące ich produkcję, sprzedaż i spożywanie.</Polish>
 		<Russian>Алкогольный напиток - это напиток, содержащий значительное количество психоактивного наркотика этанола (неофициально называемого «алкоголем»). Несмотря на то, что алкоголь играет важную социальную роль в большинстве культур, злоупотребление им может привести к химической и психологической зависимости. Практически все страны мира регулируют его производство, продажу и потребление, от тех, которые полностью запрещают его, до тех, которые ограничивают его продажу и потребление несовершеннолетним.</Russian>
 	</TEXT>
 	<TEXT>
@@ -237,6 +256,7 @@
 		<English>Alemannic</English>
 		<French>Allémanique</French>
 		<Italian>Cittadino alemanno</Italian>
+		<Polish>Alemańska</Polish>
 		<Russian>Àëåìàííû</Russian>
 	</TEXT>
 	<TEXT>
@@ -252,6 +272,7 @@
 		<Tag>TXT_KEY_BONUS_ALGAE_PEDIA</Tag>
 		<English>[COLOR_HIGHLIGHT_TEXT]Algae[COLOR_REVERT] are a group of single or multi-cellular plant-based organisms. Single-celled algae are found mostly near the water surface, where light is more abundant: they are scientifically considered as phytoplankton, and therefore have a fundamental role in the marine food chain and in supplying atmosphere with oxygen. The multi-cellular ones, instead, live in shallow waters and are characterized by different shapes and colors in order to better absorb the light (the more their color tends to red, the greater the depth at which they live). They are made only of tissues (called "thallus") and have no roots, stems or leaves.</English>
 		<Italian>Le [COLOR_HIGHLIGHT_TEXT]alghe[COLOR_REVERT] sono un gruppo di organismi di struttura vegetale unicellulari o pluricellulari. Le alghe unicellulari si trovano perlopiù vicino al pelo dell'acqua, dove la luce è più abbondante: vengono considerate fitoplancton e hanno quindi un ruolo fondamentale nella catena alimentare marina e nel rifornire di ossigeno l'atmosfera. Quelle pluricellulari vivono invece in acque poco profonde e sono caratterizzate da forme e colori diversi per poter meglio assorbire la luce (più tendente al rosso è il loro colore, maggiore è la profondità alla quale vivono). Sono formate di solo tessuto (il "tallo") e non hanno radici, fusto o foglie.</Italian>
+		<Polish>[COLOR_HIGHLIGHT_TEXT]Glony[COLOR_REVERT], to grupa morfologiczno-ekologiczna, składająca się tradycyjnie z kilku niespokrewnionych linii ewolucyjnych organizmów plechowych, tj. beztkankowych. Glony wchodzą w skład planktonu w morzach, oceanach i zbiornikach śródlądowych (jako fitoplankton). Glony żyjące na powierzchni osadów dennych zbiorników wodnych stanowią składnik bentosu (jako fitobentos) a te, które porastają inne powierzchnie (rośliny, kamienie, itp.) tworzą zespół peryfitonu. Glony żyją także poza zbiornikami wodnymi ale w miejscach wilgotnych: w glebie i na jej powierzchni, na kamieniach, pniach drzew, ścianach, a także na śniegu i lodzie (glony naśnieżne).</Polish>
 		<Russian>Водоросли (лат. «Algae») - очень большая и разнообразная группа простых, обычно автотрофных организмов, от одноклеточных до многоклеточных форм, таких как гигантские водоросли, вырастающие до 65 метров в длину. Большинство из них являются фотосинтезирующими и «простыми», потому что им не хватает многих различных типов клеток и органов, обнаруженных у наземных растений. Самые крупные и сложные морские формы называются водорослями.</Russian>
 	</TEXT>
 	<TEXT>
@@ -259,6 +280,7 @@
 		<English>Algerian</English>
 		<French>Algérien</French>
 		<Italian>Cittadino algerino</Italian>
+		<Polish>Algierska</Polish>
 		<Russian>Àëæèðöû</Russian>
 	</TEXT>
 	<TEXT>
@@ -266,12 +288,14 @@
 		<English>Alice Matter</English>
 		<French>Matière spéculative</French>
 		<Italian>Materia speculare</Italian>
+		<Polish>Materia lustrzana</Polish>
 		<Russian>Ìàòåðèÿ Àëèñû</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_ALICE_MATTER_PEDIA</Tag>
 		<English>[COLOR_HIGHLIGHT_TEXT]Alice matter[COLOR_REVERT], also called mirror matter or shadow matter, is a counterpart to ordinary matter. Mirror particles interact amongst themselves in the same way as ordinary particles, except where ordinary particles have left-handed interactions, mirror particles have right-handed interactions. In this way, it turns out that mirror reflection symmetry can exist as an exact symmetry of nature, provided that a "mirror" particle exists for every ordinary particle.</English>
 		<Italian>La [COLOR_HIGHLIGHT_TEXT]materia speculare[COLOR_REVERT], anche detta materia ombra, è una controparte della materia ordinaria. Le particelle speculari interagiscono tra loro allo stesso modo delle particelle ordinarie, solo in maniera simmetricamente speculare rispetto alle loro controparti. In altri termini, la simmetria della riflessione a specchio può esistere come una esatta simmetria della natura, a condizione che esista una particella "a specchio" per ogni particella ordinaria.</Italian>
+		<Polish>[COLOR_HIGHLIGHT_TEXT]Materia lustrzana[COLOR_REVERT], to hipotetyczny rodzaj materii, która jest dokładnym przeciwieństwem zwykłej materii. Cząstki lustrzane odziaływują na siebię w dokładnie ten sam sposób, co zwykłe cząstki, z tą różnicą, że tam gdzie zwykłe cząstki mają interakcje lewej dłoni (left-handed interactions), cząteczki lustrzane mają interakcję prawej dłoni (right-handed interactions). W ten sposób symetria odbicia lustrzanego może istnieć, jako dokładna symetria natury, pod warunkiem, że dla każdej zwykłej cząstki istnieje jej "lustrzana siostra".</Polish>
 		<Russian>Эти экзотические частицы - суперпартнеры обычных частиц, известных из менее просвещенного времени в истории вашей цивилизации. Их можно использовать во всевозможных фантастических сооружениях. Зеркальные частицы взаимодействуют между собой так же, как и обычные частицы, за исключением случаев, когда обычные частицы имеют левые взаимодействия, а зеркальные частицы имеют правые взаимодействия. Таким образом, оказывается, что симметрия зеркального отражения может существовать как точная симметрия природы, при условии, что у каждой обычной частицы имеется свой«зеркальный» двойник.</Russian>
 	</TEXT>
 	<TEXT>
