@@ -77,7 +77,7 @@
 		<German>%s1 (%s2) geriet unter den Einfluss einer fremden Kultur</German>
 		<Italian>La città di %s1 (%s2) ha subito l'influsso di una cultura straniera</Italian>
 		<Spanish>%s1 (%s2) cayó bajo la influencia de una cultura extranjera</Spanish>
-		<Polish>Miasto: %s1 (%s2) zosta&#179;o przej&#234;te poprzez wpływ kulturowy</Polish>
+		<Polish>Miasto: %s1 (%s2) zosta&#179;o przej&#234;te poprzez wp&#179;yw kulturowy</Polish>
 		<Russian>%s1 (%s2) культурный переворот</Russian>
 	</TEXT>
 	<TEXT>
@@ -117,7 +117,7 @@
 		<German>%s1 beginnt mit der Aufstellung von: %s2 (Dauer: %d3 [NUM3:Runde:Runden])</German>
 		<Italian>La città di %s1 ha iniziato ad addestrare l'unità %s2 e necessita di %d3 [NUM1:turno:turni]</Italian>
 		<Spanish>%s1 comienza la producción de: %s2 (%d3 turnos)</Spanish>
-		<Polish>Miasto: %s1 rozpoczyna rekrutację: %s2 (%d3 tur)</Polish>
+		<Polish>Miasto: %s1 rozpoczyna rekrutacj&#234;: %s2 (%d3 tur)</Polish>
 		<Russian>Строится %s1: %s2 (%d3 ходов)</Russian>
 	</TEXT>
 	<TEXT>
@@ -986,7 +986,7 @@
 		<English>archer</English>
 		<Russian>archer</Russian>
 		<Italian>arciere</Italian>
-		<Polish>łucznik</Polish>
+		<Polish>&#179;ucznik</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_AUTOLOG_VILLAGE_RESULT_ARQUEBUSIER</Tag>
@@ -1009,7 +1009,7 @@
 		<French>archer composite</French>
 		<Russian>композитный лучник</Russian>
 		<Italian>arciere con arco composito</Italian>
-		<Polish>łucznik z łukiem kompozytowym</Polish>
+		<Polish>&#179;ucznik z &#179;ukiem kompozytowym</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_AUTOLOG_VILLAGE_RESULT_CRIMINALHOSTILES</Tag>
@@ -1017,7 +1017,7 @@
 		<French>criminel</French>
 		<Russian>преступник</Russian>
 		<Italian>criminale</Italian>
-		<Polish>przestępca</Polish>
+		<Polish>przest&#234;pca</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_AUTOLOG_VILLAGE_RESULT_GATHERER</Tag>
@@ -1053,7 +1053,7 @@
 		<French>Piquier lourd</French>
 		<Russian>тяжелый копейщик</Russian>
 		<Italian>picchiere pesante</Italian>
-		<Polish>ciężkozbrojny pikinier</Polish>
+		<Polish>ci&#234;&#191;kozbrojny pikinier</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_AUTOLOG_VILLAGE_RESULT_HEAVYSWORDSMAN</Tag>
@@ -1061,7 +1061,7 @@
 		<French>Epéiste</French>
 		<Russian>тяжелый мечник</Russian>
 		<Italian>spadaccino pesante</Italian>
-		<Polish>ciężkozbrojny miecznik</Polish>
+		<Polish>ci&#234;&#191;kozbrojny miecznik</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_AUTOLOG_VILLAGE_RESULT_HUNTER</Tag>
@@ -1069,7 +1069,7 @@
 		<French>chasseur</French>
 		<Russian>охотник</Russian>
 		<Italian>cacciatore</Italian>
-		<Polish>myśliwy</Polish>
+		<Polish>my&#156;liwy</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_AUTOLOG_VILLAGE_RESULT_INFANTRY</Tag>
@@ -1095,7 +1095,7 @@
 		<French>un peu de recherche</French>
 		<Russian>небольшое исследование</Russian>
 		<Italian>ricevuta una piccola quantità di ricerca</Italian>
-		<Polish>trochę punktów badań</Polish>
+		<Polish>troch&#234; punkt&#243;w bada&#241;</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_AUTOLOG_VILLAGE_RESULT_LONGBOWMAN</Tag>
@@ -1103,7 +1103,7 @@
 		<French>archer long</French>
 		<Russian>йомен</Russian>
 		<Italian>arciere con arco lungo</Italian>
-		<Polish>łucznik z długim łukiem</Polish>
+		<Polish>&#179;ucznik z d&#179;ugim &#179;ukiem</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_AUTOLOG_VILLAGE_RESULT_LOTSOFGOLD</Tag>
@@ -1121,7 +1121,7 @@
 		<French>beaucoup de recherche</French>
 		<Russian>много исследований</Russian>
 		<Italian>ricevuta una grossa quantità di ricerca</Italian>
-		<Polish>dużo punktów badań</Polish>
+		<Polish>du&#191;o punkt&#243;w bada&#241;</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_AUTOLOG_VILLAGE_RESULT_MACEMAN</Tag>
@@ -1156,7 +1156,7 @@
 		<French>beaucoup de navires hostiles</French>
 		<Russian>сильный вражеский флот</Russian>
 		<Italian>forti unità navali ostili</Italian>
-		<Polish>silna flota barbarzyńców</Polish>
+		<Polish>silna flota barbarzy&#241;c&#243;w</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_AUTOLOG_VILLAGE_RESULT_NAVALWEAKHOSTILES</Tag>
@@ -1164,7 +1164,7 @@
 		<French>navires hostiles</French>
 		<Russian>слабый вражеский флот</Russian>
 		<Italian>deboli unità navali ostili</Italian>
-		<Polish>słaba flota barbarzyńców</Polish>
+		<Polish>s&#179;aba flota barbarzy&#241;c&#243;w</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_AUTOLOG_VILLAGE_RESULT_NOTHING</Tag>
@@ -1218,7 +1218,7 @@
 		<French>Lancier</French>
 		<Russian>копьеносец</Russian>
 		<Italian>lanciere</Italian>
-		<Polish>włócznik</Polish>
+		<Polish>w&#179;&#243;cznik</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_AUTOLOG_VILLAGE_RESULT_STONEAXEMAN</Tag>
@@ -1233,7 +1233,7 @@
 		<English>stone spearman</English>
 		<French>guerrier avec lance de pierre</French>
 		<Spanish>un Lancero de piedra</Spanish>
-		<Polish>wojownik z kamienną włócznią</Polish>
+		<Polish>wojownik z kamienn&#185; w&#179;&#243;czni&#185;</Polish>
 		<Russian>древний копейщик</Russian>
 		<Italian>guerriero con lancia di pietra</Italian>
 	</TEXT>
