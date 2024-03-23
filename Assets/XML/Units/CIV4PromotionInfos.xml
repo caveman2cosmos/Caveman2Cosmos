@@ -8197,6 +8197,28 @@
 				<GameOptionType>GAMEOPTION_COMBAT_HIDE_SEEK</GameOptionType>
 				<GameOptionType>GAMEOPTION_COMBAT_SIZE_MATTERS</GameOptionType>
 			</OnGameOptions>
+			<UnitCombats>
+				<UnitCombat>
+					<UnitCombatType>UNITCOMBAT_COMBATANT</UnitCombatType>
+					<bUnitCombat>1</bUnitCombat>
+				</UnitCombat>
+				<UnitCombat>
+					<UnitCombatType>UNITCOMBAT_EXPLORER</UnitCombatType>
+					<bUnitCombat>1</bUnitCombat>
+				</UnitCombat>
+				<UnitCombat>
+					<UnitCombatType>UNITCOMBAT_RUFFIAN</UnitCombatType>
+					<bUnitCombat>1</bUnitCombat>
+				</UnitCombat>
+			</UnitCombats>
+			<AIWeightbyUnitCombatTypes>
+				<AIWeightbyUnitCombatType>
+					<UnitCombatType>UNITCOMBAT_HUNTER</UnitCombatType>
+					<iAIWeight>20</iAIWeight>
+				</AIWeightbyUnitCombatType>
+			</AIWeightbyUnitCombatTypes>
+			<iChanceFirstStrikesChange>1</iChanceFirstStrikesChange>
+			<iPursuitChange>5</iPursuitChange>
 			<VisibilityIntensityChangeTypes>
 				<VisibilityIntensityChangeType>
 					<InvisibleType>INVISIBLE_SIZE</InvisibleType>
@@ -8220,6 +8242,28 @@
 				<GameOptionType>GAMEOPTION_COMBAT_HIDE_SEEK</GameOptionType>
 				<GameOptionType>GAMEOPTION_COMBAT_SIZE_MATTERS</GameOptionType>
 			</OnGameOptions>
+			<UnitCombats>
+				<UnitCombat>
+					<UnitCombatType>UNITCOMBAT_HUNTER</UnitCombatType>
+					<bUnitCombat>1</bUnitCombat>
+				</UnitCombat>
+				<UnitCombat>
+					<UnitCombatType>UNITCOMBAT_CANINE</UnitCombatType>
+					<bUnitCombat>1</bUnitCombat>
+				</UnitCombat>
+				<UnitCombat>
+					<UnitCombatType>UNITCOMBAT_FELINE</UnitCombatType>
+					<bUnitCombat>1</bUnitCombat>
+				</UnitCombat>
+			</UnitCombats>
+			<AIWeightbyUnitCombatTypes>
+				<AIWeightbyUnitCombatType>
+					<UnitCombatType>UNITCOMBAT_HUNTER</UnitCombatType>
+					<iAIWeight>20</iAIWeight>
+				</AIWeightbyUnitCombatType>
+			</AIWeightbyUnitCombatTypes>
+			<iFirstStrikesChange>1</iFirstStrikesChange>
+			<iPursuitChange>5</iPursuitChange>
 			<VisibilityIntensityChangeTypes>
 				<VisibilityIntensityChangeType>
 					<InvisibleType>INVISIBLE_SIZE</InvisibleType>
@@ -8231,12 +8275,6 @@
 				</VisibilityIntensityChangeType>
 			</VisibilityIntensityChangeTypes>
 			<Button>,Art/Interface/Buttons/Promotions/Sentry2.dds,Art/Interface/Buttons/FinalFrontier1_Atlas.dds,5,10</Button>
-			<UnitCombats>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_HUNTER</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-			</UnitCombats>
 		</PromotionInfo>
 		<PromotionInfo>
 			<Type>PROMOTION_SEA_CREATURE1</Type>
