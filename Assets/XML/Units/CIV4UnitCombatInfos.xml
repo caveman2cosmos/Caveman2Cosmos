@@ -2650,6 +2650,22 @@
 			<Categories>
 				<Category>CATEGORY_UNITCOMBAT_GROUP_WEAPONS_H2H</Category>
 			</Categories>
+			<iCombatModifierPerVolumeMoreChange>10</iCombatModifierPerVolumeMoreChange>
+			<UnitCombatChangeModifiers>
+				<UnitCombatChangeModifier>
+					<UnitCombatType>UNITCOMBAT_MELEE</UnitCombatType>
+					<iModifier>5</iModifier>
+				</UnitCombatChangeModifier>
+				<UnitCombatChangeModifier>
+					<UnitCombatType>UNITCOMBAT_ANIMAL</UnitCombatType>
+					<iModifier>10</iModifier>
+				</UnitCombatChangeModifier>
+				<UnitCombatChangeModifier>
+					<UnitCombatType>UNITCOMBAT_MOUNTED</UnitCombatType>
+					<iModifier>15</iModifier>
+				</UnitCombatChangeModifier>
+			</UnitCombatChangeModifiers>
+			<iCaptureProbabilityModifierChange>30</iCaptureProbabilityModifierChange>
 			<Button>Art/Interface/Buttons/units/sparth/categories/wields_h2h.dds</Button>
 		</UnitCombatInfo>
 		<UnitCombatInfo>
@@ -4023,6 +4039,11 @@
 			<Categories>
 				<Category>CATEGORY_UNITCOMBAT_GROUP_ARMORS</Category>
 			</Categories>
+			<iArmorChange>10</iArmorChange>
+			<iDodgeModifierChange>-5</iDodgeModifierChange>
+			<iPrecisionModifierChange>-5</iPrecisionModifierChange>
+			<iWithdrawalChange>-5</iWithdrawalChange>
+			<iPursuitChange>-5</iPursuitChange>
 			<Button>Art/Interface/Buttons/units/sparth/categories/armor_type.dds</Button>
 		</UnitCombatInfo>
 		<UnitCombatInfo>
@@ -4031,6 +4052,11 @@
 			<Categories>
 				<Category>CATEGORY_UNITCOMBAT_GROUP_ARMORS</Category>
 			</Categories>
+			<iArmorChange>20</iArmorChange>
+			<iDodgeModifierChange>-10</iDodgeModifierChange>
+			<iPrecisionModifierChange>-10</iPrecisionModifierChange>
+			<iWithdrawalChange>-10</iWithdrawalChange>
+			<iPursuitChange>-10</iPursuitChange>
 			<Button>Art/Interface/Buttons/units/sparth/categories/armor_type.dds</Button>
 		</UnitCombatInfo>
 		<UnitCombatInfo>
@@ -4039,6 +4065,7 @@
 			<Categories>
 				<Category>CATEGORY_UNITCOMBAT_GROUP_ARMORS</Category>
 			</Categories>
+			<iArmorChange>10</iArmorChange>
 			<Button>Art/Interface/Buttons/units/sparth/categories/armor_type.dds</Button>
 		</UnitCombatInfo>
 		<UnitCombatInfo>
@@ -4047,6 +4074,7 @@
 			<Categories>
 				<Category>CATEGORY_UNITCOMBAT_GROUP_ARMORS</Category>
 			</Categories>
+			<iArmorChange>15</iArmorChange>
 			<Button>Art/Interface/Buttons/units/sparth/categories/armor_type.dds</Button>
 		</UnitCombatInfo>
 		<UnitCombatInfo>
@@ -4055,6 +4083,7 @@
 			<Categories>
 				<Category>CATEGORY_UNITCOMBAT_GROUP_ARMORS</Category>
 			</Categories>
+			<iArmorChange>10</iArmorChange>
 			<Button>Art/Interface/Buttons/units/sparth/categories/armor_type.dds</Button>
 		</UnitCombatInfo>
 		<UnitCombatInfo>
@@ -4063,6 +4092,7 @@
 			<Categories>
 				<Category>CATEGORY_UNITCOMBAT_GROUP_ARMORS</Category>
 			</Categories>
+			<iArmorChange>10</iArmorChange>
 			<Button>Art/Interface/Buttons/units/sparth/categories/armor_type.dds</Button>
 		</UnitCombatInfo>
 		<UnitCombatInfo>
@@ -4071,6 +4101,7 @@
 			<Categories>
 				<Category>CATEGORY_UNITCOMBAT_GROUP_ARMORS</Category>
 			</Categories>
+			<iArmorChange>10</iArmorChange>
 			<Button>Art/Interface/Buttons/units/sparth/categories/armor_type.dds</Button>
 		</UnitCombatInfo>
 		<UnitCombatInfo>
@@ -4079,6 +4110,16 @@
 			<Categories>
 				<Category>CATEGORY_UNITCOMBAT_GROUP_SHIELDS</Category>
 			</Categories>
+			<ArmorVSUnitCombatTypesChanges>
+				<ArmorVSUnitCombatTypesChange>
+					<UnitCombatType>UNITCOMBAT_ARCHER</UnitCombatType>
+					<iModifier>5</iModifier>
+				</ArmorVSUnitCombatTypesChange>
+				<ArmorVSUnitCombatTypesChange>
+					<UnitCombatType>UNITCOMBAT_THROWING</UnitCombatType>
+					<iModifier>5</iModifier>
+				</ArmorVSUnitCombatTypesChange>
+			</ArmorVSUnitCombatTypesChanges>
 			<Button>Art/Interface/Buttons/units/sparth/categories/shield_buckler.dds</Button>
 		</UnitCombatInfo>
 		<UnitCombatInfo>
@@ -4087,6 +4128,34 @@
 			<Categories>
 				<Category>CATEGORY_UNITCOMBAT_GROUP_SHIELDS</Category>
 			</Categories>
+			<UnitCombatChangeModifiers>
+				<UnitCombatChangeModifier>
+					<UnitCombatType>UNITCOMBAT_MELEE</UnitCombatType>
+					<iModifier>5</iModifier>
+				</UnitCombatChangeModifier>
+			</UnitCombatChangeModifiers>
+			<ArmorVSUnitCombatTypesChanges>
+				<ArmorVSUnitCombatTypesChange>
+					<UnitCombatType>UNITCOMBAT_ARCHER</UnitCombatType>
+					<iModifier>10</iModifier>
+				</ArmorVSUnitCombatTypesChange>
+				<ArmorVSUnitCombatTypesChange>
+					<UnitCombatType>UNITCOMBAT_THROWING</UnitCombatType>
+					<iModifier>10</iModifier>
+				</ArmorVSUnitCombatTypesChange>
+			</ArmorVSUnitCombatTypesChanges>
+			<DodgeVSUnitCombatTypesChanges>
+				<DodgeVSUnitCombatTypesChange>
+					<UnitCombatType>UNITCOMBAT_MELEE</UnitCombatType>
+					<iModifier>-5</iModifier>
+				</DodgeVSUnitCombatTypesChange>
+			</DodgeVSUnitCombatTypesChanges>
+			<PrecisionVSUnitCombatTypesChanges>
+				<PrecisionVSUnitCombatTypesChanges>
+					<UnitCombatType>UNITCOMBAT_MELEE</UnitCombatType>
+					<iModifier>-5</iModifier>
+				</PrecisionVSUnitCombatTypesChanges>
+			</PrecisionVSUnitCombatTypesChanges>
 			<Button>Art/Interface/Buttons/units/sparth/categories/shield_small.dds</Button>
 		</UnitCombatInfo>
 		<UnitCombatInfo>
@@ -4095,6 +4164,34 @@
 			<Categories>
 				<Category>CATEGORY_UNITCOMBAT_GROUP_SHIELDS</Category>
 			</Categories>
+			<UnitCombatChangeModifiers>
+				<UnitCombatChangeModifier>
+					<UnitCombatType>UNITCOMBAT_MELEE</UnitCombatType>
+					<iModifier>10</iModifier>
+				</UnitCombatChangeModifier>
+			</UnitCombatChangeModifiers>
+			<ArmorVSUnitCombatTypesChanges>
+				<ArmorVSUnitCombatTypesChange>
+					<UnitCombatType>UNITCOMBAT_ARCHER</UnitCombatType>
+					<iModifier>15</iModifier>
+				</ArmorVSUnitCombatTypesChange>
+				<ArmorVSUnitCombatTypesChange>
+					<UnitCombatType>UNITCOMBAT_THROWING</UnitCombatType>
+					<iModifier>15</iModifier>
+				</ArmorVSUnitCombatTypesChange>
+			</ArmorVSUnitCombatTypesChanges>
+			<DodgeVSUnitCombatTypesChanges>
+				<DodgeVSUnitCombatTypesChange>
+					<UnitCombatType>UNITCOMBAT_MELEE</UnitCombatType>
+					<iModifier>-10</iModifier>
+				</DodgeVSUnitCombatTypesChange>
+			</DodgeVSUnitCombatTypesChanges>
+			<PrecisionVSUnitCombatTypesChanges>
+				<PrecisionVSUnitCombatTypesChange>
+					<UnitCombatType>UNITCOMBAT_MELEE</UnitCombatType>
+					<iModifier>-10</iModifier>
+				</PrecisionVSUnitCombatTypesChange>
+			</PrecisionVSUnitCombatTypesChanges>
 			<Button>Art/Interface/Buttons/units/sparth/categories/shield_large.dds</Button>
 		</UnitCombatInfo>
 		<UnitCombatInfo>
@@ -4103,6 +4200,34 @@
 			<Categories>
 				<Category>CATEGORY_UNITCOMBAT_GROUP_SHIELDS</Category>
 			</Categories>
+			<UnitCombatChangeModifiers>
+				<UnitCombatChangeModifier>
+					<UnitCombatType>UNITCOMBAT_WEAPON_METHOD_DISTANCE_PRIMARY</UnitCombatType>
+					<iModifier>15</iModifier>
+				</UnitCombatChangeModifier>
+			</UnitCombatChangeModifiers>
+			<ArmorVSUnitCombatTypesChanges>
+				<ArmorVSUnitCombatTypesChange>
+					<UnitCombatType>UNITCOMBAT_ARCHER</UnitCombatType>
+					<iModifier>20</iModifier>
+				</ArmorVSUnitCombatTypesChange>
+				<ArmorVSUnitCombatTypesChange>
+					<UnitCombatType>UNITCOMBAT_THROWING</UnitCombatType>
+					<iModifier>20</iModifier>
+				</ArmorVSUnitCombatTypesChange>
+			</ArmorVSUnitCombatTypesChanges>
+			<DodgeVSUnitCombatTypesChanges>
+				<DodgeVSUnitCombatTypesChange>
+					<UnitCombatType>UNITCOMBAT_MELEE</UnitCombatType>
+					<iModifier>-15</iModifier>
+				</DodgeVSUnitCombatTypesChange>
+			</DodgeVSUnitCombatTypesChanges>
+			<PrecisionVSUnitCombatTypesChanges>
+				<PrecisionVSUnitCombatTypesChange>
+					<UnitCombatType>UNITCOMBAT_MELEE</UnitCombatType>
+					<iModifier>-15</iModifier>
+				</PrecisionVSUnitCombatTypesChange>
+			</PrecisionVSUnitCombatTypesChanges>
 			<Button>Art/Interface/Buttons/units/sparth/categories/shield_tower.dds</Button>
 		</UnitCombatInfo>
 		<UnitCombatInfo>
@@ -5763,6 +5888,8 @@
 			<Categories>
 				<Category>CATEGORY_UNITCOMBAT_GROUP_MOBILITY</Category>
 			</Categories>
+			<iWithdrawalChange>5</iWithdrawalChange>
+			<iPursuitChange>5</iPursuitChange>
 			<VisibleTerrainRangeChanges>
 				<VisibleTerrainRangeChange>
 					<InvisibleType>INVISIBLE_CAMOUFLAGE</InvisibleType>
@@ -5937,6 +6064,8 @@
 			<Categories>
 				<Category>CATEGORY_UNITCOMBAT_GROUP_MOBILITY</Category>
 			</Categories>
+			<iWithdrawalChange>10</iWithdrawalChange>
+			<iPursuitChange>10</iPursuitChange>
 			<VisibleTerrainRangeChanges>
 				<VisibleTerrainRangeChange>
 					<InvisibleType>INVISIBLE_CAMOUFLAGE</InvisibleType>
@@ -6106,6 +6235,8 @@
 			<Categories>
 				<Category>CATEGORY_UNITCOMBAT_GROUP_MOBILITY</Category>
 			</Categories>
+			<iWithdrawalChange>8</iWithdrawalChange>
+			<iPursuitChange>8</iPursuitChange>
 			<VisibleTerrainRangeChanges>
 				<VisibleTerrainRangeChange>
 					<InvisibleType>INVISIBLE_CAMOUFLAGE</InvisibleType>
@@ -6275,6 +6406,8 @@
 			<Categories>
 				<Category>CATEGORY_UNITCOMBAT_GROUP_MOBILITY</Category>
 			</Categories>
+			<iWithdrawalChange>12</iWithdrawalChange>
+			<iPursuitChange>12</iPursuitChange>
 			<VisibleTerrainRangeChanges>
 				<VisibleTerrainRangeChange>
 					<InvisibleType>INVISIBLE_CAMOUFLAGE</InvisibleType>
@@ -6444,6 +6577,8 @@
 			<Categories>
 				<Category>CATEGORY_UNITCOMBAT_GROUP_MOBILITY</Category>
 			</Categories>
+			<iWithdrawalChange>18</iWithdrawalChange>
+			<iPursuitChange>18</iPursuitChange>
 			<Button>Art/Interface/Buttons/units/sparth/categories/mobility.dds</Button>
 		</UnitCombatInfo>
 		<UnitCombatInfo>
