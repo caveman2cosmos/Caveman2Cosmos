@@ -1028,6 +1028,10 @@
 		<PromotionLineInfo>
 			<Type>PROMOTIONLINE_HUNTING_SIGHT</Type>
 			<Description>TXT_KEY_PROMOTIONLINE_HUNTING_SIGHT</Description>
+			<OnGameOptions>
+				<GameOptionType>GAMEOPTION_COMBAT_HIDE_SEEK</GameOptionType>
+				<GameOptionType>GAMEOPTION_COMBAT_SIZE_MATTERS</GameOptionType>
+			</OnGameOptions>
 			<Button>,Art/Interface/Buttons/Promotions/Sentry.dds,Art/Interface/Buttons/FinalFrontier1_Atlas.dds,4,10</Button>
 		</PromotionLineInfo>
 		<PromotionLineInfo>
