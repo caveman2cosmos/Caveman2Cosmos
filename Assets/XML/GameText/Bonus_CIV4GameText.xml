@@ -499,7 +499,7 @@
 		<Polish>
 			<Text>Jab&#179;ko:Jab&#179;ka:Jab&#179;o&#241;:Jab&#179;onie</Text>
 			<Gender>Male</Gender>
-			<Plural>1</Plural>
+			<Plural>0</Plural>
 		</Polish>
 		<Russian>ßáëîêè</Russian>
 	</TEXT>
@@ -508,7 +508,7 @@
 		<English>An [COLOR_HIGHLIGHT_TEXT]apple[COLOR_REVERT] is a sweet, edible fruit produced by an apple tree. Apple trees originated in Central Asia, are today cultivated worldwide and are the most widely grown species in the genus Malus. There are more than 7,500 known cultivars of apples, bred for various tastes and use, including cooking, eating raw and cider production. Apples have religious and mythological significance in many cultures, including Norse, Greek and European Christian tradition.</English>
 		<German>Die [COLOR_HIGHLIGHT_TEXT]Äpfel[COLOR_REVERT] (Malus) sind eine wirtschaftlich sehr bedeutsame Obstsorte aus der Familie der Rosengewächse. Kulturäpfel werden hauptsächlich als Nahrungsmittel, aber teilweise auch zur Zierde angepflanzt.[NEWLINE]Es handelt sich hierbei um eine Zuchtform, die wahrscheinlich vom noch wild vorkommenden Holzapfel abstammt, der in Mitteleuropa schon seit der Jungsteinzeit genutzt wird. Apfelbäume wurden vermutlich schon gepflegt, bevor die Menschen mit dem Ackerbau begannen. Bereits die Kelten und Germanen verkochten das Obst zu Mus und gewannen Most daraus. Den Obstbau, wie wir ihn kennen, führten allerdings erst die Römer in Mitteleuropa ein.[NEWLINE]Der Apfel spielt in vielen Kulturen als Symbol der Liebe und der Sexualität, der Fruchtbarkeit und des Lebens, aber auch des Reichtums und der Erkenntnis eine wichtige Rolle.</German>
 		<Italian>Una [COLOR_HIGHLIGHT_TEXT]mela[COLOR_REVERT] è un frutto dolce e commestibile prodotto da un albero di melo. I meli sono originari dell'Asia centrale, oggi sono coltivati in tutto il mondo e sono le specie più coltivate nel genere Malus. Ci sono più di 7.500 cultivar conosciute di mele, differenziate per il gusto e l'uso, dalla consumazione dei frutti crudi o cotti alla produzione di sidro. Le mele hanno un significato religioso e mitologico in molte culture, tra cui quelle nordica, greca e cristiana-europea.</Italian>
-		<Polish>[COLOR_HIGHLIGHT_TEXT]Jab&#179;ko[COLOR_REVERT], to adalny, kulisty owoc drzew z rodzaju jab&#179;o&#241; Malus. Jab&#179;ka odmian uprawnych o miesza&#241;cowym pochodzeniu, uznawanych za gatunek jab&#179;o&#241; domowa Malus domestica, s&#185; istotnym komercyjnie owocem o soczystym i chrupkim mi&#185;&#191;szu. S&#185; spo&#191;ywane na surowo, a tak&#191;e po obr&#243;bce kulinarnej.</Polish>
+		<Polish>[COLOR_HIGHLIGHT_TEXT]Jab&#179;ko[COLOR_REVERT], to jadalny, kulisty owoc drzew z rodzaju jab&#179;o&#241; Malus. Jab&#179;ka odmian uprawnych o miesza&#241;cowym pochodzeniu, s&#185; istotnym komercyjnie owocem o soczystym i chrupkim mi&#185;&#191;szu. Jab&#179;ka s&#185; spo&#191;ywane na surowo, a tak&#191;e po obr&#243;bce kulinarnej.</Polish>
 		<Russian>ßáëîêî - ïëîäû ÿáëîíè, ðàçíîâèäíîñòè Malus domestica . Ýòî - îäíè èç íàèáîëåå øèðîêî ðàñïðîñòðàíåííûõ êóëüòóðíûõ ôðóêòîâ. Äåðåâî ÿáëîíü - ìàëåíüêîå è ëèñòâåííûì, äîñòèãàÿ 5-12 ì. âûñîòîé, ñ øèðîêîé ÷àñòî õðóïêîé êðîíîé.</Russian>
 	</TEXT>
 	<TEXT>
@@ -531,7 +531,7 @@
 		<Tag>TXT_KEY_BONUS_ARAWAK</Tag>
 		<English>Arawak</English>
 		<Russian>Àðàâàêè</Russian>
-		<Polish>Arawak&#243;w</Polish>
+		<Polish>Arawaska</Polish>
 		<Italian>Cittadino aruaco</Italian>
 	</TEXT>
 	<TEXT>
@@ -697,12 +697,14 @@
 		<English>Bactric</English>
 		<French>Bactrique</French>
 		<Italian>Cittadino battriano</Italian>
+		<Polish>Baktryjska</Polish>
 		<Russian>Áàêòðèéöû</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_BAHRAINI</Tag>
 		<English>Bahraini</English>
 		<Italian>Cittadino bahreinita</Italian>
+		<Polish>Bahrajska</Polish>
 		<Russian>Áàõðåéíöû</Russian>
 	</TEXT>
 	<TEXT>
