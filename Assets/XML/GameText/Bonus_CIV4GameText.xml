@@ -17,7 +17,7 @@
 		<German>schnellere Produktion</German>
 		<Italian>Produzione delle unità accelerata</Italian>
 		<Spanish>Unidades aceleradas</Spanish>
-		<Polish>Jednostki zbudowane szybciej</Polish>
+		<Polish>Jednostki rekrutowane szybciej</Polish>
 		<Russian>Ускоряет обучение отрядов</Russian>
 	</TEXT>
 	<TEXT>
@@ -37,7 +37,7 @@
 		<German>Zufriedenheit: +%d1_Change[ICON_HAPPY]</German>
 		<Italian>Felicità: [COLOR_HIGHLIGHT_TEXT]+%d1_Change[COLOR_REVERT] [ICON_HAPPY]</Italian> <!-- city screen hover on a resource -->
 		<Spanish>Feliz: +%d1_Change[ICON_HAPPY]</Spanish>
-		<Polish>Szcz&#234;&#156;liwy: +%d1_Change[ICON_HAPPY]</Polish>
+		<Polish>Szcz&#234;&#156;liwi: +%d1_Change[ICON_HAPPY]</Polish>
 		<Russian>Íàñòðîåíèå: +%d1_Change[ICON_HAPPY]</Russian>
 	</TEXT>
 	<TEXT>
@@ -73,6 +73,7 @@
 		<English>Abandoned Civilization</English>
 		<French>Civilization abandonnée</French>
 		<Italian>Civiltà abbandonata</Italian>
+		<Polish>Opuszczona cywilizacja</Polish>
 		<Russian>Çàòåðÿííàÿ öèâèëèçàöèÿ</Russian>
 	</TEXT>
 	<TEXT>
@@ -80,6 +81,7 @@
 		<English>The [COLOR_HIGHLIGHT_TEXT]ruins of a not-very-advanced civilization[COLOR_REVERT] lie here. Maybe they had a nuclear war, or collapsed from resources shortages, or didn't build enough policing units and crime got too high. You weren't surprised to find something awful in their history though - full of radicalism, bigotry, ignorance, and greed.</English>
 		<French>Les [COLOR_HIGHLIGHT_TEXT]ruines d'une civilisation peu avancée[COLOR_REVERT] se trouvent ici. Peut-être qu'ils ont eu une guerre nucléaire, ou qu'ils se sont effondrés à cause d'une pénurie de ressources, ou qu'ils n'ont pas construit suffisamment d'unités de police et que la criminalité est devenue trop élevée. Mais ne soyez pas surpris de trouver des traces de choses terribles dans leur histoire, pleines de radicalisme, de sectarisme, d'ignorance et de cupidité.</French>
 		<Italian>Le [COLOR_HIGHLIGHT_TEXT]rovine di una civiltà non troppo avanzata[COLOR_REVERT] si trovano qui. Magari sono stati spazzati via da una guerra nucleare, sono collassati in seguito a una carenza di risorse oppure non hanno costruito unità di polizia a sufficienza e sono stati soffocati dal crimine. Ma non ti stupisci di trovare tracce di cose orribili nella loro storia, piena di radicalismo, bigotteria, ignoranza e avidità.</Italian>
+		<Polish>Znajduj&#185; si&#234; tutaj [COLOR_HIGHLIGHT_TEXT]ruiny niezbyt zaawansowanej cywilizacji[COLOR_REVERT]. By&#230; mo&#191;e jej upadek spowodowa&#179;a wojna atomowa, wyczerpanie zasob&#243;w naturalnych, lub brak wystarczaj&#185;cej ilo&#156;ci jednostek policyjnych spowodowa&#179; ogromny wzrost przest&#234;pczo&#156;ci. Jakakolwiek by&#179;a przyczyna, nie jest zaskoczeniem, &#191;e historia tej cywilizacji pe&#179;na jest radykalizmu, uprzedze&#241;, ignorancji oraz chciwo&#156;ci.</Polish>
 		<Russian>Çäåñü ëåæàò ðóèíû íå î÷åíü ðàçâèòîé öèâèëèçàöèè. Âîçìîæíî, ó íèõ áûëà ÿäåðíàÿ âîéíà, èëè îíè ïîòåðïåëè êðàõ èç-çà íåõâàòêè ðåñóðñîâ, èëè îíè íå ïîñòðîèëè äîñòàòî÷íî ïîëèöåéñêèõ ïîäðàçäåëåíèé, è ïðåñòóïíîñòü ñòàëà ñëèøêîì âûñîêîé. Âû ìîæåòå íèêîãäà íå óçíàòü âñåé ïðàâäû.</Russian>
 	</TEXT>
 	<TEXT>
@@ -87,12 +89,14 @@
 		<English>Abandoned Megastructure</English>
 		<French>Mégastructure abandonnée</French>
 		<Italian>Megastruttura abbandonata</Italian>
+		<Polish>Opuszczona Megastruktura</Polish>
 		<Russian>Çàáðîøåííàÿ ìåãàñòðóêòóðà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_ABANDONED_MEGASTRUCTURE_PEDIA</Tag>
 		<English>The [COLOR_HIGHLIGHT_TEXT]ruins of a spacefaring civilization[COLOR_REVERT] lie here. It's not clear whether they died out or chose to abandon this structure. For that matter, you aren't entirely sure what it is, though it looks like some sort of Dyson Sphere.</English>
 		<Italian>Le [COLOR_HIGHLIGHT_TEXT]rovine di una civiltà spaziale[COLOR_REVERT] si trovano qui. Non è chiaro se si siano estinti o abbiano scelto di abbandonare questa struttura. Del resto, non sei del tutto sicuro di cosa sia la struttura, sebbene sembri una sorta di sfera di Dyson.</Italian>
+		<Polish>Znajduj&#185; si&#234; tutaj [COLOR_HIGHLIGHT_TEXT]cywilizacji przemierzaj&#185;cej kosmos[COLOR_REVERT]. Nie jest pewne, czy jej przedstawiciele wygineli, czy te&#191; zdecydowali si&#234; porzuci&#230; t&#234; struktur&#234;. W zasadzie, ci&#234;&#191;ko powiedzie&#230;, czym ona w&#179;a&#156;ciwie jest, ale wygl&#185;da na jaki&#156; rodzaj sfery Dysona.</Polish>
 		<Russian>Çäåñü îáíàðóæèëèñü ðóèíû äðåâíåé êîñìè÷åñêîé öèâèëèçàöèè. Íå ÿñíî, âûìåðëè ëè îíè èëè ðåøèëè áðîñèòü ýòî ñîîðóæåíèå. Âïðî÷åì, âû íå ñîâñåì óâåðåíû, ÷òî ýòî òàêîå, õîòÿ ïîõîæå, ÷òî ýòî êàêàÿ-òî ñôåðà Äàéñîíà.</Russian>
 	</TEXT>
 	<TEXT>
@@ -100,6 +104,7 @@
 		<English>Abbasid</English>
 		<French>Abbaside</French>
 		<Italian>Cittadino abbaside</Italian>
+		<Polish>Abbasydzka</Polish>
 		<Russian>Àááàñèäû</Russian>
 	</TEXT>
 	<TEXT>
@@ -107,7 +112,7 @@
 		<English>Aborigine</English>
 		<French>Aborigène</French>
 		<Italian>Cittadino aborigeno</Italian>
-		<Polish>Aborygen</Polish>
+		<Polish>Aboryge&#241;ska</Polish>
 		<Russian>Àáîðèãåíû</Russian>
 	</TEXT>
 	<TEXT>
@@ -115,18 +120,21 @@
 		<English>AB Matter</English>
 		<French>Matière AB</French>
 		<Italian>Materia AB</Italian>
+		<Polish>Materia AB</Polish>
 		<Russian>ÀÁ-ìàòåðèÿ</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_AB_MATTER_PEDIA</Tag>
 		<English>[COLOR_HIGHLIGHT_TEXT]AB Matter[COLOR_REVERT] is a form of matter that can be produced using femtotechnology, and held together using the strong nuclear force, rather than the electromagnetic forces of typical matter. This matter is then arranged in a mesh configuration, with the permeability of the AB Matter to various external objects depending on the mesh size. A sufficiently small mesh can block gamma radiation; a sufficiently large one can pass through matter, since the thickness of a string of AB Matter is on the order of a nucleon, much smaller than the spacing between molecules.</English>
 		<Italian>La [COLOR_HIGHLIGHT_TEXT]materia AB[COLOR_REVERT] è una forma di materia che può essere prodotta usando la femtotecnologia e tenuta insieme utilizzando la forza nucleare forte, piuttosto che le forze elettromagnetiche della materia normale. Questa materia può essere quindi riorganizzata in una configurazione a maglia, la cui permeabilità agli oggetti esterni dipende dalla grandezza della configurazione stessa. Una maglia sufficientemente ristretta può bloccare le radiazioni gamma; una più larga può passare attraverso la materia, poiché lo spessore della materia AB è dell'ordine di un nucleone, ossia più piccola dello spazio esistente fra le molecole.</Italian>
+		<Polish>[COLOR_HIGHLIGHT_TEXT]Materia AB[COLOR_REVERT] to rodzaj materii produkowany przy u&#191;yciu femtotechnologii, kt&#243;ra jest spojona za pomoc&#185; odzia&#179;ywania silnego, zamiast jak w zwyk&#179;ej materii, si&#179; elektromagnetycznych. Nazt&#234;pnie materia ta jest u&#179;o&#191;ona w siatk&#234;, z mo&#191;liwo&#156;ci&#185; przepuszczania r&#243;&#191;nych obiekt&#243;w zale&#191;n&#185; od wielko&#156;ci oczek. Je&#191;eli b&#234;d&#185; one wystarczaj&#185;co ma&#179;e, jest w stanie blokowa&#230; promieniowanie gamma. Natomiast wystarczaj&#185;co du&#191;e pozwalaj&#185; jej przenika&#230; przez zwyk&#179;&#185; materi&#234;, poniewa&#191; grubo&#156;&#230; nici Materii AB jest rz&#234;du nukleon&#243;w, a wi&#234;c znacznie mniejsza, ni&#191; odleg&#179;o&#156;ci pomi&#234;dzy cz&#185;steczkami.</Polish>
 		<Russian>АБ-материя - гипотетическая форма ядерной материи, предложенная Александром Болонкиным.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_ADENAN</Tag>
 		<English>Adenan</English>
 		<Italian>Cittadino adenano</Italian>
+		<Polish>Ade&#241;ska</Polish>
 		<Russian>Àäåíöû</Russian>
 	</TEXT>
 	<TEXT>
@@ -134,24 +142,28 @@
 		<English>Advanced Replicators</English>
 		<French>Réplicateurs avancés</French>
 		<Italian>Duplicatore avanzato</Italian>
+		<Polish>Zaawansowane replikatory</Polish>
 		<Russian>Ïðîäâ. ðåïëèêàòîðû</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_ADVANCED_REPLICATORS_PEDIA</Tag>
 		<English>An [COLOR_HIGHLIGHT_TEXT]advanced replicator[COLOR_REVERT] is a highly intelligent and versatile replicator that, if instructed, can create manufactured goods, structures, and copies of itself.</English>
 		<Italian>Un [COLOR_HIGHLIGHT_TEXT]duplicatore avanzato[COLOR_REVERT] è un duplicatore altamente intelligente e versatile che, se programmato, può creare oggetti, strutture oppure altri duplicatori.</Italian>
+		<Polish>[COLOR_HIGHLIGHT_TEXT]Zaawansowany replikator[COLOR_REVERT], to niezwykle inteligentny oraz wszechstronny replikator zdolny do tworzenia zaawansowanych d&#243;br, struktur, oraz w&#179;asnych kopii.</Polish>
 		<Russian>Эти высокоинтеллектуальные и универсальные репликаторы создают промышленные товары, постройки и самих себя.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_AEROGEL</Tag>
 		<English>Aerogel</English>
 		<French>Aérogel</French>
+		<Polish>Aero&#191;el</Polish>
 		<Russian>Àýðîãåëü</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_AEROGEL_PEDIA</Tag>
 		<English>An [COLOR_HIGHLIGHT_TEXT]aerogel[COLOR_REVERT] is a synthetic porous ultralight material derived from a gel, in which the liquid component has been replaced with a gas. The result is a solid, rigid, and dry material with extremely low density and thermal conductivity, since it is 99.8% made up from air. Aerogels can be produced mostly out of silica, carbon, and metal oxides, but also organic polymers can be used.</English>
 		<Italian>Un [COLOR_HIGHLIGHT_TEXT]aerogel[COLOR_REVERT] è un materiale ultraleggero poroso sintetico derivato da un gel, in cui la componente liquida è stata sostituita con un gas. Il risultato è un materiale solido, rigido e asciutto con densità e conducibilità termica estremamente bassa, poiché è costituito al 99,8% da aria. Gli aerogel possono essere prodotti principalmente da silice, carbonio e ossidi di metallo, ma si possono usare anche polimeri organici.</Italian>
+		<Polish>[COLOR_HIGHLIGHT_TEXT]Aero&#191;el[COLOR_REVERT], to materia&#179; b&#234;d&#185;cy rodzajem sztywnej piany o wyj&#185;tkowo ma&#179;ej g&#234;sto&#156;ci. Na jego mas&#234; sk&#179;ada si&#234; w 90–99,8% powietrze, reszt&#234; stanowi porowaty materia&#179; tworz&#185;cy jego struktur&#234;.</Polish>
 		<Russian>Аэрогель представляет собой синтетический пористый сверхлегкий материал, полученный из геля, в котором жидкий компонент геля заменен газом. В результате получается твердый, жесткий и сухой материал с чрезвычайно низкой плотностью и теплопроводностью, поскольку он на 99,8% состоит из воздуха. Аэрогели можно производить в основном из оксидов кремния, углерода и металлов, но также можно использовать органические полимеры.</Russian>
 	</TEXT>
 	<TEXT>
@@ -159,6 +171,7 @@
 		<English>Afghan</English>
 		<French>Afghane</French>
 		<Italian>Cittadino afghano</Italian>
+		<Polish>Afga&#241;ska</Polish>
 		<Russian>Àôãàíöû</Russian>
 	</TEXT>
 	<TEXT>
@@ -167,6 +180,7 @@
 		<French>Aïnou</French>
 		<Russian>Àéíû</Russian>
 		<Italian>Cittadino ainu</Italian>
+		<Polish>Ajnu</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_AIRCRAFT</Tag>
@@ -181,7 +195,7 @@
 		<English>An [COLOR_HIGHLIGHT_TEXT]aircraft[COLOR_REVERT] is a vehicle that is able to fly by gaining support from the air, or in general the atmosphere of a planet. It counters the force of gravity by using either static lift or by using the dynamic lift of an airfoil, or in a few cases the downward thrust from jet engines.</English>
 		<French>Un [COLOR_HIGHLIGHT_TEXT]aéronef[COLOR_REVERT] est un véhicule qui est capable de voler en s'appuyant sur l'air, ou, en général, l'atmosphère d'une planète. Il s'extrait de la force de gravité grâce aux courants ascendants, au flux d'air généré par une hélice, ou par l'intermédiaire de la poussée de moteurs à réaction.</French>
 		<Italian>Un [COLOR_HIGHLIGHT_TEXT]aeroplano[COLOR_REVERT] è un veicolo in grado di volare sfruttando l'aria o, più in generale, l'atmosfera di un pianeta. Contrasta la forza di gravità usando spinte statiche o le spinte dinamiche create da una corrente d'aria oppure, in alcuni casi, dalle correnti discensionali create dai motori a reazione.</Italian>
-		<Polish>[COLOR_HIGHLIGHT_TEXT]Samolot[COLOR_REVERT] to pojazd, kt&#243;ry jest w stanie lata&#230; dzi&#234;ki uzyskaniu wsparcia z powietrza, albo w og&#243;le, atmosfer&#234; planety. Liczniki to si&#179;y grawitacji za pomoc&#185; jednej statycznej przy u&#191;yciu podno&#156;nika lub d&#159;wigu dynamiczny p&#179;ata lub w kilku przypadkach ci&#185;g d&#243;&#179; od silnik&#243;w odrzutowych.</Polish>
+		<Polish>[COLOR_HIGHLIGHT_TEXT]Samolot[COLOR_REVERT] to za&#179;ogowy b&#185;d&#159; bezza&#179;ogowy statek powietrzny ci&#234;&#191;szy od powietrza (aerodyna), utrzymuj&#185;cy si&#234; w powietrzu dzi&#234;ki sile no&#156;nej wytwarzanej za pomoc&#185; nieruchomych, w danych warunkach, wzgl&#234;dem statku skrzyde&#179;. Ci&#185;g potrzebny do utrzymania pr&#234;dko&#156;ci w locie poziomym wytwarzany jest przez jeden lub wi&#234;cej silnik&#243;w.</Polish>
 		<Russian>Ñàìîëåò - ýòî òðàíñïîðòíîå ñðåäñòâî, êîòîðîå óìååò ëåòàòü, îïèðàÿñü íà âîçäóõ èëè, â öåëîì, íà àòìîñôåðó ïëàíåòû. Îí ïðîòèâîïîñòàâëÿåò ñèëó òÿæåñòè ñ ïîìîùüþ âîñõîäÿùèõ ïîòîêîâ èëè ïðè ïîìîùè àýðîäèíàìè÷åñêîé ïîäúåìíîé ñèëû, èëè â íåêîòîðûõ ñëó÷àÿõ îò òÿãè îò ðåàêòèâíûõ äâèãàòåëåé.</Russian>
 	</TEXT>
 	<TEXT>
@@ -189,25 +203,28 @@
 		<English>Aka</English>
 		<Russian>Àêà</Russian>
 		<Italian>Cittadino aka</Italian>
+		<Polish>ba-Aka</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_AKKADIAN</Tag>
 		<English>Akkadian</English>
 		<French>Akkadien</French>
 		<Italian>Cittadino accadico</Italian>
-		<Polish>Akadyjski</Polish>
+		<Polish>Akadyjska</Polish>
 		<Russian>Àêêàäöû</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_AKSUMITE</Tag>
 		<English>Aksumite</English>
 		<Italian>Cittadino aksumita</Italian>
+		<Polish>Aksumska</Polish>
 		<Russian>Àêñóìèòû</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_ALACALUFE</Tag>
 		<English>Alacalufe</English>
 		<Russian>Àëàêàëóôû</Russian>
+		<Polish>Alakalufska</Polish>
 		<Italian>Cittadino kaweshkar</Italian>
 	</TEXT>
 	<TEXT>
@@ -215,6 +232,7 @@
 		<English>Albanian</English>
 		<French>Albanaise</French>
 		<Italian>Cittadino albanese</Italian>
+		<Polish>Alba&#241;ska</Polish>
 		<Russian>Àëáàíöû</Russian>
 	</TEXT>
 	<TEXT>
@@ -230,6 +248,7 @@
 		<Tag>TXT_KEY_BONUS_ALCOHOL_PEDIA</Tag>
 		<English>An [COLOR_HIGHLIGHT_TEXT]alcoholic beverage[COLOR_REVERT] is a drink which contains a substantial amount of the psychoactive drug ethanol (informally called "alcohol"). Despite drinking plays an important social role in most cultures, alcohol has potential for abuse and physical dependence. Almost all the countries of the world regulate its production, sale and consumption, from those that ban it completely to those that limit its sale and consumption to adults.</English>
 		<Italian>Una [COLOR_HIGHLIGHT_TEXT]bevanda alcolica[COLOR_REVERT] è una bevanda che contiene una quantità considerevole di etanolo (chiamato informalmente anche "alcool"). Nonostante bere bevande alcoliche rivesta un ruolo sociale molto importante in molte culture, l'alcool può generare dipendenza o il suo consumo può esserne abusato. Quasi tutti i paesi del mondo ne regolano la produzione, la vendita e il consumo, da quelli che lo bandiscono completamente a quelli che ne limitano vendita e consumo ai soli maggiorenni.</Italian>
+		<Polish>[COLOR_HIGHLIGHT_TEXT]Nap&#243;j alkoholowy[COLOR_REVERT], to nap&#243;j zawieraj&#185;cy etanol, jedna z najpopularniejszych u&#191;ywek. Napoje alkoholowe dzielone s&#185; na piwa, wina oraz alkohole spirytusowe. Spo&#191;ywanie napoj&#243;w alkoholowych jest legalne w wi&#234;kszo&#156;ci kraj&#243;w, a ponad 100 pa&#241;stw posiada przepisy reguluj&#185;ce ich produkcj&#234;, sprzeda&#191; i spo&#191;ywanie.</Polish>
 		<Russian>Алкогольный напиток - это напиток, содержащий значительное количество психоактивного наркотика этанола (неофициально называемого «алкоголем»). Несмотря на то, что алкоголь играет важную социальную роль в большинстве культур, злоупотребление им может привести к химической и психологической зависимости. Практически все страны мира регулируют его производство, продажу и потребление, от тех, которые полностью запрещают его, до тех, которые ограничивают его продажу и потребление несовершеннолетним.</Russian>
 	</TEXT>
 	<TEXT>
@@ -237,6 +256,7 @@
 		<English>Alemannic</English>
 		<French>Allémanique</French>
 		<Italian>Cittadino alemanno</Italian>
+		<Polish>Alema&#241;ska</Polish>
 		<Russian>Àëåìàííû</Russian>
 	</TEXT>
 	<TEXT>
@@ -252,6 +272,7 @@
 		<Tag>TXT_KEY_BONUS_ALGAE_PEDIA</Tag>
 		<English>[COLOR_HIGHLIGHT_TEXT]Algae[COLOR_REVERT] are a group of single or multi-cellular plant-based organisms. Single-celled algae are found mostly near the water surface, where light is more abundant: they are scientifically considered as phytoplankton, and therefore have a fundamental role in the marine food chain and in supplying atmosphere with oxygen. The multi-cellular ones, instead, live in shallow waters and are characterized by different shapes and colors in order to better absorb the light (the more their color tends to red, the greater the depth at which they live). They are made only of tissues (called "thallus") and have no roots, stems or leaves.</English>
 		<Italian>Le [COLOR_HIGHLIGHT_TEXT]alghe[COLOR_REVERT] sono un gruppo di organismi di struttura vegetale unicellulari o pluricellulari. Le alghe unicellulari si trovano perlopiù vicino al pelo dell'acqua, dove la luce è più abbondante: vengono considerate fitoplancton e hanno quindi un ruolo fondamentale nella catena alimentare marina e nel rifornire di ossigeno l'atmosfera. Quelle pluricellulari vivono invece in acque poco profonde e sono caratterizzate da forme e colori diversi per poter meglio assorbire la luce (più tendente al rosso è il loro colore, maggiore è la profondità alla quale vivono). Sono formate di solo tessuto (il "tallo") e non hanno radici, fusto o foglie.</Italian>
+		<Polish>[COLOR_HIGHLIGHT_TEXT]Glony[COLOR_REVERT], to grupa morfologiczno-ekologiczna, sk&#179;adaj&#185;ca si&#234; tradycyjnie z kilku niespokrewnionych linii ewolucyjnych organizm&#243;w plechowych, tj. beztkankowych. Glony wchodz&#185; w sk&#179;ad planktonu w morzach, oceanach i zbiornikach &#156;r&#243;dl&#185;dowych (jako fitoplankton). Glony &#191;yj&#185;ce na powierzchni osad&#243;w dennych zbiornik&#243;w wodnych stanowi&#185; sk&#179;adnik bentosu (jako fitobentos) a te, kt&#243;re porastaj&#185; inne powierzchnie (ro&#156;liny, kamienie, itp.) tworz&#185; zesp&#243;&#179; peryfitonu. Glony &#191;yj&#185; tak&#191;e poza zbiornikami wodnymi ale w miejscach wilgotnych: w glebie i na jej powierzchni, na kamieniach, pniach drzew, &#156;cianach, a tak&#191;e na &#156;niegu i lodzie (glony na&#156;nie&#191;ne).</Polish>
 		<Russian>Водоросли (лат. «Algae») - очень большая и разнообразная группа простых, обычно автотрофных организмов, от одноклеточных до многоклеточных форм, таких как гигантские водоросли, вырастающие до 65 метров в длину. Большинство из них являются фотосинтезирующими и «простыми», потому что им не хватает многих различных типов клеток и органов, обнаруженных у наземных растений. Самые крупные и сложные морские формы называются водорослями.</Russian>
 	</TEXT>
 	<TEXT>
@@ -259,6 +280,7 @@
 		<English>Algerian</English>
 		<French>Algérien</French>
 		<Italian>Cittadino algerino</Italian>
+		<Polish>Algierska</Polish>
 		<Russian>Àëæèðöû</Russian>
 	</TEXT>
 	<TEXT>
@@ -266,12 +288,14 @@
 		<English>Alice Matter</English>
 		<French>Matière spéculative</French>
 		<Italian>Materia speculare</Italian>
+		<Polish>Materia lustrzana</Polish>
 		<Russian>Ìàòåðèÿ Àëèñû</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_ALICE_MATTER_PEDIA</Tag>
 		<English>[COLOR_HIGHLIGHT_TEXT]Alice matter[COLOR_REVERT], also called mirror matter or shadow matter, is a counterpart to ordinary matter. Mirror particles interact amongst themselves in the same way as ordinary particles, except where ordinary particles have left-handed interactions, mirror particles have right-handed interactions. In this way, it turns out that mirror reflection symmetry can exist as an exact symmetry of nature, provided that a "mirror" particle exists for every ordinary particle.</English>
 		<Italian>La [COLOR_HIGHLIGHT_TEXT]materia speculare[COLOR_REVERT], anche detta materia ombra, è una controparte della materia ordinaria. Le particelle speculari interagiscono tra loro allo stesso modo delle particelle ordinarie, solo in maniera simmetricamente speculare rispetto alle loro controparti. In altri termini, la simmetria della riflessione a specchio può esistere come una esatta simmetria della natura, a condizione che esista una particella "a specchio" per ogni particella ordinaria.</Italian>
+		<Polish>[COLOR_HIGHLIGHT_TEXT]Materia lustrzana[COLOR_REVERT], to hipotetyczny rodzaj materii, kt&#243;ra jest dok&#179;adnym przeciwie&#241;stwem zwyk&#179;ej materii. Cz&#185;stki lustrzane odzia&#179;ywuj&#185; na siebi&#234; w dok&#179;adnie ten sam spos&#243;b, co zwyk&#179;e cz&#185;stki, z t&#185; r&#243;&#191;nic&#185;, &#191;e tam gdzie zwyk&#179;e cz&#185;stki maj&#185; interakcje lewej d&#179;oni (left-handed interactions), cz&#185;teczki lustrzane maj&#185; interakcj&#234; prawej d&#179;oni (right-handed interactions). W ten spos&#243;b symetria odbicia lustrzanego mo&#191;e istnie&#230;, jako dok&#179;adna symetria natury, pod warunkiem, &#191;e dla ka&#191;dej zwyk&#179;ej cz&#185;stki istnieje jej "lustrzana siostra".</Polish>
 		<Russian>Эти экзотические частицы - суперпартнеры обычных частиц, известных из менее просвещенного времени в истории вашей цивилизации. Их можно использовать во всевозможных фантастических сооружениях. Зеркальные частицы взаимодействуют между собой так же, как и обычные частицы, за исключением случаев, когда обычные частицы имеют левые взаимодействия, а зеркальные частицы имеют правые взаимодействия. Таким образом, оказывается, что симметрия зеркального отражения может существовать как точная симметрия природы, при условии, что у каждой обычной частицы имеется свой«зеркальный» двойник.</Russian>
 	</TEXT>
 	<TEXT>
@@ -293,6 +317,9 @@
 		<English>An [COLOR_HIGHLIGHT_TEXT]almond[COLOR_REVERT] is the edible, and widely cultivated, seed of the almond tree, a species of tree native to the Middle East and South Asia, and one of the oldest domesticated fruit trees. An almond consists of a green outer hull (that usually separates from the shell when the drupe matures) and a hard shell, with the seed ("nut") inside. Almond seeds are commonly sold with or without their shell, and are widely used as a food and as an ingredient (mostly in pastry).</English>
 		<German>[COLOR_HIGHLIGHT_TEXT]Mandeln[COLOR_REVERT] werden die Samen des Mandelbaums (Prunus dulcis) genannt. Dieser stammt aller Wahrscheinlichkeit nach aus Südwestasien. Er wird seit rund 4000 Jahren kultiviert und heute hauptsächlich in den Vereinigten Staaten und im Mittelmeerraum angebaut. Es wird zwischen süßen und bitteren Mandeln unterschieden. Außerdem gibt es auch noch die ebenfalls süßen und würzigen Krachmandeln, deren Schale porös und leicht zu knacken ist. Mandeln werden als Nahrungsmittel oder Kosmetikum verwendet.</German>
 		<Italian>La [COLOR_HIGHLIGHT_TEXT]mandorla[COLOR_REVERT] è il seme commestibile dell'albero di mandorlo, uno dei primissimi alberi da frutto che l'essere umano abbia mai coltivato. Il seme è contenuto in una drupa, composto da una parte esterna di colore verde (che solitamente si separa dal resto della drupa quando matura) e un guscio duro, all'interno del quale si trova il seme. Le mandorle vengono vendute sia con il guscio, sia senza e sono ampiamente utilizzate come cibo e come ingrediente per i dolci.</Italian>
+		<Polish>[COLOR_HIGHLIGHT_TEXT]Migda&#179;y[COLOR_REVERT], to nasiona owoc&#243;w migda&#179;owca zwyczajnego. Wyr&#243;&#191;nia si&#234; dwa ich rodzaje, pochodz&#185;ce od r&#243;&#191;nych odmian i kultywar&#243;w:
+		[NEWLINE]migda&#179;y s&#179;odkie, cz&#234;&#156;ciej uprawiane. S&#185; jadalne w stanie surowym, nadaj&#185; si&#234; r&#243;wnie&#191; na przetwory. Znajduj&#185; zastosowanie w przemy&#156;le spo&#191;ywczym, kosmetycznym i w lecznictwie.
+		[NEWLINE]migda&#179;y gorzkie, uprawiane na mniejsz&#185; skal&#234;. S&#185; truj&#185;ce, zawieraj&#185; amigdalin&#234;, podczas rozk&#179;adu kt&#243;rej wydziela si&#234; silnie truj&#185;cy kwas pruski. Po jego oddzieleniu otrzymuje si&#234; z nich olej migda&#179;owy u&#191;ywany do produkcji niekt&#243;rych likier&#243;w, a tak&#191;e myd&#179;a i esencji zapachowych wykorzystywanych w przemy&#156;le spo&#191;ywczym.</Polish>
 		<Russian>Миндаль (Prunus dulcis, син. Prunus amygdalus Batsch., Amygdalus communis L., Amygdalus dulcis Mill.) - это вид дерева, произрастающий на Ближнем Востоке и в Южной Азии. Миндаль - это также название съедобного и широко культивируемого семени этого дерева. Внутри рода Prunus он классифицируется вместе с персиком в подроде Amygdalus, который отличается от других подродов гофрированной оболочкой (эндокарпием), окружающей семя.[PARAGRAPH:2]Плод миндаля - это не настоящий орех, а костянка, состоящая из внешней оболочки и твердой оболочки с семенами («орехом») внутри. Очистка миндаля от кожуры означает удаление оболочки, чтобы обнажить семя. Миндаль обычно продается в скорлупе (т.е. после снятия скорлупы) или без скорлупы (то есть с еще прикрепленной скорлупой). Бланшированный миндаль - это очищенный от скорлупы миндаль, обработанный горячей водой для смягчения кожуры семян, которую затем удаляют, чтобы обнажить белый зародыш.</Russian>
 	</TEXT>
 	<TEXT>
@@ -313,7 +340,7 @@
 		<English>Aluminum Wares</English>
 		<French>Objets en aluminum</French>
 		<Italian>Prodotto di alluminio</Italian>
-		<Polish>Przedmioty z aluminium</Polish>
+		<Polish>Wyroby aluminiowe</Polish>
 		<Russian>Àëþìèíèåâûå èçäåëèÿ</Russian>
 	</TEXT>
 	<TEXT>
@@ -331,6 +358,7 @@
 		<English>[COLOR_HIGHLIGHT_TEXT]Amber[COLOR_REVERT] is the common name for fossil resin or tree sap that over time fossilize and, in some cases, solidifies, possibly containing inside plants, fungi or small animals remains. It is a translucent material, and its color varies from yellow to reddish brown, up to green. The best known variant is succinite or "Baltic amber" (i.e. from countries bordering the Baltic Sea). It is used in the production of small jewels or to finish objects, such as pipe torches or stick handles.</English>
 		<German>Bernstein ist der allgemeine Name für versteinertes Harz, oder Baumsaft, der für seine zugehörige und interessante Mischung von Farben geschätzt wird und er werden allgemein für die Herstellung der dekorativen Gegenstände verwendet. Obgleich nicht mineralisiert, wird es manchmal einen Edelstein gehalten und verwendet. Die meisten des Bernsteines der Welt ist in der Strecke 30-90 Million Jahre alt. Halb-versteinertes Harz oder Vor-Fossil Bernstein wird Copal genannt.</German>
 		<Italian>L'[COLOR_HIGHLIGHT_TEXT]ambra[COLOR_REVERT] è la resina emessa da una conifera che col tempo si fossilizza e, in alcuni casi, si solidifica, eventualmente contenendo al suo interno resti vegetali, di funghi o di piccoli animali. È un materiale traslucido, dal colore che varia dal giallo al rossiccio al bruno, fino ad arrivare al verde. La variante più conosciuta è la succinite o "ambra baltica" (proveniente cioè dai Paesi che si affacciano al Mar Baltico). Viene impiegata nella produzione di piccoli gioielli o per rifinire oggetti come cannelli di pipe o impugnature di bastoni.</Italian>
+		<Polish>[COLOR_HIGHLIGHT_TEXT]Bursztyn[COLOR_REVERT], to kopalna &#191;ywica drzew iglastych, a w rzadszych przypadkach &#191;ywicuj&#185;cych li&#156;ciastych drzew z rz&#234;du bobowc&#243;w czy rodziny dwuskrzyd&#179;owatych. Najcz&#234;&#156;ciej wyst&#234;puje w kolorze jasno&#191;&#243;&#179;tym oraz brunatnym, ale bywa tak&#191;e mlecznobia&#179;y, niebieski, zielonkawy, bezbarwny, czerwony i czarny. Jest on najcz&#234;&#156;ciej wykorzystywany w jubilarstwie, gdzie najbardziej ceniony jest bursztyn ba&#179;tycki.</Polish>
 		<Russian>ßíòàðü ìîæåò áûòü íàéäåí íà çåìëå èëè â ìîðå. Ìîðñêîé ÿíòàðü ñìîòðèòñÿ îáû÷íî ëó÷øå ÷åì ÿíòàðü èç øàõò, ïîòîìó ÷òî âîäíîå äâèæåíèå ïîëèðóåò êàìíè òàê, ÷òî îíè ÷àñòî íàõîäÿòñÿ êàê ÿñíûå, ñîëíå÷íûå êàìíè áåç êîðêè. Ìîðñêîé ÿíòàðü ìîæåò áûòü ñîáðàí, ïîñêîëüêó îí âûìûâàåòñÿ íà áåðåã èëè íåïîñðåäñòâåííî èç âîäû ïðè ïîìîùè ñåòåé (îñîáåííî â Áàëòèéñêèõ ñòðàíàõ). ßíòàðü ìîæåò ïîïàäàòüñÿ â áåëîì, æåëòîì, îðàíæåâîì, êðàñíîì, êîðè÷íåâîì, çåëåíîì, ñèíåì, è ÷åðíîâàòîì. Öåííîñòü êàìíÿ çàâèñèò òàêæå îò åãî ïðîçðà÷íîñòè. Áîëåå ïðîçðà÷íîå áîëåå öåííîå. Ïðîçðà÷íîñòü èçìåíÿåòñÿ îò ÿñíîãî äî íåïðîçðà÷íîãî. ßñíûé, ïðîçðà÷íûé ÿíòàðü ðàñïîëàãàåòñÿ îò ñâåòëî-æåëòîãî äî òåìíî-êðàñíîãî. Â áåðåãàõ Áàëòèéñêîãî ìîðÿ è Ñåâåðíîãî ìîðÿ ÿíòàðü ìîæåò áûòü íàéäåí ïîñëå øòîðìîâ (åñëè îí èäåò ñ ïðàâèëüíîãî íàïðàâëåíèÿ), è âî âðåìÿ îòëèâà. Èç-çà åãî óäåëüíîé ìàññû (1.05 - 1.1), íåìíîãî áîëåå òÿæåëîé ÷åì ìîðñêàÿ âîäà, áîëüøèíñòâî ÿíòàðíûõ ÷àñòåé âêðàïëÿåòñÿ â ìîðñêèå âîäîðîñëè èëè ëåæèò ñðåäè ñåäîâàòûõ îñòàòêîâ ðå÷íûõ ðàêîâ è êðåâåòîê òàê æå êàê ñðåäè ìàëåíüêèõ, ÷åðíûõ îñòàòêîâ äðåâåñèíû.</Russian>
 	</TEXT>
 	<TEXT>
@@ -345,6 +373,7 @@
 		<Tag>TXT_KEY_BONUS_AMIS</Tag>
 		<English>Amis</English>
 		<Russian>Àìè</Russian>
+		<Polish>Amiska</Polish>
 		<Italian>Cittadino amis</Italian>
 	</TEXT>
 	<TEXT>
@@ -361,12 +390,14 @@
 		<Tag>TXT_KEY_BONUS_AMMUNITION_PEDIA</Tag>
 		<English>[COLOR_HIGHLIGHT_TEXT]Ammunition[COLOR_REVERT] (informally "ammo") is the material fired, scattered, dropped or detonated from any weapon. Ammunition is both expendable weapons (e.g. bombs, missiles, grenades, land mines) and the component parts of other weapons that create the effect on a target (e.g. bullets and warheads). Nearly all mechanical weapons require some form of ammunition to operate.</English>
 		<Italian>Una [COLOR_HIGHLIGHT_TEXT]munizione[COLOR_REVERT] è un materiale sparato, sparso, lasciato cadere o fatto esplodere da un'arma. Le munizioni possono essere sia armi esse stesse (bombe, missili, granate, mine), sia quella componente di un'arma che produce un determinato effetto su un bersaglio (proiettili, testate di missili). Quasi tutte le armi meccaniche richiedono una qualche tipologia di munizioni per operare.</Italian>
+		<Polish>[COLOR_HIGHLIGHT_TEXT]Amunicja[COLOR_REVERT], to og&#243;&#179; naboj&#243;w, granat&#243;w, rakiet, min, bomb i torped. S&#179;u&#191;y ona do niszczenia (lub obezw&#179;adniania) si&#179;y &#191;ywej, punkt&#243;w ogniowych, sprz&#234;tu, umocnie&#241; a tak&#191;e do szkole&#241; i trening&#243;w. W uj&#234;ciu cywilnym amunicja strzelecka wykorzystywana jest r&#243;wnie&#191; w sporcie i my&#156;listwie. </Polish>
 		<Russian>Боеприпасы - это общий термин, означающий снаряд и его метательное вещество. Различные типы боеприпасов:[PARAGRAPH:1]- Патроны, применяемые в винтовках, пистолетах и пулеметах;[PARAGRAPH:1]- Крупнокалиберные снаряды с высокой бризантностью, такие как фугас;[PARAGRAPH:1]- Большая номенклатура малокалиберных снарядов, для одновременного автоматического оружия; а также дробь для охотничьего гладкоствола.[PARAGRAPH:2]Конструкция боеприпаса определяется его назначением; противопехотные боеприпасы часто предназначены для разрушения или падения внутри цели, чтобы нанести максимальный ущерб. Противопехотные снаряды содержат шрапнель и предназначены для взрыва в воздухе, поэтому его осколки разлетаются по большой площади. Бронебойные боеприпасы обычно бывают твердыми, острыми и узкими, часто со смазкой. Зажигательные снаряды содержат такой материал, как белый фосфор, который сильно горит. Трассирующие боеприпасы при движении излучают свет, позволяя наводчику видеть путь полета пули при использовании пулемета.[PARAGRAPH:2]Популярные типы боеприпасов для военных винтовок и пулеметов включают 5,45 мм, 5,56 мм и 7,62 мм. Основные боевые танки используют пенетраторы KE для борьбы с другими ОБТ и боевыми бронированными машинами и HE-Frag (осколочно-фугасные) для слабых целей, таких как пехота.[PARAGRAPH:2]Флотские боеприпасы оптимизированы для достижения большой скорости (для достижения этих больших расстояний, для поражения самолетов, летящих на высоте, а также для уменьшения упреждения, которое необходимо применять для поражения удаленной движущейся цели) и для отключения указанных машин, а не для разрушения человеческая плоть. Боеприпасы для морских орудий времен Второй мировой войны выпускались в двух основных вариантах: бронебойные снаряды для атаки укрепленных военных кораблей или фугасно-зажигательные снаряды.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_ANASAZI</Tag>
 		<English>Anasazi</English>
 		<Russian>Àíàñàçè</Russian>
+		<Polish>Anasazka</Polish>
 		<Italian>Cittadino anasazi</Italian>
 	</TEXT>
 	<TEXT>
@@ -383,6 +414,7 @@
 		<Tag>TXT_KEY_BONUS_ANCIENT_RELICS_PEDIA</Tag>
 		<English>A [COLOR_HIGHLIGHT_TEXT]relic[COLOR_REVERT] is an object relative to a saint or venerated person, preserved for purposes of veneration as a tangible memorial. It can consist of the physical remains of the venerated person (such as the body or parts of it) or of objects possessed or associated to the person (such as weapons, furniture, clothing, etc.). The term is also used to define something that has survived the passage of time, especially an object or custom whose original culture has disappeared, but also an object cherished for historical or memorial value (such as a keepsake or heirloom). Relics are an important aspect of many religions and cultures.</English>
 		<Italian>Una [COLOR_HIGHLIGHT_TEXT]reliquia[COLOR_REVERT] è un oggetto relativo a un santo o una persona venerata, conservato come memoriale tangibile a fini di venerazione, come i resti fisici della persona venerata (come il corpo o parti di esso) oppure oggetti posseduti o associati alla persona (come armi, mobili, vestiti, ecc.). Il termine è anche usato per definire qualcosa che è sopravvissuto al passare del tempo, in particolare un oggetto o un'usanza la cui cultura originale è scomparsa, ma anche un oggetto apprezzato per il valore storico o commemorativo (come un ricordo o un cimelio). Le reliquie sono un aspetto importante di molte religioni e culture.</Italian>
+		<Polish>[COLOR_HIGHLIGHT_TEXT]Relikwie[COLOR_REVERT], to  szcz&#185;tki cia&#179; os&#243;b &#156;wi&#234;tych lub przedmioty, z kt&#243;rymi te osoby mia&#179;y zwi&#185;zek w czasie &#191;ycia, stanowi&#185;ce przedmioty czci w wielu religiach (np. drewno lub drzazgi z krzy&#191;a, na kt&#243;rym umar&#179; Jezus). S&#185; one szczeg&#243;lnie rozpowszechnione w katolicyzmie i prawos&#179;awiu, natomiast protestantyzm neguje kult relikwii.</Polish>
 		<Russian>Сокровище - это скопление богатств, часто считающихся потерянными или забытыми до тех пор, пока их не откроют заново. Некоторые юрисдикции юридически определяют, что считается сокровищем (например, в Законе о сокровищах Англии 1996 года). Поиск спрятанных сокровищ - обычная тема в легендах и художественной литературе, но существуют настоящие охотники за сокровищами, которые ищут потерянное богатство, чтобы заработать себе на жизнь. Испанские сокровища, потерянные испанским флотом, состояли из золота, серебра, драгоценных камней (особенно изумрудов), а также какао, ванили и бразильского дерева (Zarin, 2005). Археологов иногда называют охотниками за сокровищами, особенно из XIX века, хотя сами они редко хотят ассоциироваться с этим термином. Охотники за сокровищами часто обвиняются археологами в разграблении древних мест в своих поисках, уничтожении при этом ценной информации. Незаконную продажу древностей иностранным покупателям также связывают с т.н. «черной археологией».</Russian>
 	</TEXT>
 	<TEXT>
@@ -390,6 +422,7 @@
 		<English>Andamanese</English>
 		<French>Andamanaise</French>
 		<Russian>Àíäàìàíöû</Russian>
+		<Polish>Andama&#241;ska</Polish>
 		<Italian>Cittadino andamanese</Italian>
 	</TEXT>
 	<TEXT>
@@ -404,6 +437,7 @@
 		<Tag>TXT_KEY_BONUS_ANDROIDS_PEDIA</Tag>
 		<English>An [COLOR_HIGHLIGHT_TEXT]android[COLOR_REVERT] is a robot or synthetic organism with a flesh-like body, designed to look and act like a human. Androids have largely remained within the domain of science fiction until 20th century, but from 21st century on, advancements in robot technology have allowed the design of functional and realistic humanoid robots.</English>
 		<Italian>Un [COLOR_HIGHLIGHT_TEXT]androide[COLOR_REVERT] è un robot o un organismo sintetico con un corpo di un materiale simile alla carne, progettato per apparire e agire come un essere umano. Considerati perlopiù materia di fantascienza fino al XX secolo, a partire dal XXI il progresso tecnologico ha consentito la progettazione di robot umanoidi funzionali e realistici.</Italian>
+		<Polish>[COLOR_HIGHLIGHT_TEXT]Android[COLOR_REVERT], to  robot humanoid, czyli sztucznie stworzona istota, lub urz&#185;dzenie wykonuj&#185;ce automatycznie pewne zadania, kt&#243;rego kszta&#179;t przypomina ludzkie cia&#179;o. Androidy pocz&#185;tkowo by&#179;y tylko postaciami wyst&#234;puj&#185;cymi w literaturze i filmach science-fiction. Jednak w 21 wieku post&#234;py w dziedzinie robotyki pozwoli&#179;y na stworzenie pierwszych dzia&#179;aj&#185;cych android&#243;w.</Polish>
 		<Russian>Андроид - это робот или синтетический организм, созданный, чтобы выглядеть и действовать как человек, особенно с телом, похожим на плоть. До недавнего времени андроиды в значительной степени оставались областью научной фантастики, которую часто можно было увидеть в фильмах и на телевидении. Однако достижения в области робототехники позволили создать функциональных и реалистичных гуманоидных роботов.</Russian>
 	</TEXT>
 	<TEXT>
@@ -411,6 +445,7 @@
 		<English>Angolan</English>
 		<French>Angolaise</French>
 		<Italian>Cittadino angolano</Italian>
+		<Polish>Angolska</Polish>
 		<Russian>Àíãîëüöû</Russian>
 	</TEXT>
 	<TEXT>
@@ -425,6 +460,7 @@
 		<Tag>TXT_KEY_BONUS_ANTIMATTER_PEDIA</Tag>
 		<English>[COLOR_HIGHLIGHT_TEXT]Antimatter[COLOR_REVERT] is defined by physics as matter composed of antiparticles of the corresponding particles of ordinary matter (in other words, a particle and its anti-particle have the same mass, but opposite electric charge and other differences in quantum numbers). Antimatter particles bind with each other to form antimatter, just as ordinary particles bind to form normal matter, and can be used as fuel, as trigger mechanism for weapons or in medical field for cancer therapy or radiation research.</English>
 		<Italian>L'[COLOR_HIGHLIGHT_TEXT]antimateria[COLOR_REVERT] è definita, in fisica, come materia composta da particelle contrarie alle particelle della materia ordinaria (in altre parole, una particella e la sua corrispondente antiparticella hanno la stessa massa, ma carica elettrica opposta e altre differenze nei numeri quantici). Le antiparticelle si combinano fra loro per generare l'antimateria, in modo molto simile al modo in cui le particelle interagiscono fra loro per produrre materia, e possono essere utilizzate come carburante, come meccanismo di azionamento di armi oppure in campo medico, per terapie anticancro o nell'ambito di ricerca sulle radiazioni.</Italian>
+		<Polish>[COLOR_HIGHLIGHT_TEXT]Antymateria[COLOR_REVERT], to rodzaj materii zbudowanej z antycz&#185;steczek, czyli cz&#185;steczek podobnych do wyst&#234;puj&#185;cych w „zwyk&#179;ej” materii, ale o przeciwnym znaku &#179;adunku elektrycznego. W momencie kontaktu antymaterii z materi&#185; (zwyk&#179;&#185;) obie ulegaj&#185; anihilacji. Energia zwi&#185;zana z mas&#185; spoczynkow&#185; anihiluj&#185;cych cz&#185;stek ulega przy tym zamianie na energi&#234; promieniowania elektromagnetycznego lub energi&#234; kinetyczn&#185; l&#191;ejszych cz&#185;stek.</Polish>
 		<Russian>В физике элементарных частиц антивещество - это материал, состоящий из античастиц; которые имеют ту же массу, что и частицы обычного вещества, но имеют противоположный заряд и другие свойства частиц, такие как лептонное и барионное число, квантовый спин и т.д. (гамма-лучи), нейтрино и менее массивные пары частица-античастица. Масса любых образовавшихся нейтрино ничтожно мала, в то время как они содержат энергию, которая обычно остается недоступной после высвобождения аннигиляции частица-античастица. Полным следствием аннигиляции является высвобождение доступной для работы энергии, пропорциональной общей массе вещества и антивещества, в соответствии с уравнением эквивалентности массы и энергии E = mc2.</Russian>
 	</TEXT>
 	<TEXT>
@@ -439,12 +475,13 @@
 		<Tag>TXT_KEY_BONUS_ANTI_GRAVITY_FIELD_GENERATORS_PEDIA</Tag>
 		<English>An [COLOR_HIGHLIGHT_TEXT]anti-gravity field generator[COLOR_REVERT] is a machinery that creates a field that is free from the force of gravity. The field produced can also provide protection to objects in it, by providing a force that allows to repel objects from outside the field.</English>
 		<Italian>Un [COLOR_HIGHLIGHT_TEXT]generatore di campo antigravità[COLOR_REVERT] è una macchina che crea un campo privo dalla forza di gravità. Questo campo può anche fornire un certo grado di protezione agli oggetti al suo interno, attraverso una forza repulsiva di qualsiasi oggetto che si trovi al di fuori del campo.</Italian>
+		<Polish>[COLOR_HIGHLIGHT_TEXT]Generator pola antygrawitacyjnego[COLOR_REVERT], to urz&#185;dzenie zdolne do utworzenia pola, w kt&#243;rym nie odzia&#179;owuje si&#179;a grawitacji. Pole to mo&#191;e r&#243;wnie&#191; chroni&#230; obiekty znajduj&#185;ce si&#234; wewn&#185;trz poprzez dostarczanie si&#179;y pozwalaj&#185;cej na odpychanie obiekt&#243;w znajduj&#185;cych si&#234; poza wygenerowanym polem.</Polish>
 		<Russian>Современные исследования антигравитационных технологий показали, что электромагнитные поля могут поднимать объект. Кроме того, эти поля также могут стать защитными и могут также обеспечивать репеллент от близлежащих планетных поверхностей, что позволяет подвешенному внутри объекту прыгать по небу, как скала, на фоне электромагнитных свойств поверхности под ним. В настоящее время, в XXI веке, исследование находится в зачаточном состоянии, но теоретически оно может привести к созданию аппарата, который может удерживаться в воздухе в своем собственном атмосферном пространстве и может двигаться по небу с огромной скоростью, что предполагает движение без трения. Часто наблюдаемые неопознанные летающие объекты в атмосфере Земли, наблюдаемые в нашу современную эпоху, движутся во многом таким же образом и могут достигать потрясающих скоростей с мгновенным полным ускорением. Теоретически это технологическое приложение позволяет им достичь этого движения.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_APACHE</Tag>
 		<English>Apache</English>
-		<Polish>Apacze</Polish>
+		<Polish>Apaczy</Polish>
 		<Russian>Àïà÷è</Russian>
 		<Italian>Cittadino apache</Italian>
 	</TEXT>
@@ -459,7 +496,11 @@
 		</German>
 		<Italian>Mela</Italian>
 		<Spanish>Manzana</Spanish>
-		<Polish>Jab&#179;ko</Polish>
+		<Polish>
+			<Text>Jab&#179;ko:Jab&#179;ka:Jab&#179;o&#241;:Jab&#179;onie</Text>
+			<Gender>Male</Gender>
+			<Plural>1</Plural>
+		</Polish>
 		<Russian>ßáëîêè</Russian>
 	</TEXT>
 	<TEXT>
@@ -467,6 +508,7 @@
 		<English>An [COLOR_HIGHLIGHT_TEXT]apple[COLOR_REVERT] is a sweet, edible fruit produced by an apple tree. Apple trees originated in Central Asia, are today cultivated worldwide and are the most widely grown species in the genus Malus. There are more than 7,500 known cultivars of apples, bred for various tastes and use, including cooking, eating raw and cider production. Apples have religious and mythological significance in many cultures, including Norse, Greek and European Christian tradition.</English>
 		<German>Die [COLOR_HIGHLIGHT_TEXT]Äpfel[COLOR_REVERT] (Malus) sind eine wirtschaftlich sehr bedeutsame Obstsorte aus der Familie der Rosengewächse. Kulturäpfel werden hauptsächlich als Nahrungsmittel, aber teilweise auch zur Zierde angepflanzt.[NEWLINE]Es handelt sich hierbei um eine Zuchtform, die wahrscheinlich vom noch wild vorkommenden Holzapfel abstammt, der in Mitteleuropa schon seit der Jungsteinzeit genutzt wird. Apfelbäume wurden vermutlich schon gepflegt, bevor die Menschen mit dem Ackerbau begannen. Bereits die Kelten und Germanen verkochten das Obst zu Mus und gewannen Most daraus. Den Obstbau, wie wir ihn kennen, führten allerdings erst die Römer in Mitteleuropa ein.[NEWLINE]Der Apfel spielt in vielen Kulturen als Symbol der Liebe und der Sexualität, der Fruchtbarkeit und des Lebens, aber auch des Reichtums und der Erkenntnis eine wichtige Rolle.</German>
 		<Italian>Una [COLOR_HIGHLIGHT_TEXT]mela[COLOR_REVERT] è un frutto dolce e commestibile prodotto da un albero di melo. I meli sono originari dell'Asia centrale, oggi sono coltivati in tutto il mondo e sono le specie più coltivate nel genere Malus. Ci sono più di 7.500 cultivar conosciute di mele, differenziate per il gusto e l'uso, dalla consumazione dei frutti crudi o cotti alla produzione di sidro. Le mele hanno un significato religioso e mitologico in molte culture, tra cui quelle nordica, greca e cristiana-europea.</Italian>
+		<Polish>[COLOR_HIGHLIGHT_TEXT]Jab&#179;ko[COLOR_REVERT], to adalny, kulisty owoc drzew z rodzaju jab&#179;o&#241; Malus. Jab&#179;ka odmian uprawnych o miesza&#241;cowym pochodzeniu, uznawanych za gatunek jab&#179;o&#241; domowa Malus domestica, s&#185; istotnym komercyjnie owocem o soczystym i chrupkim mi&#185;&#191;szu. S&#185; spo&#191;ywane na surowo, a tak&#191;e po obr&#243;bce kulinarnej.</Polish>
 		<Russian>ßáëîêî - ïëîäû ÿáëîíè, ðàçíîâèäíîñòè Malus domestica . Ýòî - îäíè èç íàèáîëåå øèðîêî ðàñïðîñòðàíåííûõ êóëüòóðíûõ ôðóêòîâ. Äåðåâî ÿáëîíü - ìàëåíüêîå è ëèñòâåííûì, äîñòèãàÿ 5-12 ì. âûñîòîé, ñ øèðîêîé ÷àñòî õðóïêîé êðîíîé.</Russian>
 	</TEXT>
 	<TEXT>
@@ -482,12 +524,14 @@
 		<English>Aragonese</English>
 		<French>Aragone</French>
 		<Russian>Àðàãîíöû</Russian>
+		<Polish>Arago&#241;ska</Polish>
 		<Italian>Cittadino aragonese</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_ARAWAK</Tag>
 		<English>Arawak</English>
 		<Russian>Àðàâàêè</Russian>
+		<Polish>Arawak&#243;w</Polish>
 		<Italian>Cittadino aruaco</Italian>
 	</TEXT>
 	<TEXT>
@@ -511,12 +555,14 @@
 		<English>Artisan Planets</English>
 		<French>Planètes artisan</French>
 		<Italian>Pianeta artigianale</Italian>
+		<Polish>Planety rzemie&#156;lnicze</Polish>
 		<Russian>Èñêóññòâ. ïëàíåòû</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_ARTISAN_PLANETS_PEDIA</Tag>
 		<English>An [COLOR_HIGHLIGHT_TEXT]artisan planet[COLOR_REVERT] is a hand-crafted, high-quality planet.</English>
 		<Italian>Un [COLOR_HIGHLIGHT_TEXT]pianeta artigianale[COLOR_REVERT] è un pianeta realizzato a mano di alta qualità.</Italian>
+		<Polish>[COLOR_HIGHLIGHT_TEXT]Planeta rzemie&#156;lnicza[COLOR_REVERT], to r&#234;cznie wykonana, wysokiej jako&#156;ci planeta.</Polish>
 		<Russian>Это планеты ручной работы и высокого качества.</Russian>
 	</TEXT>
 	<TEXT>
@@ -524,13 +570,14 @@
 		<English>Arvernian</English>
 		<French>Arvernien</French>
 		<Italian>Cittadino averno</Italian>
+		<Polish>Arwernijska</Polish>
 		<Russian>Àâåðíû</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_ASHANTI</Tag>
 		<English>Ashanti</English>
-		<Polish>Aszanti</Polish>
 		<Russian>Àøàíòè</Russian>
+		<Polish>Aszantyjska</Polish>
 		<Italian>Cittadino ashanti</Italian>
 	</TEXT>
 	<TEXT>
@@ -554,24 +601,28 @@
 		<English>Atomically Precise Alloys</English>
 		<French>Alliages à précision atomique</French>
 		<Italian>Lega a precisione atomica</Italian>
+		<Polish>Stopy o atomowej precyzji</Polish>
 		<Russian>Ñóáàòîìíûå ñïëàâû</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_ATOMICALLY_PRECISE_ALLOYS_PEDIA</Tag>
 		<English>An [COLOR_HIGHLIGHT_TEXT]atomically precise alloy[COLOR_REVERT] is an alloy produced in such a way that every atom has a specified location relative to the other atoms, and in which there are no defects or missing, extra or incorrect (impurity) atoms.</English>
 		<Italian>Una [COLOR_HIGHLIGHT_TEXT]lega atomicamente precisa[COLOR_REVERT] è una lega prodotta in modo tale che ogni atomo abbia una posizione specifica rispetto agli altri atomi e in cui non vi siano difetti o atomi mancanti, in eccesso o in posizione errata (impurità).</Italian>
+		<Polish>[COLOR_HIGHLIGHT_TEXT]Stop o atomowej precyzji[COLOR_REVERT], to rodzaj stopu wyprodukowany w taki spos&#243;b, &#191;e ka&#191;dy atom ma swoj&#185; okre&#156;lon&#185; pozycj&#234; w stosunku do pozosta&#179;ych atom&#243;w, co powoduje, &#191;e nie ma on &#191;adnych niedoskona&#179;o&#156;ci ani nieczysto&#156;ci.</Polish>
 		<Russian>Субатомными сплавами называют те, что были произведены таким образом, когда каждый атом имеет определенное положение относительно других атомов и в котором нет дефектов или отсутствующих, лишних или неправильных атомов в виде примесей.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_ATOMPUNK</Tag>
 		<English>Atompunk</English>
 		<Russian>Àòîìïàíê</Russian>
+		<Polish>Atompunk</Polish>
 		<Italian>Atompunk (cultura alternativa)</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_ATOMPUNK_PEDIA</Tag>
 		<English>[COLOR_HIGHLIGHT_TEXT]Atompunk[COLOR_REVERT] is a subgenre of speculative fiction that relates to the 1945-1965 or pre-digital period, including mid-20th century Modernism, the Atomic Age and Space Age. Its aesthetic describes a retro-futuristic vision of the world, with its tendency toward Populuxe and Raygun Gothic, exaggerated concern towards Communism bordering on paranoia, Neo-Soviet styling, underground cinema, Googie architecture, the Sputnik programme, superhero fiction, the rise of the US military/industrial powers and the fall-out of Chernobyl.</English>
 		<Italian>L'[COLOR_HIGHLIGHT_TEXT]Atompunk[COLOR_REVERT] è un sottogenere della narrativa fantascientifica che si riferisce al periodo 1945-1965 o predigitale, compreso il Modernismo di metà XX secolo, l'Era atomica e l'Era spaziale. La sua estetica descrive una visione retro-futuristica del mondo, con la sua tendenza verso il Populuxe e il Raygun Gothic, la sua esagerata preoccupazione per il comunismo al limite della paranoia, lo stile neo-sovietico, il cinema underground, l'architettura Googie, il programma Sputnik, la narrativa sui supereroi, l'ascesa del complesso militare-industriale USA e l'incidente di Chernobyl.</Italian>
+		<Polish>Subkultura [COLOR_HIGHLIGHT_TEXT]Atompunk[COLOR_REVERT] odnosi si&#234; do lat 1945-1965, a wi&#234;c do ery analogowej. Jej estetyka opisuje retro-futurystyczn&#185; wizj&#234; &#156;wiata, z przesadzonymi obawami w stosunku do komunizmu granicz&#185;cymi z paranoj&#185;, neo-sowieckim stylem, podziemnymi kinami, stylem Googie, programem Sputnik, oraz superbohaterami. Wa&#191;nymi elementami jest r&#243;wnie&#191; wzrost znaczenia kompleku militarnego w Stanach Zjednoczonych, oraz katastrofa w Czarnobylu.</Polish>
 		<Russian>Атомпанк- это поджанр спекулятивной фантастики, относящийся к 1945-1965 годам или доцифровой эпохе, включая модернизм середины ХХ века, атомную эру и космическую эру. Его эстетика описывает ретрофутуристическое видение мира с его тенденцией к Популукс и Рейган-готик, преувеличенные страхи перед коммунизмом, граничащее с паранойей, неосоветский стиль, андеграундное кино, архитектуру Гуги, программу «Спутник», фантастику о супергероях, подъем военно-промышленных держав, вроде США и последствия атомных техногенных аварий.</Russian>
 	</TEXT>
 	<TEXT>
@@ -601,24 +652,28 @@
 		<Tag>TXT_KEY_BONUS_AUTOMOBILES_PEDIA</Tag>
 		<English>An [COLOR_HIGHLIGHT_TEXT]automobile[COLOR_REVERT], also called car, is a wheeled motor vehicle used for transporting passengers. Most definitions of the term specify that automobiles are designed to run primarily on roads, to have seating for one to eight people, to typically have four wheels, and to be constructed principally for the transport of people rather than goods.</English>
 		<Italian>Un'[COLOR_HIGHLIGHT_TEXT]automobile[COLOR_REVERT] è un veicolo a motore, usato principalmente per il trasporto di passeggeri o, secondariamente, di oggetti. Le automobili sono progettate per procedere su percorsi appositi, come le strade, possono avere posti disponibili fino a otto persone e hanno solitamente quattro ruote.</Italian>
+		<Polish>[COLOR_HIGHLIGHT_TEXT]Samoch&#243;d[COLOR_REVERT], to rodzaj pojazdu silnikowego, s&#179;u&#191;&#185;cy do przewozu os&#243;b lub &#179;adunk&#243;w. Wi&#234;kszo&#156;&#230; definicji dodaje r&#243;wnie&#191;, &#191;e samochody s&#185; projektowane w celu poruszania si&#234; przede wszystkim po drogach, jak r&#243;wnie&#191; to, &#191;e maj&#185; zazwyczaj cztery ko&#179;a.</Polish>
 		<Russian>Àâòîìîáèëü - ýòî êîëåñíîå òðàíñïîðòíîå ñðåäñòâî, êîòîðîå èñïîëüçóåòñÿ äëÿ ïåðåâîçêè ïàññàæèðîâ, ïðè ïîìîùè ñîáñòâåííîãî äâèãàòåëÿ èëè ìîòîðà. Áîëüøèíñòâî îïðåäåëåíèé òåðìèíà óêàçûâàþò, ÷òî àâòîìîáèëè ïðåäíàçíà÷åíû äëÿ ïåðåäâèæåíèÿ â ïåðâóþ î÷åðåäü íà äîðîãàõ, è èìåþò ïîñàäî÷íûå ìåñòà äëÿ îäíîãî äî âîñüìè ÷åëîâåê, è êàê ïðàâèëî, èìåþò ÷åòûðå êîëåñà, ïðåäíàçíà÷åííûå ãëàâíûì îáðàçîì äëÿ ïåðåâîçêè ëþäåé, à íå òîâàðîâ.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_AVARIC</Tag>
 		<English>Avaric</English>
 		<Italian>Cittadino avaro</Italian>
+		<Polish>Awarska</Polish>
 		<Russian>Àâàðû</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_AYMARA</Tag>
 		<English>Aymara</English>
 		<Russian>Àéìàðà</Russian>
+		<Polish>Ajmarska</Polish>
 		<Italian>Cittadino aymara</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_AZANDE</Tag>
 		<English>Azande</English>
 		<Russian>Çàíäå</Russian>
+		<Polish>Azandzka</Polish>
 		<Italian>Cittadino azande</Italian>
 	</TEXT>
 	<TEXT>
