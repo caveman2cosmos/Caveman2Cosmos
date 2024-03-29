@@ -1540,7 +1540,8 @@ void CvCityAI::AI_chooseProduction()
 	//TB Note: min 1 hunter goes under the priority level of settling initiation because this is exploitable with ambushers (or just plain bad luck for the hunters which is not unlikely).  Destroy all hunters and you cripple growth.
 	//Koshling - made having at least 1 hunter a much higher priority
 	int iNeededHunters = player.AI_neededHunters(pArea);
-	int iHunterDeficitPercent = (iNeededHunters == 0) ? 0 : (iNeededHunters - player.AI_totalAreaUnitAIs(pArea, UNITAI_HUNTER)) * 100 / iNeededHunters;
+	int iOwnedHunters = player.AI_totalAreaUnitAIs(pArea, UNITAI_HUNTER);
+	int iHunterDeficitPercent = (iNeededHunters == 0) ? 0 : (iNeededHunters - iOwnedHunters) * 100 / iNeededHunters;
 
 	if (!bInhibitUnits && iHunterDeficitPercent > 80)
 	{
@@ -1558,7 +1559,7 @@ void CvCityAI::AI_chooseProduction()
 	{
 		if (iWorkersInArea == 0) // Not a single worker on my landmass
 		{
-			if (iNeededWorkersInArea > 0 && iProductionRank < (player.getNumCities() + 1) * 2 / 3)
+			if (iNeededWorkersInArea > 0 && iProductionRank < (player.getNumCities() + 1) * 2 / 3.0) // build worker in the most productive city. Float to avoid comparing 1 < 1.
 			{
 				if (AI_chooseUnit("no workers", UNITAI_WORKER, -1, -1, CITY_NO_WORKERS_WORKER_PRIORITY))
 				{

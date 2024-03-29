@@ -547,6 +547,8 @@
 			<Civilopedia>TXT_KEY_UNIT_SCOUT_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_GROWTH</Advisor>
 			<bBarbCoExist>1</bBarbCoExist>
+			<!-- Don't know if it was missing or left out by design, but without it they raze all barbarian cities, so added for now. -->
+			<bBlendIntoCity>1</bBlendIntoCity>
 			<bNoBadGoodies>1</bNoBadGoodies>
 			<bPassage>1</bPassage>
 			<bUpgradeAnywhere>1</bUpgradeAnywhere>
@@ -629,6 +631,7 @@
 			<Civilopedia>TXT_KEY_UNIT_GUIDE_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_GROWTH</Advisor>
 			<bBarbCoExist>1</bBarbCoExist>
+			<bBlendIntoCity>1</bBlendIntoCity>
 			<bNoBadGoodies>1</bNoBadGoodies>
 			<bPassage>1</bPassage>
 			<bUpgradeAnywhere>1</bUpgradeAnywhere>
@@ -712,6 +715,7 @@
 			<Advisor>ADVISOR_GROWTH</Advisor>
 			<bBarbCoExist>1</bBarbCoExist>
 			<bNoBadGoodies>1</bNoBadGoodies>
+			<bBlendIntoCity>1</bBlendIntoCity>
 			<bPassage>1</bPassage>
 			<bUpgradeAnywhere>1</bUpgradeAnywhere>
 			<bIgnoreTerrainCost>1</bIgnoreTerrainCost>
@@ -805,6 +809,7 @@
 			<Civilopedia>TXT_KEY_UNIT_PACK_LLAMA_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_GROWTH</Advisor>
 			<bBarbCoExist>1</bBarbCoExist>
+			<bBlendIntoCity>1</bBlendIntoCity>
 			<bNoBadGoodies>1</bNoBadGoodies>
 			<bPassage>1</bPassage>
 			<bUpgradeAnywhere>1</bUpgradeAnywhere>
@@ -889,6 +894,7 @@
 			<Advisor>ADVISOR_GROWTH</Advisor>
 			<bBarbCoExist>1</bBarbCoExist>
 			<bNoBadGoodies>1</bNoBadGoodies>
+			<bBlendIntoCity>1</bBlendIntoCity>
 			<bPassage>1</bPassage>
 			<bUpgradeAnywhere>1</bUpgradeAnywhere>
 			<UnitUpgrades>
@@ -974,6 +980,7 @@
 			<Advisor>ADVISOR_GROWTH</Advisor>
 			<bBarbCoExist>1</bBarbCoExist>
 			<bNoBadGoodies>1</bNoBadGoodies>
+			<bBlendIntoCity>1</bBlendIntoCity>
 			<bPassage>1</bPassage>
 			<bUpgradeAnywhere>1</bUpgradeAnywhere>
 			<bIgnoreTerrainCost>1</bIgnoreTerrainCost>
@@ -1072,6 +1079,7 @@
 			<Advisor>ADVISOR_GROWTH</Advisor>
 			<bBarbCoExist>1</bBarbCoExist>
 			<bNoBadGoodies>1</bNoBadGoodies>
+			<bBlendIntoCity>1</bBlendIntoCity>
 			<bNoDefensiveBonus>1</bNoDefensiveBonus>
 			<bPassage>1</bPassage>
 			<bUpgradeAnywhere>1</bUpgradeAnywhere>

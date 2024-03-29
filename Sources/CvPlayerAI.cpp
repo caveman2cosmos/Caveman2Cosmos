@@ -11870,8 +11870,14 @@ int CvPlayerAI::AI_neededHunters(const CvArea* pArea) const
 	{
 		iNeeded += getNumCities() / 2;
 	}
-	iNeeded += pArea->getNumUnownedTiles() / 16;
+	
+	//maybe too restrictive?
+	//percentage of how many tiles are unowned in comparison to all tiles. No idea why divided by 16. Value between 0 and 6.
+	//maybe should also be based on the amount of explored tiles? 
+	int iNeededIncrease = (pArea->getNumUnownedTiles() * 100 / pArea->getNumTiles()) / 16;
+	iNeeded += iNeededIncrease;
 
+	// iNeeded += pArea->getNumUnownedTiles() / 16;
 	return iNeeded;
 }
 
