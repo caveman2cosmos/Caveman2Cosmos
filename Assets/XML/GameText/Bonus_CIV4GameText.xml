@@ -1624,6 +1624,7 @@
 		<Tag>TXT_KEY_BONUS_CELLPHONES_PEDIA</Tag>
 		<English>A [COLOR_HIGHLIGHT_TEXT]mobile phone[COLOR_REVERT] is a portable telephone that can make and receive calls over a radio frequency link while the user is moving within a telephone service area. The radio frequency link establishes a connection to the switching systems of a mobile phone operator, which provides access to the public switched telephone network (PSTN). 21st century mobile phones also support a variety of other services, such as text messaging, MMS, email, Internet access, short-range wireless communications (infrared, Bluetooth), business applications, video games, and digital photography.</English>
 		<Italian>Un [COLOR_HIGHLIGHT_TEXT]telefono cellulare[COLOR_REVERT] è un telefono portatile che può effettuare e ricevere chiamate tramite un collegamento a radiofrequenza, mentre l'utente si sposta all'interno di un'area di servizio telefonico. Il collegamento in radiofrequenza stabilisce una connessione ai sistemi di commutazione di un operatore di telefonia mobile, che fornisce l'accesso alla rete telefonica pubblica commutata (PSTN). I telefoni cellulari del XXI secolo supportano anche una varietà di altri servizi, come messaggi di testo, MMS, e-mail, accesso a Internet, comunicazioni wireless a corto raggio (infrarossi, Bluetooth), applicazioni aziendali, videogiochi e fotografia digitale.</Italian>
+		<Polish>[COLOR_HIGHLIGHT_TEXT]Telefon komórkowy[COLOR_REVERT], to przenośny telefon zdolny do nadawania i odbierania połączeń na obszarze objętym zasięgiem telefonii komórkowej. Nowoczsne telefony posiadają dodatkowo wiele innych funkcji jak wysyłanie wiadomości SMS, MMS; połączenie z internetem, połączenie bezprzewodowe krótkiego zasięgu (podczerwień, bluetooth), gry mobilne oraz aparat fotograficzny.</Polish>
 		<Russian>Ìîáèëüíûé òåëåôîí (òàêæå èçâåñòíûé êàê ñîòîâûé òåëåôîí èëè êàðìàííûé òåëåôîí) - ýòî óñòðîéñòâî, êîòîðîå ìîæåò ñîâåðøàòü è ïðèíèìàòü òåëåôîííûå çâîíêè ÷åðåç ðàäèîñâÿçü âî âðåìÿ ïåðåäâèæåíèÿ ïî øèðîêîé ãåîãðàôè÷åñêîé îáëàñòè. Îíà îñóùåñòâëÿåòñÿ ïóòåì ïîäêëþ÷åíèÿ ê ñåòè ñîòîâîé ñâÿçè, ïðåäîñòàâëÿåìûõ îïåðàòîðîì ìîáèëüíîé ñâÿçè, ïðåäîñòàâëÿÿ äîñòóï ê òåëåôîííîé ñåòè îáùåãî ïîëüçîâàíèÿ. Íàïðîòèâ, áåñïðîâîäíîé òåëåôîí èñïîëüçóåòñÿ òîëüêî â ïðåäåëàõ ðàäèóñà åäèíè÷íîãî, ÷àñòíîãî áàçîâîé ñòàíöèè. Â äîïîëíåíèå ê òåëåôîíèè, ñîâðåìåííûå ìîáèëüíûå òåëåôîíû ïîääåðæèâàþò òàêæå øèðîêèé ñïåêòð äðóãèõ óñëóã, òàêèõ êàê îáìåí òåêñòîâûìè ñîîáùåíèÿìè, MMS, ýëåêòðîííàÿ ïî÷òà, äîñòóï â Èíòåðíåò, áåñïðîâîäíóþ ñâÿçü (èíôðàêðàñíûé ïîðò, Bluetooth), áèçíåñ-ïðèëîæåíèÿ, èãðû è ôîòîãðàôèè. Ìîáèëüíûå òåëåôîíû, êîòîðûå ïðåäëàãàþò ýòè è áîëåå îáùèå âû÷èñëèòåëüíûå âîçìîæíîñòè, íàçûâàþòñÿ ñìàðòôîíû.</Russian>
 	</TEXT>
 	<TEXT>
@@ -1631,13 +1632,14 @@
 		<English>Cellulase Capsules</English>
 		<French>Capsules de cellulase</French>
 		<Italian>Capsula di cellulasi</Italian>
-		<Polish>Kapsu&#179;ki celulazy</Polish>
+		<Polish>Kapsu&#179;ki z celulazą</Polish>
 		<Russian>Ïèùåâûå êàïñóëû</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_CELLULASE_CAPSULES_PEDIA</Tag>
 		<English>A [COLOR_HIGHLIGHT_TEXT]cellulase capsule[COLOR_REVERT] is a capsule that allows humans to completely digest cellulose. Cellulase is an enzyme, produced chiefly by fungi, bacteria, and protozoans, that breaks down the cellulose molecule into monosaccharides ("simple sugars") such as beta-glucose, or shorter polysaccharides and oligosaccharides. By allowing humans to digest even grass or leaves, these capsules greatly help reducing world hunger.</English>
 		<Italian>Una [COLOR_HIGHLIGHT_TEXT]capsula di cellulasi[COLOR_REVERT] è una capsula che consente a un essere umano di digerire completamente la cellulosa. La cellulasi è un enzima, prodotto principalmente da funghi, batteri e protozoi, che scompone la molecola di cellulosa in monosaccaridi ("zuccheri semplici") come il beta-glucosio, oppure in polisaccaridi e oligosaccaridi più corti. Permettendo agli esseri umani di digerire anche l'erba o le foglie, queste capsule contribuiscono alla riduzione della fame nel mondo.</Italian>
+		<Polish>[COLOR_HIGHLIGHT_TEXT]Kapsułki z celulazą[COLOR_REVERT], to kapsułki zawierające celulazę, a więc enzym trawienny umożliwiający trawienie celulozy. Celuloza jest to związek chemiczny zaliczany do polisacharydów, który tworzy ściany komurkowe roślin. Celulaza rozkłada celulozę, a w wyniku tego rozkładu powstaje glukoza.</Polish>
 		<Russian>Ëþäè íåñïîñîáíû íàïðÿìóþ óñâàèâàòü öåëëþëîçó, øèðîêî ðàñïðîñòðàííåííîãî â ðàñòåíèÿõ ïîëèñàõàðèäà. Â òî æå âðåìÿ áàêòåðèè ìîãóò åå óñâîèòü, ÷òîáû ïðîèçâåñòè îãðîìíîå êîëè÷åñòâî öåëëþëàçû, ôåðìåíòà, êîòîðûé ÿâëÿåòñÿ êàòàëèçàòîðîì ðåàêöèè îò öåëëþëàçû ê ãëþêîçå. Ýòè àìïóëû öåëëþëàçû, ïîçâîëÿþùèå ÷åëîâåêó ïîëíîñòüþ ïåðåâàðèòü äàæå òðàâó èëè ëèñòüÿ, çíà÷èòåëüíî ñíèæàþò ðèñê ãîëîäà â ìèðå.</Russian>
 	</TEXT>
 	<TEXT>
@@ -1645,6 +1647,7 @@
 		<English>Celtiberian</English>
 		<French>Celtibérienne</French>
 		<Italian>Cittadino celtiberico</Italian>
+		<Polish>Celtyberska</Polish>
 		<Russian>Êåëüòèáåðû</Russian>
 	</TEXT>
 	<TEXT>
@@ -1668,6 +1671,7 @@
 		<Tag>TXT_KEY_BONUS_CEMENT_PEDIA</Tag>
 		<English>[COLOR_HIGHLIGHT_TEXT]Cement[COLOR_REVERT] is a binder, a substance used for construction that sets, hardens, and adheres to other materials to bind them together. Cement is seldom used on its own, but rather to bind sand and gravel (aggregate) together. Cement mixed with fine aggregate produces mortar for masonry, or with sand and gravel, produces concrete. Cement is the most widely used material in existence and is only behind water as the planet's most-consumed resource.</English>
 		<Italian>Il [COLOR_HIGHLIGHT_TEXT]cemento[COLOR_REVERT] è una sostanza legante usata per la costruzione che fissa, indurisce e aderisce ad altri materiali per legarli insieme. Il cemento viene usato raramente da solo, ma piuttosto per legare insieme sabbia e ghiaia. Il cemento miscelato con un aggregato fine (come la sabbia) produce malta per muratura, oppure con sabbia e ghiaia produce calcestruzzo. Il cemento è il materiale più ampiamente usato esistente ed è secondo solo all'acqua come risorsa più consumata del pianeta.</Italian>
+		<Polish>[COLOR_HIGHLIGHT_TEXT]Cement[COLOR_REVERT], to  hydrauliczne spoiwo mineralne, otrzymywane w cementowniach z surowców mineralnych (margiel lub wapień i glina) wypalonych na klinkier w piecu cementowym, a następnie zmielenie otrzymanego spieku z gipsem, spełniającym rolę regulatora czasu wiązania. Stosowany jest do przygotowywania zapraw cementowych, cementowo-wapiennych i betonów. Wykorzystywany jest do łączenia materiałów budowlanych. </Polish>
 		<Russian>Цемент - это вяжущее вещество, которое схватывается, затвердевает и может связывать другие материалы. Слово «цемент» восходит к римлянам, которые использовали термин opus caementicium для описания каменной кладки, напоминающей современный бетон, которая была сделана из щебня с обожженной известью в качестве связующего. Примеси из вулканического пепла и измельченного кирпича, которые были добавлены к обожженной извести для получения гидравлического связующего, позже стали называть цементом.</Russian>
 	</TEXT>
 	<TEXT>
@@ -1679,6 +1683,7 @@
 		<Tag>TXT_KEY_BONUS_CERMET_PEDIA</Tag>
 		<English>[COLOR_HIGHLIGHT_TEXT]Cermet[COLOR_REVERT] is a composite material composed of ceramic (cer) and metallic (met) materials. It is ideally designed to have the optimal properties of both a ceramic, such as high temperature resistance and hardness, and those of a metal, such as the ability to undergo plastic deformation. Cermets are used in the manufacture of resistors (especially potentiometers), capacitors, and other electronic components which may experience high temperature. Some types of cermets are also being considered for use as spacecraft shielding, as they resist the high velocity impacts of micrometeoroids and orbital debris much more effectively than more traditional spacecraft materials.</English>
 		<Italian>Il [COLOR_HIGHLIGHT_TEXT]cermet[COLOR_REVERT] è un materiale composito composto da materiali ceramici (cer) e metallici (met). È progettato idealmente per avere le proprietà ottimali sia di una ceramica (come resistenza alle alte temperature e durezza), sia quelle di un metallo (come la capacità di subire una deformazione plastica). I cermet vengono utilizzati nella fabbricazione di resistori (in particolare potenziometri), condensatori e altri componenti elettronici che potrebbero raggiungere temperature elevate. Alcuni tipi di cermet vengono anche considerati per la schermatura di veicoli spaziali, poiché resistono agli impatti ad alta velocità dei micrometeoriti e dei detriti orbitali in modo molto più efficace rispetto ai più tradizionali materiali spaziali.</Italian>
+		<Polish>[COLOR_HIGHLIGHT_TEXT]Cermet[COLOR_REVERT], to materiał kompozytowy spieczony (sprasowany) z materiałów ceramicznych i metalowych. Metal stanowi spoiwo, podtrzymuje kowalność, przewodność cieplną, odporność na zmiany temperatury i wstrząsy. Materiał ceramiczny zapewnia ognioodporność i twardość. Własności zależą od stosunku ilościowego użytych materiałów, wielkości cząsteczek i technologii produkcji.</Polish>
 		<Russian>Кермет - это композитный материал, состоящий из керамических (кер) и металлических (мет) материалов. Он идеально разработан, чтобы иметь оптимальные свойства как керамики, такие как устойчивость к высоким температурам и твердость, так и свойства металла, такие как способность подвергаться пластической деформации. Керметы используются при производстве резисторов (особенно потенциометров), конденсаторов и других электронных компонентов, которые могут подвергаться воздействию высоких температур. Некоторые типы металлокерамики также рассматриваются для использования в качестве защиты космических аппаратов, поскольку они гораздо более эффективно противостоят высокоскоростным ударам микрометеороидов и орбитального мусора, чем более традиционные материалы для космических аппаратов.</Russian>
 	</TEXT>
 	<TEXT>
@@ -1686,6 +1691,7 @@
 		<English>Cetacea Sapiens</English>
 		<French>Sapiens Cétacés</French>
 		<Italian>Cetacea Sapiens</Italian>
+		<Polish>Ludzko-waleńska</Polish>
 		<Russian>Ðàçóìíûå êèòû</Russian>
 	</TEXT>
 	<TEXT>
@@ -1700,6 +1706,7 @@
 		<Tag>TXT_KEY_BONUS_CHACHAPOYA</Tag>
 		<English>Chachapoya</English>
 		<Russian>×à÷àïîéöû</Russian>
+		<Polish>Chachapoyas</Polish>
 		<Italian>Cittadino chachapoya</Italian>
 	</TEXT>
 	<TEXT>
@@ -1714,18 +1721,21 @@
 		<Tag>TXT_KEY_BONUS_CHALK_PEDIA</Tag>
 		<English>[COLOR_HIGHLIGHT_TEXT]Chalk[COLOR_REVERT] is a soft, white, porous, sedimentary carbonate rock, a form of limestone composed of the mineral calcite. It forms under reasonably deep marine conditions from the gradual accumulation of minute calcite shells (coccoliths) shed from micro-organisms called coccolithophores. Chalk has greater resistance to weathering and slumping than the clays with which it is usually associated, thus forming tall, steep cliffs. Because chalk is well jointed, it can hold a large volume of ground water, providing a natural reservoir that releases water slowly through dry seasons.</English>
 		<Italian>Il [COLOR_HIGHLIGHT_TEXT]gesso[COLOR_REVERT] è una roccia carbonatica morbida, bianca, porosa e sedimentaria, una forma di calcare composta da calcite minerale. Si forma in ambienti marini ragionevolmente profondi dall'accumulo graduale di minuscoli gusci di calcite (coccoliti) rilasciati da microrganismi chiamati coccolitofori. Il gesso ha una maggiore resistenza agli agenti atmosferici e al cedimento rispetto alle argille a cui è solitamente associato, formando così alte e ripide scogliere. Poiché il gesso è ben articolato, può contenere un grande volume di acque sotterranee, fornendo un serbatoio naturale che rilascia lentamente l'acqua durante le stagioni secche.</Italian>
+		<Polish>[COLOR_HIGHLIGHT_TEXT]Kreda[COLOR_REVERT], to skała osadowa, która powstała na dnie mórz i oceanów. est odmianą wapieni dość czystych, niezawierających wielu domieszek. Jej podstawowym składnikiem jest kalcyt (CaCO3). Zbudowana jest głównie z mikroskopowych skorupek kokolitów i otwornic oraz bardzo drobnoziarnistego mikrytu. Inne skamieniałości (np. igły gąbek, małże, belemnity) występują podrzędnie. Jest to skała miękka, niezbyt zwięzła, porowata, dzięki czemu ma mały ciężar właściwy i jest lekka.</Polish>
 		<Russian>Ìåë - ýòî ìÿãêàÿ, áåëàÿ è ïîðèñòàÿ îñàäî÷íàÿ ïîðîäà, ðàçíîâèäíîñòü èçâåñòíÿêà ñîñòîÿùàÿ èç ìèíåðàëà êàëüöèòà. Êàëüöèò ÿâëÿåòñÿ êàðáîíàòîì êàëüöèÿ èëè CaCO3. Îí âîçíèêàåò ïîä äîñòàòî÷íî ãëóáîêèìè ìîðñêèìè ïîðîäàìè ñ ïîñòåïåííûì íàêîïëåíèåì êàëüöèòîâûõ ñëîåâ (êîêêîëèòîâ), îáðàçóåìûõ îò ìèêðîîðãàíèçìîâ, íàçûâàåìûõ êîêêîëèòîôîðàìè.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_CHAM</Tag>
 		<English>Cham</English>
 		<Russian>×àìäî</Russian>
+		<Polish>Czamska</Polish>
 		<Italian>Cittadino cham</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_CHAMORRAN</Tag>
 		<English>Chamorran</English>
 		<Russian>×àìîððî</Russian>
+		<Polish>Czamorska</Polish>
 		<Italian>Cittadino chamorro</Italian>
 	</TEXT>
 	<TEXT>
@@ -1733,12 +1743,14 @@
 		<English>Chaos Wands</English>
 		<French>Baguettes du Chaos</French>
 		<Italian>Bacchetta del caos</Italian>
+		<Polish>Różdżka chaosu</Polish>
 		<Russian>Æåçëû Õàîñà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_CHAOS_WANDS_PEDIA</Tag>
 		<English>A [COLOR_HIGHLIGHT_TEXT]chaos wand[COLOR_REVERT] is a high-tech device with seemingly magical properties.</English>
 		<Italian>Una [COLOR_HIGHLIGHT_TEXT]bacchetta[COLOR_REVERT] del caos è un dispositivo altamente tecnologico con proprietà apparentemente magiche.</Italian>
+		<Polish>[COLOR_HIGHLIGHT_TEXT]Różdżka chaosu[COLOR_REVERT], to niezwykle zaawansowane technologicznie urządzenie z właściwościami, które wydają się niemal magiczne.</Polish>
 		<Russian>Жезл Хаоса - это высокотехнологичное устройство с, казалось бы, магическими свойствами.</Russian>
 	</TEXT>
 	<TEXT>
@@ -1753,6 +1765,7 @@
 		<Tag>TXT_KEY_BONUS_CHARCOAL_PEDIA</Tag>
 		<English>[COLOR_HIGHLIGHT_TEXT]Charcoal[COLOR_REVERT] is a lightweight black carbon residue, produced by removing water and other volatile constituents from animal and plant materials. Charcoal is usually produced by slow pyrolysis, i.e. the heating of wood or other organic materials in the absence of oxygen. This process is called charcoal burning. The finished charcoal consists largely of carbon.</English>
 		<Italian>Il [COLOR_HIGHLIGHT_TEXT]carbone[COLOR_REVERT] è un residuo leggero di carbonio nero, prodotto rimuovendo l'acqua e altri componenti volatili da materiali animali e vegetali. Il carbone viene solitamente prodotto da una lenta pirolisi, ossia dal riscaldamento del legno o di altri materiali organici in assenza di ossigeno. Questo processo si chiama combustione del carbone. Il carbone finito è costituito in gran parte da carbonio.</Italian>
+		<Polish>[COLOR_HIGHLIGHT_TEXT]W&#234;giel drzewny[COLOR_REVERT], to lekka, czarna substancja wytwarzana z drewna w procesie suchej destylacji. Głównym składnikiem jest węgiel pierwiastkowy, zanieczyszczony popiołem i licznymi związkami organicznymi. Węgiel drzewny ma bardzo małą gęstość (zachowuje częściowo strukturę ścian komórkowych drewna). Ma duże zdolności adsorpcyjne dzięki silnie rozwiniętej powierzchni. Jako paliwo ma ok. trzykrotnie większą wydajność energetyczną niż drewno. 1 kg węgla drzewnego daje ilość energii podobną do uzyskiwanej ze spalenia 1 litra benzyny. Jest jednak kłopotliwy w użyciu ze względu na zajmowaną przestrzeń w stosunku do masy, poza tym kruszy się i pyli przy manipulacji.</Polish>
 		<Russian>Древесный уголь представляет собой легкий остаток черного углерода, полученный путем удаления воды и других летучих компонентов из материалов животного и растительного происхождения. Древесный уголь обычно получают путем медленного пиролиза, то есть нагревания древесины или других органических материалов в отсутствие кислорода. Этот процесс называется сжиганием древесного угля. Полученный в итоге древесный уголь состоит в основном из углерода.</Russian>
 	</TEXT>
 	<TEXT>
@@ -1766,6 +1779,7 @@
 		<English>Chechen</English>
 		<French>Tchétchénienne</French>
 		<Italian>Cittadino ceceno</Italian>
+		<Polish>Czeczeńska</Polish>
 		<Russian>×å÷åíöû</Russian>
 	</TEXT>
 	<TEXT>
@@ -1773,13 +1787,14 @@
 		<English>Cheese</English>
 		<French>Fromage</French>
 		<Italian>Formaggio</Italian>
-		<Polish>Sery</Polish>
+		<Polish>Ser</Polish>
 		<Russian>Ñûð</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_CHEESE_PEDIA</Tag>
 		<English>[COLOR_HIGHLIGHT_TEXT]Cheese[COLOR_REVERT] is a dairy product derived from milk that is produced in a wide range of flavors, textures, and forms. It comprises proteins and fat from milk, usually of cows, buffalo, goats, or sheep. Cheese is valued for its portability, long life, and high content of fat, protein, calcium, and phosphorus.</English>
 		<Italian>Il [COLOR_HIGHLIGHT_TEXT]formaggio[COLOR_REVERT] è un prodotto lattiero-caseario derivato dal latte che viene prodotto in una vasta gamma di aromi, consistenze e forme. Comprende proteine e grassi del latte, solitamente di mucca, bufala, capra o pecora. È un alimento molto importante per la sua facile trasportabilità, la sua durata (a seconda della varietà) e per l'alto contenuto di proteine, grassi, calcio e fosforo.</Italian>
+		<Polish>[COLOR_HIGHLIGHT_TEXT]Ser[COLOR_REVERT], to produkt spożywczy wytwarzany poprzez wytrącenie z mleka tłuszczu i białka w postaci skrzepu, który zostaje poddany dalszej obróbce. Istnieje wiele gatunków sera i dzieli się je np. ze względu na gatunek mleka, zawartość tłuszczu, konsystencję, proces produkcyjny i czas dojrzewania. Ser zawiera wiele składników odżywczych.</Polish>
 		<Russian>Ñûð - ýòî îáùèé òåðìèí äëÿ ðàçëè÷íûõ ãðóïï ìîëî÷íûõ ïðîäóêòîâ. Ñûð ïðîèçâîäèòñÿ âî âñåì ìèðå â ñàìûõ ðàçíîîáðàçíûõ âêóñàõ, òåêñòóðàõ è ôîðìàõ.</Russian>
 	</TEXT>
 	<TEXT>
@@ -1796,18 +1811,21 @@
 		<Tag>TXT_KEY_BONUS_CHEMICALS_PEDIA</Tag>
 		<English>A [COLOR_HIGHLIGHT_TEXT]chemical substance[COLOR_REVERT] is a form of matter having constant chemical composition and characteristic properties. Chemical substances can be simple substances, chemical compounds, or alloys, can exist as solids, liquids, gases, or plasma, and may change between these phases of matter with changes in temperature or pressure. Chemical substances may be combined or converted to others by means of chemical reactions. No substance is entirely pure, and chemical purity is specified according to the intended use of the chemical.</English>
 		<Italian>Una [COLOR_HIGHLIGHT_TEXT]sostanza chimica[COLOR_REVERT] è una forma di materia con composizione chimica costante e proprietà caratteristiche. Le sostanze chimiche possono essere semplici sostanze, composti chimici o leghe, possono esistere come solidi, liquidi, gas o plasma e possono cambiare tra queste fasi della materia con variazioni di temperatura o pressione. Le sostanze chimiche possono essere combinate o convertite in altre per mezzo di reazioni chimiche. Nessuna sostanza è completamente pura e la purezza chimica è specificata in base all'uso previsto della sostanza chimica.</Italian>
+		<Polish>[COLOR_HIGHLIGHT_TEXT]Substancja chemiczna[COLOR_REVERT], to  substancja jednorodna, o stałym, określonym składzie chemicznym, jakościowym (co do rodzaju atomów pod względem liczby atomowej i ewentualnie, co do poszczególnych rodzajów atomów w cząsteczce) i najczęściej także ilościowym (liczby atomów różnych rodzajów w cząsteczce); zbiór atomów lub cząsteczek spełniających kryterium stałości składu.</Polish>
 		<Russian>Химическое вещество - это форма материи, имеющая постоянный химический состав и характерные свойства. Его нельзя разделить на компоненты методами физического разделения, то есть без разрыва химических связей. Химические вещества могут быть химическими элементами, химическими соединениями, ионами или сплавами. Химические вещества часто называют «чистыми», чтобы отличить их от смесей. Типичный пример химического вещества - чистая вода; он имеет те же свойства и такое же соотношение водорода и кислорода, независимо от того, выделен ли он из реки или изготовлен в лаборатории. Другие химические вещества, обычно встречающиеся в чистом виде, - это алмаз (углерод), золото, поваренная соль (хлорид натрия) и рафинированный сахар (сахароза). Однако на практике ни одно вещество не является полностью чистым, а химическая чистота определяется в соответствии с предполагаемым использованием химического вещества.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_CHEROKEE</Tag>
 		<English>Cherokee</English>
 		<Russian>×åðîêè</Russian>
+		<Polish>Czirokezka</Polish>
 		<Italian>Cittadino cherokee</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_CHEYENNE</Tag>
 		<English>Cheyenne</English>
 		<Russian>Øàéåííû</Russian>
+		<Polish>Szejeńska</Polish>
 		<Italian>Cittadino cheyenne</Italian>
 	</TEXT>
 	<TEXT>
@@ -1815,12 +1833,14 @@
 		<English>Chilean</English>
 		<French>Chilienne</French>
 		<Italian>Cittadino cileno</Italian>
+		<Polish>Czilijska</Polish>
 		<Russian>×èëèéöû</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_CHIMU</Tag>
 		<English>Chimú</English>
 		<Russian>×èìó</Russian>
+		<Polish>Chimorska</Polish>
 		<Italian>Cittadino chimú</Italian>
 	</TEXT>
 	<TEXT>
@@ -1835,6 +1855,7 @@
 		<Tag>TXT_KEY_BONUS_CHIPPEWA</Tag>
 		<English>Chippewa</English>
 		<Russian>×èïïåâà</Russian>
+		<Polish>Odżibwejska</Polish>
 		<Italian>Cittadino ojibway</Italian>
 	</TEXT>
 	<TEXT>
@@ -1849,12 +1870,14 @@
 		<Tag>TXT_KEY_BONUS_CHOCOLATE_PEDIA</Tag>
 		<English>[COLOR_HIGHLIGHT_TEXT]Chocolate[COLOR_REVERT] is a usually sweet, brown food preparation of roasted and ground cacao seeds, that is made in the form of a liquid, paste, or in a block, or used as a flavoring ingredient in other foods. Chocolate is one of the most popular food types and flavors in the world, and many foodstuffs involving chocolate exist, particularly desserts. The earliest evidence of use traces to 19th century BC Central America.</English>
 		<Italian>Il [COLOR_HIGHLIGHT_TEXT]cioccolato[COLOR_REVERT] è un preparato alimentare, generalmente dolce e di colore marrone, derivato dai semi di cacao tostati e macinati, che viene prodotta sotto forma di liquido, pasta o in un blocco o utilizzata come ingrediente aromatizzante in altri alimenti. Il cioccolato è uno dei tipi di alimenti e sapori più popolari al mondo e esistono molti cibi che contengono il cioccolato, in particolare i dessert. Le prime tracce di utilizzo risalgono all'America centrale del XIX secolo a.C.</Italian>
+		<Polish>[COLOR_HIGHLIGHT_TEXT]Czekolada[COLOR_REVERT], to wyrób cukierniczy sporządzany z miazgi kakaowej, tłuszczu kakaowego (masło kakaowe) lub innego tłuszczu roślinnego, środka słodzącego i innych dodatków, a w przypadku czekolady mlecznej także z mleka.</Polish>
 		<Russian>Øîêîëàä â âèäå ñûðöà èëè îáðàáîòàííûå ïðîäóêòîâ ïðîèçâîäèòñÿ èç ñåìÿí òðîïè÷åñêîãî äåðåâà êàêàî. Êàêàî âûðàùèâàëîñü â òå÷åíèå íå ìåíåå òðåõ òûñÿ÷åëåòèé â Ìåêñèêå, Öåíòðàëüíîé è Þæíîé Àìåðèêå. Íàèáîëåå ðàííåå åãî äîêóìåíòàëüíîå óïîìèíàíèå îòíîñèòñÿ îêîëî 1100 ãîäà äî íàøåé ýðû.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_CHOLA</Tag>
 		<English>Chola</English>
 		<Russian>×îëà</Russian>
+		<Polish>Ćolijska</Polish>
 		<Italian>Cittadino chola</Italian>
 	</TEXT>
 	<TEXT>
