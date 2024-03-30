@@ -2042,6 +2042,8 @@ protected:
 	mutable std::map<FeatureTypes, FeatureKeyedInfo>		m_featureKeyedInfo;
 	mutable std::map<UnitCombatTypes, UnitCombatKeyedInfo>	m_unitCombatKeyedInfo;
 
+	bool m_bInCityWhenKillDelay; // wheter unit is in a city or not when kill is delayed
+
 	bool canAdvance(const CvPlot* pPlot, int iThreshold) const;
 	void collateralCombat(const CvPlot* pPlot, CvUnit* pSkipUnit = NULL);
 	void rBombardCombat(const CvPlot* pPlot, CvUnit* pFirstUnit = NULL);
