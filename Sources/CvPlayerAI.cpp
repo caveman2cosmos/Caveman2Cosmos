@@ -11851,28 +11851,22 @@ int CvPlayerAI::AI_neededExplorers(const CvArea* pArea) const
 
 int CvPlayerAI::AI_neededHunters(const CvArea* pArea) const
 {
-	FAssert(pArea != NULL);
+	FAssert(pArea);
 
 	if (pArea->isWater())
 	{
 		return 0; // Hunter AI currently only operates on land
 	}
-	int iNeeded = 1;
 
-	if (GC.getGame().isOption(GAMEOPTION_ANIMAL_STAY_OUT))
+	if (GC.getGame().isOption(GAMEOPTION_ANIMAL_STAY_OUT) && pArea->getNumUnownedTiles() == 0)
 	{
-		if (pArea->getNumUnownedTiles() == 0)
-		{
-			return 0;
-		}
+		return 1; // A hunter unit might come in handy at some point
 	}
-	else
-	{
-		iNeeded += getNumCities() / 2;
-	}
-	iNeeded += pArea->getNumUnownedTiles() / 16;
-
-	return iNeeded;
+	return (
+		std::min(
+			getNumCities() / 2 + pArea->getNumUnownedTiles() / 16 + 1,
+			getNumCities() + pArea->getNumUnownedTiles() / 64)
+	);
 }
 
 
