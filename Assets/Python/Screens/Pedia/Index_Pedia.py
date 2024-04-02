@@ -140,7 +140,11 @@ class Index:
 						iTemp = W_INDEX * iList
 						if iTemp - iX > 0:
 							iX = 4 + iTemp
-					szLetter = str(szName[:1])
+
+					try:
+						szLetter = str(szName[:1])
+					except:
+						szLetter = "?"
 					szHeader = szFont + "<color=245,245,0,255>" + "-----  " + szLetter + "  -----"
 					do(LIST[iList], szHeader, eWidGen, 0, 0, 1<<2)
 					# create letter button
