@@ -1084,6 +1084,9 @@
 			</TriggerTexts>
 			<EventArt>Art/Event_Images/FauxPasEvent.dds</EventArt>
 			<bSinglePlayer>1</bSinglePlayer>
+			<AndPreReqs>
+				<PrereqTech>TECH_TRIBALISM</PrereqTech>
+			</AndPreReqs>
 			<iPercentGamesActive>100</iPercentGamesActive>
 			<iWeight>12</iWeight>
 			<bOwnPlot>1</bOwnPlot>
@@ -1595,6 +1598,9 @@
 					<Era>NONE</Era>
 				</TriggerText>
 			</TriggerTexts>
+			<AndPreReqs>
+				<PrereqTech>TECH_BRONZE_WORKING</PrereqTech>
+			</AndPreReqs>
 			<EventArt>Art/Event_Images/TsunamiEvent.dds</EventArt>
 			<iPercentGamesActive>100</iPercentGamesActive>
 			<iWeight>1</iWeight>

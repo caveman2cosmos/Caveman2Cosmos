@@ -15808,6 +15808,7 @@ void CvUnit::setXY(int iX, int iY, bool bGroup, bool bUpdate, bool bShow, bool b
 
 			if (!myPlayer.isAnimal()
 			&& !isBlendIntoCity()
+			&& (!isBarbCoExist() || !pNewPlot->isHominid())
 			&& isEnemy(pNewCity->getTeam())
 			&& (
 				!canCoexistWithTeamOnPlot(pNewCity->getTeam(), *pNewPlot)
@@ -15857,6 +15858,7 @@ void CvUnit::setXY(int iX, int iY, bool bGroup, bool bUpdate, bool bShow, bool b
 				const CvPlayer& pNewPlotOwner = GET_PLAYER(pNewPlot->getOwner());
 
 				if ((isEnemy(pNewPlotOwner.getTeam()) || !pNewPlotOwner.isAlive())
+				&& (!isBarbCoExist() || !pNewPlot->isHominid())
 				&& !canCoexistWithTeamOnPlot(pNewPlotOwner.getTeam(), *pNewPlot) && canFight())
 				{
 					AddDLLMessage(
