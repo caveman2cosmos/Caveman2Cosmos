@@ -327,7 +327,20 @@ void CvCity::init(int iID, PlayerTypes eOwner, int iX, int iY, bool bBumpUnits, 
 		}
 	}
 
-	changeMilitaryHappinessUnits(pPlot->plotCount(PUF_isMilitaryHappiness));
+	{
+		// don't use pPlot->plotCount(PUF_isMilitaryHappiness), it doesn't count dead units
+		//	and will thus for the AI not recognize units that have just merged on the plot the same turn before it founded the city.
+		// hmm, maybe plotCount should always count dead units, need to investigate, could add a new paramater to make it count dead units too.
+		int iCount = 0;
+		foreach_(const CvUnit* unitX, pPlot->units())
+		{
+			if (unitX->isMilitaryHappiness())
+			{
+				iCount++;
+			}
+		}
+		changeMilitaryHappinessUnits(iCount);
+	}
 
 	for (int iI = 0; iI < NUM_COMMERCE_TYPES; iI++)
 	{
