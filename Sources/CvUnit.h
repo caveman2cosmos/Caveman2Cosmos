@@ -2009,6 +2009,7 @@ protected:
 	bool m_bInhibitSplit;
 	bool m_bIsBuildUp;
 	bool m_bIsReligionLocked;
+	bool m_bInCityWhenKillDelay;
 
 	PlayerTypes m_eOwner;
 	PlayerTypes m_eCapturingPlayer;

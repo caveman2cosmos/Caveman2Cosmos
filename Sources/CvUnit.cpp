@@ -890,6 +890,8 @@ void CvUnit::reset(int iID, UnitTypes eUnit, PlayerTypes eOwner, bool bConstruct
 	// Toffer - UnitComponents
 	m_commander = NULL;
 	m_worker = NULL;
+
+	m_bInCityWhenKillDelay = false; // Not in a city by default
 }
 
 CvUnit& CvUnit::operator=(const CvUnit& other)
@@ -1590,6 +1592,7 @@ void CvUnit::killUnconditional(bool bDelay, PlayerTypes ePlayer, bool bMessaged)
 		if (bDelay)
 		{
 			m_bDeathDelay = true;
+			pPlot->getPlotCity() ? m_bInCityWhenKillDelay = true : m_bInCityWhenKillDelay = false; // check if there is a city on a plot when unit gets killed
 			return;
 		}
 		{
@@ -15736,7 +15739,7 @@ void CvUnit::setXY(int iX, int iY, bool bGroup, bool bUpdate, bool bShow, bool b
 
 		CvCity* pOldCity = pOldPlot->getPlotCity();
 
-		if (pOldCity)
+		if (pOldCity && (!isDelayedDeath() || (isDelayedDeath() && m_bInCityWhenKillDelay))) // If there is a city on old plot and death is delayed check if there was a city when death happend
 		{
 			if (isMilitaryHappiness())
 			{

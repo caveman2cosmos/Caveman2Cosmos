@@ -1558,7 +1558,7 @@ void CvCityAI::AI_chooseProduction()
 	{
 		if (iWorkersInArea == 0) // Not a single worker on my landmass
 		{
-			if (iNeededWorkersInArea > 0 && iProductionRank < (player.getNumCities() + 1) * 2 / 3)
+			if (iNeededWorkersInArea > 0 && iProductionRank <= (player.getNumCities() + 1) * 2 / 3)
 			{
 				if (AI_chooseUnit("no workers", UNITAI_WORKER, -1, -1, CITY_NO_WORKERS_WORKER_PRIORITY))
 				{
