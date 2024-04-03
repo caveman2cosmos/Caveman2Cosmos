@@ -34645,18 +34645,12 @@ void CvUnit::doMerge()
 		pUnit2->joinGroup(NULL);
 		pUnit3->joinGroup(NULL);
 
-		//CvSelectionGroup* dGroup = pUnit1->getGroup();
-
 		pUnit1->getGroup()->AI_setMissionAI(MISSIONAI_DELIBERATE_KILL, NULL, NULL);
 		pUnit1->kill(true, NO_PLAYER, true);
 		pUnit2->getGroup()->AI_setMissionAI(MISSIONAI_DELIBERATE_KILL, NULL, NULL);
 		pUnit2->kill(true, NO_PLAYER, true);
 		pUnit3->getGroup()->AI_setMissionAI(MISSIONAI_DELIBERATE_KILL, NULL, NULL);
 		pUnit3->kill(true, NO_PLAYER, true);
-		//if ( dGroup->getNumUnits() == 0 )
-		//{
-		//	dGroup->kill();
-		//}
 	}
 }
 
