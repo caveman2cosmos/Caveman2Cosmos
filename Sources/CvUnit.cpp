@@ -10383,6 +10383,10 @@ bool CvUnit::canAddHeritage(const CvPlot* pPlot, const HeritageTypes eType, cons
 
 bool CvUnit::addHeritage(const HeritageTypes eType)
 {
+	if (!canAddHeritage(plot(), eType))
+	{
+		return false;
+	}
 	GET_PLAYER(getOwner()).setHeritage(eType, true);
 
 	if (plot()->isActiveVisible(false))

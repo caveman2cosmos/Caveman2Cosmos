@@ -1460,7 +1460,7 @@ bool CvSelectionGroup::startMission()
 			}
 
 			CLLNode<IDInfo>* pUnitNode = headUnitNode();
-			while (pUnitNode != NULL)
+			while (pUnitNode)
 			{
 				CvUnit* pLoopUnit = ::getUnit(pUnitNode->m_data);
 				pUnitNode = nextUnitNode(pUnitNode);
@@ -1651,6 +1651,7 @@ bool CvSelectionGroup::startMission()
 							if (pLoopUnit->construct((BuildingTypes)headMissionQueueNode()->m_data.iData1))
 							{
 								bAction = true;
+								pUnitNode = NULL; // City can only have one of each building, only one unit needs to add it.
 							}
 							break;
 						}
@@ -1659,6 +1660,7 @@ bool CvSelectionGroup::startMission()
 							if (pLoopUnit->addHeritage((HeritageTypes)headMissionQueueNode()->m_data.iData1))
 							{
 								bAction = true;
+								pUnitNode = NULL; // Heritages are unique, only one unit needs to add it.
 							}
 							break;
 						}
@@ -1730,8 +1732,8 @@ bool CvSelectionGroup::startMission()
 							if (pLoopUnit->espionage((EspionageMissionTypes)headMissionQueueNode()->m_data.iData1, headMissionQueueNode()->m_data.iData2))
 							{
 								bAction = true;
+								pUnitNode = NULL; // allow one unit at a time to do espionage
 							}
-							pUnitNode = NULL; // allow one unit at a time to do espionage
 							break;
 						}
 						case MISSION_AIRBOMB1:
@@ -1788,8 +1790,8 @@ bool CvSelectionGroup::startMission()
 							if (pLoopUnit->claimTerritory())
 							{
 								bAction = true;
+								pUnitNode = NULL; // allow only one unit to claim territory (no need for more)
 							}
-							pUnitNode = NULL; // allow only one unit to claim territory (no need for more)
 							break;
 						}
 						case MISSION_HURRY_FOOD:
@@ -1815,8 +1817,11 @@ bool CvSelectionGroup::startMission()
 						}
 						case MISSION_GREAT_COMMANDER:
 						{
-							pLoopUnit->setCommander(true);
-							pUnitNode = NULL;
+							if (pLoopUnit->getUnitInfo().isGreatGeneral() && !pLoopUnit->isCommander())
+							{
+								pLoopUnit->setCommander(true);
+								bAction = true;
+							}
 							break;
 						}
 						case MISSION_SHADOW:
