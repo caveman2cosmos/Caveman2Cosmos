@@ -1383,6 +1383,7 @@ void CvMap::afterSwitch()
 		}
 	}
 
+	gDLL->getEngineIFace()->InitGraphics(); // Matt: Need this to resize map, but it creates a bug with the fog.
 	gDLL->getEngineIFace()->updateFoundingBorder(); // Matt: Maybe need this.
 	gDLL->getEngineIFace()->MarkBridgesDirty(); // Matt: Maybe need this.
 	gDLL->getEngineIFace()->SetDirty(GlobeTexture_DIRTY_BIT, true);
