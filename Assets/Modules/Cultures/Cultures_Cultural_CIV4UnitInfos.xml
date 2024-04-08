@@ -7214,8 +7214,6 @@
 					<iIntensity>1</iIntensity>
 				</VisibilityIntensityType>
 			</VisibilityIntensityTypes>
-			<bMilitarySupport>1</bMilitarySupport>
-			<bMilitaryProduction>1</bMilitaryProduction>
 			<bPillage>1</bPillage>
 			<UnitUpgrades>
 				<UnitType>UNIT_RANGER</UnitType>
@@ -7234,9 +7232,31 @@
 			<iCombat>4</iCombat>
 			<iXPValueAttack>6</iXPValueAttack>
 			<iXPValueDefense>3</iXPValueDefense>
-			<iPursuit>50</iPursuit>
-			<iCityAttack>-20</iCityAttack>
-			<iAnimalCombat>250</iAnimalCombat>
+			<iPursuit>30</iPursuit>
+			<iCityAttack>-75</iCityAttack>
+			<iAnimalCombat>125</iAnimalCombat>
+			<UnitCombatMods>
+				<UnitCombatMod>
+					<UnitCombatType>UNITCOMBAT_ANIMAL</UnitCombatType>
+					<iUnitCombatMod>25</iUnitCombatMod>
+				</UnitCombatMod>
+			</UnitCombatMods>
+			<PursuitVSUnitCombatTypes>
+				<PursuitVSUnitCombatType>
+					<UnitCombatType>UNITCOMBAT_ANIMAL</UnitCombatType>
+					<iModifier>20</iModifier>
+				</PursuitVSUnitCombatType>
+			</PursuitVSUnitCombatTypes>
+			<UnitCombatTargets>
+				<UnitCombatTarget>
+					<UnitCombatTargetType>UNITCOMBAT_ANIMAL</UnitCombatTargetType>
+					<bUnitCombatTarget>1</bUnitCombatTarget>
+				</UnitCombatTarget>
+				<UnitCombatTarget>
+					<UnitCombatTargetType>UNITCOMBAT_PROMOTED_ARMED_GUARD</UnitCombatTargetType>
+					<bUnitCombatTarget>1</bUnitCombatTarget>
+				</UnitCombatTarget>
+			</UnitCombatTargets>
 			<iAsset>1</iAsset>
 			<iPower>4</iPower>
 			<UnitMeshGroups>
@@ -9710,8 +9730,6 @@
 			<Civilopedia>TXT_KEY_UNIT_SWAZI_TRACKER_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_GROWTH</Advisor>
 			<bNoBadGoodies>1</bNoBadGoodies>
-			<bMilitarySupport>1</bMilitarySupport>
-			<bMilitaryProduction>1</bMilitaryProduction>
 			<UnitUpgrades>
 				<UnitType>UNIT_GAME_HUNTER</UnitType>
 			</UnitUpgrades>
@@ -9731,12 +9749,34 @@
 			<iCost>205</iCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>
-			<iCombat>6</iCombat>
+			<iCombat>7</iCombat>
 			<iXPValueAttack>6</iXPValueAttack>
 			<iXPValueDefense>3</iXPValueDefense>
-			<iPursuit>70</iPursuit>
-			<iCityAttack>-20</iCityAttack>
-			<iAnimalCombat>100</iAnimalCombat>
+			<iPursuit>50</iPursuit>
+			<iCityAttack>-75</iCityAttack>
+			<iAnimalCombat>125</iAnimalCombat>
+			<UnitCombatMods>
+				<UnitCombatMod>
+					<UnitCombatType>UNITCOMBAT_ANIMAL</UnitCombatType>
+					<iUnitCombatMod>25</iUnitCombatMod>
+				</UnitCombatMod>
+			</UnitCombatMods>
+			<PursuitVSUnitCombatTypes>
+				<PursuitVSUnitCombatType>
+					<UnitCombatType>UNITCOMBAT_ANIMAL</UnitCombatType>
+					<iModifier>40</iModifier>
+				</PursuitVSUnitCombatType>
+			</PursuitVSUnitCombatTypes>
+			<UnitCombatTargets>
+				<UnitCombatTarget>
+					<UnitCombatTargetType>UNITCOMBAT_ANIMAL</UnitCombatTargetType>
+					<bUnitCombatTarget>1</bUnitCombatTarget>
+				</UnitCombatTarget>
+				<UnitCombatTarget>
+					<UnitCombatTargetType>UNITCOMBAT_PROMOTED_ARMED_GUARD</UnitCombatTargetType>
+					<bUnitCombatTarget>1</bUnitCombatTarget>
+				</UnitCombatTarget>
+			</UnitCombatTargets>
 			<FeatureAttacks>
 				<FeatureAttack>
 					<FeatureType>FEATURE_SAVANNA</FeatureType>
@@ -17870,9 +17910,6 @@
 					<iIntensity>1</iIntensity>
 				</InvisibilityIntensityType>
 			</InvisibilityIntensityTypes>
-			<bMilitaryHappiness>1</bMilitaryHappiness>
-			<bMilitarySupport>1</bMilitarySupport>
-			<bMilitaryProduction>1</bMilitaryProduction>
 			<bPillage>1</bPillage>
 			<UnitUpgrades>
 				<UnitType>UNIT_WARDEN</UnitType>
@@ -17904,10 +17941,20 @@
 			<iCityAttack>-75</iCityAttack>
 			<UnitCombatMods>
 				<UnitCombatMod>
-					<UnitCombatType>UNITCOMBAT_HUNTER</UnitCombatType>
+					<UnitCombatType>UNITCOMBAT_EXPLORER</UnitCombatType>
 					<iUnitCombatMod>300</iUnitCombatMod>
 				</UnitCombatMod>
 			</UnitCombatMods>
+			<UnitCombatTargets>
+				<UnitCombatTarget>
+					<UnitCombatTargetType>UNITCOMBAT_EXPLORER</UnitCombatTargetType>
+					<bUnitCombatTarget>1</bUnitCombatTarget>
+				</UnitCombatTarget>
+				<UnitCombatTarget>
+					<UnitCombatTargetType>UNITCOMBAT_PROMOTED_ARMED_GUARD</UnitCombatTargetType>
+					<bUnitCombatTarget>1</bUnitCombatTarget>
+				</UnitCombatTarget>
+			</UnitCombatTargets>
 			<iAsset>3</iAsset>
 			<iPower>3</iPower>
 			<UnitMeshGroups>
@@ -19131,9 +19178,6 @@
 			<Description>TXT_KEY_UNIT_SIBERIAN_TRACKER</Description>
 			<Civilopedia>TXT_KEY_UNIT_SIBERIAN_TRACKER_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_GROWTH</Advisor>
-			<bMilitaryHappiness>1</bMilitaryHappiness>
-			<bMilitarySupport>1</bMilitarySupport>
-			<bMilitaryProduction>1</bMilitaryProduction>
 			<bPillage>1</bPillage>
 			<UnitUpgrades>
 				<UnitType>UNIT_GAME_HUNTER</UnitType>
@@ -19161,9 +19205,31 @@
 			<iCombat>10</iCombat>
 			<iXPValueAttack>5</iXPValueAttack>
 			<iXPValueDefense>3</iXPValueDefense>
-			<iPursuit>70</iPursuit>
+			<iPursuit>50</iPursuit>
 			<iCityAttack>-75</iCityAttack>
-			<iAnimalCombat>325</iAnimalCombat>
+			<iAnimalCombat>125</iAnimalCombat>
+			<UnitCombatMods>
+				<UnitCombatMod>
+					<UnitCombatType>UNITCOMBAT_ANIMAL</UnitCombatType>
+					<iUnitCombatMod>25</iUnitCombatMod>
+				</UnitCombatMod>
+			</UnitCombatMods>
+			<PursuitVSUnitCombatTypes>
+				<PursuitVSUnitCombatType>
+					<UnitCombatType>UNITCOMBAT_ANIMAL</UnitCombatType>
+					<iModifier>40</iModifier>
+				</PursuitVSUnitCombatType>
+			</PursuitVSUnitCombatTypes>
+			<UnitCombatTargets>
+				<UnitCombatTarget>
+					<UnitCombatTargetType>UNITCOMBAT_ANIMAL</UnitCombatTargetType>
+					<bUnitCombatTarget>1</bUnitCombatTarget>
+				</UnitCombatTarget>
+				<UnitCombatTarget>
+					<UnitCombatTargetType>UNITCOMBAT_PROMOTED_ARMED_GUARD</UnitCombatTargetType>
+					<bUnitCombatTarget>1</bUnitCombatTarget>
+				</UnitCombatTarget>
+			</UnitCombatTargets>
 			<iAsset>2</iAsset>
 			<iPower>10</iPower>
 			<UnitMeshGroups>
@@ -23002,9 +23068,31 @@
 			<iCombat>7</iCombat>
 			<iXPValueAttack>8</iXPValueAttack>
 			<iXPValueDefense>4</iXPValueDefense>
-			<iPursuit>80</iPursuit>
+			<iPursuit>50</iPursuit>
 			<iCityAttack>-75</iCityAttack>
-			<iAnimalCombat>325</iAnimalCombat>
+			<iAnimalCombat>150</iAnimalCombat>
+			<UnitCombatMods>
+				<UnitCombatMod>
+					<UnitCombatType>UNITCOMBAT_ANIMAL</UnitCombatType>
+					<iUnitCombatMod>25</iUnitCombatMod>
+				</UnitCombatMod>
+			</UnitCombatMods>
+			<PursuitVSUnitCombatTypes>
+				<PursuitVSUnitCombatType>
+					<UnitCombatType>UNITCOMBAT_ANIMAL</UnitCombatType>
+					<iModifier>40</iModifier>
+				</PursuitVSUnitCombatType>
+			</PursuitVSUnitCombatTypes>
+			<UnitCombatTargets>
+				<UnitCombatTarget>
+					<UnitCombatTargetType>UNITCOMBAT_ANIMAL</UnitCombatTargetType>
+					<bUnitCombatTarget>1</bUnitCombatTarget>
+				</UnitCombatTarget>
+				<UnitCombatTarget>
+					<UnitCombatTargetType>UNITCOMBAT_PROMOTED_ARMED_GUARD</UnitCombatTargetType>
+					<bUnitCombatTarget>1</bUnitCombatTarget>
+				</UnitCombatTarget>
+			</UnitCombatTargets>
 			<iAsset>2</iAsset>
 			<iPower>2</iPower>
 			<UnitMeshGroups>
@@ -26230,9 +26318,6 @@
 				<UnitType>UNIT_BIG_GAME_HUNTER</UnitType>
 			</UnitUpgrades>
 			<Advisor>ADVISOR_GROWTH</Advisor>
-			<bMilitaryHappiness>1</bMilitaryHappiness>
-			<bMilitarySupport>1</bMilitarySupport>
-			<bMilitaryProduction>1</bMilitaryProduction>
 			<bAssassin>1</bAssassin>
 			<UnitAIs>
 				<UnitAI>
@@ -26256,9 +26341,31 @@
 			<iCombat>10</iCombat>
 			<iXPValueAttack>8</iXPValueAttack>
 			<iXPValueDefense>4</iXPValueDefense>
-			<iPursuit>60</iPursuit>
+			<iPursuit>50</iPursuit>
 			<iCityAttack>-75</iCityAttack>
-			<iAnimalCombat>325</iAnimalCombat>
+			<iAnimalCombat>150</iAnimalCombat>
+			<UnitCombatMods>
+				<UnitCombatMod>
+					<UnitCombatType>UNITCOMBAT_ANIMAL</UnitCombatType>
+					<iUnitCombatMod>25</iUnitCombatMod>
+				</UnitCombatMod>
+			</UnitCombatMods>
+			<PursuitVSUnitCombatTypes>
+				<PursuitVSUnitCombatType>
+					<UnitCombatType>UNITCOMBAT_ANIMAL</UnitCombatType>
+					<iModifier>50</iModifier>
+				</PursuitVSUnitCombatType>
+			</PursuitVSUnitCombatTypes>
+			<UnitCombatTargets>
+				<UnitCombatTarget>
+					<UnitCombatTargetType>UNITCOMBAT_ANIMAL</UnitCombatTargetType>
+					<bUnitCombatTarget>1</bUnitCombatTarget>
+				</UnitCombatTarget>
+				<UnitCombatTarget>
+					<UnitCombatTargetType>UNITCOMBAT_PROMOTED_ARMED_GUARD</UnitCombatTargetType>
+					<bUnitCombatTarget>1</bUnitCombatTarget>
+				</UnitCombatTarget>
+			</UnitCombatTargets>
 			<iAsset>2</iAsset>
 			<iPower>2</iPower>
 			<UnitMeshGroups>
@@ -26272,16 +26379,6 @@
 					<EarlyArtDefineTag>ART_DEF_UNIT_BUSH_TRACKERS</EarlyArtDefineTag>
 				</UnitMeshGroup>
 			</UnitMeshGroups>
-			<UnitCombatTargets>
-				<UnitCombatTarget>
-					<UnitCombatTargetType>UNITCOMBAT_ANIMAL</UnitCombatTargetType>
-					<bUnitCombatTarget>1</bUnitCombatTarget>
-				</UnitCombatTarget>
-				<UnitCombatTarget>
-					<UnitCombatTargetType>UNITCOMBAT_PROMOTED_ARMED_GUARD</UnitCombatTargetType>
-					<bUnitCombatTarget>1</bUnitCombatTarget>
-				</UnitCombatTarget>
-			</UnitCombatTargets>
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
 			<FreePromotions>
 				<FreePromotion>
@@ -29736,9 +29833,6 @@
 				<UnitType>UNIT_GAME_HUNTER</UnitType>
 			</UnitUpgrades>
 			<Advisor>ADVISOR_GROWTH</Advisor>
-			<bMilitaryHappiness>1</bMilitaryHappiness>
-			<bMilitarySupport>1</bMilitarySupport>
-			<bMilitaryProduction>1</bMilitaryProduction>
 			<bAssassin>1</bAssassin>
 			<UnitAIs>
 				<UnitAI>
@@ -29763,9 +29857,31 @@
 			<iCombat>7</iCombat>
 			<iXPValueAttack>8</iXPValueAttack>
 			<iXPValueDefense>4</iXPValueDefense>
-			<iPursuit>80</iPursuit>
+			<iPursuit>50</iPursuit>
 			<iCityAttack>-75</iCityAttack>
-			<iAnimalCombat>325</iAnimalCombat>
+			<iAnimalCombat>125</iAnimalCombat>
+			<UnitCombatMods>
+				<UnitCombatMod>
+					<UnitCombatType>UNITCOMBAT_ANIMAL</UnitCombatType>
+					<iUnitCombatMod>25</iUnitCombatMod>
+				</UnitCombatMod>
+			</UnitCombatMods>
+			<PursuitVSUnitCombatTypes>
+				<PursuitVSUnitCombatType>
+					<UnitCombatType>UNITCOMBAT_ANIMAL</UnitCombatType>
+					<iModifier>40</iModifier>
+				</PursuitVSUnitCombatType>
+			</PursuitVSUnitCombatTypes>
+			<UnitCombatTargets>
+				<UnitCombatTarget>
+					<UnitCombatTargetType>UNITCOMBAT_ANIMAL</UnitCombatTargetType>
+					<bUnitCombatTarget>1</bUnitCombatTarget>
+				</UnitCombatTarget>
+				<UnitCombatTarget>
+					<UnitCombatTargetType>UNITCOMBAT_PROMOTED_ARMED_GUARD</UnitCombatTargetType>
+					<bUnitCombatTarget>1</bUnitCombatTarget>
+				</UnitCombatTarget>
+			</UnitCombatTargets>
 			<iAsset>2</iAsset>
 			<iPower>2</iPower>
 			<UnitMeshGroups>
@@ -35759,9 +35875,6 @@
 				<UnitType>UNIT_WARDEN</UnitType>
 			</UnitUpgrades>
 			<Advisor>ADVISOR_GROWTH</Advisor>
-			<bMilitaryHappiness>1</bMilitaryHappiness>
-			<bMilitarySupport>1</bMilitarySupport>
-			<bMilitaryProduction>1</bMilitaryProduction>
 			<bAssassin>1</bAssassin>
 			<UnitAIs>
 				<UnitAI>
@@ -35785,9 +35898,31 @@
 			<iCombat>5</iCombat>
 			<iXPValueAttack>8</iXPValueAttack>
 			<iXPValueDefense>4</iXPValueDefense>
-			<iPursuit>60</iPursuit>
+			<iPursuit>40</iPursuit>
 			<iCityAttack>-75</iCityAttack>
-			<iAnimalCombat>325</iAnimalCombat>
+			<iAnimalCombat>150</iAnimalCombat>
+			<UnitCombatMods>
+				<UnitCombatMod>
+					<UnitCombatType>UNITCOMBAT_ANIMAL</UnitCombatType>
+					<iUnitCombatMod>25</iUnitCombatMod>
+				</UnitCombatMod>
+			</UnitCombatMods>
+			<PursuitVSUnitCombatTypes>
+				<PursuitVSUnitCombatType>
+					<UnitCombatType>UNITCOMBAT_ANIMAL</UnitCombatType>
+					<iModifier>30</iModifier>
+				</PursuitVSUnitCombatType>
+			</PursuitVSUnitCombatTypes>
+			<UnitCombatTargets>
+				<UnitCombatTarget>
+					<UnitCombatTargetType>UNITCOMBAT_ANIMAL</UnitCombatTargetType>
+					<bUnitCombatTarget>1</bUnitCombatTarget>
+				</UnitCombatTarget>
+				<UnitCombatTarget>
+					<UnitCombatTargetType>UNITCOMBAT_PROMOTED_ARMED_GUARD</UnitCombatTargetType>
+					<bUnitCombatTarget>1</bUnitCombatTarget>
+				</UnitCombatTarget>
+			</UnitCombatTargets>
 			<iAsset>2</iAsset>
 			<iPower>2</iPower>
 			<UnitMeshGroups>
@@ -35801,16 +35936,6 @@
 					<EarlyArtDefineTag>ART_DEF_UNIT_WALLABY_HUNTERS</EarlyArtDefineTag>
 				</UnitMeshGroup>
 			</UnitMeshGroups>
-			<UnitCombatTargets>
-				<UnitCombatTarget>
-					<UnitCombatTargetType>UNITCOMBAT_ANIMAL</UnitCombatTargetType>
-					<bUnitCombatTarget>1</bUnitCombatTarget>
-				</UnitCombatTarget>
-				<UnitCombatTarget>
-					<UnitCombatTargetType>UNITCOMBAT_PROMOTED_ARMED_GUARD</UnitCombatTargetType>
-					<bUnitCombatTarget>1</bUnitCombatTarget>
-				</UnitCombatTarget>
-			</UnitCombatTargets>
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
 			<FreePromotions>
 				<FreePromotion>
@@ -36648,9 +36773,6 @@
 				<UnitType>UNIT_GAME_HUNTER</UnitType>
 			</UnitUpgrades>
 			<Advisor>ADVISOR_GROWTH</Advisor>
-			<bMilitaryHappiness>1</bMilitaryHappiness>
-			<bMilitarySupport>1</bMilitarySupport>
-			<bMilitaryProduction>1</bMilitaryProduction>
 			<bAssassin>1</bAssassin>
 			<UnitAIs>
 				<UnitAI>
@@ -36674,9 +36796,31 @@
 			<iCombat>7</iCombat>
 			<iXPValueAttack>8</iXPValueAttack>
 			<iXPValueDefense>4</iXPValueDefense>
-			<iPursuit>80</iPursuit>
+			<iPursuit>50</iPursuit>
 			<iCityAttack>-75</iCityAttack>
-			<iAnimalCombat>325</iAnimalCombat>
+			<iAnimalCombat>150</iAnimalCombat>
+			<UnitCombatMods>
+				<UnitCombatMod>
+					<UnitCombatType>UNITCOMBAT_ANIMAL</UnitCombatType>
+					<iUnitCombatMod>25</iUnitCombatMod>
+				</UnitCombatMod>
+			</UnitCombatMods>
+			<PursuitVSUnitCombatTypes>
+				<PursuitVSUnitCombatType>
+					<UnitCombatType>UNITCOMBAT_ANIMAL</UnitCombatType>
+					<iModifier>40</iModifier>
+				</PursuitVSUnitCombatType>
+			</PursuitVSUnitCombatTypes>
+			<UnitCombatTargets>
+				<UnitCombatTarget>
+					<UnitCombatTargetType>UNITCOMBAT_ANIMAL</UnitCombatTargetType>
+					<bUnitCombatTarget>1</bUnitCombatTarget>
+				</UnitCombatTarget>
+				<UnitCombatTarget>
+					<UnitCombatTargetType>UNITCOMBAT_PROMOTED_ARMED_GUARD</UnitCombatTargetType>
+					<bUnitCombatTarget>1</bUnitCombatTarget>
+				</UnitCombatTarget>
+			</UnitCombatTargets>
 			<iAsset>2</iAsset>
 			<iPower>2</iPower>
 			<UnitMeshGroups>
@@ -44684,6 +44828,9 @@
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_NGAYAU</Type>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
 			<Combat>UNITCOMBAT_HUNTER</Combat>
 			<SubCombatTypes>
@@ -44707,21 +44854,11 @@
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
 				<SubCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</SubCombatType>
 			</SubCombatTypes>
-			<Domain>DOMAIN_LAND</Domain>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-			<DefaultUnitAI>UNITAI_HUNTER</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_NGAYAU</Description>
 			<Civilopedia>TXT_KEY_UNIT_NGAYAU_PEDIA</Civilopedia>
-			<UnitUpgrades>
-				<UnitType>UNIT_WARDEN</UnitType>
-			</UnitUpgrades>
 			<Advisor>ADVISOR_GROWTH</Advisor>
-			<bMilitaryHappiness>1</bMilitaryHappiness>
-			<bMilitarySupport>1</bMilitarySupport>
-			<bMilitaryProduction>1</bMilitaryProduction>
-			<bAssassin>1</bAssassin>
+			<Domain>DOMAIN_LAND</Domain>
+			<DefaultUnitAI>UNITAI_HUNTER</DefaultUnitAI>
 			<UnitAIs>
 				<UnitAI>
 					<UnitAIType>UNITAI_HUNTER</UnitAIType>
@@ -44736,41 +44873,12 @@
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
+			<UnitUpgrades>
+				<UnitType>UNIT_WARDEN</UnitType>
+			</UnitUpgrades>
+			<bAssassin>1</bAssassin>
 			<PrereqTech>TECH_BRONZE_WORKING</PrereqTech>
 			<BonusType>BONUS_DAYAK</BonusType>
-			<iCost>175</iCost>
-			<iBaseUpkeep>1</iBaseUpkeep>
-			<iMoves>2</iMoves>
-			<iCombat>5</iCombat>
-			<iXPValueAttack>8</iXPValueAttack>
-			<iXPValueDefense>4</iXPValueDefense>
-			<iPursuit>60</iPursuit>
-			<iCityAttack>-75</iCityAttack>
-			<iAnimalCombat>325</iAnimalCombat>
-			<iAsset>2</iAsset>
-			<iPower>2</iPower>
-			<UnitMeshGroups>
-				<iGroupSize>2</iGroupSize>
-				<fMaxSpeed>1.75</fMaxSpeed>
-				<fPadTime>1</fPadTime>
-				<iMeleeWaveSize>2</iMeleeWaveSize>
-				<iRangedWaveSize>0</iRangedWaveSize>
-				<UnitMeshGroup>
-					<iRequired>1</iRequired>
-					<EarlyArtDefineTag>ART_DEF_UNIT_NGAYAU</EarlyArtDefineTag>
-				</UnitMeshGroup>
-			</UnitMeshGroups>
-			<UnitCombatTargets>
-				<UnitCombatTarget>
-					<UnitCombatTargetType>UNITCOMBAT_ANIMAL</UnitCombatTargetType>
-					<bUnitCombatTarget>1</bUnitCombatTarget>
-				</UnitCombatTarget>
-				<UnitCombatTarget>
-					<UnitCombatTargetType>UNITCOMBAT_PROMOTED_ARMED_GUARD</UnitCombatTargetType>
-					<bUnitCombatTarget>1</bUnitCombatTarget>
-				</UnitCombatTarget>
-			</UnitCombatTargets>
-			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
 			<FreePromotions>
 				<FreePromotion>
 					<PromotionType>PROMOTION_HUNTING_SIGHT1</PromotionType>
@@ -44793,6 +44901,51 @@
 					<bFreePromotion>1</bFreePromotion>
 				</FreePromotion>
 			</FreePromotions>
+			<iCost>175</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
+			<iMoves>2</iMoves>
+			<iCombat>5</iCombat>
+			<iXPValueAttack>8</iXPValueAttack>
+			<iXPValueDefense>4</iXPValueDefense>
+			<iPursuit>40</iPursuit>
+			<iCityAttack>-75</iCityAttack>
+			<iAnimalCombat>175</iAnimalCombat>
+			<UnitCombatMods>
+				<UnitCombatMod>
+					<UnitCombatType>UNITCOMBAT_ANIMAL</UnitCombatType>
+					<iUnitCombatMod>25</iUnitCombatMod>
+				</UnitCombatMod>
+			</UnitCombatMods>
+			<PursuitVSUnitCombatTypes>
+				<PursuitVSUnitCombatType>
+					<UnitCombatType>UNITCOMBAT_ANIMAL</UnitCombatType>
+					<iModifier>30</iModifier>
+				</PursuitVSUnitCombatType>
+			</PursuitVSUnitCombatTypes>
+			<UnitCombatTargets>
+				<UnitCombatTarget>
+					<UnitCombatTargetType>UNITCOMBAT_ANIMAL</UnitCombatTargetType>
+					<bUnitCombatTarget>1</bUnitCombatTarget>
+				</UnitCombatTarget>
+				<UnitCombatTarget>
+					<UnitCombatTargetType>UNITCOMBAT_PROMOTED_ARMED_GUARD</UnitCombatTargetType>
+					<bUnitCombatTarget>1</bUnitCombatTarget>
+				</UnitCombatTarget>
+			</UnitCombatTargets>
+			<iAsset>2</iAsset>
+			<iPower>2</iPower>
+			<UnitMeshGroups>
+				<iGroupSize>2</iGroupSize>
+				<fMaxSpeed>1.75</fMaxSpeed>
+				<fPadTime>1</fPadTime>
+				<iMeleeWaveSize>2</iMeleeWaveSize>
+				<iRangedWaveSize>0</iRangedWaveSize>
+				<UnitMeshGroup>
+					<iRequired>1</iRequired>
+					<EarlyArtDefineTag>ART_DEF_UNIT_NGAYAU</EarlyArtDefineTag>
+				</UnitMeshGroup>
+			</UnitMeshGroups>
+			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
 			<ObsoleteTech>TECH_FEUDALISM</ObsoleteTech>
 		</UnitInfo>
 		<UnitInfo>
@@ -45960,9 +46113,6 @@
 			<Description>TXT_KEY_UNIT_SEAL_HUNTER</Description>
 			<Civilopedia>TXT_KEY_UNIT_SEAL_HUNTER_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_GROWTH</Advisor>
-			<bMilitaryHappiness>1</bMilitaryHappiness>
-			<bMilitarySupport>1</bMilitarySupport>
-			<bMilitaryProduction>1</bMilitaryProduction>
 			<bAssassin>1</bAssassin>
 			<UnitAIs>
 				<UnitAI>
@@ -45996,8 +46146,30 @@
 			<iXPValueAttack>8</iXPValueAttack>
 			<iXPValueDefense>4</iXPValueDefense>
 			<iCityAttack>-75</iCityAttack>
-			<iPursuit>40</iPursuit>
-			<iAnimalCombat>225</iAnimalCombat>
+			<iPursuit>30</iPursuit>
+			<iAnimalCombat>175</iAnimalCombat>
+			<UnitCombatMods>
+				<UnitCombatMod>
+					<UnitCombatType>UNITCOMBAT_ANIMAL</UnitCombatType>
+					<iUnitCombatMod>25</iUnitCombatMod>
+				</UnitCombatMod>
+			</UnitCombatMods>
+			<PursuitVSUnitCombatTypes>
+				<PursuitVSUnitCombatType>
+					<UnitCombatType>UNITCOMBAT_ANIMAL</UnitCombatType>
+					<iModifier>20</iModifier>
+				</PursuitVSUnitCombatType>
+			</PursuitVSUnitCombatTypes>
+			<UnitCombatTargets>
+				<UnitCombatTarget>
+					<UnitCombatTargetType>UNITCOMBAT_ANIMAL</UnitCombatTargetType>
+					<bUnitCombatTarget>1</bUnitCombatTarget>
+				</UnitCombatTarget>
+				<UnitCombatTarget>
+					<UnitCombatTargetType>UNITCOMBAT_PROMOTED_ARMED_GUARD</UnitCombatTargetType>
+					<bUnitCombatTarget>1</bUnitCombatTarget>
+				</UnitCombatTarget>
+			</UnitCombatTargets>
 			<iAsset>2</iAsset>
 			<iPower>2</iPower>
 			<UnitMeshGroups>
@@ -46011,16 +46183,6 @@
 					<EarlyArtDefineTag>ART_DEF_UNIT_SEAL_HUNTER</EarlyArtDefineTag>
 				</UnitMeshGroup>
 			</UnitMeshGroups>
-			<UnitCombatTargets>
-				<UnitCombatTarget>
-					<UnitCombatTargetType>UNITCOMBAT_ANIMAL</UnitCombatTargetType>
-					<bUnitCombatTarget>1</bUnitCombatTarget>
-				</UnitCombatTarget>
-				<UnitCombatTarget>
-					<UnitCombatTargetType>UNITCOMBAT_PROMOTED_ARMED_GUARD</UnitCombatTargetType>
-					<bUnitCombatTarget>1</bUnitCombatTarget>
-				</UnitCombatTarget>
-			</UnitCombatTargets>
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
 			<FreePromotions>
 				<FreePromotion>
@@ -50277,6 +50439,9 @@
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_TSAVO_HUNTERS</Type>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
 			<Combat>UNITCOMBAT_HUNTER</Combat>
 			<SubCombatTypes>
@@ -50299,16 +50464,10 @@
 				<SubCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
 			<DefaultUnitAI>UNITAI_HUNTER</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_TSAVO_HUNTERS</Description>
 			<Civilopedia>TXT_KEY_UNIT_TSAVO_HUNTERS_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_GROWTH</Advisor>
-			<bMilitaryHappiness>1</bMilitaryHappiness>
-			<bMilitarySupport>1</bMilitarySupport>
-			<bMilitaryProduction>1</bMilitaryProduction>
 			<bAssassin>1</bAssassin>
 			<UnitAIs>
 				<UnitAI>
@@ -50332,9 +50491,31 @@
 			<iCombat>20</iCombat>
 			<iXPValueAttack>8</iXPValueAttack>
 			<iXPValueDefense>4</iXPValueDefense>
-			<iPursuit>40</iPursuit>
+			<iPursuit>50</iPursuit>
 			<iCityAttack>-75</iCityAttack>
-			<iAnimalCombat>325</iAnimalCombat>
+			<iAnimalCombat>125</iAnimalCombat>
+			<UnitCombatMods>
+				<UnitCombatMod>
+					<UnitCombatType>UNITCOMBAT_ANIMAL</UnitCombatType>
+					<iUnitCombatMod>25</iUnitCombatMod>
+				</UnitCombatMod>
+			</UnitCombatMods>
+			<PursuitVSUnitCombatTypes>
+				<PursuitVSUnitCombatType>
+					<UnitCombatType>UNITCOMBAT_ANIMAL</UnitCombatType>
+					<iModifier>50</iModifier>
+				</PursuitVSUnitCombatType>
+			</PursuitVSUnitCombatTypes>
+			<UnitCombatTargets>
+				<UnitCombatTarget>
+					<UnitCombatTargetType>UNITCOMBAT_ANIMAL</UnitCombatTargetType>
+					<bUnitCombatTarget>1</bUnitCombatTarget>
+				</UnitCombatTarget>
+				<UnitCombatTarget>
+					<UnitCombatTargetType>UNITCOMBAT_PROMOTED_ARMED_GUARD</UnitCombatTargetType>
+					<bUnitCombatTarget>1</bUnitCombatTarget>
+				</UnitCombatTarget>
+			</UnitCombatTargets>
 			<iAsset>2</iAsset>
 			<iPower>2</iPower>
 			<UnitMeshGroups>
@@ -50348,16 +50529,6 @@
 					<EarlyArtDefineTag>ART_DEF_UNIT_TSAVO_HUNTERS</EarlyArtDefineTag>
 				</UnitMeshGroup>
 			</UnitMeshGroups>
-			<UnitCombatTargets>
-				<UnitCombatTarget>
-					<UnitCombatTargetType>UNITCOMBAT_ANIMAL</UnitCombatTargetType>
-					<bUnitCombatTarget>1</bUnitCombatTarget>
-				</UnitCombatTarget>
-				<UnitCombatTarget>
-					<UnitCombatTargetType>UNITCOMBAT_PROMOTED_ARMED_GUARD</UnitCombatTargetType>
-					<bUnitCombatTarget>1</bUnitCombatTarget>
-				</UnitCombatTarget>
-			</UnitCombatTargets>
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
 			<FreePromotions>
 				<FreePromotion>

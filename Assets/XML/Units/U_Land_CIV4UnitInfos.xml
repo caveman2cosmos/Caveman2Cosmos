@@ -497,6 +497,7 @@
 			<iXPValueDefense>4</iXPValueDefense>
 			<iWithdrawalProb>10</iWithdrawalProb>
 			<iEarlyWithdraw>50</iEarlyWithdraw>
+			<iAnimalCombat>50</iAnimalCombat>
 			<iAsset>2</iAsset>
 			<iPower>1</iPower>
 			<UnitMeshGroups>
@@ -584,6 +585,7 @@
 			<iXPValueDefense>4</iXPValueDefense>
 			<iWithdrawalProb>40</iWithdrawalProb>
 			<iEarlyWithdraw>25</iEarlyWithdraw>
+			<iAnimalCombat>25</iAnimalCombat>
 			<iAsset>1</iAsset>
 			<UnitMeshGroups>
 				<iGroupSize>2</iGroupSize>
@@ -665,6 +667,7 @@
 			<iXPValueDefense>4</iXPValueDefense>
 			<iWithdrawalProb>50</iWithdrawalProb>
 			<iEarlyWithdraw>30</iEarlyWithdraw>
+			<iAnimalCombat>25</iAnimalCombat>
 			<iAsset>1</iAsset>
 			<UnitMeshGroups>
 				<iGroupSize>2</iGroupSize>
@@ -748,6 +751,7 @@
 			<iXPValueDefense>4</iXPValueDefense>
 			<iWithdrawalProb>60</iWithdrawalProb>
 			<iEarlyWithdraw>35</iEarlyWithdraw>
+			<iAnimalCombat>25</iAnimalCombat>
 			<iAsset>1</iAsset>
 			<UnitMeshGroups>
 				<iGroupSize>2</iGroupSize>
@@ -835,6 +839,7 @@
 			<iXPValueDefense>4</iXPValueDefense>
 			<iWithdrawalProb>30</iWithdrawalProb>
 			<iEarlyWithdraw>30</iEarlyWithdraw>
+			<iAnimalCombat>25</iAnimalCombat>
 			<iAsset>1</iAsset>
 			<UnitMeshGroups>
 				<iGroupSize>2</iGroupSize>
@@ -918,6 +923,7 @@
 			<iXPValueDefense>4</iXPValueDefense>
 			<iWithdrawalProb>30</iWithdrawalProb>
 			<iEarlyWithdraw>30</iEarlyWithdraw>
+			<iAnimalCombat>25</iAnimalCombat>
 			<iAsset>1</iAsset>
 			<UnitMeshGroups>
 				<iGroupSize>1</iGroupSize>
@@ -1014,6 +1020,7 @@
 			<iXPValueDefense>4</iXPValueDefense>
 			<iWithdrawalProb>70</iWithdrawalProb>
 			<iEarlyWithdraw>40</iEarlyWithdraw>
+			<iAnimalCombat>25</iAnimalCombat>
 			<iAsset>1</iAsset>
 			<UnitMeshGroups>
 				<iGroupSize>2</iGroupSize>
@@ -1107,6 +1114,7 @@
 			<iXPValueDefense>4</iXPValueDefense>
 			<iWithdrawalProb>80</iWithdrawalProb>
 			<iEarlyWithdraw>50</iEarlyWithdraw>
+			<iAnimalCombat>25</iAnimalCombat>
 			<iAsset>5</iAsset>
 			<iPower>18</iPower>
 			<UnitMeshGroups>
@@ -1138,7 +1146,6 @@
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_CHASER</Type>
-			<iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<iInstanceCostModifier>10</iInstanceCostModifier>
 			<Combat>UNITCOMBAT_HUNTER</Combat>
 			<SubCombatTypes>
@@ -1198,7 +1205,7 @@
 			<iXPValueDefense>1</iXPValueDefense>
 			<iPursuit>10</iPursuit>
 			<iCityAttack>-75</iCityAttack>
-			<iAnimalCombat>100</iAnimalCombat>
+			<iAnimalCombat>125</iAnimalCombat>
 			<iEarlyWithdraw>30</iEarlyWithdraw>
 			<UnitCombatMods>
 				<UnitCombatMod>
@@ -1217,7 +1224,27 @@
 					<UnitCombatType>UNITCOMBAT_ANIMAL_COMBAT_HIDING</UnitCombatType>
 					<iUnitCombatMod>-25</iUnitCombatMod>
 				</UnitCombatMod>
+				<UnitCombatMod>
+					<UnitCombatType>UNITCOMBAT_ANIMAL</UnitCombatType>
+					<iUnitCombatMod>25</iUnitCombatMod>
+				</UnitCombatMod>
 			</UnitCombatMods>
+			<PursuitVSUnitCombatTypes>
+				<PursuitVSUnitCombatType>
+					<UnitCombatType>UNITCOMBAT_ANIMAL</UnitCombatType>
+					<iModifier>20</iModifier>
+				</PursuitVSUnitCombatType>
+			</PursuitVSUnitCombatTypes>
+			<UnitCombatTargets>
+				<UnitCombatTarget>
+					<UnitCombatTargetType>UNITCOMBAT_ANIMAL</UnitCombatTargetType>
+					<bUnitCombatTarget>1</bUnitCombatTarget>
+				</UnitCombatTarget>
+				<UnitCombatTarget>
+					<UnitCombatTargetType>UNITCOMBAT_PROMOTED_ARMED_GUARD</UnitCombatTargetType>
+					<bUnitCombatTarget>1</bUnitCombatTarget>
+				</UnitCombatTarget>
+			</UnitCombatTargets>
 			<iAsset>1</iAsset>
 			<iPower>1</iPower>
 			<UnitMeshGroups>
@@ -1235,7 +1262,9 @@
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_TRACKER</Type>
-			<iMaxPlayerInstances>5</iMaxPlayerInstances>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<iInstanceCostModifier>10</iInstanceCostModifier>
 			<Combat>UNITCOMBAT_HUNTER</Combat>
 			<SubCombatTypes>
@@ -1282,9 +1311,6 @@
 				</UnitAI>
 			</NotUnitAIs>
 			<bAssassin>1</bAssassin>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
 			<PrereqTech>TECH_TRACKING</PrereqTech>
 			<UnitUpgrades>
 				<UnitType>UNIT_HUNTER</UnitType>
@@ -1302,7 +1328,37 @@
 			<iXPValueDefense>1</iXPValueDefense>
 			<iCityAttack>-75</iCityAttack>
 			<iPursuit>20</iPursuit>
-			<iAnimalCombat>100</iAnimalCombat>
+			<iAnimalCombat>125</iAnimalCombat>
+			<UnitCombatMods>
+				<UnitCombatMod>
+					<UnitCombatType>UNITCOMBAT_ANIMAL_COMBAT_FLEEING</UnitCombatType>
+					<iUnitCombatMod>20</iUnitCombatMod>
+				</UnitCombatMod>
+				<UnitCombatMod>
+					<UnitCombatType>UNITCOMBAT_ANIMAL_COMBAT_HIDING</UnitCombatType>
+					<iUnitCombatMod>20</iUnitCombatMod>
+				</UnitCombatMod>
+				<UnitCombatMod>
+					<UnitCombatType>UNITCOMBAT_ANIMAL</UnitCombatType>
+					<iUnitCombatMod>25</iUnitCombatMod>
+				</UnitCombatMod>
+			</UnitCombatMods>
+			<PursuitVSUnitCombatTypes>
+				<PursuitVSUnitCombatType>
+					<UnitCombatType>UNITCOMBAT_ANIMAL</UnitCombatType>
+					<iModifier>20</iModifier>
+				</PursuitVSUnitCombatType>
+			</PursuitVSUnitCombatTypes>
+			<UnitCombatTargets>
+				<UnitCombatTarget>
+					<UnitCombatTargetType>UNITCOMBAT_ANIMAL</UnitCombatTargetType>
+					<bUnitCombatTarget>1</bUnitCombatTarget>
+				</UnitCombatTarget>
+				<UnitCombatTarget>
+					<UnitCombatTargetType>UNITCOMBAT_PROMOTED_ARMED_GUARD</UnitCombatTargetType>
+					<bUnitCombatTarget>1</bUnitCombatTarget>
+				</UnitCombatTarget>
+			</UnitCombatTargets>
 			<iAsset>2</iAsset>
 			<iPower>2</iPower>
 			<UnitMeshGroups>
@@ -1316,21 +1372,10 @@
 					<EarlyArtDefineTag>ART_DEF_UNIT_TRACKER</EarlyArtDefineTag>
 				</UnitMeshGroup>
 			</UnitMeshGroups>
-			<UnitCombatTargets>
-				<UnitCombatTarget>
-					<UnitCombatTargetType>UNITCOMBAT_ANIMAL</UnitCombatTargetType>
-					<bUnitCombatTarget>1</bUnitCombatTarget>
-				</UnitCombatTarget>
-				<UnitCombatTarget>
-					<UnitCombatTargetType>UNITCOMBAT_PROMOTED_ARMED_GUARD</UnitCombatTargetType>
-					<bUnitCombatTarget>1</bUnitCombatTarget>
-				</UnitCombatTarget>
-			</UnitCombatTargets>
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_HUNTER</Type>
-			<iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<iInstanceCostModifier>10</iInstanceCostModifier>
 			<Combat>UNITCOMBAT_HUNTER</Combat>
 			<SubCombatTypes>
@@ -1393,7 +1438,29 @@
 			<iXPValueDefense>1</iXPValueDefense>
 			<iCityAttack>-75</iCityAttack>
 			<iPursuit>30</iPursuit>
-			<iAnimalCombat>100</iAnimalCombat>
+			<iAnimalCombat>125</iAnimalCombat>
+			<UnitCombatMods>
+				<UnitCombatMod>
+					<UnitCombatType>UNITCOMBAT_ANIMAL</UnitCombatType>
+					<iUnitCombatMod>25</iUnitCombatMod>
+				</UnitCombatMod>
+			</UnitCombatMods>
+			<PursuitVSUnitCombatTypes>
+				<PursuitVSUnitCombatType>
+					<UnitCombatType>UNITCOMBAT_ANIMAL</UnitCombatType>
+					<iModifier>20</iModifier>
+				</PursuitVSUnitCombatType>
+			</PursuitVSUnitCombatTypes>
+			<UnitCombatTargets>
+				<UnitCombatTarget>
+					<UnitCombatTargetType>UNITCOMBAT_ANIMAL</UnitCombatTargetType>
+					<bUnitCombatTarget>1</bUnitCombatTarget>
+				</UnitCombatTarget>
+				<UnitCombatTarget>
+					<UnitCombatTargetType>UNITCOMBAT_PROMOTED_ARMED_GUARD</UnitCombatTargetType>
+					<bUnitCombatTarget>1</bUnitCombatTarget>
+				</UnitCombatTarget>
+			</UnitCombatTargets>
 			<iAsset>2</iAsset>
 			<iPower>2</iPower>
 			<UnitMeshGroups>
@@ -1407,16 +1474,6 @@
 					<EarlyArtDefineTag>ART_DEF_UNIT_HUNTER</EarlyArtDefineTag>
 				</UnitMeshGroup>
 			</UnitMeshGroups>
-			<UnitCombatTargets>
-				<UnitCombatTarget>
-					<UnitCombatTargetType>UNITCOMBAT_ANIMAL</UnitCombatTargetType>
-					<bUnitCombatTarget>1</bUnitCombatTarget>
-				</UnitCombatTarget>
-				<UnitCombatTarget>
-					<UnitCombatTargetType>UNITCOMBAT_PROMOTED_ARMED_GUARD</UnitCombatTargetType>
-					<bUnitCombatTarget>1</bUnitCombatTarget>
-				</UnitCombatTarget>
-			</UnitCombatTargets>
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
 			<FreePromotions>
 				<FreePromotion>
@@ -1431,7 +1488,6 @@
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_RANGER</Type>
-			<iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<iInstanceCostModifier>10</iInstanceCostModifier>
 			<Combat>UNITCOMBAT_HUNTER</Combat>
 			<SubCombatTypes>
@@ -1488,9 +1544,31 @@
 			<iCombat>5</iCombat>
 			<iXPValueAttack>2</iXPValueAttack>
 			<iXPValueDefense>1</iXPValueDefense>
-			<iPursuit>50</iPursuit>
+			<iPursuit>40</iPursuit>
 			<iCityAttack>-75</iCityAttack>
-			<iAnimalCombat>100</iAnimalCombat>
+			<iAnimalCombat>125</iAnimalCombat>
+			<UnitCombatMods>
+				<UnitCombatMod>
+					<UnitCombatType>UNITCOMBAT_ANIMAL</UnitCombatType>
+					<iUnitCombatMod>25</iUnitCombatMod>
+				</UnitCombatMod>
+			</UnitCombatMods>
+			<PursuitVSUnitCombatTypes>
+				<PursuitVSUnitCombatType>
+					<UnitCombatType>UNITCOMBAT_ANIMAL</UnitCombatType>
+					<iModifier>30</iModifier>
+				</PursuitVSUnitCombatType>
+			</PursuitVSUnitCombatTypes>
+			<UnitCombatTargets>
+				<UnitCombatTarget>
+					<UnitCombatTargetType>UNITCOMBAT_ANIMAL</UnitCombatTargetType>
+					<bUnitCombatTarget>1</bUnitCombatTarget>
+				</UnitCombatTarget>
+				<UnitCombatTarget>
+					<UnitCombatTargetType>UNITCOMBAT_PROMOTED_ARMED_GUARD</UnitCombatTargetType>
+					<bUnitCombatTarget>1</bUnitCombatTarget>
+				</UnitCombatTarget>
+			</UnitCombatTargets>
 			<iAsset>2</iAsset>
 			<iPower>2</iPower>
 			<UnitMeshGroups>
@@ -1504,16 +1582,6 @@
 					<EarlyArtDefineTag>ART_DEF_UNIT_RANGER</EarlyArtDefineTag>
 				</UnitMeshGroup>
 			</UnitMeshGroups>
-			<UnitCombatTargets>
-				<UnitCombatTarget>
-					<UnitCombatTargetType>UNITCOMBAT_ANIMAL</UnitCombatTargetType>
-					<bUnitCombatTarget>1</bUnitCombatTarget>
-				</UnitCombatTarget>
-				<UnitCombatTarget>
-					<UnitCombatTargetType>UNITCOMBAT_PROMOTED_ARMED_GUARD</UnitCombatTargetType>
-					<bUnitCombatTarget>1</bUnitCombatTarget>
-				</UnitCombatTarget>
-			</UnitCombatTargets>
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
 			<FreePromotions>
 				<FreePromotion>
@@ -1529,7 +1597,6 @@
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_WARDEN</Type>
-			<iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<iInstanceCostModifier>10</iInstanceCostModifier>
 			<Combat>UNITCOMBAT_HUNTER</Combat>
 			<SubCombatTypes>
@@ -1585,9 +1652,21 @@
 			<iCombat>7</iCombat>
 			<iXPValueAttack>2</iXPValueAttack>
 			<iXPValueDefense>1</iXPValueDefense>
-			<iPursuit>70</iPursuit>
+			<iPursuit>50</iPursuit>
 			<iCityAttack>-75</iCityAttack>
-			<iAnimalCombat>100</iAnimalCombat>
+			<iAnimalCombat>125</iAnimalCombat>
+			<UnitCombatMods>
+				<UnitCombatMod>
+					<UnitCombatType>UNITCOMBAT_ANIMAL</UnitCombatType>
+					<iUnitCombatMod>25</iUnitCombatMod>
+				</UnitCombatMod>
+			</UnitCombatMods>
+			<PursuitVSUnitCombatTypes>
+				<PursuitVSUnitCombatType>
+					<UnitCombatType>UNITCOMBAT_ANIMAL</UnitCombatType>
+					<iModifier>40</iModifier>
+				</PursuitVSUnitCombatType>
+			</PursuitVSUnitCombatTypes>
 			<UnitCombatTargets>
 				<UnitCombatTarget>
 					<UnitCombatTargetType>UNITCOMBAT_ANIMAL</UnitCombatTargetType>
@@ -1626,7 +1705,6 @@
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_GAME_HUNTER</Type>
-			<iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<iInstanceCostModifier>10</iInstanceCostModifier>
 			<Combat>UNITCOMBAT_HUNTER</Combat>
 			<SubCombatTypes>
@@ -1684,7 +1762,29 @@
 			<iXPValueDefense>1</iXPValueDefense>
 			<iPursuit>50</iPursuit>
 			<iCityAttack>-75</iCityAttack>
-			<iAnimalCombat>100</iAnimalCombat>
+			<iAnimalCombat>125</iAnimalCombat>
+			<UnitCombatMods>
+				<UnitCombatMod>
+					<UnitCombatType>UNITCOMBAT_ANIMAL</UnitCombatType>
+					<iUnitCombatMod>25</iUnitCombatMod>
+				</UnitCombatMod>
+			</UnitCombatMods>
+			<PursuitVSUnitCombatTypes>
+				<PursuitVSUnitCombatType>
+					<UnitCombatType>UNITCOMBAT_ANIMAL</UnitCombatType>
+					<iModifier>50</iModifier>
+				</PursuitVSUnitCombatType>
+			</PursuitVSUnitCombatTypes>
+			<UnitCombatTargets>
+				<UnitCombatTarget>
+					<UnitCombatTargetType>UNITCOMBAT_ANIMAL</UnitCombatTargetType>
+					<bUnitCombatTarget>1</bUnitCombatTarget>
+				</UnitCombatTarget>
+				<UnitCombatTarget>
+					<UnitCombatTargetType>UNITCOMBAT_PROMOTED_ARMED_GUARD</UnitCombatTargetType>
+					<bUnitCombatTarget>1</bUnitCombatTarget>
+				</UnitCombatTarget>
+			</UnitCombatTargets>
 			<iAsset>2</iAsset>
 			<iPower>2</iPower>
 			<UnitMeshGroups>
@@ -1698,16 +1798,6 @@
 					<EarlyArtDefineTag>ART_DEF_UNIT_GAME_HUNTER</EarlyArtDefineTag>
 				</UnitMeshGroup>
 			</UnitMeshGroups>
-			<UnitCombatTargets>
-				<UnitCombatTarget>
-					<UnitCombatTargetType>UNITCOMBAT_ANIMAL</UnitCombatTargetType>
-					<bUnitCombatTarget>1</bUnitCombatTarget>
-				</UnitCombatTarget>
-				<UnitCombatTarget>
-					<UnitCombatTargetType>UNITCOMBAT_PROMOTED_ARMED_GUARD</UnitCombatTargetType>
-					<bUnitCombatTarget>1</bUnitCombatTarget>
-				</UnitCombatTarget>
-			</UnitCombatTargets>
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
 			<FreePromotions>
 				<FreePromotion>
@@ -1723,7 +1813,6 @@
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_BIG_GAME_HUNTER</Type>
-			<iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<iInstanceCostModifier>10</iInstanceCostModifier>
 			<Combat>UNITCOMBAT_HUNTER</Combat>
 			<SubCombatTypes>
@@ -1775,9 +1864,31 @@
 			<iCombat>15</iCombat>
 			<iXPValueAttack>2</iXPValueAttack>
 			<iXPValueDefense>1</iXPValueDefense>
-			<iPursuit>30</iPursuit>
+			<iPursuit>50</iPursuit>
 			<iCityAttack>-75</iCityAttack>
-			<iAnimalCombat>100</iAnimalCombat>
+			<iAnimalCombat>125</iAnimalCombat>
+			<UnitCombatMods>
+				<UnitCombatMod>
+					<UnitCombatType>UNITCOMBAT_ANIMAL</UnitCombatType>
+					<iUnitCombatMod>25</iUnitCombatMod>
+				</UnitCombatMod>
+			</UnitCombatMods>
+			<PursuitVSUnitCombatTypes>
+				<PursuitVSUnitCombatType>
+					<UnitCombatType>UNITCOMBAT_ANIMAL</UnitCombatType>
+					<iModifier>50</iModifier>
+				</PursuitVSUnitCombatType>
+			</PursuitVSUnitCombatTypes>
+			<UnitCombatTargets>
+				<UnitCombatTarget>
+					<UnitCombatTargetType>UNITCOMBAT_ANIMAL</UnitCombatTargetType>
+					<bUnitCombatTarget>1</bUnitCombatTarget>
+				</UnitCombatTarget>
+				<UnitCombatTarget>
+					<UnitCombatTargetType>UNITCOMBAT_PROMOTED_ARMED_GUARD</UnitCombatTargetType>
+					<bUnitCombatTarget>1</bUnitCombatTarget>
+				</UnitCombatTarget>
+			</UnitCombatTargets>
 			<iAsset>2</iAsset>
 			<iPower>2</iPower>
 			<UnitMeshGroups>
@@ -1791,16 +1902,6 @@
 					<EarlyArtDefineTag>ART_DEF_UNIT_BIG_GAME_HUNTER</EarlyArtDefineTag>
 				</UnitMeshGroup>
 			</UnitMeshGroups>
-			<UnitCombatTargets>
-				<UnitCombatTarget>
-					<UnitCombatTargetType>UNITCOMBAT_ANIMAL</UnitCombatTargetType>
-					<bUnitCombatTarget>1</bUnitCombatTarget>
-				</UnitCombatTarget>
-				<UnitCombatTarget>
-					<UnitCombatTargetType>UNITCOMBAT_PROMOTED_ARMED_GUARD</UnitCombatTargetType>
-					<bUnitCombatTarget>1</bUnitCombatTarget>
-				</UnitCombatTarget>
-			</UnitCombatTargets>
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
 			<FreePromotions>
 				<FreePromotion>
@@ -44791,9 +44892,9 @@
 			<iCombat>2</iCombat>
 			<iXPValueAttack>1</iXPValueAttack>
 			<iXPValueDefense>2</iXPValueDefense>
-			<iPursuit>10</iPursuit>
+			<iPursuit>20</iPursuit>
 			<iCityAttack>-75</iCityAttack>
-			<iAnimalCombat>100</iAnimalCombat>
+			<iAnimalCombat>125</iAnimalCombat>
 			<iEarlyWithdraw>30</iEarlyWithdraw>
 			<UnitCombatMods>
 				<UnitCombatMod>
@@ -44812,7 +44913,21 @@
 					<UnitCombatType>UNITCOMBAT_ANIMAL_COMBAT_HIDING</UnitCombatType>
 					<iUnitCombatMod>-25</iUnitCombatMod>
 				</UnitCombatMod>
+				<UnitCombatMod>
+					<UnitCombatType>UNITCOMBAT_ANIMAL</UnitCombatType>
+					<iUnitCombatMod>25</iUnitCombatMod>
+				</UnitCombatMod>
 			</UnitCombatMods>
+			<UnitCombatTargets>
+				<UnitCombatTarget>
+					<UnitCombatTargetType>UNITCOMBAT_ANIMAL</UnitCombatTargetType>
+					<bUnitCombatTarget>1</bUnitCombatTarget>
+				</UnitCombatTarget>
+				<UnitCombatTarget>
+					<UnitCombatTargetType>UNITCOMBAT_PROMOTED_ARMED_GUARD</UnitCombatTargetType>
+					<bUnitCombatTarget>1</bUnitCombatTarget>
+				</UnitCombatTarget>
+			</UnitCombatTargets>
 			<iAsset>1</iAsset>
 			<iPower>1</iPower>
 			<UnitMeshGroups>
@@ -44890,8 +45005,22 @@
 			<iXPValueAttack>1</iXPValueAttack>
 			<iXPValueDefense>2</iXPValueDefense>
 			<iCityAttack>-75</iCityAttack>
-			<iPursuit>20</iPursuit>
-			<iAnimalCombat>100</iAnimalCombat>
+			<iPursuit>30</iPursuit>
+			<iAnimalCombat>125</iAnimalCombat>
+			<UnitCombatMods>
+				<UnitCombatMod>
+					<UnitCombatType>UNITCOMBAT_ANIMAL_COMBAT_FLEEING</UnitCombatType>
+					<iUnitCombatMod>20</iUnitCombatMod>
+				</UnitCombatMod>
+				<UnitCombatMod>
+					<UnitCombatType>UNITCOMBAT_ANIMAL_COMBAT_HIDING</UnitCombatType>
+					<iUnitCombatMod>20</iUnitCombatMod>
+				</UnitCombatMod>
+				<UnitCombatMod>
+					<UnitCombatType>UNITCOMBAT_ANIMAL</UnitCombatType>
+					<iUnitCombatMod>25</iUnitCombatMod>
+				</UnitCombatMod>
+			</UnitCombatMods>
 			<UnitCombatTargets>
 				<UnitCombatTarget>
 					<UnitCombatTargetType>UNITCOMBAT_ANIMAL</UnitCombatTargetType>
@@ -44986,8 +45115,14 @@
 			<iXPValueAttack>1</iXPValueAttack>
 			<iXPValueDefense>2</iXPValueDefense>
 			<iCityAttack>-75</iCityAttack>
-			<iPursuit>30</iPursuit>
-			<iAnimalCombat>100</iAnimalCombat>
+			<iPursuit>40</iPursuit>
+			<iAnimalCombat>125</iAnimalCombat>
+			<UnitCombatMods>
+				<UnitCombatMod>
+					<UnitCombatType>UNITCOMBAT_ANIMAL</UnitCombatType>
+					<iUnitCombatMod>25</iUnitCombatMod>
+				</UnitCombatMod>
+			</UnitCombatMods>
 			<UnitCombatTargets>
 				<UnitCombatTarget>
 					<UnitCombatTargetType>UNITCOMBAT_ANIMAL</UnitCombatTargetType>
@@ -45088,9 +45223,15 @@
 			<iCombat>6</iCombat>
 			<iXPValueAttack>1</iXPValueAttack>
 			<iXPValueDefense>2</iXPValueDefense>
-			<iPursuit>50</iPursuit>
+			<iPursuit>60</iPursuit>
 			<iCityAttack>-75</iCityAttack>
-			<iAnimalCombat>100</iAnimalCombat>
+			<iAnimalCombat>125</iAnimalCombat>
+			<UnitCombatMods>
+				<UnitCombatMod>
+					<UnitCombatType>UNITCOMBAT_ANIMAL</UnitCombatType>
+					<iUnitCombatMod>25</iUnitCombatMod>
+				</UnitCombatMod>
+			</UnitCombatMods>
 			<UnitCombatTargets>
 				<UnitCombatTarget>
 					<UnitCombatTargetType>UNITCOMBAT_ANIMAL</UnitCombatTargetType>
@@ -45194,9 +45335,15 @@
 			<iCombat>8</iCombat>
 			<iXPValueAttack>1</iXPValueAttack>
 			<iXPValueDefense>2</iXPValueDefense>
-			<iPursuit>70</iPursuit>
+			<iPursuit>80</iPursuit>
 			<iCityAttack>-75</iCityAttack>
-			<iAnimalCombat>100</iAnimalCombat>
+			<iAnimalCombat>125</iAnimalCombat>
+			<UnitCombatMods>
+				<UnitCombatMod>
+					<UnitCombatType>UNITCOMBAT_ANIMAL</UnitCombatType>
+					<iUnitCombatMod>25</iUnitCombatMod>
+				</UnitCombatMod>
+			</UnitCombatMods>
 			<UnitCombatTargets>
 				<UnitCombatTarget>
 					<UnitCombatTargetType>UNITCOMBAT_ANIMAL</UnitCombatTargetType>
@@ -45304,9 +45451,15 @@
 			<iCombat>11</iCombat>
 			<iXPValueAttack>1</iXPValueAttack>
 			<iXPValueDefense>2</iXPValueDefense>
-			<iPursuit>50</iPursuit>
+			<iPursuit>60</iPursuit>
 			<iCityAttack>-75</iCityAttack>
-			<iAnimalCombat>100</iAnimalCombat>
+			<iAnimalCombat>125</iAnimalCombat>
+			<UnitCombatMods>
+				<UnitCombatMod>
+					<UnitCombatType>UNITCOMBAT_ANIMAL</UnitCombatType>
+					<iUnitCombatMod>25</iUnitCombatMod>
+				</UnitCombatMod>
+			</UnitCombatMods>
 			<UnitCombatTargets>
 				<UnitCombatTarget>
 					<UnitCombatTargetType>UNITCOMBAT_ANIMAL</UnitCombatTargetType>
@@ -45410,9 +45563,15 @@
 			<iCombat>16</iCombat>
 			<iXPValueAttack>1</iXPValueAttack>
 			<iXPValueDefense>2</iXPValueDefense>
-			<iPursuit>30</iPursuit>
+			<iPursuit>40</iPursuit>
 			<iCityAttack>-75</iCityAttack>
-			<iAnimalCombat>100</iAnimalCombat>
+			<iAnimalCombat>125</iAnimalCombat>
+			<UnitCombatMods>
+				<UnitCombatMod>
+					<UnitCombatType>UNITCOMBAT_ANIMAL</UnitCombatType>
+					<iUnitCombatMod>25</iUnitCombatMod>
+				</UnitCombatMod>
+			</UnitCombatMods>
 			<UnitCombatTargets>
 				<UnitCombatTarget>
 					<UnitCombatTargetType>UNITCOMBAT_ANIMAL</UnitCombatTargetType>
