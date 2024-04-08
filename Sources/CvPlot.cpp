@@ -11647,7 +11647,6 @@ int CvPlot::getYieldWithBuild(BuildTypes eBuild, YieldTypes eYield, bool bWithUp
 bool CvPlot::canTrigger(EventTriggerTypes eTrigger, PlayerTypes ePlayer) const
 {
 	PROFILE_EXTRA_FUNC();
-	FAssert(::isPlotEventTrigger(eTrigger));
 
 	const CvEventTriggerInfo& kTrigger = GC.getEventTriggerInfo(eTrigger);
 
@@ -11770,7 +11769,7 @@ bool CvPlot::canTrigger(EventTriggerTypes eTrigger, PlayerTypes ePlayer) const
 		{
 			if (pLoopUnit->getOwner() == ePlayer)
 			{
-				if (-1 != pLoopUnit->getTriggerValue(eTrigger, this, false))
+				if (MIN_INT != pLoopUnit->getTriggerValue(eTrigger, this, false))
 				{
 					bFoundValid = true;
 					break;
@@ -11804,7 +11803,6 @@ bool CvPlot::canTrigger(EventTriggerTypes eTrigger, PlayerTypes ePlayer) const
 			return false;
 		}
 	}
-
 
 	return true;
 }

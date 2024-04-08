@@ -1191,59 +1191,6 @@ void setTradeItem(TradeData* pItem, TradeableItems eItemType, int iData)
 	pItem->m_bHidden = false;
 }
 
-bool isPlotEventTrigger(EventTriggerTypes eTrigger)
-{
-	if (eTrigger == NO_EVENTTRIGGER)
-		return false;
-
-	const CvEventTriggerInfo& kTrigger = GC.getEventTriggerInfo(eTrigger);
-
-	if (kTrigger.getNumPlotsRequired() > 0)
-	{
-		if (kTrigger.getPlotType() != NO_PLOT)
-		{
-			return true;
-		}
-
-		if (kTrigger.getNumFeaturesRequired() > 0)
-		{
-			return true;
-		}
-
-		if (kTrigger.getNumTerrainsRequired() > 0)
-		{
-			return true;
-		}
-
-		if (kTrigger.getNumImprovementsRequired() > 0)
-		{
-			return true;
-		}
-
-		if (kTrigger.getNumBonusesRequired() > 0)
-		{
-			return true;
-		}
-
-		if (kTrigger.getNumRoutesRequired() > 0)
-		{
-			return true;
-		}
-
-		if (kTrigger.isUnitsOnPlot() && kTrigger.getNumUnitsRequired() > 0)
-		{
-			return true;
-		}
-
-		if (kTrigger.isPrereqEventCity() && !kTrigger.isPickCity())
-		{
-			return true;
-		}
-	}
-
-	return false;
-}
-
 
 TechTypes getDiscoveryTech(const UnitTypes eUnit, const PlayerTypes ePlayer)
 {

@@ -553,12 +553,9 @@ bool CvOutcome::isPossible(const CvUnit& kUnit) const
 			}
 		}
 
-		if (isPlotEventTrigger(m_eEventTrigger))
+		if (!kUnit.plot()->canTrigger(m_eEventTrigger, kUnit.getOwner()))
 		{
-			if (!kUnit.plot()->canTrigger(m_eEventTrigger, kUnit.getOwner()))
-			{
-				return false;
-			}
+			return false;
 		}
 	}
 
@@ -870,21 +867,15 @@ bool CvOutcome::isPossibleInPlot(const CvUnit& kUnit, const CvPlot& kPlot, bool 
 		if (kTriggerInfo.isPickCity())
 		{
 			const CvCity* pCity = kPlot.getPlotCity();
-			if (pCity)
-			{
-				if (!pCity->isEventTriggerPossible(m_eEventTrigger))
-				{
-					return false;
-				}
-			}
-		}
-
-		if (isPlotEventTrigger(m_eEventTrigger))
-		{
-			if (!kPlot.canTrigger(m_eEventTrigger, kUnit.getOwner()))
+			if (pCity && !pCity->isEventTriggerPossible(m_eEventTrigger))
 			{
 				return false;
 			}
+		}
+
+		if (!kPlot.canTrigger(m_eEventTrigger, kUnit.getOwner()))
+		{
+			return false;
 		}
 	}
 

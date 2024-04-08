@@ -1346,12 +1346,6 @@
 			<iWeight>5</iWeight>
 			<iNumPlotsRequired>1</iNumPlotsRequired>
 			<bOwnPlot>1</bOwnPlot>
-			<ImprovementsRequired>
-				<ImprovementType>NONE</ImprovementType>
-			</ImprovementsRequired>
-			<RoutesRequired>
-				<RouteType>NONE</RouteType>
-			</RoutesRequired>
 			<Events>
 				<Event>EVENT_SPICY_1</Event>
 				<Event>EVENT_SPICY_2</Event>

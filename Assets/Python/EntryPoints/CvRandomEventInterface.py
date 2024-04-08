@@ -331,40 +331,42 @@ def getHelpWeddingFeud3(argsList):
 ######## SPICY ###########
 
 def canTriggerSpicy(argsList):
-  data = argsList[0]
-  player = GC.getPlayer(data.ePlayer)
+	data = argsList[0]
+	player = GC.getPlayer(data.ePlayer)
 
-  iSpice = GC.getInfoTypeForString("BONUS_SPICES")
-  iHappyBonuses = 0
-  bSpices = False
-  for i in xrange(GC.getNumBonusInfos()):
-    bonus = GC.getBonusInfo(i)
-    iNum = player.getNumAvailableBonuses(i)
-    if iNum > 0 :
-      if bonus.getHappiness() > 0:
-        iHappyBonuses += 1
-        if iHappyBonuses > 4:
-          return False
-      if i == iSpice:
-        return False
+	iSpice = GC.getInfoTypeForString("BONUS_SPICES")
 
-  plot = GC.getMap().plot(data.iPlotX, data.iPlotY)
-  if not plot.canHaveBonus(iSpice, False):
-    return False
+	plot = GC.getMap().plot(data.iPlotX, data.iPlotY)
+	if not plot:
+		try:
+			raise "ERROR in canTriggerSpicy from bad trigger definition"
+		except:
+			return False
 
-  return True
+	if not plot.canHaveBonus(iSpice, False):
+		return False
+
+	iHappyBonuses = 0
+
+	for i in xrange(GC.getNumBonusInfos()):
+		bonus = GC.getBonusInfo(i)
+		if player.getNumAvailableBonuses(i) > 0:
+			if bonus.getHappiness() > 0:
+				iHappyBonuses += 1
+				if iHappyBonuses > 4:
+					return False
+			if i == iSpice:
+				return False
+
+	return True
 
 def doSpicy2(argsList):
-	# need this because plantations are notmally not allowed unless there are already spices
-	data = argsList[1]
-	plot = GC.getMap().plot(data.iPlotX, data.iPlotY)
-	if plot:
-		plot.setImprovementType(GC.getInfoTypeForString("IMPROVEMENT_PLANTATION"))
+	# need this because plantations are normally not allowed unless there are already spices
+	GC.getMap().plot(argsList[1].iPlotX, argsList[1].iPlotY).setImprovementType(GC.getInfoTypeForString("IMPROVEMENT_PLANTATION"))
 	return 1
 
 def getHelpSpicy2(argsList):
-	iPlantation = GC.getInfoTypeForString("IMPROVEMENT_PLANTATION")
-	return TRNSLTR.getText("TXT_KEY_EVENT_IMPROVEMENT_GROWTH", (GC.getImprovementInfo(iPlantation).getTextKey(), ))
+	return TRNSLTR.getText("TXT_KEY_EVENT_IMPROVEMENT_GROWTH", (GC.getImprovementInfo(GC.getInfoTypeForString("IMPROVEMENT_PLANTATION")).getTextKey(), ))
 
 ######## BABY BOOM ###########
 
