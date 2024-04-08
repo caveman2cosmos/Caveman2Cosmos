@@ -20729,6 +20729,12 @@ void CvPlayer::setTriggerFired(const EventTriggeredData& kTriggeredData, bool bO
 EventTriggeredData* CvPlayer::initTriggeredData(EventTriggerTypes eEventTrigger, bool bFire, int iCityId, int iPlotX, int iPlotY, PlayerTypes eOtherPlayer, int iOtherPlayerCityId, ReligionTypes eReligion, CorporationTypes eCorporation, int iUnitId, BuildingTypes eBuilding)
 {
 	PROFILE_EXTRA_FUNC();
+
+	if (NO_EVENTTRIGGER == eEventTrigger)
+	{
+		FErrorMsg("unexpected!");
+		return NULL;
+	}
 	const CvEventTriggerInfo& kTrigger = GC.getEventTriggerInfo(eEventTrigger);
 
 	CvCity* pCity = getCity(iCityId);
@@ -20909,7 +20915,7 @@ EventTriggeredData* CvPlayer::initTriggeredData(EventTriggerTypes eEventTrigger,
 	{
 		if (!apPlots.empty())
 		{
-			if (apPlots.size() < kTrigger.getNumPlotsRequired())
+			if (static_cast<int>(apPlots.size()) < kTrigger.getNumPlotsRequired())
 			{
 				return NULL;
 			}
@@ -21119,41 +21125,32 @@ EventTriggeredData* CvPlayer::initTriggeredData(EventTriggerTypes eEventTrigger,
 				}
 			}
 
-			if (!aePlayers.empty())
-			{
-				int iChosen = GC.getGame().getSorenRandNum(aePlayers.size(), "Event pick player");
-				eOtherPlayer = aePlayers[iChosen];
-				pOtherPlayerCity = apCities[iChosen];
-			}
-			else
+			if (aePlayers.empty())
 			{
 				return NULL;
 			}
+			const int iChosen = GC.getGame().getSorenRandNum(aePlayers.size(), "Event pick player");
+			eOtherPlayer = aePlayers[iChosen];
+			pOtherPlayerCity = apCities[iChosen];
 		}
 	}
 
 	EventTriggeredData* pTriggerData = addEventTriggered();
 
-	if (NO_EVENTTRIGGER != eEventTrigger)
-	{
-		pTriggerData->m_eTrigger = eEventTrigger;
-		pTriggerData->m_ePlayer = getID();
-		pTriggerData->m_iTurn = GC.getGame().getGameTurn();
-		pTriggerData->m_iCityId = pCity ? pCity->getID() : -1;
-		pTriggerData->m_iPlotX = pPlot ? pPlot->getX() : INVALID_PLOT_COORD;
-		pTriggerData->m_iPlotY = pPlot ? pPlot->getY() : INVALID_PLOT_COORD;
-		pTriggerData->m_eOtherPlayer = eOtherPlayer;
-		pTriggerData->m_iOtherPlayerCityId = pOtherPlayerCity ? pOtherPlayerCity->getID() : -1;
-		pTriggerData->m_eReligion = eReligion;
-		pTriggerData->m_eCorporation = eCorporation;
-		pTriggerData->m_iUnitId = pUnit ? pUnit->getID() : -1;
-		pTriggerData->m_eBuilding = eBuilding;
-		pTriggerData->m_bExpired = false;
-	}
-	else
-	{
-		return NULL;
-	}
+	pTriggerData->m_eTrigger = eEventTrigger;
+	pTriggerData->m_ePlayer = getID();
+	pTriggerData->m_iTurn = GC.getGame().getGameTurn();
+	pTriggerData->m_iCityId = pCity ? pCity->getID() : -1;
+	pTriggerData->m_iPlotX = pPlot ? pPlot->getX() : INVALID_PLOT_COORD;
+	pTriggerData->m_iPlotY = pPlot ? pPlot->getY() : INVALID_PLOT_COORD;
+	pTriggerData->m_eOtherPlayer = eOtherPlayer;
+	pTriggerData->m_iOtherPlayerCityId = pOtherPlayerCity ? pOtherPlayerCity->getID() : -1;
+	pTriggerData->m_eReligion = eReligion;
+	pTriggerData->m_eCorporation = eCorporation;
+	pTriggerData->m_iUnitId = pUnit ? pUnit->getID() : -1;
+	pTriggerData->m_eBuilding = eBuilding;
+	pTriggerData->m_bExpired = false;
+
 
 	if (!CvString(kTrigger.getPythonCanDo()).empty())
 	{

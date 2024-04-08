@@ -26896,9 +26896,10 @@ void CvUnitAI::AI_SearchAndDestroyMove(bool bWithCommander)
 		return;
 	}
 
+	CvPlayerAI& player = GET_PLAYER(getOwner());
 	MissionAITypes eMissionAIType = MISSIONAI_GROUP;
 
-	if (!isHuman() && plot()->getOwner() == getOwner() && GET_PLAYER(getOwner()).AI_unitTargetMissionAIs(this, &eMissionAIType, 1, getGroup(), 1) > 0)
+	if (!isHuman() && plot()->getOwner() == getOwner() && player.AI_unitTargetMissionAIs(this, &eMissionAIType, 1, getGroup(), 1) > 0)
 	{
 		// Wait for units which are joining our group this turn
 		getGroup()->pushMission(MISSION_SKIP);
@@ -26982,7 +26983,7 @@ void CvUnitAI::AI_SearchAndDestroyMove(bool bWithCommander)
 			{
 				logContractBroker(1, "	Hunter for player %d (%S) at (%d,%d) found contractual work",
 					getOwner(),
-					GET_PLAYER(getOwner()).getCivilizationDescription(0),
+					player.getCivilizationDescription(0),
 					getX(),
 					getY());
 			}
@@ -26992,21 +26993,43 @@ void CvUnitAI::AI_SearchAndDestroyMove(bool bWithCommander)
 		{
 			logContractBroker(1, "	Hunter for player %d (%S) at (%d,%d) found no urgent contractual work",
 				getOwner(),
-				GET_PLAYER(getOwner()).getCivilizationDescription(0),
+				player.getCivilizationDescription(0),
 				getX(),
 				getY());
 		}
 	}
 
 	//Apparently minimum odds is a maximum odds threshold rather than minimum
-	const int iMinimumOdds = isHuman() ? GET_PLAYER(getOwner()).getModderOption(MODDEROPTION_AUTO_HUNT_MIN_COMBAT_ODDS) : (bWithCommander ? 90 : 70);
+	const int iMinimumOdds = isHuman() ? player.getModderOption(MODDEROPTION_AUTO_HUNT_MIN_COMBAT_ODDS) : (bWithCommander ? 90 : 70);
 
 	if (AI_huntRange(1, iMinimumOdds, false))
 	{
 		return;
 	}
 
-	if (!isHuman() || GET_PLAYER(getOwner()).isModderOption(MODDEROPTION_AUTO_HUNT_RETURN_FOR_UPGRADES))
+	// Toffer - Non-optimal hunter is temporary, phase them out when appropriate.
+	if (m_pUnitInfo->getDefaultUnitAIType() != UNITAI_HUNTER)
+	{
+		const int iOwnedHunters = player.AI_totalAreaUnitAIs(area(), UNITAI_HUNTER);
+		if (iOwnedHunters > 5)
+		{
+			AI_setUnitAIType(m_pUnitInfo->getDefaultUnitAIType());
+			return;
+		}
+		if (iOwnedHunters > 1)
+		{
+			const int iNeededHunters = player.AI_neededHunters(area());
+			const int iHunterDeficitPercent = (iNeededHunters <= iOwnedHunters) ? 0 : (iNeededHunters - iOwnedHunters) * 100 / iNeededHunters;
+
+			if (iHunterDeficitPercent <= 80)
+			{
+				AI_setUnitAIType(m_pUnitInfo->getDefaultUnitAIType());
+				return;
+			}
+		}
+	}
+
+	if (!isHuman() || player.isModderOption(MODDEROPTION_AUTO_HUNT_RETURN_FOR_UPGRADES))
 	{
 		if (AI_travelToUpgradeCity())
 		{
@@ -27019,12 +27042,12 @@ void CvUnitAI::AI_SearchAndDestroyMove(bool bWithCommander)
 		const bool bContractEscort = (
 			!bLookForWork && !isHuman() && !isCargo()
 			&& AI_getUnitAIType() == UNITAI_HUNTER
-			&& GET_PLAYER(getOwner()).getBestUnitType(UNITAI_HUNTER_ESCORT) != NO_UNIT
+			&& player.getBestUnitType(UNITAI_HUNTER_ESCORT) != NO_UNIT
 			&& getGroup()->countNumUnitAIType(UNITAI_HUNTER_ESCORT) < 1
 		);
 		if (bContractEscort)
 		{
-			GET_PLAYER(getOwner()).getContractBroker().advertiseWork
+			player.getContractBroker().advertiseWork
 			(
 				HIGHEST_PRIORITY_ESCORT_PRIORITY,
 				NO_UNITCAPABILITIES,
@@ -27034,7 +27057,7 @@ void CvUnitAI::AI_SearchAndDestroyMove(bool bWithCommander)
 
 			if (gUnitLogLevel > 2)
 			{
-				logBBAI("	%S's hunter (%d) at (%d,%d) [stack size %d] requests escort at priority %d", GET_PLAYER(getOwner()).getCivilizationDescription(0), getID(), getX(), getY(), getGroup()->getNumUnits(), HIGHEST_PRIORITY_ESCORT_PRIORITY);
+				logBBAI("	%S's hunter (%d) at (%d,%d) [stack size %d] requests escort at priority %d", player.getCivilizationDescription(0), getID(), getX(), getY(), getGroup()->getNumUnits(), HIGHEST_PRIORITY_ESCORT_PRIORITY);
 			}
 			// Limited operations gravitating close to borders while waiting.
 			if (exposedToDanger(plot(), 90))
@@ -27108,18 +27131,19 @@ void CvUnitAI::AI_SearchAndDestroyMove(bool bWithCommander)
 		return;
 	}
 
+	// Toffer - Should change this to scrap the lowest level hunters first, perhaps in the player objects doTurn() routine.
 	if (!bWithCommander && !isHuman()
-	&& GET_PLAYER(getOwner()).AI_isFinancialTrouble()
-	&& GET_PLAYER(getOwner()).getUnitUpkeepNet(isMilitaryBranch(), getUpkeep100()) > 0)
+	&& player.AI_isFinancialTrouble()
+	&& player.getUnitUpkeepNet(isMilitaryBranch(), getUpkeep100()) > 0)
 	{
-		const int iNeededHunters = GET_PLAYER(getOwner()).AI_neededHunters(area());
-		const int iHasHunters = GET_PLAYER(getOwner()).AI_totalAreaUnitAIs(area(), UNITAI_HUNTER);
+		const int iNeededHunters = player.AI_neededHunters(area());
+		const int iHasHunters = player.AI_totalAreaUnitAIs(area(), UNITAI_HUNTER);
 
-		if (iHasHunters > iNeededHunters + 1)
+		if (iHasHunters > iNeededHunters)
 		{
 			if (gUnitLogLevel >= 2)
 			{
-				logBBAI("%S has %d hunters (%d needed) - scrapping", GET_PLAYER(getOwner()).getCivilizationDescription(0), iHasHunters, iNeededHunters);
+				logBBAI("%S has %d hunters (%d needed) - scrapping", player.getCivilizationDescription(0), iHasHunters, iNeededHunters);
 			}
 			scrap();
 			return;

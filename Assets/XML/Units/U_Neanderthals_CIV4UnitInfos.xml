@@ -809,6 +809,7 @@
 			<iXPValueDefense>3</iXPValueDefense>
 			<iWithdrawalProb>10</iWithdrawalProb>
 			<iEarlyWithdraw>50</iEarlyWithdraw>
+			<iAnimalCombat>50</iAnimalCombat>
 			<iAsset>2</iAsset>
 			<iPower>1</iPower>
 			<UnitMeshGroups>
@@ -3073,7 +3074,6 @@
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_NEANDERTHAL_HUNTER</Type>
-			<iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<iInstanceCostModifier>10</iInstanceCostModifier>
 			<EnabledCivilizationTypes>
 				<EnabledCivilizationType>
@@ -3127,16 +3127,6 @@
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</NotUnitAIs>
-			<UnitCombatTargets>
-				<UnitCombatTarget>
-					<UnitCombatTargetType>UNITCOMBAT_ANIMAL</UnitCombatTargetType>
-					<bUnitCombatTarget>1</bUnitCombatTarget>
-				</UnitCombatTarget>
-				<UnitCombatTarget>
-					<UnitCombatTargetType>UNITCOMBAT_PROMOTED_ARMED_GUARD</UnitCombatTargetType>
-					<bUnitCombatTarget>1</bUnitCombatTarget>
-				</UnitCombatTarget>
-			</UnitCombatTargets>
 			<FreePromotions>
 				<FreePromotion>
 					<PromotionType>PROMOTION_HUNTING_SIGHT1</PromotionType>
@@ -3161,7 +3151,29 @@
 			<iXPValueDefense>1</iXPValueDefense>
 			<iCityAttack>-75</iCityAttack>
 			<iPursuit>30</iPursuit>
-			<iAnimalCombat>100</iAnimalCombat>
+			<iAnimalCombat>125</iAnimalCombat>
+			<UnitCombatMods>
+				<UnitCombatMod>
+					<UnitCombatType>UNITCOMBAT_ANIMAL</UnitCombatType>
+					<iUnitCombatMod>25</iUnitCombatMod>
+				</UnitCombatMod>
+			</UnitCombatMods>
+			<PursuitVSUnitCombatTypes>
+				<PursuitVSUnitCombatType>
+					<UnitCombatType>UNITCOMBAT_ANIMAL</UnitCombatType>
+					<iModifier>20</iModifier>
+				</PursuitVSUnitCombatType>
+			</PursuitVSUnitCombatTypes>
+			<UnitCombatTargets>
+				<UnitCombatTarget>
+					<UnitCombatTargetType>UNITCOMBAT_ANIMAL</UnitCombatTargetType>
+					<bUnitCombatTarget>1</bUnitCombatTarget>
+				</UnitCombatTarget>
+				<UnitCombatTarget>
+					<UnitCombatTargetType>UNITCOMBAT_PROMOTED_ARMED_GUARD</UnitCombatTargetType>
+					<bUnitCombatTarget>1</bUnitCombatTarget>
+				</UnitCombatTarget>
+			</UnitCombatTargets>
 			<iAsset>2</iAsset>
 			<iPower>2</iPower>
 			<UnitMeshGroups>
@@ -3179,7 +3191,6 @@
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_NEANDERTHAL_TRACKER</Type>
-			<iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<iInstanceCostModifier>10</iInstanceCostModifier>
 			<EnabledCivilizationTypes>
 				<EnabledCivilizationType>
@@ -3251,7 +3262,37 @@
 			<iXPValueDefense>1</iXPValueDefense>
 			<iCityAttack>-75</iCityAttack>
 			<iPursuit>20</iPursuit>
-			<iAnimalCombat>100</iAnimalCombat>
+			<iAnimalCombat>125</iAnimalCombat>
+			<UnitCombatMods>
+				<UnitCombatMod>
+					<UnitCombatType>UNITCOMBAT_ANIMAL_COMBAT_FLEEING</UnitCombatType>
+					<iUnitCombatMod>20</iUnitCombatMod>
+				</UnitCombatMod>
+				<UnitCombatMod>
+					<UnitCombatType>UNITCOMBAT_ANIMAL_COMBAT_HIDING</UnitCombatType>
+					<iUnitCombatMod>20</iUnitCombatMod>
+				</UnitCombatMod>
+				<UnitCombatMod>
+					<UnitCombatType>UNITCOMBAT_ANIMAL</UnitCombatType>
+					<iUnitCombatMod>25</iUnitCombatMod>
+				</UnitCombatMod>
+			</UnitCombatMods>
+			<PursuitVSUnitCombatTypes>
+				<PursuitVSUnitCombatType>
+					<UnitCombatType>UNITCOMBAT_ANIMAL</UnitCombatType>
+					<iModifier>20</iModifier>
+				</PursuitVSUnitCombatType>
+			</PursuitVSUnitCombatTypes>
+			<UnitCombatTargets>
+				<UnitCombatTarget>
+					<UnitCombatTargetType>UNITCOMBAT_ANIMAL</UnitCombatTargetType>
+					<bUnitCombatTarget>1</bUnitCombatTarget>
+				</UnitCombatTarget>
+				<UnitCombatTarget>
+					<UnitCombatTargetType>UNITCOMBAT_PROMOTED_ARMED_GUARD</UnitCombatTargetType>
+					<bUnitCombatTarget>1</bUnitCombatTarget>
+				</UnitCombatTarget>
+			</UnitCombatTargets>
 			<iAsset>2</iAsset>
 			<iPower>2</iPower>
 			<UnitMeshGroups>
@@ -3265,21 +3306,10 @@
 					<EarlyArtDefineTag>ART_DEF_UNIT_NEANDERTHAL_TRACKER</EarlyArtDefineTag>
 				</UnitMeshGroup>
 			</UnitMeshGroups>
-			<UnitCombatTargets>
-				<UnitCombatTarget>
-					<UnitCombatTargetType>UNITCOMBAT_ANIMAL</UnitCombatTargetType>
-					<bUnitCombatTarget>1</bUnitCombatTarget>
-				</UnitCombatTarget>
-				<UnitCombatTarget>
-					<UnitCombatTargetType>UNITCOMBAT_PROMOTED_ARMED_GUARD</UnitCombatTargetType>
-					<bUnitCombatTarget>1</bUnitCombatTarget>
-				</UnitCombatTarget>
-			</UnitCombatTargets>
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_NEANDERTHAL_CHASER</Type>
-			<iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<iInstanceCostModifier>10</iInstanceCostModifier>
 			<EnabledCivilizationTypes>
 				<EnabledCivilizationType>
@@ -3344,7 +3374,7 @@
 			<iXPValueDefense>1</iXPValueDefense>
 			<iPursuit>10</iPursuit>
 			<iCityAttack>-75</iCityAttack>
-			<iAnimalCombat>100</iAnimalCombat>
+			<iAnimalCombat>125</iAnimalCombat>
 			<iEarlyWithdraw>30</iEarlyWithdraw>
 			<UnitCombatMods>
 				<UnitCombatMod>
@@ -3363,7 +3393,27 @@
 					<UnitCombatType>UNITCOMBAT_ANIMAL_COMBAT_HIDING</UnitCombatType>
 					<iUnitCombatMod>-25</iUnitCombatMod>
 				</UnitCombatMod>
+				<UnitCombatMod>
+					<UnitCombatType>UNITCOMBAT_ANIMAL</UnitCombatType>
+					<iUnitCombatMod>25</iUnitCombatMod>
+				</UnitCombatMod>
 			</UnitCombatMods>
+			<PursuitVSUnitCombatTypes>
+				<PursuitVSUnitCombatType>
+					<UnitCombatType>UNITCOMBAT_ANIMAL</UnitCombatType>
+					<iModifier>20</iModifier>
+				</PursuitVSUnitCombatType>
+			</PursuitVSUnitCombatTypes>
+			<UnitCombatTargets>
+				<UnitCombatTarget>
+					<UnitCombatTargetType>UNITCOMBAT_ANIMAL</UnitCombatTargetType>
+					<bUnitCombatTarget>1</bUnitCombatTarget>
+				</UnitCombatTarget>
+				<UnitCombatTarget>
+					<UnitCombatTargetType>UNITCOMBAT_PROMOTED_ARMED_GUARD</UnitCombatTargetType>
+					<bUnitCombatTarget>1</bUnitCombatTarget>
+				</UnitCombatTarget>
+			</UnitCombatTargets>
 			<iAsset>1</iAsset>
 			<iPower>1</iPower>
 			<UnitMeshGroups>
@@ -3460,6 +3510,7 @@
 			<iXPValueDefense>4</iXPValueDefense>
 			<iWithdrawalProb>40</iWithdrawalProb>
 			<iEarlyWithdraw>25</iEarlyWithdraw>
+			<iAnimalCombat>25</iAnimalCombat>
 			<iAsset>1</iAsset>
 			<UnitMeshGroups>
 				<iGroupSize>2</iGroupSize>

@@ -634,21 +634,8 @@
 			</Categories>
 			<iCaptureProbabilityModifierChange>20</iCaptureProbabilityModifierChange>
 			<iCaptureResistanceModifierChange>-10</iCaptureResistanceModifierChange>
-			<iPursuitChange>10</iPursuitChange>
 			<iStealthStrikesChange>1</iStealthStrikesChange>
 			<iStealthCombatModifierChange>10</iStealthCombatModifierChange>
-			<PursuitVSUnitCombatTypesChanges>
-				<PursuitVSUnitCombatTypesChange>
-					<UnitCombatType>UNITCOMBAT_ANIMAL</UnitCombatType>
-					<iModifier>10</iModifier>
-				</PursuitVSUnitCombatTypesChange>
-			</PursuitVSUnitCombatTypesChanges>
-			<UnitCombatChangeModifiers>
-				<UnitCombatChangeModifier>
-					<UnitCombatType>UNITCOMBAT_ANIMAL</UnitCombatType>
-					<iModifier>20</iModifier>
-				</UnitCombatChangeModifier>
-			</UnitCombatChangeModifiers>
 			<VisibilityIntensityRangeChangeTypes>
 				<VisibilityIntensityRangeChangeType>
 					<InvisibleType>INVISIBLE_CAMOUFLAGE</InvisibleType>
@@ -1111,18 +1098,6 @@
 			<GGptsforUnitTypes>
 				<UnitType>UNIT_GREAT_HUNTER</UnitType>
 			</GGptsforUnitTypes>
-			<PursuitVSUnitCombatTypesChanges>
-				<PursuitVSUnitCombatTypesChange>
-					<UnitCombatType>UNITCOMBAT_WILD</UnitCombatType>
-					<iModifier>10</iModifier>
-				</PursuitVSUnitCombatTypesChange>
-			</PursuitVSUnitCombatTypesChanges>
-			<UnitCombatChangeModifiers>
-				<UnitCombatChangeModifier>
-					<UnitCombatType>UNITCOMBAT_WILD</UnitCombatType>
-					<iModifier>20</iModifier>
-				</UnitCombatChangeModifier>
-			</UnitCombatChangeModifiers>
 			<VisibilityIntensityChangeTypes>
 				<VisibilityIntensityChangeType>
 					<InvisibleType>INVISIBLE_SUBMARINE</InvisibleType>

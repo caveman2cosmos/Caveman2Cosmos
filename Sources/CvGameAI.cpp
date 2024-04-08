@@ -114,19 +114,6 @@ int CvGameAI::AI_combatValue(const UnitTypes eUnit) const
 }
 
 
-int CvGameAI::AI_turnsPercent(int iTurns, const int iPercent) const
-{
-	FAssert(iPercent > 0);
-	if (iTurns != MAX_INT)
-	{
-		iTurns *= (iPercent);
-		iTurns /= 100;
-	}
-
-	return std::max(1, iTurns);
-}
-
-
 void CvGameAI::read(FDataStreamBase* pStream)
 {
 	CvGame::read(pStream);
