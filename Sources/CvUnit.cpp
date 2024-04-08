@@ -25362,14 +25362,11 @@ int CvUnit::getTriggerValue(EventTriggerTypes eTrigger, const CvPlot* pPlot, boo
 		}
 	}
 
-	if (bCheckPlot && plot() != NULL)
+	if (bCheckPlot && plot() && kTrigger.isUnitsOnPlot())
 	{
-		if (kTrigger.isUnitsOnPlot())
+		if (!plot()->canTrigger(eTrigger, getOwner()))
 		{
-			if (!plot()->canTrigger(eTrigger, getOwner()))
-			{
-				return MIN_INT;
-			}
+			return MIN_INT;
 		}
 	}
 
