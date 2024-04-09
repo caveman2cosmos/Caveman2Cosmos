@@ -1231,8 +1231,8 @@
 			</UnitCombatMods>
 			<PursuitVSUnitCombatTypes>
 				<PursuitVSUnitCombatType>
-					<UnitCombatType>UNITCOMBAT_ANIMAL</UnitCombatType>
-					<iModifier>20</iModifier>
+					<PursuitVSUnitCombat>UNITCOMBAT_ANIMAL</PursuitVSUnitCombat>
+					<iPursuitVSUnitCombat>20</iPursuitVSUnitCombat>
 				</PursuitVSUnitCombatType>
 			</PursuitVSUnitCombatTypes>
 			<UnitCombatTargets>
@@ -1345,8 +1345,8 @@
 			</UnitCombatMods>
 			<PursuitVSUnitCombatTypes>
 				<PursuitVSUnitCombatType>
-					<UnitCombatType>UNITCOMBAT_ANIMAL</UnitCombatType>
-					<iModifier>20</iModifier>
+					<PursuitVSUnitCombat>UNITCOMBAT_ANIMAL</PursuitVSUnitCombat>
+					<iPursuitVSUnitCombat>20</iPursuitVSUnitCombat>
 				</PursuitVSUnitCombatType>
 			</PursuitVSUnitCombatTypes>
 			<UnitCombatTargets>
@@ -1447,8 +1447,8 @@
 			</UnitCombatMods>
 			<PursuitVSUnitCombatTypes>
 				<PursuitVSUnitCombatType>
-					<UnitCombatType>UNITCOMBAT_ANIMAL</UnitCombatType>
-					<iModifier>20</iModifier>
+					<PursuitVSUnitCombat>UNITCOMBAT_ANIMAL</PursuitVSUnitCombat>
+					<iPursuitVSUnitCombat>20</iPursuitVSUnitCombat>
 				</PursuitVSUnitCombatType>
 			</PursuitVSUnitCombatTypes>
 			<UnitCombatTargets>
@@ -1555,8 +1555,8 @@
 			</UnitCombatMods>
 			<PursuitVSUnitCombatTypes>
 				<PursuitVSUnitCombatType>
-					<UnitCombatType>UNITCOMBAT_ANIMAL</UnitCombatType>
-					<iModifier>30</iModifier>
+					<PursuitVSUnitCombat>UNITCOMBAT_ANIMAL</PursuitVSUnitCombat>
+					<iPursuitVSUnitCombat>30</iPursuitVSUnitCombat>
 				</PursuitVSUnitCombatType>
 			</PursuitVSUnitCombatTypes>
 			<UnitCombatTargets>
@@ -1663,8 +1663,8 @@
 			</UnitCombatMods>
 			<PursuitVSUnitCombatTypes>
 				<PursuitVSUnitCombatType>
-					<UnitCombatType>UNITCOMBAT_ANIMAL</UnitCombatType>
-					<iModifier>40</iModifier>
+					<PursuitVSUnitCombat>UNITCOMBAT_ANIMAL</PursuitVSUnitCombat>
+					<iPursuitVSUnitCombat>40</iPursuitVSUnitCombat>
 				</PursuitVSUnitCombatType>
 			</PursuitVSUnitCombatTypes>
 			<UnitCombatTargets>
@@ -1771,8 +1771,8 @@
 			</UnitCombatMods>
 			<PursuitVSUnitCombatTypes>
 				<PursuitVSUnitCombatType>
-					<UnitCombatType>UNITCOMBAT_ANIMAL</UnitCombatType>
-					<iModifier>50</iModifier>
+					<PursuitVSUnitCombat>UNITCOMBAT_ANIMAL</PursuitVSUnitCombat>
+					<iPursuitVSUnitCombat>50</iPursuitVSUnitCombat>
 				</PursuitVSUnitCombatType>
 			</PursuitVSUnitCombatTypes>
 			<UnitCombatTargets>
@@ -1875,8 +1875,8 @@
 			</UnitCombatMods>
 			<PursuitVSUnitCombatTypes>
 				<PursuitVSUnitCombatType>
-					<UnitCombatType>UNITCOMBAT_ANIMAL</UnitCombatType>
-					<iModifier>50</iModifier>
+					<PursuitVSUnitCombat>UNITCOMBAT_ANIMAL</PursuitVSUnitCombat>
+					<iPursuitVSUnitCombat>50</iPursuitVSUnitCombat>
 				</PursuitVSUnitCombatType>
 			</PursuitVSUnitCombatTypes>
 			<UnitCombatTargets>
