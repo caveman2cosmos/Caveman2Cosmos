@@ -4766,18 +4766,21 @@ void CvPlot::removeGoody()
 
 bool CvPlot::isCity(bool bCheckImprovement, TeamTypes eForTeam) const
 {
-	// Checking for city also includes improvement (fort) w/bCheckImprovement if:
-	// No team specified, or
-	// Tile with fort is on no team, or
-	// Fort is within friendly territory of specified team
-	if (bCheckImprovement && isActsAsCity() &&
-		(NO_TEAM == eForTeam
-		|| NO_TEAM == getTeam() && GC.getImprovementInfo(getImprovementType()).isOutsideBorders()
-		|| GET_TEAM(eForTeam).isFriendlyTerritory(getTeam())))
-	{
-		return true;
-	}
-	return getPlotCity() != NULL;
+	return (
+		getPlotCity()
+		||
+		// Checking for city also includes improvement (fort) w/bCheckImprovement if:
+		bCheckImprovement
+	&&	isActsAsCity()
+	&&	(
+			// No team specified, or
+			NO_TEAM == eForTeam
+			// Tile with fort is on no team, or
+		||	NO_TEAM == getTeam() && GC.getImprovementInfo(getImprovementType()).isOutsideBorders()
+			// Fort is within friendly territory of specified team
+		||	GET_TEAM(eForTeam).isFriendlyTerritory(getTeam())
+		)
+	);
 }
 
 
