@@ -45,6 +45,7 @@ class ANewDawnSettings:
 			elif data2 == int(ModderGameOptionTypes.MODDERGAMEOPTION_MAX_BOMBARD_DEFENSE):
 				ANewDawnOpt.setMaxBombardDefense(data3)
 			elif data2 == int(ModderGameOptionTypes.MODDERGAMEOPTION_MIN_CITY_DISTANCE):
+				print ("WWWWWWWWWWWW", data2, data3)
 				ANewDawnOpt.setMinCityDistance(data3)
 			elif data2 == int(ModderGameOptionTypes.MODDERGAMEOPTION_CANNOT_CLAIM_OCEAN):
 				ANewDawnOpt.setCanNotClaimOcean(data3)
@@ -293,6 +294,7 @@ def setXMLOptionsfromIniFile():
 	changedFlexibleDifficultyTurnIncrements(ANewDawnOpt, ANewDawnOpt.getFlexibleDifficultyTurnIncrements())
 	changedFlexibleDifficultyAITurnIncrements(ANewDawnOpt, ANewDawnOpt.getFlexibleDifficultyAITurnIncrements())
 	changedMaxBombardDefense(ANewDawnOpt, ANewDawnOpt.getMaxBombardDefense())
+	changedMinCityDistance(ANewDawnOpt, ANewDawnOpt.getMinCityDistance())
 	changedCanNotClaimOcean(ANewDawnOpt, ANewDawnOpt.isCanNotClaimOcean())
 	changedShowCivTraits(ANewDawnOpt, ANewDawnOpt.isShowCivTraits(), GC.getGame().isHotSeat())
 	changedNoFriendlyPillaging(ANewDawnOpt, ANewDawnOpt.isNoFriendlyPillaging())
