@@ -239,7 +239,7 @@ protected:
 	bool AI_patrol(bool bIgnoreDanger = false);
 	bool AI_defend();
 	bool AI_safety(int iRange = 1);
-	bool AI_reachHome(const bool bMockRun = false) const;
+	bool AI_reachHome(const bool bMockRun = false, int iRange = 0) const;
 	bool AI_hide();
 	bool AI_goody(int iRange);
 

@@ -5091,6 +5091,13 @@ void CvUnitAI::AI_exploreMove()
 		return;
 	}
 
+	//	If we have any animal hangers-on we should end the exploration and escort it home.
+	if (plot()->getOwner() != getOwner() && getGroup()->countNumUnitAIType(UNITAI_SUBDUED_ANIMAL) > 0)
+	{
+		AI_setUnitAIType(UNITAI_HUNTER_ESCORT);
+		return;
+	}
+
 	if (!isHuman() && canAttack())
 	{
 		if (AI_cityAttack(1, 60))
@@ -5102,22 +5109,6 @@ void CvUnitAI::AI_exploreMove()
 		{
 			OutputDebugString(CvString::format("%S (%d) chooses to attack\n", getDescription().c_str(), m_iID).c_str());
 			return;
-		}
-	}
-	if (plot()->getOwner() != getOwner())
-	{
-		if (getGroup()->countNumUnitAIType(UNITAI_SUBDUED_ANIMAL) > 0)
-		{
-			AI_setUnitAIType(UNITAI_HUNTER_ESCORT);
-			return;
-		}
-		foreach_(const CvUnit * unitX, plot()->units())
-		{
-			if (unitX->getOwner() == getOwner() && !unitX->getGroup()->canDefend() && unitX->getGroup()->countNumUnitAIType(UNITAI_SUBDUED_ANIMAL) > 0)
-			{
-				AI_setUnitAIType(UNITAI_HUNTER_ESCORT);
-				return;
-			}
 		}
 	}
 
@@ -5396,27 +5387,27 @@ void CvUnitAI::AI_hunterEscortMove()
 			getGroup()->AI_separateAI(UNITAI_WORKER);
 		}
 	}
-	else if (!isHuman())
+	else
 	{
 		if (AI_groupMergeRange(UNITAI_SUBDUED_ANIMAL, 1, false, true, true))
 		{
 			return;
 		}
-		if (AI_groupMergeRange(UNITAI_HUNTER, 1, false, true, true))
-		{
-			return;
-		}
-		//	In the worker case we don't want to get sucked into a stack with an already protected
-		//	worker, or one not also in non-owned territory so just search this plot
-		if (AI_group(GroupingParams().withUnitAI(UNITAI_WORKER).maxGroupSize(1).maxPathTurns(0)))
+
+		if (getGroup()->getNumUnits() == 1 && AI_groupMergeRange(UNITAI_HUNTER, 1, false, true, true))
 		{
 			return;
 		}
 
-		if (getGroup()->countNumUnitAIType(UNITAI_WORKER) + getGroup()->countNumUnitAIType(UNITAI_SUBDUED_ANIMAL) > 0)
+		if (AI_huntRange(1, 90, false))
+		{
+			return;
+		}
+
+		if (getGroup()->countNumUnitAIType(UNITAI_SUBDUED_ANIMAL) > 0)
 		{
 			// If we have hangers-ons escort them back to our territory
-			if (AI_reachHome() || AI_retreatToCity())
+			if (AI_reachHome(false, 3) || AI_retreatToCity())
 			{
 				return;
 			}
@@ -6333,12 +6324,12 @@ void CvUnitAI::AI_subduedAnimalMove()
 			return;
 		}
 
-		// Try to move to a nearby hunter unit if one is available to group with it
-		if (AI_groupMergeRange(UNITAI_HUNTER, 1, false, true, true)
 		// Try to move to a nearby hunter escort unit if one is available to group with it
-		|| AI_groupMergeRange(UNITAI_HUNTER_ESCORT, 1, false, true, true)
+		if (AI_groupMergeRange(UNITAI_HUNTER_ESCORT, 1, false, true, true)
 		// Try to move to a nearby explorer unit if one is available to group with it
-		|| AI_groupMergeRange(UNITAI_EXPLORE, 1, false, true, true))
+		|| AI_groupMergeRange(UNITAI_EXPLORE, 1, false, true, true)
+		// Try to move to a nearby hunter unit if one is available to group with it
+		|| AI_groupMergeRange(UNITAI_HUNTER, 1, false, true, true))
 		{
 			return;
 		}
@@ -6363,7 +6354,7 @@ void CvUnitAI::AI_subduedAnimalMove()
 				this, UNITAI_HUNTER_ESCORT
 			);
 		}
-		else if (AI_reachHome())
+		else if (AI_retreatToCity())
 		{
 			return;
 		}
@@ -12760,63 +12751,71 @@ bool CvUnitAI::AI_heal(int iDamagePercent, int iMaxPath)
 	std::vector<CvUnit*> aeDamagedUnits;
 	int iHurtUnitCount = 0;
 
-	foreach_(CvUnit * pLoopUnit, pGroup->units())
+	foreach_(CvUnit * unitX, pGroup->units())
 	{
-		int iDamageThreshold = pLoopUnit->getMaxHP() * iDamagePercent / 100;
-
-		if (NO_UNIT != getLeaderUnitType())
-		{
-			iDamageThreshold /= 2;
-		}
-
-		if (pLoopUnit->getDamage() > 0)
+		if (unitX->getDamage() > 0)
 		{
 			iHurtUnitCount++;
 
-			if (pLoopUnit->getDamage() > iDamageThreshold
-			&& !pLoopUnit->hasMoved() && !pLoopUnit->isAlwaysHeal()
-			&& pLoopUnit->healTurns(pLoopUnit->plot()) <= iMaxPath)
+			if (!isHuman())
 			{
-				aeDamagedUnits.push_back(pLoopUnit);
+				const int iThreshold = (
+					unitX->getMaxHP() * iDamagePercent
+					/
+					(100 + 100 * (NO_UNIT != getLeaderUnitType()))
+				);
+				if (unitX->getDamage() > iThreshold
+				&& !unitX->hasMoved() && !unitX->isAlwaysHeal()
+				&& unitX->healTurns(unitX->plot()) <= iMaxPath)
+				{
+					aeDamagedUnits.push_back(unitX);
+				}
 			}
 		}
-
 	}
 	if (iHurtUnitCount == 0)
 	{
 		return false;
 	}
 
-	bool bCanClaimTerritory = canClaimTerritory(plot());
-	bool bPushedMission = false;
-
-	if (bCanClaimTerritory || plot()->isCity() && plot()->getOwner() == getOwner())
+	if (!isHuman())
 	{
-		for (unsigned int iI = 0; iI < aeDamagedUnits.size(); iI++)
+		const bool bCanClaimTerritory = canClaimTerritory(plot());
+
+		if (bCanClaimTerritory || plot()->isCity() && plot()->getOwner() == getOwner())
 		{
-			CvUnit* pUnitToHeal = aeDamagedUnits[iI];
-			pUnitToHeal->joinGroup(NULL);
+			bool bPushedMission = false;
 
-			// note, removing the head unit from a group will force the group to be completely split if non-human
-			if (pUnitToHeal == this)
+			for (unsigned int iI = 0; iI < aeDamagedUnits.size(); iI++)
 			{
-				pGroup = getGroup();
-				bPushedMission = true;
+				CvUnit* pUnitToHeal = aeDamagedUnits[iI];
+				pUnitToHeal->joinGroup(NULL);
 
-				if (bCanClaimTerritory)
+				// note, removing the head unit from a group will force the group to be completely split if non-human
+				if (pUnitToHeal == this)
 				{
-					pGroup->pushMission(MISSION_CLAIM_TERRITORY, -1, -1, 0, false, false, MISSIONAI_CLAIM_TERRITORY, plot());
-					pGroup->pushMission(MISSION_HEAL, -1, -1, 0, true);
-				}
-				else pGroup->pushMission(MISSION_HEAL);
-			}
-			else pUnitToHeal->getGroup()->pushMission(MISSION_HEAL);
+					pGroup = getGroup();
+					bPushedMission = true;
 
-			iHurtUnitCount--;
+					if (bCanClaimTerritory)
+					{
+						pGroup->pushMission(MISSION_CLAIM_TERRITORY, -1, -1, 0, false, false, MISSIONAI_CLAIM_TERRITORY, plot());
+						pGroup->pushMission(MISSION_HEAL, -1, -1, 0, true);
+					}
+					else pGroup->pushMission(MISSION_HEAL);
+				}
+				else pUnitToHeal->getGroup()->pushMission(MISSION_HEAL);
+
+				iHurtUnitCount--;
+			}
+			if (bPushedMission)
+			{
+				return true;
+			}
 		}
 	}
 
-	if (iHurtUnitCount * 2 > pGroup->getNumUnits())
+	if (iHurtUnitCount * 2 >= plot()->getNumDefenders(getOwner()))
 	{
 		if (AI_moveIntoCity(2))
 		{
@@ -12832,7 +12831,7 @@ bool CvUnitAI::AI_heal(int iDamagePercent, int iMaxPath)
 			return true;
 		}
 	}
-	return bPushedMission;
+	return false;
 }
 
 
@@ -15966,7 +15965,7 @@ bool CvUnitAI::AI_safety(int iRange)
 }
 
 // Returns true if a mission was pushed... unless it's a mock run.
-bool CvUnitAI::AI_reachHome(const bool bMockRun) const
+bool CvUnitAI::AI_reachHome(const bool bMockRun, int iRange) const
 {
 	PROFILE_FUNC();
 
@@ -15976,13 +15975,16 @@ bool CvUnitAI::AI_reachHome(const bool bMockRun) const
 	{
 		return true;
 	}
+	if (iRange < baseMoves())
+	{
+		iRange = baseMoves();
+	}
 	const CvPlot* pBestPlot = NULL;
 	int iBestValue = 0;
 
-	// baseMoves() is enough, this function is not supposed to send the unit far through hostile land.
-	foreach_(const CvPlot * plotX, plot()->rect(baseMoves(), baseMoves()))
+	foreach_(const CvPlot * plotX, plot()->rect(iRange, iRange))
 	{
-		if (plotX == NULL || plotX->getOwner() != getOwner() || GET_PLAYER(getOwner()).AI_getAnyPlotDanger(plotX, 1) || atPlot(plotX))
+		if (!plotX || plotX->getOwner() != getOwner() || GET_PLAYER(getOwner()).AI_getAnyPlotDanger(plotX, 1) || atPlot(plotX))
 		{
 			continue;
 		}
@@ -15991,11 +15993,31 @@ bool CvUnitAI::AI_reachHome(const bool bMockRun) const
 		{
 			continue;
 		}
+		{
+			bool bStranded = true;
+			foreach_(CvCity* cityX, GET_PLAYER(getOwner()).cities())
+			{
+				if (plotX->isConnectedTo(cityX))
+				{
+					bStranded = false;
+					break;
+				}
+			}
+			if (bStranded)
+			{
+				continue;
+			}
+		}
 		int iValue = 1000;
 
 		const CvCity* cityNear = GC.getMap().findCity(plotX->getX(), plotX->getY(), getOwner(), NO_TEAM, true);
 
-		if (cityNear != NULL)
+		if (!plotX->isConnectedTo(cityNear))
+		{
+			iValue /= 2;
+		}
+
+		if (cityNear)
 		{
 			iValue /= 1 + plotDistance(plotX->getX(), plotX->getY(), cityNear->getX(), cityNear->getY());
 		}
@@ -16023,7 +16045,7 @@ bool CvUnitAI::AI_reachHome(const bool bMockRun) const
 			pBestPlot = plotX;
 		}
 	}
-	if (pBestPlot != NULL)
+	if (pBestPlot)
 	{
 		return getGroup()->pushMissionInternal(MISSION_MOVE_TO, pBestPlot->getX(), pBestPlot->getY(), 0);
 	}
@@ -22330,8 +22352,9 @@ bool CvUnitAI::AI_travelToUpgradeCity()
 				const CvWString szBuffer = gDLL->getText("TXT_KEY_MISC_UNIT_UPGRADE_READY", getNameKey(), pUpgradeCity->getNameKey());
 				AddDLLMessage(getOwner(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, NULL, MESSAGE_TYPE_MINOR_EVENT, NULL, GC.getCOLOR_GREY(), getX(), getY(), true, true);
 
-				getGroup()->clearMissionQueue();
-				getGroup()->setActivityType(ACTIVITY_AWAKE);
+				getGroup()->setAutomateType(NO_AUTOMATE);
+				//getGroup()->clearMissionQueue();
+				//getGroup()->setActivityType(ACTIVITY_AWAKE);
 				return true;
 			}
 			if (getDomainType() == DOMAIN_AIR)
@@ -26907,28 +26930,19 @@ void CvUnitAI::AI_SearchAndDestroyMove(bool bWithCommander)
 	}
 
 	//	If we have any animal hangers-on and are in our territory drop them off
-	if (plot()->getOwner() == getOwner())
+	if (getGroup()->countNumUnitAIType(UNITAI_SUBDUED_ANIMAL) > 0)
 	{
-		if (getGroup()->countNumUnitAIType(UNITAI_SUBDUED_ANIMAL) > 0)
+		if (plot()->getOwner() == getOwner())
 		{
 			getGroup()->AI_separateAI(UNITAI_SUBDUED_ANIMAL);
 		}
-		if (getGroup()->countNumUnitAIType(UNITAI_WORKER) > 0)
+		else if (getGroup()->countNumUnitAIType(UNITAI_HUNTER_ESCORT) > 0)
 		{
-			getGroup()->AI_separateAI(UNITAI_WORKER);
-		}
-	}
-	else if (!isHuman())
-	{
-		if (AI_groupMergeRange(UNITAI_SUBDUED_ANIMAL, 0, false, true, true))
-		{
-			return;
-		}
-		//	In the worker case we don't want to get sucked into a stack with an already protected
-		//	worker, or one not also in non-owned territory so just search this plot
-		if (AI_group(GroupingParams().withUnitAI(UNITAI_WORKER).maxGroupSize(1).maxPathTurns(0)))
-		{
-			return;
+			getGroup()->AI_separateAI(UNITAI_HUNTER);
+			if (getGroup()->countNumUnitAIType(UNITAI_HUNTER) == 0)
+			{
+				return; // The hunter wasn't the stack leader?
+			}
 		}
 	}
 
@@ -26946,6 +26960,7 @@ void CvUnitAI::AI_SearchAndDestroyMove(bool bWithCommander)
 			}
 		}
 
+		OutputDebugString("	...Try to heal\n");
 		if (AI_heal())
 		{
 			OutputDebugString(CvString::format("	...healing at (%d,%d)\n", m_iX, m_iY).c_str());
@@ -26963,11 +26978,9 @@ void CvUnitAI::AI_SearchAndDestroyMove(bool bWithCommander)
 	}
 
 	//	If we have more than 3 animal hangers-on escort them back to our territory
-	if (!isHuman()
-	&& getGroup()->countNumUnitAIType(UNITAI_WORKER) + getGroup()->countNumUnitAIType(UNITAI_SUBDUED_ANIMAL) > 3
-	&& plot()->getOwner() != getOwner())
+	if (getGroup()->countNumUnitAIType(UNITAI_WORKER) + getGroup()->countNumUnitAIType(UNITAI_SUBDUED_ANIMAL) > 3 && plot()->getOwner() != getOwner())
 	{
-		if (AI_reachHome())
+		if (AI_retreatToCity())
 		{
 			return;
 		}
@@ -27008,7 +27021,7 @@ void CvUnitAI::AI_SearchAndDestroyMove(bool bWithCommander)
 	}
 
 	// Toffer - Non-optimal hunter is temporary, phase them out when appropriate.
-	if (m_pUnitInfo->getDefaultUnitAIType() != UNITAI_HUNTER)
+	if (!isHuman() && m_pUnitInfo->getDefaultUnitAIType() != UNITAI_HUNTER)
 	{
 		const int iOwnedHunters = player.AI_totalAreaUnitAIs(area(), UNITAI_HUNTER);
 		if (iOwnedHunters > 5)
@@ -27062,14 +27075,7 @@ void CvUnitAI::AI_SearchAndDestroyMove(bool bWithCommander)
 			// Limited operations gravitating close to borders while waiting.
 			if (exposedToDanger(plot(), 90))
 			{
-				if (plot()->getOwner() != getOwner())
-				{
-					if (AI_reachHome())
-					{
-						return;
-					}
-				}
-				else if (AI_safety())
+				if (AI_safety())
 				{
 					return;
 				}
@@ -27091,9 +27097,9 @@ void CvUnitAI::AI_SearchAndDestroyMove(bool bWithCommander)
 				{
 					return;
 				}
-				if (GC.getGame().getSorenRandNum(10, "AI Air Attack Move") < 4)
+				if (GC.getGame().getSorenRandNum(10, "keep close to home") < 4)
 				{
-					if (AI_reachHome())
+					if (AI_reachHome(false, 6))
 					{
 						return;
 					}
@@ -27108,6 +27114,15 @@ void CvUnitAI::AI_SearchAndDestroyMove(bool bWithCommander)
 		}
 	}
 
+	//	If we have animal hangers-on escort them back to our territory if it is not too far
+	if ((getGroup()->countNumUnitAIType(UNITAI_SUBDUED_ANIMAL) > 0 || getGroup()->countNumUnitAIType(UNITAI_WORKER) > 0) && plot()->getOwner() != getOwner())
+	{
+		if (AI_reachHome(false, 4))
+		{
+			return;
+		}
+	}
+
 	if (AI_huntRange(3, iMinimumOdds, false))
 	{
 		return;
@@ -27118,14 +27133,6 @@ void CvUnitAI::AI_SearchAndDestroyMove(bool bWithCommander)
 		return;
 	}
 
-	//	If we have animal hangers-on escort them back to our territory
-	if (!isHuman() && (getGroup()->countNumUnitAIType(UNITAI_SUBDUED_ANIMAL) > 0 || getGroup()->countNumUnitAIType(UNITAI_WORKER) > 0) && plot()->getOwner() != getOwner())
-	{
-		if (AI_reachHome())
-		{
-			return;
-		}
-	}
 	if (AI_huntRange(5, iMinimumOdds, false))
 	{
 		return;
@@ -27200,22 +27207,16 @@ bool CvUnitAI::AI_huntRange(int iRange, int iOddsThreshold, bool bStayInBorders,
 		&& AI_plotValid(plotX)
 		&& plotX->isVisible(getTeam(), false))
 		{
-			const bool bHuntingAnimals = AI_getUnitAIType() == UNITAI_HUNTER && algo::any_of(plotX->units(), CvUnit::fn::isAnimal());
-			if (
-				(bHuntingAnimals || plotX->isVisibleEnemyUnit(this))
+			if (plotX->isVisibleEnemyUnit(this)
 			&&	getGroup()->canEnterPlot(plotX, true)
 			&&	generatePath(plotX, 0, true, nullptr, iRange))
 			{
 				const int attackOdds = getGroup()->AI_attackOdds(plotX, true);
 
-				if (attackOdds >= (isHuman() ? iOddsThreshold : AI_finalOddsThreshold(plotX, iOddsThreshold)))
+				if (attackOdds > bestScore && attackOdds >= (isHuman() ? iOddsThreshold : AI_finalOddsThreshold(plotX, iOddsThreshold)))
 				{
-					const int plotScore = attackOdds + (bHuntingAnimals ? 25 : 0);
-					if (plotScore > bestScore)
-					{
-						bestScore = plotScore;
-						bestTargetPlot = getPathEndTurnPlot();
-					}
+					bestScore = attackOdds;
+					bestTargetPlot = getPathEndTurnPlot();
 				}
 			}
 		}
@@ -27434,7 +27435,7 @@ bool CvUnitAI::AI_returnToBorders()
 
 
 //	AI_headToBorder is used to cause a unit within our borders to move towards them.  It will
-//	prefer borders with players we are at war with, over nborders to neutral, over borders
+//	prefer borders with players we are at war with, over borders to neutral, over borders
 //	to players we are not at war with
 bool CvUnitAI::AI_moveToBorders()
 {

@@ -2210,7 +2210,7 @@ void CvGame::update()
 
 		//	Some processing that is done in viewport tranisitions has to occur
 		//	over several messaging timeslices (empirically - the game engine
-		//	gets things wrong if you don't give it a chnace to process messages
+		//	gets things wrong if you don't give it a chance to process messages
 		//	in between).  To enact that we use a state machine which performs state
 		//	transitions on each call to CvGame::update().
 		GC.getCurrentViewport()->processActionState();
