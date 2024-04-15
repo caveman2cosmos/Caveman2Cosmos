@@ -1046,8 +1046,12 @@ bool CvOutcome::execute(CvUnit &kUnit, PlayerTypes eDefeatedUnitPlayer, UnitType
 	{
 		CvUnit* pUnit = kPlayer.initUnit(m_eUnitType, kUnit.getX(), kUnit.getY(), GC.getUnitInfo(m_eUnitType).getDefaultUnitAIType(), NO_DIRECTION, GC.getGame().getSorenRandNum(10000, "AI Unit Birthmark"));
 
-		if (pUnit != NULL)
+		if (pUnit)
 		{
+			if (pUnit->AI_getUnitAIType() == UNITAI_SUBDUED_ANIMAL && (kUnit.AI_getUnitAIType() == UNITAI_HUNTER || kUnit.getGroup()->getAutomateType() == AUTOMATE_HUNT))
+			{
+				pUnit->joinGroup(kUnit.getGroup());
+			}
 			pUnit->finishMoves();
 		}
 		else FErrorMsg("pUnit is expected to be assigned a valid unit object");
