@@ -8,7 +8,6 @@ import PythonToolTip as pyTT
 import AbandonCityEventManager as ACEM
 import TextUtil
 import RevInstances
-#import ParallelMaps
 # globals
 GC = CyGlobalContext()
 ENGINE = CyEngine()
@@ -6063,6 +6062,9 @@ class CvMainInterface:
 				GAME.doControl(ControlTypes.CONTROL_PREVCITY)
 			else:
 				GAME.doControl(ControlTypes.CONTROL_PREVUNIT)
+
+	def initMinimap(self):
+		CyGInterfaceScreen("MainInterface", CvScreenEnums.MAIN_INTERFACE).initMinimap(self.xMinimap, self.xRes - 3, self.yMinimap, self.yRes - 3, -0.1)
 
 # # # # # # #
 # Pop-Up Callbacks
