@@ -119,7 +119,7 @@ public:
 	bool isRebelAgainst(TeamTypes eTeam) const;
 	void setRebelAgainst(TeamTypes eTeam, bool bNewValue);
 	int countRebelAgainst() const;
-	void setIsMinorCiv(bool bNewValue, bool bDoBarbCivCheck);
+	void setIsMinorCiv(bool bNewValue);
 	void declareWarAsMinor();
 
 	int getNumMilitaryUnits() const;

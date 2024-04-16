@@ -12,7 +12,7 @@
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<PrereqTech>TECH_TRADE</PrereqTech>
 			<PrereqOrHeritage>
-				<Type>HERITAGE_TAXONOMY_AMPHIBIANS</Type>
+				<Type>HERITAGE_TAXON_AMPHIBIA</Type>
 			</PrereqOrHeritage>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_CARNIVAL</BuildingType>
@@ -52,7 +52,7 @@
 			</PrereqOrBuildings>
 			<bAutoBuild>1</bAutoBuild>
 			<bNukeImmune>1</bNukeImmune>
-			<ArtDefineTag>ART_DEF_BUILDING_FOLKLORE_DESERT_TORTOISE</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_ENCLOSURE_AMPHIBIAN_POND</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_ANIMAL_TAMER_COMPLEX</Type>
@@ -120,21 +120,19 @@
 			<PrereqTech>TECH_CANINE_DOMESTICATION</PrereqTech>
 			<Bonus>BONUS_DOG</Bonus>
 			<PrereqOrHeritage>
+				<Type>HERITAGE_FOLKLORE_DINGO</Type>
 				<Type>HERITAGE_FOLKLORE_FOX_ARCTIC</Type>
 				<Type>HERITAGE_FOLKLORE_FOX_FENNEC</Type>
 				<Type>HERITAGE_FOLKLORE_FOX_RED</Type>
+				<Type>HERITAGE_FOLKLORE_USSURI_DHOLE</Type>
+				<Type>HERITAGE_FOLKLORE_WOLF</Type>
+				<Type>HERITAGE_FOLKLORE_WOLF_DIRE</Type>
+				<Type>HERITAGE_FOLKLORE_WOLF_ETHIOPIAN</Type>
+				<Type>HERITAGE_FOLKLORE_WOLF_MANED</Type>
 			</PrereqOrHeritage>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MILITARY_STANDARD_ANIMAL_MASCOT</BuildingType>
 			</PrereqInCityBuildings>
-			<PrereqOrBuildings>
-				<BuildingType>BUILDING_FOLKLORE_USSURI_DHOLE</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_DINGO</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_DIRE_WOLF</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_ETHIOPIAN_WOLF</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_MANED_WOLF</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_WOLF</BuildingType>
-			</PrereqOrBuildings>
 			<iCost>92</iCost>
 			<ObsoleteTech>TECH_AVIATION</ObsoleteTech>
 			<UnitProductionModifiers>
@@ -179,13 +177,13 @@
 			</PrereqInCityBuildings>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_FOLKLORE_NINE_BANDED_ARMADILLO</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_BEAVER</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_GLYPTODON</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_GROUND_SLOTH</BuildingType>
 			</PrereqOrBuildings>
 			<PrereqOrHeritage>
 				<Type>HERITAGE_FOLKLORE_AARDVARK</Type>
 				<Type>HERITAGE_FOLKLORE_ANTEATER</Type>
+				<Type>HERITAGE_FOLKLORE_BEAVER</Type>
 			</PrereqOrHeritage>
 			<iCost>70</iCost>
 			<ObsoleteTech>TECH_AVIATION</ObsoleteTech>
@@ -208,30 +206,14 @@
 			<Civilopedia>TXT_KEY_BUILDING_WILD_ANIMAL_CAGE_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<PrereqTech>TECH_TRADE</PrereqTech>
-			<ConstructCondition>
-				<And>
-					<Or>
-						<Has>
-							<GOMType>GOM_BUILDING</GOMType>
-							<ID>BUILDING_CARNIVAL</ID>
-						</Has>
-						<Has>
-							<GOMType>GOM_BUILDING</GOMType>
-							<ID>BUILDING_ZOO</ID>
-						</Has>
-					</Or>
-					<Or>
-						<Has>
-							<GOMType>GOM_BUILDING</GOMType>
-							<ID>BUILDING_FOLKLORE_T_CROCODILE</ID>
-						</Has>
-						<Has>
-							<GOMType>GOM_BUILDING</GOMType>
-							<ID>BUILDING_FOLKLORE_T_WEASEL</ID>
-						</Has>
-					</Or>
-				</And>
-			</ConstructCondition>
+			<PrereqOrBuildings>
+				<BuildingType>BUILDING_CARNIVAL</BuildingType>
+				<BuildingType>BUILDING_ZOO</BuildingType>
+			</PrereqOrBuildings>
+			<PrereqOrHeritage>
+				<Type>HERITAGE_TAXON_CROCODILIA</Type>
+				<Type>HERITAGE_TAXON_MUSTELOIDEA</Type>
+			</PrereqOrHeritage>
 			<iCost>306</iCost>
 			<iHappiness>1</iHappiness>
 			<CommerceChanges>
@@ -308,38 +290,14 @@
 			<Civilopedia>TXT_KEY_BUILDING_WILD_ANIMAL_CAGE_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<PrereqTech>TECH_TRADE</PrereqTech>
-			<ConstructCondition>
-				<And>
-					<Or>
-						<Has>
-							<GOMType>GOM_BUILDING</GOMType>
-							<ID>BUILDING_GOVERNORS_MENAGERIE</ID>
-						</Has>
-						<Has>
-							<GOMType>GOM_BUILDING</GOMType>
-							<ID>BUILDING_CARNIVAL</ID>
-						</Has>
-						<Has>
-							<GOMType>GOM_BUILDING</GOMType>
-							<ID>BUILDING_ZOO</ID>
-						</Has>
-					</Or>
-					<Or>
-						<Has>
-							<GOMType>GOM_BUILDING</GOMType>
-							<ID>BUILDING_FOLKLORE_LION</ID>
-						</Has>
-						<Has>
-							<GOMType>GOM_BUILDING</GOMType>
-							<ID>BUILDING_FOLKLORE_T_TIGER</ID>
-						</Has>
-						<Has>
-							<GOMType>GOM_BUILDING</GOMType>
-							<ID>BUILDING_FOLKLORE_T_SPOTTED_CAT</ID>
-						</Has>
-					</Or>
-				</And>
-			</ConstructCondition>
+			<PrereqOrBuildings>
+				<BuildingType>BUILDING_GOVERNORS_MENAGERIE</BuildingType>
+				<BuildingType>BUILDING_CARNIVAL</BuildingType>
+				<BuildingType>BUILDING_ZOO</BuildingType>
+			</PrereqOrBuildings>
+			<PrereqOrHeritage>
+				<Type>HERITAGE_TAXON_PANTHERINAE</Type>
+			</PrereqOrHeritage>
 			<iCost>306</iCost>
 			<iHappiness>1</iHappiness>
 			<CommerceChanges>
@@ -715,12 +673,15 @@
 			<Description>TXT_KEY_BUILDING_REMAINS_CAVE_LION</Description>
 			<Civilopedia>TXT_KEY_BUILDING_FOLKLORE_ANIMAL_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_MILITARY</Advisor>
-			<PrereqAmountBuildings>
-				<PrereqBuilding>
-					<BuildingType>BUILDING_FOLKLORE_CAVE_LION</BuildingType>
-					<iNumBuildingNeeded>3</iNumBuildingNeeded>
-				</PrereqBuilding>
-			</PrereqAmountBuildings>
+			<PrereqOrFeature>
+				<PrereqFeature>
+					<FeatureType>FEATURE_CAVES</FeatureType>
+					<bPrereqFeature>1</bPrereqFeature>
+				</PrereqFeature>
+			</PrereqOrFeature>
+			<PrereqOrHeritage>
+				<Type>HERITAGE_FOLKLORE_LION_CAVE</Type>
+			</PrereqOrHeritage>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_FOLKLORE_REQUIREMENT</BuildingType>
 			</PrereqInCityBuildings>
@@ -760,7 +721,7 @@
 			<iAsset>1</iAsset>
 			<iConquestProb>90</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
-			<ArtDefineTag>ART_DEF_BUILDING_FOLKLORE_CAVE_LION</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_REMAINS_CAVE_LION</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CENTER_FOR_CEPHALOPOD_STUDIES</Type>
@@ -1228,8 +1189,8 @@
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<PrereqTech>TECH_TRADE</PrereqTech>
 			<PrereqOrHeritage>
-				<Type>HERITAGE_TAXONOMY_BOAR</Type>
-				<Type>HERITAGE_TAXONOMY_ELEPHANT</Type>
+				<Type>HERITAGE_TAXON_SUIDAE</Type>
+				<Type>HERITAGE_TAXON_ELEPHANTIDAE</Type>
 			</PrereqOrHeritage>
 			<ConstructCondition>
 				<Or>
@@ -1282,8 +1243,12 @@
 			<ConstructSound>AS2D_BUILD_GRANARY</ConstructSound>
 			<FreeStartEra>C2C_ERA_CLASSICAL</FreeStartEra>
 			<PrereqTech>TECH_BONE_WORKING</PrereqTech>
-			<Bonus>BONUS_FEATHERS</Bonus>
-			<iCost>90</iCost>
+			<ExtraFreeBonuses>
+				<ExtraFreeBonus>
+					<FreeBonus>BONUS_FEATHERS</FreeBonus>
+					<iNumFreeBonuses>1</iNumFreeBonuses>
+				</ExtraFreeBonus>
+			</ExtraFreeBonuses>
 			<ObsoleteTech>TECH_REPLACEMENT_ORGANS</ObsoleteTech>
 			<ObsoletesToBuilding>BUILDING_INDUSTRIAL_FARMS</ObsoletesToBuilding>
 			<ReplacementBuildings>
@@ -1367,16 +1332,14 @@
 			<iMaxLatitude>60</iMaxLatitude>
 			<PrereqTech>TECH_FREE_ARTISTRY</PrereqTech>
 			<PrereqOrHeritage>
+				<Type>HERITAGE_FOLKLORE_BEAVER</Type>
 				<Type>HERITAGE_FOLKLORE_FOX_ARCTIC</Type>
 				<Type>HERITAGE_FOLKLORE_FOX_FENNEC</Type>
 				<Type>HERITAGE_FOLKLORE_FOX_RED</Type>
+				<Type>HERITAGE_FOLKLORE_KOALA</Type>
+				<Type>HERITAGE_FOLKLORE_OTTER_SEA</Type>
+				<Type>HERITAGE_FOLKLORE_PLATYPUS</Type>
 			</PrereqOrHeritage>
-			<PrereqOrBuildings>
-				<BuildingType>BUILDING_FOLKLORE_BEAVER</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_KOALA</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_PLATYPUS</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_SEA_OTTER</BuildingType>
-			</PrereqOrBuildings>
 			<iCost>850</iCost>
 			<ObsoleteTech>TECH_VERTICAL_FLIGHT</ObsoleteTech>
 			<CommerceChanges>
@@ -2071,14 +2034,19 @@
 				<BuildingType>BUILDING_ZOO</BuildingType>
 			</PrereqInCityBuildings>
 			<PrereqOrBuildings>
-				<BuildingType>BUILDING_FOLKLORE_T_OWLS</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_BADGER</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_KOALA</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_RACCOON</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_RATEL</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_SKUNK</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_BARN_OWL</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_BARRED_OWL</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_GREAT_HORNED_OWL</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_TASMANIAN_DEVIL</BuildingType>
 			</PrereqOrBuildings>
+			<PrereqOrHeritage>
+				<Type>HERITAGE_FOLKLORE_BADGER</Type>
+				<Type>HERITAGE_FOLKLORE_KOALA</Type>
+				<Type>HERITAGE_FOLKLORE_RACCOON</Type>
+				<Type>HERITAGE_FOLKLORE_RATEL</Type>
+				<Type>HERITAGE_FOLKLORE_RED_PANDA</Type>
+				<Type>HERITAGE_FOLKLORE_SKUNK</Type>
+			</PrereqOrHeritage>
 			<iCost>1600</iCost>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -2100,12 +2068,15 @@
 			<Description>TXT_KEY_BUILDING_REMAINS_DIRE_WOLF</Description>
 			<Civilopedia>TXT_KEY_BUILDING_FOLKLORE_ANIMAL_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<PrereqAmountBuildings>
-				<PrereqBuilding>
-					<BuildingType>BUILDING_FOLKLORE_DIRE_WOLF</BuildingType>
-					<iNumBuildingNeeded>3</iNumBuildingNeeded>
-				</PrereqBuilding>
-			</PrereqAmountBuildings>
+			<PrereqOrFeature>
+				<PrereqFeature>
+					<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
+					<bPrereqFeature>1</bPrereqFeature>
+				</PrereqFeature>
+			</PrereqOrFeature>
+			<PrereqOrHeritage>
+				<Type>HERITAGE_FOLKLORE_WOLF_DIRE</Type>
+			</PrereqOrHeritage>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_FOLKLORE_REQUIREMENT</BuildingType>
 			</PrereqInCityBuildings>
@@ -2210,6 +2181,9 @@
 			<PrereqRawVicinityBonuses>
 				<VicinityBonus>BONUS_MAMMOTH</VicinityBonus>
 			</PrereqRawVicinityBonuses>
+			<PrereqOrHeritage>
+				<Type>HERITAGE_FOLKLORE_MAMMOTH</Type>
+			</PrereqOrHeritage>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_FOLKLORE_REQUIREMENT</BuildingType>
 			</PrereqInCityBuildings>
@@ -2479,9 +2453,9 @@
 				<BuildingType>BUILDING_CARNIVAL</BuildingType>
 				<BuildingType>BUILDING_ZOO</BuildingType>
 			</PrereqOrBuildings>
-			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_FOLKLORE_T_REPTILE</BuildingType>
-			</PrereqInCityBuildings>
+			<PrereqOrHeritage>
+				<Type>HERITAGE_TAXON_REPTILIA</Type>
+			</PrereqOrHeritage>
 			<iCost>306</iCost>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -2515,9 +2489,9 @@
 				<BuildingType>BUILDING_CARNIVAL</BuildingType>
 				<BuildingType>BUILDING_ZOO</BuildingType>
 			</PrereqOrBuildings>
-			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_FOLKLORE_T_RODENT</BuildingType>
-			</PrereqInCityBuildings>
+			<PrereqOrHeritage>
+				<Type>HERITAGE_TAXON_RODENTIA</Type>
+			</PrereqOrHeritage>
 			<iCost>306</iCost>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -2744,13 +2718,13 @@
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<FreeStartEra>C2C_ERA_ANCIENT</FreeStartEra>
 			<PrereqTech>TECH_SIMPLE_WOOD_WORKING</PrereqTech>
-			<PrereqOrBuildings>
-				<BuildingType>BUILDING_FOLKLORE_BALL_PYTHON</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_COBRA</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_PUFF_ADDER</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_VIPER</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_CHAIN_VIPER</BuildingType>
-			</PrereqOrBuildings>
+			<PrereqOrHeritage>
+				<Type>HERITAGE_FOLKLORE_ADDER_PUFF</Type>
+				<Type>HERITAGE_FOLKLORE_COBRA</Type>
+				<Type>HERITAGE_FOLKLORE_PYTHON_BALL</Type>
+				<Type>HERITAGE_FOLKLORE_VIPER_CHAIN</Type>
+				<Type>HERITAGE_FOLKLORE_VIPER_PIT</Type>
+			</PrereqOrHeritage>
 			<iCost>100</iCost>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -2785,12 +2759,12 @@
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<FreeStartEra>C2C_ERA_CLASSICAL</FreeStartEra>
 			<PrereqTech>TECH_POISON_CRAFTING</PrereqTech>
-			<PrereqOrBuildings>
-				<BuildingType>BUILDING_FOLKLORE_COBRA</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_PUFF_ADDER</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_VIPER</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_CHAIN_VIPER</BuildingType>
-			</PrereqOrBuildings>
+			<PrereqOrHeritage>
+				<Type>HERITAGE_FOLKLORE_ADDER_PUFF</Type>
+				<Type>HERITAGE_FOLKLORE_COBRA</Type>
+				<Type>HERITAGE_FOLKLORE_VIPER_CHAIN</Type>
+				<Type>HERITAGE_FOLKLORE_VIPER_PIT</Type>
+			</PrereqOrHeritage>
 			<iCost>80</iCost>
 			<iHappiness>1</iHappiness>
 			<CommerceChanges>
@@ -2867,11 +2841,11 @@
 			<ConstructSound>AS2D_BUILD_GRANARY</ConstructSound>
 			<FreeStartEra>C2C_ERA_CLASSICAL</FreeStartEra>
 			<PrereqTech>TECH_BONE_WORKING</PrereqTech>
-			<PrereqOrBuildings>
-				<BuildingType>BUILDING_FOLKLORE_DESERT_TORTOISE</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_GALAPAGOS_TORTOISE</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_SEA_TURTLE</BuildingType>
-			</PrereqOrBuildings>
+			<PrereqOrHeritage>
+				<Type>HERITAGE_FOLKLORE_TORTOISE_DESERT</Type>
+				<Type>HERITAGE_FOLKLORE_TORTOISE_GALAPAGOS</Type>
+				<Type>HERITAGE_FOLKLORE_TURTLE_SEA</Type>
+			</PrereqOrHeritage>
 			<iCost>90</iCost>
 			<ObsoleteTech>TECH_PLASTICS</ObsoleteTech>
 			<CommerceChanges>
@@ -3084,9 +3058,9 @@
 			<Civilopedia>TXT_KEY_BUILDING_WILD_ANIMAL_CAGE_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<PrereqTech>TECH_TRADE</PrereqTech>
-			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_FOLKLORE_T_WOLF</BuildingType>
-			</PrereqInCityBuildings>
+			<PrereqOrHeritage>
+				<Type>HERITAGE_TAXON_CANIDAE</Type>
+			</PrereqOrHeritage>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_GOVERNORS_MENAGERIE</BuildingType>
 				<BuildingType>BUILDING_CARNIVAL</BuildingType>

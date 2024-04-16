@@ -340,6 +340,11 @@ bool CyPlayer::hasBonus(int /*BonusTypes*/ eBonus) const
 	return m_pPlayer->hasBonus((BonusTypes)eBonus);
 }
 
+bool CyPlayer::hasHeritage(int iType) const
+{
+	return m_pPlayer->hasHeritage((HeritageTypes)iType);
+}
+
 bool CyPlayer::isTurnActive() const
 {
 	return m_pPlayer->isTurnActive();
@@ -1032,14 +1037,9 @@ void CyPlayer::setFoundedFirstCity(bool bNewValue)
 	m_pPlayer->setFoundedFirstCity(bNewValue);
 }
 
-void CyPlayer::setAlive(bool bNewValue)
+void CyPlayer::setAlive(bool bNewValue, bool bActivateTurn)
 {
-	m_pPlayer->setAlive(bNewValue);
-}
-
-void CyPlayer::setNewPlayerAlive(bool bNewValue)
-{
-	m_pPlayer->setNewPlayerAlive(bNewValue);
+	m_pPlayer->setAlive(bNewValue, bActivateTurn);
 }
 
 bool CyPlayer::isStrike() const
@@ -1520,11 +1520,6 @@ EventTriggeredData* CyPlayer::getEventTriggered(int iID) const
 EventTriggeredData* CyPlayer::initTriggeredData(int /*EventTriggerTypes*/ eEventTrigger, bool bFire, int iCityId, int iPlotX, int iPlotY, int /*PlayerTypes*/ eOtherPlayer, int iOtherPlayerCityId, int /*ReligionTypes*/ eReligion, int /*CorporationTypes*/ eCorporation, int iUnitId, int /*BuildingTypes*/ eBuilding)
 {
 	return m_pPlayer->initTriggeredData((EventTriggerTypes)eEventTrigger, bFire, iCityId, iPlotX, iPlotY, (PlayerTypes)eOtherPlayer, iOtherPlayerCityId, (ReligionTypes)eReligion, (CorporationTypes)eCorporation, iUnitId, (BuildingTypes)eBuilding);
-}
-
-int CyPlayer::getEventTriggerWeight(int /*EventTriggerTypes*/ eTrigger) const
-{
-	return m_pPlayer->getEventTriggerWeight((EventTriggerTypes)eTrigger);
 }
 
 void CyPlayer::AI_updateFoundValues(bool bStartingLoc)

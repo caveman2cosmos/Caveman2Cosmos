@@ -78,7 +78,7 @@
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_NEANDERTHAL_WARRIOR</Type>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
+			<iInstanceCostModifier>10</iInstanceCostModifier>
 			<EnabledCivilizationTypes>
 				<EnabledCivilizationType>
 					<CivilizationType>CIVILIZATION_NPC_NEANDERTHAL</CivilizationType>
@@ -786,10 +786,11 @@
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
+			<bBarbCoExist>1</bBarbCoExist>
+			<bBlendIntoCity>1</bBlendIntoCity>
 			<bNoBadGoodies>1</bNoBadGoodies>
-			<bMilitarySupport>1</bMilitarySupport>
-			<bMilitaryProduction>1</bMilitaryProduction>
-			<bPillage>1</bPillage>
+			<bRivalTerritory>1</bRivalTerritory>
+			<bUpgradeAnywhere>1</bUpgradeAnywhere>
 			<PrereqTech>TECH_NOMADISM</PrereqTech>
 			<PrereqAndBuildings>
 				<BuildingType>BUILDING_C_AC_NEANDERTHAL</BuildingType>
@@ -807,8 +808,8 @@
 			<iXPValueAttack>3</iXPValueAttack>
 			<iXPValueDefense>3</iXPValueDefense>
 			<iWithdrawalProb>10</iWithdrawalProb>
-			<iEarlyWithdraw>100</iEarlyWithdraw>
-			<iAnimalCombat>100</iAnimalCombat>
+			<iEarlyWithdraw>50</iEarlyWithdraw>
+			<iAnimalCombat>50</iAnimalCombat>
 			<iAsset>2</iAsset>
 			<iPower>1</iPower>
 			<UnitMeshGroups>
@@ -1371,10 +1372,6 @@
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_NEANDERTHAL_TRIBAL_GUARDIAN</Type>
-			<iMaxPlayerInstances>1</iMaxPlayerInstances>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
 			<Description>TXT_KEY_UNIT_NEANDERTHAL_TRIBAL_GUARDIAN</Description>
 			<Civilopedia>TXT_KEY_UNIT_TRIBAL_GUARDIAN_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_MILITARY</Advisor>
@@ -1439,7 +1436,6 @@
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_NEANDERTHAL_KAYAK</Type>
-			<iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<EnabledCivilizationTypes>
 				<EnabledCivilizationType>
 					<CivilizationType>CIVILIZATION_NPC_NEANDERTHAL</CivilizationType>
@@ -2018,7 +2014,7 @@
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_NEANDERTHAL_LOG_RAM</Type>
-			<iMaxPlayerInstances>40</iMaxPlayerInstances>
+			<iInstanceCostModifier>5</iInstanceCostModifier>
 			<Capture>UNIT_LOG_RAM</Capture>
 			<EnabledCivilizationTypes>
 				<EnabledCivilizationType>
@@ -3078,7 +3074,7 @@
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_NEANDERTHAL_HUNTER</Type>
-			<iMaxPlayerInstances>5</iMaxPlayerInstances>
+			<iInstanceCostModifier>10</iInstanceCostModifier>
 			<EnabledCivilizationTypes>
 				<EnabledCivilizationType>
 					<CivilizationType>CIVILIZATION_NPC_NEANDERTHAL</CivilizationType>
@@ -3131,16 +3127,6 @@
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</NotUnitAIs>
-			<UnitCombatTargets>
-				<UnitCombatTarget>
-					<UnitCombatTargetType>UNITCOMBAT_ANIMAL</UnitCombatTargetType>
-					<bUnitCombatTarget>1</bUnitCombatTarget>
-				</UnitCombatTarget>
-				<UnitCombatTarget>
-					<UnitCombatTargetType>UNITCOMBAT_PROMOTED_ARMED_GUARD</UnitCombatTargetType>
-					<bUnitCombatTarget>1</bUnitCombatTarget>
-				</UnitCombatTarget>
-			</UnitCombatTargets>
 			<FreePromotions>
 				<FreePromotion>
 					<PromotionType>PROMOTION_HUNTING_SIGHT1</PromotionType>
@@ -3164,8 +3150,30 @@
 			<iXPValueAttack>2</iXPValueAttack>
 			<iXPValueDefense>1</iXPValueDefense>
 			<iCityAttack>-75</iCityAttack>
-			<iPursuit>40</iPursuit>
-			<iAnimalCombat>200</iAnimalCombat>
+			<iPursuit>30</iPursuit>
+			<iAnimalCombat>125</iAnimalCombat>
+			<UnitCombatMods>
+				<UnitCombatMod>
+					<UnitCombatType>UNITCOMBAT_ANIMAL</UnitCombatType>
+					<iUnitCombatMod>25</iUnitCombatMod>
+				</UnitCombatMod>
+			</UnitCombatMods>
+			<PursuitVSUnitCombatTypes>
+				<PursuitVSUnitCombatType>
+					<PursuitVSUnitCombat>UNITCOMBAT_ANIMAL</PursuitVSUnitCombat>
+					<iPursuitVSUnitCombat>20</iPursuitVSUnitCombat>
+				</PursuitVSUnitCombatType>
+			</PursuitVSUnitCombatTypes>
+			<UnitCombatTargets>
+				<UnitCombatTarget>
+					<UnitCombatTargetType>UNITCOMBAT_ANIMAL</UnitCombatTargetType>
+					<bUnitCombatTarget>1</bUnitCombatTarget>
+				</UnitCombatTarget>
+				<UnitCombatTarget>
+					<UnitCombatTargetType>UNITCOMBAT_PROMOTED_ARMED_GUARD</UnitCombatTargetType>
+					<bUnitCombatTarget>1</bUnitCombatTarget>
+				</UnitCombatTarget>
+			</UnitCombatTargets>
 			<iAsset>2</iAsset>
 			<iPower>2</iPower>
 			<UnitMeshGroups>
@@ -3183,7 +3191,7 @@
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_NEANDERTHAL_TRACKER</Type>
-			<iMaxPlayerInstances>5</iMaxPlayerInstances>
+			<iInstanceCostModifier>10</iInstanceCostModifier>
 			<EnabledCivilizationTypes>
 				<EnabledCivilizationType>
 					<CivilizationType>CIVILIZATION_NPC_NEANDERTHAL</CivilizationType>
@@ -3253,8 +3261,38 @@
 			<iXPValueAttack>2</iXPValueAttack>
 			<iXPValueDefense>1</iXPValueDefense>
 			<iCityAttack>-75</iCityAttack>
-			<iPursuit>30</iPursuit>
-			<iAnimalCombat>200</iAnimalCombat>
+			<iPursuit>20</iPursuit>
+			<iAnimalCombat>125</iAnimalCombat>
+			<UnitCombatMods>
+				<UnitCombatMod>
+					<UnitCombatType>UNITCOMBAT_ANIMAL_COMBAT_FLEEING</UnitCombatType>
+					<iUnitCombatMod>20</iUnitCombatMod>
+				</UnitCombatMod>
+				<UnitCombatMod>
+					<UnitCombatType>UNITCOMBAT_ANIMAL_COMBAT_HIDING</UnitCombatType>
+					<iUnitCombatMod>20</iUnitCombatMod>
+				</UnitCombatMod>
+				<UnitCombatMod>
+					<UnitCombatType>UNITCOMBAT_ANIMAL</UnitCombatType>
+					<iUnitCombatMod>25</iUnitCombatMod>
+				</UnitCombatMod>
+			</UnitCombatMods>
+			<PursuitVSUnitCombatTypes>
+				<PursuitVSUnitCombatType>
+					<PursuitVSUnitCombat>UNITCOMBAT_ANIMAL</PursuitVSUnitCombat>
+					<iPursuitVSUnitCombat>20</iPursuitVSUnitCombat>
+				</PursuitVSUnitCombatType>
+			</PursuitVSUnitCombatTypes>
+			<UnitCombatTargets>
+				<UnitCombatTarget>
+					<UnitCombatTargetType>UNITCOMBAT_ANIMAL</UnitCombatTargetType>
+					<bUnitCombatTarget>1</bUnitCombatTarget>
+				</UnitCombatTarget>
+				<UnitCombatTarget>
+					<UnitCombatTargetType>UNITCOMBAT_PROMOTED_ARMED_GUARD</UnitCombatTargetType>
+					<bUnitCombatTarget>1</bUnitCombatTarget>
+				</UnitCombatTarget>
+			</UnitCombatTargets>
 			<iAsset>2</iAsset>
 			<iPower>2</iPower>
 			<UnitMeshGroups>
@@ -3268,21 +3306,11 @@
 					<EarlyArtDefineTag>ART_DEF_UNIT_NEANDERTHAL_TRACKER</EarlyArtDefineTag>
 				</UnitMeshGroup>
 			</UnitMeshGroups>
-			<UnitCombatTargets>
-				<UnitCombatTarget>
-					<UnitCombatTargetType>UNITCOMBAT_ANIMAL</UnitCombatTargetType>
-					<bUnitCombatTarget>1</bUnitCombatTarget>
-				</UnitCombatTarget>
-				<UnitCombatTarget>
-					<UnitCombatTargetType>UNITCOMBAT_PROMOTED_ARMED_GUARD</UnitCombatTargetType>
-					<bUnitCombatTarget>1</bUnitCombatTarget>
-				</UnitCombatTarget>
-			</UnitCombatTargets>
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_NEANDERTHAL_CHASER</Type>
-			<iMaxPlayerInstances>5</iMaxPlayerInstances>
+			<iInstanceCostModifier>10</iInstanceCostModifier>
 			<EnabledCivilizationTypes>
 				<EnabledCivilizationType>
 					<CivilizationType>CIVILIZATION_NPC_NEANDERTHAL</CivilizationType>
@@ -3344,9 +3372,48 @@
 			<iCombat>2</iCombat>
 			<iXPValueAttack>2</iXPValueAttack>
 			<iXPValueDefense>1</iXPValueDefense>
-			<iPursuit>20</iPursuit>
+			<iPursuit>10</iPursuit>
 			<iCityAttack>-75</iCityAttack>
-			<iAnimalCombat>200</iAnimalCombat>
+			<iAnimalCombat>125</iAnimalCombat>
+			<iEarlyWithdraw>30</iEarlyWithdraw>
+			<UnitCombatMods>
+				<UnitCombatMod>
+					<UnitCombatType>UNITCOMBAT_ANIMAL_COMBAT_FLEEING</UnitCombatType>
+					<iUnitCombatMod>50</iUnitCombatMod>
+				</UnitCombatMod>
+				<UnitCombatMod>
+					<UnitCombatType>UNITCOMBAT_ANIMAL_COMBAT_RAGING</UnitCombatType>
+					<iUnitCombatMod>-50</iUnitCombatMod>
+				</UnitCombatMod>
+				<UnitCombatMod>
+					<UnitCombatType>UNITCOMBAT_ANIMAL_COMBAT_HERDING</UnitCombatType>
+					<iUnitCombatMod>-25</iUnitCombatMod>
+				</UnitCombatMod>
+				<UnitCombatMod>
+					<UnitCombatType>UNITCOMBAT_ANIMAL_COMBAT_HIDING</UnitCombatType>
+					<iUnitCombatMod>-25</iUnitCombatMod>
+				</UnitCombatMod>
+				<UnitCombatMod>
+					<UnitCombatType>UNITCOMBAT_ANIMAL</UnitCombatType>
+					<iUnitCombatMod>25</iUnitCombatMod>
+				</UnitCombatMod>
+			</UnitCombatMods>
+			<PursuitVSUnitCombatTypes>
+				<PursuitVSUnitCombatType>
+					<PursuitVSUnitCombat>UNITCOMBAT_ANIMAL</PursuitVSUnitCombat>
+					<iPursuitVSUnitCombat>20</iPursuitVSUnitCombat>
+				</PursuitVSUnitCombatType>
+			</PursuitVSUnitCombatTypes>
+			<UnitCombatTargets>
+				<UnitCombatTarget>
+					<UnitCombatTargetType>UNITCOMBAT_ANIMAL</UnitCombatTargetType>
+					<bUnitCombatTarget>1</bUnitCombatTarget>
+				</UnitCombatTarget>
+				<UnitCombatTarget>
+					<UnitCombatTargetType>UNITCOMBAT_PROMOTED_ARMED_GUARD</UnitCombatTargetType>
+					<bUnitCombatTarget>1</bUnitCombatTarget>
+				</UnitCombatTarget>
+			</UnitCombatTargets>
 			<iAsset>1</iAsset>
 			<iPower>1</iPower>
 			<UnitMeshGroups>
@@ -3422,11 +3489,10 @@
 				</UnitAI>
 			</NotUnitAIs>
 			<SeeInvisible>INVISIBLE_CAMOUFLAGE</SeeInvisible>
+			<bBarbCoExist>1</bBarbCoExist>
 			<bNoBadGoodies>1</bNoBadGoodies>
-			<bOnlyDefensive>1</bOnlyDefensive>
-			<bMilitarySupport>1</bMilitarySupport>
-			<bMilitaryProduction>1</bMilitaryProduction>
-			<bPillage>1</bPillage>
+			<bPassage>1</bPassage>
+			<bUpgradeAnywhere>1</bUpgradeAnywhere>
 			<PrereqTech>TECH_TRAILS</PrereqTech>
 			<PrereqAndBuildings>
 				<BuildingType>BUILDING_C_AC_NEANDERTHAL</BuildingType>
@@ -3444,7 +3510,7 @@
 			<iXPValueDefense>4</iXPValueDefense>
 			<iWithdrawalProb>40</iWithdrawalProb>
 			<iEarlyWithdraw>25</iEarlyWithdraw>
-			<iAnimalCombat>100</iAnimalCombat>
+			<iAnimalCombat>25</iAnimalCombat>
 			<iAsset>1</iAsset>
 			<UnitMeshGroups>
 				<iGroupSize>2</iGroupSize>

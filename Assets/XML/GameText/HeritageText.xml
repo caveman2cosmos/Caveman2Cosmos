@@ -3,46 +3,159 @@
 <Civ4GameText xmlns="http://www.firaxis.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.firaxis.com ../Schema/Civ4Gametext.xsd">
 	<TEXT>
 		<Tag>TXT_KEY_HERITAGE_FOLKLORE_AARDVARK</Tag>
-		<English>Folklore - Aardvark</English>
+		<English>Tale, Aardvark</English>
 		<French>Mythe de l'Oryctérope du Cap</French>
 		<German>Mythos des Erdferkels</German>
 		<Italian>Mito dell'oritteropo</Italian>
 		<Russian>Ìèô î òðóáêîçóáå</Russian>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_FOLKLORE_ADDER_PUFF</Tag>
+		<English>Tale, Puff Adder</English>
+		<French>Mythe de la Vipère heurtante</French>
+		<German>Mythos der Puffotter</German>
+		<Italian>Mito della vipera soffiante</Italian>
+		<Russian>Ìèô î øóì. ãàäþêå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_FOLKLORE_ALLIGATOR_AMERICAN</Tag>
+		<English>Tale, American Alligator</English>
+		<French>Mythe de l'Alligator d'Amérique</French>
+		<German>Mythos des Mississippi-Alligators</German>
+		<Italian>Mito dell'alligatore americano</Italian>
+		<Polish>Mit - Aligator Ameryka&#241;ski</Polish>
+		<Russian>Ìèô îá àëëèãàòîðå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_FOLKLORE_ALLIGATOR_CHINESE</Tag>
+		<English>Tale, Chinese Alligator</English>
+		<French>Mythe de l'Alligator de Chine</French>
+		<German>Mythos des China-Alligators</German>
+		<Italian>Mito dell'alligatore cinese</Italian>
+		<Polish>Mit - Aligator Chi&#241;ski</Polish>
+		<Russian>Ìèô î êèò. àëëèãàòîð</Russian>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_HERITAGE_FOLKLORE_ANTEATER</Tag>
-		<English>Folklore - Anteater</English>
+		<English>Tale, Anteater</English>
 		<French>Mythe du Fourmilier</French>
 		<German>Mythos des Ameisenbären</German>
 		<Italian>Mito del formichiere</Italian>
-		<Polish>Mit - Mrówkojad</Polish>
+		<Polish>Mit - Mr&#243;wkojad</Polish>
 		<Russian>Ìèô î ìóðàâüåäå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HERITAGE_FOLKLORE_BABIRUSA</Tag>
-		<English>Folklore - Babirusa</English>
+		<English>Tale, Babirusa</English>
 		<French>Mythe du babiroussas</French>
 		<German>Mythos des Molukken-Hirschebers</German>
 		<Italian>Mito del babirussa</Italian>
 		<Russian>Ìèô î áàáèðóñå</Russian>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_FOLKLORE_BADGER</Tag>
+		<English>Tale, Badger</English>
+		<French>Mythe du Blaireau</French>
+		<German>Mythos des Dachses</German>
+		<Italian>Mito del tasso</Italian>
+		<Polish>Mit - Borsuk</Polish>
+		<Russian>Ìèô î áàðñóêå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_FOLKLORE_BEAVER</Tag>
+		<English>Tale, Beaver</English>
+		<French>Mythe du Castor</French>
+		<German>Mythos des Bibers</German>
+		<Italian>Mito del castoro</Italian>
+		<Polish>Mit - B&#243;br</Polish>
+		<Russian>Ìèô î áîáðå</Russian>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_HERITAGE_FOLKLORE_BOAR_WILD</Tag>
-		<English>Folklore - Wild Boar</English>
+		<English>Tale, Wild Boar</English>
 		<German>Mythos des Wildschweins</German>
 		<Italian>Mito del cinghiale selvatico</Italian>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_FOLKLORE_CAIMAN_BLACK</Tag>
+		<English>Tale, Black Caiman</English>
+		<French>Mythe du Caïman</French>
+		<German>Mythos des Mohrenkaimans</German>
+		<Italian>Mito del caimano nero</Italian>
+		<Polish>Mit - Kajman</Polish>
+		<Russian>Ìèô î êàéìàíå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_FOLKLORE_CAPYBARA</Tag>
+		<English>Tale, Capybara</English>
+		<French>Mythe du Cabiaï</French>
+		<German>Mythos des Wasserschweins</German>
+		<Italian>Mito del capibara</Italian>
+		<Russian>Ìèô î âîäîñâèíêå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_FOLKLORE_CHEETAH</Tag>
+		<English>Tale, Cheetah</English>
+		<French>Mythe du Cheetah</French>
+		<German>Mythos des Gepards</German>
+		<Italian>Mito del ghepardo</Italian>
+		<Russian>Ìèô î ãåïàðäå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_FOLKLORE_COBRA</Tag>
+		<English>Tale, Cobra</English>
+		<French>Mythe du Cobra</French>
+		<German>Mythos der Kobra</German>
+		<Italian>Mito del cobra</Italian>
+		<Russian>Ìèô î êîáðå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_FOLKLORE_CROCODILE_MUGGER</Tag>
+		<English>Tale, Mugger Crocodile</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_FOLKLORE_CROCODILE_NILE</Tag>
+		<English>Tale, Nile Crocodile</English>
+		<French>Mythe du Crocodile du Nil</French>
+		<German>Mythos des Nilkrokodils</German>
+		<Italian>Mito del coccodrillo del Nilo</Italian>
+		<Polish>Mit - Krokodyl Nilowy</Polish>
+		<Russian>Ìèô î íèë. êðîêîäèëå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_FOLKLORE_CROCODILE_SALTWATER</Tag>
+		<English>Tale, Saltwater Crocodile</English>
+		<French>Mythe du Crocodile de mer</French>
+		<German>Mythos des Salzwasserkrokodils</German>
+		<Italian>Mito del coccodrillo marino</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_FOLKLORE_CUSCUS_SPOTTED</Tag>
+		<English>Tale, Spotted Cuscus</English>
+		<French>Mythe du Couscous</French>
+		<German>Mythos des Tüpfelkuskus</German>
+		<Italian>Mito del cusco maculato</Italian>
+		<Russian>Ìèô î êóñêóñå</Russian>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_HERITAGE_FOLKLORE_DART_FROG</Tag>
-		<English>Folklore - Dart Frog</English>
+		<English>Tale, Dart Frog</English>
 		<French>Mythe de la Grenouille venimeuse</French>
 		<German>Mythos des Baumsteigerfroschs</German>
 		<Italian>Mito della rana velenosa</Italian>
 		<Russian>Ìèô î æàáå</Russian>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_FOLKLORE_DINGO</Tag>
+		<English>Tale, Dingo</English>
+		<French>Mythe du Dingo</French>
+		<German>Mythos des Dingos</German>
+		<Italian>Mito del dingo</Italian>
+		<Russian>Ìèô î äèíãî</Russian>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_HERITAGE_FOLKLORE_ELEPHANT_AFRICAN</Tag>
-		<English>Folklore - African Elephant</English>
+		<English>Tale, African Elephant</English>
 		<French>Mythe de l'Eléphant d'Afrique</French>
 		<German>Mythos des Afrikanischen Elefanten</German>
 		<Italian>Mito dell'elefante africano</Italian>
@@ -50,7 +163,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HERITAGE_FOLKLORE_ELEPHANT_ASIAN</Tag>
-		<English>Folklore - Asian Elephant</English>
+		<English>Tale, Asian Elephant</English>
 		<French>Mythe de l'Eléphant d'Asie</French>
 		<German>Mythos des Asiatischen Elefanten</German>
 		<Italian>Mito dell'elefante asiatico</Italian>
@@ -58,7 +171,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HERITAGE_FOLKLORE_FOX_ARCTIC</Tag>
-		<English>Folklore - Arctic Fox</English>
+		<English>Tale, Arctic Fox</English>
 		<French>Mythe du Renard arctique</French>
 		<German>Mythos des Polarfuchses</German>
 		<Italian>Mito della volpe artica</Italian>
@@ -66,7 +179,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HERITAGE_FOLKLORE_FOX_FENNEC</Tag>
-		<English>Folklore - Fennec Fox</English>
+		<English>Tale, Fennec Fox</English>
 		<French>Mythe du Fennec</French>
 		<German>Mythos des Fenneks</German>
 		<Italian>Mito della volpe del deserto</Italian>
@@ -74,45 +187,263 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HERITAGE_FOLKLORE_FOX_RED</Tag>
-		<English>Folklore - Red Fox</English>
+		<English>Tale, Red Fox</English>
 		<French>Mythe du Renard Roux</French>
 		<German>Mythos des Rotfuchses</German>
 		<Italian>Mito della volpe rossa</Italian>
 		<Russian>Ìèô î ëèñèöå</Russian>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_FOLKLORE_GHARIAL</Tag>
+		<English>Tale, Gharial</English>
+		<French>Mythe du Gavial du Gange</French>
+		<German>Mythos des Gavials</German>
+		<Italian>Mito del gaviale</Italian>
+		<Polish>Mit - Gawial</Polish>
+		<Russian>Ìèô î ãàâèàëå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_FOLKLORE_HIPPOPOTAMUS</Tag>
+		<English>Tale, Hippopotamus</English>
+		<French>Mythe de l'Hippopotame</French>
+		<German>Mythos des Flusspferds</German>
+		<Italian>Mito dell'ippopotamo</Italian>
+		<Russian>Ìèô î áåãåìîòå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_FOLKLORE_HIPPOPOTAMUS_PYGMY</Tag>
+		<English>Tale, Pygmy Hippo</English>
+		<French>Mythe de l'Hippopotame nain</French>
+		<German>Mythos des Zwergflusspferdes</German>
+		<Italian>Mito dell'ippopotamo pigmeo</Italian>
+		<Russian>Ìèô î êàðë. áåãåìîòå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_FOLKLORE_HORSE</Tag>
+		<English>Tale, Horse</English>
+		<French>Mythe du Cheval</French>
+		<German>Mythos des Pferdes</German>
+		<Italian>Mito del cavallo</Italian>
+		<Polish>Mit Koni</Polish>
+		<Russian>Ìèô î ëîøàäè</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_FOLKLORE_HYENA_STRIPED</Tag>
+		<English>Tale, Striped Hyena</English>
+		<French>Mythe de la Hyène rayée</French>
+		<German>Mythos der Hyäne</German>
+		<Italian>Mito della iena striata</Italian>
+		<Russian>Ìèô î ãèåíå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_FOLKLORE_IGUANA</Tag>
+		<English>Tale, Iguana</English>
+		<French>Mythe de l'Iguane</French>
+		<German>Mythos des Leguans</German>
+		<Italian>Mito dell'iguana</Italian>
+		<Russian>Ìèô î èãóàíå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_FOLKLORE_JAGUAR</Tag>
+		<English>Tale, Jaguar</English>
+		<French>Mythe du Jaguar</French>
+		<German>Mythos des Jaguars</German>
+		<Italian>Mito del giaguaro</Italian>
+		<Russian>Ìèô îá ÿãóàðå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_FOLKLORE_JAGUAR_BLACK</Tag>
+		<English>Tale, Black Jaguar</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_FOLKLORE_KOALA</Tag>
+		<English>Tale, Koala</English>
+		<French>Mythe du Koala</French>
+		<German>Mythos des Koalas</German>
+		<Italian>Mito del koala</Italian>
+		<Russian>Ìèô î êîàëå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_FOLKLORE_KOMODO_DRAGON</Tag>
+		<English>Tale, Komodo Dragon</English>
+		<French>Mythe du Dragon de Komodo</French>
+		<German>Mythos des Komodowarans</German>
+		<Italian>Mito del drago di Komodo</Italian>
+		<Russian>Ìèô î êîì. âàðàíå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_FOLKLORE_LEOPARD_SNOW</Tag>
+		<English>Tale, Snow Leopard</English>
+		<French>Mythe du Léopard des neiges</French>
+		<German>Mythos des Schneeleoparden</German>
+		<Italian>Mito del leopardo delle nevi</Italian>
+		<Russian>Ìèô î ñíåæíîì áàðñå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_FOLKLORE_LION</Tag>
+		<English>Tale, Lion</English>
+		<French>Mythe du Lion</French>
+		<German>Mythos des Löwen</German>
+		<Italian>Mito del leone</Italian>
+		<Polish>Mit Lwa</Polish>
+		<Russian>Ìèô î ëüâå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_FOLKLORE_LION_CAVE</Tag>
+		<English>Tale, Cave Lion</English>
+		<French>Mythe du Lion des cavernes</French>
+		<German>Mythos des Höhlenlöwen</German>
+		<Italian>Mito del leone delle caverne</Italian>
+		<Russian>Ìèô î ïåù. ëüâå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_FOLKLORE_LIZARD</Tag>
+		<English>Tale, Lizard</English>
+		<French>Mythe du lézard</French>
+		<German>Mythos der Echse</German>
+		<Italian>Mito della lucertola</Italian>
+		<Polish>Mit - Jaszczurka</Polish>
+		<Russian>Ìèô î ÿùåðèöå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_FOLKLORE_LYNX</Tag>
+		<English>Tale, Lynx</English>
+		<French>Mythe du Lynx</French>
+		<German>Mythos des Luchses</German>
+		<Italian>Mito della lince</Italian>
+		<Russian>Ìèô î ðûñè</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_FOLKLORE_MACAW</Tag>
+		<English>Tale, Macaw</English>
+		<French>Mythe de l'Ara</French>
+		<Italian>Mito del pappagallo ara</Italian>
+		<Polish>Mit - Papuga Ara</Polish>
+		<Russian>Ìèô î ïîïóãàå àðà</Russian>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_HERITAGE_FOLKLORE_MAMMOTH</Tag>
-		<English>Folklore - Mammoth</English>
+		<English>Tale, Mammoth</English>
 		<French>Mythe du Mammouth</French>
 		<German>Mythos des Mammuts</German>
 		<Italian>Mito del mammut</Italian>
-		<Polish>Mit Mamutów</Polish>
+		<Polish>Mit Mamut&#243;w</Polish>
 		<Russian>Ìèô î ìàìîíòå</Russian>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_FOLKLORE_MONITOR_NILE</Tag>
+		<English>Tale, Nile Monitor</English>
+		<French>Mythe du Varan du Nil</French>
+		<German>Mythos des Nilwarans</German>
+		<Italian>Mito del varano del Nilo</Italian>
+		<Russian>Ìèô î íèë. âàðàíå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_FOLKLORE_OTTER_SEA</Tag>
+		<English>Tale, Sea Otter</English>
+		<French>Mythe de la Loutre de mer</French>
+		<German>Mythos des Seeotters</German>
+		<Italian>Mito della lontra marina</Italian>
+		<Russian>Ìèô î êàëàíå</Russian>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_HERITAGE_FOLKLORE_PARROT_AFRICAN_GREY</Tag>
-		<English>Folklore - African Grey Parrot</English>
+		<English>Tale, African Grey Parrot</English>
 		<French>Mythe du Perroquet jaco</French>
 		<Italian>Mito del pappagallo cenerino</Italian>
-		<Polish>Mit - Żako</Polish>
+		<Polish>Mit - &#175;ako</Polish>
 		<Russian>Ìèô îá àôð. ïîïóãàå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HERITAGE_FOLKLORE_PENGUIN_AFRICAN</Tag>
-		<English>Folklore - African Penguin</English>
+		<English>Tale, African Penguin</English>
 		<French>Mythe du Manchot du Cap</French>
 		<Italian>Mito del pinguino africano</Italian>
-		<Polish>Mit - Pingwin Przylądkowy</Polish>
+		<Polish>Mit - Pingwin Przyl&#185;dkowy</Polish>
 		<Russian>Ìèô îá àôð. ïèíãâèíå</Russian>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_FOLKLORE_PENGUIN_EMPEROR</Tag>
+		<English>Tale, Emperor Penguin</English>
+		<French>Mythe du Manchot Empereur</French>
+		<German>Mythos des Kaiserpinguins</German>
+		<Italian>Mito del pinguino imperatore</Italian>
+		<Russian>Ìèô îá èìï. ïèíãâèíå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_FOLKLORE_PENGUIN_GALAPAGOS</Tag>
+		<English>Tale, Galapagos Penguin</English>
+		<French>Mythe du Pingouin des Galapagos</French>
+		<German>Mythos des Galápagos-Pinguins</German>
+		<Italian>Mito del pinguino delle Galapagos</Italian>
+		<Polish>Mit - Pingwin R&#243;wnikowy</Polish>
+		<Russian>Ìèô îá î÷ê. ïèíãâèíå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_FOLKLORE_PENGUIN_ROCKHOPPER</Tag>
+		<English>Tale, Rockhopper Penguin</English>
+		<French>Mythe du Gorfou sauteur</French>
+		<German>Mythos des Felsenpinguins</German>
+		<Italian>Mito del pinguino saltarocce</Italian>
+		<Russian>Ìèô î ñêàë. ïèíãâèíå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_FOLKLORE_PLATYPUS</Tag>
+		<English>Tale, Platypus</English>
+		<French>Mythe de l'Ornithorynque</French>
+		<German>Mythos des Schnabeltiers</German>
+		<Italian>Mito dell'ornitorinco</Italian>
+		<Russian>Ìèô îá óòêîíîñå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_FOLKLORE_PYTHON_BALL</Tag>
+		<English>Tale, Ball Python</English>
+		<French>Mythe du Python royal</French>
+		<German>Mythos des Königspythons</German>
+		<Italian>Mito del pitone reale</Italian>
+		<Polish>Mit - Pyton Kr&#243;lewski</Polish>
+		<Russian>Ìèô î êîð. ïèòîíå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_FOLKLORE_RACCOON</Tag>
+		<English>Tale, Raccoon</English>
+		<French>Mythe du Raton-Laveur</French>
+		<German>Mythos des Waschbären</German>
+		<Italian>Mito del procione</Italian>
+		<Russian>Ìèô î åíîòå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_FOLKLORE_RATEL</Tag>
+		<English>Tale, Ratel</English>
+		<French>Mythe du Ratel</French>
+		<German>Mythos des Honigdachses</German>
+		<Italian>Mito del tasso del miele</Italian>
+		<Russian>Ìèô î ìåäîåäå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_FOLKLORE_RED_PANDA</Tag>
+		<English>Tale, Red Panda</English>
+		<French>Mythe du Panda roux</French>
+		<Italian>Mito del panda rosso</Italian>
+		<Polish>Mit - Panda Czerwona</Polish>
+		<Russian>Ìèô î êðàñíîé ïàíäå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_FOLKLORE_SKUNK</Tag>
+		<English>Tale, Skunk</English>
+		<French>Mythe de la Moufette</French>
+		<German>Mythos des Stinktiers</German>
+		<Italian>Mito della puzzola</Italian>
+		<Russian>Ìèô î ñêóíñå</Russian>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_HERITAGE_FOLKLORE_SWINE</Tag>
-		<English>Folklore - Swine</English>
+		<English>Tale, Swine</English>
 		<Italian>Mito del maiale</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HERITAGE_FOLKLORE_TAPIR_BAIRDS</Tag>
-		<English>Folklore - Baird's Tapir</English>
+		<English>Tale, Baird's Tapir</English>
 		<French>Mythe du Tapir de Baird</French>
 		<German>Mythos des Baird-Tapirs</German>
 		<Italian>Mito del tapiro di Baird</Italian>
@@ -121,7 +452,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HERITAGE_FOLKLORE_TAPIR_LOWLAND</Tag>
-		<English>Folklore - Lowland Tapir</English>
+		<English>Tale, Lowland Tapir</English>
 		<French>Mythe du Tapir du Brésil</French>
 		<German>Mythos des Flachlandtapirs</German>
 		<Italian>Mito del tapiro di pianura</Italian>
@@ -130,7 +461,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HERITAGE_FOLKLORE_TAPIR_MALAYAN</Tag>
-		<English>Folklore - Malayan Tapir</English>
+		<English>Tale, Malayan Tapir</English>
 		<French>Mythe du Tapir Malais</French>
 		<German>Mythos des Schabrackentapirs</German>
 		<Italian>Mito del tapiro malese</Italian>
@@ -139,25 +470,105 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HERITAGE_FOLKLORE_TAPIR_MOUNTAIN</Tag>
-		<English>Folklore - Mountain Tapir</English>
+		<English>Tale, Mountain Tapir</English>
 		<French>Mythe du Tapir des Montagnes</French>
 		<German>Mythos des Bergtapirs</German>
 		<Italian>Mito del tapiro delle Ande</Italian>
-		<Polish>Mit - Tapir Górski</Polish>
+		<Polish>Mit - Tapir G&#243;rski</Polish>
 		<Russian>Ìèô î ãîðíîì òàïèðå</Russian>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_FOLKLORE_TARANTULA_DESERT</Tag>
+		<English>Tale, Desert Tarantula</English>
+		<French>Mythe de la Tarentule du désert</French>
+		<German>Mythos der Wüstenvogelspinne</German>
+		<Italian>Mito della tarantola del deserto</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_FOLKLORE_TARANTULA_JUNGLE</Tag>
+		<English>Tale, Jungle Tarantula</English>
+		<French>Mythe de la Tarentule de la jungle</French>
+		<German>Mythos der Dschungelvogelspinne</German>
+		<Italian>Mito della tarantola della giungla</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_FOLKLORE_TIGER_BENGAL</Tag>
+		<English>Tale, Bengal Tiger</English>
+		<French>Mythe du Tigre du Bengale</French>
+		<German>Mythos des Bengalischen Tigers</German>
+		<Italian>Mito della tigre del Bengala</Italian>
+		<Polish>Mit - Tygrys Bengalski</Polish>
+		<Russian>Ìèô î áåíãàë. òèãðå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_FOLKLORE_TIGER_SIBERIAN</Tag>
+		<English>Tale, Siberian Tiger</English>
+		<French>Mythe du Tigre de Sibérie</French>
+		<German>Mythos des Sibirischen Tigers</German>
+		<Italian>Mito della tigre siberiana</Italian>
+		<Russian>Ìèô î ñèá. òèãðå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_FOLKLORE_TORTOISE_DESERT</Tag>
+		<English>Tale, Desert Tortoise</English>
+		<French>Mythe de la Tortue du désert</French>
+		<German>Mythos der Gopherschildkröte</German>
+		<Italian>Mito della tartaruga del deserto</Italian>
+		<Russian>Ìèô î ãîôåðå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_FOLKLORE_TORTOISE_GALAPAGOS</Tag>
+		<English>Tale, Galapagos Tortoise</English>
+		<French>Mythe de la Tortue des Galapagos</French>
+		<German>Mythos der Riesenschildkröte</German>
+		<Italian>Mito della tartaruga delle Galapagos</Italian>
+		<Russian>Ìèô î ñëîíîâîé ÷åðåïàõå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_FOLKLORE_TURTLE_SEA</Tag>
+		<English>Tale, Sea Turtle</English>
+		<French>Mythe de la Tortue de mer</French>
+		<German>Mythos der Meeresschildkröte</German>
+		<Italian>Mito della tartaruga di mare</Italian>
+		<Polish>Mit &#175;&#243;&#179;wia Morskiego</Polish>
+		<Russian>Ìèô î ìîð. ÷åðåïàõå</Russian>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_HERITAGE_FOLKLORE_UNICORN</Tag>
-		<English>Folklore - Unicorn</English>
+		<English>Tale, Unicorn</English>
 		<French>Mythe de la Licorne</French>
 		<German>Mythos der Einhörner</German>
 		<Italian>Mito dell'unicorno</Italian>
-		<Polish>Mit Jednorożca</Polish>
+		<Polish>Mit Jednoro&#191;ca</Polish>
 		<Russian>Ìèô îá åäèíîðîãå</Russian>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_FOLKLORE_USSURI_DHOLE</Tag>
+		<English>Tale, Ussuri Dhole</English>
+		<French>Mythe du Cuon d'Asie</French>
+		<German>Mythos des Rothundes</German>
+		<Italian>Mito del cuon rutilano</Italian>
+		<Russian>Ìèô î êðàñíîì âîëêå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_FOLKLORE_VIPER_CHAIN</Tag>
+		<English>Tale, Chain Viper</English>
+		<French>Mythe de la Vipère de Russell</French>
+		<German>Mythos der Kettenviper</German>
+		<Italian>Mito della vipera di Russell</Italian>
+		<Russian>Ìèô î ãàäþêå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_FOLKLORE_VIPER_PIT</Tag>
+		<English>Tale, Pit Viper</English>
+		<French>Mythe de la Vipère</French>
+		<German>Mythos der Viper</German>
+		<Italian>Mito della vipera</Italian>
+		<Russian>Ìèô î ãàäþêå</Russian>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_HERITAGE_FOLKLORE_WARTHOG</Tag>
-		<English>Folklore - Warthog</English>
+		<English>Tale, Warthog</English>
 		<French>Mythe du Phacochère</French>
 		<German>Mythos des Warzenschweins</German>
 		<Italian>Mito del facocero</Italian>
@@ -165,19 +576,195 @@
 		<Russian>Ìèô î áîðîäàâî÷íèêå</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_HERITAGE_TAXONOMY_AMPHIBIANS</Tag>
-		<English>Taxonomy - Amphibians</English>
+		<Tag>TXT_KEY_HERITAGE_FOLKLORE_WOLF</Tag>
+		<English>Tale, Wolf</English>
+		<French>Mythe du Loup gris</French>
+		<German>Mythos des Wolfes</German>
+		<Italian>Mito del lupo grigio</Italian>
+		<Russian>Ìèô î âîëêå</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_HERITAGE_TAXONOMY_BOAR</Tag>
-		<English>Taxonomy - Boar</English>
+		<Tag>TXT_KEY_HERITAGE_FOLKLORE_WOLF_DIRE</Tag>
+		<English>Tale, Dire Wolf</English>
+		<French>Mythe du Loup sinistre</French>
+		<German>Mythos des Canis dirus</German>
+		<Italian>Mito dell'enocione</Italian>
+		<Russian>Ìèô î ëþòîâîëêå</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_HERITAGE_TAXONOMY_ELEPHANT</Tag>
-		<English>Taxonomy - Elephant</English>
+		<Tag>TXT_KEY_HERITAGE_FOLKLORE_WOLF_ETHIOPIAN</Tag>
+		<English>Tale, Ethiopian Wolf</English>
+		<French>Mythe du loup d'Éthiopie</French>
+		<German>Mythos des Äthiopischen Wolfs</German>
+		<Italian>Mito del lupo etiope</Italian>
+		<Russian>Ìèô îá ýô. øàêàëå</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_HERITAGE_TAXONOMY_TAPIR</Tag>
-		<English>Taxonomy - Tapir</English>
+		<Tag>TXT_KEY_HERITAGE_FOLKLORE_WOLF_MANED</Tag>
+		<English>Tale, Maned Wolf</English>
+		<French>Mythe du Loup à crinière</French>
+		<German>Mythos des Mähnenwolfs</German>
+		<Italian>Mito del lupo dalla criniera</Italian>
+		<Russian>Ìèô î ãðèâ. âîëêå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_FOLKLORE_WOLVERINE</Tag>
+		<English>Tale, Wolverine</English>
+		<French>Mythe du Carcajou</French>
+		<German>Mythos des Vielfraßes</German>
+		<Italian>Mito del ghiottone</Italian>
+		<Russian>Ìèô î ðîñîìàõå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_TAXON_AMPHIBIA</Tag>
+		<English>Taxon Amphibia</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_TAXON_AMPHIBIA_PEDIA</Tag>
+		<English>The Amphibia class is a taxonomic rank commonly known as Amphibians. Amphibians are ectothermic, anamniotic, four-limbed vertebrate animals. In its broad sense, it is paraphyletic group encompassing all tetrapods excluding the amniotes (tetrapods with an amniotic membrane, such as modern reptiles, birds, and mammals). All extant (living) amphibians belong to the monophyletic subclass Lissamphibia, with three living orders: Anura (frogs), Urodela (salamanders), and Gymnophiona (caecilians). Evolved to be mostly semiaquatic, amphibians have adapted to inhabit a wide variety of habitats, with most species living in freshwater, wetland or terrestrial ecosystems (such as riparian woodland, fossorial and even arboreal habitats). Their life cycle typically starts out as aquatic larvae with gills known as tadpoles, but some species have developed behavioural adaptations to bypass this.</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_TAXON_ARACHNIDA</Tag>
+		<English>Taxon Arachnida</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_TAXON_ARACHNIDA_PEDIA</Tag>
+		<English>Arachnida is a class of joint-legged arthropods, in the subphylum Chelicerata. Arachnida includes, among others, spiders, scorpions, ticks, mites, pseudoscorpions, harvestmen, camel spiders, whip spiders and vinegaroons. Adult arachnids have eight legs attached to the cephalothorax, although the frontmost pair of legs in some species has converted to a sensory function, while in other species, different appendages can grow large enough to take on the appearance of extra pairs of legs. The term is derived from the Greek word for 'spider', from the myth of the hubristic human weaver Arachne, who was turned into a spider. Almost all extant arachnids are terrestrial, living mainly on land. However, some inhabit freshwater environments and, with the exception of the pelagic zone, marine environments as well. They comprise over 110,000 named species, of which 51,000 are species of spiders.</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_TAXON_CANIDAE</Tag>
+		<English>Taxon Canidae</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_TAXON_CANIDAE_PEDIA</Tag>
+		<English>Canidae is a family of carnivoran mammals which are commonly called dogs or canids. Canids are found on all continents except Antarctica, having arrived independently or accompanied by human beings over extended periods of time. Canids vary in size from the 2-metre-long gray wolf to the 24-centimetre-long fennec fox. The body forms of canids are similar, typically having long muzzles, upright ears, teeth adapted for cracking bones and slicing flesh, long legs, and bushy tails. They are mostly social animals, living together in family units or small groups and behaving co-operatively. Typically, only the dominant pair in a group breeds and a litter of young are reared annually in an underground den. Canids communicate by scent signals and vocalizations. One canid, the domestic dog, originated from a symbiotic relationship with Upper Paleolithic humans and today remains one of the most widely kept domestic animals.</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_TAXON_CROCODILIA</Tag>
+		<English>Taxon Crocodilia</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_TAXON_CROCODILIA_PEDIA</Tag>
+		<English>Crocodilia is an order of mostly large, predatory, semiaquatic reptiles known as crocodilians. They first appeared 94 million years ago in the Late Cretaceous period and are the closest living relatives of birds, as the two groups are the only known survivors of the Archosauria. The order Crocodilia includes the true crocodiles (family Crocodylidae), the alligators and caimans (family Alligatoridae), and the gharial and false gharial (family Gavialidae). Although the term crocodiles (or crocs) is sometimes used to refer to all of these, crocodilians is a less ambiguous vernacular term for members of this group.</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_TAXON_ELEPHANTIDAE</Tag>
+		<English>Taxon Elephantidae</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_TAXON_ELEPHANTIDAE_PEDIA</Tag>
+		<English>Elephantidae is a family of large, herbivorous proboscidean mammals collectively called elephants and mammoths. These are large terrestrial mammals with a snout modified into a trunk and teeth modified into tusks. Most genera and species in the family are extinct. Only two genera, Loxodonta (African elephants) and Elephas (Asian elephants), are living.[NEWLINE][NEWLINE]The family was first described by John Edward Gray in 1821, and later assigned to taxonomic ranks within the order Proboscidea. Elephantidae has been revised by various authors to include or exclude other extinct proboscidean genera.</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_TAXON_FELINAE</Tag>
+		<English>Taxon Felinae</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_TAXON_FELINAE_PEDIA</Tag>
+		<English>Felinae is a subfamily of the Felidae, a family of feliform carnivoran mammals. The members of the Felinae have retractile claws that are protected by at least one cutaneous lobe. Their larynx is kept close to the base of the skull by an ossified hyoid. They can purr owing to the vocal folds being shorter than 6 mm. The cheetah Acinonyx does not have cutaneous sheaths for guarding claws. The Felinae and Pantherinae probably diverged about 11.5 million years ago.</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_TAXON_HIPPOPOTAMIDAE</Tag>
+		<English>Taxon Hippopotamidae</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_TAXON_HIPPOPOTAMIDAE_PEDIA</Tag>
+		<English>Hippopotamidae is a family of stout, naked-skinned, and semiaquatic artiodactyl mammals, possessing three-chambered stomachs and walking on four toes on each foot. While they resemble pigs physiologically, their closest living relatives are the cetaceans. There are two living species of hippopotamid in two genera; the pygmy hippo (Choeropsis liberiensis) of the forests of west Africa, and the common hippo (Hippopotamus amphibius). </English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_TAXON_HYAENIDAE</Tag>
+		<English>Taxon Hyaenidae</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_TAXON_HYAENIDAE_PEDIA</Tag>
+		<English>Hyaenidae is a family of feliform carnivoran mammals commonly called hyenas. With just four extant species, it is the fourth-smallest family in the order Carnivora and one of the smallest in the class Mammalia. Despite their low diversity, hyenas are unique and vital components of most African ecosystems. Although phylogenetically closer to felines and viverrids, hyenas are behaviourally and morphologically similar to canids in several elements due to convergent evolution: both hyenas and canines are non-arboreal, cursorial hunters that catch prey with their teeth rather than claws. Both eat food quickly and may store it, and their calloused feet with large, blunt, nonretractable claws are adapted for running and making sharp turns. However, hyenas' grooming, scent marking, defecation habits, mating and parental behavior are consistent with the behavior of other feliforms.</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_TAXON_MONOTREMATA</Tag>
+		<English>Taxon Monotremata</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_TAXON_MONOTREMATA_PEDIA</Tag>
+		<English>Monotremata is a taxonomic order of mammals. Monotremes are the only known group of living mammals that lay eggs, rather than bearing live young. The extant monotreme species are the platypus and the four species of echidnas. Monotremes are typified by structural differences in their brains, jaws, digestive tract, reproductive tract, and other body parts, compared to the more common mammalian types. Although they are different from almost all mammals in that they lay eggs, like all mammals, the female monotremes nurse their young with milk. Monotremes have been considered by some authors to be members of Australosphenida, a clade that contains extinct mammals from the Jurassic and Cretaceous of Madagascar, South America, and Australia, but this categorization is disputed and their taxonomy is under debate. All extant species of monotremes are indigenous to Australia and New Guinea, although they were also present in the Late Cretaceous and Paleocene of southern South America, indicating that they were also present in Antarctica, though remains have not been found there.</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_TAXON_MUSTELOIDEA</Tag>
+		<English>Taxon Musteloidea</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_TAXON_MUSTELOIDEA_PEDIA</Tag>
+		<English>Musteloidea is a superfamily of carnivoran mammals united by shared characteristics of the skull and teeth. Musteloids are the sister group of pinnipeds, the group which includes seals. Mustelidae contains 8 subfamilies and roughly 60 species including weasels, martens, otters, badgers and the wolverine. It is the largest family within the order Carnivora and is part of Musteloidea, a superfamily of weasels that also contains the red panda, raccoons and skunks. Interestingly, this superfamily is most closely related to seals rather than to bears or dogs.</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_TAXON_PANTHERINAE</Tag>
+		<English>Taxon Pantherinae</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_TAXON_PANTHERINAE_PEDIA</Tag>
+		<English>Pantherinae is a subfamily of the Felidae, a family of feliform carnivoran mammals. Pantherinae species are characterised by an imperfectly ossified hyoid bone with elastic tendons that enable their larynx to be mobile. They have a flat rhinarium that only barely reaches the dorsal side of the nose. The area between the nostrils is narrow, and not extended sidewards as in the Felinae. The Panthera species have a single, rounded, vocal fold with a thick mucosal lining, a large vocalis muscle, and a large cricothyroid muscle with long and narrow membranes. A vocal fold that is longer than 19 mm enables all but the snow leopard among them to roar, as it has shorter vocal folds of 9 mm that provide a lower resistance to airflow. The Felinae and Pantherinae probably diverged about 11.5 million years ago.</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_TAXON_REPTILIA</Tag>
+		<English>Taxon Reptilia</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_TAXON_REPTILIA_PEDIA</Tag>
+		<English>Reptilia (aka. reptiles) is a taxonomic class of tetrapods with an ectothermic ('cold-blooded') metabolism and amniotic development. Living reptiles comprise four orders: Testudines (turtles), Crocodilia (crocodilians), Squamata (lizards and snakes), and Rhynchocephalia (the tuatara). As of May 2023, about 12,000 living species of reptiles are listed in the Reptile Database. The study of the traditional reptile orders, customarily in combination with the study of modern amphibians, is called herpetology.</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_TAXON_RODENTIA</Tag>
+		<English>Taxon Rodentia</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_TAXON_RODENTIA_PEDIA</Tag>
+		<English>Rodentia is an order of mammals commonly called rodents (from Latin rodere, 'to gnaw'). With over 2000 living species placed in about 30 families, rodents are by far the largest order of mammals, at least in terms of number of taxa (well over 40% of mammalian species belong to the order Rodentia!). Rodents range in size from pygmy mice weighing 5 gms to capybaras, the largest of which weigh over 70 kg. They are found around the world except in Antarctica, New Zealand, and on some oceanic islands. Ecologically, they are incredibly diverse. Some species spend their entire lives above the ground in the canopy of rainforests; others seldom emerge from beneath the ground. Some species are highly aquatic, while others are equally specialized for life in deserts. Many are to some degree omnivorous; others are highly specialized, eating, for example, only a few species of invertebrates or fungi.</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_TAXON_SERPENTES</Tag>
+		<English>Taxon Serpentes</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_TAXON_SERPENTES_PEDIA</Tag>
+		<English>Serpentes is a suborder of the squamata order that is commonly known as snakes and are elongated, limbless, carnivorous reptiles.  Like all other squamates, snakes are ectothermic, amniote vertebrates covered in overlapping scales. Many species of snakes have skulls with several more joints than their lizard ancestors, enabling them to swallow prey much larger than their heads.</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_TAXON_SPHENISCIDAE</Tag>
+		<English>Taxon Spheniscidae</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_TAXON_SPHENISCIDAE_PEDIA</Tag>
+		<English>Spheniscidae is a family of sphenisciformes birds which are commonly called penguins. These aquatic flightless birds live almost exclusively in the Southern Hemisphere: only one species, the Galápagos penguin, is found north of the Equator. Highly adapted for life in the ocean water, penguins have countershaded dark and white plumage and flippers for swimming. Most penguins feed on krill, fish, squid and other forms of sea life which they catch with their bills and swallow whole while swimming. A penguin has a spiny tongue and powerful jaws to grip slippery prey.</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_TAXON_SQUAMATA</Tag>
+		<English>Taxon Squamata</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_TAXON_SQUAMATA_PEDIA</Tag>
+		<English>Squamata (Latin squamatus, 'scaly, having scales') is the largest taxonomic order of the class reptilia, comprising lizards and snakes. With over 11,500 species, it is also the second-largest order of extant vertebrates, after the perciform fish. Members of the order are distinguished by their skins, which bear horny scales or shields, and must periodically engage in molting. They also possess movable quadrate bones, making possible movement of the upper jaw relative to the neurocranium. This is particularly visible in snakes, which are able to open their mouths very wide to accommodate comparatively large prey.</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_TAXON_SUIDAE</Tag>
+		<English>Taxon Suidae</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_TAXON_SUIDAE_PEDIA</Tag>
+		<English>Suidae is a family of artiodactyl mammals which are commonly called pigs, hogs or swine. In addition to numerous fossil species, 18 extant species are currently recognized (or 19 counting domestic pigs and wild boars separately), classified into between four and eight genera. Within this family, the genus Sus includes the domestic pig, Sus scrofa domesticus or Sus domesticus, and many species of wild pig from Europe to the Pacific. Other genera include babirusas and warthogs. All suids, or swine, are native to the Old World, ranging from Asia to Europe and Africa.</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_TAXON_TAPIRIDAE</Tag>
+		<English>Taxon Tapiridae</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_TAXON_TAPIRIDAE_PEDIA</Tag>
+		<English>Tapiridae is a family of perissodactyla mammals which are commonly called Tapirs. They are similar in shape to a pig, with a short, prehensile nose trunk. Tapirs inhabit jungle and forest regions of South and Central America and Southeast Asia. They are one of three extant branches of Perissodactyla (odd-toed ungulates), alongside equines and rhinoceroses. Only a single genus, Tapirus, is currently extant. Tapirs migrated into South America during the Pleistocene epoch from North America after the formation of the Isthmus of Panama as part of the Great American Interchange. Tapirs were formerly present across North America, but became extinct in the region at the end of the Late Pleistocene, around 12,000 years ago.</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_TAXON_TESTUDINES</Tag>
+		<English>Taxon Testudines</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_TAXON_TESTUDINES_PEDIA</Tag>
+		<English>Testudines is a taxonomical order of reptiles commonly called turtles that are characterized by a special shell developed mainly from their ribs. Modern turtles are divided into two major groups, the Pleurodira (side necked turtles) and Cryptodira (hidden necked turtles), which differ in the way the head retracts. There are 360 living and recently extinct species of turtles, including land-dwelling tortoises and freshwater terrapins. They are found on most continents, some islands and, in the case of sea turtles, much of the ocean. They breathe air and do not lay eggs underwater, although many species live in or around water.</English>
 	</TEXT>
 </Civ4GameText>

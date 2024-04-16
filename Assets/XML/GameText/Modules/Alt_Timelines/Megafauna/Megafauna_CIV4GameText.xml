@@ -4,7 +4,7 @@
 		<Tag>TXT_KEY_BUILDING_MILITARY_STANDARD_BEARS</Tag>
 		<English>Military Standard (Bears)</English>
 		<French>Standards Militaires (Ours)</French>
-		<Polish>Sztandar Wojskowy (Niedźwiedź)</Polish>
+		<Polish>Sztandar Wojskowy (Nied&#159;wied&#159;)</Polish>
 		<Russian>Военный штандарт (Медведь)</Russian>
 		<Italian>Stendardo militare dell'orso</Italian>
 	</TEXT>
@@ -27,7 +27,7 @@
 		<Tag>TXT_KEY_BUILDING_MILITARY_STANDARD_BISON_HELP</Tag>
 		<English>[ICON_BULLET]Build Bison buildings and units faster in this city.</English>
 		<French>Construit les bâtiments et unités bisons plus vite dans cette Ville.</French>
-		<Polish>Konstuuj budynki i werbuj jednostki bizonów szybciej w tym mieście.</Polish>
+		<Polish>Konstuuj budynki i werbuj jednostki bizon&#243;w szybciej w tym mie&#156;cie.</Polish>
 		<Italian>[ICON_BULLET]Costruisci edifici e unità relazionati ai bisonti più velocemente in questa città.</Italian>
 		<Russian>[ICON_BULLET]Бизоньи здания и подразделения в этом городе создаются быстрее.</Russian>
 	</TEXT>
@@ -44,7 +44,7 @@
 		<English>[ICON_BULLET]Build Feline buildings and units faster in this city.</English>
 		<French>Construit les bâtiments et unités félines plus vite dans cette Ville.</French>
 		<Italian>[ICON_BULLET]Costruisci edifici e unità relazionati ai felini più velocemente in questa città.</Italian>
-		<Polish>Buduj budynki i jednostki Wielkich Kotów szybciej w Twoim mieście.</Polish>
+		<Polish>Buduj budynki i jednostki Wielkich Kot&#243;w szybciej w Twoim mie&#156;cie.</Polish>
 		<Russian>[ICON_BULLET]Кошачьи здания и подразделения в этом городе создаются быстрее.</Russian>
 	</TEXT>
 	<TEXT>
@@ -66,7 +66,7 @@
 		<Tag>TXT_KEY_BUILDING_MILITARY_STANDARD_GIRAFFE</Tag>
 		<English>Military Standard (Giraffe)</English>
 		<French>Standards Militaires (Girafe)</French>
-		<Polish>Sztandar Wojskowy (Żyrafa)</Polish>
+		<Polish>Sztandar Wojskowy (&#175;yrafa)</Polish>
 		<Russian>Военный штандарт (Жираф)</Russian>
 		<Italian>Stendardo militare della giraffa</Italian>
 	</TEXT>
@@ -81,7 +81,7 @@
 		<Tag>TXT_KEY_BUILDING_MILITARY_STANDARD_RHINOCEROS</Tag>
 		<English>Military Standard (Rhinoceros)</English>
 		<French>Standards Militaires (Rhinocéros)</French>
-		<Polish>Sztandar Wojskowy (Nosorożec)</Polish>
+		<Polish>Sztandar Wojskowy (Nosoro&#191;ec)</Polish>
 		<Russian>Военный штандарт (Носорог)</Russian>
 		<Italian>Stendardo militare del rinoceronte</Italian>
 	</TEXT>
@@ -116,14 +116,14 @@
 			<Plural>0</Plural>
 		</French>
 		<Italian>Addestratore orsi</Italian>
-		<Polish>Treser Niedźwiedzi</Polish>
+		<Polish>Treser Nied&#159;wiedzi</Polish>
 		<Russian>Дрессировка медведей</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_EFFECT_HERITAGE_BEARS</Tag>
 		<English>Effect - Heritage - Bears</English>
 		<French>Effet - Patrimoine (Ours)</French>
-		<Polish>Efekt - Dziedzictwo - Niedźwiedź</Polish>
+		<Polish>Efekt - Dziedzictwo - Nied&#159;wied&#159;</Polish>
 		<Russian>Эффект - Культурное наследие - Медведи</Russian>
 		<Italian>Effetto dell'eredità culturale degli orsi</Italian>
 	</TEXT>
@@ -131,7 +131,7 @@
 		<Tag>TXT_KEY_BUILDING_HERITAGE_BEARS</Tag>
 		<English>Heritage - Bears</English>
 		<French>Patrimoine (Ours)</French>
-		<Polish>Dziedzictwo - Niedźwiedź</Polish>
+		<Polish>Dziedzictwo - Nied&#159;wied&#159;</Polish>
 		<Russian>Культурное наследие - Медведи</Russian>
 		<Italian>Eredità culturale degli orsi</Italian>
 	</TEXT>
@@ -151,7 +151,7 @@
 		<Tag>TXT_KEY_BUILDING_ANIMAL_TRAINER_BIG_CAT</Tag>
 		<English>Animal Trainer (Big Cat)</English>
 		<French>Entraineur de Félins</French>
-		<Polish>Treser Wielkich Kotów</Polish>
+		<Polish>Treser Wielkich Kot&#243;w</Polish>
 		<Russian>Дрессировка больших кошек</Russian>
 		<Italian>Addestratore grossi felini</Italian>
 	</TEXT>
@@ -159,7 +159,7 @@
 		<Tag>TXT_KEY_BUILDING_EFFECT_HERITAGE_BIG_CATS</Tag>
 		<English>Effect - Heritage - Big Cats</English>
 		<French>Effet (Entraineur de Félins)</French>
-		<Polish>Efekt - Treser Wielkich Kotów</Polish>
+		<Polish>Efekt - Treser Wielkich Kot&#243;w</Polish>
 		<Russian>Эффект - Культурное наследие - Большие кошки</Russian>
 		<Italian>Effetto dell'eredità culturale dei grossi felini</Italian>
 	</TEXT>
@@ -178,7 +178,7 @@
 			<Plural>0</Plural>
 		</French>
 		<Italian>Addestratore bisonti</Italian>
-		<Polish>Treser Bizonów</Polish>
+		<Polish>Treser Bizon&#243;w</Polish>
 		<Russian>Дрессировка бизонов</Russian>
 	</TEXT>
 	<TEXT>
@@ -207,7 +207,7 @@
 		<Tag>TXT_KEY_BUILDING_ANIMAL_TRAINER_BISON_PEDIA</Tag>
 		<English>There is no evidence bison were ever trained for warfare. The [COLOR_BUILDING_TEXT]Bison Trainer[COLOR_REVERT] building is part of the [COLOR_HIGHLIGHT_TEXT]alternate timeline technologies[COLOR_REVERT]. Technologies that might have been.</English>
 		<Italian>Non ci sono prove che i bisonti siano mai stati usati in guerra. L'[COLOR_BUILDING_TEXT]addestramento bisonti[COLOR_REVERT] fa parte delle [COLOR_HIGHLIGHT_TEXT]tecnologie alternative[COLOR_REVERT]. Tecnologie che potrebbero essere esistite.</Italian>
-		<Polish>Nie ma dowodów na istnienie tej jednostki, jest ona częścią tzw. [COLOR_HIGHLIGHT_TEXT]technologii alternatywnej ścieżki historycznej[COLOR_REVERT].</Polish>
+		<Polish>Nie ma dowod&#243;w na istnienie tej jednostki, jest ona cz&#234;&#156;ci&#185; tzw. [COLOR_HIGHLIGHT_TEXT]technologii alternatywnej &#156;cie&#191;ki historycznej[COLOR_REVERT].</Polish>
 		<Russian>Не существует доказательств того, что бизонов когда-либо использовали для ведения войны. [COLOR_BUILDING_TEXT]Дрессировка бизонов[COLOR_REVERT] - часть [COLOR_HIGHLIGHT_TEXT]технологий альтернативной временной линии[COLOR_REVERT]. Технологий, которые могли бы быть.</Russian>
 	</TEXT>
 	<TEXT>
@@ -241,7 +241,7 @@
 		<Tag>TXT_KEY_BUILDING_HERITAGE_DEER</Tag>
 		<English>Heritage - Deer</English>
 		<French>Patrimoine (Cervidés)</French>
-		<Polish>Dziedzictwo - Jeleń</Polish>
+		<Polish>Dziedzictwo - Jele&#241;</Polish>
 		<Russian>Культурное наследие - Олени</Russian>
 		<Italian>Eredità culturale dei cervi</Italian>
 	</TEXT>
@@ -268,14 +268,14 @@
 			<Plural>0</Plural>
 		</French>
 		<Italian>Addestratore giraffe</Italian>
-		<Polish>Treser Żyraf</Polish>
+		<Polish>Treser &#175;yraf</Polish>
 		<Russian>Дрессировка жирафов</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_EFFECT_HERITAGE_GIRAFFES</Tag>
 		<English>Effect - Heritage - Giraffes</English>
 		<French>Effet - Patrimoine (Girafes)</French>
-		<Polish>Efekt - Dziedzictwo - Żyrafa</Polish>
+		<Polish>Efekt - Dziedzictwo - &#175;yrafa</Polish>
 		<Russian>Эффект - Культурное наследие - Жирафы</Russian>
 		<Italian>Effetto dell'eredità culturale delle giraffe</Italian>
 	</TEXT>
@@ -289,7 +289,7 @@
 		<Tag>TXT_KEY_BUILDING_HERITAGE_GIRAFFE</Tag>
 		<English>Heritage - Giraffe</English>
 		<French>Patrimoine (Girafes)</French>
-		<Polish>Dziedzictwo - Żyrafa</Polish>
+		<Polish>Dziedzictwo - &#175;yrafa</Polish>
 		<Russian>Культурное наследие - Жирафы</Russian>
 		<Italian>Eredità culturale delle giraffe</Italian>
 	</TEXT>
@@ -321,7 +321,7 @@
 		<Tag>TXT_KEY_BUILDING_HERD_MAMMOTH_PEDIA</Tag>
 		<English>Only subdued mammoth can build the mammoth herd. It provides a mammoth resource. There can only be one per civ.</English>
 		<Italian>Solo i mammut domati possono costruire un branco di mammut. Fornisce una risorsa di mammut e solo una risorsa di questo tipo può essere costruita per civiltà.</Italian>
-		<Polish>Mamut włochaty należał do ulubionej zwierzyny łownej człowieka w późnym plejstocenie, co znalazło swe odzwierciedlenie w zachowanych do dzisiaj licznych wyobrażeniach i malowidłach, pozostawionych głównie na ścianach jaskiń (np. w Rouffignac we Francji). Mamuty były źródłem pożywienia, ale dostarczały także materiałów do wyrobu okryć (skóry), sprzętów domowych, narzędzi i ozdób (kości, ciosy). Kości wykorzystywane były sporadycznie również do budowy paleolitycznych domostw, czego ślady odnaleziono w miejscowości Meziriczi na Ukrainie.</Polish>
+		<Polish>Mamut w&#179;ochaty nale&#191;a&#179; do ulubionej zwierzyny &#179;ownej cz&#179;owieka w p&#243;&#159;nym plejstocenie, co znalaz&#179;o swe odzwierciedlenie w zachowanych do dzisiaj licznych wyobra&#191;eniach i malowid&#179;ach, pozostawionych g&#179;&#243;wnie na &#156;cianach jaski&#241; (np. w Rouffignac we Francji). Mamuty by&#179;y &#159;r&#243;d&#179;em po&#191;ywienia, ale dostarcza&#179;y tak&#191;e materia&#179;&#243;w do wyrobu okry&#230; (sk&#243;ry), sprz&#234;t&#243;w domowych, narz&#234;dzi i ozd&#243;b (ko&#156;ci, ciosy). Ko&#156;ci wykorzystywane by&#179;y sporadycznie r&#243;wnie&#191; do budowy paleolitycznych domostw, czego &#156;lady odnaleziono w miejscowo&#156;ci Meziriczi na Ukrainie.</Polish>
 		<Russian>Только используя прирученного мамонта можно создать их стадо. Оно предоставляет соответсвующий ресурс и может быть лишь одно на всю цивилизацию.</Russian>
 	</TEXT>
 	<TEXT>
@@ -366,7 +366,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
-		<Polish>Leże Mapinguari</Polish>
+		<Polish>Le&#191;e Mapinguari</Polish>
 		<Russian>Комплекс мапингуари</Russian>
 		<Italian>Addestratore mapinguari (unità consumata)</Italian>
 	</TEXT>
@@ -379,7 +379,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MAPINGUARI_CHANGING_OF_THE_GUARD_CEREMONY</Tag>
 		<English>Mapinguari Changing of the Guard Ceremony</English>
-		<Polish>Strażnik Mapinguari</Polish>
+		<Polish>Stra&#191;nik Mapinguari</Polish>
 		<Russian>Церемония смены караула мапингуари</Russian>
 		<Italian>Cerimonia del cambio della guardia mapinguari (costruzione automatica)</Italian>
 	</TEXT>
@@ -393,7 +393,7 @@
 		<Tag>TXT_KEY_BUILDING_POLICE_CAT_TRAINER</Tag>
 		<English>Police Cat Trainer</English>
 		<French>Entraineur de Félins Limiers</French>
-		<Polish>Treser Kotów Policyjnych</Polish>
+		<Polish>Treser Kot&#243;w Policyjnych</Polish>
 		<Russian>Тренер полицейских кошек</Russian>
 		<Italian>Addestratore gatti poliziotto</Italian>
 	</TEXT>
@@ -412,14 +412,14 @@
 			<Plural>0</Plural>
 		</French>
 		<Italian>Addestratore rinoceronti</Italian>
-		<Polish>Treser Nosorożców</Polish>
+		<Polish>Treser Nosoro&#191;c&#243;w</Polish>
 		<Russian>Дрессировка носорогов</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_EFFECT_HERITAGE_RHINOS</Tag>
 		<English>Effect - Heritage - Rhinos</English>
 		<French>Effet - Patrimoine (Rhinocéros)</French>
-		<Polish>Efekt - Dziedzictwo - Nosorożec</Polish>
+		<Polish>Efekt - Dziedzictwo - Nosoro&#191;ec</Polish>
 		<Russian>Эффект - Культурное наследие - Носороги</Russian>
 		<Italian>Effetto dell'eredità culturale dei rinoceronti</Italian>
 	</TEXT>
@@ -433,7 +433,7 @@
 		<Tag>TXT_KEY_BUILDING_HERITAGE_RHINOCEROS</Tag>
 		<English>Heritage - Rhinoceros</English>
 		<French>Patrimoine (Rhinocéros)</French>
-		<Polish>Dziedzictwo - Nosorożec</Polish>
+		<Polish>Dziedzictwo - Nosoro&#191;ec</Polish>
 		<Russian>Культурное наследие - Носороги</Russian>
 		<Italian>Eredità culturale dei rinoceronti</Italian>
 	</TEXT>
@@ -535,7 +535,7 @@
 			<Plural>0</Plural>
 		</French>
 		<Italian>Cavaliere su orso</Italian>
-		<Polish>Rycerz (Niedźwiedź)</Polish>
+		<Polish>Rycerz (Nied&#159;wied&#159;)</Polish>
 		<Russian>Рыцарь на медведе</Russian>
 	</TEXT>
 	<TEXT>
@@ -553,7 +553,7 @@
 			<Plural>0</Plural>
 		</French>
 		<Italian>Cavaliere di orsi</Italian>
-		<Polish>Jeździec (Niedźwiedź)</Polish>
+		<Polish>Je&#159;dziec (Nied&#159;wied&#159;)</Polish>
 		<Russian>Всадник на медведе</Russian>
 	</TEXT>
 	<TEXT>
@@ -571,14 +571,14 @@
 			<Plural>0</Plural>
 		</French>
 		<Italian>Cavaliere di bisonti</Italian>
-		<Polish>Jeździec (Bizon)</Polish>
+		<Polish>Je&#159;dziec (Bizon)</Polish>
 		<Russian>Всадник на бизоне</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_BISON_RIDER_PEDIA</Tag>
 		<English>There is no evidence this unit was ever used. It is part of the [COLOR_HIGHLIGHT_TEXT]alternate timeline technologies[COLOR_REVERT]. Technologies that might have been.</English>
 		<Italian>Non c'è alcuna prova che quest'unità sia mai stata usata in battaglia. Fa parte delle [COLOR_HIGHLIGHT_TEXT]tecnologie delle timeline alternative[COLOR_REVERT]. Tecnologie che potrebbero essere esistite.</Italian>
-		<Polish>Nie ma dowodów na istnienie tej jednostki, jest ona częścią tzw. [COLOR_HIGHLIGHT_TEXT]technologii alternatywnej ścieżki historycznej[COLOR_REVERT].</Polish>
+		<Polish>Nie ma dowod&#243;w na istnienie tej jednostki, jest ona cz&#234;&#156;ci&#185; tzw. [COLOR_HIGHLIGHT_TEXT]technologii alternatywnej &#156;cie&#191;ki historycznej[COLOR_REVERT].</Polish>
 		<Russian>Не существует доказательств того, что такие подразделения когда-либо существовали. Они - порождение [COLOR_HIGHLIGHT_TEXT]технологий альтернативной временной линии[COLOR_REVERT]. Технологий, которые могли бы быть.</Russian>
 	</TEXT>
 	<TEXT>
@@ -602,7 +602,7 @@
 			<Plural>0</Plural>
 		</French>
 		<Italian>Cavaliere di cervi</Italian>
-		<Polish>Jeździec (Jeleń)</Polish>
+		<Polish>Je&#159;dziec (Jele&#241;)</Polish>
 		<Russian>Всадник на олене</Russian>
 	</TEXT>
 	<TEXT>
@@ -621,7 +621,7 @@
 			<Plural>0</Plural>
 		</French>
 		<Italian>Arciere su cervo</Italian>
-		<Polish>Jeleni Łucznik</Polish>
+		<Polish>Jeleni &#163;ucznik</Polish>
 		<Russian>Лучник на олене</Russian>
 	</TEXT>
 	<TEXT>
@@ -635,7 +635,7 @@
 		<Tag>TXT_KEY_UNIT_DEER_LIGHT</Tag>
 		<English>Light Deer Cavalry</English>
 		<French>Cavalier léger cervidé</French>
-		<Polish>Lekka Kawaleria (Jeleń)</Polish>
+		<Polish>Lekka Kawaleria (Jele&#241;)</Polish>
 		<Russian>Легкая оленья кавалерия</Russian>
 		<Italian>Cavalleria leggera di cervi</Italian>
 	</TEXT>
@@ -662,7 +662,7 @@
 			<Plural>0</Plural>
 		</French>
 		<Italian>Arciere su giraffa</Italian>
-		<Polish>Żyrafi Łucznik</Polish>
+		<Polish>&#175;yrafi &#163;ucznik</Polish>
 		<Russian>Лучник на жирафе</Russian>
 	</TEXT>
 	<TEXT>
@@ -711,7 +711,7 @@
 		<Tag>TXT_KEY_UNIT_GUARDCAT</Tag>
 		<English>Guard Cat</English>
 		<French>Félin de surveillance</French>
-		<Polish>Kot Stróżujący</Polish>
+		<Polish>Kot Str&#243;&#191;uj&#185;cy</Polish>
 		<Russian>Сторожевая кошка</Russian>
 		<Italian>Gatto da guardia</Italian>
 	</TEXT>
@@ -724,7 +724,7 @@
 			<Plural>0</Plural>
 		</French>
 		<Italian>Arciere su lama</Italian>
-		<Polish>Llami Łucznik</Polish>
+		<Polish>Llami &#163;ucznik</Polish>
 		<Russian>Лучник на ламе</Russian>
 	</TEXT>
 	<TEXT>
@@ -742,7 +742,7 @@
 			<Plural>0</Plural>
 		</French>
 		<Italian>Cavaliere di lama</Italian>
-		<Polish>Jeździec (Llama)</Polish>
+		<Polish>Je&#159;dziec (Llama)</Polish>
 		<Russian>Всадник на ламе</Russian>
 	</TEXT>
 	<TEXT>
@@ -759,7 +759,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
-		<Polish>Mapinguari (Włócznik)</Polish>
+		<Polish>Mapinguari (W&#179;&#243;cznik)</Polish>
 		<Russian>Мапингуари с копьем</Russian>
 		<Italian>Mapinguari con lancia</Italian>
 	</TEXT>
@@ -771,7 +771,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
-		<Polish>Mapinguari (Włócznik - Obsydian)</Polish>
+		<Polish>Mapinguari (W&#179;&#243;cznik - Obsydian)</Polish>
 		<Russian>Мапингуари с обсидиановым копьем</Russian>
 		<Italian>Mapinguari con lancia d'ossidiana</Italian>
 	</TEXT>
@@ -801,7 +801,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
-		<Polish>Mapinguari (Włócznik - Kamień)</Polish>
+		<Polish>Mapinguari (W&#179;&#243;cznik - Kamie&#241;)</Polish>
 		<Russian>Мапингуари с каменным копьем</Russian>
 		<Italian>Mapinguari con lancia di pietra</Italian>
 	</TEXT>
@@ -813,7 +813,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
-		<Polish>Mapinguari (Włócznik - Drewno)</Polish>
+		<Polish>Mapinguari (W&#179;&#243;cznik - Drewno)</Polish>
 		<Russian>Мапингуари с деревянным копьем</Russian>
 		<Italian>Mapinguari con lancia di legno</Italian>
 	</TEXT>
@@ -840,7 +840,7 @@
 			<Plural>0</Plural>
 		</French>
 		<Italian>Cavaliere di rinoceronti</Italian>
-		<Polish>Jeździec (Nosorożec)</Polish>
+		<Polish>Je&#159;dziec (Nosoro&#191;ec)</Polish>
 		<Russian>Всадник на носороге</Russian>
 	</TEXT>
 	<TEXT>
@@ -872,7 +872,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</Spanish>
-		<Polish>Jeździec (Mamut)</Polish>
+		<Polish>Je&#159;dziec (Mamut)</Polish>
 		<Russian>Всадник на мамонте</Russian>
 	</TEXT>
 	<TEXT>
@@ -927,7 +927,7 @@
 			<Plural>0</Plural>
 		</French>
 		<Italian>Rinoceronte da guerra</Italian>
-		<Polish>Azjatyckie Nosorożce Bojowe</Polish>
+		<Polish>Azjatyckie Nosoro&#191;ce Bojowe</Polish>
 		<Russian>Азиатский боевой носорог</Russian>
 	</TEXT>
 	<TEXT>
@@ -945,7 +945,7 @@
 			<Plural>0</Plural>
 		</French>
 		<Italian>Arciere su zebra</Italian>
-		<Polish>Zebryjski Łucznik</Polish>
+		<Polish>Zebryjski &#163;ucznik</Polish>
 		<Russian>Лучник на зебре</Russian>
 	</TEXT>
 	<TEXT>

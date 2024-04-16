@@ -41,6 +41,10 @@
 		<Russian>Советник МИД</Russian>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_HUD_BUTTON_ADVISOR_HERITAGE</Tag>
+		<English>Heritage Advisor</English>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_HUD_BUTTON_ADVISOR_INTELLIGENCE</Tag>
 		<English>Intelligence Advisor</English>
 		<French>Conseiller d'Espionnage</French>

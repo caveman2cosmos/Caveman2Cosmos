@@ -331,40 +331,42 @@ def getHelpWeddingFeud3(argsList):
 ######## SPICY ###########
 
 def canTriggerSpicy(argsList):
-  data = argsList[0]
-  player = GC.getPlayer(data.ePlayer)
+	data = argsList[0]
+	player = GC.getPlayer(data.ePlayer)
 
-  iSpice = GC.getInfoTypeForString("BONUS_SPICES")
-  iHappyBonuses = 0
-  bSpices = False
-  for i in xrange(GC.getNumBonusInfos()):
-    bonus = GC.getBonusInfo(i)
-    iNum = player.getNumAvailableBonuses(i)
-    if iNum > 0 :
-      if bonus.getHappiness() > 0:
-        iHappyBonuses += 1
-        if iHappyBonuses > 4:
-          return False
-      if i == iSpice:
-        return False
+	iSpice = GC.getInfoTypeForString("BONUS_SPICES")
 
-  plot = GC.getMap().plot(data.iPlotX, data.iPlotY)
-  if not plot.canHaveBonus(iSpice, False):
-    return False
+	plot = GC.getMap().plot(data.iPlotX, data.iPlotY)
+	if not plot:
+		try:
+			raise "ERROR in canTriggerSpicy from bad trigger definition"
+		except:
+			return False
 
-  return True
+	if not plot.canHaveBonus(iSpice, False):
+		return False
+
+	iHappyBonuses = 0
+
+	for i in xrange(GC.getNumBonusInfos()):
+		bonus = GC.getBonusInfo(i)
+		if player.getNumAvailableBonuses(i) > 0:
+			if bonus.getHappiness() > 0:
+				iHappyBonuses += 1
+				if iHappyBonuses > 4:
+					return False
+			if i == iSpice:
+				return False
+
+	return True
 
 def doSpicy2(argsList):
-	# need this because plantations are notmally not allowed unless there are already spices
-	data = argsList[1]
-	plot = GC.getMap().plot(data.iPlotX, data.iPlotY)
-	if plot:
-		plot.setImprovementType(GC.getInfoTypeForString("IMPROVEMENT_PLANTATION"))
+	# need this because plantations are normally not allowed unless there are already spices
+	GC.getMap().plot(argsList[1].iPlotX, argsList[1].iPlotY).setImprovementType(GC.getInfoTypeForString("IMPROVEMENT_PLANTATION"))
 	return 1
 
 def getHelpSpicy2(argsList):
-	iPlantation = GC.getInfoTypeForString("IMPROVEMENT_PLANTATION")
-	return TRNSLTR.getText("TXT_KEY_EVENT_IMPROVEMENT_GROWTH", (GC.getImprovementInfo(iPlantation).getTextKey(), ))
+	return TRNSLTR.getText("TXT_KEY_EVENT_IMPROVEMENT_GROWTH", (GC.getImprovementInfo(GC.getInfoTypeForString("IMPROVEMENT_PLANTATION")).getTextKey(), ))
 
 ######## BABY BOOM ###########
 
@@ -388,12 +390,12 @@ def canTriggerBabyBoom(argsList):
 def applyBardTale3(argsList):
 	data = argsList[1]
 	player = GC.getPlayer(data.ePlayer)
-	player.changeGold(-10 * player.getNumCities())
+	player.changeGold(-50 * player.getNumCities())
 
 def canApplyBardTale3(argsList):
 	data = argsList[1]
 	player = GC.getPlayer(data.ePlayer)
-	if player.getGold() - 10 * player.getNumCities() < 0:
+	if player.getGold() - 50 * player.getNumCities() < 0:
 		return False
 	return True
 
@@ -401,7 +403,7 @@ def canApplyBardTale3(argsList):
 def getHelpBardTale3(argsList):
 	data = argsList[1]
 	player = GC.getPlayer(data.ePlayer)
-	return TRNSLTR.getText("TXT_KEY_EVENT_GOLD_LOST", (10 * player.getNumCities(), ))
+	return TRNSLTR.getText("TXT_KEY_EVENT_GOLD_LOST", (50 * player.getNumCities(), ))
 
 ######## LOOTERS ###########
 
@@ -478,6 +480,8 @@ def canTriggerBrothersInNeed(argsList):
 
   listResources = []
   listResources.append(GC.getInfoTypeForString("BONUS_COPPER_ORE"))
+  listResources.append(GC.getInfoTypeForString("BONUS_OBSIDIAN"))
+  listResources.append(GC.getInfoTypeForString("BONUS_STONE"))
   listResources.append(GC.getInfoTypeForString("BONUS_IRON_ORE"))
   listResources.append(GC.getInfoTypeForString("BONUS_HORSE"))
   listResources.append(GC.getInfoTypeForString("BONUS_ELEPHANTS"))
@@ -6156,7 +6160,7 @@ def doVolcanoNeighbouringPlots(pPlot):
 			if iImprovement != -1 and not plotX.isCity() and not iImprovement in immuneImprovements:
 				if iPlayer > -1:
 					szBuffer = TRNSLTR.getText("TXT_KEY_EVENT_CITY_IMPROVEMENT_DESTROYED_NOOWNER", (GC.getImprovementInfo(iImprovement).getTextKey(), ))
-					CyInterface().addMessage(iPlayer, False, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_BOMBARDED", InterfaceMessageTypes.MESSAGE_TYPE_INFO, GC.getImprovementInfo(iImprovement).getButton(), GC.getCOLOR_RED(), plot.getX(), plot.getY(), True, True)
+					CyInterface().addMessage(iPlayer, False, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_BOMBARDED", InterfaceMessageTypes.MESSAGE_TYPE_INFO, GC.getImprovementInfo(iImprovement).getButton(), GC.getCOLOR_RED(), plotX.getX(), plotX.getY(), True, True)
 				if iImprovement in listRuins:
 					plotX.setImprovementType(iRuins)
 				else:
@@ -6329,6 +6333,26 @@ def getHelpVolcanoExtinction(argsList):
 
 ### Fire events for C2C
 
+def doWildFire(argsList):
+	data = argsList[1]
+	CyPlayer = GC.getPlayer(data.ePlayer)
+	CyCity = CyPlayer.getCity(data.iCityId)
+
+	validHousesList = []
+	for i in range(GC.getNumBuildingInfos()):
+		if isLimitedWonder(i) or not CyCity.hasBuilding(i) or CyCity.isFreeBuilding(i):
+			continue
+		info = GC.getBuildingInfo(i)
+		if info.getProductionCost() < 1 or info.isNukeImmune() or info.isAutoBuild():
+			continue
+		validHousesList.append(i)
+
+	if validHousesList:
+		iBuilding = validHousesList[GAME.getSorenRandNum(len(validHousesList), "Wildfire")]
+		szBuffer = TRNSLTR.getText("TXT_KEY_EVENT_CITY_IMPROVEMENT_DESTROYED", (GC.getBuildingInfo(iBuilding).getTextKey(), ))
+		CyInterface().addMessage(data.ePlayer, False, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_BOMBARDED", InterfaceMessageTypes.MESSAGE_TYPE_INFO, GC.getBuildingInfo(iBuilding).getButton(), GC.getCOLOR_RED(), CyCity.getX(), CyCity.getY(), True, True)
+		CyCity.changeHasBuilding(iBuilding, False)
+
 def doMinorFire(argsList):
 	data = argsList[1]
 	CyPlayer = GC.getPlayer(data.ePlayer)
@@ -6448,6 +6472,8 @@ def doCatastrophicFire(argsList):
 			CyInterface().addMessage(data.ePlayer, False, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_BOMBARDED", InterfaceMessageTypes.MESSAGE_TYPE_INFO, GC.getBuildingInfo(iBurnBuilding).getButton(), GC.getCOLOR_RED(), CyCity.getX(), CyCity.getY(), True, True)
 			CyCity.changeHasBuilding(iBurnBuilding, False)
 
+def getHelpWildFire(argsList):
+  return TRNSLTR.getText("TXT_KEY_EVENT_WILDFIRE_1_HELP",())
 
 def getHelpMinorFire(argsList):
   return TRNSLTR.getText("TXT_KEY_EVENT_FIRE_MINOR_1_HELP",())

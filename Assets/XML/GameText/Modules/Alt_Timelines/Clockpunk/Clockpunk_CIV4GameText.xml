@@ -32,7 +32,7 @@
 		</French>
 		<Italian>Nido degli ornitotteri</Italian>
 		<Polish>
-			<Text>Baza Ornitopterów</Text>
+			<Text>Baza Ornitopter&#243;w</Text>
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</Polish>
@@ -113,7 +113,7 @@
 		</French>
 		<Italian>Produttore di calcolatori meccanici</Italian>
 		<Polish>
-			<Text>Fabryka Maszyn Liczących</Text>
+			<Text>Fabryka Maszyn Licz&#185;cych</Text>
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</Polish>
@@ -143,7 +143,7 @@
 		<English>«A clockwork heart can't replace the real thing.» - Dru Pagliassotti, Clockwork Heart</English>
 		<French>« Un cœur d'horlogerie ne peut pas remplacer la chose réelle. » - Dru Pagliassotti, Le Cœur d'Horlogerie</French>
 		<Italian>«Un cuore meccanico non può sostituirne uno vero.» - Dru Pagliassotti, Clockwork Heart</Italian>
-		<Polish>«Mechaniczne serce może zastąpić rzeczywiste.» - Dru Pagliassotti, Clockwork Heart</Polish>
+		<Polish>«Mechaniczne serce mo&#191;e zast&#185;pi&#230; rzeczywiste.» - Dru Pagliassotti, Clockwork Heart</Polish>
 		<Russian>«Механическое сердце не способно заменить настоящее и живое». - Дрю Паглиассотти, Заводное Сердце</Russian>
 	</TEXT>
 	<TEXT>
@@ -178,7 +178,7 @@
 		</French>
 		<Italian>Carro armato di Leonardo</Italian>
 		<Polish>
-			<Text>Czołg Da Vinci</Text>
+			<Text>Czo&#179;g Da Vinci</Text>
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</Polish>

@@ -1,4 +1,5 @@
 from CvPythonExtensions import CyGlobalContext, CyInterface, MapTypes
+from CvMainInterface import g_mainInterface
 import BugEventManager
 import DebugUtils
 
@@ -14,12 +15,14 @@ class ParallelMaps:
 
 		def _tryMapSwitch(eMap):
 			if eMap > -1 and eMap < MapTypes.NUM_MAPS and eMap != GC.getGame().getCurrentMap() \
+			and not GC.getGame().GetWorldBuilderMode() \
 			and (GC.isDebugBuild() or DebugUtils.bDebugMode or GC.getMapByIndex(eMap).plotsInitialized()):
 				if not GC.getMapByIndex(eMap).plotsInitialized():
 					CyInterface().addImmediateMessage("Initialized Map %d: %s" %(eMap, GC.getMapInfo(eMap).getDescription()), "")
 				else:
 					CyInterface().addImmediateMessage("Map %d: %s" %(eMap, GC.getMapInfo(eMap).getDescription()), "")
 				GC.switchMap(eMap)
+				g_mainInterface.initMinimap()
 				return 1
 
 		eKey = argsList[1]

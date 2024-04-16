@@ -60,7 +60,7 @@ public:
 	int AI_startWarVal(TeamTypes eTeam) const;
 	int AI_endWarVal(TeamTypes eTeam) const;
 
-	int AI_minorKeepWarVal(TeamTypes eTeam) const;
+	bool AI_minorPeaceOut(TeamTypes eTeam) const;
 	int AI_getBarbarianCivWarVal(TeamTypes eTeam, int iMaxDistance = 10) const;
 
 	int AI_techTradeVal(TechTypes eTech, TeamTypes eTeam);

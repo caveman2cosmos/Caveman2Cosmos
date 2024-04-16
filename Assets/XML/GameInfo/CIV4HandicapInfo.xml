@@ -48,7 +48,7 @@
 			<iAttitudeChange>2</iAttitudeChange>
 			<iNoTechTradeModifier>150</iNoTechTradeModifier>
 			<iTechTradeKnownModifier>-99</iTechTradeKnownModifier>
-			<!-- These only count for human players -->
+			<!-- These are game difficulty modifers, not player difficulty modifers and they all affect AI, not human players  -->
 			<iAnimalAttackProb>40</iAnimalAttackProb>
 			<iFreeWinsVsBarbs>8</iFreeWinsVsBarbs>
 			<iUnownedWaterTilesPerBarbarianUnit>180</iUnownedWaterTilesPerBarbarianUnit>
@@ -175,7 +175,7 @@
 			<iAttitudeChange>1</iAttitudeChange>
 			<iNoTechTradeModifier>100</iNoTechTradeModifier>
 			<iTechTradeKnownModifier>-66</iTechTradeKnownModifier>
-			<!-- These only count for human players -->
+			<!-- These are game difficulty modifers, not player difficulty modifers and they all affect AI, not human players  -->
 			<iAnimalAttackProb>45</iAnimalAttackProb>
 			<iFreeWinsVsBarbs>7</iFreeWinsVsBarbs>
 			<iUnownedWaterTilesPerBarbarianUnit>165</iUnownedWaterTilesPerBarbarianUnit>
@@ -320,7 +320,7 @@
 			<iAttitudeChange>1</iAttitudeChange>
 			<iNoTechTradeModifier>50</iNoTechTradeModifier>
 			<iTechTradeKnownModifier>-33</iTechTradeKnownModifier>
-			<!-- These only count for human players -->
+			<!-- These are game difficulty modifers, not player difficulty modifers and they all affect AI, not human players  -->
 			<iAnimalAttackProb>50</iAnimalAttackProb>
 			<iFreeWinsVsBarbs>6</iFreeWinsVsBarbs>
 			<iUnownedWaterTilesPerBarbarianUnit>150</iUnownedWaterTilesPerBarbarianUnit>
@@ -485,7 +485,7 @@
 					</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
-			<!-- These only count for human players -->
+			<!-- These are game difficulty modifers, not player difficulty modifers and they all affect AI, not human players  -->
 			<iAnimalAttackProb>55</iAnimalAttackProb>
 			<iFreeWinsVsBarbs>5</iFreeWinsVsBarbs>
 			<iUnownedWaterTilesPerBarbarianUnit>135</iUnownedWaterTilesPerBarbarianUnit>
@@ -663,7 +663,7 @@
 			<iAttitudeChange>-1</iAttitudeChange>
 			<iNoTechTradeModifier>-10</iNoTechTradeModifier>
 			<iTechTradeKnownModifier>10</iTechTradeKnownModifier>
-			<!-- These only count for human players -->
+			<!-- These are game difficulty modifers, not player difficulty modifers and they all affect AI, not human players  -->
 			<iAnimalAttackProb>60</iAnimalAttackProb>
 			<iFreeWinsVsBarbs>4</iFreeWinsVsBarbs>
 			<iUnownedWaterTilesPerBarbarianUnit>120</iUnownedWaterTilesPerBarbarianUnit>
@@ -672,6 +672,7 @@
 			<iBarbarianCityCreationProb>12</iBarbarianCityCreationProb>
 			<iBarbarianDefenders>4</iBarbarianDefenders>
 			<iAIAnimalBonus>-10</iAIAnimalBonus>
+			<iSubdueAnimalBonusAI>10</iSubdueAnimalBonusAI>
 			<iAIBarbarianBonus>-10</iAIBarbarianBonus>
 			<iAIStartingDefenseUnits>2</iAIStartingDefenseUnits>
 			<iAIStartingExploreUnits>1</iAIStartingExploreUnits>
@@ -870,7 +871,7 @@
 			<iAttitudeChange>-1</iAttitudeChange>
 			<iNoTechTradeModifier>-20</iNoTechTradeModifier>
 			<iTechTradeKnownModifier>20</iTechTradeKnownModifier>
-			<!-- These only count for human players -->
+			<!-- These are game difficulty modifers, not player difficulty modifers and they all affect AI, not human players  -->
 			<iAnimalAttackProb>65</iAnimalAttackProb>
 			<iFreeWinsVsBarbs>3</iFreeWinsVsBarbs>
 			<iUnownedWaterTilesPerBarbarianUnit>105</iUnownedWaterTilesPerBarbarianUnit>
@@ -879,6 +880,7 @@
 			<iBarbarianCityCreationProb>14</iBarbarianCityCreationProb>
 			<iBarbarianDefenders>5</iBarbarianDefenders>
 			<iAIAnimalBonus>-20</iAIAnimalBonus>
+			<iSubdueAnimalBonusAI>30</iSubdueAnimalBonusAI>
 			<iAIBarbarianBonus>-20</iAIBarbarianBonus>
 			<iAIStartingDefenseUnits>4</iAIStartingDefenseUnits>
 			<iAIStartingExploreUnits>1</iAIStartingExploreUnits>
@@ -1095,7 +1097,7 @@
 			<iAttitudeChange>-2</iAttitudeChange>
 			<iNoTechTradeModifier>-30</iNoTechTradeModifier>
 			<iTechTradeKnownModifier>30</iTechTradeKnownModifier>
-			<!-- These only count for human players -->
+			<!-- These are game difficulty modifers, not player difficulty modifers and they all affect AI, not human players  -->
 			<iAnimalAttackProb>70</iAnimalAttackProb>
 			<iFreeWinsVsBarbs>2</iFreeWinsVsBarbs>
 			<iUnownedWaterTilesPerBarbarianUnit>90</iUnownedWaterTilesPerBarbarianUnit>
@@ -1104,6 +1106,7 @@
 			<iBarbarianCityCreationProb>16</iBarbarianCityCreationProb>
 			<iBarbarianDefenders>6</iBarbarianDefenders>
 			<iAIAnimalBonus>-30</iAIAnimalBonus>
+			<iSubdueAnimalBonusAI>60</iSubdueAnimalBonusAI>
 			<iAIBarbarianBonus>-30</iAIBarbarianBonus>
 			<iAIStartingDefenseUnits>6</iAIStartingDefenseUnits>
 			<iAIStartingExploreUnits>2</iAIStartingExploreUnits>
@@ -1352,7 +1355,7 @@
 			<iAttitudeChange>-2</iAttitudeChange>
 			<iNoTechTradeModifier>-40</iNoTechTradeModifier>
 			<iTechTradeKnownModifier>40</iTechTradeKnownModifier>
-			<!-- These only count for human players -->
+			<!-- These are game difficulty modifers, not player difficulty modifers and they all affect AI, not human players  -->
 			<iAnimalAttackProb>75</iAnimalAttackProb>
 			<iFreeWinsVsBarbs>1</iFreeWinsVsBarbs>
 			<iUnownedWaterTilesPerBarbarianUnit>75</iUnownedWaterTilesPerBarbarianUnit>
@@ -1361,6 +1364,7 @@
 			<iBarbarianCityCreationProb>18</iBarbarianCityCreationProb>
 			<iBarbarianDefenders>7</iBarbarianDefenders>
 			<iAIAnimalBonus>-40</iAIAnimalBonus>
+			<iSubdueAnimalBonusAI>100</iSubdueAnimalBonusAI>
 			<iAIBarbarianBonus>-40</iAIBarbarianBonus>
 			<iAIStartingDefenseUnits>8</iAIStartingDefenseUnits>
 			<iAIStartingExploreUnits>2</iAIStartingExploreUnits>
@@ -1608,7 +1612,7 @@
 			<iAttitudeChange>-3</iAttitudeChange>
 			<iNoTechTradeModifier>-50</iNoTechTradeModifier>
 			<iTechTradeKnownModifier>50</iTechTradeKnownModifier>
-			<!-- These only count for human players -->
+			<!-- These are game difficulty modifers, not player difficulty modifers and they all affect AI, not human players  -->
 			<iAnimalAttackProb>80</iAnimalAttackProb>
 			<iUnownedWaterTilesPerBarbarianUnit>60</iUnownedWaterTilesPerBarbarianUnit>
 			<iUnownedTilesPerBarbarianCity>20</iUnownedTilesPerBarbarianCity>
@@ -1616,6 +1620,7 @@
 			<iBarbarianCityCreationProb>20</iBarbarianCityCreationProb>
 			<iBarbarianDefenders>8</iBarbarianDefenders>
 			<iAIAnimalBonus>-50</iAIAnimalBonus>
+			<iSubdueAnimalBonusAI>150</iSubdueAnimalBonusAI>
 			<iAIBarbarianBonus>-50</iAIBarbarianBonus>
 			<iAIStartingDefenseUnits>5</iAIStartingDefenseUnits>
 			<iAIStartingExploreUnits>2</iAIStartingExploreUnits>
@@ -1889,7 +1894,7 @@
 			<iAttitudeChange>-4</iAttitudeChange>
 			<iNoTechTradeModifier>-70</iNoTechTradeModifier>
 			<iTechTradeKnownModifier>70</iTechTradeKnownModifier>
-			<!-- These only count for human players -->
+			<!-- These are game difficulty modifers, not player difficulty modifers and they all affect AI, not human players  -->
 			<iAnimalAttackProb>90</iAnimalAttackProb>
 			<iUnownedWaterTilesPerBarbarianUnit>30</iUnownedWaterTilesPerBarbarianUnit>
 			<iUnownedTilesPerBarbarianCity>10</iUnownedTilesPerBarbarianCity>
@@ -1897,6 +1902,7 @@
 			<iBarbarianCityCreationProb>24</iBarbarianCityCreationProb>
 			<iBarbarianDefenders>10</iBarbarianDefenders>
 			<iAIAnimalBonus>-70</iAIAnimalBonus>
+			<iSubdueAnimalBonusAI>210</iSubdueAnimalBonusAI>
 			<iAIBarbarianBonus>-70</iAIBarbarianBonus>
 			<iAIStartingDefenseUnits>7</iAIStartingDefenseUnits>
 			<iAIStartingExploreUnits>3</iAIStartingExploreUnits>

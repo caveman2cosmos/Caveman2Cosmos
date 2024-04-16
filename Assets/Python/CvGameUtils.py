@@ -37,8 +37,14 @@ class CvGameUtils:
 			if szType[:12] == "BUILD_BONUS_":
 				iBonus = GC.getInfoTypeForString(szType[6:])
 
-				if iBonus > -1 and GC.getPlayer(iPlayer).getNumAvailableBonuses(iBonus):
-					return 1
+				if (
+					iBonus > -1
+				and	GC.getPlayer(iPlayer).getNumAvailableBonuses(iBonus)
+				and (
+						GAME.getModderGameOption(ModderGameOptionTypes.MODDERGAMEOPTION_GREATER_GREAT_FARMER)
+					or GC.getMap().plot(iX, iY).canHaveBonus(iBonus, False)
+				)): return 1
+
 				return 0
 
 		return -1 # Returning 0 means "No", 1 or greater means "Yes", and negative numbers means "continue this evaluation on the dll side".

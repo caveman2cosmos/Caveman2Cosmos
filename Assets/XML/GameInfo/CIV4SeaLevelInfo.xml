@@ -7,9 +7,14 @@
 <Civ4SeaLevelInfo xmlns="x-schema:../Schema/C2C_CIV4GameInfoSchema.xml">
 	<SeaLevelInfos>
 		<SeaLevelInfo>
+			<Type>SEALEVEL_VERY_LOW</Type>
+			<Description>TXT_KEY_SEALEVEL_VERY_LOW</Description>
+			<iSeaLevelChange>-14</iSeaLevelChange>
+		</SeaLevelInfo>
+		<SeaLevelInfo>
 			<Type>SEALEVEL_LOW</Type>
 			<Description>TXT_KEY_SEALEVEL_LOW</Description>
-			<iSeaLevelChange>-8</iSeaLevelChange>
+			<iSeaLevelChange>-7</iSeaLevelChange>
 		</SeaLevelInfo>
 		<SeaLevelInfo>
 			<Type>SEALEVEL_MEDIUM</Type>
@@ -19,7 +24,7 @@
 		<SeaLevelInfo>
 			<Type>SEALEVEL_HIGH</Type>
 			<Description>TXT_KEY_SEALEVEL_HIGH</Description>
-			<iSeaLevelChange>6</iSeaLevelChange>
+			<iSeaLevelChange>7</iSeaLevelChange>
 		</SeaLevelInfo>
 	</SeaLevelInfos>
 </Civ4SeaLevelInfo>

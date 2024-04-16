@@ -3599,6 +3599,7 @@ public:
 	int getAnimalCombatModifier() const;
 	int getBarbarianCombatModifier() const;
 	int getAIAnimalCombatModifier() const;
+	inline int getSubdueAnimalBonusAI() const { return m_iSubdueAnimalBonusAI; }
 	int getAIBarbarianCombatModifier() const;
 
 	int getStartingDefenseUnits() const;
@@ -3668,6 +3669,7 @@ private:
 	int m_iAnimalCombatModifier;
 	int m_iBarbarianCombatModifier;
 	int m_iAIAnimalCombatModifier;
+	int m_iSubdueAnimalBonusAI;
 	int m_iAIBarbarianCombatModifier;
 
 	int m_iStartingDefenseUnits;
@@ -4829,7 +4831,6 @@ public:
 	int getGridHeight() const;
 	int getTerrainGrainChange() const;
 	int getFeatureGrainChange() const;
-	int getResearchPercent() const;
 	int getTradeProfitPercent() const;
 	int getDistanceMaintenancePercent() const;
 	int getNumCitiesMaintenancePercent() const;
@@ -4858,7 +4859,6 @@ private:
 	int m_iGridHeight;
 	int m_iTerrainGrainChange;
 	int m_iFeatureGrainChange;
-	int m_iResearchPercent;
 	int m_iTradeProfitPercent;
 	int m_iDistanceMaintenancePercent;
 	int m_iNumCitiesMaintenancePercent;
@@ -7211,6 +7211,7 @@ public:
 	bool isGoldenAge() const;
 	bool isDeclareWar() const;
 	bool isDisbandUnit() const;
+	inline bool isGameSpeedScale() const { return m_bGameSpeedScale; }
 
 	int getGold() const;
 	int getRandomGold() const;
@@ -7220,7 +7221,7 @@ public:
 	int getTechPercent() const;
 	int getTechCostPercent() const;
 	int getTechMinTurnsLeft() const;
-	TechTypes getPrereqTech() const	{ return m_iPrereqTech; }
+	inline TechTypes getPrereqTech() const { return m_iPrereqTech; }
 	int getFreeUnit() const;
 	int getNumUnits() const;
 	int getBuilding() const;
@@ -7233,7 +7234,7 @@ public:
 	int getFoodPercent() const;
 	int getFeature() const;
 	int getFeatureChange() const;
-	ImprovementTypes getImprovement() const	{ return m_iImprovement; }
+	inline ImprovementTypes getImprovement() const { return m_iImprovement; }
 	int getImprovementChange() const;
 	int getCommerceModifier(int i) const;
 	int getYieldModifier(int i) const;
@@ -7340,6 +7341,7 @@ private:
 	bool m_bGoldenAge;
 	bool m_bDeclareWar;
 	bool m_bDisbandUnit;
+	bool m_bGameSpeedScale;
 
 	int m_iGold;
 	int m_iRandomGold;

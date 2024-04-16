@@ -2956,13 +2956,13 @@ void CvTaggedSaveFormatWrapper::Read(const char* name, uint32_t* i)
 }
 
 
-void CvTaggedSaveFormatWrapper::Read(const char* name, int count, int32_t values[])
+void CvTaggedSaveFormatWrapper::Read(const char* name, int count, int32_t values[], bool bAllowTruncation)
 {
 	PROFILE_FUNC();
 
 	FAssert(m_stream != NULL);
 
-	if ( m_useTaggedFormat )
+	if (m_useTaggedFormat)
 	{
 		DEBUG_TRACE3("Read int array, name %s, count=%d\n", name, count)
 
@@ -2971,15 +2971,23 @@ void CvTaggedSaveFormatWrapper::Read(const char* name, int count, int32_t values
 			int num;
 
 			m_stream->Read(&num);
+			m_stream->Read(std::min(num,count), values);
 
-			if ( num != count )
+			// Allow reading LESS than the desired number.  This allows for things like new MEMORY_TYPES
+			if (num > count)
 			{
-				DEBUG_TRACE4("Read int array, name %s, count=%d, num=%d\n", name, count, num)
+				// Also allow less, throwing the extra away - use this option CAREFULLY!
+				if (bAllowTruncation)
+				{
+					bst::scoped_array<int> tempBuffer(new int[num-count]);
 
-				//	Incompatible save
-				HandleIncompatibleSave(CvString::format("Save format is not compatible (%s)", name).c_str());
+					m_stream->Read(num-count, tempBuffer.get());
+				}
+				else // Incompatible save
+				{
+					HandleIncompatibleSave(CvString::format("Save format is not compatible (%s)", name).c_str());
+				}
 			}
-			m_stream->Read(count, values);
 		}
 	}
 	else

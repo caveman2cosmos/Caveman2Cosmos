@@ -309,10 +309,6 @@
 		<iDefineIntVal>3</iDefineIntVal>
 	</Define>
 	<Define>
-		<DefineName>MIN_CITY_RANGE</DefineName>
-		<iDefineIntVal>2</iDefineIntVal>
-	</Define>
-	<Define>
 		<!-- Starting/minimum culture on city tile -->
 		<DefineName>FREE_CITY_CULTURE</DefineName>
 		<iDefineIntVal>2</iDefineIntVal>
@@ -664,19 +660,19 @@
 	</Define>
 	<Define>
 		<DefineName>WW_UNIT_KILLED_ATTACKING</DefineName>
-		<iDefineIntVal>5</iDefineIntVal>
-	</Define>
-	<Define>
-		<DefineName>WW_KILLED_UNIT_DEFENDING</DefineName>
 		<iDefineIntVal>3</iDefineIntVal>
 	</Define>
 	<Define>
 		<DefineName>WW_UNIT_KILLED_DEFENDING</DefineName>
+		<iDefineIntVal>5</iDefineIntVal>
+	</Define>
+	<Define>
+		<DefineName>WW_KILLED_UNIT_DEFENDING</DefineName>
 		<iDefineIntVal>2</iDefineIntVal>
 	</Define>
 	<Define>
 		<DefineName>WW_KILLED_UNIT_ATTACKING</DefineName>
-		<iDefineIntVal>2</iDefineIntVal>
+		<iDefineIntVal>1</iDefineIntVal>
 	</Define>
 	<Define>
 		<DefineName>WW_UNIT_CAPTURED</DefineName>
@@ -692,11 +688,19 @@
 	</Define>
 	<Define>
 		<DefineName>WW_HIT_BY_NUKE</DefineName>
-		<iDefineIntVal>10</iDefineIntVal>
+		<iDefineIntVal>20</iDefineIntVal>
 	</Define>
 	<Define>
 		<DefineName>WW_ATTACKED_WITH_NUKE</DefineName>
-		<iDefineIntVal>12</iDefineIntVal>
+		<iDefineIntVal>10</iDefineIntVal>
+	</Define>
+	<Define>
+		<DefineName>WW_PLOT_CAPTURED</DefineName>
+		<iDefineIntVal>2</iDefineIntVal>
+	</Define>
+	<Define>
+		<DefineName>WW_CAPTURED_PLOT</DefineName>
+		<iDefineIntVal>1</iDefineIntVal>
 	</Define>
 	<Define>
 		<DefineName>WW_DECAY_RATE</DefineName>
@@ -1615,10 +1619,6 @@
 	<Define>
 		<DefineName>EVENT_PROBABILITY_ROLL_SIDES</DefineName>
 		<iDefineIntVal>100</iDefineIntVal>
-	</Define>
-	<Define>
-		<DefineName>FIRST_EVENT_DELAY_TURNS</DefineName>
-		<iDefineIntVal>20</iDefineIntVal>
 	</Define>
 	<Define>
 		<DefineName>USE_MODDERS_PLAYEROPTION_1</DefineName>

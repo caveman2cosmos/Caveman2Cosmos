@@ -7,7 +7,7 @@
 		<German>Fracht</German>
 		<Spanish>Carga</Spanish>
 		<Italian>Carico</Italian> <!--infoscreen building list-->
-		<Polish>Ładowność</Polish>
+		<Polish>&#163;adowno&#156;&#230;</Polish>
 		<Russian>Транспорт</Russian>
 	</TEXT>
 	<TEXT>
@@ -74,7 +74,7 @@
 		<German>Nahrung</German>
 		<Italian>Cibo</Italian>
 		<Spanish>Alimento</Spanish>
-		<Polish>Żywność</Polish>
+		<Polish>&#175;ywno&#156;&#230;</Polish>
 		<Russian>Пища</Russian>
 	</TEXT>
 	<TEXT>
@@ -153,7 +153,7 @@
 		<French>Equipe</French>
 		<Italian>squadra</Italian>
 		<Spanish>Equipo</Spanish>
-		<Polish>Drużyna</Polish>
+		<Polish>Dru&#191;yna</Polish>
 		<Russian>Команда</Russian>
 	</TEXT>
 	<TEXT>

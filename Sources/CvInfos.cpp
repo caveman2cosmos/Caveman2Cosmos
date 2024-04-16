@@ -9,6 +9,7 @@
 #include "CvGameCoreDLL.h"
 #include "CvArtFileMgr.h"
 #include "CvBuildingInfo.h"
+#include "CvHeritageInfo.h"
 #include "CvGameAI.h"
 #include "CvGameTextMgr.h"
 #include "CvGlobals.h"
@@ -11359,6 +11360,7 @@ m_iBarbarianCityCreationProb(0),
 m_iAnimalCombatModifier(0),
 m_iBarbarianCombatModifier(0),
 m_iAIAnimalCombatModifier(0),
+m_iSubdueAnimalBonusAI(0),
 m_iAIBarbarianCombatModifier(0),
 m_iStartingDefenseUnits(0),
 m_iStartingWorkerUnits(0),
@@ -11767,6 +11769,7 @@ bool CvHandicapInfo::read(CvXMLLoadUtility* pXML)
 	pXML->GetOptionalChildXmlValByName(&m_iAnimalCombatModifier, L"iAnimalBonus");
 	pXML->GetOptionalChildXmlValByName(&m_iBarbarianCombatModifier, L"iBarbarianBonus");
 	pXML->GetOptionalChildXmlValByName(&m_iAIAnimalCombatModifier, L"iAIAnimalBonus");
+	pXML->GetOptionalChildXmlValByName(&m_iSubdueAnimalBonusAI, L"iSubdueAnimalBonusAI");
 	pXML->GetOptionalChildXmlValByName(&m_iAIBarbarianCombatModifier, L"iAIBarbarianBonus");
 	pXML->GetOptionalChildXmlValByName(&m_iStartingDefenseUnits, L"iStartingDefenseUnits");
 	pXML->GetOptionalChildXmlValByName(&m_iStartingWorkerUnits, L"iStartingWorkerUnits");
@@ -11837,6 +11840,7 @@ void CvHandicapInfo::copyNonDefaults(const CvHandicapInfo* pClassInfo)
 	if (getAnimalCombatModifier() == iDefault) m_iAnimalCombatModifier = pClassInfo->getAnimalCombatModifier();
 	if (getBarbarianCombatModifier() == iDefault) m_iBarbarianCombatModifier = pClassInfo->getBarbarianCombatModifier();
 	if (getAIAnimalCombatModifier() == iDefault) m_iAIAnimalCombatModifier = pClassInfo->getAIAnimalCombatModifier();
+	if (m_iSubdueAnimalBonusAI == iDefault) m_iSubdueAnimalBonusAI = pClassInfo->getSubdueAnimalBonusAI();
 	if (getAIBarbarianCombatModifier() == iDefault) m_iAIBarbarianCombatModifier = pClassInfo->getAIBarbarianCombatModifier();
 	if (getStartingDefenseUnits() == iDefault) m_iStartingDefenseUnits = pClassInfo->getStartingDefenseUnits();
 	if (getStartingWorkerUnits() == iDefault) m_iStartingWorkerUnits = pClassInfo->getStartingWorkerUnits();
@@ -16012,7 +16016,6 @@ CvWorldInfo::CvWorldInfo() :
 ,m_iGridHeight(0)
 ,m_iTerrainGrainChange(0)
 ,m_iFeatureGrainChange(0)
-,m_iResearchPercent(0)
 ,m_iTradeProfitPercent(0)
 ,m_iDistanceMaintenancePercent(0)
 ,m_iNumCitiesMaintenancePercent(0)
@@ -16085,11 +16088,6 @@ int CvWorldInfo::getFeatureGrainChange() const
 	return m_iFeatureGrainChange;
 }
 
-int CvWorldInfo::getResearchPercent() const
-{
-	return m_iResearchPercent;
-}
-
 int CvWorldInfo::getTradeProfitPercent() const
 {
 	return m_iTradeProfitPercent;
@@ -16157,7 +16155,6 @@ bool CvWorldInfo::read(CvXMLLoadUtility* pXML)
 	pXML->GetOptionalChildXmlValByName(&m_iGridHeight, L"iGridHeight");
 	pXML->GetOptionalChildXmlValByName(&m_iTerrainGrainChange, L"iTerrainGrainChange");
 	pXML->GetOptionalChildXmlValByName(&m_iFeatureGrainChange, L"iFeatureGrainChange");
-	pXML->GetOptionalChildXmlValByName(&m_iResearchPercent, L"iResearchPercent");
 	pXML->GetOptionalChildXmlValByName(&m_iTradeProfitPercent, L"iTradeProfitPercent");
 	pXML->GetOptionalChildXmlValByName(&m_iDistanceMaintenancePercent, L"iDistanceMaintenancePercent");
 	pXML->GetOptionalChildXmlValByName(&m_iNumCitiesMaintenancePercent, L"iNumCitiesMaintenancePercent");
@@ -16189,7 +16186,6 @@ void CvWorldInfo::copyNonDefaults(const CvWorldInfo* pClassInfo)
 	if (getGridHeight() == iDefault) m_iGridHeight = pClassInfo->getGridHeight();
 	if (getTerrainGrainChange() == iDefault) m_iTerrainGrainChange = pClassInfo->getTerrainGrainChange();
 	if (getFeatureGrainChange() == iDefault) m_iFeatureGrainChange = pClassInfo->getFeatureGrainChange();
-	if (getResearchPercent() == iDefault) m_iResearchPercent = pClassInfo->getResearchPercent();
 	if (getTradeProfitPercent() == iDefault) m_iTradeProfitPercent = pClassInfo->getTradeProfitPercent();
 	if (getDistanceMaintenancePercent() == iDefault) m_iDistanceMaintenancePercent = pClassInfo->getDistanceMaintenancePercent();
 	if (getNumCitiesMaintenancePercent() == iDefault) m_iNumCitiesMaintenancePercent = pClassInfo->getNumCitiesMaintenancePercent();
@@ -16215,7 +16211,6 @@ void CvWorldInfo::getCheckSum(uint32_t& iSum) const
 	CheckSum(iSum, m_iGridHeight);
 	CheckSum(iSum, m_iTerrainGrainChange);
 	CheckSum(iSum, m_iFeatureGrainChange);
-	CheckSum(iSum, m_iResearchPercent);
 	CheckSum(iSum, m_iTradeProfitPercent);
 	CheckSum(iSum, m_iDistanceMaintenancePercent);
 	CheckSum(iSum, m_iNumCitiesMaintenancePercent);
@@ -22891,6 +22886,7 @@ CvEventInfo::CvEventInfo() :
 	m_bGoldenAge(false),
 	m_bDeclareWar(false),
 	m_bDisbandUnit(false),
+	m_bGameSpeedScale(false),
 	m_iGold(0),
 	m_iRandomGold(0),
 	m_iCulture(0),
@@ -23474,6 +23470,7 @@ void CvEventInfo::getCheckSum(uint32_t& iSum) const
 	CheckSum(iSum, m_bGoldenAge);
 	CheckSum(iSum, m_bDeclareWar);
 	CheckSum(iSum, m_bDisbandUnit);
+	CheckSum(iSum, m_bGameSpeedScale);
 	CheckSum(iSum, m_iGold);
 	CheckSum(iSum, m_iRandomGold);
 	CheckSum(iSum, m_iCulture);
@@ -23601,6 +23598,7 @@ bool CvEventInfo::read(CvXMLLoadUtility* pXML)
 	m_iFreeUnit = pXML->GetInfoClass(szTextVal);
 	pXML->GetOptionalChildXmlValByName(&m_iNumUnits, L"iNumFreeUnits");
 	pXML->GetOptionalChildXmlValByName(&m_bDisbandUnit, L"bDisbandUnit");
+	pXML->GetOptionalChildXmlValByName(&m_bGameSpeedScale, L"bGameSpeedScale");
 	pXML->GetOptionalChildXmlValByName(&m_iUnitExperience, L"iUnitExperience");
 	pXML->GetOptionalChildXmlValByName(&m_iUnitImmobileTurns, L"iUnitImmobileTurns");
 	pXML->GetOptionalChildXmlValByName(szTextVal, L"Building");
@@ -24046,7 +24044,8 @@ void CvEventInfo::copyNonDefaults(const CvEventInfo* pClassInfo)
 	if (getPrereqTech() == iTextDefault) m_iPrereqTech = pClassInfo->getPrereqTech();
 	if (getFreeUnit() == iTextDefault) m_iFreeUnit = pClassInfo->getFreeUnit();
 	if (getNumUnits() == iDefault) m_iNumUnits = pClassInfo->getNumUnits();
-	if (isDisbandUnit() == bDefault) m_bDisbandUnit = pClassInfo->isDisbandUnit();
+	if (m_bDisbandUnit == bDefault) m_bDisbandUnit = pClassInfo->isDisbandUnit();
+	if (m_bGameSpeedScale == bDefault) m_bGameSpeedScale = pClassInfo->isGameSpeedScale();
 	if (getUnitExperience() == iDefault) m_iUnitExperience = pClassInfo->getUnitExperience();
 	if (getUnitImmobileTurns() == iDefault) m_iUnitImmobileTurns = pClassInfo->getUnitImmobileTurns();
 	if (getBuilding() == iTextDefault) m_iBuilding = pClassInfo->getBuilding();

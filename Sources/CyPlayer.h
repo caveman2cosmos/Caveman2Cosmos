@@ -95,6 +95,8 @@ public:
 	int getNumTradeableBonuses(int /*BonusTypes*/ eBonus) const;
 	bool hasBonus(int /*BonusTypes*/ eBonus) const;
 
+	bool hasHeritage(int iType) const;
+
 	bool isTurnActive() const;
 
 	void receiveGoody(const CyPlot* pPlot, int /*GoodyTypes*/ eGoody, const CyUnit* pUnit);
@@ -270,8 +272,7 @@ public:
 	bool isFoundedFirstCity() const;
 
 	void setFoundedFirstCity(bool bNewValue);
-	void setAlive(bool bNewValue);
-	void setNewPlayerAlive(bool bNewValue);
+	void setAlive(bool bNewValue, bool bActivateTurn);
 
 	bool isStrike() const;
 
@@ -376,8 +377,6 @@ public:
 	void resetEventOccured(/*EventTypes*/ int eEvent);
 	EventTriggeredData* getEventTriggered(int iID) const;
 	EventTriggeredData* initTriggeredData(int eEventTrigger, bool bFire, int iCityId, int iPlotX, int iPlotY, int eOtherPlayer, int iOtherPlayerCityId, int eReligion, int eCorporation, int iUnitId, int eBuilding);
-
-	int getEventTriggerWeight(int /*EventTriggerTypes*/ eTrigger) const;
 
 	void AI_updateFoundValues(bool bStartingLoc);
 	bool AI_isFinancialTrouble() const;

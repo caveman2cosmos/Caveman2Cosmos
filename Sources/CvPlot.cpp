@@ -3961,6 +3961,7 @@ int CvPlot::defenseModifier(TeamTypes eDefender, bool bIgnoreBuilding, bool bHel
 	FAssertMsg(getTerrainType() != NO_TERRAIN, "TerrainType is not assigned a valid value");
 
 	int iModifier = GC.getTerrainInfo(getTerrainType()).getDefenseModifier();
+
 	if (getFeatureType() != NO_FEATURE)
 	{
 		iModifier += GC.getFeatureInfo(getFeatureType()).getDefenseModifier();
@@ -3975,28 +3976,27 @@ int CvPlot::defenseModifier(TeamTypes eDefender, bool bIgnoreBuilding, bool bHel
 		iModifier += GC.getPEAK_EXTRA_DEFENSE();
 	}
 
-	ImprovementTypes eImprovement;
-	if (bHelp)
 	{
-		eImprovement = getRevealedImprovementType(GC.getGame().getActiveTeam(), false);
-	}
-	else
-	{
-		eImprovement = getImprovementType();
-	}
-
-	if (eImprovement != NO_IMPROVEMENT && eDefender != NO_TEAM
-	&& (getTeam() == NO_TEAM || GET_TEAM(eDefender).isFriendlyTerritory(getTeam())))
-	{
-		// Super Forts begin *bombard*
-		iModifier += GC.getImprovementInfo(eImprovement).getDefenseModifier() - getDefenseDamage();
+		const ImprovementTypes eImprovement = (
+			bHelp
+			?
+			getRevealedImprovementType(GC.getGame().getActiveTeam())
+			:
+			getImprovementType()
+		);
+		if (eImprovement != NO_IMPROVEMENT && eDefender != NO_TEAM
+		&& (getTeam() == NO_TEAM || GET_TEAM(eDefender).isFriendlyTerritory(getTeam())))
+		{
+			// Super Forts begin *bombard*
+			iModifier += GC.getImprovementInfo(eImprovement).getDefenseModifier() - getDefenseDamage();
+		}
 	}
 
 	if (!bHelp)
 	{
 		const CvCity* pCity = getPlotCity();
 
-		if (pCity != NULL)
+		if (pCity)
 		{
 			iModifier += pCity->getDefenseModifier(bIgnoreBuilding);
 		}
@@ -4754,7 +4754,7 @@ bool CvPlot::isRevealedGoody(TeamTypes eTeam) const
 		return false;
 	}
 
-	return ((getRevealedImprovementType(eTeam, false) == NO_IMPROVEMENT) ? false : GC.getImprovementInfo(getRevealedImprovementType(eTeam, false)).isGoody());
+	return ((getRevealedImprovementType(eTeam) == NO_IMPROVEMENT) ? false : GC.getImprovementInfo(getRevealedImprovementType(eTeam)).isGoody());
 }
 
 
@@ -4766,18 +4766,21 @@ void CvPlot::removeGoody()
 
 bool CvPlot::isCity(bool bCheckImprovement, TeamTypes eForTeam) const
 {
-	// Checking for city also includes improvement (fort) w/bCheckImprovement if:
-	// No team specified, or
-	// Tile with fort is on no team, or
-	// Fort is within friendly territory of specified team
-	if (bCheckImprovement && isActsAsCity() &&
-		(NO_TEAM == eForTeam
-		|| NO_TEAM == getTeam() && GC.getImprovementInfo(getImprovementType()).isOutsideBorders()
-		|| GET_TEAM(eForTeam).isFriendlyTerritory(getTeam())))
-	{
-		return true;
-	}
-	return getPlotCity() != NULL;
+	return (
+		getPlotCity()
+		||
+		// Checking for city also includes improvement (fort) w/bCheckImprovement if:
+		bCheckImprovement
+	&&	isActsAsCity()
+	&&	(
+			// No team specified, or
+			NO_TEAM == eForTeam
+			// Tile with fort is on no team, or
+		||	NO_TEAM == getTeam() && GC.getImprovementInfo(getImprovementType()).isOutsideBorders()
+			// Fort is within friendly territory of specified team
+		||	GET_TEAM(eForTeam).isFriendlyTerritory(getTeam())
+		)
+	);
 }
 
 
@@ -7900,7 +7903,7 @@ int CvPlot::calculateYield(YieldTypes eYield, bool bDisplay) const
 
 		if (bDisplay)
 		{
-			eImprovement = getRevealedImprovementType(GC.getGame().getActiveTeam(), false);
+			eImprovement = getRevealedImprovementType(GC.getGame().getActiveTeam());
 			eRoute = getRevealedRouteType(GC.getGame().getActiveTeam(), false);
 		}
 		else
@@ -9234,17 +9237,17 @@ void CvPlot::setRevealed(const TeamTypes eTeam, const bool bNewValue, const bool
 		{
 			if (getRevealedOwner(eFromTeam, false) == getOwner())
 			{
-				setRevealedOwner(eTeam, getRevealedOwner(eFromTeam, false));
+				setRevealedOwner(eTeam, getOwner());
 			}
 
-			if (getRevealedImprovementType(eFromTeam, false) == getImprovementType())
+			if (getRevealedImprovementType(eFromTeam) == getImprovementType())
 			{
-				setRevealedImprovementType(eTeam, getRevealedImprovementType(eFromTeam, false));
+				setRevealedImprovementType(eTeam, getImprovementType());
 			}
 
 			if (getRevealedRouteType(eFromTeam, false) == getRouteType())
 			{
-				setRevealedRouteType(eTeam, getRevealedRouteType(eFromTeam, false));
+				setRevealedRouteType(eTeam, getRouteType());
 			}
 
 			if (pCity != NULL && pCity->isRevealed(eFromTeam, false))
@@ -9289,7 +9292,7 @@ void CvPlot::setRevealedImprovementType(TeamTypes eTeam, ImprovementTypes eNewVa
 	PROFILE_EXTRA_FUNC();
 	FASSERT_BOUNDS(0, MAX_TEAMS, eTeam);
 
-	if (getRevealedImprovementType(eTeam, false) != eNewValue)
+	if (getRevealedImprovementType(eTeam) != eNewValue)
 	{
 		if (NULL == m_aeRevealedImprovementType)
 		{
@@ -9810,7 +9813,7 @@ void CvPlot::updateFlagSymbol()
 	PlayerTypes ePlayer = NO_PLAYER;
 	PlayerTypes ePlayerOffset = NO_PLAYER;
 
-	CvUnit* pCenterUnit = getCenterUnit(false);
+	CvUnit* pCenterUnit = getCenterUnit(GC.getGame().isDebugMode());
 
 	//get the plot's unit's flag
 	//The plot check is to account for units in the delayed-death cycle
@@ -9933,6 +9936,11 @@ void CvPlot::updateCenterUnit()
 		return;
 	}
 	CvUnit* newCenterUnit = isActiveVisible(true) ? getPreferredCenterUnit() : NULL;
+	if (!newCenterUnit && gDLL->GetWorldBuilderMode())
+	{
+		const CLLNode<IDInfo>* pUnitNode = headUnitNode();
+		newCenterUnit = pUnitNode ? ::getUnit(pUnitNode->m_data) : NULL;
+	}
 
 	if (newCenterUnit != m_pCenterUnit)
 	{
@@ -10519,9 +10527,10 @@ ColorTypes CvPlot::plotMinimapColor() const
 				return (ColorTypes) GC.getInfoTypeForString("COLOR_WHITE");
 			}
 		}
+
 		if (isActiveVisible(true))
 		{
-			const CvUnit* pCenterUnit = getCenterUnit(true);
+			const CvUnit* pCenterUnit = getCenterUnit(GC.getGame().isDebugMode());
 
 			if (pCenterUnit)
 			{
@@ -11641,7 +11650,6 @@ int CvPlot::getYieldWithBuild(BuildTypes eBuild, YieldTypes eYield, bool bWithUp
 bool CvPlot::canTrigger(EventTriggerTypes eTrigger, PlayerTypes ePlayer) const
 {
 	PROFILE_EXTRA_FUNC();
-	FAssert(::isPlotEventTrigger(eTrigger));
 
 	const CvEventTriggerInfo& kTrigger = GC.getEventTriggerInfo(eTrigger);
 
@@ -11764,7 +11772,7 @@ bool CvPlot::canTrigger(EventTriggerTypes eTrigger, PlayerTypes ePlayer) const
 		{
 			if (pLoopUnit->getOwner() == ePlayer)
 			{
-				if (-1 != pLoopUnit->getTriggerValue(eTrigger, this, false))
+				if (MIN_INT != pLoopUnit->getTriggerValue(eTrigger, this, false))
 				{
 					bFoundValid = true;
 					break;
@@ -11798,7 +11806,6 @@ bool CvPlot::canTrigger(EventTriggerTypes eTrigger, PlayerTypes ePlayer) const
 			return false;
 		}
 	}
-
 
 	return true;
 }

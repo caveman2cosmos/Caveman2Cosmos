@@ -112,7 +112,7 @@ Base XP gained when defending
 			<iCost>1350</iCost>
 			<iBaseUpkeep>6</iBaseUpkeep>
 			<iMoves>1</iMoves>
-			<iNukeRange>1</iNukeRange>
+			<iNukeRange>0</iNukeRange>
 			<iAirRange>7</iAirRange>
 			<iAirCombat>1</iAirCombat>
 			<iAirCombatLimit>10</iAirCombatLimit>
@@ -510,6 +510,7 @@ Base XP gained when defending
 		<UnitInfo>
 			<Type>UNIT_POISON_NOVA</Type>
 			<iMaxPlayerInstances>5</iMaxPlayerInstances>
+			<iInstanceCostModifier>15</iInstanceCostModifier>
 			<Combat>UNITCOMBAT_DOOM</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_BALLISTIC</SubCombatType>
@@ -572,6 +573,7 @@ Base XP gained when defending
 		<UnitInfo>
 			<Type>UNIT_FUSION_NUKE</Type>
 			<iMaxPlayerInstances>15</iMaxPlayerInstances>
+			<iInstanceCostModifier>5</iInstanceCostModifier>
 			<Combat>UNITCOMBAT_DOOM</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_BALLISTIC</SubCombatType>
@@ -637,6 +639,7 @@ Base XP gained when defending
 		<UnitInfo>
 			<Type>UNIT_FUSION_NOVA</Type>
 			<iMaxPlayerInstances>5</iMaxPlayerInstances>
+			<iInstanceCostModifier>15</iInstanceCostModifier>
 			<Combat>UNITCOMBAT_DOOM</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_BALLISTIC</SubCombatType>
@@ -702,6 +705,7 @@ Base XP gained when defending
 		<UnitInfo>
 			<Type>UNIT_EXPERIMENTAL</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
+			<bUnlimitedException>1</bUnlimitedException>
 			<Combat>UNITCOMBAT_DOOM</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_BALLISTIC</SubCombatType>
@@ -761,6 +765,7 @@ Base XP gained when defending
 		<UnitInfo>
 			<Type>UNIT_TURN</Type>
 			<iMaxPlayerInstances>5</iMaxPlayerInstances>
+			<iInstanceCostModifier>15</iInstanceCostModifier>
 			<Combat>UNITCOMBAT_DOOM</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_BALLISTIC</SubCombatType>

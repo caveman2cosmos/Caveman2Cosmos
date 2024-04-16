@@ -3,7 +3,7 @@
 	<UnitInfos>
 		<UnitInfo>
 			<Type>UNIT_TAMED_PANTHER</Type>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
+			<iInstanceCostModifier>10</iInstanceCostModifier>
 			<Combat>UNITCOMBAT_ANIMAL</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_TAMED</SubCombatType>
@@ -92,7 +92,7 @@
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_TAMED_LION</Type>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
+			<iInstanceCostModifier>10</iInstanceCostModifier>
 			<Combat>UNITCOMBAT_ANIMAL</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_TAMED</SubCombatType>
@@ -180,7 +180,7 @@
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_TAMED_CAMEL</Type>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
+			<iInstanceCostModifier>10</iInstanceCostModifier>
 			<Combat>UNITCOMBAT_ANIMAL</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_TAMED</SubCombatType>
@@ -273,7 +273,7 @@
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_TAMED_LLAMA</Type>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
+			<iInstanceCostModifier>10</iInstanceCostModifier>
 			<Combat>UNITCOMBAT_ANIMAL</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_TAMED</SubCombatType>
@@ -365,7 +365,7 @@
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_TAMED_DONKEY</Type>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
+			<iInstanceCostModifier>10</iInstanceCostModifier>
 			<Combat>UNITCOMBAT_ANIMAL</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_TAMED</SubCombatType>
@@ -485,7 +485,7 @@
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_TAMED_HORSE</Type>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
+			<iInstanceCostModifier>10</iInstanceCostModifier>
 			<Combat>UNITCOMBAT_ANIMAL</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_TAMED</SubCombatType>
@@ -609,7 +609,7 @@
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_TAMED_BISON</Type>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
+			<iInstanceCostModifier>10</iInstanceCostModifier>
 			<Combat>UNITCOMBAT_ANIMAL</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_TAMED</SubCombatType>
@@ -706,7 +706,7 @@
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_TAMED_BUFFALO</Type>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
+			<iInstanceCostModifier>10</iInstanceCostModifier>
 			<Combat>UNITCOMBAT_ANIMAL</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_TAMED</SubCombatType>
@@ -799,7 +799,7 @@
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_TAMED_CATTLE</Type>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
+			<iInstanceCostModifier>10</iInstanceCostModifier>
 			<Combat>UNITCOMBAT_ANIMAL</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_TAMED</SubCombatType>
@@ -894,7 +894,7 @@
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_TAMED_MUSKOX</Type>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
+			<iInstanceCostModifier>10</iInstanceCostModifier>
 			<Combat>UNITCOMBAT_ANIMAL</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_TAMED</SubCombatType>
@@ -986,7 +986,7 @@
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_TAMED_AARDVARK</Type>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
+			<iInstanceCostModifier>10</iInstanceCostModifier>
 			<Combat>UNITCOMBAT_ANIMAL</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_TAMED</SubCombatType>
@@ -1031,6 +1031,7 @@
 			<Buildings>
 				<BuildingType>BUILDING_MILITARY_STANDARD_ANIMAL_MASCOT</BuildingType>
 				<BuildingType>BUILDING_MILITARY_STANDARD_WORKERS</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_E_EARTH</BuildingType>
 				<BuildingType>BUILDING_GOVERNORS_MENAGERIE</BuildingType>
 				<BuildingType>BUILDING_GOVERNORS_PETS</BuildingType>
 				<BuildingType>BUILDING_TAXIDERMIST</BuildingType>
@@ -1068,7 +1069,7 @@
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_TAMED_BOAR</Type>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
+			<iInstanceCostModifier>10</iInstanceCostModifier>
 			<Combat>UNITCOMBAT_ANIMAL</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_TAMED</SubCombatType>
@@ -1163,7 +1164,7 @@
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_TAMED_AMPHIBIAN</Type>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
+			<iInstanceCostModifier>10</iInstanceCostModifier>
 			<Combat>UNITCOMBAT_ANIMAL</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_TAMED</SubCombatType>
@@ -1244,7 +1245,7 @@
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_TAMED_ASIANBEAR</Type>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
+			<iInstanceCostModifier>10</iInstanceCostModifier>
 			<Combat>UNITCOMBAT_ANIMAL</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_TAMED</SubCombatType>
@@ -1331,7 +1332,7 @@
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_TAMED_BROWNBEAR</Type>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
+			<iInstanceCostModifier>10</iInstanceCostModifier>
 			<Combat>UNITCOMBAT_ANIMAL</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_TAMED</SubCombatType>
@@ -1419,7 +1420,7 @@
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_TAMED_BLACKBEAR</Type>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
+			<iInstanceCostModifier>10</iInstanceCostModifier>
 			<Combat>UNITCOMBAT_ANIMAL</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_TAMED</SubCombatType>
@@ -1506,7 +1507,7 @@
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_TAMED_CAVEBEAR</Type>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
+			<iInstanceCostModifier>10</iInstanceCostModifier>
 			<Combat>UNITCOMBAT_ANIMAL</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_TAMED</SubCombatType>
@@ -1594,7 +1595,7 @@
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_TAMED_GRIZZLY</Type>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
+			<iInstanceCostModifier>10</iInstanceCostModifier>
 			<Combat>UNITCOMBAT_ANIMAL</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_TAMED</SubCombatType>
@@ -1682,7 +1683,7 @@
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_TAMED_PANDA_BEAR</Type>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
+			<iInstanceCostModifier>10</iInstanceCostModifier>
 			<Combat>UNITCOMBAT_ANIMAL</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_TAMED</SubCombatType>
@@ -1764,7 +1765,7 @@
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_TAMED_POLARBEAR</Type>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
+			<iInstanceCostModifier>10</iInstanceCostModifier>
 			<Combat>UNITCOMBAT_ANIMAL</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_TAMED</SubCombatType>
@@ -1853,7 +1854,7 @@
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_TAMED_REDPANDA</Type>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
+			<iInstanceCostModifier>10</iInstanceCostModifier>
 			<Combat>UNITCOMBAT_ANIMAL</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_TAMED</SubCombatType>
@@ -1900,18 +1901,22 @@
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<Buildings>
 				<BuildingType>BUILDING_MILITARY_STANDARD_ANIMAL_MASCOT</BuildingType>
-				<BuildingType>BUILDING_ENCLOSURE_BEAR</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_E_EARTH</BuildingType>
 				<BuildingType>BUILDING_GOVERNORS_MENAGERIE</BuildingType>
 				<BuildingType>BUILDING_GOVERNORS_PETS</BuildingType>
 				<BuildingType>BUILDING_TRAP_RACCOON</BuildingType>
 				<BuildingType>BUILDING_TAXIDERMIST</BuildingType>
 				<BuildingType>BUILDING_ZOO</BuildingType>
 			</Buildings>
+			<Heritage>
+				<Type>HERITAGE_TAXON_MUSTELOIDEA</Type>
+			</Heritage>
 			<PrereqAndBuildings>
 				<BuildingType>BUILDING_ANIMAL_TAMER_COMPLEX</BuildingType>
-				<BuildingType>BUILDING_ENCLOSURE_BEAR</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_RED_PANDA</BuildingType>
 			</PrereqAndBuildings>
+			<PrereqAndHeritage>
+				<Type>HERITAGE_FOLKLORE_RED_PANDA</Type>
+			</PrereqAndHeritage>
 			<PrereqTech>TECH_SPECIALIZATION</PrereqTech>
 			<iCost>133</iCost>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
@@ -1937,7 +1942,7 @@
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_TAMED_SLOTHBEAR</Type>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
+			<iInstanceCostModifier>10</iInstanceCostModifier>
 			<Combat>UNITCOMBAT_ANIMAL</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_TAMED</SubCombatType>
@@ -2025,7 +2030,7 @@
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_TAMED_SPECTACLEDBEAR</Type>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
+			<iInstanceCostModifier>10</iInstanceCostModifier>
 			<Combat>UNITCOMBAT_ANIMAL</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_TAMED</SubCombatType>
@@ -2114,7 +2119,7 @@
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_TAMED_SUNBEAR</Type>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
+			<iInstanceCostModifier>10</iInstanceCostModifier>
 			<Combat>UNITCOMBAT_ANIMAL</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_TAMED</SubCombatType>
@@ -2203,7 +2208,7 @@
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_TAMED_ELEPHANT</Type>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
+			<iInstanceCostModifier>10</iInstanceCostModifier>
 			<Combat>UNITCOMBAT_ANIMAL</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_TAMED</SubCombatType>
@@ -2295,7 +2300,7 @@
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_TAMED_GIRAFFE</Type>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
+			<iInstanceCostModifier>10</iInstanceCostModifier>
 			<Combat>UNITCOMBAT_ANIMAL</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_TAMED</SubCombatType>
@@ -2380,7 +2385,7 @@
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_TAMED_HIPPO</Type>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
+			<iInstanceCostModifier>10</iInstanceCostModifier>
 			<Combat>UNITCOMBAT_ANIMAL</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_TAMED</SubCombatType>
@@ -2440,9 +2445,11 @@
 			</Buildings>
 			<PrereqAndBuildings>
 				<BuildingType>BUILDING_ANIMAL_TAMER_COMPLEX</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_T_HIPPOS</BuildingType>
 				<BuildingType>BUILDING_ENCLOSURE_EXOTIC_HERBIVORE</BuildingType>
 			</PrereqAndBuildings>
+			<PrereqAndHeritage>
+				<Type>HERITAGE_TAXON_HIPPOPOTAMIDAE</Type>
+			</PrereqAndHeritage>
 			<PrereqTech>TECH_SPECIALIZATION</PrereqTech>
 			<iCost>140</iCost>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
@@ -2466,7 +2473,7 @@
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_TAMED_WOLF</Type>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
+			<iInstanceCostModifier>10</iInstanceCostModifier>
 			<Combat>UNITCOMBAT_ANIMAL</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_TAMED</SubCombatType>
@@ -2537,19 +2544,11 @@
 				<BuildingType>BUILDING_ANIMAL_TAMER_COMPLEX</BuildingType>
 				<BuildingType>BUILDING_DOG_KENNELS</BuildingType>
 			</PrereqAndBuildings>
-			<PrereqOrBuildings>
-				<BuildingType>BUILDING_FOLKLORE_T_WOLF</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_WOLF</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_DIRE_WOLF</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_USSURI_DHOLE</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_DINGO</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_ETHIOPIAN_WOLF</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_MANED_WOLF</BuildingType>
-			</PrereqOrBuildings>
 			<PrereqOrHeritage>
-				<Type>HERITAGE_FOLKLORE_FOX_ARCTIC</Type>
-				<Type>HERITAGE_FOLKLORE_FOX_FENNEC</Type>
-				<Type>HERITAGE_FOLKLORE_FOX_RED</Type>
+				<Type>HERITAGE_FOLKLORE_WOLF</Type>
+				<Type>HERITAGE_FOLKLORE_WOLF_DIRE</Type>
+				<Type>HERITAGE_FOLKLORE_WOLF_ETHIOPIAN</Type>
+				<Type>HERITAGE_TAXON_CANIDAE</Type>
 			</PrereqOrHeritage>
 			<PrereqTech>TECH_SPECIALIZATION</PrereqTech>
 			<iCost>133</iCost>
@@ -2577,7 +2576,7 @@
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_TAMED_BLACK_RHINO</Type>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
+			<iInstanceCostModifier>10</iInstanceCostModifier>
 			<Combat>UNITCOMBAT_ANIMAL</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_TAMED</SubCombatType>
@@ -2665,7 +2664,7 @@
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_TAMED_INDIAN_RHINO</Type>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
+			<iInstanceCostModifier>10</iInstanceCostModifier>
 			<Combat>UNITCOMBAT_ANIMAL</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_TAMED</SubCombatType>
@@ -2753,7 +2752,7 @@
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_TAMED_JAVA_RHINO</Type>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
+			<iInstanceCostModifier>10</iInstanceCostModifier>
 			<Combat>UNITCOMBAT_ANIMAL</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_TAMED</SubCombatType>
@@ -2841,7 +2840,7 @@
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_TAMED_WHITE_RHINO</Type>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
+			<iInstanceCostModifier>10</iInstanceCostModifier>
 			<Combat>UNITCOMBAT_ANIMAL</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_TAMED</SubCombatType>
@@ -2929,7 +2928,7 @@
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_TAMED_BAIRDS_TAPIR</Type>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
+			<iInstanceCostModifier>10</iInstanceCostModifier>
 			<Combat>UNITCOMBAT_ANIMAL</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_TAMED</SubCombatType>
@@ -2981,6 +2980,10 @@
 				<BuildingType>BUILDING_TAXIDERMIST</BuildingType>
 				<BuildingType>BUILDING_ZOO</BuildingType>
 			</Buildings>
+			<Heritage>
+				<Type>HERITAGE_TAXON_SUIDAE</Type>
+				<Type>HERITAGE_TAXON_TAPIRIDAE</Type>
+			</Heritage>
 			<PrereqAndBuildings>
 				<BuildingType>BUILDING_ANIMAL_TAMER_COMPLEX</BuildingType>
 				<BuildingType>BUILDING_ENCLOSURE_EXOTIC_HERBIVORE</BuildingType>
@@ -3015,7 +3018,7 @@
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_TAMED_BRAZILIAN_TAPIR</Type>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
+			<iInstanceCostModifier>10</iInstanceCostModifier>
 			<Combat>UNITCOMBAT_ANIMAL</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_TAMED</SubCombatType>
@@ -3067,6 +3070,10 @@
 				<BuildingType>BUILDING_TAXIDERMIST</BuildingType>
 				<BuildingType>BUILDING_ZOO</BuildingType>
 			</Buildings>
+			<Heritage>
+				<Type>HERITAGE_TAXON_SUIDAE</Type>
+				<Type>HERITAGE_TAXON_TAPIRIDAE</Type>
+			</Heritage>
 			<PrereqAndBuildings>
 				<BuildingType>BUILDING_ANIMAL_TAMER_COMPLEX</BuildingType>
 				<BuildingType>BUILDING_ENCLOSURE_EXOTIC_HERBIVORE</BuildingType>
@@ -3101,7 +3108,7 @@
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_TAMED_MALAYAN_TAPIR</Type>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
+			<iInstanceCostModifier>10</iInstanceCostModifier>
 			<Combat>UNITCOMBAT_ANIMAL</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_TAMED</SubCombatType>
@@ -3153,6 +3160,10 @@
 				<BuildingType>BUILDING_TAXIDERMIST</BuildingType>
 				<BuildingType>BUILDING_ZOO</BuildingType>
 			</Buildings>
+			<Heritage>
+				<Type>HERITAGE_TAXON_SUIDAE</Type>
+				<Type>HERITAGE_TAXON_TAPIRIDAE</Type>
+			</Heritage>
 			<PrereqAndBuildings>
 				<BuildingType>BUILDING_ANIMAL_TAMER_COMPLEX</BuildingType>
 				<BuildingType>BUILDING_ENCLOSURE_EXOTIC_HERBIVORE</BuildingType>
@@ -3187,7 +3198,7 @@
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_TAMED_MOUNTAIN_TAPIR</Type>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
+			<iInstanceCostModifier>10</iInstanceCostModifier>
 			<Combat>UNITCOMBAT_ANIMAL</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_TAMED</SubCombatType>
@@ -3239,6 +3250,10 @@
 				<BuildingType>BUILDING_TAXIDERMIST</BuildingType>
 				<BuildingType>BUILDING_ZOO</BuildingType>
 			</Buildings>
+			<Heritage>
+				<Type>HERITAGE_TAXON_SUIDAE</Type>
+				<Type>HERITAGE_TAXON_TAPIRIDAE</Type>
+			</Heritage>
 			<PrereqAndBuildings>
 				<BuildingType>BUILDING_ANIMAL_TAMER_COMPLEX</BuildingType>
 				<BuildingType>BUILDING_ENCLOSURE_EXOTIC_HERBIVORE</BuildingType>
@@ -3273,7 +3288,7 @@
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_TAMED_LIZARD</Type>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
+			<iInstanceCostModifier>10</iInstanceCostModifier>
 			<Combat>UNITCOMBAT_ANIMAL</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_TAMED</SubCombatType>
@@ -3324,14 +3339,14 @@
 				<BuildingType>BUILDING_TAXIDERMIST</BuildingType>
 				<BuildingType>BUILDING_ZOO</BuildingType>
 			</Buildings>
+			<Heritage>
+				<Type>HERITAGE_TAXON_REPTILIA</Type>
+				<Type>HERITAGE_TAXON_SQUAMATA</Type>
+			</Heritage>
 			<PrereqAndBuildings>
 				<BuildingType>BUILDING_ANIMAL_TAMER_COMPLEX</BuildingType>
 				<BuildingType>BUILDING_ENCLOSURE_REPTILE</BuildingType>
 			</PrereqAndBuildings>
-			<PrereqOrBuildings>
-				<BuildingType>BUILDING_FOLKLORE_KOMODO_DRAGON</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_NILE_MONITOR</BuildingType>
-			</PrereqOrBuildings>
 			<PrereqTech>TECH_SPECIALIZATION</PrereqTech>
 			<iCost>133</iCost>
 			<iMoves>1</iMoves>
@@ -3357,7 +3372,7 @@
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_TAMED_SNAKE</Type>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
+			<iInstanceCostModifier>10</iInstanceCostModifier>
 			<Combat>UNITCOMBAT_ANIMAL</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_TAMED</SubCombatType>
@@ -3416,6 +3431,11 @@
 				<BuildingType>BUILDING_TAXIDERMIST</BuildingType>
 				<BuildingType>BUILDING_ZOO</BuildingType>
 			</Buildings>
+			<Heritage>
+				<Type>HERITAGE_TAXON_REPTILIA</Type>
+				<Type>HERITAGE_TAXON_SERPENTES</Type>
+				<Type>HERITAGE_TAXON_SQUAMATA</Type>
+			</Heritage>
 			<PrereqAndBuildings>
 				<BuildingType>BUILDING_ANIMAL_TAMER_COMPLEX</BuildingType>
 				<BuildingType>BUILDING_SNAKE_CHARMER</BuildingType>
@@ -3446,7 +3466,7 @@
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_TAMED_DONKEY_PAIR</Type>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
+			<iInstanceCostModifier>10</iInstanceCostModifier>
 			<Combat>UNITCOMBAT_ANIMAL</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_TAMED</SubCombatType>
@@ -3561,7 +3581,7 @@
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_TAMED_HORSE_PAIR</Type>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
+			<iInstanceCostModifier>10</iInstanceCostModifier>
 			<Combat>UNITCOMBAT_ANIMAL</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_TAMED</SubCombatType>
@@ -3678,7 +3698,7 @@
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_TAMED_WOLF_PAIR</Type>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
+			<iInstanceCostModifier>10</iInstanceCostModifier>
 			<Combat>UNITCOMBAT_ANIMAL</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_TAMED</SubCombatType>
@@ -3749,19 +3769,11 @@
 			<PrereqAndBuildings>
 				<BuildingType>BUILDING_DOG_KENNELS</BuildingType>
 			</PrereqAndBuildings>
-			<PrereqOrBuildings>
-				<BuildingType>BUILDING_FOLKLORE_T_WOLF</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_WOLF</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_DIRE_WOLF</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_USSURI_DHOLE</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_DINGO</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_ETHIOPIAN_WOLF</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_MANED_WOLF</BuildingType>
-			</PrereqOrBuildings>
 			<PrereqOrHeritage>
-				<Type>HERITAGE_FOLKLORE_FOX_ARCTIC</Type>
-				<Type>HERITAGE_FOLKLORE_FOX_FENNEC</Type>
-				<Type>HERITAGE_FOLKLORE_FOX_RED</Type>
+				<Type>HERITAGE_FOLKLORE_WOLF</Type>
+				<Type>HERITAGE_FOLKLORE_WOLF_DIRE</Type>
+				<Type>HERITAGE_FOLKLORE_WOLF_ETHIOPIAN</Type>
+				<Type>HERITAGE_TAXON_CANIDAE</Type>
 			</PrereqOrHeritage>
 			<PrereqTech>TECH_THE_WHEEL</PrereqTech>
 			<UnitUpgrades>
@@ -3793,7 +3805,7 @@
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_TAMED_DUCK</Type>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
+			<iInstanceCostModifier>10</iInstanceCostModifier>
 			<Combat>UNITCOMBAT_ANIMAL</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_TAMED</SubCombatType>
@@ -3880,7 +3892,7 @@
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_TAMED_TURKEY</Type>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
+			<iInstanceCostModifier>10</iInstanceCostModifier>
 			<Combat>UNITCOMBAT_ANIMAL</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_TAMED</SubCombatType>

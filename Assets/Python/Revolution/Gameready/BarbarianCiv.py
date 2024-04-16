@@ -217,7 +217,7 @@ class BarbarianCiv:
 
 		CyTeam = GC.getTeam(CyPlayer.getTeam())
 
-		CyPlayer.setNewPlayerAlive(True)
+		CyPlayer.setAlive(True, False)
 
 		civName = CyPlayer.getCivilizationDescription(0)
 		print "[BarbCiv] %s has emerged in %s" %(civName, szCityName)
@@ -274,7 +274,7 @@ class BarbarianCiv:
 				if iKnownRatio >= iTechFrac:
 					CyTeam.setHasTech(iTech, True, iPlayer, False, False)
 
-		CyTeam.setIsMinorCiv(True, False)
+		CyTeam.setIsMinorCiv(True)
 
 		# Units
 		iNumBarbDefenders = GC.getHandicapInfo(GAME.getHandicapType()).getBarbarianInitialDefenders()
@@ -340,10 +340,6 @@ class BarbarianCiv:
 
 
 	def getScenario(self, CyArea):
-		if CyArea == None:
-			print "Error!  Passed a None area!"
-			return None
-
 		bMajorCivCities = False
 		bMajorCivUnits = False
 		iCount = 0
@@ -351,6 +347,9 @@ class BarbarianCiv:
 		fPowerPlayer = 0.0
 
 		# Smaller landmasses require less relative civ power to be considered Old World...
+		# Toffer-ToDo: make new world and old world be stored to areas in the dll and set by mapscripts.
+		#	New world should become old world when the first minor civ in the new world becomes a major civ.
+		#	Would simplify getScenario, and could move this function from python to dll.
 		fSizeMod = 1.0 * MAP.getLandPlots()/CyArea.getNumTiles()
 		fSizeMod **= 0.9 # ...within reason.
 
@@ -409,7 +408,12 @@ class BarbarianCiv:
 			if isLimitedUnit(iUnit): continue
 
 			CvUnitInfo = GC.getUnitInfo(iUnit)
-			if CvUnitInfo.getDomainType() != DomainTypes.DOMAIN_LAND or CvUnitInfo.getNumPrereqAndBuildings() > 0:
+			if (
+				CvUnitInfo.getDomainType() != DomainTypes.DOMAIN_LAND
+			or	CvUnitInfo.getNumPrereqAndBuildings() > 0
+			or	CvUnitInfo.getPrereqAndBonus() != -1
+			and	GC.getBonusInfo(CvUnitInfo.getPrereqAndBonus()).getBonusClassType() == GC.getInfoTypeForString("BONUSCLASS_CULTURE")
+			):
 				continue
 
 			if not CyPlayer.canTrain(iUnit, False, False): continue
@@ -565,14 +569,13 @@ class BarbarianCiv:
 		# Check minor civs for accomplishments which warrant settling into full civ.
 		iCities = CyPlayer.getNumCities()
 		if iCities < 1: return
-		POST_FIX = "\n\tBarbarianCiv.checkMinorCivs"
-		CyCity1 = CyPlayer.getCapitalCity()
 
+		CyCity1 = CyPlayer.getCapitalCity()
 		CyArea = CyCity1.area()
+
 		aList = self.getScenario(CyArea)
 		if not aList: return
 		bNewWorld, bMajorCivCities, bMajorCivUnits = aList
-		iAreaID = CyArea.getID()
 
 		if bNewWorld:
 			iPolicy = self.RevOpt.getNewWorldPolicy()
@@ -612,8 +615,6 @@ class BarbarianCiv:
 		iFactorGS = GC.getGameSpeedInfo(GAME.getGameSpeedType()).getSpeedPercent()
 		if not GAME.getSorenRandNum(40*iFactorGS + odds, 'minor2major') < odds: return
 
-		iX = CyCity1.getX(); iY = CyCity1.getY()
-
 		bLowScore = False
 		if not bNewWorld:
 			iScoreSum = 0
@@ -634,6 +635,7 @@ class BarbarianCiv:
 				bLowScore = GAME.getPlayerScore(iPlayer) < (iScoreSum - iMinScore) / iCount
 
 		# Turn a minor BarbCiv into a full civ, give more bonuses to launch into the world
+		iX = CyCity1.getX(); iY = CyCity1.getY()
 		if bNewWorld or bLowScore:
 
 			iDefender, iCounter, iAttack, iMobile, iAttackCity, iWorker, iSettler, iExplorer, iMerchant = self.getUnitsForPlayer(iPlayer, CyTeam)
@@ -645,6 +647,7 @@ class BarbarianCiv:
 			fMilitaryMod = self.RevOpt.getMilitaryStrength()
 
 			# Pickup nearby barb cities, search a 4x area if in new world.
+			iAreaID = CyArea.getID()
 			iMaxDistance = (iHighestEra + 10) * (1 + 3*bNewWorld) * GC.getWorldInfo(MAP.getWorldSize()).getDefaultPlayers() / 8
 			CyPlayerBarb = GC.getPlayer(iPlayerBarb)
 			aList = ()
@@ -727,10 +730,10 @@ class BarbarianCiv:
 			# Gold
 			CyPlayer.changeGold(2 * iFactorGS * (iEra + 1))
 			CyPlayer.changeGoldenAgeTurns(GAME.goldenAgeLength100()/100)
-		CyTeam.setIsMinorCiv(False, False)
+		CyTeam.setIsMinorCiv(False)
 
 		civName = CyPlayer.getCivilizationShortDescription(0)
-		print "[INFO] Minor civ %s becomes a major civ.%s" %(civName, POST_FIX)
+		print "[INFO] Minor civ %s becomes a major civ.%s" %(civName, "\n\tBarbarianCiv.checkMinorCivs")
 		# Add replay message
 		szMsg = TRNSLTR.getText("TXT_KEY_BARBCIV_MINOR_SETTLE", ()) %(CyPlayer.getName(), CyPlayer.getCivilizationAdjective(1), civName)
 		iColor = GC.getInfoTypeForString("COLOR_HIGHLIGHT_TEXT")

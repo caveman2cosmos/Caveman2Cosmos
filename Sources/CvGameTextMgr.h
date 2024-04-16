@@ -234,7 +234,6 @@ public:
 
 	DllExport void getPlotHelp(CvPlot* pMouseOverPlot, CvCity* pCity, CvPlot* pFlagPlot, bool bAlt, CvWStringBuffer& strHelp);
 	void getRebasePlotHelp(const CvPlot* pPlot, CvWString& strHelp) const;
-	void getNukePlotHelp(const CvPlot* pPlot, CvWString& strHelp) const;
 	DllExport void getInterfaceCenterText(CvWString& strText);
 	DllExport void getTurnTimerText(CvWString& strText);
 	DllExport void getFontSymbols(std::vector< std::vector<wchar_t> >& aacSymbols, std::vector<int>& aiMaxNumRows);

@@ -3,7 +3,7 @@
 	<UnitInfos>
 		<UnitInfo>
 			<Type>UNIT_GOLIATH_AIRSHIP</Type>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
+			<iInstanceCostModifier>15</iInstanceCostModifier>
 			<Combat>UNITCOMBAT_BALLOON</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_TRANSPORT</SubCombatType>
@@ -97,7 +97,7 @@
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_DRACHE_HELICOPTER</Type>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
+			<iInstanceCostModifier>15</iInstanceCostModifier>
 			<Combat>UNITCOMBAT_HELICOPTER</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
@@ -205,7 +205,7 @@
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_RAILROAD_ARTILLERY</Type>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
+			<iInstanceCostModifier>15</iInstanceCostModifier>
 			<Capture>UNIT_RAILROAD_ARTILLERY</Capture>
 			<Combat>UNITCOMBAT_SIEGE</Combat>
 			<SubCombatTypes>
@@ -314,7 +314,7 @@
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_BIG_BERTHA</Type>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
+			<iInstanceCostModifier>15</iInstanceCostModifier>
 			<Capture>UNIT_BIG_BERTHA</Capture>
 			<Combat>UNITCOMBAT_SIEGE</Combat>
 			<SubCombatTypes>
@@ -428,7 +428,7 @@
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_TZAR_TANK</Type>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
+			<iInstanceCostModifier>15</iInstanceCostModifier>
 			<Combat>UNITCOMBAT_WHEELED</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
@@ -538,7 +538,7 @@
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_DOUBLE_BIPLANE</Type>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
+			<iInstanceCostModifier>15</iInstanceCostModifier>
 			<Combat>UNITCOMBAT_EARLY_FIGHTERS</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
@@ -617,7 +617,7 @@
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_VERY_HEAVY_ARMOR</Type>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
+			<iInstanceCostModifier>15</iInstanceCostModifier>
 			<Combat>UNITCOMBAT_TRACKED</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
@@ -739,7 +739,7 @@
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_CHROMIUM_GUNMAN</Type>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
+			<iInstanceCostModifier>15</iInstanceCostModifier>
 			<Combat>UNITCOMBAT_GUN</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_ROBOT</SubCombatType>

@@ -959,7 +959,7 @@
 		<Tag>TXT_KEY_CONCEPT_FOOD_CARAVAN_PEDIA</Tag>
 		<English>Food merchants transport food from one city to another.</English>
 		<French>Les Marchands de nourriture transportent de la nourriture d'une ville à une autre</French>
-		<Polish>Handlarze żywności transportują pożywienie z jednego miasta do drugiego.</Polish>
+		<Polish>Handlarze &#191;ywno&#156;ci transportuj&#185; po&#191;ywienie z jednego miasta do drugiego.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CONCEPT_FOOD_PEDIA</Tag>
@@ -1127,7 +1127,7 @@
 		<Tag>TXT_KEY_CONCEPT_GREAT_STATESMAN_PEDIA</Tag>
 		<English>The [COLOR_UNIT_TEXT]Great Statesman[COLOR_REVERT] can improve international relations, prevent international disasters, start a golden age, and attach himself to a city.</English>
 		<Italian>Un [COLOR_UNIT_TEXT]Grande uomo di stato[COLOR_REVERT] può migliorare le relazioni internazionali, prevenire i disastri internazionali, iniziare un'età dell'oro o unirsi ad una città.</Italian>
-		<Polish>[COLOR_UNIT_TEXT]Wielki Ustawodawca[COLOR_REVERT] może poprawiać relacje międzynarodowe, zapobiegać konfliktom, rozpoczynać Złoty Wiek i dołączać do miasta.</Polish>
+		<Polish>[COLOR_UNIT_TEXT]Wielki Ustawodawca[COLOR_REVERT] mo&#191;e poprawia&#230; relacje mi&#234;dzynarodowe, zapobiega&#230; konfliktom, rozpoczyna&#230; Z&#179;oty Wiek i do&#179;&#185;cza&#230; do miasta.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CONCEPT_HAPPINESS</Tag>
@@ -2575,7 +2575,7 @@ Remember: If you're having trouble with which civic to choose, just think of his
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CONCEPT_ROM_MAPSCRIPTS_PEDIA</Tag>
-		<English>Rise of Mankind mod (a parent mod of C2C) adds new terrain type [LINK=TERRAIN_MARSH]Marsh[\LINK] and new terrain feature [LINK=FEATURE_SWAMP]Peat Bog[\LINK]. Because of these terrain changes, the regular mapscripts from Civ 4, Warlords and from Beyond the Sword won't work correctly. For this reason all the default and other custom mapscripts have been disabled and all those mapscripts have been converted to work with Rise of Mankind mod. All the changed mapscripts start with the text "RoM_", if the mapscript you are trying to use does not have this prefix, you might encounter problems when game is generating the map. Some converted mapscripts are still unable to generate Marsh terrain (these require still some python "fixes" before they can place Marsh terrain) but new terrain feature Peat Bog should appear on all maps since it is set to appear also on tundra.[PARAGRAPH:2]Rise of Mankind adds 2 new map sizes: Giant and Gigantic. These maps are extra large and should be tried only on high end computers. There are still some issues with these new map sizes, meaning that some mapscripts won't work correctly for these new map sizes and the script won't place terrain correctly - more advanced mapscripts, like Smartmap, can handle these new map sizes without problems - if you encounter problems on Giant and Gigantic mapsizes on certain mapscripts, I recommend using max Huge map size.[PARAGRAPH:2]Basic mapscripts are shown in list when you click Single Player and then Play Now. Advanced mapscripts can be used in Custom Game.</English>
+		<English>Rise of Mankind mod (a parent mod of C2C) adds new terrain type [LINK=TERRAIN_MARSH]Marsh[\LINK] and new terrain feature [LINK=FEATURE_SWAMP]Peat Bog[\LINK].[PARAGRAPH:2]Rise of Mankind adds 2 new map sizes: Giant and Gigantic. These maps are extra large and should be tried only on high end computers.[PARAGRAPH:2]Basic mapscripts are shown in list when you click Single Player and then Play Now. Advanced mapscripts can be used in Custom Game.</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CONCEPT_ROM_MAPS_PEDIA</Tag>

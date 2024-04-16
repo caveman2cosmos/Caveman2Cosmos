@@ -354,7 +354,7 @@ void CvGame::init(HandicapTypes eHandicap)
 				ePlayer, (LeaderHeadTypes)GC.getDefineINT("ANIMAL_LEADER"),
 				(CivilizationTypes)GC.getDefineINT("BEAST_CIVILIZATION"), false
 			);
-			GET_PLAYER(ePlayer).setNewPlayerAlive(true);
+			GET_PLAYER(ePlayer).setAlive(true, false);
 			GET_TEAM(BEAST_TEAM).init(BEAST_TEAM);
 			GC.getInitCore().setTeam(ePlayer, BEAST_TEAM);
 			GC.getInitCore().setHandicap(ePlayer, (HandicapTypes)GC.getDefineINT("BARBARIAN_HANDICAP"));
@@ -365,7 +365,7 @@ void CvGame::init(HandicapTypes eHandicap)
 				ePlayer, (LeaderHeadTypes)GC.getDefineINT("ANIMAL_LEADER"),
 				(CivilizationTypes)GC.getDefineINT("PREDATOR_CIVILIZATION"), false
 			);
-			GET_PLAYER(ePlayer).setNewPlayerAlive(true);
+			GET_PLAYER(ePlayer).setAlive(true, false);
 			GET_TEAM(PREDATOR_TEAM).init(PREDATOR_TEAM);
 			GC.getInitCore().setTeam(ePlayer, PREDATOR_TEAM);
 			GC.getInitCore().setHandicap(ePlayer, (HandicapTypes)GC.getDefineINT("BARBARIAN_HANDICAP"));
@@ -376,7 +376,7 @@ void CvGame::init(HandicapTypes eHandicap)
 				ePlayer, (LeaderHeadTypes)GC.getDefineINT("ANIMAL_LEADER"),
 				(CivilizationTypes)GC.getDefineINT("PREY_CIVILIZATION"), false
 			);
-			GET_PLAYER(ePlayer).setNewPlayerAlive(true);
+			GET_PLAYER(ePlayer).setAlive(true, false);
 			GET_TEAM(PREY_TEAM).init(PREY_TEAM);
 			GC.getInitCore().setTeam(ePlayer, PREY_TEAM);
 			GC.getInitCore().setHandicap(ePlayer, (HandicapTypes)GC.getDefineINT("BARBARIAN_HANDICAP"));
@@ -387,7 +387,7 @@ void CvGame::init(HandicapTypes eHandicap)
 				ePlayer, (LeaderHeadTypes)GC.getDefineINT("INSECT_LEADER"),
 				(CivilizationTypes)GC.getDefineINT("INSECT_CIVILIZATION"), false
 			);
-			GET_PLAYER(ePlayer).setNewPlayerAlive(true);
+			GET_PLAYER(ePlayer).setAlive(true, false);
 			GET_TEAM(INSECT_TEAM).init(INSECT_TEAM);
 			GC.getInitCore().setTeam(ePlayer, INSECT_TEAM);
 			GC.getInitCore().setHandicap(ePlayer, (HandicapTypes)GC.getDefineINT("BARBARIAN_HANDICAP"));
@@ -399,7 +399,7 @@ void CvGame::init(HandicapTypes eHandicap)
 				ePlayer, (LeaderHeadTypes)GC.getDefineINT("NPC4_LEADER"),
 				(CivilizationTypes)GC.getDefineINT("NPC4_CIVILIZATION"), false
 			);
-			GET_PLAYER(ePlayer).setNewPlayerAlive(true);
+			GET_PLAYER(ePlayer).setAlive(true, false);
 			GET_TEAM(NPC4_TEAM).init(NPC4_TEAM);
 			GC.getInitCore().setTeam(ePlayer, NPC4_TEAM);
 			GC.getInitCore().setHandicap(ePlayer, (HandicapTypes)GC.getDefineINT("BARBARIAN_HANDICAP"));
@@ -410,7 +410,7 @@ void CvGame::init(HandicapTypes eHandicap)
 				ePlayer, (LeaderHeadTypes)GC.getDefineINT("NPC3_LEADER"),
 				(CivilizationTypes)GC.getDefineINT("NPC3_CIVILIZATION"), false
 			);
-			GET_PLAYER(ePlayer).setNewPlayerAlive(true);
+			GET_PLAYER(ePlayer).setAlive(true, false);
 			GET_TEAM(NPC3_TEAM).init(NPC3_TEAM);
 			GC.getInitCore().setTeam(ePlayer, NPC3_TEAM);
 			GC.getInitCore().setHandicap(ePlayer, (HandicapTypes)GC.getDefineINT("BARBARIAN_HANDICAP"));
@@ -421,7 +421,7 @@ void CvGame::init(HandicapTypes eHandicap)
 				ePlayer, (LeaderHeadTypes)GC.getDefineINT("NPC2_LEADER"),
 				(CivilizationTypes)GC.getDefineINT("NPC2_CIVILIZATION"), false
 			);
-			GET_PLAYER(ePlayer).setNewPlayerAlive(true);
+			GET_PLAYER(ePlayer).setAlive(true, false);
 			GET_TEAM(NPC2_TEAM).init(NPC2_TEAM);
 			GC.getInitCore().setTeam(ePlayer, NPC2_TEAM);
 			GC.getInitCore().setHandicap(ePlayer, (HandicapTypes)GC.getDefineINT("BARBARIAN_HANDICAP"));
@@ -432,7 +432,7 @@ void CvGame::init(HandicapTypes eHandicap)
 				ePlayer, (LeaderHeadTypes)GC.getDefineINT("NPC1_LEADER"),
 				(CivilizationTypes)GC.getDefineINT("NPC1_CIVILIZATION"), false
 			);
-			GET_PLAYER(ePlayer).setNewPlayerAlive(true);
+			GET_PLAYER(ePlayer).setAlive(true, false);
 			GET_TEAM(NPC1_TEAM).init(NPC1_TEAM);
 			GC.getInitCore().setTeam(ePlayer, NPC1_TEAM);
 			GC.getInitCore().setHandicap(ePlayer, (HandicapTypes)GC.getDefineINT("BARBARIAN_HANDICAP"));
@@ -443,7 +443,7 @@ void CvGame::init(HandicapTypes eHandicap)
 				ePlayer, (LeaderHeadTypes)GC.getDefineINT("NPC0_LEADER"),
 				(CivilizationTypes)GC.getDefineINT("NPC0_CIVILIZATION"), false
 			);
-			GET_PLAYER(ePlayer).setNewPlayerAlive(true);
+			GET_PLAYER(ePlayer).setAlive(true, false);
 			GET_TEAM(NPC0_TEAM).init(NPC0_TEAM);
 			GC.getInitCore().setTeam(ePlayer, NPC0_TEAM);
 			GC.getInitCore().setHandicap(ePlayer, (HandicapTypes)GC.getDefineINT("BARBARIAN_HANDICAP"));
@@ -455,7 +455,7 @@ void CvGame::init(HandicapTypes eHandicap)
 				ePlayer, (LeaderHeadTypes)GC.getDefineINT("NEANDERTHAL_LEADER"),
 				(CivilizationTypes)GC.getDefineINT("NEANDERTHAL_CIVILIZATION"), false
 			);
-			GET_PLAYER(ePlayer).setNewPlayerAlive(true);
+			GET_PLAYER(ePlayer).setAlive(true, false);
 			GET_TEAM(NEANDERTHAL_TEAM).init(NEANDERTHAL_TEAM);
 			GC.getInitCore().setTeam(ePlayer, NEANDERTHAL_TEAM);
 			GC.getInitCore().setHandicap(ePlayer, (HandicapTypes)GC.getDefineINT("BARBARIAN_HANDICAP"));
@@ -467,7 +467,7 @@ void CvGame::init(HandicapTypes eHandicap)
 				ePlayer, (LeaderHeadTypes)GC.getDefineINT("BARBARIAN_LEADER"),
 				(CivilizationTypes)GC.getDefineINT("BARBARIAN_CIVILIZATION"), false
 			);
-			GET_PLAYER(ePlayer).setNewPlayerAlive(true);
+			GET_PLAYER(ePlayer).setAlive(true, false);
 			GET_TEAM(BARBARIAN_TEAM).init(BARBARIAN_TEAM);
 			GC.getInitCore().setTeam(ePlayer, BARBARIAN_TEAM);
 			GC.getInitCore().setHandicap(ePlayer, (HandicapTypes)GC.getDefineINT("BARBARIAN_HANDICAP"));
@@ -2210,7 +2210,7 @@ void CvGame::update()
 
 		//	Some processing that is done in viewport tranisitions has to occur
 		//	over several messaging timeslices (empirically - the game engine
-		//	gets things wrong if you don't give it a chnace to process messages
+		//	gets things wrong if you don't give it a chance to process messages
 		//	in between).  To enact that we use a state machine which performs state
 		//	transitions on each call to CvGame::update().
 		GC.getCurrentViewport()->processActionState();
@@ -3950,31 +3950,6 @@ void CvGame::changeForcedAIAutoPlay(PlayerTypes iPlayer, int iChange)
 	}
 	else setForcedAIAutoPlay(iPlayer, (getAIAutoPlay(iPlayer) + iChange));
 }
-
-
-// Toffer - Unused, but I spared it in my M.A.D. purge as it looks somewhat useful
-CvPlot* CvGame::getLastNukeStrikePlot() const
-{
-	return GC.getMap().plotSorenINLINE(m_iLastNukeStrikeX, m_iLastNukeStrikeY);
-}
-
-void CvGame::setLastNukeStrikePlot(CvPlot* pPlot)
-{
-	if (getLastNukeStrikePlot() != pPlot)
-	{
-		if (pPlot != NULL)
-		{
-			m_iLastNukeStrikeX = pPlot->getX();
-			m_iLastNukeStrikeY = pPlot->getY();
-		}
-		else
-		{
-			m_iLastNukeStrikeX = INVALID_PLOT_COORD;
-			m_iLastNukeStrikeY = INVALID_PLOT_COORD;
-		}
-	}
-}
-// ! Toffer
 
 
 unsigned int CvGame::getInitialTime() const
@@ -6061,11 +6036,11 @@ void enumSpawnPlots(const CvSpawnInfo& spawnInfo, std::vector<CvPlot*>* plots)
 namespace Game {
 	bool isGroupUpgradePromotion(const CvUnit* unit, PromotionTypes promotion)
 	{
-		return GC.getPromotionInfo(promotion).getGroupChange() > 0 && unit->canAcquirePromotion(promotion, PromotionRequirements::ForStatus);
+		return GC.getPromotionInfo(promotion).getGroupChange() > 0 && unit->canAcquirePromotion(promotion, PromotionRequirements::ForFree | PromotionRequirements::ForOffset);
 	}
 	bool isGroupDowngradePromotion(const CvUnit* unit, PromotionTypes promotion)
 	{
-		return GC.getPromotionInfo(promotion).getGroupChange() < 0 && unit->canAcquirePromotion(promotion, PromotionRequirements::ForStatus);
+		return GC.getPromotionInfo(promotion).getGroupChange() < 0 && unit->canAcquirePromotion(promotion, PromotionRequirements::ForFree | PromotionRequirements::ForOffset);
 	}
 }
 
@@ -6283,18 +6258,17 @@ void CvGame::doSpawns(PlayerTypes ePlayer)
 							//remove old group volume unitcombat
 							if (eGroupVolume != NO_UNITCOMBAT)
 							{
-								for (int iI = 0; iI < GC.getNumUnitCombatInfos(); iI++)
+								foreach_(const UnitCombatTypes eSubCombat, kUnit.getSubCombatTypes())
 								{
-									const UnitCombatTypes eUnitCombat = static_cast<UnitCombatTypes>(iI);
-
-									if (GC.getUnitCombatInfo(eUnitCombat).getGroupBase() != -10 && pUnit->isHasUnitCombat(eUnitCombat) && eUnitCombat != eGroupVolume)
+									if (GC.getUnitCombatInfo(eSubCombat).getGroupBase() != -10 && eSubCombat != eGroupVolume)
 									{
 										CvUnit::normalizeUnitPromotions(
 											pUnit,
-											GC.getUnitCombatInfo(eGroupVolume).getGroupBase() - GC.getUnitCombatInfo(eUnitCombat).getGroupBase(),
+											GC.getUnitCombatInfo(eGroupVolume).getGroupBase() - GC.getUnitCombatInfo(eSubCombat).getGroupBase(),
 											bind(Game::isGroupUpgradePromotion, pUnit, _2),
 											bind(Game::isGroupDowngradePromotion, pUnit, _2)
 										);
+										break;
 									}
 								}
 							}
@@ -7210,7 +7184,7 @@ void CvGame::updateTurnTimer()
 		{
 			if (GET_PLAYER((PlayerTypes)iI).isAlive() && GET_PLAYER((PlayerTypes)iI).isTurnActive())
 			{
-				GET_PLAYER((PlayerTypes)iI).setEndTurn(true);
+				GET_PLAYER((PlayerTypes)iI).changeEndTurn(true, true);
 
 				if (!isMPOption(MPOPTION_SIMULTANEOUS_TURNS) && !isSimultaneousTeamTurns())
 				{
@@ -9890,8 +9864,8 @@ void CvGame::doFlexibleDifficulty()
 	const bool bFlexDiffForAI = isModderGameOption(MODDERGAMEOPTION_AI_USE_FLEXIBLE_DIFFICULTY);
 	const bool bIncreasingDifficulty = isOption(GAMEOPTION_CHALLENGE_INCREASING_DIFFICULTY);
 	bool bHumanHandicapChanged = false;
-	const int iMaxAIHandicap = getModderGameOption(MODDEROPTION_FLEXIBLE_DIFFICULTY_AI_MAX_DIFFICULTY);
-	const int iMinAIHandicap = getModderGameOption(MODDEROPTION_FLEXIBLE_DIFFICULTY_AI_MIN_DIFFICULTY);
+	const int iMaxAIHandicap = getModderGameOption(MODDERGAMEOPTION_FLEXIBLE_DIFFICULTY_AI_MAX_DIFFICULTY);
+	const int iMinAIHandicap = getModderGameOption(MODDERGAMEOPTION_FLEXIBLE_DIFFICULTY_AI_MIN_DIFFICULTY);
 	for (int iI = 0; iI < MAX_PC_PLAYERS; iI++)
 	{
 		const PlayerTypes ePlayer = static_cast<PlayerTypes>(iI);
@@ -9905,15 +9879,8 @@ void CvGame::doFlexibleDifficulty()
 
 			if (bFlexDiffForAI && !bHuman)
 			{
-				iTurns = getModderGameOption(MODDEROPTION_FLEXIBLE_DIFFICULTY_AI_TURN_INCREMENTS);
+				iTurns = getModderGameOption(MODDERGAMEOPTION_FLEXIBLE_DIFFICULTY_AI_TURN_INCREMENTS);
 			}
-
-			//if (iTurns <= 0 || bFlexDiffForAI && !bHuman)
-			//{
-			//	iTurns = getModderGameOption(MODDEROPTION_FLEXIBLE_DIFFICULTY_AI_TURN_INCREMENTS);
-			//	iTurns *= GC.getGameSpeedInfo(getGameSpeedType()).getSpeedPercent();
-			//	iTurns /= 100;
-			//}
 
 			logging::logMsg("C2C.log", "[Flexible Difficulty] (%d / %d) turns until next flexible difficulty check for Player: %S\n", iTimer, iTurns, playerX.getName());
 
@@ -10169,7 +10136,7 @@ void CvGame::averageHandicaps()
 	int iHumanCount = 0;
 	for (int iI = 0; iI < MAX_PLAYERS; iI++)
 	{
-		if (GET_PLAYER((PlayerTypes)iI).isHumanPlayer() && GET_PLAYER((PlayerTypes)iI).isAlive())
+		if (GET_PLAYER((PlayerTypes)iI).isHumanPlayer(true) && GET_PLAYER((PlayerTypes)iI).isAlive())
 		{
 			iAggregate += GET_PLAYER((PlayerTypes)iI).getHandicapType();
 			iHumanCount++;

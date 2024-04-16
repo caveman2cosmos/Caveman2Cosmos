@@ -111,7 +111,7 @@ bool CvWorkerService::ImproveBonus(CvUnitAI* unit, int allowedMovementTurns)
 		}
 		else tempBonusValue = std::max(1, ownerReference.AI_bonusVal(nonObsoleteBonusType) / numberOfMoveTurns);
 
-		/*if (numberOfMoveTurns <= allowedMovementTurns)*/ {
+		if (numberOfMoveTurns <= allowedMovementTurns) {
 			if (bestBonusValue < tempBonusValue) {
 				bestBonusValue = tempBonusValue;
 				overallBestBuild = bestBuildForPlot;
@@ -121,6 +121,7 @@ bool CvWorkerService::ImproveBonus(CvUnitAI* unit, int allowedMovementTurns)
 		}
 	}
 	if (overallBestBuild == NO_BUILD) return false;
+
 	MissionTypes eBestMission = MISSION_MOVE_TO;
 
 	if (finalNumberOfMoveTurns >= stepDistance(unit->getX(), unit->getY(), bestPlot->getX(), bestPlot->getY())) {

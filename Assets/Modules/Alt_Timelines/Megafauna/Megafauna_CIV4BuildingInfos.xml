@@ -305,7 +305,6 @@
 				<BuildingType>BUILDING_FOLKLORE_GRIZZLY</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_GIANT_PANDA</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_POLAR_BEAR</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_RED_PANDA</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_SLOTH_BEAR</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_SPECTACLED_BEAR</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_SUN_BEAR</BuildingType>
@@ -405,19 +404,6 @@
 			</Flavors>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_ENCLOSURE_BIG_CAT</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_LION</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_T_SPOTTED_CAT</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_BENGAL_TIGER</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_SIBERIAN_TIGER</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_T_TIGER</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_PALEOLITHIC_CAT</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_SABRETOOTH</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_CAVE_LION</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_JAGUAR</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_LYNX</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_PANTHER</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_SNOW_LEOPARD</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_CHEETAH</BuildingType>
 			</PrereqOrBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
