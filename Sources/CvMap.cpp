@@ -1383,6 +1383,8 @@ void CvMap::afterSwitch()
 		}
 	}
 
+	gDLL->getEngineIFace()->ClearMinimap();
+	gDLL->getEngineIFace()->InitGraphics();
 	gDLL->getEngineIFace()->updateFoundingBorder(); // Matt: Maybe need this.
 	gDLL->getEngineIFace()->MarkBridgesDirty(); // Matt: Maybe need this.
 	gDLL->getEngineIFace()->SetDirty(GlobeTexture_DIRTY_BIT, true);
