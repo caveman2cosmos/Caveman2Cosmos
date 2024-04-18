@@ -11920,6 +11920,7 @@ void CvPlayer::setTurnActive(bool bNewValue, bool bDoTurn)
 	{
 		m_bTurnActive = bNewValue;
 
+
 		if (bNewValue)
 		{
 			PROFILE("CvPlayer::setTurnActive.SetActive");
@@ -12109,6 +12110,10 @@ void CvPlayer::setTurnActive(bool bNewValue, bool bDoTurn)
 				GC.getGame().processGreatWall(false);
 				//	...and straight back in
 				GC.getGame().processGreatWall(true);
+			}
+			else if (!GET_PLAYER(GC.getGame().getActivePlayer()).isTurnActive())
+			{
+				Cy::call(PYScreensModule, "updateWaitingForPlayer", Cy::Args() << getID());
 			}
 
 			if (bDoTurn)

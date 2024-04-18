@@ -25004,7 +25004,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_SYSTEM_WAITING</Tag>
-		<English>Waiting for other Civilizations...</English>
+		<English>Waiting for player %s...</English>
 		<French>En attente d'autres civilisations...</French>
 		<German>Warten auf andere Zivilisationen ...</German>
 		<Italian>In attesa delle altre civiltà...</Italian>

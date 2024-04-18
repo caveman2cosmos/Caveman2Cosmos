@@ -511,6 +511,13 @@ def forceScreenUpdate(argsList):
 	elif argsList[0] == ADVANCED_START_SCREEN:
 		advancedStartScreen.updateScreen()
 
+# Called by dll every time a players turn is set to active when the active player has finished his turn.
+# Only used to update what player one is waiting for while using "minimize AI turns" BUG option.
+def updateWaitingForPlayer(argsList):
+	if g_iScreenActive == MAIN_INTERFACE:
+		mainInterface.updateWaitingForPlayer(argsList[0])
+
+
 # Forced redraw (~7 ms)
 def forceScreenRedraw(argsList):
 	if argsList[0] == MAIN_INTERFACE:
