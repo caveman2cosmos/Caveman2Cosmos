@@ -12235,6 +12235,7 @@ void CvPlayer::setTurnActive(bool bNewValue, bool bDoTurn)
 		gDLL->getInterfaceIFace()->setDirty(Score_DIRTY_BIT, true);
 
 		GC.getMap().invalidateIsActivePlayerNoDangerCache();
+		GC.getMap().invalidateIsTeamBorderCache(getTeam());
 	}
 }
 
