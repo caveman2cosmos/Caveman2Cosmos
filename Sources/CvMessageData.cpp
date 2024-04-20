@@ -1461,7 +1461,7 @@ void CvNetBuildListPushOrder::Execute()
 	}
 	if (m_ePlayer == GC.getGame().getActivePlayer())
 	{
-		Cy::call("CvScreensInterface", "showBuildListScreen");
+		Cy::call(PYScreensModule, "showBuildListScreen");
 	}
 }
 
@@ -1508,7 +1508,7 @@ void CvNetBuildListPopOrder::Execute()
 	}
 	if (m_ePlayer == GC.getGame().getActivePlayer())
 	{
-		Cy::call("CvScreensInterface", "showBuildListScreen");
+		Cy::call(PYScreensModule, "showBuildListScreen");
 	}
 }
 
@@ -1559,7 +1559,7 @@ void CvNetBuildListEdit::Execute()
 	}
 	if (m_ePlayer == GC.getGame().getActivePlayer())
 	{
-		Cy::call("CvScreensInterface", "showBuildListScreen");
+		Cy::call(PYScreensModule, "showBuildListScreen");
 	}
 }
 

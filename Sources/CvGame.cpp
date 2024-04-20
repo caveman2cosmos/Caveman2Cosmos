@@ -2263,6 +2263,7 @@ void CvGame::update()
 		else cycleSelectionGroups();
 	}
 
+	int iCount = 0;
 again:
 
 	if (!gDLL->GetWorldBuilderMode() || isInAdvancedStart())
@@ -2309,7 +2310,10 @@ again:
 	&& playerAct.isAlive())
 	{
 		updateTimers();
-		goto again;
+		if (iCount++ < 16)
+		{
+			goto again;
+		}
 	}
 	//OutputDebugString(CvString::format("Stop profiling(false) after CvGame::update()\n").c_str());
 	PROFILE_END();

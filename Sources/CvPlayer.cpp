@@ -11920,6 +11920,7 @@ void CvPlayer::setTurnActive(bool bNewValue, bool bDoTurn)
 	{
 		m_bTurnActive = bNewValue;
 
+
 		if (bNewValue)
 		{
 			PROFILE("CvPlayer::setTurnActive.SetActive");
@@ -12110,6 +12111,10 @@ void CvPlayer::setTurnActive(bool bNewValue, bool bDoTurn)
 				//	...and straight back in
 				GC.getGame().processGreatWall(true);
 			}
+			else if (!GET_PLAYER(GC.getGame().getActivePlayer()).isTurnActive())
+			{
+				Cy::call(PYScreensModule, "updateWaitingForPlayer", Cy::Args() << getID());
+			}
 
 			if (bDoTurn)
 			{
@@ -12230,6 +12235,7 @@ void CvPlayer::setTurnActive(bool bNewValue, bool bDoTurn)
 		gDLL->getInterfaceIFace()->setDirty(Score_DIRTY_BIT, true);
 
 		GC.getMap().invalidateIsActivePlayerNoDangerCache();
+		GC.getMap().invalidateIsTeamBorderCache(getTeam());
 	}
 }
 

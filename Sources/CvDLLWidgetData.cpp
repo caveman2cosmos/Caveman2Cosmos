@@ -1472,7 +1472,7 @@ void CvDLLWidgetData::doBuildingFilter(CvWidgetDataStruct &widgetDataStruct)
 	{
 		bool bActive = GET_PLAYER(GC.getGame().getActivePlayer()).getBuildingListFilterActive(eFilter);
 		GET_PLAYER(GC.getGame().getActivePlayer()).setBuildingListFilterActive(eFilter, !bActive);
-		Cy::call("CvScreensInterface", "showBuildListScreen");
+		Cy::call(PYScreensModule, "showBuildListScreen");
 	}
 }
 
@@ -1522,7 +1522,7 @@ void CvDLLWidgetData::doUnitFilter(CvWidgetDataStruct &widgetDataStruct)
 	{
 		bool bActive = GET_PLAYER(GC.getGame().getActivePlayer()).getUnitListFilterActive(eFilter);
 		GET_PLAYER(GC.getGame().getActivePlayer()).setUnitListFilterActive(eFilter, !bActive);
-		Cy::call("CvScreensInterface", "showBuildListScreen");
+		Cy::call(PYScreensModule, "showBuildListScreen");
 	}
 }
 
@@ -1754,7 +1754,7 @@ void CvDLLWidgetData::doForeignAdvisor(CvWidgetDataStruct &widgetDataStruct)
 void CvDLLWidgetData::doBuildList(CvWidgetDataStruct &widgetDataStruct)
 {
 	GET_PLAYER(GC.getGame().getActivePlayer()).m_pBuildLists->setCurrentList(widgetDataStruct.m_iData1);
-	Cy::call("CvScreensInterface", "showBuildListScreen");
+	Cy::call(PYScreensModule, "showBuildListScreen");
 }
 
 //

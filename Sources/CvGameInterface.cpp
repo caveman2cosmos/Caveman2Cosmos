@@ -1913,7 +1913,7 @@ void CvGame::doControl(ControlTypes eControl)
 		}
 		case CONTROL_OPTIONS_SCREEN:
 		{
-			Cy::call("CvScreensInterface", "showOptionsScreen");
+			Cy::call(PYScreensModule, "showOptionsScreen");
 			break;
 		}
 		case CONTROL_RETIRE:
