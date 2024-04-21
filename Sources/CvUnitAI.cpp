@@ -16010,16 +16010,21 @@ bool CvUnitAI::AI_reachHome(const bool bMockRun, int iRange) const
 		}
 		int iValue = 1000;
 
-		const CvCity* cityNear = GC.getMap().findCity(plotX->getX(), plotX->getY(), getOwner(), NO_TEAM, true);
-
-		if (!plotX->isConnectedTo(cityNear))
 		{
-			iValue /= 2;
-		}
+			const CvCity* cityNear = GC.getMap().findCity(plotX->getX(), plotX->getY(), getOwner(), NO_TEAM, true);
 
-		if (cityNear)
-		{
-			iValue /= 1 + plotDistance(plotX->getX(), plotX->getY(), cityNear->getX(), cityNear->getY());
+			if (cityNear)
+			{
+				if (!plotX->isConnectedTo(cityNear))
+				{
+					iValue /= 10;
+				}
+				iValue /= 1 + plotDistance(plotX->getX(), plotX->getY(), cityNear->getX(), cityNear->getY());
+			}
+			else
+			{
+				iValue /= 100;
+			}
 		}
 
 		foreach_(const CvUnit * unitX, plotX->units())

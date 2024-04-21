@@ -168,7 +168,7 @@ void CvDLLButtonPopup::OnOkClicked(CvPopup* pPopup, PopupReturn *pPopupReturn, C
 		}
 		else if (pPopupReturn->getButtonClicked() == 6)
 		{	// options
-			Cy::call("CvScreensInterface", "showOptionsScreen");
+			Cy::call(PYScreensModule, "showOptionsScreen");
 		}
 		else if (pPopupReturn->getButtonClicked() == 7)
 		{
@@ -273,7 +273,7 @@ void CvDLLButtonPopup::OnOkClicked(CvPopup* pPopup, PopupReturn *pPopupReturn, C
 	case BUTTONPOPUP_CHOOSETECH:
 		if (pPopupReturn->getButtonClicked() == GC.getNumTechInfos())
 		{
-			Cy::call("CvScreensInterface", "showTechChooser");
+			Cy::call(PYScreensModule, "showTechChooser");
 			GET_PLAYER(GC.getGame().getActivePlayer()).chooseTech(0, "", true);
 		}
 		break;
