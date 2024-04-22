@@ -244,6 +244,8 @@ public:
 	CvPlot* getNearestLandPlot() const;
 	*/
 	int getDistanceToLandOrCoast(const int iMaxReturn = MAX_INT) const;
+	bool correctWaterTerrain(int &iLastDistance);
+	void correctWaterTerrains(int iLastDistance, const DirectionTypes dir, const bool bContinue = false);
 
 	int getElevationLevel(const bool bExtra = false) const;
 	int getTerrainElevation() const;

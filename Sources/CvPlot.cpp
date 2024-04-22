@@ -2189,11 +2189,10 @@ int CvPlot::getDistanceToLandOrCoast(const int iMaxReturn) const
 						direction.push_back(DIRECTION_NORTH);
 						distance.push_back(iDistance + 1);
 					}
+					else bDiagonal = false;
 				}
-				else
-				{
-					bDiagonal = false;
-				}
+				else bDiagonal = false;
+
 				if (iMaxStepX == 0 || xDistance(x0, x1) < iMaxStepX)
 				{
 					const CvPlot* plotY = plotDirection(x1, y1, DIRECTION_EAST);
@@ -2203,11 +2202,10 @@ int CvPlot::getDistanceToLandOrCoast(const int iMaxReturn) const
 						direction.push_back(DIRECTION_EAST);
 						distance.push_back(iDistance + 1);
 					}
+					else bDiagonal = false;
 				}
-				else
-				{
-					bDiagonal = false;
-				}
+				else bDiagonal = false;
+
 				if (bDiagonal)
 				{
 					const CvPlot* plotY = plotDirection(x1, y1, DIRECTION_NORTHEAST);
@@ -2232,11 +2230,10 @@ int CvPlot::getDistanceToLandOrCoast(const int iMaxReturn) const
 						direction.push_back(DIRECTION_SOUTH);
 						distance.push_back(iDistance + 1);
 					}
+					else bDiagonal = false;
 				}
-				else
-				{
-					bDiagonal = false;
-				}
+				else bDiagonal = false;
+
 				if (iMaxStepX == 0 || xDistance(x0, x1) < iMaxStepX)
 				{
 					const CvPlot* plotY = plotDirection(x1, y1, DIRECTION_EAST);
@@ -2246,11 +2243,10 @@ int CvPlot::getDistanceToLandOrCoast(const int iMaxReturn) const
 						direction.push_back(DIRECTION_EAST);
 						distance.push_back(iDistance + 1);
 					}
+					else bDiagonal = false;
 				}
-				else
-				{
-					bDiagonal = false;
-				}
+				else bDiagonal = false;
+
 				if (bDiagonal)
 				{
 					const CvPlot* plotY = plotDirection(x1, y1, DIRECTION_SOUTHEAST);
@@ -2275,11 +2271,10 @@ int CvPlot::getDistanceToLandOrCoast(const int iMaxReturn) const
 						direction.push_back(DIRECTION_SOUTH);
 						distance.push_back(iDistance + 1);
 					}
+					else bDiagonal = false;
 				}
-				else
-				{
-					bDiagonal = false;
-				}
+				else bDiagonal = false;
+
 				if (iMaxStepX == 0 || xDistance(x0, x1) + 1 < iMaxStepX)
 				{
 					const CvPlot* plotY = plotDirection(x1, y1, DIRECTION_WEST);
@@ -2289,11 +2284,10 @@ int CvPlot::getDistanceToLandOrCoast(const int iMaxReturn) const
 						direction.push_back(DIRECTION_WEST);
 						distance.push_back(iDistance + 1);
 					}
+					else bDiagonal = false;
 				}
-				else
-				{
-					bDiagonal = false;
-				}
+				else bDiagonal = false;
+
 				if (bDiagonal)
 				{
 					const CvPlot* plotY = plotDirection(x1, y1, DIRECTION_SOUTHWEST);
@@ -2318,11 +2312,10 @@ int CvPlot::getDistanceToLandOrCoast(const int iMaxReturn) const
 						direction.push_back(DIRECTION_NORTH);
 						distance.push_back(iDistance + 1);
 					}
+					else bDiagonal = false;
 				}
-				else
-				{
-					bDiagonal = false;
-				}
+				else bDiagonal = false;
+
 				if (iMaxStepX == 0 || xDistance(x0, x1) + 1 < iMaxStepX)
 				{
 					const CvPlot* plotY = plotDirection(x1, y1, DIRECTION_WEST);
@@ -2332,11 +2325,10 @@ int CvPlot::getDistanceToLandOrCoast(const int iMaxReturn) const
 						direction.push_back(DIRECTION_WEST);
 						distance.push_back(iDistance + 1);
 					}
+					else bDiagonal = false;
 				}
-				else
-				{
-					bDiagonal = false;
-				}
+				else bDiagonal = false;
+
 				if (bDiagonal)
 				{
 					const CvPlot* plotY = plotDirection(x1, y1, DIRECTION_NORTHWEST);
@@ -2353,6 +2345,186 @@ int CvPlot::getDistanceToLandOrCoast(const int iMaxReturn) const
 	return -1;
 }
 
+bool CvPlot::correctWaterTerrain(int &iLastDistance)
+{
+	if (this && isWater())
+	{
+		if (isAdjacentToLand())
+		{
+			setTerrainType((TerrainTypes)GC.getDefineINT("WATER_TERRAIN_COAST"));
+			iLastDistance = 1;
+		}
+		else if (iLastDistance == 1 || getDistanceToLandOrCoast(3) == 2)
+		{
+			setTerrainType((TerrainTypes)GC.getDefineINT("WATER_TERRAIN_SEA"));
+			iLastDistance = 2;
+		}
+		else
+		{
+			setTerrainType((TerrainTypes)GC.getDefineINT("WATER_TERRAIN_OCEAN"));
+			iLastDistance = 3;
+		}
+		return true;
+	}
+	return false;
+}
+
+// Toffer - This could be generalized to look for anything (and do anything with it) specified with a function passed as a parameter,
+//	the function parameter would replace the "correctWaterTerrain" function used below,
+//	and the bContinue bool could be changed to an count int that decrement if one wants to do something further out.
+void CvPlot::correctWaterTerrains(int iLastDistance, const DirectionTypes dir, const bool bContinue)
+{
+	switch (dir)
+	{
+		case DIRECTION_NORTH:
+		case DIRECTION_EAST:
+		case DIRECTION_SOUTH:
+		case DIRECTION_WEST:
+		{
+			CvPlot* plotY = plotDirection(getX(), getY(), dir);
+			if (plotY->correctWaterTerrain(iLastDistance) && bContinue)
+			{
+				plotY->correctWaterTerrains(iLastDistance, dir);
+			}
+			break;
+		}
+		case DIRECTION_NORTHEAST:
+		{
+			bool bDiagonal = true;
+
+			CvPlot* plotY = plotDirection(getX(), getY(), DIRECTION_NORTH);
+			if (plotY->correctWaterTerrain(iLastDistance))
+			{
+				if (bContinue)
+				{
+					plotY->correctWaterTerrains(iLastDistance, DIRECTION_NORTH);
+				}
+			}
+			else bDiagonal = false;
+
+			plotY = plotDirection(getX(), getY(), DIRECTION_EAST);
+			if (plotY->correctWaterTerrain(iLastDistance))
+			{
+				if (bContinue)
+				{
+					plotY->correctWaterTerrains(iLastDistance, DIRECTION_EAST);
+				}
+			}
+			else bDiagonal = false;
+
+			if (bDiagonal)
+			{
+				plotY = plotDirection(getX(), getY(), DIRECTION_NORTHEAST);
+				if (plotY->correctWaterTerrain(iLastDistance) && bContinue)
+				{
+					plotY->correctWaterTerrains(iLastDistance, DIRECTION_NORTHEAST);
+				}
+			}
+			break;
+		}
+		case DIRECTION_SOUTHEAST:
+		{
+			bool bDiagonal = true;
+
+			CvPlot* plotY = plotDirection(getX(), getY(), DIRECTION_SOUTH);
+			if (plotY->correctWaterTerrain(iLastDistance))
+			{
+				if (bContinue)
+				{
+					plotY->correctWaterTerrains(iLastDistance, DIRECTION_SOUTH);
+				}
+			}
+			else bDiagonal = false;
+
+			plotY = plotDirection(getX(), getY(), DIRECTION_EAST);
+			if (plotY->correctWaterTerrain(iLastDistance))
+			{
+				if (bContinue)
+				{
+					plotY->correctWaterTerrains(iLastDistance, DIRECTION_EAST);
+				}
+			}
+			else bDiagonal = false;
+
+			if (bDiagonal)
+			{
+				plotY = plotDirection(getX(), getY(), DIRECTION_SOUTHEAST);
+				if (plotY->correctWaterTerrain(iLastDistance) && bContinue)
+				{
+					plotY->correctWaterTerrains(iLastDistance, DIRECTION_SOUTHEAST);
+				}
+			}
+			break;
+		}
+		case DIRECTION_SOUTHWEST:
+		{
+			bool bDiagonal = true;
+
+			CvPlot* plotY = plotDirection(getX(), getY(), DIRECTION_SOUTH);
+			if (plotY->correctWaterTerrain(iLastDistance))
+			{
+				if (bContinue)
+				{
+					plotY->correctWaterTerrains(iLastDistance, DIRECTION_SOUTH);
+				}
+			}
+			else bDiagonal = false;
+
+			plotY = plotDirection(getX(), getY(), DIRECTION_WEST);
+			if (plotY->correctWaterTerrain(iLastDistance))
+			{
+				if (bContinue)
+				{
+					plotY->correctWaterTerrains(iLastDistance, DIRECTION_WEST);
+				}
+			}
+			else bDiagonal = false;
+
+			if (bDiagonal)
+			{
+				plotY = plotDirection(getX(), getY(), DIRECTION_SOUTHWEST);
+				if (plotY->correctWaterTerrain(iLastDistance) && bContinue)
+				{
+					plotY->correctWaterTerrains(iLastDistance, DIRECTION_SOUTHWEST);
+				}
+			}
+			break;
+		}
+		case DIRECTION_NORTHWEST:
+		{
+			bool bDiagonal = true;
+
+			CvPlot* plotY = plotDirection(getX(), getY(), DIRECTION_NORTH);
+			if (plotY->correctWaterTerrain(iLastDistance))
+			{
+				if (bContinue)
+				{
+					plotY->correctWaterTerrains(iLastDistance, DIRECTION_NORTH);
+				}
+			}
+			else bDiagonal = false;
+
+			plotY = plotDirection(getX(), getY(), DIRECTION_WEST);
+			if (plotY->correctWaterTerrain(iLastDistance))
+			{
+				if (bContinue)
+				{
+					plotY->correctWaterTerrains(iLastDistance, DIRECTION_WEST);
+				}
+			}
+			else bDiagonal = false;
+
+			if (bDiagonal)
+			{
+				plotY = plotDirection(getX(), getY(), DIRECTION_NORTHWEST);
+				if (plotY->correctWaterTerrain(iLastDistance) && bContinue)
+				{
+					plotY->correctWaterTerrains(iLastDistance, DIRECTION_NORTHWEST);
+				}
+			}
+		}
+	}
+}
 
 int CvPlot::seeFromLevel(TeamTypes eTeam) const
 {
@@ -6508,9 +6680,7 @@ void CvPlot::setOwner(PlayerTypes eNewValue, bool bCheckUnits, bool bUpdatePlotG
 		}
 
 		// Plot danger cache
-		algo::for_each(rect(DANGER_RANGE, DANGER_RANGE),
-			bind(&CvPlot::invalidateIsTeamBorderCache, _1)
-		);
+		algo::for_each(rect(DANGER_RANGE, DANGER_RANGE), bind(&CvPlot::invalidateIsTeamBorderCache, _1));
 
 		updateSymbols();
 	}
@@ -6571,14 +6741,13 @@ void CvPlot::setPlotType(PlotTypes eNewValue, bool bRecalculate, bool bRebuildGr
 	{
 		return;
 	}
-	const bool bLandWaterTransition = eOldPlotType == PLOT_OCEAN || eNewValue == PLOT_OCEAN;
+	const bool bWasWater = eOldPlotType == PLOT_OCEAN;
+	const bool bIsWater = eNewValue == PLOT_OCEAN;
 
-	if (bLandWaterTransition)
+	if (bWasWater || bIsWater)
 	{
 		erase();
 	}
-
-	const bool bWasWater = isWater();
 
 	updateSeeFromSight(false, true);
 
@@ -6618,9 +6787,9 @@ void CvPlot::setPlotType(PlotTypes eNewValue, bool bRecalculate, bool bRebuildGr
 	updatePlotGroup();
 	updateSeeFromSight(true, true);
 
-	if (getTerrainType() == NO_TERRAIN || GC.getTerrainInfo(getTerrainType()).isWaterTerrain() != isWater())
+	if (getTerrainType() == NO_TERRAIN || GC.getTerrainInfo(getTerrainType()).isWaterTerrain() != bIsWater)
 	{
-		if (!isWater())
+		if (!bIsWater)
 		{
 			TerrainTypes eTerrain = (TerrainTypes)GC.getDefineINT("LAND_TERRAIN");
 
@@ -6640,16 +6809,27 @@ void CvPlot::setPlotType(PlotTypes eNewValue, bool bRecalculate, bool bRebuildGr
 		{
 			setTerrainType((TerrainTypes)GC.getDefineINT("WATER_TERRAIN_COAST"), bRecalculate, bRebuildGraphics);
 		}
-		else setTerrainType((TerrainTypes)GC.getDefineINT("WATER_TERRAIN_OCEAN"), bRecalculate, bRebuildGraphics);
+		else
+		{
+			const int iDistanceToLand = getDistanceToLandOrCoast(3);
+			if (iDistanceToLand == 2)
+			{
+				setTerrainType((TerrainTypes)GC.getDefineINT("WATER_TERRAIN_SEA"), bRecalculate, bRebuildGraphics);
+			}
+			else
+			{
+				setTerrainType((TerrainTypes)GC.getDefineINT("WATER_TERRAIN_OCEAN"), bRecalculate, bRebuildGraphics);
+			}
+		}
 	}
 
 	GC.getMap().resetPathDistance();
 
-	if (bLandWaterTransition)
+	if (bWasWater || bIsWater)
 	{
 		if (bRecalculate)
 		{
-			if (isWater())
+			if (bIsWater)
 			{
 				CvPlot* plotX = plotCardinalDirection(getX(), getY(), CARDINALDIRECTION_NORTH);
 
@@ -6666,23 +6846,41 @@ void CvPlot::setPlotType(PlotTypes eNewValue, bool bRecalculate, bool bRebuildGr
 				}
 			}
 
-			foreach_(CvPlot* plotX, rect(2, 2))
-			{
-				if (plotX->isWater())
-				{
-					const int iDistance = plotX->getDistanceToLandOrCoast(3);
+			const int x0 = getX();
+			const int y0 = getY();
 
-					if (iDistance == 1)
+			for (int dx = -1; dx <= 1; dx++)
+			{
+				for (int dy = -1; dy <= 1; dy++)
+				{
+					if (dx != 0 || dy != 0)
 					{
-						plotX->setTerrainType((TerrainTypes)GC.getDefineINT("WATER_TERRAIN_COAST"), bRecalculate, bRebuildGraphics);
-					}
-					else if (iDistance == 2)
-					{
-						plotX->setTerrainType((TerrainTypes)GC.getDefineINT("WATER_TERRAIN_SEA"), bRecalculate, bRebuildGraphics);
-					}
-					else
-					{
-						plotX->setTerrainType((TerrainTypes)GC.getDefineINT("WATER_TERRAIN_OCEAN"), bRecalculate, bRebuildGraphics);
+						CvPlot* plotX = plotXY(x0, y0, dx, dy);
+						if (plotX && plotX->isWater())
+						{
+							int iLastDistance = 1;
+
+							if (bIsWater)
+							{
+								if (plotX->isAdjacentToLand())
+								{
+									plotX->setTerrainType((TerrainTypes)GC.getDefineINT("WATER_TERRAIN_COAST"));
+								}
+								else if (plotX->getDistanceToLandOrCoast(3) == 2)
+								{
+									plotX->setTerrainType((TerrainTypes)GC.getDefineINT("WATER_TERRAIN_SEA"));
+									iLastDistance = 2;
+								}
+								else
+								{
+									plotX->setTerrainType((TerrainTypes)GC.getDefineINT("WATER_TERRAIN_OCEAN"));
+									iLastDistance = 3;
+								}
+							}
+							else plotX->setTerrainType((TerrainTypes)GC.getDefineINT("WATER_TERRAIN_COAST"));
+
+							plotX->correctWaterTerrains(iLastDistance, estimateDirection(dx, dy), true);
+						}
 					}
 				}
 			}
@@ -6704,17 +6902,17 @@ void CvPlot::setPlotType(PlotTypes eNewValue, bool bRecalculate, bool bRebuildGr
 			}
 		}
 
-		GC.getMap().changeLandPlots((isWater()) ? -1 : 1);
+		GC.getMap().changeLandPlots(bIsWater ? -1 : 1);
 
 		if (getBonusType() != NO_BONUS)
 		{
-			GC.getMap().changeNumBonusesOnLand(getBonusType(), ((isWater()) ? -1 : 1));
+			GC.getMap().changeNumBonusesOnLand(getBonusType(), bIsWater ? -1 : 1);
 		}
 
 		if (isOwned())
 		{
-			GET_PLAYER(getOwner()).changeTotalLand((isWater()) ? -1 : 1);
-			GET_TEAM(getTeam()).changeTotalLand((isWater()) ? -1 : 1);
+			GET_PLAYER(getOwner()).changeTotalLand(bIsWater ? -1 : 1);
+			GET_TEAM(getTeam()).changeTotalLand(bIsWater ? -1 : 1);
 		}
 
 		if (bRecalculate)
@@ -6723,7 +6921,7 @@ void CvPlot::setPlotType(PlotTypes eNewValue, bool bRecalculate, bool bRebuildGr
 			bool bRecalculateAreas = false;
 
 			// XXX might want to change this if we allow diagonal water movement...
-			if (isWater())
+			if (bIsWater)
 			{
 				foreach_(const CvPlot* plotX, cardinalDirectionAdjacent())
 				{
@@ -6798,7 +6996,7 @@ void CvPlot::setPlotType(PlotTypes eNewValue, bool bRecalculate, bool bRebuildGr
 				if (!pNewArea)
 				{
 					pNewArea = GC.getMap().addArea();
-					pNewArea->init(pNewArea->getID(), isWater());
+					pNewArea->init(pNewArea->getID(), bIsWater);
 				}
 				setArea(pNewArea->getID());
 			}
