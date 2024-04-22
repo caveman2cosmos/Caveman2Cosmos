@@ -527,6 +527,7 @@ public:
 	void registerPropertyPropagators();
 	void registerMissions();
 	void registerNPCPlayers();
+	void registerClimateZones();
 
 	CvInfoBase& getAttitudeInfo(AttitudeTypes eAttitudeNum) const;
 

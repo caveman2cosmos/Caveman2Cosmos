@@ -260,13 +260,37 @@ bool CvXMLLoadUtility::SetPostGlobalsGlobalDefines()
 		idx = GetInfoClass(szVal);
 		GC.getDefinesVarSystem()->SetValue("WATER_TERRAIN_OCEAN", idx);
 
+		SetGlobalDefine("WATER_TERRAIN_OCEAN_POLAR", szVal);
+		idx = GetInfoClass(szVal);
+		GC.getDefinesVarSystem()->SetValue("WATER_TERRAIN_OCEAN_POLAR", idx);
+
+		SetGlobalDefine("WATER_TERRAIN_OCEAN_TROPICAL", szVal);
+		idx = GetInfoClass(szVal);
+		GC.getDefinesVarSystem()->SetValue("WATER_TERRAIN_OCEAN_TROPICAL", idx);
+
 		SetGlobalDefine("WATER_TERRAIN_SEA", szVal);
 		idx = GetInfoClass(szVal);
 		GC.getDefinesVarSystem()->SetValue("WATER_TERRAIN_SEA", idx);
 
+		SetGlobalDefine("WATER_TERRAIN_SEA_POLAR", szVal);
+		idx = GetInfoClass(szVal);
+		GC.getDefinesVarSystem()->SetValue("WATER_TERRAIN_SEA_POLAR", idx);
+
+		SetGlobalDefine("WATER_TERRAIN_SEA_TROPICAL", szVal);
+		idx = GetInfoClass(szVal);
+		GC.getDefinesVarSystem()->SetValue("WATER_TERRAIN_SEA_TROPICAL", idx);
+
 		SetGlobalDefine("WATER_TERRAIN_COAST", szVal);
 		idx = GetInfoClass(szVal);
 		GC.getDefinesVarSystem()->SetValue("WATER_TERRAIN_COAST", idx);
+
+		SetGlobalDefine("WATER_TERRAIN_COAST_POLAR", szVal);
+		idx = GetInfoClass(szVal);
+		GC.getDefinesVarSystem()->SetValue("WATER_TERRAIN_COAST_POLAR", idx);
+
+		SetGlobalDefine("WATER_TERRAIN_COAST_TROPICAL", szVal);
+		idx = GetInfoClass(szVal);
+		GC.getDefinesVarSystem()->SetValue("WATER_TERRAIN_COAST_TROPICAL", idx);
 
 		SetGlobalDefine("FROZEN_TERRAIN", szVal);
 		idx = GetInfoClass(szVal);
@@ -693,6 +717,7 @@ bool CvXMLLoadUtility::LoadBasicInfos()
 	GC.registerPropertySources();
 	GC.registerPropertyInteractions();
 	GC.registerPropertyPropagators();
+	GC.registerClimateZones();
 	//LoadGlobalClassInfo(GC.m_paUnitAIInfo(), "CIV4UnitAIInfos", "BasicInfos", L"CIV4UnitAIInfos/UnitAIInfos/UnitAIInfo", false);
 	LoadGlobalClassInfo(GC.m_paAttitudeInfos, "CIV4AttitudeInfos", "BasicInfos", L"/Civ4AttitudeInfos/AttitudeInfos/AttitudeInfo", false);
 	LoadGlobalClassInfo(GC.m_paMemoryInfos, "CIV4MemoryInfos", "BasicInfos", L"/Civ4MemoryInfos/MemoryInfos/MemoryInfo", false);

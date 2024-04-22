@@ -3147,6 +3147,15 @@ enum LandmarkTypes
 	NUM_LANDMARK_TYPES
 };
 
+enum ClimateZoneTypes
+{
+	NO_CLIMATE_ZONE = -1,
+	CLIMATE_ZONE_TROPICAL,
+	CLIMATE_ZONE_TEMPERATE,
+	CLIMATE_ZONE_POLAR,
+	NUM_CLIMATE_ZONE_TYPES
+};
+
 //Used for each player
 enum ModderOptionTypes
 {

@@ -535,6 +535,7 @@ void CvPlot::erase()
 	setImprovementType(NO_IMPROVEMENT);
 	setRouteType(NO_ROUTE, false);
 	setFeatureType(NO_FEATURE);
+	setTerrainType(NO_TERRAIN);
 
 	// disable rivers
 	setNOfRiver(false, NO_CARDINALDIRECTION);
@@ -2041,37 +2042,6 @@ bool CvPlot::isRiverConnection(DirectionTypes eDirection) const
 	return false;
 }
 
-/* Toffer - Unused
-CvPlot* CvPlot::getNearestLandPlotInternal(int iDistance) const
-{
-	PROFILE_EXTRA_FUNC();
-	if (iDistance > GC.getMap().getGridHeight() && iDistance > GC.getMap().getGridWidth())
-	{
-		return NULL;
-	}
-
-	foreach_(CvPlot* pPlot, rect(iDistance, iDistance))
-	{
-		if (!pPlot->isWater())
-		{
-			return pPlot;
-		}
-	}
-	return getNearestLandPlotInternal(iDistance + 1);
-}
-
-
-int CvPlot::getNearestLandArea() const
-{
-	const CvPlot* pPlot = getNearestLandPlot();
-	return pPlot ? pPlot->getArea() : -1;
-}
-
-CvPlot* CvPlot::getNearestLandPlot() const
-{
-	return getNearestLandPlotInternal(0);
-}
-*/
 
 int CvPlot::isLandWater(const bool bLand) const
 {
@@ -2196,24 +2166,94 @@ int CvPlot::getDistanceToLandOrCoast(const int iMaxReturn) const
 	return 0;
 }
 
+int CvPlot::setClimateAppropriateWaterTerrain(const int iDistance, ClimateZoneTypes eClimate)
+{
+	if (eClimate == NO_CLIMATE_ZONE && getTerrainType() != NO_TERRAIN)
+	{
+		eClimate = GC.getTerrainInfo(getTerrainType()).getClimate();
+	}
+
+	// @SAVEBREAK - remove
+	// Only world mapscript has been set up to define climate zone for map, and scenarios can also not define climate zones.
+	if (eClimate != NO_CLIMATE_ZONE && GC.getMap().getClimateZone(getY()) == NO_CLIMATE_ZONE)
+	{
+		GC.getMap().setClimateZone(getY(), eClimate);
+	}
+	// !SAVEBREAK
+
+	// Coast
+	if (iDistance == 1)
+	{
+		if (eClimate == CLIMATE_ZONE_POLAR)
+		{
+			setTerrainType((TerrainTypes)GC.getDefineINT("WATER_TERRAIN_COAST_POLAR"));
+		}
+		else if (eClimate == CLIMATE_ZONE_TROPICAL)
+		{
+			setTerrainType((TerrainTypes)GC.getDefineINT("WATER_TERRAIN_COAST_TROPICAL"));
+		}
+		else if (getTerrainType() == NO_TERRAIN || eClimate == CLIMATE_ZONE_TEMPERATE)
+		{
+			setTerrainType((TerrainTypes)GC.getDefineINT("WATER_TERRAIN_COAST"));
+		}
+		return 1;
+	}
+
+	// Sea
+	if (iDistance == 2)
+	{
+		if (eClimate == CLIMATE_ZONE_POLAR)
+		{
+			setTerrainType((TerrainTypes)GC.getDefineINT("WATER_TERRAIN_SEA_POLAR"));
+		}
+		else if (eClimate == CLIMATE_ZONE_TROPICAL)
+		{
+			setTerrainType((TerrainTypes)GC.getDefineINT("WATER_TERRAIN_SEA_TROPICAL"));
+		}
+		else if (getTerrainType() == NO_TERRAIN || eClimate == CLIMATE_ZONE_TEMPERATE)
+		{
+			setTerrainType((TerrainTypes)GC.getDefineINT("WATER_TERRAIN_SEA"));
+		}
+		return 2;
+	}
+
+	// Ocean
+	if (eClimate == CLIMATE_ZONE_POLAR)
+	{
+		setTerrainType((TerrainTypes)GC.getDefineINT("WATER_TERRAIN_OCEAN_POLAR"));
+	}
+	else if (eClimate == CLIMATE_ZONE_TROPICAL)
+	{
+		setTerrainType((TerrainTypes)GC.getDefineINT("WATER_TERRAIN_OCEAN_TROPICAL"));
+	}
+	else if (getTerrainType() == NO_TERRAIN || eClimate == CLIMATE_ZONE_TEMPERATE)
+	{
+		setTerrainType((TerrainTypes)GC.getDefineINT("WATER_TERRAIN_OCEAN"));
+	}
+	return 3;
+}
+
 bool CvPlot::correctWaterTerrain(int &iLastDistance)
 {
 	if (this && isWater())
 	{
 		if (isAdjacentToLand())
 		{
-			setTerrainType((TerrainTypes)GC.getDefineINT("WATER_TERRAIN_COAST"));
-			iLastDistance = 1;
+			if (GC.getTerrainInfo(getTerrainType()).getDistanceToLand() != 1)
+			{
+				iLastDistance = setClimateAppropriateWaterTerrain(1);
+			}
 		}
 		else if (iLastDistance == 1 || getDistanceToLandOrCoast(3) == 2)
 		{
-			setTerrainType((TerrainTypes)GC.getDefineINT("WATER_TERRAIN_SEA"));
-			iLastDistance = 2;
+			if (GC.getTerrainInfo(getTerrainType()).getDistanceToLand() != 2)
+			{
+				iLastDistance = setClimateAppropriateWaterTerrain(2);
+			}
 		}
-		else
+		else if (GC.getTerrainInfo(getTerrainType()).getDistanceToLand() != 3)
 		{
-			setTerrainType((TerrainTypes)GC.getDefineINT("WATER_TERRAIN_OCEAN"));
-			iLastDistance = 3;
+				iLastDistance = setClimateAppropriateWaterTerrain(3);
 		}
 		return true;
 	}
@@ -6592,15 +6632,16 @@ void CvPlot::setPlotType(PlotTypes eNewValue, bool bRecalculate, bool bRebuildGr
 	{
 		return;
 	}
+	const TerrainTypes eOldTerrain = getTerrainType();
 	const bool bWasWater = eOldPlotType == PLOT_OCEAN;
 	const bool bIsWater = eNewValue == PLOT_OCEAN;
+
+	updateSeeFromSight(false, true);
 
 	if (bWasWater || bIsWater)
 	{
 		erase();
 	}
-
-	updateSeeFromSight(false, true);
 
 	if (eOldPlotType != NO_PLOT)
 	{
@@ -6636,12 +6677,21 @@ void CvPlot::setPlotType(PlotTypes eNewValue, bool bRecalculate, bool bRebuildGr
 	changeBaseYield(yieldChange);
 
 	updatePlotGroup();
-	updateSeeFromSight(true, true);
 
-	if (getTerrainType() == NO_TERRAIN || GC.getTerrainInfo(getTerrainType()).isWaterTerrain() != bIsWater)
+	if (getTerrainType() == NO_TERRAIN)
 	{
 		if (!bIsWater)
 		{
+			// @SAVEBREAK - remove
+			// Only world mapscript has been set up to define climate zone for map, and scenarios can also not define climate zones.
+			if (eOldTerrain != NO_TERRAIN
+			&& GC.getTerrainInfo(eOldTerrain).isWaterTerrain()
+			&& GC.getTerrainInfo(eOldTerrain).getClimate() != NO_CLIMATE_ZONE
+			&& GC.getMap().getClimateZone(getY()) == NO_CLIMATE_ZONE)
+			{
+				GC.getMap().setClimateZone(getY(), GC.getTerrainInfo(eOldTerrain).getClimate());
+			}
+			// !SAVEBREAK
 			TerrainTypes eTerrain = (TerrainTypes)GC.getDefineINT("LAND_TERRAIN");
 
 #ifdef EXPERIMENTAL_FEATURE_ON_PEAK
@@ -6656,17 +6706,18 @@ void CvPlot::setPlotType(PlotTypes eNewValue, bool bRecalculate, bool bRebuildGr
 #endif
 			setTerrainType(eTerrain, bRecalculate, bRebuildGraphics);
 		}
-		else if (isAdjacentToLand())
-		{
-			setTerrainType((TerrainTypes)GC.getDefineINT("WATER_TERRAIN_COAST"), bRecalculate, bRebuildGraphics);
-		}
-		else if (getDistanceToLandOrCoast(3) == 2)
-		{
-			setTerrainType((TerrainTypes)GC.getDefineINT("WATER_TERRAIN_SEA"), bRecalculate, bRebuildGraphics);
-		}
 		else
 		{
-			setTerrainType((TerrainTypes)GC.getDefineINT("WATER_TERRAIN_OCEAN"), bRecalculate, bRebuildGraphics);
+			int iDistance = 3;
+			if (isAdjacentToLand())
+			{
+				iDistance = 1;
+			}
+			else if (getDistanceToLandOrCoast(3) == 2)
+			{
+				iDistance = 2;
+			}
+			setClimateAppropriateWaterTerrain(iDistance, GC.getMap().getClimateZone(getY()));
 		}
 	}
 
@@ -6705,28 +6756,37 @@ void CvPlot::setPlotType(PlotTypes eNewValue, bool bRecalculate, bool bRebuildGr
 						CvPlot* plotX = plotXY(x0, y0, dx, dy);
 						if (plotX && plotX->isWater())
 						{
-							int iLastDistance = 1;
+							int iLastDistance = 0;
 
 							if (bIsWater)
 							{
 								if (plotX->isAdjacentToLand())
 								{
-									plotX->setTerrainType((TerrainTypes)GC.getDefineINT("WATER_TERRAIN_COAST"));
+									if (GC.getTerrainInfo(plotX->getTerrainType()).getDistanceToLand() != 1)
+									{
+										iLastDistance = plotX->setClimateAppropriateWaterTerrain(1);
+									}
 								}
 								else if (plotX->getDistanceToLandOrCoast(3) == 2)
 								{
-									plotX->setTerrainType((TerrainTypes)GC.getDefineINT("WATER_TERRAIN_SEA"));
-									iLastDistance = 2;
+									if (GC.getTerrainInfo(plotX->getTerrainType()).getDistanceToLand() != 2)
+									{
+										iLastDistance = plotX->setClimateAppropriateWaterTerrain(2);
+									}
 								}
-								else
+								else if (GC.getTerrainInfo(plotX->getTerrainType()).getDistanceToLand() != 3)
 								{
-									plotX->setTerrainType((TerrainTypes)GC.getDefineINT("WATER_TERRAIN_OCEAN"));
-									iLastDistance = 3;
+									iLastDistance = plotX->setClimateAppropriateWaterTerrain(3);
 								}
 							}
-							else plotX->setTerrainType((TerrainTypes)GC.getDefineINT("WATER_TERRAIN_COAST"));
-
-							plotX->correctWaterTerrains(iLastDistance, estimateDirection(dx, dy), true);
+							else if (GC.getTerrainInfo(plotX->getTerrainType()).getDistanceToLand() != 1)
+							{
+								iLastDistance = plotX->setClimateAppropriateWaterTerrain(1);
+							}
+							if (iLastDistance)
+							{
+								plotX->correctWaterTerrains(iLastDistance, estimateDirection(dx, dy), true);
+							}
 						}
 					}
 				}
@@ -6851,6 +6911,8 @@ void CvPlot::setPlotType(PlotTypes eNewValue, bool bRecalculate, bool bRebuildGr
 		}
 	}
 
+	updateSeeFromSight(true, true);
+
 	if (bRebuildGraphics && GC.IsGraphicsInitialized() && shouldHaveGraphics())
 	{
 		//Update terrain graphical
@@ -6920,15 +6982,18 @@ void CvPlot::setTerrainType(TerrainTypes eNewValue, bool bRecalculate, bool bReb
 		changeBaseYield(yieldChange);
 		updatePlotGroup();
 
-		if (bRebuildGraphics && shouldHaveGraphics())
+		if (eNewValue != NO_TERRAIN)
 		{
-			// Update terrain graphics
-			gDLL->getEngineIFace()->RebuildPlot(getViewportX(), getViewportY(),false,true);
-		}
+			if (bRebuildGraphics && shouldHaveGraphics())
+			{
+				// Update terrain graphics
+				gDLL->getEngineIFace()->RebuildPlot(getViewportX(), getViewportY(),false,true);
+			}
 
-		if (GC.getTerrainInfo(eNewValue).isWaterTerrain() != isWater())
-		{
-			setPlotType(isWater() ? PLOT_LAND : PLOT_OCEAN, bRecalculate, bRebuildGraphics);
+			if (GC.getTerrainInfo(eNewValue).isWaterTerrain() != isWater())
+			{
+				setPlotType(isWater() ? PLOT_LAND : PLOT_OCEAN, bRecalculate, bRebuildGraphics);
+			}
 		}
 	}
 }

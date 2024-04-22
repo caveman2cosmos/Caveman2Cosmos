@@ -107,6 +107,8 @@ public:
 
 	void moveUnitToMap(const CyUnit* unit, int numTravelTurns);
 
+	void setClimateZone(const int y, const ClimateZoneTypes eClimate);
+
 protected:
 	CvMap* m_pMap;
 };

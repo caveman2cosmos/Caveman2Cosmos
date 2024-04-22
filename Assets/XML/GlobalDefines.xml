@@ -93,8 +93,36 @@
 		<DefineTextVal>TERRAIN_OCEAN</DefineTextVal>
 	</Define>
 	<Define>
+		<DefineName>WATER_TERRAIN_OCEAN_POLAR</DefineName>
+		<DefineTextVal>TERRAIN_OCEAN_POLAR</DefineTextVal>
+	</Define>
+	<Define>
+		<DefineName>WATER_TERRAIN_OCEAN_TROPICAL</DefineName>
+		<DefineTextVal>TERRAIN_OCEAN_TROPICAL</DefineTextVal>
+	</Define>
+	<Define>
 		<DefineName>WATER_TERRAIN_SEA</DefineName>
 		<DefineTextVal>TERRAIN_SEA</DefineTextVal>
+	</Define>
+	<Define>
+		<DefineName>WATER_TERRAIN_SEA_POLAR</DefineName>
+		<DefineTextVal>TERRAIN_SEA_POLAR</DefineTextVal>
+	</Define>
+	<Define>
+		<DefineName>WATER_TERRAIN_SEA_TROPICAL</DefineName>
+		<DefineTextVal>TERRAIN_SEA_TROPICAL</DefineTextVal>
+	</Define>
+	<Define>
+		<DefineName>WATER_TERRAIN_COAST</DefineName>
+		<DefineTextVal>TERRAIN_COAST</DefineTextVal>
+	</Define>
+	<Define>
+		<DefineName>WATER_TERRAIN_COAST_POLAR</DefineName>
+		<DefineTextVal>TERRAIN_COAST_POLAR</DefineTextVal>
+	</Define>
+	<Define>
+		<DefineName>WATER_TERRAIN_COAST_TROPICAL</DefineName>
+		<DefineTextVal>TERRAIN_COAST_TROPICAL</DefineTextVal>
 	</Define>
 	<Define>
 		<DefineName>WATER_TERRAIN_COAST</DefineName>

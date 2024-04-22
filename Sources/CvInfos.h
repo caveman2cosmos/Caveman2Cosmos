@@ -4378,7 +4378,9 @@ public:
 	int getBuildModifier() const;
 	int getDefenseModifier() const;
 
-	bool isWaterTerrain() const;
+	inline ClimateZoneTypes getClimate() const { return m_eClimate; }
+	inline int getDistanceToLand() const { return m_iDistanceToLand; }
+	inline bool isWaterTerrain() const { return m_iDistanceToLand > 0; }
 	bool isImpassable() const;
 	bool isFound() const;
 	bool isFoundCoast() const;
@@ -4429,8 +4431,9 @@ private:
 
 	CvString m_szArtDefineTag;
 	int	m_zobristValue;
+	int m_iDistanceToLand;
+	ClimateZoneTypes m_eClimate;
 
-	bool m_bWaterTerrain;
 	bool m_bImpassable;
 	bool m_bFound;
 	bool m_bFoundCoast;

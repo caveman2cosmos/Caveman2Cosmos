@@ -61,6 +61,7 @@ public:
 protected:
 	void uninit();
 	void setup();
+	void addViewport(int iXOffset, int iYOffset);
 
 public:
 	MapTypes getType() const;
@@ -71,9 +72,6 @@ public:
 	void updateIncomingUnits();
 	void moveUnitToMap(CvUnit& unit, int numTravelTurns);
 
-private:
-	void addViewport(int iXOffset, int iYOffset);
-public:
 	//void deleteViewport(int iIndex);
 	CvViewport* getCurrentViewport() const;
 	const std::vector<CvViewport*>& getViewports() const;
@@ -242,6 +240,9 @@ public:
 	void toggleUnitsDisplay();
 	void toggleCitiesDisplay();
 
+	void setClimateZone(const int y, const ClimateZoneTypes eClimateZone);
+	ClimateZoneTypes getClimateZone(const int y);
+
 private:
 	void calculateAreas();
 
@@ -286,6 +287,7 @@ private:
 	};
 
 	std::vector<TravelingUnit*> m_IncomingUnits;
+	ClimateZoneTypes* m_climateZones;
 };
 
 #endif
