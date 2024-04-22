@@ -256,13 +256,17 @@ bool CvXMLLoadUtility::SetPostGlobalsGlobalDefines()
 		int idx = GetInfoClass(szVal);
 		GC.getDefinesVarSystem()->SetValue("LAND_TERRAIN", idx);
 
-		SetGlobalDefine("DEEP_WATER_TERRAIN", szVal);
+		SetGlobalDefine("WATER_TERRAIN_OCEAN", szVal);
 		idx = GetInfoClass(szVal);
-		GC.getDefinesVarSystem()->SetValue("DEEP_WATER_TERRAIN", idx);
+		GC.getDefinesVarSystem()->SetValue("WATER_TERRAIN_OCEAN", idx);
 
-		SetGlobalDefine("SHALLOW_WATER_TERRAIN", szVal);
+		SetGlobalDefine("WATER_TERRAIN_SEA", szVal);
 		idx = GetInfoClass(szVal);
-		GC.getDefinesVarSystem()->SetValue("SHALLOW_WATER_TERRAIN", idx);
+		GC.getDefinesVarSystem()->SetValue("WATER_TERRAIN_SEA", idx);
+
+		SetGlobalDefine("WATER_TERRAIN_COAST", szVal);
+		idx = GetInfoClass(szVal);
+		GC.getDefinesVarSystem()->SetValue("WATER_TERRAIN_COAST", idx);
 
 		SetGlobalDefine("FROZEN_TERRAIN", szVal);
 		idx = GetInfoClass(szVal);

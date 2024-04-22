@@ -525,9 +525,8 @@ void CvPlot::erase()
 {
 	algo::for_each(units_safe(), bind(CvUnit::kill, _1, false, NO_PLAYER, true));
 
-	// kill cities
 	CvCity* pCity = getPlotCity();
-	if (pCity != NULL)
+	if (pCity)
 	{
 		pCity->kill(false);
 	}
@@ -1271,7 +1270,7 @@ bool CvPlot::updateSymbolsInternal()
 		int iYield = 0;
 		for (int iYieldType = 0; iYieldType < NUM_YIELD_TYPES; iYieldType++)
 		{
-			iYield = calculateYield(((YieldTypes)iYieldType), true);
+			iYield = calculateYield((YieldTypes)iYieldType, true);
 			yieldAmounts[iYieldType] = iYield;
 			if (iYield > maxYield)
 			{
@@ -2042,7 +2041,7 @@ bool CvPlot::isRiverConnection(DirectionTypes eDirection) const
 	return false;
 }
 
-
+/* Toffer - Unused
 CvPlot* CvPlot::getNearestLandPlotInternal(int iDistance) const
 {
 	PROFILE_EXTRA_FUNC();
@@ -2071,6 +2070,287 @@ int CvPlot::getNearestLandArea() const
 CvPlot* CvPlot::getNearestLandPlot() const
 {
 	return getNearestLandPlotInternal(0);
+}
+*/
+
+// Toffer - Needed this for some ocean/sea/coast automatic terrain assignment when plot typåe change between ocean and land.
+//	Made it without much thought, probably potential for optimizations here.
+int CvPlot::getDistanceToLandOrCoast(const int iMaxReturn) const
+{
+	std::list<const CvPlot*> plots;
+	std::list<const DirectionTypes> direction;
+	std::list<const int> distance;
+	const bool bToLand = isWater();
+	const int x0 = getX();
+	const int y0 = getY();
+
+	for (int dx = -1; dx <= 1; dx++)
+	{
+		for (int dy = -1; dy <= 1; dy++)
+		{
+			if (dx != 0 || dy != 0)
+			{
+				const CvPlot* plotX = plotXY(x0, y0, dx, dy);
+				if (plotX)
+				{
+					plots.push_back(plotX);
+					direction.push_back(estimateDirection(dx, dy));
+					distance.push_back(1);
+				}
+			}
+		}
+	}
+	const int iMaxStepX = GC.getMap().isWrapX() ? GC.getMap().getGridWidth() / 2 : 0;
+	const int iMaxStepY = GC.getMap().isWrapY() ? GC.getMap().getGridHeight() / 2 : 0;
+
+	while (!plots.empty())
+	{
+		const CvPlot* plotX = plots.front(); plots.pop_front();
+		const int iDistance = distance.front(); distance.pop_front();
+		if (iDistance == iMaxReturn)
+		{
+			return iMaxReturn;
+		}
+
+		if (plotX->isWater())
+		{
+			if (!bToLand)
+			{
+				return iDistance;
+			}
+		}
+		else if (bToLand)
+		{
+			return iDistance;
+		}
+		const DirectionTypes dir = direction.front(); direction.pop_front();
+		const int x1 = plotX->getX();
+		const int y1 = plotX->getY();
+
+		switch (dir)
+		{
+			case DIRECTION_NORTH:
+			{
+				if (iMaxStepY > 0 && yDistance(y0, y1) >= iMaxStepY)
+				{
+					continue;
+				}
+				break;
+			}
+			case DIRECTION_EAST:
+			{
+				if (iMaxStepX > 0 && xDistance(x0, x1) >= iMaxStepX)
+				{
+					continue;
+				}
+				break;
+			}
+			case DIRECTION_SOUTH:
+			{
+				if (iMaxStepY > 0 && yDistance(y0, y1) + 1 >= iMaxStepY)
+				{
+					continue;
+				}
+				break;
+			}
+			case DIRECTION_WEST:
+			{
+				if (iMaxStepX > 0 && xDistance(x0, x1) + 1 >= iMaxStepX)
+				{
+					continue;
+				}
+			}
+		}
+		switch (dir)
+		{
+			case DIRECTION_NORTH:
+			case DIRECTION_EAST:
+			case DIRECTION_SOUTH:
+			case DIRECTION_WEST:
+			{
+				const CvPlot* plotY = plotDirection(x1, y1, dir);
+				if (plotY)
+				{
+					plots.push_back(plotY);
+					direction.push_back(dir);
+					distance.push_back(iDistance + 1);
+				}
+				break;
+			}
+			case DIRECTION_NORTHEAST:
+			{
+				bool bDiagonal = true;
+				if (iMaxStepY == 0 || yDistance(y0, y1) < iMaxStepY)
+				{
+					const CvPlot* plotY = plotDirection(x1, y1, DIRECTION_NORTH);
+					if (plotY)
+					{
+						plots.push_back(plotY);
+						direction.push_back(DIRECTION_NORTH);
+						distance.push_back(iDistance + 1);
+					}
+				}
+				else
+				{
+					bDiagonal = false;
+				}
+				if (iMaxStepX == 0 || xDistance(x0, x1) < iMaxStepX)
+				{
+					const CvPlot* plotY = plotDirection(x1, y1, DIRECTION_EAST);
+					if (plotY)
+					{
+						plots.push_back(plotY);
+						direction.push_back(DIRECTION_EAST);
+						distance.push_back(iDistance + 1);
+					}
+				}
+				else
+				{
+					bDiagonal = false;
+				}
+				if (bDiagonal)
+				{
+					const CvPlot* plotY = plotDirection(x1, y1, DIRECTION_NORTHEAST);
+					if (plotY)
+					{
+						plots.push_back(plotY);
+						direction.push_back(DIRECTION_NORTHEAST);
+						distance.push_back(iDistance + 1);
+					}
+				}
+				break;
+			}
+			case DIRECTION_SOUTHEAST:
+			{
+				bool bDiagonal = true;
+				if (iMaxStepY == 0 || yDistance(y0, y1) + 1 < iMaxStepY)
+				{
+					const CvPlot* plotY = plotDirection(x1, y1, DIRECTION_SOUTH);
+					if (plotY)
+					{
+						plots.push_back(plotY);
+						direction.push_back(DIRECTION_SOUTH);
+						distance.push_back(iDistance + 1);
+					}
+				}
+				else
+				{
+					bDiagonal = false;
+				}
+				if (iMaxStepX == 0 || xDistance(x0, x1) < iMaxStepX)
+				{
+					const CvPlot* plotY = plotDirection(x1, y1, DIRECTION_EAST);
+					if (plotY)
+					{
+						plots.push_back(plotY);
+						direction.push_back(DIRECTION_EAST);
+						distance.push_back(iDistance + 1);
+					}
+				}
+				else
+				{
+					bDiagonal = false;
+				}
+				if (bDiagonal)
+				{
+					const CvPlot* plotY = plotDirection(x1, y1, DIRECTION_SOUTHEAST);
+					if (plotY)
+					{
+						plots.push_back(plotY);
+						direction.push_back(DIRECTION_SOUTHEAST);
+						distance.push_back(iDistance + 1);
+					}
+				}
+				break;
+			}
+			case DIRECTION_SOUTHWEST:
+			{
+				bool bDiagonal = true;
+				if (iMaxStepY == 0 || yDistance(y0, y1) + 1 < iMaxStepY)
+				{
+					const CvPlot* plotY = plotDirection(x1, y1, DIRECTION_SOUTH);
+					if (plotY)
+					{
+						plots.push_back(plotY);
+						direction.push_back(DIRECTION_SOUTH);
+						distance.push_back(iDistance + 1);
+					}
+				}
+				else
+				{
+					bDiagonal = false;
+				}
+				if (iMaxStepX == 0 || xDistance(x0, x1) + 1 < iMaxStepX)
+				{
+					const CvPlot* plotY = plotDirection(x1, y1, DIRECTION_WEST);
+					if (plotY)
+					{
+						plots.push_back(plotY);
+						direction.push_back(DIRECTION_WEST);
+						distance.push_back(iDistance + 1);
+					}
+				}
+				else
+				{
+					bDiagonal = false;
+				}
+				if (bDiagonal)
+				{
+					const CvPlot* plotY = plotDirection(x1, y1, DIRECTION_SOUTHWEST);
+					if (plotY)
+					{
+						plots.push_back(plotY);
+						direction.push_back(DIRECTION_SOUTHWEST);
+						distance.push_back(iDistance + 1);
+					}
+				}
+				break;
+			}
+			case DIRECTION_NORTHWEST:
+			{
+				bool bDiagonal = true;
+				if (iMaxStepY == 0 || yDistance(y0, y1) < iMaxStepY)
+				{
+					const CvPlot* plotY = plotDirection(x1, y1, DIRECTION_NORTH);
+					if (plotY)
+					{
+						plots.push_back(plotY);
+						direction.push_back(DIRECTION_NORTH);
+						distance.push_back(iDistance + 1);
+					}
+				}
+				else
+				{
+					bDiagonal = false;
+				}
+				if (iMaxStepX == 0 || xDistance(x0, x1) + 1 < iMaxStepX)
+				{
+					const CvPlot* plotY = plotDirection(x1, y1, DIRECTION_WEST);
+					if (plotY)
+					{
+						plots.push_back(plotY);
+						direction.push_back(DIRECTION_WEST);
+						distance.push_back(iDistance + 1);
+					}
+				}
+				else
+				{
+					bDiagonal = false;
+				}
+				if (bDiagonal)
+				{
+					const CvPlot* plotY = plotDirection(x1, y1, DIRECTION_NORTHWEST);
+					if (plotY)
+					{
+						plots.push_back(plotY);
+						direction.push_back(DIRECTION_NORTHWEST);
+						distance.push_back(iDistance + 1);
+					}
+				}
+			}
+		}
+	}
+	return -1;
 }
 
 
@@ -5723,7 +6003,7 @@ bool CvPlot::isWOfRiver() const
 void CvPlot::setWOfRiver(bool bNewValue, CardinalDirectionTypes eRiverDir)
 {
 	PROFILE_EXTRA_FUNC();
-	if ((isWOfRiver() != bNewValue) || (eRiverDir != m_eRiverNSDirection))
+	if (isWOfRiver() != bNewValue || eRiverDir != m_eRiverNSDirection)
 	{
 		if (isWOfRiver() != bNewValue)
 		{
@@ -5973,11 +6253,11 @@ void CvPlot::updateShowCitySymbols()
 		{
 			const CvPlot* plotX = plotCity(iX, iY, iI);
 
-			if (plotX != NULL)
+			if (plotX)
 			{
-				const CvCity* pLoopCity = plotX->getPlotCity();
+				const CvCity* cityX = plotX->getPlotCity();
 
-				if (pLoopCity != NULL && pLoopCity->isCitySelected() && pLoopCity->canWork(this))
+				if (cityX && cityX->isCitySelected() && cityX->canWork(this))
 				{
 					bNewShowCitySymbols = true;
 					break;
@@ -6291,8 +6571,9 @@ void CvPlot::setPlotType(PlotTypes eNewValue, bool bRecalculate, bool bRebuildGr
 	{
 		return;
 	}
+	const bool bLandWaterTransition = eOldPlotType == PLOT_OCEAN || eNewValue == PLOT_OCEAN;
 
-	if (eOldPlotType == PLOT_OCEAN || eNewValue == PLOT_OCEAN)
+	if (bLandWaterTransition)
 	{
 		erase();
 	}
@@ -6357,43 +6638,69 @@ void CvPlot::setPlotType(PlotTypes eNewValue, bool bRecalculate, bool bRebuildGr
 		}
 		else if (isAdjacentToLand())
 		{
-			setTerrainType((TerrainTypes)GC.getDefineINT("SHALLOW_WATER_TERRAIN"), bRecalculate, bRebuildGraphics);
+			setTerrainType((TerrainTypes)GC.getDefineINT("WATER_TERRAIN_COAST"), bRecalculate, bRebuildGraphics);
 		}
-		else setTerrainType((TerrainTypes)GC.getDefineINT("DEEP_WATER_TERRAIN"), bRecalculate, bRebuildGraphics);
+		else setTerrainType((TerrainTypes)GC.getDefineINT("WATER_TERRAIN_OCEAN"), bRecalculate, bRebuildGraphics);
 	}
 
 	GC.getMap().resetPathDistance();
 
-	if (bWasWater != isWater())
+	if (bLandWaterTransition)
 	{
 		if (bRecalculate)
 		{
-			foreach_(CvPlot* pLoopPlot, adjacent() | filtered(CvPlot::fn::isWater()))
+			if (isWater())
 			{
-				if (pLoopPlot->isAdjacentToLand())
+				CvPlot* plotX = plotCardinalDirection(getX(), getY(), CARDINALDIRECTION_NORTH);
+
+				if (plotX && !plotX->isWater() && plotX->isNOfRiver())
 				{
-					pLoopPlot->setTerrainType((TerrainTypes)GC.getDefineINT("SHALLOW_WATER_TERRAIN"), bRecalculate, bRebuildGraphics);
+					plotX->setNOfRiver(false, NO_CARDINALDIRECTION);
 				}
-				else
+
+				plotX = plotCardinalDirection(getX(), getY(), CARDINALDIRECTION_WEST);
+
+				if (plotX && !plotX->isWater() && plotX->isWOfRiver())
 				{
-					pLoopPlot->setTerrainType((TerrainTypes)GC.getDefineINT("DEEP_WATER_TERRAIN"), bRecalculate, bRebuildGraphics);
+					plotX->setWOfRiver(false, NO_CARDINALDIRECTION);
+				}
+			}
+
+			foreach_(CvPlot* plotX, rect(2, 2))
+			{
+				if (plotX->isWater())
+				{
+					const int iDistance = plotX->getDistanceToLandOrCoast(3);
+
+					if (iDistance == 1)
+					{
+						plotX->setTerrainType((TerrainTypes)GC.getDefineINT("WATER_TERRAIN_COAST"), bRecalculate, bRebuildGraphics);
+					}
+					else if (iDistance == 2)
+					{
+						plotX->setTerrainType((TerrainTypes)GC.getDefineINT("WATER_TERRAIN_SEA"), bRecalculate, bRebuildGraphics);
+					}
+					else
+					{
+						plotX->setTerrainType((TerrainTypes)GC.getDefineINT("WATER_TERRAIN_OCEAN"), bRecalculate, bRebuildGraphics);
+					}
 				}
 			}
 		}
 
-		foreach_(CvPlot* pLoopPlot, adjacent())
+		foreach_(CvPlot* plotX, adjacent())
 		{
-			pLoopPlot->updateYield();
-			pLoopPlot->updatePlotGroup();
+			plotX->updateYield();
+			plotX->updatePlotGroup();
 		}
 
 		for (int iI = 0; iI < NUM_CITY_PLOTS; ++iI)
 		{
-			CvPlot* pLoopPlot = plotCity(getX(), getY(), iI);
+			CvPlot* plotX = plotCity(getX(), getY(), iI);
 
-			if (pLoopPlot != NULL)
+			if (plotX)
 			{
-				pLoopPlot->updatePotentialCityWork();
+				plotX->updatePotentialCityWork();
 			}
 		}
 
@@ -6418,15 +6725,15 @@ void CvPlot::setPlotType(PlotTypes eNewValue, bool bRecalculate, bool bRebuildGr
 			// XXX might want to change this if we allow diagonal water movement...
 			if (isWater())
 			{
-				foreach_(const CvPlot* pLoopPlot, cardinalDirectionAdjacent())
+				foreach_(const CvPlot* plotX, cardinalDirectionAdjacent())
 				{
-					if (pLoopPlot->area()->isWater())
+					if (plotX->area()->isWater())
 					{
-						if (pNewArea == NULL)
+						if (!pNewArea)
 						{
-							pNewArea = pLoopPlot->area();
+							pNewArea = plotX->area();
 						}
-						else if (pNewArea != pLoopPlot->area())
+						else if (pNewArea != plotX->area())
 						{
 							bRecalculateAreas = true;
 							break;
@@ -6436,15 +6743,15 @@ void CvPlot::setPlotType(PlotTypes eNewValue, bool bRecalculate, bool bRebuildGr
 			}
 			else
 			{
-				foreach_(const CvPlot* pLoopPlot, adjacent())
+				foreach_(const CvPlot* plotX, adjacent())
 				{
-					if (!pLoopPlot->area()->isWater())
+					if (!plotX->area()->isWater())
 					{
-						if (pNewArea == NULL)
+						if (!pNewArea)
 						{
-							pNewArea = pLoopPlot->area();
+							pNewArea = plotX->area();
 						}
-						else if (pNewArea != pLoopPlot->area())
+						else if (pNewArea != plotX->area())
 						{
 							bRecalculateAreas = true;
 							break;
@@ -6455,17 +6762,17 @@ void CvPlot::setPlotType(PlotTypes eNewValue, bool bRecalculate, bool bRebuildGr
 
 			if (!bRecalculateAreas)
 			{
-				CvPlot* pLoopPlot = plotDirection(getX(), getY(), ((DirectionTypes)(NUM_DIRECTION_TYPES - 1)));
+				CvPlot* plotX = plotDirection(getX(), getY(), (DirectionTypes)(NUM_DIRECTION_TYPES - 1));
 
-				CvArea* pLastArea = pLoopPlot != NULL ? pLoopPlot->area() : NULL;
+				CvArea* pLastArea = plotX ? plotX->area() : NULL;
 
 				int iAreaCount = 0;
 
 				for (int iI = 0; iI < NUM_DIRECTION_TYPES; ++iI)
 				{
-					pLoopPlot = plotDirection(getX(), getY(), (DirectionTypes)iI);
+					plotX = plotDirection(getX(), getY(), (DirectionTypes)iI);
 
-					CvArea* pCurrArea = pLoopPlot != NULL ? pLoopPlot->area() : NULL;
+					CvArea* pCurrArea = plotX ? plotX->area() : NULL;
 
 					if (pCurrArea != pLastArea)
 					{
@@ -6484,11 +6791,11 @@ void CvPlot::setPlotType(PlotTypes eNewValue, bool bRecalculate, bool bRebuildGr
 			{
 				setArea(FFreeList::INVALID_INDEX);
 
-				if (area() != NULL && area()->getNumTiles() == 1)
+				if (area() && area()->getNumTiles() == 1)
 				{
 					GC.getMap().deleteArea(getArea());
 				}
-				if (pNewArea == NULL)
+				if (!pNewArea)
 				{
 					pNewArea = GC.getMap().addArea();
 					pNewArea->init(pNewArea->getID(), isWater());
@@ -6624,13 +6931,13 @@ void CvPlot::setFeatureType(FeatureTypes eNewValue, int iVariety, bool bImprovem
 		{
 			for (int iI = 0; iI < NUM_CITY_PLOTS; ++iI)
 			{
-				CvPlot* pLoopPlot = plotCity(getX(), getY(), iI);
-				if (pLoopPlot != NULL)
+				CvPlot* plotX = plotCity(getX(), getY(), iI);
+				if (plotX)
 				{
-					CvCity* pLoopCity = pLoopPlot->getPlotCity();
-					if (pLoopCity != NULL && pLoopCity->getOwner() == getOwner())
+					CvCity* cityX = plotX->getPlotCity();
+					if (cityX && cityX->getOwner() == getOwner())
 					{
-						pLoopCity->changeLandmarkAngerTimer(GC.getDefineINT("LANDMARK_ANGER_DIVISOR") * 2);
+						cityX->changeLandmarkAngerTimer(GC.getDefineINT("LANDMARK_ANGER_DIVISOR") * 2);
 					}
 				}
 			}
@@ -6708,14 +7015,14 @@ void CvPlot::setFeatureType(FeatureTypes eNewValue, int iVariety, bool bImprovem
 
 		for (int iI = 0; iI < NUM_CITY_PLOTS; ++iI)
 		{
-			CvPlot* pLoopPlot = plotCity(getX(), getY(), iI);
-			if (pLoopPlot != NULL)
+			CvPlot* plotX = plotCity(getX(), getY(), iI);
+			if (plotX)
 			{
-				CvCity* pLoopCity = pLoopPlot->getPlotCity();
-				if (pLoopCity != NULL)
+				CvCity* cityX = plotX->getPlotCity();
+				if (cityX)
 				{
-					pLoopCity->updateFeatureHealth();
-					pLoopCity->updateFeatureHappiness();
+					cityX->updateFeatureHealth();
+					cityX->updateFeatureHappiness();
 				}
 			}
 		}
@@ -7262,12 +7569,12 @@ void CvPlot::setPlotCity(CvCity* pNewValue)
 	{
 		for (int iI = 0; iI < NUM_CITY_PLOTS; ++iI)
 		{
-			CvPlot* pLoopPlot = plotCity(getX(), getY(), iI);
+			CvPlot* plotX = plotCity(getX(), getY(), iI);
 
-			if (pLoopPlot != NULL)
+			if (plotX)
 			{
-				pLoopPlot->changeCityRadiusCount(-1);
-				pLoopPlot->changePlayerCityRadiusCount(getPlotCity()->getOwner(), -1);
+				plotX->changeCityRadiusCount(-1);
+				plotX->changePlayerCityRadiusCount(getPlotCity()->getOwner(), -1);
 			}
 		}
 	}
@@ -7278,7 +7585,7 @@ void CvPlot::setPlotCity(CvCity* pNewValue)
 	{
 		CvPlotGroup* pPlotGroup = getPlotGroup(getOwner());
 
-		if (pPlotGroup != NULL)
+		if (pPlotGroup)
 		{
 			for (int iI = 0; iI < GC.getNumBonusInfos(); ++iI)
 			{
@@ -7286,7 +7593,7 @@ void CvPlot::setPlotCity(CvCity* pNewValue)
 			}
 		}
 	}
-	if (pNewValue != NULL)
+	if (pNewValue)
 	{
 		m_plotCity = pNewValue->getIDInfo();
 	}
@@ -7297,7 +7604,7 @@ void CvPlot::setPlotCity(CvCity* pNewValue)
 	{
 		CvPlotGroup* pPlotGroup = getPlotGroup(getOwner());
 
-		if (pPlotGroup != NULL)
+		if (pPlotGroup)
 		{
 			for (int iI = 0; iI < GC.getNumBonusInfos(); ++iI)
 			{
@@ -7313,12 +7620,12 @@ void CvPlot::setPlotCity(CvCity* pNewValue)
 	{
 		for (int iI = 0; iI < NUM_CITY_PLOTS; ++iI)
 		{
-			CvPlot* pLoopPlot = plotCity(getX(), getY(), iI);
+			CvPlot* plotX = plotCity(getX(), getY(), iI);
 
-			if (pLoopPlot != NULL)
+			if (plotX)
 			{
-				pLoopPlot->changeCityRadiusCount(1);
-				pLoopPlot->changePlayerCityRadiusCount(getPlotCity()->getOwner(), 1);
+				plotX->changeCityRadiusCount(1);
+				plotX->changePlayerCityRadiusCount(getPlotCity()->getOwner(), 1);
 			}
 		}
 	}
@@ -7553,8 +7860,7 @@ int CvPlot::getBaseYield(const YieldTypes eIndex) const
 void CvPlot::changeBaseYield(const short* pYieldChange)
 {
 	PROFILE_EXTRA_FUNC();
-	CvCity* pWorkingCity = getWorkingCity();
-	const bool bWorked = pWorkingCity != NULL ? isBeingWorked() : false;
+
 	bool bChange = false;
 
 	for (int iI = 0; iI < NUM_YIELD_TYPES; ++iI)
@@ -7562,24 +7868,12 @@ void CvPlot::changeBaseYield(const short* pYieldChange)
 		if (pYieldChange[iI] != 0)
 		{
 			m_baseYields[iI] += pYieldChange[iI];
-
-			if (pWorkingCity != NULL)
-			{
-				if (bWorked)
-				{
-					pWorkingCity->changePlotYield((YieldTypes)iI, pYieldChange[iI]);
-				}
-			}
 			bChange = true;
 		}
 	}
 	if (bChange)
 	{
-		if (pWorkingCity != NULL)
-		{
-			pWorkingCity->AI_setAssignWorkDirty(true);
-		}
-		updateSymbols();
+		updateYield();
 	}
 }
 
@@ -7640,11 +7934,11 @@ void CvPlot::updateYield()
 {
 	PROFILE_FUNC();
 
-	if (area() == NULL)
-	{
-		return;
-	}
+	if (!area()) return;
+
 	bool bChange = false;
+	CvCity* pWorkingCity = getWorkingCity();
+	const bool bWorked = pWorkingCity ? pWorkingCity->isWorkingPlot(this) : false;
 
 	for (int iI = 0; iI < NUM_YIELD_TYPES; ++iI)
 	{
@@ -7657,21 +7951,19 @@ void CvPlot::updateYield()
 
 			m_aiYield[iI] = iNewYield;
 
-			CvCity* pWorkingCity = getWorkingCity();
-
-			if (pWorkingCity != NULL)
+			if (bWorked)
 			{
-				if (isBeingWorked())
-				{
-					pWorkingCity->changePlotYield((YieldTypes)iI, iNewYield - iOldYield);
-				}
-				pWorkingCity->AI_setAssignWorkDirty(true);
+				pWorkingCity->changePlotYield((YieldTypes)iI, iNewYield - iOldYield);
 			}
 			bChange = true;
 		}
 	}
 	if (bChange)
 	{
+		if (pWorkingCity)
+		{
+			pWorkingCity->AI_setAssignWorkDirty(true);
+		}
 		updateSymbols();
 	}
 }
@@ -7843,7 +8135,7 @@ int CvPlot::calculateYield(YieldTypes eYield, bool bDisplay) const
 		{
 			const CvCity* pCity = getPlotCity();
 
-			if (pCity != NULL && (!bDisplay || pCity->isRevealed(GC.getGame().getActiveTeam(), false)))
+			if (pCity && (!bDisplay || pCity->isRevealed(GC.getGame().getActiveTeam(), false)))
 			{
 				iYield += GC.getYieldInfo(eYield).getCityChange();
 
@@ -7866,7 +8158,7 @@ int CvPlot::calculateYield(YieldTypes eYield, bool bDisplay) const
 				}
 				const CvCity* pWorkingCity = getWorkingCity();
 
-				if (pWorkingCity != NULL && (!bDisplay || pWorkingCity->isRevealed(GC.getGame().getActiveTeam(), false)))
+				if (pWorkingCity && (!bDisplay || pWorkingCity->isRevealed(GC.getGame().getActiveTeam(), false)))
 				{
 					iYield += pWorkingCity->getYieldChangeAt(this, eYield);
 				}
@@ -9039,7 +9331,7 @@ void CvPlot::updateRiverCrossing(DirectionTypes eIndex)
 
 	if (isRiverCrossing(eIndex) != bValid)
 	{
-		if (NULL == m_abRiverCrossing)
+		if (!m_abRiverCrossing)
 		{
 			m_abRiverCrossing = new bool[NUM_DIRECTION_TYPES];
 			for (int iI = 0; iI < NUM_DIRECTION_TYPES; ++iI)
@@ -9050,7 +9342,7 @@ void CvPlot::updateRiverCrossing(DirectionTypes eIndex)
 
 		m_abRiverCrossing[eIndex] = bValid;
 
-		changeRiverCrossingCount((isRiverCrossing(eIndex)) ? 1 : -1);
+		changeRiverCrossingCount(isRiverCrossing(eIndex) ? 1 : -1);
 	}
 }
 
@@ -11446,21 +11738,15 @@ void CvPlot::getVisibleImprovementState(ImprovementTypes& eType, bool& bWorked) 
 
 	eType = getRevealedImprovementType(GC.getGame().getActiveTeam(), true);
 
-	if (eType == NO_IMPROVEMENT)
+	if (eType == NO_IMPROVEMENT && isActiveVisible(true) && isBeingWorked() && !isCity())
 	{
-		if (isActiveVisible(true))
+		if (isWater())
 		{
-			if (isBeingWorked() && !isCity())
-			{
-				if (isWater())
-				{
-					eType = ((ImprovementTypes)(GC.getDefineINT("WATER_IMPROVEMENT")));
-				}
-				else
-				{
-					eType = ((ImprovementTypes)(GC.getDefineINT("LAND_IMPROVEMENT")));
-				}
-			}
+			eType = (ImprovementTypes) GC.getDefineINT("WATER_IMPROVEMENT");
+		}
+		else
+		{
+			eType = (ImprovementTypes) GC.getDefineINT("LAND_IMPROVEMENT");
 		}
 	}
 
@@ -11496,7 +11782,7 @@ void CvPlot::getVisibleBonusState(BonusTypes& eType, bool& bImproved, bool& bWor
 	{
 		const ImprovementTypes eRevealedImprovement = getRevealedImprovementType(GC.getGame().getActiveTeam(), true);
 
-		if ((eRevealedImprovement != NO_IMPROVEMENT) && GC.getImprovementInfo(eRevealedImprovement).isImprovementBonusTrade(eType))
+		if (eRevealedImprovement != NO_IMPROVEMENT && GC.getImprovementInfo(eRevealedImprovement).isImprovementBonusTrade(eType))
 		{
 			bImproved = true;
 			bWorked = isBeingWorked();

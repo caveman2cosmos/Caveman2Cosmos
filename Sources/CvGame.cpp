@@ -6364,7 +6364,7 @@ void CvGame::doGlobalWarming()
 		const TerrainTypes eTemperateTerrain = (TerrainTypes)GC.getDefineINT("TEMPERATE_TERRAIN");
 		const TerrainTypes eDryTerrain = (TerrainTypes)GC.getDefineINT("DRY_TERRAIN");
 		const TerrainTypes eBarrenTerrain = (TerrainTypes)GC.getDefineINT("BARREN_TERRAIN");
-		const TerrainTypes eShallowsTerrain = (TerrainTypes)GC.getDefineINT("SHALLOW_WATER_TERRAIN");
+		const TerrainTypes eShallowsTerrain = (TerrainTypes)GC.getDefineINT("WATER_TERRAIN_COAST");
 		const FeatureTypes eTemperateFeature = (FeatureTypes)GC.getDefineINT("TEMPERATE_FEATURE");
 		const FeatureTypes eWarmFeature = (FeatureTypes)GC.getDefineINT("WARM_FEATURE");
 
@@ -8929,14 +8929,33 @@ int CvGame::getPlotExtraYield(int iX, int iY, YieldTypes eYield) const
 void CvGame::setPlotExtraYield(int iX, int iY, YieldTypes eYield, int iExtraYield)
 {
 	PROFILE_EXTRA_FUNC();
+	if (iExtraYield == 0)
+	{
+		FErrorMsg("Redundant function call");
+		return;
+	}
 	bool bFound = false;
 
-	foreach_(PlotExtraYield& extraYield, m_aPlotExtraYields)
+	for (std::vector<PlotExtraYield>::iterator it = m_aPlotExtraYields.begin(); it != m_aPlotExtraYields.end(); ++it)
 	{
-		if (extraYield.m_iX == iX && extraYield.m_iY == iY)
+		if ((*it).m_iX == iX && (*it).m_iY == iY)
 		{
-			extraYield.m_aeExtraYield[eYield] += iExtraYield;
 			bFound = true;
+			(*it).m_aeExtraYield[eYield] += iExtraYield;
+
+			bool bEmpty = true;
+			for (int i = 0; i < NUM_YIELD_TYPES; ++i)
+			{
+				if ((*it).m_aeExtraYield[i] != 0)
+				{
+					bEmpty = false;
+					break;
+				}
+			}
+			if (bEmpty)
+			{
+				m_aPlotExtraYields.erase(it);
+			}
 			break;
 		}
 	}
@@ -8959,33 +8978,9 @@ void CvGame::setPlotExtraYield(int iX, int iY, YieldTypes eYield, int iExtraYiel
 		}
 		m_aPlotExtraYields.push_back(kExtraYield);
 	}
-
-	CvPlot* pPlot = GC.getMap().plot(iX, iY);
-	if (NULL != pPlot)
-	{
-		pPlot->updateYield();
-	}
+	GC.getMap().plot(iX, iY)->updateYield();
 }
 
-/* Toffer - Unused, but might be needed for recalc...
-void CvGame::removePlotExtraYield(int iX, int iY)
-{
-	for (std::vector<PlotExtraYield>::iterator it = m_aPlotExtraYields.begin(); it != m_aPlotExtraYields.end(); ++it)
-	{
-		if ((*it).m_iX == iX && (*it).m_iY == iY)
-		{
-			m_aPlotExtraYields.erase(it);
-			break;
-		}
-	}
-
-	CvPlot* pPlot = GC.getMap().plot(iX, iY);
-	if (NULL != pPlot)
-	{
-		pPlot->updateYield();
-	}
-}
-*/
 
 ReligionTypes CvGame::getVoteSourceReligion(VoteSourceTypes eVoteSource) const
 {
