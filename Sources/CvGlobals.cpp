@@ -1798,6 +1798,18 @@ void cvInternalGlobals::registerNPCPlayers()
 	REGISTER_NPC(BARBARIAN_PLAYER);
 }
 
+#define	REGISTER_CLIMATE_ZONE(x) setInfoTypeFromString(#x,x)
+
+void cvInternalGlobals::registerClimateZones()
+{
+	//	Sadly C++ doesn't have any reflection capability so need to do this explicitly
+	REGISTER_CLIMATE_ZONE(NO_CLIMATE_ZONE);
+	REGISTER_CLIMATE_ZONE(CLIMATE_ZONE_TROPICAL);
+	REGISTER_CLIMATE_ZONE(CLIMATE_ZONE_TEMPERATE);
+	REGISTER_CLIMATE_ZONE(CLIMATE_ZONE_POLAR);
+}
+
+
 CvInfoBase& cvInternalGlobals::getAttitudeInfo(AttitudeTypes eAttitudeNum) const
 {
 	FASSERT_BOUNDS(0, NUM_ATTITUDE_TYPES, eAttitudeNum);

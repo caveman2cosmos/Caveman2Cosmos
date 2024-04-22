@@ -951,11 +951,11 @@ void CvMapGenerator::setPlotTypes(const std::vector<int>& plotTypes)
 		{
 			if (pLoopPlot->isAdjacentToLand())
 			{
-				pLoopPlot->setTerrainType(((TerrainTypes)(GC.getDefineINT("SHALLOW_WATER_TERRAIN"))), false, false);
+				pLoopPlot->setTerrainType(((TerrainTypes)(GC.getDefineINT("WATER_TERRAIN_COAST"))), false, false);
 			}
 			else
 			{
-				pLoopPlot->setTerrainType(((TerrainTypes)(GC.getDefineINT("DEEP_WATER_TERRAIN"))), false, false);
+				pLoopPlot->setTerrainType(((TerrainTypes)(GC.getDefineINT("WATER_TERRAIN_OCEAN"))), false, false);
 			}
 		}
 	}

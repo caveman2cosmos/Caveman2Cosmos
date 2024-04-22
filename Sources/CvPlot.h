@@ -238,9 +238,11 @@ public:
 	bool isRiver() const;
 	bool isRiverConnection(DirectionTypes eDirection) const;
 
-	CvPlot* getNearestLandPlotInternal(int iDistance) const;
-	int getNearestLandArea() const;
-	CvPlot* getNearestLandPlot() const;
+	int isLandWater(const bool bLand) const;
+	int getDistanceToLandOrCoast(const int iMaxReturn = MAX_INT) const;
+	int setClimateAppropriateWaterTerrain(const int iDistance, ClimateZoneTypes eClimate = NO_CLIMATE_ZONE);
+	bool correctWaterTerrain(int &iLastDistance);
+	void correctWaterTerrains(int iLastDistance, const DirectionTypes dir, const bool bContinue = false);
 
 	int getElevationLevel(const bool bExtra = false) const;
 	int getTerrainElevation() const;

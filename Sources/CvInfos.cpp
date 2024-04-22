@@ -14076,7 +14076,8 @@ CvTerrainInfo::CvTerrainInfo() :
 m_iMovementCost(0),
 m_iBuildModifier(0),
 m_iDefenseModifier(0),
-m_bWaterTerrain(false),
+m_iDistanceToLand(0),
+m_eClimate(NO_CLIMATE_ZONE),
 m_bImpassable(false),
 m_bFound(false),
 m_bFoundCoast(false),
@@ -14122,11 +14123,6 @@ int CvTerrainInfo::getBuildModifier() const
 int CvTerrainInfo::getDefenseModifier() const
 {
 	return m_iDefenseModifier;
-}
-
-bool CvTerrainInfo::isWaterTerrain() const
-{
-	return m_bWaterTerrain;
 }
 
 bool CvTerrainInfo::isImpassable() const
@@ -14251,7 +14247,9 @@ bool CvTerrainInfo::read(CvXMLLoadUtility* pXML)
 	}
 	else SAFE_DELETE_ARRAY(m_piYields);
 
-	pXML->GetOptionalChildXmlValByName(&m_bWaterTerrain, L"bWaterTerrain");
+	pXML->GetOptionalChildXmlValByName(&m_iDistanceToLand, L"iDistanceToLand");
+	pXML->GetOptionalChildXmlValByName(szTextVal, L"ClimateZoneType");
+	m_eClimate = (ClimateZoneTypes) pXML->GetInfoClass(szTextVal);
 	pXML->GetOptionalChildXmlValByName(&m_bImpassable, L"bImpassable");
 	pXML->GetOptionalChildXmlValByName(&m_bFound, L"bFound");
 	pXML->GetOptionalChildXmlValByName(&m_bFoundCoast, L"bFoundCoast");
@@ -14337,7 +14335,8 @@ void CvTerrainInfo::copyNonDefaults(const CvTerrainInfo* pClassInfo)
 			m_piYields[i] = pClassInfo->getYield(i);
 		}
 	}
-	if (isWaterTerrain() == bDefault) m_bWaterTerrain = pClassInfo->isWaterTerrain();
+	if (m_iDistanceToLand == 0) m_iDistanceToLand = pClassInfo->isWaterTerrain();
+	if (m_eClimate == CLIMATE_ZONE_TEMPERATE) m_eClimate = pClassInfo->getClimate();
 	if (isImpassable() == bDefault) m_bImpassable = pClassInfo->isImpassable();
 	if (isFound() == bDefault) m_bFound = pClassInfo->isFound();
 	if (isFoundCoast() == bDefault) m_bFoundCoast = pClassInfo->isFoundCoast();
@@ -14380,8 +14379,9 @@ void CvTerrainInfo::getCheckSum(uint32_t &iSum) const
 	CheckSum(iSum, m_iMovementCost);
 	CheckSum(iSum, m_iBuildModifier);
 	CheckSum(iSum, m_iDefenseModifier);
+	CheckSum(iSum, m_iDistanceToLand);
+	CheckSum(iSum, m_eClimate);
 
-	CheckSum(iSum, m_bWaterTerrain);
 	CheckSum(iSum, m_bImpassable);
 	CheckSum(iSum, m_bFound);
 	CheckSum(iSum, m_bFoundCoast);

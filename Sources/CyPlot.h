@@ -40,7 +40,6 @@ public:
 	bool isRiverSide() const;
 	bool isRiver() const;
 
-	CyPlot* getNearestLandPlot() const;
 	bool canHaveBonus(int /*BonusTypes*/ eBonus, bool bIgnoreLatitude) const;
 	bool canHaveImprovement(int /*ImprovementTypes*/ eImprovement, int /*TeamTypes*/ eTeam, bool bPotential) const;
 	bool canBuild(int /*BuildTypes*/ eBuild, int /*PlayerTypes*/ ePlayer, bool bTestVisible) const;

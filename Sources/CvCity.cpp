@@ -10694,7 +10694,22 @@ void CvCity::changeTerrainYieldChanges(const TerrainTypes eTerrain, const YieldA
 {
 	PROFILE_EXTRA_FUNC();
 	FASSERT_BOUNDS(0, GC.getNumTerrainInfos(), eTerrain);
-
+	{
+		bool bNoChange = true;
+		for (int iI = 0; iI < NUM_YIELD_TYPES; iI++)
+		{
+			if (yields[iI] != 0)
+			{
+				bNoChange = false;
+				break;
+			}
+		}
+		if (bNoChange)
+		{
+			FErrorMsg("Redundant function call");
+			return;
+		}
+	}
 	std::map<short, YieldArray>::const_iterator itr = m_terrainYieldChanges.find((short)eTerrain);
 
 	if (itr == m_terrainYieldChanges.end())
@@ -10704,7 +10719,6 @@ void CvCity::changeTerrainYieldChanges(const TerrainTypes eTerrain, const YieldA
 			if (yields[iI] != 0)
 			{
 				m_terrainYieldChanges.insert(std::make_pair((short)eTerrain, yields));
-				updateYield();
 				break;
 			}
 		}
@@ -10726,8 +10740,8 @@ void CvCity::changeTerrainYieldChanges(const TerrainTypes eTerrain, const YieldA
 		{
 			m_terrainYieldChanges.erase(itr->first);
 		}
-		else updateYield();
 	}
+	updateYield();
 }
 
 int CvCity::getTerrainYieldChange(const TerrainTypes eTerrain, const YieldTypes eYield) const
@@ -10741,6 +10755,22 @@ int CvCity::getTerrainYieldChange(const TerrainTypes eTerrain, const YieldTypes 
 void CvCity::changePlotYieldChanges(const PlotTypes ePlot, const YieldArray& yields)
 {
 	PROFILE_EXTRA_FUNC();
+	{
+		bool bNoChange = true;
+		for (int iI = 0; iI < NUM_YIELD_TYPES; iI++)
+		{
+			if (yields[iI] != 0)
+			{
+				bNoChange = false;
+				break;
+			}
+		}
+		if (bNoChange)
+		{
+			FErrorMsg("Redundant function call");
+			return;
+		}
+	}
 	std::map<short, YieldArray>::const_iterator itr = m_plotYieldChanges.find((short)ePlot);
 
 	if (itr == m_plotYieldChanges.end())
@@ -10750,7 +10780,6 @@ void CvCity::changePlotYieldChanges(const PlotTypes ePlot, const YieldArray& yie
 			if (yields[iI] != 0)
 			{
 				m_plotYieldChanges.insert(std::make_pair((short)ePlot, yields));
-				updateYield();
 				break;
 			}
 		}
@@ -10772,8 +10801,8 @@ void CvCity::changePlotYieldChanges(const PlotTypes ePlot, const YieldArray& yie
 		{
 			m_plotYieldChanges.erase(itr->first);
 		}
-		else updateYield();
 	}
+	updateYield();
 }
 
 int CvCity::getPlotYieldChange(const PlotTypes ePlot, const YieldTypes eYield) const
@@ -14100,7 +14129,7 @@ void CvCity::processWorkingPlot(int iPlot, int iChange, bool yieldsOnly)
 	PROFILE_EXTRA_FUNC();
 	CvPlot* pPlot = getCityIndexPlot(iPlot);
 
-	if (pPlot != NULL)
+	if (pPlot)
 	{
 		FAssertMsg(pPlot->getWorkingCity() == this, "WorkingCity is expected to be this");
 
@@ -14114,7 +14143,7 @@ void CvCity::processWorkingPlot(int iPlot, int iChange, bool yieldsOnly)
 			// update plot builder special case where a plot is being worked but is (a) unimproved  or (b) un-bonus'ed
 			pPlot->updatePlotBuilder();
 
-			if ((getTeam() == GC.getGame().getActiveTeam()) || GC.getGame().isDebugMode())
+			if (getTeam() == GC.getGame().getActiveTeam() || GC.getGame().isDebugMode())
 			{
 				pPlot->updateSymbolDisplay();
 			}

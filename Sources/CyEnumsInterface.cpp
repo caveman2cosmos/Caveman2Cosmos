@@ -2284,4 +2284,14 @@ void CyEnumsPythonInterface()
 
 		.value("NUM_MAPS", NUM_MAPS)
 	;
+
+	python::enum_<ClimateZoneTypes>("ClimateZoneTypes")
+		.value("NO_CLIMATE_ZONE", NO_CLIMATE_ZONE)
+
+		.value("CLIMATE_ZONE_TROPICAL", CLIMATE_ZONE_TROPICAL)
+		.value("CLIMATE_ZONE_TEMPERATE", CLIMATE_ZONE_TEMPERATE)
+		.value("CLIMATE_ZONE_POLAR", CLIMATE_ZONE_POLAR)
+
+		.value("NUM_CLIMATE_ZONE_TYPES", NUM_CLIMATE_ZONE_TYPES)
+	;
 }

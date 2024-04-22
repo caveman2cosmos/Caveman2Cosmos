@@ -2462,7 +2462,8 @@
 			<Description>TXT_KEY_TERRAIN_COAST</Description>
 			<Civilopedia>TXT_KEY_TERRAIN_COAST_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_TERRAIN_COAST</ArtDefineTag>
-			<bWaterTerrain>1</bWaterTerrain>
+			<iDistanceToLand>1</iDistanceToLand>
+			<ClimateZoneType>CLIMATE_ZONE_TEMPERATE</ClimateZoneType>
 			<iCultureDistance>2</iCultureDistance>
 			<iDefense>10</iDefense>
 			<iMovement>2</iMovement>
@@ -2609,7 +2610,8 @@
 			<Description>TXT_KEY_TERRAIN_COAST_POLAR</Description>
 			<Civilopedia>TXT_KEY_TERRAIN_COAST_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_TERRAIN_COAST_POLAR</ArtDefineTag>
-			<bWaterTerrain>1</bWaterTerrain>
+			<iDistanceToLand>1</iDistanceToLand>
+			<ClimateZoneType>CLIMATE_ZONE_POLAR</ClimateZoneType>
 			<iCultureDistance>2</iCultureDistance>
 			<iDefense>10</iDefense>
 			<iMovement>2</iMovement>
@@ -2756,7 +2758,8 @@
 			<Description>TXT_KEY_TERRAIN_COAST_TROPICAL</Description>
 			<Civilopedia>TXT_KEY_TERRAIN_COAST_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_TERRAIN_COAST_TROPICAL</ArtDefineTag>
-			<bWaterTerrain>1</bWaterTerrain>
+			<iDistanceToLand>1</iDistanceToLand>
+			<ClimateZoneType>CLIMATE_ZONE_TROPICAL</ClimateZoneType>
 			<iCultureDistance>2</iCultureDistance>
 			<iDefense>10</iDefense>
 			<iMovement>2</iMovement>
@@ -2903,7 +2906,8 @@
 			<Description>TXT_KEY_TERRAIN_OCEAN</Description>
 			<Civilopedia>TXT_KEY_TERRAIN_OCEAN_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_TERRAIN_OCEAN</ArtDefineTag>
-			<bWaterTerrain>1</bWaterTerrain>
+			<iDistanceToLand>3</iDistanceToLand>
+			<ClimateZoneType>CLIMATE_ZONE_TEMPERATE</ClimateZoneType>
 			<iCultureDistance>4</iCultureDistance>
 			<iMovement>2</iMovement>
 			<Yields>
@@ -3049,7 +3053,8 @@
 			<Description>TXT_KEY_TERRAIN_OCEAN_POLAR</Description>
 			<Civilopedia>TXT_KEY_TERRAIN_OCEAN_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_TERRAIN_OCEAN_POLAR</ArtDefineTag>
-			<bWaterTerrain>1</bWaterTerrain>
+			<iDistanceToLand>3</iDistanceToLand>
+			<ClimateZoneType>CLIMATE_ZONE_POLAR</ClimateZoneType>
 			<iCultureDistance>4</iCultureDistance>
 			<iMovement>2</iMovement>
 			<Yields>
@@ -3195,7 +3200,8 @@
 			<Description>TXT_KEY_TERRAIN_OCEAN_TROPICAL</Description>
 			<Civilopedia>TXT_KEY_TERRAIN_OCEAN_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_TERRAIN_OCEAN_TROPICAL</ArtDefineTag>
-			<bWaterTerrain>1</bWaterTerrain>
+			<iDistanceToLand>3</iDistanceToLand>
+			<ClimateZoneType>CLIMATE_ZONE_TROPICAL</ClimateZoneType>
 			<iCultureDistance>4</iCultureDistance>
 			<iMovement>2</iMovement>
 			<Yields>
@@ -3341,7 +3347,8 @@
 			<Description>TXT_KEY_TERRAIN_SEA</Description>
 			<Civilopedia>TXT_KEY_TERRAIN_SEA_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_TERRAIN_SEA</ArtDefineTag>
-			<bWaterTerrain>1</bWaterTerrain>
+			<iDistanceToLand>2</iDistanceToLand>
+			<ClimateZoneType>CLIMATE_ZONE_TEMPERATE</ClimateZoneType>
 			<iCultureDistance>3</iCultureDistance>
 			<iMovement>2</iMovement>
 			<Yields>
@@ -3487,7 +3494,8 @@
 			<Description>TXT_KEY_TERRAIN_SEA_POLAR</Description>
 			<Civilopedia>TXT_KEY_TERRAIN_SEA_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_TERRAIN_SEA_POLAR</ArtDefineTag>
-			<bWaterTerrain>1</bWaterTerrain>
+			<iDistanceToLand>2</iDistanceToLand>
+			<ClimateZoneType>CLIMATE_ZONE_POLAR</ClimateZoneType>
 			<iCultureDistance>3</iCultureDistance>
 			<iMovement>2</iMovement>
 			<Yields>
@@ -3633,7 +3641,8 @@
 			<Description>TXT_KEY_TERRAIN_SEA_TROPICAL</Description>
 			<Civilopedia>TXT_KEY_TERRAIN_SEA_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_TERRAIN_SEA_TROPICAL</ArtDefineTag>
-			<bWaterTerrain>1</bWaterTerrain>
+			<iDistanceToLand>2</iDistanceToLand>
+			<ClimateZoneType>CLIMATE_ZONE_TROPICAL</ClimateZoneType>
 			<iCultureDistance>3</iCultureDistance>
 			<iMovement>2</iMovement>
 			<Yields>
@@ -3779,7 +3788,8 @@
 			<Description>TXT_KEY_TERRAIN_COAST_DEEP</Description>
 			<Civilopedia>TXT_KEY_TERRAIN_COAST_DEEP_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_TERRAIN_COAST_DEEP</ArtDefineTag>
-			<bWaterTerrain>1</bWaterTerrain>
+			<iDistanceToLand>1</iDistanceToLand>
+			<ClimateZoneType>CLIMATE_ZONE_TEMPERATE</ClimateZoneType>
 			<iCultureDistance>2</iCultureDistance>
 			<iMovement>2</iMovement>
 			<Yields>
@@ -3925,7 +3935,8 @@
 			<Description>TXT_KEY_TERRAIN_COAST_DEEP_POLAR</Description>
 			<Civilopedia>TXT_KEY_TERRAIN_COAST_DEEP_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_TERRAIN_COAST_DEEP</ArtDefineTag>
-			<bWaterTerrain>1</bWaterTerrain>
+			<iDistanceToLand>1</iDistanceToLand>
+			<ClimateZoneType>CLIMATE_ZONE_POLAR</ClimateZoneType>
 			<iCultureDistance>2</iCultureDistance>
 			<iMovement>2</iMovement>
 			<Yields>
@@ -4071,7 +4082,8 @@
 			<Description>TXT_KEY_TERRAIN_COAST_DEEP_TROPICAL</Description>
 			<Civilopedia>TXT_KEY_TERRAIN_COAST_DEEP_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_TERRAIN_COAST_DEEP</ArtDefineTag>
-			<bWaterTerrain>1</bWaterTerrain>
+			<iDistanceToLand>1</iDistanceToLand>
+			<ClimateZoneType>CLIMATE_ZONE_TROPICAL</ClimateZoneType>
 			<iCultureDistance>2</iCultureDistance>
 			<iMovement>2</iMovement>
 			<Yields>
@@ -4217,7 +4229,8 @@
 			<Description>TXT_KEY_TERRAIN_SEA_DEEP</Description>
 			<Civilopedia>TXT_KEY_TERRAIN_SEA_DEEP_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_TERRAIN_SEA_DEEP</ArtDefineTag>
-			<bWaterTerrain>1</bWaterTerrain>
+			<iDistanceToLand>2</iDistanceToLand>
+			<ClimateZoneType>CLIMATE_ZONE_TEMPERATE</ClimateZoneType>
 			<iCultureDistance>3</iCultureDistance>
 			<iMovement>2</iMovement>
 			<Yields>
@@ -4363,7 +4376,8 @@
 			<Description>TXT_KEY_TERRAIN_SEA_DEEP_POLAR</Description>
 			<Civilopedia>TXT_KEY_TERRAIN_SEA_DEEP_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_TERRAIN_SEA_DEEP_POLAR</ArtDefineTag>
-			<bWaterTerrain>1</bWaterTerrain>
+			<iDistanceToLand>2</iDistanceToLand>
+			<ClimateZoneType>CLIMATE_ZONE_POLAR</ClimateZoneType>
 			<iCultureDistance>3</iCultureDistance>
 			<iMovement>2</iMovement>
 			<Yields>
@@ -4509,7 +4523,8 @@
 			<Description>TXT_KEY_TERRAIN_SEA_DEEP_TROPICAL</Description>
 			<Civilopedia>TXT_KEY_TERRAIN_SEA_DEEP_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_TERRAIN_SEA_DEEP_TROPICAL</ArtDefineTag>
-			<bWaterTerrain>1</bWaterTerrain>
+			<iDistanceToLand>2</iDistanceToLand>
+			<ClimateZoneType>CLIMATE_ZONE_TROPICAL</ClimateZoneType>
 			<iCultureDistance>3</iCultureDistance>
 			<iMovement>2</iMovement>
 			<Yields>
@@ -4655,7 +4670,8 @@
 			<Description>TXT_KEY_TERRAIN_TRENCH</Description>
 			<Civilopedia>TXT_KEY_TERRAIN_TRENCH_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_TERRAIN_TRENCH</ArtDefineTag>
-			<bWaterTerrain>1</bWaterTerrain>
+			<iDistanceToLand>3</iDistanceToLand>
+			<ClimateZoneType>CLIMATE_ZONE_TEMPERATE</ClimateZoneType>
 			<iCultureDistance>4</iCultureDistance>
 			<iMovement>2</iMovement>
 			<Yields>
@@ -4801,7 +4817,8 @@
 			<Description>TXT_KEY_TERRAIN_TRENCH_POLAR</Description>
 			<Civilopedia>TXT_KEY_TERRAIN_TRENCH_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_TERRAIN_TRENCH</ArtDefineTag>
-			<bWaterTerrain>1</bWaterTerrain>
+			<iDistanceToLand>3</iDistanceToLand>
+			<ClimateZoneType>CLIMATE_ZONE_POLAR</ClimateZoneType>
 			<iCultureDistance>4</iCultureDistance>
 			<iMovement>2</iMovement>
 			<Yields>
@@ -4947,7 +4964,8 @@
 			<Description>TXT_KEY_TERRAIN_TRENCH_TROPICAL</Description>
 			<Civilopedia>TXT_KEY_TERRAIN_TRENCH_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_TERRAIN_TRENCH</ArtDefineTag>
-			<bWaterTerrain>1</bWaterTerrain>
+			<iDistanceToLand>3</iDistanceToLand>
+			<ClimateZoneType>CLIMATE_ZONE_TROPICAL</ClimateZoneType>
 			<iCultureDistance>4</iCultureDistance>
 			<iMovement>2</iMovement>
 			<Yields>
@@ -5093,7 +5111,7 @@
 			<Description>TXT_KEY_TERRAIN_FRESHWATER_COAST</Description>
 			<Civilopedia>TXT_KEY_TERRAIN_COAST_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_TERRAIN_LAKE_SHORE</ArtDefineTag>
-			<bWaterTerrain>1</bWaterTerrain>
+			<iDistanceToLand>1</iDistanceToLand>
 			<bFreshWaterTerrain>1</bFreshWaterTerrain>
 			<iCultureDistance>1</iCultureDistance>
 			<iDefense>10</iDefense>
@@ -5241,7 +5259,7 @@
 			<Description>TXT_KEY_TERRAIN_FRESHWATER_SEA</Description>
 			<Civilopedia>TXT_KEY_TERRAIN_OCEAN_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_TERRAIN_LAKE</ArtDefineTag>
-			<bWaterTerrain>1</bWaterTerrain>
+			<iDistanceToLand>2</iDistanceToLand>
 			<bFreshWaterTerrain>1</bFreshWaterTerrain>
 			<iCultureDistance>2</iCultureDistance>
 			<iMovement>2</iMovement>
@@ -5388,7 +5406,7 @@
 			<Description>TXT_KEY_TERRAIN_INFECTED_WATER</Description>
 			<Civilopedia>TXT_KEY_TERRAIN_INFECTED_WATER_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_TERRAIN_INFECTED_WATER</ArtDefineTag>
-			<bWaterTerrain>1</bWaterTerrain>
+			<iDistanceToLand>1</iDistanceToLand>
 			<iCultureDistance>6</iCultureDistance>
 			<iMovement>6</iMovement>
 			<Yields>
@@ -5530,7 +5548,7 @@
 			<Description>TXT_KEY_TERRAIN_PLAGUED_WATER</Description>
 			<Civilopedia>TXT_KEY_TERRAIN_PLAGUED_WATER_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_TERRAIN_PLAGUED_WATER</ArtDefineTag>
-			<bWaterTerrain>1</bWaterTerrain>
+			<iDistanceToLand>1</iDistanceToLand>
 			<iCultureDistance>6</iCultureDistance>
 			<iMovement>20</iMovement>
 			<Yields>
@@ -5672,7 +5690,6 @@
 			<Description>TXT_KEY_TERRAIN_PEAK</Description>
 			<Civilopedia>TXT_KEY_TERRAIN_PEAK_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_TERRAIN_PEAK</ArtDefineTag>
-			<bWaterTerrain>1</bWaterTerrain>
 			<iBuildModifier>75</iBuildModifier>
 			<iCultureDistance>3</iCultureDistance> <!-- dll increases penalty 1 for each missing: bCanPassPeaks, bMoveFastPeaks, bCanFoundOnPeaks -->
 			<iMovement>2</iMovement>
@@ -5809,7 +5826,6 @@
 			<Description>TXT_KEY_TERRAIN_HILL</Description>
 			<Civilopedia>TXT_KEY_TERRAIN_HILL_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_TERRAIN_HILL</ArtDefineTag>
-			<bWaterTerrain>1</bWaterTerrain>
 			<iBuildModifier>25</iBuildModifier>
 			<iCultureDistance>1</iCultureDistance> <!-- dll increases penalty 1 for missing: bBridgeBuilding, bCanFoundOnPeaks -->
 			<iMovement>1</iMovement>
