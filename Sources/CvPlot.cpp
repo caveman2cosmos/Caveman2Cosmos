@@ -2073,276 +2073,127 @@ CvPlot* CvPlot::getNearestLandPlot() const
 }
 */
 
+int CvPlot::isLandWater(const bool bLand) const
+{
+	if (this)
+	{
+		if (isWater())
+		{
+			if (!bLand)
+			{
+				return true;
+			}
+		}
+		else if (bLand)
+		{
+			return true;
+		}
+	}
+	return false;
+}
+
 // Toffer - Needed this for some ocean/sea/coast automatic terrain assignment when plot typåe change between ocean and land.
-//	Made it without much thought, probably potential for optimizations here.
 int CvPlot::getDistanceToLandOrCoast(const int iMaxReturn) const
 {
-	std::list<const CvPlot*> plots;
-	std::list<const DirectionTypes> direction;
-	std::list<const int> distance;
 	const bool bToLand = isWater();
 	const int x0 = getX();
 	const int y0 = getY();
+	int iMinDx, iMinDy, iMaxDx, iMaxDy;
 
-	for (int dx = -1; dx <= 1; dx++)
+	if (GC.getMap().isWrapX())
 	{
-		for (int dy = -1; dy <= 1; dy++)
-		{
-			if (dx != 0 || dy != 0)
-			{
-				const CvPlot* plotX = plotXY(x0, y0, dx, dy);
-				if (plotX)
-				{
-					plots.push_back(plotX);
-					direction.push_back(estimateDirection(dx, dy));
-					distance.push_back(1);
-				}
-			}
-		}
+		iMaxDx = GC.getMap().getGridWidth() / 2;
+		iMinDx = -iMaxDx / 2 + 1;
 	}
-	const int iMaxStepX = GC.getMap().isWrapX() ? GC.getMap().getGridWidth() / 2 : 0;
-	const int iMaxStepY = GC.getMap().isWrapY() ? GC.getMap().getGridHeight() / 2 : 0;
-
-	while (!plots.empty())
+	else
 	{
-		const CvPlot* plotX = plots.front(); plots.pop_front();
-		const int iDistance = distance.front(); distance.pop_front();
-		if (iDistance == iMaxReturn)
+		iMinDx = -x0;
+		iMaxDx = GC.getMap().getGridWidth() - 1 - x0;
+	}
+	if (GC.getMap().isWrapY())
+	{
+		iMaxDy = GC.getMap().getGridHeight() / 2;
+		iMinDy = -iMaxDy / 2 + 1;
+	}
+	else
+	{
+		iMinDy = -y0;
+		iMaxDy = GC.getMap().getGridHeight() - 1 - y0;
+	}
+	int iRange = 1;
+	bool bSearch = true;
+
+	while (bSearch)
+	{
+		if (iRange == iMaxReturn)
 		{
 			return iMaxReturn;
 		}
+		bSearch = false;
 
-		if (plotX->isWater())
+		bool bTopCornersChecked = false;
+		bool bBotCornersChecked = false;
+		// constant dy, horisontal search.
+		if (iRange <= iMaxDy && iMaxDy != y0 || iRange <= -iMinDy && iMinDy != y0)
 		{
-			if (!bToLand)
-			{
-				return iDistance;
-			}
-		}
-		else if (bToLand)
-		{
-			return iDistance;
-		}
-		const DirectionTypes dir = direction.front(); direction.pop_front();
-		const int x1 = plotX->getX();
-		const int y1 = plotX->getY();
+			bSearch = true;
+			int xStart = iRange >= -iMinDx ? iMinDx : -iRange;
+			int xEnd = iRange >= iMaxDx ? iMaxDx : iRange;
 
-		switch (dir)
-		{
-			case DIRECTION_NORTH:
+			if (iRange <= iMaxDy && iMaxDy != y0)
 			{
-				if (iMaxStepY > 0 && yDistance(y0, y1) >= iMaxStepY)
+				bTopCornersChecked = true;
+				for (int dx = xStart; dx <= xEnd; dx++)
 				{
-					continue;
-				}
-				break;
-			}
-			case DIRECTION_EAST:
-			{
-				if (iMaxStepX > 0 && xDistance(x0, x1) >= iMaxStepX)
-				{
-					continue;
-				}
-				break;
-			}
-			case DIRECTION_SOUTH:
-			{
-				if (iMaxStepY > 0 && yDistance(y0, y1) + 1 >= iMaxStepY)
-				{
-					continue;
-				}
-				break;
-			}
-			case DIRECTION_WEST:
-			{
-				if (iMaxStepX > 0 && xDistance(x0, x1) + 1 >= iMaxStepX)
-				{
-					continue;
+					if (plotXY(x0, y0, dx, iRange)->isLandWater(bToLand))
+					{
+						return iRange;
+					}
 				}
 			}
-		}
-		switch (dir)
-		{
-			case DIRECTION_NORTH:
-			case DIRECTION_EAST:
-			case DIRECTION_SOUTH:
-			case DIRECTION_WEST:
+			if (iRange <= -iMinDy && iMinDy != y0)
 			{
-				const CvPlot* plotY = plotDirection(x1, y1, dir);
-				if (plotY)
+				bBotCornersChecked = true;
+				for (int dx = xStart; dx <= xEnd; dx++)
 				{
-					plots.push_back(plotY);
-					direction.push_back(dir);
-					distance.push_back(iDistance + 1);
-				}
-				break;
-			}
-			case DIRECTION_NORTHEAST:
-			{
-				bool bDiagonal = true;
-				if (iMaxStepY == 0 || yDistance(y0, y1) < iMaxStepY)
-				{
-					const CvPlot* plotY = plotDirection(x1, y1, DIRECTION_NORTH);
-					if (plotY)
+					if (plotXY(x0, y0, dx, -iRange)->isLandWater(bToLand))
 					{
-						plots.push_back(plotY);
-						direction.push_back(DIRECTION_NORTH);
-						distance.push_back(iDistance + 1);
-					}
-					else bDiagonal = false;
-				}
-				else bDiagonal = false;
-
-				if (iMaxStepX == 0 || xDistance(x0, x1) < iMaxStepX)
-				{
-					const CvPlot* plotY = plotDirection(x1, y1, DIRECTION_EAST);
-					if (plotY)
-					{
-						plots.push_back(plotY);
-						direction.push_back(DIRECTION_EAST);
-						distance.push_back(iDistance + 1);
-					}
-					else bDiagonal = false;
-				}
-				else bDiagonal = false;
-
-				if (bDiagonal)
-				{
-					const CvPlot* plotY = plotDirection(x1, y1, DIRECTION_NORTHEAST);
-					if (plotY)
-					{
-						plots.push_back(plotY);
-						direction.push_back(DIRECTION_NORTHEAST);
-						distance.push_back(iDistance + 1);
-					}
-				}
-				break;
-			}
-			case DIRECTION_SOUTHEAST:
-			{
-				bool bDiagonal = true;
-				if (iMaxStepY == 0 || yDistance(y0, y1) + 1 < iMaxStepY)
-				{
-					const CvPlot* plotY = plotDirection(x1, y1, DIRECTION_SOUTH);
-					if (plotY)
-					{
-						plots.push_back(plotY);
-						direction.push_back(DIRECTION_SOUTH);
-						distance.push_back(iDistance + 1);
-					}
-					else bDiagonal = false;
-				}
-				else bDiagonal = false;
-
-				if (iMaxStepX == 0 || xDistance(x0, x1) < iMaxStepX)
-				{
-					const CvPlot* plotY = plotDirection(x1, y1, DIRECTION_EAST);
-					if (plotY)
-					{
-						plots.push_back(plotY);
-						direction.push_back(DIRECTION_EAST);
-						distance.push_back(iDistance + 1);
-					}
-					else bDiagonal = false;
-				}
-				else bDiagonal = false;
-
-				if (bDiagonal)
-				{
-					const CvPlot* plotY = plotDirection(x1, y1, DIRECTION_SOUTHEAST);
-					if (plotY)
-					{
-						plots.push_back(plotY);
-						direction.push_back(DIRECTION_SOUTHEAST);
-						distance.push_back(iDistance + 1);
-					}
-				}
-				break;
-			}
-			case DIRECTION_SOUTHWEST:
-			{
-				bool bDiagonal = true;
-				if (iMaxStepY == 0 || yDistance(y0, y1) + 1 < iMaxStepY)
-				{
-					const CvPlot* plotY = plotDirection(x1, y1, DIRECTION_SOUTH);
-					if (plotY)
-					{
-						plots.push_back(plotY);
-						direction.push_back(DIRECTION_SOUTH);
-						distance.push_back(iDistance + 1);
-					}
-					else bDiagonal = false;
-				}
-				else bDiagonal = false;
-
-				if (iMaxStepX == 0 || xDistance(x0, x1) + 1 < iMaxStepX)
-				{
-					const CvPlot* plotY = plotDirection(x1, y1, DIRECTION_WEST);
-					if (plotY)
-					{
-						plots.push_back(plotY);
-						direction.push_back(DIRECTION_WEST);
-						distance.push_back(iDistance + 1);
-					}
-					else bDiagonal = false;
-				}
-				else bDiagonal = false;
-
-				if (bDiagonal)
-				{
-					const CvPlot* plotY = plotDirection(x1, y1, DIRECTION_SOUTHWEST);
-					if (plotY)
-					{
-						plots.push_back(plotY);
-						direction.push_back(DIRECTION_SOUTHWEST);
-						distance.push_back(iDistance + 1);
-					}
-				}
-				break;
-			}
-			case DIRECTION_NORTHWEST:
-			{
-				bool bDiagonal = true;
-				if (iMaxStepY == 0 || yDistance(y0, y1) < iMaxStepY)
-				{
-					const CvPlot* plotY = plotDirection(x1, y1, DIRECTION_NORTH);
-					if (plotY)
-					{
-						plots.push_back(plotY);
-						direction.push_back(DIRECTION_NORTH);
-						distance.push_back(iDistance + 1);
-					}
-					else bDiagonal = false;
-				}
-				else bDiagonal = false;
-
-				if (iMaxStepX == 0 || xDistance(x0, x1) + 1 < iMaxStepX)
-				{
-					const CvPlot* plotY = plotDirection(x1, y1, DIRECTION_WEST);
-					if (plotY)
-					{
-						plots.push_back(plotY);
-						direction.push_back(DIRECTION_WEST);
-						distance.push_back(iDistance + 1);
-					}
-					else bDiagonal = false;
-				}
-				else bDiagonal = false;
-
-				if (bDiagonal)
-				{
-					const CvPlot* plotY = plotDirection(x1, y1, DIRECTION_NORTHWEST);
-					if (plotY)
-					{
-						plots.push_back(plotY);
-						direction.push_back(DIRECTION_NORTHWEST);
-						distance.push_back(iDistance + 1);
+						return iRange;
 					}
 				}
 			}
 		}
+		// constant dx, vertical search.
+		if (iRange <= iMaxDx && iMaxDx != x0 || iRange <= -iMinDx && iMinDx != x0)
+		{
+			bSearch = true;
+			int yStart = (iRange >= -iMinDy ? iMinDy : -iRange) + bBotCornersChecked;
+			int yEnd = (iRange >= iMaxDy ? iMaxDy : iRange) - bTopCornersChecked;
+
+			if (iRange <= iMaxDx && iMaxDx != x0)
+			{
+				for (int dy = yStart; dy <= yEnd; dy++)
+				{
+					if (plotXY(x0, y0, iRange, dy)->isLandWater(bToLand))
+					{
+						return iRange;
+					}
+				}
+			}
+			if (iRange <= -iMinDx && iMinDx != x0)
+			{
+				for (int dy = yStart; dy <= yEnd; dy++)
+				{
+					if (plotXY(x0, y0, -iRange, dy)->isLandWater(bToLand))
+					{
+						return iRange;
+					}
+				}
+			}
+		}
+		iRange++;
 	}
-	return -1;
+	return 0;
 }
 
 bool CvPlot::correctWaterTerrain(int &iLastDistance)
@@ -6809,17 +6660,13 @@ void CvPlot::setPlotType(PlotTypes eNewValue, bool bRecalculate, bool bRebuildGr
 		{
 			setTerrainType((TerrainTypes)GC.getDefineINT("WATER_TERRAIN_COAST"), bRecalculate, bRebuildGraphics);
 		}
+		else if (getDistanceToLandOrCoast(3) == 2)
+		{
+			setTerrainType((TerrainTypes)GC.getDefineINT("WATER_TERRAIN_SEA"), bRecalculate, bRebuildGraphics);
+		}
 		else
 		{
-			const int iDistanceToLand = getDistanceToLandOrCoast(3);
-			if (iDistanceToLand == 2)
-			{
-				setTerrainType((TerrainTypes)GC.getDefineINT("WATER_TERRAIN_SEA"), bRecalculate, bRebuildGraphics);
-			}
-			else
-			{
-				setTerrainType((TerrainTypes)GC.getDefineINT("WATER_TERRAIN_OCEAN"), bRecalculate, bRebuildGraphics);
-			}
+			setTerrainType((TerrainTypes)GC.getDefineINT("WATER_TERRAIN_OCEAN"), bRecalculate, bRebuildGraphics);
 		}
 	}
 

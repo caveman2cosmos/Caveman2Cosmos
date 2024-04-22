@@ -243,6 +243,7 @@ public:
 	int getNearestLandArea() const;
 	CvPlot* getNearestLandPlot() const;
 	*/
+	int isLandWater(const bool bLand) const;
 	int getDistanceToLandOrCoast(const int iMaxReturn = MAX_INT) const;
 	bool correctWaterTerrain(int &iLastDistance);
 	void correctWaterTerrains(int iLastDistance, const DirectionTypes dir, const bool bContinue = false);
