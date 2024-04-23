@@ -535,7 +535,6 @@ void CvPlot::erase()
 	setImprovementType(NO_IMPROVEMENT);
 	setRouteType(NO_ROUTE, false);
 	setFeatureType(NO_FEATURE);
-	setTerrainType(NO_TERRAIN);
 
 	// disable rivers
 	setNOfRiver(false, NO_CARDINALDIRECTION);
@@ -2168,12 +2167,18 @@ int CvPlot::getDistanceToLandOrCoast(const int iMaxReturn) const
 
 int CvPlot::setClimateAppropriateWaterTerrain(const int iDistance, ClimateZoneTypes eClimate)
 {
-	if (eClimate == NO_CLIMATE_ZONE && getTerrainType() != NO_TERRAIN)
+	if (eClimate == NO_CLIMATE_ZONE)
 	{
-		eClimate = GC.getTerrainInfo(getTerrainType()).getClimate();
+		if (getTerrainType() != NO_TERRAIN)
+		{
+			eClimate = GC.getTerrainInfo(getTerrainType()).getClimate();
+		}
+		if (eClimate == NO_CLIMATE_ZONE)
+		{
+			eClimate = GC.getMap().getClimateZone(getY());
+		}
 	}
-
-	// @SAVEBREAK - remove
+	// @SAVEBREAK - remove (when scenarios handle climate zones)
 	// Only world mapscript has been set up to define climate zone for map, and scenarios can also not define climate zones.
 	if (eClimate != NO_CLIMATE_ZONE && GC.getMap().getClimateZone(getY()) == NO_CLIMATE_ZONE)
 	{
@@ -2192,7 +2197,7 @@ int CvPlot::setClimateAppropriateWaterTerrain(const int iDistance, ClimateZoneTy
 		{
 			setTerrainType((TerrainTypes)GC.getDefineINT("WATER_TERRAIN_COAST_TROPICAL"));
 		}
-		else if (getTerrainType() == NO_TERRAIN || eClimate == CLIMATE_ZONE_TEMPERATE)
+		else if (eClimate == CLIMATE_ZONE_TEMPERATE || getTerrainType() == NO_TERRAIN || GC.getTerrainInfo(getTerrainType()).getDistanceToLand() != iDistance)
 		{
 			setTerrainType((TerrainTypes)GC.getDefineINT("WATER_TERRAIN_COAST"));
 		}
@@ -2210,7 +2215,7 @@ int CvPlot::setClimateAppropriateWaterTerrain(const int iDistance, ClimateZoneTy
 		{
 			setTerrainType((TerrainTypes)GC.getDefineINT("WATER_TERRAIN_SEA_TROPICAL"));
 		}
-		else if (getTerrainType() == NO_TERRAIN || eClimate == CLIMATE_ZONE_TEMPERATE)
+		else if (eClimate == CLIMATE_ZONE_TEMPERATE || getTerrainType() == NO_TERRAIN || GC.getTerrainInfo(getTerrainType()).getDistanceToLand() != iDistance)
 		{
 			setTerrainType((TerrainTypes)GC.getDefineINT("WATER_TERRAIN_SEA"));
 		}
@@ -2226,7 +2231,7 @@ int CvPlot::setClimateAppropriateWaterTerrain(const int iDistance, ClimateZoneTy
 	{
 		setTerrainType((TerrainTypes)GC.getDefineINT("WATER_TERRAIN_OCEAN_TROPICAL"));
 	}
-	else if (getTerrainType() == NO_TERRAIN || eClimate == CLIMATE_ZONE_TEMPERATE)
+	else if (eClimate == CLIMATE_ZONE_TEMPERATE || getTerrainType() == NO_TERRAIN || GC.getTerrainInfo(getTerrainType()).getDistanceToLand() != iDistance)
 	{
 		setTerrainType((TerrainTypes)GC.getDefineINT("WATER_TERRAIN_OCEAN"));
 	}
@@ -6632,11 +6637,8 @@ void CvPlot::setPlotType(PlotTypes eNewValue, bool bRecalculate, bool bRebuildGr
 	{
 		return;
 	}
-	const TerrainTypes eOldTerrain = getTerrainType();
 	const bool bWasWater = eOldPlotType == PLOT_OCEAN;
 	const bool bIsWater = eNewValue == PLOT_OCEAN;
-
-	updateSeeFromSight(false, true);
 
 	if (bWasWater || bIsWater)
 	{
@@ -6652,7 +6654,11 @@ void CvPlot::setPlotType(PlotTypes eNewValue, bool bRecalculate, bool bRebuildGr
 		m_movementCharacteristicsHash ^= g_plotTypeZobristHashes[eNewValue];
 	}
 
+	updateSeeFromSight(false, true);
+
 	m_ePlotType = eNewValue;
+
+	updateSeeFromSight(true, true);
 
 	short yieldChange[NUM_YIELD_TYPES] = {};
 	for (int iI = 0; iI < NUM_YIELD_TYPES; ++iI)
@@ -6678,18 +6684,18 @@ void CvPlot::setPlotType(PlotTypes eNewValue, bool bRecalculate, bool bRebuildGr
 
 	updatePlotGroup();
 
-	if (getTerrainType() == NO_TERRAIN)
+	if (getTerrainType() == NO_TERRAIN || GC.getTerrainInfo(getTerrainType()).isWaterTerrain() != bIsWater)
 	{
 		if (!bIsWater)
 		{
-			// @SAVEBREAK - remove
+			// @SAVEBREAK - remove (when scenarios handle climate zones)
 			// Only world mapscript has been set up to define climate zone for map, and scenarios can also not define climate zones.
-			if (eOldTerrain != NO_TERRAIN
-			&& GC.getTerrainInfo(eOldTerrain).isWaterTerrain()
-			&& GC.getTerrainInfo(eOldTerrain).getClimate() != NO_CLIMATE_ZONE
+			if (getTerrainType() != NO_TERRAIN
+			&&  GC.getTerrainInfo(getTerrainType()).isWaterTerrain()
+			&&  GC.getTerrainInfo(getTerrainType()).getClimate() != NO_CLIMATE_ZONE
 			&& GC.getMap().getClimateZone(getY()) == NO_CLIMATE_ZONE)
 			{
-				GC.getMap().setClimateZone(getY(), GC.getTerrainInfo(eOldTerrain).getClimate());
+				GC.getMap().setClimateZone(getY(), GC.getTerrainInfo(getTerrainType()).getClimate());
 			}
 			// !SAVEBREAK
 			TerrainTypes eTerrain = (TerrainTypes)GC.getDefineINT("LAND_TERRAIN");
@@ -6910,8 +6916,6 @@ void CvPlot::setPlotType(PlotTypes eNewValue, bool bRecalculate, bool bRebuildGr
 			else GC.getMap().recalculateAreas();
 		}
 	}
-
-	updateSeeFromSight(true, true);
 
 	if (bRebuildGraphics && GC.IsGraphicsInitialized() && shouldHaveGraphics())
 	{
