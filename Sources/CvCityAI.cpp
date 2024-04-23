@@ -3485,7 +3485,7 @@ void CvCityAI::AI_chooseProduction()
 	//	100, but only if we already have less gold than our target in which case we should already have unconditonally
 	//	gone for gold earlier in this choice)
 	int64_t commerceWeights[NUM_COMMERCE_TYPES];
-	commerceWeights[COMMERCE_GOLD] = std::max<int64_t>(0, 100 - (player.getGold() - player.AI_goldTarget()) * 100 / std::max(1, player.AI_goldTarget()));
+	commerceWeights[COMMERCE_GOLD] = std::max<int64_t>(0, 100 - (player.getGold() - player.AI_goldTarget()) * 100 / std::max<int64_t>(1, player.AI_goldTarget()));
 	commerceWeights[COMMERCE_RESEARCH] = 150; // Can't think of a good measure for research pressure so just set to a middling value
 	commerceWeights[COMMERCE_CULTURE] = 100 + iCulturePressure;
 	commerceWeights[COMMERCE_ESPIONAGE] = 110;	//	Is this ever really worthwhile?

@@ -2043,15 +2043,14 @@ bool CvUnitAI::IsAbroad() {
 bool CvUnitAI::AI_upgradeWorker() {
 
 	const int64_t iGold = GET_PLAYER(getOwner()).getGold();
-	const int iTargetGold = GET_PLAYER(getOwner()).AI_goldTarget();
-
-	if (iGold > iTargetGold) {
-		//	Whether we let it try to be comsumed by an upgrade depends on how much spare cash we have
-		if (GC.getGame().getSorenRandNum(100, "AI upgrade worker") < 100 * (iGold - iTargetGold) / iGold) {
-			return AI_upgrade();
-		}
-	}
-	return false;
+	const int64_t iTarget = GET_PLAYER(getOwner()).AI_goldTarget();
+	return (
+		iGold > iTarget
+		// Whether we let it try to be comsumed by an upgrade depends on how much spare cash we have
+		&& GC.getGame().getSorenRandNum(100, "AI upgrade worker") < 100 * (iGold - iTarget) / iGold
+		// Try to upgrade this unit
+		&& AI_upgrade()
+	);
 }
 
 int CvUnitAI::GetNumberOfUnitsInGroup() {

@@ -157,7 +157,7 @@ public:
 	bool AI_isFinancialTrouble() const;
 	short AI_fundingHealth(int iExtraExpense = 0, int iExtraExpenseMod = 0) const;
 	short AI_safeFunding() const;
-	int AI_goldTarget() const;
+	int64_t AI_goldTarget() const;
 	int AI_goldValueAssessmentModifier() const;
 
 	TechTypes AI_bestTech(int iMaxPathLength = 1, bool bIgnoreCost = false, bool bAsync = false, TechTypes eIgnoreTech = NO_TECH, AdvisorTypes eIgnoreAdvisor = NO_ADVISOR);
