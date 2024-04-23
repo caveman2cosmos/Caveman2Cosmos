@@ -697,7 +697,7 @@ void CvPlayerAI::AI_doTurnUnitsPost()
 
 	const bool bAnyWar = GET_TEAM(getTeam()).hasWarPlan(true);
 	const int64_t iStartingGold = getGold();
-	const int iTargetGold = AI_goldTarget();
+	const int64_t iTargetGold = AI_goldTarget();
 	int64_t iUpgradeBudget = std::max<int64_t>(iStartingGold - iTargetGold, AI_goldToUpgradeAllUnits()) / (bAnyWar ? 1 : 2);
 
 	iUpgradeBudget = std::min<int64_t>(iUpgradeBudget, (iStartingGold - iTargetGold < iUpgradeBudget) ? (iStartingGold - iTargetGold) : iStartingGold / 2);
@@ -710,7 +710,7 @@ void CvPlayerAI::AI_doTurnUnitsPost()
 
 	if (gPlayerLogLevel > 2)
 	{
-		logBBAI("	%S calculates upgrade budget of %I64d from %I64d current gold, %d target", getCivilizationDescription(0), iUpgradeBudget, iStartingGold, iTargetGold);
+		logBBAI("	%S calculates upgrade budget of %I64d from %I64d current gold, %I64d target", getCivilizationDescription(0), iUpgradeBudget, iStartingGold, iTargetGold);
 	}
 
 	// Always willing to upgrade 1 unit if we have the money
@@ -3914,7 +3914,7 @@ short CvPlayerAI::AI_fundingHealth(int iExtraExpense, int iExtraExpenseMod) cons
 		//	Prehistoric: 25 gold (ultrafast); 100 gold (normal); 1000 gold (eternity)
 		//	Ancient: 50 gold (ultrafast); 200 gold (normal); 2000 gold (eternity)
 		//	Classical: 125 gold (ultrafast); 500 gold (normal); 5000 gold (eternity)
-		const int iEraGoldThreshold = AI_goldTarget();
+		const int64_t iEraGoldThreshold = AI_goldTarget();
 		int64_t iValue;
 		if (iEraGoldThreshold < 1)
 		{
@@ -3964,10 +3964,10 @@ bool CvPlayerAI::AI_isFinancialTrouble() const
 	return !isNPC() && AI_fundingHealth() < AI_safeFunding();
 }
 
-int CvPlayerAI::AI_goldTarget() const
+int64_t CvPlayerAI::AI_goldTarget() const
 {
 	PROFILE_EXTRA_FUNC();
-	if (getNumCities() < 1)
+	if (getNumCities() < 1 || isNPC())
 	{
 		return 0;
 	}
@@ -3979,9 +3979,9 @@ int CvPlayerAI::AI_goldTarget() const
 			GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getHammerCostPercent()
 			+
 			GC.getHandicapInfo(GC.getGame().getHandicapType()).getAITrainPercent()
-			)
+		)
 	);
-	int iGold = iEra * (iEra * 2 * getNumCities() + getTotalPopulation()) * iModGS / 300;
+	int64_t iGold = iEra * (iEra * 2 * getNumCities() + getTotalPopulation()) * iModGS / 300;
 
 	iGold *= getInflationMod10000();
 	iGold /= 10000;
@@ -16943,7 +16943,7 @@ void CvPlayerAI::AI_doCommerce()
 	{
 		return;
 	}
-	int iGoldTarget = AI_goldTarget();
+	int64_t iGoldTarget = AI_goldTarget();
 
 	const bool bFlexResearch = isCommerceFlexible(COMMERCE_RESEARCH);
 	const bool bFlexCulture = isCommerceFlexible(COMMERCE_CULTURE);
