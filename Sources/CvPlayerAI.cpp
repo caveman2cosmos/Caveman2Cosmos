@@ -3350,44 +3350,38 @@ bool CvPlayerAI::AI_getVisiblePlotDanger(const CvPlot* pPlot, int iRange, bool b
 // changes.
 bool CvPlayerAI::AI_getAnyPlotDanger(const CvPlot* pPlot, int iRange, bool bTestMoves) const
 {
-	bool bResult = false;
-
 	PROFILE_FUNC();
 
-	if (iRange == -1)
-	{
-		iRange = DANGER_RANGE;
-	}
+	if (iRange == -1) iRange = DANGER_RANGE;
 
 	if (bTestMoves && isTurnActive())
 	{
 		PROFILE("CvPlayerAI::AI_getAnyPlotDanger.ActiveTurn");
 
-		if ((iRange <= DANGER_RANGE) && pPlot->isActivePlayerNoDangerCache())
+		if (iRange <= pPlot->getActivePlayerSafeRangeCache())
 		{
 			PROFILE("CvPlayerAI::AI_getAnyPlotDanger.NoDangerHit");
 			return false;
 		}
-		else if (iRange >= DANGER_RANGE && pPlot->isActivePlayerHasDangerCache())
+		if (iRange >= DANGER_RANGE && pPlot->getActivePlayerHasDangerCache())
 		{
 			PROFILE("CvPlayerAI::AI_getAnyPlotDanger.HasDangerHit");
 			return true;
 		}
 	}
+	bool bResult = false;
 
-	TeamTypes eTeam = getTeam();
-	bool bCheckBorder = (!isHumanPlayer() && !pPlot->isCity());
+	const TeamTypes eTeam = getTeam();
+	// Exclude cities and defended plots from the hostile border proximity check.
+	const bool bCheckBorder = !pPlot->isCity() && pPlot->plotCheck(PUF_canDefend, -1, -1, NULL, getID());
 
-	if (bCheckBorder)
+	if (bCheckBorder && iRange >= 2 && pPlot->getBorderDangerCache(eTeam))
 	{
-		if ((iRange >= DANGER_RANGE) && pPlot->isTeamBorderCache(eTeam))
-		{
-			bResult = true;
-		}
+		bResult = true;
 	}
 
-	//	If we have plot danger count here over the same threhold that workers use
-	//	to require escorts then consider that dangerous for the AI
+	// If we have plot danger count here over the same threhold that workers
+	//	use to require escorts then consider that dangerous for the AI
 	if (!bResult && !isHumanPlayer() && pPlot->getDangerCount(m_eID) > 20)
 	{
 		bResult = true;
@@ -3397,67 +3391,52 @@ bool CvPlayerAI::AI_getAnyPlotDanger(const CvPlot* pPlot, int iRange, bool bTest
 	{
 		const CvArea* pPlotArea = pPlot->area();
 
-		foreach_(const CvPlot * pLoopPlot, pPlot->rect(iRange, iRange))
+		foreach_(const CvPlot* plotX, pPlot->rect(iRange, iRange))
 		{
-			if (pLoopPlot->area() == pPlotArea)
+			if (plotX->area() == pPlotArea)
 			{
-				const int iDistance = stepDistance(pPlot->getX(), pPlot->getY(), pLoopPlot->getX(), pLoopPlot->getY());
-				if (bCheckBorder)
+				const int iDistance = stepDistance(pPlot->getX(), pPlot->getY(), plotX->getX(), plotX->getY());
+
+				if (bCheckBorder && iDistance <= 2 && atWar(plotX->getTeam(), eTeam))
 				{
-					if (atWar(pLoopPlot->getTeam(), eTeam))
+					if (pPlot != plotX)
 					{
-						// Border cache is reversible, set for both team and enemy
-						if (iDistance == 1)
+						pPlot->setBorderDangerCache(eTeam, true);
+						plotX->setBorderDangerCache(eTeam, true);
+						// Only set the cache for the plotX team if pPlot is owned by us! (ie. owned by their enemy)
+						if (pPlot->getTeam() == eTeam) 
 						{
-							pPlot->setIsTeamBorderCache(eTeam, true);
-							pPlot->setIsTeamBorderCache(pLoopPlot->getTeam(), true);
-							pLoopPlot->setIsTeamBorderCache(eTeam, true);
-							pLoopPlot->setIsTeamBorderCache(pLoopPlot->getTeam(), true);
-							bResult = true;
-							break;
-						}
-						else if ((iDistance == 2) && (pLoopPlot->isRoute()))
-						{
-							pPlot->setIsTeamBorderCache(eTeam, true);
-							pPlot->setIsTeamBorderCache(pLoopPlot->getTeam(), true);
-							pLoopPlot->setIsTeamBorderCache(eTeam, true);
-							pLoopPlot->setIsTeamBorderCache(pLoopPlot->getTeam(), true);
-							bResult = true;
-							break;
+							pPlot->setBorderDangerCache(plotX->getTeam(), true);
+							plotX->setBorderDangerCache(plotX->getTeam(), true);
 						}
 					}
+					else pPlot->setBorderDangerCache(eTeam, true);
+
+					bResult = true;
+					break;
 				}
 
-				foreach_(const CvUnit * pLoopUnit, pLoopPlot->units())
+				foreach_(const CvUnit * unitx, plotX->units())
 				{
-					// No need to loop over tiles full of our own units
-					if (pLoopUnit->getTeam() == eTeam)
+					if (unitx->getTeam() == eTeam && !unitx->alwaysInvisible() && unitx->getInvisibleType() == NO_INVISIBLE)
 					{
-						if (!(pLoopUnit->alwaysInvisible()) && (pLoopUnit->getInvisibleType() == NO_INVISIBLE))
-						{
-							break;
-						}
+						break; // No need to loop over tiles where we have regular units
 					}
 
-					if (pLoopUnit->isEnemy(eTeam)
-					&& pLoopUnit->canAttack()
-					&& !pLoopUnit->isInvisible(eTeam, false)
-					&& pLoopUnit->canEnterOrAttackPlot(pPlot))
+					if (unitx->isEnemy(eTeam)
+					&&  unitx->canAttack()
+					&& !unitx->isInvisible(eTeam, false)
+					&&  unitx->canEnterOrAttackPlot(pPlot))
 					{
 						if (!bTestMoves)
 						{
 							bResult = true;
 							break;
 						}
-						else
+						else if (iDistance <= unitx->baseMoves() + plotX->isValidRoute(unitx))
 						{
-							int iDangerRange = pLoopUnit->baseMoves();
-							iDangerRange += (pLoopPlot->isValidRoute(pLoopUnit) ? 1 : 0);
-							if (iDangerRange >= iDistance)
-							{
-								bResult = true;
-								break;
-							}
+							bResult = true;
+							break;
 						}
 					}
 				}
@@ -3465,32 +3444,20 @@ bool CvPlayerAI::AI_getAnyPlotDanger(const CvPlot* pPlot, int iRange, bool bTest
 		}
 	}
 
-	// The test moves case is a strict subset of the more general case,
-	// either is appropriate for setting the cache.  However, since the test moves
-	// case is called far more frequently, it is more important and the cache
-	// value being true is only assumed to mean that the plot is safe in the
-	// test moves case.
-	//if( bTestMoves )
+	if (GC.getGame().getNumGameTurnActive() == 1 && isTurnActive() && !GC.getGame().isMPOption(MPOPTION_SIMULTANEOUS_TURNS))
 	{
-		if (isTurnActive())
+		if (bResult)
 		{
-			if (!(GC.getGame().isMPOption(MPOPTION_SIMULTANEOUS_TURNS)) && (GC.getGame().getNumGameTurnActive() == 1))
+			if (iRange <= DANGER_RANGE)
 			{
-				if (bResult)
-				{
-					if (iRange <= DANGER_RANGE)
-					{
-						pPlot->setIsActivePlayerHasDangerCache(true);
-					}
-				}
-				else if (iRange >= DANGER_RANGE)
-				{
-					pPlot->setIsActivePlayerNoDangerCache(true);
-				}
+				pPlot->setActivePlayerHasDangerCache(true);
 			}
 		}
+		else if (iRange < pPlot->getActivePlayerSafeRangeCache())
+		{
+			pPlot->setActivePlayerSafeRangeCache(iRange);
+		}
 	}
-
 	return bResult;
 }
 
@@ -3509,12 +3476,9 @@ int CvPlayerAI::AI_getPlotDanger(const CvPlot* pPlot, int iRange, bool bTestMove
 		iRange = DANGER_RANGE;
 	}
 
-	if (bTestMoves && isTurnActive())
+	if (bTestMoves && isTurnActive() && iRange <= pPlot->getActivePlayerSafeRangeCache())
 	{
-		if ((iRange <= DANGER_RANGE) && pPlot->isActivePlayerNoDangerCache())
-		{
-			return 0;
-		}
+		return 0;
 	}
 
 #ifdef PLOT_DANGER_CACHING
@@ -3597,16 +3561,18 @@ int CvPlayerAI::AI_getPlotDangerInternal(const CvPlot* pPlot, int iRange, bool b
 		if (pLoopPlot->area() == pPlotArea)
 		{
 			const int iDistance = stepDistance(pPlot->getX(), pPlot->getY(), pLoopPlot->getX(), pLoopPlot->getY());
-			if (atWar(pLoopPlot->getTeam(), eTeam))
+
+			if (iDistance <= 2 && atWar(pLoopPlot->getTeam(), eTeam))
 			{
-				if (iDistance == 1)
+				if (iDistance == 0)
 				{
-					iBorderDanger++;
+					iBorderDanger += 4;
 				}
-				else if ((iDistance == 2) && (pLoopPlot->isRoute()))
+				else if (iDistance == 1)
 				{
-					iBorderDanger++;
+					iBorderDanger += 2;
 				}
+				else iBorderDanger++;
 			}
 
 			foreach_(const CvUnit * pLoopUnit, pLoopPlot->units())
@@ -3638,11 +3604,26 @@ int CvPlayerAI::AI_getPlotDangerInternal(const CvPlot* pPlot, int iRange, bool b
 		}
 	}
 
-	if (iBorderDanger > 0 && !isHumanPlayer() && !pPlot->isCity())
+	// Note that here we still count border danger in cities - because I want it for AI_cityThreat
+	if (iBorderDanger > 0 && (!isHumanPlayer() || pPlot->plotCheck(PUF_canDefend, -1, -1, NULL, getID())))
 	{
-		iCount += iBorderDanger;
+		iCount += (1 + iBorderDanger) / 2;
 	}
 
+	if (GC.getGame().getNumGameTurnActive() == 1 && isTurnActive() && !GC.getGame().isMPOption(MPOPTION_SIMULTANEOUS_TURNS))
+	{
+		if (iCount > 0)
+		{
+			if (iRange <= DANGER_RANGE)
+			{
+				pPlot->setActivePlayerHasDangerCache(true);
+			}
+		}
+		else if (iRange < pPlot->getActivePlayerSafeRangeCache())
+		{
+			pPlot->setActivePlayerSafeRangeCache(iRange);
+		}
+	}
 	return iCount;
 }
 

@@ -322,13 +322,14 @@ public:
 	int calculatePathDistanceToPlot( TeamTypes eTeam, CvPlot* pTargetPlot ) const;
 
 	// Plot danger cache
-	bool isActivePlayerNoDangerCache() const;
-	bool isActivePlayerHasDangerCache() const;
-	bool isTeamBorderCache( TeamTypes eTeam ) const;
-	void setIsActivePlayerNoDangerCache( bool bNewValue ) const;
-	void setIsActivePlayerHasDangerCache( bool bNewValue ) const;
-	void setIsTeamBorderCache( TeamTypes eTeam, bool bNewValue ) const;
-	void invalidateIsTeamBorderCache() const;
+	inline int getActivePlayerSafeRangeCache() const { return m_iActivePlayerSafeRangeCache; }
+	inline bool getActivePlayerHasDangerCache() const { return m_bActivePlayerHasDangerCache; }
+	inline bool getBorderDangerCache(const TeamTypes eTeam) const { return m_borderDangerCache[eTeam]; }
+	inline void setActivePlayerSafeRangeCache(const int iRange) const { m_iActivePlayerSafeRangeCache = iRange; }
+	inline void setActivePlayerHasDangerCache(const bool bNewValue) const { m_bActivePlayerHasDangerCache = bNewValue; }
+	inline void setBorderDangerCache(const TeamTypes eTeam, const bool bNewValue) const { m_borderDangerCache[eTeam] = bNewValue; }
+	void invalidateBorderDangerCache() const;
+	void invalidateActivePlayerPlotCache();
 
 	CvCity* getAdjacentCity(PlayerTypes ePlayer = NO_PLAYER) const;
 	bool changeBuildProgress(BuildTypes eBuild, int iChange, PlayerTypes ePlayer = NO_PLAYER);
@@ -964,9 +965,9 @@ protected:
 	IDInfo m_workingCityOverride;
 
 	// Plot danger cache
-	mutable bool m_bIsActivePlayerHasDangerCache;
-	mutable bool m_bIsActivePlayerNoDangerCache;
-	mutable bool* m_abIsTeamBorderCache;
+	mutable bool m_bActivePlayerHasDangerCache;
+	mutable bool m_iActivePlayerSafeRangeCache;
+	mutable bool* m_borderDangerCache;
 
 	static	int m_iGlobalCachePathEpoch;
 	mutable int		m_iCachePathEpoch;

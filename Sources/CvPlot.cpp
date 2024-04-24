@@ -81,7 +81,7 @@ CvPlot::CvPlot()
 	m_aiYield = new short[NUM_YIELD_TYPES]();
 
 	// Plot danger cache
-	m_abIsTeamBorderCache = new bool[MAX_TEAMS];
+	m_borderDangerCache = new bool[MAX_TEAMS];
 
 	m_aiFoundValue = NULL;
 	m_aiPlayerCityRadiusCount = NULL;
@@ -153,7 +153,7 @@ CvPlot::~CvPlot()
 
 	SAFE_DELETE_ARRAY(m_baseYields);
 	SAFE_DELETE_ARRAY(m_aiYield);
-	SAFE_DELETE_ARRAY(m_abIsTeamBorderCache);
+	SAFE_DELETE_ARRAY(m_borderDangerCache);
 }
 
 void CvPlot::init(int iX, int iY)
@@ -279,12 +279,12 @@ void CvPlot::reset(int iX, int iY, bool bConstructorCall)
 	m_workingCity.reset();
 	m_workingCityOverride.reset();
 
-	m_bIsActivePlayerNoDangerCache = false;
-	m_bIsActivePlayerHasDangerCache = false;
+	m_iActivePlayerSafeRangeCache = -1;
+	m_bActivePlayerHasDangerCache = false;
 
 	for (int iI = 0; iI < MAX_TEAMS; iI++)
 	{
-		m_abIsTeamBorderCache[iI] = false;
+		m_borderDangerCache[iI] = false;
 	}
 
 	m_pathGenerationSeq = -1;
@@ -4703,55 +4703,23 @@ int CvPlot::calculatePathDistanceToPlot( TeamTypes eTeam, CvPlot* pTargetPlot ) 
 /* BETTER_BTS_AI_MOD                       END                                                  */
 /************************************************************************************************/
 
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD                      08/21/09                                jdog5000      */
-/*                                                                                              */
-/* Efficiency                                                                                   */
-/************************************************************************************************/
-// Plot danger cache
-bool CvPlot::isActivePlayerNoDangerCache() const
+
+void CvPlot::invalidateActivePlayerPlotCache()
 {
-	return m_bIsActivePlayerNoDangerCache;
+	setActivePlayerSafeRangeCache(-1);
+	setActivePlayerHasDangerCache(false);
+
+	CachePathValidityResult(NULL, false, false);
+	CachePathValidityResult(NULL, true, false);
 }
 
-bool CvPlot::isActivePlayerHasDangerCache() const
+void CvPlot::invalidateBorderDangerCache() const
 {
-	return m_bIsActivePlayerHasDangerCache;
-}
-
-bool CvPlot::isTeamBorderCache( TeamTypes eTeam ) const
-{
-	return m_abIsTeamBorderCache[eTeam];
-}
-
-void CvPlot::setIsActivePlayerNoDangerCache( bool bNewValue ) const
-{
-	m_bIsActivePlayerNoDangerCache = bNewValue;
-}
-
-void CvPlot::setIsActivePlayerHasDangerCache( bool bNewValue ) const
-{
-	m_bIsActivePlayerHasDangerCache = bNewValue;
-}
-
-void CvPlot::setIsTeamBorderCache( TeamTypes eTeam, bool bNewValue ) const
-{
-	PROFILE_FUNC();
-	m_abIsTeamBorderCache[eTeam] = bNewValue;
-}
-
-void CvPlot::invalidateIsTeamBorderCache() const
-{
-	PROFILE_FUNC();
-
-	for( int iI = 0; iI < MAX_TEAMS; iI++ )
+	for (int iI = 0; iI < MAX_TEAMS; iI++)
 	{
-		m_abIsTeamBorderCache[iI] = false;
+		m_borderDangerCache[iI] = false;
 	}
 }
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD                       END                                                  */
-/************************************************************************************************/
 
 
 /* returns the city adjacent to this plot or NULL if none exists. more than one can't exist, because of the 2-tile spacing btwn cities limit. */
@@ -6576,7 +6544,7 @@ void CvPlot::setOwner(PlayerTypes eNewValue, bool bCheckUnits, bool bUpdatePlotG
 		}
 
 		// Plot danger cache
-		algo::for_each(rect(DANGER_RANGE, DANGER_RANGE), bind(&CvPlot::invalidateIsTeamBorderCache, _1));
+		algo::for_each(rect(2, 2), bind(&CvPlot::invalidateBorderDangerCache, _1));
 
 		updateSymbols();
 	}
@@ -11044,9 +11012,9 @@ void CvPlot::read(FDataStreamBase* pStream)
 
 	WRAPPER_READ_ARRAY(wrapper, "CvPlot", NUM_YIELD_TYPES, m_aiYield);
 
-	m_bIsActivePlayerNoDangerCache = false;
-	m_bIsActivePlayerHasDangerCache = false;
-	invalidateIsTeamBorderCache();
+	m_iActivePlayerSafeRangeCache = -1;
+	m_bActivePlayerHasDangerCache = false;
+	invalidateBorderDangerCache();
 
 	m_aiCulture.clear();
 

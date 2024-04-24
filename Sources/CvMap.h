@@ -226,8 +226,8 @@ public:
 	void calculateCanalAndChokePoints();
 
 	// Plot danger cache
-	void invalidateIsActivePlayerNoDangerCache();
-	void invalidateIsTeamBorderCache(TeamTypes eTeam);
+	void invalidateActivePlayerPlotCache();
+	void invalidateBorderDangerCache(TeamTypes eTeam);
 
 	const std::pair<CvPlot*, CvPlot*> plots() const;
 
