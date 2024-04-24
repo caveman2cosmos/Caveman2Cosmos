@@ -322,10 +322,10 @@ public:
 	int calculatePathDistanceToPlot( TeamTypes eTeam, CvPlot* pTargetPlot ) const;
 
 	// Plot danger cache
-	inline bool getActivePlayerNoDangerCache() const { return m_bActivePlayerNoDangerCache; }
+	inline int getActivePlayerSafeRangeCache() const { return m_iActivePlayerSafeRangeCache; }
 	inline bool getActivePlayerHasDangerCache() const { return m_bActivePlayerHasDangerCache; }
 	inline bool getBorderDangerCache(const TeamTypes eTeam) const { return m_borderDangerCache[eTeam]; }
-	inline void setActivePlayerNoDangerCache(const bool bNewValue) const { m_bActivePlayerNoDangerCache = bNewValue; }
+	inline void setActivePlayerSafeRangeCache(const int iRange) const { m_iActivePlayerSafeRangeCache = iRange; }
 	inline void setActivePlayerHasDangerCache(const bool bNewValue) const { m_bActivePlayerHasDangerCache = bNewValue; }
 	inline void setBorderDangerCache(const TeamTypes eTeam, const bool bNewValue) const { m_borderDangerCache[eTeam] = bNewValue; }
 	void invalidateBorderDangerCache() const;
@@ -966,7 +966,7 @@ protected:
 
 	// Plot danger cache
 	mutable bool m_bActivePlayerHasDangerCache;
-	mutable bool m_bActivePlayerNoDangerCache;
+	mutable bool m_iActivePlayerSafeRangeCache;
 	mutable bool* m_borderDangerCache;
 
 	static	int m_iGlobalCachePathEpoch;

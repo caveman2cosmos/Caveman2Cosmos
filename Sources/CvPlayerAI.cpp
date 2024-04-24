@@ -3358,7 +3358,7 @@ bool CvPlayerAI::AI_getAnyPlotDanger(const CvPlot* pPlot, int iRange, bool bTest
 	{
 		PROFILE("CvPlayerAI::AI_getAnyPlotDanger.ActiveTurn");
 
-		if (iRange <= DANGER_RANGE && pPlot->getActivePlayerNoDangerCache())
+		if (iRange <= pPlot->getActivePlayerSafeRangeCache())
 		{
 			PROFILE("CvPlayerAI::AI_getAnyPlotDanger.NoDangerHit");
 			return false;
@@ -3453,9 +3453,9 @@ bool CvPlayerAI::AI_getAnyPlotDanger(const CvPlot* pPlot, int iRange, bool bTest
 				pPlot->setActivePlayerHasDangerCache(true);
 			}
 		}
-		else if (iRange >= DANGER_RANGE)
+		else if (iRange < pPlot->getActivePlayerSafeRangeCache())
 		{
-			pPlot->setActivePlayerNoDangerCache(true);
+			pPlot->setActivePlayerSafeRangeCache(iRange);
 		}
 	}
 	return bResult;
@@ -3476,12 +3476,9 @@ int CvPlayerAI::AI_getPlotDanger(const CvPlot* pPlot, int iRange, bool bTestMove
 		iRange = DANGER_RANGE;
 	}
 
-	if (bTestMoves && isTurnActive())
+	if (bTestMoves && isTurnActive() && iRange <= pPlot->getActivePlayerSafeRangeCache())
 	{
-		if ((iRange <= DANGER_RANGE) && pPlot->getActivePlayerNoDangerCache())
-		{
-			return 0;
-		}
+		return 0;
 	}
 
 #ifdef PLOT_DANGER_CACHING
@@ -3611,6 +3608,21 @@ int CvPlayerAI::AI_getPlotDangerInternal(const CvPlot* pPlot, int iRange, bool b
 	if (iBorderDanger > 0 && (!isHumanPlayer() || pPlot->plotCheck(PUF_canDefend, -1, -1, NULL, getID())))
 	{
 		iCount += (1 + iBorderDanger) / 2;
+	}
+
+	if (GC.getGame().getNumGameTurnActive() == 1 && isTurnActive() && !GC.getGame().isMPOption(MPOPTION_SIMULTANEOUS_TURNS))
+	{
+		if (iCount > 0)
+		{
+			if (iRange <= DANGER_RANGE)
+			{
+				pPlot->setActivePlayerHasDangerCache(true);
+			}
+		}
+		else if (iRange < pPlot->getActivePlayerSafeRangeCache())
+		{
+			pPlot->setActivePlayerSafeRangeCache(iRange);
+		}
 	}
 	return iCount;
 }

@@ -279,7 +279,7 @@ void CvPlot::reset(int iX, int iY, bool bConstructorCall)
 	m_workingCity.reset();
 	m_workingCityOverride.reset();
 
-	m_bActivePlayerNoDangerCache = false;
+	m_iActivePlayerSafeRangeCache = -1;
 	m_bActivePlayerHasDangerCache = false;
 
 	for (int iI = 0; iI < MAX_TEAMS; iI++)
@@ -4706,7 +4706,7 @@ int CvPlot::calculatePathDistanceToPlot( TeamTypes eTeam, CvPlot* pTargetPlot ) 
 
 void CvPlot::invalidateActivePlayerPlotCache()
 {
-	setActivePlayerNoDangerCache(false);
+	setActivePlayerSafeRangeCache(-1);
 	setActivePlayerHasDangerCache(false);
 
 	CachePathValidityResult(NULL, false, false);
@@ -11012,7 +11012,7 @@ void CvPlot::read(FDataStreamBase* pStream)
 
 	WRAPPER_READ_ARRAY(wrapper, "CvPlot", NUM_YIELD_TYPES, m_aiYield);
 
-	m_bActivePlayerNoDangerCache = false;
+	m_iActivePlayerSafeRangeCache = -1;
 	m_bActivePlayerHasDangerCache = false;
 	invalidateBorderDangerCache();
 
