@@ -1260,11 +1260,6 @@ void CvTeam::declareWar(TeamTypes eTeam, bool bNewDiplo, WarPlanTypes eWarPlan)
 		setAtWar(eTeam, true);
 		teamFoe.setAtWar(getID(), true);
 
-		// Plot danger cache
-		GC.getMap().invalidateBorderDangerCache(eTeam);
-		GC.getMap().invalidateBorderDangerCache(getID());
-
-
 		for (int iI = 0; iI < MAX_PLAYERS; iI++)
 		{
 			if (GET_PLAYER((PlayerTypes)iI).isAliveAndTeam(getID(), true, eTeam))

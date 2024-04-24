@@ -6544,7 +6544,7 @@ void CvPlot::setOwner(PlayerTypes eNewValue, bool bCheckUnits, bool bUpdatePlotG
 		}
 
 		// Plot danger cache
-		algo::for_each(rect(DANGER_RANGE, DANGER_RANGE), bind(&CvPlot::invalidateBorderDangerCache, _1));
+		algo::for_each(rect(2, 2), bind(&CvPlot::invalidateBorderDangerCache, _1));
 
 		updateSymbols();
 	}

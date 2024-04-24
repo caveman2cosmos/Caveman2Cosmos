@@ -3372,7 +3372,8 @@ bool CvPlayerAI::AI_getAnyPlotDanger(const CvPlot* pPlot, int iRange, bool bTest
 	bool bResult = false;
 
 	const TeamTypes eTeam = getTeam();
-	const bool bCheckBorder = !isHumanPlayer() && !pPlot->isCity();
+	// Exclude cities and defended plots from the hostile border proximity check.
+	const bool bCheckBorder = !pPlot->isCity() && pPlot->plotCheck(PUF_canDefend, -1, -1, NULL, getID());
 
 	if (bCheckBorder && iRange >= 2 && pPlot->getBorderDangerCache(eTeam))
 	{
@@ -3390,19 +3391,27 @@ bool CvPlayerAI::AI_getAnyPlotDanger(const CvPlot* pPlot, int iRange, bool bTest
 	{
 		const CvArea* pPlotArea = pPlot->area();
 
-		foreach_(const CvPlot * plotX, pPlot->rect(iRange, iRange))
+		foreach_(const CvPlot* plotX, pPlot->rect(iRange, iRange))
 		{
 			if (plotX->area() == pPlotArea)
 			{
 				const int iDistance = stepDistance(pPlot->getX(), pPlot->getY(), plotX->getX(), plotX->getY());
 
-				if (bCheckBorder && (iDistance == 1 || iDistance == 2) && atWar(plotX->getTeam(), eTeam))
+				if (bCheckBorder && iDistance <= 2 && atWar(plotX->getTeam(), eTeam))
 				{
-					// Border cache is reversible, set for both team and enemy
-					pPlot->setBorderDangerCache(eTeam, true);
-					pPlot->setBorderDangerCache(plotX->getTeam(), true);
-					plotX->setBorderDangerCache(eTeam, true);
-					plotX->setBorderDangerCache(plotX->getTeam(), true);
+					if (pPlot != plotX)
+					{
+						pPlot->setBorderDangerCache(eTeam, true);
+						plotX->setBorderDangerCache(eTeam, true);
+						// Only set the cache for the plotX team if pPlot is owned by us! (ie. owned by their enemy)
+						if (pPlot->getTeam() == eTeam) 
+						{
+							pPlot->setBorderDangerCache(plotX->getTeam(), true);
+							plotX->setBorderDangerCache(plotX->getTeam(), true);
+						}
+					}
+					else pPlot->setBorderDangerCache(eTeam, true);
+
 					bResult = true;
 					break;
 				}
@@ -3555,16 +3564,18 @@ int CvPlayerAI::AI_getPlotDangerInternal(const CvPlot* pPlot, int iRange, bool b
 		if (pLoopPlot->area() == pPlotArea)
 		{
 			const int iDistance = stepDistance(pPlot->getX(), pPlot->getY(), pLoopPlot->getX(), pLoopPlot->getY());
-			if (atWar(pLoopPlot->getTeam(), eTeam))
+
+			if (iDistance <= 2 && atWar(pLoopPlot->getTeam(), eTeam))
 			{
-				if (iDistance == 1)
+				if (iDistance == 0)
 				{
-					iBorderDanger++;
+					iBorderDanger += 4;
 				}
-				else if ((iDistance == 2) && (pLoopPlot->isRoute()))
+				else if (iDistance == 1)
 				{
-					iBorderDanger++;
+					iBorderDanger += 2;
 				}
+				else iBorderDanger++;
 			}
 
 			foreach_(const CvUnit * pLoopUnit, pLoopPlot->units())
@@ -3596,11 +3607,11 @@ int CvPlayerAI::AI_getPlotDangerInternal(const CvPlot* pPlot, int iRange, bool b
 		}
 	}
 
-	if (iBorderDanger > 0 && !isHumanPlayer() && !pPlot->isCity())
+	// Note that here we still count border danger in cities - because I want it for AI_cityThreat
+	if (iBorderDanger > 0 && (!isHumanPlayer() || pPlot->plotCheck(PUF_canDefend, -1, -1, NULL, getID())))
 	{
-		iCount += iBorderDanger;
+		iCount += (1 + iBorderDanger) / 2;
 	}
-
 	return iCount;
 }
 
