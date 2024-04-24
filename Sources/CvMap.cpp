@@ -1188,40 +1188,29 @@ void CvMap::calculateCanalAndChokePoints()
 }
 // Super Forts end
 
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD                      08/21/09                                jdog5000      */
-/*                                                                                              */
-/* Efficiency                                                                                   */
-/************************************************************************************************/
+
 // Plot danger cache
-void CvMap::invalidateIsActivePlayerNoDangerCache()
+void CvMap::invalidateActivePlayerPlotCache()
 {
 	PROFILE_FUNC();
 
-	for (int iI = 0; iI < numPlots(); iI++)
+	for (int iI = numPlots() - 1; iI > -1; iI--)
 	{
-		CvPlot* pLoopPlot = plotByIndex(iI);
-
-		pLoopPlot->setIsActivePlayerNoDangerCache(false);
-		pLoopPlot->setIsActivePlayerHasDangerCache(false);
-		pLoopPlot->CachePathValidityResult(NULL,false,false);
-		pLoopPlot->CachePathValidityResult(NULL,true,false);
+		plotByIndex(iI)->invalidateActivePlayerPlotCache();
 	}
 }
 
 
-void CvMap::invalidateIsTeamBorderCache(TeamTypes eTeam)
+void CvMap::invalidateBorderDangerCache(TeamTypes eTeam)
 {
 	PROFILE_FUNC();
 
-	for (int iI = 0; iI < numPlots(); iI++)
+	for (int iI = numPlots() - 1; iI > -1; iI--)
 	{
-		plotByIndex(iI)->setIsTeamBorderCache(eTeam, false);
+		plotByIndex(iI)->setBorderDangerCache(eTeam, false);
 	}
 }
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD                       END                                                  */
-/************************************************************************************************/
+
 
 
 const std::pair<CvPlot*, CvPlot*> CvMap::plots() const

@@ -3358,12 +3358,12 @@ bool CvPlayerAI::AI_getAnyPlotDanger(const CvPlot* pPlot, int iRange, bool bTest
 	{
 		PROFILE("CvPlayerAI::AI_getAnyPlotDanger.ActiveTurn");
 
-		if (iRange <= DANGER_RANGE && pPlot->isActivePlayerNoDangerCache())
+		if (iRange <= DANGER_RANGE && pPlot->getActivePlayerNoDangerCache())
 		{
 			PROFILE("CvPlayerAI::AI_getAnyPlotDanger.NoDangerHit");
 			return false;
 		}
-		if (iRange >= DANGER_RANGE && pPlot->isActivePlayerHasDangerCache())
+		if (iRange >= DANGER_RANGE && pPlot->getActivePlayerHasDangerCache())
 		{
 			PROFILE("CvPlayerAI::AI_getAnyPlotDanger.HasDangerHit");
 			return true;
@@ -3374,7 +3374,7 @@ bool CvPlayerAI::AI_getAnyPlotDanger(const CvPlot* pPlot, int iRange, bool bTest
 	const TeamTypes eTeam = getTeam();
 	const bool bCheckBorder = !isHumanPlayer() && !pPlot->isCity();
 
-	if (bCheckBorder && iRange >= 2 && pPlot->isTeamBorderCache(eTeam))
+	if (bCheckBorder && iRange >= 2 && pPlot->getBorderDangerCache(eTeam))
 	{
 		bResult = true;
 	}
@@ -3399,10 +3399,10 @@ bool CvPlayerAI::AI_getAnyPlotDanger(const CvPlot* pPlot, int iRange, bool bTest
 				if (bCheckBorder && (iDistance == 1 || iDistance == 2) && atWar(plotX->getTeam(), eTeam))
 				{
 					// Border cache is reversible, set for both team and enemy
-					pPlot->setIsTeamBorderCache(eTeam, true);
-					pPlot->setIsTeamBorderCache(plotX->getTeam(), true);
-					plotX->setIsTeamBorderCache(eTeam, true);
-					plotX->setIsTeamBorderCache(plotX->getTeam(), true);
+					pPlot->setBorderDangerCache(eTeam, true);
+					pPlot->setBorderDangerCache(plotX->getTeam(), true);
+					plotX->setBorderDangerCache(eTeam, true);
+					plotX->setBorderDangerCache(plotX->getTeam(), true);
 					bResult = true;
 					break;
 				}
@@ -3441,12 +3441,12 @@ bool CvPlayerAI::AI_getAnyPlotDanger(const CvPlot* pPlot, int iRange, bool bTest
 		{
 			if (iRange <= DANGER_RANGE)
 			{
-				pPlot->setIsActivePlayerHasDangerCache(true);
+				pPlot->setActivePlayerHasDangerCache(true);
 			}
 		}
 		else if (iRange >= DANGER_RANGE)
 		{
-			pPlot->setIsActivePlayerNoDangerCache(true);
+			pPlot->setActivePlayerNoDangerCache(true);
 		}
 	}
 	return bResult;
@@ -3469,7 +3469,7 @@ int CvPlayerAI::AI_getPlotDanger(const CvPlot* pPlot, int iRange, bool bTestMove
 
 	if (bTestMoves && isTurnActive())
 	{
-		if ((iRange <= DANGER_RANGE) && pPlot->isActivePlayerNoDangerCache())
+		if ((iRange <= DANGER_RANGE) && pPlot->getActivePlayerNoDangerCache())
 		{
 			return 0;
 		}
