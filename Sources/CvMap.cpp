@@ -394,9 +394,11 @@ void CvMap::moveUnitToMap(CvUnit& unit, int numTravelTurns)
 void CvMap::updateIncomingUnits()
 {
 	PROFILE_EXTRA_FUNC();
-	foreach_(TravelingUnit* travelingUnit, m_IncomingUnits)
+	for (std::vector<TravelingUnit*>::iterator it = m_IncomingUnits.begin(); it != m_IncomingUnits.end();)
 	{
-		if (travelingUnit->numTurnsUntilArrival-- <= 0)
+		TravelingUnit* travelingUnit = *it;
+		travelingUnit->numTurnsUntilArrival--;
+		if (travelingUnit->numTurnsUntilArrival <= 0)
 		{
 			GC.switchMap(m_eType);
 
@@ -407,10 +409,12 @@ void CvMap::updateIncomingUnits()
 			if (newUnit != NULL)
 			{
 				static_cast<CvUnitAI&>(*newUnit) = unit;
-				m_IncomingUnits.erase(&travelingUnit);
+				it = m_IncomingUnits.erase(it);
 				delete travelingUnit;
+				continue;
 			}
 		}
+		++it;
 	}
 }
 

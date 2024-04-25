@@ -115,7 +115,7 @@ CvUnitAI& CvUnitAI::operator=(const CvUnitAI& other)
 	m_iGenericValue = other.m_iGenericValue;
 	m_aiWaitingOnUnitAITypes = other.m_aiWaitingOnUnitAITypes;
 
-	//static_cast<CvUnit&>(*this) = static_cast<const CvUnit&>(other)
+	static_cast<CvUnit&>(*this) = static_cast<const CvUnit&>(other);
 
 	return *this;
 }
