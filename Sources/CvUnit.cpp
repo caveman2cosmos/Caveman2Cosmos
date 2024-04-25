@@ -894,11 +894,6 @@ void CvUnit::reset(int iID, UnitTypes eUnit, PlayerTypes eOwner, bool bConstruct
 
 CvUnit& CvUnit::operator=(const CvUnit& other)
 {
-	//uninit();
-	//clearCityOfOrigin();
-
-	//static_cast<CvUnitAI&>(*this) = static_cast<const CvUnitAI&>(other);
-
 	m_iHealUnitCombatCount = other.m_iHealUnitCombatCount;
 	m_iDCMBombRange = other.m_iDCMBombRange;
 	m_iDCMBombAccuracy = other.m_iDCMBombAccuracy;
@@ -1224,8 +1219,19 @@ CvUnit& CvUnit::operator=(const CvUnit& other)
 
 	m_pPlayerInvestigated = other.m_pPlayerInvestigated;
 	m_Properties = other.m_Properties;
-	m_commander = other.m_commander;
-	m_worker = other.m_worker;
+
+	if (other.m_commander)
+	{
+		SAFE_DELETE(m_commander);
+		m_commander = new UnitCompCommander(this, m_pUnitInfo);
+		*m_commander = *other.m_commander;
+	}
+	if (other.m_worker)
+	{
+		SAFE_DELETE(m_worker);
+		m_worker = new UnitCompWorker();
+		*m_worker = *other.m_worker;
+	}
 
 	return *this;
 }
