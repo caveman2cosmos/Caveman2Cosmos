@@ -3,10 +3,10 @@
 #ifndef CV_WORKER_SERVICE
 #define CV_WORKER_SERVICE
 
-#include "CvPlot.h"
-#include "CvCity.h"
-
+class CvPlot;
+class CvCity;
 class CvBuildInfo;
+class CvUnitAI;
 
 class CvWorkerService
 {
