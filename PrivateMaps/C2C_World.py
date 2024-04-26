@@ -1082,9 +1082,9 @@ class ElevationMap(FloatMap):
 
 	def GenerateElevationMap(self):
 		timer = BugUtil.Timer('Generating Elevation Map')
-		self.iWidth	 = iWidthLoc  = self.iWidth
-		self.iHeight = iHeightLoc = self.iHeight
-		self.iArea	 = iAreaLoc	  = self.iArea
+		iWidthLoc	= self.iWidth
+		iHeightLoc	= self.iHeight
+		iAreaLoc	= self.iArea
 		bWrapY = mc.bWrapY
 		bWrapX = mc.bWrapX
 		bAttenuate = mc.bAttenuate
@@ -2468,17 +2468,21 @@ class LakeMap:
 		fTropicLat	= mc.fTropicLat
 		climateList = []
 		latFactor = 2.0 / (iHeight - 1.0)
+		POLAR = ClimateZoneTypes.CLIMATE_ZONE_POLAR
+		TROPICAL = ClimateZoneTypes.CLIMATE_ZONE_TROPICAL
+		TEMPERATE = ClimateZoneTypes.CLIMATE_ZONE_TEMPERATE
+		MAP = CyGlobalContext().getMap()
 		# Map the climate zones.
-		i = -1
 		for y in xrange(iHeight):
 			lat = y * latFactor - 1.0
 			if lat >= fPolarLat or -fPolarLat >= lat:
-				climate = -1
+				climate = POLAR
 			elif lat >= -fTropicLat and fTropicLat >= lat:
-				climate = 1
+				climate = TROPICAL
 			else:
-				climate = 0
-			climateList = climateList + [climate] * iWidth
+				climate = TEMPERATE
+			MAP.setClimateZone(y, climate)
+			climateList.append(climate)
 		bDefined = array('H', [0] * iArea)
 		lakeData = self.lakeData
 		# First define coast and shore.
@@ -2488,6 +2492,7 @@ class LakeMap:
 		LAKE_SHORE	= mc.LAKE_SHORE
 		i = -1
 		for y in xrange(iHeight):
+			climate = climateList[y]
 			for x in xrange(iWidth):
 				i += 1
 				if not plotData[i]:
@@ -2497,17 +2502,17 @@ class LakeMap:
 						if ii >= 0 and plotData[ii]:
 							if lakeData[i] != 1:
 								bDefined[i] = COAST
-								if not climateList[i]:
+								if climate == TEMPERATE:
 									terrData[i] = COAST
-								elif climateList[i] == 1:
+								elif climate == TROPICAL:
 									terrData[i] = COAST_TROP
 								else:
 									terrData[i] = COAST_POL
 							else:
 								bDefined[i] = LAKE_SHORE
-								if not climateList[i]:
+								if climate == TEMPERATE:
 									terrData[i] = LAKE_SHORE
-								elif climateList[i] == 1:
+								elif climate == TROPICAL:
 									terrData[i] = LAKE_SHORE
 								else:
 									terrData[i] = LAKE_SHORE
@@ -2524,14 +2529,15 @@ class LakeMap:
 		LAKE		= mc.LAKE
 		i = -1
 		for y in xrange(iHeight):
+			climate = climateList[y]
 			for x in xrange(iWidth):
 				i += 1
 				if not (plotData[i] or bDefined[i]):
 					if lakeData[i] == 1:
 						bDefined[i] = LAKE
-						if not climateList[i]:
+						if climate == TEMPERATE:
 							terrData[i] = LAKE
-						elif climateList[i] == 1:
+						elif climate == TROPICAL:
 							terrData[i] = LAKE
 						else:
 							terrData[i] = LAKE
@@ -2542,25 +2548,25 @@ class LakeMap:
 							if ii >= 0 and 	bDefined[ii] == COAST:
 								bDefined[i] = SEA
 								if em.data[i] < fLandHeight * 0.75:
-									if not climateList[i]:
+									if climate == TEMPERATE:
 										terrData[i] = SEA_DEEP
-									elif climateList[i] == 1:
+									elif climate == TROPICAL:
 										terrData[i] = SEA_DEEP_T
 									else:
 										terrData[i] = SEA_DEEP_P
 								else:
-									if not climateList[i]:
+									if climate == TEMPERATE:
 										terrData[i] = SEA
-									elif climateList[i] == 1:
+									elif climate == TROPICAL:
 										terrData[i] = SEA_TROP
 									else:
 										terrData[i] = SEA_POL
 								break
 						if not bDefined[i]:
 							bDefined[i] = OCEAN
-							if not climateList[i]:
+							if climate == TEMPERATE:
 								terrData[i] = OCEAN
-							elif climateList[i] == 1:
+							elif climate == TROPICAL:
 								terrData[i] = OCEAN_TROP
 							else:
 								terrData[i] = OCEAN_POL
@@ -2612,9 +2618,9 @@ class LakeMap:
 				trenchExpPlots = []
 				iTrenchPlots = 0
 				while True:
-					if not climateList[i]:
+					if climateList[y] == TEMPERATE:
 						terrData[i] = TRENCH
-					elif climateList[i] == 1:
+					elif climateList[y] == TROPICAL:
 						terrData[i] = TRENCH_TROP
 					else:
 						terrData[i] = TRENCH_POL

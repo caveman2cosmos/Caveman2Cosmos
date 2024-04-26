@@ -447,3 +447,9 @@ void CyMap::moveUnitToMap(const CyUnit* unit, int numTravelTurns)
 {
 	m_pMap->moveUnitToMap(*unit->getUnit(), numTravelTurns);
 }
+
+void CyMap::setClimateZone(const int y, const ClimateZoneTypes eClimate)
+{
+	m_pMap->setClimateZone(y, eClimate);
+}
+

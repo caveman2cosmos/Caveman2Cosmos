@@ -26,7 +26,6 @@ void CvPythonPlotLoader::CyPlotPythonInterface1(boost::python::class_<CyPlot>& i
 		.def("isRiverSide", &CyPlot::isRiverSide, "bool ()")
 		.def("isRiver", &CyPlot::isRiver, "bool ()")
 
-		.def("getNearestLandPlot", &CyPlot::getNearestLandPlot, boost::python::return_value_policy<boost::python::manage_new_object>(), "CyPlot* ()")
 		.def("canHaveBonus", &CyPlot::canHaveBonus, "bool (int /*BonusTypes*/ eBonus, bool bIgnoreLatitude)")
 		.def("canHaveImprovement", &CyPlot::canHaveImprovement, "bool (int (ImprovementTypes) eImprovement, int (TeamTypes) eTeam, bool bPotential)")
 		.def("canBuild", &CyPlot::canBuild, "bool (int (BuildTypes) eBuild, int (PlayerTypes) ePlayer, bool bTestVisible)")

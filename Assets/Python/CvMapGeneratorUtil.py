@@ -1613,12 +1613,24 @@ def placeC2CBonuses():
 
 	improvementGoodyIsland = GC.getInfoTypeForString("IMPROVEMENT_GOODY_ISLAND")
 
+	# Map the climate zones.
+	POLAR = ClimateZoneTypes.CLIMATE_ZONE_POLAR
+	TROPICAL = ClimateZoneTypes.CLIMATE_ZONE_TROPICAL
+	TEMPERATE = ClimateZoneTypes.CLIMATE_ZONE_TEMPERATE
+	for y in xrange(MAP.getGridHeight()):
+		iLatitude = MAP.plot(0, y).getLatitude()
+		if iLatitude > 66.5:
+			MAP.setClimateZone(y, POLAR)
+		elif iLatitude < 23.5:
+			MAP.setClimateZone(y, TROPICAL)
+		else:
+			MAP.setClimateZone(y, TEMPERATE)
+
 	for i in range(MAP.numPlots()):
 		plot = MAP.plotByIndex(i)
 
 		# Identify where on the map the plot is
 		iLatitude = plot.getLatitude()
-		iLongitude = plot.getLongitude()
 		x = plot.getX()
 		y = plot.getY()
 		if y > iEquatorPlot:

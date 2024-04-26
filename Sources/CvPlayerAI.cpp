@@ -697,7 +697,7 @@ void CvPlayerAI::AI_doTurnUnitsPost()
 
 	const bool bAnyWar = GET_TEAM(getTeam()).hasWarPlan(true);
 	const int64_t iStartingGold = getGold();
-	const int iTargetGold = AI_goldTarget();
+	const int64_t iTargetGold = AI_goldTarget();
 	int64_t iUpgradeBudget = std::max<int64_t>(iStartingGold - iTargetGold, AI_goldToUpgradeAllUnits()) / (bAnyWar ? 1 : 2);
 
 	iUpgradeBudget = std::min<int64_t>(iUpgradeBudget, (iStartingGold - iTargetGold < iUpgradeBudget) ? (iStartingGold - iTargetGold) : iStartingGold / 2);
@@ -710,7 +710,7 @@ void CvPlayerAI::AI_doTurnUnitsPost()
 
 	if (gPlayerLogLevel > 2)
 	{
-		logBBAI("	%S calculates upgrade budget of %I64d from %I64d current gold, %d target", getCivilizationDescription(0), iUpgradeBudget, iStartingGold, iTargetGold);
+		logBBAI("	%S calculates upgrade budget of %I64d from %I64d current gold, %I64d target", getCivilizationDescription(0), iUpgradeBudget, iStartingGold, iTargetGold);
 	}
 
 	// Always willing to upgrade 1 unit if we have the money
@@ -3350,44 +3350,38 @@ bool CvPlayerAI::AI_getVisiblePlotDanger(const CvPlot* pPlot, int iRange, bool b
 // changes.
 bool CvPlayerAI::AI_getAnyPlotDanger(const CvPlot* pPlot, int iRange, bool bTestMoves) const
 {
-	bool bResult = false;
-
 	PROFILE_FUNC();
 
-	if (iRange == -1)
-	{
-		iRange = DANGER_RANGE;
-	}
+	if (iRange == -1) iRange = DANGER_RANGE;
 
 	if (bTestMoves && isTurnActive())
 	{
 		PROFILE("CvPlayerAI::AI_getAnyPlotDanger.ActiveTurn");
 
-		if ((iRange <= DANGER_RANGE) && pPlot->isActivePlayerNoDangerCache())
+		if (iRange <= pPlot->getActivePlayerSafeRangeCache())
 		{
 			PROFILE("CvPlayerAI::AI_getAnyPlotDanger.NoDangerHit");
 			return false;
 		}
-		else if (iRange >= DANGER_RANGE && pPlot->isActivePlayerHasDangerCache())
+		if (iRange >= DANGER_RANGE && pPlot->getActivePlayerHasDangerCache())
 		{
 			PROFILE("CvPlayerAI::AI_getAnyPlotDanger.HasDangerHit");
 			return true;
 		}
 	}
+	bool bResult = false;
 
-	TeamTypes eTeam = getTeam();
-	bool bCheckBorder = (!isHumanPlayer() && !pPlot->isCity());
+	const TeamTypes eTeam = getTeam();
+	// Exclude cities and defended plots from the hostile border proximity check.
+	const bool bCheckBorder = !pPlot->isCity() && pPlot->plotCheck(PUF_canDefend, -1, -1, NULL, getID());
 
-	if (bCheckBorder)
+	if (bCheckBorder && iRange >= 2 && pPlot->getBorderDangerCache(eTeam))
 	{
-		if ((iRange >= DANGER_RANGE) && pPlot->isTeamBorderCache(eTeam))
-		{
-			bResult = true;
-		}
+		bResult = true;
 	}
 
-	//	If we have plot danger count here over the same threhold that workers use
-	//	to require escorts then consider that dangerous for the AI
+	// If we have plot danger count here over the same threhold that workers
+	//	use to require escorts then consider that dangerous for the AI
 	if (!bResult && !isHumanPlayer() && pPlot->getDangerCount(m_eID) > 20)
 	{
 		bResult = true;
@@ -3397,67 +3391,52 @@ bool CvPlayerAI::AI_getAnyPlotDanger(const CvPlot* pPlot, int iRange, bool bTest
 	{
 		const CvArea* pPlotArea = pPlot->area();
 
-		foreach_(const CvPlot * pLoopPlot, pPlot->rect(iRange, iRange))
+		foreach_(const CvPlot* plotX, pPlot->rect(iRange, iRange))
 		{
-			if (pLoopPlot->area() == pPlotArea)
+			if (plotX->area() == pPlotArea)
 			{
-				const int iDistance = stepDistance(pPlot->getX(), pPlot->getY(), pLoopPlot->getX(), pLoopPlot->getY());
-				if (bCheckBorder)
+				const int iDistance = stepDistance(pPlot->getX(), pPlot->getY(), plotX->getX(), plotX->getY());
+
+				if (bCheckBorder && iDistance <= 2 && atWar(plotX->getTeam(), eTeam))
 				{
-					if (atWar(pLoopPlot->getTeam(), eTeam))
+					if (pPlot != plotX)
 					{
-						// Border cache is reversible, set for both team and enemy
-						if (iDistance == 1)
+						pPlot->setBorderDangerCache(eTeam, true);
+						plotX->setBorderDangerCache(eTeam, true);
+						// Only set the cache for the plotX team if pPlot is owned by us! (ie. owned by their enemy)
+						if (pPlot->getTeam() == eTeam) 
 						{
-							pPlot->setIsTeamBorderCache(eTeam, true);
-							pPlot->setIsTeamBorderCache(pLoopPlot->getTeam(), true);
-							pLoopPlot->setIsTeamBorderCache(eTeam, true);
-							pLoopPlot->setIsTeamBorderCache(pLoopPlot->getTeam(), true);
-							bResult = true;
-							break;
-						}
-						else if ((iDistance == 2) && (pLoopPlot->isRoute()))
-						{
-							pPlot->setIsTeamBorderCache(eTeam, true);
-							pPlot->setIsTeamBorderCache(pLoopPlot->getTeam(), true);
-							pLoopPlot->setIsTeamBorderCache(eTeam, true);
-							pLoopPlot->setIsTeamBorderCache(pLoopPlot->getTeam(), true);
-							bResult = true;
-							break;
+							pPlot->setBorderDangerCache(plotX->getTeam(), true);
+							plotX->setBorderDangerCache(plotX->getTeam(), true);
 						}
 					}
+					else pPlot->setBorderDangerCache(eTeam, true);
+
+					bResult = true;
+					break;
 				}
 
-				foreach_(const CvUnit * pLoopUnit, pLoopPlot->units())
+				foreach_(const CvUnit * unitx, plotX->units())
 				{
-					// No need to loop over tiles full of our own units
-					if (pLoopUnit->getTeam() == eTeam)
+					if (unitx->getTeam() == eTeam && !unitx->alwaysInvisible() && unitx->getInvisibleType() == NO_INVISIBLE)
 					{
-						if (!(pLoopUnit->alwaysInvisible()) && (pLoopUnit->getInvisibleType() == NO_INVISIBLE))
-						{
-							break;
-						}
+						break; // No need to loop over tiles where we have regular units
 					}
 
-					if (pLoopUnit->isEnemy(eTeam)
-					&& pLoopUnit->canAttack()
-					&& !pLoopUnit->isInvisible(eTeam, false)
-					&& pLoopUnit->canEnterOrAttackPlot(pPlot))
+					if (unitx->isEnemy(eTeam)
+					&&  unitx->canAttack()
+					&& !unitx->isInvisible(eTeam, false)
+					&&  unitx->canEnterOrAttackPlot(pPlot))
 					{
 						if (!bTestMoves)
 						{
 							bResult = true;
 							break;
 						}
-						else
+						else if (iDistance <= unitx->baseMoves() + plotX->isValidRoute(unitx))
 						{
-							int iDangerRange = pLoopUnit->baseMoves();
-							iDangerRange += (pLoopPlot->isValidRoute(pLoopUnit) ? 1 : 0);
-							if (iDangerRange >= iDistance)
-							{
-								bResult = true;
-								break;
-							}
+							bResult = true;
+							break;
 						}
 					}
 				}
@@ -3465,32 +3444,20 @@ bool CvPlayerAI::AI_getAnyPlotDanger(const CvPlot* pPlot, int iRange, bool bTest
 		}
 	}
 
-	// The test moves case is a strict subset of the more general case,
-	// either is appropriate for setting the cache.  However, since the test moves
-	// case is called far more frequently, it is more important and the cache
-	// value being true is only assumed to mean that the plot is safe in the
-	// test moves case.
-	//if( bTestMoves )
+	if (GC.getGame().getNumGameTurnActive() == 1 && isTurnActive() && !GC.getGame().isMPOption(MPOPTION_SIMULTANEOUS_TURNS))
 	{
-		if (isTurnActive())
+		if (bResult)
 		{
-			if (!(GC.getGame().isMPOption(MPOPTION_SIMULTANEOUS_TURNS)) && (GC.getGame().getNumGameTurnActive() == 1))
+			if (iRange <= DANGER_RANGE)
 			{
-				if (bResult)
-				{
-					if (iRange <= DANGER_RANGE)
-					{
-						pPlot->setIsActivePlayerHasDangerCache(true);
-					}
-				}
-				else if (iRange >= DANGER_RANGE)
-				{
-					pPlot->setIsActivePlayerNoDangerCache(true);
-				}
+				pPlot->setActivePlayerHasDangerCache(true);
 			}
 		}
+		else if (iRange < pPlot->getActivePlayerSafeRangeCache())
+		{
+			pPlot->setActivePlayerSafeRangeCache(iRange);
+		}
 	}
-
 	return bResult;
 }
 
@@ -3509,12 +3476,9 @@ int CvPlayerAI::AI_getPlotDanger(const CvPlot* pPlot, int iRange, bool bTestMove
 		iRange = DANGER_RANGE;
 	}
 
-	if (bTestMoves && isTurnActive())
+	if (bTestMoves && isTurnActive() && iRange <= pPlot->getActivePlayerSafeRangeCache())
 	{
-		if ((iRange <= DANGER_RANGE) && pPlot->isActivePlayerNoDangerCache())
-		{
-			return 0;
-		}
+		return 0;
 	}
 
 #ifdef PLOT_DANGER_CACHING
@@ -3597,16 +3561,18 @@ int CvPlayerAI::AI_getPlotDangerInternal(const CvPlot* pPlot, int iRange, bool b
 		if (pLoopPlot->area() == pPlotArea)
 		{
 			const int iDistance = stepDistance(pPlot->getX(), pPlot->getY(), pLoopPlot->getX(), pLoopPlot->getY());
-			if (atWar(pLoopPlot->getTeam(), eTeam))
+
+			if (iDistance <= 2 && atWar(pLoopPlot->getTeam(), eTeam))
 			{
-				if (iDistance == 1)
+				if (iDistance == 0)
 				{
-					iBorderDanger++;
+					iBorderDanger += 4;
 				}
-				else if ((iDistance == 2) && (pLoopPlot->isRoute()))
+				else if (iDistance == 1)
 				{
-					iBorderDanger++;
+					iBorderDanger += 2;
 				}
+				else iBorderDanger++;
 			}
 
 			foreach_(const CvUnit * pLoopUnit, pLoopPlot->units())
@@ -3638,11 +3604,26 @@ int CvPlayerAI::AI_getPlotDangerInternal(const CvPlot* pPlot, int iRange, bool b
 		}
 	}
 
-	if (iBorderDanger > 0 && !isHumanPlayer() && !pPlot->isCity())
+	// Note that here we still count border danger in cities - because I want it for AI_cityThreat
+	if (iBorderDanger > 0 && (!isHumanPlayer() || pPlot->plotCheck(PUF_canDefend, -1, -1, NULL, getID())))
 	{
-		iCount += iBorderDanger;
+		iCount += (1 + iBorderDanger) / 2;
 	}
 
+	if (GC.getGame().getNumGameTurnActive() == 1 && isTurnActive() && !GC.getGame().isMPOption(MPOPTION_SIMULTANEOUS_TURNS))
+	{
+		if (iCount > 0)
+		{
+			if (iRange <= DANGER_RANGE)
+			{
+				pPlot->setActivePlayerHasDangerCache(true);
+			}
+		}
+		else if (iRange < pPlot->getActivePlayerSafeRangeCache())
+		{
+			pPlot->setActivePlayerSafeRangeCache(iRange);
+		}
+	}
 	return iCount;
 }
 
@@ -3914,7 +3895,7 @@ short CvPlayerAI::AI_fundingHealth(int iExtraExpense, int iExtraExpenseMod) cons
 		//	Prehistoric: 25 gold (ultrafast); 100 gold (normal); 1000 gold (eternity)
 		//	Ancient: 50 gold (ultrafast); 200 gold (normal); 2000 gold (eternity)
 		//	Classical: 125 gold (ultrafast); 500 gold (normal); 5000 gold (eternity)
-		const int iEraGoldThreshold = AI_goldTarget();
+		const int64_t iEraGoldThreshold = AI_goldTarget();
 		int64_t iValue;
 		if (iEraGoldThreshold < 1)
 		{
@@ -3964,10 +3945,10 @@ bool CvPlayerAI::AI_isFinancialTrouble() const
 	return !isNPC() && AI_fundingHealth() < AI_safeFunding();
 }
 
-int CvPlayerAI::AI_goldTarget() const
+int64_t CvPlayerAI::AI_goldTarget() const
 {
 	PROFILE_EXTRA_FUNC();
-	if (getNumCities() < 1)
+	if (getNumCities() < 1 || isNPC())
 	{
 		return 0;
 	}
@@ -3979,9 +3960,9 @@ int CvPlayerAI::AI_goldTarget() const
 			GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getHammerCostPercent()
 			+
 			GC.getHandicapInfo(GC.getGame().getHandicapType()).getAITrainPercent()
-			)
+		)
 	);
-	int iGold = iEra * (iEra * 2 * getNumCities() + getTotalPopulation()) * iModGS / 300;
+	int64_t iGold = iEra * (iEra * 2 * getNumCities() + getTotalPopulation()) * iModGS / 300;
 
 	iGold *= getInflationMod10000();
 	iGold /= 10000;
@@ -16943,7 +16924,7 @@ void CvPlayerAI::AI_doCommerce()
 	{
 		return;
 	}
-	int iGoldTarget = AI_goldTarget();
+	int64_t iGoldTarget = AI_goldTarget();
 
 	const bool bFlexResearch = isCommerceFlexible(COMMERCE_RESEARCH);
 	const bool bFlexCulture = isCommerceFlexible(COMMERCE_CULTURE);

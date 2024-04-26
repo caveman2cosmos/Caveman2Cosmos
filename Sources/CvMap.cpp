@@ -56,6 +56,7 @@ CvMap::CvMap(MapTypes eType)
 	, m_bCitiesDisplayed(true)
 	, m_bUnitsDisplayed(true)
 	, m_pMapPlots(NULL)
+	, m_climateZones(NULL)
 {
 	OutputDebugString("Calling constructor for Map: Start\n");
 
@@ -104,11 +105,18 @@ void CvMap::init(CvMapInitData* pInitInfo/*=NULL*/)
 	//--------------------------------
 	// Init other game data
 	gDLL->logMemState("CvMap before init plots");
+	const int iWidth = getGridWidth();
+	const int iHeight = getGridHeight();
+	m_climateZones = new ClimateZoneTypes[iHeight];
 	m_pMapPlots = new CvPlot[numPlots()];
-	for (int iX = 0; iX < getGridWidth(); iX++)
+
+	for (int iY = 0; iY < iHeight; iY++)
 	{
+		m_climateZones[iY] = NO_CLIMATE_ZONE;
+
 		gDLL->callUpdater();
-		for (int iY = 0; iY < getGridHeight(); iY++)
+
+		for (int iX = 0; iX < iWidth; iX++)
 		{
 			plotSorenINLINE(iX, iY)->init(iX, iY);
 		}
@@ -127,6 +135,7 @@ void CvMap::uninit()
 	SAFE_DELETE_ARRAY(m_paiNumBonusOnLand);
 
 	SAFE_DELETE_ARRAY(m_pMapPlots);
+	SAFE_DELETE_ARRAY(m_climateZones);
 
 	m_areas.uninit();
 
@@ -308,11 +317,11 @@ void CvMap::setupGraphical()
 {
 	PROFILE_FUNC();
 
-	if (GC.IsGraphicsInitialized() && m_pMapPlots != NULL)
+	if (GC.IsGraphicsInitialized() && m_pMapPlots)
 	{
 		for (int iI = 0; iI < numPlots(); iI++)
 		{
-			if ( (iI % 10) == 0 )
+			if ( (iI % 20) == 0 )
 			{
 				gDLL->callUpdater();	// allow windows msgs to update
 			}
@@ -394,9 +403,11 @@ void CvMap::moveUnitToMap(CvUnit& unit, int numTravelTurns)
 void CvMap::updateIncomingUnits()
 {
 	PROFILE_EXTRA_FUNC();
-	foreach_(TravelingUnit* travelingUnit, m_IncomingUnits)
+	for (std::vector<TravelingUnit*>::iterator it = m_IncomingUnits.begin(); it != m_IncomingUnits.end();)
 	{
-		if (travelingUnit->numTurnsUntilArrival-- <= 0)
+		TravelingUnit* travelingUnit = *it;
+		travelingUnit->numTurnsUntilArrival--;
+		if (travelingUnit->numTurnsUntilArrival <= 0)
 		{
 			GC.switchMap(m_eType);
 
@@ -407,10 +418,12 @@ void CvMap::updateIncomingUnits()
 			if (newUnit != NULL)
 			{
 				static_cast<CvUnitAI&>(*newUnit) = unit;
-				m_IncomingUnits.erase(&travelingUnit);
+				it = m_IncomingUnits.erase(it);
 				delete travelingUnit;
+				continue;
 			}
 		}
+		++it;
 	}
 }
 
@@ -1179,40 +1192,29 @@ void CvMap::calculateCanalAndChokePoints()
 }
 // Super Forts end
 
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD                      08/21/09                                jdog5000      */
-/*                                                                                              */
-/* Efficiency                                                                                   */
-/************************************************************************************************/
+
 // Plot danger cache
-void CvMap::invalidateIsActivePlayerNoDangerCache()
+void CvMap::invalidateActivePlayerPlotCache()
 {
 	PROFILE_FUNC();
 
-	for (int iI = 0; iI < numPlots(); iI++)
+	for (int iI = numPlots() - 1; iI > -1; iI--)
 	{
-		CvPlot* pLoopPlot = plotByIndex(iI);
-
-		pLoopPlot->setIsActivePlayerNoDangerCache(false);
-		pLoopPlot->setIsActivePlayerHasDangerCache(false);
-		pLoopPlot->CachePathValidityResult(NULL,false,false);
-		pLoopPlot->CachePathValidityResult(NULL,true,false);
+		plotByIndex(iI)->invalidateActivePlayerPlotCache();
 	}
 }
 
 
-void CvMap::invalidateIsTeamBorderCache(TeamTypes eTeam)
+void CvMap::invalidateBorderDangerCache(TeamTypes eTeam)
 {
 	PROFILE_FUNC();
 
-	for (int iI = 0; iI < numPlots(); iI++)
+	for (int iI = numPlots() - 1; iI > -1; iI--)
 	{
-		plotByIndex(iI)->setIsTeamBorderCache(eTeam, false);
+		plotByIndex(iI)->setBorderDangerCache(eTeam, false);
 	}
 }
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD                       END                                                  */
-/************************************************************************************************/
+
 
 
 const std::pair<CvPlot*, CvPlot*> CvMap::plots() const
@@ -1270,6 +1272,16 @@ void CvMap::read(FDataStreamBase* pStream)
 	// call the read of the free list CvArea class allocations
 	ReadStreamableFFreeListTrashArray(m_areas, pStream);
 
+	const int iHeight = getGridHeight();
+	if (iHeight > 0)
+	{
+		m_climateZones = new ClimateZoneTypes[iHeight];
+		for (int y = 0; y < iHeight; y++)
+		{
+			m_climateZones[y] = NO_CLIMATE_ZONE;
+		}
+		WRAPPER_READ_ARRAY(wrapper, "CvMap", iHeight, (int*)m_climateZones);
+	}
 	setup();
 
 	WRAPPER_READ_OBJECT_END(wrapper);
@@ -1310,6 +1322,8 @@ void CvMap::write(FDataStreamBase* pStream)
 
 	// call the read of the free list CvArea class allocations
 	WriteStreamableFFreeListTrashArray(m_areas, pStream);
+
+	WRAPPER_WRITE_ARRAY(wrapper, "CvArea", getGridHeight(), (int*)m_climateZones);
 
 	WRAPPER_WRITE_OBJECT_END(wrapper);
 }
@@ -1729,4 +1743,15 @@ void CvMap::toggleUnitsDisplay()
 
 
 	AddDLLMessage(GC.getGame().getActivePlayer(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_EXPOSED", MESSAGE_TYPE_INFO);
+}
+
+
+void CvMap::setClimateZone(const int y, const ClimateZoneTypes eClimateZone)
+{
+	m_climateZones[y] = eClimateZone;
+}
+
+ClimateZoneTypes CvMap::getClimateZone(const int y)
+{
+	return m_climateZones[y];
 }

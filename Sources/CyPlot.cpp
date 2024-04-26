@@ -83,11 +83,6 @@ bool CyPlot::isRiver() const
 	return m_pPlot ? m_pPlot->isRiver() : false;
 }
 
-CyPlot* CyPlot::getNearestLandPlot() const
-{
-	return m_pPlot ? new CyPlot(m_pPlot->getNearestLandPlot()) : NULL;
-}
-
 bool CyPlot::canHaveBonus(int /*BonusTypes*/ eBonus, bool bIgnoreLatitude) const
 {
 	return m_pPlot ? m_pPlot->canHaveBonus((BonusTypes)eBonus, bIgnoreLatitude) : false;

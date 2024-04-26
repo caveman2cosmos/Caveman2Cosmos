@@ -11906,7 +11906,7 @@ void CvPlayer::setTurnActiveForPbem(bool bActive)
 	{
 		m_bTurnActive = bActive;
 		GC.getGame().changeNumGameTurnActive(bActive ? 1 : -1);
-		GC.getMap().invalidateIsActivePlayerNoDangerCache();
+		GC.getMap().invalidateActivePlayerPlotCache();
 	}
 }
 
@@ -12234,8 +12234,7 @@ void CvPlayer::setTurnActive(bool bNewValue, bool bDoTurn)
 		gDLL->getInterfaceIFace()->updateCursorType();
 		gDLL->getInterfaceIFace()->setDirty(Score_DIRTY_BIT, true);
 
-		GC.getMap().invalidateIsActivePlayerNoDangerCache();
-		GC.getMap().invalidateIsTeamBorderCache(getTeam());
+		GC.getMap().invalidateActivePlayerPlotCache();
 	}
 }
 

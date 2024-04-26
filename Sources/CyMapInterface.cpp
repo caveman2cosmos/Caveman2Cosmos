@@ -100,5 +100,6 @@ void CyMapPythonInterface()
 		.def("getLastPathPlotByIndex", &CyMap::getLastPathPlotByIndex, python::return_value_policy<python::manage_new_object>(), "CyPlot (index) - get a plot on the path by its Index")
 
 		.def("moveUnitToMap", &CyMap::moveUnitToMap)
+		.def("setClimateZone", &CyMap::setClimateZone, "void (int y, ClimateZoneType eClimate)")
 	;
 }
