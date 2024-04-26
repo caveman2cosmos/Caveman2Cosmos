@@ -70,6 +70,7 @@ public:
 
 	void updateIncomingUnits();
 	void moveUnitToMap(CvUnit& unit, int numTravelTurns);
+	void deleteOffMapUnits();
 
 private:
 	void addViewport(int iXOffset, int iYOffset);

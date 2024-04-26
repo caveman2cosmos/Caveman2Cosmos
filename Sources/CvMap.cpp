@@ -135,12 +135,6 @@ void CvMap::uninit()
 		delete viewport;
 	}
 	m_viewports.clear();
-
-	foreach_(const TravelingUnit* unit, m_IncomingUnits)
-	{
-		delete unit;
-	}
-	m_IncomingUnits.clear();
 }
 
 // FUNCTION: reset()
@@ -418,6 +412,14 @@ void CvMap::updateIncomingUnits()
 	}
 }
 
+void CvMap::deleteOffMapUnits()
+{
+	foreach_(const TravelingUnit* unit, m_IncomingUnits)
+	{
+		delete unit;
+	}
+	m_IncomingUnits.clear();
+}
 
 void CvMap::doTurn()
 {
