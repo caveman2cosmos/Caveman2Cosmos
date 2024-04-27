@@ -4891,27 +4891,13 @@ void CvUnitAI::AI_cityDefenseExtraMove()
 		return;
 	}
 
-	CvCity* pCity;
-	bool bDanger = (GET_PLAYER(getOwner()).AI_getAnyPlotDanger(plot(), 3));
-
-	/************************************************************************************************/
-	/* BETTER_BTS_AI_MOD					  09/18/09								jdog5000	  */
-	/*																							  */
-	/* Settler AI																				   */
-	/************************************************************************************************/
-	if (!(plot()->isOwned()))
+	if (!plot()->isOwned() && getGroup()->getHeadUnitAI() == UNITAI_CITY_COUNTER)
 	{
-		if (getGroup()->getHeadUnitAI() == UNITAI_CITY_COUNTER)
+		if (AI_group(GroupingParams().withUnitAI(UNITAI_SETTLE).maxGroupSize(5).maxOwnUnitAI(2).maxPathTurns(4).allowRegrouping()))
 		{
-			if (AI_group(GroupingParams().withUnitAI(UNITAI_SETTLE).maxGroupSize(5).maxOwnUnitAI(2).maxPathTurns(4).allowRegrouping()))
-			{
-				return;
-			}
+			return;
 		}
 	}
-	/************************************************************************************************/
-	/* BETTER_BTS_AI_MOD					   END												  */
-	/************************************************************************************************/
 
 	if (AI_leaveAttack(2, 55, 150))
 	{
@@ -4922,20 +4908,6 @@ void CvUnitAI::AI_cityDefenseExtraMove()
 	{
 		return;
 	}
-	/************************************************************************************************/
-	/* DCM									 04/19/09								Johny Smith  */
-	/************************************************************************************************/
-		// RevolutionDCM - new field bombard ai
-		// Dale - RB: Field Bombard START
-		//if (AI_RbombardCity())
-		//{
-		//	return;
-		//}
-		// Dale - RB: Field Bombard END
-
-	/************************************************************************************************/
-	/* DCM									 END												  */
-	/************************************************************************************************/
 
 	if (getGroup()->getHeadUnitAI() == UNITAI_CITY_COUNTER)
 	{
@@ -4950,36 +4922,29 @@ void CvUnitAI::AI_cityDefenseExtraMove()
 		return;
 	}
 
-	if (getGroup()->getHeadUnitAI() == UNITAI_CITY_COUNTER)
+	if (plot()->getOwner() == getOwner())
 	{
-		if (!bDanger)
+		if (getGroup()->getHeadUnitAI() == UNITAI_CITY_COUNTER && !GET_PLAYER(getOwner()).AI_getAnyPlotDanger(plot(), 3))
 		{
-			if (plot()->getOwner() == getOwner())
+			if (GC.getGame().isOption(GAMEOPTION_COMBAT_SIZE_MATTERS))
 			{
-				if (GC.getGame().isOption(GAMEOPTION_COMBAT_SIZE_MATTERS))
-				{
-					if (AI_load(UNITAI_SETTLER_SEA, MISSIONAI_LOAD_SETTLER, UNITAI_SETTLE, -1, -1, ((SMCargoVolume() * 2) - 1), -1, MOVE_SAFE_TERRITORY, 1))
-					{
-						return;
-					}
-				}
-				else if (AI_load(UNITAI_SETTLER_SEA, MISSIONAI_LOAD_SETTLER, UNITAI_SETTLE, -1, -1, 1, -1, MOVE_SAFE_TERRITORY, 1))
+				if (AI_load(UNITAI_SETTLER_SEA, MISSIONAI_LOAD_SETTLER, UNITAI_SETTLE, -1, -1, ((SMCargoVolume() * 2) - 1), -1, MOVE_SAFE_TERRITORY, 1))
 				{
 					return;
 				}
 			}
+			else if (AI_load(UNITAI_SETTLER_SEA, MISSIONAI_LOAD_SETTLER, UNITAI_SETTLE, -1, -1, 1, -1, MOVE_SAFE_TERRITORY, 1))
+			{
+				return;
+			}
 		}
-	}
 
-	pCity = plot()->getPlotCity();
-
-	if ((pCity != NULL) && (pCity->getOwner() == getOwner())) // XXX check for other team?
-	{
-		int iMinLocalCounter = plot()->plotCount(PUF_isUnitAIType, UNITAI_CITY_COUNTER, -1, NULL, getOwner());
-		if (iMinLocalCounter < 2)
+		if (plot()->getPlotCity()
+		&&  plot()->getPlotCity()->getOwner() == getOwner()
+		&&  plot()->plotCount(PUF_isUnitAIType, UNITAI_CITY_COUNTER, -1, NULL, getOwner()) < 2)
 		{
 			getGroup()->pushMission(MISSION_SKIP, -1, -1, 0, false, false, MISSIONAI_GUARD_CITY, NULL);
-			getGroup()->AI_setAsGarrison(pCity);
+			getGroup()->AI_setAsGarrison(plot()->getPlotCity());
 			return;
 		}
 	}
@@ -5015,7 +4980,7 @@ void CvUnitAI::AI_cityDefenseExtraMove()
 		return;
 	}
 
-	if ((pCity != NULL) && (pCity->getOwner() == getOwner())) // XXX check for other team?
+	if (plot()->getPlotCity() && plot()->getPlotCity()->getOwner() == getOwner())
 	{
 		if (plot()->plotCount(PUF_canDefendGroupHead, -1, -1, NULL, getOwner(), NO_TEAM, PUF_isUnitAIType, AI_getUnitAIType()) == 1)
 		{
