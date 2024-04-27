@@ -966,7 +966,7 @@ protected:
 
 	// Plot danger cache
 	mutable bool m_bActivePlayerHasDangerCache;
-	mutable bool m_iActivePlayerSafeRangeCache;
+	mutable int m_iActivePlayerSafeRangeCache;
 	mutable bool* m_borderDangerCache;
 
 	static	int m_iGlobalCachePathEpoch;
