@@ -799,10 +799,15 @@ void CvGame::uninit()
 	{
 		CvMapInitData defaultMapData;
 
-		algo::for_each(GC.getMaps()
-			| filtered(bind(CvMap::plotsInitialized, _1))
-			, bind(CvMap::reset, _1, &defaultMapData)
-		);
+		foreach_(CvMap* map, GC.getMaps())
+		{
+			map->deleteOffMapUnits();
+
+			if (map->plotsInitialized())
+			{
+				map->reset(&defaultMapData);
+			}
+		}
 
 		for(int i = 0; i < MAX_PLAYERS; i++)
 		{
