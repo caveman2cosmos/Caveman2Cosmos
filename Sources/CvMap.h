@@ -15,13 +15,12 @@
 #include "CvArea.h"
 #include "CvMapInterfaceBase.h"
 #include "CvPlot.h"
-#include "CvUnitAI.h"
 #include "index_iterator_base.h"
 
 class CvCity;
 class CvPlotGroup;
 class CvSelectionGroup;
-//class CvUnitAI;
+class TravelingUnit;
 class CvViewport;
 
 inline int coordRange(int iCoord, int iRange, bool bWrap)
@@ -71,6 +70,7 @@ public:
 
 	void updateIncomingUnits();
 	void moveUnitToMap(CvUnit& unit, int numTravelTurns);
+	void deleteOffMapUnits();
 
 	//void deleteViewport(int iIndex);
 	CvViewport* getCurrentViewport() const;
@@ -273,18 +273,6 @@ private:
 	FFreeListTrashArray<CvArea> m_areas;
 
 	std::vector<CvViewport*> m_viewports;
-
-	struct TravelingUnit
-	{
-		TravelingUnit(const CvUnit& travelingUnit, int numTravelTurns)
-			: numTurnsUntilArrival(numTravelTurns)
-		{
-			unit = static_cast<const CvUnitAI&>(travelingUnit);
-		}
-
-		CvUnitAI unit;
-		int numTurnsUntilArrival;
-	};
 
 	std::vector<TravelingUnit*> m_IncomingUnits;
 	ClimateZoneTypes* m_climateZones;
