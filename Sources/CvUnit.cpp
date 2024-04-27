@@ -894,11 +894,6 @@ void CvUnit::reset(int iID, UnitTypes eUnit, PlayerTypes eOwner, bool bConstruct
 
 CvUnit& CvUnit::operator=(const CvUnit& other)
 {
-	//uninit();
-	//clearCityOfOrigin();
-
-	//static_cast<CvUnitAI&>(*this) = static_cast<const CvUnitAI&>(other);
-
 	m_iHealUnitCombatCount = other.m_iHealUnitCombatCount;
 	m_iDCMBombRange = other.m_iDCMBombRange;
 	m_iDCMBombAccuracy = other.m_iDCMBombAccuracy;
@@ -1224,8 +1219,19 @@ CvUnit& CvUnit::operator=(const CvUnit& other)
 
 	m_pPlayerInvestigated = other.m_pPlayerInvestigated;
 	m_Properties = other.m_Properties;
-	m_commander = other.m_commander;
-	m_worker = other.m_worker;
+
+	if (other.m_commander)
+	{
+		SAFE_DELETE(m_commander);
+		m_commander = new UnitCompCommander(this, m_pUnitInfo);
+		*m_commander = *other.m_commander;
+	}
+	if (other.m_worker)
+	{
+		SAFE_DELETE(m_worker);
+		m_worker = new UnitCompWorker();
+		*m_worker = *other.m_worker;
+	}
 
 	return *this;
 }
@@ -13248,11 +13254,11 @@ int CvUnit::maxCombatStr(const CvPlot* pPlot, const CvUnit* pAttacker, CombatDet
 
 		if (pPlot->isCity(true, getTeam()))
 		{
-			if (pAttacker != NULL && pAttacker->plot() != pPlot)
+			if (pAttacker && pAttacker->plot() != pPlot)
 			{
 				iExtraModifier = cityDefenseModifier() + cityDefenseVSOpponent(pAttacker);
 
-				if (pPlot->isCity(false))
+				if (pPlot->isCity())
 				{
 					//TB SubCombat Mod Begin
 					for (std::map<UnitCombatTypes, UnitCombatKeyedInfo>::const_iterator it = m_unitCombatKeyedInfo.begin(), end = m_unitCombatKeyedInfo.end(); it != end; ++it)
@@ -14979,7 +14985,7 @@ int CvUnit::collateralDamageMaxUnits() const
 
 int CvUnit::cityAttackModifier() const
 {
-	return (m_pUnitInfo->getCityAttackModifier() + getExtraCityAttackPercent());
+	return m_pUnitInfo->getCityAttackModifier() + getExtraCityAttackPercent();
 }
 
 int CvUnit::cityDefenseModifier() const
