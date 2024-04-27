@@ -25,7 +25,7 @@
 #include "CvPlotGroup.h"
 #include "CvPython.h"
 #include "CvSelectionGroup.h"
-#include "CvUnit.h"
+#include "CvUnitAI.h"
 #include "CvViewport.h"
 #include "CvDLLEngineIFaceBase.h"
 #include "CvDLLEntityIFaceBase.h"
@@ -144,12 +144,6 @@ void CvMap::uninit()
 		delete viewport;
 	}
 	m_viewports.clear();
-
-	foreach_(const TravelingUnit* unit, m_IncomingUnits)
-	{
-		delete unit;
-	}
-	m_IncomingUnits.clear();
 }
 
 // FUNCTION: reset()
@@ -394,6 +388,18 @@ void CvMap::setAllPlotTypes(PlotTypes ePlotType)
 }
 
 
+struct TravelingUnit
+{
+	TravelingUnit(const CvUnit& travelingUnit, int numTravelTurns)
+		: numTurnsUntilArrival(numTravelTurns)
+	{
+		unit = static_cast<const CvUnitAI&>(travelingUnit);
+	}
+
+	CvUnitAI unit;
+	int numTurnsUntilArrival;
+};
+
 void CvMap::moveUnitToMap(CvUnit& unit, int numTravelTurns)
 {
 	m_IncomingUnits.push_back(new TravelingUnit(unit, numTravelTurns));
@@ -425,6 +431,15 @@ void CvMap::updateIncomingUnits()
 		}
 		++it;
 	}
+}
+
+void CvMap::deleteOffMapUnits()
+{
+	foreach_(const TravelingUnit* unit, m_IncomingUnits)
+	{
+		delete unit;
+	}
+	m_IncomingUnits.clear();
 }
 
 
