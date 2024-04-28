@@ -4710,7 +4710,7 @@ void CvPlot::invalidateActivePlayerPlotCache()
 {
 	setActivePlayerSafeRangeCache(-1, true);
 	setActivePlayerSafeRangeCache(-1, false);
-	setActivePlayerHasDangerCache(false, false);
+	setActivePlayerHasDangerCache(false, true);
 	setActivePlayerHasDangerCache(false, false);
 
 	CachePathValidityResult(NULL, false, false);
