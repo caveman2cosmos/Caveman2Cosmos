@@ -20,8 +20,8 @@
 class CvCity;
 class CvPlotGroup;
 class CvSelectionGroup;
-class TravelingUnit;
 class CvViewport;
+struct TravelingUnit;
 
 inline int coordRange(int iCoord, int iRange, bool bWrap)
 {
