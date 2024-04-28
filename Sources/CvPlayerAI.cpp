@@ -3354,16 +3354,16 @@ bool CvPlayerAI::AI_getAnyPlotDanger(const CvPlot* pPlot, int iRange, bool bTest
 
 	if (iRange == -1) iRange = DANGER_RANGE;
 
-	if (bTestMoves && isTurnActive())
+	if (isTurnActive())
 	{
 		PROFILE("CvPlayerAI::AI_getAnyPlotDanger.ActiveTurn");
 
-		if (iRange <= pPlot->getActivePlayerSafeRangeCache())
+		if (iRange <= pPlot->getActivePlayerSafeRangeCache(bTestMoves))
 		{
 			PROFILE("CvPlayerAI::AI_getAnyPlotDanger.NoDangerHit");
 			return false;
 		}
-		if (iRange >= DANGER_RANGE && pPlot->getActivePlayerHasDangerCache())
+		if (iRange >= DANGER_RANGE && pPlot->getActivePlayerHasDangerCache(bTestMoves))
 		{
 			PROFILE("CvPlayerAI::AI_getAnyPlotDanger.HasDangerHit");
 			return true;
@@ -3444,18 +3444,18 @@ bool CvPlayerAI::AI_getAnyPlotDanger(const CvPlot* pPlot, int iRange, bool bTest
 		}
 	}
 
-	if (GC.getGame().getNumGameTurnActive() == 1 && isTurnActive() && !GC.getGame().isMPOption(MPOPTION_SIMULTANEOUS_TURNS))
+	if (isTurnActive() && !GC.getGame().isMPOption(MPOPTION_SIMULTANEOUS_TURNS))
 	{
 		if (bResult)
 		{
 			if (iRange <= DANGER_RANGE)
 			{
-				pPlot->setActivePlayerHasDangerCache(true);
+				pPlot->setActivePlayerHasDangerCache(true, bTestMoves);
 			}
 		}
-		else if (iRange < pPlot->getActivePlayerSafeRangeCache())
+		else if (iRange < pPlot->getActivePlayerSafeRangeCache(bTestMoves))
 		{
-			pPlot->setActivePlayerSafeRangeCache(iRange);
+			pPlot->setActivePlayerSafeRangeCache(iRange, bTestMoves);
 		}
 	}
 	return bResult;
@@ -3476,7 +3476,7 @@ int CvPlayerAI::AI_getPlotDanger(const CvPlot* pPlot, int iRange, bool bTestMove
 		iRange = DANGER_RANGE;
 	}
 
-	if (bTestMoves && isTurnActive() && iRange <= pPlot->getActivePlayerSafeRangeCache())
+	if (isTurnActive() && iRange <= pPlot->getActivePlayerSafeRangeCache(bTestMoves))
 	{
 		return 0;
 	}
@@ -3610,18 +3610,18 @@ int CvPlayerAI::AI_getPlotDangerInternal(const CvPlot* pPlot, int iRange, bool b
 		iCount += (1 + iBorderDanger) / 2;
 	}
 
-	if (GC.getGame().getNumGameTurnActive() == 1 && isTurnActive() && !GC.getGame().isMPOption(MPOPTION_SIMULTANEOUS_TURNS))
+	if (isTurnActive() && !GC.getGame().isMPOption(MPOPTION_SIMULTANEOUS_TURNS))
 	{
 		if (iCount > 0)
 		{
 			if (iRange <= DANGER_RANGE)
 			{
-				pPlot->setActivePlayerHasDangerCache(true);
+				pPlot->setActivePlayerHasDangerCache(true, bTestMoves);
 			}
 		}
-		else if (iRange < pPlot->getActivePlayerSafeRangeCache())
+		else if (iRange < pPlot->getActivePlayerSafeRangeCache(bTestMoves))
 		{
-			pPlot->setActivePlayerSafeRangeCache(iRange);
+			pPlot->setActivePlayerSafeRangeCache(iRange, bTestMoves);
 		}
 	}
 	return iCount;
