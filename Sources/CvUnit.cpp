@@ -16804,7 +16804,7 @@ int CvUnit::getEnemyRouteCount() const
 
 bool CvUnit::isEnemyRoute() const
 {
-	return (getEnemyRouteCount() > 0);
+	return getEnemyRouteCount() > 0;
 }
 
 void CvUnit::changeEnemyRouteCount(int iChange)

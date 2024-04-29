@@ -3345,9 +3345,36 @@ bool CvPlayerAI::AI_getVisiblePlotDanger(const CvPlot* pPlot, int iRange, bool b
 // multiplayer game with simultaneous turns.  The safety cache for all plots is reset when the active
 // player changes or a new game is loaded.
 //
-// The border cache is done by team and works for all game types.  The border cache is reset for all
-// plots when war or peace are declared, and reset over a limited range whenever a ownership over a plot
-// changes.
+// The border cache is done by team and works for all game types.  The border cache is reset for all plots
+// when war or peace are declared, and reset over a limited range whenever a ownership over a plot changes.
+
+
+int CvPlayerAI::AI_plotDangerUnitCheck(const CvPlot* pPlot, const CvPlot* plotX, const CvUnit* pUnit, const bool bTestMoves, const TeamTypes eTeam, const int iDistance) const
+{
+	if (pUnit->getTeam() == eTeam && !pUnit->alwaysInvisible() && pUnit->getInvisibleType() == NO_INVISIBLE)
+	{
+		return -1;
+	}
+
+	if (pUnit->isEnemy(eTeam)
+	&&  pUnit->canAttack()
+	&& !pUnit->isInvisible(eTeam, false)
+	&&  pUnit->canEnterOrAttackPlot(pPlot))
+	{
+		if (!bTestMoves)
+		{
+			return 1;
+		}
+		// Toffer - Would need a seperate path generator, or a second set of path generation cache, here to check if pUnit can reach pPlot in one turn
+		//	because generatePath calls this function so calling generatePath again inside a generatePath call would mess up the caching of it for the first call.
+		if (iDistance <= pUnit->baseMoves() + plotX->isValidRoute(pUnit))
+		{
+			return 1;
+		}
+	}
+	return 0;
+}
+
 bool CvPlayerAI::AI_getAnyPlotDanger(const CvPlot* pPlot, int iRange, bool bTestMoves) const
 {
 	PROFILE_FUNC();
@@ -3416,28 +3443,17 @@ bool CvPlayerAI::AI_getAnyPlotDanger(const CvPlot* pPlot, int iRange, bool bTest
 					break;
 				}
 
-				foreach_(const CvUnit * unitx, plotX->units())
+				foreach_(const CvUnit * unitX, plotX->units())
 				{
-					if (unitx->getTeam() == eTeam && !unitx->alwaysInvisible() && unitx->getInvisibleType() == NO_INVISIBLE)
+					const int iCheck = AI_plotDangerUnitCheck(pPlot, plotX, unitX, bTestMoves, eTeam, iDistance);
+					if (iCheck < 0)
 					{
 						break; // No need to loop over tiles where we have regular units
 					}
-
-					if (unitx->isEnemy(eTeam)
-					&&  unitx->canAttack()
-					&& !unitx->isInvisible(eTeam, false)
-					&&  unitx->canEnterOrAttackPlot(pPlot))
+					if (iCheck > 0)
 					{
-						if (!bTestMoves)
-						{
-							bResult = true;
-							break;
-						}
-						else if (iDistance <= unitx->baseMoves() + plotX->isValidRoute(unitx))
-						{
-							bResult = true;
-							break;
-						}
+						bResult = true;
+						break;
 					}
 				}
 			}
@@ -3556,13 +3572,13 @@ int CvPlayerAI::AI_getPlotDangerInternal(const CvPlot* pPlot, int iRange, bool b
 		iRange,
 		bTestMoves).c_str());
 
-	foreach_(const CvPlot * pLoopPlot, pPlot->rect(iRange, iRange))
+	foreach_(const CvPlot * plotX, pPlot->rect(iRange, iRange))
 	{
-		if (pLoopPlot->area() == pPlotArea)
+		if (plotX->area() == pPlotArea)
 		{
-			const int iDistance = stepDistance(pPlot->getX(), pPlot->getY(), pLoopPlot->getX(), pLoopPlot->getY());
+			const int iDistance = stepDistance(pPlot->getX(), pPlot->getY(), plotX->getX(), plotX->getY());
 
-			if (iDistance <= 2 && atWar(pLoopPlot->getTeam(), eTeam))
+			if (iDistance <= 2 && atWar(plotX->getTeam(), eTeam))
 			{
 				if (iDistance == 0)
 				{
@@ -3575,30 +3591,16 @@ int CvPlayerAI::AI_getPlotDangerInternal(const CvPlot* pPlot, int iRange, bool b
 				else iBorderDanger++;
 			}
 
-			foreach_(const CvUnit * pLoopUnit, pLoopPlot->units())
+			foreach_(const CvUnit * unitX, plotX->units())
 			{
-				// No need to loop over tiles full of our own units
-				if (pLoopUnit->getTeam() == eTeam
-				&& !pLoopUnit->alwaysInvisible()
-				&& pLoopUnit->getInvisibleType() == NO_INVISIBLE)
+				const int iCheck = AI_plotDangerUnitCheck(pPlot, plotX, unitX, bTestMoves, eTeam, iDistance);
+				if (iCheck < 0)
 				{
-					break;
+					break; // No need to loop over tiles where we have regular units
 				}
-				if (pLoopUnit->isEnemy(eTeam)
-				&& (pLoopUnit->canAttack() || pLoopUnit->plot() == pPlot)
-				&& !pLoopUnit->isInvisible(eTeam, false)
-				&& (pLoopUnit->canEnterOrAttackPlot(pPlot) || pLoopUnit->plot() == pPlot))
+				if (iCheck > 0)
 				{
-					if (bTestMoves)
-					{
-						const int iDangerRange = pLoopUnit->baseMoves() + pLoopPlot->isValidRoute(pLoopUnit);
-
-						if (iDangerRange >= iDistance)
-						{
-							iCount++;
-						}
-					}
-					else iCount++;
+					iCount++;
 				}
 			}
 		}

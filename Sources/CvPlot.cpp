@@ -4708,10 +4708,10 @@ int CvPlot::calculatePathDistanceToPlot( TeamTypes eTeam, CvPlot* pTargetPlot ) 
 
 void CvPlot::invalidateActivePlayerPlotCache()
 {
-	setActivePlayerSafeRangeCache(-1, true);
-	setActivePlayerSafeRangeCache(-1, false);
-	setActivePlayerHasDangerCache(false, true);
-	setActivePlayerHasDangerCache(false, false);
+	m_iActivePlayerSafeRangeCache = -1;
+	m_iActivePlayerSafeRangeCacheTestMoves = -1;
+	m_bActivePlayerHasDangerCache = false;
+	m_bActivePlayerHasDangerCacheTestMoves = false;
 
 	CachePathValidityResult(NULL, false, false);
 	CachePathValidityResult(NULL, true, false);
@@ -5366,7 +5366,7 @@ int CvPlot::getVisibleNonAllyStrength(PlayerTypes ePlayer) const
 
 bool CvPlot::isVisibleEnemyUnit(const CvUnit* pUnit) const
 {
-	return (plotCheck(PUF_isEnemy, pUnit->getOwner(), pUnit->isAlwaysHostile(this), pUnit, NO_PLAYER, NO_TEAM, PUF_isVisible, pUnit->getOwner()) != NULL);
+	return isVisible(pUnit->getTeam(), false) && plotCheck(PUF_isEnemy, pUnit->getOwner(), pUnit->isAlwaysHostile(this), pUnit, NO_PLAYER, NO_TEAM, PUF_isVisible, pUnit->getOwner());
 }
 
 bool CvPlot::isVisibleOtherUnit(PlayerTypes ePlayer) const
