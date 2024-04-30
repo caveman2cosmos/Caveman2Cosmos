@@ -1150,6 +1150,7 @@
 		<German>[COLOR_HIGHLIGHT_TEXT]Knochen[COLOR_REVERT] von toten Tieren zählen neben Holz und Stein zu den ältesten Werkstoffen der Menschheit. Aus Knochen ließen sich Werkzeuge und Geräte herstellen, mit denen wieder andere Werkstoffe bearbeitet werden konnten, so z.B. Nadeln und Ahlen. Schmuckperlen, Kämme und Haarnadeln wurden noch bis ins Mittelalter aus Knochen angefertigt. Beim Aushöhlen gelangte man auch an das Knochenmark, das lange Zeit eine wertvolle Nahrungsquelle war. Knochen zählen auch zu den ältesten bekannten Beschreibstoffen, denn in China wurden Schulterblätter bereits in der Steinzeit mit Orakelgesuchen beschrieben.</German>
 		<Italian>L'[COLOR_HIGHLIGHT_TEXT]osso[COLOR_REVERT] è un materiale utilizzato dalle prime società di cacciatori-raccoglitori per produrre utensili o armi. Le prime tracce di attrezzi in osso risalgono all'avvento dell'Homo sapiens, ma sono state trovate tracce di utensili in osso prodotti anche dall'Homo neanderthalensis.</Italian>
 		<Russian>Костяные орудия были задокументированы археологами с момента появления Homo sapiens, а также известны из контекстов Homo neanderthalensis или даже раньше. Кость - повсеместный материал в обществах охотников-собирателей, даже когда другие материалы для инструментов не были дефицитом или недоступны.</Russian>
+		<Polish>[COLOR_HIGHLIGHT_TEXT]Kość[COLOR_REVERT], to materiał używany przez pierwszych łowców-zbieraczy do produkcji narzędzi i broni. Pierwsze ślady narzędzi kostnych sięgają do początków Homo sapiens, ale odnaleziono także ślady narzędzi kostnych wytwarzanych przez Neandertalczyków.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_BOOKS</Tag>
@@ -1678,6 +1679,7 @@
 		<Tag>TXT_KEY_BONUS_CERMET</Tag>
 		<English>Cermet</English>
 		<Russian>Êåðìåò</Russian>
+		<Polish>Cermetal</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_CERMET_PEDIA</Tag>
@@ -1773,6 +1775,7 @@
 		<English>Chavín</English>
 		<Russian>×àâèíöû</Russian>
 		<Italian>Cittadino chavin</Italian>
+		<Polish>Chavin</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_CHECHEN</Tag>
@@ -3111,6 +3114,7 @@
 		<English>Femtobots</English>
 		<Italian>Femtobot</Italian>
 		<Russian>Фемтоботы</Russian>
+		<Polish>Femtoboty</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_FEMTOBOTS_PEDIA</Tag>
@@ -4142,6 +4146,7 @@
 		<German>Der [COLOR_HIGHLIGHT_TEXT]Hennastrauch[COLOR_REVERT] (Lawsonia inermis), der bis zu 8 m hoch wachsen kann, gehört zur Familie der Weiderichgewächse. Er bildet silbrig-grüne, ledrige Laubblätter, die er im Winter vollständig abwirft, und duftende, gelblich-weiße, in Rispenform angeordnete Blüten aus. Aus den Blättern wird Hennapulver gewonnen, das hauptsächlich zur Färbung der Haare dient. Es ist aber auch möglich, die Haut oder Stoffe wie Wolle oder Seide damit einzufärben.[NEWLINE]Schon den Ägyptern und Griechen war der Hennastrauch bekannt. Die Griechen und Römer nutzten die Blüten für ein wohlriechendes Öl. Die alten Ägypter nutzten Henna bereits für Bemalungen zu rituellen, aber auch kosmetischen Zwecken, was anhand von Mumienfunden belegt werden konnte. In Indien, dem Vorderen Orient und Nordafrika wird Henna auch heute noch bei Festlichkeiten für Körperverzierungen an Händen und Füßen benutzt. Durch Stars wie Madonna wurden in den späten 1990ern Henna-Tattoos auch in der westlichen Welt populär.</German>
 		<Italian>L'[COLOR_HIGHLIGHT_TEXT]hennè[COLOR_REVERT] è un colorante derivato dalla pianta Lawsonia inermis, nota anche come hina o albero di hennè. L'hennè può anche riferirsi alla tradizione di dipingere parti del corpo con il colorante. L'hennè è stato utilizzato fin dall'antichità per tingere la pelle, i capelli e le unghie, nonché tessuti come seta, lana e pelle. Storicamente, l'hennè veniva usato nella Penisola arabica, nel Subcontinente indiano, nel Vicino e Medio Oriente, a Cartagine, in altre parti del Nord Africa e nel Corno d'Africa. Il nome è usato in altre tinture per pelle e capelli, come l'hennè nero e l'hennè neutro, che non derivano dalla pianta di hennè.</Italian>
 		<Russian>Хна (Lawsonia inermis, также называемая деревом хны) - это цветущее растение, которое с древних времен использовалось для окрашивания кожи, волос, ногтей, кожи и шерсти. Это название также используется для красителей, полученных из растений, и для искусства временного нанесения татуировок на их основе. Кроме того, это название неправильно используется для других красок для кожи и волос, таких как черная хна или нейтральная хна, которые не являются производными растений.[PARAGRAPH:2]Хна - это высокий куст или небольшое дерево, высотой 2,6 м. Он голый, разветвленный, с веточками на конце шипа. Листья супротивные, цельнокрайние, голые, почти сидячие, эллиптические, широколанцетные (1,5-5,0 см x 0,5-2 см), заостренные, с вдавленными жилками на спинной поверхности. Цветки хны имеют четыре чашелистика и чашечку диаметром 2 мм с раскрытыми лепестками 3 мм. Лепестки - обратнояйцевидные, белые или красные тычинки, попарно вставленные на ободок трубки чашечки. Яичник четырехклеточный, длиной до 5 мм, прямостоячий. Плоды представляют собой маленькие коричневатые коробочки, диаметром 4-8 мм, с 32-49 семенами на плод, которые распадаются на четыре части.</Russian>
+		<Polish>[COLOR_HIGHLIGHT_TEXT]Henna[COLOR_REVERT], to barwnik roślinny produkowany z liści i pędów rośliny zwanej lawsonią bezbronną. Henna służy do malowania skóry od bardzo dawna. Wśród wykopalisk dawnego Egiptu znajdowano dowody farbowania henną mumii dostojników. Starożytni Egipcjanie henną malowali mumiom włosy, dłonie, stopy i paznokcie oraz płótna, w które były one zawinięte. W tym celu rozdrobnione liście mieszano z mleczkiem wapiennym, co w efekcie dawało kolor czerwony; poprzez dodatek substancji zawierających garbniki uzyskiwano kolor ciemnobrązowy lub czerwonożółty.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_HERERO</Tag>
@@ -4149,13 +4154,14 @@
 		<French>Héréro</French>
 		<Russian>Ãåðåðî</Russian>
 		<Italian>Cittadino herero</Italian>
+		<Polish>Hererska</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_HIDE</Tag>
 		<English>Hide</English>
 		<French>Peaux</French>
 		<Italian>Pelle animale</Italian>
-		<Polish>Sk&#243;rki traktowane</Polish>
+		<Polish>Sk&#243;ry</Polish>
 		<Russian>Øêóðû</Russian>
 	</TEXT>
 	<TEXT>
@@ -4163,6 +4169,7 @@
 		<English>A [COLOR_HIGHLIGHT_TEXT]hide[COLOR_REVERT] is an animal skin treated for human use. Although they are usually from large animals such as cows or buffalos, it can also refer to skins of smaller animals, such as goats, sheeps, deers, pigs, fishes, alligators, snakes, etc. All are used for shoes, clothes, leather bags, belts and other fashion accessories. Leather is also used in cars, upholstery, interior decorating, horse tack and harnesses. Skins are sometimes still gathered from hunting and processed at a domestic or artisanal level, but most leather making is now industrialized and large-scale.</English>
 		<Italian>Una [COLOR_HIGHLIGHT_TEXT]pelle trattata[COLOR_REVERT] è una pelle di animale trattata per uso umano. Sebbene di solito provengano da grandi animali come mucche o bufali, può anche riferirsi a pelli di animali più piccoli, come capre, pecore, cervi, maiali, pesci, alligatori, serpenti, ecc. Tutti questi tipi di pelle sono usati per produrre scarpe, vestiti, borse, cinture e altri accessori, ma anche per tappezzerie e decorazioni d'interni o di automobili, finimenti per cavalli e imbracature. Talvolta, alcune pelli possono provenire da animali cacciati e lavorate a livello domestico o artigianale, ma la maggior parte della produzione di pelletteria è ora industrializzata e su larga scala.</Italian>
 		<Russian>Шкура - это кожа животного, обработанная для использования человеком. Шкуры включают кожу крупного рогатого скота и других домашних животных, шкуры аллигатора, змеиные шкуры для обуви, модные аксессуары и меха диких кошек, норки и медведя. В некоторых регионах кожа производится в домашних условиях или в небольших промышленных масштабах, но в большинстве случаев производство кожи производится в крупных масштабах.</Russian>
+		<Polish>[COLOR_HIGHLIGHT_TEXT]Skóra[COLOR_REVERT] to skóra zwierzęca przeznaczona do użytku przez ludzi. Chociaż zwykle pochodzi od dużych zwierząt, takich jak krowy czy bawoły, może również odnosić się do skór mniejszych zwierząt, takich jak kozy, owce, jelenie, świnie, ryby, aligatory, węże itp. Ze skór wytwarza się obuwie, odzież, skórzane torby, paski i inne modne dodatki. Skórę wykorzystuje się także do produkcji samochodów, tapicerki i dekoracji wnętrz. Skóry są nadal zbierane podczas polowań i przetwarzane na poziomie domowym lub rzemieślniczym, ale większość wyrobów skórzanych ma obecnie charakter przemysłowy i odbywa się na dużą skalę.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_HIERACOSPHINX</Tag>
@@ -4170,18 +4177,21 @@
 		<French>Hiéracosphinx</French>
 		<Italian>Ieracosfinge</Italian>
 		<Russian>Èåðàêîñôèíêñ</Russian>
+		<Polish>Hierakosfinks</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_HIERACOSPHINX_PEDIA</Tag>
 		<English>The [COLOR_HIGHLIGHT_TEXT]hieracosphinx[COLOR_REVERT] is a mythical beast found in Egyptian sculpture and European heraldry, with the head of a hawk and the body of a lion. Sometimes it is depicted with a headdress. The combination of the two animals makes the hieracosphinx a symbol of royalty.</English>
 		<Italian>La [COLOR_HIGHLIGHT_TEXT]ieracosfinge[COLOR_REVERT] è una bestia mitica, spesso presente nella scultura egizia e nell'araldica europea, con la testa di un falco e il corpo di un leone. A volte è raffigurata con un copricapo. La combinazione dei due animali rende la ieracosfinge un simbolo di regalità.</Italian>
 		<Russian>Иеракосфинкс - мифический зверь, встречающийся в египетской скульптуре и европейской геральдике.[PARAGRAPH:2]У Иеракосфинкса голова ястреба и тело льва. Это название было придумано Геродотом для сфинксов с ястребиными головами, которых он видел в Египте (второй - сфинкс с головой барана, которого Геродот называл криосфинксом).</Russian>
+		<Polish>[COLOR_HIGHLIGHT_TEXT]Hierakosfinks[COLOR_REVERT], to mityczna bestia występująca w egipskiej rzeźbie i europejskiej heraldyce, z głową jastrzębia i ciałem lwa. Czasami jest przedstawiany z nakryciem głowy. Połączenie tych dwóch zwierząt sprawia, że hierakosfinks jest symbolem rodziny królewskiej.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_HIMYARITE</Tag>
 		<English>Himyarite</English>
 		<Italian>Cittadino himyarita</Italian>
 		<Russian>Õèìüÿðèòû</Russian>
+		<Polish>Himjarydzka</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_HITTITE</Tag>
@@ -4209,6 +4219,7 @@
 		<English>A [COLOR_HIGHLIGHT_TEXT]hit movie[COLOR_REVERT], also called blockbuster, is a feature film that is highly popular and financially successful. The term has also come to refer to any large-budget production intended for "blockbuster" status, aimed at mass markets with associated merchandising, sometimes on a scale that meant the financial fortunes of a film studio or a distributor could depend on it. The first use of the term was in 1943, but only by mid-1970s the term reached widespread popularity.</English>
 		<Italian>Un [COLOR_HIGHLIGHT_TEXT]film di successo[COLOR_REVERT], chiamato anche blockbuster, è un film molto popolare e di grande successo al botteghino. Il termine comprende, più in generale, qualsiasi produzione cinematografica con un grande budget rivolta al grande pubblico, con un merchandising associato, talvolta prodotto su una scala talmente ampia da poter determinare la sorte di uno studio cinematografico o di un distributore. Il primo uso del termine fu nel 1943, ma solo a metà degli anni settanta il termine raggiunse una popolarità diffusa.</Italian>
 		<Russian>Блокбастер - это художественный фильм, который пользуется большой популярностью и имеет финансовый успех. Этот термин также используется для обозначения любой крупнобюджетной продукции, предназначенной для статуса «блокбастера», нацеленной на массовые рынки с сопутствующим мерчендайзингом, иногда в масштабах, которые означали, что от этого могут зависеть финансовые состояния киностудии или дистрибьютора. Впервые этот термин был использован в 1943 году, но только к середине 1970-х годов термин приобрел широкую популярность.</Russian>
+		<Polish>[COLOR_HIGHLIGHT_TEXT]Przebój filmowy[COLOR_REVERT], zwany także hitem kinowym, to film fabularny, który cieszy się dużą popularnością i sukcesem finansowym. Termin ten zaczął również odnosić się do każdej wysokobudżetowej produkcji, która ma uzyskać status przeboju, skierowanej na rynki masowe i powiązanej z nią sprzedaży, czasami na skalę oznaczającą, że od niej mogą zależeć losy finansowe studia filmowego lub dystrybutora. Termin ten po raz pierwszy pojawił się w 1943 r., ale dopiero w połowie lat 70. XX wieku osiągnął powszechną popularność.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_HIT_MUSICALS</Tag>
@@ -4221,7 +4232,7 @@
 		</German>
 		<Italian>Musical di successo</Italian>
 		<Spanish>Musicales de éxito</Spanish>
-		<Polish>Przeboje musikalowe</Polish>
+		<Polish>Przebojowe musicale</Polish>
 		<Russian>Ìþçèêëû</Russian>
 	</TEXT>
 	<TEXT>
@@ -4229,6 +4240,7 @@
 		<English>[COLOR_HIGHLIGHT_TEXT]Musical theatre[COLOR_REVERT] is a form of theatrical performance that combines songs, spoken dialogue, acting and dance. The story and emotional content of a musical – humor, pathos, love, anger – are communicated through words, music, movement and technical aspects of the entertainment as an integrated whole. Since the early 20th century, musical theatre stage works have generally been called, simply, "musicals". Although music has been a part of dramatic presentations since ancient times, modern Western musical theatre emerged during 19th century.</English>
 		<Italian>Il [COLOR_HIGHLIGHT_TEXT]teatro musicale[COLOR_REVERT] è una forma di spettacolo teatrale che combina canzoni, dialoghi parlati, recitazione e danza. La storia e il contenuto emotivo di un musical - umorismo, pathos, amore, rabbia - sono comunicati attraverso parole, musica, movimento e aspetti tecnici dell'intrattenimento come un tutt'uno integrato. Dall'inizio del XX secolo, le opere teatrali di teatro musicale sono state generalmente chiamate semplicemente "musical". Sebbene la musica abbia fatto parte di rappresentazioni drammatiche fin dai tempi antichi, il canone dei moderni musical occidentali ha iniziato a definirsi nel corso del XIX secolo.</Italian>
 		<Russian>Мюзикл - это форма театрального представления, в котором сочетаются песни, разговорный диалог, игра и танец. История и эмоциональное содержание мюзикла - юмор, пафос, любовь, гнев - передаются через слова, музыку, движения и технические аспекты развлечения как единое целое. С начала ХХ века сценические произведения музыкального театра обычно назывались просто «мюзиклами». Хотя музыка была частью драматических представлений с древних времен, современный западный музыкальный театр возник в XIX веке.</Russian>
+		<Polish>[COLOR_HIGHLIGHT_TEXT]Teatr muzyczny[COLOR_REVERT] to forma przedstawienia teatralnego, która łączy w sobie pieśni, dialogi mówione, grę aktorską i taniec. Fabuła i zawartość emocjonalna musicalu - humor, patos, miłość, złość - są przekazywane poprzez słowa, muzykę, ruch i techniczne aspekty rozrywki jako zintegrowana całość. Od początku XX wieku dzieła sceniczne teatru muzycznego nazywano po prostu "musicalami". Chociaż muzyka była częścią przedstawień dramatycznych od czasów starożytnych, nowoczesny zachodni teatr muzyczny pojawił się w XIX wieku.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_HIT_SINGLES</Tag>
@@ -4249,6 +4261,7 @@
 		<English>A [COLOR_HIGHLIGHT_TEXT]hit single[COLOR_REVERT], also known as hit song, hit record, or simply hit, is a recorded song or instrumental that becomes broadly popular or well-known. Although hit song means any widely played or big-selling song, the specific term usually refers to a single that has appeared in an official music chart, through repeated radio airplay or significant commercial sales.</English>
 		<Italian>Una [COLOR_HIGHLIGHT_TEXT]canzone di successo[COLOR_REVERT] è un brano registrato o strumentale che diventa ampiamente popolare o noto. Sebbene il termine "canzone di successo" sia comunemente usato per indicare qualsiasi canzone ampiamente suonata o conosciuta, il termine specifico di solito si riferisce a un singolo che è apparso in una classifica musicale ufficiale, attraverso ripetute trasmissioni radiofoniche o vendite commerciali significative.</Italian>
 		<Russian>Шлягер - это записанная песня или инструментал, который становится широко популярным или широко известным. Хотя хитовая песня означает любую широко исполняемую или пользующуюся большим спросом песню, конкретный термин обычно относится к синглу, который появился в официальном музыкальном чарте, благодаря неоднократным трансляциям по радио или значительным коммерческим продажам.</Russian>
+		<Polish>[COLOR_HIGHLIGHT_TEXT]Hitowy singiel[COLOR_REVERT], znany również jako hit, to nagrana piosenka lub utwór instrumentalny, który staje się powszechnie popularny lub dobrze znany. Chociaż hit oznacza dowolną powszechnie odtwarzaną lub dobrze sprzedającą się piosenkę, konkretny termin zwykle odnosi się do singla, który pojawił się na oficjalnych listach przebojów dzięki wielokrotnym emisjom radiowym lub znaczącym sprzedażom komercyjnym.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_HOLOGRAPHIC_PROJECTORS</Tag>
@@ -4263,13 +4276,14 @@
 		<English>A [COLOR_HIGHLIGHT_TEXT]holographic projector[COLOR_REVERT] is a type of projector that utilizes light diffraction to create a virtual three-dimensional image of an object. Holographic projectors are distinguished from other forms of 3D imaging in that they do not require the aid of any special glasses or external equipment for a viewer to see the image.</English>
 		<Italian>Un [COLOR_HIGHLIGHT_TEXT]proiettore olografico[COLOR_REVERT] è un tipo di proiettore che utilizza la diffrazione della luce per creare un'immagine tridimensionale virtuale di un oggetto. I proiettori olografici si distinguono da altre forme di apparecchiature tridimensionali perché non richiedono l'ausilio di occhiali speciali o apparecchiature esterne affinché uno spettatore possa vedere l'immagine.</Italian>
 		<Russian>Голография - это метод, который позволяет составить трехмерное изображение. Он предполагает использование лазера, интерференции, дифракции, интенсивности света для записи и любой освещенности. Изображение меняется как в положении и ориентации системы просмотра изменений точно таким же образом, как будто объекты все еще присутствовали, тем самым делая изображение трехмерным. Голографическая запись сама по себе не изображение; она состоит из по-видимому, из случайной структуры различной интенсивности, плотности или профиля.</Russian>
+		<Polish>[COLOR_HIGHLIGHT_TEXT]Projektor holograficzny[COLOR_REVERT], to rodzaj projektora, który wykorzystuje dyfrakcję światła do tworzenia wirtualnego trójwymiarowego obrazu obiektu. Projektory holograficzne różnią się od innych form obrazowania 3D tym, że nie wymagają pomocy żadnych specjalnych okularów ani sprzętu zewnętrznego, aby widz mógł zobaczyć obraz.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_HOLY_ROMAN</Tag>
 		<English>Holy Roman</English>
 		<French>Saint romain</French>
 		<Italian>Cittadino del sacro romano impero</Italian>
-		<Polish>Sw. Cesarstwa Rzymskiego</Polish>
+		<Polish>Św. Cesarstwa Rzymskiego</Polish>
 		<Russian>Ëàòèíÿíå</Russian>
 	</TEXT>
 	<TEXT>
@@ -4287,12 +4301,14 @@
 		<English>[COLOR_HIGHLIGHT_TEXT]Honey[COLOR_REVERT] is a sweet, viscous food substance, made by bees from floral nectar or from secretions of other insects (such as honeydew), by regurgitation, enzymatic activity, and water evaporation. Bees store honey in wax structures called honeycombs. The variety of honey produced by honey bees is the best-known, due to its worldwide commercial production and human consumption. Honey is collected from wild bee colonies, or from hives of domesticated bees, a practice known as beekeeping or apiculture. Honey use and production have a long and varied history as an ancient activity. Several cave paintings in Spain depict humans foraging for honey at least 8,000 years ago.</English>
 		<Italian>Il [COLOR_HIGHLIGHT_TEXT]miele[COLOR_REVERT] è una sostanza alimentare dolce e viscosa, prodotta dalle api dal nettare floreale o dalle secrezioni di altri insetti (come la melata), tramite rigurgito, attività enzimatica ed evaporazione dell'acqua. Le api immagazzinano il miele in strutture di cera chiamate favi. La varietà di miele prodotta dalle api è la più nota, grazie alla sua produzione commerciale mondiale e al consumo umano. Il miele viene raccolto da colonie di api selvatiche o da alveari di api domestiche - pratica nota come apicoltura. L'uso e la produzione del miele hanno una storia lunga e variegata come attività antica. Diverse pitture rupestri in Spagna raffigurano umani che cercano miele risalenti ad almeno 8.000 anni fa.</Italian>
 		<Russian>Медоносные пчелы превращают нектар в мед в процессе срыгивания и хранят его в качестве основного источника пищи в восковых сотах внутри улья. Практика пчеловодства способствует перепроизводству меда, чтобы излишки можно было забрать из колонии.[PARAGRAPH:2]Мед - сладкая пища, которую производят медоносные пчелы (и некоторые другие виды) и получают из нектара цветов. Согласно Национальному совету США по меду и различным международным нормам в области пищевых продуктов, «мед - это чистый продукт, который не позволяет добавлять какие-либо другие вещества, включая, помимо прочего, воду или другие подсластители». Мед получает свою сладость от моносахаридов фруктозы и глюкозы и имеет примерно такую же относительную сладость, как и сахар-песок (97% сладости сахарозы, дисахарида). Мед обладает привлекательными химическими свойствами для выпечки и характерным ароматом, из-за чего некоторые люди предпочитают его сахару и другим подсластителям.</Russian>
+		<Polish>[COLOR_HIGHLIGHT_TEXT]Miód[COLOR_REVERT] jest słodką, lepką substancją spożywczą wytwarzaną przez pszczoły z nektaru kwiatowego lub wydzielin innych owadów (takich jak spadź) w wyniku regurgitacji, aktywności enzymatycznej i odparowania wody. Pszczoły przechowują miód w strukturach woskowych zwanych plastrami miodu. Odmiana miodu produkowanego przez pszczoły miodne jest najbardziej znana ze względu na ogólnoświatową produkcję komercyjną i spożycie przez ludzi. Miód zbiera się z koloni dzikich pszczół lub z uli pszczół udomowionych, co jest praktyką znaną jako pszczelarstwo. Wykorzystanie i produkcja miodu mają długą historię sięgającą aż do starożytności. Kilka malowideł jaskiniowych w Hiszpanii przedstawia ludzi poszukujących miodu co najmniej 8 000 lat temu.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_HONGKONGER</Tag>
 		<English>Hongkonger</English>
 		<Italian>Cittadino hongkonghese</Italian>
 		<Russian>Ãîíêîíãöû</Russian>
+		<Polish>Hongkongijska</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_HOPEWELL</Tag>
@@ -4326,6 +4342,7 @@
 		<German>[COLOR_HIGHLIGHT_TEXT]Pferde[COLOR_REVERT] gibt es seit mehr als 50 Millionen Jahren. Sie sind die wohl nützlichsten domestizierten Tiere in der Geschichte der Menschheit. Obwohl sich ihr Äußeres im Laufe der Jahre kaum verändert hat, haben die Pferde eine bedeutende Evolution durchlaufen. Immerhin waren ihre frühzeitlichen Artgenossen nur etwa 30 cm groß. Ursprünglich jagten die Menschen Pferde zu Nahrungszwecken. Erst um 2500 vor Christus tauchten die ersten domestizierten Züchtungen in Asien auf. Diese Idee wurde so gut angenommen, dass sie sich schnell in andere Länder ausbreitete. Ihr Beitrag zur Ausbreitung der Völker war enorm, da erst die Pferde die gewaltigen Feldzüge Dschingis Khans und Alexanders des Großen ermöglichten. Im 16. Jahrhundert brachten die Spanier die heutigen Pferderassen nach Nordamerika. Oft ließen sie dort ihre Herden zurück, um auf ihren Schiffen mehr Platz für Gold und andere erbeutete Schätze zu haben. Obwohl die Bedeutung des Pferdes seit der Erfindung des Verbrennungsmotors deutlich rückläufig ist, hat es in der Landwirtschaft und im Sport bis heute einen festen Platz.</German>
 		<Italian>Un [COLOR_HIGHLIGHT_TEXT]cavallo[COLOR_REVERT] è un mammifero ungulato, appartenente alla famiglia tassonomica degli equidi. I cavalli sono naturalmente portati alla corsa, cosa che gli permette di sfuggire rapidamente ai predatori, e possiedono un eccellente senso di equilibrio e una forte attitudine alla lotta e alla fuga. Gli umani iniziarono ad addomesticare i cavalli intorno al 4000 a.C. e si ritiene che la loro domesticazione fosse diffusa nel 3000 a.C., venendo storicamente impiegati anche in guerra. Con il tempo, i cavalli sono stati impiegati dalle forze di polizia e anche in attività lavorative come l'agricoltura, l'intrattenimento, lo sport e la terapia. I cavalli sono utilizzati anche per la carne, il latte, la pelle, i peli, le ossa e per prodotti farmaceutici estratti dall'urina delle cavalle in gravidanza.</Italian>
 		<Russian>Пожалуй, самые полезные домашние животные в истории человечества, лошади существуют как вид около 50 миллионов лет. Хотя произошла значительная эволюция (ранние предки были ниже фута), внешний вид лошади остался относительно неизменным. Самое раннее взаимодействие между лошадьми и людьми было связано с охотой, когда человек охотился на них ради пропитания. Около 2500 г. до н.э. в Азии начали появляться первые признаки одомашнивания, но эта идея быстро распространилась. Вклад лошади в завоевание человеком своих собратьев был огромен, что позволило Чингисхану и Александру Великому проводить обширные кампании. Испанцы завезли эту современную породу в Северную Америку в 16 веке, часто выпуская импортированные стада перед возвращением в Европу (освобождая драгоценное место для золота и других сокровищ). Хотя значение лошадей уменьшилось с момента появления двигателя внутреннего сгорания, они остаются благом в сферах развлечений и сельского хозяйства.</Russian>
+		<Polish>[COLOR_HIGHLIGHT_TEXT]Koń[COLOR_REVERT], to ssak kopytny, należący do taksonomicznej rodziny koniowatych. Konie są przystosowane do biegania, co pozwala im szybko uciekać przed drapieżnikami, posiadają doskonałe poczucie równowagi i silną reakcję walki lub ucieczki. Ludzie zaczęli udomawiać konie około 4000 roku p.n.e. i uważa się, że ich udomowienie było powszechne już około 3000 roku p.n.e. Historycznie konie wykorzystywano w działaniach wojennych. Z czasem jednak zaczęto je wykorzystywać także do zajęć zawodowych, takich jak praca w policji, rolnictwo, rozrywka, sport i terapia.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_HOVERCRAFTS</Tag>
@@ -4342,6 +4359,7 @@
 		<German>Ein Luftkissenfahrzeug ist ein Amphibienfahrzeug, das durch Luft getragen wird, die eine Art Kissen bildet. Es wird meist auf dem Wasser eingesetzt und dient dem Güter- und Personentransport, als Expeditionsfahrzeug oder als Hilfsfahrzeug bei Rettungsdiensten und Feuerwehren. Zum Führen ist eine der Fahrzeuggröße entsprechende Fahrerlaubnis für ein Wasserfahrzeug notwendig.</German>
 		<Italian>Un [COLOR_HIGHLIGHT_TEXT]hovercraft[COLOR_REVERT] è un velivolo anfibio in grado di viaggiare su terra, acqua, fango, ghiaccio e altre superfici. Un hovercraft utilizza i soffiatori per produrre un "cuscino d'aria" sotto lo scafo, di pressione leggermente superiore a quella atmosferica. La differenza di pressione produce un sollevamento, che fa galleggiare lo scafo sopra la superficie. Per motivi di stabilità, l'aria viene generalmente soffiata attraverso fessure o fori praticate in una piattaforma ovale o discoidale, conferendo alla maggior parte degli hovercraft una caratteristica forma rettangolare. In genere, questo cuscino è contenuto in una "gonna" flessibile, che consente al veicolo di spostarsi su piccoli ostacoli senza danni.</Italian>
 		<Russian>Ñóäíî íà âîçäóøíîé ïîäóøêå èëè ÑÂÏ - ýòî êîðàáëü, êîòîðûé ñïîñîáåí ïåðåìåùàòüñÿ ïî çåìëå, âîäå, ãðÿçè èëè ëüäó è äðóãèõ ïîâåðõíîñòÿõ òàêæå êàê è îñòàíàâëèâàòüñÿ íà íèõ. ÑÂÏ êàê ãèáðèäíîå ñóäíî, áîëüøå óïðàâëÿåòñÿ ïèëîòîì, à íå êàïèòàíîì, êàê íà ìîðñêèõ ñóäàõ. Îíè ðàáîòàþò, ñîçäàâàÿ çîíó íèçêîãî äàâëåíèÿ, âûñîêîãî îáüåìà âîçäóõà ìåæäó êîðïóñîì ñîñóäà è ïîäñòèëàþùåé ïîâåðõíîñòüþ. Îáû÷íî ýòà ïîäóøêà ïðèâîäèòñÿ â ãèáêèé "ïîäîë". Îíè îáû÷íî ïàðÿò íà âûñîòàõ îò 200 ìì (7.9 Â) ëèáî 600 ìì (24 äþéìà) âûøå ëþáîé ïîâåðõíîñòè è äâèãàþòñÿ ñî ñêîðîñòüþ ñâûøå 20 óçëîâ (23 ìèëè â ÷àñ) è ìîãóò îãèáàòü óêëîíû äî 20 ãðàäóñîâ. Ïåðâàÿ ïðàêòè÷åñêàÿ êîíñòðóêöèÿ íà âîçäóøíîé ïîäóøêå áûëà ðàçðàáîòàíà àíãëè÷àíàìè â 1950-1960-å ãîäû. Îíè ñåé÷àñ èñïîëüçóþòñÿ âî âñåì ìèðå êàê ñïåöèàëèçèðîâàííûå òðàíñïîðòû â ëèêâèäàöèè ïîñëåäñòâèé ñòèõèéíûõ áåäñòâèé, áåðåãîâîé îõðàíû, âîåííûõ è èññëåäîâàòåëüñêèõ öåëåé, à òàêæå äëÿ ñïîðòà èëè îáñëóæèâàíèÿ ïàññàæèðîâ. Íàèáîëåå êðóïíûå ýêñçåìïëÿðû èñïîëüçóþòñÿ äëÿ ïåðåâîçêè ñîòíè ëþäåé è àâòîìîáèëåé ÷åðåç Ëà-Ìàíø, â òî âðåìÿ êàê äðóãèå èìåþò âîåííîå ïðèìåíåíèå, è èñïîëüçóåþòñÿ äëÿ ïåðåâîçêè òàíêîâ, ñîëäàò è êðóïíîãàáàðèòíîãî îáîðóäîâàíèÿ âî âðàæäåáíîé ñðåäå è ìåñòíîñòè.</Russian>
+		<Polish>[COLOR_HIGHLIGHT_TEXT]Poduszkowiec[COLOR_REVERT], znany również jako ACV, to amfibia zdolna do poruszania się po lądzie, wodzie, błocie, lodzie i innych powierzchniach. Poduszkowiec wykorzystuje dmuchawy do wytwarzania dużej ilości powietrza pod kadłubem lub poduszką powietrzną; nieco powyżej ciśnienia atmosferycznego. Różnica ciśnień wytwarza siłę nośną, która powoduje, że kadłub unosi się nad powierzchnią. Żeby zapewnić stabilność, powietrze jest zwykle wdmuchiwane przez szczeliny lub otwory wokół zewnętrznej strony platformy w kształcie dysku lub owalu, co nadaje większości poduszkowców charakterystyczny kształt zaokrąglonego prostokąta. Zazwyczaj poduszka ta jest umieszczona w elastycznej "spódniczce", która umożliwia pojazdowi przejazd przez małe przeszkody bez uszkodzeń.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_HUASTEC</Tag>
@@ -4349,6 +4367,7 @@
 		<French>Huaxtèque</French>
 		<Italian>Cittadino huaxteco</Italian>
 		<Russian>Óàñòåêè</Russian>
+		<Polish>Huastedzka</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_HUMAN_MOD_ALIEN_HYBRID</Tag>
@@ -4356,6 +4375,7 @@
 		<French>Modification humaine (Alien hybride)</French>
 		<Italian>Ibrido alieno (modificazione umana)</Italian>
 		<Russian>Постлюди (Ксеноантропы)</Russian>
+		<Polish>Modyfikacja człowieka (Hybryda obcych)</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_HUMAN_MOD_ARCHAILECT</Tag>
@@ -4363,6 +4383,7 @@
 		<French>Modification humaine (Archailecte)</French>
 		<Italian>IArchetipico (modificazione umana)</Italian>
 		<Russian>Постлюди (Цирронианцы)</Russian>
+		<Polish>Modyfikacja człowieka (Archailekt)</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_HUMAN_MOD_ATEMPORAL</Tag>
@@ -4370,6 +4391,7 @@
 		<French>Modification humaine (Atemporel)</French>
 		<Italian>Atemporale (modificazione umana)</Italian>
 		<Russian>Постлюди (Вневременные)</Russian>
+		<Polish>Modyfikacja człowieka (Bezczasowy)</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_HUMAN_MOD_COGNITIVE_ENHANCEMENT</Tag>
@@ -4377,6 +4399,7 @@
 		<French>Modification humaine (Amélioration cognitive)</French>
 		<Italian>Potenziamento cognitivo (modificazione umana)</Italian>
 		<Russian>Постлюди (Нооантропы)</Russian>
+		<Polish>Modyfikacja człowieka (Wzmocnienie funkcji poznawczych)</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_HUMAN_MOD_COLD_TOLERANCE</Tag>
@@ -4384,6 +4407,7 @@
 		<French>Modification humaine (Tolérance au froid)</French>
 		<Italian>Tolleranza al freddo (modificazione umana)</Italian>
 		<Russian>Постлюди (Холодостойкие)</Russian>
+		<Polish>Modyfikacja człowieka (Tolerancja na zimno)</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_HUMAN_MOD_COLLECTIVE_CONSCIOUSNESS</Tag>
@@ -4391,6 +4415,7 @@
 		<French>Modification humaine (Conscience collective)</French>
 		<Italian>Coscienza collettiva (modificazione umana)</Italian>
 		<Russian>Постлюди (Улей)</Russian>
+		<Polish>Modyfikacja człowieka (Świadomość zbiorowa)</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_HUMAN_MOD_DESIGNER_BABIES</Tag>
@@ -4398,6 +4423,7 @@
 		<French>Modification humaine (Enfants sur mesure)</French>
 		<Italian>Bambini su misura (modificazione umana)</Italian>
 		<Russian>Постлюди (Дизайн младенцев)</Russian>
+		<Polish>Modyfikacja człowieka (Dzieci projektantów)</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_HUMAN_MOD_DIGITAL_IDENTITY</Tag>
@@ -4405,6 +4431,7 @@
 		<French>Modification humaine (Identité numérique)</French>
 		<Italian>Identità digitale (modificazione umana)</Italian>
 		<Russian>Постлюди (Виртуальные)</Russian>
+		<Polish>Modyfikacja człowieka (Tożsamość cyfrowa)</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_HUMAN_MOD_DIGITAL_LIFESTYLE</Tag>
@@ -4412,6 +4439,7 @@
 		<French>Modification humaine (Forme de vie numérique)</French>
 		<Italian>Stile di vita digitale (modificazione umana)</Italian>
 		<Russian>Постлюди (Цифровые)</Russian>
+		<Polish>Modyfikacja człowieka (Cyfrowy styl życia)</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_HUMAN_MOD_ENLIGHTENED</Tag>
@@ -4419,6 +4447,7 @@
 		<French>Modification humaine (Éclaircissement)</French>
 		<Italian>Illuminazione (modificazione umana)</Italian>
 		<Russian>Постлюди (Архонтропы)</Russian>
+		<Polish>Modyfikacja człowieka (Oświecony)</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_HUMAN_MOD_GENE_EDITING</Tag>
@@ -4426,6 +4455,7 @@
 		<French>Modification humaine (Modification des gènes)</French>
 		<Italian>Modifiche genetiche (modificazione umana)</Italian>
 		<Russian>Постлюди (Неоантропы)</Russian>
+		<Polish>Modyfikacja człowieka (Edycja genów)</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_HUMAN_MOD_GILLS</Tag>
@@ -4433,6 +4463,7 @@
 		<French>Modification humaine (Branchies)</French>
 		<Italian>Branchie (modificazione umana)</Italian>
 		<Russian>Постлюди (Амфибии)</Russian>
+		<Polish>Modyfikacja człowieka (Skrzela)</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_HUMAN_MOD_HEAT_TOLERANCE</Tag>
@@ -4440,6 +4471,7 @@
 		<French>Modification humaine (Tolérance à la chaleur)</French>
 		<Italian>Tolleranza al calore (modificazione umana)</Italian>
 		<Russian>Постлюди (Жаропрочные)</Russian>
+		<Polish>Modyfikacja człowieka (Tolerancja Ciepła)</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_HUMAN_MOD_HIGH_DIMENSIONAL</Tag>
@@ -4447,6 +4479,7 @@
 		<French>Modification humaine (Haute dimension)</French>
 		<Italian>Multiple dimensioni (modificazione umana)</Italian>
 		<Russian>Постлюди (Многомерные)</Russian>
+		<Polish>Modyfikacja człowieka (Wielwymiarowy)</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_HUMAN_MOD_IMMORTAL</Tag>
@@ -4454,6 +4487,7 @@
 		<French>Modification humaine (Immortel)</French>
 		<Italian>Immortale (modificazione umana)</Italian>
 		<Russian>Постлюди (Инфалы)</Russian>
+		<Polish>Modyfikacja człowieka (Nieśmiertelny)</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_HUMAN_MOD_INDEFINITE_LIFESPAN</Tag>
@@ -4461,6 +4495,7 @@
 		<French>Modification humaine (Durée de vie indéfinie)</French>
 		<Italian>Durata di vita indefinita (modificazione umana)</Italian>
 		<Russian>Постлюди (Антроиды)</Russian>
+		<Polish>Modyfikacja człowieka (Nieokreślona długość życia)</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_HUMAN_MOD_INFORMATION_BASED</Tag>
@@ -4468,6 +4503,7 @@
 		<French>Modification humaine (Basé sur l'information)</French>
 		<Italian>Basato su informazione (modificazione umana)</Italian>
 		<Russian>Постлюди (Виртуалы)</Russian>
+		<Polish>Modyfikacja człowieka (Oparta na informacjach)</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_HUMAN_MOD_LUNARIS</Tag>
@@ -4475,6 +4511,7 @@
 		<French>Modification humaine (Lunaire)</French>
 		<Italian>Lunaris (modificazione umana)</Italian>
 		<Russian>Постлюди (Лунатики)</Russian>
+		<Polish>Modyfikacja człowieka (Lunaris)</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_HUMAN_MOD_MARTIAN</Tag>
@@ -4482,6 +4519,7 @@
 		<French>Modification humaine (Martien)</French>
 		<Italian>Marziano (modificazione umana)</Italian>
 		<Russian>Постлюди (Марсиане)</Russian>
+		<Polish>Modyfikacja człowieka (Marsjanin)</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_HUMAN_MOD_METAPHYSICAL</Tag>
@@ -4489,6 +4527,7 @@
 		<French>Modification humaine (Métaphysique)</French>
 		<Italian>Metafisico (modificazione umana)</Italian>
 		<Russian>Постлюди (Метафизич.)</Russian>
+		<Polish>Modyfikacja człowieka (Metafizyczna)</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_HUMAN_MOD_NANOMORPHISM</Tag>
@@ -4496,6 +4535,7 @@
 		<French>Modification humaine (Nanomorphisme)</French>
 		<Italian>Nanomorfismo (modificazione umana)</Italian>
 		<Russian>Постлюди (Лилипуты)</Russian>
+		<Polish>Modyfikacja człowieka (Nanomorfizm)</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_HUMAN_MOD_NONSPATIAL</Tag>
@@ -4503,6 +4543,7 @@
 		<French>Modification humaine (Non-spatiale)</French>
 		<Italian>Aspaziale (modificazione umana)</Italian>
 		<Russian>Постлюди (Внепростр-ные)</Russian>
+		<Polish>Modyfikacja człowieka (Nieprzestrzenny)</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_HUMAN_MOD_NOVEL_SENSES</Tag>
@@ -4510,12 +4551,14 @@
 		<French>Modification humaine (Nouveaux sens)</French>
 		<Italian>Nuovi sensi (modificazione umana)</Italian>
 		<Russian>Постлюди (Псионики)</Russian>
+		<Polish>Modyfikacja człowieka (Nowe zmysły)</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_HUMAN_MOD_PEDIA</Tag>
 		<English>[COLOR_HIGHLIGHT_TEXT]Human Modification[COLOR_REVERT] represents a permanent change in human psyche, physiology, or nature.</English>
 		<Italian>[NEWLINE][NEWLINE]Gli [COLOR_HIGHLIGHT_TEXT]umani aumentati[COLOR_REVERT] sono degli umani a cui sono stati applicati dei cambiamenti permanenti di tipo psichico, fisiologico o naturale.</Italian>
 		<Russian>[COLOR_BONUS_TEXT]Модификация человека[COLOR_REVERT] представляет собой постоянное изменение психики, физиологии или природы человека.</Russian>
+		<Polish>[COLOR_HIGHLIGHT_TEXT]Modyfikacja człowieka[COLOR_REVERT] oznacza trwałą zmianę w ludzkiej psychice, fizjologii lub naturze.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_HUMAN_MOD_PURE_ENERGY</Tag>
@@ -4523,6 +4566,7 @@
 		<French>Modification humaine (Énergie pure)</French>
 		<Italian>Pura energia (modificazione umana)</Italian>
 		<Russian>Постлюди (Эфириалы)</Russian>
+		<Polish>Modyfikacja człowieka (Czysta energia)</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_HUMAN_MOD_RADIATION_TOLERANCE</Tag>
@@ -4530,6 +4574,7 @@
 		<French>Modification humaine (Tolérance aux radiations)</French>
 		<Italian>Tolleranza alle radiazioni (modificazione umana)</Italian>
 		<Russian>Постлюди (Людены)</Russian>
+		<Polish>Modyfikacja człowieka (Tolerancja na promieniowanie)</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_HUMAN_MOD_ROBOTIC_BODY</Tag>
@@ -4537,6 +4582,7 @@
 		<French>Modification humaine (Corps robotique)</French>
 		<Italian>Corpo robotico (modificazione umana)</Italian>
 		<Russian>Постлюди (Суррогаты)</Russian>
+		<Polish>Modyfikacja człowieka (Ciało robota)</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_HUMAN_MOD_TRANSAPIENT</Tag>
@@ -4544,6 +4590,7 @@
 		<French>Modification humaine (Transapient)</French>
 		<Italian>Transapiente (modificazione umana)</Italian>
 		<Russian>Постлюди (Транслюди)</Russian>
+		<Polish>Modyfikacja człowieka (Ponadgatunkowy)</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_HUMAN_MOD_WINGS</Tag>
@@ -4551,6 +4598,7 @@
 		<French>Modification humaine (Ailes)</French>
 		<Italian>Crescita di ali (modificazione umana)</Italian>
 		<Russian>Постлюди (Крылатые)</Russian>
+		<Polish>Modyfikacja człowieka (Skrzydła)</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_HUMAN_MOD_ZERO_G_ADAPTATION</Tag>
@@ -4558,6 +4606,7 @@
 		<French>Modification humaine (Adaptation zéro G)</French>
 		<Italian>Adattamento a gravità zero (modificazione umana)</Italian>
 		<Russian>Постлюди (Адапт. к невесомости)</Russian>
+		<Polish>Modyfikacja człowieka (Adaptacja do nieważkości)</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_HUN</Tag>
@@ -4579,6 +4628,7 @@
 		<English>Huron</English>
 		<Italian>Cittadino urone</Italian>
 		<Russian>Ãóðîíû</Russian>
+		<Polish>Hurońska</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_HURRIANS</Tag>
@@ -4586,6 +4636,7 @@
 		<French>Hurrienne</French>
 		<Italian>Cittadino urrita</Italian>
 		<Russian>Õóððèòû</Russian>
+		<Polish>Hurydzka</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_HYDROGEN</Tag>
@@ -4600,6 +4651,7 @@
 		<English>[COLOR_HIGHLIGHT_TEXT]Hydrogen[COLOR_REVERT] is a colorless, odorless, tasteless, non-toxic, nonmetallic, highly combustible gas, and it is the most abundant chemical substance in the Universe, constituting roughly 75% of all baryonic mass. The most common isotope of hydrogen, protium, has one proton and no neutrons; since hydrogen readily forms covalent compounds with most nonmetallic elements, study of the energetics and bonding of the hydrogen atom has played a key role in the development of quantum mechanics. Industrial production is mainly from steam reforming natural gas, and less often from more energy-intensive methods such as the electrolysis of water.</English>
 		<Italian>L'[COLOR_HIGHLIGHT_TEXT]idrogeno[COLOR_REVERT] è un gas incolore, inodore, insapore, non tossico, non metallico, altamente combustibile ed è la sostanza chimica più abbondante nell'Universo, costituendo il 75% circa di tutta la massa barionica. L'isotopo più comune dell'idrogeno, il protio, ha un protone e nessun neutrone; poiché l'idrogeno forma prontamente composti covalenti con la maggior parte degli elementi non metallici, lo studio dell'energia e dei legami degli atomi di idrogeno ha svolto un ruolo chiave nello sviluppo della meccanica quantistica. La produzione industriale proviene principalmente dai vapori di gas naturale e, meno spesso, da metodi a più alta intensità energetica, come l'elettrolisi dell'acqua.</Italian>
 		<Russian>Â ñåðåäèíå XXI âåêà ëþäè íàó÷èëèñü èñïîëüçîâàòü ýíåðãèþ âîäîðîäà. Íîâûå äâèãàòåëè áûñòðî íàøëè ïðèìåíåíèå â àâòîìîáèëüíîé ïðîìûøëåííîñòè. Õîòÿ âî Âñåëåííîé ýòîò õèìè÷åñêèé ýëåìåíò ÿâëÿåòñÿ åäâà ëè íå ñàìûì ðàñïðîñòðàíåííûì, äîáûòü åãî íå òàê-òî ïðîñòî, ïîýòîìó êîñìè÷åñêèå èñòî÷íèêè ýòîãî ðåñóðñà îñîáåííî öåííû.</Russian>
+		<Polish>[COLOR_HIGHLIGHT_TEXT]Wodór[COLOR_REVERT], bezbarwny, bezwonny, pozbawiony smaku, nietoksyczny, niemetaliczny i wysoce palny gaz, będący najobficiej występującą substancją chemiczną we Wszechświecie, stanowiącą około 75% całej masy. Najpopularniejszy izotop wodoru, prot, ma jeden proton i nie ma neutronów; ponieważ wodór łatwo tworzy związki kowalencyjne z większością pierwiastków niemetalicznych, badanie energetyki i wiązania atomu wodoru odegrało kluczową rolę w rozwoju mechaniki kwantowej. Produkcja przemysłowa odbywa się głównie z gazu ziemnego poddanego reformingowi parowemu, rzadziej z bardziej energochłonnych metod, takich jak elektroliza wody.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_HYDROTHERMAL_VENT</Tag>
@@ -4607,7 +4659,7 @@
 		<French>Sources hydrothermales</French>
 		<Italian>Sorgente idrotermale</Italian>
 		<Spanish>Fuente geotérmica submarina</Spanish>
-		<Polish>Odpowietrznik hydrotermalny</Polish>
+		<Polish>Komin hydrotermalny</Polish>
 		<Russian>Ãåîòåðì. èñòî÷íèê</Russian>
 	</TEXT>
 	<TEXT>
@@ -4615,12 +4667,14 @@
 		<English>A [COLOR_HIGHLIGHT_TEXT]hydrothermal vent[COLOR_REVERT] is a fissure on the seafloor from which geothermally heated water issues. They are commonly found near volcanically or geologically active places, ocean basins, and hotspots. Under the sea, hydrothermal vents may form features called black smokers or white smokers. Relative to the majority of the deep sea, the areas around submarine hydrothermal vents are biologically more productive, often hosting complex communities of lifeforms, fueled by the chemicals dissolved in the vent fluids. Active hydrothermal vents are thought to exist on Europa and Enceladus, and it is speculated that ancient hydrothermal vents once existed on Mars.</English>
 		<Italian>Una [COLOR_HIGHLIGHT_TEXT]sorgente idrotermale[COLOR_REVERT] è una fessura sul fondo del mare da cui vengono emesse colonne d'acqua calda. Si trovano spesso in luoghi vulcanicamente o geologicamente attivi, bacini oceanici e punti caldi. Sotto il mare, le sorgenti possono formare delle fumarole di colore nero o bianco. Rispetto al resto del mare profondo, le aree intorno alle sorgenti sono biologicamente più produttive, ospitando spesso comunità complesse di forme di vita, alimentate dalle sostanze chimiche disciolte nei fluidi di sfiato. Si pensa che esistano sorgenti idrotermali attive su Europa ed Encelado, e si ipotizza che in passato esistessero anche su Marte.</Italian>
 		<Russian>Гидротермальный источник - это разлом в литосфере планеты, из которого выходит геотермально нагретая вода. Гидротермальные жерла обычно встречаются около вулканически активных мест, областей, где тектонические плиты расходятся, океанских бассейнов и горячих точек. Гидротермальные источники существуют потому, что Земля одновременно геологически активна и имеет большое количество воды на своей поверхности и в ее коре. Обычные типы земель включают горячие источники, фумаролы и гейзеры. Под водой гидротермальные источники могут образовывать объекты, называемые черными курильщиками. По сравнению с большей частью морских глубин, районы вокруг подводных гидротермальных источников являются более продуктивными с биологической точки зрения, часто в них находятся сложные сообщества, подпитываемые химическими веществами, растворенными в выходных жидкостях. Хемосинтезирующие бактерии и археи образуют основу пищевой цепи, поддерживая разнообразные организмы, включая гигантских трубчатых червей, моллюсков, блюдец и креветок. Считается, что активные гидротермальные жерла существуют на спутнике Юпитера Европе и спутнике Сатурна Энцеладе, а древние гидротермальные жерла, как предполагалось, существуют на Марсе.</Russian>
+		<Polish>[COLOR_HIGHLIGHT_TEXT]Komin hydrotermalny[COLOR_REVERT] to szczelina w dnie morskim, z której wydobywa się woda podgrzewana geotermalnie. Można je powszechnie spotkać w pobliżu miejsc aktywnych wulkanicznie lub geologicznie, basenów oceanicznych i gorących punktów. Pod powierzchnią morza kominy hydrotermalne mogą tworzyć elementy zwane czarnymi lub białymi palaczami. W porównaniu z większością głębin morskich obszary wokół podwodnych kominów hydrotermalnych są biologicznie bardziej produktywne i często zamieszkują je złożone zbiorowiska form życia, zasilane chemikaliami rozpuszczonymi w płynach wylotowych. Uważa się, że aktywne kominy hydrotermalne istnieją na Europie i Enceladusie, spekuluje się także, że starożytne kominy hydrotermalne istniały kiedyś na Marsie.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_HYKSOSI</Tag>
 		<English>Hyksosi</English>
 		<Russian>Ãèêñîñû</Russian>
 		<Italian>Cittadino hyksos</Italian>
+		<Polish>Hyksosów</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_HYPOSPRAYS</Tag>
@@ -4628,12 +4682,14 @@
 		<French>Seringues hypodermiques</French>
 		<Italian>Ipospray</Italian>
 		<Russian>Ãèïîñïðåè</Russian>
+		<Polish>Hipospreje</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_HYPOSPRAYS_PEDIA</Tag>
 		<English>A [COLOR_HIGHLIGHT_TEXT]hypospray[COLOR_REVERT] is a jet injector that delivers medications intramuscularly, if applied at the top of the arm, or intravenously or intra-arterially, if applied on the neck. It can also be applied through clothing. The hypospray is extremely versatile as the medicine vials can be quickly swapped out from the bottom of the hypospray. As the hypospray is bloodless, it is not contaminated by use. This allows it to be used on many people until the supply of medicine runs out.</English>
 		<Italian>Un [COLOR_HIGHLIGHT_TEXT]ipospray[COLOR_REVERT] è un iniettore a getto che eroga farmaci per via intramuscolare, se applicato nella parte superiore del braccio, oppure per via endovenosa o intra-arteriosa, se applicato sul collo. Può anche essere applicato attraverso l'abbigliamento. L'ipospray è estremamente versatile, poiché le fiale del medicinale possono essere rapidamente sostituite dal fondo. Poiché privo di un ago, non viene contaminato dall'uso. Ciò consente di utilizzarlo su molte persone fino all'esaurimento della fornitura di medicinali.</Italian>
 		<Russian>Ìåäèöèíñêèé èíñòðóìåíò, èñïîëüçóåìûé äëÿ ââåäåíèÿ ëåêàðñòâåííûõ âåùåñòâ ïîäêîæíî, âíóòðèìûøå÷íî, âíóòðèâåííî, â óñëîâèÿõ òùàòåëüíîãî êîíòðîëÿ çà äîçèðîâêîé ïðåïàðàòîâ. Ïðåïàðàòû ââîäÿòñÿ ïîñðåäñòâîì òî÷å÷íîãî, íàõîäÿùåãîñÿ ïîä âûñîêèì äàâëåíèåì, ìàëîîáúåìíîãî, ìèêðîñêîïè÷åñêîãî ïîòîêà âîçäóøíîé ñóñïåíçèè. Ýòî ïîçâîëÿåò ïðåïàðàòàì ïðîíèêàòü ÷åðåç êîæó áåç åå ìåõàíè÷åñêîãî ïîâðåæäåíèÿ. Âåëè÷èíà ïëîùàäè âîçäåéñòâèÿ è ãëóáèíà ïðîíèêíîâåíèÿ ìîãóò âàðüèðîâàòüñÿ.</Russian>
+		<Polish>[COLOR_HIGHLIGHT_TEXT]Hiposprej[COLOR_REVERT], to wtryskiwacz strumieniowy, który podaje leki domięśniowo, jeśli zostanie zastosowany w górnej części ramienia, lub dożylnie lub dotętniczo, jeśli zostanie zastosowany na szyi. Można go również nakładać przez ubranie. Hiposprej jest niezwykle wszechstronny, ponieważ fiolki z lekiem można szybko wymienić na spodzie Hipospreju. Ponieważ jest on bezkrwawy, nie ulega zanieczyszczeniu podczas użytkowania. Dzięki temu można go stosować u wielu osób, aż do wyczerpania zapasów leku.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_ICELANDIC</Tag>
@@ -4656,6 +4712,7 @@
 		<English>[COLOR_HIGHLIGHT_TEXT]Ice cream[COLOR_REVERT] is a sweetened, smooth, semi-solid food, typically eaten as a snack or dessert. It may be made from dairy milk or cream and is flavoured with a sweetener (either sugar or an alternative) and any spice, such as cocoa or vanilla. Colourings are usually added, in addition to stabilizers. The mixture is stirred to incorporate air spaces and cooled below the freezing point of water to prevent detectable ice crystals from forming. Ice cream may be served in dishes, for eating with a spoon, or licked from edible cones. Ice cream may be served with other desserts, such as apple pie, or as an ingredient in ice cream floats, sundaes, milkshakes, ice cream cakes and even baked items.</English>
 		<Italian>Un [COLOR_HIGHLIGHT_TEXT]gelato[COLOR_REVERT] è un alimento zuccherato semi-solido, tipicamente consumato come spuntino o dessert. Può essere fatto con latte o crema di latte ed è aromatizzato con un dolcificante (come lo zucchero o simili) e qualsiasi spezia, come il cacao o la vaniglia. Di solito vengono aggiunti coloranti, oltre agli stabilizzanti. La miscela viene agitata per incorporare aria e raffreddata sotto la temperatura di congelamento dell'acqua per impedire la formazione di cristalli di ghiaccio rilevabili. Il gelato può essere servito in un piatto, mangiato con un cucchiaio o leccato su un cono commestibile. Il gelato può essere servito con altri dessert, come la torta di mele, o come ingrediente in gelati, coppe, frappè, torte gelato e persino prodotti da forno.</Italian>
 		<Russian>Мороженое - это охлажденный десерт, который обычно готовят из молочных продуктов, таких как молоко и сливки, и часто сочетают с фруктами или другими ингредиентами и ароматизаторами. Большинство сортов содержат сахар, хотя некоторые из них сделаны с другими подсластителями. В некоторых случаях в дополнение или вместо натуральных ингредиентов используются искусственные ароматизаторы и красители. Мороженое можно подавать в посуде, есть ложкой или слизывать из съедобных стаканчиков. Мороженое можно подавать с другими десертами, такими как яблочный пирог, или в качестве ингредиента для мороженого, мороженого, молочных коктейлей, тортов с мороженым и даже выпечки.</Russian>
+		<Polish>[COLOR_HIGHLIGHT_TEXT]Lody[COLOR_REVERT], to słodzony, gładki, półstały produkt spożywczy, zwykle spożywany jako przekąska lub deser. Może być wytwarzany z mleka lub śmietanki mlecznej i jest aromatyzowany słodzikiem (cukrem lub jego alternatywą) i dowolną przyprawą, taką jak kakao lub wanilia. Oprócz stabilizatorów zwykle dodaje się barwniki. Mieszaninę miesza się, aby wprowadzić przestrzenie powietrzne i schładza poniżej temperatury zamarzania wody, aby zapobiec tworzeniu się wykrywalnych kryształków lodu. Lody można podawać w naczyniach, jeść łyżką lub zlizywać z jadalnych rożków. Lody można podawać z innymi deserami, np. szarlotką, lub jako składnik koktajli mlecznych, ciast lodowych, a nawet wypieków.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_ILLYRIAN</Tag>
@@ -4663,12 +4720,14 @@
 		<French>Illyrienne</French>
 		<Italian>Cittadino illiro</Italian>
 		<Russian>Èëëèðèéöû</Russian>
+		<Polish>Ilyryjska</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_ILOCANO</Tag>
 		<English>Ilocano</English>
 		<Italian>Cittadino ilocano</Italian>
 		<Russian>Èëîêè</Russian>
+		<Polish>Ilokanów</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_IMMUNITY_DRUGS</Tag>
@@ -4683,6 +4742,7 @@
 		<English>[COLOR_HIGHLIGHT_TEXT]Immunity drugs[COLOR_REVERT], better known as immunosuppressive drugs or agents, are drugs that inhibit or prevent activity of the immune system. They are mainly used to prevent the rejection of transplanted organs and tissues, to treat autoimmune diseases or diseases that are most likely of autoimmune origin (e.g. rheumatoid arthritis, multiple sclerosis, psoriasis, Crohn's disease, Behcet's Disease, etc.), and to treat other non-autoimmune inflammatory diseases (e.g. long-term allergic asthma control).</English>
 		<Italian>I [COLOR_HIGHLIGHT_TEXT]farmaci immunitari[COLOR_REVERT], meglio noti come farmaci o agenti immunosoppressori, sono farmaci che inibiscono o impediscono l'attività del sistema immunitario. Sono principalmente utilizzati per prevenire il rigetto di organi e tessuti trapiantati, per il trattamento di malattie autoimmuni o patologie che sono molto probabilmente di origine autoimmune (ad es. artrite reumatoide, sclerosi multipla, psoriasi, morbo di Crohn, malattia di Behcet, ecc.) e per il trattamento altre malattie infiammatorie non autoimmuni (ad es. controllo allergico dell'asma a lungo termine).</Italian>
 		<Russian>Иммунная система - это система многих биологических структур и процессов внутри организма, которая защищает от болезней. Для правильного функционирования иммунная система должна обнаруживать широкий спектр агентов, известных как патогены, от вирусов до паразитических червей, и отличать их от собственной здоровой ткани организма. У многих видов иммунную систему можно разделить на подсистемы, такие как врожденная иммунная система по сравнению с адаптивной иммунной системой или гуморальный иммунитет по сравнению с клеточно-опосредованным иммунитетом.</Russian>
+		<Polish>[COLOR_HIGHLIGHT_TEXT]Leki na odporność[COLOR_REVERT], lepiej znane jako środki immunosupresyjne, to leki hamujące lub uniemożliwiające aktywność układu odpornościowego. Stosowane są głównie w celu zapobiegania odrzuceniu przeszczepionych narządów i tkanek, w leczeniu chorób autoimmunologicznych lub chorób, które najprawdopodobniej mają podłoże autoimmunologiczne (np. reumatoidalne zapalenie stawów, stwardnienie rozsiane, łuszczyca, choroba Leśniowskiego-Crohna, choroba Behceta itp.) oraz w leczeniu innych nieautoimmunologicznych chorób zapalnyvh (np. długoterminowa kontrola astmy alergicznej).</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_INCAN</Tag>
@@ -4712,6 +4772,7 @@
 		<German>Bei [COLOR_HIGHLIGHT_TEXT]Weihrauch[COLOR_REVERT] handelt es sich um das getrocknete Gummiharz des Weihrauchbaumes (Boswellia sacra), der nur in Trockengebieten wächst und heute hauptsächlich in Somalia, dem Oman und Jemen angebaut wird.[NEWLINE]Bei der Verbrennung von Weihrauch entsteht ein geruchsintensiver Dampf. Dieser kommt oft bei religiösen Zeremonien zum Einsatz und manche glauben, dass er auch eine therapeutische Wirkung habe. Die meisten Räucherdüfte setzen sich aus pflanzlichen Bestandteilen wie Nelke, Zedernholz, Weihrauch oder Muskatnuss zusammen, sie können jedoch auch aus essenziellen Ölen oder Tierprodukten wie Moschus oder Ambra erzeugt werden. Viele alte Kulturen haben Räucherdüfte verwendet, darunter die Chinesen, Japaner, Ägypter, Babylonier und die Assyrer. In Indien kommen sie seit mindestens 5000 v.Chr. bei religiösen Zeremonien zum Einsatz.</German>
 		<Italian>L'[COLOR_HIGHLIGHT_TEXT]incenso[COLOR_REVERT] è un materiale biotico aromatico che rilascia fumo profumato quando viene bruciato. Il termine viene usato sia per il materiale, sia per l'aroma. L'incenso è composto da materiali vegetali aromatici, spesso combinati con oli essenziali e viene utilizzato per motivi estetici, aromaterapia, meditazione e usi cerimoniali. Può anche essere usato come semplice deodorante o repellente per insetti. Le forme adottate dall'incenso differiscono con le culture e sono cambiate con i progressi della tecnologia e il numero crescente di usi.</Italian>
 		<Russian>Благовоние - это соединение, которое при сжигании выделяет ароматный дым. Его часто используют в религиозных церемониях, и некоторые считают, что он также обладает лечебными свойствами. Благовония обычно состоят из растительных материалов, таких как гвоздика, кедр, ладан или мускатный орех, но его можно создать из эфирных масел или продуктов животного происхождения - например, мускуса или амбры. Во многих ранних культурах, включая китайскую, японскую, египетскую, вавилонскую и ассирийскую цивилизации, использовали ладан. Индейцы использовали ладан в религиозных церемониях по крайней мере с 5000 г. до н. э.</Russian>
+		<Polish>[COLOR_HIGHLIGHT_TEXT]Kadzidło[COLOR_REVERT] to aromatyczny materiał, który po spaleniu wydziela pachnący dym. Termin ten jest używany w odniesieniu do materiału lub aromatu. Kadzidło składa się z aromatycznych materiałów roślinnych, często łączonych z olejkami eterycznymi i jest używane ze względów estetycznych, lub do aromaterapii, medytacji albo w czsie ceremonii. Może być również stosowany jako prosty dezodorant lub środek odstraszający owady. Formy przybierane przez kadzidło różnią się w zależności od podstawowej kultury i zmieniały się wraz z postępem technologii i rosnącą liczbą zastosowań.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_INDIAN</Tag>
@@ -4740,6 +4801,7 @@
 		<German>[COLOR_HIGHLIGHT_TEXT]Indigo[COLOR_REVERT] wird aus den Blättern der tropischen Indigopflanze (Indigofera tinctoria) gewonnen, die in Indien (wie der Name schon andeutet), China und Afrika heimisch ist. Es handelt sich um einen tiefblauen Farbstoff von hoher Farbstärke, der in Wasser nur schwer löslich ist.[NEWLINE]Indigo ist eines der verbreitetsten und am häufigsten verwendeten Färbemittel vom Altertum bis heute. Bereits vor 6000 Jahren wurde Indigo in Peru zum Färben von Baumwollstoffen eingesetzt. Auch in den frühen mesopotamischen, persischen und afrikanischen Kulturen war der Farbstoff bereits bekannt. In Ägypten wurden im Alten Reich bereits Mumien in indigofarbene Bandagen eingewickelt. Von dort gelangte er als Luxusartikel über Griechenland und Italien nach Europa. In Europa blieb der Farbstoff aus der Indigopflanze bis zum 12. Jahrhundert selten, er wurde nur in kleinen Mengen aus Indien importiert. Bis zum 17. Jahrhundert wurde stattdessen Färberwaid zur Indigogewinnung in England, Frankreich und Deutschland angebaut. Nach dem Ersten Weltkrieg verlor Indigo durch die Entwicklung synthetischer Farbstoffe zunehmend an Bedeutung. Die zunehmende Popularität der Jeans kurbelte aber in den 1960er-Jahren die Nachfrage wieder an.</German>
 		<Italian>L'[COLOR_HIGHLIGHT_TEXT]indaco[COLOR_REVERT] è un composto organico con un caratteristico colore blu. Storicamente, l'indaco era un colorante naturale estratto dalle foglie di alcune piante o da alcuni molluschi, ma questo processo era economicamente costoso e il suo uso era estremamente limitato. Solo alla fine del XIX secolo, vi fu un processo consolidato per la sintesi su scala industriale. L'uso principale dell'indaco è come tintura per filati di cotone, che sono a loro volta usati per la produzione di tessuti denim per i jeans.</Italian>
 		<Russian>Индиго - это цвет, названный в честь синего красителя, полученного из растения Indigofera tinctoria и родственных ему видов. Цвет помещается в электромагнитный спектр с длиной волны около 420-450 нм, помещая его между синим и фиолетовым. Хотя он традиционно считается одним из семи цветов радуги или оптического спектра, современные специалисты по цвету обычно не выделяют индиго как отдельный раздел и обычно классифицируют длины волн короче примерно 450 нм как фиолетовый. Ученые-оптики Харди и Перрин указывают, что длина волны индиго составляет от 446 до 464 нм.</Russian>
+		<Polish>[COLOR_HIGHLIGHT_TEXT]Barwnik indygo[COLOR_REVERT] to związek organiczny o charakterystycznej niebieskiej barwie. Historycznie rzecz biorąc, indygo było naturalnym barwnikiem wydobywanym z liści niektórych roślin lub niektórych mięczaków, ale proces ten był kosztowny ekonomicznie, a jego stosowanie było niezwykle rzadkie. Dopiero pod koniec XIX wieku powstał proces syntezy na skalę przemysłową. Podstawowym zastosowaniem indygo jest barwnik do przędzy bawełnianej, która służy głównie do produkcji tkaniny dżinsowej na niebieskie dżinsy.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_INDONESIAN</Tag>
@@ -4754,18 +4816,21 @@
 		<English>Indus</English>
 		<Russian>Èíäóñû</Russian>
 		<Italian>Cittadino indus</Italian>
+		<Polish>Doliny Indus</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_INGOTS_PEDIA</Tag>
 		<English>An [COLOR_HIGHLIGHT_TEXT]ingot[COLOR_REVERT] is a material, usually metal, that is cast into a shape suitable for further processing. Non-metallic and semiconductor materials prepared in bulk form may also be referred to as ingots, particularly when cast by mold based methods.</English>
 		<Italian>Un [COLOR_HIGHLIGHT_TEXT]lingotto[COLOR_REVERT] è una barra di metallo fusa in una forma utile per essere ulteriormente lavorata. Si può parlare di lingotti anche per i materiali non-metallici e semiconduttori, specie quando vengono prodotti per fusione.</Italian>
 		<Russian>Ñëèòîê ìàòåðèàëà, êàê ïðàâèëî ìåòàëëà, êîòîðûé îòëèâàåòñÿ â ôîðìó, ïðèãîäíóþ äëÿ äàëüíåéøåé îáðàáîòêè. Íåìåòàëëè÷åñêèå è ïîëóïðîâîäíèêîâûå ìàòåðèàëû â îáüåìíîì âèäå òàêæå ìîãóò îòëèâàòüñÿ â êàê ÷óøêè, îñîáåííî êîãäà íà îñíîâå ñòàíäàðòíûõ ìåòîäîâ îíè îòëèâàþòñÿ â ïðåññôîðìó.</Russian>
+		<Polish>[COLOR_HIGHLIGHT_TEXT]Wlewek, sztabka[COLOR_REVERT], to materiał, zwykle metal, który jest odlany w kształt odpowiedni do dalszej obróbki. Materiały niemetaliczne i półprzewodnikowe przygotowane luzem można również nazwać wlewkami, szczególnie w przypadku odlewania metodami opartymi na formach.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_INUIT</Tag>
 		<English>Inuit</English>
 		<Russian>Èíóèòû</Russian>
 		<Italian>Cittadino iniut</Italian>
+		<Polish>Eskimoska</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_IRANIAN</Tag>
@@ -4773,12 +4838,14 @@
 		<French>Iranienne</French>
 		<Italian>Cittadino iraniano</Italian>
 		<Russian>Èðàíöû</Russian>
+		<Polish>Irańska</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_IRAQI</Tag>
 		<English>Iraqi</English>
 		<Italian>Cittadino iracheno</Italian>
 		<Russian>Èðàêöû</Russian>
+		<Polish>Iracka</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_IRISH</Tag>
@@ -4820,6 +4887,7 @@
 		<German>Als die Zivilisationen der Frühzeit begannen, metallene Werkzeuge und Waffen anzufertigen, war Bronze das am meisten verwendete Material. Es hatte den Vorteil, dass es leicht erhältlich war und gut bearbeitet werden konnte. Leider war es zu weich, als dass man scharfe Klingen daraus hätte formen können. Mitte des 14. Jahrhunderts vor Christus, zu Beginn der so genannten Eisenzeit, löste Eisen die Bronze als bevorzugtes Metall in Europa ab. Seit dieser Zeit ist Eisen ein wertvoller Gebrauchsartikel. Eisen- und Eisenerzablagerungen, die in Bergen zu finden sind, werden abgebaut und in Rohform oder bei der Produktion von Stahl verwendet.</German>
 		<Italian>Il [COLOR_HIGHLIGHT_TEXT]ferro[COLOR_REVERT] è l'elemento più comune sulla Terra, costituendo gran parte del nucleo esterno e interno della Terra, e il quarto elemento più comune nella crosta terrestre, principalmente sotto forma di minerali. Gli umani iniziarono a dominare il processo di fusione del ferro in Eurasia solo verso il 2000 a.C. e l'uso di strumenti e armi di ferro iniziò a sostituire le leghe di rame, in alcune regioni, solo verso il 1200 a.C., innescando il passaggio dall'età del bronzo all'età del ferro. Nel mondo moderno, le leghe di ferro, quali acciaio, inox, ghisa e acciai speciali, sono di gran lunga i metalli industriali più comuni, a causa delle loro elevate proprietà meccaniche e del basso costo.</Italian>
 		<Russian>Когда первые цивилизации начали создавать первые металлические инструменты и оружие, для этой цели обычно использовалась бронза: она доступна и проста в обработке. Однако этот металл слишком мягок, чтобы орудия из него можно было эффективно заточить. В Центральной Европе железо сменило бронзу в роли основного металла к середине XIV в. до н.э., и с этого времени начался Железный век. С тех пор железо считается ценным ресурсом. Железо и железную руду из горных месторождений добывают и перерабатывают, чтобы использовать в чистом виде и при производстве стали.</Russian>
+		<Polish>[COLOR_HIGHLIGHT_TEXT]Żelazo[COLOR_REVERT], jest najpowszechniejszym pierwiastkiem na Ziemi, tworzącym większość zewnętrznego i wewnętrznego jądra Ziemi oraz czwartym najczęściej występującym pierwiastkiem w skorupie ziemskiej, głównie w postaci rud. Ludzie zaczęli opanowywać proces wytapiania żelaza w Eurazji dopiero około 2000 roku p.n.e., a użycie żelaznych narzędzi i broni zaczęło w niektórych regionach wypierać stopy miedzi dopiero około 1200 roku p.n.e., zapoczątkowując przejście od epoki brązu do epoki żelaza. We współczesnym świecie stopy żelaza, takie jak stal, inox, żeliwo i stale specjalne, są zdecydowanie najpopularniejszymi metalami przemysłowymi, ze względu na ich wysokie właściwości mechaniczne i niski koszt produkcji.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_IRON_WARES</Tag>
@@ -4872,6 +4940,7 @@
 		<German>Elfenbein (mittelhochdeutsch für Elefantenknochen) bezeichnet das Zahnbein der Stoßzähne von Elefant, Walross und Mammut und der Eckzähne verschiedener Säugetiere (Pottwal, Narwal, Flusspferd), das als Werkstoff zur Herstellung von Gebrauchs- und Schmuckgegenständen verwendet werden kann. Aus Elfenbein wurden neben kunstvollen Schnitzereien und Intarsien auch so profane Dinge wie falsche Zähne, Dominosteine, Klaviertasten und Billardkugeln gefertigt. Heutzutage greift man bei derartigen Gebrauchsgütern zwar fast nur noch auf Kunstharze zurück, trotzdem ist der weltweite Bedarf an Elfenbein immer noch groß und besonders der afrikanische Elefant durch Wilderei stark bedroht.</German>
 		<Italian>L'[COLOR_HIGHLIGHT_TEXT]avorio[COLOR_REVERT] è un materiale duro e bianco proveniente dalle zanne e dai denti degli animali, tradizionalmente elefanti, anche se il commercio di denti e zanne di altri animali è ben consolidato e diffuso; pertanto, "avorio" può essere correttamente utilizzato per descrivere eventuali denti o zanne di mammiferi di interesse commerciale che sono abbastanza grandi da poter essere scolpiti o lavorati. L'avorio è stato apprezzato fin dall'antichità nell'arte e per la realizzazione di una gamma di sculture in avorio, come denti finti, tasti di pianoforte, ventole, pedine del domino e tubi articolati. A partire dalla fine del XX secolo, il commercio nazionale e internazionale di avorio di specie minacciate è stato dichiarato illegale.</Italian>
 		<Russian>Слоновая кость - это термин для обозначения дентина, который составляет большую часть зубов и клыков животных, когда он используется в качестве материала для искусства или производства. С древних времен слоновая кость играет важную роль в изготовлении различных предметов, от резных фигурок из слоновой кости до вставных зубов, вееров, домино, шарнирных трубок, клавиш пианино и бильярдных шаров. Слоновая кость была наиболее важным источником, но использовались кости или бивни многих видов, включая бегемота, моржа, мамонта, кашалота и нарвала.</Russian>
+		<Polish>[COLOR_HIGHLIGHT_TEXT]Kość słoniowa[COLOR_REVERT], to twardy, biały materiał otrzymywany z kłów i zębów zwierząt, tradycyjnie słoni, nawet jeśli handel niektórymi zębami i kłami innymi niż słonie jest dobrze ugruntowany i powszechny; dlatego też określenie "kość słoniowa" może być poprawnie użyte do opisania wszelkich zębów lub kłów ssaków o znaczeniu handlowym, które są wystarczająco duże, aby można w nich było rzeźbić. Kość słoniowa była ceniona od czasów starożytnych w sztuce i przemyśle do wyrobu szerokiej gamy przedmiotów, od rzeźb z kości słoniowej po sztuczne zęby, klawisze fortepianu, wachlarze, domino. Od końca XX wieku krajowy i międzynarodowy handel kością słoniową gatunków zagrożonych został uznany za nielegalny.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_JACKALOPE</Tag>
@@ -4879,12 +4948,14 @@
 		<French>Jackalope</French>
 		<Italian>Jackalope</Italian>
 		<Russian>Ðîãàòûé çàÿö</Russian>
+		<Polish>Szakalop</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_JACKALOPE_PEDIA</Tag>
 		<English>A [COLOR_HIGHLIGHT_TEXT]jackalope[COLOR_REVERT] is a mythical animal from North American folklore, described as a jackrabbit with antelope horns. The jackalope has appeared in published stories, poems, television shows, video games, and a low-budget mockumentary film. Researchers suggest that at least some of the tales of horned hares were inspired by sightings of rabbits infected with the Shope papilloma virus, that causes horn- and antler-like tumors to grow in various places on a rabbit's head and body.</English>
 		<Italian>Un [COLOR_HIGHLIGHT_TEXT]jackalope[COLOR_REVERT] è un animale mitico del folklore nordamericano, descritto come un coniglio selvatico con corna di antilope. Il jackalope è apparso in numerose storie, poesie, spettacoli televisivi, videogiochi e un finto documentario a basso budget. I ricercatori suggeriscono che alcuni degli avvistamenti di lepri cornute siano dovuti ad avvistamenti di conigli infetti dal papilloma virus di Shope, che causa la crescita di tumori a forma di corna (anche ramificate) in varie parti della testa o del corpo di un coniglio.</Italian>
 		<Russian>Рогатый заяц, кролень, иногда джекалоп (англ. jackalope от jackrabbit - «заяц» и antelope - «антилопа») или зайцелоп - вымышленное животное (химера), фигурирующее в различных фольклорных, литературных и журналистских источниках в качестве мистификации или метафоры.[PARAGRAPH:2]В США рогатый заяц приобрел особую популярность в течение XX века. Считается, что у истоков этой популярности стоял Дуглас Херрик (1920—2003), потомственный таксидермист, в 1932 году изготовивший шутки ради первую голову кролика с рогами. В дальнейшем производство подобных сувениров в семейной мастерской Херриков исчислялось тысячами экземпляров в год, а их родной городок Дуглас в штате Вайоминг был официально объявлен столицей рогатых зайцев. После этого они изготовили и продали много подобных зайцелопов в розничную точку в Южной Дакоте, а другой таксидермист продолжает производить рогатых кроликов в 21 веке. Чучела и верхом на зайцелопах можно найти во многих барах и других местах Соединенных Штатов; магазины, обслуживающие туристов, продают открытки с зайцелопами и другую атрибутику, а коммерческие организации в Америке и других странах использовали слово «зайцелоп» или логотип зайцелопа как часть своих маркетинговых стратегий. Зайцелоп появлялся в опубликованных рассказах, стихах, телешоу, видеоиграх и малобюджетном псевдодокументальном фильме. Законодательное собрание штата Вайоминг рассмотрело законопроекты, которые сделают зайцелопа официальным мифологическим существом штата.[PARAGRAPH:2]Основная легенда о рогатом зайце, на которой основывались таксидермисты Вайоминга, может быть связана с аналогичными историями из других культур и других исторических времен. Исследователи предполагают, что по крайней мере некоторые из сказок о рогатых зайцах были навеяны наблюдениями за кроликами, инфицированными вирусом папилломы Шопе. Он вызывает рост опухолей, похожих на рога и рога, в различных местах головы и тела кролика.</Russian>
+		<Polish>[COLOR_HIGHLIGHT_TEXT]Szakalop[COLOR_REVERT], to mityczne zwierzę z folkloru Ameryki Północnej, opisane jako zając z rogami antylopy. Szakalop pojawił się w opowiadaniach, wierszach, programach telewizyjnych, grach wideo i niskobudżetowych filmach dokumentalnych. Naukowcy sugerują, że przynajmniej część opowieści o rogatych zającach została zainspirowana obserwacjami królików zakażonych wirusem brodawczaka, który powoduje, że w różnych miejscach głowy i tułowia królika rosną guzy przypominające rogi i poroże.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_JADE</Tag>
@@ -4898,7 +4969,7 @@
 		<English>Jade Death Masks</English>
 		<French>Masques de mort en jade</French>
 		<Italian>Maschera mortuaria di giada</Italian>
-		<Polish>Jadeitowe maski &#156;mierci</Polish>
+		<Polish>Jadeitowe maski pośmiertnei</Polish>
 		<Russian>Íåôðèòîâûå ìàñêè</Russian>
 	</TEXT>
 	<TEXT>
@@ -4917,6 +4988,7 @@
 натрия, алюминия, железа и хрома в разных пропорциях. Прозрачность тоже может варьироваться, начиная с образцов от практически бесцветных до полностью светонепроницаемых.
 Среди мезоамериканских археологов, «нефрит» иногда используется таким образом, когда не делаются различия между жадеитом и другими внешне похожими
 зелеными самоцветами таких как альбитит, омфацит, хризопраз и кварцит.</Russian>
+		<Polish>[COLOR_HIGHLIGHT_TEXT]Jadeitowa maska pośmiertna[COLOR_REVERT], to odcisk twarzy osoby po jej śmierci, zwykle wykonany przez złożenie kilku kawałków jadeitu. Maski pośmiertne mogą być pamiątką po zmarłych lub służyć do tworzenia portretów. Czasem udaje się rozpoznać portrety namalowane z masek pośmiertnych, ze względu na charakterystyczne lekkie zniekształcenia rysów twarzy.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_JADE_PEDIA</Tag>
@@ -4924,6 +4996,7 @@
 		<German>Ein grünliches Mineral, Jade ist extrem hart und robust und ist im Gebrauch für viele Tausenden Jahre gewesen. Jade wurde ursprünglich in den Werkzeugen und in den Waffen benutzt, aber, während andere wirkungsvollere Substanzen (wie Bronze und Eisen) entdeckt wurden, würde Jade groß für dekorative Zwecke verwendet werden. Jade war erste allgemein verwendet in China während der neolithischen Periode. Überzeit als die zugänglichsten Quellen wurden verbraucht, es wurde wertvoller als Gold. Heute wird Jade noch in den Schmucksachen benutzt und in einer Vielzahl von Trinkets, obwohl es nicht mehr das Prestige trägt oder bewertet, sie einmal.</German>
 		<Italian>La [COLOR_HIGHLIGHT_TEXT]giada[COLOR_REVERT] è un minerale ornamentale, noto soprattutto per le sue varietà verdi. Il termine può riferirsi a due diversi minerali: la nefrite, un silicato di calcio e magnesio, e la giadeite, un silicato di sodio e alluminio. La prima va dal bianco crema a una varietà di sfumature verdi chiare; l'altra è più rara e mostra più variazioni di colore, tra cui blu, marrone, rosso, nero, verde scuro, lavanda e bianco. Entrambi i materiali sono stati utilizzati dalla preistoria per ornamenti e oggetti decorativi: tra i primi manufatti di giada noti, vi sono semplici ornamenti con perline, bottoni e forme tubolari. Inoltre, la giada veniva utilizzata per asce, coltelli e altre armi che possono essere modellate delicatamente.</Italian>
 		<Russian>Зеленоватый минерал, нефрит чрезвычайно твердый и прочный, его использовали многие тысячи лет. Изначально нефрит использовался в инструментах и оружии, но когда были обнаружены другие более эффективные вещества (например, бронза и железо), он стал использоваться в основном в декоративных целях. Впервые нефрит начали широко использовать в Китае в период неолита. Со временем, когда наиболее доступные источники истощились, он стал дороже золота. Сегодня нефрит по-прежнему используется в ювелирных изделиях и в различных безделушках, хотя он больше не имеет того престижа или ценности, как раньше.</Russian>
+		<Polish>[COLOR_HIGHLIGHT_TEXT]Jadeit[COLOR_REVERT], to minerał ozdobny, znany głównie ze swoich zielonych odmian. Może odnosić się do jednego z dwóch różnych minerałów: nefrytu: krzemianu wapnia i magnezu lub jadeitu: krzemianu sodu i glinu. Te pierwsze występują w kremowo-białej formie, a także w różnych jasnozielonych kolorach; ten ostatni jest rzadszy i wykazuje więcej odmian kolorystycznych, w tym niebieski, brązowy, czerwony, czarny, ciemnozielony, lawendowy i biały. Obydwa materiały były używane od okresów prehistorycznych do ozdób i przedmiotów dekoracyjnych: wśród najwcześniejszych znanych artefaktów z jadeitu wydobytych z miejsc prehistorycznych znajdują się proste ozdoby w kształcie koralików, guzików i rurek. Dodatkowo z jadeitu wytwarzano główki toporów, noże i inną broń, którą można delikatnie kształtować.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_JAMAICAN</Tag>
@@ -4947,6 +5020,7 @@
 		<French>Javanaise</French>
 		<Italian>Cittadino javanese</Italian>
 		<Russian>ßâàíöû</Russian>
+		<Polish>Jawajska</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_JET_ENGINES</Tag>
@@ -4961,6 +5035,7 @@
 		<English>A [COLOR_HIGHLIGHT_TEXT]jet engine[COLOR_REVERT] is a type of reaction combustion engine discharging a fast-moving jet that generates thrust by jet propulsion. Jet engines usually power jet aircraft, cruise missiles and unmanned aerial vehicles, while the term typically refers to an airbreathing jet engine such as a turbojet, turbofan, ramjet, or pulse jet, that typically feature a rotating air compressor powered by a turbine, with the leftover power providing thrust through the propelling nozzle. Initially developed in 1930s, only by 1970s jet engine efficiency was enough to par and surpass piston and propeller engines.</English>
 		<Italian>Un [COLOR_HIGHLIGHT_TEXT]motore a reazione[COLOR_REVERT] è un tipo di motore a combustione che genera spinta mediante propulsione a getto. I motori a reazione di solito alimentano aeromobili a reazione, missili da crociera e velivoli aerei senza equipaggio, mentre il termine si riferisce in genere a un motore a getto d'aria che tipicamente presenta un compressore d'aria rotante alimentato da una turbina, con la potenza rimanente che fornisce la spinta attraverso l'ugello di propulsione. Sviluppato inizialmente negli anni trenta del XX secolo, solo negli anni settanta l'efficienza del motore a reazione era sufficiente per raggiungere e superare quella dei motori a pistoni e a elica.</Italian>
 		<Russian>Реактивный самолет - это самолет (почти всегда с фиксированным крылом) приводимый в движение реактивными двигателями. Реактивные самолеты летают гораздо быстрее, чем их поршневые предшественники как на малых, так и на больших высотах, таких как 10,000-15,000 метров (33,000-49,000 футов). На этих высотах, реактивные двигатели достигают максимальной эффективности на дальние расстояниях. Поршневые двигатели, наоборот, имеют максимальную эффективность на гораздо более низких высотах. Некоторые реактивные самолеты могут двигаться быстрее звука.</Russian>
+		<Polish>[COLOR_HIGHLIGHT_TEXT]Silnik odrzutowy[COLOR_REVERT], to rodzaj silnika spalinowego,  który wytwarza ciąg poprzez wyrzucanie szybko poruszającego się strumienia. Silniki odrzutowe zazwyczaj napędzają samoloty odrzutowe, rakiety manewrujące i bezzałogowe statki powietrzne, natomiast termin ten zazwyczaj odnosi się do silnika odrzutowego oddychającego powietrzem, takiego jak silnik turboodrzutowy, turbowentylatorowy, strumieniowy lub impulsowy, który zazwyczaj jest wyposażony w obrotową sprężarkę powietrza napędzaną turbiną. Opracowany początkowo w latach trzydziestych XX wieku, dopiero w latach siedemdziesiątych XX wieku wydajność silników odrzutowych była wystarczająca, aby dorównać, a nawet przewyższyć silniki tłokowe i śmigłowe.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_JEWELRY</Tag>
@@ -4975,12 +5050,14 @@
 		<English>[COLOR_HIGHLIGHT_TEXT]Jewelry[COLOR_REVERT] are decorative items worn for personal adornment, such as brooches, rings, necklaces, earrings, pendants, bracelets, and cufflinks. Jewelry may be attached to the body, to adorn nearly every body part, or to clothes. For many centuries metal, often combined with gemstones, amber or coral, has been the normal material used, but other materials such as shells and other plant materials may be used. It is one of the oldest type of archaeological artefact ever found. The basic forms of jewelry vary between cultures but are often extremely long-lived. The patterns of wearing jewelry can vary greatly between cultures, but adult women have been the most consistent wearers of jewelry. In most cultures jewelry can be understood as a status symbol, for its material properties, its patterns, or for meaningful symbols.</English>
 		<Italian>I [COLOR_HIGHLIGHT_TEXT]gioielli[COLOR_REVERT] sono oggetti decorativi indossati per ornamento personale, come spille, anelli, collane, orecchini, pendenti, bracciali e gemelli. I gioielli possono essere attaccati al corpo, per adornare quasi ogni parte del corpo, o ai vestiti. Per molti secoli il metallo, spesso combinato con pietre preziose, ambra o corallo, è stato il normale materiale utilizzato, ma possono essere utilizzati altri materiali come conchiglie e altri materiali vegetali. È uno dei più antichi manufatti archeologici mai trovati. Le forme di base dei gioielli variano tra le culture, ma sono spesso estremamente longevi. La tradizione di indossare gioielli può variare notevolmente tra le culture, ma le donne adulte sono le principali indossatrici di gioielli. Nella maggior parte delle culture, la gioielleria può essere intesa come uno status symbol, per il materiale usato, la sua fattura o per il simbolismo rivestito.</Italian>
 		<Russian>Þâåëèðíûå èçäåëèÿ ÿâëÿåòñÿ îäíîé èç ôîðì íàòåëüíûõ óêðàøåíèé - òàêèõ êàê áðîøè, êîëüöà, îæåðåëüÿ, ñåðüãè è áðàñëåòû.</Russian>
+		<Polish>[COLOR_HIGHLIGHT_TEXT]Biżuteria[COLOR_REVERT], to przedmioty dekoracyjne noszone w celu ozdoby osobistej, takie jak broszki, pierścionki, naszyjniki, kolczyki, wisiorki, bransoletki i spinki do mankietów. Biżuterię można przymocować do ciała, ozdobić niemal każdą jego część lub do ubrania. Przez wiele stuleci metal, często łączony z kamieniami szlachetnymi, bursztynem lub koralem, był najczęściej używanym materiałem, ale można również używać innych materiałów, takich jak muszle i materiały roślinne. Jest to jeden z najstarszych typów artefaktów archeologicznych, jakie kiedykolwiek znaleziono. Podstawowe formy biżuterii różnią się w zależności od kultury, ale często są niezwykle trwałe. Sposoby noszenia biżuterii mogą się znacznie różnić w zależności od kultury. W większości kultur biżuterię można rozumieć jako symbol statusu, ze względu na jej właściwości materialne, wzory lub znaczące symbole.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_JIVARO</Tag>
 		<English>Jivaro</English>
 		<Russian>Äæèâàðî</Russian>
 		<Italian>Cittadino jivaro</Italian>
+		<Polish>Jiwarska</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_JOMON</Tag>
