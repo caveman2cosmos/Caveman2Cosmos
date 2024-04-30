@@ -3328,11 +3328,7 @@ bool CvPlayerAI::AI_getVisiblePlotDanger(const CvPlot* pPlot, int iRange, bool b
 	return false;
 }
 
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD					  08/20/09								jdog5000	  */
-/*																							  */
-/* General AI, Efficiency																	   */
-/************************************************************************************************/
+
 // Plot danger cache
 
 // The vast majority of checks for plot danger are boolean checks during path planning for non-combat
@@ -3345,25 +3341,71 @@ bool CvPlayerAI::AI_getVisiblePlotDanger(const CvPlot* pPlot, int iRange, bool b
 // multiplayer game with simultaneous turns.  The safety cache for all plots is reset when the active
 // player changes or a new game is loaded.
 //
-// The border cache is done by team and works for all game types.  The border cache is reset for all
-// plots when war or peace are declared, and reset over a limited range whenever a ownership over a plot
-// changes.
+// The border cache is done by team and works for all game types.  The border cache is reset for all plots
+// when war or peace are declared, and reset over a limited range whenever a ownership over a plot changes.
+
+int CvPlayerAI::AI_plotDangerUnitCheck(
+	const CvPlot* plot0, const CvPlot* plotX,
+	const CvUnit* unitX, const TeamTypes eTeam,
+	const int iDistance, const bool bTestMoves) const
+{
+	if (plotX == plot0)
+	{
+		if (unitX->getTeam() == eTeam)
+		{
+			if (unitX->canDefend()
+			&& !unitX->isBarbCoExist()
+			&& !unitX->isHiddenNationality()
+			&& !unitX->canCoexistAlwaysOnPlot(*plot0))
+			{
+				return -1;
+			}
+		}
+		else if (
+			unitX->isEnemy(eTeam)
+		&&  unitX->canAttack()
+		&& !unitX->isInvisible(eTeam)
+		&& (!plot0->isCity(true) || !unitX->isBlendIntoCity()))
+		{
+			return 1;
+		}
+	}
+	else if (
+		unitX->isEnemy(eTeam)
+	&&  unitX->canAttack()
+	&& !unitX->isInvisible(eTeam)
+	&&  unitX->canEnterOrAttackPlot(plot0))
+	{
+		if (!bTestMoves)
+		{
+			return 1;
+		}
+		// Toffer - Would need a seperate path generator, or a second set of path generation cache, here to check if unitX can reach plot0 in one turn
+		//	because generatePath calls this function so calling generatePath again inside a generatePath call would mess up the caching of it for the first call.
+		if (iDistance <= unitX->baseMoves() + plotX->isValidRoute(unitX))
+		{
+			return 1;
+		}
+	}
+	return 0;
+}
+
 bool CvPlayerAI::AI_getAnyPlotDanger(const CvPlot* pPlot, int iRange, bool bTestMoves) const
 {
 	PROFILE_FUNC();
 
 	if (iRange == -1) iRange = DANGER_RANGE;
 
-	if (bTestMoves && isTurnActive())
+	if (isTurnActive())
 	{
 		PROFILE("CvPlayerAI::AI_getAnyPlotDanger.ActiveTurn");
 
-		if (iRange <= pPlot->getActivePlayerSafeRangeCache())
+		if (iRange <= pPlot->getActivePlayerSafeRangeCache(bTestMoves))
 		{
 			PROFILE("CvPlayerAI::AI_getAnyPlotDanger.NoDangerHit");
 			return false;
 		}
-		if (iRange >= DANGER_RANGE && pPlot->getActivePlayerHasDangerCache())
+		if (iRange >= DANGER_RANGE && pPlot->getActivePlayerHasDangerCache(bTestMoves))
 		{
 			PROFILE("CvPlayerAI::AI_getAnyPlotDanger.HasDangerHit");
 			return true;
@@ -3372,8 +3414,38 @@ bool CvPlayerAI::AI_getAnyPlotDanger(const CvPlot* pPlot, int iRange, bool bTest
 	bool bResult = false;
 
 	const TeamTypes eTeam = getTeam();
+	const bool bCityOrFort = pPlot->isCity(true);
+
+	bool bDefendedPlot = false;
+	{
+		int iCount = 0;
+		foreach_(const CvUnit * unitX, pPlot->units())
+		{
+			iCount += AI_plotDangerUnitCheck(pPlot, pPlot, unitX, eTeam);
+			if (iCount > 2)
+			{
+				bDefendedPlot = true;
+				break;
+			}
+			else if (iCount < -2)
+			{
+				break;
+			}
+		}
+		if (!bDefendedPlot)
+		{
+			if (iCount < 0)
+			{
+				bResult = true;
+			}
+			else if (iCount > 0)
+			{
+				bDefendedPlot = true;
+			}
+		}
+	}
 	// Exclude cities and defended plots from the hostile border proximity check.
-	const bool bCheckBorder = !pPlot->isCity() && pPlot->plotCheck(PUF_canDefend, -1, -1, NULL, getID());
+	const bool bCheckBorder = !bResult && !bDefendedPlot && !pPlot->isCity();
 
 	if (bCheckBorder && iRange >= 2 && pPlot->getBorderDangerCache(eTeam))
 	{
@@ -3389,22 +3461,26 @@ bool CvPlayerAI::AI_getAnyPlotDanger(const CvPlot* pPlot, int iRange, bool bTest
 
 	if (!bResult)
 	{
-		const CvArea* pPlotArea = pPlot->area();
-
 		foreach_(const CvPlot* plotX, pPlot->rect(iRange, iRange))
 		{
-			if (plotX->area() == pPlotArea)
+			if (plotX->area() == pPlot->area())
 			{
 				const int iDistance = stepDistance(pPlot->getX(), pPlot->getY(), plotX->getX(), plotX->getY());
 
-				if (bCheckBorder && iDistance <= 2 && atWar(plotX->getTeam(), eTeam))
+				if (bCheckBorder && iDistance <= 2
+				&& plotX->getTeam() != NO_PLAYER
+				// AI shouldn't be aware of hostile borders it hasn't revealed yet
+				// No biggie that they think the danger is over after a owner change they are not aware of yet.
+				&& plotX->getRevealedOwner(eTeam, false) == plotX->getTeam()
+				&& atWar(plotX->getTeam(), eTeam))
 				{
 					if (pPlot != plotX)
 					{
 						pPlot->setBorderDangerCache(eTeam, true);
 						plotX->setBorderDangerCache(eTeam, true);
 						// Only set the cache for the plotX team if pPlot is owned by us! (ie. owned by their enemy)
-						if (pPlot->getTeam() == eTeam) 
+						// It's ok to aproximate that pPlot is revealed by the other team if they have borders that close to our borders.
+						if (pPlot->getTeam() == eTeam)
 						{
 							pPlot->setBorderDangerCache(plotX->getTeam(), true);
 							plotX->setBorderDangerCache(plotX->getTeam(), true);
@@ -3416,24 +3492,11 @@ bool CvPlayerAI::AI_getAnyPlotDanger(const CvPlot* pPlot, int iRange, bool bTest
 					break;
 				}
 
-				foreach_(const CvUnit * unitx, plotX->units())
+				if (plotX->isVisible(eTeam, false) && (pPlot != plotX || !bDefendedPlot))
 				{
-					if (unitx->getTeam() == eTeam && !unitx->alwaysInvisible() && unitx->getInvisibleType() == NO_INVISIBLE)
+					foreach_(const CvUnit * unitX, plotX->units())
 					{
-						break; // No need to loop over tiles where we have regular units
-					}
-
-					if (unitx->isEnemy(eTeam)
-					&&  unitx->canAttack()
-					&& !unitx->isInvisible(eTeam, false)
-					&&  unitx->canEnterOrAttackPlot(pPlot))
-					{
-						if (!bTestMoves)
-						{
-							bResult = true;
-							break;
-						}
-						else if (iDistance <= unitx->baseMoves() + plotX->isValidRoute(unitx))
+						if (AI_plotDangerUnitCheck(pPlot, plotX, unitX, eTeam, iDistance, bTestMoves) > 0)
 						{
 							bResult = true;
 							break;
@@ -3444,21 +3507,92 @@ bool CvPlayerAI::AI_getAnyPlotDanger(const CvPlot* pPlot, int iRange, bool bTest
 		}
 	}
 
-	if (GC.getGame().getNumGameTurnActive() == 1 && isTurnActive() && !GC.getGame().isMPOption(MPOPTION_SIMULTANEOUS_TURNS))
+	if (isTurnActive() && !GC.getGame().isMPOption(MPOPTION_SIMULTANEOUS_TURNS))
 	{
 		if (bResult)
 		{
 			if (iRange <= DANGER_RANGE)
 			{
-				pPlot->setActivePlayerHasDangerCache(true);
+				pPlot->setActivePlayerHasDangerCache(true, bTestMoves);
 			}
 		}
-		else if (iRange < pPlot->getActivePlayerSafeRangeCache())
+		else if (iRange < pPlot->getActivePlayerSafeRangeCache(bTestMoves))
 		{
-			pPlot->setActivePlayerSafeRangeCache(iRange);
+			pPlot->setActivePlayerSafeRangeCache(iRange, bTestMoves);
 		}
 	}
 	return bResult;
+}
+
+int CvPlayerAI::AI_getPlotDangerInternal(const CvPlot* pPlot, int iRange, bool bTestMoves) const
+{
+	PROFILE_EXTRA_FUNC();
+	const CvArea* pPlotArea = pPlot->area();
+	const TeamTypes eTeam = getTeam();
+
+	int iCount = 0;
+	int iBorderDanger = 0;
+
+	OutputDebugString(CvString::format("AI_getPlotDanger for (%d,%d) at range %d (bTestMoves=%d)\n",
+		pPlot->getX(), pPlot->getY(),
+		iRange,
+		bTestMoves).c_str());
+
+	foreach_(const CvPlot * plotX, pPlot->rect(iRange, iRange))
+	{
+		if (plotX->area() == pPlotArea)
+		{
+			const int iDistance = stepDistance(pPlot->getX(), pPlot->getY(), plotX->getX(), plotX->getY());
+
+			if (iDistance <= 2
+			&& plotX->getTeam() != NO_PLAYER // Owned by someone
+			// AI shouldn't be aware of hostile borders it hasn't revealed yet
+			// No biggie if they think the danger is gone after a owner change they are not yet aware of.
+			&& plotX->getRevealedOwner(eTeam, false) == plotX->getTeam()
+			&& atWar(plotX->getTeam(), eTeam))
+			{
+				if (iDistance == 0)
+				{
+					iBorderDanger += 4;
+				}
+				else if (iDistance == 1)
+				{
+					iBorderDanger += 2;
+				}
+				else iBorderDanger++;
+			}
+
+			if (plotX->isVisible(eTeam, false))
+			{
+				foreach_(const CvUnit * unitX, plotX->units())
+				{
+					iCount += AI_plotDangerUnitCheck(pPlot, plotX, unitX, eTeam, iDistance, bTestMoves);
+				}
+			}
+		}
+	}
+
+	// Note that here we still count border danger in cities - because I want it for AI_cityThreat
+	if (iBorderDanger > 0 && (!isHumanPlayer() || pPlot->plotCheck(PUF_canDefend, -1, -1, NULL, getID())))
+	{
+		iCount += (1 + iBorderDanger) / 2;
+	}
+
+	if (isTurnActive() && !GC.getGame().isMPOption(MPOPTION_SIMULTANEOUS_TURNS))
+	{
+		if (iCount > 0)
+		{
+			if (iRange <= DANGER_RANGE)
+			{
+				pPlot->setActivePlayerHasDangerCache(true, bTestMoves);
+			}
+		}
+		else if (iRange < pPlot->getActivePlayerSafeRangeCache(bTestMoves))
+		{
+			pPlot->setActivePlayerSafeRangeCache(iRange, bTestMoves);
+		}
+	}
+	return iCount;
 }
 
 #ifdef PLOT_DANGER_CACHING
@@ -3476,7 +3610,7 @@ int CvPlayerAI::AI_getPlotDanger(const CvPlot* pPlot, int iRange, bool bTestMove
 		iRange = DANGER_RANGE;
 	}
 
-	if (bTestMoves && isTurnActive() && iRange <= pPlot->getActivePlayerSafeRangeCache())
+	if (isTurnActive() && iRange <= pPlot->getActivePlayerSafeRangeCache(bTestMoves))
 	{
 		return 0;
 	}
@@ -3542,182 +3676,6 @@ int CvPlayerAI::AI_getPlotDanger(const CvPlot* pPlot, int iRange, bool bTestMove
 #endif
 }
 
-int CvPlayerAI::AI_getPlotDangerInternal(const CvPlot* pPlot, int iRange, bool bTestMoves) const
-{
-	PROFILE_EXTRA_FUNC();
-	const CvArea* pPlotArea = pPlot->area();
-	const TeamTypes eTeam = getTeam();
-
-	int iCount = 0;
-	int iBorderDanger = 0;
-
-	OutputDebugString(CvString::format("AI_getPlotDanger for (%d,%d) at range %d (bTestMoves=%d)\n",
-		pPlot->getX(), pPlot->getY(),
-		iRange,
-		bTestMoves).c_str());
-
-	foreach_(const CvPlot * pLoopPlot, pPlot->rect(iRange, iRange))
-	{
-		if (pLoopPlot->area() == pPlotArea)
-		{
-			const int iDistance = stepDistance(pPlot->getX(), pPlot->getY(), pLoopPlot->getX(), pLoopPlot->getY());
-
-			if (iDistance <= 2 && atWar(pLoopPlot->getTeam(), eTeam))
-			{
-				if (iDistance == 0)
-				{
-					iBorderDanger += 4;
-				}
-				else if (iDistance == 1)
-				{
-					iBorderDanger += 2;
-				}
-				else iBorderDanger++;
-			}
-
-			foreach_(const CvUnit * pLoopUnit, pLoopPlot->units())
-			{
-				// No need to loop over tiles full of our own units
-				if (pLoopUnit->getTeam() == eTeam
-				&& !pLoopUnit->alwaysInvisible()
-				&& pLoopUnit->getInvisibleType() == NO_INVISIBLE)
-				{
-					break;
-				}
-				if (pLoopUnit->isEnemy(eTeam)
-				&& (pLoopUnit->canAttack() || pLoopUnit->plot() == pPlot)
-				&& !pLoopUnit->isInvisible(eTeam, false)
-				&& (pLoopUnit->canEnterOrAttackPlot(pPlot) || pLoopUnit->plot() == pPlot))
-				{
-					if (bTestMoves)
-					{
-						const int iDangerRange = pLoopUnit->baseMoves() + pLoopPlot->isValidRoute(pLoopUnit);
-
-						if (iDangerRange >= iDistance)
-						{
-							iCount++;
-						}
-					}
-					else iCount++;
-				}
-			}
-		}
-	}
-
-	// Note that here we still count border danger in cities - because I want it for AI_cityThreat
-	if (iBorderDanger > 0 && (!isHumanPlayer() || pPlot->plotCheck(PUF_canDefend, -1, -1, NULL, getID())))
-	{
-		iCount += (1 + iBorderDanger) / 2;
-	}
-
-	if (GC.getGame().getNumGameTurnActive() == 1 && isTurnActive() && !GC.getGame().isMPOption(MPOPTION_SIMULTANEOUS_TURNS))
-	{
-		if (iCount > 0)
-		{
-			if (iRange <= DANGER_RANGE)
-			{
-				pPlot->setActivePlayerHasDangerCache(true);
-			}
-		}
-		else if (iRange < pPlot->getActivePlayerSafeRangeCache())
-		{
-			pPlot->setActivePlayerSafeRangeCache(iRange);
-		}
-	}
-	return iCount;
-}
-
-// Never used ...
-/*
-int CvPlayerAI::AI_getUnitDanger(CvUnit* pUnit, int iRange, bool bTestMoves, bool bAnyDanger) const
-{
-	PROFILE_FUNC();
-
-	CvPlot* pLoopPlot;
-	int iCount;
-	int iDistance;
-	int iBorderDanger;
-	int iDX, iDY;
-
-	CvPlot* pPlot = pUnit->plot();
-	iCount = 0;
-	iBorderDanger = 0;
-
-	if (iRange == -1)
-	{
-		iRange = DANGER_RANGE;
-	}
-
-	for (iDX = -(iRange); iDX <= iRange; iDX++)
-	{
-		for (iDY = -(iRange); iDY <= iRange; iDY++)
-		{
-			pLoopPlot = plotXY(pPlot->getX(), pPlot->getY(), iDX, iDY);
-
-			if (pLoopPlot != NULL)
-			{
-				if (pLoopPlot->area() == pPlot->area())
-				{
-					iDistance = stepDistance(pPlot->getX(), pPlot->getY(), pLoopPlot->getX(), pLoopPlot->getY());
-					if (atWar(pLoopPlot->getTeam(), getTeam()))
-					{
-						if (iDistance == 1)
-						{
-							iBorderDanger++;
-						}
-						else if ((iDistance == 2) && (pLoopPlot->isRoute()))
-						{
-							iBorderDanger++;
-						}
-					}
-
-					foreach_(CvUnit* pLoopUnit, pLoopPlot->units())
-					{
-						if (atWar(pLoopUnit->getTeam(), getTeam()))
-						{
-							if (pLoopUnit->canAttack())
-							{
-								if (!(pLoopUnit->isInvisible(getTeam(), false)))
-								{
-									if (pLoopUnit->canEnterOrAttackPlot(pPlot))
-									{
-										if (!bTestMoves)
-										{
-											iCount++;
-										}
-										else
-										{
-											int iDangerRange = pLoopUnit->baseMoves();
-											iDangerRange += ((pLoopPlot->isValidRoute(pLoopUnit)) ? 1 : 0);
-											if (iDangerRange >= iDistance)
-											{
-												iCount++;
-											}
-										}
-									}
-								}
-							}
-						}
-					}
-				}
-			}
-		}
-	}
-
-	if (iBorderDanger > 0)
-	{
-		if (!isHumanPlayer() || pUnit->isAutomated())
-		{
-			iCount += iBorderDanger;
-		}
-	}
-
-	return iCount;
-}
-*/
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD					   END												  */
-/************************************************************************************************/
 
 int CvPlayerAI::AI_countNumLocalNavy(const CvPlot* pPlot, int iRange) const
 {

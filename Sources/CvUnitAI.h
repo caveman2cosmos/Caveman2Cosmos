@@ -238,6 +238,7 @@ protected:
 	bool AI_seaAreaAttack();
 	bool AI_patrol(bool bIgnoreDanger = false);
 	bool AI_defend();
+	void AI_safetyEval(const CvPlot* plotX, const int iPass, const int iRange, const bool bAnimalDanger, int &iBestValue, const CvPlot** pBestPlot);
 	bool AI_safety(int iRange = 1);
 	bool AI_reachHome(const bool bMockRun = false, int iRange = 0) const;
 	bool AI_hide();

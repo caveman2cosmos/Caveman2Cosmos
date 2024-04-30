@@ -322,11 +322,39 @@ public:
 	int calculatePathDistanceToPlot( TeamTypes eTeam, CvPlot* pTargetPlot ) const;
 
 	// Plot danger cache
-	inline int getActivePlayerSafeRangeCache() const { return m_iActivePlayerSafeRangeCache; }
-	inline bool getActivePlayerHasDangerCache() const { return m_bActivePlayerHasDangerCache; }
+	inline int getActivePlayerSafeRangeCache(const bool bTestMoves) const
+	{
+		if (bTestMoves)
+		{
+			return m_iActivePlayerSafeRangeCacheTestMoves;
+		}
+		return m_iActivePlayerSafeRangeCache;
+	}
+	inline void setActivePlayerSafeRangeCache(const int iRange, const bool bTestMoves) const 
+	{
+		if (bTestMoves)
+		{
+			m_iActivePlayerSafeRangeCacheTestMoves = iRange;
+		}
+		else m_iActivePlayerSafeRangeCache = iRange;
+	}
+	inline bool getActivePlayerHasDangerCache(const bool bTestMoves) const
+	{
+		if (bTestMoves)
+		{
+			return m_bActivePlayerHasDangerCacheTestMoves;
+		}
+		return m_bActivePlayerHasDangerCache;
+	}
+	inline void setActivePlayerHasDangerCache(const bool bNewValue, const bool bTestMoves) const
+	{
+		if (bTestMoves)
+		{
+			m_bActivePlayerHasDangerCacheTestMoves = bNewValue;
+		}
+		else m_bActivePlayerHasDangerCache = bNewValue;
+	}
 	inline bool getBorderDangerCache(const TeamTypes eTeam) const { return m_borderDangerCache[eTeam]; }
-	inline void setActivePlayerSafeRangeCache(const int iRange) const { m_iActivePlayerSafeRangeCache = iRange; }
-	inline void setActivePlayerHasDangerCache(const bool bNewValue) const { m_bActivePlayerHasDangerCache = bNewValue; }
 	inline void setBorderDangerCache(const TeamTypes eTeam, const bool bNewValue) const { m_borderDangerCache[eTeam] = bNewValue; }
 	void invalidateBorderDangerCache() const;
 	void invalidateActivePlayerPlotCache();
@@ -965,8 +993,10 @@ protected:
 	IDInfo m_workingCityOverride;
 
 	// Plot danger cache
-	mutable bool m_bActivePlayerHasDangerCache;
 	mutable int m_iActivePlayerSafeRangeCache;
+	mutable int m_iActivePlayerSafeRangeCacheTestMoves;
+	mutable bool m_bActivePlayerHasDangerCache;
+	mutable bool m_bActivePlayerHasDangerCacheTestMoves;
 	mutable bool* m_borderDangerCache;
 
 	static	int m_iGlobalCachePathEpoch;

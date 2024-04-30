@@ -616,15 +616,16 @@ class CvNetChooseArrestUnit : public CvMessageData
 {
 public:
 	CvNetChooseArrestUnit();
-	CvNetChooseArrestUnit(PlayerTypes ePlayer, PlayerTypes ePlayerT, int iUnitID);
+	CvNetChooseArrestUnit(int iCopID, PlayerTypes eCopPlayer, int iVictimID, PlayerTypes eVictimPlayer);
 	virtual void Debug(char* szAddendum);
 	virtual void Execute();
 	virtual void PutInBuffer(FDataStreamBase* pStream);
 	virtual void SetFromBuffer(FDataStreamBase* pStream);
 private:
-	PlayerTypes m_ePlayer;
-	PlayerTypes m_ePlayerT;
-	int m_iUnitID;
+	PlayerTypes m_eCopPlayer;
+	PlayerTypes m_eVictimPlayer;
+	int m_iCopID;
+	int m_iVictimID;
 };
 
 //  Ambush

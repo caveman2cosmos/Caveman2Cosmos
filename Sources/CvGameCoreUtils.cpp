@@ -1432,11 +1432,6 @@ bool PUF_canDefend(const CvUnit* pUnit, int iData1, int iData2, const CvUnit* pT
 	return pUnit->canDefend();
 }
 
-bool PUF_canAttack(const CvUnit* pUnit, int iData1, int iData2, const CvUnit* pThis)
-{
-	return pUnit->canAttack();
-}
-
 bool PUF_isCriminal(const CvUnit* pUnit, int iData1, int iData2, const CvUnit* pThis)
 {
 	return (pUnit->getInsidiousnessTotal(true) > 0);
@@ -2306,24 +2301,13 @@ int pathCost(FAStarNode* parent, FAStarNode* node, int data, const void* pointer
 				{
 					iExtraNodeCost += (GC.getPATH_DAMAGE_WEIGHT() * std::max(0, GC.getFeatureInfo(pToPlot->getFeatureType()).getTurnDamage())) / GC.getMAX_HIT_POINTS();
 				}
-	/************************************************************************************************/
-	/* Afforess	                  Start		 05/17/10                                                */
-	/*                                                                                              */
-	/*                                                                                              */
-	/************************************************************************************************/
+
 				if (iMaxTerrainDamage > 0)
 				{
 					iExtraNodeCost += (GC.getPATH_DAMAGE_WEIGHT() * std::max(0, iMaxTerrainDamage * 2)) / GC.getMAX_HIT_POINTS();
 				}
-	/************************************************************************************************/
-	/* Afforess	                     END                                                            */
-	/************************************************************************************************/
 			}
-	/************************************************************************************************/
-	/* BETTER_BTS_AI_MOD                      04/03/09                                jdog5000      */
-	/*                                                                                              */
-	/* General AI                                                                                   */
-	/************************************************************************************************/
+
 			// Add additional cost for ending turn in or adjacent to enemy territory based on flags
 			if (gDLL->getFAStarIFace()->GetInfo(finder) & MOVE_AVOID_ENEMY_WEIGHT_3)
 			{

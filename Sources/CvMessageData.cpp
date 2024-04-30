@@ -72,20 +72,10 @@ CvMessageData* CvMessageData::createMessage(GameMessageTypes eType)
 		return new CvNetChangeWar();
 	case GAMEMESSAGE_PING:
 		return new CvNetPing();
-// BUG - Reminder Mod - start
 	case GAMEMESSAGE_ADD_REMINDER:
 		return new CvNetAddReminder();
-// BUG - Reminder Mod - end
-/************************************************************************************************/
-/* Afforess	                  Start		 08/18/10                                               */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
 	case GAMEMESSAGE_SET_GLOBAL_DEFINE:
 		return new CvGlobalDefineUpdate();
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
 	case GAMEMESSAGE_RECALCULATE_MODIFIERS:
 		return new CvNetRecalculateModifiers();
 	case GAMEMESSAGE_BUILD_LISTS:
@@ -1275,7 +1265,7 @@ void CvNetPing::Execute()
 	}
 }
 
-// BUG - Reminder Mod - start
+
 #include "CyArgsList.h"
 #include "CvDLLPythonIFaceBase.h"
 CvNetAddReminder::CvNetAddReminder(PlayerTypes ePlayer, int iGameTurn, CvWString szMessage) : CvMessageData(GAMEMESSAGE_ADD_REMINDER), m_ePlayer(ePlayer), m_iGameTurn(iGameTurn), m_szMessage(szMessage)
@@ -1308,13 +1298,8 @@ void CvNetAddReminder::SetFromBuffer(FDataStreamBase* pStream)
 	pStream->Read(&m_iGameTurn);
 	pStream->ReadString(m_szMessage);
 }
-// BUG - Reminder Mod - end
 
-/************************************************************************************************/
-/* Afforess	                  Start		 08/18/10                                               */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
+
 CvGlobalDefineUpdate::CvGlobalDefineUpdate(CvWString szName, int iValue, float fValue, CvWString szValue) : CvMessageData(GAMEMESSAGE_SET_GLOBAL_DEFINE), m_szDefine(szName), m_iValue(iValue), m_fValue(fValue), m_szValue(szValue)
 {
 }
@@ -1367,13 +1352,9 @@ void CvGlobalDefineUpdate::SetFromBuffer(FDataStreamBase* pStream)
 	pStream->Read(&m_fValue);
 	pStream->ReadString(m_szValue);
 }
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
 
-CvNetRecalculateModifiers::CvNetRecalculateModifiers() : CvMessageData(GAMEMESSAGE_RECALCULATE_MODIFIERS)
-{
-}
+
+CvNetRecalculateModifiers::CvNetRecalculateModifiers() : CvMessageData(GAMEMESSAGE_RECALCULATE_MODIFIERS) { }
 
 void CvNetRecalculateModifiers::Debug(char *szAddendum)
 {
@@ -2001,6 +1982,7 @@ void CvNetConfirmSplitUnit::SetFromBuffer(FDataStreamBase* pStream)
 	pStream->Read((bool*)&m_bConfirm);
 }
 
+
 CvNetImprovementUpgrade::CvNetImprovementUpgrade() : CvMessageData(GAMEMESSAGE_IMPROVEMENT_UPGRADE), m_ePlayer(NO_PLAYER), m_eImprovement(NO_IMPROVEMENT), m_iX(-1), m_iY(-1), m_bConfirm(false)
 {
 }
@@ -2041,50 +2023,51 @@ void CvNetImprovementUpgrade::SetFromBuffer(FDataStreamBase* pStream)
 	pStream->Read(&m_bConfirm);
 }
 
-CvNetChooseArrestUnit::CvNetChooseArrestUnit() : CvMessageData(GAMEMESSAGE_CHOOSE_ARREST_UNIT), m_ePlayer(NO_PLAYER), m_ePlayerT(NO_PLAYER), m_iUnitID(NO_UNIT)
-{
-}
 
-CvNetChooseArrestUnit::CvNetChooseArrestUnit(PlayerTypes ePlayer, PlayerTypes ePlayerT, int iUnitID) : CvMessageData(GAMEMESSAGE_CHOOSE_ARREST_UNIT), m_ePlayer(ePlayer), m_ePlayerT(ePlayerT), m_iUnitID(iUnitID)
-{
-}
+CvNetChooseArrestUnit::CvNetChooseArrestUnit()
+	:
+	CvMessageData(GAMEMESSAGE_CHOOSE_ARREST_UNIT),
+	m_iCopID(NO_UNIT),
+	m_eCopPlayer(NO_PLAYER),
+	m_iVictimID(NO_UNIT),
+	m_eVictimPlayer(NO_PLAYER)
+	{ }
+
+CvNetChooseArrestUnit::CvNetChooseArrestUnit(int iCopID, PlayerTypes eCopPlayer, int iVictimID, PlayerTypes eVictimPlayer)
+	:
+	CvMessageData(GAMEMESSAGE_CHOOSE_ARREST_UNIT),
+	m_iCopID(iCopID),
+	m_eCopPlayer(eCopPlayer),
+	m_iVictimID(iVictimID),
+	m_eVictimPlayer(eVictimPlayer)
+	{ }
 
 void CvNetChooseArrestUnit::Debug(char* szAddendum)
 {
-	sprintf(szAddendum, "Selecting Unit to Arrest: %d", m_iUnitID);
+	sprintf(szAddendum, "Selecting Unit to Arrest: %d", m_iVictimID);
 }
 
 void CvNetChooseArrestUnit::Execute()
 {
-	if (m_ePlayer != NO_PLAYER && m_ePlayerT != NO_PLAYER)
-	{
-		if (GET_PLAYER(m_ePlayer).getArrestingUnit() != FFreeList::INVALID_INDEX)
-		{
-			GET_PLAYER(m_ePlayerT).setArrestedUnit(m_iUnitID);
-			CvUnit* pArrestingUnit = GET_PLAYER(m_ePlayer).getUnit(GET_PLAYER(m_ePlayer).getArrestingUnit());
-			CvUnit* pArrestedUnit = GET_PLAYER(m_ePlayerT).getUnit(GET_PLAYER(m_ePlayerT).getArrestedUnit());
-
-			pArrestingUnit->attackSamePlotSpecifiedUnit(pArrestedUnit);
-
-			GET_PLAYER(m_ePlayer).setArrestingUnit(FFreeList::INVALID_INDEX);
-			GET_PLAYER(m_ePlayerT).setArrestedUnit(FFreeList::INVALID_INDEX);
-		}
-	}
+	GET_PLAYER(m_eCopPlayer).getUnit(m_iCopID)->attackSamePlotSpecifiedUnit(GET_PLAYER(m_eVictimPlayer).getUnit(m_iVictimID));
 }
 
 void CvNetChooseArrestUnit::PutInBuffer(FDataStreamBase* pStream)
 {
-	pStream->Write(m_ePlayer);
-	pStream->Write(m_ePlayerT);
-	pStream->Write(m_iUnitID);
+	pStream->Write(m_eCopPlayer);
+	pStream->Write(m_eVictimPlayer);
+	pStream->Write(m_iVictimID);
+	pStream->Write(m_iCopID);
 }
 
 void CvNetChooseArrestUnit::SetFromBuffer(FDataStreamBase* pStream)
 {
-	pStream->Read((int*)&m_ePlayer);
-	pStream->Read((int*)&m_ePlayerT);
-	pStream->Read((int*)&m_iUnitID);
+	pStream->Read((int*)&m_eCopPlayer);
+	pStream->Read((int*)&m_eVictimPlayer);
+	pStream->Read((int*)&m_iVictimID);
+	pStream->Read((int*)&m_iCopID);
 }
+
 
 CvNetConfirmAmbush::CvNetConfirmAmbush() : CvMessageData(GAMEMESSAGE_CONFIRM_AMBUSH), m_ePlayer(NO_PLAYER), m_bConfirm(false)
 {

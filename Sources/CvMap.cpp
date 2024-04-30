@@ -1338,7 +1338,7 @@ void CvMap::write(FDataStreamBase* pStream)
 	// call the read of the free list CvArea class allocations
 	WriteStreamableFFreeListTrashArray(m_areas, pStream);
 
-	WRAPPER_WRITE_ARRAY(wrapper, "CvArea", getGridHeight(), (int*)m_climateZones);
+	WRAPPER_WRITE_ARRAY(wrapper, "CvMap", getGridHeight(), (int*)m_climateZones);
 
 	WRAPPER_WRITE_OBJECT_END(wrapper);
 }

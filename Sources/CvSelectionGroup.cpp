@@ -4692,9 +4692,12 @@ CvPlot* CvSelectionGroup::getPathEndTurnPlot() const
 		FAssertMsg(
 			pPlot != getPath().begin().plot() || pPlot == getPath().lastPlot(),
 			CvString::format(
-				"Bad path movement calc on path from (%d,%d) to (%d,%d) for %S (%d) at plot (%d,%d)\n",
-				pPlot->getX(), pPlot->getY(),getPath().lastPlot()->getX(), getPath().lastPlot()->getY(),
-				getHeadUnit()->getDescription().c_str(),getHeadUnit()->getID(), plot()->getX(), plot()->getY()
+				"Bad path movement calc on path from (%d,%d) to (%d,%d) via (%d,%d) for %S (%d) at plot (%d,%d)\n",
+				getPath().begin().plot()->getX(), getPath().begin().plot()->getY(),
+				getPath().lastPlot()->getX(), getPath().lastPlot()->getY(),
+				pPlot->getX(), pPlot->getY(),
+				getHeadUnit()->getDescription().c_str(), getHeadUnit()->getID(),
+				plot()->getX(), plot()->getY()
 			).c_str()
 		);
 		return pPlot;
