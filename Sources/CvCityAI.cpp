@@ -786,7 +786,8 @@ void CvCityAI::AI_chooseProduction()
 	m_bRequestedBuilding = false;
 	m_bRequestedUnit = false;
 
-	CvPlayerAI& player = GET_PLAYER(getOwner());
+	const PlayerTypes eOwner = getOwner();
+	CvPlayerAI& player = GET_PLAYER(eOwner);
 
 	if (player.isAnarchy())
 	{
@@ -828,7 +829,7 @@ void CvCityAI::AI_chooseProduction()
 
 			// if building a combat unit, and we have nearly no defenders, keep building it
 			const UnitTypes eProductionUnit = getProductionUnit();
-			if (eProductionUnit != NO_UNIT && plot()->getNumDefenders(getOwner()) < 2
+			if (eProductionUnit != NO_UNIT && plot()->getNumDefenders(eOwner) < 2
 				&& GC.getUnitInfo(eProductionUnit).getCombat() > 0)
 			{
 				return;
@@ -933,7 +934,7 @@ void CvCityAI::AI_chooseProduction()
 	int iNumCapitalAreaCities = 0;
 	if (player.getCapitalCity() != NULL)
 	{
-		iNumCapitalAreaCities = player.getCapitalCity()->area()->getCitiesPerPlayer(getOwner());
+		iNumCapitalAreaCities = player.getCapitalCity()->area()->getCitiesPerPlayer(eOwner);
 		if (getArea() == player.getCapitalCity()->getArea())
 		{
 			bIsCapitalArea = true;
@@ -1011,7 +1012,7 @@ void CvCityAI::AI_chooseProduction()
 
 	// Does this city require special attention as a cultural victory city?
 	bool bImportantCity = false; //be very careful about setting this.
-	const int iNumCitiesInArea = pArea->getCitiesPerPlayer(getOwner());
+	const int iNumCitiesInArea = pArea->getCitiesPerPlayer(eOwner);
 	const int iCultureRateRank = findCommerceRateRank(COMMERCE_CULTURE);
 	const int iCulturalVictoryNumCultureCities = GC.getGame().culturalVictoryNumCultureCities();
 
@@ -1049,7 +1050,7 @@ void CvCityAI::AI_chooseProduction()
 			"	Considering new production: iProdRank %d, iBuildUnitProb %d\n"
 			"	Area workers %d (need %d), workers assigned to city %d (need %d more)\n"
 			"	iNumSettlers=%d; iMaxSettlers=%d\n",
-			getOwner(), player.getCivilizationDescription(0), getName().GetCString(), getPopulation(),
+			eOwner, player.getCivilizationDescription(0), getName().GetCString(), getPopulation(),
 			iProductionRank, iBuildUnitProb,
 			iWorkersInArea, iNeededWorkersInArea, getNumWorkers(), iWorkersNeeded,
 			iNumSettlers, iMaxSettlers
@@ -1106,7 +1107,7 @@ void CvCityAI::AI_chooseProduction()
 			}
 		}
 
-		if (eAreaAI == AREAAI_OFFENSIVE || eAreaAI == AREAAI_ASSAULT || plot()->plotCount(PUF_isUnitAIType, UNITAI_ASSAULT_SEA, -1, NULL, getOwner()) > 0)
+		if (eAreaAI == AREAAI_OFFENSIVE || eAreaAI == AREAAI_ASSAULT || plot()->plotCount(PUF_isUnitAIType, UNITAI_ASSAULT_SEA, -1, NULL, eOwner) > 0)
 		{
 			if (AI_chooseUnit("barbarian choose attack city", UNITAI_ATTACK_CITY))
 			{
@@ -1211,7 +1212,7 @@ void CvCityAI::AI_chooseProduction()
 		else
 		{
 			// City Defense
-			if (plot()->plotCount(PUF_isUnitAIType, UNITAI_CITY_DEFENSE, -1, NULL, getOwner()) < (AI_minDefenders()))
+			if (plot()->plotCount(PUF_isUnitAIType, UNITAI_CITY_DEFENSE, -1, NULL, eOwner) < (AI_minDefenders()))
 			{
 				if (AI_chooseUnit("rebel city defense", UNITAI_CITY_DEFENSE))
 				{
@@ -1394,7 +1395,7 @@ void CvCityAI::AI_chooseProduction()
 		}
 	}
 
-	if (!bInhibitUnits && plot()->getNumDefenders(getOwner()) == 0) // XXX check for other team's units?
+	if (!bInhibitUnits && plot()->getNumDefenders(eOwner) == 0) // XXX check for other team's units?
 	{
 		static CvUnitSelectionCriteria DefaultCriteria;
 		if (AI_chooseUnit("defenseless city", UNITAI_CITY_DEFENSE, -1, -1, CITY_BUILD_PRIORITY_CEILING, &DefaultCriteria))
@@ -1474,13 +1475,13 @@ void CvCityAI::AI_chooseProduction()
 
 	// So what's the right detection of defense which works in early game too?
 	// Fuyu: The right way is to 1) queue the warriors with UNITAI_CITY_DEFENCE or UNITAI_RESERVE,
-	// then 2) to detect defenders with plot()->plotCount(PUF_canDefendGroupHead, -1, -1, getOwner(), NO_TEAM, PUF_isCityAIType) - compare AI_isDefended()
-	int iPlotSettlerCount = (iNumSettlers == 0) ? 0 : plot()->plotCount(PUF_isUnitAIType, UNITAI_SETTLE, -1, NULL, getOwner());
-	int iPlotCityDefenderCount = plot()->plotCount(PUF_isUnitAIType, UNITAI_CITY_DEFENSE, -1, NULL, getOwner(), NO_TEAM, NULL, -1, -1, 2);
-	int iPlotOtherCityAICount = plot()->plotCount(PUF_canDefend, -1, -1, NULL, getOwner(), NO_TEAM, PUF_isCityAIType, -1, -1, 2);
+	// then 2) to detect defenders with plot()->plotCount(PUF_canDefendGroupHead, -1, -1, eOwner, NO_TEAM, PUF_isCityAIType) - compare AI_isDefended()
+	int iPlotSettlerCount = (iNumSettlers == 0) ? 0 : plot()->plotCount(PUF_isUnitAIType, UNITAI_SETTLE, -1, NULL, eOwner);
+	int iPlotCityDefenderCount = plot()->plotCount(PUF_isUnitAIType, UNITAI_CITY_DEFENSE, -1, NULL, eOwner, NO_TEAM, NULL, -1, -1, 2);
+	int iPlotOtherCityAICount = plot()->plotCount(PUF_canDefend, -1, -1, NULL, eOwner, NO_TEAM, PUF_isCityAIType, -1, -1, 2);
 
 	int iPlotCityDefenderStrength = getGarrisonStrength();
-	int iPlotOtherCityAIStrength = plot()->plotStrength(UNITVALUE_FLAGS_DEFENSIVE, PUF_canDefend, -1, -1, getOwner(), NO_TEAM, PUF_isCityAIType, -1, -1, 2) - iPlotCityDefenderStrength;
+	int iPlotOtherCityAIStrength = plot()->plotStrength(UNITVALUE_FLAGS_DEFENSIVE, PUF_canDefend, -1, -1, eOwner, NO_TEAM, PUF_isCityAIType, -1, -1, 2) - iPlotCityDefenderStrength;
 
 	if (eCurrentEra == 0)
 	{
@@ -1493,7 +1494,7 @@ void CvCityAI::AI_chooseProduction()
 				iPlotOtherCityAIStrength = 0;
 				if (iPlotCityDefenderStrength == 0)
 				{
-					iPlotCityDefenderStrength = plot()->plotStrength(UNITVALUE_FLAGS_DEFENSIVE, PUF_canDefend, -1, -1, getOwner(), NO_TEAM, PUF_isDomainType, DOMAIN_LAND, -1, 2);
+					iPlotCityDefenderStrength = plot()->plotStrength(UNITVALUE_FLAGS_DEFENSIVE, PUF_canDefend, -1, -1, eOwner, NO_TEAM, PUF_isDomainType, DOMAIN_LAND, -1, 2);
 				}
 			}
 		}
@@ -1609,8 +1610,8 @@ void CvCityAI::AI_chooseProduction()
 	m_iTempBuildPriority--;
 
 	// Minimal defense.
-	int iPlotSettlerEscortCityDefenseCount = plot()->plotCount(PUF_isUnitAIType, UNITAI_CITY_COUNTER, -1, NULL, getOwner()) - (AI_minDefenders() + 1);
-	int iPlotSettlerEscortCounterCount = plot()->plotCount(PUF_isUnitAIType, UNITAI_CITY_COUNTER, -1, NULL, getOwner());
+	int iPlotSettlerEscortCityDefenseCount = plot()->plotCount(PUF_isUnitAIType, UNITAI_CITY_COUNTER, -1, NULL, eOwner) - (AI_minDefenders() + 1);
+	int iPlotSettlerEscortCounterCount = plot()->plotCount(PUF_isUnitAIType, UNITAI_CITY_COUNTER, -1, NULL, eOwner);
 	int iPlotSettlerEscortCount = iPlotSettlerEscortCityDefenseCount + iPlotSettlerEscortCounterCount;
 	if (iMaxSettlers > 0 && !bInhibitUnits && iPlotSettlerCount > 0 && iPlotSettlerEscortCount < (iPlotSettlerCount * 4))
 	{
@@ -1725,7 +1726,7 @@ void CvCityAI::AI_chooseProduction()
 				int iSettlerSeaNeeded = std::min(iNumWaterAreaCitySites, 1 + (iTotalCities + 4) / 8);
 				if (player.getCapitalCity() != NULL)
 				{
-					int iOverSeasColonies = iTotalCities - player.getCapitalCity()->area()->getCitiesPerPlayer(getOwner());
+					int iOverSeasColonies = iTotalCities - player.getCapitalCity()->area()->getCitiesPerPlayer(eOwner);
 					int iLoop = 2;
 					int iExtras = 0;
 					while (iOverSeasColonies >= iLoop)
@@ -1776,7 +1777,7 @@ void CvCityAI::AI_chooseProduction()
 				if (player.getNumMilitaryUnits() <= 1 + player.getNumCities() + iNumSettlers
 				//Fuyu: in the beginning, don't count on other cities to build the escorts
 				|| player.getNumCities() <= 7 && iNumCitiesInArea <= 3
-				&& plot()->plotCount(PUF_canDefendGroupHead, -1, -1, NULL, getOwner(), NO_TEAM, PUF_isCityAIType) <= 1)
+				&& plot()->plotCount(PUF_canDefendGroupHead, -1, -1, NULL, eOwner, NO_TEAM, PUF_isCityAIType) <= 1)
 				{
 					if (AI_chooseUnit("extra quick defender", UNITAI_CITY_DEFENSE))
 					{
@@ -2239,7 +2240,7 @@ void CvCityAI::AI_chooseProduction()
 		// BBAI TODO:  This check should be done by player, not by city and optimize placement
 		// If losing badly in war, don't build big things
 		if (!bLandWar || iWarSuccessRatio > -30
-			&& (!player.getCapitalCity() || pArea->getPopulationPerPlayer(getOwner()) > player.getCapitalCity()->area()->getPopulationPerPlayer(getOwner())))
+			&& (!player.getCapitalCity() || pArea->getPopulationPerPlayer(eOwner) > player.getCapitalCity()->area()->getPopulationPerPlayer(eOwner)))
 		{
 			if (AI_chooseBuilding(BUILDINGFOCUS_CAPITAL, 15))
 			{
@@ -2262,7 +2263,7 @@ void CvCityAI::AI_chooseProduction()
 	const int iSpreadUnitThreshold =
 		(
 			1000 + (bLandWar ? 800 - 10 * iWarSuccessRatio : 0)
-			+ 300 * plot()->plotCount(PUF_isUnitAIType, UNITAI_MISSIONARY, -1, NULL, getOwner())
+			+ 300 * plot()->plotCount(PUF_isUnitAIType, UNITAI_MISSIONARY, -1, NULL, eOwner)
 			);
 
 	UnitTypes eBestSpreadUnit = NO_UNIT;
@@ -3361,7 +3362,7 @@ void CvCityAI::AI_chooseProduction()
 	m_iTempBuildPriority--;
 
 	//	If there are no city counter units in the vicinity best create 1
-	if (!bInhibitUnits && plot()->plotCount(PUF_isUnitAIType, UNITAI_CITY_COUNTER, -1, NULL, getOwner(), NO_TEAM, NULL, -1, -1, 2) == 0)
+	if (!bInhibitUnits && plot()->plotCount(PUF_isUnitAIType, UNITAI_CITY_COUNTER, -1, NULL, eOwner, NO_TEAM, NULL, -1, -1, 2) == 0)
 	{
 		if (AI_chooseUnit("city counter units needed locally", UNITAI_CITY_COUNTER))
 		{
@@ -3372,7 +3373,7 @@ void CvCityAI::AI_chooseProduction()
 	m_iTempBuildPriority--;
 
 	//	If there are no pillage counter units in the vicinity best create 1
-	if (!bInhibitUnits && plot()->plotCount(PUF_isUnitAIType, UNITAI_PILLAGE_COUNTER, -1, NULL, getOwner(), NO_TEAM, NULL, -1, -1, 2) == 0)
+	if (!bInhibitUnits && plot()->plotCount(PUF_isUnitAIType, UNITAI_PILLAGE_COUNTER, -1, NULL, eOwner, NO_TEAM, NULL, -1, -1, 2) == 0)
 	{
 		if (AI_chooseUnit("pillage counter units needed locally", UNITAI_PILLAGE_COUNTER))
 		{

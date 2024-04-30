@@ -13254,11 +13254,11 @@ int CvUnit::maxCombatStr(const CvPlot* pPlot, const CvUnit* pAttacker, CombatDet
 
 		if (pPlot->isCity(true, getTeam()))
 		{
-			if (pAttacker != NULL && pAttacker->plot() != pPlot)
+			if (pAttacker && pAttacker->plot() != pPlot)
 			{
 				iExtraModifier = cityDefenseModifier() + cityDefenseVSOpponent(pAttacker);
 
-				if (pPlot->isCity(false))
+				if (pPlot->isCity())
 				{
 					//TB SubCombat Mod Begin
 					for (std::map<UnitCombatTypes, UnitCombatKeyedInfo>::const_iterator it = m_unitCombatKeyedInfo.begin(), end = m_unitCombatKeyedInfo.end(); it != end; ++it)
@@ -14985,7 +14985,7 @@ int CvUnit::collateralDamageMaxUnits() const
 
 int CvUnit::cityAttackModifier() const
 {
-	return (m_pUnitInfo->getCityAttackModifier() + getExtraCityAttackPercent());
+	return m_pUnitInfo->getCityAttackModifier() + getExtraCityAttackPercent();
 }
 
 int CvUnit::cityDefenseModifier() const
@@ -16804,7 +16804,7 @@ int CvUnit::getEnemyRouteCount() const
 
 bool CvUnit::isEnemyRoute() const
 {
-	return (getEnemyRouteCount() > 0);
+	return getEnemyRouteCount() > 0;
 }
 
 void CvUnit::changeEnemyRouteCount(int iChange)

@@ -3345,25 +3345,52 @@ bool CvPlayerAI::AI_getVisiblePlotDanger(const CvPlot* pPlot, int iRange, bool b
 // multiplayer game with simultaneous turns.  The safety cache for all plots is reset when the active
 // player changes or a new game is loaded.
 //
-// The border cache is done by team and works for all game types.  The border cache is reset for all
-// plots when war or peace are declared, and reset over a limited range whenever a ownership over a plot
-// changes.
+// The border cache is done by team and works for all game types.  The border cache is reset for all plots
+// when war or peace are declared, and reset over a limited range whenever a ownership over a plot changes.
+
+
+int CvPlayerAI::AI_plotDangerUnitCheck(const CvPlot* pPlot, const CvPlot* plotX, const CvUnit* pUnit, const bool bTestMoves, const TeamTypes eTeam, const int iDistance) const
+{
+	if (pUnit->getTeam() == eTeam && !pUnit->alwaysInvisible() && pUnit->getInvisibleType() == NO_INVISIBLE)
+	{
+		return -1;
+	}
+
+	if (pUnit->isEnemy(eTeam)
+	&&  pUnit->canAttack()
+	&& !pUnit->isInvisible(eTeam, false)
+	&&  pUnit->canEnterOrAttackPlot(pPlot))
+	{
+		if (!bTestMoves)
+		{
+			return 1;
+		}
+		// Toffer - Would need a seperate path generator, or a second set of path generation cache, here to check if pUnit can reach pPlot in one turn
+		//	because generatePath calls this function so calling generatePath again inside a generatePath call would mess up the caching of it for the first call.
+		if (iDistance <= pUnit->baseMoves() + plotX->isValidRoute(pUnit))
+		{
+			return 1;
+		}
+	}
+	return 0;
+}
+
 bool CvPlayerAI::AI_getAnyPlotDanger(const CvPlot* pPlot, int iRange, bool bTestMoves) const
 {
 	PROFILE_FUNC();
 
 	if (iRange == -1) iRange = DANGER_RANGE;
 
-	if (bTestMoves && isTurnActive())
+	if (isTurnActive())
 	{
 		PROFILE("CvPlayerAI::AI_getAnyPlotDanger.ActiveTurn");
 
-		if (iRange <= pPlot->getActivePlayerSafeRangeCache())
+		if (iRange <= pPlot->getActivePlayerSafeRangeCache(bTestMoves))
 		{
 			PROFILE("CvPlayerAI::AI_getAnyPlotDanger.NoDangerHit");
 			return false;
 		}
-		if (iRange >= DANGER_RANGE && pPlot->getActivePlayerHasDangerCache())
+		if (iRange >= DANGER_RANGE && pPlot->getActivePlayerHasDangerCache(bTestMoves))
 		{
 			PROFILE("CvPlayerAI::AI_getAnyPlotDanger.HasDangerHit");
 			return true;
@@ -3416,46 +3443,35 @@ bool CvPlayerAI::AI_getAnyPlotDanger(const CvPlot* pPlot, int iRange, bool bTest
 					break;
 				}
 
-				foreach_(const CvUnit * unitx, plotX->units())
+				foreach_(const CvUnit * unitX, plotX->units())
 				{
-					if (unitx->getTeam() == eTeam && !unitx->alwaysInvisible() && unitx->getInvisibleType() == NO_INVISIBLE)
+					const int iCheck = AI_plotDangerUnitCheck(pPlot, plotX, unitX, bTestMoves, eTeam, iDistance);
+					if (iCheck < 0)
 					{
 						break; // No need to loop over tiles where we have regular units
 					}
-
-					if (unitx->isEnemy(eTeam)
-					&&  unitx->canAttack()
-					&& !unitx->isInvisible(eTeam, false)
-					&&  unitx->canEnterOrAttackPlot(pPlot))
+					if (iCheck > 0)
 					{
-						if (!bTestMoves)
-						{
-							bResult = true;
-							break;
-						}
-						else if (iDistance <= unitx->baseMoves() + plotX->isValidRoute(unitx))
-						{
-							bResult = true;
-							break;
-						}
+						bResult = true;
+						break;
 					}
 				}
 			}
 		}
 	}
 
-	if (GC.getGame().getNumGameTurnActive() == 1 && isTurnActive() && !GC.getGame().isMPOption(MPOPTION_SIMULTANEOUS_TURNS))
+	if (isTurnActive() && !GC.getGame().isMPOption(MPOPTION_SIMULTANEOUS_TURNS))
 	{
 		if (bResult)
 		{
 			if (iRange <= DANGER_RANGE)
 			{
-				pPlot->setActivePlayerHasDangerCache(true);
+				pPlot->setActivePlayerHasDangerCache(true, bTestMoves);
 			}
 		}
-		else if (iRange < pPlot->getActivePlayerSafeRangeCache())
+		else if (iRange < pPlot->getActivePlayerSafeRangeCache(bTestMoves))
 		{
-			pPlot->setActivePlayerSafeRangeCache(iRange);
+			pPlot->setActivePlayerSafeRangeCache(iRange, bTestMoves);
 		}
 	}
 	return bResult;
@@ -3476,7 +3492,7 @@ int CvPlayerAI::AI_getPlotDanger(const CvPlot* pPlot, int iRange, bool bTestMove
 		iRange = DANGER_RANGE;
 	}
 
-	if (bTestMoves && isTurnActive() && iRange <= pPlot->getActivePlayerSafeRangeCache())
+	if (isTurnActive() && iRange <= pPlot->getActivePlayerSafeRangeCache(bTestMoves))
 	{
 		return 0;
 	}
@@ -3556,13 +3572,13 @@ int CvPlayerAI::AI_getPlotDangerInternal(const CvPlot* pPlot, int iRange, bool b
 		iRange,
 		bTestMoves).c_str());
 
-	foreach_(const CvPlot * pLoopPlot, pPlot->rect(iRange, iRange))
+	foreach_(const CvPlot * plotX, pPlot->rect(iRange, iRange))
 	{
-		if (pLoopPlot->area() == pPlotArea)
+		if (plotX->area() == pPlotArea)
 		{
-			const int iDistance = stepDistance(pPlot->getX(), pPlot->getY(), pLoopPlot->getX(), pLoopPlot->getY());
+			const int iDistance = stepDistance(pPlot->getX(), pPlot->getY(), plotX->getX(), plotX->getY());
 
-			if (iDistance <= 2 && atWar(pLoopPlot->getTeam(), eTeam))
+			if (iDistance <= 2 && atWar(plotX->getTeam(), eTeam))
 			{
 				if (iDistance == 0)
 				{
@@ -3575,30 +3591,16 @@ int CvPlayerAI::AI_getPlotDangerInternal(const CvPlot* pPlot, int iRange, bool b
 				else iBorderDanger++;
 			}
 
-			foreach_(const CvUnit * pLoopUnit, pLoopPlot->units())
+			foreach_(const CvUnit * unitX, plotX->units())
 			{
-				// No need to loop over tiles full of our own units
-				if (pLoopUnit->getTeam() == eTeam
-				&& !pLoopUnit->alwaysInvisible()
-				&& pLoopUnit->getInvisibleType() == NO_INVISIBLE)
+				const int iCheck = AI_plotDangerUnitCheck(pPlot, plotX, unitX, bTestMoves, eTeam, iDistance);
+				if (iCheck < 0)
 				{
-					break;
+					break; // No need to loop over tiles where we have regular units
 				}
-				if (pLoopUnit->isEnemy(eTeam)
-				&& (pLoopUnit->canAttack() || pLoopUnit->plot() == pPlot)
-				&& !pLoopUnit->isInvisible(eTeam, false)
-				&& (pLoopUnit->canEnterOrAttackPlot(pPlot) || pLoopUnit->plot() == pPlot))
+				if (iCheck > 0)
 				{
-					if (bTestMoves)
-					{
-						const int iDangerRange = pLoopUnit->baseMoves() + pLoopPlot->isValidRoute(pLoopUnit);
-
-						if (iDangerRange >= iDistance)
-						{
-							iCount++;
-						}
-					}
-					else iCount++;
+					iCount++;
 				}
 			}
 		}
@@ -3610,18 +3612,18 @@ int CvPlayerAI::AI_getPlotDangerInternal(const CvPlot* pPlot, int iRange, bool b
 		iCount += (1 + iBorderDanger) / 2;
 	}
 
-	if (GC.getGame().getNumGameTurnActive() == 1 && isTurnActive() && !GC.getGame().isMPOption(MPOPTION_SIMULTANEOUS_TURNS))
+	if (isTurnActive() && !GC.getGame().isMPOption(MPOPTION_SIMULTANEOUS_TURNS))
 	{
 		if (iCount > 0)
 		{
 			if (iRange <= DANGER_RANGE)
 			{
-				pPlot->setActivePlayerHasDangerCache(true);
+				pPlot->setActivePlayerHasDangerCache(true, bTestMoves);
 			}
 		}
-		else if (iRange < pPlot->getActivePlayerSafeRangeCache())
+		else if (iRange < pPlot->getActivePlayerSafeRangeCache(bTestMoves))
 		{
-			pPlot->setActivePlayerSafeRangeCache(iRange);
+			pPlot->setActivePlayerSafeRangeCache(iRange, bTestMoves);
 		}
 	}
 	return iCount;
@@ -10259,24 +10261,21 @@ int CvPlayerAI::AI_unitPropertyValue(UnitTypes eUnit, PropertyTypes eProperty) c
 {
 	PROFILE_EXTRA_FUNC();
 	const CvPropertyManipulators* propertyManipulators = GC.getUnitInfo(eUnit).getPropertyManipulators();
-	int iValue = 0;
 
-	if (propertyManipulators != NULL)
+	if (propertyManipulators)
 	{
+		int iValue = 0;
 		foreach_(const CvPropertySource * pSource, propertyManipulators->getSources())
 		{
-			if (pSource->getType() == PROPERTYSOURCE_CONSTANT &&
-				 (eProperty == NO_PROPERTY || pSource->getProperty() == eProperty))
+			if (pSource->getType() == PROPERTYSOURCE_CONSTANT && (eProperty == NO_PROPERTY || pSource->getProperty() == eProperty))
 			{
-				//	We have a source for a property - value is crudely just the AIweight of that property times the source size (which is expected to only depend on the player)
-				const PropertyTypes eProperty = pSource->getProperty();
-
-				iValue += GC.getPropertyInfo(eProperty).getAIWeight() * ((const CvPropertySourceConstant*)pSource)->getAmountPerTurn(getGameObject());
+				// Value is crudely, just the AIweight of that property times the source size
+				iValue += GC.getPropertyInfo(pSource->getProperty()).getAIWeight() * ((const CvPropertySourceConstant*)pSource)->getAmountPerTurn(getGameObject());
 			}
 		}
+		return iValue;
 	}
-
-	return iValue;
+	return 0;
 }
 
 int CvPlayerAI::AI_unitValue(UnitTypes eUnit, UnitAITypes eUnitAI, const CvArea* pArea, const CvUnitSelectionCriteria* criteria) const
@@ -10472,7 +10471,7 @@ int CvPlayerAI::AI_unitValue(UnitTypes eUnit, UnitAITypes eUnitAI, const CvArea*
 		case UNITAI_HEALER:
 		case UNITAI_HEALER_SEA:
 		{
-			if (!bisNegativePropertyUnit && (AI_unitHealerValue(eUnit) > 0))
+			if (!bisNegativePropertyUnit && AI_unitHealerValue(eUnit) > 0)
 			{
 				bValid = true;
 			}
@@ -10481,10 +10480,7 @@ int CvPlayerAI::AI_unitValue(UnitTypes eUnit, UnitAITypes eUnitAI, const CvArea*
 		case UNITAI_PROPERTY_CONTROL:
 		case UNITAI_PROPERTY_CONTROL_SEA:
 		{
-			if (bisPositivePropertyUnit)
-			{
-				bValid = true;
-			}
+			bValid = bisPositivePropertyUnit;
 			break;
 		}
 		case UNITAI_INVESTIGATOR:
@@ -10830,7 +10826,7 @@ int CvPlayerAI::AI_unitValue(UnitTypes eUnit, UnitAITypes eUnitAI, const CvArea*
 			}
 			case UNITAI_ATTACK:
 			{
-				//	For now the AI cannot cope with bad prroperty values on anything but hunter or pillage units
+				//	For now the AI cannot cope with bad property values on anything but hunter or pillage units
 				if (iPropertyValue < 0)
 				{
 					iValue = 0;
@@ -11317,15 +11313,13 @@ int CvPlayerAI::AI_unitValue(UnitTypes eUnit, UnitAITypes eUnitAI, const CvArea*
 			case UNITAI_PROPERTY_CONTROL_SEA:
 			case UNITAI_CITY_SPECIAL:
 			{
-				//	For now the AI cannot cope with bad property values on anything but hunter or pillage units
-				if (iPropertyValue < 0)
+				if (iPropertyValue > 0)
 				{
-					iValue = 0;
-					break;
+					iValue += iPropertyValue * 10 + iCombatValue;
 				}
-				//	The '30' scaling is empirical based on what seems reasonable for crime fighting units
-				iValue += iPropertyValue;
-				iValue += iCombatValue;
+				//	For now the AI cannot cope with bad property values on anything but hunter or pillage units
+				else iValue = 0;
+
 				break;
 			}
 			case UNITAI_PARADROP:
@@ -27214,14 +27208,14 @@ int CvPlayerAI::AI_militaryBonusVal(BonusTypes eBonus)
 int CvPlayerAI::AI_promotionValue(PromotionTypes ePromotion, UnitTypes eUnit, const CvUnit* pUnit, UnitAITypes eUnitAI, bool bForBuildUp) const
 {
 	PROFILE_EXTRA_FUNC();
-	int iTemp;
+	int iTemp = 0;
 	int iExtra;
-
 	int iValue = 0;
-
 	const CvPromotionInfo& kPromotion = GC.getPromotionInfo(ePromotion);
 	const CvUnitInfo& kUnit = GC.getUnitInfo(eUnit);
-	int iMoves = pUnit ? pUnit->maxMoves() : kUnit.getMoves();
+	const CvPlot* pPlot = pUnit ? pUnit->plot() : NULL;
+	const int iMoves = pUnit ? pUnit->maxMoves() : kUnit.getMoves();
+	const bool bNoDefensiveBonus = !pUnit && kUnit.isNoDefensiveBonus() || pUnit && pUnit->noDefensiveBonus();
 
 	if (eUnitAI == NO_UNITAI)
 	{
@@ -27307,41 +27301,35 @@ int CvPlayerAI::AI_promotionValue(PromotionTypes ePromotion, UnitTypes eUnit, co
 
 		for (int iI = 0; iI < kPromotion.getNumSubCombatChangeTypes(); iI++)
 		{
-			if (pUnit == NULL)
-			{
-				if (!kUnit.hasUnitCombat((UnitCombatTypes)kPromotion.getSubCombatChangeType(iI)))
-				{
-					iValue += AI_unitCombatValue((UnitCombatTypes)kPromotion.getSubCombatChangeType(iI), eUnit, pUnit, eUnitAI);
-				}
-			}
-			else
+			if (pUnit)
 			{
 				if (!pUnit->isHasUnitCombat((UnitCombatTypes)kPromotion.getSubCombatChangeType(iI)))
 				{
 					iValue += AI_unitCombatValue((UnitCombatTypes)kPromotion.getSubCombatChangeType(iI), eUnit, pUnit, eUnitAI);
 				}
 			}
+			else if (!kUnit.hasUnitCombat((UnitCombatTypes)kPromotion.getSubCombatChangeType(iI)))
+			{
+				iValue += AI_unitCombatValue((UnitCombatTypes)kPromotion.getSubCombatChangeType(iI), eUnit, pUnit, eUnitAI);
+			}
 		}
 
 		for (int iI = 0; iI < kPromotion.getNumRemovesUnitCombatTypes(); iI++)
 		{
-			if (pUnit == NULL)
+			if (pUnit)
 			{
-				if (kUnit.hasUnitCombat((UnitCombatTypes)kPromotion.getRemovesUnitCombatType(iI)))
+				if (pUnit->isHasUnitCombat((UnitCombatTypes)kPromotion.getRemovesUnitCombatType(iI)))
 				{
 					iValue -= AI_unitCombatValue((UnitCombatTypes)kPromotion.getRemovesUnitCombatType(iI), eUnit, pUnit, eUnitAI);
 				}
 			}
-			else
+			else if (kUnit.hasUnitCombat((UnitCombatTypes)kPromotion.getRemovesUnitCombatType(iI)))
 			{
-				if (!pUnit->isHasUnitCombat((UnitCombatTypes)kPromotion.getRemovesUnitCombatType(iI)))
-				{
-					iValue -= AI_unitCombatValue((UnitCombatTypes)kPromotion.getRemovesUnitCombatType(iI), eUnit, pUnit, eUnitAI);
-				}
+				iValue -= AI_unitCombatValue((UnitCombatTypes)kPromotion.getRemovesUnitCombatType(iI), eUnit, pUnit, eUnitAI);
 			}
 		}
 
-		if (pUnit != NULL && iValue > 0 && !bForBuildUp)
+		if (pUnit && iValue > 0 && !bForBuildUp)
 		{
 			//GC.getGame().logOOSSpecial(1,iValue, pUnit->getID());
 			iValue += GC.getGame().getSorenRandNum(25, "AI Spy Promote");
@@ -27402,37 +27390,32 @@ int CvPlayerAI::AI_promotionValue(PromotionTypes ePromotion, UnitTypes eUnit, co
 		}
 	}
 
-	bool bTemp = false;
-	bTemp = kPromotion.isOneUp();
-	if (bTemp)
+	if (kPromotion.isOneUp())
 	{
-		if ((eUnitAI == UNITAI_RESERVE) ||
-			  (eUnitAI == UNITAI_COUNTER) ||
-				(eUnitAI == UNITAI_CITY_DEFENSE) ||
-				(eUnitAI == UNITAI_CITY_COUNTER) ||
-				(eUnitAI == UNITAI_CITY_SPECIAL) ||
-				(eUnitAI == UNITAI_ATTACK) ||
-				(eUnitAI == UNITAI_ESCORT))
+		if (eUnitAI == UNITAI_RESERVE
+		||  eUnitAI == UNITAI_COUNTER
+		||  eUnitAI == UNITAI_CITY_DEFENSE
+		||  eUnitAI == UNITAI_CITY_COUNTER
+		||  eUnitAI == UNITAI_CITY_SPECIAL
+		||  eUnitAI == UNITAI_ATTACK
+		||  eUnitAI == UNITAI_ESCORT)
 		{
 			iValue += 20;
 		}
-		else
-		{
-			iValue += 5;
-		}
+		else iValue += 5;
 	}
 
-	bTemp = kPromotion.isDefensiveVictoryMove();
-	if (bTemp)
+
+	if (kPromotion.isDefensiveVictoryMove())
 	{
-		if ((eUnitAI == UNITAI_RESERVE) ||
-			  (eUnitAI == UNITAI_COUNTER) ||
-				(eUnitAI == UNITAI_CITY_DEFENSE) ||
-				(eUnitAI == UNITAI_CITY_COUNTER) ||
-				(eUnitAI == UNITAI_CITY_SPECIAL) ||
-				(eUnitAI == UNITAI_ATTACK))
+		if (eUnitAI == UNITAI_RESERVE
+		||  eUnitAI == UNITAI_COUNTER
+		||  eUnitAI == UNITAI_CITY_DEFENSE
+		||  eUnitAI == UNITAI_CITY_COUNTER
+		||  eUnitAI == UNITAI_CITY_SPECIAL
+		||  eUnitAI == UNITAI_ATTACK)
 		{
-			iValue += 10;
+			iValue += 12;
 		}
 		else
 		{
@@ -27440,24 +27423,18 @@ int CvPlayerAI::AI_promotionValue(PromotionTypes ePromotion, UnitTypes eUnit, co
 		}
 	}
 
-	iTemp = 0;
-	bTemp = kPromotion.isFreeDrop();
-	if (bTemp)
-	{
-		if ((eUnitAI == UNITAI_PILLAGE) ||
-				(eUnitAI == UNITAI_ATTACK))
-		{
-			iTemp += 10;
-		}
-		else
-		{
-			iTemp += 8;
-		}
-	}
-	iValue += iTemp;
 
-	bTemp = kPromotion.isOffensiveVictoryMove();
-	if (bTemp)
+	if (kPromotion.isFreeDrop())
+	{
+		if (eUnitAI == UNITAI_PILLAGE || eUnitAI == UNITAI_ATTACK)
+		{
+			iValue += 10;
+		}
+		else iValue += 8;
+	}
+
+
+	if (kPromotion.isOffensiveVictoryMove())
 	{
 		if ((eUnitAI == UNITAI_PILLAGE) ||
 				(eUnitAI == UNITAI_ATTACK) ||
@@ -27574,204 +27551,175 @@ int CvPlayerAI::AI_promotionValue(PromotionTypes ePromotion, UnitTypes eUnit, co
 		}
 	}
 
-	iTemp = 0;
-	bTemp = kPromotion.isPillageEspionage();
-	if (bTemp)
 	{
-		if (pUnit)
+		iTemp = 0;
+		if (kPromotion.isPillageEspionage())
 		{
-			if (pUnit->isPillageOnMove() || pUnit->isPillageOnVictory())
+			if (pUnit)
 			{
-				if (eUnitAI == UNITAI_PILLAGE)
+				if (pUnit->isPillageOnMove() || pUnit->isPillageOnVictory())
 				{
-					iTemp += 10;
+					if (eUnitAI == UNITAI_PILLAGE)
+					{
+						iTemp += 12;
+					}
+					else if (
+						eUnitAI == UNITAI_ATTACK
+					||  eUnitAI == UNITAI_PARADROP
+					||  eUnitAI == UNITAI_INFILTRATOR)
+					{
+						iTemp += 8;
+					}
+					else
+					{
+						iTemp += 4;
+					}
 				}
-				else if ((eUnitAI == UNITAI_ATTACK) ||
-						(eUnitAI == UNITAI_PARADROP) ||
-						(eUnitAI == UNITAI_INFILTRATOR))
+				else if (eUnitAI == UNITAI_PILLAGE)
 				{
 					iTemp += 8;
 				}
-				else
+				else if (
+					eUnitAI == UNITAI_ATTACK
+				||  eUnitAI == UNITAI_PARADROP
+				||  eUnitAI == UNITAI_INFILTRATOR)
 				{
-					iTemp += 4;
+					iTemp += 5;
 				}
+				else iTemp += 2;
 			}
-			else
-			{
-				if (eUnitAI == UNITAI_PILLAGE)
-				{
-					iTemp += 8;
-				}
-				else if ((eUnitAI == UNITAI_ATTACK) ||
-						(eUnitAI == UNITAI_PARADROP) ||
-						(eUnitAI == UNITAI_INFILTRATOR))
-				{
-					iTemp += 6;
-				}
-				else
-				{
-					iTemp += 4;
-				}
-			}
+			else iTemp += 2;
 		}
-		else
-		{
-			iTemp += 2;
-		}
-	}
-	iValue += iTemp;
+		iValue += iTemp;
 
-	bTemp = kPromotion.isPillageMarauder();
-	if (bTemp)
-	{
-		if (pUnit)
+		if (kPromotion.isPillageMarauder())
 		{
-			if (pUnit->isPillageOnMove() || pUnit->isPillageOnVictory())
+			if (pUnit)
 			{
-				if (eUnitAI == UNITAI_PILLAGE)
+				if (pUnit->isPillageOnMove() || pUnit->isPillageOnVictory())
 				{
-					iTemp += 10;
+					if (eUnitAI == UNITAI_PILLAGE)
+					{
+						iTemp += 12;
+					}
+					else if (
+						eUnitAI == UNITAI_ATTACK
+					||  eUnitAI == UNITAI_PARADROP
+					||  eUnitAI == UNITAI_INFILTRATOR)
+					{
+						iTemp += 8;
+					}
+					else
+					{
+						iTemp += 4;
+					}
 				}
-				else if ((eUnitAI == UNITAI_ATTACK) ||
-						(eUnitAI == UNITAI_PARADROP) ||
-						(eUnitAI == UNITAI_INFILTRATOR))
+				else if (eUnitAI == UNITAI_PILLAGE)
 				{
 					iTemp += 8;
 				}
-				else
+				else if (
+					eUnitAI == UNITAI_ATTACK
+				||  eUnitAI == UNITAI_PARADROP
+				||  eUnitAI == UNITAI_INFILTRATOR)
 				{
-					iTemp += 4;
+					iTemp += 5;
 				}
+				else iTemp += 2;
 			}
-			else
-			{
-				if (eUnitAI == UNITAI_PILLAGE)
-				{
-					iTemp += 8;
-				}
-				else if ((eUnitAI == UNITAI_ATTACK) ||
-						(eUnitAI == UNITAI_PARADROP) ||
-						(eUnitAI == UNITAI_INFILTRATOR))
-				{
-					iTemp += 6;
-				}
-				else
-				{
-					iTemp += 4;
-				}
-			}
+			else iTemp += 2;
 		}
-		else
-		{
-			iTemp += 2;
-		}
-	}
-	iValue += iTemp;
+		iValue += iTemp;
 
-	bTemp = kPromotion.isPillageOnMove();
-	if (bTemp)
-	{
-		if (pUnit)
+		if (kPromotion.isPillageOnMove())
 		{
-			if (pUnit->isPillageEspionage()
-			|| pUnit->isPillageMarauder()
-			|| pUnit->isPillageResearch())
+			if (pUnit)
 			{
-				if (eUnitAI == UNITAI_PILLAGE
-				|| eUnitAI == UNITAI_ATTACK
-				|| eUnitAI == UNITAI_PARADROP
-				|| eUnitAI == UNITAI_INFILTRATOR)
+				if (pUnit->isPillageEspionage()
+				||  pUnit->isPillageMarauder()
+				||  pUnit->isPillageResearch())
 				{
-					iTemp += 10;
+					if (eUnitAI == UNITAI_PILLAGE
+					||  eUnitAI == UNITAI_ATTACK
+					||  eUnitAI == UNITAI_PARADROP
+					||  eUnitAI == UNITAI_INFILTRATOR)
+					{
+						iTemp += 16;
+					}
+					else iTemp += 8;
 				}
-				else iTemp += 8;
+				else iTemp++;
 			}
 			else iTemp++;
 		}
-		else iTemp++;
-	}
-	iValue += iTemp;
+		iValue += iTemp;
 
-	bTemp = kPromotion.isPillageOnVictory();
-	if (bTemp)
-	{
-		if (pUnit)
+		if (kPromotion.isPillageOnVictory())
 		{
-			if (pUnit->isPillageEspionage()
-			|| pUnit->isPillageMarauder()
-			|| pUnit->isPillageResearch())
+			if (pUnit)
 			{
-				if (eUnitAI == UNITAI_PILLAGE
-				|| eUnitAI == UNITAI_ATTACK
-				|| eUnitAI == UNITAI_PARADROP
-				|| eUnitAI == UNITAI_INFILTRATOR)
+				if (pUnit->isPillageEspionage()
+				|| pUnit->isPillageMarauder()
+				|| pUnit->isPillageResearch())
 				{
-					iTemp += 20;
+					if (eUnitAI == UNITAI_PILLAGE
+					|| eUnitAI == UNITAI_ATTACK
+					|| eUnitAI == UNITAI_PARADROP
+					|| eUnitAI == UNITAI_INFILTRATOR)
+					{
+						iTemp += 20;
+					}
+					else iTemp += 12;
 				}
-				else iTemp += 12;
+				else iTemp += 4;
 			}
 			else iTemp += 4;
 		}
-		else iTemp += 4;
-	}
-	iValue += iTemp;
+		iValue += iTemp;
 
-	bTemp = kPromotion.isPillageResearch();
-	if (bTemp)
-	{
-		if (pUnit)
+		if (kPromotion.isPillageResearch())
 		{
-			if (pUnit->isPillageOnMove() || pUnit->isPillageOnVictory())
+			if (pUnit)
 			{
-				if (eUnitAI == UNITAI_PILLAGE)
+				if (pUnit->isPillageOnMove() || pUnit->isPillageOnVictory())
 				{
-					iTemp += 10;
+					if (eUnitAI == UNITAI_PILLAGE)
+					{
+						iTemp += 12;
+					}
+					else if (
+						eUnitAI == UNITAI_ATTACK
+					||  eUnitAI == UNITAI_PARADROP
+					||  eUnitAI == UNITAI_INFILTRATOR)
+					{
+						iTemp += 8;
+					}
+					else
+					{
+						iTemp += 4;
+					}
 				}
-				else if ((eUnitAI == UNITAI_ATTACK) ||
-						(eUnitAI == UNITAI_PARADROP) ||
-						(eUnitAI == UNITAI_INFILTRATOR))
+				else if (eUnitAI == UNITAI_PILLAGE)
 				{
 					iTemp += 8;
 				}
-				else
+				else if (
+					eUnitAI == UNITAI_ATTACK
+				||  eUnitAI == UNITAI_PARADROP
+				||  eUnitAI == UNITAI_INFILTRATOR)
 				{
-					iTemp += 4;
+					iTemp += 5;
 				}
+				else iTemp += 2;
 			}
-			else
-			{
-				if (eUnitAI == UNITAI_PILLAGE)
-				{
-					iTemp += 8;
-				}
-				else if ((eUnitAI == UNITAI_ATTACK) ||
-						(eUnitAI == UNITAI_PARADROP) ||
-						(eUnitAI == UNITAI_INFILTRATOR))
-				{
-					iTemp += 6;
-				}
-				else
-				{
-					iTemp += 4;
-				}
-			}
+			else iTemp += 2;
 		}
-		else
-		{
-			iTemp += 2;
-		}
-	}
-
-	if (pUnit)
-	{
-		if (pUnit->maxMoves() > 1)
+		if (iMoves > 1)
 		{
 			iTemp *= 100;
 		}
+		iValue += iTemp;
 	}
-	iValue += iTemp;
-
 
 	iTemp = kPromotion.getAirCombatLimitChange();
 	if (iTemp != 0)
@@ -27785,41 +27733,26 @@ int CvPlayerAI::AI_promotionValue(PromotionTypes ePromotion, UnitTypes eUnit, co
 	}
 
 	iTemp = kPromotion.getCelebrityHappy();
-	int iTempTemp = 0;
-	if (iTemp > 0)
+	if (iTemp != 0)
 	{
-		if ((eUnitAI == UNITAI_CITY_DEFENSE) ||
-			(eUnitAI == UNITAI_CITY_COUNTER) ||
-			(eUnitAI == UNITAI_HEALER) ||
-			(eUnitAI == UNITAI_HEALER_SEA) ||
-			(eUnitAI == UNITAI_PROPERTY_CONTROL) ||
-			(eUnitAI == UNITAI_PROPERTY_CONTROL_SEA))
+		if (eUnitAI == UNITAI_CITY_DEFENSE
+		||  eUnitAI == UNITAI_CITY_COUNTER
+		||  eUnitAI == UNITAI_HEALER
+		||  eUnitAI == UNITAI_HEALER_SEA
+		||  eUnitAI == UNITAI_PROPERTY_CONTROL
+		||  eUnitAI == UNITAI_PROPERTY_CONTROL_SEA)
 		{
+			iValue += iTemp * 10;
+
 			if (pUnit)
 			{
-				const CvCity* pCity = pUnit->plot()->getPlotCity();
-				if (pCity != NULL)
+				const CvCity* pCity = pPlot->getPlotCity();
+				if (pCity && pCity->happyLevel() < pCity->unhappyLevel())
 				{
-					if (pCity->happyLevel() < pCity->unhappyLevel())
-					{
-						iTempTemp = (iTemp * 5);
-					}
-					else
-					{
-						iTempTemp = (iTemp / 100);
-					}
+					iValue += iTemp * 40;
 				}
 			}
-			else
-			{
-				iTempTemp /= 100;
-			}
 		}
-		else
-		{
-			iTempTemp /= 100;
-		}
-		iValue += iTempTemp;
 	}
 
 	iTemp = kPromotion.getCollateralDamageLimitChange();
@@ -27908,82 +27841,69 @@ int CvPlayerAI::AI_promotionValue(PromotionTypes ePromotion, UnitTypes eUnit, co
 	}
 
 	iTemp = 0;
-	int iTemp2 = 0;
 	int iWeight = 0;
 	const CvPropertyManipulators* promotionPropertyManipulators = GC.getPromotionInfo(ePromotion).getPropertyManipulators();
 
-	if (promotionPropertyManipulators != NULL)
+	if (promotionPropertyManipulators)
 	{
 		foreach_(const CvPropertySource * pSource, promotionPropertyManipulators->getSources())
 		{
-			iTemp2 = 0;
-
 			if (pSource->getType() == PROPERTYSOURCE_CONSTANT)
 			{
-				const PropertyTypes pProperty = pSource->getProperty();
-				iTemp2 = ((CvPropertySourceConstant*)pSource)->getAmountPerTurn(getGameObject());
-				if (pUnit)
+				const PropertyTypes eProperty = pSource->getProperty();
+				int iTemp2 = ((CvPropertySourceConstant*)pSource)->getAmountPerTurn(getGameObject());
+				if (pUnit && iTemp2 != 0)
 				{
 					foreach_(const CvPropertySource * uSource, GC.getUnitInfo(pUnit->getUnitType()).getPropertyManipulators()->getSources())
 					{
-						if (uSource->getType() == PROPERTYSOURCE_CONSTANT && pProperty == uSource->getProperty() && iTemp2 != 0)
+						if (uSource->getType() == PROPERTYSOURCE_CONSTANT && eProperty == uSource->getProperty())
 						{
 							iTemp2 += ((CvPropertySourceConstant*)uSource)->getAmountPerTurn(getGameObject());
 						}
 					}
 				}
-				iWeight += (GC.getPropertyInfo(pProperty).getAIWeight() / 50);
-				iTemp += iTemp2;
+				iTemp += iTemp2 * GC.getPropertyInfo(eProperty).getAIWeight();
 			}
 		}
-		iTemp *= iWeight;
 
 		if (iTemp != 0)
 		{
-			if ((eUnitAI == UNITAI_PROPERTY_CONTROL) ||
-				(eUnitAI == UNITAI_PROPERTY_CONTROL_SEA))
+			if (eUnitAI == UNITAI_PROPERTY_CONTROL
+			||  eUnitAI == UNITAI_PROPERTY_CONTROL_SEA)
 			{
+				iValue += 10 * iTemp;
+
 				if (pUnit)
 				{
 					const MissionAITypes eMissionAI = pUnit->getGroup()->AI_getMissionAIType();
-					if (eMissionAI == MISSIONAI_PROPERTY_CONTROL_RESPONSE ||
-						eMissionAI == MISSIONAI_PROPERTY_CONTROL_MAINTAIN)
-					{
-						iValue += 20 * iTemp;
-					}
-					else
+					if (eMissionAI == MISSIONAI_PROPERTY_CONTROL_RESPONSE
+					||  eMissionAI == MISSIONAI_PROPERTY_CONTROL_MAINTAIN)
 					{
 						iValue += 10 * iTemp;
 					}
 				}
-				else
-				{
-					iValue += 10 * iTemp;
-				}
 			}
-			else if ((eUnitAI == UNITAI_HEALER) ||
-				(eUnitAI == UNITAI_HEALER_SEA) ||
-				(eUnitAI == UNITAI_CITY_DEFENSE) ||
-				(eUnitAI == UNITAI_CITY_SPECIAL) ||
-				(eUnitAI == UNITAI_INVESTIGATOR) ||
-				(eUnitAI == UNITAI_ESCORT) ||
-				(eUnitAI == UNITAI_SEE_INVISIBLE) ||
-				(eUnitAI == UNITAI_SEE_INVISIBLE_SEA))
+			else if (
+			    eUnitAI == UNITAI_HEALER
+			||  eUnitAI == UNITAI_HEALER_SEA
+			||  eUnitAI == UNITAI_CITY_DEFENSE
+			||  eUnitAI == UNITAI_CITY_SPECIAL
+			||  eUnitAI == UNITAI_INVESTIGATOR
+			||  eUnitAI == UNITAI_ESCORT
+			||  eUnitAI == UNITAI_SEE_INVISIBLE
+			||  eUnitAI == UNITAI_SEE_INVISIBLE_SEA)
 			{
 				iValue += iTemp / 10;
 			}
-			else if ((eUnitAI == UNITAI_BARB_CRIMINAL) ||
-				(eUnitAI == UNITAI_INFILTRATOR))
+			else if (
+			    eUnitAI == UNITAI_BARB_CRIMINAL
+			||  eUnitAI == UNITAI_INFILTRATOR)
 			{
-				if (pUnit)
-				{
-					iValue -= 10 * iTemp;
-				}
+				iValue -= 10 * iTemp;
 			}
 		}
 	}
 
-	//getHiddenNationalityChange()
 	iTemp = kPromotion.getHiddenNationalityChange();
 	if (iTemp != 0)
 	{
@@ -28343,13 +28263,6 @@ int CvPlayerAI::AI_promotionValue(PromotionTypes ePromotion, UnitTypes eUnit, co
 		}
 
 		iValue += iTemp;
-	}
-
-
-	CvPlot* pPlot = NULL;
-	if (pUnit)
-	{
-		pPlot = pUnit->plot();
 	}
 
 	iTemp = kPromotion.getNumHealSupport();
@@ -28728,9 +28641,9 @@ int CvPlayerAI::AI_promotionValue(PromotionTypes ePromotion, UnitTypes eUnit, co
 		}
 		if (pUnit)
 		{
-			if (pUnit->plot() != NULL)
+			if (pPlot != NULL)
 			{
-				CvCity* pCity = pUnit->plot()->getPlotCity();
+				CvCity* pCity = pPlot->getPlotCity();
 				if (pCity != NULL && pCity->getOwner() != pUnit->getOwner())
 				{
 					iTemp *= 2;
@@ -28752,12 +28665,12 @@ int CvPlayerAI::AI_promotionValue(PromotionTypes ePromotion, UnitTypes eUnit, co
 			iTemp *= 2;
 			if (pUnit)
 			{
-				if (pUnit->plot() != NULL)
+				if (pPlot != NULL)
 				{
-					const CvCity* pCity = pUnit->plot()->getPlotCity();
+					const CvCity* pCity = pPlot->getPlotCity();
 					if (pCity != NULL)
 					{
-						int iNumCriminals = pUnit->plot()->getNumCriminals();
+						int iNumCriminals = pPlot->getNumCriminals();
 						if (eUnitAI == UNITAI_INVESTIGATOR)
 						{
 							iNumCriminals += 10;
@@ -28771,9 +28684,9 @@ int CvPlayerAI::AI_promotionValue(PromotionTypes ePromotion, UnitTypes eUnit, co
 	}
 
 	iTemp = kPromotion.getAssassinChange();
-	iTemp2 = 0;
 	if (iTemp != 0)
 	{
+		int iTemp2 = 0;
 		if (pUnit)
 		{
 			if (pUnit->isAssassin())
@@ -28787,22 +28700,17 @@ int CvPlayerAI::AI_promotionValue(PromotionTypes ePromotion, UnitTypes eUnit, co
 					iTemp2 += 10;
 				}
 			}
+			else if (iTemp < 0)
+			{
+				iTemp2 -= 5;
+			}
 			else
 			{
-				if (iTemp < 0)
-				{
-					iTemp2 -= 5;
-				}
-				else
-				{
-					iTemp2 += 30;
-				}
+				iTemp2 += 30;
 			}
 		}
-		else
-		{
-			iTemp2 += iTemp * 5;
-		}
+		else iTemp2 += iTemp * 5;
+
 		if (eUnitAI == UNITAI_INFILTRATOR)
 		{
 			iTemp2 *= 2;
@@ -29215,64 +29123,66 @@ int CvPlayerAI::AI_promotionValue(PromotionTypes ePromotion, UnitTypes eUnit, co
 		iValue += iTemp;
 	}
 
-	iTemp = kPromotion.getPowerShotsChange();
-	if (iTemp != 0)
 	{
-		iExtra = pUnit == NULL ? kUnit.getPowerShotCombatModifier() : pUnit->powerShotCombatModifierTotal();
-		iExtra += pUnit == NULL ? kUnit.getPowerShotCriticalModifier() : pUnit->powerShotCriticalModifierTotal();
-		iExtra += pUnit == NULL ? kUnit.getPowerShotPunctureModifier() : pUnit->powerShotPunctureModifierTotal();
-		iExtra += pUnit == NULL ? kUnit.getPowerShotPrecisionModifier() : pUnit->powerShotPrecisionModifierTotal();
-		iExtra += kPromotion.getPowerShotCombatModifierChange() == 0 ? 0 : kPromotion.getPowerShotCombatModifierChange();
-		iExtra += kPromotion.getPowerShotCriticalModifierChange() == 0 ? 0 : kPromotion.getPowerShotCriticalModifierChange();
-		iExtra += kPromotion.getPowerShotPunctureModifierChange() == 0 ? 0 : kPromotion.getPowerShotPunctureModifierChange();
-		iExtra += kPromotion.getPowerShotPrecisionModifierChange() == 0 ? 0 : kPromotion.getPowerShotPrecisionModifierChange();
-		iTemp *= (100 + iExtra);
-		iValue += iTemp;
-	}
+		const int iNumPowerShots = kPromotion.getPowerShotsChange() + (pUnit ? pUnit->powerShotsTotal() : kUnit.getPowerShots());
 
-	iTemp = kPromotion.getPowerShotCombatModifierChange();
-	if (iTemp != 0)
-	{
-		iExtra = pUnit == NULL ? kUnit.getPowerShots() : pUnit->powerShotsTotal();
-		iTemp *= iExtra;
-		iTemp /= 5;
-		iValue += iTemp;
-	}
+		iTemp = kPromotion.getPowerShotsChange();
+		if (iTemp != 0)
+		{
+			iTemp *= (
+				100
+				+ (pUnit ? pUnit->powerShotCombatModifierTotal() : kUnit.getPowerShotCombatModifier())
+				+ (pUnit ? pUnit->powerShotCriticalModifierTotal() : kUnit.getPowerShotCriticalModifier())
+				+ (pUnit ? pUnit->powerShotPunctureModifierTotal() : kUnit.getPowerShotPunctureModifier())
+				+ (pUnit ? pUnit->powerShotPrecisionModifierTotal() : kUnit.getPowerShotPrecisionModifier())
+				+ kPromotion.getPowerShotCombatModifierChange()
+				+ kPromotion.getPowerShotCriticalModifierChange()
+				+ kPromotion.getPowerShotPunctureModifierChange()
+				+ kPromotion.getPowerShotPrecisionModifierChange()
+			);
+			if (iNumPowerShots > 0)
+			{
+				iValue += iTemp / 10;
+			}
+			else iValue += iTemp / 100;
+		}
 
-	iTemp = kPromotion.getPowerShotCriticalModifierChange();
-	if (iTemp != 0)
-	{
-		iExtra = pUnit == NULL ? kUnit.getPowerShots() : pUnit->powerShotsTotal();
-		iTemp *= iExtra;
-		iTemp /= 5;
-		iValue += iTemp;
-	}
+		if (iNumPowerShots > 0)
+		{
+			iTemp = kPromotion.getPowerShotCombatModifierChange();
+			if (iTemp != 0)
+			{
+				iTemp *= (100 + 2*(pUnit ? pUnit->powerShotCombatModifierTotal() : kUnit.getPowerShotCombatModifier()));
+				iValue += iTemp * iNumPowerShots / 500;
+			}
 
-	iTemp = kPromotion.getPowerShotPrecisionModifierChange();
-	if (iTemp != 0)
-	{
-		iExtra = pUnit == NULL ? kUnit.getPowerShots() : pUnit->powerShotsTotal();
-		iTemp *= iExtra;
-		iTemp /= 4;
-		iValue += iTemp;
-	}
+			iTemp = kPromotion.getPowerShotCriticalModifierChange();
+			if (iTemp != 0)
+			{
+				iTemp *= (100 + 2*(pUnit ? pUnit->powerShotCriticalModifierTotal() : kUnit.getPowerShotCriticalModifier()));
+				iValue += iTemp * iNumPowerShots / 500;
+			}
 
-	iTemp = kPromotion.getPowerShotPunctureModifierChange();
-	if (iTemp != 0)
-	{
-		iExtra = pUnit == NULL ? kUnit.getPowerShots() : pUnit->powerShotsTotal();
-		iTemp *= iExtra;
-		iTemp /= 4;
-		iValue += iTemp;
+			iTemp = kPromotion.getPowerShotPrecisionModifierChange();
+			if (iTemp != 0)
+			{
+				iTemp *= (100 + 2*(pUnit ? pUnit->powerShotPrecisionModifierTotal() : kUnit.getPowerShotPrecisionModifier()));
+				iValue += iTemp * iNumPowerShots / 500;
+			}
+
+			iTemp = kPromotion.getPowerShotPunctureModifierChange();
+			if (iTemp != 0)
+			{
+				iTemp *= (100 + 2*(pUnit ? pUnit->powerShotPunctureModifierTotal() : kUnit.getPowerShotPunctureModifier()));
+				iValue += iTemp * iNumPowerShots / 500;
+			}
+		}
 	}
 
 	iTemp = kPromotion.getEnduranceChange();
 	if (iTemp != 0)
 	{
-		iExtra = pUnit == NULL ? kUnit.getEndurance() : pUnit->enduranceTotal();
-		iTemp += iExtra;
-		iTemp *= 10;
-		iValue += iTemp;
+		iValue += (iTemp + (100 + 2*(pUnit ? pUnit->enduranceTotal() : kUnit.getEndurance()))) / 10;
 	}
 
 	iTemp = kPromotion.getOverrunChange();
@@ -29291,7 +29201,7 @@ int CvPlayerAI::AI_promotionValue(PromotionTypes ePromotion, UnitTypes eUnit, co
 		}
 	}
 
-	if (pUnit == NULL && !kUnit.isNoDefensiveBonus() || pUnit && !pUnit->noDefensiveBonus())
+	if (!bNoDefensiveBonus)
 	{
 		iTemp = kPromotion.getRepelChange();
 		if (iTemp != 0)
@@ -29338,130 +29248,140 @@ int CvPlayerAI::AI_promotionValue(PromotionTypes ePromotion, UnitTypes eUnit, co
 			}
 			iTemp *= 100 + 2*iExtra;
 			iTemp /= 100;
-			if ((eUnitAI == UNITAI_CITY_DEFENSE) ||
-				  (eUnitAI == UNITAI_CITY_SPECIAL) ||
-				  (eUnitAI == UNITAI_CITY_COUNTER) ||
-				  (eUnitAI == UNITAI_COUNTER) ||
-				  (eUnitAI == UNITAI_RESERVE) ||
-				  (eUnitAI == UNITAI_ESCORT))
+			if (eUnitAI == UNITAI_CITY_DEFENSE
+			||  eUnitAI == UNITAI_CITY_SPECIAL
+			||  eUnitAI == UNITAI_CITY_COUNTER
+			||  eUnitAI == UNITAI_COUNTER
+			||  eUnitAI == UNITAI_RESERVE
+			||  eUnitAI == UNITAI_ESCORT)
 			{
-				iValue += (iTemp * 25);
+				iValue += iTemp * 25;
 			}
 			else
 			{
 				iValue += iTemp;
 			}
 		}
-		iTemp = kPromotion.getCityDefensePercent();
-		if (iTemp != 0)
+
+		if (!bNoDefensiveBonus)
 		{
-			iExtra = kUnit.getCityDefenseModifier() + (pUnit ? pUnit->getExtraCityDefensePercent() * 2 : 0);
-			iTemp *= 100 + iExtra;
-			iTemp /= 100;
-			if (eUnitAI == UNITAI_CITY_DEFENSE
-			||	eUnitAI == UNITAI_CITY_SPECIAL
-			||	eUnitAI == UNITAI_CITY_COUNTER)
+			iTemp = kPromotion.getCityDefensePercent();
+			if (iTemp != 0)
 			{
-				iValue += (iTemp * 4);
-			}
-			else if (
-				eUnitAI == UNITAI_HEALER
-			||	eUnitAI == UNITAI_PROPERTY_CONTROL
-			||	eUnitAI == UNITAI_INVESTIGATOR)
-			{
-				iValue += iTemp / 2;
-			}
-			else iValue += (iTemp / 4);
-		}
-		iTemp = kPromotion.getHillsDefensePercent();
-		if (iTemp != 0)
-		{
-			iExtra = kUnit.getHillsDefenseModifier() + (pUnit ? pUnit->getExtraHillsDefensePercent() * 2 : 0);
-			iTemp *= 100 + iExtra;
-			iTemp /= 100;
-			if (eUnitAI == UNITAI_CITY_DEFENSE
-			||	eUnitAI == UNITAI_CITY_COUNTER
-			||	eUnitAI == UNITAI_ESCORT)
-			{
-				if (pUnit && pUnit->plot()->isCity() && pUnit->plot()->isHills())
+				iTemp *= 100 + 2*(kUnit.getCityDefenseModifier() + (pUnit ? pUnit->getExtraCityDefensePercent() : 0));
+
+				if (pPlot && pPlot->isCity(true))
 				{
-					iValue += iTemp * 4/3;
+					iTemp *= 2;
 				}
-			}
-			else if (eUnitAI == UNITAI_COUNTER)
-			{
-				if (pUnit && pUnit->plot()->isHills())
+
+				if (eUnitAI == UNITAI_CITY_DEFENSE
+				||  eUnitAI == UNITAI_CITY_SPECIAL
+				||  eUnitAI == UNITAI_CITY_COUNTER)
 				{
-					iValue += (iTemp / 4);
+					iValue += iTemp / 30;
 				}
-				else iValue++;
+				else if (
+				    eUnitAI == UNITAI_HEALER
+				||  eUnitAI == UNITAI_PROPERTY_CONTROL
+				||  eUnitAI == UNITAI_INVESTIGATOR)
+				{
+					iValue += iTemp / 300;
+				}
+				else iValue += iTemp / 800;
 			}
-			else iValue += (iTemp / 16);
+
+			iTemp = kPromotion.getHillsDefensePercent();
+			if (iTemp != 0)
+			{
+				iTemp *= 100 + 2*(kUnit.getHillsDefenseModifier() + (pUnit ? pUnit->getExtraHillsDefensePercent() : 0));
+
+				if (pPlot && pPlot->isHills())
+				{
+					iTemp *= 2;
+				}
+
+				if (eUnitAI == UNITAI_CITY_DEFENSE
+				||  eUnitAI == UNITAI_CITY_SPECIAL
+				||  eUnitAI == UNITAI_CITY_COUNTER)
+				{
+					if (pPlot && pPlot->isCity(true))
+					{
+						iValue += iTemp / 100;
+					}
+					else iValue += iTemp / 300;
+				}
+				else if (
+				    eUnitAI == UNITAI_COUNTER
+				||  eUnitAI == UNITAI_ESCORT
+				||  eUnitAI == UNITAI_HUNTER_ESCORT)
+				{
+					iValue += iTemp / 500;
+				}
+				else iValue += iTemp / 1000;
+			}
 		}
 	}
 
 	iTemp = kPromotion.getUnyieldingChange();
 	if (iTemp != 0)
 	{
-		if ((eUnitAI == UNITAI_CITY_DEFENSE) ||
-			  (eUnitAI == UNITAI_CITY_SPECIAL) ||
-			  (eUnitAI == UNITAI_CITY_COUNTER) ||
-			  (eUnitAI == UNITAI_COUNTER) ||
-			  (eUnitAI == UNITAI_ATTACK) ||
-			  (eUnitAI == UNITAI_ATTACK_CITY) ||
-			  (eUnitAI == UNITAI_PILLAGE_COUNTER) ||
-			  (eUnitAI == UNITAI_HUNTER) ||
-			  (eUnitAI == UNITAI_HUNTER_ESCORT) ||
-			  (eUnitAI == UNITAI_GREAT_HUNTER) ||
-			  (eUnitAI == UNITAI_RESERVE) ||
-			  (eUnitAI == UNITAI_HEALER) ||
-			  (eUnitAI == UNITAI_PROPERTY_CONTROL))
+		iTemp *= 100 + kUnit.getUnyielding() + (pUnit ? pUnit->getExtraUnyielding() : 0);
+
+		if (eUnitAI == UNITAI_CITY_DEFENSE
+		||  eUnitAI == UNITAI_CITY_SPECIAL
+		||  eUnitAI == UNITAI_CITY_COUNTER
+		||  eUnitAI == UNITAI_COUNTER
+		||  eUnitAI == UNITAI_ATTACK
+		||  eUnitAI == UNITAI_ATTACK_CITY
+		||  eUnitAI == UNITAI_PILLAGE_COUNTER
+		||  eUnitAI == UNITAI_HUNTER
+		||  eUnitAI == UNITAI_HUNTER_ESCORT
+		||  eUnitAI == UNITAI_GREAT_HUNTER
+		||  eUnitAI == UNITAI_RESERVE)
 		{
-			iExtra = kUnit.getUnyielding() + (pUnit == NULL ? 0 : pUnit->getExtraUnyielding() * 2);
-			iValue += ((iTemp * (100 + iExtra)) / 110);
+			iValue += iTemp / 100;
 		}
-		else
-		{
-			iValue += (iTemp / 4);
-		}
+		else iValue += iTemp / 400;
 	}
 
 	iTemp = kPromotion.getKnockbackChange();
 	if (iTemp != 0)
 	{
-		if ((eUnitAI == UNITAI_COUNTER) ||
-			  (eUnitAI == UNITAI_ATTACK) ||
-			  (eUnitAI == UNITAI_ATTACK_CITY))
+		iTemp *= (
+			100
+			+
+			2 * (kUnit.getKnockback() + (pUnit ? pUnit->getExtraKnockback() : 0))
+			*
+			(
+				1 + kPromotion.getKnockbackRetriesChange()
+				+ (pUnit ? (pUnit->knockbackRetriesTotal()) : kUnit.getKnockbackRetries())
+			)
+		);
+		if (eUnitAI == UNITAI_COUNTER
+		||  eUnitAI == UNITAI_ATTACK
+		||  eUnitAI == UNITAI_ATTACK_CITY)
 		{
-			iExtra = kUnit.getKnockback() + (pUnit == NULL ? 0 : pUnit->getExtraKnockback() * 2);
-			iValue += ((iTemp * (100 + iExtra)) / 100);
+			iValue += iTemp / 100;
 		}
-		else
-		{
-			iValue += (iTemp / 4);
-		}
+		else iValue += iTemp / 400;
 	}
 
 	iTemp = kPromotion.getKnockbackRetriesChange();
-	int itempknockback = 0;
-	if ((kUnit.getKnockback() + (pUnit == NULL ? 0 : pUnit->getExtraKnockback() * 4)) > 0)
-	{
-		itempknockback += ((kUnit.getKnockback() + (pUnit == NULL ? 0 : pUnit->getExtraKnockback() * 4)) / 2);
-	}
 	if (iTemp != 0)
 	{
-		iExtra = pUnit == NULL ? 0 : (itempknockback + pUnit->knockbackRetriesTotal());
-		iTemp *= (100 + iExtra * 2);
-		iTemp /= 100;
-		if ((eUnitAI == UNITAI_COUNTER) ||
-			  (eUnitAI == UNITAI_ATTACK) ||
-			  (eUnitAI == UNITAI_ATTACK_CITY))
+		const int iKnockbackChance = kPromotion.getKnockbackChange() + kUnit.getKnockback() + (pUnit ? pUnit->getExtraKnockback() : 0);
+		if (iKnockbackChance > 0)
 		{
-			iValue += (iTemp * 25);
-		}
-		else
-		{
-			iValue += iTemp;
+			iTemp *= 100 + 2 * iKnockbackChance * (1 + (pUnit ? (pUnit->knockbackRetriesTotal()) : kUnit.getKnockbackRetries()));
+
+			if (eUnitAI == UNITAI_COUNTER
+			||  eUnitAI == UNITAI_ATTACK
+			||  eUnitAI == UNITAI_ATTACK_CITY)
+			{
+				iValue += iTemp * 4/100;
+			}
+			else iValue += iTemp / 100;
 		}
 	}
 
@@ -29470,144 +29390,116 @@ int CvPlayerAI::AI_promotionValue(PromotionTypes ePromotion, UnitTypes eUnit, co
 		iTemp = kPromotion.getFlankingStrengthbyUnitCombatTypeChange(iI);
 		if (iTemp != 0)
 		{
+			iTemp *= 100 + 2*(kUnit.getFlankingStrengthbyUnitCombatType(iI) + (pUnit ? pUnit->getExtraFlankingStrengthbyUnitCombatType((UnitCombatTypes)iI) : 0));
+
 			if (eUnitAI == UNITAI_COUNTER || eUnitAI == UNITAI_ATTACK || eUnitAI == UNITAI_ATTACK_CITY)
 			{
-				iExtra = kUnit.getFlankingStrengthbyUnitCombatType(iI) + (pUnit ? 2*pUnit->getExtraFlankingStrengthbyUnitCombatType((UnitCombatTypes)iI) : 0);
-				iValue += ((iTemp * (100 + iExtra)) / 125);
+				iValue += iTemp / 125;
 			}
-			else
-			{
-				iValue += (iTemp / 10);
-			}
+			else iValue += iTemp / 1000;
 		}
 	}
 
 	iTemp = kPromotion.getUnnerveChange();
 	if (iTemp != 0)
 	{
-		if ((eUnitAI == UNITAI_COUNTER) ||
-			  (eUnitAI == UNITAI_ATTACK) ||
-			  (eUnitAI == UNITAI_PILLAGE))
+		iTemp *= 100 + 2*(kUnit.getUnnerve() + (pUnit ? pUnit->getExtraUnnerve() : 0));
+
+		if (eUnitAI == UNITAI_COUNTER
+		||  eUnitAI == UNITAI_ATTACK
+		||  eUnitAI == UNITAI_PILLAGE)
 		{
-			iExtra = kUnit.getUnnerve() + (pUnit == NULL ? 0 : pUnit->getExtraUnnerve() * 2);
-			iValue += ((iTemp / 2) * (100 + iExtra) / 100);
+			iValue += iTemp / 200;
 		}
-		else
-		{
-			iValue += (iTemp / 8);
-		}
+		else iValue += iTemp / 800;
 	}
 
 	iTemp = kPromotion.getEncloseChange();
 	if (iTemp != 0)
 	{
-		if ((eUnitAI == UNITAI_COUNTER) ||
-			  (eUnitAI == UNITAI_ATTACK) ||
-			  (eUnitAI == UNITAI_ATTACK_CITY) ||
-			  (eUnitAI == UNITAI_PILLAGE))
+		iTemp *= 100 + 2*(kUnit.getEnclose() + (pUnit ? pUnit->getExtraEnclose() : 0));
+
+		if (eUnitAI == UNITAI_COUNTER
+		||  eUnitAI == UNITAI_ATTACK
+		||  eUnitAI == UNITAI_ATTACK_CITY
+		||  eUnitAI == UNITAI_PILLAGE)
 		{
-			iExtra = kUnit.getEnclose() + (pUnit == NULL ? 0 : pUnit->getExtraEnclose() * 2);
-			iValue += ((iTemp * 5) * (100 + iExtra) / 100);
+			iValue += iTemp / 20;
 		}
-		else
-		{
-			iValue += iTemp;
-		}
+		else iValue += iTemp / 100;
 	}
 
 	iTemp = kPromotion.getLungeChange();
 	if (iTemp != 0)
 	{
-		if ((eUnitAI == UNITAI_COUNTER) ||
-			  (eUnitAI == UNITAI_ATTACK) ||
-			  (eUnitAI == UNITAI_ATTACK_CITY ||
-				  (eUnitAI == UNITAI_PILLAGE)))
+		iTemp *= 100 + 2*(kUnit.getLunge() + (pUnit ? pUnit->getExtraLunge() : 0));
+
+		if (eUnitAI == UNITAI_COUNTER
+		||  eUnitAI == UNITAI_ATTACK
+		||  eUnitAI == UNITAI_ATTACK_CITY
+		||  eUnitAI == UNITAI_PILLAGE)
 		{
-			iExtra = kUnit.getLunge() + (pUnit == NULL ? 0 : pUnit->getExtraLunge() * 2);
-			iValue += (iTemp * (100 + iExtra) / 100);
+			iValue += iTemp / 100;
 		}
-		else
-		{
-			iValue += (iTemp / 4);
-		}
+		else iValue += iTemp / 400;
 	}
 
 	iTemp = kPromotion.getDynamicDefenseChange();
 	if (iTemp != 0)
 	{
-		if ((eUnitAI == UNITAI_CITY_DEFENSE) ||
-			  (eUnitAI == UNITAI_CITY_SPECIAL) ||
-			  (eUnitAI == UNITAI_CITY_COUNTER) ||
-			  (eUnitAI == UNITAI_COUNTER) ||
-			  (eUnitAI == UNITAI_RESERVE) ||
-			  (eUnitAI == UNITAI_HEALER) ||
-			  (eUnitAI == UNITAI_PROPERTY_CONTROL) ||
-			  (eUnitAI == UNITAI_RESERVE_SEA) ||
-			  (eUnitAI == UNITAI_ESCORT_SEA) ||
-			  (eUnitAI == UNITAI_ESCORT))
+		iTemp *= 100 + 2*(kUnit.getDynamicDefense() + (pUnit ? pUnit->getExtraDynamicDefense() : 0));
+
+		if (eUnitAI == UNITAI_CITY_DEFENSE
+		||  eUnitAI == UNITAI_CITY_SPECIAL
+		||  eUnitAI == UNITAI_CITY_COUNTER
+		||  eUnitAI == UNITAI_COUNTER
+		||  eUnitAI == UNITAI_RESERVE
+		||  eUnitAI == UNITAI_HEALER
+		||  eUnitAI == UNITAI_PROPERTY_CONTROL
+		||  eUnitAI == UNITAI_RESERVE_SEA
+		||  eUnitAI == UNITAI_ESCORT_SEA
+		||  eUnitAI == UNITAI_ESCORT)
 		{
-			iExtra = kUnit.getDynamicDefense() + (pUnit == NULL ? 0 : pUnit->getExtraDynamicDefense() * 2);
-			iValue += (iTemp * (100 + iExtra) / 100);
+			iValue += iTemp / 100;
 		}
-		else
-		{
-			iValue += (iTemp / 4);
-		}
+		else iValue += iTemp / 400;
 	}
 
-	bTemp = kPromotion.isStampedeChange();
-	if (bTemp)
+
+	if (kPromotion.isStampedeChange())
 	{
 		iValue -= 25;
 	}
 
-	bTemp = kPromotion.isRemoveStampede();
-	if (bTemp)
-	{
-		if (pUnit)
-		{
-			if (pUnit->mayStampede())
-			{
-				iValue += 25;
-			}
-		}
-	}
-
-	bTemp = kPromotion.isMakesDamageCold();
-	if (bTemp)
+	if (kPromotion.isMakesDamageCold())
 	{
 		iValue += 25;
 	}
 
-	bTemp = kPromotion.isMakesDamageNotCold();
-	if (bTemp)
-	{
-		if (pUnit)
-		{
-			if (pUnit->dealsColdDamage())
-			{
-				iValue -= 25;
-			}
-		}
-	}
-
-	bTemp = kPromotion.isAddsColdImmunity();
-	if (bTemp)
+	if (kPromotion.isAddsColdImmunity())
 	{
 		iValue += 25;
 	}
 
-	bTemp = kPromotion.isRemovesColdImmunity();
-	if (bTemp)
+	if (pUnit)
 	{
-		if (pUnit)
+		if (kPromotion.isRemoveStampede() && pUnit->mayStampede())
 		{
-			if (pUnit->hasImmunitytoColdDamage())
-			{
-				iValue -= 25;
-			}
+			iValue += 25;
+		}
+
+		if (kPromotion.isMakesDamageNotCold() && pUnit->dealsColdDamage())
+		{
+			iValue -= 25;
+		}
+
+		if (kPromotion.isRemovesColdImmunity() && pUnit->hasImmunitytoColdDamage())
+		{
+			iValue -= 25;
 		}
 	}
+
+
 #ifdef BATTLEWORN
 	iTemp = kPromotion.getStrAdjperRndChange();
 	if (iTemp != 0)
@@ -29702,7 +29594,7 @@ int CvPlayerAI::AI_promotionValue(PromotionTypes ePromotion, UnitTypes eUnit, co
 				int iPlotAfflictedCount = 0;
 				if (pUnit)
 				{
-					CvPlot* pUnitPlot = pUnit->plot();
+					CvPlot* pUnitPlot = pPlot;
 					iPlotAfflictedCount = pUnitPlot->getNumAfflictedUnits(pUnit->getOwner(), eAfflictionLine);
 				}
 				iPlotAfflictedCount *= 100;
@@ -29726,10 +29618,9 @@ int CvPlayerAI::AI_promotionValue(PromotionTypes ePromotion, UnitTypes eUnit, co
 		iTemp = kPromotion.getFortitudeChange();
 		if (iTemp != 0)
 		{
-			iExtra = kUnit.getFortitude() + (pUnit == NULL ? 0 : pUnit->getExtraFortitude());
-			iTemp *= (100 + iExtra);
+			iTemp *= 100 + 2*(kUnit.getFortitude() + (pUnit ? pUnit->getExtraFortitude() : 0));
 			iTemp /= 100;
-			iValue += ((iTemp * 3) / 4);
+			iValue += iTemp * 3/4;
 		}
 
 		for (int iI = 0; iI < GC.getNumPropertyInfos(); iI++)
@@ -29737,17 +29628,16 @@ int CvPlayerAI::AI_promotionValue(PromotionTypes ePromotion, UnitTypes eUnit, co
 			iTemp = kPromotion.getAidChange(iI);
 			if (iTemp != 0)
 			{
-				iExtra = kUnit.getAidChange(iI) + (pUnit == NULL ? 0 : pUnit->extraAidChange((PropertyTypes)iI));
-				iTemp *= (100 + iExtra);
+				iTemp *= 100 + 2*(kUnit.getAidChange(iI) + (pUnit ? pUnit->extraAidChange((PropertyTypes)iI) : 0));
 				iTemp /= 100;
-				if ((eUnitAI == UNITAI_HEALER) ||
-					  (eUnitAI == UNITAI_HEALER_SEA) ||
-					  (eUnitAI == UNITAI_PROPERTY_CONTROL) ||
-					  (eUnitAI == UNITAI_PROPERTY_CONTROL_SEA))
+				if (eUnitAI == UNITAI_HEALER
+				||  eUnitAI == UNITAI_HEALER_SEA
+				||  eUnitAI == UNITAI_PROPERTY_CONTROL
+				||  eUnitAI == UNITAI_PROPERTY_CONTROL_SEA)
 				{
-					iTemp *= 2;
+					iValue += iTemp * 6/4;
 				}
-				iValue += ((iTemp * 3) / 4);
+				else iValue += iTemp * 3/4;
 			}
 		}
 	}
@@ -29759,46 +29649,36 @@ int CvPlayerAI::AI_promotionValue(PromotionTypes ePromotion, UnitTypes eUnit, co
 		iTemp = kPromotion.getFrontSupportPercentChange();
 		if (iTemp != 0)
 		{
-			iExtra = pUnit == NULL ? kUnit.getFrontSupportPercent() : pUnit->getExtraFrontSupportPercent();
-			iTemp *= (100 + iExtra * 2);
-			iTemp /= 100;
-			iValue += iTemp * 4;
+			iTemp *= 100 + 2*(pUnit ? pUnit->getExtraFrontSupportPercent() : kUnit.getFrontSupportPercent());
+			iValue += iTemp / 25;
 		}
 
 		iTemp = kPromotion.getShortRangeSupportPercentChange();
 		if (iTemp != 0)
 		{
-			iExtra = pUnit == NULL ? kUnit.getShortRangeSupportPercent() : pUnit->getExtraShortRangeSupportPercent();
-			iTemp *= (100 + iExtra * 2);
-			iTemp /= 100;
-			iValue += iTemp * 4;
+			iTemp *= 100 + 2*(pUnit ? pUnit->getExtraShortRangeSupportPercent() : kUnit.getShortRangeSupportPercent());
+			iValue += iTemp / 25;
 		}
 
 		iTemp = kPromotion.getMediumRangeSupportPercentChange();
 		if (iTemp != 0)
 		{
-			iExtra = pUnit == NULL ? kUnit.getMediumRangeSupportPercent() : pUnit->getExtraMediumRangeSupportPercent();
-			iTemp *= (100 + iExtra * 2);
-			iTemp /= 100;
-			iValue += iTemp * 4;
+			iTemp *= 100 + 2*(pUnit ? pUnit->getExtraMediumRangeSupportPercent() : kUnit.getMediumRangeSupportPercent());
+			iValue += iTemp / 25;
 		}
 
 		iTemp = kPromotion.getLongRangeSupportPercentChange();
 		if (iTemp != 0)
 		{
-			iExtra = pUnit == NULL ? kUnit.getLongRangeSupportPercent() : pUnit->getExtraLongRangeSupportPercent();
-			iTemp *= (100 + iExtra * 2);
-			iTemp /= 100;
-			iValue += iTemp * 4;
+			iTemp *= 100 + 2*(pUnit ? pUnit->getExtraLongRangeSupportPercent() : kUnit.getLongRangeSupportPercent());
+			iValue += iTemp / 25;
 		}
 
 		iTemp = kPromotion.getFlankSupportPercentChange();
 		if (iTemp != 0)
 		{
-			iExtra = pUnit == NULL ? kUnit.getFlankSupportPercent() : pUnit->getExtraFlankSupportPercent();
-			iTemp *= (100 + iExtra * 2);
-			iTemp /= 100;
-			iValue += iTemp * 4;
+			iTemp *= 100 + 2*(pUnit ? pUnit->getExtraFlankSupportPercent() : kUnit.getFlankSupportPercent());
+			iValue += iTemp / 25;
 		}
 }
 #endif // STRENGTH_IN_NUMBERS
@@ -29806,35 +29686,26 @@ int CvPlayerAI::AI_promotionValue(PromotionTypes ePromotion, UnitTypes eUnit, co
 	iTemp = kPromotion.getRoundStunProbChange();
 	if (iTemp != 0)
 	{
-		iExtra = kUnit.getRoundStunProb();
-		if (pUnit) iExtra += pUnit->getExtraRoundStunProb();
-
-		// 2x strengthens synergy
-		iTemp *= 2 * (100 + iExtra);
-		iTemp /= 100;
-		iValue += iTemp * 2;
+		iTemp *= 100 + 2*(kUnit.getRoundStunProb() + (pUnit ? pUnit->getExtraRoundStunProb() : 0));
+		iValue += iTemp / 25;
 	}
 	//TB Combat Mods End
 
 	iTemp = kPromotion.getCollateralDamageChange();
 	if (iTemp != 0)
 	{
-		iExtra = pUnit == NULL ? kUnit.getCollateralDamage() : pUnit->getExtraCollateralDamage(); //collateral has no strong synergy (not like retreat)
-		iTemp *= (100 + iExtra);
+		iTemp *= 100 + 2*(pUnit ? pUnit->getExtraCollateralDamage() : kUnit.getCollateralDamage());
 		iTemp /= 100;
 
 		if (eUnitAI == UNITAI_COLLATERAL)
 		{
-			iValue += (iTemp * 1);
+			iValue += iTemp * 2;
 		}
 		else if (eUnitAI == UNITAI_ATTACK_CITY)
 		{
-			iValue += ((iTemp * 2) / 3);
+			iValue += iTemp / 2;
 		}
-		else
-		{
-			iValue += (iTemp / 8);
-		}
+		else iValue += iTemp / 6;
 	}
 
 	iTemp = kPromotion.getBombardRateChange();
@@ -29939,7 +29810,7 @@ int CvPlayerAI::AI_promotionValue(PromotionTypes ePromotion, UnitTypes eUnit, co
 		iTemp = kPromotion.getControlPoints();
 		if (iTemp != 0)
 		{
-			iValue += iTemp * (100 + 25 * pUnit->plot()->getNumUnits());
+			iValue += iTemp * (100 + 25 * pPlot->getNumUnits());
 		}
 	}
 	//end mod
@@ -30149,52 +30020,34 @@ int CvPlayerAI::AI_promotionValue(PromotionTypes ePromotion, UnitTypes eUnit, co
 		}
 	}
 
-	if (kPromotion.getAnimalIgnoresBordersChange() > 0 && !GC.getGame().isOption(GAMEOPTION_ANIMAL_STAY_OUT))
+	if (pUnit)
 	{
-		if (pUnit)
+		if (pUnit->isAnimal() && kPromotion.getAnimalIgnoresBordersChange() > 0 && !GC.getGame().isOption(GAMEOPTION_ANIMAL_STAY_OUT))
 		{
-			if (pUnit->isAnimal())
-			{
-				iValue += 50;
-			}
+			iValue += 50;
 		}
 	}
 
 	if (kPromotion.getNoDefensiveBonusChange() > 0)
 	{
-		if (pUnit)
+		if (bNoDefensiveBonus)
 		{
-			if (!pUnit->noDefensiveBonus())
-			{
-				iValue -= 50;
-			}
-			else
-			{
-				iValue -= 5;
-			}
+			iValue -= 5;
 		}
+		else iValue -= 50;
 	}
 	else if (kPromotion.getNoDefensiveBonusChange() < 0)
 	{
-		if (pUnit)
+		if (bNoDefensiveBonus)
 		{
-			if (pUnit->noDefensiveBonus())
-			{
-				iValue += 50;
-			}
-			else
-			{
-				iValue += 5;
-			}
+			iValue += 50;
 		}
+		else iValue += 5;
 	}
 
 	if (kPromotion.isOnslaughtChange())
 	{
-		if (pUnit)
-		{
-			iValue += 75;
-		}
+		iValue += 75;
 	}
 
 	if (kPromotion.isAttackOnlyCitiesAdd())
@@ -30802,36 +30655,26 @@ int CvPlayerAI::AI_promotionValue(PromotionTypes ePromotion, UnitTypes eUnit, co
 	{
 		if (eUnitAI == UNITAI_ATTACK || eUnitAI == UNITAI_ATTACK_CITY || eUnitAI == UNITAI_ATTACK_CITY_LEMMING)
 		{
-			iExtra = (kUnit.getCityAttackModifier() + (pUnit == NULL ? 0 : pUnit->getExtraCityAttackPercent() * 4));
-			iTemp *= (100 + iExtra);
+			iTemp *= 100 + kUnit.getCityAttackModifier() + (pUnit ? 2*pUnit->getExtraCityAttackPercent() : 0);
 			iTemp /= 100;
-			if (eUnitAI == UNITAI_ATTACK_CITY ||
-				eUnitAI == UNITAI_ATTACK_CITY_LEMMING)
+			if (eUnitAI == UNITAI_ATTACK_CITY || eUnitAI == UNITAI_ATTACK_CITY_LEMMING)
 			{
-				iValue += (iTemp * 4);
+				iValue += iTemp * 4;
 			}
-			else
-			{
-				iValue += iTemp;
-			}
+			else iValue += iTemp;
 		}
 	}
 
 	iTemp = kPromotion.getHillsAttackPercent();
 	if (iTemp != 0)
 	{
-		iExtra = pUnit == NULL ? kUnit.getHillsAttackModifier() : pUnit->getExtraHillsAttackPercent();
-		iTemp *= (100 + iExtra * 2);
+		iTemp *= 100 + 2*(pUnit ? pUnit->getExtraHillsAttackPercent() : kUnit.getHillsAttackModifier());
 		iTemp /= 100;
-		if ((eUnitAI == UNITAI_ATTACK) ||
-			(eUnitAI == UNITAI_COUNTER))
+		if (eUnitAI == UNITAI_ATTACK || eUnitAI == UNITAI_COUNTER)
 		{
-			iValue += (iTemp / 4);
+			iValue += iTemp / 4;
 		}
-		else
-		{
-			iValue += (iTemp / 16);
-		}
+		else iValue += iTemp / 16;
 	}
 
 
@@ -30909,9 +30752,9 @@ int CvPlayerAI::AI_promotionValue(PromotionTypes ePromotion, UnitTypes eUnit, co
 		||	eUnitAI == UNITAI_PROPERTY_CONTROL
 		||	eUnitAI == UNITAI_INVESTIGATOR)
 		{
-			if (pUnit != NULL && pUnit->plot() != NULL && pUnit->getX() != INVALID_PLOT_COORD && pUnit->plot()->isCity())
+			if (pUnit != NULL && pPlot != NULL && pUnit->getX() != INVALID_PLOT_COORD && pPlot->isCity())
 			{
-				PlayerTypes eCultureOwner = pUnit->plot()->calculateCulturalOwner();
+				PlayerTypes eCultureOwner = pPlot->calculateCulturalOwner();
 				// High weight for cities being threatened with culture revolution
 				if (eCultureOwner != NO_PLAYER && GET_PLAYER(eCultureOwner).getTeam() != getTeam())
 				{
@@ -31037,331 +30880,364 @@ int CvPlayerAI::AI_promotionValue(PromotionTypes ePromotion, UnitTypes eUnit, co
 	}
 	iValue += iTempValue;
 
-	iPass = 0;
-	iTempValue = 0;
-	for (int iI = 0; iI < GC.getNumTerrainInfos(); iI++)
 	{
-		if (kPromotion.getTerrainAttackPercent(iI) != 0 ||
-			 kPromotion.getTerrainDefensePercent(iI) != 0 ||
-			 kPromotion.getTerrainWorkPercent(iI) != 0 ||
-			 kPromotion.getTerrainDoubleMove(iI) ||
-			 kPromotion.getIgnoreTerrainDamage() == iI ||
-			 kPromotion.getWithdrawOnTerrainTypeChange(iI) != 0)
+		const bool bTerrainDamage = GC.getGame().isModderGameOption(MODDERGAMEOPTION_TERRAIN_DAMAGE);
+		int iPass = 0;
+		int iTempValue = 0;
+		for (int iI = 0; iI < GC.getNumTerrainInfos(); iI++)
 		{
-			iPass++;
-			iTemp = kPromotion.getTerrainAttackPercent(iI);
-			int iTerrainWeight;
-			//ls612: Weight values by Terrain in area
-			//General form of the calculation is to change a value of 'x' (old version) to '(x * iTerrainWeight)/250'
-			//The 250 normalizes the calculation to give the old values for a terrain that covers 25% of the area
-			if (pUnit)
+			if (kPromotion.getTerrainAttackPercent(iI)
+			||  kPromotion.getTerrainDefensePercent(iI)
+			||  kPromotion.getTerrainWorkPercent(iI)
+			||  kPromotion.getTerrainDoubleMove(iI)
+			||  bTerrainDamage && kPromotion.getIgnoreTerrainDamage() == iI
+			||  kPromotion.getWithdrawOnTerrainTypeChange(iI))
 			{
-				int iNumRevealedAreaTiles = std::max(1, pUnit->area()->getNumRevealedTiles(getTeam()));
-				int	iNumRevealedAreaThisTerrain = pUnit->area()->getNumRevealedTerrainTiles(getTeam(), (TerrainTypes)iI);
-				iTerrainWeight = std::min(10, (1000 * iNumRevealedAreaThisTerrain) / iNumRevealedAreaTiles);
-			}
-			else
-			{
-				iTerrainWeight = 1000;
-			}
+				iPass++;
+				const int iTerrainWeight = (
+					pUnit
+					?
+					1000
+					*
+					pUnit->area()->getNumRevealedTerrainTiles(getTeam(), (TerrainTypes)iI)
+					/
+					std::max(1, pUnit->area()->getNumRevealedTiles(getTeam()))
+					:
+					1000
+				);
+				const bool bOnTerrain = pPlot && pPlot->getTerrainType() == iI;
 
-			if (iTemp != 0)
-			{
-				iExtra = pUnit == NULL ? kUnit.getTerrainAttackModifier(iI) : pUnit->getExtraTerrainAttackPercent((TerrainTypes)iI);
-				iTemp *= (100 + iExtra * 2);
-				iTemp /= 100;
-
-				if ((eUnitAI == UNITAI_ATTACK) ||
-					(eUnitAI == UNITAI_COUNTER) ||
-					(eUnitAI == UNITAI_HUNTER) ||
-					(eUnitAI == UNITAI_GREAT_HUNTER))
-				{
-					iTempValue += (iTerrainWeight * iTemp) / 2500;
-				}
-				else
-				{
-					iTempValue += (iTerrainWeight * iTemp) / 12500;
-				}
-			}
-
-			if (pUnit == NULL && !kUnit.isNoDefensiveBonus() || pUnit && !pUnit->noDefensiveBonus())
-			{
-				iTemp = kPromotion.getTerrainDefensePercent(iI);
+				iTemp = kPromotion.getTerrainAttackPercent(iI);
 				if (iTemp != 0)
 				{
-					iExtra = pUnit ? pUnit->getExtraTerrainDefensePercent((TerrainTypes)iI) : kUnit.getTerrainDefenseModifier(iI);
-					iTemp *= 100 + iExtra;
-					iTemp /= 100;
+					iTemp *= 100 + 2*(pUnit ? pUnit->getExtraTerrainAttackPercent((TerrainTypes)iI) : kUnit.getTerrainAttackModifier(iI));
 
-					if (eUnitAI == UNITAI_COUNTER
-					||	eUnitAI == UNITAI_ESCORT
-					||	eUnitAI == UNITAI_HUNTER
-					||	eUnitAI == UNITAI_HUNTER_ESCORT
-					||	eUnitAI == UNITAI_EXPLORE
-					||	eUnitAI == UNITAI_GREAT_HUNTER)
+					if (bOnTerrain)
 					{
-						if (pUnit != NULL && pUnit->plot()->getTerrainType() == (TerrainTypes)iI)
+						iTemp /= 50;
+					}
+					else iTemp /= 100;
+
+					if (eUnitAI == UNITAI_ATTACK
+					||  eUnitAI == UNITAI_COUNTER
+					||  eUnitAI == UNITAI_HUNTER
+					||  eUnitAI == UNITAI_GREAT_HUNTER)
+					{
+						iTempValue += iTemp * iTerrainWeight / 1000;
+					}
+					else
+					{
+						iTempValue += iTemp * iTerrainWeight / 1400;
+					}
+				}
+
+				if (!bNoDefensiveBonus)
+				{
+					iTemp = kPromotion.getTerrainDefensePercent(iI);
+					if (iTemp != 0)
+					{
+						iTemp *= 100 + 2*(pUnit ? pUnit->getExtraTerrainDefensePercent((TerrainTypes)iI) : kUnit.getTerrainDefenseModifier(iI));
+
+						if (bOnTerrain)
 						{
-							iTempValue += (iTerrainWeight * iTemp) / 3000;
+							iTemp /= 50;
 						}
-						else iTempValue++;
+						else iTemp /= 100;
+
+						if (eUnitAI == UNITAI_COUNTER
+						||	eUnitAI == UNITAI_ESCORT
+						||	eUnitAI == UNITAI_HUNTER
+						||	eUnitAI == UNITAI_HUNTER_ESCORT
+						||	eUnitAI == UNITAI_EXPLORE
+						||	eUnitAI == UNITAI_GREAT_HUNTER)
+						{
+							iTempValue += iTemp * iTerrainWeight / 1000;
+						}
+						else
+						{
+							iTempValue += iTemp * iTerrainWeight / 1400;
+						}
 					}
-					else iTempValue += (iTerrainWeight * iTemp) / 12500;
 				}
-			}
 
-			if (kPromotion.getTerrainDoubleMove(iI))
-			{
-				if (eUnitAI == UNITAI_EXPLORE ||
-					eUnitAI == UNITAI_ESCORT ||
-					eUnitAI == UNITAI_HUNTER ||
-					eUnitAI == UNITAI_HUNTER_ESCORT ||
-					eUnitAI == UNITAI_GREAT_HUNTER)
+				if (kPromotion.getTerrainDoubleMove(iI))
 				{
-					iTempValue += (50 * iTerrainWeight) / 250;
-				}
-				else if ((eUnitAI == UNITAI_ATTACK) || (eUnitAI == UNITAI_PILLAGE) || (eUnitAI == UNITAI_COUNTER))
-				{
-					iTempValue += (15 * iTerrainWeight) / 250;
-				}
-				else
-				{
-					iTempValue += iTerrainWeight / 250;
-				}
-			}
+					iTemp = iMoves * (bOnTerrain ? 80 : 40);
 
-			iTemp = kPromotion.getTerrainWorkPercent(iI);
-			if (iTemp != 0)
-			{
-				if (eUnitAI == UNITAI_WORKER)
-				{
-					iTempValue += (iTerrainWeight * iTemp) / 250;
-				}
-				else iTempValue++;
-			}
-
-			if (GC.getGame().isModderGameOption(MODDERGAMEOPTION_TERRAIN_DAMAGE) && kPromotion.getIgnoreTerrainDamage() == iI)
-			{
-				if (eUnitAI == UNITAI_EXPLORE ||
-					eUnitAI == UNITAI_HUNTER ||
-					eUnitAI == UNITAI_HUNTER_ESCORT ||
-					eUnitAI == UNITAI_GREAT_HUNTER ||
-					eUnitAI == UNITAI_ESCORT)
-				{
-					iTempValue += (iTerrainWeight * -2 * GC.getTerrainInfo((TerrainTypes)kPromotion.getIgnoreTerrainDamage()).getHealthPercent()) / 100;
-				}
-				else if ((eUnitAI == UNITAI_ATTACK) || (eUnitAI == UNITAI_PILLAGE) || (eUnitAI == UNITAI_COUNTER))
-				{
-					iTempValue += (iTerrainWeight * -GC.getTerrainInfo((TerrainTypes)kPromotion.getIgnoreTerrainDamage()).getHealthPercent()) / 100;
-				}
-				else
-				{
-					iTempValue++;
-				}
-			}
-
-			iTemp = kPromotion.getWithdrawOnTerrainTypeChange(iI);
-			if (iTemp != 0)
-			{
-				iExtra = pUnit ? pUnit->getExtraWithdrawOnTerrainType((TerrainTypes)iI) : kUnit.getWithdrawOnTerrainType(iI);
-				iTemp *= (100 + iExtra);
-				iTemp /= 100;
-
-				switch (eUnitAI)
-				{
-				case UNITAI_ANIMAL:
-				case UNITAI_COLLATERAL:
-				case UNITAI_PILLAGE:
-				case UNITAI_EXPLORE:
-				case UNITAI_ATTACK_SEA:
-				case UNITAI_EXPLORE_SEA:
-				case UNITAI_CARRIER_SEA:
-				case UNITAI_PIRATE_SEA:
-				case UNITAI_SUBDUED_ANIMAL:
-				{
-					if (pUnit != NULL && pUnit->plot()->getTerrainType() == (TerrainTypes)iI && pUnit->withdrawalProbability() > 0)
+					if (eUnitAI == UNITAI_EXPLORE
+					||  eUnitAI == UNITAI_HUNTER
+					||  eUnitAI == UNITAI_HUNTER_ESCORT
+					||  eUnitAI == UNITAI_GREAT_HUNTER
+					||  eUnitAI == UNITAI_ESCORT)
 					{
-						iTempValue += iTerrainWeight * iTemp / 2500;
+						iTempValue += iTemp * iTerrainWeight / 200;
 					}
-					else
+					else if (
+					    eUnitAI == UNITAI_ATTACK
+					||  eUnitAI == UNITAI_PILLAGE
+					||  eUnitAI == UNITAI_COUNTER)
 					{
-						iTempValue += iTerrainWeight * iTemp / 5000;
+						iTempValue += iTemp * iTerrainWeight / 500;
 					}
-					break;
+					else iTempValue += iTemp * iTerrainWeight / 1000;
 				}
-				default:
-				{
-					if (pUnit != NULL && pUnit->withdrawalProbability() > 0)
-					{
-						iTempValue += iTerrainWeight * iTemp / 75500;
-					}
-					else
-					{
-						iTempValue += iTerrainWeight * iTemp / 12500;
-					}
-				}
-				}
-			}
-		}
-	}
-	if (iPass > 0)
-	{
-		iTempValue /= iPass;
-	}
-	iValue += iTempValue;
 
-	iPass = 0;
-	iTempValue = 0;
-	for (int iI = 0; iI < GC.getNumFeatureInfos(); iI++)
-	{
-		if (kPromotion.getFeatureAttackPercent(iI) != 0 ||
-			 kPromotion.getFeatureDefensePercent(iI) != 0 ||
-			 kPromotion.getFeatureWorkPercent(iI) != 0 ||
-			 kPromotion.getFeatureDoubleMove(iI) != 0 ||
-			 kPromotion.getWithdrawOnFeatureTypeChange(iI))
-		{
-			iPass++;
-			iTemp = kPromotion.getFeatureAttackPercent(iI);
-			//ls612: Feature Weights
-			//General form of the calculation is to change a value of 'x' (old version) to '(x * iFeatureWeight)/100'
-			//The 100 normalizes the calculation to give the old values for a feature that covers 10% of the area - note
-			//that we use 10% for features where we used 25% for terrains because most plots don't have features at all
-			int iFeatureWeight;
-			if (pUnit)
-			{
-				int iNumRevealedAreaFeatures = std::max(1, pUnit->area()->getNumRevealedTiles(getTeam()));
-				int iNumRevealedAreaFeatureTiles = pUnit->area()->getNumRevealedFeatureTiles(getTeam(), (FeatureTypes)iI);
-				iFeatureWeight = ((iNumRevealedAreaFeatureTiles * 1000) / iNumRevealedAreaFeatures);
-			}
-			else
-			{
-				iFeatureWeight = 1000;
-			}
-
-			if (iTemp != 0)
-			{
-
-				iExtra = pUnit == NULL ? kUnit.getFeatureAttackModifier(iI) : pUnit->getExtraFeatureAttackPercent((FeatureTypes)iI);
-				iTemp *= (100 + iExtra * 2);
-				iTemp /= 100;
-
-				if ((eUnitAI == UNITAI_ATTACK) ||
-					(eUnitAI == UNITAI_COUNTER) ||
-					eUnitAI == UNITAI_HUNTER ||
-					eUnitAI == UNITAI_HUNTER_ESCORT ||
-					eUnitAI == UNITAI_GREAT_HUNTER ||
-					eUnitAI == UNITAI_ESCORT)
-				{
-					iTempValue += (iFeatureWeight * iTemp) / 1200;
-				}
-				else
-				{
-					iTempValue += (iFeatureWeight * iTemp) / 1600;
-				}
-			}
-
-			if (pUnit == NULL && !kUnit.isNoDefensiveBonus() || pUnit && !pUnit->noDefensiveBonus())
-			{
-				iTemp = kPromotion.getFeatureDefensePercent(iI);
+				iTemp = kPromotion.getTerrainWorkPercent(iI);
 				if (iTemp != 0)
 				{
-					iTemp *= 100 + 2*(pUnit ? pUnit->getExtraFeatureDefensePercent((FeatureTypes)iI) : kUnit.getFeatureDefenseModifier(iI));
-					iTemp /= 100;
-
-					if (eUnitAI == UNITAI_COUNTER
-					||	eUnitAI == UNITAI_EXPLORE
-					||	eUnitAI == UNITAI_HUNTER
-					||	eUnitAI == UNITAI_HUNTER_ESCORT
-					||	eUnitAI == UNITAI_GREAT_HUNTER
-					||	eUnitAI == UNITAI_ESCORT)
+					if (eUnitAI == UNITAI_WORKER)
 					{
-						if (pUnit != NULL && pUnit->plot()->getFeatureType() == (FeatureTypes)iI)
+						if (bOnTerrain)
 						{
-							iTempValue += (iFeatureWeight * iTemp) / 1200;
+							iTemp *= 2;
 						}
-						else iTempValue++;
-					}
-					else iTempValue += (iFeatureWeight * iTemp) / 1600;
-				}
-			}
-
-			if (kPromotion.getFeatureDoubleMove(iI))
-			{
-				if (eUnitAI == UNITAI_EXPLORE ||
-					eUnitAI == UNITAI_HUNTER ||
-					eUnitAI == UNITAI_HUNTER_ESCORT ||
-					eUnitAI == UNITAI_GREAT_HUNTER ||
-					eUnitAI == UNITAI_ESCORT)
-				{
-					iTempValue += (iFeatureWeight * 50) / 100;
-				}
-				else if ((eUnitAI == UNITAI_ATTACK) || (eUnitAI == UNITAI_PILLAGE) || (eUnitAI == UNITAI_COUNTER))
-				{
-					iTempValue += (iFeatureWeight * 25) / 100;
-				}
-				else
-				{
-					iTempValue++;
-				}
-			}
-
-			iTemp = kPromotion.getWithdrawOnFeatureTypeChange(iI);
-			if (iTemp != 0)
-			{
-				iExtra = pUnit ? pUnit->getExtraWithdrawOnFeatureType((FeatureTypes)iI, true) : kUnit.getWithdrawOnFeatureType(iI);
-				iTemp *= (100 + iExtra);
-				iTemp /= 100;
-
-				switch (eUnitAI)
-				{
-				case UNITAI_ANIMAL:
-				case UNITAI_COLLATERAL:
-				case UNITAI_PILLAGE:
-				case UNITAI_EXPLORE:
-				case UNITAI_ATTACK_SEA:
-				case UNITAI_EXPLORE_SEA:
-				case UNITAI_CARRIER_SEA:
-				case UNITAI_PIRATE_SEA:
-				case UNITAI_SUBDUED_ANIMAL:
-				{
-					if (pUnit != NULL && pUnit->plot()->getFeatureType() == (FeatureTypes)iI && pUnit->withdrawalProbability() > 0)
-					{
-						iTempValue += iFeatureWeight * iTemp / 1200;
-					}
-					else
-					{
-						iTempValue += iFeatureWeight * iTemp / 1600;
-					}
-					break;
-				}
-				default:
-				{
-					if (pUnit != NULL && pUnit->withdrawalProbability() > 0)
-					{
-						iTempValue += (iFeatureWeight * iTemp) / 2000;
+						iTempValue += iTemp * iTerrainWeight / 100;
 					}
 					else iTempValue++;
 				}
-				}
-			}
 
-			//ls612: Terrain Work Modifiers //TB Edited for WorkRateMod (THANK you for thinking this out ls!)
-			iTemp = kPromotion.getFeatureWorkPercent(iI);
-			if (iTemp != 0)
-			{
-				if (eUnitAI == UNITAI_WORKER)
+				if (bTerrainDamage && kPromotion.getIgnoreTerrainDamage() == iI)
 				{
-					iTempValue += iFeatureWeight * iTemp / 100;
+					if (pUnit && pUnit->isTerrainProtected((TerrainTypes)iI))
+					{
+						iTempValue++;
+					}
+					else
+					{
+						iTemp = -GC.getTerrainInfo((TerrainTypes)kPromotion.getIgnoreTerrainDamage()).getHealthPercent();
+
+						if (bOnTerrain)
+						{
+							iTemp *= 2;
+						}
+
+						if (eUnitAI == UNITAI_EXPLORE
+						||  eUnitAI == UNITAI_HUNTER
+						||  eUnitAI == UNITAI_HUNTER_ESCORT
+						||  eUnitAI == UNITAI_GREAT_HUNTER
+						||  eUnitAI == UNITAI_ESCORT)
+						{
+							iTempValue += iTemp * iTerrainWeight / 100;
+						}
+						else if (
+						    eUnitAI == UNITAI_ATTACK
+						||  eUnitAI == UNITAI_PILLAGE
+						||  eUnitAI == UNITAI_COUNTER)
+						{
+							iTempValue += iTemp * iTerrainWeight / 200;
+						}
+						else iTempValue += iTemp * iTerrainWeight / 500;
+					}
 				}
-				else iTempValue++;
+
+				iTemp = kPromotion.getWithdrawOnTerrainTypeChange(iI);
+				if (iTemp != 0)
+				{
+					iTemp *= 100 + 2*(pUnit ? pUnit->getExtraWithdrawOnTerrainType((TerrainTypes)iI) : kUnit.getWithdrawOnTerrainType(iI));
+
+					if (bOnTerrain)
+					{
+						iTemp /= 50;
+					}
+					else iTemp /= 100;
+
+					switch (eUnitAI)
+					{
+						case UNITAI_ANIMAL:
+						case UNITAI_COLLATERAL:
+						case UNITAI_PILLAGE:
+						case UNITAI_EXPLORE:
+						case UNITAI_ATTACK_SEA:
+						case UNITAI_EXPLORE_SEA:
+						case UNITAI_CARRIER_SEA:
+						case UNITAI_PIRATE_SEA:
+						case UNITAI_SUBDUED_ANIMAL:
+						{
+							if (pUnit && pUnit->withdrawalProbability() > 0)
+							{
+								iTempValue += iTemp * iTerrainWeight / 1000;
+							}
+							else iTempValue += iTemp * iTerrainWeight / 1400;
+
+							break;
+						}
+						default:
+						{
+							if (pUnit && pUnit->withdrawalProbability() > 0)
+							{
+								iTempValue += iTemp * iTerrainWeight / 1800;
+							}
+							else iTempValue += iTemp * iTerrainWeight / 2200;
+						}
+					}
+				}
 			}
 		}
+		if (iPass > 0)
+		{
+			iValue += iTempValue / iPass;
+		}
 	}
-	if (iPass > 0)
+
 	{
-		iTempValue /= iPass;
+		int iPass = 0;
+		int iTempValue = 0;
+		for (int iI = 0; iI < GC.getNumFeatureInfos(); iI++)
+		{
+			if (kPromotion.getFeatureAttackPercent(iI)
+			||  kPromotion.getFeatureDefensePercent(iI)
+			||  kPromotion.getFeatureWorkPercent(iI)
+			||  kPromotion.getFeatureDoubleMove(iI)
+			||  kPromotion.getWithdrawOnFeatureTypeChange(iI))
+			{
+				iPass++;
+				const int iFeatureWeight = (
+					pUnit
+					?
+					1000
+					*
+					pUnit->area()->getNumRevealedFeatureTiles(getTeam(), (FeatureTypes)iI)
+					/
+					std::max(1, pUnit->area()->getNumRevealedTiles(getTeam()))
+					:
+					1000
+				);
+				const bool bOnFeature = pPlot && pPlot->getFeatureType() == iI;
+
+				iTemp = kPromotion.getFeatureAttackPercent(iI);
+				if (iTemp != 0)
+				{
+					iTemp *= 100 + 2*(pUnit ? pUnit->getExtraFeatureAttackPercent((FeatureTypes)iI) : kUnit.getFeatureAttackModifier(iI));
+
+					if (bOnFeature)
+					{
+						iTemp /= 50;
+					}
+					else iTemp /= 100;
+
+					if (eUnitAI == UNITAI_ATTACK
+					||  eUnitAI == UNITAI_COUNTER
+					||  eUnitAI == UNITAI_HUNTER
+					||  eUnitAI == UNITAI_HUNTER_ESCORT
+					||  eUnitAI == UNITAI_GREAT_HUNTER
+					||  eUnitAI == UNITAI_ESCORT)
+					{
+						iTempValue += iTemp * iFeatureWeight / 1000;
+					}
+					else iTempValue += iTemp * iFeatureWeight / 1400;
+				}
+
+				if (!bNoDefensiveBonus)
+				{
+					iTemp = kPromotion.getFeatureDefensePercent(iI);
+					if (iTemp != 0)
+					{
+						iTemp *= 100 + 2*(pUnit ? pUnit->getExtraFeatureDefensePercent((FeatureTypes)iI) : kUnit.getFeatureDefenseModifier(iI));
+
+						if (bOnFeature)
+						{
+							iTemp /= 50;
+						}
+						else iTemp /= 100;
+
+						if (eUnitAI == UNITAI_COUNTER
+						||	eUnitAI == UNITAI_EXPLORE
+						||	eUnitAI == UNITAI_HUNTER
+						||	eUnitAI == UNITAI_HUNTER_ESCORT
+						||	eUnitAI == UNITAI_GREAT_HUNTER
+						||	eUnitAI == UNITAI_ESCORT)
+						{
+							iTempValue += iTemp * iFeatureWeight / 1000;
+						}
+						else iTempValue += iTemp * iFeatureWeight / 1400;
+					}
+				}
+
+				if (kPromotion.getFeatureDoubleMove(iI))
+				{
+					iTemp = iMoves * (bOnFeature ? 80 : 40);
+
+					if (eUnitAI == UNITAI_EXPLORE
+					||  eUnitAI == UNITAI_HUNTER
+					||  eUnitAI == UNITAI_HUNTER_ESCORT
+					||  eUnitAI == UNITAI_GREAT_HUNTER
+					||  eUnitAI == UNITAI_ESCORT)
+					{
+						iTempValue += iTemp * iFeatureWeight / 200;
+					}
+					else if (
+					    eUnitAI == UNITAI_ATTACK
+					||  eUnitAI == UNITAI_PILLAGE
+					||  eUnitAI == UNITAI_COUNTER)
+					{
+						iTempValue += iTemp * iFeatureWeight / 500;
+					}
+					else iTempValue += iTemp * iFeatureWeight / 1000;
+				}
+
+				iTemp = kPromotion.getWithdrawOnFeatureTypeChange(iI);
+				if (iTemp != 0)
+				{
+					iTemp *= 100 + 2*(pUnit ? pUnit->getExtraWithdrawOnFeatureType((FeatureTypes)iI, true) : kUnit.getWithdrawOnFeatureType(iI));
+
+					if (bOnFeature)
+					{
+						iTemp /= 50;
+					}
+					else iTemp /= 100;
+
+					switch (eUnitAI)
+					{
+						case UNITAI_ANIMAL:
+						case UNITAI_COLLATERAL:
+						case UNITAI_PILLAGE:
+						case UNITAI_EXPLORE:
+						case UNITAI_ATTACK_SEA:
+						case UNITAI_EXPLORE_SEA:
+						case UNITAI_CARRIER_SEA:
+						case UNITAI_PIRATE_SEA:
+						case UNITAI_SUBDUED_ANIMAL:
+						{
+							if (pUnit && pUnit->withdrawalProbability() > 0)
+							{
+								iTempValue += iTemp * iFeatureWeight / 1000;
+							}
+							else iTempValue += iTemp * iFeatureWeight / 1400;
+
+							break;
+						}
+						default:
+						{
+							if (pUnit && pUnit->withdrawalProbability() > 0)
+							{
+								iTempValue += iTemp * iFeatureWeight / 1800;
+							}
+							else iTempValue += iTemp * iFeatureWeight / 2200;
+						}
+					}
+				}
+
+				//ls612: Terrain Work Modifiers //TB Edited for WorkRateMod (THANK you for thinking this out ls!)
+				iTemp = kPromotion.getFeatureWorkPercent(iI);
+				if (iTemp != 0)
+				{
+					if (eUnitAI == UNITAI_WORKER)
+					{
+						if (bOnFeature)
+						{
+							iTemp *= 2;
+						}
+						iTempValue += iTemp * iFeatureWeight / 100;
+					}
+					else iTempValue++;
+				}
+			}
+		}
+		if (iPass > 0)
+		{
+			iValue += iTempValue / iPass;
+		}
 	}
-	iValue += iTempValue;
 
 
 	if ((pUnit && pUnit->canFight() || !pUnit && kUnit.getCombat() > 0))
@@ -31767,8 +31643,7 @@ int CvPlayerAI::AI_promotionValue(PromotionTypes ePromotion, UnitTypes eUnit, co
 	iTemp = kPromotion.getAttackCombatModifierChange();
 	if (iTemp != 0)
 	{
-		iExtra = pUnit == NULL ? kUnit.getAttackCombatModifier() : pUnit->getExtraAttackCombatModifier();
-		iTemp *= (100 + iExtra * 2);
+		iTemp *= 100 + 2*(pUnit ? pUnit->getExtraAttackCombatModifier() : kUnit.getAttackCombatModifier());
 		iTemp /= 100;
 		if ((eUnitAI == UNITAI_ATTACK) ||
 			(eUnitAI == UNITAI_ATTACK_CITY) ||
@@ -31793,47 +31668,39 @@ int CvPlayerAI::AI_promotionValue(PromotionTypes ePromotion, UnitTypes eUnit, co
 	iTemp = kPromotion.getDefenseCombatModifierChange();
 	if (iTemp != 0)
 	{
-		iExtra = pUnit == NULL ? kUnit.getDefenseCombatModifier() : pUnit->getExtraDefenseCombatModifier();
-		iTemp *= (100 + iExtra * 2);
+		iTemp *= 100 + 2*(pUnit ? pUnit->getExtraDefenseCombatModifier() : kUnit.getDefenseCombatModifier());
 		iTemp /= 100;
 
-		int iMultiplier = bForBuildUp ? 3 : 2;
-
-		if (eUnitAI == UNITAI_RESERVE ||
-			eUnitAI == UNITAI_CITY_DEFENSE ||
-			eUnitAI == UNITAI_ESCORT_SEA ||
-			eUnitAI == UNITAI_ESCORT ||
-			bForBuildUp)
+		if (bForBuildUp
+		|| eUnitAI == UNITAI_RESERVE
+		|| eUnitAI == UNITAI_CITY_DEFENSE
+		|| eUnitAI == UNITAI_ESCORT_SEA
+		|| eUnitAI == UNITAI_ESCORT)
 		{
-			iValue += (iTemp * iMultiplier);
+			iValue += iTemp * (2 + bForBuildUp);
 		}
-		else
-		{
-			iValue += (iTemp);
-		}
+		else iValue += iTemp;
 	}
 
-	iTemp = kPromotion.getVSBarbsChange();
-	if (iTemp != 0)
+	if (!isNPC())
 	{
-		if (eUnitAI == UNITAI_COUNTER ||
-			eUnitAI == UNITAI_CITY_DEFENSE ||
-			eUnitAI == UNITAI_CITY_COUNTER ||
-			eUnitAI == UNITAI_ESCORT_SEA ||
-			eUnitAI == UNITAI_EXPLORE_SEA ||
-			eUnitAI == UNITAI_EXPLORE ||
-			eUnitAI == UNITAI_PILLAGE_COUNTER ||
-			eUnitAI == UNITAI_HUNTER ||
-			eUnitAI == UNITAI_HUNTER_ESCORT ||
-			eUnitAI == UNITAI_GREAT_HUNTER ||
-			eUnitAI == UNITAI_ESCORT)
+		iTemp = kPromotion.getVSBarbsChange();
+		if (iTemp != 0)
 		{
-			int iEraFactor = 10 - (int)getCurrentEra();
-			iTemp *= iEraFactor;
-			iTemp /= 9;
-			if (pUnit != NULL && !pUnit->isHominid())
+			if (eUnitAI == UNITAI_COUNTER
+			||  eUnitAI == UNITAI_CITY_DEFENSE
+			||  eUnitAI == UNITAI_CITY_COUNTER
+			||  eUnitAI == UNITAI_ESCORT_SEA
+			||  eUnitAI == UNITAI_EXPLORE_SEA
+			||  eUnitAI == UNITAI_EXPLORE
+			||  eUnitAI == UNITAI_PILLAGE_COUNTER
+			||  eUnitAI == UNITAI_HUNTER
+			||  eUnitAI == UNITAI_HUNTER_ESCORT
+			||  eUnitAI == UNITAI_GREAT_HUNTER
+			||  eUnitAI == UNITAI_ESCORT)
 			{
-				iValue += iTemp;
+				iTemp *= 10 - getCurrentEra();
+				iValue += iTemp / 9;
 			}
 		}
 	}
@@ -31841,24 +31708,22 @@ int CvPlayerAI::AI_promotionValue(PromotionTypes ePromotion, UnitTypes eUnit, co
 	iTemp = kPromotion.getReligiousCombatModifierChange();
 	if (iTemp != 0)
 	{
-		iExtra = pUnit == NULL ? kUnit.getReligiousCombatModifier() : pUnit->getExtraReligiousCombatModifier();
-		iTemp *= (100 + iExtra * 2);
+		iTemp *= 100 + 2*(pUnit ? pUnit->getExtraReligiousCombatModifier() : kUnit.getReligiousCombatModifier());
 		iTemp /= 100;
 
-		if (eUnitAI == UNITAI_ATTACK ||
-			eUnitAI == UNITAI_ATTACK_CITY ||
-			eUnitAI == UNITAI_COLLATERAL ||
-			eUnitAI == UNITAI_PILLAGE ||
-			eUnitAI == UNITAI_RESERVE ||
-			eUnitAI == UNITAI_COUNTER ||
-			eUnitAI == UNITAI_CITY_DEFENSE ||
-			eUnitAI == UNITAI_ATTACK_SEA ||
-			eUnitAI == UNITAI_RESERVE_SEA ||
-			eUnitAI == UNITAI_ASSAULT_SEA ||
-			eUnitAI == UNITAI_ATTACK_CITY_LEMMING)
+		if (eUnitAI == UNITAI_ATTACK
+		||  eUnitAI == UNITAI_ATTACK_CITY
+		||  eUnitAI == UNITAI_COLLATERAL
+		||  eUnitAI == UNITAI_PILLAGE
+		||  eUnitAI == UNITAI_RESERVE
+		||  eUnitAI == UNITAI_COUNTER
+		||  eUnitAI == UNITAI_CITY_DEFENSE
+		||  eUnitAI == UNITAI_ATTACK_SEA
+		||  eUnitAI == UNITAI_RESERVE_SEA
+		||  eUnitAI == UNITAI_ASSAULT_SEA
+		||  eUnitAI == UNITAI_ATTACK_CITY_LEMMING)
 		{
-			iTemp *= 2;
-			iValue += iTemp;
+			iValue += 2 * iTemp;
 		}
 	}
 
@@ -32027,9 +31892,7 @@ int CvPlayerAI::AI_unitCombatValue(UnitCombatTypes eUnitCombat, UnitTypes eUnit,
 		}
 	}
 
-	bool bTemp = false;
-	bTemp = kUnitCombat.isOneUp();
-	if (bTemp)
+	if (kUnitCombat.isOneUp())
 	{
 		if ((eUnitAI == UNITAI_RESERVE) ||
 			  (eUnitAI == UNITAI_COUNTER) ||
@@ -32047,8 +31910,7 @@ int CvPlayerAI::AI_unitCombatValue(UnitCombatTypes eUnitCombat, UnitTypes eUnit,
 		}
 	}
 
-	bTemp = kUnitCombat.isDefensiveVictoryMove();
-	if (bTemp)
+	if (kUnitCombat.isDefensiveVictoryMove())
 	{
 		if ((eUnitAI == UNITAI_RESERVE) ||
 			  (eUnitAI == UNITAI_COUNTER) ||
@@ -32071,8 +31933,7 @@ int CvPlayerAI::AI_unitCombatValue(UnitCombatTypes eUnitCombat, UnitTypes eUnit,
 	}
 
 	iTemp = 0;
-	bTemp = kUnitCombat.isFreeDrop();
-	if (bTemp)
+	if (kUnitCombat.isFreeDrop())
 	{
 		if ((eUnitAI == UNITAI_PILLAGE) ||
 				(eUnitAI == UNITAI_ATTACK))
@@ -32085,8 +31946,7 @@ int CvPlayerAI::AI_unitCombatValue(UnitCombatTypes eUnitCombat, UnitTypes eUnit,
 		}
 	}
 
-	bTemp = kUnitCombat.isOffensiveVictoryMove();
-	if (bTemp)
+	if (kUnitCombat.isOffensiveVictoryMove())
 	{
 		if ((eUnitAI == UNITAI_PILLAGE) ||
 				(eUnitAI == UNITAI_ATTACK) ||
@@ -32111,8 +31971,7 @@ int CvPlayerAI::AI_unitCombatValue(UnitCombatTypes eUnitCombat, UnitTypes eUnit,
 	iValue += iTemp;
 
 	iTemp = 0;
-	bTemp = kUnitCombat.isPillageEspionage();
-	if (bTemp)
+	if (kUnitCombat.isPillageEspionage())
 	{
 		if (pUnit)
 		{
@@ -32144,8 +32003,7 @@ int CvPlayerAI::AI_unitCombatValue(UnitCombatTypes eUnitCombat, UnitTypes eUnit,
 		}
 	}
 
-	bTemp = kUnitCombat.isPillageMarauder();
-	if (bTemp)
+	if (kUnitCombat.isPillageMarauder())
 	{
 		if (pUnit)
 		{
@@ -32166,8 +32024,7 @@ int CvPlayerAI::AI_unitCombatValue(UnitCombatTypes eUnitCombat, UnitTypes eUnit,
 		else iTemp += 2;
 	}
 
-	bTemp = kUnitCombat.isPillageOnMove();
-	if (bTemp)
+	if (kUnitCombat.isPillageOnMove())
 	{
 		if (pUnit)
 		{
@@ -32187,8 +32044,7 @@ int CvPlayerAI::AI_unitCombatValue(UnitCombatTypes eUnitCombat, UnitTypes eUnit,
 		else iTemp++;
 	}
 
-	bTemp = kUnitCombat.isPillageOnVictory();
-	if (bTemp)
+	if (kUnitCombat.isPillageOnVictory())
 	{
 		if (pUnit)
 		{
@@ -32208,8 +32064,7 @@ int CvPlayerAI::AI_unitCombatValue(UnitCombatTypes eUnitCombat, UnitTypes eUnit,
 		else iTemp += 4;
 	}
 
-	bTemp = kUnitCombat.isPillageResearch();
-	if (bTemp)
+	if (kUnitCombat.isPillageResearch())
 	{
 		if (pUnit)
 		{
@@ -33824,23 +33679,21 @@ int CvPlayerAI::AI_unitCombatValue(UnitCombatTypes eUnitCombat, UnitTypes eUnit,
 		}
 	}
 
-	bTemp = kUnitCombat.isStampedeChange();
-	if (bTemp)
+	if (kUnitCombat.isStampedeChange())
 	{
 		iValue -= 25;
 	}
 
-	bTemp = kUnitCombat.isMakesDamageCold();
-	if (bTemp)
+	if (kUnitCombat.isMakesDamageCold())
 	{
 		iValue += 25;
 	}
 
-	bTemp = kUnitCombat.isAddsColdImmunity();
-	if (bTemp)
+	if (kUnitCombat.isAddsColdImmunity())
 	{
 		iValue += 25;
 	}
+
 #ifdef BATTLEWORN
 	iTemp = kUnitCombat.getStrAdjperAttChange();
 	if (iTemp != 0)

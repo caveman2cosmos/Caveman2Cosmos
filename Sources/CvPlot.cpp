@@ -280,7 +280,9 @@ void CvPlot::reset(int iX, int iY, bool bConstructorCall)
 	m_workingCityOverride.reset();
 
 	m_iActivePlayerSafeRangeCache = -1;
+	m_iActivePlayerSafeRangeCacheTestMoves = -1;
 	m_bActivePlayerHasDangerCache = false;
+	m_bActivePlayerHasDangerCacheTestMoves = false;
 
 	for (int iI = 0; iI < MAX_TEAMS; iI++)
 	{
@@ -4706,8 +4708,10 @@ int CvPlot::calculatePathDistanceToPlot( TeamTypes eTeam, CvPlot* pTargetPlot ) 
 
 void CvPlot::invalidateActivePlayerPlotCache()
 {
-	setActivePlayerSafeRangeCache(-1);
-	setActivePlayerHasDangerCache(false);
+	m_iActivePlayerSafeRangeCache = -1;
+	m_iActivePlayerSafeRangeCacheTestMoves = -1;
+	m_bActivePlayerHasDangerCache = false;
+	m_bActivePlayerHasDangerCacheTestMoves = false;
 
 	CachePathValidityResult(NULL, false, false);
 	CachePathValidityResult(NULL, true, false);
@@ -5362,7 +5366,7 @@ int CvPlot::getVisibleNonAllyStrength(PlayerTypes ePlayer) const
 
 bool CvPlot::isVisibleEnemyUnit(const CvUnit* pUnit) const
 {
-	return (plotCheck(PUF_isEnemy, pUnit->getOwner(), pUnit->isAlwaysHostile(this), pUnit, NO_PLAYER, NO_TEAM, PUF_isVisible, pUnit->getOwner()) != NULL);
+	return isVisible(pUnit->getTeam(), false) && plotCheck(PUF_isEnemy, pUnit->getOwner(), pUnit->isAlwaysHostile(this), pUnit, NO_PLAYER, NO_TEAM, PUF_isVisible, pUnit->getOwner());
 }
 
 bool CvPlot::isVisibleOtherUnit(PlayerTypes ePlayer) const
@@ -11013,7 +11017,9 @@ void CvPlot::read(FDataStreamBase* pStream)
 	WRAPPER_READ_ARRAY(wrapper, "CvPlot", NUM_YIELD_TYPES, m_aiYield);
 
 	m_iActivePlayerSafeRangeCache = -1;
+	m_iActivePlayerSafeRangeCacheTestMoves = -1;
 	m_bActivePlayerHasDangerCache = false;
+	m_bActivePlayerHasDangerCacheTestMoves = false;
 	invalidateBorderDangerCache();
 
 	m_aiCulture.clear();
