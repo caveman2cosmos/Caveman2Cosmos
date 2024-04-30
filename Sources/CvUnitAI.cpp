@@ -28918,79 +28918,73 @@ bool CvUnitAI::AI_fulfillPropertyControlNeed()
 
 bool CvUnitAI::AI_arrest()
 {
+	if (!canArrest())
+	{
+		return false;
+	}
 	const int iMoves = getMoves();
-	if (canArrest())
-	{
-		doArrest();
-	}
-	if (getMoves() > iMoves)
-	{
-		return true;
-	}
-	return false;
+
+	doArrest();
+
+	return getMoves() > iMoves;
 }
+
 
 bool CvUnitAI::AI_ambush(int iOddsThreshold, bool bAssassinationOnly)
 {
-	int iValue = 0;
-	int iBestValue = 0;
+	PROFILE_FUNC();
 
 	const CvPlot* pPlot = getGroup()->plot();
-	if (pPlot == NULL)
+	if (!pPlot) return false;
+
+	const bool bAssassin = isAssassin();
+
+	if (pPlot->isCity(true) && !bAssassin)
 	{
 		return false;
 	}
-	int iVisDef = pPlot->getNumVisiblePotentialEnemyDefenders(this);//getting 1 here which is to say there is a target but the target doesn't validate later.
-	int iVisDefless = pPlot->getNumVisiblePotentialEnemyDefenderless(this);
-
-	if (pPlot->isCity(true) && !isAssassin())
-	{
-		return false;
-	}
-
-	bool bAssassin = isAssassin();
-	bool bCanAssassinate = canAmbush(pPlot, bAssassin);
+	const bool bCanAssassinate = canAmbush(pPlot, bAssassin);
 	if (bAssassinationOnly && !bCanAssassinate)
 	{
 		return false;
 	}
+	// Getting 1 here which is to say there is a target but the target doesn't validate later.
+	const int iVisDef = pPlot->getNumVisiblePotentialEnemyDefenders(this);
+	// No point to count this if there are visible defenders as it is only relevant when there are none.
+	const int iVisDefless = iVisDef < 1 ? pPlot->getNumVisiblePotentialEnemyDefenderless(this) : 0;
 
-	if (iVisDef > 0 || iVisDefless > 0)
+	if (iVisDef < 1 && iVisDefless < 1)
 	{
-		bool bWinLikely = false;
-		int iAdjustedOddsThreshold = 0;
+		return false;
+	}
+	bool bWinLikely = false;
+	int iAdjustedOddsThreshold;
+	int iValue;
 
-		PROFILE("CvUnitAI::AI_anyAttack.FoundTargetforAmbush");
-		if (iVisDef > 0)
+	PROFILE("CvUnitAI::AI_anyAttack.FoundTargetforAmbush");
+	if (iVisDef > 0)
+	{
+		iValue = getGroup()->AI_attackOdds(pPlot, true, true, &bWinLikely, iOddsThreshold);
+		iAdjustedOddsThreshold = AI_finalOddsThreshold(pPlot, iOddsThreshold);
+		if (bWinLikely)
 		{
-			iValue = getGroup()->AI_attackOdds(pPlot, true, true, &bWinLikely, iOddsThreshold);
-			iAdjustedOddsThreshold = AI_finalOddsThreshold(pPlot, iOddsThreshold);
-			if (bWinLikely)
-			{
-				iValue += iOddsThreshold;
-			}
-		}
-		else
-		{
-			iValue = 100 * iVisDefless;
-			iAdjustedOddsThreshold = 1;
-			bWinLikely = true;
-		}
-
-		//	Increase value on our territory since we really want to get rid of enemies there even
-		//	if it costs us a few losses
-		if (pPlot->getOwner() == getOwner() && bWinLikely)
-		{
-			iValue *= 2;
-		}
-
-		if (iValue > iBestValue && iValue >= iAdjustedOddsThreshold)
-		{
-			iBestValue = iValue;
+			iValue += iOddsThreshold;
 		}
 	}
+	else
+	{
+		iValue = 100 * iVisDefless;
+		iAdjustedOddsThreshold = 1;
+		bWinLikely = true;
+	}
 
-	if (iBestValue > 0)
+	// Increase value on our territory since we really want to get rid of enemies there even if it costs us a few losses
+	if (pPlot->getOwner() == getOwner() && bWinLikely)
+	{
+		iValue *= 2;
+	}
+
+	if (iValue > 0 && iValue >= iAdjustedOddsThreshold)
 	{
 		if (bCanAssassinate)
 		{
@@ -29000,6 +28994,7 @@ bool CvUnitAI::AI_ambush(int iOddsThreshold, bool bAssassinationOnly)
 	}
 	return false;
 }
+
 
 bool CvUnitAI::AI_activateStatus(bool bStack, PromotionTypes eStatus, CvUnit* pUnit)
 {

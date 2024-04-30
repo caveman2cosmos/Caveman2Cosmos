@@ -273,7 +273,6 @@ bool PUF_canSiege( const CvUnit* pUnit, int iData1, int iData2 = -1, const CvUni
 bool PUF_isPotentialEnemy( const CvUnit* pUnit, int iData1, int iData2 = -1, const CvUnit* pThis = NULL);
 bool PUF_canDeclareWar( const CvUnit* pUnit, int iData1 = -1, int iData2 = -1, const CvUnit* pThis = NULL);
 bool PUF_canDefend( const CvUnit* pUnit, int iData1 = -1, int iData2 = -1, const CvUnit* pThis = NULL);
-bool PUF_canAttack( const CvUnit* pUnit, int iData1 = -1, int iData2 = -1, const CvUnit* pThis = NULL);
 bool PUF_isCriminal(const CvUnit* pUnit, int iData1 = -1, int iData2 = -1, const CvUnit* pThis = NULL);
 bool PUF_isWantedCriminal(const CvUnit* pUnit, int iData1 = -1, int iData2 = -1, const CvUnit* pThis = NULL);
 bool PUF_isCityGarrison(const CvUnit* pUnit, int iData1 = -1, int iData2 = -1, const CvUnit* pThis = NULL);
@@ -304,14 +303,7 @@ bool PUF_isSelected( const CvUnit* pUnit, int iData1 = -1, int iData2 = -1, cons
 bool PUF_makeInfoBarDirty(CvUnit* pUnit, int iData1 = -1, int iData2 = -1, const CvUnit* pThis = NULL);
 bool PUF_isNoMission(const CvUnit* pUnit, int iData1 = -1, int iData2 = -1, const CvUnit* pThis = NULL);
 bool PUF_isMissionAI(const CvUnit* pUnit, int iData1 = -1, int iData2 = -1, const CvUnit* pThis = NULL);
-
-/********************************************************************************/
-/* 	Worker Counting						03.08.2010				Fuyu			*/
-/********************************************************************************/
 bool PUF_isNoMissionAI(const CvUnit* pUnit, int iData1 = -1, int iData2 = -1, const CvUnit* pThis = NULL);
-/********************************************************************************/
-/* 	Worker Counting												END 			*/
-/********************************************************************************/
 bool PUF_isFiniteRange(const CvUnit* pUnit, int iData1 = -1, int iData2 = -1, const CvUnit* pThis = NULL);
 bool PUF_isAvailableUnitAITypeGroupie(const CvUnit* pUnit, int iData1, int iData2, const CvUnit* pThis = NULL);
 bool PUF_isUnitAITypeGroupie(const CvUnit* pUnit, int iData1, int iData2, const CvUnit* pThis = NULL);

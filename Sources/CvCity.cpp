@@ -24026,23 +24026,18 @@ void CvCity::setWorkerHave(const int iUnitID, const bool bNewValue)
 
 	if (bNewValue)
 	{
-		if (itr == m_workers.end())
+		UnitCompWorker* workerComp = GET_PLAYER(getOwner()).getUnit(iUnitID)->getWorkerComponent();
+		if (workerComp)
 		{
-			UnitCompWorker* workerComp = GET_PLAYER(getOwner()).getUnit(iUnitID)->getWorkerComponent();
-			if (workerComp)
+			if (itr == m_workers.end())
 			{
 				m_workers.push_back(iUnitID);
-				workerComp->setCityAssignment(getID());
 			}
-			else
-			{
-				FErrorMsg("UnitCompWorker unexpectedly not initialized");
-			}
+			else FErrorMsg("Tried to add a duplicate vector element!");
+
+			workerComp->setCityAssignment(getID());
 		}
-		else
-		{
-			FErrorMsg("Tried to add a duplicate vector element!");
-		}
+		else FErrorMsg("UnitCompWorker unexpectedly not initialized");
 	}
 	else if (itr != m_workers.end())
 	{
@@ -24054,20 +24049,20 @@ void CvCity::setWorkerHave(const int iUnitID, const bool bNewValue)
 			{
 				workerComp->setCityAssignment(-1);
 			}
-			else
-			{
-				FErrorMsg("UnitCompWorker unexpectedly not initialized!");
-			}
+			else FErrorMsg("UnitCompWorker unexpectedly not initialized!");
 		}
-		else
-		{
-			FErrorMsg("m_workers contained an invalid unitID!")
-		}
+		else FErrorMsg("m_workers contained an invalid unitID!")
+
 		m_workers.erase(itr);
 	}
 	else
 	{
 		FErrorMsg("Vector element to remove was missing!");
+		UnitCompWorker* workerComp = GET_PLAYER(getOwner()).getUnit(iUnitID)->getWorkerComponent();
+		if (workerComp)
+		{
+			workerComp->setCityAssignment(-1);
+		}
 	}
 }
 

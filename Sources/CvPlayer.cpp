@@ -921,8 +921,6 @@ void CvPlayer::reset(PlayerTypes eID, bool bConstructorCall)
 	m_iFirstMergeSelection = FFreeList::INVALID_INDEX;
 	m_iSecondMergeSelection = FFreeList::INVALID_INDEX;
 	m_iSplittingUnit = FFreeList::INVALID_INDEX;
-	m_iArrestingUnit = FFreeList::INVALID_INDEX;
-	m_iArrestedUnit = FFreeList::INVALID_INDEX;
 	m_iAmbushingUnit = FFreeList::INVALID_INDEX;
 	m_bAssassinate = false;
 
@@ -19277,7 +19275,9 @@ void CvPlayer::read(FDataStreamBase* pStream)
 		WRAPPER_READ_CLASS_ARRAY(wrapper, "CvPlayer", REMAPPED_CLASS_TYPE_SPECIAL_BUILDINGS, GC.getNumSpecialBuildingInfos(), m_paiBuildingGroupCount);
 		WRAPPER_READ_CLASS_ARRAY(wrapper, "CvPlayer", REMAPPED_CLASS_TYPE_SPECIAL_BUILDINGS, GC.getNumSpecialBuildingInfos(), m_paiBuildingGroupMaking);
 
-		WRAPPER_READ(wrapper, "CvPlayer", &m_iArrestingUnit);
+		// @SAVEBREAK - remove
+		WRAPPER_SKIP_ELEMENT(wrapper, "CvPlayer", m_iArrestingUnit, SAVE_VALUE_ANY);
+		// !SAVEBREAK
 		WRAPPER_READ(wrapper, "CvPlayer", &m_iUpgradeRoundCount);
 		WRAPPER_READ(wrapper, "CvPlayer", &m_iSelectionRegroup);
 		WRAPPER_READ(wrapper, "CvPlayer", &m_iFreedomFighterCount);
@@ -20241,7 +20241,7 @@ void CvPlayer::write(FDataStreamBase* pStream)
 		WRAPPER_WRITE(wrapper, "CvPlayer", m_iFocusPlotY);
 		WRAPPER_WRITE_CLASS_ARRAY(wrapper, "CvPlayer", REMAPPED_CLASS_TYPE_SPECIAL_BUILDINGS, GC.getNumSpecialBuildingInfos(), m_paiBuildingGroupCount);
 		WRAPPER_WRITE_CLASS_ARRAY(wrapper, "CvPlayer", REMAPPED_CLASS_TYPE_SPECIAL_BUILDINGS, GC.getNumSpecialBuildingInfos(), m_paiBuildingGroupMaking);
-		WRAPPER_WRITE(wrapper, "CvPlayer", m_iArrestingUnit);
+
 		WRAPPER_WRITE(wrapper, "CvPlayer", m_iUpgradeRoundCount);
 		WRAPPER_WRITE(wrapper, "CvPlayer", m_iSelectionRegroup);
 		WRAPPER_WRITE(wrapper, "CvPlayer", m_iFreedomFighterCount);
@@ -27929,8 +27929,6 @@ void CvPlayer::clearModifierTotals()
 	m_iFirstMergeSelection = FFreeList::INVALID_INDEX;
 	m_iSecondMergeSelection = FFreeList::INVALID_INDEX;
 	m_iSplittingUnit = FFreeList::INVALID_INDEX;
-	m_iArrestingUnit = FFreeList::INVALID_INDEX;
-	m_iArrestedUnit = FFreeList::INVALID_INDEX;
 	m_iAmbushingUnit = FFreeList::INVALID_INDEX;
 	m_bAssassinate = false;
 
@@ -30371,26 +30369,6 @@ int CvPlayer::getSplittingUnit() const
 void CvPlayer::setSplittingUnit(int iNewValue)
 {
 	m_iSplittingUnit = iNewValue;
-}
-
-int CvPlayer::getArrestingUnit() const
-{
-	return m_iArrestingUnit;
-}
-
-void CvPlayer::setArrestingUnit(int iNewValue)
-{
-	m_iArrestingUnit = iNewValue;
-}
-
-int CvPlayer::getArrestedUnit() const
-{
-	return m_iArrestedUnit;
-}
-
-void CvPlayer::setArrestedUnit(int iNewValue)
-{
-	m_iArrestedUnit = iNewValue;
 }
 
 int CvPlayer::getAmbushingUnit() const

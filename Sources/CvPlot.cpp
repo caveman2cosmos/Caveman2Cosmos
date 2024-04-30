@@ -1396,14 +1396,14 @@ void CvPlot::verifyUnitValidPlot()
 
 	for (std::vector<CvUnit*>::iterator it = aUnits.begin(); it != aUnits.end(); )
 	{
-		CvUnit* pLoopUnit = *it;
+		CvUnit* unitX = *it;
 		bool bErased = false;
 
-		if (pLoopUnit->atPlot(this) && !pLoopUnit->isCargo() && !pLoopUnit->isCombat()
-		&& (!isValidDomainForLocation(*pLoopUnit) || !pLoopUnit->canEnterArea(getTeam(), area())))
+		if (unitX->atPlot(this) && !unitX->isCargo() && !unitX->isCombat()
+		&& (!isValidDomainForLocation(*unitX) || !unitX->canEnterArea(getTeam(), area())))
 		{
 			bAnyMoved = true;
-			if (!pLoopUnit->jumpToNearestValidPlot())
+			if (!unitX->jumpToNearestValidPlot())
 			{
 				bErased = true;
 			}
@@ -1419,72 +1419,20 @@ void CvPlot::verifyUnitValidPlot()
 		}
 	}
 
-	//TB: Disabled due to other game rules making this at times an incompatible check with logical game flow.
-	//if (isOwned())
-	//{
-	//	it = aUnits.begin();
-	//	while (it != aUnits.end())
-	//	{
-	//		CvUnit* pLoopUnit = *it;
-	//		bool bErased = false;
-
-	//		if (pLoopUnit != NULL)
-	//		{
-	//			if (pLoopUnit->atPlot(this))
-	//			{
-	//				if (!(pLoopUnit->isCombat()))
-	//				{
-	//					//if (pLoopUnit->getTeam() != getTeam() && (getTeam() == NO_TEAM || !GET_TEAM(getTeam()).isVassal(pLoopUnit->getTeam())))
-	//					if (getTeam() != NO_TEAM &&
-	//						GET_PLAYER(pLoopUnit->getCombatOwner(getTeam(), this)).getTeam() != BARBARIAN_TEAM &&
-	//						pLoopUnit->getTeam() != getTeam() &&
-	//						!GET_TEAM(getTeam()).isVassal(pLoopUnit->getTeam()))
-	//					{
-	//						if (isVisibleEnemyUnit(pLoopUnit))
-	//						{
-	//							if (!(pLoopUnit->isInvisible(getTeam(), false)))
-	//							{
-	//								if (!(isCity(true) && pLoopUnit->isBlendIntoCity()))
-	//								{
-	//									bAnyMoved = true;
-	//									if (!pLoopUnit->jumpToNearestValidPlot())
-	//									{
-	//										bErased = true;
-	//									}
-	//								}
-	//							}
-	//						}
-	//					}
-	//				}
-	//			}
-	//		}
-
-	//		if (bErased)
-	//		{
-	//			it = aUnits.erase(it);
-	//		}
-	//		else
-	//		{
-	//			++it;
-	//		}
-	//	}
-	//}
-
-	//	Check groups are not broken by only some of their constituent units
-	//	having been moved
-	if ( bAnyMoved )
+	// Check groups are not broken by only some of their constituent units having been moved
+	if (bAnyMoved)
 	{
-		foreach_(CvUnit* pLoopUnit, aUnits)
+		foreach_(CvUnit* unitX, aUnits)
 		{
-			const CvSelectionGroup* pGroup = pLoopUnit->getGroup();
+			const CvSelectionGroup* pGroup = unitX->getGroup();
 
-			if ( pGroup != NULL && !pGroup->isMidMove() )
+			if (pGroup && !pGroup->isMidMove())
 			{
 				const CvUnit* pHeadUnit = pGroup->getHeadUnit();
 
-				if ( pHeadUnit != NULL && pHeadUnit->plot() != pLoopUnit->plot() )
+				if (pHeadUnit && pHeadUnit->plot() != unitX->plot())
 				{
-					pLoopUnit->joinGroup(NULL);
+					unitX->joinGroup(NULL);
 				}
 			}
 		}
@@ -5253,7 +5201,7 @@ int CvPlot::getNumVisiblePotentialEnemyDefenders(const CvUnit* pUnit) const
 {
 	PROFILE_FUNC();
 
-	if (pUnit != NULL && isVisible(pUnit->getTeam(), false))
+	if (isVisible(pUnit->getTeam(), false))
 	{
 		return plotCount(PUF_canDefendPotentialEnemyAgainst, pUnit->getOwner(), pUnit->isAlwaysHostile(this), pUnit, NO_PLAYER, NO_TEAM, PUF_isVisible, pUnit->getOwner());
 	}
@@ -5264,7 +5212,7 @@ int CvPlot::getNumVisiblePotentialEnemyDefenderless(const CvUnit* pUnit) const
 {
 	PROFILE_FUNC();
 
-	if (pUnit != NULL && isVisible(pUnit->getTeam(), false))
+	if (isVisible(pUnit->getTeam(), false))
 	{
 		return plotCount(PUF_canDefenselessPotentialEnemyAgainst, pUnit->getOwner(), pUnit->isAlwaysHostile(this), pUnit, NO_PLAYER, NO_TEAM, PUF_isVisible, pUnit->getOwner());
 	}
@@ -5303,9 +5251,6 @@ int CvPlot::getNumVisibleUnits(PlayerTypes ePlayer) const
 	return plotCount(PUF_isVisibleDebug, ePlayer);
 }
 
-/************************************************************************************************/
-/* Afforess	                  Start		 6/22/11                                                */
-/************************************************************************************************/
 int CvPlot::getNumVisibleEnemyUnits(PlayerTypes ePlayer) const
 {
 	return plotCount(PUF_isEnemy, ePlayer, 0, NULL, NO_PLAYER, NO_TEAM, PUF_isVisible, ePlayer);
@@ -5316,28 +5261,16 @@ int CvPlot::getNumVisibleEnemyCombatUnits(PlayerTypes ePlayer) const
 	PROFILE_FUNC();
 
 	int iCount = 0;
-
-	foreach_(const CvUnit* pLoopUnit, units())
+	foreach_(const CvUnit* unitX, units())
 	{
-		if ( pLoopUnit->isDead() )
+		if (!unitX->isDead()
+		&& (unitX->canAttack() || unitX->canDefend())
+		&& PUF_isEnemy(unitX, ePlayer, 0)
+		&& PUF_isVisible(unitX, ePlayer))
 		{
-			continue;
-		}
-
-		if (! (pLoopUnit->canAttack() || pLoopUnit->canDefend()))
-		{
-			continue;
-		}
-
-		if (PUF_isEnemy(pLoopUnit, ePlayer, 0))
-		{
-			if (PUF_isVisible(pLoopUnit, ePlayer))
-			{
-				iCount++;
-			}
+			iCount++;
 		}
 	}
-
 	return iCount;
 }
 
@@ -5350,9 +5283,6 @@ int CvPlot::getNumVisibleEnemyTargetUnits(const CvUnit* pUnit) const
 {
 	return plotCount(PUF_isEnemyTarget, pUnit->getOwner(), pUnit->isAlwaysHostile(this), pUnit, NO_PLAYER, NO_TEAM, PUF_isVisible, pUnit->getOwner());
 }
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
 
 int CvPlot::getVisibleEnemyStrength(PlayerTypes ePlayer, int iRange) const
 {

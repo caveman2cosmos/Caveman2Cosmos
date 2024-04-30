@@ -876,8 +876,6 @@ public:
 
 	bool isGoldenAge() const;
 
-	// Can this unit always coexist with all other units anywhere?
-	bool canCoexistAlways() const;
 	// Can this unit always coexist with all units on the specified plot?
 	bool canCoexistAlwaysOnPlot(const CvPlot& onPlot) const;
 	// Can this unit coexist with the specified team anywhere?
