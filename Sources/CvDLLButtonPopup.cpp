@@ -816,6 +816,7 @@ void CvDLLButtonPopup::OnOkClicked(CvPopup* pPopup, PopupReturn *pPopupReturn, C
 			{
 				GC.getGame().selectionListGameNetMessage(GAMEMESSAGE_PUSH_MISSION, MISSION_DISCOVER, info.getData1(), pPopupReturn->getButtonClicked());
 			}
+			break;
 		}
 		case BUTTONPOPUP_CHOOSE_ARREST_UNIT:
 		{
