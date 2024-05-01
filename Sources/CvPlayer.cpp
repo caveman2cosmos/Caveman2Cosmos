@@ -19584,6 +19584,22 @@ void CvPlayer::read(FDataStreamBase* pStream)
 		}
 		WRAPPER_READ_ARRAY(wrapper, "CvPlayer", NUM_COMMERCE_TYPES, m_extraCommerce);
 		WRAPPER_READ(wrapper, "CvPlayer", &m_bHasLanguage);
+		// Read Vector
+		{
+			uint iSize = 0;
+			WRAPPER_READ_DECORATED(wrapper, "CvPlayer", &iSize, "numCommandFieldPlots");
+			for (uint i = 0; i < iSize; i++)
+			{
+				short iX = -1;
+				short iY = -1;
+				WRAPPER_READ_DECORATED(wrapper, "CvPlayer", &iX, "CommandFieldPlotX");
+				WRAPPER_READ_DECORATED(wrapper, "CvPlayer", &iY, "CommandFieldPlotY");
+				if (iX > -1 && iY > -1)
+				{
+					setCommandFieldPlot(true, GC.getMap().plot(iX, iY));
+				}
+			}
+		}
 		//Example of how to skip element
 		//WRAPPER_SKIP_ELEMENT(wrapper, "CvPlayer", m_iPopulationgrowthratepercentage, SAVE_VALUE_ANY);
 	}
@@ -20390,6 +20406,16 @@ void CvPlayer::write(FDataStreamBase* pStream)
 		}
 		WRAPPER_WRITE_ARRAY(wrapper, "CvPlayer", NUM_COMMERCE_TYPES, m_extraCommerce);
 		WRAPPER_WRITE(wrapper, "CvPlayer", m_bHasLanguage);
+		// Write Vector
+		{
+			uint iSize = m_commandFieldPlots.size();
+			WRAPPER_WRITE_DECORATED(wrapper, "CvPlayer", iSize, "numCommandFieldPlots");
+			foreach_(const CvPlot* plotX, m_commandFieldPlots)
+			{
+				WRAPPER_WRITE_DECORATED(wrapper, "CvPlayer", (short)plotX->getX(), "CommandFieldPlotX");
+				WRAPPER_WRITE_DECORATED(wrapper, "CvPlayer", (short)plotX->getY(), "CommandFieldPlotY");
+			}
+		}
 	}
 	WRAPPER_WRITE_OBJECT_END(wrapper);
 }
