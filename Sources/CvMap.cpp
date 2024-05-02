@@ -1394,7 +1394,9 @@ void CvMap::afterSwitch()
 {
 	PROFILE_FUNC();
 
-	if (!plotsInitialized())
+	const bool firstSwitch = !plotsInitialized();
+
+	if (firstSwitch)
 	{
 		if (!GC.getMapInfo(getType()).getInitialWBMap().empty())
 		{
@@ -1417,15 +1419,12 @@ void CvMap::afterSwitch()
 	gDLL->getEngineIFace()->updateFoundingBorder(); // Matt: Maybe need this.
 	gDLL->getEngineIFace()->MarkBridgesDirty(); // Matt: Maybe need this.
 	gDLL->getEngineIFace()->SetDirty(GlobeTexture_DIRTY_BIT, true);
-	gDLL->getEngineIFace()->SetDirty(MinimapTexture_DIRTY_BIT, true);
 	gDLL->getEngineIFace()->SetDirty(CultureBorders_DIRTY_BIT, true);
 	gDLL->getInterfaceIFace()->makeSelectionListDirty();
 	gDLL->getInterfaceIFace()->setDirty(ColoredPlots_DIRTY_BIT, true);
-	gDLL->getInterfaceIFace()->setDirty(MinimapSection_DIRTY_BIT, true);
 	gDLL->getInterfaceIFace()->setDirty(SelectionCamera_DIRTY_BIT, true);
 	gDLL->getInterfaceIFace()->setDirty(HighlightPlot_DIRTY_BIT, true);
 	gDLL->getInterfaceIFace()->setDirty(BlockadedPlots_DIRTY_BIT, true); // Matt: Maybe need this.
-	gDLL->getInterfaceIFace()->setDirty(Fog_DIRTY_BIT, true); // Matt: Maybe need this.
 
 	int iWidth = GC.getMapInfo(getType()).getGridWidth();
 	if (iWidth == 0)
@@ -1473,6 +1472,11 @@ void CvMap::afterSwitch()
 		}
 	}
 
+	//if (firstSwitch)
+	//	setRevealedPlots(GC.getGame().getActiveTeam(), true, false);
+
+	Cy::call(PYScreensModule, "initMinimap");
+
 	setupGraphical();
 	updateFog();
 	updateSymbols();
@@ -1489,6 +1493,8 @@ void CvMap::afterSwitch()
 #endif // THE_GREAT_WALL
 
 	gDLL->getEngineIFace()->setResourceLayer(GC.getResourceLayer());
+
+	getCurrentViewport()->setActionState(VIEWPORT_ACTION_STATE_AFTER_SWITCH);
 
 	m_bSwitchInProgress = false;
 }

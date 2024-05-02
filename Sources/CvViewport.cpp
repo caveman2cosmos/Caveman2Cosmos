@@ -453,6 +453,12 @@ void CvViewport::processActionState()
 
 		setActionState(VIEWPORT_ACTION_STATE_NONE);
 		break;
+	case VIEWPORT_ACTION_STATE_AFTER_SWITCH:
+		gDLL->getEngineIFace()->SetDirty(MinimapTexture_DIRTY_BIT, true);
+		gDLL->getInterfaceIFace()->setDirty(MinimapSection_DIRTY_BIT, true);
+		gDLL->getInterfaceIFace()->setDirty(Fog_DIRTY_BIT, true);
+		setActionState(VIEWPORT_ACTION_STATE_NONE);
+		break;
 	}
 }
 
