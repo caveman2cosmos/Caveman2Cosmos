@@ -6069,24 +6069,7 @@ class CvMainInterface:
 				GAME.doControl(ControlTypes.CONTROL_PREVUNIT)
 
 	def initMinimap(self):
-		screen = CyGInterfaceScreen("MainInterface", CvScreenEnums.MAIN_INTERFACE)
-		screen.initMinimap(self.xMinimap, self.xRes - 3, self.yMinimap, self.yRes - 3, -0.1)
-
-		#replayInfo = CyGame().getReplayInfo()
-		#if replayInfo.isNone():
-		#	replayInfo = CyReplayInfo()
-		#	replayInfo.createInfo(GC.getGame().getActivePlayer())
-		#screen.setMinimapMap(replayInfo, self.xMinimap, self.xRes - 3, self.yMinimap, self.yRes - 3, -0.1)
-
-		#screen.setMinimapMode(MinimapModeTypes.MINIMAPMODE_TERRAIN)
-		#screen.setMinimapSectionOverride(FLOAT left, FLOAT bottom, FLOAT right, FLOAT top)
-		#screen.renderMinimapWorldTexture()
-		#screen.updateMinimap(FLOAT fTime)
-		#screen.updateMinimapColorFromMap(MinimapModeTypes.MINIMAPMODE_TERRAIN, -0.1)
-		#screen.updateMinimapSection(True, True)
-		#screen.updateMinimapVisibility()
-		#screen.bringMinimapToFront()
-
+		CyGInterfaceScreen("MainInterface", CvScreenEnums.MAIN_INTERFACE).initMinimap(self.xMinimap, self.xRes - 3, self.yMinimap, self.yRes - 3, -0.1)
 
 # # # # # # #
 # Pop-Up Callbacks
