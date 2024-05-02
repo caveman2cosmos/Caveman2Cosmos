@@ -203,7 +203,7 @@
 		<English>Aka</English>
 		<Russian>Àêà</Russian>
 		<Italian>Cittadino aka</Italian>
-		<Polish>ba-Aka</Polish>
+		<Polish>Aka</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_AKKADIAN</Tag>
@@ -4161,7 +4161,7 @@
 		<English>Hide</English>
 		<French>Peaux</French>
 		<Italian>Pelle animale</Italian>
-		<Polish>Sk&#243;ry</Polish>
+		<Polish>Sk&#243;ry zwierząt</Polish>
 		<Russian>Øêóðû</Russian>
 	</TEXT>
 	<TEXT>
@@ -5085,12 +5085,14 @@
 		<English>Jute</English>
 		<Russian>Þòû</Russian>
 		<Italian>Cittadino juto</Italian>
+		<Polish>Jutowska</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_KANEM_BORNU</Tag>
 		<English>Kanem-Bornu</English>
 		<Russian>Êàíåìöû</Russian>
 		<Italian>Cittadino kanem-bornu</Italian>
+		<Polish>Kanem-Bornu</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_KANGAROO</Tag>
@@ -5112,6 +5114,7 @@
 		<German>[COLOR_HIGHLIGHT_TEXT]Kängurus[COLOR_REVERT] wurden schon lange vor der Ankunft der Europäer von den Aborigines bejagt. Diese nutzten nicht nur das nahrhafte Fleisch, sondern verarbeiteten auch das Fell der Beuteltiere. Heute ist das Kängurufleisch seltsamerweise eher im Ausland beliebt und wird von den Australiern vorwiegend zu Tierfutter verarbeitet. Das sehr reißfeste Känguruleder hingegen wird auch heute noch für die Herstellung von Handschuhen, Stiefeln und Schuhen verwendet.</German>
 		<Italian>Un [COLOR_HIGHLIGHT_TEXT]canguro[COLOR_REVERT] è un animale marsupiale della famiglia Macropodidae, originario dell'Australia. A seconda delle loro dimensioni, possono essere chiamati canguri, wallaroo e wallaby (dal più grande al più piccolo). I canguri hanno zampe posteriori grandi e potenti, piedi larghi adatti per saltare, una lunga coda muscolare che usano per mantenere l'equilibrio e una testa piccola. Come la maggior parte dei marsupiali, i canguri femmina hanno una sacca anteriore chiamata marsupio, in cui i cuccioli completano il proprio sviluppo postnatale. Il canguro è un simbolo dell'Australia, per la sua importanza per la cultura e l'immagine nazionale australiana. Tuttavia, i canguri selvatici vengono cacciati per le loro carni e pelli e per proteggere i pascoli.</Italian>
 		<Russian>Кенгуру - сумчатое животное из семейства Macropodidae (макроподы, что означает «большая лапа»). Обычно этот термин используется для описания крупнейших видов из этого семейства, особенно представителей рода Macropus, красных кенгуру, антилопинных кенгуру, восточных серых кенгуру и западных серых кенгуру. Кенгуру - эндемики страны Австралия. Более мелкие макроподы обитают в Австралии и Новой Гвинее.[PARAGRAPH:2]У кенгуру большие мощные задние лапы, большие ступни, приспособленные для прыжков, длинный мускулистый хвост для равновесия и маленькая голова. Как и у большинства сумчатых, у самок кенгуру есть сумочка, называемая сумчатым телом, в которой джои завершают постнатальное развитие.[PARAGRAPH:2]Более крупные кенгуру гораздо лучше приспособились к изменениям, внесенным в австралийский ландшафт человеком, и, хотя многие из их меньших собратьев находятся под угрозой исчезновения, их много. Их практически не разводят, но диких кенгуру отстреливают ради мяса, кожи и защиты пастбищ овец и крупного рогатого скота. Хотя есть некоторые разногласия, заготовка мяса кенгуру имеет много преимуществ для окружающей среды и здоровья по сравнению с традиционным мясом.[PARAGRAPH:2]Кенгуру - национальный символ Австралии: его эмблема используется на австралийском гербе, на некоторых денежных знаках страны, а также некоторыми известными организациями Австралии, включая Qantas. Кенгуру важен как для австралийской культуры, так и для национального имиджа, и, следовательно, существует множество ссылок на популярную культуру.</Russian>
+		<Polish>[COLOR_HIGHLIGHT_TEXT]Kangur[COLOR_REVERT],to torbacz z rodziny Macropodidae, zamieszkujący Australię. W zależności od wielkości można je nazwać kangurami, wallaroo i wallaby, od największego do najmniejszego. Kangury mają duże, mocne tylne nogi, duże stopy przystosowane do skakania, długi, muskularny ogon zapewniający równowagę i małą głowę. Podobnie jak większość torbaczy, samice kangurów mają worek zwany torbą, w którym młode kończą rozwój poporodowy. Kangur jest symbolem Australii ze względu na jego znaczenie dla australijskiej kultury i wizerunku narodowego. Niemniej jednak dzikie kangury odstrzeliwane są w celu zdobycia mięsa, skór i ochrony pastwisk.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_KAVA</Tag>
@@ -5122,6 +5125,7 @@
 			<Plural>0</Plural>
 		</German>
 		<Russian>Ïåðåö êàâà</Russian>
+		<Polish>Pieprz metystynowy (Kava Kava)</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_KAVA_PEDIA</Tag>
@@ -5129,12 +5133,14 @@
 		<German>Die immergrüne [COLOR_HIGHLIGHT_TEXT]Kava[COLOR_REVERT] oder Kava-Kava (Piper methysticum) gehört zur Familie der Pfeffergewächse. Sie stammt aus dem westpazifischen Raum und wird wegen ihrer euphorisierenden Wirkung auch Rauschpfeffer genannt. Es handelt sich um einen 1,5 bis 5 m hohen Strauch mit stark verzweigtem Wurzelstock.[NEWLINE]Die ursprüngliche Heimat der Pflanze ist nicht durch Fakten gesichert, man geht aber davon aus, dass sie aus dem südlichen Pazifikraum stammt. Die Kava wurde wohl anfänglich zum Fischfang genutzt, weil die Fische aufgrund der entspannenden Wirkung nicht wegschwammen. Die niederländischen Entdecker Le Maire und Schouten berichteten von der Pflanze nach einer Reise auf die Südseeinseln Wallis und Futuna im Jahr 1616. Ihre Beobachtungen führten aber zu der irrigen Annahme, dass Kava als Getränk berauschende Wirkung habe, weshalb ihr der Name Rauschpfeffer gegeben wurde. Die Kava-Pflanze wurde später auch vom deutschen Botaniker Johann Georg Forster beschrieben, der James Cook auf dessen zweiter wissenschaftlicher Erdumseglung 1772-1775 begleitete. Etwa seit 1820 wird Kava-Kava in Europa für medizinische und therapeutische Zwecke angewendet, aufgrund möglicher leberschädigender Wirkung ist sie aber in letzter Zeit wieder in Verruf gekommen.</German>
 		<Italian>La [COLOR_HIGHLIGHT_TEXT]kava[COLOR_REVERT], o kava kava, è una coltura delle isole del Pacifico. Il nome deriva dal tongano e dal marquesano (e significa "amaro") ed è consumato per i suoi effetti sedativi nelle culture dell'Oceano Pacifico. In misura minore, viene consumato nelle nazioni in cui viene esportato come fitoterapia. La radice della pianta viene utilizzata per produrre una bevanda con proprietà sedative, anestetiche ed euforizzanti. Il consumo moderato di kava nella sua forma tradizionale, cioè come sospensione a base acquosa di radici di kava, presenta un "livello accettabilmente basso di rischio per la salute", mentre il consumo di estratti di kava prodotti con solventi organici o quantità eccessive di kava di bassa qualità possono essere collegati ad un aumentato rischio per la salute, tra cui potenziali danni al fegato.</Italian>
 		<Russian>Кава или кава-кава - урожай западной части Тихого океана. Название кава (-kava) происходит от Тонга и Маркизского языка; другие названия кавы включают «ава» (Гавайи), «ава» (Самоа), «якона» (Фиджи) и «сакау» (Понпеи). Из корней растения делают напиток, обладающий успокаивающими и обезболивающими свойствами. Кава употребляется в культурах Тихоокеанского региона Полинезии, включая Гавайи, Вануату, Меланезию и некоторые части Микронезии.[PARAGRAPH:2]Кава успокаивает и употребляется в основном для расслабления, не нарушая ясности ума. Его активные ингредиенты называются кавалактонами. Традиционно его готовят путем жевания, измельчения или измельчения корней растения кавы. Растирание производится вручную о конусообразный блок мертвого коралла; рука образует ступку, а коралл - пестик. Измельченный корень/кора смешивается с небольшим количеством воды, так как свежий корень выделяет влагу во время измельчения, после чего толкают большой камень небольшим бревном. Затем продукт добавляется в холодную воду и употребляется как можно быстрее.[PARAGRAPH:2]Кава используется в медицинских, религиозных, политических, культурных и социальных целях по всему Тихому океану. Эти культуры очень уважают растение и придают ему большое значение. Например, на Фиджи официальная церемония якона (кава) часто сопровождает важные социальные, политические, религиозные и т. Д. Функции, обычно включающие ритуальное представление связанных корней в качестве севусеву (подарка) и употребление самой яконы. Фиджийцы обычно пьют напиток под названием грог, который делают из высушенного на солнце корня кавы в мелкий порошок, процеживают и смешивают с холодной водой. Традиционно грог пьют из стриженной половинки кокосового ореха, называемого било. Грог очень популярен на Фиджи, особенно среди молодых людей, и часто объединяет людей для рассказов и общения. Выпивка грога в течение нескольких часов вызывает у пьющего эффект онемения и расслабления; грог также вызывает онемение языка, и за питьем грога обычно следует «чейзер» или сладкая или острая закуска, чтобы следовать за било. На Вануату за крепким напитком кавы обычно следует горячая еда или чай. Прием пищи традиционно следует через некоторое время после напитка, поэтому психоактивные вещества быстрее всасываются в кровоток. Традиционно ароматизаторы не добавляются. В Самоа ни учредительное собрание, ни важное мероприятие, ни прощание, ни последующая церемония, ни важное событие, приятное или иное, ни судебное разбирательство по клятве, не являются полными и достойными названия без "церемонии авы".</Russian>
+		<Polish>[COLOR_HIGHLIGHT_TEXT]Kava[COLOR_REVERT] lub kava kava, to roślina uprawna porastająca wyspy Pacyfiku. Nazwa pochodzi z języka Tonga i Marquesan, i oznacza "gorzki". W kulturach oceanu spokojnego jest spożywana ze względu na działanie uspokajające . W mniejszym stopniu jest spożywany w krajach, do których jest eksportowana jako lek ziołowy. Z korzenia tej rośliny sporządza się napój o działaniu uspokajającym, znieczulającym i euforycznym. Uznano, że umiarkowane spożycie kavy w jej tradycyjnej postaci, tj. w postaci wodnej zawiesiny korzeni kavy, stwarza "akceptowalnie niski poziom zagrożenia dla zdrowia", natomiast spożywanie ekstraktów kavy wytwarzanych przy użyciu rozpuszczalników organicznych lub nadmiernych ilości niskiej jakości produktów z kavy, może być powiązane ze zwiększonym ryzykiem niekorzystnych skutków zdrowotnych, w tym potencjalnego uszkodzenia wątroby.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_KAZAKH</Tag>
 		<English>Kazakh</English>
 		<Italian>Cittadino kazako</Italian>
 		<Russian>Êàçàõè</Russian>
+		<Polish>Kazachska</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_KENYAN</Tag>
@@ -5142,6 +5148,7 @@
 		<French>Kenyane</French>
 		<Italian>Cittadino keniano</Italian>
 		<Russian>Êåíèéöû</Russian>
+		<Polish>Kenijska</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_KEROSENE</Tag>
@@ -5155,6 +5162,7 @@
 		<English>[COLOR_HIGHLIGHT_TEXT]Kerosene[COLOR_REVERT], also known as paraffin or lamp oil, is a combustible hydrocarbon liquid which is derived from petroleum. It is widely used as a fuel in aviation, as well as in households as fuel for lamps and stoves. It can be also used as a solvent and lubricant in industry applications, as fuel for small outboard motors or even motorcycles, or for entertainment with fire performances, such as fire breathing, fire juggling, and fire dancing. First distilled by mid-19th century, it rapidly substituted whale oil as fuel for lamps, only to be substituted in turn by gasoline as main commercial fuel by early 20th century.</English>
 		<Italian>Il [COLOR_HIGHLIGHT_TEXT]cherosene[COLOR_REVERT], noto anche come cherosene o paraffina, è un liquido combustibile idrocarburico derivato dal petrolio. È ampiamente usato come combustibile nell'aviazione, così come combustibile per lampade e stufe. Può anche essere usato come solvente e lubrificante in applicazioni industriali, come combustibile per piccoli motori fuoribordo o persino motociclette, o per intrattenimento negli spettacoli di mangiafuoco e danza del fuoco. Distillato per la prima volta a metà del XIX secolo, sostituì rapidamente l'olio di balena come combustibile per lampade, per poi essere a sua volta sostituito dalla benzina come principale combustibile commerciale all'inizio del XX secolo.</Italian>
 		<Russian>Ñðåäè äðóãèõ âèäîâ òîïëèâà èñïîëüçîâàëèñü óãîëü, íåôòü è êåðîñèí â êåðîñèíîâûõ ëàìïàõ.</Russian>
+		<Polish>[COLOR_HIGHLIGHT_TEXT]Nafta[COLOR_REVERT], znana również jako parafina lub olej do lamp, to palna ciecz węglowodorowa otrzymywana z ropy naftowej. Ma szerokie zastosowanie jako paliwo w lotnictwie, a także w gospodarstwach domowych, jako paliwo do lamp i pieców. Może być również stosowana jako rozpuszczalnik i smar w zastosowaniach przemysłowych, jako paliwo do małych silników zaburtowych, a nawet motocykli lub do celów rozrywkowych podczas występów ogniowych, takich jak ziewanie ogniem, żonglowanie ogniem i taniec z ogniem. Wydestylowana po raz pierwszy w połowie XIX wieku, szybko zastąpiła olej wielorybi jako paliwo do lamp, by na początku XX wieku zostać zastąpiona przez benzynę, jako główe paliwo komercyje.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_KEVLAR</Tag>
@@ -5167,18 +5175,21 @@
 		<Italian>Il [COLOR_HIGHLIGHT_TEXT]kevlar[COLOR_REVERT] è una fibra sintetica resistente al calore e forte. Sviluppato nel 1965, è stato utilizzato per la prima volta commercialmente nei primi anni settanta del XX secolo in sostituzione dell'acciaio nei pneumatici da corsa. Tipicamente è filato in corde o fogli di tessuto, che possono essere usati come tali o come componenti in materiali compositi. Il kevlar ha molte applicazioni, che vanno dai pneumatici per biciclette alle vele da corsa, ai giubbotti antiproiettile, grazie al suo elevato rapporto resistenza-peso a trazione che lo rende cinque volte più resistente dell'acciaio. Inoltre, viene utilizzato nei tamburi da marcia perché resistano a forti impatti. Se utilizzato come materiale tessuto, è adatto per i cavi di ormeggio e altre applicazioni subacquee.</Italian>
 		<Russian>Êåâëàð - çàðåãèñòðèðîâàííàÿ òîðãîâàÿ ìàðêà ïàðà-àðàìèäíîãî ñèíòåòè÷åñêîãî âîëîêíà, ñâÿçàííîãî ñ äðóãèìè àðàìèäàìè, òàêèõ êàê Nomex è Technora. Ðàçðàáîòàííûé â êîìïàíèè DuPont â 1965 ãîäó, ýòîò âûñîêîïðî÷íûé ìàòåðèàë áûë ïåðâûì êîììåð÷åñêè èñïîëüçîâàâøèìñÿ â íà÷àëå 1970-õ ãîäîâ â êà÷åñòâå çàìåíû ñòàëè â ãîíî÷íûõ øèíàõ. Îáû÷íî ýòî ïðÿäè èëè ïîëîòíî, êîòîðûå ìîãóò áûòü èñïîëüçîâàíû êàê òàêîâûå èëè â êà÷åñòâå èíãðåäèåíòà êîìïîçèöèîííûõ ìàòåðèàëîâ.
 Â íàñòîÿùåå âðåìÿ êåâëàð èìååò ìíîæåñòâî ïðèìåíåíèé, íà÷èíàÿ îò âåëîñèïåäíûõ øèí è ãîíî÷íûå ïàðóñîâ, çàêàí÷èâàÿ áðîíåæèëåòàìè èç-çà åãî âûñîêîé ïðî÷íîñòè â ñîîòíîøåíèè ê âåñó; ïî ýòîìó ïîêàçàòåëþ îí â 5 ðàç ïðî÷íåå ñòàëè ïðè îäèíàêîâîì âåñå. Îí òàêæå èñïîëüçóåòñÿ â èçãîòîâëåíèè ñîâðåìåííîãî ïëàñòèêà, êîòîðûé èìåò âûñîêóþ ñòîéêîñòü. Ïðè èñïîëüçîâàíèè â êà÷åñòâå ïîëîòíà, îí ïîäõîäèò äëÿ øâàðòîâûõ è äðóãèõ âîäîëàçíûõ ðàáîò.</Russian>
+		<Polish>[COLOR_HIGHLIGHT_TEXT]Kevlar[COLOR_REVERT] to odporne na ciepło, mocne włókno syntetyczne. Ten niezwykle wytrzymały materiał, opracowany w 1965 r. został po raz pierwszy zastosowany komercyjnie na początku lat 70. XX wieku jako zamiennik stali w oponach wyścigowych. Zwykle jest on przędzony na liny lub arkusze tkaniny, które można stosować jako takie lub jako składnik materiałów kompozytowych. Kevlar ma wiele zastosowań, od opon rowerowych i żagli regatowych po kamizelki kuloodporne. Ze względu na wysoki stosunek wytrzymałości na rozciąganie do masy, co czyni go pięć razy mocniejszym od stali. Służy również do produkcji nowoczesnych naciągów na bębny marszowe, które wytrzymują silne uderzenia. Stosowany jako materiał tkany nadaje się do cumowania i innych zastosowań podwodnych.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_KHAZAR</Tag>
 		<English>Khazar</English>
 		<Italian>Cittadino cazaro</Italian>
 		<Russian>Õàçàðû</Russian>
+		<Polish>Chazarska</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_KHITAN</Tag>
 		<English>Khitan</English>
 		<Italian>Cittadino kitai</Italian>
 		<Russian>Êèäàíè</Russian>
+		<Polish>Kitańska</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_KHMER</Tag>
@@ -5192,6 +5203,7 @@
 		<English>Khwarazmian</English>
 		<Italian>Cittadino corasmio</Italian>
 		<Russian>Õîðåçìèéöû</Russian>
+		<Polish>Chorezmijska</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_KILLKE</Tag>
@@ -5204,12 +5216,14 @@
 		<English>Kipchak</English>
 		<Russian>Êûï÷àêè</Russian>
 		<Italian>Cittadino kipcako</Italian>
+		<Polish>Kipczacka</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_KITARAN</Tag>
 		<English>Kitaran</English>
 		<Italian>Cittadino kitara</Italian>
 		<Russian>Êèòàðà</Russian>
+		<Polish>Kitarańska</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_KLAMATH</Tag>
@@ -5222,6 +5236,7 @@
 		<English>Kogi</English>
 		<Russian>Êîãè</Russian>
 		<Italian>Cittadino coguo</Italian>
+		<Polish>Kagabska</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_KONGOLESE</Tag>
@@ -5255,6 +5270,7 @@
 		<English>A [COLOR_HIGHLIGHT_TEXT]kugelblitz[COLOR_REVERT] (German for "ball lightning") is a concentration of heat, light or radiation so intense that its energy forms an event horizon and becomes self-trapped: according to general relativity and the equivalence of mass and energy, if enough radiation is aimed into a region, the concentration of energy can warp space-time enough for the region to become a black hole. In simpler terms, a kugelblitz is a black hole formed from radiation as opposed to matter. Such a black hole would nonetheless have properties identical to one of equivalent mass and angular momentum formed in a more conventional way. Kugelblitz drives have been considered as possible future black hole starship engines.</English>
 		<Italian>Un [COLOR_HIGHLIGHT_TEXT]kugelblitz[COLOR_REVERT] (tedesco per "sfera di lampo") è una concentrazione di calore, luce o radiazione così intensa che l'energia emessa forma un orizzonte degli eventi e si auto-intrappola: secondo la relatività generale e l'equivalenza di massa ed energia, se la radiazione è sufficientemente concentrata in una regione, la concentrazione di energia può deformare lo spaziotempo al punto da rendere la regione un buco nero. In termini più semplici, un kugelblitz è un buco nero formato da radiazioni, piuttosto che da materia. Un simile buco nero avrebbe comunque proprietà identiche a uno di massa e momento angolare equivalente formatosi in un modo convenzionale. Un motore alimentato da kugelblitz è stato considerato come un potenziale motore per astronavi alimentato a buchi neri.</Italian>
 		<Russian>В теоретической физике кугельблиц (по-немецки «шаровая молния») представляет собой концентрацию света, настолько интенсивную, что он образует горизонт событий и оказывается в ловушке: согласно общей теории относительности, если в область направлено достаточное количество излучения, концентрация энергия может деформировать пространство-время, достаточное для того, чтобы объект стал черной дырой (хотя это будет черная дыра, чья первоначальная масса-энергия была в форме лучистой энергии, а не материи). Проще говоря, кугельблиц - это черная дыра, образованная из энергии, а не массы. В соответствии с общей теорией относительности Эйнштейна, после того, как сформировался горизонт событий, тип создаваемой им массы-энергии больше не имеет значения. Кугельблиц настолько горячий, что превосходит температуру Планка, температуру Вселенной через 5,4*10^ -44 секунд после Большого взрыва.</Russian>
+		<Polish>[COLOR_HIGHLIGHT_TEXT]Kugelblitz[COLOR_REVERT] (po niemiecku "błyskawica kulista"), to koncentracja ciepła, światła lub promieniowania tak intensywna, że jego energia tworzy horyzont zdarzeń i zostaje uwięziona; zgodnie z ogólną teorią względności oraz równoważnością masy i energii, jeśli wystarczająco silne promieniowanie jest skierowanw w jeden punkt, koncentracja energii może zakrzywić czasoprzestrzeń na tyle, że powstanie czarna dziura. Mówiąc prościej, kugelblitz to czarna dziura utworzona z promieniowania, a nie z materii. Taka czarna dziura miałaby jednak właściwości identyczne jak czarna dzura z równoważną masą i momentem pędu utworzonyma w bardziej konwencjonalny sposób. Napędy Kugelblitz uznano za możliwe przyszłe silniki statków kosmicznych.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_KURDISH</Tag>
@@ -5262,24 +5278,28 @@
 		<French>Kurde</French>
 		<Italian>Cittadino curdo</Italian>
 		<Russian>Êóðäû</Russian>
+		<Polish>Kurdyjska</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_KUSHAN</Tag>
 		<English>Kushan</English>
 		<Italian>Cittadino kushan</Italian>
 		<Russian>Êóøàíû</Russian>
+		<Polish>Kuszańska</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_KUSHITE</Tag>
 		<English>Kushite</English>
 		<Italian>Cittadino kush</Italian>
 		<Russian>Êóøèòû</Russian>
+		<Polish>Kuszycka</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_KUWAITI</Tag>
 		<English>Kuwaiti</English>
 		<Italian>Cittadino kuwaitiano</Italian>
 		<Russian>Êóâåéòöû</Russian>
+		<Polish>Kuwejcka</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_LACQUERWARE</Tag>
@@ -5287,7 +5307,7 @@
 		<French>Objets décoratifs</French>
 		<German>Lackkunst</German>
 		<Italian>Lacca</Italian>
-		<Polish>Lakierowane przedmioty</Polish>
+		<Polish>Wyroby lakierowane</Polish>
 		<Russian>Ëàêèðîâ. èçäåëèÿ</Russian>
 	</TEXT>
 	<TEXT>
@@ -5295,6 +5315,7 @@
 		<English>Lacquerware are objects decoratively covered with lacquer. The lacquer is sometimes inlaid or carved. Lacquerware includes boxes, tableware, buttons and even coffins painted with lacquer in cultures mostly in the Eastern Asia.</English>
 		<German>Die Lackkunst ist eine kunsthandwerkliche Technik, deren Ursprünge vor 3500 Jahren in China lagen. Dabei werden Lacke zur Oberflächenveredelung und Dekoration auf Alltagsgegenstände und Kunstgegenstände aufgetragen.</German>
 		<Russian>Ëàêèðîâàííûå èçäåëèÿ ÷àùå âñåãî ñîïðîâîæäàþòñÿ èíêðóñòàöèåé è äåêîðàòèâíîé ðåçüáîé, à èìåííî: ëàêèðîâàííûå øêàòóëêè, ïîñóäà, ïóãîâèöû è äàæå ãðîáû îêðàøèâàþòñÿ ëàêîì â íåêîòîðûõ êóëüòóðàõ, â îñíîâíîì â Âîñòî÷íîé Àçèè.</Russian>
+		<Polish>[COLOR_HIGHLIGHT_TEXT]Wyroby lakierowane[COLOR_REVERT], to przedmioty dekoracyjnie pokryte lakierem. Lakier jest czasami inkrustowany lub rzeźbiony. Wyroby lakierowane obejmują pudełka, zastawę stołową, guziki, a nawet trumny malowane lakierem głównie w Azji Wschodniej.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_LARD</Tag>
@@ -5307,7 +5328,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_LARD_PEDIA</Tag>
 		<English>Lard is pig fat in both its rendered and unrendered forms. Lard was commonly used in many cuisines as a cooking fat or shortening, or as a spread similar to butter. Its use in contemporary cuisine has diminished; however, many contemporary cooks and bakers favor it over other fats for select uses. The culinary qualities of lard vary somewhat depending on the part of the pig from which the fat was taken and how the lard was processed.</English>
-		<Polish>Smalec - t&#179;uszcz zwierz&#234;cy wykorzystywany w sztuce kulinarnej do przyrz&#185;dzania potraw, jak r&#243;wnie&#191; bezpo&#156;redniego spo&#191;ywania.</Polish>
+		<Polish>[COLOR_HIGHLIGHT_TEXT]Smalec[COLOR_REVERT], t&#179;uszcz zwierz&#234;cy wykorzystywany w sztuce kulinarnej do przyrz&#185;dzania potraw, jak r&#243;wnie&#191; bezpo&#156;redniego spo&#191;ywania.</Polish>
 		<Russian>Ñàëî - ýòî ñâèíîé æèð ñ íàëè÷èåì èëè îòñóòñòâèåì ìÿñíûõ ïðîñëîåê. Ñâèíîå ñàëî øèðîêî èñïîëüçóåòñÿ â êóõíÿõ ìíîãèõ íàðîäîâ â êà÷åñòâå êóëèíàðíîãî æèðà èëè ìàñëà, ïîäîáíîãî ñëèâî÷íîìó. Åãî èñïîëüçîâàíèå â ñîâðåìåííîé êóõíå óìåíüøèëàñü; òåì íå ìåíåå, ìíîãèå ñîâðåìåííûå ïîâàðà è ïåêàðè îòìå÷àþò åãî ïîëüçó ïî ñðàâíåíèþ ñ äðóãèìè æèðàìè ïðè âûáîðå èíãðåäèåíòîâ. Êóëèíàðíûå êà÷åñòâà ñàëà íåñêîëüêî ðàçëè÷àþòñÿ â çàâèñèìîñòè îò ÷àñòåé ñâèíüè, èç êîòîðîé áûë èçâëå÷åí æèð è ñàëî, è êàêèì îáðàçîì îí áûë îáðàáîòàí.</Russian>
 		<Italian>Il lardo è grasso di maiale sia nella sua forma fusa che in quella non fusa. Il lardo era comunemente usato in molte cucine come grasso da cucina o accorciamento, o come crema da spalmare simile al burro. Il suo utilizzo nella cucina contemporanea è diminuito; tuttavia, molti cuochi e fornai contemporanei lo preferiscono ad altri grassi per usi selezionati. Le qualità culinarie del lardo variano leggermente a seconda della parte del maiale da cui è stato prelevato il grasso e di come è stato lavorato il lardo.</Italian>
 	</TEXT>
@@ -5317,6 +5338,7 @@
 		<French>Létone</French>
 		<Italian>Cittadino lettone</Italian>
 		<Russian>Ëàòûøè</Russian>
+		<Polish>Łotewska</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_LAZULITE_ORE</Tag>
@@ -5329,7 +5351,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_LAZULITE_ORE_PEDIA</Tag>
 		<English>Lazulite is a blue, phosphate mineral containing magnesium, iron, and aluminium phosphate. Lazulite forms one endmember of a solid solution series with the darker iron rich scorzalite.</English>
-		<Polish>Lazulit - rzadki minera&#179; z gromady fosforan&#243;w. Nazwa pochodzi od arab. azul = niebo; pers. lazhward = niebieski oraz &#179;ac. lazulum = b&#179;&#234;kit, po&#179;&#185;czonego z gr. lithos = kamie&#241; (ska&#179;a), nawi&#185;zuj&#185;c do charakterystycznej barwy tego minera&#179;u.</Polish>
+		<Polish>[COLOR_HIGHLIGHT_TEXT]Lazulit[COLOR_REVERT], rzadki minera&#179; z gromady fosforan&#243;w. Nazwa pochodzi od arab. azul = niebo; pers. lazhward = niebieski oraz &#179;ac. lazulum = b&#179;&#234;kit, po&#179;&#185;czonego z gr. lithos = kamie&#241; (ska&#179;a), nawi&#185;zuj&#185;c do charakterystycznej barwy tego minera&#179;u.</Polish>
 		<Russian>Ëàçóðèò ÿâëÿåòñÿ ñèíèì ìèíåðàëîì, ñîäåðæàùèì ôîñôàò ìàãíèÿ, æåëåçà è ôîñôàò àëþìèíèÿ. Óçîðû ëàçóðèòà áîëüøå âñåãî íàïîìèíàþò áîãàòûå æåëåçîì ñ áîëåå òåìíûìè ïðîæèëêàìè ñêîðçàëèòû.</Russian>
 		<Italian>La lazulite è un minerale fosfato blu contenente magnesio, ferro e fosfato di alluminio. La lazulite forma un membro terminale di una serie di soluzioni solide con la scorzalite più scura ricca di ferro</Italian>
 	</TEXT>
@@ -5338,6 +5360,7 @@
 		<English>La Platan</English>
 		<Italian>Cittadino platanense</Italian>
 		<Russian>Ëà-Ïëàòà</Russian>
+		<Polish>La Plata</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_LEAD_INGOTS</Tag>
@@ -5361,6 +5384,7 @@
 		<French>Plomb, Pb de symbole (plumbum latin, un poids de plomb), l'élément métallique dense et gris-bleuâtre qui était l'un des premiers métaux connus. Le nombre atomique de plomb est 82 ; l'élément est dans le groupe 14 (ou IVa) de la table périodique. Le plomb est employé en énorme quantité dans des batteries de stockage et en engainant les câbles électriques. De grandes quantités sont employées dans l'industrie pour des pipes de doublure, des réservoirs, et l'appareillage de rayon X. En raison de ses propriétés à haute densité et nucléaires, le plomb est employé intensivement comme l'armature protectrice pour le matériel radioactif. Parmi de nombreux alliages contenant un pourcentage élevé de plomb soyez soudure, type métal, et divers métaux de roulement. Une quantité considérable de plomb est consommée sous forme de ses composés, en particulier en peintures et colorants. Le plomb a été employé par des humains pendant au moins 7000 années, parce qu'il est répandu, facile d'extraire et facile à travailler avec. Il est fortement malléable et malléable comme facile à fondre. Dans l'âge en bronze jeune le plomb a été employé avec de l'antimoine et l'arsenic. Le plomb a été mentionné dans le livre de l'exode. Les alchimistes ont pensé que menez était le métal le plus ancien et associé lui à la planète Saturne. Menez les pipes qui soutiennent les insignes des empereurs romains sont toujours en service et beaucoup de "porcs" romains (des lingots) de chiffre de plomb en plomb de Derbyshire extrayant l'histoire et dans l'histoire de l'industrie à d'autres centres anglais. Le Pb du symbole du plomb est une abréviation de son plumbum nommé latin. Le mot anglais "tuyauterie" dérive également de cette racine latine. Cependant, il est également toxique, et l'empoisonnement de plomb a été identifié même par les ancients. De même, au vingtième siècle, l'utilisation du plomb en colorants de peinture a été finie en raison du danger du plomb empoisonnant, particulièrement aux enfants. Par le milieu des années 80, une variation significative dans l'usage final de plomb a modelé avait eu lieu. Beaucoup de ce décalage était un résultat de la conformité des consommateurs de plomb des ETATS-UNIS aux règlements environnementaux qui ont réduit ou ont éliminé de manière significative l'utilisation du plomb dans des produits de nonbattery, y compris l'essence, des peintures, des soudures, et des systèmes de l'eau. Récemment, l'utilisation de plomb est encore raccourcie par la directive de RoHS.</French>
 		<Italian>Il piombo, simbolo Pb (in latino plumbum, un'unità di peso), è un elemento metallico denso e grigio bluastro che fu uno dei primi metalli conosciuti. Il numero atomico del piombo è 82; l'elemento è nel gruppo 14 della tavola periodica. Il piombo è usato in quantità enorme nelle batterie di accumulo e nell'inguainamento dei cavi elettrici, per il rivestimento dei tubi, i carri armati e le apparecchiature a raggi X. A causa della sua alta densità e delle sue proprietà nucleari, il piombo è usato estesamente come scudo protettivo dai materiali radioattivi. Una quantità considerevole di piombo è consumata sotto forma dei suoi componenti, specialmente in vernici e pigmenti. Il piombo è stato usato dagli esseri umani per almeno 7000 anni, perché è diffuso, facile da estrarre e facile da lavorare. È altamente malleabile e duttile e facile a fondersi. All'inizio dell'età del bronzo il piombo è stato usato con antimonio ed arsenico. Il piombo è stato menzionato nel libro dell'Esodo. Gli alchimisti credevano che fosse il più vecchio metallo e  lo associavano con il pianeta Saturno. Molti tubi di piombo con il simbolo degli imperatori romani sono ancora in servizio e molti lingotti di piombo figurano nella storia dell'industria in vari centri inglesi. Il simbolo Pb del piombo è un'abbreviazione del relativo plumbum latino. La parola inglese "plumbing" deriva anch'essa da questa radice latina. Comunque è tossico e l'avvelenamento da piombo era riconosciuto anche dagli antichi. Similmente, nel ventesimo secolo, l'uso di piombo nei pigmenti delle vernici è stato interrotto a causa del pericolo di avvelenamento, particolarmente per i bambini. Entro la metà degli anni 80, avvenne una variazione significativa nell'uso del piombo.</Italian>	
 		<Russian>Свинец, символ Pb (лат. Plumbum, свинцовая гиря) - плотный, голубовато-серый металлический элемент, который был одним из первых известных металлов. Атомный номер свинца 82; элемент находится в группе 14 (или IVa) периодической таблицы. Свинец в огромных количествах используется в аккумуляторных батареях и в оболочке электрических кабелей. Большие количества используются в промышленности для футеровки труб, резервуаров и рентгеновских аппаратов. Из-за своей высокой плотности и ядерных свойств свинец широко используется в качестве защитной защиты для радиоактивных материалов. Среди многочисленных сплавов, содержащих высокий процент свинца, есть припой, металл марки и различные металлы подшипников. Значительное количество свинца потребляется в виде его соединений, особенно в красках и пигментах. Свинец используется людьми не менее 7000 лет, потому что он широко распространен, легко извлекается и с ним легко работать. Он очень пластичный и пластичный, а также легко плавится. В раннем бронзовом веке свинец использовался вместе с сурьмой и мышьяком. Свинец упоминается в Книге Исход. Алхимики считали свинец самым древним металлом и связывали его с планетой Сатурн. Свинцовые трубы, на которых нанесены знаки отличия римских императоров, все еще используются, и многие римские «свиньи» (слитки) свинца в истории добычи свинца Дербишира и в истории промышленности в других английских центрах. Символ свинца Pb - это аббревиатура от латинского названия plumbum. Английское слово «сантехника» также происходит от этого латинского корня. Однако он также токсичен, и отравление свинцом было признано еще древними. Точно так же в двадцатом веке использование свинца в пигментах красок было прекращено из-за опасности отравления свинцом, особенно для детей. К середине 80-х годов в структуре конечного использования свинца произошел значительный сдвиг. Во многом этот сдвиг стал результатом соблюдения ведущими потребителями США экологических норм, которые значительно сократили или полностью исключили использование свинца в не аккумуляторных продуктах, включая бензин, краски, припои и водные системы. В последнее время использование свинца сокращается директивой RoHS.</Russian>
+		<Polish>[COLOR_HIGHLIGHT_TEXT]Ołów[COLOR_REVERT], symbol Pb (łac. plumbum, ciężarek ołowiany), gęsty, niebieskawo-szary pierwiastek metaliczny, będący jednym z pierwszych znanych metali. Liczba atomowa ołowiu wynosi 82; pierwiastek należy do grupy 14 (lub IVa) układu okresowego. Ołów jest używany w ogromnych ilościach w akumulatorach i osłonach kabli elektrycznych. Duże ilości są wykorzystywane w przemyśle do wykładania rur, zbiorników i aparatury rentgenowskiej. Ze względu na dużą gęstość i właściwości jądrowe ołów jest szeroko stosowany jako osłona ochronna materiałów radioaktywnych. Do licznych stopów zawierających wysoki procent ołowiu należy między innymi lut. Znaczna ilość ołowiu jest zużywana w postaci jego związków, szczególnie w farbach i pigmentach. Ołów jest używany przez człowieka od co najmniej 7000 lat, ponieważ jest szeroko rozpowszechniony, łatwy do wydobycia i łatwy w obróbce. Jest bardzo kowalny i ciągliwy, a także łatwo się topi. We wczesnej epoce brązu używano ołowiu z antymonem i arsenem. Ołów został wspomniany między innymi w Księdze Wyjścia. Alchemicy uważali, że ołów jest najstarszym metalem i skojarzyli go z planetą Saturn. Rury ołowiane noszące insygnia cesarzy rzymskich są nadal w użyciu. Symbol ołowiu Pb jest skrótem od jego łacińskiej nazwy plumbum. Angielskie słowo "hydraulika - plumbing" również wywodzi się od tego łacińskiego rdzenia. Jest on jednak toksyczny, a zatrucie ołowiem rozpoznawali już starożytni. W XX wieku zaprzestano stosowania ołowiu w pigmentach farb ze względu na niebezpieczeństwo zatrucia ołowiem, szczególnie u dzieci. W połowie lat 80. nastąpiła znacząca zmiana we wzorcach końcowego wykorzystania ołowiu. Duża część tej zmiany była wynikiem przestrzegania przez głównych konsumentów w USA przepisów środowiskowych, które znacznie ograniczyły lub wyeliminowały użycie ołowiu w produktach innych niż akumulatory, w tym w benzynie, farbach, lutach i instalacjach wodnych. Ostatnio stosowanie ołowiu zostało jeszcze bardziej ograniczone przez dyrektywę RoHS.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_LEAD_WARES</Tag>
@@ -5375,7 +5399,7 @@
 		<English>Leather</English>
 		<French>Cuir</French>
 		<Italian>Cuoio</Italian>
-		<Polish>Sk&#243;rzany</Polish>
+		<Polish>Sk&#243;ra</Polish>
 		<Russian>Êîæà</Russian>
 	</TEXT>
 	<TEXT>
@@ -5383,6 +5407,7 @@
 		<English>Leather is a durable and flexible material created via the tanning of putrescible animal rawhide and skin, primarily cattlehide. It can be produced through different manufacturing processes, ranging from cottage industry to heavy industry.</English>
 		<Italian>Il cuoio è un materiale durevole e flessibile creato con la conciatura della pelle animale. Può essere prodotta in diversi modi da una produzione artigiana ad una industriale su grande scala.</Italian>
 		<Russian>Кожа - это прочный и гибкий материал, созданный путем дубления размоченной сыромятной кожи и шкур животных, в первую очередь, кожи крупного рогатого скота. Его можно производить с помощью различных производственных процессов, от кустарной до тяжелой.</Russian>
+		<Polish>[COLOR_HIGHLIGHT_TEXT]Skóra[COLOR_REVERT], to trwały i elastyczny materiał powstały w wyniku garbowania gnijącej surowej skóry lub skóry zwierzęcej, głównie bydlęcej. Można go wytwarzać w różnych procesach produkcyjnych, od przemysłu chałupniczego po przemysł ciężki.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_LEBANESE</Tag>
@@ -5390,6 +5415,7 @@
 		<French>Libanaise</French>
 		<Italian>Cittadino libanese</Italian>
 		<Russian>Ëèâàíöû</Russian>
+		<Polish>Libańska</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_LEMONS</Tag>
@@ -5410,6 +5436,7 @@
 		<English>The lemon is a citrus tree, a hybrid of cultivated origin. The fruit are cultivated primarily for their juice, though the pulp and rind (zest) are also used, primarily in cooking or mixing. Lemon juice is about 5% citric acid, which gives lemons a sour taste. This is a small tree, grows to 6 m (20 ft) but usually smaller. The branches are thorny, and form an open crown. The leaves are elliptical-acuminate. Flowers are violet and streaked in the interior and white on the outside. On a lemon tree, flowers and ripe fruits can be found at the same time. The first description of the lemon, which had been introduced from India two centuries earlier, is found in Arabic writings from the 12th century. They were cultivated in Genoa in the mid-fifteenth century, and appeared in the Azores in 1494. More recent research has identified lemons in the ruins of Pompeii. Lemons were once used by the British Royal navy to combat scurvy, as they provided a large amount of vitamin C.</English>
 		<German>[COLOR_HIGHLIGHT_TEXT]Zitronen[COLOR_REVERT] oder Limonen werden die Früchte des Zitronenbaums (Citrus × limon) genannt. Sie sind länglich-oval, etwa faustgroß und von gelber bis grün-gelber Farbe. Ihr saftiges, saures Fruchtfleisch enthält viel Vitamin C.[NEWLINE]Die Gattung der Zitruspflanzen stammt aus Asien, vermutlich aus dem Gebiet von Nordostindien und Myanmar sowie Teilen von Südchina. Von dort aus haben sie sich im Laufe der Jahrhunderte verbreitet. Die Zitronatzitrone war die erste Zitrusfrucht, die in Europa eingeführt wurde. Die Nachfolger Alexanders des Großen brachten sie von Persien nach Kleinasien mit. Etwa im 2. Jahrhundert n.Chr. wurde die Zitrone dann von jüdischen Einwanderern in Spanien, Griechenland und Italien verbreitet. Gerade die Römer wussten die Frucht, die sie Medischen Apfel nannten, zu schätzen. Von den arabischen Siedlern wurden im 9. Jahrhundert in den annektierten Gebieten dann auch echte Zitronen und Bitterorangen (Pomeranzen) angepflanzt. Sie wurden aber selbst zu Zeiten der Renaissance noch weitgehend als Zierpflanze genutzt und kaum in der Küche eingesetzt. Wichtig war die Entdeckung, dass Zitrusfrüchte den Skorbut, der durch Vitaminmangel bei langen Seereisen ausgelöst wurde, heilen konnten.</German>
 		<Russian>Лимон, лимонное дерево, это цитрусовое дерево, гибрид культурного происхождения. Фрукт культивируется в первую очередь из-за его сока, хотя мякоть и кожура (цедра) также используется, в основном в кулинарии или смесях. Лимонный сок содержит около 5% лимонной кислоты, которая дает лимонам кислый вкус. Это маленькие деревья, вырастающие до 6 м но обычно меньше. Ветки колючие и образуют открытую крону. Листья эллиптически-остроконечные. Цветки фиолетовые и полосатые внутри и белые снаружи. На лимонном дереве, цветки и спелые плоды могут быть найдены в одно и то же время. Первое описание лимона, который был ввезен из Индии двумя столетиями ранее, найдено в арабских записях от 12 столетия. Исходное название лимон произошло от персидского (Limu), из санскрита nimbuka. Он культивировался в Генуе в середине пятнадцатого столетия, и появился на Азорах в 1494. Более поздние исследования опознали лимоны на руинах Помпеи. Лимоны использовались британскими королевскими ВМС для борьбы с цингой, так как они содержат большое количество витамина C.</Russian>
+		<Polish>[COLOR_HIGHLIGHT_TEXT]Cytryna[COLOR_REVERT], to drzewo cytrusowe, hybryda pochodzenia uprawnego. Owoce uprawia się głównie dla soku, chociaż wykorzystuje się także miąższ i skórkę, głównie do gotowania. Sok cytrynowy zawiera około 5% kwasu cytrynowego, który nadaje cytrynom kwaśny smak. To małe drzewo, dorasta do 6 m, ale zwykle jest mniejsze. Gałęzie są cierniste i tworzą otwartą koronę. Liście są eliptyczno-szpiczaste. Kwiaty są fioletowe z prążkami wewnątrz i białe na zewnątrz. Na drzewie cytrynowym można znaleźć jednocześnie kwiaty i dojrzałe owoce. Pierwszy opis cytryny, która została sprowadzona z Indii dwa wieki wcześniej, znajduje się w pismach arabskich z XII wieku. Uprawiano je w Genui w połowie XV wieku, a na Azorach pojawiły się w 1494 roku. Nowsze badania zidentyfikowały cytryny w ruinach Pompejów. Cytryny były kiedyś używane przez brytyjską marynarkę królewską do zwalczania szkorbutu, ponieważ dostarczały dużej ilości witaminy C.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_LEVITATION_GENERATORS</Tag>
@@ -5423,6 +5450,7 @@
 		<Tag>TXT_KEY_BONUS_LEVITATION_GENERATORS_PEDIA</Tag>
 		<English>While levitation trough usage of room superconductors, magnetics, electricity, acoustics and optics was theoretically possible earlier, it wasn't economically feasible to do as energy requirements were enormous. Now with fusion reactors it is possible to use levitation anywhere and everywhere. That is levitation is no longer limited to maglev trains.</English>
 		<Russian>Хотя левитация за счет использования комнатных сверхпроводников, магнетиков, электричества, акустики и оптики была теоретически возможна и раньше, это было экономически нецелесообразно из-за огромной энергоемкости подобных устройств. Теперь с термоядерными реакторами можно использовать левитацию везде и всюду. Отныне область применения левитации больше не ограничивается поездами на магнитной подвеске.</Russian>
+		<Polish>Chociaż lewitacja poprzez wykorzystanie nadprzewodników pokojowych, magnesów, elektryczności, akustyki i optyki była teoretycznie możliwa wcześniej, nie było to ekonomicznie wykonalne, ponieważ zapotrzebowanie na energię było ogromne. Teraz dzięki reaktorom termojądrowym możliwe jest wykorzystanie lewitacji w dowolnym miejscu i czasie. Oznacza to, że lewitacja nie jest już ograniczona do pociągów maglev.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_LIANGZHU</Tag>
@@ -5443,6 +5471,7 @@
 		<English>The term "Liangzhu Jades" refers to finely worked large ritual jades, commonly incised with the taotie motif related to the Liangzhu culture. The most exemplary artifacts from the culture were its cong (cylinders), the largest of which weighed 3.5 kg (7.72 lb). Bi (discs), Yue axes (ceremonial axes), and pendants were also found. These artifacts are said to have been highly influential on the development of other neolithic cultures in China, and on production of ritual objects in later periods of Chinese culture.</English>
 		<Italian>Il termine "Giada di Liangzhu" si riferisce a grandi oggetti rituali in giada, finemente lavorati e comunemente incisi con un taotie, un motivo rituale legato alla cultura di Liangzhu. I manufatti più esemplari di questa cultura furono i suoi cong (cilindri), il più grande dei quali pesava 3,5 kg. Sono stati trovati anche bi (dischi), assi yue (assi cerimoniali) e pendenti. Si dice che questi manufatti abbiano avuto un'influenza notevole sullo sviluppo di altre culture neolitiche in Cina e sulla produzione di oggetti rituali nei periodi successivi della cultura cinese.</Italian>
 		<Russian>Эти искусно вырезанные нефриты также использовались в качестве погребальных принадлежностей. Лучшие бывают двух видов, которые, как говорят, представляют Небо и Землю.</Russian>
+		<Polish>Termin [COLOR_HIGHLIGHT_TEXT]Jadeity z Lianghzu[COLOR_REVERT] odnosi się do drobno obrobionych, dużych jadeitów rytualnych, powszechnie z wyciętych motywem "taotie" związanym z kulturą Liangzhu. Najbardziej widowiskowymi artefaktami były cong (cylindry), z których największy ważył 3,5 kg. Znaleziono także Bi (dyski), topory Yue (osie ceremonialne) i wisiorki. Uważa się, że te artefakty wywarły duży wpływ na rozwój innych kultur neolitycznych w Chinach oraz na produkcję przedmiotów rytualnych w późniejszych okresach kultury chińskiej.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_LIBYAN</Tag>
@@ -5450,6 +5479,7 @@
 		<French>Libyenne</French>
 		<Italian>Cittadino libico</Italian>
 		<Russian>Ëèâèéöû</Russian>
+		<Polish>Libijska</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_LIQUID_METAL</Tag>
@@ -5464,6 +5494,7 @@
 		<English>A liquid metal consists of alloys with very low melting points. The standard metal used to be mercury, but gallium-based alloys, which are lower both in their vapor pressure at room temperature and toxicity, are being used as a replacement in various applications. Alloy systems that are liquid at room temperature have thermal conductivity far superior to ordinary non-metallic liquids, and a higher electrical conductivity that allows the liquid to be pumped by more efficient electromagnetic pumps. Typical uses of liquid metals include thermostats, switches, barometers, heat transfer systems, and thermal cooling and heating designs. Starting from 21st century, also wearable devices and IoT applications made use of liquid metals.</English>
 		<Italian>Un metallo liquido è costituito da leghe con punti di fusione molto bassi. Il metallo più usato inizialmente era il mercurio, ma le leghe a base di gallio, che hanno una pressione dei vapori a temperatura ambiente e una tossicità inferiore, lo hanno gradualmente sostituito. Questo tipo di leghe liquide a temperatura ambiente hanno una conduttività termica di gran lunga superiore ai normali liquidi non metallici e una maggiore conduttività elettrica, che consente al liquido di essere pompato più efficientemente da pompe elettromagnetiche. Gli usi tipici dei metalli liquidi includono termostati, interruttori, barometri, sistemi di trasferimento di calore e impianti di raffreddamento e riscaldamento termici. A partire dal XXI secolo, anche i dispositivi indossabili e le applicazioni IoT hanno iniziato a utilizzarli.</Italian>
 		<Russian>Жидкий металл состоит из галлийсодержащих сплавов с очень низкими температурами плавления, которые являются жидкими при комнатной температуре. Раньше стандартным металлом была ртуть, но сплавы на основе галлия теперь используются в качестве замены в различных областях. Ртуть токсична и имеет высокое давление пара при комнатной температуре. Сплавы галлия имеют пониженную токсичность и более низкое давление пара, чем ртуть. Типичные сферы применения жидких металлов - это термостаты, переключатели, барометры, системы теплопередачи, а также конструкции для термического охлаждения и нагрева. Начиная с XXI века жидкие металлы также использовались в мобильных устройствах и приложениях для Интернета вещей.</Russian>
+		<Polish>[COLOR_HIGHLIGHT_TEXT]Ciekły metal[COLOR_REVERT], składa się ze stopów o bardzo niskich temperaturach topnienia. Standardowym metalem była kiedyś rtęć, ale stopy na bazie galu, które mają niższą prężność par w temperaturze pokojowej i toksyczność, są stosowane jako zamiennik w różnych zastosowaniach. Systemy stopowe, które są płynne w temperaturze pokojowej, mają przewodność cieplną znacznie lepszą niż zwykłe ciecze niemetaliczne i wyższą przewodność elektryczną, która umożliwia pompowanie cieczy za pomocą bardziej wydajnych pomp elektromagnetycznych. Typowe zastosowania ciekłych metali obejmują termostaty, przełączniki, barometry, systemy wymiany ciepła oraz projekty chłodzenia i ogrzewania termicznego. Począwszy od XXI wieku również aplikacje IoT wykorzystują ciekłe metale.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_LITHIUM</Tag>
@@ -5476,6 +5507,7 @@
 		<Tag>TXT_KEY_BONUS_LITHIUM_PEDIA</Tag>
 		<English>Lithium is a chemical element with symbol Li and atomic number 3. It is a soft, silver-white metal belonging to the alkali metal group of chemical elements. Under standard conditions it is the lightest metal and the least dense solid element. Like all alkali metals, lithium is highly reactive and flammable. For this reason, it is typically stored in mineral oil. When cut open, lithium exhibits a metallic luster, but contact with moist air corrodes the surface quickly to a dull silvery gray, then black tarnish. Because of its high reactivity, lithium never occurs freely in nature, and instead, only appears in compounds, which are usually ionic. Lithium occurs in a number of pegmatitic minerals, but due to its solubility as an ion is present in ocean water and is commonly obtained from brines and clays. On a commercial scale, lithium is isolated electrolytically from a mixture of lithium chloride and potassium chloride.</English>
 		<Russian>Ëèòèé (îò ãðå÷åñêîãî Ëèòîñ 'êàìåíü') - ýòî õèìè÷åñêèé ýëåìåíò ñ ñèìâîëîì Li è àòîìíûì íîìåðîì 3. Ýòî ìÿãêèé, ñåðåáðèñòî-áåëûé ìåòàëë, îòíîñÿùèéñÿ ê ãðóïïå ùåëî÷íûõ ìåòàëëîâ õèìè÷åñêèõ ýëåìåíòîâ. Ïðè ñòàíäàðòíûõ óñëîâèÿõ îí ÿâëÿåòñÿ ñàìûì ëåãêèì ìåòàëëîì è íàèìåíåå ïëîòíûì èç òâåðäûõ ýëåìåíòîâ. Êàê è âñå ùåëî÷íûå ìåòàëëû, ëèòèé îáëàäàåò âûñîêîé ðåàêöèîííîé ñïîñîáíîñòüþ, ëåãêî âîñïëàìåíÿåòñÿ. Ïî ýòîé ïðè÷èíå, îíà îáû÷íî õðàíèòñÿ â ìèíåðàëüíîì ìàñëå. Ïðè íàäðåçå, ëèòèé èìååò ìåòàëëè÷åñêèé áëåñê, íî è êîíòàêò ñ âëàæíûì âîçäóõîì áûñòðî ðàçúåäàåò ïîâåðõíîñòü äî óíûëîãî ñåðåáðèñòî-ñåðîãî öâåòà, êîòîðûé çàòåì òóñêíååò äî÷åðíà. Èç-çà ñâîåé âûñîêîé ðåàêòèâíîñòè, ëèòèé íå âñòðå÷àåòñÿ â âèäå ñàìîðîäêîâ â ïðèðîäå, è ïîÿâëÿåòñÿ ëèøü â ñîåäèíåíèÿõ, êàê ïðàâèëî â èçîòîïàõ. Ëèòèé âñòðå÷àåòñÿ â ðÿäå ïåãìàòèòîâûõ ìèíåðàëîâ, íî èç-çà ñâîåé ðàñòâîðèìîñòè â âèäå èîíîâ ïðèñóòñòâóåò â îêåàíñêîé âîäå è ÷àùå âñåãî èçâëåêàåòñÿ èç ðàññîëîâ è ãëèí. Â ïðîìûøëåííûõ ìàñøòàáàõ, ëèòèé âûäåëÿþò ýëåêòðîëèòè÷åñêè èç ñìåñè õëîðèäà ëèòèÿ è õëîðèäà êàëèÿ.</Russian>
+		<Polish>[COLOR_HIGHLIGHT_TEXT]Lit[COLOR_REVERT], to pierwiastek chemiczny o symbolu Li i liczbie atomowej 3. Jest to miękki, srebrzystobiały metal należący do grupy pierwiastków chemicznych zawierających metale alkaliczne. W normalnych warunkach jest to najlżejszy metal i najmniej gęsty pierwiastek stały. Podobnie jak wszystkie metale alkaliczne, lit jest wysoce reaktywny i łatwopalny. Z tego powodu zazwyczaj przechowuje się go w oleju mineralnym. Po rozcięciu lit wykazuje metaliczny połysk, ale kontakt z wilgotnym powietrzem szybko powoduje korozję powierzchni, nadając jej matowy srebrzystoszary, a następnie czarny nalot. Ze względu na swoją wysoką reaktywność lit nigdy nie występuje w przyrodzie w postaci wolnej, a zamiast tego występuje jedynie w związkach, które zwykle są jonowe. Lit występuje w wielu minerałach pegmatytycznych, ale ze względu na swoją rozpuszczalność jako jon jest obecny w wodzie oceanicznej i jest powszechnie otrzymywany z solanek i glin. Na skalę przemysłową lit jest izolowany elektrolitycznie z mieszaniny chlorku litu i chlorku potasu.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_LITHUANIAN</Tag>
@@ -5483,6 +5515,7 @@
 		<French>Lithuanien</French>
 		<Italian>Cittadino lituano</Italian>
 		<Russian>Ëèòîâöû</Russian>
+		<Polish>Litewska</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_LIZARDS</Tag>
@@ -5497,6 +5530,7 @@
 		<English>Lizards are squamate reptiles that generally have four legs and external ears.</English>
 		<French>Les lézards sont des petits reptiles de l'ordre des Squamates. Ils partagent le fait d'avoir quatre pattes, des oreilles à tympan apparent sans conduit auditif externe, le corps recouvert d'écailles et la mue.</French>
 		<Russian>Ящерицы - плоские рептилии, у которых, как правило, четыре ноги и наружные уши.</Russian>
+		<Polish>[COLOR_HIGHLIGHT_TEXT]Jaszczurki[COLOR_REVERT], to gady płaskonabłonkowe, które zazwyczaj mają cztery nogi i uszy zewnętrzne.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_LLAMA</Tag>
@@ -5516,6 +5550,7 @@
 		<English>The llama (Lama glama) is a South American camelid, widely used as a meat and pack animal by Andean cultures since pre-Hispanic times. The Moche people frequently placed llamas and llama parts in the burials of important people, as offerings or provisions for the afterlife. The Moche culture of pre-Columbian Peru depicted llamas quite realistically in their ceramics. In the Inca empire, llamas were the only beasts of burden, and many of the peoples dominated by the Inca had long traditions of llama herding. For the Inca nobility, the llama was of symbolic significance, and llama figures were often buried with the dead. In South America, llamas are still used as beasts of burden, as well as for the production of fibre and meat.</English>
 		<German>[COLOR_HIGHLIGHT_TEXT]Lamas[COLOR_REVERT] sind eine beliebte Nutztierart in den südamerikanischen Anden, die zur Familie der Kamele zählen, aber im Gegensatz zu ihren Altweltvettern über keine Höcker verfügen. Sie wurden bereits vor mehr als 5000 Jahren aus den wilden Guanakos domestiziert und waren lange Zeit das einzige verfügbare Lasttier auf dem amerikanischen Kontinent. Außerdem wurden Wolle und Fleisch des Lamas genutzt und ähnlich wie beim Kamel dienten die Exkremente als guter Brennstoff, während die Haut für Lederwaren und das Fett zur Kerzenherstellung verwendet wurde. Heute werdem Lamas hauptsächlich wegen ihrer Wolle und ihres Fleisches gezüchtet, inzwischen sogar in Europa.</German>
 		<Russian>Лама (Lama glama) - южноамериканский верблюд, широко используемый в андских культурах в качестве мясного и вьючного животного с доиспанских времен. Люди моче часто помещали лам и их части в могилы важных людей в качестве подношений или провизии для загробной жизни. В культуре моче доколумбового Перу ламы довольно реалистично изображались в керамике. В империи инков ламы были единственными вьючными животными, и многие народы, в которых доминировали инки, имели давние традиции пасти лам. Для знати инков лама имела символическое значение, и фигуры лам часто хоронили вместе с мертвыми. В Южной Америке ламы до сих пор используются в качестве вьючных животных, а также для производства клетчатки и мяса.</Russian>
+		<Polish>[COLOR_HIGHLIGHT_TEXT]Lama[COLOR_REVERT] (Lama glama) to południowoamerykański wielbłądowaty, szeroko stosowany jako zwierzę mięsne i juczne w kulturach andyjskich od czasów przedhiszpańskich. Lud Moche często umieszczał lamy i części lam w pochówkach ważnych osób jako ofiary lub zaopatrzenie na życie pozagrobowe. Kultura Moche w prekolumbijskim Peru dość realistycznie przedstawiała lamy w ceramice. W imperium Inków lamy były jedynymi zwierzętami jucznymi, a wiele ludów zdominowanych przez Inków miało długie tradycje hodowli lam. Dla szlachty Inków lama miała znaczenie symboliczne, a figurki lam często chowano razem ze zmarłymi. W Ameryce Południowej lamy są nadal wykorzystywane jako zwierzęta juczne, a także do produkcji błonnika i mięsa.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_LOBSTER</Tag>
@@ -5530,6 +5565,7 @@
 		<Tag>TXT_KEY_BONUS_LOBSTER_PEDIA</Tag>
 		<English>Lobsters are economically important as seafood, forming the basis of a global industry that nets more than 1 billion dollars annually. In North America, the American lobster did not achieve popularity until the mid-19th century, when New Yorkers and Bostonians developed a taste for it; not until the invention of a special boat, the lobster smack, did a commercial fishery flourish. The American Lobster is fished from Canada to New Jersey. In Massachusetts, the near-shore lobster fishery consists of independent fishermen who operate their own vessels. Lobster is the most valuable species caught in Massachusetts waters. Lobsters can be air-shipped anywhere in the world and arrive alive, making them the most expensive.</English>
 		<Russian>Омары экономически важны как морепродукты, они составляют основу мировой индустрии, ежегодно приносящей более 1 миллиарда долларов. В Северной Америке американский лобстер не стал популярным до середины 19 века, когда жители Нью-Йорка и бостонцы полюбили его; коммерческое рыболовство не стало процветать до тех пор, пока не была изобретена особая лодка - привкус омаров. Американского омара ловят от Канады до Нью-Джерси. В Массачусетсе прибрежный промысел омаров состоит из независимых рыбаков, которые управляют собственными судами. Лобстер - самый ценный вид, пойманный в водах Массачусетса. Омаров можно доставить по воздуху в любую точку мира и доставить живыми, что делает их самыми дорогими.</Russian>
+		<Polish>[COLOR_HIGHLIGHT_TEXT]Homary[COLOR_REVERT], są ważne gospodarczo jako owoce morza i stanowią podstawę światowego przemysłu, który przynosi zyski przekraczające miliard dolarów rocznie. W Ameryce Północnej homar amerykański zyskał popularność dopiero w połowie XIX wieku, kiedy upodobali sobie go mieszkańcy Nowego Jorku i Bostonu; dopiero wynalezienie specjalnej łodzi, homara spowodowało rozkwit komercyjnego rybołówstwa. Homar amerykański jest poławiany od Kanady po New Jersey. W Massachusetts przybrzeżne połowy homarów obejmują niezależnych rybaków, którzy obsługują własne statki. Homar to najcenniejszy gatunek łowiony w wodach Massachusetts. Żywe homary można przewozić samolotem w dowolne miejsce na świecie.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_LONGOBARDIAN</Tag>
@@ -5537,6 +5573,7 @@
 		<French>Lombarde</French>
 		<Italian>Cittadino longobardo</Italian>
 		<Russian>Ëàíãîáàðäû</Russian>
+		<Polish>Longobardyjska</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_LSD</Tag>
@@ -5546,7 +5583,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_LSD_PEDIA</Tag>
 		<English>Lysergic acid diethylamide, abbreviated LSD or LSD-25, also known as lysergide (INN) and colloquially as acid, is a semisynthetic psychedelic drug of the ergoline family, well known for its psychological effects which can include altered thinking processes, closed and open eye visuals, synesthesia, an altered sense of time and spiritual experiences, as well as for its key role in 1960s counterculture. It is used mainly as an entheogen, recreational drug, and as an agent in psychedelic therapy. LSD is non-addictive, is not known to cause brain damage, and has extremely low toxicity relative to dose. However, adverse psychiatric reactions such as anxiety, paranoia, and delusions are possible.</English>
-		<Polish>Dietyloamid kwasu D-lizergowego (LSD, LSD-25) - organiczny zwi&#185;zek chemiczny, psychodeliczna substancja psychoaktywna, pochodna ergoliny.</Polish>
+		<Polish>[COLOR_HIGHLIGHT_TEXT]Dietyloamid kwasu D-lizergowego (LSD, LSD-25)[COLOR_REVERT], potocznie znany jako kwas, jest półsyntetycznym lekiem psychedelicznym z rodziny ergolin, dobrze znanym ze swoich skutków psychologicznych, które mogą obejmować zmienione procesy myślenia, wizualizacje przy zamkniętych i otwartych oczach, synestezję, zmienione poczucie czasu i doświadczeń duchowych. Stosowany jest głównie jako enteogen, narkotyk rekreacyjny oraz jako środek w terapii psychodelicznej. LSD nie powoduje uzależnienia, nie powoduje uszkodzeń mózgu i ma wyjątkowo niską toksyczność w stosunku do dawki. Jednakże możliwe są niepożądane reakcje psychiczne, takie jak lęk, paranoja i urojenia.</Polish>
 		<Russian>Äèýòèëàìèä ëèçåðãèíîâîé êèñëîòû, ñîêðàùåííî ËÑÄ èëè ËÑÄ-25, òàêæå èçâåñòíûé êàê ëèçåðãèä (ÈÍÍ), - ïîëóñèíòåòè÷åñêèé ïñèõîäåëè÷åñêèé íàðêîòèê èç ñåìåéñòâà ýðãîëàéí, õîðîøî èçâåñòíûé çà åãî ïñèõîëîãè÷åñêèå ýôôåêòû, êîòîðûå ìîãóò âêëþ÷àòü èçìåíåííûå ìûñëèòåëüíûå ïðîöåññû, íåðâíûé òèê, ñèíåñòåçèÿ, èñêàæåííîå ÷óâñòâî âðåìåíè è äóøåâíûå ïåðåæèâàíèÿ, êîòîðûé èãðàë êëþ÷åâóþ ðîëü â êîíòðêóëüòóðå 1960-õ ãîäîâ. Â îñíîâíîì îí èñïîëüçóåòñÿ êàê ãàëëþöèíîãåí, íàðêîòèê, è êàê ïðåïàðàò â ïñèõîäåëè÷åñêîé òåðàïèè. ËÑÄ íå âûçûâàåò ïðèâûêàíèÿ, íå âûçûâàþò ïîâðåæäåíèå ìîçãà, è îáëàäàåò êðàéíå íèçêîé òîêñè÷íîñòüþ ïî îòíîøåíèþ ê äîçå. Îäíàêî íå èñêëþ÷åíû íåáëàãîïðèÿòíûå ïñèõèàòðè÷åñêèå ðåàêöèè, òàêèå êàê òðåâîæíîñòü, ïàðàíîéÿ è ãàëëþöèíàöèè.</Russian>
 	</TEXT>
 	<TEXT>
@@ -5560,6 +5597,7 @@
 		<English>Lule</English>
 		<Russian>Ëóëå</Russian>
 		<Italian>Cittadino lule</Italian>
+		<Polish>Lulidzka</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_LUNDA</Tag>
@@ -5573,6 +5611,7 @@
 		<French>Lusitanean</French>
 		<Italian>Cittadino lusitano</Italian>
 		<Russian>Ëóçèòàíû</Russian>
+		<Polish>Luzytańska</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_LYDIAN</Tag>
@@ -5594,6 +5633,7 @@
 		<Tag>TXT_KEY_BONUS_LYE_PEDIA</Tag>
 		<English>Lye is a term that can refer to the liquid obtained by leaching ashes (containing largely potassium carbonate or "potash"), or to a strong alkali which is highly soluble in water producing caustic basic solutions. It is commonly the alternative name of sodium hydroxide or historically potassium hydroxide.</English>
 		<Russian>Ùåëî÷ü - ýòî òåðìèí, îçíà÷àþùèé æèäêîñòü, ïîëó÷åííóþ ïðè âûùåëà÷èâàíèè çîëû (ñîäåðæàùèé â îñíîâíîì êàðáîíàò êàëèÿ èëè "ïîòàø"), ëèáî ñèëüíóþ ùåëî÷ü, êîòîðàÿ õîðîøî ðàñòâîðÿåòñÿ â âîäå ñ ïîëó÷åíèåì êðåïêîãî ùåëî÷íîãî ðàñòâîðà. Åùå îäíî àëüòåðíàòèâíîå íàçâàíèå - ãèäðîêñèä íàòðèÿ (NaOH) èëè ãèäðîêñèä êàëèÿ (KOH).</Russian>
+		<Polish>[COLOR_HIGHLIGHT_TEXT]Ług[COLOR_REVERT], to termin, który może odnosić się do cieczy otrzymanej w wyniku ługowania popiołów (zawierających głównie węglan potasu lub potaż) lub do mocnej zasady, która jest dobrze rozpuszczalna w wodzie, tworząc zasadowe roztwory żrące. Jest to powszechnie alternatywna nazwa wodorotlenku sodu lub historycznie wodorotlenku potasu.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_MACEDONIAN</Tag>
@@ -5608,10 +5648,12 @@
 		<English>Machu Picchu Plans</English>
 		<Italian>Progetto per Machu Picchu</Italian>
 		<Russian>Ñõåìû Ìà÷ó-Ïèê÷ó</Russian>
+		<Polish>Plany Machu Picchu</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_MACHU_PICCHU_PLANS_PEDIA</Tag>
 		<English>Machu Picchu is a 15th-century Inca citadel located in the Eastern Cordillera of southern Peru on a 2,430-meter (7,970 ft) mountain ridge. It is located in the Machupicchu District within Urubamba Province above the Sacred Valley, which is 80 kilometers (50 mi) northwest of Cuzco. The Urubamba River flows past it, cutting through the Cordillera and creating a canyon with a tropical mountain climate. For most speakers of English or Spanish, the first 'c' in Picchu is silent. The Incas, in contrast with the Mayans, had no written language, and no European visited the site until the 19th century, so far as is known. There are, therefore, no written records of the site while it was in use. The names of the buildings, their supposed uses, and their inhabitants are all the product of modern archeologists, on the basis of physical evidence, including tombs at the site.</English>
+		<Polish>[COLOR_HIGHLIGHT_TEXT]Machu Picchu[COLOR_REVERT], to XV-wieczna cytadela Inków położona we wschodniej Kordylierii w południowym Peru, na grzbiecie górskim o wysokości 2430 metrów. Znajduje się w dystrykcie Machupicchu w prowincji Urubamba, nad Świętą Doliną, 80 kilometrów na północny zachód od Cuzco. Przepływa obok niej rzeka Urubamba, przecinając Kordylierę i tworząc kanion o tropikalnym, górskim klimacie. Dla większości osób mówiących po angielsku lub hiszpańsku pierwsze "c" w języku Picchu jest ciche. Inkowie, w przeciwieństwie do Majów, nie znali języka pisanego i, o ile wiadomo, żaden Europejczyk nie odwiedził tego miejsca aż do XIX wieku. Nie ma zatem żadnych pisemnych wzmianek o tym miejscu w okresie jego użytkowania. Nazwy budynków, ich rzekome przeznaczenie i mieszkańcy są dziełem współczesnych archeologów na podstawie dowodów fizycznych, w tym grobowców.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_MADAN</Tag>
@@ -5631,7 +5673,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_MAGNESIUM_ORE_PEDIA</Tag>
 		<English>The free element (metal) is not found naturally on Earth, as it is highly reactive (though once produced, it is coated in a thin layer of oxide (see passivation), which partly masks this reactivity). Magnesium is the eighth-most-abundant element in the Earth's crust by mass and tied in seventh place with iron in terms of molarity. It is found in large deposits of magnesite, dolomite, and other minerals, and in mineral waters, where magnesium ion is soluble.</English>
-		<Polish>Proszek b&#179;yskowy (te&#191; fotob&#179;ysk) - proszek sk&#179;adaj&#185;cy si&#234; z py&#179;u aluminiowego lub magnezowego i substancji utleniaj&#185;cej (na przyk&#179;ad chloranu potasu), podczas spalania kt&#243;rej uzyskuje si&#234; bardzo jasny b&#179;ysk bia&#179;ego &#156;wiat&#179;a. S&#179;u&#191;y do wytworzenia &#156;wiat&#179;a magnezowego. U&#191;ywany w pirotechnice do uzyskania efekt&#243;w &#156;wietlnych w fajerwerkach.</Polish>
+		<Polish>[COLOR_HIGHLIGHT_TEXT]Magnez[COLOR_REVERT], w stanie wolnym nie występuje naturalnie na Ziemii, ponieważ jest wysoce reaktywny (chociaż po wytworzeniu jest pokryty cienką warstwą tlenku, co częściowo maskuje tę reaktywność). Magnez jest ósmym pod względem masy pierwiastkiem w skorupie ziemskiej. Występuje w dużych złożach magnezytu, dolomitu i innych minerałów oraz w wodach mineralnych, w których jon magnezu jest rozpuszczalny.</Polish>
 		<Russian>Ñâîáîäíûé ýëåìåíò (ìåòàëë) íå âñòðå÷àþùèéñÿ â ÷èñòîì âèäå â ïðèðîäå, òàê êàê îí îáëàäàåò âûñîêîé ðåàêöèîííîé ñïîñîáíîñòüþ (õîòÿ íà îòêðûòîì âîçäóõå îí ïîêðûâàåòñÿ òîíêèì ñëîåì îêèñè (ñì. âîññòàíîâëåíèå), êîòîðûé ÷àñòè÷íî ñíèæàåò ýòó ðåàêòèâíîñòè). Ìàãíèé - âîñüìîé èç ñàìûõ ðàñïðîñòðàíåííûõ ýëåìåíòîâ â çåìíîé êîðå ïî ìàññå è çàâÿçûâàåòñÿ íà ñåäüìîì ìåñòå ñ æåëåçíîé òî÷êè çðåíèÿ ìîëÿðíîñòè. Îí ñîäåðæèòñÿ â áîëüøèõ ìåñòîðîæäåíèé ìàãíåçèòà, äîëîìèòà è äðóãèõ ìèíåðàëîâ, è â ìèíåðàëüíûõ âîäàõ, ãäå ðàñòâîðåíû èîíû ìàãíèÿ.</Russian>
 	</TEXT>
 	<TEXT>
@@ -5640,11 +5682,13 @@
 		<French>Monopoles magnétiques</French>
 		<Italian>Monopolo magnetico</Italian>
 		<Russian>Ìàãíèòíûå ìîíîïîëè</Russian>
+		<Polish>Monopole magnetyczne</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_MAGNETIC_MONOPOLES_PEDIA</Tag>
 		<English>A magnetic monopole is a hypothetical elementary particle in particle physics that is an isolated magnet with only one magnetic pole (a north pole without a south pole or vice versa). In more technical terms, a magnetic monopole would have a net "magnetic charge". Modern interest in the concept stems from particle theories, notably the grand unified and superstring theories, which predict their existence.</English>
 		<Russian>Магнитный монополь - это гипотетическая элементарная частица в физике частиц, которая представляет собой изолированный магнит с одним магнитным полюсом (северный полюс без южного полюса или наоборот). В более технических терминах магнитный монополь имел бы чистый «магнитный заряд». Современный интерес к этой концепции проистекает из теорий частиц, в частности из теорий великого единства и суперструн, которые предсказывают их существование.</Russian>
+		<Polish>[COLOR_HIGHLIGHT_TEXT]Monopol magnetyczny[COLOR_REVERT], to hipotetyczna cząstka elementarna w fizyce cząstek elementarnych, która jest izolowanym magnesem z tylko jednym biegunem magnetycznym (biegun północny bez bieguna południowego i odwrotnie). Współczesne zainteresowanie tą koncepcją wywodzi się z teorii cząstek, zwłaszcza teorii wielkiej unifikacji i teorii superstrun, które przewidują ich istnienie.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_MALAGASY</Tag>
@@ -5652,6 +5696,7 @@
 		<French>Malagache</French>
 		<Italian>Cittadino malgascio</Italian>
 		<Russian>Ìàëàãàñèéöû</Russian>
+		<Polish>Malgaska</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_MALAYSIAN</Tag>
@@ -5674,6 +5719,7 @@
 		<English>Mameluk</English>
 		<Italian>Cittadino mammelucco</Italian>
 		<Russian>Ìàìåëþêè</Russian>
+		<Polish>Mamelucka</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_MAMMOTH</Tag>
@@ -5694,6 +5740,7 @@
 		<English>A mammoth is any species of the extinct genus Mammuthus. These proboscideans are members of Elephantidae, the family of elephants and mammoths, and close relatives of modern elephants. They were often equipped with long curved tusks and, in northern species, a covering of long hair. They lived from the Pliocene Epoch from around 4.8 million years ago, into the Holocene at about 4,500 years ago. The largest known species, Songhua River mammoth (Mammuthus sungari), reached heights of at least 5 metres (16 ft) at the shoulder. Mammoths would probably normally weigh in the region of 6 to 8 tons, but exceptionally large males may have exceeded 12 tons. However, most species of mammoth were only about as large as a modern Asian elephant. Fossils of species of dwarf mammoth have been found on the Californian Channel Islands (Mammuthus exilis) and the Mediterranean island of Sardinia (Mammuthus lamarmorae). There was also a race of dwarf woolly mammoths on Wrangel Island, north of Siberia, within the Arctic Circle.</English>
 		<German>[COLOR_HIGHLIGHT_TEXT]Mammuts[COLOR_REVERT] sind eine ausgestorbene Gattung aus der Familie der Elefanten, von denen sich die meisten Arten durch eine gewaltige Körpergröße auszeichneten. Die frühen Menschen kamen hauptsächlich mit dem Wollhaarmammut in Kontakt, das sie bejagten oder zumindest schlachteten. Neben dem Fleisch wurden wie beim Elefanten auch Knochen und Elfenbein der Tiere verarbeitet. Mammutknochenhäuser wurden z.B. bei Ausgrabungen an verschiedenen Stellen in der Ukraine entdeckt.</German>
 		<Russian>Мамонт - это любой вид вымершего рода Mammuthus. Эти хоботки являются членами Elephantidae, семейства слонов и мамонтов, а также близкими родственниками современных слонов. Они часто были оснащены длинными изогнутыми бивнями, а у северных видов - покровом из длинной шерсти. Они жили с эпохи плиоцена, примерно 4,8 миллиона лет назад, в голоцен, примерно 4500 лет назад. Слово мамонт происходит от русского Mamont, вероятно, в свою очередь, из вогульского (мансийского) языка, mang ont, что означает «земляной рог».[PARAGRAPH:2]Как и их современный родственник слон (азиатский или африканский), мамонты были довольно большими; в английском языке существительное «мамонт» стало прилагательным, означающим «большой» или «массивный». Самый крупный из известных видов, мамонт реки Сунгари (Mammuthus sungari), достигал высоты не менее 5 метров (16 футов) в плече. Мамонты, вероятно, обычно весили бы от 6 до 8 тонн, но исключительно крупные самцы могли превышать 12 тонн. Однако большинство видов мамонтов были размером с современного азиатского слона. Окаменелости карликовых мамонтов были найдены на Калифорнийских Нормандских островах (Mammuthus exilis) и на средиземноморском острове Сардиния (Mammuthus lamarmorae). Также была раса карликовых шерстистых мамонтов на острове Врангеля, к северу от Сибири, за Полярным кругом.[PARAGRAPH:2]Бивень мамонта длиной 11 футов (3,4 м) был обнаружен к северу от Линкольна, штат Иллинойс, в 2005 году.[PARAGRAPH:2]Основываясь на исследованиях их близких родственников, современных слонов, у мамонтов, вероятно, был период беременности 22 месяца, в результате чего родился единственный мамонтенок. Их социальная структура, вероятно, была такой же, как у африканских и азиатских слонов, с самками, живущими в стадах, возглавляемых матриархом, в то время как быки жили уединенно или образовывали свободные группы после половой зрелости.</Russian>
+		<Polish>[COLOR_HIGHLIGHT_TEXT]Mamut[COLOR_REVERT], to dowolny gatunek wymarłego rodzaju Mammuthus. Te trąbaki są członkami Elephantidae, rodziny słoni i mamutów oraz bliskimi krewnymi współczesnych słoni. Często były wyposażone w długie zakrzywione kły, a u gatunków północnych w osłonę długich włosów. Żyły od epoki pliocenu sprzed około 4,8 miliona lat do holocenu około 4500 lat temu. Największy znany gatunek, mamut rzeczny Songhua (Mammuthus sungari), osiągał wysokość co najmniej 5 metrów w kłębie. Mamuty zwykle ważyły od 6 do 8 ton, ale wyjątkowo duże samce mogły przekraczać 12 ton. Jednak większość gatunków mamutów była mniej więcej tak duża jak współczesny słoń azjatycki. Skamieniałości gatunków mamutów karłowatych odkryto na kalifornijskich Wyspach Normandzkich (Mammuthus exilis) i na śródziemnomorskiej wyspie Sardynii (Mammuthus lamarmorae). Na Wyspie Wrangla, na północ od Syberii, za kołem podbiegunowym, występowała także rasa mamutów włochatych karłowatych.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_MANCHURIAN</Tag>
@@ -5713,7 +5760,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_MANGANESE_PEDIA</Tag>
 		<English>Manganese is a chemical element, designated by the symbol Mn. It has the atomic number 25. It is found as a free element in nature (often in combination with iron), and in many minerals. Manganese is a metal with important industrial metal alloy uses, particularly in stainless steels. Historically, manganese is named for various black minerals (such as pyrolusite) from the same region of Magnesia in Greece which gave names to similar-sounding magnesium, Mg, and magnetite, an ore of the element iron, Fe. By the mid-18th century, Swedish chemist Carl Wilhelm Scheele had used pyrolusite to produce chlorine. Scheele and others were aware that pyrolusite (now known to be manganese dioxide) contained a new element, but they were not able to isolate it. Johan Gottlieb Gahn was the first to isolate an impure sample of manganese metal in 1774, by reducing the dioxide with carbon.</English>
-		<Polish>Mangan (Mn, &#179;ac. manganum) - pierwiastek chemiczny nale&#191;&#185;cy w uk&#179;adzie okresowym do grupy metali przej&#156;ciowych. Ma 15 izotop&#243;w z przedzia&#179;u mas 49-62 i izomery j&#185;drowe 51m, 52m, 54m. Trwa&#179;y jest tylko izotop 55, kt&#243;ry stanowi niemal 100% sk&#179;adu izotopowego manganu wyst&#234;puj&#185;cego w naturze.</Polish>
+		<Polish>[COLOR_HIGHLIGHT_TEXT]Mangan[COLOR_REVERT], to pierwiastek chemiczny nale&#191;&#185;cy w uk&#179;adzie okresowym do grupy metali przej&#156;ciowych. Ma 15 izotop&#243;w z przedzia&#179;u mas 49-62 i izomery j&#185;drowe 51m, 52m, 54m. Trwa&#179;y jest tylko izotop 55, kt&#243;ry stanowi niemal 100% sk&#179;adu izotopowego manganu wyst&#234;puj&#185;cego w naturze.</Polish>
 		<Russian>Ìàðãàíåö - ýòî õèìè÷åñêèé ýëåìåíò, îáîçíà÷åííûé ñèìâîëîì Mn. Îí èìååò àòîìíûé íîìåð 25. Îí âñòðå÷àåòñÿ êàê ñâîáîäíûé ýëåìåíò â ïðèðîäå (÷àñòî â ñî÷åòàíèè ñ æåëåçîì) è âî ìíîãèõ ìèíåðàëàõ. Ìåòàëëè÷åñêèé ìàðãàíåö èñïîëüçóåòñÿ ñ âàæíûìè ïðîìûøëåííûìè ìåòàëëè÷åñêèìè ñïëàâàìè, â ÷àñòíîñòè ñ íåðæàâåþùèìè ñòàëÿìè.
 Èñòîðè÷åñêè, ìàðãàíåö íàçâàí â ÷åñòü ÷åðíûõ ìèíåðàëîâ (òàêèõ êàê ïèðîëþçèò) èç òîé æå îáëàñòè Ìàãíåçèÿ â Ãðåöèè, êîòîðûé äàë èìåíà áëèçêèå ïî çâó÷àíèþ ìàãíèÿ, Mg, è ìàãíåòèòó, ðóäû ýëåìåíòà æåëåçà, FE. Ê ñåðåäèíå 18 âåêà øâåäñêèé õèìèê Êàðë Âèëüãåëüì Øååëå èñïîëüçóåò ïèðîëþçèò äëÿ ïðîèçâîäñòâà õëîðà. Øååëå è äðóãèå õèìèêè áûëè â êóðñå, ÷òî â ïèðîëþçèòå (òåïåðü èçâåñòåí, êàê äèîêñèä ìàðãàíöà), ñîäåðæàùèòñÿ íîâûé ýëåìåíò, íî îíè áûëè íå â ñîñòîÿíèè âûäåëèòü åãî. Éîõàí Ãîòòëèá Ãàí áûë ïåðâûì, âûäåëèâøèé íåî÷èùåííûé îáðàçåö ìåòàëëè÷åñêîãî ìàðãàíöà â 1774 ãîäó çà ñ÷åò âûìûâàíèÿ äèîêñèäà óãëåðîäà.</Russian>
 	</TEXT>
@@ -5728,12 +5775,14 @@
 		</German>
 		<Spanish>Mangos</Spanish>
 		<Russian>Ìàíãî</Russian>
+		<Polish>Mango</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_MANGO_PEDIA</Tag>
 		<English>The mango is a fleshy stone fruit belonging to the genus Mangifera, consisting of numerous tropical fruiting trees in the flowering plant family Anacardiaceae. The mango is native to India from where it spread all over the world. It is one of the most cultivated fruits of the tropical world. While other Mangifera species are also grown on a more localized basis, Mangifera indica the common mango or Indian mango is the only mango tree commonly cultivated in many tropical and subtropical regions, and its fruit is distributed essentially worldwide. In several cultures, its fruit and leaves are ritually used as floral decorations at weddings, public celebrations and religious ceremonies.</English>
 		<German>Die [COLOR_HIGHLIGHT_TEXT]Mango[COLOR_REVERT] (Mangifera indica) gehört zur Familie der Sumachgewächse (Anacardiaceae). Der Mangobaum ist immergrün, schnellwüchsig und langlebig und kann bis zu 300 der ei- bis birnenförmigen Früchte tragen. Er stammt aus Borneo und einem Gebiet zwischen Indien und Myanmar und ist in tropischen Regenwäldern heimisch. Die Mango wird bereits in den hinduistischen Veden (etwa 1200 v.Chr.) als Götterspeise erwähnt und auch heute opfert man sie noch den Göttern. In Europa werden die Bäume hauptsächlich in Spanien angebaut. Mangos werden nicht nur als Nahrungsmittel genutzt, das Pflanzenfett aus den Samen kann ähnlich wie Kakaobutter zur Herstellung von Schokolade, Margarine und Pflegeprodukten verwendet werden. Außerdem soll die Mango gegen Entzündungen, Diabetes und Reizdarm wirken und das Herz stärken.</German>
 		<Russian>Манго - это мясистый косточковый плод, принадлежащий к роду Mangifera, состоящему из многочисленных плодоносящих тропических деревьев семейства цветковых растений Anacardiaceae. Манго родом из Индии, откуда распространилось по всему миру. Это один из самых культивируемых фруктов тропического мира. В то время как другие виды Mangifera также выращиваются на более локальной основе, Mangifera indica, обычное манго или индийское манго, является единственным манговым деревом, обычно культивируемым во многих тропических и субтропических регионах, а его плоды распространены по всему миру.[PARAGRAPH:2]В некоторых культурах его плоды и листья ритуально используются в качестве цветочных украшений на свадьбах, публичных торжествах и религиозных церемониях.</Russian>
+		<Polish>[COLOR_HIGHLIGHT_TEXT]Mango[COLOR_REVERT], to mięsisty owoc pestkowy należący do rodzaju Mangifera, składającego się z licznych tropikalnych drzew owocujących z rodziny roślin kwitnących Anacardiaceae. Mango pochodzi z Indii, skąd rozprzestrzeniło się na cały świat. Jest to jeden z najczęściej uprawianych owoców tropikalnego świata. Podczas gdy inne gatunki Mangifera są uprawiane bardziej lokalnie, Mangifera indica, mango pospolite lub mango indyjskie, jest jedynym drzewem mango powszechnie uprawianym w wielu regionach tropikalnych i subtropikalnych, a jego owoce są rozprowadzane na całym świecie. W kilku kulturach jej owoce i liście są rytualnie używane jako dekoracje kwiatowe na weselach, uroczystościach publicznych i ceremoniach religijnych.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_MANI</Tag>
@@ -5773,6 +5822,7 @@
 		<English>Marble is a kind of limestone, used by man for millennia. It is a useful material for construction, especially in dry climates. Marble is an excellent material from which to make statues, as well. Marble surfaces can be polished to a beautiful sheen, but the rock remains attractive even when the surface is left rough. The Egyptians used marble blocks to line the outside of the Pyramid of Cheops. The Greeks used blocks of marble to construct some of their buildings; they also used the material to sculpt some of the world's great artworks. The Romans were the first to use slabs of marble as wall coverings. Marble remains one of the most popular construction and artistic materials extant.</English>
 		<German>Marmor ist eine Kalksteinart, die schon seit Jahrtausenden genutzt wird. Er eignet sich vor allem in trockenen Regionen als Baumaterial und für die Herstellung von Statuen. Marmoroberflächen können poliert werden, werden aber auch naturbelassen eingesetzt. [PARAGRAPH:1]Die Ägypter nutzten Marmorblöcke, um die Außenseite der Cheopspyramide zu verkleiden. Die Griechen konstruierten einige Gebäude aus Marmorblöcken und schufen aus diesem Material einige der schönsten Kunstwerke der Welt. Die Römer verwendeten erstmals Marmorplatten als Wandbedeckungen. Marmor gehört bis heute zu den beliebtesten Materialien für Bau- und Kunstwerke.</German>
 		<Russian>Мрамор - это разновидность известняка, которую человек использовал на протяжении тысячелетий. Это полезный материал для строительства, особенно в сухом климате. Мрамор - отличный материал для изготовления статуй. Мраморные поверхности можно отполировать до красивого блеска, но камень остается привлекательным, даже если поверхность оставить шероховатой.[PARAGRAPH:1]Египтяне использовали мраморные блоки для облицовки внешней стороны пирамиды Хеопса. Греки использовали мраморные блоки для строительства некоторых своих зданий; они также использовали этот материал для создания некоторых великих произведений искусства в мире. Римляне первыми использовали мраморные плиты в качестве настенных покрытий. Мрамор остается одним из самых популярных сохранившихся строительных и художественных материалов.</Russian>
+		<Polish>[COLOR_HIGHLIGHT_TEXT]Marmur[COLOR_REVERT], to rodzaj wapienia, wykorzystywanego przez człowieka od tysiącleci. Jest to przydatny materiał w budownictwie, szczególnie w suchym klimacie. Marmur to także doskonały materiał do wykonywania posągów. Powierzchnie marmuru można wypolerować do pięknego połysku, ale skała pozostaje atrakcyjna nawet wtedy, gdy powierzchnia pozostaje szorstka. Egipcjanie używali bloków marmuru do wyłożenia zewnętrznej części Piramidy Cheopsa. Grecy używali bloków marmuru do budowy niektórych swoich budynków; wykorzystali ten materiał również do wyrzeźbienia niektórych z najwspanialszych dzieł sztuki na świecie. Rzymianie jako pierwsi zastosowali płyty marmurowe jako pokrycie ścian. Marmur pozostaje jednym z najpopularniejszych materiałów budowlanych i artystycznych.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_MARIC</Tag>
@@ -5786,12 +5836,14 @@
 		<French>Algues martiennes</French>
 		<Italian>Alga marziana</Italian>
 		<Russian>Ìàðñ. âîäîðîñëè</Russian>
+		<Polish>Algi marsjańskie</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_MARTIAN_ALGAE_PEDIA</Tag>
 		<English>Algae are a group of single or multi-cellular plant-based organisms. They are found mostly near the water surface, and are made only of tissues (called "thallus") and have no roots, stems or leaves. Their presence on Mars is important to testify the success of the terraforming process.</English>
 		<Italian>Le alghe sono un gruppo di organismi vegetali monocellulari o multicellulari. Si trovano principalmente vicino alla superficie dell'acqua e sono fatti solo di tessuti (chiamati "tallo") e non hanno radici, steli o foglie. La loro presenza su Marte è un'importante testimonianza del successo del processo di terraformazione.</Italian>
 		<Russian>Водоросли - это группа одноклеточных или многоклеточных организмов растительного происхождения. В основном они встречаются у поверхности воды, состоят только из тканей (называемых «слоевищами») и не имеют корней, стеблей или листьев. Их присутствие на Марсе важно для подтверждения успеха процесса терраформирования.</Russian>
+		<Polish>[COLOR_HIGHLIGHT_TEXT]Glony[COLOR_REVERT], to grupa jedno- lub wielokomórkowych organizmów roślinnych. Występują głównie w pobliżu powierzchni wody i składają się wyłącznie z tkanek, nie mają korzeni, łodyg ani liści. Ich obecność na Marsie jest ważna, gdyż może świadczyć o powodzeniu procesu terraformowania.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_MARTIAN_BLUEBERRIES</Tag>
@@ -5799,6 +5851,7 @@
 		<French>Myrtilles martiennes</French>
 		<Italian>Mirtillo marziano</Italian>
 		<Russian>Ìàðñèàíñêàÿ ÷åðíèêà</Russian>
+		<Polish>Borówki marsjańskie</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_MARTIAN_BLUEBERRIES_PEDIA</Tag>
@@ -5806,6 +5859,7 @@
 		<French>Ce ne sont pas des bleuets comestibles. Ce sont des gisements particulièrement riches de métaux utiles.</French>
 		<Italian>Benché si chiamino "mirtilli", non sono frutti commestibili, ma depositi particolarmente ricchi di metalli utili.</Italian>
 		<Russian>Ýòî íåñúåäîáíàÿ ÷åðíèêà. Ñêîðåå, ýòî îñîáåííî áîãàòûå çàëåæè ïîëåçíûõ ìåòàëëîâ.</Russian>
+		<Polish>To nie są borówki jadalne. Są to szczególnie bogate złoża metali użytecznych.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_MARTIAN_CROPS</Tag>
@@ -5813,12 +5867,14 @@
 		<French>Céréales martiens</French>
 		<Italian>Coltura marziana</Italian>
 		<Russian>Ìàðñ. ïðîäóêòû</Russian>
+		<Polish>Uprawy marsjańskie</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_MARTIAN_CROPS_PEDIA</Tag>
 		<English>A crop is a plant or animal product that can be grown and harvested extensively for profit or subsistence. The term may refer either to the harvested parts or to the harvest in a more refined state. Crops growth on Mars is important to testify the success of the terraforming process.</English>
 		<Italian>Una coltura è un prodotto vegetale o animale che può essere coltivato e raccolto ampiamente a scopo di lucro o di sussistenza. Il termine può riferirsi alle singole parti raccolte o al raccolto in uno stato più raffinato. Lo sviluppo di colture su Marte è un'importante testimonianza del successo del processo di terraformazione.</Italian>
 		<Russian>Урожай - это растение или продукт животного происхождения, который можно выращивать и собирать для получения прибыли или пропитания. Термин может относиться либо к собранным частям, либо к урожаю в более очищенном состоянии. Рост сельскохозяйственных культур на Марсе важен для подтверждения успеха процесса терраформирования.</Russian>
+		<Polish>[COLOR_HIGHLIGHT_TEXT]Uprawa[COLOR_REVERT], to produkt roślinny lub zwierzęcy, który można uprawiać i zbierać na szeroką skalę w celu osiągnięcia zysku lub utrzymania. Termin ten może odnosić się albo do zebranych części, albo do zbiorów w bardziej wyrafinowanym stanie. Wzrost plonów na Marsie jest ważnym czynnikiem potwierdzającym powodzenie procesu terraformowania.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_MARTIAN_ELECTRONICS</Tag>
@@ -5826,12 +5882,14 @@
 		<French>Electroniques martiennes</French>
 		<Italian>Elettronica marziana</Italian>
 		<Russian>Ìàðñ. ýëåêòðîíèêà</Russian>
+		<Polish>Elektronika marsjańska</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_MARTIAN_ELECTRONICS_PEDIA</Tag>
 		<English>Consumer electronics or home electronics are analog or digital electronic equipment intended for everyday use, typically in private homes. Consumer electronics include devices used for entertainment, communications, and home-office activities. The development of such an industry on Mars is important to testify the thriving of the human colonies on the Red Planet.</English>
 		<Italian>L'elettronica di consumo comprende le apparecchiature elettroniche analogiche o digitali destinate all'uso quotidiano, in genere nelle case private. L'elettronica di consumo include dispositivi utilizzati per attività di intrattenimento, comunicazione e attività a casa e in ufficio. Lo sviluppo di tale industria su Marte è un'importante testimonianza della prosperità delle colonie umane sul pianeta rosso.</Italian>
 		<Russian>Бытовая или домашняя электроника - это аналоговое или цифровое электронное оборудование, предназначенное для повседневного использования, обычно в частных домах. К бытовой электронике относятся устройства, используемые для развлечений, связи и домашнего офиса. Развитие такой индустрии на Марсе является важным свидетельством процветания человеческих колоний на Красной планете.</Russian>
+		<Polish>[COLOR_HIGHLIGHT_TEXT]Elektronika użytkowa[COLOR_REVERT] lub elektronika domowa to analogowy lub cyfrowy sprzęt elektroniczny przeznaczony do codziennego użytku, zazwyczaj w domach prywatnych. Elektronika użytkowa obejmuje urządzenia wykorzystywane do rozrywki, komunikacji i prowadzenia domowego biura. Rozwój takiego przemysłu na Marsie jest ważnym świadectwem rozkwitu kolonii ludzkich na Czerwonej Planecie.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_MARTIAN_FRUIT</Tag>
@@ -5839,12 +5897,14 @@
 		<French>Fruits martiens</French>
 		<Italian>Frutta marziana</Italian>
 		<Russian>Ìàðñ. ôðóêòû</Russian>
+		<Polish>Owoc marsjański</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_MARTIAN_FRUIT_PEDIA</Tag>
 		<English>A fruit is the seed-bearing structure in flowering plants, and are the means by which angiosperms disseminate seeds. Edible fruits, in particular, have propagated with the movements of humans and animals in a symbiotic relationship as a means for seed dispersal and nutrition. Their growth on Mars is important to testify the success of the terraforming process.</English>
 		<Italian>Un frutto è la struttura portante del seme nelle piante da fiore e sono il mezzo con cui le angiosperme diffondono i semi. I frutti commestibili, in particolare, si sono propagati con i movimenti di esseri umani e animali, in una relazione simbiotica come mezzo per la dispersione e l'alimentazione dei semi. La loro crescita su Marte è un'importante testimonianza del successo del processo di terraformazione.</Italian>
 		<Russian>Плод - это семенная структура у цветковых растений и средство распространения семян покрытосеменными. Съедобные плоды, в частности, размножаются вместе с перемещениями людей и животных в симбиотических отношениях как средство распространения семян и питания. Их рост на Марсе важен для подтверждения успеха процесса терраформирования.</Russian>
+		<Polish>[COLOR_HIGHLIGHT_TEXT]Owoc[COLOR_REVERT], jest strukturą zawierającą nasiona w roślinach kwitnących i jest środkiem, za pomocą którego rośliny okrytozalążkowe rozprzestrzeniają nasiona. W szczególności owoce jadalne rozmnażały się wraz z przemieszczaniem się ludzi i zwierząt w symbiozie, stanowiąc sposób na rozsiewanie nasion i odżywianie. Ich rozwój na Marsie jest ważnym dowodem powodzenia procesu terraformowania.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_MARTIAN_MANUFACTURED_GOODS</Tag>
@@ -5852,12 +5912,14 @@
 		<French>Marchandises martiennes</French>
 		<Italian>Manufatto marziano</Italian>
 		<Russian>Ìàðñ. ïîëóôàáðèêàòû</Russian>
+		<Polish>Towary produkowane na Marsie</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_MARTIAN_MANUFACTURED_GOODS_PEDIA</Tag>
 		<English>A manufactured good is a commodity that is used by a consumer to satisfy current wants or needs or to produce another, more complex good. The manufacturing process begins with the product design, and materials specification from which the product is made. These materials are then modified through manufacturing processes to become the required object. The development of such an industry on Mars is important to testify the thriving of the human colonies on the Red Planet.</English>
 		<Italian>Un manufatto è un prodotto che viene utilizzato da un consumatore per soddisfare i suoi desideri o necessità oppure per produrre un altro bene più complesso. Il processo di fabbricazione inizia con la progettazione del prodotto e le specifiche dei materiali con cui il prodotto è realizzato. Questi materiali vengono quindi modificati attraverso i processi di produzione per diventare l'oggetto richiesto. Lo sviluppo di tale industria su Marte è un'importante testimonianza della prosperità delle colonie umane sul pianeta rosso.</Italian>
 		<Russian>Полуфабрикат - это товар, который используется потребителем для удовлетворения текущих потребностей или для производства другого, более сложного товара. Производственный процесс начинается с дизайна продукта и спецификации материалов, из которых он изготовлен. Затем эти материалы модифицируются в процессе производства, чтобы стать необходимым объектом. Развитие такой индустрии на Марсе является важным свидетельством процветания человеческих колоний на Красной планете.</Russian>
+		<Polish>[COLOR_HIGHLIGHT_TEXT]Dobro wytworzone[COLOR_REVERT], to towar używany przez konsumenta do zaspokojenia bieżących pragnień lub potrzeb lub do wytworzenia innego, bardziej złożonego dobra. Proces produkcyjny rozpoczyna się od projektu produktu i specyfikacji materiałów, z których produkt jest wykonany. Materiały te są następnie modyfikowane w procesach produkcyjnych, aby stać się wymaganym przedmiotem. Rozwój takiego przemysłu na Marsie jest ważnym świadectwem rozkwitu kolonii ludzkich na Czerwonej Planecie.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_MARTIAN_ROCKS</Tag>
@@ -5873,6 +5935,7 @@
 		<English>A Martian rock is a rocky element found on Mars and taken for research or scientific purposes. The International Astronomical Union's official Martian naming system declares that objects smaller than 100 m (330 ft) are not to be given official names. Because of this, some less significant rocks have largely unofficial, and sometimes conflicting, designations.</English>
 		<Italian>Una roccia marziana è un elemento roccioso trovato su Marte e prelevato per scopi di ricerca o scientifici. Il sistema ufficiale di denominazione relativo a Marte dell'Unione Astronomica Internazionale dichiara che non devono essere assegnati nomi ufficiali agli oggetti di dimensioni inferiori a 100 m. Per questo motivo, alcune rocce meno significative hanno designazioni in gran parte non ufficiali e talvolta contrastanti.</Italian>
 		<Russian>Марсианская скала - это каменистый элемент, обнаруженный на Марсе и использованный в исследовательских или научных целях. Официальная марсианская система именования Международного астрономического союза заявляет, что объектам меньше 100 метров не следует давать официальных имен. Из-за этого некоторые менее значимые породы имеют в основном неофициальные, а иногда и противоречивые названия.</Russian>
+		<Polish>[COLOR_HIGHLIGHT_TEXT]Skała marsjańska[COLOR_REVERT], to element skalisty znaleziony na Marsie i pobrany do celów badawczych lub naukowych. Oficjalny system nazewnictwa marsjańskiego Międzynarodowej Unii Astronomicznej stanowi, że obiektom mniejszym niż 100 m nie należy nadawać oficjalnych nazw. Z tego powodu niektóre mniej znaczące skały mają w dużej mierze nieoficjalne, a czasem sprzeczne oznaczenia.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_MARTIAN_VEGETABLES</Tag>
@@ -5880,12 +5943,14 @@
 		<French>Légumes martiens</French>
 		<Italian>Verdura marziana</Italian>
 		<Russian>Ìàðñ. îâîùè</Russian>
+		<Polish>Warzywa marsjańskie</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_MARTIAN_VEGETABLES_PEDIA</Tag>
 		<English>Vegetables are parts of plants that are consumed by humans or other animals as food. The original meaning of the term is still used to refer to all edible plant matter, including the flowers, fruits, stems, leaves, roots, and seeds. Their growth on Mars is important to testify the success of the terraforming process.</English>
 		<Italian>Le verdure sono parti di piante che vengono consumate dall'uomo o da altri animali come cibo. Il significato originale del termine è ancora usato per indicare tutta la materia vegetale commestibile, inclusi fiori, frutti, steli, foglie, radici e semi. La loro crescita su Marte è un'importante testimonianza del successo del processo di terraformazione.</Italian>
 		<Russian>Начинающая цивилизация, такая как ваш марсианский город, нуждается в качественной пище для роста численности населения.</Russian>
+		<Polish>[COLOR_HIGHLIGHT_TEXT]Warzywa[COLOR_REVERT], to części roślin spożywane przez ludzi lub inne zwierzęta jako żywność. Pierwotne znaczenie tego terminu jest nadal używane w odniesieniu do całej jadalnej materii roślinnej, w tym kwiatów, owoców, łodyg, liści, korzeni i nasion. Ich rozwój na Marsie jest ważnym dowodem powodzenia procesu terraformowania.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_MARZIPAN</Tag>
@@ -5898,7 +5963,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_MARZIPAN_PEDIA</Tag>
 		<English>Marzipan is a confection consisting primarily of sugar or honey and almond meal, sometimes augmented with almond oil or extract. It is often made into sweets; common uses are marzipan-filled chocolate and small marzipan imitations of fruits and vegetables. It is also rolled into thin sheets and glazed for icing cakes, primarily birthday and wedding cakes and Christmas cakes. This use is particularly common in England, on large fruitcakes. Marzipan (or almond paste) may also be used as a cake ingredient, as in stollen. In some countries, it is shaped into small figures of animals as a traditional treat for New Year's Day. Marzipan is also used in Tortell, and in some versions of king cake eaten during the Carnival season. Traditional Swedish Princess Cake is typically covered with a layer of marzipan that has been tinted pale green.</English>
-		<Polish>Marcepan - s&#179;odka masa cukiernicza utworzona g&#179;&#243;wnie z pra&#191;onych i zmielonych migda&#179;&#243;w i cukru z dodatkiem olejku migda&#179;owego. Pod wp&#179;ywem ciep&#179;a (wystarczy ogrzanie w d&#179;oni) masa staje si&#234; plastyczna, dlatego bywa u&#191;ywana do wyrobu ozdobnych, skomplikowanych kszta&#179;t&#243;w.</Polish>
+		<Polish>[COLOR_HIGHLIGHT_TEXT]Marcepan[COLOR_REVERT], to s&#179;odka masa cukiernicza utworzona g&#179;&#243;wnie z pra&#191;onych i zmielonych migda&#179;&#243;w i cukru z dodatkiem olejku migda&#179;owego. Pod wp&#179;ywem ciep&#179;a (wystarczy ogrzanie w d&#179;oni) masa staje si&#234; plastyczna, dlatego bywa u&#191;ywana do wyrobu ozdobnych, skomplikowanych kszta&#179;t&#243;w.</Polish>
 		<Russian>Ìàðöèïàí - ýòî êîíäèòåðñêîå èçäåëèå, ñîñòîÿùåå â îñíîâíîì èç ñàõàðà èëè ìåäà è ìèíäàëüíîé ìóêè, èíîãäà ïðèïðàâëåííîå ìèíäàëüíûì ìàñëîì èëè ýêñòðàêòîì. Ýòî ÷àñòî äåëàåòñÿ â ñëàäîñòÿõ; îáû÷íî èñïîëüçóþòñÿ ìàðöèïàíû è øîêîëàäíûå ìàëåíüêèå èìèòàöèè ôðóêòîâ è îâîùåé. Èõ òàêæå ðàñêàòûâàþò â òîíêèå ëèñòû èç ãëàçóðè äëÿ òîðòîâ, â ïåðâóþ î÷åðåäü, ê äíÿì ðîæäåíèÿ, äëÿ ñâàäåáíûõ ïèðîãîâ è Ðîæäåñòâåíñêèõ òîðòû. Ýòî ïðèìåíåíèå îñîáåííî ðàñïðîñòðàíåíî â Àíãëèè íà áîëüøèå êåêñû. Ìàðöèïàí (èëè ìèíäàëüíîé ïàñòà) ìîæåò òàêæå èñïîëüçîâàòüñÿ êàê èíãðåäèåíò äëÿ òîðòà. Â íåêîòîðûõ ñòðàíàõ îíî ôîðìèðóåòñÿ â íåáîëüøèå ôèãóðêè æèâîòíûõ, êàê òðàäèöèîííîå ëàêîìñòâî íà Íîâûé Ãîä. Ìàðöèïàí òàêæå èñïîëüçóåòñÿ â ðóëåòàõ, è â íåêîòîðûõ âåðñèÿõ êîðîëü ñüåäàåò òîðò âî âðåìÿ êàðíàâàëüíîãî ñåçîíà. Òðàäèöèîííûé òîðò øâåäñêàÿ Ïðèíöåññà îáû÷íî ïîêðûò ñëîåì ìàðöèïàíà, êîòîðûé òîíèðîâàí â áëåäíî-çåëåíûé öâåò.</Russian>
 	</TEXT>
 	<TEXT>
@@ -5919,6 +5984,7 @@
 		<Tag>TXT_KEY_BONUS_MASCAGNITE_PEDIA</Tag>
 		<English>Mascagnite is a rare ammonium sulfate mineral. It crystallizes in the orthorhombic system typically forming as stalactitic masses exhibiting good cleavage. It is soft (not higher than 2.5 on the Mohs Scale) and water soluble. Optical properties are variable; the purest form is transparent and colorless, but opaque gray or yellow deposits are also known.</English>
 		<Russian>Ìàñêàíüèò - ýòî ðåäêèé ìèíåðàë ñóëüôàòà àììîíèÿ. Îí êðèñòàëëèçóåòñÿ â ðîìáè÷åñêóþ ñèñòåìó, îáðàçóÿñü îáû÷íî â ñòàëàêòèòîâûõ ìàññàõ âûäàâàÿ õîðîøóþ ñïàéíîñòü. Îí ìÿãîê (íå âûøå 2.5 ïî øêàëå Ìîîñà) è âîäîðàñòâîðèì. Îïòè÷åñêèå ñâîéñòâà ÿâëÿþòñÿ ïåðåìåííûìè; â ÷èñòîì âèäå ïðîçðà÷åí è áåñöâåòåí, íî òàêæå èçâåñòíû íåïðîçðà÷íûå ñåðûå èëè æåëòûå îòëîæåíèÿ.</Russian>
+		<Polish>[COLOR_HIGHLIGHT_TEXT]Maskagnit[COLOR_REVERT], to rzadki minerał siarczanu amonu. Krystalizuje w układzie rombowym, zwykle tworząc masy stalaktytowe charakteryzujące się dobrym rozszczepieniem. Jest miękki (nie więcej niż 2,5 w skali Mohsa) i rozpuszczalny w wodzie. Właściwości optyczne są zmienne; najczystsza postać jest przezroczysta i bezbarwna, ale znane są również nieprzezroczyste szare lub żółte osady.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_MASKS</Tag>
@@ -5931,7 +5997,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_MASKS_PEDIA</Tag>
 		<English>A mask is an object normally worn on the face, typically for protection, disguise, performance or entertainment. Masks have been used since antiquity for both ceremonial and practical purposes. They are usually worn on the face, although they may also be positioned for effect elsewhere on the wearer's body, so in parts of Australia giant totem masks cover the body, whilst Inuit women use finger masks during storytelling and dancing</English>
-		<Polish>Maska - przykrycie twarzy lub jej cz&#234;&#156;ci, z otworami na oczy, pocz&#185;tkowo u&#191;ywane w celach magicznych lub obrz&#234;dowych. Maski mog&#185; mie&#230; r&#243;&#191;ne kszta&#179;ty, czasami przedstawiaj&#185; emocje, innym razem zwierz&#234;, demona lub potwora. Maski wyst&#234;puj&#185; w r&#243;&#191;nych kulturach i obszarach geograficznych. W Europie znane np. w staro&#191;ytnym teatrze greckim, od &#156;redniowiecza u&#191;ywane w czasie zabaw karnawa&#179;owych zwanych maskaradami. Od XVI w. wprowadzone do teatru dworskiego, p&#243;&#159;niej do commedii dell'arte.</Polish>
+		<Polish>[COLOR_HIGHLIGHT_TEXT]Maska[COLOR_REVERT], to przykrycie twarzy lub jej cz&#234;&#156;ci, z otworami na oczy, pocz&#185;tkowo u&#191;ywane w celach magicznych lub obrz&#234;dowych. Maski mog&#185; mie&#230; r&#243;&#191;ne kszta&#179;ty, czasami przedstawiaj&#185; emocje, innym razem zwierz&#234;, demona lub potwora. Maski wyst&#234;puj&#185; w r&#243;&#191;nych kulturach i obszarach geograficznych. W Europie znane np. w staro&#191;ytnym teatrze greckim, od &#156;redniowiecza u&#191;ywane w czasie zabaw karnawa&#179;owych zwanych maskaradami. Od XVI w. wprowadzone do teatru dworskiego, p&#243;&#159;niej do commedii dellłarte.</Polish>
 		<Russian>Ìàñêà - ýòî ïðåäìåò îáû÷íî íîñèìûé íà ëèöå, êàê ïðàâèëî, äëÿ çàùèòû, ìàñêèðîâêè èëè ðàçâëå÷åíèÿ. Ìàñêè èñïîëüçîâàëèñü ñ äðåâíîñòè äëÿ öåðåìîíèàëüíûõ è ïðàêòè÷åñêèõ öåëåé. Èõ îáû÷íî íîñèëè íà ëèöå, õîòÿ îíè òàêæå ìîãëè áûòü ðàçìåùåíû è íà äðóãèõ ìåñòàõ äëÿ ïóùåãî ýôôåêòà, ïîýòîìó â íåêîòîðûõ ÷àñòÿõ Àâñòðàëèè ãèãàíòñêèå òîòåìíûå ìàñêè ïîêðûâàþò âñå òåëî, à æåíùèíû-èííóèòîâ èñïîëüçîâàëè ïàëüöû ìàñêè âî âðåìÿ ñêàçàíèé è òàíöåâ.</Russian>
 	</TEXT>
 	<TEXT>
@@ -5939,7 +6005,7 @@
 		<English>Massagetae</English>
 		<French>Massagètes</French>
 		<Italian>Cittadino massageto</Italian>
-		<Polish>Massageci</Polish>
+		<Polish>Massagecka</Polish>
 		<Russian>Ìàññàãåòû</Russian>
 	</TEXT>
 	<TEXT>
@@ -5947,7 +6013,7 @@
 		<English>Mayan</English>
 		<French>Maya</French>
 		<Italian>Cittadino maya</Italian>
-		<Polish>Maja</Polish>
+		<Polish>Majów</Polish>
 		<Russian>Ìàéÿíöû</Russian>
 	</TEXT>
 	<TEXT>
@@ -5961,7 +6027,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_MECHS_PEDIA</Tag>
 		<English>The majority of Mechs are bipedal and can be classed as either humanoid or reverse-joint ("chicken walker"). Humanoid-type BattleMechs are the most common and include the iconic Atlas and Summoner (Thor). Reverse-joint 'Mechs are slightly less common on the field of battle, but include such famous models as the Supernova, Marauder, Catapult, Timber Wolf (Mad Cat) and the Dire Wolf (Daishi). There are a few, however, with digitigrade legs that have a raised ankle and stand on their toes, like the legs of a dog, cat, etc. Examples include the Thanatos and Nova Cat.</English>
-		<Polish>Mecha - du&#191;e, najcz&#234;&#156;ciej humanoidalne roboty, sterowane przez umieszczonego w jego wn&#234;trzu pilota, autonomiczne b&#185;d&#159; te&#191; zdalnie.</Polish>
+		<Polish>[COLOR_HIGHLIGHT_TEXT]Mechy[COLOR_REVERT], to du&#191;e, najcz&#234;&#156;ciej humanoidalne roboty, sterowane przez umieszczonego w jego wn&#234;trzu pilota, autonomiczne b&#185;d&#159; te&#191; zdalnie.</Polish>
 		<Russian>Большинство шагоходов - двуногие и могут быть классифицированы как гуманоидные меха или обратносочлененные («куриные ходунки»). Боевые роботы гуманоидного типа являются наиболее распространенными и включают в себя культовый «Атлас» и «Призыватель» (Тор). Механоиды с обратным приводом немного реже встречаются на поле боя, но включают такие известные модели, как «Супернова», «Мародер», «Катапульта», «Волк» («Бешеный кот») и «Ужасный волк». Тем не менее, есть несколько серийных образцов с пальцевидными опорами, с приподнятой щиколоткой и стоящими на носках, как например, у собачьих или кошачьих лап и т. д. В качестве примера можно привести «Танатоса».</Russian>
 	</TEXT>
 	<TEXT>
@@ -5969,6 +6035,7 @@
 		<English>Median</English>
 		<Italian>Cittadino medo</Italian>
 		<Russian>Ìèäÿíå</Russian>
+		<Polish>Medyjska</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_MEDICAL_TRICORDERS</Tag>
@@ -5983,6 +6050,7 @@
 		<English>A medical tricorder is a handheld portable scanning device to be used by consumers to self-diagnose medical conditions within seconds and take basic vital measurements, such as blood pressure, temperature, and flow in a noninvasive way. It can diagnose a person's state of health either as a standalone device or as a connection to medical databases via an Internet connection. The idea of a medical tricorder comes from an imaginary device on the science fiction TV show Star Trek.</English>
 		<Italian>Un tricorder medico è un dispositivo medico portatile che può essere utilizzato per auto-diagnosticare condizioni mediche in pochi secondi e per eseguire misurazioni vitali di base, come la pressione, la temperatura e il flusso sanguigno in modo non invasivo. Può diagnosticare lo stato di salute di una persona come dispositivo autonomo oppure connettendosi tramite Internet a dei database medici. L'idea di un tricorder medico proviene da un dispositivo immaginario dello show televisivo di fantascienza Star Trek.</Italian>
 		<Russian>Медицинский трикодер - это портативное сканирующее устройство, для использования потребителями для самостоятельной диагностики организма в течение нескольких секунд и принятия основных жизненно важных мер. Хотя идея для медицинский трикодера была гипотетической до мая 2013 г., то теперь появились сообщения, что фирма Scanadu сконструировала один, который они называют сканером Scanadu. Пока устройство еще не вышло на потебительский рынок, есть многочисленные доклады и других ученых и изобретателей, также работающих над созданием и совершенствованием такого устройства. Общее мнение заключается в том, что это будет универсальный инструмент, аналогичный по функциональности швейцарскому армейскому ножу, но для диагностики таких показателей, как кровяное давление и температура, и ток крови неинвазивным способом. Было бы желательно диагностировать состояние здоровье человека после анализа данных, либо в качестве автономного устройства или в виде подключения к медицинским базам данных через Интернет-соединение.</Russian>
+		<Polish>[COLOR_HIGHLIGHT_TEXT]Trikorder medyczny[COLOR_REVERT], to podręczne, przenośne urządzenie skanujące, którego konsumenci mogą używać do samodzielnej diagnozy schorzeń w ciągu kilku sekund i mierzenia w nieinwazyjny sposób podstawowych parametrów życiowych, takich jak ciśnienie krwi, temperatura. Może diagnozować stan zdrowia człowieka zarówno jako samodzielne urządzenie, jak i połączenie z medycznymi bazami danych poprzez łącze internetowe. Pomysł na trikorder medyczny wziął się z wyimaginowanego urządzenia z serialu science fiction Star Trek.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_MEGASTRONG_ALLOYS</Tag>
@@ -5997,6 +6065,7 @@
 		<English>A megastrong alloy is a material composed of two or more metals or a metal and a nonmetal. An alloy may be a solid solution of the elements (a single phase), a mixture of metallic phases (two or more solutions) or an intermetallic compound with no distinct boundary between the phases. Solid solution alloys give a single solid phase microstructure, while partial solutions exhibit two or more phases that may or may not be homogeneous in distribution, depending on the thermal (heat treatment) history of the material. An inter-metallic compound has one other alloy or pure metal embedded within another pure metal.</English>
 		<Italian>Una lega megaresistente è un materiale composto da due o più metalli o un metallo e una sostanza non metallica. Una lega può essere una soluzione solida degli elementi (una singola fase), una miscela di fasi metalliche (due o più soluzioni) o un composto intermetallico senza confini distinti tra le fasi. Le leghe di soluzioni solide forniscono una microstruttura a singola fase solida, mentre le soluzioni parziali presentano due o più fasi che possono o meno essere omogenee nella distribuzione, a seconda della storia termica (trattamento termico) del materiale. Un composto intermetallico ha un'altra lega o metallo puro incorporato in un altro metallo puro.</Italian>
 		<Russian>Мегапрочный сплав - это материал, состоящий из двух или более металлов или металла с неметаллом. Сплав может быть твердым раствором элементов (одна фаза), смесью металлических фаз (два или более растворов) или интерметаллическим соединением без четкой границы между фазами. Сплавы твердых растворов образуют единую твердофазную микроструктуру, в то время как частичные растворы демонстрируют две или более фаз, которые могут быть или не могут быть однородными по распределению, в зависимости от термической (термической обработки) истории материала. Межметаллическое соединение имеет один другой сплав или чистый металл, внедренный в другой чистый металл.</Russian>
+		<Polish>[COLOR_HIGHLIGHT_TEXT]Megamocny stop[COLOR_REVERT], to materiał składający się z dwóch lub więcej metali lub metalu i niemetalu. Stop może być stałym roztworem pierwiastków (jedna faza), mieszaniną faz metalicznych (dwa lub więcej roztworów) lub związkiem międzymetalicznym bez wyraźnej granicy między fazami. Stopy w roztworze stałym dają mikrostrukturę z pojedynczą fazą stałą, podczas gdy roztwory częściowe wykazują dwie lub więcej faz, które mogą, ale nie muszą, mieć jednorodny rozkład, w zależności od historii termicznej (obróbki cieplnej) materiału. Związek międzymetaliczny ma inny stop lub czysty metal osadzony w innym czystym metalu.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_MELANESIAN</Tag>
@@ -6004,6 +6073,7 @@
 		<French>Mélanésienne</French>
 		<Italian>Cittadino melanesiano</Italian>
 		<Russian>Ìåëàíåçèéöû</Russian>
+		<Polish>Melanezyjska</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_MELONS</Tag>
@@ -6023,12 +6093,13 @@
 		<English>Melon is a name given to various members of the plant family Cucurbitaceae with sweet flavored, fleshy fruit e.g. gourds or cucurbits. Melon can be referred as a plant or a fruit. Many different cultivars have been produced, particularly of muskmelons. The plant grows as a vine. Although the melon is a fruit, some varieties may be considered "culinary vegetables".</English>
 		<German>[COLOR_HIGHLIGHT_TEXT]Melonen[COLOR_REVERT] gehören zur Familie der Kürbisgewächse (Cucurbitaceae). Der deutsche Name leitet sich vom griechischen Wort melo (Apfel) ab. Melonen wachsen vor allem in subtropischen Gebieten und bilden große Beerenfrüchte aus. Diese werden aufgrund ihres hohen Wassergehalts in heißen Ländern vorwiegend zum Durststillen verwendet.[NEWLINE]Es wird hauptsächlich zwischen Zucker- und Wassermelonen unterschieden. Die Früchte wurden zunächst wegen der nahrhaften Samen gesammelt, da das Fruchtfleisch der Wildpflanzen bitter ist. Man geht heute davon aus, dass Melonen etwa 3000 v.Chr. domestiziert wurden. Ab 2000 v.Chr. sind kultivierte Melonen aus dem Alten Ägypten und Westasien bekannt. Sie wurde lange nur in heißen und trockenen Gebieten angebaut und erst relativ spät in Europa eingeführt. Heute wird vermutet, dass sie die Araber während der ottomanischen Expansion mitbrachten.</German>
 		<Russian>Бахчевые - это название, данное различным членам семейства растений Cucurbitaceae со сладкими ароматными, мясистыми фруктами, например: дыни, арбузы или тыквы. Растения из рода Тыквенных можно назвать ягодой или фруктом. Было культивировано множество разных сортов, особенно из мускусной дыни. Бахчевые растут как лоза. Хотя они являются фруктом, некоторые сорта можно считать «кулинарными овощами». Слово «дыня» происходит от латинского «мелопепо», которое означает латинизацию греческого языка (мелопепон), что означает «дыня», что само по себе является соединением (дыня), «яблоко» (pepon), среди прочих «разновидностей тыквы или дыни».</Russian>
+		<Polish>[COLOR_HIGHLIGHT_TEXT]Melon[COLOR_REVERT], to nazwa nadana różnym członkom rodziny roślin Cucurbitaceae o mięsistych owocach o słodkim smaku. Melonem można nazwać roślinę lub owoc. Wyprodukowano wiele różnych odmian, szczególnie muskmelonów. Roślina rośnie jak winorośl. Chociaż melon jest owocem, niektóre odmiany można uznać za "warzywa kulinarne".</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_MERINA</Tag>
 		<English>Merina</English>
 		<Italian>Cittadino merina</Italian>
-		<Polish>Merina</Polish>
+		<Polish>Merińska</Polish>
 		<Russian>Ìåðèíà</Russian>
 	</TEXT>
 	<TEXT>
@@ -6037,6 +6108,7 @@
 		<French>Astéroïde métallique</French>
 		<Italian>Asteroide metallico</Italian>
 		<Russian>Ìåòàëëè÷. àñòåðîèä</Russian>
+		<Polish>Metaliczna asteroida</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_METALLIC_ASTEROID_PEDIA</Tag>
@@ -6044,6 +6116,7 @@
 		<French>Cet astéroïde est particulièrement riche en métaux, ce qui est utile pour l'exploitation minière.</French>
 		<Italian>Questo asteroide è particolarmente ricco di metallo e può essere sfruttato come giacimento.</Italian>
 		<Russian>Ýòîò àñòåðîèä èìååò îñîáåííî âûñîêîå ñîäåðæàíèå ìåòàëëîâ, ÷òî öåííî äëÿ äîáû÷è ïîëåçíûõ èñêîïàåìûõ.</Russian>
+		<Polish>Ta asteroida ma szczególnie wysoką zawartość metalu.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_METALLIC_HYDROGEN</Tag>
@@ -6051,11 +6124,13 @@
 		<French>Hydrogène métallique</French>
 		<Italian>Idrogeno metallico</Italian>
 		<Russian>Ìåòàëëè÷. âîäîðîä</Russian>
+		<Polish>Wodór metaliczny</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_METALLIC_HYDROGEN_PEDIA</Tag>
 		<English>Metallic hydrogen is a kind of degenerate matter, a phase of hydrogen in which it behaves as an electrical conductor. This phase was predicted theoretically in 1935. It has yet to be unambiguously observed, but some observations consistent with metallic behaviour have been reported such as the possible observation of some new phases of solid hydrogen under static conditions, and, in dense liquid deuterium, electrical insulator-to-conductor transitions associated with an increase in optical reflectivity. At high pressure, on the order of hundreds of gigapascals, hydrogen might exist as a liquid rather than a gas. Liquid metallic hydrogen is thought to be present in large amounts in the gravitationally compressed interiors of Jupiter, Saturn, and in some extrasolar planets.</English>
 		<Russian>Металлический водород - это разновидность вырожденного вещества, фаза водорода, в которой он ведет себя как электрический проводник. Эта фаза была предсказана теоретически в 1935 году. Ее еще предстоит однозначно наблюдать, но сообщалось о некоторых наблюдениях, согласующихся с поведением металлов, таких как возможное наблюдение некоторых новых фаз твердого водорода в статических условиях, а в плотном жидком дейтерии - электрическое. переходы диэлектрик-проводник связаны с увеличением оптической отражательной способности. При высоком давлении порядка сотен гигапаскалей водород может существовать в виде жидкости, а не газа. Считается, что жидкий металлический водород присутствует в больших количествах в гравитационно сжатых недрах Юпитера, Сатурна и на некоторых внесолнечных планетах.</Russian>
+		<Polish>[COLOR_HIGHLIGHT_TEXT]Wodór metaliczny[COLOR_REVERT], jest rodzajem materii zdegenerowanej, fazą wodoru, która zachowuje się jak przewodnik elektryczny. Fazę tę przewidywano teoretycznie w 1935 r. Nie została ona jeszcze jednoznacznie zaobserwowana, ale odnotowano pewne obserwacje zgodne z zachowaniem metali, takie jak możliwa obserwacja niektórych nowych faz stałego wodoru w warunkach statycznych oraz, w gęstym ciekłym deuterze, właściwości elektryczne przejścia izolator-przewodnik związane ze wzrostem współczynnika odbicia optycznego. Pod wysokim ciśnieniem, rzędu setek gigapaskali, wodór może występować w postaci cieczy, a nie gazu. Uważa się, że ciekły metaliczny wodór występuje w dużych ilościach w ściśniętych grawitacyjnie wnętrzach Jowisza, Saturna i niektórych planet pozasłonecznych.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_METAL_FOAM</Tag>
@@ -6063,11 +6138,13 @@
 		<French>Mousse métallique</French>
 		<Italian>Schiuma di metallo</Italian>
 		<Russian>Ìåòàëëè÷. ïåíà</Russian>
+		<Polish>Pianka metaliczna</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_METAL_FOAM_PEDIA</Tag>
 		<English>A metal foam is a cellular structure consisting of a solid metal, frequently aluminium, as well as a large volume fraction of gas-filled pores. The pores can be sealed (closed-cell foam), or they can form an interconnected network (open-cell foam). The defining characteristic of metal foams is a very high porosity: typically 75-95% of the volume consists of void spaces making these ultralight materials. The strength of foamed metal possesses a power law relationship to its density; i.e., a 20% dense material is more than twice as strong as a 10% dense material.</English>
 		<Russian>Металлическая пена представляет собой ячеистую структуру, состоящую из твердого металла, часто алюминия, а также большой объемной доли заполненных газом пор. Поры могут быть герметичными (пена с закрытыми порами) или они могут образовывать взаимосвязанную сеть (пена с открытыми порами). Определяющей характеристикой металлических пенопластов является очень высокая пористость: обычно 75-95% объема состоит из пустот, образующих эти сверхлегкие материалы. Прочность вспененного металла обладает степенным отношением к его плотности; материал с плотностью 20% более чем в два раза прочнее материала с плотностью 10%.</Russian>
+		<Polish>[COLOR_HIGHLIGHT_TEXT]Pianka metaliczna[COLOR_REVERT] jest strukturą komórkową składającą się z litego metalu, często aluminium, oraz w dużej części z porów wypełnionych gazem. Pory mogą być uszczelnione (pianka o zamkniętych komórkach) lub mogą tworzyć wzajemnie połączoną sieć (pianka o otwartych komórkach). Cechą charakterystyczną pianek metalowych jest bardzo wysoka porowatość: zazwyczaj 75-95% objętości stanowią puste przestrzenie, dzięki czemu są to ultralekkie materiały. Wytrzymałość spienionego metalu jest zależna od jego gęstości; tj. materiał o gęstości 20% jest ponad dwukrotnie silniejszy niż materiał o gęstości 10%.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_METAMATERIALS</Tag>
@@ -6082,6 +6159,7 @@
 		<English>A metamaterial is any material engineered to have properties that are not found in naturally occurring materials. They are made from assemblies of multiple elements, fashioned from composite materials such as metals and plastics, and then arranged in repeating patterns, at scales that are smaller than the wavelengths of the phenomena they influence, that give them their smart properties. Applications of metamaterials include optical filters and lenses, medical devices, and a wide range of remote-based interactions and monitoring infrastructures.</English>
 		<Italian>Un metamateriale è un qualsiasi materiale progettato per avere proprietà che non si trovano nei materiali naturali. Sono costituiti da insiemi di più elementi, realizzati con materiali compositi come metalli e materie plastiche, e quindi disposti secondo schemi ripetitivi, su scale più piccole delle lunghezze d'onda dei fenomeni che influenzano, che conferiscono loro le loro proprietà peculiari. Le applicazioni dei metamateriali includono filtri e lenti ottici, dispositivi medici e una vasta gamma di infrastrutture di monitoraggio e di interazioni da remoto.</Italian>
 		<Russian>Метаматериалы - это материалы, обладающие свойствами, которые еще не обнаружены в природе. Они состоят из сплава множества элементов, изготовленных из обычных материалов, таких как металлы или пластмассы. Материалы обычно расположены в повторяющихся узорах, часто в микроскопическом или меньшем масштабе, который меньше длины волны явления, на которое они влияют. Метаматериалы получают свои свойства не из свойств основных материалов, а из их спроектированной структуры. Их точная форма, геометрия, размер, ориентация и расположение придают им свои свойства.</Russian>
+		<Polish>[COLOR_HIGHLIGHT_TEXT]Metamateriał[COLOR_REVERT], to dowolny materiał zaprojektowany tak, aby miał właściwości, które nie występują w materiałach występujących naturalnie. Metamateriały Są wykonane z połączenia wielu elementów, wykonanych z materiałów kompozytowych, takich jak metale i tworzywa sztuczne, a następnie ułożonych w powtarzające się wzory w skalach mniejszych niż długości fal zjawisk, na które wpływają, co nadaje im inteligentne właściwości. Zastosowania metamateriałów obejmują filtry i soczewki optyczne, urządzenia medyczne oraz szeroką gamę zdalnych interakcji.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_METHAMPHETAMINE</Tag>
@@ -6096,6 +6174,7 @@
 		<English>N-methylamphetamine, commonly named methamphetamine or meth, is a potent central nervous system stimulant that is mainly used as a recreational drug, and less commonly as a second-line treatment for attention deficit hyperactivity disorder and obesity. It is rarely prescribed over concerns involving human neurotoxicity, high addiction and dependence liability, as well as the availability of safer substitute drugs with comparable treatment efficacy. Internationally, the production, distribution, sale, and possession of methamphetamine is restricted or banned in many countries.</English>
 		<Italian>La N-metilamfetamina, comunemente chiamata metanfetamina, è un potente stimolante del sistema nervoso centrale che viene utilizzato principalmente come farmaco ricreativo e, meno comunemente, come trattamento di seconda linea per il disturbo da deficit di attenzione e iperattività e l'obesità. Viene raramente prescritta come medicinale a causa delle controindicazioni (come neurotossicità e alto rischio di dipendenza), nonché dalla disponibilità di farmaci sostitutivi più sicuri. A livello internazionale, la produzione, la distribuzione, la vendita e il possesso di metanfetamine sono limitati o vietati in molti paesi.</Italian>
 		<Russian>Метамфетамин, известный также как метамфитамином, мет, лед, облака, кристалл, стекло, тик, N-метамфетамин, метамфетамин, и дезоксефедрин, это психостимулятор фенэтиламинов и амфетаминов класса психотропных препаратов. Его редко назначают из-за проблем, связанных с нейротоксичностью человека, высокой зависимостью и склонностью к зависимости, а также из-за доступности более безопасных препаратов-заменителей с сопоставимой эффективностью лечения. На международном уровне производство, распространение, продажа и хранение метамфетамина ограничены или запрещены во многих странах.</Russian>
+		<Polish>[COLOR_HIGHLIGHT_TEXT]N-metyloamfetamina[COLOR_REVERT], powszechnie nazywana metamfetaminą, jest silnym środkiem pobudzającym ośrodkowy układ nerwowy, stosowanym głównie jako narkotyk rekreacyjny, a rzadziej jako lek drugiego rzutu w leczeniu zespołu nadpobudliwości psychoruchowej z deficytem uwagi oraz otyłości. Jest rzadko przepisywany ze względu na obawy związane z neurotoksycznością u ludzi, wysokim ryzykiem uzależnienia, a także dostępnością bezpieczniejszych leków zastępczych o porównywalnej skuteczności leczenia. Na arenie międzynarodowej produkcja, dystrybucja, sprzedaż i posiadanie metamfetaminy są ograniczone lub zakazane w wielu krajach.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_METHANE_ICE</Tag>
@@ -6104,13 +6183,14 @@
 		<German>Methanhydrat</German>
 		<Italian>Ghiaccio di metano</Italian>
 		<Spanish>Hielo de metano</Spanish>
-		<Polish>L&#243;d metanowy</Polish>
+		<Polish>L&#243;d metanu</Polish>
 		<Russian>Ìåòàíîâûé ëåä</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_METHANE_ICE_PEDIA</Tag>
 		<English>Methane clathrate, also called methane hydrate or methane ice, is a solid clathrate compound (more specifically, a clathrate hydrate) in which a large amount of methane is trapped within the crystal structure of water ice. Originally thought to occur only in the outer regions of the Solar System where temperatures are low and water ice is common, significant deposits of methane clathrate have been found under sediments on the ocean floors of Earth. Methane clathrates are common constituents of the shallow marine geosphere, and they occur both in deep sedimentary structures, and as outcrops on the ocean floor.</English>
 		<Russian>Клатрат метана, также называемый метановым гидратом или метановым льдом, представляет собой твердое клатратное соединение (более конкретно, клатратный гидрат), в котором большое количество метана удерживается в кристаллической структуре водяного льда. Первоначально считалось, что это происходит только во внешних регионах Солнечной системы, где температура низкая и водяной лед является обычным явлением, значительные отложения клатрата метана были обнаружены под осадками на дне океанов Земли.[PARAGRAPH:2]Клатраты метана - общие составляющие мелководной морской геосферы, и они встречаются как в глубоких осадочных структурах, так и в виде обнажений на дне океана. Считается, что гидраты метана образуются в результате миграции газа с глубины по геологическим разломам с последующим выпадением в осадок или кристаллизацией при контакте восходящего потока газа с холодной морской водой. Клатраты метана также присутствуют в глубоких ледяных кернах Антарктики и хранят данные об атмосферных концентрациях метана, датируемые 800000 лет назад. Клатрат метана в ледяных кернах является основным источником данных для исследований глобального потепления, наряду с кислородом и углекислым газом.[PARAGRAPH:2]Хотя он стабилен при температуре примерно до 0°C, при более высоких давлениях клатраты метана остаются стабильными до 18°C. Средний состав гидрата клатрата метана составляет 1 моль метана на каждые 5,75 моль воды, хотя это зависит от того, сколько молекул метана «вписывается» в различные клеточные структуры водной решетки. Наблюдаемая плотность составляет около 0,9 г/см3. Таким образом, один литр твердого клатрата метана будет содержать в среднем 168 литров метанового газа.[PARAGRAPH:2]Метан образует гидратную структуру с двумя додекаэдрическими (20 вершин, таким образом, 20 молекул воды) и шестью тетрадекаэдрическими (24 молекулы воды) водяными клетками на элементарную ячейку. Значение гидратации 20 может быть определено экспериментально с помощью MAS ЯМР. Спектр клатрата метана, записанный при 275 К и 3,1 МПа, показывает пик для каждого типа клетки и отдельный пик для газовой фазы метана. Недавно был синтезирован интеркалат глина-гидрат метана, в котором комплекс гидрата метана был введен в прослойку богатой натрием монтмориллонитовой глины. Верхняя температурная стабильность этой фазы аналогична стабильности гидрата структуры I.[PARAGRAPH:2]Клатраты метана ограничены мелкой литосферой (то есть глубиной менее 2000 м). Кроме того, необходимые условия имеются только в полярных континентальных осадочных породах, где температура поверхности ниже 0°C; или в океанических отложениях на глубине более 300 м, где температура придонной воды составляет около 2°C. Кроме того, в глубоких озерах также могут находиться газовые гидраты, например пресноводное озеро Байкал, Сибирь. Континентальные отложения были расположены в Сибири и на Аляске в пластах песчаников и алевролитов на глубине менее 800 м. Океанические отложения, по-видимому, широко распространены на континентальном шельфе и могут встречаться в отложениях на глубине или близко к границе раздела отложений и воды. Они могут покрывать даже более крупные залежи газообразного метана.[PARAGRAPH:2]Есть два различных типа океанических отложений. Чаще всего преобладает (более 99%) метан, содержащийся в клатрате структуры I и обычно обнаруживаемый на глубине в отложениях. В данном случае метан изотопно легкий, что указывает на то, что он получен в результате микробного уменьшения содержания CO2.[PARAGRAPH:2]Эти отложения расположены в пределах средней глубины зоны толщиной около 300-500 м в отложениях (Зона стабильности газовых гидратов, или GHSZ), где они сосуществуют с метаном, растворенным в поровых водах. Выше этой зоны метан присутствует только в растворенной форме в концентрациях, которые уменьшаются к поверхности осадка. Под ним метан газообразный. У хребта Блейк на континентальном подъеме Атлантики GHSZ начиналась на глубине 190 м и продолжалась до 450 м, где достигла равновесия с газовой фазой. Измерения показали, что метан занимает 0-9%% по объему в GHSZ и около 12%% в газовой зоне.[PARAGRAPH:2]В менее распространенном втором типе, обнаруженном у поверхности осадка, некоторые образцы имеют более высокую долю углеводородов с более длинной цепью (менее 99% метана), содержащихся в клатрате структуры II. Метан изотопно тяжелее и, как полагают, мигрировал вверх из глубоких отложений, где метан образовался в результате термического разложения органических веществ. Примеры месторождения этого типа были обнаружены в Мексиканском заливе и в Каспийском море.[PARAGRAPH:2]Коллектор осадочного гидрата метана, вероятно, содержит в 2-10 раз больше известных в настоящее время запасов обычного природного газа. Это потенциально важный источник углеводородного топлива в будущем. Однако на большинстве участков месторождения, вероятно, слишком рассредоточены для рентабельной добычи. Другие проблемы, стоящие перед коммерческой эксплуатацией, включают обнаружение жизнеспособных запасов; и разработка технологии извлечения метанового газа из гидратных залежей. На сегодняшний день промышленно добывается только одно месторождение, часть газа на котором, как считается, была добыта из клатратов метана - Мессояхское газовое месторождение.[PARAGRAPH:2]Проект исследований и разработок в Японии нацелен на коммерческую добычу к 2016 году. В августе 2006 года Китай объявил о планах потратить 800 миллионов юаней (100 миллионов долларов США) в течение следующих 10 лет на изучение гидратов природного газа. Потенциально экономические запасы в Мексиканском заливе могут содержать около 1010 м3 газа. Бьерн Квамме и Арне Грауэ из Института физики и технологий Бергенского университета разработали метод закачки CO2 в гидраты и обращения этого процесса; тем самым извлекая CH4 прямым обменом.</Russian>
+		<Polish>[COLOR_HIGHLIGHT_TEXT]Klatrat metanu[COLOR_REVERT], zwany także hydratem metanu lub lodem metanu, to stały związek klatratu (dokładniej hydrat klatratu), w którym duża ilość metanu jest uwięziona w strukturze krystalicznej lodu wodnego. Pierwotnie sądzono, że występuje tylko w zewnętrznych obszarach Układu Słonecznego, gdzie temperatury są niskie i występuje powszechnie lód wodny, jednak pod osadami na dnie oceanicznym Ziemi odkryto znaczne złoża klatratu metanu. Klatraty metanu są powszechnymi składnikami płytkiej geosfery morskiej i występują zarówno w głębokich strukturach osadowych, jak i w postaci wychodni na dnie oceanu.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_MEXICAN</Tag>
@@ -6126,13 +6206,14 @@
 		<French>Microprocesseurs</French>
 		<Italian>Microprocessore</Italian>
 		<Spanish>Microcircuitos</Spanish>
-		<Polish>P&#243;&#179;przewodniki</Polish>
+		<Polish>Układy scalone</Polish>
 		<Russian>Ïîëóïðîâîäíèêè</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_MICROCHIPS_PEDIA</Tag>
 		<English>An integrated circuit or monolithic integrated circuit (also referred to as an IC, a chip, or a microchip) is a set of electronic circuits on one small flat piece (or "chip") of semiconductor material that is normally silicon. The integration of large numbers of tiny MOS transistors into a small chip results in circuits that are orders of magnitude smaller, faster, and less expensive than those constructed of discrete electronic components. The IC's mass production capability, reliability, and building-block approach to circuit design has ensured the rapid adoption of standardized ICs in place of designs using discrete transistors. ICs are now used in virtually all electronic equipment and have revolutionized the world of electronics. Computers, mobile phones, and other digital home appliances are now inextricable parts of the structure of modern societies, made possible by the small size and low cost of ICs.</English>
 		<Russian>Интегральная схема или монолитная интегральная схема (также называемая ИС, микросхемой или микрочипом) - это набор электронных схем на одной небольшой пластине («микросхеме») из полупроводникового материала, обычно кремния. Ее можно сделать намного меньше, чем дискретная схема, состоящая из независимых электронных компонентов. ИС можно сделать очень компактными, имея до нескольких миллиардов транзисторов и других электронных компонентов на площади размером с ноготь. Ширина каждой проводящей линии в цепи может быть все меньше и меньше по мере развития технологии; в 2008 году она упала ниже 100 нанометров, а сейчас составляет десятки нанометров.</Russian>
+		<Polish>[COLOR_HIGHLIGHT_TEXT]Układ scalony[COLOR_REVERT], lub monolityczny układ scalony (nazywany również chipem lub mikrochipem) to zestaw obwodów elektronicznych umieszczonych na jednym małym płaskim kawałku z materiału półprzewodnikowego, którym zwykle jest krzem. Integracja dużej liczby maleńkich tranzystorów MOS w małym chipie skutkuje obwodami o rząd wielkości mniejszymi, szybszymi i tańszymi niż te zbudowane z dyskretnych komponentów elektronicznych. Możliwość masowej produkcji, niezawodność i podejście do projektowania obwodów oparte na elementach konstrukcyjnych zapewniły szybkie przyjęcie standardowych układów scalonych zamiast projektów wykorzystujących dyskretne tranzystory. Układy scalone są obecnie stosowane w praktycznie każdym sprzęcie elektronicznym i zrewolucjonizowały świat elektroniki. Komputery, telefony komórkowe i inne cyfrowe urządzenia gospodarstwa domowego są obecnie nierozłącznymi elementami struktury współczesnych społeczeństw, co jest możliwe dzięki niewielkim rozmiarom i niskim kosztom układów scalonych.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_MICROGENERATORS</Tag>
@@ -6146,6 +6227,7 @@
 		<Tag>TXT_KEY_BONUS_MICROGENERATORS_PEDIA</Tag>
 		<English>Micropower describes the work that researchers at several universities are doing to develop very small electric generators and prime movers or devices to convert heat or motion to electricity, for use close to the generator. These devices offer the promise of a power source for portable electronic devices which is lighter weight and has a longer operating time than batteries. Micropower differs from microgeneration in being concerned with universities, mobility and milliwatts or watts rather than individuals, homes and kilowatts.</English>
 		<Russian>Микрогенераторы обозначают работу, которую проводят исследователи из нескольких университетов по разработке очень маленьких электрических генераторов и первичных двигателей или устройств для преобразования тепла или движения в электричество для использования рядом с генератором. Эти устройства обещают стать источником питания для портативных электронных устройств, который имеет меньший вес и более продолжительное время работы, чем батареи. Микроэнергетика отличается от микрогенерации тем, что занимается университетами, мобильностью и милливаттами или ваттами, а не людьми, домами и киловаттами.</Russian>
+		<Polish>[COLOR_HIGHLIGHT_TEXT]Mikroenergia[COLOR_REVERT] opisuje prace prowadzone przez naukowców z kilku uniwersytetów nad opracowaniem bardzo małych generatorów elektrycznych i napędów głównych lub urządzeń do przekształcania ciepła lub ruchu w energię elektryczną do użytku w pobliżu generatora. Urządzenia te stanowią obiecujące źródło zasilania dla przenośnych urządzeń elektronicznych, które jest lżejsze i ma dłuższy czas pracy niż baterie. Mikroenergia różni się od mikrogeneracji tym, że dotyczy uniwersytetów, mobilności i miliwatów lub watów, a nie osób, domów i kilowatów.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_MICRONESIAN</Tag>
@@ -6153,6 +6235,7 @@
 		<French>Micronésienne</French>
 		<Italian>Cittadino micronesiano</Italian>
 		<Russian>Ìèêðîíåçèéöû</Russian>
+		<Polish>Mikronezyjska</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_MICROWAVE_OVENS</Tag>
@@ -6166,7 +6249,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_MICROWAVE_OVENS_PEDIA</Tag>
 		<English>A microwave oven, often colloquially shortened to microwave, is a kitchen appliance that heats food by bombarding it with electromagnetic radiation in the microwave spectrum causing polarized molecules in the food to rotate and build up thermal energy in a process known as dielectric heating. Microwave ovens heat foods quickly and efficiently because excitation is fairly uniform in the outer 25 - 38 mm of a dense (high water content) food item; food is more evenly heated throughout (except in thick, dense objects) than generally occurs in other cooking techniques.</English>
-		<Polish>Kuchenka mikrofalowa (potoczna nazwa: mikrofal&#243;wka, mikrofala) - urz&#185;dzenie kuchenne s&#179;u&#191;&#185;ce do ogrzewania przedmiot&#243;w znajduj&#185;cych si&#234; w jej wn&#234;trzu poprzez poddanie ich dzia&#179;aniu mikrofal. Za wynalazc&#234; kuchenki mikrofalowej uwa&#191;a si&#234; Percy'ego Spencera. Pierwsz&#185; komercyjnie dost&#234;pn&#185; kuchenk&#185; mikrofalow&#185; by&#179;a wyprodukowana w 1947 Radarange.</Polish>
+		<Polish>[COLOR_HIGHLIGHT_TEXT]Kuchenka mikrofalowa[COLOR_REVERT] (potoczna nazwa: mikrofal&#243;wka, mikrofala) - urz&#185;dzenie kuchenne s&#179;u&#191;&#185;ce do ogrzewania przedmiot&#243;w znajduj&#185;cych si&#234; w jej wn&#234;trzu poprzez poddanie ich dzia&#179;aniu mikrofal. Za wynalazc&#234; kuchenki mikrofalowej uwa&#191;a si&#234; Percyłego Spencera. Pierwsz&#185; komercyjnie dost&#234;pn&#185; kuchenk&#185; mikrofalow&#185; by&#179;a wyprodukowana w 1947 Radarange.</Polish>
 		<Russian>Ìèêðîâîëíîâàÿ ïå÷ü, â ðàçãîâîðíîé ðå÷è ÷àñòî ñîêðàùàåòñÿ äî ÑÂ×, êóõîííûé ïðèáîð, êîòîðûé íàãðåâàåò ïèùó ïðè îáëó÷åíèè ýëåêòðîìàãíèòíûì èçëó÷åíèåì â ìèêðîâîëíîâîì ñïåêòðå âûçûâàÿ ñâåðòûâàíèå ïîëÿðèçîâàííûõ ìîëåêóë â ïèùå è íàðàùèâàÿ òåïëîâóþ ýíåðãèþ â ïðîöåññå, êîòîðàÿ íàçûâàåòñÿ äèýëåêòðè÷åñêèì íàãðåâîì. Ìèêðîâîëíîâûå ïå÷è ðàçîãðåâàþò ïðîäóêòû áûñòðî è ýôôåêòèâíî, òàê êàê âîçáóæäåíèå ÿâëÿåòñÿ äîâîëüíî ðàâíîìåðíûì âî âíåøíåì 25-38 ìì ïëîòíîì (ñ âûñîêèì ñîäåðæàíèåì âîäû) ïèùåâîì ïðîäóêòå; åäà áîëåå ðàâíîìåðíî íàãðåâàåòñÿ ïî âñåé ïðîòÿæåííîñòè (çà èñêëþ÷åíèåì òîëñòûõ, ïëîòíûõ îáúåêòîâ), ÷åì ïðè äðóãèõ ñïîñîáàõ ãîòîâêè.</Russian>
 	</TEXT>
 	<TEXT>
@@ -6182,12 +6265,14 @@
 		<English>Milk is a white liquid produced by the mammary glands of mammals. It provides the primary source of nutrition for young mammals before they are able to digest other types of food.</English>
 		<Italian>Il latte è un liquido bianco prodotto dalle ghiandole mammarie dei mammiferi; è la fonte principale di nutrimento dei mammiferi prima che essi siano in grado di digerire altri tipi di cibo.</Italian>
 		<Russian>Молоко - это белая жидкость, вырабатываемая молочными железами млекопитающих. Он является основным источником питания для молодых млекопитающих, прежде чем они смогут переваривать другие виды пищи.</Russian>
+		<Polish>[COLOR_HIGHLIGHT_TEXT]Mleko[COLOR_REVERT], to biały płyn wytwarzany przez gruczoły sutkowe ssaków. Stanowi główne źródło pożywienia dla młodych ssaków, zanim są one w stanie strawić inny rodzaj pożywienia.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_MING</Tag>
 		<English>Ming</English>
 		<Russian>Ìèí</Russian>
 		<Italian>Cittadino ming</Italian>
+		<Polish>Mingijska</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_MING_VASE</Tag>
@@ -6195,11 +6280,13 @@
 		<French>Vase Ming</French>
 		<Italian>Vaso Ming</Italian>
 		<Russian>Êèòàéñêèé ôàðôîð</Russian>
+		<Polish>Wazon Mingijski</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_MING_VASE_PEDIA</Tag>
 		<English>A [COLOR_HIGHLIGHT_TEXT]Ming vase[COLOR_REVERT] is an example of Chinese ceramic manufacture from 14th to 17th century, that was also the result of an extraordinary period of innovation. Manufacturers explored and investigated new techniques in design and shapes, showing a predilection for colour and painted design, and an openness to foreign forms (especially Islamic ones, during the first part of the 15th century). Late Ming period vessels underwent a dramatic shift towards a market economy, exporting porcelain around the world on an unprecedented scale, thus becoming valuable and highly prized possessions.</English>
 		<Italian>Un [COLOR_HIGHLIGHT_TEXT]vaso Ming[COLOR_REVERT] è un esempio di manifattura ceramica cinese dal XIV al XVII secolo, frutto anche di uno straordinario periodo di innovazione. I produttori esplorarono e investigarono nuove tecniche nel design e nelle forme, mostrando una predilezione per il colore e il design dipinto, e un'apertura alle forme straniere (specialmente quelle islamiche, durante la prima parte del XV secolo). La qualità dei vasi del tardo periodo Ming subì una marcata transizione verso l'economia di mercato, quando la porcellana cinese venne esportata in tutto il mondo su una scala senza precedenti, diventando così un bene di valore molto apprezzato.</Italian>
+		<Polish>[COLOR_HIGHLIGHT_TEXT]Wazon Mingijski[COLOR_REVERT] jest przykładem chińskiej produkcji ceramiki od XIV do XVII wieku, która była wynikiem niezwykłego okresu innowacji. Producenci badali i odkrywali nowe techniki projektowania i kształcenia, wykazując upodobanie do koloru i malarstwa oraz otwartość na formy obce (zwłaszcza islamskie w pierwszej połowie XV wieku). Naczynia z późnego okresu Ming przeszły dramatyczną zmianę w kierunku gospodarki rynkowej, eksportując porcelanę na cały świat na niespotykaną dotąd skalę, stając się w ten sposób wysoko cenionym nabytkiem.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_MINOAN</Tag>
@@ -6222,6 +6309,7 @@
 		<English>Mitanni</English>
 		<Italian>Cittadino mitannico</Italian>
 		<Russian>Ìèòàííè</Russian>
+		<Polish>Mitannijska</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_MITHRIL</Tag>
@@ -6233,13 +6321,14 @@
 		<English>Mithril is an artisan material that is manufactured out of lunar regolith, designed specifically to have the properties described about in fantasy literature: highly malleable when pure, resembling silver in appearance, and stronger and lighter than steel. In actuality, it is a composite material treated with high-tech (and highly secret) methods.</English>
 		<Italian>Il mithril è un materiale artificiale fabbricato con regolite lunare, progettato specificamente per avere le proprietà descritte nella letteratura fantasy: altamente malleabile se puro, simile all'argento in apparenza e più forte e leggero dell'acciaio. In realtà, è un materiale composito trattato con metodi altamente tecnologici (e altamente segreti).</Italian>
 		<Russian>Мифрил - это металл, который можно найти во многих фантастических мирах. Первоначально он был представлен фантазийными сочинениями Дж. Р. Р. Толкина, присутствовавших в его Средиземье. Он напоминает серебро, но прочнее стали и намного легче по весу, чем любой. Автор впервые написал об этом в «Властелине колец», и он ретроспективно упоминается в третьем, пересмотренном издании «Хоббита» в 1966 году. В первом издании 1937 года кольчуга, переданная Бильбо, описывается как сделанная из «посеребренной стали».[PARAGRAPH:2]В C2C Мифрил - это ремесленный материал, изготовленный из лунного реголита, специально разработанный для того, чтобы обладать свойствами, описанными в фантазии. На самом деле, это композит, который обрабатывается с помощью высокотехнологичных методов, которые являются коммерческой тайной.</Russian>
+		<Polish>[COLOR_HIGHLIGHT_TEXT]Mithril[COLOR_REVERT], to materiał rzemieślniczy wytwarzany z księżycowego regolitu, zaprojektowany specjalnie tak, aby miał właściwości opisane w literaturze fantasy: bardzo plastyczny w czystej postaci, przypominający wyglądem srebro oraz mocniejszy i lżejszy od stali. W rzeczywistości jest to materiał kompozytowy poddany obróbce nowoczesnymi (i ściśle tajnymi) metodami.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_MIXTEC</Tag>
 		<English>Mixtec</English>
 		<French>Mixtèque</French>
 		<Italian>Cittadino misteco</Italian>
-		<Polish>Mixtek&#243;w</Polish>
+		<Polish>Mistecka</Polish>
 		<Russian>Ìèøòåêè</Russian>
 	</TEXT>
 	<TEXT>
@@ -6248,18 +6337,21 @@
 		<French>Mochica</French>
 		<Russian>Ìî÷å</Russian>
 		<Italian>Cittadino moche</Italian>
+		<Polish>Mochica</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_MOCOVI</Tag>
 		<English>Mocoví</English>
 		<Russian>Ìîêîâè</Russian>
 		<Italian>Cittadino mocovi</Italian>
+		<Polish>Mocovi</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_MOHAWK</Tag>
 		<English>Mohawk</English>
 		<Russian>Ìîõîêè</Russian>
 		<Italian>Cittadino mohawk</Italian>
+		<Polish>Mohawkańska</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_MOLLO</Tag>
@@ -6289,6 +6381,7 @@
 		<English>A lunar rock, or Moon rock, is a rocky element found on Earth's Moon and taken for research or scientific purposes, or that has been ejected naturally from the Moon's surface (and which has then landed on the Earth as meteorite). Analyzed elements have been dated from about 3.16 billion years old (for the rocks coming from the lunar maria) up to about 4.44 billion years old (for those coming from the highlands). Maria basalts are classified in direct relation to their titanium content, while highlands rocks are dominantly mafic plutonic rocks.</English>
 		<Italian>Una roccia lunare è un elemento roccioso trovato sulla Luna e preso per scopi di ricerca o scientifici, o che è stato espulso naturalmente dalla superficie della Luna (e che è poi atterrato sulla Terra come meteorite). Gli elementi analizzati sono stati datati da circa 3,16 miliardi di anni (per le rocce provenienti dai mari lunari) fino a circa 4,44 miliardi di anni (per quelli provenienti dagli altopiani). I basalti provenienti dai mari sono classificati in relazione diretta con il loro contenuto di titanio, mentre le rocce degli altipiani sono prevalentemente rocce plutoniche femiche.</Italian>
 		<Russian>Лунный камень - это минерал, добываемый на Луне, спутнике Земли, полезное ископаемое, собранное в ходе исследования Луны человеком. Лунные камни на Земле поступают из трех источников: те, которые были собраны пилотируемыми кораблями США «Аполлон» с 1969 по 1972 год; образцы, возвращенные тремя советскими беспилотными зондами «Луна» в 1970-х годах; и камни, которые были выброшены естественным образом с поверхности Луны в результате образования кратеров и впоследствии упали на Землю в виде лунных метеоритов.</Russian>
+		<Polish>[COLOR_HIGHLIGHT_TEXT]Skała księżycowa[COLOR_REVERT], to skalisty element znaleziony na ziemskim Księżycu i zabrany do celów badawczych lub naukowych lub który został naturalnie wyrzucony z powierzchni Księżyca (a następnie wylądował na Ziemi jako meteoryt). Badane elementy datowano na okres od około 3,16 miliarda lat (dla skał pochodzących z mórz księżycowych) do około 4,44 miliarda lat (dla skał pochodzących z wyżyn). Bazalty morskie klasyfikuje się bezpośrednio ze względu na zawartość tytanu, podczas gdy skały wyżynne to skały z dominacją plutoniczną.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_MOROCCAN</Tag>
@@ -6302,7 +6395,7 @@
 		<Tag>TXT_KEY_BONUS_MUGHAL</Tag>
 		<English>Mughal</English>
 		<French>Moghol</French>
-		<Polish>Mugali</Polish>
+		<Polish>Mugalska</Polish>
 		<Russian>Ìîãîëû</Russian>
 		<Italian>Cittadino mogul</Italian>
 	</TEXT>
@@ -6311,6 +6404,7 @@
 		<English>Muisca</English>
 		<Russian>×èá÷à</Russian>
 		<Italian>Cittadino muisca</Italian>
+		<Polish>Czibcza-Muisca</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_MUREX</Tag>
@@ -6319,11 +6413,13 @@
 		<Italian>Murice</Italian>
 		<Spanish>Moluscos</Spanish>
 		<Russian>Ìîðñêèå óëèòêè</Russian>
+		<Polish>Rozkolcowate</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_MUREX_PEDIA</Tag>
 		<English>Murex is a genus of medium to large sized predatory tropical sea snails. These are carnivorous marine gastropod molluscs in the family Muricidae, commonly called "murexes" or "rock snails". The common name murex is still used for a large number of species in the family Muricidae which were originally given the Latin generic name Murex in the past, but have more recently been regrouped into different newer genera. The word murex was used by Aristotle in reference to these kinds of snails, thus making it one of the oldest classical seashell names still in use by the scientific community.</English>
 		<Russian>Мурекс - это род хищных тропических морских улиток среднего и крупного размера. Это плотоядные морские брюхоногие моллюски из семейства Muricidae, обычно называемые «каменными улитками».[PARAGRAPH:2]Общее название murex до сих пор используется для большого числа видов в семействе Muricidae, которым в прошлом первоначально давалось латинское родовое название Murex, но позднее они были перегруппированы в другие более новые роды.[PARAGRAPH:2]Слово murex было использовано Аристотелем по отношению к этим видам улиток, что сделало его одним из старейших классических названий морских раковин, все еще используемых научным сообществом.</Russian>
+		<Polish>[COLOR_HIGHLIGHT_TEXT]Rozkolcowate[COLOR_REVERT], to rodzina ślimaków morskich z rzędu Neogastropoda. Rozkolcowate to bardzo liczna rodzina skupiająca (włącznie z taksonami kopalnymi) ponad 2600 gatunków podzielonych na ponad 230 rodzajów[2]. Zamieszkują wody morskie całego świata, od równika po umiarkowaną strefę klimatyczną (głównie dzielnica Indo-Pacyfiku i Panamy). Istnieje duża rozpiętość kształtów i wielkości. Muszle są przeważnie grubościenne, ze spiczastą skrętką. Powierzchnia zewnętrzna jest misternie pokryta kolcami, palmiastymi wyrostkami, guzami. Z reguły na powierzchni skrętki widać rozmieszczone w regularnych odstępach zgrubienia kolabralne (zgodne z kształtem linii wzrostu muszli) – ślady istnienia wcześniejszych ujść. W przeciwieństwie do rodziny Ranellidae, u których przypadają dwa takie zgrubienia na każdy skręt, rozkolce charakteryzują się obecnością co najmniej 3 zgrubień na skręcie.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_MUSHROOMS</Tag>
@@ -6344,12 +6440,14 @@
 		<English>A mushroom (or toadstool) is the fleshy, spore-bearing fruiting body of a fungus, typically produced above ground on soil or on its food source. The standard for the name "mushroom" is the cultivated white button mushroom, Agaricus bisporus; hence the word "mushroom" is most often applied to those fungi (Basidiomycota, Agaricomycetes) that have a stem (stipe), a cap (pileus), and gills (lamellae, sing. lamella) on the underside of the cap. These gills produce microscopic spores that help the fungus spread across the ground or its occupant surface.</English>
 		<German>Die [COLOR_HIGHLIGHT_TEXT]Pilze[COLOR_REVERT] (Fungi) sind in einer heute noch gebräuchlichen, aber veralteten Klassifikation neben den Tieren und Pflanzen das dritte große Reich der Lebewesen. Zwar zählen auch viele Einzeller zu den Pilzen, aber im engeren Sinne wird der Begriff für die Ständer- und Schlauchpilze verwendet, von denen viele auch als Speisepilze Verwendung finden. Dazu gehören nicht kultivierbare Arten wie Steinpilz und Pfifferling, aber auch Kulturarten und -sorten von Champignon, Shiitake und Austernpilz. Beim Sammeln von Wildpilzen ist allerdings immer größte Sorgfalt geboten, um nicht durch versehentlich geerntete Giftpilze eine unter Umständen tödliche Vergiftung zu riskieren.</German>
 		<Russian>Гриб - это мясистое плодовое тело гриба, содержащее споры, обычно выращиваемое над землей, на почве или на источнике пищи. Стандарт для названия «гриб» - культивируемый белый шампиньон, Agaricus bisporus; следовательно, слово «гриб» чаще всего применяется к тем грибам (Basidiomycota, Agaricomycetes), у которых есть стебель (ножка), шляпка (pileus) и жабры (lamellae, sing. lamella) на нижней стороне шляпки. Эти жабры производят микроскопические споры, которые помогают грибку распространяться по земле или по ее поверхности.</Russian>
+		<Polish>[COLOR_HIGHLIGHT_TEXT]Grzyb[COLOR_REVERT], to mięsisty, zawierający zarodniki owocnik grzyba, zwykle wytwarzany nad ziemią na glebie lub w źródle pożywienia. Standardem nazwy "grzyb" jest uprawiana pieczarka biała Agaricus bisporus; stąd słowo "grzyb" jest najczęściej stosowane w odniesieniu do grzybów (Basidiomycota, Agaricomycetes), które mają łodygę (trzon), kapelusz (pileus) i skrzela (lamellae, sing. lamella) na spodniej stronie kapelusza. Te skrzela wytwarzają mikroskopijne zarodniki, które pomagają grzybowi rozprzestrzeniać się po ziemi lub innej powierzchni którą zamieszkuje.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_MUTAPA</Tag>
 		<English>Mutapa</English>
 		<Russian>Ìóòàïû</Russian>
 		<Italian>Cittadino monomotapa</Italian>
+		<Polish>Monomotapijska</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_NABATEANS</Tag>
@@ -6357,6 +6455,7 @@
 		<French>Nabatéennes</French>
 		<Italian>Cittadino nabateo</Italian>
 		<Russian>Íàáàòåè</Russian>
+		<Polish>Nabatejska</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_NAHUA</Tag>
@@ -6369,6 +6468,7 @@
 		<English>Nama</English>
 		<Russian>Íàìà</Russian>
 		<Italian>Cittadino nama</Italian>
+		<Polish>Namajska</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_NANOACTUATORS</Tag>
@@ -6381,7 +6481,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_NANOACTUATORS_PEDIA</Tag>
 		<English>An actuator is a type of motor for moving or controlling a mechanism or system. It is operated by a source of energy, typically electric current, hydraulic fluid pressure, or pneumatic pressure, and converts that energy into motion. An actuator is the mechanism by which a control system acts upon an environment. The control system can be simple (a fixed mechanical or electronic system), software-based (e.g. a printer driver, robot control system), or a human or other agent. Nanoactuators do basically the same - just in nanoscale.</English>
-		<Polish>Nanosi&#179;owniki to ma&#179;e nanokonstrukty nap&#234;dzaj&#185;ce.</Polish>
+		<Polish>[COLOR_HIGHLIGHT_TEXT]Siłownik[COLOR_REVERT], to rodzaj silnika służący do poruszania lub sterowania mechanizmem lub systemem. Jest obsługiwany przez źródło energii, zwykle prąd elektryczny, ciśnienie płynu hydraulicznego lub ciśnienie pneumatyczne, i przekształca tę energię w ruch. Siłownik to mechanizm, za pomocą którego system sterowania oddziałuje na otoczenie. System sterowania może być prosty (stały system mechaniczny lub elektroniczny), oparty na oprogramowaniu (np. sterownik drukarki, system sterowania robotem) lub może być oparty na człowieku lub innym czynniku. Nanosiłowniki robią w zasadzie to samo – tylko w nanoskali.</Polish>
 		<Russian>Íàíîàêòèâàòîð - òèï ìîòîðà äëÿ ïåðåìåùåíèÿ èëè óïðàâëåíèÿ ìåõàíèçìîì èëè ñèñòåìîé. Îí ôóíêöèîíèðóåò ñ ïîìîùüþ èñòî÷íèêà ýíåðãèè, êàê ïðàâèëî, ýëåêòðè÷åñêîãî òîêà, äàâëåíèÿ ãèäðàâëè÷åñêîé æèäêîñòè, èëè ïíåâìàòè÷åñêîãî äàâëåíèÿ, ïðåîáðàçóÿ ýòó ýíåðãèþ â äâèæåíèå. Àêòèâàòîð - ýòî ìåõàíèçì, ïîñðåäñòâîì êîòîðîãî ñèñòåìà óïðàâëåíèÿ âîçäåéñòâóåò íà ñðåäó. Ñèñòåìà óïðàâëåíèÿ ìîæåò áûòü ïðîñòîé (ôèêñèðîâàííûé ìåõàíè÷åñêèå èëè ýëåêòðîííûå ñèñòåìû), íà îñíîâå ïðîãðàììíîãî îáåñïå÷åíèÿ (íàïðèìåð, äðàéâåð ïðèíòåðà, ñèñòåìà óïðàâëåíèÿ ðîáîòîì), èëè ÷åëîâåêà èëè äðóãîãî àãåíòà. Íàíîàêòèâàòîðû äåëàþò â ïðèíöèïå òî æå ñàìîå - òîëüêî â íàíîìàñøòàáå.</Russian>
 	</TEXT>
 	<TEXT>
@@ -6395,7 +6495,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_NANOBOTS_PEDIA</Tag>
 		<English>Nanorobotics is the emerging technology field creating machines or robots whose components are at or close to the scale of a nanometer (10^-9 meters). More specifically, nanorobotics refers to the nanotechnology engineering discipline of designing and building nanorobots, with devices ranging in size from 0.1-10 micrometers and constructed of nanoscale or molecular components. The names nanobots, nanoids, nanites, nanomachines, or nanomites have also been used to describe these devices currently under research and development.</English>
-		<Polish>Nanoroboty s&#185; hipotetycznymi maszynami, skonstruowanymi dzi&#234;ki nanotechnologii w nanoskali z komponent&#243;w nanometrycznych. Bardzo rzadko stosuje si&#234; inn&#185; definicj&#234; nanorobota. Jest to urz&#185;dzenie, kt&#243;re pozwala na precyzyjn&#185; interakcj&#234; z obiektami w nanoskali. Tak&#185; definicj&#234; mo&#191;na przypisa&#230; zar&#243;wno ma&#179;ym robotom poruszaj&#185;cym si&#234; z nanometrow&#185; precyzj&#185;, jak i du&#191;ym urz&#185;dzeniem, np. mikroskopowi si&#179; atomowych. W niedalekiej przysz&#179;o&#156;ci prawdopodobnie nanoboty b&#234;d&#185; mie&#230; wiele zastosowa&#241;. W medycynie, nanoroboty mog&#185; by&#230; u&#191;yteczne do identyfikowania kom&#243;rek rakowych i ich niszczenia oraz prawdopodobnie, wprowadzone do organizmu by&#179;yby wstanie znacznie wyd&#179;u&#191;y&#230; czas &#191;ycia naszego gatunku likwiduj&#185;c inne zagro&#191;enia &#191;ycia (choroby genetyczne) a nawet zapewni&#230; nam nie&#156;miertelno&#156;&#230; (nieustanie "naprawiaj&#185;c" DNA- lecz to jedynie plotki). Innym potencjalnym zastosowaniem, jest detekcja toksycznych chemikali&#243;w i pomiar ich koncentracji w &#156;rodowisku.</Polish>
+		<Polish>[COLOR_HIGHLIGHT_TEXT]Nanoroboty[COLOR_REVERT], s&#185; hipotetycznymi maszynami, skonstruowanymi dzi&#234;ki nanotechnologii w nanoskali z komponent&#243;w nanometrycznych. Bardzo rzadko stosuje si&#234; inn&#185; definicj&#234; nanorobota. Jest to urz&#185;dzenie, kt&#243;re pozwala na precyzyjn&#185; interakcj&#234; z obiektami w nanoskali. Tak&#185; definicj&#234; mo&#191;na przypisa&#230; zar&#243;wno ma&#179;ym robotom poruszaj&#185;cym si&#234; z nanometrow&#185; precyzj&#185;, jak i du&#191;ym urz&#185;dzeniem, np. mikroskopowi si&#179; atomowych. W niedalekiej przysz&#179;o&#156;ci prawdopodobnie nanoboty b&#234;d&#185; mie&#230; wiele zastosowa&#241;. W medycynie, nanoroboty mog&#185; by&#230; u&#191;yteczne do identyfikowania kom&#243;rek rakowych i ich niszczenia oraz prawdopodobnie, wprowadzone do organizmu by&#179;yby wstanie znacznie wyd&#179;u&#191;y&#230; czas &#191;ycia naszego gatunku likwiduj&#185;c inne zagro&#191;enia &#191;ycia (choroby genetyczne) a nawet zapewni&#230; nam nie&#156;miertelno&#156;&#230; (nieustanie Śnaprawiaj&#185;cŚ DNA- lecz to jedynie plotki). Innym potencjalnym zastosowaniem, jest detekcja toksycznych chemikali&#243;w i pomiar ich koncentracji w &#156;rodowisku.</Polish>
 		<Russian>Наноробототехника - это развивающаяся область технологий, в которой создаются машины или роботы, компоненты которых имеют масштаб нанометра (10^-9 метров) или близки к нему. Более конкретно, наноробототехника относится к дисциплине нанотехнологической инженерии, связанной с проектированием и созданием нанороботов, с устройствами размером от 0,1 до 10 микрометров и построенными из наноразмерных или молекулярных компонентов. Названия наноботов, наноидов, нанитов, наномашин или наномитов также использовались для описания этих устройств, которые в настоящее время находятся в стадии исследований и разработок.</Russian>
 	</TEXT>
 	<TEXT>
@@ -6409,7 +6509,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_NANOGENERATORS_PEDIA</Tag>
 		<English>Nanogenerator is a technology that converts mechanical/thermal energy as produced by small-scale physical change into electricity. Nanogenerator has three typical approaches: piezoelectric, triboelectric, and pyroelectric nanogenerators. Both the piezoelectric and triboelectric nanogenerators can convert the mechanical energy into electricity. However, the pyroelectric nanogenerators can be used to harvest thermal energy from a time-dependent temperature fluctuation.</English>
-		<Polish>Nanogeneratory to mikrogeneratory oparte o nanotechnologi&#234;.</Polish>
+		<Polish>[COLOR_HIGHLIGHT_TEXT]Nanogenerator[COLOR_REVERT], to technologia przekształcająca energię mechaniczną/termiczną wytwarzaną w wyniku przemian fizycznych na małą skalę w energię elektryczną. Nanogenerator ma trzy typowe podejścia: nanogeneratory piezoelektryczne, tryboelektryczne i piroelektryczne. Zarówno nanogeneratory piezoelektryczne, jak i tryboelektryczne mogą przekształcać energię mechaniczną w energię elektryczną. Jednakże nanogeneratory piroelektryczne można wykorzystać do pozyskiwania energii cieplnej z zależnych od czasu wahań temperatury.</Polish>
 		<Russian>Наногенератор - это технология, которая преобразует механическую/тепловую энергию, полученную в результате небольших физических изменений, в электричество. Наногенераторы имеют три типичных подхода: пьезоэлектрические, трибоэлектрические и пироэлектрические наногенераторы. И пьезоэлектрические, и трибоэлектрические наногенераторы могут преобразовывать механическую энергию в электричество. Однако пироэлектрические наногенераторы можно использовать для сбора тепловой энергии из зависящих от времени колебаний температуры.</Russian>
 	</TEXT>
 	<TEXT>
@@ -6418,11 +6518,13 @@
 		<French>Habitats nanomorphiques</French>
 		<Italian>Habitat nanomorfico</Italian>
 		<Russian>Наноморфные жилища</Russian>
+		<Polish>Siedliska nanomorficzne</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_NANOMORPHIC_HABITATS_PEDIA</Tag>
 		<English>These structures can dynamically configures themselves on the molecular level. They are ideal for quick construction of space habitats.</English>
 		<Russian>Эти структуры могут динамически настраиваться на молекулярном уровне. Они идеально подходят для быстрого строительства космических мест обитания.</Russian>
+		<Polish>Struktury te mogą dynamicznie konfigurować się na poziomie molekularnym. Idealnie nadają się do szybkiej budowy siedlisk kosmicznych.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_NANOPUNK</Tag>
@@ -6432,18 +6534,21 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_NANOPUNK_PEDIA</Tag>
 		<English>Nanopunk refers to an emerging subgenre of science fiction that is still very much in its infancy in comparison to its ancestor-genre, cyberpunk, and some of its other derivatives. The genre is especially similar to biopunk, but describes a world where nanites and bio-nanotechnologies are widely in use and nanotechnologies are the predominant technological forces in society. Currently the genre is mainly concerned with the artistic, psychological, and societal impact of nanotechnology, rather than aspects of the technology which itself is still in its infancy. Unlike cyberpunk, which can be distinguished by a gritty and low-life yet technologically advanced character, nanopunk can have a darker dystopian character that might examine potential risks by nanotechnology as well as a more optimistic outlook that might emphasize potential uses of nanotechnology.</English>
+		<Polish>[COLOR_HIGHLIGHT_TEXT]Nanopunk[COLOR_REVERT] odnosi się do wyłaniającego się podgatunku science fiction, który jest wciąż w powijakach w porównaniu do swojego gatunku-przodka, cyberpunku i niektórych innych jego pochodnych. Gatunek ten jest szczególnie podobny do biopunku, ale opisuje świat, w którym nanity i bionanotechnologie są szeroko stosowane, a nanotechnologie stanowią dominującą siłę technologiczną w społeczeństwie. Obecnie gatunek ten dotyczy głównie artystycznego, psychologicznego i społecznego wpływu nanotechnologii, a nie aspektów samej technologii, która sama w sobie jest wciąż w powijakach. W przeciwieństwie do cyberpunku, który wyróżnia się szorstkim i płytkim, ale zaawansowanym technologicznie charakterem, nanopunk może mieć mroczniejszy, dystopijny charakter, który może badać potencjalne ryzyko związane z nanotechnologią, a także bardziej optymistyczną perspektywę, która może podkreślać potencjalne zastosowania nanotechnologii.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_NANOTRUSSES</Tag>
 		<English>Nanotrusses</English>
 		<Italian>Nanotraliccio</Italian>
 		<Russian>Нанофермы</Russian>
+		<Polish>Nanokratownice</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_NANOTRUSSES_PEDIA</Tag>
 		<English>A nanotruss is a carefully architected nanostructure made up of members that are as thin as five nanometers. They are constructed in such a way that it is possible to tune the material properties of the used materials in order to make the whole structure extra-resistant and extremely lightweight at the same time.</English>
 		<Italian>Un nanotraliccio è una nanostruttura attentamente progettata, i cui componenti sono spessi fino a cinque nanometri. Sono costruiti in modo tale che sia possibile adattare le proprietà del materiale utilizzato per rendere l'intera struttura extra-resistente ed estremamente leggera allo stesso tempo.</Italian>
 		<Russian>Эти строительные материалы имеют ферменную структуру на многих уровнях, вплоть до наноскопического. Это дает им отличное соотношение прочности и веса. Их массовое производство позволило создать монументальную и экзотическую архитектуру, что ранее было невозможно.</Russian>
+		<Polish>[COLOR_HIGHLIGHT_TEXT]Nanokratownica[COLOR_REVERT], to starannie zaprojektowana nanostruktura złożona z elementów o grubości zaledwie pięciu nanometrów. Konstruowane są w taki sposób, że możliwe jest dostrojenie właściwości materiałowych zastosowanych materiałów tak, aby cała konstrukcja była wyjątkowo wytrzymała, a jednocześnie niezwykle lekka.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_NANOTUBES</Tag>
