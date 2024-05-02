@@ -11257,7 +11257,9 @@ void CvPlot::read(FDataStreamBase* pStream)
 			FAssert(uCount16 > 0);
 			m_commanderCount.insert(std::make_pair(uType8, uCount16));
 
-			GET_PLAYER(static_cast<PlayerTypes>(uType8)).setCommandFieldPlot(true, this);
+			// Toffer - This is too early to set the player cahce, players haven't been read in yet,
+			//	so the cache will be cleared at the player reset before read.
+			//GET_PLAYER(static_cast<PlayerTypes>(uType8)).setCommandFieldPlot(true, this);
 		}
 	}
 

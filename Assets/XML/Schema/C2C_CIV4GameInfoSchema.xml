@@ -167,6 +167,7 @@
 	<!-- MapInfos -->
 	<ElementType name="bWrapX" content="textOnly" dt:type="boolean"/>
 	<ElementType name="bWrapY" content="textOnly" dt:type="boolean"/>
+	<ElementType name="bStartRevealed" content="textOnly" dt:type="boolean"/>
 	<ElementType name="InitialWBMap" content="textOnly"/>
 	<ElementType name="MapScript" content="textOnly"/>
 	<ElementType name="MapInfo" content="eltOnly">
@@ -177,6 +178,7 @@
 		<element type="iGridHeight"/>
 		<element type="bWrapX"/>
 		<element type="bWrapY"/>
+		<element type="bStartRevealed"/>
 		<element type="InitialWBMap"/>
 		<element type="MapScript"/>
 	</ElementType>

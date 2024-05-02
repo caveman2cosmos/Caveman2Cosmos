@@ -26682,9 +26682,9 @@ void CvUnitAI::AI_SearchAndDestroyMove(bool bWithCommander)
 			return;
 		}
 	}
-	const bool bLookForWork = (GC.getGame().getGameTurn() % 2 == 0);
+	const bool bLookForWork = !bWithCommander && (GC.getGame().getGameTurn() % 2 == 0);
 
-	if (bLookForWork && !bWithCommander && !isHuman() && getGroup()->getNumUnits() == 1)
+	if (bLookForWork && !isHuman() && getGroup()->getNumUnits() == 1)
 	{
 		// If anyone is actively asking for a hunter that takes priority
 		if (processContracts(HIGHEST_PRIORITY_ESCORT_PRIORITY))
@@ -26718,7 +26718,7 @@ void CvUnitAI::AI_SearchAndDestroyMove(bool bWithCommander)
 	}
 
 	// Toffer - Non-optimal hunter is temporary, phase them out when appropriate.
-	if (!isHuman() && m_pUnitInfo->getDefaultUnitAIType() != UNITAI_HUNTER)
+	if (!bWithCommander && !isHuman() && m_pUnitInfo->getDefaultUnitAIType() != UNITAI_HUNTER)
 	{
 		const int iOwnedHunters = player.AI_totalAreaUnitAIs(area(), UNITAI_HUNTER);
 		if (iOwnedHunters > 5)
@@ -26739,7 +26739,7 @@ void CvUnitAI::AI_SearchAndDestroyMove(bool bWithCommander)
 		}
 	}
 
-	if (!isHuman() || player.isModderOption(MODDEROPTION_AUTO_HUNT_RETURN_FOR_UPGRADES))
+	if (!bWithCommander && (!isHuman() || player.isModderOption(MODDEROPTION_AUTO_HUNT_RETURN_FOR_UPGRADES)))
 	{
 		if (AI_travelToUpgradeCity())
 		{
@@ -26751,9 +26751,8 @@ void CvUnitAI::AI_SearchAndDestroyMove(bool bWithCommander)
 		// Get the proper accompaniment
 		const bool bContractEscort = (
 			!bLookForWork && !isHuman() && !isCargo()
-			&& AI_getUnitAIType() == UNITAI_HUNTER
-			&& player.getBestUnitType(UNITAI_HUNTER_ESCORT) != NO_UNIT
 			&& getGroup()->countNumUnitAIType(UNITAI_HUNTER_ESCORT) < 1
+			&& player.getBestUnitType(UNITAI_HUNTER_ESCORT) != NO_UNIT
 		);
 		if (bContractEscort)
 		{

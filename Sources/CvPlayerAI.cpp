@@ -3424,11 +3424,11 @@ bool CvPlayerAI::AI_getAnyPlotDanger(const CvPlot* pPlot, int iRange, bool bTest
 			iCount += AI_plotDangerUnitCheck(pPlot, pPlot, unitX, eTeam);
 			if (iCount > 2)
 			{
-				bDefendedPlot = true;
 				break;
 			}
 			else if (iCount < -2)
 			{
+				bDefendedPlot = true;
 				break;
 			}
 		}
@@ -3436,11 +3436,11 @@ bool CvPlayerAI::AI_getAnyPlotDanger(const CvPlot* pPlot, int iRange, bool bTest
 		{
 			if (iCount < 0)
 			{
-				bResult = true;
+				bDefendedPlot = true;
 			}
 			else if (iCount > 0)
 			{
-				bDefendedPlot = true;
+				bResult = true;
 			}
 		}
 	}

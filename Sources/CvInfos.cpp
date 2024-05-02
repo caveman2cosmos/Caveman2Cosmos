@@ -16232,6 +16232,7 @@ CvMapInfo::CvMapInfo()
 	, m_iGridHeight(0)
 	, m_iWrapX(-1)
 	, m_iWrapY(-1)
+	, m_bStartRevealed(false)
 	, m_szInitialWBMap(NULL)
 	, m_szMapScript(NULL)
 {
@@ -16249,6 +16250,7 @@ bool CvMapInfo::read(CvXMLLoadUtility* pXML)
 	pXML->GetOptionalChildXmlValByName(&m_iGridHeight, L"iGridHeight");
 	pXML->GetOptionalChildXmlValByName(&m_iWrapX, L"bWrapX");
 	pXML->GetOptionalChildXmlValByName(&m_iWrapY, L"bWrapY");
+	pXML->GetOptionalChildXmlValByName(&m_bStartRevealed, L"bStartRevealed");
 	pXML->GetOptionalChildXmlValByName(m_szInitialWBMap, L"InitialWBMap");
 	pXML->GetOptionalChildXmlValByName(m_szMapScript, L"MapScript");
 
