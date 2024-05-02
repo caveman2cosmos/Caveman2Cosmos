@@ -1,5 +1,4 @@
 from CvPythonExtensions import CyGlobalContext, CyInterface, MapTypes
-from CvMainInterface import g_mainInterface
 import BugEventManager
 import DebugUtils
 
@@ -22,7 +21,6 @@ class ParallelMaps:
 				else:
 					CyInterface().addImmediateMessage("Map %d: %s" %(eMap, GC.getMapInfo(eMap).getDescription()), "")
 				GC.switchMap(eMap)
-				g_mainInterface.initMinimap()
 				return 1
 
 		eKey = argsList[1]
