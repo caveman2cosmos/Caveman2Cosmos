@@ -680,6 +680,7 @@
         <xs:element ref="iGridHeight"/>
         <xs:element ref="bWrapX"/>
         <xs:element ref="bWrapY"/>
+        <xs:element ref="bStartRevealed"/>
         <xs:element ref="InitialWBMap"/>
         <xs:element ref="MapScript"/>
       </xs:sequence>
@@ -736,6 +737,7 @@
   <xs:element name="iGridHeight" type="Civ4Integer"/>
   <xs:element name="bWrapX" type="Civ4Boolean"/>
   <xs:element name="bWrapY" type="Civ4Boolean"/>
+  <xs:element name="bStartRevealed" type="Civ4Boolean"/>
   <xs:element name="Civilopedia" type="xs:NCName"/>
   <xs:element name="AnimationOperatorType" type="xs:NCName"/>
   <xs:element name="FunctionType" type="xs:NCName"/>

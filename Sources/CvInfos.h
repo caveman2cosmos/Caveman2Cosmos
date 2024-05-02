@@ -4893,6 +4893,8 @@ public:
 	int getWrapX() const					{ return m_iWrapX; }
 	int getWrapY() const					{ return m_iWrapY; }
 
+	inline bool startRevealed() const		{ return m_bStartRevealed; }
+
 	const CvString getInitialWBMap() const	{ return m_szInitialWBMap; }
 	const CvString getMapScript() const		{ return m_szMapScript; }
 
@@ -4904,6 +4906,8 @@ private:
 
 	int m_iWrapX;
 	int m_iWrapY;
+
+	bool m_bStartRevealed;
 
 	CvString m_szInitialWBMap;
 	CvString m_szMapScript;
