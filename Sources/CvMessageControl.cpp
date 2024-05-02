@@ -314,12 +314,9 @@ void CvMessageControl::sendImprovementUpgrade(ImprovementTypes eImprovement, int
 	}
 }
 
-void CvMessageControl::sendArrestUnit(int iUnitID, PlayerTypes ePlayerT)
+void CvMessageControl::sendArrestUnit(int iCopID, PlayerTypes eCopPlayer, int iVictimID, PlayerTypes eVictimPlayer)
 {
-	if (NO_PLAYER != GC.getGame().getActivePlayer())
-	{
-		gDLL->sendMessageData(new CvNetChooseArrestUnit(GC.getGame().getActivePlayer(), ePlayerT, iUnitID));
-	}
+	gDLL->sendMessageData(new CvNetChooseArrestUnit(iCopID, eCopPlayer, iVictimID, eVictimPlayer));
 }
 
 void CvMessageControl::sendAmbushConfirmation(bool bConfirm)

@@ -1618,8 +1618,6 @@ protected:
 	int m_iFirstMergeSelection;
 	int m_iSecondMergeSelection;
 	int m_iSplittingUnit;
-	int m_iArrestingUnit;
-	int m_iArrestedUnit;
 	int m_iAmbushingUnit;
 	bool m_bAssassinate;
 
@@ -2275,11 +2273,6 @@ public:
 
 	int getSplittingUnit() const;
 	void setSplittingUnit(int iNewValue);
-
-	int getArrestingUnit() const;
-	void setArrestingUnit(int iNewValue);
-	int getArrestedUnit() const;
-	void setArrestedUnit(int iNewValue);
 
 	int getAmbushingUnit() const;
 	bool isAssassinate() const;

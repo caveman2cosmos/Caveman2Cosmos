@@ -1541,7 +1541,7 @@ void CvUnit::killUnconditional(bool bDelay, PlayerTypes ePlayer, bool bMessaged)
 					{
 						const CvPlot* rescuePlot = validPlots[GC.getGame().getSorenRandNum(validPlots.size(), "Event pick plot")];
 
-						FAssertMsg(rescuePlot != NULL, "rescuePlot is expected to be a valid plot!");
+						FAssertMsg(rescuePlot, "rescuePlot is expected to be a valid plot!");
 						unitX->setXY(rescuePlot->getX(), rescuePlot->getY());
 						unitX->setDamage(GC.getGame().getSorenRandNum(std::min(unitX->getMaxHP() * 2/3, unitX->getHP()), "Survival Damage"), NO_PLAYER);
 						AddDLLMessage(
@@ -1600,7 +1600,7 @@ void CvUnit::killUnconditional(bool bDelay, PlayerTypes ePlayer, bool bMessaged)
 		}
 		{
 			const CvCity* pCapitalCity = owner.getCapitalCity();
-			if (pCapitalCity != NULL)
+			if (pCapitalCity)
 			{
 				if (isCanRespawn() && pCapitalCity->plot() != plot())
 				{
@@ -1666,8 +1666,8 @@ void CvUnit::killUnconditional(bool bDelay, PlayerTypes ePlayer, bool bMessaged)
 			}
 		}
 		*/
-		FAssertMsg(getAttackPlot() == NULL, "The current unit instance's attack plot is expected to be NULL");
-		FAssertMsg(getCombatUnit() == NULL, "The current unit instance's combat unit is expected to be NULL");
+		FAssertMsg(!getAttackPlot(), "The current unit instance's attack plot is expected to be NULL");
+		FAssertMsg(!getCombatUnit(), "The current unit instance's combat unit is expected to be NULL");
 	}
 
 	owner.changeUnitUpkeep(-getUpkeep100(), isMilitaryBranch());
@@ -1709,8 +1709,13 @@ void CvUnit::killUnconditional(bool bDelay, PlayerTypes ePlayer, bool bMessaged)
 
 		if (eCapturingPlayer != NO_PLAYER && eCaptureUnitType != NO_UNIT && !GET_PLAYER(eCapturingPlayer).isNPC())
 		{
-			CvUnit* pkCapturedUnit = GET_PLAYER(eCapturingPlayer).initUnit(eCaptureUnitType, pPlot->getX(), pPlot->getY(), NO_UNITAI, NO_DIRECTION, GC.getGame().getSorenRandNum(10000, "AI Unit Birthmark"));
-
+			CvUnit* pkCapturedUnit = (
+				GET_PLAYER(eCapturingPlayer).initUnit(
+					eCaptureUnitType, pPlot->getX(), pPlot->getY(),
+					NO_UNITAI, NO_DIRECTION,
+					GC.getGame().getSorenRandNum(10000, "AI Unit Birthmark")
+				)
+			);
 			if (pkCapturedUnit)
 			{
 				CvEventReporter::getInstance().unitCaptured(eOwner, getUnitType(), pkCapturedUnit);
@@ -5243,23 +5248,17 @@ int CvUnit::defenderValue(const CvUnit* pAttacker) const
 bool CvUnit::isBetterDefenderThan(const CvUnit* pDefender, const CvUnit* pAttacker) const
 {
 	PROFILE_EXTRA_FUNC();
-	if (pDefender == NULL)
-	{
-		return true;
-	}
+
+	if (!pDefender) return true;
+
 	const TeamTypes eAttackerTeam = pAttacker ? pAttacker->getTeam() : NO_TEAM;
 
-	if (canCoexistWithTeam(eAttackerTeam))
+	if (alwaysInvisible() || getTeam() == eAttackerTeam || !canDefend())
 	{
 		return false;
 	}
 
-	if (!canDefend())
-	{
-		return false;
-	}
-
-	if (canDefend() && !(pDefender->canDefend()))
+	if (!pDefender->canDefend())
 	{
 		return true;
 	}
@@ -5293,44 +5292,46 @@ bool CvUnit::isBetterDefenderThan(const CvUnit* pDefender, const CvUnit* pAttack
 		iOurDefense /= 2;
 	}
 
-	if (NULL == pAttacker)
+	if (pAttacker)
 	{
-		if (pDefender->collateralDamage() > 0)
+		if (!pAttacker->immuneToFirstStrikes())
 		{
-			iOurDefense *= (100 + pDefender->collateralDamage());
-			iOurDefense /= 100;
-		}
-
-		if (pDefender->currInterceptionProbability() > 0)
-		{
-			iOurDefense *= (100 + pDefender->currInterceptionProbability());
-			iOurDefense /= 100;
-		}
-	}
-	else
-	{
-		if (!(pAttacker->immuneToFirstStrikes()))
-		{
-			iOurDefense *= ((((firstStrikes() * 2) + chanceFirstStrikes()) * ((GC.getCOMBAT_DAMAGE() * 2) / 5)) + 100);
+			iOurDefense *= 100 + (firstStrikes() * 2 + chanceFirstStrikes()) * GC.getCOMBAT_DAMAGE() * 2 / 5;
 			iOurDefense /= 100;
 		}
 
 		if (immuneToFirstStrikes())
 		{
-			iOurDefense *= ((((pAttacker->firstStrikes() * 2) + pAttacker->chanceFirstStrikes()) * ((GC.getCOMBAT_DAMAGE() * 2) / 5)) + 100);
+			iOurDefense *= 100 + (pAttacker->firstStrikes() * 2 + pAttacker->chanceFirstStrikes()) * GC.getCOMBAT_DAMAGE() * 2 / 5;
+			iOurDefense /= 100;
+		}
+	}
+	else
+	{
+		if (pDefender->collateralDamage() > 0)
+		{
+			iOurDefense *= 100 + pDefender->collateralDamage();
+			iOurDefense /= 100;
+		}
+
+		if (pDefender->currInterceptionProbability() > 0)
+		{
+			iOurDefense *= 100 + pDefender->currInterceptionProbability();
 			iOurDefense /= 100;
 		}
 	}
 
-	int iAssetValue = assetValueTotal()/100;
-	int iCargoAssetValue = 0;
-	std::vector<CvUnit*> aCargoUnits;
-	getCargoUnits(aCargoUnits);
-	foreach_(const CvUnit* pCargoUnit, aCargoUnits)
 	{
-		iCargoAssetValue += pCargoUnit->assetValueTotal()/100;
+		const int iAssetValue = assetValueTotal() / 100;
+		int iCargoAssetValue = 0;
+		std::vector<CvUnit*> aCargoUnits;
+		getCargoUnits(aCargoUnits);
+		foreach_(const CvUnit* pCargoUnit, aCargoUnits)
+		{
+			iCargoAssetValue += pCargoUnit->assetValueTotal() / 100;
+		}
+		iOurDefense = iOurDefense * iAssetValue / std::max(1, iAssetValue + iCargoAssetValue);
 	}
-	iOurDefense = iOurDefense * iAssetValue / std::max(1, iAssetValue + iCargoAssetValue);
 
 	int iTheirDefense = pDefender->currCombatStr(plot(), pAttacker);
 	if (::isWorldUnit(pDefender->getUnitType()))
@@ -5367,14 +5368,17 @@ bool CvUnit::isBetterDefenderThan(const CvUnit* pDefender, const CvUnit* pAttack
 		}
 	}
 
-	iAssetValue = pDefender->assetValueTotal()/100;
-	iCargoAssetValue = 0;
-	pDefender->getCargoUnits(aCargoUnits);
-	foreach_(const CvUnit* pCargoUnit, aCargoUnits)
 	{
-		iCargoAssetValue += pCargoUnit->assetValueTotal()/100;
+		const int iAssetValue = pDefender->assetValueTotal() / 100;
+		int iCargoAssetValue = 0;
+		std::vector<CvUnit*> aCargoUnits;
+		pDefender->getCargoUnits(aCargoUnits);
+		foreach_(const CvUnit* pCargoUnit, aCargoUnits)
+		{
+			iCargoAssetValue += pCargoUnit->assetValueTotal() / 100;
+		}
+		iTheirDefense = iTheirDefense * iAssetValue / std::max(1, iAssetValue + iCargoAssetValue);
 	}
-	iTheirDefense = iTheirDefense * iAssetValue / std::max(1, iAssetValue + iCargoAssetValue);
 
 	if (iOurDefense == iTheirDefense)
 	{
@@ -5391,11 +5395,10 @@ bool CvUnit::isBetterDefenderThan(const CvUnit* pDefender, const CvUnit* pAttack
 			++iOurDefense;
 		}
 	}
+	iOurDefense += tauntTotal() * iOurDefense / 100;
+	iTheirDefense += pDefender->tauntTotal() * iTheirDefense / 100;
 
-	iOurDefense += (tauntTotal() * iOurDefense) / 100;
-	iTheirDefense += (pDefender->tauntTotal() * iTheirDefense) / 100;
-
-	return (iOurDefense > iTheirDefense);
+	return iOurDefense > iTheirDefense;
 }
 
 
@@ -12605,30 +12608,24 @@ bool CvUnit::isGoldenAge() const
 	return m_pUnitInfo->isGoldenAge();
 }
 
-bool CvUnit::canCoexistAlways() const
-{
-	return alwaysInvisible();
-}
-
 bool CvUnit::canCoexistAlwaysOnPlot(const CvPlot& onPlot) const
 {
-	return canCoexistAlways()
-		// City or fort allows blend in
-		|| onPlot.isCity(true) && isBlendIntoCity()
-	;
+	return alwaysInvisible() || onPlot.isCity(true) && isBlendIntoCity();
 }
 
 bool CvUnit::canCoexistWithTeam(const TeamTypes withTeam) const
 {
-	return canCoexistAlways() || getTeam() == withTeam;
+	return alwaysInvisible() || getTeam() == withTeam;
 }
 
 bool CvUnit::canCoexistWithTeamOnPlot(const TeamTypes withTeam, const CvPlot& onPlot) const
 {
-	return getTeam() == withTeam || canCoexistAlwaysOnPlot(onPlot)
+	return (
+		   getTeam() == withTeam 
+		|| canCoexistAlwaysOnPlot(onPlot)
 		// Invisible to team and on the same plot
 		|| isInvisible(withTeam) && *plot() == onPlot
-	;
+	);
 }
 
 namespace {
@@ -12647,8 +12644,8 @@ bool CvUnit::canCoexistWithAttacker(const CvUnit& attacker, bool bAssassinate) c
 	const TeamTypes attackerTeam = GET_PLAYER(attacker.getOwner()).getTeam();
 
 	return (
-		// Always coexists
-		canCoexistAlways() || attacker.canCoexistAlways()
+		// Always invisible
+		alwaysInvisible() || attacker.alwaysInvisible()
 		// Coexists due to barb coexist flag
 		|| attacker.isBarbCoExist() && (isHominid() || isBarbCoExist())
 		|| isBarbCoExist() && (attacker.isHominid() || attacker.isBarbCoExist())
@@ -13855,34 +13852,17 @@ bool CvUnit::canAttack(const CvUnit& defender) const
 
 bool CvUnit::canDefend(const CvPlot* pPlot) const
 {
-	if (pPlot == NULL)
-	{
-		pPlot = plot();
-	}
+	if (!pPlot) pPlot = plot();
 
-	if (!canFight())
+	if (!canFight() || isTrap() || isCargo())
 	{
 		return false;
 	}
 
-	if (isTrap())
+	if (!pPlot->isValidDomainForAction(*this) && !GC.getLAND_UNITS_CAN_ATTACK_WATER_CITIES())
 	{
 		return false;
 	}
-
-	if (!pPlot->isValidDomainForAction(*this))
-	{
-		if (GC.getLAND_UNITS_CAN_ATTACK_WATER_CITIES() == 0)
-		{
-			return false;
-		}
-	}
-
-	if (isCargo())
-	{
-		return false;
-	}
-
 	return true;
 }
 
@@ -23156,7 +23136,7 @@ void CvUnit::read(FDataStreamBase* pStream)
 		{
 			int iExtraControlPoints = 0;
 			int iExtraCommandRange = 0;
-			int iControlPointsLeft = 0;
+			short iControlPointsLeft = 0;
 			WRAPPER_READ_DECORATED(wrapper, "CvUnit", &iExtraControlPoints, "m_iExtraControlPoints");
 			WRAPPER_READ_DECORATED(wrapper, "CvUnit", &iExtraCommandRange, "m_iExtraCommandRange");
 			WRAPPER_READ_DECORATED(wrapper, "CvUnit", &iControlPointsLeft, "m_iControlPointsLeft");
@@ -23178,7 +23158,7 @@ void CvUnit::read(FDataStreamBase* pStream)
 		if (bWorker)
 		{
 			m_worker = new UnitCompWorker();
-			int iExtraWorkPercent = 0;
+			short iExtraWorkPercent = 0;
 			int iExtraHillsWorkPercent = 0;
 			int iExtraPeaksWorkPercent = 0;
 			int iAssignedCity = -1;
@@ -23206,12 +23186,12 @@ void CvUnit::read(FDataStreamBase* pStream)
 				}
 			}
 
-			WRAPPER_READ_DECORATED(wrapper, "CvCity", &iSize, "ExtraWorkModForBuildsSize");
+			WRAPPER_READ_DECORATED(wrapper, "CvUnit", &iSize, "ExtraWorkModForBuildsSize");
 			while (iSize-- > 0)
 			{
 				short iMod = 0;
 				WRAPPER_READ_CLASS_ENUM_DECORATED(wrapper, "CvUnit", REMAPPED_CLASS_TYPE_BUILDS, &iBuild, "ExtraWorkModForBuildType");
-				WRAPPER_READ_DECORATED(wrapper, "CvCity", &iMod, "ExtraWorkModForBuild");
+				WRAPPER_READ_DECORATED(wrapper, "CvUnit", &iMod, "ExtraWorkModForBuild");
 
 				if (iBuild != NO_BUILD)
 				{
@@ -25564,18 +25544,17 @@ bool CvUnit::verifyStackValid()
 	if (isDead()) return true;
 
 	const CvPlot* pPlot = plot();
-	if (canCoexistAlwaysOnPlot(*pPlot))
+	if (!canCoexistAlwaysOnPlot(*pPlot))
 	{
-		return true;
-	}
-	foreach_ (const CvUnit* unit, pPlot->units())
-	{
-		if (unit != this && isEnemy(unit->getTeam(), NULL, unit)
-		&& !isInvisible(unit->getTeam())
-		&& !canCoexistWithTeam(unit->getTeam())
-		&& !unit->canCoexistWithTeamOnPlot(getTeam(), *pPlot))
+		foreach_ (const CvUnit* unit, pPlot->units())
 		{
-			return jumpToNearestValidPlot();
+			if (unit != this
+			&& isEnemy(unit->getTeam(), NULL, unit)
+			&& !isInvisible(unit->getTeam())
+			&& !unit->canCoexistWithTeamOnPlot(getTeam(), *pPlot))
+			{
+				return jumpToNearestValidPlot();
+			}
 		}
 	}
 	return true;
@@ -37290,47 +37269,41 @@ bool CvUnit::canArrest() const
 void CvUnit::doArrest()
 {
 	PROFILE_EXTRA_FUNC();
-	GET_PLAYER(getOwner()).setArrestingUnit(getID());
+
 	if (isHuman())
 	{
 		CvPopupInfo* pInfo = new CvPopupInfo(BUTTONPOPUP_CHOOSE_ARREST_UNIT);
 		pInfo->setData1(getID());
 		pInfo->setData2(getX());
 		pInfo->setData3(getY());
+		pInfo->setFlags(getOwner());
 		gDLL->getInterfaceIFace()->addPopup(pInfo, getOwner(), true);
+		return;
 	}
-	else
+	CvUnit* pBestUnit = NULL;
 	{
-		const CvPlot* pPlot = plot();
-		if (pPlot != NULL)
+		int iBestOdds = 0;
+		foreach_(CvUnit* unitX, plot()->units())
 		{
-			int iBestOdds = 0;
-			CvUnit* pBestUnit = NULL;
-			foreach_(CvUnit* pLoopUnit, pPlot->units())
+			if (unitX->isWanted()
+			&&  unitX->getID() != getID()
+			&& !unitX->isInvisible(GET_PLAYER(getOwner()).getTeam(), false)
+			&& !unitX->isDead()
+			&& !unitX->isInBattle()
+			&& !unitX->isSpy())
 			{
-				if (pLoopUnit->isWanted())
+				const int iOdds = getCombatOdds(this, unitX);
+				if (iOdds > 50 && iOdds > iBestOdds)
 				{
-					if (GET_PLAYER(pLoopUnit->getOwner()).getArrestingUnit() != pLoopUnit->getID())
-					{
-						if (!pLoopUnit->isInvisible(GET_PLAYER(getOwner()).getTeam(), false) && !pLoopUnit->isDead() && !pLoopUnit->isInBattle() && !pLoopUnit->isSpy())
-						{
-							const int iOdds = getCombatOdds(this, pLoopUnit);
-							if (iOdds > 50 && iOdds > iBestOdds)
-							{
-								iBestOdds = iOdds;
-								pBestUnit = pLoopUnit;
-							}
-						}
-					}
+					iBestOdds = iOdds;
+					pBestUnit = unitX;
 				}
 			}
-			if (pBestUnit != NULL)
-			{
-				attackSamePlotSpecifiedUnit(pBestUnit);
-			}
 		}
-
-		GET_PLAYER(getOwner()).setArrestingUnit(FFreeList::INVALID_INDEX);
+	}
+	if (pBestUnit)
+	{
+		attackSamePlotSpecifiedUnit(pBestUnit);
 	}
 }
 
@@ -37467,12 +37440,7 @@ void CvUnit::setDebugCount(int iValue)
 
 bool CvUnit::isAssassin() const
 {
-	int iCount = getAssassinCount();
-	if (m_pUnitInfo->isAssassin())
-	{
-		iCount++;
-	}
-	return (iCount > 0);
+	return m_iAssassinCount + m_pUnitInfo->isAssassin() > 0;
 }
 
 int CvUnit::getAssassinCount() const

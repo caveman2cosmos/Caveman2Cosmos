@@ -1432,11 +1432,6 @@ bool PUF_canDefend(const CvUnit* pUnit, int iData1, int iData2, const CvUnit* pT
 	return pUnit->canDefend();
 }
 
-bool PUF_canAttack(const CvUnit* pUnit, int iData1, int iData2, const CvUnit* pThis)
-{
-	return pUnit->canAttack();
-}
-
 bool PUF_isCriminal(const CvUnit* pUnit, int iData1, int iData2, const CvUnit* pThis)
 {
 	return (pUnit->getInsidiousnessTotal(true) > 0);

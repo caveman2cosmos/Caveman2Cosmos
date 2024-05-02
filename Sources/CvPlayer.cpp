@@ -921,8 +921,6 @@ void CvPlayer::reset(PlayerTypes eID, bool bConstructorCall)
 	m_iFirstMergeSelection = FFreeList::INVALID_INDEX;
 	m_iSecondMergeSelection = FFreeList::INVALID_INDEX;
 	m_iSplittingUnit = FFreeList::INVALID_INDEX;
-	m_iArrestingUnit = FFreeList::INVALID_INDEX;
-	m_iArrestedUnit = FFreeList::INVALID_INDEX;
 	m_iAmbushingUnit = FFreeList::INVALID_INDEX;
 	m_bAssassinate = false;
 
@@ -19277,7 +19275,9 @@ void CvPlayer::read(FDataStreamBase* pStream)
 		WRAPPER_READ_CLASS_ARRAY(wrapper, "CvPlayer", REMAPPED_CLASS_TYPE_SPECIAL_BUILDINGS, GC.getNumSpecialBuildingInfos(), m_paiBuildingGroupCount);
 		WRAPPER_READ_CLASS_ARRAY(wrapper, "CvPlayer", REMAPPED_CLASS_TYPE_SPECIAL_BUILDINGS, GC.getNumSpecialBuildingInfos(), m_paiBuildingGroupMaking);
 
-		WRAPPER_READ(wrapper, "CvPlayer", &m_iArrestingUnit);
+		// @SAVEBREAK - remove
+		WRAPPER_SKIP_ELEMENT(wrapper, "CvPlayer", m_iArrestingUnit, SAVE_VALUE_ANY);
+		// !SAVEBREAK
 		WRAPPER_READ(wrapper, "CvPlayer", &m_iUpgradeRoundCount);
 		WRAPPER_READ(wrapper, "CvPlayer", &m_iSelectionRegroup);
 		WRAPPER_READ(wrapper, "CvPlayer", &m_iFreedomFighterCount);
@@ -19584,6 +19584,22 @@ void CvPlayer::read(FDataStreamBase* pStream)
 		}
 		WRAPPER_READ_ARRAY(wrapper, "CvPlayer", NUM_COMMERCE_TYPES, m_extraCommerce);
 		WRAPPER_READ(wrapper, "CvPlayer", &m_bHasLanguage);
+		// Read Vector
+		{
+			uint iSize = 0;
+			WRAPPER_READ_DECORATED(wrapper, "CvPlayer", &iSize, "numCommandFieldPlots");
+			for (uint i = 0; i < iSize; i++)
+			{
+				short iX = -1;
+				short iY = -1;
+				WRAPPER_READ_DECORATED(wrapper, "CvPlayer", &iX, "CommandFieldPlotX");
+				WRAPPER_READ_DECORATED(wrapper, "CvPlayer", &iY, "CommandFieldPlotY");
+				if (iX > -1 && iY > -1)
+				{
+					setCommandFieldPlot(true, GC.getMap().plot(iX, iY));
+				}
+			}
+		}
 		//Example of how to skip element
 		//WRAPPER_SKIP_ELEMENT(wrapper, "CvPlayer", m_iPopulationgrowthratepercentage, SAVE_VALUE_ANY);
 	}
@@ -20241,7 +20257,7 @@ void CvPlayer::write(FDataStreamBase* pStream)
 		WRAPPER_WRITE(wrapper, "CvPlayer", m_iFocusPlotY);
 		WRAPPER_WRITE_CLASS_ARRAY(wrapper, "CvPlayer", REMAPPED_CLASS_TYPE_SPECIAL_BUILDINGS, GC.getNumSpecialBuildingInfos(), m_paiBuildingGroupCount);
 		WRAPPER_WRITE_CLASS_ARRAY(wrapper, "CvPlayer", REMAPPED_CLASS_TYPE_SPECIAL_BUILDINGS, GC.getNumSpecialBuildingInfos(), m_paiBuildingGroupMaking);
-		WRAPPER_WRITE(wrapper, "CvPlayer", m_iArrestingUnit);
+
 		WRAPPER_WRITE(wrapper, "CvPlayer", m_iUpgradeRoundCount);
 		WRAPPER_WRITE(wrapper, "CvPlayer", m_iSelectionRegroup);
 		WRAPPER_WRITE(wrapper, "CvPlayer", m_iFreedomFighterCount);
@@ -20390,6 +20406,16 @@ void CvPlayer::write(FDataStreamBase* pStream)
 		}
 		WRAPPER_WRITE_ARRAY(wrapper, "CvPlayer", NUM_COMMERCE_TYPES, m_extraCommerce);
 		WRAPPER_WRITE(wrapper, "CvPlayer", m_bHasLanguage);
+		// Write Vector
+		{
+			uint iSize = m_commandFieldPlots.size();
+			WRAPPER_WRITE_DECORATED(wrapper, "CvPlayer", iSize, "numCommandFieldPlots");
+			foreach_(const CvPlot* plotX, m_commandFieldPlots)
+			{
+				WRAPPER_WRITE_DECORATED(wrapper, "CvPlayer", (short)plotX->getX(), "CommandFieldPlotX");
+				WRAPPER_WRITE_DECORATED(wrapper, "CvPlayer", (short)plotX->getY(), "CommandFieldPlotY");
+			}
+		}
 	}
 	WRAPPER_WRITE_OBJECT_END(wrapper);
 }
@@ -27929,8 +27955,6 @@ void CvPlayer::clearModifierTotals()
 	m_iFirstMergeSelection = FFreeList::INVALID_INDEX;
 	m_iSecondMergeSelection = FFreeList::INVALID_INDEX;
 	m_iSplittingUnit = FFreeList::INVALID_INDEX;
-	m_iArrestingUnit = FFreeList::INVALID_INDEX;
-	m_iArrestedUnit = FFreeList::INVALID_INDEX;
 	m_iAmbushingUnit = FFreeList::INVALID_INDEX;
 	m_bAssassinate = false;
 
@@ -30371,26 +30395,6 @@ int CvPlayer::getSplittingUnit() const
 void CvPlayer::setSplittingUnit(int iNewValue)
 {
 	m_iSplittingUnit = iNewValue;
-}
-
-int CvPlayer::getArrestingUnit() const
-{
-	return m_iArrestingUnit;
-}
-
-void CvPlayer::setArrestingUnit(int iNewValue)
-{
-	m_iArrestingUnit = iNewValue;
-}
-
-int CvPlayer::getArrestedUnit() const
-{
-	return m_iArrestedUnit;
-}
-
-void CvPlayer::setArrestedUnit(int iNewValue)
-{
-	m_iArrestedUnit = iNewValue;
 }
 
 int CvPlayer::getAmbushingUnit() const

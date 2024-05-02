@@ -794,6 +794,7 @@ void CvCityAI::AI_chooseProduction()
 		return;
 	}
 	const bool bDanger = AI_isDanger();
+	const int iDangerValue = GET_PLAYER(getOwner()).AI_getPlotDanger(plot(), 2, false);
 	const bool bWasFoodProduction = isFoodProduction();
 	const bool bFinancialTrouble = player.AI_isFinancialTrouble();
 	const int iHammerCostPercent = GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getHammerCostPercent();
@@ -1556,9 +1557,9 @@ void CvCityAI::AI_chooseProduction()
 		}
 	}
 	bool bChooseWorker = false;
-	if (!bInhibitUnits && !(bDefenseWar && iWarSuccessRatio < -50) && !bDanger)
+	if (!bInhibitUnits && !(bDefenseWar && iWarSuccessRatio < -50))
 	{
-		if (iWorkersInArea == 0) // Not a single worker on my landmass
+		if (iWorkersInArea == 0 || iDangerValue < 3) // Not a single worker on my landmass and low danger.
 		{
 			if (iNeededWorkersInArea > 0 && iProductionRank <= (player.getNumCities() + 1) * 2 / 3)
 			{
@@ -1577,7 +1578,7 @@ void CvCityAI::AI_chooseProduction()
 				}
 			}
 
-			if (!bChooseWorker && AI_countNumImprovableBonuses(true, player.getCurrentResearch()) > 0 && getPopulation() > 1)
+			if (!bChooseWorker && iWorkersNeeded > 1 && getPopulation() > 1)
 			{
 				if (AI_chooseUnit("secondary worker", UNITAI_WORKER))
 				{
@@ -1675,7 +1676,7 @@ void CvCityAI::AI_chooseProduction()
 
 	const bool bStrategyTurtle = player.AI_isDoStrategy(AI_STRATEGY_TURTLE);
 
-	if (!bInhibitUnits && !bDanger && !bStrategyTurtle && isCapital())
+	if (!bInhibitUnits && iDangerValue < 4 && !bStrategyTurtle && isCapital())
 	{
 		if (!bWaterDanger && iNeededSeaWorkers > 0 && iExistingSeaWorkers == 0)
 		{
@@ -1709,7 +1710,7 @@ void CvCityAI::AI_chooseProduction()
 	m_iTempBuildPriority--;
 
 	int iMinFoundValue = player.AI_getMinFoundValue();
-	if (bDanger)
+	if (iDangerValue > 3)
 	{
 		iMinFoundValue *= 3;
 		iMinFoundValue /= 2;
@@ -1720,11 +1721,11 @@ void CvCityAI::AI_chooseProduction()
 		if (iAreaBestFoundValue > iMinFoundValue || iWaterAreaBestFoundValue > iMinFoundValue)
 		{
 			// BBAI TODO: Needs logic to check for early settler builds, settler builds in small cities, whether settler sea exists for water area sites?
-			if (pWaterArea != NULL)
+			if (pWaterArea)
 			{
 				const int iTotalCities = player.getNumCities();
 				int iSettlerSeaNeeded = std::min(iNumWaterAreaCitySites, 1 + (iTotalCities + 4) / 8);
-				if (player.getCapitalCity() != NULL)
+				if (player.getCapitalCity())
 				{
 					int iOverSeasColonies = iTotalCities - player.getCapitalCity()->area()->getCitiesPerPlayer(eOwner);
 					int iLoop = 2;
@@ -1744,7 +1745,7 @@ void CvCityAI::AI_chooseProduction()
 				if (player.AI_totalWaterAreaUnitAIs(pWaterArea, UNITAI_SETTLER_SEA) < iSettlerSeaNeeded)
 				{
 					/* financial trouble: 2/3; */
-					if (!bDanger && bFinancialTrouble && iWorkersInArea < 5 * iNeededWorkersInArea && iWorkersNeeded > 0
+					if (iDangerValue < 5 && bFinancialTrouble && iWorkersInArea < 5 * iNeededWorkersInArea && iWorkersNeeded > 0
 					&& (getPopulation() > 1 || GC.getGame().getGameTurn() - getGameTurnAcquired() > 15 * iHammerCostPercent / 100))
 					{
 						if (!bChooseWorker && AI_chooseUnit("worker needed", UNITAI_WORKER))
@@ -1764,7 +1765,7 @@ void CvCityAI::AI_chooseProduction()
 			if (iPlotSettlerCount == 0 && iNumSettlers < iMaxSettlers)
 			{
 				// Workers first if in financial trouble
-				if (!bDanger && iWorkersInArea < (2 * iNeededWorkersInArea + 2) / 3 && iWorkersNeeded > 0
+				if (iDangerValue < 6 && iWorkersInArea < (2 * iNeededWorkersInArea + 2) / 3 && iWorkersNeeded > 0
 				&& (getPopulation() > 1 || GC.getGame().getGameTurn() - getGameTurnAcquired() > 15 * iHammerCostPercent / 100))
 				{
 					if (!bChooseWorker && AI_chooseUnit("worker needed 2", UNITAI_WORKER))
@@ -1978,7 +1979,7 @@ void CvCityAI::AI_chooseProduction()
 			(
 				bMaybeWaterArea && bWaterDanger
 				||
-				pWaterArea != NULL && bPrimaryArea
+				pWaterArea && bPrimaryArea
 				&& player.AI_countNumAreaHostileUnits(pWaterArea, true, false, false, false, plot(), 15) > 0
 				)
 			// If there are a few local appropriate AI units already assume they will deal
@@ -1991,7 +1992,7 @@ void CvCityAI::AI_chooseProduction()
 				)
 			) return;
 
-		if (NULL != pWaterArea)
+		if (pWaterArea)
 		{
 			int iOdds = -1;
 			if (iAreaBestFoundValue == 0 || iWaterAreaBestFoundValue > iAreaBestFoundValue)
@@ -2039,7 +2040,7 @@ void CvCityAI::AI_chooseProduction()
 
 	m_iTempBuildPriority--;
 
-	if (!bDanger && (eCurrentEra > GC.getGame().getStartEra() + iProductionRank / 2 || eCurrentEra > GC.getNumEraInfos() / 2))
+	if (iDangerValue < 5 && (eCurrentEra > GC.getGame().getStartEra() + iProductionRank / 2 || eCurrentEra > GC.getNumEraInfos() / 2))
 	{
 		if ((!isHuman() || AI_isEmphasizeYield(YIELD_PRODUCTION))
 			&& AI_chooseBuilding(BUILDINGFOCUS_PRODUCTION, 20 - iWarTroubleThreshold, 15, (!isHuman() && (bLandWar || bAssault)) ? 25 : -1))
@@ -2100,11 +2101,7 @@ void CvCityAI::AI_chooseProduction()
 			defensiveTypes.push_back(std::make_pair(UNITAI_CITY_COUNTER, 50));
 		}
 
-		const int iOdds =
-			(
-				iBuildUnitProb + bDanger * 10
-				+ (iWarSuccessRatio < -50) * abs(iWarSuccessRatio / 3)
-				);
+		const int iOdds = iBuildUnitProb + iDangerValue - (iWarSuccessRatio < -3 ? iWarSuccessRatio / 3 : 0);
 		if (AI_chooseLeastRepresentedUnit("extra defense", defensiveTypes, iOdds))
 		{
 			return;
@@ -2113,7 +2110,7 @@ void CvCityAI::AI_chooseProduction()
 
 	m_iTempBuildPriority--;
 
-	if (!bInhibitUnits && !bChooseWorker && !bDanger && iWorkersInArea < iNeededWorkersInArea
+	if (!bInhibitUnits && !bChooseWorker && iDangerValue < 7 && iWorkersInArea < iNeededWorkersInArea
 	&& (!bDefenseWar || iWarSuccessRatio >= -50)
 	&& iProductionRank < (player.getNumCities() + 1) / 2)
 	{
@@ -2221,7 +2218,7 @@ void CvCityAI::AI_chooseProduction()
 
 	// Opportunistic wonder build (1)
 	// For small civ at war, don't build wonders unless winning
-	if (!bDanger && !hasActiveWorldWonder() && player.getNumCities() <= 3 && (!bLandWar || iWarSuccessRatio > 30))
+	if (iDangerValue < 6 && !hasActiveWorldWonder() && player.getNumCities() <= 3 && (!bLandWar || iWarSuccessRatio > 30))
 	{
 		if (AI_chooseBuilding(BUILDINGFOCUS_WORLDWONDER, 7))
 		{
@@ -2235,12 +2232,13 @@ void CvCityAI::AI_chooseProduction()
 
 	m_iTempBuildPriority--;
 
-	if (!bDanger && !bIsCapitalArea && iNumCitiesInArea > iNumCapitalAreaCities)
+	if (iDangerValue < 6 && !bIsCapitalArea && iNumCitiesInArea > iNumCapitalAreaCities)
 	{
 		// BBAI TODO:  This check should be done by player, not by city and optimize placement
 		// If losing badly in war, don't build big things
-		if (!bLandWar || iWarSuccessRatio > -30
-			&& (!player.getCapitalCity() || pArea->getPopulationPerPlayer(eOwner) > player.getCapitalCity()->area()->getPopulationPerPlayer(eOwner)))
+		if (!bLandWar
+		|| iWarSuccessRatio > -30
+		&& (!player.getCapitalCity() || pArea->getPopulationPerPlayer(eOwner) > player.getCapitalCity()->area()->getPopulationPerPlayer(eOwner)))
 		{
 			if (AI_chooseBuilding(BUILDINGFOCUS_CAPITAL, 15))
 			{
@@ -2288,7 +2286,7 @@ void CvCityAI::AI_chooseProduction()
 		return;
 	}
 
-	if (!bDanger && !isHuman()
+	if (iDangerValue < 3 && !isHuman()
 		&& (!bLandWar || iWarSuccessRatio >= 30)
 		&& iProductionRank <= 1 + player.getNumCities() / 5
 		&& AI_chooseProject())
@@ -2302,7 +2300,7 @@ void CvCityAI::AI_chooseProduction()
 
 	m_iTempBuildPriority--;
 
-	if (!bInhibitUnits && !(bLandWar && iWarSuccessRatio < 0) && !bDanger)
+	if (!bInhibitUnits && (!bLandWar || iWarSuccessRatio >= 0) && iDangerValue < 4)
 	{
 		/* financial trouble: ---; will grow above happy cap: 2/3; both: 3/4; else 4/7 */
 		if ((iWorkersInArea < ((4 * iNeededWorkersInArea) + 6) / 7)
@@ -2371,7 +2369,7 @@ void CvCityAI::AI_chooseProduction()
 			return;
 		}
 
-		if ((bMassing || !bLandWar) && !bDanger && !bFinancialTrouble)
+		if ((bMassing || !bLandWar) && iDangerValue < 4 && !bFinancialTrouble)
 		{
 			const int iNeededExplorers = player.AI_neededExplorers(pArea);
 			const int iExplorerDeficitPercent = (iNeededExplorers == 0) ? 0 : (iNeededExplorers - player.AI_totalAreaUnitAIs(pArea, UNITAI_EXPLORE)) * 100 / iNeededExplorers;
@@ -2448,10 +2446,10 @@ void CvCityAI::AI_chooseProduction()
 	m_iTempBuildPriority--;
 
 	//opportunistic wonder build
-	if (!isHuman() && !bDanger && (!hasActiveWorldWonder() || (player.getNumCities() > 3)))
+	if (!isHuman() && iDangerValue < 6 && (!hasActiveWorldWonder() || (player.getNumCities() > 3)))
 	{
 		// For civ at war, don't build wonders if losing
-		if (!bLandWar || (iWarSuccessRatio > -30))
+		if (!bLandWar || iWarSuccessRatio > -25)
 		{
 			if (AI_chooseBuilding(BUILDINGFOCUS_WORLDWONDER, 10))
 			{
@@ -2463,7 +2461,7 @@ void CvCityAI::AI_chooseProduction()
 
 	m_iTempBuildPriority--;
 
-	if (!bChooseWorker && !bInhibitUnits && !bDanger && (!bLandWar || iWarSuccessRatio >= -30)
+	if (!bChooseWorker && !bInhibitUnits && iDangerValue < 8 && (!bLandWar || iWarSuccessRatio >= -30)
 	&& 0 < iNeededWorkersInArea && iWorkersNeeded > 0
 	&& (getPopulation() > 1 || GC.getGame().getGameTurn() - getGameTurnAcquired() > 15 * iHammerCostPercent / 100))
 	{
@@ -2496,7 +2494,7 @@ void CvCityAI::AI_chooseProduction()
 
 	m_iTempBuildPriority--;
 
-	if (!bDanger && bFinancialTrouble
+	if (iDangerValue < 4 && bFinancialTrouble
 	&& (isCapital() || getYieldRate(YIELD_PRODUCTION) > std::min(70, std::max(40, iNumCitiesInArea * 6)))
 	&& AI_chooseProcess(COMMERCE_GOLD))
 	{
@@ -2567,7 +2565,7 @@ void CvCityAI::AI_chooseProduction()
 	// Koshling - next section moved from quite a bit earlier to avoid not-needed-yet worker builds before we have checked basic economy builds
 	// do a check for one tile island type thing?
 	// this can be overridden by "wait and grow more"
-	if (!bInhibitUnits && !bDanger && iWorkersInArea == 0 && (isCapital() || iNeededWorkersInArea > 0 || (iNeededSeaWorkers > iExistingSeaWorkers)))
+	if (!bInhibitUnits && iDangerValue < 3 && iWorkersInArea == 0 && (isCapital() || iNeededWorkersInArea > 0 || (iNeededSeaWorkers > iExistingSeaWorkers)))
 	{
 		if (!bStrategyTurtle && (!bDefenseWar || iWarSuccessRatio >= -30))
 		{
@@ -3180,7 +3178,7 @@ void CvCityAI::AI_chooseProduction()
 		}
 	}
 
-	if (!bInhibitUnits && bLandWar && !bDanger && iNumSettlers < iMaxSettlers && !bFinancialTrouble)
+	if (!bInhibitUnits && bLandWar && iDangerValue < 3 && iNumSettlers < iMaxSettlers && !bFinancialTrouble)
 	{
 		if (iAreaBestFoundValue > iMinFoundValue)
 		{
