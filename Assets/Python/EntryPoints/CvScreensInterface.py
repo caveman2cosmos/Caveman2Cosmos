@@ -52,6 +52,9 @@ def reinitMainInterface():
 	mainInterface = CvMainInterface.CvMainInterface()
 	mainInterface.interfaceScreen()
 
+def initMinimap():
+	CvMainInterface.g_mainInterface.initMinimap()
+
 def numPlotListButtons(): return 0 # Called from exe
 
 def showTechChooser():
