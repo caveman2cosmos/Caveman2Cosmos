@@ -24051,7 +24051,7 @@ void CvCity::setWorkerHave(const int iUnitID, const bool bNewValue)
 			}
 			else FErrorMsg("UnitCompWorker unexpectedly not initialized!");
 		}
-		else FErrorMsg("m_workers contained an invalid unitID!")
+		else FErrorMsg("m_workers contained an invalid unitID!");
 
 		m_workers.erase(itr);
 	}
