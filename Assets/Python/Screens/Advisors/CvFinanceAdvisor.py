@@ -250,39 +250,35 @@ class CvFinanceAdvisor:
 		self.goldFromCivs = goldFromCivs = CyPlayer.getGoldPerTurn()
 
 		y = -2
-		szText = TRNSLTR.getText("TXT_KEY_UNITUPKEEP", ())
-		screen.setTextAt("unitUpkeep0", Pnl, uFont2 + szText, 1<<0, 6, y, 0, eGameFont, eWidGen, 1, 2)
+		screen.setTextAt("unitUpkeep0", Pnl, uFont2 + TRNSLTR.getText("TXT_INTERFACE_TREASURYHELP_UNIT_UPKEEP", ()), 1<<0, 6, y, 0, eGameFont, eWidGen, 1, 2)
 		screen.setLabelAt("unitUpkeep1", Pnl, uFont2 + str(iFinalUnitUpkeep), 1<<1, x, y, 0, eGameFont, eWidGen, 1, 2)
 		iExpenses += iFinalUnitUpkeep
 		y += 22
 
-		if totalUnitSupply:
-			szText = TRNSLTR.getText("TXT_KEY_FINANCIAL_ADVISOR_UNITSUPPLY", ())
-			screen.setLabelAt("", Pnl, uFont2 + szText, 1<<0, 8, y, 0, eGameFont, WidgetTypes.WIDGET_HELP_FINANCE_AWAY_SUPPLY, iPlayer, 1)
-			screen.setLabelAt("", Pnl, uFont2 + str(totalUnitSupply), 1<<1, x, y, 0, eGameFont, WidgetTypes.WIDGET_HELP_FINANCE_AWAY_SUPPLY, iPlayer, 1)
-			iExpenses += totalUnitSupply
-			y += 20
+		szText = TRNSLTR.getText("TXT_KEY_FINANCIAL_ADVISOR_UNITSUPPLY", ())
+		screen.setLabelAt("", Pnl, uFont2 + szText, 1<<0, 8, y, 0, eGameFont, WidgetTypes.WIDGET_HELP_FINANCE_AWAY_SUPPLY, iPlayer, 1)
+		screen.setLabelAt("", Pnl, uFont2 + str(totalUnitSupply), 1<<1, x, y, 0, eGameFont, WidgetTypes.WIDGET_HELP_FINANCE_AWAY_SUPPLY, iPlayer, 1)
+		iExpenses += totalUnitSupply
+		y += 20
 
-		szText = TRNSLTR.getText("TXT_KEY_FINANCIAL_ADVISOR_MAINTENANCE", ())
+		szText = TRNSLTR.getText("TXT_INTERFACE_TREASURYHELP_CITY_MAINTENANCE", ())
 		screen.setLabelAt("", Pnl, uFont2 + szText, 1<<0, 8, y, 0, eGameFont, WidgetTypes.WIDGET_HELP_FINANCE_CITY_MAINT, iPlayer, 1)
 		screen.setLabelAt("", Pnl, uFont2 + str(totalMaintenance), 1<<1, x, y, 0, eGameFont, WidgetTypes.WIDGET_HELP_FINANCE_CITY_MAINT, iPlayer, 1)
 		iExpenses += totalMaintenance
 		y += 20
 
-		if iTreasuryUpkeep:
-			szText = TRNSLTR.getText("TXT_KEY_TREASURY_UPKEEP", ())
-			screen.setLabelAt("", Pnl, uFont2 + szText, 1<<0, 8, y, 0, eGameFont, eWidGen, 1, 2)
-			screen.setLabelAt("", Pnl, uFont2 + str(iTreasuryUpkeep), 1<<1, x, y, 0, eGameFont, eWidGen, 1, 2)
-			iExpenses += iTreasuryUpkeep
-			y += 20
+		screen.setLabelAt("", Pnl, uFont2 + TRNSLTR.getText("TXT_KEY_TREASURY_UPKEEP", ()), 1<<0, 8, y, 0, eGameFont, eWidGen, 1, 2)
+		screen.setLabelAt("", Pnl, uFont2 + str(iTreasuryUpkeep), 1<<1, x, y, 0, eGameFont, eWidGen, 1, 2)
+		iExpenses += iTreasuryUpkeep
+		y += 20
 
-		szText = TRNSLTR.getText("TXT_KEY_FINANCIAL_ADVISOR_CIVICS", ())
+		szText = TRNSLTR.getText("TXT_INTERFACE_TREASURYHELP_CIVIC_UPKEEP", ())
 		screen.setLabelAt("", Pnl, uFont2 + szText, 1<<0, 8, y, 0, eGameFont, WidgetTypes.WIDGET_HELP_FINANCE_CIVIC_UPKEEP, iPlayer, 1)
 		screen.setLabelAt("", Pnl, uFont2 + str(totalCivicUpkeep), 1<<1, x, y, 0, eGameFont, WidgetTypes.WIDGET_HELP_FINANCE_CIVIC_UPKEEP, iPlayer, 1)
 		iExpenses += totalCivicUpkeep
 		y += 20
 
-		screen.setLabelAt("", Pnl, uFont2 + TRNSLTR.getText("TXT_KEY_FINANCIAL_ADVISOR_CORPORATIONS", ()), 1<<0, 8, y, 0, eGameFont, eWidGen, iPlayer, 1)
+		screen.setLabelAt("", Pnl, uFont2 + TRNSLTR.getText("TXT_INTERFACE_TREASURYHELP_CORPORATE_MAINTENANCE", ()), 1<<0, 8, y, 0, eGameFont, eWidGen, iPlayer, 1)
 		screen.setLabelAt("", Pnl, uFont2 + str(iCorporateMaintenance), 1<<1, x, y, 0, eGameFont, eWidGen, iPlayer, 1)
 		iExpenses += iCorporateMaintenance
 		y += 20
@@ -321,12 +317,7 @@ class CvFinanceAdvisor:
 		uFontEdge, uFont4b, uFont4, uFont3b, uFont3, uFont2b, uFont2, uFont1b, uFont1 = self.aFontList
 		iconCommerceList = self.iconCommerceList
 		CyPlayer = self.CyPlayer
-
 		iIncome = CyPlayer.getCommerceRate(eComGold)
-		if not CyPlayer.isCommerceFlexible(CommerceTypes.COMMERCE_RESEARCH):
-			iIncome += CyPlayer.calculateBaseNetResearch()
-		goldFromCivs = self.goldFromCivs
-		iIncome += goldFromCivs
 
 		# Treasury footer
 		szTxt = self.szTreasury
@@ -552,10 +543,12 @@ class CvFinanceAdvisor:
 			screen.setLabelAt(aName(), Pnl, uFont2 + str(int(fWealth)), 1<<1, x, y, 0, eGameFont, eWidGen, 1, 1)
 			y += 20
 
+		goldFromCivs = self.goldFromCivs
 		if goldFromCivs > 0:
 			szText = TRNSLTR.getText("TXT_KEY_FINANCIAL_ADVISOR_PER_TURN", ())
 			screen.setLabelAt(aName(), Pnl, uFont2 + szText, 1<<0, 8, y, 0, eGameFont, WidgetTypes.WIDGET_HELP_FINANCE_FOREIGN_INCOME, iPlayer, 1)
 			screen.setLabelAt(aName(), Pnl, uFont2 + str(goldFromCivs), 1<<1, x, y, 0, eGameFont, WidgetTypes.WIDGET_HELP_FINANCE_FOREIGN_INCOME, iPlayer, 1)
+			iIncome += goldFromCivs
 			y += 20
 
 		y += 8

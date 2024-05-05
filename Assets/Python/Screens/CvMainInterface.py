@@ -5218,6 +5218,7 @@ class CvMainInterface:
 				szTxt += u"\n%s%s - %d%%" % (GPUtil.getUnitIcon(iUnit), GC.getUnitInfo(iUnit).getDescription(), iPercent)
 		self.updateTooltip(screen, szTxt)
 
+
 	def treasuryHelp(self, screen, szTxt):
 		player = self.CyPlayer
 		iconCommerceGold = self.iconCommerceList[0]
@@ -5225,10 +5226,12 @@ class CvMainInterface:
 		if player.isAnarchy():
 			self.updateTooltip(screen, szTxt)
 			return
+
 		# Treasury Upkeep
 		iValue = player.getTreasuryUpkeep()
 		if iValue:
 			szTxt += "\n" + TRNSLTR.getText("TXT_KEY_TREASURY_UPKEEP", ()) + str(iValue) + iconCommerceGold
+
 		# Civics
 		iSum = 0
 		szTemp = ""
@@ -5240,10 +5243,16 @@ class CvMainInterface:
 				iSum += iValue
 		if iSum:
 			szTxt += "\n" + TRNSLTR.getText("TXT_INTERFACE_TREASURYHELP_CIVIC_UPKEEP", ()) +" " + str(iSum) + iconCommerceGold + szTemp
+
 		# Maintenance
 		iValue = player.getTotalMaintenance()
 		if iValue:
 			szTxt += "\n" + TRNSLTR.getText("TXT_INTERFACE_TREASURYHELP_CITY_MAINTENANCE", ()) + " " + str(iValue) + iconCommerceGold
+
+		iValue = player.getCorporateMaintenance()
+		if iValue:
+			szTxt += "\n" + TRNSLTR.getText("TXT_INTERFACE_TREASURYHELP_CORPORATE_MAINTENANCE", ()) + " " + str(iValue) + iconCommerceGold
+
 		# Unit upkeep
 		iUnitUpkeep = player.getFinalUnitUpkeep()
 		iUnitSupply = player.calculateUnitSupply()
@@ -5255,6 +5264,7 @@ class CvMainInterface:
 					szTxt += "\n	" + str(iUnitSupply) + iconCommerceGold + " " + TRNSLTR.getText("TXT_INTERFACE_TREASURYHELP_EXPEDITIONARY", ())
 			elif iUnitSupply:
 				szTxt += TRNSLTR.getText("TXT_INTERFACE_TREASURYHELP_UNIT_SUPPLY", ()) + " " + str(iUnitSupply) + iconCommerceGold
+
 		# Trade
 		iValue = player.getGoldPerTurn()
 		if iValue:
@@ -5265,6 +5275,7 @@ class CvMainInterface:
 				szTxt += "0,255,0>"
 			szTxt += str(iValue) + "</color>" + iconCommerceGold
 		self.updateTooltip(screen, szTxt)
+
 
 	def showRevStatusInfoPane(self, screen):
 		InCity = self.InCity

@@ -694,15 +694,25 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_INTERFACE_TREASURYHELP_CITY_MAINTENANCE</Tag>
-		<English>City maintenance:</English>
+		<English>City Maintenance:</English>
 		<French>Entretien des villes :</French>
+		<German>Stadtunterhalt:</German>
+		<Italian>Costi di mantenimento città:</Italian>
+		<Spanish>Mantenimiento de las ciudades:</Spanish>
 		<Russian>Содержание городов:</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_INTERFACE_TREASURYHELP_CIVIC_UPKEEP</Tag>
 		<English>Civic Upkeep:</English>
 		<French>Entretien des Doctrines :</French>
+		<German>Staatsformunterhalt:</German>
+		<Italian>Costi di mantenimento forme di governo:</Italian>
+		<Spanish>Mantenimiento principios:</Spanish>
 		<Russian>Стоимость парадигм:</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_INTERFACE_TREASURYHELP_CORPORATE_MAINTENANCE</Tag>
+		<English>Corporate Maintenance:</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_INTERFACE_TREASURYHELP_EXPEDITIONARY</Tag>
@@ -732,6 +742,7 @@
 		<Tag>TXT_INTERFACE_TREASURYHELP_UNIT_UPKEEP</Tag>
 		<English>Unit Upkeep:</English>
 		<French>Entretien des Unités :</French>
+		<Italian>Costi di mantenimento unità:</Italian>
 		<Russian>Содержание отрядов:</Russian>
 	</TEXT>
 	<TEXT>
@@ -7904,18 +7915,6 @@
 		<Italian>[NEWLINE]--------------------------------[NEWLINE] Costi di mantenimento totali unità: [COLOR_HIGHLIGHT_TEXT]%d1[COLOR_REVERT] [ICON_GOLD]</Italian> <!-- financial advisor screen hover on unit maintenance costs -->
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_FINANCIAL_ADVISOR_CIVICS</Tag>
-		<English>Civic Upkeep</English>
-		<French>Entretien doctrinal</French>
-		<German>Staatsformunterhalt</German>
-		<Italian>Costi di mantenimento forme di governo</Italian> <!-- financial infoscreen -->
-		<Spanish>Mantenimiento principios</Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_FINANCIAL_ADVISOR_CORPORATIONS</Tag>
-		<English>Corporation Maintenance</English>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_FINANCIAL_ADVISOR_COST_PER_TURN</Tag>
 		<English>Net Foreign Expenses</English>
 		<French>Dépenses étrangères nettes</French>
@@ -7962,14 +7961,6 @@
 		<German>Inflation</German>
 		<Italian>Costi di inflazione</Italian> <!-- financial infoscreen -->
 		<Spanish>Inflación</Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_FINANCIAL_ADVISOR_MAINTENANCE</Tag>
-		<English>City Maintenance</English>
-		<French>Entretien ville</French>
-		<German>Stadtunterhalt</German>
-		<Italian>Costi di mantenimento città</Italian> <!-- financial infoscreen -->
-		<Spanish>Mantenimiento de las ciudades</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_FINANCIAL_ADVISOR_NET_INCOME</Tag>
@@ -28430,12 +28421,6 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<German>[SPACE]Welteinheit: %d1_Num übrig</German>
 		<Italian>[SPACE]Unità mondiale: %d1_Num [NUM1:rimanente:rimanenti]</Italian>
 		<Spanish>[SPACE]Unidad mundial: %d1_Num [NUM1:restante:restantes]</Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNITUPKEEP</Tag>
-		<English>Unit Upkeep</English>
-		<Russian>Содержание отряда</Russian>
-		<Italian>Costi di mantenimento unità</Italian> <!-- financial infoscreen -->
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_ANDEAN_MISSIONARY</Tag>
