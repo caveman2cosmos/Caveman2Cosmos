@@ -1332,7 +1332,7 @@ public:
 
 	void doCorporation();
 	int getCorporationInfluence(CorporationTypes eCorporation) const;
-	int calculateCorporateTaxes() const;
+	int64_t calcCorporateMaintenance() const;
 
 	int getDisabledPowerTimer() const;
 	void changeDisabledPowerTimer(int iChange);
@@ -2131,7 +2131,7 @@ public:
 		DECLARE_MAP_FUNCTOR_CONST(CvCity, bool, isGovernmentCenter);
 		DECLARE_MAP_FUNCTOR_CONST(CvCity, bool, AI_isMilitaryProductionCity);
 		DECLARE_MAP_FUNCTOR_CONST(CvCity, bool, AI_isNavalMilitaryProductionCity);
-		DECLARE_MAP_FUNCTOR_CONST(CvCity, int, calculateCorporateTaxes);
+		DECLARE_MAP_FUNCTOR_CONST(CvCity, int64_t, calcCorporateMaintenance);
 		DECLARE_MAP_FUNCTOR_CONST(CvCity, int, getID);
 		DECLARE_MAP_FUNCTOR_CONST(CvCity, int, getPopulation);
 		DECLARE_MAP_FUNCTOR_CONST(CvCity, int, getRealPopulation);

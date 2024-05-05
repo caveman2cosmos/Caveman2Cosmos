@@ -12490,7 +12490,7 @@ void CvCity::updateCorporationCommerce(CommerceTypes eIndex)
 
 	for (int iI = 0; iI < GC.getNumCorporationInfos(); iI++)
 	{
-		iNewCommerce += getCorporationCommerceByCorporation(eIndex, ((CorporationTypes)iI));
+		iNewCommerce += getCorporationCommerceByCorporation(eIndex, (CorporationTypes)iI);
 	}
 
 	if (getCorporationCommerce(eIndex) != iNewCommerce)
@@ -21441,11 +21441,11 @@ int CvCity::getCorporationInfluence(CorporationTypes eCorporation) const
 	return iInfluence;
 }
 
-int CvCity::calculateCorporateTaxes() const
+int64_t CvCity::calcCorporateMaintenance() const
 {
 	PROFILE_FUNC();
 
-	int iTaxes = 0;
+	int64_t iTaxes = 0;
 
 	for (int iI = 0; iI < GC.getNumCorporationInfos(); iI++)
 	{
@@ -21468,7 +21468,7 @@ int CvCity::calculateCorporateTaxes() const
 			(
 				GC.getCorporationInfo(eCorporation).getMaintenance() * iNumBonuses *
 				GC.getWorldInfo(GC.getMap().getWorldSize()).getCorporationMaintenancePercent()
-				/ 200
+				/ 100
 			);
 			const int iAveragePopulation = GC.getGame().getTotalPopulation() / std::max(1, GC.getGame().getNumCivCities());
 
@@ -21477,12 +21477,14 @@ int CvCity::calculateCorporateTaxes() const
 				iTaxes *= getPopulation();
 				iTaxes /= iAveragePopulation;
 			}
-			iTaxes = getModifiedIntValue(iTaxes, GET_PLAYER(getOwner()).getCorporationMaintenanceModifier() + GET_TEAM(getTeam()).getCorporationMaintenanceModifier());
+			iTaxes = getModifiedIntValue64(iTaxes, GET_PLAYER(getOwner()).getCorporationMaintenanceModifier() + GET_TEAM(getTeam()).getCorporationMaintenanceModifier());
 
-			iTaxes *= 100;
-			iTaxes /= GC.getHandicapInfo(getHandicapType()).getCorporationMaintenancePercent();
+			iTaxes *= GC.getHandicapInfo(getHandicapType()).getCorporationMaintenancePercent();
+			iTaxes /= 100;
 		}
 	}
+	FASSERT_NOT_NEGATIVE(iTaxes);
+
 	return iTaxes / 100;
 }
 

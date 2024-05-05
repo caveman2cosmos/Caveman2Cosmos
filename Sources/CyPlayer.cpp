@@ -862,6 +862,11 @@ int64_t CyPlayer::getTreasuryUpkeep() const
 	return m_pPlayer->getTreasuryUpkeep();
 }
 
+int64_t CyPlayer::getCorporateMaintenance() const
+{
+	return m_pPlayer->getCorporateMaintenance();
+}
+
 int CyPlayer::getTotalMaintenance() const
 {
 	return m_pPlayer->getTotalMaintenance();

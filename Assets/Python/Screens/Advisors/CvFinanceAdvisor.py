@@ -244,6 +244,7 @@ class CvFinanceAdvisor:
 		iTreasuryUpkeep = CyPlayer.getTreasuryUpkeep()
 		totalMaintenance = CyPlayer.getTotalMaintenance()
 		totalCivicUpkeep = CyPlayer.getCivicUpkeep(False)
+		iCorporateMaintenance = CyPlayer.getCorporateMaintenance()
 
 		iInflation = CyPlayer.getFinalExpense() - CyPlayer.calculatePreInflatedCosts()
 		self.goldFromCivs = goldFromCivs = CyPlayer.getGoldPerTurn()
@@ -279,6 +280,11 @@ class CvFinanceAdvisor:
 		screen.setLabelAt("", Pnl, uFont2 + szText, 1<<0, 8, y, 0, eGameFont, WidgetTypes.WIDGET_HELP_FINANCE_CIVIC_UPKEEP, iPlayer, 1)
 		screen.setLabelAt("", Pnl, uFont2 + str(totalCivicUpkeep), 1<<1, x, y, 0, eGameFont, WidgetTypes.WIDGET_HELP_FINANCE_CIVIC_UPKEEP, iPlayer, 1)
 		iExpenses += totalCivicUpkeep
+		y += 20
+
+		screen.setLabelAt("", Pnl, uFont2 + TRNSLTR.getText("TXT_KEY_FINANCIAL_ADVISOR_CORPORATIONS", ()), 1<<0, 8, y, 0, eGameFont, eWidGen, iPlayer, 1)
+		screen.setLabelAt("", Pnl, uFont2 + str(iCorporateMaintenance), 1<<1, x, y, 0, eGameFont, eWidGen, iPlayer, 1)
+		iExpenses += iCorporateMaintenance
 		y += 20
 
 		if goldFromCivs < 0:
@@ -422,7 +428,7 @@ class CvFinanceAdvisor:
 		fBuildings = 0.0
 		fHeadquarters = 0.0
 		fShrines = 0.0
-		fCorporations = 0.0
+		iCorporations = 0
 		fSpecialists = 0.0
 		iWealthCount = 0
 		fWealth = 0.0
@@ -452,12 +458,8 @@ class CvFinanceAdvisor:
 				fHeadquarters += fCityHeadquarters
 				fShrines += fCityShrines
 
-				fCityCorporations = CyCity.getCorporationCommerce(eComGold)
-				fCorporations += fCityCorporations
-				#Afforess Corporation Taxes
-				fTaxRate = CyCity.calculateCorporateTaxes()
-				if fTaxRate > 0:
-					fCorporations += fTaxRate
+				iCityCorporations = CyCity.getCorporationCommerce(eComGold)
+				iCorporations += iCityCorporations
 
 				fCitySpecialists = CyCity.getSpecialistCommerce(eComGold)
 				fSpecialists += fCitySpecialists
@@ -471,7 +473,7 @@ class CvFinanceAdvisor:
 					iWealthCount += 1
 
 				# modifiers don't multiply wealth
-				fCityTotal = fCityTaxes + fCityBuildings + fCityHeadquarters + fCityShrines + fCityCorporations + fCitySpecialists
+				fCityTotal = fCityTaxes + fCityBuildings + fCityHeadquarters + fCityShrines + iCityCorporations + fCitySpecialists
 				fUnmodifiedTotal += fCityTotal
 
 				if CyCity.isCapital():
@@ -486,7 +488,7 @@ class CvFinanceAdvisor:
 						entry[3] += 1
 						entry[4] += fCityTotal * entry[1] / 100.0
 
-		iTotalMinusTaxes = int(fBuildings) + int(fHeadquarters) + int(fShrines) + int(fCorporations) + int(fSpecialists) + int(fWealth) + int(fPlayerGoldModifierEffect) + int(fBonusGoldModifierEffect)
+		iTotalMinusTaxes = int(fBuildings) + int(fHeadquarters) + int(fShrines) + iCorporations + int(fSpecialists) + int(fWealth) + int(fPlayerGoldModifierEffect) + int(fBonusGoldModifierEffect)
 		for entry in multipliers:
 			if entry[3]:
 				iTotalMinusTaxes += int(entry[4])
@@ -514,10 +516,10 @@ class CvFinanceAdvisor:
 			screen.setLabelAt(aName(), Pnl, uFont2 + str(int(fHeadquarters)), 1<<1, x, y, 0, eGameFont, eWidGen, 1, 1)
 			y += 20
 
-		if fCorporations:
+		if iCorporations:
 			szText = TRNSLTR.getText("TXT_KEY_CONCEPT_CORPORATIONS", ())
 			screen.setLabelAt(aName(), Pnl, uFont2 + szText, 1<<0, 8, y, 0, eGameFont, eWidGen, 1, 1)
-			screen.setLabelAt(aName(), Pnl, uFont2 + str(int(fCorporations)), 1<<1, x, y, 0, eGameFont, eWidGen, 1, 1)
+			screen.setLabelAt(aName(), Pnl, uFont2 + str(iCorporations), 1<<1, x, y, 0, eGameFont, eWidGen, 1, 1)
 			y += 20
 
 		if fShrines:
