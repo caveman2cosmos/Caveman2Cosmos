@@ -3251,6 +3251,7 @@ bool CvPlayer::hasTrait(TraitTypes eTrait) const
 void CvPlayer::setHumanDisabled(bool newVal)
 {
 	m_bDisableHuman = newVal;
+	m_bUnitUpkeepDirty = true;
 	updateHuman();
 }
 
