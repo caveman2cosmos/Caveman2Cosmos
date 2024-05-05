@@ -3824,6 +3824,58 @@ void CvPlayer::doTurn()
 	CvEventReporter::getInstance().endPlayerTurn( GC.getGame().getGameTurn(),  getID());
 }
 
+void CvPlayer::doMultiMapTurn()
+{
+#ifdef VALIDATION_FOR_PLOT_GROUPS
+	foreach_(const CvPlot* pLoopPlot, GC.getMap().plots())
+	{
+		if ( pLoopPlot->getPlotGroupId(getID()) != -1 && pLoopPlot->getPlotGroup(getID()) == NULL )
+		{
+			::MessageBox(NULL, "Invalid plot group id found!", "CvGameCoreDLL", MB_OK);
+		}
+	}
+#endif
+
+	//	Each turn flush the movement cost cache for each player to avoid it getting too large
+	CvPlot::flushMovementCostCache();
+
+#ifdef CAN_TRAIN_CACHING
+	//	Clear training caches at the start of each turn
+	algo::for_each(cities(), CvCity::fn::clearCanTrainCache());
+#endif
+
+	setBuildingListInvalid();
+
+#ifdef CAN_BUILD_VALUE_CACHING
+	CvPlot::ClearCanBuildCache();
+#endif
+
+	doUpdateCacheOnTurn();
+
+	//AI_doTurnPre();
+
+	AI_assignWorkingPlots();
+
+	{
+		PROFILE("CvPlayer::doTurn.DoCityTurn");
+
+		algo::for_each(cities_safe(), CvCity::fn::doTurn());
+	}
+
+	if (GC.isDCM_OPP_FIRE())
+	{
+		algo::for_each(units(), CvUnit::fn::doOpportunityFire());
+	}
+	if (GC.isDCM_ACTIVE_DEFENSE())
+	{
+		algo::for_each(units(), CvUnit::fn::doActiveDefense());
+	}
+
+	updateTradeRoutes();
+
+	doTurnUnits();
+}
+
 void CvPlayer::recordHistory()
 {
 	m_mapEconomyHistory[GC.getGame().getGameTurn()] = calculateTotalCommerce();
