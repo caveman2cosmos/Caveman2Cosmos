@@ -310,7 +310,7 @@ public:
 
 	bool isWeLoveTheKingDay() const;
 	void setWeLoveTheKingDay(bool bWeLoveTheKingDay);
-	int calculateCorporateTaxes() const;
+	int64_t calcCorporateMaintenance() const;
 	void changePowerCount(int iChange);
 
 	void changeEventAnger(int iChange);

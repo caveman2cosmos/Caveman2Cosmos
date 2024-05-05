@@ -308,6 +308,7 @@ void CvPythonPlayerLoader::CyPlayerPythonInterface3(boost::python::class_<CyPlay
 		.def("isBuildingOnlyHealthy", &CyPlayer::isBuildingOnlyHealthy, "bool ()")
 
 		.def("getTreasuryUpkeep", &CyPlayer::getTreasuryUpkeep, "int64 ()")
+		.def("getCorporateMaintenance", &CyPlayer::getCorporateMaintenance, "int64 ()")
 		.def("getTotalMaintenance", &CyPlayer::getTotalMaintenance, "int ()")
 		.def("getLevelExperienceModifier", &CyPlayer::getLevelExperienceModifier, "int ()")
 

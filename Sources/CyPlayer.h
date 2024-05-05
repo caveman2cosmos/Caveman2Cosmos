@@ -229,6 +229,7 @@ public:
 	bool isBuildingOnlyHealthy() const;
 
 	int64_t getTreasuryUpkeep() const;
+	int64_t getCorporateMaintenance() const;
 	int getTotalMaintenance() const;
 	int getLevelExperienceModifier() const;
 

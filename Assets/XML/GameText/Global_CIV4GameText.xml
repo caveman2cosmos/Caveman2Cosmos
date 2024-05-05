@@ -7912,6 +7912,10 @@
 		<Spanish>Mantenimiento principios</Spanish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_FINANCIAL_ADVISOR_CORPORATIONS</Tag>
+		<English>Corporation Maintenance</English>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_FINANCIAL_ADVISOR_COST_PER_TURN</Tag>
 		<English>Net Foreign Expenses</English>
 		<French>Dépenses étrangères nettes</French>
