@@ -1414,6 +1414,8 @@ void CvMap::afterSwitch()
 		}
 	}
 
+	Cy::call("CvAppInterface", "cacheCameraZoom");
+
 	gDLL->getEngineIFace()->ClearMinimap();
 	gDLL->getEngineIFace()->InitGraphics();
 	gDLL->getEngineIFace()->updateFoundingBorder(); // Matt: Maybe need this.
