@@ -5707,9 +5707,6 @@ void CvGame::doTurn()
 
 	updateScore();
 
-	// solve property system
-	m_PropertySolver.doTurn();
-
 	doDeals();
 
 	for (int iI = 0; iI < MAX_TEAMS; iI++)
@@ -5722,7 +5719,26 @@ void CvGame::doTurn()
 
 	reverse_foreach_(CvMap* map, GC.getMaps())
 	{
-		map->doTurn();
+		if (map->plotsInitialized())
+		{
+			GC.switchMap(map->getType());
+
+			// solve property system
+			m_PropertySolver.doTurn();
+
+			map->doTurn();
+
+			if (map->getType() != MAP_EARTH)
+			{
+				foreach_(const PlayerTypes ePlayer, PlayerTypesRange())
+				{
+					if (GET_PLAYER(ePlayer).isAlive())
+					{
+						GET_PLAYER(ePlayer).doMultiMapTurn();
+					}
+				}
+			}
+		}
 	}
 
 	createBarbarianCities(false);

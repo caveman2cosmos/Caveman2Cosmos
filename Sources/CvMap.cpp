@@ -447,16 +447,11 @@ void CvMap::doTurn()
 {
 	PROFILE("CvMap::doTurn()");
 
-	if (plotsInitialized())
+	updateIncomingUnits();
+
+	for (int iI = 0; iI < numPlots(); iI++)
 	{
-		GC.switchMap(m_eType);
-
-		updateIncomingUnits();
-
-		for (int iI = 0; iI < numPlots(); iI++)
-		{
-			plotByIndex(iI)->doTurn();
-		}
+		plotByIndex(iI)->doTurn();
 	}
 }
 
@@ -1413,6 +1408,8 @@ void CvMap::afterSwitch()
 			kGenerator.addGameElements();
 		}
 	}
+
+	Cy::call("CvAppInterface", "cacheCameraZoom");
 
 	gDLL->getEngineIFace()->ClearMinimap();
 	gDLL->getEngineIFace()->InitGraphics();

@@ -175,5 +175,12 @@ def gameExitSave():
 	import AutoSave
 	AutoSave.autoSave("[Exit]")
 
+def cacheCameraZoom():
+	global g_cameraZoom
+	g_cameraZoom = CyCamera().GetZoom()
+
+def resetCameraZoom():
+	CyCamera().SetZoom(g_cameraZoom)
+
 # Referenced by the BtS exe.
 def getConsoleMacro(argsList): return ""

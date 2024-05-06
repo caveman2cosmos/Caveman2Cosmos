@@ -1614,9 +1614,9 @@ class Pedia:
 				elif "PROJECT" in szSplit:
 					self.tooltip.handle(screen, CyGameTextMgr().getProjectHelp(ID, False, None))
 				elif "TRAIT" in szSplit:
-					self.tooltip.handle(screen, CyGameTextMgr().parseTraits(ID, -1, False, False))
+					self.tooltip.handle(screen, CyGameTextMgr().parseTraits(ID, False, False))
 				elif "LEADER" in szSplit:
-					self.tooltip.handle(screen, CyGameTextMgr().parseLeaderTraits(ID, -1, False, False))
+					self.tooltip.handle(screen, CyGameTextMgr().parseLeaderTraits(ID, False, False))
 				elif "BUILD" in szSplit:
 					self.tooltip.handle(screen, GC.getBuildInfo(ID).getDescription())
 				elif "RELIGION" in szSplit:
