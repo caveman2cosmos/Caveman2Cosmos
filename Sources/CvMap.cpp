@@ -1474,8 +1474,8 @@ void CvMap::afterSwitch()
 		}
 	}
 
-	//if (firstSwitch)
-	//	setRevealedPlots(GC.getGame().getActiveTeam(), true, false);
+	if (firstSwitch && GC.getMapInfo(m_eType).startRevealed())
+		setRevealedPlots(GC.getGame().getActiveTeam(), true, false);
 
 	Cy::call(PYScreensModule, "initMinimap");
 

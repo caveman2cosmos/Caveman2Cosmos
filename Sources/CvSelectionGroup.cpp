@@ -549,7 +549,7 @@ void CvSelectionGroup::autoMission()
 
 	FAssert(getOwner() != NO_PLAYER);
 
-	if (getNumUnits() > 0 && headMissionQueueNode() != NULL && !isBusy())
+	if (getNumUnits() > 0 && headMissionQueueNode() && !isBusy())
 	{
 		if (isHuman()
 		&& algo::any_of(units(), !CvUnit::fn::alwaysInvisible())
