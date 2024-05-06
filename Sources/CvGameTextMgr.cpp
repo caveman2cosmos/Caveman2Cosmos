@@ -10185,7 +10185,7 @@ void CvGameTextMgr::parseBuildUp(CvWStringBuffer &szHelpString, PromotionLineTyp
 	}
 }
 
-void CvGameTextMgr::parseTraits(CvWStringBuffer &szHelpString, TraitTypes eTrait, CivilizationTypes eCivilization, bool bDawnOfMan, bool bEffectsOnly)
+void CvGameTextMgr::parseTraits(CvWStringBuffer &szHelpString, TraitTypes eTrait, bool bDawnOfMan, bool bEffectsOnly)
 {
 	// TB Traits
 	PROFILE_FUNC();
@@ -11816,8 +11816,6 @@ void CvGameTextMgr::parseTraits(CvWStringBuffer &szHelpString, TraitTypes eTrait
 		if (pMani)
 			pMani->buildDisplayString(szHelpString);
 	}
-
-//	return szHelpString;
 }
 
 
@@ -11864,7 +11862,7 @@ void CvGameTextMgr::parseLeaderTraits(CvWStringBuffer &szHelpString, LeaderHeadT
 						}
 						else bFirst = false;
 
-						parseTraits(szHelpString, eTrait, eCivilization, bDawnOfMan);
+						parseTraits(szHelpString, eTrait, bDawnOfMan);
 					}
 				}
 			}
@@ -11888,7 +11886,7 @@ void CvGameTextMgr::parseLeaderTraits(CvWStringBuffer &szHelpString, LeaderHeadT
 						}
 						else bFirst = false;
 
-						parseTraits(szHelpString, eTrait, eCivilization, bDawnOfMan);
+						parseTraits(szHelpString, eTrait, bDawnOfMan);
 					}
 				}
 			}
@@ -11910,7 +11908,7 @@ void CvGameTextMgr::parseLeaderTraits(CvWStringBuffer &szHelpString, LeaderHeadT
 					}
 					else bFirst = false;
 
-					parseTraits(szHelpString, eTrait, eCivilization, bDawnOfMan);
+					parseTraits(szHelpString, eTrait, bDawnOfMan);
 				}
 			}
 		}
@@ -27730,22 +27728,11 @@ void CvGameTextMgr::setBuildUpHelp(CvWStringBuffer &szBuffer, PromotionLineTypes
 
 void CvGameTextMgr::setTraitHelp(CvWStringBuffer &szBuffer, TraitTypes eTrait)
 {
-	CivilizationTypes eCivilization;
-
-	if (GC.getGame().getActivePlayer() != NO_PLAYER)
-	{
-		eCivilization = GET_PLAYER(GC.getGame().getActivePlayer()).getCivilizationType();
-	}
-	else
-	{
-		eCivilization = NO_CIVILIZATION;
-	}
-
 	if (NO_TRAIT == eTrait)
 	{
 		return;
 	}
-	parseTraits(szBuffer, eTrait, eCivilization, false, false);
+	parseTraits(szBuffer, eTrait, false, false);
 }
 
 void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer& szBuffer, UnitCombatTypes eUnitCombat, bool bCivilopediaText) const
@@ -31251,7 +31238,6 @@ void CvGameTextMgr::parsePlayerTraits(CvWStringBuffer &szBuffer, PlayerTypes ePl
 	}
 	iDisplayCount = kPlayer.getTraitDisplayCount();
 	bool bFirst = true;
-	const CivilizationTypes eCivilization = kPlayer.getCivilizationType();
 	int iCurrentDisplay = 0;
 
 	for (int iTrait = 0; iTrait < GC.getNumTraitInfos(); ++iTrait)
@@ -31271,7 +31257,7 @@ void CvGameTextMgr::parsePlayerTraits(CvWStringBuffer &szBuffer, PlayerTypes ePl
 			//May need to add the buttons here?  Not sure. We'll see how this goes.
 			if (iCurrentDisplay == iDisplayCount)
 			{
-				parseTraits(szBuffer, (TraitTypes)iTrait, eCivilization);
+				parseTraits(szBuffer, (TraitTypes)iTrait);
 				if (iCurrentDisplay != iPotentialDisplays)
 				{
 					szBuffer.append(NEWLINE);

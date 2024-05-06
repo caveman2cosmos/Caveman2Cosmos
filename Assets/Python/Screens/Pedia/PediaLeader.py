@@ -99,7 +99,7 @@ class PediaLeader:
 
 		# Traits
 		screen.addPanel(aName(), "", "", True, False, X_COL_2, Y_ROW_2, W_COL_2, H_ROW_2, ePanelBlue50)
-		szSpecialText = szfont3 + CyGameTextMgr().parseLeaderTraits(iLeader, -1, False, True)
+		szSpecialText = szfont3 + CyGameTextMgr().parseLeaderTraits(iLeader, False, True)
 		screen.addMultilineText(aName(), szSpecialText, X_COL_2+4, Y_ROW_2+16, W_COL_2-8, H_ROW_2-32, eWidGen, -1, -1, 1<<0)
 
 		# Personality

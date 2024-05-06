@@ -461,7 +461,7 @@ class CvGameUtils:
 ## Leader Widget Text##
 			elif iData1 == 7876:
 				iLeader = iData2 % 10000
-				return CyGameTextMgr().parseLeaderTraits(iLeader, -1, False, False)
+				return CyGameTextMgr().parseLeaderTraits(iLeader, False, False)
 ## Improvement Widget Text##
 			elif iData1 == 7877:
 				if iData2 == -1:
