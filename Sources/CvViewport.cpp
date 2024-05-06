@@ -457,6 +457,7 @@ void CvViewport::processActionState()
 		gDLL->getEngineIFace()->SetDirty(MinimapTexture_DIRTY_BIT, true);
 		gDLL->getInterfaceIFace()->setDirty(MinimapSection_DIRTY_BIT, true);
 		gDLL->getInterfaceIFace()->setDirty(Fog_DIRTY_BIT, true);
+		Cy::call("CvAppInterface", "resetCameraZoom");
 		setActionState(VIEWPORT_ACTION_STATE_NONE);
 		break;
 	}
