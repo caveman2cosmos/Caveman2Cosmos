@@ -184,6 +184,7 @@ public:
 	const char* getUnitButton(UnitTypes eUnit) const;
 
 	void doTurn();
+	void doMultiMapTurn();
 	void doTurnUnits();
 
 	void recordHistory();
