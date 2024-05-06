@@ -419,16 +419,11 @@ void CvMap::doTurn()
 {
 	PROFILE("CvMap::doTurn()");
 
-	if (plotsInitialized())
+	updateIncomingUnits();
+
+	for (int iI = 0; iI < numPlots(); iI++)
 	{
-		GC.switchMap(m_eType);
-
-		updateIncomingUnits();
-
-		for (int iI = 0; iI < numPlots(); iI++)
-		{
-			plotByIndex(iI)->doTurn();
-		}
+		plotByIndex(iI)->doTurn();
 	}
 }
 

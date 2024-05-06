@@ -5710,18 +5710,23 @@ void CvGame::doTurn()
 
 	reverse_foreach_(CvMap* map, GC.getMaps())
 	{
-		// solve property system
-		m_PropertySolver.doTurn();
-
-		map->doTurn();
-
-		if (map->getType() != MAP_EARTH)
+		if (map->plotsInitialized())
 		{
-			foreach_(const PlayerTypes ePlayer, PlayerTypesRange())
+			GC.switchMap(map->getType());
+
+			// solve property system
+			m_PropertySolver.doTurn();
+
+			map->doTurn();
+
+			if (map->getType() != MAP_EARTH)
 			{
-				if (GET_PLAYER(ePlayer).isAlive())
+				foreach_(const PlayerTypes ePlayer, PlayerTypesRange())
 				{
-					GET_PLAYER(ePlayer).doMultiMapTurn();
+					if (GET_PLAYER(ePlayer).isAlive())
+					{
+						GET_PLAYER(ePlayer).doMultiMapTurn();
+					}
 				}
 			}
 		}
