@@ -759,7 +759,7 @@ def applySaltpeter(argsList):
 		if iCount == 0:
 			break
 		iCount -= 1
-		GAME.setPlotExtraYield(loopPlot[1].getX(), loopPlot[1].getY(), YieldTypes.YIELD_COMMERCE, 1)
+		loopPlot[1].setExtraYield(YieldTypes.YIELD_COMMERCE, 1)
 		CyInterface().addMessage(data.ePlayer, False, GC.getEVENT_MESSAGE_TIME(), TRNSLTR.getText("TXT_KEY_EVENT_SALTPETER_DISCOVERED", ()), "", InterfaceMessageTypes.MESSAGE_TYPE_INFO, None, GC.getInfoTypeForString("COLOR_WHITE"), loopPlot[1].getX(), loopPlot[1].getY(), True, True)
 
 ######## GREAT DEPRESSION ###########
@@ -6064,7 +6064,7 @@ def doVolcanoAdjustFertility(argsList):
 	for i in xrange(8):
 		tPlot = plotDirection(iX, iY, DirectionTypes(i))
 		if tPlot and not tPlot.isCity():
-			GAME.setPlotExtraYield(tPlot.getX(), tPlot.getY(), YieldTypes.YIELD_FOOD, extraFood)
+			tPlot.setExtraYield(YieldTypes.YIELD_FOOD, extraFood)
 
 
 def doVolcanoNeighbouringPlots(pPlot):

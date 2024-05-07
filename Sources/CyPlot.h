@@ -127,6 +127,7 @@ public:
 	int getRiverID() const;
 	void setRiverID(int iNewValue);
 	int getYield(YieldTypes eIndex) const;
+	void setExtraYield(YieldTypes eYield, short iExtraYield);
 	int calculateBestNatureYield(YieldTypes eIndex, TeamTypes eTeam) const;
 	int calculateTotalBestNatureYield(TeamTypes eTeam) const;
 	int calculateImprovementYieldChange(int /*ImprovementTypes*/ eImprovement, YieldTypes eYield, int /*PlayerTypes*/ ePlayer, bool bOptimal) const;

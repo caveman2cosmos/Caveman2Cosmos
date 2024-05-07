@@ -8409,6 +8409,7 @@ void CvGame::read(FDataStreamBase* pStream)
 		++m_iNumSessions;
 	}
 
+	// @SAVEBREAK delete
 	{
 		unsigned int iSize;
 		m_aPlotExtraYields.clear();
@@ -8420,6 +8421,7 @@ void CvGame::read(FDataStreamBase* pStream)
 			m_aPlotExtraYields.push_back(kPlotYield);
 		}
 	}
+	// !SAVEBREAK
 
 	{
 		unsigned int iSize;
@@ -8635,11 +8637,12 @@ void CvGame::write(FDataStreamBase* pStream)
 
 	WRAPPER_WRITE(wrapper, "CvGame", m_iNumSessions);
 
-	WRAPPER_WRITE_DECORATED(wrapper, "CvGame", m_aPlotExtraYields.size(), "PlotYieldCount");
-	foreach_(PlotExtraYield& pExtraYield, m_aPlotExtraYields)
+	// @SAVEBREAK delete
 	{
-		pExtraYield.write(pStream);
+		uint iSize = 0;
+		WRAPPER_WRITE_DECORATED(wrapper, "CvGame", iSize, "PlotYieldCount");
 	}
+	// !SAVEBREAK
 
 	WRAPPER_WRITE_DECORATED(wrapper, "CvGame", m_mapVoteSourceReligions.size(), "VoteSourceReligionsCount");
 	for (stdext::hash_map<VoteSourceTypes, ReligionTypes>::iterator it = m_mapVoteSourceReligions.begin(); it != m_mapVoteSourceReligions.end(); ++it)
@@ -8916,8 +8919,7 @@ bool CvGame::isCompetingCorporation(CorporationTypes eCorporation1, CorporationT
 	return false;
 }
 
-// Toffer - ToDo - I think we want to use this more extensively,
-//	so move it over to CvPlot and store extra yield in an array of three elements per plot.
+// @SAVEBREAK delete
 int CvGame::getPlotExtraYield(int iX, int iY, YieldTypes eYield) const
 {
 	PROFILE_EXTRA_FUNC();
@@ -8930,62 +8932,7 @@ int CvGame::getPlotExtraYield(int iX, int iY, YieldTypes eYield) const
 	}
 	return 0;
 }
-
-void CvGame::setPlotExtraYield(int iX, int iY, YieldTypes eYield, int iExtraYield)
-{
-	PROFILE_EXTRA_FUNC();
-	if (iExtraYield == 0)
-	{
-		FErrorMsg("Redundant function call");
-		return;
-	}
-	bool bFound = false;
-
-	for (std::vector<PlotExtraYield>::iterator it = m_aPlotExtraYields.begin(); it != m_aPlotExtraYields.end(); ++it)
-	{
-		if ((*it).m_iX == iX && (*it).m_iY == iY)
-		{
-			bFound = true;
-			(*it).m_aeExtraYield[eYield] += iExtraYield;
-
-			bool bEmpty = true;
-			for (int i = 0; i < NUM_YIELD_TYPES; ++i)
-			{
-				if ((*it).m_aeExtraYield[i] != 0)
-				{
-					bEmpty = false;
-					break;
-				}
-			}
-			if (bEmpty)
-			{
-				m_aPlotExtraYields.erase(it);
-			}
-			break;
-		}
-	}
-
-	if (!bFound)
-	{
-		PlotExtraYield kExtraYield;
-		kExtraYield.m_iX = iX;
-		kExtraYield.m_iY = iY;
-		for (int i = 0; i < NUM_YIELD_TYPES; ++i)
-		{
-			if (eYield == i)
-			{
-				kExtraYield.m_aeExtraYield.push_back(iExtraYield);
-			}
-			else
-			{
-				kExtraYield.m_aeExtraYield.push_back(0);
-			}
-		}
-		m_aPlotExtraYields.push_back(kExtraYield);
-	}
-	GC.getMap().plot(iX, iY)->updateYield();
-}
-
+// !SAVEBREAK
 
 ReligionTypes CvGame::getVoteSourceReligion(VoteSourceTypes eVoteSource) const
 {

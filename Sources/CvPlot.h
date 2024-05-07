@@ -749,6 +749,9 @@ public:
 	int getBaseYield(const YieldTypes eIndex) const;
 	void changeBaseYield(const short* pYieldChange);
 
+ 	short getExtraYield(YieldTypes eYield) const;
+	void setExtraYield(YieldTypes eYield, short iExtraYield);
+
 	short* getYield() const;
 	void updateYield();
 	int calculateYield(YieldTypes eIndex, bool bDisplay = false) const;
@@ -1014,6 +1017,7 @@ protected:
 
 	short* m_baseYields;
 	short* m_aiYield;
+	bst::array<short, NUM_YIELD_TYPES> m_aExtraYield;
 	std::vector<std::pair<PlayerTypes,int> > m_aiCulture;
 	std::vector<PlotTeamVisibilityIntensity> m_aPlotTeamVisibilityIntensity;
 	unsigned int* m_aiFoundValue;
