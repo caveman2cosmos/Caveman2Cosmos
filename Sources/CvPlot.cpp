@@ -7937,12 +7937,6 @@ void CvPlot::recalculateBaseYield()
 }
 
 
-short CvPlot::getExtraYield(YieldTypes eYield) const
-{
-	FASSERT_BOUNDS(0, NUM_YIELD_TYPES, eYield);
-	return m_aExtraYield[eYield];
-}
-
 void CvPlot::setExtraYield(YieldTypes eYield, short iExtraYield)
 {
 	FASSERT_BOUNDS(0, NUM_YIELD_TYPES, eYield);
@@ -11336,9 +11330,7 @@ void CvPlot::read(FDataStreamBase* pStream)
 	// @SAVEBREAK delete
 	foreach_(const YieldTypes eYield, YieldTypesRange())
 	{
-		const int value = GC.getGame().getPlotExtraYield(m_iX, m_iY, eYield);
-		if (value != 0)
-			m_aExtraYield[eYield] += value;
+		m_aExtraYield[eYield] += GC.getGame().getPlotExtraYield(m_iX, m_iY, eYield);
 	}
 	// ! SAVEBREAK
 

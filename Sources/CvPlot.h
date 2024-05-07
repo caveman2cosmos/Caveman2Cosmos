@@ -749,9 +749,7 @@ public:
 	int getBaseYield(const YieldTypes eIndex) const;
 	void changeBaseYield(const short* pYieldChange);
 
- 	short getExtraYield(YieldTypes eYield) const;
 	void setExtraYield(YieldTypes eYield, short iExtraYield);
-
 	short* getYield() const;
 	void updateYield();
 	int calculateYield(YieldTypes eIndex, bool bDisplay = false) const;
