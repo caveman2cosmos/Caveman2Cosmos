@@ -12253,7 +12253,7 @@ void CvPlot::applyEvent(EventTypes eEvent)
 		const int iChange = kEvent.getPlotExtraYield(i);
 		if (0 != iChange)
 		{
-			m_aExtraYield[i] += iChange;
+			setExtraYield((YieldTypes)i, iChange);
 		}
 	}
 }
