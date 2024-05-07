@@ -111,6 +111,7 @@ void CvPythonPlotLoader::CyPlotPythonInterface1(boost::python::class_<CyPlot>& i
 		.def("getRiverID", &CyPlot::getRiverID, "int ()")
 		.def("setRiverID", &CyPlot::setRiverID, "void (int)")
 		.def("getYield", &CyPlot::getYield, "int (YieldTypes eIndex)")
+		.def("setExtraYield", &CyPlot::setExtraYield)
 		.def("calculateBestNatureYield", &CyPlot::calculateBestNatureYield, "int (int (YieldTypes) eYield, int (TeamTypes) eTeam)")
 		.def("calculateTotalBestNatureYield", &CyPlot::calculateTotalBestNatureYield, "int (int (TeamTypes) eTeam)")
 		.def("calculateImprovementYieldChange", &CyPlot::calculateImprovementYieldChange, "int (int (ImprovementTypes) eImprovement, int (YieldTypes) eYield, int (PlayerTypes) ePlayer, bool bOptimal)")

@@ -748,6 +748,7 @@ enum YieldTypes
 
 	NUM_YIELD_TYPES
 };
+typedef fixed_enum_range<YieldTypes, int, 0, NUM_YIELD_TYPES> YieldTypesRange;
 
 enum CommerceTypes
 {
@@ -760,6 +761,7 @@ enum CommerceTypes
 
 	NUM_COMMERCE_TYPES
 };
+typedef fixed_enum_range<CommerceTypes, int, 0, NUM_COMMERCE_TYPES> CommerceTypesRange;
 
 enum AdvisorTypes
 {

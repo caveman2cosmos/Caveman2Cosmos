@@ -658,6 +658,7 @@ struct EventMessage
 	std::wstring getDescription() const { return szDescription;	}
 };
 
+// @SAVEBREAK delete
 struct PlotExtraYield
 {
 	int m_iX;
@@ -672,6 +673,7 @@ struct PlotExtraYield
 	void read(FDataStreamBase* pStream);
 	void write(FDataStreamBase* pStream);
 };
+// !SAVEBREAK
 
 typedef std::vector< std::pair<BuildingTypes, int> > BuildingChangeArray;
 
