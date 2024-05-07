@@ -1669,9 +1669,9 @@ void CyCity::setWeLoveTheKingDay(bool bWeLoveTheKingDay)
 	m_pCity->setWeLoveTheKingDay(bWeLoveTheKingDay);
 }
 
-int CyCity::calculateCorporateTaxes() const
+int64_t CyCity::calcCorporateMaintenance() const
 {
-	return m_pCity->calculateCorporateTaxes();
+	return m_pCity->calcCorporateMaintenance();
 }
 
 void CyCity::changePowerCount(int iChange)

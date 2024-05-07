@@ -184,6 +184,7 @@ public:
 	const char* getUnitButton(UnitTypes eUnit) const;
 
 	void doTurn();
+	void doMultiMapTurn();
 	void doTurnUnits();
 
 	void recordHistory();
@@ -215,7 +216,6 @@ public:
 	void updateCitySight(bool bIncrement, bool bUpdatePlotGroups);
 	void updateTradeRoutes();
 	void updatePlunder(int iChange, bool bUpdatePlotGroups);
-	void validateCommerce() const;
 	void updateTimers();
 	CvCity* findClosestCity(const CvPlot* pPlot) const;
 
@@ -1450,14 +1450,13 @@ public:
 	int getCorporationSpreadModifier() const;
 	void changeCorporationSpreadModifier(int iChange);
 
-	int getCorporateTaxIncome() const;
-	void changeCorporateTaxIncome(int iChange);
+	int64_t getCorporateMaintenance() const;
+	void updateCorporateMaintenance();
 
 	int getCorporationInfluence(CorporationTypes eIndex) const;
 	int getEnvironmentalProtection() const;
 	int getLaborFreedom() const;
 
-	void doTaxes();
 
 	bool m_bChoosingReligion;
 	bool m_bHasLanguage;
@@ -1562,7 +1561,10 @@ protected:
 	int m_iWorldHappiness;
 	float m_fPopulationgrowthratepercentageLog;
 	int m_iCorporationSpreadModifier;
+	// @SAVEBREAK - delete
 	int m_iCorporateTaxIncome;
+	// !SAVEBREAK
+	int64_t m_iCorporateMaintenance;
 	bool m_bShowLandmarks;
 	int m_iCityLimit;
 	int m_iCityOverLimitUnhappy;
@@ -2321,10 +2323,6 @@ public:
 	void changeExtraFreedomFighters(int iChange);
 
 	CvBuildLists* m_pBuildLists;
-
-#ifdef _DEBUG
-	void ValidatePlotGroup(CvPlot* plot, CvPlotGroup* group);
-#endif
 
 private:
 	int m_iNumAnimalsSubdued;
