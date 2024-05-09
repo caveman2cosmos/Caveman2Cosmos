@@ -31050,73 +31050,83 @@ void CvGameTextMgr::setProductionHelp(CvWStringBuffer &szBuffer, CvCity& city)
 }
 
 
-void CvGameTextMgr::parsePlayerTraits(CvWStringBuffer &szBuffer, PlayerTypes ePlayer)
+void CvGameTextMgr::parsePlayerTraits(CvWStringBuffer &szBuffer, PlayerTypes ePlayer, bool bNoEffects)
 {
 	PROFILE_EXTRA_FUNC();
+
 	CvPlayer& kPlayer = GET_PLAYER(ePlayer);
-	int iPotentialDisplays = 0;
 
-	for (int iTrait = 0; iTrait < GC.getNumTraitInfos(); iTrait++)
+	if (bNoEffects)
 	{
-		if (kPlayer.hasTrait((TraitTypes)iTrait))
+		bool bStarted = false;
+		const int iNumTraitInfos = GC.getNumTraitInfos();
+		for (int i = 0; i < iNumTraitInfos; ++i)
 		{
-			iPotentialDisplays++;
+			if (kPlayer.hasTrait(static_cast<TraitTypes>(i)))
+			{
+				if (bStarted) szBuffer.append(L", ");
+				else bStarted = true;
+
+				szBuffer.append(GC.getTraitInfo(static_cast<TraitTypes>(i)).getDescription());
+			}
 		}
 	}
-	int iDisplayCount = kPlayer.getTraitDisplayCount();
-
-	if (gDLL->shiftKey())
+	else
 	{
-		if (iDisplayCount >= iPotentialDisplays)
-		{
-			kPlayer.setTraitDisplayCount(0);
-		}
-		else
-		{
-			kPlayer.changeTraitDisplayCount(1);
-		}
-	}
-	iDisplayCount = kPlayer.getTraitDisplayCount();
-	bool bFirst = true;
-	int iCurrentDisplay = 0;
+		const int iNumTraitInfos = GC.getNumTraitInfos();
+		int iPotentialDisplays = 0;
 
-	for (int iTrait = 0; iTrait < GC.getNumTraitInfos(); ++iTrait)
-	{
-		if (kPlayer.hasTrait((TraitTypes)iTrait))
+		for (int iTrait = 0; iTrait < iNumTraitInfos; iTrait++)
 		{
-			iCurrentDisplay++;
-			if (bFirst)
+			if (kPlayer.hasTrait((TraitTypes)iTrait))
 			{
-				szBuffer.append(L" (");
-				bFirst = false;
+				iPotentialDisplays++;
 			}
-			else
+		}
+		if (gDLL->shiftKey())
+		{
+			if (kPlayer.getTraitDisplayCount() >= iPotentialDisplays)
 			{
-				szBuffer.append(L", ");
+				kPlayer.setTraitDisplayCount(0);
 			}
-			//May need to add the buttons here?  Not sure. We'll see how this goes.
-			if (iCurrentDisplay == iDisplayCount)
+			else kPlayer.changeTraitDisplayCount(1);
+		}
+		const int iDisplayCount = kPlayer.getTraitDisplayCount();
+		bool bFirst = true;
+		int iCurrentDisplay = 0;
+
+		for (int iTrait = 0; iTrait < iNumTraitInfos; ++iTrait)
+		{
+			if (kPlayer.hasTrait((TraitTypes)iTrait))
 			{
-				parseTraits(szBuffer, (TraitTypes)iTrait);
-				if (iCurrentDisplay != iPotentialDisplays)
+				iCurrentDisplay++;
+				if (bFirst)
 				{
-					szBuffer.append(NEWLINE);
+					szBuffer.append(L" (");
+					bFirst = false;
 				}
-			}
-			else
-			{
-				szBuffer.append(GC.getTraitInfo((TraitTypes)iTrait).getDescription());
+				else szBuffer.append(L", ");
+
+				//May need to add the buttons here?  Not sure. We'll see how this goes.
+				if (iCurrentDisplay == iDisplayCount)
+				{
+					parseTraits(szBuffer, (TraitTypes)iTrait);
+					if (iCurrentDisplay != iPotentialDisplays)
+					{
+						szBuffer.append(NEWLINE);
+					}
+				}
+				else szBuffer.append(GC.getTraitInfo((TraitTypes)iTrait).getDescription());
 			}
 		}
-	}
+		if (!bFirst)
+		{
+			szBuffer.append(L")");
+		}
 
-	if (!bFirst)
-	{
-		szBuffer.append(L")");
+		szBuffer.append(NEWLINE);
+		szBuffer.append(gDLL->getText("TXT_KEY_MISC_TRAIT_CYCLING_HELP"));
 	}
-
-	szBuffer.append(NEWLINE);
-	szBuffer.append(gDLL->getText("TXT_KEY_MISC_TRAIT_CYCLING_HELP"));
 
 	if (GC.getGame().isOption(GAMEOPTION_LEADER_DEVELOPING))
 	{
@@ -31150,7 +31160,7 @@ void CvGameTextMgr::parseLeaderHeadHelp(CvWStringBuffer &szBuffer, PlayerTypes e
 		return;
 	}
 
-	szBuffer.append(CvWString::format(L"%s", GET_PLAYER(eThisPlayer).getName()));
+	szBuffer.append(CvWString::format(L"%s\n", GET_PLAYER(eThisPlayer).getName()));
 
 	parsePlayerTraits(szBuffer, eThisPlayer);
 
@@ -35804,11 +35814,8 @@ void CvGameTextMgr::setFlagHelp(CvWStringBuffer &szBuffer)
 	szBuffer.append(CvWString::format(SETCOLR L"%s" ENDCOLR, TEXT_COLOR("COLOR_MAGENTA"), gDLL->getText("TXT_KEY_SETTINGS_DIFFICULTY_GAME", GC.getHandicapInfo(GAME.getHandicapType()).getTextKeyWide()).GetCString()));
 
 	// Traits
-	if (player.isModderOption(MODDEROPTION_SHOW_TRAITS_FLAG) || GAME.isOption(GAMEOPTION_LEADER_DEVELOPING))
-	{
-		szBuffer.append(NEWLINE L"==============================" NEWLINE);
-		parsePlayerTraits(szBuffer, GAME.getActivePlayer());
-	}
+	szBuffer.append(NEWLINE L"==============================" NEWLINE);
+	parsePlayerTraits(szBuffer, GAME.getActivePlayer(), true);
 
 	// Properties
 	CvWStringBuffer szPeekBuffer;

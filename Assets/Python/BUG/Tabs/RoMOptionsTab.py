@@ -55,8 +55,6 @@ class RoMOptionsTab(BugOptionsTab.BugOptionsTab):
 		#Empire Management
 		self.addLabel(screen, center, "RoMSettings__EmpireManagement")
 
-		self.addCheckbox(screen, center, "RoMSettings__ShowCivTraits")
-
 		self.addCheckbox(screen, center, "RoMSettings__HideUnavailableBuilds")
 
 		if GAME.isOption(GameOptionTypes.GAMEOPTION_UNSUPPORTED_REVOLUTION):
