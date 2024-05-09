@@ -298,6 +298,8 @@ void CvPlot::reset(int iX, int iY, bool bConstructorCall)
 	m_influencedByCityByPlayer.clear();
 	m_influencedByCityByPlayerLastTurn.clear();
 
+	m_aExtraYield.fill(0);
+
 	m_bPlotGroupsDirty = false;
 	m_aiVisibilityCount = new short[MAX_TEAMS];
 	for (int iI = 0; iI < MAX_TEAMS; iI++)
@@ -7935,6 +7937,17 @@ void CvPlot::recalculateBaseYield()
 }
 
 
+void CvPlot::setExtraYield(YieldTypes eYield, short iExtraYield)
+{
+	FASSERT_BOUNDS(0, NUM_YIELD_TYPES, eYield);
+	FAssertMsg(iExtraYield != 0, "Redundant function call");
+
+	m_aExtraYield[eYield] += iExtraYield;
+
+	updateYield();
+}
+
+
 short* CvPlot::getYield() const
 {
 	return m_aiYield;
@@ -8142,7 +8155,7 @@ int CvPlot::calculateYield(YieldTypes eYield, bool bDisplay) const
 	int iYield = (
 		calculateNatureYield(eYield, (ePlayer != NO_PLAYER) ? GET_PLAYER(ePlayer).getTeam() : NO_TEAM)
 		+
-		GC.getGame().getPlotExtraYield(m_iX, m_iY, eYield)
+		m_aExtraYield[eYield]
 	);
 	bool bCity = false;
 
@@ -11313,6 +11326,14 @@ void CvPlot::read(FDataStreamBase* pStream)
 			}
 		}
 	}
+	WRAPPER_READ_ARRAY(wrapper, "CvPlot", NUM_YIELD_TYPES, m_aExtraYield.c_array());
+	// @SAVEBREAK delete
+	foreach_(const YieldTypes eYield, YieldTypesRange())
+	{
+		m_aExtraYield[eYield] += GC.getGame().getPlotExtraYield(m_iX, m_iY, eYield);
+	}
+	// ! SAVEBREAK
+
 	//Example of how to Skip Element
 	//WRAPPER_SKIP_ELEMENT(wrapper, "CvPlot", m_bPeaks, SAVE_VALUE_ANY);
 	WRAPPER_READ_OBJECT_END(wrapper);
@@ -11679,6 +11700,8 @@ void CvPlot::write(FDataStreamBase* pStream)
 			WRAPPER_WRITE_DECORATED(wrapper, "CvPlot", static_cast<short>(*it), "InfluencedByCityByPlayer");
 		}
 	}
+	WRAPPER_WRITE_ARRAY(wrapper, "CvPlot", NUM_YIELD_TYPES, m_aExtraYield.c_array());
+
 	WRAPPER_WRITE_OBJECT_END(wrapper);
 }
 
@@ -12227,10 +12250,10 @@ void CvPlot::applyEvent(EventTypes eEvent)
 
 	for (int i = 0; i < NUM_YIELD_TYPES; ++i)
 	{
-		int iChange = kEvent.getPlotExtraYield(i);
+		const int iChange = kEvent.getPlotExtraYield(i);
 		if (0 != iChange)
 		{
-			GC.getGame().setPlotExtraYield(m_iX, m_iY, (YieldTypes)i, iChange);
+			setExtraYield((YieldTypes)i, iChange);
 		}
 	}
 }

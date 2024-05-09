@@ -272,8 +272,6 @@ public:
 	void log(const char* file, char* str);
 	void logw(std::wstring str);
 
-	void setPlotExtraYield(int iX, int iY, YieldTypes eYield, int iExtraYield);
-
 	bool isCivEverActive(CivilizationTypes eCivilization) const;
 	bool isLeaderEverActive(LeaderHeadTypes eLeader) const;
 

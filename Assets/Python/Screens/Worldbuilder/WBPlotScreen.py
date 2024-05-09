@@ -549,13 +549,13 @@ class WBPlotScreen:
 		elif inputClass.getFunctionName().find("BaseYield") > -1:
 			i = YieldTypes(inputClass.getData2())
 			if inputClass.getData1() == 1030:
-				CyGame().setPlotExtraYield(pPlot.getX(), pPlot.getY(), i, iChange)
+				pPlot.setExtraYield(i, iChange)
 			elif inputClass.getData1() == 1031:
 				iYield = pPlot.getYield(i)
 				iImprovement = pPlot.getImprovementType()
 				if iImprovement > -1:
 					iYield -= pPlot.calculateImprovementYieldChange(iImprovement, i, pPlot.getOwner(), False)
-				CyGame().setPlotExtraYield(pPlot.getX(), pPlot.getY(), i, - min(iChange, iYield))
+				pPlot.setExtraYield(i, - min(iChange, iYield))
 			self.placeStats()
 
 		elif inputClass.getFunctionName() == "RiverWestAButton":

@@ -103,7 +103,7 @@ class HeritageScreen:
 		x = dX / 2
 		screen.setText("Heritage_Tab0", "", szTxt, 1<<2, x, Y_BOT_TEXT, 0, eFontTitle, eWidGen, 0, 0)
 		screen.setText("Heritage_Tab|Col0", "", szCol + szTxt, 1<<2, x, Y_BOT_TEXT, 0, eFontTitle, eWidGen, 0, 0)
-		screen.hide("Heritage_Tab|Col0")
+		screen.hide("Heritage_Tab0")
 
 		szTxt = uFontEdge + "Traits"
 		x += dX
@@ -131,6 +131,8 @@ class HeritageScreen:
 		self.deleteAllWidgets(screen)
 		if not self.iTab:
 			self.drawHeritage(screen)
+		elif self.iTab == 1:
+			self.drawTraits(screen)
 
 	def drawHeritage(self, screen):
 		xRes = self.xRes
@@ -187,6 +189,41 @@ class HeritageScreen:
 				screen.setTextAt("WID|HERITAGE|TEXT%d" % iType, ScPnl0, uFont3 + heritageX.getDescription(), 1<<0, 2+dy, iOff + y0, 0, eFontGame, eWidGen, 1, 2)
 				y0 += dy
 
+
+	def drawTraits(self, screen):
+		xRes = self.xRes
+		yRes = self.yRes
+		xMid = self.xMid
+		H_EDGE = self.H_EDGE
+		iPlayer = self.iPlayer
+		player = self.CyPlayer
+		bDebug = self.bDebug
+		CANCEL = self.CANCEL
+
+		uFontEdge, uFont4b, uFont4, uFont3b, uFont3, uFont2b, uFont2 = self.aFontList
+
+
+		eWidGen = WidgetTypes.WIDGET_GENERAL
+		eFontGame = FontTypes.GAME_FONT
+		ePnlMain = PanelStyles.PANEL_STYLE_MAIN
+		ePnlOut = PanelStyles.PANEL_STYLE_OUT
+		iPanelBlue50 = PanelStyles.PANEL_STYLE_BLUE50
+
+		h0 = yRes - 2*H_EDGE
+		w0 = (xRes - 52)/4
+
+		pnl = self.getNextWidget()
+		screen.addPanel(pnl, "", "", False, False, xRes/2 + 8, H_EDGE, xRes/2 - 16, h0, iPanelBlue50)
+
+		txt = ""
+		for iTrait in xrange(GC.getNumTraitInfos()):
+			if player.hasTrait(iTrait):
+				if txt:
+					txt += "\n\n"
+				txt += GTM.parseTraits(iTrait, False, False)
+
+		if txt:
+			screen.addMultilineText(self.getNextWidget(), uFont3 + txt, xRes/2 + 16, H_EDGE + 14, xRes/2 - 26, h0 - 26, eWidGen, 1, 2, 1<<0)
 
 
 	# Utility
@@ -249,6 +286,11 @@ class HeritageScreen:
 
 			if BASE == "Heritage_Tab":
 				if CASE[0] != "Col":
+					screen.hide("Heritage_Tab|Col" + str(self.iTab))
+					screen.show("Heritage_Tab" + str(self.iTab))
+					screen.hide("Heritage_Tab" + str(ID))
+					screen.show("Heritage_Tab|Col" + str(ID))
+					self.iTab = ID
 					self.drawContents(screen)
 
 			elif BASE == "WID":
