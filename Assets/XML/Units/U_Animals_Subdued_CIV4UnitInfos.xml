@@ -4847,13 +4847,13 @@
 				<BuildingType>BUILDING_GOVERNORS_PETS</BuildingType>
 				<BuildingType>BUILDING_GOVERNORS_MENAGERIE</BuildingType>
 				<BuildingType>BUILDING_MILITARY_STANDARD_ANIMAL_MASCOT</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_T_MARSUPIAL</BuildingType>
 				<BuildingType>BUILDING_ENCLOSURE_MARSUPIAL</BuildingType>
 				<BuildingType>BUILDING_ZOO</BuildingType>
 				<BuildingType>BUILDING_TAXIDERMIST</BuildingType>
 			</Buildings>
 			<Heritage>
 				<Type>HERITAGE_FOLKLORE_CUSCUS_SPOTTED</Type>
+				<Type>HERITAGE_TAXON_MARSUPIALIA</Type>
 			</Heritage>
 			<iCost>-1</iCost>
 			<iMoves>1</iMoves>
@@ -11311,14 +11311,16 @@
 				<BuildingType>BUILDING_GOVERNORS_MENAGERIE</BuildingType>
 				<BuildingType>BUILDING_MILITARY_STANDARD_ANIMAL_MASCOT</BuildingType>
 				<BuildingType>BUILDING_ENCLOSURE_MARSUPIAL</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_T_MARSUPIAL</BuildingType>
 				<BuildingType>BUILDING_CARNIVAL_BOXING_KANGAROO</BuildingType>
 				<BuildingType>BUILDING_CAMP_KANGAROO</BuildingType>
 				<BuildingType>BUILDING_HERD_KANGAROO</BuildingType>
 				<BuildingType>BUILDING_ZOO</BuildingType>
 				<BuildingType>BUILDING_TAXIDERMIST</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_GREY_KANGAROO</BuildingType>
 			</Buildings>
+			<Heritage>
+				<Type>HERITAGE_FOLKLORE_KANGAROO_GREY</Type>
+				<Type>HERITAGE_TAXON_MARSUPIALIA</Type>
+			</Heritage>
 			<iCost>-1</iCost>
 			<iMoves>1</iMoves>
 			<iAsset>1</iAsset>
@@ -11487,14 +11489,16 @@
 				<BuildingType>BUILDING_GOVERNORS_MENAGERIE</BuildingType>
 				<BuildingType>BUILDING_MILITARY_STANDARD_ANIMAL_MASCOT</BuildingType>
 				<BuildingType>BUILDING_ENCLOSURE_MARSUPIAL</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_T_MARSUPIAL</BuildingType>
 				<BuildingType>BUILDING_CAMP_KANGAROO</BuildingType>
 				<BuildingType>BUILDING_CARNIVAL_BOXING_KANGAROO</BuildingType>
 				<BuildingType>BUILDING_HERD_KANGAROO</BuildingType>
 				<BuildingType>BUILDING_ZOO</BuildingType>
 				<BuildingType>BUILDING_TAXIDERMIST</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_RED_KANGAROO</BuildingType>
 			</Buildings>
+			<Heritage>
+				<Type>HERITAGE_FOLKLORE_KANGAROO_RED</Type>
+				<Type>HERITAGE_TAXON_MARSUPIALIA</Type>
+			</Heritage>
 			<iCost>-1</iCost>
 			<iMoves>1</iMoves>
 			<iAsset>1</iAsset>
@@ -11662,7 +11666,6 @@
 				<BuildingType>BUILDING_GOVERNORS_MENAGERIE</BuildingType>
 				<BuildingType>BUILDING_MILITARY_STANDARD_ANIMAL_MASCOT</BuildingType>
 				<BuildingType>BUILDING_ENCLOSURE_MARSUPIAL</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_T_MARSUPIAL</BuildingType>
 				<BuildingType>BUILDING_FUR_FARM</BuildingType>
 				<BuildingType>BUILDING_ENCLOSURE_NOCTURNAL</BuildingType>
 				<BuildingType>BUILDING_ZOO</BuildingType>
@@ -11670,6 +11673,7 @@
 			</Buildings>
 			<Heritage>
 				<Type>HERITAGE_FOLKLORE_KOALA</Type>
+				<Type>HERITAGE_TAXON_MARSUPIALIA</Type>
 			</Heritage>
 			<iCost>-1</iCost>
 			<iMoves>1</iMoves>
@@ -14672,12 +14676,14 @@
 				<BuildingType>BUILDING_GOVERNORS_PETS</BuildingType>
 				<BuildingType>BUILDING_GOVERNORS_MENAGERIE</BuildingType>
 				<BuildingType>BUILDING_MILITARY_STANDARD_ANIMAL_MASCOT</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_T_MARSUPIAL</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_NUMBAT</BuildingType>
 				<BuildingType>BUILDING_ENCLOSURE_MARSUPIAL</BuildingType>
 				<BuildingType>BUILDING_ZOO</BuildingType>
 				<BuildingType>BUILDING_TAXIDERMIST</BuildingType>
 			</Buildings>
+			<Heritage>
+				<Type>HERITAGE_FOLKLORE_NUMBAT</Type>
+				<Type>HERITAGE_TAXON_MARSUPIALIA</Type>
+			</Heritage>
 			<iCost>-1</iCost>
 			<iMoves>1</iMoves>
 			<iAsset>1</iAsset>
@@ -14905,12 +14911,14 @@
 				<BuildingType>BUILDING_GOVERNORS_PETS</BuildingType>
 				<BuildingType>BUILDING_GOVERNORS_MENAGERIE</BuildingType>
 				<BuildingType>BUILDING_MILITARY_STANDARD_ANIMAL_MASCOT</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_T_MARSUPIAL</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_OPOSSUM</BuildingType>
 				<BuildingType>BUILDING_ENCLOSURE_MARSUPIAL</BuildingType>
 				<BuildingType>BUILDING_ZOO</BuildingType>
 				<BuildingType>BUILDING_TAXIDERMIST</BuildingType>
 			</Buildings>
+			<Heritage>
+				<Type>HERITAGE_FOLKLORE_POSSUM_DIDELPHIS</Type>
+				<Type>HERITAGE_TAXON_MARSUPIALIA</Type>
+			</Heritage>
 			<iCost>-1</iCost>
 			<iMoves>1</iMoves>
 			<iAsset>1</iAsset>
@@ -16177,12 +16185,14 @@
 				<BuildingType>BUILDING_GOVERNORS_PETS</BuildingType>
 				<BuildingType>BUILDING_GOVERNORS_MENAGERIE</BuildingType>
 				<BuildingType>BUILDING_MILITARY_STANDARD_ANIMAL_MASCOT</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_T_MARSUPIAL</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_BRUSHTAIL_POSSUM</BuildingType>
 				<BuildingType>BUILDING_ENCLOSURE_MARSUPIAL</BuildingType>
 				<BuildingType>BUILDING_ZOO</BuildingType>
 				<BuildingType>BUILDING_TAXIDERMIST</BuildingType>
 			</Buildings>
+			<Heritage>
+				<Type>HERITAGE_FOLKLORE_POSSUM_BRUSHTAIL</Type>
+				<Type>HERITAGE_TAXON_MARSUPIALIA</Type>
+			</Heritage>
 			<iCost>-1</iCost>
 			<iMoves>1</iMoves>
 			<iAsset>1</iAsset>
@@ -16238,16 +16248,18 @@
 				<BuildingType>BUILDING_GOVERNORS_MENAGERIE</BuildingType>
 				<BuildingType>BUILDING_MILITARY_STANDARD_ANIMAL_MASCOT</BuildingType>
 				<BuildingType>BUILDING_ENCLOSURE_MARSUPIAL</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_T_MARSUPIAL</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_PALEOLITHIC_MARSUPIAL</BuildingType>
 				<BuildingType>BUILDING_CARNIVAL_BOXING_KANGAROO</BuildingType>
 				<BuildingType>BUILDING_HERD_KANGAROO</BuildingType>
 				<BuildingType>BUILDING_CAMP_KANGAROO</BuildingType>
 				<BuildingType>BUILDING_ZOO</BuildingType>
 				<BuildingType>BUILDING_TAXIDERMIST</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_PROCOPTODON</BuildingType>
 				<BuildingType>BUILDING_REMAINS_PROCOPTODON</BuildingType>
 			</Buildings>
+			<Heritage>
+				<Type>HERITAGE_FOLKLORE_PALEOLITHIC_MARSUPIAL</Type>
+				<Type>HERITAGE_FOLKLORE_PROCOPTODON</Type>
+				<Type>HERITAGE_TAXON_MARSUPIALIA</Type>
+			</Heritage>
 			<iCost>-1</iCost>
 			<iMoves>1</iMoves>
 			<iAsset>1</iAsset>
@@ -16481,12 +16493,14 @@
 				<BuildingType>BUILDING_GOVERNORS_PETS</BuildingType>
 				<BuildingType>BUILDING_GOVERNORS_MENAGERIE</BuildingType>
 				<BuildingType>BUILDING_MILITARY_STANDARD_ANIMAL_MASCOT</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_T_MARSUPIAL</BuildingType>
 				<BuildingType>BUILDING_ENCLOSURE_MARSUPIAL</BuildingType>
 				<BuildingType>BUILDING_ZOO</BuildingType>
 				<BuildingType>BUILDING_TAXIDERMIST</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_QUOLL</BuildingType>
 			</Buildings>
+			<Heritage>
+				<Type>HERITAGE_FOLKLORE_QUOLL</Type>
+				<Type>HERITAGE_TAXON_MARSUPIALIA</Type>
+			</Heritage>
 			<iCost>-1</iCost>
 			<iMoves>1</iMoves>
 			<iAsset>1</iAsset>
@@ -21394,13 +21408,13 @@
 				<BuildingType>BUILDING_GOVERNORS_MENAGERIE</BuildingType>
 				<BuildingType>BUILDING_MILITARY_STANDARD_ANIMAL_MASCOT</BuildingType>
 				<BuildingType>BUILDING_ENCLOSURE_MARSUPIAL</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_T_MARSUPIAL</BuildingType>
 				<BuildingType>BUILDING_ENCLOSURE_NOCTURNAL</BuildingType>
 				<BuildingType>BUILDING_ZOO</BuildingType>
 				<BuildingType>BUILDING_TAXIDERMIST</BuildingType>
 			</Buildings>
 			<Heritage>
 				<Type>HERITAGE_FOLKLORE_TASMANIAN_DEVIL</Type>
+				<Type>HERITAGE_TAXON_MARSUPIALIA</Type>
 			</Heritage>
 			<iCost>-1</iCost>
 			<iMoves>1</iMoves>
@@ -21632,13 +21646,15 @@
 				<BuildingType>BUILDING_GOVERNORS_MENAGERIE</BuildingType>
 				<BuildingType>BUILDING_MILITARY_STANDARD_ANIMAL_MASCOT</BuildingType>
 				<BuildingType>BUILDING_ENCLOSURE_MARSUPIAL</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_T_MARSUPIAL</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_PALEOLITHIC_MARSUPIAL</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_THYLACINE</BuildingType>
 				<BuildingType>BUILDING_REMAINS_THYLACINE</BuildingType>
 				<BuildingType>BUILDING_ZOO</BuildingType>
 				<BuildingType>BUILDING_TAXIDERMIST</BuildingType>
 			</Buildings>
+			<Heritage>
+				<Type>HERITAGE_FOLKLORE_PALEOLITHIC_MARSUPIAL</Type>
+				<Type>HERITAGE_FOLKLORE_THYLACINE</Type>
+				<Type>HERITAGE_TAXON_MARSUPIALIA</Type>
+			</Heritage>
 			<iCost>-1</iCost>
 			<iMoves>1</iMoves>
 			<iAsset>1</iAsset>
@@ -22314,14 +22330,16 @@
 				<BuildingType>BUILDING_GOVERNORS_MENAGERIE</BuildingType>
 				<BuildingType>BUILDING_MILITARY_STANDARD_ANIMAL_MASCOT</BuildingType>
 				<BuildingType>BUILDING_ENCLOSURE_MARSUPIAL</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_T_MARSUPIAL</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_RING_TAILED_WALLABY</BuildingType>
 				<BuildingType>BUILDING_CAMP_KANGAROO</BuildingType>
 				<BuildingType>BUILDING_CARNIVAL_BOXING_KANGAROO</BuildingType>
 				<BuildingType>BUILDING_HERD_KANGAROO</BuildingType>
 				<BuildingType>BUILDING_ZOO</BuildingType>
 				<BuildingType>BUILDING_TAXIDERMIST</BuildingType>
 			</Buildings>
+			<Heritage>
+				<Type>HERITAGE_FOLKLORE_WALLABY</Type>
+				<Type>HERITAGE_TAXON_MARSUPIALIA</Type>
+			</Heritage>
 			<iCost>-1</iCost>
 			<iMoves>1</iMoves>
 			<iAsset>1</iAsset>
@@ -22377,14 +22395,16 @@
 				<BuildingType>BUILDING_GOVERNORS_MENAGERIE</BuildingType>
 				<BuildingType>BUILDING_MILITARY_STANDARD_ANIMAL_MASCOT</BuildingType>
 				<BuildingType>BUILDING_ENCLOSURE_MARSUPIAL</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_T_MARSUPIAL</BuildingType>
 				<BuildingType>BUILDING_CAMP_KANGAROO</BuildingType>
 				<BuildingType>BUILDING_CARNIVAL_BOXING_KANGAROO</BuildingType>
 				<BuildingType>BUILDING_HERD_KANGAROO</BuildingType>
 				<BuildingType>BUILDING_ZOO</BuildingType>
 				<BuildingType>BUILDING_TAXIDERMIST</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_WALLAROO</BuildingType>
 			</Buildings>
+			<Heritage>
+				<Type>HERITAGE_FOLKLORE_WALLAROO</Type>
+				<Type>HERITAGE_TAXON_MARSUPIALIA</Type>
+			</Heritage>
 			<iCost>-1</iCost>
 			<iMoves>1</iMoves>
 			<iAsset>1</iAsset>
@@ -22982,12 +23002,14 @@
 				<BuildingType>BUILDING_GOVERNORS_MENAGERIE</BuildingType>
 				<BuildingType>BUILDING_MILITARY_STANDARD_ANIMAL_MASCOT</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_E_EARTH</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_T_MARSUPIAL</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_WOMBAT</BuildingType>
 				<BuildingType>BUILDING_ENCLOSURE_MARSUPIAL</BuildingType>
 				<BuildingType>BUILDING_ZOO</BuildingType>
 				<BuildingType>BUILDING_TAXIDERMIST</BuildingType>
 			</Buildings>
+			<Heritage>
+				<Type>HERITAGE_FOLKLORE_WOMBAT</Type>
+				<Type>HERITAGE_TAXON_MARSUPIALIA</Type>
+			</Heritage>
 			<iCost>-1</iCost>
 			<iMoves>1</iMoves>
 			<iAsset>1</iAsset>
