@@ -347,6 +347,30 @@
 		<Russian>Ìèô î êàëàíå</Russian>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_FOLKLORE_OWL_BARN</Tag>
+		<English>Tale, Barn Owl</English>
+		<French>Mythe de la Chouette effraie</French>
+		<Italian>Mito del barbagianni comune</Italian>
+		<Polish>Mit - P&#179;omyk&#243;wka Zwyczajna</Polish>
+		<Russian>Ìèô î ñèïóõå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_FOLKLORE_OWL_BARRED</Tag>
+		<English>Tale, Barred Owl</English>
+		<French>Mythe de la Chouette rayée</French>
+		<Italian>Mito dell'allocco barrato</Italian>
+		<Polish>Mit - Puszczyk</Polish>
+		<Russian>Ìèô î ñû÷å</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_FOLKLORE_OWL_GREAT_HORNED</Tag>
+		<English>Tale, Great Horned Owl</English>
+		<French>Mythe du Hibou grand duc</French>
+		<German>Mythos des Uhus</German>
+		<Italian>Mito del gufo della Virginia</Italian>
+		<Russian>Ìèô î ôèëèíå</Russian>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_HERITAGE_FOLKLORE_PARROT_AFRICAN_GREY</Tag>
 		<English>Tale, African Grey Parrot</English>
 		<French>Mythe du Perroquet jaco</French>
@@ -490,6 +514,12 @@
 		<French>Mythe de la Tarentule de la jungle</French>
 		<German>Mythos der Dschungelvogelspinne</German>
 		<Italian>Mito della tarantola della giungla</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_FOLKLORE_TASMANIAN_DEVIL</Tag>
+		<English>Tale, Tasmanian Devil</English>
+		<German>Mythos des Tasmanischen Teufels</German>
+		<Italian>Mito del diavolo della Tasmania</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HERITAGE_FOLKLORE_TIGER_BENGAL</Tag>
@@ -742,6 +772,14 @@
 	<TEXT>
 		<Tag>TXT_KEY_HERITAGE_TAXON_SQUAMATA_PEDIA</Tag>
 		<English>Squamata (Latin squamatus, 'scaly, having scales') is the largest taxonomic order of the class reptilia, comprising lizards and snakes. With over 11,500 species, it is also the second-largest order of extant vertebrates, after the perciform fish. Members of the order are distinguished by their skins, which bear horny scales or shields, and must periodically engage in molting. They also possess movable quadrate bones, making possible movement of the upper jaw relative to the neurocranium. This is particularly visible in snakes, which are able to open their mouths very wide to accommodate comparatively large prey.</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_TAXON_STRIGIFORMES</Tag>
+		<English>Taxon Strigiformes</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_TAXON_STRIGIFORMES_PEDIA</Tag>
+		<English>Strigiformes is an order of birds commonly called owls. It includes over 200 species of mostly solitary and nocturnal birds of prey typified by an upright stance, a large, broad head, binocular vision, binaural hearing, sharp talons, and feathers adapted for silent flight. Exceptions include the diurnal northern hawk-owl and the gregarious burrowing owl. Owls are divided into two families: the true (or typical) owl family, Strigidae, and the barn-owl family, Tytonidae. Owls hunt mostly small mammals, insects, and other birds, although a few species specialize in hunting fish. They are found in all regions of the Earth except the polar ice caps and some remote islands. A group of owls is called a "parliament".</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HERITAGE_TAXON_SUIDAE</Tag>
