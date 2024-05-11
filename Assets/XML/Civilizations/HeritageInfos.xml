@@ -2208,7 +2208,7 @@
 			</EraCommerceChanges>
 			<Button>Art/Interface/Buttons/Units/Barredowl.dds</Button>
 		</HeritageInfo>
-		<BuildingInfo>
+		<HeritageInfo>
 			<Type>HERITAGE_FOLKLORE_OWL_GREAT_HORNED</Type>
 			<Description>TXT_KEY_HERITAGE_FOLKLORE_OWL_GREAT_HORNED</Description>
 			<Civilopedia>TXT_KEY_BUILDING_FOLKLORE_ANIMAL_PEDIA</Civilopedia>
@@ -2256,7 +2256,7 @@
 				</EraCommerceChange>
 			</EraCommerceChanges>
 			<Button>Art/Interface/Buttons/Units/Hornedowl.dds</Button>
-		</BuildingInfo>
+		</HeritageInfo>
 		<HeritageInfo>
 			<Type>HERITAGE_FOLKLORE_PARROT_AFRICAN_GREY</Type>
 			<Description>TXT_KEY_HERITAGE_FOLKLORE_PARROT_AFRICAN_GREY</Description>
