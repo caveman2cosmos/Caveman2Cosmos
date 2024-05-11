@@ -1080,18 +1080,6 @@
 		<Russian>Ìèô îá àêóëå-ìîëîò</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_FOLKLORE_GREAT_HORNED_OWL</Tag>
-		<English>Folklore - Great Horned Owl</English>
-		<French>Mythe du Hibou grand duc</French>
-		<German>
-			<Text>Mythos des Uhus:Mythos des Uhus:Mythos des Uhus:Mythos des Uhus</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>Mito del gufo della Virginia</Italian>
-		<Russian>Ìèô î ôèëèíå</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_HUMPBACK_WHALE</Tag>
 		<English>Folklore - Humpback Whale</English>
 		<French>Mythe de la Baleine à Bosses</French>
@@ -1494,19 +1482,6 @@
 		<Russian>Ìèô î êàñàòêå</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_FOLKLORE_T_OWLS</Tag>
-		<English>Folklore (T) - Owls</English>
-		<French>Mythe des Chouettes (T)</French>
-		<German>
-			<Text>Mythos der Eulen:Mythos der Eulen:Mythos der Eulen:Mythos der Eulen</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>Mito del gufo</Italian>
-		<Polish>Folklore (T) - Sowy</Polish>
-		<Russian>Ìèô î ñîâå</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_OXPECKER</Tag>
 		<English>Folklore - Oxpecker</English>
 		<French>Mythe du Pique-bœufs</French>
@@ -1831,16 +1806,6 @@
 		<Italian>Mito della pietra</Italian>
 		<Polish>Mit (E) - Kamie&#241;</Polish>
 		<Russian>Ìèô î êàìíå</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_FOLKLORE_TASMANIAN_DEVIL</Tag>
-		<English>Folklore - Tasmanian Devil</English>
-		<German>
-			<Text>Mythos des Tasmanischen Teufels:Mythos des Tasmanischen Teufels:Mythos des Tasmanischen Teufels:Mythos des Tasmanischen Teufels</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>Mito del diavolo della Tasmania</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_ARCTIC_TERN</Tag>

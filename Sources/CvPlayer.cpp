@@ -880,7 +880,6 @@ void CvPlayer::reset(PlayerTypes eID, bool bConstructorCall)
 	m_iAIAttitudeModifier = 0;
 	m_iTraitExtraCityDefense = 0;
 	m_iLeaderHeadLevel = 0;
-	m_iTraitDisplayCount = 0;
 	m_iNationalEspionageDefense = 0;
 	m_iInquisitionCount = 0;
 	m_iMaxTradeRoutesAdjustment = 0;
@@ -19272,7 +19271,9 @@ void CvPlayer::read(FDataStreamBase* pStream)
 		WRAPPER_READ(wrapper, "CvPlayer", &m_iTraitExtraCityDefense);
 		WRAPPER_READ_CLASS_ARRAY(wrapper, "CvPlayer", REMAPPED_CLASS_TYPE_TRAITS, GC.getNumTraitInfos(), m_pabHasTrait);
 		WRAPPER_READ(wrapper, "CvPlayer", &m_iLeaderHeadLevel);
-		WRAPPER_READ(wrapper, "CvPlayer", &m_iTraitDisplayCount);
+		// @SAVEBREAK - Delete
+		WRAPPER_SKIP_ELEMENT(wrapper, "CvPlayer", m_iTraitDisplayCount, SAVE_VALUE_ANY);
+		// !SAVEBREAK
 		WRAPPER_READ(wrapper, "CvPlayer", &m_iNationalEspionageDefense);
 		WRAPPER_READ(wrapper, "CvPlayer", &m_iInquisitionCount);
 		WRAPPER_READ_ARRAY(wrapper, "CvPlayer", NUM_YIELD_TYPES, m_aiLessYieldThreshold);
@@ -20265,7 +20266,6 @@ void CvPlayer::write(FDataStreamBase* pStream)
 		WRAPPER_WRITE(wrapper, "CvPlayer", m_iTraitExtraCityDefense);
 		WRAPPER_WRITE_CLASS_ARRAY(wrapper, "CvPlayer", REMAPPED_CLASS_TYPE_TRAITS, GC.getNumTraitInfos(), m_pabHasTrait);
 		WRAPPER_WRITE(wrapper, "CvPlayer", m_iLeaderHeadLevel);
-		WRAPPER_WRITE(wrapper, "CvPlayer", m_iTraitDisplayCount);
 		WRAPPER_WRITE(wrapper, "CvPlayer", m_iNationalEspionageDefense);
 		WRAPPER_WRITE(wrapper, "CvPlayer", m_iInquisitionCount);
 		WRAPPER_WRITE_ARRAY(wrapper, "CvPlayer", NUM_YIELD_TYPES, m_aiLessYieldThreshold);
@@ -27967,7 +27967,6 @@ void CvPlayer::clearModifierTotals()
 
 	m_iInquisitionCount = 0;
 	m_iNationalEspionageDefense = 0;
-	m_iTraitDisplayCount = 0;
 	m_iCivicAnarchyModifier = 0;
 	m_iReligiousAnarchyModifier = 0;
 	m_iAIAttitudeModifier = 0;
@@ -29627,21 +29626,6 @@ void CvPlayer::clearLeaderTraits()
 		}
 	}
 	setLeaderHeadLevel(0);
-}
-
-int CvPlayer::getTraitDisplayCount() const
-{
-	return m_iTraitDisplayCount;
-}
-
-void CvPlayer::setTraitDisplayCount(int iValue)
-{
-	m_iTraitDisplayCount = iValue;
-}
-
-void CvPlayer::changeTraitDisplayCount(int iChange)
-{
-	setTraitDisplayCount(getTraitDisplayCount() + iChange);
 }
 
 int CvPlayer::getNationalEspionageDefense() const

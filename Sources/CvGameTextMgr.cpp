@@ -31050,13 +31050,11 @@ void CvGameTextMgr::setProductionHelp(CvWStringBuffer &szBuffer, CvCity& city)
 }
 
 
-void CvGameTextMgr::parsePlayerTraits(CvWStringBuffer &szBuffer, PlayerTypes ePlayer, bool bNoEffects)
+void CvGameTextMgr::parsePlayerTraits(CvWStringBuffer &szBuffer, PlayerTypes ePlayer)
 {
 	PROFILE_EXTRA_FUNC();
 
 	CvPlayer& kPlayer = GET_PLAYER(ePlayer);
-
-	if (bNoEffects)
 	{
 		bool bStarted = false;
 		const int iNumTraitInfos = GC.getNumTraitInfos();
@@ -31071,63 +31069,6 @@ void CvGameTextMgr::parsePlayerTraits(CvWStringBuffer &szBuffer, PlayerTypes ePl
 			}
 		}
 	}
-	else
-	{
-		const int iNumTraitInfos = GC.getNumTraitInfos();
-		int iPotentialDisplays = 0;
-
-		for (int iTrait = 0; iTrait < iNumTraitInfos; iTrait++)
-		{
-			if (kPlayer.hasTrait((TraitTypes)iTrait))
-			{
-				iPotentialDisplays++;
-			}
-		}
-		if (gDLL->shiftKey())
-		{
-			if (kPlayer.getTraitDisplayCount() >= iPotentialDisplays)
-			{
-				kPlayer.setTraitDisplayCount(0);
-			}
-			else kPlayer.changeTraitDisplayCount(1);
-		}
-		const int iDisplayCount = kPlayer.getTraitDisplayCount();
-		bool bFirst = true;
-		int iCurrentDisplay = 0;
-
-		for (int iTrait = 0; iTrait < iNumTraitInfos; ++iTrait)
-		{
-			if (kPlayer.hasTrait((TraitTypes)iTrait))
-			{
-				iCurrentDisplay++;
-				if (bFirst)
-				{
-					szBuffer.append(L" (");
-					bFirst = false;
-				}
-				else szBuffer.append(L", ");
-
-				//May need to add the buttons here?  Not sure. We'll see how this goes.
-				if (iCurrentDisplay == iDisplayCount)
-				{
-					parseTraits(szBuffer, (TraitTypes)iTrait);
-					if (iCurrentDisplay != iPotentialDisplays)
-					{
-						szBuffer.append(NEWLINE);
-					}
-				}
-				else szBuffer.append(GC.getTraitInfo((TraitTypes)iTrait).getDescription());
-			}
-		}
-		if (!bFirst)
-		{
-			szBuffer.append(L")");
-		}
-
-		szBuffer.append(NEWLINE);
-		szBuffer.append(gDLL->getText("TXT_KEY_MISC_TRAIT_CYCLING_HELP"));
-	}
-
 	if (GC.getGame().isOption(GAMEOPTION_LEADER_DEVELOPING))
 	{
 		const int iLevel = kPlayer.getLeaderHeadLevel();
@@ -35815,7 +35756,7 @@ void CvGameTextMgr::setFlagHelp(CvWStringBuffer &szBuffer)
 
 	// Traits
 	szBuffer.append(NEWLINE L"==============================" NEWLINE);
-	parsePlayerTraits(szBuffer, GAME.getActivePlayer(), true);
+	parsePlayerTraits(szBuffer, GAME.getActivePlayer());
 
 	// Properties
 	CvWStringBuffer szPeekBuffer;

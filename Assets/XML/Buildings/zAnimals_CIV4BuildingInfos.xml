@@ -2033,19 +2033,17 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_ZOO</BuildingType>
 			</PrereqInCityBuildings>
-			<PrereqOrBuildings>
-				<BuildingType>BUILDING_FOLKLORE_BARN_OWL</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_BARRED_OWL</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_GREAT_HORNED_OWL</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_TASMANIAN_DEVIL</BuildingType>
-			</PrereqOrBuildings>
 			<PrereqOrHeritage>
 				<Type>HERITAGE_FOLKLORE_BADGER</Type>
 				<Type>HERITAGE_FOLKLORE_KOALA</Type>
+				<Type>HERITAGE_FOLKLORE_OWL_BARN</Type>
+				<Type>HERITAGE_FOLKLORE_OWL_BARRED</Type>
+				<Type>HERITAGE_FOLKLORE_OWL_GREAT_HORNED</Type>
 				<Type>HERITAGE_FOLKLORE_RACCOON</Type>
 				<Type>HERITAGE_FOLKLORE_RATEL</Type>
 				<Type>HERITAGE_FOLKLORE_RED_PANDA</Type>
 				<Type>HERITAGE_FOLKLORE_SKUNK</Type>
+				<Type>HERITAGE_FOLKLORE_TASMANIAN_DEVIL</Type>
 			</PrereqOrHeritage>
 			<iCost>1600</iCost>
 			<MapCategoryTypes>

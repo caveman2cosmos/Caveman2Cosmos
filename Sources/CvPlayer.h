@@ -1575,7 +1575,6 @@ protected:
 	int m_iTraitExtraCityDefense;
 	bool* m_pabHasTrait;
 	int m_iLeaderHeadLevel;
-	int m_iTraitDisplayCount;
 	int m_iNationalEspionageDefense;
 	int m_iInquisitionCount;
 	int m_iCompatCheckCount;
@@ -2116,10 +2115,6 @@ public:
 	bool canLeaderPromote() const;
 	void doPromoteLeader();
 	void clearLeaderTraits();
-
-	int getTraitDisplayCount() const;
-	void setTraitDisplayCount(int iNewValue);
-	void changeTraitDisplayCount(int iChange);
 
 	int getNationalEspionageDefense() const;
 	void setNationalEspionageDefense(int iNewValue);
