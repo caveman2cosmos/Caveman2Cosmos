@@ -436,9 +436,10 @@ int64_t getBinomialCoefficient(int iN, int iK)
 	iK = std::min(iK, iN - iK);
 
 	//eg. 15C3 = (15 * 14 * 13) / (1 * 2 * 3) = 15 / 1 * 14 / 2 * 13 / 3 = 455
-	for(int i=1;i<=iK;i++)
-		iTemp = (iTemp * (iN - i + 1)) / i;
-
+	for (int i = 1; i <= iK; i++)
+	{
+		iTemp = iTemp * (iN - i + 1) / i;
+	}
 	return iTemp;
 }
 
@@ -471,8 +472,8 @@ int getCombatOdds(const CvUnit* pAttacker, const CvUnit* pDefender)
 	}
 #endif // STRENGTH_IN_NUMBERS
 
-	FAssert((iAttackerStrength + iDefenderStrength) > 0);
-	FAssert((iAttackerFirepower + iDefenderFirepower) > 0);
+	FAssert(iAttackerStrength + iDefenderStrength > 0);
+	FAssert(iAttackerFirepower + iDefenderFirepower > 0);
 
 	const int iDefenderInitialOdds = GC.getCOMBAT_DIE_SIDES() * iDefenderStrength / std::max(1, iAttackerStrength + iDefenderStrength);
 	const int iDefenderHitOdds = (
@@ -516,11 +517,6 @@ int getCombatOdds(const CvUnit* pAttacker, const CvUnit* pDefender)
 
 	// calculate damage done in one round
 	//TB Combat Mods (Armor Compare)
-	const int iUnmodifiedDefenderArmor = pDefender->armorVSOpponentProbTotal(pAttacker) - pAttacker->punctureVSOpponentProbTotal(pDefender);
-	const int iUnmodifiedAttackerArmor = pAttacker->armorVSOpponentProbTotal(pDefender) - pDefender->punctureVSOpponentProbTotal(pAttacker);
-	const int iModifiedDefenderArmorZero = (iUnmodifiedDefenderArmor < 0 ? 0 : iUnmodifiedDefenderArmor);
-	const int iModifiedAttackerArmorZero = (iUnmodifiedAttackerArmor < 0 ? 0 : iUnmodifiedAttackerArmor);
-
 	const int iDamageToAttackerBase = GC.getCOMBAT_DAMAGE() * (iDefenderFirepower + iStrengthFactor) / std::max(1, iAttackerFirepower + iStrengthFactor);
 	const int iDamageToDefenderBase = GC.getCOMBAT_DAMAGE() * (iAttackerFirepower + iStrengthFactor) / std::max(1, iDefenderFirepower + iStrengthFactor);
 
@@ -534,7 +530,17 @@ int getCombatOdds(const CvUnit* pAttacker, const CvUnit* pDefender)
 				* pDefender->damageModifierTotal()
 			)
 			*
-			(100 - (iModifiedAttackerArmorZero > 95 ? 95 : iModifiedAttackerArmorZero))
+			(
+				100
+				-
+				range(
+					pAttacker->armorVSOpponentProbTotal(pDefender)
+					-
+					pDefender->punctureVSOpponentProbTotal(pAttacker)
+					, 0
+					, 95
+				)
+			)
 			/
 			100
 		)
@@ -549,7 +555,17 @@ int getCombatOdds(const CvUnit* pAttacker, const CvUnit* pDefender)
 				* pAttacker->damageModifierTotal()
 			)
 			*
-			(100 - (iModifiedDefenderArmorZero > 95 ? 95 : iModifiedDefenderArmorZero))
+			(
+				100
+				-
+				range(
+					pDefender->armorVSOpponentProbTotal(pAttacker)
+					-
+					pAttacker->punctureVSOpponentProbTotal(pDefender)
+					, 0
+					, 95
+				)
+			)
 			/
 			100
 		)
@@ -562,18 +578,19 @@ int getCombatOdds(const CvUnit* pAttacker, const CvUnit* pDefender)
 	int iNeededRoundsDefender = (100*pAttacker->getHP() + iDamageToAttacker - 100) / iDamageToAttacker;
 	if (iNeededRoundsAttacker > 20 * iNeededRoundsDefender || iNeededRoundsDefender > 20 * iNeededRoundsAttacker || iNeededRoundsAttacker + iNeededRoundsDefender > 100)
 	{
-		// Solves inaccuracies that arise when combat invovles an extremely weak unit like a pigeon
-		//	Where a very strong unit would get maxXP from combat against the very weak one because the combat odds
-		//	here would evaluate to less than 1% chance of winning due to the math for fOddsAfterEvent breaking down
-		//	Also fixes hunters not being willing to attack weak animals as he perceived them to be impossible to beat.
+		// Solves inaccuracies that arise when combat involves an extremely weak unit like a pigeon
+		//	Where a very strong unit would get max XP from combat against the very weak one because the combat odds
+		//	here would evaluate to less than 1% chance of winning due to the math for fOddsAfterEvent breaking down.
+		// The tiny overall reduction in accuracy by doing this for these edge cases is worth the efficiency boost and math integrity.
 		iNeededRoundsAttacker /= 10;
 		iNeededRoundsDefender /= 10;
 	}
+	if (iNeededRoundsAttacker < 0) iNeededRoundsAttacker = 1;
+	if (iNeededRoundsDefender < 0) iNeededRoundsDefender = 1;
 	const int iMaxRounds = iNeededRoundsAttacker + iNeededRoundsDefender - 1;
 
 	// calculate possible first strikes distribution.
-	// We can't use the getCombatFirstStrikes() function (only one result,
-	// no distribution), so we need to mimic it.
+	// We can't use the getCombatFirstStrikes() function (only one result, no distribution), so we need to mimic it.
 	const int iAttackerLowFS = pDefender->immuneToFirstStrikes() ? 0 : pAttacker->firstStrikes();
 	const int iAttackerHighFS = pDefender->immuneToFirstStrikes() ? 0 : pAttacker->firstStrikes() + pAttacker->chanceFirstStrikes();
 
@@ -675,9 +692,8 @@ int getCombatOdds(const CvUnit* pAttacker, const CvUnit* pDefender)
 								* pow(1.0f - ((float)iAttackerOdds) / GC.getCOMBAT_DIE_SIDES(), iMaxRounds - i3 - i4)
 							);
 						}
-						// Multiply these together, round them properly, and add
-						// the result to the total iOdds
-						iOdds += ((int)(1000.0 * (fOddsEvent*fOddsAfterEvent + 0.0005)));
+						// Multiply these together, round them properly, and add the result to the total iOdds
+						iOdds += (int)(1000 * (fOddsEvent*fOddsAfterEvent + 0.0005));
 					}
 				}
 			}
@@ -686,8 +702,9 @@ int getCombatOdds(const CvUnit* pAttacker, const CvUnit* pDefender)
 
 	// Weigh the total to the number of possible combinations of first strikes events
 	// note: the integer math breaks down when #FS > 656 (with a die size of 1000)
-	iOdds /= (((pDefender->immuneToFirstStrikes()) ? 0 : pAttacker->chanceFirstStrikes()) + 1) * (((pAttacker->immuneToFirstStrikes()) ? 0 : pDefender->chanceFirstStrikes()) + 1);
+	iOdds /= ((pDefender->immuneToFirstStrikes() ? 0 : pAttacker->chanceFirstStrikes()) + 1) * ((pAttacker->immuneToFirstStrikes() ? 0 : pDefender->chanceFirstStrikes()) + 1);
 
+	FASSERT_BOUNDS(0, 1001, iOdds);
 	return iOdds;
 }
 
@@ -705,14 +722,6 @@ float getCombatOddsSpecific(const CvUnit* pAttacker, const CvUnit* pDefender, in
 	PROFILE_EXTRA_FUNC();
 
 	//TB Combat Mods (Armor Compare)
-	const int iUnmodifiedDefenderArmor = pDefender->armorVSOpponentProbTotal(pAttacker) - pAttacker->punctureVSOpponentProbTotal(pDefender);
-	const int iUnmodifiedAttackerArmor = pAttacker->armorVSOpponentProbTotal(pDefender) - pDefender->punctureVSOpponentProbTotal(pAttacker);
-	const int iModifiedDefenderArmorZero = iUnmodifiedDefenderArmor < 0 ? 0 : iUnmodifiedDefenderArmor;
-	const int iModifiedAttackerArmorZero = iUnmodifiedAttackerArmor < 0 ? 0 : iUnmodifiedAttackerArmor;
-
-	const int iDefenderArmor = 100 - (iModifiedDefenderArmorZero > 95 ? 95 : iModifiedDefenderArmorZero);
-	const int iAttackerArmor = 100 - (iModifiedAttackerArmorZero > 95 ? 95 : iModifiedAttackerArmorZero);
-
 	int iAttackerStrength = pAttacker->currCombatStr(NULL, NULL);
 	int iAttackerFirepower = pAttacker->currFirepower(NULL, NULL);
 	int iDefenderStrength = pDefender->currCombatStr(pDefender->plot(), pAttacker);
@@ -737,8 +746,26 @@ float getCombatOddsSpecific(const CvUnit* pAttacker, const CvUnit* pDefender, in
 	const int iDamageToAttackerBase = GC.getCOMBAT_DAMAGE() * (iDefenderFirepower + iStrengthFactor) / std::max(1, iAttackerFirepower + iStrengthFactor);
 	const int iDamageToDefenderBase = GC.getCOMBAT_DAMAGE() * (iAttackerFirepower + iStrengthFactor) / std::max(1, iDefenderFirepower + iStrengthFactor);
 
-	const int iDamageToAttacker  = std::max(1, (iDamageToAttackerBase + iDamageToAttackerBase * pDefender->damageModifierTotal() / 100) * iAttackerArmor / 100);
-	const int iDamageToDefender  = std::max(1, (iDamageToDefenderBase + iDamageToDefenderBase * pAttacker->damageModifierTotal() / 100) * iDefenderArmor / 100);
+	const int iDamageToAttacker = (
+		std::max(
+			1,
+			(iDamageToAttackerBase + iDamageToAttackerBase * pDefender->damageModifierTotal() / 100)
+			*
+			(100 - range(pAttacker->armorVSOpponentProbTotal(pDefender) - pDefender->punctureVSOpponentProbTotal(pAttacker), 0, 95))
+			/
+			100
+		)
+	);
+	const int iDamageToDefender = (
+		std::max(
+			1,
+			(iDamageToDefenderBase + iDamageToDefenderBase * pAttacker->damageModifierTotal() / 100)
+			*
+			(100 - range(pDefender->armorVSOpponentProbTotal(pAttacker) - pAttacker->punctureVSOpponentProbTotal(pDefender), 0, 95))
+			/
+			100
+		)
+	);
 
 	//TB Combat Mods begin (Dodge/Precision)
 
