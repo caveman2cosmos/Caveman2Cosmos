@@ -436,9 +436,10 @@ int64_t getBinomialCoefficient(int iN, int iK)
 	iK = std::min(iK, iN - iK);
 
 	//eg. 15C3 = (15 * 14 * 13) / (1 * 2 * 3) = 15 / 1 * 14 / 2 * 13 / 3 = 455
-	for(int i=1;i<=iK;i++)
-		iTemp = (iTemp * (iN - i + 1)) / i;
-
+	for (int i = 1; i <= iK; i++)
+	{
+		iTemp = iTemp * (iN - i + 1) / i;
+	}
 	return iTemp;
 }
 
@@ -449,323 +450,261 @@ int64_t getBinomialCoefficient(int iN, int iK)
 int getCombatOdds(const CvUnit* pAttacker, const CvUnit* pDefender)
 {
 	PROFILE_EXTRA_FUNC();
-	float fOddsEvent;
-	float fOddsAfterEvent;
-	int iAttackerStrength;
-	int iAttackerFirepower;
-	int iDefenderStrength;
-	int iDefenderFirepower;
-	int iDefenderOdds;
-	int iAttackerOdds;
-	int iStrengthFactor;
-	int iDamageToAttacker;
-	int iDamageToDefender;
-	int iNeededRoundsAttacker;
-	int iNeededRoundsDefender;
-	int iMaxRounds;
-	int iAttackerLowFS;
-	int iAttackerHighFS;
-	int iDefenderLowFS;
-	int iDefenderHighFS;
-	int iFirstStrikes;
-	int iDefenderHitLimit;
-	int iI;
-	int iJ;
-	int iI3;
-	int iI4;
-	int iOdds = 0;
 
 	// setup battle, calculate strengths and odds
-	//////
+
 	//TB Combat Mod begin
-
 	//Added ST
-	iAttackerStrength = pAttacker->currCombatStr(NULL, NULL);
-	iAttackerFirepower = pAttacker->currFirepower(NULL, NULL);
-
-	iDefenderStrength = pDefender->currCombatStr(pDefender->plot(), pAttacker);
-	iDefenderFirepower = pDefender->currFirepower(pDefender->plot(), pAttacker);
+	int iAttackerStrength = pAttacker->currCombatStr(NULL, NULL);
+	int iAttackerFirepower = pAttacker->currFirepower(NULL, NULL);
+	int iDefenderStrength = pDefender->currCombatStr(pDefender->plot(), pAttacker);
+	int iDefenderFirepower = pDefender->currFirepower(pDefender->plot(), pAttacker);
 
 #ifdef STRENGTH_IN_NUMBERS
 	if (GC.getGame().isOption(GAMEOPTION_COMBAT_STRENGTH_IN_NUMBERS))
 	{
-		int iAttackerSupportStrength = pAttacker->getAttackerSupportValue();
+		const int iAttackerSupportStrength = pAttacker->getAttackerSupportValue();
 		iAttackerStrength += iAttackerSupportStrength;
 		iAttackerFirepower += iAttackerSupportStrength;
-		int iDefenderSupportStrength = pDefender->getDefenderSupportValue(pAttacker);
+		const int iDefenderSupportStrength = pDefender->getDefenderSupportValue(pAttacker);
 		iDefenderStrength += iDefenderSupportStrength;
 		iDefenderFirepower += iDefenderSupportStrength;
 	}
 #endif // STRENGTH_IN_NUMBERS
 
-	//TB Combat Mod end
-	FAssert((iAttackerStrength + iDefenderStrength) > 0);
-	FAssert((iAttackerFirepower + iDefenderFirepower) > 0);
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD                      02/21/10                                jdog5000      */
-/*                                                                                              */
-/* Efficiency, Lead From Behind                                                                 */
-/************************************************************************************************/
-	// From Lead From Behind by UncutDragon
-/* original code
-	iDefenderOdds = ((GC.getDefineINT("COMBAT_DIE_SIDES") * iDefenderStrength) / (iAttackerStrength + iDefenderStrength));
-*/	// modified
-	/*iDefenderOdds = ((GC.getCOMBAT_DIE_SIDES() * iDefenderStrength) / (iAttackerStrength + iDefenderStrength));*/
-	// /UncutDragon
-	//TB Combat Mod begin
-	int iDefenderDodge = pDefender->dodgeVSOpponentProbTotal(pAttacker);
-	int iDefenderPrecision = pDefender->precisionVSOpponentProbTotal(pAttacker);
-	int iAttackerDodge = pAttacker->dodgeVSOpponentProbTotal(pDefender);
-	int iAttackerPrecision = pAttacker->precisionVSOpponentProbTotal(pDefender);
-	int iAttackerHitModifier = iAttackerPrecision - iDefenderDodge;
-	int iDefenderHitModifier = iDefenderPrecision - iAttackerDodge;
+	FAssert(iAttackerStrength + iDefenderStrength > 0);
+	FAssert(iAttackerFirepower + iDefenderFirepower > 0);
 
-	int iDefenderInitialOdds = ((GC.getCOMBAT_DIE_SIDES() * iDefenderStrength) / std::max(1,(iAttackerStrength + iDefenderStrength)));
-	int iDefenderHitOdds = std::max(5, iDefenderInitialOdds + ((iDefenderHitModifier * iDefenderInitialOdds)/100));
-
-	int iAttackerInitialOdds = GC.getCOMBAT_DIE_SIDES() - iDefenderInitialOdds;
-	int iAttackerHitOdds = std::max(5, iAttackerInitialOdds + ((iAttackerHitModifier * iAttackerInitialOdds)/100));
-
-	iDefenderOdds = ((iDefenderHitOdds - iAttackerHitOdds)+ GC.getCOMBAT_DIE_SIDES())/2;
-	iAttackerOdds = ((iAttackerHitOdds - iDefenderHitOdds)+ GC.getCOMBAT_DIE_SIDES())/2;
+	const int iDefenderInitialOdds = GC.getCOMBAT_DIE_SIDES() * iDefenderStrength / std::max(1, iAttackerStrength + iDefenderStrength);
+	const int iDefenderHitOdds = (
+		std::max(
+			5,
+			iDefenderInitialOdds
+			+
+			iDefenderInitialOdds
+			*
+			(pDefender->precisionVSOpponentProbTotal(pAttacker) - pAttacker->dodgeVSOpponentProbTotal(pDefender))
+			/
+			100
+		)
+	);
+	const int iAttackerInitialOdds = GC.getCOMBAT_DIE_SIDES() - iDefenderInitialOdds;
+	const int iAttackerHitOdds = (
+		std::max(
+			5,
+			iAttackerInitialOdds
+			+
+			iAttackerInitialOdds
+			*
+			(pAttacker->precisionVSOpponentProbTotal(pDefender) - pDefender->dodgeVSOpponentProbTotal(pAttacker))
+			/
+			100
+		)
+	);
+	const int iDefenderOdds = ((iDefenderHitOdds - iAttackerHitOdds) + GC.getCOMBAT_DIE_SIDES()) / 2;
+	const int iAttackerOdds = ((iAttackerHitOdds - iDefenderHitOdds) + GC.getCOMBAT_DIE_SIDES()) / 2;
 	//TB Combat Mods end
 	if (iDefenderOdds == 0)
 	{
 		return 1000;
 	}
-
 	if (iAttackerOdds == 0)
 	{
 		return 0;
 	}
-
-	iStrengthFactor = ((iAttackerFirepower + iDefenderFirepower + 1) / 2);
+	int iOdds = 0;
+	const int iStrengthFactor = (iAttackerFirepower + iDefenderFirepower + 1) / 2;
 
 	// calculate damage done in one round
-	//////
 	//TB Combat Mods (Armor Compare)
-	int iAttackArmorTotal = pAttacker->armorVSOpponentProbTotal(pDefender);
-	int iDefendPunctureTotal = pDefender->punctureVSOpponentProbTotal(pAttacker);
-	int iAttackPunctureTotal = pAttacker->punctureVSOpponentProbTotal(pDefender);
-	int iDefendArmorTotal = pDefender->armorVSOpponentProbTotal(pAttacker);
+	const int iDamageToAttackerBase = GC.getCOMBAT_DAMAGE() * (iDefenderFirepower + iStrengthFactor) / std::max(1, iAttackerFirepower + iStrengthFactor);
+	const int iDamageToDefenderBase = GC.getCOMBAT_DAMAGE() * (iAttackerFirepower + iStrengthFactor) / std::max(1, iDefenderFirepower + iStrengthFactor);
 
-	int iUnmodifiedDefenderArmor = (iDefendArmorTotal - iAttackPunctureTotal);
-	int iUnmodifiedAttackerArmor = (iAttackArmorTotal - iDefendPunctureTotal);
-	int iModifiedDefenderArmorZero = (iUnmodifiedDefenderArmor < 0 ? 0 : iUnmodifiedDefenderArmor);
-	int iModifiedAttackerArmorZero = (iUnmodifiedAttackerArmor < 0 ? 0 : iUnmodifiedAttackerArmor);
-	int iModifiedDefenderArmor = (iModifiedDefenderArmorZero > 95 ? 95 : iModifiedDefenderArmorZero);
-	int iModifiedAttackerArmor = (iModifiedAttackerArmorZero > 95 ? 95 : iModifiedAttackerArmorZero);
-
-	int iDefenderArmor = (100 - iModifiedDefenderArmor);
-	int iAttackerArmor = (100 - iModifiedAttackerArmor);
-
-	int iDefendDamageModifierTotal = pDefender->damageModifierTotal();
-	int iAttackDamageModifierTotal = pAttacker->damageModifierTotal();
-
-	int iDamageToAttackerBase = ((GC.getCOMBAT_DAMAGE() * (iDefenderFirepower + iStrengthFactor)) / std::max(1,(iAttackerFirepower + iStrengthFactor)));
-	int iDamageToDefenderBase = ((GC.getCOMBAT_DAMAGE() * (iAttackerFirepower + iStrengthFactor)) / std::max(1,(iDefenderFirepower + iStrengthFactor)));
-	int iDamageToAttackerModified = iDamageToAttackerBase + ((iDamageToAttackerBase * iDefendDamageModifierTotal)/100);
-	int iDamageToDefenderModified = iDamageToDefenderBase + ((iDamageToDefenderBase * iAttackDamageModifierTotal)/100);
-	int iDamageToAttackerArmor = (iDamageToAttackerModified * iAttackerArmor)/100;
-	int iDamageToDefenderArmor = (iDamageToDefenderModified * iDefenderArmor)/100;
-	iDamageToAttacker  = std::max(1, iDamageToAttackerArmor);
-	iDamageToDefender  = std::max(1, iDamageToDefenderArmor);
+	const int iDamageToAttacker = (
+		std::max(
+			1,
+			(
+				100
+				* iDamageToAttackerBase
+				+ iDamageToAttackerBase
+				* pDefender->damageModifierTotal()
+			)
+			*
+			(
+				100
+				-
+				range(
+					pAttacker->armorVSOpponentProbTotal(pDefender)
+					-
+					pDefender->punctureVSOpponentProbTotal(pAttacker)
+					, 0
+					, 95
+				)
+			)
+			/
+			100
+		)
+	);
+	const int iDamageToDefender = (
+		std::max(
+			1,
+			(
+				100
+				* iDamageToDefenderBase
+				+ iDamageToDefenderBase
+				* pAttacker->damageModifierTotal()
+			)
+			*
+			(
+				100
+				-
+				range(
+					pDefender->armorVSOpponentProbTotal(pAttacker)
+					-
+					pAttacker->punctureVSOpponentProbTotal(pDefender)
+					, 0
+					, 95
+				)
+			)
+			/
+			100
+		)
+	);
 	//TB Combat Mods (Armor Compare) end
-	// UncutDragon
-/* original code
-	iDamageToAttacker = std::max(1,((GC.getDefineINT("COMBAT_DAMAGE") * (iDefenderFirepower + iStrengthFactor)) / (iAttackerFirepower + iStrengthFactor)));
-	iDamageToDefender = std::max(1,((GC.getDefineINT("COMBAT_DAMAGE") * (iAttackerFirepower + iStrengthFactor)) / (iDefenderFirepower + iStrengthFactor)));
-*/	// modified
-	//TB Combat Mods (Armor) begin
-	//iDamageToAttacker = std::max(1,((((GC.getCOMBAT_DAMAGE() * (iDefenderFirepower + iStrengthFactor)) / (iAttackerFirepower + iStrengthFactor)) * iAttackerArmor)/100));
-	//iDamageToDefender = std::max(1,((((GC.getCOMBAT_DAMAGE() * (iAttackerFirepower + iStrengthFactor)) / (iDefenderFirepower + iStrengthFactor)) * iDefenderArmor)/100));
-	//TB Combat Mods (Armor) end
-	// /UncutDragon
 
 	// calculate needed rounds.
 	// Needed rounds = round_up(health/damage)
-	//////
-
-	iDefenderHitLimit = pDefender->getMaxHP() - pAttacker->combatLimit(pDefender);
-
-	iNeededRoundsAttacker = (std::max(0, pDefender->getHP() - iDefenderHitLimit) + iDamageToDefender - 1 ) / iDamageToDefender;
-	iNeededRoundsDefender = (pAttacker->getHP() + iDamageToAttacker - 1 ) / iDamageToAttacker;
-	iMaxRounds = iNeededRoundsAttacker + iNeededRoundsDefender - 1;
+	int iNeededRoundsAttacker = (std::max(0, 100*pDefender->getHP() + 100*pAttacker->combatLimit(pDefender) - 100*pDefender->getMaxHP()) + iDamageToDefender - 100) / iDamageToDefender;
+	int iNeededRoundsDefender = (100*pAttacker->getHP() + iDamageToAttacker - 100) / iDamageToAttacker;
+	if (iNeededRoundsAttacker > 20 * iNeededRoundsDefender || iNeededRoundsDefender > 20 * iNeededRoundsAttacker || iNeededRoundsAttacker + iNeededRoundsDefender > 100)
+	{
+		// Solves inaccuracies that arise when combat involves an extremely weak unit like a pigeon
+		//	Where a very strong unit would get max XP from combat against the very weak one because the combat odds
+		//	here would evaluate to less than 1% chance of winning due to the math for fOddsAfterEvent breaking down.
+		// The tiny overall reduction in accuracy by doing this for these edge cases is worth the efficiency boost and math integrity.
+		iNeededRoundsAttacker /= 10;
+		iNeededRoundsDefender /= 10;
+	}
+	if (iNeededRoundsAttacker < 0) iNeededRoundsAttacker = 1;
+	if (iNeededRoundsDefender < 0) iNeededRoundsDefender = 1;
+	const int iMaxRounds = iNeededRoundsAttacker + iNeededRoundsDefender - 1;
 
 	// calculate possible first strikes distribution.
-	// We can't use the getCombatFirstStrikes() function (only one result,
-	// no distribution), so we need to mimic it.
-	//////
+	// We can't use the getCombatFirstStrikes() function (only one result, no distribution), so we need to mimic it.
+	const int iAttackerLowFS = pDefender->immuneToFirstStrikes() ? 0 : pAttacker->firstStrikes();
+	const int iAttackerHighFS = pDefender->immuneToFirstStrikes() ? 0 : pAttacker->firstStrikes() + pAttacker->chanceFirstStrikes();
 
-	iAttackerLowFS = (pDefender->immuneToFirstStrikes()) ? 0 : pAttacker->firstStrikes();
-	iAttackerHighFS = (pDefender->immuneToFirstStrikes()) ? 0 : (pAttacker->firstStrikes() + pAttacker->chanceFirstStrikes());
-
-	iDefenderLowFS = (pAttacker->immuneToFirstStrikes()) ? 0 : pDefender->firstStrikes();
-	iDefenderHighFS = (pAttacker->immuneToFirstStrikes()) ? 0 : (pDefender->firstStrikes() + pDefender->chanceFirstStrikes());
+	const int iDefenderLowFS = (pAttacker->immuneToFirstStrikes()) ? 0 : pDefender->firstStrikes();
+	const int iDefenderHighFS = (pAttacker->immuneToFirstStrikes()) ? 0 : (pDefender->firstStrikes() + pDefender->chanceFirstStrikes());
 
 	// For every possible first strike event, calculate the odds of combat.
-	// Then, add these to the total, weighted to the chance of that first
-	// strike event occurring
-	//////
-
-	for (iI = iAttackerLowFS; iI < iAttackerHighFS + 1; iI++)
+	// Then, add these to the total, weighted to the chance of that first strike event occurring
+	for (int i1 = iAttackerLowFS; i1 < iAttackerHighFS + 1; i1++)
 	{
-		for (iJ = iDefenderLowFS; iJ < iDefenderHighFS + 1; iJ++)
+		for (int i2 = iDefenderLowFS; i2 < iDefenderHighFS + 1; i2++)
 		{
 			// for every possible combination of fs results, calculate the chance
 
-			if (iI >= iJ)
+			if (i1 >= i2)
 			{
 				// Attacker gets more or equal first strikes than defender
-
-				iFirstStrikes = iI - iJ;
+				const int iFirstStrikes = i1 - i2;
 
 				// For every possible first strike getting hit, calculate both
 				// the chance of that event happening, as well as the rest of
 				// the chance assuming the event has happened. Multiply these
 				// together to get the total chance (Bayes rule).
-				// iI3 counts the number of successful first strikes
-				//////
-
-				for (iI3 = 0; iI3 < (iFirstStrikes + 1); iI3++)
+				// i3 counts the number of successful first strikes
+				for (int i3 = 0; i3 < iFirstStrikes + 1; i3++)
 				{
-					// event: iI3 first strikes hit the defender
+					// event: i3 first strikes hit the defender
 
-					// calculate chance of iI3 first strikes hitting: fOddsEvent
+					// calculate chance of i3 first strikes hitting: fOddsEvent
 					// f(k;n,p)=C(n,k)*(p^k)*((1-p)^(n-k))
 					// this needs to be in floating point math
-					//////
+					const float fOddsEvent = (
+						((float)getBinomialCoefficient(iFirstStrikes, i3))
+						* pow((((float)iAttackerOdds) / GC.getCOMBAT_DIE_SIDES()), i3)
+						* pow(1.0f - ((float)iAttackerOdds) / GC.getCOMBAT_DIE_SIDES(), iFirstStrikes - i3)
+					);
+					// calculate chance assuming i3 first strike hits: fOddsAfterEvent
+					float fOddsAfterEvent = 1;
 
-					// UncutDragon
-/* original code
-					fOddsEvent = ((float)getBinomialCoefficient(iFirstStrikes, iI3)) * pow((((float)iAttackerOdds) / GC.getDefineINT("COMBAT_DIE_SIDES")), iI3) * pow((1.0f - (((float)iAttackerOdds) / GC.getDefineINT("COMBAT_DIE_SIDES"))), (iFirstStrikes - iI3));
-*/					// modified
-					fOddsEvent = ((float)getBinomialCoefficient(iFirstStrikes, iI3)) * pow((((float)iAttackerOdds) / GC.getCOMBAT_DIE_SIDES()), iI3) * pow((1.0f - (((float)iAttackerOdds) / GC.getCOMBAT_DIE_SIDES())), (iFirstStrikes - iI3));
-					// /UncutDragon
-
-					// calculate chance assuming iI3 first strike hits: fOddsAfterEvent
-					//////
-
-					if (iI3 >= iNeededRoundsAttacker)
+					if (i3 < iNeededRoundsAttacker)
 					{
-						fOddsAfterEvent = 1;
-					}
-					else
-					{
+						// odds for _at_least_ (iNeededRoundsAttacker - i3) (the remaining hits the attacker needs to make)
+						// out of (iMaxRounds - i3) (the left over rounds) is the sum of each _exact_ draw
 						fOddsAfterEvent = 0;
 
-						// odds for _at_least_ (iNeededRoundsAttacker - iI3) (the remaining hits
-						// the attacker needs to make) out of (iMaxRounds - iI3) (the left over
-						// rounds) is the sum of each _exact_ draw
-						//////
-
-						for (iI4 = (iNeededRoundsAttacker - iI3); iI4 < (iMaxRounds - iI3 + 1); iI4++)
+						for (int i4 = iNeededRoundsAttacker - i3; i4 < iMaxRounds - i3 + 1; i4++)
 						{
-							// odds of exactly iI4 out of (iMaxRounds - iI3) draws.
+							// odds of exactly i4 out of (iMaxRounds - i3) draws.
 							// f(k;n,p)=C(n,k)*(p^k)*((1-p)^(n-k))
 							// this needs to be in floating point math
-							//////
-
-							// UncutDragon
-/* original code
-							fOddsAfterEvent += ((float)getBinomialCoefficient((iMaxRounds - iI3), iI4)) * pow((((float)iAttackerOdds) / GC.getDefineINT("COMBAT_DIE_SIDES")), iI4) * pow((1.0f - (((float)iAttackerOdds) / GC.getDefineINT("COMBAT_DIE_SIDES"))), ((iMaxRounds - iI3) - iI4));
-*/							// modified
-							fOddsAfterEvent += ((float)getBinomialCoefficient((iMaxRounds - iI3), iI4)) * pow((((float)iAttackerOdds) / GC.getCOMBAT_DIE_SIDES()), iI4) * pow((1.0f - (((float)iAttackerOdds) / GC.getCOMBAT_DIE_SIDES())), ((iMaxRounds - iI3) - iI4));
-							// /UncutDragon
+							fOddsAfterEvent += (
+								((float)getBinomialCoefficient(iMaxRounds - i3, i4))
+								* pow(((float)iAttackerOdds) / GC.getCOMBAT_DIE_SIDES(), i4)
+								* pow(1.0f - ((float)iAttackerOdds) / GC.getCOMBAT_DIE_SIDES(), iMaxRounds - i3 - i4)
+							);
 						}
 					}
-
 					// Multiply these together, round them properly, and add
 					// the result to the total iOdds
-					//////
-
-					iOdds += ((int)(1000.0 * (fOddsEvent*fOddsAfterEvent + 0.0005)));
+					iOdds += (int)(1000 * (fOddsEvent * fOddsAfterEvent + 0.0005));
 				}
 			}
-			else // (iI < iJ)
+			else // (i1 < i2)
 			{
 				// Attacker gets less first strikes than defender
-
-				iFirstStrikes = iJ - iI;
+				const int iFirstStrikes = i2 - i1;
 
 				// For every possible first strike getting hit, calculate both
 				// the chance of that event happening, as well as the rest of
 				// the chance assuming the event has happened. Multiply these
 				// together to get the total chance (Bayes rule).
-				// iI3 counts the number of successful first strikes
-				//////
-
-				for (iI3 = 0; iI3 < (iFirstStrikes + 1); iI3++)
+				// i3 counts the number of successful first strikes
+				for (int i3 = 0; i3 < (iFirstStrikes + 1); i3++)
 				{
-					// event: iI3 first strikes hit the defender
+					// event: i3 first strikes hit the defender
 
 					// First of all, check if the attacker is still alive.
 					// Otherwise, no further calculations need to occur
-					/////
-
-					if (iI3 < iNeededRoundsDefender)
+					if (i3 < iNeededRoundsDefender)
 					{
-						// calculate chance of iI3 first strikes hitting: fOddsEvent
+						// Calculate chance of i3 first strikes hitting: fOddsEvent
 						// f(k;n,p)=C(n,k)*(p^k)*((1-p)^(n-k))
-						// this needs to be in floating point math
-						//////
+						// This needs to be in floating point math
+						const float fOddsEvent = ((float)getBinomialCoefficient(iFirstStrikes, i3)) * pow((((float)iDefenderOdds) / GC.getCOMBAT_DIE_SIDES()), i3) * pow((1.0f - (((float)iDefenderOdds) / GC.getCOMBAT_DIE_SIDES())), (iFirstStrikes - i3));
 
-						// UncutDragon
-/* original code
-						fOddsEvent = ((float)getBinomialCoefficient(iFirstStrikes, iI3)) * pow((((float)iDefenderOdds) / GC.getDefineINT("COMBAT_DIE_SIDES")), iI3) * pow((1.0f - (((float)iDefenderOdds) / GC.getDefineINT("COMBAT_DIE_SIDES"))), (iFirstStrikes - iI3));
-*/						// modified
-						fOddsEvent = ((float)getBinomialCoefficient(iFirstStrikes, iI3)) * pow((((float)iDefenderOdds) / GC.getCOMBAT_DIE_SIDES()), iI3) * pow((1.0f - (((float)iDefenderOdds) / GC.getCOMBAT_DIE_SIDES())), (iFirstStrikes - iI3));
-						// /UncutDragon
+						// calculate chance assuming i3 first strike hits: fOddsAfterEvent
+						float fOddsAfterEvent = 0;
 
-						// calculate chance assuming iI3 first strike hits: fOddsAfterEvent
-						//////
-
-						fOddsAfterEvent = 0;
-
-						// odds for _at_least_ iNeededRoundsAttacker (the remaining hits
-						// the attacker needs to make) out of (iMaxRounds - iI3) (the left over
-						// rounds) is the sum of each _exact_ draw
-						//////
-
-						for (iI4 = iNeededRoundsAttacker; iI4 < (iMaxRounds - iI3 + 1); iI4++)
+						// odds for _at_least_ iNeededRoundsAttacker (the remaining hits the attacker needs to make)
+						// out of (iMaxRounds - i3) (the left over rounds) is the sum of each _exact_ draw
+						for (int i4 = iNeededRoundsAttacker; i4 < iMaxRounds - i3 + 1; i4++)
 						{
-
-							// odds of exactly iI4 out of (iMaxRounds - iI3) draws.
+							// Odds of exactly i4 out of (iMaxRounds - i3) draws.
 							// f(k;n,p)=C(n,k)*(p^k)*((1-p)^(n-k))
-							// this needs to be in floating point math
-							//////
-
-							// UncutDragon
-/* original code
-							fOddsAfterEvent += ((float)getBinomialCoefficient((iMaxRounds - iI3), iI4)) * pow((((float)iAttackerOdds) / GC.getDefineINT("COMBAT_DIE_SIDES")), iI4) * pow((1.0f - (((float)iAttackerOdds) / GC.getDefineINT("COMBAT_DIE_SIDES"))), ((iMaxRounds - iI3) - iI4));
-*/							// modified
-							fOddsAfterEvent += ((float)getBinomialCoefficient((iMaxRounds - iI3), iI4)) * pow((((float)iAttackerOdds) / GC.getCOMBAT_DIE_SIDES()), iI4) * pow((1.0f - (((float)iAttackerOdds) / GC.getCOMBAT_DIE_SIDES())), ((iMaxRounds - iI3) - iI4));
-							// /UncutDragon
+							// This needs to be in floating point math
+							fOddsAfterEvent += (
+								((float)getBinomialCoefficient(iMaxRounds - i3, i4))
+								* pow((((float)iAttackerOdds) / GC.getCOMBAT_DIE_SIDES()), i4)
+								* pow(1.0f - ((float)iAttackerOdds) / GC.getCOMBAT_DIE_SIDES(), iMaxRounds - i3 - i4)
+							);
 						}
-
-						// Multiply these together, round them properly, and add
-						// the result to the total iOdds
-						//////
-
-						iOdds += ((int)(1000.0 * (fOddsEvent*fOddsAfterEvent + 0.0005)));
+						// Multiply these together, round them properly, and add the result to the total iOdds
+						iOdds += (int)(1000 * (fOddsEvent*fOddsAfterEvent + 0.0005));
 					}
 				}
 			}
 		}
 	}
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD                       END                                                  */
-/************************************************************************************************/
 
 	// Weigh the total to the number of possible combinations of first strikes events
 	// note: the integer math breaks down when #FS > 656 (with a die size of 1000)
-	//////
+	iOdds /= ((pDefender->immuneToFirstStrikes() ? 0 : pAttacker->chanceFirstStrikes()) + 1) * ((pAttacker->immuneToFirstStrikes() ? 0 : pDefender->chanceFirstStrikes()) + 1);
 
-	iOdds /= (((pDefender->immuneToFirstStrikes()) ? 0 : pAttacker->chanceFirstStrikes()) + 1) * (((pAttacker->immuneToFirstStrikes()) ? 0 : pDefender->chanceFirstStrikes()) + 1);
-
-	// finished!
-	//////
-
+	FASSERT_BOUNDS(0, 1001, iOdds);
 	return iOdds;
 }
 
@@ -781,50 +720,18 @@ int getCombatOdds(const CvUnit* pAttacker, const CvUnit* pDefender)
 float getCombatOddsSpecific(const CvUnit* pAttacker, const CvUnit* pDefender, int n_A, int n_D)
 {
 	PROFILE_EXTRA_FUNC();
-	int iAttackerStrength;
-	int iAttackerFirepower;
-	int iDefenderStrength;
-	int iDefenderFirepower;
-	int iDefenderOdds;
-	int iAttackerOdds;
-	int iStrengthFactor;
-	int iDamageToAttacker;
-	int iDamageToDefender;
-	int iNeededRoundsAttacker;
-	//int iNeededRoundsDefender;
-
-	int AttFSnet;
-	int AttFSC;
-	int DefFSC;
-
-	int iDefenderHitLimit;
 
 	//TB Combat Mods (Armor Compare)
-	int iAttackArmorTotal = pAttacker->armorVSOpponentProbTotal(pDefender);
-	int iDefendPunctureTotal = pDefender->punctureVSOpponentProbTotal(pAttacker);
-	int iAttackPunctureTotal = pAttacker->punctureVSOpponentProbTotal(pDefender);
-	int iDefendArmorTotal = pDefender->armorVSOpponentProbTotal(pAttacker);
-
-	int iUnmodifiedDefenderArmor = (iDefendArmorTotal - iAttackPunctureTotal);
-	int iUnmodifiedAttackerArmor = (iAttackArmorTotal - iDefendPunctureTotal);
-	int iModifiedDefenderArmorZero = (iUnmodifiedDefenderArmor < 0 ? 0 : iUnmodifiedDefenderArmor);
-	int iModifiedAttackerArmorZero = (iUnmodifiedAttackerArmor < 0 ? 0 : iUnmodifiedAttackerArmor);
-	int iModifiedDefenderArmor = (iModifiedDefenderArmorZero > 95 ? 95 : iModifiedDefenderArmorZero);
-	int iModifiedAttackerArmor = (iModifiedAttackerArmorZero > 95 ? 95 : iModifiedAttackerArmorZero);
-
-	int iDefenderArmor = (100 - iModifiedDefenderArmor);
-	int iAttackerArmor = (100 - iModifiedAttackerArmor);
-
-	iAttackerStrength = pAttacker->currCombatStr(NULL, NULL);
-	iAttackerFirepower = pAttacker->currFirepower(NULL, NULL);
-	iDefenderStrength = pDefender->currCombatStr(pDefender->plot(), pAttacker);
-	iDefenderFirepower = pDefender->currFirepower(pDefender->plot(), pAttacker);
+	int iAttackerStrength = pAttacker->currCombatStr(NULL, NULL);
+	int iAttackerFirepower = pAttacker->currFirepower(NULL, NULL);
+	int iDefenderStrength = pDefender->currCombatStr(pDefender->plot(), pAttacker);
+	int iDefenderFirepower = pDefender->currFirepower(pDefender->plot(), pAttacker);
 
 #ifdef STRENGTH_IN_NUMBERS
 	if (GC.getGame().isOption(GAMEOPTION_COMBAT_STRENGTH_IN_NUMBERS))
 	{
-		int iDefenderSupportStrength = pDefender->getDefenderSupportValue(pAttacker);
-		int iAttackerSupportStrength = pAttacker->getAttackerSupportValue();
+		const int iDefenderSupportStrength = pDefender->getDefenderSupportValue(pAttacker);
+		const int iAttackerSupportStrength = pAttacker->getAttackerSupportValue();
 		iAttackerStrength += iAttackerSupportStrength;
 		iAttackerFirepower += iAttackerSupportStrength;
 		iDefenderStrength += iDefenderSupportStrength;
@@ -834,44 +741,67 @@ float getCombatOddsSpecific(const CvUnit* pAttacker, const CvUnit* pDefender, in
 
 	//TB Combat Mods End
 
-	iStrengthFactor = ((iAttackerFirepower + iDefenderFirepower + 1) / 2);
+	const int iStrengthFactor = ((iAttackerFirepower + iDefenderFirepower + 1) / 2);
 
-	int iDefendDamageModifierTotal = pDefender->damageModifierTotal();
-	int iAttackDamageModifierTotal = pAttacker->damageModifierTotal();
+	const int iDamageToAttackerBase = GC.getCOMBAT_DAMAGE() * (iDefenderFirepower + iStrengthFactor) / std::max(1, iAttackerFirepower + iStrengthFactor);
+	const int iDamageToDefenderBase = GC.getCOMBAT_DAMAGE() * (iAttackerFirepower + iStrengthFactor) / std::max(1, iDefenderFirepower + iStrengthFactor);
 
-	int iDamageToAttackerBase = ((GC.getCOMBAT_DAMAGE() * (iDefenderFirepower + iStrengthFactor)) / std::max(1,(iAttackerFirepower + iStrengthFactor)));
-	int iDamageToDefenderBase = ((GC.getCOMBAT_DAMAGE() * (iAttackerFirepower + iStrengthFactor)) / std::max(1,(iDefenderFirepower + iStrengthFactor)));
-	int iDamageToAttackerModified = iDamageToAttackerBase + ((iDamageToAttackerBase * iDefendDamageModifierTotal)/100);
-	int iDamageToDefenderModified = iDamageToDefenderBase + ((iDamageToDefenderBase * iAttackDamageModifierTotal)/100);
-	int iDamageToAttackerArmor = (iDamageToAttackerModified * iAttackerArmor)/100;
-	int iDamageToDefenderArmor = (iDamageToDefenderModified * iDefenderArmor)/100;
-	iDamageToAttacker  = std::max(1, iDamageToAttackerArmor);
-	iDamageToDefender  = std::max(1, iDamageToDefenderArmor);
-	//TB Combat Mods Begin (Armor/Puncture)
-//  iDamageToAttacker = std::max(1,((GC.getDefineINT("COMBAT_DAMAGE") * (iDefenderFirepower + iStrengthFactor)) / (iAttackerFirepower + iStrengthFactor)));
-//  iDamageToDefender = std::max(1,((GC.getDefineINT("COMBAT_DAMAGE") * (iAttackerFirepower + iStrengthFactor)) / (iDefenderFirepower + iStrengthFactor)));
-	//iDamageToAttacker  = std::max(1, ((((GC.getDefineINT("COMBAT_DAMAGE") * (iDefenderFirepower + iStrengthFactor)) / (iAttackerFirepower + iStrengthFactor)) * iAttackerArmor)/100));
-	//iDamageToDefender  = std::max(1, ((((GC.getDefineINT("COMBAT_DAMAGE") * (iAttackerFirepower + iStrengthFactor)) / (iDefenderFirepower + iStrengthFactor)) * iDefenderArmor)/100));
-	//TB Combat Mods end (Armor/Puncture)
+	const int iDamageToAttacker = (
+		std::max(
+			1,
+			(iDamageToAttackerBase + iDamageToAttackerBase * pDefender->damageModifierTotal() / 100)
+			*
+			(100 - range(pAttacker->armorVSOpponentProbTotal(pDefender) - pDefender->punctureVSOpponentProbTotal(pAttacker), 0, 95))
+			/
+			100
+		)
+	);
+	const int iDamageToDefender = (
+		std::max(
+			1,
+			(iDamageToDefenderBase + iDamageToDefenderBase * pAttacker->damageModifierTotal() / 100)
+			*
+			(100 - range(pDefender->armorVSOpponentProbTotal(pAttacker) - pAttacker->punctureVSOpponentProbTotal(pDefender), 0, 95))
+			/
+			100
+		)
+	);
+
 	//TB Combat Mods begin (Dodge/Precision)
-	int iDefenderDodge = pDefender->dodgeVSOpponentProbTotal(pAttacker);
-	int iDefenderPrecision = pDefender->precisionVSOpponentProbTotal(pAttacker);
-	int iAttackerDodge = pAttacker->dodgeVSOpponentProbTotal(pDefender);
-	int iAttackerPrecision = pAttacker->precisionVSOpponentProbTotal(pDefender);
-	int iAttackerHitModifier = iAttackerPrecision - iDefenderDodge;
-	int iDefenderHitModifier = iDefenderPrecision - iAttackerDodge;
 
-	int iDefenderInitialOdds = ((GC.getCOMBAT_DIE_SIDES() * iDefenderStrength) / (iAttackerStrength + iDefenderStrength));
-	int iDefenderHitOdds = std::max(5, iDefenderInitialOdds + ((iDefenderHitModifier * iDefenderInitialOdds)/100));
+	const int iDefenderInitialOdds = GC.getCOMBAT_DIE_SIDES() * iDefenderStrength / (iAttackerStrength + iDefenderStrength);
+	const int iAttackerInitialOdds = GC.getCOMBAT_DIE_SIDES() - iDefenderInitialOdds;
 
-	int iAttackerInitialOdds = GC.getCOMBAT_DIE_SIDES() - iDefenderInitialOdds;
-	int iAttackerHitOdds = std::max(5, iAttackerInitialOdds + ((iAttackerHitModifier * iAttackerInitialOdds)/100));
+	const int iDefenderHitOdds = (
+		std::max(
+			5,
+			iDefenderInitialOdds
+			+
+			(
+				pDefender->precisionVSOpponentProbTotal(pAttacker)
+				-
+				pAttacker->dodgeVSOpponentProbTotal(pDefender)
+			)
+			*
+			iDefenderInitialOdds / 100
+		)
+	);
+	const int iAttackerHitOdds = (
+		std::max(
+			5,
+			iAttackerInitialOdds
+			+
+			(
+				pAttacker->precisionVSOpponentProbTotal(pDefender)
+				-
+				pDefender->dodgeVSOpponentProbTotal(pAttacker)
+			)
+			* iAttackerInitialOdds / 100
+		)
+	);
+	int iDefenderOdds = ((iDefenderHitOdds - iAttackerHitOdds) + GC.getCOMBAT_DIE_SIDES()) / 2;
+	int iAttackerOdds = ((iAttackerHitOdds - iDefenderHitOdds) + GC.getCOMBAT_DIE_SIDES()) / 2;
 
-	iDefenderOdds = ((iDefenderHitOdds - iAttackerHitOdds)+ GC.getCOMBAT_DIE_SIDES())/2;
-	iAttackerOdds = ((iAttackerHitOdds - iDefenderHitOdds)+ GC.getCOMBAT_DIE_SIDES())/2;
-	//original:
-	//iDefenderOdds = ((GC.getDefineINT("COMBAT_DIE_SIDES") * iDefenderStrength) / (iAttackerStrength + iDefenderStrength));
-	//iAttackerOdds = GC.getDefineINT("COMBAT_DIE_SIDES") - iDefenderOdds;
 	//TB Combat Mods end (Dodge/Precision)
 
 	if (GC.getDefineINT("ACO_IgnoreBarbFreeWins")==0)
@@ -900,268 +830,216 @@ float getCombatOddsSpecific(const CvUnit* pAttacker, const CvUnit* pDefender, in
 		}
 	}
 
-	iDefenderHitLimit = pDefender->getMaxHP() - pAttacker->combatLimit(pDefender);
+	const int iNeededRoundsAttacker = (pDefender->getHP() - pDefender->getMaxHP() + pAttacker->combatLimit(pDefender) - (((pAttacker->combatLimit(pDefender))==pDefender->getMaxHP())?1:0))/iDamageToDefender + 1;
+	const int iNeededRoundsDefender = (pAttacker->getHP() + iDamageToAttacker - 1 ) / iDamageToAttacker;
 
-	//iNeededRoundsAttacker = (std::max(0, pDefender->getHP() - iDefenderHitLimit) + iDamageToDefender - (((pAttacker->combatLimit())==GC.getMAX_HIT_POINTS())?1:0) ) / iDamageToDefender;
-	iNeededRoundsAttacker = (pDefender->getHP() - pDefender->getMaxHP() + pAttacker->combatLimit(pDefender) - (((pAttacker->combatLimit(pDefender))==pDefender->getMaxHP())?1:0))/iDamageToDefender + 1;
-	//TB Combat Mods begin
-	int iNeededRoundsDefender = (pAttacker->getHP() + iDamageToAttacker - 1 ) / iDamageToAttacker;
-	//TB Combat Mods end
+	const int N_D = (
+		(
+			std::max(0, pDefender->getHP() + pAttacker->combatLimit(pDefender) - pDefender->getMaxHP())
+			+ iDamageToDefender
+			- (pAttacker->combatLimit(pDefender) == pDefender->getMaxHP())
+		)
+		/ iDamageToDefender
+	);
+	const int N_A = 1 + (pAttacker->getHP() - 1) / iDamageToAttacker;
 
-	int N_D = (std::max(0, pDefender->getHP() - iDefenderHitLimit) + iDamageToDefender - (((pAttacker->combatLimit(pDefender))==pDefender->getMaxHP())?1:0) ) / iDamageToDefender;
-
-	//int N_A = (pAttacker->getHP() + iDamageToAttacker - 1 ) / iDamageToAttacker;  //same as next line
-	int N_A = (pAttacker->getHP() - 1)/iDamageToAttacker + 1;
-
-
-	//int iRetreatOdds = std::max((pAttacker->withdrawalProbability()),100);
-	//  TB Combat Mods:
-	//  Determine Attack Withdraw odds
-	int iAttackerWithdraw = pAttacker->withdrawVSOpponentProbTotal(pDefender, pDefender->plot());
-	int iDefenderPursuit = pDefender->pursuitVSOpponentProbTotal(pAttacker);
-	int iAttackerEarly = pAttacker->earlyWithdrawTotal();
-	int AdjustedAttWithdrawalstep1 = iAttackerWithdraw - iDefenderPursuit;
-	int AdjustedAttWithdrawalstep2 = ((AdjustedAttWithdrawalstep1 > 100) ? 100 : AdjustedAttWithdrawalstep1);
-	int AdjustedAttWithdrawal = ((AdjustedAttWithdrawalstep2 < 0) ? 0 : AdjustedAttWithdrawalstep2);
-
-	int expectedrndcnt = std::min(iNeededRoundsDefender, iNeededRoundsAttacker);
-	int expectedrnds = ((expectedrndcnt * iAttackerEarly)/100);
-
-	int y = AdjustedAttWithdrawal;
-	int z = AdjustedAttWithdrawal;
-	int Time;
-	for (Time = 0; Time < expectedrnds; ++Time)
+	// TB Combat Mods:
+	int z;
+	const int expectedrndcnt = std::min(iNeededRoundsDefender, iNeededRoundsAttacker);
+	// Determine Attack Withdraw odds
 	{
-		z += ((AdjustedAttWithdrawal * y)/100);
-		y = ((AdjustedAttWithdrawal * (100 - z))/100);	//	Prob next round is prob per round times prob you haven't already
-	}
+		const int iWithdrawal = range(pAttacker->withdrawVSOpponentProbTotal(pDefender, pDefender->plot()) - pDefender->pursuitVSOpponentProbTotal(pAttacker), 0, 100);
 
-	int EvaluatedAttWithdrawOdds = z;
+		int y = iWithdrawal;
+		z = iWithdrawal;
+
+		for (int Time = expectedrndcnt * pAttacker->earlyWithdrawTotal() / 100; Time > 0; --Time)
+		{
+			z += iWithdrawal * y / 100;
+			y  = iWithdrawal * (100 - z) / 100; // Prob next round is prob per round times prob you haven't already
+		}
+	}
+	const float RetreatOdds = std::min(z, 100) / 100.0f;
 
 	//  Determine Attack Knockback odds
-	int iAttackerKnockback = pAttacker->knockbackVSOpponentProbTotal(pDefender);
-	int iDefenderUnyielding = pDefender->unyieldingTotal();
-	int iAttackerKnockbackTries = pAttacker->knockbackRetriesTotal() + 1;
-
-	int AdjustedKnockbackstep1 = iAttackerKnockback - iDefenderUnyielding;
-	int AdjustedKnockbackstep2 = ((AdjustedKnockbackstep1 > 100) ? 100 : AdjustedKnockbackstep1);
-	int AdjustedKnockback = ((AdjustedKnockbackstep2 < 0) ? 0 : AdjustedKnockbackstep2);
-
-	y = AdjustedKnockback;
-	z = AdjustedKnockback;
-
-	for (Time = 0; Time < iAttackerKnockbackTries; ++Time)
 	{
-		z += ((AdjustedKnockback * y)/100);
-		y = ((AdjustedKnockback * (100 - z))/100);	//	Prob next round is prob per round times prob you haven't already
-	}
+		const int iKnockback = range(pAttacker->knockbackVSOpponentProbTotal(pDefender) - pDefender->unyieldingTotal(), 0, 100);
 
-	int EvaluatedKnockbackOdds = z;
+		int y = iKnockback;
+		z = iKnockback;
+
+		for (int Time = pAttacker->knockbackRetriesTotal(); Time > -1; --Time)
+		{
+			z += iKnockback * y / 100;
+			y  = iKnockback * (100 - z) / 100; // Prob next round is prob per round times prob you haven't already
+		}
+	}
+	const float KnockbackOdds = std::min(z, 100) / 100.0f;
 
 	//  Determine Defensive Withdrawal odds
-	int iDefenderWithdraw = pDefender->withdrawVSOpponentProbTotal(pAttacker, pDefender->plot());
-	int iAttackerPursuit = pAttacker->pursuitVSOpponentProbTotal(pDefender);
-	int iDefenderEarly = pDefender->earlyWithdrawTotal();
-	int AdjustedDefWithdrawalstep1 = iDefenderWithdraw - iAttackerPursuit;
-	int AdjustedDefWithdrawalstep2 = ((AdjustedDefWithdrawalstep1 > 100) ? 100 : AdjustedDefWithdrawalstep1);
-	int AdjustedDefWithdrawal = ((AdjustedDefWithdrawalstep2 < 0) ? 0 : AdjustedDefWithdrawalstep2);
-
-	expectedrnds = ((expectedrndcnt * iDefenderEarly)/100);
-
-	y = AdjustedDefWithdrawal;
-	z = AdjustedDefWithdrawal;
-
-	for (Time = 0; Time < expectedrnds; ++Time)
 	{
-		z += ((AdjustedDefWithdrawal * y)/100);
-		y = ((AdjustedDefWithdrawal * (100 - z))/100);	//	Prob next round is prob per round times prob you haven't already
-	}
+		const int iDefWithdrawal = range(pDefender->withdrawVSOpponentProbTotal(pAttacker, pDefender->plot()) - pAttacker->pursuitVSOpponentProbTotal(pDefender), 0, 100);
 
-	int EvaluatedDefWithdrawalOdds = z;
+		int y = iDefWithdrawal;
+		z = iDefWithdrawal;
+
+		for (int Time = expectedrndcnt * pDefender->earlyWithdrawTotal() / 100; Time > 0; --Time)
+		{
+			z += iDefWithdrawal * y / 100;
+			y  = iDefWithdrawal * (100 - z) / 100; // Prob next round is prob per round times prob you haven't already
+		}
+	}
+	const float DefRetreatOdds = std::min(z, 100) / 100.0f;
 
 	// Fortify, Repel Odds
-	int iDefenderFortifyTotal = pDefender->fortifyModifier();
-	int iDefenderRepel = pDefender->repelVSOpponentProbTotal(pAttacker);
-	int iDefenderFortRepel = pDefender->fortifyRepelModifier();
-	int iRepelAttempts = (pDefender->repelRetriesTotal() + 1);
-	int iAttackerOverrun = pAttacker->overrunTotal();
-	int iAttackerUnyielding = pAttacker->unyieldingTotal();
-	int iFortRepellessOverrun = iDefenderFortRepel - iAttackerOverrun;
-	int iFortRepelZero = (iFortRepellessOverrun < 0 ? 0 : iFortRepellessOverrun);
-	int iFortRepelTotal = (iFortRepelZero > 100 ? 100 : iFortRepelZero);
-	int iDefenderRepelwithFortRepel = iDefenderRepel + iFortRepelTotal;
-	int iRepelwithUnyielding = iDefenderRepelwithFortRepel - iAttackerUnyielding;
-	int iRepelZero = (iRepelwithUnyielding < 0 ? 0 : iRepelwithUnyielding);
-	int iRepelTotal = (iRepelZero > 100 ? 100 : iRepelZero);
-	int iFortifylessOverrun = iDefenderFortifyTotal - iAttackerOverrun;
-
-	y = iRepelTotal;
-	z = iRepelTotal;
-
-	for (Time = 0; Time < iRepelAttempts; ++Time)
 	{
-		z += ((iRepelTotal * y)/100);
-		y = ((iRepelTotal * (100 - z))/100);	//	Prob next round is prob per round times prob you haven't already
+		const int iRepel = (
+			range(
+				pDefender->repelVSOpponentProbTotal(pAttacker)
+				+
+				range(pDefender->fortifyRepelModifier() - pAttacker->overrunTotal(), 0, 100)
+				-
+				pAttacker->unyieldingTotal()
+				, 0
+				, 100
+			)
+		);
+		int y = iRepel;
+		z = iRepel;
+
+		for (int Time = pDefender->repelRetriesTotal(); Time > -1; --Time)
+		{
+			z += iRepel * y / 100;
+			y  = iRepel * (100 - z) / 100;	//	Prob next round is prob per round times prob you haven't already
+		}
 	}
+	const float RepelOdds = std::min(z, 100) / 100.0f;
+	//TB Combat Mods End
 
-	int EvaluatedRepelOdds = z;
+	const int AttFSnet = (pDefender->immuneToFirstStrikes() ? 0 : pAttacker->firstStrikes()) - (pAttacker->immuneToFirstStrikes() ? 0 : pDefender->firstStrikes());
+	const int AttFSC = pDefender->immuneToFirstStrikes() ? 0 : pAttacker->chanceFirstStrikes();
+	const int DefFSC = (pAttacker->immuneToFirstStrikes()) ? 0 : (pDefender->chanceFirstStrikes());
 
-	float RetreatOdds = ((float)(std::min((EvaluatedAttWithdrawOdds),100)))/100.0f ;
-	float DefRetreatOdds = ((float)(std::min((EvaluatedDefWithdrawalOdds),100)))/100.0f;
-	float RepelOdds = ((float)(std::min((EvaluatedRepelOdds),100)))/100.0f ;
-	float KnockbackOdds = ((float)(std::min((EvaluatedKnockbackOdds),100)))/100.0f ;
-	//TB Combat Mods End (above original:float RetreatOdds = ((float)(std::min(pAttacker->withdrawalProbability(),100)))/100.0f ;
-
-	AttFSnet = ( (pDefender->immuneToFirstStrikes()) ? 0 : pAttacker->firstStrikes() ) - ((pAttacker->immuneToFirstStrikes()) ? 0 : pDefender->firstStrikes());
-	AttFSC = (pDefender->immuneToFirstStrikes()) ? 0 : (pAttacker->chanceFirstStrikes());
-	DefFSC = (pAttacker->immuneToFirstStrikes()) ? 0 : (pDefender->chanceFirstStrikes());
-
-
-	float P_A = (float)iAttackerOdds / GC.getDefineINT("COMBAT_DIE_SIDES");
-	float P_D = (float)iDefenderOdds / GC.getDefineINT("COMBAT_DIE_SIDES");
+	const float P_A = ((float)iAttackerOdds) / GC.getDefineINT("COMBAT_DIE_SIDES");
+	const float P_D = ((float)iDefenderOdds) / GC.getDefineINT("COMBAT_DIE_SIDES");
 	float answer = 0.0f;
-	if (n_A < N_A && n_D == iNeededRoundsAttacker)   // (1) Defender dies or is taken to combat limit
+	// (1) Defender dies or is taken to combat limit
+	if (n_A < N_A && n_D == iNeededRoundsAttacker)
 	{
 		float sum1 = 0.0f;
-		for (int i = (-AttFSnet-AttFSC<1?1:-AttFSnet-AttFSC); i <= DefFSC - AttFSnet; i++)
+		for (int i = (-AttFSnet-AttFSC < 1 ? 1 : -AttFSnet - AttFSC); i <= DefFSC - AttFSnet; i++)
 		{
 			for (int j = 0; j <= i; j++)
 			{
-
 				if (n_A >= j)
 				{
 					sum1 += (float)getBinomialCoefficient(i,j) * pow(P_A,(float)(i-j)) * getBinomialCoefficient(iNeededRoundsAttacker-1+n_A-j,iNeededRoundsAttacker-1);
-
-				} //if
-			}//for j
-		}//for i
+				}
+			}
+		}
 		sum1 *= pow(P_D,(float)n_A)*pow(P_A,(float)iNeededRoundsAttacker);
 		answer += sum1;
 
-
 		float sum2 = 0.0f;
 
-
-		for (int i = (0<AttFSnet-DefFSC?AttFSnet-DefFSC:0); i <= AttFSnet + AttFSC; i++)
+		for (int i = (0 < AttFSnet - DefFSC ? AttFSnet - DefFSC : 0); i <= AttFSnet + AttFSC; i++)
 		{
-
 			for (int j = 0; j <= i; j++)
 			{
 				if (N_D > j)
 				{
 					sum2 = sum2 + getBinomialCoefficient(n_A+iNeededRoundsAttacker-j-1,n_A) * (float)getBinomialCoefficient(i,j) * pow(P_A,(float)iNeededRoundsAttacker) * pow(P_D,(float)(n_A+i-j));
-
 				}
 				else if (n_A == 0)
 				{
 					sum2 = sum2 + (float)getBinomialCoefficient(i,j) * pow(P_A,(float)j) * pow(P_D,(float)(i-j));
 				}
-				else
-				{
-					sum2 = sum2 + 0.0f;
-				}
-			}//for j
-
-		}//for i
+				else sum2 = sum2 + 0.0f;
+			}
+		}
 		answer += sum2;
-
 	}
-	else if (n_D < N_D && n_A == N_A)  // (2) Attacker dies!
+	// (2) Attacker dies!
+	else if (n_D < N_D && n_A == N_A)
 	{
-
 		float sum1 = 0.0f;
-		for (int i = (-AttFSnet-AttFSC<1?1:-AttFSnet-AttFSC); i <= DefFSC - AttFSnet; i++)
+		for (int i = (-AttFSnet - AttFSC < 1 ? 1 : -AttFSnet - AttFSC); i <= DefFSC - AttFSnet; i++)
 		{
-
 			for (int j = 0; j <= i; j++)
 			{
-				if (N_A>j)
+				if (N_A > j)
 				{
 					sum1 += getBinomialCoefficient(n_D+N_A-j-1,n_D) * (float)getBinomialCoefficient(i,j) * pow(P_D,(float)(N_A)) * pow(P_A,(float)(n_D+i-j));
 				}
-				else
+				else if (n_D == 0)
 				{
-					if (n_D == 0)
-					{
-						sum1 += (float)getBinomialCoefficient(i,j) * pow(P_D,(float)(j)) * pow(P_A,(float)(i-j));
-					}//if (inside if) else sum += 0
-				}//if
-			}//for j
-
-		}//for i
+					sum1 += (float)getBinomialCoefficient(i,j) * pow(P_D,(float)(j)) * pow(P_A,(float)(i-j));
+				}
+			}
+		}
 		answer += sum1;
+
 		float sum2 = 0.0f;
-		for (int i = (0<AttFSnet-DefFSC?AttFSnet-DefFSC:0); i <= AttFSnet + AttFSC; i++)
+
+		for (int i = (0 < AttFSnet-DefFSC ? AttFSnet - DefFSC : 0); i <= AttFSnet + AttFSC; i++)
 		{
 			for (int j = 0; j <= i; j++)
 			{
 				if (n_D >= j)
 				{
 					sum2 += (float)getBinomialCoefficient(i,j) * pow(P_D,(float)(i-j)) * getBinomialCoefficient(N_A-1+n_D-j,N_A-1);
-				} //if
-			}//for j
-		}//for i
+				}
+			}
+		}
 		sum2 *= pow(P_A,(float)(n_D))*pow(P_D,(float)(N_A));
 		answer += sum2;
 		//TB Combat Mods (Repel & Knockback)
-//orig: answer = answer * (1.0f - RetreatOdds);
 		answer = answer * (1.0f - RetreatOdds) * (1.0f - RepelOdds) * (1.0f - KnockbackOdds) * (1.0f - DefRetreatOdds);
 		//TB Combat Mods End
-
 	}
-	//TB Combat Mods begin - original: else if (n_A == (N_A-1) && n_D < N_D)  // (3) Attacker retreats!
-	else if (n_A == (N_A-1) && n_D < N_D)  // (3) Attacker retreats, is repelled or knocks opponent back!
-	//TB Combat Mods end
+	//TB Combat Mods - (3) Attacker retreats, is repelled or knocks opponent back!
+	else if (n_A == (N_A-1) && n_D < N_D)
 	{
 		float sum1 = 0.0f;
 		for (int i = (AttFSnet+AttFSC>-1?1:-AttFSnet-AttFSC); i <= DefFSC - AttFSnet; i++)
 		{
-
 			for (int j = 0; j <= i; j++)
 			{
-				if (N_A>j)
+				if (N_A > j)
 				{
 					sum1 += getBinomialCoefficient(n_D+N_A-j-1,n_D) * (float)getBinomialCoefficient(i,j) * pow(P_D,(float)(N_A)) * pow(P_A,(float)(n_D+i-j));
 				}
-				else
+				else if (n_D == 0)
 				{
-					if (n_D == 0)
-					{
-						sum1 += (float)getBinomialCoefficient(i,j) * pow(P_D,(float)(j)) * pow(P_A,(float)(i-j));
-					}//if (inside if) else sum += 0
-				}//if
-			}//for j
-
-		}//for i
+					sum1 += (float)getBinomialCoefficient(i,j) * pow(P_D,(float)(j)) * pow(P_A,(float)(i-j));
+				}
+			}
+		}
 		answer += sum1;
 
 		float sum2 = 0.0f;
-		for (int i = (0<AttFSnet-DefFSC?AttFSnet-DefFSC:0); i <= AttFSnet + AttFSC; i++)
+		for (int i = (0 < AttFSnet-DefFSC ? AttFSnet-DefFSC : 0); i <= AttFSnet + AttFSC; i++)
 		{
 			for (int j = 0; j <= i; j++)
 			{
 				if (n_D >= j)
 				{
 					sum2 += (float)getBinomialCoefficient(i,j) * pow(P_D,(float)(i-j)) * getBinomialCoefficient(N_A-1+n_D-j,N_A-1);
-				} //if
-			}//for j
-		}//for i
+				}
+			}
+		}
 		sum2 *= pow(P_A,(float)(n_D))*pow(P_D,(float)(N_A));
 		answer += sum2;
 		//TB Combat Mods (Repel & Knockback)
-		//orig: answer = answer * RetreatOdds;
 		answer = answer * RetreatOdds * RepelOdds * KnockbackOdds * DefRetreatOdds;
 		//TB Combat Mods End
-
 	}
-	else
-	{
-		//Unexpected value.  Process should not reach here.
-	}
+	else FErrorMsg("Unexpected value.  Process should not reach here.");
 
-	answer = answer / ((float)(AttFSC+DefFSC+1)); // dividing by (t+w+1) as is necessary
-	return answer;
-}// getCombatOddsSpecific
+	// dividing by (t+w+1) as is necessary
+	return answer / ((float)(AttFSC + DefFSC + 1));
+}
+// !getCombatOddsSpecific
 
 // I had to add this function to the header file CvGameCoreUtils.h
 /*************************************************************************************************/

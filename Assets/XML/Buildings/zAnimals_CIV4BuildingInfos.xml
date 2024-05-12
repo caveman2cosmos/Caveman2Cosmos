@@ -433,8 +433,10 @@
 			<PrereqTech>TECH_TRADE</PrereqTech>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_CARNIVAL</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_T_MARSUPIAL</BuildingType>
 			</PrereqInCityBuildings>
+			<PrereqOrHeritage>
+				<Type>HERITAGE_TAXON_MARSUPIALIA</Type>
+			</PrereqOrHeritage>
 			<iCost>306</iCost>
 			<ObsoleteTech>TECH_ADVANCED_AVIATION</ObsoleteTech>
 			<iHappiness>1</iHappiness>
@@ -1675,9 +1677,9 @@
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_ENCLOSURE_MARSUPIAL</ArtDefineTag>
 			<PrereqTech>TECH_TRADE</PrereqTech>
-			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_FOLKLORE_T_MARSUPIAL</BuildingType>
-			</PrereqInCityBuildings>
+			<PrereqOrHeritage>
+				<Type>HERITAGE_TAXON_MARSUPIALIA</Type>
+			</PrereqOrHeritage>
 			<iCost>306</iCost>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -2033,19 +2035,17 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_ZOO</BuildingType>
 			</PrereqInCityBuildings>
-			<PrereqOrBuildings>
-				<BuildingType>BUILDING_FOLKLORE_BARN_OWL</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_BARRED_OWL</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_GREAT_HORNED_OWL</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_TASMANIAN_DEVIL</BuildingType>
-			</PrereqOrBuildings>
 			<PrereqOrHeritage>
 				<Type>HERITAGE_FOLKLORE_BADGER</Type>
 				<Type>HERITAGE_FOLKLORE_KOALA</Type>
+				<Type>HERITAGE_FOLKLORE_OWL_BARN</Type>
+				<Type>HERITAGE_FOLKLORE_OWL_BARRED</Type>
+				<Type>HERITAGE_FOLKLORE_OWL_GREAT_HORNED</Type>
 				<Type>HERITAGE_FOLKLORE_RACCOON</Type>
 				<Type>HERITAGE_FOLKLORE_RATEL</Type>
 				<Type>HERITAGE_FOLKLORE_RED_PANDA</Type>
 				<Type>HERITAGE_FOLKLORE_SKUNK</Type>
+				<Type>HERITAGE_FOLKLORE_TASMANIAN_DEVIL</Type>
 			</PrereqOrHeritage>
 			<iCost>1600</iCost>
 			<MapCategoryTypes>
@@ -2370,15 +2370,19 @@
 			<Description>TXT_KEY_BUILDING_REMAINS_PROCOPTODON</Description>
 			<Civilopedia>TXT_KEY_BUILDING_FOLKLORE_ANIMAL_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<PrereqAmountBuildings>
-				<PrereqBuilding>
-					<BuildingType>BUILDING_FOLKLORE_PROCOPTODON</BuildingType>
-					<iNumBuildingNeeded>3</iNumBuildingNeeded>
-				</PrereqBuilding>
-			</PrereqAmountBuildings>
-			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_FOLKLORE_REQUIREMENT</BuildingType>
-			</PrereqInCityBuildings>
+			<PrereqOrFeature>
+				<PrereqFeature>
+					<FeatureType>FEATURE_OASIS</FeatureType>
+					<bPrereqFeature>1</bPrereqFeature>
+				</PrereqFeature>
+				<PrereqFeature>
+					<FeatureType>FEATURE_VERY_TALL_GRASS</FeatureType>
+					<bPrereqFeature>1</bPrereqFeature>
+				</PrereqFeature>
+			</PrereqOrFeature>
+			<PrereqOrHeritage>
+				<Type>HERITAGE_FOLKLORE_PROCOPTODON</Type>
+			</PrereqOrHeritage>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -2783,15 +2787,19 @@
 			<Description>TXT_KEY_BUILDING_REMAINS_THYLACINE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_FOLKLORE_ANIMAL_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_MILITARY</Advisor>
-			<PrereqAmountBuildings>
-				<PrereqBuilding>
-					<BuildingType>BUILDING_FOLKLORE_THYLACINE</BuildingType>
-					<iNumBuildingNeeded>3</iNumBuildingNeeded>
-				</PrereqBuilding>
-			</PrereqAmountBuildings>
-			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_FOLKLORE_REQUIREMENT</BuildingType>
-			</PrereqInCityBuildings>
+			<PrereqOrFeature>
+				<PrereqFeature>
+					<FeatureType>FEATURE_CAVES</FeatureType>
+					<bPrereqFeature>1</bPrereqFeature>
+				</PrereqFeature>
+				<PrereqFeature>
+					<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
+					<bPrereqFeature>1</bPrereqFeature>
+				</PrereqFeature>
+			</PrereqOrFeature>
+			<PrereqOrHeritage>
+				<Type>HERITAGE_FOLKLORE_THYLACINE</Type>
+			</PrereqOrHeritage>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -2828,7 +2836,7 @@
 			<iAsset>1</iAsset>
 			<iConquestProb>90</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
-			<ArtDefineTag>ART_DEF_BUILDING_FOLKLORE_THYLACINE</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_REMAINS_THYLACINE</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_SHELL_WORKERS_HUT</Type>

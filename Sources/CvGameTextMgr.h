@@ -59,7 +59,7 @@ public:
 	void setScoreHelp(CvWStringBuffer &szString, PlayerTypes ePlayer);
 
 	void parseBuildUp(CvWStringBuffer &szHelpString, PromotionLineTypes eTrait, CivilizationTypes eCivilization = NO_CIVILIZATION);
-	void parseTraits(CvWStringBuffer &szHelpString, TraitTypes eTrait, CivilizationTypes eCivilization = NO_CIVILIZATION, bool bDawnOfMan = false, bool bEffectsOnly = false);
+	void parseTraits(CvWStringBuffer &szHelpString, TraitTypes eTrait, bool bDawnOfMan = false, bool bEffectsOnly = false);
 
 	DllExport void parseLeaderTraits(CvWStringBuffer &szInfoText, LeaderHeadTypes eLeader = NO_LEADER, CivilizationTypes eCivilization = NO_CIVILIZATION, bool bDawnOfMan = false, bool bCivilopediaText = false);
 	DllExport void parseLeaderShortTraits(CvWStringBuffer &szInfoText, LeaderHeadTypes eLeader);

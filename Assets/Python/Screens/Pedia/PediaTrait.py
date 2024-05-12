@@ -81,7 +81,7 @@ class Page:
 			Y_ROW_3 += H_ROW_2
 			H_ROW_3 -= H_ROW_2
 		# Pedia Text & Effects
-		szTxt1 = CyGameTextMgr().parseTraits(iTheTrait, -1, False, True)[1:]
+		szTxt1 = CyGameTextMgr().parseTraits(iTheTrait, False, True)[1:]
 		szTxt2 = CvTheTraitInfo.getCivilopedia()
 		if szTxt1 or szTxt2:
 			if szTxt1 and szTxt2:

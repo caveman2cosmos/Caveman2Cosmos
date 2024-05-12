@@ -139,6 +139,7 @@ class EnhancedTechConquest:
 
 		aTxtList = []
 		bGotTech = False
+		szTxt = ""
 
 		while iLen0 or iLen1:
 
@@ -183,29 +184,13 @@ class EnhancedTechConquest:
 			CyTeamN.changeResearchProgress(iTech, iBeakers, iOwnerNew)
 
 			if bHuman:
-
-				if not (iCount % 6):
-					if iCount:
-						aTxtList.append(szTxt)
-					szTxt = "\n\t* " + GC.getTechInfo(iTech).getDescription() + u" <-> %i%c" %(iBeakers, charBeaker)
-				else: szTxt += "\n\t* " + GC.getTechInfo(iTech).getDescription() + u" <-> %i%c" %(iBeakers, charBeaker)
+				szTxt += "\n\t* " + GC.getTechInfo(iTech).getDescription() + u" <-> %i%c" %(iBeakers, charBeaker)
 
 			iCount += 1
 
-		if bHuman: # Inform the player they didn't get any new technologies
+		if bHuman:
 			if iCount:
-				if (iCount % 6):
-					aTxtList.append(szTxt)
-
-				bFirst = True
-				while aTxtList:
-					
-					if bFirst:
-						szTxt0 = aTxtList.pop(0)
-						bFirst = False
-					else: CvUtil.sendMessage(aTxtList.pop(), iOwnerNew, 20, "", col, city.getX(), city.getY(), True, True)
-
-				szTxt = TRNSLTR.getText("TXT_KEY_ENHANCED_TECH_CONQUEST_SUCESS", ()) % city.getName() + szTxt0
+				szTxt = TRNSLTR.getText("TXT_KEY_ENHANCED_TECH_CONQUEST_SUCESS", ()) % city.getName() + szTxt
 			else: szTxt = TRNSLTR.getText("TXT_KEY_ENHANCED_TECH_CONQUEST_FAIL", ()) % city.getName()
 
 			CvUtil.sendMessage(

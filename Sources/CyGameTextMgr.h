@@ -47,8 +47,8 @@ public:
 	std::wstring parseReligionInfo(int /*ReligionTypes*/ iReligionType, bool bCivilopediaText);
 	std::wstring parseCorporationInfo(int /*CorporationTypes*/ iCorporationType, bool bCivilopediaText);
 	std::wstring parseCivInfos(int /*CivilizationTypes*/ iCivilization, bool bDawnOfMan);
-	std::wstring parseLeaderTraits(int /*LeaderHeadTypes*/ iLeader, int /*CivilizationTypes*/ iCivilization, bool bDawnOfMan, bool bCivilopediaText);
-	std::wstring parseTraits(int /*TraitTypes*/ eTrait, int /*CivilizationTypes*/ eCivilization, bool bDawnOfMan, bool bEffectsOnly);
+	std::wstring parseLeaderTraits(int /*LeaderHeadTypes*/ iLeader, bool bDawnOfMan, bool bCivilopediaText);
+	std::wstring parseTraits(int /*TraitTypes*/ eTrait, bool bDawnOfMan, bool bEffectsOnly);
 	std::wstring getHappinessHelp();
 	std::wstring getTradeString(TradeData* pTradeData, int iPlayer1, int iPlayer2);
 	std::wstring getSpecialistHelp(int iSpecialist, bool bCivilopediaText);

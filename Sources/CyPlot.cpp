@@ -457,6 +457,11 @@ int CyPlot::getYield(YieldTypes eIndex) const
 	return m_pPlot ? m_pPlot->getYield(eIndex) : -1;
 }
 
+void CyPlot::setExtraYield(YieldTypes eYield, short iExtraYield)
+{
+	m_pPlot->setExtraYield(eYield, iExtraYield);
+}
+
 int CyPlot::calculateBestNatureYield(YieldTypes eIndex, TeamTypes eTeam) const
 {
 	return m_pPlot ? m_pPlot->calculateBestNatureYield(eIndex, eTeam) : -1;

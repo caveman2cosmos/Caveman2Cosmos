@@ -259,8 +259,6 @@ void CyGamePythonInterface()
 		.def("log", &CyGame::log)
 		.def("logw", &CyGame::logw, "void log(wstring str)")
 
-		.def("setPlotExtraYield", &CyGame::setPlotExtraYield, "void (int iX, int iY, int /*YieldTypes*/ eYield, int iExtraYield)")
-
 		.def("isCivEverActive", &CyGame::isCivEverActive, "bool (int /*CivilizationTypes*/ eCivilization)")
 		.def("isLeaderEverActive", &CyGame::isLeaderEverActive, "bool (int /*LeaderHeadTypes*/ eLeader)")
 

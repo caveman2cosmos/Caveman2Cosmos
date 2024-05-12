@@ -256,6 +256,22 @@
 		<English>Tale, Black Jaguar</English>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_FOLKLORE_KANGAROO_GREY</Tag>
+		<English>Tale, Grey Kangaroo</English>
+		<French>Mythe du Kangourou gris</French>
+		<German>Mythos des Grauen Riesenkängurus</German>
+		<Italian>Mito del canguro grigio</Italian>
+		<Russian>Ìèô î ñåðîì êåíãóðó</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_FOLKLORE_KANGAROO_RED</Tag>
+		<English>Tale, Red Kangaroo</English>
+		<French>Mythe du Kangourou roux</French>
+		<German>Mythos des Roten Riesenkängurus</German>
+		<Italian>Mito del canguro rosso</Italian>
+		<Russian>Ìèô î êðàñí.êåíãóðó</Russian>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_HERITAGE_FOLKLORE_KOALA</Tag>
 		<English>Tale, Koala</English>
 		<French>Mythe du Koala</French>
@@ -339,12 +355,53 @@
 		<Russian>Ìèô î íèë. âàðàíå</Russian>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_FOLKLORE_NUMBAT</Tag>
+		<English>Tale, Numbat</English>
+		<French>Mythe du Numbat</French>
+		<German>Mythos des Numbats</German>
+		<Italian>Mito del numbat</Italian>
+		<Russian>Ìèô î ñóì÷. ìóðàâüåäå</Russian>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_HERITAGE_FOLKLORE_OTTER_SEA</Tag>
 		<English>Tale, Sea Otter</English>
 		<French>Mythe de la Loutre de mer</French>
 		<German>Mythos des Seeotters</German>
 		<Italian>Mito della lontra marina</Italian>
 		<Russian>Ìèô î êàëàíå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_FOLKLORE_OWL_BARN</Tag>
+		<English>Tale, Barn Owl</English>
+		<French>Mythe de la Chouette effraie</French>
+		<Italian>Mito del barbagianni comune</Italian>
+		<Polish>Mit - P&#179;omyk&#243;wka Zwyczajna</Polish>
+		<Russian>Ìèô î ñèïóõå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_FOLKLORE_OWL_BARRED</Tag>
+		<English>Tale, Barred Owl</English>
+		<French>Mythe de la Chouette rayée</French>
+		<Italian>Mito dell'allocco barrato</Italian>
+		<Polish>Mit - Puszczyk</Polish>
+		<Russian>Ìèô î ñû÷å</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_FOLKLORE_OWL_GREAT_HORNED</Tag>
+		<English>Tale, Great Horned Owl</English>
+		<French>Mythe du Hibou grand duc</French>
+		<German>Mythos des Uhus</German>
+		<Italian>Mito del gufo della Virginia</Italian>
+		<Russian>Ìèô î ôèëèíå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_FOLKLORE_PALEOLITHIC_MARSUPIAL</Tag>
+		<English>Tale, Paleolithic Marsupial</English>
+		<French>Mythe du Marsupial Paléolithique</French>
+		<German>Mythos des Urzeitbeuteltiers</German>
+		<Italian>Mito del marsupiale paleolitico</Italian>
+		<Polish>Mit Paleolitycznych Torbaczy</Polish>
+		<Russian>Ìèô î äðåâ. ñóì÷àòîì</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HERITAGE_FOLKLORE_PARROT_AFRICAN_GREY</Tag>
@@ -396,6 +453,26 @@
 		<Russian>Ìèô îá óòêîíîñå</Russian>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_FOLKLORE_POSSUM_BRUSHTAIL</Tag>
+		<English>Tale, Brushtail Possum</English>
+		<French>Mythe du Phalanger commun</French>
+		<German>Mythos des Kusus</German>
+		<Italian>Mito del tricosuro volpino</Italian>
+		<Russian>Ìèô î ïîññóìå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_FOLKLORE_POSSUM_DIDELPHIS</Tag>
+		<English>Tale, Didelphis Possum</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_FOLKLORE_PROCOPTODON</Tag>
+		<English>Tale, Procoptodon</English>
+		<French>Mythe du Procoptodon</French>
+		<German>Mythos des Procoptodons</German>
+		<Italian>Mito del procoptodonte</Italian>
+		<Russian>Ìèô î ïðîêîïòîäîíå</Russian>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_HERITAGE_FOLKLORE_PYTHON_BALL</Tag>
 		<English>Tale, Ball Python</English>
 		<French>Mythe du Python royal</French>
@@ -403,6 +480,14 @@
 		<Italian>Mito del pitone reale</Italian>
 		<Polish>Mit - Pyton Kr&#243;lewski</Polish>
 		<Russian>Ìèô î êîð. ïèòîíå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_FOLKLORE_QUOLL</Tag>
+		<English>Tale, Quoll</English>
+		<French>Mythe du Chat marsupial</French>
+		<German>Mythos des Beutelmarders</German>
+		<Italian>Mito del quoll tigre</Italian>
+		<Russian>Ìèô î ñóì÷.êóíèöå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HERITAGE_FOLKLORE_RACCOON</Tag>
@@ -492,6 +577,20 @@
 		<Italian>Mito della tarantola della giungla</Italian>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_FOLKLORE_TASMANIAN_DEVIL</Tag>
+		<English>Tale, Tasmanian Devil</English>
+		<German>Mythos des Tasmanischen Teufels</German>
+		<Italian>Mito del diavolo della Tasmania</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_FOLKLORE_THYLACINE</Tag>
+		<English>Tale, Thylacine</English>
+		<French>Mythe du Thylacine</French>
+		<German>Mythos des Beutelwolfs</German>
+		<Italian>Mito del tilacino</Italian>
+		<Russian>Ìèô î ñóì÷. âîëêå</Russian>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_HERITAGE_FOLKLORE_TIGER_BENGAL</Tag>
 		<English>Tale, Bengal Tiger</English>
 		<French>Mythe du Tigre du Bengale</French>
@@ -567,6 +666,20 @@
 		<Russian>Ìèô î ãàäþêå</Russian>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_FOLKLORE_WALLABY</Tag>
+		<English>Tale, Wallaby</English>
+		<German>Mythos des Wallabys</German>
+		<Italian>Mito del wallaby</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_FOLKLORE_WALLAROO</Tag>
+		<English>Tale, Wallaroo</English>
+		<French>Mythe du Wallaroo</French>
+		<German>Mythos des Bergkängurus</German>
+		<Italian>Mito del wallaroo</Italian>
+		<Russian>Ìèô î êåíãóðó</Russian>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_HERITAGE_FOLKLORE_WARTHOG</Tag>
 		<English>Tale, Warthog</English>
 		<French>Mythe du Phacochère</French>
@@ -614,6 +727,14 @@
 		<German>Mythos des Vielfraßes</German>
 		<Italian>Mito del ghiottone</Italian>
 		<Russian>Ìèô î ðîñîìàõå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_FOLKLORE_WOMBAT</Tag>
+		<English>Tale, Wombat</English>
+		<French>Mythe du Wombat</French>
+		<German>Mythos des Wombats</German>
+		<Italian>Mito del vombato</Italian>
+		<Russian>Ìèô î âîìáàòå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HERITAGE_TAXON_AMPHIBIA</Tag>
@@ -680,6 +801,14 @@
 		<English>Hyaenidae is a family of feliform carnivoran mammals commonly called hyenas. With just four extant species, it is the fourth-smallest family in the order Carnivora and one of the smallest in the class Mammalia. Despite their low diversity, hyenas are unique and vital components of most African ecosystems. Although phylogenetically closer to felines and viverrids, hyenas are behaviourally and morphologically similar to canids in several elements due to convergent evolution: both hyenas and canines are non-arboreal, cursorial hunters that catch prey with their teeth rather than claws. Both eat food quickly and may store it, and their calloused feet with large, blunt, nonretractable claws are adapted for running and making sharp turns. However, hyenas' grooming, scent marking, defecation habits, mating and parental behavior are consistent with the behavior of other feliforms.</English>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_TAXON_MARSUPIALIA</Tag>
+		<English>Taxon Marsupialia</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_TAXON_MARSUPIALIA_PEDIA</Tag>
+		<English>Marsupialia is an infraclass of mammals commonly known as marsupials.  They are primarily found in Australasia, Wallacea, and the Americas. One of the defining features of marsupials is their unique reproductive strategy, where the young are born in a relatively undeveloped state and then nurtured within a pouch. Living marsupials encompass a wide range of species, including kangaroos, koalas, opossums, Tasmanian devils, wombats, wallabies, and bandicoots, among others. Each species exhibits distinct adaptations and behaviors suited to its particular ecological niche.</English>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_HERITAGE_TAXON_MONOTREMATA</Tag>
 		<English>Taxon Monotremata</English>
 	</TEXT>
@@ -742,6 +871,14 @@
 	<TEXT>
 		<Tag>TXT_KEY_HERITAGE_TAXON_SQUAMATA_PEDIA</Tag>
 		<English>Squamata (Latin squamatus, 'scaly, having scales') is the largest taxonomic order of the class reptilia, comprising lizards and snakes. With over 11,500 species, it is also the second-largest order of extant vertebrates, after the perciform fish. Members of the order are distinguished by their skins, which bear horny scales or shields, and must periodically engage in molting. They also possess movable quadrate bones, making possible movement of the upper jaw relative to the neurocranium. This is particularly visible in snakes, which are able to open their mouths very wide to accommodate comparatively large prey.</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_TAXON_STRIGIFORMES</Tag>
+		<English>Taxon Strigiformes</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_TAXON_STRIGIFORMES_PEDIA</Tag>
+		<English>Strigiformes is an order of birds commonly called owls. It includes over 200 species of mostly solitary and nocturnal birds of prey typified by an upright stance, a large, broad head, binocular vision, binaural hearing, sharp talons, and feathers adapted for silent flight. Exceptions include the diurnal northern hawk-owl and the gregarious burrowing owl. Owls are divided into two families: the true (or typical) owl family, Strigidae, and the barn-owl family, Tytonidae. Owls hunt mostly small mammals, insects, and other birds, although a few species specialize in hunting fish. They are found in all regions of the Earth except the polar ice caps and some remote islands. A group of owls is called a "parliament".</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HERITAGE_TAXON_SUIDAE</Tag>
