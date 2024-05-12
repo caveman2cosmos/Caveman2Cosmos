@@ -1143,30 +1143,6 @@
 		<Russian>Ìèô î ÿâàí. íîñîðîãå</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_FOLKLORE_GREY_KANGAROO</Tag>
-		<English>Folklore - Grey Kangaroo</English>
-		<French>Mythe du Kangourou gris</French>
-		<German>
-			<Text>Mythos des Grauen Riesenkängurus:Mythos des Grauen Riesenkängurus:Mythos des Grauen Riesenkängurus:Mythos des Grauen Riesenkängurus</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>Mito del canguro grigio</Italian>
-		<Russian>Ìèô î ñåðîì êåíãóðó</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_FOLKLORE_RED_KANGAROO</Tag>
-		<English>Folklore - Red Kangaroo</English>
-		<French>Mythe du Kangourou roux</French>
-		<German>
-			<Text>Mythos des Roten Riesenkängurus:Mythos des Roten Riesenkängurus:Mythos des Roten Riesenkängurus:Mythos des Roten Riesenkängurus</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>Mito del canguro rosso</Italian>
-		<Russian>Ìèô î êðàñí.êåíãóðó</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_KOOKABURRA</Tag>
 		<English>Folklore - Kookaburra</English>
 		<French>Mythe du Kookaboura</French>
@@ -1297,19 +1273,6 @@
 		<Russian>Ìèô î ìàðëèíå</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_FOLKLORE_T_MARSUPIAL</Tag>
-		<English>Folklore (T) - Marsupial</English>
-		<French>Mythe du Marsupial (T)</French>
-		<German>
-			<Text>Mythos der Beuteltiere:Mythos der Beuteltiere:Mythos der Beuteltiere:Mythos der Beuteltiere</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>Mito del marsupiale</Italian>
-		<Polish>Mit (T) Torbacza</Polish>
-		<Russian>Ìèô î ñóì÷àòîì</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_E_MERMAID</Tag>
 		<English>Folklore (E) - Mermaid</English>
 		<French>Mythe des Sirènes (E)</French>
@@ -1397,18 +1360,6 @@
 		<Russian>Ìèô îá îáåçüÿíàõ Íîâîãî Ñâåòà</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_FOLKLORE_NUMBAT</Tag>
-		<English>Folklore - Numbat</English>
-		<French>Mythe du Numbat</French>
-		<German>
-			<Text>Mythos des Numbats:Mythos des Numbats:Mythos des Numbats:Mythos des Numbats</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>Mito del numbat</Italian>
-		<Russian>Ìèô î ñóì÷. ìóðàâüåäå</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_OKAPI</Tag>
 		<English>Folklore - Okapi</English>
 		<French>Mythe de l'Okapi</French>
@@ -1443,18 +1394,6 @@
 		</German>
 		<Italian>Mito delle scimmie del vecchio mondo</Italian>
 		<Russian>Ìèô îá îáåçüÿíàõ Ñòàðîãî Ñâåòà</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_FOLKLORE_OPOSSUM</Tag>
-		<English>Folklore - Opossum</English>
-		<French>Mythe de l'Opossum</French>
-		<German>
-			<Text>Mythos des Opposums:Mythos des Opposums:Mythos des Opposums:Mythos des Opposums</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>Mito dell'opossum</Italian>
-		<Russian>Ìèô îá îïîññóìå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_ORANGUTAN</Tag>
@@ -1532,19 +1471,6 @@
 		<Russian>Ìèô î ãèã. ëåíèâöå</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_FOLKLORE_PALEOLITHIC_MARSUPIAL</Tag>
-		<English>Folklore - Paleolithic Marsupial</English>
-		<French>Mythe du Marsupial Paléolithique</French>
-		<German>
-			<Text>Mythos des Urzeitbeuteltiers:Mythos des Urzeitbeuteltiers:Mythos des Urzeitbeuteltiers:Mythos des Urzeitbeuteltiers</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>Mito del marsupiale paleolitico</Italian>
-		<Polish>Mit Paleolitycznych Torbaczy</Polish>
-		<Russian>Ìèô î äðåâ. ñóì÷àòîì</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_PEACOCK</Tag>
 		<English>Folklore - Peacock</English>
 		<French>Mythe du Paon</French>
@@ -1592,42 +1518,6 @@
 		</German>
 		<Italian>Mito del piccione</Italian>
 		<Russian>Ìèô î ãîëóáå</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_FOLKLORE_BRUSHTAIL_POSSUM</Tag>
-		<English>Folklore - Brushtail Possum</English>
-		<French>Mythe du Phalanger commun</French>
-		<German>
-			<Text>Mythos des Kusus:Mythos des Kusus:Mythos des Kusus:Mythos des Kusus</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>Mito del tricosuro volpino</Italian>
-		<Russian>Ìèô î ïîññóìå</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_FOLKLORE_PROCOPTODON</Tag>
-		<English>Folklore - Procoptodon</English>
-		<French>Mythe du Procoptodon</French>
-		<German>
-			<Text>Mythos des Procoptodons:Mythos des Procoptodons:Mythos des Procoptodons:Mythos des Procoptodons</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>Mito del procoptodonte</Italian>
-		<Russian>Ìèô î ïðîêîïòîäîíå</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_FOLKLORE_QUOLL</Tag>
-		<English>Folklore - Quoll</English>
-		<French>Mythe du Chat marsupial</French>
-		<German>
-			<Text>Mythos des Beutelmarders:Mythos des Beutelmarders:Mythos des Beutelmarders:Mythos des Beutelmarders</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>Mito del quoll tigre</Italian>
-		<Russian>Ìèô î ñóì÷.êóíèöå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_T_RAPTORS</Tag>
@@ -1820,18 +1710,6 @@
 		<Russian>Ìèô î ïîë. êðà÷êå</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_FOLKLORE_THYLACINE</Tag>
-		<English>Folklore - Thylacine</English>
-		<French>Mythe du Thylacine</French>
-		<German>
-			<Text>Mythos des Beutelwolfs:Mythos des Beutelwolfs:Mythos des Beutelwolfs:Mythos des Beutelwolfs</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>Mito del tilacino</Italian>
-		<Russian>Ìèô î ñóì÷. âîëêå</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_TOUCAN</Tag>
 		<English>Folklore - Toucan</English>
 		<French>Mythe du Toucan</French>
@@ -1893,28 +1771,6 @@
 		<Russian>Ìèô î ãðèôå</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_FOLKLORE_RING_TAILED_WALLABY</Tag>
-		<English>Folklore - Ring-tailed Wallaby</English>
-		<German>
-			<Text>Mythos des Wallabys:Mythos des Wallabys:Mythos des Wallabys:Mythos des Wallabys</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>Mito del wallaby delle rocce</Italian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_FOLKLORE_WALLAROO</Tag>
-		<English>Folklore - Wallaroo</English>
-		<French>Mythe du Wallaroo</French>
-		<German>
-			<Text>Mythos des Bergkängurus:Mythos des Bergkängurus:Mythos des Bergkängurus:Mythos des Bergkängurus</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>Mito del wallaroo</Italian>
-		<Russian>Ìèô î êåíãóðó</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_WALRUS</Tag>
 		<English>Folklore - Walrus</English>
 		<French>Mythe du Morse</French>
@@ -1964,18 +1820,6 @@
 		</German>
 		<Italian>Mito dello gnu</Italian>
 		<Russian>Ìèô î ãíó</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_FOLKLORE_WOMBAT</Tag>
-		<English>Folklore - Wombat</English>
-		<French>Mythe du Wombat</French>
-		<German>
-			<Text>Mythos des Wombats:Mythos des Wombats:Mythos des Wombats:Mythos des Wombats</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>Mito del vombato</Italian>
-		<Russian>Ìèô î âîìáàòå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_ZEBRA</Tag>
