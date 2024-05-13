@@ -594,7 +594,7 @@ public:
 	void changeCivilianUnitUpkeepMod(const int iChange);
 	void changeMilitaryUnitUpkeepMod(const int iChange);
 	void changeUnitUpkeep(const int iChange, const bool bMilitary);
-	inline void setUnitUpkeepDirty() const { m_bUnitUpkeepDirty = true; }
+	void setUnitUpkeepDirty() const;
 
 	int64_t getUnitUpkeepCivilian100() const;
 	int64_t getUnitUpkeepCivilian() const;
