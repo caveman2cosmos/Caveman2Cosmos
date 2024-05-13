@@ -1277,9 +1277,9 @@ bool PUF_isPotentialEnemy(const CvUnit* pDefender, int pAttackerTeam, int pAttac
 	FASSERT_NOT_NEGATIVE(pAttackerTeam);
 	FASSERT_NOT_NEGATIVE(pAttackerAlwaysHostile);
 
-	const bool bAssassinate = ((pDefender->isAssassin() || pAttacker->isAssassin()) && (pDefender->plot() == pAttacker->plot()));
+	const bool bAssassinate = (pDefender->isAssassin() || pAttacker->isAssassin()) && pDefender->plot() == pAttacker->plot();
 
-	if (pDefender->canCoexistWithAttacker(*pAttacker, bAssassinate))
+	if (pDefender->canCoexistWithAttacker(*pAttacker, false, bAssassinate))
 	{
 		return false;
 	}
