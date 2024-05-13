@@ -13920,66 +13920,54 @@ bool CvUnitAI::AI_join(int iMaxCount)
 {
 	PROFILE_FUNC();
 
-	int iValue;
-	int iI;
-	int iPathTurns = 0;
-
-	int iBestValue = 0;
-	const CvPlot* pBestPlot = NULL;
-	SpecialistTypes eBestSpecialist = NO_SPECIALIST;
-	int iCount = 0;
-
-	/************************************************************************************************/
-	/* BETTER_BTS_AI_MOD					  09/03/10								jdog5000	  */
-	/*																				phungus420	*/
-	/* Unit AI, Efficiency																		  */
-	/************************************************************************************************/
-	if (iMaxCount && (GC.getGame().getSorenRandNum(11, "Settle GG") < iMaxCount + 5))
+	if (iMaxCount && GC.getGame().getSorenRandNum(11, "Settle GG") < iMaxCount + 5)
 	{
 		return false;
 	}
+	const CvPlot* pBestPlot = NULL;
+	SpecialistTypes eBestSpecialist = NO_SPECIALIST;
 
-	foreach_(CvCity * pLoopCity, GET_PLAYER(getOwner()).cities())
 	{
-		// BBAI efficiency: check same area
-		if ((pLoopCity->area() == area()) && AI_plotValid(pLoopCity->plot()))
+		const int iThreatTreshold = (
+			2
+			*
+			std::max(1, GET_PLAYER(getOwner()).AI_getTotalAreaCityThreat(area(), NULL))
+			/
+			GET_PLAYER(getOwner()).getNumCities()
+		);
+		int iBestValue = 0;
+
+		foreach_(CvCity * cityX, GET_PLAYER(getOwner()).cities())
 		{
-			if (generateSafePathforVulnerable(pLoopCity->plot(), &iPathTurns))
+			// BBAI efficiency: check same area
+			if (cityX->area() == area()
+			&& AI_plotValid(cityX->plot())
+			&& generateIgnoreDangerPath(cityX->plot()))
 			{
-				for (iI = 0; iI < GC.getNumSpecialistInfos(); iI++)
+				for (int iI = 0; iI < GC.getNumSpecialistInfos(); iI++)
 				{
-					bool bDoesJoin = false;
-					SpecialistTypes eSpecialist = (SpecialistTypes)iI;
-					if (m_pUnitInfo->getGreatPeoples(eSpecialist))
+					const SpecialistTypes eType = static_cast<SpecialistTypes>(iI);
+
+					if (m_pUnitInfo->getGreatPeoples(eType))
 					{
-						bDoesJoin = true;
-					}
-					if (bDoesJoin)
-					{
-						iCount += pLoopCity->getSpecialistCount(eSpecialist);
+						const int iCount = cityX->getSpecialistCount(eType);
 						if (iCount >= iMaxCount)
 						{
-							return false;
+							continue;
 						}
 					}
 
-					if (canJoin(pLoopCity->plot(), ((SpecialistTypes)iI)))
+					if (canJoin(cityX->plot(), eType)
+					// Replaced local danger blocking of joins with more nuanced threat level evaluation.
+					//	This reduces the chances of the join being blocked by local dnager counts from battles with animals and so forth
+					&& cityX->AI_cityThreat() < iThreatTreshold)
 					{
-						int iTotalThreat = std::max(1, GET_PLAYER(getOwner()).AI_getTotalAreaCityThreat(area(), NULL));
-						int iOurThreat = pLoopCity->AI_cityThreat();
-
-						//	Replaced local danger blocking of joins with more nuanced threat level evaluation.
-						//	This reduces the chances of the join being blocked by local dnager counts from
-						//	battles with animals and so forth
-						if (iOurThreat < (2 * iTotalThreat) / GET_PLAYER(getOwner()).getNumCities())
+						const int iValue = cityX->AI_specialistValue(eType, cityX->AI_avoidGrowth(), false);
+						if (iValue > iBestValue)
 						{
-							iValue = pLoopCity->AI_specialistValue(((SpecialistTypes)iI), pLoopCity->AI_avoidGrowth(), false);
-							if (iValue > iBestValue)
-							{
-								iBestValue = iValue;
-								pBestPlot = getPathEndTurnPlot();
-								eBestSpecialist = ((SpecialistTypes)iI);
-							}
+							iBestValue = iValue;
+							pBestPlot = cityX->plot();
+							eBestSpecialist = eType;
 						}
 					}
 				}
@@ -13987,28 +13975,22 @@ bool CvUnitAI::AI_join(int iMaxCount)
 		}
 	}
 
-	if ((pBestPlot != NULL) && (eBestSpecialist != NO_SPECIALIST))
+	if (pBestPlot && eBestSpecialist != NO_SPECIALIST)
 	{
 		if (atPlot(pBestPlot))
 		{
 			getGroup()->pushMission(MISSION_JOIN, eBestSpecialist);
 			return true;
 		}
-		else
-		{
-			if (generateSafePathforVulnerable(pBestPlot, &iPathTurns))
-			{
-				return getGroup()->pushMissionInternal(MISSION_MOVE_TO, pBestPlot->getX(), pBestPlot->getY(), MOVE_IGNORE_DANGER);
-			}
-			else
-			{
-				getGroup()->pushMission(MISSION_SKIP);
-				return true;
-			}
-		}
-	}
 
-	//getGroup()->releaseUnitAIs(UNITAI_ESCORT);
+		if (generateSafePathforVulnerable(pBestPlot))
+		{
+			const CvPlot* plotX = getPathEndTurnPlot();
+			return getGroup()->pushMissionInternal(MISSION_MOVE_TO, plotX->getX(), plotX->getY(), MOVE_WITH_CAUTION);
+		}
+		getGroup()->pushMission(MISSION_SKIP, -1, -1, 0, false, false, MISSIONAI_WAIT_FOR_ESCORT);
+		return true;
+	}
 	return false;
 }
 
@@ -14789,94 +14771,66 @@ bool CvUnitAI::AI_hurry(bool bAny)
 {
 	PROFILE_FUNC();
 
-	bool bHurry;
-	int iTurnsLeft;
-	int iPathTurns;
-	int iValue;
-
+	const CvPlayerAI& owner = GET_PLAYER(getOwner());
 	int iBestValue = 0;
 	const CvPlot* pBestPlot = NULL;
-	const CvPlot* pBestHurryPlot = NULL;
 
-	foreach_(const CvCity * pLoopCity, GET_PLAYER(getOwner()).cities())
+	foreach_(const CvCity * cityX, owner.cities())
 	{
-		/************************************************************************************************/
-		/* BETTER_BTS_AI_MOD					  08/19/09								jdog5000	  */
-		/*																							  */
-		/* Unit AI, Efficiency																		  */
-		/************************************************************************************************/
-				// BBAI efficiency: check same area
-		if ((pLoopCity->area() == area()) && AI_plotValid(pLoopCity->plot()))
-			/************************************************************************************************/
-			/* BETTER_BTS_AI_MOD					   END												  */
-			/************************************************************************************************/
+		if (
+		    cityX->area() != area()
+		|| !cityX->isProductionBuilding()
+		|| !AI_plotValid(cityX->plot())
+		|| !canHurry(cityX->plot())
+		||
+		   !bAny
+		&& (
+				owner.AI_plotTargetMissionAIs(cityX->plot(), MISSIONAI_HURRY, getGroup()) != 0
+				||
+				!isWorldWonder(cityX->getProductionBuilding())
+			)
+		)
+		{ continue; }
+
+		int iPathTurns;
+		if (generateIgnoreDangerPath(cityX->plot(), &iPathTurns))
 		{
-			if (canHurry(pLoopCity->plot()))
+			const int iTurnsLeft = cityX->getProductionTurnsLeft() - iPathTurns;
+
+			if (iTurnsLeft > (bAny ? 1 : 8))
 			{
-				if (bAny || GET_PLAYER(getOwner()).AI_plotTargetMissionAIs(pLoopCity->plot(), MISSIONAI_HURRY, getGroup()) == 0)
+				const int iValue = iTurnsLeft;
+
+				if (iValue > iBestValue)
 				{
-					if (generateSafePathforVulnerable(pLoopCity->plot(), &iPathTurns))
-					{
-						bHurry = false;
-
-						if (pLoopCity->isProductionBuilding())
-						{
-							if (bAny || isWorldWonder(pLoopCity->getProductionBuilding()))
-							{
-								bHurry = true;
-							}
-						}
-
-						if (bHurry)
-						{
-							iTurnsLeft = pLoopCity->getProductionTurnsLeft();
-
-							iTurnsLeft -= iPathTurns;
-
-							if (iTurnsLeft > (bAny ? 1 : 8))
-							{
-								iValue = iTurnsLeft;
-
-								if (iValue > iBestValue)
-								{
-									iBestValue = iValue;
-									pBestPlot = getPathEndTurnPlot();
-									pBestHurryPlot = pLoopCity->plot();
-								}
-							}
-						}
-					}
+					iBestValue = iValue;
+					pBestPlot = cityX->plot();
 				}
 			}
 		}
 	}
 
-	if ((pBestPlot != NULL) && (pBestHurryPlot != NULL))
+	if (pBestPlot)
 	{
-		if (!atPlot(pBestHurryPlot))
-		{
-			FAssert(!atPlot(pBestPlot));
-			if (generateSafePathforVulnerable(pBestHurryPlot, &iPathTurns))
-			{
-				return getGroup()->pushMissionInternal(MISSION_MOVE_TO, pBestPlot->getX(), pBestPlot->getY(), MOVE_IGNORE_DANGER, false, false, MISSIONAI_HURRY, pBestHurryPlot);
-			}
-			else
-			{
-				getGroup()->pushMission(MISSION_SKIP);
-				return true;
-			}
-		}
-		else
+		if (atPlot(pBestPlot))
 		{
 			getGroup()->pushMission(MISSION_HURRY);
 			return true;
 		}
+
+		if (generateSafePathforVulnerable(pBestPlot))
+		{
+			const CvPlot* plotX = getPathEndTurnPlot();
+			return getGroup()->pushMissionInternal(MISSION_MOVE_TO, plotX->getX(), plotX->getY(), MOVE_WITH_CAUTION, false, false, MISSIONAI_HURRY, pBestPlot);
+		}
+		getGroup()->pushMission(MISSION_SKIP, -1, -1, 0, false, false, MISSIONAI_WAIT_FOR_ESCORT);
+		return true;
 	}
 	return false;
 }
 
-namespace scoring {
 
+namespace scoring {
 
 	// Implementation details of the scoring
 	namespace detail {
@@ -14990,8 +14944,8 @@ namespace scoring {
 	// Validation function that will ensure a unit can reach an item
 	bool canSafePathToCity(const CvUnitAI* unit, const CvCity* item)
 	{
-		FAssert(unit != NULL);
-		FAssert(item != NULL);
+		FAssert(unit);
+		FAssert(item);
 		return unit->generateSafePathforVulnerable(item->plot());
 	}
 
@@ -15116,26 +15070,24 @@ namespace {
 
 bool CvUnitAI::AI_doInquisition()
 {
-	int iPathTurns = 0;
-
 	CvCity* pTargetCity = GET_PLAYER(getOwner()).getInquisitionRevoltCity(this, false, GC.getOC_MIN_REV_INDEX(), 0);
-	if (pTargetCity == NULL)
+	if (!pTargetCity)
 	{
 		pTargetCity = GET_PLAYER(getOwner()).getTeamInquisitionRevoltCity(this, false, GC.getOC_MIN_REV_INDEX(), 0);
-		if (pTargetCity == NULL)
+		if (!pTargetCity)
 		{
 			pTargetCity = getReligiousVictoryTarget(this);
 		}
 	}
-	if (pTargetCity != NULL)
+	if (pTargetCity)
 	{
 		if (atPlot(pTargetCity->plot()))
 		{
 			return performInquisition();
 		}
-		if (generateSafePathforVulnerable(pTargetCity->plot(), &iPathTurns))
+		if (generateSafePathforVulnerable(pTargetCity->plot()))
 		{
-			return getGroup()->pushMissionInternal(MISSION_MOVE_TO, pTargetCity->getX(), pTargetCity->getY(), MOVE_IGNORE_DANGER, false, false, MISSIONAI_INQUISITION, pTargetCity->plot());
+			return getGroup()->pushMissionInternal(MISSION_MOVE_TO, pTargetCity->getX(), pTargetCity->getY(), MOVE_WITH_CAUTION, false, false, MISSIONAI_INQUISITION, pTargetCity->plot());
 		}
 		return false;
 	}
@@ -15148,69 +15100,47 @@ bool CvUnitAI::AI_greatWork()
 {
 	PROFILE_FUNC();
 
-	int iValue;
-	int iPathTurns = 0;
-
-	int iBestValue = 0;
 	CvPlot* pBestPlot = NULL;
-	CvPlot* pBestGreatWorkPlot = NULL;
-
-	foreach_(const CvCity * pLoopCity, GET_PLAYER(getOwner()).cities())
 	{
-		/************************************************************************************************/
-		/* BETTER_BTS_AI_MOD					  08/19/09								jdog5000	  */
-		/*																							  */
-		/* Unit AI, Efficiency																		  */
-		/************************************************************************************************/
-				// BBAI efficiency: check same area
-		if ((pLoopCity->area() == area()) && AI_plotValid(pLoopCity->plot()))
-			/************************************************************************************************/
-			/* BETTER_BTS_AI_MOD					   END												  */
-			/************************************************************************************************/
+		int iBestValue = 0;
+		foreach_(const CvCity * cityX, GET_PLAYER(getOwner()).cities())
 		{
-			if (canGreatWork(pLoopCity->plot()))
+			if (cityX->area() == area()
+			&& AI_plotValid(cityX->plot())
+			&& canGreatWork(cityX->plot())
+			&& GET_PLAYER(getOwner()).AI_plotTargetMissionAIs(cityX->plot(), MISSIONAI_GREAT_WORK, getGroup()) == 0
+			&& generateIgnoreDangerPath(cityX->plot()))
 			{
-				if (GET_PLAYER(getOwner()).AI_plotTargetMissionAIs(pLoopCity->plot(), MISSIONAI_GREAT_WORK, getGroup()) == 0)
+				const int iValue =
+				(
+					cityX->AI_calculateCulturePressure(true)
+					-
+					100 * cityX->getCulture(cityX->getOwner()) / std::max(1, getGreatWorkCulture())
+				);
+				if (iValue > iBestValue)
 				{
-					if (generateSafePathforVulnerable(pLoopCity->plot(), &iPathTurns))
-					{
-						iValue = pLoopCity->AI_calculateCulturePressure(true);
-						iValue -= ((100 * pLoopCity->getCulture(pLoopCity->getOwner())) / std::max(1, getGreatWorkCulture()));
-						if (iValue > 0)
-						{
-							if (iValue > iBestValue)
-							{
-								iBestValue = iValue;
-								pBestPlot = getPathEndTurnPlot();
-								pBestGreatWorkPlot = pLoopCity->plot();
-							}
-						}
-					}
+					iBestValue = iValue;
+					pBestPlot = cityX->plot();
 				}
 			}
 		}
 	}
 
-	if ((pBestPlot != NULL) && (pBestGreatWorkPlot != NULL))
+	if (pBestPlot)
 	{
-		if (atPlot(pBestGreatWorkPlot))
+		if (atPlot(pBestPlot))
 		{
 			getGroup()->pushMission(MISSION_GREAT_WORK);
 			return true;
 		}
-		else
+
+		if (generateSafePathforVulnerable(pBestPlot))
 		{
-			FAssert(!atPlot(pBestPlot));
-			if (generateSafePathforVulnerable(pBestPlot, &iPathTurns))
-			{
-				return getGroup()->pushMissionInternal(MISSION_MOVE_TO, pBestPlot->getX(), pBestPlot->getY(), MOVE_IGNORE_DANGER, false, false, MISSIONAI_GREAT_WORK, pBestGreatWorkPlot);
-			}
-			else
-			{
-				getGroup()->pushMission(MISSION_SKIP);
-				return true;
-			}
+			const CvPlot* plotX = getPathEndTurnPlot();
+			return getGroup()->pushMissionInternal(MISSION_MOVE_TO, plotX->getX(), plotX->getY(), MOVE_WITH_CAUTION, false, false, MISSIONAI_GREAT_WORK, pBestPlot);
 		}
+		getGroup()->pushMission(MISSION_SKIP, -1, -1, 0, false, false, MISSIONAI_WAIT_FOR_ESCORT);
+		return true;
 	}
 	return false;
 }
@@ -18815,56 +18745,52 @@ bool CvUnitAI::AI_found()
 
 	int iPathTurns, iBestFoundValue = 0;
 	const CvPlot* pBestPlot = NULL;
-	CvPlot* pBestFoundPlot = NULL;
 
 	for (int iI = 0; iI < GET_PLAYER(getOwner()).AI_getNumCitySites(); iI++)
 	{
 		CvPlot* pCitySitePlot = GET_PLAYER(getOwner()).AI_getCitySite(iI);
 
-		if ((pCitySitePlot->getArea() == getArea() || canMoveAllTerrain()) && canFound(pCitySitePlot)
+		if (canFound(pCitySitePlot)
+		&& (pCitySitePlot->getArea() == getArea() || canMoveAllTerrain())
 		&& !pCitySitePlot->isVisibleEnemyUnit(this)
 		&& GET_PLAYER(getOwner()).AI_plotTargetMissionAIs(pCitySitePlot, MISSIONAI_FOUND, getGroup()) == 0
-		&& getGroup()->canDefend() && getGroup()->getStrength() >= AI_minSettlerDefense()
-		&& generateSafePathforVulnerable(pCitySitePlot, &iPathTurns))
+		&& getGroup()->canDefend()
+		&& getGroup()->getStrength() >= AI_minSettlerDefense()
+		&& generateIgnoreDangerPath(pCitySitePlot, &iPathTurns))
 		{
 			const int iValue = 1000 * pCitySitePlot->getFoundValue(getOwner()) / (iPathTurns + 1);
 
 			if (iValue > iBestFoundValue)
 			{
-				const CvPlot* endTurnPlot = getPathEndTurnPlot();
-
-				if (endTurnPlot == pCitySitePlot || !exposedToDanger(endTurnPlot, 80))
-				{
-					iBestFoundValue = iValue;
-					pBestPlot = endTurnPlot;
-					pBestFoundPlot = pCitySitePlot;
-				}
+				iBestFoundValue = iValue;
+				pBestPlot = pCitySitePlot;
 			}
 		}
 	}
 
-	if (pBestPlot != NULL && pBestFoundPlot != NULL)
+	if (pBestPlot)
 	{
-		if (atPlot(pBestFoundPlot))
+		if (atPlot(pBestPlot))
 		{
 			if (gUnitLogLevel >= 2)
 			{
-				logBBAI("	Settler (%d) founding at best found plot %d, %d", getID(), pBestFoundPlot->getX(), pBestFoundPlot->getY());
+				logBBAI("	Settler (%d) founding at best found plot %d, %d", getID(), pBestPlot->getX(), pBestPlot->getY());
 			}
-			getGroup()->pushMission(MISSION_FOUND, -1, -1, 0, false, false, MISSIONAI_FOUND, pBestFoundPlot);
+			getGroup()->pushMission(MISSION_FOUND, -1, -1, 0, false, false, MISSIONAI_FOUND, pBestPlot);
 			return true;
 		}
 
 		if (gUnitLogLevel >= 2)
 		{
-			logBBAI("	Settler (%d) heading for best found plot %d, %d, current group strength (%d)", getID(), pBestFoundPlot->getX(), pBestFoundPlot->getY(), getGroup()->getStrength());
+			logBBAI("	Settler (%d) heading for best found plot %d, %d, current group strength (%d)", getID(), pBestPlot->getX(), pBestPlot->getY(), getGroup()->getStrength());
 		}
 
-		if (generateSafePathforVulnerable(pBestPlot, &iPathTurns))
+		if (generateSafePathforVulnerable(pBestPlot))
 		{
-			return getGroup()->pushMissionInternal(MISSION_MOVE_TO, pBestPlot->getX(), pBestPlot->getY(), MOVE_IGNORE_DANGER, false, false, MISSIONAI_FOUND, pBestFoundPlot);
+			const CvPlot* plotX = getPathEndTurnPlot();
+			return getGroup()->pushMissionInternal(MISSION_MOVE_TO, plotX->getX(), plotX->getY(), MOVE_WITH_CAUTION, false, false, MISSIONAI_FOUND, pBestPlot);
 		}
-		getGroup()->pushMission(MISSION_SKIP);
+		getGroup()->pushMission(MISSION_SKIP, -1, -1, 0, false, false, MISSIONAI_WAIT_FOR_ESCORT);
 		return true;
 	}
 	return false;
@@ -18876,61 +18802,53 @@ bool CvUnitAI::AI_foundRange(int iRange, bool bFollow)
 {
 	PROFILE_FUNC();
 
-	int iPathTurns;
-
-	const int iSearchRange = AI_searchRange(iRange);
-
-	int iBestValue = 0;
 	const CvPlot* pBestPlot = NULL;
-	const CvPlot* pBestFoundPlot = NULL;
 
-	foreach_(CvPlot * pLoopPlot, plot()->rect(iSearchRange, iSearchRange))
 	{
-		if (AI_plotValid(pLoopPlot) && (pLoopPlot != plot() || GET_PLAYER(getOwner()).AI_getPlotDanger(pLoopPlot, 1) <= pLoopPlot->plotCount(PUF_canDefend, -1, -1, NULL, getOwner())))
+		const int iSearchRange = AI_searchRange(iRange);
+		int iBestValue = 0;
+		foreach_(CvPlot * plotX, plot()->rect(iSearchRange, iSearchRange))
 		{
-			if (canFound(pLoopPlot))
+			if (AI_plotValid(plotX)
+			&& canFound(plotX)
+			&& (
+					plotX != plot()
+					||
+					GET_PLAYER(getOwner()).AI_getPlotDanger(plotX, 1)
+					<=
+					plotX->plotCount(PUF_canDefend, -1, -1, NULL, getOwner())
+				)
+			&& !plotX->isVisibleEnemyUnit(this)
+			&& GET_PLAYER(getOwner()).AI_plotTargetMissionAIs(plotX, MISSIONAI_FOUND, getGroup(), 3) == 0)
 			{
-				const int iValue = pLoopPlot->getFoundValue(getOwner());
+				const int iValue = plotX->getFoundValue(getOwner());
 
 				if (iValue > iBestValue)
 				{
-					if (!pLoopPlot->isVisibleEnemyUnit(this))
+					int iPathTurns;
+					if (generateIgnoreDangerPath(plotX, &iPathTurns) && iPathTurns <= iRange)
 					{
-						if (GET_PLAYER(getOwner()).AI_plotTargetMissionAIs(pLoopPlot, MISSIONAI_FOUND, getGroup(), 3) == 0)
-						{
-							if (generateSafePathforVulnerable(pLoopPlot, &iPathTurns))/*(generatePath(pLoopPlot, MOVE_SAFE_TERRITORY, true, &iPathTurns, iRange))*/
-							{
-								if (iPathTurns <= iRange)
-								{
-									const CvPlot* endTurnPlot = getPathEndTurnPlot();
-
-									if (endTurnPlot == pLoopPlot || !exposedToDanger(endTurnPlot, 80))
-									{
-										iBestValue = iValue;
-										pBestPlot = endTurnPlot;
-										pBestFoundPlot = pLoopPlot;
-									}
-								}
-							}
-						}
+						iBestValue = iValue;
+						pBestPlot = plotX;
 					}
 				}
 			}
 		}
 	}
 
-	if (pBestPlot != NULL && pBestFoundPlot != NULL)
+	if (pBestPlot)
 	{
-		if (atPlot(pBestFoundPlot))
+		if (atPlot(pBestPlot))
 		{
-			getGroup()->pushMission(MISSION_FOUND, -1, -1, 0, false, false, MISSIONAI_FOUND, pBestFoundPlot);
+			getGroup()->pushMission(MISSION_FOUND, -1, -1, 0, false, false, MISSIONAI_FOUND, pBestPlot);
 			return true;
 		}
 		if (!bFollow)
 		{
-			if (generateSafePathforVulnerable(pBestPlot, &iPathTurns))
+			if (generateSafePathforVulnerable(pBestPlot))
 			{
-				return getGroup()->pushMissionInternal(MISSION_MOVE_TO, pBestPlot->getX(), pBestPlot->getY(), MOVE_IGNORE_DANGER, false, false, MISSIONAI_FOUND, pBestFoundPlot);
+				const CvPlot* plotX = getPathEndTurnPlot();
+				return getGroup()->pushMissionInternal(MISSION_MOVE_TO, pBestPlot->getX(), pBestPlot->getY(), MOVE_AVOID_ENEMY_UNITS, false, false, MISSIONAI_FOUND, pBestPlot);
 			}
 			getGroup()->pushMission(MISSION_SKIP, -1, -1, 0, false, false, MISSIONAI_WAIT_FOR_ESCORT);
 			return true;
@@ -20385,78 +20303,80 @@ bool CvUnitAI::AI_connectPlot(CvPlot* pPlot, int iRange)
 
 	FAssert(canBuildRoute());
 
-	if ((getDomainType() == DOMAIN_LAND) && (pPlot->area() != area()) && !(getGroup()->canMoveAllTerrain()))
+	if (getDomainType() == DOMAIN_LAND
+	&& pPlot->area() != area()
+	&& !getGroup()->canMoveAllTerrain())
 	{
 		return false;
 	}
 	int iBasePathFlags = MOVE_SAFE_TERRITORY | MOVE_AVOID_ENEMY_UNITS | MOVE_IGNORE_DANGER | MOVE_RECONSIDER_ON_LEAVING_OWNED;
-	int iPathTurns = 0;
 
 	if (!pPlot->isVisibleEnemyUnit(this)
 	&& GET_PLAYER(getOwner()).AI_plotTargetMissionAIs(pPlot, MISSIONAI_BUILD, getGroup(), iRange) == 0
-	&& generateSafePathforVulnerable(pPlot, &iPathTurns))
+	&& generateIgnoreDangerPath(pPlot))
 	{
 		bool bHasPossibleTargetCity = false;
 
-		foreach_(const CvCity * cityX, GET_PLAYER(getOwner()).cities())
+		if (atPlot(pPlot))
 		{
-			if (pPlot->isConnectedTo(cityX))
+			foreach_(const CvCity * cityX, GET_PLAYER(getOwner()).cities())
 			{
-				continue;
-			}
-			if (!bHasPossibleTargetCity && !cityX->plot()->isVisibleEnemyUnit(this))
-			{
+				if (pPlot->isConnectedTo(cityX))
+				{
+					continue;
+				}
+				const CvPlot* cityPlot = cityX->plot();
+
+				if (cityPlot->isVisibleEnemyUnit(this))
+				{
+					continue;
+				}
 				bHasPossibleTargetCity = true;
-			}
-			FAssertMsg(pPlot->getPlotCity() != cityX, "pPlot->getPlotCity() is not expected to be equal with cityX");
 
-			if (plot()->getPlotGroup(getOwner()) == cityX->plot()->getPlotGroup(getOwner()))
-			{
-				PROFILE("CvUnitAI::AI_connectPlot.StrangeCase");
+				FAssertMsg(pPlot->getPlotCity() != cityX, "pPlot->getPlotCity() is not expected to be equal with cityX");
 
-				if (generateSafePathforVulnerable(pPlot, &iPathTurns))
+				if (plot()->getPlotGroup(getOwner()) == cityPlot->getPlotGroup(getOwner()))
 				{
-					return getGroup()->pushMissionInternal(MISSION_ROUTE_TO, pPlot->getX(), pPlot->getY(), MOVE_IGNORE_DANGER, false, false, MISSIONAI_BUILD, cityX->plot());
-				}
-				getGroup()->pushMission(MISSION_SKIP, -1, -1, 0, false, false, MISSIONAI_WAIT_FOR_ESCORT);
-				return true;
-			}
-		}
+					PROFILE("CvUnitAI::AI_connectPlot.StrangeCase");
 
-		if (!bHasPossibleTargetCity)
-		{
-			return false;
-		}
-		CvReachablePlotSet plotSet(getGroup(), iBasePathFlags);
-		plotSet.Populate(MAX_INT);
-
-		foreach_(const CvCity * cityX, GET_PLAYER(getOwner()).cities())
-		{
-			if (pPlot->isConnectedTo(cityX) || plotSet.find(cityX->plot()) == plotSet.end())
-			{
-				continue;
-			}
-			FAssertMsg(pPlot->getPlotCity() != cityX, "pPlot->getPlotCity() is not expected to be equal with cityX");
-
-			if (!cityX->plot()->isVisibleEnemyUnit(this))
-			{
-				if (generateSafePathforVulnerable(cityX->plot(), &iPathTurns))
-				{
-					if (atPlot(pPlot)) // need to test before moving...
+					if (generateSafePathforVulnerable(cityPlot))
 					{
-						return getGroup()->pushMissionInternal(MISSION_ROUTE_TO, cityX->getX(), cityX->getY(), MOVE_SAFE_TERRITORY | MOVE_WITH_CAUTION, false, false, MISSIONAI_BUILD, pPlot);
+						return getGroup()->pushMissionInternal(MISSION_ROUTE_TO, cityPlot->getX(), cityPlot->getY(), MOVE_WITH_CAUTION, false, false, MISSIONAI_BUILD, cityPlot);
 					}
-
-					if (generateSafePathforVulnerable(cityX->plot(), &iPathTurns))
-					{
-						return getGroup()->pushMissionInternal(MISSION_ROUTE_TO, cityX->getX(), cityX->getY(), MOVE_IGNORE_DANGER, false, false, MISSIONAI_BUILD, cityX->plot());
-					}
-					getGroup()->pushMission(MISSION_SKIP, -1, -1, 0, false, false, MISSIONAI_WAIT_FOR_ESCORT);
-					return true;
 				}
 			}
+			if (!bHasPossibleTargetCity)
+			{
+				return false;
+			}
+			CvReachablePlotSet plotSet(getGroup(), iBasePathFlags);
+			plotSet.Populate(MAX_INT);
 
+			foreach_(const CvCity * cityX, GET_PLAYER(getOwner()).cities())
+			{
+				if (pPlot->isConnectedTo(cityX))
+				{
+					continue;
+				}
+				CvPlot* cityPlot = cityX->plot();
+				if (plotSet.find(cityPlot) == plotSet.end())
+				{
+					continue;
+				}
+				FAssertMsg(pPlot->getPlotCity() != cityX, "pPlot->getPlotCity() is not expected to be equal with cityX");
+
+				if (!cityPlot->isVisibleEnemyUnit(this) && generateSafePathforVulnerable(cityPlot))
+				{
+					return getGroup()->pushMissionInternal(MISSION_ROUTE_TO, cityPlot->getX(), cityPlot->getY(), MOVE_WITH_CAUTION, false, false, MISSIONAI_BUILD, cityPlot);
+				}
+			}
 		}
+		else if (generateSafePathforVulnerable(pPlot))
+		{
+			return getGroup()->pushMissionInternal(MISSION_ROUTE_TO, pPlot->getX(), pPlot->getY(), MOVE_WITH_CAUTION, false, false, MISSIONAI_BUILD, pPlot);
+		}
+		getGroup()->pushMission(MISSION_SKIP, -1, -1, 0, false, false, MISSIONAI_WAIT_FOR_ESCORT);
+		return true;
 	}
 	return false;
 }
@@ -21957,10 +21877,8 @@ bool CvUnitAI::AI_routeTerritory(bool bImprovementOnly)
 	PROFILE_FUNC();
 	FAssert(canBuildRoute());
 
-	int iPathTurns;
 	const CvMap& map = GC.getMap();
 	const CvArea* pArea = area();
-	const TeamTypes eTeam = getTeam();
 	const PlayerTypes ePlayer = getOwner();
 
 	int iBestValue = 0;
@@ -21977,7 +21895,7 @@ bool CvUnitAI::AI_routeTerritory(bool bImprovementOnly)
 			continue;
 		}
 		// Best route depends on Tech, Plot(Terrain/Feature, and Improvement in case of eRail v Highway)
-		RouteTypes eBestRoute = GET_PLAYER(ePlayer).getBestRoute(plotX, false, this);
+		const RouteTypes eBestRoute = GET_PLAYER(ePlayer).getBestRoute(plotX, false, this);
 
 		if (eBestRoute == NO_ROUTE || eBestRoute == plotX->getRouteType())
 		{
@@ -21985,7 +21903,7 @@ bool CvUnitAI::AI_routeTerritory(bool bImprovementOnly)
 		}
 		bool bValid = !bImprovementOnly;
 
-		if (bImprovementOnly)
+		if (!bValid)
 		{
 			const ImprovementTypes eType = plotX->getImprovementType();
 
@@ -22002,32 +21920,30 @@ bool CvUnitAI::AI_routeTerritory(bool bImprovementOnly)
 				}
 			}
 		}
-		if (bValid
-		&& GET_PLAYER(ePlayer).AI_plotTargetMissionAIs(plotX, MISSIONAI_BUILD, getGroup(), 1) == 0
-		&& generateSafePathforVulnerable(plotX, &iPathTurns))
+		if (bValid && GET_PLAYER(ePlayer).AI_plotTargetMissionAIs(plotX, MISSIONAI_BUILD, getGroup(), 1) == 0)
 		{
-			const int iValue = 10000 / (iPathTurns + 1);
-
-			if (iValue > iBestValue)
+			int iPathTurns;
+			if (generateIgnoreDangerPath(plotX, &iPathTurns))
 			{
-				iBestValue = iValue;
-				pBestPlot = plotX;
+				const int iValue = 10000 / (iPathTurns + 1);
+
+				if (iValue > iBestValue)
+				{
+					iBestValue = iValue;
+					pBestPlot = plotX;
+				}
 			}
 		}
 	}
 
 	if (pBestPlot)
 	{
-		if (!atPlot(pBestPlot))
+		if (atPlot(pBestPlot) || generateSafePathforVulnerable(pBestPlot))
 		{
-			if (generateSafePathforVulnerable(pBestPlot, &iPathTurns))
-			{
-				return getGroup()->pushMissionInternal(MISSION_ROUTE_TO, pBestPlot->getX(), pBestPlot->getY(), MOVE_IGNORE_DANGER, false, false, MISSIONAI_BUILD, pBestPlot);
-			}
-			getGroup()->pushMission(MISSION_SKIP, -1, -1, 0, false, false, MISSIONAI_WAIT_FOR_ESCORT);
+			getGroup()->pushMission(MISSION_ROUTE_TO, pBestPlot->getX(), pBestPlot->getY(), MOVE_WITH_CAUTION, false, false, MISSIONAI_BUILD, pBestPlot);
 			return true;
 		}
-		getGroup()->pushMission(MISSION_ROUTE_TO, pBestPlot->getX(), pBestPlot->getY(), MOVE_SAFE_TERRITORY, false, false, MISSIONAI_BUILD, pBestPlot);
+		getGroup()->pushMission(MISSION_SKIP, -1, -1, 0, false, false, MISSIONAI_WAIT_FOR_ESCORT);
 		return true;
 	}
 	return false;
@@ -23949,21 +23865,21 @@ bool CvUnitAI::AI_trade(int iValueThreshold)
 	{
 		if (GET_PLAYER((PlayerTypes)iI).isAliveAndTeam(getTeam(), false))
 		{
-			foreach_(const CvCity * pLoopCity, GET_PLAYER((PlayerTypes)iI).cities())
+			foreach_(const CvCity * cityX, GET_PLAYER((PlayerTypes)iI).cities())
 			{
-				if (AI_plotValid(pLoopCity->plot()))
+				if (AI_plotValid(cityX->plot()))
 				{
-					int iValue = getTradeGold(pLoopCity->plot());
+					int iValue = getTradeGold(cityX->plot());
 
-					if (iValue >= iValueThreshold && canTrade(pLoopCity->plot(), true)
-					&& generateSafePathforVulnerable(pLoopCity->plot(), &iPathTurns))
+					if (iValue >= iValueThreshold && canTrade(cityX->plot(), true)
+					&& generateIgnoreDangerPath(cityX->plot(), &iPathTurns))
 					{
 						iValue /= 4 + iPathTurns;
 
 						if (iValue > iBestValue)
 						{
 							iBestValue = iValue;
-							pBestPlot = pLoopCity->plot();
+							pBestPlot = cityX->plot();
 						}
 					}
 				}
@@ -23971,18 +23887,18 @@ bool CvUnitAI::AI_trade(int iValueThreshold)
 		}
 	}
 
-	if (pBestPlot != NULL)
+	if (pBestPlot)
 	{
-		if (!atPlot(pBestPlot))
+		if (atPlot(pBestPlot))
 		{
-			if (generateSafePathforVulnerable(pBestPlot, &iPathTurns))
-			{
-				return getGroup()->pushMissionInternal(MISSION_MOVE_TO, pBestPlot->getX(), pBestPlot->getY(), MOVE_IGNORE_DANGER);
-			}
-			getGroup()->pushMission(MISSION_SKIP, -1, -1, 0, false, false, MISSIONAI_WAIT_FOR_ESCORT);
-			return true;
+			return getGroup()->pushMissionInternal(MISSION_TRADE, pBestPlot->getX(), pBestPlot->getY());
 		}
-		return getGroup()->pushMissionInternal(MISSION_TRADE, pBestPlot->getX(), pBestPlot->getY());
+		if (generateSafePathforVulnerable(pBestPlot))
+		{
+			return getGroup()->pushMissionInternal(MISSION_MOVE_TO, pBestPlot->getX(), pBestPlot->getY(), MOVE_WITH_CAUTION);
+		}
+		getGroup()->pushMission(MISSION_SKIP, -1, -1, 0, false, false, MISSIONAI_WAIT_FOR_ESCORT);
+		return true;
 	}
 	return false;
 }
@@ -25282,37 +25198,33 @@ bool CvUnitAI::AI_artistCultureVictoryMove()
 	{
 		return false;
 	}
-	int iCultureCitiesNeeded = GC.getGame().culturalVictoryNumCultureCities();
-	FAssertMsg(iCultureCitiesNeeded > 0, "AI_VICTORY_CULTURE1 Strategy should not be true");
+	FAssertMsg(GC.getGame().culturalVictoryNumCultureCities() > 0, "AI_VICTORY_CULTURE1 Strategy should not be true");
 
 	bool bJoin = true;
 	bool bGreatWork = GET_PLAYER(getOwner()).AI_isDoVictoryStrategy(AI_VICTORY_CULTURE3);
 
-	int iPathTurns = 0;
 	SpecialistTypes eBestSpecialist = NO_SPECIALIST;
-	CvCity* pBestCity = NULL;
 	CvPlot* pBestPlot = NULL;
 	int iBestValue = 0;
-	int iTargetCultureRank = iCultureCitiesNeeded;
+	int iTargetCultureRank = GC.getGame().culturalVictoryNumCultureCities();
 
-	while (iTargetCultureRank > 0 && pBestCity == NULL)
+	while (iTargetCultureRank > 0 && !pBestPlot)
 	{
-		foreach_(CvCity * pLoopCity, GET_PLAYER(getOwner()).cities())
+		foreach_(CvCity * cityX, GET_PLAYER(getOwner()).cities())
 		{
 			// BBAI efficiency: check same area
-			if (pLoopCity->area() == area() && AI_plotValid(pLoopCity->plot())
+			if (cityX->area() == area() && AI_plotValid(cityX->plot())
 			// instead of commerce rate rank should use the culture on tile...
-			&& pLoopCity->findCommerceRateRank(COMMERCE_CULTURE) == iTargetCultureRank)
+			&& cityX->findCommerceRateRank(COMMERCE_CULTURE) == iTargetCultureRank)
 			{
 				// if the city is a fledgling, probably building culture, try next higher city
-				if (pLoopCity->getCultureLevel() < 2
+				if (cityX->getCultureLevel() < 2
 				// if we cannot path there, try the next higher culture city
-				|| !generateSafePathforVulnerable(pLoopCity->plot(), &iPathTurns))
+				|| !generateIgnoreDangerPath(cityX->plot()))
 				{
-					break;
+					continue;
 				}
-				pBestCity = pLoopCity;
-				pBestPlot = pLoopCity->plot();
+				pBestPlot = cityX->plot();
 
 				if (bGreatWork && canGreatWork(pBestPlot))
 				{
@@ -25322,7 +25234,7 @@ bool CvUnitAI::AI_artistCultureVictoryMove()
 				{
 					if (canJoin(pBestPlot, (SpecialistTypes)iI))
 					{
-						const int iValue = pLoopCity->AI_specialistValue(((SpecialistTypes)iI), pLoopCity->AI_avoidGrowth(), false);
+						const int iValue = cityX->AI_specialistValue(((SpecialistTypes)iI), cityX->AI_avoidGrowth(), false);
 
 						if (iValue > iBestValue)
 						{
@@ -25347,17 +25259,16 @@ bool CvUnitAI::AI_artistCultureVictoryMove()
 		iTargetCultureRank--;
 	}
 
-	if (pBestCity == NULL)
+	if (!pBestPlot)
 	{
 		return false; // should try to airlift there...
 	}
 
 	if (!atPlot(pBestPlot))
 	{
-		if (generateSafePathforVulnerable(pBestPlot, &iPathTurns))
+		if (generateSafePathforVulnerable(pBestPlot))
 		{
-			CvPlot* endTurnPlot = getPathEndTurnPlot();
-			return getGroup()->pushMissionInternal(MISSION_MOVE_TO, endTurnPlot->getX(), endTurnPlot->getY(), MOVE_IGNORE_DANGER);
+			return getGroup()->pushMissionInternal(MISSION_MOVE_TO, pBestPlot->getX(), pBestPlot->getY(), MOVE_WITH_CAUTION);
 		}
 		getGroup()->pushMission(MISSION_SKIP, -1, -1, 0, false, false, MISSIONAI_WAIT_FOR_ESCORT);
 		return true;
@@ -26277,21 +26188,21 @@ bool CvUnitAI::AI_StrategicForts()
 			&& kOwner.AI_plotTargetMissionAIs(pLoopPlot, MISSIONAI_BUILD, getGroup(), 3) == 0)
 			{
 				int iPathTurns = 0;
-				if (generateSafePathforVulnerable(pLoopPlot, &iPathTurns))
+				if (generateIgnoreDangerPath(pLoopPlot, &iPathTurns))
 				{
 					//	Koshling - adjusted a bit to take advantage of super forts choke calculations
 					const int iValue =
-						(
-							1000
-							*
-							std::max(100, pLoopPlot->getFoundValue(getOwner()) / 2 + kOwner.AI_getPlotChokeValue(pLoopPlot))
-							*
-							(pLoopPlot->getBorderPlotCount() + 1)
-							*
-							(pLoopPlot->getEnemyBorderPlotCount(getOwner()) + 1) * (bWarPlan ? 3 : 1)
-							/
-							((GC.getBuildInfo(eBestTempBuild).getTime() + 1) * (iPathTurns + 1))
-						);
+					(
+						1000
+						*
+						std::max(100, pLoopPlot->getFoundValue(getOwner()) / 2 + kOwner.AI_getPlotChokeValue(pLoopPlot))
+						*
+						(pLoopPlot->getBorderPlotCount() + 1)
+						*
+						(pLoopPlot->getEnemyBorderPlotCount(getOwner()) + 1) * (bWarPlan ? 3 : 1)
+						/
+						((GC.getBuildInfo(eBestTempBuild).getTime() + 1) * (iPathTurns + 1))
+					);
 					if (iValue > iBestValue)
 					{
 						iBestValue = iValue;
@@ -26303,29 +26214,22 @@ bool CvUnitAI::AI_StrategicForts()
 		}
 	}
 	// No real value or plot
-	if (iBestValue < 250 || pBestPlot == NULL)
+	if (iBestValue < 250 || !pBestPlot)
 	{
 		return false;
 	}
 	FASSERT_BOUNDS(0, GC.getNumBuildInfos(), eBestBuild);
 
-	if (!atPlot(pBestPlot))
+	if (atPlot(pBestPlot))
 	{
-		int iPathTurns = 0;
-		if (generateSafePathforVulnerable(pBestPlot, &iPathTurns))
-		{
-			const CvPlot* endTurnPlot = getPathEndTurnPlot();
-			if (endTurnPlot != NULL)
-			{
-				return getGroup()->pushMissionInternal(MISSION_MOVE_TO, endTurnPlot->getX(), endTurnPlot->getY(), MOVE_IGNORE_DANGER, false, false, MISSIONAI_BUILD, pBestPlot);
-			}
-			getGroup()->pushMission(MISSION_SKIP);
-			return true;
-		}
-		getGroup()->pushMission(MISSION_SKIP, -1, -1, 0, false, false, MISSIONAI_WAIT_FOR_ESCORT);
+		getGroup()->pushMission(MISSION_BUILD, eBestBuild, -1, 0, (getGroup()->getLengthMissionQueue() > 0), false, MISSIONAI_BUILD, pBestPlot);
 		return true;
 	}
-	getGroup()->pushMission(MISSION_BUILD, eBestBuild, -1, 0, (getGroup()->getLengthMissionQueue() > 0), false, MISSIONAI_BUILD, pBestPlot);
+	if (generateSafePathforVulnerable(pBestPlot))
+	{
+		return getGroup()->pushMissionInternal(MISSION_MOVE_TO, pBestPlot->getX(), pBestPlot->getY(), MOVE_WITH_CAUTION, false, false, MISSIONAI_BUILD, pBestPlot);
+	}
+	getGroup()->pushMission(MISSION_SKIP, -1, -1, 0, false, false, MISSIONAI_WAIT_FOR_ESCORT);
 	return true;
 }
 
@@ -26347,7 +26251,7 @@ bool CvUnitAI::AI_caravan(bool bAnyCity)
 		&& !pLoopCity->plot()->isVisibleEnemyUnit(this))
 		{
 			int iPathTurns;
-			if (generateSafePathforVulnerable(pLoopCity->plot(), &iPathTurns))
+			if (generateIgnoreDangerPath(pLoopCity->plot(), &iPathTurns))
 			{
 				if (bAnyCity
 				|| pLoopCity->findPopulationRank() >= iNumCities * 2 / 3
@@ -26367,27 +26271,20 @@ bool CvUnitAI::AI_caravan(bool bAnyCity)
 		}
 	}
 
-	if (pBestPlot == NULL)
+	if (!pBestPlot)
 	{
 		return false;
 	}
-	if (!atPlot(pBestPlot))
+	if (atPlot(pBestPlot))
 	{
-		int iPathTurns;
-		if (generateSafePathforVulnerable(pBestPlot, &iPathTurns))
-		{
-			CvPlot* endTurnPlot = getPathEndTurnPlot();
-			if (endTurnPlot != NULL)
-			{
-				return getGroup()->pushMissionInternal(MISSION_MOVE_TO, endTurnPlot->getX(), endTurnPlot->getY(), MOVE_IGNORE_DANGER, false, false, MISSIONAI_HURRY, pBestPlot);
-			}
-			getGroup()->pushMission(MISSION_SKIP);
-			return true;
-		}
-		getGroup()->pushMission(MISSION_SKIP, -1, -1, 0, false, false, MISSIONAI_WAIT_FOR_ESCORT);
+		getGroup()->pushMission(MISSION_HURRY);
 		return true;
 	}
-	getGroup()->pushMission(MISSION_HURRY);
+	if (generateSafePathforVulnerable(pBestPlot))
+	{
+		return getGroup()->pushMissionInternal(MISSION_MOVE_TO, pBestPlot->getX(), pBestPlot->getY(), MOVE_WITH_CAUTION, false, false, MISSIONAI_HURRY, pBestPlot);
+	}
+	getGroup()->pushMission(MISSION_SKIP, -1, -1, 0, false, false, MISSIONAI_WAIT_FOR_ESCORT);
 	return true;
 }
 
@@ -26398,74 +26295,54 @@ bool CvUnitAI::AI_hurryFood()
 	CvPlot* pBestPlot = NULL;
 	int iBestValue = 0;
 
-	foreach_(const CvCity * pLoopCity, GET_PLAYER(getOwner()).cities())
+	foreach_(const CvCity * cityX, GET_PLAYER(getOwner()).cities())
 	{
-		if (pLoopCity->area() == area() && AI_plotValid(pLoopCity->plot())
-			// Hurry is possible
-			&& canHurry(pLoopCity->plot())
-			&& !pLoopCity->plot()->isVisibleEnemyUnit(this)
-			// Nobody already hurrying
-			&& GET_PLAYER(getOwner()).AI_plotTargetMissionAIs(pLoopCity->plot(), MISSIONAI_HURRY_FOOD, getGroup()) == 0
-			&& (
-				pLoopCity->foodDifference() < 0
-				|| (GC.getGame().getSorenRandNum(100, "AI hurry with food") > 75
-					&& pLoopCity->findPopulationRank() > GC.getWorldInfo(GC.getMap().getWorldSize()).getTargetNumCities())
-				)
+		if (cityX->area() == area()
+		&& AI_plotValid(cityX->plot())
+		// Hurry is possible
+		&& canHurry(cityX->plot())
+		&& !cityX->plot()->isVisibleEnemyUnit(this)
+		// Nobody already hurrying
+		&& GET_PLAYER(getOwner()).AI_plotTargetMissionAIs(cityX->plot(), MISSIONAI_HURRY_FOOD, getGroup()) == 0
+		&& (
+				cityX->foodDifference() < 0
+				||
+				GC.getGame().getSorenRandNum(100, "AI hurry with food") > 75
+				&&
+				cityX->findPopulationRank() > GC.getWorldInfo(GC.getMap().getWorldSize()).getTargetNumCities()
 			)
+		)
 		{
 			int iPathTurns;
 			// Get a safe path
-			if (generateSafePathforVulnerable(pLoopCity->plot(), &iPathTurns))
+			if (generateIgnoreDangerPath(cityX->plot(), &iPathTurns))
 			{
-				int iTurnsLeft = pLoopCity->getFoodTurnsLeft();
-				iTurnsLeft -= iPathTurns;
+				const int iTurnsLeft = cityX->getFoodTurnsLeft() - iPathTurns;
 
 				// Worth actually going
-				if (iTurnsLeft > 10)
+				if (iTurnsLeft > (1 + GC.getGame().getGameSpeedType()) *2/3 && iTurnsLeft > iBestValue)
 				{
-					int iValue = iTurnsLeft;
-
-					if (iValue > iBestValue)
-					{
-						iBestValue = iValue;
-						pBestPlot = pLoopCity->plot();
-					}
+					iBestValue = iTurnsLeft;
+					pBestPlot = cityX->plot();
 				}
 			}
 		}
 	}
 
-	if (pBestPlot != NULL)
+	if (pBestPlot)
 	{
-		if (!atPlot(pBestPlot))
-		{
-			int iPathTurns = 0;
-			if (generateSafePathforVulnerable(pBestPlot, &iPathTurns))
-			{
-				CvPlot* endTurnPlot = getPathEndTurnPlot();
-				if (endTurnPlot != NULL)
-				{
-					return getGroup()->pushMissionInternal(MISSION_MOVE_TO, endTurnPlot->getX(), endTurnPlot->getY(), MOVE_IGNORE_DANGER, false, false, MISSIONAI_HURRY_FOOD, pBestPlot);
-				}
-				else
-				{
-					getGroup()->pushMission(MISSION_SKIP);
-					return true;
-				}
-			}
-			else
-			{
-				getGroup()->pushMission(MISSION_SKIP, -1, -1, 0, false, false, MISSIONAI_WAIT_FOR_ESCORT);
-				return true;
-			}
-		}
-		else
+		if (atPlot(pBestPlot))
 		{
 			getGroup()->pushMission(MISSION_HURRY_FOOD);
 			return true;
 		}
+		if (generateSafePathforVulnerable(pBestPlot))
+		{
+			return getGroup()->pushMissionInternal(MISSION_MOVE_TO, pBestPlot->getX(), pBestPlot->getY(), MOVE_WITH_CAUTION, false, false, MISSIONAI_HURRY_FOOD, pBestPlot);
+		}
+		getGroup()->pushMission(MISSION_SKIP, -1, -1, 0, false, false, MISSIONAI_WAIT_FOR_ESCORT);
+		return true;
 	}
-
 	return false;
 }
 
@@ -27746,7 +27623,6 @@ bool CvUnitAI::AI_joinMilitaryCity(bool bNaval)
 {
 	PROFILE_FUNC();
 
-	int iPathTurns = 0;
 	int iBestValue = 0;
 	CvPlot* pBestPlot = NULL;
 	SpecialistTypes eBestSpecialist = NO_SPECIALIST;
@@ -27760,7 +27636,7 @@ bool CvUnitAI::AI_joinMilitaryCity(bool bNaval)
 			if (AI_plotValid(plot)
 			&& (bNaval ? pLoopCity->AI_isNavalMilitaryProductionCity() : pLoopCity->AI_isMilitaryProductionCity())
 			&& !plot->isVisibleEnemyUnit(this)
-			&& generateSafePathforVulnerable(plot, &iPathTurns))
+			&& generateIgnoreDangerPath(plot))
 			{
 				for (int iI = 0; iI < GC.getNumSpecialistInfos(); iI++)
 				{
@@ -27779,17 +27655,17 @@ bool CvUnitAI::AI_joinMilitaryCity(bool bNaval)
 		}
 	}
 
-	if (pBestPlot != NULL)
+	if (pBestPlot)
 	{
 		if (atPlot(pBestPlot))
 		{
 			getGroup()->pushMission(MISSION_JOIN, eBestSpecialist);
 			return true;
 		}
-		if (generateSafePathforVulnerable(pBestPlot, &iPathTurns))
+		if (generateSafePathforVulnerable(pBestPlot))
 		{
-			const CvPlot* endTurnPlot = getPathEndTurnPlot();
-			return getGroup()->pushMissionInternal(MISSION_MOVE_TO, endTurnPlot->getX(), endTurnPlot->getY(), MOVE_IGNORE_DANGER);
+			const CvPlot* plotX = getPathEndTurnPlot();
+			return getGroup()->pushMissionInternal(MISSION_MOVE_TO, plotX->getX(), plotX->getY(), MOVE_WITH_CAUTION);
 		}
 		getGroup()->pushMission(MISSION_SKIP, -1, -1, 0, false, false, MISSIONAI_WAIT_FOR_ESCORT);
 		return true;
@@ -28581,9 +28457,7 @@ bool CvUnitAI::AI_fulfillHealerNeed(const CvPlot* pPlot)
 {
 	PROFILE_EXTRA_FUNC();
 	const CvPlot* pBestPlot = NULL;
-	const CvPlot* endTurnPlot = NULL;
 	int iBestValue = 0;
-	int iPathTurns = 0;
 	const UnitCombatTypes eUnitCombat = getBestHealingType();
 	if (eUnitCombat == NO_UNITCOMBAT)
 	{
@@ -28594,13 +28468,19 @@ bool CvUnitAI::AI_fulfillHealerNeed(const CvPlot* pPlot)
 	const DomainTypes eDomain = getDomainType();
 
 	int iValue = 0;
-	foreach_(const CvPlot * pLoopPlot, pPlot->rect(25, 25))
+	foreach_(const CvPlot * plotX, pPlot->rect(25, 25))
 	{
-		const int iCheck = pLoopPlot->getUnitCombatsUnsupportedByHealer(ePlayer, eUnitCombat, eDomain);
+		const int iCheck = plotX->getUnitCombatsUnsupportedByHealer(ePlayer, eUnitCombat, eDomain);
 
-		if (!atPlot(pLoopPlot) && iCheck > 0)
+		if (iCheck > 0)
 		{
-			if (generateSafePathforVulnerable(pLoopPlot, &iPathTurns))
+			int iPathTurns = 0;
+			if (atPlot(plotX))
+			{
+				iValue = iCheck;
+				iValue += getNumHealSupportTotal();
+			}
+			else if (generateIgnoreDangerPath(plotX, &iPathTurns))
 			{
 				iValue = iCheck;
 				iValue -= iPathTurns / 4;
@@ -28608,73 +28488,62 @@ bool CvUnitAI::AI_fulfillHealerNeed(const CvPlot* pPlot)
 		}
 		else
 		{
-			if (iCheck > 0)
-			{
-				iValue = iCheck;
-				iValue += getNumHealSupportTotal();
-			}
-			else
-			{
-				const int iPlotCount = pLoopPlot->plotCount(PUF_isHealUnitCombatType, eUnitCombat, eDomain, NULL, ePlayer);
-				iValue = std::min(iPlotCount, getNumHealSupportTotal());
-			}
+			iValue = std::min(plotX->plotCount(PUF_isHealUnitCombatType, eUnitCombat, eDomain, NULL, ePlayer), getNumHealSupportTotal());
 		}
 		if (iValue > iBestValue)
 		{
 			iBestValue = iValue;
-			pBestPlot = pLoopPlot;
+			pBestPlot = plotX;
 		}
 	}
 
-	if (pBestPlot != NULL)
+	if (pBestPlot)
 	{
-		if (!atPlot(pBestPlot))
-		{
-			if (generateSafePathforVulnerable(pBestPlot, &iPathTurns))
-			{
-				endTurnPlot = getPathEndTurnPlot();
-				return getGroup()->pushMissionInternal(MISSION_MOVE_TO, endTurnPlot->getX(), endTurnPlot->getY(), MOVE_IGNORE_DANGER, false, false, MISSIONAI_HEAL_SUPPORT, pBestPlot);
-			}
-			else
-			{
-				getGroup()->pushMission(MISSION_SKIP, -1, -1, 0, false, false, MISSIONAI_WAIT_FOR_ESCORT);
-				return true;
-			}
-		}
-		else
+		if (atPlot(pBestPlot))
 		{
 			return getGroup()->pushMissionInternal(MISSION_SKIP, pBestPlot->getX(), pBestPlot->getY(), 0, false, false, MISSIONAI_HEAL_SUPPORT, pBestPlot);
 		}
+		if (generateSafePathforVulnerable(pBestPlot))
+		{
+			const CvPlot* plotX = getPathEndTurnPlot();
+			return getGroup()->pushMissionInternal(MISSION_MOVE_TO, plotX->getX(), plotX->getY(), MOVE_WITH_CAUTION, false, false, MISSIONAI_HEAL_SUPPORT, pBestPlot);
+		}
+		getGroup()->pushMission(MISSION_SKIP, -1, -1, 0, false, false, MISSIONAI_WAIT_FOR_ESCORT);
+		return true;
 	}
-
 	return false;
 }
 
 bool CvUnitAI::AI_fulfillImmediateHealerNeed(const CvPlot* pPlot)
 {
 	PROFILE_EXTRA_FUNC();
-	const CvPlot* pBestPlot = NULL;
-	const CvPlot* endTurnPlot = NULL;
-	int iBestValue = 0;
-	int iPathTurns = 0;
+
 	const UnitCombatTypes eUnitCombat = getBestHealingType();
 	if (eUnitCombat == NO_UNITCOMBAT)
 	{
 		return false;
 	}
+	const CvPlot* pBestPlot = NULL;
+	int iBestValue = 0;
 
 	const PlayerTypes ePlayer = getOwner();
 	const DomainTypes eDomain = getDomainType();
 
 	int iValue = 0;
 
-	foreach_(const CvPlot * pLoopPlot, pPlot->rect(4, 4))
+	foreach_(const CvPlot * plotX, pPlot->rect(4, 4))
 	{
-		const int iCheck = pLoopPlot->getInjuredUnitCombatsUnsupportedByHealer(ePlayer, eUnitCombat, eDomain);
+		const int iCheck = plotX->getInjuredUnitCombatsUnsupportedByHealer(ePlayer, eUnitCombat, eDomain);
 
-		if (!atPlot(pLoopPlot) && iCheck > 0)
+		if (iCheck > 0)
 		{
-			if (generateSafePathforVulnerable(pLoopPlot, &iPathTurns))
+			int iPathTurns;
+			if (atPlot(plotX))
+			{
+				iValue = iCheck;
+				iValue += getNumHealSupportTotal();
+			}
+			else if (generateIgnoreDangerPath(plotX, &iPathTurns))
 			{
 				iValue = iCheck;
 				iValue -= iPathTurns;
@@ -28682,45 +28551,29 @@ bool CvUnitAI::AI_fulfillImmediateHealerNeed(const CvPlot* pPlot)
 		}
 		else
 		{
-			if (iCheck > 0)
-			{
-				iValue = iCheck;
-				iValue += getNumHealSupportTotal();
-			}
-			else
-			{
-				const int iPlotCount = pLoopPlot->plotCount(PUF_isInjuredUnitCombatType, eUnitCombat, eDomain, NULL, ePlayer);
-				iValue = std::min(iPlotCount, getNumHealSupportTotal());
-			}
+			iValue = std::min(plotX->plotCount(PUF_isInjuredUnitCombatType, eUnitCombat, eDomain, NULL, ePlayer), getNumHealSupportTotal());
 		}
 		if (iValue > iBestValue)
 		{
 			iBestValue = iValue;
-			pBestPlot = pLoopPlot;
+			pBestPlot = plotX;
 		}
 	}
 
-	if (pBestPlot != NULL)
+	if (pBestPlot)
 	{
-		if (!atPlot(pBestPlot))
-		{
-			if (generateSafePathforVulnerable(pBestPlot, &iPathTurns))
-			{
-				endTurnPlot = getPathEndTurnPlot();
-				return getGroup()->pushMissionInternal(MISSION_MOVE_TO, endTurnPlot->getX(), endTurnPlot->getY(), MOVE_IGNORE_DANGER, false, false, MISSIONAI_HEAL_SUPPORT, pBestPlot);
-			}
-			else
-			{
-				getGroup()->pushMission(MISSION_SKIP, -1, -1, 0, false, false, MISSIONAI_WAIT_FOR_ESCORT);
-				return true;
-			}
-		}
-		else
+		if (atPlot(pBestPlot))
 		{
 			return getGroup()->pushMissionInternal(MISSION_SKIP, pBestPlot->getX(), pBestPlot->getY(), 0, false, false, MISSIONAI_HEAL_SUPPORT, pBestPlot);
 		}
+		if (generateSafePathforVulnerable(pBestPlot))
+		{
+			const CvPlot* plotX = getPathEndTurnPlot();
+			return getGroup()->pushMissionInternal(MISSION_MOVE_TO, plotX->getX(), plotX->getY(), MOVE_WITH_CAUTION, false, false, MISSIONAI_HEAL_SUPPORT, pBestPlot);
+		}
+		getGroup()->pushMission(MISSION_SKIP, -1, -1, 0, false, false, MISSIONAI_WAIT_FOR_ESCORT);
+		return true;
 	}
-
 	return false;
 }
 
@@ -28773,20 +28626,18 @@ bool CvUnitAI::AI_fulfillCityHealerNeed(const CvPlot* pPlot)
 	if (bestCityScore.found)
 	{
 		CvCity* bestCity = bestCityScore.result.item;
-		if (!atPlot(bestCity->plot()))
+		if (atPlot(bestCity->plot()))
 		{
-			int iPathTurns = 0;
-			if (generateSafePathforVulnerable(bestCity->plot(), &iPathTurns))
-			{
-				const CvPlot* endTurnPlot = getPathEndTurnPlot();
-				return getGroup()->pushMissionInternal(MISSION_MOVE_TO, endTurnPlot->getX(), endTurnPlot->getY(), MOVE_IGNORE_DANGER, false, false, MISSIONAI_HEAL_SUPPORT, bestCity->plot());
-			}
-			getGroup()->pushMission(MISSION_SKIP, -1, -1, 0, false, false, MISSIONAI_WAIT_FOR_ESCORT);
-			return true;
+			return getGroup()->pushMissionInternal(MISSION_SKIP, bestCity->getX(), bestCity->getY(), 0, false, false, MISSIONAI_HEAL_SUPPORT, bestCity->plot());
 		}
-		return getGroup()->pushMissionInternal(MISSION_SKIP, bestCity->getX(), bestCity->getY(), 0, false, false, MISSIONAI_HEAL_SUPPORT, bestCity->plot());
+		if (generateSafePathforVulnerable(bestCity->plot()))
+		{
+			const CvPlot* endTurnPlot = getPathEndTurnPlot();
+			return getGroup()->pushMissionInternal(MISSION_MOVE_TO, endTurnPlot->getX(), endTurnPlot->getY(), MOVE_IGNORE_DANGER, false, false, MISSIONAI_HEAL_SUPPORT, bestCity->plot());
+		}
+		getGroup()->pushMission(MISSION_SKIP, -1, -1, 0, false, false, MISSIONAI_WAIT_FOR_ESCORT);
+		return true;
 	}
-
 	return false;
 }
 
@@ -28899,18 +28750,18 @@ bool CvUnitAI::AI_fulfillPropertyControlNeed()
 	if (bestCityScore.found)
 	{
 		CvCity* bestCity = bestCityScore.result.item;
-		if (!atPlot(bestCity->plot()))
+		if (atPlot(bestCity->plot()))
 		{
-			int iPathTurns = 0;
-			if (generateSafePathforVulnerable(bestCity->plot(), &iPathTurns))
-			{
-				const CvPlot* endTurnPlot = getPathEndTurnPlot();
-				return getGroup()->pushMissionInternal(MISSION_MOVE_TO, endTurnPlot->getX(), endTurnPlot->getY(), MOVE_IGNORE_DANGER, false, false, MISSIONAI_PROPERTY_CONTROL_RESPONSE, bestCity->plot());
-			}
-			getGroup()->pushMission(MISSION_SKIP, -1, -1, 0, false, false, MISSIONAI_WAIT_FOR_ESCORT);
-			return true;
+			return getGroup()->pushMissionInternal(MISSION_SKIP, bestCity->getX(), bestCity->getY(), 0, false, false, MISSIONAI_PROPERTY_CONTROL_MAINTAIN, bestCity->plot());
 		}
-		return getGroup()->pushMissionInternal(MISSION_SKIP, bestCity->getX(), bestCity->getY(), 0, false, false, MISSIONAI_PROPERTY_CONTROL_MAINTAIN, bestCity->plot());
+
+		if (generateSafePathforVulnerable(bestCity->plot()))
+		{
+			const CvPlot* endTurnPlot = getPathEndTurnPlot();
+			return getGroup()->pushMissionInternal(MISSION_MOVE_TO, endTurnPlot->getX(), endTurnPlot->getY(), MOVE_IGNORE_DANGER, false, false, MISSIONAI_PROPERTY_CONTROL_RESPONSE, bestCity->plot());
+		}
+		getGroup()->pushMission(MISSION_SKIP, -1, -1, 0, false, false, MISSIONAI_WAIT_FOR_ESCORT);
+		return true;
 	}
 	return false;
 }
@@ -29466,38 +29317,38 @@ bool CvUnitAI::AI_groupSelectStatus()
 bool CvUnitAI::AI_InvestigatorFulfillment()
 {
 	PROFILE_EXTRA_FUNC();
-	const int iMinimumDedicated = 1;
+
 	const CvPlayerAI& player = GET_PLAYER(getOwner());
-
-	bool bDedicate = false;
-
 	int iBestValue = 0;
 	const CvPlot* pBestPlot = NULL;
-	//CvCity* pBestCity = NULL;
 
-	foreach_(const CvCity * pLoopCity, player.cities())
+	foreach_(const CvCity * cityX, player.cities())
 	{
-		const CvPlot* pLoopPlot = pLoopCity->plot();
-		bool bAtPlot = atPlot(pLoopPlot);
-		int iDedicated = player.AI_plotTargetMissionAIs(pLoopPlot, MISSIONAI_INVESTIGATOR_MAINTAIN, NULL, 0);
-		int iDedicatedNeeded = iMinimumDedicated - iDedicated;
-		if (!bDedicate && bAtPlot && iDedicatedNeeded > 0)
+		const CvPlot* plotX = cityX->plot();
+
+		if (atPlot(plotX)
+		&& 0 <	1 + (getGroup()->AI_getMissionAIType() == MISSIONAI_INVESTIGATOR_MAINTAIN)
+				- player.AI_plotTargetMissionAIs(plotX, MISSIONAI_INVESTIGATOR_MAINTAIN, NULL, 0))
 		{
-			bDedicate = true;
-			break;
+			return getGroup()->pushMissionInternal(MISSION_SKIP, getX(), getY(), 0, false, false, MISSIONAI_INVESTIGATOR_MAINTAIN, plotX);
 		}
-		int iNumCriminals = pLoopCity->plot()->getNumCriminals();
-		int iResponders = player.AI_plotTargetMissionAIs(pLoopPlot, MISSIONAI_INVESTIGATOR_RESPONSE, NULL, 0);
-		iNumCriminals -= iResponders; //At this point iNumCriminals is more of a subjective need base
-		int iValue = iNumCriminals * iNumCriminals * 100; //Each criminal makes things exponentially more valuable.  The multiply by 100 step ensures some granularity when then dividing by reduction factors in the next step.
+		const int iResponders = player.AI_plotTargetMissionAIs(plotX, MISSIONAI_INVESTIGATOR_RESPONSE, NULL, 0);
+		// At this point iNumCriminals is more of a subjective need base
+		const int iNumCriminals = cityX->plot()->getNumCriminals() - iResponders;
 
-		if (iValue <= 0)
-			continue;
+		// Each criminal makes things exponentially more valuable.
+		int iValue = 100 * iNumCriminals * iNumCriminals; 
 
-		if (!bAtPlot)
+		if (iValue <= 0) continue;
+
+		if (atPlot(plotX))
+		{
+			iValue *= 2;
+		}
+		else
 		{
 			int iPathTurns = 0;
-			if (generateSafePathforVulnerable(pLoopPlot, &iPathTurns))
+			if (generateIgnoreDangerPath(plotX, &iPathTurns))
 			{
 				if (iPathTurns > 0)
 				{
@@ -29513,39 +29364,27 @@ bool CvUnitAI::AI_InvestigatorFulfillment()
 				iValue = 0;
 			}
 		}
-		else
-		{
-			iValue *= 2;
-		}
 		if (iValue > iBestValue)
 		{
 			iBestValue = iValue;
-			pBestPlot = pLoopPlot;
-			//pBestCity = pLoopCity;
+			pBestPlot = plotX;
 		}
 	}
 
-	if (bDedicate)
+	if (pBestPlot)
 	{
-		return getGroup()->pushMissionInternal(MISSION_SKIP, getX(), getY(), 0, false, false, MISSIONAI_INVESTIGATOR_MAINTAIN, plot());
-	}
-	if (pBestPlot != NULL)
-	{
-		if (!atPlot(pBestPlot))
-		{
-			int iPathTurns = 0;
-			if (generateSafePathforVulnerable(pBestPlot, &iPathTurns))
-			{
-				const CvPlot* endTurnPlot = getPathEndTurnPlot();
-				return getGroup()->pushMissionInternal(MISSION_MOVE_TO, endTurnPlot->getX(), endTurnPlot->getY(), MOVE_IGNORE_DANGER, false, false, MISSIONAI_INVESTIGATOR_RESPONSE, pBestPlot);
-			}
-		}
-		else
+		if (atPlot(pBestPlot))
 		{
 			return getGroup()->pushMissionInternal(MISSION_SKIP, pBestPlot->getX(), pBestPlot->getY(), 0, false, false, MISSIONAI_INVESTIGATOR_MAINTAIN, pBestPlot);
 		}
+		if (generateSafePathforVulnerable(pBestPlot))
+		{
+			const CvPlot* endTurnPlot = getPathEndTurnPlot();
+			return getGroup()->pushMissionInternal(MISSION_MOVE_TO, endTurnPlot->getX(), endTurnPlot->getY(), MOVE_WITH_CAUTION, false, false, MISSIONAI_INVESTIGATOR_RESPONSE, pBestPlot);
+		}
+		getGroup()->pushMission(MISSION_SKIP, -1, -1, 0, false, false, MISSIONAI_WAIT_FOR_ESCORT);
+		return true;
 	}
-
 	return false;
 }
 
@@ -29638,6 +29477,11 @@ bool CvUnitAI::AI_establishStackSeeInvisibleCoverage()
 }
 
 bool CvUnitAI::generateSafePathforVulnerable(const CvPlot* pToPlot, int* piPathTurns) const
+{
+	return generatePath(pToPlot, MOVE_WITH_CAUTION, true, piPathTurns);
+}
+
+bool CvUnitAI::generateIgnoreDangerPath(const CvPlot* pToPlot, int* piPathTurns) const
 {
 	return generatePath(pToPlot, MOVE_IGNORE_DANGER, true, piPathTurns);
 }

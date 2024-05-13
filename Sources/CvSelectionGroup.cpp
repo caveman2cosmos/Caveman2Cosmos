@@ -3557,12 +3557,13 @@ bool CvSelectionGroup::groupAttack(int iX, int iY, int iFlags, bool& bFailedAlre
 	{
 		return false;
 	}
-	if (!pDestPlot->hasDefender(false, NO_PLAYER, getOwner(), pBestAttackUnit, true, false, false, true))
+
+	if (!pDestPlot->isCity(false)
+	&& !pDestPlot->hasDefender(false, NO_PLAYER, getOwner(), pBestAttackUnit, true, false, false, true))
 	{
-		if (pDestPlot->hasStealthDefender(pBestAttackUnit) && !pDestPlot->isCity(false))
+		// Reveals the unit if true
+		if (pDestPlot->hasStealthDefender(pBestAttackUnit, true))
 		{
-			//reveal!
-			pDestPlot->revealBestStealthDefender(pBestAttackUnit);
 			bStealthDefense = true;
 			bAffixFirstAttacker = true;
 		}
@@ -3614,11 +3615,13 @@ bool CvSelectionGroup::groupAttack(int iX, int iY, int iFlags, bool& bFailedAlre
 			}
 		}
 		// if there are no defenders, do not attack
-		if (!bAffixFirstAttacker && !pDestPlot->hasDefender(false, NO_PLAYER, getOwner(), pBestAttackUnit, true, false, false, true))
+		if (!bAffixFirstAttacker
+		&& !pDestPlot->isCity(false)
+		&& !pDestPlot->hasDefender(false, NO_PLAYER, getOwner(), pBestAttackUnit, true, false, false, true))
 		{
-			if (pDestPlot->hasStealthDefender(pBestAttackUnit) && !pDestPlot->isCity(false))
+			// Reveals the unit if true
+			if (pDestPlot->hasStealthDefender(pBestAttackUnit, true))
 			{
-				pDestPlot->revealBestStealthDefender(pBestAttackUnit);
 				bStealth = true;
 			}
 		}
@@ -3679,8 +3682,7 @@ bool CvSelectionGroup::groupAttack(int iX, int iY, int iFlags, bool& bFailedAlre
 			{
 				break;
 			}
-			const int iPlus = pDestPlot->hasStealthDefender(pBestAttackUnit);
-			const bool bMore = pDestPlot->getNumVisiblePotentialEnemyDefenders(pBestAttackUnit) + iPlus > 1;
+			const bool bMore = pDestPlot->getNumVisiblePotentialEnemyDefenders(pBestAttackUnit) + pDestPlot->hasStealthDefender(pBestAttackUnit) > 1;
 			const bool bQuick = (bStack || bMore || bLoopStealthDefense);
 
 			pBestAttackUnit->attack(pDestPlot, bQuick, bLoopStealthDefense);

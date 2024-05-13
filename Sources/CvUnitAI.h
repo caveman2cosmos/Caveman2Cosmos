@@ -442,6 +442,7 @@ public:
 	bool AI_establishStackSeeInvisibleCoverage();
 
 	bool generateSafePathforVulnerable(const CvPlot* pToPlot, int* piPathTurns = NULL) const;
+	bool generateIgnoreDangerPath(const CvPlot* pToPlot, int* piPathTurns = NULL) const;
 
 	void setToWaitOnUnitAI(UnitAITypes eUnitAI, bool bAdd);
 	bool isWaitingOnUnitAI(int iIndex) const;

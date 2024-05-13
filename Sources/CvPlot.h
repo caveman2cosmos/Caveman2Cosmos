@@ -1078,9 +1078,18 @@ protected:
 
 // From Lead From Behind by UncutDragon
 public:
-	bool hasDefender(bool bCheckCanAttack, PlayerTypes eOwner, PlayerTypes eAttackingPlayer = NO_PLAYER, const CvUnit* pAttacker = NULL, bool bTestAtWar = false, bool bTestPotentialEnemy = false, bool bTestCanMove = false, bool bTestCanFight = false) const;
-	bool hasStealthDefender(const CvUnit* pAttacker) const;
-	void revealBestStealthDefender(const CvUnit* pAttacker);
+	bool hasDefender(
+		bool bCheckCanAttack,
+		PlayerTypes eOwner,
+		PlayerTypes eAttackingPlayer = NO_PLAYER,
+		const CvUnit* pAttacker = NULL,
+		bool bTestAtWar = false,
+		bool bTestPotentialEnemy = false,
+		bool bTestCanMove = false,
+		bool bTestCanFight = false
+	) const;
+	bool hasStealthDefender(const CvUnit* victim, const bool bReveal = false);
+
 	void doPreAttackTraps(CvUnit* pAttacker);
 
 	void countCommander(bool bNewVal, const CvUnit* pUnit);
