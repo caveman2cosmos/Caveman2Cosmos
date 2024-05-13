@@ -883,7 +883,7 @@ public:
 	// Can this unit coexist with the specified team, on the specified plot?
 	bool canCoexistWithTeamOnPlot(const TeamTypes withTeam, const CvPlot& onPlot) const;
 	// Can this unit coexist with an attacking unit (possibly performing an assassination)?
-	bool canCoexistWithAttacker(const CvUnit& attacker, bool bAssassinate = false) const;
+	bool canCoexistWithAttacker(const CvUnit& attacker, bool bStealthDefend = false, bool bAssassinate = false) const;
 
 	// Checks for differing domains, transport status, amnesty game setting
 	// TODO: roll this into the other Coexist functions
@@ -910,6 +910,7 @@ public:
 	bool canAttack() const;
 	bool canAttack(const CvUnit& defender) const;
 	bool canDefend(const CvPlot* pPlot = NULL) const;
+	bool canStealthDefend(const CvUnit* victim) const;
 	bool canSiege(TeamTypes eTeam) const;
 
 	int airBaseCombatStr() const;

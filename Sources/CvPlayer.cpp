@@ -3250,7 +3250,7 @@ bool CvPlayer::hasTrait(TraitTypes eTrait) const
 void CvPlayer::setHumanDisabled(bool newVal)
 {
 	m_bDisableHuman = newVal;
-	m_bUnitUpkeepDirty = true;
+	setUnitUpkeepDirty();
 	updateHuman();
 }
 
@@ -10189,7 +10189,7 @@ void CvPlayer::changeBaseFreeUnitUpkeepCivilian(const int iChange)
 	if (iChange != 0)
 	{
 		m_iBaseFreeUnitUpkeepCivilian += iChange;
-		m_bUnitUpkeepDirty = true;
+		setUnitUpkeepDirty();
 	}
 }
 
@@ -10203,7 +10203,7 @@ void CvPlayer::changeBaseFreeUnitUpkeepMilitary(const int iChange)
 	if (iChange != 0)
 	{
 		m_iBaseFreeUnitUpkeepMilitary += iChange;
-		m_bUnitUpkeepDirty = true;
+		setUnitUpkeepDirty();
 	}
 }
 
@@ -10217,7 +10217,7 @@ void CvPlayer::changeFreeUnitUpkeepCivilianPopPercent(const int iChange)
 	if (iChange != 0)
 	{
 		m_iFreeUnitUpkeepCivilianPopPercent += iChange;
-		m_bUnitUpkeepDirty = true;
+		setUnitUpkeepDirty();
 	}
 }
 
@@ -10231,7 +10231,7 @@ void CvPlayer::changeFreeUnitUpkeepMilitaryPopPercent(const int iChange)
 	if (iChange != 0)
 	{
 		m_iFreeUnitUpkeepMilitaryPopPercent += iChange;
-		m_bUnitUpkeepDirty = true;
+		setUnitUpkeepDirty();
 	}
 }
 
@@ -10259,7 +10259,7 @@ void CvPlayer::changeCivilianUnitUpkeepMod(const int iChange)
 	if (iChange != 0)
 	{
 		m_iCivilianUnitUpkeepMod += iChange;
-		m_bUnitUpkeepDirty = true;
+		setUnitUpkeepDirty();
 	}
 }
 void CvPlayer::changeMilitaryUnitUpkeepMod(const int iChange)
@@ -10267,7 +10267,7 @@ void CvPlayer::changeMilitaryUnitUpkeepMod(const int iChange)
 	if (iChange != 0)
 	{
 		m_iMilitaryUnitUpkeepMod += iChange;
-		m_bUnitUpkeepDirty = true;
+		setUnitUpkeepDirty();
 	}
 }
 
@@ -10281,7 +10281,7 @@ void CvPlayer::changeUnitUpkeep(const int iChange, const bool bMilitary)
 			m_iUnitUpkeepMilitary100 += iChange;
 		else m_iUnitUpkeepCivilian100 += iChange;
 
-		m_bUnitUpkeepDirty = true;
+		setUnitUpkeepDirty();
 	}
 }
 
@@ -10392,6 +10392,17 @@ int64_t CvPlayer::calcFinalUnitUpkeep(const bool bReal) const
 		}
 	}
 	return iCalc;
+}
+
+void CvPlayer::setUnitUpkeepDirty() const
+{
+	m_bUnitUpkeepDirty = true;
+
+	// Refresh relevant UI
+	if (getID() == GC.getGame().getActivePlayer() && isTurnActive())
+	{
+		gDLL->getInterfaceIFace()->setDirty(GameData_DIRTY_BIT, true);
+	}
 }
 
 int CvPlayer::getFinalUnitUpkeepChange(const int iExtra, const bool bMilitary)
@@ -27420,7 +27431,7 @@ void CvPlayer::setHandicap(int iNewVal, bool bAdjustGameHandicap)
 			GC.getGame().averageHandicaps();
 		}
 		setMaintenanceDirty(true);
-		m_bUnitUpkeepDirty = true;
+		setUnitUpkeepDirty();
 	}
 }
 

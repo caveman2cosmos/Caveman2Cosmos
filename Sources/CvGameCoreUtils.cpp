@@ -1277,9 +1277,9 @@ bool PUF_isPotentialEnemy(const CvUnit* pDefender, int pAttackerTeam, int pAttac
 	FASSERT_NOT_NEGATIVE(pAttackerTeam);
 	FASSERT_NOT_NEGATIVE(pAttackerAlwaysHostile);
 
-	const bool bAssassinate = ((pDefender->isAssassin() || pAttacker->isAssassin()) && (pDefender->plot() == pAttacker->plot()));
+	const bool bAssassinate = (pDefender->isAssassin() || pAttacker->isAssassin()) && pDefender->plot() == pAttacker->plot();
 
-	if (pDefender->canCoexistWithAttacker(*pAttacker, bAssassinate))
+	if (pDefender->canCoexistWithAttacker(*pAttacker, false, bAssassinate))
 	{
 		return false;
 	}
@@ -1696,7 +1696,6 @@ bool pathValidInternal(const CvPlot* pPlot, bool bCheckVisibleDanger, const CvSe
 
 	return true;
 }
-
 
 
 int pathValid(FAStarNode* parent, FAStarNode* node, int data, const void* pointer, FAStar* finder)
@@ -3355,6 +3354,46 @@ bool moveToValid(const CvSelectionGroup* pSelectionGroup, const CvPlot* pPlot, i
 			return false;
 		}
 	}
+
+	if ((iFlags &  MOVE_AVOID_ENEMY_UNITS))
+	{
+		if (((CvUnitAI*)pSelectionGroup->getHeadUnit())->exposedToDanger(pPlot, 80))
+		{
+			return false;
+		}
+	}
+
+	if (!pSelectionGroup->canDefend())
+	{
+		if ((iFlags & MOVE_RECONSIDER_ON_LEAVING_OWNED))
+		{
+			if (pPlot->getTeam() != pSelectionGroup->getHeadTeam())
+			{
+				return false;
+			}
+		}
+		if ((iFlags & MOVE_WITH_CAUTION))
+		{
+			// If the next plot we'd go to has a danger count above a threshold
+			//	consider it not safe and abort so we can reconsider
+			if (pPlot->getDangerCount(pSelectionGroup->getHeadTeam()) > 20
+			// Also for non-owned territory check for nearby enemies
+			||  pPlot->getTeam() != pSelectionGroup->getHeadTeam()
+			&&  GET_PLAYER(pSelectionGroup->getOwner()).AI_getVisiblePlotDanger(pPlot, 2, false))
+			{
+				return false;
+			}
+		}
+	}
+
+	if ((iFlags & MOVE_HEAL_AS_NEEDED25)
+	&&  pSelectionGroup->getHeadUnit()->getDamagePercent() > 25
+	&&  pSelectionGroup->plot()->getTotalTurnDamage(pSelectionGroup) <= 0
+	&& !GET_PLAYER(pSelectionGroup->getOwner()).AI_getVisiblePlotDanger(pSelectionGroup->plot(), 2, false))
+	{
+		return false;
+	}
+
 	return true;
 }
 

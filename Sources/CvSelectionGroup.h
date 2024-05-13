@@ -87,7 +87,6 @@ public:
 	bool canStartMission(int iMission, int iData1, int iData2, CvPlot* pPlot = NULL, bool bTestVisible = false, bool bUseCache = false) const;
 	bool startMission();
 	bool continueMission(int iSteps = 0);
-	bool checkMoveSafety(int iX, int iY, int iFlags);
 
 	DllExport bool canDoInterfaceMode(InterfaceModeTypes eInterfaceMode);
 	DllExport bool canDoInterfaceModeAt(InterfaceModeTypes eInterfaceMode, CvPlot* pPlot);

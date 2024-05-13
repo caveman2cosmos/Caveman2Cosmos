@@ -6138,7 +6138,10 @@ bool CvUnit::canEnterPlot(const CvPlot* pPlot, MoveCheck::flags flags /*= MoveCh
 			if (bAttack && !bFailWithAttack)
 			{
 				//City Minimum Defense Level
-				if (!bIgnoreLocation && pPlot->getPlotCity() != NULL && !isSpy() && !isBlendIntoCity()
+				if (!bIgnoreLocation
+				&& pPlot->getPlotCity()
+				&& !isSpy()
+				&& !isBlendIntoCity()
 				&& (!isBarbCoExist() || !pPlot->isHominid())
 				&& GET_TEAM(GET_PLAYER(getCombatOwner(pPlot->getTeam(),pPlot)).getTeam()).isAtWar(pPlot->getTeam()))
 				{
@@ -6149,7 +6152,7 @@ bool CvUnit::canEnterPlot(const CvPlot* pPlot, MoveCheck::flags flags /*= MoveCh
 					bHasCheckedCityEntry = true;
 				}
 				const CvUnit* pDefender = pPlot->getFirstDefender(NO_PLAYER, getOwner(), this, true);
-				if (NULL != pDefender)
+				if (pDefender)
 				{
 					if (!canAttack(*pDefender))
 					{
@@ -6322,10 +6325,15 @@ bool CvUnit::canEnterPlot(const CvPlot* pPlot, MoveCheck::flags flags /*= MoveCh
 		}
 	}
 	//City Minimum Defense Level
-	if (!bHasCheckedCityEntry && !bIgnoreLocation && pPlot->getPlotCity() != NULL && !isSpy()
-	&& !isBlendIntoCity() && (!isBarbCoExist() || !pPlot->isHominid())
+	if (!bHasCheckedCityEntry
+	&& !bIgnoreLocation
+	&& pPlot->getPlotCity()
+	&& !isSpy()
+	&& !isBlendIntoCity()
+	&& (!isBarbCoExist() || !pPlot->isHominid())
 	&& GET_TEAM(GET_PLAYER(getCombatOwner(pPlot->getTeam(), pPlot)).getTeam()).isAtWar(pPlot->getTeam())
-	&& !pPlot->getPlotCity()->isDirectAttackable() && !canIgnoreNoEntryLevel())
+	&& !pPlot->getPlotCity()->isDirectAttackable()
+	&& !canIgnoreNoEntryLevel())
 	{
 		return false;
 	}
@@ -6360,9 +6368,10 @@ void CvUnit::attack(CvPlot* pPlot, bool bQuick, bool bStealth, bool bNoCache)
 
 	if (!isDead())
 	{
-		if (!pPlot->hasDefender(false, NO_PLAYER, getOwner(), this, true, false, false, true) && pPlot->hasStealthDefender(this))
+		if (!pPlot->hasDefender(false, NO_PLAYER, getOwner(), this, true, false, false, true)
+		// Reveals the unit if true
+		&& pPlot->hasStealthDefender(this, true))
 		{
-			pPlot->revealBestStealthDefender(this);
 			attack(pPlot, true, true);
 		}
 #ifdef STRENGTH_IN_NUMBERS
@@ -12639,20 +12648,19 @@ namespace {
 		);
 	}
 }
-bool CvUnit::canCoexistWithAttacker(const CvUnit& attacker, bool bAssassinate) const
+bool CvUnit::canCoexistWithAttacker(const CvUnit& attacker, bool bStealthDefend, bool bAssassinate) const
 {
 	const TeamTypes attackerTeam = GET_PLAYER(attacker.getOwner()).getTeam();
 
 	return (
+		// Same team
+		getTeam() == attackerTeam
 		// Always invisible
-		alwaysInvisible() || attacker.alwaysInvisible()
-		// Coexists due to barb coexist flag
-		|| attacker.isBarbCoExist() && (isHominid() || isBarbCoExist())
-		|| isBarbCoExist() && (attacker.isHominid() || attacker.isBarbCoExist())
+		|| alwaysInvisible() || attacker.alwaysInvisible()
 		// Coexists due to blending into a city (nullified by assassination)
 		|| !bAssassinate && plot()->isCity(true) && (isBlendIntoCity() || attacker.isBlendIntoCity())
-		// Invisibility to the attacking team, or being on the attacking team
-		|| isInvisible(attackerTeam, false) || getTeam() == attackerTeam
+		// Invisibility to the attacking team (nullified by stealthDefend)
+		|| !bStealthDefend && isInvisible(attackerTeam, false)
 		// War enemy, or just always hostile
 		|| !isEnemy(attackerTeam) && !alwaysHostile(*this, attacker)
 		// Checks for differing domains, transport status, amnesty game setting
@@ -12702,12 +12710,12 @@ bool CvUnit::canUnitCoexistWithArrivingUnit(const CvUnit& enemyUnit) const
 		{
 			return true;
 		}
-		if ((enemyUnit.isBarbCoExist() && isHominid()) || (enemyUnit.isHominid() && isBarbCoExist()))
+		if (enemyUnit.isBarbCoExist() && isHominid() || enemyUnit.isHominid() && isBarbCoExist())
 		{
 			return true;
 		}
 
-		if ((enemyUnit.isInvisible(getTeam(), false, false) && enemyUnit.isOnlyDefensive()) || (isInvisible(enemyUnit.getTeam(), false, false) && isOnlyDefensive()))
+		if (enemyUnit.isInvisible(getTeam(), false, false) && enemyUnit.isOnlyDefensive() || isInvisible(enemyUnit.getTeam(), false, false) && isOnlyDefensive())
 		{
 			return true;
 		}
@@ -12751,24 +12759,22 @@ bool CvUnit::canUnitCoexistWithArrivingUnit(const CvUnit& enemyUnit) const
 	}
 
 	// if is loaded and is not attacking
-	if ((isCargo() && !getGroup()->IsSelected() && plot()->isWater() == enemyUnit.plot()->isWater())
-		||
-		(enemyUnit.isCargo() && !enemyUnit.getGroup()->IsSelected() && plot()->isWater() == enemyUnit.plot()->isWater())
-		)
+	if (isCargo()
+	&& !getGroup()->IsSelected()
+	&&  plot()->isWater() == enemyUnit.plot()->isWater()
+	||
+		enemyUnit.isCargo()
+	&& !enemyUnit.getGroup()->IsSelected()
+	&&  plot()->isWater() == enemyUnit.plot()->isWater())
 	{
-		//may be oversimplified still - if I move a transport and drop off units on land, the units aren't selected when they are checked to see if they can make this move without an attack.  So this makes for a free overlapping beachhead maneuver.
-		//somehow, if disembarking, it must still consider the unit incapable of automatically being able to share the space being moved to with enemies
-		//check the autodisembarking code for the right filter checks perhaps...
+		// May be oversimplified still
+		//	If I move a transport and drop off units on land,
+		//	the units aren't selected when they are checked to see if they can make this move without an attack.
+		//	So this makes for a free overlapping beachhead maneuver somehow, if disembarking,
+		//	it must still consider the unit incapable of automatically being able to share the space being moved to with enemies.
+		//	Check the autodisembarking code for the right filter checks perhaps...
 		return true;
 	}
-	//if (isCargo())
-	//{
-	//	return (getTransportUnit()->canUnitCoexistWithEnemyUnit(pUnit, pPlot, bTrapCheck));
-	//}
-	//if (pUnit->isCargo())
-	//{
-	//	return (pUnit->getTransportUnit()->canUnitCoexistWithEnemyUnit(this, pPlot, bTrapCheck));
-	//}
 	return false;
 }
 
@@ -13852,18 +13858,30 @@ bool CvUnit::canAttack(const CvUnit& defender) const
 
 bool CvUnit::canDefend(const CvPlot* pPlot) const
 {
-	if (!pPlot) pPlot = plot();
-
 	if (!canFight() || isTrap() || isCargo())
 	{
 		return false;
 	}
+	if (!pPlot) pPlot = plot();
 
 	if (!pPlot->isValidDomainForAction(*this) && !GC.getLAND_UNITS_CAN_ATTACK_WATER_CITIES())
 	{
 		return false;
 	}
 	return true;
+}
+
+bool CvUnit::canStealthDefend(const CvUnit* victim) const
+{
+	return (
+		   !isDead()
+		&&  canFight()
+		&&  hasStealthDefense()
+		&& !isCargo()
+		&&  getImmobileTimer() < 1
+		&&  isInvisible(victim->getTeam(), false, false)
+		&& !canCoexistWithAttacker(*victim, true)
+	);
 }
 
 
@@ -15611,9 +15629,8 @@ void CvUnit::setXY(int iX, int iY, bool bGroup, bool bUpdate, bool bShow, bool b
 			{
 				if (!pNewPlot->hasDefender(false, NO_PLAYER, eMyPlayer, this, true, false, false, true))
 				{
-					while (pNewPlot->hasStealthDefender(this))
+					while (pNewPlot->hasStealthDefender(this, true)) // Reveals the unit if true
 					{
-						pNewPlot->revealBestStealthDefender(this);
 						attack(pNewPlot, true, true);
 
 						if (isDead() || at(iX, iY))
@@ -15642,7 +15659,7 @@ void CvUnit::setXY(int iX, int iY, bool bGroup, bool bUpdate, bool bShow, bool b
 					if (unitX->isDead())
 						continue;
 
-					if ((isEnemy(unitX->getTeam(), pNewPlot) || unitX->isEnemy(getTeam())) && !unitX->canCoexistWithAttacker(*this))
+					if ((isEnemy(unitX->getTeam(), pNewPlot) || unitX->isEnemy(getTeam())) && !unitX->canCoexistWithAttacker(*this, true))
 					{
 						if (unitX->isArmedTrap())
 						{
