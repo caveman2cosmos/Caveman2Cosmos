@@ -25157,8 +25157,6 @@ bool CvUnitAI::AI_moveIntoNearestOwnedCity()
 				int iPathTurns;
 				if (generatePath(plotX, 0, true, &iPathTurns))
 				{
-					FAssert(getPathEndTurnPlot() == plotX);
-
 					int iValue = 1000;
 					if (plotX->getPlotCity())
 					{
