@@ -21940,8 +21940,7 @@ bool CvUnitAI::AI_routeTerritory(bool bImprovementOnly)
 	{
 		if (atPlot(pBestPlot) || generateSafePathforVulnerable(pBestPlot))
 		{
-			getGroup()->pushMission(MISSION_ROUTE_TO, pBestPlot->getX(), pBestPlot->getY(), MOVE_WITH_CAUTION, false, false, MISSIONAI_BUILD, pBestPlot);
-			return true;
+			return getGroup()->pushMissionInternal(MISSION_ROUTE_TO, pBestPlot->getX(), pBestPlot->getY(), MOVE_WITH_CAUTION, false, false, MISSIONAI_BUILD, pBestPlot);
 		}
 		getGroup()->pushMission(MISSION_SKIP, -1, -1, 0, false, false, MISSIONAI_WAIT_FOR_ESCORT);
 		return true;
@@ -24925,16 +24924,16 @@ int CvUnitAI::AI_nukeValue(const CvCity* pCity) const
 
 int CvUnitAI::AI_searchRange(int iRange) const
 {
-	if (iRange == 0)
+	if (iRange < 1)
 	{
-		return 0;
+		return 1;
 	}
 	if (iRange >= MAX_SEARCH_RANGE)
 	{
 		return MAX_SEARCH_RANGE;
 	}
 
-	if (flatMovementCost() || (getDomainType() == DOMAIN_AIR))
+	if (flatMovementCost() || getDomainType() == DOMAIN_AIR)
 	{
 		return std::min(MAX_SEARCH_RANGE, iRange * baseMoves());
 	}
