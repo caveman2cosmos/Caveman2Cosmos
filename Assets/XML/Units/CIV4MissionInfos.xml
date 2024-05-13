@@ -1785,7 +1785,7 @@
 			<Waypoint>NONE</Waypoint>
 			<EntityEventType>NONE</EntityEventType>
 			<bVisible>1</bVisible>
-			<Button>Art/Interface/Buttons/missions/ClaimTerritory.dds</Button>
+			<Button>Art/Interface/Buttons/missions/moon.dds</Button>
 		</MissionInfo>
 		<MissionInfo>
 			<Type>MISSION_GO_TO_MAP_MARS</Type>
@@ -1793,7 +1793,7 @@
 			<Waypoint>NONE</Waypoint>
 			<EntityEventType>NONE</EntityEventType>
 			<bVisible>1</bVisible>
-			<Button>Art/Interface/Buttons/missions/ClaimTerritory.dds</Button>
+			<Button>Art/Interface/Buttons/missions/mars.dds</Button>
 		</MissionInfo>
 		<MissionInfo>
 			<Type>MISSION_GO_TO_MAP_VENUS</Type>
@@ -1801,7 +1801,7 @@
 			<Waypoint>NONE</Waypoint>
 			<EntityEventType>NONE</EntityEventType>
 			<bVisible>1</bVisible>
-			<Button>Art/Interface/Buttons/missions/ClaimTerritory.dds</Button>
+			<Button>Art/Interface/Buttons/missions/venus.dds</Button>
 		</MissionInfo>
 		<MissionInfo>
 			<Type>MISSION_GO_TO_MAP_INNER_SOLAR_SYSTEM</Type>
@@ -1809,7 +1809,7 @@
 			<Waypoint>NONE</Waypoint>
 			<EntityEventType>NONE</EntityEventType>
 			<bVisible>1</bVisible>
-			<Button>Art/Interface/Buttons/missions/ClaimTerritory.dds</Button>
+			<Button>Art/Interface/Buttons/missions/inner_solar_system.dds</Button>
 		</MissionInfo>
 		<MissionInfo>
 			<Type>MISSION_GO_TO_MAP_OUTER_SOLAR_SYSTEM</Type>
@@ -1817,7 +1817,7 @@
 			<Waypoint>NONE</Waypoint>
 			<EntityEventType>NONE</EntityEventType>
 			<bVisible>1</bVisible>
-			<Button>Art/Interface/Buttons/missions/ClaimTerritory.dds</Button>
+			<Button>Art/Interface/Buttons/missions/outer_solar_system.dds</Button>
 		</MissionInfo>
 		<MissionInfo>
 			<Type>MISSION_GO_TO_MAP_TITAN</Type>
@@ -1825,7 +1825,7 @@
 			<Waypoint>NONE</Waypoint>
 			<EntityEventType>NONE</EntityEventType>
 			<bVisible>1</bVisible>
-			<Button>Art/Interface/Buttons/missions/ClaimTerritory.dds</Button>
+			<Button>Art/Interface/Buttons/missions/titan.dds</Button>
 		</MissionInfo>
 		<MissionInfo>
 			<Type>MISSION_GO_TO_MAP_TRANSNEPTUNIAN</Type>
@@ -1833,7 +1833,7 @@
 			<Waypoint>NONE</Waypoint>
 			<EntityEventType>NONE</EntityEventType>
 			<bVisible>1</bVisible>
-			<Button>Art/Interface/Buttons/missions/ClaimTerritory.dds</Button>
+			<Button>Art/Interface/Buttons/missions/kuiper_belt.dds</Button>
 		</MissionInfo>
 		<MissionInfo>
 			<Type>MISSION_GO_TO_MAP_NEARBY_STARS</Type>
@@ -1857,7 +1857,7 @@
 			<Waypoint>NONE</Waypoint>
 			<EntityEventType>NONE</EntityEventType>
 			<bVisible>1</bVisible>
-			<Button>Art/Interface/Buttons/missions/ClaimTerritory.dds</Button>
+			<Button>Art/Interface/Buttons/missions/milky_way.dds</Button>
 		</MissionInfo>
 		<MissionInfo>
 			<Type>MISSION_GO_TO_MAP_LOCAL_GROUP</Type>
