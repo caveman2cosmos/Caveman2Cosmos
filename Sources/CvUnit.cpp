@@ -6125,14 +6125,6 @@ bool CvUnit::canEnterPlot(const CvPlot* pPlot, MoveCheck::flags flags /*= MoveCh
 						bFailWithAttack = true;
 					}
 				}
-				//This part is to keep units that cannot capture a city from doing so. - one objective at least.
-				else if ((bAttack || bVisibleEnemyUnit)
-				&& bVisibleEnemyUnit != bAttack
-				&& (!bDeclareWar || bVisibleEnemyUnit != bAttack && (!bAttack || !pPlot->getPlotCity() || isNoCapture())))
-				{
-					return false;//Searchforthis
-					// Toffer - I can't make heads from tails on this one...
-				}
 			}
 
 			if (bAttack && !bFailWithAttack)
