@@ -1983,10 +1983,13 @@ bool CvSelectionGroup::continueMission(int iSteps)
 		}
 	}
 
-	if ((missionNode->m_data.iFlags & (MOVE_RECONSIDER_ON_LEAVING_OWNED | MOVE_AVOID_ENEMY_UNITS))
-	&& (missionNode->m_data.eMissionType == MISSION_MOVE_TO || missionNode->m_data.eMissionType == MISSION_ROUTE_TO)
-	&& canAllMove()
-	&& !checkMoveSafety(missionNode->m_data.iData1, missionNode->m_data.iData2, missionNode->m_data.iFlags))
+	if (canAllMove()
+	&& (
+			missionNode->m_data.eMissionType == MISSION_MOVE_TO
+			||
+			missionNode->m_data.eMissionType == MISSION_ROUTE_TO
+		)
+	&& !moveToValid(this, GC.getMap().plot(missionNode->m_data.iData1, missionNode->m_data.iData2), missionNode->m_data.iFlags))
 	{
 		OutputDebugString(CvString::format("%S (%d) interrupted cautious move while moving to (%d,%d)...\n", getHeadUnit()->getDescription().c_str(), getHeadUnit()->getID(), missionNode->m_data.iData1, missionNode->m_data.iData2).c_str());
 		bDone = true;
@@ -2318,35 +2321,6 @@ bool CvSelectionGroup::continueMission(int iSteps)
 	return !bFailed;
 }
 
-
-bool CvSelectionGroup::checkMoveSafety(int iX, int iY, int iFlags)
-{
-	if (getHeadUnit() == NULL)
-	{
-		return false;
-	}
-	CvPlot* pDestPlot = GC.getMap().plot(iX, iY);
-
-	if (generatePath(plot(), pDestPlot, iFlags))
-	{
-		pDestPlot = getPathEndTurnPlot();
-	}
-
-	if ( (iFlags & MOVE_RECONSIDER_ON_LEAVING_OWNED) != 0 && !canDefend() )
-	{
-		if ( pDestPlot->getOwner() != getOwner() )
-		{
-			return false;
-		}
-	}
-
-	if ( (iFlags &  MOVE_AVOID_ENEMY_UNITS) != 0 )
-	{
-		return !((CvUnitAI*)getHeadUnit())->exposedToDanger(pDestPlot, 80);
-	}
-
-	return true;
-}
 
 void CvSelectionGroup::doCommand(CommandTypes eCommand, int iData1, int iData2)
 {
@@ -3853,34 +3827,6 @@ bool CvSelectionGroup::groupPathTo(int iX, int iY, int iFlags)
 		if (groupAmphibMove(pPathPlot, iFlags))
 		{
 			return false;
-		}
-
-		if ( (iFlags & MOVE_WITH_CAUTION) && !canDefend() )
-		{
-			const CvPlot* endTurnPlot = getPathEndTurnPlot();
-
-			//	If the next plot we'd go to has a danger count above a threshold
-			//	consider it not safe and abort so we can reconsider
-			if ( endTurnPlot->getDangerCount(getTeam()) > 20 )
-			{
-				return false;
-			}
-
-			//	Also for non-owned territory check for nearby enemies
-			if ( endTurnPlot->getOwner() != getOwner() &&
-				 GET_PLAYER(getOwner()).AI_getVisiblePlotDanger(endTurnPlot, 2, false) )
-			{
-				return false;
-			}
-		}
-
-		if ( (iFlags & MOVE_HEAL_AS_NEEDED25) && getHeadUnit()->getDamagePercent() > 25 )
-		{
-			if ( !GET_PLAYER(getOwner()).AI_getVisiblePlotDanger(plot(), 2, false) &&
-				 plot()->getTotalTurnDamage(this) <= 0)
-			{
-				return false;
-			}
 		}
 	}
 
