@@ -23372,24 +23372,24 @@ int CvPlayerAI::AI_getOurPlotStrength(const CvPlot* pPlot, int iRange, bool bDef
 
 	int iValue = 0;
 
-	foreach_(const CvPlot * pLoopPlot, pPlot->rect(iRange, iRange) | filtered(CvPlot::fn::area() == pPlot->area()))
+	foreach_(const CvPlot * plotX, pPlot->rect(iRange, iRange) | filtered(CvPlot::fn::area() == pPlot->area()))
 	{
-		const int iDistance = stepDistance(pPlot->getX(), pPlot->getY(), pLoopPlot->getX(), pLoopPlot->getY());
+		const int iDistance = stepDistance(pPlot->getX(), pPlot->getY(), plotX->getX(), plotX->getY());
 
-		foreach_(const CvUnit * pLoopUnit, pLoopPlot->units())
+		foreach_(const CvUnit * unitX, plotX->units())
 		{
-			if (pLoopUnit->getOwner() == getID()
-			&& (bDefensiveBonuses && pLoopUnit->canDefend() || pLoopUnit->canAttack())
-			&& !pLoopUnit->isInvisible(getTeam(), false)
-			&& (pLoopUnit->atPlot(pPlot) || pLoopUnit->canEnterPlot(pPlot) || pLoopUnit->canEnterPlot(pPlot, MoveCheck::Attack)))
+			if (unitX->getOwner() == getID()
+			&& (bDefensiveBonuses && unitX->canDefend() || unitX->canAttack())
+			&& !unitX->isInvisible(getTeam(), false)
+			&& (unitX->atPlot(pPlot) || unitX->canEnterPlot(pPlot) || unitX->canEnterPlot(pPlot, MoveCheck::Attack)))
 			{
 				if (!bTestMoves)
 				{
-					iValue += pLoopUnit->currEffectiveStr((bDefensiveBonuses ? pPlot : NULL), NULL);
+					iValue += unitX->currEffectiveStr((bDefensiveBonuses ? pPlot : NULL), NULL);
 				}
-				else if (pLoopUnit->baseMoves() >= iDistance)
+				else if (unitX->baseMoves() >= iDistance)
 				{
-					iValue += pLoopUnit->currEffectiveStr((bDefensiveBonuses ? pPlot : NULL), NULL);
+					iValue += unitX->currEffectiveStr((bDefensiveBonuses ? pPlot : NULL), NULL);
 				}
 			}
 		}
@@ -23403,41 +23403,23 @@ int CvPlayerAI::AI_getEnemyPlotStrength(const CvPlot* pPlot, int iRange, bool bD
 
 	int iValue = 0;
 
-	foreach_(const CvPlot * pLoopPlot, pPlot->rect(iRange, iRange)
+	foreach_(const CvPlot * plotX, pPlot->rect(iRange, iRange)
 	| filtered(CvPlot::fn::area() == pPlot->area()))
 	{
-		const int iDistance = stepDistance(pPlot->getX(), pPlot->getY(), pLoopPlot->getX(), pLoopPlot->getY());
+		const int iDistance = stepDistance(pPlot->getX(), pPlot->getY(), plotX->getX(), plotX->getY());
 
-		foreach_(const CvUnit * pLoopUnit, pLoopPlot->units())
+		foreach_(const CvUnit * unitX, plotX->units())
 		{
-			if (atWar(pLoopUnit->getTeam(), getTeam()))
+			if (atWar(unitX->getTeam(), getTeam())
+			&& (bDefensiveBonuses && unitX->canDefend() || unitX->canAttack())
+			&& !unitX->canCoexistWithTeamOnPlot(getTeam(), *pPlot)
+			&& pPlot->isValidDomainForAction(*unitX)
+			&& (!bTestMoves || unitX->baseMoves() + plotX->isValidRoute(unitX) >= iDistance))
 			{
-				if ((bDefensiveBonuses && pLoopUnit->canDefend()) || pLoopUnit->canAttack())
-				{
-					if (!(pLoopUnit->canCoexistWithTeamOnPlot(getTeam(), *pPlot)))
-					{
-						if (pPlot->isValidDomainForAction(*pLoopUnit))
-						{
-							if (!bTestMoves)
-							{
-								iValue += pLoopUnit->currEffectiveStr((bDefensiveBonuses ? pPlot : NULL), NULL);
-							}
-							else
-							{
-								int iDangerRange = pLoopUnit->baseMoves();
-								iDangerRange += ((pLoopPlot->isValidRoute(pLoopUnit)) ? 1 : 0);
-								if (iDangerRange >= iDistance)
-								{
-									iValue += pLoopUnit->currEffectiveStr((bDefensiveBonuses ? pPlot : NULL), NULL);
-								}
-							}
-						}
-					}
-				}
+				iValue += unitX->currEffectiveStr((bDefensiveBonuses ? pPlot : NULL), NULL);
 			}
 		}
 	}
-
 	return iValue;
 }
 

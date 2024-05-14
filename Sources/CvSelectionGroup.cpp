@@ -3681,59 +3681,54 @@ void CvSelectionGroup::groupMove(CvPlot* pPlot, bool bCombat, CvUnit* pCombatUni
 {
 	PROFILE_FUNC();
 
-	//	Inhibit recalculation of the appropriate center unit to display on the
-	//	start and end plots until after all units have moved, so it only has to be done once
+	// Inhibit recalculation of the appropriate center unit to display on the start
+	// and end plots until after all units have moved, so it only has to be done once.
 	CvPlot* pStartPlot = plot();
 
 	pStartPlot->enableCenterUnitRecalc(false);
 	pPlot->enableCenterUnitRecalc(false);
+
 	const int iX = pPlot->getX();
 	const int iY = pPlot->getY();
 
 	m_bIsMidMove = true;
 
-// BUG - Sentry Actions - start
-#ifdef _MOD_SENTRY
-	bool bSentryAlert = isHuman() && NULL != headMissionQueueNode() && headMissionQueueNode()->m_data.eMissionType == MISSION_MOVE_TO_SENTRY && sentryAlertSameDomainType();
-#endif
-// BUG - Sentry Actions - end
-
-	foreach_(CvUnit* pLoopUnit, units_safe())
+	foreach_(CvUnit* unitX, units_safe())
 	{
-		if (pLoopUnit->at(iX,iY))
+		if (unitX->at(iX,iY))
 		{
 			continue;
 		}
-// BUG - Sentry Actions - start
+
+		//TBNote: Need to make this an option perhaps.
+		//	Groups probably shouldn't be automatically splitting up to continue the planned move, particularly for human players.
+		//	Would check if the whole group can move into the plot first. This warrants more study before acting on this.
+		if (unitX == pCombatUnit
+		|| unitX->canMove()
 #ifdef _MOD_SENTRY
-		// don't move if bSentryAlert set to true above
-		if ((!bSentryAlert && pLoopUnit->canMove() && ((bCombat && (!(pLoopUnit->isNoCapture()) || !(pPlot->isEnemyCity(*pLoopUnit)))) ? pLoopUnit->canEnterOrAttackPlot(pPlot) : pLoopUnit->canEnterPlot(pPlot))) || (pLoopUnit == pCombatUnit))
-#else
-		//TBNote: Need to make this an option perhaps.  Groups probably shouldn't be automatically splitting up to continue the planned move, particularly for human players.
-		//Would check if the whole group can move into the plot first.  This warrants more study before acting on this.
-		if (pLoopUnit->canMove()
-		&&	(
-				bCombat && (!pLoopUnit->isNoCapture() || !pPlot->isEnemyCity(*pLoopUnit))
-				?
-				pLoopUnit->canEnterOrAttackPlot(pPlot)
-				:
-				pLoopUnit->canEnterPlot(pPlot)
+		&& (
+				!isHuman()
+				||
+				!headMissionQueueNode()
+				||
+				headMissionQueueNode()->m_data.eMissionType != MISSION_MOVE_TO_SENTRY
+				||
+				!sentryAlertSameDomainType()
 			)
-		||	pLoopUnit == pCombatUnit)
 #endif
-// BUG - Sentry Actions - end
+		&& (bCombat ? unitX->canEnterOrAttackPlot(pPlot) : unitX->canEnterPlot(pPlot)))
 		{
-			pLoopUnit->move(pPlot, true);
+			unitX->move(pPlot, true);
 		}
 		else
 		{
-			pLoopUnit->joinGroup(NULL, true);
-			pLoopUnit->ExecuteMove(((float)(GC.getMissionInfo(MISSION_MOVE_TO).getTime() * gDLL->getMillisecsPerTurn())) / 1000.0f, false);
+			unitX->joinGroup(NULL, true);
+			unitX->ExecuteMove(((float)(GC.getMissionInfo(MISSION_MOVE_TO).getTime() * gDLL->getMillisecsPerTurn())) / 1000.0f, false);
 
 			// Afforess - Units Seem to be getting stuck here
-			if (GC.iStuckUnitID != pLoopUnit->getID())
+			if (GC.iStuckUnitID != unitX->getID())
 			{
-				GC.iStuckUnitID = pLoopUnit->getID();
+				GC.iStuckUnitID = unitX->getID();
 				GC.iStuckUnitCount = 0;
 			}
 			else
@@ -3752,7 +3747,7 @@ void CvSelectionGroup::groupMove(CvPlot* pPlot, bool bCombat, CvUnit* pCombatUni
 							pHeadUnit->getX(), pHeadUnit->getY(), szTempString.GetCString());
 						gDLL->messageControlLog(szOut);
 					}
-					pLoopUnit->finishMoves();
+					unitX->finishMoves();
 				}
 			}
 		}
@@ -3763,10 +3758,10 @@ void CvSelectionGroup::groupMove(CvPlot* pPlot, bool bCombat, CvUnit* pCombatUni
 	//execute move
 	if (bEndMove || !canAllMove())
 	{
-		foreach_(CvUnit* pLoopUnit, units())
+		foreach_(CvUnit* unitX, units())
 		{
 			FAssertDeclareScope(CvSelectionGroup_CvUnit_LOOP);
-			pLoopUnit->ExecuteMove(((float)(GC.getMissionInfo(MISSION_MOVE_TO).getTime() * gDLL->getMillisecsPerTurn())) / 1000.0f, false);
+			unitX->ExecuteMove(((float)(GC.getMissionInfo(MISSION_MOVE_TO).getTime() * gDLL->getMillisecsPerTurn())) / 1000.0f, false);
 		}
 	}
 

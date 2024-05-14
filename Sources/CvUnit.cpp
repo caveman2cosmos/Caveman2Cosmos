@@ -5862,11 +5862,6 @@ bool CvUnit::canEnterPlot(const CvPlot* pPlot, MoveCheck::flags flags /*= MoveCh
 	}
 	const bool bCanCoexist = canCoexistAlwaysOnPlot(*pPlot);
 	const bool bVisibleEnemyDefender = !bCanCoexist && pPlot->isVisiblePotentialEnemyDefender(this);
-
-	if (!bVisibleEnemyDefender && !isSpy() && isNoCapture() && !isBlendIntoCity() && pPlot->isEnemyCity(*this))
-	{
-		return false;
-	}
 	const bool bVisibleEnemyUnit = !bCanCoexist && (bVisibleEnemyDefender || pPlot->isVisiblePotentialEnemyDefenderless(this));
 
 	const bool bAttack = flags & MoveCheck::Attack;
@@ -6043,43 +6038,13 @@ bool CvUnit::canEnterPlot(const CvPlot* pPlot, MoveCheck::flags flags /*= MoveCh
 		{
 			return false;
 		}
-
-		if (!bAttack && !bFailWithoutAttack)
-		{
-			if (pPlot->getBonusType() != NO_BONUS)
-			{
-				if (!bIgnoreAttack)
-				{
-					return false;
-				}
-				bFailWithoutAttack = true;
-			}
-
-			if (pPlot->getImprovementType() != NO_IMPROVEMENT)
-			{
-				if (!bIgnoreAttack)
-				{
-					return false;
-				}
-				bFailWithoutAttack = true;
-			}
-
-			if (pPlot->getNumUnits() > 0)
-			{
-				if (!bIgnoreAttack)
-				{
-					return false;
-				}
-				bFailWithoutAttack = true;
-			}
-		}
 	}
 
-
+	const bool bCanAttack = !isMadeAttack() || isBlitz();
 	// The following change makes it possible to capture defenseless units after having made a previous attack or paradrop
-	if (bAttack && isMadeAttack() && !isBlitz() && !bSuprise && bVisibleEnemyUnit)
+	if (bAttack && !bCanAttack && !bSuprise && bVisibleEnemyUnit)
 	{
-		if (!bIgnoreAttack || bFailWithoutAttack)
+		if (!bIgnoreAttack)
 		{
 			return false;
 		}
@@ -6091,7 +6056,7 @@ bool CvUnit::canEnterPlot(const CvPlot* pPlot, MoveCheck::flags flags /*= MoveCh
 	{
 		if (bAttack && !bFailWithAttack && !canAirStrike(pPlot))
 		{
-			if (!bIgnoreAttack || bFailWithoutAttack)
+			if (!bIgnoreAttack)
 			{
 				return false;
 			}
@@ -6104,10 +6069,15 @@ bool CvUnit::canEnterPlot(const CvPlot* pPlot, MoveCheck::flags flags /*= MoveCh
 		{
 			if (!isHuman() || pPlot->isVisible(getTeam(), false))
 			{
+				if (!bCanAttack && !bCanCoexist && bVisibleEnemyUnit)
+				{
+					return false;
+				}
+
 				if (bIgnoreAttack)
 				{
 					if (!bFailWithoutAttack && !bCanCoexist && bVisibleEnemyUnit
-					&& (!bDeclareWar || (pPlot->isVisibleOtherUnit(getOwner()))))
+					&& (!bDeclareWar || pPlot->isVisibleOtherUnit(getOwner())))
 					{
 						if (bFailWithAttack)
 						{
@@ -6115,8 +6085,9 @@ bool CvUnit::canEnterPlot(const CvPlot* pPlot, MoveCheck::flags flags /*= MoveCh
 						}
 						bFailWithoutAttack = true;
 					}
-					if (!bFailWithAttack && !bVisibleEnemyUnit
-					&& (!bDeclareWar || !pPlot->isVisibleOtherUnit(getOwner()) && !(pPlot->getPlotCity() && !isNoCapture() && !isBlendIntoCity())))
+					if (!bFailWithAttack
+					&& !bVisibleEnemyUnit
+					&& (!bDeclareWar || !pPlot->isVisibleOtherUnit(getOwner()) && (!pPlot->getPlotCity() || isNoCapture() || isBlendIntoCity())))
 					{
 						if (bFailWithoutAttack)
 						{
@@ -12622,7 +12593,7 @@ bool CvUnit::canCoexistWithTeam(const TeamTypes withTeam) const
 bool CvUnit::canCoexistWithTeamOnPlot(const TeamTypes withTeam, const CvPlot& onPlot) const
 {
 	return (
-		   getTeam() == withTeam 
+		   getTeam() == withTeam
 		|| canCoexistAlwaysOnPlot(onPlot)
 		// Invisible to team and on the same plot
 		|| isInvisible(withTeam) && *plot() == onPlot
@@ -15804,15 +15775,14 @@ void CvUnit::setXY(int iX, int iY, bool bGroup, bool bUpdate, bool bShow, bool b
 
 			if (!myPlayer.isAnimal()
 			&& !isBlendIntoCity()
-			&& (!isBarbCoExist() || !pNewPlot->isHominid())
-			&& isEnemy(pNewCity->getTeam())
-			&& (
-				!canCoexistWithTeamOnPlot(pNewCity->getTeam(), *pNewPlot)
-				|| !pNewPlot->isVisibleEnemyDefender(this)
-			)
+			&& !isNoCapture()
+			&& !isCargo()
 			&& canFight()
-			&& !(isHiddenNationality() && pNewCity->isNPC())
-			&& !isCargo())
+			&& isEnemy(pNewCity->getTeam())
+			&& (!isBarbCoExist() || !pNewPlot->isHominid())
+			&& (!isHiddenNationality() || !pNewCity->isNPC())
+			&& !canCoexistAlwaysOnPlot(*pNewPlot)
+			&& !pNewPlot->isVisibleEnemyDefender(this))
 			{
 				GET_TEAM(getTeam()).changeWarWeariness(pNewCity->getTeam(), *pNewPlot, GC.getDefineINT("WW_CAPTURED_CITY"));
 
@@ -24068,8 +24038,7 @@ bool CvUnit::canAdvance(const CvPlot* pPlot, int iThreshold) const
 	FAssert(getDomainType() != DOMAIN_AIR);
 	FAssert(getDomainType() != DOMAIN_IMMOBILE);
 
-	if (pPlot->getNumVisiblePotentialEnemyDefenders(this) > iThreshold
-	|| isNoCapture() && pPlot->isEnemyCity(*this))
+	if (pPlot->getNumVisiblePotentialEnemyDefenders(this) > iThreshold)
 	{
 		return false;
 	}
