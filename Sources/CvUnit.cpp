@@ -6067,7 +6067,7 @@ bool CvUnit::canEnterPlot(const CvPlot* pPlot, MoveCheck::flags flags /*= MoveCh
 	{
 		if (canAttack())
 		{
-			if (!isHuman() || pPlot->isVisible(getTeam(), false))
+			if (pPlot->isVisible(getTeam(), false))
 			{
 				if (!bCanAttack && !bCanCoexist && bVisibleEnemyUnit)
 				{
