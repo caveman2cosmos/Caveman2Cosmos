@@ -121,6 +121,7 @@ public:
 
 	bool canMoveThrough(const CvPlot* pPlot, bool bDeclareWar = false) const;
 	bool canFight() const;
+	bool canAttackNow() const;
 	bool canDefend() const;
 	bool canBombard(const CvPlot* pPlot, bool bCheckCanReduceOnly = false) const;
 	bool hasBombardCapability() const;

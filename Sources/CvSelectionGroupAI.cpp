@@ -604,36 +604,39 @@ CvUnit* CvSelectionGroupAI::AI_getBestGroupAttacker(const CvPlot* pPlot, bool bP
 	int iBestValue = 0;
 	CvUnit* pBestUnit = NULL;
 
-	foreach_(CvUnit* pLoopUnit, units())
+	foreach_(CvUnit* unitX, units())
 	{
-		if (pLoopUnit->isDead() || pBestUnit != NULL && isClearlySuperior(pBestUnit, pLoopUnit, pPlot))
+		if (unitX->isDead() || pBestUnit != NULL && isClearlySuperior(pBestUnit, unitX, pPlot))
 		{
 			continue;
 		}
-		if (pLoopUnit->getDomainType() == DOMAIN_AIR ? pLoopUnit->canAirAttack() : (pLoopUnit->canAttack() && !(bNoBlitz && pLoopUnit->isBlitz() && pLoopUnit->isMadeAttack())))
+		if (unitX->getDomainType() == DOMAIN_AIR ? unitX->canAirAttack() : (unitX->canAttack() && !(bNoBlitz && unitX->isBlitz() && unitX->isMadeAttack())))
 		{
-			if ((!pLoopUnit->AI_getHasAttacked() || bSuprise) && (bForce || pLoopUnit->canMove()))
+			if ((!unitX->AI_getHasAttacked() || bSuprise) && (bForce || unitX->canMove()))
 			{
 				CvUnit* pBestDefender = NULL;
-				if (bForce || pLoopUnit->canEnterPlot(pPlot, moveCheckFlags, &pBestDefender))
+				if (bForce || unitX->canEnterPlot(pPlot, moveCheckFlags, &pBestDefender))
 				{
 					PROFILE("AI_getBestGroupAttacker.RegularAttackOdds");
 
-					const int iOdds = pBestDefender?
-						pLoopUnit->AI_attackOddsAtPlot(pPlot, (CvUnitAI*)pBestDefender)
+					const int iOdds =
+					(
+						pBestDefender
+						?
+						unitX->AI_attackOddsAtPlot(pPlot, (CvUnitAI*)pBestDefender)
 						:
-						pLoopUnit->AI_attackOdds(pPlot, bPotentialEnemy, 0, bAssassinate);
-
+						unitX->AI_attackOdds(pPlot, bPotentialEnemy, 0, bAssassinate)
+					);
 					int iValue = iOdds;
 					FAssertMsg(iValue > 0, "iValue is expected to be greater than 0");
 
-					if (pLoopUnit->collateralDamage() > 0)
+					if (unitX->collateralDamage() > 0)
 					{
-						const int iPossibleTargets = std::min((pPlot->getNumVisiblePotentialEnemyDefenders(pLoopUnit) - 1), pLoopUnit->collateralDamageMaxUnits());
+						const int iPossibleTargets = std::min((pPlot->getNumVisiblePotentialEnemyDefenders(unitX) - 1), unitX->collateralDamageMaxUnits());
 
 						if (iPossibleTargets > 0)
 						{
-							iValue *= (100 + ((pLoopUnit->collateralDamage() * iPossibleTargets) / 5));
+							iValue *= (100 + ((unitX->collateralDamage() * iPossibleTargets) / 5));
 							iValue /= 100;
 						}
 					}
@@ -643,14 +646,14 @@ CvUnit* CvSelectionGroupAI::AI_getBestGroupAttacker(const CvPlot* pPlot, bool bP
 					{
 						iBestValue = iValue;
 						iBestOdds = iOdds;
-						pBestUnit = pLoopUnit;
+						pBestUnit = unitX;
 					}
 				}
 			}
 		}
 	}
 
-	if ( ppDefender != NULL && pBestUnit != NULL )
+	if (ppDefender && pBestUnit)
 	{
 		PROFILE("AI_getBestGroupAttacker.FinalOdds");
 
@@ -659,7 +662,6 @@ CvUnit* CvSelectionGroupAI::AI_getBestGroupAttacker(const CvPlot* pPlot, bool bP
 		//	had previously, but should not change the unit choice
 		iBestOdds = pBestUnit->AI_attackOdds(pPlot, bPotentialEnemy, ppDefender);
 	}
-
 	iUnitOdds = iBestOdds;
 	return pBestUnit;
 }

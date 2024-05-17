@@ -907,6 +907,7 @@ public:
 	int currFirepower(const CvPlot* pPlot, const CvUnit* pAttacker) const;
 	int currEffectiveStr(const CvPlot* pPlot, const CvUnit* pAttacker, CombatDetails* pCombatDetails = NULL) const;
 
+	bool canAttackNow() const;
 	bool canAttack() const;
 	bool canAttack(const CvUnit& defender) const;
 	bool canDefend(const CvPlot* pPlot = NULL) const;
@@ -3014,6 +3015,7 @@ public:
 		DECLARE_MAP_FUNCTOR_CONST(CvUnit, bool, isCombat);
 		DECLARE_MAP_FUNCTOR_CONST(CvUnit, bool, isAnimal);
 		DECLARE_MAP_FUNCTOR_CONST(CvUnit, bool, canFight);
+		DECLARE_MAP_FUNCTOR_CONST(CvUnit, bool, canAttackNow);
 		DECLARE_MAP_FUNCTOR_CONST(CvUnit, bool, canDefend);
 		DECLARE_MAP_FUNCTOR_CONST(CvUnit, bool, alwaysInvisible);
 		DECLARE_MAP_FUNCTOR_CONST(CvUnit, bool, IsSelected);
