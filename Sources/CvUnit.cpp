@@ -13720,7 +13720,7 @@ bool CvUnit::canFight() const
 
 bool CvUnit::canAttackNow() const
 {
-	return canAttack() && (!isMadeAttack() || isBlitz());
+	return (canAttack() || canAirAttack()) && (!isMadeAttack() || isBlitz());
 }
 
 bool CvUnit::canAttack() const
@@ -13981,23 +13981,23 @@ int CvUnit::airCombatDamage(const CvUnit* pDefender) const
 {
 	const CvPlot* pPlot = pDefender->plot();
 
+	const int iTheirStrength = pDefender->maxCombatStr(pPlot, this);
 	const int iOurStrength = airCurrCombatStr(pDefender);
 	FAssertMsg(iOurStrength > 0, "Air combat strength is expected to be greater than zero");
-	const int iTheirStrength = pDefender->maxCombatStr(pPlot, this);
 
-	const int iStrengthFactor = ((iOurStrength + iTheirStrength + 1) / 2);
+	const int iStrengthFactor = (iOurStrength + iTheirStrength + 1) / 2;
 
-	int iDamage = std::max(1, ((GC.getDefineINT("AIR_COMBAT_DAMAGE") * (iOurStrength + iStrengthFactor)) / (iTheirStrength + iStrengthFactor)));
-
-	const CvCity* pCity = pPlot->getPlotCity();
-
-	if (pCity != NULL)
+	if (pPlot->getPlotCity())
 	{
-		iDamage *= std::max(0, (pCity->getAirModifier() + 100));
-		iDamage /= 100;
+		return (
+			std::max(1, GC.getDefineINT("AIR_COMBAT_DAMAGE") * (iOurStrength + iStrengthFactor) / (iTheirStrength + iStrengthFactor))
+			*
+			std::max(0, 100 + pPlot->getPlotCity()->getAirModifier())
+			/
+			100
+		);
 	}
-
-	return iDamage;
+	return std::max(1, GC.getDefineINT("AIR_COMBAT_DAMAGE") * (iOurStrength + iStrengthFactor) / (iTheirStrength + iStrengthFactor));
 }
 
 
@@ -24513,45 +24513,14 @@ CvUnit* CvUnit::airStrikeTarget(const CvPlot* pPlot) const
 
 bool CvUnit::canAirStrike(const CvPlot* pPlot) const
 {
-	const int iX = pPlot->getX();
-	const int iY = pPlot->getY();
-
-	if (getDomainType() != DOMAIN_AIR)
-	{
-		return false;
-	}
-
-	if (!canAirAttack())
-	{
-		return false;
-	}
-
-	if (pPlot == plot())
-	{
-		return false;
-	}
-
-	if (!pPlot->isVisible(getTeam(), false))
-	{
-		return false;
-	}
-
-	if (plotDistance(getX(), getY(), iX, iY) > airRange())
-	{
-		return false;
-	}
-
-	if (!airStrikeTarget(pPlot))
-	{
-		return false;
-	}
-
-	if (isMadeAttack())
-	{
-		return false;
-	}
-
-	return true;
+	return (
+		   getDomainType() == DOMAIN_AIR
+		&& canAirAttack()
+		&& pPlot != plot()
+		&& pPlot->isVisible(getTeam(), false)
+		&& plotDistance(getX(), getY(), pPlot->getX(), pPlot->getY()) <= airRange()
+		&& airStrikeTarget(pPlot)
+	);
 }
 
 
