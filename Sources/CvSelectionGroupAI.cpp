@@ -610,7 +610,7 @@ CvUnit* CvSelectionGroupAI::AI_getBestGroupAttacker(const CvPlot* pPlot, bool bP
 		{
 			continue;
 		}
-		if (unitX->getDomainType() == DOMAIN_AIR ? unitX->canAirAttack() : (unitX->canAttack() && !(bNoBlitz && unitX->isBlitz() && unitX->isMadeAttack())))
+		if (unitX->getDomainType() == DOMAIN_AIR ? unitX->canAirAttack() : unitX->canAttack() && (!bNoBlitz || !unitX->isBlitz() || !unitX->isMadeAttack()))
 		{
 			if ((!unitX->AI_getHasAttacked() || bSuprise) && (bForce || unitX->canMove()))
 			{
@@ -669,31 +669,27 @@ CvUnit* CvSelectionGroupAI::AI_getBestGroupAttacker(const CvPlot* pPlot, bool bP
 CvUnit* CvSelectionGroupAI::AI_getBestGroupSacrifice(const CvPlot* pPlot, bool bForce, bool bNoBlitz) const
 {
 	PROFILE_EXTRA_FUNC();
+
 	int iBestValue = 0;
 	CvUnit* pBestUnit = NULL;
 
-	foreach_(CvUnit* pLoopUnit, units())
+	foreach_(CvUnit* unitX, units())
 	{
-		if (!pLoopUnit->isDead())
+		if (!unitX->isDead()
+		&& (unitX->getDomainType() == DOMAIN_AIR ? unitX->canAirAttack() : unitX->canAttack() && (!bNoBlitz || !unitX->isBlitz() || !unitX->isMadeAttack()))
+		&& (bForce || unitX->canMove() && unitX->canEnterPlot(pPlot, MoveCheck::Attack)))
 		{
-			if (pLoopUnit->getDomainType() == DOMAIN_AIR ? pLoopUnit->canAirAttack() : (pLoopUnit->canAttack() && !(bNoBlitz && pLoopUnit->isBlitz() && pLoopUnit->isMadeAttack())))
-			{
-				if (bForce || (pLoopUnit->canMove() && pLoopUnit->canEnterPlot(pPlot, MoveCheck::Attack)))
-				{
-					const int iValue = pLoopUnit->AI_sacrificeValue(pPlot);
-					FASSERT_NOT_NEGATIVE(iValue);
+			const int iValue = unitX->AI_sacrificeValue(pPlot);
+			FASSERT_NOT_NEGATIVE(iValue);
 
-					// we want to pick the last unit of highest value, so pick the last unit with a good value
-					if (iValue > 0 && iValue >= iBestValue)
-					{
-						iBestValue = iValue;
-						pBestUnit = pLoopUnit;
-					}
-				}
+			// we want to pick the last unit of highest value, so pick the last unit with a good value
+			if (iValue > 0 && iValue >= iBestValue)
+			{
+				iBestValue = iValue;
+				pBestUnit = unitX;
 			}
 		}
 	}
-
 	return pBestUnit;
 }
 

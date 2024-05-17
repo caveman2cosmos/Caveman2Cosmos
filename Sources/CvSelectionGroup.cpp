@@ -3781,7 +3781,7 @@ bool CvSelectionGroup::groupPathTo(int iX, int iY, int iFlags)
 
 	if (getDomainType() == DOMAIN_AIR)
 	{
-		if (!canEnterPlot(pDestPlot) && !canEnterPlot(pDestPlot, MoveCheck::Attack))
+		if (!canEnterOrAttackPlot(pDestPlot))
 		{
 			return false;
 		}
