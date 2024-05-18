@@ -1889,7 +1889,7 @@ bool CvSelectionGroup::startMission()
 		}
 	}
 
-	if (getNumUnits() > 0 && headMissionQueueNode() != NULL)
+	if (getNumUnits() > 0 && headMissionQueueNode())
 	{
 		if (bAction && isHuman() && plot()->isVisibleToWatchingHuman())
 		{
@@ -1965,7 +1965,6 @@ bool CvSelectionGroup::continueMission(int iSteps)
 		{
 			bDone = true;
 			bCombat = true;
-			bAction = true;
 		}
 		missionNode = headMissionQueueNode();
 		FAssert(getHeadUnit());
