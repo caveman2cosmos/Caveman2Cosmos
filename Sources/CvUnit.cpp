@@ -1911,10 +1911,10 @@ void CvUnit::updateAirStrike(CvPlot* pPlot, bool bQuick, bool bFinish)
 			return;
 		}
 
-		if (!bQuick)
+		if (!bQuick && isHuman())
 		{
 			// Always show human air strikes
-			bVisible = isHuman() || isCombatVisible(NULL);
+			bVisible = true;
 		}
 
 		// Dale - NB: A-Bomb
@@ -3071,7 +3071,7 @@ void CvUnit::updateCombat(bool bQuick, CvUnit* pSelectedDefender, bool bSamePlot
 
 	CvPlot* pPlot = getAttackPlot();
 
-	if (pPlot == NULL)
+	if (!pPlot)
 	{
 		/*GC.getGame().logOOSSpecial(8, getID(), getDamage());*/
 		return;
@@ -3089,16 +3089,13 @@ void CvUnit::updateCombat(bool bQuick, CvUnit* pSelectedDefender, bool bSamePlot
 	{
 		pDefender = getCombatUnit();
 	}
-	else if (pSelectedDefender == NULL)
+	else if (!pSelectedDefender)
 	{
 		pDefender = pPlot->getBestDefender(NO_PLAYER, getOwner(), this, true, false, false, false, bNoCache);
 	}
-	else
-	{
-		pDefender = pSelectedDefender;
-	}
+	else pDefender = pSelectedDefender;
 
-	if (pDefender == NULL)
+	if (!pDefender)
 	{
 		setAttackPlot(NULL, false);
 		setCombatUnit(NULL);
@@ -3226,8 +3223,11 @@ void CvUnit::updateCombat(bool bQuick, CvUnit* pSelectedDefender, bool bSamePlot
 
 			pDefender->getGroup()->clearMissionQueue();
 
-			bool bFocused = bVisible && isCombatFocus() && gDLL->getInterfaceIFace()->isCombatFocus() && plot()->isInViewport() && pDefender->isInViewport();
-			if (bFocused)
+			if (bVisible
+			&& isCombatFocus()
+			&& gDLL->getInterfaceIFace()->isCombatFocus()
+			&& plot()->isInViewport()
+			&& pDefender->isInViewport())
 			{ // TBMaybeproblem - is it possible that all this should happen to setup the combat on a surprise defense?
 				// It is not currently doing so, perhaps because of fear of the revealed unit not being visible yet?
 				DirectionTypes directionType = directionXY(plot(), pPlot);
@@ -3322,7 +3322,7 @@ void CvUnit::updateCombat(bool bQuick, CvUnit* pSelectedDefender, bool bSamePlot
 				{
 					//	Hack to make quick offensive option not switch away from
 					//	the stack.  It appears to be a bug in the main game engine
-					//	in that it ALWAYS switches away unles you compleet the combat
+					//	in that it ALWAYS switches away unles you complete the combat
 					//	in a timer update call rather than directly here, so fake up
 					//	a pseudo-combat round to perform delayed completion (but without
 					//	animation, so no battle setup) via the unit timer
@@ -3565,7 +3565,6 @@ void CvUnit::updateCombat(bool bQuick, CvUnit* pSelectedDefender, bool bSamePlot
 			{
 				if (bHuman)
 				{
-
 					if (BARBARIAN_PLAYER != eDefender)
 					{
 						AddDLLMessage(
@@ -3614,7 +3613,6 @@ void CvUnit::updateCombat(bool bQuick, CvUnit* pSelectedDefender, bool bSamePlot
 			{
 				if (bHuman)
 				{
-
 					if (BARBARIAN_PLAYER != eAttacker)
 					{
 						AddDLLMessage(
@@ -3637,7 +3635,6 @@ void CvUnit::updateCombat(bool bQuick, CvUnit* pSelectedDefender, bool bSamePlot
 				}
 				if (bHumanDefender)
 				{
-
 					if (BARBARIAN_PLAYER != eAttacker)
 					{
 						AddDLLMessage(
@@ -6332,145 +6329,6 @@ void CvUnit::fightInterceptor(const CvPlot* pPlot, bool bQuick)
 	updateAirCombat(bQuick);
 }
 
-
-/* Toffer - Unused function...
-void CvUnit::attackForDamage(CvUnit *pDefender, int attackerDamageChange, int defenderDamageChange)
-{
-	FAssert(getCombatTimer() == 0);
-	FAssert(!isInBattle());
-
-	if(pDefender == NULL)
-	{
-		FErrorMsg("Defender cannot be NULL");
-		return;
-	}
-
-	setAttackPlot(pDefender->plot(), false);
-
-	CvPlot* pPlot = getAttackPlot();
-	if (pPlot == NULL)
-	{
-		FErrorMsg("Plot was NULL");
-		return;
-	}
-
-	//rotate to face plot
-	DirectionTypes newDirection = estimateDirection(this->plot(), pDefender->plot());
-	if(newDirection != NO_DIRECTION)
-	{
-		setFacingDirection(newDirection);
-	}
-
-	//rotate enemy to face us
-	newDirection = estimateDirection(pDefender->plot(), this->plot());
-	if(newDirection != NO_DIRECTION)
-	{
-		pDefender->setFacingDirection(newDirection);
-	}
-
-	//check if quick combat
-	bool bVisible = isCombatVisible(pDefender);
-
-	//if not finished and not fighting yet, set up combat damage and mission
-	if (!isInBattle())
-	{
-		if (plot()->isBattle() || pPlot->isBattle())
-		{
-			return;
-		}
-
-		bool bStealthAttack = false;
-		if (isInvisible(GET_PLAYER(pDefender->getOwner()).getTeam(), false, false) || pDefender->plot() == plot())
-		{
-			bStealthAttack = true;
-		}
-		bool bStealthDefense = false;
-		if (bStealthAttack)
-		{
-			if (!isInvisible(GET_PLAYER(pDefender->getOwner()).getTeam(), false, false) && pDefender->plot() == plot())
-			{
-				bStealthDefense = true;
-			}
-		}
-		setCombatUnit(pDefender, true, bStealthAttack, bStealthDefense);
-		pDefender->setCombatUnit(this, false, bStealthAttack, bStealthDefense);
-
-		pDefender->getGroup()->clearMissionQueue();
-
-		bool bFocused = (bVisible && isCombatFocus() && gDLL->getInterfaceIFace()->isCombatFocus() && plot()->isInViewport() && pDefender->isInViewport());
-
-		if (bFocused)
-		{
-			DirectionTypes directionType = directionXY(plot(), pPlot);
-			//								N			NE				E				SE					S				SW					W				NW
-			NiPoint2 directions[8] = {NiPoint2(0, 1), NiPoint2(1, 1), NiPoint2(1, 0), NiPoint2(1, -1), NiPoint2(0, -1), NiPoint2(-1, -1), NiPoint2(-1, 0), NiPoint2(-1, 1)};
-			NiPoint3 attackDirection = NiPoint3(directions[directionType].x, directions[directionType].y, 0);
-			float plotSize = GC.getPLOT_SIZE();
-			NiPoint3 lookAtPoint(plot()->getPoint().x + plotSize / 2 * attackDirection.x, plot()->getPoint().y + plotSize / 2 * attackDirection.y, (plot()->getPoint().z + pPlot->getPoint().z) / 2);
-			attackDirection.Unitize();
-			gDLL->getInterfaceIFace()->lookAt(lookAtPoint, (((getOwner() != GC.getGame().getActivePlayer()) || gDLL->getGraphicOption(GRAPHICOPTION_NO_COMBAT_ZOOM)) ? CAMERALOOKAT_BATTLE : CAMERALOOKAT_BATTLE_ZOOM_IN), attackDirection);
-		}
-		else
-		{
-
-			PlayerTypes eAttacker = getVisualOwner(pDefender->getTeam());
-			CvWString szMessage;
-			if (BARBARIAN_PLAYER != eAttacker)
-			{
-				szMessage = gDLL->getText("TXT_KEY_MISC_YOU_UNITS_UNDER_ATTACK", GET_PLAYER(getOwner()).getNameKey());
-			}
-			else
-			{
-				szMessage = gDLL->getText("TXT_KEY_MISC_YOU_UNITS_UNDER_ATTACK_UNKNOWN");
-			}
-			AddDLLMessage(pDefender->getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szMessage, "AS2D_COMBAT", MESSAGE_TYPE_DISPLAY_ONLY, getButton(), GC.getCOLOR_RED(), pPlot->getX(), pPlot->getY(), true);
-		}
-	}
-	FAssertMsg(plot()->isBattle(), "Current unit instance plot is not fighting as expected");
-	FAssertMsg(pPlot->isBattle(), "pPlot is not fighting as expected");
-
-	//setup battle object
-	CvBattleDefinition kBattle(pPlot, this, pDefender);
-
-	changeDamage(attackerDamageChange, pDefender->getOwner());
-	//TB Combat Mod begin
-	if (pDefender->dealsColdDamage())
-	{
-		changeColdDamage(attackerDamageChange);
-	}
-	//TB Combat Mod end
-	pDefender->changeDamage(defenderDamageChange, getOwner());
-	//TB Combat Mod begin
-	if (dealsColdDamage())
-	{
-		pDefender->changeColdDamage(defenderDamageChange);
-	}
-	//TB Combat Mod end
-
-	if (bVisible)
-	{
-		kBattle.setDamage(BATTLE_UNIT_ATTACKER, BATTLE_TIME_END, getDamage());
-		kBattle.setDamage(BATTLE_UNIT_DEFENDER, BATTLE_TIME_END, pDefender->getDamage());
-		kBattle.setAdvanceSquare(canAdvance(pPlot, pDefender->isDead() ? 0 : 1));
-
-		kBattle.addDamage(BATTLE_UNIT_ATTACKER, BATTLE_TIME_RANGED, kBattle.getDamage(BATTLE_UNIT_ATTACKER, BATTLE_TIME_BEGIN));
-		kBattle.addDamage(BATTLE_UNIT_DEFENDER, BATTLE_TIME_RANGED, kBattle.getDamage(BATTLE_UNIT_DEFENDER, BATTLE_TIME_BEGIN));
-
-		int iTurns = planBattle( kBattle);
-		kBattle.setMissionTime(iTurns * gDLL->getSecsPerTurn());
-		setCombatTimer(iTurns);
-
-		GC.getGame().incrementTurnTimer(getCombatTimer());
-
-		if (pPlot->isActiveVisible(false) && !pDefender->isUsingDummyEntities())
-		{
-			ExecuteMove(0.5f, true);
-			addMission(kBattle);
-		}
-	}
-	else setCombatTimer(1);
-}
-*/
 
 void CvUnit::move(CvPlot* pPlot, bool bShow)
 {
@@ -12730,7 +12588,7 @@ bool CvUnit::isInBattle() const
 
 bool CvUnit::isAttacking() const
 {
-	return (getAttackPlot() != NULL && !isDelayedDeath());
+	return getAttackPlot() && !isDelayedDeath();
 }
 
 
@@ -25487,19 +25345,16 @@ bool CvUnit::verifyStackValid()
 //check if quick combat
 bool CvUnit::isCombatVisible(const CvUnit* pDefender) const
 {
-	if (!m_pUnitInfo->isQuickCombat() && (NULL == pDefender || !pDefender->getUnitInfo().isQuickCombat()))
+	if (isHuman())
 	{
-		if (isHuman())
-		{
-			if (!GET_PLAYER(getOwner()).isOption(PLAYEROPTION_QUICK_ATTACK))
-			{
-				return true;
-			}
-		}
-		else if (NULL != pDefender && pDefender->isHuman() && !GET_PLAYER(pDefender->getOwner()).isOption(PLAYEROPTION_QUICK_DEFENSE))
+		if (!GET_PLAYER(getOwner()).isOption(PLAYEROPTION_QUICK_ATTACK))
 		{
 			return true;
 		}
+	}
+	else if (pDefender && pDefender->isHuman() && !GET_PLAYER(pDefender->getOwner()).isOption(PLAYEROPTION_QUICK_DEFENSE))
+	{
+		return true;
 	}
 	return false;
 }

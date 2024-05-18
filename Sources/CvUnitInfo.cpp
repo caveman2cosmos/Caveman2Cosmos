@@ -132,7 +132,6 @@ m_bFoodProduction(false),
 m_bNoBadGoodies(false),
 m_bOnlyDefensive(false),
 m_bNoCapture(false),
-m_bQuickCombat(false),
 m_bRivalTerritory(false),
 m_bMilitaryHappiness(false),
 m_bMilitarySupport(false),
@@ -938,11 +937,6 @@ bool CvUnitInfo::isOnlyDefensive() const
 bool CvUnitInfo::isNoCapture() const
 {
 	return (m_bNoCapture);
-}
-
-bool CvUnitInfo::isQuickCombat() const
-{
-	return m_bQuickCombat;
 }
 
 bool CvUnitInfo::isRivalTerritory() const
@@ -3655,7 +3649,6 @@ void CvUnitInfo::getCheckSum(uint32_t& iSum) const
 	CheckSum(iSum, m_bNoBadGoodies);
 	CheckSum(iSum, m_bOnlyDefensive);
 	CheckSum(iSum, m_bNoCapture);
-	CheckSum(iSum, m_bQuickCombat);
 	CheckSum(iSum, m_bRivalTerritory);
 	CheckSum(iSum, m_bMilitaryHappiness);
 	CheckSum(iSum, m_bMilitarySupport);
@@ -4097,7 +4090,6 @@ bool CvUnitInfo::read(CvXMLLoadUtility* pXML)
 	pXML->GetOptionalChildXmlValByName(&m_bNoBadGoodies, L"bNoBadGoodies");
 	pXML->GetOptionalChildXmlValByName(&m_bOnlyDefensive, L"bOnlyDefensive");
 	pXML->GetOptionalChildXmlValByName(&m_bNoCapture, L"bNoCapture");
-	pXML->GetOptionalChildXmlValByName(&m_bQuickCombat, L"bQuickCombat");
 	pXML->GetOptionalChildXmlValByName(&m_bRivalTerritory, L"bRivalTerritory");
 	pXML->GetOptionalChildXmlValByName(&m_bMilitaryHappiness, L"bMilitaryHappiness");
 	pXML->GetOptionalChildXmlValByName(&m_bMilitarySupport, L"bMilitarySupport");
@@ -5030,7 +5022,6 @@ void CvUnitInfo::copyNonDefaults(CvUnitInfo* pClassInfo)
 	if ( m_bNoBadGoodies == bDefault )	m_bNoBadGoodies = pClassInfo->isNoBadGoodies();
 	if ( m_bOnlyDefensive == bDefault )	m_bOnlyDefensive = pClassInfo->isOnlyDefensive();
 	if ( m_bNoCapture == bDefault )	m_bNoCapture = pClassInfo->isNoCapture();
-	if ( m_bQuickCombat == bDefault )	m_bQuickCombat = pClassInfo->isQuickCombat();
 	if ( m_bRivalTerritory == bDefault )	m_bRivalTerritory = pClassInfo->isRivalTerritory();
 	if ( m_bMilitaryHappiness == bDefault )	m_bMilitaryHappiness = pClassInfo->isMilitaryHappiness();
 	if ( m_bMilitarySupport == bDefault )	m_bMilitarySupport = pClassInfo->isMilitarySupport();
