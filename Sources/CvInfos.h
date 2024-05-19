@@ -1741,7 +1741,6 @@ public:
 	bool isNoBadGoodies() const;
 	bool isOnlyDefensive() const;
 	bool isNoCapture() const;
-	bool isQuickCombat() const;
 	bool isRivalTerritory() const;
 	bool isMilitaryHappiness() const;
 	bool isMilitarySupport() const;
@@ -2370,7 +2369,6 @@ private:
 	bool m_bNoBadGoodies;
 	bool m_bOnlyDefensive;
 	bool m_bNoCapture;
-	bool m_bQuickCombat;
 	bool m_bRivalTerritory;
 	bool m_bMilitaryHappiness;
 	bool m_bMilitarySupport;
