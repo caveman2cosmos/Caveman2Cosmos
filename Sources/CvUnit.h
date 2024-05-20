@@ -538,9 +538,9 @@ public:
 
 	void doTurn();
 
-	void updateCombat(bool bQuick = false, CvUnit* pSelectedDefender = NULL, bool bSamePlot = false, bool bStealth = false, bool bNoCache = false);
+	void updateCombat(CvUnit* pSelectedDefender = NULL, bool bSamePlot = false, bool bStealth = false, bool bNoCache = false);
 	void updateAirCombat(bool bQuick = false);
-	void updateAirStrike(CvPlot* pPlot, bool bQuick, bool bFinish);
+	void updateAirStrike(CvPlot* pPlot, bool bFinish);
 
 	bool isActionRecommended(int iAction) const;
 
@@ -566,7 +566,7 @@ public:
 
 	bool canEnterOrAttackPlot(const CvPlot* pPlot, bool bDeclareWar = false) const;
 	bool canMoveThrough(const CvPlot* pPlot, bool bDeclareWar = false) const;
-	void attack(CvPlot* pPlot, bool bQuick, bool bStealth = false, bool bNoCache = false);
+	void attack(CvPlot* pPlot, bool bStealth = false, bool bNoCache = false);
 	void fightInterceptor(const CvPlot* pPlot, bool bQuick);
 	void move(CvPlot* pPlot, bool bShow);
 

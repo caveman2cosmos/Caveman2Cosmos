@@ -373,21 +373,21 @@ void CvSelectionGroup::updateTimers()
 	if (getNumUnits() > 0)
 	{
 		bool bCombat = false;
+		bool bCombatFinished = true;
 
-		foreach_(CvUnit* pLoopUnit, units())
+		foreach_(CvUnit* unitX, units())
 		{
-			if (pLoopUnit->isCombat())
+			if (unitX->getCombatTimer() > 0)
 			{
-				if (pLoopUnit->isAirCombat())
-				{
-					pLoopUnit->updateAirCombat();
-				}
-				else
-				{
-					pLoopUnit->updateCombat();
-				}
+				if (unitX->isAirCombat())
+					unitX->updateAirCombat();
+				else unitX->updateCombat();
+
 				bCombat = true;
-				break;
+				if (bCombatFinished && unitX->getCombatTimer() > 0)
+				{
+					bCombatFinished = false;
+				}
 			}
 		}
 
@@ -395,9 +395,19 @@ void CvSelectionGroup::updateTimers()
 		{
 			updateMission();
 		}
-		else if (IsSelected() && !canAnyMove())
+		else if (bCombatFinished && IsSelected())
 		{
-			GC.getGame().updateSelectionListInternal();
+			if (canAnyMove())
+			{
+				foreach_(CvUnit* unitX, units())
+				{
+					if (unitX->IsSelected() && !unitX->canMove())
+					{
+						gDLL->getInterfaceIFace()->removeFromSelectionList(unitX);
+					}
+				}
+			}
+			else GC.getGame().updateSelectionListInternal();
 		}
 	}
 	doDelayedDeath();
@@ -2248,10 +2258,7 @@ bool CvSelectionGroup::continueMission(int iSteps)
 				}
 			}
 		}
-	}
 
-	if (missionNode && getNumUnits() > 0)
-	{
 		if (bAction && (bDone || !canAllMove()) && plot()->isVisibleToWatchingHuman())
 		{
 			updateMissionTimer(iSteps);
@@ -2271,7 +2278,7 @@ bool CvSelectionGroup::continueMission(int iSteps)
 		{
 			OutputDebugString(CvString::format("%S Done...\n", getHeadUnit()->getDescription().c_str()).c_str());
 
-			if (IsSelected() && (bCombat ? !canAnyMove() : !canAllSelectedMove()))
+			if (IsSelected() && !bCombat && !canAllSelectedMove())
 			{
 				GC.getGame().updateSelectionListInternal();
 			}
@@ -2287,15 +2294,19 @@ bool CvSelectionGroup::continueMission(int iSteps)
 					// We executed this one ok but if we have no moves left don't leave
 					//	it with ACTIVITY_AWAKE as its state as that'll just cause the AI to spin wheels.
 					//	Preserve the missionAI and target plot/unit though as other units may search on them.
-					if (!isHuman() && !canAllMove() && missionNode == NULL)
+					if (!isHuman() && !canAllMove() && !missionNode)
 					{
 						pushMission(MISSION_SKIP, -1, -1, 0, false, false, AI_getMissionAIType(), AI_getMissionAIPlot(), AI_getMissionAIUnit());
 					}
 				}
-				else if (canAllMove() || nextMissionQueueNode(missionNode) == NULL)
+				else if (canAllMove() || !nextMissionQueueNode(missionNode))
 				{
 					deleteMissionQueueNode(missionNode);
 				}
+			}
+			else if (bCombat && isHuman() && !nextMissionQueueNode(missionNode))
+			{
+				clearMissionQueue();
 			}
 		}
 		else if (canAllMove())
@@ -2704,9 +2715,20 @@ bool CvSelectionGroup::isHuman() const
 
 bool CvSelectionGroup::isBusy() const
 {
-	return getMissionTimer() > 0 || algo::any_of(units(), CvUnit::fn::isCombat());
+	return getMissionTimer() > 0 || isCombat();
 }
 
+bool CvSelectionGroup::isCombat(const CvUnit* ignoreMe) const
+{
+	foreach_(const CvUnit* unitX, units())
+	{
+		if ((!ignoreMe || ignoreMe != unitX) && unitX->isCombat())
+		{
+			return true;
+		}
+	}
+	return false;
+}
 
 bool CvSelectionGroup::isCargoBusy() const
 {
@@ -3466,21 +3488,20 @@ bool CvSelectionGroup::groupDeclareWar(const CvPlot* pPlot, bool bForce)
 	{
 		return false;
 	}
-
 	TeamTypes ePlotTeam = pPlot->getTeam();
-
 	const int iNumUnits = getNumUnits();
 
 	if (bForce || !canEnterArea(ePlotTeam, pPlot->area(), true))
 	{
 		CvTeamAI& kTeam = GET_TEAM(getTeam());
-		if (ePlotTeam != NO_TEAM && kTeam.AI_isSneakAttackReady(ePlotTeam) && kTeam.canDeclareWar(ePlotTeam))
+		if (ePlotTeam != NO_TEAM
+		&& kTeam.AI_isSneakAttackReady(ePlotTeam)
+		&& kTeam.canDeclareWar(ePlotTeam))
 		{
 			kTeam.declareWar(ePlotTeam, true, NO_WARPLAN);
 		}
 	}
-
-	return (iNumUnits != getNumUnits());
+	return iNumUnits != getNumUnits();
 }
 
 // Returns true if attack was made...
@@ -3505,13 +3526,20 @@ bool CvSelectionGroup::groupAttack(int iX, int iY, int iFlags, bool& bFailedAlre
 	{
 		return false;
 	}
-	bool bStealthDefense = false;
-	int iAttackOdds = 0;
-	CvUnit* pBestAttackUnit = AI_getBestGroupAttacker(pDestPlot, true, iAttackOdds, bStealthDefense, false, 0, false, bStealthDefense);
-	if (!pBestAttackUnit)
+
+	const bool bHuman = isHuman();
+
+	if (bHuman && !isLastPathPlotVisible() && getDomainType() != DOMAIN_AIR)
 	{
 		return false;
 	}
+
+	bool bStealthDefense = false;
+	int iAttackOdds = 0;
+	CvUnit* pBestAttackUnit = AI_getBestGroupAttacker(pDestPlot, true, iAttackOdds, bStealthDefense, NULL, false, bStealthDefense);
+
+	if (!pBestAttackUnit) return false;
+
 	bool bAffixFirstAttacker = false;
 
 	if (!pDestPlot->isCity(false)
@@ -3525,54 +3553,46 @@ bool CvSelectionGroup::groupAttack(int iX, int iY, int iFlags, bool& bFailedAlre
 		}
 	}
 
-	if (isHuman() && !isLastPathPlotVisible() && getDomainType() != DOMAIN_AIR)
-	{
-		return false;
-	}
-	bool bAffixFirstDefender = false;
-
-	CvUnit* pBestDefender = pDestPlot->getBestDefender(NO_PLAYER, getOwner(), pBestAttackUnit, true, false, false, false, bStealthDefense);
-	if (pBestDefender)
-	{
-		bAffixFirstDefender = true;
-	}
-
 	if (groupDeclareWar(pDestPlot))
 	{
 		return true;
 	}
+	CvUnit* pBestDefender = pDestPlot->getBestDefender(NO_PLAYER, getOwner(), pBestAttackUnit, true, false, false, false, bStealthDefense);
 
-	if (!pBestDefender)
-	{
-		return false;
-	}
-	const bool bNoBlitz = (!pBestAttackUnit->isBlitz() && pBestAttackUnit->isMadeAttack());
-	const bool bStack = isHuman() && (getDomainType() == DOMAIN_AIR || GET_PLAYER(getOwner()).isOption(PLAYEROPTION_STACK_ATTACK));
+	if (!pBestDefender) return false;
 
+	const bool bStack = bHuman && (getDomainType() == DOMAIN_AIR || GET_PLAYER(getOwner()).isOption(PLAYEROPTION_STACK_ATTACK));
+
+	std::set<int> alreadyAttacked;
 	bool bAttack = false;
 	bool bStealth = false;
 	bool bBombardExhausted = false;
 	bool bLoopStealthDefense = false;
+	bool bAffixFirstDefender = true;
 	while (true)
 	{
 		PROFILE("CvSelectionGroup::groupAttack.StackLoop");
-		if (bLoopStealthDefense)
-		{
-			bStealthDefense = false;
-		}
-		if (bStealthDefense)
-		{
-			bLoopStealthDefense = true;
-		}
+
+		if (bLoopStealthDefense) bStealthDefense = false;
+		else if (bStealthDefense) bLoopStealthDefense = true;
+
 		if (!bAffixFirstAttacker)
 		{
-			pBestAttackUnit = AI_getBestGroupAttacker(pDestPlot, false, iAttackOdds, bLoopStealthDefense, bNoBlitz, 0, false, bStealth);
-			if (!pBestAttackUnit)
-			{
-				break;
-			}
+			pBestAttackUnit = AI_getBestGroupAttacker(pDestPlot, false, iAttackOdds, bLoopStealthDefense, NULL, false, bStealth, false, alreadyAttacked);
+
+			if (!pBestAttackUnit) break;
 		}
-		// if there are no defenders, do not attack
+		// Toffer - Human player expect units with blitz to only attack once in a stack attack
+		// if not the player has no control of the situation as e.g.
+		//	2 units are selected, if one of the units have 4 moves and blitz it might completly suicide
+		//	with 4 attacks against an enemy stack; AI would stop to reconsider depending on the outcome of each attack,
+		//	the human player would expect an even expenditure of movement points in the selected group for one attack command.
+		if (bStack && pBestAttackUnit->isBlitz())
+		{
+			FAssert(alreadyAttacked.find(pBestAttackUnit->getID()) == alreadyAttacked.end());
+
+			alreadyAttacked.insert(pBestAttackUnit->getID());
+		}
 		if (!bAffixFirstAttacker
 		&& !pDestPlot->isCity(false)
 		&& !pDestPlot->hasDefender(false, NO_PLAYER, getOwner(), pBestAttackUnit, true, false, false, true))
@@ -3587,16 +3607,19 @@ bool CvSelectionGroup::groupAttack(int iX, int iY, int iFlags, bool& bFailedAlre
 		{
 			pBestDefender = pDestPlot->getBestDefender(NO_PLAYER, getOwner(), pBestAttackUnit, true, false, false, false, true);
 		}
+		// if there are no defenders, do not attack
+		if (!pBestDefender) break;
+
 		bAffixFirstAttacker = false;
 		bAffixFirstDefender = false;
 
-		if (iAttackOdds < 68 && !isHuman() && !bStealth)
+		if (iAttackOdds < 68 && !bHuman && !bStealth)
 		{
 			if (bBombardExhausted)
 			{
-				CvUnit* pBestSacrifice = AI_getBestGroupSacrifice(pDestPlot, false, bNoBlitz);
+				CvUnit* pBestSacrifice = AI_getBestGroupSacrifice(pDestPlot, false, bHuman);
 				if (pBestSacrifice
-				&& pBestSacrifice->canEnterPlot(pDestPlot, MoveCheck::Attack | (bStealthDefense? MoveCheck::Suprise : MoveCheck::None)))
+				&& pBestSacrifice->canEnterPlot(pDestPlot, MoveCheck::Attack | (bStealthDefense ? MoveCheck::Suprise : MoveCheck::None)))
 				{
 					pBestAttackUnit = pBestSacrifice;
 				}
@@ -3621,41 +3644,25 @@ bool CvSelectionGroup::groupAttack(int iX, int iY, int iFlags, bool& bFailedAlre
 
 		bAttack = true;
 
-		if (getNumUnits() < 2)
+		if (getNumUnits() < 2 || (bHuman && !bStack))
 		{
-			if (pBestDefender)
-			{
-				pBestAttackUnit->attack(pDestPlot, false, bLoopStealthDefense);
-			}
+			pBestAttackUnit->attack(pDestPlot, bLoopStealthDefense);
 			break;
 		}
 
-		if (!bLoopStealthDefense && (pBestAttackUnit->plot()->isBattle() || pDestPlot->isBattle()))
+		if (!bStack && (pBestAttackUnit->plot()->isBattle() || pDestPlot->isBattle()))
 		{
 			bFailedAlreadyFighting = true;
-		}
-		else
-		{
-			if (!pBestDefender)
-			{
-				break;
-			}
-			const bool bMore = pDestPlot->getNumVisiblePotentialEnemyDefenders(pBestAttackUnit) + pDestPlot->hasStealthDefender(pBestAttackUnit) > 1;
-			const bool bQuick = (bStack || bMore || bLoopStealthDefense);
 
-			pBestAttackUnit->attack(pDestPlot, bQuick, bLoopStealthDefense);
-		}
-
-		if (bFailedAlreadyFighting || !bStack)
-		{
 			// If this is AI stack, follow through with the attack to the end.
 			// Allow Automated Units to Stack Attack
-			if ((!isHuman() || isAutomated()) && getNumUnits() > 1)
+			if (!bHuman || isAutomated())
 			{
 				AI_queueGroupAttack(iX, iY);
 			}
 			break;
 		}
+		else pBestAttackUnit->attack(pDestPlot, bLoopStealthDefense);
 	}
 	return bAttack;
 }

@@ -1900,10 +1900,8 @@ void CvUnit::doTurn()
 }
 
 
-void CvUnit::updateAirStrike(CvPlot* pPlot, bool bQuick, bool bFinish)
+void CvUnit::updateAirStrike(CvPlot* pPlot, bool bFinish)
 {
-	bool bVisible = false;
-
 	if (!bFinish)
 	{
 		if (isInBattle())
@@ -1911,26 +1909,13 @@ void CvUnit::updateAirStrike(CvPlot* pPlot, bool bQuick, bool bFinish)
 			return;
 		}
 
-		if (!bQuick && isHuman())
-		{
-			// Always show human air strikes
-			bVisible = true;
-		}
-
-		// Dale - NB: A-Bomb
 		if (canNuke())
 		{
 			kill(true, NO_PLAYER, true);
 			return;
 		}
-		// ! Dale
 
-		//if (!airStrike(pPlot))
-		//{
-		//	return;
-		//}
-
-		if (airStrike(pPlot) && bVisible)
+		if (airStrike(pPlot) && pPlot->isVisibleToWatchingHuman())
 		{
 			setCombatTimer(GC.getMissionInfo(MISSION_AIRSTRIKE).getTime());
 			GC.getGame().incrementTurnTimer(getCombatTimer());
@@ -1942,7 +1927,7 @@ void CvUnit::updateAirStrike(CvPlot* pPlot, bool bQuick, bool bFinish)
 	}
 
 	CvUnit *pDefender = getCombatUnit();
-	if (pDefender != NULL)
+	if (pDefender)
 	{
 		pDefender->setCombatUnit(NULL);
 	}
@@ -2161,10 +2146,7 @@ void CvUnit::updateAirCombat(bool bQuick)
 		{
 			return;
 		}
-		else
-		{
-			bFinish = true;
-		}
+		bFinish = true;
 	}
 
 	CvPlot* pPlot = getAttackPlot();
@@ -2183,7 +2165,7 @@ void CvUnit::updateAirCombat(bool bQuick)
 	}
 
 
-	if (pInterceptor == NULL)
+	if (!pInterceptor)
 	{
 		setAttackPlot(NULL, false);
 		setCombatUnit(NULL);
@@ -2191,13 +2173,6 @@ void CvUnit::updateAirCombat(bool bQuick)
 		getGroup()->clearMissionQueue();
 
 		return;
-	}
-
-	//check if quick combat
-	bool bVisible = false;
-	if (!bQuick)
-	{
-		bVisible = isCombatVisible(pInterceptor);
 	}
 
 	//if not finished and not fighting yet, set up combat damage and mission
@@ -2224,16 +2199,13 @@ void CvUnit::updateAirCombat(bool bQuick)
 		CvAirMissionDefinition kAirMission(getDomainType() == DOMAIN_AIR ? MISSION_AIRSTRIKE : MISSION_PARADROP, pPlot, this, pInterceptor, GC.getMissionInfo(MISSION_AIRSTRIKE).getTime() * gDLL->getSecsPerTurn());
 		resolveAirCombat(pInterceptor, pPlot, kAirMission);
 
-		if (!bVisible)
-		{
-			bFinish = true;
-		}
-		else
+		if (!bQuick && isCombatVisible(pInterceptor))
 		{
 			setCombatTimer(GC.getMissionInfo(MISSION_AIRSTRIKE).getTime());
 			GC.getGame().incrementTurnTimer(getCombatTimer());
 			addMission(kAirMission);
 		}
+		else bFinish = true;
 
 		changeMoves(GC.getMOVE_DENOMINATOR());
 		if (DOMAIN_AIR != pInterceptor->getDomainType())
@@ -3045,22 +3017,18 @@ void CvUnit::resolveCombat(CvUnit* pDefender, CvPlot* pPlot, CvBattleDefinition&
 }
 
 
-void CvUnit::updateCombat(bool bQuick, CvUnit* pSelectedDefender, bool bSamePlot, bool bStealth, bool bNoCache)
+void CvUnit::updateCombat(CvUnit* pSelectedDefender, bool bSamePlot, bool bStealth, bool bNoCache)
 {
 	PROFILE_FUNC();
 
 	/*GC.getGame().logOOSSpecial(6, getID(), getDamage());*/
-
-	if (bStealth)
-	{
-		bNoCache = true;
-	}
 
 	bool bFinish = false;
 
 	if (getCombatTimer() > 0)
 	{
 		changeCombatTimer(-1);
+
 		if (getCombatTimer() > 0)
 		{
 			/*GC.getGame().logOOSSpecial(7, getID(), getDamage());*/
@@ -3079,21 +3047,23 @@ void CvUnit::updateCombat(bool bQuick, CvUnit* pSelectedDefender, bool bSamePlot
 
 	if (getDomainType() == DOMAIN_AIR)
 	{
-		updateAirStrike(pPlot, bQuick, bFinish);
+		updateAirStrike(pPlot, bFinish);
 		/*GC.getGame().logOOSSpecial(9, getID(), getDamage());*/
 		return;
 	}
 
 	CvUnit* pDefender = NULL;
+
 	if (bFinish)
 	{
 		pDefender = getCombatUnit();
 	}
 	else if (!pSelectedDefender)
 	{
-		pDefender = pPlot->getBestDefender(NO_PLAYER, getOwner(), this, true, false, false, false, bNoCache);
+		pDefender = pPlot->getBestDefender(NO_PLAYER, getOwner(), this, true, false, false, false, bStealth || bNoCache);
 	}
 	else pDefender = pSelectedDefender;
+
 
 	if (!pDefender)
 	{
@@ -3102,37 +3072,30 @@ void CvUnit::updateCombat(bool bQuick, CvUnit* pSelectedDefender, bool bSamePlot
 
 		if (!bSamePlot)
 		{
-			getGroup()->groupMove(pPlot, true, ((canAdvance(pPlot, 0)) ? this : NULL));
+			getGroup()->groupMove(pPlot, true, (canAdvance(pPlot, 0) ? this : NULL));
 		}
-
 		getGroup()->clearMissionQueue();
 
 		/*GC.getGame().logOOSSpecial(10, getID(), getDamage());*/
 		return;
 	}
+	//check if quick combat
+	const bool bQuick = bSamePlot || !isCombatVisible(pDefender);
+
 	const bool bHuman = isHuman();
 	const bool bHumanDefender = pDefender->isHuman();
-
-	//check if quick combat
-	const bool bVisible = !bQuick && !bSamePlot && isCombatVisible(pDefender);
-
-	//FAssertMsg((pPlot == pDefender->plot()), "There is not expected to be a defender or the defender's plot is expected to be pPlot (the attack plot)");
 
 	const PlayerTypes eAttacker = getVisualOwner(pDefender->getTeam());
 	const PlayerTypes eDefender = pDefender->getVisualOwner(getTeam());
 
 	//if not finished and not fighting yet, set up combat damage and mission
+	CvUnit* firstAttacker = NULL;
 	if (!bFinish)
 	{
 		if (!isInBattle())
 		{
 			PROFILE("CvUnit::updateCombat.StartFight");
 
-			if (!bStealth && (plot()->isBattle() || pPlot->isBattle()))
-			{
-				/*GC.getGame().logOOSSpecial(11, getID(), getDamage());*/
-				return;
-			}
 			//TB Combat Mods (Att&DefCounters)
 			if (getRoundCount() > 0)
 			{
@@ -3164,7 +3127,6 @@ void CvUnit::updateCombat(bool bQuick, CvUnit* pSelectedDefender, bool bSamePlot
 			const bool bStealthAttack = isInvisible(GET_PLAYER(pDefender->getOwner()).getTeam(), false, false) || pDefender->plot() == plot();
 			if (bStealthAttack)
 			{
-
 				if (bHuman)
 				{
 					AddDLLMessage(
@@ -3216,14 +3178,21 @@ void CvUnit::updateCombat(bool bQuick, CvUnit* pSelectedDefender, bool bSamePlot
 				setMadeAttack(true);
 			}
 			setCombatUnit(pDefender, true, bStealthAttack, bStealthDefense);
+
+			firstAttacker = pDefender->getCombatUnit();
+
 			pDefender->setCombatUnit(this, false, bStealthAttack, bStealthDefense);
 			//TB Combat Mods (Att&DefCounters)
 			pDefender->changeDefenseCount(1);
 			//TB Combat Mods end
 
-			pDefender->getGroup()->clearMissionQueue();
+			if (!firstAttacker)
+			{
+				pDefender->getGroup()->clearMissionQueue();
+			}
 
-			if (bVisible
+			if (!bQuick
+			&& !firstAttacker
 			&& isCombatFocus()
 			&& gDLL->getInterfaceIFace()->isCombatFocus()
 			&& plot()->isInViewport()
@@ -3241,7 +3210,6 @@ void CvUnit::updateCombat(bool bQuick, CvUnit* pSelectedDefender, bool bSamePlot
 			}
 			else if (bHumanDefender)
 			{
-
 				if (BARBARIAN_PLAYER != eAttacker)
 				{
 					AddDLLMessage(
@@ -3278,13 +3246,13 @@ void CvUnit::updateCombat(bool bQuick, CvUnit* pSelectedDefender, bool bSamePlot
 				}
 			}
 		}
-		FAssertMsg(pDefender != NULL, "Defender is not assigned a valid value");
+		FAssertMsg(pDefender, "Defender is not assigned a valid value");
 		FAssertMsg(plot()->isBattle(), "Current unit instance plot is not fighting as expected");
 		FAssertMsg(pPlot->isBattle(), "pPlot is not fighting as expected");
 
 		if (!pDefender->canDefend())
 		{
-			if (bVisible)
+			if (!bQuick)
 			{
 				addMission(CvMissionDefinition(MISSION_SURRENDER, pPlot, this, pDefender, getCombatTimer() * gDLL->getSecsPerTurn()));
 
@@ -3316,32 +3284,9 @@ void CvUnit::updateCombat(bool bQuick, CvUnit* pSelectedDefender, bool bSamePlot
 
 			resolveCombat(pDefender, pPlot, kBattle, bSamePlot);
 
-			if (!bVisible)
+			if (bQuick)
 			{
-				if (bHuman)
-				{
-					//	Hack to make quick offensive option not switch away from
-					//	the stack.  It appears to be a bug in the main game engine
-					//	in that it ALWAYS switches away unles you complete the combat
-					//	in a timer update call rather than directly here, so fake up
-					//	a pseudo-combat round to perform delayed completion (but without
-					//	animation, so no battle setup) via the unit timer
-					setCombatTimer(1);
-
-					GC.getGame().incrementTurnTimer(getCombatTimer());
-					//TB: This is a fix for (standard bts) stack attack.  This 'hack' works as described above but if you have stack attack on,
-					//it causes a situation where the tile is still considered to be in the middle of a battle after the battle has ended.
-					//This will in effect disable stack attack and force each attack to be instructed individually as if the option was off.
-					//Therefore, the bQuick definition that the groupAttack sends when the attack is one among a sequence
-					//was modified to only send false IF it was the LAST attack in the stack attack sequence while
-					//this section was modified to ONLY turn bFinish true on quick attack if it is the last attack in the sequence, when,
-					//at that point it is safe to process as the finish of the battle.
-					if (bQuick || !GET_PLAYER(getOwner()).isOption(PLAYEROPTION_QUICK_ATTACK))//TBFLAG
-					{
-						bFinish = true;
-					}
-				}
-				else bFinish = true;
+				bFinish = true;
 			}
 			else
 			{
@@ -3365,10 +3310,12 @@ void CvUnit::updateCombat(bool bQuick, CvUnit* pSelectedDefender, bool bSamePlot
 
 				const int iTurns = planBattle(kBattle);
 				kBattle.setMissionTime(iTurns * gDLL->getSecsPerTurn());
-				setCombatTimer(iTurns);
-				//TB Debug: Without plot set, this routine ended up causing a crash at addMission below.
 
-				GC.getGame().incrementTurnTimer(getCombatTimer());
+				setCombatTimer(firstAttacker ? std::max(firstAttacker->getCombatTimer() + 1, iTurns) : iTurns);
+
+				GC.getGame().incrementTurnTimer(iTurns);
+
+				//TB Debug: Without plot set, this routine ended up causing a crash at addMission below.
 
 				if (pPlot->isActiveVisible(false) && !pDefender->isUsingDummyEntities())
 				{
@@ -3378,7 +3325,7 @@ void CvUnit::updateCombat(bool bQuick, CvUnit* pSelectedDefender, bool bSamePlot
 				}
 			}
 		}
-		else bFinish = true;	//Attacker died before it could even engage
+		else bFinish = true; //Attacker died before it could even engage
 	}
 
 	if (bFinish)
@@ -3393,7 +3340,9 @@ void CvUnit::updateCombat(bool bQuick, CvUnit* pSelectedDefender, bool bSamePlot
 			ClearSupports();
 		}
 #endif // STRENGTH_IN_NUMBERS
-		if (bVisible && isCombatFocus() && gDLL->getInterfaceIFace()->isCombatFocus() && getOwner() == GC.getGame().getActivePlayer())
+		const bool bCombatFinished = bQuick || !getGroup()->isCombat(this);
+
+		if (!bQuick && bCombatFinished && getOwner() == GC.getGame().getActivePlayer())
 		{
 			gDLL->getInterfaceIFace()->releaseLockedCamera();
 		}
@@ -3712,6 +3661,11 @@ void CvUnit::updateCombat(bool bQuick, CvUnit* pSelectedDefender, bool bSamePlot
 		setAttackPlot(NULL, false);
 		setCombatUnit(NULL);
 		pDefender->setCombatUnit(NULL);
+
+		if (!bCombatFinished)
+		{
+			gDLL->getInterfaceIFace()->setCombatFocus(true);
+		}
 		NotifyEntity(MISSION_DAMAGE);
 		pDefender->NotifyEntity(MISSION_DAMAGE);
 
@@ -4403,7 +4357,7 @@ void CvUnit::updateCombat(bool bQuick, CvUnit* pSelectedDefender, bool bSamePlot
 					bSamePlot = true;
 				}
 				//TB debug attempt: added && pDefender->plot() == pPlot to try to allow units to move in when one defender on the plot withdrew.
-				const bool bAdvance = !bSamePlot && canAdvance(pPlot, (pDefender->canDefend() && !pDefender->isDead() && pDefender->plot() == pPlot) ? 1 : 0);
+				const bool bAdvance = !bSamePlot && canAdvance(pPlot, pDefender->canDefend() && !pDefender->isDead() && pDefender->plot() == pPlot);
 
 				//TBMaybeproblem - should this come before the generation of the captive which takes place above at the add outcome step?
 				if (bAdvance && !isNoCapture())
@@ -4422,13 +4376,9 @@ void CvUnit::updateCombat(bool bQuick, CvUnit* pSelectedDefender, bool bSamePlot
 				if (m_combatResult.bAttackerStampedes || m_combatResult.bAttackerOnslaught)
 				{
 					getGroup()->clearMissionQueue();
-					attack(pPlot, true);
+					attack(pPlot);
 				}
-				if (bAdvance && getGroup() != NULL)
-				{
-					PROFILE("CvUnit::updateCombat.Advance");
-					getGroup()->groupMove(pPlot, true, this);
-				}
+				if (bAdvance && bCombatFinished) getGroup()->groupMove(pPlot, true, this);
 			}
 			//TB Combat Mods End
 
@@ -4504,7 +4454,7 @@ void CvUnit::updateCombat(bool bQuick, CvUnit* pSelectedDefender, bool bSamePlot
 				if (m_combatResult.bAttackerStampedes || m_combatResult.bAttackerOnslaught)
 				{
 					getGroup()->clearMissionQueue();
-					attack(pPlot,true);
+					attack(pPlot);
 				}
 				else
 				{
@@ -4525,7 +4475,7 @@ void CvUnit::updateCombat(bool bQuick, CvUnit* pSelectedDefender, bool bSamePlot
 				//TB Combat Mod end
 			}
 
-			if (m_combatResult.pPlot != NULL && !bSamePlot)
+			if (m_combatResult.pPlot && !bSamePlot)
 			{
 				FAssertMsg(m_combatResult.pPlot != plot(), "Can't escape back to attacker plot");
 				FAssertMsg(m_combatResult.pPlot != pDefender->plot(), "Can't escape back to own plot");
@@ -4538,7 +4488,7 @@ void CvUnit::updateCombat(bool bQuick, CvUnit* pSelectedDefender, bool bSamePlot
 				if (m_combatResult.bAttackerStampedes || m_combatResult.bAttackerOnslaught)
 				{
 					getGroup()->clearMissionQueue();
-					attack(pPlot,true);
+					attack(pPlot);
 				}
 				else
 				{
@@ -4719,7 +4669,7 @@ void CvUnit::updateCombat(bool bQuick, CvUnit* pSelectedDefender, bool bSamePlot
 					changeMoves(std::max(GC.getMOVE_DENOMINATOR(), pPlot->movementCost(this, plot())));
 				}
 			}
-			else attack(pPlot, true); //TB Combat Mod (Stampede)
+			else attack(pPlot); //TB Combat Mod (Stampede)
 		}
 		else if (m_combatResult.bDefenderKnockedBack)
 		{
@@ -4913,10 +4863,10 @@ void CvUnit::updateCombat(bool bQuick, CvUnit* pSelectedDefender, bool bSamePlot
 			{
 				//TB Combat Mod (Stampede)
 				getGroup()->clearMissionQueue();
-				attack(pPlot,true);
+				attack(pPlot);
 			}
 
-			if (getGroup() != NULL)
+			if (getGroup())
 			{
 				if (pPlot->getNumVisiblePotentialEnemyDefenders(this) == 0)
 				{
@@ -4970,11 +4920,11 @@ void CvUnit::updateCombat(bool bQuick, CvUnit* pSelectedDefender, bool bSamePlot
 						"AS2D_THEIR_WITHDRAWL", MESSAGE_TYPE_INFO, NULL, GC.getCOLOR_YELLOW(), pPlot->getX(), pPlot->getY()
 					);
 				}
-				if (getGroup() != NULL)
+				if (getGroup())
 				{
 					getGroup()->clearMissionQueue();
 				}
-				attack(pPlot,true);
+				attack(pPlot);
 			}
 			else if (m_combatResult.bAttackerOnslaught)
 			{
@@ -4994,11 +4944,11 @@ void CvUnit::updateCombat(bool bQuick, CvUnit* pSelectedDefender, bool bSamePlot
 						"AS2D_THEIR_WITHDRAWL", MESSAGE_TYPE_INFO, NULL, GC.getCOLOR_YELLOW(), pPlot->getX(), pPlot->getY()
 					);
 				}
-				if (getGroup() != NULL)
+				if (getGroup())
 				{
 					getGroup()->clearMissionQueue();
 				}
-				attack(pPlot, true);
+				attack(pPlot);
 			}
 		}
 		else if (!bStealthDefense)
@@ -5006,16 +4956,9 @@ void CvUnit::updateCombat(bool bQuick, CvUnit* pSelectedDefender, bool bSamePlot
 			changeMoves(std::max(GC.getMOVE_DENOMINATOR(), pPlot->movementCost(this, plot())));
 		}
 
-		if (IsSelected() && !canMove())
+		if (bQuick && IsSelected() && !canMove())
 		{
-			if (gDLL->getInterfaceIFace()->getLengthSelectionList() > 1)
-			{
-				gDLL->getInterfaceIFace()->removeFromSelectionList(this);
-			}
-			else if (bSamePlot)
-			{
-				GC.getGame().updateSelectionListInternal();
-			}
+			gDLL->getInterfaceIFace()->removeFromSelectionList(this);
 		}
 	}
 }
@@ -6286,7 +6229,7 @@ bool CvUnit::canMoveThrough(const CvPlot* pPlot, bool bDeclareWar) const
 	return canEnterPlot(pPlot, (bDeclareWar ? MoveCheck::DeclareWar : MoveCheck::None) | MoveCheck::IgnoreLoad);
 }
 
-void CvUnit::attack(CvPlot* pPlot, bool bQuick, bool bStealth, bool bNoCache)
+void CvUnit::attack(CvPlot* pPlot, bool bStealth, bool bNoCache)
 {
 	PROFILE_FUNC();
 	FAssert(plot() == pPlot || bStealth || bNoCache || canEnterPlot(pPlot, MoveCheck::Attack));
@@ -6303,7 +6246,7 @@ void CvUnit::attack(CvPlot* pPlot, bool bQuick, bool bStealth, bool bNoCache)
 		// Reveals the unit if true
 		&& pPlot->hasStealthDefender(this, true))
 		{
-			attack(pPlot, true, true);
+			attack(pPlot, true);
 		}
 #ifdef STRENGTH_IN_NUMBERS
 		CvPlot* aPlot = plot();
@@ -6316,7 +6259,7 @@ void CvUnit::attack(CvPlot* pPlot, bool bQuick, bool bStealth, bool bNoCache)
 		setAttackPlot(pPlot, false);
 
 		FAssertMsg(pPlot != plot(), "We are passing in false for bSamePlot so why are we on the same plot? (This is here to confirm if the bSamePlot parameter actually means what it says or not, we might remove the parameter or rename it if the assert is hit)");
-		updateCombat(bQuick, 0, false, bStealth, bNoCache);
+		updateCombat(NULL, false, bStealth, bNoCache);
 	}
 }
 
@@ -8901,7 +8844,7 @@ bool CvUnit::pillage(const bool bAutoPillage)
 
 			int iWithdrawal = withdrawalProbability();
 			changeExtraWithdrawal(-iWithdrawal); // no withdrawal since we are really the defender
-			attack(pInterceptor->plot(), false);
+			attack(pInterceptor->plot());
 			changeExtraWithdrawal(iWithdrawal);
 
 			return false;
@@ -12104,42 +12047,23 @@ int CvUnit::maxMoves() const
 {
 	PROFILE_FUNC();
 
-	if ( m_iMaxMoveCacheTurn != GC.getGame().getGameTurn() )
+	if (m_iMaxMoveCacheTurn != GC.getGame().getGameTurn())
 	{
 		m_maxMoveCache = (baseMoves() * GC.getMOVE_DENOMINATOR());
 		m_iMaxMoveCacheTurn = GC.getGame().getGameTurn();
 	}
-
 	return m_maxMoveCache;
 }
 
-
 int CvUnit::movesLeft() const
 {
-	return std::max(0, (maxMoves() - getMoves()));
+	return std::max(0, maxMoves() - getMoves());
 }
-
 
 bool CvUnit::canMove() const
 {
-	if (isDead())
-	{
-		return false;
-	}
-
-	if (getMoves() >= maxMoves())
-	{
-		return false;
-	}
-
-	if (getImmobileTimer() > 0)
-	{
-		return false;
-	}
-
-	return true;
+	return !isDead() && getMoves() < maxMoves() && getImmobileTimer() < 1;
 }
-
 
 bool CvUnit::hasMoved()	const
 {
@@ -15428,7 +15352,7 @@ void CvUnit::setXY(int iX, int iY, bool bGroup, bool bUpdate, bool bShow, bool b
 				{
 					while (pNewPlot->hasStealthDefender(this, true)) // Reveals the unit if true
 					{
-						attack(pNewPlot, true, true);
+						attack(pNewPlot, true);
 
 						if (isDead() || at(iX, iY))
 						{
@@ -15438,7 +15362,7 @@ void CvUnit::setXY(int iX, int iY, bool bGroup, bool bUpdate, bool bShow, bool b
 				}
 				else if (pNewPlot->getBestDefender(NO_PLAYER, eMyPlayer, this, true, true, false, false, true))
 				{
-					attack(pNewPlot, true, false, true);
+					attack(pNewPlot, false, true);
 
 					if (isDead() || at(iX, iY))
 					{
@@ -16467,7 +16391,7 @@ void CvUnit::setAttackPlot(const CvPlot* pNewValue, bool bAirCombat)
 {
 	if (getAttackPlot() != pNewValue)
 	{
-		if (pNewValue != NULL)
+		if (pNewValue)
 		{
 			m_iAttackPlotX = pNewValue->getX();
 			m_iAttackPlotY = pNewValue->getY();
@@ -18383,7 +18307,7 @@ int CvUnit::getImmobileTimer() const
 
 void CvUnit::setImmobileTimer(int iNewValue)
 {
-	if (iNewValue != getImmobileTimer())
+	if (iNewValue != m_iImmobileTimer)
 	{
 		m_iImmobileTimer = iNewValue;
 
@@ -18395,7 +18319,7 @@ void CvUnit::changeImmobileTimer(int iChange)
 {
 	if (iChange != 0)
 	{
-		setImmobileTimer(std::max(0, getImmobileTimer() + iChange));
+		setImmobileTimer(std::max(0, m_iImmobileTimer + iChange));
 	}
 }
 
@@ -18750,7 +18674,7 @@ void CvUnit::setCombatUnit(CvUnit* pCombatUnit, bool bAttacking, bool bStealthAt
 		gDLL->getInterfaceIFace()->setCombatFocus(false);
 	}
 
-	if (pCombatUnit != NULL)
+	if (pCombatUnit)
 	{
 		if (bAttacking)
 		{
@@ -18783,8 +18707,6 @@ void CvUnit::setCombatUnit(CvUnit* pCombatUnit, bool bAttacking, bool bStealthAt
 		}
 		else setCombatFirstStrikes((pCombatUnit->immuneToFirstStrikes()) ? 0 : (firstStrikes() + GC.getGame().getSorenRandNum(chanceFirstStrikes() + 1, "First Strike")));
 
-		FAssertMsg(getCombatUnit() == NULL, "Combat Unit is not expected to be assigned");
-
 		m_bCombatFocus = (bAttacking && !(gDLL->getInterfaceIFace()->isFocusedWidget()) && ((getOwner() == GC.getGame().getActivePlayer()) || ((pCombatUnit->getOwner() == GC.getGame().getActivePlayer()) && !(GC.getGame().isMPOption(MPOPTION_SIMULTANEOUS_TURNS)))));
 		m_combatUnit = pCombatUnit->getIDInfo();
 
@@ -18808,9 +18730,8 @@ void CvUnit::setCombatUnit(CvUnit* pCombatUnit, bool bAttacking, bool bStealthAt
 		setCombatStuns(0);
 		//TB Combat Mod end
 	}
-	else if (getCombatUnit() != NULL)
+	else if (getCombatUnit())
 	{
-		FAssertMsg(getCombatUnit() != NULL, "getCombatUnit() is not expected to be equal with NULL");
 		m_bCombatFocus = false;
 		m_combatUnit.reset();
 		setCombatFirstStrikes(0);
@@ -18836,8 +18757,6 @@ void CvUnit::setCombatUnit(CvUnit* pCombatUnit, bool bAttacking, bool bStealthAt
 			CvDLLEntity::SetSiegeTower(false);
 		}
 	}
-
-	setCombatTimer(0);
 	setInfoBarDirty(true);
 
 	if (isCombatFocus())
@@ -24930,8 +24849,12 @@ int CvUnit::computeWaveSize( bool bRangedRound, int iAttackerMax, int iDefenderM
 
 	aiDesiredSize[BATTLE_UNIT_DEFENDER] = aiDesiredSize[BATTLE_UNIT_DEFENDER] <= 0 ? iDefenderMax : aiDesiredSize[BATTLE_UNIT_DEFENDER];
 	aiDesiredSize[BATTLE_UNIT_ATTACKER] = aiDesiredSize[BATTLE_UNIT_ATTACKER] <= 0 ? iDefenderMax : aiDesiredSize[BATTLE_UNIT_ATTACKER];
-	return std::min( std::min( aiDesiredSize[BATTLE_UNIT_ATTACKER], iAttackerMax ), std::min( aiDesiredSize[BATTLE_UNIT_DEFENDER],
-		iDefenderMax) );
+	return (
+		std::min(
+			std::min(aiDesiredSize[BATTLE_UNIT_ATTACKER], iAttackerMax),
+			std::min(aiDesiredSize[BATTLE_UNIT_DEFENDER], iDefenderMax)
+		)
+	);
 }
 
 bool CvUnit::isTargetOf(const CvUnit& attacker) const
@@ -37013,7 +36936,7 @@ void CvUnit::attackSamePlotSpecifiedUnit(CvUnit* pSelectedDefender)
 	CvPlot* pPlot = plot();
 	setAttackPlot(pPlot, false);
 
-	updateCombat(true, pSelectedDefender, true);
+	updateCombat(pSelectedDefender, true);
 }
 
 bool CvUnit::canArrest() const

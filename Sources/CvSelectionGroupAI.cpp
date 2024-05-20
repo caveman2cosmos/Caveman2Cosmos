@@ -198,7 +198,7 @@ bool CvSelectionGroupAI::AI_update()
 		{
 			CvUnit* pHeadUnit = getHeadUnit();
 
-			if (pHeadUnit == NULL || pHeadUnit->isDelayedDeath())
+			if (!pHeadUnit || pHeadUnit->isDelayedDeath())
 			{
 				break;
 			}
@@ -395,7 +395,7 @@ int CvSelectionGroupAI::AI_attackOdds(const CvPlot* pPlot, bool bPotentialEnemy,
 		do
 		{
 			int iOdds = 0;
-			pAttacker = AI_getBestGroupAttacker(pPlot, bPotentialEnemy, iOdds, bForce, false, &pDefender);
+			pAttacker = AI_getBestGroupAttacker(pPlot, bPotentialEnemy, iOdds, bForce, &pDefender);
 
 			if ( pDefender != NULL && pAttacker != NULL )
 			{
@@ -588,7 +588,16 @@ static bool isClearlySuperior(CvUnit* pUnit, CvUnit* pOtherUnit, const CvPlot* p
 	return iTotalCombatMods >= iOtherTotalCombatMods;
 }
 
-CvUnit* CvSelectionGroupAI::AI_getBestGroupAttacker(const CvPlot* pPlot, bool bPotentialEnemy, int& iUnitOdds, bool bForce, bool bNoBlitz, CvUnit** ppDefender, bool bAssassinate, bool bSuprise) const
+CvUnit* CvSelectionGroupAI::AI_getBestGroupAttacker(
+	const CvPlot* pPlot,
+	bool bPotentialEnemy,
+	int& iUnitOdds,
+	bool bForce,
+	CvUnit** ppDefender,
+	bool bAssassinate,
+	bool bSuprise,
+	bool bIgnoreMadeAttack,
+	const std::set<int>& ignoreUnitID) const
 {
 	PROFILE_FUNC();
 
@@ -606,48 +615,64 @@ CvUnit* CvSelectionGroupAI::AI_getBestGroupAttacker(const CvPlot* pPlot, bool bP
 
 	foreach_(CvUnit* unitX, units())
 	{
-		if (unitX->isDead() || pBestUnit != NULL && isClearlySuperior(pBestUnit, unitX, pPlot))
+		if (unitX->isDead()
+		|| ignoreUnitID.find(unitX->getID()) != ignoreUnitID.end()
+		|| pBestUnit && isClearlySuperior(pBestUnit, unitX, pPlot))
 		{
 			continue;
 		}
-		if (unitX->getDomainType() == DOMAIN_AIR ? unitX->canAirAttack() : unitX->canAttack() && (!bNoBlitz || !unitX->isBlitz() || !unitX->isMadeAttack()))
+		if (
+			(
+				unitX->getDomainType() == DOMAIN_AIR
+				?
+				unitX->canAirAttack()
+				:
+				unitX->canAttack()
+				&&
+				(
+					bIgnoreMadeAttack
+					||
+					unitX->isBlitz()
+					||
+					!unitX->isMadeAttack()
+				)
+			)
+		&& (bSuprise || !unitX->AI_getHasAttacked())
+		&& (bForce || unitX->canMove()))
 		{
-			if ((!unitX->AI_getHasAttacked() || bSuprise) && (bForce || unitX->canMove()))
+			CvUnit* pBestDefender = NULL;
+			if (bForce || unitX->canEnterPlot(pPlot, moveCheckFlags, &pBestDefender))
 			{
-				CvUnit* pBestDefender = NULL;
-				if (bForce || unitX->canEnterPlot(pPlot, moveCheckFlags, &pBestDefender))
+				PROFILE("AI_getBestGroupAttacker.RegularAttackOdds");
+
+				const int iOdds =
+				(
+					pBestDefender
+					?
+					unitX->AI_attackOddsAtPlot(pPlot, (CvUnitAI*)pBestDefender)
+					:
+					unitX->AI_attackOdds(pPlot, bPotentialEnemy, 0, bAssassinate)
+				);
+				int iValue = iOdds;
+				FAssertMsg(iValue > 0, "iValue is expected to be greater than 0");
+
+				if (unitX->collateralDamage() > 0)
 				{
-					PROFILE("AI_getBestGroupAttacker.RegularAttackOdds");
+					const int iPossibleTargets = std::min((pPlot->getNumVisiblePotentialEnemyDefenders(unitX) - 1), unitX->collateralDamageMaxUnits());
 
-					const int iOdds =
-					(
-						pBestDefender
-						?
-						unitX->AI_attackOddsAtPlot(pPlot, (CvUnitAI*)pBestDefender)
-						:
-						unitX->AI_attackOdds(pPlot, bPotentialEnemy, 0, bAssassinate)
-					);
-					int iValue = iOdds;
-					FAssertMsg(iValue > 0, "iValue is expected to be greater than 0");
-
-					if (unitX->collateralDamage() > 0)
+					if (iPossibleTargets > 0)
 					{
-						const int iPossibleTargets = std::min((pPlot->getNumVisiblePotentialEnemyDefenders(unitX) - 1), unitX->collateralDamageMaxUnits());
-
-						if (iPossibleTargets > 0)
-						{
-							iValue *= (100 + ((unitX->collateralDamage() * iPossibleTargets) / 5));
-							iValue /= 100;
-						}
+						iValue *= (100 + ((unitX->collateralDamage() * iPossibleTargets) / 5));
+						iValue /= 100;
 					}
+				}
 
-					// if non-human, prefer the last unit that has the best value (so as to avoid splitting the group)
-					if (iValue > iBestValue || (!bIsHuman && iValue > 0 && iValue == iBestValue))
-					{
-						iBestValue = iValue;
-						iBestOdds = iOdds;
-						pBestUnit = unitX;
-					}
+				// if non-human, prefer the last unit that has the best value (so as to avoid splitting the group)
+				if (iValue > iBestValue || (!bIsHuman && iValue > 0 && iValue == iBestValue))
+				{
+					iBestValue = iValue;
+					iBestOdds = iOdds;
+					pBestUnit = unitX;
 				}
 			}
 		}
@@ -676,7 +701,15 @@ CvUnit* CvSelectionGroupAI::AI_getBestGroupSacrifice(const CvPlot* pPlot, bool b
 	foreach_(CvUnit* unitX, units())
 	{
 		if (!unitX->isDead()
-		&& (unitX->getDomainType() == DOMAIN_AIR ? unitX->canAirAttack() : unitX->canAttack() && (!bNoBlitz || !unitX->isBlitz() || !unitX->isMadeAttack()))
+		&& (
+				unitX->getDomainType() == DOMAIN_AIR
+				?
+				unitX->canAirAttack()
+				:
+				unitX->canAttack()
+				&&
+				(bNoBlitz ? !unitX->isMadeAttack() : unitX->isBlitz() || !unitX->isMadeAttack())
+			)
 		&& (bForce || unitX->canMove() && unitX->canEnterPlot(pPlot, MoveCheck::Attack)))
 		{
 			const int iValue = unitX->AI_sacrificeValue(pPlot);
