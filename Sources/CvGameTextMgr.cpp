@@ -3991,13 +3991,13 @@ bool CvGameTextMgr::setCombatPlotHelp(CvWStringBuffer& szString, CvPlot* pPlot, 
 	}
 	if (!pAttacker)
 	{
-		const bool bCanAttackNow = group->canAttackNow();
+		const bool bIgnoreMadeAttack = !group->canAttackNow();
 		int iOdds;
-		pAttacker = group->AI_getBestGroupAttacker(pPlot, false, iOdds, false, bCanAttackNow, 0, bAssassinate);
+		pAttacker = group->AI_getBestGroupAttacker(pPlot, false, iOdds, false, NULL, bAssassinate, false, bIgnoreMadeAttack);
 
 		if (!pAttacker)
 		{
-			pAttacker = group->AI_getBestGroupAttacker(pPlot, false, iOdds, true, bCanAttackNow, 0, bAssassinate);
+			pAttacker = group->AI_getBestGroupAttacker(pPlot, false, iOdds, true, NULL, bAssassinate, false, bIgnoreMadeAttack);
 		}
 	}
 

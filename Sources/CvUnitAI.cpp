@@ -16658,7 +16658,7 @@ bool CvUnitAI::exposedToDanger(const CvPlot* pPlot, int acceptableOdds, bool bCo
 			int dummy;
 			pOurAttacker = getGroup()->AI_getBestGroupAttacker(pPlot, true, dummy);
 
-			if (pOurAttacker == NULL)
+			if (!pOurAttacker)
 			{
 				//	We cannot attack here
 				return true;
