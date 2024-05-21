@@ -1978,6 +1978,7 @@ bool CvSelectionGroup::continueMission(int iSteps)
 		}
 		missionNode = headMissionQueueNode();
 		FAssert(getHeadUnit());
+		FAssert(getNumUnits() > 0);
 		OutputDebugString(CvString::format("%S continueMission %d after attack...\n", getHeadUnit() ? getHeadUnit()->getDescription().c_str() : L"Empty group", missionNode == NULL ? -1 : missionNode->m_data.eMissionType).c_str());
 
 		// extra crash protection, should never happen (but a previous bug in groupAttack was causing a NULL here)
