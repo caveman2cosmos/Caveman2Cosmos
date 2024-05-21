@@ -25083,48 +25083,52 @@ bool CvUnitAI::AI_moveIntoCity(int iRange, bool bOpponentOnly)
 	{
 		return false;
 	}
-	const int iSearchRange = AI_searchRange(iRange);
-
-	int iBestValue = 0;
 	const CvPlot* pBestPlot = NULL;
-	const CvPlot* pBestCityPlot = NULL;
-
-	foreach_(const CvPlot * plotX, plot()->rect(iSearchRange, iSearchRange))
 	{
-		int iPathTurns = 0;
-		if (plotX->isCity(true)
-		&& AI_plotValid(plotX)
-		&& (!bOpponentOnly || isEnemy(plotX->getTeam(), plotX))
-		&& canEnterPlot(plotX)
-		&& generatePath(plotX, 0, true, &iPathTurns, iRange))
+		const int iSearchRange = AI_searchRange(iRange);
+		int iBestValue = 0;
+
+		foreach_(const CvPlot * plotX, plot()->rect(iSearchRange, iSearchRange))
 		{
-			int iValue = 1;
-			if (plotX->getPlotCity())
+			if (!plotX->isCity(true)
+			|| bOpponentOnly && getTeam() == plotX->getTeam()
+			|| !AI_plotValid(plotX)
+			|| !canEnterPlot(plotX))
 			{
-				iValue += plotX->getPlotCity()->getPopulation();
-				if (bOpponentOnly)
+				continue;
+			}
+			int iPathTurns = 0;
+			if (generatePath(plotX, 0, true, &iPathTurns, iRange))
+			{
+				int iValue = 100;
+
+				if (plotX->getPlotCity()) // Could be a fort
 				{
-					iValue *= -GET_TEAM(getTeam()).AI_getAttitudeWeight(plotX->getTeam());
+					iValue += 3 * plotX->getPlotCity()->getPopulation();
 				}
+
+				if (bOpponentOnly && !plotX->isNPC())
+				{
+					iValue -= 9 * GET_TEAM(getTeam()).AI_getAttitudeWeight(plotX->getTeam());
+				}
+
 				//Reduce by amount of turns to get there
 				if (iPathTurns > 0)
 				{
-					iValue /= 1 + iPathTurns;
+					iValue = iValue / (1 + iPathTurns);
 				}
-			}
-			if (iValue > iBestValue)
-			{
-				iBestValue = iValue;
-				pBestPlot = getPathEndTurnPlot();
-				pBestCityPlot = plotX;
-				FAssert(!atPlot(pBestPlot));
+
+				if (iValue > iBestValue)
+				{
+					iBestValue = iValue;
+					pBestPlot = getPathEndTurnPlot();
+					FAssert(!atPlot(pBestPlot));
+				}
 			}
 		}
 	}
-
 	if (pBestPlot)
 	{
-		FAssert(!atPlot(pBestCityPlot));
 		return getGroup()->pushMissionInternal(MISSION_MOVE_TO, pBestPlot->getX(), pBestPlot->getY());
 	}
 	return false;

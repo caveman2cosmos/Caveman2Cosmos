@@ -11977,11 +11977,9 @@ void CvPlayer::setTurnActive(bool bNewValue, bool bDoTurn)
 {
 	PROFILE_FUNC();
 
-
 	if (m_bTurnActive != bNewValue)
 	{
 		m_bTurnActive = bNewValue;
-
 
 		if (bNewValue)
 		{
@@ -12181,9 +12179,6 @@ void CvPlayer::setTurnActive(bool bNewValue, bool bDoTurn)
 			if (bDoTurn)
 			{
 				PROFILE("CvPlayer::setTurnActive.SetActive.doTurn");
-
-				//m_contractBroker.reset();
-
 
 				// cleans up contractbroker, and finished contracts
 				m_contractBroker.cleanup();
