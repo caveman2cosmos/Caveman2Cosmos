@@ -87,6 +87,10 @@ void CvContractBroker::cleanup()
 void CvContractBroker::init(PlayerTypes eOwner)
 {
 	m_eOwner = eOwner;
+	// Toffer:
+	// Needed for contract broker logging to not CTD for the human player when loading saves.
+	cleanup(); // especially when using AI autoplay right after loading a save.
+	// Should really store contract broker data in saves as it is used by human player automated units.
 }
 
 
