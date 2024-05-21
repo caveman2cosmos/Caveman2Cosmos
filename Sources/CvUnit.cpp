@@ -2169,9 +2169,6 @@ void CvUnit::updateAirCombat(bool bQuick)
 	{
 		setAttackPlot(NULL, false);
 		setCombatUnit(NULL);
-
-		getGroup()->clearMissionQueue();
-
 		return;
 	}
 
@@ -3074,8 +3071,6 @@ void CvUnit::updateCombat(CvUnit* pSelectedDefender, bool bSamePlot, bool bSteal
 		{
 			getGroup()->groupMove(pPlot, true, (canAdvance(pPlot, 0) ? this : NULL));
 		}
-		getGroup()->clearMissionQueue();
-
 		/*GC.getGame().logOOSSpecial(10, getID(), getDamage());*/
 		return;
 	}
@@ -4375,7 +4370,6 @@ void CvUnit::updateCombat(CvUnit* pSelectedDefender, bool bSamePlot, bool bSteal
 				}
 				if (m_combatResult.bAttackerStampedes || m_combatResult.bAttackerOnslaught)
 				{
-					getGroup()->clearMissionQueue();
 					attack(pPlot);
 				}
 				if (bAdvance && bCombatFinished) getGroup()->groupMove(pPlot, true, this);
@@ -4453,7 +4447,6 @@ void CvUnit::updateCombat(CvUnit* pSelectedDefender, bool bSamePlot, bool bSteal
 				//TB Combat Mod (Stampede)
 				if (m_combatResult.bAttackerStampedes || m_combatResult.bAttackerOnslaught)
 				{
-					getGroup()->clearMissionQueue();
 					attack(pPlot);
 				}
 				else
@@ -4487,28 +4480,24 @@ void CvUnit::updateCombat(CvUnit* pSelectedDefender, bool bSamePlot, bool bSteal
 				//TB Combat Mod (Stampede) begin
 				if (m_combatResult.bAttackerStampedes || m_combatResult.bAttackerOnslaught)
 				{
-					getGroup()->clearMissionQueue();
 					attack(pPlot);
 				}
-				else
+				else if (getGroup())
 				{
-					if (getGroup())
+					if (bAdvance && pPlot->getNumVisiblePotentialEnemyDefenders(this) == 0)
 					{
-						if (bAdvance && getGroup() != NULL && pPlot->getNumVisiblePotentialEnemyDefenders(this) == 0)
-						{
-							PROFILE("CvUnit::updateCombat.Advance");
+						PROFILE("CvUnit::updateCombat.Advance");
 
-							getGroup()->groupMove(pPlot, true, ((bAdvance) ? this : NULL));
-						}
-						else if (!bStealthDefense && !m_combatResult.bAttackerStampedes && !m_combatResult.bAttackerOnslaught)
-						{
-							changeMoves(std::max(GC.getMOVE_DENOMINATOR(), pPlot->movementCost(this, plot())));
-						}
+						getGroup()->groupMove(pPlot, true, ((bAdvance) ? this : NULL));
 					}
-					else if (!bStealthDefense)
+					else if (!bStealthDefense && !m_combatResult.bAttackerStampedes && !m_combatResult.bAttackerOnslaught)
 					{
 						changeMoves(std::max(GC.getMOVE_DENOMINATOR(), pPlot->movementCost(this, plot())));
 					}
+				}
+				else if (!bStealthDefense)
+				{
+					changeMoves(std::max(GC.getMOVE_DENOMINATOR(), pPlot->movementCost(this, plot())));
 				}
 			}
 			else if (!bStealthDefense)
@@ -4861,8 +4850,6 @@ void CvUnit::updateCombat(CvUnit* pSelectedDefender, bool bSamePlot, bool bSteal
 			}
 			else if (m_combatResult.bAttackerStampedes || m_combatResult.bAttackerOnslaught)
 			{
-				//TB Combat Mod (Stampede)
-				getGroup()->clearMissionQueue();
 				attack(pPlot);
 			}
 
@@ -4920,10 +4907,6 @@ void CvUnit::updateCombat(CvUnit* pSelectedDefender, bool bSamePlot, bool bSteal
 						"AS2D_THEIR_WITHDRAWL", MESSAGE_TYPE_INFO, NULL, GC.getCOLOR_YELLOW(), pPlot->getX(), pPlot->getY()
 					);
 				}
-				if (getGroup())
-				{
-					getGroup()->clearMissionQueue();
-				}
 				attack(pPlot);
 			}
 			else if (m_combatResult.bAttackerOnslaught)
@@ -4943,10 +4926,6 @@ void CvUnit::updateCombat(CvUnit* pSelectedDefender, bool bSamePlot, bool bSteal
 						gDLL->getText("TXT_KEY_MISC_ENEMY_UNIT_ATTACKER_WITHDRAW_ONSLAUGHT", getNameKey(), pDefender->getNameKey()),
 						"AS2D_THEIR_WITHDRAWL", MESSAGE_TYPE_INFO, NULL, GC.getCOLOR_YELLOW(), pPlot->getX(), pPlot->getY()
 					);
-				}
-				if (getGroup())
-				{
-					getGroup()->clearMissionQueue();
 				}
 				attack(pPlot);
 			}
