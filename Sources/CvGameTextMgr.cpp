@@ -3940,91 +3940,93 @@ namespace {
 bool CvGameTextMgr::setCombatPlotHelp(CvWStringBuffer& szString, CvPlot* pPlot, bool bAssassinate)
 {
 	PROFILE_FUNC();
-	//Note that due to the large amount of extra content added to this function (setCombatPlotHelp), this should never be used in any function that needs to be called repeatedly (e.g. hundreds of times) quickly.
-	//It is fine for a human player mouse-over (which is what it is used for).
-
-	bool ACO_enabled = getBugOptionBOOL("ACO__Enabled", true, "ACO_ENABLED");
-	bool bShift = gDLL->shiftKey();
-	int iView = bShift ? 2 : 1;
-	if (getBugOptionBOOL("ACO__SwapViews", false, "ACO_SWAP_VIEWS"))
-	{
-		iView = 3 - iView; //swaps 1 and 2.
-	}
-
-	bool bTBView = gDLL->ctrlKey();
-	bool bSINView = gDLL->altKey();
-
-	CvWString szTempBuffer2;
-
-	CvUnit* pAttacker;
-	CvUnit* pDefender;
-	CvWString szTempBuffer;
-	CvWString szOffenseOdds;
-	CvWString szDefenseOdds;
-	int iModifier;
-
-	UnitCombatTypes eUnitCombatType;
-	int iI;
 
 	if (gDLL->getInterfaceIFace()->getLengthSelectionList() == 0)
 	{
 		return false;
 	}
+	// Note that due to the large amount of extra content added to this function (setCombatPlotHelp),
+	//	this should never be used in any function that needs to be called repeatedly (e.g. hundreds of times) quickly.
+	// It is fine for a human player mouse-over (which is what it is used for).
+	CvSelectionGroup* group = gDLL->getInterfaceIFace()->getSelectionList();
 
-	bool bValid = false;
-
-	switch (gDLL->getInterfaceIFace()->getSelectionList()->getDomainType())
+	switch (group->getDomainType())
 	{
-	case DOMAIN_SEA:
-		bValid = (pPlot->isWater() || gDLL->getInterfaceIFace()->getSelectionList()->canMoveAllTerrain());
-		break;
-
-	case DOMAIN_AIR:
-		bValid = true;
-		break;
-
-	case DOMAIN_LAND:
-		bValid = (!pPlot->isWater() || pPlot->isSeaTunnel() || gDLL->getInterfaceIFace()->getSelectionList()->canMoveAllTerrain());
-		break;
-
-	case DOMAIN_IMMOBILE:
-		break;
-
-	default:
-		FErrorMsg("error");
-		break;
+		case DOMAIN_SEA:
+		{
+			if (!pPlot->isWater() && !group->canMoveAllTerrain())
+			{
+				return false;
+			}
+			break;
+		}
+		case DOMAIN_AIR:
+		{
+			break;
+		}
+		case DOMAIN_LAND:
+		{
+			if (pPlot->isWater() && !pPlot->isSeaTunnel() && !group->canMoveAllTerrain())
+			{
+				return false;
+			}
+			break;
+		}
+		case DOMAIN_IMMOBILE:
+		{
+			return false;
+		}
+		default:
+		{
+			FErrorMsg("error");
+			return false;
+		}
 	}
 
-	if (!bValid)
-	{
-		return false;
-	}
+	CvUnit* pAttacker;
 
-	int iOdds;
-	const PlayerTypes eAmbushingPlayer = GC.getGame().getActivePlayer();
-	const CvPlayerAI& kAmbushingPlayer = GET_PLAYER(eAmbushingPlayer);
-	CvUnit* pAmbusher = NULL;
-	if (eAmbushingPlayer != NO_PLAYER)
+	if (GC.getGame().getActivePlayer() != NO_PLAYER)
 	{
-		pAmbusher = kAmbushingPlayer.getUnit(kAmbushingPlayer.getAmbushingUnit());
+		pAttacker = GET_PLAYER(GC.getGame().getActivePlayer()).getUnit(GET_PLAYER(GC.getGame().getActivePlayer()).getAmbushingUnit());
 	}
-	if (pAmbusher)
+	if (!pAttacker)
 	{
-		pAttacker = pAmbusher;
-	}
-	else
-	{
-		pAttacker = gDLL->getInterfaceIFace()->getSelectionList()->AI_getBestGroupAttacker(pPlot, false, iOdds, true, false, 0, bAssassinate);
-	}
+		const bool bIgnoreMadeAttack = !group->canAttackNow();
+		int iOdds;
+		pAttacker = group->AI_getBestGroupAttacker(pPlot, false, iOdds, false, NULL, bAssassinate, false, bIgnoreMadeAttack);
 
-	bool bStealthAttack = false;
-	bool bStealthDefense = false;
-	bool bIsSamePlot = false;
+		if (!pAttacker)
+		{
+			pAttacker = group->AI_getBestGroupAttacker(pPlot, false, iOdds, true, NULL, bAssassinate, false, bIgnoreMadeAttack);
+		}
+	}
 
 	if (pAttacker)
 	{
+		int iI;
+		int iModifier;
 
-		pDefender = pPlot->getBestDefender(NO_PLAYER, pAttacker->getOwner(), pAttacker, !gDLL->altKey(), NO_TEAM == pAttacker->getDeclareWarMove(pPlot), false, bAssassinate);
+		CvWString szTempBuffer2;
+		CvWString szTempBuffer;
+		CvWString szOffenseOdds;
+		CvWString szDefenseOdds;
+
+		UnitCombatTypes eUnitCombatType;
+
+		bool bStealthAttack = false;
+		bool bStealthDefense = false;
+		bool bIsSamePlot = false;
+		bool bTBView = gDLL->ctrlKey();
+		bool bSINView = gDLL->altKey();
+
+		int iView = gDLL->shiftKey() ? 2 : 1;
+
+		if (getBugOptionBOOL("ACO__SwapViews", false, "ACO_SWAP_VIEWS"))
+		{
+			iView = 3 - iView; //swaps 1 and 2.
+		}
+
+		CvUnit* pDefender = pPlot->getBestDefender(NO_PLAYER, pAttacker->getOwner(), pAttacker, !gDLL->altKey(), NO_TEAM == pAttacker->getDeclareWarMove(pPlot), false, bAssassinate);
 
 		if (pDefender && pDefender != pAttacker && pDefender->canDefend(pPlot) && pAttacker->canAttack(*pDefender))
 		{
@@ -4112,7 +4114,7 @@ bool CvGameTextMgr::setCombatPlotHelp(CvWStringBuffer& szString, CvPlot* pPlot, 
 						{
 							szTempBuffer.Format(L"%.1f", iCombatOdds / 10.0f);
 						}
-						if (!ACO_enabled || getBugOptionBOOL("ACO__ForceOriginalOdds", false, "ACO_FORCE_ORIGINAL_ODDS"))
+						if (!getBugOptionBOOL("ACO__Enabled", true, "ACO_ENABLED") || getBugOptionBOOL("ACO__ForceOriginalOdds", false, "ACO_FORCE_ORIGINAL_ODDS"))
 						{
 							szString.append(gDLL->getText("TXT_KEY_COMBAT_PLOT_ODDS", szTempBuffer.GetCString()));
 						}
@@ -5172,7 +5174,7 @@ bool CvGameTextMgr::setCombatPlotHelp(CvWStringBuffer& szString, CvPlot* pPlot, 
 							}
 						}
 					}
-					else if (ACO_enabled && !bTBView) // PieceOfMind - ADVANCED COMBAT ODDS - 3/11/09 - v2.0
+					else if (!bTBView && getBugOptionBOOL("ACO__Enabled", true, "ACO_ENABLED")) // PieceOfMind - ADVANCED COMBAT ODDS - 3/11/09 - v2.0
 					{
 						szString.append(NEWLINE);
 
@@ -7563,14 +7565,12 @@ bool CvGameTextMgr::setCombatPlotHelp(CvWStringBuffer& szString, CvPlot* pPlot, 
 
 					if (GC.getGame().isDebugMode())
 					{
-						szTempBuffer.Format(L"\nStack Compare Value = %d",
-							gDLL->getInterfaceIFace()->getSelectionList()->AI_compareStacks(pPlot));
+						szTempBuffer.Format(L"\nStack Compare Value = %d", group->AI_compareStacks(pPlot));
 						szString.append(szTempBuffer);
 
 						if (pPlot->getPlotCity())
 						{
-							szTempBuffer.Format(L"\nBombard turns = %d",
-								gDLL->getInterfaceIFace()->getSelectionList()->getBombardTurns(pPlot->getPlotCity()));
+							szTempBuffer.Format(L"\nBombard turns = %d", group->getBombardTurns(pPlot->getPlotCity()));
 							szString.append(szTempBuffer);
 						}
 

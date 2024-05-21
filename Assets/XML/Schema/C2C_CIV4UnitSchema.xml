@@ -1265,7 +1265,6 @@
 	<ElementType name="bNoBadGoodies" content="textOnly" dt:type="boolean"/>
 	<ElementType name="bOnlyDefensive" content="textOnly" dt:type="boolean"/>
 	<ElementType name="bNoCapture" content="textOnly" dt:type="boolean"/>
-	<ElementType name="bQuickCombat" content="textOnly" dt:type="boolean"/>
 	<ElementType name="bRivalTerritory" content="textOnly" dt:type="boolean"/>
 	<ElementType name="bMilitaryHappiness" content="textOnly" dt:type="boolean"/>
 	<ElementType name="bMilitarySupport" content="textOnly" dt:type="boolean"/>
@@ -1833,7 +1832,6 @@
 		<element type="bNoBadGoodies" minOccurs="0"/>
 		<element type="bOnlyDefensive" minOccurs="0"/>
 		<element type="bNoCapture" minOccurs="0"/>
-		<element type="bQuickCombat" minOccurs="0"/>
 		<element type="bRivalTerritory" minOccurs="0"/>
 		<element type="bMilitaryHappiness" minOccurs="0"/>
 		<element type="bMilitarySupport" minOccurs="0"/>

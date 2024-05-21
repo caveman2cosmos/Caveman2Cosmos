@@ -16658,7 +16658,7 @@ bool CvUnitAI::exposedToDanger(const CvPlot* pPlot, int acceptableOdds, bool bCo
 			int dummy;
 			pOurAttacker = getGroup()->AI_getBestGroupAttacker(pPlot, true, dummy);
 
-			if (pOurAttacker == NULL)
+			if (!pOurAttacker)
 			{
 				//	We cannot attack here
 				return true;
@@ -23179,101 +23179,101 @@ bool CvUnitAI::AI_missileLoad(UnitAITypes eTargetUnitAI, int iMaxOwnUnitAI, bool
 bool CvUnitAI::AI_airStrike()
 {
 	PROFILE_EXTRA_FUNC();
-	//PROFILE_FUNC();
-
-	CvUnit* pDefender;
-	CvUnit* pInterceptor;
-	int iDamage;
-	int iInterceptProb;
 
 	const int iSearchRange = airRange();
 
-	int iBestValue = (isSuicide() && m_pUnitInfo->getProductionCost() > 0) ? (5 * m_pUnitInfo->getProductionCost()) / 6 : 0;
+	int iBestValue = (isSuicide() && m_pUnitInfo->getProductionCost() > 0) ? m_pUnitInfo->getProductionCost() * 5/6 : 0;
 	const CvPlot* pBestPlot = NULL;
 
-	foreach_(const CvPlot * pLoopPlot, plot()->rect(iSearchRange, iSearchRange))
+	foreach_(const CvPlot * plotX, plot()->rect(iSearchRange, iSearchRange))
 	{
-		if (canEnterPlot(pLoopPlot, MoveCheck::Attack))
+		if (!canEnterPlot(plotX, MoveCheck::Attack))
 		{
-			int iValue = 0;
-			int iPotentialAttackers = GET_PLAYER(getOwner()).AI_adjacentPotentialAttackers(pLoopPlot);
-			if (pLoopPlot->isCity())
-			{
-				iPotentialAttackers += GET_PLAYER(getOwner()).AI_plotTargetMissionAIs(pLoopPlot, MISSIONAI_ASSAULT, getGroup(), 1) * 2;
-			}
-			/********************************************************************************/
-			/* 	BETTER_BTS_AI_MOD						10/13/08		jdog5000		*/
-			/* 																			*/
-			/* 	Air AI																	*/
-			/********************************************************************************/
-			/* original BTS code
-			if (pLoopPlot->isWater() || (iPotentialAttackers > 0) || pLoopPlot->isAdjacentTeam(getTeam()))
-			*/
-			// Bombers will always consider striking units adjacent to this team's territory
-			// to soften them up for potential attack.  This situation doesn't apply if this team's adjacent
-			// territory is water, land units won't be able to reach easily for attack
-			if (pLoopPlot->isWater() || (iPotentialAttackers > 0) || pLoopPlot->isAdjacentTeam(getTeam(), true))
-				/********************************************************************************/
-				/* 	BETTER_BTS_AI_MOD						END								*/
-				/********************************************************************************/
-			{
-				pDefender = pLoopPlot->getBestDefender(NO_PLAYER, getOwner(), this, true);
+			continue;
+		}
+		const int iPotentialAttackers =
+		(
+			GET_PLAYER(getOwner()).AI_adjacentPotentialAttackers(plotX)
+			+
+			(
+				plotX->isCity()
+				?
+				2*GET_PLAYER(getOwner()).AI_plotTargetMissionAIs(plotX, MISSIONAI_ASSAULT, getGroup(), 1)
+				:
+				0
+			)
+		);
+		// Bombers will always consider striking units adjacent to this team's territory
+		// to soften them up for potential attack.  This situation doesn't apply if this team's adjacent
+		// territory is water, land units won't be able to reach easily for attack
+		if (plotX->isWater() || iPotentialAttackers > 0 || plotX->isAdjacentTeam(getTeam(), true))
+		{
+			CvUnit* pDefender = plotX->getBestDefender(NO_PLAYER, getOwner(), this, true);
 
-				if (pDefender == NULL)
+			if (!pDefender) continue;
+
+			if (pDefender->canDefend())
+			{
+				const int iDamage = airCombatDamage(pDefender);
+
+				int iValue =
+				(
+					std::max(0, std::min(pDefender->getDamage() + iDamage, airCombatLimit(pDefender)) - pDefender->getDamage())
+					+
+					(iDamage * collateralDamage() / 100)
+					*
+					std::min(plotX->getNumVisiblePotentialEnemyDefenders(this) - 1, collateralDamageMaxUnits())
+					/
+					2
+				);
+				iValue *= 3 + iPotentialAttackers;
+				iValue /= 4;
+
+				const CvUnit* unitX = bestInterceptor(plotX);
+
+				if (unitX)
 				{
-					return false;
+					iValue =
+					(
+						iValue
+						*
+						std::max
+						(
+							0,
+							100
+							-
+							(isSuicide() ? 100 : unitX->currInterceptionProbability())
+							*
+							std::max(0, 100 - evasionProbability())
+							/
+							200
+						)
+						/
+						100
+					);
 				}
 
-				FAssert(pDefender != NULL && pDefender->canDefend());
-
-				if (pDefender != NULL && pDefender->canDefend())
+				if (plotX->isWater())
 				{
-					// XXX factor in air defenses...
+					iValue *= 3;
+				}
 
-					iDamage = airCombatDamage(pDefender);
-
-					iValue = std::max(0, (std::min((pDefender->getDamage() + iDamage), airCombatLimit(pDefender)) - pDefender->getDamage()));
-
-					iValue += ((((iDamage * collateralDamage()) / 100) * std::min((pLoopPlot->getNumVisiblePotentialEnemyDefenders(this) - 1), collateralDamageMaxUnits())) / 2);
-
-					iValue *= (3 + iPotentialAttackers);
-					iValue /= 4;
-
-					pInterceptor = bestInterceptor(pLoopPlot);
-
-					if (pInterceptor != NULL)
-					{
-						iInterceptProb = isSuicide() ? 100 : pInterceptor->currInterceptionProbability();
-
-						iInterceptProb *= std::max(0, (100 - evasionProbability()));
-						iInterceptProb /= 100;
-
-						iValue *= std::max(0, 100 - iInterceptProb / 2);
-						iValue /= 100;
-					}
-
-					if (pLoopPlot->isWater())
-					{
-						iValue *= 3;
-					}
-
-					if (iValue > iBestValue)
-					{
-						iBestValue = iValue;
-						pBestPlot = pLoopPlot;
-						FAssert(!atPlot(pBestPlot));
-					}
+				if (iValue > iBestValue)
+				{
+					iBestValue = iValue;
+					pBestPlot = plotX;
+					FAssert(!atPlot(pBestPlot));
 				}
 			}
+			else FErrorMsg("Best Defender is expected to be able to defend!");
 		}
 	}
 
-	if (pBestPlot != NULL)
+	if (pBestPlot)
 	{
 		FAssert(!atPlot(pBestPlot));
 		return getGroup()->pushMissionInternal(MISSION_MOVE_TO, pBestPlot->getX(), pBestPlot->getY());
 	}
-
 	return false;
 }
 

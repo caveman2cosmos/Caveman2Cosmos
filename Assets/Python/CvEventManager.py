@@ -2059,7 +2059,7 @@ class CvEventManager:
 						szName = CyUnit.getNameNoDesc()
 						CyUnitNew = CyPlayerL.initUnit(GC.getInfoTypeForString("UNIT_GREAT_GENERAL"), iX, iY, UnitAITypes.NO_UNITAI, DirectionTypes.NO_DIRECTION)
 						CyUnitNew.setName(szName)
-						CyUnitNew.setImmobileTimer(8)
+						CyUnitNew.setImmobileTimer(2 * (1 + GAME.getGameSpeedType()))
 						# Message
 						if iPlayerL == GAME.getActivePlayer():
 							CvUtil.sendMessage(TRNSLTR.getText("TXT_KEY_GG_REVIVE", (szName,)), iPlayerL, 16, 'Art/Interface/Buttons/Great_Wonders/cyrustomb.dds', ColorTypes(11), iX, iY, True, True, bForce=False)

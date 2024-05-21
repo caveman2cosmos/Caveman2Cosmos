@@ -4771,7 +4771,7 @@ class CvMainInterface:
 											scores.setWontTalk()
 										if bShowWorstEnemy and CyPlayer.getWorstEnemyName() == CyTeamAct.getName():
 											scores.setWorstEnemy()
-										if bShowWHEOOH and not bTeamAtWarWithYou and bWillingToTalk:
+										if bShowWHEOOH and not bTeamAtWarWithYou and bWillingToTalk and bHaveMetTeam:
 											TD = TradeData()
 											TD.ItemType = TradeableItems.TRADE_WAR
 											for iTeamX in xrange(MAX_PC_TEAMS):
