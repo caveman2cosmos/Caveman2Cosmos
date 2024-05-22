@@ -12441,15 +12441,9 @@ bool CvUnit::canUnitCoexistWithArrivingUnit(const CvUnit& enemyUnit) const
 			}
 		}
 
-		if (plot()->isCity(true))
+		if (plot()->isCity(true) && (isBlendIntoCity() || enemyUnit.isBlendIntoCity()))
 		{
-			if (isBlendIntoCity() || enemyUnit.isBlendIntoCity())
-			{
-				if ((isAssassin() && enemyUnit.isTargetOf(*this)) || (enemyUnit.isAssassin() && isTargetOf(enemyUnit)))
-				{
-					return false;
-				}
-			}
+			return true;
 		}
 	}
 
@@ -15519,7 +15513,7 @@ void CvUnit::setXY(int iX, int iY, bool bGroup, bool bUpdate, bool bShow, bool b
 			&& (!isBarbCoExist() || !pNewPlot->isHominid())
 			&& (!isHiddenNationality() || !pNewCity->isNPC())
 			&& !canCoexistAlwaysOnPlot(*pNewPlot)
-			&& !pNewPlot->isVisibleEnemyDefender(this))
+			&& !pNewPlot->hasDefender(false, NO_PLAYER, getOwner(), this, true, false, false, true))
 			{
 				GET_TEAM(getTeam()).changeWarWeariness(pNewCity->getTeam(), *pNewPlot, GC.getDefineINT("WW_CAPTURED_CITY"));
 
