@@ -5157,7 +5157,7 @@ bool CvPlot::isVisibleEnemyDefender(const CvUnit* pUnit) const
 {
 	PROFILE_FUNC();
 
-	return (plotCheck(PUF_canDefendEnemy, pUnit->getOwner(), pUnit->isAlwaysHostile(this), NULL, NO_PLAYER, NO_TEAM, PUF_isVisible, pUnit->getOwner()) != NULL);
+	return isVisible(pUnit->getTeam(), false) && hasDefender(false, NO_PLAYER, pUnit->getOwner(), pUnit, true, false, false, true);
 }
 
 

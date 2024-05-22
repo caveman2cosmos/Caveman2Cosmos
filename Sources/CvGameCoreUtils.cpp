@@ -2081,7 +2081,7 @@ int pathCost(FAStarNode* parent, FAStarNode* node, int data, const void* pointer
 						bHasCanAttackUnit = true;
 					}
 
-					if ( bHasCanAttackUnit && !bHasVisibleEnemy && pToPlot->isVisibleEnemyDefender(pLoopUnit) )
+					if (bHasCanAttackUnit && !bHasVisibleEnemy && pToPlot->isVisibleEnemyDefender(pLoopUnit))
 					{
 						bHasVisibleEnemy = true;
 					}
@@ -2733,7 +2733,7 @@ int	NewPathCostFunc(const CvPathGeneratorBase* generator, const CvSelectionGroup
 						bHasCanAttackUnit = true;
 					}
 
-					if (bHasCanAttackUnit && !bHasVisibleEnemy && pToPlot->isVisible(eTeam, false) && pToPlot->isVisibleEnemyDefender(pLoopUnit))
+					if (bHasCanAttackUnit && !bHasVisibleEnemy && pToPlot->isVisibleEnemyDefender(pLoopUnit))
 					{
 						bHasVisibleEnemy = true;
 					}
