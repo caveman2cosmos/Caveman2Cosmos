@@ -395,19 +395,27 @@ void CvSelectionGroup::updateTimers()
 		{
 			updateMission();
 		}
-		else if (bCombatFinished && IsSelected())
+		else if (bCombatFinished)
 		{
-			if (canAnyMove())
+			if (gDLL->getInterfaceIFace()->isCombatFocus())
 			{
-				foreach_(CvUnit* unitX, units())
+				gDLL->getInterfaceIFace()->releaseLockedCamera();
+				gDLL->getInterfaceIFace()->setCombatFocus(false);
+			}
+			if (IsSelected())
+			{
+				if (canAnyMove())
 				{
-					if (unitX->IsSelected() && !unitX->canMove())
+					foreach_(CvUnit* unitX, units())
 					{
-						gDLL->getInterfaceIFace()->removeFromSelectionList(unitX);
+						if (unitX->IsSelected() && !unitX->canMove())
+						{
+							gDLL->getInterfaceIFace()->removeFromSelectionList(unitX);
+						}
 					}
 				}
+				else GC.getGame().updateSelectionListInternal();
 			}
-			else GC.getGame().updateSelectionListInternal();
 		}
 	}
 	doDelayedDeath();
