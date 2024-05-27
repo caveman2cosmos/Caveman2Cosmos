@@ -11481,25 +11481,16 @@ int CvUnit::canGiveExperience(const CvPlot* pPlot) const
 	{
 		foreach_(const CvUnit* pUnit, pPlot->units())
 		{
-			if (pUnit != this && pUnit->getOwner() == getOwner() && pUnit->canAcquirePromotionAny())
+			if (pUnit != this
+			&& pUnit->getOwner() == getOwner()
+			&& pUnit->canAcquirePromotionAny()
+			&& !pUnit->getUnitInfo().isGreatGeneral()
+			&& !pUnit->isTrap())
 			{
-/************************************************************************************************/
-/* Afforess	                  Start		 03/30/10                                               */
-/*                                                                                              */
-/* Great Commanders: Do Not give commanders free XP                                             */
-/************************************************************************************************/
-				if (pUnit->getUnitInfo().isGreatGeneral() || pUnit->isTrap())
-				{
-					continue;
-				}
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
 				++iNumUnits;
 			}
 		}
 	}
-
 	return iNumUnits;
 }
 

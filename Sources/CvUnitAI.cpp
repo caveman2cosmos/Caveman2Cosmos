@@ -5896,16 +5896,10 @@ void CvUnitAI::AI_generalMove()
 		}
 		getGroup()->pushMission(MISSION_SKIP);
 		return;
-
 	}
-	else
+	if (AI_command())
 	{
-		if (AI_command())
-		{
-			//Does not use it's turn
-			AI_generalMove();
-			return;
-		}
+		return;
 	}
 
 	/************************************************************************************************/
@@ -26350,7 +26344,10 @@ bool CvUnitAI::AI_hurryFood()
 bool CvUnitAI::AI_command()
 {
 	PROFILE_EXTRA_FUNC();
-	if (!GC.getGame().isOption(GAMEOPTION_UNIT_GREAT_COMMANDERS))
+
+	if (!GC.getGame().isOption(GAMEOPTION_UNIT_GREAT_COMMANDERS)
+	|| !getUnitInfo().isGreatGeneral()
+	|| isCommander())
 	{
 		return false;
 	}
@@ -26376,7 +26373,7 @@ bool CvUnitAI::AI_command()
 		bCommand = true;
 	}
 
-	if (bCommand && plot()->getPlotCity() != NULL)
+	if (bCommand && plot()->getPlotCity())
 	{
 		const int iTotalThreat = std::max(1, GET_PLAYER(getOwner()).AI_getTotalAreaCityThreat(area(), NULL));
 		const int iOurThreat = plot()->getPlotCity()->AI_cityThreat();
@@ -26388,8 +26385,12 @@ bool CvUnitAI::AI_command()
 			bCommand = false;
 		}
 	}
-	setCommander(bCommand);
-	return bCommand;
+	if (bCommand)
+	{
+		setCommander(true);
+		return true;
+	}
+	return false;
 }
 
 bool CvUnitAI::AI_AutomatedPillage(int iBonusValueThreshold)
