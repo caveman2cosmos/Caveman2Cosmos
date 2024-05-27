@@ -13551,6 +13551,7 @@ bool CvUnit::canStealthDefend(const CvUnit* victim) const
 		&& !isCargo()
 		&&  getImmobileTimer() < 1
 		&&  isInvisible(victim->getTeam(), false, false)
+		&& !victim->isInvisible(getTeam(), false, false)
 		&& !canCoexistWithAttacker(*victim, true)
 	);
 }
@@ -15294,64 +15295,37 @@ void CvUnit::setXY(int iX, int iY, bool bGroup, bool bUpdate, bool bShow, bool b
 			setTransportUnit(NULL); // Departed from transport
 		}
 
-		if (canFight() && !isCargo())
+		if (!bInit && pOldPlot && canFight() && !isCargo())
 		{
-			if (!bInit && pOldPlot && !pNewPlot->isCity(false) && canAttack() && getDomainType() != DOMAIN_AIR)
-			{
-				if (!pNewPlot->hasDefender(false, NO_PLAYER, eMyPlayer, this, true, false, false, true))
-				{
-					while (pNewPlot->hasStealthDefender(this, true)) // Reveals the unit if true
-					{
-						attack(pNewPlot, true);
-
-						if (isDead() || at(iX, iY))
-						{
-							return;
-						}
-					}
-				}
-				else if (pNewPlot->getBestDefender(NO_PLAYER, eMyPlayer, this, true, true, false, false, true))
-				{
-					attack(pNewPlot, false, true);
-
-					if (isDead() || at(iX, iY))
-					{
-						return;
-					}
-				}
-			}
 			///TB: This next portion is to reset the plot list of the new plot before moving on after units may (probably were) have been destroyed in combat there.
 			//This might be necessary for the trap segment below, to rerun this.
-			if (!bInit && pOldPlot)
+			OutputDebugString(CvString::format("%S (%d) CvUnit::setXY (%d,%d)\n", getDescription().c_str(), m_iID, m_iX, m_iY).c_str());
+			foreach_(CvUnit* unitX, pNewPlot->units_safe())
 			{
-				OutputDebugString(CvString::format("%S (%d) CvUnit::setXY (%d,%d)\n", getDescription().c_str(), m_iID, m_iX, m_iY).c_str());
-				foreach_(CvUnit* unitX, pNewPlot->units_safe())
-				{
-					if (unitX->isDead())
-						continue;
+				if (unitX->isDead())
+					continue;
 
-					if ((isEnemy(unitX->getTeam(), pNewPlot) || unitX->isEnemy(getTeam())) && !unitX->canCoexistWithAttacker(*this, true))
+				if ((isEnemy(unitX->getTeam(), pNewPlot) || unitX->isEnemy(getTeam())) && !unitX->canCoexistWithAttacker(*this, true))
+				{
+					if (unitX->isArmedTrap())
 					{
-						if (unitX->isArmedTrap())
+						unitX->doTrap(this);
+					}
+					else if (!unitX->canDefend(pNewPlot) && !unitX->isInvisible(getTeam(), false) && !unitX->isCargo())
+					{
+						//TB NOTE: This is where units that can't defend themselves are auto-captured IF the unit has a defined capture tag and cannot defend.
+						if (!isNoCapture() && NO_UNIT != unitX->getUnitInfo().getUnitCaptureType())
 						{
-							unitX->doTrap(this);
-						}
-						else if (!unitX->canDefend(pNewPlot) && !unitX->isInvisible(getTeam(), false) && !unitX->isCargo())
-						{
-							//TB NOTE: This is where units that can't defend themselves are auto-captured IF the unit has a defined capture tag and cannot defend.
-							if (!isNoCapture() && NO_UNIT != unitX->getUnitInfo().getUnitCaptureType())
+							if (isHiddenNationality() || unitX->isHiddenNationality())
 							{
-								if (isHiddenNationality() || unitX->isHiddenNationality())
-								{
-									GET_TEAM(unitX->getTeam()).changeWarWeariness(getTeam(), *pNewPlot, GC.getDefineINT("WW_UNIT_CAPTURED"));
-									GET_TEAM(getTeam()).changeWarWeariness(unitX->getTeam(), *pNewPlot, GC.getDefineINT("WW_CAPTURED_UNIT"));
-									GET_TEAM(getTeam()).AI_changeWarSuccess(unitX->getTeam(), GC.getDefineINT("WAR_SUCCESS_UNIT_CAPTURING"));
-								}
-								unitX->setCapturingPlayer(eMyPlayer);
-								unitX->setCapturingUnit(this);
+								GET_TEAM(unitX->getTeam()).changeWarWeariness(getTeam(), *pNewPlot, GC.getDefineINT("WW_UNIT_CAPTURED"));
+								GET_TEAM(getTeam()).changeWarWeariness(unitX->getTeam(), *pNewPlot, GC.getDefineINT("WW_CAPTURED_UNIT"));
+								GET_TEAM(getTeam()).AI_changeWarSuccess(unitX->getTeam(), GC.getDefineINT("WAR_SUCCESS_UNIT_CAPTURING"));
 							}
-							unitX->kill(true, eMyPlayer, true);
+							unitX->setCapturingPlayer(eMyPlayer);
+							unitX->setCapturingUnit(this);
 						}
+						unitX->kill(true, eMyPlayer, true);
 					}
 				}
 			}
