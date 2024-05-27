@@ -3687,6 +3687,44 @@ void CvPlayer::doTurn()
 
 	m_canHaveBuilder.clear();
 
+#ifdef _DEBUG
+	if (!GC.getGame().isMPOption(MPOPTION_SIMULTANEOUS_TURNS) && !GC.getGame().isSimultaneousTeamTurns())
+	{
+		foreach_(CvSelectionGroup* group, groups()
+		| filtered(bind(CvSelectionGroup::isBusy, _1)))
+		{
+			if (group->getNumUnits() == 0)
+			{
+				FErrorMsg(CvString::format("Empty selection group lingering on start of turn for Player %d (%S)", getID(), getCivilizationDescription(0)).c_str());
+				group->kill();
+			}
+			if (group->getMissionTimer() > 0)
+			{
+				FErrorMsg(CvString::format("Mission Timer running for selection group at start of turn for player %d (%S)", getID(), getCivilizationDescription(0)).c_str());
+				group->setMissionTimer(0);
+			}
+			foreach_(CvUnit* unitX, group->units())
+			{
+				if (unitX->isCombat())
+				{
+					FErrorMsg(CvString::format("Unit %S (%d) at (%d,%d) in combat at start of turn for player %d (%S)", unitX->getDescription().c_str(), unitX->getID(), unitX->getX(), unitX->getY(), getID(), getCivilizationDescription(0)).c_str());
+
+					if (unitX->getCombatUnit())
+					{
+						FErrorMsg(CvString::format("In combat with Unit %S (%d) at (%d,%d)", unitX->getCombatUnit()->getDescription().c_str(), unitX->getCombatUnit()->getID(), unitX->getCombatUnit()->getX(), unitX->getCombatUnit()->getY()).c_str());
+						unitX->setCombatUnit(NULL);
+					}
+					if (unitX->getAttackPlot())
+					{
+						FErrorMsg(CvString::format("Unit %S (%d) at (%d,%d) attacking (%d, %d) at start of turn for player %d (%S)", unitX->getDescription().c_str(), unitX->getID(), unitX->getX(), unitX->getY(), unitX->getAttackPlot()->getX(), unitX->getAttackPlot()->getY(), getID(), getCivilizationDescription(0)).c_str());
+						unitX->setAttackPlot(NULL, false);
+					}
+				}
+			}
+		}
+	}
+#endif
+
 	FAssertMsg(isAlive(), "isAlive is expected to be true");
 	FAssertMsg(!hasBusyUnit() || GC.getGame().isMPOption(MPOPTION_SIMULTANEOUS_TURNS)  || GC.getGame().isSimultaneousTeamTurns(), "End of turn with busy units in a sequential-turn game");
 
@@ -4452,15 +4490,8 @@ bool CvPlayer::hasBusyUnit() const
 	foreach_(CvSelectionGroup* pLoopSelectionGroup, groups()
 	| filtered(bind(CvSelectionGroup::isBusy, _1)))
 	{
-		if (pLoopSelectionGroup->getNumUnits() == 0)
-		{
-			pLoopSelectionGroup->kill();
-			return false;
-		}
-
 		return true;
 	}
-
 	return false;
 }
 
