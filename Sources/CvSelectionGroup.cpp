@@ -1976,7 +1976,7 @@ bool CvSelectionGroup::continueMission(int iSteps)
 
 	if ((missionNode->m_data.iPushTurn == GC.getGame().getGameTurn() || (missionNode->m_data.iFlags & MOVE_THROUGH_ENEMY))
 	&& missionNode->m_data.eMissionType == MISSION_MOVE_TO
-	&& canAllMove() && canAttackNow())
+	&& canAllMove() && canFight())
 	{
 		bool bFailedAlreadyFighting;
 		if (groupAttack(missionNode->m_data.iData1, missionNode->m_data.iData2, missionNode->m_data.iFlags, bFailedAlreadyFighting))
@@ -3551,8 +3551,7 @@ bool CvSelectionGroup::groupAttack(int iX, int iY, int iFlags, bool& bFailedAlre
 
 	bool bAffixFirstAttacker = false;
 
-	if (!pDestPlot->isCity(false)
-	&& !pDestPlot->hasDefender(false, NO_PLAYER, getOwner(), pBestAttackUnit, true, false, false, true))
+	if (!pDestPlot->hasDefender(false, NO_PLAYER, getOwner(), pBestAttackUnit, true, false, false, true))
 	{
 		// Reveals the unit if true
 		if (pDestPlot->hasStealthDefender(pBestAttackUnit, true))
@@ -3574,7 +3573,6 @@ bool CvSelectionGroup::groupAttack(int iX, int iY, int iFlags, bool& bFailedAlre
 
 	std::set<int> alreadyAttacked;
 	bool bAttack = false;
-	bool bStealth = false;
 	bool bBombardExhausted = false;
 	bool bLoopStealthDefense = false;
 	bool bAffixFirstDefender = true;
@@ -3587,7 +3585,7 @@ bool CvSelectionGroup::groupAttack(int iX, int iY, int iFlags, bool& bFailedAlre
 
 		if (!bAffixFirstAttacker)
 		{
-			pBestAttackUnit = AI_getBestGroupAttacker(pDestPlot, false, iAttackOdds, bLoopStealthDefense, NULL, false, bStealth, false, alreadyAttacked);
+			pBestAttackUnit = AI_getBestGroupAttacker(pDestPlot, false, iAttackOdds, bLoopStealthDefense, NULL, false, bLoopStealthDefense, false, alreadyAttacked);
 
 			if (!pBestAttackUnit) break;
 		}
@@ -3596,20 +3594,19 @@ bool CvSelectionGroup::groupAttack(int iX, int iY, int iFlags, bool& bFailedAlre
 		//	2 units are selected, if one of the units have 4 moves and blitz it might completly suicide
 		//	with 4 attacks against an enemy stack; AI would stop to reconsider depending on the outcome of each attack,
 		//	the human player would expect an even expenditure of movement points in the selected group for one attack command.
-		if (bStack && pBestAttackUnit->isBlitz())
+		if (bHuman || !pBestAttackUnit->isBlitz())
 		{
 			FAssert(alreadyAttacked.find(pBestAttackUnit->getID()) == alreadyAttacked.end());
-
 			alreadyAttacked.insert(pBestAttackUnit->getID());
 		}
+
 		if (!bAffixFirstAttacker
-		&& !pDestPlot->isCity(false)
 		&& !pDestPlot->hasDefender(false, NO_PLAYER, getOwner(), pBestAttackUnit, true, false, false, true))
 		{
 			// Reveals the unit if true
 			if (pDestPlot->hasStealthDefender(pBestAttackUnit, true))
 			{
-				bStealth = true;
+				bLoopStealthDefense = true;
 			}
 		}
 		if (!bAffixFirstDefender)
@@ -3622,13 +3619,12 @@ bool CvSelectionGroup::groupAttack(int iX, int iY, int iFlags, bool& bFailedAlre
 		bAffixFirstAttacker = false;
 		bAffixFirstDefender = false;
 
-		if (iAttackOdds < 68 && !bHuman && !bStealth)
+		if (iAttackOdds < 68 && !bHuman && !bLoopStealthDefense)
 		{
 			if (bBombardExhausted)
 			{
 				CvUnit* pBestSacrifice = AI_getBestGroupSacrifice(pDestPlot, false, bHuman);
-				if (pBestSacrifice
-				&& pBestSacrifice->canEnterPlot(pDestPlot, MoveCheck::Attack | (bStealthDefense ? MoveCheck::Suprise : MoveCheck::None)))
+				if (pBestSacrifice && pBestSacrifice->canEnterPlot(pDestPlot, MoveCheck::Attack))
 				{
 					pBestAttackUnit = pBestSacrifice;
 				}
