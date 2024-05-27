@@ -3170,6 +3170,11 @@ void CvUnit::updateCombat(CvUnit* pSelectedDefender, bool bSamePlot, bool bSteal
 			{
 				setMadeAttack(true);
 			}
+			if (getCombatUnit())
+			{
+				FErrorMsg("Not expected, though this code is a mess and need a full overhaul");
+				getCombatUnit()->setCombatUnit(NULL);
+			}
 			setCombatUnit(pDefender, true, bQuick, bStealthAttack, bStealthDefense);
 
 			firstAttacker = pDefender->getCombatUnit();
@@ -11481,25 +11486,16 @@ int CvUnit::canGiveExperience(const CvPlot* pPlot) const
 	{
 		foreach_(const CvUnit* pUnit, pPlot->units())
 		{
-			if (pUnit != this && pUnit->getOwner() == getOwner() && pUnit->canAcquirePromotionAny())
+			if (pUnit != this
+			&& pUnit->getOwner() == getOwner()
+			&& pUnit->canAcquirePromotionAny()
+			&& !pUnit->getUnitInfo().isGreatGeneral()
+			&& !pUnit->isTrap())
 			{
-/************************************************************************************************/
-/* Afforess	                  Start		 03/30/10                                               */
-/*                                                                                              */
-/* Great Commanders: Do Not give commanders free XP                                             */
-/************************************************************************************************/
-				if (pUnit->getUnitInfo().isGreatGeneral() || pUnit->isTrap())
-				{
-					continue;
-				}
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
 				++iNumUnits;
 			}
 		}
 	}
-
 	return iNumUnits;
 }
 
