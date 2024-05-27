@@ -3170,6 +3170,11 @@ void CvUnit::updateCombat(CvUnit* pSelectedDefender, bool bSamePlot, bool bSteal
 			{
 				setMadeAttack(true);
 			}
+			if (getCombatUnit())
+			{
+				FErrorMsg("Not expected, though this code is a mess and need a full overhaul");
+				getCombatUnit()->setCombatUnit(NULL);
+			}
 			setCombatUnit(pDefender, true, bQuick, bStealthAttack, bStealthDefense);
 
 			firstAttacker = pDefender->getCombatUnit();
