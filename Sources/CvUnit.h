@@ -86,72 +86,6 @@ struct MoveCheck
 DECLARE_FLAGS(MoveCheck::flags);
 
 
-/************************************************************************************************/
-/* Afforess	                  Start		 02/22/10                                               */
-/*                                                                                              */
-/* Defender Withdraw                                                                            */
-/************************************************************************************************/
-struct CombatResult
-{
-	bool bDefenderWithdrawn;
-	//TB Combat Mods Begin
-	bool bAttackerPursued;
-	bool bDefenderPursued;
-	bool bAttackerPursuedSustain;
-	bool bDefenderPursuedSustain;
-	bool bAttackerRepelled;
-	bool bAttackerRefusedtoYield;
-	bool bDefenderRefusedtoYield;
-	bool bAttackerRefusedtoYieldSustain;
-	bool bDefenderRefusedtoYieldSustain;
-	bool bDefenderKnockedBack;
-	bool bAttackerStampedes;
-	bool bAttackerWithdraws;
-	bool bAttackerOnslaught;
-	bool bAttackerInjured;
-	bool bDefenderInjured;
-	int iTurnCount;
-	bool bDeathMessaged;
-	bool bDefenderHitAttackerWithDistanceAttack;
-	bool bAttackerHitDefenderWithDistanceAttack;
-	bool bNeverMelee;
-	//TB Combat Mods End
-	CvPlot* pPlot;
-	int iAttacksCount;
-	bool bStealthDefense;
-
-	CombatResult()
-		: bDefenderWithdrawn(false)
-		//TB Combat Mods Begin
-		, bAttackerPursued(false)
-		, bDefenderPursued(false)
-		, bAttackerPursuedSustain(false)
-		, bDefenderPursuedSustain(false)
-		, bAttackerRepelled(false)
-		, bAttackerRefusedtoYield(false)
-		, bDefenderRefusedtoYield(false)
-		, bAttackerRefusedtoYieldSustain(false)
-		, bDefenderRefusedtoYieldSustain(false)
-		, bDefenderKnockedBack(false)
-		, bAttackerStampedes(false)
-		, bAttackerWithdraws(false)
-		, bAttackerOnslaught(false)
-		, bAttackerInjured(false)
-		, bDefenderInjured(false)
-		, iTurnCount(0)
-		, bDeathMessaged(true)
-		, bDefenderHitAttackerWithDistanceAttack(false)
-		, bAttackerHitDefenderWithDistanceAttack(false)
-		, bNeverMelee(true)
-		//TB Combat Mods End
-		, pPlot(NULL)
-		, iAttacksCount(0)
-		, bStealthDefense(false)
-		{}
-};
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
 struct CombatDetails
 {
 	int iExtraCombatPercent;
@@ -538,9 +472,11 @@ public:
 
 	void doTurn();
 
-	void updateCombat(CvUnit* pSelectedDefender = NULL, bool bSamePlot = false, bool bStealth = false, bool bNoCache = false);
-	void updateAirCombat(bool bQuick = false);
-	void updateAirStrike(CvPlot* pPlot, bool bFinish);
+	void startCombat(CvUnit* pDefender = NULL, bool bSamePlot = false, bool bStealth = false, bool bNoCache = false);
+	void endCombat(CvUnit* pDefender = NULL, bool bSamePlot = false);
+	void startAirStrike(CvPlot* pPlot);
+	void startAirCombat();
+	void endAirCombat();
 
 	bool isActionRecommended(int iAction) const;
 
@@ -567,7 +503,6 @@ public:
 	bool canEnterOrAttackPlot(const CvPlot* pPlot, bool bDeclareWar = false) const;
 	bool canMoveThrough(const CvPlot* pPlot, bool bDeclareWar = false) const;
 	void attack(CvPlot* pPlot, bool bStealth = false, bool bNoCache = false);
-	void fightInterceptor(const CvPlot* pPlot, bool bQuick);
 	void move(CvPlot* pPlot, bool bShow);
 
 	bool jumpToNearestValidPlot(bool bKill = true);

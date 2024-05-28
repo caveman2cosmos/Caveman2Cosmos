@@ -603,11 +603,17 @@ CvUnit* CvSelectionGroupAI::AI_getBestGroupAttacker(
 
 	const bool bIsHuman = isHuman();
 
-	const MoveCheck::flags moveCheckFlags = MoveCheck::Attack |
-		(bPotentialEnemy ? MoveCheck::DeclareWar : MoveCheck::None) |
-		MoveCheck::CheckForBest |
-		(bAssassinate ? MoveCheck::Assassinate : MoveCheck::None) |
-		(bSuprise ? MoveCheck::Suprise : MoveCheck::None);
+	const MoveCheck::flags moveCheckFlags = (
+		MoveCheck::Attack
+		|
+		(bPotentialEnemy ? MoveCheck::DeclareWar : MoveCheck::None)
+		|
+		MoveCheck::CheckForBest
+		|
+		(bAssassinate ? MoveCheck::Assassinate : MoveCheck::None)
+		|
+		(bSuprise ? MoveCheck::Suprise : MoveCheck::None)
+	);
 
 	int iBestOdds = 0;
 	int iBestValue = 0;
@@ -630,6 +636,8 @@ CvUnit* CvSelectionGroupAI::AI_getBestGroupAttacker(
 				unitX->canAttack()
 				&&
 				(
+					bSuprise
+					||
 					bIgnoreMadeAttack
 					||
 					unitX->isBlitz()
@@ -658,11 +666,11 @@ CvUnit* CvSelectionGroupAI::AI_getBestGroupAttacker(
 
 				if (unitX->collateralDamage() > 0)
 				{
-					const int iPossibleTargets = std::min((pPlot->getNumVisiblePotentialEnemyDefenders(unitX) - 1), unitX->collateralDamageMaxUnits());
+					const int iPossibleTargets = std::min(pPlot->getNumVisiblePotentialEnemyDefenders(unitX) - 1, unitX->collateralDamageMaxUnits());
 
 					if (iPossibleTargets > 0)
 					{
-						iValue *= (100 + ((unitX->collateralDamage() * iPossibleTargets) / 5));
+						iValue *= 100 + unitX->collateralDamage() * iPossibleTargets / 5;
 						iValue /= 100;
 					}
 				}
@@ -691,7 +699,7 @@ CvUnit* CvSelectionGroupAI::AI_getBestGroupAttacker(
 	return pBestUnit;
 }
 
-CvUnit* CvSelectionGroupAI::AI_getBestGroupSacrifice(const CvPlot* pPlot, bool bForce, bool bNoBlitz) const
+CvUnit* CvSelectionGroupAI::AI_getBestGroupSacrifice(const CvPlot* pPlot) const
 {
 	PROFILE_EXTRA_FUNC();
 
@@ -701,16 +709,9 @@ CvUnit* CvSelectionGroupAI::AI_getBestGroupSacrifice(const CvPlot* pPlot, bool b
 	foreach_(CvUnit* unitX, units())
 	{
 		if (!unitX->isDead()
-		&& (
-				unitX->getDomainType() == DOMAIN_AIR
-				?
-				unitX->canAirAttack()
-				:
-				unitX->canAttack()
-				&&
-				(bNoBlitz ? !unitX->isMadeAttack() : unitX->isBlitz() || !unitX->isMadeAttack())
-			)
-		&& (bForce || unitX->canMove() && unitX->canEnterPlot(pPlot, MoveCheck::Attack)))
+		&& unitX->canAttackNow()
+		&& unitX->canMove()
+		&& unitX->canEnterPlot(pPlot, MoveCheck::Attack))
 		{
 			const int iValue = unitX->AI_sacrificeValue(pPlot);
 			FASSERT_NOT_NEGATIVE(iValue);

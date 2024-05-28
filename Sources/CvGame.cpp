@@ -3435,77 +3435,67 @@ void CvGame::setNumAdvancedStartPoints(int iNewValue)
 	FASSERT_NOT_NEGATIVE(getNumAdvancedStartPoints());
 }
 
+
 int CvGame::getStartTurn() const
 {
 	return m_iStartTurn;
 }
-
 
 void CvGame::setStartTurn(int iNewValue)
 {
 	m_iStartTurn = iNewValue;
 }
 
-
 int CvGame::getStartYear() const
 {
 	return m_iStartYear;
 }
-
 
 void CvGame::setStartYear(int iNewValue)
 {
 	m_iStartYear = iNewValue;
 }
 
-
 int CvGame::getEstimateEndTurn() const
 {
 	return m_iEstimateEndTurn;
 }
-
 
 void CvGame::setEstimateEndTurn(int iNewValue)
 {
 	m_iEstimateEndTurn = iNewValue;
 }
 
+
 int CvGame::getTurnSlice() const
 {
 	return m_iTurnSlice;
 }
 
-
 int CvGame::getMinutesPlayed() const
 {
-	return getTurnSlice() / gDLL->getTurnsPerMinute();
+	return m_iTurnSlice / gDLL->getTurnsPerMinute();
 }
-
-
 
 int CvGame::getCutoffSlice() const
 {
 	return m_iCutoffSlice;
 }
 
-
 void CvGame::setCutoffSlice(int iNewValue)
 {
 	m_iCutoffSlice = iNewValue;
 }
 
-
 void CvGame::changeCutoffSlice(int iChange)
 {
-	setCutoffSlice(getCutoffSlice() + iChange);
+	m_iCutoffSlice += iChange;
 }
-
 
 int CvGame::getTurnSlicesRemaining()
 {
-	return getCutoffSlice() - getTurnSlice();
+	return m_iCutoffSlice - m_iTurnSlice;
 }
-
 
 void CvGame::resetTurnTimer()
 {
@@ -3533,7 +3523,6 @@ void CvGame::incrementTurnTimer(int iNumTurnSlices)
 		changeCutoffSlice(iNumTurnSlices);
 	}
 }
-
 
 int CvGame::getMaxTurnLen() const
 {
@@ -3578,7 +3567,6 @@ int CvGame::getTargetScore() const
 	return GC.getInitCore().getTargetScore();
 }
 
-
 void CvGame::setTargetScore(int iNewValue)
 {
 	GC.getInitCore().setTargetScore(iNewValue);
@@ -3590,7 +3578,6 @@ int CvGame::getNumGameTurnActive() const
 {
 	return m_iNumGameTurnActive;
 }
-
 
 int CvGame::countNumHumanGameTurnActive() const
 {
@@ -3606,7 +3593,6 @@ int CvGame::countNumHumanGameTurnActive() const
 	return iCount;
 }
 
-
 void CvGame::changeNumGameTurnActive(int iChange)
 {
 	m_iNumGameTurnActive += iChange;
@@ -3618,6 +3604,7 @@ int CvGame::getNumCities() const
 {
 	return m_iNumCities;
 }
+
 void CvGame::changeNumCities(int iChange)
 {
 	m_iNumCities += iChange;

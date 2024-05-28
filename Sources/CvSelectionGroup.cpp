@@ -379,9 +379,7 @@ void CvSelectionGroup::updateTimers()
 		{
 			if (unitX->getCombatTimer() > 0)
 			{
-				if (unitX->isAirCombat())
-					unitX->updateAirCombat();
-				else unitX->updateCombat();
+				unitX->changeCombatTimer(-1);
 
 				bCombat = true;
 				if (bCombatFinished && unitX->getCombatTimer() > 0)
@@ -3543,52 +3541,74 @@ bool CvSelectionGroup::groupAttack(int iX, int iY, int iFlags, bool& bFailedAlre
 		return false;
 	}
 
-	bool bStealthDefense = false;
-	int iAttackOdds = 0;
-	CvUnit* pBestAttackUnit = AI_getBestGroupAttacker(pDestPlot, true, iAttackOdds, bStealthDefense, NULL, false, bStealthDefense);
-
-	if (!pBestAttackUnit) return false;
-
-	bool bAffixFirstAttacker = false;
-
-	if (!pDestPlot->hasDefender(false, NO_PLAYER, getOwner(), pBestAttackUnit, true, false, false, true))
-	{
-		// Reveals the unit if true
-		if (pDestPlot->hasStealthDefender(pBestAttackUnit, true))
-		{
-			bStealthDefense = true;
-			bAffixFirstAttacker = true;
-		}
-	}
-
 	if (groupDeclareWar(pDestPlot))
 	{
 		return true;
 	}
-	CvUnit* pBestDefender = pDestPlot->getBestDefender(NO_PLAYER, getOwner(), pBestAttackUnit, true, false, false, false, bStealthDefense);
-
-	if (!pBestDefender) return false;
 
 	const bool bStack = bHuman && (getDomainType() == DOMAIN_AIR || GET_PLAYER(getOwner()).isOption(PLAYEROPTION_STACK_ATTACK));
 
 	std::set<int> alreadyAttacked;
 	bool bAttack = false;
+	bool bSurprise = false;
 	bool bBombardExhausted = false;
-	bool bLoopStealthDefense = false;
-	bool bAffixFirstDefender = true;
 	while (true)
 	{
 		PROFILE("CvSelectionGroup::groupAttack.StackLoop");
 
-		if (bLoopStealthDefense) bStealthDefense = false;
-		else if (bStealthDefense) bLoopStealthDefense = true;
-
-		if (!bAffixFirstAttacker)
+		if (!bSurprise && !pDestPlot->hasDefender(false, NO_PLAYER, getOwner(), NULL, true, false, false, true))
 		{
-			pBestAttackUnit = AI_getBestGroupAttacker(pDestPlot, false, iAttackOdds, bLoopStealthDefense, NULL, false, bLoopStealthDefense, false, alreadyAttacked);
-
-			if (!pBestAttackUnit) break;
+			bSurprise = true;
 		}
+		int iAttackOdds = 0;
+		CvUnit* pBestAttackUnit = AI_getBestGroupAttacker(pDestPlot, false, iAttackOdds, false, NULL, false, bSurprise, false, alreadyAttacked);
+		if (!pBestAttackUnit) break;
+
+		if (bSurprise)
+		{
+			if (!pDestPlot->hasStealthDefender(pBestAttackUnit))
+			{
+				break;
+			}
+			// Stealth Defender is now revealed by hasStealthDefender
+		}
+		else if (iAttackOdds < 68 && !bHuman)
+		{
+			if (bBombardExhausted)
+			{
+				CvUnit* pBestSacrifice = AI_getBestGroupSacrifice(pDestPlot);
+
+				if (pBestSacrifice)
+				{
+					pBestAttackUnit = pBestSacrifice;
+				}
+			}
+			else
+			{
+				bool bFoundBombard = false;
+
+				OutputDebugString("Attempting to bombard tough plot\n");
+				foreach_(CvUnit* unitX, units())
+				{
+					if (unitX->canBombardAtRanged(plot(), pDestPlot->getX(), pDestPlot->getY()))
+					{
+						bFoundBombard = true;
+						unitX->bombardRanged(pDestPlot->getX(), pDestPlot->getY(), false);
+					}
+				}
+				bBombardExhausted = !bFoundBombard;
+				continue;
+			}
+		}
+		CvUnit* pBestDefender = pDestPlot->getBestDefender(NO_PLAYER, getOwner(), pBestAttackUnit, true, false, false, false, true);
+
+		FAssert(bSurprise || pBestDefender);
+
+		// if there are no defenders, do not attack
+		if (!pBestDefender) break;
+
+		bAttack = true;
+
 		// Toffer - Human player expect units with blitz to only attack once in a stack attack
 		// if not the player has no control of the situation as e.g.
 		//	2 units are selected, if one of the units have 4 moves and blitz it might completly suicide
@@ -3600,58 +3620,9 @@ bool CvSelectionGroup::groupAttack(int iX, int iY, int iFlags, bool& bFailedAlre
 			alreadyAttacked.insert(pBestAttackUnit->getID());
 		}
 
-		if (!bAffixFirstAttacker
-		&& !pDestPlot->hasDefender(false, NO_PLAYER, getOwner(), pBestAttackUnit, true, false, false, true))
-		{
-			// Reveals the unit if true
-			if (pDestPlot->hasStealthDefender(pBestAttackUnit, true))
-			{
-				bLoopStealthDefense = true;
-			}
-		}
-		if (!bAffixFirstDefender)
-		{
-			pBestDefender = pDestPlot->getBestDefender(NO_PLAYER, getOwner(), pBestAttackUnit, true, false, false, false, true);
-		}
-		// if there are no defenders, do not attack
-		if (!pBestDefender) break;
-
-		bAffixFirstAttacker = false;
-		bAffixFirstDefender = false;
-
-		if (iAttackOdds < 68 && !bHuman && !bLoopStealthDefense)
-		{
-			if (bBombardExhausted)
-			{
-				CvUnit* pBestSacrifice = AI_getBestGroupSacrifice(pDestPlot, false, bHuman);
-				if (pBestSacrifice && pBestSacrifice->canEnterPlot(pDestPlot, MoveCheck::Attack))
-				{
-					pBestAttackUnit = pBestSacrifice;
-				}
-			}
-			else
-			{
-				bool bFoundBombard = false;
-
-				OutputDebugString("Attempting to bombard tough plot\n");
-				foreach_(CvUnit* pLoopUnit, units())
-				{
-					if (pLoopUnit->canBombardAtRanged(plot(), pDestPlot->getX(), pDestPlot->getY()))
-					{
-						bFoundBombard = true;
-						pLoopUnit->bombardRanged(pDestPlot->getX(), pDestPlot->getY(), false);
-					}
-				}
-				bBombardExhausted = !bFoundBombard;
-				continue;
-			}
-		}
-
-		bAttack = true;
-
 		if (getNumUnits() < 2 || (bHuman && !bStack))
 		{
-			pBestAttackUnit->attack(pDestPlot, bLoopStealthDefense);
+			pBestAttackUnit->attack(pDestPlot, bSurprise);
 			break;
 		}
 
@@ -3667,7 +3638,7 @@ bool CvSelectionGroup::groupAttack(int iX, int iY, int iFlags, bool& bFailedAlre
 			}
 			break;
 		}
-		else pBestAttackUnit->attack(pDestPlot, bLoopStealthDefense);
+		else pBestAttackUnit->attack(pDestPlot, bSurprise);
 	}
 	return bAttack;
 }

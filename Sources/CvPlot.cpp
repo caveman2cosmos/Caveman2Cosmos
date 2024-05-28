@@ -12636,7 +12636,8 @@ bool CvPlot::hasDefender(
 				unitX->isPotentialEnemy(GET_PLAYER(eAttacker).getTeam(), this)
 				||
 				pAttacker
-				&& pAttacker->isPotentialEnemy(GET_PLAYER(unitX->getOwner()).getTeam(), this, unitX)
+				&&
+				pAttacker->isPotentialEnemy(GET_PLAYER(unitX->getOwner()).getTeam(), this, unitX)
 			)
 		&& (!bTestCanMove || unitX->canMove() && !unitX->isCargo())
 		&& (!pAttacker || pAttacker->getDomainType() != DOMAIN_AIR || unitX->getDamage() < pAttacker->airCombatLimit(unitX))

@@ -43,7 +43,7 @@ public:
 	)
 	const;
 
-	CvUnit* AI_getBestGroupSacrifice(const CvPlot* pPlot, bool bForce, bool bNoBlitz) const;
+	CvUnit* AI_getBestGroupSacrifice(const CvPlot* pPlot) const;
 
 	int AI_compareStacks(const CvPlot* pPlot, StackCompare::flags flags = StackCompare::None, int iRange = 0) const; // override
 	int AI_sumStrength(const CvPlot* pAttackedPlot = NULL, DomainTypes eDomainType = NO_DOMAIN, StackCompare::flags flags = StackCompare::None) const;

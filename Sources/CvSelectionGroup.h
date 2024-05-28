@@ -312,7 +312,7 @@ public:
 	)
 	const = 0;
 
-	virtual CvUnit* AI_getBestGroupSacrifice(const CvPlot* pPlot, bool bForce, bool bNoBlitz) const = 0;
+	virtual CvUnit* AI_getBestGroupSacrifice(const CvPlot* pPlot) const = 0;
 
 	virtual int AI_compareStacks(const CvPlot* pPlot, StackCompare::flags flags = StackCompare::None, int iRange = 0) const = 0;
 	//virtual int AI_compareStacks(const CvPlot* pPlot, bool bPotentialEnemy, bool bCheckCanAttack = false, bool bCheckCanMove = false, int iRange = 0) const = 0;

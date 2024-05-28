@@ -1898,43 +1898,22 @@ void CvUnit::doTurn()
 }
 
 
-void CvUnit::updateAirStrike(CvPlot* pPlot, bool bFinish)
+void CvUnit::startAirStrike(CvPlot* pPlot)
 {
-	if (!bFinish)
+	if (canNuke())
 	{
-		if (isInBattle())
-		{
-			return;
-		}
-
-		if (canNuke())
-		{
-			kill(true, NO_PLAYER, true);
-			return;
-		}
-
-		if (airStrike(pPlot) && pPlot->isVisibleToWatchingHuman())
-		{
-			setCombatTimer(GC.getMissionInfo(MISSION_AIRSTRIKE).getTime());
-			GC.getGame().incrementTurnTimer(getCombatTimer());
-
-			addMission(CvAirMissionDefinition(MISSION_AIRSTRIKE, pPlot, this, NULL, getCombatTimer() * gDLL->getSecsPerTurn()));
-
-			return;
-		}
+		kill(true, NO_PLAYER, true);
+		return;
 	}
 
-	CvUnit *pDefender = getCombatUnit();
-	if (pDefender)
+	if (airStrike(pPlot) && pPlot->isVisibleToWatchingHuman())
 	{
-		pDefender->setCombatUnit(NULL);
-	}
-	setCombatUnit(NULL);
-	setAttackPlot(NULL, false);
+		setCombatTimer(GC.getMissionInfo(MISSION_AIRSTRIKE).getTime());
+		GC.getGame().incrementTurnTimer(getCombatTimer());
 
-	if (isSuicide() && !isDead())
-	{
-		kill(true);
+		addMission(CvAirMissionDefinition(MISSION_AIRSTRIKE, pPlot, this, NULL, getCombatTimer() * gDLL->getSecsPerTurn()));
+
+		return;
 	}
 }
 
@@ -2129,39 +2108,16 @@ void CvUnit::resolveAirCombat(CvUnit* pInterceptor, CvPlot* pPlot, CvAirMissionD
 }
 
 
-void CvUnit::updateAirCombat(bool bQuick)
+void CvUnit::startAirCombat()
 {
-	CvUnit* pInterceptor = NULL;
-	bool bFinish = false;
-
 	FAssert(getDomainType() == DOMAIN_AIR || getDropRange() > 0);
 
-	if (getCombatTimer() > 0)
-	{
-		changeCombatTimer(-1);
-
-		if (getCombatTimer() > 0)
-		{
-			return;
-		}
-		bFinish = true;
-	}
-
 	CvPlot* pPlot = getAttackPlot();
-	if (pPlot == NULL)
+	if (!pPlot)
 	{
 		return;
 	}
-
-	if (bFinish)
-	{
-		pInterceptor = getCombatUnit();
-	}
-	else
-	{
-		pInterceptor = bestInterceptor(pPlot);
-	}
-
+	CvUnit* pInterceptor = bestInterceptor(pPlot);
 
 	if (!pInterceptor)
 	{
@@ -2170,103 +2126,98 @@ void CvUnit::updateAirCombat(bool bQuick)
 		return;
 	}
 
-	//if not finished and not fighting yet, set up combat damage and mission
-	if (!bFinish)
+	if (!isInBattle())
 	{
-		if (!isInBattle())
+		if (plot()->isBattle() || pPlot->isBattle())
 		{
-			if (plot()->isBattle() || pPlot->isBattle())
-			{
-				return;
-			}
-
-			setMadeAttack(true);
-
-			setCombatUnit(pInterceptor, true, bQuick);
-			pInterceptor->setCombatUnit(this, false, bQuick);
+			return;
 		}
+		setMadeAttack(true);
 
-		FAssertMsg(pInterceptor != NULL, "Defender is not assigned a valid value");
-
-		FAssertMsg(plot()->isBattle(), "Current unit instance plot is not fighting as expected");
-		FAssertMsg(pInterceptor->plot()->isBattle(), "pPlot is not fighting as expected");
-
-		CvAirMissionDefinition kAirMission(getDomainType() == DOMAIN_AIR ? MISSION_AIRSTRIKE : MISSION_PARADROP, pPlot, this, pInterceptor, GC.getMissionInfo(MISSION_AIRSTRIKE).getTime() * gDLL->getSecsPerTurn());
-		resolveAirCombat(pInterceptor, pPlot, kAirMission);
-
-		if (!bQuick && isCombatVisible(pInterceptor))
-		{
-			setCombatTimer(GC.getMissionInfo(MISSION_AIRSTRIKE).getTime());
-			GC.getGame().incrementTurnTimer(getCombatTimer());
-			addMission(kAirMission);
-		}
-		else bFinish = true;
-
-		changeMoves(GC.getMOVE_DENOMINATOR());
-		if (DOMAIN_AIR != pInterceptor->getDomainType())
-		{
-			pInterceptor->setMadeInterception(true);
-		}
-
-		if (isDead())
-		{
-
-			CvWString szBuffer = gDLL->getText("TXT_KEY_MISC_YOU_SHOT_DOWN_ENEMY", pInterceptor->getNameKey(), getNameKey(), getVisualCivAdjective(pInterceptor->getTeam()));
-			AddDLLMessage(pInterceptor->getOwner(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_INTERCEPT", MESSAGE_TYPE_INFO, getButton(), GC.getCOLOR_GREEN(), pPlot->getX(), pPlot->getY(), true, true);
-
-			szBuffer = gDLL->getText("TXT_KEY_MISC_YOU_UNIT_SHOT_DOWN", getNameKey(), pInterceptor->getNameKey());
-			AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_INTERCEPTED", MESSAGE_TYPE_INFO, pInterceptor->getButton(), GC.getCOLOR_RED(), pPlot->getX(), pPlot->getY());
-		}
-		else if (kAirMission.getDamage(BATTLE_UNIT_ATTACKER) > 0)
-		{
-
-			CvWString szBuffer = gDLL->getText("TXT_KEY_MISC_YOU_HURT_ENEMY_AIR", pInterceptor->getNameKey(), getNameKey(), -(kAirMission.getDamage(BATTLE_UNIT_ATTACKER)), getVisualCivAdjective(pInterceptor->getTeam()));
-			AddDLLMessage(pInterceptor->getOwner(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_INTERCEPT", MESSAGE_TYPE_INFO, getButton(), GC.getCOLOR_GREEN(), pPlot->getX(), pPlot->getY(), true, true);
-
-			szBuffer = gDLL->getText("TXT_KEY_MISC_YOU_AIR_UNIT_HURT", getNameKey(), pInterceptor->getNameKey(), -(kAirMission.getDamage(BATTLE_UNIT_ATTACKER)));
-			AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_INTERCEPTED", MESSAGE_TYPE_INFO, pInterceptor->getButton(), GC.getCOLOR_RED(), pPlot->getX(), pPlot->getY());
-		}
-
-		if (pInterceptor->isDead())
-		{
-
-			CvWString szBuffer = gDLL->getText("TXT_KEY_MISC_YOU_SHOT_DOWN_ENEMY", getNameKey(), pInterceptor->getNameKey(), pInterceptor->getVisualCivAdjective(getTeam()));
-			AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_INTERCEPT", MESSAGE_TYPE_INFO, pInterceptor->getButton(), GC.getCOLOR_GREEN(), pPlot->getX(), pPlot->getY(), true, true);
-
-			szBuffer = gDLL->getText("TXT_KEY_MISC_YOU_UNIT_SHOT_DOWN", pInterceptor->getNameKey(), getNameKey());
-			AddDLLMessage(pInterceptor->getOwner(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_INTERCEPTED", MESSAGE_TYPE_INFO, getButton(), GC.getCOLOR_RED(), pPlot->getX(), pPlot->getY());
-		}
-		else if (kAirMission.getDamage(BATTLE_UNIT_DEFENDER) > 0)
-		{
-
-			CvWString szBuffer = gDLL->getText("TXT_KEY_MISC_YOU_DAMAGED_ENEMY_AIR", getNameKey(), pInterceptor->getNameKey(), -(kAirMission.getDamage(BATTLE_UNIT_DEFENDER)), pInterceptor->getVisualCivAdjective(getTeam()));
-			AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_INTERCEPT", MESSAGE_TYPE_INFO, pInterceptor->getButton(), GC.getCOLOR_GREEN(), pPlot->getX(), pPlot->getY(), true, true);
-
-			szBuffer = gDLL->getText("TXT_KEY_MISC_YOUR_AIR_UNIT_DAMAGED", pInterceptor->getNameKey(), getNameKey(), -(kAirMission.getDamage(BATTLE_UNIT_DEFENDER)));
-			AddDLLMessage(pInterceptor->getOwner(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_INTERCEPTED", MESSAGE_TYPE_INFO, getButton(), GC.getCOLOR_RED(), pPlot->getX(), pPlot->getY());
-		}
-
-		if (0 == kAirMission.getDamage(BATTLE_UNIT_ATTACKER) + kAirMission.getDamage(BATTLE_UNIT_DEFENDER))
-		{
-
-			CvWString szBuffer = gDLL->getText("TXT_KEY_MISC_YOU_ABORTED_ENEMY_AIR", pInterceptor->getNameKey(), getNameKey(), getVisualCivAdjective(getTeam()));
-			AddDLLMessage(pInterceptor->getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_INTERCEPT", MESSAGE_TYPE_INFO, pInterceptor->getButton(), GC.getCOLOR_GREEN(), pPlot->getX(), pPlot->getY(), true, true);
-
-			szBuffer = gDLL->getText("TXT_KEY_MISC_YOUR_AIR_UNIT_ABORTED", getNameKey(), pInterceptor->getNameKey());
-			AddDLLMessage(getOwner(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_INTERCEPTED", MESSAGE_TYPE_INFO, getButton(), GC.getCOLOR_RED(), pPlot->getX(), pPlot->getY());
-		}
+		setCombatUnit(pInterceptor, true, false);
+		pInterceptor->setCombatUnit(this, false, false);
 	}
 
-	if (bFinish)
+	FAssertMsg(plot()->isBattle(), "Current unit instance plot is not fighting as expected");
+	FAssertMsg(pInterceptor->plot()->isBattle(), "pPlot is not fighting as expected");
+
+	CvAirMissionDefinition kAirMission(getDomainType() == DOMAIN_AIR ? MISSION_AIRSTRIKE : MISSION_PARADROP, pPlot, this, pInterceptor, GC.getMissionInfo(MISSION_AIRSTRIKE).getTime() * gDLL->getSecsPerTurn());
+	resolveAirCombat(pInterceptor, pPlot, kAirMission);
+
+	changeMoves(GC.getMOVE_DENOMINATOR());
+	if (DOMAIN_AIR != pInterceptor->getDomainType())
 	{
-		setAttackPlot(NULL, false);
+		pInterceptor->setMadeInterception(true);
+	}
+
+	if (isDead())
+	{
+		CvWString szBuffer = gDLL->getText("TXT_KEY_MISC_YOU_SHOT_DOWN_ENEMY", pInterceptor->getNameKey(), getNameKey(), getVisualCivAdjective(pInterceptor->getTeam()));
+		AddDLLMessage(pInterceptor->getOwner(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_INTERCEPT", MESSAGE_TYPE_INFO, getButton(), GC.getCOLOR_GREEN(), pPlot->getX(), pPlot->getY(), true, true);
+
+		szBuffer = gDLL->getText("TXT_KEY_MISC_YOU_UNIT_SHOT_DOWN", getNameKey(), pInterceptor->getNameKey());
+		AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_INTERCEPTED", MESSAGE_TYPE_INFO, pInterceptor->getButton(), GC.getCOLOR_RED(), pPlot->getX(), pPlot->getY());
+	}
+	else if (kAirMission.getDamage(BATTLE_UNIT_ATTACKER) > 0)
+	{
+		CvWString szBuffer = gDLL->getText("TXT_KEY_MISC_YOU_HURT_ENEMY_AIR", pInterceptor->getNameKey(), getNameKey(), -(kAirMission.getDamage(BATTLE_UNIT_ATTACKER)), getVisualCivAdjective(pInterceptor->getTeam()));
+		AddDLLMessage(pInterceptor->getOwner(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_INTERCEPT", MESSAGE_TYPE_INFO, getButton(), GC.getCOLOR_GREEN(), pPlot->getX(), pPlot->getY(), true, true);
+
+		szBuffer = gDLL->getText("TXT_KEY_MISC_YOU_AIR_UNIT_HURT", getNameKey(), pInterceptor->getNameKey(), -(kAirMission.getDamage(BATTLE_UNIT_ATTACKER)));
+		AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_INTERCEPTED", MESSAGE_TYPE_INFO, pInterceptor->getButton(), GC.getCOLOR_RED(), pPlot->getX(), pPlot->getY());
+	}
+
+	if (pInterceptor->isDead())
+	{
+		CvWString szBuffer = gDLL->getText("TXT_KEY_MISC_YOU_SHOT_DOWN_ENEMY", getNameKey(), pInterceptor->getNameKey(), pInterceptor->getVisualCivAdjective(getTeam()));
+		AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_INTERCEPT", MESSAGE_TYPE_INFO, pInterceptor->getButton(), GC.getCOLOR_GREEN(), pPlot->getX(), pPlot->getY(), true, true);
+
+		szBuffer = gDLL->getText("TXT_KEY_MISC_YOU_UNIT_SHOT_DOWN", pInterceptor->getNameKey(), getNameKey());
+		AddDLLMessage(pInterceptor->getOwner(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_INTERCEPTED", MESSAGE_TYPE_INFO, getButton(), GC.getCOLOR_RED(), pPlot->getX(), pPlot->getY());
+	}
+	else if (kAirMission.getDamage(BATTLE_UNIT_DEFENDER) > 0)
+	{
+		CvWString szBuffer = gDLL->getText("TXT_KEY_MISC_YOU_DAMAGED_ENEMY_AIR", getNameKey(), pInterceptor->getNameKey(), -(kAirMission.getDamage(BATTLE_UNIT_DEFENDER)), pInterceptor->getVisualCivAdjective(getTeam()));
+		AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_INTERCEPT", MESSAGE_TYPE_INFO, pInterceptor->getButton(), GC.getCOLOR_GREEN(), pPlot->getX(), pPlot->getY(), true, true);
+
+		szBuffer = gDLL->getText("TXT_KEY_MISC_YOUR_AIR_UNIT_DAMAGED", pInterceptor->getNameKey(), getNameKey(), -(kAirMission.getDamage(BATTLE_UNIT_DEFENDER)));
+		AddDLLMessage(pInterceptor->getOwner(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_INTERCEPTED", MESSAGE_TYPE_INFO, getButton(), GC.getCOLOR_RED(), pPlot->getX(), pPlot->getY());
+	}
+
+	if (0 == kAirMission.getDamage(BATTLE_UNIT_ATTACKER) + kAirMission.getDamage(BATTLE_UNIT_DEFENDER))
+	{
+		CvWString szBuffer = gDLL->getText("TXT_KEY_MISC_YOU_ABORTED_ENEMY_AIR", pInterceptor->getNameKey(), getNameKey(), getVisualCivAdjective(getTeam()));
+		AddDLLMessage(pInterceptor->getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_INTERCEPT", MESSAGE_TYPE_INFO, pInterceptor->getButton(), GC.getCOLOR_GREEN(), pPlot->getX(), pPlot->getY(), true, true);
+
+		szBuffer = gDLL->getText("TXT_KEY_MISC_YOUR_AIR_UNIT_ABORTED", getNameKey(), pInterceptor->getNameKey());
+		AddDLLMessage(getOwner(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_INTERCEPTED", MESSAGE_TYPE_INFO, getButton(), GC.getCOLOR_RED(), pPlot->getX(), pPlot->getY());
+	}
+
+	if (isCombatVisible(pInterceptor))
+	{
+		setCombatTimer(GC.getMissionInfo(MISSION_AIRSTRIKE).getTime());
+		GC.getGame().incrementTurnTimer(getCombatTimer());
+		addMission(kAirMission);
+	}
+	else endAirCombat();
+}
+
+void CvUnit::endAirCombat()
+{
+	FAssert(getDomainType() == DOMAIN_AIR || getDropRange() > 0);
+
+	CvUnit* pInterceptor = getCombatUnit();
+
+	if (pInterceptor)
+	{
 		setCombatUnit(NULL);
 		pInterceptor->setCombatUnit(NULL);
+	}
+	setAttackPlot(NULL, false);
 
-		if (!isDead() && isSuicide())
-		{
-			kill(true);
-		}
+	if (!isDead() && isSuicide())
+	{
+		kill(true);
 	}
 }
 
@@ -2300,7 +2251,6 @@ namespace {
 		{
 			return withdrawingUnit->plot();
 		}
-
 		return algo::find_if(withdrawingUnit->plot()->adjacent(), bind(canWithdrawToPlot, withdrawingUnit, _1));
 	}
 }
@@ -3012,64 +2962,313 @@ void CvUnit::resolveCombat(CvUnit* pDefender, CvPlot* pPlot, CvBattleDefinition&
 }
 
 
-void CvUnit::updateCombat(CvUnit* pSelectedDefender, bool bSamePlot, bool bStealth, bool bNoCache)
+void CvUnit::startCombat(CvUnit* pDefender, bool bSamePlot, bool bStealth, bool bNoCache)
 {
 	PROFILE_FUNC();
-
-	/*GC.getGame().logOOSSpecial(6, getID(), getDamage());*/
-
-	bool bFinish = false;
-
-	if (getCombatTimer() > 0)
-	{
-		changeCombatTimer(-1);
-
-		if (getCombatTimer() > 0)
-		{
-			/*GC.getGame().logOOSSpecial(7, getID(), getDamage());*/
-			return;
-		}
-		bFinish = true;
-	}
 
 	CvPlot* pPlot = getAttackPlot();
 
 	if (!pPlot)
 	{
-		/*GC.getGame().logOOSSpecial(8, getID(), getDamage());*/
+		FErrorMsg("Plot to attack is expected to exist when initiating combat...");
 		return;
 	}
 
 	if (getDomainType() == DOMAIN_AIR)
 	{
-		updateAirStrike(pPlot, bFinish);
-		/*GC.getGame().logOOSSpecial(9, getID(), getDamage());*/
+		startAirStrike(pPlot);
 		return;
 	}
 
-	CvUnit* pDefender = NULL;
-
-	if (bFinish)
-	{
-		pDefender = getCombatUnit();
-	}
-	else if (!pSelectedDefender)
+	if (!pDefender)
 	{
 		pDefender = pPlot->getBestDefender(NO_PLAYER, getOwner(), this, true, false, false, false, bStealth || bNoCache);
-	}
-	else pDefender = pSelectedDefender;
 
+		if (!pDefender)
+		{
+			setAttackPlot(NULL, false);
+			setCombatUnit(NULL);
+			setCombatTimer(0);
+			FErrorMsg("Defender is expected to be exist when initiating combat...");
+			return;
+		}
+	}
+	//check if quick combat
+	const bool bQuick = bSamePlot || !isCombatVisible(pDefender);
+
+	const bool bHuman = isHuman();
+	const bool bHumanDefender = pDefender->isHuman();
+
+	const PlayerTypes eAttacker = getVisualOwner(pDefender->getTeam());
+	const PlayerTypes eDefender = pDefender->getVisualOwner(getTeam());
+
+	// if not fighting yet, set up combat damage and mission
+	CvUnit* firstAttacker = NULL;
+	if (!isInBattle())
+	{
+		PROFILE("CvUnit::updateCombat.StartFight");
+
+		//TB Combat Mods (Att&DefCounters)
+		if (getRoundCount() > 0)
+		{
+			changeRoundCount(-getRoundCount());
+		}
+		if (pDefender->getRoundCount() > 0)
+		{
+			pDefender->changeRoundCount(-pDefender->getRoundCount());
+		}
+		changeAttackCount(1);
+		//TB Combat Mods end
+		if (!bSamePlot)
+		{
+			//rotate to face plot
+			DirectionTypes newDirection = estimateDirection(plot(), pDefender->plot());
+			if (newDirection != NO_DIRECTION)
+			{
+				setFacingDirection(newDirection);
+			}
+
+			//rotate enemy to face us
+			newDirection = estimateDirection(pDefender->plot(), plot());
+			if (newDirection != NO_DIRECTION)
+			{
+				pDefender->setFacingDirection(newDirection);
+			}
+		}
+
+		const bool bStealthAttack = isInvisible(GET_PLAYER(pDefender->getOwner()).getTeam(), false, false) || pDefender->plot() == plot();
+		if (bStealthAttack)
+		{
+			if (bHuman)
+			{
+				AddDLLMessage(
+					getOwner(), false, GC.getEVENT_MESSAGE_TIME(),
+					gDLL->getText("TXT_KEY_MISC_STEALTH_ATTACK_OWNER", getNameKey(), GET_PLAYER(eDefender).getNameKey(), pDefender->getNameKey()),
+					"AS2D_EXPOSED", MESSAGE_TYPE_MINOR_EVENT, getButton(), GC.getCOLOR_UNIT_TEXT(), getX(), getY(), true, true
+				);
+			}
+			if (bHumanDefender)
+			{
+				AddDLLMessage(
+					pDefender->getOwner(), false, GC.getEVENT_MESSAGE_TIME(),
+					gDLL->getText("TXT_KEY_MISC_STEALTH_ATTACK", GET_PLAYER(eAttacker).getNameKey(), getNameKey(), pDefender->getNameKey()),
+					"AS2D_EXPOSED", MESSAGE_TYPE_MINOR_EVENT, getButton(), GC.getCOLOR_UNIT_TEXT(), getX(), getY(), true, true
+				);
+			}
+		}
+		bool bStealthDefense = false;
+		if (bStealthAttack || bStealth)
+		{
+			const bool bLieInWait = !isInvisible(GET_PLAYER(pDefender->getOwner()).getTeam(), false, false) && pDefender->plot() == plot();
+
+			bStealthDefense = bStealth || bLieInWait;
+			if (bStealthDefense && bLieInWait)
+			{
+				if (bHumanDefender)
+				{
+					AddDLLMessage(
+						pDefender->getOwner(), false, GC.getEVENT_MESSAGE_TIME(),
+						gDLL->getText("TXT_KEY_MISC_STEALTH_LIE_IN_WAIT_OWNER", pDefender->getNameKey(), GET_PLAYER(getOwner()).getNameKey(), getNameKey()),
+						"AS2D_EXPOSED", MESSAGE_TYPE_MINOR_EVENT, getButton(), GC.getCOLOR_UNIT_TEXT(), getX(), getY(), true, true
+					);
+				}
+				if (bHuman)
+				{
+					AddDLLMessage(
+						getOwner(), false, GC.getEVENT_MESSAGE_TIME(),
+						gDLL->getText("TXT_KEY_MISC_STEALTH_LIE_IN_WAIT", GET_PLAYER(eAttacker).getNameKey(), getNameKey(), pDefender->getNameKey()),
+						"AS2D_EXPOSED", MESSAGE_TYPE_MINOR_EVENT, getButton(), GC.getCOLOR_UNIT_TEXT(), getX(), getY(), true, true
+					);
+				}
+			}
+		}
+		m_combatResult.bStealthDefense = bStealthDefense && pDefender->plot() != plot();//Note this information is transferred to bStealthDefense during bFinish routine to help define whether units should lose movement or not.
+		//TBMaybeproblem : I'd like to elminate this from attackers in a stealth defense situation - they shouldn't be counted as having attacked for being ambushed.
+		if (!canStampede() && !canOnslaught() && !bStealthDefense)
+		{
+			setMadeAttack(true);
+		}
+		setCombatUnit(pDefender, true, bQuick, bStealthAttack, bStealthDefense);
+
+		firstAttacker = pDefender->getCombatUnit();
+
+		pDefender->setCombatUnit(this, false, bQuick, bStealthAttack, bStealthDefense);
+		//TB Combat Mods (Att&DefCounters)
+		pDefender->changeDefenseCount(1);
+		//TB Combat Mods end
+
+		if (!firstAttacker)
+		{
+			pDefender->getGroup()->clearMissionQueue();
+		}
+
+		if (!bQuick
+		&& !firstAttacker
+		&& gDLL->getInterfaceIFace()->isCombatFocus()
+		&& plot()->isInViewport()
+		&& pDefender->isInViewport())
+		{ // TBMaybeproblem - is it possible that all this should happen to setup the combat on a surprise defense?
+			// It is not currently doing so, perhaps because of fear of the revealed unit not being visible yet?
+			DirectionTypes directionType = directionXY(plot(), pPlot);
+			//								N			NE				E				SE					S				SW					W				NW
+			NiPoint2 directions[8] = {NiPoint2(0, 1), NiPoint2(1, 1), NiPoint2(1, 0), NiPoint2(1, -1), NiPoint2(0, -1), NiPoint2(-1, -1), NiPoint2(-1, 0), NiPoint2(-1, 1)};
+			NiPoint3 attackDirection = NiPoint3(directions[directionType].x, directions[directionType].y, 0);
+			float plotSize = GC.getPLOT_SIZE();
+			NiPoint3 lookAtPoint(plot()->getPoint().x + plotSize / 2 * attackDirection.x, plot()->getPoint().y + plotSize / 2 * attackDirection.y, (plot()->getPoint().z + pPlot->getPoint().z) / 2);
+			attackDirection.Unitize();
+			gDLL->getInterfaceIFace()->lookAt(lookAtPoint, (((getOwner() != GC.getGame().getActivePlayer()) || gDLL->getGraphicOption(GRAPHICOPTION_NO_COMBAT_ZOOM)) ? CAMERALOOKAT_BATTLE : CAMERALOOKAT_BATTLE_ZOOM_IN), attackDirection);
+		}
+		else if (bHumanDefender)
+		{
+			if (BARBARIAN_PLAYER != eAttacker)
+			{
+				AddDLLMessage(
+					pDefender->getOwner(), true, GC.getEVENT_MESSAGE_TIME(),
+					gDLL->getText("TXT_KEY_MISC_YOU_UNITS_UNDER_ATTACK", GET_PLAYER(getOwner()).getNameKey()),
+					"AS2D_COMBAT", MESSAGE_TYPE_DISPLAY_ONLY, getButton(), GC.getCOLOR_RED(), pPlot->getX(), pPlot->getY(), true
+				);
+			}
+			else
+			{
+				AddDLLMessage(
+					pDefender->getOwner(), true, GC.getEVENT_MESSAGE_TIME(),
+					gDLL->getText("TXT_KEY_MISC_YOU_UNITS_UNDER_ATTACK_UNKNOWN"),
+					"AS2D_COMBAT", MESSAGE_TYPE_DISPLAY_ONLY, getButton(), GC.getCOLOR_RED(), pPlot->getX(), pPlot->getY(), true
+				);
+			}
+		}
+		//Damage to Attacking Unit from City Defenses
+		if (pPlot->isCity(false) && !bSamePlot)
+		{
+			std::vector<UnitCombatTypes> damagableUnitCombatTypes;
+
+			CvCity* pCity = pPlot->getPlotCity();
+			for (std::map<UnitCombatTypes, UnitCombatKeyedInfo>::iterator it = m_unitCombatKeyedInfo.begin(), end = m_unitCombatKeyedInfo.end(); it != end; ++it)
+			{
+				if (it->second.m_bHasUnitCombat && pCity->canDamageAttackingUnitCombat(it->first))
+				{
+					damagableUnitCombatTypes.push_back(it->first);
+				}
+			}
+			if (damagableUnitCombatTypes.size() > 0)
+			{
+				checkCityAttackDefensesDamage(pCity, damagableUnitCombatTypes);
+			}
+		}
+	}
+	FAssertMsg(pDefender, "Defender is not assigned a valid value");
+	FAssertMsg(plot()->isBattle(), "Current unit instance plot is not fighting as expected");
+	FAssertMsg(pPlot->isBattle(), "pPlot is not fighting as expected");
+
+	if (!pDefender->canDefend())
+	{
+		if (!bQuick)
+		{
+			addMission(CvMissionDefinition(MISSION_SURRENDER, pPlot, this, pDefender, getCombatTimer() * gDLL->getSecsPerTurn()));
+
+			// Surrender mission
+			setCombatTimer(GC.getMissionInfo(MISSION_SURRENDER).getTime());
+
+			GC.getGame().incrementTurnTimer(getCombatTimer());
+		}
+		else bFinish = true;
+
+		// Kill them!
+		pDefender->setDamage(pDefender->getMaxHP());
+	}
+	//	Need to check the attacker has not already died in the attempt (on building defenses)
+	else if (!isDead())
+	{
+		PROFILE("CvUnit::updateCombat.CanDefend");
+
+		//USE commanders here (so their command points will be decreased) for attacker and defender:
+		this->tryUseCommander();
+		pDefender->tryUseCommander();
+
+		CvBattleDefinition kBattle(pPlot, this, pDefender);
+
+		//	Koshling - save pre-combat helath so we can use health loss as
+		//	a basis for more granular war weariness
+		setupPreCombatDamage();
+		pDefender->setupPreCombatDamage();
+
+		resolveCombat(pDefender, pPlot, kBattle, bSamePlot);
+
+		if (!bQuick)
+		{
+			kBattle.setDamage(BATTLE_UNIT_ATTACKER, BATTLE_TIME_END, getDamage());
+			kBattle.setDamage(BATTLE_UNIT_DEFENDER, BATTLE_TIME_END, pDefender->getDamage());
+			if (!bSamePlot)
+			{
+				kBattle.setAdvanceSquare(canAdvance(pPlot, pDefender->isDead() ? 0 : 1));
+			}
+
+			if (isRanged() && pDefender->isRanged())
+			{
+				kBattle.setDamage(BATTLE_UNIT_ATTACKER, BATTLE_TIME_RANGED, kBattle.getDamage(BATTLE_UNIT_ATTACKER, BATTLE_TIME_END));
+				kBattle.setDamage(BATTLE_UNIT_DEFENDER, BATTLE_TIME_RANGED, kBattle.getDamage(BATTLE_UNIT_DEFENDER, BATTLE_TIME_END));
+			}
+			else
+			{
+				kBattle.addDamage(BATTLE_UNIT_ATTACKER, BATTLE_TIME_RANGED, kBattle.getDamage(BATTLE_UNIT_ATTACKER, BATTLE_TIME_BEGIN));
+				kBattle.addDamage(BATTLE_UNIT_DEFENDER, BATTLE_TIME_RANGED, kBattle.getDamage(BATTLE_UNIT_DEFENDER, BATTLE_TIME_BEGIN));
+			}
+
+			const int iTurns = planBattle(kBattle);
+			kBattle.setMissionTime(iTurns * gDLL->getSecsPerTurn());
+
+			setCombatTimer(firstAttacker ? std::max(firstAttacker->getCombatTimer() + 1, iTurns) : iTurns);
+
+			GC.getGame().incrementTurnTimer(iTurns);
+
+			//TB Debug: Without plot set, this routine ended up causing a crash at addMission below.
+
+			if (pPlot->isActiveVisible(false) && !pDefender->isUsingDummyEntities())
+			{
+				//TB sameplot?
+				ExecuteMove(0.5f, true);
+				addMission(kBattle);
+			}
+		}
+		else if (m_combatResult.bStealthDefense)
+		{
+			// Stealth defense is initialized in the endCombat function,
+			//	so the previous fight should wrap up before this next combat does so.
+			//	so add one to the timer for it to be queued for the next round of quick combat.
+			setCombatTimer(1);
+			GC.getGame().incrementTurnTimer(1);
+		}
+		else endCombat(pDefender, bSamePlot); // No need to update timers for quick combat
+	}
+	else endCombat(pDefender, bSamePlot); //Attacker died before it could even engage
+}
+
+void CvUnit::endCombat(CvUnit* pDefender, bool bSamePlot)
+{
+	if (getDomainType() == DOMAIN_AIR)
+	{
+		endAirCombat();
+		return;
+	}
+
+	if (!pDefender)
+	{
+		CvUnit* pDefender = getCombatUnit();
+	}
 
 	if (!pDefender)
 	{
 		setAttackPlot(NULL, false);
 		setCombatUnit(NULL);
+		setCombatTimer(0);
+		FErrorMsg("Defender is expected to be exist when it's in the middle of combat...");
+		return;
+	}
+	CvPlot* pPlot = getAttackPlot();
 
-		if (!bSamePlot)
-		{
-			getGroup()->groupMove(pPlot, true, (canAdvance(pPlot, 0) ? this : NULL));
-		}
-		/*GC.getGame().logOOSSpecial(10, getID(), getDamage());*/
+	if (!pPlot)
+	{
+		FErrorMsg("Plot to attack is expected to exist when ending combat...");
 		return;
 	}
 	//check if quick combat
@@ -3081,943 +3280,670 @@ void CvUnit::updateCombat(CvUnit* pSelectedDefender, bool bSamePlot, bool bSteal
 	const PlayerTypes eAttacker = getVisualOwner(pDefender->getTeam());
 	const PlayerTypes eDefender = pDefender->getVisualOwner(getTeam());
 
-	//if not finished and not fighting yet, set up combat damage and mission
-	CvUnit* firstAttacker = NULL;
-	if (!bFinish)
+	const bool bStealthDefense = m_combatResult.bStealthDefense;
+#ifdef STRENGTH_IN_NUMBERS
+	//TB Combat Mod begin
+	if (GC.getGame().isOption(GAMEOPTION_COMBAT_STRENGTH_IN_NUMBERS))
 	{
-		if (!isInBattle())
+		ClearSupports();
+	}
+#endif // STRENGTH_IN_NUMBERS
+
+#ifdef OUTBREAKS_AND_AFFLICTIONS
+	//TB Combat Mod (Afflict) begin
+	if (GC.getGame().isOption(GAMEOPTION_COMBAT_OUTBREAKS_AND_AFFLICTIONS))
+	{
+		for (int iI = 0; iI < GC.getNumPromotionLineInfos(); iI++)
 		{
-			PROFILE("CvUnit::updateCombat.StartFight");
+			if (m_combatResult.bAttackerInjured
+			&&
+			(
+				pDefender->isDead()
+				|| m_combatResult.bDefenderWithdrawn
+				|| m_combatResult.bDefenderKnockedBack
+				|| m_combatResult.bAttackerRepelled
+				|| m_combatResult.bAttackerWithdraws
+			)
+			&& GC.getPromotionLineInfo((PromotionLineTypes)iI).isAffliction()
+			&& !GC.getPromotionLineInfo((PromotionLineTypes)iI).isCritical())
+			{
+				const PromotionLineTypes eAfflictionLine = (PromotionLineTypes)iI;
 
-			//TB Combat Mods (Att&DefCounters)
-			if (getRoundCount() > 0)
-			{
-				changeRoundCount(-getRoundCount());
-			}
-			if (pDefender->getRoundCount() > 0)
-			{
-				pDefender->changeRoundCount(-pDefender->getRoundCount());
-			}
-			changeAttackCount(1);
-			//TB Combat Mods end
-			if (!bSamePlot)
-			{
-				//rotate to face plot
-				DirectionTypes newDirection = estimateDirection(this->plot(), pDefender->plot());
-				if (newDirection != NO_DIRECTION)
+				if (pDefender->hasAfflictOnAttackType(eAfflictionLine)
+				&& !pDefender->isAfflictOnAttackTypeAttempted(eAfflictionLine)
+				// Distance Qualifier
+				&&
+				(
+					m_combatResult.bDefenderHitAttackerWithDistanceAttack
+					&& pDefender->isAfflictOnAttackTypeDistance(eAfflictionLine)
+					|| pDefender->isAfflictOnAttackTypeMelee(eAfflictionLine)
+					&& !m_combatResult.bNeverMelee
+				))
 				{
-					setFacingDirection(newDirection);
-				}
-
-				//rotate enemy to face us
-				newDirection = estimateDirection(pDefender->plot(), this->plot());
-				if (newDirection != NO_DIRECTION)
-				{
-					pDefender->setFacingDirection(newDirection);
-				}
-			}
-
-			const bool bStealthAttack = isInvisible(GET_PLAYER(pDefender->getOwner()).getTeam(), false, false) || pDefender->plot() == plot();
-			if (bStealthAttack)
-			{
-				if (bHuman)
-				{
-					AddDLLMessage(
-						getOwner(), false, GC.getEVENT_MESSAGE_TIME(),
-						gDLL->getText("TXT_KEY_MISC_STEALTH_ATTACK_OWNER", getNameKey(), GET_PLAYER(eDefender).getNameKey(), pDefender->getNameKey()),
-						"AS2D_EXPOSED", MESSAGE_TYPE_MINOR_EVENT, getButton(), GC.getCOLOR_UNIT_TEXT(), getX(), getY(), true, true
+					const int iDefendersPoisonChance =
+					(
+						pDefender->getAfflictOnAttackTypeProbability(eAfflictionLine)
+						- fortitudeTotal() - getUnitAfflictionTolerance(eAfflictionLine)
 					);
-				}
-				if (bHumanDefender)
-				{
-					AddDLLMessage(
-						pDefender->getOwner(), false, GC.getEVENT_MESSAGE_TIME(),
-						gDLL->getText("TXT_KEY_MISC_STEALTH_ATTACK", GET_PLAYER(eAttacker).getNameKey(), getNameKey(), pDefender->getNameKey()),
-						"AS2D_EXPOSED", MESSAGE_TYPE_MINOR_EVENT, getButton(), GC.getCOLOR_UNIT_TEXT(), getX(), getY(), true, true
-					);
-				}
-			}
-			bool bStealthDefense = false;
-			if (bStealthAttack || bStealth)
-			{
-				const bool bLieInWait = !isInvisible(GET_PLAYER(pDefender->getOwner()).getTeam(), false, false) && pDefender->plot() == plot();
-
-				bStealthDefense = bStealth || bLieInWait;
-				if (bStealthDefense && bLieInWait)
-				{
-
-					if (bHumanDefender)
+					if (GC.getGame().getSorenRandNum(100, "DefendersPoisonRoll") < iDefendersPoisonChance)
 					{
-						AddDLLMessage(
-							pDefender->getOwner(), false, GC.getEVENT_MESSAGE_TIME(),
-							gDLL->getText("TXT_KEY_MISC_STEALTH_LIE_IN_WAIT_OWNER", pDefender->getNameKey(), GET_PLAYER(getOwner()).getNameKey(), getNameKey()),
-							"AS2D_EXPOSED", MESSAGE_TYPE_MINOR_EVENT, getButton(), GC.getCOLOR_UNIT_TEXT(), getX(), getY(), true, true
-						);
+						afflict(eAfflictionLine, true, pDefender);
 					}
-					if (bHuman)
+					pDefender->setAfflictOnAttackTypeAttemptedCount(eAfflictionLine, 1);
+				}
+				//Battle proximity communicability affliction spread
+				if (!m_combatResult.bNeverMelee && pDefender->hasAfflictionLine(eAfflictionLine) && GC.getPromotionLineInfo(eAfflictionLine).getCommunicability() > 0 && !GC.getPromotionLineInfo(eAfflictionLine).isNoSpreadonBattle())
+				{
+					const int iDefendersChancetoAfflict = getChancetoContract(eAfflictionLine) + pDefender->worsenedProbabilitytoAfflict(eAfflictionLine);
+
+					if (GC.getGame().getSorenRandNum(100, "DefenderCauseContractRoll") < iDefendersChancetoAfflict)
 					{
-						AddDLLMessage(
-							getOwner(), false, GC.getEVENT_MESSAGE_TIME(),
-							gDLL->getText("TXT_KEY_MISC_STEALTH_LIE_IN_WAIT", GET_PLAYER(eAttacker).getNameKey(), getNameKey(), pDefender->getNameKey()),
-							"AS2D_EXPOSED", MESSAGE_TYPE_MINOR_EVENT, getButton(), GC.getCOLOR_UNIT_TEXT(), getX(), getY(), true, true
-						);
+						afflict(eAfflictionLine, false, pDefender);
 					}
 				}
 			}
-			m_combatResult.bStealthDefense = bStealthDefense && pDefender->plot() != plot();//Note this information is transferred to bStealthDefense during bFinish routine to help define whether units should lose movement or not.
-			//TBMaybeproblem : I'd like to elminate this from attackers in a stealth defense situation - they shouldn't be counted as having attacked for being ambushed.
-			if (!canStampede() && !canOnslaught() && !bStealthDefense)
+			if (m_combatResult.bDefenderInjured
+			&&
+			(
+				isDead()
+				|| m_combatResult.bDefenderWithdrawn
+				|| m_combatResult.bDefenderKnockedBack
+				|| m_combatResult.bAttackerRepelled
+				|| m_combatResult.bAttackerWithdraws
+			)
+			&& GC.getPromotionLineInfo((PromotionLineTypes)iI).isAffliction()
+			&& !GC.getPromotionLineInfo((PromotionLineTypes)iI).isCritical())
 			{
-				setMadeAttack(true);
+				const PromotionLineTypes eAfflictionLine = (PromotionLineTypes)iI;
+				if (hasAfflictOnAttackType(eAfflictionLine)
+				&& !isAfflictOnAttackTypeAttempted(eAfflictionLine)
+				&&
+				(
+					m_combatResult.bDefenderHitAttackerWithDistanceAttack
+					&& isAfflictOnAttackTypeDistance(eAfflictionLine)
+					|| isAfflictOnAttackTypeMelee(eAfflictionLine)
+					&& !m_combatResult.bNeverMelee
+				))
+				{
+					const int iAttackersPoisonChance =
+					(
+						getAfflictOnAttackTypeProbability(eAfflictionLine)
+						- pDefender->fortitudeTotal()
+						- pDefender->getUnitAfflictionTolerance(eAfflictionLine)
+					);
+					if (GC.getGame().getSorenRandNum(100, "AttackersPoisonRoll") < iAttackersPoisonChance)
+					{
+						pDefender->afflict(eAfflictionLine, true, this);
+					}
+					setAfflictOnAttackTypeAttemptedCount(eAfflictionLine, 1);
+				}
+				//Communicability exposure
+				if (!m_combatResult.bNeverMelee && hasAfflictionLine(eAfflictionLine) && GC.getPromotionLineInfo(eAfflictionLine).getCommunicability() > 0 && !GC.getPromotionLineInfo(eAfflictionLine).isNoSpreadonBattle())
+				{
+					const int iAttackersChancetoAfflict = pDefender->getChancetoContract(eAfflictionLine) + worsenedProbabilitytoAfflict(eAfflictionLine);
+
+					if (GC.getGame().getSorenRandNum(100, "AttackerCauseContractRoll") < iAttackersChancetoAfflict)
+					{
+						pDefender->afflict(eAfflictionLine, false, this);
+					}
+				}
 			}
-			if (getCombatUnit())
+		}
+	}
+	//TB Combat Mod (Afflict) end
+#endif // OUTBREAKS_AND_AFFLICTIONS
+
+	//TB Combat Mod (Stampede/Onslaught)
+	if (pDefender->isDead() || m_combatResult.bDefenderWithdrawn || m_combatResult.bDefenderKnockedBack || m_combatResult.bAttackerRepelled || m_combatResult.bAttackerWithdraws)
+	{
+		if (!bSamePlot && canStampede() && pPlot->getNumVisiblePotentialEnemyDefenders(this) > 1)
+		{
+			m_combatResult.bAttackerStampedes = true;
+		}
+		if (!bSamePlot && canOnslaught() && (getDamage() == 0) && pPlot->getNumVisiblePotentialEnemyDefenders(this) > 1)
+		{
+			m_combatResult.bAttackerOnslaught = true;
+		}
+	}
+	if (isDead() || pDefender->isDead() || m_combatResult.bDefenderWithdrawn || m_combatResult.bDefenderKnockedBack || m_combatResult.bAttackerRepelled || m_combatResult.bAttackerWithdraws)
+	{
+		//Sustain Reports
+		//Pursuit Reports
+		if (m_combatResult.bAttackerPursuedSustain)
+		{
+			if (bHuman)
 			{
-				FErrorMsg("Not expected, though this code is a mess and need a full overhaul");
-				getCombatUnit()->setCombatUnit(NULL);
+
+				if (BARBARIAN_PLAYER != eDefender)
+				{
+					AddDLLMessage(
+						getOwner(), true, GC.getEVENT_MESSAGE_TIME(),
+						gDLL->getText("TXT_KEY_MISC_ATTACKER_PURSUED_SUSTAIN_HUMAN", getNameKey(), pDefender->getVisualCivAdjective(pDefender->getTeam()), pDefender->getNameKey()),
+						"AS2D_OUR_WITHDRAWL", MESSAGE_TYPE_INFO, NULL, GC.getCOLOR_YELLOW(), pPlot->getX(), pPlot->getY()
+					);
+				}
+				else
+				{
+					AddDLLMessage(
+						getOwner(), true, GC.getEVENT_MESSAGE_TIME(),
+						gDLL->getText("TXT_KEY_MISC_ATTACKER_PURSUED_SUSTAIN_HUMAN_HIDDEN", getNameKey(), pDefender->getNameKey()),
+						"AS2D_OUR_WITHDRAWL", MESSAGE_TYPE_INFO, NULL, GC.getCOLOR_YELLOW(), pPlot->getX(), pPlot->getY()
+					);
+				}
 			}
-			setCombatUnit(pDefender, true, bQuick, bStealthAttack, bStealthDefense);
-
-			firstAttacker = pDefender->getCombatUnit();
-
-			pDefender->setCombatUnit(this, false, bQuick, bStealthAttack, bStealthDefense);
-			//TB Combat Mods (Att&DefCounters)
-			pDefender->changeDefenseCount(1);
-			//TB Combat Mods end
-
-			if (!firstAttacker)
+			if (bHumanDefender)
 			{
-				pDefender->getGroup()->clearMissionQueue();
-			}
 
-			if (!bQuick
-			&& !firstAttacker
-			&& gDLL->getInterfaceIFace()->isCombatFocus()
-			&& plot()->isInViewport()
-			&& pDefender->isInViewport())
-			{ // TBMaybeproblem - is it possible that all this should happen to setup the combat on a surprise defense?
-				// It is not currently doing so, perhaps because of fear of the revealed unit not being visible yet?
-				DirectionTypes directionType = directionXY(plot(), pPlot);
-				//								N			NE				E				SE					S				SW					W				NW
-				NiPoint2 directions[8] = {NiPoint2(0, 1), NiPoint2(1, 1), NiPoint2(1, 0), NiPoint2(1, -1), NiPoint2(0, -1), NiPoint2(-1, -1), NiPoint2(-1, 0), NiPoint2(-1, 1)};
-				NiPoint3 attackDirection = NiPoint3(directions[directionType].x, directions[directionType].y, 0);
-				float plotSize = GC.getPLOT_SIZE();
-				NiPoint3 lookAtPoint(plot()->getPoint().x + plotSize / 2 * attackDirection.x, plot()->getPoint().y + plotSize / 2 * attackDirection.y, (plot()->getPoint().z + pPlot->getPoint().z) / 2);
-				attackDirection.Unitize();
-				gDLL->getInterfaceIFace()->lookAt(lookAtPoint, (((getOwner() != GC.getGame().getActivePlayer()) || gDLL->getGraphicOption(GRAPHICOPTION_NO_COMBAT_ZOOM)) ? CAMERALOOKAT_BATTLE : CAMERALOOKAT_BATTLE_ZOOM_IN), attackDirection);
+				if (BARBARIAN_PLAYER != eAttacker)
+				{
+					AddDLLMessage(
+						pDefender->getOwner(), true, GC.getEVENT_MESSAGE_TIME(),
+						gDLL->getText("TXT_KEY_MISC_ATTACKER_PURSUED_SUSTAIN", getVisualCivAdjective(getTeam()), getNameKey(), pDefender->getNameKey()),
+						"AS2D_OUR_WITHDRAWL", MESSAGE_TYPE_INFO, NULL, GC.getCOLOR_GREEN(), pPlot->getX(), pPlot->getY()
+					);
+				}
+				else
+				{
+					AddDLLMessage(
+						pDefender->getOwner(), true, GC.getEVENT_MESSAGE_TIME(),
+						gDLL->getText("TXT_KEY_MISC_ATTACKER_PURSUED_SUSTAIN_HIDDEN", getNameKey(), pDefender->getNameKey()),
+						"AS2D_OUR_WITHDRAWL", MESSAGE_TYPE_INFO, NULL, GC.getCOLOR_GREEN(), pPlot->getX(), pPlot->getY()
+					);
+				}
 			}
-			else if (bHumanDefender)
+			m_combatResult.bAttackerPursuedSustain = false;
+		}
+		if (m_combatResult.bDefenderPursuedSustain)
+		{
+			if (bHuman)
+			{
+				if (BARBARIAN_PLAYER != eDefender)
+				{
+					AddDLLMessage(
+						getOwner(), true, GC.getEVENT_MESSAGE_TIME(),
+						gDLL->getText(
+							"TXT_KEY_MISC_DEFENDER_PURSUED_SUSTAIN_HUMAN",
+							getNameKey(), pDefender->getVisualCivAdjective(pDefender->getTeam()), pDefender->getNameKey()
+						),
+						"AS2D_OUR_WITHDRAWL", MESSAGE_TYPE_INFO, NULL, GC.getCOLOR_GREEN(), pPlot->getX(), pPlot->getY()
+					);
+				}
+				else
+				{
+					AddDLLMessage(
+						getOwner(), true, GC.getEVENT_MESSAGE_TIME(),
+						gDLL->getText("TXT_KEY_MISC_DEFENDER_PURSUED_SUSTAIN_HUMAN_HIDDEN", getNameKey(), pDefender->getNameKey()),
+						"AS2D_OUR_WITHDRAWL", MESSAGE_TYPE_INFO, NULL, GC.getCOLOR_GREEN(), pPlot->getX(), pPlot->getY()
+					);
+				}
+			}
+			if (bHumanDefender)
+			{
+
+				if (BARBARIAN_PLAYER != eAttacker)
+				{
+					AddDLLMessage(
+						pDefender->getOwner(), true, GC.getEVENT_MESSAGE_TIME(),
+						gDLL->getText("TXT_KEY_MISC_DEFENDER_PURSUED_SUSTAIN", pDefender->getNameKey(), getVisualCivAdjective(getTeam()), getNameKey()),
+						"AS2D_OUR_WITHDRAWL", MESSAGE_TYPE_INFO, NULL, GC.getCOLOR_YELLOW(), pPlot->getX(), pPlot->getY()
+					);
+				}
+				else
+				{
+					AddDLLMessage(
+						pDefender->getOwner(), true, GC.getEVENT_MESSAGE_TIME(),
+						gDLL->getText("TXT_KEY_MISC_DEFENDER_PURSUED_SUSTAIN_HIDDEN", pDefender->getNameKey(),getNameKey()),
+						"AS2D_OUR_WITHDRAWL", MESSAGE_TYPE_INFO, NULL, GC.getCOLOR_YELLOW(), pPlot->getX(), pPlot->getY()
+					);
+				}
+			}
+			m_combatResult.bDefenderPursuedSustain = false;
+		}
+
+		//Unyielding Reports
+		if (m_combatResult.bAttackerRefusedtoYieldSustain)
+		{
+			if (bHuman)
+			{
+				if (BARBARIAN_PLAYER != eAttacker)
+				{
+					AddDLLMessage(
+						getOwner(), true, GC.getEVENT_MESSAGE_TIME(),
+						gDLL->getText(
+							"TXT_KEY_MISC_ATTACKER_UNYIELDING_SUSTAIN_HUMAN",
+							getNameKey(), getVisualCivAdjective(pDefender->getTeam()), pDefender->getNameKey()
+						),
+						"AS2D_OUR_WITHDRAWL", MESSAGE_TYPE_INFO, NULL, GC.getCOLOR_GREEN(), pPlot->getX(), pPlot->getY()
+					);
+				}
+				else
+				{
+					AddDLLMessage(
+						getOwner(), true, GC.getEVENT_MESSAGE_TIME(),
+						gDLL->getText("TXT_KEY_MISC_ATTACKER_UNYIELDING_SUSTAIN_HUMAN_HIDDEN", getNameKey(), pDefender->getNameKey()),
+						"AS2D_OUR_WITHDRAWL", MESSAGE_TYPE_INFO, NULL, GC.getCOLOR_GREEN(), pPlot->getX(), pPlot->getY()
+					);
+				}
+			}
+			if (bHumanDefender)
 			{
 				if (BARBARIAN_PLAYER != eAttacker)
 				{
 					AddDLLMessage(
 						pDefender->getOwner(), true, GC.getEVENT_MESSAGE_TIME(),
-						gDLL->getText("TXT_KEY_MISC_YOU_UNITS_UNDER_ATTACK", GET_PLAYER(getOwner()).getNameKey()),
-						"AS2D_COMBAT", MESSAGE_TYPE_DISPLAY_ONLY, getButton(), GC.getCOLOR_RED(), pPlot->getX(), pPlot->getY(), true
+						gDLL->getText("TXT_KEY_MISC_ATTACKER_UNYIELDING_SUSTAIN", getVisualCivAdjective(getTeam()), pDefender->getNameKey(), getNameKey()),
+						"AS2D_OUR_WITHDRAWL", MESSAGE_TYPE_INFO, NULL, GC.getCOLOR_YELLOW(), pPlot->getX(), pPlot->getY()
 					);
 				}
 				else
 				{
 					AddDLLMessage(
 						pDefender->getOwner(), true, GC.getEVENT_MESSAGE_TIME(),
-						gDLL->getText("TXT_KEY_MISC_YOU_UNITS_UNDER_ATTACK_UNKNOWN"),
-						"AS2D_COMBAT", MESSAGE_TYPE_DISPLAY_ONLY, getButton(), GC.getCOLOR_RED(), pPlot->getX(), pPlot->getY(), true
+						gDLL->getText("TXT_KEY_MISC_ATTACKER_UNYIELDING_SUSTAIN_HIDDEN", pDefender->getNameKey(), getNameKey()),
+						"AS2D_OUR_WITHDRAWL", MESSAGE_TYPE_INFO, NULL, GC.getCOLOR_YELLOW(), pPlot->getX(), pPlot->getY()
 					);
 				}
 			}
-			//Damage to Attacking Unit from City Defenses
-			if (pPlot->isCity(false) && !bSamePlot)
-			{
-				std::vector<UnitCombatTypes> damagableUnitCombatTypes;
-
-				CvCity* pCity = pPlot->getPlotCity();
-				for (std::map<UnitCombatTypes, UnitCombatKeyedInfo>::iterator it = m_unitCombatKeyedInfo.begin(), end = m_unitCombatKeyedInfo.end(); it != end; ++it)
-				{
-					if (it->second.m_bHasUnitCombat && pCity->canDamageAttackingUnitCombat(it->first))
-					{
-						damagableUnitCombatTypes.push_back(it->first);
-					}
-				}
-				if (damagableUnitCombatTypes.size() > 0)
-				{
-					checkCityAttackDefensesDamage(pCity, damagableUnitCombatTypes);
-				}
-			}
+			m_combatResult.bAttackerRefusedtoYieldSustain = false;
 		}
-		FAssertMsg(pDefender, "Defender is not assigned a valid value");
-		FAssertMsg(plot()->isBattle(), "Current unit instance plot is not fighting as expected");
-		FAssertMsg(pPlot->isBattle(), "pPlot is not fighting as expected");
-
-		if (!pDefender->canDefend())
+		if (m_combatResult.bDefenderRefusedtoYieldSustain)
 		{
-			if (!bQuick)
+			if (bHuman)
 			{
-				addMission(CvMissionDefinition(MISSION_SURRENDER, pPlot, this, pDefender, getCombatTimer() * gDLL->getSecsPerTurn()));
 
-				// Surrender mission
-				setCombatTimer(GC.getMissionInfo(MISSION_SURRENDER).getTime());
-
-				GC.getGame().incrementTurnTimer(getCombatTimer());
-			}
-			else bFinish = true;
-
-			// Kill them!
-			pDefender->setDamage(pDefender->getMaxHP());
-		}
-		//	Need to check the attacker has not already died in the attempt (on building defenses)
-		else if (!isDead())
-		{
-			PROFILE("CvUnit::updateCombat.CanDefend");
-
-			//USE commanders here (so their command points will be decreased) for attacker and defender:
-			this->tryUseCommander();
-			pDefender->tryUseCommander();
-
-			CvBattleDefinition kBattle(pPlot, this, pDefender);
-
-			//	Koshling - save pre-combat helath so we can use health loss as
-			//	a basis for more granular war weariness
-			setupPreCombatDamage();
-			pDefender->setupPreCombatDamage();
-
-			resolveCombat(pDefender, pPlot, kBattle, bSamePlot);
-
-			if (!bQuick)
-			{
-				kBattle.setDamage(BATTLE_UNIT_ATTACKER, BATTLE_TIME_END, getDamage());
-				kBattle.setDamage(BATTLE_UNIT_DEFENDER, BATTLE_TIME_END, pDefender->getDamage());
-				if (!bSamePlot)
+				if (BARBARIAN_PLAYER != eDefender)
 				{
-					kBattle.setAdvanceSquare(canAdvance(pPlot, pDefender->isDead() ? 0 : 1));
-				}
-
-				if (isRanged() && pDefender->isRanged())
-				{
-					kBattle.setDamage(BATTLE_UNIT_ATTACKER, BATTLE_TIME_RANGED, kBattle.getDamage(BATTLE_UNIT_ATTACKER, BATTLE_TIME_END));
-					kBattle.setDamage(BATTLE_UNIT_DEFENDER, BATTLE_TIME_RANGED, kBattle.getDamage(BATTLE_UNIT_DEFENDER, BATTLE_TIME_END));
+					AddDLLMessage(
+						getOwner(), true, GC.getEVENT_MESSAGE_TIME(),
+						gDLL->getText("TXT_KEY_MISC_DEFENDER_UNYIELDING_SUSTAIN_HUMAN", getNameKey(), getVisualCivAdjective(pDefender->getTeam()), pDefender->getNameKey()),
+						"AS2D_OUR_WITHDRAWL", MESSAGE_TYPE_INFO, NULL, GC.getCOLOR_YELLOW(), pPlot->getX(), pPlot->getY()
+					);
 				}
 				else
 				{
-					kBattle.addDamage(BATTLE_UNIT_ATTACKER, BATTLE_TIME_RANGED, kBattle.getDamage(BATTLE_UNIT_ATTACKER, BATTLE_TIME_BEGIN));
-					kBattle.addDamage(BATTLE_UNIT_DEFENDER, BATTLE_TIME_RANGED, kBattle.getDamage(BATTLE_UNIT_DEFENDER, BATTLE_TIME_BEGIN));
+					AddDLLMessage(
+						getOwner(), true, GC.getEVENT_MESSAGE_TIME(),
+						gDLL->getText("TXT_KEY_MISC_DEFENDER_UNYIELDING_SUSTAIN_HUMAN_HIDDEN", getNameKey(), pDefender->getNameKey()),
+						"AS2D_OUR_WITHDRAWL", MESSAGE_TYPE_INFO, NULL, GC.getCOLOR_YELLOW(), pPlot->getX(), pPlot->getY()
+					);
 				}
-
-				const int iTurns = planBattle(kBattle);
-				kBattle.setMissionTime(iTurns * gDLL->getSecsPerTurn());
-
-				setCombatTimer(firstAttacker ? std::max(firstAttacker->getCombatTimer() + 1, iTurns) : iTurns);
-
-				GC.getGame().incrementTurnTimer(iTurns);
-
-				//TB Debug: Without plot set, this routine ended up causing a crash at addMission below.
-
-				if (pPlot->isActiveVisible(false) && !pDefender->isUsingDummyEntities())
-				{
-					//TB sameplot?
-					ExecuteMove(0.5f, true);
-					addMission(kBattle);
-				}
-			}
-			else if (m_combatResult.bStealthDefense)
-			{
-				// Stealth defense is initialized in the bFinish section,
-				//	so the previous fight should wrap up before this next combat does so.
-				//	so add one to the timer for it to be queued for the next round of quick combat.
-				setCombatTimer(1);
-				GC.getGame().incrementTurnTimer(1);
-			}
-			else bFinish = true; // No need to update timers for quick combat
-		}
-		else bFinish = true; //Attacker died before it could even engage
-	}
-
-	if (bFinish)
-	{
-		PROFILE("CvUnit::updateCombat.Finish");
-
-		const bool bStealthDefense = m_combatResult.bStealthDefense;
-#ifdef STRENGTH_IN_NUMBERS
-		//TB Combat Mod begin
-		if (GC.getGame().isOption(GAMEOPTION_COMBAT_STRENGTH_IN_NUMBERS))
-		{
-			ClearSupports();
-		}
-#endif // STRENGTH_IN_NUMBERS
-
-#ifdef OUTBREAKS_AND_AFFLICTIONS
-		//TB Combat Mod (Afflict) begin
-		if (GC.getGame().isOption(GAMEOPTION_COMBAT_OUTBREAKS_AND_AFFLICTIONS))
-		{
-			for (int iI = 0; iI < GC.getNumPromotionLineInfos(); iI++)
-			{
-				if (m_combatResult.bAttackerInjured
-				&&
-				(
-					pDefender->isDead()
-					|| m_combatResult.bDefenderWithdrawn
-					|| m_combatResult.bDefenderKnockedBack
-					|| m_combatResult.bAttackerRepelled
-					|| m_combatResult.bAttackerWithdraws
-				)
-				&& GC.getPromotionLineInfo((PromotionLineTypes)iI).isAffliction()
-				&& !GC.getPromotionLineInfo((PromotionLineTypes)iI).isCritical())
-				{
-					const PromotionLineTypes eAfflictionLine = (PromotionLineTypes)iI;
-
-					if (pDefender->hasAfflictOnAttackType(eAfflictionLine)
-					&& !pDefender->isAfflictOnAttackTypeAttempted(eAfflictionLine)
-					// Distance Qualifier
-					&&
-					(
-						m_combatResult.bDefenderHitAttackerWithDistanceAttack
-						&& pDefender->isAfflictOnAttackTypeDistance(eAfflictionLine)
-						|| pDefender->isAfflictOnAttackTypeMelee(eAfflictionLine)
-						&& !m_combatResult.bNeverMelee
-					))
-					{
-						const int iDefendersPoisonChance =
-						(
-							pDefender->getAfflictOnAttackTypeProbability(eAfflictionLine)
-							- fortitudeTotal() - getUnitAfflictionTolerance(eAfflictionLine)
-						);
-						if (GC.getGame().getSorenRandNum(100, "DefendersPoisonRoll") < iDefendersPoisonChance)
-						{
-							afflict(eAfflictionLine, true, pDefender);
-						}
-						pDefender->setAfflictOnAttackTypeAttemptedCount(eAfflictionLine, 1);
-					}
-					//Battle proximity communicability affliction spread
-					if (!m_combatResult.bNeverMelee && pDefender->hasAfflictionLine(eAfflictionLine) && GC.getPromotionLineInfo(eAfflictionLine).getCommunicability() > 0 && !GC.getPromotionLineInfo(eAfflictionLine).isNoSpreadonBattle())
-					{
-						const int iDefendersChancetoAfflict = getChancetoContract(eAfflictionLine) + pDefender->worsenedProbabilitytoAfflict(eAfflictionLine);
-
-						if (GC.getGame().getSorenRandNum(100, "DefenderCauseContractRoll") < iDefendersChancetoAfflict)
-						{
-							afflict(eAfflictionLine, false, pDefender);
-						}
-					}
-				}
-				if (m_combatResult.bDefenderInjured
-				&&
-				(
-					isDead()
-					|| m_combatResult.bDefenderWithdrawn
-					|| m_combatResult.bDefenderKnockedBack
-					|| m_combatResult.bAttackerRepelled
-					|| m_combatResult.bAttackerWithdraws
-				)
-				&& GC.getPromotionLineInfo((PromotionLineTypes)iI).isAffliction()
-				&& !GC.getPromotionLineInfo((PromotionLineTypes)iI).isCritical())
-				{
-					const PromotionLineTypes eAfflictionLine = (PromotionLineTypes)iI;
-					if (hasAfflictOnAttackType(eAfflictionLine)
-					&& !isAfflictOnAttackTypeAttempted(eAfflictionLine)
-					&&
-					(
-						m_combatResult.bDefenderHitAttackerWithDistanceAttack
-						&& isAfflictOnAttackTypeDistance(eAfflictionLine)
-						|| isAfflictOnAttackTypeMelee(eAfflictionLine)
-						&& !m_combatResult.bNeverMelee
-					))
-					{
-						const int iAttackersPoisonChance =
-						(
-							getAfflictOnAttackTypeProbability(eAfflictionLine)
-							- pDefender->fortitudeTotal()
-							- pDefender->getUnitAfflictionTolerance(eAfflictionLine)
-						);
-						if (GC.getGame().getSorenRandNum(100, "AttackersPoisonRoll") < iAttackersPoisonChance)
-						{
-							pDefender->afflict(eAfflictionLine, true, this);
-						}
-						setAfflictOnAttackTypeAttemptedCount(eAfflictionLine, 1);
-					}
-					//Communicability exposure
-					if (!m_combatResult.bNeverMelee && hasAfflictionLine(eAfflictionLine) && GC.getPromotionLineInfo(eAfflictionLine).getCommunicability() > 0 && !GC.getPromotionLineInfo(eAfflictionLine).isNoSpreadonBattle())
-					{
-						const int iAttackersChancetoAfflict = pDefender->getChancetoContract(eAfflictionLine) + worsenedProbabilitytoAfflict(eAfflictionLine);
-
-						if (GC.getGame().getSorenRandNum(100, "AttackerCauseContractRoll") < iAttackersChancetoAfflict)
-						{
-							pDefender->afflict(eAfflictionLine, false, this);
-						}
-					}
-				}
-			}
-		}
-		//TB Combat Mod (Afflict) end
-#endif // OUTBREAKS_AND_AFFLICTIONS
-
-		//TB Combat Mod (Stampede/Onslaught)
-		if (pDefender->isDead() || m_combatResult.bDefenderWithdrawn || m_combatResult.bDefenderKnockedBack || m_combatResult.bAttackerRepelled || m_combatResult.bAttackerWithdraws)
-		{
-			if (!bSamePlot && canStampede() && pPlot->getNumVisiblePotentialEnemyDefenders(this) > 1)
-			{
-				m_combatResult.bAttackerStampedes = true;
-			}
-			if (!bSamePlot && canOnslaught() && (getDamage() == 0) && pPlot->getNumVisiblePotentialEnemyDefenders(this) > 1)
-			{
-				m_combatResult.bAttackerOnslaught = true;
-			}
-		}
-		if (isDead() || pDefender->isDead() || m_combatResult.bDefenderWithdrawn || m_combatResult.bDefenderKnockedBack || m_combatResult.bAttackerRepelled || m_combatResult.bAttackerWithdraws)
-		{
-			//Sustain Reports
-			//Pursuit Reports
-			if (m_combatResult.bAttackerPursuedSustain)
-			{
-				if (bHuman)
-				{
-
-					if (BARBARIAN_PLAYER != eDefender)
-					{
-						AddDLLMessage(
-							getOwner(), true, GC.getEVENT_MESSAGE_TIME(),
-							gDLL->getText("TXT_KEY_MISC_ATTACKER_PURSUED_SUSTAIN_HUMAN", getNameKey(), pDefender->getVisualCivAdjective(pDefender->getTeam()), pDefender->getNameKey()),
-							"AS2D_OUR_WITHDRAWL", MESSAGE_TYPE_INFO, NULL, GC.getCOLOR_YELLOW(), pPlot->getX(), pPlot->getY()
-						);
-					}
-					else
-					{
-						AddDLLMessage(
-							getOwner(), true, GC.getEVENT_MESSAGE_TIME(),
-							gDLL->getText("TXT_KEY_MISC_ATTACKER_PURSUED_SUSTAIN_HUMAN_HIDDEN", getNameKey(), pDefender->getNameKey()),
-							"AS2D_OUR_WITHDRAWL", MESSAGE_TYPE_INFO, NULL, GC.getCOLOR_YELLOW(), pPlot->getX(), pPlot->getY()
-						);
-					}
-				}
-				if (bHumanDefender)
-				{
-
-					if (BARBARIAN_PLAYER != eAttacker)
-					{
-						AddDLLMessage(
-							pDefender->getOwner(), true, GC.getEVENT_MESSAGE_TIME(),
-							gDLL->getText("TXT_KEY_MISC_ATTACKER_PURSUED_SUSTAIN", getVisualCivAdjective(getTeam()), getNameKey(), pDefender->getNameKey()),
-							"AS2D_OUR_WITHDRAWL", MESSAGE_TYPE_INFO, NULL, GC.getCOLOR_GREEN(), pPlot->getX(), pPlot->getY()
-						);
-					}
-					else
-					{
-						AddDLLMessage(
-							pDefender->getOwner(), true, GC.getEVENT_MESSAGE_TIME(),
-							gDLL->getText("TXT_KEY_MISC_ATTACKER_PURSUED_SUSTAIN_HIDDEN", getNameKey(), pDefender->getNameKey()),
-							"AS2D_OUR_WITHDRAWL", MESSAGE_TYPE_INFO, NULL, GC.getCOLOR_GREEN(), pPlot->getX(), pPlot->getY()
-						);
-					}
-				}
-				m_combatResult.bAttackerPursuedSustain = false;
-			}
-			if (m_combatResult.bDefenderPursuedSustain)
-			{
-				if (bHuman)
-				{
-					if (BARBARIAN_PLAYER != eDefender)
-					{
-						AddDLLMessage(
-							getOwner(), true, GC.getEVENT_MESSAGE_TIME(),
-							gDLL->getText(
-								"TXT_KEY_MISC_DEFENDER_PURSUED_SUSTAIN_HUMAN",
-								getNameKey(), pDefender->getVisualCivAdjective(pDefender->getTeam()), pDefender->getNameKey()
-							),
-							"AS2D_OUR_WITHDRAWL", MESSAGE_TYPE_INFO, NULL, GC.getCOLOR_GREEN(), pPlot->getX(), pPlot->getY()
-						);
-					}
-					else
-					{
-						AddDLLMessage(
-							getOwner(), true, GC.getEVENT_MESSAGE_TIME(),
-							gDLL->getText("TXT_KEY_MISC_DEFENDER_PURSUED_SUSTAIN_HUMAN_HIDDEN", getNameKey(), pDefender->getNameKey()),
-							"AS2D_OUR_WITHDRAWL", MESSAGE_TYPE_INFO, NULL, GC.getCOLOR_GREEN(), pPlot->getX(), pPlot->getY()
-						);
-					}
-				}
-				if (bHumanDefender)
-				{
-
-					if (BARBARIAN_PLAYER != eAttacker)
-					{
-						AddDLLMessage(
-							pDefender->getOwner(), true, GC.getEVENT_MESSAGE_TIME(),
-							gDLL->getText("TXT_KEY_MISC_DEFENDER_PURSUED_SUSTAIN", pDefender->getNameKey(), getVisualCivAdjective(getTeam()), getNameKey()),
-							"AS2D_OUR_WITHDRAWL", MESSAGE_TYPE_INFO, NULL, GC.getCOLOR_YELLOW(), pPlot->getX(), pPlot->getY()
-						);
-					}
-					else
-					{
-						AddDLLMessage(
-							pDefender->getOwner(), true, GC.getEVENT_MESSAGE_TIME(),
-							gDLL->getText("TXT_KEY_MISC_DEFENDER_PURSUED_SUSTAIN_HIDDEN", pDefender->getNameKey(),getNameKey()),
-							"AS2D_OUR_WITHDRAWL", MESSAGE_TYPE_INFO, NULL, GC.getCOLOR_YELLOW(), pPlot->getX(), pPlot->getY()
-						);
-					}
-				}
-				m_combatResult.bDefenderPursuedSustain = false;
-			}
-
-			//Unyielding Reports
-			if (m_combatResult.bAttackerRefusedtoYieldSustain)
-			{
-				if (bHuman)
-				{
-					if (BARBARIAN_PLAYER != eAttacker)
-					{
-						AddDLLMessage(
-							getOwner(), true, GC.getEVENT_MESSAGE_TIME(),
-							gDLL->getText(
-								"TXT_KEY_MISC_ATTACKER_UNYIELDING_SUSTAIN_HUMAN",
-								getNameKey(), getVisualCivAdjective(pDefender->getTeam()), pDefender->getNameKey()
-							),
-							"AS2D_OUR_WITHDRAWL", MESSAGE_TYPE_INFO, NULL, GC.getCOLOR_GREEN(), pPlot->getX(), pPlot->getY()
-						);
-					}
-					else
-					{
-						AddDLLMessage(
-							getOwner(), true, GC.getEVENT_MESSAGE_TIME(),
-							gDLL->getText("TXT_KEY_MISC_ATTACKER_UNYIELDING_SUSTAIN_HUMAN_HIDDEN", getNameKey(), pDefender->getNameKey()),
-							"AS2D_OUR_WITHDRAWL", MESSAGE_TYPE_INFO, NULL, GC.getCOLOR_GREEN(), pPlot->getX(), pPlot->getY()
-						);
-					}
-				}
-				if (bHumanDefender)
-				{
-					if (BARBARIAN_PLAYER != eAttacker)
-					{
-						AddDLLMessage(
-							pDefender->getOwner(), true, GC.getEVENT_MESSAGE_TIME(),
-							gDLL->getText("TXT_KEY_MISC_ATTACKER_UNYIELDING_SUSTAIN", getVisualCivAdjective(getTeam()), pDefender->getNameKey(), getNameKey()),
-							"AS2D_OUR_WITHDRAWL", MESSAGE_TYPE_INFO, NULL, GC.getCOLOR_YELLOW(), pPlot->getX(), pPlot->getY()
-						);
-					}
-					else
-					{
-						AddDLLMessage(
-							pDefender->getOwner(), true, GC.getEVENT_MESSAGE_TIME(),
-							gDLL->getText("TXT_KEY_MISC_ATTACKER_UNYIELDING_SUSTAIN_HIDDEN", pDefender->getNameKey(), getNameKey()),
-							"AS2D_OUR_WITHDRAWL", MESSAGE_TYPE_INFO, NULL, GC.getCOLOR_YELLOW(), pPlot->getX(), pPlot->getY()
-						);
-					}
-				}
-				m_combatResult.bAttackerRefusedtoYieldSustain = false;
-			}
-			if (m_combatResult.bDefenderRefusedtoYieldSustain)
-			{
-				if (bHuman)
-				{
-
-					if (BARBARIAN_PLAYER != eDefender)
-					{
-						AddDLLMessage(
-							getOwner(), true, GC.getEVENT_MESSAGE_TIME(),
-							gDLL->getText("TXT_KEY_MISC_DEFENDER_UNYIELDING_SUSTAIN_HUMAN", getNameKey(), getVisualCivAdjective(pDefender->getTeam()), pDefender->getNameKey()),
-							"AS2D_OUR_WITHDRAWL", MESSAGE_TYPE_INFO, NULL, GC.getCOLOR_YELLOW(), pPlot->getX(), pPlot->getY()
-						);
-					}
-					else
-					{
-						AddDLLMessage(
-							getOwner(), true, GC.getEVENT_MESSAGE_TIME(),
-							gDLL->getText("TXT_KEY_MISC_DEFENDER_UNYIELDING_SUSTAIN_HUMAN_HIDDEN", getNameKey(), pDefender->getNameKey()),
-							"AS2D_OUR_WITHDRAWL", MESSAGE_TYPE_INFO, NULL, GC.getCOLOR_YELLOW(), pPlot->getX(), pPlot->getY()
-						);
-					}
-				}
-				if (bHumanDefender)
-				{
-
-					if (BARBARIAN_PLAYER != eAttacker)
-					{
-						AddDLLMessage(
-							pDefender->getOwner(), true, GC.getEVENT_MESSAGE_TIME(),
-							gDLL->getText("TXT_KEY_MISC_DEFENDER_UNYIELDING_SUSTAIN", pDefender->getNameKey(), getVisualCivAdjective(getTeam()), getNameKey()),
-							"AS2D_OUR_WITHDRAWL", MESSAGE_TYPE_INFO, NULL, GC.getCOLOR_GREEN(), pPlot->getX(), pPlot->getY()
-						);
-					}
-					else
-					{
-						AddDLLMessage(
-							pDefender->getOwner(), true, GC.getEVENT_MESSAGE_TIME(),
-							gDLL->getText("TXT_KEY_MISC_DEFENDER_UNYIELDING_SUSTAIN_HIDDEN", pDefender->getNameKey(), getNameKey()),
-							"AS2D_OUR_WITHDRAWL", MESSAGE_TYPE_INFO, NULL, GC.getCOLOR_GREEN(), pPlot->getX(), pPlot->getY()
-						);
-					}
-				}
-				m_combatResult.bDefenderRefusedtoYieldSustain = false;
-			}
-		}
-		//TB Combat Mods End
-		//end the combat mission if this code executes first
-		if (!isUsingDummyEntities() && isInViewport())
-		{
-			gDLL->getEntityIFace()->RemoveUnitFromBattle(this);
-		}
-		if (!pDefender->isUsingDummyEntities() && pDefender->isInViewport())
-		{
-			gDLL->getEntityIFace()->RemoveUnitFromBattle(pDefender);
-		}
-		setAttackPlot(NULL, false);
-		setCombatUnit(NULL);
-		pDefender->setCombatUnit(NULL);
-
-		NotifyEntity(MISSION_DAMAGE);
-		pDefender->NotifyEntity(MISSION_DAMAGE);
-
-		if (isDead())
-		{
-			if (isNPC())
-			{
-				GET_PLAYER(pDefender->getOwner()).changeWinsVsBarbs(1);
-			}
-
-			if (!isHiddenNationality() && !pDefender->isHiddenNationality())
-			{
-				const int attackerWarWearinessChangeTimes100 = std::max(1, 100 * GC.getDefineINT("WW_UNIT_KILLED_ATTACKING") * (getMaxHP() - getPreCombatDamage()) / getMaxHP());
-				GET_TEAM(getTeam()).changeWarWearinessTimes100(pDefender->getTeam(), *pPlot, attackerWarWearinessChangeTimes100);
-
-				const int defenderWarWearinessChangeTimes100 = 100*GC.getDefineINT("WW_KILLED_UNIT_DEFENDING")*(pDefender->getDamage() - pDefender->getPreCombatDamage())/pDefender->getMaxHP();
-				GET_TEAM(pDefender->getTeam()).changeWarWearinessTimes100(getTeam(), *pPlot, defenderWarWearinessChangeTimes100);
-
-				GET_TEAM(pDefender->getTeam()).AI_changeWarSuccess(getTeam(), GC.getDefineINT("WAR_SUCCESS_DEFENDING"));
-			}
-
-			const int iInfluenceRatio = GC.isIDW_ENABLED() ? pDefender->doVictoryInfluence(this, false, false) : 0;
-
-			if (bHuman)
-			{
-				CvWString szBuffer;
-
-				if (m_combatResult.bAttackerPursued)
-				{
-					szBuffer = gDLL->getText("TXT_KEY_MISC_PURSUIT_VICTIM", getNameKey(), pDefender->getNameKey());
-				}
-				else if (m_combatResult.bAttackerRefusedtoYield)
-				{
-					szBuffer = gDLL->getText("TXT_KEY_MISC_YOU_UNYIELDING_UNIT_DIED_ATTACKING", getNameKey(), pDefender->getNameKey());
-				}
-				else if (m_combatResult.bDefenderRefusedtoYield)
-				{
-					szBuffer = gDLL->getText("TXT_KEY_MISC_YOU_UNIT_DIED_ATTACKING_UNYIELDING", getNameKey(), pDefender->getNameKey());
-				}
-				else szBuffer = gDLL->getText("TXT_KEY_MISC_YOU_UNIT_DIED_ATTACKING", getNameKey(), pDefender->getNameKey());
-
-				if (iInfluenceRatio > 0)
-				{
-					szBuffer = szBuffer + CvString::format(" %s: -%.1f%%", gDLL->getText("TXT_KEY_TILE_INFLUENCE").GetCString(), ((float)iInfluenceRatio)/10);
-				}
-				AddDLLMessage(
-					getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer,
-					GC.getEraInfo(GC.getGame().getCurrentEra()).getAudioUnitDefeatScript(),
-					MESSAGE_TYPE_INFO, NULL, GC.getCOLOR_RED(), pPlot->getX(), pPlot->getY()
-				);
 			}
 			if (bHumanDefender)
 			{
-				CvWString szBuffer;
 
-				if (m_combatResult.bAttackerPursued)
+				if (BARBARIAN_PLAYER != eAttacker)
 				{
-					szBuffer = gDLL->getText("TXT_KEY_MISC_PURSUIT_SUCCESS", getNameKey(), pDefender->getNameKey());
+					AddDLLMessage(
+						pDefender->getOwner(), true, GC.getEVENT_MESSAGE_TIME(),
+						gDLL->getText("TXT_KEY_MISC_DEFENDER_UNYIELDING_SUSTAIN", pDefender->getNameKey(), getVisualCivAdjective(getTeam()), getNameKey()),
+						"AS2D_OUR_WITHDRAWL", MESSAGE_TYPE_INFO, NULL, GC.getCOLOR_GREEN(), pPlot->getX(), pPlot->getY()
+					);
 				}
-				else if (m_combatResult.bAttackerRefusedtoYield)
+				else
 				{
-					szBuffer = gDLL->getText("TXT_KEY_MISC_UNYIELDING_ATTACKER_YOU_KILLED", getNameKey(), pDefender->getNameKey());
-				}
-				else if (m_combatResult.bDefenderRefusedtoYield)
-				{
-					szBuffer = gDLL->getText("TXT_KEY_MISC_YOU_KILLED_ATTACKER_WHILEUNYIELDING", getNameKey(), pDefender->getNameKey());
-				}
-				else if (BARBARIAN_PLAYER != eAttacker)
-				{
-					szBuffer = gDLL->getText("TXT_KEY_MISC_YOU_KILLED_ENEMY_UNIT", pDefender->getNameKey(), getNameKey(), getVisualCivAdjective(pDefender->getTeam()));
-				}
-				else szBuffer = gDLL->getText("TXT_KEY_MISC_YOU_KILLED_ENEMY_UNIT_HIDDEN", pDefender->getNameKey(), getNameKey());
-
-				if (iInfluenceRatio > 0)
-				{
-					szBuffer = szBuffer + CvString::format(" %s: +%.1f%%", gDLL->getText("TXT_KEY_TILE_INFLUENCE").GetCString(), ((float)iInfluenceRatio)/10);
-				}
-				AddDLLMessage(
-					pDefender->getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer,
-					GC.getEraInfo(GC.getGame().getCurrentEra()).getAudioUnitVictoryScript(),
-					MESSAGE_TYPE_INFO, NULL, GC.getCOLOR_GREEN(), pPlot->getX(), pPlot->getY()
-				);
-			}
-
-			int iUnitsHealed = 0;
-			if (pDefender->getVictoryAdjacentHeal() > 0
-			&& GC.getGame().getSorenRandNum(100, "Field Hospital Die Roll") <= pDefender->getVictoryAdjacentHeal())
-			{
-				foreach_(const CvPlot* pLoopPlot, pPlot->adjacent() | filtered(CvPlot::fn::area() == pPlot->area()))
-				{
-					foreach_(CvUnit* pLoopUnit, pLoopPlot->units())
-					{
-						if (pLoopUnit->getTeam() == pDefender->getTeam() && pLoopUnit->isHurt())
-						{
-							iUnitsHealed++;
-							pLoopUnit->doHeal();
-						}
-					}
+					AddDLLMessage(
+						pDefender->getOwner(), true, GC.getEVENT_MESSAGE_TIME(),
+						gDLL->getText("TXT_KEY_MISC_DEFENDER_UNYIELDING_SUSTAIN_HIDDEN", pDefender->getNameKey(), getNameKey()),
+						"AS2D_OUR_WITHDRAWL", MESSAGE_TYPE_INFO, NULL, GC.getCOLOR_GREEN(), pPlot->getX(), pPlot->getY()
+					);
 				}
 			}
+			m_combatResult.bDefenderRefusedtoYieldSustain = false;
+		}
+	}
+	//TB Combat Mods End
+	//end the combat mission if this code executes first
+	if (!isUsingDummyEntities() && isInViewport())
+	{
+		gDLL->getEntityIFace()->RemoveUnitFromBattle(this);
+	}
+	if (!pDefender->isUsingDummyEntities() && pDefender->isInViewport())
+	{
+		gDLL->getEntityIFace()->RemoveUnitFromBattle(pDefender);
+	}
+	setAttackPlot(NULL, false);
+	setCombatUnit(NULL);
+	pDefender->setCombatUnit(NULL);
 
-			if (pDefender->getVictoryStackHeal() > 0
-			&& GC.getGame().getSorenRandNum(100, "Field Surgeon Die Roll") <= pDefender->getVictoryStackHeal())
+	NotifyEntity(MISSION_DAMAGE);
+	pDefender->NotifyEntity(MISSION_DAMAGE);
+
+	if (isDead())
+	{
+		if (isNPC())
+		{
+			GET_PLAYER(pDefender->getOwner()).changeWinsVsBarbs(1);
+		}
+
+		if (!isHiddenNationality() && !pDefender->isHiddenNationality())
+		{
+			const int attackerWarWearinessChangeTimes100 = std::max(1, 100 * GC.getDefineINT("WW_UNIT_KILLED_ATTACKING") * (getMaxHP() - getPreCombatDamage()) / getMaxHP());
+			GET_TEAM(getTeam()).changeWarWearinessTimes100(pDefender->getTeam(), *pPlot, attackerWarWearinessChangeTimes100);
+
+			const int defenderWarWearinessChangeTimes100 = 100*GC.getDefineINT("WW_KILLED_UNIT_DEFENDING")*(pDefender->getDamage() - pDefender->getPreCombatDamage())/pDefender->getMaxHP();
+			GET_TEAM(pDefender->getTeam()).changeWarWearinessTimes100(getTeam(), *pPlot, defenderWarWearinessChangeTimes100);
+
+			GET_TEAM(pDefender->getTeam()).AI_changeWarSuccess(getTeam(), GC.getDefineINT("WAR_SUCCESS_DEFENDING"));
+		}
+
+		const int iInfluenceRatio = GC.isIDW_ENABLED() ? pDefender->doVictoryInfluence(this, false, false) : 0;
+
+		if (bHuman)
+		{
+			CvWString szBuffer;
+
+			if (m_combatResult.bAttackerPursued)
 			{
-				foreach_(CvUnit* pLoopUnit, pPlot->units())
+				szBuffer = gDLL->getText("TXT_KEY_MISC_PURSUIT_VICTIM", getNameKey(), pDefender->getNameKey());
+			}
+			else if (m_combatResult.bAttackerRefusedtoYield)
+			{
+				szBuffer = gDLL->getText("TXT_KEY_MISC_YOU_UNYIELDING_UNIT_DIED_ATTACKING", getNameKey(), pDefender->getNameKey());
+			}
+			else if (m_combatResult.bDefenderRefusedtoYield)
+			{
+				szBuffer = gDLL->getText("TXT_KEY_MISC_YOU_UNIT_DIED_ATTACKING_UNYIELDING", getNameKey(), pDefender->getNameKey());
+			}
+			else szBuffer = gDLL->getText("TXT_KEY_MISC_YOU_UNIT_DIED_ATTACKING", getNameKey(), pDefender->getNameKey());
+
+			if (iInfluenceRatio > 0)
+			{
+				szBuffer = szBuffer + CvString::format(" %s: -%.1f%%", gDLL->getText("TXT_KEY_TILE_INFLUENCE").GetCString(), ((float)iInfluenceRatio)/10);
+			}
+			AddDLLMessage(
+				getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer,
+				GC.getEraInfo(GC.getGame().getCurrentEra()).getAudioUnitDefeatScript(),
+				MESSAGE_TYPE_INFO, NULL, GC.getCOLOR_RED(), pPlot->getX(), pPlot->getY()
+			);
+		}
+		if (bHumanDefender)
+		{
+			CvWString szBuffer;
+
+			if (m_combatResult.bAttackerPursued)
+			{
+				szBuffer = gDLL->getText("TXT_KEY_MISC_PURSUIT_SUCCESS", getNameKey(), pDefender->getNameKey());
+			}
+			else if (m_combatResult.bAttackerRefusedtoYield)
+			{
+				szBuffer = gDLL->getText("TXT_KEY_MISC_UNYIELDING_ATTACKER_YOU_KILLED", getNameKey(), pDefender->getNameKey());
+			}
+			else if (m_combatResult.bDefenderRefusedtoYield)
+			{
+				szBuffer = gDLL->getText("TXT_KEY_MISC_YOU_KILLED_ATTACKER_WHILEUNYIELDING", getNameKey(), pDefender->getNameKey());
+			}
+			else if (BARBARIAN_PLAYER != eAttacker)
+			{
+				szBuffer = gDLL->getText("TXT_KEY_MISC_YOU_KILLED_ENEMY_UNIT", pDefender->getNameKey(), getNameKey(), getVisualCivAdjective(pDefender->getTeam()));
+			}
+			else szBuffer = gDLL->getText("TXT_KEY_MISC_YOU_KILLED_ENEMY_UNIT_HIDDEN", pDefender->getNameKey(), getNameKey());
+
+			if (iInfluenceRatio > 0)
+			{
+				szBuffer = szBuffer + CvString::format(" %s: +%.1f%%", gDLL->getText("TXT_KEY_TILE_INFLUENCE").GetCString(), ((float)iInfluenceRatio)/10);
+			}
+			AddDLLMessage(
+				pDefender->getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer,
+				GC.getEraInfo(GC.getGame().getCurrentEra()).getAudioUnitVictoryScript(),
+				MESSAGE_TYPE_INFO, NULL, GC.getCOLOR_GREEN(), pPlot->getX(), pPlot->getY()
+			);
+		}
+
+		int iUnitsHealed = 0;
+		if (pDefender->getVictoryAdjacentHeal() > 0
+		&& GC.getGame().getSorenRandNum(100, "Field Hospital Die Roll") <= pDefender->getVictoryAdjacentHeal())
+		{
+			foreach_(const CvPlot* plotX, pPlot->adjacent() | filtered(CvPlot::fn::area() == pPlot->area()))
+			{
+				foreach_(CvUnit* unitX, plotX->units())
 				{
-					if (pLoopUnit->getTeam() == pDefender->getTeam() && pLoopUnit->isHurt())
+					if (unitX->getTeam() == pDefender->getTeam() && unitX->isHurt())
 					{
 						iUnitsHealed++;
-						pLoopUnit->doHeal();
+						unitX->doHeal();
 					}
 				}
 			}
-			else if (pDefender->getVictoryHeal() > 0 && pDefender->isHurt()
-			&& GC.getGame().getSorenRandNum(100, "Field Medic Die Roll") <= pDefender->getVictoryHeal())
+		}
+
+		if (pDefender->getVictoryStackHeal() > 0
+		&& GC.getGame().getSorenRandNum(100, "Field Surgeon Die Roll") <= pDefender->getVictoryStackHeal())
+		{
+			foreach_(CvUnit* unitX, pPlot->units())
 			{
-				pDefender->doHeal();
+				if (unitX->getTeam() == pDefender->getTeam() && unitX->isHurt())
+				{
+					iUnitsHealed++;
+					unitX->doHeal();
+				}
+			}
+		}
+		else if (pDefender->getVictoryHeal() > 0 && pDefender->isHurt()
+		&& GC.getGame().getSorenRandNum(100, "Field Medic Die Roll") <= pDefender->getVictoryHeal())
+		{
+			pDefender->doHeal();
+		}
+
+		if (iUnitsHealed > 1)
+		{
+			if (bHuman)
+			{
+				if (BARBARIAN_PLAYER != eAttacker)
+				{
+					AddDLLMessage(
+						getOwner(), true, GC.getEVENT_MESSAGE_TIME(),
+						gDLL->getText("TXT_KEY_MISC_ENEMY_FIELD_MEDIC_DEFENDERS", GET_PLAYER(pDefender->getOwner()).getCivilizationAdjective()),
+						"AS2D_COMBAT", MESSAGE_TYPE_INFO, getButton(), GC.getCOLOR_YELLOW(), pDefender->getX(), pDefender->getY()
+					);
+				}
+				else
+				{
+					AddDLLMessage(
+						getOwner(), true, GC.getEVENT_MESSAGE_TIME(), gDLL->getText("TXT_KEY_MISC_ENEMY_FIELD_MEDIC_DEFENDERS_HIDDEN"),
+						"AS2D_COMBAT", MESSAGE_TYPE_INFO, getButton(), GC.getCOLOR_YELLOW(), pDefender->getX(), pDefender->getY()
+					);
+				}
+			}
+			if (bHumanDefender)
+			{
+				AddDLLMessage(
+					pDefender->getOwner(), true, GC.getEVENT_MESSAGE_TIME(),
+					gDLL->getText("TXT_KEY_MISC_FIELD_MEDIC_DEFENDERS", pDefender->getNameKey(), iUnitsHealed),
+					"AS2D_POSITIVE_DINK", MESSAGE_TYPE_INFO, getButton(), GC.getCOLOR_GREEN(), pDefender->getX(), pDefender->getY()
+				);
+			}
+		}
+
+		if (pDefender->getDefensiveVictoryMoveCount() > 0)
+		{
+			pDefender->changeMoves(-GC.getMOVE_DENOMINATOR());
+		}
+
+		if (getSurvivorChance() > 0
+		&& GC.getGame().getSorenRandNum(100, "Too Badass Check") <= getSurvivorChance())
+		{
+			setSurvivor(true);
+			jumpToNearestValidPlot();
+		}
+		else if (isOneUp())
+		{
+			setCanRespawn(true);
+		}
+
+		if (pDefender->isPillageOnVictory())
+		{
+			CvPlot* pDefenderPlot = pDefender->plot();
+			int iPillageGold = getLevel() * getExperience();
+			if (NO_UNIT != getLeaderUnitType())
+			{
+				iPillageGold *= getLevel();
 			}
 
-			if (iUnitsHealed > 1)
+			if (iPillageGold > 0)
 			{
+				iPillageGold += (iPillageGold * pDefender->getPillageChange()) / 100;
+				GET_PLAYER(pDefender->getOwner()).changeGold(iPillageGold);
+
 				if (bHuman)
 				{
-					if (BARBARIAN_PLAYER != eAttacker)
+					if (BARBARIAN_PLAYER != eDefender)
 					{
 						AddDLLMessage(
 							getOwner(), true, GC.getEVENT_MESSAGE_TIME(),
-							gDLL->getText("TXT_KEY_MISC_ENEMY_FIELD_MEDIC_DEFENDERS", GET_PLAYER(pDefender->getOwner()).getCivilizationAdjective()),
-							"AS2D_COMBAT", MESSAGE_TYPE_INFO, getButton(), GC.getCOLOR_YELLOW(), pDefender->getX(), pDefender->getY()
+							gDLL->getText("TXT_KEY_MISC_GOLD_LOOTED_FROM_DEAD", getNameKey(), pDefender->getVisualCivAdjective(pDefender->getTeam())),
+							"AS2D_PILLAGED", MESSAGE_TYPE_INFO, getButton(), GC.getCOLOR_YELLOW(), pDefenderPlot->getX(), pDefenderPlot->getY()
 						);
 					}
 					else
 					{
 						AddDLLMessage(
-							getOwner(), true, GC.getEVENT_MESSAGE_TIME(), gDLL->getText("TXT_KEY_MISC_ENEMY_FIELD_MEDIC_DEFENDERS_HIDDEN"),
-							"AS2D_COMBAT", MESSAGE_TYPE_INFO, getButton(), GC.getCOLOR_YELLOW(), pDefender->getX(), pDefender->getY()
+							getOwner(), true, GC.getEVENT_MESSAGE_TIME(),
+							gDLL->getText("TXT_KEY_MISC_GOLD_LOOTED_FROM_DEAD_HIDDEN", getNameKey()),
+							"AS2D_PILLAGED", MESSAGE_TYPE_INFO, getButton(), GC.getCOLOR_YELLOW(), pDefenderPlot->getX(), pDefenderPlot->getY()
 						);
 					}
+				}
+
+				for (int iI = 0; iI < NUM_COMMERCE_TYPES; ++iI)
+				{
+					TechTypes ePillageTech = GET_PLAYER(pDefender->getOwner()).getCurrentResearch();
+					CommerceTypes eCommerce = (CommerceTypes)iI;
+					switch (eCommerce)
+					{
+					case COMMERCE_GOLD:
+						if (pDefender->isPillageMarauder())
+						{
+							GET_PLAYER(pDefender->getOwner()).changeGold(iPillageGold);
+							if (bHumanDefender)
+							{
+								AddDLLMessage(
+									pDefender->getOwner(), true, GC.getEVENT_MESSAGE_TIME(),
+									gDLL->getText("TXT_KEY_MISC_MARAUDERS_PLUNDERED_VICTIMS", iPillageGold, pDefender->getNameKey()),
+									"AS2D_PILLAGE", MESSAGE_TYPE_INFO, getButton(), GC.getCOLOR_GREEN(), pDefenderPlot->getX(), pDefenderPlot->getY()
+								);
+							}
+							if (bHuman)
+							{
+								if (BARBARIAN_PLAYER != eDefender)
+								{
+									AddDLLMessage(
+										getOwner(), false, GC.getEVENT_MESSAGE_TIME(),
+										gDLL->getText("TXT_KEY_MISC_DEFENDED_BY_MARAUDERS", getNameKey(), getVisualCivAdjective(pDefender->getTeam())),
+										"AS2D_PILLAGED", MESSAGE_TYPE_INFO, getButton(), GC.getCOLOR_YELLOW(), pDefenderPlot->getX(), pDefenderPlot->getY(), true, true
+									);
+								}
+								else
+								{
+									AddDLLMessage(
+										getOwner(), false, GC.getEVENT_MESSAGE_TIME(),
+										gDLL->getText("TXT_KEY_MISC_DEFENDED_BY_MARAUDERS_HIDDEN", getNameKey()),
+										"AS2D_PILLAGED", MESSAGE_TYPE_INFO, getButton(), GC.getCOLOR_YELLOW(), pDefenderPlot->getX(), pDefenderPlot->getY(), true, true
+									);
+								}
+							}
+						}
+						break;
+					case COMMERCE_RESEARCH:
+						if (pDefender->isPillageResearch())
+						{
+							GET_TEAM(GET_PLAYER(pDefender->getOwner()).getTeam()).changeResearchProgress(ePillageTech, iPillageGold, pDefender->getOwner());
+							if (bHumanDefender)
+							{
+								if (BARBARIAN_PLAYER != eDefender)
+								{
+									AddDLLMessage(
+										pDefender->getOwner(), true, GC.getEVENT_MESSAGE_TIME(),
+										gDLL->getText(
+											"TXT_KEY_MISC_PLUNDERED_RESEARCH_FROM_VICTIMS",
+											iPillageGold, pDefender->getNameKey(), getVisualCivAdjective(getTeam()), ePillageTech
+										),
+										"AS2D_PILLAGE", MESSAGE_TYPE_INFO, getButton(), GC.getCOLOR_GREEN(), pDefenderPlot->getX(), pDefenderPlot->getY()
+									);
+								}
+								else
+								{
+									AddDLLMessage(
+										pDefender->getOwner(), true, GC.getEVENT_MESSAGE_TIME(),
+										gDLL->getText("TXT_KEY_MISC_PLUNDERED_RESEARCH_FROM_VICTIMS_HIDDEN", iPillageGold, pDefender->getNameKey(), ePillageTech),
+										"AS2D_PILLAGE", MESSAGE_TYPE_INFO, getButton(), GC.getCOLOR_GREEN(), pDefenderPlot->getX(), pDefenderPlot->getY()
+									);
+								}
+							}
+						}
+						break;
+					case COMMERCE_CULTURE:
+						break;
+					case COMMERCE_ESPIONAGE:
+						if (pDefender->isPillageEspionage() && pDefenderPlot->getTeam() != NO_TEAM)
+						{
+							GET_TEAM(GET_PLAYER(pDefender->getOwner()).getTeam()).changeEspionagePointsAgainstTeam(getTeam(), iPillageGold);
+							if (bHumanDefender)
+							{
+								if (BARBARIAN_PLAYER != eDefender)
+								{
+									AddDLLMessage(
+										pDefender->getOwner(), true, GC.getEVENT_MESSAGE_TIME(),
+										gDLL->getText("TXT_KEY_MISC_PLUNDERED_ESPIONAGE_FROM_VICTIMS", iPillageGold, getVisualCivAdjective(getTeam()), pDefender->getNameKey()),
+										"AS2D_PILLAGE", MESSAGE_TYPE_INFO, getButton(), GC.getCOLOR_GREEN(), pDefenderPlot->getX(), pDefenderPlot->getY()
+									);
+								}
+								else
+								{
+									AddDLLMessage(
+										pDefender->getOwner(), true, GC.getEVENT_MESSAGE_TIME(),
+										gDLL->getText("TXT_KEY_MISC_PLUNDERED_ESPIONAGE_FROM_VICTIMS_HIDDEN", iPillageGold, pDefender->getNameKey()),
+										"AS2D_PILLAGE", MESSAGE_TYPE_INFO, getButton(), GC.getCOLOR_GREEN(), pDefenderPlot->getX(), pDefenderPlot->getY()
+									);
+								}
+							}
+						}
+						break;
+					}
+				}
+			}
+		}
+
+		// report event to Python, along with some other key state
+		CvEventReporter::getInstance().combatResult(pDefender, this);
+
+		CvOutcomeListMerged list;
+		list.addOutcomeList(getUnitInfo().getKillOutcomeList());
+		//getUnitInfo().getKillOutcomeList()->execute(*pDefender, getOwner(), getUnitType());
+		for (int iI = 0; iI < GC.getNumUnitCombatInfos(); iI++)
+		{
+			const UnitCombatTypes eCombat = (UnitCombatTypes)iI;
+			if (isHasUnitCombat(eCombat))
+			{
+				list.addOutcomeList(GC.getUnitCombatInfo(eCombat).getKillOutcomeList());
+				//pOutcomeList->execute(*pDefender, getOwner(), getUnitType());
+			}
+		}
+		list.execute(*pDefender, getOwner(), getUnitType());
+
+		return;
+	}
+
+	if (m_combatResult.bDefenderWithdrawn)
+	{
+		if (!m_combatResult.bAttackerOnslaught)
+		{
+			if (!m_combatResult.bAttackerStampedes)
+			{
+				if (bHuman)
+				{
+					AddDLLMessage(
+						getOwner(), true, GC.getEVENT_MESSAGE_TIME(),
+						gDLL->getText("TXT_KEY_MISC_ENEMY_UNIT_WITHDRAW", pDefender->getNameKey(), getNameKey()),
+						"AS2D_OUR_WITHDRAWL", MESSAGE_TYPE_INFO, NULL, GC.getCOLOR_YELLOW(), pPlot->getX(), pPlot->getY()
+					);
 				}
 				if (bHumanDefender)
 				{
 					AddDLLMessage(
 						pDefender->getOwner(), true, GC.getEVENT_MESSAGE_TIME(),
-						gDLL->getText("TXT_KEY_MISC_FIELD_MEDIC_DEFENDERS", pDefender->getNameKey(), iUnitsHealed),
-						"AS2D_POSITIVE_DINK", MESSAGE_TYPE_INFO, getButton(), GC.getCOLOR_GREEN(), pDefender->getX(), pDefender->getY()
+						gDLL->getText("TXT_KEY_MISC_YOU_UNIT_WITHDRAW", pDefender->getNameKey(), getNameKey()),
+						"AS2D_THEIR_WITHDRAWL", MESSAGE_TYPE_INFO, NULL, GC.getCOLOR_GREEN(), pPlot->getX(), pPlot->getY()
 					);
-				}
-			}
-
-			if (pDefender->getDefensiveVictoryMoveCount() > 0)
-			{
-				pDefender->changeMoves(-GC.getMOVE_DENOMINATOR());
-			}
-
-			if (getSurvivorChance() > 0
-			&& GC.getGame().getSorenRandNum(100, "Too Badass Check") <= getSurvivorChance())
-			{
-				setSurvivor(true);
-				jumpToNearestValidPlot();
-			}
-			else if (isOneUp())
-			{
-				setCanRespawn(true);
-			}
-
-			if (pDefender->isPillageOnVictory())
-			{
-				CvPlot* pDefenderPlot = pDefender->plot();
-				int iPillageGold = getLevel() * getExperience();
-				if (NO_UNIT != getLeaderUnitType())
-				{
-					iPillageGold *= getLevel();
-				}
-
-				if (iPillageGold > 0)
-				{
-					iPillageGold += (iPillageGold * pDefender->getPillageChange()) / 100;
-					GET_PLAYER(pDefender->getOwner()).changeGold(iPillageGold);
-
-					if (bHuman)
-					{
-						if (BARBARIAN_PLAYER != eDefender)
-						{
-							AddDLLMessage(
-								getOwner(), true, GC.getEVENT_MESSAGE_TIME(),
-								gDLL->getText("TXT_KEY_MISC_GOLD_LOOTED_FROM_DEAD", getNameKey(), pDefender->getVisualCivAdjective(pDefender->getTeam())),
-								"AS2D_PILLAGED", MESSAGE_TYPE_INFO, getButton(), GC.getCOLOR_YELLOW(), pDefenderPlot->getX(), pDefenderPlot->getY()
-							);
-						}
-						else
-						{
-							AddDLLMessage(
-								getOwner(), true, GC.getEVENT_MESSAGE_TIME(),
-								gDLL->getText("TXT_KEY_MISC_GOLD_LOOTED_FROM_DEAD_HIDDEN", getNameKey()),
-								"AS2D_PILLAGED", MESSAGE_TYPE_INFO, getButton(), GC.getCOLOR_YELLOW(), pDefenderPlot->getX(), pDefenderPlot->getY()
-							);
-						}
-					}
-
-					for (int iI = 0; iI < NUM_COMMERCE_TYPES; ++iI)
-					{
-						TechTypes ePillageTech = GET_PLAYER(pDefender->getOwner()).getCurrentResearch();
-						CommerceTypes eCommerce = (CommerceTypes)iI;
-						switch (eCommerce)
-						{
-						case COMMERCE_GOLD:
-							if (pDefender->isPillageMarauder())
-							{
-								GET_PLAYER(pDefender->getOwner()).changeGold(iPillageGold);
-								if (bHumanDefender)
-								{
-									AddDLLMessage(
-										pDefender->getOwner(), true, GC.getEVENT_MESSAGE_TIME(),
-										gDLL->getText("TXT_KEY_MISC_MARAUDERS_PLUNDERED_VICTIMS", iPillageGold, pDefender->getNameKey()),
-										"AS2D_PILLAGE", MESSAGE_TYPE_INFO, getButton(), GC.getCOLOR_GREEN(), pDefenderPlot->getX(), pDefenderPlot->getY()
-									);
-								}
-								if (bHuman)
-								{
-									if (BARBARIAN_PLAYER != eDefender)
-									{
-										AddDLLMessage(
-											getOwner(), false, GC.getEVENT_MESSAGE_TIME(),
-											gDLL->getText("TXT_KEY_MISC_DEFENDED_BY_MARAUDERS", getNameKey(), getVisualCivAdjective(pDefender->getTeam())),
-											"AS2D_PILLAGED", MESSAGE_TYPE_INFO, getButton(), GC.getCOLOR_YELLOW(), pDefenderPlot->getX(), pDefenderPlot->getY(), true, true
-										);
-									}
-									else
-									{
-										AddDLLMessage(
-											getOwner(), false, GC.getEVENT_MESSAGE_TIME(),
-											gDLL->getText("TXT_KEY_MISC_DEFENDED_BY_MARAUDERS_HIDDEN", getNameKey()),
-											"AS2D_PILLAGED", MESSAGE_TYPE_INFO, getButton(), GC.getCOLOR_YELLOW(), pDefenderPlot->getX(), pDefenderPlot->getY(), true, true
-										);
-									}
-								}
-							}
-							break;
-						case COMMERCE_RESEARCH:
-							if (pDefender->isPillageResearch())
-							{
-								GET_TEAM(GET_PLAYER(pDefender->getOwner()).getTeam()).changeResearchProgress(ePillageTech, iPillageGold, pDefender->getOwner());
-								if (bHumanDefender)
-								{
-									if (BARBARIAN_PLAYER != eDefender)
-									{
-										AddDLLMessage(
-											pDefender->getOwner(), true, GC.getEVENT_MESSAGE_TIME(),
-											gDLL->getText(
-												"TXT_KEY_MISC_PLUNDERED_RESEARCH_FROM_VICTIMS",
-												iPillageGold, pDefender->getNameKey(), getVisualCivAdjective(getTeam()), ePillageTech
-											),
-											"AS2D_PILLAGE", MESSAGE_TYPE_INFO, getButton(), GC.getCOLOR_GREEN(), pDefenderPlot->getX(), pDefenderPlot->getY()
-										);
-									}
-									else
-									{
-										AddDLLMessage(
-											pDefender->getOwner(), true, GC.getEVENT_MESSAGE_TIME(),
-											gDLL->getText("TXT_KEY_MISC_PLUNDERED_RESEARCH_FROM_VICTIMS_HIDDEN", iPillageGold, pDefender->getNameKey(), ePillageTech),
-											"AS2D_PILLAGE", MESSAGE_TYPE_INFO, getButton(), GC.getCOLOR_GREEN(), pDefenderPlot->getX(), pDefenderPlot->getY()
-										);
-									}
-								}
-							}
-							break;
-						case COMMERCE_CULTURE:
-							break;
-						case COMMERCE_ESPIONAGE:
-							if (pDefender->isPillageEspionage() && pDefenderPlot->getTeam() != NO_TEAM)
-							{
-								GET_TEAM(GET_PLAYER(pDefender->getOwner()).getTeam()).changeEspionagePointsAgainstTeam(getTeam(), iPillageGold);
-								if (bHumanDefender)
-								{
-									if (BARBARIAN_PLAYER != eDefender)
-									{
-										AddDLLMessage(
-											pDefender->getOwner(), true, GC.getEVENT_MESSAGE_TIME(),
-											gDLL->getText("TXT_KEY_MISC_PLUNDERED_ESPIONAGE_FROM_VICTIMS", iPillageGold, getVisualCivAdjective(getTeam()), pDefender->getNameKey()),
-											"AS2D_PILLAGE", MESSAGE_TYPE_INFO, getButton(), GC.getCOLOR_GREEN(), pDefenderPlot->getX(), pDefenderPlot->getY()
-										);
-									}
-									else
-									{
-										AddDLLMessage(
-											pDefender->getOwner(), true, GC.getEVENT_MESSAGE_TIME(),
-											gDLL->getText("TXT_KEY_MISC_PLUNDERED_ESPIONAGE_FROM_VICTIMS_HIDDEN", iPillageGold, pDefender->getNameKey()),
-											"AS2D_PILLAGE", MESSAGE_TYPE_INFO, getButton(), GC.getCOLOR_GREEN(), pDefenderPlot->getX(), pDefenderPlot->getY()
-										);
-									}
-								}
-							}
-							break;
-						}
-					}
-				}
-			}
-
-			// report event to Python, along with some other key state
-			CvEventReporter::getInstance().combatResult(pDefender, this);
-
-			CvOutcomeListMerged list;
-			list.addOutcomeList(getUnitInfo().getKillOutcomeList());
-			//getUnitInfo().getKillOutcomeList()->execute(*pDefender, getOwner(), getUnitType());
-			for (int iI = 0; iI < GC.getNumUnitCombatInfos(); iI++)
-			{
-				const UnitCombatTypes eCombat = (UnitCombatTypes)iI;
-				if (isHasUnitCombat(eCombat))
-				{
-					list.addOutcomeList(GC.getUnitCombatInfo(eCombat).getKillOutcomeList());
-					//pOutcomeList->execute(*pDefender, getOwner(), getUnitType());
-				}
-			}
-			list.execute(*pDefender, getOwner(), getUnitType());
-
-			return;
-		}
-
-		if (m_combatResult.bDefenderWithdrawn)
-		{
-			if (!m_combatResult.bAttackerOnslaught)
-			{
-				if (!m_combatResult.bAttackerStampedes)
-				{
-					if (bHuman)
-					{
-						AddDLLMessage(
-							getOwner(), true, GC.getEVENT_MESSAGE_TIME(),
-							gDLL->getText("TXT_KEY_MISC_ENEMY_UNIT_WITHDRAW", pDefender->getNameKey(), getNameKey()),
-							"AS2D_OUR_WITHDRAWL", MESSAGE_TYPE_INFO, NULL, GC.getCOLOR_YELLOW(), pPlot->getX(), pPlot->getY()
-						);
-					}
-					if (bHumanDefender)
-					{
-						AddDLLMessage(
-							pDefender->getOwner(), true, GC.getEVENT_MESSAGE_TIME(),
-							gDLL->getText("TXT_KEY_MISC_YOU_UNIT_WITHDRAW", pDefender->getNameKey(), getNameKey()),
-							"AS2D_THEIR_WITHDRAWL", MESSAGE_TYPE_INFO, NULL, GC.getCOLOR_GREEN(), pPlot->getX(), pPlot->getY()
-						);
-					}
-				}
-				else
-				{
-					if (bHuman)
-					{
-						AddDLLMessage(
-							getOwner(), true, GC.getEVENT_MESSAGE_TIME(),
-							gDLL->getText("TXT_KEY_MISC_ENEMY_UNIT_WITHDRAW_STAMPEDE", pDefender->getNameKey(), getNameKey()),
-							"AS2D_OUR_WITHDRAWL", MESSAGE_TYPE_INFO, NULL, GC.getCOLOR_YELLOW(), pPlot->getX(), pPlot->getY()
-						);
-					}
-					if (bHumanDefender)
-					{
-						AddDLLMessage(
-							pDefender->getOwner(), true, GC.getEVENT_MESSAGE_TIME(),
-							gDLL->getText("TXT_KEY_MISC_YOU_UNIT_WITHDRAW_STAMPEDE", pDefender->getNameKey(), getNameKey()),
-							"AS2D_THEIR_WITHDRAWL", MESSAGE_TYPE_INFO, NULL, GC.getCOLOR_GREEN(), pPlot->getX(), pPlot->getY()
-						);
-					}
 				}
 			}
 			else
@@ -4026,7 +3952,7 @@ void CvUnit::updateCombat(CvUnit* pSelectedDefender, bool bSamePlot, bool bSteal
 				{
 					AddDLLMessage(
 						getOwner(), true, GC.getEVENT_MESSAGE_TIME(),
-						gDLL->getText("TXT_KEY_MISC_ENEMY_UNIT_WITHDRAW_ONSLAUGHT", pDefender->getNameKey(), getNameKey()),
+						gDLL->getText("TXT_KEY_MISC_ENEMY_UNIT_WITHDRAW_STAMPEDE", pDefender->getNameKey(), getNameKey()),
 						"AS2D_OUR_WITHDRAWL", MESSAGE_TYPE_INFO, NULL, GC.getCOLOR_YELLOW(), pPlot->getX(), pPlot->getY()
 					);
 				}
@@ -4034,67 +3960,82 @@ void CvUnit::updateCombat(CvUnit* pSelectedDefender, bool bSamePlot, bool bSteal
 				{
 					AddDLLMessage(
 						pDefender->getOwner(), true, GC.getEVENT_MESSAGE_TIME(),
-						gDLL->getText("TXT_KEY_MISC_YOU_UNIT_WITHDRAW_ONSLAUGHT", pDefender->getNameKey(), getNameKey()),
+						gDLL->getText("TXT_KEY_MISC_YOU_UNIT_WITHDRAW_STAMPEDE", pDefender->getNameKey(), getNameKey()),
 						"AS2D_THEIR_WITHDRAWL", MESSAGE_TYPE_INFO, NULL, GC.getCOLOR_GREEN(), pPlot->getX(), pPlot->getY()
 					);
 				}
 			}
-
-			if (pPlot->isCity())
+		}
+		else
+		{
+			if (bHuman)
 			{
-				m_combatResult.pPlot = NULL;
-				//TB Combat Mod (Stampede)
-				if (m_combatResult.bAttackerStampedes || m_combatResult.bAttackerOnslaught)
-				{
-					attack(pPlot);
-				}
-				else
-				{
-					const bool bAdvance = !bSamePlot && canAdvance(pPlot, (pDefender->canDefend() && !pDefender->isDead() && pDefender->plot() == pPlot) ? 1 : 0);
-					if (bAdvance)
-					{
-						if (getGroup() != NULL && pPlot->getNumVisiblePotentialEnemyDefenders(this) == 0)
-						{
-							PROFILE("CvUnit::updateCombat.Advance");
-							getGroup()->groupMove(pPlot, true, bAdvance ? this : NULL);
-						}
-					}
-					else if (!m_combatResult.bAttackerStampedes && !m_combatResult.bAttackerOnslaught)
-					{
-						changeMoves(std::max(GC.getMOVE_DENOMINATOR(), pPlot->movementCost(this, plot())));
-					}
-				}
-				//TB Combat Mod end
+				AddDLLMessage(
+					getOwner(), true, GC.getEVENT_MESSAGE_TIME(),
+					gDLL->getText("TXT_KEY_MISC_ENEMY_UNIT_WITHDRAW_ONSLAUGHT", pDefender->getNameKey(), getNameKey()),
+					"AS2D_OUR_WITHDRAWL", MESSAGE_TYPE_INFO, NULL, GC.getCOLOR_YELLOW(), pPlot->getX(), pPlot->getY()
+				);
 			}
-
-			if (m_combatResult.pPlot && !bSamePlot)
+			if (bHumanDefender)
 			{
-				FAssertMsg(m_combatResult.pPlot != plot(), "Can't escape back to attacker plot");
-				FAssertMsg(m_combatResult.pPlot != pDefender->plot(), "Can't escape back to own plot");
+				AddDLLMessage(
+					pDefender->getOwner(), true, GC.getEVENT_MESSAGE_TIME(),
+					gDLL->getText("TXT_KEY_MISC_YOU_UNIT_WITHDRAW_ONSLAUGHT", pDefender->getNameKey(), getNameKey()),
+					"AS2D_THEIR_WITHDRAWL", MESSAGE_TYPE_INFO, NULL, GC.getCOLOR_GREEN(), pPlot->getX(), pPlot->getY()
+				);
+			}
+		}
 
-				//defender escapes to a safe plot
-				pDefender->move(m_combatResult.pPlot, true);
-				const bool bAdvance = canAdvance(pPlot, (pDefender->canDefend() && !pDefender->isDead() && pDefender->plot() == pPlot) ? 1 : 0);
-
-				//TB Combat Mod (Stampede) begin
-				if (m_combatResult.bAttackerStampedes || m_combatResult.bAttackerOnslaught)
+		if (pPlot->isCity())
+		{
+			m_combatResult.pPlot = NULL;
+			//TB Combat Mod (Stampede)
+			if (m_combatResult.bAttackerStampedes || m_combatResult.bAttackerOnslaught)
+			{
+				attack(pPlot);
+			}
+			else
+			{
+				const bool bAdvance = !bSamePlot && canAdvance(pPlot, (pDefender->canDefend() && !pDefender->isDead() && pDefender->plot() == pPlot) ? 1 : 0);
+				if (bAdvance)
 				{
-					attack(pPlot);
-				}
-				else if (getGroup())
-				{
-					if (bAdvance && pPlot->getNumVisiblePotentialEnemyDefenders(this) == 0)
+					if (getGroup() != NULL && pPlot->getNumVisiblePotentialEnemyDefenders(this) == 0)
 					{
 						PROFILE("CvUnit::updateCombat.Advance");
-
-						getGroup()->groupMove(pPlot, true, ((bAdvance) ? this : NULL));
-					}
-					else if (!bStealthDefense && !m_combatResult.bAttackerStampedes && !m_combatResult.bAttackerOnslaught)
-					{
-						changeMoves(std::max(GC.getMOVE_DENOMINATOR(), pPlot->movementCost(this, plot())));
+						getGroup()->groupMove(pPlot, true, bAdvance ? this : NULL);
 					}
 				}
-				else if (!bStealthDefense)
+				else if (!m_combatResult.bAttackerStampedes && !m_combatResult.bAttackerOnslaught)
+				{
+					changeMoves(std::max(GC.getMOVE_DENOMINATOR(), pPlot->movementCost(this, plot())));
+				}
+			}
+			//TB Combat Mod end
+		}
+
+		if (m_combatResult.pPlot && !bSamePlot)
+		{
+			FAssertMsg(m_combatResult.pPlot != plot(), "Can't escape back to attacker plot");
+			FAssertMsg(m_combatResult.pPlot != pDefender->plot(), "Can't escape back to own plot");
+
+			//defender escapes to a safe plot
+			pDefender->move(m_combatResult.pPlot, true);
+			const bool bAdvance = canAdvance(pPlot, (pDefender->canDefend() && !pDefender->isDead() && pDefender->plot() == pPlot) ? 1 : 0);
+
+			//TB Combat Mod (Stampede) begin
+			if (m_combatResult.bAttackerStampedes || m_combatResult.bAttackerOnslaught)
+			{
+				attack(pPlot);
+			}
+			else if (getGroup())
+			{
+				if (bAdvance && pPlot->getNumVisiblePotentialEnemyDefenders(this) == 0)
+				{
+					PROFILE("CvUnit::updateCombat.Advance");
+
+					getGroup()->groupMove(pPlot, true, ((bAdvance) ? this : NULL));
+				}
+				else if (!bStealthDefense && !m_combatResult.bAttackerStampedes && !m_combatResult.bAttackerOnslaught)
 				{
 					changeMoves(std::max(GC.getMOVE_DENOMINATOR(), pPlot->movementCost(this, plot())));
 				}
@@ -4104,833 +4045,845 @@ void CvUnit::updateCombat(CvUnit* pSelectedDefender, bool bSamePlot, bool bSteal
 				changeMoves(std::max(GC.getMOVE_DENOMINATOR(), pPlot->movementCost(this, plot())));
 			}
 		}
-		else if (m_combatResult.bAttackerRepelled)
+		else if (!bStealthDefense)
 		{
-			if (!m_combatResult.bAttackerStampedes && !m_combatResult.bAttackerOnslaught)
-			{
-				if (bHuman)
-				{
-
-					if (BARBARIAN_PLAYER != eDefender)
-					{
-						AddDLLMessage(
-							getOwner(), true, GC.getEVENT_MESSAGE_TIME(),
-							gDLL->getText(
-								"TXT_KEY_MISC_ATTACKER_REPELLED_HUMAN",
-								getNameKey(), getVisualCivAdjective(pDefender->getTeam()), pDefender->getNameKey()
-							),
-							"AS2D_OUR_WITHDRAWL", MESSAGE_TYPE_INFO, NULL, GC.getCOLOR_YELLOW(), pPlot->getX(), pPlot->getY()
-						);
-					}
-					else
-					{
-						AddDLLMessage(
-							getOwner(), true, GC.getEVENT_MESSAGE_TIME(),
-							gDLL->getText("TXT_KEY_MISC_ATTACKER_REPELLED_HUMAN_HIDDEN", getNameKey(), pDefender->getNameKey()),
-							"AS2D_OUR_WITHDRAWL", MESSAGE_TYPE_INFO, NULL, GC.getCOLOR_YELLOW(), pPlot->getX(), pPlot->getY()
-						);
-					}
-				}
-				if (bHumanDefender)
-				{
-
-					if (BARBARIAN_PLAYER != eDefender)
-					{
-						AddDLLMessage(
-							pDefender->getOwner(), true, GC.getEVENT_MESSAGE_TIME(),
-							gDLL->getText("TXT_KEY_MISC_ATTACKER_REPELLED", getVisualCivAdjective(getTeam()), getNameKey(), pDefender->getNameKey()),
-							"AS2D_THEIR_WITHDRAWL", MESSAGE_TYPE_INFO, NULL, GC.getCOLOR_GREEN(), pPlot->getX(), pPlot->getY()
-						);
-					}
-					else
-					{
-						AddDLLMessage(
-							pDefender->getOwner(), true, GC.getEVENT_MESSAGE_TIME(),
-							gDLL->getText("TXT_KEY_MISC_ATTACKER_REPELLED_HIDDEN", getNameKey(), pDefender->getNameKey()),
-							"AS2D_THEIR_WITHDRAWL", MESSAGE_TYPE_INFO, NULL, GC.getCOLOR_GREEN(), pPlot->getX(), pPlot->getY()
-						);
-					}
-				}
-			}
-			else if (!m_combatResult.bAttackerOnslaught)
-			{
-				if (bHuman)
-				{
-
-					if (BARBARIAN_PLAYER != eDefender)
-					{
-						AddDLLMessage(
-							getOwner(), true, GC.getEVENT_MESSAGE_TIME(),
-							gDLL->getText(
-								"TXT_KEY_MISC_ATTACKER_REPELLED_HUMAN_STAMPEDE",
-								getNameKey(), getVisualCivAdjective(pDefender->getTeam()), pDefender->getNameKey()
-							),
-							"AS2D_OUR_WITHDRAWL", MESSAGE_TYPE_INFO, NULL, GC.getCOLOR_YELLOW(), pPlot->getX(), pPlot->getY()
-						);
-					}
-					else
-					{
-						AddDLLMessage(
-							getOwner(), true, GC.getEVENT_MESSAGE_TIME(),
-							gDLL->getText("TXT_KEY_MISC_ATTACKER_REPELLED_HUMAN_STAMPEDE_HIDDEN", getNameKey(), pDefender->getNameKey()),
-							"AS2D_OUR_WITHDRAWL", MESSAGE_TYPE_INFO, NULL, GC.getCOLOR_YELLOW(), pPlot->getX(), pPlot->getY()
-						);
-					}
-				}
-				if (bHumanDefender)
-				{
-
-					if (BARBARIAN_PLAYER != eAttacker)
-					{
-						AddDLLMessage(
-							pDefender->getOwner(), true, GC.getEVENT_MESSAGE_TIME(),
-							gDLL->getText("TXT_KEY_MISC_ATTACKER_REPELLED_STAMPEDE", getVisualCivAdjective(getTeam()), getNameKey(), pDefender->getNameKey()),
-							"AS2D_THEIR_WITHDRAWL", MESSAGE_TYPE_INFO, NULL, GC.getCOLOR_GREEN(), pPlot->getX(), pPlot->getY()
-						);
-					}
-					else
-					{
-						AddDLLMessage(
-							pDefender->getOwner(), true, GC.getEVENT_MESSAGE_TIME(),
-							gDLL->getText("TXT_KEY_MISC_ATTACKER_REPELLED_STAMPEDE_HIDDEN", getNameKey(), pDefender->getNameKey()),
-							"AS2D_THEIR_WITHDRAWL", MESSAGE_TYPE_INFO, NULL, GC.getCOLOR_GREEN(), pPlot->getX(), pPlot->getY()
-						);
-					}
-				}
-			}
-			else
-			{
-				if (bHuman)
-				{
-					if (BARBARIAN_PLAYER != eDefender)
-					{
-						AddDLLMessage(
-							getOwner(), true, GC.getEVENT_MESSAGE_TIME(),
-							gDLL->getText(
-								"TXT_KEY_MISC_ATTACKER_REPELLED_HUMAN_ONSLAUGHT",
-								getNameKey(), getVisualCivAdjective(pDefender->getTeam()), pDefender->getNameKey()
-							),
-							"AS2D_OUR_WITHDRAWL", MESSAGE_TYPE_INFO, NULL, GC.getCOLOR_YELLOW(), pPlot->getX(), pPlot->getY()
-						);
-					}
-					else
-					{
-						AddDLLMessage(
-							getOwner(), true, GC.getEVENT_MESSAGE_TIME(),
-							gDLL->getText("TXT_KEY_MISC_ATTACKER_REPELLED_HUMAN_ONSLAUGHT_HIDDEN", getNameKey(), pDefender->getNameKey()),
-							"AS2D_OUR_WITHDRAWL", MESSAGE_TYPE_INFO, NULL, GC.getCOLOR_YELLOW(), pPlot->getX(), pPlot->getY()
-						);
-					}
-				}
-				if (bHumanDefender)
-				{
-					if (BARBARIAN_PLAYER != eAttacker)
-					{
-						AddDLLMessage(
-							pDefender->getOwner(), true, GC.getEVENT_MESSAGE_TIME(),
-							gDLL->getText(
-								"TXT_KEY_MISC_ATTACKER_REPELLED_ONSLAUGHT",
-								getVisualCivAdjective(getTeam()), getNameKey(), pDefender->getNameKey()
-							),
-							"AS2D_THEIR_WITHDRAWL", MESSAGE_TYPE_INFO, NULL, GC.getCOLOR_GREEN(), pPlot->getX(), pPlot->getY()
-						);
-					}
-					else
-					{
-						AddDLLMessage(
-							pDefender->getOwner(), true, GC.getEVENT_MESSAGE_TIME(),
-							gDLL->getText("TXT_KEY_MISC_ATTACKER_REPELLED_ONSLAUGHT_HIDDEN", getNameKey(), pDefender->getNameKey()),
-							"AS2D_THEIR_WITHDRAWL", MESSAGE_TYPE_INFO, NULL, GC.getCOLOR_GREEN(), pPlot->getX(), pPlot->getY()
-						);
-					}
-				}
-			}
-
-			m_combatResult.bAttackerRepelled = false;
-
-			if (!m_combatResult.bAttackerStampedes && !m_combatResult.bAttackerOnslaught)
-			{
-				if (!bStealthDefense)
-				{
-					changeMoves(std::max(GC.getMOVE_DENOMINATOR(), pPlot->movementCost(this, plot())));
-				}
-			}
-			else attack(pPlot); //TB Combat Mod (Stampede)
+			changeMoves(std::max(GC.getMOVE_DENOMINATOR(), pPlot->movementCost(this, plot())));
 		}
-		else if (m_combatResult.bDefenderKnockedBack)
+	}
+	else if (m_combatResult.bAttackerRepelled)
+	{
+		if (!m_combatResult.bAttackerStampedes && !m_combatResult.bAttackerOnslaught)
 		{
-			//Knockback
-			if (!m_combatResult.bAttackerStampedes && !m_combatResult.bAttackerOnslaught)
-			{
-				if (bHuman)
-				{
-					if (BARBARIAN_PLAYER != eDefender)
-					{
-						AddDLLMessage(
-							getOwner(), true, GC.getEVENT_MESSAGE_TIME(),
-							gDLL->getText(
-								"TXT_KEY_MISC_DEFENDER_KNOCKEDBACK_HUMAN",
-								getNameKey(), getVisualCivAdjective(pDefender->getTeam()), pDefender->getNameKey()
-							),
-							"AS2D_THEIR_WITHDRAWL", MESSAGE_TYPE_INFO, NULL, GC.getCOLOR_GREEN(), pPlot->getX(), pPlot->getY()
-						);
-					}
-					else
-					{
-						AddDLLMessage(
-							getOwner(), true, GC.getEVENT_MESSAGE_TIME(),
-							gDLL->getText("TXT_KEY_MISC_DEFENDER_KNOCKEDBACK_HUMAN_HIDDEN", getNameKey(), pDefender->getNameKey()),
-							"AS2D_THEIR_WITHDRAWL", MESSAGE_TYPE_INFO, NULL, GC.getCOLOR_GREEN(), pPlot->getX(), pPlot->getY()
-						);
-					}
-				}
-				if (bHumanDefender)
-				{
-					if (BARBARIAN_PLAYER != eAttacker)
-					{
-						AddDLLMessage(
-							pDefender->getOwner(), true, GC.getEVENT_MESSAGE_TIME(),
-							gDLL->getText(
-								"TXT_KEY_MISC_DEFENDER_KNOCKEDBACK",
-								getVisualCivAdjective(getTeam()), getNameKey(), pDefender->getNameKey()
-							),
-							"AS2D_OUR_WITHDRAWL", MESSAGE_TYPE_INFO, NULL, GC.getCOLOR_YELLOW(), pPlot->getX(), pPlot->getY()
-						);
-					}
-					else
-					{
-						AddDLLMessage(
-							pDefender->getOwner(), true, GC.getEVENT_MESSAGE_TIME(),
-							gDLL->getText("TXT_KEY_MISC_DEFENDER_KNOCKEDBACK_HIDDEN", getNameKey(), pDefender->getNameKey()),
-							"AS2D_OUR_WITHDRAWL", MESSAGE_TYPE_INFO, NULL, GC.getCOLOR_YELLOW(), pPlot->getX(), pPlot->getY()
-						);
-					}
-				}
-			}
-			else if (!m_combatResult.bAttackerOnslaught)
-			{
-				if (bHuman)
-				{
-					if (BARBARIAN_PLAYER != eDefender)
-					{
-						AddDLLMessage(
-							getOwner(), true, GC.getEVENT_MESSAGE_TIME(),
-							gDLL->getText(
-								"TXT_KEY_MISC_DEFENDER_KNOCKEDBACK_HUMAN_STAMPEDE",
-								getNameKey(), getVisualCivAdjective(pDefender->getTeam()), pDefender->getNameKey()
-							),
-							"AS2D_THEIR_WITHDRAWL", MESSAGE_TYPE_INFO, NULL, GC.getCOLOR_GREEN(), pPlot->getX(), pPlot->getY()
-						);
-					}
-					else
-					{
-						AddDLLMessage(
-							getOwner(), true, GC.getEVENT_MESSAGE_TIME(),
-							gDLL->getText(
-								"TXT_KEY_MISC_DEFENDER_KNOCKEDBACK_HUMAN_STAMPEDE_HIDDEN",
-								getNameKey(), pDefender->getNameKey()
-							),
-							"AS2D_THEIR_WITHDRAWL", MESSAGE_TYPE_INFO, NULL, GC.getCOLOR_GREEN(), pPlot->getX(), pPlot->getY()
-						);
-					}
-				}
-				if (bHumanDefender)
-				{
-					if (BARBARIAN_PLAYER != eAttacker)
-					{
-						AddDLLMessage(
-							pDefender->getOwner(), true, GC.getEVENT_MESSAGE_TIME(),
-							gDLL->getText(
-								"TXT_KEY_MISC_DEFENDER_KNOCKEDBACK_STAMPEDE",
-								getVisualCivAdjective(getTeam()), getNameKey(), pDefender->getNameKey()
-							),
-							"AS2D_OUR_WITHDRAWL", MESSAGE_TYPE_INFO, NULL, GC.getCOLOR_YELLOW(), pPlot->getX(), pPlot->getY()
-						);
-					}
-					else
-					{
-						AddDLLMessage(
-							pDefender->getOwner(), true, GC.getEVENT_MESSAGE_TIME(),
-							gDLL->getText(
-								"TXT_KEY_MISC_DEFENDER_KNOCKEDBACK_STAMPEDE_HIDDEN",
-								getNameKey(), pDefender->getNameKey()
-							),
-							"AS2D_OUR_WITHDRAWL", MESSAGE_TYPE_INFO, NULL, GC.getCOLOR_YELLOW(), pPlot->getX(), pPlot->getY()
-						);
-					}
-				}
-			}
-			else
-			{
-				if (bHuman)
-				{
-					if (BARBARIAN_PLAYER != eDefender)
-					{
-						AddDLLMessage(
-							getOwner(), true, GC.getEVENT_MESSAGE_TIME(),
-							gDLL->getText(
-								"TXT_KEY_MISC_DEFENDER_KNOCKEDBACK_HUMAN_ONSLAUGHT",
-								getNameKey(), getVisualCivAdjective(pDefender->getTeam()), pDefender->getNameKey()
-							),
-							"AS2D_THEIR_WITHDRAWL", MESSAGE_TYPE_INFO, NULL, GC.getCOLOR_GREEN(), pPlot->getX(), pPlot->getY()
-						);
-					}
-					else
-					{
-						AddDLLMessage(
-							getOwner(), true, GC.getEVENT_MESSAGE_TIME(),
-							gDLL->getText(
-								"TXT_KEY_MISC_DEFENDER_KNOCKEDBACK_HUMAN_ONSLAUGHT_HIDDEN",
-								getNameKey(), pDefender->getNameKey()
-							),
-							"AS2D_THEIR_WITHDRAWL", MESSAGE_TYPE_INFO, NULL, GC.getCOLOR_GREEN(), pPlot->getX(), pPlot->getY()
-						);
-					}
-				}
-				if (bHumanDefender)
-				{
-					if (BARBARIAN_PLAYER != eAttacker)
-					{
-						AddDLLMessage(
-							pDefender->getOwner(), true, GC.getEVENT_MESSAGE_TIME(),
-							gDLL->getText(
-								"TXT_KEY_MISC_DEFENDER_KNOCKEDBACK_ONSLAUGHT",
-								getVisualCivAdjective(getTeam()), getNameKey(), pDefender->getNameKey()
-							),
-							"AS2D_OUR_WITHDRAWL", MESSAGE_TYPE_INFO, NULL, GC.getCOLOR_YELLOW(), pPlot->getX(), pPlot->getY()
-						);
-					}
-					else
-					{
-						AddDLLMessage(
-							pDefender->getOwner(), true, GC.getEVENT_MESSAGE_TIME(),
-							gDLL->getText(
-								"TXT_KEY_MISC_DEFENDER_KNOCKEDBACK_ONSLAUGHT_HIDDEN",
-								getNameKey(), pDefender->getNameKey()
-							),
-							"AS2D_OUR_WITHDRAWL", MESSAGE_TYPE_INFO, NULL, GC.getCOLOR_YELLOW(), pPlot->getX(), pPlot->getY()
-						);
-					}
-				}
-			}
-			m_combatResult.bDefenderKnockedBack = false;
-
-			if (pPlot->isCity())
-			{
-				m_combatResult.pPlot = NULL;
-			}
-			pDefender->setFortifyTurns(0);
-
-			if (m_combatResult.pPlot != NULL)
-			{
-				FAssertMsg(m_combatResult.pPlot != plot(), "Can't get knocked back to attacker plot");
-				FAssertMsg(m_combatResult.pPlot != pDefender->plot(), "Can't get knocked back to own plot");
-
-				//defender escapes to a safe plot
-				pDefender->move(m_combatResult.pPlot, true);
-				pDefender->getGroup()->clearMissionQueue();
-			}
-
-			const bool bAdvance = canAdvance(pPlot, (pDefender->canDefend() && !pDefender->isDead() && pDefender->plot() == pPlot) ? 1 : 0);
-
-			if (!bAdvance && !m_combatResult.bAttackerStampedes && !m_combatResult.bAttackerOnslaught)
-			{
-				if (!isNoCapture())
-				{
-					pDefender->setCapturingPlayer(getOwner());
-					pDefender->setCapturingUnit(this);
-				}
-				if (!bStealthDefense)
-				{
-					changeMoves(std::max(GC.getMOVE_DENOMINATOR(), pPlot->movementCost(this, plot())));
-				}
-			}
-			else if (m_combatResult.bAttackerStampedes || m_combatResult.bAttackerOnslaught)
-			{
-				attack(pPlot);
-			}
-
-			if (getGroup())
-			{
-				if (pPlot->getNumVisiblePotentialEnemyDefenders(this) == 0)
-				{
-					PROFILE("CvUnit::updateCombat.Advance");
-
-					getGroup()->groupMove(pPlot, true, ((bAdvance) ? this : NULL));
-				}
-				// This is before the plot advancement, the unit will always try to walk back
-				// to the square that they came from, before advancing.
-			}
-		}
-		else if (m_combatResult.bAttackerWithdraws)
-		{
-			if (!m_combatResult.bAttackerStampedes && !m_combatResult.bAttackerOnslaught)
-			{
-				if (bHuman)
-				{
-					AddDLLMessage(
-						getOwner(), true, GC.getEVENT_MESSAGE_TIME(),
-						gDLL->getText("TXT_KEY_MISC_YOU_UNIT_WITHDRAW", getNameKey(), pDefender->getNameKey()),
-						"AS2D_OUR_WITHDRAWL", MESSAGE_TYPE_INFO, NULL, GC.getCOLOR_GREEN(), pPlot->getX(), pPlot->getY()
-					);
-				}
-				if (bHumanDefender)
-				{
-					AddDLLMessage(
-						pDefender->getOwner(), true, GC.getEVENT_MESSAGE_TIME(),
-						gDLL->getText("TXT_KEY_MISC_ENEMY_UNIT_WITHDRAW", getNameKey(), pDefender->getNameKey()),
-						"AS2D_THEIR_WITHDRAWL", MESSAGE_TYPE_INFO, NULL, GC.getCOLOR_YELLOW(), pPlot->getX(), pPlot->getY()
-					);
-				}
-				changeMoves(std::max(GC.getMOVE_DENOMINATOR(), pPlot->movementCost(this, plot())));
-				//GC.getGame().logOOSSpecial(53, getID(), getMoves(), getDamage());
-			}
-			//TB Combat Mod (Stampede) begin
-			else if (m_combatResult.bAttackerStampedes)
-			{
-				if (bHuman)
-				{
-					AddDLLMessage(
-						getOwner(), true, GC.getEVENT_MESSAGE_TIME(),
-						gDLL->getText("TXT_KEY_MISC_YOU_UNIT_ATTACKER_WITHDRAW_STAMPEDE", getNameKey(), pDefender->getNameKey()),
-						"AS2D_OUR_WITHDRAWL", MESSAGE_TYPE_INFO, NULL, GC.getCOLOR_GREEN(), pPlot->getX(), pPlot->getY()
-					);
-				}
-				if (bHumanDefender)
-				{
-					AddDLLMessage(
-						pDefender->getOwner(), true, GC.getEVENT_MESSAGE_TIME(),
-						gDLL->getText("TXT_KEY_MISC_ENEMY_UNIT_ATTACKER_WITHDRAW_STAMPEDE", getNameKey(), pDefender->getNameKey()),
-						"AS2D_THEIR_WITHDRAWL", MESSAGE_TYPE_INFO, NULL, GC.getCOLOR_YELLOW(), pPlot->getX(), pPlot->getY()
-					);
-				}
-				attack(pPlot);
-			}
-			else if (m_combatResult.bAttackerOnslaught)
-			{
-				if (bHuman)
-				{
-					AddDLLMessage(
-						getOwner(), true, GC.getEVENT_MESSAGE_TIME(),
-						gDLL->getText("TXT_KEY_MISC_YOU_UNIT_ATTACKER_WITHDRAW_ONSLAUGHT", getNameKey(), pDefender->getNameKey()),
-						"AS2D_OUR_WITHDRAWL", MESSAGE_TYPE_INFO, NULL, GC.getCOLOR_GREEN(), pPlot->getX(), pPlot->getY()
-					);
-				}
-				if (bHumanDefender)
-				{
-					AddDLLMessage(
-						pDefender->getOwner(), true, GC.getEVENT_MESSAGE_TIME(),
-						gDLL->getText("TXT_KEY_MISC_ENEMY_UNIT_ATTACKER_WITHDRAW_ONSLAUGHT", getNameKey(), pDefender->getNameKey()),
-						"AS2D_THEIR_WITHDRAWL", MESSAGE_TYPE_INFO, NULL, GC.getCOLOR_YELLOW(), pPlot->getX(), pPlot->getY()
-					);
-				}
-				attack(pPlot);
-			}
-		}
-		else if (pDefender->isDead())
-		{
-			if (pDefender->isNPC())
-			{
-				GET_PLAYER(getOwner()).changeWinsVsBarbs(1);
-			}
-
-			if (!isHiddenNationality() && !pDefender->isHiddenNationality())
-			{
-				const int defenderWarWearinessChangeTimes100 =
-				(
-					std::max(
-						1,
-						100 * GC.getDefineINT("WW_UNIT_KILLED_DEFENDING")
-						* (pDefender->getMaxHP() - pDefender->getPreCombatDamage())
-						/
-						pDefender->getMaxHP()
-					)
-				);
-				GET_TEAM(pDefender->getTeam()).changeWarWearinessTimes100(getTeam(), *pPlot, defenderWarWearinessChangeTimes100);
-
-				const int attackerWarWearinessChangeTimes100 =
-				(
-					100 * GC.getDefineINT("WW_KILLED_UNIT_ATTACKING")
-					* (getDamage() - getPreCombatDamage())
-					/
-					getMaxHP()
-				);
-				GET_TEAM(getTeam()).changeWarWearinessTimes100(pDefender->getTeam(), *pPlot, attackerWarWearinessChangeTimes100);
-
-				GET_TEAM(getTeam()).AI_changeWarSuccess(pDefender->getTeam(), GC.getDefineINT("WAR_SUCCESS_ATTACKING"));
-			}
-
-			const int iInfluenceRatio = GC.isIDW_ENABLED() ? doVictoryInfluence(pDefender, true, false) : 0;
-
 			if (bHuman)
 			{
-				CvWString szBuffer;
 
-				if (m_combatResult.bDefenderPursued)
+				if (BARBARIAN_PLAYER != eDefender)
 				{
-					szBuffer = gDLL->getText("TXT_KEY_MISC_PURSUIT_ONATTACK_SUCCESS", pDefender->getNameKey(), getNameKey());
+					AddDLLMessage(
+						getOwner(), true, GC.getEVENT_MESSAGE_TIME(),
+						gDLL->getText(
+							"TXT_KEY_MISC_ATTACKER_REPELLED_HUMAN",
+							getNameKey(), getVisualCivAdjective(pDefender->getTeam()), pDefender->getNameKey()
+						),
+						"AS2D_OUR_WITHDRAWL", MESSAGE_TYPE_INFO, NULL, GC.getCOLOR_YELLOW(), pPlot->getX(), pPlot->getY()
+					);
 				}
-				else if (m_combatResult.bAttackerRefusedtoYield)
+				else
 				{
-					szBuffer = gDLL->getText("TXT_KEY_MISC_UNYIELDING_YOU_DESTROYED_ENEMY", pDefender->getNameKey(), getNameKey());
+					AddDLLMessage(
+						getOwner(), true, GC.getEVENT_MESSAGE_TIME(),
+						gDLL->getText("TXT_KEY_MISC_ATTACKER_REPELLED_HUMAN_HIDDEN", getNameKey(), pDefender->getNameKey()),
+						"AS2D_OUR_WITHDRAWL", MESSAGE_TYPE_INFO, NULL, GC.getCOLOR_YELLOW(), pPlot->getX(), pPlot->getY()
+					);
 				}
-				else if (m_combatResult.bDefenderRefusedtoYield)
-				{
-					szBuffer = gDLL->getText("TXT_KEY_MISC_YOU_UNIT_DESTROYED_UNYIELDING_ENEMY", pDefender->getNameKey(), getNameKey());
-				}
-				else if (m_combatResult.bAttackerStampedes)
-				{
-					szBuffer = gDLL->getText("TXT_KEY_MISC_YOU_UNIT_DESTROYED_ENEMY_STAMPEDE", pDefender->getNameKey(), getNameKey());
-				}
-				else if (m_combatResult.bAttackerOnslaught)
-				{
-					szBuffer = gDLL->getText("TXT_KEY_MISC_YOU_UNIT_DESTROYED_ENEMY_ONSLAUGHT", pDefender->getNameKey(), getNameKey());
-				}
-				else szBuffer = gDLL->getText("TXT_KEY_MISC_YOU_UNIT_DESTROYED_ENEMY", getNameKey(), pDefender->getNameKey());
+			}
+			if (bHumanDefender)
+			{
 
-				if (iInfluenceRatio > 0)
+				if (BARBARIAN_PLAYER != eDefender)
 				{
-					szBuffer = szBuffer + CvString::format(" %s: +%.1f%%", gDLL->getText("TXT_KEY_TILE_INFLUENCE").GetCString(), ((float)iInfluenceRatio)/10);
+					AddDLLMessage(
+						pDefender->getOwner(), true, GC.getEVENT_MESSAGE_TIME(),
+						gDLL->getText("TXT_KEY_MISC_ATTACKER_REPELLED", getVisualCivAdjective(getTeam()), getNameKey(), pDefender->getNameKey()),
+						"AS2D_THEIR_WITHDRAWL", MESSAGE_TYPE_INFO, NULL, GC.getCOLOR_GREEN(), pPlot->getX(), pPlot->getY()
+					);
 				}
+				else
+				{
+					AddDLLMessage(
+						pDefender->getOwner(), true, GC.getEVENT_MESSAGE_TIME(),
+						gDLL->getText("TXT_KEY_MISC_ATTACKER_REPELLED_HIDDEN", getNameKey(), pDefender->getNameKey()),
+						"AS2D_THEIR_WITHDRAWL", MESSAGE_TYPE_INFO, NULL, GC.getCOLOR_GREEN(), pPlot->getX(), pPlot->getY()
+					);
+				}
+			}
+		}
+		else if (!m_combatResult.bAttackerOnslaught)
+		{
+			if (bHuman)
+			{
+
+				if (BARBARIAN_PLAYER != eDefender)
+				{
+					AddDLLMessage(
+						getOwner(), true, GC.getEVENT_MESSAGE_TIME(),
+						gDLL->getText(
+							"TXT_KEY_MISC_ATTACKER_REPELLED_HUMAN_STAMPEDE",
+							getNameKey(), getVisualCivAdjective(pDefender->getTeam()), pDefender->getNameKey()
+						),
+						"AS2D_OUR_WITHDRAWL", MESSAGE_TYPE_INFO, NULL, GC.getCOLOR_YELLOW(), pPlot->getX(), pPlot->getY()
+					);
+				}
+				else
+				{
+					AddDLLMessage(
+						getOwner(), true, GC.getEVENT_MESSAGE_TIME(),
+						gDLL->getText("TXT_KEY_MISC_ATTACKER_REPELLED_HUMAN_STAMPEDE_HIDDEN", getNameKey(), pDefender->getNameKey()),
+						"AS2D_OUR_WITHDRAWL", MESSAGE_TYPE_INFO, NULL, GC.getCOLOR_YELLOW(), pPlot->getX(), pPlot->getY()
+					);
+				}
+			}
+			if (bHumanDefender)
+			{
+
+				if (BARBARIAN_PLAYER != eAttacker)
+				{
+					AddDLLMessage(
+						pDefender->getOwner(), true, GC.getEVENT_MESSAGE_TIME(),
+						gDLL->getText("TXT_KEY_MISC_ATTACKER_REPELLED_STAMPEDE", getVisualCivAdjective(getTeam()), getNameKey(), pDefender->getNameKey()),
+						"AS2D_THEIR_WITHDRAWL", MESSAGE_TYPE_INFO, NULL, GC.getCOLOR_GREEN(), pPlot->getX(), pPlot->getY()
+					);
+				}
+				else
+				{
+					AddDLLMessage(
+						pDefender->getOwner(), true, GC.getEVENT_MESSAGE_TIME(),
+						gDLL->getText("TXT_KEY_MISC_ATTACKER_REPELLED_STAMPEDE_HIDDEN", getNameKey(), pDefender->getNameKey()),
+						"AS2D_THEIR_WITHDRAWL", MESSAGE_TYPE_INFO, NULL, GC.getCOLOR_GREEN(), pPlot->getX(), pPlot->getY()
+					);
+				}
+			}
+		}
+		else
+		{
+			if (bHuman)
+			{
+				if (BARBARIAN_PLAYER != eDefender)
+				{
+					AddDLLMessage(
+						getOwner(), true, GC.getEVENT_MESSAGE_TIME(),
+						gDLL->getText(
+							"TXT_KEY_MISC_ATTACKER_REPELLED_HUMAN_ONSLAUGHT",
+							getNameKey(), getVisualCivAdjective(pDefender->getTeam()), pDefender->getNameKey()
+						),
+						"AS2D_OUR_WITHDRAWL", MESSAGE_TYPE_INFO, NULL, GC.getCOLOR_YELLOW(), pPlot->getX(), pPlot->getY()
+					);
+				}
+				else
+				{
+					AddDLLMessage(
+						getOwner(), true, GC.getEVENT_MESSAGE_TIME(),
+						gDLL->getText("TXT_KEY_MISC_ATTACKER_REPELLED_HUMAN_ONSLAUGHT_HIDDEN", getNameKey(), pDefender->getNameKey()),
+						"AS2D_OUR_WITHDRAWL", MESSAGE_TYPE_INFO, NULL, GC.getCOLOR_YELLOW(), pPlot->getX(), pPlot->getY()
+					);
+				}
+			}
+			if (bHumanDefender)
+			{
+				if (BARBARIAN_PLAYER != eAttacker)
+				{
+					AddDLLMessage(
+						pDefender->getOwner(), true, GC.getEVENT_MESSAGE_TIME(),
+						gDLL->getText(
+							"TXT_KEY_MISC_ATTACKER_REPELLED_ONSLAUGHT",
+							getVisualCivAdjective(getTeam()), getNameKey(), pDefender->getNameKey()
+						),
+						"AS2D_THEIR_WITHDRAWL", MESSAGE_TYPE_INFO, NULL, GC.getCOLOR_GREEN(), pPlot->getX(), pPlot->getY()
+					);
+				}
+				else
+				{
+					AddDLLMessage(
+						pDefender->getOwner(), true, GC.getEVENT_MESSAGE_TIME(),
+						gDLL->getText("TXT_KEY_MISC_ATTACKER_REPELLED_ONSLAUGHT_HIDDEN", getNameKey(), pDefender->getNameKey()),
+						"AS2D_THEIR_WITHDRAWL", MESSAGE_TYPE_INFO, NULL, GC.getCOLOR_GREEN(), pPlot->getX(), pPlot->getY()
+					);
+				}
+			}
+		}
+
+		m_combatResult.bAttackerRepelled = false;
+
+		if (!m_combatResult.bAttackerStampedes && !m_combatResult.bAttackerOnslaught)
+		{
+			if (!bStealthDefense)
+			{
+				changeMoves(std::max(GC.getMOVE_DENOMINATOR(), pPlot->movementCost(this, plot())));
+			}
+		}
+		else attack(pPlot); //TB Combat Mod (Stampede)
+	}
+	else if (m_combatResult.bDefenderKnockedBack)
+	{
+		//Knockback
+		if (!m_combatResult.bAttackerStampedes && !m_combatResult.bAttackerOnslaught)
+		{
+			if (bHuman)
+			{
+				if (BARBARIAN_PLAYER != eDefender)
+				{
+					AddDLLMessage(
+						getOwner(), true, GC.getEVENT_MESSAGE_TIME(),
+						gDLL->getText(
+							"TXT_KEY_MISC_DEFENDER_KNOCKEDBACK_HUMAN",
+							getNameKey(), getVisualCivAdjective(pDefender->getTeam()), pDefender->getNameKey()
+						),
+						"AS2D_THEIR_WITHDRAWL", MESSAGE_TYPE_INFO, NULL, GC.getCOLOR_GREEN(), pPlot->getX(), pPlot->getY()
+					);
+				}
+				else
+				{
+					AddDLLMessage(
+						getOwner(), true, GC.getEVENT_MESSAGE_TIME(),
+						gDLL->getText("TXT_KEY_MISC_DEFENDER_KNOCKEDBACK_HUMAN_HIDDEN", getNameKey(), pDefender->getNameKey()),
+						"AS2D_THEIR_WITHDRAWL", MESSAGE_TYPE_INFO, NULL, GC.getCOLOR_GREEN(), pPlot->getX(), pPlot->getY()
+					);
+				}
+			}
+			if (bHumanDefender)
+			{
+				if (BARBARIAN_PLAYER != eAttacker)
+				{
+					AddDLLMessage(
+						pDefender->getOwner(), true, GC.getEVENT_MESSAGE_TIME(),
+						gDLL->getText(
+							"TXT_KEY_MISC_DEFENDER_KNOCKEDBACK",
+							getVisualCivAdjective(getTeam()), getNameKey(), pDefender->getNameKey()
+						),
+						"AS2D_OUR_WITHDRAWL", MESSAGE_TYPE_INFO, NULL, GC.getCOLOR_YELLOW(), pPlot->getX(), pPlot->getY()
+					);
+				}
+				else
+				{
+					AddDLLMessage(
+						pDefender->getOwner(), true, GC.getEVENT_MESSAGE_TIME(),
+						gDLL->getText("TXT_KEY_MISC_DEFENDER_KNOCKEDBACK_HIDDEN", getNameKey(), pDefender->getNameKey()),
+						"AS2D_OUR_WITHDRAWL", MESSAGE_TYPE_INFO, NULL, GC.getCOLOR_YELLOW(), pPlot->getX(), pPlot->getY()
+					);
+				}
+			}
+		}
+		else if (!m_combatResult.bAttackerOnslaught)
+		{
+			if (bHuman)
+			{
+				if (BARBARIAN_PLAYER != eDefender)
+				{
+					AddDLLMessage(
+						getOwner(), true, GC.getEVENT_MESSAGE_TIME(),
+						gDLL->getText(
+							"TXT_KEY_MISC_DEFENDER_KNOCKEDBACK_HUMAN_STAMPEDE",
+							getNameKey(), getVisualCivAdjective(pDefender->getTeam()), pDefender->getNameKey()
+						),
+						"AS2D_THEIR_WITHDRAWL", MESSAGE_TYPE_INFO, NULL, GC.getCOLOR_GREEN(), pPlot->getX(), pPlot->getY()
+					);
+				}
+				else
+				{
+					AddDLLMessage(
+						getOwner(), true, GC.getEVENT_MESSAGE_TIME(),
+						gDLL->getText(
+							"TXT_KEY_MISC_DEFENDER_KNOCKEDBACK_HUMAN_STAMPEDE_HIDDEN",
+							getNameKey(), pDefender->getNameKey()
+						),
+						"AS2D_THEIR_WITHDRAWL", MESSAGE_TYPE_INFO, NULL, GC.getCOLOR_GREEN(), pPlot->getX(), pPlot->getY()
+					);
+				}
+			}
+			if (bHumanDefender)
+			{
+				if (BARBARIAN_PLAYER != eAttacker)
+				{
+					AddDLLMessage(
+						pDefender->getOwner(), true, GC.getEVENT_MESSAGE_TIME(),
+						gDLL->getText(
+							"TXT_KEY_MISC_DEFENDER_KNOCKEDBACK_STAMPEDE",
+							getVisualCivAdjective(getTeam()), getNameKey(), pDefender->getNameKey()
+						),
+						"AS2D_OUR_WITHDRAWL", MESSAGE_TYPE_INFO, NULL, GC.getCOLOR_YELLOW(), pPlot->getX(), pPlot->getY()
+					);
+				}
+				else
+				{
+					AddDLLMessage(
+						pDefender->getOwner(), true, GC.getEVENT_MESSAGE_TIME(),
+						gDLL->getText(
+							"TXT_KEY_MISC_DEFENDER_KNOCKEDBACK_STAMPEDE_HIDDEN",
+							getNameKey(), pDefender->getNameKey()
+						),
+						"AS2D_OUR_WITHDRAWL", MESSAGE_TYPE_INFO, NULL, GC.getCOLOR_YELLOW(), pPlot->getX(), pPlot->getY()
+					);
+				}
+			}
+		}
+		else
+		{
+			if (bHuman)
+			{
+				if (BARBARIAN_PLAYER != eDefender)
+				{
+					AddDLLMessage(
+						getOwner(), true, GC.getEVENT_MESSAGE_TIME(),
+						gDLL->getText(
+							"TXT_KEY_MISC_DEFENDER_KNOCKEDBACK_HUMAN_ONSLAUGHT",
+							getNameKey(), getVisualCivAdjective(pDefender->getTeam()), pDefender->getNameKey()
+						),
+						"AS2D_THEIR_WITHDRAWL", MESSAGE_TYPE_INFO, NULL, GC.getCOLOR_GREEN(), pPlot->getX(), pPlot->getY()
+					);
+				}
+				else
+				{
+					AddDLLMessage(
+						getOwner(), true, GC.getEVENT_MESSAGE_TIME(),
+						gDLL->getText(
+							"TXT_KEY_MISC_DEFENDER_KNOCKEDBACK_HUMAN_ONSLAUGHT_HIDDEN",
+							getNameKey(), pDefender->getNameKey()
+						),
+						"AS2D_THEIR_WITHDRAWL", MESSAGE_TYPE_INFO, NULL, GC.getCOLOR_GREEN(), pPlot->getX(), pPlot->getY()
+					);
+				}
+			}
+			if (bHumanDefender)
+			{
+				if (BARBARIAN_PLAYER != eAttacker)
+				{
+					AddDLLMessage(
+						pDefender->getOwner(), true, GC.getEVENT_MESSAGE_TIME(),
+						gDLL->getText(
+							"TXT_KEY_MISC_DEFENDER_KNOCKEDBACK_ONSLAUGHT",
+							getVisualCivAdjective(getTeam()), getNameKey(), pDefender->getNameKey()
+						),
+						"AS2D_OUR_WITHDRAWL", MESSAGE_TYPE_INFO, NULL, GC.getCOLOR_YELLOW(), pPlot->getX(), pPlot->getY()
+					);
+				}
+				else
+				{
+					AddDLLMessage(
+						pDefender->getOwner(), true, GC.getEVENT_MESSAGE_TIME(),
+						gDLL->getText(
+							"TXT_KEY_MISC_DEFENDER_KNOCKEDBACK_ONSLAUGHT_HIDDEN",
+							getNameKey(), pDefender->getNameKey()
+						),
+						"AS2D_OUR_WITHDRAWL", MESSAGE_TYPE_INFO, NULL, GC.getCOLOR_YELLOW(), pPlot->getX(), pPlot->getY()
+					);
+				}
+			}
+		}
+		m_combatResult.bDefenderKnockedBack = false;
+
+		if (pPlot->isCity())
+		{
+			m_combatResult.pPlot = NULL;
+		}
+		pDefender->setFortifyTurns(0);
+
+		if (m_combatResult.pPlot != NULL)
+		{
+			FAssertMsg(m_combatResult.pPlot != plot(), "Can't get knocked back to attacker plot");
+			FAssertMsg(m_combatResult.pPlot != pDefender->plot(), "Can't get knocked back to own plot");
+
+			//defender escapes to a safe plot
+			pDefender->move(m_combatResult.pPlot, true);
+			pDefender->getGroup()->clearMissionQueue();
+		}
+
+		const bool bAdvance = canAdvance(pPlot, (pDefender->canDefend() && !pDefender->isDead() && pDefender->plot() == pPlot) ? 1 : 0);
+
+		if (!bAdvance && !m_combatResult.bAttackerStampedes && !m_combatResult.bAttackerOnslaught)
+		{
+			if (!isNoCapture())
+			{
+				pDefender->setCapturingPlayer(getOwner());
+				pDefender->setCapturingUnit(this);
+			}
+			if (!bStealthDefense)
+			{
+				changeMoves(std::max(GC.getMOVE_DENOMINATOR(), pPlot->movementCost(this, plot())));
+			}
+		}
+		else if (m_combatResult.bAttackerStampedes || m_combatResult.bAttackerOnslaught)
+		{
+			attack(pPlot);
+		}
+
+		if (getGroup())
+		{
+			if (pPlot->getNumVisiblePotentialEnemyDefenders(this) == 0)
+			{
+				PROFILE("CvUnit::updateCombat.Advance");
+
+				getGroup()->groupMove(pPlot, true, ((bAdvance) ? this : NULL));
+			}
+			// This is before the plot advancement, the unit will always try to walk back
+			// to the square that they came from, before advancing.
+		}
+	}
+	else if (m_combatResult.bAttackerWithdraws)
+	{
+		if (!m_combatResult.bAttackerStampedes && !m_combatResult.bAttackerOnslaught)
+		{
+			if (bHuman)
+			{
 				AddDLLMessage(
-					getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer,
-					GC.getEraInfo(GC.getGame().getCurrentEra()).getAudioUnitVictoryScript(),
-					MESSAGE_TYPE_INFO, NULL, GC.getCOLOR_GREEN(), pPlot->getX(), pPlot->getY()
+					getOwner(), true, GC.getEVENT_MESSAGE_TIME(),
+					gDLL->getText("TXT_KEY_MISC_YOU_UNIT_WITHDRAW", getNameKey(), pDefender->getNameKey()),
+					"AS2D_OUR_WITHDRAWL", MESSAGE_TYPE_INFO, NULL, GC.getCOLOR_GREEN(), pPlot->getX(), pPlot->getY()
 				);
 			}
 			if (bHumanDefender)
 			{
-				CvWString szBuffer;
-
-				if (m_combatResult.bDefenderPursued)
-				{
-					szBuffer = gDLL->getText("TXT_KEY_MISC_PURSUIT_ONATTACK_VICTIM", pDefender->getNameKey(), getNameKey());
-				}
-				else if (m_combatResult.bAttackerRefusedtoYield)
-				{
-					if (BARBARIAN_PLAYER != eDefender)
-					{
-						szBuffer = gDLL->getText("TXT_KEY_MISC_YOU_UNIT_WAS_DESTROYED_BYUNYIELDING_UNKNOWN", pDefender->getNameKey(), getNameKey());
-					}
-					else szBuffer = gDLL->getText("TXT_KEY_MISC_YOU_UNIT_WAS_DESTROYED_BYUNYIELDING", pDefender->getNameKey(), getVisualCivAdjective(pDefender->getTeam()), getNameKey());
-				}
-				else if (m_combatResult.bDefenderRefusedtoYield)
-				{
-					if (BARBARIAN_PLAYER == eDefender)
-					{
-						szBuffer = gDLL->getText("TXT_KEY_MISC_YOU_UNIT_WAS_DESTROYED_WHILEUNYIELDING_UNKNOWN", pDefender->getNameKey(), getNameKey());
-					}
-					else szBuffer = gDLL->getText("TXT_KEY_MISC_YOU_UNIT_WAS_DESTROYED_WHILEUNYIELDING", pDefender->getNameKey(), getVisualCivAdjective(pDefender->getTeam()), getNameKey());
-				}
-				else if (m_combatResult.bAttackerStampedes)
-				{
-					szBuffer = gDLL->getText("TXT_KEY_MISC_YOU_UNIT_WAS_DESTROYED_ENEMY_STAMPEDE", pDefender->getNameKey(), getNameKey());
-				}
-				else if (m_combatResult.bAttackerOnslaught)
-				{
-					szBuffer = gDLL->getText("TXT_KEY_MISC_YOU_UNIT_WAS_DESTROYED_ENEMY_ONSLAUGHT", pDefender->getNameKey(), getNameKey());
-				}
-				else if (BARBARIAN_PLAYER == eAttacker)
-				{
-					szBuffer = gDLL->getText("TXT_KEY_MISC_YOU_UNIT_WAS_DESTROYED_UNKNOWN", pDefender->getNameKey(), getNameKey());
-				}
-				else szBuffer = gDLL->getText("TXT_KEY_MISC_YOU_UNIT_WAS_DESTROYED", pDefender->getNameKey(), getNameKey(), getVisualCivAdjective(pDefender->getTeam()));
-
-				if (iInfluenceRatio > 0)
-				{
-					szBuffer = szBuffer + CvString::format(" %s: -%.1f%%", gDLL->getText("TXT_KEY_TILE_INFLUENCE").GetCString(), ((float)iInfluenceRatio)/10);
-				}
 				AddDLLMessage(
-					pDefender->getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer,
-					GC.getEraInfo(GC.getGame().getCurrentEra()).getAudioUnitDefeatScript(),
-					MESSAGE_TYPE_INFO, NULL, GC.getCOLOR_RED(), pPlot->getX(), pPlot->getY()
+					pDefender->getOwner(), true, GC.getEVENT_MESSAGE_TIME(),
+					gDLL->getText("TXT_KEY_MISC_ENEMY_UNIT_WITHDRAW", getNameKey(), pDefender->getNameKey()),
+					"AS2D_THEIR_WITHDRAWL", MESSAGE_TYPE_INFO, NULL, GC.getCOLOR_YELLOW(), pPlot->getX(), pPlot->getY()
 				);
 			}
-
-			// report event to Python, along with some other key state
-			int iUnitsHealed = 0;
-			if (getVictoryAdjacentHeal() > 0
-			&& GC.getGame().getSorenRandNum(100, "Field Hospital Die Roll") <= getVictoryAdjacentHeal())
+			changeMoves(std::max(GC.getMOVE_DENOMINATOR(), pPlot->movementCost(this, plot())));
+			//GC.getGame().logOOSSpecial(53, getID(), getMoves(), getDamage());
+		}
+		//TB Combat Mod (Stampede) begin
+		else if (m_combatResult.bAttackerStampedes)
+		{
+			if (bHuman)
 			{
-				foreach_(const CvPlot* pLoopPlot, pPlot->adjacent() | filtered(CvPlot::fn::area() == pPlot->area()))
-				{
-					foreach_(CvUnit* pLoopUnit, pLoopPlot->units())
-					{
-						if (pLoopUnit->getTeam() == getTeam() && pLoopUnit->isHurt())
-						{
-							iUnitsHealed++;
-							pLoopUnit->doHeal();
-						}
-					}
-				}
+				AddDLLMessage(
+					getOwner(), true, GC.getEVENT_MESSAGE_TIME(),
+					gDLL->getText("TXT_KEY_MISC_YOU_UNIT_ATTACKER_WITHDRAW_STAMPEDE", getNameKey(), pDefender->getNameKey()),
+					"AS2D_OUR_WITHDRAWL", MESSAGE_TYPE_INFO, NULL, GC.getCOLOR_GREEN(), pPlot->getX(), pPlot->getY()
+				);
 			}
-
-			if (getVictoryStackHeal() > 0
-			&& GC.getGame().getSorenRandNum(100, "Field Surgeon Die Roll") <= getVictoryStackHeal())
+			if (bHumanDefender)
 			{
-				foreach_(CvUnit* pLoopUnit, pPlot->units())
+				AddDLLMessage(
+					pDefender->getOwner(), true, GC.getEVENT_MESSAGE_TIME(),
+					gDLL->getText("TXT_KEY_MISC_ENEMY_UNIT_ATTACKER_WITHDRAW_STAMPEDE", getNameKey(), pDefender->getNameKey()),
+					"AS2D_THEIR_WITHDRAWL", MESSAGE_TYPE_INFO, NULL, GC.getCOLOR_YELLOW(), pPlot->getX(), pPlot->getY()
+				);
+			}
+			attack(pPlot);
+		}
+		else if (m_combatResult.bAttackerOnslaught)
+		{
+			if (bHuman)
+			{
+				AddDLLMessage(
+					getOwner(), true, GC.getEVENT_MESSAGE_TIME(),
+					gDLL->getText("TXT_KEY_MISC_YOU_UNIT_ATTACKER_WITHDRAW_ONSLAUGHT", getNameKey(), pDefender->getNameKey()),
+					"AS2D_OUR_WITHDRAWL", MESSAGE_TYPE_INFO, NULL, GC.getCOLOR_GREEN(), pPlot->getX(), pPlot->getY()
+				);
+			}
+			if (bHumanDefender)
+			{
+				AddDLLMessage(
+					pDefender->getOwner(), true, GC.getEVENT_MESSAGE_TIME(),
+					gDLL->getText("TXT_KEY_MISC_ENEMY_UNIT_ATTACKER_WITHDRAW_ONSLAUGHT", getNameKey(), pDefender->getNameKey()),
+					"AS2D_THEIR_WITHDRAWL", MESSAGE_TYPE_INFO, NULL, GC.getCOLOR_YELLOW(), pPlot->getX(), pPlot->getY()
+				);
+			}
+			attack(pPlot);
+		}
+	}
+	else if (pDefender->isDead())
+	{
+		if (pDefender->isNPC())
+		{
+			GET_PLAYER(getOwner()).changeWinsVsBarbs(1);
+		}
+
+		if (!isHiddenNationality() && !pDefender->isHiddenNationality())
+		{
+			const int defenderWarWearinessChangeTimes100 =
+			(
+				std::max(
+					1,
+					100 * GC.getDefineINT("WW_UNIT_KILLED_DEFENDING")
+					* (pDefender->getMaxHP() - pDefender->getPreCombatDamage())
+					/
+					pDefender->getMaxHP()
+				)
+			);
+			GET_TEAM(pDefender->getTeam()).changeWarWearinessTimes100(getTeam(), *pPlot, defenderWarWearinessChangeTimes100);
+
+			const int attackerWarWearinessChangeTimes100 =
+			(
+				100 * GC.getDefineINT("WW_KILLED_UNIT_ATTACKING")
+				* (getDamage() - getPreCombatDamage())
+				/
+				getMaxHP()
+			);
+			GET_TEAM(getTeam()).changeWarWearinessTimes100(pDefender->getTeam(), *pPlot, attackerWarWearinessChangeTimes100);
+
+			GET_TEAM(getTeam()).AI_changeWarSuccess(pDefender->getTeam(), GC.getDefineINT("WAR_SUCCESS_ATTACKING"));
+		}
+
+		const int iInfluenceRatio = GC.isIDW_ENABLED() ? doVictoryInfluence(pDefender, true, false) : 0;
+
+		if (bHuman)
+		{
+			CvWString szBuffer;
+
+			if (m_combatResult.bDefenderPursued)
+			{
+				szBuffer = gDLL->getText("TXT_KEY_MISC_PURSUIT_ONATTACK_SUCCESS", pDefender->getNameKey(), getNameKey());
+			}
+			else if (m_combatResult.bAttackerRefusedtoYield)
+			{
+				szBuffer = gDLL->getText("TXT_KEY_MISC_UNYIELDING_YOU_DESTROYED_ENEMY", pDefender->getNameKey(), getNameKey());
+			}
+			else if (m_combatResult.bDefenderRefusedtoYield)
+			{
+				szBuffer = gDLL->getText("TXT_KEY_MISC_YOU_UNIT_DESTROYED_UNYIELDING_ENEMY", pDefender->getNameKey(), getNameKey());
+			}
+			else if (m_combatResult.bAttackerStampedes)
+			{
+				szBuffer = gDLL->getText("TXT_KEY_MISC_YOU_UNIT_DESTROYED_ENEMY_STAMPEDE", pDefender->getNameKey(), getNameKey());
+			}
+			else if (m_combatResult.bAttackerOnslaught)
+			{
+				szBuffer = gDLL->getText("TXT_KEY_MISC_YOU_UNIT_DESTROYED_ENEMY_ONSLAUGHT", pDefender->getNameKey(), getNameKey());
+			}
+			else szBuffer = gDLL->getText("TXT_KEY_MISC_YOU_UNIT_DESTROYED_ENEMY", getNameKey(), pDefender->getNameKey());
+
+			if (iInfluenceRatio > 0)
+			{
+				szBuffer = szBuffer + CvString::format(" %s: +%.1f%%", gDLL->getText("TXT_KEY_TILE_INFLUENCE").GetCString(), ((float)iInfluenceRatio)/10);
+			}
+			AddDLLMessage(
+				getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer,
+				GC.getEraInfo(GC.getGame().getCurrentEra()).getAudioUnitVictoryScript(),
+				MESSAGE_TYPE_INFO, NULL, GC.getCOLOR_GREEN(), pPlot->getX(), pPlot->getY()
+			);
+		}
+		if (bHumanDefender)
+		{
+			CvWString szBuffer;
+
+			if (m_combatResult.bDefenderPursued)
+			{
+				szBuffer = gDLL->getText("TXT_KEY_MISC_PURSUIT_ONATTACK_VICTIM", pDefender->getNameKey(), getNameKey());
+			}
+			else if (m_combatResult.bAttackerRefusedtoYield)
+			{
+				if (BARBARIAN_PLAYER != eDefender)
 				{
-					if (pLoopUnit->getTeam() == getTeam() && pLoopUnit->isHurt())
+					szBuffer = gDLL->getText("TXT_KEY_MISC_YOU_UNIT_WAS_DESTROYED_BYUNYIELDING_UNKNOWN", pDefender->getNameKey(), getNameKey());
+				}
+				else szBuffer = gDLL->getText("TXT_KEY_MISC_YOU_UNIT_WAS_DESTROYED_BYUNYIELDING", pDefender->getNameKey(), getVisualCivAdjective(pDefender->getTeam()), getNameKey());
+			}
+			else if (m_combatResult.bDefenderRefusedtoYield)
+			{
+				if (BARBARIAN_PLAYER == eDefender)
+				{
+					szBuffer = gDLL->getText("TXT_KEY_MISC_YOU_UNIT_WAS_DESTROYED_WHILEUNYIELDING_UNKNOWN", pDefender->getNameKey(), getNameKey());
+				}
+				else szBuffer = gDLL->getText("TXT_KEY_MISC_YOU_UNIT_WAS_DESTROYED_WHILEUNYIELDING", pDefender->getNameKey(), getVisualCivAdjective(pDefender->getTeam()), getNameKey());
+			}
+			else if (m_combatResult.bAttackerStampedes)
+			{
+				szBuffer = gDLL->getText("TXT_KEY_MISC_YOU_UNIT_WAS_DESTROYED_ENEMY_STAMPEDE", pDefender->getNameKey(), getNameKey());
+			}
+			else if (m_combatResult.bAttackerOnslaught)
+			{
+				szBuffer = gDLL->getText("TXT_KEY_MISC_YOU_UNIT_WAS_DESTROYED_ENEMY_ONSLAUGHT", pDefender->getNameKey(), getNameKey());
+			}
+			else if (BARBARIAN_PLAYER == eAttacker)
+			{
+				szBuffer = gDLL->getText("TXT_KEY_MISC_YOU_UNIT_WAS_DESTROYED_UNKNOWN", pDefender->getNameKey(), getNameKey());
+			}
+			else szBuffer = gDLL->getText("TXT_KEY_MISC_YOU_UNIT_WAS_DESTROYED", pDefender->getNameKey(), getNameKey(), getVisualCivAdjective(pDefender->getTeam()));
+
+			if (iInfluenceRatio > 0)
+			{
+				szBuffer = szBuffer + CvString::format(" %s: -%.1f%%", gDLL->getText("TXT_KEY_TILE_INFLUENCE").GetCString(), ((float)iInfluenceRatio)/10);
+			}
+			AddDLLMessage(
+				pDefender->getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer,
+				GC.getEraInfo(GC.getGame().getCurrentEra()).getAudioUnitDefeatScript(),
+				MESSAGE_TYPE_INFO, NULL, GC.getCOLOR_RED(), pPlot->getX(), pPlot->getY()
+			);
+		}
+
+		// report event to Python, along with some other key state
+		int iUnitsHealed = 0;
+		if (getVictoryAdjacentHeal() > 0
+		&& GC.getGame().getSorenRandNum(100, "Field Hospital Die Roll") <= getVictoryAdjacentHeal())
+		{
+			foreach_(const CvPlot* plotX, pPlot->adjacent() | filtered(CvPlot::fn::area() == pPlot->area()))
+			{
+				foreach_(CvUnit* unitX, plotX->units())
+				{
+					if (unitX->getTeam() == getTeam() && unitX->isHurt())
 					{
 						iUnitsHealed++;
-						pLoopUnit->doHeal();
+						unitX->doHeal();
 					}
 				}
 			}
-			else if (getVictoryHeal() > 0 && GC.getGame().getSorenRandNum(100, "Field Medic Die Roll") <= getVictoryHeal())
-			{
-				doHeal();
-			}
+		}
 
-			if (iUnitsHealed > 1)
+		if (getVictoryStackHeal() > 0
+		&& GC.getGame().getSorenRandNum(100, "Field Surgeon Die Roll") <= getVictoryStackHeal())
+		{
+			foreach_(CvUnit* pLoopUnit, pPlot->units())
 			{
-				if (bHumanDefender)
+				if (pLoopUnit->getTeam() == getTeam() && pLoopUnit->isHurt())
+				{
+					iUnitsHealed++;
+					pLoopUnit->doHeal();
+				}
+			}
+		}
+		else if (getVictoryHeal() > 0 && GC.getGame().getSorenRandNum(100, "Field Medic Die Roll") <= getVictoryHeal())
+		{
+			doHeal();
+		}
+
+		if (iUnitsHealed > 1)
+		{
+			if (bHumanDefender)
+			{
+				if (BARBARIAN_PLAYER != eAttacker)
+				{
+					AddDLLMessage(
+						pDefender->getOwner(), true, GC.getEVENT_MESSAGE_TIME(),
+						gDLL->getText("TXT_KEY_MISC_ENEMY_FIELD_MEDIC_ATTACKERS", GET_PLAYER(getOwner()).getCivilizationAdjective()),
+						"AS2D_COMBAT", MESSAGE_TYPE_INFO, getButton(), GC.getCOLOR_YELLOW(), getX(), getY(), true, true
+					);
+				}
+				else
+				{
+					AddDLLMessage(
+						pDefender->getOwner(), true, GC.getEVENT_MESSAGE_TIME(),
+						gDLL->getText("TXT_KEY_MISC_ENEMY_FIELD_MEDIC_ATTACKERS_HIDDEN"),
+						"AS2D_COMBAT", MESSAGE_TYPE_INFO, getButton(), GC.getCOLOR_YELLOW(), getX(), getY(), true, true
+					);
+				}
+			}
+			if (bHuman)
+			{
+				AddDLLMessage(
+					getOwner(), true, GC.getEVENT_MESSAGE_TIME(),
+					gDLL->getText("TXT_KEY_MISC_FIELD_MEDIC_ATTACKERS", getNameKey(), iUnitsHealed),
+					"AS2D_POSITIVE_DINK", MESSAGE_TYPE_INFO, getButton(), GC.getCOLOR_GREEN(), getX(), getY()
+				);
+			}
+		}
+
+		if (getOffensiveVictoryMoveCount() > 0)
+		{
+			changeMoves(-GC.getMOVE_DENOMINATOR());
+		}
+
+		if (pDefender->getSurvivorChance() > 0
+		&& GC.getGame().getSorenRandNum(100, "Too Badass Check") <= pDefender->getSurvivorChance())
+		{
+			pDefender->setSurvivor(true);
+			pDefender->jumpToNearestValidPlot();
+		}
+		else if (pDefender->isOneUp())
+		{
+			CvCity* pCapitalCity = GET_PLAYER(pDefender->getOwner()).getCapitalCity();
+			if (pCapitalCity != NULL)
+			{
+				pDefender->setCanRespawn(true);
+			}
+		}
+
+		if (isPillageOnVictory())
+		{
+			CvPlot* pDefenderPlot = (pDefender->plot());
+			int iPillageGold = (pDefender->getLevel() * pDefender->getExperience());
+			if (NO_UNIT != pDefender->getLeaderUnitType())
+			{
+				iPillageGold *= pDefender->getLevel();
+			}
+			if (iPillageGold > 0)
+			{
+				iPillageGold += iPillageGold * getPillageChange() / 100;
+				GET_PLAYER(getOwner()).changeGold(iPillageGold);
+
+				if (bHuman)
 				{
 					if (BARBARIAN_PLAYER != eAttacker)
 					{
 						AddDLLMessage(
-							pDefender->getOwner(), true, GC.getEVENT_MESSAGE_TIME(),
-							gDLL->getText("TXT_KEY_MISC_ENEMY_FIELD_MEDIC_ATTACKERS", GET_PLAYER(getOwner()).getCivilizationAdjective()),
-							"AS2D_COMBAT", MESSAGE_TYPE_INFO, getButton(), GC.getCOLOR_YELLOW(), getX(), getY(), true, true
+							getOwner(), true, GC.getEVENT_MESSAGE_TIME(),
+							gDLL->getText("TXT_KEY_MISC_GOLD_LOOTED_FROM_DEAD", pDefender->getNameKey(), getVisualCivAdjective(getTeam())),
+							"AS2D_PILLAGED", MESSAGE_TYPE_INFO, getButton(), GC.getCOLOR_YELLOW(), pDefenderPlot->getX(), pDefenderPlot->getY()
 						);
 					}
 					else
 					{
 						AddDLLMessage(
-							pDefender->getOwner(), true, GC.getEVENT_MESSAGE_TIME(),
-							gDLL->getText("TXT_KEY_MISC_ENEMY_FIELD_MEDIC_ATTACKERS_HIDDEN"),
-							"AS2D_COMBAT", MESSAGE_TYPE_INFO, getButton(), GC.getCOLOR_YELLOW(), getX(), getY(), true, true
+							getOwner(), true, GC.getEVENT_MESSAGE_TIME(),
+							gDLL->getText("TXT_KEY_MISC_GOLD_LOOTED_FROM_DEAD_HIDDEN", pDefender->getNameKey()),
+							"AS2D_PILLAGED", MESSAGE_TYPE_INFO, getButton(), GC.getCOLOR_YELLOW(), pDefenderPlot->getX(), pDefenderPlot->getY()
 						);
 					}
 				}
-				if (bHuman)
+
+				for (int iI = 0; iI < NUM_COMMERCE_TYPES; ++iI)
 				{
-					AddDLLMessage(
-						getOwner(), true, GC.getEVENT_MESSAGE_TIME(),
-						gDLL->getText("TXT_KEY_MISC_FIELD_MEDIC_ATTACKERS", getNameKey(), iUnitsHealed),
-						"AS2D_POSITIVE_DINK", MESSAGE_TYPE_INFO, getButton(), GC.getCOLOR_GREEN(), getX(), getY()
-					);
-				}
-			}
-
-			if (getOffensiveVictoryMoveCount() > 0)
-			{
-				changeMoves(-GC.getMOVE_DENOMINATOR());
-			}
-
-			if (pDefender->getSurvivorChance() > 0
-			&& GC.getGame().getSorenRandNum(100, "Too Badass Check") <= pDefender->getSurvivorChance())
-			{
-				pDefender->setSurvivor(true);
-				pDefender->jumpToNearestValidPlot();
-			}
-			else if (pDefender->isOneUp())
-			{
-				CvCity* pCapitalCity = GET_PLAYER(pDefender->getOwner()).getCapitalCity();
-				if (pCapitalCity != NULL)
-				{
-					pDefender->setCanRespawn(true);
-				}
-			}
-
-			if (isPillageOnVictory())
-			{
-				CvPlot* pDefenderPlot = (pDefender->plot());
-				int iPillageGold = (pDefender->getLevel() * pDefender->getExperience());
-				if (NO_UNIT != pDefender->getLeaderUnitType())
-				{
-					iPillageGold *= pDefender->getLevel();
-				}
-				if (iPillageGold > 0)
-	            {
-					iPillageGold += iPillageGold * getPillageChange() / 100;
-					GET_PLAYER(getOwner()).changeGold(iPillageGold);
-
-					if (bHuman)
+					TechTypes ePillageTech = GET_PLAYER(getOwner()).getCurrentResearch();
+					CommerceTypes eCommerce = (CommerceTypes)iI;
+					switch (eCommerce)
 					{
-						if (BARBARIAN_PLAYER != eAttacker)
+					case COMMERCE_GOLD:
+						if (isPillageMarauder())
 						{
-							AddDLLMessage(
-								getOwner(), true, GC.getEVENT_MESSAGE_TIME(),
-								gDLL->getText("TXT_KEY_MISC_GOLD_LOOTED_FROM_DEAD", pDefender->getNameKey(), getVisualCivAdjective(getTeam())),
-								"AS2D_PILLAGED", MESSAGE_TYPE_INFO, getButton(), GC.getCOLOR_YELLOW(), pDefenderPlot->getX(), pDefenderPlot->getY()
-							);
-						}
-						else
-						{
-							AddDLLMessage(
-								getOwner(), true, GC.getEVENT_MESSAGE_TIME(),
-								gDLL->getText("TXT_KEY_MISC_GOLD_LOOTED_FROM_DEAD_HIDDEN", pDefender->getNameKey()),
-								"AS2D_PILLAGED", MESSAGE_TYPE_INFO, getButton(), GC.getCOLOR_YELLOW(), pDefenderPlot->getX(), pDefenderPlot->getY()
-							);
-						}
-					}
-
-					for (int iI = 0; iI < NUM_COMMERCE_TYPES; ++iI)
-					{
-						TechTypes ePillageTech = GET_PLAYER(getOwner()).getCurrentResearch();
-						CommerceTypes eCommerce = (CommerceTypes)iI;
-						switch (eCommerce)
-						{
-						case COMMERCE_GOLD:
-							if (isPillageMarauder())
+							GET_PLAYER(getOwner()).changeGold(iPillageGold);
+							if (bHuman)
 							{
-								GET_PLAYER(getOwner()).changeGold(iPillageGold);
-								if (bHuman)
+								AddDLLMessage(
+									getOwner(), true, GC.getEVENT_MESSAGE_TIME(),
+									gDLL->getText("TXT_KEY_MISC_MARAUDERS_PLUNDERED_VICTIMS", iPillageGold, getNameKey()),
+									"AS2D_PILLAGE", MESSAGE_TYPE_INFO, getButton(), GC.getCOLOR_GREEN(), pDefenderPlot->getX(), pDefenderPlot->getY()
+								);
+							}
+							if (bHumanDefender)
+							{
+								if (BARBARIAN_PLAYER != eAttacker)
+								{
+									AddDLLMessage(
+										pDefender->getOwner(), false, GC.getEVENT_MESSAGE_TIME(),
+										gDLL->getText("TXT_KEY_MISC_ATTACKED_BY_MARAUDERS", pDefender->getNameKey(), getVisualCivAdjective(getTeam())),
+										"AS2D_PILLAGED", MESSAGE_TYPE_INFO, getButton(), GC.getCOLOR_YELLOW(), pDefenderPlot->getX(), pDefenderPlot->getY(), true, true
+									);
+								}
+								else
+								{
+									AddDLLMessage(
+										pDefender->getOwner(), false, GC.getEVENT_MESSAGE_TIME(),
+										gDLL->getText("TXT_KEY_MISC_ATTACKED_BY_MARAUDERS_HIDDEN", pDefender->getNameKey()),
+										"AS2D_PILLAGED", MESSAGE_TYPE_INFO, getButton(), GC.getCOLOR_YELLOW(), pDefenderPlot->getX(), pDefenderPlot->getY(), true, true
+									);
+								}
+							}
+						}
+						break;
+					case COMMERCE_RESEARCH:
+						if (isPillageResearch())
+						{
+							GET_TEAM(GET_PLAYER(getOwner()).getTeam()).changeResearchProgress(ePillageTech, iPillageGold, getOwner());
+							if (bHuman)
+							{
+								if (BARBARIAN_PLAYER != eDefender)
 								{
 									AddDLLMessage(
 										getOwner(), true, GC.getEVENT_MESSAGE_TIME(),
-										gDLL->getText("TXT_KEY_MISC_MARAUDERS_PLUNDERED_VICTIMS", iPillageGold, getNameKey()),
+										gDLL->getText(
+											"TXT_KEY_MISC_PLUNDERED_RESEARCH_FROM_IMP",
+											iPillageGold, getNameKey(), getVisualCivAdjective(pDefender->getTeam()), ePillageTech
+										),
 										"AS2D_PILLAGE", MESSAGE_TYPE_INFO, getButton(), GC.getCOLOR_GREEN(), pDefenderPlot->getX(), pDefenderPlot->getY()
 									);
 								}
-								if (bHumanDefender)
+								else
 								{
-									if (BARBARIAN_PLAYER != eAttacker)
-									{
-										AddDLLMessage(
-											pDefender->getOwner(), false, GC.getEVENT_MESSAGE_TIME(),
-											gDLL->getText("TXT_KEY_MISC_ATTACKED_BY_MARAUDERS", pDefender->getNameKey(), getVisualCivAdjective(getTeam())),
-											"AS2D_PILLAGED", MESSAGE_TYPE_INFO, getButton(), GC.getCOLOR_YELLOW(), pDefenderPlot->getX(), pDefenderPlot->getY(), true, true
-										);
-									}
-									else
-									{
-										AddDLLMessage(
-											pDefender->getOwner(), false, GC.getEVENT_MESSAGE_TIME(),
-											gDLL->getText("TXT_KEY_MISC_ATTACKED_BY_MARAUDERS_HIDDEN", pDefender->getNameKey()),
-											"AS2D_PILLAGED", MESSAGE_TYPE_INFO, getButton(), GC.getCOLOR_YELLOW(), pDefenderPlot->getX(), pDefenderPlot->getY(), true, true
-										);
-									}
+									AddDLLMessage(
+										getOwner(), true, GC.getEVENT_MESSAGE_TIME(),
+										gDLL->getText("TXT_KEY_MISC_PLUNDERED_RESEARCH_FROM_IMP_HIDDEN", iPillageGold, getNameKey(), ePillageTech),
+										"AS2D_PILLAGE", MESSAGE_TYPE_INFO, getButton(), GC.getCOLOR_GREEN(), pDefenderPlot->getX(), pDefenderPlot->getY()
+									);
 								}
 							}
-							break;
-						case COMMERCE_RESEARCH:
-							if (isPillageResearch())
-							{
-								GET_TEAM(GET_PLAYER(getOwner()).getTeam()).changeResearchProgress(ePillageTech, iPillageGold, getOwner());
-								if (bHuman)
-								{
-									if (BARBARIAN_PLAYER != eDefender)
-									{
-										AddDLLMessage(
-											getOwner(), true, GC.getEVENT_MESSAGE_TIME(),
-											gDLL->getText(
-												"TXT_KEY_MISC_PLUNDERED_RESEARCH_FROM_IMP",
-												iPillageGold, getNameKey(), getVisualCivAdjective(pDefender->getTeam()), ePillageTech
-											),
-											"AS2D_PILLAGE", MESSAGE_TYPE_INFO, getButton(), GC.getCOLOR_GREEN(), pDefenderPlot->getX(), pDefenderPlot->getY()
-										);
-									}
-									else
-									{
-										AddDLLMessage(
-											getOwner(), true, GC.getEVENT_MESSAGE_TIME(),
-											gDLL->getText("TXT_KEY_MISC_PLUNDERED_RESEARCH_FROM_IMP_HIDDEN", iPillageGold, getNameKey(), ePillageTech),
-											"AS2D_PILLAGE", MESSAGE_TYPE_INFO, getButton(), GC.getCOLOR_GREEN(), pDefenderPlot->getX(), pDefenderPlot->getY()
-										);
-									}
-								}
-							}
-							break;
-						case COMMERCE_CULTURE:
-							break;
-						case COMMERCE_ESPIONAGE:
-							if (isPillageEspionage() && pDefenderPlot->getTeam() != NO_TEAM)
-							{
-								GET_TEAM(GET_PLAYER(getOwner()).getTeam()).changeEspionagePointsAgainstTeam(pDefenderPlot->getTeam(), iPillageGold);
-
-								if (bHuman)
-								{
-									if (BARBARIAN_PLAYER != eDefender)
-									{
-										AddDLLMessage(
-											getOwner(), true, GC.getEVENT_MESSAGE_TIME(),
-											gDLL->getText(
-												"TXT_KEY_MISC_PLUNDERED_ESPIONAGE_FROM_IMP",
-												iPillageGold, getNameKey(), getVisualCivAdjective(pDefender->getTeam()), ePillageTech
-											),
-											"AS2D_PILLAGE", MESSAGE_TYPE_INFO, getButton(), GC.getCOLOR_GREEN(), pDefenderPlot->getX(), pDefenderPlot->getY()
-										);
-									}
-									else
-									{
-										AddDLLMessage(
-											getOwner(), true, GC.getEVENT_MESSAGE_TIME(),
-											gDLL->getText("TXT_KEY_MISC_PLUNDERED_ESPIONAGE_FROM_IMP_HIDDEN", iPillageGold, getNameKey(), ePillageTech),
-											"AS2D_PILLAGE", MESSAGE_TYPE_INFO, getButton(), GC.getCOLOR_GREEN(), pDefenderPlot->getX(), pDefenderPlot->getY()
-										);
-									}
-								}
-							}
-							break;
 						}
+						break;
+					case COMMERCE_CULTURE:
+						break;
+					case COMMERCE_ESPIONAGE:
+						if (isPillageEspionage() && pDefenderPlot->getTeam() != NO_TEAM)
+						{
+							GET_TEAM(GET_PLAYER(getOwner()).getTeam()).changeEspionagePointsAgainstTeam(pDefenderPlot->getTeam(), iPillageGold);
+
+							if (bHuman)
+							{
+								if (BARBARIAN_PLAYER != eDefender)
+								{
+									AddDLLMessage(
+										getOwner(), true, GC.getEVENT_MESSAGE_TIME(),
+										gDLL->getText(
+											"TXT_KEY_MISC_PLUNDERED_ESPIONAGE_FROM_IMP",
+											iPillageGold, getNameKey(), getVisualCivAdjective(pDefender->getTeam()), ePillageTech
+										),
+										"AS2D_PILLAGE", MESSAGE_TYPE_INFO, getButton(), GC.getCOLOR_GREEN(), pDefenderPlot->getX(), pDefenderPlot->getY()
+									);
+								}
+								else
+								{
+									AddDLLMessage(
+										getOwner(), true, GC.getEVENT_MESSAGE_TIME(),
+										gDLL->getText("TXT_KEY_MISC_PLUNDERED_ESPIONAGE_FROM_IMP_HIDDEN", iPillageGold, getNameKey(), ePillageTech),
+										"AS2D_PILLAGE", MESSAGE_TYPE_INFO, getButton(), GC.getCOLOR_GREEN(), pDefenderPlot->getX(), pDefenderPlot->getY()
+									);
+								}
+							}
+						}
+						break;
 					}
 				}
 			}
+		}
 
-			CvEventReporter::getInstance().combatResult(this, pDefender);
-			PlayerTypes eDefenderUnitPlayer = pDefender->getOwner();
-			UnitTypes eDefenderUnitType = pDefender->getUnitType();
+		CvEventReporter::getInstance().combatResult(this, pDefender);
+		PlayerTypes eDefenderUnitPlayer = pDefender->getOwner();
+		UnitTypes eDefenderUnitType = pDefender->getUnitType();
 
-			// generate the kill outcome list but don't execute it yet
-			//std::vector<UnitCombatTypes> aDefenderCombats;
-			CvOutcomeListMerged mergedList;
-			mergedList.addOutcomeList(pDefender->getUnitInfo().getKillOutcomeList());
-			for (std::map<UnitCombatTypes, UnitCombatKeyedInfo>::const_iterator it = m_unitCombatKeyedInfo.begin(), end = m_unitCombatKeyedInfo.end(); it != end; ++it)
+		// generate the kill outcome list but don't execute it yet
+		//std::vector<UnitCombatTypes> aDefenderCombats;
+		CvOutcomeListMerged mergedList;
+		mergedList.addOutcomeList(pDefender->getUnitInfo().getKillOutcomeList());
+		for (std::map<UnitCombatTypes, UnitCombatKeyedInfo>::const_iterator it = m_unitCombatKeyedInfo.begin(), end = m_unitCombatKeyedInfo.end(); it != end; ++it)
+		{
+			if(it->second.m_bHasUnitCombat)
 			{
-				if(it->second.m_bHasUnitCombat)
-				{
-					mergedList.addOutcomeList(GC.getUnitCombatInfo((UnitCombatTypes)it->first).getKillOutcomeList());
-					//aDefenderCombats.push_back((UnitCombatTypes)it->first);
-				}
+				mergedList.addOutcomeList(GC.getUnitCombatInfo((UnitCombatTypes)it->first).getKillOutcomeList());
+				//aDefenderCombats.push_back((UnitCombatTypes)it->first);
 			}
+		}
 
-			if (isSuicide())
+		if (isSuicide())
+		{
+			kill(true);
+
+			pDefender->kill(true, NO_PLAYER, true);
+			pDefender = NULL;
+		}
+		else
+		{
+			// Each attacker will only be ambushed once by a stealth defender per move,
+			//	and stampede only needs to trigger against visible defenders.
+			if (!bStealthDefense)
 			{
-				kill(true);
-
-				pDefender->kill(false, NO_PLAYER, true);
-				pDefender = NULL;
-			}
-			else
-			{
-				if (pPlot == plot())
-				{
-					bSamePlot = true;
-				}
-				//TB debug attempt: added && pDefender->plot() == pPlot to try to allow units to move in when one defender on the plot withdrew.
-				const bool bAdvance = !bSamePlot && canAdvance(pPlot, pDefender->canDefend() && !pDefender->isDead() && pDefender->plot() == pPlot);
-
-				//TBMaybeproblem - should this come before the generation of the captive which takes place above at the add outcome step?
-				if (bAdvance && !isNoCapture())
-				{
-					pDefender->setCapturingPlayer(getOwner());
-					pDefender->setCapturingUnit(this);
-				}
-
-				pDefender->killUnconditional(false, NO_PLAYER, true);
-				pDefender = NULL;
-				//TB Combat Mod (Stampede) begin
-				if (!bAdvance && !m_combatResult.bAttackerStampedes && !m_combatResult.bAttackerOnslaught && !bStealthDefense)
-				{
-					changeMoves(std::max(GC.getMOVE_DENOMINATOR(), pPlot->movementCost(this, plot())));
-				}
-				if (m_combatResult.bAttackerStampedes || m_combatResult.bAttackerOnslaught)
+				if (pPlot->hasDefender(false, NO_PLAYER, getOwner(), this, true, false, false, true)
+				&& (m_combatResult.bAttackerStampedes || m_combatResult.bAttackerOnslaught))
 				{
 					attack(pPlot);
 				}
-				if (bAdvance && (bQuick || !getGroup()->isCombat())) getGroup()->groupMove(pPlot, true, this);
+				else if (pPlot->hasStealthDefender(this))  // Reveals the unit if true
+				{
+					// Doesn't matter if the plot has visible defenders, stealth defense is an opportunistic ambush.
+					attack(pPlot, true); 
+				}
 			}
-			//TB Combat Mods End
+			const bool bAdvance = !bSamePlot && canAdvance(pPlot, pDefender->canDefend());
 
-			mergedList.execute(*this, eDefenderUnitPlayer, eDefenderUnitType);
-		}
+			// TBMaybeproblem - should this come before the generation of the captive which takes place above at the add outcome step?
+			if (bAdvance && !isNoCapture())
+			{
+				pDefender->setCapturingPlayer(getOwner());
+				pDefender->setCapturingUnit(this);
+			}
+			pDefender->kill(true, NO_PLAYER, true);
+			pDefender = NULL;
 
-		if (bQuick && IsSelected() && !canMove())
-		{
-			gDLL->getInterfaceIFace()->removeFromSelectionList(this);
+			if (bSamePlot || !bAdvance)
+			{
+				if (bCombatFinished || !m_combatResult.bAttackerStampedes && !m_combatResult.bAttackerOnslaught)
+				{
+					changeMoves(std::max(GC.getMOVE_DENOMINATOR(), pPlot->movementCost(this, plot())));
+				}
+			}
+			else if (bCombatFinished) getGroup()->groupMove(pPlot, true, this);
 		}
+		//TB Combat Mods End
+
+		mergedList.execute(*this, eDefenderUnitPlayer, eDefenderUnitType);
+	}
+
+	if (bQuick && IsSelected() && !canMove())
+	{
+		gDLL->getInterfaceIFace()->removeFromSelectionList(this);
 	}
 }
 
@@ -6224,17 +6177,8 @@ void CvUnit::attack(CvPlot* pPlot, bool bStealth, bool bNoCache)
 		setAttackPlot(pPlot, false);
 
 		FAssertMsg(pPlot != plot(), "We are passing in false for bSamePlot so why are we on the same plot? (This is here to confirm if the bSamePlot parameter actually means what it says or not, we might remove the parameter or rename it if the assert is hit)");
-		updateCombat(NULL, false, bStealth, bNoCache);
+		startCombat(NULL, false, bStealth, bNoCache);
 	}
-}
-
-void CvUnit::fightInterceptor(const CvPlot* pPlot, bool bQuick)
-{
-	FAssert(getCombatTimer() == 0);
-
-	setAttackPlot(pPlot, true);
-
-	updateAirCombat(bQuick);
 }
 
 
@@ -15302,8 +15246,7 @@ void CvUnit::setXY(int iX, int iY, bool bGroup, bool bUpdate, bool bShow, bool b
 			OutputDebugString(CvString::format("%S (%d) CvUnit::setXY (%d,%d)\n", getDescription().c_str(), m_iID, m_iX, m_iY).c_str());
 			foreach_(CvUnit* unitX, pNewPlot->units_safe())
 			{
-				if (unitX->isDead())
-					continue;
+				if (unitX->isDead()) continue;
 
 				if ((isEnemy(unitX->getTeam(), pNewPlot) || unitX->isEnemy(getTeam())) && !unitX->canCoexistWithAttacker(*this, true))
 				{
@@ -24186,7 +24129,11 @@ bool CvUnit::interceptTest(const CvPlot* pPlot)
 			}
 			if (GC.getGame().getSorenRandNum(100, "Intercept Rand (Air)") < iInterceptionOdds)
 			{
-				fightInterceptor(pPlot, false);
+				FAssert(getCombatTimer() == 0);
+
+				setAttackPlot(pPlot, true);
+				startAirCombat();
+
 				return true;
 			}
 		}
@@ -36852,10 +36799,9 @@ void CvUnit::attackSamePlotSpecifiedUnit(CvUnit* pSelectedDefender)
 	FAssert(getCombatTimer() == 0);
 	m_combatResult.iTurnCount = 0;
 	//TB Note: No Strength in numbers possible on such a same plot attack.
-	CvPlot* pPlot = plot();
-	setAttackPlot(pPlot, false);
+	setAttackPlot(plot(), false);
 
-	updateCombat(pSelectedDefender, true);
+	startCombat(pSelectedDefender, true);
 }
 
 bool CvUnit::canArrest() const

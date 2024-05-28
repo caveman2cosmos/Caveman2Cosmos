@@ -1088,7 +1088,7 @@ public:
 		bool bTestCanMove = false,
 		bool bTestCanFight = false
 	) const;
-	bool hasStealthDefender(const CvUnit* victim, const bool bReveal = false);
+	bool hasStealthDefender(const CvUnit* victim, const bool bReveal = true);
 
 	void doPreAttackTraps(CvUnit* pAttacker);
 
