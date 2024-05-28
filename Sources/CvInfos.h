@@ -4125,6 +4125,7 @@ public:
 	bool isNoAdjacent() const;
 	bool isRequiresFlatlands() const;
 	bool isRequiresRiver() const;
+	inline bool isCoastalOnly() const { return m_bCoastalOnly; }
 	bool isAddsFreshWater() const;
 	bool isImpassable() const;
 	bool isNoCity() const;
@@ -4218,6 +4219,7 @@ private:
 	bool m_bNoAdjacent;
 	bool m_bRequiresFlatlands;
 	bool m_bRequiresRiver;
+	bool m_bCoastalOnly;
 	bool m_bAddsFreshWater;
 	bool m_bImpassable;
 	bool m_bNoCity;
