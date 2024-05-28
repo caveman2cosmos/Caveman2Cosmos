@@ -1607,10 +1607,6 @@ def placeC2CBonuses():
 
 	aCoastTerrains = [terrainCoast, terrainPolarCoast, terrainTropicalCoast]
 
-	terrainMarsh = GC.getInfoTypeForString("TERRAIN_MARSH")
-
-	featureMangrove = GC.getInfoTypeForString("FEATURE_MANGROVE")
-
 	improvementGoodyIsland = GC.getInfoTypeForString("IMPROVEMENT_GOODY_ISLAND")
 
 	# Map the climate zones.
