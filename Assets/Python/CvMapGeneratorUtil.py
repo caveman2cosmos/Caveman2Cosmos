@@ -1697,9 +1697,6 @@ def placeC2CBonuses():
 					plot.setBonusType(iSeaLion)
 					iResource = iSeaLion
 
-			if iTerrain == terrainMarsh and iLatitude < 30 and not plot.isHills() and plot.isCoastal():
-				# tropical and semi-tropical marsh coastal plot
-				plot.setFeatureType(featureMangrove, 0)
 		'''
 		Replace resources that the map generator may have put on the wrong parts of the map
 		since it only has north/south control not east/west control

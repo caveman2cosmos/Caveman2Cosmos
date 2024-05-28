@@ -13159,6 +13159,7 @@ m_bNoRiver(false),
 m_bNoAdjacent(false),
 m_bRequiresFlatlands(false),
 m_bRequiresRiver(false),
+m_bCoastalOnly(false),
 m_bAddsFreshWater(false),
 m_bImpassable(false),
 m_bNoCity(false),
@@ -13513,6 +13514,7 @@ bool CvFeatureInfo::read(CvXMLLoadUtility* pXML)
 	pXML->GetOptionalChildXmlValByName(&m_bNoAdjacent, L"bNoAdjacent");
 	pXML->GetOptionalChildXmlValByName(&m_bRequiresFlatlands, L"bRequiresFlatlands");
 	pXML->GetOptionalChildXmlValByName(&m_bRequiresRiver, L"bRequiresRiver");
+	pXML->GetOptionalChildXmlValByName(&m_bCoastalOnly, L"bCoastalOnly");
 	pXML->GetOptionalChildXmlValByName(&m_bAddsFreshWater, L"bAddsFreshWater");
 	pXML->GetOptionalChildXmlValByName(&m_bImpassable, L"bImpassable");
 	pXML->GetOptionalChildXmlValByName(&m_bNoCity, L"bNoCity");
@@ -13622,6 +13624,7 @@ void CvFeatureInfo::copyNonDefaults(const CvFeatureInfo* pClassInfo)
 	if (isNoAdjacent() == bDefault) m_bNoAdjacent = pClassInfo->isNoAdjacent();
 	if (isRequiresFlatlands() == bDefault) m_bRequiresFlatlands = pClassInfo->isRequiresFlatlands();
 	if (isRequiresRiver() == bDefault) m_bRequiresRiver = pClassInfo->isRequiresRiver();
+	if (m_bCoastalOnly == bDefault) m_bCoastalOnly = pClassInfo->isCoastalOnly();
 	if (isAddsFreshWater() == bDefault) m_bAddsFreshWater = pClassInfo->isAddsFreshWater();
 	if (isImpassable() == bDefault) m_bImpassable = pClassInfo->isImpassable();
 	if (isNoCity() == bDefault) m_bNoCity = pClassInfo->isNoCity();
@@ -13710,6 +13713,7 @@ void CvFeatureInfo::getCheckSum(uint32_t &iSum) const
 	CheckSum(iSum, m_bNoAdjacent);
 	CheckSum(iSum, m_bRequiresFlatlands);
 	CheckSum(iSum, m_bRequiresRiver);
+	CheckSum(iSum, m_bCoastalOnly);
 	CheckSum(iSum, m_bAddsFreshWater);
 	CheckSum(iSum, m_bImpassable);
 	CheckSum(iSum, m_bNoCity);
