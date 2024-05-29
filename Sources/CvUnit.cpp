@@ -13396,7 +13396,7 @@ bool CvUnit::canFight() const
 
 bool CvUnit::canAttackNow() const
 {
-	return (canAttack() || canAirAttack()) && (!isMadeAttack() || isBlitz());
+	return canAttack() && (!isMadeAttack() || isBlitz());
 }
 
 bool CvUnit::canAttack() const

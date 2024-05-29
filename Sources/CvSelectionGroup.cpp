@@ -1974,7 +1974,7 @@ bool CvSelectionGroup::continueMission(int iSteps)
 
 	if ((missionNode->m_data.iPushTurn == GC.getGame().getGameTurn() || (missionNode->m_data.iFlags & MOVE_THROUGH_ENEMY))
 	&& missionNode->m_data.eMissionType == MISSION_MOVE_TO
-	&& canAllMove() && canFight())
+	&& canAllMove())
 	{
 		bool bFailedAlreadyFighting;
 		if (groupAttack(missionNode->m_data.iData1, missionNode->m_data.iData2, missionNode->m_data.iFlags, bFailedAlreadyFighting))
