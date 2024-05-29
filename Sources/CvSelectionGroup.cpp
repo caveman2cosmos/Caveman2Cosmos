@@ -1976,7 +1976,7 @@ bool CvSelectionGroup::continueMission(int iSteps)
 
 	if ((missionNode->m_data.iPushTurn == GC.getGame().getGameTurn() || (missionNode->m_data.iFlags & MOVE_THROUGH_ENEMY))
 	&& missionNode->m_data.eMissionType == MISSION_MOVE_TO
-	&& canAllMove() && canFight())
+	&& canAllMove())
 	{
 		bool bFailedAlreadyFighting;
 		if (groupAttack(missionNode->m_data.iData1, missionNode->m_data.iData2, missionNode->m_data.iFlags, bFailedAlreadyFighting))
@@ -3589,16 +3589,6 @@ bool CvSelectionGroup::groupAttack(int iX, int iY, int iFlags, bool& bFailedAlre
 
 			if (!pBestAttackUnit) break;
 		}
-		// Toffer - Human player expect units with blitz to only attack once in a stack attack
-		// if not the player has no control of the situation as e.g.
-		//	2 units are selected, if one of the units have 4 moves and blitz it might completly suicide
-		//	with 4 attacks against an enemy stack; AI would stop to reconsider depending on the outcome of each attack,
-		//	the human player would expect an even expenditure of movement points in the selected group for one attack command.
-		if (bHuman || !pBestAttackUnit->isBlitz())
-		{
-			FAssert(alreadyAttacked.find(pBestAttackUnit->getID()) == alreadyAttacked.end());
-			alreadyAttacked.insert(pBestAttackUnit->getID());
-		}
 
 		if (!bAffixFirstAttacker
 		&& !pDestPlot->hasDefender(false, NO_PLAYER, getOwner(), pBestAttackUnit, true, false, false, true))
@@ -3646,7 +3636,16 @@ bool CvSelectionGroup::groupAttack(int iX, int iY, int iFlags, bool& bFailedAlre
 				continue;
 			}
 		}
-
+		// Toffer - Human player expect units with blitz to only attack once in a stack attack
+		// if not the player has no control of the situation as e.g.
+		//	2 units are selected, if one of the units have 4 moves and blitz it might completly suicide
+		//	with 4 attacks against an enemy stack; AI would stop to reconsider depending on the outcome of each attack,
+		//	the human player would expect an even expenditure of movement points in the selected group for one attack command.
+		if (bHuman || !pBestAttackUnit->isBlitz())
+		{
+			FAssert(alreadyAttacked.find(pBestAttackUnit->getID()) == alreadyAttacked.end());
+			alreadyAttacked.insert(pBestAttackUnit->getID());
+		}
 		bAttack = true;
 
 		if (getNumUnits() < 2 || (bHuman && !bStack))
