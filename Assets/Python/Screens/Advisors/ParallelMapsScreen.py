@@ -137,10 +137,6 @@ class ParallelMapsScreen:
 			TYPE = szSplit[1]
 		else:
 			TYPE = ""
-		if szSplit[2:]:
-			CASE = szSplit[2:]
-		else:
-			CASE = [0]
 
 		# Remove potential Help Text
 		self.tooltip.reset(screen)
