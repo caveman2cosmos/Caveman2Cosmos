@@ -24,7 +24,6 @@ class ParallelMapsScreen:
 
 		self.tooltip = PythonToolTip.PythonToolTip()
 
-		# Resolution
 		import ScreenResolution as SR
 		self.xRes = xRes = SR.x
 		self.yRes = yRes = SR.y
@@ -39,14 +38,10 @@ class ParallelMapsScreen:
 			self.H_EDGE_PANEL = H_EDGE_PANEL = 30
 			uFontEdge = "<font=2b>"
 
-		self.a4thX = a4thX = xRes / 4
-
 		eWidGen = WidgetTypes.WIDGET_GENERAL
-		#ePnlBlue50 = PanelStyles.PANEL_STYLE_BLUE50
 		eFontTitle = FontTypes.TITLE_FONT
 
 		screen.setRenderInterfaceOnly(True);
-		#screen.showScreen(PopupStates.POPUPSTATE_IMMEDIATE, False)
 		screen.showWindowBackground(False)
 		screen.setDimensions(0, 0, xRes, yRes)
 
@@ -54,8 +49,6 @@ class ParallelMapsScreen:
 		screen.addPanel("TopPanel", "", "", True, False, -2, -2, xRes+4, H_EDGE_PANEL, PanelStyles.PANEL_STYLE_TOPBAR)
 		stTxt = uFontEdge + TRNSLTR.getText("TXT_WORD_EXIT", ())
 		screen.setText("Exit", "", stTxt, 1<<1, xRes - 8, 0, 0, eFontTitle, WidgetTypes.WIDGET_CLOSE_SCREEN, -1, -1)
-
-		# Header
 		screen.setLabel("Header", "", uFontEdge + "Maps", 1<<2, xRes / 2, 2, 0, eFontTitle, eWidGen, 1, 1)
 
 		if GC.isDebugBuild(): # Matt: minimap is glitchy, needs fixing.
@@ -66,21 +59,18 @@ class ParallelMapsScreen:
 		screen.showScreen(PopupStates.POPUPSTATE_IMMEDIATE, False)
 
 	def initMinimap(self, screen):
-		self.Y_MAP = Y_MAP = self.H_EDGE_PANEL + 90
-		self.W_MAP = W_MAP = self.xRes - self.a4thX - 16
+		a4thX = self.xRes / 4
+		Y_MAP = self.H_EDGE_PANEL + 90
+		W_MAP = self.xRes - self.a4thX - 16
 		H_MAP_MAX = self.yRes - Y_MAP - 10
-
-		self.yMainPnl = yMainPnl = Y_MAP - 12
-
+		yMainPnl = Y_MAP - 12
 		MAP = CyMap()
-
 		iMap_W = MAP.getViewportWidth()
 		iMap_H = MAP.getViewportHeight()
-
-		self.H_MAP = H_MAP = int(W_MAP * iMap_H * 1.0 / iMap_W)
+		H_MAP = int(W_MAP * iMap_H * 1.0 / iMap_W)
 		if H_MAP > H_MAP_MAX:
-			self.W_MAP = W_MAP = int(H_MAP_MAX * iMap_W * 1.0 / iMap_H)
-			self.H_MAP = H_MAP = H_MAP_MAX
+			W_MAP = int(H_MAP_MAX * iMap_W * 1.0 / iMap_H)
+			H_MAP = H_MAP_MAX
 
 		screen.addPanel("MA_PnlMM", "", "", False, False, 8, yMainPnl, W_MAP + 12, H_MAP + 18, PanelStyles.PANEL_STYLE_BLUE50)
 		screen.initMinimap(14, 14 + W_MAP, Y_MAP, Y_MAP + H_MAP, 0)
@@ -102,7 +92,7 @@ class ParallelMapsScreen:
 		eWidGen = WidgetTypes.WIDGET_GENERAL
 		ePnlBlue50	= PanelStyles.PANEL_STYLE_BLUE50
 
-		# Set scrollable area for maps
+		# Set scrollable area for the map buttons
 		y = yTop - 4
 		w = xRes - 16
 		screen.addPanel("MA_CivSelBG", "", "", False, True, 8, y, w, 88, ePnlBlue50)
@@ -169,18 +159,14 @@ class ParallelMapsScreen:
 							screen.hide("WID|MAP|HiLi" + str(int(GAME.getCurrentMap())))
 							screen.show("WID|MAP|HiLi" + str(ID))
 							GC.switchMap(ID) 
-							#self.hideScreen()
-							#self.interfaceScreen()
-							self.initMinimap(screen)
-							CyMap().setViewportActionState(ViewportDeferredActionState.VIEWPORT_ACTION_STATE_AFTER_SWITCH)
 
 	def update(self, fDelta):
-		CyMap().setViewportActionState(ViewportDeferredActionState.VIEWPORT_ACTION_STATE_AFTER_SWITCH)
+		pass
 
 	def hideScreen(self):
 		screen = self.getScreen()
 		screen.hideScreen()
 
 	def onClose(self):
-		del self.xRes, self.yRes
+		del self.xRes, self.yRes, self.tooltip, self.H_EDGE_PANEL, self.H_EDGE_PANEL, self.H_EDGE_PANEL
 		CyMap().setViewportActionState(ViewportDeferredActionState.VIEWPORT_ACTION_STATE_AFTER_SWITCH)
