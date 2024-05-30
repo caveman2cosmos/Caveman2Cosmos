@@ -1789,7 +1789,7 @@ class CvMainInterface:
 			screen.hide("GreatGeneralBar")
 			screen.hide("GreatGeneralBarText")
 
-	def showParallelMapsButton(self):
+	def showParallelMapsScreenButton(self):
 		CyGInterfaceScreen("MainInterface", CvScreenEnums.MAIN_INTERFACE).show("ParallelMapsBtn")
 
 	def cleanPlotList(self, screen):

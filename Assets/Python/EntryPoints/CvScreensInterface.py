@@ -55,8 +55,8 @@ def reinitMainInterface():
 def initMinimap():
 	mainInterface.initMinimap()
 
-def showParallelMapsButton():
-	mainInterface.showParallelMapsButton()
+def showParallelMapsScreenButton():
+	mainInterface.showParallelMapsScreenButton()
 
 def numPlotListButtons(): return 0 # Called from exe
 
