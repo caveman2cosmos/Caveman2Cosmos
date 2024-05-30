@@ -402,10 +402,6 @@ class CvEventManager:
 
 		elif eventType == 6: # Key down
 
-			if key == InputTypes.KB_F10:
-				CvScreensInterface.showParallelMapsScreen()
-				return 1
-
 			if iModifiers == 1:
 				if bCtrl:
 					if key == InputTypes.KB_F1:
