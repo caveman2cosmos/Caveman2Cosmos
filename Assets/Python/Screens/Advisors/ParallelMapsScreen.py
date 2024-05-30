@@ -61,7 +61,7 @@ class ParallelMapsScreen:
 	def initMinimap(self, screen):
 		a4thX = self.xRes / 4
 		Y_MAP = self.H_EDGE_PANEL + 90
-		W_MAP = self.xRes - self.a4thX - 16
+		W_MAP = self.xRes - a4thX - 16
 		H_MAP_MAX = self.yRes - Y_MAP - 10
 		yMainPnl = Y_MAP - 12
 		MAP = CyMap()
