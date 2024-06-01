@@ -26,7 +26,7 @@
 
 std::vector<CyPlayer> g_cyPlayers;
 std::vector<CyTeam>   g_cyTeams;
-std::vector<CyMap>    g_cyMaps;
+std::vector<CyMap>	  g_cyMaps;
 
 void CyGlobalContext::initStatics()
 {
@@ -78,6 +78,22 @@ CyMap* CyGlobalContext::getMapByIndex(MapTypes eMap) const
 {
 	FASSERT_BOUNDS(0, NUM_MAPS, eMap);
 	return &g_cyMaps[eMap];
+}
+
+python::list CyGlobalContext::getMaps() const
+{
+	python::list l = python::list();
+
+	foreach_(CyMap& mapX, g_cyMaps)
+	{
+		l.append(mapX);
+	}
+	return l;
+}
+
+int CyGlobalContext::getNumMapsInitialized() const
+{
+	return algo::count_if(GC.getMaps(), bind(CvMap::plotsInitialized, _1));
 }
 
 CyPlayer* CyGlobalContext::getCyPlayer(PlayerTypes ePlayer) const

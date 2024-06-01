@@ -1407,6 +1407,8 @@ void CvMap::afterSwitch()
 			kGenerator.generateRandomMap();
 			kGenerator.addGameElements();
 		}
+
+		Cy::call("CvScreensInterface", "showParallelMapsScreenButton");
 	}
 
 	Cy::call("CvAppInterface", "cacheCameraZoom");

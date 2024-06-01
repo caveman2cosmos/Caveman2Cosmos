@@ -19,6 +19,7 @@
 			<!-- <MapScript>\Mods\Caveman2Cosmos\PrivateMaps\Multimaps\Test.py</MapScript> -->
 			<InitialWBMap/>
 			<MapScript/>
+			<Button>Art/Interface/Buttons/missions/ClaimTerritory.dds</Button>
 		</MapInfo>
 		<MapInfo>
 			<!-- Subterrain map -->
@@ -32,6 +33,7 @@
 			<bStartRevealed>0</bStartRevealed>
 			<InitialWBMap/>
 			<MapScript/>
+			<Button>Art/Interface/Buttons/missions/ClaimTerritory.dds</Button>
 		</MapInfo>
 		<MapInfo>
 			<!-- Cislunar map -->
@@ -45,6 +47,7 @@
 			<bStartRevealed>1</bStartRevealed>
 			<InitialWBMap>\Mods\Caveman2Cosmos\PrivateMaps\Multimaps\MM_01_CISLUNAR.CivBeyondSwordWBSave</InitialWBMap>
 			<MapScript/>
+			<Button>Art/Interface/Buttons/missions/ClaimTerritory.dds</Button>
 		</MapInfo>
 		<MapInfo>
 			<!-- Map of the Moon -->
@@ -58,6 +61,7 @@
 			<bStartRevealed>1</bStartRevealed>
 			<InitialWBMap>\Mods\Caveman2Cosmos\PrivateMaps\Multimaps\MM_02_MOON.CivBeyondSwordWBSave</InitialWBMap>
 			<MapScript/>
+			<Button>Art/Interface/Buttons/missions/moon.dds</Button>
 		</MapInfo>
 		<MapInfo>
 			<!-- Map of the Mars -->
@@ -71,6 +75,7 @@
 			<bStartRevealed>1</bStartRevealed>
 			<InitialWBMap>\Mods\Caveman2Cosmos\PrivateMaps\Multimaps\MM_03_MARS.CivBeyondSwordWBSave</InitialWBMap>
 			<MapScript/>
+			<Button>Art/Interface/Buttons/missions/mars.dds</Button>
 		</MapInfo>
 		<MapInfo>
 			<!-- Map of the Venus -->
@@ -84,6 +89,7 @@
 			<bStartRevealed>1</bStartRevealed>
 			<InitialWBMap>\Mods\Caveman2Cosmos\PrivateMaps\Multimaps\MM_04_VENUS.CivBeyondSwordWBSave</InitialWBMap>
 			<MapScript/>
+			<Button>Art/Interface/Buttons/missions/venus.dds</Button>
 		</MapInfo>
 		<MapInfo>
 			<!-- Map of Inner Solar System -->
@@ -97,6 +103,7 @@
 			<bStartRevealed>1</bStartRevealed>
 			<InitialWBMap>\Mods\Caveman2Cosmos\PrivateMaps\Multimaps\MM_05_INNNER_SOLAR_SYSTEM.CivBeyondSwordWBSave</InitialWBMap>
 			<MapScript/>
+			<Button>Art/Interface/Buttons/missions/inner_solar_system.dds</Button>
 		</MapInfo>
 		<MapInfo>
 			<!-- Map of Outer Solar System -->
@@ -110,6 +117,7 @@
 			<bStartRevealed>1</bStartRevealed>
 			<InitialWBMap>\Mods\Caveman2Cosmos\PrivateMaps\Multimaps\MM_06_OUTER_SOLAR_SYSTEM.CivBeyondSwordWBSave</InitialWBMap>
 			<MapScript/>
+			<Button>Art/Interface/Buttons/missions/outer_solar_system.dds</Button>
 		</MapInfo>
 		<MapInfo>
 			<!-- Map of Saturn moon, Titan -->
@@ -123,6 +131,7 @@
 			<bStartRevealed>1</bStartRevealed>
 			<InitialWBMap>\Mods\Caveman2Cosmos\PrivateMaps\Multimaps\MM_07_TITAN.CivBeyondSwordWBSave</InitialWBMap>
 			<MapScript/>
+			<Button>Art/Interface/Buttons/missions/titan.dds</Button>
 		</MapInfo>
 		<MapInfo>
 			<!-- Map of Kuiper Belt -->
@@ -136,6 +145,7 @@
 			<bStartRevealed>1</bStartRevealed>
 			<InitialWBMap>\Mods\Caveman2Cosmos\PrivateMaps\Multimaps\MM_08_KUIPER.CivBeyondSwordWBSave</InitialWBMap>
 			<MapScript/>
+			<Button>Art/Interface/Buttons/missions/kuiper_belt.dds</Button>
 		</MapInfo>
 		<MapInfo>
 			<!-- Map of Nearby Stars -->
@@ -149,6 +159,7 @@
 			<bStartRevealed>1</bStartRevealed>
 			<InitialWBMap>\Mods\Caveman2Cosmos\PrivateMaps\Multimaps\MM_09_NEARBY_STARS.CivBeyondSwordWBSave</InitialWBMap>
 			<MapScript/>
+			<Button>Art/Interface/Buttons/missions/ClaimTerritory.dds</Button>
 		</MapInfo>
 		<MapInfo>
 			<!-- Map of Orion Arm -->
@@ -162,6 +173,7 @@
 			<bStartRevealed>1</bStartRevealed>
 			<InitialWBMap>\Mods\Caveman2Cosmos\PrivateMaps\Multimaps\MM_10_ORION_ARM.CivBeyondSwordWBSave</InitialWBMap>
 			<MapScript/>
+			<Button>Art/Interface/Buttons/missions/ClaimTerritory.dds</Button>
 		</MapInfo>
 		<MapInfo>
 			<!-- Map of Milky Way -->
@@ -175,6 +187,7 @@
 			<bStartRevealed>1</bStartRevealed>
 			<InitialWBMap>\Mods\Caveman2Cosmos\PrivateMaps\Multimaps\MM_11_MILKY_WAY.CivBeyondSwordWBSave</InitialWBMap>
 			<MapScript/>
+			<Button>Art/Interface/Buttons/missions/milky_way.dds</Button>
 		</MapInfo>
 		<MapInfo>
 			<!-- Map of Local Group -->
@@ -188,6 +201,7 @@
 			<bStartRevealed>1</bStartRevealed>
 			<InitialWBMap>\Mods\Caveman2Cosmos\PrivateMaps\Multimaps\MM_12_LOCAL_GROUP.CivBeyondSwordWBSave</InitialWBMap>
 			<MapScript/>
+			<Button>Art/Interface/Buttons/missions/ClaimTerritory.dds</Button>
 		</MapInfo>
 		<MapInfo>
 			<!-- Map of Virgo Supercluster -->
@@ -201,6 +215,7 @@
 			<bStartRevealed>1</bStartRevealed>
 			<InitialWBMap>\Mods\Caveman2Cosmos\PrivateMaps\Multimaps\MM_13_VIRGO_SUPERCLUSTER.CivBeyondSwordWBSave</InitialWBMap>
 			<MapScript/>
+			<Button>Art/Interface/Buttons/missions/ClaimTerritory.dds</Button>
 		</MapInfo>
 		<MapInfo>
 			<!-- Map of Universe -->
@@ -214,6 +229,7 @@
 			<bStartRevealed>1</bStartRevealed>
 			<InitialWBMap>\Mods\Caveman2Cosmos\PrivateMaps\Multimaps\MM_14_UNIVERSE.CivBeyondSwordWBSave</InitialWBMap>
 			<MapScript/>
+			<Button>Art/Interface/Buttons/missions/ClaimTerritory.dds</Button>
 		</MapInfo>
 		<MapInfo>
 			<!-- Map of Distant Cosmos -->
@@ -227,6 +243,7 @@
 			<bStartRevealed>1</bStartRevealed>
 			<InitialWBMap>\Mods\Caveman2Cosmos\PrivateMaps\Multimaps\MM_15_DISTANT_COSMOS.CivBeyondSwordWBSave</InitialWBMap>
 			<MapScript/>
+			<Button>Art/Interface/Buttons/missions/ClaimTerritory.dds</Button>
 		</MapInfo>
 	</MapInfos>
 </Civ4MapInfos>
