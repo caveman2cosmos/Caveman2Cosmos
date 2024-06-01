@@ -27,6 +27,8 @@ public:
 	CyMap* getCyMap() const;
 	void switchMap(MapTypes eMap);
 	CyMap* getMapByIndex(MapTypes eMap) const;
+	python::list getMaps() const;
+	int getNumMapsInitialized() const;
 	CyPlayer* getCyPlayer(PlayerTypes ePlayer) const;
 	CyPlayer* getCyActivePlayer() const;
 	CvRandom& getCyASyncRand() const;

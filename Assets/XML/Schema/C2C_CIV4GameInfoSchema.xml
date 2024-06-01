@@ -181,6 +181,7 @@
 		<element type="bStartRevealed"/>
 		<element type="InitialWBMap"/>
 		<element type="MapScript"/>
+		<element type="Button" minOccurs="0"/>
 	</ElementType>
 	<ElementType name="MapInfos" content="eltOnly">
 		<element type="MapInfo" minOccurs="0"/>

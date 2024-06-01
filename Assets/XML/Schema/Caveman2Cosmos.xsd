@@ -683,6 +683,7 @@
         <xs:element ref="bStartRevealed"/>
         <xs:element ref="InitialWBMap"/>
         <xs:element ref="MapScript"/>
+        <xs:element ref="Button"/>
       </xs:sequence>
     </xs:complexType>
   </xs:element>
