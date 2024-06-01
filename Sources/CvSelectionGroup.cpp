@@ -395,19 +395,27 @@ void CvSelectionGroup::updateTimers()
 		{
 			updateMission();
 		}
-		else if (bCombatFinished && IsSelected())
+		else if (bCombatFinished)
 		{
-			if (canAnyMove())
+			if (gDLL->getInterfaceIFace()->isCombatFocus())
 			{
-				foreach_(CvUnit* unitX, units())
+				gDLL->getInterfaceIFace()->releaseLockedCamera();
+				gDLL->getInterfaceIFace()->setCombatFocus(false);
+			}
+			if (IsSelected())
+			{
+				if (canAnyMove())
 				{
-					if (unitX->IsSelected() && !unitX->canMove())
+					foreach_(CvUnit* unitX, units())
 					{
-						gDLL->getInterfaceIFace()->removeFromSelectionList(unitX);
+						if (unitX->IsSelected() && !unitX->canMove())
+						{
+							gDLL->getInterfaceIFace()->removeFromSelectionList(unitX);
+						}
 					}
 				}
+				else GC.getGame().updateSelectionListInternal();
 			}
-			else GC.getGame().updateSelectionListInternal();
 		}
 	}
 	doDelayedDeath();
@@ -1968,7 +1976,7 @@ bool CvSelectionGroup::continueMission(int iSteps)
 
 	if ((missionNode->m_data.iPushTurn == GC.getGame().getGameTurn() || (missionNode->m_data.iFlags & MOVE_THROUGH_ENEMY))
 	&& missionNode->m_data.eMissionType == MISSION_MOVE_TO
-	&& canAllMove() && canAttackNow())
+	&& canAllMove())
 	{
 		bool bFailedAlreadyFighting;
 		if (groupAttack(missionNode->m_data.iData1, missionNode->m_data.iData2, missionNode->m_data.iFlags, bFailedAlreadyFighting))
@@ -1978,6 +1986,7 @@ bool CvSelectionGroup::continueMission(int iSteps)
 		}
 		missionNode = headMissionQueueNode();
 		FAssert(getHeadUnit());
+		FAssert(getNumUnits() > 0);
 		OutputDebugString(CvString::format("%S continueMission %d after attack...\n", getHeadUnit() ? getHeadUnit()->getDescription().c_str() : L"Empty group", missionNode == NULL ? -1 : missionNode->m_data.eMissionType).c_str());
 
 		// extra crash protection, should never happen (but a previous bug in groupAttack was causing a NULL here)
@@ -3542,8 +3551,7 @@ bool CvSelectionGroup::groupAttack(int iX, int iY, int iFlags, bool& bFailedAlre
 
 	bool bAffixFirstAttacker = false;
 
-	if (!pDestPlot->isCity(false)
-	&& !pDestPlot->hasDefender(false, NO_PLAYER, getOwner(), pBestAttackUnit, true, false, false, true))
+	if (!pDestPlot->hasDefender(false, NO_PLAYER, getOwner(), pBestAttackUnit, true, false, false, true))
 	{
 		// Reveals the unit if true
 		if (pDestPlot->hasStealthDefender(pBestAttackUnit, true))
@@ -3565,7 +3573,6 @@ bool CvSelectionGroup::groupAttack(int iX, int iY, int iFlags, bool& bFailedAlre
 
 	std::set<int> alreadyAttacked;
 	bool bAttack = false;
-	bool bStealth = false;
 	bool bBombardExhausted = false;
 	bool bLoopStealthDefense = false;
 	bool bAffixFirstDefender = true;
@@ -3578,29 +3585,18 @@ bool CvSelectionGroup::groupAttack(int iX, int iY, int iFlags, bool& bFailedAlre
 
 		if (!bAffixFirstAttacker)
 		{
-			pBestAttackUnit = AI_getBestGroupAttacker(pDestPlot, false, iAttackOdds, bLoopStealthDefense, NULL, false, bStealth, false, alreadyAttacked);
+			pBestAttackUnit = AI_getBestGroupAttacker(pDestPlot, false, iAttackOdds, bLoopStealthDefense, NULL, false, bLoopStealthDefense, false, alreadyAttacked);
 
 			if (!pBestAttackUnit) break;
 		}
-		// Toffer - Human player expect units with blitz to only attack once in a stack attack
-		// if not the player has no control of the situation as e.g.
-		//	2 units are selected, if one of the units have 4 moves and blitz it might completly suicide
-		//	with 4 attacks against an enemy stack; AI would stop to reconsider depending on the outcome of each attack,
-		//	the human player would expect an even expenditure of movement points in the selected group for one attack command.
-		if (bStack && pBestAttackUnit->isBlitz())
-		{
-			FAssert(alreadyAttacked.find(pBestAttackUnit->getID()) == alreadyAttacked.end());
 
-			alreadyAttacked.insert(pBestAttackUnit->getID());
-		}
 		if (!bAffixFirstAttacker
-		&& !pDestPlot->isCity(false)
 		&& !pDestPlot->hasDefender(false, NO_PLAYER, getOwner(), pBestAttackUnit, true, false, false, true))
 		{
 			// Reveals the unit if true
 			if (pDestPlot->hasStealthDefender(pBestAttackUnit, true))
 			{
-				bStealth = true;
+				bLoopStealthDefense = true;
 			}
 		}
 		if (!bAffixFirstDefender)
@@ -3613,13 +3609,12 @@ bool CvSelectionGroup::groupAttack(int iX, int iY, int iFlags, bool& bFailedAlre
 		bAffixFirstAttacker = false;
 		bAffixFirstDefender = false;
 
-		if (iAttackOdds < 68 && !bHuman && !bStealth)
+		if (iAttackOdds < 68 && !bHuman && !bLoopStealthDefense)
 		{
 			if (bBombardExhausted)
 			{
 				CvUnit* pBestSacrifice = AI_getBestGroupSacrifice(pDestPlot, false, bHuman);
-				if (pBestSacrifice
-				&& pBestSacrifice->canEnterPlot(pDestPlot, MoveCheck::Attack | (bStealthDefense ? MoveCheck::Suprise : MoveCheck::None)))
+				if (pBestSacrifice && pBestSacrifice->canEnterPlot(pDestPlot, MoveCheck::Attack))
 				{
 					pBestAttackUnit = pBestSacrifice;
 				}
@@ -3641,7 +3636,16 @@ bool CvSelectionGroup::groupAttack(int iX, int iY, int iFlags, bool& bFailedAlre
 				continue;
 			}
 		}
-
+		// Toffer - Human player expect units with blitz to only attack once in a stack attack
+		// if not the player has no control of the situation as e.g.
+		//	2 units are selected, if one of the units have 4 moves and blitz it might completly suicide
+		//	with 4 attacks against an enemy stack; AI would stop to reconsider depending on the outcome of each attack,
+		//	the human player would expect an even expenditure of movement points in the selected group for one attack command.
+		if (bHuman || !pBestAttackUnit->isBlitz())
+		{
+			FAssert(alreadyAttacked.find(pBestAttackUnit->getID()) == alreadyAttacked.end());
+			alreadyAttacked.insert(pBestAttackUnit->getID());
+		}
 		bAttack = true;
 
 		if (getNumUnits() < 2 || (bHuman && !bStack))

@@ -5157,7 +5157,7 @@ bool CvPlot::isVisibleEnemyDefender(const CvUnit* pUnit) const
 {
 	PROFILE_FUNC();
 
-	return (plotCheck(PUF_canDefendEnemy, pUnit->getOwner(), pUnit->isAlwaysHostile(this), NULL, NO_PLAYER, NO_TEAM, PUF_isVisible, pUnit->getOwner()) != NULL);
+	return isVisible(pUnit->getTeam(), false) && hasDefender(false, NO_PLAYER, pUnit->getOwner(), pUnit, true, false, false, true);
 }
 
 
@@ -5329,40 +5329,26 @@ bool CvPlot::canHaveFeature(FeatureTypes eFeature, bool bOverExistingFeature) co
 	{
 		return true;
 	}
-	if (!bOverExistingFeature && getFeatureType() != NO_FEATURE)
+	if (!bOverExistingFeature
+	&& getFeatureType() != NO_FEATURE
+	|| getImprovementType() != NO_IMPROVEMENT
+	&& !GC.getImprovementInfo(getImprovementType()).getFeatureMakesValid(eFeature)
+	|| isPeak())
 	{
 		return false;
 	}
-	if (getImprovementType() != NO_IMPROVEMENT && !GC.getImprovementInfo(getImprovementType()).getFeatureMakesValid(eFeature))
-	{
-		return false;
-	}
-	if (isCity() || isPeak())
-	{
-		return false;
-	}
-
 	const CvFeatureInfo& feature = GC.getFeatureInfo(eFeature);
 
-	if (!feature.isTerrain(getTerrainType()))
-	{
-		return false;
-	}
-	if (feature.isNoBonus() && getBonusType() != NO_BONUS
-	||  feature.isNoCoast() && isCoastalLand()
-	||  feature.isNoRiver() && isRiver())
-	{
-		return false;
-	}
-	if (feature.isRequiresFlatlands() && isHills())
-	{
-		return false;
-	}
-	if (feature.isNoAdjacent() && algo::any_of(adjacent(), CvPlot::fn::getFeatureType() == eFeature))
-	{
-		return false;
-	}
-	if (feature.isRequiresRiver() && !isRiver())
+	if (feature.isNoCity() && isCity()
+	|| !feature.isTerrain(getTerrainType())
+	||  feature.isNoBonus() && getBonusType() != NO_BONUS
+	||  feature.isRequiresFlatlands() && isHills()
+	||  feature.isNoCoast() && isCoastal()
+	||  feature.isCoastalOnly() && !isCoastal()
+	||  feature.isNoRiver() && isRiver()
+	||  feature.isRequiresRiver() && !isRiver()
+	||  feature.isNoAdjacent()
+	&& algo::any_of(adjacent(), CvPlot::fn::getFeatureType() == eFeature))
 	{
 		return false;
 	}

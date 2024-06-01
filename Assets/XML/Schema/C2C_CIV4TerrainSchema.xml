@@ -282,6 +282,7 @@
 	<ElementType name="bNoAdjacent" content="textOnly" dt:type="boolean"/>
 	<ElementType name="bRequiresFlatlands" content="textOnly" dt:type="boolean"/>
 	<ElementType name="bRequiresRiver" content="textOnly" dt:type="boolean"/>
+	<ElementType name="bCoastalOnly" content="textOnly" dt:type="boolean"/>
 	<ElementType name="bAddsFreshWater" content="textOnly" dt:type="boolean"/>
 	<ElementType name="bNoCity" content="textOnly" dt:type="boolean"/>
 	<ElementType name="bNoImprovement" content="textOnly" dt:type="boolean"/>
@@ -339,6 +340,7 @@
 		<element type="bNoAdjacent" minOccurs="0"/>
 		<element type="bRequiresFlatlands" minOccurs="0"/>
 		<element type="bRequiresRiver" minOccurs="0"/>
+		<element type="bCoastalOnly" minOccurs="0"/>
 		<element type="bAddsFreshWater" minOccurs="0"/>
 		<element type="bImpassable" minOccurs="0"/>
 		<element type="bNoCity" minOccurs="0"/>

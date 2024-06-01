@@ -25,6 +25,7 @@ void CyMapPythonInterface()
 		.def("getViewportXFromMapX", &CyMap::getViewportXFromMapX, "int (int iX)")
 		.def("getViewportYFromMapY", &CyMap::getViewportYFromMapY, "int (int iY)")
 		.def("isInViewport", &CyMap::isInViewport, "bool (int iX, int iY)")
+		.def("setViewportActionState", &CyMap::setViewportActionState)
 		.def("isMidSwitch", &CyMap::isMidSwitch)
 
 		.def("closeAdvisor", &CyMap::closeAdvisor, "void (int advisorWidth, int iMinimapLeft, int iMinimapRight, int iMinimapTop, int iMinimapBottom)")
@@ -101,5 +102,9 @@ void CyMapPythonInterface()
 
 		.def("moveUnitToMap", &CyMap::moveUnitToMap)
 		.def("setClimateZone", &CyMap::setClimateZone, "void (int y, ClimateZoneType eClimate)")
+	;
+
+	python::enum_<ViewportDeferredActionState>("ViewportDeferredActionState")
+		.value("VIEWPORT_ACTION_STATE_AFTER_SWITCH", VIEWPORT_ACTION_STATE_AFTER_SWITCH)
 	;
 }

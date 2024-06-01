@@ -1485,8 +1485,6 @@ public:
 	bool isDelayedDeath() const;
 	bool doDelayedDeath();
 
-	bool isCombatFocus() const;
-
 	bool isBlockading() const;
 	void setBlockading(bool bNewValue);
 	void collectBlockadeGold();
@@ -1503,7 +1501,7 @@ public:
 
 	void setLeaderUnitType(UnitTypes leaderUnitType);
 
-	void setCombatUnit(CvUnit* pUnit, bool bAttacking = false, bool bStealthAttack = false, bool bStealthDefense = false);
+	void setCombatUnit(CvUnit* pUnit, bool bAttacking = false, bool bQuick = true, bool bStealthAttack = false, bool bStealthDefense = false);
 	bool showSeigeTower(const CvUnit* pDefender) const; // K-Mod
 
 	CvUnit* getTransportUnit() const;
@@ -1999,7 +1997,6 @@ protected:
 	bool m_bMadeInterception;
 	bool m_bPromotionReady;
 	bool m_bDeathDelay;
-	bool m_bCombatFocus;
 	bool m_bInfoBarDirty;
 	bool m_bBlockading;
 	bool m_bAirCombat;

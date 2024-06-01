@@ -922,6 +922,13 @@ class CvMainInterface:
 		screen.setStyle(btn, "Button_HUDSmall_Style")
 		screen.hide(btn)
 
+		btn = "ParallelMapsBtn"
+		artPath = CyArtFileMgr().getInterfaceArtInfo("BUG_WORLDWONDER_OFF").getPath()
+		x += dx
+		screen.setImageButton(btn, artPath, x, y, iSize, iSize, eWidGen, -1, -1)
+		screen.setStyle(btn, "Button_HUDSmall_Style")
+		screen.hide(btn)
+
 		btn = "DebugBtn0"
 		artPath = CyArtFileMgr().getInterfaceArtInfo("INTERFACE_DEBUG_SCREEN_BUTTON").getPath()
 		x += dx
@@ -1605,6 +1612,7 @@ class CvMainInterface:
 				screen.hide("FoVSliderText")
 				screen.hide("FoVSlider")
 				screen.hide("BuildListBtn0")
+				screen.hide("ParallelMapsBtn")
 			else:
 				screen.show("InterfaceTopLeft")
 				screen.show("InterfaceTopCenter")
@@ -1633,6 +1641,8 @@ class CvMainInterface:
 					screen.hide("FoVSliderText")
 					screen.hide("FoVSlider")
 				screen.show("BuildListBtn0")
+				if GC.getNumMapsInitialized() > 1:
+					screen.show("ParallelMapsBtn")
 
 		elif IFT == InterfaceVisibility.INTERFACE_HIDE:
 			screen.moveItem("EndTurnText", 0, self.yRes - 128, 0)
@@ -1667,6 +1677,7 @@ class CvMainInterface:
 			screen.hide("FoVSliderText")
 			screen.hide("FoVSlider")
 			screen.hide("BuildListBtn0")
+			screen.hide("ParallelMapsBtn")
 
 		elif IFT in (InterfaceVisibility.INTERFACE_HIDE_ALL, InterfaceVisibility.INTERFACE_MINIMAP_ONLY):
 			screen.moveItem("EndTurnText", 0, self.yRes - 128, 0)
@@ -1716,6 +1727,7 @@ class CvMainInterface:
 			screen.hide("FoVSliderText")
 			screen.hide("FoVSlider")
 			screen.hide("BuildListBtn0")
+			screen.hide("ParallelMapsBtn")
 			screen.hide("ResearchBar")
 			screen.hide("ResearchBarDC")
 			screen.hide("WID|TECH|ProgBar0")
@@ -1760,6 +1772,7 @@ class CvMainInterface:
 			screen.hide("OptionsBtnBUG0")
 			screen.hide("DebugBtn0")
 			screen.hide("BuildListBtn0")
+			screen.hide("ParallelMapsBtn")
 			if MainOpt.isShowFieldOfView():
 				screen.show("FoVSliderText")
 				screen.show("FoVSlider")
@@ -1775,6 +1788,9 @@ class CvMainInterface:
 			screen.hide("GreatPersonBar1")
 			screen.hide("GreatGeneralBar")
 			screen.hide("GreatGeneralBarText")
+
+	def showParallelMapsScreenButton(self):
+		CyGInterfaceScreen("MainInterface", CvScreenEnums.MAIN_INTERFACE).show("ParallelMapsBtn")
 
 	def cleanPlotList(self, screen):
 		self.hidePlotList(screen)
@@ -5658,6 +5674,9 @@ class CvMainInterface:
 			elif NAME == "BuildListBtn":
 				self.updateTooltip(screen, TRNSLTR.getText("TXT_KEY_MISC_BUILD_LIST_SCREEN_HOVER", ()))
 
+			elif NAME == "ParallelMapsBtn":
+				self.updateTooltip(screen, TRNSLTR.getText("TXT_KEY_PARALLEL_MAPS_SCREEN_HOVER", ()))
+
 			elif NAME == "EraIndicator":
 				self.updateTooltip(screen, GC.getEraInfo(self.CyPlayer.getCurrentEra()).getDescription())
 
@@ -6020,6 +6039,9 @@ class CvMainInterface:
 
 			elif NAME == "BuildListBtn":
 				UP.showBuildListScreen()
+
+			elif NAME == "ParallelMapsBtn":
+				UP.showParallelMapsScreen()
 
 			elif NAME == "DebugBtn":
 				UP.showDebugScreen()

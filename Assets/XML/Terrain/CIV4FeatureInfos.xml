@@ -1892,6 +1892,28 @@
 			<iDefense>25</iDefense>
 			<iPopDestroys>-1</iPopDestroys>
 			<bNoCity>1</bNoCity>
+			<bCoastalOnly>1</bCoastalOnly>
+			<bRequiresFlatlands>1</bRequiresFlatlands>
+			<iAppearance>200</iAppearance>
+			<iGrowth>10</iGrowth>
+			<TerrainBooleans>
+				<TerrainBoolean>
+					<TerrainType>TERRAIN_MARSH</TerrainType>
+					<bTerrain>1</bTerrain>
+				</TerrainBoolean>
+				<TerrainBoolean>
+					<TerrainType>TERRAIN_LUSH</TerrainType>
+					<bTerrain>1</bTerrain>
+				</TerrainBoolean>
+				<TerrainBoolean>
+					<TerrainType>TERRAIN_MUDDY</TerrainType>
+					<bTerrain>1</bTerrain>
+				</TerrainBoolean>
+				<TerrainBoolean>
+					<TerrainType>TERRAIN_COAST_TROPICAL</TerrainType>
+					<bTerrain>1</bTerrain>
+				</TerrainBoolean>
+			</TerrainBooleans>
 			<FootstepSounds>
 				<FootstepSound>
 					<FootstepAudioType>FOOTSTEP_AUDIO_HUMAN</FootstepAudioType>
@@ -1910,48 +1932,20 @@
 					<FootstepAudioScript>AS3D_UN_ANIMAL_FOOT_LARGE_LOW_MUD</FootstepAudioScript>
 				</FootstepSound>
 				<FootstepSound>
-					<FootstepAudioType>FOOTSTEP_AUDIO_HORSE</FootstepAudioType>
-					<FootstepAudioScript/>
+					<FootstepAudioType>LOOPSTEP_OCEAN1</FootstepAudioType>
+					<FootstepAudioScript>AS3D_UN_OCEAN_LOOP1</FootstepAudioScript>
 				</FootstepSound>
 				<FootstepSound>
-					<FootstepAudioType>LOOPSTEP_WHEELS</FootstepAudioType>
-					<FootstepAudioScript/>
+					<FootstepAudioType>ENDSTEP_OCEAN1</FootstepAudioType>
+					<FootstepAudioScript>AS3D_UN_OCEAN_END1</FootstepAudioScript>
 				</FootstepSound>
 				<FootstepSound>
-					<FootstepAudioType>ENDSTEP_WHEELS</FootstepAudioType>
-					<FootstepAudioScript/>
+					<FootstepAudioType>LOOPSTEP_OCEAN2</FootstepAudioType>
+					<FootstepAudioScript>AS3D_UN_OCEAN_LOOP1</FootstepAudioScript>
 				</FootstepSound>
 				<FootstepSound>
-					<FootstepAudioType>LOOPSTEP_WHEELS_2</FootstepAudioType>
-					<FootstepAudioScript/>
-				</FootstepSound>
-				<FootstepSound>
-					<FootstepAudioType>ENDSTEP_WHEELS_2</FootstepAudioType>
-					<FootstepAudioScript/>
-				</FootstepSound>
-				<FootstepSound>
-					<FootstepAudioType>LOOPSTEP_TANK</FootstepAudioType>
-					<FootstepAudioScript/>
-				</FootstepSound>
-				<FootstepSound>
-					<FootstepAudioType>ENDSTEP_TANK</FootstepAudioType>
-					<FootstepAudioScript/>
-				</FootstepSound>
-				<FootstepSound>
-					<FootstepAudioType>LOOPSTEP_MOD_ARMOUR</FootstepAudioType>
-					<FootstepAudioScript/>
-				</FootstepSound>
-				<FootstepSound>
-					<FootstepAudioType>ENDSTEP_MOD_ARMOUR</FootstepAudioType>
-					<FootstepAudioScript/>
-				</FootstepSound>
-				<FootstepSound>
-					<FootstepAudioType>LOOPSTEP_ARTILLERY</FootstepAudioType>
-					<FootstepAudioScript/>
-				</FootstepSound>
-				<FootstepSound>
-					<FootstepAudioType>ENDSTEP_ARTILLERY</FootstepAudioType>
-					<FootstepAudioScript/>
+					<FootstepAudioType>ENDSTEP_OCEAN2</FootstepAudioType>
+					<FootstepAudioScript>AS3D_UN_OCEAN_END2</FootstepAudioScript>
 				</FootstepSound>
 			</FootstepSounds>
 			<WorldSoundscapeAudioScript>ASSS_OASIS_SELECT_AMB</WorldSoundscapeAudioScript>

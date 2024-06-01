@@ -28,6 +28,8 @@ void CvPythonGlobalContextLoader::CyGlobalContextPythonInterface1(boost::python:
 		.def("isDebugBuild", &CyGlobalContext::isDebugBuild, "() - returns true if running a debug build")
 		.def("getGame", &CyGlobalContext::getCyGame, boost::python::return_value_policy<boost::python::reference_existing_object>(), "() - CyGame()")
 		.def("getMap", &CyGlobalContext::getCyMap, boost::python::return_value_policy<boost::python::reference_existing_object>(), "() - CyMap()")
+		.def("getMaps", &CyGlobalContext::getMaps)
+		.def("getNumMapsInitialized", &CyGlobalContext::getNumMapsInitialized)
 		.def("getPlayer", &CyGlobalContext::getCyPlayer, boost::python::return_value_policy<boost::python::reference_existing_object>(), "(iPlayer) - iPlayer instance")
 		.def("getActivePlayer", &CyGlobalContext::getCyActivePlayer, boost::python::return_value_policy<boost::python::reference_existing_object>(), "() - active player instance")
 		.def("getASyncRand", &CyGlobalContext::getCyASyncRand, boost::python::return_value_policy<boost::python::reference_existing_object>(), "Non-Synch'd random #")
