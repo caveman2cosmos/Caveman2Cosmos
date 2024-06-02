@@ -82,6 +82,11 @@ bool CyMap::isInViewport(int iX, int iY)
 	return GC.getCurrentViewport()->isInViewport(iX, iY);
 }
 
+void CyMap::setViewportActionState(ViewportDeferredActionState newState)
+{
+	GC.getCurrentViewport()->setActionState(newState);
+}
+
 bool CyMap::isMidSwitch() const
 {
 	return CvMap::m_bSwitchInProgress;
@@ -452,4 +457,3 @@ void CyMap::setClimateZone(const int y, const ClimateZoneTypes eClimate)
 {
 	m_pMap->setClimateZone(y, eClimate);
 }
-

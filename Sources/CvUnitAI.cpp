@@ -2391,7 +2391,6 @@ void CvUnitAI::AI_workerMove()
 	{
 		return;
 	}
-
 	getGroup()->pushMission(MISSION_SKIP);
 }
 

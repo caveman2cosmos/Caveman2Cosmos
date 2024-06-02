@@ -1027,18 +1027,46 @@ void CvSelectionGroupAI::AI_setMissionAI(MissionAITypes eNewMissionAI, const CvP
 	}
 
 	// Worker city tracking
-	if (eNewMissionAI == NO_MISSIONAI)
 	{
-		// A worker is skipping turns somewhere,
-		//	likely in a city, but not necessarily the same city it is assigned to,
-		//	best to release it from its assigned city.
+		const CvPlot* plotX = newPlot ? newPlot : plot();
+		CvCity* cityX = plotX ? plotX->getWorkingCity() : NULL;
+
 		foreach_(CvUnit* unitX, units())
 		{
 			UnitCompWorker* workerComp = unitX->getWorkerComponent();
 			if (workerComp)
 			{
 				const int iAssignedCityID = workerComp->getAssignedCity();
-				if (iAssignedCityID != -1)
+
+				if (cityX && cityX->getOwner() == getOwner())
+				{
+					if (iAssignedCityID != cityX->getID())
+					{
+						if (iAssignedCityID != -1)
+						{
+							CvCity* city = GET_PLAYER(getOwner()).getCity(iAssignedCityID);
+							if (city)
+							{
+								if (gUnitLogLevel > 2)
+								{
+									logBBAI("    Worker (%d) at (%d,%d) detaching from mission for city %S", unitX->getID(), unitX->getX(), unitX->getY(), city->getName().GetCString());
+								}
+								city->setWorkerHave(unitX->getID(), false);
+							}
+							else
+							{
+								FErrorMsg("Worker assigned to a NULL city...")
+								workerComp->setCityAssignment(-1);
+							}
+						}
+						if (gUnitLogLevel > 2)
+						{
+							logBBAI("Worker (%d) at (%d,%d) attaching to mission for city %S\n", unitX->getID(), unitX->getX(), unitX->getY(), cityX->getName().GetCString());
+						}
+						cityX->setWorkerHave(unitX->getID(), true);
+					}
+				}
+				else if (iAssignedCityID != -1)
 				{
 					CvCity* city = GET_PLAYER(getOwner()).getCity(iAssignedCityID);
 					if (city)
@@ -1065,48 +1093,6 @@ void CvSelectionGroupAI::AI_setMissionAI(MissionAITypes eNewMissionAI, const CvP
 	{
 		m_iMissionAIX = newPlot->getX();
 		m_iMissionAIY = newPlot->getY();
-
-		// Worker city tracking
-		if (eNewMissionAI == MISSIONAI_BUILD)
-		{
-			CvCity* newCity = newPlot->getWorkingCity();
-			if (newCity && newCity->getOwner() == getOwner())
-			{
-				foreach_(CvUnit* unitX, units())
-				{
-					UnitCompWorker* workerComp = unitX->getWorkerComponent();
-					if (workerComp)
-					{
-						const int iAssignedCityID = workerComp->getAssignedCity();
-						if (iAssignedCityID != newCity->getID())
-						{
-							if (iAssignedCityID != -1)
-							{
-								CvCity* city = GET_PLAYER(getOwner()).getCity(iAssignedCityID);
-								if (city)
-								{
-									if (gUnitLogLevel > 2)
-									{
-										logBBAI("    Worker (%d) at (%d,%d) detaching from mission for city %S", unitX->getID(), unitX->getX(), unitX->getY(), city->getName().GetCString());
-									}
-									city->setWorkerHave(unitX->getID(), false);
-								}
-								else
-								{
-									FErrorMsg("Worker assigned to a NULL city...")
-									workerComp->setCityAssignment(-1);
-								}
-							}
-							if (gUnitLogLevel > 2)
-							{
-								logBBAI("Worker (%d) at (%d,%d) attaching to mission for city %S\n", unitX->getID(), unitX->getX(), unitX->getY(), newCity->getName().GetCString());
-							}
-							newCity->setWorkerHave(unitX->getID(), true);
-						}
-					}
-				}
-			}
-		}
 
 		if (eNewMissionAI != NO_MISSIONAI)
 		{
