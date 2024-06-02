@@ -912,7 +912,7 @@ void CvCityAI::AI_chooseProduction()
 	// Sea worker need independent of whether water area is militarily relevant
 	int iNeededSeaWorkers = (bMaybeWaterArea) ? AI_neededSeaWorkers() : 0;
 	const int iWorkersNeeded = AI_getWorkersNeeded() - getNumWorkers();
-	int iExistingSeaWorkers = (waterArea(true) != NULL) ? player.AI_totalWaterAreaUnitAIs(waterArea(true), UNITAI_WORKER_SEA) : 0;
+	int iExistingSeaWorkers = waterArea(true) ? player.AI_totalWaterAreaUnitAIs(waterArea(true), UNITAI_WORKER_SEA) : 0;
 
 	int iAreaBestFoundValue;
 	int iNumAreaCitySites = player.AI_getNumAreaCitySites(getArea(), iAreaBestFoundValue);
@@ -1559,9 +1559,9 @@ void CvCityAI::AI_chooseProduction()
 	bool bChooseWorker = false;
 	if (!bInhibitUnits && !(bDefenseWar && iWarSuccessRatio < -50))
 	{
-		if (iWorkersInArea == 0 || iDangerValue < 3) // Not a single worker on my landmass and low danger.
+		if (iWorkersInArea == 0 || iDangerValue < 3) // Not a single worker on my landmass or low danger.
 		{
-			if (iNeededWorkersInArea > 0 && iProductionRank <= (player.getNumCities() + 1) * 2 / 3)
+			if (iNeededWorkersInArea > iWorkersInArea && iProductionRank <= (player.getNumCities() + 1) * 2 / 3)
 			{
 				if (AI_chooseUnit("no workers", UNITAI_WORKER, -1, -1, CITY_NO_WORKERS_WORKER_PRIORITY))
 				{
@@ -11234,12 +11234,12 @@ void CvCityAI::AI_updateWorkersNeededHere()
 
 	for (int iI = SKIP_CITY_HOME_PLOT; iI < NUM_CITY_PLOTS; iI++)
 	{
-		const CvPlot* pLoopPlot = getCityIndexPlot(iI);
-		if (NULL != pLoopPlot && pLoopPlot->getWorkingCity() == this && pLoopPlot->getArea() == getArea())
+		const CvPlot* plotX = getCityIndexPlot(iI);
+		if (plotX && plotX->getWorkingCity() == this && plotX->getArea() == getArea())
 		{
-			if (pLoopPlot->getImprovementType() == NO_IMPROVEMENT)
+			if (plotX->getImprovementType() == NO_IMPROVEMENT)
 			{
-				if (pLoopPlot->isBeingWorked())
+				if (plotX->isBeingWorked())
 				{
 					(
 						AI_getBestBuild(iI) != NO_BUILD
@@ -11254,17 +11254,17 @@ void CvCityAI::AI_updateWorkersNeededHere()
 					iUnimprovedUnworkedPlotCount++;
 				}
 			}
-			else if (!pLoopPlot->isBeingWorked())
+			else if (!plotX->isBeingWorked())
 			{
 				iImprovedUnworkedPlotCount++;
 			}
 
 			for (int iJ = 0; iJ < NUM_YIELD_TYPES; iJ++)
 			{
-				aiYields[iJ] = pLoopPlot->getYield((YieldTypes)iJ);
+				aiYields[iJ] = plotX->getYield((YieldTypes)iJ);
 			}
 
-			if (pLoopPlot->isBeingWorked())
+			if (plotX->isBeingWorked())
 			{
 				iWorstWorkedPlotValue = std::min(iWorstWorkedPlotValue, AI_yieldValue(aiYields, NULL, false, false, false, false, true, true));
 			}
@@ -11293,8 +11293,10 @@ void CvCityAI::AI_updateWorkersNeededHere()
 		{
 			const CvPlot* plotX = getCityIndexPlot(iI);
 
-			if (NULL != plotX && plotX->getWorkingCity() == this
-				&& plotX->getArea() == getArea() && AI_getBestBuild(iI) != NO_BUILD)
+			if (plotX
+			&& plotX->getWorkingCity() == this
+			&& plotX->getArea() == getArea()
+			&& AI_getBestBuild(iI) != NO_BUILD)
 			{
 				for (int iJ = 0; iJ < NUM_YIELD_TYPES; iJ++)
 				{
@@ -11365,7 +11367,7 @@ void CvCityAI::AI_updateWorkersNeededHere()
 
 	iWorkersNeeded = std::max((iUnimprovedWorkedPlotCount + 1) / 2, iWorkersNeeded);
 
-	m_iWorkersNeeded = std::max(0, iWorkersNeeded - plot()->plotCount(PUF_isUnitAIType, UNITAI_WORKER, -1, NULL, getOwner(), getTeam(), PUF_isNoMissionAI, -1, -1));
+	m_iWorkersNeeded = std::max(0, iWorkersNeeded - area()->getNumTrainAIUnits(getOwner(), UNITAI_WORKER));
 
 	FASSERT_NOT_NEGATIVE(iWorkersNeeded);
 	if (gCityLogLevel > 2)

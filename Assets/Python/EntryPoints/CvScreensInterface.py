@@ -53,7 +53,10 @@ def reinitMainInterface():
 	mainInterface.interfaceScreen()
 
 def initMinimap():
-	CvMainInterface.g_mainInterface.initMinimap()
+	mainInterface.initMinimap()
+
+def showParallelMapsScreenButton():
+	mainInterface.showParallelMapsScreenButton()
 
 def numPlotListButtons(): return 0 # Called from exe
 
@@ -71,6 +74,10 @@ def showCivicsScreen():
 def showHeritageScreen():
 	if CyGame().getActivePlayer() != -1:
 		screenMap[HERITAGE_SCREEN].interfaceScreen()
+
+def showParallelMapsScreen():
+	if CyGame().getActivePlayer() != -1:
+		screenMap[PARALLEL_MAPS_SCREEN].interfaceScreen()
 
 def showReligionScreen():
 	if CyGame().getActivePlayer() != -1:
@@ -692,6 +699,7 @@ def lateInit():
 	import CvVictoryScreen
 	import CvCivicsScreen
 	import HeritageScreen
+	import ParallelMapsScreen
 	import CvInfoScreen
 	import CvDawnOfMan
 	import CvTopCivs
@@ -711,6 +719,7 @@ def lateInit():
 	screenMap[VICTORY_SCREEN]		= CvVictoryScreen.CvVictoryScreen(VICTORY_SCREEN)
 	screenMap[CIVICS_SCREEN]		= CvCivicsScreen.CvCivicsScreen(CIVICS_SCREEN)
 	screenMap[HERITAGE_SCREEN]		= HeritageScreen.HeritageScreen(HERITAGE_SCREEN)
+	screenMap[PARALLEL_MAPS_SCREEN]	= ParallelMapsScreen.ParallelMapsScreen(PARALLEL_MAPS_SCREEN)
 	screenMap[INFO_SCREEN]			= CvInfoScreen.CvInfoScreen(INFO_SCREEN)
 	screenMap[DAWN_OF_MAN]			= CvDawnOfMan.CvDawnOfMan()
 	screenMap[TOP_CIVS]				= CvTopCivs.CvTopCivs(TOP_CIVS)
