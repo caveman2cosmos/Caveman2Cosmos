@@ -9,6 +9,8 @@ public:
 	CombatData(CvUnit* attacker, CvUnit* defender, CvPlot* pPlot);
 	~CombatData();
 
+	void resolveCombat(CvBattleDefinition& kBattle);
+	void endCombat();
 
 private:
 	CvUnit* m_attacker;
@@ -16,6 +18,8 @@ private:
 	CvPlot* m_plot;
 	CvPlot* m_plotWithdrawal;
 
+	bool m_bSamePlot;
+	bool m_bQuick;
 	bool m_bCombatStarted;
 	bool m_bDefenderWithdrawn;
 	bool m_bAttackerPursued;
@@ -41,8 +45,6 @@ private:
 
 	int m_iAttacksCount;
 	int m_iTurnCount;
-
 };
-
 
 #endif

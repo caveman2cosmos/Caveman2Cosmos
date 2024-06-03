@@ -473,7 +473,6 @@ public:
 	void doTurn();
 
 	void startCombat(CvPlot* combatPlot, CvUnit* pDefender = NULL, bool bSamePlot = false, bool bStealth = false, bool bNoCache = false);
-	void endCombat(CvUnit* pDefender = NULL, bool bSamePlot = false);
 	void startAirStrike(CvPlot* pPlot);
 	void startAirCombat();
 	void endAirCombat();
@@ -1651,7 +1650,6 @@ protected:
 	int m_movementCharacteristicsHash;
 
 	PlayerTypes m_eNationality;
-	CombatResult m_combatResult;
 	int m_iSleepTimer;
 	int m_iZoneOfControlCount;
 
