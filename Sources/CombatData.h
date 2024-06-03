@@ -6,37 +6,41 @@
 class CombatData
 {
 public:
-	CombatData();
+	CombatData(CvUnit* attacker, CvUnit* defender, CvPlot* pPlot);
 	~CombatData();
 
 
 private:
-	bool bDefenderWithdrawn;
-	bool bAttackerPursued;
-	bool bDefenderPursued;
-	bool bAttackerPursuedSustain;
-	bool bDefenderPursuedSustain;
-	bool bAttackerRepelled;
-	bool bAttackerRefusedtoYield;
-	bool bDefenderRefusedtoYield;
-	bool bAttackerRefusedtoYieldSustain;
-	bool bDefenderRefusedtoYieldSustain;
-	bool bDefenderKnockedBack;
-	bool bAttackerStampedes;
-	bool bAttackerWithdraws;
-	bool bAttackerOnslaught;
-	bool bAttackerInjured;
-	bool bDefenderInjured;
-	bool bDeathMessaged;
-	bool bDefenderHitAttackerWithDistanceAttack;
-	bool bAttackerHitDefenderWithDistanceAttack;
-	bool bNeverMelee;
-	bool bStealthDefense;
+	CvUnit* m_attacker;
+	CvUnit* m_defender;
+	CvPlot* m_plot;
+	CvPlot* m_plotWithdrawal;
 
-	int iAttacksCount;
-	int iTurnCount;
+	bool m_bCombatStarted;
+	bool m_bDefenderWithdrawn;
+	bool m_bAttackerPursued;
+	bool m_bDefenderPursued;
+	bool m_bAttackerPursuedSustain;
+	bool m_bDefenderPursuedSustain;
+	bool m_bAttackerRepelled;
+	bool m_bAttackerRefusedtoYield;
+	bool m_bDefenderRefusedtoYield;
+	bool m_bAttackerRefusedtoYieldSustain;
+	bool m_bDefenderRefusedtoYieldSustain;
+	bool m_bDefenderKnockedBack;
+	bool m_bAttackerStampedes;
+	bool m_bAttackerWithdraws;
+	bool m_bAttackerOnslaught;
+	bool m_bAttackerInjured;
+	bool m_bDefenderInjured;
+	bool m_bDeathMessaged;
+	bool m_bDefenderHitAttackerWithDistanceAttack;
+	bool m_bAttackerHitDefenderWithDistanceAttack;
+	bool m_bNeverMelee;
+	bool m_bStealthDefense;
 
-	CvPlot* pPlot;
+	int m_iAttacksCount;
+	int m_iTurnCount;
 
 };
 

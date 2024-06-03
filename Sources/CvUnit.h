@@ -472,7 +472,7 @@ public:
 
 	void doTurn();
 
-	void startCombat(CvUnit* pDefender = NULL, bool bSamePlot = false, bool bStealth = false, bool bNoCache = false);
+	void startCombat(CvPlot* combatPlot, CvUnit* pDefender = NULL, bool bSamePlot = false, bool bStealth = false, bool bNoCache = false);
 	void endCombat(CvUnit* pDefender = NULL, bool bSamePlot = false);
 	void startAirStrike(CvPlot* pPlot);
 	void startAirCombat();
