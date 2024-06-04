@@ -5,11 +5,6 @@ import DebugUtils
 GC = CyGlobalContext()
 
 
-'''class ParallelMaps:
-
-	def __init__(self, pEventManager):
-		pEventManager.addEventHandler("kbdEvent", self.handleInput)'''
-
 def handleInput(argsList):
 	GAME = GC.getGame()
 	if not GAME.GetWorldBuilderMode():
