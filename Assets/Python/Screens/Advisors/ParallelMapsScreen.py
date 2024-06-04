@@ -144,7 +144,7 @@ class ParallelMapsScreen:
 		if iCode == NotifyCode.NOTIFY_CURSOR_MOVE_ON:
 			if BASE == "WID":
 				if TYPE == "MAP":
-					szTxt = GC.getMapInfo(ID).getDescription()
+					szTxt = GC.getMapInfo(ID).getDescription() + "\n" + GC.getMapInfo(ID).getHotKeyString()
 					self.tooltip.handle(screen, szTxt)
 
 		if iCode == NotifyCode.NOTIFY_CLICKED:
@@ -164,5 +164,5 @@ class ParallelMapsScreen:
 		screen.hideScreen()
 
 	def onClose(self):
-		del self.xRes, self.yRes, self.tooltip, self.H_EDGE_PANEL, self.H_EDGE_PANEL, self.H_EDGE_PANEL
+		del self.xRes, self.yRes, self.tooltip, self.H_EDGE_PANEL
 		CyMap().setViewportActionState(ViewportDeferredActionState.VIEWPORT_ACTION_STATE_AFTER_SWITCH)

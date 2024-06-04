@@ -167,6 +167,7 @@ public:
 	const wchar_t* getHotKeyDescriptionKey() const;
 	const wchar_t* getHotKeyAltDescriptionKey() const;
 	const wchar_t* getHotKeyString() const;
+	std::wstring pyGetHotKeyString() const { return getHotKeyString(); }
 
 	std::wstring getHotKeyDescription() const;
 	void setHotKeyDescription(const wchar_t* szHotKeyDescKey, const wchar_t* szHotKeyAltDescKey, const wchar_t* szHotKeyString);
@@ -4880,7 +4881,7 @@ private:
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 class CvMapInfo
-	: public CvInfoBase
+	: public CvHotkeyInfo
 	, private bst::noncopyable
 {
 public:

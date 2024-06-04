@@ -6,6 +6,9 @@
 			<!-- This is starting map -->
 			<Type>MAP_EARTH</Type>
 			<Description>TXT_KEY_MAP_EARTH</Description>
+			<Button>Art/Interface/Buttons/missions/ClaimTerritory.dds</Button>
+			<HotKey>KB_0</HotKey>
+			<bAltDown>1</bAltDown>
 			<!-- default grid size and wrapping is the same as the original map -->
 			<!-- You must enter grid size and wrap of InitialWBMap, if you aren't using mapscript -->
 			<iGridWidth>0</iGridWidth>
@@ -19,13 +22,17 @@
 			<!-- <MapScript>\Mods\Caveman2Cosmos\PrivateMaps\Multimaps\Test.py</MapScript> -->
 			<InitialWBMap/>
 			<MapScript/>
-			<Button>Art/Interface/Buttons/missions/ClaimTerritory.dds</Button>
 		</MapInfo>
 		<MapInfo>
 			<!-- Subterrain map -->
 			<!-- This is underground part of starting map -->
 			<Type>MAP_SUBTERRAIN</Type>
 			<Description>TXT_KEY_MAP_SUBTERRAIN</Description>
+			<Button>Art/Interface/Buttons/missions/ClaimTerritory.dds</Button>
+			<HotKey>KB_1</HotKey>
+			<bAltDown>1</bAltDown>
+			<bShiftDown>0</bShiftDown>
+			<bCtrlDown>0</bCtrlDown>
 			<iGridWidth>0</iGridWidth>
 			<iGridHeight>0</iGridHeight>
 			<bWrapX>0</bWrapX>
@@ -33,13 +40,17 @@
 			<bStartRevealed>0</bStartRevealed>
 			<InitialWBMap/>
 			<MapScript/>
-			<Button>Art/Interface/Buttons/missions/ClaimTerritory.dds</Button>
 		</MapInfo>
 		<MapInfo>
 			<!-- Cislunar map -->
 			<!-- Colonizable in Nanotech and later -->
 			<Type>MAP_CISLUNAR</Type>
 			<Description>TXT_KEY_MAP_CISLUNAR</Description>
+			<Button>Art/Interface/Buttons/missions/ClaimTerritory.dds</Button>
+			<HotKey>KB_2</HotKey>
+			<bAltDown>1</bAltDown>
+			<bShiftDown>0</bShiftDown>
+			<bCtrlDown>0</bCtrlDown>
 			<iGridWidth>48</iGridWidth>
 			<iGridHeight>32</iGridHeight>
 			<bWrapX>1</bWrapX>
@@ -47,13 +58,17 @@
 			<bStartRevealed>1</bStartRevealed>
 			<InitialWBMap>\Mods\Caveman2Cosmos\PrivateMaps\Multimaps\MM_01_CISLUNAR.CivBeyondSwordWBSave</InitialWBMap>
 			<MapScript/>
-			<Button>Art/Interface/Buttons/missions/ClaimTerritory.dds</Button>
 		</MapInfo>
 		<MapInfo>
 			<!-- Map of the Moon -->
 			<!-- Colonizable in Nanotech and later -->
 			<Type>MAP_MOON</Type>
 			<Description>TXT_KEY_MAP_MOON</Description>
+			<Button>Art/Interface/Buttons/missions/moon.dds</Button>
+			<HotKey>KB_3</HotKey>
+			<bAltDown>1</bAltDown>
+			<bShiftDown>0</bShiftDown>
+			<bCtrlDown>0</bCtrlDown>
 			<iGridWidth>72</iGridWidth>
 			<iGridHeight>48</iGridHeight>
 			<bWrapX>1</bWrapX>
@@ -61,13 +76,17 @@
 			<bStartRevealed>1</bStartRevealed>
 			<InitialWBMap>\Mods\Caveman2Cosmos\PrivateMaps\Multimaps\MM_02_MOON.CivBeyondSwordWBSave</InitialWBMap>
 			<MapScript/>
-			<Button>Art/Interface/Buttons/missions/moon.dds</Button>
 		</MapInfo>
 		<MapInfo>
 			<!-- Map of the Mars -->
 			<!-- Colonizable in Nanotech and later -->
 			<Type>MAP_MARS</Type>
 			<Description>TXT_KEY_MAP_MARS</Description>
+			<Button>Art/Interface/Buttons/missions/mars.dds</Button>
+			<HotKey>KB_4</HotKey>
+			<bAltDown>1</bAltDown>
+			<bShiftDown>0</bShiftDown>
+			<bCtrlDown>0</bCtrlDown>
 			<iGridWidth>72</iGridWidth>
 			<iGridHeight>48</iGridHeight>
 			<bWrapX>1</bWrapX>
@@ -75,13 +94,17 @@
 			<bStartRevealed>1</bStartRevealed>
 			<InitialWBMap>\Mods\Caveman2Cosmos\PrivateMaps\Multimaps\MM_03_MARS.CivBeyondSwordWBSave</InitialWBMap>
 			<MapScript/>
-			<Button>Art/Interface/Buttons/missions/mars.dds</Button>
 		</MapInfo>
 		<MapInfo>
 			<!-- Map of the Venus -->
 			<!-- Colonizable in Nanotech and later -->
 			<Type>MAP_VENUS</Type>
 			<Description>TXT_KEY_MAP_VENUS</Description>
+			<Button>Art/Interface/Buttons/missions/venus.dds</Button>
+			<HotKey>KB_5</HotKey>
+			<bAltDown>1</bAltDown>
+			<bShiftDown>0</bShiftDown>
+			<bCtrlDown>0</bCtrlDown>
 			<iGridWidth>48</iGridWidth>
 			<iGridHeight>32</iGridHeight>
 			<bWrapX>1</bWrapX>
@@ -89,13 +112,17 @@
 			<bStartRevealed>1</bStartRevealed>
 			<InitialWBMap>\Mods\Caveman2Cosmos\PrivateMaps\Multimaps\MM_04_VENUS.CivBeyondSwordWBSave</InitialWBMap>
 			<MapScript/>
-			<Button>Art/Interface/Buttons/missions/venus.dds</Button>
 		</MapInfo>
 		<MapInfo>
 			<!-- Map of Inner Solar System -->
 			<!-- Colonizable in Transhuman and later -->
 			<Type>MAP_INNER_SOLAR_SYSTEM</Type>
 			<Description>TXT_KEY_MAP_INNER_SOLAR_SYSTEM</Description>
+			<Button>Art/Interface/Buttons/missions/inner_solar_system.dds</Button>
+			<HotKey>KB_6</HotKey>
+			<bAltDown>1</bAltDown>
+			<bShiftDown>0</bShiftDown>
+			<bCtrlDown>0</bCtrlDown>
 			<iGridWidth>48</iGridWidth>
 			<iGridHeight>96</iGridHeight>
 			<bWrapX>1</bWrapX>
@@ -103,13 +130,17 @@
 			<bStartRevealed>1</bStartRevealed>
 			<InitialWBMap>\Mods\Caveman2Cosmos\PrivateMaps\Multimaps\MM_05_INNNER_SOLAR_SYSTEM.CivBeyondSwordWBSave</InitialWBMap>
 			<MapScript/>
-			<Button>Art/Interface/Buttons/missions/inner_solar_system.dds</Button>
 		</MapInfo>
 		<MapInfo>
 			<!-- Map of Outer Solar System -->
 			<!-- Colonizable in Transhuman and later -->
 			<Type>MAP_OUTER_SOLAR_SYSTEM</Type>
 			<Description>TXT_KEY_MAP_OUTER_SOLAR_SYSTEM</Description>
+			<Button>Art/Interface/Buttons/missions/outer_solar_system.dds</Button>
+			<HotKey>KB_7</HotKey>
+			<bAltDown>1</bAltDown>
+			<bShiftDown>0</bShiftDown>
+			<bCtrlDown>0</bCtrlDown>
 			<iGridWidth>48</iGridWidth>
 			<iGridHeight>96</iGridHeight>
 			<bWrapX>1</bWrapX>
@@ -117,13 +148,17 @@
 			<bStartRevealed>1</bStartRevealed>
 			<InitialWBMap>\Mods\Caveman2Cosmos\PrivateMaps\Multimaps\MM_06_OUTER_SOLAR_SYSTEM.CivBeyondSwordWBSave</InitialWBMap>
 			<MapScript/>
-			<Button>Art/Interface/Buttons/missions/outer_solar_system.dds</Button>
 		</MapInfo>
 		<MapInfo>
 			<!-- Map of Saturn moon, Titan -->
 			<!-- Colonizable in Transhuman and later -->
 			<Type>MAP_TITAN</Type>
 			<Description>TXT_KEY_MAP_TITAN</Description>
+			<Button>Art/Interface/Buttons/missions/titan.dds</Button>
+			<HotKey>KB_8</HotKey>
+			<bAltDown>1</bAltDown>
+			<bShiftDown>0</bShiftDown>
+			<bCtrlDown>0</bCtrlDown>
 			<iGridWidth>48</iGridWidth>
 			<iGridHeight>32</iGridHeight>
 			<bWrapX>1</bWrapX>
@@ -131,13 +166,17 @@
 			<bStartRevealed>1</bStartRevealed>
 			<InitialWBMap>\Mods\Caveman2Cosmos\PrivateMaps\Multimaps\MM_07_TITAN.CivBeyondSwordWBSave</InitialWBMap>
 			<MapScript/>
-			<Button>Art/Interface/Buttons/missions/titan.dds</Button>
 		</MapInfo>
 		<MapInfo>
 			<!-- Map of Kuiper Belt -->
 			<!-- Colonizable in Transhuman and later -->
 			<Type>MAP_TRANSNEPTUNIAN</Type>
 			<Description>TXT_KEY_MAP_TRANSNEPTUNIAN</Description>
+			<Button>Art/Interface/Buttons/missions/kuiper_belt.dds</Button>
+			<HotKey>KB_9</HotKey>
+			<bAltDown>1</bAltDown>
+			<bShiftDown>0</bShiftDown>
+			<bCtrlDown>0</bCtrlDown>
 			<iGridWidth>48</iGridWidth>
 			<iGridHeight>32</iGridHeight>
 			<bWrapX>1</bWrapX>
@@ -145,13 +184,17 @@
 			<bStartRevealed>1</bStartRevealed>
 			<InitialWBMap>\Mods\Caveman2Cosmos\PrivateMaps\Multimaps\MM_08_KUIPER.CivBeyondSwordWBSave</InitialWBMap>
 			<MapScript/>
-			<Button>Art/Interface/Buttons/missions/kuiper_belt.dds</Button>
 		</MapInfo>
 		<MapInfo>
 			<!-- Map of Nearby Stars -->
 			<!-- Colonizable in Galactic and later -->
 			<Type>MAP_NEARBY_STARS</Type>
 			<Description>TXT_KEY_MAP_NEARBY_STARS</Description>
+			<Button>Art/Interface/Buttons/missions/ClaimTerritory.dds</Button>
+			<HotKey>KB_1</HotKey>
+			<bAltDown>0</bAltDown>
+			<bShiftDown>0</bShiftDown>
+			<bCtrlDown>1</bCtrlDown>
 			<iGridWidth>72</iGridWidth>
 			<iGridHeight>48</iGridHeight>
 			<bWrapX>1</bWrapX>
@@ -159,13 +202,17 @@
 			<bStartRevealed>1</bStartRevealed>
 			<InitialWBMap>\Mods\Caveman2Cosmos\PrivateMaps\Multimaps\MM_09_NEARBY_STARS.CivBeyondSwordWBSave</InitialWBMap>
 			<MapScript/>
-			<Button>Art/Interface/Buttons/missions/ClaimTerritory.dds</Button>
 		</MapInfo>
 		<MapInfo>
 			<!-- Map of Orion Arm -->
 			<!-- Colonizable in Galactic and later -->
 			<Type>MAP_ORION_ARM</Type>
 			<Description>TXT_KEY_MAP_ORION_ARM</Description>
+			<Button>Art/Interface/Buttons/missions/ClaimTerritory.dds</Button>
+			<HotKey>KB_2</HotKey>
+			<bAltDown>0</bAltDown>
+			<bShiftDown>0</bShiftDown>
+			<bCtrlDown>1</bCtrlDown>
 			<iGridWidth>48</iGridWidth>
 			<iGridHeight>32</iGridHeight>
 			<bWrapX>1</bWrapX>
@@ -173,13 +220,17 @@
 			<bStartRevealed>1</bStartRevealed>
 			<InitialWBMap>\Mods\Caveman2Cosmos\PrivateMaps\Multimaps\MM_10_ORION_ARM.CivBeyondSwordWBSave</InitialWBMap>
 			<MapScript/>
-			<Button>Art/Interface/Buttons/missions/ClaimTerritory.dds</Button>
 		</MapInfo>
 		<MapInfo>
 			<!-- Map of Milky Way -->
 			<!-- Colonizable in Galactic and later -->
 			<Type>MAP_MILKY_WAY</Type>
 			<Description>TXT_KEY_MAP_MILKY_WAY</Description>
+			<Button>Art/Interface/Buttons/missions/milky_way.dds</Button>
+			<HotKey>KB_3</HotKey>
+			<bAltDown>0</bAltDown>
+			<bShiftDown>0</bShiftDown>
+			<bCtrlDown>1</bCtrlDown>
 			<iGridWidth>48</iGridWidth>
 			<iGridHeight>48</iGridHeight>
 			<bWrapX>0</bWrapX>
@@ -187,13 +238,17 @@
 			<bStartRevealed>1</bStartRevealed>
 			<InitialWBMap>\Mods\Caveman2Cosmos\PrivateMaps\Multimaps\MM_11_MILKY_WAY.CivBeyondSwordWBSave</InitialWBMap>
 			<MapScript/>
-			<Button>Art/Interface/Buttons/missions/milky_way.dds</Button>
 		</MapInfo>
 		<MapInfo>
 			<!-- Map of Local Group -->
 			<!-- Colonizable in Cosmic and later -->
 			<Type>MAP_LOCAL_GROUP</Type>
 			<Description>TXT_KEY_MAP_LOCAL_GROUP</Description>
+			<Button>Art/Interface/Buttons/missions/ClaimTerritory.dds</Button>
+			<HotKey>KB_4</HotKey>
+			<bAltDown>0</bAltDown>
+			<bShiftDown>0</bShiftDown>
+			<bCtrlDown>1</bCtrlDown>
 			<iGridWidth>48</iGridWidth>
 			<iGridHeight>32</iGridHeight>
 			<bWrapX>1</bWrapX>
@@ -201,13 +256,17 @@
 			<bStartRevealed>1</bStartRevealed>
 			<InitialWBMap>\Mods\Caveman2Cosmos\PrivateMaps\Multimaps\MM_12_LOCAL_GROUP.CivBeyondSwordWBSave</InitialWBMap>
 			<MapScript/>
-			<Button>Art/Interface/Buttons/missions/ClaimTerritory.dds</Button>
 		</MapInfo>
 		<MapInfo>
 			<!-- Map of Virgo Supercluster -->
 			<!-- Colonizable in Cosmic and later -->
 			<Type>MAP_VIRGO_SUPERCLUSTER</Type>
 			<Description>TXT_KEY_MAP_VIRGO_SUPERCLUSTER</Description>
+			<Button>Art/Interface/Buttons/missions/ClaimTerritory.dds</Button>
+			<HotKey>KB_5</HotKey>
+			<bAltDown>0</bAltDown>
+			<bShiftDown>0</bShiftDown>
+			<bCtrlDown>1</bCtrlDown>
 			<iGridWidth>48</iGridWidth>
 			<iGridHeight>32</iGridHeight>
 			<bWrapX>1</bWrapX>
@@ -215,13 +274,17 @@
 			<bStartRevealed>1</bStartRevealed>
 			<InitialWBMap>\Mods\Caveman2Cosmos\PrivateMaps\Multimaps\MM_13_VIRGO_SUPERCLUSTER.CivBeyondSwordWBSave</InitialWBMap>
 			<MapScript/>
-			<Button>Art/Interface/Buttons/missions/ClaimTerritory.dds</Button>
 		</MapInfo>
 		<MapInfo>
 			<!-- Map of Universe -->
 			<!-- Colonizable in Cosmic and later -->
 			<Type>MAP_UNIVERSE</Type>
 			<Description>TXT_KEY_MAP_UNIVERSE</Description>
+			<Button>Art/Interface/Buttons/missions/ClaimTerritory.dds</Button>
+			<HotKey>KB_6</HotKey>
+			<bAltDown>0</bAltDown>
+			<bShiftDown>0</bShiftDown>
+			<bCtrlDown>1</bCtrlDown>
 			<iGridWidth>48</iGridWidth>
 			<iGridHeight>32</iGridHeight>
 			<bWrapX>1</bWrapX>
@@ -229,13 +292,17 @@
 			<bStartRevealed>1</bStartRevealed>
 			<InitialWBMap>\Mods\Caveman2Cosmos\PrivateMaps\Multimaps\MM_14_UNIVERSE.CivBeyondSwordWBSave</InitialWBMap>
 			<MapScript/>
-			<Button>Art/Interface/Buttons/missions/ClaimTerritory.dds</Button>
 		</MapInfo>
 		<MapInfo>
 			<!-- Map of Distant Cosmos -->
 			<!-- Colonizable in Transcendent and later -->
 			<Type>MAP_DISTANT_COSMOS</Type>
 			<Description>TXT_KEY_MAP_DISTANT_COSMOS</Description>
+			<Button>Art/Interface/Buttons/missions/ClaimTerritory.dds</Button>
+			<HotKey>KB_7</HotKey>
+			<bAltDown>0</bAltDown>
+			<bShiftDown>0</bShiftDown>
+			<bCtrlDown>1</bCtrlDown>
 			<iGridWidth>48</iGridWidth>
 			<iGridHeight>32</iGridHeight>
 			<bWrapX>1</bWrapX>
@@ -243,7 +310,6 @@
 			<bStartRevealed>1</bStartRevealed>
 			<InitialWBMap>\Mods\Caveman2Cosmos\PrivateMaps\Multimaps\MM_15_DISTANT_COSMOS.CivBeyondSwordWBSave</InitialWBMap>
 			<MapScript/>
-			<Button>Art/Interface/Buttons/missions/ClaimTerritory.dds</Button>
 		</MapInfo>
 	</MapInfos>
 </Civ4MapInfos>

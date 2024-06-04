@@ -1,32 +1,31 @@
 from CvPythonExtensions import CyGlobalContext, CyInterface, MapTypes
-import BugEventManager
+from BugEventManager import g_eventManager
 import DebugUtils
 
 GC = CyGlobalContext()
 
 
-class ParallelMaps:
+'''class ParallelMaps:
 
 	def __init__(self, pEventManager):
-		pEventManager.addEventHandler("kbdEvent", self.handleInput)
+		pEventManager.addEventHandler("kbdEvent", self.handleInput)'''
 
-	def handleInput(self, argsList):
-
-		def _tryMapSwitch(eMap):
-			if eMap > -1 and eMap < MapTypes.NUM_MAPS and eMap != GC.getGame().getCurrentMap() \
-			and not GC.getGame().GetWorldBuilderMode() \
-			and (GC.isDebugBuild() or DebugUtils.bDebugMode or GC.getMapByIndex(eMap).plotsInitialized()):
-				if not GC.getMapByIndex(eMap).plotsInitialized():
-					CyInterface().addImmediateMessage("Initialized Map %d: %s" %(eMap, GC.getMapInfo(eMap).getDescription()), "")
+def handleInput(argsList):
+	GAME = GC.getGame()
+	if not GAME.GetWorldBuilderMode():
+		iKey = argsList[1]
+		bDebug = GC.isDebugBuild() or DebugUtils.bDebugMode
+		for i in range(MapTypes.NUM_MAPS):
+			mapInfo = GC.getMapInfo(i)
+			if iKey == mapInfo.getHotKeyVal() \
+			and (not mapInfo.isAltDown() or g_eventManager.bAlt) \
+			and (not mapInfo.isShiftDown() or g_eventManager.bShift) \
+			and (not mapInfo.isCtrlDown() or g_eventManager.bCtrl) \
+			and i != GAME.getCurrentMap() \
+			and (bDebug or GC.getMapByIndex(i).plotsInitialized()):
+				if not GC.getMapByIndex(i).plotsInitialized():
+					CyInterface().addImmediateMessage("Initialized Map %d: %s" %(i, mapInfo.getDescription()), "")
 				else:
-					CyInterface().addImmediateMessage("Map %d: %s" %(eMap, GC.getMapInfo(eMap).getDescription()), "")
-				GC.switchMap(eMap)
+					CyInterface().addImmediateMessage("Map %d: %s" %(i, mapInfo.getDescription()), "")
+				GC.switchMap(i)
 				return 1
-
-		eKey = argsList[1]
-
-		if BugEventManager.g_eventManager.bAlt and not BugEventManager.g_eventManager.bCtrl:
-			return _tryMapSwitch(eKey -2) # enum of key -2 gives the correct value for the number keys (0-9). I know enums should not be used this way.
-
-		elif BugEventManager.g_eventManager.bCtrl and not BugEventManager.g_eventManager.bAlt:
-			return _tryMapSwitch(eKey +7) # Maps 10 - 16 (ctrl+1 -> ctrl+6)

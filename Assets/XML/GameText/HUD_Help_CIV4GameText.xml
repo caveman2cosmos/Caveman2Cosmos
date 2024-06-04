@@ -94,4 +94,8 @@
 		<English>[COLOR_HIGHLIGHT_TEXT]Toggle score list[COLOR_REVERT][NEWLINE]Click your own list entry to minimize score list.</English>
 		<Italian>[COLOR_HIGHLIGHT_TEXT]Attiva/disattiva l'elenco dei punteggi[COLOR_REVERT][NEWLINE]Fai clic sulla tua voce nell'elenco per ridurlo a icona.</Italian>
 	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PARALLEL_MAPS_SCREEN_HOVER</Tag>
+		<English>Maps</English>
+	</TEXT>
 </Civ4GameText>
