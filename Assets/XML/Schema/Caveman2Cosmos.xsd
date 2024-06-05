@@ -679,7 +679,7 @@
         <xs:element ref="Button"/>
         <xs:element ref="HotKey"/>
         <xs:element ref="bAltDown" minOccurs="0"/>
-		<xs:element ref="bShiftDown" minOccurs="0"/>
+        <xs:element ref="bShiftDown" minOccurs="0"/>
         <xs:element ref="bCtrlDown" minOccurs="0"/>
         <xs:element ref="iGridWidth"/>
         <xs:element ref="iGridHeight"/>
