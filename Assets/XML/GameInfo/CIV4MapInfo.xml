@@ -31,8 +31,6 @@
 			<Button>Art/Interface/Buttons/missions/ClaimTerritory.dds</Button>
 			<HotKey>KB_1</HotKey>
 			<bAltDown>1</bAltDown>
-			<bShiftDown>0</bShiftDown>
-			<bCtrlDown>0</bCtrlDown>
 			<iGridWidth>0</iGridWidth>
 			<iGridHeight>0</iGridHeight>
 			<bWrapX>0</bWrapX>
@@ -49,8 +47,6 @@
 			<Button>Art/Interface/Buttons/missions/ClaimTerritory.dds</Button>
 			<HotKey>KB_2</HotKey>
 			<bAltDown>1</bAltDown>
-			<bShiftDown>0</bShiftDown>
-			<bCtrlDown>0</bCtrlDown>
 			<iGridWidth>48</iGridWidth>
 			<iGridHeight>32</iGridHeight>
 			<bWrapX>1</bWrapX>
@@ -67,8 +63,6 @@
 			<Button>Art/Interface/Buttons/missions/moon.dds</Button>
 			<HotKey>KB_3</HotKey>
 			<bAltDown>1</bAltDown>
-			<bShiftDown>0</bShiftDown>
-			<bCtrlDown>0</bCtrlDown>
 			<iGridWidth>72</iGridWidth>
 			<iGridHeight>48</iGridHeight>
 			<bWrapX>1</bWrapX>
@@ -85,8 +79,6 @@
 			<Button>Art/Interface/Buttons/missions/mars.dds</Button>
 			<HotKey>KB_4</HotKey>
 			<bAltDown>1</bAltDown>
-			<bShiftDown>0</bShiftDown>
-			<bCtrlDown>0</bCtrlDown>
 			<iGridWidth>72</iGridWidth>
 			<iGridHeight>48</iGridHeight>
 			<bWrapX>1</bWrapX>
@@ -103,8 +95,6 @@
 			<Button>Art/Interface/Buttons/missions/venus.dds</Button>
 			<HotKey>KB_5</HotKey>
 			<bAltDown>1</bAltDown>
-			<bShiftDown>0</bShiftDown>
-			<bCtrlDown>0</bCtrlDown>
 			<iGridWidth>48</iGridWidth>
 			<iGridHeight>32</iGridHeight>
 			<bWrapX>1</bWrapX>
@@ -121,8 +111,6 @@
 			<Button>Art/Interface/Buttons/missions/inner_solar_system.dds</Button>
 			<HotKey>KB_6</HotKey>
 			<bAltDown>1</bAltDown>
-			<bShiftDown>0</bShiftDown>
-			<bCtrlDown>0</bCtrlDown>
 			<iGridWidth>48</iGridWidth>
 			<iGridHeight>96</iGridHeight>
 			<bWrapX>1</bWrapX>
@@ -139,8 +127,6 @@
 			<Button>Art/Interface/Buttons/missions/outer_solar_system.dds</Button>
 			<HotKey>KB_7</HotKey>
 			<bAltDown>1</bAltDown>
-			<bShiftDown>0</bShiftDown>
-			<bCtrlDown>0</bCtrlDown>
 			<iGridWidth>48</iGridWidth>
 			<iGridHeight>96</iGridHeight>
 			<bWrapX>1</bWrapX>
@@ -157,8 +143,6 @@
 			<Button>Art/Interface/Buttons/missions/titan.dds</Button>
 			<HotKey>KB_8</HotKey>
 			<bAltDown>1</bAltDown>
-			<bShiftDown>0</bShiftDown>
-			<bCtrlDown>0</bCtrlDown>
 			<iGridWidth>48</iGridWidth>
 			<iGridHeight>32</iGridHeight>
 			<bWrapX>1</bWrapX>
@@ -175,8 +159,6 @@
 			<Button>Art/Interface/Buttons/missions/kuiper_belt.dds</Button>
 			<HotKey>KB_9</HotKey>
 			<bAltDown>1</bAltDown>
-			<bShiftDown>0</bShiftDown>
-			<bCtrlDown>0</bCtrlDown>
 			<iGridWidth>48</iGridWidth>
 			<iGridHeight>32</iGridHeight>
 			<bWrapX>1</bWrapX>
@@ -192,8 +174,6 @@
 			<Description>TXT_KEY_MAP_NEARBY_STARS</Description>
 			<Button>Art/Interface/Buttons/missions/ClaimTerritory.dds</Button>
 			<HotKey>KB_1</HotKey>
-			<bAltDown>0</bAltDown>
-			<bShiftDown>0</bShiftDown>
 			<bCtrlDown>1</bCtrlDown>
 			<iGridWidth>72</iGridWidth>
 			<iGridHeight>48</iGridHeight>
@@ -210,8 +190,6 @@
 			<Description>TXT_KEY_MAP_ORION_ARM</Description>
 			<Button>Art/Interface/Buttons/missions/ClaimTerritory.dds</Button>
 			<HotKey>KB_2</HotKey>
-			<bAltDown>0</bAltDown>
-			<bShiftDown>0</bShiftDown>
 			<bCtrlDown>1</bCtrlDown>
 			<iGridWidth>48</iGridWidth>
 			<iGridHeight>32</iGridHeight>
@@ -228,8 +206,6 @@
 			<Description>TXT_KEY_MAP_MILKY_WAY</Description>
 			<Button>Art/Interface/Buttons/missions/milky_way.dds</Button>
 			<HotKey>KB_3</HotKey>
-			<bAltDown>0</bAltDown>
-			<bShiftDown>0</bShiftDown>
 			<bCtrlDown>1</bCtrlDown>
 			<iGridWidth>48</iGridWidth>
 			<iGridHeight>48</iGridHeight>
@@ -246,8 +222,6 @@
 			<Description>TXT_KEY_MAP_LOCAL_GROUP</Description>
 			<Button>Art/Interface/Buttons/missions/ClaimTerritory.dds</Button>
 			<HotKey>KB_4</HotKey>
-			<bAltDown>0</bAltDown>
-			<bShiftDown>0</bShiftDown>
 			<bCtrlDown>1</bCtrlDown>
 			<iGridWidth>48</iGridWidth>
 			<iGridHeight>32</iGridHeight>
@@ -264,8 +238,6 @@
 			<Description>TXT_KEY_MAP_VIRGO_SUPERCLUSTER</Description>
 			<Button>Art/Interface/Buttons/missions/ClaimTerritory.dds</Button>
 			<HotKey>KB_5</HotKey>
-			<bAltDown>0</bAltDown>
-			<bShiftDown>0</bShiftDown>
 			<bCtrlDown>1</bCtrlDown>
 			<iGridWidth>48</iGridWidth>
 			<iGridHeight>32</iGridHeight>
@@ -282,8 +254,6 @@
 			<Description>TXT_KEY_MAP_UNIVERSE</Description>
 			<Button>Art/Interface/Buttons/missions/ClaimTerritory.dds</Button>
 			<HotKey>KB_6</HotKey>
-			<bAltDown>0</bAltDown>
-			<bShiftDown>0</bShiftDown>
 			<bCtrlDown>1</bCtrlDown>
 			<iGridWidth>48</iGridWidth>
 			<iGridHeight>32</iGridHeight>
@@ -300,8 +270,6 @@
 			<Description>TXT_KEY_MAP_DISTANT_COSMOS</Description>
 			<Button>Art/Interface/Buttons/missions/ClaimTerritory.dds</Button>
 			<HotKey>KB_7</HotKey>
-			<bAltDown>0</bAltDown>
-			<bShiftDown>0</bShiftDown>
 			<bCtrlDown>1</bCtrlDown>
 			<iGridWidth>48</iGridWidth>
 			<iGridHeight>32</iGridHeight>
