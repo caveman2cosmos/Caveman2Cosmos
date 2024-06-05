@@ -506,7 +506,7 @@ public:
 	void setPopulation(int iNewValue, bool bNormal = true);
 	void changePopulation(int iChange);
 
-	int getRealPopulation() const;
+	int64_t getRealPopulation() const;
 
 	int getHighestPopulation() const;
 	void setHighestPopulation(int iNewValue);
@@ -2134,7 +2134,7 @@ public:
 		DECLARE_MAP_FUNCTOR_CONST(CvCity, int64_t, calcCorporateMaintenance);
 		DECLARE_MAP_FUNCTOR_CONST(CvCity, int, getID);
 		DECLARE_MAP_FUNCTOR_CONST(CvCity, int, getPopulation);
-		DECLARE_MAP_FUNCTOR_CONST(CvCity, int, getRealPopulation);
+		DECLARE_MAP_FUNCTOR_CONST(CvCity, int64_t, getRealPopulation);
 		DECLARE_MAP_FUNCTOR_CONST(CvCity, int, goodHealth);
 		DECLARE_MAP_FUNCTOR_CONST(CvCity, int, badHealth);
 		DECLARE_MAP_FUNCTOR_CONST(CvCity, int, happyLevel);

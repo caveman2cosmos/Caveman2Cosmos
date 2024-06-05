@@ -9341,7 +9341,7 @@ int CvPlayer::getAveragePopulation() const
 
 int64_t CvPlayer::getRealPopulation() const
 {
-	return algo::accumulate(cities() | transformed(CvCity::fn::getRealPopulation()), 0);
+	return algo::accumulate(cities() | transformed(CvCity::fn::getRealPopulation()), (int64_t)0);
 }
 
 
