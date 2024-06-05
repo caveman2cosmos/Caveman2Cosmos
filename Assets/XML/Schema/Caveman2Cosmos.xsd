@@ -676,6 +676,11 @@
       <xs:sequence>
         <xs:element ref="Type"/>
         <xs:element ref="Description"/>
+        <xs:element ref="Button"/>
+        <xs:element ref="HotKey"/>
+        <xs:element ref="bAltDown" minOccurs="0"/>
+        <xs:element ref="bShiftDown" minOccurs="0"/>
+        <xs:element ref="bCtrlDown" minOccurs="0"/>
         <xs:element ref="iGridWidth"/>
         <xs:element ref="iGridHeight"/>
         <xs:element ref="bWrapX"/>
@@ -683,7 +688,6 @@
         <xs:element ref="bStartRevealed"/>
         <xs:element ref="InitialWBMap"/>
         <xs:element ref="MapScript"/>
-        <xs:element ref="Button"/>
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -729,6 +733,10 @@
     </xs:complexType>
   </xs:element>
   <xs:element name="GameOptionType" type="xs:NCName"/>
+  <xs:element name="HotKey" type="xs:string"/>
+  <xs:element name="bAltDown" type="Civ4Boolean"/>
+  <xs:element name="bShiftDown" type="Civ4Boolean"/>
+  <xs:element name="bCtrlDown" type="Civ4Boolean"/>
   <xs:element name="InitialWBMap" type="xs:string"/>
   <xs:element name="MapScript" type="xs:string"/>
   <xs:element name="bRiverArt" type="Civ4Boolean"/>

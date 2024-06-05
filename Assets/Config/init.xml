@@ -105,6 +105,6 @@
 	<load mod="InitMilitaryPromos"/>
 	<load mod="NaturalWonders"/>
 	<load mod="GreatPersonBornDisplay"/>
-	<events module="ParallelMaps"/>
+	<event type="kbdEvent" module="ParallelMapsInput" function="handleInput"/>
 	<events module="WoodlandCycle"/>
 </bug>

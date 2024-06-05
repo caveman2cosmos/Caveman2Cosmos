@@ -203,13 +203,13 @@ void CyInfoPythonInterface3()
 		.def("getOceanMinAreaSize", &CvWorldInfo::getOceanMinAreaSize, "int ()")
 	;
 
-	python::class_<CvMapInfo, python::bases<CvInfoBase>, boost::noncopyable>("CvMapInfo", python::no_init)
+	python::class_<CvMapInfo, python::bases<CvHotkeyInfo>, boost::noncopyable>("CvMapInfo", python::no_init)
 
 		.def("getGridWidth", &CvMapInfo::getGridWidth, "int ()")
 		.def("getGridHeight", &CvMapInfo::getGridHeight, "int ()")
 		.def("getWrapX", &CvMapInfo::getWrapX, "int ()")
 		.def("getWrapY", &CvMapInfo::getWrapY, "int ()")
-		.def("getMapScript", &CvMapInfo::getMapScript, "string ()")
+		//.def("getMapScript", &CvMapInfo::getMapScript, "string ()")
 	;
 
 	python::class_<CvClimateInfo, python::bases<CvInfoBase>, boost::noncopyable>("CvClimateInfo", python::no_init)

@@ -16248,7 +16248,7 @@ CvMapInfo::~CvMapInfo()
 
 bool CvMapInfo::read(CvXMLLoadUtility* pXML)
 {
-	CvInfoBase::read(pXML);
+	CvHotkeyInfo::read(pXML);
 
 	pXML->GetOptionalChildXmlValByName(&m_iGridWidth, L"iGridWidth");
 	pXML->GetOptionalChildXmlValByName(&m_iGridHeight, L"iGridHeight");
