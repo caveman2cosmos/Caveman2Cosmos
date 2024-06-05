@@ -6973,7 +6973,7 @@ void CvCity::changePopulation(int iChange)
 }
 
 
-int CvCity::getRealPopulation() const
+int64_t CvCity::getRealPopulation() const
 {
 	//return (((long)(pow((float)getPopulation(), 2.8f))) * 1000);
 
