@@ -11805,7 +11805,7 @@ int CvPlayerAI::AI_neededWorkers(const CvArea* pArea) const
 			iCities++;
 		}
 	}
-	if (iNeeded == 0)
+	if (iCities == 0)
 	{
 		return 0;
 	}

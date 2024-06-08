@@ -28,6 +28,14 @@ void CyInfoPythonInterface1()
 		.def("getHelp", &CvInfoBase::pyGetHelp, "wstring ()")
 		;
 
+	python::class_<CvHotkeyInfo, python::bases<CvInfoBase> >("CvHotkeyInfo", python::no_init)
+		.def("getHotKeyVal", &CvHotkeyInfo::getHotKeyVal)
+		.def("getHotKeyString", &CvHotkeyInfo::pyGetHotKeyString)
+		.def("isAltDown", &CvHotkeyInfo::isAltDown)
+		.def("isShiftDown", &CvHotkeyInfo::isShiftDown)
+		.def("isCtrlDown", &CvMapInfo::isCtrlDown)
+	;
+
 	python::class_<CvScalableInfo>("CvScalableInfo", python::no_init)
 		.def("getScale", &CvScalableInfo::getScale, "float ()")
 		;
