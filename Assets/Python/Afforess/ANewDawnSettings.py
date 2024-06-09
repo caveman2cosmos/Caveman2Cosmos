@@ -45,7 +45,6 @@ class ANewDawnSettings:
 			elif data2 == int(ModderGameOptionTypes.MODDERGAMEOPTION_MAX_BOMBARD_DEFENSE):
 				ANewDawnOpt.setMaxBombardDefense(data3)
 			elif data2 == int(ModderGameOptionTypes.MODDERGAMEOPTION_MIN_CITY_DISTANCE):
-				print ("WWWWWWWWWWWW", data2, data3)
 				ANewDawnOpt.setMinCityDistance(data3)
 			elif data2 == int(ModderGameOptionTypes.MODDERGAMEOPTION_CANNOT_CLAIM_OCEAN):
 				ANewDawnOpt.setCanNotClaimOcean(data3)

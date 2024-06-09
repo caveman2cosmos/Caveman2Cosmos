@@ -200,7 +200,7 @@ class MapConstants:
 		# Minimum amount of rain dropped by default before other factors add to the amount of rain dropped
 		self.minimumRainCost = .01
 		self.upLiftExponent  = 4
-		self.fPolarRainBoost  = .20
+		self.fRainFactor = 1
 
 		# These attenuation factors lower the altitude of the map edges. Value between 0 an 1.
 		# Low factor means strong attenuation at the edge, attenuation dissipates for each plot in the range.
@@ -252,23 +252,27 @@ class MapConstants:
 		# Hills & Peaks
 		selectionID = MAP.getCustomMapOption(0)
 		if not selectionID:
-			self.HillPercent *= 0.50
+			self.HillPercent *= 0.25
 		elif selectionID == 1:
+			self.HillPercent *= 0.50
+		elif selectionID == 2:
 			self.HillPercent *= 0.75
-		elif selectionID == 3:
-			self.HillPercent *= 1.25
 		elif selectionID == 4:
+			self.HillPercent *= 1.25
+		elif selectionID == 5:
 			self.HillPercent *= 1.50
 		# Peaks
 		selectionID = MAP.getCustomMapOption(1)
 		if not selectionID:
-			self.HillPercent *= 0.50
+			self.PeakPercent *= 0.25
 		elif selectionID == 1:
-			self.HillPercent *= 0.75
-		elif selectionID == 3:
-			self.HillPercent *= 1.25
+			self.PeakPercent *= 0.50
+		elif selectionID == 2:
+			self.PeakPercent *= 0.75
 		elif selectionID == 4:
-			self.HillPercent *= 1.50
+			self.PeakPercent *= 1.25
+		elif selectionID == 5:
+			self.PeakPercent *= 1.50
 		# Landmass Type
 		selectionID = MAP.getCustomMapOption(2)
 		self.bDryland = False
@@ -423,25 +427,25 @@ class MapConstants:
 			self.fPolarLat		= 0.90
 			self.fTropicLat		= 0.25
 
-			self.upLiftExponent  = 5
-
 		elif iClimate == 2: # Arid, more desert, less wet plots.
-			self.SaltFlatsPercent	= 0.10
-			self.DunesPercent		= 0.20
-			self.DesertPercent		= 0.35
-			self.ScrubPercent		= 0.50
-			self.PlainsPercent		= 0.8
-			self.GrasslandPercent	= 0.9
-			self.LushPercent		= 0.95
-			self.MuddyPercent		= 0.98
+			self.SaltFlatsPercent	= 0.07
+			self.DunesPercent		= 0.25
+			self.DesertPercent		= 0.56
+			self.ScrubPercent		= 0.88
+			self.PlainsPercent		= 0.93
+			self.GrasslandPercent	= 0.95
+			self.LushPercent		= 0.97
+			self.MuddyPercent		= 0.99
 
-			self.minimumRainCost = 0.01
-			self.upLiftExponent  = 3
-			self.fPolarRainBoost  = 0.1
+			self.iLakeSizeMinPercent = 0
+			self.fLakeSizeFactorChance = 1
+			self.fLakesPerPlot = 0.002
+			self.fRainFactor = 0.5
 
 		elif iClimate == 3: # Rocky, more peaks, hills and rocky terrain
 			self.HillPercent	*= 1.25
-			self.fRockyPercent 	*= 1.25
+			self.PeakPercent	*= 1.25
+			self.fRockyPercent 	*= 2
 
 		elif iClimate == 4: # Cold, larger polar area, more cold territory
 			self.IceTemp		*= 1.25
@@ -457,7 +461,6 @@ class MapConstants:
 			self.fPolarLat		= 0.70
 			self.fTropicLat		= 0.10
 
-			self.upLiftExponent = 2
 		# fMaxStartLat limits the starting location to a maximum latitude.
 		self.fMaxStartLat = 90 * self.fPolarLat - self.fPolarLat**3 / 0.0569
 		# Sea Level
@@ -513,6 +516,7 @@ class MapConstants:
 				self.fLandPercent = .30 # High
 
 		print "SEALEVEL %d | Land percent = %f" % (seaLevel, self.fLandPercent)
+
 
 mc = None
 
@@ -1502,12 +1506,13 @@ class ClimateMap:
 		initialRainfall.Normalize()
 		geostrophicRain.Normalize()
 		fGeostroFactor = mc.geostrophicFactor
+		fRainFactor = mc.fRainFactor
 		i = -1
 		for y in xrange(iHeight):
 			for x in xrange(iWidth):
 				i += 1
 				if em.data[i] >= fLandHeight:
-					self.RainfallMap.data[i] = 1.0*(initialRainfall.data[i] + 2 * self.aboveSeaLevelMap[i] + geostrophicRain.data[i] * fGeostroFactor) / self.toOceanDist[i]
+					self.RainfallMap.data[i] = 1.0*(fRainFactor * initialRainfall.data[i] + 2 * self.aboveSeaLevelMap[i] + geostrophicRain.data[i] * fGeostroFactor) / self.toOceanDist[i]
 		self.RainfallMap.Normalize()
 
 
@@ -1544,7 +1549,8 @@ class ClimateMap:
 			return
 		elif boolGeostrophic:
 			geoLatWindStr = mc.geostrophicLateralWindStrength
-		moisturePerNeighbor = 1.0*moistureMap.data[i] / nListLength
+		else:
+			moisturePerNeighbor = mc.fRainFactor*moistureMap.data[i] / nListLength
 		# Drop rain and pass moisture to neighbors
 		cost	  = mc.minimumRainCost
 		upLiftExp = mc.upLiftExponent
@@ -3935,8 +3941,8 @@ class MapOptions:
 	def __init__(self):
 		self.optionList = \
 		[	# Title, Default, Random, Choices
-			["Hills:",			2,	True, 5],
-			["Peaks:",			2,	True, 5],
+			["Hills:",			3,	True, 6],
+			["Peaks:",			3,	True, 6],
 			["Landform:",		2,	True, 5],
 			["World Wrap:",		0, False, 3],
 			["Start:",			1, False, 2],
@@ -4037,30 +4043,21 @@ def getCustomMapOptionDescAt(argsList):
 	# Return names of option alternatives.
 	optionID	= argsList[0]
 	selectionID = argsList[1]
-	# Hills
-	if optionID == 0:
+	# Hills & Peaks
+	if optionID in (0, 1):
 		if selectionID == 0:
-			return "50%"
+			return "25%"
 		if selectionID == 1:
-			return "75%"
-		if selectionID == 2:
-			return "100%"
-		if selectionID == 3:
-			return "125%"
-		if selectionID == 4:
-			return "150%"
-	# Peaks
-	if optionID == 1:
-		if selectionID == 0:
 			return "50%"
-		if selectionID == 1:
-			return "75%"
 		if selectionID == 2:
-			return "100%"
+			return "75%"
 		if selectionID == 3:
-			return "125%"
+			return "100%"
 		if selectionID == 4:
+			return "125%"
+		if selectionID == 5:
 			return "150%"
+
 	# Landform
 	if optionID == 2:
 		if selectionID == 0:
@@ -4073,6 +4070,7 @@ def getCustomMapOptionDescAt(argsList):
 			return "Archipelago"
 		if selectionID == 4:
 			return "Waterworld"
+
 	# World Wrap
 	if optionID == 3:
 		if selectionID == 0:
@@ -4081,6 +4079,7 @@ def getCustomMapOptionDescAt(argsList):
 			return "Toroidal"
 		if selectionID == 2:
 			return "Flat"
+
 	# Start
 	if optionID == 4:
 		if selectionID == 0:
@@ -4089,6 +4088,7 @@ def getCustomMapOptionDescAt(argsList):
 			if optionList[2][1] == 0 or optionList[2][1] == 1:
 				return "Everywhere (Dryland|Pangea)"
 			return "Old World"
+
 	# Rivers
 	if optionID == 5:
 		if selectionID == 0:
@@ -4109,6 +4109,7 @@ def getCustomMapOptionDescAt(argsList):
 			return "+3"
 		if selectionID == 8:
 			return "+4"
+
 	# Resources
 	if optionID == 6:
 		if selectionID == 0:
@@ -4129,6 +4130,7 @@ def getCustomMapOptionDescAt(argsList):
 			return "140%"
 		if selectionID == 8:
 			return "160%"
+
 	# Pangea Breaker
 	if optionID == 7:
 		if selectionID == 0: # On
@@ -4151,25 +4153,29 @@ def beforeInit():
 	print "\n", "Options Selected:"
 	# Hills
 	if optionList[0][1] == 0:
-		print "	%s			50 percent" % optionList[0][0]
+		print "	%s			25 percent" % optionList[0][0]
 	elif optionList[0][1] == 1:
-		print "	%s			75 percent" % optionList[0][0]
+		print "	%s			50 percent" % optionList[0][0]
 	elif optionList[0][1] == 2:
-		print "	%s			100 percent" % optionList[0][0]
+		print "	%s			75 percent" % optionList[0][0]
 	elif optionList[0][1] == 3:
-		print "	%s			125 percent" % optionList[0][0]
+		print "	%s			100 percent" % optionList[0][0]
 	elif optionList[0][1] == 4:
+		print "	%s			125 percent" % optionList[0][0]
+	elif optionList[0][1] == 5:
 		print "	%s			150 percent" % optionList[0][0]
 	# Peaks
 	if optionList[1][1] == 0:
-		print "	%s			50 percent" % optionList[1][0]
+		print "	%s			25 percent" % optionList[1][0]
 	elif optionList[1][1] == 1:
-		print "	%s			75 percent" % optionList[1][0]
+		print "	%s			50 percent" % optionList[1][0]
 	elif optionList[1][1] == 2:
-		print "	%s			100 percent" % optionList[1][0]
+		print "	%s			75 percent" % optionList[1][0]
 	elif optionList[1][1] == 3:
 		print "	%s			100 percent" % optionList[1][0]
 	elif optionList[1][1] == 4:
+		print "	%s			125 percent" % optionList[1][0]
+	elif optionList[1][1] == 5:
 		print "	%s			150 percent" % optionList[1][0]
 	# Landform
 	if optionList[2][1] == 0:
