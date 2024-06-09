@@ -13,4 +13,5 @@ void logAIJson(CvWString type, CvWString identifier, CvWString squirrel, CvWStri
 void logCB(CvString message);
 void logToFile(CvString message, char* filename);
 void logContractBroker(int level, char* format, ...);
+void logAiEvaluations(int level, char* format, ...);
 #endif
