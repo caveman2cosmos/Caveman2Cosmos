@@ -6423,7 +6423,7 @@
 		<EventInfo>
 			<Type>EVENT_TREASURY_PLUNDERED_2</Type>
 			<Description>TXT_KEY_EVENT_TREASURY_PLUNDERED_2</Description>
-			<bPickCity>1</bPickCity>:D
+			<bPickCity>1</bPickCity>
 			<iGold>-1500</iGold>
 			<iHappy>1</iHappy>
 			<iHappyTurns>5</iHappyTurns>
