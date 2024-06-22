@@ -11701,7 +11701,7 @@
 			<Type>EVENTTRIGGER_ADD_ONE_POPULATION</Type>
 			<Description>TXT_KEY_EVENTTRIGGER_ADD_ONE_POPULATION</Description>
 			<iPercentGamesActive>100</iPercentGamesActive>
-			<iWeigh>5</iWeigh>
+			<iWeight>5</iWeight>
 			<bRecurring>1</bRecurring>
 			<bPickCity>1</bPickCity>
 			<Events>
