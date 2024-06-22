@@ -51,10 +51,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_ADD_ONE_POPULATION</Tag>
-		<English>Join the city. Increasing the population by one.</English>
-		<French>Rejoindre la Ville. Augmente de 1 la population.</French>
-		<Italian>Unisci alla città e incrementa la popolazione di 1.</Italian>
-		<Russian>Ïîäñåëèòü â ãîðîä. Íàñåëåíèå ãîðîäà óâåëè÷èâàåòñÿ íà îäíîãî æèòåëÿ.</Russian>
+		<English>A wandering group of people has demanded to join our city.</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_AIRLINER_CRASH</Tag>
@@ -503,7 +500,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_COASTAL_REEF_STUCK</Tag>
-		<English>One of our ships got stuck on a reef after trying to navigate through treacherous coastal waters. Sailors managed to save it from sinking but it will take some time to set the ship free from the reef and fix the ship hull.</English>
+		<English>One of our ships got stuck on a reef after trying to navigate through treacherous coastal waters. Sailors managed to save it from sinking, but it will take some time to set the ship free from the reef and fix the ship hull.</English>
 		<French>Un de nos navires s'est accroché à un récif en essayant de naviguer dans des eaux côtières traîtres. Les marins ont réussi à sauver le navire, mais il va falloir du temps pour réparer la coque et le sortir des récifs.</French>
 		<German>Eines unserer Schiffe ist auf ein Riff gefahren, nachdem es versucht hatte durch tückische Küstengewässer zu fahren. Den Matrosen ist es gelungen, das Schiff vor dem Untergang zu bewahren, doch wird es eine Weile dauern, bis es vom Riff befreit und der Rumpf repariert ist.</German>
 		<Italian>Una delle nostre navi si è arenata mentre stava navigando in acque costiere piuttosto insidiose. I marinai sono riusciti a impedire che affondasse, ma ci vorrà del tempo per disincastrare la nave dagli scogli e riparare lo scafo.</Italian>
@@ -2796,6 +2793,10 @@
 		<Polish>To wielce interesuj&#185;ce.</Polish>
 		<Russian>Это добрые известия.</Russian>
 	</TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_ACADEMIC_FUNDING_2</Tag>
+        <English>Let us invest ourselves and double the scientific boom.</English>
+    </TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_ACHIEVEMENT</Tag>
 		<English>This is certainly a good day for our glorious nation.</English>
@@ -2877,12 +2878,12 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_ADD_ONE_POPULATION</Tag>
-		<English>Join the city. Increasing the population by one.</English>
-		<French>Rejoindre la Ville. Augmente de 1 la population.</French>
-		<Italian>Unisci alla città. Incrementa la popolazione di 1.</Italian>
-		<Polish>Do&#179;&#185;cz do miasta. Zwi&#234;ksza populacj&#234; miasta o 1.</Polish>
-		<Russian>Ïîäñåëèòü â ãîðîä. Íàñåëåíèå ãîðîäà óâåëè÷èâàåòñÿ íà îäíîãî æèòåëÿ.</Russian>
+		<English>Join the city.</English>
 	</TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_ADD_ONE_POPULATION1</Tag>
+        <English>Chase them away we can't afford to feed more mouths.</English>
+    </TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_AIRLINER_CRASH_1</Tag>
 		<English>Allow their recovery teams unfettered access to the crash site.</English>
@@ -3121,6 +3122,10 @@
 		<Russian>Поздравляем охотников, открывших этот прекрасный вид оружия.</Russian>
 		<Spanish>Enviad mis felicitaciones a los cazadores que han inventado este nuevo tipo de arma.</Spanish>
 	</TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_ARCHERY_FOUNDED_2</Tag>
+        <English>This seems very useful, let us make as many as we can.</English>
+    </TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_ARTIFICIAL_ELEMENT_1</Tag>
 		<English>Congratulate the scientists and send more researchers to this facility!</English>
@@ -3207,7 +3212,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_AXE_HAFT_1</Tag>
-		<English>Convert our axemen to the new axe handles immediately.</English>
+		<English>Convert our axeman to the new axe handles immediately.</English>
 		<French>Adoptons immédiatement les nouveaux manches de hache pour nos soldats avec hache.</French>
 		<German>Rüstet unsere Axtkämpfer sofort mit den neuen Axtgriffen aus.</German>
 		<Italian>Armate immediatamente i nostri guerrieri con le nuove asce.</Italian>
@@ -3223,11 +3228,11 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_BABY_BOOM_2</Tag>
-		<English>Let's help our people even more. Offer subsidies to every family that has more then three children</English>
+		<English>Let's help our people even more. Offer subsidies to every family that has more than three children</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_BANANA_BLIGHT</Tag>
-		<English>The tastiest banana sub-species has been wiped out by the dreaded banana blight.</English>
+		<English>The tastiest banana subspecies has been wiped out by the dreaded banana blight.</English>
 		<French>Les meilleurs variétés de nos bananes ont été décimées par une maladie.</French>
 		<German>Die geschmackvollsten Bananensorten sind durch die gefürchtete Bananenpest vernichtet worden.</German>
 		<Italian>Le varietà migliori di banane sono state spazzate via da una malattia.</Italian>
@@ -3245,6 +3250,10 @@
 		<Polish>To smutne. B&#234;dziemy musieli si&#234; zadowoli&#230; tymi odmianami jakie pozosta&#179;y.</Polish>
 		<Russian>Это очень плохо. Придется довольствоваться оставшимися сортами.</Russian>
 	</TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_BANANA_BLIGHT_2</Tag>
+        <English>Invest in preserving the quality of banana.</English>
+    </TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_BANANA_SPLIT_1</Tag>
 		<English>Mmm, ice cream. The customers must be going bananas over that!</English>
@@ -3261,6 +3270,10 @@
 		<Italian>È probabile che il peggio della furia di quest'orda barbarica tocchi a noi.</Italian>
 		<Spanish>Es probable que nos llevemos la peor parte de la furia de la horda bárbara.</Spanish>
 	</TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_TALIBAN_UPRISING</Tag>
+        <English>Let this goat fuckers come. We shall send them into the dirt.</English>
+    </TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_BARDS_TALE_1</Tag>
 		<English>We are glad to see that the local culture is thriving.</English>
@@ -3440,6 +3453,10 @@
 		<Russian>Огонь! Не упустите его, мистер Мэйнард!</Russian>
 		<Spanish>¡Fuego! ¡Atrape a los que pueda, almirante!</Spanish>
 	</TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_BLACKBEARD_2</Tag>
+        <English>God darnit just give him the gold, let him pester someone else.</English>
+    </TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_BLACKBEARD_HELP_1</Tag>
 		<English>[ICON_BULLET]A dangerous number of barbarian [COLOR_UNIT_TEXT]Frigate[COLOR_REVERT] and [COLOR_UNIT_TEXT]Privateer[COLOR_REVERT] units have spawned near our waters.</English>
@@ -3470,6 +3487,10 @@
 		<Russian>Если бы у нас было знание Медицины!</Russian>
 		<Spanish>¡Si supiéramos algo de medicina!</Spanish>
 	</TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_BLACK_DEATH_3</Tag>
+        <English>Kill anyone that leaves the city, this ends here.</English>
+    </TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_BLACK_DEATH_HELP_2</Tag>
 		<English>[ICON_BULLET]The plague spreads to some nearby cities and reduces their population by %d1</English>
@@ -4357,6 +4378,10 @@
 		<Italian>Portatemi la sua testa su un palo e distruggete la città. Qui comando IO.</Italian>
 		<Russian>Ïðèíåñèòå ìíå åãî ãîëîâó íà ïèêå, ñîêðóøèòå ýòîò ãîðîä, èáî ÿ ïðàâëþ çäåñü.</Russian>
 	</TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_CIVIL_WAR1</Tag>
+        <English>Bribe the revolt leader. Gold always fixes everything.</English>
+    </TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_CIV_GAME_1</Tag>
 		<English>Send congratulations to the developers. Our people should enjoy this game.</English>
@@ -5086,7 +5111,11 @@
 		<Russian>Как только они доберутся до Стоунхенджа, принесите их в жертву! Вот для чего они здесь! И не забудьте также о богатствах!</Russian>
 		<Spanish>Cuando lleguen al Stonehenge, ¡sacrificadlos! ¡Para eso han venido hasta aquí! ¡Coged sus objetos valiosos, de paso!</Spanish>
 	</TEXT>
-	<TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_DRUIDS_4</Tag>
+        <English>Tax them, its only fair after all we paid the price to build it.</English>
+    </TEXT>
+    <TEXT>
 		<Tag>TXT_KEY_EVENT_DUSTBOWL_1</Tag>
 		<English>We need that food. Do whatever it takes to figure out how to mitigate the erosion of the soil and end the dust storms.</English>
 		<French>Nous avons besoin de cette nourriture. Faire le nécessaire pour découvrir un moyen d'atténuer l'érosion du sol et mettre un terme aux tempêtes de poussière.</French>
@@ -5249,6 +5278,10 @@
 		<Russian>По крайней мере, эти новые пристройки ко дворцу украсят столицу.</Russian>
 		<Spanish>Al menos estos nuevos añadidos al Palacio embellecerán la capital.</Spanish>
 	</TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_EXPENSIVE_HABITS_2</Tag>
+        <English>We need a new fountain as well.</English>
+    </TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_EXPERIENCED_CAPTAIN_1</Tag>
 		<English>The reputation boost should enhance revenues.</English>
@@ -5285,6 +5318,10 @@
 		<Russian>Их тяготы наполнят нашу казну.</Russian>
 		<Spanish>Su sufrimiento rellenará nuestro tesoro.</Spanish>
 	</TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_EXPLOITED_PEASANTS_2</Tag>
+        <English>Let's not risk a revolution on our heads. Return some of the money.</English>
+    </TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_FAIL_ALTERNATIVE_ENERGY_1</Tag>
 		<English>You have failed the quest for Alternative Energy!</English>
@@ -5521,6 +5558,10 @@
 		<Russian>Используйте эти деньги для создания в городе бесплатных поликлиник, для ухода за больными и пострадавшими.</Russian>
 		<Spanish>Usarlo para establecer clínicas gratuitas en la ciudad, para cuidar a enfermos y heridos.</Spanish>
 	</TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_FAMOUS_DOCTOR_3</Tag>
+        <English>Pocket the money who cares what he wanted. The country needs it most.</English>
+    </TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_FARM_BANDITS_1</Tag>
 		<English>We need that food. Do whatever it takes to deal with those bandits.</English>
@@ -5933,6 +5974,10 @@
 		<Italian>Questo aiuto dovrebbe permettere alla nostra unità di recuperare le forze.</Italian>
 		<Spanish>Se espera que esta ayuda contribuya a que nuestra unidad recupere su fuerza.</Spanish>
 	</TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_FRIENDLY_LOCALS_2</Tag>
+        <English>Offer them a gift in sign of gratitude.</English>
+    </TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_FUEL_ADDITIVES_1</Tag>
 		<English>Reduced costs, lower pollution and improved revenues are always welcome news.</English>
@@ -5941,6 +5986,10 @@
 		<Italian>Costi più bassi, inquinamento ridotto ed entrate aumentate sono sempre buone notizie.</Italian>
 		<Spanish>Costes reducidos, menor polución y mayores ingresos son siempre una buena noticia.</Spanish>
 	</TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_FUEL_ADDITIVES_2</Tag>
+        <English>Let's focus more on the pollution part, profits aren't everything.</English>
+    </TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_FUGITIVE_1</Tag>
 		<English>Extradite the offender back to his homeland.</English>
@@ -6075,6 +6124,10 @@
 		<Polish>Czapy lodowe si&#234; topi&#185;, pustynie poszerzaj&#185;. Musimy zaj&#185;&#230; sie zanieczyszczeniem.</Polish>
 		<Russian>Повсеместно тают ледники и наступают пустыни. Нам следует тщательнее контролировать загрязнения!</Russian>
 	</TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_GLOBAL_WARMING_2</Tag>
+        <English>Invest tons of money to reverse this at any cost.</English>
+    </TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_GLOBAL_WARMING_1_HELP</Tag>
 		<English>A number of tiles around the map are changed reflecting the increasing global temperatures.</English>
@@ -6203,6 +6256,10 @@
 		<Italian>Stanziate dei fondi per motivare quanti più cercatori d'oro a fermarsi, alla fine della corsa all'oro.</Italian>
 		<Spanish>Que se financie una campaña para motivar a más buscadores de oro a que se queden cuando acabe la fiebre.</Spanish>
 	</TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_GOLD_RUSH_3</Tag>
+        <English>Make all who come here pay double the taxes.</English>
+    </TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_GOLD_TO_PLAYER</Tag>
 		<English>[ICON_BULLET]Give %d1[ICON_GOLD] to %s2_playerName</English>
@@ -6231,6 +6288,10 @@
 		<Russian>Доходы от пошлин будут подспорьем местной экономике.</Russian>
 		<Spanish>El dinero de los aranceles ayudarán a la economía local.</Spanish>
 	</TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_GOOD_HARBOR_2</Tag>
+        <English>Lets capitalize on the boom invest gold to increase returns.</English>
+    </TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_GRAPE_SHOT_1</Tag>
 		<English>We will fit all of our siege units with the new ammunition type.</English>
@@ -6299,6 +6360,10 @@
 		<Italian>Non c'è molto che possiamo fare, non è vero?</Italian>
 		<Spanish>No es que podamos hacer gran cosa, ¿verdad?</Spanish>
 	</TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_GREAT_DEPRESSION_2</Tag>
+        <English>Try to spend our way out.</English>
+    </TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_GREAT_DEPRESSION_HELP</Tag>
 		<English>[ICON_BULLET]All nations in the world suffer the loss of %d1%% their national treasury.</English>
@@ -6341,6 +6406,14 @@
 		<Russian>Это повысит престиж города!</Russian>
 		<Spanish>¡Esto dará prestigio a la ciudad!</Spanish>
 	</TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_GREAT_MONUMENTS_2</Tag>
+        <English>Let us invest into promoting it even more.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_GREAT_MONUMENT_3</Tag>
+        <English>Let's use this chance to promote our culture.</English>
+    </TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_GREED_1</Tag>
 		<English>Greed[PARAGRAPH:1]You are tasked by your military leaders to seize control of that resource.</English>
@@ -6459,6 +6532,10 @@
 		<Italian>Posso avere le patatine, con quello? Grazie!</Italian>
 		<Spanish>¿Podemos acompañarlo con patatas fritas? ¡Gracias!</Spanish>
 	</TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_HAMBURGER_JOINT_2</Tag>
+        <English>Make it more popular than air.</English>
+    </TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_HAPPY</Tag>
 		<English>[ICON_BULLET]%D1[ICON_HAPPY] in all cities</English>
@@ -6769,6 +6846,10 @@
 		<Polish>Chc&#234; dorwa&#230; tego pirata w swoje r&#234;ce!</Polish>
 		<Russian>Я хочу, чтобы эти «Джентльмены удачи» убирались восвояси!</Russian>
 	</TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_HENRY_MORGAN_2</Tag>
+        <English>This savages all they care about is gold.</English>
+    </TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_HENRY_MORGAN_HELP_1</Tag>
 		<English>[ICON_BULLET]A dangerous number of barbarian [COLOR_UNIT_TEXT]Ship of the Line[COLOR_REVERT], [COLOR_UNIT_TEXT]Frigate[COLOR_REVERT], and [COLOR_UNIT_TEXT]Privateer[COLOR_REVERT] units have spawned near our waters.</English>
@@ -6823,6 +6904,10 @@
 		<Polish>Czasy si&#234; zmieniaj&#185;, my tak&#191;e. Ludzie to w ko&#241;cu zaakceptuj&#185;.</Polish>
 		<Russian>Времена меняются, и мы тоже. Со временем они это преодолеют.</Russian>
 	</TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_HERETICAL_RESEARCH2_3</Tag>
+        <English>Gold does solve everything doesn't it. Buy away our sins.</English>
+    </TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_HERETICAL_RESEARCH_1</Tag>
 		<English>We need to take a step back and convince our followers that our research will not conflict with our faith.</English>
@@ -6843,6 +6928,10 @@
 		<Polish>Czasy si&#234; zmieniaj&#185;, my tak&#191;e. Ludzie to w ko&#241;cu zaakceptuj&#185;.</Polish>
 		<Russian>Времена меняются, и мы тоже. Со временем они это преодолеют.</Russian>
 	</TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_HERETICAL_RESEARCH_3</Tag>
+        <English>Gold will ease out their suffering.</English>
+    </TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_HEROIC_GESTURE_1</Tag>
 		<English>No good deed shall go unpunished. Send our recovered soldiers back into battle the moment they are ready.</English>
@@ -7182,6 +7271,10 @@
 		<Polish>Musimy zebra&#230; nasz&#185; flot&#234;, aby pokona&#179;a te barbarzy&#241;skie &#156;winie.</Polish>
 		<Russian>We must marshal our fleet to defeat these Barbarian pigs.</Russian>
 	</TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_ILLYRIAN_PIRATES_2</Tag>
+        <English>Gold solves all problems.</English>
+    </TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_ILLYRIAN_PIRATES_HELP_1</Tag>
 		<English>[ICON_BULLET]A dangerous number of barbarian [COLOR_UNIT_TEXT]War Galley[COLOR_REVERT] units have spawned near our waters.</English>
@@ -7215,6 +7308,10 @@
 		<Polish>Jeste&#156;my zadowoleni z ich wyboru nowych domostw.</Polish>
 		<Russian>We are pleased at their new choice of residence.</Russian>
 	</TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_IMMIGRANTS_2</Tag>
+        <English>We need the extra work force, the locals might not like it but who cares. Let's attract as many as we can.</English>
+    </TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_IMMOBILE_UNIT</Tag>
 		<English>[ICON_BULLET]The %s2_unit will be busy for %d1 [NUM1:turn:turns], unavailable for any other duty except self-defense.</English>
@@ -7724,6 +7821,10 @@
 		<Polish>&#140;wietnie. Powinni&#156;my rozwin&#185;&#230; produkcj&#234; na masow&#185; skal&#234;.</Polish>
 		<Russian>Отлично. Мы могли бы использовать эту продукцию и для других средств.</Russian>
 	</TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_LOCAL_MILLS_2</Tag>
+        <English>Let's build a few more, it will really boost our production.</English>
+    </TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_LOCAL_THE_BUCCANEERS_2</Tag>
 		<English>The Buccaneers accept our tribute and disappear back into the hinterland. For now.</English>
@@ -7762,6 +7863,10 @@
 		<Polish>To jest muzyka przysz&#179;o&#156;ci!</Polish>
 		<Russian>Это глас из будущего.</Russian>
 	</TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_LOOSE_MORALS_2</Tag>
+        <English>Promote the future out with the old.</English>
+    </TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_LOOTERS_1</Tag>
 		<English>Their problems are none of our affairs. Tell our operatives to stand down.</English>
@@ -7877,6 +7982,10 @@
 		<Polish>Co prawda to nie popchnie nas z rozwojem do przodu, ale przynajmniej sprawi, &#191;e ludzi&#234; b&#234;d&#185; szcz&#234;&#156;liwi.</Polish>
 		<Russian>Пусть это не будет способствовать научному прогрессу, но хотя бы сделает людей счастливыми.</Russian>
 	</TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_MAJOR_IN_HUMANITIES_2</Tag>
+        <English>Give the university a prize for its exceptional effort.</English>
+    </TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_MALACCAN_PIRATES_1</Tag>
 		<English>Order our Coast Guard to hunt down and capture every last one of these criminals!</English>
@@ -7887,6 +7996,10 @@
 		<Polish>Rozka&#191; stra&#191;y przybrze&#191;nej &#156;ciga&#230; i wy&#179;apa&#230; tych &#179;ajdak&#243;w co do jednego!</Polish>
 		<Russian>Распорядитесь, чтобы наша береговая охрана выследила и обезвредила всех до единого из этих преступников!</Russian>
 	</TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_MALACCAN_PIRATES_2</Tag>
+        <English>Bribe them that always works.</English>
+    </TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_MALACCAN_PIRATES_HELP_1</Tag>
 		<English>[ICON_BULLET]A dangerous number of barbarian [COLOR_UNIT_TEXT]Torpedoboat[COLOR_REVERT] units have spawned near our waters.</English>
@@ -8127,6 +8240,10 @@
 		<Polish>Wspaniale, wy&#156;lemy j&#185; do dalekich port&#243;w po wielkie pieni&#185;dze.</Polish>
 		<Russian>Отлично, я отправлю его в далекий порт за большие деньги.</Russian>
 	</TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_MERCHANTFLEET1</Tag>
+        <English>Use the momentum to expand our merchant fleet.</English>
+    </TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_METAL_DECKS_1</Tag>
 		<English>Make it so.</English>
@@ -8243,6 +8360,10 @@
 		<Italian>Finanzia la modernizzazioneo della flotta di mezzi del nostro esercito affinché usino la nuova formula.</Italian>
 		<Spanish>Que se financie la modernización de nuestra flotilla de vehículos militares para que pueda aprovechar la nueva fórmula.</Spanish>
 	</TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_MOTOR_OIL_3</Tag>
+        <English>Make sure our army is always supplied.</English>
+    </TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_MUSICOFGODS_1</Tag>
 		<English>Enact more stringent noise pollution laws, these nerds should be doing something more productive than making "music".</English>
@@ -8339,6 +8460,10 @@
 		<Polish>Wy&#156;lij gratulacje szamanom, kt&#243;rzy ryzykowali &#191;yciem, aby odkry&#230; te cenne zio&#179;a lecznicze.</Polish>
 		<Russian>Передайте наши поздравления шаманам, которые рисковали своей жизнью, чтобы открыть эти целебные травы.</Russian>
 	</TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_NATUROPATHY_FOUNDED_2</Tag>
+        <English>No, only those who pay will get to be healed.</English>
+    </TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_NAVAL_PROXIMITY_AAA_FUSES</Tag>
 		<English>Our naval units have been equipped with new anti-aircraft guns.</English>
@@ -8515,6 +8640,10 @@
 		<Polish>Nic nie mo&#191;emy z tym zrobi&#230;.</Polish>
 		<Russian>Мы мало что можем сделать.</Russian>
 	</TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_NO_JUSTICE_2</Tag>
+        <English>Invest into fixing this problem.</English>
+    </TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_NSLCHAMP</Tag>
 		<English>The hometown hero of %s2_city has just won the National Sports League championship! What is he going to do next?</English>
@@ -8632,6 +8761,10 @@
 		<Polish>Jaka szkoda.</Polish>
 		<Russian>Скверные известия.</Russian>
 	</TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_OVERFISHING_2</Tag>
+        <English>Fund methods to help the fish breed. We can't afford to let them go extinct.</English>
+    </TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_OVERWHELM_1</Tag>
 		<English>The Overwhelm Doctrine[PARAGRAPH:1]You are tasked by your military leaders to construct a fully functional aircraft carrier battle fleet.</English>
@@ -8775,6 +8908,14 @@
 		<Polish>To jest wysokoiej jakosci torf! Wzmocni nasza produkcje.</Polish>
 		<Russian>Ýòî òîðô âûñøåé ïðîáû. Îí áóäåò ñòèìóëèðîâàòü íàøå ïðîèçâîäñòâî.</Russian>
 	</TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_PEAT_2</Tag>
+        <English>Invest in scaling the extraction.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_PEAT_3</Tag>
+        <English>Try to max out production, money is not an issue.</English>
+    </TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_PESTILENCE_1</Tag>
 		<English>That's horrible.</English>
@@ -8829,6 +8970,10 @@
 		<Polish>Strzelaj gdy b&#234;dziesz got&#243;w, panie Gridley.</Polish>
 		<Russian>Стреляйте, когда будете готовы, господин Гридли.</Russian>
 	</TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_PIRATES_OF_THE_NEUTRAL_ZONES_2</Tag>
+        <English>Get them lads with the oldest of traps, gold.</English>
+    </TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_PIRATES_OF_THE_NEUTRAL_ZONES_HELP_1</Tag>
 		<English>[ICON_BULLET]A dangerous number of barbarian [COLOR_UNIT_TEXT]Stealth Destroyer[COLOR_REVERT] units have spawned near our waters.</English>
@@ -9145,7 +9290,11 @@
 		<Polish>Nasza armia potrzebuje ka&#191;dego rekruta jakiego mo&#191;emy zdoby&#230;. Przekonajcie niezdecydowanych z&#179;otem.</Polish>
 		<Russian>В армии нашей страны каждый человек на счету! Убедите всех колеблющихся с помощью денежных поощрений.</Russian>
 	</TEXT>
-	<TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_RECRUITMENT_DRIVE_4</Tag>
+        <English>Total mobilization, promise glory and riches galore. No man can resist the lure of gold.</English>
+    </TEXT>
+    <TEXT>
 		<Tag>TXT_KEY_EVENT_REFINERY_EXPLOSION_1</Tag>
 		<English>Organize a rebuilding effort and clean up the chemicals.</English>
 		<French>Organisez un projet de reconstruction et de nettoyage de la pollution.</French>
@@ -9203,6 +9352,10 @@
 		<Polish>Kto nie lubi wystaw sklepowych. Zacznijcie kasowa&#230; turyst&#243;w za gapienie si&#234; na nie.</Polish>
 		<Russian>Кому не по нраву витрины? Даешь доходы от туризма!</Russian>
 	</TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_RESORT_TOWN_2</Tag>
+        <English>Reinvest the profits back into the town making sure everything is perfect. Let's make it a tourist paradise.</English>
+    </TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_REVOLT_TURNS</Tag>
 		<English>[ICON_BULLET]%d1 [NUM1:turn:turns] of disorder in %s2_city</English>
@@ -9249,7 +9402,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_ROGUE_STATION_1</Tag>
-		<English>Send a blackops group to destroy the radio tower, we can blame it on an industrial accident.</English>
+		<English>Send a black op's group to destroy the radio tower, we can blame it on an industrial accident.</English>
 		<French>Envoyez le GIGN détruire la station émettrice, nous prétendrons que c'est un accident industriel.</French>
 		<German>Ein verdecktes Einsatzkommando soll den Sender zerstören, aber lasst es wie einen Unfall aussehen.</German>
 		<Italian>Manda una squadra speciale a distruggere la stazione radio, possiamo addossare le cause ad un incidente industriale.</Italian>
@@ -9327,6 +9480,10 @@
 		<Polish>Wy&#156;lij gratulacje do tw&#243;rc&#243;w tego nowego statku.</Polish>
 		<Russian>Send congratulations to the boat builders who built this new ship.</Russian>
 	</TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_SAILING_FOUNDED_2</Tag>
+        <English>Pay the builders to build more than one ship. Our navy will rule the waves.</English>
+    </TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_SALTPETER_1</Tag>
 		<English>Our ability to manufacture large amounts of gunpowder should prove lucrative.</English>
@@ -9417,11 +9574,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_SCHOLARS_4</Tag>
-		<English>Scholarly societies are for the weak. Press these foolish youths into our army.</English>
-		<French>Les sociétés savantes sont pour les faibles. Envoyez ces jeunes fous dans notre armée.</French>
-		<German>Wissenschaft ist etwas für Schwächlinge. Sie wissen nicht wohin? Teilt sie unserer Armee zu!</German>
-		<Polish>Bractwa student&#243;w sa dla mieczak&#243;w. Wcielic wszystkich student&#243;w do armii!</Polish>
-		<Russian>Ýòè âñå àêàäåìèè äëÿ ñëþíòÿåâ è ñëàáàêîâ. Çàáðåéòå ýòèõ ãëóïûõ þíöîâ â ðÿäû íàøåé àðìèè.</Russian>
+		<English>Tax them for the privilege of learning here.</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_SEA_TURTLES_1</Tag>
@@ -9552,7 +9705,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_SILVER_RAIN_3</Tag>
-		<English>We could try nuking those clouds. Electromagnetic pulse should shutdown the nanites.</English>
+		<English>We could try nuking those clouds. Electromagnetic pulse should shut down the nanobots.</English>
 		<French>Nous allons essayer d'anéantir ces nuages. Une charge Electromagnetique devrait désactiver les nanites.</French>
 		<German>Wir könnten versuchen, diese Wolken mit Atomwaffen zu beschießen. Der elektromagnetische Impuls sollte sie lahmlegen.</German>
 		<Italian>Potremmo usare delle armi atomiche. L'impulso elettromagnetico dovrebbe disattivare i naniti.</Italian>
@@ -9634,6 +9787,10 @@
 		<Polish>Gdyby&#156;my tylko znali tajemnic&#234; Medycyny!</Polish>
 		<Russian>Если бы у нас было знание Медицины!</Russian>
 	</TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_SMALLPOX_3</Tag>
+        <English>Kill any one that dares to leave the city. Show no mercy this plague ends here.</English>
+    </TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_SMALLPOX_HELP_2</Tag>
 		<English>[ICON_BULLET]The smallpox spreads to some nearby cities and reduces their population by %d1</English>
@@ -9701,6 +9858,14 @@
 		<Polish>Bardzo dobrze. Ludzi powinni zna&#230; swoje miejsce.</Polish>
 		<Russian>Скатертью дорога. Люди должны знать свое место.</Russian>
 	</TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_SOCIAL_STAGNATION_2</Tag>
+        <English>Lets try to improve the situation in the short therm.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_SOCIAL_STAGNATION_3</Tag>
+        <English>And where in the hell do they think they are going.</English>
+    </TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_SOLO_FLIGHT_1</Tag>
 		<English>This grand achievement has won admiration from people across the globe!</English>
@@ -9765,6 +9930,10 @@
 		<Italian>Paga affinché il grano perduto sia sostituito.</Italian>
 		<Spanish>Que se pague la reposición de los cereales perdidos.</Spanish>
 	</TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_SPOILED_GRAIN_3</Tag>
+        <English>Buy some food just to make sure people don't starve.</English>
+    </TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_SPORTS_LEAGUE_1</Tag>
 		<English>National Sports League[PARAGRAPH:1]You are tasked by your cultural advisors to build enough [COLOR_BUILDING_TEXT]Colosseums[COLOR_REVERT] to support viable sports leagues.</English>
@@ -9865,6 +10034,10 @@
 		<Polish>Chc&#234; dorwa&#230; tego pirata w swoje r&#234;ce!</Polish>
 		<Russian>I want this "Gentleman of Fortune" to swing by a yardarm!</Russian>
 	</TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_STEDE_BONNET_2</Tag>
+        <English>A bag of gold a day keeps this savages away.</English>
+    </TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_STEDE_BONNET_HELP_1</Tag>
 		<English>[ICON_BULLET]A dangerous number of barbarian [COLOR_UNIT_TEXT]Carrack[COLOR_REVERT] and [COLOR_UNIT_TEXT]East Indiaman[COLOR_REVERT] units have spawned near our waters.</English>
@@ -9885,6 +10058,18 @@
 		<Polish>&#140;wietnie, to poprawi nasz&#185; efektywno&#156;&#230; zarz&#185;dzania.</Polish>
 		<Russian>Отлично, это повысит эффективность нашей администрации.</Russian>
 	</TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_STREAMLINED_GOVERNMENT_2</Tag>
+        <English>Let's try to go even further what could go wrong?</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_STREAMLINED_GOVERNMENT_3</Tag>
+        <English>Yes, we did it great.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_STREAMLINED_GOVERNMENT_4</Tag>
+        <English>Oh no, a man should know when to stop.</English>
+    </TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_STRONGER_FITTINGS_1</Tag>
 		<English>Commission the new fittings for all of our crossbow units.</English>
@@ -9983,7 +10168,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_SYNTHETIC_FUELS_2</Tag>
-		<English>The idea is interesting, but risky. Give this researcher enough money to to hire a staff and buy some new equipment, but hold firm on further requests.</English>
+		<English>The idea is interesting, but risky. Give this researcher enough money to hire a staff and buy some new equipment, but hold firm on further requests.</English>
 		<French>L'idée est intéressante, mais risquée. Donnez à ce chercheur assez d'argent à pour engager une équipe et pour acheter des équipements, mais refusez d'autres demandes de leur part.</French>
 		<German>Die Idee ist interessant aber riskant. Geben Sie diesem Forscher genügend Geld, um Personal anzustellen und etwas neue Ausrüstung zu kaufen, aber halten Sie sich bei weiteren Forderungen zurück.</German>
 		<Italian>L'idea è interessante, ma rischiosa. Dai a questo ricercatore abbastanza soldi per assumere del personale e per comprare una certa quantità di equipaggiamento, ma non cedere ad ulteriori richieste.</Italian>
@@ -10060,6 +10245,10 @@
 		<Polish>Radujmy si&#234; z odkrycia naszego garbarza.</Polish>
 		<Russian>Мы преклоняемся перед этим достижением нашего кожевника.</Russian>
 	</TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_TANNERY_GLUE_2</Tag>
+        <English>Help him expand the workspace we can profit of it even more and the extra glue will come handy.</English>
+    </TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_TARPIT</Tag>
 		<English>Your troops are stuck in a tar pit.</English>
@@ -10091,6 +10280,10 @@
 		<Polish>Wydaje si&#234;, &#191;e nasz skarbiec nie jest w cale taki wielki jak si&#234; wydawa&#179;o.</Polish>
 		<Russian>Похоже, наша казна не так велика, как мы думали.</Russian>
 	</TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_TAX_COLLECTION_RECORDS_2</Tag>
+        <English>Time to fix the mistake, send in the army take everything.</English>
+    </TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_TEA_1</Tag>
 		<English>The taxes from these sales should boost our coffers nicely, as well as boosting our relations.</English>
@@ -10217,6 +10410,10 @@
 		<Polish>Musimy zebra&#230; nasz&#185; flot&#234;, aby pokona&#179;a te barbarzy&#241;skie &#156;winie.</Polish>
 		<Russian>Мы должны собрать в единый кулак наш флот для победы над этими грязными свиньями.</Russian>
 	</TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_THE_CORSAIRS_2</Tag>
+        <English>Drown them in gold.</English>
+    </TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_THE_CORSAIRS_HELP_1</Tag>
 		<English>[ICON_BULLET]A dangerous number of barbarian [COLOR_UNIT_TEXT]Carrack[COLOR_REVERT] units have spawned near our waters.</English>
@@ -10458,6 +10655,10 @@
 		<Polish>&#175;ycz im powodzenia.</Polish>
 		<Russian>Пожелайте им удачи.</Russian>
 	</TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_TRADE_FOUNDED_2</Tag>
+        <English>We must use this chance to expand our trade network. Give them all the gold they need.</English>
+    </TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_TREASURY_PLUNDERED_1</Tag>
 		<English>None of the thieves were captured? Issue price on their heads and increase city taxes to cover the losses!</English>
@@ -10556,9 +10757,13 @@
 		<Italian>Un giovane appassionato ha intrapreso una crociata per piantare più meli possibile.</Italian>
 		<Spanish>Un apasionado joven ha emprendido una cruzada para plantar cuantos manzanos pueda.</Spanish>
 	</TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_TRIGGER_ARCHERY_FOUNDED1</Tag>
+        <English>Some people have discovered archery.</English>
+    </TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_TRIGGER_ARCHERY_FOUNDED_1</Tag>
-		<English>Hunters in %s2_city have equipped themselves now with bows and arrows - our city gets 1 free archer unit.</English>
+		<English>Hunters in %s2_city have equipped themselves now with bows and arrows.</English>
 		<French>Les Chasseurs de %s2_city se sont équipés eux-mêmes d'arcs et de flèches - notre Ville reçoit une unité d'archers gratuite.</French>
 		<German>Jäger in %s2_city haben sich jetzt mit Pfeil und Bogen ausgerüstet - unsere Stadt erhält einen kostenlosen Bogenschützen.</German>
 		<Italian>I cacciatori di %s2_city hanno iniziato ad equipaggiarsi con archi e frecce - la nostra città ottiene 1 arciere gratuito.</Italian>
@@ -11081,17 +11286,18 @@
 		<Italian>Un potente ciclone, originato nell'emisfero meridionale, ha colpito %s2_city.</Italian>
 		<Spanish>Un fuerte ciclón proveniente del hemisferio sur ha pasado por %s2_city.</Spanish>
 	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_EVENT_TRIGGER_DARWINS_VOYAGE</Tag>
-		<English>After completing an ocean voyage around the world, one of our scientists has published a new theory of the origins of life based on his studies of the strange animals in foreign lands. News of this theory has spurred research throughout the Empire.</English>
-		<French>Après avoir réalisé un voyage maritime tout autour du monde, un de nos scientifiques a édité une nouvelle théorie des origines de la vie basées sur ses études des animaux exotiques dans les terres lointaines. Les nouvelles de cette théorie ont stimulé la recherche dans tout l'empire.</French>
-		<German>Nachdem er eine Ozeanreise rund um die Welt durchgeführt hat, hat einer unserer Wissenschaftler eine neue Theorie über den Ursprung des Lebens veröffentlicht, basierend auf seinen Studien der eigenartigen Tiere in fremden Ländern. Die Verbreitung dieser Theorie hat die Forschung im ganzen Land befruchtet.</German>
-		<Italian>Dopo avere completato un viaggio dell'oceano intorno al mondo, uno dei nostri scienziati ha pubblicato una nuova teoria sulle origini della vita basata sui suoi studi degli animali sconosciuti in terre straniere. Le notizie di questa teoria hanno stimolato la ricerca in tutto l'Impero.</Italian>
-		<Spanish>Tras completar un viaje por los océanos de todo el mundo, uno de nuestros científicos ha publicado una nueva teoría sobre los orígenes de la vida basada en sus estudios de los animales extraños en tierras extranjeras. Las noticias acerca de esta teoría han estimulado la investigación por todo el imperio.</Spanish>
-		<Polish>Po zako&#241;czeniu podr&#243;&#191;y dooko&#179;a &#156;wiata, jeden z naszych naukowc&#243;w opublikowa&#179; now&#185; teori&#234; o pocz&#185;tkach &#191;ycia, w oparciu o badania nad dziwnymi zwierz&#234;tami na obcych ziemiach. Wie&#156;ci o tej teorii szybko obieg&#179;y ca&#179;e Imperium.</Polish>
-		<Russian>Один из наших зоологов после завершения кругосветного путешествия по морю опубликовал новую теорию происхождения жизни, основанную на его исследованиях экзотических животных. Новые положения из этой теории существенно продвинули вперед отечественную науку.</Russian>
-	</TEXT>
-	<TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_TRIGGER_DARWINS_VOYAGE1</Tag>
+        <English>After completing an ocean voyage around the world, one of our scientists has published a new theory of the origins of life based on his studies of the strange animals in foreign lands.</English>
+        <French>Après avoir réalisé un voyage maritime tout autour du monde, un de nos scientifiques a édité une nouvelle théorie des origines de la vie basées sur ses études des animaux exotiques dans les terres lointaines. Les nouvelles de cette théorie ont stimulé la recherche dans tout l'empire.</French>
+        <German>Nachdem er eine Ozeanreise rund um die Welt durchgeführt hat, hat einer unserer Wissenschaftler eine neue Theorie über den Ursprung des Lebens veröffentlicht, basierend auf seinen Studien der eigenartigen Tiere in fremden Ländern. Die Verbreitung dieser Theorie hat die Forschung im ganzen Land befruchtet.</German>
+        <Italian>Dopo avere completato un viaggio dell'oceano intorno al mondo, uno dei nostri scienziati ha pubblicato una nuova teoria sulle origini della vita basata sui suoi studi degli animali sconosciuti in terre straniere. Le notizie di questa teoria hanno stimolato la ricerca in tutto l'Impero.</Italian>
+        <Spanish>Tras completar un viaje por los océanos de todo el mundo, uno de nuestros científicos ha publicado una nueva teoría sobre los orígenes de la vida basada en sus estudios de los animales extraños en tierras extranjeras. Las noticias acerca de esta teoría han estimulado la investigación por todo el imperio.</Spanish>
+        <Polish>Po zako&#241;czeniu podr&#243;&#191;y dooko&#179;a &#156;wiata, jeden z naszych naukowc&#243;w opublikowa&#179; now&#185; teori&#234; o pocz&#185;tkach &#191;ycia, w oparciu o badania nad dziwnymi zwierz&#234;tami na obcych ziemiach. Wie&#156;ci o tej teorii szybko obieg&#179;y ca&#179;e Imperium.</Polish>
+        <Russian>Один из наших зоологов после завершения кругосветного путешествия по морю опубликовал новую теорию происхождения жизни, основанную на его исследованиях экзотических животных. Новые положения из этой теории существенно продвинули вперед отечественную науку.</Russian>
+    </TEXT>
+
+    <TEXT>
 		<Tag>TXT_KEY_EVENT_TRIGGER_DOCK_WORKERS_STRIKE</Tag>
 		<English>Dock workers in %s2_city have begun a city-wide strike, calling for better working conditions!</English>
 		<French>Les Dockers de %s2_city ont cessé le travail et font grève pour de meilleures conditions de travail!</French>
@@ -12094,7 +12300,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_TRIGGER_MERCENARIES_ANCIENT_1</Tag>
-		<English>Ruthless mercenaries approach you with a threat: They demand 100 gold from our treasury and if not given, they'll attack us.</English>
+		<English>Ruthless mercenaries approach you with a threat: They demand gold from our treasury and if not given, they'll attack us.</English>
 		<French>Des Mercenaires audaçieux nous ont contacté et ont proféré des menaces: Ils demandent 100 or de notre trésor, ou ils nous attaqueront.</French>
 		<German>Gewissenlose Söldner erscheinen mit einer Drohung vor Dir: Sie verlangen 100 Gold aus unserem Staatsschatz oder sie werden uns angreifen.</German>
 		<Italian>Dei mercenari senza scrupoli si avvicinano a te con una minaccia: Chiedono 100 oro dal nostro tesoro; se non accetteremo, attaccheranno.</Italian>
@@ -12104,7 +12310,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_TRIGGER_MERCENARIES_CLASSICAL_1</Tag>
-		<English>Ruthless mercenaries approach you with a threat: They demand 200 gold from our treasury and if not given, they'll attack us.</English>
+		<English>Ruthless mercenaries approach you with a threat: They demand gold from our treasury and if not given, they'll attack us.</English>
 		<French>Des Mercenaires sans pitié nous ont contacté et ont proféré des menaces: Ils demandent 200 or de notre trésor, ou ils nous attaqueront.</French>
 		<German>Gewissenlose Söldner erscheinen mit einer Drohung vor Dir: Sie verlangen 200 Gold aus unserem Staatsschatz oder sie werden uns angreifen.</German>
 		<Italian>Dei mercenari senza scrupoli si avvicinano a te con una minaccia: Chiedono 200 oro dal nostro tesoro; se non accetteremo, attaccheranno.</Italian>
@@ -12114,7 +12320,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_TRIGGER_MERCENARIES_MEDIEVAL_1</Tag>
-		<English>Ruthless mercenaries approach you with a threat: They demand 300 gold from our treasury and if not given, they'll attack us.</English>
+		<English>Ruthless mercenaries approach you with a threat: They demand gold from our treasury and if not given, they'll attack us.</English>
 		<French>Des Mercenaires sans pitié nous ont contacté et ont proféré des menaces: Ils demandent 300 or de notre trésor, ou ils nous attaqueront.</French>
 		<German>Gewissenlose Söldner erscheinen mit einer Drohung vor Dir: Sie verlangen 300 Gold aus unserem Staatsschatz oder sie werden uns angreifen.</German>
 		<Italian>Dei mercenari senza scrupoli si avvicinano a te con una minaccia: Chiedono 300 oro dal nostro tesoro; se non accetteremo, attaccheranno.</Italian>
@@ -12457,7 +12663,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_TRIGGER_REFINERY_EXPLOSION_1</Tag>
-		<English>A careless worker mixed wrong chemicals at the Oil Refinery in %s2_city causing a huge explosion which totally destroyed the facility. Several nearby industrial cityblocks were damaged and dangerous chemicals were spread to environment.</English>
+		<English>A careless worker mixed wrong chemicals at the Oil Refinery in %s2_city causing a huge explosion which totally destroyed the facility. Several nearby industrial city blocks were damaged and dangerous chemicals were spread to environment.</English>
 		<French>Un Ouvrier imprudent a mélangé des produits chimique incompatibles dans la Raffinerie de Prétrole de %s2_city, provoquant une énorme explosion qui a totalement détruit l'installation. Des logements à proximité ont été également endommagés et des produits toxiques se sont déversés dans la nature.</French>
 		<German>Ein achtloser Arbeiter hat in der Ölraffinerie in %s2_city die falschen Chemikalien gemischt und dabei eine riesige Explosion hervorgerufen, die die Anlage völlig zerstört hat. Verschiedene Industrieanlagen in der Umgebung wurden ebenfalls in Mitleidenschaft gezogen und gefährliche Chemikalien in die Umwelt freigesetzt.</German>
 		<Italian>Un lavoratore imprudente ha mischiato dei prodotti chimici nella raffineria di %s2_city causando un'enorme esplosione che ha distrutto completamente l'impianto. Molti quartieri industriali delle vicinanze sono stati danneggiati, mentre una nube tossica si sta diffondendo nell'ambiente.</Italian>
@@ -12499,7 +12705,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_TRIGGER_SAILING_FOUNDED_1</Tag>
-		<English>Boat builders in %s2_city have designed new ship type - our city gets 1 free galley unit.</English>
+		<English>Boat builders in %s2_city have designed new ship type.</English>
 		<French>Des fabricants de bâteaux dans %s2_city ont conçu un nouveau type de navire - notre ville reçoit une galère.</French>
 		<German>Schiffsbauer in %s2_city haben einen neuen Schiffstyp konstruiert - unsere Stadt erhält eine kostenlose Galeere.</German>
 		<Italian>I costruttori di barche di %s2_city hanno progettato un nuovo tipo di nave - la nostra città ottiene 1 galea gratuita.</Italian>
@@ -12685,7 +12891,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_TRIGGER_SPICY_2</Tag>
-		<English>A worker was farming near the city of %s2_city when he discovered an herb that makes food more delicious.</English>
+		<English>A worker was farming near the city of %s2_city when he discovered a special herb that makes food more delicious.</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_TRIGGER_SPOILED_GRAIN_1</Tag>
@@ -13128,7 +13334,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_TSUNAMI_1</Tag>
-		<English>The city now lies in ruins. All life has been lost, all property obliterated.</English>
+		<English>The city now lies in ruins. All life has been lost, all property obliterated. Gather the survivors we must carry on.</English>
 		<French>La ville est désormais en ruines. Toute trace de vie a disparu, tous les bâtiments ont été anéantis.</French>
 		<German>Die Stadt liegt in Trümmern. Niemand hat überlebt, es wurde alles ausgelöscht.</German>
 		<Italian>La città giace in rovina. Tutte le vite sono state spente, tutti i beni distrutti.</Italian>
@@ -13142,6 +13348,10 @@
 		<Italian>La città ha sofferto enormi perdite di vite e beni. Ci vorranno decadi per la ripresa.</Italian>
 		<Spanish>La ciudad ha sufrido grandes pérdidas de vidas y edificios, y tardará décadas en recuperarse.</Spanish>
 	</TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_TSUNAMI_3</Tag>
+        <English>Evacuate everyone we can, we can start over again, it is what it is.</English>
+    </TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_TSUNAMI_2_HELP</Tag>
 		<English>[ICON_BULLET]Up to %d1 buildings destroyed in %s2_city</English>
@@ -13157,6 +13367,14 @@
 		<Polish>Mozemy sprzedwac cenne kly z niezlym zyskiem!</Polish>
 		<Russian>Ìû ìîæåì ïðîäàòü äðàãîöåííûå áèâíè è ïîëó÷àòü äîïîëíèòåëüíóþ ïðèáûëü.</Russian>
 	</TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_TUSK_2</Tag>
+        <English>This sounds promising,let us invest.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_TUSK_3</Tag>
+        <English>Let us try to get the most of this, give them everything they need.</English>
+    </TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_UFO_1</Tag>
 		<English>Interrogate and shoot anyone who wanders inside our base area. In public release fake reports how these people got killed while wandering in weapon testing range. It should keep the public away from the area and our secret projects will be kept in secret.</English>
@@ -13169,7 +13387,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_UFO_2</Tag>
-		<English>Tighten security and gather information about everyone who approaches our base without proper authorization. Do not acknowledge any of the so called "UFO"-sightings but let the people photograph the area from distance.</English>
+		<English>Tighten security and gather information about everyone who approaches our base without proper authorization. Do not acknowledge any of the alleged "UFO"-sightings but let the people photograph the area from distance.</English>
 		<French>Augmentez la sécurité et récupérer des informations sur tous ceux qui s'approchent de la base sans autorisation. Démentez toutes informations concernant ces soi-disants Ovnis, mais laissez les gens photographier la zone de loin.</French>
 		<German>Erhöhe die Sicherheitsmaßnahmen und sammle Informationen über jeden, der sich unserer Basis ohne unsere Autorisierung nähert. Bestätigt keine dieser "UFO-Sichtungen" aber lasst die Menschen die Stelle aus der Ferne fotografieren.</German>
 		<Italian>Rafforza la sicurezza e raccogli informazioni su chiunque si avvicini alla nostra base senza un'adeguata autorizzazione. Non confermare nessun avvistamento degli UFO, ma lascia che la gente fotografi la base dalla distanza.</Italian>
@@ -13502,6 +13720,10 @@
 		<Polish>Nowe dodatki do naszych pomnik&#243;w zadziwia lokalnych mieszka&#241;c&#243;w.</Polish>
 		<Russian>The new additions to our monuments will continue to awe the locals.</Russian>
 	</TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_WAR_MEMORIAL_3</Tag>
+        <English>Let us build a monument of eternal memory. Let the future generations know on what their country stands.</English>
+    </TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_WASHED_OUT_1</Tag>
 		<English>We will have to send workers to repair them at a later time.</English>
