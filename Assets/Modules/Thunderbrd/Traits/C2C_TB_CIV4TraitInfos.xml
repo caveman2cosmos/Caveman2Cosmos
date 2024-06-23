@@ -5526,6 +5526,10 @@
 				</FreePromotionUnitCombatType>
 			</FreePromotionUnitCombatTypes>
 			<BuildingProductionModifierTypes>
+			<BuildingProductionModifierType>
+					<BuildingType>BUILDING_CAVE_SHELTER</BuildingType>
+					<iBuildingProductionModifier>25</iBuildingProductionModifier>
+				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_ABATIS</BuildingType>
 					<iBuildingProductionModifier>25</iBuildingProductionModifier>
@@ -5756,6 +5760,10 @@
 				</BuildingProductionModifierType>
 			</BuildingProductionModifierTypes>
 			<BuildingHappinessModifierTypes>
+			    <BuildingHappinessModifierType>
+					<BuildingType>BUILDING_CAVE_SHELTER</BuildingType>
+					<iBuildingHappinessModifier>1</iBuildingHappinessModifier>
+				</BuildingHappinessModifierType>
 				<BuildingHappinessModifierType>
 					<BuildingType>BUILDING_ABATIS</BuildingType>
 					<iBuildingHappinessModifier>1</iBuildingHappinessModifier>
@@ -6221,6 +6229,10 @@
 				</FreePromotionUnitCombatType>
 			</FreePromotionUnitCombatTypes>
 			<BuildingProductionModifierTypes>
+			    <BuildingProductionModifierType>
+					<BuildingType>BUILDING_CAVE_SHELTER</BuildingType>
+					<iBuildingProductionModifier>25</iBuildingProductionModifier>
+				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_ABATIS</BuildingType>
 					<iBuildingProductionModifier>25</iBuildingProductionModifier>
@@ -6387,6 +6399,10 @@
 				</BuildingProductionModifierType>
 			</BuildingProductionModifierTypes>
 			<BuildingHappinessModifierTypes>
+			    <BuildingHappinessModifierType>
+					<BuildingType>BUILDING_CAVE_SHELTER</BuildingType>
+					<iBuildingHappinessModifier>1</iBuildingHappinessModifier>
+				</BuildingHappinessModifierType>
 				<BuildingHappinessModifierType>
 					<BuildingType>BUILDING_ABATIS</BuildingType>
 					<iBuildingHappinessModifier>1</iBuildingHappinessModifier>
@@ -7293,6 +7309,10 @@
 				</FreePromotionUnitCombatType>
 			</FreePromotionUnitCombatTypes>
 			<BuildingProductionModifierTypes>
+			    <BuildingProductionModifierType>
+					<BuildingType>BUILDING_CAVE_SHELTER</BuildingType>
+					<iBuildingProductionModifier>-25</iBuildingProductionModifier>
+				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_ABATIS</BuildingType>
 					<iBuildingProductionModifier>-25</iBuildingProductionModifier>
@@ -7760,6 +7780,10 @@
 				</FreePromotionUnitCombatType>
 			</FreePromotionUnitCombatTypes>
 			<BuildingProductionModifierTypes>
+			    <BuildingProductionModifierType>
+					<BuildingType>BUILDING_CAVE_SHELTER</BuildingType>
+					<iBuildingProductionModifier>-25</iBuildingProductionModifier>
+				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_ABATIS</BuildingType>
 					<iBuildingProductionModifier>-25</iBuildingProductionModifier>
@@ -70328,6 +70352,10 @@
 					<iBuildingProductionModifier>25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
+					<BuildingType>BUILDING_CAVE_SHELTER</BuildingType>
+					<iBuildingProductionModifier>25</iBuildingProductionModifier>
+				</BuildingProductionModifierType>
+				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_ABATIS</BuildingType>
 					<iBuildingProductionModifier>25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
@@ -71250,6 +71278,10 @@
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_SENTRY_POST</BuildingType>
+					<iBuildingProductionModifier>25</iBuildingProductionModifier>
+				</BuildingProductionModifierType>
+				<BuildingProductionModifierType>
+					<BuildingType>BUILDING_CAVE_SHELTER</BuildingType>
 					<iBuildingProductionModifier>25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
