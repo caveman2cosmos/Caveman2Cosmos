@@ -99,7 +99,7 @@
             <fInterfaceScale>0</fInterfaceScale>
             <NIF/>
             <KFM/>
-            <Button>art/buttons/buildings/caveicon.dds</Button>
+            <Button>art/buttons/buildings/cave_icon.dds</Button>
         </BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_ABATIS</Type>
@@ -35872,7 +35872,7 @@
             <fInterfaceScale>0</fInterfaceScale>
             <NIF/>
             <KFM/>
-            <Button>Art/Buttons/Buildings/WoodenWaterTrough.dds</Button>
+            <Button>Art/Buttons/Buildings/water_trough.dds</Button>
         </BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_RIVER_RAFTING_DOCK</Type>
