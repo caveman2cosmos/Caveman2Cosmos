@@ -91,6 +91,220 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
+            <BonusProductionModifiers>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_WHALE</BonusType>
+                    <iProductonModifier>1</iProductonModifier>
+                </BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_SHRIMP</BonusType>
+                    <iProductonModifier>1</iProductonModifier>
+                </BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_MUREX</BonusType>
+                    <iProductonModifier>1</iProductonModifier>
+                </BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_LOBSTER</BonusType>
+                    <iProductonModifier>1</iProductonModifier>
+                </BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_FISH</BonusType>
+                    <iProductonModifier>1</iProductonModifier>
+                </BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_CRAB</BonusType>
+                    <iProductonModifier>1</iProductonModifier>
+                </BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_CLAM</BonusType>
+                    <iProductonModifier>1</iProductonModifier>
+                </BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_WALRUS</BonusType>
+                    <iProductonModifier>1</iProductonModifier>
+                </BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_SEA_LION_AND_SEAL</BonusType>
+                    <iProductonModifier>1</iProductonModifier>
+                </BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_RABBIT</BonusType>
+                    <iProductonModifier>1</iProductonModifier>
+                </BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_POULTRY</BonusType>
+                    <iProductonModifier>1</iProductonModifier>
+                </BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_MUSHROOMS</BonusType>
+                    <iProductonModifier>1</iProductonModifier>
+                </BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_GRAPES</BonusType>
+                    <iProductonModifier>1</iProductonModifier>
+                </BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_VANILLA</BonusType>
+                    <iProductonModifier>1</iProductonModifier>
+                </BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_PRICKLY_PEAR</BonusType>
+                    <iProductonModifier>1</iProductonModifier>
+                </BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_PEYOTE</BonusType>
+                    <iProductonModifier>1</iProductonModifier>
+                </BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_KAVA</BonusType>
+                    <iProductonModifier>1</iProductonModifier>
+                </BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_COCOA</BonusType>
+                    <iProductonModifier>1</iProductonModifier>
+                </BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_OLIVES</BonusType>
+                    <iProductonModifier>1</iProductonModifier>
+                </BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_POMEGRANATE</BonusType>
+                    <iProductonModifier>1</iProductonModifier>
+                </BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_PISTACHIO</BonusType>
+                    <iProductonModifier>1</iProductonModifier>
+                </BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_PAPAYA</BonusType>
+                    <iProductonModifier>1</iProductonModifier>
+                </BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_MANGO</BonusType>
+                    <iProductonModifier>1</iProductonModifier>
+                </BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_LEMONS</BonusType>
+                    <iProductonModifier>1</iProductonModifier>
+                </BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_GUAVAS</BonusType>
+                    <iProductonModifier>1</iProductonModifier>
+                </BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_FIG</BonusType>
+                    <iProductonModifier>1</iProductonModifier>
+                </BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_DATES</BonusType>
+                    <iProductonModifier>1</iProductonModifier>
+                </BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_COCONUT</BonusType>
+                    <iProductonModifier>1</iProductonModifier>
+                </BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_BANANA</BonusType>
+                    <iProductonModifier>1</iProductonModifier>
+                </BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_APPLE</BonusType>
+                    <iProductonModifier>1</iProductonModifier>
+                </BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_ALMONDS</BonusType>
+                    <iProductonModifier>1</iProductonModifier>
+                </BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_WHEAT</BonusType>
+                    <iProductonModifier>1</iProductonModifier>
+                </BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_SQUASH</BonusType>
+                    <iProductonModifier>1</iProductonModifier>
+                </BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_RICE</BonusType>
+                    <iProductonModifier>1</iProductonModifier>
+                </BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_PUMPKIN</BonusType>
+                    <iProductonModifier>1</iProductonModifier>
+                </BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_POTATOES</BonusType>
+                    <iProductonModifier>1</iProductonModifier>
+                </BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_MELONS</BonusType>
+                    <iProductonModifier>1</iProductonModifier>
+                </BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_CORN</BonusType>
+                    <iProductonModifier>1</iProductonModifier>
+                </BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_BARLEY</BonusType>
+                    <iProductonModifier>1</iProductonModifier>
+                </BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_BISON</BonusType>
+                    <iProductonModifier>1</iProductonModifier>
+                </BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_DEER</BonusType>
+                    <iProductonModifier>1</iProductonModifier>
+                </BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_GUINEA_PIGS</BonusType>
+                    <iProductonModifier>1</iProductonModifier>
+                </BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_KANGAROO</BonusType>
+                    <iProductonModifier>1</iProductonModifier>
+                </BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_MAMMOTH</BonusType>
+                    <iProductonModifier>1</iProductonModifier>
+                </BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_RABBIT</BonusType>
+                    <iProductonModifier>1</iProductonModifier>
+                </BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_BEAVERS</BonusType>
+                    <iProductonModifier>1</iProductonModifier>
+                </BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_PIG</BonusType>
+                    <iProductonModifier>1</iProductonModifier>
+                </BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_SHEEP</BonusType>
+                    <iProductonModifier>1</iProductonModifier>
+                </BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_COW</BonusType>
+                    <iProductonModifier>1</iProductonModifier>
+                </BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_HORSE</BonusType>
+                    <iProductonModifier>2</iProductonModifier>
+                </BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_DONKEY</BonusType>
+                    <iProductonModifier>2</iProductonModifier>
+                </BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_LLAMA</BonusType>
+                    <iProductonModifier>2</iProductonModifier>
+                </BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_CAMEL</BonusType>
+                    <iProductonModifier>2</iProductonModifier>
+                </BonusProductionModifier>
+            </BonusProductionModifiers>
 			<DefaultUnitAI>UNITAI_SETTLE</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_TRIBE</Description>
 			<Civilopedia>TXT_KEY_UNIT_TRIBE_PEDIA</Civilopedia>
@@ -158,7 +372,221 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<DefaultUnitAI>UNITAI_SETTLE</DefaultUnitAI>
+            <BonusProductionModifiers>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_WHALE</BonusType>
+                    <iProductonModifier>1</iProductonModifier>
+                </BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_SHRIMP</BonusType>
+                    <iProductonModifier>1</iProductonModifier>
+                </BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_MUREX</BonusType>
+                    <iProductonModifier>1</iProductonModifier>
+                </BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_LOBSTER</BonusType>
+                    <iProductonModifier>1</iProductonModifier>
+                </BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_FISH</BonusType>
+                    <iProductonModifier>1</iProductonModifier>
+                </BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_CRAB</BonusType>
+                    <iProductonModifier>1</iProductonModifier>
+                </BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_CLAM</BonusType>
+                    <iProductonModifier>1</iProductonModifier>
+                </BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_WALRUS</BonusType>
+                    <iProductonModifier>1</iProductonModifier>
+                </BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_SEA_LION_AND_SEAL</BonusType>
+                    <iProductonModifier>1</iProductonModifier>
+                </BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_RABBIT</BonusType>
+                    <iProductonModifier>1</iProductonModifier>
+                </BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_POULTRY</BonusType>
+                    <iProductonModifier>1</iProductonModifier>
+                </BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_MUSHROOMS</BonusType>
+                    <iProductonModifier>1</iProductonModifier>
+                </BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_GRAPES</BonusType>
+                    <iProductonModifier>1</iProductonModifier>
+                </BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_VANILLA</BonusType>
+                    <iProductonModifier>1</iProductonModifier>
+                </BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_PRICKLY_PEAR</BonusType>
+                    <iProductonModifier>1</iProductonModifier>
+                </BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_PEYOTE</BonusType>
+                    <iProductonModifier>1</iProductonModifier>
+                </BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_KAVA</BonusType>
+                    <iProductonModifier>1</iProductonModifier>
+                </BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_COCOA</BonusType>
+                    <iProductonModifier>1</iProductonModifier>
+                </BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_OLIVES</BonusType>
+                    <iProductonModifier>1</iProductonModifier>
+                </BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_POMEGRANATE</BonusType>
+                    <iProductonModifier>1</iProductonModifier>
+                </BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_PISTACHIO</BonusType>
+                    <iProductonModifier>1</iProductonModifier>
+                </BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_PAPAYA</BonusType>
+                    <iProductonModifier>1</iProductonModifier>
+                </BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_MANGO</BonusType>
+                    <iProductonModifier>1</iProductonModifier>
+                </BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_LEMONS</BonusType>
+                    <iProductonModifier>1</iProductonModifier>
+                </BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_GUAVAS</BonusType>
+                    <iProductonModifier>1</iProductonModifier>
+                </BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_FIG</BonusType>
+                    <iProductonModifier>1</iProductonModifier>
+                </BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_DATES</BonusType>
+                    <iProductonModifier>1</iProductonModifier>
+                </BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_COCONUT</BonusType>
+                    <iProductonModifier>1</iProductonModifier>
+                </BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_BANANA</BonusType>
+                    <iProductonModifier>1</iProductonModifier>
+                </BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_APPLE</BonusType>
+                    <iProductonModifier>1</iProductonModifier>
+                </BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_ALMONDS</BonusType>
+                    <iProductonModifier>1</iProductonModifier>
+                </BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_WHEAT</BonusType>
+                    <iProductonModifier>1</iProductonModifier>
+                </BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_SQUASH</BonusType>
+                    <iProductonModifier>1</iProductonModifier>
+                </BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_RICE</BonusType>
+                    <iProductonModifier>1</iProductonModifier>
+                </BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_PUMPKIN</BonusType>
+                    <iProductonModifier>1</iProductonModifier>
+                </BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_POTATOES</BonusType>
+                    <iProductonModifier>1</iProductonModifier>
+                </BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_MELONS</BonusType>
+                    <iProductonModifier>1</iProductonModifier>
+                </BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_CORN</BonusType>
+                    <iProductonModifier>1</iProductonModifier>
+                </BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_BARLEY</BonusType>
+                    <iProductonModifier>1</iProductonModifier>
+                </BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_BISON</BonusType>
+                    <iProductonModifier>1</iProductonModifier>
+                </BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_DEER</BonusType>
+                    <iProductonModifier>1</iProductonModifier>
+                </BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_GUINEA_PIGS</BonusType>
+                    <iProductonModifier>1</iProductonModifier>
+                </BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_KANGAROO</BonusType>
+                    <iProductonModifier>1</iProductonModifier>
+                </BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_MAMMOTH</BonusType>
+                    <iProductonModifier>1</iProductonModifier>
+                </BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_RABBIT</BonusType>
+                    <iProductonModifier>1</iProductonModifier>
+                </BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_BEAVERS</BonusType>
+                    <iProductonModifier>1</iProductonModifier>
+                </BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_PIG</BonusType>
+                    <iProductonModifier>1</iProductonModifier>
+                </BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_SHEEP</BonusType>
+                    <iProductonModifier>1</iProductonModifier>
+                </BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_COW</BonusType>
+                    <iProductonModifier>1</iProductonModifier>
+                </BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_HORSE</BonusType>
+                    <iProductonModifier>2</iProductonModifier>
+                </BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_DONKEY</BonusType>
+                    <iProductonModifier>2</iProductonModifier>
+                </BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_LLAMA</BonusType>
+                    <iProductonModifier>2</iProductonModifier>
+                </BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_CAMEL</BonusType>
+                    <iProductonModifier>2</iProductonModifier>
+                </BonusProductionModifier>
+            </BonusProductionModifiers>
+            <DefaultUnitAI>UNITAI_SETTLE</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_SETTLER</Description>
 			<Civilopedia>TXT_KEY_UNIT_SETTLER_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_GROWTH</Advisor>
@@ -1289,6 +1717,16 @@
 			<Description>TXT_KEY_UNIT_TRACKER</Description>
 			<Civilopedia>TXT_KEY_UNIT_HUNTER_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_GROWTH</Advisor>
+            <BonusProductionModifiers>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_ROPE</BonusType>
+                    <iProductonModifier>10</iProductonModifier>
+                </BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_FLINT</BonusType>
+                    <iProductonModifier>10</iProductonModifier>
+                </BonusProductionModifier>
+            </BonusProductionModifiers>
 			<DefaultUnitAI>UNITAI_HUNTER</DefaultUnitAI>
 			<UnitAIs>
 				<UnitAI>
@@ -1400,6 +1838,20 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
+            <BonusProductionModifiers>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_ROPE</BonusType>
+                    <iProductonModifier>10</iProductonModifier>
+                </BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_FLINT</BonusType>
+                    <iProductonModifier>10</iProductonModifier>
+                </BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_PRIME_TIMBER</BonusType>
+                    <iProductonModifier>10</iProductonModifier>
+                </BonusProductionModifier>
+            </BonusProductionModifiers>
 			<DefaultUnitAI>UNITAI_HUNTER</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_HUNTER</Description>
 			<Civilopedia>TXT_KEY_UNIT_HUNTER_PEDIA</Civilopedia>
@@ -5809,7 +6261,7 @@
 			</UnitCombatMods>
 			<BonusProductionModifiers>
 				<BonusProductionModifier>
-					<BonusType>BONUS_PRIME_TIMBER</BonusType>
+					<BonusType>BONUS_WOOD</BonusType>
 					<iProductonModifier>15</iProductonModifier>
 				</BonusProductionModifier>
 			</BonusProductionModifiers>
@@ -5908,6 +6360,10 @@
 					<BonusType>BONUS_PRIME_TIMBER</BonusType>
 					<iProductonModifier>15</iProductonModifier>
 				</BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_FLINT</BonusType>
+                    <iProductonModifier>15</iProductonModifier>
+                </BonusProductionModifier>
 			</BonusProductionModifiers>
 			<iConscription>1</iConscription>
 			<iAsset>1</iAsset>
@@ -7304,6 +7760,10 @@
 				</UnitCombatMod>
 			</UnitCombatMods>
 			<BonusProductionModifiers>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_WOOD</BonusType>
+                    <iProductonModifier>15</iProductonModifier>
+                </BonusProductionModifier>
 				<BonusProductionModifier>
 					<BonusType>BONUS_PRIME_TIMBER</BonusType>
 					<iProductonModifier>15</iProductonModifier>
@@ -7407,6 +7867,10 @@
 					<BonusType>BONUS_FLINT</BonusType>
 					<iProductonModifier>15</iProductonModifier>
 				</BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_PRIME_TIMBER</BonusType>
+                    <iProductonModifier>15</iProductonModifier>
+                </BonusProductionModifier>
 			</BonusProductionModifiers>
 			<iConscription>2</iConscription>
 			<iAsset>1</iAsset>
@@ -8492,6 +8956,16 @@
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
+            <BonusProductionModifiers>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_STONE</BonusType>
+                    <iProductonModifier>15</iProductonModifier>
+                </BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_FLINT</BonusType>
+                    <iProductonModifier>15</iProductonModifier>
+                </BonusProductionModifier>
+            </BonusProductionModifiers>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitaryProduction>1</bMilitaryProduction>
@@ -8619,6 +9093,16 @@
 			<iCollateralDamageMaxUnits>1</iCollateralDamageMaxUnits>
 			<iCityDefense>20</iCityDefense>
 			<iHillsDefense>20</iHillsDefense>
+            <BonusProductionModifiers>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_ROPE</BonusType>
+                    <iProductonModifier>15</iProductonModifier>
+                </BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_FLINT</BonusType>
+                    <iProductonModifier>15</iProductonModifier>
+                </BonusProductionModifier>
+            </BonusProductionModifiers>
 			<UnitCombatMods>
 				<UnitCombatMod>
 					<UnitCombatType>UNITCOMBAT_ARCHER</UnitCombatType>
@@ -8743,6 +9227,10 @@
 					<BonusType>BONUS_OBSIDIAN</BonusType>
 					<iProductonModifier>25</iProductonModifier>
 				</BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_PRIME_TIMBER</BonusType>
+                    <iProductonModifier>15</iProductonModifier>
+                </BonusProductionModifier>
 			</BonusProductionModifiers>
 			<iConscription>4</iConscription>
 			<iAsset>2</iAsset>
@@ -12165,6 +12653,16 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
+            <BonusProductionModifiers>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_FLINT</BonusType>
+                    <iProductonModifier>5</iProductonModifier>
+                </BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_PRIME_TIMBER</BonusType>
+                    <iProductonModifier>5</iProductonModifier>
+                </BonusProductionModifier>
+            </BonusProductionModifiers>
 			<DefaultUnitAI>UNITAI_ATTACK</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_HORSEMAN</Description>
 			<Civilopedia>TXT_KEY_UNIT_HORSEMAN_PEDIA</Civilopedia>
@@ -14422,6 +14920,16 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
+            <BonusProductionModifiers>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_FLINT</BonusType>
+                    <iProductonModifier>5</iProductonModifier>
+                </BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_PRIME_TIMBER</BonusType>
+                    <iProductonModifier>5</iProductonModifier>
+                </BonusProductionModifier>
+            </BonusProductionModifiers>
 			<DefaultUnitAI>UNITAI_ATTACK</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_ELEPHANT_RIDER</Description>
 			<Civilopedia>TXT_KEY_UNIT_ELEPHANT_RIDER_PEDIA</Civilopedia>
@@ -15050,6 +15558,12 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
+            <BonusProductionModifiers>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_FLINT</BonusType>
+                    <iProductonModifier>10</iProductonModifier>
+                </BonusProductionModifier>
+            </BonusProductionModifiers>
 			<DefaultUnitAI>UNITAI_ATTACK</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_CAMEL_RIDER</Description>
 			<Civilopedia>TXT_KEY_UNIT_CAMEL_RIDER_PEDIA</Civilopedia>
@@ -17968,7 +18482,7 @@
 			<BonusProductionModifiers>
 				<BonusProductionModifier>
 					<BonusType>BONUS_PRIME_TIMBER</BonusType>
-					<iProductonModifier>15</iProductonModifier>
+					<iProductonModifier>30</iProductonModifier>
 				</BonusProductionModifier>
 			</BonusProductionModifiers>
 			<iAsset>1</iAsset>
@@ -28652,6 +29166,16 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
+            <BonusProductionModifiers>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_PRIME_TIMBER</BonusType>
+                    <iProductonModifier>5</iProductonModifier>
+                </BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_FLINT</BonusType>
+                    <iProductonModifier>5</iProductonModifier>
+                </BonusProductionModifier>
+            </BonusProductionModifiers>
 			<Description>TXT_KEY_UNIT_THIEF</Description>
 			<Civilopedia>TXT_KEY_CONCEPT_ESPIONAGE_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_MILITARY</Advisor>
@@ -28838,6 +29362,16 @@
 			<Description>TXT_KEY_UNIT_ROGUE</Description>
 			<Civilopedia>TXT_KEY_CONCEPT_ESPIONAGE_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_MILITARY</Advisor>
+            <BonusProductionModifiers>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_FLINT</BonusType>
+                    <iProductonModifier>5</iProductonModifier>
+                </BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_PRIME_TIMBER</BonusType>
+                    <iProductonModifier>5</iProductonModifier>
+                </BonusProductionModifier>
+            </BonusProductionModifiers>
 			<DefaultUnitAI>UNITAI_INFILTRATOR</DefaultUnitAI>
 			<UnitAIs>
 				<UnitAI>
@@ -32158,6 +32692,16 @@
 			<Description>TXT_KEY_UNIT_AMBUSHER</Description>
 			<Civilopedia>TXT_KEY_UNIT_AMBUSHER_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_GROWTH</Advisor>
+            <BonusProductionModifiers>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_FLINT</BonusType>
+                    <iProductonModifier>5</iProductonModifier>
+                </BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_PRIME_TIMBER</BonusType>
+                    <iProductonModifier>5</iProductonModifier>
+                </BonusProductionModifier>
+            </BonusProductionModifiers>
 			<DefaultUnitAI>UNITAI_ATTACK</DefaultUnitAI>
 			<UnitAIs>
 				<UnitAI>
@@ -44103,7 +44647,221 @@
 			<bNoCapture>1</bNoCapture>
 			<bRivalTerritory>1</bRivalTerritory>
 			<bMilitarySupport>1</bMilitarySupport>
-			<UnitUpgrades>
+            <BonusProductionModifiers>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_WHALE</BonusType>
+                    <iProductonModifier>1</iProductonModifier>
+                </BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_SHRIMP</BonusType>
+                    <iProductonModifier>1</iProductonModifier>
+                </BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_MUREX</BonusType>
+                    <iProductonModifier>1</iProductonModifier>
+                </BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_LOBSTER</BonusType>
+                    <iProductonModifier>1</iProductonModifier>
+                </BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_FISH</BonusType>
+                    <iProductonModifier>1</iProductonModifier>
+                </BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_CRAB</BonusType>
+                    <iProductonModifier>1</iProductonModifier>
+                </BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_CLAM</BonusType>
+                    <iProductonModifier>1</iProductonModifier>
+                </BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_WALRUS</BonusType>
+                    <iProductonModifier>1</iProductonModifier>
+                </BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_SEA_LION_AND_SEAL</BonusType>
+                    <iProductonModifier>1</iProductonModifier>
+                </BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_RABBIT</BonusType>
+                    <iProductonModifier>1</iProductonModifier>
+                </BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_POULTRY</BonusType>
+                    <iProductonModifier>1</iProductonModifier>
+                </BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_MUSHROOMS</BonusType>
+                    <iProductonModifier>1</iProductonModifier>
+                </BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_GRAPES</BonusType>
+                    <iProductonModifier>1</iProductonModifier>
+                </BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_VANILLA</BonusType>
+                    <iProductonModifier>1</iProductonModifier>
+                </BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_PRICKLY_PEAR</BonusType>
+                    <iProductonModifier>1</iProductonModifier>
+                </BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_PEYOTE</BonusType>
+                    <iProductonModifier>1</iProductonModifier>
+                </BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_KAVA</BonusType>
+                    <iProductonModifier>1</iProductonModifier>
+                </BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_COCOA</BonusType>
+                    <iProductonModifier>1</iProductonModifier>
+                </BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_OLIVES</BonusType>
+                    <iProductonModifier>1</iProductonModifier>
+                </BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_POMEGRANATE</BonusType>
+                    <iProductonModifier>1</iProductonModifier>
+                </BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_PISTACHIO</BonusType>
+                    <iProductonModifier>1</iProductonModifier>
+                </BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_PAPAYA</BonusType>
+                    <iProductonModifier>1</iProductonModifier>
+                </BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_MANGO</BonusType>
+                    <iProductonModifier>1</iProductonModifier>
+                </BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_LEMONS</BonusType>
+                    <iProductonModifier>1</iProductonModifier>
+                </BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_GUAVAS</BonusType>
+                    <iProductonModifier>1</iProductonModifier>
+                </BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_FIG</BonusType>
+                    <iProductonModifier>1</iProductonModifier>
+                </BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_DATES</BonusType>
+                    <iProductonModifier>1</iProductonModifier>
+                </BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_COCONUT</BonusType>
+                    <iProductonModifier>1</iProductonModifier>
+                </BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_BANANA</BonusType>
+                    <iProductonModifier>1</iProductonModifier>
+                </BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_APPLE</BonusType>
+                    <iProductonModifier>1</iProductonModifier>
+                </BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_ALMONDS</BonusType>
+                    <iProductonModifier>1</iProductonModifier>
+                </BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_WHEAT</BonusType>
+                    <iProductonModifier>1</iProductonModifier>
+                </BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_SQUASH</BonusType>
+                    <iProductonModifier>1</iProductonModifier>
+                </BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_RICE</BonusType>
+                    <iProductonModifier>1</iProductonModifier>
+                </BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_PUMPKIN</BonusType>
+                    <iProductonModifier>1</iProductonModifier>
+                </BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_POTATOES</BonusType>
+                    <iProductonModifier>1</iProductonModifier>
+                </BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_MELONS</BonusType>
+                    <iProductonModifier>1</iProductonModifier>
+                </BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_CORN</BonusType>
+                    <iProductonModifier>1</iProductonModifier>
+                </BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_BARLEY</BonusType>
+                    <iProductonModifier>1</iProductonModifier>
+                </BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_BISON</BonusType>
+                    <iProductonModifier>1</iProductonModifier>
+                </BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_DEER</BonusType>
+                    <iProductonModifier>1</iProductonModifier>
+                </BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_GUINEA_PIGS</BonusType>
+                    <iProductonModifier>1</iProductonModifier>
+                </BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_KANGAROO</BonusType>
+                    <iProductonModifier>1</iProductonModifier>
+                </BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_MAMMOTH</BonusType>
+                    <iProductonModifier>1</iProductonModifier>
+                </BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_RABBIT</BonusType>
+                    <iProductonModifier>1</iProductonModifier>
+                </BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_BEAVERS</BonusType>
+                    <iProductonModifier>1</iProductonModifier>
+                </BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_PIG</BonusType>
+                    <iProductonModifier>1</iProductonModifier>
+                </BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_SHEEP</BonusType>
+                    <iProductonModifier>1</iProductonModifier>
+                </BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_COW</BonusType>
+                    <iProductonModifier>1</iProductonModifier>
+                </BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_HORSE</BonusType>
+                    <iProductonModifier>2</iProductonModifier>
+                </BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_DONKEY</BonusType>
+                    <iProductonModifier>2</iProductonModifier>
+                </BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_LLAMA</BonusType>
+                    <iProductonModifier>2</iProductonModifier>
+                </BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_CAMEL</BonusType>
+                    <iProductonModifier>2</iProductonModifier>
+                </BonusProductionModifier>
+            </BonusProductionModifiers>
+            <UnitUpgrades>
 				<UnitType>UNIT_FOOD_CARAVAN</UnitType>
 			</UnitUpgrades>
 			<UnitAIs>
@@ -44433,7 +45191,82 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<DefaultUnitAI>UNITAI_MERCHANT</DefaultUnitAI>
+            <BonusProductionModifiers>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_HENNA</BonusType>
+                    <iProductonModifier>1</iProductonModifier>
+                </BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_INDIGO</BonusType>
+                    <iProductonModifier>1</iProductonModifier>
+                </BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_PAPYRUS</BonusType>
+                    <iProductonModifier>1</iProductonModifier>
+                </BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_OPIUM</BonusType>
+                    <iProductonModifier>1</iProductonModifier>
+                </BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_TOBACCO</BonusType>
+                    <iProductonModifier>1</iProductonModifier>
+                </BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_PARROTS</BonusType>
+                    <iProductonModifier>1</iProductonModifier>
+                </BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_COCA</BonusType>
+                    <iProductonModifier>1</iProductonModifier>
+                </BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_PEARLS</BonusType>
+                    <iProductonModifier>1</iProductonModifier>
+                </BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_AMBER</BonusType>
+                    <iProductonModifier>1</iProductonModifier>
+                </BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_RUBIES</BonusType>
+                    <iProductonModifier>1</iProductonModifier>
+                </BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_DIAMOND</BonusType>
+                    <iProductonModifier>1</iProductonModifier>
+                </BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_SAPPHIRES</BonusType>
+                    <iProductonModifier>1</iProductonModifier>
+                </BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_JADE</BonusType>
+                    <iProductonModifier>1</iProductonModifier>
+                </BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_TURQUOISE</BonusType>
+                    <iProductonModifier>1</iProductonModifier>
+                </BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_HORSE</BonusType>
+                    <iProductonModifier>2</iProductonModifier>
+                </BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_DONKEY</BonusType>
+                    <iProductonModifier>2</iProductonModifier>
+                </BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_LLAMA</BonusType>
+                    <iProductonModifier>2</iProductonModifier>
+                </BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_CAMEL</BonusType>
+                    <iProductonModifier>2</iProductonModifier>
+                </BonusProductionModifier>
+            </BonusProductionModifiers>
+
+            <DefaultUnitAI>UNITAI_MERCHANT</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_EARLY_MERCHANT</Description>
 			<Civilopedia>TXT_KEY_CONCEPT_TRADE_CARAVAN_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_GROWTH</Advisor>
