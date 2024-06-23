@@ -99,7 +99,7 @@
             <fInterfaceScale>0</fInterfaceScale>
             <NIF/>
             <KFM/>
-            <Button>art/interface/buttons/buildings/cavedwelling.dds</Button>
+            <Button>art/buttons/buildings/caveicon.dds</Button>
         </BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_ABATIS</Type>
