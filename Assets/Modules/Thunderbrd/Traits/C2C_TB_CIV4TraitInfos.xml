@@ -59012,7 +59012,6 @@
 					</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
-			</PropertyManipulators>
 			<ReplacementCondition>
 				<Has>
 					<GOMType>GOM_OPTION</GOMType>
