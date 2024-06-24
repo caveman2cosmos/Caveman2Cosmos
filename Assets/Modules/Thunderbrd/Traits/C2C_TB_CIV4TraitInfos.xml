@@ -14323,7 +14323,7 @@
 				<SpecialistYieldChange>
 					<SpecialistType>SPECIALIST_GREAT_HUNTER</SpecialistType>
 					<YieldChanges>
-						<iYield>1</iYield>
+						<iYield>3</iYield>
 						<iYield>0</iYield>
 						<iYield>0</iYield>
 					</YieldChanges>
@@ -14342,7 +14342,7 @@
 			</SpecialistCommerceChanges>
 			<LessYieldThresholds>
 				<iLessYieldThreshold>0</iLessYieldThreshold>
-				<iLessYieldThreshold>5</iLessYieldThreshold>
+				<iLessYieldThreshold>6</iLessYieldThreshold>
 				<iLessYieldThreshold>0</iLessYieldThreshold>
 			</LessYieldThresholds>
 			<TechResearchModifiers>
@@ -18380,28 +18380,27 @@
 			<UnitCombatFreeExperiences>
 				<UnitCombatFreeExperience>
 					<UnitCombatType>UNITCOMBAT_THROWING</UnitCombatType>
-					<iModifier>2</iModifier>
+					<iModifier>1</iModifier>
 				</UnitCombatFreeExperience>
 				<UnitCombatFreeExperience>
 					<UnitCombatType>UNITCOMBAT_ARCHER</UnitCombatType>
-					<iModifier>2</iModifier>
+					<iModifier>1</iModifier>
 				</UnitCombatFreeExperience>
 			</UnitCombatFreeExperiences>
 			<UnitCombatProductionModifiers>
 				<UnitCombatProductionModifier>
 					<UnitCombatType>UNITCOMBAT_THROWING</UnitCombatType>
-					<iModifier>20</iModifier>
+					<iModifier>10</iModifier>
 				</UnitCombatProductionModifier>
 				<UnitCombatProductionModifier>
 					<UnitCombatType>UNITCOMBAT_ARCHER</UnitCombatType>
-					<iModifier>20</iModifier>
+					<iModifier>10</iModifier>
 				</UnitCombatProductionModifier>
 			</UnitCombatProductionModifiers>
 			<iImprovementUpgradeRateModifier>-25</iImprovementUpgradeRateModifier>
 			<iWorkerSpeedModifier>-25</iWorkerSpeedModifier>
 			<iDistanceMaintenanceModifier>-20</iDistanceMaintenanceModifier>
 			<iNumCitiesMaintenanceModifier>15</iNumCitiesMaintenanceModifier>
-			<iLargestCityHappiness>-1</iLargestCityHappiness>
 			<iTradeRoutes>1</iTradeRoutes>
 			<iMaxTradeRoutesChange>1</iMaxTradeRoutesChange>
 			<iBombardDefense>5</iBombardDefense>
@@ -20079,7 +20078,7 @@
 				</UnitCombatProductionModifier>
 				<UnitCombatProductionModifier>
 					<UnitCombatType>UNITCOMBAT_MISSIONARY</UnitCombatType>
-					<iModifier>25</iModifier>
+					<iModifier>35</iModifier>
 				</UnitCombatProductionModifier>
 			</UnitCombatProductionModifiers>
 			<GoldenAgeonBirthofGreatPersonType>UNIT_PROPHET</GoldenAgeonBirthofGreatPersonType>
@@ -20087,7 +20086,7 @@
 			<iReligiousAnarchyTimeModifier>-25</iReligiousAnarchyTimeModifier>
 			<iStateReligionHappiness>1</iStateReligionHappiness>
 			<iNonStateReligionHappiness>1</iNonStateReligionHappiness>
-			<iGoldenAgeDurationModifier>-25</iGoldenAgeDurationModifier>
+			<iGoldenAgeDurationModifier>-10</iGoldenAgeDurationModifier>
 			<GreatPeopleUnitType>UNIT_PROPHET</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<iHolyCityofStateReligionXPModifier>10</iHolyCityofStateReligionXPModifier>
@@ -20956,13 +20955,11 @@
 			<iWarWearinessAccumulationModifier>-10</iWarWearinessAccumulationModifier>
 			<iReligiousAnarchyTimeModifier>100</iReligiousAnarchyTimeModifier>
 			<iStateReligionGreatPeopleRateModifier>-10</iStateReligionGreatPeopleRateModifier>
-			<iFreeExperience>1</iFreeExperience>
 			<iStateReligionHappiness>-1</iStateReligionHappiness>
 			<iNonStateReligionHappiness>-1</iNonStateReligionHappiness>
 			<iStateReligionUnitProductionModifier>-5</iStateReligionUnitProductionModifier>
 			<iStateReligionBuildingProductionModifier>-5</iStateReligionBuildingProductionModifier>
 			<iStateReligionFreeExperience>-1</iStateReligionFreeExperience>
-			<iMilitaryProductionModifier>5</iMilitaryProductionModifier>
 			<GreatPeopleUnitType>UNIT_PROPHET</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>-1</iGreatPeopleRateChange>
 			<iHolyCityofStateReligionXPModifier>-5</iHolyCityofStateReligionXPModifier>
@@ -21797,8 +21794,8 @@
 			<iWarWearinessAccumulationModifier>-10</iWarWearinessAccumulationModifier>
 			<iReligiousAnarchyTimeModifier>0</iReligiousAnarchyTimeModifier>
 			<iStateReligionGreatPeopleRateModifier>15</iStateReligionGreatPeopleRateModifier>
-			<iStateReligionHappiness>2</iStateReligionHappiness>
-			<iNonStateReligionHappiness>-1</iNonStateReligionHappiness>
+			<iStateReligionHappiness>3</iStateReligionHappiness>
+			<iNonStateReligionHappiness>-3</iNonStateReligionHappiness>
 			<iStateReligionUnitProductionModifier>15</iStateReligionUnitProductionModifier>
 			<iStateReligionBuildingProductionModifier>15</iStateReligionBuildingProductionModifier>
 			<iStateReligionFreeExperience>2</iStateReligionFreeExperience>
@@ -22522,8 +22519,6 @@
 					<iFlavor>1</iFlavor>
 				</Flavor>
 			</Flavors>
-			<iGreatPeopleRateModifier>0</iGreatPeopleRateModifier>
-			<iGreatGeneralRateModifier>5</iGreatGeneralRateModifier>
 			<iRevIdxHolyCityGood>5</iRevIdxHolyCityGood>
 			<iRevIdxHolyCityBad>10</iRevIdxHolyCityBad>
 			<fRevIdxBadReligionMod>40</fRevIdxBadReligionMod>
@@ -22698,13 +22693,12 @@
 			</TechResearchModifiers>
 			<iReligiousAnarchyTimeModifier>100</iReligiousAnarchyTimeModifier>
 			<iStateReligionGreatPeopleRateModifier>10</iStateReligionGreatPeopleRateModifier>
-			<iNonStateReligionHappiness>-1</iNonStateReligionHappiness>
-			<iStateReligionUnitProductionModifier>0</iStateReligionUnitProductionModifier>
-			<iStateReligionBuildingProductionModifier>0</iStateReligionBuildingProductionModifier>
+			<iNonStateReligionHappiness>-3</iNonStateReligionHappiness>
+			<iStateReligionUnitProductionModifier>-5</iStateReligionUnitProductionModifier>
+			<iStateReligionBuildingProductionModifier>-5</iStateReligionBuildingProductionModifier>
 			<iAttitudeModifier>-1</iAttitudeModifier>
-			<iHolyCityofStateReligionXPModifier>0</iHolyCityofStateReligionXPModifier>
 			<iHolyCityofNonStateReligionXPModifier>-5</iHolyCityofNonStateReligionXPModifier>
-			<iStateReligionSpreadProbabilityModifier>0</iStateReligionSpreadProbabilityModifier>
+			<iStateReligionSpreadProbabilityModifier>-5</iStateReligionSpreadProbabilityModifier>
 			<iNonStateReligionSpreadProbabilityModifier>-20</iNonStateReligionSpreadProbabilityModifier>
 			<bAllowsInquisitions>1</bAllowsInquisitions>
 			<bBansNonStateReligions>1</bBansNonStateReligions>
@@ -23314,8 +23308,6 @@
 			<iReligiousAnarchyTimeModifier>0</iReligiousAnarchyTimeModifier>
 			<iNumCitiesMaintenanceModifier>0</iNumCitiesMaintenanceModifier>
 			<iStateReligionGreatPeopleRateModifier>25</iStateReligionGreatPeopleRateModifier>
-			<iFreeSpecialist>-1</iFreeSpecialist>
-			<iStateReligionHappiness>0</iStateReligionHappiness>
 			<iGoldenAgeDurationModifier>50</iGoldenAgeDurationModifier>
 			<iHurryAngerModifier>-25</iHurryAngerModifier>
 			<iHolyCityofStateReligionXPModifier>5</iHolyCityofStateReligionXPModifier>
@@ -23784,10 +23776,7 @@
 				<iCommerce>-4</iCommerce>
 				<iCommerce>-4</iCommerce>
 			</GoldenAgeCommerceChanges>
-			<iWorkerSpeedModifier>0</iWorkerSpeedModifier>
-			<iNumCitiesMaintenanceModifier>0</iNumCitiesMaintenanceModifier>
 			<iStateReligionGreatPeopleRateModifier>-25</iStateReligionGreatPeopleRateModifier>
-			<iFreeSpecialist>1</iFreeSpecialist>
 			<iStateReligionHappiness>-1</iStateReligionHappiness>
 			<iStateReligionUnitProductionModifier>-5</iStateReligionUnitProductionModifier>
 			<iStateReligionBuildingProductionModifier>-5</iStateReligionBuildingProductionModifier>
@@ -24705,8 +24694,8 @@
 				<iCommerce>5</iCommerce>
 				<iCommerce>5</iCommerce>
 			</CapitalCommerceModifiers>
-			<iDistanceMaintenanceModifier>20</iDistanceMaintenanceModifier>
-			<iNumCitiesMaintenanceModifier>20</iNumCitiesMaintenanceModifier>
+			<iDistanceMaintenanceModifier>15</iDistanceMaintenanceModifier>
+			<iNumCitiesMaintenanceModifier>15</iNumCitiesMaintenanceModifier>
 			<iLargestCityHappiness>0</iLargestCityHappiness>
 			<iTradeRoutes>-1</iTradeRoutes>
 			<iExpInBorderModifier>5</iExpInBorderModifier>
@@ -25911,10 +25900,8 @@
 				<iCommerce>-5</iCommerce>
 				<iCommerce>-5</iCommerce>
 			</CapitalCommerceModifiers>
-			<iDistanceMaintenanceModifier>-20</iDistanceMaintenanceModifier>
-			<iNumCitiesMaintenanceModifier>-20</iNumCitiesMaintenanceModifier>
-			<iLargestCityHappiness>0</iLargestCityHappiness>
-			<iTradeRoutes>1</iTradeRoutes>
+			<iDistanceMaintenanceModifier>-15</iDistanceMaintenanceModifier>
+			<iNumCitiesMaintenanceModifier>-15</iNumCitiesMaintenanceModifier>
 			<iExpInBorderModifier>-5</iExpInBorderModifier>
 			<iForeignTradeRouteModifier>10</iForeignTradeRouteModifier>
 			<iCapitalXPModifier>-10</iCapitalXPModifier>
@@ -27520,7 +27507,7 @@
 				</Flavor>
 			</Flavors>
 			<iHealth>-1</iHealth>
-			<iHappiness>0</iHappiness>
+			<iHappiness>-1</iHappiness>
 			<ExtraYieldThresholds>
 				<iExtraYieldThreshold>0</iExtraYieldThreshold>
 				<iExtraYieldThreshold>7</iExtraYieldThreshold>
@@ -28075,7 +28062,7 @@
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 			</TechResearchModifiers>
-			<iWorkerSpeedModifier>25</iWorkerSpeedModifier>
+			<iWorkerSpeedModifier>35</iWorkerSpeedModifier>
 			<GreatPeopleUnitType>UNIT_GREAT_ENGINEER</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<PropertyManipulators>
@@ -30064,7 +30051,7 @@
 				</Flavor>
 			</Flavors>
 			<iHealth>1</iHealth>
-			<iHappiness>0</iHappiness>
+			<iHappiness>1</iHappiness>
 			<LessYieldThresholds>
 				<iLessYieldThreshold>0</iLessYieldThreshold>
 				<iLessYieldThreshold>7</iLessYieldThreshold>
@@ -32221,7 +32208,6 @@
 			</YieldModifiers>
 			<iWarWearinessAccumulationModifier>10</iWarWearinessAccumulationModifier>
 			<iCivicAnarchyTimeModifier>25</iCivicAnarchyTimeModifier>
-			<iCorporationMaintenanceModifier>0</iCorporationMaintenanceModifier>
 			<GreatPeopleUnitType>UNIT_GREAT_STATESMAN</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<PropertyManipulators>
@@ -33366,7 +33352,6 @@
 			</YieldModifiers>
 			<iMaxConscript>2</iMaxConscript>
 			<iNumCitiesMaintenanceModifier>-20</iNumCitiesMaintenanceModifier>
-			<iMilitaryProductionModifier>0</iMilitaryProductionModifier>
 			<GreatPeopleUnitType>UNIT_GREAT_STATESMAN</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>-2</iGreatPeopleRateChange>
 			<bExtraGoody>1</bExtraGoody>
@@ -34935,7 +34920,6 @@
 				</TechResearchModifier>
 			</TechResearchModifiers>
 			<iNumCitiesMaintenanceModifier>-10</iNumCitiesMaintenanceModifier>
-			<iLargestCityHappiness>0</iLargestCityHappiness>
 			<bMilitaryFoodProduction>1</bMilitaryFoodProduction>
 			<PropertyManipulators>
 				<PropertySource>
@@ -34946,7 +34930,7 @@
 					<iAmountPerTurn>
 						<Div>
 							<AttributeType>ATTRIBUTE_POPULATION</AttributeType>
-							<Constant>4</Constant>
+							<Constant>3</Constant>
 						</Div>
 					</iAmountPerTurn>
 				</PropertySource>
@@ -34958,7 +34942,7 @@
 					<iAmountPerTurn>
 						<Div>
 							<AttributeType>ATTRIBUTE_POPULATION</AttributeType>
-							<Constant>-4</Constant>
+							<Constant>-2</Constant>
 						</Div>
 					</iAmountPerTurn>
 				</PropertySource>
@@ -36630,12 +36614,11 @@
 			</Flavors>
 			<iHealth>-1</iHealth>
 			<iHappiness>1</iHappiness>
-			<iGreatPeopleRateModifier>10</iGreatPeopleRateModifier>
-			<ExtraYieldThresholds>
-				<iExtraYieldThreshold>7</iExtraYieldThreshold>
-				<iExtraYieldThreshold>0</iExtraYieldThreshold>
-				<iExtraYieldThreshold>0</iExtraYieldThreshold>
-			</ExtraYieldThresholds>
+			<LessYieldThresholds>
+				<iLessYieldThreshold>7</iLessYieldThreshold>
+				<iLessYieldThreshold>0</iLessYieldThreshold>
+				<iLessYieldThreshold>0</iLessYieldThreshold>
+			</LessYieldThresholds>
 			<ImprovementYieldChanges>
 				<ImprovementYieldChange>
 					<ImprovementType>IMPROVEMENT_SEED_CAMP</ImprovementType>
@@ -39352,7 +39335,7 @@
 					<iFlavor>0</iFlavor>
 				</Flavor>
 			</Flavors>
-			<iHappiness>1</iHappiness>
+			<iHappiness>2</iHappiness>
 			<iUpkeepModifier>10</iUpkeepModifier>
 			<iGreatPeopleRateModifier>10</iGreatPeopleRateModifier>
 			<iMaxGlobalBuildingProductionModifier>10</iMaxGlobalBuildingProductionModifier>
@@ -39979,16 +39962,26 @@
 					<UnitCombatType>UNITCOMBAT_NAVAL_COMBATANT</UnitCombatType>
 					<iModifier>-1</iModifier>
 				</UnitCombatFreeExperience>
+				<UnitCombatFreeExperience>
+				    <UnitCombatType>UNITCOMBAT_ENTERTAINER</UnitCombatType>
+				    <iModifier>1</iModifier>
+			    </UnitCombatFreeExperience>
 			</UnitCombatFreeExperiences>
+			<UnitCombatProductionModifiers>
+				<UnitCombatProductionModifier>
+					<UnitCombatType>UNITCOMBAT_ENTERTAINER</UnitCombatType>
+					<iModifier>15</iModifier>
+				</UnitCombatProductionModifier>
+			</UnitCombatProductionModifiers>
 			<iWarWearinessAccumulationModifier>10</iWarWearinessAccumulationModifier>
-			<iWorkerSpeedModifier>-25</iWorkerSpeedModifier>
+			<iWorkerSpeedModifier>-10</iWorkerSpeedModifier>
 			<iMaxConscript>-1</iMaxConscript>
 			<iMilitaryProductionModifier>-5</iMilitaryProductionModifier>
 			<GreatPeopleUnitType>UNIT_ARTIST</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<iEnemyWarWearinessModifier>-10</iEnemyWarWearinessModifier>
 			<iBombardDefense>-5</iBombardDefense>
-			<iCityStartCulture>5</iCityStartCulture>
+			<iCityStartCulture>10</iCityStartCulture>
 			<iNationalCaptureResistanceModifier>-10</iNationalCaptureResistanceModifier>
 			<BonusHappinessChanges>
 				<BonusHappinessChange>
@@ -42314,9 +42307,8 @@
 				</UnitCombatProductionModifier>
 			</UnitCombatProductionModifiers>
 			<iWarWearinessAccumulationModifier>-10</iWarWearinessAccumulationModifier>
-			<iWorkerSpeedModifier>25</iWorkerSpeedModifier>
+			<iWorkerSpeedModifier>-15</iWorkerSpeedModifier>
 			<iMaxConscript>1</iMaxConscript>
-			<iCityDefenseBonus>5</iCityDefenseBonus>
 			<iMilitaryProductionModifier>5</iMilitaryProductionModifier>
 			<GreatPeopleUnitType>UNIT_ARTIST</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>-2</iGreatPeopleRateChange>
@@ -44296,9 +44288,8 @@
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 			</TechResearchModifiers>
-			<iCivicAnarchyTimeModifier>5</iCivicAnarchyTimeModifier>
-			<iImprovementUpgradeRateModifier>-25</iImprovementUpgradeRateModifier>
-			<iWorkerSpeedModifier>-15</iWorkerSpeedModifier>
+			<iImprovementUpgradeRateModifier>-15</iImprovementUpgradeRateModifier>
+			<iWorkerSpeedModifier>-10</iWorkerSpeedModifier>
 			<iCorporationMaintenanceModifier>-10</iCorporationMaintenanceModifier>
 			<iFreeExperience>-1</iFreeExperience>
 			<iCityDefenseBonus>-5</iCityDefenseBonus>
@@ -44317,7 +44308,7 @@
 					<iAmountPerTurn>
 						<Div>
 							<AttributeType>ATTRIBUTE_POPULATION</AttributeType>
-							<Constant>8</Constant>
+							<Constant>6</Constant>
 						</Div>
 					</iAmountPerTurn>
 				</PropertySource>
@@ -46207,15 +46198,14 @@
 					<iModifier>-20</iModifier>
 				</TechResearchModifier>
 			</TechResearchModifiers>
-			<iCivicAnarchyTimeModifier>-5</iCivicAnarchyTimeModifier>
 			<iImprovementUpgradeRateModifier>50</iImprovementUpgradeRateModifier>
 			<iWorkerSpeedModifier>15</iWorkerSpeedModifier>
 			<iMaxConscript>1</iMaxConscript>
 			<iCorporationMaintenanceModifier>10</iCorporationMaintenanceModifier>
-			<iFreeUnitUpkeepCivilian>5</iFreeUnitUpkeepCivilian>
+			<iFreeUnitUpkeepCivilian>10</iFreeUnitUpkeepCivilian>
 			<GreatPeopleUnitType>UNIT_MERCHANT</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>-2</iGreatPeopleRateChange>
-			<iHurryCostModifier>-25</iHurryCostModifier>
+			<iHurryCostModifier>-40</iHurryCostModifier>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -46225,7 +46215,7 @@
 					<iAmountPerTurn>
 						<Div>
 							<AttributeType>ATTRIBUTE_POPULATION</AttributeType>
-							<Constant>2</Constant>
+							<Constant>4</Constant>
 						</Div>
 					</iAmountPerTurn>
 				</PropertySource>
@@ -47567,7 +47557,7 @@
 					<iFlavor>15</iFlavor>
 				</Flavor>
 			</Flavors>
-			<iHappiness>-1</iHappiness>
+			<iHappiness>-2</iHappiness>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -47888,13 +47878,12 @@
 					<iModifier>20</iModifier>
 				</UnitCombatProductionModifier>
 			</UnitCombatProductionModifiers>
-			<iCivicAnarchyTimeModifier>5</iCivicAnarchyTimeModifier>
 			<iAttitudeModifier>-1</iAttitudeModifier>
-			<iEspionageDefense>10</iEspionageDefense>
+			<iEspionageDefense>20</iEspionageDefense>
 			<GreatPeopleUnitType>UNIT_GREAT_SPY</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<iEnemyWarWearinessModifier>-10</iEnemyWarWearinessModifier>
-			<iNationalCaptureResistanceModifier>0</iNationalCaptureResistanceModifier>
+			<iNationalCaptureResistanceModifier>10</iNationalCaptureResistanceModifier>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -47904,7 +47893,7 @@
 					<iAmountPerTurn>
 						<Div>
 							<AttributeType>ATTRIBUTE_POPULATION</AttributeType>
-							<Constant>4</Constant>
+							<Constant>2</Constant>
 						</Div>
 					</iAmountPerTurn>
 				</PropertySource>
@@ -49250,7 +49239,7 @@
 					<iFlavor>15</iFlavor>
 				</Flavor>
 			</Flavors>
-			<iHappiness>1</iHappiness>
+			<iHappiness>2</iHappiness>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -49572,12 +49561,11 @@
 				</UnitCombatProductionModifier>
 			</UnitCombatProductionModifiers>
 			<iWarWearinessAccumulationModifier>-10</iWarWearinessAccumulationModifier>
-			<iCivicAnarchyTimeModifier>-5</iCivicAnarchyTimeModifier>
 			<iAttitudeModifier>1</iAttitudeModifier>
 			<iEspionageDefense>-15</iEspionageDefense>
 			<GreatPeopleUnitType>UNIT_GREAT_SPY</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>-2</iGreatPeopleRateChange>
-			<iNationalCaptureResistanceModifier>0</iNationalCaptureResistanceModifier>
+			<iNationalCaptureResistanceModifier>-10</iNationalCaptureResistanceModifier>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -51336,8 +51324,8 @@
 			<iMilitaryProductionModifier>-10</iMilitaryProductionModifier>
 			<GreatPeopleUnitType>UNIT_SCIENTIST</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
-			<iMissileRange>0</iMissileRange>
-			<iFlightOperationRange>0</iFlightOperationRange>
+			<iMissileRange>1</iMissileRange>
+			<iFlightOperationRange>1</iFlightOperationRange>
 			<iStateReligionSpreadProbabilityModifier>-10</iStateReligionSpreadProbabilityModifier>
 			<iNonStateReligionSpreadProbabilityModifier>-10</iNonStateReligionSpreadProbabilityModifier>
 			<PropertyManipulators>
@@ -51349,7 +51337,7 @@
 					<iAmountPerTurn>
 						<Div>
 							<AttributeType>ATTRIBUTE_POPULATION</AttributeType>
-							<Constant>4</Constant>
+							<Constant>2</Constant>
 						</Div>
 					</iAmountPerTurn>
 				</PropertySource>
@@ -53156,8 +53144,6 @@
 					<iFlavor>0</iFlavor>
 				</Flavor>
 			</Flavors>
-			<iHealth>-1</iHealth>
-			<iHappiness>0</iHappiness>
 			<iGreatPeopleRateModifier>-10</iGreatPeopleRateModifier>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -53371,7 +53357,7 @@
 					<iModifier>-20</iModifier>
 				</TechResearchModifier>
 			</TechResearchModifiers>
-			<iCivicAnarchyTimeModifier>15</iCivicAnarchyTimeModifier>
+			<iCivicAnarchyTimeModifier>20</iCivicAnarchyTimeModifier>
 			<iReligiousAnarchyTimeModifier>50</iReligiousAnarchyTimeModifier>
 			<iLargestCityHappiness>1</iLargestCityHappiness>
 			<iFreeSpecialist>1</iFreeSpecialist>
@@ -53386,7 +53372,7 @@
 					<iAmountPerTurn>
 						<Div>
 							<AttributeType>ATTRIBUTE_POPULATION</AttributeType>
-							<Constant>4</Constant>
+							<Constant>-4</Constant>
 						</Div>
 					</iAmountPerTurn>
 				</PropertySource>
@@ -54415,13 +54401,13 @@
 			<UnitCombatFreeExperiences>
 				<UnitCombatFreeExperience>
 					<UnitCombatType>UNITCOMBAT_TRADE</UnitCombatType>
-					<iModifier>1</iModifier>
+					<iModifier>2</iModifier>
 				</UnitCombatFreeExperience>
 			</UnitCombatFreeExperiences>
 			<UnitCombatProductionModifiers>
 				<UnitCombatProductionModifier>
 					<UnitCombatType>UNITCOMBAT_TRADE</UnitCombatType>
-					<iModifier>10</iModifier>
+					<iModifier>20</iModifier>
 				</UnitCombatProductionModifier>
 			</UnitCombatProductionModifiers>
 			<iWarWearinessAccumulationModifier>10</iWarWearinessAccumulationModifier>
@@ -54429,12 +54415,11 @@
 			<iMaxConscript>-1</iMaxConscript>
 			<iDistanceMaintenanceModifier>-10</iDistanceMaintenanceModifier>
 			<iNumCitiesMaintenanceModifier>-10</iNumCitiesMaintenanceModifier>
-			<iCorporationMaintenanceModifier>0</iCorporationMaintenanceModifier>
 			<iTradeRoutes>1</iTradeRoutes>
 			<iCityDefenseBonus>-10</iCityDefenseBonus>
 			<iMilitaryProductionModifier>-10</iMilitaryProductionModifier>
 			<iAttitudeModifier>1</iAttitudeModifier>
-			<iEspionageDefense>-15</iEspionageDefense>
+			<iEspionageDefense>-10</iEspionageDefense>
 			<iMaxTradeRoutesChange>1</iMaxTradeRoutesChange>
 			<iForeignTradeRouteModifier>10</iForeignTradeRouteModifier>
 			<PropertyManipulators>
@@ -54446,7 +54431,7 @@
 					<iAmountPerTurn>
 						<Div>
 							<AttributeType>ATTRIBUTE_POPULATION</AttributeType>
-							<Constant>4</Constant>
+							<Constant>6</Constant>
 						</Div>
 					</iAmountPerTurn>
 				</PropertySource>
@@ -54901,7 +54886,7 @@
 			<UnitCombatProductionModifiers>
 				<UnitCombatProductionModifier>
 					<UnitCombatType>UNITCOMBAT_TRADE</UnitCombatType>
-					<iModifier>-10</iModifier>
+					<iModifier>-5</iModifier>
 				</UnitCombatProductionModifier>
 			</UnitCombatProductionModifiers>
 			<iCivicAnarchyTimeModifier>5</iCivicAnarchyTimeModifier>
@@ -54911,11 +54896,11 @@
 			<iCorporationMaintenanceModifier>0</iCorporationMaintenanceModifier>
 			<iTradeRoutes>-1</iTradeRoutes>
 			<iExpInBorderModifier>10</iExpInBorderModifier>
-			<iCityDefenseBonus>10</iCityDefenseBonus>
+			<iCityDefenseBonus>5</iCityDefenseBonus>
 			<iAttitudeModifier>-1</iAttitudeModifier>
 			<iEspionageDefense>15</iEspionageDefense>
 			<iMaxTradeRoutesChange>-1</iMaxTradeRoutesChange>
-			<iForeignTradeRouteModifier>10</iForeignTradeRouteModifier>
+			<iForeignTradeRouteModifier>-10</iForeignTradeRouteModifier>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -54925,7 +54910,7 @@
 					<iAmountPerTurn>
 						<Div>
 							<AttributeType>ATTRIBUTE_POPULATION</AttributeType>
-							<Constant>-4</Constant>
+							<Constant>-8</Constant>
 						</Div>
 					</iAmountPerTurn>
 				</PropertySource>
