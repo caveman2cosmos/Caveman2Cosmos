@@ -800,119 +800,136 @@ def doBuildPigBonusAndPasture(argsList):
 ################ MULTIMAPS ###################
 
 def canGoToEarth(argsList):
-	return GAME.getCurrentMap() != MapTypes.MAP_EARTH
+	return GAME.isOption(GameOptionTypes.GAMEOPTION_UNSUPPORTED_MULTIMAPS) \
+		and GAME.getCurrentMap() != MapTypes.MAP_EARTH
 
 def goToEarth(argsList):
 	pUnit = argsList[0]
 	GC.getMapByIndex(MapTypes.MAP_EARTH).moveUnitToMap(pUnit, 1)
 
 def canGoToSubterrain(argsList):
-	return GAME.getCurrentMap() != MapTypes.MAP_SUBTERRAIN
+	return GAME.isOption(GameOptionTypes.GAMEOPTION_UNSUPPORTED_MULTIMAPS) \
+		and GAME.getCurrentMap() != MapTypes.MAP_SUBTERRAIN
 
 def goToSubterrain(argsList):
 	pUnit = argsList[0]
 	GC.getMapByIndex(MapTypes.MAP_SUBTERRAIN).moveUnitToMap(pUnit, 1)
 
 def canGoToCislunarSpace(argsList):
-	return GAME.getCurrentMap() != MapTypes.MAP_CISLUNAR
+	return GAME.isOption(GameOptionTypes.GAMEOPTION_UNSUPPORTED_MULTIMAPS) \
+		and GAME.getCurrentMap() != MapTypes.MAP_CISLUNAR
 
 def goToCislunarSpace(argsList):
 	pUnit = argsList[0]
 	GC.getMapByIndex(MapTypes.MAP_CISLUNAR).moveUnitToMap(pUnit, 1)
 
 def canGoToMoon(argsList):
-	return GAME.getCurrentMap() != MapTypes.MAP_MOON
+	return GAME.isOption(GameOptionTypes.GAMEOPTION_UNSUPPORTED_MULTIMAPS) \
+		and GAME.getCurrentMap() != MapTypes.MAP_MOON
 
 def goToMoon(argsList):
 	pUnit = argsList[0]
 	GC.getMapByIndex(MapTypes.MAP_MOON).moveUnitToMap(pUnit, 1)
 
 def canGoToMars(argsList):
-	return GAME.getCurrentMap() != MapTypes.MAP_MARS
+	return GAME.isOption(GameOptionTypes.GAMEOPTION_UNSUPPORTED_MULTIMAPS) \
+		and GAME.getCurrentMap() != MapTypes.MAP_MARS
 
 def goToMars(argsList):
 	pUnit = argsList[0]
 	GC.getMapByIndex(MapTypes.MAP_MARS).moveUnitToMap(pUnit, 1)
 
 def canGoToVenus(argsList):
-	return GAME.getCurrentMap() != MapTypes.MAP_VENUS
+	return GAME.isOption(GameOptionTypes.GAMEOPTION_UNSUPPORTED_MULTIMAPS) \
+		and GAME.getCurrentMap() != MapTypes.MAP_VENUS
 
 def goToVenus(argsList):
 	pUnit = argsList[0]
 	GC.getMapByIndex(MapTypes.MAP_VENUS).moveUnitToMap(pUnit, 1)
 
 def canGoToInnerSolarSystem(argsList):
-	return GAME.getCurrentMap() != MapTypes.MAP_INNER_SOLAR_SYSTEM
+	return GAME.isOption(GameOptionTypes.GAMEOPTION_UNSUPPORTED_MULTIMAPS) \
+		and GAME.getCurrentMap() != MapTypes.MAP_INNER_SOLAR_SYSTEM
 
 def goToInnerSolarSystem(argsList):
 	pUnit = argsList[0]
 	GC.getMapByIndex(MapTypes.MAP_INNER_SOLAR_SYSTEM).moveUnitToMap(pUnit, 1)
 
 def canGoToOuterSolarSystem(argsList):
-	return GAME.getCurrentMap() != MapTypes.MAP_OUTER_SOLAR_SYSTEM
+	return GAME.isOption(GameOptionTypes.GAMEOPTION_UNSUPPORTED_MULTIMAPS) \
+		and GAME.getCurrentMap() != MapTypes.MAP_OUTER_SOLAR_SYSTEM
 
 def goToOuterSolarSystem(argsList):
 	pUnit = argsList[0]
 	GC.getMapByIndex(MapTypes.MAP_OUTER_SOLAR_SYSTEM).moveUnitToMap(pUnit, 1)
 
 def canGoToTitan(argsList):
-	return GAME.getCurrentMap() != MapTypes.MAP_TITAN
+	return GAME.isOption(GameOptionTypes.GAMEOPTION_UNSUPPORTED_MULTIMAPS) \
+		and GAME.getCurrentMap() != MapTypes.MAP_TITAN
 
 def goToTitan(argsList):
 	pUnit = argsList[0]
 	GC.getMapByIndex(MapTypes.MAP_TITAN).moveUnitToMap(pUnit, 1)
 
 def canGoToTransneptunianSpace(argsList):
-	return GAME.getCurrentMap() != MapTypes.MAP_TRANSNEPTUNIAN
+	return GAME.isOption(GameOptionTypes.GAMEOPTION_UNSUPPORTED_MULTIMAPS) \
+		and GAME.getCurrentMap() != MapTypes.MAP_TRANSNEPTUNIAN
 
 def goToTransneptunianSpace(argsList):
 	pUnit = argsList[0]
 	GC.getMapByIndex(MapTypes.MAP_TRANSNEPTUNIAN).moveUnitToMap(pUnit, 1)
 
 def canGoToNearbyStars(argsList):
-	return GAME.getCurrentMap() != MapTypes.MAP_NEARBY_STARS
+	return GAME.isOption(GameOptionTypes.GAMEOPTION_UNSUPPORTED_MULTIMAPS) \
+		and GAME.getCurrentMap() != MapTypes.MAP_NEARBY_STARS
 
 def goToNearbyStars(argsList):
 	pUnit = argsList[0]
 	GC.getMapByIndex(MapTypes.MAP_NEARBY_STARS).moveUnitToMap(pUnit, 1)
 
 def canGoToOrionArm(argsList):
-	return GAME.getCurrentMap() != MapTypes.MAP_ORION_ARM
+	return GAME.isOption(GameOptionTypes.GAMEOPTION_UNSUPPORTED_MULTIMAPS) \
+		and GAME.getCurrentMap() != MapTypes.MAP_ORION_ARM
 
 def goToOrionArm(argsList):
 	pUnit = argsList[0]
 	GC.getMapByIndex(MapTypes.MAP_ORION_ARM).moveUnitToMap(pUnit, 1)
 
 def canGoToMilkyWay(argsList):
-	return GAME.getCurrentMap() != MapTypes.MAP_MILKY_WAY
+	return GAME.isOption(GameOptionTypes.GAMEOPTION_UNSUPPORTED_MULTIMAPS) \
+		and GAME.getCurrentMap() != MapTypes.MAP_MILKY_WAY
 
 def goToMilkyWay(argsList):
 	pUnit = argsList[0]
 	GC.getMapByIndex(MapTypes.MAP_MILKY_WAY).moveUnitToMap(pUnit, 1)
 
 def canGoToLocalGroup(argsList):
-	return GAME.getCurrentMap() != MapTypes.MAP_LOCAL_GROUP
+	return GAME.isOption(GameOptionTypes.GAMEOPTION_UNSUPPORTED_MULTIMAPS) \
+		and GAME.getCurrentMap() != MapTypes.MAP_LOCAL_GROUP
 
 def goToLocalGroup(argsList):
 	pUnit = argsList[0]
 	GC.getMapByIndex(MapTypes.MAP_LOCAL_GROUP).moveUnitToMap(pUnit, 1)
 
 def canGoToVirgoSupercluster(argsList):
-	return GAME.getCurrentMap() != MapTypes.MAP_VIRGO_SUPERCLUSTER
+	return GAME.isOption(GameOptionTypes.GAMEOPTION_UNSUPPORTED_MULTIMAPS) \
+		and GAME.getCurrentMap() != MapTypes.MAP_VIRGO_SUPERCLUSTER
 
 def goToVirgoSupercluster(argsList):
 	pUnit = argsList[0]
 	GC.getMapByIndex(MapTypes.MAP_VIRGO_SUPERCLUSTER).moveUnitToMap(pUnit, 1)
 
 def canGoToUniverse(argsList):
-	return GAME.getCurrentMap() != MapTypes.MAP_UNIVERSE
+	return GAME.isOption(GameOptionTypes.GAMEOPTION_UNSUPPORTED_MULTIMAPS) \
+		and GAME.getCurrentMap() != MapTypes.MAP_UNIVERSE
 
 def goToUniverse(argsList):
 	pUnit = argsList[0]
 	GC.getMapByIndex(MapTypes.MAP_UNIVERSE).moveUnitToMap(pUnit, 1)
 
 def canGoToDistantCosmos(argsList):
-	return GAME.getCurrentMap() != MapTypes.MAP_DISTANT_COSMOS
+	return GAME.isOption(GameOptionTypes.GAMEOPTION_UNSUPPORTED_MULTIMAPS) \
+		and GAME.getCurrentMap() != MapTypes.MAP_DISTANT_COSMOS
 
 def goToDistantCosmos(argsList):
 	pUnit = argsList[0]

@@ -594,7 +594,7 @@ void CyCity::changePopulation(int iChange)
 	m_pCity->changePopulation(iChange);
 }
 
-int CyCity::getRealPopulation() const
+int64_t CyCity::getRealPopulation() const
 {
 	return m_pCity->getRealPopulation();
 }

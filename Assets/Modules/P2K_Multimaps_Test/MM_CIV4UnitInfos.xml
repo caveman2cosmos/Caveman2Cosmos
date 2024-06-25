@@ -72,6 +72,7 @@
 				</UnitMeshGroup>
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
+			<PrereqGameOption>GAMEOPTION_UNSUPPORTED_MULTIMAPS</PrereqGameOption>
 			<Actions>
 				<Action>
 					<MissionType>MISSION_GO_TO_MAP_MOON</MissionType>
@@ -195,6 +196,7 @@
 				</UnitMeshGroup>
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_MACHINE</FormationType>
+			<PrereqGameOption>GAMEOPTION_UNSUPPORTED_MULTIMAPS</PrereqGameOption>
 			<Actions>
 				<Action>
 					<MissionType>MISSION_EXPLORE_MOON_SURFACE</MissionType>
@@ -308,6 +310,7 @@
 				</UnitMeshGroup>
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
+			<PrereqGameOption>GAMEOPTION_UNSUPPORTED_MULTIMAPS</PrereqGameOption>
 			<Actions>
 				<Action>
 					<MissionType>MISSION_PLANET_LAND</MissionType>
@@ -405,6 +408,7 @@
 				</UnitMeshGroup>
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
+			<PrereqGameOption>GAMEOPTION_UNSUPPORTED_MULTIMAPS</PrereqGameOption>
 			<Actions>
 				<Action>
 					<MissionType>MISSION_PLANET_LAND</MissionType>
@@ -519,6 +523,7 @@
 				</UnitMeshGroup>
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
+			<PrereqGameOption>GAMEOPTION_UNSUPPORTED_MULTIMAPS</PrereqGameOption>
 			<Actions>
 				<Action>
 					<MissionType>MISSION_PLANET_LAND</MissionType>
@@ -660,6 +665,7 @@
 				</UnitMeshGroup>
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
+			<PrereqGameOption>GAMEOPTION_UNSUPPORTED_MULTIMAPS</PrereqGameOption>
 			<Actions>
 				<Action>
 					<MissionType>MISSION_PLANET_LAND</MissionType>
@@ -815,6 +821,7 @@
 				</UnitMeshGroup>
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
+			<PrereqGameOption>GAMEOPTION_UNSUPPORTED_MULTIMAPS</PrereqGameOption>
 			<Actions>
 				<Action>
 					<MissionType>MISSION_PLANET_LAND</MissionType>
@@ -924,6 +931,7 @@
 				</UnitMeshGroup>
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
+			<PrereqGameOption>GAMEOPTION_UNSUPPORTED_MULTIMAPS</PrereqGameOption>
 			<Actions>
 				<Action>
 					<MissionType>MISSION_PLANET_LAND</MissionType>
@@ -1052,6 +1060,7 @@
 				</UnitMeshGroup>
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
+			<PrereqGameOption>GAMEOPTION_UNSUPPORTED_MULTIMAPS</PrereqGameOption>
 			<Actions>
 				<Action>
 					<MissionType>MISSION_PLANET_LAND</MissionType>
@@ -1228,6 +1237,7 @@
 				</UnitMeshGroup>
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
+			<PrereqGameOption>GAMEOPTION_UNSUPPORTED_MULTIMAPS</PrereqGameOption>
 			<Actions>
 				<Action>
 					<MissionType>MISSION_PLANET_LAND</MissionType>
@@ -1390,6 +1400,7 @@
 				</UnitMeshGroup>
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
+			<PrereqGameOption>GAMEOPTION_UNSUPPORTED_MULTIMAPS</PrereqGameOption>
 			<Actions>
 				<Action>
 					<MissionType>MISSION_PLANET_LAND</MissionType>
@@ -1544,6 +1555,7 @@
 				</UnitMeshGroup>
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
+			<PrereqGameOption>GAMEOPTION_UNSUPPORTED_MULTIMAPS</PrereqGameOption>
 			<Actions>
 				<Action>
 					<MissionType>MISSION_GO_TO_MAP_INNER_SOLAR_SYSTEM</MissionType>
@@ -1648,6 +1660,7 @@
 				</UnitMeshGroup>
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
+			<PrereqGameOption>GAMEOPTION_UNSUPPORTED_MULTIMAPS</PrereqGameOption>
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_INT_INVADER</Type>
@@ -1702,6 +1715,7 @@
 				</UnitMeshGroup>
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
+			<PrereqGameOption>GAMEOPTION_UNSUPPORTED_MULTIMAPS</PrereqGameOption>
 			<Actions>
 				<Action>
 					<MissionType>MISSION_GO_TO_MAP_NEARBY_STARS</MissionType>
@@ -1806,6 +1820,7 @@
 				</UnitMeshGroup>
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
+			<PrereqGameOption>GAMEOPTION_UNSUPPORTED_MULTIMAPS</PrereqGameOption>
 			<Actions>
 				<Action>
 					<MissionType>MISSION_GO_TO_MAP_NEARBY_STARS</MissionType>
@@ -1925,6 +1940,7 @@
 				</UnitMeshGroup>
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
+			<PrereqGameOption>GAMEOPTION_UNSUPPORTED_MULTIMAPS</PrereqGameOption>
 			<!-- Earth has no tech requirement -->
 			<Actions>
 				<Action>
@@ -2266,6 +2282,7 @@
 				</UnitMeshGroup>
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_RANGED</FormationType>
+			<PrereqGameOption>GAMEOPTION_UNSUPPORTED_MULTIMAPS</PrereqGameOption>
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_DEEPSPACE_INFANTRY</Type>
@@ -2348,6 +2365,7 @@
 				</UnitMeshGroup>
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_RANGED</FormationType>
+			<PrereqGameOption>GAMEOPTION_UNSUPPORTED_MULTIMAPS</PrereqGameOption>
 			<FreePromotions>
 				<FreePromotion>
 					<PromotionType>PROMOTION_BLITZ</PromotionType>
@@ -2436,6 +2454,7 @@
 				</UnitMeshGroup>
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_RANGED</FormationType>
+			<PrereqGameOption>GAMEOPTION_UNSUPPORTED_MULTIMAPS</PrereqGameOption>
 			<FreePromotions>
 				<FreePromotion>
 					<PromotionType>PROMOTION_BLITZ</PromotionType>
@@ -2523,6 +2542,7 @@
 				</UnitMeshGroup>
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_RANGED</FormationType>
+			<PrereqGameOption>GAMEOPTION_UNSUPPORTED_MULTIMAPS</PrereqGameOption>
 			<FreePromotions>
 				<FreePromotion>
 					<PromotionType>PROMOTION_BLITZ</PromotionType>
@@ -2610,6 +2630,7 @@
 				</UnitMeshGroup>
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_RANGED</FormationType>
+			<PrereqGameOption>GAMEOPTION_UNSUPPORTED_MULTIMAPS</PrereqGameOption>
 			<FreePromotions>
 				<FreePromotion>
 					<PromotionType>PROMOTION_BLITZ</PromotionType>
@@ -2697,6 +2718,7 @@
 				</UnitMeshGroup>
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_RANGED</FormationType>
+			<PrereqGameOption>GAMEOPTION_UNSUPPORTED_MULTIMAPS</PrereqGameOption>
 			<FreePromotions>
 				<FreePromotion>
 					<PromotionType>PROMOTION_BLITZ</PromotionType>
@@ -2781,6 +2803,7 @@
 				</UnitMeshGroup>
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_RANGED</FormationType>
+			<PrereqGameOption>GAMEOPTION_UNSUPPORTED_MULTIMAPS</PrereqGameOption>
 			<FreePromotions>
 				<FreePromotion>
 					<PromotionType>PROMOTION_BLITZ</PromotionType>
@@ -2916,6 +2939,7 @@
 				</UnitMeshGroup>
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_RANGED</FormationType>
+			<PrereqGameOption>GAMEOPTION_UNSUPPORTED_MULTIMAPS</PrereqGameOption>
 			<FreePromotions>
 				<FreePromotion>
 					<PromotionType>PROMOTION_BLITZ</PromotionType>
@@ -2991,6 +3015,7 @@
 				</UnitMeshGroup>
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
+			<PrereqGameOption>GAMEOPTION_UNSUPPORTED_MULTIMAPS</PrereqGameOption>
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_VENUS_WORKER</Type>
@@ -3053,6 +3078,7 @@
 				</UnitMeshGroup>
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
+			<PrereqGameOption>GAMEOPTION_UNSUPPORTED_MULTIMAPS</PrereqGameOption>
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_CISLUNAR_WORKER</Type>
@@ -3113,6 +3139,7 @@
 				</UnitMeshGroup>
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
+			<PrereqGameOption>GAMEOPTION_UNSUPPORTED_MULTIMAPS</PrereqGameOption>
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_SOLAR_WORKER</Type>
@@ -3177,6 +3204,7 @@
 				</UnitMeshGroup>
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
+			<PrereqGameOption>GAMEOPTION_UNSUPPORTED_MULTIMAPS</PrereqGameOption>
 			<Actions>
 				<Action>
 					<MissionType>MISSION_GO_TO_MAP_CISLUNAR</MissionType>
@@ -3314,6 +3342,7 @@
 					<LateArtDefineTag>ART_DEF_UNIT_MARS_SETTLER</LateArtDefineTag>
 				</UnitMeshGroup>
 			</UnitMeshGroups>
+			<PrereqGameOption>GAMEOPTION_UNSUPPORTED_MULTIMAPS</PrereqGameOption>
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_VENUS_SETTLER</Type>
@@ -3370,6 +3399,7 @@
 				</UnitMeshGroup>
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_SETTLER</FormationType>
+			<PrereqGameOption>GAMEOPTION_UNSUPPORTED_MULTIMAPS</PrereqGameOption>
 		</UnitInfo>
 		<!-- Solar Sail Workcraft -->
 		<UnitInfo>
@@ -3527,6 +3557,7 @@
 				</UnitMeshGroup>
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
+			<PrereqGameOption>GAMEOPTION_UNSUPPORTED_MULTIMAPS</PrereqGameOption>
 		</UnitInfo>
 		<!-- Magsail Workcraft -->
 		<UnitInfo>
@@ -3729,6 +3760,7 @@
 				</UnitMeshGroup>
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
+			<PrereqGameOption>GAMEOPTION_UNSUPPORTED_MULTIMAPS</PrereqGameOption>
 		</UnitInfo>
 		<!-- Nanoworker -->
 		<UnitInfo>
@@ -3928,6 +3960,7 @@
 				</UnitMeshGroup>
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
+			<PrereqGameOption>GAMEOPTION_UNSUPPORTED_MULTIMAPS</PrereqGameOption>
 		</UnitInfo>
 		<!-- Cosmic Worker -->
 		<UnitInfo>
@@ -4041,6 +4074,7 @@
 				</UnitMeshGroup>
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
+			<PrereqGameOption>GAMEOPTION_UNSUPPORTED_MULTIMAPS</PrereqGameOption>
 			<Actions>
 				<Action>
 					<MissionType>MISSION_GO_TO_MAP_CISLUNAR</MissionType>
@@ -4313,6 +4347,7 @@
 				</UnitMeshGroup>
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
+			<PrereqGameOption>GAMEOPTION_UNSUPPORTED_MULTIMAPS</PrereqGameOption>
 			<Actions>
 				<Action>
 					<MissionType>MISSION_GO_TO_MAP_LOCAL_GROUP</MissionType>
@@ -4441,6 +4476,7 @@
 				</UnitMeshGroup>
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
+			<PrereqGameOption>GAMEOPTION_UNSUPPORTED_MULTIMAPS</PrereqGameOption>
 			<Actions>
 				<Action>
 					<MissionType>MISSION_GO_TO_MAP_CISLUNAR</MissionType>
@@ -4525,6 +4561,7 @@
 				</UnitMeshGroup>
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
+			<PrereqGameOption>GAMEOPTION_UNSUPPORTED_MULTIMAPS</PrereqGameOption>
 			<Actions>
 				<Action>
 					<MissionType>MISSION_GO_TO_MAP_CISLUNAR</MissionType>
@@ -4707,6 +4744,7 @@
 				</UnitMeshGroup>
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
+			<PrereqGameOption>GAMEOPTION_UNSUPPORTED_MULTIMAPS</PrereqGameOption>
 			<Actions>
 				<Action>
 					<MissionType>MISSION_GO_TO_MAP_CISLUNAR</MissionType>
@@ -4907,6 +4945,7 @@
 				</UnitMeshGroup>
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
+			<PrereqGameOption>GAMEOPTION_UNSUPPORTED_MULTIMAPS</PrereqGameOption>
 			<Actions>
 				<Action>
 					<MissionType>MISSION_GO_TO_MAP_CISLUNAR</MissionType>
@@ -5157,6 +5196,7 @@
 				</UnitMeshGroup>
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
+			<PrereqGameOption>GAMEOPTION_UNSUPPORTED_MULTIMAPS</PrereqGameOption>
 			<Actions>
 				<Action>
 					<MissionType>MISSION_GO_TO_MAP_CISLUNAR</MissionType>
@@ -5457,6 +5497,7 @@
 				</UnitMeshGroup>
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
+			<PrereqGameOption>GAMEOPTION_UNSUPPORTED_MULTIMAPS</PrereqGameOption>
 			<Actions>
 				<Action>
 					<MissionType>MISSION_GO_TO_MAP_CISLUNAR</MissionType>
@@ -5774,6 +5815,7 @@
 				</UnitMeshGroup>
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
+			<PrereqGameOption>GAMEOPTION_UNSUPPORTED_MULTIMAPS</PrereqGameOption>
 			<Actions>
 				<Action>
 					<MissionType>MISSION_GO_TO_MAP_CISLUNAR</MissionType>
@@ -6078,6 +6120,7 @@
 				</UnitMeshGroup>
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
+			<PrereqGameOption>GAMEOPTION_UNSUPPORTED_MULTIMAPS</PrereqGameOption>
 			<Actions>
 				<Action>
 					<MissionType>MISSION_GO_TO_MAP_NEARBY_STARS</MissionType>
@@ -6240,6 +6283,7 @@
 				</UnitMeshGroup>
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
+			<PrereqGameOption>GAMEOPTION_UNSUPPORTED_MULTIMAPS</PrereqGameOption>
 			<Actions>
 				<Action>
 					<MissionType>MISSION_GO_TO_MAP_NEARBY_STARS</MissionType>
@@ -6412,6 +6456,7 @@
 				</UnitMeshGroup>
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
+			<PrereqGameOption>GAMEOPTION_UNSUPPORTED_MULTIMAPS</PrereqGameOption>
 			<Actions>
 				<!-- Earth has no tech requirement -->
 				<Action>
@@ -6828,6 +6873,7 @@
 				</UnitMeshGroup>
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
+			<PrereqGameOption>GAMEOPTION_UNSUPPORTED_MULTIMAPS</PrereqGameOption>
 		</UnitInfo>
 		<!-- Space Shuttle -->
 		<UnitInfo>
@@ -7019,6 +7065,7 @@
 				</UnitMeshGroup>
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
+			<PrereqGameOption>GAMEOPTION_UNSUPPORTED_MULTIMAPS</PrereqGameOption>
 		</UnitInfo>
 		<!-- Planetary Probe -->
 		<UnitInfo>
@@ -7734,6 +7781,7 @@
 				</UnitMeshGroup>
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
+			<PrereqGameOption>GAMEOPTION_UNSUPPORTED_MULTIMAPS</PrereqGameOption>
 		</UnitInfo>
 		<!-- Interstellar Probe -->
 		<UnitInfo>
@@ -7966,6 +8014,7 @@
 				</UnitMeshGroup>
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
+			<PrereqGameOption>GAMEOPTION_UNSUPPORTED_MULTIMAPS</PrereqGameOption>
 		</UnitInfo>
 		<!-- Bracewell Probe -->
 		<UnitInfo>
@@ -8175,6 +8224,7 @@
 				</UnitMeshGroup>
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
+			<PrereqGameOption>GAMEOPTION_UNSUPPORTED_MULTIMAPS</PrereqGameOption>
 		</UnitInfo>
 		<!-- Von Neumann Probe -->
 		<UnitInfo>
@@ -8400,6 +8450,7 @@
 				</UnitMeshGroup>
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
+			<PrereqGameOption>GAMEOPTION_UNSUPPORTED_MULTIMAPS</PrereqGameOption>
 		</UnitInfo>
 		<!-- Quantum Probe -->
 		<UnitInfo>
@@ -8512,6 +8563,7 @@
 				</UnitMeshGroup>
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
+			<PrereqGameOption>GAMEOPTION_UNSUPPORTED_MULTIMAPS</PrereqGameOption>
 		</UnitInfo>
 		<!-- Interdimensional Probe -->
 		<UnitInfo>
@@ -8657,6 +8709,7 @@
 				</UnitMeshGroup>
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
+			<PrereqGameOption>GAMEOPTION_UNSUPPORTED_MULTIMAPS</PrereqGameOption>
 		</UnitInfo>
 		<!-- Heavy Rocket -->
 		<UnitInfo>
@@ -8842,6 +8895,7 @@
 				</UnitMeshGroup>
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
+			<PrereqGameOption>GAMEOPTION_UNSUPPORTED_MULTIMAPS</PrereqGameOption>
 		</UnitInfo>
 		<!-- Captured Asteroid -->
 		<UnitInfo>
@@ -8917,6 +8971,7 @@
 				</UnitMeshGroup>
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
+			<PrereqGameOption>GAMEOPTION_UNSUPPORTED_MULTIMAPS</PrereqGameOption>
 			<!-- Captured Asteroid is Mission Reward, that can place Asteroid for colonization preparation -->
 			<Actions>
 				<Action>
@@ -9107,6 +9162,7 @@
 				</UnitMeshGroup>
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
+			<PrereqGameOption>GAMEOPTION_UNSUPPORTED_MULTIMAPS</PrereqGameOption>
 			<!-- Captured Comet is Mission Reward, that can place Asteroid for colonization preparation -->
 			<Actions>
 				<Action>
@@ -9296,6 +9352,7 @@
 				</UnitMeshGroup>
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
+			<PrereqGameOption>GAMEOPTION_UNSUPPORTED_MULTIMAPS</PrereqGameOption>
 			<Actions>
 				<Action>
 					<MissionType>MISSION_GO_TO_MAP_NEARBY_STARS</MissionType>
@@ -9425,6 +9482,7 @@
 				</UnitMeshGroup>
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
+			<PrereqGameOption>GAMEOPTION_UNSUPPORTED_MULTIMAPS</PrereqGameOption>
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_SS1_REWARD</Type>
@@ -9500,6 +9558,7 @@
 				</UnitMeshGroup>
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
+			<PrereqGameOption>GAMEOPTION_UNSUPPORTED_MULTIMAPS</PrereqGameOption>
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_SS2_REWARD</Type>
@@ -9577,6 +9636,7 @@
 				</UnitMeshGroup>
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
+			<PrereqGameOption>GAMEOPTION_UNSUPPORTED_MULTIMAPS</PrereqGameOption>
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_SS3_REWARD</Type>
@@ -9656,6 +9716,7 @@
 				</UnitMeshGroup>
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
+			<PrereqGameOption>GAMEOPTION_UNSUPPORTED_MULTIMAPS</PrereqGameOption>
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_CISLUNAR_REWARD</Type>
@@ -9735,6 +9796,7 @@
 				</UnitMeshGroup>
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
+			<PrereqGameOption>GAMEOPTION_UNSUPPORTED_MULTIMAPS</PrereqGameOption>
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_LUNAR_REWARD</Type>
@@ -9813,6 +9875,7 @@
 				</UnitMeshGroup>
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
+			<PrereqGameOption>GAMEOPTION_UNSUPPORTED_MULTIMAPS</PrereqGameOption>
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_INNER_SOLAR_SYSTEM_REWARD</Type>
@@ -9893,6 +9956,7 @@
 				</UnitMeshGroup>
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
+			<PrereqGameOption>GAMEOPTION_UNSUPPORTED_MULTIMAPS</PrereqGameOption>
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_OUTER_SOLAR_SYSTEM_REWARD</Type>
@@ -9968,6 +10032,7 @@
 				</UnitMeshGroup>
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
+			<PrereqGameOption>GAMEOPTION_UNSUPPORTED_MULTIMAPS</PrereqGameOption>
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_TRANSNEPTUNIAN_REWARD</Type>
@@ -10039,6 +10104,7 @@
 				</UnitMeshGroup>
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
+			<PrereqGameOption>GAMEOPTION_UNSUPPORTED_MULTIMAPS</PrereqGameOption>
 		</UnitInfo>
 		<!-- Interstellar Reward -->
 		<UnitInfo>
@@ -10114,6 +10180,7 @@
 				</UnitMeshGroup>
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
+			<PrereqGameOption>GAMEOPTION_UNSUPPORTED_MULTIMAPS</PrereqGameOption>
 		</UnitInfo>
 		<!-- Galactic Reward -->
 		<UnitInfo>
@@ -10189,6 +10256,7 @@
 				</UnitMeshGroup>
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
+			<PrereqGameOption>GAMEOPTION_UNSUPPORTED_MULTIMAPS</PrereqGameOption>
 		</UnitInfo>
 		<!-- Intergalactic Reward -->
 		<UnitInfo>
@@ -10264,6 +10332,7 @@
 				</UnitMeshGroup>
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
+			<PrereqGameOption>GAMEOPTION_UNSUPPORTED_MULTIMAPS</PrereqGameOption>
 		</UnitInfo>
 		<!-- Mercury Reward -->
 		<UnitInfo>
@@ -10339,6 +10408,7 @@
 				</UnitMeshGroup>
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
+			<PrereqGameOption>GAMEOPTION_UNSUPPORTED_MULTIMAPS</PrereqGameOption>
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_VENUS_REWARD</Type>
@@ -10413,6 +10483,7 @@
 				</UnitMeshGroup>
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
+			<PrereqGameOption>GAMEOPTION_UNSUPPORTED_MULTIMAPS</PrereqGameOption>
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_MARS_REWARD</Type>
@@ -10488,6 +10559,7 @@
 				</UnitMeshGroup>
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
+			<PrereqGameOption>GAMEOPTION_UNSUPPORTED_MULTIMAPS</PrereqGameOption>
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_ASTEROID_REWARD</Type>
@@ -10562,6 +10634,7 @@
 				</UnitMeshGroup>
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
+			<PrereqGameOption>GAMEOPTION_UNSUPPORTED_MULTIMAPS</PrereqGameOption>
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_JUPITER_REWARD</Type>
@@ -10636,6 +10709,7 @@
 				</UnitMeshGroup>
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
+			<PrereqGameOption>GAMEOPTION_UNSUPPORTED_MULTIMAPS</PrereqGameOption>
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_EUROPA_REWARD</Type>
@@ -10711,6 +10785,7 @@
 				</UnitMeshGroup>
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
+			<PrereqGameOption>GAMEOPTION_UNSUPPORTED_MULTIMAPS</PrereqGameOption>
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_SATURN_REWARD</Type>
@@ -10785,6 +10860,7 @@
 				</UnitMeshGroup>
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
+			<PrereqGameOption>GAMEOPTION_UNSUPPORTED_MULTIMAPS</PrereqGameOption>
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_TITAN_REWARD</Type>
@@ -10859,6 +10935,7 @@
 				</UnitMeshGroup>
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
+			<PrereqGameOption>GAMEOPTION_UNSUPPORTED_MULTIMAPS</PrereqGameOption>
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_URANUS_REWARD</Type>
@@ -10934,6 +11011,7 @@
 				</UnitMeshGroup>
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
+			<PrereqGameOption>GAMEOPTION_UNSUPPORTED_MULTIMAPS</PrereqGameOption>
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_NEPTUNE_REWARD</Type>
@@ -11009,6 +11087,7 @@
 				</UnitMeshGroup>
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
+			<PrereqGameOption>GAMEOPTION_UNSUPPORTED_MULTIMAPS</PrereqGameOption>
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_KBO_REWARD</Type>
@@ -11084,6 +11163,7 @@
 				</UnitMeshGroup>
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
+			<PrereqGameOption>GAMEOPTION_UNSUPPORTED_MULTIMAPS</PrereqGameOption>
 		</UnitInfo>
 		<!-- Sednoid Mission Reward-->
 		<UnitInfo>
@@ -11160,6 +11240,7 @@
 				</UnitMeshGroup>
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
+			<PrereqGameOption>GAMEOPTION_UNSUPPORTED_MULTIMAPS</PrereqGameOption>
 		</UnitInfo>
 		<!-- Exoplanet Mission Reward-->
 		<UnitInfo>
@@ -11232,6 +11313,7 @@
 				</UnitMeshGroup>
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
+			<PrereqGameOption>GAMEOPTION_UNSUPPORTED_MULTIMAPS</PrereqGameOption>
 		</UnitInfo>
 		<!-- Oort Cloud Mission Reward-->
 		<UnitInfo>
@@ -11304,6 +11386,7 @@
 				</UnitMeshGroup>
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
+			<PrereqGameOption>GAMEOPTION_UNSUPPORTED_MULTIMAPS</PrereqGameOption>
 		</UnitInfo>
 		<!-- Distant Cosmos Mission Reward-->
 		<UnitInfo>
@@ -11376,6 +11459,7 @@
 				</UnitMeshGroup>
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
+			<PrereqGameOption>GAMEOPTION_UNSUPPORTED_MULTIMAPS</PrereqGameOption>
 		</UnitInfo>
 		<!-- Hyperspace Mission Reward-->
 		<UnitInfo>
@@ -11448,6 +11532,7 @@
 				</UnitMeshGroup>
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
+			<PrereqGameOption>GAMEOPTION_UNSUPPORTED_MULTIMAPS</PrereqGameOption>
 		</UnitInfo>
 		<!-- Multiverse Mission Reward-->
 		<UnitInfo>
@@ -11520,6 +11605,7 @@
 				</UnitMeshGroup>
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
+			<PrereqGameOption>GAMEOPTION_UNSUPPORTED_MULTIMAPS</PrereqGameOption>
 		</UnitInfo>
 		<!-- Ancient Civilization Mission Reward-->
 		<UnitInfo>
@@ -11592,6 +11678,7 @@
 				</UnitMeshGroup>
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
+			<PrereqGameOption>GAMEOPTION_UNSUPPORTED_MULTIMAPS</PrereqGameOption>
 		</UnitInfo>
 		<!-- Solar System Life Mission Reward-->
 		<UnitInfo>
@@ -11664,6 +11751,7 @@
 				</UnitMeshGroup>
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
+			<PrereqGameOption>GAMEOPTION_UNSUPPORTED_MULTIMAPS</PrereqGameOption>
 		</UnitInfo>
 		<!-- Interstellar Life Mission Reward-->
 		<UnitInfo>
@@ -11736,6 +11824,7 @@
 				</UnitMeshGroup>
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
+			<PrereqGameOption>GAMEOPTION_UNSUPPORTED_MULTIMAPS</PrereqGameOption>
 		</UnitInfo>
 		<!-- Galactic Core Mission Reward-->
 		<UnitInfo>
@@ -11811,6 +11900,7 @@
 				</UnitMeshGroup>
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
+			<PrereqGameOption>GAMEOPTION_UNSUPPORTED_MULTIMAPS</PrereqGameOption>
 			<!-- Galactic Core is a Mission Reward -->
 			<Actions>
 				<Action>
@@ -11928,6 +12018,7 @@
 				</UnitMeshGroup>
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
+			<PrereqGameOption>GAMEOPTION_UNSUPPORTED_MULTIMAPS</PrereqGameOption>
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_LUNAR_WORKER</Type>
@@ -11997,6 +12088,7 @@
 				</UnitMeshGroup>
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
+			<PrereqGameOption>GAMEOPTION_UNSUPPORTED_MULTIMAPS</PrereqGameOption>
 		</UnitInfo>
 	</UnitInfos>
 </Civ4UnitInfos>
