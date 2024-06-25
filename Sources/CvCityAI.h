@@ -79,7 +79,9 @@ public:
 };
 #endif
 
-typedef std::vector<std::pair<UnitAITypes, int> > UnitTypeWeightArray;
+typedef std::multimap<int, UnitAITypes, std::greater<int>> UnitAisOrderedByValue;
+
+typedef std::vector<std::pair<UnitAITypes,int>> UnitTypeWeightArray;
 
 typedef struct
 {
@@ -109,6 +111,9 @@ public:
 	bool AI_avoidGrowth();
 	bool AI_ignoreGrowth();
 	int AI_specialistValue(SpecialistTypes eSpecialist, bool bAvoidGrowth, bool bRemove) const;
+
+	bool AI_chooseBuildingProduction();
+	bool AI_chooseUnitProduction();
 
 	//	KOSHLING - initialisation called on every city prior to performing unit mission allocation logic
 	//	This allows caches that will remain valid for the processing of the current turn's units to be cleared

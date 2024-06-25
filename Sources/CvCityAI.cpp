@@ -779,6 +779,22 @@ int CvCityAI::AI_specialistValue(SpecialistTypes eSpecialist, bool bAvoidGrowth,
 	return AI_isEmphasizeSpecialist(eSpecialist) ? (iValue * 175) : (iValue * 100);
 }
 
+bool CvCityAI::AI_chooseBuildingProduction()
+{
+
+
+
+	return true;
+}
+
+bool CvCityAI::AI_chooseUnitProduction()
+{
+	UnitAisOrderedByValue orderedUnitAis;
+
+
+	return true;
+}
+
 void CvCityAI::AI_chooseProduction()
 {
 	PROFILE_FUNC();
@@ -831,6 +847,7 @@ void CvCityAI::AI_chooseProduction()
 			// if building a combat unit, and we have nearly no defenders, keep building it
 			const UnitTypes eProductionUnit = getProductionUnit();
 			if (eProductionUnit != NO_UNIT && plot()->getNumDefenders(eOwner) < 2
+
 				&& GC.getUnitInfo(eProductionUnit).getCombat() > 0)
 			{
 				return;
@@ -1616,16 +1633,6 @@ void CvCityAI::AI_chooseProduction()
 	int iPlotSettlerEscortCount = iPlotSettlerEscortCityDefenseCount + iPlotSettlerEscortCounterCount;
 	if (iMaxSettlers > 0 && !bInhibitUnits && iPlotSettlerCount > 0 && iPlotSettlerEscortCount < (iPlotSettlerCount * 4))
 	{
-		if (AI_chooseUnit("min defender", UNITAI_CITY_DEFENSE))
-		{
-			return;
-		}
-
-		if (AI_chooseUnit("min defender", UNITAI_CITY_COUNTER))
-		{
-			return;
-		}
-
 		if (AI_chooseUnit("min defender", UNITAI_CITY_DEFENSE))
 		{
 			return;
@@ -8483,7 +8490,7 @@ bool CvCityAI::AI_chooseLeastRepresentedUnit(const char* reason, UnitTypeWeightA
 	PROFILE_EXTRA_FUNC();
 	if (iOdds < 0 || iOdds > GC.getGame().getSorenRandNum(100, "AI choose least represented unit overall odds"))
 	{
-		std::multimap<int, UnitAITypes, std::greater<int> > bestTypes;
+		std::multimap<int,UnitAITypes,std::greater<int>> bestTypes;
 		int iTotalWeight = 0;
 
 		for (UnitTypeWeightArray::iterator it = allowedTypes.begin(); it != allowedTypes.end(); ++it)
@@ -8498,7 +8505,7 @@ bool CvCityAI::AI_chooseLeastRepresentedUnit(const char* reason, UnitTypeWeightA
 
 		int iChoiceWeight = GC.getGame().getSorenRandNum(iTotalWeight, "AI choose least represented unit");
 
-		for (std::multimap<int, UnitAITypes, std::greater<int> >::iterator best_it = bestTypes.begin(); best_it != bestTypes.end(); ++best_it)
+		for (std::multimap<int, UnitAITypes,std::greater<int>>::iterator best_it = bestTypes.begin(); best_it != bestTypes.end(); ++best_it)
 		{
 			iChoiceWeight -= best_it->first / 100;
 

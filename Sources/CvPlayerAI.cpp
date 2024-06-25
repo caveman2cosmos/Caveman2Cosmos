@@ -26630,8 +26630,7 @@ UnitTypes CvPlayerAI::bestBuildableUnitForAIType(DomainTypes eDomain, UnitAIType
 		}
 		case DOMAIN_SEA:
 		{
-			CvCity* pCoastalCity =
-			(
+			CvCity* pCoastalCity =(
 				pCapitalCity->isCoastal(GC.getWorldInfo(GC.getMap().getWorldSize()).getOceanMinAreaSize())
 				?
 				pCapitalCity

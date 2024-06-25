@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup Label="ProjectConfigurations">
     <ProjectConfiguration Include="Assert|Win32">
@@ -223,6 +223,7 @@
     <ClCompile Include="CvAllocator.cpp" />
     <ClCompile Include="CvAllocator.h" />
     <ClCompile Include="CvBonusInfo.cpp" />
+    <ClCompile Include="CvCityProduction.cpp" />
     <ClCompile Include="CvDiplomacyClasses.cpp" />
     <ClCompile Include="CvHallOfFameInfo.cpp" />
     <ClCompile Include="CvPlayerOptionInfo.cpp" />
@@ -376,6 +377,7 @@
     <ClCompile Include="SCvDebug.cpp" />
     <ClCompile Include="SCvInternalGlobals.cpp" />
     <ClCompile Include="SCyDebug.cpp" />
+    <ClInclude Include="CvCityProduction.h" />
     <ClInclude Include="CvDiplomacyClasses.h" />
     <ClInclude Include="CvPlayerOptionInfo.h" />
     <ClInclude Include="CvPythonCityLoader.h" />
