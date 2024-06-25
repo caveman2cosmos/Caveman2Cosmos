@@ -346,18 +346,6 @@ def canTriggerSpicy(argsList):
 	if not plot.canHaveBonus(iSpice, False):
 		return False
 
-	iHappyBonuses = 0
-
-	for i in xrange(GC.getNumBonusInfos()):
-		bonus = GC.getBonusInfo(i)
-		if player.getNumAvailableBonuses(i) > 0:
-			if bonus.getHappiness() > 0:
-				iHappyBonuses += 1
-				if iHappyBonuses > 4:
-					return False
-			if i == iSpice:
-				return False
-
 	return True
 
 def doSpicy2(argsList):
@@ -759,7 +747,7 @@ def applySaltpeter(argsList):
 		if iCount == 0:
 			break
 		iCount -= 1
-		loopPlot[1].setExtraYield(YieldTypes.YIELD_COMMERCE, 1)
+		loopPlot[1].setExtraYield(YieldTypes.YIELD_COMMERCE, 2)
 		CyInterface().addMessage(data.ePlayer, False, GC.getEVENT_MESSAGE_TIME(), TRNSLTR.getText("TXT_KEY_EVENT_SALTPETER_DISCOVERED", ()), "", InterfaceMessageTypes.MESSAGE_TYPE_INFO, None, GC.getInfoTypeForString("COLOR_WHITE"), loopPlot[1].getX(), loopPlot[1].getY(), True, True)
 
 ######## GREAT DEPRESSION ###########
@@ -836,9 +824,6 @@ def canTriggerGoldRush(argsList):
 def canTriggerInfluenza(argsList):
 	data = argsList[0]
 	player = GC.getPlayer(data.ePlayer)
-
-	if player.getCurrentEra() <= GC.getInfoTypeForString("C2C_ERA_INDUSTRIAL"):
-		return False
 
 	if GC.getTeam(player.getTeam()).isHasTech(GC.getInfoTypeForString("TECH_MEDICINE")):
 		return False
@@ -924,18 +909,6 @@ def canTriggerAntelope(argsList):
   player = GC.getPlayer(data.ePlayer)
 
   iDeer = GC.getInfoTypeForString("BONUS_DEER")
-  iHappyBonuses = 0
-  bDeer = False
-  for i in xrange(GC.getNumBonusInfos()):
-    bonus = GC.getBonusInfo(i)
-    iNum = player.getNumAvailableBonuses(i)
-    if iNum > 0 :
-      if bonus.getHappiness() > 0:
-        iHappyBonuses += 1
-        if iHappyBonuses > 5:
-          return False
-      if i == iDeer:
-        return False
 
   plot = GC.getMap().plot(data.iPlotX, data.iPlotY)
   if not plot.canHaveBonus(iDeer, False):
@@ -964,14 +937,8 @@ def canTriggerWhaleOfAThing(argsList):
 	player = GC.getPlayer(data.ePlayer)
 	iWhale = GC.getInfoTypeForString("BONUS_WHALE")
 
-	if player.getNumAvailableBonuses(iWhale) > 0:
-		return False
-	elif player.countOwnedBonuses(iWhale) > 1:
-		return False
-	iNumCoastalCities = player.countNumCoastalCities()
-	if iNumCoastalCities < 1:
-		return False
-	if 0.75 > ( iNumCoastalCities / player.getNumCities()):
+    iNumCoastalCities = player.countNumCoastalCities()
+	if 0.65 > ( iNumCoastalCities / player.getNumCities()):
 		return False
 	return True
 
@@ -983,18 +950,6 @@ def canTriggerHiyoSilver(argsList):
   player = GC.getPlayer(data.ePlayer)
 
   iSilver = GC.getInfoTypeForString("BONUS_SILVER_ORE")
-  iHappyBonuses = 0
-  bSilver = False
-  for i in xrange(GC.getNumBonusInfos()):
-    bonus = GC.getBonusInfo(i)
-    iNum = player.getNumAvailableBonuses(i)
-    if iNum > 0 :
-      if bonus.getHappiness() > 0:
-        iHappyBonuses += 1
-        if iHappyBonuses > 5:
-          return False
-      if i == iSilver:
-        return False
 
   plot = GC.getMap().plot(data.iPlotX, data.iPlotY)
   if not plot.canHaveBonus(iSilver, False):
@@ -1493,7 +1448,7 @@ def applyTheHuns1(argsList):
   elif map.getWorldSize() == GC.getInfoTypeForString("WORLDSIZE_LARGE"):
     iNumUnits  = 10
   else:
-    iNumUnits  = 15
+    iNumUnits  = 30
 
   iUnitType = GC.getInfoTypeForString("UNIT_HORSE_ARCHER")
 
@@ -1577,7 +1532,7 @@ def applyTheVandals1(argsList):
   elif map.getWorldSize() == GC.getInfoTypeForString("WORLDSIZE_LARGE"):
     iNumUnits  = 10
   else:
-    iNumUnits  = 15
+    iNumUnits  = 30
 
   iUnitType = GC.getInfoTypeForString("UNIT_HEAVY_SWORDSMAN")
 
@@ -1660,7 +1615,7 @@ def applyTheGoths1(argsList):
   elif map.getWorldSize() == GC.getInfoTypeForString("WORLDSIZE_LARGE"):
     iNumUnits  = 10
   else:
-    iNumUnits  = 15
+    iNumUnits  = 30
 
   iUnitType = GC.getInfoTypeForString("UNIT_AXEMAN")
 
@@ -1744,7 +1699,7 @@ def applyThePhilistines1(argsList):
   elif map.getWorldSize() == GC.getInfoTypeForString("WORLDSIZE_LARGE"):
     iNumUnits  = 10
   else:
-    iNumUnits  = 15
+    iNumUnits  = 30
 
   iUnitType = GC.getInfoTypeForString("UNIT_SPEARMAN")
 
@@ -1828,7 +1783,7 @@ def applyTheVedicAryans1(argsList):
   elif map.getWorldSize() == GC.getInfoTypeForString("WORLDSIZE_LARGE"):
     iNumUnits  = 10
   else:
-    iNumUnits  = 15
+    iNumUnits  = 30
 
   iUnitType = GC.getInfoTypeForString("UNIT_ARCHER")
 
@@ -3682,7 +3637,7 @@ def applyTheBuccaneers1(argsList):
   elif map.getWorldSize() == GC.getInfoTypeForString("WORLDSIZE_LARGE"):
     iNumUnits  = 10
   else:
-    iNumUnits  = 15
+    iNumUnits  = 30
 
   iUnitType = GC.getInfoTypeForString("UNIT_FRENCH_MUSKETEER")
 
@@ -4620,7 +4575,7 @@ def applyMahdiArmy1(argsList):
   elif map.getWorldSize() == GC.getInfoTypeForString("WORLDSIZE_LARGE"):
     iNumUnits  = 10
   else:
-    iNumUnits  = 15
+    iNumUnits  = 30
 
   iUnitType = GC.getInfoTypeForString("UNIT_MUSKETMAN")
 
@@ -5125,10 +5080,10 @@ def canTriggerBlackDeath(argsList):
   player = GC.getPlayer(data.ePlayer)
   team = GC.getTeam(player.getTeam())
 
-  iClassical = GC.getInfoTypeForString("C2C_ERA_CLASSICAL")
-
-  if player.getCurrentEra() <= iClassical:
-    return False
+#   iClassical = GC.getInfoTypeForString("C2C_ERA_CLASSICAL")
+#
+#   if player.getCurrentEra() <= iClassical:
+#     return False
 
   iMedicine = GC.getInfoTypeForString("TECH_MEDICINE")
 
@@ -5175,10 +5130,10 @@ def canTriggerSmallpox(argsList):
   player = GC.getPlayer(data.ePlayer)
   team = GC.getTeam(player.getTeam())
 
-  iClassical = GC.getInfoTypeForString("C2C_ERA_CLASSICAL")
-
-  if player.getCurrentEra() <= iClassical:
-    return False
+#   iClassical = GC.getInfoTypeForString("C2C_ERA_CLASSICAL")
+#
+#   if player.getCurrentEra() <= iClassical:
+#     return False
 
   iMedicine = GC.getInfoTypeForString("TECH_MEDICINE")
 
@@ -5698,7 +5653,7 @@ def TriggerSuperVirus2(argsList):
 
   iNumCities = 1 + GAME.getSorenRandNum(3, "Super Virus event number of cities")
 
-  iRequireGold = 100 + player.getNumCities() * 35
+  iRequireGold = 100 + player.getNumCities() * 350
   player.changeGold(-iRequireGold)
 
   listCities = []
@@ -5753,7 +5708,7 @@ def TriggerSuperVirus3(argsList):
   player = GC.getPlayer(data.ePlayer)
   eventCity = player.getCity(data.iCityId)
 
-  iRequireGold = 100 + player.getNumCities() * 65
+  iRequireGold = 100 + player.getNumCities() * 650
   player.changeGold(-iRequireGold)
 
   iChangePopulation = eventCity.getPopulation() * 25
@@ -6953,7 +6908,7 @@ def canTriggerCivilWar(argsList):
 	if pCity.isCapital():
 		return False
 
-	return False ### Disabled!!!
+	return True
 
 def applyCivilWar(argsList):
 	data = argsList[1]

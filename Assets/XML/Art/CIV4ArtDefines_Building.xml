@@ -91,6 +91,16 @@
 			<KFM/>
 			<Button>art/Seafood/Art/abalonediggers.dds</Button>
 		</BuildingArtInfo>
+        <BuildingArtInfo>
+            <Type>ART_DEF_BUILDING_CAVE_SHELTER</Type>
+            <LSystem/>
+            <bAnimated>0</bAnimated>
+            <fScale>0</fScale>
+            <fInterfaceScale>0</fInterfaceScale>
+            <NIF/>
+            <KFM/>
+            <Button>art/buttons/buildings/cave_icon.dds</Button>
+        </BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_ABATIS</Type>
 			<LSystem/>
@@ -35854,6 +35864,16 @@
 			<KFM/>
 			<Button>Art/Interface/Buttons/Buildings/docks.dds</Button>
 		</BuildingArtInfo>
+        <BuildingArtInfo>
+            <Type>ART_DEF_BUILDING_WATER_TROUGH</Type>
+            <LSystem/>
+            <bAnimated>0</bAnimated>
+            <fScale>0</fScale>
+            <fInterfaceScale>0</fInterfaceScale>
+            <NIF/>
+            <KFM/>
+            <Button>Art/Buttons/Buildings/water_trough.dds</Button>
+        </BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_RIVER_RAFTING_DOCK</Type>
 			<LSystem/>
