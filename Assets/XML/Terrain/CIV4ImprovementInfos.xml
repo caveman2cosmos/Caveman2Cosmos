@@ -7385,7 +7385,7 @@
 				<iYieldChange>0</iYieldChange>
 				<iYieldChange>1</iYieldChange>
 			</YieldChanges>
-			<PrereqTech>TECH_WOODWORKING</PrereqTech>
+			<PrereqTech>TECH_SIMPLE_WOOD_WORKING</PrereqTech>
 			<bRequiresFeature>1</bRequiresFeature>
 			<iUpgradeTime>5</iUpgradeTime>
 			<iPillageGold>5</iPillageGold>
