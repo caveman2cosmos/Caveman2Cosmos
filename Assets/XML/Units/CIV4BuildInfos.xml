@@ -3263,7 +3263,7 @@
 		<BuildInfo>
 			<Type>BUILD_WOOD_GATHERER_KILL</Type>
 			<Description>TXT_KEY_BUILD_WOOD_GATHERER_KILL</Description>
-			<PrereqTech>TECH_WOODWORKING</PrereqTech>
+			<PrereqTech>TECH_SIMPLE_WOOD_WORKING</PrereqTech>
 			<ObsoleteTech>TECH_CLASSICAL_LIFESTYLE</ObsoleteTech>
 			<iTime>200</iTime>
 			<iCost>1</iCost>
