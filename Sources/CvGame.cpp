@@ -8460,7 +8460,7 @@ void CvGame::read(FDataStreamBase* pStream)
 		for (unsigned int i = 0; i < iSize; ++i)
 		{
 			int iTrigger = -1;
-			WRAPPER_READ_CLASS_ENUM_DECORATED(wrapper, "CvGame", REMAPPED_CLASS_TYPE_EVENT_TRIGGERS, &iTrigger, "InactiveTrigger");
+			WRAPPER_READ_CLASS_ENUM_DECORATED_ALLOW_MISSING(wrapper, "CvGame", REMAPPED_CLASS_TYPE_EVENT_TRIGGERS, &iTrigger, "InactiveTrigger");
 
 			if (iTrigger > -1)
 			{
