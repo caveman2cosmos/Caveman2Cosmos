@@ -574,7 +574,7 @@ private:
 	int m_iCivicOption;
 	int m_iAIWeight;
 	int m_iProductionCost;
-	int m_iProductionCostSizeModifier
+	int m_iProductionCostSizeModifier;
 	int m_iHurryCostModifier;
 	int m_iHurryAngerModifier;
 	int m_iMinAreaSize;
