@@ -7174,7 +7174,7 @@ int CvPlayer::getProductionNeeded(BuildingTypes eBuilding) const
 {
 
 //TODO : ADD COST MODIFIERS
-    const int iModifier = GC.getBuildingInfo(eBuilding).getProductionCostBySize();
+    const int iCostBySize = GC.getBuildingInfo(eBuilding).getProductionCostSize();
 	const int iBaseCost = GC.getBuildingInfo(eBuilding).getProductionCost();
 	if (iBaseCost < 1)
 	{

@@ -85,7 +85,7 @@ public:
 	int getCivicOption() const						{ return m_iCivicOption; }
 	int getAIWeight() const							{ return m_iAIWeight; }
 	int getProductionCost() const					{ return m_iProductionCost; }
-	int getProductionCostSizeModifier() const		{ return m_iProductionCostSizeModifier; }
+	int getProductionCostSize() const		        { return m_iProductionCostSize; }
 	int getHurryCostModifier() const				{ return m_iHurryCostModifier; }
 	int getHurryAngerModifier() const				{ return m_iHurryAngerModifier; }
 	int getMinAreaSize() const						{ return m_iMinAreaSize; }
@@ -574,7 +574,7 @@ private:
 	int m_iCivicOption;
 	int m_iAIWeight;
 	int m_iProductionCost;
-	int m_iProductionCostSizeModifier;
+	int m_iProductionCostSize;
 	int m_iHurryCostModifier;
 	int m_iHurryAngerModifier;
 	int m_iMinAreaSize;
