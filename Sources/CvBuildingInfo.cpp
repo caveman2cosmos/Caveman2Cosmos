@@ -50,6 +50,7 @@ m_iFreeAreaBuilding(NO_BUILDING),
 m_iCivicOption(NO_CIVICOPTION),
 m_iAIWeight(0),
 m_iProductionCost(-1),
+m_iProductionCostSizeModifier(-1),
 m_iHurryCostModifier(0),
 m_iHurryAngerModifier(0),
 m_iMinAreaSize(0),
@@ -1590,6 +1591,7 @@ void CvBuildingInfo::getCheckSum(uint32_t& iSum) const
 	CheckSum(iSum, m_iCivicOption);
 	CheckSum(iSum, m_iAIWeight);
 	CheckSum(iSum, m_iProductionCost);
+	CheckSum(iSum, m_iProductionCostSizeModifier);
 	CheckSum(iSum, m_iHurryCostModifier);
 	CheckSum(iSum, m_iHurryAngerModifier);
 	CheckSum(iSum, m_iMinAreaSize);
@@ -2109,6 +2111,7 @@ bool CvBuildingInfo::read(CvXMLLoadUtility* pXML)
 	pXML->GetOptionalChildXmlValByName(&m_bStateReligionInCity, L"bNeedStateReligionInCity");
 	pXML->GetOptionalChildXmlValByName(&m_iAIWeight, L"iAIWeight");
 	pXML->GetOptionalChildXmlValByName(&m_iProductionCost, L"iCost", -1);
+	pXML->GetOptionalChildXmlValByName(&m_iProductionCostSizeModifier, L"iCostSizeModifier", -1);
 	pXML->GetOptionalChildXmlValByName(&m_iHurryCostModifier, L"iHurryCostModifier");
 	pXML->GetOptionalChildXmlValByName(&m_iHurryAngerModifier, L"iHurryAngerModifier");
 	pXML->GetOptionalChildXmlValByName(&m_iMinAreaSize, L"iMinAreaSize");
@@ -3345,6 +3348,7 @@ void CvBuildingInfo::copyNonDefaults(CvBuildingInfo* pClassInfo)
 
 	if (getAIWeight() == iDefault) m_iAIWeight = pClassInfo->getAIWeight();
 	if (m_iProductionCost == iTextDefault) m_iProductionCost = pClassInfo->getProductionCost();
+	if (m_iProductionCostSizeModifier == iTextDefault) m_iProductionCostSizeModifier = pClassInfo->getProductionCostSizeModifier();
 	if (getHurryCostModifier() == iDefault) m_iHurryCostModifier = pClassInfo->getHurryCostModifier();
 	if (getHurryAngerModifier() == iDefault) m_iHurryAngerModifier = pClassInfo->getHurryAngerModifier();
 	if (getMinAreaSize() == iDefault) m_iMinAreaSize = pClassInfo->getMinAreaSize();

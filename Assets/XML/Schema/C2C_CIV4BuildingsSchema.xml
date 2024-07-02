@@ -386,7 +386,7 @@
 	<ElementType name="bCenterInCity" content="textOnly" dt:type="boolean"/>
 	<ElementType name="iAIWeight" content="textOnly" dt:type="int"/>
 	<ElementType name="iCost" content="textOnly" dt:type="int"/>
-	<ElementType name="iCostBySizeModifier" content="textOnly" dt:type="int"/>
+	<ElementType name="iCostSizeModifier" content="textOnly" dt:type="int"/>
 	<ElementType name="iHurryCostModifier" content="textOnly" dt:type="int"/>
 	<ElementType name="iMinAreaSize" content="textOnly" dt:type="int"/>
 	<ElementType name="iConquestProb" content="textOnly" dt:type="int"/>
@@ -812,7 +812,7 @@
 		<element type="bCenterInCity" minOccurs="0"/>
 		<element type="iAIWeight" minOccurs="0"/>
 		<element type="iCost" minOccurs="0"/>
-		<element type="iCostBySizeModifier" minOccurs="0"/>
+		<element type="iCostSizeModifier" minOccurs="0"/>
 		<element type="iHurryCostModifier" minOccurs="0"/>
 		<element type="iMinAreaSize" minOccurs="0"/>
 		<element type="iConquestProb" minOccurs="0"/>
