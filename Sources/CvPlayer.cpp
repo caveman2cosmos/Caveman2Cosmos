@@ -7173,13 +7173,46 @@ int CvPlayer::getProductionNeeded(UnitTypes eUnit) const
 int CvPlayer::getProductionNeeded(BuildingTypes eBuilding) const
 {
 
-//TODO : ADD COST MODIFIERS
-    const int iCostBySize = GC.getBuildingInfo(eBuilding).getProductionCostSize();
-	const int iBaseCost = GC.getBuildingInfo(eBuilding).getProductionCost();
+	int iBaseCost = GC.getBuildingInfo(eBuilding).getProductionCost();
 	if (iBaseCost < 1)
 	{
 		return -1;
 	}
+
+    const int iCostBySize = GC.getBuildingInfo(eBuilding).getProductionCostSize();
+    const int iCostByCount = GC.getBuildingInfo(eBuilding).getProductionCostCount();
+    const int iCostByMaterials = GC.getBuildingInfo(eBuilding).getProductionCostMaterials();
+    const int iCostByComplexity = GC.getBuildingInfo(eBuilding).getProductionCostComplexity();
+
+    // Calculate total modifier
+    float totalModifier = 1.0f;
+
+    if (iCostBySize == -1) {
+        totalModifier -= 0.1f;
+    } else if (iCostBySize == 1) {
+        totalModifier += 0.1f;
+    }
+
+    if (iCostByCount == -1) {
+        totalModifier -= 0.1f;
+    } else if (iCostByCount == 1) {
+        totalModifier += 0.1f;
+    }
+
+    if (iCostByMaterials == -1) {
+        totalModifier -= 0.1f;
+    } else if (iCostByMaterials == 1) {
+        totalModifier += 0.1f;
+    }
+
+    if (iCostByComplexity == -1) {
+        totalModifier -= 0.1f;
+    } else if (iCostByComplexity == 1) {
+        totalModifier += 0.1f;
+    }
+
+    // Apply total modifier to base cost
+    iBaseCost = static_cast<int>(iBaseCost * totalModifier);
 	uint64_t iProductionNeeded = (uint64_t) 100*iBaseCost;
 
 	iProductionNeeded *= GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getHammerCostPercent();

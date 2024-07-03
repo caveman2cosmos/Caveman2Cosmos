@@ -51,6 +51,9 @@ m_iCivicOption(NO_CIVICOPTION),
 m_iAIWeight(0),
 m_iProductionCost(-1),
 m_iProductionCostSize(-1),
+m_iProductionCostCount(-1),
+m_iProductionCostMaterials(-1),
+m_iProductionCostComplexity(-1),
 m_iHurryCostModifier(0),
 m_iHurryAngerModifier(0),
 m_iMinAreaSize(0),
@@ -1592,6 +1595,9 @@ void CvBuildingInfo::getCheckSum(uint32_t& iSum) const
 	CheckSum(iSum, m_iAIWeight);
 	CheckSum(iSum, m_iProductionCost);
 	CheckSum(iSum, m_iProductionCostSize);
+	CheckSum(iSum, m_iProductionCostCount);
+	CheckSum(iSum, m_iProductionCostMaterials);
+	CheckSum(iSum, m_iProductionCostComplexity);
 	CheckSum(iSum, m_iHurryCostModifier);
 	CheckSum(iSum, m_iHurryAngerModifier);
 	CheckSum(iSum, m_iMinAreaSize);
@@ -2112,6 +2118,9 @@ bool CvBuildingInfo::read(CvXMLLoadUtility* pXML)
 	pXML->GetOptionalChildXmlValByName(&m_iAIWeight, L"iAIWeight");
 	pXML->GetOptionalChildXmlValByName(&m_iProductionCost, L"iCost", -1);
 	pXML->GetOptionalChildXmlValByName(&m_iProductionCostSize, L"iCostSizeModifier", -1);
+	pXML->GetOptionalChildXmlValByName(&m_iProductionCostCount, L"iCostCountModifier", -1);
+	pXML->GetOptionalChildXmlValByName(&m_iProductionCostMaterials, L"iCostMaterialsModifier", -1);
+	pXML->GetOptionalChildXmlValByName(&m_iProductionCostComplexity, L"iCostComplexityModifier", -1);
 	pXML->GetOptionalChildXmlValByName(&m_iHurryCostModifier, L"iHurryCostModifier");
 	pXML->GetOptionalChildXmlValByName(&m_iHurryAngerModifier, L"iHurryAngerModifier");
 	pXML->GetOptionalChildXmlValByName(&m_iMinAreaSize, L"iMinAreaSize");
@@ -3349,6 +3358,9 @@ void CvBuildingInfo::copyNonDefaults(CvBuildingInfo* pClassInfo)
 	if (getAIWeight() == iDefault) m_iAIWeight = pClassInfo->getAIWeight();
 	if (m_iProductionCost == iTextDefault) m_iProductionCost = pClassInfo->getProductionCost();
 	if (m_iProductionCostSize == iTextDefault) m_iProductionCostSize = pClassInfo->getProductionCostSize();
+	if (m_iProductionCostCount == iTextDefault) m_iProductionCostCount = pClassInfo->getProductionCostCount();
+	if (m_iProductionCostMaterials == iTextDefault) m_iProductionCostMaterials = pClassInfo->getProductionCostMaterials();
+	if (m_iProductionCostComplexity == iTextDefault) m_iProductionCostComplexity = pClassInfo->getProductionCostComplexity();
 	if (getHurryCostModifier() == iDefault) m_iHurryCostModifier = pClassInfo->getHurryCostModifier();
 	if (getHurryAngerModifier() == iDefault) m_iHurryAngerModifier = pClassInfo->getHurryAngerModifier();
 	if (getMinAreaSize() == iDefault) m_iMinAreaSize = pClassInfo->getMinAreaSize();

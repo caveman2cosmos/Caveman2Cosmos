@@ -86,6 +86,9 @@ public:
 	int getAIWeight() const							{ return m_iAIWeight; }
 	int getProductionCost() const					{ return m_iProductionCost; }
 	int getProductionCostSize() const		        { return m_iProductionCostSize; }
+	int getProductionCostCount() const		        { return m_iProductionCostCount; }
+	int getProductionCostMaterials() const		    { return m_iProductionCostMaterials; }
+	int getProductionCostComplexity() const		    { return m_iProductionCostComplexity; }
 	int getHurryCostModifier() const				{ return m_iHurryCostModifier; }
 	int getHurryAngerModifier() const				{ return m_iHurryAngerModifier; }
 	int getMinAreaSize() const						{ return m_iMinAreaSize; }
@@ -575,6 +578,9 @@ private:
 	int m_iAIWeight;
 	int m_iProductionCost;
 	int m_iProductionCostSize;
+	int m_iProductionCostCount;
+	int m_iProductionCostMaterials;
+	int m_iProductionCostComplexity;
 	int m_iHurryCostModifier;
 	int m_iHurryAngerModifier;
 	int m_iMinAreaSize;
