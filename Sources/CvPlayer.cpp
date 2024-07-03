@@ -7187,27 +7187,27 @@ int CvPlayer::getProductionNeeded(BuildingTypes eBuilding) const
     // Calculate total modifier
     float totalModifier = 1.0f;
 
-    if (iCostBySize == -1) {
+    if (iCostBySize == 0) {
         totalModifier -= 0.1f;
-    } else if (iCostBySize == 1) {
+    } else if (iCostBySize == 2) {
         totalModifier += 0.1f;
     }
 
-    if (iCostByCount == -1) {
+    if (iCostByCount == 0) {
         totalModifier -= 0.1f;
-    } else if (iCostByCount == 1) {
+    } else if (iCostByCount == 2) {
         totalModifier += 0.1f;
     }
 
-    if (iCostByMaterials == -1) {
+    if (iCostByMaterials == 0) {
         totalModifier -= 0.1f;
-    } else if (iCostByMaterials == 1) {
+    } else if (iCostByMaterials == 2) {
         totalModifier += 0.1f;
     }
 
-    if (iCostByComplexity == -1) {
+    if (iCostByComplexity == 0) {
         totalModifier -= 0.1f;
-    } else if (iCostByComplexity == 1) {
+    } else if (iCostByComplexity == 2) {
         totalModifier += 0.1f;
     }
 
