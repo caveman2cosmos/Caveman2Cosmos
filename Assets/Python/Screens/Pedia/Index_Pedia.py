@@ -3,6 +3,15 @@
 from CvPythonExtensions import *
 from operator import itemgetter
 
+polish_hex_mapping = {
+    'xc6': 'C',
+    'xa3': 'L',
+    'xd3': 'O',
+    'x8c': 'S',
+    'x8f': 'Z',
+    'xaf': 'Z'
+}
+
 class Index:
 
 	def __init__(self, parent, xRes, yRes, H_EDGE_PANEL, Y_PEDIA_PAGE, szFontEdge):
@@ -89,7 +98,26 @@ class Index:
 					if szName.find("<") == 0:
 						i = szName.find(">") + 1
 						szName = szName[i:]
-					aList.append((szName, misc, iType, info.getButton()))
+					oldFirstLetter = ''
+					newFirstLetter = ''
+					try:
+						oldFirstLetter = str(szName[:1])
+					except UnicodeEncodeError,e:
+						found = False
+						for diacritic, letter in polish_hex_mapping.items():
+							it = e.__str__().find(diacritic)
+							if it != -1:
+								oldFirstLetter = szName[:1]
+								newFirstLetter = letter
+								szName = newFirstLetter + szName[1:]
+								found = True
+								break
+						if found == False:
+							oldFirstLetter = szName[:1]
+							newFirstLetter = '?'
+							szName = '?' + szName[1:]
+
+					aList.append((szName, misc, iType, info.getButton(), oldFirstLetter, newFirstLetter))
 			aList.sort(key=itemgetter(0))
 			self.aListLength = len(aList)
 
@@ -119,7 +147,7 @@ class Index:
 			do = screen.appendListBoxStringNoUpdate
 			iIconSize = self.iIconSize
 			i = 0
-			for szName, WIDGET, iType, path in aList:
+			for szName, WIDGET, iType, path, oldFirstLetter, newFirstLetter in aList:
 
 				if WIDGET == "Builds":
 					iOffset = 100000
@@ -129,9 +157,14 @@ class Index:
 					WIDGET = iWidJuToUnit
 				else:
 					iOffset = 0
-
-				BUTTON = '<img=%s size=%d></img> %s' %(path, iIconSize, szFont + szName)
-				if (szName[:1] != szLetter):
+				
+				if newFirstLetter != '':
+					firstLetter = newFirstLetter
+				else:
+					firstLetter = oldFirstLetter
+	
+				BUTTON = '<img=%s size=%d></img> %s' %(path, iIconSize, szFont + oldFirstLetter + szName[1:])
+				if (firstLetter != szLetter):
 					if i >= iLimit:
 						iList += 1
 						nRowList.append(i + iLetter)
@@ -140,7 +173,9 @@ class Index:
 						iTemp = W_INDEX * iList
 						if iTemp - iX > 0:
 							iX = 4 + iTemp
-					szLetter = str(szName[:1])
+
+					szLetter = firstLetter
+
 					szHeader = szFont + "<color=245,245,0,255>" + "-----  " + szLetter + "  -----"
 					do(LIST[iList], szHeader, eWidGen, 0, 0, 1<<2)
 					# create letter button

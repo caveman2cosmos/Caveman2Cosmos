@@ -150,14 +150,13 @@ public:
 	bool isConnectedToCapital(int /*PlayerTypes*/ ePlayer) const;
 	CyArea* area() const;
 	CyArea* waterArea() const;
-	CyPlot* getRallyPlot() const;
 
 	int getGameTurnFounded() const;
 	int getGameTurnAcquired() const;
 	int getPopulation() const;
 	void setPopulation(int iNewValue);
 	void changePopulation(int iChange);
-	int getRealPopulation() const;
+	int64_t getRealPopulation() const;
 
 	int getHighestPopulation() const;
 	void setHighestPopulation(int iNewValue);
@@ -311,7 +310,7 @@ public:
 
 	bool isWeLoveTheKingDay() const;
 	void setWeLoveTheKingDay(bool bWeLoveTheKingDay);
-	int calculateCorporateTaxes() const;
+	int64_t calcCorporateMaintenance() const;
 	void changePowerCount(int iChange);
 
 	void changeEventAnger(int iChange);

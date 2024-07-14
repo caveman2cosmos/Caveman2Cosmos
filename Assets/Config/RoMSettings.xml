@@ -19,14 +19,17 @@
 			<option id="CanNotClaimOcean" key="CanNotClaimOcean" type="boolean" default="False" get="isCanNotClaimOcean" set="setCanNotClaimOcean">
 				<change module="ANewDawnSettings" function="changedCanNotClaimOcean"/>
 			</option>
-			<option id="ShowCivTraits" key="ShowCivTraits" type="boolean" default="True" get="isShowCivTraits" set="setShowCivTraits">
-				<change module="ANewDawnSettings" function="changedShowCivTraits"/>
-			</option>
 			<option id="DepletionMod" key="DepletionMod" type="boolean" default="False" get="isDepletionMod" set="setDepletionMod">
 				<change module="ANewDawnSettings" function="changedDepletionMod"/>
 			</option>
+			<option id="GreaterGreatFarmer" key="GreaterGreatFarmer" type="boolean" default="False" get="isGreaterGreatFarmer" set="setGreaterGreatFarmer">
+				<change module="ANewDawnSettings" function="changedGreaterGreatFarmer"/>
+			</option>
 			<option id="BattlefieldPromotions" key="BattlefieldPromotions" type="boolean" default="False" get="isBattlefieldPromotions" set="setBattlefieldPromotions">
 				<change module="ANewDawnSettings" function="changedBattlefieldPromotions"/>
+			</option>
+			<option id="Starsigns" key="Starsigns" type="boolean" default="False" get="isStarsigns" set="setStarsigns">
+				<change module="ANewDawnSettings" function="changedStarsigns"/>
 			</option>
 			<option id="BetterAirInterception" key="BetterAirInterception" type="boolean" default="True" get="isBetterAirInterception" set="setBetterAirInterception">
 				<change module="ANewDawnSettings" function="changedBetterAirInterception"/>
@@ -80,6 +83,9 @@
 				values="100, 95, 90, 85, 80, 75, 70, 65, 60, 55, 50, 45, 40, 35, 30, 25, 20, 15, 10" get="getMaxBombardDefense" set="setMaxBombardDefense">
 
 				<change module="ANewDawnSettings" function="changedMaxBombardDefense"/>
+			</list>
+			<list id="MinCityDistance" key="MinCityDistance" type="int" default="3" values="6, 5, 4, 3, 2" get="getMinCityDistance" set="setMinCityDistance">
+				<change module="ANewDawnSettings" function="changedMinCityDistance"/>
 			</list>
 			<list id="FlexibleDifficultyMinimumDiff" key="FlexibleDifficultyMinimumDiff" type="int" default="0" listType="string"
 				values="No Minimum|Settler|Chieftan|Warlord|Noble|Prince|Monarch|Emperor|Immortal|Deity|Nightmare"
@@ -150,12 +156,6 @@ values="Current Color|Black|Blue|Brown|Cyan|Dark Blue|Dark Cyan|Dark Green|Dark 
 			</option>
 			<option id="WarPrizes" key="WarPrizes" type="boolean" default="True" get="isWarPrizes" set="setWarPrizes">
 				<change module="ANewDawnSettings" function="changedWarPrizes"/>
-			</option>
-			<option id="EventImages" key="EventImages" type="boolean" default="True" get="isEventImages" set="setEventImages">
-				<change module="ANewDawnSettings" function="changedEventImages"/>
-			</option>
-			<option id="StrategicEvents" key="StrategicEvents" type="boolean" default="True" get="isStrategicEvents" set="setStrategicEvents">
-				<change module="ANewDawnSettings" function="changedStrategicEvents"/>
 			</option>
 			<option id="ReligionDecay" key="ReligionDecay" type="boolean" default="True" get="isReligionDecay" set="setReligionDecay">
 				<change module="ANewDawnSettings" function="changedReligionDecay"/>

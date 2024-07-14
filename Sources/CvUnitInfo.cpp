@@ -132,7 +132,6 @@ m_bFoodProduction(false),
 m_bNoBadGoodies(false),
 m_bOnlyDefensive(false),
 m_bNoCapture(false),
-m_bQuickCombat(false),
 m_bRivalTerritory(false),
 m_bMilitaryHappiness(false),
 m_bMilitarySupport(false),
@@ -940,11 +939,6 @@ bool CvUnitInfo::isNoCapture() const
 	return (m_bNoCapture);
 }
 
-bool CvUnitInfo::isQuickCombat() const
-{
-	return m_bQuickCombat;
-}
-
 bool CvUnitInfo::isRivalTerritory() const
 {
 	return m_bRivalTerritory;
@@ -1418,6 +1412,23 @@ bool CvUnitInfo::getHasBuilding(int i) const
 int CvUnitInfo::getNumBuildings() const
 {
 	return m_pbBuildings.size();
+}
+
+int CvUnitInfo::getHeritage(int i) const
+{
+	FASSERT_BOUNDS(0, GC.getNumHeritageInfos(), i);
+	return m_addHeritage[i];
+}
+
+bool CvUnitInfo::getHasHeritage(int i) const
+{
+	FASSERT_BOUNDS(0, GC.getNumHeritageInfos(), i);
+	return algo::any_of_equal(m_addHeritage, i);
+}
+
+int CvUnitInfo::getNumHeritage() const
+{
+	return m_addHeritage.size();
 }
 
 //
@@ -3638,7 +3649,6 @@ void CvUnitInfo::getCheckSum(uint32_t& iSum) const
 	CheckSum(iSum, m_bNoBadGoodies);
 	CheckSum(iSum, m_bOnlyDefensive);
 	CheckSum(iSum, m_bNoCapture);
-	CheckSum(iSum, m_bQuickCombat);
 	CheckSum(iSum, m_bRivalTerritory);
 	CheckSum(iSum, m_bMilitaryHappiness);
 	CheckSum(iSum, m_bMilitarySupport);
@@ -3692,6 +3702,8 @@ void CvUnitInfo::getCheckSum(uint32_t& iSum) const
 	CheckSumI(iSum, GC.getNumCivicInfos(), m_pbPrereqOrCivics);
 
 	CheckSumC(iSum, m_workerBuilds);
+	CheckSumC(iSum, m_prereqOrHeritage);
+	CheckSumC(iSum, m_prereqAndHeritage);
 	CheckSumC(iSum, m_aiPrereqAndBuildings);
 	CheckSumC(iSum, m_aiPrereqOrBuildings);
 
@@ -3710,7 +3722,10 @@ void CvUnitInfo::getCheckSum(uint32_t& iSum) const
 	CheckSumI(iSum, GC.getNumTerrainInfos(), m_piTerrainPassableTech);
 	CheckSumI(iSum, GC.getNumFeatureInfos(), m_piFeaturePassableTech);
 	CheckSumI(iSum, GC.getNumSpecialistInfos(), m_pbGreatPeoples);
+
 	CheckSumC(iSum, m_pbBuildings);
+	CheckSumC(iSum, m_addHeritage);
+
 	CheckSumI(iSum, GC.getNumTerrainInfos(), m_pbTerrainNative);
 	CheckSumI(iSum, GC.getNumFeatureInfos(), m_pbFeatureNative);
 	//CheckSumI(iSum, GC.getNumTerrainInfos(), m_pbTerrainImpassable);
@@ -4075,7 +4090,6 @@ bool CvUnitInfo::read(CvXMLLoadUtility* pXML)
 	pXML->GetOptionalChildXmlValByName(&m_bNoBadGoodies, L"bNoBadGoodies");
 	pXML->GetOptionalChildXmlValByName(&m_bOnlyDefensive, L"bOnlyDefensive");
 	pXML->GetOptionalChildXmlValByName(&m_bNoCapture, L"bNoCapture");
-	pXML->GetOptionalChildXmlValByName(&m_bQuickCombat, L"bQuickCombat");
 	pXML->GetOptionalChildXmlValByName(&m_bRivalTerritory, L"bRivalTerritory");
 	pXML->GetOptionalChildXmlValByName(&m_bMilitaryHappiness, L"bMilitaryHappiness");
 	pXML->GetOptionalChildXmlValByName(&m_bMilitarySupport, L"bMilitarySupport");
@@ -4154,6 +4168,7 @@ bool CvUnitInfo::read(CvXMLLoadUtility* pXML)
 	pXML->SetVariableListTagPair(&m_pbGreatPeoples, L"GreatPeoples", GC.getNumSpecialistInfos());
 
 	pXML->SetOptionalVector(&m_pbBuildings, L"Buildings");
+	pXML->SetOptionalVector(&m_addHeritage, L"Heritage");
 
 	pXML->GetOptionalChildXmlValByName(szTextVal, L"MaxStartEra");
 	m_iMaxStartEra = pXML->GetInfoClass(szTextVal);
@@ -4192,6 +4207,8 @@ bool CvUnitInfo::read(CvXMLLoadUtility* pXML)
 	m_iPrereqCorporation = pXML->GetInfoClass(szTextVal);
 
 	pXML->SetOptionalVector(&m_workerBuilds, L"Builds");
+	pXML->SetOptionalVector(&m_prereqOrHeritage, L"PrereqOrHeritage");
+	pXML->SetOptionalVector(&m_prereqAndHeritage, L"PrereqAndHeritage");
 	pXML->SetOptionalVector(&m_aiPrereqAndBuildings, L"PrereqAndBuildings");
 	pXML->SetOptionalVector(&m_aiPrereqOrBuildings, L"PrereqOrBuildings");
 
@@ -5005,7 +5022,6 @@ void CvUnitInfo::copyNonDefaults(CvUnitInfo* pClassInfo)
 	if ( m_bNoBadGoodies == bDefault )	m_bNoBadGoodies = pClassInfo->isNoBadGoodies();
 	if ( m_bOnlyDefensive == bDefault )	m_bOnlyDefensive = pClassInfo->isOnlyDefensive();
 	if ( m_bNoCapture == bDefault )	m_bNoCapture = pClassInfo->isNoCapture();
-	if ( m_bQuickCombat == bDefault )	m_bQuickCombat = pClassInfo->isQuickCombat();
 	if ( m_bRivalTerritory == bDefault )	m_bRivalTerritory = pClassInfo->isRivalTerritory();
 	if ( m_bMilitaryHappiness == bDefault )	m_bMilitaryHappiness = pClassInfo->isMilitaryHappiness();
 	if ( m_bMilitarySupport == bDefault )	m_bMilitarySupport = pClassInfo->isMilitarySupport();
@@ -5098,6 +5114,7 @@ void CvUnitInfo::copyNonDefaults(CvUnitInfo* pClassInfo)
 	}
 
 	CvXMLLoadUtility::CopyNonDefaultsFromVector(m_pbBuildings, pClassInfo->m_pbBuildings);
+	CvXMLLoadUtility::CopyNonDefaultsFromVector(m_addHeritage, pClassInfo->m_addHeritage);
 
 	for ( int i = 0; i < GC.getNumReligionInfos(); i++)
 	{
@@ -5315,6 +5332,8 @@ void CvUnitInfo::copyNonDefaults(CvUnitInfo* pClassInfo)
 	if ( m_iPrereqCorporation == iTextDefault ) m_iPrereqCorporation = pClassInfo->getPrereqCorporation();
 
 	CvXMLLoadUtility::CopyNonDefaultsFromVector(m_workerBuilds, pClassInfo->m_workerBuilds);
+	CvXMLLoadUtility::CopyNonDefaultsFromVector(m_prereqOrHeritage, pClassInfo->m_prereqOrHeritage);
+	CvXMLLoadUtility::CopyNonDefaultsFromVector(m_prereqAndHeritage, pClassInfo->m_prereqAndHeritage);
 	CvXMLLoadUtility::CopyNonDefaultsFromVector(m_aiPrereqAndBuildings, pClassInfo->m_aiPrereqAndBuildings);
 	CvXMLLoadUtility::CopyNonDefaultsFromVector(m_aiPrereqOrBuildings, pClassInfo->m_aiPrereqOrBuildings);
 

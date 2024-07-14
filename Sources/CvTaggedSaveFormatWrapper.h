@@ -65,6 +65,7 @@ typedef enum
 	REMAPPED_CLASS_TYPE_COMMERCES,
 	REMAPPED_CLASS_TYPE_DOMAINS,
 	REMAPPED_CLASS_TYPE_CATEGORIES,
+	REMAPPED_CLASS_TYPE_HERITAGE,
 	REMAPPED_CLASS_TYPE_MAPS,
 
 	NUM_REMAPPED_TYPES
@@ -247,7 +248,7 @@ public:
 
 	void Read(const char* name, int32_t* i);
 	void Read(const char* name, uint32_t* i);
-	void Read(const char* name, int count, int32_t values[]);
+	void Read(const char* name, int count, int32_t values[], bool bAllowTruncation = false);
 	void Read(const char* name, int count, uint32_t values[]);
 
 	void Read(const char* name, long* l);

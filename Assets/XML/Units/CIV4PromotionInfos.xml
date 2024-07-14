@@ -8197,6 +8197,28 @@
 				<GameOptionType>GAMEOPTION_COMBAT_HIDE_SEEK</GameOptionType>
 				<GameOptionType>GAMEOPTION_COMBAT_SIZE_MATTERS</GameOptionType>
 			</OnGameOptions>
+			<UnitCombats>
+				<UnitCombat>
+					<UnitCombatType>UNITCOMBAT_COMBATANT</UnitCombatType>
+					<bUnitCombat>1</bUnitCombat>
+				</UnitCombat>
+				<UnitCombat>
+					<UnitCombatType>UNITCOMBAT_EXPLORER</UnitCombatType>
+					<bUnitCombat>1</bUnitCombat>
+				</UnitCombat>
+				<UnitCombat>
+					<UnitCombatType>UNITCOMBAT_RUFFIAN</UnitCombatType>
+					<bUnitCombat>1</bUnitCombat>
+				</UnitCombat>
+			</UnitCombats>
+			<AIWeightbyUnitCombatTypes>
+				<AIWeightbyUnitCombatType>
+					<UnitCombatType>UNITCOMBAT_HUNTER</UnitCombatType>
+					<iAIWeight>20</iAIWeight>
+				</AIWeightbyUnitCombatType>
+			</AIWeightbyUnitCombatTypes>
+			<iChanceFirstStrikesChange>1</iChanceFirstStrikesChange>
+			<iPursuitChange>5</iPursuitChange>
 			<VisibilityIntensityChangeTypes>
 				<VisibilityIntensityChangeType>
 					<InvisibleType>INVISIBLE_SIZE</InvisibleType>
@@ -8220,6 +8242,28 @@
 				<GameOptionType>GAMEOPTION_COMBAT_HIDE_SEEK</GameOptionType>
 				<GameOptionType>GAMEOPTION_COMBAT_SIZE_MATTERS</GameOptionType>
 			</OnGameOptions>
+			<UnitCombats>
+				<UnitCombat>
+					<UnitCombatType>UNITCOMBAT_HUNTER</UnitCombatType>
+					<bUnitCombat>1</bUnitCombat>
+				</UnitCombat>
+				<UnitCombat>
+					<UnitCombatType>UNITCOMBAT_CANINE</UnitCombatType>
+					<bUnitCombat>1</bUnitCombat>
+				</UnitCombat>
+				<UnitCombat>
+					<UnitCombatType>UNITCOMBAT_FELINE</UnitCombatType>
+					<bUnitCombat>1</bUnitCombat>
+				</UnitCombat>
+			</UnitCombats>
+			<AIWeightbyUnitCombatTypes>
+				<AIWeightbyUnitCombatType>
+					<UnitCombatType>UNITCOMBAT_HUNTER</UnitCombatType>
+					<iAIWeight>20</iAIWeight>
+				</AIWeightbyUnitCombatType>
+			</AIWeightbyUnitCombatTypes>
+			<iFirstStrikesChange>1</iFirstStrikesChange>
+			<iPursuitChange>5</iPursuitChange>
 			<VisibilityIntensityChangeTypes>
 				<VisibilityIntensityChangeType>
 					<InvisibleType>INVISIBLE_SIZE</InvisibleType>
@@ -8231,12 +8275,6 @@
 				</VisibilityIntensityChangeType>
 			</VisibilityIntensityChangeTypes>
 			<Button>,Art/Interface/Buttons/Promotions/Sentry2.dds,Art/Interface/Buttons/FinalFrontier1_Atlas.dds,5,10</Button>
-			<UnitCombats>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_HUNTER</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-			</UnitCombats>
 		</PromotionInfo>
 		<PromotionInfo>
 			<Type>PROMOTION_SEA_CREATURE1</Type>
@@ -9496,6 +9534,10 @@
 			<Description>TXT_KEY_PROMOTION_AQUARIUS</Description>
 			<Help>TXT_KEY_PROMOTION_ASTRO_HELP</Help>
 			<Sound>AS2D_IF_LEVELUP</Sound>
+			<bStarsign>1</bStarsign>
+			<NotOnUnitCombatTypes>
+				<NotOnUnitCombatType>UNITCOMBAT_PACIFIST</NotOnUnitCombatType>
+			</NotOnUnitCombatTypes>
 			<iExperiencePercent>20</iExperiencePercent>
 			<Button>Art/Interface/Buttons/Promotions/StarSigns/aquarius.dds</Button>
 		</PromotionInfo>
@@ -9504,6 +9546,10 @@
 			<Description>TXT_KEY_PROMOTION_ARIES</Description>
 			<Help>TXT_KEY_PROMOTION_ASTRO_HELP</Help>
 			<Sound>AS2D_IF_LEVELUP</Sound>
+			<bStarsign>1</bStarsign>
+			<NotOnUnitCombatTypes>
+				<NotOnUnitCombatType>UNITCOMBAT_PACIFIST</NotOnUnitCombatType>
+			</NotOnUnitCombatTypes>
 			<iChanceFirstStrikesChange>3</iChanceFirstStrikesChange>
 			<Button>Art/Interface/Buttons/Promotions/StarSigns/aries.dds</Button>
 		</PromotionInfo>
@@ -9512,6 +9558,10 @@
 			<Description>TXT_KEY_PROMOTION_CANCER</Description>
 			<Help>TXT_KEY_PROMOTION_ASTRO_HELP</Help>
 			<Sound>AS2D_IF_LEVELUP</Sound>
+			<bStarsign>1</bStarsign>
+			<NotOnUnitCombatTypes>
+				<NotOnUnitCombatType>UNITCOMBAT_PACIFIST</NotOnUnitCombatType>
+			</NotOnUnitCombatTypes>
 			<bDefensiveVictoryMove>1</bDefensiveVictoryMove>
 			<Button>Art/Interface/Buttons/Promotions/StarSigns/cancer.dds</Button>
 		</PromotionInfo>
@@ -9520,6 +9570,14 @@
 			<Description>TXT_KEY_PROMOTION_CAPRICORN</Description>
 			<Help>TXT_KEY_PROMOTION_ASTRO_HELP</Help>
 			<Sound>AS2D_IF_LEVELUP</Sound>
+			<bStarsign>1</bStarsign>
+			<NotOnUnitCombatTypes>
+				<NotOnUnitCombatType>UNITCOMBAT_PACIFIST</NotOnUnitCombatType>
+			</NotOnUnitCombatTypes>
+			<NotOnDomainTypes>
+				<DomainType>DOMAIN_AIR</DomainType>
+				<DomainType>DOMAIN_SEA</DomainType>
+			</NotOnDomainTypes>
 			<bAmphib>1</bAmphib>
 			<bRiver>1</bRiver>
 			<Button>Art/Interface/Buttons/Promotions/StarSigns/capricorn.dds</Button>
@@ -9529,6 +9587,10 @@
 			<Description>TXT_KEY_PROMOTION_GEMINI</Description>
 			<Help>TXT_KEY_PROMOTION_ASTRO_HELP</Help>
 			<Sound>AS2D_IF_LEVELUP</Sound>
+			<bStarsign>1</bStarsign>
+			<NotOnUnitCombatTypes>
+				<NotOnUnitCombatType>UNITCOMBAT_PACIFIST</NotOnUnitCombatType>
+			</NotOnUnitCombatTypes>
 			<iVictoryHeal>15</iVictoryHeal>
 			<Button>Art/Interface/Buttons/Promotions/StarSigns/gemini.dds</Button>
 		</PromotionInfo>
@@ -9537,6 +9599,10 @@
 			<Description>TXT_KEY_PROMOTION_LEO</Description>
 			<Help>TXT_KEY_PROMOTION_ASTRO_HELP</Help>
 			<Sound>AS2D_IF_LEVELUP</Sound>
+			<bStarsign>1</bStarsign>
+			<NotOnUnitCombatTypes>
+				<NotOnUnitCombatType>UNITCOMBAT_PACIFIST</NotOnUnitCombatType>
+			</NotOnUnitCombatTypes>
 			<iStrengthChange>1</iStrengthChange>
 			<Button>Art/Interface/Buttons/Promotions/StarSigns/leo.dds</Button>
 		</PromotionInfo>
@@ -9545,6 +9611,7 @@
 			<Description>TXT_KEY_PROMOTION_LIBRA</Description>
 			<Help>TXT_KEY_PROMOTION_ASTRO_HELP</Help>
 			<Sound>AS2D_IF_LEVELUP</Sound>
+			<bStarsign>1</bStarsign>
 			<iUpgradeDiscount>25</iUpgradeDiscount>
 			<Button>Art/Interface/Buttons/Promotions/StarSigns/libra.dds</Button>
 		</PromotionInfo>
@@ -9553,6 +9620,7 @@
 			<Description>TXT_KEY_PROMOTION_PISCES</Description>
 			<Help>TXT_KEY_PROMOTION_ASTRO_HELP</Help>
 			<Sound>AS2D_IF_LEVELUP</Sound>
+			<bStarsign>1</bStarsign>
 			<bOneUp>1</bOneUp>
 			<Button>Art/Interface/Buttons/Promotions/StarSigns/pices.dds</Button>
 		</PromotionInfo>
@@ -9561,6 +9629,10 @@
 			<Description>TXT_KEY_PROMOTION_SAGITTARIUS</Description>
 			<Help>TXT_KEY_PROMOTION_ASTRO_HELP</Help>
 			<Sound>AS2D_IF_LEVELUP</Sound>
+			<bStarsign>1</bStarsign>
+			<NotOnUnitCombatTypes>
+				<NotOnUnitCombatType>UNITCOMBAT_PACIFIST</NotOnUnitCombatType>
+			</NotOnUnitCombatTypes>
 			<iFirstStrikesChange>3</iFirstStrikesChange>
 			<Button>Art/Interface/Buttons/Promotions/StarSigns/SAGITTARIUS.dds</Button>
 		</PromotionInfo>
@@ -9569,6 +9641,10 @@
 			<Description>TXT_KEY_PROMOTION_SCORPIO</Description>
 			<Help>TXT_KEY_PROMOTION_ASTRO_HELP</Help>
 			<Sound>AS2D_IF_LEVELUP</Sound>
+			<bStarsign>1</bStarsign>
+			<NotOnUnitCombatTypes>
+				<NotOnUnitCombatType>UNITCOMBAT_PACIFIST</NotOnUnitCombatType>
+			</NotOnUnitCombatTypes>
 			<iSurvivorChance>20</iSurvivorChance>
 			<Button>Art/Interface/Buttons/Promotions/StarSigns/scorpio.dds</Button>
 		</PromotionInfo>
@@ -9577,6 +9653,10 @@
 			<Description>TXT_KEY_PROMOTION_TAURUS</Description>
 			<Help>TXT_KEY_PROMOTION_ASTRO_HELP</Help>
 			<Sound>AS2D_IF_LEVELUP</Sound>
+			<bStarsign>1</bStarsign>
+			<NotOnUnitCombatTypes>
+				<NotOnUnitCombatType>UNITCOMBAT_PACIFIST</NotOnUnitCombatType>
+			</NotOnUnitCombatTypes>
 			<iVictoryAdjacentHeal>15</iVictoryAdjacentHeal>
 			<iVictoryStackHeal>15</iVictoryStackHeal>
 			<Button>Art/Interface/Buttons/Promotions/StarSigns/taurus.dds</Button>
@@ -9586,6 +9666,14 @@
 			<Description>TXT_KEY_PROMOTION_VIRGO</Description>
 			<Help>TXT_KEY_PROMOTION_ASTRO_HELP</Help>
 			<Sound>AS2D_IF_LEVELUP</Sound>
+			<bStarsign>1</bStarsign>
+			<NotOnUnitCombatTypes>
+				<NotOnUnitCombatType>UNITCOMBAT_PACIFIST</NotOnUnitCombatType>
+			</NotOnUnitCombatTypes>
+			<NotOnDomainTypes>
+				<DomainType>DOMAIN_AIR</DomainType>
+				<DomainType>DOMAIN_SEA</DomainType>
+			</NotOnDomainTypes>
 			<iHillsDefense>50</iHillsDefense>
 			<Button>Art/Interface/Buttons/Promotions/StarSigns/virgo.dds</Button>
 		</PromotionInfo>

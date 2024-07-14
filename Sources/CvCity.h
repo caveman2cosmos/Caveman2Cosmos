@@ -276,7 +276,6 @@ public:
 	UnitTypes getConscriptUnit() const;
 	CvUnit* initConscriptedUnit();
 	int getConscriptPopulation() const;
-	int conscriptMinCityPopulation() const;
 	int flatConscriptAngerLength() const;
 	bool canConscript(bool bOnCapture = false) const;
 	void conscript(bool bOnCapture = false);
@@ -507,7 +506,7 @@ public:
 	void setPopulation(int iNewValue, bool bNormal = true);
 	void changePopulation(int iChange);
 
-	int getRealPopulation() const;
+	int64_t getRealPopulation() const;
 
 	int getHighestPopulation() const;
 	void setHighestPopulation(int iNewValue);
@@ -1333,7 +1332,7 @@ public:
 
 	void doCorporation();
 	int getCorporationInfluence(CorporationTypes eCorporation) const;
-	int calculateCorporateTaxes() const;
+	int64_t calcCorporateMaintenance() const;
 
 	int getDisabledPowerTimer() const;
 	void changeDisabledPowerTimer(int iChange);
@@ -2132,10 +2131,10 @@ public:
 		DECLARE_MAP_FUNCTOR_CONST(CvCity, bool, isGovernmentCenter);
 		DECLARE_MAP_FUNCTOR_CONST(CvCity, bool, AI_isMilitaryProductionCity);
 		DECLARE_MAP_FUNCTOR_CONST(CvCity, bool, AI_isNavalMilitaryProductionCity);
-		DECLARE_MAP_FUNCTOR_CONST(CvCity, int, calculateCorporateTaxes);
+		DECLARE_MAP_FUNCTOR_CONST(CvCity, int64_t, calcCorporateMaintenance);
 		DECLARE_MAP_FUNCTOR_CONST(CvCity, int, getID);
 		DECLARE_MAP_FUNCTOR_CONST(CvCity, int, getPopulation);
-		DECLARE_MAP_FUNCTOR_CONST(CvCity, int, getRealPopulation);
+		DECLARE_MAP_FUNCTOR_CONST(CvCity, int64_t, getRealPopulation);
 		DECLARE_MAP_FUNCTOR_CONST(CvCity, int, goodHealth);
 		DECLARE_MAP_FUNCTOR_CONST(CvCity, int, badHealth);
 		DECLARE_MAP_FUNCTOR_CONST(CvCity, int, happyLevel);

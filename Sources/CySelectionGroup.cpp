@@ -61,7 +61,11 @@ bool CySelectionGroup::isInvisible(int /*TeamTypes*/ eTeam) const
 
 CyPlot* CySelectionGroup::plot() const
 {
-	return new CyPlot(m_pSelectionGroup->plot());
+	if (m_pSelectionGroup->plot())
+	{
+		return new CyPlot(m_pSelectionGroup->plot());
+	}
+	return NULL;
 }
 
 CyArea* CySelectionGroup::area() const

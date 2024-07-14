@@ -231,7 +231,6 @@
     <ClCompile Include="CvPythonCityLoader.cpp" />
     <ClCompile Include="CvPythonEnumLoader.cpp" />
     <ClCompile Include="CvPythonGlobalContextLoader.cpp" />
-    <ClCompile Include="CvPythonInfoLoader.cpp" />
     <ClCompile Include="CvPythonMiscLoader.cpp" />
     <ClCompile Include="CvPythonPlayerLoader.cpp" />
     <ClCompile Include="CvPythonPlotLoader.cpp" />
@@ -244,6 +243,7 @@
     <ClCompile Include="CvWorkerService.cpp" />
     <ClCompile Include="CyCityOutputHistoryInterface.cpp" />
     <ClCompile Include="CvImprovementInfo.cpp" />
+    <ClCompile Include="CvHeritageInfo.cpp" />
     <ClCompile Include="CyInfoInterface1.cpp" />
     <ClCompile Include="logging.cpp" />
     <ClCompile Include="OutputRatios.cpp" />
@@ -381,7 +381,6 @@
     <ClInclude Include="CvPythonCityLoader.h" />
     <ClInclude Include="CvPythonEnumLoader.h" />
     <ClInclude Include="CvPythonGlobalContextLoader.h" />
-    <ClInclude Include="CvPythonInfoLoader.h" />
     <ClInclude Include="CvPythonMiscLoader.h" />
     <ClInclude Include="CvPythonPlayerLoader.h" />
     <ClInclude Include="CvPythonPlotLoader.h" />
@@ -456,6 +455,7 @@
     <ClInclude Include="CvDLLWidgetData.h" />
     <ClInclude Include="CvDLLXMLIFaceBase.h" />
     <ClInclude Include="CvImprovementInfo.h" />
+    <ClInclude Include="CvHeritageInfo.h" />
     <ClInclude Include="index_iterator_base.h" />
     <ClInclude Include="logging.h" />
     <ClInclude Include="NiPoint.h" />

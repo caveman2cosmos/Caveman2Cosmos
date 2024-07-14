@@ -52,6 +52,12 @@ def reinitMainInterface():
 	mainInterface = CvMainInterface.CvMainInterface()
 	mainInterface.interfaceScreen()
 
+def initMinimap():
+	mainInterface.initMinimap()
+
+def showParallelMapsScreenButton():
+	mainInterface.showParallelMapsScreenButton()
+
 def numPlotListButtons(): return 0 # Called from exe
 
 def showTechChooser():
@@ -64,6 +70,14 @@ def showHallOfFame(argsList):
 def showCivicsScreen():
 	if CyGame().getActivePlayer() != -1:
 		screenMap[CIVICS_SCREEN].interfaceScreen()
+
+def showHeritageScreen():
+	if CyGame().getActivePlayer() != -1:
+		screenMap[HERITAGE_SCREEN].interfaceScreen()
+
+def showParallelMapsScreen():
+	if CyGame().getActivePlayer() != -1:
+		screenMap[PARALLEL_MAPS_SCREEN].interfaceScreen()
 
 def showReligionScreen():
 	if CyGame().getActivePlayer() != -1:
@@ -261,6 +275,9 @@ def pediaJumpToCivic(argsList):
 def pediaJumpToReligion(argsList):
 	screenMap[PEDIA].pediaJump(9, "Religion", argsList[0])
 
+def pediaJumpToHeritage(argsList):
+	screenMap[PEDIA].pediaJump(9, "Heritage", argsList[0])
+
 def pediaJumpToProject(argsList):
 	screenMap[PEDIA].pediaJump(10, "Project", argsList[0])
 
@@ -453,7 +470,6 @@ def rightMouseDown(argsList):
 
 def mouseOverPlot(argsList):
 
-	print argsList[0]
 	if argsList[0] == STRATEGY_OVERLAY_SCREEN:
 		overlayScreen.onMouseOverPlot()
 
@@ -504,6 +520,13 @@ def forceScreenUpdate(argsList):
 
 	elif argsList[0] == ADVANCED_START_SCREEN:
 		advancedStartScreen.updateScreen()
+
+# Called by dll every time a players turn is set to active when the active player has finished his turn.
+# Only used to update what player one is waiting for while using "minimize AI turns" BUG option.
+def updateWaitingForPlayer(argsList):
+	if g_iScreenActive == MAIN_INTERFACE:
+		mainInterface.updateWaitingForPlayer(argsList[0])
+
 
 # Forced redraw (~7 ms)
 def forceScreenRedraw(argsList):
@@ -675,6 +698,8 @@ def lateInit():
 	import CvEraMovieScreen
 	import CvVictoryScreen
 	import CvCivicsScreen
+	import HeritageScreen
+	import ParallelMapsScreen
 	import CvInfoScreen
 	import CvDawnOfMan
 	import CvTopCivs
@@ -693,6 +718,8 @@ def lateInit():
 	screenMap[ERA_MOVIE_SCREEN]		= CvEraMovieScreen.CvEraMovieScreen()
 	screenMap[VICTORY_SCREEN]		= CvVictoryScreen.CvVictoryScreen(VICTORY_SCREEN)
 	screenMap[CIVICS_SCREEN]		= CvCivicsScreen.CvCivicsScreen(CIVICS_SCREEN)
+	screenMap[HERITAGE_SCREEN]		= HeritageScreen.HeritageScreen(HERITAGE_SCREEN)
+	screenMap[PARALLEL_MAPS_SCREEN]	= ParallelMapsScreen.ParallelMapsScreen(PARALLEL_MAPS_SCREEN)
 	screenMap[INFO_SCREEN]			= CvInfoScreen.CvInfoScreen(INFO_SCREEN)
 	screenMap[DAWN_OF_MAN]			= CvDawnOfMan.CvDawnOfMan()
 	screenMap[TOP_CIVS]				= CvTopCivs.CvTopCivs(TOP_CIVS)

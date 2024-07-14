@@ -1,3 +1,4 @@
+#include "CvGameCoreDLL.h"
 #include "CvPythonMiscLoader.h"
 #include "CySelectionGroup.h"
 #include "CvInfos.h"
@@ -13,6 +14,7 @@
 #include "CyCity.h"
 #include "CyMap.h"
 #include "CyDeal.h"
+#include "CvRandom.h"
 #include <boost/python/class.hpp>
 #include <boost/python/manage_new_object.hpp>
 
@@ -302,8 +304,6 @@ void CvPythonMiscLoader::CyGamePythonInterface()
 		.def("log", &CyGame::log)
 		.def("logw", &CyGame::logw, "void log(wstring str)")
 
-		.def("setPlotExtraYield", &CyGame::setPlotExtraYield, "void (int iX, int iY, int /*YieldTypes*/ eYield, int iExtraYield)")
-
 		.def("isCivEverActive", &CyGame::isCivEverActive, "bool (int /*CivilizationTypes*/ eCivilization)")
 		.def("isLeaderEverActive", &CyGame::isLeaderEverActive, "bool (int /*LeaderHeadTypes*/ eLeader)")
 
@@ -323,7 +323,6 @@ void CvPythonMiscLoader::CyGamePythonInterface()
 		.def("getCutLosersCounter", &CyGame::getCutLosersCounter)
 		.def("getHighToLowCounter", &CyGame::getHighToLowCounter)
 
-		.def("isModderGameOption", &CyGame::isModderGameOption, "bool ()")
 		.def("getModderGameOption", &CyGame::getModderGameOption, "bool ()")
 		.def("setModderGameOption", &CyGame::setModderGameOption, "void (int iNewVal)")
 

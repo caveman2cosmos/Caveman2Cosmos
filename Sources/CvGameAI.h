@@ -24,8 +24,6 @@ public:
 
 	int AI_combatValue(const UnitTypes eUnit) const;
 
-	int AI_turnsPercent(int iTurns, const int iPercent) const;
-
 	virtual void read(FDataStreamBase* pStream);
 	virtual void write(FDataStreamBase* pStream);
 

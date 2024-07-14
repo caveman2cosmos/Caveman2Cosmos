@@ -107,7 +107,7 @@ class CvDawnOfMan:
 		# Info/"Stats" text
 		szNameText = "<color=255,255,0,255><font=3b>%s</font>" % CvLeaderHead.getDescription().upper()
 		szNameText += "\n- %s -\n" % CyPlayer.getCivilizationDescription(0)
-		szNameText += CyGameTextMgr().parseLeaderTraits(iLeader, iCiv, True, False)
+		szNameText += CyGameTextMgr().parseLeaderTraits(iLeader, True, False)
 		screen.addMultilineText("", szNameText, X_LEADER_TITLE_TEXT, Y_LEADER_TITLE_TEXT, W_LEADER_TITLE_TEXT, H_LEADER_TITLE_TEXT, eWidGen, 1, 1, 1<<2)
 
 		Text_BoxText = CyGameTextMgr().parseCivInfos(iCiv, True)

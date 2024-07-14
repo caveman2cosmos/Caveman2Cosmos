@@ -41,6 +41,7 @@
 	MACRO_FUNC(CvTraitInfo, TRAIT_INFO, TraitTypes) \
 	MACRO_FUNC(CvInvisibleInfo, INVISIBLE_INFO, InvisibleTypes) \
 	MACRO_FUNC(CvCategoryInfo, CATEGORY_INFO, CategoryTypes) \
+	MACRO_FUNC(CvHeritageInfo, HERITAGE_INFO, HeritageTypes) \
 	MACRO_FUNC(CvMapCategoryInfo, MAPCATEGORy_INFO, MapCategoryTypes) \
 	MACRO_FUNC(CvIdeaClassInfo, IDEACLASS_INFO, IdeaClassTypes) \
 	MACRO_FUNC(CvIdeaInfo, IDEA_INFO, IdeaTypes) \

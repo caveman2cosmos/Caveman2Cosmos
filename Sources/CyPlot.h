@@ -21,7 +21,6 @@ public:
 
 	CvPlot* getPlot() const { return m_pPlot; }	// Call from C++
 	void setPlot(CvPlot* p) { m_pPlot = p; }	// Call from C++
-	bool isNone() const { return m_pPlot == NULL; }
 
 	void erase();
 	DllExport NiPoint3 getPoint() const;
@@ -41,7 +40,6 @@ public:
 	bool isRiverSide() const;
 	bool isRiver() const;
 
-	CyPlot* getNearestLandPlot() const;
 	bool canHaveBonus(int /*BonusTypes*/ eBonus, bool bIgnoreLatitude) const;
 	bool canHaveImprovement(int /*ImprovementTypes*/ eImprovement, int /*TeamTypes*/ eTeam, bool bPotential) const;
 	bool canBuild(int /*BuildTypes*/ eBuild, int /*PlayerTypes*/ ePlayer, bool bTestVisible) const;
@@ -129,6 +127,7 @@ public:
 	int getRiverID() const;
 	void setRiverID(int iNewValue);
 	int getYield(YieldTypes eIndex) const;
+	void setExtraYield(YieldTypes eYield, short iExtraYield);
 	int calculateBestNatureYield(YieldTypes eIndex, TeamTypes eTeam) const;
 	int calculateTotalBestNatureYield(TeamTypes eTeam) const;
 	int calculateImprovementYieldChange(int /*ImprovementTypes*/ eImprovement, YieldTypes eYield, int /*PlayerTypes*/ ePlayer, bool bOptimal) const;

@@ -1265,7 +1265,6 @@
 	<ElementType name="bNoBadGoodies" content="textOnly" dt:type="boolean"/>
 	<ElementType name="bOnlyDefensive" content="textOnly" dt:type="boolean"/>
 	<ElementType name="bNoCapture" content="textOnly" dt:type="boolean"/>
-	<ElementType name="bQuickCombat" content="textOnly" dt:type="boolean"/>
 	<ElementType name="bRivalTerritory" content="textOnly" dt:type="boolean"/>
 	<ElementType name="bMilitaryHappiness" content="textOnly" dt:type="boolean"/>
 	<ElementType name="bMilitarySupport" content="textOnly" dt:type="boolean"/>
@@ -1302,6 +1301,7 @@
 	<ElementType name="bPlotPrereqsKeepAfter" content="textOnly" dt:type="boolean"/>
 	<ElementType name="bRemoveAfterSet" content="textOnly" dt:type="boolean"/>
 	<ElementType name="bQuick" content="textOnly" dt:type="boolean"/>
+	<ElementType name="bStarsign" content="textOnly" dt:type="boolean"/>
 	<ElementType name="bInquisitor" content="textOnly" dt:type="boolean"/>
 	<!-- ls612: No Non-Owned Entry -->
 	<ElementType name="bOnlyFriendlyEntry" content="textOnly" dt:type="boolean"/>
@@ -1391,6 +1391,9 @@
 	<ElementType name="Buildings" content="eltOnly">
 		<element type="BuildingType" minOccurs="0" maxOccurs="*"/>
 	</ElementType>
+	<ElementType name="Heritage" content="eltOnly">
+		<element type="Type" minOccurs="0" maxOccurs="*"/>
+	</ElementType>
 	<!-- RevDCM canTrain -->
 	<ElementType name="MaxStartEra" content="textOnly"/>
 	<ElementType name="bStateReligion" content="textOnly" dt:type="boolean"/>
@@ -1414,6 +1417,12 @@
 	<ElementType name="StateReligion" content="textOnly"/>
 	<ElementType name="PrereqReligion" content="textOnly"/>
 	<ElementType name="PrereqCorporation" content="textOnly"/>
+	<ElementType name="PrereqAndHeritage" content="eltOnly">
+		<element type="Type" minOccurs="0" maxOccurs="*"/>
+	</ElementType>
+	<ElementType name="PrereqOrHeritage" content="eltOnly">
+		<element type="Type" minOccurs="0" maxOccurs="*"/>
+	</ElementType>
 	<ElementType name="PrereqAndBuildings" content="eltOnly">
 		<element type="BuildingType" minOccurs="0" maxOccurs="*"/>
 	</ElementType>
@@ -1823,7 +1832,6 @@
 		<element type="bNoBadGoodies" minOccurs="0"/>
 		<element type="bOnlyDefensive" minOccurs="0"/>
 		<element type="bNoCapture" minOccurs="0"/>
-		<element type="bQuickCombat" minOccurs="0"/>
 		<element type="bRivalTerritory" minOccurs="0"/>
 		<element type="bMilitaryHappiness" minOccurs="0"/>
 		<element type="bMilitarySupport" minOccurs="0"/>
@@ -1892,6 +1900,7 @@
 		<element type="CorporationSpreads" minOccurs="0"/>
 		<element type="GreatPeoples" minOccurs="0"/>
 		<element type="Buildings" minOccurs="0"/>
+		<element type="Heritage" minOccurs="0"/>
 		<!-- RevDCM canTrain -->
 		<element type="MaxStartEra" minOccurs="0"/>
 		<element type="ObsoleteTech" minOccurs="0"/>
@@ -1900,6 +1909,8 @@
 		<element type="PrereqGameOption" minOccurs="0"/>
 		<element type="NotGameOption" minOccurs="0"/>
 		<element type="PrereqOrCivics" minOccurs="0"/>
+		<element type="PrereqOrHeritage" minOccurs="0"/>
+		<element type="PrereqAndHeritage" minOccurs="0"/>
 		<element type="PrereqAndBuildings" minOccurs="0"/>
 		<element type="SupersedingUnits" minOccurs="0"/>
 		<!-- RevDCM end -->
@@ -2364,6 +2375,7 @@
 		<element type="bPlotPrereqsKeepAfter" minOccurs="0"/>
 		<element type="bRemoveAfterSet" minOccurs="0"/>
 		<element type="bQuick" minOccurs="0"/>
+		<element type="bStarsign" minOccurs="0"/>
 		<element type="bCanMovePeaks" minOccurs="0"/>
 		<element type="bCanLeadThroughPeaks" minOccurs="0"/>
 		<element type="bForceUpgrade" minOccurs="0"/>

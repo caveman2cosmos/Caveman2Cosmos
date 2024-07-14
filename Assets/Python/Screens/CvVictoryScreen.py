@@ -918,7 +918,7 @@ class CvVictoryScreen:
 		szTxt = BULLET + ufont2 + TRNSLTR.getText("TXT_KEY_LEADER_CIV_DESCRIPTION", (CyPlayer.getNameKey(), CyPlayer.getCivilizationShortDescriptionKey()))
 		screen.appendListBoxStringNoUpdate(szSettingsTable, szTxt, eWidGen, 1, 2, 1<<0)
 
-		szTxt = CyGameTextMgr().parseLeaderTraits(CyPlayer.getLeaderType(), CyPlayer.getCivilizationType(), True, False)
+		szTxt = CyGameTextMgr().parseLeaderTraits(CyPlayer.getLeaderType(), True, False)
 		if szTxt:
 			szTxt = ufont1 + "\t<color=200,200,200>(" + szTxt + ")\n"
 			screen.appendListBoxStringNoUpdate(szSettingsTable, szTxt, eWidGen, 1, 2, 1<<0)
@@ -1014,7 +1014,7 @@ class CvVictoryScreen:
 			if GC.getTeam(CyPlayerX.getTeam()).isHasMet(iTeam) or GAME.isDebugMode():
 				szTxt = BULLET + ufont2 + TRNSLTR.getText("TXT_KEY_LEADER_CIV_DESCRIPTION", (CyPlayerX.getNameKey(), CyPlayerX.getCivilizationShortDescriptionKey()))
 				screen.appendListBoxStringNoUpdate(szCivsTable, szTxt, eWidGen, 1, 2, 1<<0)
-				szTxt = CyGameTextMgr().parseLeaderTraits(CyPlayerX.getLeaderType(), CyPlayerX.getCivilizationType(), True, False)
+				szTxt = CyGameTextMgr().parseLeaderTraits(CyPlayerX.getLeaderType(), True, False)
 				if szTxt:
 					szTxt = ufont1 + "\t<color=200,200,200>(" + szTxt + ")"
 					screen.appendListBoxStringNoUpdate(szCivsTable, szTxt, eWidGen, 1, 2, 1<<0)

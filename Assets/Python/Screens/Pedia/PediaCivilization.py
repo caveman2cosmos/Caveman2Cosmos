@@ -79,7 +79,7 @@ class PediaCivilization:
 		x = 8
 		for iLeader in xrange(GC.getNumLeaderHeadInfos()):
 			if not CvCivilizationInfo.isLeaders(iLeader): continue
-			screen.setImageButtonAt("", Pnl, GC.getLeaderHeadInfo(iLeader).getButton(), x, 4, size, size, eWidJuToLeader, iLeader, iCivilization)
+			screen.setImageButtonAt("", Pnl, GC.getLeaderHeadInfo(iLeader).getButton(), x, 4, size, size, eWidJuToLeader, iLeader, -1)
 			x += size + 8
 
 		# City List

@@ -16,7 +16,7 @@
 		<German>durch[SPACE]</German>
 		<Spanish>con[SPACE]</Spanish>
 		<Russian>åñëè[SPACE]</Russian>
-		<Italian>con la proprietà[SPACE]</Italian>
+		<Italian>con la [COLOR_HIGHLIGHT_TEXT]tecnologia[COLOR_REVERT][SPACE]</Italian> <!-- building krakatoa building list hover -->
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROPERTY_AIR_POLLUTION</Tag>
@@ -74,7 +74,7 @@
 		<German>[ICON_BULLET]automatischer Effekt im Bereich von %D1 und %D2</German>
 		<Spanish>[ICON_BULLET]Existe entre %D1 y %D2</Spanish>
 		<Russian>[ICON_BULLET]Ñóùåñòâóåò ìåæäó %D1 è %D2</Russian>
-		<Italian>[ICON_BULLET]Automaticamente in effetto tra i valori %D1 e %D2</Italian>
+		<Italian>[ICON_BULLET]Automaticamente in effetto tra i valori [COLOR_HIGHLIGHT_TEXT]%D1[COLOR_REVERT]  e COLOR_HIGHLIGHT_TEXT]%D2[COLOR_REVERT] </Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROPERTY_BUILDING_DISPLAY_OVER</Tag>
@@ -83,7 +83,7 @@
 		<German>[ICON_BULLET]automatischer Effekt bei mehr als %D1</German>
 		<Spanish>[ICON_BULLET]Existe por encima de %D1</Spanish>
 		<Russian>[ICON_BULLET]Ñóùåñòâóåò âûøå %D1</Russian>
-		<Italian>[ICON_BULLET]Automaticamente in effetto sopra il valore %D1</Italian>
+		<Italian>[ICON_BULLET]Automaticamente in effetto sopra il valore: [COLOR_HIGHLIGHT_TEXT]%D1[COLOR_REVERT] </Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROPERTY_BUILDING_DISPLAY_UNDER</Tag>
@@ -92,7 +92,7 @@
 		<German>[ICON_BULLET]automatischer Effekt bei weniger als %D1</German>
 		<Spanish>[ICON_BULLET]Existe por debajo de %D1</Spanish>
 		<Russian>[ICON_BULLET]Ñóùåñòâóåò íèæå %D1</Russian>
-		<Italian>[ICON_BULLET]Automaticamente in effetto sotto il valore %D1</Italian>
+		<Italian>[ICON_BULLET]Automaticamente in effetto sotto il valore: [COLOR_HIGHLIGHT_TEXT]%D1[COLOR_REVERT] </Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROPERTY_CRIME</Tag>
@@ -149,7 +149,7 @@
 		<French>Maladie</French>
 		<German>Krankheiten</German>
 		<Spanish>Enfermedad</Spanish>
-		<Italian>Malattia</Italian>
+		<Italian>Diffusione malattie</Italian>
 		<Russian>Óðîâåíü Çàáîëåâàåìîñòè</Russian>
 	</TEXT>
 	<TEXT>
@@ -245,9 +245,9 @@
 		<English>Flammability</English>
 		<French>Risque d'incendie</French>
 		<German>Brandgefahr</German>
-		<Italian>Rischio d'incendio</Italian>
+		<Italian>Incendio</Italian> <!--infoscreen building list-->
 		<Spanish>Inflamabilidad</Spanish>
-		<Polish>Palność</Polish>
+		<Polish>Palno&#156;&#230;</Polish>
 		<Russian>Âîñïëàìåíÿåìîñòü</Russian>
 	</TEXT>
 	<TEXT>
@@ -295,7 +295,7 @@
 		<English>General property sources (population, decay): %D1 / Turn</English>
 		<French>Sources générales (population...): %D1 / Tour</French>
 		<German>Einfluss von anderen Quellen (Bevölkerung etc.): %D1 pro Runde</German>
-		<Italian>Var. generali: [COLOR_WARNING_TEXT]%D1[COLOR_REVERT] a turno</Italian>
+		<Italian>Variazioni generali: [COLOR_HIGHLIGHT_TEXT]%D1[COLOR_REVERT] a turno</Italian>
 		<Spanish>Incremento general (población, decaída...): %D1/turno</Spanish>
 		<Russian>Îáùèå èñòî÷íèêè (íàñåëåíèå, ðàñïàä): %D1 / õîä</Russian>
 	</TEXT>
@@ -330,7 +330,7 @@
 		<French>Sources bâtiments: %D1 / Tour</French>
 		<German>Einfluss von Gebäuden: %D1 pro Runde</German>
 		<Spanish>Incremento gradual por edificios: %D1/turno</Spanish>
-		<Italian>Var. edifici: [COLOR_WARNING_TEXT]%D1[COLOR_REVERT] a turno</Italian>
+		<Italian>Varazione da edifici: [COLOR_HIGHLIGHT_TEXT]%D1[COLOR_REVERT] a turno</Italian>
 		<Russian>Ïîñòîÿííûå ñòðîèòåëüíûå èñòî÷íèêè: %D1 / õîä</Russian>
 	</TEXT>
 	<TEXT>

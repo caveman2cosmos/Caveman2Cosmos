@@ -167,6 +167,7 @@ public:
 	const wchar_t* getHotKeyDescriptionKey() const;
 	const wchar_t* getHotKeyAltDescriptionKey() const;
 	const wchar_t* getHotKeyString() const;
+	std::wstring pyGetHotKeyString() const { return getHotKeyString(); }
 
 	std::wstring getHotKeyDescription() const;
 	void setHotKeyDescription(const wchar_t* szHotKeyDescKey, const wchar_t* szHotKeyAltDescKey, const wchar_t* szHotKeyString);
@@ -368,6 +369,7 @@ public:
 	bool isIgnoreIrrigation() const;
 	bool isWaterWork() const;
 	bool isRiverTrade() const;
+	inline bool isLanguage() const { return m_bLanguage;}
 
 	bool isCanPassPeaks() const;
 	bool isMoveFastPeaks() const;
@@ -483,6 +485,7 @@ protected:
 	bool m_bIgnoreIrrigation;
 	bool m_bWaterWork;
 	bool m_bRiverTrade;
+	bool m_bLanguage;
 	bool m_bDCMAirBombTech1;
 	bool m_bDCMAirBombTech2;
 	bool m_bGlobal;
@@ -1054,6 +1057,7 @@ public:
 	void setDisqualifiedUnitCombatTypes();
 
 	bool hasNegativeEffects() const;
+	inline bool isStarsign() const { return m_bStarsign; }
 
 protected:
 	bool m_bCanMovePeaks;
@@ -1074,6 +1078,7 @@ public:
 	void copyNonDefaults(const CvPromotionInfo* pClassInfo);
 
 private:
+	bool m_bStarsign;
 	CvPropertyManipulators m_PropertyManipulators;
 
 //----------------------PROTECTED MEMBER VARIABLES----------------------------
@@ -1737,7 +1742,6 @@ public:
 	bool isNoBadGoodies() const;
 	bool isOnlyDefensive() const;
 	bool isNoCapture() const;
-	bool isQuickCombat() const;
 	bool isRivalTerritory() const;
 	bool isMilitaryHappiness() const;
 	bool isMilitarySupport() const;
@@ -2102,6 +2106,12 @@ public:
 	void setQualifiedPromotionTypes();
 	void setCanAnimalIgnores();
 
+	const std::vector<BonusTypes>& getPrereqOrBonuses() const;
+	const std::vector<BonusTypes>& getPrereqOrVicinityBonuses() const;
+	const std::vector<TechTypes>& getPrereqAndTechs() const;
+	const std::vector<HeritageTypes>& getPrereqAndHeritage() const { return m_prereqAndHeritage; }
+	const std::vector<HeritageTypes>& getPrereqOrHeritage() const { return m_prereqOrHeritage; }
+
 	virtual const wchar_t* getExtraHoverText() const;
 
 	const CvPropertyManipulators* getPropertyManipulators() const { return &m_PropertyManipulators; }
@@ -2151,11 +2161,6 @@ public:
 	float getUnitPadTime() const;
 
 	bool canAcquireExperience() const;
-
-	const std::vector<BonusTypes>& getPrereqOrBonuses() const;
-	const std::vector<BonusTypes>& getPrereqOrVicinityBonuses() const;
-
-	const std::vector<TechTypes>& getPrereqAndTechs() const;
 
 	// Arrays
 	int getFlavorValue(int i) const;
@@ -2216,6 +2221,10 @@ public:
 	int getBuildings(int i) const;
 	bool getHasBuilding(int i) const;
 	int getNumBuildings() const;
+
+	int getHeritage(int i) const;
+	bool getHasHeritage(int i) const;
+	int getNumHeritage() const;
 
 	bool getTerrainNative(int i) const;
 	bool getFeatureNative(int i) const;
@@ -2339,6 +2348,8 @@ private:
 	int m_iPrereqAndBonus;
 
 	std::vector<BuildTypes> m_workerBuilds;
+	std::vector<HeritageTypes> m_prereqAndHeritage;
+	std::vector<HeritageTypes> m_prereqOrHeritage;
 	std::vector<int> m_aiPrereqAndBuildings;
 	std::vector<int> m_aiPrereqOrBuildings;
 	std::vector<int> m_aiTargetUnit;
@@ -2359,7 +2370,6 @@ private:
 	bool m_bNoBadGoodies;
 	bool m_bOnlyDefensive;
 	bool m_bNoCapture;
-	bool m_bQuickCombat;
 	bool m_bRivalTerritory;
 	bool m_bMilitaryHappiness;
 	bool m_bMilitarySupport;
@@ -2431,6 +2441,7 @@ private:
 	bool* m_pbNotUnitAIType;
 	bool* m_pbGreatPeoples;
 	std::vector<int> m_pbBuildings;
+	std::vector<int> m_addHeritage;
 	bool* m_pbTerrainNative;
 	bool* m_pbFeatureNative;
 	//bool* m_pbTerrainImpassable;
@@ -2633,11 +2644,11 @@ public:
 	bool read(CvXMLLoadUtility* pXML);
 	void copyNonDefaults(CvSpawnInfo* pClassInfo);
 
-	const std::vector<BonusTypes>&   getBonuses() const        { return m_bonusTypes; }
-	const std::vector<TerrainTypes>& getTerrain() const        { return m_terrainTypes; }
-	const std::vector<FeatureTypes>& getFeatures() const       { return m_featureTypes; }
+	const std::vector<BonusTypes>& getBonuses() const { return m_bonusTypes; }
+	const std::vector<UnitTypes>& getSpawnGroups() const { return m_spawnGroup; }
+	const std::vector<TerrainTypes>& getTerrain() const { return m_terrainTypes; }
+	const std::vector<FeatureTypes>& getFeatures() const { return m_featureTypes; }
 	const std::vector<TerrainTypes>& getFeatureTerrain() const { return m_featureTerrainTypes; }
-	const std::vector<UnitTypes>&    getSpawnGroups() const    { return m_spawnGroup; }
 
 	PlayerTypes getPlayer() const;
 	int getTurnRate() const;
@@ -3587,6 +3598,7 @@ public:
 	int getAnimalCombatModifier() const;
 	int getBarbarianCombatModifier() const;
 	int getAIAnimalCombatModifier() const;
+	inline int getSubdueAnimalBonusAI() const { return m_iSubdueAnimalBonusAI; }
 	int getAIBarbarianCombatModifier() const;
 
 	int getStartingDefenseUnits() const;
@@ -3656,6 +3668,7 @@ private:
 	int m_iAnimalCombatModifier;
 	int m_iBarbarianCombatModifier;
 	int m_iAIAnimalCombatModifier;
+	int m_iSubdueAnimalBonusAI;
 	int m_iAIBarbarianCombatModifier;
 
 	int m_iStartingDefenseUnits;
@@ -4113,6 +4126,7 @@ public:
 	bool isNoAdjacent() const;
 	bool isRequiresFlatlands() const;
 	bool isRequiresRiver() const;
+	inline bool isCoastalOnly() const { return m_bCoastalOnly; }
 	bool isAddsFreshWater() const;
 	bool isImpassable() const;
 	bool isNoCity() const;
@@ -4206,6 +4220,7 @@ private:
 	bool m_bNoAdjacent;
 	bool m_bRequiresFlatlands;
 	bool m_bRequiresRiver;
+	bool m_bCoastalOnly;
 	bool m_bAddsFreshWater;
 	bool m_bImpassable;
 	bool m_bNoCity;
@@ -4364,7 +4379,9 @@ public:
 	int getBuildModifier() const;
 	int getDefenseModifier() const;
 
-	bool isWaterTerrain() const;
+	inline ClimateZoneTypes getClimate() const { return m_eClimate; }
+	inline int getDistanceToLand() const { return m_iDistanceToLand; }
+	inline bool isWaterTerrain() const { return m_iDistanceToLand > 0; }
 	bool isImpassable() const;
 	bool isFound() const;
 	bool isFoundCoast() const;
@@ -4415,8 +4432,9 @@ private:
 
 	CvString m_szArtDefineTag;
 	int	m_zobristValue;
+	int m_iDistanceToLand;
+	ClimateZoneTypes m_eClimate;
 
-	bool m_bWaterTerrain;
 	bool m_bImpassable;
 	bool m_bFound;
 	bool m_bFoundCoast;
@@ -4817,7 +4835,6 @@ public:
 	int getGridHeight() const;
 	int getTerrainGrainChange() const;
 	int getFeatureGrainChange() const;
-	int getResearchPercent() const;
 	int getTradeProfitPercent() const;
 	int getDistanceMaintenancePercent() const;
 	int getNumCitiesMaintenancePercent() const;
@@ -4846,7 +4863,6 @@ private:
 	int m_iGridHeight;
 	int m_iTerrainGrainChange;
 	int m_iFeatureGrainChange;
-	int m_iResearchPercent;
 	int m_iTradeProfitPercent;
 	int m_iDistanceMaintenancePercent;
 	int m_iNumCitiesMaintenancePercent;
@@ -4865,7 +4881,7 @@ private:
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 class CvMapInfo
-	: public CvInfoBase
+	: public CvHotkeyInfo
 	, private bst::noncopyable
 {
 public:
@@ -4878,6 +4894,8 @@ public:
 	int getWrapX() const					{ return m_iWrapX; }
 	int getWrapY() const					{ return m_iWrapY; }
 
+	inline bool startRevealed() const		{ return m_bStartRevealed; }
+
 	const CvString getInitialWBMap() const	{ return m_szInitialWBMap; }
 	const CvString getMapScript() const		{ return m_szMapScript; }
 
@@ -4889,6 +4907,8 @@ private:
 
 	int m_iWrapX;
 	int m_iWrapY;
+
+	bool m_bStartRevealed;
 
 	CvString m_szInitialWBMap;
 	CvString m_szMapScript;
@@ -7199,6 +7219,7 @@ public:
 	bool isGoldenAge() const;
 	bool isDeclareWar() const;
 	bool isDisbandUnit() const;
+	inline bool isGameSpeedScale() const { return m_bGameSpeedScale; }
 
 	int getGold() const;
 	int getRandomGold() const;
@@ -7208,7 +7229,7 @@ public:
 	int getTechPercent() const;
 	int getTechCostPercent() const;
 	int getTechMinTurnsLeft() const;
-	TechTypes getPrereqTech() const	{ return m_iPrereqTech; }
+	inline TechTypes getPrereqTech() const { return m_iPrereqTech; }
 	int getFreeUnit() const;
 	int getNumUnits() const;
 	int getBuilding() const;
@@ -7221,7 +7242,7 @@ public:
 	int getFoodPercent() const;
 	int getFeature() const;
 	int getFeatureChange() const;
-	ImprovementTypes getImprovement() const	{ return m_iImprovement; }
+	inline ImprovementTypes getImprovement() const { return m_iImprovement; }
 	int getImprovementChange() const;
 	int getCommerceModifier(int i) const;
 	int getYieldModifier(int i) const;
@@ -7328,6 +7349,7 @@ private:
 	bool m_bGoldenAge;
 	bool m_bDeclareWar;
 	bool m_bDisbandUnit;
+	bool m_bGameSpeedScale;
 
 	int m_iGold;
 	int m_iRandomGold;

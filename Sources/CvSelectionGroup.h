@@ -87,7 +87,6 @@ public:
 	bool canStartMission(int iMission, int iData1, int iData2, CvPlot* pPlot = NULL, bool bTestVisible = false, bool bUseCache = false) const;
 	bool startMission();
 	bool continueMission(int iSteps = 0);
-	bool checkMoveSafety(int iX, int iY, int iFlags);
 
 	DllExport bool canDoInterfaceMode(InterfaceModeTypes eInterfaceMode);
 	DllExport bool canDoInterfaceModeAt(InterfaceModeTypes eInterfaceMode, CvPlot* pPlot);
@@ -100,6 +99,8 @@ public:
 	bool isHuman() const;
 
 	DllExport bool isBusy() const;
+
+	bool isCombat(const CvUnit* ignoreMe = NULL) const;
 
 	bool isCargoBusy() const;
 	int baseMoves() const;
@@ -122,6 +123,7 @@ public:
 
 	bool canMoveThrough(const CvPlot* pPlot, bool bDeclareWar = false) const;
 	bool canFight() const;
+	bool canAttackNow() const;
 	bool canDefend() const;
 	bool canBombard(const CvPlot* pPlot, bool bCheckCanReduceOnly = false) const;
 	bool hasBombardCapability() const;
@@ -295,7 +297,21 @@ public:
 	virtual void AI_separate() = 0;
 	virtual bool AI_update() = 0;
 	virtual int AI_attackOdds(const CvPlot* pPlot, bool bPotentialEnemy, bool bForce = false, bool* bWin = NULL, int iTheshold = -1) const = 0;
-	virtual CvUnit* AI_getBestGroupAttacker(const CvPlot* pPlot, bool bPotentialEnemy, int& iUnitOdds, bool bForce = false, bool bNoBlitz = false, CvUnit** pDefender = NULL, bool bAssassinate = false, bool bSurprise = false) const = 0;
+
+	virtual CvUnit* AI_getBestGroupAttacker
+	(
+		const CvPlot* pPlot,
+		bool bPotentialEnemy,
+		int& iUnitOdds,
+		bool bForce = false,
+		CvUnit** pDefender = NULL,
+		bool bAssassinate = false,
+		bool bSurprise = false,
+		bool bIgnoreMadeAttack = false,
+		const std::set<int>& ignoreUnitID = std::set<int>()
+	)
+	const = 0;
+
 	virtual CvUnit* AI_getBestGroupSacrifice(const CvPlot* pPlot, bool bForce, bool bNoBlitz) const = 0;
 
 	virtual int AI_compareStacks(const CvPlot* pPlot, StackCompare::flags flags = StackCompare::None, int iRange = 0) const = 0;

@@ -275,8 +275,7 @@ class CvCivicsScreen:
 		# Background
 		h0 = self.Y_STAT_BAR - H_EDGE
 		screen.addPanel(self.getNextWidget(), "", "", True, False, 8, H_EDGE, 416, h0, iPanelBlue50)
-		self.CivicTxtPnl = CivicTxtPnl = self.getNextWidget()
-		screen.addPanel(CivicTxtPnl, "", "", True, False, 440, H_EDGE, xRes - 448, h0, iPanelBlue50)
+		screen.addPanel(self.getNextWidget(), "", "", True, False, 440, H_EDGE, xRes - 448, h0, iPanelBlue50)
 		# Initial civic text
 		x = 456; y = H_EDGE + 16; w = xRes - 470; h = h0 - 32
 		self.aCoordList = [x, y, w, h]
@@ -289,7 +288,6 @@ class CvCivicsScreen:
 		# Fill screen
 		dy = iSize + 8
 		y = -2
-		iOff = 3*xRes/7
 		iCivicOption = 0
 		for civics in CivicData.civicLists:
 			h = 56 + len(civics)*dy

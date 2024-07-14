@@ -90,6 +90,13 @@ std::wstring CyGameTextMgr::getBuildingHelp(int iBuilding, bool bActual, CyCity*
 	return szBuffer.getCString();
 }
 
+std::wstring CyGameTextMgr::getHeritageHelp(int iType, CyCity* pCity, bool bCivilopediaText, bool bStrategyText, bool bTechChooserText)
+{
+	CvWStringBuffer szBuffer;
+	GAMETEXT.setHeritageHelp(szBuffer, (HeritageTypes)iType, pCity ? pCity->getCity() : NULL, bCivilopediaText, bStrategyText, bTechChooserText);
+	return szBuffer.getCString();
+}
+
 std::wstring CyGameTextMgr::getProjectHelp(int iProject, bool bCivilopediaText, CyCity* pCity)
 {
 	CvWStringBuffer szBuffer;
@@ -202,17 +209,17 @@ std::wstring CyGameTextMgr::parseCivInfos(int /*CivilizationTypes*/ iCivilizatio
 	return szBuffer.getCString();
 }
 
-std::wstring CyGameTextMgr::parseLeaderTraits(int /*LeaderHeadTypes*/ iLeader, int /*CivilizationTypes*/ iCivilization, bool bDawnOfMan, bool bCivilopediaText)
+std::wstring CyGameTextMgr::parseLeaderTraits(int /*LeaderHeadTypes*/ iLeader, bool bDawnOfMan, bool bCivilopediaText)
 {
 	CvWStringBuffer szBuffer;
-	GAMETEXT.parseLeaderTraits(szBuffer, (LeaderHeadTypes)iLeader, (CivilizationTypes) iCivilization, bDawnOfMan, bCivilopediaText);
+	GAMETEXT.parseLeaderTraits(szBuffer, (LeaderHeadTypes)iLeader, NO_CIVILIZATION, bDawnOfMan, bCivilopediaText);
 	return szBuffer.getCString();
 }
 
-std::wstring CyGameTextMgr::parseTraits(int /*TraitTypes*/ eTrait, int /*CivilizationTypes*/ eCivilization, bool bDawnOfMan, bool bEffectsOnly)
+std::wstring CyGameTextMgr::parseTraits(int /*TraitTypes*/ eTrait, bool bDawnOfMan, bool bEffectsOnly)
 {
 	CvWStringBuffer szBuffer;
-	GAMETEXT.parseTraits(szBuffer, (TraitTypes)eTrait, (CivilizationTypes)eCivilization, bDawnOfMan, bEffectsOnly);
+	GAMETEXT.parseTraits(szBuffer, (TraitTypes)eTrait, bDawnOfMan, bEffectsOnly);
 	return szBuffer.getCString();
 }
 

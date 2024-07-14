@@ -72,7 +72,8 @@ public:
 	void AI_setAsGarrison(const CvCity* pCity = NULL);
 	int AI_searchRange(int iRange = 1) const;
 
-	BuildingTypes getIntendedConstructBuilding() const { return m_eIntendedConstructBuilding; };
+	BuildingTypes getIntendedConstructBuilding() const { return m_eIntendedConstructBuilding; }
+	HeritageTypes getIntendedHeritage() const { return m_eIntendedHeritage; }
 
 	void read(FDataStreamBase* pStream);
 	void write(FDataStreamBase* pStream);
@@ -92,6 +93,7 @@ protected:
 	int m_iAffirmedGarrisonCity;
 
 	BuildingTypes m_eIntendedConstructBuilding; // Used to coordinate subdued animal and great person builds
+	HeritageTypes m_eIntendedHeritage; // Used to coordinate subdued animal and great person builds
 	static ConstructionNeeds* m_constructionNeeds;
 
 	int m_iGroupLeadOverride;
@@ -211,15 +213,19 @@ protected:
 
 	bool AI_lead(std::vector<UnitAITypes>& aeAIUnitTypes);
 	bool AI_join(int iMaxCount = MAX_INT);
-	bool AI_construct(int iMaxCount = MAX_INT, int iMaxSingleBuildingCount = MAX_INT, int iThreshold = 15, bool bDecayProbabilities = false, bool assumeSameValueEverywhere = false);
 	bool AI_outcomeMission();
 	bool AI_scrapSubdued();
 	bool AI_moveToOurTerritory(int maxMoves);
 	bool AI_switchHurry();
 	bool AI_hurry(bool bAny = false);
+
 	bool checkSwitchToConstruct();
+	bool AI_construct(int iMaxCount = MAX_INT, int iMaxSingleBuildingCount = MAX_INT, int iThreshold = 0, bool bDecayProbabilities = false, bool assumeSameValueEverywhere = false);
 	int getBestConstructValue(int iMaxCount, int iMaxSingleBuildingCount, int iDecayProbabilityRate, int iThreshold, bool assumeSameValueEverywhere, CvPlot*& bestConstructPlot, CvPlot*& bestTurnPlot, CvUnitAI*& pBestTargetingUnit, BuildingTypes& eBestBuilding);
 	bool enactConstruct(CvPlot* pBestConstructPlot, CvPlot* pBestPlot, CvUnitAI* eBestTargetingUnit, BuildingTypes eBestBuilding);
+
+	bool AI_heritage();
+	int getBestHeritageValue(CvPlot*& pBestConstructPlot, CvPlot*& pBestPlot, CvUnitAI*& pTargetingUnit, HeritageTypes& eBest);
 
 	bool AI_doInquisition();
 
@@ -232,8 +238,9 @@ protected:
 	bool AI_seaAreaAttack();
 	bool AI_patrol(bool bIgnoreDanger = false);
 	bool AI_defend();
+	void AI_safetyEval(const CvPlot* plotX, const int iPass, const int iRange, const bool bAnimalDanger, int &iBestValue, const CvPlot** pBestPlot);
 	bool AI_safety(int iRange = 1);
-	bool AI_reachHome(const bool bMockRun = false) const;
+	bool AI_reachHome(const bool bMockRun = false, int iRange = 0) const;
 	bool AI_hide();
 	bool AI_goody(int iRange);
 
@@ -435,6 +442,7 @@ public:
 	bool AI_establishStackSeeInvisibleCoverage();
 
 	bool generateSafePathforVulnerable(const CvPlot* pToPlot, int* piPathTurns = NULL) const;
+	bool generateIgnoreDangerPath(const CvPlot* pToPlot, int* piPathTurns = NULL) const;
 
 	void setToWaitOnUnitAI(UnitAITypes eUnitAI, bool bAdd);
 	bool isWaitingOnUnitAI(int iIndex) const;

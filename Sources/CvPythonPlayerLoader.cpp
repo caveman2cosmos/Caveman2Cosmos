@@ -1,8 +1,8 @@
+#include "CvGameCoreDLL.h"
 #include "CvPythonPlayerLoader.h"
 #include "CyPlayer.h"
 #include <boost/python/manage_new_object.hpp>
 #include <boost/python/scope.hpp>
-#include "CvGameCoreDLL.h"
 
 void CvPythonPlayerLoader::CyPlayerPythonInterface1(boost::python::class_<CyPlayer>& inst)
 {
@@ -20,8 +20,6 @@ void CvPythonPlayerLoader::CyPlayerPythonInterface1(boost::python::class_<CyPlay
 
 		.def("startingPlotRange", &CyPlayer::startingPlotRange, "int ()")
 		.def("startingPlotWithinRange", &CyPlayer::startingPlotWithinRange, "bool (CyPlot *pPlot, int /*PlayerTypes*/ ePlayer, int iRange, int iPass)")
-
-		.def("findStartingPlot", &CyPlayer::findStartingPlot, boost::python::return_value_policy<boost::python::manage_new_object>(), "findStartingPlot(bool bRandomize) - Finds a starting plot for player")
 
 		.def("initCity", &CyPlayer::initCity, boost::python::return_value_policy<boost::python::manage_new_object>(), "initCity(plotX, plotY) - spawns a city at x,y")
 		.def("acquireCity", &CyPlayer::acquireCity, "void (CyCity* pCity, bool bConquest, bool bTrade)")
@@ -192,8 +190,7 @@ void CvPythonPlayerLoader::CyPlayerPythonInterface2(boost::python::class_<CyPlay
 
 		.def("addReminder", &CyPlayer::addReminder, "void (int iGameTurn, string szMessage)")
 		.def("setFoundedFirstCity", &CyPlayer::setFoundedFirstCity, "void (bool bNewValue)")
-		.def("setAlive", &CyPlayer::setAlive, "void (bool bNewValue)")
-		.def("setNewPlayerAlive", &CyPlayer::setNewPlayerAlive, "void (bool bNewValue) - like setAlive, but without firing turn logic")
+		.def("setAlive", &CyPlayer::setAlive, "void (bool bNewValue, bool bActivateTurn)")
 		.def("getStabilityIndex", &CyPlayer::getStabilityIndex, "int ( )")
 		.def("changeStabilityIndex", &CyPlayer::changeStabilityIndex, "void ( int iChange )")
 		.def("getStabilityIndexAverage", &CyPlayer::getStabilityIndexAverage, "int ( )")
@@ -311,6 +308,7 @@ void CvPythonPlayerLoader::CyPlayerPythonInterface3(boost::python::class_<CyPlay
 		.def("isBuildingOnlyHealthy", &CyPlayer::isBuildingOnlyHealthy, "bool ()")
 
 		.def("getTreasuryUpkeep", &CyPlayer::getTreasuryUpkeep, "int64 ()")
+		.def("getCorporateMaintenance", &CyPlayer::getCorporateMaintenance, "int64 ()")
 		.def("getTotalMaintenance", &CyPlayer::getTotalMaintenance, "int ()")
 		.def("getLevelExperienceModifier", &CyPlayer::getLevelExperienceModifier, "int ()")
 
@@ -455,6 +453,6 @@ void CvPythonPlayerLoader::CyPlayerPythonInterface3(boost::python::class_<CyPlay
 		.def("resetEventOccured", &CyPlayer::resetEventOccured, "void (int /*EventTypes*/ eEvent)")
 		.def("getEventTriggered", &CyPlayer::getEventTriggered, boost::python::return_value_policy<boost::python::reference_existing_object>(), "EventTriggeredData* (int iID)")
 		.def("initTriggeredData", &CyPlayer::initTriggeredData, boost::python::return_value_policy<boost::python::reference_existing_object>(), "EventTriggeredData* (int eEventTrigger, bool bFire, int iCityId, int iPlotX, int iPlotY, PlayerTypes eOtherPlayer, int iOtherPlayerCityId, ReligionTypes eReligion, CorporationTypes eCorporation, int iUnitId, BuildingTypes eBuilding)")
-		.def("getEventTriggerWeight", &CyPlayer::getEventTriggerWeight, "int getEventTriggerWeight(int eEventTrigger)")
+		.def("hasHeritage", &CyPlayer::hasHeritage, "bool hasHeritage(int iType)")
 	;
 }

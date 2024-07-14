@@ -27,7 +27,7 @@
 		<German>BarbCiv-Stärke-Einstellungen:</German>
 		<Italian>Forza civiltà barbare:</Italian>
 		<Spanish>Configuración de fuerza de BarbCiv:</Spanish>
-		<Polish>Ustawienia Siły BarbCiv:</Polish>
+		<Polish>Ustawienia Si&#179;y BarbCiv:</Polish>
 		<Russian>Ïàðàìåòðû ìîùè âàðâàðîâ</Russian>
 	</TEXT>
 	<TEXT>
@@ -47,7 +47,7 @@
 		<German>Einfluss-Optionen:</German>
 		<Italian>Opzioni influenza culturale:</Italian>
 		<Spanish>Opciones de influencia:</Spanish>
-		<Polish>Opcje Wpływu:</Polish>
+		<Polish>Opcje Wp&#179;ywu:</Polish>
 		<Russian>Îïöèè êóëüò. âëèÿíèÿ:</Russian>
 	</TEXT>
 	<TEXT>
@@ -67,7 +67,7 @@
 		<German>Neue-Welt-Optionen:</German>
 		<Italian>Opzioni mod New World:</Italian>
 		<Spanish>Opciones de Nuevo Mundo:</Spanish>
-		<Polish>Opcje Nowego świata:</Polish>
+		<Polish>Opcje Nowego &#156;wiata:</Polish>
 		<Russian>Опции New World:</Russian>
 	</TEXT>
 	<TEXT>
@@ -87,7 +87,7 @@
 		<German>Standard wiederherstellen:</German>
 		<Italian>Ripristina opzioni predefinite:</Italian>
 		<Spanish>Restablecer valores predeterminados:</Spanish>
-		<Polish>Resetuj do Domyślnych:</Polish>
+		<Polish>Resetuj do Domy&#156;lnych:</Polish>
 		<Russian>Ñáðîñ íàñòðîåê ïî óìîë÷àíèþ:</Russian>
 	</TEXT>
 	<TEXT>
@@ -97,7 +97,7 @@
 		<German>Belagerungs-Optionen:</German>
 		<Italian>Opzioni assedio:</Italian>
 		<Spanish>Opciones de asedio:</Spanish>
-		<Polish>Opcje Oblężenia:</Polish>
+		<Polish>Opcje Obl&#234;&#191;enia:</Polish>
 		<Russian>Îïöèè îñàäû:</Russian>
 	</TEXT>
 	<TEXT>
@@ -107,7 +107,7 @@
 		<German>Spionage-Optionen:</German>
 		<Italian>Opzioni spie:</Italian>
 		<Spanish>Opciones de espionaje:</Spanish>
-		<Polish>Opcje Szpiegów:</Polish>
+		<Polish>Opcje Szpieg&#243;w:</Polish>
 		<Russian>Îïöèè øïèîíàæà:</Russian>
 	</TEXT>
 	<TEXT>
@@ -121,7 +121,7 @@
 		<German>Revolutionsinstabilität</German>
 		<Italian>Instabilità generale</Italian> <!-- info screen graph tab -->
 		<Spanish>Inestabilidad</Spanish>
-		<Polish>Zagrożenie rewoltą</Polish>
+		<Polish>Zagro&#191;enie rewolt&#185;</Polish>
 		<Russian>Ðåâîëþöèîííàÿ ñèòóàöèÿ</Russian>
 	</TEXT>
 	<TEXT>
@@ -139,7 +139,7 @@
 		<German>Revolutionsüberwachungsanzeige</German>
 		<Italian>Rapporto sul rischio di rivoluzione</Italian>
 		<Spanish>Vista del Consejero de Revolución</Spanish>
-		<Polish>Ekran szczegółów rewolucji</Polish>
+		<Polish>Ekran szczeg&#243;&#179;&#243;w rewolucji</Polish>
 		<Russian>Ýêðàí ñîâåòíèêà ïî âíóòð. ïîëèòèêå</Russian>
 	</TEXT>
 	<TEXT>
@@ -149,7 +149,7 @@
 		<German>(Ihre Berater empfehlen, die Bedingungen zu akzeptieren)</German>
 		<Italian>(I tuoi consiglieri ti suggeriscono di accettare queste condizioni)</Italian>
 		<Spanish>(Tus consejeros recomiendan aceptar los términos)</Spanish>
-		<Polish>(Twoi doradcy zalecają zaakceptowanie ich żądań)</Polish>
+		<Polish>(Twoi doradcy zalecaj&#185; zaakceptowanie ich &#191;&#185;da&#241;)</Polish>
 		<Russian>(âàøè ñîâåòíèêè ðåêîìåíäóþò ïðèíÿòü èõ óñëîâèÿ)</Russian>
 	</TEXT>
 	<TEXT>
@@ -159,7 +159,7 @@
 		<German>Ihr neuer Beliebtheitsgrad ist</German>
 		<Italian>Il tuo nuovo grado di approvazione è</Italian>
 		<Spanish>Tu grado de aprobación entre el pueblo es</Spanish>
-		<Polish>Twój powiększony wskaźnik poparcia wynosi</Polish>
+		<Polish>Tw&#243;j powi&#234;kszony wska&#159;nik poparcia wynosi</Polish>
 		<Russian>Âàñ ñêîððåêòèðîâàííûé ðåéòèíã ïîïóëÿðíîñòè ðàâåí</Russian>
 	</TEXT>
 	<TEXT>
@@ -169,7 +169,7 @@
 		<German>Sie werden zweifellos jede gerechte Wahl verlieren.</German>
 		<Italian>In caso di elezioni regolari, perderai sicuramente.</Italian>
 		<Spanish>Seguramente perderías unas elecciones justas.</Spanish>
-		<Polish>Z pewnością przegrasz każde uczciwe wybory.</Polish>
+		<Polish>Z pewno&#156;ci&#185; przegrasz ka&#191;de uczciwe wybory.</Polish>
 		<Russian>Âû ñ âåðîÿòíîñòüþ 99.9% ïðîèãðàåòå ëþáûå âûáîðû.</Russian>
 	</TEXT>
 	<TEXT>
@@ -179,7 +179,7 @@
 		<German>(Ihre Berater stehen diesen Bedingungen neutral gegenüber)</German>
 		<Italian>(I tuoi consiglieri ritengono queste condizioni neutrali)</Italian>
 		<Spanish>(Tus consejeros son neutrales respecto a estos términos)</Spanish>
-		<Polish>(Twoi doradcy nie mają zdania na temat ich żądań)</Polish>
+		<Polish>(Twoi doradcy nie maj&#185; zdania na temat ich &#191;&#185;da&#241;)</Polish>
 		<Russian>(âàøè ñîâåòíèêè ñ÷èòàþò èõ òðåáîâàíèÿ áåçûíòåðåñíûìè)</Russian>
 	</TEXT>
 	<TEXT>
@@ -189,7 +189,7 @@
 		<German>(Ihre Berater empfehlen, die Bedingungen zurückzuweisen)</German>
 		<Italian>(I tuoi consiglieri ti suggeriscono di rifiutare queste condizioni)</Italian>
 		<Spanish>(Tus consejeros recomiendan rechazar los términos)</Spanish>
-		<Polish>(Twoi doradcy zalecają odrzucenie ich żądań)</Polish>
+		<Polish>(Twoi doradcy zalecaj&#185; odrzucenie ich &#191;&#185;da&#241;)</Polish>
 		<Russian>(âàøè ñîâåòíèêè ðåêîìåíäóþò îòêëîíèòü èõ óñëîâèÿ)</Russian>
 	</TEXT>
 	<TEXT>
@@ -219,7 +219,7 @@
 		<German>sind</German>
 		<Italian>stanno</Italian>
 		<Spanish>están</Spanish>
-		<Polish>są</Polish>
+		<Polish>s&#185;</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_REV_ASSIM_POPUP</Tag>
@@ -228,7 +228,7 @@
 		<German>Das %s möchte die Unabhängigkeit aufgeben und sich Ihrem Imperium anschließen! Sie glauben, dass sie einfach zu klein sind, um auf sich selbst gestellt zu überleben und hoffen, dass Sie ihren Antrag annehmen.[NEWLINE][NEWLINE]Wenn Sie diesen Antrag annehmen, erhalten Sie alle Städte von %s. Sie bilden anschließend eine Minderheit in Ihrem Imperium.</German>
 		<Italian>%s vorrebbe abbandonare la propria indipendenza e unirsi al tuo impero! Sono troppo piccoli e deboli per sopravvivere da soli e sperano che accetterai la loro richiesta.[NEWLINE][NEWLINE]Se accetti, otterrai tutte le città del %s ed essi diverranno una minoranza all'interno del tuo impero.</Italian>
 		<Spanish>¡Las %s querrían renunciar a su independencia y unirse a tu imperio! Simplemente sienten que son demasiado pequeñas para sobrevivir por sí mismas, y esperan que aceptes sus peticiones.[NEWLINE][NEWLINE]Si aceptas sus términos, recibirás todas las ciudades de los %s, y se convertirán en un grupo minoritario bajo tu imperio.</Spanish>
-		<Polish>%s chcą zrezygnować ze swojej niepodległości i przyłączyć się do twojego imperium! Sądzą, że są zbyt słabi, aby przetrwać samotnie. Mają nadzieję, że spełnisz ich prośbę.[NEWLINE][NEWLINE]Jeżeli spełnisz ich prośbę, otrzymasz wszystkie miasta %s, które staną się częścią twojego imperium.</Polish>
+		<Polish>%s chc&#185; zrezygnowa&#230; ze swojej niepodleg&#179;o&#156;ci i przy&#179;&#185;czy&#230; si&#234; do twojego imperium! S&#185;dz&#185;, &#191;e s&#185; zbyt s&#179;abi, aby przetrwa&#230; samotnie. Maj&#185; nadziej&#234;, &#191;e spe&#179;nisz ich pro&#156;b&#234;.[NEWLINE][NEWLINE]Je&#191;eli spe&#179;nisz ich pro&#156;b&#234;, otrzymasz wszystkie miasta %s, kt&#243;re stan&#185; si&#234; cz&#234;&#156;ci&#185; twojego imperium.</Polish>
 		<Russian>%s ãîòîâû ïîñòóïèòüñÿ íåçàâèñèìîñòüþ è ïðèñîåäèíèòüñÿ ê âàøåé èìïåðèè! Îíè ÷óâòñâóþò, ÷òî ñëèøêîì ìàëû, ÷òîáû âûæèòü â îäèíî÷êó, è íàäåþòñÿ, ÷òî âû ïðèìåòå èõ ïðåäëîæåíèå.[NEWLINE][NEWLINE]Åñëè âû ñîãëàñèòåñü, òî ïîëó÷èòå âñå ãîðîäà %s è îíè ñòàíóò îäíèì èç íàöèîíàëüíûõ ìåíüøèíñòâ â âàøåé èìïåðèè.</Russian>
 	</TEXT>
 	<TEXT>
@@ -238,7 +238,7 @@
 		<German>Beachten Sie, dass die Einverleibung dieser Rebellen zu einer ernsthaften Belastung unserer Beziehung zu %s führt, die Ihnen womöglich sogar den Krieg erklären werden. Bedenken Sie Ihre Entscheidung sorgfältig.</German>
 		<Italian>Nota che assimilare questi ribelli provocherà una grande tensione nei rapporti con %s, fino a portarlo sul punto di dichiararti guerra. Rifletti bene sulla tua decisione.</Italian>
 		<Spanish>Ten en cuenta que asimilar a estos rebeldes causará serias tensiones en tus relaciones con %s, que podría incluso considerar el declararte la guerra. Estudia cuidadosamente tu decisión.</Spanish>
-		<Polish>Należy także pamiętać, że dołączenie tych rebeliantów do twojego imperium spowoduje pogorszenie się relacji z %s, który może posunąć się nawet do wypowiedzenia wojny. Dobrze zastanów się więc nad tą decyzją.</Polish>
+		<Polish>Nale&#191;y tak&#191;e pami&#234;ta&#230;, &#191;e do&#179;&#185;czenie tych rebeliant&#243;w do twojego imperium spowoduje pogorszenie si&#234; relacji z %s, kt&#243;ry mo&#191;e posun&#185;&#230; si&#234; nawet do wypowiedzenia wojny. Dobrze zastan&#243;w si&#234; wi&#234;c nad t&#185; decyzj&#185;.</Polish>
 		<Russian>Ó÷òèòå, ÷òî àññèìèëÿöèÿ ýòèõ ñåïàðàòèñòîâ ñåðüåçíî óõóäøèò âàøè îòíîøåíèÿ ñ %s, ýòî ìîæåò äàæå ïðèâåñòè ê âîéíå. Ïðèíèìàéòå ðåøåíèå îñòðîæíî.</Russian>
 	</TEXT>
 	<TEXT>
@@ -256,7 +256,7 @@
 		<German>Sie können auch beschließen, die Aufwiegler zu bestechen und sie werden ihre Sache aufgeben und sich beruhigen.</German>
 		<Italian>Puoi anche scegliere di corrompere gli agitatori, cominceranno ad abbandonare la loro causa e la situazione comincerà a calmarsi.</Italian>
 		<Spanish>También puedes elegir sobornar a los agitadores, dejarán a un lado su causa y se calmarán.</Spanish>
-		<Polish>Możesz również przekupić agitatorów, co spowoduje, że wycofają swoje groźby i uciszą się.</Polish>
+		<Polish>Mo&#191;esz r&#243;wnie&#191; przekupi&#230; agitator&#243;w, co spowoduje, &#191;e wycofaj&#185; swoje gro&#159;by i ucisz&#185; si&#234;.</Polish>
 		<Russian>Òàêæå âû ìîæåòå óòèõîìèðèòü àãèòàòîðîâ, ïðîñòî èõ ïîäêóïèâ.</Russian>
 	</TEXT>
 	<TEXT>
@@ -266,7 +266,7 @@
 		<German>%d Bestechung mit Gold</German>
 		<Italian>Corrompi con %d oro</Italian>
 		<Spanish>Dar %d de oro</Spanish>
-		<Polish>%d złota łapówki</Polish>
+		<Polish>%d z&#179;ota &#179;ap&#243;wki</Polish>
 		<Russian>%d çîëîòûõ</Russian>
 	</TEXT>
 	<TEXT>
@@ -276,7 +276,7 @@
 		<German>Ein verschwenderisches Geschenk in Höhe von %d Gold, um sie an Ihre Wohltätigkeit zu erinnern und sie für längere Zeit vom Rebellieren abzuhalten.</German>
 		<Italian>Un regalo sontuoso (%d [ICON_GOLD]), per ricordare loro la tua benevolenza e impedirgli di ribellarsi per molto tempo.</Italian>
 		<Spanish>Un profuso presente, por %d de oro, para recordarles tu benevolencia y esfumar las ansias de rebelión por mucho tiempo.</Spanish>
-		<Polish>Hojny podarunek w wysokości %d złota, przypomniał im o twojej życzliwości i odsunął rebelię na długi czas.</Polish>
+		<Polish>Hojny podarunek w wysoko&#156;ci %d z&#179;ota, przypomnia&#179; im o twojej &#191;yczliwo&#156;ci i odsun&#185;&#179; rebeli&#234; na d&#179;ugi czas.</Polish>
 		<Russian>Ùåäðûé äàð â %d çîëîòûõ íàïîìíèò æèòåëÿì î âàøåé äîáðîæåëàòåëüíîñòè. Îíè íàäîëãî âûáðîñÿò èç ñâîèõ ãîëîâ ìûñëè î âîññòàíèè.</Russian>
 	</TEXT>
 	<TEXT>
@@ -286,7 +286,7 @@
 		<German>Ein mittelgroßes Geschenk in Höhe von %d Gold um den Gedanken an Rebellion etwas länger aus ihren Gedanken zu streichen.</German>
 		<Italian>Un discreto regalo (%d [ICON_GOLD]), per allontanare la rivolta dai loro pensieri...</Italian>
 		<Spanish>Un buen presente por el coste de %d de oro para alejar el espíritu revolucionario de sus pensamientos.</Spanish>
-		<Polish>Podarunek w wysokości %d złota, wybił im z głowy rebelię.</Polish>
+		<Polish>Podarunek w wysoko&#156;ci %d z&#179;ota, wybi&#179; im z g&#179;owy rebeli&#234;.</Polish>
 		<Russian>Ïðèëè÷íàÿ ñóììà â %d çîëîòûõ çàñòàâèò æèòåëåé ãîðîäà íàâðåìÿ çàáûòü î ìÿòåæå.</Russian>
 	</TEXT>
 	<TEXT>
@@ -296,7 +296,7 @@
 		<German>Kein Bestechungsgeld</German>
 		<Italian>Nessun dono</Italian>
 		<Spanish>No sobornar</Spanish>
-		<Polish>Nie można przekupić</Polish>
+		<Polish>Nie mo&#191;na przekupi&#230;</Polish>
 		<Russian>ß ïåðåäóìàë</Russian>
 	</TEXT>
 	<TEXT>
@@ -306,7 +306,7 @@
 		<German>Es ist nicht notwendig %s zu bestechen, die örtlichen Verhältnisse sind derzeit günstig.</German>
 		<Italian>[H2]La situazione della città è [COLOR_HIGHLIGHT_TEXT]favorevole[COLOR_REVERT] al momento quindi non serve cercare di [COLOR_HIGHLIGHT_TEXT]corrompere %s[COLOR_REVERT][\H2]</Italian> <!-- city screen, press on the revolt bar -->
 		<Spanish>No es necesario sobornar %s, la situación local es favorable por ahora.</Spanish>
-		<Polish>Nie ma potrzeby przekupywania miasta %s, gdyż sytuacja w nim jest dobra.</Polish>
+		<Polish>Nie ma potrzeby przekupywania miasta %s, gdy&#191; sytuacja w nim jest dobra.</Polish>
 		<Russian>Íåò íåîáõîäèìîñòè çàäàáðèâàòü æèòåëåé %s, ò.ê. ñèòóàöèÿ â ãîðîäå ÿâëÿåòñÿ ñòàáèëüíîé.</Russian>
 	</TEXT>
 	<TEXT>
@@ -316,7 +316,7 @@
 		<German>Sie können der Stadt eine der folgenden 'Spenden' geben:</German>
 		<Italian>Puoi scegliere di fare una delle seguenti 'donazioni' alla città:</Italian>
 		<Spanish>Puedes elegir dar una de las siguientes 'donaciones' para la ciudad:</Spanish>
-		<Polish>Możesz wybrać jeden z poniższych podarunków dla tego miasta:</Polish>
+		<Polish>Mo&#191;esz wybra&#230; jeden z poni&#191;szych podarunk&#243;w dla tego miasta:</Polish>
 		<Russian>Âû ìîæåòå ñäåëàòü ñëåäóþùèå 'ïîäàðêè' ãîðîæàíàì:</Russian>
 	</TEXT>
 	<TEXT>
@@ -326,7 +326,7 @@
 		<German>Leider haben Sie nicht genügend Gold in der Schatzkammer, um diese Stadt bestechen zu können.</German>
 		<Italian>Purtroppo non hai abbastanza oro per poter corrompere questa città.</Italian>
 		<Spanish>Desafortunadamente, no tienes suficiente oro en el tesoro para poder sobornar esta ciudad.</Spanish>
-		<Polish>Niestety, nie masz wystarczającej ilości złota w skarbcu, aby przekupić to miasto.</Polish>
+		<Polish>Niestety, nie masz wystarczaj&#185;cej ilo&#156;ci z&#179;ota w skarbcu, aby przekupi&#230; to miasto.</Polish>
 		<Russian>Ê ñîæàëåíèþ, çîëîòà â êàçíå íå õâàòàåò íà âçÿòêó æèòåëÿì äàííîãî ãîðîäà.</Russian>
 	</TEXT>
 	<TEXT>
@@ -336,7 +336,7 @@
 		<German>Sie bestachen diese Stadt vor %d Runden, deshalb sind die Kosten, um den gewünschten Effekt zu erzielen höher als üblich. Die Kosten verringern sich jede Runde, die Sie warten, falls Sie überhaupt warten können.</German>
 		<Italian>Hai corrotto questa città %d turni fa, il costo per ottenere l'effetto desiderato sarà superiore al normale. Questo costo diminuirà ogni turno che passa, se puoi aspettare.</Italian>
 		<Spanish>Sobornaste esta ciudad hace %d turnos, así que el coste para producir el efecto deseado será mayor de lo normal. Los costes decrecerán cada turno que esperes, si por supuesto te puedes permitir la espera.</Spanish>
-		<Polish>Przekupiłeś to miasto %d tur temu, dlatego koszt uzyskania pożądanego efektu będzie wyższy niż normalnie. Koszty będą się zmniejszać w każdej następnej turze.</Polish>
+		<Polish>Przekupi&#179;e&#156; to miasto %d tur temu, dlatego koszt uzyskania po&#191;&#185;danego efektu b&#234;dzie wy&#191;szy ni&#191; normalnie. Koszty b&#234;d&#185; si&#234; zmniejsza&#230; w ka&#191;dej nast&#234;pnej turze.</Polish>
 		<Russian>Âû äàâàëè âçÿòêó ãîðîæàíàì %d õîäîâ íàçàä, ïîýòîìó öåíà äîñòèæåíèÿ òîãî æå ýôôåêòà áóäåò âûøå îáû÷íîé. Îíà ñíèçèòñÿ ñî âðåìåíåì, åñëè, êîíå÷íî, ó âàñ åñòü âðåìÿ...</Russian>
 	</TEXT>
 	<TEXT>
@@ -346,7 +346,7 @@
 		<German>Ein kleines Geschenk von %d Gold, um sich etwas Zeit kaufen zu können bis sie eine Rebellion in Erwägung ziehen.</German>
 		<Italian>Un piccolo regalo (%d [ICON_GOLD]) per guadagnare un po' di tempo prima che scoppi una rivolta.</Italian>
 		<Spanish>Un pequeño presente de %d de oro para comprar algo de tiempo antes de que consideren la revuelta.</Spanish>
-		<Polish>Niewielki podarunek w wysokości %d złota, oddalił na jakiś czas groźbę rebelii.</Polish>
+		<Polish>Niewielki podarunek w wysoko&#156;ci %d z&#179;ota, oddali&#179; na jaki&#156; czas gro&#159;b&#234; rebelii.</Polish>
 		<Russian>Íåáîëüøîé ïîäàðîê â %d çîëîòûõ êóïèò íàì âðåìÿ ïåðåä ãðÿäóùèì âîññòàíèåì.</Russian>
 	</TEXT>
 	<TEXT>
@@ -356,7 +356,7 @@
 		<German>Die Bürger von %s nehmen kein Geld von Ihnen an, sie möchten Sie vielmehr völlig los werden!</German>
 		<Italian>I cittadini di %s non accetteranno il tuo denaro, piuttosto preferiscono sbarazzarsi completamente di te!</Italian>
 		<Spanish>¡Los ciudadanos de %s no aceptarán ningún soborno, ¡preferirían deshacerse totalmente de ti!</Spanish>
-		<Polish>Mieszkańcy miasta %s nie przyjmą żadnych pieniędzy od ciebie, gdyż woleliby całkowicie się ciebie pozbyć!</Polish>
+		<Polish>Mieszka&#241;cy miasta %s nie przyjm&#185; &#191;adnych pieni&#234;dzy od ciebie, gdy&#191; woleliby ca&#179;kowicie si&#234; ciebie pozby&#230;!</Polish>
 		<Russian>Æèòåëè %s íå ïðèìóò îò âàñ íèêàêèõ äåíåã. Îíè ïðîñòî õîòÿò îò âàñ èçáàâèòüñÿ!</Russian>
 	</TEXT>
 	<TEXT>
@@ -366,7 +366,7 @@
 		<German>Welche Stadt möchten Sie bestechen?</German>
 		<Italian>Quale città vorresti corrompere?</Italian>
 		<Spanish>¿Qué ciudad te gustaría sobornar?</Spanish>
-		<Polish>Które miasto chciałbyś przekupić?</Polish>
+		<Polish>Kt&#243;re miasto chcia&#179;by&#156; przekupi&#230;?</Polish>
 		<Russian>Æèòåëåé êàêîãî ãîðîäà âû õîòèòå çàäîáðèòü?</Russian>
 	</TEXT>
 	<TEXT>
@@ -376,7 +376,7 @@
 		<German>Bedingungen akzeptieren</German>
 		<Italian>Accetta le condizioni</Italian>
 		<Spanish>Aceptar los términos</Spanish>
-		<Polish>Zaakceptuj żądania</Polish>
+		<Polish>Zaakceptuj &#191;&#185;dania</Polish>
 		<Russian>Ïðèíÿòü óñëîâèÿ</Russian>
 	</TEXT>
 	<TEXT>
@@ -386,7 +386,7 @@
 		<German>Zahlen Sie ihnen</German>
 		<Italian>Pagali</Italian>
 		<Spanish>Págales</Spanish>
-		<Polish>Zapłać im</Polish>
+		<Polish>Zap&#179;a&#230; im</Polish>
 		<Russian>Çàïëàòèòü èì</Russian>
 	</TEXT>
 	<TEXT>
@@ -406,7 +406,7 @@
 		<German>Nehmen Sie an und kontrollieren Sie die neue Civ</German>
 		<Italian>Accetta e prendi il controllo di una nuova civiltà</Italian>
 		<Spanish>Aceptar y tomar el control de la nueva civilización</Spanish>
-		<Polish>Zaakceptuj i przejmij kontrolę nad nową cywilizacją</Polish>
+		<Polish>Zaakceptuj i przejmij kontrol&#234; nad now&#185; cywilizacj&#185;</Polish>
 		<Russian>Ñîãëàñèòüñÿ è ïðèíÿòü óïðàâëåíèå íîâîé öèâèëèçàöèåé</Russian>
 	</TEXT>
 	<TEXT>
@@ -416,7 +416,7 @@
 		<German>Laufen Sie über und führen Sie die Rebellenarmee!</German>
 		<Italian>Diserta e prendi il comando dell'armata dei ribelli!</Italian>
 		<Spanish>¡Organizar y comandar los ejércitos rebeldes!</Spanish>
-		<Polish>Zdradź własne imperium i poprowadź armię rebeliantów!</Polish>
+		<Polish>Zdrad&#159; w&#179;asne imperium i poprowad&#159; armi&#234; rebeliant&#243;w!</Polish>
 		<Russian>Áåæàòü çà ãðàíèöó è âîçãëàâèòü àðìèè ìÿòåæíèêîâ!</Russian>
 	</TEXT>
 	<TEXT>
@@ -426,7 +426,7 @@
 		<German>Gewähren Sie die Unabhängigkeit</German>
 		<Italian>Concedi l'indipendenza</Italian>
 		<Spanish>Otorgar la independencia</Spanish>
-		<Polish>Nadaj niepodległość</Polish>
+		<Polish>Nadaj niepodleg&#179;o&#156;&#230;</Polish>
 		<Russian>Äàðîâàòü íåçàâèñèìîñòü</Russian>
 	</TEXT>
 	<TEXT>
@@ -436,7 +436,7 @@
 		<German>Vielleicht später</German>
 		<Italian>Forse dopo</Italian>
 		<Spanish>Quizás más tarde</Spanish>
-		<Polish>Może później</Polish>
+		<Polish>Mo&#191;e p&#243;&#159;niej</Polish>
 		<Russian>Ìîæåò ïîòîì</Russian>
 	</TEXT>
 	<TEXT>
@@ -456,7 +456,7 @@
 		<German>Sie sind hier nicht Willkommen</German>
 		<Italian>Non sei il benvenuto qui</Italian>
 		<Spanish>No eres bienvenido aquí</Spanish>
-		<Polish>Nie jesteś tu mile widziany</Polish>
+		<Polish>Nie jeste&#156; tu mile widziany</Polish>
 		<Russian>Âàì çäåñü íå ðàäû</Russian>
 	</TEXT>
 	<TEXT>
@@ -466,7 +466,7 @@
 		<German>Erkennen Sie die Unabhängigkeit an</German>
 		<Italian>Riconosci l'indipendenza</Italian>
 		<Spanish>Reconocer la independencia</Spanish>
-		<Polish>Uznaj niepodległość</Polish>
+		<Polish>Uznaj niepodleg&#179;o&#156;&#230;</Polish>
 		<Russian>Ïðèçíàòü íåçàâèñèìîñòü</Russian>
 	</TEXT>
 	<TEXT>
@@ -476,7 +476,7 @@
 		<German>Bedingungen ablehnen</German>
 		<Italian>Rifiuta le condizioni</Italian>
 		<Spanish>Rechazar</Spanish>
-		<Polish>Odrzuć żądania</Polish>
+		<Polish>Odrzu&#230; &#191;&#185;dania</Polish>
 		<Russian>Îòêëîíèòü óñëîâèÿ</Russian>
 	</TEXT>
 	<TEXT>
@@ -496,7 +496,7 @@
 		<German>Erklären Sie Krieg gegen</German>
 		<Italian>Dichiara guerra a</Italian>
 		<Spanish>Declarar la guerra a:</Spanish>
-		<Polish>Wypowiedz wojnę przeciwko</Polish>
+		<Polish>Wypowiedz wojn&#234; przeciwko</Polish>
 		<Russian>Îáúÿâèòü âîéíó</Russian>
 	</TEXT>
 	<TEXT>
@@ -516,7 +516,7 @@
 		<German>Sie träumen von einer Welt ohne Besitztümer in der alle Menschen Brüder sind![NEWLINE][NEWLINE]Während</German>
 		<Italian>Stanno sognando la fine della proprietà privata e la fratellanza tra gli uomini!</Italian>
 		<Spanish>¡Están imaginando un mundo sin posesiones, una hermandad de hombres![NEWLINE][NEWLINE]Mientras</Spanish>
-		<Polish>Marzą o równości i braterstwie![NEWLINE][NEWLINE]Dopóki</Polish>
+		<Polish>Marz&#185; o r&#243;wno&#156;ci i braterstwie![NEWLINE][NEWLINE]Dop&#243;ki</Polish>
 		<Russian>Îíè ìå÷òàþò î ìèðå áåç ïðèòåñíåíèé è î âñå÷åëîâå÷åñêîì áðàòñòâå![NEWLINE][NEWLINE]Õîòÿ </Russian>
 	</TEXT>
 	<TEXT>
@@ -526,7 +526,7 @@
 		<German>seine Vorteile haben mag, so ist es womöglich doch nicht sinnvoll, das derzeitige ökonomische Modell aufzugeben. Die kommunistischen Aufwiegler sind noch nicht gewalttätig, also haben Sie Zeit, ihnen die Vorteile des Wettbewerbs beizubringen. Sich zu einem Genossen zu erklären ist jedoch der schnellste und einfachste Weg diese Städte in der absehbaren Zukunft in Ihrem Imperium zu behalten. Da sie in Geld keinen Wert sehen, können Sie sie auch nicht bestechen.</German>
 		<Italian>Anche se può avere i suoi benefici, può non valere la pena di abbandonare il tuo attuale modello economico. Gli agitatori comunisti non sono ancora passati alla violenza, quindi sei ancora in tempo per aiutarli a vedere i benefici del libero mercato. Tuttavia, la scelta più rapida e più semplice per mantenere queste città nel tuo impero, per il prossimo futuro, è quella di dichiararsi un 'compagno'. Poiché non danno peso al tuo oro, non potrai corromperli.</Italian>
 		<Spanish>puede tener sus cosas buenas, puede no valer la pena renunciar a tu modelo económico actual. Los agitadores comunistas aún no han hecho uso de la violencia, puede que aún tengas tiempo de ayudarles a ver los beneficios de la competencia mercantil. No obstante, la opción más rápida y fácil para mantener estas ciudades en tu imperio en un futuro próximo es declararte un "camarada". Al no dar valor a tu dinero, no podrás pagarles para calmarlos.</Spanish>
-		<Polish>będzie przynosić korzyści, może nie być warta rezygnacja z aktualnego modelu ekonomicznego. Komunistyczni agitatorzy jeszcze nie uciekli się do przemocy, więc może masz jeszcze czas, aby pomóc im zobaczyć korzyści z konkurencji. Jednakże, najszybszą i najłatwiejszą drogą do pokojowego utrzymania ich w imperium w niedalekiej przyszłości jest zadeklarowanie siebie jako Towarzysza. Ponieważ pieniądz nie ma dla nich wartości, nie można ich przekupić.</Polish>
+		<Polish>b&#234;dzie przynosi&#230; korzy&#156;ci, mo&#191;e nie by&#230; warta rezygnacja z aktualnego modelu ekonomicznego. Komunistyczni agitatorzy jeszcze nie uciekli si&#234; do przemocy, wi&#234;c mo&#191;e masz jeszcze czas, aby pom&#243;c im zobaczy&#230; korzy&#156;ci z konkurencji. Jednak&#191;e, najszybsz&#185; i naj&#179;atwiejsz&#185; drog&#185; do pokojowego utrzymania ich w imperium w niedalekiej przysz&#179;o&#156;ci jest zadeklarowanie siebie jako Towarzysza. Poniewa&#191; pieni&#185;dz nie ma dla nich warto&#156;ci, nie mo&#191;na ich przekupi&#230;.</Polish>
 		<Russian>ìîæåò èìåòü ñâîè ïëþñû, îíî ìîæåò íå ñòîèòü ñìåíû ïîëèòè÷åñêîé ìîäåëè ãîñóäàðñòâà. Ïðîòåñòóþùèå êîììóíèñòû åùå íå íà÷èíàëè íàñèëèÿ, ïîýòîìó ó âàñ åñòü âðåìÿ äîêàçàòü èì ïðåèìóùåñòâà íàøåé ôîðìû ïðàâëåíèÿ. Îäíàêî, ëåã÷àéøèì ñïîñîáîì óäåðæàòü èõ îò âîññòàíèÿ áóäåò ñîãëàñèå ïðèíÿòü êîììóíèñòè÷åñêóþ èäåîëîãèþ. Ïîòîìó ÷òî îíè íå öåíÿò äåíüãè, è ïîäêóïèòü èõ íåëüçÿ.</Russian>
 	</TEXT>
 	<TEXT>
@@ -536,7 +536,7 @@
 		<German>verlangen den Wechsel zu</German>
 		<Italian>richiedendo un cambiamento verso</Italian>
 		<Spanish>demandando un cambio a</Spanish>
-		<Polish>domagają się zmiany na</Polish>
+		<Polish>domagaj&#185; si&#234; zmiany na</Polish>
 		<Russian>òðåáóþò ïðèíÿòü</Russian>
 	</TEXT>
 	<TEXT>
@@ -546,7 +546,7 @@
 		<German>Wenn Sie eine ehrliche und offene Wahl gewinnen, so werden die Proteste verschwinden und Ihre Macht wird nicht in Frage gestellt. Es könnte auch möglich sein, Ihnen den 'Wahlsieg' zu garantieren, wenn Sie meine Anspielung verstehen, aber es wäre sehr teuer und die Sache könnte auffliegen, mit sehr negativen Konsequenzen. Ihre Ablehnung der Wahlen würde Ihr Bekenntnis zur freien Regierung in Zweifel ziehen, damit würde sich die Gefahr dass Ihre Gegner in den Kampf ziehen erhöhen!</German>
 		<Italian>Se vincerai libere ed oneste elezioni, le proteste cesseranno ed il tuo potere non sarà contestato. È possibile anche "garantirsi la vittoria" - non so se mi spiego - ma ti costerà e l'imbroglio potrebbe essere scoperto, con conseguenze molto negative. Rifiutare la loro richiesta di un'elezione metterà in dubbio il tuo impegno per un governo democratico ed inciterà i vostri avversari a combattere in futuro!</Italian>
 		<Spanish>Si ganas unas elecciones justas y abiertas, los manifestantes desaparecerán y dejará de cuestionarse tu poder. También podría ser posible garantizar tu 'victoria', si sabes a lo que me refiero, pero será costoso y el amaño podría ser descubierto con nefastas consecuencias. ¡Denegar sus peticiones para unas nuevas elecciones les hará cuestionarse tu compromiso de ceder el poder del gobierno y hará que tus oponentes estén más deseosos de luchar en el futuro!</Spanish>
-		<Polish>Jeżeli wygrasz uczciwe wolne wybory, protestanci odejdą, a twoja władzą będzie niekwestionowana. Możliwe jest także zagwarantowanie 'zwycięstwa', ale będzie to kosztowne i związane z ryzykiem wykrycia, które może mieć bardzo negatywne konsekwencje. Odrzucenie ich żądania wyborów spowoduje podanie w wątpliwość twojego rządu i podburzy twoich przeciwników do walki w przyszłości!</Polish>
+		<Polish>Je&#191;eli wygrasz uczciwe wolne wybory, protestanci odejd&#185;, a twoja w&#179;adz&#185; b&#234;dzie niekwestionowana. Mo&#191;liwe jest tak&#191;e zagwarantowanie 'zwyci&#234;stwa', ale b&#234;dzie to kosztowne i zwi&#185;zane z ryzykiem wykrycia, kt&#243;re mo&#191;e mie&#230; bardzo negatywne konsekwencje. Odrzucenie ich &#191;&#185;dania wybor&#243;w spowoduje podanie w w&#185;tpliwo&#156;&#230; twojego rz&#185;du i podburzy twoich przeciwnik&#243;w do walki w przysz&#179;o&#156;ci!</Polish>
 		<Russian>Åñëè âû âûèãðàåòå ÷åñòíûå è îòêðûòûå âûáîðû, âàøà âëàñòü áîëüøå íå áóäåò ñòàâèòüñÿ ïîä ñîìíåíèå. Âû òàêæå ìîæåòå ïðèâëå÷ü èíîé 'ðåñóðñ', íî åñëè ýòî ñòàíåò èçâåñòíûì îáùåñòâåííîñòè, ïîñëåäñòâèÿ ìîãóò áûòü ïå÷àëüíûìè. Îòêëîíåíèå èõ ïðîñüáû ïîñòàâèò ïîä ñîìíåíèå îòêðûòîñòü âàøåãî ïðàâèòåëüñòâà è ñûãðàåò íà ðóêó âàøèì îïïîíåíòàì!</Russian>
 	</TEXT>
 	<TEXT>
@@ -556,7 +556,7 @@
 		<German>Demonstrationen sind ausgebrochen, sie fordern, dass Sie die Macht übergeben an</German>
 		<Italian>Sono scoppiate manifestazioni, chiedendo che tu ceda il potere a</Italian>
 		<Spanish>Han estallado manifestaciones: exigen que cedas el poder a</Spanish>
-		<Polish>Rozpoczęły się demonstracje, prosząc abyś zmienił władzę na</Polish>
+		<Polish>Rozpocz&#234;&#179;y si&#234; demonstracje, prosz&#185;c aby&#156; zmieni&#179; w&#179;adz&#234; na</Polish>
 		<Russian>Íà÷àëèñü äåìîíñòðàöèè, ïðèçûâàþùèå âàñ óñòóïèòü âëàñòü</Russian>
 	</TEXT>
 	<TEXT>
@@ -566,7 +566,7 @@
 		<German>Die Demonstranten sind noch nicht gewalttätig, also haben Sie Zeit, das Problem friedlich zu lösen. Wie alle guten Despoten sind Sie selbstverständlich die größte Hoffnung für Ihr Volk. Sie müssen sie lediglich an den Ruhm Ihrer Herrschaft erinnern, indem Sie entweder ihre Situation verbessern, Ihre Feinde vernichten oder Massen von Soldaten in ihre Städte schicken. Das Aufrichten von glänzenden Statuen Ihrer selbst wird die Abweichler ebenfalls ruhigstellen.[NEWLINE][NEWLINE]Wenn Sie jetzt allerdings zu sehr an der Macht hängen, könnten Sie sich in der Zukunft einem Bürgerkrieg gegenübersehen! Ihre Forderung zu erfüllen würde Ihre Herrschaft nur kurzzeitig beenden, es gibt berechtigten Grund zu glauben, dass Ihre Erben in der Zukunft die Macht zurückgewinnen werden.</German>
 		<Italian>I dimostranti non sono ancora passati alla violenza e sei ancora in tempo per giungere ad una conclusione pacifica. Come tutti i despoti illuminati, sei certamente la miglior speranza per la tua gente. Ti occorre solo ricordar loro la gloria del tuo governo, sia con il miglioramento della loro condizione, sia sgominando i nemici, sia con il rafforzamento delle guarnigioni nelle loro città. Anche la costruzione di splendide statue con la tua immagine calmerà i dissidenti.[NEWLINE][NEWLINE]Tuttavia, se ora ti aggrapperai al potere, potrai essere costretto ad affrontare una guerra civile in avvenire! Accettare la loro richiesta porterebbe soltanto ad una provvisoria interruzione del tuo governo, poiché c'è ragione di credere che i tuoi eredi riprenderanno il potere in futuro.</Italian>
 		<Spanish>Los manifestantes no han hecho uso de la violencia por ahora, y aún puede ser tiempo de concluir la situación de forma pacífica. Como todos los buenos déspotas, eres desde luego la mejor esperanza para tu gente. Solo necesitas recordarles la gloria de tu mandato, bien mejorando su situación, venciendo a tus enemigos, o trasladando grupos de soldados a sus ciudades. Erigir majestuosas estatuas de tu persona puede también calmar a los disidentes.[NEWLINE][NEWLINE]¡No obstante, si te apegas ahora al poder, puede que debas afrontar una guerra civil en el futuro! Aceptar sus demandas solo conllevará un final temporal de tu mandato, dado que hay muchas razones para creer que tus herederos podrán retornar al poder en el futuro.</Spanish>
-		<Polish>Protestanci nie uciekli się jeszcze do przemocy i ciągle jest czas na pokojowe rozwiązania tej sytuacji. Tak jak wszyscy wielcy despoci, jesteś największą nadzieją dla swoich ludzi. Musisz tylko im przypomnieć o swoich osiągnięciach, zarówno poprzez poprawę ich sytuacji, zmiecenie wrogów, czy przeniesienie wielu żołnierzy do miast. Wzniesienie połyskujących posągów twojej osoby powinno również uciszyć zamieszki.[NEWLINE][NEWLINE]Jednakże, pozostawienie sobie teraz całej władzy, może spowodować wybuch wojny domowej w przyszłości! Spełnienie ich żądań przyniesie tylko tymczasowy koniec twoich rządów, gdyż są powody do przypuszczenia, że twój spadkobierca odzyska władzę w przyszłości.</Polish>
+		<Polish>Protestanci nie uciekli si&#234; jeszcze do przemocy i ci&#185;gle jest czas na pokojowe rozwi&#185;zania tej sytuacji. Tak jak wszyscy wielcy despoci, jeste&#156; najwi&#234;ksz&#185; nadziej&#185; dla swoich ludzi. Musisz tylko im przypomnie&#230; o swoich osi&#185;gni&#234;ciach, zar&#243;wno poprzez popraw&#234; ich sytuacji, zmiecenie wrog&#243;w, czy przeniesienie wielu &#191;o&#179;nierzy do miast. Wzniesienie po&#179;yskuj&#185;cych pos&#185;g&#243;w twojej osoby powinno r&#243;wnie&#191; uciszy&#230; zamieszki.[NEWLINE][NEWLINE]Jednak&#191;e, pozostawienie sobie teraz ca&#179;ej w&#179;adzy, mo&#191;e spowodowa&#230; wybuch wojny domowej w przysz&#179;o&#156;ci! Spe&#179;nienie ich &#191;&#185;da&#241; przyniesie tylko tymczasowy koniec twoich rz&#185;d&#243;w, gdy&#191; s&#185; powody do przypuszczenia, &#191;e tw&#243;j spadkobierca odzyska w&#179;adz&#234; w przysz&#179;o&#156;ci.</Polish>
 		<Russian>Ïðîòåñòóþùèå íå ïðèáåãàëè ê íàñèëèþ, ïîýòîìó åñòü âðåìÿ íà ðàçðåøåíèå ñèòóàöèè ìèðíûì ïóòåì. Êàê è âñå ïðàâèëüíûå äåñïîòû, âû - íàäåæäà äëÿ ñâîèõ ëþäåé. Âû ìîæåòå íàïîìíèòü èì, íàñêîëüêî ñëàâíûì ÿâëÿåòñÿ âàøå ïðàâëåíèå, ïðîñòî óëó÷øèâ èõ áëàãîñîñòîÿíèå, óíè÷òîæàÿ âðàãîâ èëè ââîäÿ òîëïû âîéñê â ãîðîäà. Òàêæå ìîæåò ïîìî÷ü ñîîðóæåíèå ñèÿþùèõ ñòàòóé ñåáÿ ëþáèìîãî.[NEWLINE][NEWLINE]Îäíàêî, åñëè âû áóäåòå öåïëÿòüñÿ çà âëàñòü ñåé÷àñ, òî ìîæåòå ñòîëêíóòüñÿ ñ ãðàæäàíñêîé âîéíîé â áóäóùåì! Óäîâëåòâîðåíèå èõ ïðîñüá ëèøèò âàñ âëàñòè ëèøü âðåìåííî, ò.ê. åñòü âñå îñíîâàíèÿ ïîëàãàòü, ÷òî âàøè ïîòîìêè ñìîãóò âåðíóòü ñåáå âëàñòü â áóäóøåì.</Russian>
 	</TEXT>
 	<TEXT>
@@ -576,7 +576,7 @@
 		<German>Demonstrationen sind ausgebrochen, es wird gefordert, dass Sie sich einer Wahl stellen gegen</German>
 		<Italian>Sono scoppiate manifestazioni: richiedono una consultazione elettorale, dove affronterai</Italian>
 		<Spanish>Los manifestantes han salido a la calle, exigiendo que afrontes unas elecciones contra</Spanish>
-		<Polish>Rozpoczęły się demonstracje, prosząc żebyś zmierzył się w wyborach z</Polish>
+		<Polish>Rozpocz&#234;&#179;y si&#234; demonstracje, prosz&#185;c &#191;eby&#156; zmierzy&#179; si&#234; w wyborach z</Polish>
 		<Russian>Íà÷àëèñü äåìîíñòðàöèè, ÷òîáû âû âñòðåòèëèñü íà âûáîðàõ ñ</Russian>
 	</TEXT>
 	<TEXT>
@@ -586,7 +586,7 @@
 		<German>fordern einen Führungswechsel!</German>
 		<Italian>richiedendo un cambiamento di governo!</Italian>
 		<Spanish>pidiendo un cambio en el gobierno del estado.</Spanish>
-		<Polish>wzywają do zmiany w dowodzeniu!</Polish>
+		<Polish>wzywaj&#185; do zmiany w dowodzeniu!</Polish>
 		<Russian>òðåáóþò ñìåíû ðóêîâîäñòâà!</Russian>
 	</TEXT>
 	<TEXT>
@@ -596,7 +596,7 @@
 		<German>wäre kein halb so guter Anführer wie Sie. (Wenn Sie diese Option wählen, so wird Ihre Civ einige Runden lang automatisiert und dann Ihnen wieder friedlich übergeben)</German>
 		<Italian>potrebbe possibilmente non valere la metà di te come leader. (Se scegli questa opzione, la tua civiltà sarà automatizzata per un certo numero di turni, quindi pacificamente sarà restituita al tuo controllo)</Italian>
 		<Spanish>muy posiblemente no sea la mitad de dirigente que eres tú. (Si eliges esta opción, tu civilización estará automatizada durante algunos turnos, después volverá a tu control pacíficamente)</Spanish>
-		<Polish>nie będzie nawet w połowie tak dobrym władcą jakim ty jesteś. (Jeżeli wybierzesz tą opcję, twoja cywilizacja będzie automatycznie zarządzana przez kilka tur, po czym wróci ponownie pod twoją kontrolę)</Polish>
+		<Polish>nie b&#234;dzie nawet w po&#179;owie tak dobrym w&#179;adc&#185; jakim ty jeste&#156;. (Je&#191;eli wybierzesz t&#185; opcj&#234;, twoja cywilizacja b&#234;dzie automatycznie zarz&#185;dzana przez kilka tur, po czym wr&#243;ci ponownie pod twoj&#185; kontrol&#234;)</Polish>
 		<Russian>íå ìîæåò áûòü è íàïîëîâèíó òàêèì õîðîøèì ïðàâèòåëåì, êàê âû. (åñëè âûáåðåòå ýòó îïöèþ, òî âàøà öèâ. áóäåò àâòîìàòèçèðîâàíà íà íåñêîëüêî õîäîâ, à ïîòîì óïðàâëåíèå âíîâü âåðíåòñÿ ê âàì)</Russian>
 	</TEXT>
 	<TEXT>
@@ -606,7 +606,7 @@
 		<German>und kämpfen. Ihre Truppen in diesen Städten werden von einer feindseligen Bevölkerung umgeben sein und können starke Verluste erleiden oder sogar überlaufen. Die Verteidigung einiger dieser Städte kann unmittelbar zerfallen, andere können vielleicht einen Rest an Kontrolle bewahren.[NEWLINE][NEWLINE]Wenn Sie eine ehrliche und offene Wahl gewinnen, so werden die Proteste verschwinden und Ihre Macht wird nicht in Frage gestellt. Es könnte auch möglich sein, Ihnen den 'Wahlsieg' zu garantieren, wenn Sie meine Anspielung verstehen, aber es wäre sehr teuer und die Sache könnte auffliegen, mit sehr negativen Konsequenzen.</German>
 		<Italian>e combatteranno. Le tue truppe in queste città saranno circondate da una popolazione ostile e subiranno gravi perdite o potranno anche disertare. Le difese di alcune di queste città possono crollare subito, su altre potresti mantenere un certo livello di controllo.[NEWLINE][NEWLINE]Tuttavia, se vincerai libere ed oneste elezioni, i tumulti cesseranno ed il tuo potere non sarà contestato. È possibile anche "garantirsi la vittoria" - non so se mi spiego - ma ti costerà e l'imbroglio potrebbe essere scoperto, con conseguenze molto negative.</Italian>
 		<Spanish>y lucharán. En estas ciudades, tus tropas estarán cercadas por una población hostil y podrían sufrir graves pérdidas o incluso desaparecer. Las defensas de algunas de estas ciudades podrían caer inmediatamente, es posible que otras ciudades puedan mantener cierto grado de control.[NEWLINE][NEWLINE]Sin embargo, si ganas unas elecciones justas y abiertas, los motines desaparecerán y tu poder dejará de ser cuestionado. También podría ser posible garantizar tu 'victoria', si sabes a lo que me refiero, pero será costoso y el amaño podría ser descubierto con nefastas consecuencias.</Spanish>
-		<Polish>i będą walczyć. Twoje wojsko zostanie otoczone przez wrogo nastawioną ludność i może ponieść ciężkie straty. Obrona kilku z tych miast może ulec od razu, inne mogą zachować tylko pozory kontroli.[NEWLINE][NEWLINE]Jeżeli wygrasz uczciwe i wolne wybory, protestanci odejdą a twoja włądza będzie niekwestionowana. Możliwe jest także zagwarantowanie 'zwycięstwa', ale będzie to kosztowne i związane z ryzykiem wykrycia, które może mieć bardzo negatywne konsekwencje.</Polish>
+		<Polish>i b&#234;d&#185; walczy&#230;. Twoje wojsko zostanie otoczone przez wrogo nastawion&#185; ludno&#156;&#230; i mo&#191;e ponie&#156;&#230; ci&#234;&#191;kie straty. Obrona kilku z tych miast mo&#191;e ulec od razu, inne mog&#185; zachowa&#230; tylko pozory kontroli.[NEWLINE][NEWLINE]Je&#191;eli wygrasz uczciwe i wolne wybory, protestanci odejd&#185; a twoja w&#179;&#185;dza b&#234;dzie niekwestionowana. Mo&#191;liwe jest tak&#191;e zagwarantowanie 'zwyci&#234;stwa', ale b&#234;dzie to kosztowne i zwi&#185;zane z ryzykiem wykrycia, kt&#243;re mo&#191;e mie&#230; bardzo negatywne konsekwencje.</Polish>
 		<Russian>è íà÷íóò áîé. Ýòî ìîæåò ïðèâåñòè ê íàñòîÿùåé áîéíå.[NEWLINE][NEWLINE]Îäíàêî, åñëè âû âûèãðàåòå âûáîðû, òî ïðîòåñòû ïðåêðàòÿòñÿ, è âàøó âëàñòü áîëüøå íèêòî íå ïîñòàâèò ïîä ñîìíåíèå. Òàêæå ìîæíî ïîïðîáîâàòü êóïèòü ïîáåäó, íî áóäåò ïëîõî, åñëè ýòî ñòàíåò èçâåñòíûì îáùåñòâó.</Russian>
 	</TEXT>
 	<TEXT>
@@ -616,7 +616,7 @@
 		<German>Armeen versammeln sich auf dem Lande und bereiten sich auf einen Kampf vor, wenn Sie die Macht nicht übergeben an</German>
 		<Italian>Gli eserciti si stanno riunendo nelle campagne, preparandosi a combattere se non cedi il potere a</Italian>
 		<Spanish>Sus ejércitos están agrupándose en la campiña, preparándose para la batalla si no le cedes el poder a</Spanish>
-		<Polish>Armie zbierają się w okolicy i przygotowują do walki gdybyś nie chciał przekazać władzy</Polish>
+		<Polish>Armie zbieraj&#185; si&#234; w okolicy i przygotowuj&#185; do walki gdyby&#156; nie chcia&#179; przekaza&#230; w&#179;adzy</Polish>
 		<Russian>Àðìèè ñîáèðàþòñÿ â ñåëüñêîé ìåñòíîñòè, ãîòîâûå íà÷àòü áîé, åñëè âû ìèðíî íå îòðå÷åòåñü îò âëàñòè</Russian>
 	</TEXT>
 	<TEXT>
@@ -626,7 +626,7 @@
 		<German>verlangen einen Führungswechsels!</German>
 		<Italian>richiedendo un cambiamento di governo!</Italian>
 		<Spanish>demandando un cambio en el gobierno del estado.</Spanish>
-		<Polish>żądają zmiany w dowodzeniu!</Polish>
+		<Polish>&#191;&#185;daj&#185; zmiany w dowodzeniu!</Polish>
 		<Russian>òðåáóþò ñìåíû ïðàâèòåëüñòâà!</Russian>
 	</TEXT>
 	<TEXT>
@@ -636,7 +636,7 @@
 		<German>Demonstranten randalieren in den Straßen und verlangen, dass Sie sich einer Wahl stellen gegen</German>
 		<Italian>I dimostranti sono in rivolta nelle strade: richiedono una nuova consultazione elettorale, dove affronterai</Italian>
 		<Spanish>Los manifestantes están causando disturbios en las calles, exigiendo que afrontes unas elecciones contra</Spanish>
-		<Polish>Demonstranci strajkują na ulicach, żądając abyś zmierzył się w wyborach z</Polish>
+		<Polish>Demonstranci strajkuj&#185; na ulicach, &#191;&#185;daj&#185;c aby&#156; zmierzy&#179; si&#234; w wyborach z</Polish>
 		<Russian>Íà óëèöû âûøëè ïðîòåñòóþùèå, êîòîðûå òðåáóþò, ÷òîáû âû âñòðåòèëèñü íà âûáîðàõ ñ</Russian>
 	</TEXT>
 	<TEXT>
@@ -646,7 +646,7 @@
 		<German>zu kämpfen. Ihre Truppen in diesen Städten werden von einer feindseligen Bevölkerung umgeben sein und können starke Verluste erleiden oder sogar überlaufen. Die Verteidigung einiger dieser Städte kann unmittelbar zerfallen, andere können vielleicht einen Rest an Kontrolle bewahren. Wenn es Ihnen dann gelingen würde, das Land wieder zu vereinen, so wäre der Ruhm gewaltig. Aber wenn Sie versagen, so würden Sie lange dafür geschmäht, dass Ihre Sturköpfigkeit den Bürgerkrieg in Ihr Vaterland gebracht hat![NEWLINE][NEWLINE]Es liegt keine Ehre darin, sich dem Willen des Volkes zu beugen, aber es könnte all das erhalten, was Sie aufgebaut haben. Ihre Forderung zu erfüllen würde Ihre Herrschaft nur kurzzeitig beenden, da es berechtigten Grund gibt zu glauben, dass Ihre Erben in der Zukunft die Macht zurückgewinnen werden.</German>
 		<Italian>per combattere. Le tue truppe in queste città saranno circondate da una popolazione ostile e potranno subire gravi perdite o anche disertare. Le difese di alcune di queste città possono crollare subito, su altre potresti mantenere un certo livello di controllo. Se allora riuscirai a riunire il paese, il trionfo sarà completo. Ma se fallirai, sarai disprezzato a lungo poiché la tua ostinazione avrà portato la guerra civile nella tua patria![NEWLINE][NEWLINE]non c'è gloria nell'arrendersi alla volontà del popolo, ma manterresti ciò che hai costruito. Accettare la loro richiesta porterebbe soltanto ad una provvisoria interruzione del tuo governo, poiché c'è ragione di credere che i tuoi eredi riprenderanno il potere in futuro.</Italian>
 		<Spanish>para luchar. Tus tropas en estas ciudades estarán cercadas por una población hostil y podrían sufrir graves pérdidas o incluso desaparecer. Las defensas de algunas de estas ciudades podrían desmoronarse inmediatamente, es posible que otras ciudades puedan mantener un cierto grado de control. Si te las arreglaras para reunificar tu país, la gloria sería enorme. ¡Pero si fallas, serás vilipendiado, dado que tu obstinación habrá traido la guerra civil a tu tierra![NEWLINE][NEWLINE]No recibirás gloria ninguna por rendirte ante la voluntad de tu pueblo, pero ello preservará todo lo que has construido. Aceptar sus peticiones tan solo traerá un final temporal de tu mandato, pues todos los indicios apuntan a que tus herederos podrán retornar al poder en el futuro.</Spanish>
-		<Polish>do walki. Twoje wojsko w tych miastach zostanie otoczone przez wrogo nastawioną ludność i może ponieść ciężkie straty. Obrona kilku z tych miast może ulec od razu, inne mogą zachować tylko pozory kontroli. Jeżeli uda ci się po tym ponownie połączyć państwo, spłynie na ciebie ogromna chwała. Jednakże jeśli zawiedziesz, będziesz długo nękany przez wojnę domową w swojej ojczyźnie![NEWLINE][NEWLINE]Nie zdobędziesz chwały oddając wszystko woli ludzi, ale może to ocalić wszystko co do tej pory zbudowałeś. Spełnienie ich żądań przyniesie tylko tymczasowy koniec twoich rządów, gdyż są powody do przypuszczenia, że twój spadkobierca odzyska władzę w przyszłości.</Polish>
+		<Polish>do walki. Twoje wojsko w tych miastach zostanie otoczone przez wrogo nastawion&#185; ludno&#156;&#230; i mo&#191;e ponie&#156;&#230; ci&#234;&#191;kie straty. Obrona kilku z tych miast mo&#191;e ulec od razu, inne mog&#185; zachowa&#230; tylko pozory kontroli. Je&#191;eli uda ci si&#234; po tym ponownie po&#179;&#185;czy&#230; pa&#241;stwo, sp&#179;ynie na ciebie ogromna chwa&#179;a. Jednak&#191;e je&#156;li zawiedziesz, b&#234;dziesz d&#179;ugo n&#234;kany przez wojn&#234; domow&#185; w swojej ojczy&#159;nie![NEWLINE][NEWLINE]Nie zdob&#234;dziesz chwa&#179;y oddaj&#185;c wszystko woli ludzi, ale mo&#191;e to ocali&#230; wszystko co do tej pory zbudowa&#179;e&#156;. Spe&#179;nienie ich &#191;&#185;da&#241; przyniesie tylko tymczasowy koniec twoich rz&#185;d&#243;w, gdy&#191; s&#185; powody do przypuszczenia, &#191;e tw&#243;j spadkobierca odzyska w&#179;adz&#234; w przysz&#179;o&#156;ci.</Polish>
 		<Russian>íà áîé. Âàøè ñîëäàòû â ýòèõ ãîðîäàõ áóäóò àòàêîâàíû, è, âîçìîæíî, óáèòû. Åñëè âàì óäàñòñÿ âíîâü îáúåäèíèòü ñòðàíó, âàøà ñëàâà áóäåò îãðîìíîé. Íî åñëè ýòî âàì íå óäàñòñÿ, âàñ çàïîìíÿò, êàê òèðàíà, íà÷àâøåãî ãðàæäàíñêóþ âîéíó![NEWLINE][NEWLINE]Íåò íè÷åãî ïðèÿòíîãî â ïîä÷èíåíèè âîëå ñâîåãî ñîáñòâåííîãî íàðîäà, íî òàê âû ñîõðàíèòå âñå, ÷òî ñîçäàëè. Óäîâëåòâîðåíèå èõ òðåáîâàíèé ëèøèò âàñ âëàñòè ëèøü âðåìåííî, ò.ê. âñåãäà åñòü øàíñ, ÷òî âàøè ïîòîìêè ïîëó÷àò åå â áóäóùåì.</Russian>
 	</TEXT>
 	<TEXT>
@@ -656,7 +656,7 @@
 		<German>Wenn Sie ihre Forderung ablehnen, so erheben sich diese Städte als</German>
 		<Italian>Se non accetti la loro richiesta, queste città si solleveranno come</Italian>
 		<Spanish>Si deniegas sus peticiones, estas ciudades se alzarán como</Spanish>
-		<Polish>Jeżeli odmówisz spełnienia ich żądań, te miasta powstaną jako</Polish>
+		<Polish>Je&#191;eli odm&#243;wisz spe&#179;nienia ich &#191;&#185;da&#241;, te miasta powstan&#185; jako</Polish>
 		<Russian>Åñëè âû îòêëîíèòå èõ òðåáîâàíèÿ, òî ãîðîäà âîññòàíóò êàê</Russian>
 	</TEXT>
 	<TEXT>
@@ -666,7 +666,7 @@
 		<German>Dies ist wirklich eine schreckliche Situation. Wie alle guten Despote sind Sie selbstverständlich die größte Hoffnung für Ihr Volk, aber irgendwie erkennen sie einfach das Licht nicht. Jetzt müssen Sie sich entscheiden, welches Vermächtnis Sie hinterlassen.[NEWLINE][NEWLINE]Sie können der Herausforderung mit Gewalt begegnen, und Ihre Städte würden sich erheben als</German>
 		<Italian>Questa è veramente una situazione terribile. Come tutti i despoti illuminati, sei certamente la miglior speranza per la tua gente, ma per qualche motivo essi non vedono la luce. Ora devi decidere che eredità lascerai.[NEWLINE][NEWLINE]Puoi affrontare la sfida con la forza e le tue città si solleveranno come</Italian>
 		<Spanish>Esta es, sinceramente, una situación terrible. Como todos los buenos déspotas, eres por descontado la mejor esperanza para tu gente, pero algunos por su simpleza no son capaces de ver la luz. Ahora debes decidir qué legado dejarás.[NEWLINE][NEWLINE]Puedes plantarle cara al desafío por la fuerza, y tus ciudades se alzarán como</Spanish>
-		<Polish>To jest naprawdę trudna sytuacja. Tak jak wszyscy wielcy despoci, jesteś największą nadzieją dla swoich ludzi, ale kilku podważa twój autorytet. Musisz zadecydować, jakie dziedzictwo chcesz po sobie zostawić.[NEWLINE][NEWLINE]Może będziesz musiał stawić czoło wrogim siłom oraz twoim miastom, które powstaną jako</Polish>
+		<Polish>To jest naprawd&#234; trudna sytuacja. Tak jak wszyscy wielcy despoci, jeste&#156; najwi&#234;ksz&#185; nadziej&#185; dla swoich ludzi, ale kilku podwa&#191;a tw&#243;j autorytet. Musisz zadecydowa&#230;, jakie dziedzictwo chcesz po sobie zostawi&#230;.[NEWLINE][NEWLINE]Mo&#191;e b&#234;dziesz musia&#179; stawi&#230; czo&#179;o wrogim si&#179;om oraz twoim miastom, kt&#243;re powstan&#185; jako</Polish>
 		<Russian>Ýòî äåéñòâèòåëüíî óæàñíàÿ ñèòóàöèÿ. Êàê âñå íàñòîÿùèå äåñïîòû - âû ëó÷ ñâåòà äëÿ ñâîåãî íàðîäà. Ïðàâäà, îíè ïî÷åìó-òî ýòîãî íå çàìå÷àþò. Òåïåðü âû ðåøàåòå, êàêîå îò âàñ îñòàíåòñÿ íàñëåäèå[NEWLINE][NEWLINE]Âû ìîæåòå ïðèìåíèòü ñèëó, è ýòè ãîðîäà âîññòàíóò êàê</Russian>
 	</TEXT>
 	<TEXT>
@@ -676,7 +676,7 @@
 		<German>Junge Menschen äußern sich frei, alle Macht dem Volk![NEWLINE][NEWLINE]Die Halbstarken und die Journalisten sind noch nicht gewalttätig, also haben Sie Zeit, das Problem friedlich zu lösen. Ihre Forderungen zu erfüllen ist jedoch der schnellste und einfachste Weg diese Städte in der absehbaren Zukunft in Ihrem Imperium zu behalten. Sollten Sie sich entscheiden, Ihr gegenwärtiges Verhalten beibehalten, so könnten Sie immer noch genügend Zeit haben, andere Aspekte dieser Städte so zu verbessern, dass sie sich über nichts beschweren können, selbst wenn sie dazu in der Lage wären. Sie können die Aufrürer auch bestechen und sie werden ihre Sache fallen lassen und sagen, was immer Sie von ihnen wollen.</German>
 		<Italian>Giovani che esprimono il proprio pensiero, potere alla gente![NEWLINE][NEWLINE]I contestatori non sono ancora passati alla violenza e sei ancora in tempo per giungere ad una conclusione pacifica. Accettare la loro richiesta è la scelta più rapida e più semplice per mantenere queste città nel tuo impero, per il prossimo futuro. Tuttavia, anche se decidi di proseguire l'attuale politica, sei ancora in tempo per migliorare altri aspetti di queste città in modo che non protestino ancora, anche se ne avrebbero motivo. Puoi anche scegliere di corrompere gli agitatori, essi cominceranno ad abbandonare la loro causa e diranno qualunque cosa tu vorrai.</Italian>
 		<Spanish>¡Los jóvenes expresan sus ideales: el poder para el pueblo![NEWLINE][NEWLINE]Los agitadores y periodistas aún no han dado muestras de violencia, todavía hay tiempo para poder concluir la situación de forma pacífica. Aceptar sus demandas es de lejos el camino más rápido y fácil para mantener estas ciudades en tu imperio en un futuro próximo. No obstante, si decides mantener tus políticas actuales, puede que aún tengas tiempo de mejorar otros aspectos de estas ciudades, de modo que no tengan motivos para quejarse acerca de si se pueden quejar. También puedes sobornar a los agitadores, y dejarán a un lado su causa y dirán lo que tú quieras que digan.</Spanish>
-		<Polish>Młodzi ludzie pragną wolności słowa![NEWLINE][NEWLINE]Pisarze i dziennikarze nie uciekli się jeszcze do przemocy i ciągle jest czas na pokojowe rozwiązania tej sytuacji. Spełnienie ich żądań jest najszybszą i najłatwiejszą drogą do pokojowego utrzymania ich w imperium w niedalekiej przyszłości. Jednakże, jeśli zadecydujesz zachować swoje obecne praktyki, może jeszcze będzie czas na poprawę innych aspektów w tych miastach, dzięki czemu nie będą dłużej narzekać nawet jeśli będą mieli do tego powody. Możesz również przekupić agitatorów, co spowoduje, że wycofają swoje groźby i będą mówić tylko to, co będziesz chciał usłyszeć.</Polish>
+		<Polish>M&#179;odzi ludzie pragn&#185; wolno&#156;ci s&#179;owa![NEWLINE][NEWLINE]Pisarze i dziennikarze nie uciekli si&#234; jeszcze do przemocy i ci&#185;gle jest czas na pokojowe rozwi&#185;zania tej sytuacji. Spe&#179;nienie ich &#191;&#185;da&#241; jest najszybsz&#185; i naj&#179;atwiejsz&#185; drog&#185; do pokojowego utrzymania ich w imperium w niedalekiej przysz&#179;o&#156;ci. Jednak&#191;e, je&#156;li zadecydujesz zachowa&#230; swoje obecne praktyki, mo&#191;e jeszcze b&#234;dzie czas na popraw&#234; innych aspekt&#243;w w tych miastach, dzi&#234;ki czemu nie b&#234;d&#185; d&#179;u&#191;ej narzeka&#230; nawet je&#156;li b&#234;d&#185; mieli do tego powody. Mo&#191;esz r&#243;wnie&#191; przekupi&#230; agitator&#243;w, co spowoduje, &#191;e wycofaj&#185; swoje gro&#159;by i b&#234;d&#185; m&#243;wi&#230; tylko to, co b&#234;dziesz chcia&#179; us&#179;ysze&#230;.</Polish>
 		<Russian>Âàøè ëþäè âûñêàçûâàþò ñâîè èäåè, âëàñòü íàðîäó![NEWLINE][NEWLINE]Áèòíèêè è æóðíàëèñòû åùå íå ïðèâåëè èíöèäåíò ê íàñèëèþ, ïîýòîìó åñòü âðåìÿ äëÿ ìèðíîãî ðåøåíèÿ ñèòóàöèè. Ïðîùå âñåãî áóäåò óäîâëåòâîðèòü èõ òðåáîâàíèÿ, õîòÿ âñåãäà ìîæíî óëó÷øèòü äðóãèå àñïåêòû èõ æèçíè èëè ïðîñòî ïîäêóïèòü èõ ëèäåðîâ.</Russian>
 	</TEXT>
 	<TEXT>
@@ -686,7 +686,7 @@
 		<German>fordern die Meinungsfreiheit:</German>
 		<Italian>stanno chiedendo la libertà di esprimere il proprio pensiero:</Italian>
 		<Spanish>están demandando libertad para expresar sus opiniones:</Spanish>
-		<Polish>domagają się wolności słowa:</Polish>
+		<Polish>domagaj&#185; si&#234; wolno&#156;ci s&#179;owa:</Polish>
 		<Russian>òðåáóþò ñâîáîäû â âûñêàçûâàíèè ñâîèõ ìûñëåé:</Russian>
 	</TEXT>
 	<TEXT>
@@ -696,7 +696,7 @@
 		<German>Rufe von 'Keine Steuern ohne'</German>
 		<Italian>Grida di 'No alle tasse senza rappresentanza'</Italian>
 		<Spanish>Gritos de 'No hay tributación sin'</Spanish>
-		<Polish>Krzyki o 'Braku podatków bez'</Polish>
+		<Polish>Krzyki o 'Braku podatk&#243;w bez'</Polish>
 		<Russian>Êðèêè 'Íåò íàëîãàì áåç</Russian>
 	</TEXT>
 	<TEXT>
@@ -706,7 +706,7 @@
 		<German>erfüllen die Luft während die Demonstranten marschieren!</German>
 		<Italian>riempiono l'aria mentre i dimostranti marciano!</Italian>
 		<Spanish>inundan la zona al tiempo que los manifestantes marchan!</Spanish>
-		<Polish>wypełniają powietrze podczas marszu protestantów!</Polish>
+		<Polish>wype&#179;niaj&#185; powietrze podczas marszu protestant&#243;w!</Polish>
 		<Russian>çàïîëíèëè âñå óëèöû!</Russian>
 	</TEXT>
 	<TEXT>
@@ -716,7 +716,7 @@
 		<German>Wenn Sie Ihr gegenwärtiges Verhalten beibehalten, so könnten Sie immer noch genügend Zeit haben, andere Aspekte dieser Städte so zu verbessern, dass sie ihre Machtlosigkeit übersehen werden.</German>
 		<Italian>Tuttavia, anche se decidi di proseguire l'attuale politica, sei ancora in tempo per migliorare altri aspetti di queste città in modo da fargli sentire meno l'esclusione dal potere.</Italian>
 		<Spanish>No obstante, si decides mantener tus prácticas actuales, aún tienes tiempo de mejorar la situación local de estas ciudades de modo que pasen por alto su exclusión del poder.</Spanish>
-		<Polish>Jednakże, jeśli zadecydujesz zachować swoje obecne praktyki, może jeszcze będzie czas na poprawę innych aspektów w tych miastach, dzięki czemu zignorują ich odsunięcie od władzy.</Polish>
+		<Polish>Jednak&#191;e, je&#156;li zadecydujesz zachowa&#230; swoje obecne praktyki, mo&#191;e jeszcze b&#234;dzie czas na popraw&#234; innych aspekt&#243;w w tych miastach, dzi&#234;ki czemu zignoruj&#185; ich odsuni&#234;cie od w&#179;adzy.</Polish>
 		<Russian>Îäíàêî, âû ìîæåòå óëó÷øèòü äðóãèå àñïåêòû èõ æèçíè, ÷òîáû îíè ïåðåñòàëè òðåáîâàòü ñåáå ìåñòà â ñèñòåìå âëàñòè.</Russian>
 	</TEXT>
 	<TEXT>
@@ -726,7 +726,7 @@
 		<German>fordern Mitsprache in Ihrer Regierung.</German>
 		<Italian>richiedendo di avere voce nel tuo governo.</Italian>
 		<Spanish>solicitando representación en tu gobierno.</Spanish>
-		<Polish>domagają się głosu w twoim rządzie.</Polish>
+		<Polish>domagaj&#185; si&#234; g&#179;osu w twoim rz&#185;dzie.</Polish>
 		<Russian>òðåáóþò ìåñòà â âàøåì ïðàâèòåëüñòâå.</Russian>
 	</TEXT>
 	<TEXT>
@@ -736,7 +736,7 @@
 		<German>Einige neue, teure Statuen könnten sie daran erinnern, wie bedeutend Sie sind.</German>
 		<Italian>Alcuni nuovi, costosi monumenti potranno ricordare loro la tua grandezza.</Italian>
 		<Spanish>Algunas nuevas (y caras) estatuas podrían hacerles recordar lo grandioso que eres.</Spanish>
-		<Polish>Niektóre nowe, drogie posągi będą przypominać im, jakim jesteś wielkim człowiekiem.</Polish>
+		<Polish>Niekt&#243;re nowe, drogie pos&#185;gi b&#234;d&#185; przypomina&#230; im, jakim jeste&#156; wielkim cz&#179;owiekiem.</Polish>
 		<Russian>Íåñêîëüêî íîâûõ, äîðîãèõ ïàìÿòíèêîâ ìîãóò íàïîìíèòü èì, êàêîé âû õîðîøèé ÷åëîâåê.</Russian>
 	</TEXT>
 	<TEXT>
@@ -746,7 +746,7 @@
 		<German>Männer und Frauen protestieren auf den Straßen und verlangen</German>
 		<Italian>Sia gli uomini che le donne stanno protestando nelle strade, richiedendo</Italian>
 		<Spanish>¡Hombres y mujeres protestan juntos en las calles demandando</Spanish>
-		<Polish>Kobiety i mężczyźni protestują na ulicach domagając się</Polish>
+		<Polish>Kobiety i m&#234;&#191;czy&#159;ni protestuj&#185; na ulicach domagaj&#185;c si&#234;</Polish>
 		<Russian>È ìóæ÷èíû è æåíùèíû ïðîòåñòóþò íà óëèöàõ, òðåáóÿ</Russian>
 	</TEXT>
 	<TEXT>
@@ -776,7 +776,7 @@
 		<German>Die Bürger von</German>
 		<Italian>I cittadini di</Italian>
 		<Spanish>Los ciudadanos de</Spanish>
-		<Polish>Mieszkańcy</Polish>
+		<Polish>Mieszka&#241;cy</Polish>
 		<Russian>Æèòåëè</Russian>
 	</TEXT>
 	<TEXT>
@@ -786,7 +786,7 @@
 		<German>Die Stadt</German>
 		<Italian>La città di</Italian>
 		<Spanish>La ciudad de</Spanish>
-		<Polish>mieście</Polish>
+		<Polish>mie&#156;cie</Polish>
 		<Russian>ãîðîä</Russian>
 	</TEXT>
 	<TEXT>
@@ -796,7 +796,7 @@
 		<German>Rufe von 'Keine Steuern ohne</German>
 		<Italian>Grida di 'No alle tasse senza rappresentanza'</Italian>
 		<Spanish>Gritos de 'No hay tributación sin</Spanish>
-		<Polish>Krzyki o Braku podatków bez</Polish>
+		<Polish>Krzyki o Braku podatk&#243;w bez</Polish>
 		<Russian>Êðèêè 'Íåò íàëîãîîáëàæåíèþ áåç</Russian>
 	</TEXT>
 	<TEXT>
@@ -806,7 +806,7 @@
 		<German>erfüllen die Luft während die Kolonisten marschieren!</German>
 		<Italian>riempiono l'aria quando i coloni sono in marcia!</Italian>
 		<Spanish>inundan la zona mientras los colonos marchan!</Spanish>
-		<Polish>wypełniają powietrze podczas marszu kolonistów!</Polish>
+		<Polish>wype&#179;niaj&#185; powietrze podczas marszu kolonist&#243;w!</Polish>
 		<Russian>çàïîëîíèëè âîçäóõ, âåçäå ãäå ïðîøëè ìèòèíãóþùèå êîëîíèñòû!</Russian>
 	</TEXT>
 	<TEXT>
@@ -816,7 +816,7 @@
 		<German>Wenn Sie Ihr gegenwärtiges Verhalten beibehalten, so könnten Sie immer noch genügend Zeit haben, andere Aspekte dieser Städte so zu verbessern, dass sie ihre Machtlosigkeit übersehen werden.</German>
 		<Italian>Tuttavia, anche se decidi di proseguire l'attuale politica, sei ancora in tempo per migliorare altri aspetti di queste città in modo da fargli sentire meno l'esclusione dal potere.</Italian>
 		<Spanish>No obstante, si decides mantener tu sistema actual, aún tienes tiempo de mejorar la situación local de estas ciudades de modo que pasen por alto su exclusión del poder.</Spanish>
-		<Polish>Jednakże, jeśli zdecydujesz się kontynuować swoje obecne praktyki, może jeszcze będzie czas na poprawę innych aspektów w tych miastach, dzięki czemu zignorują odsunięcie ich od władzy.</Polish>
+		<Polish>Jednak&#191;e, je&#156;li zdecydujesz si&#234; kontynuowa&#230; swoje obecne praktyki, mo&#191;e jeszcze b&#234;dzie czas na popraw&#234; innych aspekt&#243;w w tych miastach, dzi&#234;ki czemu zignoruj&#185; odsuni&#234;cie ich od w&#179;adzy.</Polish>
 		<Russian>Îäíàêî, âû ìîæåòå óëó÷øèòü äðóãèå àñïåêòû èõ æèçíè, ÷òîáû îíè çàáûëè î ñâîèõ ïîëèòè÷åñêèõ òðåáîâàíèÿõ.</Russian>
 	</TEXT>
 	<TEXT>
@@ -826,7 +826,7 @@
 		<German>Die Kolonisten protestieren in den Straßen und verlangen</German>
 		<Italian>I coloni stanno protestando nelle strade chiedendo</Italian>
 		<Spanish>Los colonos están protestando en las calles demandando</Spanish>
-		<Polish>Koloniści protestują na ulicach domagając się</Polish>
+		<Polish>Koloni&#156;ci protestuj&#185; na ulicach domagaj&#185;c si&#234;</Polish>
 		<Russian>Êîëîíèñòû âûøëè íà óëèöû, òðåáóÿ</Russian>
 	</TEXT>
 	<TEXT>
@@ -836,7 +836,7 @@
 		<German>fordern Mitsprache in Ihrer Regierung. Als Kolonien fühlen sie sich von Ihrer Regierung nicht gerecht behandelt.</German>
 		<Italian>richiedendo di avere voce nel tuo governo. Come colonie, pensano di non essere trattate equamente dal tuo governo.</Italian>
 		<Spanish>solicitando representación en tu gobierno. Como colonias, sienten que tu gobierno no las está tratando equitativamente.</Spanish>
-		<Polish>domagają się głosu w twoim rządzie. Jako kolonie, uważają, że twój rząd nie traktuje ich sprawiedliwie.</Polish>
+		<Polish>domagaj&#185; si&#234; g&#179;osu w twoim rz&#185;dzie. Jako kolonie, uwa&#191;aj&#185;, &#191;e tw&#243;j rz&#185;d nie traktuje ich sprawiedliwie.</Polish>
 		<Russian>òðåáóþò ñëîâà â âàøåì ïðàâèòåëüñòâå. Êàê êîëîíèè, îíè ÷óâñòâóþò, ÷òî ñ íèìè îáðàùàþòñÿ íåñïðàâåäëèâî.</Russian>
 	</TEXT>
 	<TEXT>
@@ -846,7 +846,7 @@
 		<German>Diplomatie ist mit der kleinen Civ %s1_CivName nicht möglich</German>
 		<Italian>Non sono possibili relazioni diplomatiche con la civiltà minore: %s1_CivName</Italian>
 		<Spanish>No es posible la diplomacia con la civilización menor: %s1_CivName</Spanish>
-		<Polish>Dyplomacja nie jest możliwa z podrzędną cywilizacją %s1_CivName</Polish>
+		<Polish>Dyplomacja nie jest mo&#191;liwa z podrz&#234;dn&#185; cywilizacj&#185; %s1_CivName</Polish>
 		<Russian>Íåâîçìîæíû äèïëîìàòè÷åñêèå êîíòàêòû ñ ìàëîé íàöèåé: %s1_CivName</Russian>
 	</TEXT>
 	<TEXT>
@@ -856,7 +856,7 @@
 		<German>Demonstrationen und Aufstände sind in den Straßen ausgebrochen![NEWLINE][NEWLINE]Ihre Forderungen zu verweigern wird die Leute verärgern und vielleicht ihren revolutionären Geist beflügeln. Wenn Sie ihre Forderungen ablehnen, so werden sie noch nicht zu den Waffen greifen. Sie sollten jedoch Maßnahmen ergreifen, um ihre Zufriedenheit zu erhöhen oder die Bindung an Ihre Kultur und Religion zu verbessern. Beim nächsten mal könnte es einen Aufstand geben!</German>
 		<Italian>Sono scoppiati dimostrazioni e tumulti![NEWLINE][NEWLINE]Rifiutare le loro richieste farà aumentare la rabbia e rinforzare lo spirito rivoluzionario. Anche se ora non prenderanno le armi, se non accetti le loro richieste dovresti comunque intervenire per aumentare la loro felicità e i legami con la tua cultura e la tua religione. Se ci sarà una prossima volta, potresti affrontare una vera rivolta!</Italian>
 		<Spanish>¡Las manifestaciones y los motines dominan las calles![NEWLINE][NEWLINE]Denegar sus peticiones enfadará a los ciudadanos y quizá encienda el espíritu revolucionario. Aunque por ahora no se alzarán en armas, si rechazas sus peticiones deberías tomar medidas para aumentar su felicidad o acercarlos a tu cultura y religión. ¡Si esto vuelve a ocurrir, deberás enfrentarte a una sublevación!</Spanish>
-		<Polish>Demonstranci wyszli na ulice![NEWLINE][NEWLINE]Odmowa spełnienia ich żądań mocno rozgniewa tłum. Po odmowie powinieneś podjąć wszelkie działania zwiększające ich zadowolenie lub wpływ kultury i religii. Jeżeli zdarzy się to jeszcze raz, będziesz zmuszony stawić czoła powstaniu!</Polish>
+		<Polish>Demonstranci wyszli na ulice![NEWLINE][NEWLINE]Odmowa spe&#179;nienia ich &#191;&#185;da&#241; mocno rozgniewa t&#179;um. Po odmowie powiniene&#156; podj&#185;&#230; wszelkie dzia&#179;ania zwi&#234;kszaj&#185;ce ich zadowolenie lub wp&#179;yw kultury i religii. Je&#191;eli zdarzy si&#234; to jeszcze raz, b&#234;dziesz zmuszony stawi&#230; czo&#179;a powstaniu!</Polish>
 		<Russian>Äåìîíñòðàöèè ãðåìÿò íà óëèöàõ![NEWLINE][NEWLINE]Îòêëîíèâ òðåáîâàíèÿ ïðîòåñòóþùèõ, ìû ëèøü îçëîáèì ëþäåé è ïîäñòåãíåì äóõ ðåâîëþöèè. Õîòÿ îíè è íå âîçüìóòñÿ çà îðóæèå, ëó÷øå áóäåò ïîçàáîòèòüñÿ îá èõ ñ÷àñòüå, ò.ê. â ñëåäóþùèé ðàç íåëüçÿ áóäåò äàòü òàêèõ ãàðàíòèé.</Russian>
 	</TEXT>
 	<TEXT>
@@ -866,7 +866,7 @@
 		<German>Lautstarke Forderung sich anzuschließen an</German>
 		<Italian>chiedono a gran voce di unirsi a</Italian>
 		<Spanish>clamando por unirse al</Spanish>
-		<Polish>domagają się przyłączenia się do</Polish>
+		<Polish>domagaj&#185; si&#234; przy&#179;&#185;czenia si&#234; do</Polish>
 		<Russian>ãðîìêî òðåáóþò ñâîåãî ïðèñîåäèíåíèÿ</Russian>
 	</TEXT>
 	<TEXT>
@@ -876,7 +876,7 @@
 		<German>sehnen sich danach neu zu formen</German>
 		<Italian>desiderano riformare</Italian>
 		<Spanish>anhelando reformas</Spanish>
-		<Polish>pragną utworzyć</Polish>
+		<Polish>pragn&#185; utworzy&#230;</Polish>
 		<Russian>òîñêóþò ïî ðåôîðìàì</Russian>
 	</TEXT>
 	<TEXT>
@@ -886,7 +886,7 @@
 		<German>Die Bürger haben Waffen angehäuft und auf dem Land Manöver ausgeführt![NEWLINE][NEWLINE]Wenn Sie ihren Wunsch sich abzuspalten ablehnen, müssen Sie sich den Revolutionären auf dem Schlachtfeld gegenüberstellen.</German>
 		<Italian>I cittadini stanno prendendo le armi e iniziando le esercitazioni![NEWLINE][NEWLINE]Se non accetterai la loro richiesta di indipendenza, dovrai affrontare i rivoluzionari sul campo di battaglia.</Italian>
 		<Spanish>¡Los ciudadanos han estado fabricando armas y adiestrándose en el campo![NEWLINE][NEWLINE]Si rechazas sus peticiones para abandonar, tendrás que verte las caras con los revolucionarios en el campo de batalla.</Spanish>
-		<Polish>Mieszkańcy zaczęli rozdawać broń![NEWLINE][NEWLINE]Jeśli odmówisz im wolności, będziesz musiał stawić czoło rewolucjonistom na polu bitwy.</Polish>
+		<Polish>Mieszka&#241;cy zacz&#234;li rozdawa&#230; bro&#241;![NEWLINE][NEWLINE]Je&#156;li odm&#243;wisz im wolno&#156;ci, b&#234;dziesz musia&#179; stawi&#230; czo&#179;o rewolucjonistom na polu bitwy.</Polish>
 		<Russian>Æèòåëè ìàññîâî çàïàñàþòñÿ îðóæèåì è ñîáèðàþòñÿ â ñåëüñêîé ìåñòíîñòè![NEWLINE][NEWLINE]Åñëè âû íå ðàçðåøèòå èì ìèðíî óéòè, âàì ïðèäåòñÿ âñòðåòèòüñÿ ñ ïîâòñàíöàìè íà ïîëå áîÿ.</Russian>
 	</TEXT>
 	<TEXT>
@@ -896,7 +896,7 @@
 		<German>kann Ihre Aktivitäten als Kriegshandlung deuten und dementsprechend reagieren! Auch wenn sie sich nicht revanchieren werden, so leiden doch Ihre Beziehungen zu ihnen, und die Städte werden sich erheben</German>
 		<Italian>può interpretare le tue azioni come atto di guerra e rispondere di conseguenza! Anche se non reagiranno, i rapporti ne soffriranno comunque e le città si solleveranno</Italian>
 		<Spanish>puede interpretár tus acciones como un acto de guerra y responder en consecuencia. No obstante, aunque no tomen represalias, tus relaciones con ellos sufrirán, y las ciudades se sublevarán.</Spanish>
-		<Polish>może zinterpretować twoje posunięcia jako akt wojny i odpowiedzieć na nie! Nawet jeżeli nie będzie odwetu, twoje relacje z nim będą dalej się pogarszać, a miasta powstaną</Polish>
+		<Polish>mo&#191;e zinterpretowa&#230; twoje posuni&#234;cia jako akt wojny i odpowiedzie&#230; na nie! Nawet je&#191;eli nie b&#234;dzie odwetu, twoje relacje z nim b&#234;d&#185; dalej si&#234; pogarsza&#230;, a miasta powstan&#185;</Polish>
 		<Russian>ìîãóò èíòåðïðåòèðîâàòü âàøè äåéñòâèÿ êàê âðàæäåáíûé àêò è îòðåàãèðîâàòü ñîîòâåòñòâåííî. Äàæå åñëè îíè ýòîãî íå ñäåëàþò, îòíîøåíèÿ âñå ðàâíî ïîñòðàäàþò, è ãîðîäà ìîãóò âîññòàòü.</Russian>
 	</TEXT>
 	<TEXT>
@@ -906,7 +906,7 @@
 		<German>in lose organisierten Rebellenbanden.</German>
 		<Italian>in bande ribelli poco organizzate.</Italian>
 		<Spanish>en bandas de rebeldes desorganizadas.</Spanish>
-		<Polish>jako luźno zorganizowane grupy rebeliantów.</Polish>
+		<Polish>jako lu&#159;no zorganizowane grupy rebeliant&#243;w.</Polish>
 		<Russian>â ïëîõî îãðàíèçîâàííûå áàíäû ìÿòåæíèêîâ.</Russian>
 	</TEXT>
 	<TEXT>
@@ -916,7 +916,7 @@
 		<German>Die Städte werden sich erheben und schließen sich Ihrem Feind an, den</German>
 		<Italian>Le città si solleveranno e si uniranno al tuo nemico, </Italian>
 		<Spanish>Las ciudades se alzarán y se unirán a tu enemigo, el</Spanish>
-		<Polish>Miasta powstaną i dołączą do</Polish>
+		<Polish>Miasta powstan&#185; i do&#179;&#185;cz&#185; do</Polish>
 		<Russian>Ãîðîäà âîññòàíóò è ïðèñîåäèíÿòñÿ ê âàøåìó âðàãó:</Russian>
 	</TEXT>
 	<TEXT>
@@ -926,7 +926,7 @@
 		<German>und bekämpfen Sie als</German>
 		<Italian>e combatterti come</Italian>
 		<Spanish>y lucharán contra tí como</Spanish>
-		<Polish>i będą walczyć przeciwko tobie jako</Polish>
+		<Polish>i b&#234;d&#185; walczy&#230; przeciwko tobie jako</Polish>
 		<Russian>è ñðàæàòüñÿ ñ âàìè êàê</Russian>
 	</TEXT>
 	<TEXT>
@@ -936,7 +936,7 @@
 		<German>Ihre Truppen werden von einer feindseligen Bevölkerung umgeben sein und können starke Verluste erleiden oder sogar überlaufen. Die Verteidigung einiger dieser Städte kann unmittelbar zerfallen, andere können vielleicht einen Rest an Kontrolle bewahren. Krieg mit Ihren eigenen Städten ist hässlich, aber vielleicht ist er dennoch besser, als Ihre Städte ohne Kampf ziehen zu lassen! Wägen Sie Ihre Optionen sorgfältig ab.</German>
 		<Italian>Le tue truppe saranno circondate da una popolazione ostile e potranno subire gravi perdite o anche disertare. Le difese di alcune di queste città possono cadere subito, in altre potrai mantenere un certo grado di controllo. Anche se la guerra contro le tue stesse città sarà terribile, potrebbe essere meglio che permettere loro di separarsi senza lottare! Valuta con attenzione le tue scelte.</Italian>
 		<Spanish>Tus tropas estarán cercadas por una población hostil y pueden sufrir graves pérdidas o incluso desaparecer. Las defensas de algunas de estas ciudades podrían desmoronarse inmediatamente, es posible que otras ciudades puedan mantener un cierto grado de control. ¡Mientras tanto, la guerra contra tus propias ciudades se irá volviendo más y más violenta, no obstante será mejor que permitir abandonar a las ciudades en tu poder sin luchar! Considera cuidadosamente tus opciones.</Spanish>
-		<Polish>Twoje wojsko zostanie otoczone przez wrogo nastawioną ludność i może ponieść ciężkie straty. Obrona kilku z tych miast może ulec od razu, inne mogą zachować tylko pozory kontroli. Wojna domowa przeciwko własnym miastom może wydawać się okropnością, ale może jest to dużo lepsze niż utrata kontroli nad nimi bez walki! Ostrożnie oceń własne możliwości.</Polish>
+		<Polish>Twoje wojsko zostanie otoczone przez wrogo nastawion&#185; ludno&#156;&#230; i mo&#191;e ponie&#156;&#230; ci&#234;&#191;kie straty. Obrona kilku z tych miast mo&#191;e ulec od razu, inne mog&#185; zachowa&#230; tylko pozory kontroli. Wojna domowa przeciwko w&#179;asnym miastom mo&#191;e wydawa&#230; si&#234; okropno&#156;ci&#185;, ale mo&#191;e jest to du&#191;o lepsze ni&#191; utrata kontroli nad nimi bez walki! Ostro&#191;nie oce&#241; w&#179;asne mo&#191;liwo&#156;ci.</Polish>
 		<Russian>Âàøè âîéñêà áóäóò îêðóæåííû âðàæåñêèìè ôîðìàðèðîâàíèÿìè è ìîãóò ïîíåñòè ñåðüåçíûå ïîòåðè èëè äàæå îòñòóïèòü. Çàùèòíèêè íåêîòîðûõ ãîðîäîâ ïàäóò íåçàìåäëèòåëüíî, îñòàëüíûå ñìîãóò ïðîäåðæàòüñÿ åùå êàêîå-òî âðåìÿ. Õîòÿ âîéíà ñ ñîáñòâåííûì íàðîäîì ìîæåò âûãëÿäåòü îòâðàòèòåëüíîé, âîçìîæíî, ýòî ëó÷øå ÷åì ñäàâàòüñÿ áåç áîÿ! Â ëþáîì ñëó÷àå, áóäüòå îñòîðîæíû.</Russian>
 	</TEXT>
 	<TEXT>
@@ -946,7 +946,7 @@
 		<German>fordern den Anschluss an</German>
 		<Italian>vogliono unirsi a</Italian>
 		<Spanish>reclamando unirse al</Spanish>
-		<Polish>żądają przyłączenia się do</Polish>
+		<Polish>&#191;&#185;daj&#185; przy&#179;&#185;czenia si&#234; do</Polish>
 		<Russian>òðåáóþò ïðèñîåäèíèòüñÿ ê</Russian>
 	</TEXT>
 	<TEXT>
@@ -956,7 +956,7 @@
 		<German>Sie können sich auch entscheiden, den Krieg zu erklären und beseitigen damit den ärgerlichen Einfluss von</German>
 		<Italian>Puoi anche decidere di dichiarare guerra ed eliminare la fastidiosa influenza di</Italian>
 		<Spanish>También puedes decidir declarar la guerra y eliminar la problemática influencia de</Spanish>
-		<Polish>Możesz również zdecydować się na wypowiedzenie wojny i wyeliminowanie obcego wpływu</Polish>
+		<Polish>Mo&#191;esz r&#243;wnie&#191; zdecydowa&#230; si&#234; na wypowiedzenie wojny i wyeliminowanie obcego wp&#179;ywu</Polish>
 		<Russian>Âû òàêæå ìîæåòå îáúÿâèòü âîéíó, ÷òîáû èçáåæàòü íåïðèÿòíîãî âëèÿíèÿ</Russian>
 	</TEXT>
 	<TEXT>
@@ -966,7 +966,7 @@
 		<German>Wenn Sie sie nicht lassen werden sie sich gegen Sie erheben als</German>
 		<Italian>Se non li lasci andare, si solleveranno contro di te, come</Italian>
 		<Spanish>Si no les dejas, se alzarán contra tí como</Spanish>
-		<Polish>Jeżeli im na to nie pozwolisz, powstaną przeciwko tobie jako</Polish>
+		<Polish>Je&#191;eli im na to nie pozwolisz, powstan&#185; przeciwko tobie jako</Polish>
 		<Russian>Åñëè âû íå ðàçðåøèòå èì, îíè âîññòàíóò ïðîòèâ âàñ êàê</Russian>
 	</TEXT>
 	<TEXT>
@@ -976,7 +976,7 @@
 		<German>Wenn Sie sie nicht lassen, werden sie sich mit den %s vereinigen und Sie angreifen!</German>
 		<Italian>Se non li lasci andare, si uniranno a %s e ti attaccheranno!</Italian>
 		<Spanish>¡Si no se lo permites, se unirán al %s y te atacarán!</Spanish>
-		<Polish>Jeżeli im na to nie pozwolisz, przyłączą się do %s i zaatakują!</Polish>
+		<Polish>Je&#191;eli im na to nie pozwolisz, przy&#179;&#185;cz&#185; si&#234; do %s i zaatakuj&#185;!</Polish>
 		<Russian>Åñëè âû íå ðàçðåøèòå èì, òî îíè ïðèñîåäèíÿòñÿ ê %s è àòàêóþò âàñ!</Russian>
 	</TEXT>
 	<TEXT>
@@ -986,7 +986,7 @@
 		<German>Wenn Sie sie nicht lassen, werden ihre lose organisierten Rebellenbanden sich gegen Sie erheben.</German>
 		<Italian>Se non li lasci andare, le bande ribelli si solleveranno contro di te.</Italian>
 		<Spanish>Si no les dejas, sus bandas rebeldes desorganizadas se sublevarán contra tí.</Spanish>
-		<Polish>Jeżeli im na to nie pozwolisz, luźno zorganizowane grupy rebeliantów powstaną przeciwko tobie.</Polish>
+		<Polish>Je&#191;eli im na to nie pozwolisz, lu&#159;no zorganizowane grupy rebeliant&#243;w powstan&#185; przeciwko tobie.</Polish>
 		<Russian>Åñëè âû íå ðàçðåøèòå èì, òî ïðîòèâ âàñ ïîäíèìóòñÿ ïëîõî îðãàíèçîâàííûå áàíäû ìÿòåæíèêîâ.</Russian>
 	</TEXT>
 	<TEXT>
@@ -996,7 +996,7 @@
 		<German>ihre Unabhängigkeit zu erklären und wünschen wieder zu bilden das</German>
 		<Italian>dichiarando la propria indipendenza e desiderio di riformare</Italian>
 		<Spanish>declarando su independencia y deseando reformarse</Spanish>
-		<Polish>zadeklarowali niepodległość i pragną utworzyć</Polish>
+		<Polish>zadeklarowali niepodleg&#179;o&#156;&#230; i pragn&#185; utworzy&#230;</Polish>
 		<Russian>îáúÿâëÿþò î íåçàâèñèìîñòè è ôîðìèðóþò</Russian>
 	</TEXT>
 	<TEXT>
@@ -1006,7 +1006,7 @@
 		<German>Unabhängigkeit zu erklären, obwohl sie keine Flagge haben, um die sie sich versammeln können.</German>
 		<Italian>dichiarando la propria indipendenza, anche se non hanno una bandiera sotto cui unirsi.</Italian>
 		<Spanish>declarando la independencia, aunque no tienen una bandera bajo la que unirse.</Spanish>
-		<Polish>zadeklarowali niepodległość nie mając planów na przyszłość.</Polish>
+		<Polish>zadeklarowali niepodleg&#179;o&#156;&#230; nie maj&#185;c plan&#243;w na przysz&#179;o&#156;&#230;.</Polish>
 		<Russian>îáúÿâëÿþò î íåçàâèñèìîñòè, õîòü îíè åùå íå èìåþò ñîáñòâåííîãî ãîñ. ôëàãà.</Russian>
 	</TEXT>
 	<TEXT>
@@ -1026,7 +1026,7 @@
 		<German>in Ihren Gesellschaftsformen. Massendemonstrationen sind ausgebrochen und die Produktion in Ihren Städten wurde zum Stillstand gebracht!</German>
 		<Italian>come forma di governo. Sono scoppiate manifestazioni di piazza, bloccando la produzione nelle tue città!</Italian>
 		<Spanish>en tus principios políticos. ¡Han estallado manifestaciones masivas, provocando la paralización de la producción en tus ciudades!</Spanish>
-		<Polish>jako swoją doktrynę. Masowe demonstracje zatrzymały produkcję w twoich miastach!</Polish>
+		<Polish>jako swoj&#185; doktryn&#234;. Masowe demonstracje zatrzyma&#179;y produkcj&#234; w twoich miastach!</Polish>
 		<Russian>â ñâîåé âíóòðåííåé ïîëèòèêå. Ìàññîâûå äåìîíñòðàöèè çàïîëíèëè óëèöû, îñòàíàâëèâàÿ ïðîèçâîäñòâî â âàøèõ ãîðîäàõ!</Russian>
 	</TEXT>
 	<TEXT>
@@ -1036,7 +1036,7 @@
 		<German>fordern, dass Sie offiziell die Praxis der Sklaverei zurückweisen und annehmen</German>
 		<Italian>chiedendo che venga ufficialmente abolita la pratica della schiavitù e che tu adotti</Italian>
 		<Spanish>solicitando que rehuses oficialmente de las prácticas de esclavitud y adoptes</Spanish>
-		<Polish>żądają, abyś oficjalnie zakazał praktykowania niewolnictwa i przyjął</Polish>
+		<Polish>&#191;&#185;daj&#185;, aby&#156; oficjalnie zakaza&#179; praktykowania niewolnictwa i przyj&#185;&#179;</Polish>
 		<Russian>òðåáóþò, ÷òîáû âû îôèöèàëüíî îòìåíèëè ðàáñòâî è ïðèíÿëè</Russian>
 	</TEXT>
 	<TEXT>
@@ -1046,7 +1046,7 @@
 		<German>Sollten Sie sich entscheiden, Ihre gegenwärtige Praxis beizubehalten, so könnten Sie noch genügend Zeit haben, andere Aspekte dieser Städte zu verbessern, bis sie Ihre Duldung des Sklavenhandels vergessen haben.</German>
 		<Italian>Tuttavia, anche se decidi di proseguire l'attuale politica, sei ancora in tempo per migliorare altri aspetti di queste città in modo da far loro dimenticare la tua tolleranza al commercio di schiavi.</Italian>
 		<Spanish>No obstante, si decides mantener tus prácticas actuales, aún tienes tiempo para mejorar otros aspectos de estas ciudades de modo que olviden tu tolerancia al comercio de esclavos.</Spanish>
-		<Polish>Jednakże, jeśli zdecydujesz się kontynuować swoje obecne praktyki, może jeszcze będzie czas na poprawę innych aspektów w tych miastach i zostanie zapomniany handel niewolnikami.</Polish>
+		<Polish>Jednak&#191;e, je&#156;li zdecydujesz si&#234; kontynuowa&#230; swoje obecne praktyki, mo&#191;e jeszcze b&#234;dzie czas na popraw&#234; innych aspekt&#243;w w tych miastach i zostanie zapomniany handel niewolnikami.</Polish>
 		<Russian>Îäíàêî, åñëè âû óëó÷øèòå èõ æèçíü äðóãèìè ñïîñîáàìè, òî îíè ìîãóò çàáûòü î âàøåì ïîïóñòèòåëüñòâå ðàáîòîðãîâëå.</Russian>
 	</TEXT>
 	<TEXT>
@@ -1056,7 +1056,7 @@
 		<German>Massendemonstrationen sind ausgebrochen und grüne Kräfte füllen die Straßen!</German>
 		<Italian>Sono scoppiate manifestazioni di massa e le strade sono riempite dal 'potere verde'!</Italian>
 		<Spanish>¡Han tenido lugar manifestaciones masivas, y el "poder verde" ha tomado las calles!</Spanish>
-		<Polish>Rozpoczęły się masowe demonstracje, a ekolodzy wyszli na ulice!</Polish>
+		<Polish>Rozpocz&#234;&#179;y si&#234; masowe demonstracje, a ekolodzy wyszli na ulice!</Polish>
 		<Russian>Íà÷àëèñü ìàññîâûå äåìîíñòðàöèè, è 'çåëåíûå' çàïîëíèëè óëèöû!</Russian>
 	</TEXT>
 	<TEXT>
@@ -1066,7 +1066,7 @@
 		<German>fordern, dass Sie die Umweltverschmutzung einstellen und annehmen</German>
 		<Italian>chiedendo di porre fine ai comportamenti inquinanti, e di adottare</Italian>
 		<Spanish>solicitando que acabes con tus contaminantes costumbres y adoptes</Spanish>
-		<Polish>domagają się zmiany polityki ekologicznej i przyjęcie</Polish>
+		<Polish>domagaj&#185; si&#234; zmiany polityki ekologicznej i przyj&#234;cie</Polish>
 		<Russian>òðåáóþò, ÷òîáû âû ïðåêðàòèëè çàãðÿçíÿòü îêðóæàþùóþ ñðåäó è ïðèíÿëè</Russian>
 	</TEXT>
 	<TEXT>
@@ -1076,7 +1076,7 @@
 		<German>Wenn Sie Ihr gegenwärtiges Verhalten beibehalten, so könnten Sie immer noch genügend Zeit haben, andere Aspekte dieser Städte so zu verbessern, dass sie wieder durch den Smog sehen werden können.</German>
 		<Italian>Tuttavia, anche se decidi di proseguire l'attuale politica, sei ancora in tempo per migliorare altri aspetti di queste città in modo renderli meno sensibili allo smog.</Italian>
 		<Spanish>No obstante, si decides mantener tus prácticas actuales, aún tienes tiempo de mejorar otros aspectos de estas ciudades, de modo que dejen a un lado el tema de la polución.</Spanish>
-		<Polish>Jednakże, jeśli zadecydujesz zachować swoje obecne praktyki, może jeszcze będzie czas na poprawę innych aspektów w tych miastach i wtedy może przebiją się przez smog.</Polish>
+		<Polish>Jednak&#191;e, je&#156;li zadecydujesz zachowa&#230; swoje obecne praktyki, mo&#191;e jeszcze b&#234;dzie czas na popraw&#234; innych aspekt&#243;w w tych miastach i wtedy mo&#191;e przebij&#185; si&#234; przez smog.</Polish>
 		<Russian>Îäíàêî, âû ìîæåòå óëó÷øèòü äðóãèå àñïåêòû èõ æèçíè, ÷òîáû îíè ïåðåñòàëè çàìå÷àòü äûì çàâîäñêèõ òðóá.</Russian>
 	</TEXT>
 	<TEXT>
@@ -1086,7 +1086,7 @@
 		<German>fordert zu folgen</German>
 		<Italian>proclama di seguire</Italian>
 		<Spanish>claman seguir</Spanish>
-		<Polish>domagają się zrozumienia</Polish>
+		<Polish>domagaj&#185; si&#234; zrozumienia</Polish>
 		<Russian>òðåáóåò ïîñëåäîâàòü</Russian>
 	</TEXT>
 	<TEXT>
@@ -1096,7 +1096,7 @@
 		<German>Sie müssen Ihre Hingabe zeigen, indem Sie zurückfordern</German>
 		<Italian>Devi mostrare la tua devozione riconquistando</Italian>
 		<Spanish>Debes mostrar tu devoción reconquistando</Spanish>
-		<Polish>Musisz ukazać oddanie i posłuszeństwo poprzez nawrócenie</Polish>
+		<Polish>Musisz ukaza&#230; oddanie i pos&#179;usze&#241;stwo poprzez nawr&#243;cenie</Polish>
 		<Russian>Âû äîëæíû äîêàçàòü ñâîå ðâåíèå, çàõâàòèâ</Russian>
 	</TEXT>
 	<TEXT>
@@ -1106,7 +1106,7 @@
 		<German>von den Heiden!</German>
 		<Italian>dagli infedeli!</Italian>
 		<Spanish>de los infieles!</Spanish>
-		<Polish>z rąk pogan!</Polish>
+		<Polish>z r&#185;k pogan!</Polish>
 		<Russian>èç ðóê ÿçû÷íèêîâ!</Russian>
 	</TEXT>
 	<TEXT>
@@ -1116,7 +1116,7 @@
 		<German>Sie müssen Ihre Hingabe zeigen, indem Sie Ihre heilige Stadt zurückfordern,</German>
 		<Italian>Devi mostrare la tua devozione riconquistando la città santa,</Italian>
 		<Spanish>Debes mostrar tu devoción reconquistando tu Ciudad Santa,</Spanish>
-		<Polish>Musisz pokazać swoje oddanie poprzez odbicie świętego miasta,</Polish>
+		<Polish>Musisz pokaza&#230; swoje oddanie poprzez odbicie &#156;wi&#234;tego miasta,</Polish>
 		<Russian>Âû äîëæíû äîêàçàòü âàøó íàáîæíîñòü, âåðíóâ Ñâÿòûå Çåìëè</Russian>
 	</TEXT>
 	<TEXT>
@@ -1126,7 +1126,7 @@
 		<German>Ihre Forderung zu beachten und Ihre Anhänger zu einem heiligen Sieg zu führen ist der sicherste Weg, diese Städte auch in der Zukunft in Ihrem Imperium zu halten. Wenn Sie ihre Rufe nach einem heiligen Krieg ignorieren, könnten sie bald zur Erkenntnis gelangen, dass Sie kein wahrer Gläubiger sind und sich gegen Sie wenden.</German>
 		<Italian>Accettare la loro richiesta e condurre i tuoi seguaci a una sacra vittoria è il metodo più sicuro per mantenere queste città nel tuo impero per il prossimo futuro. Se ignori i loro richiami alla guerra santa, potranno decidere che non sei un vero credente e rivoltarsi contro di te.</Italian>
 		<Spanish>Hacer honor a sus peticiones, y dirigir a tus seguidores a una victoria santa, será la forma más segura de mantener estas ciudades en tu imperio en un futuro próximo. Si ignoras su clamor por la Cruzada, puede que en el futuro determinen que no eres un verdadero creyente, y se posicionen en tu contra.</Spanish>
-		<Polish>Spełnienie ich żądań i zaprowadzenie wyznawców do świętego zwycięstwa jest sposobem na utrzymanie tych miast w niedalekiej przyszłości. Jeśli zignorujesz ich pragnienie do świętej wojny, to wkrótce mogą uznać, że nie jesteś prawdziwym wierzącym i staną przeciwko tobie.</Polish>
+		<Polish>Spe&#179;nienie ich &#191;&#185;da&#241; i zaprowadzenie wyznawc&#243;w do &#156;wi&#234;tego zwyci&#234;stwa jest sposobem na utrzymanie tych miast w niedalekiej przysz&#179;o&#156;ci. Je&#156;li zignorujesz ich pragnienie do &#156;wi&#234;tej wojny, to wkr&#243;tce mog&#185; uzna&#230;, &#191;e nie jeste&#156; prawdziwym wierz&#185;cym i stan&#185; przeciwko tobie.</Polish>
 		<Russian>Óäîâëåòâîðèâ èõ ïðîñüáó è âûñòóïèâ â ïîõîä, ÷òîáû âåðíóòü Ñâÿòûå Çåìëè, ìû óäåðæèì ýòèõ ëþäåé â êà÷åñòâå âåðíûõ æèòåëåé èìïåðèè. Â ïðîòèâíîì ñëó÷àå îíè ñî÷òóò âàñ åðåòèêîì è ìîãóò âçáóíòîâàòüñÿ.</Russian>
 	</TEXT>
 	<TEXT>
@@ -1136,7 +1136,7 @@
 		<German>von den Unwürdigen!</German>
 		<Italian>dagli indegni!</Italian>
 		<Spanish>de los indignos!</Spanish>
-		<Polish>za swój brak godności!</Polish>
+		<Polish>za sw&#243;j brak godno&#156;ci!</Polish>
 		<Russian>ó åðåòèêîâ!</Russian>
 	</TEXT>
 	<TEXT>
@@ -1146,7 +1146,7 @@
 		<German>vereinigen sich mit Ihren religiösen Anführern zum Anruf für einen heiligen Krieg gegen</German>
 		<Italian>unendosi con i tuoi capi religiosi per richiedere per una guerra santa contro</Italian>
 		<Spanish>uniéndose a tus líderes religiosos para declarar una Cruzada contra</Spanish>
-		<Polish>dołączył do twoich przywódców religijnych w celu wzywania do świętej wojny przeciwko</Polish>
+		<Polish>do&#179;&#185;czy&#179; do twoich przyw&#243;dc&#243;w religijnych w celu wzywania do &#156;wi&#234;tej wojny przeciwko</Polish>
 		<Russian>ïðèñîåäèíÿþòñÿ ê âàøèì äóõîâíûì ëèäåðàì, ÷òî ïðèçâàòü ê ñâÿùåííîé âîéíå ïðîòèâ</Russian>
 	</TEXT>
 	<TEXT>
@@ -1156,7 +1156,7 @@
 		<German>Während es zutrifft, dass</German>
 		<Italian>Mentre è vero che</Italian>
 		<Spanish>Aunque es verdad que los</Spanish>
-		<Polish>Tak długo jak to jest prawdą</Polish>
+		<Polish>Tak d&#179;ugo jak to jest prawd&#185;</Polish>
 		<Russian>Õîòÿ ýòî è ïðàâäà,</Russian>
 	</TEXT>
 	<TEXT>
@@ -1166,7 +1166,7 @@
 		<German>sie sind nicht mehr würdig, die heilige Stadt zu besitzen</German>
 		<Italian>non sono più degni di possedere la città santa di</Italian>
 		<Spanish>no son dignos de poseer por más tiempo la Ciudad Santa de</Spanish>
-		<Polish>nie są już godni utrzymywania świętego miasta</Polish>
+		<Polish>nie s&#185; ju&#191; godni utrzymywania &#156;wi&#234;tego miasta</Polish>
 		<Russian>îíè áîëüøå íå äîñòîéíû äåðæàòü â ñâîèõ ðóêàõ Ñâÿùåííûé</Russian>
 	</TEXT>
 	<TEXT>
@@ -1176,7 +1176,7 @@
 		<German>Die Sklaven verlangen, dass Sie wechseln zu</German>
 		<Italian>Gli schiavi stanno chiedendo di cambiare verso</Italian>
 		<Spanish>Los esclavos están demandando que cambies a</Spanish>
-		<Polish>Niewolnicy domagają się przyjęcia</Polish>
+		<Polish>Niewolnicy domagaj&#185; si&#234; przyj&#234;cia</Polish>
 		<Russian>Ðàáû òðåáóþò âàñ ñìåíèòü îáùåñòâåííîå óñòðîéñòâî íà</Russian>
 	</TEXT>
 	<TEXT>
@@ -1186,7 +1186,7 @@
 		<German>oder sie werden kämpfen![NEWLINE][NEWLINE]Wenn Sie ihre Forderung ablehnen, so werden unorganisierte Sklavenbanden vor den Toren Ihrer Städte auftauchen! Aber wenn Sie die Sklaverei beenden, so werden viele Peitschenhersteller arbeitslos.</German>
 		<Italian>o combatteranno![NEWLINE][NEWLINE]Se non accetti la loro richiesta, bande disorganizzate di schiavi si solleveranno nelle tue città! Ma se porrai fine alla schiavitù, lascerai i fabbricanti di fruste senza lavoro.</Italian>
 		<Spanish>o lucharán![NEWLINE][NEWLINE]¡Si deniegas sus peticiones, se levantarán bandas de esclavos desorganizadas en las afueras de tus ciudades! Pero si acabas con su servidumbre, dejarás a muchos esclavistas sin trabajo.</Spanish>
-		<Polish>albo będą walczyć![NEWLINE][NEWLINE]Jeżeli odrzucisz teraz ich żądania, to wzniecą oni bunt w twoich miastach! Ale jeżeli zdecydujesz się zakończyć trzymanie ich w niewoli, to zachwieje się cała twoja gospodarka.</Polish>
+		<Polish>albo b&#234;d&#185; walczy&#230;![NEWLINE][NEWLINE]Je&#191;eli odrzucisz teraz ich &#191;&#185;dania, to wzniec&#185; oni bunt w twoich miastach! Ale je&#191;eli zdecydujesz si&#234; zako&#241;czy&#230; trzymanie ich w niewoli, to zachwieje si&#234; ca&#179;a twoja gospodarka.</Polish>
 		<Russian>èëè îíè ïðèìóò áîé![NEWLINE][NEWLINE]Åñëè âû îòêëîíèòå èõ ïðîñüáó, îçëîáëåííûå ðàáû ïîäíèìóò âîññòàíèÿ âî âñåõ âàøèõ ãîðîäàõ! Íî åñëè âû ïðåêðàòèòå èõ óãíåòåíèå, âû îñòàâèòå ìíîãèõ ïðîèçâîäèòåëåé êíóòîâ áåç ñðåäñòâ ê ñóùåñòâîâàíèþ.</Russian>
 	</TEXT>
 	<TEXT>
@@ -1196,7 +1196,7 @@
 		<German>Ein Sklavenaufstand ist ausgebrochen in</German>
 		<Italian>Una rivolta di schiavi è scoppiata a</Italian>
 		<Spanish>Ha estallado una revuelta de esclavos en</Spanish>
-		<Polish>Rebelia niewolników wybuchła w</Polish>
+		<Polish>Rebelia niewolnik&#243;w wybuch&#179;a w</Polish>
 		<Russian>Âîññòàíèå ðàáîâ íà÷àëîñü â</Russian>
 	</TEXT>
 	<TEXT>
@@ -1206,7 +1206,7 @@
 		<German>Sie haben zwar noch nicht mit Kriegsvorbereitungen begonnen, doch wenn Sie ihre Forderungen ablehnen, werden sie Ihre gegenwärtige Politik möglicherweise nicht länger dulden. Ihre Forderung zu erfüllen ist der bei weitem schnellste und einfachste Weg sie in absehbaren Zukunft in Ihrem Imperium zu halten.</German>
 		<Italian>Per ora non hanno cominciato i preparativi per la guerra, ma se non accetti la loro richiesta, non potranno sopportare per molto la tua politica. Accettare la loro richiesta è la scelta più rapida e più semplice per mantenerli nel tuo impero, per il prossimo futuro.</Italian>
 		<Spanish>Aunque aún no han comenzado los preparativos para la guerra, si rechazas sus peticiones, puede que no aguanten mucho más con tus políticas actuales. Aceptar sus demandas es, con mucho, el camino más rápido y fácil para mantener a estos ciudadanos en tu imperio en un futuro próximo.</Spanish>
-		<Polish>Jeżeli odrzucisz teraz ich żądania, w czasie gdy nie rozpoczęli jeszcze przygotowań do zbrojnych działań, to nie będą dłużej bezczynnie przyglądać się twojej polityce. Spełnienie ich żądań jest najszybszą i najłatwiejszą drogą do pokojowego utrzymania ich w imperium w niedalekiej przyszłości.</Polish>
+		<Polish>Je&#191;eli odrzucisz teraz ich &#191;&#185;dania, w czasie gdy nie rozpocz&#234;li jeszcze przygotowa&#241; do zbrojnych dzia&#179;a&#241;, to nie b&#234;d&#185; d&#179;u&#191;ej bezczynnie przygl&#185;da&#230; si&#234; twojej polityce. Spe&#179;nienie ich &#191;&#185;da&#241; jest najszybsz&#185; i naj&#179;atwiejsz&#185; drog&#185; do pokojowego utrzymania ich w imperium w niedalekiej przysz&#179;o&#156;ci.</Polish>
 		<Russian>Õîòü îíè åùå è íå íà÷èíàëè ïðèãîòîâëåíèÿ ê âîéíå, íå óäîâëåòâîðèâ èõ òðåáîâàíèÿ, ìû ëèøü ïîäîëüåì ìàñëà â îãîíü. Âûïîëíèòü îíûå - ëó÷øèé ñïîñîá óäåðæàòü èõ â ãðàíèöàõ ñòðàíû.</Russian>
 	</TEXT>
 	<TEXT>
@@ -1216,7 +1216,7 @@
 		<German>Ihre Herrschaft ist beendet und ein neuer Anführer besetzt den Thron!</German>
 		<Italian>Il tuo regno è finito e un nuovo leader sale sul trono!</Italian>
 		<Spanish>¡Tu mandato ha cesado, y un nuevo líder asume el trono!</Spanish>
-		<Polish>Twoje panowanie skończyło się, a nowy przywódca zasiadł na tronie!</Polish>
+		<Polish>Twoje panowanie sko&#241;czy&#179;o si&#234;, a nowy przyw&#243;dca zasiad&#179; na tronie!</Polish>
 		<Russian>Âàøå ïðàâëåíèå îêîí÷åíî, è íîâûé ëèäåð ñàäèòñÿ íà òðîí!</Russian>
 	</TEXT>
 	<TEXT>
@@ -1226,7 +1226,7 @@
 		<German>Jedoch wird Ihnen die Kontrolle zurückgegeben in</German>
 		<Italian>Tuttavia, il controllo ti sarà restituito in</Italian>
 		<Spanish>No obstante, el control te será devuelto en</Spanish>
-		<Polish>Jednakże, kontrola zostanie tobie przywrócona za</Polish>
+		<Polish>Jednak&#191;e, kontrola zostanie tobie przywr&#243;cona za</Polish>
 		<Russian>Îäíàêî êîíòðîëü áóäåò âîçâðàùåí âàì â</Russian>
 	</TEXT>
 	<TEXT>
@@ -1236,7 +1236,7 @@
 		<German>Erfolg! Sie haben sich erfolgreich einen Wahlsieg gekauft.[NEWLINE][NEWLINE]Ihre hinterhältigen Taktiken und Bestechungsgelder wurden nicht aufgedeckt und die rebellischen Städte nehmen ihre Niederlage in den Abstimmungen an und und beruhigen sich vorläufig. Dennoch wird es weiterhin sinnvoll sein ihre Zufriedenheit zu erhöhen, um so etwas nicht bald wieder zu erleben.</German>
 		<Italian>Successo! Hai comprato la vittoria delle elezioni.[NEWLINE][NEWLINE]Le tue losche tattiche e le tangenti non sono state scoperte: le città ribelli accettano la sconfitta elettorale e cessano le ostilità per il momento. Tuttavia, sarebbe prudente aumentare la loro felicità per non affrontare presto lo stesso pericolo...</Italian>
 		<Spanish>¡Enhorabuena! Has comprado con éxito una victoria en las elecciones.[NEWLINE][NEWLINE]Tus sobornos y tácticas clandestinas no fueron detectadas y las ciudades rebeldes han aceptado su derrota en la votación y se han calmado por el momento. No obstante, sería prudente aumentar su felicidad para no tener que volver a encarar una situación así de nuevo.</Spanish>
-		<Polish>Sukces! Udało ci się kupić zwycięstwo w wyborach.[NEWLINE][NEWLINE]Twoja nieuczciwa taktyka i przekupstwo nie zostały wykryte, a zbuntowane miasta zaakceptowały przegraną w sondażu i nie będą przez jakiś czas stwarzać problemów. Jednakże, zapobiegaczym posunięciem będzie zwiększenie ich zadowolenia, aby podobna sytuacja nie zdarzyła się w przyszłości.</Polish>
+		<Polish>Sukces! Uda&#179;o ci si&#234; kupi&#230; zwyci&#234;stwo w wyborach.[NEWLINE][NEWLINE]Twoja nieuczciwa taktyka i przekupstwo nie zosta&#179;y wykryte, a zbuntowane miasta zaakceptowa&#179;y przegran&#185; w sonda&#191;u i nie b&#234;d&#185; przez jaki&#156; czas stwarza&#230; problem&#243;w. Jednak&#191;e, zapobiegaczym posuni&#234;ciem b&#234;dzie zwi&#234;kszenie ich zadowolenia, aby podobna sytuacja nie zdarzy&#179;a si&#234; w przysz&#179;o&#156;ci.</Polish>
 		<Russian>Óñïåõ! Âàì óäàëîñü êóïèòü ïîáåäó íà âûáîðàõ.[NEWLINE][NEWLINE]Âàøè âçÿòêè è òåìíûå ñäåëêè îáåñïå÷èëè âàì ïåðåèçáðàíèå, è ìÿòåæíèêè íà âðåìÿ çàòèõëè. Îäíàêî, ñòîèò ðàçîáðàòüñÿ ñ ñèòóàöèåé â ñòðàíå, ÷òîáû òàêîãî áîëüøå íå ïîâòîðèëîñü.</Russian>
 	</TEXT>
 	<TEXT>
@@ -1246,7 +1246,7 @@
 		<German>Schreckliche Nachrichten! Sie haben die Wahl und die Kontrolle über Ihre Civ verloren!</German>
 		<Italian>Notizie terribili! Hai perso le elezioni ed il controllo sulla tua civiltà!</Italian>
 		<Spanish>¡Terribles noticias! ¡Has perdido las elecciones y el control de tu civilización!</Spanish>
-		<Polish>Straszne wieści! Przegrałeś wybory i straciłeś kontrolę nad cywilizacją!</Polish>
+		<Polish>Straszne wie&#156;ci! Przegra&#179;e&#156; wybory i straci&#179;e&#156; kontrol&#234; nad cywilizacj&#185;!</Polish>
 		<Russian>Óæàñíûå íîâîñòè! Âû ïðîèãðàëè âûáîðû è ïîòåðÿëè êîíòðîëü íàä âàøåé öèâèëèçàöèåé!</Russian>
 	</TEXT>
 	<TEXT>
@@ -1256,7 +1256,7 @@
 		<German>Sieg! Sie haben die Wahl gewonnen![NEWLINE][NEWLINE]Die revoltierenden Städte akzeptieren die Entscheidung und beruhigen sich vorläufig. Dennoch wird es weiterhin sinnvoll sein ihre Zufriedenheit zu erhöhen, um so etwas nicht bald wieder zu erleben.</German>
 		<Italian>Vittoria! Hai vinto le elezioni![NEWLINE][NEWLINE]Le città in rivolta accettano la decisione nazionale e cessano le ostilità per il momento. Tuttavia, sarebbe prudente aumentare la loro felicità per non trovarsi presto di fronte a questo pericolo.</Italian>
 		<Spanish>¡Victoria! ¡Has ganado las elecciones![NEWLINE][NEWLINE]Las ciudades rebeldes han aceptado la decisión nacional y han sentado la cabeza por el momento. No obstante, sería prudente aumentar su felicidad para no tener que volver a encarar una situación así de nuevo.</Spanish>
-		<Polish>Zwycięstwo! Wygrałeś wybory![NEWLINE][NEWLINE]Zbuntowane miasta zaakceptowały narodową decyzję i nie będą przez jakiś czas stwarzać problemów. Jednakże, zapobiegaczym posunięciem będzie zwiększenie ich zadowolenia, aby podobna sytuacja nie zdarzyła się w przyszłości.</Polish>
+		<Polish>Zwyci&#234;stwo! Wygra&#179;e&#156; wybory![NEWLINE][NEWLINE]Zbuntowane miasta zaakceptowa&#179;y narodow&#185; decyzj&#234; i nie b&#234;d&#185; przez jaki&#156; czas stwarza&#230; problem&#243;w. Jednak&#191;e, zapobiegaczym posuni&#234;ciem b&#234;dzie zwi&#234;kszenie ich zadowolenia, aby podobna sytuacja nie zdarzy&#179;a si&#234; w przysz&#179;o&#156;ci.</Polish>
 		<Russian>Ïîáåäà! Âû âûèãðàëè âûáîðû![NEWLINE][NEWLINE]Ìÿòåæíèêè ñîãëàñèëèñü ñ ìíåíèåì áîëüøèíñòâà è âðåìåííî çàòèõëè. Îäíàêî, áóëåò ìóäðûì óëó÷øèòü æèçíü íàðîäà, ÷òîáû ìÿòåæ áîëüøå íå ïîâòîðèëñÿ.</Russian>
 	</TEXT>
 	<TEXT>
@@ -1266,7 +1266,7 @@
 		<German>wurde die Freiheit gewährt, Ihrem Imperium wieder beizutreten</German>
 		<Italian>hanno avuto il permesso di riunirsi al tuo impero, da</Italian>
 		<Spanish>les ha sido concedida la libertad para volver a unirse a tu imperio por parte de</Spanish>
-		<Polish>przyznał im wolność, w sprawie dołączenia do twojego imperium przez</Polish>
+		<Polish>przyzna&#179; im wolno&#156;&#230;, w sprawie do&#179;&#185;czenia do twojego imperium przez</Polish>
 		<Russian>ïîëó÷èëè ñâîáîäó, ÷òîáû ïðèñîåäèíèòüñÿ ê âàøåé èìïåðèè</Russian>
 	</TEXT>
 	<TEXT>
@@ -1276,7 +1276,7 @@
 		<German>Was sollen wir den Revolutionären sagen?</German>
 		<Italian>Che cosa dobbiamo dire ai rivoluzionari?</Italian>
 		<Spanish>¿Qué debemos decirle a los revolucionarios?</Spanish>
-		<Polish>Co powinniśmy powiedzieć rewolucjonistom?</Polish>
+		<Polish>Co powinni&#156;my powiedzie&#230; rewolucjonistom?</Polish>
 		<Russian>×òî ìû ñêàæåì ìÿòåæíèêàì?</Russian>
 	</TEXT>
 	<TEXT>
@@ -1286,7 +1286,7 @@
 		<German>Sie können Ihr verlorenes Territorium wiedergewinnen, ohne einen einzigen Schuss abzufeuern![NEWLINE][NEWLINE]Wenn Sie sie nicht zurückbekommen mwöchten, so bilden die Revolutionäre stattdessen</German>
 		<Italian>Puoi riguadagnare il territorio perso senza combattere![NEWLINE][NEWLINE]Se non li riaccogli, insorgeranno ribelli, per formare </Italian>
 		<Spanish>¡Puedes recuperar tu territorio perdido sin pegar un tiro![NEWLINE][NEWLINE]Si no los quieres de vuelta, los revolucionarios formarán en su lugar el</Spanish>
-		<Polish>Możesz odzyskać utracone terytorium bez oddania strzału![NEWLINE][NEWLINE]Jeżeli nie chcesz go odzyskać, rewolucjoniści utworzą</Polish>
+		<Polish>Mo&#191;esz odzyska&#230; utracone terytorium bez oddania strza&#179;u![NEWLINE][NEWLINE]Je&#191;eli nie chcesz go odzyska&#230;, rewolucjoni&#156;ci utworz&#185;</Polish>
 		<Russian>Âû âåðíóëè ïîòåðÿííûå òåððèòîðèè áåç åäèíîãî âûñòðåëà![NEWLINE][NEWLINE]Åñëè âû íå õîòèòå èõ âîçâðàùåíèå, òî ðåâîëþöèîíåðû ñôîðìèðóþò</Russian>
 	</TEXT>
 	<TEXT>
@@ -1305,7 +1305,7 @@
 		<German>Auch wenn sie noch keinen Krieg erwägen, sollten Sie, falls Sie ihre Forderung ablehnen sollten, sofort Maßnahmen ergreifen, um ihre Situation zu verbessern. Wachsende Kultur oder die Verstärkung der Garnisonen könnten ihre Entschlossenheit reduzieren.</German>
 		<Italian>Anche se ancora non stanno ancora pensando alla guerra, se non accetterai la loro richiesta dovresti agire rapidamente per migliorare la loro situazione. Aumentare l'influsso culturale o rinforzare le guarnigioni può far cambiare loro idea.</Italian>
 		<Spanish>Aunque no contemplan una guerra abierta, si rechazas sus peticiones deberás tomar medidas inmediatamente para mejorar su situación. Es posible que, si incrementas tu cultura o aumentas las guarniciones, cesen en sus propósitos.</Spanish>
-		<Polish>Jeżeli odrzucisz teraz ich żądania, w czasie gdy nie rozpoczęli jeszcze przygotowań do zbrojnych działań, to powinieneś podjąć natychmiastowe akcje poprawiające ich sytuację. Zwiększenie poziomu kultury lub siły garnizonu może zmniejszyć ich pragnienia.</Polish>
+		<Polish>Je&#191;eli odrzucisz teraz ich &#191;&#185;dania, w czasie gdy nie rozpocz&#234;li jeszcze przygotowa&#241; do zbrojnych dzia&#179;a&#241;, to powiniene&#156; podj&#185;&#230; natychmiastowe akcje poprawiaj&#185;ce ich sytuacj&#234;. Zwi&#234;kszenie poziomu kultury lub si&#179;y garnizonu mo&#191;e zmniejszy&#230; ich pragnienia.</Polish>
 		<Russian>Õîòü îíè è íå íà÷èíàþò âîéíó, åñëè âû íå óäîâëåòâîðèòå èõ ïðîñüáû, íóæíî áóäåò íåìåäëåííî ïðèíÿòü íåîáõîäèìûå äåéñòâèÿ. Äîïîëíèòåëüíûé ãàðíèçîí ñîëäàò èëè óêðåïëåíèå êóëüòóðû ñíèçÿò èõ ðåøèìîñòü.</Russian>
 	</TEXT>
 	<TEXT>
@@ -1315,7 +1315,7 @@
 		<German>Sie können auch wählen, die Revolutionäre auszuzahlen. Im Austausch für etwas Gold werden die Revolutionäre ihre Sorgen für eine Weile vergessen. Seien Sie jedoch gewarnt, dass andere Städte eher zu einer Rebellion neigen, wenn sie sehen, dass Sie Geld verteilen.</German>
 		<Italian>Puoi anche pensare di corrompere i ribelli. In cambio di oro, i ribelli abbasseranno le loro pretese, per il momento. Attento, però, altre città possono diventare più desiderose di ribellarsi, dopo che hanno capito che sei disposto a concedere il tuo oro...</Italian>
 		<Spanish>También puedes comprar a los revolucionarios. A cambio de algo de oro, los revolucionarios dejarán de lado sus agravios por el momento. No obstante, ten cuidado, otras ciudades podrían ser más proclives a rebelarse si ven que pretendes comprarles.</Spanish>
-		<Polish>Możesz także zapłacić rewolucjonistom. Za niewielką ilość złota, rewolucjoniści uciszą swoją niechęć na jakiś czas. Uważaj, gdyż inne miasta mogą być po tym bardziej skłonne do rebelii, z uwagi na pieniądze jakie mogą dzięki temu zyskać.</Polish>
+		<Polish>Mo&#191;esz tak&#191;e zap&#179;aci&#230; rewolucjonistom. Za niewielk&#185; ilo&#156;&#230; z&#179;ota, rewolucjoni&#156;ci ucisz&#185; swoj&#185; niech&#234;&#230; na jaki&#156; czas. Uwa&#191;aj, gdy&#191; inne miasta mog&#185; by&#230; po tym bardziej sk&#179;onne do rebelii, z uwagi na pieni&#185;dze jakie mog&#185; dzi&#234;ki temu zyska&#230;.</Polish>
 		<Russian>Âû òàêæå ìîæåòå îòêóïèòüñÿ îò ìÿòåæíèêîâ. Â çàìåí íà íåêóþ ñóììó çîëîòà, îíè çàáóò î ñâîèõ æàëîáàõ - íà âðåìÿ. Îäíàêî, áóäüòå îñòðîæíû! Äðóãèå ãîðîäà ìîãóò ñòàòü áîëåå ìÿòåæíûìè, åñëè óâèäÿò, ÷òî âû ðàçáðàñûâàåòåñü çîëîòîì.</Russian>
 	</TEXT>
 	<TEXT>
@@ -1325,7 +1325,7 @@
 		<German>und wird Ihr</German>
 		<Italian>e diventare un tuo</Italian>
 		<Spanish>y convertirse en tu</Spanish>
-		<Polish>i stać się twoim</Polish>
+		<Polish>i sta&#230; si&#234; twoim</Polish>
 		<Russian>è ñòàòü âàøèì</Russian>
 	</TEXT>
 	<TEXT>
@@ -1335,7 +1335,7 @@
 		<German>Vasall. Sie können ihnen auch volle Unabhängigkeit gewähren.</German>
 		<Italian>Vassallo. Puoi anche concedere loro una completa indipendenza.</Italian>
 		<Spanish>. También puedes concederles una total independencia.</Spanish>
-		<Polish>wasalem. Możesz również nadać im pełną niepodległość.</Polish>
+		<Polish>wasalem. Mo&#191;esz r&#243;wnie&#191; nada&#230; im pe&#179;n&#185; niepodleg&#179;o&#156;&#230;.</Polish>
 		<Russian>âàññàëîì. Âû, êîíå÷íî, ìîæåòå äàòü èì è ïîëíóþ íåçàâèñèìîñòü.</Russian>
 	</TEXT>
 	<TEXT>
@@ -1345,7 +1345,7 @@
 		<German>bitten um Unabhängigkeit. Diese Bürger finden, dass Ihr Imperium nicht ihren Bedürfnissen entspricht. Sie möchten auf eigenen Füßen stehen und bilden</German>
 		<Italian>chiedendo l'indipendenza. Questi cittadini ritengono che il tuo impero non venga incontro alle loro esigenze, preferiscono andare da soli e costituire</Italian>
 		<Spanish>pidiendo la indepedencia. Estos ciudadanos sienten que tu imperio no está cubriendo sus necesidades y desean separarse y mantenerse por sí mismos</Spanish>
-		<Polish>proszą o niepodległość. Ci obywatele czują, że twoje imperium nie spełnia ich potrzeb i pragną utworzyć</Polish>
+		<Polish>prosz&#185; o niepodleg&#179;o&#156;&#230;. Ci obywatele czuj&#185;, &#191;e twoje imperium nie spe&#179;nia ich potrzeb i pragn&#185; utworzy&#230;</Polish>
 		<Russian>òðåáóþò íåçàâèñèìîñòè. Ýòè ëþäè ÷óâñòâóþò, ÷òî âàøà èìïåðèÿ íå óäîâëåòâîðÿåò èõ íóæä, è õîòÿò æèòü â ñâîåé ñòðàíå, ñôîðìèðîâàâ</Russian>
 	</TEXT>
 	<TEXT>
@@ -1355,7 +1355,7 @@
 		<German>bitten darum, sich den %s anzuschließen. Diese Bürger finden, dass Ihr Imperium nicht ihren Bedürfnissen entspricht und möchten sich Ihrem Rivalen anschließen.</German>
 		<Italian>chiedendo di unirsi a %s. Questi cittadini ritengono che il tuo impero non venga incontro alle loro esigenze e preferiscono unirsi al tuo nemico.</Italian>
 		<Spanish>pidiendo unirse a %s. Estos ciudadanos sienten que tu imperio no está cubriendo sus necesidades y desean unirse a tu rival.</Spanish>
-		<Polish>proszą o pozwolenie na dołączenie do %s. Ci obywatele czują, że twoje imperium nie spełnia ich potrzeb i chcą dołączyć do twojego rywala.</Polish>
+		<Polish>prosz&#185; o pozwolenie na do&#179;&#185;czenie do %s. Ci obywatele czuj&#185;, &#191;e twoje imperium nie spe&#179;nia ich potrzeb i chc&#185; do&#179;&#185;czy&#230; do twojego rywala.</Polish>
 		<Russian>ïðîñÿò ïðèñîåäèíèòüñÿ ê %s. Ýòè ëþäè ÷óâñòâóþò, ÷òî âàøà èìïåðèÿ íå óäîâëåòâîðÿåò èõ íóæä, è õîòÿò ïðèñîåäèíèòüñÿ ê âàøåìó âðàãó.</Russian>
 	</TEXT>
 	<TEXT>
@@ -1365,7 +1365,7 @@
 		<German>bitten um begrenzte Autonomie. Diese Bürger möchten sich nicht vollständig von Ihrem Imperium lossagen, aber wünschen die Kontrolle über ihre lokalen Angelegenheiten. Sie möchten ausbilden</German>
 		<Italian>chiedendo una parziale autonomia. Questi cittadini non desiderano rompere completamente i legami con l'impero, ma vogliono il controllo dei loro affari locali. Preferiscono costituire</Italian>
 		<Spanish>demandando una autonomía parcial. Estos ciudadanos no desean romper completamente sus lazos con tu imperio, pero quieren controlar sus asuntos locales. Desean formar</Spanish>
-		<Polish>proszą o częściową autonomię. Ci obywatele nie chcą stracić więzi ze swoim imperium, ale chcą jedynie samodzielnie decydować o swoim losie. Chcą utworzyć</Polish>
+		<Polish>prosz&#185; o cz&#234;&#156;ciow&#185; autonomi&#234;. Ci obywatele nie chc&#185; straci&#230; wi&#234;zi ze swoim imperium, ale chc&#185; jedynie samodzielnie decydowa&#230; o swoim losie. Chc&#185; utworzy&#230;</Polish>
 		<Russian>ïðîñÿò ÷àñòè÷íîé àâòîíîìèè. Ýòè ëþäè íå õîòÿò ðâàòü ñâÿçè ñ âàøåé èìïåðèåé, íî æåëàþò ñàìè óïðàâëÿòü ñâîåé æèçíüþ. Îíè õîòÿò ñôîðìèðîâàòü</Russian>
 	</TEXT>
 	<TEXT>
@@ -1375,7 +1375,7 @@
 		<German>obwohl sie keine Flagge haben, um die sie sich versammeln können.</German>
 		<Italian>anche se non hanno una bandiera sotto cui unirsi.</Italian>
 		<Spanish>aunque de todas formas no tienen ninguna bandera bajo la que unirse.</Spanish>
-		<Polish>nawet jeśli nie mają planów na przyszłość.</Polish>
+		<Polish>nawet je&#156;li nie maj&#185; plan&#243;w na przysz&#179;o&#156;&#230;.</Polish>
 		<Russian>õîòü ó íèõ ïîêà è íåò ïîäõîäÿùåãî ôëàãà.</Russian>
 	</TEXT>
 	<TEXT>
@@ -1385,7 +1385,7 @@
 		<German>erklären ihre Unabhängigkeit. Sie haben genug von Ihnen und von Ihrem Imperium und werden kämpfen</German>
 		<Italian>dichiarando la propria indipendenza. Ne hanno abbastanza di te e del tuo impero, e combatteranno</Italian>
 		<Spanish>declarando su indepedencia. Ya están hartos de ti y de tu imperio, y lucharán</Spanish>
-		<Polish>deklarują swoją niepodległość. Mają już dość ciebie oraz twojego imperium i będą walczyć</Polish>
+		<Polish>deklaruj&#185; swoj&#185; niepodleg&#179;o&#156;&#230;. Maj&#185; ju&#191; do&#156;&#230; ciebie oraz twojego imperium i b&#234;d&#185; walczy&#230;</Polish>
 		<Russian>îáúÿâëÿþò î ñâîåé íåçàâèñèìîñòè. Îíè óæå äîñòàòî÷íî íàñòðàäàëèñü îò âàñ è âàøåé èìïåðèè è ãîòîâû ñðàæàòüñÿ</Russian>
 	</TEXT>
 	<TEXT>
@@ -1395,7 +1395,7 @@
 		<German>Dies ist eine schwierige Situation, Sie können entweder einen Teil Ihres Territoriums aufgeben oder Sie müssen sich dem Bürgerkrieg stellen! Keine der Optionen ist sehr attraktiv, Sie müssen die Bereitschaft Ihres Militärs gegen den Wert dieser Städte im Verhältnis zu Ihrem gesamten Imperium abwägen. Wenn Sie Krieg wählen, werden Ihre Truppen in diesen Städten von einer feindseligen Bevölkerung umgeben sein und werden schwere Verluste erleiden. Die Verteidigung von einigen dieser Städte kann sofort zusammenbrechen, andere können in der Lage sein, so etwas ähnliches wie Kontrolle aufrecht zu erhalten.</German>
 		<Italian>È una situazione difficile, poiché devi scegliere se abbandonare parte del tuo territorio, o affrontare la guerra civile! Nessuna delle due opzioni è piacevole, devi ponderare la tua preparazione militare ma anche il valore di queste città per il tuo impero. Se scegli la guerra, le tue truppe in queste città saranno circondate da una popolazione ostile e subiranno gravi perdite. Le difese di alcune di queste città possono crollare subito, su altre potresti mantenere un certo livello di controllo.</Italian>
 		<Spanish>¡Esta es una situación difícil, tus únicas opciones son abandonar parte de tu territorio, o afrontar una guerra civil! Ninguna de las opciones es muy alentadora, debes comparar tu capacidad militar con el valor de estas ciudades para tu imperio. Si eliges la guerra, tus tropas en estas ciudades estarán cercadas por una población hostil y podrían sufrir graves pérdidas. Las defensas de algunas de estas ciudades podrían caer inmediatamente, es posible que otras ciudades puedan mantener un cierto grado de control.</Spanish>
-		<Polish>Jest to trudna sytuacja, gdyż możesz albo oddać część swojego terytorium albo stawić czoła wojnie domowej! Żadna opcja nie jest zadowalająca i należy przeanalizować swoją gotowość bojową i prawdziwą wartość tych miast. Jeżeli wybierzesz wojnę, twoje wojsko zostanie otoczone przez wrogo nastawioną ludność i może ponieść ciężkie straty. Obrona kilku z tych miast może ulec od razu, inne mogą zachować tylko pozory kontroli.</Polish>
+		<Polish>Jest to trudna sytuacja, gdy&#191; mo&#191;esz albo odda&#230; cz&#234;&#156;&#230; swojego terytorium albo stawi&#230; czo&#179;a wojnie domowej! &#175;adna opcja nie jest zadowalaj&#185;ca i nale&#191;y przeanalizowa&#230; swoj&#185; gotowo&#156;&#230; bojow&#185; i prawdziw&#185; warto&#156;&#230; tych miast. Je&#191;eli wybierzesz wojn&#234;, twoje wojsko zostanie otoczone przez wrogo nastawion&#185; ludno&#156;&#230; i mo&#191;e ponie&#156;&#230; ci&#234;&#191;kie straty. Obrona kilku z tych miast mo&#191;e ulec od razu, inne mog&#185; zachowa&#230; tylko pozory kontroli.</Polish>
 		<Russian>Ýòî ñëîæíàÿ ñèòóàöèÿ, ò.ê. èç âîçìîæíûõ âàðèàíòîâ ó âàñ ëèáî îòäàòü ÷àñòü òåððèòîðèè ëèáî íà÷àòü ãðàæäàíñêóþ âîéíó! Õîòü âûáîð è íå ñëèøêîì ïðèÿòíûé âàì ñëåäóåò õîðîøåíüêî âçâåñèòü ñâîè âîåííûå âîçìîæíîñòè, ïðîòèâ ñèë ïîâñòàíöåâ. Åñëè âñå æå ðåøèòå íà÷àòü âîéíó, ýòî ìîæåò ïðèâåñòè ê íàñòîÿùåé áîéíå.</Russian>
 	</TEXT>
 	<TEXT>
@@ -1405,7 +1405,7 @@
 		<German>wenn es notwendig ist zu formen</German>
 		<Italian>se necessario per formare</Italian>
 		<Spanish>si es necesario para formar</Spanish>
-		<Polish>jeżeli będzie to konieczne, aby utworzyć</Polish>
+		<Polish>je&#191;eli b&#234;dzie to konieczne, aby utworzy&#230;</Polish>
 		<Russian>åñëè íåîáõîäèìî, ñôîðìèðîâàòü</Russian>
 	</TEXT>
 	<TEXT>
@@ -1424,7 +1424,7 @@
 		<German>KRIEGSVORBEREITUNGEN!!! Sie sollten Ihre Vorbereitungen abschließen, da die Aufrührer sich sehr bald mit %s vereinen werden...</German>
 		<Italian>preparandosi alla GUERRA!!! Affretta i tuoi preparativi, poiché i ribelli si uniranno a %s molto presto...</Italian>
 		<Spanish>preparándose para la GUERRA. Deberías ultimar tus preparativos, dado que los rebeldes se unirán a la %s muy pronto...</Spanish>
-		<Polish>przygotowuje się do WOJNY!!! Powinieneś dokonać ostatnich przygotowań, gdyż rebelianci niedługo dołączą do %s...</Polish>
+		<Polish>przygotowuje si&#234; do WOJNY!!! Powiniene&#156; dokona&#230; ostatnich przygotowa&#241;, gdy&#191; rebelianci nied&#179;ugo do&#179;&#185;cz&#185; do %s...</Polish>
 		<Russian>ãîòîâÿòñÿ ê âîéíå!!! Âû äîæíû ñäåëàòü ïîñëåäíèå ïðèãîòîâëåíèÿ, ò.ê. ìÿòåæíèêè ïðèñîåäèíÿòñÿ ê %s î÷åíü ñêîðî ...</Russian>
 	</TEXT>
 	<TEXT>
@@ -1434,7 +1434,7 @@
 		<German>wenden sich an Sie mit einem Angebot. Wenn Sie die Kontrolle übergeben vom</German>
 		<Italian>ti contatta con un'offerta. Se cedi il controllo di</Italian>
 		<Spanish>contacta contigo con una oferta. Si le entregas el control de</Spanish>
-		<Polish>przybywa do ciebie z ofertą. Jeżeli oddasz im kontrolę nad miastami</Polish>
+		<Polish>przybywa do ciebie z ofert&#185;. Je&#191;eli oddasz im kontrol&#234; nad miastami</Polish>
 		<Russian>ïðèáûëè ê âàì ñ ïðåäëîæåíèåì. Åñëè âû óñòóïèòå êîíòðîëü íàä</Russian>
 	</TEXT>
 	<TEXT>
@@ -1444,7 +1444,7 @@
 		<German>, die Aufrührer sind damit einverstanden, die Gewalt zu beenden und Frieden zu erklären.[NEWLINE][NEWLINE]Wenn Sie das Angebot annehmen, wird der Krieg beendet, aber Sie verlieren die Kontrolle über die Städte. Wenn Sie das Angebot ablehnen, wird sich die Stadt %s erheben und die Reihen der Rebellen verstärken, während Aufrührer in anderen Städten ebenfalls ermutigt werden könnten. Wählen Sie sorgfältig.</German>
 		<Italian>, i ribelli termineranno le azioni violente e acconsentiranno alla pace.[NEWLINE][NEWLINE]Se accetti l'offerta, la guerra si concluderà, ma perderai il controllo delle città. Se rifiuti, la città di %s si solleverà e rinforzerà l'armata ribelle, mentre in altre città i ribelli potranno esserne incoraggiati. Scegli con attenzione.</Italian>
 		<Spanish>, los rebeldes estarían de acuerdo en acabar la violencia y declarar la paz.[NEWLINE][NEWLINE]Si aceptas la oferta, la guerra terminará, pero perderás el control de la(s) ciudad(es). Si declinas la oferta, la ciudad de %s se sublevará, encabezando las fuerzas rebeldes, y cabe la posibilidad de que se envalentonen los rebeldes en otras ciudades. Escoge cuidadosamente.</Spanish>
-		<Polish>, rebelianci zakończą działania zbrojne i podpiszą pokój.[NEWLINE][NEWLINE]Jeżeli zaakceptujesz tą ofertę to wojna zakończy się, ale stracisz kontrolę nad tymi miastami. Jeżeli odrzucisz tą ofertę, miasto %s powstanie przeciw tobie i wzmocni szeregi rebeliantów. Rebelianci w innych miastach mogą również pójść ich śladem. Wybieraj rozważnie.</Polish>
+		<Polish>, rebelianci zako&#241;cz&#185; dzia&#179;ania zbrojne i podpisz&#185; pok&#243;j.[NEWLINE][NEWLINE]Je&#191;eli zaakceptujesz t&#185; ofert&#234; to wojna zako&#241;czy si&#234;, ale stracisz kontrol&#234; nad tymi miastami. Je&#191;eli odrzucisz t&#185; ofert&#234;, miasto %s powstanie przeciw tobie i wzmocni szeregi rebeliant&#243;w. Rebelianci w innych miastach mog&#185; r&#243;wnie&#191; p&#243;j&#156;&#230; ich &#156;ladem. Wybieraj rozwa&#191;nie.</Polish>
 		<Russian>, ìÿòåæíèêè ñîãëàñÿòñÿ ïðåêðàòèòü íàñèëèå è óñòàíîâèòü ìèð.[NEWLINE][NEWLINE]Åñëè âû ñîãëàñèòåñü íà ïðåäëîæåíèå, òî âîéíà áóäåò çàêîí÷åíà, íî âû ïîòåðÿåòå ýòè ãîðîäà. Åñëè âû îòêëîíèòå ïðåäëîæåíèå, òî %s âîññòàíåò è óêðåïèò ðÿäû ïîâñòàíöåâ, â òî âðåìÿ êàê ìÿòåæíèêè â äðóãèõ ãîðîäàõ òàêæå ìîãóò íà÷àòü äåéñòâîâàòü. Âûáèðàéòå îñòîðîæíî.</Russian>
 	</TEXT>
 	<TEXT>
@@ -1454,7 +1454,7 @@
 		<German>, Anführer der</German>
 		<Italian>, capo del</Italian>
 		<Spanish>, líder de la</Spanish>
-		<Polish>, przywódca cywilizacji</Polish>
+		<Polish>, przyw&#243;dca cywilizacji</Polish>
 		<Russian>, ëèäåð</Russian>
 	</TEXT>
 	<TEXT>
@@ -1464,7 +1464,7 @@
 		<German>Die %s1_CivName haben sich entschieden, ihre Unabhängigkeit aufzugeben und sich den %s2_CivName anzuschließen!</German>
 		<Italian>%s1_CivName ha deciso di rinunciare alla propria indipendenza e di unirsi a %s2_CivName!</Italian>
 		<Spanish>¡[NUM1:El:La:Los:Las] %s1_CivName [NUM1:ha:ha:han:han] decidido renunciar a su independencia y unirse [NUM2:al:a la:a los:a las] %s2_CivName!</Spanish>
-		<Polish>%s1_CivName zrezygnował z niepodległości i dołączył do %s2_CivName!</Polish>
+		<Polish>%s1_CivName zrezygnowa&#179; z niepodleg&#179;o&#156;ci i do&#179;&#185;czy&#179; do %s2_CivName!</Polish>
 		<Russian>%s: äîáðîâîëüíî ïðèñîåäèíÿåòñÿ ê: %s!</Russian>
 	</TEXT>
 	<TEXT>
@@ -1474,7 +1474,7 @@
 		<German>Unorganisierte Aufrührer haben sich erhoben, die Region versinkt im Bürgerkrieg!</German>
 		<Italian>Bande disorganizzate di ribelli sono in rivolta e la regione sprofonda nella guerra civile!</Italian>
 		<Spanish>¡Un grupo de rebeldes desorganizados se ha sublevado mientras la región caía en guerra civil!</Spanish>
-		<Polish>Niezorganizowani rebelianci powstali w regionie pogrążonym w wojnie domowej!</Polish>
+		<Polish>Niezorganizowani rebelianci powstali w regionie pogr&#185;&#191;onym w wojnie domowej!</Polish>
 		<Russian>Íåîðãàíèçîâàííûå ìÿòåæíèêè ïîäíÿëè âîññòàíèå, â òî âðåìÿ êàê ðåãèîí ïîãðóæàåòñÿ â ãðàæäàíñêóþ âîéíó!</Russian>
 	</TEXT>
 	<TEXT>
@@ -1484,7 +1484,7 @@
 		<German>Eine Revolution braut sich in %s zusammen!</German>
 		<Italian>Si sta preparando una rivoluzione a %s!</Italian>
 		<Spanish>¡Se está gestando una revolución en %s!</Spanish>
-		<Polish>Rewolucja w mieście %s wisi na włosku!</Polish>
+		<Polish>Rewolucja w mie&#156;cie %s wisi na w&#179;osku!</Polish>
 		<Russian>Ðåâîëþöèÿ êèïèò â %s!</Russian>
 	</TEXT>
 	<TEXT>
@@ -1494,7 +1494,7 @@
 		<German>Unter dem Druck von Rebellengruppen haben %s die Kontrolle von %s an %s übergeben!</German>
 		<Italian>Sotto pressione di gruppi ribelli, %s ha ceduto il controllo di %s a: %s!</Italian>
 		<Spanish>¡Bajo la presión de grupos rebeldes, %s ha cedido el control de %s a: %s!</Spanish>
-		<Polish>Pod presją grup rebeliantów %s przekazał kontrolę nad miastem %s do %s!</Polish>
+		<Polish>Pod presj&#185; grup rebeliant&#243;w %s przekaza&#179; kontrol&#234; nad miastem %s do %s!</Polish>
 		<Russian>Ïîä äàâëåíèåì ìÿòåæíèêîâ, %s îòäàëè êîíòðîëü íàä %s â ðóêè %s!</Russian>
 	</TEXT>
 	<TEXT>
@@ -1504,7 +1504,7 @@
 		<German>Der anhaltende Erfolg Ihres Aufstands startet ein goldenes Zeitalter!</German>
 		<Italian>Il continuo successo della tua rivolta fa partire un'età dell'oro!</Italian>
 		<Spanish>¡El continuo éxito de vuestra rebelión ha originado una Edad de Oro!</Spanish>
-		<Polish>Kolejne sukcesy twojej rebelii zapoczątkowały złoty wiek!</Polish>
+		<Polish>Kolejne sukcesy twojej rebelii zapocz&#185;tkowa&#179;y z&#179;oty wiek!</Polish>
 		<Russian>Ïðîäîëæàþùèéñÿ óñïåõ âàøåãî âîññòàíèÿ íà÷àë Çîëîòîé Âåê!</Russian>
 	</TEXT>
 	<TEXT>
@@ -1514,7 +1514,7 @@
 		<German>Die Revolutionäre vereinigen sich mit</German>
 		<Italian>I ribelli si uniscono a</Italian>
 		<Spanish>¡Los revolucionarios se han unido al/a la</Spanish>
-		<Polish>Rewolucjoniści przyłączyli się do</Polish>
+		<Polish>Rewolucjoni&#156;ci przy&#179;&#185;czyli si&#234; do</Polish>
 		<Russian>Ðåâîëþöèîíåðû ïðèñîåäèíèëèñü ê</Russian>
 	</TEXT>
 	<TEXT>
@@ -1524,7 +1524,7 @@
 		<German>wie Krieg die Region überflutet.</German>
 		<Italian>e la guerra dilaga nella regione.</Italian>
 		<Spanish>al tiempo que la guerra sacude la región.</Spanish>
-		<Polish>wojna ogarnęła ten region.</Polish>
+		<Polish>wojna ogarn&#234;&#179;a ten region.</Polish>
 		<Russian>â òî âðåìÿ, êàê âîéíà îõâàòûåò ðåãèîí.</Russian>
 	</TEXT>
 	<TEXT>
@@ -1534,7 +1534,7 @@
 		<German>hat die Kontrolle übernommen von</German>
 		<Italian>ha assunto il comando di</Italian>
 		<Spanish>ha tomado el control del/de la</Spanish>
-		<Polish>przejęli kontrolę nad miastem</Polish>
+		<Polish>przej&#234;li kontrol&#234; nad miastem</Polish>
 		<Russian>çàõâàòèëè êîíòðîëü íàä</Russian>
 	</TEXT>
 	<TEXT>
@@ -1544,7 +1544,7 @@
 		<German>Die Aufrührer vom %s kontrollieren %s! Unterstützung für den Aufstand wächst...</German>
 		<Italian>I ribelli del %s hanno preso il controllo di %s! Cresce il sostegno alla rivolta!</Italian>
 		<Spanish>¡Los rebeldes de %s han tomado el control de %s! El espirito revolucionario en la ciudad crece...</Spanish>
-		<Polish>Rebelianci z %s przejęli kontrolę nad miastem %s! Wsparcie dla rebelii wzrosło...</Polish>
+		<Polish>Rebelianci z %s przej&#234;li kontrol&#234; nad miastem %s! Wsparcie dla rebelii wzros&#179;o...</Polish>
 		<Russian>Ïîâñòàíöû èç %s âçÿëè ïîä êîíòðîëü %s! Ïîääåðæêà âîññòàíèÿ âîçðàñòàåò ...</Russian>
 	</TEXT>
 	<TEXT>
@@ -1554,7 +1554,7 @@
 		<German>Rebellenverstärkungen wurden gesichtet vor den Toren von</German>
 		<Italian>Rinforzi ribelli avvistati vicino a</Italian>
 		<Spanish>¡Se han avistado refuerzos rebeldes en el exterior de</Spanish>
-		<Polish>Posiłki rebeliantów zostały zauważone w pobliżu miasta</Polish>
+		<Polish>Posi&#179;ki rebeliant&#243;w zosta&#179;y zauwa&#191;one w pobli&#191;u miasta</Polish>
 		<Russian>Ê ìÿòåæíèêàì ïîñòóïèëè ïîäêðåïëåíèÿ îêîëî</Russian>
 	</TEXT>
 	<TEXT>
@@ -1564,7 +1564,7 @@
 		<German>Unsere Agenten berichten, dass die Spannung im %s von %s in %s</German>
 		<Italian>I nostri agenti segnalano che la tensione nella %s di %s in %s</Italian>
 		<Spanish>Nuestros agentes informan que la tensión en la(s) %s de %s, en %s, ha</Spanish>
-		<Polish>Nasi agenci donoszą, że napięcie w %s (%s) %s</Polish>
+		<Polish>Nasi agenci donosz&#185;, &#191;e napi&#234;cie w %s (%s) %s</Polish>
 		<Russian>Àãåíò äîêëàäûâàåò, ÷òî íàïðÿæåííîñòü â %s èç %s â %s</Russian>
 	</TEXT>
 	<TEXT>
@@ -1574,7 +1574,7 @@
 		<German>nachgelassen hat, nachdem die Regierung die Forderungen der Rebellen akzeptierte.</German>
 		<Italian>si è attenuata dopo che il governo ha accettato le condizioni dei ribelli.</Italian>
 		<Spanish>disminuido después de que el gobierno aceptara las exigencias de los rebeldes.</Spanish>
-		<Polish>zmalało po tym jak rząd zaakceptował żądania rebeliantów.</Polish>
+		<Polish>zmala&#179;o po tym jak rz&#185;d zaakceptowa&#179; &#191;&#185;dania rebeliant&#243;w.</Polish>
 		<Russian>ïîíèçèëàñü, ò.ê. ïðàâèòåëüñòâî ïðèíÿëî òðåáîâàíèÿ ìÿòåæíèêîâ.</Russian>
 	</TEXT>
 	<TEXT>
@@ -1584,7 +1584,7 @@
 		<German>sich erhöht hat, nachdem die Regierung die Forderungen der Rebellen ablehnte.</German>
 		<Italian>è aumentata dopo che il governo ha respinto le condizioni dei ribelli.</Italian>
 		<Spanish>aumentado después de que el gobierno rechazara las imposiciones de los rebeldes.</Spanish>
-		<Polish>wzrosło po tym jak rząd odrzucił żądania rebeliantów.</Polish>
+		<Polish>wzros&#179;o po tym jak rz&#185;d odrzuci&#179; &#191;&#185;dania rebeliant&#243;w.</Polish>
 		<Russian>ïîâûñèëàñü, ò.ê. ïðàâèòåëüñòâî îòâåðãëî òðåáîâàíèÿ ìÿòåæíèêîâ.</Russian>
 	</TEXT>
 	<TEXT>
@@ -1594,7 +1594,7 @@
 		<German>haben sich erhoben, die Region versinkt im Bürgerkrieg!</German>
 		<Italian>si è sollevata e la regione sprofonda nella guerra civile!</Italian>
 		<Spanish>se ha sublevado y la región ha caido en guerra civil.</Spanish>
-		<Polish>pojawiło się w regionie pogrążonym w wojnie domowej!</Polish>
+		<Polish>pojawi&#179;o si&#234; w regionie pogr&#185;&#191;onym w wojnie domowej!</Polish>
 		<Russian>íà÷àëè âîññòàíèå, â òî âðåìÿ êàê ðåãèîí ïîãðóæàåòñÿ â ãðàæäàíñêóþ âîéíó!</Russian>
 	</TEXT>
 	<TEXT>
@@ -1604,7 +1604,7 @@
 		<German>Ein kleiner Aufstand hat in %s stattgefunden!</German>
 		<Italian>Una piccola rivolta è scoppiata a %s!</Italian>
 		<Spanish>¡Una pequeña rebelión ha tomado lugar en %s!</Spanish>
-		<Polish>Mała rewolucja miała miejsce w mieście %s!</Polish>
+		<Polish>Ma&#179;a rewolucja mia&#179;a miejsce w mie&#156;cie %s!</Polish>
 		<Russian>Íåáîëüøîå âîññòàíèå ïðîèçîøëî â %s!</Russian>
 	</TEXT>
 	<TEXT>
@@ -1614,7 +1614,7 @@
 		<German>Eine gewalttätige Revolution findet statt im</German>
 		<Italian>Una violenta rivolta è scoppiata in</Italian>
 		<Spanish>¡¡¡Una violenta revolución ha tenido lugar en el</Spanish>
-		<Polish>Brutalna rewolucja miała miejsce w</Polish>
+		<Polish>Brutalna rewolucja mia&#179;a miejsce w</Polish>
 		<Russian>Æåñòîêîå âîññòàíèå íà÷àëîñü â</Russian>
 	</TEXT>
 	<TEXT>
@@ -1624,7 +1624,7 @@
 		<German>Durch Ihre Eroberung von %s wächst die Unterstützung für den Aufstand in der Stadt...</German>
 		<Italian>Dopo la cattura di %s, cresce il sostegno alla rivolta nella città...</Italian>
 		<Spanish>Con vuestra captura de %s, el espirito revolucionario en la ciudad crece...</Spanish>
-		<Polish>Wraz ze zdobyciem miasta %s, wsparcie dla rebelii w mieście wzrosło...</Polish>
+		<Polish>Wraz ze zdobyciem miasta %s, wsparcie dla rebelii w mie&#156;cie wzros&#179;o...</Polish>
 		<Russian>Ñ çàõâàòîì %s, â ãîðîäå íàðàñòàåò ïîääåðæêà âîññòàíèÿ ...</Russian>
 	</TEXT>
 	<TEXT>
@@ -1634,7 +1634,7 @@
 		<German>Die dankbare Stadt %s gibt Ihnen %d Gold, um den Aufstand zu unterstützen!</German>
 		<Italian>La città di %s, per riconoscenza, ti dona %d oro per sostenere la rivolta!</Italian>
 		<Spanish>¡La grandiosa ciudad de %s te otorga %d de oro para mantener la rebelión!</Spanish>
-		<Polish>Wdzięczne miasto %s ofiaruje ci %d złota jako wsparcie dla rebelii!</Polish>
+		<Polish>Wdzi&#234;czne miasto %s ofiaruje ci %d z&#179;ota jako wsparcie dla rebelii!</Polish>
 		<Russian>Äîáðûé ãîðîä %s äàåò âàì %d çîëîòà â ïîääåðæêó âîññòàíèÿ!</Russian>
 	</TEXT>
 	<TEXT>
@@ -1644,7 +1644,7 @@
 		<German>Verstärkungen schließen sich Ihrer Sache an, vor den Toren von</German>
 		<Italian>Rinforzi si uniscono al tuo esercito, nei pressi di</Italian>
 		<Spanish>¡Se han unido refuerzos a tu causa en el exterior de</Spanish>
-		<Polish>Posiłki przyłączyły się do ciebie w pobliżu miasta</Polish>
+		<Polish>Posi&#179;ki przy&#179;&#185;czy&#179;y si&#234; do ciebie w pobli&#191;u miasta</Polish>
 		<Russian>Íîâîáðàíöû ïðèñîåäèíèëèñü ê âàøåìó äåëó îêîëî</Russian>
 	</TEXT>
 	<TEXT>
@@ -1654,7 +1654,7 @@
 		<German>Unorganisierte Aufrührer haben sich gegen Sie erhoben!</German>
 		<Italian>Bande disorganizzate di ribelli si sono sollevate contro di te!</Italian>
 		<Spanish>¡Un grupo de rebeldes desorganizados se ha sublevado contra tí!</Spanish>
-		<Polish>Niezorganizowani rebelianci zwrócili się przeciwko tobie!</Polish>
+		<Polish>Niezorganizowani rebelianci zwr&#243;cili si&#234; przeciwko tobie!</Polish>
 		<Russian>Íåîðãàíèçîâàííàÿ òîëïà âûñòóïèëà ïðîòèâ âàñ!</Russian>
 	</TEXT>
 	<TEXT>
@@ -1664,7 +1664,7 @@
 		<German>in ihrem Krieg gegen Sie!</German>
 		<Italian>nella loro guerra contro di te!</Italian>
 		<Spanish>en su guerra contra tí!</Spanish>
-		<Polish>, aby wystąpić przeciwko tobie!</Polish>
+		<Polish>, aby wyst&#185;pi&#230; przeciwko tobie!</Polish>
 		<Russian>â èõ âîéíå ïðîòèâ âàñ!</Russian>
 	</TEXT>
 	<TEXT>
@@ -1684,7 +1684,7 @@
 		<German>[NEWLINE][SPACE]BarbarianCiv wird beendet bei %d1 Zivilisationen</German>
 		<Italian>[NEWLINE]La mod [COLOR_HIGHLIGHT_TEXT]civiltà barbare[COLOR_REVERT] si [COLOR_HIGHLIGHT_TEXT]disattiverà con %d1 civiltà[COLOR_REVERT]</Italian>
 		<Spanish>[NEWLINE][SPACE]BarbarianCiv se detendrá al llegar a %d1 civilizaciones</Spanish>
-		<Polish>[NEWLINE][SPACE]Mod BarbarianCiv zatrzyma się przy %d1 Cywilizacjach</Polish>
+		<Polish>[NEWLINE][SPACE]Mod BarbarianCiv zatrzyma si&#234; przy %d1 Cywilizacjach</Polish>
 		<Russian>[NEWLINE][SPACE]BarbarianCiv áóäåò îñòàíîâëåí íà %d1 öèâèëèçàöèÿõ</Russian>
 	</TEXT>
 	<TEXT>
@@ -1694,7 +1694,7 @@
 		<German>[NEWLINE]Voreingestellte Anzahl der Spieler: %d1</German>
 		<Italian>[NEWLINE]Numero predefinito di giocatori: [COLOR_HIGHLIGHT_TEXT]%d1[COLOR_REVERT][\H2]</Italian>
 		<Spanish>[NEWLINE]Numero de jugadores por defecto: %d1</Spanish>
-		<Polish>[NEWLINE]Domyślna ilość graczy: %d1</Polish>
+		<Polish>[NEWLINE]Domy&#156;lna ilo&#156;&#230; graczy: %d1</Polish>
 		<Russian>[NEWLINE]Êîëè÷åñòâî èãðîêîâ ïî óìîë÷àíèþ: %d1</Russian>
 	</TEXT>
 	<TEXT>
@@ -1726,7 +1726,7 @@
 		<English>[NEWLINE]ALT-E = Create log entry!</English>
 		<French>[NEWLINE]ALT-E = Créer une Entrée log!</French>
 		<Spanish>[NEWLINE]ALT-E = Crear entrada del registro</Spanish>
-		<Polish>[NEWLINE]ALT-E = Stwórz wpis do logu!</Polish>
+		<Polish>[NEWLINE]ALT-E = Stw&#243;rz wpis do logu!</Polish>
 		<Italian>[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]ALT-E[COLOR_REVERT] = Crea voce sul registro automatico</Italian> <!-- Bug mod recap screen Ctrl+Shift+Q -->
 	</TEXT>
 	<TEXT>
@@ -1750,7 +1750,7 @@
 		<English>[NEWLINE]ALT-L = Start/Stop logging! (Autolog must be on.)</English>
 		<French>[NEWLINE]ALT-L = Démarrer/Arrêter les logs! (si Autolog activé.)</French>
 		<Spanish>[NEWLINE]ALT-L = Activar/desactivar registro (con Autolog activo)</Spanish>
-		<Polish>[NEWLINE]ALT-L = Strat/Stop logowanie (Autologowanie musi być włączone.)</Polish>
+		<Polish>[NEWLINE]ALT-L = Strat/Stop logowanie (Autologowanie musi by&#230; w&#179;&#185;czone.)</Polish>
 		<Italian>[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]ALT-L[COLOR_REVERT] = Avvia o arresta il registro automatico</Italian> <!-- Bug mod recap screen Ctrl+Shift+Q -->
 	</TEXT>
 	<TEXT>
@@ -1758,7 +1758,7 @@
 		<English>[NEWLINE]ALT-M, ALT-CTRL-R = Create Reminder!</English>
 		<French>[NEWLINE]ALT-M, ALT-CTRL-R = Créer un Rappel!</French>
 		<Spanish>[NEWLINE]ALT-M, ALT-CTRL-R = Crear notificación</Spanish>
-		<Polish>[NEWLINE]ALT-M, ALT-CTRL-R = Stwórz przypomnienie!</Polish>
+		<Polish>[NEWLINE]ALT-M, ALT-CTRL-R = Stw&#243;rz przypomnienie!</Polish>
 		<Italian>[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]ALT-M[COLOR_REVERT], [COLOR_HIGHLIGHT_TEXT]ALT-CTRL-R[COLOR_REVERT] = Crea promemoria</Italian> <!-- Bug mod recap screen Ctrl+Shift+Q -->
 	</TEXT>
 	<TEXT>
@@ -1766,7 +1766,7 @@
 		<English>[NEWLINE]ALT-O = Change perspective!</English>
 		<French>[NEWLINE]ALT-O = Changer la perspective!</French>
 		<Spanish>[NEWLINE]ALT-O = Cambiar perspectiva</Spanish>
-		<Polish>[NEWLINE]ALT-O = Zmień perspektywę!</Polish>
+		<Polish>[NEWLINE]ALT-O = Zmie&#241; perspektyw&#234;!</Polish>
 		<Italian>[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]ALT-O[COLOR_REVERT] = Cambia prospettiva della mappa</Italian> <!-- Bug mod recap screen Ctrl+Shift+Q -->
 	</TEXT>
 	<TEXT>
@@ -1799,7 +1799,7 @@
 		<English>[NEWLINE]CTRL-A = Abandon City or Demolish Buildings!</English>
 		<French>[NEWLINE]CTRL-A = Abandonner Ville ou Démolir des Bâtiments!</French>
 		<Spanish>[NEWLINE]CTRL-A = Abandonar ciudad o demoler edificios</Spanish>
-		<Polish>[NEWLINE]CTRL-A = Opuść miasto lub zniszcz budynek!</Polish>
+		<Polish>[NEWLINE]CTRL-A = Opu&#156;&#230; miasto lub zniszcz budynek!</Polish>
 		<Italian>[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]CTRL-A[COLOR_REVERT] = Abbandona città o demolisci edifici</Italian> <!-- Bug mod recap screen Ctrl+Shift+Q -->
 	</TEXT>
 	<TEXT>
@@ -1815,7 +1815,7 @@
 		<English>[NEWLINE]CTRL-L ARROW = Angle 45 o CW!</English>
 		<French>[NEWLINE]CTRL-FLECHE G = Angle 45 D!</French>
 		<Spanish>[NEWLINE]CTRL-FLECHA IZQ = Ángulo 45º a la derecha</Spanish>
-		<Polish>[NEWLINE]CTRL-Strzałka w lewo = obróć o 45 stopni w lewo!</Polish>
+		<Polish>[NEWLINE]CTRL-Strza&#179;ka w lewo = obr&#243;&#230; o 45 stopni w lewo!</Polish>
 		<Italian>[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]CTRL-L ARROW[COLOR_REVERT] = Ruota mappa di 45° in senso orario</Italian> <!-- Bug mod recap screen Ctrl+Shift+Q -->
 	</TEXT>
 	<TEXT>
@@ -1823,7 +1823,7 @@
 		<English>[NEWLINE]CTRL-R ARROW = Angle 45 o CCW!</English>
 		<French>[NEWLINE]CTRL-FLECHE D = Angle 45 G!</French>
 		<Spanish>[NEWLINE]CTRL-FLECHA DER = Ángulo 45º a la izquierda</Spanish>
-		<Polish>[NEWLINE]CTRL-Strzałka w prawo = obróć o 45 stopni w prawo!</Polish>
+		<Polish>[NEWLINE]CTRL-Strza&#179;ka w prawo = obr&#243;&#230; o 45 stopni w prawo!</Polish>
 		<Italian>[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]CTRL-R ARROW[COLOR_REVERT] = Ruota mappa di 45° in senso antiorario</Italian> <!-- Bug mod recap screen Ctrl+Shift+Q -->
 	</TEXT>
 	<TEXT>
@@ -1831,7 +1831,7 @@
 		<English>[NEWLINE]CTRL-SHIFT-L = New leader!</English>
 		<French>[NEWLINE]CTRL-SHIFT-L = Nouveau leader!</French>
 		<Spanish>[NEWLINE]CTRL-SHIFT-L = Nuevo líder</Spanish>
-		<Polish>[NEWLINE]CTRL-SHIFT-L = Nowy Przywódca!</Polish>
+		<Polish>[NEWLINE]CTRL-SHIFT-L = Nowy Przyw&#243;dca!</Polish>
 		<Italian>[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]CTRL-SHIFT-L[COLOR_REVERT] = Nuovo leader</Italian> <!-- Bug mod recap screen Ctrl+Shift+Q -->
 	</TEXT>
 	<TEXT>
@@ -1855,7 +1855,7 @@
 		<English>[NEWLINE]CTRL-X = Show/Hide dotmap!</English>
 		<French>[NEWLINE]CTRL-X = Aff./Masquer 'dotmap'!</French>
 		<Spanish>[NEWLINE]CTRL-X = Mostrar/ocultar mapa de puntos</Spanish>
-		<Polish>[NEWLINE]CTRL-X = Pokaż/Ukryj kropki mapy!</Polish>
+		<Polish>[NEWLINE]CTRL-X = Poka&#191;/Ukryj kropki mapy!</Polish>
 		<Italian>[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]CTRL-X [COLOR_REVERT]= Mostra o nascondi dotmap</Italian>  <!-- Bug mod recap screen Ctrl+Shift+Q -->
 	</TEXT>
 	<TEXT>
@@ -1865,7 +1865,7 @@
 		<German>Erzeuge Notfallverteidiger</German>
 		<Italian>Genera difensori di emergenza</Italian>
 		<Spanish>Llamada a defensores de emergencia</Spanish>
-		<Polish>Pobór Podczas Zagrożenia</Polish>
+		<Polish>Pob&#243;r Podczas Zagro&#191;enia</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_REV_MOD_INITIALIZING_GAME_SHORTCUTS</Tag>
@@ -1874,7 +1874,7 @@
 		<German>[NEWLINE]Tastaturkürzel im Spiel:</German>
 		<Italian>[NEWLINE]Scorciatoie di gioco:[NEWLINE]</Italian> <!-- Bug mod recap screen Ctrl+Shift+Q -->
 		<Spanish>[NEWLINE]Atajos de teclado:</Spanish>
-		<Polish>[NEWLINE]Skróty w Grze:</Polish>
+		<Polish>[NEWLINE]Skr&#243;ty w Grze:</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_REV_MOD_INITIALIZING_INIT_POPUP</Tag>
@@ -1892,7 +1892,7 @@
 		<German>[NEWLINE]Inquisitionen Aktiviert</German>
 		<Italian>[NEWLINE]Opzione inquisizione attivata</Italian>
 		<Spanish>[NEWLINE]Inquisición activada</Spanish>
-		<Polish>[NEWLINE]Włączona Inkwizycja</Polish>
+		<Polish>[NEWLINE]W&#179;&#185;czona Inkwizycja</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_REV_MOD_INITIALIZING_PILLAGE_INFLUENCE</Tag>
@@ -1901,7 +1901,7 @@
 		<German>Beeinflussung durch Plünderung</German>
 		<Italian>Influenza dal saccheggio</Italian>
 		<Spanish>Influencia por saqueos</Spanish>
-		<Polish>Wpływ Plądrowania</Polish>
+		<Polish>Wp&#179;yw Pl&#185;drowania</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_REV_MOD_INITIALIZING_SHIFT_F5_SHORTCUT</Tag>
@@ -1926,7 +1926,7 @@
 		<German>[NEWLINE][NEWLINE]Maximale Anzahl Zivilisationen in DLL: %d1</German>
 		<Italian>[NEWLINE][NEWLINE][COLOR_HIGHLIGHT_TEXT]Numero massimo[COLOR_REVERT] civiltà (dal file DLL): %d1</Italian> <!-- Bug mod recap screen Ctrl+Shift+Q -->
 		<Spanish>[NEWLINE][NEWLINE]Máximo de civilizaciones de la DLL: %d1</Spanish>
-		<Polish>[NEWLINE][NEWLINE]Maks ilość cywilizacji w DLL: %d1</Polish>
+		<Polish>[NEWLINE][NEWLINE]Maks ilo&#156;&#230; cywilizacji w DLL: %d1</Polish>
 		<Russian>[NEWLINE][NEWLINE]Ìàêñèìàëüíîå êîëè÷åñòâî öèâèëèçàöèé â DLL: %d1</Russian>
 	</TEXT>
 	<TEXT>
@@ -1936,7 +1936,7 @@
 		<German>[NEWLINE][SPACE]Revolution wird beendet bei %d1 Zivilisationen</German>
 		<Italian>[NEWLINE]L'opzione [COLOR_HIGHLIGHT_TEXT]rivoluzioni[COLOR_REVERT] si [COLOR_HIGHLIGHT_TEXT]interromperà con %d1 civiltà[COLOR_REVERT]</Italian> <!-- Bug mod recap screen Ctrl+Shift+Q -->
 		<Spanish>[NEWLINE][SPACE]Revolution se detendrá al llegar a %d1 civilizaciones</Spanish>
-		<Polish>[NEWLINE][SPACE]Rewolucje zatrzymają się przy %d1 Cywilizacjach</Polish>
+		<Polish>[NEWLINE][SPACE]Rewolucje zatrzymaj&#185; si&#234; przy %d1 Cywilizacjach</Polish>
 		<Russian>[NEWLINE][SPACE]Revolution ìîä áóäåò îñòàíîâëåí íà %d1 öèâèëèçàöèÿõ.</Russian>
 	</TEXT>
 	<TEXT>
@@ -1966,7 +1966,7 @@
 		<German>Die Demonstranten sind noch nicht gewalttätig geworden, es ist immer noch Zeit die Situation friedlich beizulegen. Ihre Forderung zu erfüllen ist der bei weitem schnellste und einfachste Weg sie in absehbarer Zukunft in Ihrem Imperium zu halten.</German>
 		<Italian>I dimostranti ancora non sono arrivati alla violenza e ti rimane tempo per giungere ad una conclusione pacifica. Accettare la loro richiesta è la scelta più rapida e più semplice per mantenerli nel tuo impero, per il prossimo futuro.</Italian>
 		<Spanish>Los manifestantes todavía no han dado muestras de violencia, y aún hay tiempo para concluir la situación pacíficamente. Aceptar sus demandas es, con mucho, el camino más rápido y fácil para mantener a estos ciudadanos en tu imperio en un futuro próximo.</Spanish>
-		<Polish>Demonstranci jeszcze nie uciekli się do przemocy i wciąż jest czas na pokojowe zakończenie tej sytuacji. Spełnienie ich żądań jest najszybszą i najłatwiejszą drogą do pokojowego utrzymania ich w imperium w niedalekiej przyszłości.</Polish>
+		<Polish>Demonstranci jeszcze nie uciekli si&#234; do przemocy i wci&#185;&#191; jest czas na pokojowe zako&#241;czenie tej sytuacji. Spe&#179;nienie ich &#191;&#185;da&#241; jest najszybsz&#185; i naj&#179;atwiejsz&#185; drog&#185; do pokojowego utrzymania ich w imperium w niedalekiej przysz&#179;o&#156;ci.</Polish>
 		<Russian>Äåìîíñòðàöèÿ åùå íå ïðèâåëà ê íàñèëèþ, ïîýòîìó åñòü âðåìÿ äëÿ ìèðíîãî ðåøåíèÿ ïðîáëåìû. Óäîâëåòâîðåíèå èõ òðåáîâàíèé - íàèáîëåå ïðîñòîé ñïîñîá óäåðæàòü èõ â ãðàíèöàõ èìïåðèè íà îáîçðèìîå áóäóùåå.</Russian>
 	</TEXT>
 	<TEXT>
@@ -1976,7 +1976,7 @@
 		<German>KRIEGSVORBEREITUNGEN!!! Sie sollten Ihre Vorbereitungen abschließen, da die Aufrührer sehr bald zuschlagen werden...</German>
 		<Italian>preparandosi alla GUERRA!!! Affretta i tuoi preparativi, poiché i ribelli colpiranno molto presto...</Italian>
 		<Spanish>preparándose para la GUERRA. Deberías ultimar tus preparativos, dado que los rebeldes atacarán muy pronto...</Spanish>
-		<Polish>przygotowuje się do WOJNY!!! Powinieneś dokonać ostatnich przygotowań, gdyż rebelianci zamierzają niedługo uderzyć...</Polish>
+		<Polish>przygotowuje si&#234; do WOJNY!!! Powiniene&#156; dokona&#230; ostatnich przygotowa&#241;, gdy&#191; rebelianci zamierzaj&#185; nied&#179;ugo uderzy&#230;...</Polish>
 		<Russian>ãîòîâÿòñÿ ê âîéíå!!! Âàì ñäåëàòü ïîñëåäíèå ïðèãîòîâëåíèÿ ïåðåä àòàêîé ìÿòåæíèêîâ ...</Russian>
 	</TEXT>
 	<TEXT>
@@ -1986,7 +1986,7 @@
 		<German>fordern, dass Sie Ihre Staatsreligion ändern zu</German>
 		<Italian>chiedendo che la religione di stato divenga</Italian>
 		<Spanish>solicitando que cambies tu religión oficial por</Spanish>
-		<Polish>proszą cię o zmianę religii państwowej na</Polish>
+		<Polish>prosz&#185; ci&#234; o zmian&#234; religii pa&#241;stwowej na</Polish>
 		<Russian>òðåáóþò ñìåíû âàøåé ãîñ. ðåëèãèè íà</Russian>
 	</TEXT>
 	<TEXT>
@@ -1996,7 +1996,7 @@
 		<German>fordern, dass Sie annehmen</German>
 		<Italian>chiedendo che tu adotti</Italian>
 		<Spanish>solicitan que adoptes</Spanish>
-		<Polish>proszą o zaadoptowanie</Polish>
+		<Polish>prosz&#185; o zaadoptowanie</Polish>
 		<Russian>òðåáóþò, ÷òîáû âû ïðèíÿëè</Russian>
 	</TEXT>
 	<TEXT>
@@ -2006,7 +2006,7 @@
 		<German>Sie glauben, Ihre staatliche Unterstützung von</German>
 		<Italian>Ritengono che il tuo sostegno di stato al</Italian>
 		<Spanish>Sienten que tu patrocinio de estado de</Spanish>
-		<Polish>Czują, że państwowe wsparcie dla</Polish>
+		<Polish>Czuj&#185;, &#191;e pa&#241;stwowe wsparcie dla</Polish>
 		<Russian>Îíè ÷óâñòâóþò âàøó ãîñ. ïîääåðæêó</Russian>
 	</TEXT>
 	<TEXT>
@@ -2016,7 +2016,7 @@
 		<German>Obwohl sie noch keine Kriegsvorbereitungen begonnen haben, werden sie, wenn ihr Wunsch verweigert wird, noch eifriger in ihrem Wunsch nach Veränderung werden. Ihren Antrag zu beachten ist der bei weitem schnellste und einfachste Weg sie in absehbarer Zukunft in Ihrem Imperium zu halten, aber kann andererseits zu etwas Unzufriedenheit in anderen Städten führen.[NEWLINE][NEWLINE]Als Alternative kann eine großzügige Spende an die religiösen Führer sie beruhigen.</German>
 		<Italian>Per ora non hanno cominciato i preparativi per la guerra, ma se non accetti la loro richiesta, diventeranno presto più desiderosi di cambiamento. Accettare la loro richiesta è la scelta più rapida e più semplice per mantenerli nel tuo impero, per il prossimo futuro, ma può indurre un certo malcontento in altre città.[NEWLINE][NEWLINE]In alternativa, una notevole donazione ai capi religiosi li indurrebbe alla calma.</Italian>
 		<Spanish>Aunque aún no han comenzado sus preparativos para la guerra, si deniegas su petición puede que pronto se alcen más fervientes en su deseo de cambiar. Aceptar sus solicitudes es, de lejos, la opción más rápida y fácil para mantenerlos en tu imperio en el futuro próximo, pero puede llevar a cierto descontento en otras ciudades.[NEWLINE][NEWLINE]Alternativamente, una gran donación a los líderes religiosos puede motivarles a sentar la cabeza.</Spanish>
-		<Polish>Jeżeli odrzucisz teraz ich żądania, w czasie gdy nie rozpoczęli jeszcze przygotowań do zbrojnych działań, to mogą wkrótce stać się bardziej gorliwi w ich pragnieniu do zmian. Spełnienie ich żądań jest najszybszą i najłatwiejszą drogą do pokojowego utrzymania ich w imperium w niedalekiej przyszłości, ale może spowodować niezadowolenie w pozostałych miastach.[NEWLINE][NEWLINE]Jednakże, wysoki datek dla przywódców religijnych zmniejszy ich pragnienie do zmian.</Polish>
+		<Polish>Je&#191;eli odrzucisz teraz ich &#191;&#185;dania, w czasie gdy nie rozpocz&#234;li jeszcze przygotowa&#241; do zbrojnych dzia&#179;a&#241;, to mog&#185; wkr&#243;tce sta&#230; si&#234; bardziej gorliwi w ich pragnieniu do zmian. Spe&#179;nienie ich &#191;&#185;da&#241; jest najszybsz&#185; i naj&#179;atwiejsz&#185; drog&#185; do pokojowego utrzymania ich w imperium w niedalekiej przysz&#179;o&#156;ci, ale mo&#191;e spowodowa&#230; niezadowolenie w pozosta&#179;ych miastach.[NEWLINE][NEWLINE]Jednak&#191;e, wysoki datek dla przyw&#243;dc&#243;w religijnych zmniejszy ich pragnienie do zmian.</Polish>
 		<Russian>Õîòÿ îíè è íå íà÷àëè ïîäãîòîâêó ê âîéíå, âûïîëíåíèå èõ òðåáîâàíèé î ðåôîðìàõ ïîçâîëèò ñîõðàíèòü ìÿòåæíûå ïðîâèíöèè â ïðåäåëàõ ñòðàíû. Îäíàêî, ýòî ìîæåò íåãàòèâíî ïîâëèÿòü íà áîëåå êîíñðåâàòèâíóþ ÷àñòü íàñåëåíèÿ.[NEWLINE][NEWLINE]Â ëþáîì ñëó÷àå, âîçìîæíî ïðîùå áóäåò ïðîñòî çàïëàòèòü ðåëèãèîçíûì ëèäåðàì ïîâñòàíöåâ.</Russian>
 	</TEXT>
 	<TEXT>
@@ -2026,7 +2026,7 @@
 		<German>von Ihren Städten haben die neue Religion, während</German>
 		<Italian>delle tue città che seguono la nuova religione, mentre</Italian>
 		<Spanish>de tus ciudades que tienen la nueva religión, mientras</Spanish>
-		<Polish>twoich miast wyznaje nową religię, kiedy</Polish>
+		<Polish>twoich miast wyznaje now&#185; religi&#234;, kiedy</Polish>
 		<Russian>èç âàøèõ ãîðîäîâ èìåþò íîâóþ ðåëèãèþ, êîãäà</Russian>
 	</TEXT>
 	<TEXT>
@@ -2036,7 +2036,7 @@
 		<German>Obwohl sie noch keine Kriegsvorbereitungen begonnen haben, werden sie, wenn ihr Wunsch verweigert wird, noch eifriger in ihrem Wunsch nach Unabhägigkeit werden. Wenn Sie beschließen, sie nicht gehen zu lassen, so sollten Sie Ihre Religion in Ihren Städten verbreiten und weitere Maßnahmen ergreifen, um ihre Situation zu verbessern. Tun Sie das oder Sie können in Zukunft mit Aufständen rechnen![NEWLINE][NEWLINE]Alternativ könnten Sie den religiösen Führern eine großzügige Spende übergeben. Mit dieser Geste des Vertrauens werden sie ihre Sache fallen lassen und sich beruhigen.</German>
 		<Italian>Per ora non hanno cominciato i preparativi per la guerra, ma se non accetti la loro richiesta, diventeranno presto più desiderosi di indipendenza. Se sceglierai di non lasciarli andare, dovresti diffondere la religione di stato nelle città ed agire per migliorare la loro condizione. Fai qualcosa, altrimenti dovrai fronteggiare presto una rivolta![NEWLINE][NEWLINE]In alternativa, fai una generosa donazione ai capi religiosi: dopo questo gesto di buona fede, cominceranno ad abbandonare la loro causa e la situazione comincerà a calmarsi.</Italian>
 		<Spanish>Aunque aún no han comenzado sus preparativos para la guerra, si deniegas su petición puede que pronto se alcen más fervientes en su deseo de cambiar. Si decides impedir que se vayan, deberías extender tu religión a las otras ciudades y tomar otras medidas para mejorar su situación. ¡Haz una de las dos cosas, o puede que tengas que encarar una insurreción en el futuro![NEWLINE][NEWLINE]Alternativamente, puedes hacer una generosa donación a los líderes religiosos. Con este buen gesto de fé, dejarán a un lado su causa y se calmarán.</Spanish>
-		<Polish>Jeżeli odrzucisz teraz ich żądania, w czasie gdy nie rozpoczęli jeszcze przygotowań do zbrojnych działań, to mogą wkrótce stać się bardziej gorliwi w ich pragnieniu do niepodległości. Jeżeli nie pozwolisz im odejść, będziesz musiał rozpowszechnić twoją religię do tych miast i podjąć inne działania, które poprawią ich sytuację. Jeśli tego nie zrobisz, w przyszłości będziesz musiał stawić czoło rewolucji![NEWLINE][NEWLINE]Jednakże, wysoki datek dla przywódców religijnych zmniejszy ich pragnienie do niepodległości.</Polish>
+		<Polish>Je&#191;eli odrzucisz teraz ich &#191;&#185;dania, w czasie gdy nie rozpocz&#234;li jeszcze przygotowa&#241; do zbrojnych dzia&#179;a&#241;, to mog&#185; wkr&#243;tce sta&#230; si&#234; bardziej gorliwi w ich pragnieniu do niepodleg&#179;o&#156;ci. Je&#191;eli nie pozwolisz im odej&#156;&#230;, b&#234;dziesz musia&#179; rozpowszechni&#230; twoj&#185; religi&#234; do tych miast i podj&#185;&#230; inne dzia&#179;ania, kt&#243;re poprawi&#185; ich sytuacj&#234;. Je&#156;li tego nie zrobisz, w przysz&#179;o&#156;ci b&#234;dziesz musia&#179; stawi&#230; czo&#179;o rewolucji![NEWLINE][NEWLINE]Jednak&#191;e, wysoki datek dla przyw&#243;dc&#243;w religijnych zmniejszy ich pragnienie do niepodleg&#179;o&#156;ci.</Polish>
 		<Russian>Õîòü îíè è íå ñîáèðàþòñÿ ïîäíÿòü ìÿòåæ â áëèæàéøåå âðåìÿ, åñëè âû îòêëîíèòå âûäâèíóòûå òðåáîâàíèÿ, îíè ìîãóò ñòàòü áîëåå íàñòîé÷èâûìè â ñâîåì ñòðåìëåíèè ê íåçàâèñèìîñòè. Åñëè õîòèòå óäåðæàòü èõ, òî ñòîèò ðàñïðîñòðàòü ãîñ. ðåëèãèþ â ýòè ãîðîäà è ïðèíÿòü äðóãèå íåîáõîäèìûå äåéñòâèÿ.[NEWLINE][NEWLINE]Èëè ìîæåòå ïðîñòî äàòü âçÿòêó èõ äóõîâíûì ëèäåðàì. Ýòî äîëæíî çàòêíóòü èõ íà âðåìÿ.</Russian>
 	</TEXT>
 	<TEXT>
@@ -2046,7 +2046,7 @@
 		<German>suchen nach Unabhängigkeit, damit sie ihren Glauben frei ausüben können</German>
 		<Italian>cercando l'indipendenza in modo da essere liberi di credere in cosa vogliono</Italian>
 		<Spanish>buscando indepedencia de modo que puedan adorar libremente</Spanish>
-		<Polish>poszukują niepodległości, aby mogli swobodnie wyznawać swoją wiarę</Polish>
+		<Polish>poszukuj&#185; niepodleg&#179;o&#156;ci, aby mogli swobodnie wyznawa&#230; swoj&#185; wiar&#234;</Polish>
 		<Russian>ïðîñÿò íåçàâèñèìîñòè, ÷òîáû îíè ìîãëè ñïîêîéíî ÷òèòü ñâîþ âåðó</Russian>
 	</TEXT>
 	<TEXT>
@@ -2056,7 +2056,7 @@
 		<German>Sie haben gelebt in Ihrer</German>
 		<Italian>Hanno vissuto nella tuo</Italian>
 		<Spanish>Han vivido en tu sociedad dominada por el</Spanish>
-		<Polish>Żyli w twoim</Polish>
+		<Polish>&#175;yli w twoim</Polish>
 		<Russian>Îíè æèëè â âàøåì</Russian>
 	</TEXT>
 	<TEXT>
@@ -2066,7 +2066,7 @@
 		<German>dominanten Gesellschaft für zu lange und möchten bilden</German>
 		<Italian>per troppo tempo e vogliono formare</Italian>
 		<Spanish>durante demasiado tiempo, y quieren formar</Spanish>
-		<Polish>dominującym społeczeństwie zbyt długo i chcą utworzyć</Polish>
+		<Polish>dominuj&#185;cym spo&#179;ecze&#241;stwie zbyt d&#179;ugo i chc&#185; utworzy&#230;</Polish>
 		<Russian>îáùåñòâå â êà÷åñòâå ìåíüøèíñòâà ñëèøêîì äîëãî, è õîòÿò ñôîðìèðîâàòü</Russian>
 	</TEXT>
 	<TEXT>
@@ -2076,7 +2076,7 @@
 		<German>suchen nach teilweiser Autonomie, damit sie ihren Glauben frei ausüben können,</German>
 		<Italian>cercano una parziale autonomia in modo da professare liberamente la propria fede,</Italian>
 		<Spanish>buscando cierta autonomía de modo que puedan adorar su fé más libremente,</Spanish>
-		<Polish>poszukują częściowej autonomii, aby mogli swobodnie wyznawać swoją wiarę,</Polish>
+		<Polish>poszukuj&#185; cz&#234;&#156;ciowej autonomii, aby mogli swobodnie wyznawa&#230; swoj&#185; wiar&#234;,</Polish>
 		<Russian>òðåáóþò ÷àñòè÷íîé àâòîíîìèè, ÷òîáû îíè ìîãëè ñïîêîéíî ñîâåðøàòü ñâîè îáðÿäû</Russian>
 	</TEXT>
 	<TEXT>
@@ -2086,7 +2086,7 @@
 		<German>Sie möchten bilden</German>
 		<Italian>Desiderano formare</Italian>
 		<Spanish>Desean fomar</Spanish>
-		<Polish>Chcą utworzyć</Polish>
+		<Polish>Chc&#185; utworzy&#230;</Polish>
 		<Russian>Îíè õîòÿò ñôîðìèðîâàòü</Russian>
 	</TEXT>
 	<TEXT>
@@ -2096,7 +2096,7 @@
 		<German>und ein freier Vasall Ihres Imperiums werden. Sie können ihnen auch volle Unabhängigkeit bewilligen.</German>
 		<Italian>e diventare vassalli del tuo impero. Puoi anche decidere di riconoscere loro la completa indipendenza.</Italian>
 		<Spanish>y convertirse en un vasallo libre de tu imperio. También puedes concederles la independencia total.</Spanish>
-		<Polish>i stać się wolnym Wasalem twojego imperium. Możesz również jeśli chcesz nadać im niepodległość.</Polish>
+		<Polish>i sta&#230; si&#234; wolnym Wasalem twojego imperium. Mo&#191;esz r&#243;wnie&#191; je&#156;li chcesz nada&#230; im niepodleg&#179;o&#156;&#230;.</Polish>
 		<Russian>è ñòàòü ñâîáîäíûì âàññàëîì âàøåé Èìïåðèè. Âû òàêæå ìîæåòå äàðîâàòü èì àáñîëþòíóþ íåçàâèñèìîñòü.</Russian>
 	</TEXT>
 	<TEXT>
@@ -2106,7 +2106,7 @@
 		<German>behindert ihre Fähigkeit, den einen wahren Glauben zu üben und zu verbreiten,</German>
 		<Italian>ostacola la loro capacità di praticare e diffondere l'unica vera fede,</Italian>
 		<Spanish>impide la posibilidad de practicar y propagar la única y verdadera fé,</Spanish>
-		<Polish>utrudnia im zdolność do praktykowania i rozpowszechniania jedynej prawdziwej wiary,</Polish>
+		<Polish>utrudnia im zdolno&#156;&#230; do praktykowania i rozpowszechniania jedynej prawdziwej wiary,</Polish>
 		<Russian>ïðåïÿòñòâóåò èõ âîçìîæíîñòè ðàñïðîñòðàíÿòü è ïî÷èòàòü ñâîþ âåðó,</Russian>
 	</TEXT>
 	<TEXT>
@@ -2116,7 +2116,7 @@
 		<German>haben die aktuelle Staatsreligion.</German>
 		<Italian>ha la tua attuale religione di stato.</Italian>
 		<Spanish>tienen tu religión oficial actual.</Spanish>
-		<Polish>wyznaje religię państwową.</Polish>
+		<Polish>wyznaje religi&#234; pa&#241;stwow&#185;.</Polish>
 		<Russian>âåðóþò â òåêóùóþ ðåëèãèþ ãîñ-âà.</Russian>
 	</TEXT>
 	<TEXT>
@@ -2126,7 +2126,7 @@
 		<German>erbitten ein Ende Ihrer</German>
 		<Italian>chiedono la fine del tuo</Italian>
 		<Spanish>solicitando el fin de tu</Spanish>
-		<Polish>proszą o zakończenie twojej</Polish>
+		<Polish>prosz&#185; o zako&#241;czenie twojej</Polish>
 		<Russian>òðåáóþò êîíöà âàøåé</Russian>
 	</TEXT>
 	<TEXT>
@@ -2136,7 +2136,7 @@
 		<German>Sie sind zu lang unterdrückt worden und sie wünschen, dass Sie Ihre religiöse Gesellschaftsform wechseln zu</German>
 		<Italian>Sono stati oppressi per troppo tempo e vogliono che tu cambi la forma di governo religiosa in</Italian>
 		<Spanish>Han estado oprimidos demasiado tiempo, y desean que cambies tu principio de Religión a</Spanish>
-		<Polish>Byli prześladowani zbyt długo i pragną zmiany doktryny religijnej na</Polish>
+		<Polish>Byli prze&#156;ladowani zbyt d&#179;ugo i pragn&#185; zmiany doktryny religijnej na</Polish>
 		<Russian>Áûëè ïîä ãíåòîì âàøèõ äîãì ñëèøêîì äîëãî, è òðåáóþò èçìåíèòü âàøè ðåëèãèîçíûå çàêîíû íà</Russian>
 	</TEXT>
 	<TEXT>
@@ -2146,7 +2146,7 @@
 		<German>Wenn Sie ihre Bitte zu gehen verweigern, so müssen Sie sich gläubigen Revolutionären auf dem Schlachtfeld stellen. Ihre Truppen in diesen Städten werden von einer feindseligen Bevölkerung umgeben sein und können starke Verluste erleiden oder sogar überlaufen. Die Verteidigung einiger dieser Städte kann unmittelbar zerfallen, andere können vielleicht einen Rest an Kontrolle bewahren. Krieg mit Ihren eigenen Städten ist häßlich, aber vielleicht ist er dennoch besser, als Ihre Städte ohne Kampf ziehen zu lassen! Wägen Sie Ihre Optionen sorgfältig ab.</German>
 		<Italian>Se non accetterai la loro richiesta di separarsi, dovrai affrontare i rivoluzionari sul campo di battaglia. Le tue truppe in queste città saranno circondate da una popolazione ostile e potranno subire gravi perdite o anche disertare. Le difese di alcune di queste città possono crollare subito, su altre potresti mantenere un certo livello di controllo. Anche se la guerra contro le tue stesse città sarà terribile, potrebbe essere meglio che permettere loro di separarsi senza lottare! Valuta con attenzione le tue scelte.</Italian>
 		<Spanish>Si rechazas su petición de marcharse, deberás encarar a los revolucionarios en el campo de batalla. Tus tropas en estas ciudades estarán cercadas por una población hostil y pueden sufrir graves pérdidas o incluso ser destruidas. Las defensas de algunas de estas ciudades podrían caer inmediatamente, es posible que otras ciudades puedan mantener un cierto grado de control. ¡Teniendo en cuenta que una guerra con tus propias ciudades será horrible, sería mejor que permitas abandonar las ciudades bajo tu control sin luchar! Considera cuidadosamente tus opciones.</Spanish>
-		<Polish>Jeśli odmówisz im wolności, będziesz musiał stawić czoło rewolucjonistom na polu bitwy. Twoje wojsko w tych miastach zostanie otoczone przez wrogo nastawioną ludność i może ponieść ciężkie straty. Obrona kilku z tych miast może ulec od razu, inne mogą zachować tylko pozory kontroli. Wojna domowa przeciwko własnym miastom może wydawać się okropnością, ale może jest to dużo lepsze niż utrata kontroli nad nimi bez walki! Ostrożnie oceń własne możliwości.</Polish>
+		<Polish>Je&#156;li odm&#243;wisz im wolno&#156;ci, b&#234;dziesz musia&#179; stawi&#230; czo&#179;o rewolucjonistom na polu bitwy. Twoje wojsko w tych miastach zostanie otoczone przez wrogo nastawion&#185; ludno&#156;&#230; i mo&#191;e ponie&#156;&#230; ci&#234;&#191;kie straty. Obrona kilku z tych miast mo&#191;e ulec od razu, inne mog&#185; zachowa&#230; tylko pozory kontroli. Wojna domowa przeciwko w&#179;asnym miastom mo&#191;e wydawa&#230; si&#234; okropno&#156;ci&#185;, ale mo&#191;e jest to du&#191;o lepsze ni&#191; utrata kontroli nad nimi bez walki! Ostro&#191;nie oce&#241; w&#179;asne mo&#191;liwo&#156;ci.</Polish>
 		<Russian>Åñëè âû íå ïðèìèòå èõ òðåáîâàíèÿ, òî âàøè âîéñêà áóäóò îêðóæåííû âðàæåñêèìè ôîðìàðèðîâàíèÿìè è ìîãóò ïîíåñòè ñåðüåçíûå ïîòåðè èëè äàæå îòñòóïèòü. Çàùèòíèêè íåêîòîðûõ ãîðîäîâ ïàäóò íåçàìåäëèòåëüíî, îñòàëüíûå ñìîãóò ïðîäåðæàòüñÿ åùå êàêîå-òî âðåìÿ. Õîòÿ âîéíà ñ ñîáñòâåííûì íàðîäîì ìîæåò âûãëÿäåòü îòâðàòèòåëüíîé, âîçìîæíî, ýòî ëó÷øå ÷åì ñäàâàòüñÿ áåç áîÿ! Â ëþáîì ñëó÷àå, áóäüòå îñòîðîæíû.</Russian>
 	</TEXT>
 	<TEXT>
@@ -2156,7 +2156,7 @@
 		<German>erklären ihre Unabhängigkeit, damit sie ihren Glauben frei ausüben können,</German>
 		<Italian>dichiarando la propria indipendenza in modo da professare liberamente la propria fede,</Italian>
 		<Spanish>declarando su indepedencia de modo que puedan profesar libremente su fé,</Spanish>
-		<Polish>ogłaszają niepodległość, aby mogli swobodnie wyznawać swoją wiarę,</Polish>
+		<Polish>og&#179;aszaj&#185; niepodleg&#179;o&#156;&#230;, aby mogli swobodnie wyznawa&#230; swoj&#185; wiar&#234;,</Polish>
 		<Russian>îáúÿëâÿþò î ñâîåé íåçàâèñèìîñòè, ÷òîáû ñâîáîäíî ÷òèòü ñâîþ âåðó,</Russian>
 	</TEXT>
 	<TEXT>
@@ -2166,7 +2166,7 @@
 		<German>Sie haben gelebt in Ihrer</German>
 		<Italian>Hanno vissuto nel tuo</Italian>
 		<Spanish>Han vivido en tu sociedad dominada por el</Spanish>
-		<Polish>Żyli w twoim</Polish>
+		<Polish>&#175;yli w twoim</Polish>
 		<Russian>Îíè æèëè â âàøåì</Russian>
 	</TEXT>
 	<TEXT>
@@ -2176,7 +2176,7 @@
 		<German>dominanten Gesellschaft für zu lange!</German>
 		<Italian>per troppo tempo!</Italian>
 		<Spanish>durante demasiado tiempo.</Spanish>
-		<Polish>dominującym społeczeństwie zbyt długo!</Polish>
+		<Polish>dominuj&#185;cym spo&#179;ecze&#241;stwie zbyt d&#179;ugo!</Polish>
 		<Russian>îáùåñòâå â êà÷åñòâå ìåíüøèíñòâà ñëèøêîì äîëãî!</Russian>
 	</TEXT>
 	<TEXT>
@@ -2205,7 +2205,7 @@
 		<German>- Klicken, um der Stadt Bestechungsgeld anzubieten.[NEWLINE]==========================</German>
 		<Italian>[SPACE]Clicca sulla barra per corrompere la città[NEWLINE]==========================</Italian> <!-- city screen revolution panel -->
 		<Spanish>- clic para ofrecer soborno a la ciudad[NEWLINE]==========================</Spanish>
-		<Polish>- kliknij, aby zaoferować łapówkę temu miastu[NEWLINE]==========================</Polish>
+		<Polish>- kliknij, aby zaoferowa&#230; &#179;ap&#243;wk&#234; temu miastu[NEWLINE]==========================</Polish>
 		<Russian>- êëèêíèòå ÷òîáû çàäîáðèòü æèòåëåé[NEWLINE]==========================</Russian>
 	</TEXT>
 	<TEXT>
@@ -2232,7 +2232,7 @@
 		<German>Gute Nachrichten!</German>
 		<Italian>Buone notizie!</Italian>
 		<Spanish>¡Buenas noticias!</Spanish>
-		<Polish>Dobre wieści!</Polish>
+		<Polish>Dobre wie&#156;ci!</Polish>
 		<Russian>Õîðîøèå íîâîñòè!</Russian>
 	</TEXT>
 	<TEXT>
@@ -2242,7 +2242,7 @@
 		<German>Ihre Bürger werden unruhig</German>
 		<Italian>I tuoi cittadini sono sempre più irrequieti</Italian>
 		<Spanish>La tensión de tus ciudadanos está creciendo</Spanish>
-		<Polish>Twoi mieszkańcy robią się niespokojni</Polish>
+		<Polish>Twoi mieszka&#241;cy robi&#185; si&#234; niespokojni</Polish>
 		<Russian>Áåñïîêîéñòâî âàøèõ æèòåëåé ðàñòåò</Russian>
 	</TEXT>
 	<TEXT>
@@ -2252,7 +2252,7 @@
 		<German>Eine Revolution braut sich zusammen!</German>
 		<Italian>Una rivoluzione sta per iniziare!</Italian>
 		<Spanish>¡Se está gestando una revolución!</Spanish>
-		<Polish>Rewolucja wisi na włosku!</Polish>
+		<Polish>Rewolucja wisi na w&#179;osku!</Polish>
 		<Russian>Êèïèò ðåâîëþöèÿ!</Russian>
 	</TEXT>
 	<TEXT>
@@ -2282,7 +2282,7 @@
 		<German>Es gibt auch Civ-weite Dinge, die Sie beachten sollten:</German>
 		<Italian>Ci sono cose più generali da considerare:</Italian>
 		<Spanish>Deberías considerar también algunos asuntos que inciden sobre tu civilización en general:</Spanish>
-		<Polish>Są również problemy do rozwiązania, które dotyczą całej cywilizacji:</Polish>
+		<Polish>S&#185; r&#243;wnie&#191; problemy do rozwi&#185;zania, kt&#243;re dotycz&#185; ca&#179;ej cywilizacji:</Polish>
 		<Russian>Òàêæå âû ìîæåòå ïðèíÿòü ñëåäóþùèå äåéñòâèÿ íà óðîâíå ñòðàíû:</Russian>
 	</TEXT>
 	<TEXT>
@@ -2292,7 +2292,7 @@
 		<German>erwägen eine Revolution. Es ist möglicherweise nicht zu spät die Ordnung aufrecht zu erhalten, wenn Sie Schritte ergreifen, die die Situation in diesen Städten verbessert.</German>
 		<Italian>potrebbero rivoltarsi. Non è ancora troppo tardi per mantenere l'ordine, se agirai per migliorare la situazione in queste città.</Italian>
 		<Spanish>están ansiosos por rebelarse. Aún no debería ser demasiado tarde para mantener el orden, si tomas medidas para mejorar la situación local.</Spanish>
-		<Polish>planują rozpoczęcie rewolucji. Może nie jest jeszcze za późno do wydania rozkazów, które rozwiążą lokalne problemy w tych miastach.</Polish>
+		<Polish>planuj&#185; rozpocz&#234;cie rewolucji. Mo&#191;e nie jest jeszcze za p&#243;&#159;no do wydania rozkaz&#243;w, kt&#243;re rozwi&#185;&#191;&#185; lokalne problemy w tych miastach.</Polish>
 		<Russian>çàìûøëÿþò ðåâîëþöèþ. Íî, âîçìîæíî, åùå íå ïîçäíî ïîïðîáàâòü íàâåñòè ïîðÿäîê â ýòèõ ãîðîäàõ.</Russian>
 	</TEXT>
 	<TEXT>
@@ -2302,7 +2302,7 @@
 		<German>Der Ruhm der Eroberung anderer Länder könnte die Städte überzeugen, bei Ihnen zu bleiben. Wenn Sie bereits fremde Länder im Auge haben, könnte es jetzt an der Zeit sein zuzuschlagen.</German>
 		<Italian>La gloria delle tue conquiste potrebbe convincere le città in rivolta a desistere: se hai sotto mira territori stranieri potrebbe essere il momento di attaccare.</Italian>
 		<Spanish>Puede que la gloria de conquistar otras tierras convenza a las ciudades para quedarse; si tienes los ojos puestos en tierras extranjeras, puede que sea el momento de atacar.</Spanish>
-		<Polish>Chwała z podboju nowych ziem może przekonać miasta, aby pozostały pod twoim panowaniem. Jeśli masz ochotę zdobyć nowe ziemie to może być teraz właściwy czas na uderzenie.</Polish>
+		<Polish>Chwa&#179;a z podboju nowych ziem mo&#191;e przekona&#230; miasta, aby pozosta&#179;y pod twoim panowaniem. Je&#156;li masz ochot&#234; zdoby&#230; nowe ziemie to mo&#191;e by&#230; teraz w&#179;a&#156;ciwy czas na uderzenie.</Polish>
 		<Russian>Ïîáåäà íàä ñîñåäîì ìîæåò óáåäèòü ìÿòåæíûå ïðîâèíöèè îñòàòüñÿ ïîä âàøåé âëàñòüþ, òàê ÷òî ýòî õîðîøåå âðåìÿ äëÿ âîéíû.</Russian>
 	</TEXT>
 	<TEXT>
@@ -2312,7 +2312,7 @@
 		<German>Besonders wenn Sie einige der Städte wiedergewinnen könnten, die Sie früher verloren haben, wäre der Ruhm gewaltig.</German>
 		<Italian>In più, se riuscissi a riconquistare città perse in precedenza, per te sarebbe il trionfo.</Italian>
 		<Spanish>Por otro lado, si pudiérais recuperar algunas de las ciudades perdidas anteriormente, la gloria sería enorme.</Spanish>
-		<Polish>Szczególnie chwała byłaby wielka, gdybyś był w stanie odzyskać chociaż część utraconych wcześniej miast.</Polish>
+		<Polish>Szczeg&#243;lnie chwa&#179;a by&#179;aby wielka, gdyby&#156; by&#179; w stanie odzyska&#230; chocia&#191; cz&#234;&#156;&#230; utraconych wcze&#156;niej miast.</Polish>
 		<Russian>Áûëî áû íåïëîõî âåðíóòü ãîðîäà, ïîòåðÿííûå âàìè ðàíåå. Ýòî ïîïðàâèò âàøó ïîøàòíóâøóþñÿ ðåïóòàöèþ.</Russian>
 	</TEXT>
 	<TEXT>
@@ -2322,7 +2322,7 @@
 		<German>Ernste Nachrichten! Die Bürger von</German>
 		<Italian>Notizie preoccupanti! I cittadini di</Italian>
 		<Spanish>¡Graves noticias! Los ciudadanos de</Spanish>
-		<Polish>Ważne wieści! Mieszkańcy miasta</Polish>
+		<Polish>Wa&#191;ne wie&#156;ci! Mieszka&#241;cy miasta</Polish>
 		<Russian>Ïëîõèå íîâîñòè! Æèòåëè</Russian>
 	</TEXT>
 	<TEXT>
@@ -2332,7 +2332,7 @@
 		<German>Aber seien Sie gewarnt, dies ist nur eine temporäre Lösung!</German>
 		<Italian>Attento, questa è solo una soluzione momentanea!</Italian>
 		<Spanish>¡Pero ten cuidado, esto es solo una solución temporal!</Spanish>
-		<Polish>Ale miej na uwadze, że jest to tylko tymczasowe rozwiązanie!</Polish>
+		<Polish>Ale miej na uwadze, &#191;e jest to tylko tymczasowe rozwi&#185;zanie!</Polish>
 		<Russian>Íî áóäüòå íàñòîðîæå - ýòî ëèøü âðåìåííûå ðåøåíèÿ!</Russian>
 	</TEXT>
 	<TEXT>
@@ -2352,7 +2352,7 @@
 		<German>Während ein Sieg in unseren gegenwärtigen Kriegen die Freiheitsrufe beruhigen kann, könnte die Schande des Verlustes einer weiteren Stadt an unsere Feinde unsere Anhängerschaft verringern. Überlegen Sie gründlich, wie Sie einen schnellen Sieg erringen können.</German>
 		<Italian>Mentre una vittoria nella guerra in corso potrà diminuire la tensione nelle città, l'umiliazione di farsi strappare un'altra città dai nemici potrebbe fare crollare il tuo consenso. Valuta con attenzione le probabilità di una vittoria rapida.</Italian>
 		<Spanish>Mientras que una victoria en nuestras guerras actuales podría calmar los llantos de las ciudades, la vergüenza de perder otra ciudad ante nuestros enemigos podría erosionar su apoyo. Considerad cuidadosamente vuestras posibilidades para una victoria rápida.</Spanish>
-		<Polish>Gdy podczas triumfu w trwającej wojnie uciszają się głosy buntowników, to wstyd po stracie miasta osłabia mocno nasze poparcie. Ostrożnie rozważ swoje szanse na szybkie zwycięstwo.</Polish>
+		<Polish>Gdy podczas triumfu w trwaj&#185;cej wojnie uciszaj&#185; si&#234; g&#179;osy buntownik&#243;w, to wstyd po stracie miasta os&#179;abia mocno nasze poparcie. Ostro&#191;nie rozwa&#191; swoje szanse na szybkie zwyci&#234;stwo.</Polish>
 		<Russian>Õîòÿ ïîáåäû â òåêóùèõ âîéíàõ ìîãóò çàãëóøèòü ìÿòåæíûå ãîëîñà â âàøèõ ãîðîäàõ, íå ñòîèò ïåðåðàñ÷èòûâàòü ñâîè ñèëû. Ò.ê. ïîòåðÿ åùå îäíîãî ãîðîäà ìîæåò ñòîèòü âàì äîðîãî.</Russian>
 	</TEXT>
 	<TEXT>
@@ -2382,7 +2382,7 @@
 		<German>Stadt für Stadt:</German>
 		<Italian>Città per città:</Italian>
 		<Spanish>Ciudad por ciudad:</Spanish>
-		<Polish>Przegląd miast:</Polish>
+		<Polish>Przegl&#185;d miast:</Polish>
 		<Russian>Ãîðîä çà ãîðîäîì:</Russian>
 	</TEXT>
 	<TEXT>
@@ -2392,7 +2392,7 @@
 		<German>Imperiumweite Stabilität:</German>
 		<Italian>Stabilità nazionale:</Italian> <!-- city screen hover revolution bar -->
 		<Spanish>Estabilidad nacional:</Spanish>
-		<Polish>Stabilność imperium:</Polish>
+		<Polish>Stabilno&#156;&#230; imperium:</Polish>
 		<Russian>Óð. ñòàáèëüíîñòè ñòðàíû:</Russian>
 	</TEXT>
 	<TEXT>
@@ -2431,7 +2431,7 @@
 		<German>Gefahr</German>
 		<Italian>Pericolo</Italian>
 		<Spanish>Peligro</Spanish>
-		<Polish>Zagrożone</Polish>
+		<Polish>Zagro&#191;one</Polish>
 		<Russian>Îïàñíî</Russian>
 	</TEXT>
 	<TEXT>
@@ -2451,7 +2451,7 @@
 		<German>(Anmerkung: Einzelne Zahlen lassen sich in vielen Fällen nicht zum Ganzen addieren)</German>
 		<Italian>(Nota: In molti casi, la somma dei numeri specifici non fa il totale)</Italian>
 		<Spanish>(Nota: En diversas circunstancias, los números específicos no se sumarán al total)</Spanish>
-		<Polish>(Uwaga: Konkretne liczby nie będą dodawane do całkowitej sumy w wielu sytuacjach)</Polish>
+		<Polish>(Uwaga: Konkretne liczby nie b&#234;d&#185; dodawane do ca&#179;kowitej sumy w wielu sytuacjach)</Polish>
 		<Russian>(Ïðèìå÷àíèå: Îïðåäåëåííûå ÷èñëà íå áóäóò ñîñòàâëÿòü â öåëîì îáùåå êîëè÷åñòâî ïðè ìíîãèõ îáñòîÿòåëüñòâàõ)</Russian>
 	</TEXT>
 	<TEXT>
@@ -2461,7 +2461,7 @@
 		<German>Detailansicht</German>
 		<Italian>Dettagli</Italian> <!-- city screen hover revolution bar -->
 		<Spanish>Ver detalles</Spanish>
-		<Polish>Widok Szczegółowy</Polish>
+		<Polish>Widok Szczeg&#243;&#179;owy</Polish>
 		<Russian>Äåòàëüíûé îáçîð</Russian>
 	</TEXT>
 	<TEXT>
@@ -2471,7 +2471,7 @@
 		<German>Unruhe</German>
 		<Italian>Disordini</Italian> <!-- city screen hover revolution bar -->
 		<Spanish>Desorden</Spanish>
-		<Polish>Nieporządek</Polish>
+		<Polish>Nieporz&#185;dek</Polish>
 		<Russian>Áåñïîðÿäêè</Russian>
 	</TEXT>
 	<TEXT>
@@ -2481,7 +2481,7 @@
 		<German>Entfernte Lage</German>
 		<Italian>Distante dalla capitale</Italian> <!-- city screen hover revolution bar -->
 		<Spanish>Ubicación distante</Spanish>
-		<Polish>Duża odległość</Polish>
+		<Polish>Du&#191;a odleg&#179;o&#156;&#230;</Polish>
 		<Russian>Îòäàëåííûé ðåãèîí</Russian>
 	</TEXT>
 	<TEXT>
@@ -2501,7 +2501,7 @@
 		<German>Finanzielle Stabilitat</German>
 		<Italian>Stabilità finanziaria</Italian> <!-- city screen hover revolution bar -->
 		<Spanish>Estabilidad financiera</Spanish>
-		<Polish>Stabilność finansowa</Polish>
+		<Polish>Stabilno&#156;&#230; finansowa</Polish>
 		<Russian>Ôèíàíñîâàÿ ñòàáèëüíîñòü</Russian>
 	</TEXT>
 	<TEXT>
@@ -2531,7 +2531,7 @@
 		<German>Goldenes Zeitalter</German>
 		<Italian>Età dell'oro</Italian> <!-- city screen hover revolution bar -->
 		<Spanish>Edad de Oro</Spanish>
-		<Polish>Złoty wiek</Polish>
+		<Polish>Z&#179;oty wiek</Polish>
 		<Russian>Çîëîòîé Âåê</Russian>
 	</TEXT>
 	<TEXT>
@@ -2551,7 +2551,7 @@
 		<German>Heilige Stadt im Besitz von Heiden</German>
 		<Italian>Città santa posseduta da infedeli</Italian> <!-- city screen hover revolution bar -->
 		<Spanish>Ciudad Santa poseida por infieles</Spanish>
-		<Polish>Swięte miasto w rękach pogan</Polish>
+		<Polish>Swi&#234;te miasto w r&#234;kach pogan</Polish>
 		<Russian>Ñâ. ãîðîä â ðóêàõ ÿçû÷íèêîâ</Russian>
 	</TEXT>
 	<TEXT>
@@ -2561,7 +2561,7 @@
 		<German>Heilige Stadt</German>
 		<Italian>Presenza della città santa</Italian> <!-- city screen hover revolution bar -->
 		<Spanish>Ciudad Santa</Spanish>
-		<Polish>Swięte miasto</Polish>
+		<Polish>Swi&#234;te miasto</Polish>
 		<Russian>Ñâ. ãîðîä</Russian>
 	</TEXT>
 	<TEXT>
@@ -2601,7 +2601,7 @@
 		<German>Großes Imperium</German>
 		<Italian>Civiltà grande</Italian> <!-- city screen hover revolution bar -->
 		<Spanish>Gran imperio</Spanish>
-		<Polish>Duże imperium</Polish>
+		<Polish>Du&#191;e imperium</Polish>
 		<Russian>Áîëüøàÿ Èìïåðèÿ</Russian>
 	</TEXT>
 	<TEXT>
@@ -2631,7 +2631,7 @@
 		<German>Nationalität</German>
 		<Italian>Nazionalità</Italian>
 		<Spanish>Nacionalidad</Spanish>
-		<Polish>Narodowość</Polish>
+		<Polish>Narodowo&#156;&#230;</Polish>
 		<Russian>Íàöèîíàëüíîñòü</Russian>
 	</TEXT>
 	<TEXT>
@@ -2659,7 +2659,7 @@
 		<German>Nicht-staatliche Religion</German>
 		<Italian>Religione non di stato</Italian> <!-- city screen hover revolution bar -->
 		<Spanish>Religión no oficial</Spanish>
-		<Polish>Religia niepaństwowa</Polish>
+		<Polish>Religia niepa&#241;stwowa</Polish>
 		<Russian>Íå ãîñ. ðåëèãèÿ</Russian>
 	</TEXT>
 	<TEXT>
@@ -2669,7 +2669,7 @@
 		<German>Nicht an Hauptstadt angeschlossen</German>
 		<Italian>Non collegata alla capitale</Italian> <!-- city screen hover revolution bar -->
 		<Spanish>No conectada a la capital</Spanish>
-		<Polish>Nie połączone ze stolicą</Polish>
+		<Polish>Nie po&#179;&#185;czone ze stolic&#185;</Polish>
 		<Russian>Íå ñîåä. ñî ñòîëèöåé</Russian>
 	</TEXT>
 	<TEXT>
@@ -2717,7 +2717,7 @@
 		<German>Kleine Stadt</German>
 		<Italian>Città troppo piccola</Italian> <!-- city screen hover revolution bar -->
 		<Spanish>Ciudad pequeña</Spanish>
-		<Polish>Małe miasto</Polish>
+		<Polish>Ma&#179;e miasto</Polish>
 		<Russian>Íåáîëüøîé ãîðîä</Russian>
 	</TEXT>
 	<TEXT>
@@ -2727,7 +2727,7 @@
 		<German>Kleines Imperium</German>
 		<Italian>Civiltà troppo piccola</Italian> <!-- city screen hover revolution bar -->
 		<Spanish>Imperio pequeño</Spanish>
-		<Polish>Małe imperium</Polish>
+		<Polish>Ma&#179;e imperium</Polish>
 		<Russian>Íåáîëüøàÿ Èìïåðèÿ</Russian>
 	</TEXT>
 	<TEXT>
@@ -2756,7 +2756,7 @@
 		<German>Hunger</German>
 		<Italian>Carestia</Italian> <!-- city screen hover revolution bar -->
 		<Spanish>Hambruna</Spanish>
-		<Polish>Głód</Polish>
+		<Polish>G&#179;&#243;d</Polish>
 		<Russian>Ãîëîä</Russian>
 	</TEXT>
 	<TEXT>
@@ -2766,7 +2766,7 @@
 		<German>Staatsreligion</German>
 		<Italian>Religione di stato</Italian> <!-- city screen hover revolution bar -->
 		<Spanish>Religión oficial</Spanish>
-		<Polish>Religia państwowa</Polish>
+		<Polish>Religia pa&#241;stwowa</Polish>
 		<Russian>Ãîñ. ðåëèãèÿ</Russian>
 	</TEXT>
 	<TEXT>
@@ -2776,7 +2776,7 @@
 		<German>Revolutionsüberwachung</German>
 		<Italian>Informazioni rivoluzione</Italian>
 		<Spanish>Consejero de Revolución</Spanish>
-		<Polish>Szczegóły Rewolucji</Polish>
+		<Polish>Szczeg&#243;&#179;y Rewolucji</Polish>
 		<Russian>Ñîâåòíèê ïî âíóòðåííåé áåçîïàñíîñòè</Russian>
 	</TEXT>
 	<TEXT>
@@ -2825,7 +2825,7 @@
 		<German>Warnung</German>
 		<Italian>Attenzione</Italian>
 		<Spanish>Alerta</Spanish>
-		<Polish>Ostrzegające</Polish>
+		<Polish>Ostrzegaj&#185;ce</Polish>
 		<Russian>Íåñïîêîéíî</Russian>
 	</TEXT>
 	<TEXT>

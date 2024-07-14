@@ -13,7 +13,7 @@
 		<French>En tant que Secrétaire général, vous pouvez demander le vote d'une résolution mondiale.</French>
 		<German>Als UN-Generalsekretär könnt Ihr eine Resolution zur weltweiten Abstimmung vorlegen.</German>
 		<Italian>In quanto segretario generale, puoi scegliere una risoluzione da sottoporre a votazione globale.</Italian>
-		<Polish>Jako Sekretarz Generalny możesz wybrać rezolucję O.N.Z, aby poddać ją pod głosowanie.</Polish>
+		<Polish>Jako Sekretarz Generalny mo&#191;esz wybra&#230; rezolucj&#234; O.N.Z, aby podda&#230; j&#185; pod g&#179;osowanie.</Polish>
 		<Spanish>Como Secretario General, podéis escoger una resolución de la ONU que presentar a votación mundial.</Spanish>
 		<Russian>Как Генеральный секретарь, вы имеете право вынести резолюцию ООН на всенародное голосование.</Russian>
 	</TEXT>
@@ -32,7 +32,7 @@
 		<French>Une intrusion sur le territoire des [COLOR_HIGHLIGHT_TEXT]%s1:3_CivAdj[COLOR_REVERT] déclenchera une GUERRE! Vous confirmez?</French>
 		<German>Ein unerlaubter Grenzübertritt wäre eine [COLOR_HIGHLIGHT_TEXT]Kriegserklärung![COLOR_REVERT] Seid Ihr sicher?</German>
 		<Italian>Entrando nel territorio di [COLOR_HIGHLIGHT_TEXT]%s1_CivAdj[COLOR_REVERT] dichiarerai GUERRA! Sei sicuro?</Italian>
-		<Polish>Wkraczając w granice [COLOR_HIGHLIGHT_TEXT]%s1_CivAdj[COLOR_REVERT] doprowadzi do WOJNY! Jesteś pewny?</Polish>
+		<Polish>Wkraczaj&#185;c w granice [COLOR_HIGHLIGHT_TEXT]%s1_CivAdj[COLOR_REVERT] doprowadzi do WOJNY! Jeste&#156; pewny?</Polish>
 		<Spanish>¡Entrar en las tierras de los [COLOR_HIGHLIGHT_TEXT]%s1:3_CivAdj[COLOR_REVERT] significará la GUERRA! ¿Seguro que eso es lo que queréis?</Spanish>
 		<Russian>Эту территорию заняли [COLOR_HIGHLIGHT_TEXT]%s1_CivAdj[COLOR_REVERT]. Нарушение границ приведет к войне. Продолжить?</Russian>
 	</TEXT>
@@ -57,7 +57,7 @@
 		<English>Go to city</English>
 		<French>Aller à la ville</French>
 		<Italian>Vai alla città</Italian>
-		<Polish>Idź do Miasta</Polish>
+		<Polish>Id&#159; do Miasta</Polish>
 		<Spanish>Ir a ciudad</Spanish>
 		<Russian>Идти в город</Russian>
 	</TEXT>
@@ -67,7 +67,7 @@
 		<French>Recalculer les modificateurs?</French>
 		<German>Sollen die Modifikatoren neu berechnet werden?</German>
 		<Italian>Vuoi ricalcolare i modificatori?</Italian>
-		<Polish>Czy mam przeliczyć ponownie modyfikatory?</Polish>
+		<Polish>Czy mam przeliczy&#230; ponownie modyfikatory?</Polish>
 		<Spanish>¿Deben recalcularse los modificadores?</Spanish>
 		<Russian>Пересчитать все данные?</Russian>
 	</TEXT>
@@ -76,17 +76,17 @@
 		<English>Assets or DLL have changed since this savegame was created. Recalculating the modifiers will apply any changes to buildings, events, civics and similar to the total amount stored for cities and players. This is recommended but still beta functionality. You can always manually trigger it with Ctrl-Shift-T.</English>
 		<French>Les Assets ou la DLL ont été modifiés depuis que la sauvegarde a été crée. En appliquant le recalcul des modificateurs, tous les changements aux bâtiments, événements, doctrines sont mis à jour. Recommandé, mais uniquement en mode beta. Ctrl-Shift-T permet de l'activer à tout moment.</French>
 		<German>Seit dem Anlegen dieses Spielstands haben sich Assets oder DLLs verändert. Die Neuberechnung der Modifikatoren sorgt dafür, dass alle Änderungen an Gebäuden, Ereignissen, Gesellschaftsformen u.Ä. korrekt auf die gespeicherten Städte und Nationen angewendet werden. Sie wird dringend empfohlen, aber es handelt sich dabei immer noch um Beta-Funktionalität. Die Neuberechnung kann im Spiel manuell durch die Tastenkombination STRG-UMSCHALT-T ausgelöst werden.</German>
-		<Italian>Sono cambiate alcune cose da quando hai salvato il gioco l'ultima volta. Il ricalcolo dei modificatori applicherà i cambi effettuati su edifici, eventi, forme di governo e altro al totale già accumulato da città e giocatori. Il ricalcolo è raccomandato, anche se è ancora una funzionalità beta. Puoi sempre effettuarlo manualmente premendo Ctrl-Shift-T.</Italian>
-		<Polish>Folder Assets lub plik DLL zostały zmienione po tym jak zapisany został plik save. Rekalkulacja modyfikatorów pozwoli wprowadzić zmiany w budynkach, wydarzeniach, doktrynach i innych przechowywanych zmiennych dla miast i graczy. Jest to rekomendowane lecz dalej w wersji beta. Zawsze możesz manualnie to wywołać kombinacją klawiszy: Ctrl-Shift-T.</Polish>
+		<Italian>Gli assets o il file dll sono cambiati da quando il salavataggio è stato creato. Il ricalcolo dei modificatori applicherà i cambi effettuati su edifici, eventi, forme di governo e altro al totale già accumulato da città e giocatori. Il ricalcolo è raccomandato, anche se è ancora una funzionalità beta. Si può anche effettuare manualmente premendo Ctrl-Shift-T in qualsiasi momento.</Italian>
+		<Polish>Folder Assets lub plik DLL zosta&#179;y zmienione po tym jak zapisany zosta&#179; plik save. Rekalkulacja modyfikator&#243;w pozwoli wprowadzi&#230; zmiany w budynkach, wydarzeniach, doktrynach i innych przechowywanych zmiennych dla miast i graczy. Jest to rekomendowane lecz dalej w wersji beta. Zawsze mo&#191;esz manualnie to wywo&#179;a&#230; kombinacj&#185; klawiszy: Ctrl-Shift-T.</Polish>
 		<Spanish>Los recursos (Assets) o la DLL han sido modificados desde la creación de este guardado. Recalcular los modificadores aplicará cualquier cambio en los edificios, eventos, principios, etc. a todo lo que los jugadores y sus ciudades posean. Se recomienda hacerlo, aunque esta función aún se encuentra en fase beta y puede haber errores. Puedes hacerlo manualmente pulsando Ctrl-Shift-T.</Spanish>
-		<Russian>Часть контента или библиотек изменились с момента создания этого сохранения. Предлагаемый перерасчет модификаторов применит все изменения к зданиям, событиям, парадигмам и прочему ко всем параметрам вашего сохранения для всех городов и игроков. Это РЕКОМЕНДУЕТСЯ сделать (перерасчет займёт некоторое время), но следует иметь в виду, что это экспериментальная функциональность. Вы всегда можете запустить его вручную при нажатии Ctrl-Shift-T.</Russian>
+		<Russian>Часть контента или библиотек изменились с момента создания этого сохранения. Предлагаемый перерасчет модификаторов применит все изменения к зданиям, событиям, парадигмам и прочему ко всем параметрам вашего сохранения для всех городов и игроков. Это РЕКОМЕНДУЕТСЯ сделать (перерасчет займет некоторое время), но следует иметь в виду, что это экспериментальная функциональность. Вы всегда можете запустить его вручную при нажатии Ctrl-Shift-T.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_POPUP_NEW_GAME_SAVE_FORMAT</Tag>
 		<English>Maximum Compatibility</English>
 		<French>Compatibilité maximale</French>
 		<Italian>Compatibilità massima</Italian>
-		<Polish>Maksymalna kompatybilność</Polish>
+		<Polish>Maksymalna kompatybilno&#156;&#230;</Polish>
 		<Spanish>Máxima compatibilidad</Spanish>
 		<Russian>Максимальная совместимость</Russian>
 	</TEXT>
@@ -95,7 +95,7 @@
 		<English>"Maximum Compatibility" will allow save games to be loaded into later versions of the mod (in most cases) but is larger and a little slower to load &amp; save. It is also currently beta functionality.[NEWLINE]"Original BTS" is the save format Civ4 used previously. It is more compact and a little faster to load &amp; save, but normally will not support game loading between releases of a mod.</English>
 		<French>"Compatibilité maximale" permettra de sauvegarder les parties à charger dans les versions ultérieures du mod (dans la plupart des cas) mais est plus grand et un peu plus lent à charger et à sauvegarder. C'est aussi actuellement une fonctionnalité bêta.[NEWLINE]"Original BTS" Il est plus compact et un peu plus rapide pour charger la sauvegarde, mais ne prend généralement pas en charge le chargement du jeu entre les versions d'un mod.</French>
 		<Italian>"Compatibilità massima" è una funzione che consente di caricare (nella maggior parte dei casi) i salvataggi anche nelle versioni successive del mod, ma è rende il savefile più grande e un po' più lento nel caricare e nel salvare. È anche una funzionalità beta, per il momento.[NEWLINE]"BTS originale" è il formato di salvataggio di Civ4 utilizzato in precedenza. È più compatto e più veloce a caricare e salvare, ma non supporta il caricamento di salvataggi fra versioni diverse del mod.</Italian>
-		<Polish>Maksymalna Kompatybilność pozwala wczytywać savy z wcześniejszych wersji modu ale jest większy i wolniejszy w zapisze i odczycie.[NEWLINE]"Oryginalny BTS" jest formatem Civ4. Jest mniejszy i szybszy ale nie pozwala na odczytywanie wcześniejszych wersji zapisów modu.</Polish>
+		<Polish>Maksymalna Kompatybilno&#156;&#230; pozwala wczytywa&#230; savy z wcze&#156;niejszych wersji modu ale jest wi&#234;kszy i wolniejszy w zapisze i odczycie.[NEWLINE]"Oryginalny BTS" jest formatem Civ4. Jest mniejszy i szybszy ale nie pozwala na odczytywanie wcze&#156;niejszych wersji zapis&#243;w modu.</Polish>
 		<Spanish>"Máxima compatibilidad" permite que las partidas guardadas puedan ser cargadas en versiones posteriores del mod (en la mayoría de los casos), pero su tamaño será mayor y la carga/guardado será un poco más lenta. Actualmente se encuentra en fase beta.[NEWLINE]"Original de BTS" es el formato de guardado que utiliza Civilization 4. Su tamaño es menor y es algo más rápido al cargar/guardar, pero su uso en versiones distintas de un mod no está soportado (normalmente).</Spanish>
 		<Russian>«Максимальная совместимость» позволяет - немного медленее - загружать сохраненные игры в более поздние версии мода (в большинстве случаев). Сейчас это экспериментальная функциональность.[NEWLINE]"Оригинальная ЭО" - формат сохранения, ранее использовавшийся в классической "Цивилизации 4". Он более компактен и загружается немного быстрее, но обычно не поддерживает загрузку между новыми версиями мода.</Russian>
 	</TEXT>
@@ -113,7 +113,7 @@
 		<French>Choisir un événement qui sera activé.</French>
 		<German>Event aussuchen, das gestartet werden soll.</German>
 		<Italian>Scegli l'evento che vuoi che si attivi.</Italian>
-		<Polish>Wybierz wydarzenie, które chcesz wywołać.</Polish>
+		<Polish>Wybierz wydarzenie, kt&#243;re chcesz wywo&#179;a&#230;.</Polish>
 		<Spanish>Elige el evento que deberá ser activado.</Spanish>
 		<Russian>Выберите событие, которое должно быть вызвано.</Russian>
 	</TEXT>
@@ -123,7 +123,7 @@
 		<French>Votre Altesse, le peuple de %s1_CityName s'agite. Certains refusent même de travailler! Ils demandent la construction [NUM2:d'un:d'une:de:de] [COLOR_BUILDING_TEXT]%s2_BldgName[COLOR_REVERT]!</French>
 		<German>%s1_CityName ist in Aufruhr, viele Leute verweigern die Arbeit! Die unzufriedenen Bürger verlangen [NUM2:einen:eine:ein:endlich:endlich:endlich] [COLOR_BUILDING_TEXT]%s2:4_BldgName![COLOR_REVERT]</German>
 		<Italian>Sire, i cittadini di %s1_CityName sono in agitazione. Alcuni si rifiutano persino di lavorare! Richiedono la costruzione di [COLOR_BUILDING_TEXT]%s2_BldgName[COLOR_REVERT]!</Italian>
-		<Polish>Mieszkańcy %s1_CityName są bardzo niespokojni. Część nawet odmawia pójścia do pracy! Domagają się wybudowania [COLOR_BUILDING_TEXT]%s2_BldgName[COLOR_REVERT]!</Polish>
+		<Polish>Mieszka&#241;cy %s1_CityName s&#185; bardzo niespokojni. Cz&#234;&#156;&#230; nawet odmawia p&#243;j&#156;cia do pracy! Domagaj&#185; si&#234; wybudowania [COLOR_BUILDING_TEXT]%s2_BldgName[COLOR_REVERT]!</Polish>
 		<Spanish>Excelencia, el pueblo de %s1_CityName está descontrolado. ¡Algunos hasta se niegan a trabajar! Exigen la construcción de [NUM2:un:una:unos:unas] [COLOR_BUILDING_TEXT]%s2_BldgName[COLOR_REVERT].</Spanish>
 		<Russian>Осмелюсь сообщить, что город %s1_CityName становится центром волнений и беспорядков. Некоторые жители даже отказываются работать, пока вы не выполните их требование: построить [COLOR_BUILDING_TEXT]%s2_BldgName[COLOR_REVERT] - неужели это такая непомерная плата за спокойный сон?</Russian>
 	</TEXT>

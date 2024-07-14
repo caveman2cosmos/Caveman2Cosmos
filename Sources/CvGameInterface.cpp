@@ -25,6 +25,7 @@
 #include "CvDLLFAStarIFaceBase.h"
 #include "CvDLLInterfaceIFaceBase.h"
 #include "CvDLLUtilityIFaceBase.h"
+#include "CvGameAI.h"
 
 void CvGame::updateColoredPlots()
 {
@@ -1912,7 +1913,7 @@ void CvGame::doControl(ControlTypes eControl)
 		}
 		case CONTROL_OPTIONS_SCREEN:
 		{
-			Cy::call("CvScreensInterface", "showOptionsScreen");
+			Cy::call(PYScreensModule, "showOptionsScreen");
 			break;
 		}
 		case CONTROL_RETIRE:

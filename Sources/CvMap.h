@@ -15,14 +15,13 @@
 #include "CvArea.h"
 #include "CvMapInterfaceBase.h"
 #include "CvPlot.h"
-#include "CvUnitAI.h"
 #include "index_iterator_base.h"
 
 class CvCity;
 class CvPlotGroup;
 class CvSelectionGroup;
-//class CvUnitAI;
 class CvViewport;
+struct TravelingUnit;
 
 inline int coordRange(int iCoord, int iRange, bool bWrap)
 {
@@ -61,6 +60,7 @@ public:
 protected:
 	void uninit();
 	void setup();
+	void addViewport(int iXOffset, int iYOffset);
 
 public:
 	MapTypes getType() const;
@@ -70,10 +70,8 @@ public:
 
 	void updateIncomingUnits();
 	void moveUnitToMap(CvUnit& unit, int numTravelTurns);
+	void deleteOffMapUnits();
 
-private:
-	void addViewport(int iXOffset, int iYOffset);
-public:
 	//void deleteViewport(int iIndex);
 	CvViewport* getCurrentViewport() const;
 	const std::vector<CvViewport*>& getViewports() const;
@@ -228,8 +226,8 @@ public:
 	void calculateCanalAndChokePoints();
 
 	// Plot danger cache
-	void invalidateIsActivePlayerNoDangerCache();
-	void invalidateIsTeamBorderCache(TeamTypes eTeam);
+	void invalidateActivePlayerPlotCache();
+	void invalidateBorderDangerCache(TeamTypes eTeam);
 
 	const std::pair<CvPlot*, CvPlot*> plots() const;
 
@@ -241,6 +239,9 @@ public:
 
 	void toggleUnitsDisplay();
 	void toggleCitiesDisplay();
+
+	void setClimateZone(const int y, const ClimateZoneTypes eClimateZone);
+	ClimateZoneTypes getClimateZone(const int y);
 
 private:
 	void calculateAreas();
@@ -273,19 +274,8 @@ private:
 
 	std::vector<CvViewport*> m_viewports;
 
-	struct TravelingUnit
-	{
-		TravelingUnit(const CvUnit& travelingUnit, int numTravelTurns)
-			: numTurnsUntilArrival(numTravelTurns)
-		{
-			unit = static_cast<const CvUnitAI&>(travelingUnit);
-		}
-
-		CvUnitAI unit;
-		int numTurnsUntilArrival;
-	};
-
 	std::vector<TravelingUnit*> m_IncomingUnits;
+	ClimateZoneTypes* m_climateZones;
 };
 
 #endif

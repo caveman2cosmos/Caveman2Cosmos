@@ -1396,7 +1396,7 @@ def isSinglePlotIsland(pPlot):
 	while iX < iPlotX + 2:
 		iY = iPlotY - 1
 		while iY < iPlotY + 2:
-			if (iX != iPlotX or iY != iPlotY) and not MAP.plot(iX, iY).isWater():
+			if (iX != iPlotX or iY != iPlotY) and MAP.plot(iX, iY) and not MAP.plot(iX, iY).isWater():
 				return False
 			iY += 1
 		iX += 1
@@ -1607,18 +1607,26 @@ def placeC2CBonuses():
 
 	aCoastTerrains = [terrainCoast, terrainPolarCoast, terrainTropicalCoast]
 
-	terrainMarsh = GC.getInfoTypeForString("TERRAIN_MARSH")
-
-	featureMangrove = GC.getInfoTypeForString("FEATURE_MANGROVE")
-
 	improvementGoodyIsland = GC.getInfoTypeForString("IMPROVEMENT_GOODY_ISLAND")
+
+	# Map the climate zones.
+	POLAR = ClimateZoneTypes.CLIMATE_ZONE_POLAR
+	TROPICAL = ClimateZoneTypes.CLIMATE_ZONE_TROPICAL
+	TEMPERATE = ClimateZoneTypes.CLIMATE_ZONE_TEMPERATE
+	for y in xrange(MAP.getGridHeight()):
+		iLatitude = MAP.plot(0, y).getLatitude()
+		if iLatitude > 66.5:
+			MAP.setClimateZone(y, POLAR)
+		elif iLatitude < 23.5:
+			MAP.setClimateZone(y, TROPICAL)
+		else:
+			MAP.setClimateZone(y, TEMPERATE)
 
 	for i in range(MAP.numPlots()):
 		plot = MAP.plotByIndex(i)
 
 		# Identify where on the map the plot is
 		iLatitude = plot.getLatitude()
-		iLongitude = plot.getLongitude()
 		x = plot.getX()
 		y = plot.getY()
 		if y > iEquatorPlot:
@@ -1648,7 +1656,7 @@ def placeC2CBonuses():
 				for j in range(x - 1, x + 2):
 					for k in range(y - 1, y + 2):
 						plotX = MAP.plot(j, k)
-						if not plotX.isNone() and plotX.getTerrainType() in aCoastTerrains:
+						if plotX and plotX.getTerrainType() in aCoastTerrains:
 							plot.setTerrainType(terrainSea, False, False)
 							iTerrain = terrainSea
 							break
@@ -1685,9 +1693,6 @@ def placeC2CBonuses():
 					plot.setBonusType(iSeaLion)
 					iResource = iSeaLion
 
-			if iTerrain == terrainMarsh and iLatitude < 30 and not plot.isHills() and plot.isCoastal():
-				# tropical and semi-tropical marsh coastal plot
-				plot.setFeatureType(featureMangrove, 0)
 		'''
 		Replace resources that the map generator may have put on the wrong parts of the map
 		since it only has north/south control not east/west control

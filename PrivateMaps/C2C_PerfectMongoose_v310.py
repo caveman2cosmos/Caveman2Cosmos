@@ -580,7 +580,7 @@ class MapConstants:
 		self.MeteorCompensationFactor = 1.1
 
 		# Factor to modify mc.landPercent by if a Low or High Sea Level is chosen
-		self.SeaLevelFactor = 1.5
+		self.SeaLevelFactor = .5
 
 		##############################################################################
 		## Fuyu Settings
@@ -1496,10 +1496,12 @@ class ElevationMap(FloatMap):
 			land *= mc.MeteorCompensationFactor
 		gc = CyGlobalContext()
 		sea = gc.getSeaLevelInfo(gc.getMap().getSeaLevel()).getSeaLevelChange()
-		if sea < 0:
-			land *= mc.SeaLevelFactor
-		elif sea > 0:
-			land /= mc.SeaLevelFactor
+		if sea > 0:
+			land /= (1 + mc.SeaLevelFactor)
+		elif sea == -7:
+			land *= (1 + mc.SeaLevelFactor)
+		else:
+			land *= (1 + 2*mc.SeaLevelFactor)
 		self.seaLevelThreshold = self.FindThresholdFromPercent(land, True, False)
 
 
@@ -2438,10 +2440,12 @@ def GenerateMountainMap(width, height, wrapX, wrapY, initFreq):
 		land *= mc.MeteorCompensationFactor
 	gc = CyGlobalContext()
 	sea = gc.getSeaLevelInfo(gc.getMap().getSeaLevel()).getSeaLevelChange()
-	if sea < 0:
-		land *= mc.SeaLevelFactor
-	elif sea > 0:
-		land /= mc.SeaLevelFactor
+	if sea > 0:
+		land /= (1 + mc.SeaLevelFactor)
+	elif sea == -7:
+		land *= (1 + mc.SeaLevelFactor)
+	else:
+		land *= (1 + 2*mc.SeaLevelFactor)
 	stdDevThreshold = stdDevMap.FindThresholdFromPercent(land, True, False)
 	for y in range(mountainMap.height):
 		for x in range(mountainMap.width):
@@ -4024,7 +4028,7 @@ class StartingPlotFinder:
 		sPlot = StartPlot(x, y, 0)
 		for i in range(21): #gc.getNUM_CITY_PLOTS()
 			plot = plotCity(x, y, i)
-			if not plot.isWater() and plot.getArea() != start.getArea():
+			if not plot or not plot.isWater() and plot.getArea() != start.getArea():
 				food, value = 0, 0
 			else:
 				if cached:
@@ -4187,6 +4191,7 @@ class StartingPlotFinder:
 		shufflePyList(plotList, PRand.mapRand)
 		for n in range(len(yields) * bonuses + 1):
 			for plot in plotList:
+				if not plot: continue
 				#NEW CODE - LM
 				if bonusCount >= bonuses:
 					return
@@ -4248,6 +4253,7 @@ class StartingPlotFinder:
 		plotList = []
 		for i in range(21): #gc.getNUM_CITY_PLOTS()
 			plot = plotCity(x, y, i)
+			if not plot: continue
 			featureInfo = gc.getFeatureInfo(plot.getFeatureType())
 			if plot.getX() == x and plot.getY() == y:
 				#remove bad feature on start but don't count it.
@@ -4541,7 +4547,6 @@ class StartingArea:
 				sPlot.setImprovementType(-1)
 				playerID = self.playerList[n]
 				player = gc.getPlayer(playerID)
-				sPlot.setStartingPlot(True)
 				player.setStartingPlot(sPlot,True)
 				n += 1
 
@@ -5032,52 +5037,52 @@ def cleanUpLake(x, y):
 	mmap = gc.getMap()
 	riversIntoLake = list()
 	plot = mmap.plot(x,y+1)#North
-	if plot != 0 and plot.isNOfRiver() == True:
+	if plot and plot.isNOfRiver() == True:
 		plot.setNOfRiver(False,CardinalDirectionTypes.NO_CARDINALDIRECTION)
-	if plot != 0 and plot.isWOfRiver() == True:
+	if plot and plot.isWOfRiver() == True:
 		if plot.getRiverNSDirection() == CardinalDirectionTypes.CARDINALDIRECTION_SOUTH:
 			riversIntoLake.append(plot.getRiverID())
 		else:
 			plot.setWOfRiver(False,CardinalDirectionTypes.NO_CARDINALDIRECTION)
 	plot = mmap.plot(x - 1,y)#West
-	if plot != 0 and plot.isWOfRiver() == True:
+	if plot and plot.isWOfRiver() == True:
 		plot.setWOfRiver(False,CardinalDirectionTypes.NO_CARDINALDIRECTION)
-	if plot != 0 and plot.isNOfRiver() == True:
+	if plot and plot.isNOfRiver() == True:
 		if plot.getRiverWEDirection() == CardinalDirectionTypes.CARDINALDIRECTION_EAST:
 			riversIntoLake.append(plot.getRiverID())
 		else:
 			plot.setNOfRiver(False,CardinalDirectionTypes.NO_CARDINALDIRECTION)
 	plot = mmap.plot(x + 1,y)#East
-	if plot != 0 and plot.isNOfRiver() == True:
+	if plot and plot.isNOfRiver() == True:
 		if plot.getRiverWEDirection() == CardinalDirectionTypes.CARDINALDIRECTION_WEST:
 			riversIntoLake.append(plot.getRiverID())
 		else:
 			plot.setNOfRiver(False,CardinalDirectionTypes.NO_CARDINALDIRECTION)
 	plot = mmap.plot(x,y-1)#South
-	if plot != 0 and plot.isWOfRiver() == True:
+	if plot and plot.isWOfRiver() == True:
 		if plot.getRiverNSDirection() == CardinalDirectionTypes.CARDINALDIRECTION_NORTH:
 			riversIntoLake.append(plot.getRiverID())
 		else:
 			plot.setWOfRiver(False,CardinalDirectionTypes.NO_CARDINALDIRECTION)
 	plot = mmap.plot(x-1,y+1)#Northwest
-	if plot != 0 and plot.isWOfRiver() == True:
+	if plot and plot.isWOfRiver() == True:
 		if plot.getRiverNSDirection() == CardinalDirectionTypes.CARDINALDIRECTION_SOUTH:
 			riversIntoLake.append(plot.getRiverID())
 		else:
 			plot.setWOfRiver(False,CardinalDirectionTypes.NO_CARDINALDIRECTION)
-	if plot != 0 and plot.isNOfRiver() == True:
+	if plot and plot.isNOfRiver() == True:
 		if plot.getRiverWEDirection() == CardinalDirectionTypes.CARDINALDIRECTION_EAST:
 			riversIntoLake.append(plot.getRiverID())
 		else:
 			plot.setNOfRiver(False,CardinalDirectionTypes.NO_CARDINALDIRECTION)
 	plot = mmap.plot(x+1,y+1)#Northeast
-	if plot != 0 and plot.isNOfRiver() == True:
+	if plot and plot.isNOfRiver() == True:
 		if plot.getRiverWEDirection() == CardinalDirectionTypes.CARDINALDIRECTION_WEST:
 			riversIntoLake.append(plot.getRiverID())
 		else:
 			plot.setNOfRiver(False,CardinalDirectionTypes.NO_CARDINALDIRECTION)
 	plot = mmap.plot(x-1,y-1)#Southhwest
-	if plot != 0 and plot.isWOfRiver() == True:
+	if plot and plot.isWOfRiver() == True:
 		if plot.getRiverNSDirection() == CardinalDirectionTypes.CARDINALDIRECTION_NORTH:
 			riversIntoLake.append(plot.getRiverID())
 		else:
@@ -5096,43 +5101,43 @@ def replaceRivers(x, y):
 	gc = CyGlobalContext()
 	mmap = gc.getMap()
 	plot = mmap.plot(x, y + 1)#North
-	if plot != 0 and plot.isWOfRiver() == True:
+	if plot and plot.isWOfRiver() == True:
 		if plot.getRiverNSDirection() == CardinalDirectionTypes.CARDINALDIRECTION_SOUTH:
 			#setting the river to what it already is will be ignored by the dll,
 			#so it must be unset and then set again.
 			plot.setWOfRiver(False, CardinalDirectionTypes.NO_CARDINALDIRECTION)
 			plot.setWOfRiver(True,	CardinalDirectionTypes.CARDINALDIRECTION_SOUTH)
 	plot = mmap.plot(x - 1, y)#West
-	if plot != 0 and plot.isNOfRiver() == True:
+	if plot and plot.isNOfRiver() == True:
 		if plot.getRiverWEDirection() == CardinalDirectionTypes.CARDINALDIRECTION_EAST:
 			plot.setNOfRiver(False, CardinalDirectionTypes.NO_CARDINALDIRECTION)
 			plot.setNOfRiver(True,	CardinalDirectionTypes.CARDINALDIRECTION_EAST)
 	plot = mmap.plot(x + 1, y)#East
-	if plot != 0 and plot.isNOfRiver() == True:
+	if plot and plot.isNOfRiver() == True:
 		if plot.getRiverWEDirection() == CardinalDirectionTypes.CARDINALDIRECTION_WEST:
 			plot.setNOfRiver(False, CardinalDirectionTypes.NO_CARDINALDIRECTION)
 			plot.setNOfRiver(True,	CardinalDirectionTypes.CARDINALDIRECTION_WEST)
 	plot = mmap.plot(x, y - 1)#South
-	if plot != 0 and plot.isWOfRiver() == True:
+	if plot and plot.isWOfRiver() == True:
 		if plot.getRiverNSDirection() == CardinalDirectionTypes.CARDINALDIRECTION_NORTH:
 			plot.setWOfRiver(False, CardinalDirectionTypes.NO_CARDINALDIRECTION)
 			plot.setWOfRiver(True,	CardinalDirectionTypes.CARDINALDIRECTION_NORTH)
 	plot = mmap.plot(x - 1, y + 1)#Northwest
-	if plot != 0 and plot.isWOfRiver() == True:
+	if plot and plot.isWOfRiver() == True:
 		if plot.getRiverNSDirection() == CardinalDirectionTypes.CARDINALDIRECTION_SOUTH:
 			plot.setWOfRiver(False, CardinalDirectionTypes.NO_CARDINALDIRECTION)
 			plot.setWOfRiver(True,	CardinalDirectionTypes.CARDINALDIRECTION_SOUTH)
-	if plot != 0 and plot.isNOfRiver() == True:
+	if plot and plot.isNOfRiver() == True:
 		if plot.getRiverWEDirection() == CardinalDirectionTypes.CARDINALDIRECTION_EAST:
 			plot.setNOfRiver(False, CardinalDirectionTypes.NO_CARDINALDIRECTION)
 			plot.setNOfRiver(True,	CardinalDirectionTypes.CARDINALDIRECTION_EAST)
 	plot = mmap.plot(x + 1, y + 1)#Northeast
-	if plot != 0 and plot.isNOfRiver() == True:
+	if plot and plot.isNOfRiver() == True:
 		if plot.getRiverWEDirection() == CardinalDirectionTypes.CARDINALDIRECTION_WEST:
 			plot.setNOfRiver(False, CardinalDirectionTypes.NO_CARDINALDIRECTION)
 			plot.setNOfRiver(True,	CardinalDirectionTypes.CARDINALDIRECTION_WEST)
 	plot = mmap.plot(x - 1, y - 1)#Southhwest
-	if plot != 0 and plot.isWOfRiver() == True:
+	if plot and plot.isWOfRiver() == True:
 		if plot.getRiverNSDirection() == CardinalDirectionTypes.CARDINALDIRECTION_NORTH:
 			plot.setWOfRiver(False, CardinalDirectionTypes.NO_CARDINALDIRECTION)
 			plot.setWOfRiver(True,	CardinalDirectionTypes.CARDINALDIRECTION_NORTH)
@@ -5441,7 +5446,7 @@ def createIce():
 	while iceChance > 0.1:
 		for x in range(mc.width):
 			plot = mmap.plot(x, y)
-			if plot != 0 and plot.isWater() == True and PRand.random() < iceChance:
+			if plot and plot.isWater() == True and PRand.random() < iceChance:
 				plot.setFeatureType(featureIce, 0)
 		iceChance *= mc.IceChanceMultiplier
 		y += 1
@@ -5453,7 +5458,7 @@ def createIce():
 	while iceChance > 0.1:
 		for x in range(mc.width):
 			plot = mmap.plot(x, y)
-			if plot != 0 and plot.isWater() == True and PRand.random() < iceChance:
+			if plot and plot.isWater() == True and PRand.random() < iceChance:
 				plot.setFeatureType(featureIce, 0)
 		iceChance *= mc.IceChanceMultiplier
 		y -= 1

@@ -1,9 +1,11 @@
+#include "CvGameCoreDLL.h"
 #include "CvPythonGlobalContextLoader.h"
 #include "CvGameCoreDLL.h"
 #include "CyGlobalContext.h"
 #include "CvBonusInfo.h"
 #include "CvBuildingInfo.h"
 #include "CvImprovementInfo.h"
+#include "CvHeritageInfo.h"
 #include "CvInfos.h"
 #include "CvRandom.h"
 #include "CyGame.h"
@@ -13,6 +15,7 @@
 #include "CyTeam.h"
 #include "CvDiplomacyClasses.h"
 #include "CvPlayerOptionInfo.h"
+#include "CvTraitInfo.h"
 #include <boost/python/overloads.hpp>
 
 
@@ -25,6 +28,8 @@ void CvPythonGlobalContextLoader::CyGlobalContextPythonInterface1(boost::python:
 		.def("isDebugBuild", &CyGlobalContext::isDebugBuild, "() - returns true if running a debug build")
 		.def("getGame", &CyGlobalContext::getCyGame, boost::python::return_value_policy<boost::python::reference_existing_object>(), "() - CyGame()")
 		.def("getMap", &CyGlobalContext::getCyMap, boost::python::return_value_policy<boost::python::reference_existing_object>(), "() - CyMap()")
+		.def("getMaps", &CyGlobalContext::getMaps)
+		.def("getNumMapsInitialized", &CyGlobalContext::getNumMapsInitialized)
 		.def("getPlayer", &CyGlobalContext::getCyPlayer, boost::python::return_value_policy<boost::python::reference_existing_object>(), "(iPlayer) - iPlayer instance")
 		.def("getActivePlayer", &CyGlobalContext::getCyActivePlayer, boost::python::return_value_policy<boost::python::reference_existing_object>(), "() - active player instance")
 		.def("getASyncRand", &CyGlobalContext::getCyASyncRand, boost::python::return_value_policy<boost::python::reference_existing_object>(), "Non-Synch'd random #")
@@ -246,7 +251,10 @@ void CvPythonGlobalContextLoader::CyGlobalContextPythonInterface4(boost::python:
 		.def("getNumReligionInfos", &CyGlobalContext::getNumReligionInfos, "() - Total Religion Infos XML\\GameInfo\\CIV4ReligionInfos.xml")
 		.def("getReligionInfo", &CyGlobalContext::getReligionInfo, boost::python::return_value_policy<boost::python::reference_existing_object>(), "(ReligionID) - CvInfo for ReligionID")
 
-		.def("getNumCorporationInfos", &CyGlobalContext::getNumCorporationInfos, "() - Total Religion Infos XML\\GameInfo\\CIV4CorporationInfos.xml")
+		.def("getNumHeritageInfos", &CyGlobalContext::getNumHeritageInfos, "() - Total Heritage Infos XML\\GameInfo\\HeritageInfos.xml")
+		.def("getHeritageInfo", &CyGlobalContext::getHeritageInfo, boost::python::return_value_policy<boost::python::reference_existing_object>(), "(HeritageID) - CvInfo for HeritageID")
+
+		.def("getNumCorporationInfos", &CyGlobalContext::getNumCorporationInfos, "() - Total Corporation Infos XML\\GameInfo\\CIV4CorporationInfos.xml")
 		.def("getCorporationInfo", &CyGlobalContext::getCorporationInfo, boost::python::return_value_policy<boost::python::reference_existing_object>(), "(CorporationID) - CvInfo for CorporationID")
 
 		.def("getNumVictoryInfos", &CyGlobalContext::getNumVictoryInfos, "() - Total Victory Infos XML\\GameInfo\\CIV4VictoryInfos.xml")

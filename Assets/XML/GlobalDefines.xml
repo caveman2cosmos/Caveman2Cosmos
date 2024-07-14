@@ -89,11 +89,43 @@
 		<DefineTextVal>TERRAIN_GRASSLAND</DefineTextVal>
 	</Define>
 	<Define>
-		<DefineName>DEEP_WATER_TERRAIN</DefineName>
+		<DefineName>WATER_TERRAIN_OCEAN</DefineName>
 		<DefineTextVal>TERRAIN_OCEAN</DefineTextVal>
 	</Define>
 	<Define>
-		<DefineName>SHALLOW_WATER_TERRAIN</DefineName>
+		<DefineName>WATER_TERRAIN_OCEAN_POLAR</DefineName>
+		<DefineTextVal>TERRAIN_OCEAN_POLAR</DefineTextVal>
+	</Define>
+	<Define>
+		<DefineName>WATER_TERRAIN_OCEAN_TROPICAL</DefineName>
+		<DefineTextVal>TERRAIN_OCEAN_TROPICAL</DefineTextVal>
+	</Define>
+	<Define>
+		<DefineName>WATER_TERRAIN_SEA</DefineName>
+		<DefineTextVal>TERRAIN_SEA</DefineTextVal>
+	</Define>
+	<Define>
+		<DefineName>WATER_TERRAIN_SEA_POLAR</DefineName>
+		<DefineTextVal>TERRAIN_SEA_POLAR</DefineTextVal>
+	</Define>
+	<Define>
+		<DefineName>WATER_TERRAIN_SEA_TROPICAL</DefineName>
+		<DefineTextVal>TERRAIN_SEA_TROPICAL</DefineTextVal>
+	</Define>
+	<Define>
+		<DefineName>WATER_TERRAIN_COAST</DefineName>
+		<DefineTextVal>TERRAIN_COAST</DefineTextVal>
+	</Define>
+	<Define>
+		<DefineName>WATER_TERRAIN_COAST_POLAR</DefineName>
+		<DefineTextVal>TERRAIN_COAST_POLAR</DefineTextVal>
+	</Define>
+	<Define>
+		<DefineName>WATER_TERRAIN_COAST_TROPICAL</DefineName>
+		<DefineTextVal>TERRAIN_COAST_TROPICAL</DefineTextVal>
+	</Define>
+	<Define>
+		<DefineName>WATER_TERRAIN_COAST</DefineName>
 		<DefineTextVal>TERRAIN_COAST</DefineTextVal>
 	</Define>
 	<Define>
@@ -309,10 +341,6 @@
 		<iDefineIntVal>3</iDefineIntVal>
 	</Define>
 	<Define>
-		<DefineName>MIN_CITY_RANGE</DefineName>
-		<iDefineIntVal>2</iDefineIntVal>
-	</Define>
-	<Define>
 		<!-- Starting/minimum culture on city tile -->
 		<DefineName>FREE_CITY_CULTURE</DefineName>
 		<iDefineIntVal>2</iDefineIntVal>
@@ -395,12 +423,8 @@
 		<iDefineIntVal>20</iDefineIntVal>
 	</Define>
 	<Define>
-		<DefineName>CONSCRIPT_MIN_CITY_POPULATION</DefineName>
-		<iDefineIntVal>8</iDefineIntVal>
-	</Define>
-	<Define>
-		<DefineName>CONSCRIPT_POPULATION_PER_COST</DefineName>
-		<iDefineIntVal>60</iDefineIntVal>
+		<DefineName>CONSCRIPT_POPULATION</DefineName>
+		<iDefineIntVal>1</iDefineIntVal>
 	</Define>
 	<Define>
 		<DefineName>CONSCRIPT_MIN_CULTURE_PERCENT</DefineName>
@@ -668,19 +692,19 @@
 	</Define>
 	<Define>
 		<DefineName>WW_UNIT_KILLED_ATTACKING</DefineName>
-		<iDefineIntVal>5</iDefineIntVal>
-	</Define>
-	<Define>
-		<DefineName>WW_KILLED_UNIT_DEFENDING</DefineName>
 		<iDefineIntVal>3</iDefineIntVal>
 	</Define>
 	<Define>
 		<DefineName>WW_UNIT_KILLED_DEFENDING</DefineName>
+		<iDefineIntVal>5</iDefineIntVal>
+	</Define>
+	<Define>
+		<DefineName>WW_KILLED_UNIT_DEFENDING</DefineName>
 		<iDefineIntVal>2</iDefineIntVal>
 	</Define>
 	<Define>
 		<DefineName>WW_KILLED_UNIT_ATTACKING</DefineName>
-		<iDefineIntVal>2</iDefineIntVal>
+		<iDefineIntVal>1</iDefineIntVal>
 	</Define>
 	<Define>
 		<DefineName>WW_UNIT_CAPTURED</DefineName>
@@ -696,11 +720,19 @@
 	</Define>
 	<Define>
 		<DefineName>WW_HIT_BY_NUKE</DefineName>
-		<iDefineIntVal>10</iDefineIntVal>
+		<iDefineIntVal>20</iDefineIntVal>
 	</Define>
 	<Define>
 		<DefineName>WW_ATTACKED_WITH_NUKE</DefineName>
-		<iDefineIntVal>12</iDefineIntVal>
+		<iDefineIntVal>10</iDefineIntVal>
+	</Define>
+	<Define>
+		<DefineName>WW_PLOT_CAPTURED</DefineName>
+		<iDefineIntVal>2</iDefineIntVal>
+	</Define>
+	<Define>
+		<DefineName>WW_CAPTURED_PLOT</DefineName>
+		<iDefineIntVal>1</iDefineIntVal>
 	</Define>
 	<Define>
 		<DefineName>WW_DECAY_RATE</DefineName>
@@ -1619,10 +1651,6 @@
 	<Define>
 		<DefineName>EVENT_PROBABILITY_ROLL_SIDES</DefineName>
 		<iDefineIntVal>100</iDefineIntVal>
-	</Define>
-	<Define>
-		<DefineName>FIRST_EVENT_DELAY_TURNS</DefineName>
-		<iDefineIntVal>20</iDefineIntVal>
 	</Define>
 	<Define>
 		<DefineName>USE_MODDERS_PLAYEROPTION_1</DefineName>

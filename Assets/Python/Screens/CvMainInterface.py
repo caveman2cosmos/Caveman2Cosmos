@@ -8,7 +8,6 @@ import PythonToolTip as pyTT
 import AbandonCityEventManager as ACEM
 import TextUtil
 import RevInstances
-#import ParallelMaps
 # globals
 GC = CyGlobalContext()
 ENGINE = CyEngine()
@@ -309,7 +308,8 @@ class CvMainInterface:
 				(obj.getText("TXT_KEY_HUD_BUTTON_ADVISOR_RELIGIOUS", ()),		"F7"),
 				(obj.getText("TXT_KEY_HUD_BUTTON_ADVISOR_CORPORATE", ()),		"Shift+F7"),
 				(obj.getText("TXT_KEY_HUD_BUTTON_ADVISOR_INTELLIGENCE", ()),	"Ctrl+E"),
-				(obj.getText("TXT_KEY_HUD_BUTTON_ADVISOR_PARTISAN", ()),		"Ctrl+Shift+G")
+				(obj.getText("TXT_KEY_HUD_BUTTON_ADVISOR_PARTISAN", ()),		"Ctrl+Shift+G"),
+				(obj.getText("TXT_KEY_HUD_BUTTON_ADVISOR_HERITAGE", ()),		"")
 			]
 			# Building infos:
 			aBuildingList0 = []
@@ -823,62 +823,68 @@ class CvMainInterface:
 		x = xRes - iSize*2
 		y = 22
 		dx = 24
+		# Heritage
+		btn = "AdvBtn10"
+		screen.setImageButton(btn, "", x, y, iSize, iSize, eWidGen, 0, 0)
+		screen.setStyle(btn, "Button_HUDBtnHeritage_Style")
+		screen.hide(btn)
+		x -= dx
 		# Partisan:
 		if self.GO_REVOLUTION:
-			btn = "AdvisorButton9"
+			btn = "AdvBtn9"
 			screen.setImageButton(btn, "Art/Interface/Buttons/revbtn.dds", x, y, iSize, iSize, eWidGen, 0, 0)
 			screen.setStyle(btn, "Button_HUDSmall_Style")
 			screen.hide(btn)
 			x -= dx
 		# Intelligence
-		btn = "AdvisorButton8"
+		btn = "AdvBtn8"
 		screen.setImageButton(btn, "", x, y, iSize, iSize, eWidGen, 0, 0)
 		screen.setStyle(btn, "Button_HUDAdvisorEspionage_Style")
 		screen.hide(btn)
 		x -= dx
 		# Corporation
-		btn = "AdvisorButton7"
+		btn = "AdvBtn7"
 		screen.setImageButton(btn, "", x, y, iSize, iSize, eWidGen, 0, 0)
 		screen.setStyle(btn, "Button_HUDAdvisorCorporation_Style")
 		screen.hide(btn)
 		x -= dx
 		# Religious
-		btn = "AdvisorButton6"
+		btn = "AdvBtn6"
 		screen.setImageButton(btn, "", x, y, iSize, iSize, eWidGen, 0, 0)
 		screen.setStyle(btn, "Button_HUDAdvisorReligious_Style")
 		screen.hide(btn)
 		x -= dx
 		# Technology
-		btn = "AdvisorButton5"
+		btn = "AdvBtn5"
 		screen.setImageButton(btn, "", x, y, iSize, iSize, eWidGen, 0, 0)
 		screen.setStyle(btn, "Button_HUDAdvisorTechnology_Style")
 		screen.hide(btn)
 		x -= dx
 		# Military
-		btn = "AdvisorButton4"
+		btn = "AdvBtn4"
 		screen.setImageButton(btn, "", x, y, iSize, iSize, eWidGen, 0, 0)
 		screen.setStyle(btn, "Button_HUDAdvisorMilitary_Style")
 		screen.hide(btn)
 		x -= dx
 		# Foreign
-		btn = "AdvisorButton3"
+		btn = "AdvBtn3"
 		screen.setImageButton(btn, "", x, y, iSize, iSize, eWidGen, 0, 0)
 		screen.setStyle(btn, "Button_HUDAdvisorForeign_Style")
 		screen.hide(btn)
 		x -= dx
 		# Civics
-		btn = "AdvisorButton2"
+		btn = "AdvBtn2"
 		screen.setImageButton(btn, "", x, y, iSize, iSize, eWidGen, 0, 0)
 		screen.setStyle(btn, "Button_HUDAdvisorCivics_Style")
 		screen.hide(btn)
 		x -= dx
 		# Domestic
-		btn = "AdvisorButton0"
+		btn = "AdvBtn0"
 		screen.setImageButton(btn, "", x, y, iSize, iSize, eWidGen, 0, 0)
 		screen.setStyle(btn, "Button_HUDAdvisorDomestic_Style")
 		screen.hide(btn)
 		# Treasury
-		btn = "AdvisorButton1"
+		btn = "AdvBtn1"
 		screen.setText(btn, "", "<img=Art/Interface/Buttons/general/Treasury.dds>", 1<<0, 26, 0, 0, eFontSmall, eWidGen, 0, 0)
 		screen.setLabel("Treasury", "", "", 1<<0, 60, 0, 0, eFontSmall, eWidGen, 0, 0)
 		screen.hide(btn)
@@ -913,6 +919,13 @@ class CvMainInterface:
 		artPathButtonOptionBUG = CyArtFileMgr().getInterfaceArtInfo("BUG_OPTIONS_SCREEN_BUTTON").getPath()
 		x += dx
 		screen.setImageButton(btn, artPathButtonOptionBUG, x, y, iSize, iSize, eWidGen, -1, -1)
+		screen.setStyle(btn, "Button_HUDSmall_Style")
+		screen.hide(btn)
+
+		btn = "ParallelMapsBtn"
+		artPath = CyArtFileMgr().getInterfaceArtInfo("BUG_WORLDWONDER_OFF").getPath()
+		x += dx
+		screen.setImageButton(btn, artPath, x, y, iSize, iSize, eWidGen, -1, -1)
 		screen.setStyle(btn, "Button_HUDSmall_Style")
 		screen.hide(btn)
 
@@ -1237,7 +1250,7 @@ class CvMainInterface:
 					else:
 						szOutput = TRNSLTR.getText("TXT_KEY_SYSTEM_PLAYER_JOINING", (GC.getPlayer(iFirstBadConnection).getNameKey(), (iFirstBadConnection + 1)))
 			elif CyIF.shouldDisplayWaitingOthers():
-				szOutput = self.szSystemWaiting
+				szOutput = "..."
 			elif CyIF.shouldDisplayEndTurn():
 				szOutput = ReminderEventManager.g_turnReminderTexts
 				if not szOutput:
@@ -1255,6 +1268,7 @@ class CvMainInterface:
 				screen.showEndTurn("EndTurnText")
 			else:
 				screen.hideEndTurn("EndTurnText")
+				screen.hide("WaitingForPlayer")
 			# NJAGC - start
 			if IFT != InterfaceVisibility.INTERFACE_ADVANCED_START:
 				screen.show("EraIndicator0")
@@ -1304,6 +1318,10 @@ class CvMainInterface:
 
 		else:
 			screen.hideEndTurn("EndTurnButton")
+
+	def updateWaitingForPlayer(self, iPlayer):
+		CyGInterfaceScreen("MainInterface", CvScreenEnums.MAIN_INTERFACE).setLabel("WaitingForPlayer", "", self.aFontList[0] + self.szSystemWaiting % str(iPlayer), 1<<2, self.xRes/2, self.yRes - 296, 0, FontTypes.GAME_FONT, WidgetTypes.WIDGET_GENERAL, 0, 0)
+
 
 	# Will redraw the interface
 	def redraw(self):
@@ -1559,7 +1577,7 @@ class CvMainInterface:
 			screen.show("CityScrollPlus")
 			screen.show("MainMenuButton")
 			screen.show("PediaButton0")
-			screen.show("AdvisorButton1")
+			screen.show("AdvBtn1")
 			if self.InCity:
 				screen.show("CityWorkQueue")
 				screen.show("CityTab0")
@@ -1577,15 +1595,16 @@ class CvMainInterface:
 				screen.hide("InterfaceTopCenter")
 				screen.hide("InterfaceTopRight")
 				screen.hide("TurnLogBtn")
-				screen.hide("AdvisorButton0")
-				screen.hide("AdvisorButton2")
-				screen.hide("AdvisorButton3")
-				screen.hide("AdvisorButton4")
-				screen.hide("AdvisorButton5")
-				screen.hide("AdvisorButton6")
-				screen.hide("AdvisorButton7")
-				screen.hide("AdvisorButton8")
-				screen.hide("AdvisorButton9")
+				screen.hide("AdvBtn0")
+				screen.hide("AdvBtn10")
+				screen.hide("AdvBtn2")
+				screen.hide("AdvBtn3")
+				screen.hide("AdvBtn4")
+				screen.hide("AdvBtn5")
+				screen.hide("AdvBtn6")
+				screen.hide("AdvBtn7")
+				screen.hide("AdvBtn8")
+				screen.hide("AdvBtn9")
 				screen.hide("VictoryAdvBtn")
 				screen.hide("InfoAdvBtn")
 				screen.hide("OptionsBtnBUG0")
@@ -1593,20 +1612,22 @@ class CvMainInterface:
 				screen.hide("FoVSliderText")
 				screen.hide("FoVSlider")
 				screen.hide("BuildListBtn0")
+				screen.hide("ParallelMapsBtn")
 			else:
 				screen.show("InterfaceTopLeft")
 				screen.show("InterfaceTopCenter")
 				screen.show("InterfaceTopRight")
 				screen.show("TurnLogBtn")
-				screen.show("AdvisorButton0")
-				screen.show("AdvisorButton2")
-				screen.show("AdvisorButton3")
-				screen.show("AdvisorButton4")
-				screen.show("AdvisorButton5")
-				screen.show("AdvisorButton6")
-				screen.show("AdvisorButton7")
-				screen.show("AdvisorButton8")
-				screen.show("AdvisorButton9")
+				screen.show("AdvBtn0")
+				screen.show("AdvBtn10")
+				screen.show("AdvBtn2")
+				screen.show("AdvBtn3")
+				screen.show("AdvBtn4")
+				screen.show("AdvBtn5")
+				screen.show("AdvBtn6")
+				screen.show("AdvBtn7")
+				screen.show("AdvBtn8")
+				screen.show("AdvBtn9")
 				screen.show("VictoryAdvBtn")
 				screen.show("InfoAdvBtn")
 				screen.show("OptionsBtnBUG0")
@@ -1620,12 +1641,14 @@ class CvMainInterface:
 					screen.hide("FoVSliderText")
 					screen.hide("FoVSlider")
 				screen.show("BuildListBtn0")
+				if GC.getNumMapsInitialized() > 1:
+					screen.show("ParallelMapsBtn")
 
 		elif IFT == InterfaceVisibility.INTERFACE_HIDE:
 			screen.moveItem("EndTurnText", 0, self.yRes - 128, 0)
 			screen.show("MainMenuButton")
 			screen.show("PediaButton0")
-			screen.show("AdvisorButton1")
+			screen.show("AdvBtn1")
 			screen.hide("InterfaceLeftBackgroundWidget")
 			screen.show("InterfaceTopBackgroundWidget")
 			screen.hide("InterfaceCenterBackgroundWidget")
@@ -1637,15 +1660,16 @@ class CvMainInterface:
 			screen.show("InterfaceTopCenter")
 			screen.hide("InterfaceTopRight")
 			screen.hide("TurnLogBtn")
-			screen.hide("AdvisorButton0")
-			screen.hide("AdvisorButton2")
-			screen.hide("AdvisorButton3")
-			screen.hide("AdvisorButton4")
-			screen.hide("AdvisorButton5")
-			screen.hide("AdvisorButton6")
-			screen.hide("AdvisorButton7")
-			screen.hide("AdvisorButton8")
-			screen.hide("AdvisorButton9")
+			screen.hide("AdvBtn0")
+			screen.hide("AdvBtn10")
+			screen.hide("AdvBtn2")
+			screen.hide("AdvBtn3")
+			screen.hide("AdvBtn4")
+			screen.hide("AdvBtn5")
+			screen.hide("AdvBtn6")
+			screen.hide("AdvBtn7")
+			screen.hide("AdvBtn8")
+			screen.hide("AdvBtn9")
 			screen.hide("VictoryAdvBtn")
 			screen.hide("InfoAdvBtn")
 			screen.hide("OptionsBtnBUG0")
@@ -1653,6 +1677,7 @@ class CvMainInterface:
 			screen.hide("FoVSliderText")
 			screen.hide("FoVSlider")
 			screen.hide("BuildListBtn0")
+			screen.hide("ParallelMapsBtn")
 
 		elif IFT in (InterfaceVisibility.INTERFACE_HIDE_ALL, InterfaceVisibility.INTERFACE_MINIMAP_ONLY):
 			screen.moveItem("EndTurnText", 0, self.yRes - 128, 0)
@@ -1682,16 +1707,17 @@ class CvMainInterface:
 			screen.hide("Treasury")
 			screen.hide("PediaButton0")
 			screen.hide("TurnLogBtn")
-			screen.hide("AdvisorButton0")
-			screen.hide("AdvisorButton1")
-			screen.hide("AdvisorButton2")
-			screen.hide("AdvisorButton3")
-			screen.hide("AdvisorButton4")
-			screen.hide("AdvisorButton5")
-			screen.hide("AdvisorButton6")
-			screen.hide("AdvisorButton7")
-			screen.hide("AdvisorButton8")
-			screen.hide("AdvisorButton9")
+			screen.hide("AdvBtn1")
+			screen.hide("AdvBtn0")
+			screen.hide("AdvBtn10")
+			screen.hide("AdvBtn2")
+			screen.hide("AdvBtn3")
+			screen.hide("AdvBtn4")
+			screen.hide("AdvBtn5")
+			screen.hide("AdvBtn6")
+			screen.hide("AdvBtn7")
+			screen.hide("AdvBtn8")
+			screen.hide("AdvBtn9")
 			screen.hide("VictoryAdvBtn")
 			screen.hide("InfoAdvBtn")
 			screen.hide("CityScrollMinus")
@@ -1701,6 +1727,7 @@ class CvMainInterface:
 			screen.hide("FoVSliderText")
 			screen.hide("FoVSlider")
 			screen.hide("BuildListBtn0")
+			screen.hide("ParallelMapsBtn")
 			screen.hide("ResearchBar")
 			screen.hide("ResearchBarDC")
 			screen.hide("WID|TECH|ProgBar0")
@@ -1727,16 +1754,17 @@ class CvMainInterface:
 			screen.hide("Treasury")
 			screen.hide("PediaButton0")
 			screen.hide("TurnLogBtn")
-			screen.hide("AdvisorButton0")
-			screen.hide("AdvisorButton1")
-			screen.hide("AdvisorButton2")
-			screen.hide("AdvisorButton3")
-			screen.hide("AdvisorButton4")
-			screen.hide("AdvisorButton5")
-			screen.hide("AdvisorButton6")
-			screen.hide("AdvisorButton7")
-			screen.hide("AdvisorButton8")
-			screen.hide("AdvisorButton9")
+			screen.hide("AdvBtn1")
+			screen.hide("AdvBtn0")
+			screen.hide("AdvBtn10")
+			screen.hide("AdvBtn2")
+			screen.hide("AdvBtn3")
+			screen.hide("AdvBtn4")
+			screen.hide("AdvBtn5")
+			screen.hide("AdvBtn6")
+			screen.hide("AdvBtn7")
+			screen.hide("AdvBtn8")
+			screen.hide("AdvBtn9")
 			screen.hide("VictoryAdvBtn")
 			screen.hide("InfoAdvBtn")
 			screen.hide("CityScrollMinus")
@@ -1744,6 +1772,7 @@ class CvMainInterface:
 			screen.hide("OptionsBtnBUG0")
 			screen.hide("DebugBtn0")
 			screen.hide("BuildListBtn0")
+			screen.hide("ParallelMapsBtn")
 			if MainOpt.isShowFieldOfView():
 				screen.show("FoVSliderText")
 				screen.show("FoVSlider")
@@ -1759,6 +1788,9 @@ class CvMainInterface:
 			screen.hide("GreatPersonBar1")
 			screen.hide("GreatGeneralBar")
 			screen.hide("GreatGeneralBarText")
+
+	def showParallelMapsScreenButton(self):
+		CyGInterfaceScreen("MainInterface", CvScreenEnums.MAIN_INTERFACE).show("ParallelMapsBtn")
 
 	def cleanPlotList(self, screen):
 		self.hidePlotList(screen)
@@ -4755,7 +4787,7 @@ class CvMainInterface:
 											scores.setWontTalk()
 										if bShowWorstEnemy and CyPlayer.getWorstEnemyName() == CyTeamAct.getName():
 											scores.setWorstEnemy()
-										if bShowWHEOOH and not bTeamAtWarWithYou and bWillingToTalk:
+										if bShowWHEOOH and not bTeamAtWarWithYou and bWillingToTalk and bHaveMetTeam:
 											TD = TradeData()
 											TD.ItemType = TradeableItems.TRADE_WAR
 											for iTeamX in xrange(MAX_PC_TEAMS):
@@ -5202,6 +5234,7 @@ class CvMainInterface:
 				szTxt += u"\n%s%s - %d%%" % (GPUtil.getUnitIcon(iUnit), GC.getUnitInfo(iUnit).getDescription(), iPercent)
 		self.updateTooltip(screen, szTxt)
 
+
 	def treasuryHelp(self, screen, szTxt):
 		player = self.CyPlayer
 		iconCommerceGold = self.iconCommerceList[0]
@@ -5209,10 +5242,12 @@ class CvMainInterface:
 		if player.isAnarchy():
 			self.updateTooltip(screen, szTxt)
 			return
+
 		# Treasury Upkeep
 		iValue = player.getTreasuryUpkeep()
 		if iValue:
 			szTxt += "\n" + TRNSLTR.getText("TXT_KEY_TREASURY_UPKEEP", ()) + str(iValue) + iconCommerceGold
+
 		# Civics
 		iSum = 0
 		szTemp = ""
@@ -5224,10 +5259,16 @@ class CvMainInterface:
 				iSum += iValue
 		if iSum:
 			szTxt += "\n" + TRNSLTR.getText("TXT_INTERFACE_TREASURYHELP_CIVIC_UPKEEP", ()) +" " + str(iSum) + iconCommerceGold + szTemp
+
 		# Maintenance
 		iValue = player.getTotalMaintenance()
 		if iValue:
 			szTxt += "\n" + TRNSLTR.getText("TXT_INTERFACE_TREASURYHELP_CITY_MAINTENANCE", ()) + " " + str(iValue) + iconCommerceGold
+
+		iValue = player.getCorporateMaintenance()
+		if iValue:
+			szTxt += "\n" + TRNSLTR.getText("TXT_INTERFACE_TREASURYHELP_CORPORATE_MAINTENANCE", ()) + " " + str(iValue) + iconCommerceGold
+
 		# Unit upkeep
 		iUnitUpkeep = player.getFinalUnitUpkeep()
 		iUnitSupply = player.calculateUnitSupply()
@@ -5239,6 +5280,7 @@ class CvMainInterface:
 					szTxt += "\n	" + str(iUnitSupply) + iconCommerceGold + " " + TRNSLTR.getText("TXT_INTERFACE_TREASURYHELP_EXPEDITIONARY", ())
 			elif iUnitSupply:
 				szTxt += TRNSLTR.getText("TXT_INTERFACE_TREASURYHELP_UNIT_SUPPLY", ()) + " " + str(iUnitSupply) + iconCommerceGold
+
 		# Trade
 		iValue = player.getGoldPerTurn()
 		if iValue:
@@ -5249,6 +5291,7 @@ class CvMainInterface:
 				szTxt += "0,255,0>"
 			szTxt += str(iValue) + "</color>" + iconCommerceGold
 		self.updateTooltip(screen, szTxt)
+
 
 	def showRevStatusInfoPane(self, screen):
 		InCity = self.InCity
@@ -5602,6 +5645,14 @@ class CvMainInterface:
 				elif TYPE == "BareMap":
 					self.updateTooltip(screen, TRNSLTR.getText("TXT_KEY_HUD_BUTTON_TOGGLE_BARE_MAP", ()))
 
+			elif NAME == "AdvBtn":
+				advisorTip = self.advisorButtonTip[ID]
+				szTxt = "<color=102,229,255>" + advisorTip[0] + "  <color=144,255,72>&#60" + advisorTip[1] + "&#62</color>"
+				if ID == 1:
+					self.treasuryHelp(screen, szTxt)
+				else:
+					self.updateTooltip(screen, szTxt)
+
 			elif NAME == "GreatPersonBar":
 				self.helpGreatPersonBar(screen)
 
@@ -5611,14 +5662,6 @@ class CvMainInterface:
 				screen.hide("PlotHelp")
 				POINT = Win32.getCursorPos()
 				self.xMouseNoPlotHelp = POINT.x; self.yMouseNoPlotHelp = POINT.y
-
-			elif NAME == "AdvisorButton":
-				advisorTip = self.advisorButtonTip[ID]
-				szTxt = "<color=102,229,255>" + advisorTip[0] + "  <color=144,255,72>&#60" + advisorTip[1] + "&#62</color>"
-				if ID == 1:
-					self.treasuryHelp(screen, szTxt)
-				else:
-					self.updateTooltip(screen, szTxt)
 
 			elif NAME == "PediaButton":
 				self.updateTooltip(screen, "<color=101,229,255>Wiki  <color=144,255,72>&#60F12&#62<color=255,255,255>")
@@ -5630,6 +5673,9 @@ class CvMainInterface:
 
 			elif NAME == "BuildListBtn":
 				self.updateTooltip(screen, TRNSLTR.getText("TXT_KEY_MISC_BUILD_LIST_SCREEN_HOVER", ()))
+
+			elif NAME == "ParallelMapsBtn":
+				self.updateTooltip(screen, TRNSLTR.getText("TXT_KEY_PARALLEL_MAPS_SCREEN_HOVER", ()))
 
 			elif NAME == "EraIndicator":
 				self.updateTooltip(screen, GC.getEraInfo(self.CyPlayer.getCurrentEra()).getDescription())
@@ -5960,7 +6006,7 @@ class CvMainInterface:
 				elif TYPE == "BareMap":
 					CyIF.toggleBareMapMode()
 
-			elif NAME == "AdvisorButton":
+			elif NAME == "AdvBtn":
 				if not ID:
 					UP.showDomesticAdvisor(-1)
 				elif ID == 1:
@@ -5981,6 +6027,8 @@ class CvMainInterface:
 					UP.showEspionageAdvisor()
 				elif ID == 9:
 					UP.showRevolutionWatchAdvisor(self)
+				elif ID == 10:
+					UP.showHeritageScreen()
 
 			elif NAME == "PediaButton":
 				UP.pediaShow()
@@ -5991,6 +6039,9 @@ class CvMainInterface:
 
 			elif NAME == "BuildListBtn":
 				UP.showBuildListScreen()
+
+			elif NAME == "ParallelMapsBtn":
+				UP.showParallelMapsScreen()
 
 			elif NAME == "DebugBtn":
 				UP.showDebugScreen()
@@ -6049,6 +6100,9 @@ class CvMainInterface:
 				GAME.doControl(ControlTypes.CONTROL_PREVCITY)
 			else:
 				GAME.doControl(ControlTypes.CONTROL_PREVUNIT)
+
+	def initMinimap(self):
+		CyGInterfaceScreen("MainInterface", CvScreenEnums.MAIN_INTERFACE).initMinimap(self.xMinimap, self.xRes - 3, self.yMinimap, self.yRes - 3, -0.1)
 
 # # # # # # #
 # Pop-Up Callbacks

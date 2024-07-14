@@ -1,6 +1,7 @@
 #include "CvGameCoreDLL.h"
 #include "CvPythonCityLoader.h"
 #include "CyCity.h"
+#include "CityOutputHistory.h"
 #include <boost/python/manage_new_object.hpp>
 
 
@@ -106,7 +107,6 @@ void CvPythonCityLoader::CyCityPythonInterface1(boost::python::class_<CyCity>& i
 		.def("isConnectedToCapital", &CyCity::isConnectedToCapital, "bool (iOwner) - connected to the capital?")
 		.def("area", &CyCity::area, boost::python::return_value_policy<boost::python::manage_new_object>(), "CyArea() () - returns CyArea instance for location of city")
 		.def("waterArea", &CyCity::waterArea, boost::python::return_value_policy<boost::python::manage_new_object>(), "CyArea* ()")
-		.def("getRallyPlot", &CyCity::getRallyPlot, boost::python::return_value_policy<boost::python::manage_new_object>(), "CyPlot () - returns city's rally plot instance")
 		.def("getGameTurnFounded", &CyCity::getGameTurnFounded, "int () - GameTurn the city was founded")
 
 		.def("getGameTurnAcquired", &CyCity::getGameTurnAcquired, "int ()")
@@ -395,7 +395,7 @@ void CvPythonCityLoader::CyCityPythonInterface2(boost::python::class_<CyCity>& i
 		.def("getArea", &CyCity::getArea, "int ()")
 		.def("isWeLoveTheKingDay", &CyCity::isWeLoveTheKingDay, "bool ()")
 		.def("setWeLoveTheKingDay", &CyCity::setWeLoveTheKingDay, "void (bool bWeLoveTheKingDay)")
-		.def("calculateCorporateTaxes", &CyCity::calculateCorporateTaxes, "int ()")
+		.def("calcCorporateMaintenance", &CyCity::calcCorporateMaintenance, "int64_t ()")
 		.def("getBonusCommerceRateModifier", &CyCity::getBonusCommerceRateModifier, "int (int /*CommerceTypes*/)")
 		.def("changePowerCount", &CyCity::changePowerCount, "void (int iChange)")
 

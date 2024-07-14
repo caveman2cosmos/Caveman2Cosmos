@@ -54,7 +54,7 @@ void CyTeamPythonInterface()
 		.def("isNPC", &CyTeam::isNPC, "bool () - is NPC team?")
 		.def("isHominid", &CyTeam::isNPC, "bool () - is Hominid team?")
 		.def("isMinorCiv", &CyTeam::isMinorCiv)
-		.def("setIsMinorCiv", &CyTeam::setIsMinorCiv, "void( bool bNewValue, bool bDoBarbCivCheck )")
+		.def("setIsMinorCiv", &CyTeam::setIsMinorCiv, "void(bool bNewValue)")
 
 		.def("getLeaderID", &CyTeam::getLeaderID, "int (PlayerTypes) ()")
 		.def("getHandicapType", &CyTeam::getHandicapType, "int (HandicapTypes) ()")

@@ -67,6 +67,12 @@ public:
 
 	void processTech(const TechTypes eTech, const int iChange);
 
+	bool hasHeritage(const HeritageTypes eType) const;
+	bool canAddHeritage(const HeritageTypes eType, const bool bTestVisible = false) const;
+	void setHeritage(const HeritageTypes eType, const bool bNewValue);
+	int getHeritageCommerceEraChange(const CommerceTypes eType, const EraTypes eEra) const;
+	std::vector<HeritageTypes> getHeritage() const { return m_myHeritage; }
+
 protected:
 	CvGameObjectPlayer m_GameObject;
 	void baseInit(PlayerTypes eID);
@@ -75,6 +81,9 @@ protected:
 	std::vector<int> m_idleCities;
 	std::vector<CvUnit*> m_commanders;
 	std::vector<CvPlot*> m_commandFieldPlots;
+
+	void processHeritage(const HeritageTypes eType, const int iChange);
+	std::vector<HeritageTypes> m_myHeritage;
 
 public:
 
@@ -175,6 +184,7 @@ public:
 	const char* getUnitButton(UnitTypes eUnit) const;
 
 	void doTurn();
+	void doMultiMapTurn();
 	void doTurnUnits();
 
 	void recordHistory();
@@ -206,7 +216,6 @@ public:
 	void updateCitySight(bool bIncrement, bool bUpdatePlotGroups);
 	void updateTradeRoutes();
 	void updatePlunder(int iChange, bool bUpdatePlotGroups);
-	void validateCommerce() const;
 	void updateTimers();
 	CvCity* findClosestCity(const CvPlot* pPlot) const;
 
@@ -585,7 +594,7 @@ public:
 	void changeCivilianUnitUpkeepMod(const int iChange);
 	void changeMilitaryUnitUpkeepMod(const int iChange);
 	void changeUnitUpkeep(const int iChange, const bool bMilitary);
-	inline void setUnitUpkeepDirty() const { m_bUnitUpkeepDirty = true; }
+	void setUnitUpkeepDirty() const;
 
 	int64_t getUnitUpkeepCivilian100() const;
 	int64_t getUnitUpkeepCivilian() const;
@@ -793,8 +802,7 @@ public:
 
 	DllExport bool isAlive() const;
 	bool isEverAlive() const;
-	void setAlive(bool bNewValue);
-	void setNewPlayerAlive(bool bNewValue);
+	void setAlive(bool bNewValue, bool bActivateTurn = true);
 	void verifyAlive();
 
 	DllExport bool isTurnActive() const;
@@ -809,6 +817,7 @@ public:
 
 	bool isEndTurn() const { return m_bEndTurn; }
 	DllExport void setEndTurn(bool bNewValue);
+	void changeEndTurn(const bool bNewValue, const bool bForce = false);
 
 	bool isForcedCityCycle() const;
 	void setForcedCityCycle(const bool bNewValue) { m_bForcedCityCycle = bNewValue; }
@@ -884,8 +893,8 @@ public:
 	int getTradeYieldModifier(YieldTypes eIndex) const;
 	void changeTradeYieldModifier(YieldTypes eIndex, int iChange);
 
-	int getFreeCityCommerce(CommerceTypes eIndex) const;
-	void changeFreeCityCommerce(CommerceTypes eIndex, int iChange);
+	int getExtraCommerce100(const CommerceTypes eIndex) const;
+	void changeExtraCommerce100(const CommerceTypes eIndex, const int iChange);
 
 	int getCommercePercent(CommerceTypes eIndex) const;
 	void setCommercePercent(CommerceTypes eIndex, int iNewValue);
@@ -1441,16 +1450,16 @@ public:
 	int getCorporationSpreadModifier() const;
 	void changeCorporationSpreadModifier(int iChange);
 
-	int getCorporateTaxIncome() const;
-	void changeCorporateTaxIncome(int iChange);
+	int64_t getCorporateMaintenance() const;
+	void updateCorporateMaintenance();
 
 	int getCorporationInfluence(CorporationTypes eIndex) const;
 	int getEnvironmentalProtection() const;
 	int getLaborFreedom() const;
 
-	void doTaxes();
 
 	bool m_bChoosingReligion;
+	bool m_bHasLanguage;
 
 	int getBuildingCount(BuildingTypes eBuilding, bool bUpgrades) const;
 
@@ -1552,7 +1561,10 @@ protected:
 	int m_iWorldHappiness;
 	float m_fPopulationgrowthratepercentageLog;
 	int m_iCorporationSpreadModifier;
+	// @SAVEBREAK - delete
 	int m_iCorporateTaxIncome;
+	// !SAVEBREAK
+	int64_t m_iCorporateMaintenance;
 	bool m_bShowLandmarks;
 	int m_iCityLimit;
 	int m_iCityOverLimitUnhappy;
@@ -1563,7 +1575,6 @@ protected:
 	int m_iTraitExtraCityDefense;
 	bool* m_pabHasTrait;
 	int m_iLeaderHeadLevel;
-	int m_iTraitDisplayCount;
 	int m_iNationalEspionageDefense;
 	int m_iInquisitionCount;
 	int m_iCompatCheckCount;
@@ -1608,8 +1619,6 @@ protected:
 	int m_iFirstMergeSelection;
 	int m_iSecondMergeSelection;
 	int m_iSplittingUnit;
-	int m_iArrestingUnit;
-	int m_iArrestedUnit;
 	int m_iAmbushingUnit;
 	bool m_bAssassinate;
 
@@ -1919,7 +1928,8 @@ protected:
 	int* m_aiCapitalYieldRateModifier;
 	int* m_aiExtraYieldThreshold;
 	int* m_aiTradeYieldModifier;
-	int* m_aiFreeCityCommerce;
+	int* m_aiFreeCityCommerce; // @SAVEBREAK remove as it is unused.
+	int* m_extraCommerce;
 	int* m_aiCommercePercent;
 	int* m_aiCommerceRate;
 	bool* m_abCommerceDirty;
@@ -2029,7 +2039,7 @@ protected:
 	bool isValidTriggerReligion(const CvEventTriggerInfo& kTrigger, const CvCity* pCity, ReligionTypes eReligion) const;
 	bool isValidTriggerCorporation(const CvEventTriggerInfo& kTrigger, const CvCity* pCity, CorporationTypes eCorporation) const;
 	CvCity* pickTriggerCity(EventTriggerTypes eTrigger) const;
-	CvUnit* pickTriggerUnit(EventTriggerTypes eTrigger, const CvPlot* pPlot, bool bPickPlot) const;
+	CvUnit* pickTriggerUnit(EventTriggerTypes eTrigger, const CvPlot* pPlot, bool bCheckPlot) const;
 	bool isValidEventTech(TechTypes eTech, EventTypes eEvent, PlayerTypes eOtherPlayer) const;
 	void recalculatePopulationgrowthratepercentage();
 
@@ -2105,10 +2115,6 @@ public:
 	bool canLeaderPromote() const;
 	void doPromoteLeader();
 	void clearLeaderTraits();
-
-	int getTraitDisplayCount() const;
-	void setTraitDisplayCount(int iNewValue);
-	void changeTraitDisplayCount(int iChange);
 
 	int getNationalEspionageDefense() const;
 	void setNationalEspionageDefense(int iNewValue);
@@ -2265,11 +2271,6 @@ public:
 	int getSplittingUnit() const;
 	void setSplittingUnit(int iNewValue);
 
-	int getArrestingUnit() const;
-	void setArrestingUnit(int iNewValue);
-	int getArrestedUnit() const;
-	void setArrestedUnit(int iNewValue);
-
 	int getAmbushingUnit() const;
 	bool isAssassinate() const;
 	void setAmbushingUnit(int iNewValue, bool bAssassinate = false);
@@ -2317,10 +2318,6 @@ public:
 	void changeExtraFreedomFighters(int iChange);
 
 	CvBuildLists* m_pBuildLists;
-
-#ifdef _DEBUG
-	void ValidatePlotGroup(CvPlot* plot, CvPlotGroup* group);
-#endif
 
 private:
 	int m_iNumAnimalsSubdued;

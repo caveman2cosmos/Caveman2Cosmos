@@ -175,10 +175,8 @@ class TerraMultilayeredFractal(MGU.MultilayeredFractal):
 		else:
 			(archGrain, contGrain, gaeaGrain, eurasiaGrain) = sizevalues[sizekey]
 
-		# Sea Level adjustment (from user input), limited to value of 5%.
+		# Sea Level adjustment (from user input).
 		sea = self.GC.getSeaLevelInfo(self.map.getSeaLevel()).getSeaLevelChange()
-		sea = min(sea, 5)
-		sea = max(sea, -5)
 
 		# The following regions are specific to Terra.py
 		newworldWestLon = 0.05

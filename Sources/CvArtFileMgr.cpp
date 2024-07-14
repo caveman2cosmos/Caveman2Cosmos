@@ -11,10 +11,9 @@
 //---------------------------------------------------------------------------------------
 //  Copyright (c) 2004 Firaxis Games, Inc. All rights reserved.
 //---------------------------------------------------------------------------------------
-
-#include "FProfiler.h"
-
 #include "CvGameCoreDLL.h"
+#include "FProfiler.h"
+#include "CvInfos.h"
 #include "CvArtFileMgr.h"
 #include "CvXMLLoadUtility.h"
 

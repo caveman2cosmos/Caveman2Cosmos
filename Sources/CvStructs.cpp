@@ -221,6 +221,7 @@ void VoteTriggeredData::write(FDataStreamBase* pStream)
 	WRAPPER_WRITE_OBJECT_END(wrapper);
 }
 
+// @SAVEBREAK delete
 void PlotExtraYield::read(FDataStreamBase* pStream)
 {
 	PROFILE_EXTRA_FUNC();
@@ -261,6 +262,7 @@ void PlotExtraYield::write(FDataStreamBase* pStream)
 
 	WRAPPER_WRITE_OBJECT_END(wrapper);
 }
+// !SAVEBREAK
 
 void BuildingYieldChange::read(FDataStreamBase* pStream)
 {

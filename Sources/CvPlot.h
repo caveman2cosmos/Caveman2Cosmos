@@ -238,9 +238,11 @@ public:
 	bool isRiver() const;
 	bool isRiverConnection(DirectionTypes eDirection) const;
 
-	CvPlot* getNearestLandPlotInternal(int iDistance) const;
-	int getNearestLandArea() const;
-	CvPlot* getNearestLandPlot() const;
+	int isLandWater(const bool bLand) const;
+	int getDistanceToLandOrCoast(const int iMaxReturn = MAX_INT) const;
+	int setClimateAppropriateWaterTerrain(const int iDistance, ClimateZoneTypes eClimate = NO_CLIMATE_ZONE);
+	bool correctWaterTerrain(int &iLastDistance);
+	void correctWaterTerrains(int iLastDistance, const DirectionTypes dir, const bool bContinue = false);
 
 	int getElevationLevel(const bool bExtra = false) const;
 	int getTerrainElevation() const;
@@ -320,13 +322,42 @@ public:
 	int calculatePathDistanceToPlot( TeamTypes eTeam, CvPlot* pTargetPlot ) const;
 
 	// Plot danger cache
-	bool isActivePlayerNoDangerCache() const;
-	bool isActivePlayerHasDangerCache() const;
-	bool isTeamBorderCache( TeamTypes eTeam ) const;
-	void setIsActivePlayerNoDangerCache( bool bNewValue ) const;
-	void setIsActivePlayerHasDangerCache( bool bNewValue ) const;
-	void setIsTeamBorderCache( TeamTypes eTeam, bool bNewValue ) const;
-	void invalidateIsTeamBorderCache() const;
+	inline int getActivePlayerSafeRangeCache(const bool bTestMoves) const
+	{
+		if (bTestMoves)
+		{
+			return m_iActivePlayerSafeRangeCacheTestMoves;
+		}
+		return m_iActivePlayerSafeRangeCache;
+	}
+	inline void setActivePlayerSafeRangeCache(const int iRange, const bool bTestMoves) const 
+	{
+		if (bTestMoves)
+		{
+			m_iActivePlayerSafeRangeCacheTestMoves = iRange;
+		}
+		else m_iActivePlayerSafeRangeCache = iRange;
+	}
+	inline bool getActivePlayerHasDangerCache(const bool bTestMoves) const
+	{
+		if (bTestMoves)
+		{
+			return m_bActivePlayerHasDangerCacheTestMoves;
+		}
+		return m_bActivePlayerHasDangerCache;
+	}
+	inline void setActivePlayerHasDangerCache(const bool bNewValue, const bool bTestMoves) const
+	{
+		if (bTestMoves)
+		{
+			m_bActivePlayerHasDangerCacheTestMoves = bNewValue;
+		}
+		else m_bActivePlayerHasDangerCache = bNewValue;
+	}
+	inline bool getBorderDangerCache(const TeamTypes eTeam) const { return m_borderDangerCache[eTeam]; }
+	inline void setBorderDangerCache(const TeamTypes eTeam, const bool bNewValue) const { m_borderDangerCache[eTeam] = bNewValue; }
+	void invalidateBorderDangerCache() const;
+	void invalidateActivePlayerPlotCache();
 
 	CvCity* getAdjacentCity(PlayerTypes ePlayer = NO_PLAYER) const;
 	bool changeBuildProgress(BuildTypes eBuild, int iChange, PlayerTypes ePlayer = NO_PLAYER);
@@ -718,6 +749,7 @@ public:
 	int getBaseYield(const YieldTypes eIndex) const;
 	void changeBaseYield(const short* pYieldChange);
 
+	void setExtraYield(YieldTypes eYield, short iExtraYield);
 	short* getYield() const;
 	void updateYield();
 	int calculateYield(YieldTypes eIndex, bool bDisplay = false) const;
@@ -789,7 +821,7 @@ public:
 	bool isAdjacentRevealed(TeamTypes eTeam, bool bDebug = false) const;
 	bool isAdjacentNonrevealed(TeamTypes eTeam) const;
 
-	ImprovementTypes getRevealedImprovementType(TeamTypes eTeam, bool bDebug) const;
+	ImprovementTypes getRevealedImprovementType(TeamTypes eTeam, bool bDebug = false) const;
 	void setRevealedImprovementType(TeamTypes eTeam, ImprovementTypes eNewValue);
 
 	RouteTypes getRevealedRouteType(TeamTypes eTeam, bool bDebug) const;
@@ -962,9 +994,11 @@ protected:
 	IDInfo m_workingCityOverride;
 
 	// Plot danger cache
-	mutable bool m_bIsActivePlayerHasDangerCache;
-	mutable bool m_bIsActivePlayerNoDangerCache;
-	mutable bool* m_abIsTeamBorderCache;
+	mutable int m_iActivePlayerSafeRangeCache;
+	mutable int m_iActivePlayerSafeRangeCacheTestMoves;
+	mutable bool m_bActivePlayerHasDangerCache;
+	mutable bool m_bActivePlayerHasDangerCacheTestMoves;
+	mutable bool* m_borderDangerCache;
 
 	static	int m_iGlobalCachePathEpoch;
 	mutable int		m_iCachePathEpoch;
@@ -981,6 +1015,7 @@ protected:
 
 	short* m_baseYields;
 	short* m_aiYield;
+	bst::array<short, NUM_YIELD_TYPES> m_aExtraYield;
 	std::vector<std::pair<PlayerTypes,int> > m_aiCulture;
 	std::vector<PlotTeamVisibilityIntensity> m_aPlotTeamVisibilityIntensity;
 	unsigned int* m_aiFoundValue;
@@ -1043,9 +1078,18 @@ protected:
 
 // From Lead From Behind by UncutDragon
 public:
-	bool hasDefender(bool bCheckCanAttack, PlayerTypes eOwner, PlayerTypes eAttackingPlayer = NO_PLAYER, const CvUnit* pAttacker = NULL, bool bTestAtWar = false, bool bTestPotentialEnemy = false, bool bTestCanMove = false, bool bTestCanFight = false) const;
-	bool hasStealthDefender(const CvUnit* pAttacker) const;
-	void revealBestStealthDefender(const CvUnit* pAttacker);
+	bool hasDefender(
+		bool bCheckCanAttack,
+		PlayerTypes eOwner,
+		PlayerTypes eAttackingPlayer = NO_PLAYER,
+		const CvUnit* pAttacker = NULL,
+		bool bTestAtWar = false,
+		bool bTestPotentialEnemy = false,
+		bool bTestCanMove = false,
+		bool bTestCanFight = false
+	) const;
+	bool hasStealthDefender(const CvUnit* victim, const bool bReveal = false);
+
 	void doPreAttackTraps(CvUnit* pAttacker);
 
 	void countCommander(bool bNewVal, const CvUnit* pUnit);

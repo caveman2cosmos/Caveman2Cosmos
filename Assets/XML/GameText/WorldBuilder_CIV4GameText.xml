@@ -91,7 +91,7 @@
 		<Tag>TXT_KEY_WB_BASE_YIELD</Tag>
 		<English>Base %s1: %d2</English>
 		<Russian>Базовый %s1: %d2</Russian>
-		<Italian>Resa base %s1: %d2</Italian>
+		<Italian>Rendimento base %s1: %d2</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_WB_BRIDGE_BUILDING</Tag>
@@ -133,7 +133,7 @@
 		<Tag>TXT_KEY_WB_COUNTER_ESPIONAGE</Tag>
 		<English>Counter Espionage</English>
 		<German>Spionageabwehr</German>
-		<Russian>Счётчик шпионажа</Russian>
+		<Russian>Счетчик шпионажа</Russian>
 		<Italian>Controspionaggio</Italian>
 	</TEXT>
 	<TEXT>
@@ -231,7 +231,7 @@
 		<French>Spécialistes gratuits</French>
 		<Italian>Specialisti gratuiti</Italian>
 		<Spanish>Especialistas gratis</Spanish>
-		<Polish>Darmowi Specjaliści</Polish>
+		<Polish>Darmowi Specjali&#156;ci</Polish>
 		<Russian>Бесплатные специалисты</Russian>
 	</TEXT>
 	<TEXT>
@@ -258,7 +258,7 @@
 		<French>Échange d'or</French>
 		<Italian>Commercio d'oro</Italian>
 		<Spanish>Comercio con oro</Spanish>
-		<Polish>Handel Złotem</Polish>
+		<Polish>Handel Z&#179;otem</Polish>
 		<Russian>Торговля золотом</Russian>
 	</TEXT>
 	<TEXT>
@@ -337,7 +337,7 @@
 		<Tag>TXT_KEY_WB_LATITUDE</Tag>
 		<English>Latitude: %d1</English>
 		<Spanish>Latitud: %d1</Spanish>
-		<Polish>Szerokość: %d1</Polish>
+		<Polish>Szeroko&#156;&#230;: %d1</Polish>
 		<Russian>Широта: %d1</Russian>
 		<Italian>Latitudine: %d1</Italian>
 	</TEXT>
@@ -401,7 +401,7 @@
 		<French>Forger une équipe</French>
 		<Italian>Unisci squadra</Italian>
 		<Spanish>Fusionar equipo</Spanish>
-		<Polish>Połącz Drożynę</Polish>
+		<Polish>Po&#179;&#185;cz Dro&#191;yn&#234;</Polish>
 		<Russian>Объеденить команду</Russian>
 	</TEXT>
 	<TEXT>
@@ -422,7 +422,7 @@
 		<French>Mouvements restants</French>
 		<Italian>Movimenti rimanenti</Italian>
 		<Spanish>Movimientos restantes</Spanish>
-		<Polish>Ilość Ruchów</Polish>
+		<Polish>Ilo&#156;&#230; Ruch&#243;w</Polish>
 		<Russian>Осталось движения</Russian>
 	</TEXT>
 	<TEXT>
@@ -556,7 +556,7 @@
 		<French>Religion d'État</French>
 		<Italian>Religione di stato</Italian>
 		<Spanish>Religión oficial</Spanish>
-		<Polish>Religia Państwowa</Polish>
+		<Polish>Religia Pa&#241;stwowa</Polish>
 		<Russian>Государственная религия</Russian>
 	</TEXT>
 	<TEXT>
@@ -589,7 +589,7 @@
 		<French>Données d'équipe</French>
 		<Italian>Dati squadra</Italian>
 		<Spanish>Datos de equipo</Spanish>
-		<Polish>Dane Drużyny</Polish>
+		<Polish>Dane Dru&#191;yny</Polish>
 		<Russian>Данные команды</Russian>
 	</TEXT>
 	<TEXT>
@@ -635,7 +635,7 @@
 		<Tag>TXT_KEY_WB_UPGRADE_PROGRESS</Tag>
 		<English>Upgrade Turns: %d1</English>
 		<French>Tours pour amélioration: %d1</French>
-		<Italian>Turni per l'upgrade: %d1</Italian>
+		<Italian>Turni per la modernizzazione: %d1</Italian>
 		<Spanish>Turnos para ampliar: %d1</Spanish>
 		<Polish>Tur do Ulepszenia: %d1</Polish>
 		<Russian>Ходов улучшения: %d1</Russian>

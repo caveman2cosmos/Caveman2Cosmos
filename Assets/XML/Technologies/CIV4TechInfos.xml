@@ -13,7 +13,6 @@
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<iCost>3</iCost>
 			<Era>C2C_ERA_PREHISTORIC</Era>
-			<iHealth>1</iHealth>
 			<iAsset>2</iAsset>
 			<bTrade>1</bTrade>
 			<bGoodyTech>1</bGoodyTech>
@@ -72,6 +71,7 @@
 			<iAsset>2</iAsset>
 			<bTrade>1</bTrade>
 			<bGoodyTech>1</bGoodyTech>
+			<bLanguage>1</bLanguage>
 			<iGridX>1</iGridX>
 			<iGridY>17</iGridY>
 			<Flavors>

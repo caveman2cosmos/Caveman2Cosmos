@@ -44,7 +44,7 @@
 		<English>[ICON_BULLET]Free [COLOR_BUILDING_TEXT][LINK=%s1_NameType]%s2_Name[\LINK][COLOR_REVERT] in Every City</English>
 		<French>[ICON_BULLET]1 [COLOR_BUILDING_TEXT][LINK=%s1_NameType]%s2_Name[\LINK][COLOR_REVERT] dans chaque ville</French>
 		<German>[ICON_BULLET]freies Gebäude [LINK=%s1_NameType][COLOR_BUILDING_TEXT]%s2_Name[COLOR_REVERT][\LINK] in jeder Stadt</German>
-		<Italian>[ICON_BULLET]Edificio [COLOR_BUILDING_TEXT][LINK=%s1_NameType]%s2_Name[\LINK][COLOR_REVERT] gratuito in tutte le città</Italian>
+		<Italian>[ICON_BULLET]Edificio [COLOR_BUILDING_TEXT][LINK=%s1_NameType]%s2_Name[\LINK][COLOR_REVERT] [COLOR_HIGHLIGHT_TEXT]gratuito in tutte le città[COLOR_REVERT]</Italian> <!-- city screen local culture building hover -->
 		<Spanish>[ICON_BULLET][NUM1:Un:Una:Unos:Unas] [COLOR_BUILDING_TEXT][LINK=%s1_NameType]%s2:1_Name[\LINK][COLOR_REVERT] gratis en todas las ciudades.</Spanish>
 		<Russian>[ICON_BULLET]Бесплатный [COLOR_BUILDING_TEXT][LINK=%s1_NameType]%s2_Name[\LINK][COLOR_REVERT] в каждом городе</Russian>
 	</TEXT>
@@ -92,7 +92,7 @@
 		<English>[COLOR_WARNING_TEXT]Obsolete with [LINK=%s1_TechType]%s2_TechName[\LINK][COLOR_REVERT]</English>
 		<French>[COLOR_WARNING_TEXT]Obsolète avec : [LINK=%s1_TechType]%s2_TechName[\LINK][COLOR_REVERT]</French>
 		<German>[ICON_BULLET][COLOR_WARNING_TEXT]veraltet durch die Technologie [LINK=%s1_TechType]%s2_TechName[\LINK][COLOR_REVERT]</German>
-		<Italian>[ICON_BULLET]Diventa [COLOR_WARNING_TEXT]obsoleto[COLOR_REVERT] alla scoperta della tecnologia: [LINK=%s1_TechType]%s2_TechName[\LINK][COLOR_REVERT]</Italian>
+		<Italian>[ICON_BULLET]Raggiunge l'[COLOR_WARNING_TEXT]obsolescenza[COLOR_REVERT] alla scoperta della tecnologia: [COLOR_HIGHLIGHT_TEXT][LINK=%s1_TechType]%s2_TechName[\LINK][COLOR_REVERT]</Italian>
 		<Spanish>[COLOR_WARNING_TEXT]Caerá en desuso con [NUM1:el:la:los:las] [LINK=%s1_TechType]%s2_TechName[\LINK][COLOR_REVERT]</Spanish>
 		<Russian>[COLOR_WARNING_TEXT]Устаревает из-за [LINK=%s1_TechType]%s2_TechName[\LINK][COLOR_REVERT]</Russian>
 	</TEXT>
@@ -128,15 +128,6 @@
 		<Italian>[ICON_BULLET]Alcune funzioni sono attive solo se %F1_RelIcon è la tua religione di stato [ICON_RELIGION]</Italian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDINGHELP_REQUIRES_STRING</Tag>
-		<English>[COLOR_WARNING_TEXT]Requires [LINK=%s1_NameType]%s2_Name[\LINK][COLOR_REVERT]</English>
-		<French>[COLOR_WARNING_TEXT]Requiert : [LINK=%s1_NameType]%s2_Name[\LINK][COLOR_REVERT]</French>
-		<German>[ICON_BULLET][COLOR_WARNING_TEXT]erforderlich: [LINK=%s1_NameType]%s2_Name[\LINK][COLOR_REVERT]</German>
-		<Italian>[ICON_BULLET]Richiede inoltre: [LINK=%s1_NameType]%s2_Name[\LINK]</Italian>
-		<Spanish>[COLOR_WARNING_TEXT]Requiere [LINK=%s1_NameType]%s2_Name[\LINK][COLOR_REVERT]</Spanish>
-		<Russian>[COLOR_WARNING_TEXT]Требует [LINK=%s1_NameType]%s2_Name[\LINK][COLOR_REVERT]</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILDINGHELP_STATE_RELIGION_PREREQ</Tag>
 		<English>[ICON_BULLET]This building requires %F1_RelIcon to be your State [ICON_RELIGION].</English>
 		<French>[ICON_BULLET]Ce bâtiment nécessite %F1_RelIcon comme [ICON_RELIGION] d'Etat.</French>
@@ -166,7 +157,7 @@
 		<English>[SPACE]with [LINK=%s1_BonusType]%s2_Bonus[\LINK]</English>
 		<French>[SPACE]avec : [LINK=%s1_BonusType]%s2_Bonus[\LINK]</French>
 		<German>[SPACE]durch [LINK=%s1_BonusType]%s2_Bonus[\LINK]</German>
-		<Italian>[SPACE]con la risorsa [LINK=%s1_BonusType]%s2_Bonus[\LINK]</Italian>
+		<Italian>[SPACE]con la risorsa [LINK=%s1_BonusType]%s2_Bonus[\LINK]</Italian> <!-- hover on building Animal Snare Traps -->  
 		<Spanish>[SPACE]con [LINK=%s1_BonusType]%s2_Bonus[\LINK]</Spanish>
 		<Russian>[SPACE]с [LINK=%s1_BonusType]%s2_Bonus[\LINK]</Russian>
 	</TEXT>
@@ -178,15 +169,6 @@
 		<Italian>[ICON_BULLET]%D1_Change%F2_HappOrUnhapp a causa dell'edificio [COLOR_BUILDING_TEXT][LINK=%s3_BuildingType]%s4_Building[\LINK][COLOR_REVERT]</Italian>
 		<Spanish>[ICON_BULLET]%D1_Change %F2_HappOrUnhapp por [COLOR_BUILDING_TEXT][LINK=%s3_BuildingType]%s4_Building[\LINK][COLOR_REVERT]</Spanish>
 		<Russian>[ICON_BULLET]%D1_Change%F2_HappOrUnhapp от [COLOR_BUILDING_TEXT][LINK=%s3_BuildingType]%s4_Building[\LINK][COLOR_REVERT]</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CIVICHELP_REQUIRES</Tag>
-		<English>[COLOR_RED]Requires [LINK=%s1_TechType]%s2_TechName[\LINK][COLOR_REVERT]</English>
-		<French>[COLOR_RED]Req. [LINK=%s1_TechType]%s2_TechName[\LINK][COLOR_REVERT]</French>
-		<German>[COLOR_RED]Erfordert die Technologie [LINK=%s1_TechType]%s2_TechName[\LINK][COLOR_REVERT]</German>
-		<Italian>[COLOR_RED][ICON_BULLET]Richiede la tecnologia [LINK=%s1_TechType]%s2_TechName[\LINK][COLOR_REVERT]</Italian>
-		<Spanish>[COLOR_RED]Requiere [NUM1:el:la:los:las] [LINK=%s1_TechType]%s2_TechName[\LINK][COLOR_REVERT]</Spanish>
-		<Russian>[COLOR_RED]Требует [LINK=%s1_TechType]%s2_TechName[\LINK][COLOR_REVERT]</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CORPORATION_FOUNDED_FIRST</Tag>
@@ -341,32 +323,23 @@
 		<English>Base %s1: %d2 %F3</English>
 		<French>%s1 de base : %d2 %F3</French>
 		<German>Grundwert %s1: %d2 %F3</German>
-		<Italian>%s1 base: %d2 %F3</Italian>
+		<Italian>%s1 [COLOR_HIGHLIGHT_TEXT]base[COLOR_REVERT]: [COLOR_HIGHLIGHT_TEXT]%d2[COLOR_REVERT] %F3[NEWLINE]</Italian> <!-- city screen research, culture panel hover upper right -->
 		<Spanish>%s1 base: %d2 %F3</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISC_HELP_FINAL_YIELD</Tag>
 		<English>Total: %d1 %F2</English>
-		<Italian>Rendimento totale: %d1 %F2</Italian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_MISC_HELP_FREE_CITY_COMMERCE</Tag>
-		<English>[ICON_BULLET]%D1%F2 Free Commerce</English>
-		<French>[ICON_BULLET]%D1%F2 en raison du libre échange</French>
-		<German>[ICON_BULLET]%D1%F2 freie Wirtschaft</German>
-		<Italian>[ICON_BULLET]%D1%F2 a causa del libero commercio</Italian>
-		<Spanish>[ICON_BULLET]%D1 %F2 comercio libre</Spanish>
-		<Russian>[ICON_BULLET]%D1%F2 от чистых доходов</Russian>
+		<Italian>[NEWLINE][COLOR_HIGHLIGHT_TEXT]Totale:[COLOR_REVERT] [COLOR_HIGHLIGHT_TEXT]%d1[COLOR_REVERT] %F2[NEWLINE]</Italian> <!-- city screen research, culture panel hover upper right -->
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISC_HELP_TOTAL_YIELD_MOD</Tag>
 		<English>Sum: %d1%% = %s2%F3</English>
-		<Italian>Somma %: %d1%% = %s2%F3</Italian> <!-- city scrren, hover gold in upper left> -->
+		<Italian>[NEWLINE][COLOR_HIGHLIGHT_TEXT]Totale[COLOR_REVERT] % = [COLOR_HIGHLIGHT_TEXT]%d1%%[COLOR_REVERT]  =  [COLOR_HIGHLIGHT_TEXT]%s2[COLOR_REVERT] %F3 (da arrotondare)</Italian> <!-- city screen, hover gold in upper left> -->
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISC_HELP_YIELD_OTHER</Tag>
 		<English>[ICON_BULLET]%D1 %F2 from other</English>
-		<Italian>[ICON_BULLET]%D1 %F2 da altre fonti</Italian>
+		<Italian>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]%D1 %F2[COLOR_REVERT] da altre fonti</Italian> <!-- city screen research, culture panel hover upper right -->
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISC_INVESTIGATED_BECOME_WANTED</Tag>
@@ -419,7 +392,7 @@
 		<English>%s1_PlyrName has adopted the %s2_CvcOptionName civic [COLOR_HIGHLIGHT_TEXT]%s3_CvcName[COLOR_REVERT]!</English>
 		<French>%s1_PlyrName a adopté la doctrine (%s2_CvcOptionName) : [COLOR_HIGHLIGHT_TEXT]%s3_CvcName[COLOR_REVERT] !</French>
 		<German>%s1_PlyrName hat angenommen: %s2_CvcOptionName - [COLOR_HIGHLIGHT_TEXT]%s3_CvcName[COLOR_REVERT]!</German>
-		<Italian>L'impero di %s1_PlyrName ha adottato la forma di governo: [COLOR_HIGHLIGHT_TEXT]%s3_CvcName[COLOR_REVERT] (%s2_CvcOptionName)!</Italian>
+		<Italian>La civiltà di %s1_PlyrName ha adottato la forma di governo: [COLOR_HIGHLIGHT_TEXT]%s3_CvcName[COLOR_REVERT] (%s2_CvcOptionName)!</Italian> <!-- Message Log Screen -->
 		<Spanish>%s1_PlyrName ha adoptado: %s2_CvcOptionName - [COLOR_HIGHLIGHT_TEXT]%s3_CvcName[COLOR_REVERT]!</Spanish>
 		<Russian>%s1_PlyrName принял парадигму %s2_CvcOptionName [COLOR_HIGHLIGHT_TEXT]%s3_CvcName[COLOR_REVERT]!</Russian>
 	</TEXT>
@@ -469,7 +442,7 @@
 		<English>BUG Options:</English>
 		<French>Options 'BUG':</French>
 		<German>BUG-Optionen:</German>
-		<Italian>Opzioni BUG:</Italian>
+		<Italian>[NEWLINE]Opzioni BUG attive[NEWLINE](modificabili in opzioni BUG mod -> tab Caveman2Cosmos -> sezione impostazioni di gioco)[NEWLINE]</Italian>  <!-- Bug mod recap screen Ctrl+Shift+Q -->
 		<Spanish>Opciones de BUG:</Spanish>
 		<Polish>Opcje 'BUG':</Polish>
 		<Russian>Îïöèè BUG:</Russian>
@@ -479,7 +452,7 @@
 		<English>DCM Options:</English>
 		<French>Options DCM:</French>
 		<German>DCM-Optionen:</German>
-		<Italian>Opzioni DCM:</Italian>
+		<Italian>[NEWLINE]Opzioni DCM attive[NEWLINE](modificabili in opzioni BUG mod -> tab RevDCM -> opzioni assedio e aeronautica)[NEWLINE]</Italian>  <!-- Bug mod recap screen Ctrl+Shift+Q -->
 		<Spanish>Opciones de DCM:</Spanish>
 		<Polish>Opcje DCM:</Polish>
 	</TEXT>
@@ -490,14 +463,14 @@
 		<Spanish>Opciones de juego:</Spanish>
 		<Polish>Opcje Gry:</Polish>
 		<Russian>Îïöèè Revolution:</Russian>
-		<Italian>Opzioni di gioco:</Italian>
+		<Italian>Opzioni di gioco attive[NEWLINE](modificabili prima dell'inizio della partita nello schermo di personalizzazione partita o scenario)[NEWLINE]</Italian>  <!-- Bug mod recap screen Ctrl+Shift+Q -->
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_OPTIONS_IDW</Tag>
 		<English>IDW Options:</English>
 		<French>Options IDW:</French>
 		<German>IDW-Optionen:</German>
-		<Italian>Opzioni IDW:</Italian>
+		<Italian>[NEWLINE]Opzioni IDW attive[NEWLINE](modificabili in opzioni BUG mod -> tab RevDCM -> opzioni IDW e influenza culturale)[NEWLINE]</Italian> <!-- Bug mod recap screen Ctrl+Shift+Q -->
 		<Spanish>Opciones de IDW:</Spanish>
 		<Polish>Opcje IDW:</Polish>
 	</TEXT>
@@ -506,9 +479,9 @@
 		<English>Super Spies Options:</English>
 		<French>Options 'Super Spies':</French>
 		<German>Superspion-Optionen:</German>
-		<Italian>Opzioni Super Spie:</Italian>
+		<Italian>[NEWLINE]Opzioni spie attive[NEWLINE](modificabili in opzioni BUG mod -> tab RevDCM -> opzioni spie)[NEWLINE]</Italian>
 		<Spanish>Opciones de Super Spies:</Spanish>
-		<Polish>Opcje Super Szpiegów:</Polish>
+		<Polish>Opcje Super Szpieg&#243;w:</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PER_POP</Tag>
@@ -593,7 +566,7 @@
 		<English>[ICON_BULLET]%d1_Num Extra First Strike</English>
 		<French>[ICON_BULLET]%d1_Num première attaque supplémentaire</French>
 		<German>[ICON_BULLET]%d1_Num [NUM1:Extra-Erstschlag:Extra-Erstschläge]</German>
-		<Italian>[ICON_BULLET]%d1 primo colpo aggiunto</Italian>
+		<Italian>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Primi colpi[COLOR_REVERT] supplementari: [COLOR_HIGHLIGHT_TEXT]%d1[COLOR_REVERT]</Italian> <!-- hero unit Aatsista-Mahkan -->
 		<Spanish>[ICON_BULLET]%d1_Num [NUM1:ataque de iniciativa adicional:ataques de iniciativa adicionales]</Spanish>
 		<Russian>[ICON_BULLET]%d1_Num äîï. Ïåðâûé óäàð</Russian>
 	</TEXT>
@@ -602,7 +575,7 @@
 		<English>[ICON_BULLET]%D1_Change First Strikes</English>
 		<French>[ICON_BULLET]%D1_Change premières attaques</French>
 		<German>[ICON_BULLET]%D1_Change [NUM1:Erstschlag:Erstschläge]</German>
-		<Italian>[ICON_BULLET]Numero di primi colpi aggiunti: %D1_Change</Italian>
+		<Italian>[ICON_BULLET]Numero di [COLOR_HIGHLIGHT_TEXT]primi colpi[COLOR_REVERT]: [COLOR_HIGHLIGHT_TEXT]%d1[COLOR_REVERT]</Italian> <!-- promotion Pinch V -->
 		<Spanish>[ICON_BULLET]%D1_Change [NUM1:ataque de iniciativa:ataques de iniciativa]</Spanish>
 		<Russian>[ICON_BULLET]%D1_Change Ïåðâûõ óäàðà</Russian>
 	</TEXT>
@@ -611,7 +584,7 @@
 		<English>[ICON_BULLET]%D1_Change First Strike Chances</English>
 		<French>[ICON_BULLET]%D1_Change chances de première attaque</French>
 		<German>[ICON_BULLET]%D1_Change Erstschlagschancen</German>
-		<Italian>[ICON_BULLET]%D1_Change di probabilità di primo colpo</Italian>
+		<Italian>[ICON_BULLET]Probabilità di [COLOR_HIGHLIGHT_TEXT]primo colpo[COLOR_REVERT]: [COLOR_HIGHLIGHT_TEXT]%D1_Change%[COLOR_REVERT]</Italian> <!-- promotion Pinch II -->
 		<Spanish>[ICON_BULLET]Probabilidad de %D1_Change [NUM1:ataque de iniciativa:ataques de iniciativa]</Spanish>
 		<Russian>[ICON_BULLET]Âåðîÿòíîñòü Ïåðâîãî óäàðà: %D1_Change</Russian>
 	</TEXT>
@@ -620,7 +593,7 @@
 		<English>[ICON_BULLET]%d1_Num Extra First Strike Chance</English>
 		<French>[ICON_BULLET]%d1_Num chance supplémentaire de première attaque</French>
 		<German>[ICON_BULLET]%d1_Num Zusatzchance für Erstschlag</German>
-		<Italian>[ICON_BULLET]Probabilità di [COLOR_HIGHLIGHT_TEXT]primo colpo aggiuntivo[COLOR_REVERT]: [COLOR_HIGHLIGHT_TEXT]+%d1_Num%[COLOR_REVERT]</Italian> <!-- Subcombat type Exile) -->
+		<Italian>[ICON_BULLET]Probabilità di [COLOR_HIGHLIGHT_TEXT]primo colpo supplementare[COLOR_REVERT]: [COLOR_HIGHLIGHT_TEXT]+%d1_Num%[COLOR_REVERT]</Italian> <!-- Subcombat type Exile) -->
 		<Spanish>[ICON_BULLET]Probabilidad de %d1_Num [NUM1:ataque de iniciativa adicional:ataques de iniciativa adicionales]</Spanish>
 		<Russian>[ICON_BULLET]Âåðîÿòíîñòü äîïîëíèòåëüíîãî Ïåðâîãî óäàðà (%d1_Num)</Russian>
 	</TEXT>
@@ -674,7 +647,7 @@
 		<English>[ICON_BULLET]%D1_Mod%% vs. [LINK=%s2_AgainstType]%s3_Against[\LINK]</English>
 		<French>[ICON_BULLET]%D1_Mod%% contre [LINK=%s2_AgainstType]%s3_Against[\LINK]</French>
 		<German>[ICON_BULLET]%D1_Mod%% gegen [LINK=%s2_AgainstType]%s3_Against[\LINK]</German>
-		<Italian>[ICON_BULLET]%D1_Mod%% di danno contro le [LINK=%s2_AgainstType]%s3_Against[\LINK]</Italian>
+		<Italian>[ICON_BULLET]Danno contro le unità di tipo [LINK=%s2_AgainstType]%s3_Against[\LINK]: [COLOR_HIGHLIGHT_TEXT]%D1_Mod%%[COLOR_REVERT]</Italian> <!-- promotion Bark -->
 		<Spanish>[ICON_BULLET]%D1_Mod%% contra [LINK=%s2_AgainstType]%s3_Against[\LINK]</Spanish>
 		<Russian>[ICON_BULLET]%D1_Mod%% против [LINK=%s2_AgainstType]%s3_Against[\LINK]</Russian>
 	</TEXT>
@@ -709,14 +682,6 @@
 		<French>[COLOR_WARNING_TEXT]Vous devez avoir une [ICON_RELIGION] d'Etat, et celle-ci doit être présente dans la Ville[COLOR_REVERT]</French>
 		<Russian>[COLOR_WARNING_TEXT]У вас должна быть [ICON_RELIGION] государственной религией и иметь последователей в этом городе[COLOR_REVERT]</Russian>
 		<Italian>[COLOR_WARNING_TEXT]Devi avere uno religione di stato [ICON_RELIGION] e deve trovarsi nella città[COLOR_REVERT]</Italian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_REQUIRES_TECH</Tag>
-		<English>[COLOR_WARNING_TEXT]Requires [COLOR_TECH_TEXT][LINK=%s1_TechType]%s2_TechName[\LINK][COLOR_REVERT][COLOR_REVERT]</English>
-		<French>[COLOR_WARNING_TEXT]Requiert [COLOR_TECH_TEXT][LINK=%s1_TechType]%s2_TechName[\LINK][COLOR_REVERT][COLOR_REVERT]</French>
-		<German>[ICON_BULLET][COLOR_WARNING_TEXT]erforderlich: [COLOR_TECH_TEXT][LINK=%s1_TechType]%s2_TechName[\LINK][COLOR_REVERT][COLOR_REVERT]</German>
-		<Russian>[COLOR_WARNING_TEXT]Требует [COLOR_TECH_TEXT][LINK=%s1_TechType]%s2_TechName[\LINK][COLOR_REVERT][COLOR_REVERT]</Russian>
-		<Italian>[COLOR_WARNING_TEXT]Richiede la tecnologia [COLOR_TECH_TEXT][LINK=%s1_TechType]%s2_TechName[\LINK][COLOR_REVERT][COLOR_REVERT]</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_REQUIRES_TECH_ANYONE</Tag>
@@ -759,7 +724,7 @@
 		<German>[COLOR_WARNING_TEXT]Veraltet: [LINK=%s1_TechType]%s2_TechName[\LINK][COLOR_REVERT]</German>
 		<Italian>[ICON_BULLET]Rende [COLOR_WARNING_TEXT]obsoleto[COLOR_REVERT]: [LINK=%s1_TechType]%s2_TechName[\LINK]</Italian> <!--tech Bark Working, Mountaineering -->
 		<Spanish>[COLOR_WARNING_TEXT]Deja [NUM1:obsoleto:obsoleta:obsoletos:obsoletas] [LINK=%s1_TechType]%s2:2_TechName[\LINK][COLOR_REVERT]</Spanish>
-		<Polish>[COLOR_WARNING_TEXT]Przestarzały: [LINK=%s1_TechType]%s2:2_TechName[\LINK][COLOR_REVERT]</Polish>
+		<Polish>[COLOR_WARNING_TEXT]Przestarza&#179;y: [LINK=%s1_TechType]%s2:2_TechName[\LINK][COLOR_REVERT]</Polish>
 		<Russian>[COLOR_WARNING_TEXT]Óñòàðåâàåò: [LINK=%s1_TechType]%s2_TechName[\LINK][COLOR_REVERT]</Russian>
 	</TEXT>
 	<TEXT>
@@ -821,7 +786,7 @@
 		<English>Builds %d1_Change%% Faster with [LINK=%s2_BonusType]%s3_Bonus[\LINK]</English>
 		<French>Construit : %d1_Change%% plus vite avec : [LINK=%s2_BonusType]%s3_Bonus[\LINK]</French>
 		<German>Baut %d1_Change%% schneller mit [LINK=%s2_BonusType]%s3_Bonus[\LINK]</German>
-		<Italian>Se si è in possesso della risorsa [LINK=%s2_BonusType]%s3_Bonus[\LINK] l'unità si [COLOR_HIGHLIGHT_TEXT]addestra più rapidamente[COLOR_REVERT] del [COLOR_HIGHLIGHT_TEXT]%d1_Change%%[COLOR_REVERT]</Italian> <!-- unit Canoe -->
+		<Italian>Se si è in possesso della risorsa [COLOR_HIGHLIGHT_TEXT][LINK=%s2_BonusType]%s3_Bonus[\LINK][COLOR_REVERT] l'unità si [COLOR_HIGHLIGHT_TEXT]addestra più rapidamente[COLOR_REVERT] del [COLOR_HIGHLIGHT_TEXT]%d1_Change%%[COLOR_REVERT]</Italian> <!-- unit Canoe -->
 		<Spanish>Construye un %d1_Change%% más rápido con [LINK=%s2_BonusType]%s3_Bonus[\LINK]</Spanish>
 		<Russian>Строит %d1_Change%% быстрее, если есть [LINK=%s2_BonusType]%s3_Bonus[\LINK]</Russian>
 	</TEXT>
@@ -886,6 +851,10 @@
 		<German>[ICON_BULLET]%D1_Change%% gegen %s2_Type</German>
 		<Italian>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Danno[COLOR_REVERT] contro le unità di tipo [COLOR_HIGHLIGHT_TEXT]%s2:2_Type[COLOR_REVERT]: [COLOR_HIGHLIGHT_TEXT]%D1_Change%%[COLOR_REVERT]</Italian> <!-- unit Autogyro -->
 		<Spanish>[ICON_BULLET]%D1_Change%% contra %s2:2_Type</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_NATIONAL_SOURCES</Tag>
+		<English>Traits/Civics/Heritage.</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITHELP_WITHDRAWL_PROBABILITY</Tag>

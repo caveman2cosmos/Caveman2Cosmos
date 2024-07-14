@@ -188,6 +188,7 @@ class Pedia:
 		szCatTraits				= TRNSLTR.getText("TXT_KEY_PEDIA_TRAITS", ())
 		szCatCivics				= TRNSLTR.getText("TXT_KEY_PEDIA_CATEGORY_CIVIC", ())
 		szCatReligions			= TRNSLTR.getText("TXT_KEY_PEDIA_CATEGORY_RELIGION", ())
+		szCatHeritage			= TRNSLTR.getText("TXT_KEY_PEDIA_CATEGORY_HERITAGE", ())
 		szCatCorporations		= TRNSLTR.getText("TXT_KEY_CONCEPT_CORPORATIONS", ())
 		szCatConcepts			= TRNSLTR.getText("TXT_KEY_PEDIA_CATEGORY_CONCEPT", ())
 		szCatConceptsNew		= TRNSLTR.getText("TXT_KEY_PEDIA_CATEGORY_CONCEPT_NEW", ())
@@ -245,7 +246,7 @@ class Pedia:
 		PEDIA_SUB_BUILDINGS_2	= [szCatNationalWonders, szCatGreatWonders, szCatGroupWonders, szCatSpecialBuildings, szCatC2CCutures, szCatRelBuildings, szCatAniBuildings, szCatSpaceBuildings]
 		PEDIA_SUB_BONUSES		= [szCatBonusesMap, szCatBonusesMan, szCatBonusesCult, szCatBonusesTech, szCatBonusesWonder]
 		PEDIA_SUB_LANDSCAPE		= [szCatTerrains, szCatFeatures, szCatNaturalWonders, szCatImprovements, szCatRoutes]
-		PEDIA_SUB_LEADERSHIP	= [szCatCivs, szCatLeaders, szCatTraits, szCatCivics, szCatReligions]
+		PEDIA_SUB_LEADERSHIP	= [szCatCivs, szCatLeaders, szCatTraits, szCatCivics, szCatReligions, szCatHeritage]
 		PEDIA_SUB_SPECIAL		= [szCatUnitCombat, szCatSpecialists, szCatProjects, szCatCorporations, szCatBuilds]
 		PEDIA_SUB_UPG_TREES		= [szCatBuildingTree, szCatUnitTree, szCatPromotionTree]
 		# Map sub-categories to the main categories.
@@ -278,6 +279,7 @@ class Pedia:
 		import SevoPediaSpecialist
 		import PediaProject
 		import PediaReligion
+		import PediaHeritage
 		import PediaCorporation
 		import PediaBuild
 		import PediaTrait
@@ -300,6 +302,7 @@ class Pedia:
 			szCatTraits				: PediaTrait.Page(self, H_BOT_ROW),
 			szCatCivics				: PediaCivic.Page(self, H_BOT_ROW),
 			szCatReligions			: PediaReligion.Page(self, H_BOT_ROW),
+			szCatHeritage			: PediaHeritage.Page(self, H_BOT_ROW),
 			szCatCorporations		: PediaCorporation.PediaCorporation(self, H_BOT_ROW),
 			szCatRoutes				: SevoPediaRoute.SevoPediaRoute(self),
 			PEDIA_BONUSES			: PediaBonus.PediaBonus(self, H_BOT_ROW),
@@ -346,6 +349,7 @@ class Pedia:
 			szCatTraits				: self.placeTraits,
 			szCatCivics				: self.placeCivics,
 			szCatReligions			: self.placeReligions,
+			szCatHeritage			: self.placeHeritage,
 			szCatCorporations		: self.placeCorporations,
 			szCatRoutes				: self.placeRoutes,
 			szCatBonusesMan			: self.placeManufacturedBonuses,
@@ -584,6 +588,8 @@ class Pedia:
 				szSubCat = self.mapSubCat.get(iCategory)[3]
 			elif szSubCat == "Religion":
 				szSubCat = self.mapSubCat.get(iCategory)[4]
+			elif szSubCat == "Heritage":
+				szSubCat = self.mapSubCat.get(iCategory)[5]
 
 		elif iCategory == self.PEDIA_SPECIAL:
 			if szSubCat == "UnitCombat":
@@ -877,9 +883,12 @@ class Pedia:
 		if CvPromotionLineInfo != None:
 			if CvPromotionLineInfo.isBuildUp():
 				bBuildUp = True
+		'''
 		if CvPromotionInfo.isAffliction():
 			return 4
 		elif CvPromotionInfo.isEquipment():
+		'''
+		if CvPromotionInfo.isEquipment():
 			return 3
 		elif CvPromotionInfo.isStatus():
 			return 2
@@ -1160,6 +1169,11 @@ class Pedia:
 		print "Category: Religion"
 		self.aList = self.getSortedList(GC.getNumReligionInfos(), GC.getReligionInfo)
 		self.placeItems(WidgetTypes.WIDGET_PEDIA_JUMP_TO_RELIGION, GC.getReligionInfo)
+
+	def placeHeritage(self):
+		print "Category: Heritage"
+		self.aList = self.getSortedList(GC.getNumHeritageInfos(), GC.getHeritageInfo)
+		self.placeItems(WidgetTypes.WIDGET_PEDIA_JUMP_TO_HERITAGE, GC.getHeritageInfo)
 
 	def placeCorporations(self):
 		print "Category: Corporations"
@@ -1494,6 +1508,8 @@ class Pedia:
 					return self.pediaJump(self.PEDIA_LEADERSHIP, "Civic", iType)
 				elif szPrefix == "RELIGION":
 					return self.pediaJump(self.PEDIA_LEADERSHIP, "Religion", iType)
+				elif szPrefix == "HERITAGE":
+					return self.pediaJump(self.PEDIA_LEADERSHIP, "Heritage", iType)
 				elif szPrefix == "CORPORATION":
 					return self.pediaJump(self.PEDIA_SPECIAL, "Corporation", iType)
 				elif szPrefix == "TRAIT":
@@ -1507,7 +1523,7 @@ class Pedia:
 					CvInfoBase = GC.getNewConceptInfo(iType)
 					if CvInfoBase > -1 and CvInfoBase.getType() == szLink:
 						return self.pediaJump(self.PEDIA_CONCEPTS, "NEW", iType)
-				elif szPrefix == "ERA":
+				elif aSplit[1] == "ERA":
 					return self.pediaJump(self.PEDIA_CONCEPTS, "Eras", iType)
 
 		print "[ERROR] - Invalid Link"
@@ -1585,8 +1601,6 @@ class Pedia:
 					self.tooltip.handle(screen, CyGameTextMgr().getBonusHelp(ID, False))
 				elif "CIVIC" in szSplit:
 					self.tooltip.handle(screen, CyGameTextMgr().parseCivicInfo(ID, not bPlayerContext, bPlayerContext, False))
-				elif "REL" in szSplit:
-					self.tooltip.handle(screen, CyGameTextMgr().parseReligionInfo(ID, False))
 				elif "CORP" in szSplit:
 					self.tooltip.handle(screen, CyGameTextMgr().parseCorporationInfo(ID, False))
 				elif "TERRAIN" in szSplit:
@@ -1600,13 +1614,15 @@ class Pedia:
 				elif "PROJECT" in szSplit:
 					self.tooltip.handle(screen, CyGameTextMgr().getProjectHelp(ID, False, None))
 				elif "TRAIT" in szSplit:
-					self.tooltip.handle(screen, CyGameTextMgr().parseTraits(ID, -1, False, False))
+					self.tooltip.handle(screen, CyGameTextMgr().parseTraits(ID, False, False))
 				elif "LEADER" in szSplit:
-					self.tooltip.handle(screen, CyGameTextMgr().parseLeaderTraits(ID, -1, False, False))
+					self.tooltip.handle(screen, CyGameTextMgr().parseLeaderTraits(ID, False, False))
 				elif "BUILD" in szSplit:
 					self.tooltip.handle(screen, GC.getBuildInfo(ID).getDescription())
 				elif "RELIGION" in szSplit:
 					self.tooltip.handle(screen, CyGameTextMgr().parseReligionInfo(ID, False))
+				elif "HERITAGE" in szSplit:
+					self.tooltip.handle(screen, CyGameTextMgr().getHeritageHelp(ID, None, True, False, False))
 				elif "COMBAT" in szSplit:
 					self.tooltip.handle(screen, CyGameTextMgr().getUnitCombatHelp(ID, False))
 				elif "CONCEPT" in szSplit:
@@ -1715,8 +1731,6 @@ class Pedia:
 				self.pediaJump(self.PEDIA_BONUSES, "", ID)
 			elif "CIVIC" in szSplit:
 				self.pediaJump(self.PEDIA_LEADERSHIP, "Civic", ID)
-			elif "REL" in szSplit:
-				self.pediaJump(self.PEDIA_LEADERSHIP, "Religion", ID)
 			elif "CORP" in szSplit:
 				self.pediaJump(self.PEDIA_SPECIAL, "Corporation", ID)
 			elif "TERRAIN" in szSplit:
@@ -1737,6 +1751,8 @@ class Pedia:
 				self.pediaJump(self.PEDIA_SPECIAL, "Build", ID)
 			elif "RELIGION" in szSplit:
 				self.pediaJump(self.PEDIA_LEADERSHIP, "Religion", ID)
+			elif "HERITAGE" in szSplit:
+				self.pediaJump(self.PEDIA_LEADERSHIP, "Heritage", ID)
 			elif "COMBAT" in szSplit:
 				self.pediaJump(self.PEDIA_SPECIAL, "UnitCombat", ID)
 			elif "CONCEPT" in szSplit:

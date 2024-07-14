@@ -204,7 +204,7 @@ Unity( 'Sources-Unity' )
     .UnityInputIsolatedFiles = { "CvGameTextMgr.cpp" }
     .UnityOutputPath        = '$BUILD_DIR$\unity'
     .UnityInputPathRecurse  = false
-    .UnityNumFiles          = 12
+    .UnityNumFiles          = 20
     .UnityPCH               = 'CvGameCoreDLL.h'
 }
 

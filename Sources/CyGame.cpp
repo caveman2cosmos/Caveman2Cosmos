@@ -1050,11 +1050,6 @@ void CyGame::log(const char* file, char* str)
 #endif
 }
 
-void CyGame::setPlotExtraYield(int iX, int iY, YieldTypes eYield, int iExtraYield)
-{
-	m_pGame.setPlotExtraYield(iX, iY, eYield, iExtraYield);
-}
-
 bool CyGame::isCivEverActive(CivilizationTypes eCivilization) const
 {
 	return m_pGame.isCivEverActive(eCivilization);
@@ -1117,11 +1112,6 @@ int CyGame::getCutLosersCounter() const
 int CyGame::getHighToLowCounter() const
 {
 	return m_pGame.getHighToLowCounter();
-}
-
-bool CyGame::isModderGameOption(ModderGameOptionTypes eIndex) const
-{
-	return m_pGame.isModderGameOption(eIndex);
 }
 
 int CyGame::getModderGameOption(ModderGameOptionTypes eIndex) const

@@ -1254,74 +1254,31 @@ int CvTeamAI::AI_endWarVal(TeamTypes eTeam) const
 }
 
 
-int CvTeamAI::AI_minorKeepWarVal(TeamTypes eTeam) const
+bool CvTeamAI::AI_minorPeaceOut(TeamTypes eTeam) const
 {
 	PROFILE_EXTRA_FUNC();
-	if (hasWarPlan(true)
-	&& (!isMinorCiv() || isRebel())
-	|| !AI_hasCitiesInPrimaryArea(eTeam)
-	|| AI_teamCloseness(eTeam) <= 0)
-	{
-		return 0;
-	}
 
-	bool bIsGetBetterUnits = false;
-	bool bAggressive = GC.getGame().isOption(GAMEOPTION_AI_AGGRESSIVE);
+	if (!AI_hasCitiesInPrimaryArea(eTeam) || AI_teamCloseness(eTeam) <= 0 || AI_getWarSuccess(eTeam) < GC.getWAR_SUCCESS_CITY_CAPTURING())
+	{
+		return true;
+	}
 
 	for (int iJ = 0; iJ < MAX_PC_PLAYERS; iJ++)
 	{
 		if (GET_PLAYER((PlayerTypes)iJ).getTeam() == getID())
 		{
-			if (GET_PLAYER((PlayerTypes)iJ).AI_isDoStrategy(AI_STRATEGY_GET_BETTER_UNITS))
-			{
-				bIsGetBetterUnits = true;
-			}
-			if (GET_PLAYER((PlayerTypes)iJ).AI_isDoStrategy(AI_STRATEGY_DAGGER))
-			{
-				bAggressive = true;
-			}
 			if (GET_PLAYER((PlayerTypes)iJ).AI_isFinancialTrouble())
 			{
-				return 0;
+				return true;
 			}
 		}
 	}
-
-	if (GET_TEAM(eTeam).AI_getWarSuccess(getID()) > GC.getWAR_SUCCESS_CITY_CAPTURING()
-	|| GC.getGame().getSorenRandNum(AI_maxWarRand()/100, "Keep war on minor") == 0)
-	{
-		const int iPower =
-		(
-			(bAggressive && !bIsGetBetterUnits)
-			?
-			getPower(true)*4/3
-			:
-			getPower(true)
-		);
-		if (GET_TEAM(eTeam).getDefensivePower() < iPower * AI_maxWarNearbyPowerRatio() / 100)
-		{
-			const int iNoWarRoll =
-			(
-				GC.getGame().getSorenRandNum(100, "AI No War") - 20
-				+ (bAggressive ? 10 : 0)
-				+ ((AI_getWarSuccess(eTeam) > GC.getWAR_SUCCESS_CITY_CAPTURING()) ? 10 : 0)
-				- (bIsGetBetterUnits ? 15 : 0)
-			);
-			if (range(iNoWarRoll, 0, 99) >= AI_noWarAttitudeProb(AI_getAttitude(eTeam)))
-			{
-				return AI_startWarVal(eTeam);
-			}
-		}
-	}
-	return 0;
+	return false;
 }
 
 int CvTeamAI::AI_getBarbarianCivWarVal(TeamTypes eTeam, int iMaxDistance) const
 {
-	if (!GET_TEAM(eTeam).isAlive()
-	|| GET_TEAM(eTeam).isMinorCiv()
-	|| GET_TEAM(eTeam).isNPC()
-	|| !AI_hasCitiesInPrimaryArea(eTeam))
+	if (AI_getAttitude(eTeam) == ATTITUDE_FRIENDLY || !AI_hasCitiesInPrimaryArea(eTeam))
 	{
 		return 0;
 	}
@@ -1330,50 +1287,22 @@ int CvTeamAI::AI_getBarbarianCivWarVal(TeamTypes eTeam, int iMaxDistance) const
 	{
 		return 0;
 	}
-	int iValue = iClosenessValue;
-
-	iValue += AI_calculatePlotWarValue(eTeam)/2;
-
-	iValue += (3 * AI_calculateCapitalProximity(eTeam)) / 2;
-
-	iValue += 3*AI_getWarSuccess(eTeam);
-
-	if (GET_TEAM(eTeam).getDefensivePower() > (3*getPower(true)/2*AI_maxWarNearbyPowerRatio())/100)
+	int iValue = AI_teamCloseness(eTeam, 16);
+	if (iValue > 0)
 	{
-		iValue /= 2;
-	}
-	else if (GET_TEAM(eTeam).getDefensivePower() < getPower(true)*AI_maxWarNearbyPowerRatio()/100)
-	{
-		iValue *= 2;
-	}
-
-	switch (AI_getAttitude(eTeam))
-	{
-		case ATTITUDE_FURIOUS:
+		iValue += (
+			  AI_calculatePlotWarValue(eTeam) / 2
+			+ AI_calculateCapitalProximity(eTeam) * 3/2
+			+ AI_getWarSuccess(eTeam) * 3
+		);
+		switch (AI_getAttitude(eTeam))
 		{
-			return 16*iValue;
+			case ATTITUDE_FURIOUS: iValue *= 4; break;
+			case ATTITUDE_ANNOYED: iValue *= 3; break;
+			case ATTITUDE_CAUTIOUS: iValue *= 2;
 		}
-		case ATTITUDE_ANNOYED:
-		{
-			return 8*iValue;
-		}
-		case ATTITUDE_CAUTIOUS:
-		{
-			return 4*iValue;
-		}
-		case ATTITUDE_PLEASED:
-		{
-			return iValue;
-		}
-		case ATTITUDE_FRIENDLY:
-		{
-			return 0;
-		}
-		default:
-		{
-			FErrorMsg("error");
-			break;
-		}
+		iValue *= getPower(true) * AI_maxWarNearbyPowerRatio() / 100;
+		iValue /= GET_TEAM(eTeam).getDefensivePower();
 	}
 	return iValue;
 }
@@ -1620,8 +1549,8 @@ int CvTeamAI::AI_mapTradeVal(TeamTypes eTeam) const
 				}
 				else
 				{
-					if (pLoopPlot->getRevealedImprovementType(eTeam, false) == pLoopPlot->getImprovementType()
-					&& pLoopPlot->getRevealedImprovementType(getID(), false) != pLoopPlot->getImprovementType())
+					if (pLoopPlot->getRevealedImprovementType(eTeam) == pLoopPlot->getImprovementType()
+					&& pLoopPlot->getRevealedImprovementType(getID()) != pLoopPlot->getImprovementType())
 					{
 						iValue += 2;
 					}

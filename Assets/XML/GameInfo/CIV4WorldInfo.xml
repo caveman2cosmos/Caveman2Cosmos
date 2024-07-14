@@ -19,8 +19,6 @@
 			iGridHeight						= The height of the map in 4x4 groups of tiles. If iGridHeight is set to 10, then the map will be 40 tiles high.
 			iTerrainGrainChange				= Used by map scripts.
 			iFeatureGrainChange				= Used by map scripts.
-			iResearchPercent				= The percentage of the rate at which technology is researched, implemented through the cost in beakers of researching. So 100 means normal
-												research rates. Higher values yield slower research, so 200 means that researches will require twice as many beakers and will thus be half as fast.
 			iTradeProfitPercent				= A percentage rate change to how much money is made from trade routes. So, a value of 50 means trade routes make 50% more commerce.
 												(This may also effect Great Merchant trade missions)
 			iDistanceMaintenancePercent		= The amount of maintenance that city distance generates. It is a percentage, so 100 means full maintenance from city distance.
@@ -43,7 +41,6 @@
 			<iTerrainGrainChange>-1</iTerrainGrainChange>
 			<iFeatureGrainChange>-1</iFeatureGrainChange>
 			<iOceanMinAreaSize>6</iOceanMinAreaSize>
-			<iResearchPercent>100</iResearchPercent>
 			<iTradeProfitPercent>1000</iTradeProfitPercent>
 			<iDistanceMaintenancePercent>106</iDistanceMaintenancePercent>
 			<iColonyMaintenancePercent>80</iColonyMaintenancePercent>
@@ -72,7 +69,6 @@
 			<iTerrainGrainChange>-1</iTerrainGrainChange>
 			<iFeatureGrainChange>-1</iFeatureGrainChange>
 			<iOceanMinAreaSize>8</iOceanMinAreaSize>
-			<iResearchPercent>100</iResearchPercent>
 			<iTradeProfitPercent>755</iTradeProfitPercent>
 			<iDistanceMaintenancePercent>105</iDistanceMaintenancePercent>
 			<iColonyMaintenancePercent>80</iColonyMaintenancePercent>
@@ -99,7 +95,6 @@
 			<iGridWidth>21</iGridWidth>
 			<iGridHeight>14</iGridHeight>
 			<iOceanMinAreaSize>10</iOceanMinAreaSize>
-			<iResearchPercent>100</iResearchPercent>
 			<iTradeProfitPercent>545</iTradeProfitPercent>
 			<iDistanceMaintenancePercent>103</iDistanceMaintenancePercent>
 			<iColonyMaintenancePercent>80</iColonyMaintenancePercent>
@@ -123,7 +118,6 @@
 			<iGridWidth>24</iGridWidth>
 			<iGridHeight>16</iGridHeight>
 			<iOceanMinAreaSize>14</iOceanMinAreaSize>
-			<iResearchPercent>100</iResearchPercent>
 			<iTradeProfitPercent>370</iTradeProfitPercent>
 			<iDistanceMaintenancePercent>100</iDistanceMaintenancePercent>
 			<iColonyMaintenancePercent>80</iColonyMaintenancePercent>
@@ -152,7 +146,6 @@
 			<iOceanMinAreaSize>18</iOceanMinAreaSize>
 			<iTerrainGrainChange>1</iTerrainGrainChange>
 			<iFeatureGrainChange>1</iFeatureGrainChange>
-			<iResearchPercent>100</iResearchPercent>
 			<iTradeProfitPercent>230</iTradeProfitPercent>
 			<iDistanceMaintenancePercent>96</iDistanceMaintenancePercent>
 			<iColonyMaintenancePercent>80</iColonyMaintenancePercent>
@@ -181,7 +174,6 @@
 			<iOceanMinAreaSize>22</iOceanMinAreaSize>
 			<iTerrainGrainChange>1</iTerrainGrainChange>
 			<iFeatureGrainChange>1</iFeatureGrainChange>
-			<iResearchPercent>100</iResearchPercent>
 			<iTradeProfitPercent>125</iTradeProfitPercent>
 			<iDistanceMaintenancePercent>91</iDistanceMaintenancePercent>
 			<iColonyMaintenancePercent>80</iColonyMaintenancePercent>
@@ -210,7 +202,6 @@
 			<iTerrainGrainChange>2</iTerrainGrainChange>
 			<iFeatureGrainChange>2</iFeatureGrainChange>
 			<iOceanMinAreaSize>26</iOceanMinAreaSize>
-			<iResearchPercent>100</iResearchPercent>
 			<iTradeProfitPercent>55</iTradeProfitPercent>
 			<iDistanceMaintenancePercent>85</iDistanceMaintenancePercent>
 			<iColonyMaintenancePercent>80</iColonyMaintenancePercent>
@@ -239,7 +230,6 @@
 			<iOceanMinAreaSize>30</iOceanMinAreaSize>
 			<iTerrainGrainChange>2</iTerrainGrainChange>
 			<iFeatureGrainChange>2</iFeatureGrainChange>
-			<iResearchPercent>100</iResearchPercent>
 			<iTradeProfitPercent>20</iTradeProfitPercent>
 			<iDistanceMaintenancePercent>78</iDistanceMaintenancePercent>
 			<iColonyMaintenancePercent>80</iColonyMaintenancePercent>

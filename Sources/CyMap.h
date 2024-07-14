@@ -33,6 +33,7 @@ public:
 	int	getViewportXFromMapX(int iX);
 	int	getViewportYFromMapY(int iY);
 	bool isInViewport(int X, int Y);
+	void setViewportActionState(ViewportDeferredActionState newState);
 	bool isMidSwitch() const;
 
 	void closeAdvisor(int advisorWidth, int iMinimapLeft, int iMinimapRight, int iMinimapTop, int iMinimapBottom);
@@ -106,6 +107,8 @@ public:
 	CyPlot* getLastPathPlotByIndex(int index) const;
 
 	void moveUnitToMap(const CyUnit* unit, int numTravelTurns);
+
+	void setClimateZone(const int y, const ClimateZoneTypes eClimate);
 
 protected:
 	CvMap* m_pMap;

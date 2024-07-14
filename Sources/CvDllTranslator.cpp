@@ -1,7 +1,6 @@
-
-#include "FProfiler.h"
-
 #include "CvGameCoreDLL.h"
+#include "FProfiler.h"
+#include "CvGameAI.h"
 #include "CvDllTranslator.h"
 #include "CvGlobals.h"
 #include "CvPlayerAI.h"

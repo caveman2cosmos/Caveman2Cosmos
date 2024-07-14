@@ -37,8 +37,6 @@ public:
 	int startingPlotRange() const;
 	bool startingPlotWithinRange(const CyPlot* pPlot, int /*PlayerTypes*/ ePlayer, int iRange, int iPass);
 
-	CyPlot* findStartingPlot(bool bRandomize) const;
-
 	CyCity* initCity(int x, int y);
 	void acquireCity(CyCity* pCity, bool bConquest, bool bTrade);
 	void killCities();
@@ -96,6 +94,8 @@ public:
 	int getNumAvailableBonuses(int /*BonusTypes*/ eBonus) const;
 	int getNumTradeableBonuses(int /*BonusTypes*/ eBonus) const;
 	bool hasBonus(int /*BonusTypes*/ eBonus) const;
+
+	bool hasHeritage(int iType) const;
 
 	bool isTurnActive() const;
 
@@ -229,6 +229,7 @@ public:
 	bool isBuildingOnlyHealthy() const;
 
 	int64_t getTreasuryUpkeep() const;
+	int64_t getCorporateMaintenance() const;
 	int getTotalMaintenance() const;
 	int getLevelExperienceModifier() const;
 
@@ -272,8 +273,7 @@ public:
 	bool isFoundedFirstCity() const;
 
 	void setFoundedFirstCity(bool bNewValue);
-	void setAlive(bool bNewValue);
-	void setNewPlayerAlive(bool bNewValue);
+	void setAlive(bool bNewValue, bool bActivateTurn);
 
 	bool isStrike() const;
 
@@ -378,8 +378,6 @@ public:
 	void resetEventOccured(/*EventTypes*/ int eEvent);
 	EventTriggeredData* getEventTriggered(int iID) const;
 	EventTriggeredData* initTriggeredData(int eEventTrigger, bool bFire, int iCityId, int iPlotX, int iPlotY, int eOtherPlayer, int iOtherPlayerCityId, int eReligion, int eCorporation, int iUnitId, int eBuilding);
-
-	int getEventTriggerWeight(int /*EventTriggerTypes*/ eTrigger) const;
 
 	void AI_updateFoundValues(bool bStartingLoc);
 	bool AI_isFinancialTrouble() const;

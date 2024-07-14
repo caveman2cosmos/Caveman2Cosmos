@@ -13,6 +13,7 @@
 #include "CvTraitInfo.h"
 #include "CvUnitCombatInfo.h"
 #include "CvPopupInfo.h"
+#include "CvHeritageInfo.h"
 
 #ifdef _DEBUG
 //#define	DETAILED_TRACE	1
@@ -1078,6 +1079,17 @@ CvTaggedSaveFormatWrapper::WriteClassMappingTable(RemappedClassType classType)
 				m_stream->WriteString(info.getType());
 		}
 		break;
+	case REMAPPED_CLASS_TYPE_HERITAGE:
+		entry.numClasses = GC.getNumHeritageInfos();
+		m_stream->Write(sizeof(class_mapping_table_entry), (uint8_t*)& entry);
+		for (int i = 0; i < entry.numClasses; i++)
+		{
+			const CvHeritageInfo& info = GC.getHeritageInfo((HeritageTypes)i);
+
+			DEBUG_TRACE3("\t%d : %s\n", i, info.getType())
+				m_stream->WriteString(info.getType());
+		}
+		break;
 	case REMAPPED_CLASS_TYPE_MISSIONS:
 		entry.numClasses = GC.getNumMissionInfos();
 		m_stream->Write(sizeof(class_mapping_table_entry), (uint8_t*)&entry);
@@ -1192,6 +1204,7 @@ CvTaggedSaveFormatWrapper::WriteClassMappingTables()
 	WriteClassMappingTable(REMAPPED_CLASS_TYPE_COMMERCES);
 	WriteClassMappingTable(REMAPPED_CLASS_TYPE_DOMAINS);
 	WriteClassMappingTable(REMAPPED_CLASS_TYPE_CATEGORIES);
+	WriteClassMappingTable(REMAPPED_CLASS_TYPE_HERITAGE);
 	WriteClassMappingTable(REMAPPED_CLASS_TYPE_MAPS);
 }
 
@@ -1321,6 +1334,9 @@ CvTaggedSaveFormatWrapper::getNumClassEnumValues(RemappedClassType classType) co
 			break;
 		case REMAPPED_CLASS_TYPE_CATEGORIES:
 			result = GC.getNumCategoryInfos();
+			break;
+		case REMAPPED_CLASS_TYPE_HERITAGE:
+			result = GC.getNumHeritageInfos();
 			break;
 		case REMAPPED_CLASS_TYPE_MISSIONS:
 			result = GC.getNumMissionInfos();
@@ -2940,13 +2956,13 @@ void CvTaggedSaveFormatWrapper::Read(const char* name, uint32_t* i)
 }
 
 
-void CvTaggedSaveFormatWrapper::Read(const char* name, int count, int32_t values[])
+void CvTaggedSaveFormatWrapper::Read(const char* name, int count, int32_t values[], bool bAllowTruncation)
 {
 	PROFILE_FUNC();
 
 	FAssert(m_stream != NULL);
 
-	if ( m_useTaggedFormat )
+	if (m_useTaggedFormat)
 	{
 		DEBUG_TRACE3("Read int array, name %s, count=%d\n", name, count)
 
@@ -2955,15 +2971,23 @@ void CvTaggedSaveFormatWrapper::Read(const char* name, int count, int32_t values
 			int num;
 
 			m_stream->Read(&num);
+			m_stream->Read(std::min(num,count), values);
 
-			if ( num != count )
+			// Allow reading LESS than the desired number.  This allows for things like new MEMORY_TYPES
+			if (num > count)
 			{
-				DEBUG_TRACE4("Read int array, name %s, count=%d, num=%d\n", name, count, num)
+				// Also allow less, throwing the extra away - use this option CAREFULLY!
+				if (bAllowTruncation)
+				{
+					bst::scoped_array<int> tempBuffer(new int[num-count]);
 
-				//	Incompatible save
-				HandleIncompatibleSave(CvString::format("Save format is not compatible (%s)", name).c_str());
+					m_stream->Read(num-count, tempBuffer.get());
+				}
+				else // Incompatible save
+				{
+					HandleIncompatibleSave(CvString::format("Save format is not compatible (%s)", name).c_str());
+				}
 			}
-			m_stream->Read(count, values);
 		}
 	}
 	else

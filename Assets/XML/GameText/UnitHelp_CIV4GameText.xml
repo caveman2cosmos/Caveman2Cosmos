@@ -5,13 +5,13 @@
 		<Tag>TXT_KEY_UNITHELP_ESCAPE_PLAN_MOD</Tag>
 		<English>[ICON_BULLET]Escape route planning is contributing %d1%% to Withdrawal Probability</English>
 		<French>[ICON_BULLET]La planification des itinéraires d'évacuation donne un bonus de %d1%% des chances de Retrait</French>
-		<Polish>[ICON_BULLET]Koncentracja: Plany Ucieczki pomagają %d1%% do szansy na ucieczkę.</Polish>
+		<Polish>[ICON_BULLET]Koncentracja: Plany Ucieczki pomagaj&#185; %d1%% do szansy na ucieczk&#234;.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITHELP_HEALING_HQ_MOD</Tag>
 		<English>[ICON_BULLET]%d1%% to healing support for any unit types it can normally heal from Established Base of Operations.</English>
 		<French>[ICON_BULLET]%d1%% au soutien de guérison pour tous les types d'unités qu'il peut normalement soigner à partir d'une base d'opérations établie.</French>
-		<Polish>[ICON_BULLET]%d1%% do leczenei jednostek, które już rozpoczeły Koncentrację: Baza Operacyjna.</Polish>
+		<Polish>[ICON_BULLET]%d1%% do leczenei jednostek, kt&#243;re ju&#191; rozpocze&#179;y Koncentracj&#234;: Baza Operacyjna.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITHELP_INVISIBILITY_SPOT_PLOT_VALUE_ADJ</Tag>
@@ -39,7 +39,7 @@
 		<Tag>TXT_KEY_UNITHELP_ALWAYS_VISIBLE</Tag>
 		<English>[ICON_BULLET]Always Visible</English>
 		<German>[ICON_BULLET]immer sichtbar</German>
-		<Italian>[ICON_BULLET]Sempre visibile</Italian>
+		<Italian>[ICON_BULLET]Unità [COLOR_HIGHLIGHT_TEXT]sempre visibile[COLOR_REVERT]</Italian> <!-- unit stonethrower hover on the icon on the map -->
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITHELP_BRANCH_CIVILIAN</Tag>
@@ -59,16 +59,16 @@
 		<Tag>TXT_KEY_UNITHELP_BREAKDOWN_CHANCE</Tag>
 		<English>[ICON_BULLET]Breakdown Chance: %D1%%</English>
 		<French>[ICON_BULLET]%D1%% chance de démolir les défenses de la ville à chaque round d'attaque.</French>
-		<Italian>[ICON_BULLET]Possibilità di abbattimento delle difese cittadine per round [COLOR_HIGHLIGHT_TEXT]%D1%%[COLOR_REVERT]</Italian> <!-- unit Log Ram with Realistic Siege -->
-		<Polish>[ICON_BULLET]%D1%% szansy do złamania obrony miasta w każdej rundzie.</Polish>
+		<Italian>[ICON_BULLET]Probabilità di [COLOR_HIGHLIGHT_TEXT]abbattimento delle difese[COLOR_REVERT] cittadine per round: [COLOR_HIGHLIGHT_TEXT]%D1%%[COLOR_REVERT]</Italian> <!-- unit Log Ram with Realistic Siege -->
+		<Polish>[ICON_BULLET]%D1%% szansy do z&#179;amania obrony miasta w ka&#191;dej rundzie.</Polish>
 		<Russian>[ICON_BULLET]Вероятность поломки: %D1%%</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITHELP_BREAKDOWN_DAMAGE</Tag>
 		<English>[ICON_BULLET]Breakdown Amount: %D1%%</English>
 		<French>[ICON_BULLET]%D1%% dégâts aux défenses de la ville en cas de tentative de démolition réussi.</French>
-		<Italian>[ICON_BULLET]Danno alle difese cittadine quando l'abbattimento ha successo [COLOR_HIGHLIGHT_TEXT]%D1%%[COLOR_REVERT]</Italian> <!-- unit Log Ram with Realistic Siege -->
-		<Polish>[ICON_BULLET]%D1%% obrażeń do obrony miasta przy udanym złamaniu obrony.</Polish>
+		<Italian>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Danno alle difese[COLOR_REVERT] cittadine quando l'abbattimento ha successo: [COLOR_HIGHLIGHT_TEXT]%D1%%[COLOR_REVERT]</Italian> <!-- unit Log Ram with Realistic Siege -->
+		<Polish>[ICON_BULLET]%D1%% obra&#191;e&#241; do obrony miasta przy udanym z&#179;amaniu obrony.</Polish>
 		<Russian>[ICON_BULLET]Повреждения: %D1%%</Russian>
 	</TEXT>
 	<TEXT>
@@ -76,7 +76,7 @@
 		<English>[ICON_BULLET]Can Always Attack Cities</English>
 		<French>[ICON_BULLET]Ignore la Défense Minimum d'une Ville</French>
 		<Italian>[ICON_BULLET]Può [COLOR_HIGHLIGHT_TEXT]sempre attaccare[COLOR_REVERT] le città</Italian> <!-- unit Ambusher -->
-		<Polish>[ICON_BULLET]Ignoruje Minimalną Obronę wymaganą do ataku</Polish>
+		<Polish>[ICON_BULLET]Ignoruje Minimaln&#185; Obron&#234; wymagan&#185; do ataku</Polish>
 		<Russian>[ICON_BULLET]Всегда может атаковать города</Russian>
 	</TEXT>
 	<TEXT>
@@ -92,7 +92,7 @@
 		<English>[ICON_BULLET]Cargo Size: %d1</English>
 		<French>[ICON_BULLET]Volume en unité cargo: %d1</French>
 		<German>[ICON_BULLET]Frachteinheiten: %d1</German>
-		<Polish>[ICON_BULLET]Objętość Jedn. Transportu: %d1</Polish>
+		<Polish>[ICON_BULLET]Obj&#234;to&#156;&#230; Jedn. Transportu: %d1</Polish>
 		<Russian>[ICON_BULLET]Тоннаж: %d1</Russian>
 		<Italian>[ICON_BULLET]Dimensione carico: %d1</Italian>
 	</TEXT>
@@ -109,18 +109,18 @@
 		<Tag>TXT_KEY_UNITHELP_CARGO_SPACE_BASE_SM</Tag>
 		<English>[ICON_BULLET]Base Cargo Space (estimated # of units): %d1</English>
 		<French>[ICON_BULLET]Taille de soute (# estimé d'unités): %d1</French>
-		<Polish>[ICON_BULLET]Podstawowa Przestrzeń Transportowa (szacowana # jednostek): %d1</Polish>
+		<Polish>[ICON_BULLET]Podstawowa Przestrze&#241; Transportowa (szacowana # jednostek): %d1</Polish>
 		<Russian>[ICON_BULLET]Базовая вместимость (около # отрядов): %d1</Russian>
-		<Italian>[ICON_BULLET]Dimensione di carico base (numero stimato di unità): [COLOR_HIGHLIGHT_TEXT]%d1[COLOR_REVERT]</Italian> <!-- unit Canoe with Size Matters -->
+		<Italian>[ICON_BULLET]Dimensione di [COLOR_HIGHLIGHT_TEXT]carico base[COLOR_REVERT] (numero stimato di unità): [COLOR_HIGHLIGHT_TEXT]%d1[COLOR_REVERT]</Italian> <!-- unit Canoe with Size Matters -->
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITHELP_CARGO_SPACE_FOREIGN</Tag>
 		<English>[ICON_BULLET]Cargo Space: %d1</English>
 		<French>[ICON_BULLET]Capacité d'emport: %d1</French>
 		<German>[ICON_BULLET]Frachtraum: %d1</German>
-		<Italian>[ICON_BULLET]Numero massimo di unità trasportabili: [COLOR_HIGHLIGHT_TEXT]%d1[COLOR_REVERT]</Italian> <!-- unit Canoe -->
+		<Italian>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Spazio di carico[COLOR_REVERT] per il trasporto: [COLOR_HIGHLIGHT_TEXT]%d1[COLOR_REVERT]</Italian> <!-- unit Canoe -->
 		<Spanish>[ICON_BULLET]Bodega: %d1</Spanish>
-		<Polish>[ICON_BULLET]Przestrzeń transportowa: %d1</Polish>
+		<Polish>[ICON_BULLET]Przestrze&#241; transportowa: %d1</Polish>
 		<Russian>[ICON_BULLET]Грузоподъемность: %d1</Russian>
 	</TEXT>
 	<TEXT>
@@ -128,7 +128,7 @@
 		<English>[SPACE](Carries %s1)</English>
 		<French>[SPACE](transporte : %s1)</French>
 		<German>[SPACE](Befördert %s1)</German>
-		<Italian>[NEWLINE][ICON_BULLET]Questa unità può trasportare le unità di tipo [COLOR_HIGHLIGHT_TEXT]%s1[COLOR_REVERT]</Italian> <!-- unit Bandit Rider -->
+		<Italian>[NEWLINE][ICON_BULLET]Questa unità [COLOR_HIGHLIGHT_TEXT]può trasportare[COLOR_REVERT] le [COLOR_HIGHLIGHT_TEXT]%s1[COLOR_REVERT]</Italian> <!-- unit Bandit Rider -->
 		<Spanish>[SPACE](%s1)</Spanish>
 		<Russian>[SPACE](перевозит %s1)</Russian>
 	</TEXT>
@@ -148,13 +148,13 @@
 		<German>, Kommandobereich: %d1</German>
 		<Italian>, raggio di comando: %d1</Italian>
 		<Spanish>, Alcance: %d1</Spanish>
-		<Polish>, Ranga Dowódcy: %d1</Polish>
+		<Polish>, Ranga Dow&#243;dcy: %d1</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITHELP_DAMAGE_BY_UNITCOMBAT</Tag>
 		<English>[ICON_BULLET]Damage that %s1_UNITCOMBAT: %d2_Mod%%. Heals in %d3 Turn(s).</English>
 		<French>[ICON_BULLET]Dégâts de %s1_UNITCOMBAT: %d2_Mod%%. se soigne en %d3 Tours.</French>
-		<Polish>[ICON_BULLET]Obrażenia otrzymane %s1_UNITCOMBAT: %d2_Mod%%. Uleczone w %d3 tur.</Polish>
+		<Polish>[ICON_BULLET]Obra&#191;enia otrzymane %s1_UNITCOMBAT: %d2_Mod%%. Uleczone w %d3 tur.</Polish>
 		<Russian>[ICON_BULLET]Урон %s1_UNITCOMBAT: %d2_Mod%%. Лечит за %d3 ходов.</Russian>
 		<Italian>[ICON_BULLET]Danno di %s1_UNITCOMBAT: %d2_Mod%%. Guarisce in %d3 turno(i).</Italian>
 	</TEXT>
@@ -162,7 +162,7 @@
 		<Tag>TXT_KEY_UNITHELP_DAMAGE_BY_UNITCOMBAT_NOHEAL</Tag>
 		<English>[ICON_BULLET]Damage that %s1_UNITCOMBAT: %d2_Mod%%. [COLOR_WARNING_TEXT]Cannot heal here.[COLOR_REVERT]</English>
 		<French>[ICON_BULLET]Dégâts de %s1_UNITCOMBAT: %d2_Mod%%. [COLOR_WARNING_TEXT]Cannot heal here.[COLOR_REVERT]</French>
-		<Polish>[ICON_BULLET]Obrażenia otrzymane %s1_UNITCOMBAT: %d2_Mod%%. [COLOR_WARNING_TEXT]Cannot heal here.[COLOR_REVERT]</Polish>
+		<Polish>[ICON_BULLET]Obra&#191;enia otrzymane %s1_UNITCOMBAT: %d2_Mod%%. [COLOR_WARNING_TEXT]Cannot heal here.[COLOR_REVERT]</Polish>
 		<Russian>[ICON_BULLET]Урон %s1_UNITCOMBAT: %d2_Mod%%. [COLOR_WARNING_TEXT]Cannot heal here.[COLOR_REVERT]</Russian>
 		<Italian>[ICON_BULLET]Danno di %s1_UNITCOMBAT: %d2_Mod%%. Non è possibile guarire qui.</Italian>
 	</TEXT>
@@ -171,7 +171,7 @@
 		<English>[ICON_BULLET]First Strikes: %d1</English>
 		<French>[ICON_BULLET]Premières attaques: %d1</French>
 		<German>[ICON_BULLET]Erstangriffe: %d1</German>
-		<Italian>[ICON_BULLET]Numero di primi attacchi: [COLOR_HIGHLIGHT_TEXT]%d1[COLOR_REVERT]</Italian> <!-- unit Ambusher -->
+		<Italian>[ICON_BULLET]Numero di [COLOR_HIGHLIGHT_TEXT]primi attacchi[COLOR_REVERT]: [COLOR_HIGHLIGHT_TEXT]%d1[COLOR_REVERT]</Italian> <!-- unit Ambusher -->
 		<Spanish>[ICON_BULLET]Ataques de iniciativa: %d1</Spanish>
 		<Russian>[ICON_BULLET]Первый удар: %d1</Russian>
 	</TEXT>
@@ -189,7 +189,7 @@
 		<English>[ICON_BULLET]First Strikes: %d1-%d2</English>
 		<French>[ICON_BULLET]Premières attaques: %d1-%d2</French>
 		<German>[ICON_BULLET]Erstangriffe: %d1-%d2</German>
-		<Italian>[ICON_BULLET]Numero di primi attacchi: [COLOR_HIGHLIGHT_TEXT]%d1[COLOR_REVERT]-[COLOR_HIGHLIGHT_TEXT]%d2[COLOR_REVERT]</Italian>  <!-- unit Stone Thrower -->
+		<Italian>[ICON_BULLET]Numero di [COLOR_HIGHLIGHT_TEXT]primi attacchi[COLOR_REVERT]: [COLOR_HIGHLIGHT_TEXT]%d1[COLOR_REVERT]-[COLOR_HIGHLIGHT_TEXT]%d2[COLOR_REVERT]</Italian>  <!-- unit Stone Thrower -->
 		<Spanish>[ICON_BULLET]Ataques de iniciativa: %d1-%d2</Spanish>
 		<Russian>[ICON_BULLET]Первый удар: %d1-%d2</Russian>
 	</TEXT>
@@ -198,7 +198,7 @@
 		<English>[ICON_BULLET]Fortified: %d1%%</English>
 		<French>[ICON_BULLET]Bonus de retranchement : %d1%%</French>
 		<German>[ICON_BULLET]Verschanzungsbonus: %d1%%</German>
-		<Italian>[ICON_BULLET]Unità fortificata: %d1%%</Italian>
+		<Italian>[ICON_BULLET]Unità [COLOR_HIGHLIGHT_TEXT]fortificata[COLOR_REVERT]: [COLOR_HIGHLIGHT_TEXT]%d1%%[COLOR_REVERT] aumento di difesa</Italian> <!-- unit stonethrower if fortified hover on the icon on the map -->
 		<Russian>[ICON_BULLET]Укрепленный: %d1%%</Russian>
 	</TEXT>
 	<TEXT>
@@ -248,7 +248,7 @@
 		<French>[ICON_BULLET]Perception %D1_Change %F2_Type sur la même case</French>
 		<German>[ICON_BULLET]%D1_Change %F2_Type-Sicht in gleichem Gelände</German>
 		<Russian>[ICON_BULLET]%D1_Change %F2_Type к зоркости на этой клетке</Russian>
-		<Italian>[ICON_BULLET]%D1_Change di probabilità di rilevare %F2_Type sulla stessa casella</Italian>
+		<Italian>[ICON_BULLET]Probabilità di [COLOR_HIGHLIGHT_TEXT]rilevare[COLOR_REVERT] %F2_Type sulla [COLOR_HIGHLIGHT_TEXT]stessa casella[COLOR_REVERT]: [COLOR_HIGHLIGHT_TEXT]%D1_Change[COLOR_REVERT]</Italian> <!-- unit stonethrower hover on the icon on the map hide and seek active-->
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITHELP_INVISIBILITY_SPOT_VALUE</Tag>
@@ -280,7 +280,7 @@
 		<French>[ICON_BULLET]%d1_Change Invisibilité %F2_Type</French>
 		<German>[ICON_BULLET]%d1_Change %F2_Type-Unsichtbarkeit</German>
 		<Russian>[ICON_BULLET]%d1_Change к скрытности для %F2_Type</Russian>
-		<Italian>[ICON_BULLET]Occultamento di tipo %F2_Type [COLOR_HIGHLIGHT_TEXT]%d1_Change[COLOR_REVERT] </Italian> <!-- unit Ambusher with Hide and Seek active -->
+		<Italian>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Occultamento[COLOR_REVERT] di tipo %F2_Type: [COLOR_HIGHLIGHT_TEXT]%d1_Change[COLOR_REVERT] </Italian> <!-- unit Ambusher with Hide and Seek active -->
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITHELP_NO_ESPIONAGE</Tag>
@@ -314,15 +314,15 @@
 		<English>[ICON_BULLET]Self heal: %d1%%</English>
 		<French>[ICON_BULLET]Cette Unité peut se soigner de: %d1%%</French>
 		<German>[ICON_BULLET]Selbstheilung: %d1%%</German>
-		<Polish>[ICON_BULLET]Jednostka leczy się sama: %d1%%</Polish>
+		<Polish>[ICON_BULLET]Jednostka leczy si&#234; sama: %d1%%</Polish>
 		<Russian>[ICON_BULLET]Самолечение: %d1%%</Russian>
-		<Italian>[ICON_BULLET]Capacità di autoguarigione: [COLOR_HIGHLIGHT_TEXT]%d1%%[COLOR_REVERT]</Italian>  <!-- Subcombat type Group (Trillions (1tril+) -->
+		<Italian>[ICON_BULLET]Capacità di [COLOR_HIGHLIGHT_TEXT]autoguarigione[COLOR_REVERT]: [COLOR_HIGHLIGHT_TEXT]%d1%%[COLOR_REVERT]</Italian>  <!-- Subcombat type Group (Trillions (1tril+) -->
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITHELP_SELF_HEAL_NONE</Tag>
 		<English>[ICON_BULLET]This Unit Cannot Heal Without Assistance</English>
 		<French>[ICON_BULLET]Cette unité ne peut se soigner sans Assistance</French>
-		<Polish>[ICON_BULLET]Ta jednostka może być tylko wyleczona/naprawiona przez lekarza/mechanika.</Polish>
+		<Polish>[ICON_BULLET]Ta jednostka mo&#191;e by&#230; tylko wyleczona/naprawiona przez lekarza/mechanika.</Polish>
 		<Russian>[ICON_BULLET]Этот отряд не может лечить без посторонней помощи</Russian>
 		<Italian>[ICON_BULLET]Questa unità non può guarire senza assistenza</Italian>
 	</TEXT>
@@ -332,7 +332,7 @@
 		<French>[ICON_BULLET]Cette unité se défendra furtivement</French>
 		<German>[ICON_BULLET]Diese Einheit kann sich gegen Tarnangriffe verteidigen.</German>
 		<Russian>[ICON_BULLET]Этот отряд будет скрытно обороняться</Russian>
-		<Italian>[ICON_BULLET]Questa unita è in grado di difendersi dagli [COLOR_HIGHLIGHT_TEXT]attacchi stealth[COLOR_REVERT]</Italian> <!-- unit Bandit Footpad -->
+		<Italian>[ICON_BULLET]Questa unita è in grado di [COLOR_HIGHLIGHT_TEXT]difendersi[COLOR_REVERT] dagli [COLOR_HIGHLIGHT_TEXT]attacchi stealth[COLOR_REVERT]</Italian> <!-- unit Bandit Footpad -->
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITHELP_STEALTH_STRIKES</Tag>
@@ -361,20 +361,20 @@
 		<English>, XP: (%s1/%d2)</English>
 		<German>, Erfahrungspunkte: (%s1/%d2)</German>
 		<Spanish>, PX: (%s1/%d2)</Spanish>
-		<Italian>, punti esperienza: %s1/%d2</Italian>
+		<Italian>, punti esperienza: %s1 / %d2 </Italian> <!-- hover on a unit on the main map -->
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITHELP_XP_MOD_CAPITAL</Tag>
 		<English>[ICON_BULLET][COLOR_POSITIVE_TEXT]%D1%% for being trained in a Capital or Government Center[COLOR_REVERT]</English>
 		<French>[ICON_BULLET][COLOR_POSITIVE_TEXT]%D1%% pour avoir été entraîné dans la capitale, ou un Centre du gouvernement[COLOR_REVERT]</French>
 		<Polish>[ICON_BULLET][COLOR_POSITIVE_TEXT]%D1%% za bycie zwerbowanym w Stolicy[COLOR_REVERT]</Polish>
-		<Italian>[ICON_BULLET][COLOR_POSITIVE_TEXT]%D1%% per essere stato addestrato nella capitale o in un centro governativo[COLOR_REVERT]</Italian>
+		<Italian>[TAB][COLOR_POSITIVE_TEXT]%D1%%[COLOR_REVERT] di punti esperienza guadagnati per essere addestrato nella capitale o in un centro governativo</Italian> <!-- unit Brute hover in the production tab in the city screen -->
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITHELP_XP_MOD_HOLY_CITY_NONSTATE_RELIGION</Tag>
 		<English>[ICON_BULLET][COLOR_POSITIVE_TEXT]%D1%% for being trained in a Holy City to a Non-State Religion[COLOR_REVERT]</English>
 		<French>[ICON_BULLET][COLOR_POSITIVE_TEXT]%D1%% pour avoir été entraîné dans une Ville Sainte d'une Religion non officielle[COLOR_REVERT]</French>
-		<Polish>[ICON_BULLET][COLOR_POSITIVE_TEXT]%D1%% za bycie zwerbowanym w Świętym Mieście religii nie będącej religią państwową[COLOR_REVERT]</Polish>
+		<Polish>[ICON_BULLET][COLOR_POSITIVE_TEXT]%D1%% za bycie zwerbowanym w &#140;wi&#234;tym Mie&#156;cie religii nie b&#234;d&#185;cej religi&#185; pa&#241;stwow&#185;[COLOR_REVERT]</Polish>
 		<Italian>[ICON_BULLET][COLOR_POSITIVE_TEXT]%D1%% per essere stato addestrato in una città santa di una religione non di stato[COLOR_REVERT]</Italian>
 	</TEXT>
 	<TEXT>
@@ -382,23 +382,23 @@
 		<English>[ICON_BULLET][COLOR_POSITIVE_TEXT]%D1%% for being trained in your State Religion's Holy City[COLOR_REVERT]</English>
 		<Italian>[ICON_BULLET][COLOR_POSITIVE_TEXT]%D1%% per essere stato addestrato nella città santa della tua religione di stato[COLOR_REVERT]</Italian>
 		<French>[ICON_BULLET][COLOR_POSITIVE_TEXT]%D1%% pour avoir été entraîné dans la Ville Sainte de la Religion d'Etat[COLOR_REVERT]</French>
-		<Polish>[ICON_BULLET][COLOR_POSITIVE_TEXT]%D1%% za bycie zwerbowanym w Św. Mieście religii państwowej[COLOR_REVERT]</Polish>
+		<Polish>[ICON_BULLET][COLOR_POSITIVE_TEXT]%D1%% za bycie zwerbowanym w &#140;w. Mie&#156;cie religii pa&#241;stwowej[COLOR_REVERT]</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITHELP_XP_MOD_TOTAL</Tag>
 		<English>[ICON_BULLET][COLOR_POSITIVE_TEXT]%D1%% Total XP modifier[COLOR_REVERT]</English>
-		<Italian>[ICON_BULLET][COLOR_POSITIVE_TEXT]%D1%% aumento totale di punti esperienza[COLOR_REVERT]</Italian>
+		<Italian>[TAB][COLOR_POSITIVE_TEXT]%D1%% di aumento totale di punti esperienza guadagnati[COLOR_REVERT]</Italian>
 		<French>[ICON_BULLET][COLOR_POSITIVE_TEXT]%D1%% EXP Modif. Total[COLOR_REVERT]</French>
-		<Polish>[ICON_BULLET][COLOR_POSITIVE_TEXT]%D1%% Modyfikator całkowitej ilości XP[COLOR_REVERT]</Polish>
+		<Polish>[ICON_BULLET][COLOR_POSITIVE_TEXT]%D1%% Modyfikator ca&#179;kowitej ilo&#156;ci XP[COLOR_REVERT]</Polish>
 		<Russian>[ICON_BULLET][COLOR_POSITIVE_TEXT]%D1%% к модификатору общего ХР[COLOR_REVERT]</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITHELP_XP_TOTAL</Tag>
 		<English>[ICON_BULLET][COLOR_POSITIVE_TEXT]%d1 Total XP.[COLOR_REVERT]</English>
-		<Italian>[TAB][COLOR_POSITIVE_TEXT]%d1[COLOR_REVERT] [NUM1:punto esperienza iniziale:punti esperienza iniziali] in totale </Italian> <!-- unit in construction hover -->
+		<Italian>[TAB][COLOR_POSITIVE_TEXT]%d1 [NUM1:punto esperienza iniziale:punti esperienza iniziali] in totale[COLOR_REVERT]</Italian> <!-- unit in construction hover -->
 		<French>[ICON_BULLET][COLOR_POSITIVE_TEXT]Total d'EXP : %d1[COLOR_REVERT]</French>
 		<German>[ICON_BULLET][COLOR_POSITIVE_TEXT]%d1 [NUM1:Erfahrungspunkt:Erfahrungspunkte][COLOR_REVERT]</German>
-		<Polish>[ICON_BULLET][COLOR_POSITIVE_TEXT]%d1 Całkowita ilość XP.[COLOR_REVERT]</Polish>
+		<Polish>[ICON_BULLET][COLOR_POSITIVE_TEXT]%d1 Ca&#179;kowita ilo&#156;&#230; XP.[COLOR_REVERT]</Polish>
 		<Russian>[ICON_BULLET][COLOR_POSITIVE_TEXT]%d1 к общему XP.[COLOR_REVERT]</Russian>
 	</TEXT>
 </Civ4GameText>

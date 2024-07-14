@@ -1,3 +1,4 @@
+#include "CvGameCoreDLL.h"
 #include "CvPythonPlotLoader.h"
 #include <boost/python/manage_new_object.hpp>
 
@@ -7,7 +8,6 @@ void CvPythonPlotLoader::CyPlotPythonInterface1(boost::python::class_<CyPlot>& i
 	OutputDebugString("Python Extension Module - CyPlotPythonInterface1\n");
 
 	inst
-		.def("isNone", &CyPlot::isNone, "bool ()")
 		.def("erase", &CyPlot::erase, "void ()")
 		.def("getPoint", &CyPlot::getPoint, "NiPoint3 ()")
 		.def("getTeam", &CyPlot::getTeam, "int ()")
@@ -26,7 +26,6 @@ void CvPythonPlotLoader::CyPlotPythonInterface1(boost::python::class_<CyPlot>& i
 		.def("isRiverSide", &CyPlot::isRiverSide, "bool ()")
 		.def("isRiver", &CyPlot::isRiver, "bool ()")
 
-		.def("getNearestLandPlot", &CyPlot::getNearestLandPlot, boost::python::return_value_policy<boost::python::manage_new_object>(), "CyPlot* ()")
 		.def("canHaveBonus", &CyPlot::canHaveBonus, "bool (int /*BonusTypes*/ eBonus, bool bIgnoreLatitude)")
 		.def("canHaveImprovement", &CyPlot::canHaveImprovement, "bool (int (ImprovementTypes) eImprovement, int (TeamTypes) eTeam, bool bPotential)")
 		.def("canBuild", &CyPlot::canBuild, "bool (int (BuildTypes) eBuild, int (PlayerTypes) ePlayer, bool bTestVisible)")
@@ -112,6 +111,7 @@ void CvPythonPlotLoader::CyPlotPythonInterface1(boost::python::class_<CyPlot>& i
 		.def("getRiverID", &CyPlot::getRiverID, "int ()")
 		.def("setRiverID", &CyPlot::setRiverID, "void (int)")
 		.def("getYield", &CyPlot::getYield, "int (YieldTypes eIndex)")
+		.def("setExtraYield", &CyPlot::setExtraYield)
 		.def("calculateBestNatureYield", &CyPlot::calculateBestNatureYield, "int (int (YieldTypes) eYield, int (TeamTypes) eTeam)")
 		.def("calculateTotalBestNatureYield", &CyPlot::calculateTotalBestNatureYield, "int (int (TeamTypes) eTeam)")
 		.def("calculateImprovementYieldChange", &CyPlot::calculateImprovementYieldChange, "int (int (ImprovementTypes) eImprovement, int (YieldTypes) eYield, int (PlayerTypes) ePlayer, bool bOptimal)")

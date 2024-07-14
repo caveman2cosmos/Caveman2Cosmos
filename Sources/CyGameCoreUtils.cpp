@@ -41,12 +41,20 @@ int cyStepDistance(int iX1, int iY1, int iX2, int iY2)
 
 CyPlot* cyPlotDirection(int iX, int iY, DirectionTypes eDirection)
 {
-	return new CyPlot(plotDirection(iX, iY, eDirection));
+	if (plotDirection(iX, iY, eDirection))
+	{
+		return new CyPlot(plotDirection(iX, iY, eDirection));
+	}
+	return NULL;
 }
 
 CyPlot* cyPlotCardinalDirection(int iX, int iY, CardinalDirectionTypes eCardDirection)
 {
-	return new CyPlot(plotCardinalDirection(iX, iY, eCardDirection));
+	if (plotCardinalDirection(iX, iY, eCardDirection))
+	{
+		return new CyPlot(plotCardinalDirection(iX, iY, eCardDirection));
+	}
+	return NULL;
 }
 
 CyPlot* cysPlotCardinalDirection(int iX, int iY, CardinalDirectionTypes eCardDirection)
@@ -58,14 +66,22 @@ CyPlot* cysPlotCardinalDirection(int iX, int iY, CardinalDirectionTypes eCardDir
 
 CyPlot* cyPlotXY(int iX, int iY, int iDX, int iDY)
 {
-	return new CyPlot(plotXY(iX, iY, iDX, iDY));
+	if (plotXY(iX, iY, iDX, iDY))
+	{
+		return new CyPlot(plotXY(iX, iY, iDX, iDY));
+	}
+	return NULL;
 }
 
 CyPlot* cysPlotXY(int iX, int iY, int iDX, int iDY)
 {
-	static CyPlot plot;
-	plot.setPlot(plotXY(iX, iY, iDX, iDY));
-	return &plot;
+	if (plotXY(iX, iY, iDX, iDY))
+	{
+		static CyPlot plot;
+		plot.setPlot(plotXY(iX, iY, iDX, iDY));
+		return &plot;
+	}
+	return NULL;
 }
 
 DirectionTypes cyDirectionXYFromInt(int iDX, int iDY)
@@ -80,7 +96,11 @@ DirectionTypes cyDirectionXYFromPlot(const CyPlot& kFromPlot, const CyPlot& kToP
 
 CyPlot* cyPlotCity(int iX, int iY, int iIndex)
 {
-	return new CyPlot(plotCity(iX, iY, iIndex));
+	if (plotCity(iX, iY, iIndex))
+	{
+		return new CyPlot(plotCity(iX, iY, iIndex));
+	}
+	return NULL;
 }
 
 int cyPlotCityXYFromInt(int iDX, int iDY)

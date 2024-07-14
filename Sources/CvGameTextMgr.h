@@ -59,7 +59,7 @@ public:
 	void setScoreHelp(CvWStringBuffer &szString, PlayerTypes ePlayer);
 
 	void parseBuildUp(CvWStringBuffer &szHelpString, PromotionLineTypes eTrait, CivilizationTypes eCivilization = NO_CIVILIZATION);
-	void parseTraits(CvWStringBuffer &szHelpString, TraitTypes eTrait, CivilizationTypes eCivilization = NO_CIVILIZATION, bool bDawnOfMan = false, bool bEffectsOnly = false);
+	void parseTraits(CvWStringBuffer &szHelpString, TraitTypes eTrait, bool bDawnOfMan = false, bool bEffectsOnly = false);
 
 	DllExport void parseLeaderTraits(CvWStringBuffer &szInfoText, LeaderHeadTypes eLeader = NO_LEADER, CivilizationTypes eCivilization = NO_CIVILIZATION, bool bDawnOfMan = false, bool bCivilopediaText = false);
 	DllExport void parseLeaderShortTraits(CvWStringBuffer &szInfoText, LeaderHeadTypes eLeader);
@@ -86,6 +86,7 @@ public:
 		CvWStringBuffer &szBuffer, const BuildingTypes eBuilding, const bool bActual, CvCity* pCity = NULL,
 		const bool bCivilopediaText = false, const bool bStrategyText = false, const bool bTechChooserText = false
 	);
+	void setHeritageHelp(CvWStringBuffer &szBuffer, const HeritageTypes eType, CvCity* pCity = NULL, const bool bCivilopediaText = false, const bool bStrategyText = false, const bool bTechChooserText = false);
 	void setBuildingActualEffects(CvWStringBuffer &szBuffer, const CvWString& szStart, BuildingTypes eBuilding, const CvCity* pCity, bool bNewLine = true);
 
 	void setProjectHelp(CvWStringBuffer &szBuffer, ProjectTypes eProject, bool bCivilopediaText = false, CvCity* pCity = NULL);
@@ -233,7 +234,6 @@ public:
 
 	DllExport void getPlotHelp(CvPlot* pMouseOverPlot, CvCity* pCity, CvPlot* pFlagPlot, bool bAlt, CvWStringBuffer& strHelp);
 	void getRebasePlotHelp(const CvPlot* pPlot, CvWString& strHelp) const;
-	void getNukePlotHelp(const CvPlot* pPlot, CvWString& strHelp) const;
 	DllExport void getInterfaceCenterText(CvWString& strText);
 	DllExport void getTurnTimerText(CvWString& strText);
 	DllExport void getFontSymbols(std::vector< std::vector<wchar_t> >& aacSymbols, std::vector<int>& aiMaxNumRows);

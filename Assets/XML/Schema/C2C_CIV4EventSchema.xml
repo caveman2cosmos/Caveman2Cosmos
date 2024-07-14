@@ -82,6 +82,7 @@
 	<ElementType name="iNumUnitsGlobal" content="textOnly" dt:type="int"/>
 	<ElementType name="iNumFreeUnits" content="textOnly" dt:type="int"/>
 	<ElementType name="bDisbandUnit" content="textOnly" dt:type="boolean"/>
+	<ElementType name="bGameSpeedScale" content="textOnly" dt:type="boolean"/>
 	<ElementType name="iUnitDamagedWeight" content="textOnly" dt:type="int"/>
 	<ElementType name="iUnitDistanceWeight" content="textOnly" dt:type="int"/>
 	<ElementType name="iUnitExperienceWeight" content="textOnly" dt:type="int"/>
@@ -482,6 +483,7 @@
 		<element type="FreeUnit" minOccurs="0"/>
 		<element type="iNumFreeUnits" minOccurs="0"/>
 		<element type="bDisbandUnit" minOccurs="0"/>
+		<element type="bGameSpeedScale" minOccurs="0"/>
 		<element type="iUnitExperience" minOccurs="0"/>
 		<element type="iUnitImmobileTurns" minOccurs="0"/>
 		<element type="UnitName" minOccurs="0"/>

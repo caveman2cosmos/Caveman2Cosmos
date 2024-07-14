@@ -499,7 +499,7 @@
 		<German>Uhr</German>
 		<Italian>Zona orologio</Italian>
 		<Spanish>Reloj</Spanish>
-		<Russian>×àñû</Russian>
+		<Russian>Часы</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPTTAB_SCORES</Tag>
@@ -508,7 +508,7 @@
 		<German>Punkteanzeige</German>
 		<Italian>Pannello punteggio</Italian>
 		<Spanish>Puntuación</Spanish>
-		<Russian>Òàáëèöà ðåçóëüòàòîâ</Russian>
+		<Russian>Таблица результатов</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPTTAB_SYSTEM</Tag>
@@ -1768,7 +1768,7 @@
 		<German>Wunder vollendet</German>
 		<Italian>Progetti completati</Italian>
 		<Spanish>Proyectos completados</Spanish>
-		<Russian>Ïðåêò çàêîí÷åí</Russian>
+		<Russian>Проекты завершены</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_AUTOLOG__LOGPROMOTIONS_HOVER</Tag>
@@ -1785,7 +1785,7 @@
 		<German>Beförderungen</German>
 		<Italian>Promozioni</Italian>
 		<Spanish>Ascensos</Spanish>
-		<Russian>Ïîâûøåíèÿ â çâàíèè</Russian>
+		<Russian>Квалификации</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_AUTOLOG__LOGRELIGIONDEMAND_HOVER</Tag>
@@ -4710,7 +4710,7 @@
 		<German>Laufende Kosten</German>
 		<Italian>Mostra costi di mantenimento</Italian>
 		<Spanish>Mantenimiento</Spanish>
-		<Russian>Ñîäåðæàíèå</Russian>
+		<Russian>Содержание</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_MISCHOVER__CONSCRIPTLIMIT_HOVER</Tag>
@@ -6643,6 +6643,14 @@
 		<Russian>Êâàëèôèêàöèè âìåñòî ÕÐ</Russian>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_BUG_OPT_ROMSETTINGS__STARSIGNS_HOVER</Tag>
+		<English>Units may be created with a starsign promotion. Tech level affects how probable it is for a unit to start off with a starsign promotion and if it is possible at all.</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUG_OPT_ROMSETTINGS__STARSIGNS_TEXT</Tag>
+		<English>Starsigns</English>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_ROMSETTINGS__BETTERAIRINTERCEPTION_HOVER</Tag>
 		<English>Changes Air Interception to be Multiplicitive, making it more useful to have more than one air defender for each city.</English>
 		<French>Modifie l'Interception aérienne et la rend Multiplicative, rendant le fait d'avoir plus d'une unité de défense aérienne dans chaque Ville plus utile.</French>
@@ -6758,24 +6766,6 @@
 		<Italian>Attiva difficoltà flessibile</Italian>
 		<Spanish>Dificultad flexible</Spanish>
 		<Russian>Ãèáêèé óðîâ. ñëîæíîñòè</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUG_OPT_ROMSETTINGS__EVENTIMAGES_HOVER</Tag>
-		<English>Random Events will display an image with them.</English>
-		<French>Les Evénements aléatoires sont affichés avec une image.</French>
-		<German>Bei Zufallsereignissen wird zusätzlich ein Bild angezeigt.</German>
-		<Italian>[BOLD]Un'[COLOR_HIGHLIGHT_TEXT]immagine[COLOR_REVERT] verrà mostrata durante gli eventi casuali[\BOLD]</Italian>
-		<Spanish>Los eventos aleatorios se mostrarán con una imagen.</Spanish>
-		<Russian>Ñëó÷àéíûå ñîáûòèÿ áóäóò ñîïðîâîæäàòüñÿ èçîáðàæåíèåì äëÿ íèõ.</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUG_OPT_ROMSETTINGS__EVENTIMAGES_TEXT</Tag>
-		<English>Event Images</English>
-		<French>Images d'Evénements</French>
-		<German>Ereignisbilder</German>
-		<Italian>Immagini degli eventi</Italian>
-		<Spanish>Imágenes de eventos</Spanish>
-		<Russian>Èëëþñòð. ñîáûòèÿ</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_ROMSETTINGS__FLEXIBLEDIFFICULTYAI_HOVER</Tag>
@@ -6922,6 +6912,14 @@
 		<Russian>Ïðèðîñò ñëîæíîñòè</Russian>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_BUG_OPT_ROMSETTINGS__GREATERGREATFARMER_HOVER</Tag>
+		<English>Allows great farmer to place any known resource anywhere, e.g. place papaya on ice terrain.</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUG_OPT_ROMSETTINGS__GREATERGREATFARMER_TEXT</Tag>
+		<English>Greater Great Farmer</English>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_ROMSETTINGS__HIDEREPLACEDBUILDINGS_HOVER</Tag>
 		<English>Hides any buildings from the city construct queue if their upgraded form can be built immediately. (e.g The harbor will be hidden if the Port is available).</English>
 		<French>Masque tous les bâtiments de la liste de production si la version améliorée de ces bâtiments est déjà disponible (example: sera masqué si le Port est disponible).</French>
@@ -7015,6 +7013,14 @@
 		<Italian>Difesa dal bombardamento</Italian>
 		<Spanish>Máximo de defensa contra bombardeo</Spanish>
 		<Russian>Ìàêñ. çàù. îò îáñòðåëîâ</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUG_OPT_ROMSETTINGS__MINCITYDISTANCE_HOVER</Tag>
+		<English>The Minimum city distance between cities, cities cannot be founded within this distance of another city.</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUG_OPT_ROMSETTINGS__MINCITYDISTANCE_TEXT</Tag>
+		<English>Minimum city distance</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_ROMSETTINGS__MAXREBASERANGE_HOVER</Tag>
@@ -7245,7 +7251,7 @@
 		<German>In Städten mit vielen Religionen können die unpopuläreren nach und nach in Vergessenheit geraten.</German>
 		<Italian>[BOLD]Nelle città con multiple religioni le [COLOR_HIGHLIGHT_TEXT]meno popolari declineranno lentamente[COLOR_REVERT][\BOLD]</Italian>
 		<Spanish>En ciudades con muchas religiones, las menos populares podrían ir decayendo lentamente y desaparecer.</Spanish>
-		<Polish>Miasta z dużą ilością religii w którym jest przewaga jednej religii najmniejsze z nich mogą zniknąć.</Polish>
+		<Polish>Miasta z du&#191;&#185; ilo&#156;ci&#185; religii w kt&#243;rym jest przewaga jednej religii najmniejsze z nich mog&#185; znikn&#185;&#230;.</Polish>
 		<Russian>Ó ãîðîäîâ ñî ìíîãèìè ðåëèãèÿìè, ìåíåå ïîïóëÿðíûå ìåäëåííî ðàñïàäàþòñÿ.</Russian>
 	</TEXT>
 	<TEXT>
@@ -7295,24 +7301,6 @@
 		<Russian>Ïîäâîäíûå òóííåëè</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUG_OPT_ROMSETTINGS__SHOWCIVTRAITS_HOVER</Tag>
-		<English>Shows your civilization's traits on the flag, when hovering over it. Recommended only for larger resolutions.</English>
-		<French>Affiche les Traits de votre Civilisation en infobulle sur le Drapeau. Recommandé uniquement pour les plus hautes résolutions.</French>
-		<German>Die Merkmale deiner Zivilisation (Eigenschaften der Führerpersönlichkeit) werden als Tooltip über deiner Flagge angezeigt. Nur für höhere Bildschirmauflösungen empfohlen.</German>
-		<Italian>[BOLD]Rende visibili i [COLOR_HIGHLIGHT_TEXT]tratti della tua civiltà[COLOR_REVERT] facendo [COLOR_HIGHLIGHT_TEXT]hover sopra la bandiera[COLOR_REVERT] (raccomandato solo per risoluzioni elevate)[\BOLD]</Italian>
-		<Spanish>Muestra los rasgos de tu civilización en la bandera al pasar el ratón por encima. Solo recomendado para mayores resoluciones de pantalla.</Spanish>
-		<Russian>Ïîêàçûâàåò ÷åðòû âàøåé öèâèëèçàöèè íà ôëàãå ïðè íàâåäåíèè íà íåãî êóðñîðà. Ðåêîìåíäóåòñÿ òîëüêî äëÿ áîëüøèõ ðàçðåøåíèé.</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUG_OPT_ROMSETTINGS__SHOWCIVTRAITS_TEXT</Tag>
-		<English>Show Civilization Traits</English>
-		<French>Voir les Traits des Civilisations</French>
-		<German>Zivilisationsmerkmale zeigen</German>
-		<Italian>Mostra tratti</Italian>
-		<Spanish>Mostrar rasgos de civilización</Spanish>
-		<Russian>Ïîêàç ÷åðò öèâèëèçàöèè</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_ROMSETTINGS__SHOWREVCIVICS_HOVER</Tag>
 		<English>Shows detailed RevIndex values for civics. If disabled, generic descriptions will be used instead.</English>
 		<French>Affiche les valeurs détaillées de RevIndex. Si désactivé, les descriptions générales seront utilisées à la place.</French>
@@ -7327,24 +7315,6 @@
 		<German>Detaillierte RevIndex-Werte zeigen</German>
 		<Italian>Mostra valori rivoluzione dettagliati</Italian>
 		<Spanish>Mostrar valores detallados del RevIndex</Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUG_OPT_ROMSETTINGS__STRATEGICEVENTS_HOVER</Tag>
-		<English>Strategic Events are random events that force players to make decisions that are strategically important, and could alter the course of the game. They can be more negative than standard events, but also more positive.</English>
-		<French>Les Événements stratégiques sont des événements aléatoires qui obligent les joueurs à prendre des décisions importantes au niveau stratégique, et qui peuvent changer le cours du Jeu. Ces événements ont beaucoup plus d'incidence, en bien ou en mal.</French>
-		<German>Strategische Ereignisse sind Zufallsereignisse, die den Spieler dazu zwingen, strategisch wichtige Entscheidungen zu treffen, die den Verlauf des Spiels maßgeblich beeinflussen können. Sie können negativere, aber auch positivere Auswirkungen als Standardereignisse haben.</German>
-		<Italian>[BOLD]Gli eventi strategici sono eventi casuali che [COLOR_HIGHLIGHT_TEXT]costringono i giocatori a decisioni strategicamente importanti[COLOR_REVERT] che potrebbero alterare il corso della partita (possono essere più negativi degli eventi standard, ma anche più positivi)[\BOLD]</Italian>
-		<Spanish>Los eventos estratégicos son eventos aleatorios que fuerzan al jugador a tomar decisiones estratégicamente importantes que podrían alterar el curso de la partida. Pueden ser más perjudiciales que los eventos normales, pero también más beneficiosos.</Spanish>
-		<Russian>Ñòðàòåãè÷åñêèå ñîáûòèÿ ÿâëÿþòñÿ ñëó÷àéíûìè ñîáûòèÿìè, êîòîðûå çàñòàâëÿþò èãðîêîâ ïðèíèìàòü ðåøåíèÿ, ÿâëÿþùèåñÿ ñòðàòåãè÷åñêè âàæíûìè, è ñïîñîáíûìè èçìåíèòü õîä èãðû. Îíè ìîãóò áûòü êàê áîëåå íåãàòèâíûìè, ÷åì ñòàíäàðòíûå ñîáûòèÿ, òàê è áîëåå ïîçèòèâíûìè.</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUG_OPT_ROMSETTINGS__STRATEGICEVENTS_TEXT</Tag>
-		<English>Strategic Events</English>
-		<French>Événements Stratégiques</French>
-		<German>Strategische Ereignisse</German>
-		<Italian>Eventi strategici</Italian>
-		<Spanish>Eventos estratégicos</Spanish>
-		<Russian>Ñòðàòåãè÷. ñîáûòèÿ</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_ROMSETTINGS__TELEPATHICRELIGION_HOVER</Tag>

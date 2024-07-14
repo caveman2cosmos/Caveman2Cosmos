@@ -6,8 +6,8 @@
 		<English>Cargo</English>
 		<German>Fracht</German>
 		<Spanish>Carga</Spanish>
-		<Italian>merce</Italian>
-		<Polish>Ładowność</Polish>
+		<Italian>Carico</Italian> <!--infoscreen building list-->
+		<Polish>&#163;adowno&#156;&#230;</Polish>
 		<Russian>Транспорт</Russian>
 	</TEXT>
 	<TEXT>
@@ -15,7 +15,7 @@
 		<English>City</English>
 		<French>Ville</French>
 		<German>Stadt</German>
-		<Italian>in città</Italian><!--Aerial CT trait in the pedia-->
+		<Italian>città</Italian><!--Aerial CT trait in the pedia-->
 		<Spanish>Ciudad</Spanish>
 		<Polish>Miasto</Polish>
 		<Russian>Город</Russian>
@@ -25,7 +25,7 @@
 		<English>Cost</English>
 		<French>Coût</French>
 		<German>Kosten</German>
-		<Italian>costo</Italian>
+		<Italian>Costo</Italian> <!--infoscreen building list-->
 		<Spanish>Coste</Spanish>
 		<Polish>Koszt</Polish>
 		<Russian>Цена</Russian>
@@ -44,7 +44,7 @@
 		<English>Default</English>
 		<French>Standard</French>
 		<German>Standard</German>
-		<Italian>predefinito</Italian>
+		<Italian>Standard</Italian>
 		<Spanish>Predeterminado</Spanish>
 		<Russian>По умолчанию</Russian>
 	</TEXT>
@@ -53,7 +53,7 @@
 		<English>Espionage</English>
 		<French>Espionnage</French>
 		<German>Spionage</German>
-		<Italian>Spionaggio</Italian>
+		<Italian>Spionaggio</Italian> <!--infoscreen building list-->
 		<Spanish>Espionaje</Spanish>
 		<Polish>Szpiegostwo</Polish>
 		<Russian>Шпионаж</Russian>
@@ -63,7 +63,7 @@
 		<English>Exit</English>
 		<French>Quitter</French>
 		<German>Beenden</German>
-		<Italian>Esci</Italian>
+		<Italian>Esci</Italian> <!-- button on recap civs position every 50 turns, any info screen upper right -->
 		<Spanish>Salir</Spanish>
 		<Russian>Выход</Russian>
 	</TEXT>
@@ -74,7 +74,7 @@
 		<German>Nahrung</German>
 		<Italian>Cibo</Italian>
 		<Spanish>Alimento</Spanish>
-		<Polish>Żywność</Polish>
+		<Polish>&#175;ywno&#156;&#230;</Polish>
 		<Russian>Пища</Russian>
 	</TEXT>
 	<TEXT>
@@ -82,7 +82,7 @@
 		<English>Game</English>
 		<French>Jeu</French>
 		<German>Spiel</German>
-		<Italian>Gioco</Italian>
+		<Italian>Dettagli partita</Italian>
 		<Spanish>Partida</Spanish>
 		<Polish>Gra</Polish>
 		<Russian>Игра</Russian>
@@ -129,7 +129,7 @@
 		<English>Plot</English>
 		<French>Case</French>
 		<German>Feld</German>
-		<Italian>casella</Italian>
+		<Italian>sulla propria casella</Italian> <!-- unit Enforcers -->
 		<Spanish>Casilla</Spanish>
 		<Polish>Pole</Polish>
 		<Russian>Участок</Russian>
@@ -145,7 +145,7 @@
 		<Tag>TXT_WORD_SPOT</Tag>
 		<English>Spot</English>
 		<German>Sicht</German>
-		<Italian>punto</Italian>
+		<Italian>Tipo e forza d'[COLOR_HIGHLIGHT_TEXT]individuazione[COLOR_REVERT]:</Italian> <!-- unit Ambusher with Hide and Seek active -->
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_WORD_TEAM</Tag>
@@ -153,7 +153,7 @@
 		<French>Equipe</French>
 		<Italian>squadra</Italian>
 		<Spanish>Equipo</Spanish>
-		<Polish>Drużyna</Polish>
+		<Polish>Dru&#191;yna</Polish>
 		<Russian>Команда</Russian>
 	</TEXT>
 	<TEXT>
@@ -171,7 +171,7 @@
 		<English>With</English>
 		<French>Avec</French>
 		<German>durch</German>
-		<Italian>Variazione ulteriore con</Italian>
+		<Italian>[COLOR_HIGHLIGHT_TEXT]Variazione[COLOR_REVERT] con</Italian> <!-- building krakatoa building list hover -->
 		<Spanish>Con</Spanish>
 		<Polish>Z</Polish>
 		<Russian>С</Russian>

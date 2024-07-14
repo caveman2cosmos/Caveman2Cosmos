@@ -219,7 +219,7 @@
 		<French>Construire une [LINK=IMPROVEMENT_LISTENING_NODE]Station d'écoute[\LINK]</French>
 		<Italian>[LINK=IMPROVEMENT_LISTENING_NODE]Stazione d'ascolto[\LINK] (costruzione)</Italian>
 		<Spanish>Construir un [LINK=IMPROVEMENT_LISTENING_NODE]Nodo de escucha[\LINK]</Spanish>
-		<Polish>Zbuduj [LINK=IMPROVEMENT_LISTENING_NODE]Boję Nasłuchową[\LINK]</Polish>
+		<Polish>Zbuduj [LINK=IMPROVEMENT_LISTENING_NODE]Boj&#234; Nas&#179;uchow&#185;[\LINK]</Polish>
 		<Russian>Ñòðîèòü [LINK=IMPROVEMENT_LISTENING_NODE]Öåíòð ÐÝÁ[\LINK]</Russian>
 	</TEXT>
 	<TEXT>
@@ -764,7 +764,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_INTERGALACTIC_COLONY_PEDIA</Tag>
-		<English>A developed drawf galaxy</English>
+		<English>A developed dwarf galaxy</English>
 		<French>Une galaxie drawf développée</French>
 		<Russian>Ðàçâèòàÿ êàðëèêîâàÿ ãàëàêòèêà</Russian>
 	</TEXT>
@@ -893,7 +893,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</Spanish>
-		<Polish>Boja Nasłuchowa</Polish>
+		<Polish>Boja Nas&#179;uchowa</Polish>
 		<Russian>Óçåë ñâÿçè</Russian>
 	</TEXT>
 	<TEXT>
@@ -1734,7 +1734,7 @@
 		<English>Explore Transneptunian Space</English>
 		<French>Explorez l'espace transneptunien</French>
 		<Russian>Èññëåä. òðàíñíåï. êîñìîñ</Russian>
-		<Italian>Esplora spazio oltre Nettuno</Italian>
+		<Italian>Esplora spazio transnettuniano</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISSION_EXPLORE_TRANSNEPTUNIAN_HELP</Tag>
@@ -2168,14 +2168,14 @@
 		<English>Do Research Mission</English>
 		<French>Faire une Mission de Recherche</French>
 		<Russian>Íà÷àòü ìèññèþ</Russian>
-		<Italian>Effettua missione di ricerca (esplora lo spazio oltre Nettuno)</Italian>
+		<Italian>Effettua missione di ricerca (esplora lo spazio transnettuniano)</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_OUTCOME_EXPLORE_TRANSNEPTUNIAN_MESSAGE</Tag>
 		<English>Mission Successful!</English>
 		<French>Mission Réussie !</French>
 		<Russian>Ìèññèÿ âûïîëíåíà!</Russian>
-		<Italian>Esplorazione dello spazio oltre Nettuno completata!</Italian>
+		<Italian>Esplorazione dello spazio transnettuniano completata!</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_OUTCOME_LAUNCH_SATELLITE</Tag>
@@ -2238,7 +2238,7 @@
 		<English>Aspatial Route</English>
 		<French>Route Aspatiale</French>
 		<Russian>Âíåïðîñòð. ìàðøðóò</Russian>
-		<Italian>Strada asspaziale</Italian>
+		<Italian>Strada aspaziale</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_ROUTE_COMPACT_WORMHOLE</Tag>
@@ -2462,7 +2462,7 @@
 		<English>Construction Ship</English>
 		<French>Vaisseau de construction</French>
 		<Russian>Ñòðîèòåëüíûé ìîäóëü</Russian>
-		<Italian>Astronave costruttice</Italian>
+		<Italian>Astronave costruttrice</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_CONSTRUCTION_SHIP_PEDIA</Tag>
@@ -2718,7 +2718,7 @@
 		<English>Mission Reward (Interstellar Life)</English>
 		<French>Retour de Mission (Interstellar Life)</French>
 		<Russian>Ýôôåêò (Ìåæçâåçäí.)</Russian>
-		<Italian>Vita fuori dal sistema solare (ricompensa missione)</Italian>
+		<Italian>Forma di vita interstellare (ricompensa missione)</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_INTERSTELLAR_LIFE_REWARD_PEDIA</Tag>
@@ -2897,14 +2897,14 @@
 		<English>Lunar Rover</English>
 		<French>Véhicule Lunaire</French>
 		<Italian>Rover lunare</Italian>
-		<Polish>Łazik Księżycowy</Polish>
+		<Polish>&#163;azik Ksi&#234;&#191;ycowy</Polish>
 		<Russian>Ëóíîõîä</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_LUNAR_ROVER_PEDIA</Tag>
 		<English>Lunar Exploration Unit.</English>
 		<Italian>Unità da esplorazione lunare.</Italian>
-		<Polish>Łazik - rodzaj sondy kosmicznej, posiadający możliwość poruszania się po powierzchni ciała, na którym wylądował (planety lub księżyca, w planach także planetoid). Łazik, dzięki swojej mobilności, ma dużą przewagę nad tradycyjnym lądownikiem w kwestii wyboru miejsca i obiektu badań, jednak jego wysłanie jest znacznie droższe ze względu na konieczność umieszczenia systemu napędowego wewnątrz sondy, co znacznie zwiększa jej wagę. Do łazików zaliczane są głównie pojazdy bezzałogowe, ale łazikiem księżycowym był też nazywany załogowy Lunar Roving Vehicle, używany w misjach programu Apollo.</Polish>
+		<Polish>&#163;azik - rodzaj sondy kosmicznej, posiadaj&#185;cy mo&#191;liwo&#156;&#230; poruszania si&#234; po powierzchni cia&#179;a, na kt&#243;rym wyl&#185;dowa&#179; (planety lub ksi&#234;&#191;yca, w planach tak&#191;e planetoid). &#163;azik, dzi&#234;ki swojej mobilno&#156;ci, ma du&#191;&#185; przewag&#234; nad tradycyjnym l&#185;downikiem w kwestii wyboru miejsca i obiektu bada&#241;, jednak jego wys&#179;anie jest znacznie dro&#191;sze ze wzgl&#234;du na konieczno&#156;&#230; umieszczenia systemu nap&#234;dowego wewn&#185;trz sondy, co znacznie zwi&#234;ksza jej wag&#234;. Do &#179;azik&#243;w zaliczane s&#185; g&#179;&#243;wnie pojazdy bezza&#179;ogowe, ale &#179;azikiem ksi&#234;&#191;ycowym by&#179; te&#191; nazywany za&#179;ogowy Lunar Roving Vehicle, u&#191;ywany w misjach programu Apollo.</Polish>
 		<Russian>Ëóííûé ðàçâåäîâàòåëüíûé þíèò.</Russian>
 	</TEXT>
 	<TEXT>
@@ -3194,7 +3194,7 @@
 		<English>Mission Reward (Solar System Life)</English>
 		<French>Retour de Mission (Solar System Life)</French>
 		<Russian>Ýôôåêò (Ñîëí. ñèñòåìà)</Russian>
-		<Italian>Vita extraterrestre (ricompensa missione)</Italian>
+		<Italian>Forma di vita del sistema solare (ricompensa missione)</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SOLAR_SYSTEM_LIFE_REWARD_PEDIA</Tag>
@@ -3317,7 +3317,7 @@
 		<English>Mission Reward (Transneptunian)</English>
 		<French>Retour de Mission (Transneptunian)</French>
 		<Russian>Ýôôåêò (Òðàíñíåïòóí.)</Russian>
-		<Italian>Spazio oltre Nettuno (ricompensa missione)</Italian>
+		<Italian>Spazio transnettuniano (ricompensa missione)</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_TRANSNEPTUNIAN_REWARD_PEDIA</Tag>

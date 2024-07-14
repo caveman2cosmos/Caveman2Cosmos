@@ -143,12 +143,18 @@ public:
 
 	bool AI_isCommercePlot(const CvPlot* pPlot) const;
 
+	int AI_plotDangerUnitCheck
+	(
+		const CvPlot* plot0, const CvPlot* plotX,
+		const CvUnit* unitX, const TeamTypes eTeam,
+		const int iDistance = 0, const bool bTestMoves = false
+	)
+	const;
 	bool AI_getAnyPlotDanger(const CvPlot* pPlot, int iRange = -1, bool bTestMoves = true) const;
 	bool AI_getVisiblePlotDanger(const CvPlot* pPlot, int iRange, bool bAnimalOnly, CvSelectionGroup* group = NULL, int acceptableOdds = -1) const;
 	int AI_getPlotDanger(const CvPlot* pPlot, int iRange = -1, bool bTestMoves = true) const;
 	//	Koshling - internal bypasses cache
 	int AI_getPlotDangerInternal(const CvPlot* pPlot, int iRange, bool bTestMoves) const;
-	//int AI_getUnitDanger(CvUnit* pUnit, int iRange = -1, bool bTestMoves = true, bool bAnyDanger = true) const;
 
 	int AI_getWaterDanger(const CvPlot* pPlot, int iRange) const;
 	int AI_countNumLocalNavy(const CvPlot* pPlot, int iRange) const;
@@ -157,7 +163,7 @@ public:
 	bool AI_isFinancialTrouble() const;
 	short AI_fundingHealth(int iExtraExpense = 0, int iExtraExpenseMod = 0) const;
 	short AI_safeFunding() const;
-	int AI_goldTarget() const;
+	int64_t AI_goldTarget() const;
 	int AI_goldValueAssessmentModifier() const;
 
 	TechTypes AI_bestTech(int iMaxPathLength = 1, bool bIgnoreCost = false, bool bAsync = false, TechTypes eIgnoreTech = NO_TECH, AdvisorTypes eIgnoreAdvisor = NO_ADVISOR);
@@ -168,6 +174,7 @@ public:
 	int AI_techValue(TechTypes eTech, int iPathLength, bool bIgnoreCost, bool bAsync);
 	int AI_techBuildingValue( TechTypes eTech, int iPathLength, bool &bEnablesWonder);
 	int AI_techUnitValue( TechTypes eTech, int iPathLength, bool &bEnablesUnitWonder);
+	int AI_heritageValue(const HeritageTypes eType) const;
 
 	int  AI_TechValueCached(TechTypes eTech, bool bAsync, bool considerFollowOns = false);
 	int AI_averageCurrentTechValue(TechTypes eRelativeTo, bool bAsync);
@@ -619,6 +626,9 @@ protected:
 
 	void AI_doCounter();
 	void AI_doMilitary();
+
+	int heritagePropertiesValue(const CvHeritageInfo& heritage) const;
+
 public:
 	void AI_doCivics();
 protected:

@@ -167,6 +167,7 @@
 	<!-- MapInfos -->
 	<ElementType name="bWrapX" content="textOnly" dt:type="boolean"/>
 	<ElementType name="bWrapY" content="textOnly" dt:type="boolean"/>
+	<ElementType name="bStartRevealed" content="textOnly" dt:type="boolean"/>
 	<ElementType name="InitialWBMap" content="textOnly"/>
 	<ElementType name="MapScript" content="textOnly"/>
 	<ElementType name="MapInfo" content="eltOnly">
@@ -177,8 +178,10 @@
 		<element type="iGridHeight"/>
 		<element type="bWrapX"/>
 		<element type="bWrapY"/>
+		<element type="bStartRevealed"/>
 		<element type="InitialWBMap"/>
 		<element type="MapScript"/>
+		<element type="Button" minOccurs="0"/>
 	</ElementType>
 	<ElementType name="MapInfos" content="eltOnly">
 		<element type="MapInfo" minOccurs="0"/>
@@ -617,6 +620,7 @@
 	<ElementType name="iAnimalBonus" content="textOnly" dt:type="int"/>
 	<ElementType name="iBarbarianBonus" content="textOnly" dt:type="int"/>
 	<ElementType name="iAIAnimalBonus" content="textOnly" dt:type="int"/>
+	<ElementType name="iSubdueAnimalBonusAI" content="textOnly" dt:type="int"/>
 	<ElementType name="iAIBarbarianBonus" content="textOnly" dt:type="int"/>
 	<ElementType name="iStartingDefenseUnits" content="textOnly" dt:type="int"/>
 	<ElementType name="iStartingWorkerUnits" content="textOnly" dt:type="int"/>
@@ -682,6 +686,7 @@
 		<element type="iAnimalBonus" minOccurs="0"/>
 		<element type="iBarbarianBonus" minOccurs="0"/>
 		<element type="iAIAnimalBonus" minOccurs="0"/>
+		<element type="iSubdueAnimalBonusAI" minOccurs="0"/>
 		<element type="iAIBarbarianBonus" minOccurs="0"/>
 		<element type="iStartingDefenseUnits" minOccurs="0"/>
 		<element type="iStartingWorkerUnits" minOccurs="0"/>

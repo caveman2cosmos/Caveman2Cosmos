@@ -44,10 +44,14 @@ class ANewDawnSettings:
 				ANewDawnOpt.setMaxUnitsPerTile(data3)
 			elif data2 == int(ModderGameOptionTypes.MODDERGAMEOPTION_MAX_BOMBARD_DEFENSE):
 				ANewDawnOpt.setMaxBombardDefense(data3)
+			elif data2 == int(ModderGameOptionTypes.MODDERGAMEOPTION_MIN_CITY_DISTANCE):
+				ANewDawnOpt.setMinCityDistance(data3)
 			elif data2 == int(ModderGameOptionTypes.MODDERGAMEOPTION_CANNOT_CLAIM_OCEAN):
 				ANewDawnOpt.setCanNotClaimOcean(data3)
 			elif data2 == int(ModderGameOptionTypes.MODDERGAMEOPTION_RESOURCE_DEPLETION):
 				ANewDawnOpt.setDepletionMod(data3)
+			elif data2 == int(ModderGameOptionTypes.MODDERGAMEOPTION_GREATER_GREAT_FARMER):
+				ANewDawnOpt.setGreaterGreatFarmer(data3)
 			elif data2 == int(ModderGameOptionTypes.MODDERGAMEOPTION_BETTER_INTERCETION):
 				ANewDawnOpt.setBetterAirInterception(data3)
 			elif data2 == int(ModderGameOptionTypes.MODDERGAMEOPTION_AIRLIFT_RANGE):
@@ -58,6 +62,8 @@ class ANewDawnSettings:
 				ANewDawnOpt.setRealisiticDiplomacy(data3)
 			elif data2 == int(ModderGameOptionTypes.MODDERGAMEOPTION_BATTLEFIELD_PROMOTIONS):
 				ANewDawnOpt.setBattlefieldPromotions(data3)
+			elif data2 == int(ModderGameOptionTypes.MODDERGAMEOPTION_STARSIGNS):
+				ANewDawnOpt.setStarsigns(data3)
 			elif data2 == int(ModderGameOptionTypes.MODDERGAMEOPTION_IMPROVED_XP):
 				ANewDawnOpt.setImprovedXP(data3)
 			elif data2 == int(ModderGameOptionTypes.MODDERGAMEOPTION_RELIGION_DECAY):
@@ -66,8 +72,6 @@ class ANewDawnSettings:
 				ANewDawnOpt.setMultipleReligionSpread(data3)
 			elif data2 == int(ModderGameOptionTypes.MODDERGAMEOPTION_TERRAIN_DAMAGE):
 				ANewDawnOpt.setTerrainDamage(data3)
-			elif data2 == int(ModderGameOptionTypes.MODDERGAMEOPTION_STRATEGIC_EVENTS):
-				ANewDawnOpt.setStrategicEvents(data3)
 			elif data2 == int(ModderGameOptionTypes.MODDERGAMEOPTION_NO_AUTO_CORPORATION_FOUNDING):
 				ANewDawnOpt.setNoAutoCorporationFounding(data3)
 			elif data2 == int(ModderGameOptionTypes.MODDERGAMEOPTION_AI_USE_FLEXIBLE_DIFFICULTY):
@@ -107,27 +111,20 @@ def changedFlexibleDifficultyTurnIncrements(option, value):
 	CyMessageControl().sendModNetMessage(MODDEROPTION_EVENT_ID, GC.getGame().getActivePlayer(), int(ModderOptionTypes.MODDEROPTION_FLEXIBLE_DIFFICULTY_TURN_INCREMENTS), int(value), 0)
 
 def changedFlexibleDifficultyAITurnIncrements(option, value):
-	GC.getGame().setModderGameOption(ModderGameOptionTypes.MODDEROPTION_FLEXIBLE_DIFFICULTY_AI_TURN_INCREMENTS, value)
-	CyMessageControl().sendModNetMessage(MODDERGAMEOPTION_EVENT_ID, GC.getGame().getActivePlayer(), int(ModderGameOptionTypes.MODDEROPTION_FLEXIBLE_DIFFICULTY_AI_TURN_INCREMENTS), int(value), 0)
+	GC.getGame().setModderGameOption(ModderGameOptionTypes.MODDERGAMEOPTION_FLEXIBLE_DIFFICULTY_AI_TURN_INCREMENTS, value)
+	CyMessageControl().sendModNetMessage(MODDERGAMEOPTION_EVENT_ID, GC.getGame().getActivePlayer(), int(ModderGameOptionTypes.MODDERGAMEOPTION_FLEXIBLE_DIFFICULTY_AI_TURN_INCREMENTS), int(value), 0)
 
 def changedMaxBombardDefense(option, value):
 	GC.getGame().setModderGameOption(ModderGameOptionTypes.MODDERGAMEOPTION_MAX_BOMBARD_DEFENSE, value)
 	CyMessageControl().sendModNetMessage(MODDERGAMEOPTION_EVENT_ID, GC.getGame().getActivePlayer(), int(ModderGameOptionTypes.MODDERGAMEOPTION_MAX_BOMBARD_DEFENSE), int(value), 0)
 
+def changedMinCityDistance(option, value):
+	GC.getGame().setModderGameOption(ModderGameOptionTypes.MODDERGAMEOPTION_MIN_CITY_DISTANCE, value)
+	CyMessageControl().sendModNetMessage(MODDERGAMEOPTION_EVENT_ID, GC.getGame().getActivePlayer(), int(ModderGameOptionTypes.MODDERGAMEOPTION_MIN_CITY_DISTANCE), int(value), 0)
+
 def changedCanNotClaimOcean(option, value):
 	GC.getGame().setModderGameOption(ModderGameOptionTypes.MODDERGAMEOPTION_CANNOT_CLAIM_OCEAN, value)
 	CyMessageControl().sendModNetMessage(MODDERGAMEOPTION_EVENT_ID, GC.getGame().getActivePlayer(), int(ModderGameOptionTypes.MODDERGAMEOPTION_CANNOT_CLAIM_OCEAN), int(value), 0)
-
-def changedShowCivTraits(option, value, bAllHumans):
-	if (bAllHumans):
-		for iPlayer in range(GC.getMAX_PC_PLAYERS()):
-			CyPlayer = GC.getPlayer(iPlayer)
-			if CyPlayer.isHuman():
-				CyPlayer.setModderOption(ModderOptionTypes.MODDEROPTION_SHOW_TRAITS_FLAG, value)
-				CyMessageControl().sendModNetMessage(MODDEROPTION_EVENT_ID, iPlayer, int(ModderOptionTypes.MODDEROPTION_SHOW_TRAITS_FLAG), int(value), 0)
-	else:
-		GC.getActivePlayer().setModderOption(ModderOptionTypes.MODDEROPTION_SHOW_TRAITS_FLAG, value)
-		CyMessageControl().sendModNetMessage(MODDEROPTION_EVENT_ID, GC.getGame().getActivePlayer(), int(ModderOptionTypes.MODDEROPTION_SHOW_TRAITS_FLAG), int(value), 0)
 
 def changedNoFriendlyPillaging(option, value):
 	GC.getActivePlayer().setModderOption(ModderOptionTypes.MODDEROPTION_NO_FRIENDLY_PILLAGING, value)
@@ -146,12 +143,12 @@ def changedFlexibleDifficultyMaximumDiff(option, value):
 	CyMessageControl().sendModNetMessage(MODDEROPTION_EVENT_ID, GC.getGame().getActivePlayer(), int(ModderOptionTypes.MODDEROPTION_FLEXIBLE_DIFFICULTY_MAX_DIFFICULTY), int(value - 1), 0)
 
 def changedFlexibleDifficultyAIMinimumDiff(option, value):
-	GC.getGame().setModderGameOption(ModderGameOptionTypes.MODDEROPTION_FLEXIBLE_DIFFICULTY_AI_MIN_DIFFICULTY, value - 1)
-	CyMessageControl().sendModNetMessage(MODDERGAMEOPTION_EVENT_ID, GC.getGame().getActivePlayer(), int(ModderGameOptionTypes.MODDEROPTION_FLEXIBLE_DIFFICULTY_AI_MIN_DIFFICULTY), int(value - 1), 0)
+	GC.getGame().setModderGameOption(ModderGameOptionTypes.MODDERGAMEOPTION_FLEXIBLE_DIFFICULTY_AI_MIN_DIFFICULTY, value - 1)
+	CyMessageControl().sendModNetMessage(MODDERGAMEOPTION_EVENT_ID, GC.getGame().getActivePlayer(), int(ModderGameOptionTypes.MODDERGAMEOPTION_FLEXIBLE_DIFFICULTY_AI_MIN_DIFFICULTY), int(value - 1), 0)
 
 def changedFlexibleDifficultyAIMaximumDiff(option, value):
-	GC.getGame().setModderGameOption(ModderGameOptionTypes.MODDEROPTION_FLEXIBLE_DIFFICULTY_AI_MAX_DIFFICULTY, value - 1)
-	CyMessageControl().sendModNetMessage(MODDERGAMEOPTION_EVENT_ID, GC.getGame().getActivePlayer(), int(ModderGameOptionTypes.MODDEROPTION_FLEXIBLE_DIFFICULTY_AI_MAX_DIFFICULTY), int(value - 1), 0)
+	GC.getGame().setModderGameOption(ModderGameOptionTypes.MODDERGAMEOPTION_FLEXIBLE_DIFFICULTY_AI_MAX_DIFFICULTY, value - 1)
+	CyMessageControl().sendModNetMessage(MODDERGAMEOPTION_EVENT_ID, GC.getGame().getActivePlayer(), int(ModderGameOptionTypes.MODDERGAMEOPTION_FLEXIBLE_DIFFICULTY_AI_MAX_DIFFICULTY), int(value - 1), 0)
 
 def changedFlexibleDifficultyMinRank(option, value):
 	GC.getActivePlayer().setModderOption(ModderOptionTypes.MODDEROPTION_FLEXIBLE_DIFFICULTY_MIN_RANK, value)
@@ -164,6 +161,10 @@ def changedFlexibleDifficultyMaxRank(option, value):
 def changedDepletionMod(option, value):
 	GC.getGame().setModderGameOption(ModderGameOptionTypes.MODDERGAMEOPTION_RESOURCE_DEPLETION, value)
 	CyMessageControl().sendModNetMessage(MODDERGAMEOPTION_EVENT_ID, GC.getGame().getActivePlayer(), int(ModderGameOptionTypes.MODDERGAMEOPTION_RESOURCE_DEPLETION), int(value), 0)
+
+def changedGreaterGreatFarmer(option, value):
+	GC.getGame().setModderGameOption(ModderGameOptionTypes.MODDERGAMEOPTION_GREATER_GREAT_FARMER, value)
+	CyMessageControl().sendModNetMessage(MODDERGAMEOPTION_EVENT_ID, GC.getGame().getActivePlayer(), int(ModderGameOptionTypes.MODDERGAMEOPTION_GREATER_GREAT_FARMER), int(value), 0)
 
 def changedBetterAirInterception(option, value):
 	GC.getGame().setModderGameOption(ModderGameOptionTypes.MODDERGAMEOPTION_BETTER_INTERCETION, value)
@@ -188,6 +189,10 @@ def changedShowRevCivics(option, value):
 def changedBattlefieldPromotions(option, value):
 	GC.getGame().setModderGameOption(ModderGameOptionTypes.MODDERGAMEOPTION_BATTLEFIELD_PROMOTIONS, value)
 	CyMessageControl().sendModNetMessage(MODDERGAMEOPTION_EVENT_ID, GC.getGame().getActivePlayer(), int(ModderGameOptionTypes.MODDERGAMEOPTION_BATTLEFIELD_PROMOTIONS), int(value), 0)
+
+def changedStarsigns(option, value):
+	GC.getGame().setModderGameOption(ModderGameOptionTypes.MODDERGAMEOPTION_STARSIGNS, value)
+	CyMessageControl().sendModNetMessage(MODDERGAMEOPTION_EVENT_ID, GC.getGame().getActivePlayer(), int(ModderGameOptionTypes.MODDERGAMEOPTION_STARSIGNS), int(value), 0)
 
 def changedHideReplacedBuildings(option, value):
 	GC.getActivePlayer().setModderOption(ModderOptionTypes.MODDEROPTION_HIDE_REPLACED_BUILDINGS, value)
@@ -225,9 +230,6 @@ def changedHideUnavailableBuilds(option, value):
 	GC.getActivePlayer().setModderOption(ModderOptionTypes.MODDEROPTION_HIDE_UNAVAILBLE_BUILDS, value)
 	CyMessageControl().sendModNetMessage(MODDEROPTION_EVENT_ID, GC.getGame().getActivePlayer(), int(ModderOptionTypes.MODDEROPTION_HIDE_UNAVAILBLE_BUILDS), int(value), 0)
 
-def changedEventImages(option, value):
-	GC.getActivePlayer().setModderOption(ModderOptionTypes.MODDEROPTION_EVENT_IMAGES, value)
-	CyMessageControl().sendModNetMessage(MODDEROPTION_EVENT_ID, GC.getGame().getActivePlayer(), int(ModderOptionTypes.MODDEROPTION_EVENT_IMAGES), int(value), 0)
 
 def changedIgnoreDisabledBuildingAlerts(option, value):
 	GC.getActivePlayer().setModderOption(ModderOptionTypes.MODDEROPTION_IGNORE_DISABLED_ALERTS, value)
@@ -244,10 +246,6 @@ def changedMultipleReligionSpread(option, value):
 def changedTerrainDamage(option, value):
 	GC.getGame().setModderGameOption(ModderGameOptionTypes.MODDERGAMEOPTION_TERRAIN_DAMAGE, value)
 	CyMessageControl().sendModNetMessage(MODDERGAMEOPTION_EVENT_ID, GC.getGame().getActivePlayer(), int(ModderGameOptionTypes.MODDERGAMEOPTION_TERRAIN_DAMAGE), int(value), 0)
-
-def changedStrategicEvents(option, value):
-	GC.getGame().setModderGameOption(ModderGameOptionTypes.MODDERGAMEOPTION_STRATEGIC_EVENTS, value)
-	CyMessageControl().sendModNetMessage(MODDERGAMEOPTION_EVENT_ID, GC.getGame().getActivePlayer(), int(ModderGameOptionTypes.MODDERGAMEOPTION_STRATEGIC_EVENTS), int(value), 0)
 
 def changedAllowTerraforming(option, value):
 	CyMessageControl().sendModNetMessage(CANBUILD_EVENT_ID, GC.getGame().getActivePlayer(), GC.getInfoTypeForString("BUILD_TERRAFORM_GRASS"), not value, 0)
@@ -284,8 +282,8 @@ def setXMLOptionsfromIniFile():
 	changedFlexibleDifficultyTurnIncrements(ANewDawnOpt, ANewDawnOpt.getFlexibleDifficultyTurnIncrements())
 	changedFlexibleDifficultyAITurnIncrements(ANewDawnOpt, ANewDawnOpt.getFlexibleDifficultyAITurnIncrements())
 	changedMaxBombardDefense(ANewDawnOpt, ANewDawnOpt.getMaxBombardDefense())
+	changedMinCityDistance(ANewDawnOpt, ANewDawnOpt.getMinCityDistance())
 	changedCanNotClaimOcean(ANewDawnOpt, ANewDawnOpt.isCanNotClaimOcean())
-	changedShowCivTraits(ANewDawnOpt, ANewDawnOpt.isShowCivTraits(), GC.getGame().isHotSeat())
 	changedNoFriendlyPillaging(ANewDawnOpt, ANewDawnOpt.isNoFriendlyPillaging())
 	changedEnableFlexibleDifficulty(ANewDawnOpt, ANewDawnOpt.isEnableFlexibleDifficulty())
 	changedFlexibleDifficultyMinimumDiff(ANewDawnOpt, ANewDawnOpt.getFlexibleDifficultyMinimumDiff())
@@ -295,6 +293,7 @@ def setXMLOptionsfromIniFile():
 	changedFlexibleDifficultyMinRank(ANewDawnOpt, ANewDawnOpt.getFlexibleDifficultyMinRank())
 	changedFlexibleDifficultyMaxRank(ANewDawnOpt, ANewDawnOpt.getFlexibleDifficultyMaxRank())
 	changedDepletionMod(ANewDawnOpt, ANewDawnOpt.isDepletionMod())
+	changedGreaterGreatFarmer(ANewDawnOpt, ANewDawnOpt.isGreaterGreatFarmer())
 	changedBetterAirInterception(ANewDawnOpt, ANewDawnOpt.isBetterAirInterception())
 	changedMaxRebaseRange(ANewDawnOpt, ANewDawnOpt.getMaxRebaseRange())
 	changedMercyRule(ANewDawnOpt, ANewDawnOpt.isMercyRule())
@@ -305,12 +304,10 @@ def setXMLOptionsfromIniFile():
 	changedImprovedXP(ANewDawnOpt, ANewDawnOpt.isImprovedXP())
 	changedUseLandmarkNames(ANewDawnOpt, ANewDawnOpt.isUseLandmarkNames())
 	changedHideUnavailableBuilds(ANewDawnOpt, ANewDawnOpt.isHideUnavailableBuilds())
-	changedEventImages(ANewDawnOpt, ANewDawnOpt.isEventImages())
 	changedIgnoreDisabledBuildingAlerts(ANewDawnOpt, ANewDawnOpt.isIgnoreDisabledBuildingAlerts())
 	changedReligionDecay(ANewDawnOpt, ANewDawnOpt.isReligionDecay())
 	changedMultipleReligionSpread(ANewDawnOpt, ANewDawnOpt.isMultipleReligionSpread())
 	changedTerrainDamage(ANewDawnOpt, ANewDawnOpt.isTerrainDamage())
-	changedStrategicEvents(ANewDawnOpt, ANewDawnOpt.isStrategicEvents())
 	changedAllowTerraforming(ANewDawnOpt, ANewDawnOpt.isAllowTerraforming())
 	changedReforestation(ANewDawnOpt, ANewDawnOpt.isReforestation())
 	changedSeaTunnels(ANewDawnOpt, ANewDawnOpt.isSeaTunnels())

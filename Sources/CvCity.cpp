@@ -327,7 +327,20 @@ void CvCity::init(int iID, PlayerTypes eOwner, int iX, int iY, bool bBumpUnits, 
 		}
 	}
 
-	changeMilitaryHappinessUnits(pPlot->plotCount(PUF_isMilitaryHappiness));
+	{
+		// don't use pPlot->plotCount(PUF_isMilitaryHappiness), it doesn't count dead units
+		//	and will thus for the AI not recognize units that have just merged on the plot the same turn before it founded the city.
+		// hmm, maybe plotCount should always count dead units, need to investigate, could add a new paramater to make it count dead units too.
+		int iCount = 0;
+		foreach_(const CvUnit* unitX, pPlot->units())
+		{
+			if (unitX->isMilitaryHappiness())
+			{
+				iCount++;
+			}
+		}
+		changeMilitaryHappinessUnits(iCount);
+	}
 
 	for (int iI = 0; iI < NUM_COMMERCE_TYPES; iI++)
 	{
@@ -4237,25 +4250,7 @@ UnitTypes CvCity::getConscriptUnit() const
 
 int CvCity::getConscriptPopulation() const
 {
-	const UnitTypes eConscriptUnit = getConscriptUnit();
-
-	if (eConscriptUnit == NO_UNIT)
-	{
-		return 0;
-	}
-
-	if (GC.getCONSCRIPT_POPULATION_PER_COST() == 0)
-	{
-		return 0;
-	}
-
-	return std::max(1, (GC.getUnitInfo(eConscriptUnit).getProductionCost() / GC.getCONSCRIPT_POPULATION_PER_COST()));
-}
-
-
-int CvCity::conscriptMinCityPopulation() const
-{
-	return GC.getCONSCRIPT_MIN_CITY_POPULATION() + getConscriptPopulation();
+	return std::max(0, GC.getCONSCRIPT_POPULATION());
 }
 
 
@@ -4265,17 +4260,17 @@ int CvCity::flatConscriptAngerLength() const
 }
 
 
-//Team Project (6)
 bool CvCity::canConscript(bool bOnCapture) const
 {
-	//Team Project (6)
-	if (isDisorder() && !bOnCapture)
+	if (!bOnCapture)
 	{
-		return false;
+		if (isDisorder() || isDrafted())
+		{
+			return false;
+		}
 	}
 
-	//Team Project (6)
-	if (isDrafted() && !bOnCapture)
+	if (getPopulation() <= getConscriptPopulation())
 	{
 		return false;
 	}
@@ -4285,18 +4280,7 @@ bool CvCity::canConscript(bool bOnCapture) const
 		return false;
 	}
 
-	if (getPopulation() <= getConscriptPopulation())
-	{
-		return false;
-	}
-
-	if (getPopulation() < conscriptMinCityPopulation())
-	{
-		return false;
-	}
-
-	//Team Project (6)
-	if (plot()->calculateTeamCulturePercent(getTeam()) < GC.getCONSCRIPT_MIN_CULTURE_PERCENT() && !bOnCapture)
+	if (!bOnCapture && plot()->calculateTeamCulturePercent(getTeam()) < GC.getCONSCRIPT_MIN_CULTURE_PERCENT())
 	{
 		return false;
 	}
@@ -6222,14 +6206,12 @@ int CvCity::hurryPopulation(HurryTypes eHurry) const
 
 int CvCity::getHurryPopulation(HurryTypes eHurry, int iHurryCost) const
 {
-	int prodPerPop = GC.getGame().getProductionPerPopulation(eHurry);
-	if (prodPerPop == 0)
+	const int prodPerPop = GC.getGame().getProductionPerPopulation(eHurry);
+	if (prodPerPop < 1)
 	{
 		return 0;
 	}
-	const int iPopulation = (iHurryCost - 1) / prodPerPop;
-
-	return std::max(1, (iPopulation + 1));
+	return std::max(1, 1 + (iHurryCost - 1) / prodPerPop);
 }
 
 int CvCity::hurryProduction(HurryTypes eHurry) const
@@ -6991,7 +6973,7 @@ void CvCity::changePopulation(int iChange)
 }
 
 
-int CvCity::getRealPopulation() const
+int64_t CvCity::getRealPopulation() const
 {
 	//return (((long)(pow((float)getPopulation(), 2.8f))) * 1000);
 
@@ -10712,7 +10694,22 @@ void CvCity::changeTerrainYieldChanges(const TerrainTypes eTerrain, const YieldA
 {
 	PROFILE_EXTRA_FUNC();
 	FASSERT_BOUNDS(0, GC.getNumTerrainInfos(), eTerrain);
-
+	{
+		bool bNoChange = true;
+		for (int iI = 0; iI < NUM_YIELD_TYPES; iI++)
+		{
+			if (yields[iI] != 0)
+			{
+				bNoChange = false;
+				break;
+			}
+		}
+		if (bNoChange)
+		{
+			FErrorMsg("Redundant function call");
+			return;
+		}
+	}
 	std::map<short, YieldArray>::const_iterator itr = m_terrainYieldChanges.find((short)eTerrain);
 
 	if (itr == m_terrainYieldChanges.end())
@@ -10722,7 +10719,6 @@ void CvCity::changeTerrainYieldChanges(const TerrainTypes eTerrain, const YieldA
 			if (yields[iI] != 0)
 			{
 				m_terrainYieldChanges.insert(std::make_pair((short)eTerrain, yields));
-				updateYield();
 				break;
 			}
 		}
@@ -10744,8 +10740,8 @@ void CvCity::changeTerrainYieldChanges(const TerrainTypes eTerrain, const YieldA
 		{
 			m_terrainYieldChanges.erase(itr->first);
 		}
-		else updateYield();
 	}
+	updateYield();
 }
 
 int CvCity::getTerrainYieldChange(const TerrainTypes eTerrain, const YieldTypes eYield) const
@@ -10759,6 +10755,22 @@ int CvCity::getTerrainYieldChange(const TerrainTypes eTerrain, const YieldTypes 
 void CvCity::changePlotYieldChanges(const PlotTypes ePlot, const YieldArray& yields)
 {
 	PROFILE_EXTRA_FUNC();
+	{
+		bool bNoChange = true;
+		for (int iI = 0; iI < NUM_YIELD_TYPES; iI++)
+		{
+			if (yields[iI] != 0)
+			{
+				bNoChange = false;
+				break;
+			}
+		}
+		if (bNoChange)
+		{
+			FErrorMsg("Redundant function call");
+			return;
+		}
+	}
 	std::map<short, YieldArray>::const_iterator itr = m_plotYieldChanges.find((short)ePlot);
 
 	if (itr == m_plotYieldChanges.end())
@@ -10768,7 +10780,6 @@ void CvCity::changePlotYieldChanges(const PlotTypes ePlot, const YieldArray& yie
 			if (yields[iI] != 0)
 			{
 				m_plotYieldChanges.insert(std::make_pair((short)ePlot, yields));
-				updateYield();
 				break;
 			}
 		}
@@ -10790,8 +10801,8 @@ void CvCity::changePlotYieldChanges(const PlotTypes ePlot, const YieldArray& yie
 		{
 			m_plotYieldChanges.erase(itr->first);
 		}
-		else updateYield();
 	}
+	updateYield();
 }
 
 int CvCity::getPlotYieldChange(const PlotTypes ePlot, const YieldTypes eYield) const
@@ -11771,7 +11782,7 @@ int CvCity::getBaseCommerceRateExtra(CommerceTypes eIndex) const
 	iBaseExtraRate += getBuildingCommerce100(eIndex);
 
 	//STEP 6 : Free City Commerce (player tallied from civics/traits a change value to all cities commerce output)
-	iBaseExtraRate += 100 * GET_PLAYER(getOwner()).getFreeCityCommerce(eIndex);
+	iBaseExtraRate += GET_PLAYER(getOwner()).getExtraCommerce100(eIndex);
 
 	//STEP 7 : Minted Commerce
 	if (eIndex == COMMERCE_GOLD)
@@ -12479,7 +12490,7 @@ void CvCity::updateCorporationCommerce(CommerceTypes eIndex)
 
 	for (int iI = 0; iI < GC.getNumCorporationInfos(); iI++)
 	{
-		iNewCommerce += getCorporationCommerceByCorporation(eIndex, ((CorporationTypes)iI));
+		iNewCommerce += getCorporationCommerceByCorporation(eIndex, (CorporationTypes)iI);
 	}
 
 	if (getCorporationCommerce(eIndex) != iNewCommerce)
@@ -12860,7 +12871,10 @@ void CvCity::setCultureTimes100(PlayerTypes eIndex, int iNewValue, bool bPlots, 
 				m_aiCulture[eIndex] = 100 * GC.getGame().getCultureThreshold(getCultureLevel());
 			}
 		}
-		if (bPlots) doPlotCulture(eIndex, 0);
+		if (bPlots && iNewValue > iOldCulture)
+		{
+			doPlotCulture(eIndex, (iNewValue - iOldCulture) / 100);
+		}
 	}
 
 	if (!bNationalSet && iOldCulture < iNewValue)
@@ -12872,38 +12886,24 @@ void CvCity::setCultureTimes100(PlayerTypes eIndex, int iNewValue, bool bPlots, 
 
 void CvCity::changeCulture(PlayerTypes eIndex, int iChange, bool bPlots, bool bUpdatePlotGroups)
 {
-	if (iChange == 0) return;
-
-	GET_PLAYER(getOwner()).changeCulture(iChange);
-
-	const int iOld = getCultureTimes100(eIndex);
-
-	int iNew;
-	if (iChange < 0)
-	{
-		iNew = iOld + 100 * iChange;
-	}
-	else if (MAX_INT - 100 * iChange > iOld)
-	{
-		iNew = iOld + 100 * iChange;
-	}
-	else iNew = MAX_INT;
-
-	setCultureTimes100(eIndex, iNew, bPlots, bUpdatePlotGroups, true);
+	changeCultureTimes100(eIndex, 100 * iChange, bPlots, bUpdatePlotGroups);
 }
 
 void CvCity::changeCultureTimes100(PlayerTypes eIndex, int iChange, bool bPlots, bool bUpdatePlotGroups)
 {
 	if (iChange == 0) return;
 
-	GET_PLAYER(getOwner()).changeCulture(iChange / 100);
-
 	const int iOld = getCultureTimes100(eIndex);
+
+	if (iChange > 99)
+	{
+		GET_PLAYER(getOwner()).changeCulture(iChange / 100);
+	}
 
 	int iNew;
 	if (iChange < 0)
 	{
-		iNew = iOld + iChange;
+		iNew = std::max(0, iOld + iChange);
 	}
 	else if (MAX_INT - iChange > iOld)
 	{
@@ -14129,7 +14129,7 @@ void CvCity::processWorkingPlot(int iPlot, int iChange, bool yieldsOnly)
 	PROFILE_EXTRA_FUNC();
 	CvPlot* pPlot = getCityIndexPlot(iPlot);
 
-	if (pPlot != NULL)
+	if (pPlot)
 	{
 		FAssertMsg(pPlot->getWorkingCity() == this, "WorkingCity is expected to be this");
 
@@ -14143,7 +14143,7 @@ void CvCity::processWorkingPlot(int iPlot, int iChange, bool yieldsOnly)
 			// update plot builder special case where a plot is being worked but is (a) unimproved  or (b) un-bonus'ed
 			pPlot->updatePlotBuilder();
 
-			if ((getTeam() == GC.getGame().getActiveTeam()) || GC.getGame().isDebugMode())
+			if (getTeam() == GC.getGame().getActiveTeam() || GC.getGame().isDebugMode())
 			{
 				pPlot->updateSymbolDisplay();
 			}
@@ -14627,21 +14627,23 @@ bool CvCity::processGreatWall(bool bIn, bool bForce, bool bSeeded)
 
 				FAssert(eDummyUnit != NO_UNIT);
 			}
-			CvUnit* pTempUnit = GET_PLAYER(getOwner()).getTempUnit(eDummyUnit, getX(), getY());
-			CvReachablePlotSet	plotSet(pTempUnit->getGroup(), MOVE_OUR_TERRITORY, MAX_INT);
-
-			for (CvReachablePlotSet::const_iterator itr = plotSet.begin(); itr != plotSet.end(); ++itr)
+			if (eDummyUnit != NO_UNIT)
 			{
-				const CvCity* pCity = itr.plot()->getPlotCity();
+				CvUnit* pTempUnit = GET_PLAYER(getOwner()).getTempUnit(eDummyUnit, getX(), getY());
+				CvReachablePlotSet	plotSet(pTempUnit->getGroup(), MOVE_OUR_TERRITORY, MAX_INT);
 
-				if (pCity != NULL && pCity->isInViewport())
+				for (CvReachablePlotSet::const_iterator itr = plotSet.begin(); itr != plotSet.end(); ++itr)
 				{
-					pUseCity = pCity;
-					break;
-				}
-			}
+					const CvCity* pCity = itr.plot()->getPlotCity();
 
-			GET_PLAYER(getOwner()).releaseTempUnit();
+					if (pCity != NULL && pCity->isInViewport())
+					{
+						pUseCity = pCity;
+						break;
+					}
+				}
+				GET_PLAYER(getOwner()).releaseTempUnit();
+			}
 		}
 
 		//	If no suitable city is within the viewport we'll have to move the viewport
@@ -21439,11 +21441,11 @@ int CvCity::getCorporationInfluence(CorporationTypes eCorporation) const
 	return iInfluence;
 }
 
-int CvCity::calculateCorporateTaxes() const
+int64_t CvCity::calcCorporateMaintenance() const
 {
 	PROFILE_FUNC();
 
-	int iTaxes = 0;
+	int64_t iTaxes = 0;
 
 	for (int iI = 0; iI < GC.getNumCorporationInfos(); iI++)
 	{
@@ -21466,7 +21468,7 @@ int CvCity::calculateCorporateTaxes() const
 			(
 				GC.getCorporationInfo(eCorporation).getMaintenance() * iNumBonuses *
 				GC.getWorldInfo(GC.getMap().getWorldSize()).getCorporationMaintenancePercent()
-				/ 200
+				/ 100
 			);
 			const int iAveragePopulation = GC.getGame().getTotalPopulation() / std::max(1, GC.getGame().getNumCivCities());
 
@@ -21475,12 +21477,14 @@ int CvCity::calculateCorporateTaxes() const
 				iTaxes *= getPopulation();
 				iTaxes /= iAveragePopulation;
 			}
-			iTaxes = getModifiedIntValue(iTaxes, GET_PLAYER(getOwner()).getCorporationMaintenanceModifier() + GET_TEAM(getTeam()).getCorporationMaintenanceModifier());
+			iTaxes = getModifiedIntValue64(iTaxes, GET_PLAYER(getOwner()).getCorporationMaintenanceModifier() + GET_TEAM(getTeam()).getCorporationMaintenanceModifier());
 
-			iTaxes *= 100;
-			iTaxes /= GC.getHandicapInfo(getHandicapType()).getCorporationMaintenancePercent();
+			iTaxes *= GC.getHandicapInfo(getHandicapType()).getCorporationMaintenancePercent();
+			iTaxes /= 100;
 		}
 	}
+	FASSERT_NOT_NEGATIVE(iTaxes);
+
 	return iTaxes / 100;
 }
 
@@ -24024,23 +24028,18 @@ void CvCity::setWorkerHave(const int iUnitID, const bool bNewValue)
 
 	if (bNewValue)
 	{
-		if (itr == m_workers.end())
+		UnitCompWorker* workerComp = GET_PLAYER(getOwner()).getUnit(iUnitID)->getWorkerComponent();
+		if (workerComp)
 		{
-			UnitCompWorker* workerComp = GET_PLAYER(getOwner()).getUnit(iUnitID)->getWorkerComponent();
-			if (workerComp)
+			if (itr == m_workers.end())
 			{
 				m_workers.push_back(iUnitID);
-				workerComp->setCityAssignment(getID());
 			}
-			else
-			{
-				FErrorMsg("UnitCompWorker unexpectedly not initialized");
-			}
+			else FErrorMsg("Tried to add a duplicate vector element!");
+
+			workerComp->setCityAssignment(getID());
 		}
-		else
-		{
-			FErrorMsg("Tried to add a duplicate vector element!");
-		}
+		else FErrorMsg("UnitCompWorker unexpectedly not initialized");
 	}
 	else if (itr != m_workers.end())
 	{
@@ -24052,20 +24051,20 @@ void CvCity::setWorkerHave(const int iUnitID, const bool bNewValue)
 			{
 				workerComp->setCityAssignment(-1);
 			}
-			else
-			{
-				FErrorMsg("UnitCompWorker unexpectedly not initialized!");
-			}
+			else FErrorMsg("UnitCompWorker unexpectedly not initialized!");
 		}
-		else
-		{
-			FErrorMsg("m_workers contained an invalid unitID!")
-		}
+		else FErrorMsg("m_workers contained an invalid unitID!");
+
 		m_workers.erase(itr);
 	}
 	else
 	{
 		FErrorMsg("Vector element to remove was missing!");
+		UnitCompWorker* workerComp = GET_PLAYER(getOwner()).getUnit(iUnitID)->getWorkerComponent();
+		if (workerComp)
+		{
+			workerComp->setCityAssignment(-1);
+		}
 	}
 }
 

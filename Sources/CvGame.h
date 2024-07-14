@@ -266,10 +266,6 @@ public:
 	int getInitTech() const;
 	int getInitWonders() const;
 	DllExport void initScoreCalculation();
-	// < M.A.D. Nukes Start >
-	CvPlot* getLastNukeStrikePlot() const;
-	void setLastNukeStrikePlot(CvPlot* pPlot);
-	// < M.A.D. Nukes End   >
 
 	int getAIAutoPlay(PlayerTypes iPlayer) const;
 		void setAIAutoPlay(PlayerTypes iPlayer, int iNewValue, bool bForced = false);
@@ -491,7 +487,9 @@ protected:
 
 	int m_iNumSessions;
 
+	// @SAVEBREAK delete
 	std::vector<PlotExtraYield> m_aPlotExtraYields;
+	// !SAVEBREAK
 	stdext::hash_map<VoteSourceTypes, ReligionTypes> m_mapVoteSourceReligions;
 	std::vector<EventTriggerTypes> m_aeInactiveTriggers;
 
@@ -804,9 +802,9 @@ public:
 	CultureLevelTypes culturalVictoryCultureLevel() const;
 	int getCultureThreshold(CultureLevelTypes eLevel) const;
 
+	// @SAVEBREAK delete
 	int getPlotExtraYield(int iX, int iY, YieldTypes eYield) const;
-	void setPlotExtraYield(int iX, int iY, YieldTypes eYield, int iCost);
-	//void removePlotExtraYield(int iX, int iY); // Toffer - Unused, but might be needed for recalc...
+	// !SAVEBREAK
 
 	ReligionTypes getVoteSourceReligion(VoteSourceTypes eVoteSource) const;
 	void setVoteSourceReligion(VoteSourceTypes eVoteSource, ReligionTypes eReligion, bool bAnnounce = false);

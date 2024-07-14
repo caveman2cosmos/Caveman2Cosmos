@@ -346,7 +346,12 @@ int CvOutcome::getChance(const CvUnit &kUnit) const
 		iChance += getChancePerPop() * pCity->getPopulation();
 	}
 
-	for (int i=0; i<kInfo.getNumExtraChancePromotions(); i++)
+	if (kInfo.isCapture() && !kUnit.isHuman())
+	{
+		iChance += GC.getHandicapInfo(GC.getGame().getHandicapType()).getSubdueAnimalBonusAI();
+	}
+
+	for (int i = 0; i < kInfo.getNumExtraChancePromotions(); i++)
 	{
 		if (kUnit.isHasPromotion(kInfo.getExtraChancePromotion(i)))
 		{
@@ -548,12 +553,9 @@ bool CvOutcome::isPossible(const CvUnit& kUnit) const
 			}
 		}
 
-		if (isPlotEventTrigger(m_eEventTrigger))
+		if (!kUnit.plot()->canTrigger(m_eEventTrigger, kUnit.getOwner()))
 		{
-			if (!kUnit.plot()->canTrigger(m_eEventTrigger, kUnit.getOwner()))
-			{
-				return false;
-			}
+			return false;
 		}
 	}
 
@@ -865,21 +867,15 @@ bool CvOutcome::isPossibleInPlot(const CvUnit& kUnit, const CvPlot& kPlot, bool 
 		if (kTriggerInfo.isPickCity())
 		{
 			const CvCity* pCity = kPlot.getPlotCity();
-			if (pCity)
-			{
-				if (!pCity->isEventTriggerPossible(m_eEventTrigger))
-				{
-					return false;
-				}
-			}
-		}
-
-		if (isPlotEventTrigger(m_eEventTrigger))
-		{
-			if (!kPlot.canTrigger(m_eEventTrigger, kUnit.getOwner()))
+			if (pCity && !pCity->isEventTriggerPossible(m_eEventTrigger))
 			{
 				return false;
 			}
+		}
+
+		if (!kPlot.canTrigger(m_eEventTrigger, kUnit.getOwner()))
+		{
+			return false;
 		}
 	}
 
@@ -1050,8 +1046,12 @@ bool CvOutcome::execute(CvUnit &kUnit, PlayerTypes eDefeatedUnitPlayer, UnitType
 	{
 		CvUnit* pUnit = kPlayer.initUnit(m_eUnitType, kUnit.getX(), kUnit.getY(), GC.getUnitInfo(m_eUnitType).getDefaultUnitAIType(), NO_DIRECTION, GC.getGame().getSorenRandNum(10000, "AI Unit Birthmark"));
 
-		if (pUnit != NULL)
+		if (pUnit)
 		{
+			if (pUnit->AI_getUnitAIType() == UNITAI_SUBDUED_ANIMAL && (kUnit.AI_getUnitAIType() == UNITAI_HUNTER || kUnit.getGroup()->getAutomateType() == AUTOMATE_HUNT))
+			{
+				pUnit->joinGroup(kUnit.getGroup());
+			}
 			pUnit->finishMoves();
 		}
 		else FErrorMsg("pUnit is expected to be assigned a valid unit object");

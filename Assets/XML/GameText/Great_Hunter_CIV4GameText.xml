@@ -6,7 +6,7 @@
 		<French>Traditions du Maître Chasseur</French>
 		<German>Tradition des Meisterjägers</German>
 		<Italian>Tradizione del mastro cacciatore</Italian>
-		<Polish>Tradycje Wybitnego Łowcy</Polish>
+		<Polish>Tradycje Wybitnego &#163;owcy</Polish>
 		<Russian>Традиция Мастера-охотника</Russian>
 	</TEXT>
 	<TEXT>
@@ -14,7 +14,7 @@
 		<English>Provided to all cities by the [LINK=BUILDING_TRADITION_HUNTER]Tradition: Hunting[\LINK] which is built by a [LINK=UNIT_GREAT_HUNTER]Great Hunter[\LINK]. Combines the [LINK=BUILDING_MASTER_HUNTER]Master Hunter[\LINK] and [LINK=BUILDING_HUNTING_INSTRUCTIONS]Hunting Instruction[\LINK] buildings.</English>
 		<French>Disponible pour toutes les villes par la [LINK=BUILDING_TRADITION_HUNTER]Tradition: Chasse[\LINK] qui est construit par un [LINK=UNIT_GREAT_HUNTER]Chasseur Illustre[\LINK]. Combine à la fois les bâtiments [LINK=BUILDING_MASTER_HUNTER]Maître Chasseur[\LINK] et [LINK=BUILDING_HUNTING_INSTRUCTIONS]Instructions de Chasse[\LINK].</French>
 		<German>Versieht alle Städte mit der [LINK=BUILDING_TRADITION_HUNTER]Tradition: Jagt[\LINK] welche von einem [LINK=UNIT_GREAT_HUNTER]Großer Jäger[\LINK]errichtet wird. Kombiniert die Gebäude[LINK=BUILDING_MASTER_HUNTER]Meisterjäger[\LINK] und [LINK=BUILDING_HUNTING_INSTRUCTIONS]Jagdanleitung[\LINK].</German>
-		<Polish>Zapewniany do wszystkich miast przez [LINK=BUILDING_TRADITION_HUNTER]Tradycje: Łowiectwo[\LINK] która jest tworzona przez [LINK=UNIT_GREAT_HUNTER]Wielkiego Łowce[\LINK]. Łączy [LINK=BUILDING_MASTER_HUNTER]Wybitnego Łowce[\LINK] i [LINK=BUILDING_HUNTING_INSTRUCTIONS]Instrukcje Łowieckie[\LINK] (budynki).</Polish>
+		<Polish>Zapewniany do wszystkich miast przez [LINK=BUILDING_TRADITION_HUNTER]Tradycje: &#163;owiectwo[\LINK] kt&#243;ra jest tworzona przez [LINK=UNIT_GREAT_HUNTER]Wielkiego &#163;owce[\LINK]. &#163;&#185;czy [LINK=BUILDING_MASTER_HUNTER]Wybitnego &#163;owce[\LINK] i [LINK=BUILDING_HUNTING_INSTRUCTIONS]Instrukcje &#163;owieckie[\LINK] (budynki).</Polish>
 		<Italian>Fornito a tutte le città dall'edificio [LINK=BUILDING_TRADITION_HUNTER]Tradizione: Caccia[\LINK] che è costruito da un [LINK=UNIT_GREAT_HUNTER]Grande Cacciatore[\LINK]. Combina [LINK=BUILDING_MASTER_HUNTER]Mastro cacciatore[\LINK] e [LINK=BUILDING_HUNTING_INSTRUCTION]Istruzioni di caccia[\LINK].</Italian>
 		<Russian>Предоставляется всем городам [LINK=BUILDING_TRADITION_HUNTER]Tradition: Hunting[\LINK], которую строит [LINK=UNIT_GREAT_HUNTER]Great Hunter[\LINK]. Объединяет [LINK=BUILDING_MASTER_HUNTER]Master Hunter[\LINK] и [LINK=BUILDING_HUNTING_INSTRUCTIONS]Hunting Instruction[\LINK] здания.</Russian>
 	</TEXT>
@@ -24,7 +24,7 @@
 		<French>Spécialisation Maître Chasseur</French>
 		<Italian>Promozione mastro cacciatore</Italian>
 		<German>Meisterjäger</German>
-		<Polish>Wybitny Łowca</Polish>
+		<Polish>Wybitny &#163;owca</Polish>
 		<Russian>Опытный охотник</Russian>
 	</TEXT>
 	<TEXT>
@@ -33,7 +33,7 @@
 		<French>Maître Chasseur I</French>
 		<German>Meisterjäger I</German>
 		<Italian>Mastro cacciatore I</Italian>
-		<Polish>Wybitny Łowca I</Polish>
+		<Polish>Wybitny &#163;owca I</Polish>
 		<Russian>Опытный охотник I</Russian>
 	</TEXT>
 	<TEXT>
@@ -42,7 +42,7 @@
 		<French>Maître Chasseur II</French>
 		<German>Meisterjäger II</German>
 		<Italian>Mastro cacciatore II</Italian>
-		<Polish>Wybitny Łowca II</Polish>
+		<Polish>Wybitny &#163;owca II</Polish>
 		<Russian>Опытный охотник II</Russian>
 	</TEXT>
 	<TEXT>
@@ -51,7 +51,7 @@
 		<French>Maître Chasseur III</French>
 		<German>Meisterjäger III</German>
 		<Italian>Mastro cacciatore III</Italian>
-		<Polish>Wybitny Łowca III</Polish>
+		<Polish>Wybitny &#163;owca III</Polish>
 		<Russian>Опытный охотник III</Russian>
 	</TEXT>
 	<TEXT>
@@ -60,7 +60,7 @@
 		<French>Maître de Chasse Safari</French>
 		<German>Meister Großwildjäger</German>
 		<Italian>Mastro cacciatore di grandi animali</Italian>
-		<Polish>Wybitny Myśliwy Grubej Zwierzyny</Polish>
+		<Polish>Wybitny My&#156;liwy Grubej Zwierzyny</Polish>
 		<Russian>Мастер-загонщик</Russian>
 	</TEXT>
 	<TEXT>
@@ -68,7 +68,7 @@
 		<English>Master Game Hunter</English>
 		<French>Maître de Chasse sportive</French>
 		<German>Meister Wildjäger</German>
-		<Polish>Wybitny Myśliwy</Polish>
+		<Polish>Wybitny My&#156;liwy</Polish>
 		<Italian>Mastro cacciatore sportivo</Italian>
 		<Russian>Мастер-охотник</Russian>
 	</TEXT>
@@ -78,7 +78,7 @@
 		<French>Maître Chasseur</French>
 		<Italian>Mastro cacciatore</Italian>
 		<German>Meisterfährtenleser</German>
-		<Polish>Wybitny Łowca</Polish>
+		<Polish>Wybitny &#163;owca</Polish>
 		<Russian>Мастер-зверолов</Russian>
 	</TEXT>
 	<TEXT>
@@ -86,7 +86,7 @@
 		<English>Only Great Hunters may become Master Hunters. Master Hunters are special versions of the normal hunter. They are much more likely to subdue animals so that the food and hammer returns from them are higher.</English>
 		<Italian>Solo i grandi cacciatori possono diventare maestri cacciatori. I maestri cacciatori sono versioni speciali dei normali cacciatori. È molto più probabile che sottomettano gli animali e il ritorno di cibo e di produzione che procurano è maggiore.</Italian>
 		<German>Nur Große Jäger können Meisterjäger werden. Meisterjäger sind spezielle Varianten des normalen Jägers. Es ist wesentlich wahrscheinlicher das sie Tiere bändigen, so das mehr Nahrung und Produktion von ihnen erzeugt wird.</German>
-		<Polish>Tylko Wielcy Łowcy mogą zostać Wybitnymi Łowcami. Wybitni Łowcy są specjalna wersją normalnych myśliwych. Są bardziej sprawni w łapaniu zwierząt żywcem.</Polish>
+		<Polish>Tylko Wielcy &#163;owcy mog&#185; zosta&#230; Wybitnymi &#163;owcami. Wybitni &#163;owcy s&#185; specjalna wersj&#185; normalnych my&#156;liwych. S&#185; bardziej sprawni w &#179;apaniu zwierz&#185;t &#191;ywcem.</Polish>
 		<Russian>Только Великие охотники могут стать Мастерами-звероловами - особой версией обычного охотника. Они гораздо чаще подчиняют себе животных, чтобы получить от них больше пищи и производства.</Russian>
 	</TEXT>
 	<TEXT>
@@ -95,14 +95,14 @@
 		<French>Maître Ranger</French>
 		<German>Meister Ranger</German>
 		<Italian>Mastro guardia forestale</Italian>
-		<Polish>Wybitny Strażnik Lasu</Polish>
+		<Polish>Wybitny Stra&#191;nik Lasu</Polish>
 		<Russian>Мастер-следопыт</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_MASTER_TRACKER</Tag>
 		<English>Master Tracker</English>
 		<French>Maître Pisteur</French>
-		<Italian>Mastro inseguitore</Italian>
+		<Italian>Mastro cercatore di tracce</Italian>
 		<Polish>Wybitny Tropiciel</Polish>
 		<Russian>Мастер-ловец</Russian>
 	</TEXT>

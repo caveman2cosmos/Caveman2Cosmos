@@ -51,11 +51,6 @@
 	</Define>
 	<!-- \Dexy - Surround and Destroy -->
 	<Define>
-		<!-- Afforess: This sets the maximum bombard resistance a city can have. Set to 100 for normal games, less, for a lower minimum -->
-		<DefineName>MAX_BOMBARD_DEFENSE</DefineName>
-		<iDefineIntVal>70</iDefineIntVal>
-	</Define>
-	<Define>
 		<!-- Afforess: Units can not Claim Water Tiles -->
 		<DefineName>CANNOT_CLAIM_OCEAN</DefineName>
 		<iDefineIntVal>0</iDefineIntVal>
@@ -200,13 +195,12 @@
 			Base number of turns (10 equals 1 turn) between decay on normal gamespeed.
 			Higher value means slower decay rate.
 			Min value: 1 (means: decay 10 times per turn on Normal gamsepeed, decay every turn on eternity gamespeed)
-			Note: Decay can only happens 1 time per turn,
-				so a value of 10 means decay happens every turn on normal or faster gamespeeds,
-				which means no scaling occurs between normal and faster gamespeeds.
-			Default value: 20 (Decay every 2 turns on normal gamespeed, every 20 turns on eternity)
+			Note: More than 1 hurry decay per turn is now possible,
+				so a value of 10 means it decay by 1 every turn on normal, and that it decays by 2 every turn on blitz.
+			Default value: 10 (Decay every turn on normal gamespeed, every 10 turns on eternity, with 0 modifiers from civics)
 		-->
 		<DefineName>HURRY_INFLATION_DECAY_RATE</DefineName>
-		<iDefineIntVal>20</iDefineIntVal>
+		<iDefineIntVal>10</iDefineIntVal>
 	</Define>
 	<Define>
 		<DefineName>FREE_TRADE_AGREEMENT_ESPIONAGE_MISSION_COST_MODIFIER</DefineName>

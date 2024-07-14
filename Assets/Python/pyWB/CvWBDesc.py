@@ -557,7 +557,7 @@ class CvPlayerDesc:
 			if not player.isNPC():
 
 				pPlot = player.getStartingPlot()
-				if not pPlot.isNone():
+				if pPlot:
 					f.write("\tStartingX=%d, StartingY=%d\n" %(pPlot.getX(), pPlot.getY()))
 
 				f.write("\tStartingGold=%d\n" % player.getGold())
@@ -1987,7 +1987,7 @@ Randomize Resources=0\nEndMap\n"
 				team.setEspionagePointsEver(iSum)
 
 			if pWBTeam.isMinorNationCiv:
-				team.setIsMinorCiv(True, False)
+				team.setIsMinorCiv(True)
 			else:
 				for item in pWBTeam.bWarWithTeamList:
 					team.declareWar(item, False, WarPlanTypes.NO_WARPLAN)

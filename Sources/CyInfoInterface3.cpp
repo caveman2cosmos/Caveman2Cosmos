@@ -1,6 +1,7 @@
 #include "CvGameCoreDLL.h"
 #include "CvInfos.h"
 #include "CvTraitInfo.h"
+#include "CvHeritageInfo.h"
 #include "CvDiplomacyClasses.h"
 
 //
@@ -138,6 +139,8 @@ void CyInfoPythonInterface3()
 		.def("getFlavorValue", &CvReligionInfo::getFlavorValue, "int (int i)")
 	;
 
+	python::class_<CvHeritageInfo, python::bases<CvInfoBase>, boost::noncopyable>("CvHeritageInfo", python::no_init)
+	;
 
 	python::class_<CvCorporationInfo, python::bases<CvInfoBase>, boost::noncopyable>("CvCorporationInfo", python::no_init)
 
@@ -196,18 +199,17 @@ void CyInfoPythonInterface3()
 		.def("getGridHeight", &CvWorldInfo::getGridHeight, "int ()")
 		.def("getTerrainGrainChange", &CvWorldInfo::getTerrainGrainChange, "int ()")
 		.def("getFeatureGrainChange", &CvWorldInfo::getFeatureGrainChange, "int ()")
-		.def("getResearchPercent", &CvWorldInfo::getResearchPercent, "int ()")
 		.def("getCorporationMaintenancePercent", &CvWorldInfo::getCorporationMaintenancePercent, "int ()")
 		.def("getOceanMinAreaSize", &CvWorldInfo::getOceanMinAreaSize, "int ()")
 	;
 
-	python::class_<CvMapInfo, python::bases<CvInfoBase>, boost::noncopyable>("CvMapInfo", python::no_init)
+	python::class_<CvMapInfo, python::bases<CvHotkeyInfo>, boost::noncopyable>("CvMapInfo", python::no_init)
 
 		.def("getGridWidth", &CvMapInfo::getGridWidth, "int ()")
 		.def("getGridHeight", &CvMapInfo::getGridHeight, "int ()")
 		.def("getWrapX", &CvMapInfo::getWrapX, "int ()")
 		.def("getWrapY", &CvMapInfo::getWrapY, "int ()")
-		.def("getMapScript", &CvMapInfo::getMapScript, "string ()")
+		//.def("getMapScript", &CvMapInfo::getMapScript, "string ()")
 	;
 
 	python::class_<CvClimateInfo, python::bases<CvInfoBase>, boost::noncopyable>("CvClimateInfo", python::no_init)

@@ -85,17 +85,12 @@ int CyPlayer::startingPlotRange() const
 
 bool CyPlayer::startingPlotWithinRange(const CyPlot* pPlot, int /*PlayerTypes*/ ePlayer, int iRange, int iPass)
 {
-	if (pPlot != NULL && !pPlot->isNone())
+	if (pPlot)
 	{
 		CvPlot *pcvPlot = pPlot->getPlot();
 		return m_pPlayer->startingPlotWithinRange(pcvPlot, (PlayerTypes)ePlayer, iRange, iPass);
 	}
 	return NULL;
-}
-
-CyPlot* CyPlayer::findStartingPlot(bool bRandomize) const
-{
-	return new CyPlot(m_pPlayer->findStartingPlot(bRandomize));
 }
 
 CyCity* CyPlayer::initCity(int x, int y)
@@ -123,10 +118,21 @@ CyUnit* CyPlayer::initUnit(int /*UnitTypes*/ iIndex, int iX, int iY, UnitAITypes
 	if (iIndex == -1)
 	{
 		FErrorMsg("Initiating NO_UNIT Type!");
-		return NULL;
 	}
-	CvUnit* unit = m_pPlayer->initUnit((UnitTypes) iIndex, iX, iY, eUnitAI, eFacingDirection, GC.getGame().getSorenRandNum(10000, "AI Unit Birthmark"));
-	return unit ? new CyUnit(unit) : NULL;
+	else if (!GC.getMap().plot(iX, iY))
+	{
+		FErrorMsg("Initiating unit on invalid coordinates!");
+	}
+	else
+	{
+		CvUnit* unit = m_pPlayer->initUnit((UnitTypes) iIndex, iX, iY, eUnitAI, eFacingDirection, GC.getGame().getSorenRandNum(10000, "AI Unit Birthmark"));
+
+		if (unit)
+		{
+			return new CyUnit(unit);
+		}
+	}
+	return NULL;
 }
 
 void CyPlayer::killUnits()
@@ -332,6 +338,11 @@ int CyPlayer::getNumTradeableBonuses(int /*BonusTypes*/ eBonus) const
 bool CyPlayer::hasBonus(int /*BonusTypes*/ eBonus) const
 {
 	return m_pPlayer->hasBonus((BonusTypes)eBonus);
+}
+
+bool CyPlayer::hasHeritage(int iType) const
+{
+	return m_pPlayer->hasHeritage((HeritageTypes)iType);
 }
 
 bool CyPlayer::isTurnActive() const
@@ -579,7 +590,11 @@ int CyPlayer::specialistYield(int /*SpecialistTypes*/ eSpecialist, int /*YieldTy
 
 CyPlot* CyPlayer::getStartingPlot() const
 {
-	return new CyPlot(m_pPlayer->getStartingPlot());
+	if (m_pPlayer->getStartingPlot())
+	{
+		return new CyPlot(m_pPlayer->getStartingPlot());
+	}
+	return NULL;
 }
 
 void CyPlayer::setStartingPlot(const CyPlot* pPlot, bool bUpdateStartDist)
@@ -847,6 +862,11 @@ int64_t CyPlayer::getTreasuryUpkeep() const
 	return m_pPlayer->getTreasuryUpkeep();
 }
 
+int64_t CyPlayer::getCorporateMaintenance() const
+{
+	return m_pPlayer->getCorporateMaintenance();
+}
+
 int CyPlayer::getTotalMaintenance() const
 {
 	return m_pPlayer->getTotalMaintenance();
@@ -1022,14 +1042,9 @@ void CyPlayer::setFoundedFirstCity(bool bNewValue)
 	m_pPlayer->setFoundedFirstCity(bNewValue);
 }
 
-void CyPlayer::setAlive(bool bNewValue)
+void CyPlayer::setAlive(bool bNewValue, bool bActivateTurn)
 {
-	m_pPlayer->setAlive(bNewValue);
-}
-
-void CyPlayer::setNewPlayerAlive(bool bNewValue)
-{
-	m_pPlayer->setNewPlayerAlive(bNewValue);
+	m_pPlayer->setAlive(bNewValue, bActivateTurn);
 }
 
 bool CyPlayer::isStrike() const
@@ -1510,11 +1525,6 @@ EventTriggeredData* CyPlayer::getEventTriggered(int iID) const
 EventTriggeredData* CyPlayer::initTriggeredData(int /*EventTriggerTypes*/ eEventTrigger, bool bFire, int iCityId, int iPlotX, int iPlotY, int /*PlayerTypes*/ eOtherPlayer, int iOtherPlayerCityId, int /*ReligionTypes*/ eReligion, int /*CorporationTypes*/ eCorporation, int iUnitId, int /*BuildingTypes*/ eBuilding)
 {
 	return m_pPlayer->initTriggeredData((EventTriggerTypes)eEventTrigger, bFire, iCityId, iPlotX, iPlotY, (PlayerTypes)eOtherPlayer, iOtherPlayerCityId, (ReligionTypes)eReligion, (CorporationTypes)eCorporation, iUnitId, (BuildingTypes)eBuilding);
-}
-
-int CyPlayer::getEventTriggerWeight(int /*EventTriggerTypes*/ eTrigger) const
-{
-	return m_pPlayer->getEventTriggerWeight((EventTriggerTypes)eTrigger);
 }
 
 void CyPlayer::AI_updateFoundValues(bool bStartingLoc)

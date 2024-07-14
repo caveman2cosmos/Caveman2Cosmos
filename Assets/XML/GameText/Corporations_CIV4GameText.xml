@@ -49,13 +49,13 @@
 		<English>Standard Ethanol</English>
 		<French>Ethanol Inc.</French>
 		<German>Ecokraftstoff AG</German>
-		<Italian>Etanolo energy spa</Italian>
+		<Italian>Etanolo Energy Spa</Italian>
 		<Russian>Ýòàíîë-ñòàíäàðò</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HQ_STANDARD_ETHANOL</Tag>
 		<English>HQ - Standard Ethanol</English>
-		<Italian>Quartier generale di Etanolo energy Spa</Italian>
+		<Italian>Quartier generale di Etanolo Energy Spa</Italian>
 		<Russian>Этанол-стандарт</Russian>
 	</TEXT>
 	<TEXT>
@@ -201,14 +201,14 @@
 		<English>Bullseye</English>
 		<French>Gran'Frais</French>
 		<Russian>ßáëî÷êî</Russian>
-		<Italian>Green perfection</Italian>
+		<Italian>Green Perfection</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HQ_BULLSEYE</Tag>
 		<English>HQ - Bullseye</English>
 		<French>Le Siège de Gran'Frais</French>
 		<German>Bullseye Zentrale</German>
-		<Italian>Quartier generale di Green perfection</Italian>
+		<Italian>Quartier generale di Green Perfection</Italian>
 		<Russian>ßáëî÷êî</Russian>
 	</TEXT>
 	<TEXT>
@@ -222,7 +222,7 @@
 		<English>Bullseye Store</English>
 		<French>Epicerie Gran'Frais</French>
 		<German>Bullseye-Laden</German>
-		<Italian>Negozio di Green perfection</Italian>
+		<Italian>Negozio di Green Perfection</Italian>
 		<Spanish>Tienda de Bullseye</Spanish>
 		<Russian>Ìàãàçèí "ßáëî÷êî"</Russian>
 	</TEXT>
@@ -236,7 +236,7 @@
 		<Tag>TXT_KEY_BUILDING_CORPORATION_BURGERWORLD</Tag>
 		<English>Burgerworld</English>
 		<French>MondoBurger</French>
-		<Italian>Mondo burger</Italian>
+		<Italian>Mondo Burger</Italian>
 		<Russian>Ìèð áóðãåðîâ</Russian>
 	</TEXT>
 	<TEXT>
@@ -244,7 +244,7 @@
 		<English>HQ - Burgerworld</English>
 		<French>Le Siège de MondoBurger</French>
 		<German>Burgerworld-Zentrale</German>
-		<Italian>Quartier generale di Mondo burger</Italian>
+		<Italian>Quartier generale di Mondo Burger</Italian>
 		<Spanish>Burgerworld</Spanish>
 		<Russian>Ìèð áóðãåðîâ</Russian>
 	</TEXT>
@@ -259,7 +259,7 @@
 		<English>Burgerworld Restaurant</English>
 		<French>Restaurant MondoBurger</French>
 		<German>Burgerworld-Restaurant</German>
-		<Italian>Ristorante di Mondo burger</Italian>
+		<Italian>Ristorante di Mondo Burger</Italian>
 		<Spanish>Restaurante Burgerworld</Spanish>
 		<Russian>Ðåñòîðàí "ÌÁ"</Russian>
 	</TEXT>
@@ -274,7 +274,7 @@
 		<Tag>TXT_KEY_BUILDING_CORPORATION_EMPCLOTH</Tag>
 		<English>Emperors Clothing</English>
 		<French>Habits Impériaux</French>
-		<Italian>Abiti imperiali</Italian>
+		<Italian>Abiti Imperiali</Italian>
 		<Russian>Îäåæäà èìïåðàòîðà</Russian>
 	</TEXT>
 	<TEXT>
@@ -282,7 +282,7 @@
 		<English>HQ - Emperors Clothing</English>
 		<French>Siège des Habits Impériaux</French>
 		<German>Emperors-Clothing-Zentrale</German>
-		<Italian>Quartier generale di Abiti imperiali</Italian>
+		<Italian>Quartier generale di Abiti Imperiali</Italian>
 		<Russian>Îäåæäà èìïåðàòîðà</Russian>
 	</TEXT>
 	<TEXT>
@@ -294,7 +294,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CORPORATION_EMPCLOTH_PEDIA</Tag>
 		<English>See Fashion House for details. Emperors Clothing is a rival of Fashion House, and thus requires many of the same resources.</English>
-		<Italian>Per i dettagli, vedi Fashion House. Abiti imperiali è un rivale di Fashion House e perciò le due corporazioni hanno molte risorse in comune.</Italian>
+		<Italian>Per i dettagli, vedi Fashion House. Abiti Imperiali è un rivale di Fashion House e perciò le due corporazioni hanno molte risorse in comune.</Italian>
 		<Spanish>Véase Fashion House para más detalles. Emperors Clothing es un rival directo de Fashion House, por ello ambas corporaciones consumen los mismos recursos.</Spanish>
 		<Russian>См. подробности в статье про «Дом Мод». «Одежда императора» - конкурент «Дома Мод», и поэтому требует тот же перечень ресурсов.</Russian>
 	</TEXT>
@@ -303,7 +303,7 @@
 		<English>Emperors Clothing Store</English>
 		<French>Magasin d'Habits Impériaux</French>
 		<German>Emperors-Clothing-Laden</German>
-		<Italian>Negozio di Abiti imperiali</Italian>
+		<Italian>Negozio di Abiti Imperiali</Italian>
 		<Spanish>Tienda de Emperors Clothing</Spanish>
 		<Russian>Àòåëüå "ÎÈ"</Russian>
 	</TEXT>
@@ -318,20 +318,20 @@
 		<Tag>TXT_KEY_BUILDING_CORPORATION_EWTRADE</Tag>
 		<English>East West Traders</English>
 		<Russian>Âîñòîê-Çàïàä</Russian>
-		<Italian>Commercio est-ovest</Italian>
+		<Italian>Commercio Est-Ovest</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HQ_EAST_WEST_TRADERS</Tag>
 		<English>HQ - East West Traders</English>
 		<French>Le Siège de 'East West Traders'</French>
 		<German>East-West-Traders-Zentrale</German>
-		<Italian>Quartier generale di Commercio est-ovest</Italian>
+		<Italian>Quartier generale di Commercio Est-Ovest</Italian>
 		<Russian>Âîñòîê-Çàïàä</Russian>  
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CORPORATION_EWTRADE_PEDIA</Tag>
 		<English>The East West Traders evolved from corporations such as Transatlantic Triangular Trade, that operated during the 17th, 18th, and early 19th centuries, carrying slaves, cash crops, and manufactured goods between West Africa, the Caribbean or American colonies and the European colonial powers, with the northern colonies of British North America, especially New England, sometimes taking over the role of Europe. They are now more benign.</English>
-		<Italian>La Commercio est-ovest si è evoluta dalle corporazioni del commercio triangolare transatlantico che operarono durante il XVII, XVIII e all'inizio del XIX secolo; queste compagnie trasportavano schiavi, prodotti agricoli e beni manifatturieri tra l'Africa occidentale, i Caraibi, le colonie americane e le potenze coloniali europee. Col tempo le colonie inglesi del Nord America, specialmente il New England, arrivarono a eguagliare il ruolo dell'Europa.</Italian>
+		<Italian>La Commercio Est-Oovest si è evoluta dalle corporazioni del commercio triangolare transatlantico che operarono durante il XVII, XVIII e all'inizio del XIX secolo; queste compagnie trasportavano schiavi, prodotti agricoli e beni manifatturieri tra l'Africa occidentale, i Caraibi, le colonie americane e le potenze coloniali europee. Col tempo le colonie inglesi del Nord America, specialmente il New England, arrivarono a eguagliare il ruolo dell'Europa.</Italian>
 		<Russian>Коммерсанты из «Восток-Запад» произошли от таких корпораций, как «Transatlantic Triangular Trade», которые действовали в XVII, XVIII и начале XIX веков, перевозя рабов, изделия роскоши и промышленные товары между Западной Африкой, Карибскими или американскими колониями и европейскими метрополиями с северными колониями британской Северной Америки, особенно Новой Англии, иногда берущей на себя роль Европы. В настоящее время этот бизнес переориентировался в менее жесткие формы.</Russian>
 	</TEXT>
 	<TEXT>
@@ -339,7 +339,7 @@
 		<English>East West Traders Store</English>
 		<French>Magasin 'East West Traders'</French>
 		<German>East-West-Traders-Laden</German>
-		<Italian>Negozio di Commercio est-ovest</Italian>
+		<Italian>Negozio di Commercio Est-Ovest</Italian>
 		<Spanish>Tienda de East West Traders</Spanish>
 		<Russian>Ìàãàçèí "ÂÇ"</Russian>
 	</TEXT>
@@ -496,14 +496,14 @@
 		<Tag>TXT_KEY_BUILDING_CORPORATION_MILEHIGH</Tag>
 		<English>MileHigh Travels International</English>
 		<Russian>Ìèëõàé Òðåâåë</Russian>
-		<Italian>MileHigh viaggi</Italian>
+		<Italian>MileHigh Viaggi</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MILEHIGH_TRAVELS_INTERNATIONAL_FRANCHISE</Tag>
 		<English>MileHigh Travels International Franchise</English>
 		<French>Franchise 'MileHigh Voyages International'</French>
 		<German>MileHigh-Travels-International-Filiale</German>
-		<Italian>Filiale di MileHigh viaggi</Italian>
+		<Italian>Filiale di MileHigh Viaggi</Italian>
 		<Spanish>Franquicia de MileHigh Travels International</Spanish>
 		<Russian>Ôèëèàë "ÌÒ"</Russian>
 	</TEXT>
@@ -518,7 +518,7 @@
 		<English>HQ - MileHigh Travels International</English>
 		<French>Le Siège de 'MileHigh Voyages International'</French>
 		<German>MileHigh-Travels-International-Zentrale</German>
-		<Italian>Quartier generale di MileHigh viaggi</Italian>
+		<Italian>Quartier generale di MileHigh Viaggi</Italian>
 		<Russian>Ìèëõàé Òðåâåë</Russian>
 	</TEXT>
 	<TEXT>
@@ -531,14 +531,14 @@
 		<Tag>TXT_KEY_BUILDING_CORPORATION_MOBBY</Tag>
 		<English>Mobby Meats International</English>
 		<Russian>Ìÿñî Ìîááè</Russian>
-		<Italian>Mobby carni international</Italian>
+		<Italian>Mobby Carni International</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HQ_MOBBY_MEATS_INTERNATIONAL</Tag>
 		<English>HQ - Mobby Meats International</English>
 		<French>Le Siège de 'Mobby Meats International'</French>
 		<German>Mobby-Meats-International-Zentrale</German>
-		<Italian>Quartier generale di Mobby carni international</Italian>
+		<Italian>Quartier generale di Mobby Carni International</Italian>
 		<Russian>Ìÿñî Ìîááè</Russian>
 	</TEXT>
 	<TEXT>
@@ -552,7 +552,7 @@
 		<English>Mobby Meats Store</English>
 		<French>Magasin de 'Mobby Meats'</French>
 		<German>Mobby-Meats-Laden</German>
-		<Italian>Negozio di Mobby carni international</Italian>
+		<Italian>Negozio di Mobby Carni International</Italian>
 		<Spanish>Tienda de Mobby Meats</Spanish>
 		<Russian>Ìàãàçèí "ÌÌ"</Russian>
 	</TEXT>
@@ -602,14 +602,14 @@
 		<Tag>TXT_KEY_BUILDING_CORPORATION_RED</Tag>
 		<English>Red Curtains</English>
 		<Russian>Êðàñíûå êóëèñû</Russian>
-		<Italian>Red curtains entertainment</Italian>
+		<Italian>Red Curtains Entertainment</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HQ_RED_CURTAINS</Tag>
 		<English>HQ - Red Curtains</English>
 		<French>Le Siège de Red Curtains</French>
 		<German>Red-Curtains-Zentrale</German>
-		<Italian>Quartier generale di Red curtains entertainment</Italian>
+		<Italian>Quartier generale di Red Curtains Entertainment</Italian>
 		<Russian>Êðàñíûå êóëèñû</Russian>
 	</TEXT>
 	<TEXT>
@@ -623,7 +623,7 @@
 		<English>Red Curtains Theatre</English>
 		<French>Théatre de Red Curtains</French>
 		<German>Red-Curtains-Theater</German>
-		<Italian>Teatro di Red curtains entertainment</Italian>
+		<Italian>Teatro di Red Curtains Entertainment</Italian>
 		<Spanish>Teatro de Red Curtains</Spanish>
 		<Russian>Òåàòð "ÊÊ"</Russian>
 	</TEXT>
@@ -674,14 +674,14 @@
 		<English>Ultimate Soldiers</English>
 		<French>Soldats Ultimes</French>
 		<Russian>Óíèâåðñàëüíûå ñîëäàòû</Russian>
-		<Italian>Ultimate soldiers accociation</Italian>
+		<Italian>Ultimate soldiers</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HQ_ULTIMATE_SOLDIERS</Tag>
 		<English>HQ - Ultimate Soldiers</English>
 		<French>Le Siège de Soldats Ultimes</French>
 		<German>Ultimate Soldiers Zentrale</German>
-		<Italian>Quartier generale di Ultimate soldiers accociation</Italian>
+		<Italian>Quartier generale di Ultimate soldiers</Italian>
 		<Russian>Óíèâåðñàëüíûå ñîëäàòû</Russian>
 	</TEXT>
 	<TEXT>
@@ -696,7 +696,7 @@
 		<English>Ultimate Soldiers Trainer</English>
 		<French>Entraîneur Soldats Ultimes</French>
 		<German>Ultimate Soldiers Ausbilder</German>
-		<Italian>Addestratore di Ultimate soldiers accociation</Italian>
+		<Italian>Addestratore di Ultimate soldiers</Italian>
 		<Spanish>Instrucción de Ultimate Soldiers</Spanish>
 		<Russian>Áàçà "ÓÑ"</Russian>
 	</TEXT>
@@ -713,14 +713,14 @@
 		<French>Confiseries Wonka</French>
 		<German>Wonka Confiserie</German>
 		<Russian>Êîíäèòåðñêàÿ Âîíêà</Russian>
-		<Italian>Wonka confetture</Italian>
+		<Italian>Wonka Confetture</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HQ_WONKA_CONFECTIONERIES</Tag>
 		<English>HQ - Wonka Confectioneries</English>
 		<French>Siège des Confiseries Wonka</French>
 		<German>Wonka Confiserie Zentrale</German>
-		<Italian>Quartier generale di Wonka confetture</Italian>
+		<Italian>Quartier generale di Wonka Confetture</Italian>
 		<Spanish>Wonka Confectioneries</Spanish>
 		<Russian>Êîíäèòåðñêàÿ Âîíêà</Russian>
 	</TEXT>
@@ -737,7 +737,7 @@
 		<English>Wonka Confectioneries Shop</English>
 		<French>Magasin des Confiseries Wonka</French>
 		<German>Wonka Confiserie Geschäftsstelle</German>
-		<Italian>Negozio di Wonka confetture</Italian>
+		<Italian>Negozio di Wonka Confetture</Italian>
 		<Spanish>Tienda de Wonka Confectioneries</Spanish>
 		<Russian>Ðåñòîðàí "ÊÂ"</Russian>
 	</TEXT>
@@ -754,7 +754,7 @@
 		<English>[ICON_BULLET]%d1%% Income from Corporations</English>
 		<French>[ICON_BULLET]%d1%% de Revenus des Corporations</French>
 		<German>[ICON_BULLET]%d1%% Einkommen aus Kapitalgesellschaften</German>
-		<Italian>[ICON_BULLET]Aumento di rendita dalle corporazioni [COLOR_HIGHLIGHT_TEXT]%d1%%[COLOR_REVERT]</Italian> <!--tech Stock Brokering-->
+		<Italian>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Aumento di rendita[COLOR_REVERT] dalle corporazioni [COLOR_HIGHLIGHT_TEXT]%d1%%[COLOR_REVERT]</Italian> <!--tech Stock Brokering-->
 		<Spanish>[ICON_BULLET]%d1%%[ICON_GOLD] por corporaciones</Spanish>
 		<Russian>[ICON_BULLET]%d1%% Äîõîä ñ êîðïîðàöèé</Russian>
 	</TEXT>

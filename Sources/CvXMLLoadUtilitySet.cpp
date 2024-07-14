@@ -19,6 +19,7 @@
 #include "CvPlayerOptionInfo.h"
 #include "CvInfoWater.h"
 #include "CvTraitInfo.h"
+#include "CvHeritageInfo.h"
 #include "CvInitCore.h"
 #include "CvXMLLoadUtility.h"
 #include "CvXMLLoadUtilityModTools.h"
@@ -255,13 +256,41 @@ bool CvXMLLoadUtility::SetPostGlobalsGlobalDefines()
 		int idx = GetInfoClass(szVal);
 		GC.getDefinesVarSystem()->SetValue("LAND_TERRAIN", idx);
 
-		SetGlobalDefine("DEEP_WATER_TERRAIN", szVal);
+		SetGlobalDefine("WATER_TERRAIN_OCEAN", szVal);
 		idx = GetInfoClass(szVal);
-		GC.getDefinesVarSystem()->SetValue("DEEP_WATER_TERRAIN", idx);
+		GC.getDefinesVarSystem()->SetValue("WATER_TERRAIN_OCEAN", idx);
 
-		SetGlobalDefine("SHALLOW_WATER_TERRAIN", szVal);
+		SetGlobalDefine("WATER_TERRAIN_OCEAN_POLAR", szVal);
 		idx = GetInfoClass(szVal);
-		GC.getDefinesVarSystem()->SetValue("SHALLOW_WATER_TERRAIN", idx);
+		GC.getDefinesVarSystem()->SetValue("WATER_TERRAIN_OCEAN_POLAR", idx);
+
+		SetGlobalDefine("WATER_TERRAIN_OCEAN_TROPICAL", szVal);
+		idx = GetInfoClass(szVal);
+		GC.getDefinesVarSystem()->SetValue("WATER_TERRAIN_OCEAN_TROPICAL", idx);
+
+		SetGlobalDefine("WATER_TERRAIN_SEA", szVal);
+		idx = GetInfoClass(szVal);
+		GC.getDefinesVarSystem()->SetValue("WATER_TERRAIN_SEA", idx);
+
+		SetGlobalDefine("WATER_TERRAIN_SEA_POLAR", szVal);
+		idx = GetInfoClass(szVal);
+		GC.getDefinesVarSystem()->SetValue("WATER_TERRAIN_SEA_POLAR", idx);
+
+		SetGlobalDefine("WATER_TERRAIN_SEA_TROPICAL", szVal);
+		idx = GetInfoClass(szVal);
+		GC.getDefinesVarSystem()->SetValue("WATER_TERRAIN_SEA_TROPICAL", idx);
+
+		SetGlobalDefine("WATER_TERRAIN_COAST", szVal);
+		idx = GetInfoClass(szVal);
+		GC.getDefinesVarSystem()->SetValue("WATER_TERRAIN_COAST", idx);
+
+		SetGlobalDefine("WATER_TERRAIN_COAST_POLAR", szVal);
+		idx = GetInfoClass(szVal);
+		GC.getDefinesVarSystem()->SetValue("WATER_TERRAIN_COAST_POLAR", idx);
+
+		SetGlobalDefine("WATER_TERRAIN_COAST_TROPICAL", szVal);
+		idx = GetInfoClass(szVal);
+		GC.getDefinesVarSystem()->SetValue("WATER_TERRAIN_COAST_TROPICAL", idx);
 
 		SetGlobalDefine("FROZEN_TERRAIN", szVal);
 		idx = GetInfoClass(szVal);
@@ -310,6 +339,24 @@ bool CvXMLLoadUtility::SetPostGlobalsGlobalDefines()
 		SetGlobalDefine("NUKE_FEATURE", szVal);
 		idx = GetInfoClass(szVal);
 		GC.getDefinesVarSystem()->SetValue("NUKE_FEATURE", idx);
+
+
+		SetGlobalDefine("STARSIGN_TECH_START", szVal);
+		idx = GetInfoClass(szVal);
+		GC.getDefinesVarSystem()->SetValue("STARSIGN_TECH_START", idx);
+
+		SetGlobalDefine("STARSIGN_TECH_BOOST", szVal);
+		idx = GetInfoClass(szVal);
+		GC.getDefinesVarSystem()->SetValue("STARSIGN_TECH_BOOST", idx);
+
+		SetGlobalDefine("STARSIGN_TECH_NERF", szVal);
+		idx = GetInfoClass(szVal);
+		GC.getDefinesVarSystem()->SetValue("STARSIGN_TECH_NERF", idx);
+
+		SetGlobalDefine("STARSIGN_TECH_END", szVal);
+		idx = GetInfoClass(szVal);
+		GC.getDefinesVarSystem()->SetValue("STARSIGN_TECH_END", idx);
+
 
 		SetGlobalDefine("CAPITAL_BUILDING", szVal);
 		idx = GetInfoClass(szVal);
@@ -670,6 +717,7 @@ bool CvXMLLoadUtility::LoadBasicInfos()
 	GC.registerPropertySources();
 	GC.registerPropertyInteractions();
 	GC.registerPropertyPropagators();
+	GC.registerClimateZones();
 	//LoadGlobalClassInfo(GC.m_paUnitAIInfo(), "CIV4UnitAIInfos", "BasicInfos", L"CIV4UnitAIInfos/UnitAIInfos/UnitAIInfo", false);
 	LoadGlobalClassInfo(GC.m_paAttitudeInfos, "CIV4AttitudeInfos", "BasicInfos", L"/Civ4AttitudeInfos/AttitudeInfos/AttitudeInfo", false);
 	LoadGlobalClassInfo(GC.m_paMemoryInfos, "CIV4MemoryInfos", "BasicInfos", L"/Civ4MemoryInfos/MemoryInfos/MemoryInfo", false);
@@ -726,7 +774,7 @@ bool CvXMLLoadUtility::LoadPreMenuGlobals()
 	LoadGlobalClassInfo(GC.m_paAnimationCategoryInfo, "CIV4AnimationInfos", "Units", L"/Civ4AnimationInfos/AnimationCategories/AnimationCategory", false);
 	LoadGlobalClassInfo(GC.m_paAnimationPathInfo, "CIV4AnimationPathInfos", "Units", L"/Civ4AnimationPathInfos/AnimationPaths/AnimationPath", false);
 	LoadGlobalClassInfo(GC.m_paCursorInfo, "CIV4CursorInfo", "GameInfo", L"/Civ4CursorInfo/CursorInfos/CursorInfo", false);
-	LoadGlobalClassInfo(GC.m_paCivicOptionInfo, "CIV4CivicOptionInfos", "GameInfo", L"/Civ4CivicOptionInfos/CivicOptionInfos/CivicOptionInfo", false);
+	LoadGlobalClassInfo(GC.m_paCivicOptionInfo, "CIV4CivicOptionInfos", "Civilizations", L"/Civ4CivicOptionInfos/CivicOptionInfos/CivicOptionInfo", false);
 	LoadGlobalClassInfo(GC.m_paUpkeepInfo, "CIV4UpkeepInfo", "GameInfo", L"/Civ4UpkeepInfo/UpkeepInfos/UpkeepInfo", false);
 	LoadGlobalClassInfo(GC.m_paCultureLevelInfo, "CIV4CultureLevelInfo", "GameInfo", L"/Civ4CultureLevelInfo/CultureLevelInfos/CultureLevelInfo", false, &GC.m_CultureLevelInfoReplacements);
 	LoadGlobalClassInfo(GC.m_paBonusClassInfo, "CIV4BonusClassInfos", "Terrain", L"/Civ4BonusClassInfos/BonusClassInfos/BonusClassInfo", false, &GC.m_BonusClassInfoReplacements);
@@ -747,6 +795,7 @@ bool CvXMLLoadUtility::LoadPreMenuGlobals()
 		GC.setInfoTypeFromString(aReligionInfos.at(i)->getType(), i);
 	}
 
+	LoadGlobalClassInfo(GC.m_heritageInfo, "HeritageInfos", "Civilizations", L"/C2C_HeritageInfos/HeritageInfos/HeritageInfo", false);
 	LoadGlobalClassInfo(GC.m_paBonusInfo, "CIV4BonusInfos", "Terrain", L"/Civ4BonusInfos/BonusInfos/BonusInfo", false, &GC.m_BonusInfoReplacements);
 	LoadGlobalClassInfo(GC.m_paSpecialUnitInfo, "CIV4SpecialUnitInfos", "Units", L"/Civ4SpecialUnitInfos/SpecialUnitInfos/SpecialUnitInfo", false);
 	shouldHaveType = true;
@@ -770,7 +819,7 @@ bool CvXMLLoadUtility::LoadPreMenuGlobals()
 
 	LoadGlobalClassInfo(GC.m_paSpecialBuildingInfo, "CIV4SpecialBuildingInfos", "Buildings", L"/Civ4SpecialBuildingInfos/SpecialBuildingInfos/SpecialBuildingInfo", false, &GC.m_SpecialBuildingInfoReplacements);
 	LoadGlobalClassInfo(GC.m_paBuildingInfo, "CIV4BuildingInfos", "Buildings", L"/Civ4BuildingInfos/BuildingInfos/BuildingInfo", false, &GC.m_BuildingInfoReplacements);
-	LoadGlobalClassInfo(GC.m_paCivicInfo, "CIV4CivicInfos", "GameInfo", L"/Civ4CivicInfos/CivicInfos/CivicInfo", false, &GC.m_CivicInfoReplacements);
+	LoadGlobalClassInfo(GC.m_paCivicInfo, "CIV4CivicInfos", "Civilizations", L"/Civ4CivicInfos/CivicInfos/CivicInfo", false, &GC.m_CivicInfoReplacements);
 	LoadGlobalClassInfo(GC.m_paPlayerColorInfo, "CIV4PlayerColorInfos", "Interface", L"/Civ4PlayerColorInfos/PlayerColorInfos/PlayerColorInfo", false);
 	LoadGlobalClassInfo(GC.m_paBuildInfo, "CIV4BuildInfos", "Units", L"/Civ4BuildInfos/BuildInfos/BuildInfo", false, &GC.m_BuildInfoReplacements);
 	LoadGlobalClassInfo(GC.m_paOutcomeInfo, "CIV4OutcomeInfos", "GameInfo", L"/Civ4OutcomeInfos/OutcomeInfos/OutcomeInfo", false);
@@ -1273,6 +1322,21 @@ void CvXMLLoadUtility::SetGlobalActionInfo()
 		building.setMissionType(GetInfoClass("MISSION_CONSTRUCT"));
 		building.setActionInfoIndex(iActionInfoIndex++);
 		building.setHotKeyDescription(building.getTextKeyWide(), GC.getMissionInfo((MissionTypes)building.getMissionType()).getTextKeyWide(), CreateHotKeyFromDescription(building.getHotKey(), building.isShiftDown(), building.isAltDown(), building.isCtrlDown()));
+
+		GC.m_paActionInfo.push_back(pActionInfo);
+	}
+	// Toffer - No point in internally sorting these unit actions.
+	for (int i = GC.getNumHeritageInfos() - 1; i > -1; i--)
+	{
+		CvActionInfo* pActionInfo = new CvActionInfo;
+		pActionInfo->setOriginalIndex(i);
+		pActionInfo->setSubType(ACTIONSUBTYPE_HERITAGE);
+
+		CvHeritageInfo& heritage = GC.getHeritageInfo(static_cast<HeritageTypes>(i));
+
+		heritage.setMissionType(GetInfoClass("MISSION_HERITAGE"));
+		heritage.setActionInfoIndex(iActionInfoIndex++);
+		heritage.setHotKeyDescription(heritage.getTextKeyWide(), GC.getMissionInfo((MissionTypes)heritage.getMissionType()).getTextKeyWide(), CreateHotKeyFromDescription(heritage.getHotKey(), heritage.isShiftDown(), heritage.isAltDown(), heritage.isCtrlDown()));
 
 		GC.m_paActionInfo.push_back(pActionInfo);
 	}

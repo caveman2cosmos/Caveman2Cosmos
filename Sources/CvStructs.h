@@ -658,6 +658,7 @@ struct EventMessage
 	std::wstring getDescription() const { return szDescription;	}
 };
 
+// @SAVEBREAK delete
 struct PlotExtraYield
 {
 	int m_iX;
@@ -672,6 +673,7 @@ struct PlotExtraYield
 	void read(FDataStreamBase* pStream);
 	void write(FDataStreamBase* pStream);
 };
+// !SAVEBREAK
 
 typedef std::vector< std::pair<BuildingTypes, int> > BuildingChangeArray;
 
@@ -917,7 +919,7 @@ typedef std::vector<CvBattleRound> CvBattleRoundVector;		//!< Type declaration f
 class CvMissionDefinition
 {
 public:
-	CvMissionDefinition(MissionTypes type = NO_MISSION, CvPlot* plot = NULL, CvUnit* attacker = NULL, CvUnit* defender = NULL, float time = 0.f);
+	CvMissionDefinition(MissionTypes type = NO_MISSION, CvPlot* plot = NULL, CvUnit* attacker = NULL, CvUnit* defender = NULL, float time = -1.f);
 
 	DllExport MissionTypes getMissionType() const;
 	void setMissionType(MissionTypes missionType);

@@ -166,6 +166,9 @@ class RevolutionInit:
 		if ANewDawnOpt.isDepletionMod():
 			temp += szNewLineTab + TRNSLTR.getText("TXT_KEY_BUG_OPT_ROMSETTINGS__DEPLETIONMOD_TEXT",())
 
+		if ANewDawnOpt.isGreaterGreatFarmer():
+			temp += szNewLineTab + TRNSLTR.getText("TXT_KEY_BUG_OPT_ROMSETTINGS__GREATERGREATFARMER_TEXT",())
+
 		if ANewDawnOpt.isRealisiticDiplomacy():
 			temp += szNewLineTab + TRNSLTR.getText("TXT_KEY_BUG_OPT_ROMSETTINGS__REALISITICDIPLOMACY_TEXT",())
 
@@ -174,6 +177,9 @@ class RevolutionInit:
 
 		if ANewDawnOpt.isBattlefieldPromotions():
 			temp += szNewLineTab + TRNSLTR.getText("TXT_KEY_BUG_OPT_ROMSETTINGS__BATTLEFIELDPROMOTIONS_TEXT",())
+
+		if ANewDawnOpt.isStarsigns():
+			temp += szNewLineTab + TRNSLTR.getText("TXT_KEY_BUG_OPT_ROMSETTINGS__STARSIGNS_TEXT",())
 
 		if ANewDawnOpt.isReligionDecay():
 			temp += szNewLineTab + TRNSLTR.getText("TXT_KEY_BUG_OPT_ROMSETTINGS__RELIGIONDECAY_TEXT",())

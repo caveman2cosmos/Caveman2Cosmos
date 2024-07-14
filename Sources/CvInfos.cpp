@@ -9,6 +9,7 @@
 #include "CvGameCoreDLL.h"
 #include "CvArtFileMgr.h"
 #include "CvBuildingInfo.h"
+#include "CvHeritageInfo.h"
 #include "CvGameAI.h"
 #include "CvGameTextMgr.h"
 #include "CvGlobals.h"
@@ -947,6 +948,7 @@ m_bIrrigation(false),
 m_bIgnoreIrrigation(false),
 m_bWaterWork(false),
 m_bRiverTrade(false),
+m_bLanguage(false),
 // Dale - AB: Bombing START
 m_bDCMAirBombTech1(0),
 m_bDCMAirBombTech2(0),
@@ -1460,6 +1462,7 @@ bool CvTechInfo::read(CvXMLLoadUtility* pXML)
 	pXML->GetOptionalChildXmlValByName(&m_bIgnoreIrrigation, L"bIgnoreIrrigation");
 	pXML->GetOptionalChildXmlValByName(&m_bWaterWork, L"bWaterWork");
 	pXML->GetOptionalChildXmlValByName(&m_bRiverTrade, L"bRiverTrade");
+	pXML->GetOptionalChildXmlValByName(&m_bLanguage, L"bLanguage");
 	pXML->GetOptionalChildXmlValByName(&m_iGridX, L"iGridX");
 	pXML->GetOptionalChildXmlValByName(&m_iGridY, L"iGridY");
 	pXML->GetOptionalChildXmlValByName(&m_bDCMAirBombTech1, L"bDCMAirBombTech1");
@@ -1616,6 +1619,7 @@ void CvTechInfo::copyNonDefaults(const CvTechInfo* pClassInfo)
 	if (isIgnoreIrrigation() == bDefault) m_bIgnoreIrrigation = pClassInfo->isIgnoreIrrigation();
 	if (isWaterWork() == bDefault) m_bWaterWork = pClassInfo->isWaterWork();
 	if (isRiverTrade() == bDefault) m_bRiverTrade = pClassInfo->isRiverTrade();
+	if (m_bLanguage == bDefault) m_bLanguage = pClassInfo->isLanguage();
 
 	if (getGridX() == iDefault) m_iGridX = pClassInfo->getGridX();
 	if (getGridY() == iDefault) m_iGridY = pClassInfo->getGridY();
@@ -1789,6 +1793,7 @@ void CvTechInfo::getCheckSum(uint32_t& iSum) const
 	CheckSum(iSum, m_bIgnoreIrrigation);
 	CheckSum(iSum, m_bWaterWork);
 	CheckSum(iSum, m_bRiverTrade);
+	CheckSum(iSum, m_bLanguage);
 
 	CheckSum(iSum, m_piDomainExtraMoves, NUM_DOMAIN_TYPES);
 	CheckSum(iSum, m_piFlavorValue, GC.getNumFlavorTypes());
@@ -2093,7 +2098,8 @@ m_bStatus(false),
 m_bPrereqNormInvisible(false),
 m_bPlotPrereqsKeepAfter(false),
 m_bRemoveAfterSet(false),
-m_bQuick(false)
+m_bQuick(false),
+m_bStarsign(false)
 //TB Combat Mods End
 {
 	CvInfoUtil(this).initDataMembers();
@@ -4980,6 +4986,7 @@ bool CvPromotionInfo::read(CvXMLLoadUtility* pXML)
 	pXML->GetOptionalChildXmlValByName(&m_bPlotPrereqsKeepAfter, L"bPlotPrereqsKeepAfter");
 	pXML->GetOptionalChildXmlValByName(&m_bRemoveAfterSet, L"bRemoveAfterSet");
 	pXML->GetOptionalChildXmlValByName(&m_bQuick, L"bQuick");
+	pXML->GetOptionalChildXmlValByName(&m_bStarsign, L"bStarsign");
 	//pXML->SetVariableListTagPair(&m_piAIWeightbyUnitCombatTypes, L"AIWeightbyUnitCombatTypes", GC.getNumUnitCombatInfos());
 	pXML->SetOptionalVector(&m_aiSubCombatChangeTypes, L"SubCombatChangeTypes");
 	pXML->SetOptionalVector(&m_aiRemovesUnitCombatTypes, L"RemovesUnitCombatTypes");
@@ -5758,6 +5765,7 @@ void CvPromotionInfo::copyNonDefaults(const CvPromotionInfo* pClassInfo)
 	if (isPlotPrereqsKeepAfter() == bDefault) m_bPlotPrereqsKeepAfter = pClassInfo->isPlotPrereqsKeepAfter();
 	if (isRemoveAfterSet() == bDefault) m_bRemoveAfterSet = pClassInfo->isRemoveAfterSet();
 	if (isQuick() == bDefault) m_bQuick = pClassInfo->isQuick();
+	if (m_bStarsign == false) m_bStarsign = pClassInfo->isStarsign();
 	// bool vectors without delayed resolution
 	if (getNumSubCombatChangeTypes() == 0)
 	{
@@ -6438,6 +6446,7 @@ void CvPromotionInfo::getCheckSum(uint32_t& iSum) const
 	CheckSum(iSum, m_bPlotPrereqsKeepAfter);
 	CheckSum(iSum, m_bRemoveAfterSet);
 	CheckSum(iSum, m_bQuick);
+	CheckSum(iSum, m_bStarsign);
 	CheckSum(iSum, m_bZeroesXP);
 	CheckSum(iSum, m_bForOffset);
 	CheckSum(iSum, m_bCargoPrereq);
@@ -6965,6 +6974,7 @@ int CvActionInfo::getMissionData() const
 		case ACTIONSUBTYPE_CORPORATION:
 		case ACTIONSUBTYPE_SPECIALIST:
 		case ACTIONSUBTYPE_BUILDING:
+		case ACTIONSUBTYPE_HERITAGE:
 			return m_iOriginalIndex;
 	}
 	return -1;
@@ -7028,6 +7038,9 @@ int CvActionInfo::getMissionType() const
 
 		case ACTIONSUBTYPE_BUILDING:
 			return GC.getBuildingInfo((BuildingTypes)m_iOriginalIndex).getMissionType();
+
+		case ACTIONSUBTYPE_HERITAGE:
+			return GC.getHeritageInfo((HeritageTypes)m_iOriginalIndex).getMissionType();
 
 		case ACTIONSUBTYPE_MISSION:
 			return m_iOriginalIndex;
@@ -7139,6 +7152,9 @@ const CvHotkeyInfo* CvActionInfo::getHotkeyInfo() const
 
 		case ACTIONSUBTYPE_BUILDING:
 			return &GC.getBuildingInfo((BuildingTypes)getOriginalIndex());
+
+		case ACTIONSUBTYPE_HERITAGE:
+			return &GC.getHeritageInfo((HeritageTypes)getOriginalIndex());
 
 		case ACTIONSUBTYPE_CONTROL:
 			return &GC.getControlInfo((ControlTypes)getOriginalIndex());
@@ -11344,6 +11360,7 @@ m_iBarbarianCityCreationProb(0),
 m_iAnimalCombatModifier(0),
 m_iBarbarianCombatModifier(0),
 m_iAIAnimalCombatModifier(0),
+m_iSubdueAnimalBonusAI(0),
 m_iAIBarbarianCombatModifier(0),
 m_iStartingDefenseUnits(0),
 m_iStartingWorkerUnits(0),
@@ -11752,6 +11769,7 @@ bool CvHandicapInfo::read(CvXMLLoadUtility* pXML)
 	pXML->GetOptionalChildXmlValByName(&m_iAnimalCombatModifier, L"iAnimalBonus");
 	pXML->GetOptionalChildXmlValByName(&m_iBarbarianCombatModifier, L"iBarbarianBonus");
 	pXML->GetOptionalChildXmlValByName(&m_iAIAnimalCombatModifier, L"iAIAnimalBonus");
+	pXML->GetOptionalChildXmlValByName(&m_iSubdueAnimalBonusAI, L"iSubdueAnimalBonusAI");
 	pXML->GetOptionalChildXmlValByName(&m_iAIBarbarianCombatModifier, L"iAIBarbarianBonus");
 	pXML->GetOptionalChildXmlValByName(&m_iStartingDefenseUnits, L"iStartingDefenseUnits");
 	pXML->GetOptionalChildXmlValByName(&m_iStartingWorkerUnits, L"iStartingWorkerUnits");
@@ -11822,6 +11840,7 @@ void CvHandicapInfo::copyNonDefaults(const CvHandicapInfo* pClassInfo)
 	if (getAnimalCombatModifier() == iDefault) m_iAnimalCombatModifier = pClassInfo->getAnimalCombatModifier();
 	if (getBarbarianCombatModifier() == iDefault) m_iBarbarianCombatModifier = pClassInfo->getBarbarianCombatModifier();
 	if (getAIAnimalCombatModifier() == iDefault) m_iAIAnimalCombatModifier = pClassInfo->getAIAnimalCombatModifier();
+	if (m_iSubdueAnimalBonusAI == iDefault) m_iSubdueAnimalBonusAI = pClassInfo->getSubdueAnimalBonusAI();
 	if (getAIBarbarianCombatModifier() == iDefault) m_iAIBarbarianCombatModifier = pClassInfo->getAIBarbarianCombatModifier();
 	if (getStartingDefenseUnits() == iDefault) m_iStartingDefenseUnits = pClassInfo->getStartingDefenseUnits();
 	if (getStartingWorkerUnits() == iDefault) m_iStartingWorkerUnits = pClassInfo->getStartingWorkerUnits();
@@ -13140,6 +13159,7 @@ m_bNoRiver(false),
 m_bNoAdjacent(false),
 m_bRequiresFlatlands(false),
 m_bRequiresRiver(false),
+m_bCoastalOnly(false),
 m_bAddsFreshWater(false),
 m_bImpassable(false),
 m_bNoCity(false),
@@ -13494,6 +13514,7 @@ bool CvFeatureInfo::read(CvXMLLoadUtility* pXML)
 	pXML->GetOptionalChildXmlValByName(&m_bNoAdjacent, L"bNoAdjacent");
 	pXML->GetOptionalChildXmlValByName(&m_bRequiresFlatlands, L"bRequiresFlatlands");
 	pXML->GetOptionalChildXmlValByName(&m_bRequiresRiver, L"bRequiresRiver");
+	pXML->GetOptionalChildXmlValByName(&m_bCoastalOnly, L"bCoastalOnly");
 	pXML->GetOptionalChildXmlValByName(&m_bAddsFreshWater, L"bAddsFreshWater");
 	pXML->GetOptionalChildXmlValByName(&m_bImpassable, L"bImpassable");
 	pXML->GetOptionalChildXmlValByName(&m_bNoCity, L"bNoCity");
@@ -13603,6 +13624,7 @@ void CvFeatureInfo::copyNonDefaults(const CvFeatureInfo* pClassInfo)
 	if (isNoAdjacent() == bDefault) m_bNoAdjacent = pClassInfo->isNoAdjacent();
 	if (isRequiresFlatlands() == bDefault) m_bRequiresFlatlands = pClassInfo->isRequiresFlatlands();
 	if (isRequiresRiver() == bDefault) m_bRequiresRiver = pClassInfo->isRequiresRiver();
+	if (m_bCoastalOnly == bDefault) m_bCoastalOnly = pClassInfo->isCoastalOnly();
 	if (isAddsFreshWater() == bDefault) m_bAddsFreshWater = pClassInfo->isAddsFreshWater();
 	if (isImpassable() == bDefault) m_bImpassable = pClassInfo->isImpassable();
 	if (isNoCity() == bDefault) m_bNoCity = pClassInfo->isNoCity();
@@ -13691,6 +13713,7 @@ void CvFeatureInfo::getCheckSum(uint32_t &iSum) const
 	CheckSum(iSum, m_bNoAdjacent);
 	CheckSum(iSum, m_bRequiresFlatlands);
 	CheckSum(iSum, m_bRequiresRiver);
+	CheckSum(iSum, m_bCoastalOnly);
 	CheckSum(iSum, m_bAddsFreshWater);
 	CheckSum(iSum, m_bImpassable);
 	CheckSum(iSum, m_bNoCity);
@@ -14057,7 +14080,8 @@ CvTerrainInfo::CvTerrainInfo() :
 m_iMovementCost(0),
 m_iBuildModifier(0),
 m_iDefenseModifier(0),
-m_bWaterTerrain(false),
+m_iDistanceToLand(0),
+m_eClimate(NO_CLIMATE_ZONE),
 m_bImpassable(false),
 m_bFound(false),
 m_bFoundCoast(false),
@@ -14103,11 +14127,6 @@ int CvTerrainInfo::getBuildModifier() const
 int CvTerrainInfo::getDefenseModifier() const
 {
 	return m_iDefenseModifier;
-}
-
-bool CvTerrainInfo::isWaterTerrain() const
-{
-	return m_bWaterTerrain;
 }
 
 bool CvTerrainInfo::isImpassable() const
@@ -14232,7 +14251,9 @@ bool CvTerrainInfo::read(CvXMLLoadUtility* pXML)
 	}
 	else SAFE_DELETE_ARRAY(m_piYields);
 
-	pXML->GetOptionalChildXmlValByName(&m_bWaterTerrain, L"bWaterTerrain");
+	pXML->GetOptionalChildXmlValByName(&m_iDistanceToLand, L"iDistanceToLand");
+	pXML->GetOptionalChildXmlValByName(szTextVal, L"ClimateZoneType");
+	m_eClimate = (ClimateZoneTypes) pXML->GetInfoClass(szTextVal);
 	pXML->GetOptionalChildXmlValByName(&m_bImpassable, L"bImpassable");
 	pXML->GetOptionalChildXmlValByName(&m_bFound, L"bFound");
 	pXML->GetOptionalChildXmlValByName(&m_bFoundCoast, L"bFoundCoast");
@@ -14318,7 +14339,8 @@ void CvTerrainInfo::copyNonDefaults(const CvTerrainInfo* pClassInfo)
 			m_piYields[i] = pClassInfo->getYield(i);
 		}
 	}
-	if (isWaterTerrain() == bDefault) m_bWaterTerrain = pClassInfo->isWaterTerrain();
+	if (m_iDistanceToLand == 0) m_iDistanceToLand = pClassInfo->isWaterTerrain();
+	if (m_eClimate == CLIMATE_ZONE_TEMPERATE) m_eClimate = pClassInfo->getClimate();
 	if (isImpassable() == bDefault) m_bImpassable = pClassInfo->isImpassable();
 	if (isFound() == bDefault) m_bFound = pClassInfo->isFound();
 	if (isFoundCoast() == bDefault) m_bFoundCoast = pClassInfo->isFoundCoast();
@@ -14361,8 +14383,9 @@ void CvTerrainInfo::getCheckSum(uint32_t &iSum) const
 	CheckSum(iSum, m_iMovementCost);
 	CheckSum(iSum, m_iBuildModifier);
 	CheckSum(iSum, m_iDefenseModifier);
+	CheckSum(iSum, m_iDistanceToLand);
+	CheckSum(iSum, m_eClimate);
 
-	CheckSum(iSum, m_bWaterTerrain);
 	CheckSum(iSum, m_bImpassable);
 	CheckSum(iSum, m_bFound);
 	CheckSum(iSum, m_bFoundCoast);
@@ -15997,7 +16020,6 @@ CvWorldInfo::CvWorldInfo() :
 ,m_iGridHeight(0)
 ,m_iTerrainGrainChange(0)
 ,m_iFeatureGrainChange(0)
-,m_iResearchPercent(0)
 ,m_iTradeProfitPercent(0)
 ,m_iDistanceMaintenancePercent(0)
 ,m_iNumCitiesMaintenancePercent(0)
@@ -16070,11 +16092,6 @@ int CvWorldInfo::getFeatureGrainChange() const
 	return m_iFeatureGrainChange;
 }
 
-int CvWorldInfo::getResearchPercent() const
-{
-	return m_iResearchPercent;
-}
-
 int CvWorldInfo::getTradeProfitPercent() const
 {
 	return m_iTradeProfitPercent;
@@ -16142,7 +16159,6 @@ bool CvWorldInfo::read(CvXMLLoadUtility* pXML)
 	pXML->GetOptionalChildXmlValByName(&m_iGridHeight, L"iGridHeight");
 	pXML->GetOptionalChildXmlValByName(&m_iTerrainGrainChange, L"iTerrainGrainChange");
 	pXML->GetOptionalChildXmlValByName(&m_iFeatureGrainChange, L"iFeatureGrainChange");
-	pXML->GetOptionalChildXmlValByName(&m_iResearchPercent, L"iResearchPercent");
 	pXML->GetOptionalChildXmlValByName(&m_iTradeProfitPercent, L"iTradeProfitPercent");
 	pXML->GetOptionalChildXmlValByName(&m_iDistanceMaintenancePercent, L"iDistanceMaintenancePercent");
 	pXML->GetOptionalChildXmlValByName(&m_iNumCitiesMaintenancePercent, L"iNumCitiesMaintenancePercent");
@@ -16174,7 +16190,6 @@ void CvWorldInfo::copyNonDefaults(const CvWorldInfo* pClassInfo)
 	if (getGridHeight() == iDefault) m_iGridHeight = pClassInfo->getGridHeight();
 	if (getTerrainGrainChange() == iDefault) m_iTerrainGrainChange = pClassInfo->getTerrainGrainChange();
 	if (getFeatureGrainChange() == iDefault) m_iFeatureGrainChange = pClassInfo->getFeatureGrainChange();
-	if (getResearchPercent() == iDefault) m_iResearchPercent = pClassInfo->getResearchPercent();
 	if (getTradeProfitPercent() == iDefault) m_iTradeProfitPercent = pClassInfo->getTradeProfitPercent();
 	if (getDistanceMaintenancePercent() == iDefault) m_iDistanceMaintenancePercent = pClassInfo->getDistanceMaintenancePercent();
 	if (getNumCitiesMaintenancePercent() == iDefault) m_iNumCitiesMaintenancePercent = pClassInfo->getNumCitiesMaintenancePercent();
@@ -16200,7 +16215,6 @@ void CvWorldInfo::getCheckSum(uint32_t& iSum) const
 	CheckSum(iSum, m_iGridHeight);
 	CheckSum(iSum, m_iTerrainGrainChange);
 	CheckSum(iSum, m_iFeatureGrainChange);
-	CheckSum(iSum, m_iResearchPercent);
 	CheckSum(iSum, m_iTradeProfitPercent);
 	CheckSum(iSum, m_iDistanceMaintenancePercent);
 	CheckSum(iSum, m_iNumCitiesMaintenancePercent);
@@ -16222,6 +16236,7 @@ CvMapInfo::CvMapInfo()
 	, m_iGridHeight(0)
 	, m_iWrapX(-1)
 	, m_iWrapY(-1)
+	, m_bStartRevealed(false)
 	, m_szInitialWBMap(NULL)
 	, m_szMapScript(NULL)
 {
@@ -16233,12 +16248,13 @@ CvMapInfo::~CvMapInfo()
 
 bool CvMapInfo::read(CvXMLLoadUtility* pXML)
 {
-	CvInfoBase::read(pXML);
+	CvHotkeyInfo::read(pXML);
 
 	pXML->GetOptionalChildXmlValByName(&m_iGridWidth, L"iGridWidth");
 	pXML->GetOptionalChildXmlValByName(&m_iGridHeight, L"iGridHeight");
 	pXML->GetOptionalChildXmlValByName(&m_iWrapX, L"bWrapX");
 	pXML->GetOptionalChildXmlValByName(&m_iWrapY, L"bWrapY");
+	pXML->GetOptionalChildXmlValByName(&m_bStartRevealed, L"bStartRevealed");
 	pXML->GetOptionalChildXmlValByName(m_szInitialWBMap, L"InitialWBMap");
 	pXML->GetOptionalChildXmlValByName(m_szMapScript, L"MapScript");
 
@@ -22876,6 +22892,7 @@ CvEventInfo::CvEventInfo() :
 	m_bGoldenAge(false),
 	m_bDeclareWar(false),
 	m_bDisbandUnit(false),
+	m_bGameSpeedScale(false),
 	m_iGold(0),
 	m_iRandomGold(0),
 	m_iCulture(0),
@@ -23459,6 +23476,7 @@ void CvEventInfo::getCheckSum(uint32_t& iSum) const
 	CheckSum(iSum, m_bGoldenAge);
 	CheckSum(iSum, m_bDeclareWar);
 	CheckSum(iSum, m_bDisbandUnit);
+	CheckSum(iSum, m_bGameSpeedScale);
 	CheckSum(iSum, m_iGold);
 	CheckSum(iSum, m_iRandomGold);
 	CheckSum(iSum, m_iCulture);
@@ -23586,6 +23604,7 @@ bool CvEventInfo::read(CvXMLLoadUtility* pXML)
 	m_iFreeUnit = pXML->GetInfoClass(szTextVal);
 	pXML->GetOptionalChildXmlValByName(&m_iNumUnits, L"iNumFreeUnits");
 	pXML->GetOptionalChildXmlValByName(&m_bDisbandUnit, L"bDisbandUnit");
+	pXML->GetOptionalChildXmlValByName(&m_bGameSpeedScale, L"bGameSpeedScale");
 	pXML->GetOptionalChildXmlValByName(&m_iUnitExperience, L"iUnitExperience");
 	pXML->GetOptionalChildXmlValByName(&m_iUnitImmobileTurns, L"iUnitImmobileTurns");
 	pXML->GetOptionalChildXmlValByName(szTextVal, L"Building");
@@ -24031,7 +24050,8 @@ void CvEventInfo::copyNonDefaults(const CvEventInfo* pClassInfo)
 	if (getPrereqTech() == iTextDefault) m_iPrereqTech = pClassInfo->getPrereqTech();
 	if (getFreeUnit() == iTextDefault) m_iFreeUnit = pClassInfo->getFreeUnit();
 	if (getNumUnits() == iDefault) m_iNumUnits = pClassInfo->getNumUnits();
-	if (isDisbandUnit() == bDefault) m_bDisbandUnit = pClassInfo->isDisbandUnit();
+	if (m_bDisbandUnit == bDefault) m_bDisbandUnit = pClassInfo->isDisbandUnit();
+	if (m_bGameSpeedScale == bDefault) m_bGameSpeedScale = pClassInfo->isGameSpeedScale();
 	if (getUnitExperience() == iDefault) m_iUnitExperience = pClassInfo->getUnitExperience();
 	if (getUnitImmobileTurns() == iDefault) m_iUnitImmobileTurns = pClassInfo->getUnitImmobileTurns();
 	if (getBuilding() == iTextDefault) m_iBuilding = pClassInfo->getBuilding();
@@ -26439,7 +26459,6 @@ void CvPromotionLineInfo::doPostLoadCaching(uint32_t iThis)
 			m_aiBuildings.push_back(i);
 		}
 	}
-
 }
 
 TechTypes CvPromotionLineInfo::getObsoleteTech() const

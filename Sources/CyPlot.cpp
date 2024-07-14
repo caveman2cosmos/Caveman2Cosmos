@@ -83,11 +83,6 @@ bool CyPlot::isRiver() const
 	return m_pPlot ? m_pPlot->isRiver() : false;
 }
 
-CyPlot* CyPlot::getNearestLandPlot() const
-{
-	return m_pPlot ? new CyPlot(m_pPlot->getNearestLandPlot()) : NULL;
-}
-
 bool CyPlot::canHaveBonus(int /*BonusTypes*/ eBonus, bool bIgnoreLatitude) const
 {
 	return m_pPlot ? m_pPlot->canHaveBonus((BonusTypes)eBonus, bIgnoreLatitude) : false;
@@ -460,6 +455,11 @@ void CyPlot::setRiverID(int iNewValue)
 int CyPlot::getYield(YieldTypes eIndex) const
 {
 	return m_pPlot ? m_pPlot->getYield(eIndex) : -1;
+}
+
+void CyPlot::setExtraYield(YieldTypes eYield, short iExtraYield)
+{
+	m_pPlot->setExtraYield(eYield, iExtraYield);
 }
 
 int CyPlot::calculateBestNatureYield(YieldTypes eIndex, TeamTypes eTeam) const

@@ -150,7 +150,6 @@
 	<ElementType name="RiverYieldChange" content="eltOnly">
 		<element type="iYield" minOccurs="0" maxOccurs="*"/>
 	</ElementType>
-	<ElementType name="bWaterTerrain" content="textOnly" dt:type="boolean"/>
 	<ElementType name="bImpassable" content="textOnly" dt:type="boolean"/>
 	<ElementType name="bFound" content="textOnly" dt:type="boolean"/>
 	<ElementType name="bFoundCoast" content="textOnly" dt:type="boolean"/>
@@ -165,6 +164,8 @@
 	<!--Afforess-->
 	<ElementType name="iBuildModifier" content="textOnly" dt:type="int"/>
 	<ElementType name="iDefense" content="textOnly" dt:type="int"/>
+	<ElementType name="iDistanceToLand" content="textOnly" dt:type="int"/>
+	<ElementType name="ClimateZoneType" content="textOnly"/>
 	<ElementType name="Button" content="textOnly"/>
 	<ElementType name="FootstepAudioType" content="textOnly"/>
 	<ElementType name="FootstepAudioScript" content="textOnly"/>
@@ -195,7 +196,6 @@
 		<element type="ArtDefineTag" minOccurs="0"/>
 		<element type="Yields" minOccurs="0"/>
 		<element type="MapCategoryTypes" minOccurs="0"/>
-		<element type="bWaterTerrain" minOccurs="0"/>
 		<element type="bImpassable" minOccurs="0"/>
 		<element type="bFound" minOccurs="0"/>
 		<element type="bFoundCoast" minOccurs="0"/>
@@ -204,6 +204,8 @@
 		<element type="iMovement" minOccurs="0"/>
 		<element type="iBuildModifier" minOccurs="0"/>
 		<element type="iDefense" minOccurs="0"/>
+		<element type="iDistanceToLand" minOccurs="0"/>
+		<element type="ClimateZoneType" minOccurs="0"/>
 		<element type="Button" minOccurs="0"/>
 		<element type="FootstepSounds" minOccurs="0"/>
 		<element type="WorldSoundscapeAudioScript" minOccurs="0"/>
@@ -280,6 +282,7 @@
 	<ElementType name="bNoAdjacent" content="textOnly" dt:type="boolean"/>
 	<ElementType name="bRequiresFlatlands" content="textOnly" dt:type="boolean"/>
 	<ElementType name="bRequiresRiver" content="textOnly" dt:type="boolean"/>
+	<ElementType name="bCoastalOnly" content="textOnly" dt:type="boolean"/>
 	<ElementType name="bAddsFreshWater" content="textOnly" dt:type="boolean"/>
 	<ElementType name="bNoCity" content="textOnly" dt:type="boolean"/>
 	<ElementType name="bNoImprovement" content="textOnly" dt:type="boolean"/>
@@ -337,6 +340,7 @@
 		<element type="bNoAdjacent" minOccurs="0"/>
 		<element type="bRequiresFlatlands" minOccurs="0"/>
 		<element type="bRequiresRiver" minOccurs="0"/>
+		<element type="bCoastalOnly" minOccurs="0"/>
 		<element type="bAddsFreshWater" minOccurs="0"/>
 		<element type="bImpassable" minOccurs="0"/>
 		<element type="bNoCity" minOccurs="0"/>
