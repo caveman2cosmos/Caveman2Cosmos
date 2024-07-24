@@ -1907,8 +1907,8 @@ Randomize Resources=0\nEndMap\n"
 		return 0
 
 	# after reading setup the map
-	def applyMap(self, shouldApplyYearTurn = True):
-		if shouldApplyYearTurn:
+	def applyMap(self):
+		if GAME.getCurrentMap() == MapTypes.MAP_EARTH:
 			self.gameDesc.apply()
 
 		MAP = GC.getMap()
