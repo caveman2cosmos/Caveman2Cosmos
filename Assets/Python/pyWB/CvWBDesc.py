@@ -1907,8 +1907,10 @@ Randomize Resources=0\nEndMap\n"
 		return 0
 
 	# after reading setup the map
-	def applyMap(self):
-		self.gameDesc.apply()
+	def applyMap(self, shouldApplyYearTurn = True):
+		if shouldApplyYearTurn:
+			self.gameDesc.apply()
+
 		MAP = GC.getMap()
 		# recreate map
 		print("map rebuild. gridw=%d, gridh=%d" %(self.mapDesc.iGridW, self.mapDesc.iGridH))

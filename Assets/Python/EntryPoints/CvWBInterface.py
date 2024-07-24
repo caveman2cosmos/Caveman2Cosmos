@@ -31,7 +31,7 @@ def readAndApplyDesc(argsList):
 
 	if WBDesc.read(fileName) < 0:
 		return -1
-	if WBDesc.applyMap() < 0:
+	if WBDesc.applyMap(False) < 0:
 		return -1
 	return WBDesc.applyInitialItems()
 
