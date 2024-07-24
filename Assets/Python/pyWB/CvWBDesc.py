@@ -1908,7 +1908,9 @@ Randomize Resources=0\nEndMap\n"
 
 	# after reading setup the map
 	def applyMap(self):
-		self.gameDesc.apply()
+		if GAME.getCurrentMap() == MapTypes.MAP_EARTH:
+			self.gameDesc.apply()
+
 		MAP = GC.getMap()
 		# recreate map
 		print("map rebuild. gridw=%d, gridh=%d" %(self.mapDesc.iGridW, self.mapDesc.iGridH))
