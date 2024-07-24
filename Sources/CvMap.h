@@ -69,7 +69,7 @@ public:
 	void afterSwitch();
 
 	void updateIncomingUnits();
-	void moveUnitToMap(CvUnit& unit, int numTravelTurns);
+	void moveUnitToMap(CvUnit& unit, int numTravelTurns, bool tpToCapital = false);
 	void deleteOffMapUnits();
 
 	//void deleteViewport(int iIndex);

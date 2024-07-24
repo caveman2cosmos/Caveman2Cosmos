@@ -106,7 +106,7 @@ public:
 	int getLastPathStepNum() const;
 	CyPlot* getLastPathPlotByIndex(int index) const;
 
-	void moveUnitToMap(const CyUnit* unit, int numTravelTurns);
+	void moveUnitToMap(const CyUnit* unit, int numTravelTurns, bool tpToCapital = false);
 
 	void setClimateZone(const int y, const ClimateZoneTypes eClimate);
 

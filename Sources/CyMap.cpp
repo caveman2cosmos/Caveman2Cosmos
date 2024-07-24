@@ -447,10 +447,9 @@ CyPlot* CyMap::getLastPathPlotByIndex(int index) const
 	return NULL;
 }
 
-
-void CyMap::moveUnitToMap(const CyUnit* unit, int numTravelTurns)
+void CyMap::moveUnitToMap(const CyUnit* unit, int numTravelTurns, bool tpToCapital)
 {
-	m_pMap->moveUnitToMap(*unit->getUnit(), numTravelTurns);
+	m_pMap->moveUnitToMap(*unit->getUnit(), numTravelTurns, tpToCapital);
 }
 
 void CyMap::setClimateZone(const int y, const ClimateZoneTypes eClimate)
