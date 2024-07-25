@@ -390,19 +390,22 @@ void CvMap::setAllPlotTypes(PlotTypes ePlotType)
 
 struct TravelingUnit
 {
-	TravelingUnit(const CvUnit& travelingUnit, int numTravelTurns)
-		: numTurnsUntilArrival(numTravelTurns)
+	TravelingUnit(const CvUnit& travelingUnit, const CvMap& map, int numTravelTurns, bool tpToCapital = false)
+		: numTurnsUntilArrival(numTravelTurns), originMap(map), tpToCapital(tpToCapital)
 	{
 		unit = static_cast<const CvUnitAI&>(travelingUnit);
 	}
 
 	CvUnitAI unit;
+	const CvMap& originMap;
+
 	int numTurnsUntilArrival;
+	bool tpToCapital;
 };
 
-void CvMap::moveUnitToMap(CvUnit& unit, int numTravelTurns)
+void CvMap::moveUnitToMap(CvUnit& unit, int numTravelTurns, bool tpToCapital)
 {
-	m_IncomingUnits.push_back(new TravelingUnit(unit, numTravelTurns));
+	m_IncomingUnits.push_back(new TravelingUnit(unit, GC.getMap(), numTravelTurns, tpToCapital));
 	unit.kill(true, NO_PLAYER);
 }
 
@@ -419,8 +422,29 @@ void CvMap::updateIncomingUnits()
 
 			const CvUnitAI& unit = travelingUnit->unit;
 			CvPlayer& owner = GET_PLAYER(unit.getOwner());
-			const CvPlot* plot = owner.findStartingPlot();
-			CvUnit* newUnit = owner.initUnit(unit.getUnitType(), plot->getX(), plot->getY(), unit.AI_getUnitAIType(), NO_DIRECTION, 0);
+			int iDestX = 0;
+			int iDestY = 0;
+
+			if (travelingUnit->tpToCapital)
+			{
+				const CvPlot* plot = owner.getCapitalCity()->plot();
+				iDestX = plot->getX();
+				iDestY = plot->getY();
+			}
+			else
+			{
+				const CvPlot* plot = owner.findStartingPlot();
+				iDestX = plot->getX();
+				iDestY = plot->getY();
+			}
+
+			if (travelingUnit->originMap.getType() == MAP_EARTH && m_eType == MAP_CISLUNAR)
+			{
+				// Many units traveling from Earth to Cislunar can initially only operate in Orbit plots, which are at the bottom of the map
+				iDestY = 1;
+			}
+
+			CvUnit* newUnit = owner.initUnit(unit.getUnitType(), iDestX, iDestY, unit.AI_getUnitAIType(), NO_DIRECTION, 0);
 			if (newUnit != NULL)
 			{
 				static_cast<CvUnitAI&>(*newUnit) = unit;
