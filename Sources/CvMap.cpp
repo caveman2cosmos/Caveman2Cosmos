@@ -393,14 +393,10 @@ struct TravelingUnit
 	TravelingUnit(const CvUnit& travelingUnit, int numTravelTurns, MapTypes originMap)
 		: numTurnsUntilArrival(numTravelTurns), originMap(originMap)
 	{
-		owner = travelingUnit.getOwner();
-		unitType = travelingUnit.getUnitType();
-		unitAiType = travelingUnit.AI_getUnitAIType();
+		unit = static_cast<const CvUnitAI&>(travelingUnit);
 	}
 
-	PlayerTypes owner;
-	UnitTypes unitType;
-	UnitAITypes unitAiType;
+	CvUnitAI unit;
 
 	int numTurnsUntilArrival;
 	MapTypes originMap;
@@ -425,7 +421,8 @@ void CvMap::updateIncomingUnits()
 		{
 			GC.switchMap(m_eType);
 
-			CvPlayer& owner = GET_PLAYER(travelingUnit->owner);
+			const CvUnitAI& unit = travelingUnit->unit;
+			CvPlayer& owner = GET_PLAYER(unit.getOwner());
 			// Default is to pick a completely random coordinate
 			// Arriving at MAP_MOON, MAP_MARS, MAP_VENUS, or MAP_TITAN should not override these
 			// (Toaster) Perhaps in these maps, if the unit-owner has a city there, the unit always arrives at one of those cities?
@@ -456,9 +453,10 @@ void CvMap::updateIncomingUnits()
 				}
 			}
 
-			CvUnit* newUnit = owner.initUnit(travelingUnit->unitType, iDestX, iDestY, travelingUnit->unitAiType, NO_DIRECTION, 0);
+			CvUnit* newUnit = owner.initUnit(unit.getUnitType(), iDestX, iDestY, unit.AI_getUnitAIType(), NO_DIRECTION, 0);
 			if (newUnit != NULL)
 			{
+				static_cast<CvUnitAI&>(*newUnit) = unit;
 				it = m_IncomingUnits.erase(it);
 				delete travelingUnit;
 				continue;
