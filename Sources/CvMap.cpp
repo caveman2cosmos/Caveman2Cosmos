@@ -427,6 +427,8 @@ void CvMap::updateIncomingUnits()
 
 			CvPlayer& owner = GET_PLAYER(travelingUnit->owner);
 			// Default is to pick a completely random coordinate
+			// Arriving at MAP_MOON, MAP_MARS, MAP_VENUS, or MAP_TITAN should not override these
+			// (Toaster) Perhaps in these maps, if the unit-owner has a city there, the unit always arrives at one of those cities?
 			int iDestX = GC.getGame().getSorenRandNum(m_iGridWidth, "Multimap arriving unit default x coordinate");
 			int iDestY = GC.getGame().getSorenRandNum(m_iGridHeight, "Multimap arriving unit default y coordinate");
 
@@ -434,16 +436,24 @@ void CvMap::updateIncomingUnits()
 
 			if (m_eType == MAP_EARTH)
 			{
-				// Units arriving on Earth always arrive at the player's capital
+				// Units arriving on Earth always arrive at the owner's capital
 				const CvPlot* plot = owner.getCapitalCity()->plot();
 				iDestX = plot->getX();
 				iDestY = plot->getY();
 			}
-			else if (m_eType == MAP_CISLUNAR && travelingUnit->originMap < MAP_CISLUNAR)
+			else if (m_eType == MAP_CISLUNAR)
 			{
-				// Many units traveling from Earth to Cislunar can initially only operate in Orbit plots, which are the bottom 3 rows of the map
-				// TODO: Better logic is probably to find all Orbit plots and pick one of those randomly
-				iDestY = GC.getGame().getSorenRandNum(3, "Multimap arriving unit Earth to Cislunar y coordinate");
+				if (travelingUnit->originMap < MAP_CISLUNAR)
+				{
+					// Many units traveling from Earth to Cislunar can initially only operate in Orbit plots, which are the bottom 3 rows of the map
+					// TODO: Better logic is probably to find all Orbit plots and pick one of those randomly
+					iDestY = GC.getGame().getSorenRandNum(3, "Multimap arriving unit Earth to Cislunar y coordinate");
+				}
+				else
+				{
+					// Arriving from outside Earth, so units spawn on the opposite side of Orbit instead
+					iDestY = m_iGridHeight - GC.getGame().getSorenRandNum(3, "Multimap arriving unit non-Earth to Cislunar y coordinate");
+				}
 			}
 
 			CvUnit* newUnit = owner.initUnit(travelingUnit->unitType, iDestX, iDestY, travelingUnit->unitAiType, NO_DIRECTION, 0);

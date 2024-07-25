@@ -6790,7 +6790,7 @@
 									return plot.getTerrainType() in valid_terrains
 								def doOutcome(unit,plot,eDefPlayer, eDefUnitType):
 									gc = CyGlobalContext()
-									newUnit = newUnit = gc.getPlayer(unit.getOwner()).initUnit(gc.getInfoTypeForString('UNIT_LOE_REWARD'),plot.getX(),plot.getY(),UnitAITypes.NO_UNITAI,DirectionTypes.DIRECTION_SOUTH)
+									newUnit = gc.getPlayer(unit.getOwner()).initUnit(gc.getInfoTypeForString('UNIT_LOE_REWARD'),plot.getX(),plot.getY(),UnitAITypes.NO_UNITAI,DirectionTypes.DIRECTION_SOUTH)
 									gc.getMapByIndex(MapTypes.MAP_EARTH).moveUnitToMap(newUnit, 1)
 								def getDisplay(unit,plot):
 									return u"Place Satellite in Low-Earth Orbit."
