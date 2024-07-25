@@ -390,22 +390,27 @@ void CvMap::setAllPlotTypes(PlotTypes ePlotType)
 
 struct TravelingUnit
 {
-	TravelingUnit(const CvUnit& travelingUnit, const CvMap& map, int numTravelTurns, bool tpToCapital = false)
-		: numTurnsUntilArrival(numTravelTurns), originMap(map), tpToCapital(tpToCapital)
+	TravelingUnit(const CvUnit& travelingUnit, int numTravelTurns, MapTypes originMap)
+		: numTurnsUntilArrival(numTravelTurns), originMap(originMap)
 	{
-		unit = static_cast<const CvUnitAI&>(travelingUnit);
+		owner = travelingUnit.getOwner();
+		unitType = travelingUnit.getUnitType();
+		unitAiType = travelingUnit.AI_getUnitAIType();
 	}
 
-	CvUnitAI unit;
-	const CvMap& originMap;
+	PlayerTypes owner;
+	UnitTypes unitType;
+	UnitAITypes unitAiType;
 
 	int numTurnsUntilArrival;
-	bool tpToCapital;
+	MapTypes originMap;
 };
 
-void CvMap::moveUnitToMap(CvUnit& unit, int numTravelTurns, bool tpToCapital)
+void CvMap::moveUnitToMap(CvUnit& unit, int numTravelTurns)
 {
-	m_IncomingUnits.push_back(new TravelingUnit(unit, GC.getMap(), numTravelTurns, tpToCapital));
+	// Assumes the current map is the one that this function is being called from
+	// You can't click the unit's move map mission without having it selected, so this should be a safe assumption
+	m_IncomingUnits.push_back(new TravelingUnit(unit, numTravelTurns, CURRENT_MAP));
 	unit.kill(true, NO_PLAYER);
 }
 
@@ -420,34 +425,30 @@ void CvMap::updateIncomingUnits()
 		{
 			GC.switchMap(m_eType);
 
-			const CvUnitAI& unit = travelingUnit->unit;
-			CvPlayer& owner = GET_PLAYER(unit.getOwner());
-			int iDestX = 0;
-			int iDestY = 0;
+			CvPlayer& owner = GET_PLAYER(travelingUnit->owner);
+			// Default is to pick a completely random coordinate
+			int iDestX = GC.getGame().getSorenRandNum(m_iGridWidth, "Multimap arriving unit default x coordinate");
+			int iDestY = GC.getGame().getSorenRandNum(m_iGridHeight, "Multimap arriving unit default y coordinate");
 
-			if (travelingUnit->tpToCapital)
+			// TODO: Arrival location logic for other source-destination pairs
+
+			if (m_eType == MAP_EARTH)
 			{
+				// Units arriving on Earth always arrive at the player's capital
 				const CvPlot* plot = owner.getCapitalCity()->plot();
 				iDestX = plot->getX();
 				iDestY = plot->getY();
 			}
-			else
+			else if (m_eType == MAP_CISLUNAR && travelingUnit->originMap < MAP_CISLUNAR)
 			{
-				const CvPlot* plot = owner.findStartingPlot();
-				iDestX = plot->getX();
-				iDestY = plot->getY();
+				// Many units traveling from Earth to Cislunar can initially only operate in Orbit plots, which are the bottom 3 rows of the map
+				// TODO: Better logic is probably to find all Orbit plots and pick one of those randomly
+				iDestY = GC.getGame().getSorenRandNum(3, "Multimap arriving unit Earth to Cislunar y coordinate");
 			}
 
-			if (travelingUnit->originMap.getType() == MAP_EARTH && m_eType == MAP_CISLUNAR)
-			{
-				// Many units traveling from Earth to Cislunar can initially only operate in Orbit plots, which are at the bottom of the map
-				iDestY = 1;
-			}
-
-			CvUnit* newUnit = owner.initUnit(unit.getUnitType(), iDestX, iDestY, unit.AI_getUnitAIType(), NO_DIRECTION, 0);
+			CvUnit* newUnit = owner.initUnit(travelingUnit->unitType, iDestX, iDestY, travelingUnit->unitAiType, NO_DIRECTION, 0);
 			if (newUnit != NULL)
 			{
-				static_cast<CvUnitAI&>(*newUnit) = unit;
 				it = m_IncomingUnits.erase(it);
 				delete travelingUnit;
 				continue;
