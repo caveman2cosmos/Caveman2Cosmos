@@ -935,9 +935,9 @@ def getHelpAntelope2(argsList):
 def canTriggerWhaleOfAThing(argsList):
 	data = argsList[0]
 	player = GC.getPlayer(data.ePlayer)
-	iWhale = GC.getInfoTypeForString("BONUS_WHALE")
+	#iWhale = GC.getInfoTypeForString("BONUS_WHALE")
 
-    iNumCoastalCities = player.countNumCoastalCities()
+	iNumCoastalCities = player.countNumCoastalCities()
 	if 0.65 > ( iNumCoastalCities / player.getNumCities()):
 		return False
 	return True

@@ -2884,39 +2884,39 @@ CvMap& cvInternalGlobals::getMap() const
 	return *m_maps[CURRENT_MAP];
 }
 
-FAStar& cvInternalGlobals::getPathFinder() const
+FAStar& cvInternalGlobals::getPathFinder(MapTypes map) const
 {
-	return *m_pathFinders[m_game ? CURRENT_MAP : MAP_EARTH];
+	return *m_pathFinders[map == NO_MAP ? (m_game ? CURRENT_MAP : MAP_EARTH) : map];
 }
 
-FAStar& cvInternalGlobals::getInterfacePathFinder() const
+FAStar& cvInternalGlobals::getInterfacePathFinder(MapTypes map) const
 {
-	return *m_interfacePathFinders[m_game ? CURRENT_MAP : MAP_EARTH];
+	return *m_interfacePathFinders[map == NO_MAP ? (m_game ? CURRENT_MAP : MAP_EARTH) : map];
 }
 
-FAStar& cvInternalGlobals::getStepFinder() const
+FAStar& cvInternalGlobals::getStepFinder(MapTypes map) const
 {
-	return *m_stepFinders[m_game ? CURRENT_MAP : MAP_EARTH];
+	return *m_stepFinders[map == NO_MAP ? (m_game ? CURRENT_MAP : MAP_EARTH) : map];
 }
 
-FAStar& cvInternalGlobals::getRouteFinder() const
+FAStar& cvInternalGlobals::getRouteFinder(MapTypes map) const
 {
-	return *m_routeFinders[m_game ? CURRENT_MAP : MAP_EARTH];
+	return *m_routeFinders[map == NO_MAP ? (m_game ? CURRENT_MAP : MAP_EARTH) : map];
 }
 
-FAStar& cvInternalGlobals::getBorderFinder() const
+FAStar& cvInternalGlobals::getBorderFinder(MapTypes map) const
 {
-	return *m_borderFinders[m_game ? CURRENT_MAP : MAP_EARTH];
+	return *m_borderFinders[map == NO_MAP ? (m_game ? CURRENT_MAP : MAP_EARTH) : map];
 }
 
-FAStar& cvInternalGlobals::getAreaFinder() const
+FAStar& cvInternalGlobals::getAreaFinder(MapTypes map) const
 {
-	return *m_areaFinders[m_game ? CURRENT_MAP : MAP_EARTH];
+	return *m_areaFinders[map == NO_MAP ? (m_game ? CURRENT_MAP : MAP_EARTH) : map];
 }
 
-FAStar& cvInternalGlobals::getPlotGroupFinder() const
+FAStar& cvInternalGlobals::getPlotGroupFinder(MapTypes map) const
 {
-	return *m_plotGroupFinders[m_game ? CURRENT_MAP : MAP_EARTH];
+	return *m_plotGroupFinders[map == NO_MAP ? (m_game ? CURRENT_MAP : MAP_EARTH) : map];
 }
 
 CvGameAI* cvInternalGlobals::getGamePointer() { return m_game; }
