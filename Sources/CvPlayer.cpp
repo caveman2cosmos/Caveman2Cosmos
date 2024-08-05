@@ -7211,8 +7211,13 @@ int CvPlayer::getProductionNeeded(BuildingTypes eBuilding) const
         totalModifier += 0.1f;
     }
 
+    iBaseCost = static_cast<int>(iBaseCost);
+
     // Apply total modifier to base cost
-    iBaseCost = static_cast<int>(iBaseCost * totalModifier);
+    if(GC.getGame().isOption(GAMEOPTION_REALISTIC_BUILDING_COST)){
+        iBaseCost = iBaseCost * totalModifier;
+    }
+
 	uint64_t iProductionNeeded = (uint64_t) 100*iBaseCost;
 
 	iProductionNeeded *= GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getHammerCostPercent();
