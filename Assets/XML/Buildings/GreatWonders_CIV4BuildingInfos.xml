@@ -21,6 +21,10 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_COSMIC_PERSPECTIVE</PrereqTech>
 			<iCost>58830</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<PrereqOrTerrain>
 				<PrereqTerrain>
 					<TerrainType>TERRAIN_PEAK</TerrainType>
@@ -55,6 +59,10 @@
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<bNukeImmune>1</bNukeImmune>
 			<iCost>1860</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<iConquestProb>100</iConquestProb>
 			<iRevIdxNational>-10</iRevIdxNational>
@@ -103,6 +111,10 @@
 				</PrereqTerrain>
 			</PrereqOrTerrain>
 			<iCost>1200</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<BonusProductionModifiers>
 				<BonusProductionModifier>
@@ -161,6 +173,10 @@
 			</PrereqInCityBuildings>
 			<ObsoleteTech>TECH_MICROPROCESSOR</ObsoleteTech>
 			<iCost>3210</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<Advisor>ADVISOR_GROWTH</Advisor>
 			<ConstructSound>AS2D_BUILD_COLOSSUS</ConstructSound>
@@ -213,6 +229,10 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_NANO_ARCHITECTURE</PrereqTech>
 			<iCost>19470</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<bWater>1</bWater>
 			<bPrereqPower>1</bPrereqPower>
 			<iMinAreaSize>10</iMinAreaSize>
@@ -246,6 +266,10 @@
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_LITERATURE</PrereqTech>
 			<iCost>1350</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -273,6 +297,10 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_TECHNOLOGICAL_SINGULARITY</PrereqTech>
 			<iCost>35430</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>50</iCommerce>
@@ -314,6 +342,10 @@
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<iHurryAngerModifier>-50</iHurryAngerModifier>
 			<iCost>1566</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<iHurryCostModifier>50</iHurryCostModifier>
 			<iConquestProb>100</iConquestProb>
 			<iGreatPeopleRateModifier>25</iGreatPeopleRateModifier>
@@ -385,6 +417,10 @@
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<bNukeImmune>1</bNukeImmune>
 			<iCost>3330</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<iConquestProb>100</iConquestProb>
 			<iDomesticGreatGeneralRateModifier>25</iDomesticGreatGeneralRateModifier>
@@ -441,6 +477,10 @@
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<bNukeImmune>1</bNukeImmune>
 			<iCost>1860</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<iConquestProb>100</iConquestProb>
 			<iDefense>25</iDefense>
@@ -507,6 +547,10 @@
 			<iMinAreaSize>10</iMinAreaSize>
 			<bNukeImmune>1</bNukeImmune>
 			<iCost>4800</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<iConquestProb>100</iConquestProb>
 			<iHappiness>-4</iHappiness>
@@ -568,6 +612,10 @@
 			<ObsoleteTech>TECH_IMPERIALISM</ObsoleteTech>
 			<ObsoletesToBuilding>BUILDING_RELIC_ALHAMBRA</ObsoletesToBuilding>
 			<iCost>2640</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -673,6 +721,10 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_ANTI_AGING_MEDICINE</PrereqTech>
 			<iCost>23850</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<iHappiness>5</iHappiness>
 			<GlobalBuildingExtraCommerces>
 				<BuildingExtraCommerce>
@@ -715,6 +767,10 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_MINORITY_RIGHTS</PrereqTech>
 			<iCost>8850</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<iGlobalHappiness>1</iGlobalHappiness>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MODERN_OFFICES</BuildingType>
@@ -737,6 +793,10 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_CLIMATE_MODELS</PrereqTech>
 			<iCost>9240</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<PrereqOrFeature>
 				<PrereqFeature>
 					<FeatureType>FEATURE_ICE</FeatureType>
@@ -783,6 +843,10 @@
 			<ObsoleteTech>TECH_PERSONAL_COMPUTERS</ObsoleteTech>
 			<ObsoletesToBuilding>BUILDING_RELIC_ANGKOR_WAT</ObsoletesToBuilding>
 			<iCost>1512</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<BonusProductionModifiers>
 				<BonusProductionModifier>
 					<BonusType>BONUS_STONE</BonusType>
@@ -887,6 +951,10 @@
 			</ReplacementBuildings>
 			<ObsoleteTech>TECH_ASTRONOMY</ObsoleteTech>
 			<iCost>1104</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<CommerceChanges>
@@ -928,6 +996,10 @@
 				<BuildingType>BUILDING_TELEPORT_BOOTH</BuildingType>
 			</PrereqOrBuildings>
 			<iCost>7080</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -979,6 +1051,10 @@
 			<StateReligion>RELIGION_ZOROASTRIANISM</StateReligion>
 			<iCitiesPrereq>8</iCitiesPrereq>
 			<iCost>1152</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -1039,6 +1115,10 @@
 			<iTeamsPrereq>3</iTeamsPrereq>
 			<ObsoleteTech>TECH_MASS_MEDIA</ObsoleteTech>
 			<iCost>1860</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -1082,6 +1162,10 @@
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<bNukeImmune>1</bNukeImmune>
 			<iCost>1680</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<iConquestProb>100</iConquestProb>
 			<iTradeRouteModifier>50</iTradeRouteModifier>
@@ -1124,6 +1208,10 @@
 			<PrereqTech>TECH_MILITARY_SCIENCE</PrereqTech>
 			<Bonus>BONUS_BRICKS</Bonus>
 			<iCost>3780</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<BonusProductionModifiers>
 				<BonusProductionModifier>
 					<BonusType>BONUS_MARBLE</BonusType>
@@ -1183,6 +1271,10 @@
 			</TechTypes>
 			<ObsoleteTech>TECH_GUNPOWDER</ObsoleteTech>
 			<iCost>1296</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<SpecialistYieldChanges>
 				<SpecialistYieldChange>
 					<SpecialistType>SPECIALIST_ENGINEER</SpecialistType>
@@ -1238,6 +1330,10 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_HYPERMAGNETICS</PrereqTech>
 			<iCost>31530</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<CommerceChanges>
 				<iCommerce>10</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -1281,6 +1377,10 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_RENEWABLE_ENERGY</PrereqTech>
 			<iCost>11550</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<PrereqOrTerrain>
 				<PrereqTerrain>
 					<TerrainType>TERRAIN_DESERT</TerrainType>
@@ -1331,6 +1431,10 @@
 			<ReligionType>RELIGION_JUDAISM</ReligionType>
 			<StateReligion>RELIGION_JUDAISM</StateReligion>
 			<iCost>1200</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<Advisor>ADVISOR_GROWTH</Advisor>
 			<ConstructSound>AS2D_BUILD_OBELISK</ConstructSound>
@@ -1380,6 +1484,10 @@
 			<iPrereqPopulation>3</iPrereqPopulation>
 			<ObsoleteTech>TECH_EDUCATION</ObsoleteTech>
 			<iCost>1404</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<BonusProductionModifiers>
 				<BonusProductionModifier>
 					<BonusType>BONUS_MARBLE</BonusType>
@@ -1440,6 +1548,10 @@
 			<iPrereqPopulation>3</iPrereqPopulation>
 			<ObsoleteTech>TECH_MILITARY_SCIENCE</ObsoleteTech>
 			<iCost>1296</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<iGreatGeneralRateModifier>50</iGreatGeneralRateModifier>
 			<iUnitUpgradePriceModifier>-50</iUnitUpgradePriceModifier>
 			<iAsset>10</iAsset>
@@ -1469,6 +1581,10 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_CHAOS_THEORY</PrereqTech>
 			<iCost>11070</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>20</iCommerce>
@@ -1505,6 +1621,10 @@
 			</PrereqBonuses>
 			<ObsoleteTech>TECH_LOGISTICS</ObsoleteTech>
 			<iCost>1296</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<GreatPeopleUnitType>UNIT_GREAT_GENERAL</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
 			<DomainFreeExperiences>
@@ -1539,6 +1659,10 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_TIME_REVERSAL</PrereqTech>
 			<iCost>141330</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<iHappiness>10</iHappiness>
 			<iHealth>10</iHealth>
 			<PrereqInCityBuildings>
@@ -1592,6 +1716,10 @@
 				<BuildingType>BUILDING_MUSEUM</BuildingType>
 			</PrereqInCityBuildings>
 			<iCost>7080</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<iHappiness>1</iHappiness>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -1678,6 +1806,10 @@
 			</PrereqAndCivics>
 			<bRequiresActiveCivics>1</bRequiresActiveCivics>
 			<iCost>1458</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<iHappiness>2</iHappiness>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -1723,6 +1855,10 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_ASTRONAUTICS</PrereqTech>
 			<iCost>8850</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>7</iCommerce>
@@ -1765,6 +1901,10 @@
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<bNukeImmune>1</bNukeImmune>
 			<iCost>4800</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<iConquestProb>100</iConquestProb>
 			<iEspionageDefense>25</iEspionageDefense>
@@ -1822,6 +1962,10 @@
 			<GreatPeopleUnitType>UNIT_MERCHANT</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<iCost>7380</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<iHappiness>-2</iHappiness>
 			<iTradeRouteModifier>50</iTradeRouteModifier>
@@ -1875,6 +2019,10 @@
 			<GreatPeopleUnitType>UNIT_ARTIST</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<iCost>6480</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<iAsset>10</iAsset>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -1951,6 +2099,10 @@
 			<GreatPeopleUnitType>UNIT_ARTIST</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<iCost>4620</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<iAsset>10</iAsset>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -2044,6 +2196,10 @@
 				<BuildingType>BUILDING_ECOSCRAPER</BuildingType>
 			</PrereqInCityBuildings>
 			<iCost>12630</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<iHappiness>1</iHappiness>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -2109,6 +2265,10 @@
 			</PrereqAndCivics>
 			<bRequiresActiveCivics>1</bRequiresActiveCivics>
 			<iCost>2460</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<iHappiness>1</iHappiness>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -2165,6 +2325,10 @@
 			<PrereqTech>TECH_AESTHETICS</PrereqTech>
 			<Bonus>BONUS_STONE</Bonus>
 			<iCost>1566</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<iConquestProb>100</iConquestProb>
 			<GreatPeopleUnitType>UNIT_ARTIST</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>4</iGreatPeopleRateChange>
@@ -2208,6 +2372,10 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_ENCRYPTION_MACHINES</PrereqTech>
 			<iCost>5940</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<ObsoleteTech>TECH_EXOCORTEX_NETWORKS</ObsoleteTech>
 			<CommerceChanges>
 				<iCommerce>-10</iCommerce>
@@ -2321,6 +2489,10 @@
 				<BuildingType>BUILDING_OCEAN_ADMINISTRATION</BuildingType>
 			</PrereqOrBuildings>
 			<iCost>3210</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<iHappiness>1</iHappiness>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -2370,6 +2542,10 @@
 			<GreatPeopleUnitType>UNIT_GREAT_SPY</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<iCost>5940</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<iRevIdxNational>40</iRevIdxNational>
 			<iAsset>10</iAsset>
@@ -2428,6 +2604,10 @@
 				<BuildingType>BUILDING_TOWNCLOCK</BuildingType>
 			</PrereqInCityBuildings>
 			<iCost>2136</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<YieldModifiers>
 				<iYield>0</iYield>
 				<iYield>20</iYield>
@@ -2479,6 +2659,10 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_NANO_ARCHITECTURE</PrereqTech>
 			<iCost>19470</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<bWater>1</bWater>
 			<iMinAreaSize>10</iMinAreaSize>
 			<CommerceChanges>
@@ -2516,6 +2700,10 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_REALITY_REPROGRAMMING</PrereqTech>
 			<iCost>172530</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -2558,6 +2746,10 @@
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<bNukeImmune>1</bNukeImmune>
 			<iCost>2208</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<iConquestProb>100</iConquestProb>
 			<iDefense>50</iDefense>
@@ -2621,6 +2813,10 @@
 			<GreatPeopleUnitType>UNIT_MERCHANT</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<iCost>2208</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<iHurryCostModifier>50</iHurryCostModifier>
 			<iConquestProb>100</iConquestProb>
 			<iHappiness>1</iHappiness>
@@ -2689,6 +2885,10 @@
 			<PrereqTech>TECH_MODERN_SPORTS</PrereqTech>
 			<iPrereqPopulation>13</iPrereqPopulation>
 			<iCost>7380</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<iHealth>1</iHealth>
 			<iHappiness>10</iHappiness>
 			<CommerceChanges>
@@ -2748,6 +2948,10 @@
 				<BuildingType>BUILDING_OPERA_HOUSE</BuildingType>
 			</PrereqInCityBuildings>
 			<iCost>4620</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -2809,6 +3013,10 @@
 			</PrereqOrTerrain>
 			<ObsoleteTech>TECH_TELEPORTATION</ObsoleteTech>
 			<iCost>5220</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<iHappiness>1</iHappiness>
 			<CommerceChanges>
 				<iCommerce>3</iCommerce>
@@ -2854,6 +3062,10 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_MEGASTRUCTURE_ENGINEERING</PrereqTech>
 			<iCost>32730</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<CommerceChanges>
 				<iCommerce>15</iCommerce>
 				<iCommerce>15</iCommerce>
@@ -2897,6 +3109,10 @@
 				<BuildingType>BUILDING_MILITARY_BASE</BuildingType>
 			</PrereqOrBuildings>
 			<iCost>3480</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<BonusProductionModifiers>
 				<BonusProductionModifier>
 					<BonusType>BONUS_STONE</BonusType>
@@ -2958,6 +3174,10 @@
 			<iPrereqPopulation>8</iPrereqPopulation>
 			<ObsoleteTech>TECH_TORTURE</ObsoleteTech>
 			<iCost>1008</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<CommerceModifiers>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -3003,6 +3223,10 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<iCost>17190</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<PrereqTech>TECH_WEAPONIZED_LASERS</PrereqTech>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -3041,6 +3265,10 @@
 				<BuildingType>BUILDING_THEATRE</BuildingType>
 			</PrereqInCityBuildings>
 			<iCost>4800</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<CommerceModifiers>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -3091,6 +3319,10 @@
 				<BuildingType>BUILDING_SKYSCRAPER</BuildingType>
 			</PrereqInCityBuildings>
 			<iCost>7380</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<iHappiness>1</iHappiness>
 			<PlotYieldChanges>
 				<PlotYieldChange>
@@ -3173,6 +3405,10 @@
 				<BuildingType>BUILDING_SKYSCRAPER</BuildingType>
 			</PrereqInCityBuildings>
 			<iCost>7380</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<iHappiness>1</iHappiness>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -3233,6 +3469,10 @@
 			<GreatPeopleUnitType>UNIT_ARTIST</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<iCost>8460</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<iAsset>10</iAsset>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -3277,6 +3517,10 @@
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<bNukeImmune>1</bNukeImmune>
 			<iCost>6780</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<iConquestProb>100</iConquestProb>
 			<iHappiness>-1</iHappiness>
@@ -3324,6 +3568,10 @@
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<bNukeImmune>1</bNukeImmune>
 			<iCost>876</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<iConquestProb>100</iConquestProb>
 			<iAsset>10</iAsset>
@@ -3401,6 +3649,10 @@
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<bNukeImmune>1</bNukeImmune>
 			<iCost>7080</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<iConquestProb>100</iConquestProb>
 			<iAsset>10</iAsset>
@@ -3493,6 +3745,10 @@
 				<BuildingType>BUILDING_RECORDING_STUDIO</BuildingType>
 			</PrereqInCityBuildings>
 			<iCost>7080</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<iHappiness>3</iHappiness>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -3546,6 +3802,10 @@
 				<BuildingType>BUILDING_HIGH_TECH_CULTURAL_ENRICHMENT</BuildingType>
 			</PrereqOrBuildings>
 			<iCost>2640</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -3592,6 +3852,10 @@
 			<iPrereqPopulation>3</iPrereqPopulation>
 			<Bonus>BONUS_AUTOMOBILES</Bonus>
 			<iCost>8850</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<iGlobalHealth>1</iGlobalHealth>
 			<iGlobalHappiness>1</iGlobalHappiness>
 			<GreatPeopleUnitType>UNIT_GREAT_ENGINEER</GreatPeopleUnitType>
@@ -3626,6 +3890,10 @@
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<bNukeImmune>1</bNukeImmune>
 			<iCost>876</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<iConquestProb>100</iConquestProb>
 			<iHealth>2</iHealth>
@@ -3676,6 +3944,10 @@
 			<GreatPeopleUnitType>UNIT_ARTIST</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<iCost>1566</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<iHurryCostModifier>50</iHurryCostModifier>
 			<iConquestProb>100</iConquestProb>
 			<iStateReligionHappiness>1</iStateReligionHappiness>
@@ -3764,6 +4036,10 @@
 				<BuildingType>BUILDING_ORDINANCE_GAMBLING_BAN</BuildingType>
 			</ReplacementBuildings>
 			<iCost>8070</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<iHappiness>3</iHappiness>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -3817,6 +4093,10 @@
 				<BuildingType>BUILDING_ACCELERATOR</BuildingType>
 			</PrereqInCityBuildings>
 			<iCost>8460</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<CommerceChanges>
 				<iCommerce>-35</iCommerce>
 				<iCommerce>10</iCommerce>
@@ -3864,6 +4144,10 @@
 				<BuildingType>BUILDING_CONFUCIAN_TEMPLE</BuildingType>
 			</PrereqInCityBuildings>
 			<iCost>1860</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -3921,6 +4205,10 @@
 			<ObsoleteTech>TECH_SATELLITES</ObsoleteTech>
 			<ObsoletesToBuilding>BUILDING_RELIC_CHEOMSEONGDAE</ObsoletesToBuilding>
 			<iCost>876</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<iHurryCostModifier>200</iHurryCostModifier>
 			<CommerceChanges>
 				<iCommerce>-5</iCommerce>
@@ -4017,6 +4305,10 @@
 			<ObsoleteTech>TECH_DIVINE_RIGHT</ObsoleteTech>
 			<ObsoletesToBuilding>BUILDING_RELIC_CHICHEN_ITZA</ObsoletesToBuilding>
 			<iCost>876</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<BonusProductionModifiers>
 				<BonusProductionModifier>
@@ -4103,6 +4395,10 @@
 			<MovieDefineTag>ART_DEF_MOVIE_CHILEHAUS</MovieDefineTag>
 			<PrereqTech>TECH_EXPRESSIONISM</PrereqTech>
 			<iCost>5220</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<iConquestProb>100</iConquestProb>
 			<CommerceChanges>
 				<iCommerce>5</iCommerce>
@@ -4147,6 +4443,10 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_MEGACITIES</PrereqTech>
 			<iCost>15750</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<YieldChanges>
 				<iYield>0</iYield>
 				<iYield>0</iYield>
@@ -4175,6 +4475,10 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_DECRYPTION_MACHINES</PrereqTech>
 			<iCost>6180</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>20</iCommerce>
@@ -4215,6 +4519,10 @@
 			</PrereqOrBuildings>
 			<ObsoleteTech>TECH_TOURNAMENTS</ObsoleteTech>
 			<iCost>834</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<CommerceChanges>
 				<iCommerce>6</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -4285,6 +4593,10 @@
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<bNukeImmune>1</bNukeImmune>
 			<iCost>708</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<iConquestProb>100</iConquestProb>
 			<iCitiesPrereq>3</iCitiesPrereq>
@@ -4330,6 +4642,10 @@
 				</PrereqBuilding>
 			</PrereqAmountBuildings>
 			<iCost>7080</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<BonusProductionModifiers>
 				<BonusProductionModifier>
 					<BonusType>BONUS_ALUMINUM_WARES</BonusType>
@@ -4386,6 +4702,10 @@
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<bNukeImmune>1</bNukeImmune>
 			<iCost>6480</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<iConquestProb>100</iConquestProb>
 			<iAsset>10</iAsset>
@@ -4494,6 +4814,10 @@
 			</PrereqOrBuildings>
 			<ObsoleteTech>TECH_ASTRONOMY</ObsoleteTech>
 			<iCost>1104</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<BonusProductionModifiers>
 				<BonusProductionModifier>
 					<BonusType>BONUS_COPPER_WARES</BonusType>
@@ -4560,6 +4884,10 @@
 			<GreatPeopleUnitType>UNIT_SCIENTIST</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<iCost>1512</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<iHurryCostModifier>50</iHurryCostModifier>
 			<iConquestProb>100</iConquestProb>
 			<iGreatPeopleRateModifier>25</iGreatPeopleRateModifier>
@@ -4649,6 +4977,10 @@
 			<bForceTeamVoteEligible>1</bForceTeamVoteEligible>
 			<bNukeImmune>1</bNukeImmune>
 			<iCost>3480</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<iConquestProb>100</iConquestProb>
 			<iTeamsPrereq>3</iTeamsPrereq>
@@ -4701,6 +5033,10 @@
 			</PrereqInCityBuildings>
 			<ObsoleteTech>TECH_RADAR</ObsoleteTech>
 			<iCost>2550</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<CommerceChanges>
 				<iCommerce>-30</iCommerce>
 				<iCommerce>10</iCommerce>
@@ -4785,6 +5121,10 @@
 				</PrereqFeature>
 			</PrereqOrFeature>
 			<iCost>7680</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<iHappiness>1</iHappiness>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -4825,6 +5165,10 @@
 			<PrereqTech>TECH_RADIO</PrereqTech>
 			<iPrereqPopulation>3</iPrereqPopulation>
 			<iCost>5220</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -4871,6 +5215,10 @@
 			<ReligionType>RELIGION_CHRISTIANITY</ReligionType>
 			<StateReligion>RELIGION_CHRISTIANITY</StateReligion>
 			<iCost>1860</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<YieldModifiers>
 				<iYield>0</iYield>
@@ -4933,6 +5281,10 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<iCost>32730</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -4960,6 +5312,10 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_NANO_ARCHITECTURE</PrereqTech>
 			<iCost>19470</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<CommerceChanges>
 				<iCommerce>7</iCommerce>
 				<iCommerce>7</iCommerce>
@@ -4998,6 +5354,10 @@
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<bGoldenAge>1</bGoldenAge>
 			<iCost>4800</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<iHappiness>2</iHappiness>
 			<iAsset>10</iAsset>
@@ -5046,6 +5406,10 @@
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<bNukeImmune>1</bNukeImmune>
 			<iCost>1200</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<iConquestProb>100</iConquestProb>
 			<iGreatGeneralRateModifier>50</iGreatGeneralRateModifier>
@@ -5077,6 +5441,10 @@
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<bNukeImmune>1</bNukeImmune>
 			<iCost>1200</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<iConquestProb>100</iConquestProb>
 			<iGreatGeneralRateModifier>50</iGreatGeneralRateModifier>
@@ -5120,6 +5488,10 @@
 			<MovieDefineTag>ART_DEF_MOVIE_DALI_THEATRE</MovieDefineTag>
 			<PrereqTech>TECH_SURREALISM</PrereqTech>
 			<iCost>7080</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<iConquestProb>100</iConquestProb>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -5161,6 +5533,10 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_COMPREHENSIVE_CYBERNETICS</PrereqTech>
 			<iCost>35430</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<YieldChanges>
 				<iYield>10</iYield>
 				<iYield>10</iYield>
@@ -5189,6 +5565,10 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_SATELLITES</PrereqTech>
 			<iCost>8460</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<CommerceChanges>
 				<iCommerce>-10</iCommerce>
 				<iCommerce>20</iCommerce>
@@ -5266,6 +5646,10 @@
 				<BuildingType>BUILDING_DEEP_SEA_LAB</BuildingType>
 			</PrereqInCityBuildings>
 			<iCost>8070</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>10</iCommerce>
@@ -5296,6 +5680,10 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_MEGACITIES</PrereqTech>
 			<iCost>15750</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<CommerceChanges>
 				<iCommerce>3</iCommerce>
 			</CommerceChanges>
@@ -5333,6 +5721,10 @@
 			<GreatPeopleUnitType>UNIT_SCIENTIST</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<iCost>2640</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<iHurryCostModifier>50</iHurryCostModifier>
 			<iConquestProb>100</iConquestProb>
 			<iGreatPeopleRateModifier>10</iGreatPeopleRateModifier>
@@ -5407,6 +5799,10 @@
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<bNukeImmune>1</bNukeImmune>
 			<iCost>84930</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<iConquestProb>100</iConquestProb>
 			<iMaxLatitude>30</iMaxLatitude>
@@ -5487,6 +5883,10 @@
 				<BonusType>BONUS_CEMENT</BonusType>
 			</PrereqBonuses>
 			<iCost>5220</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<FreeBuilding>BUILDING_EFFECT_DISNEYLAND</FreeBuilding>
 			<iHappinessPercentPerPopulation>20</iHappinessPercentPerPopulation>
@@ -5546,6 +5946,10 @@
 				</PrereqTerrain>
 			</PrereqOrTerrain>
 			<iCost>2280</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<BonusProductionModifiers>
 				<BonusProductionModifier>
 					<BonusType>BONUS_STONE</BonusType>
@@ -5739,6 +6143,10 @@
 				<BuildingType>BUILDING_REPET</BuildingType>
 			</PrereqOrBuildings>
 			<iCost>3210</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<iHappiness>1</iHappiness>
 			<CommerceChanges>
 				<iCommerce>1</iCommerce>
@@ -5781,6 +6189,10 @@
 			<PrereqTech>TECH_SPECIES_UPLIFTING</PrereqTech>
 			<RawVicinityBonus>BONUS_WHALE</RawVicinityBonus>
 			<iCost>30330</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -5817,6 +6229,10 @@
 			<bTeamShare>1</bTeamShare>
 			<bNukeImmune>1</bNukeImmune>
 			<iCost>1056</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<iConquestProb>100</iConquestProb>
 			<iHappiness>2</iHappiness>
@@ -5894,6 +6310,10 @@
 			</PrereqAmountBuildings>
 			<ObsoleteTech>TECH_COMPULSORY_EDUCATION</ObsoleteTech>
 			<iCost>2208</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<CommerceModifiers>
 				<iCommerce>0</iCommerce>
 				<iCommerce>15</iCommerce>
@@ -5955,6 +6375,10 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_NANO_ARCHITECTURE</PrereqTech>
 			<iCost>19470</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<YieldChanges>
 				<iYield>0</iYield>
 				<iYield>0</iYield>
@@ -5992,6 +6416,10 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_MEGACITIES</PrereqTech>
 			<iCost>15750</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<CommerceChanges>
 				<iCommerce>20</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -6028,6 +6456,10 @@
 				<BuildingType>BUILDING_SUBTERRANEAN_LAB</BuildingType>
 			</PrereqInCityBuildings>
 			<iCost>41430</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>10</iCommerce>
@@ -6120,6 +6552,10 @@
 				<BuildingType>BUILDING_GRAND_MARINE_FESTIVAL</BuildingType>
 			</PrereqNotInCityBuildings>
 			<iCost>516</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<iHappiness>3</iHappiness>
 			<YieldChanges>
 				<iYield>-2</iYield>
@@ -6281,6 +6717,10 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_PLANETARY_MEGASTRUCTURES</PrereqTech>
 			<iCost>46830</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<GlobalBuildingExtraCommerces>
 				<BuildingExtraCommerce>
 					<BuildingType>BUILDING_ARCOLOGY</BuildingType>
@@ -6339,6 +6779,10 @@
 			<ObsoleteTech>TECH_ECONOMICS</ObsoleteTech>
 			<ObsoletesToBuilding>BUILDING_RELIC_EDINBURGH_CASTLE</ObsoletesToBuilding>
 			<iCost>1800</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -6431,6 +6875,10 @@
 			<iPrereqPopulation>7</iPrereqPopulation>
 			<ObsoleteTech>TECH_MAGNETIC_LEVITATION</ObsoleteTech>
 			<iCost>4800</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<CommerceModifiers>
 				<iCommerce>0</iCommerce>
 				<iCommerce>25</iCommerce>
@@ -6498,6 +6946,10 @@
 				<BuildingType>BUILDING_METALS_MEGACOMPLEX</BuildingType>
 			</PrereqOrBuildings>
 			<iCost>5220</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -6558,6 +7010,10 @@
 			</PrereqInCityBuildings>
 			<ObsoleteTech>TECH_SUPERSTRING_THEORY</ObsoleteTech>
 			<iCost>5940</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<CommerceChanges>
 				<iCommerce>-50</iCommerce>
 				<iCommerce>22</iCommerce>
@@ -6619,6 +7075,10 @@
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<bNukeImmune>1</bNukeImmune>
 			<iCost>1800</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<iConquestProb>100</iConquestProb>
 			<iAsset>10</iAsset>
@@ -6675,6 +7135,10 @@
 			<iMinAreaSize>10</iMinAreaSize>
 			<bNukeImmune>1</bNukeImmune>
 			<iCost>3780</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<iConquestProb>100</iConquestProb>
 			<iAsset>10</iAsset>
@@ -6729,6 +7193,10 @@
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<bNukeImmune>1</bNukeImmune>
 			<iCost>6180</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<iConquestProb>100</iConquestProb>
 			<iTradeRouteModifier>50</iTradeRouteModifier>
@@ -6780,6 +7248,10 @@
 				<BuildingType>BUILDING_ANIMAL_PRESERVE</BuildingType>
 			</PrereqOrBuildings>
 			<iCost>408</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<CommerceChanges>
 				<iCommerce>1</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -6818,6 +7290,10 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_GALACTIC_FEDERATION</PrereqTech>
 			<iCost>75930</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>10</iCommerce>
@@ -6875,6 +7351,10 @@
 			<bWater>1</bWater>
 			<iMinAreaSize>10</iMinAreaSize>
 			<iCost>1566</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<iHurryCostModifier>50</iHurryCostModifier>
 			<iConquestProb>100</iConquestProb>
 			<iHappiness>1</iHappiness>
@@ -6954,6 +7434,10 @@
 			<bGovernmentCenter>1</bGovernmentCenter>
 			<bNukeImmune>1</bNukeImmune>
 			<iCost>2640</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<iConquestProb>100</iConquestProb>
 			<iOccupationTimeModifier>50</iOccupationTimeModifier>
@@ -7009,6 +7493,10 @@
 			<iPrereqPopulation>7</iPrereqPopulation>
 			<PrereqTech>TECH_AMPLIFIED_WAVELENGTHS</PrereqTech>
 			<iCost>24870</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>20</iCommerce>
@@ -7067,6 +7555,10 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_EXOPLANET_DISCOVERY</PrereqTech>
 			<iCost>11550</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<CommerceChanges>
 				<iCommerce>-5</iCommerce>
 				<iCommerce>35</iCommerce>
@@ -7102,6 +7594,10 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_PHOTONIC_SATELLITES</PrereqTech>
 			<iCost>38430</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<CommerceChanges>
 				<iCommerce>-5</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -7177,6 +7673,10 @@
 			</PrereqOrBuildings>
 			<ObsoleteTech>TECH_ARCHEOLOGY</ObsoleteTech>
 			<iCost>1800</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -7248,6 +7748,10 @@
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<bNukeImmune>1</bNukeImmune>
 			<iCost>1296</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<iConquestProb>100</iConquestProb>
 			<iHappiness>1</iHappiness>
@@ -7292,6 +7796,10 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_ABSTRACT_MATHEMATICS</PrereqTech>
 			<iCost>5700</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>20</iCommerce>
@@ -7326,6 +7834,10 @@
 			<GreatPeopleUnitType>UNIT_ARTIST</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>3</iGreatPeopleRateChange>
 			<iCost>1404</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<iHurryCostModifier>50</iHurryCostModifier>
 			<iConquestProb>100</iConquestProb>
 			<iHappiness>1</iHappiness>
@@ -7412,6 +7924,10 @@
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<bNukeImmune>1</bNukeImmune>
 			<iCost>2280</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<iConquestProb>100</iConquestProb>
 			<iAsset>10</iAsset>
@@ -7513,6 +8029,10 @@
 				<BuildingType>BUILDING_GRAND_MARINE_FESTIVAL</BuildingType>
 			</PrereqNotInCityBuildings>
 			<iCost>516</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<iHappiness>3</iHappiness>
 			<YieldChanges>
 				<iYield>-2</iYield>
@@ -7688,6 +8208,10 @@
 			</PrereqOrBuildings>
 			<ObsoleteTech>TECH_MODERN_SPORTS</ObsoleteTech>
 			<iCost>1404</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<BonusProductionModifiers>
 				<BonusProductionModifier>
 					<BonusType>BONUS_STONE</BonusType>
@@ -7775,6 +8299,10 @@
 				<BuildingType>BUILDING_BANK</BuildingType>
 			</PrereqInCityBuildings>
 			<iCost>3480</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -7824,6 +8352,10 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_COMPUTER_SCIENCE</PrereqTech>
 			<iCost>7080</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>20</iCommerce>
@@ -7857,6 +8389,10 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_MANUFACTURING</PrereqTech>
 			<iCost>7080</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>10</iCommerce>
@@ -7937,6 +8473,10 @@
 			</PrereqAndCivics>
 			<bRequiresActiveCivics>1</bRequiresActiveCivics>
 			<iCost>2208</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<CommerceChanges>
 				<iCommerce>-10</iCommerce>
 				<iCommerce>5</iCommerce>
@@ -7991,6 +8531,10 @@
 				<Bonus>BONUS_WOOD</Bonus>
 			</PrereqBonuses>
 			<iCost>1350</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<iHurryCostModifier>50</iHurryCostModifier>
 			<iConquestProb>100</iConquestProb>
 			<HealUnitCombatTypes>
@@ -8053,6 +8597,10 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_PLANETARY_DEFENSES</PrereqTech>
 			<iCost>41430</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<iUnitUpgradePriceModifier>-5</iUnitUpgradePriceModifier>
 			<iGlobalHealth>1</iGlobalHealth>
 			<PrereqInCityBuildings>
@@ -8081,6 +8629,10 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_PROTOTYPED_PATHOGENS</PrereqTech>
 			<iCost>19470</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<bWater>1</bWater>
 			<iMinAreaSize>10</iMinAreaSize>
 			<CommerceChanges>
@@ -8130,6 +8682,10 @@
 			<iPrereqPopulation>13</iPrereqPopulation>
 			<Bonus>BONUS_CEMENT</Bonus>
 			<iCost>4800</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -8190,6 +8746,10 @@
 			</ReplacementBuildings>
 			<ObsoleteTech>TECH_CLOCKWORKS</ObsoleteTech>
 			<iCost>1056</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -8243,6 +8803,10 @@
 				</PrereqBuilding>
 			</PrereqAmountBuildings>
 			<iCost>13830</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<CommerceChanges>
 				<iCommerce>-5</iCommerce>
 			</CommerceChanges>
@@ -8322,6 +8886,10 @@
 				<BuildingType>BUILDING_ART_GALLERY</BuildingType>
 			</PrereqInCityBuildings>
 			<iCost>6480</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<iHappiness>3</iHappiness>
 			<CommerceChanges>
 				<iCommerce>10</iCommerce>
@@ -8363,6 +8931,10 @@
 			<bRiver>1</bRiver>
 			<bNukeImmune>1</bNukeImmune>
 			<iCost>4800</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<iConquestProb>100</iConquestProb>
 			<iAsset>10</iAsset>
@@ -8435,6 +9007,10 @@
 				<BuildingType>BUILDING_STOCK_MARKET</BuildingType>
 			</PrereqInCityBuildings>
 			<iCost>21150</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<iGlobalTradeRoutes>3</iGlobalTradeRoutes>
 			<iAsset>7</iAsset>
 			<Flavors>
@@ -8467,6 +9043,10 @@
 				<BuildingType>BUILDING_THEATRE</BuildingType>
 			</PrereqInCityBuildings>
 			<iCost>2550</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<iHurryCostModifier>200</iHurryCostModifier>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<CommerceChanges>
@@ -8552,6 +9132,10 @@
 			</PrereqOrBuildings>
 			<ObsoleteTech>TECH_MEDICINE</ObsoleteTech>
 			<iCost>624</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -8586,6 +9170,10 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_ABSTRACT_MATHEMATICS</PrereqTech>
 			<iCost>5700</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>25</iCommerce>
@@ -8627,6 +9215,10 @@
 			</PrereqOrBuildings>
 			<ObsoleteTech>TECH_TELEPORTATION</ObsoleteTech>
 			<iCost>4980</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<iHappiness>1</iHappiness>
 			<CommerceChanges>
 				<iCommerce>-20</iCommerce>
@@ -8669,6 +9261,10 @@
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<bNukeImmune>1</bNukeImmune>
 			<iCost>3930</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<iConquestProb>100</iConquestProb>
 			<iWorkerSpeedModifier>25</iWorkerSpeedModifier>
@@ -8748,6 +9344,10 @@
 				<BuildingType>BUILDING_MOVIE_THEATRE</BuildingType>
 			</PrereqInCityBuildings>
 			<iCost>4980</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<iHappiness>3</iHappiness>
 			<CommerceChanges>
 				<iCommerce>10</iCommerce>
@@ -8794,6 +9394,10 @@
 			<PrereqTech>TECH_POTTERY</PrereqTech>
 			<ObsoleteTech>TECH_CIVIL_SERVICE</ObsoleteTech>
 			<iCost>750</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<BonusProductionModifiers>
 				<BonusProductionModifier>
 					<BonusType>BONUS_STONE</BonusType>
@@ -8857,6 +9461,10 @@
 				<BuildingType>BUILDING_POWER_LINES</BuildingType>
 			</PrereqInCityBuildings>
 			<iCost>4800</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<CommerceChanges>
 				<iCommerce>-5</iCommerce>
 			</CommerceChanges>
@@ -8924,6 +9532,10 @@
 			</PrereqOrCivics>
 			<bRequiresActiveCivics>1</bRequiresActiveCivics>
 			<iCost>12030</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<SpecialistCounts>
 				<SpecialistCount>
 					<SpecialistType>SPECIALIST_SPY</SpecialistType>
@@ -8958,6 +9570,10 @@
 			<PrereqTech>TECH_CALENDAR</PrereqTech>
 			<ObsoleteTech>TECH_GUNPOWDER</ObsoleteTech>
 			<iCost>1404</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<BonusProductionModifiers>
 				<BonusProductionModifier>
 					<BonusType>BONUS_STONE</BonusType>
@@ -9016,6 +9632,10 @@
 			</PrereqInCityBuildings>
 			<ObsoleteTech>TECH_SCIENTIFIC_METHOD</ObsoleteTech>
 			<iCost>1350</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<BonusProductionModifiers>
 				<BonusProductionModifier>
 					<BonusType>BONUS_MARBLE</BonusType>
@@ -9087,6 +9707,10 @@
 			</PrereqOrBuildings>
 			<ObsoleteTech>TECH_CORPORATION</ObsoleteTech>
 			<iCost>1152</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -9153,6 +9777,10 @@
 				<Bonus>BONUS_BRICKS</Bonus>
 			</PrereqBonuses>
 			<iCost>960</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<BonusProductionModifiers>
 				<BonusProductionModifier>
 					<BonusType>BONUS_STONE</BonusType>
@@ -9208,6 +9836,10 @@
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<iHurryAngerModifier>-100</iHurryAngerModifier>
 			<iCost>1458</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<iHurryCostModifier>50</iHurryCostModifier>
 			<iGreatPeopleRateModifier>10</iGreatPeopleRateModifier>
 			<iStateReligionHappiness>2</iStateReligionHappiness>
@@ -9287,6 +9919,10 @@
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<iHurryAngerModifier>-100</iHurryAngerModifier>
 			<iCost>1458</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<iHurryCostModifier>50</iHurryCostModifier>
 			<iConquestProb>100</iConquestProb>
 			<iGreatPeopleRateModifier>10</iGreatPeopleRateModifier>
@@ -9368,6 +10004,10 @@
 			</PrereqBonuses>
 			<ObsoleteTech>TECH_ARCHITECTURE</ObsoleteTech>
 			<iCost>960</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<BonusProductionModifiers>
 				<BonusProductionModifier>
 					<BonusType>BONUS_STONE</BonusType>
@@ -9419,6 +10059,10 @@
 			<PrereqTech>TECH_MATHEMATICS</PrereqTech>
 			<iPrereqPopulation>3</iPrereqPopulation>
 			<iCost>1296</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<BonusProductionModifiers>
 				<BonusProductionModifier>
 					<BonusType>BONUS_STONE</BonusType>
@@ -9486,6 +10130,10 @@
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<bNukeImmune>1</bNukeImmune>
 			<iCost>1404</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<iConquestProb>100</iConquestProb>
 			<iAsset>12</iAsset>
@@ -9538,6 +10186,10 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_ENVIRONMENTAL_ECONOMICS</PrereqTech>
 			<iCost>25890</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<PrereqOrTerrain>
 				<PrereqTerrain>
 					<TerrainType>TERRAIN_DESERT</TerrainType>
@@ -9583,6 +10235,10 @@
 			<PrereqTech>TECH_CONSTRUCTION</PrereqTech>
 			<Bonus>BONUS_BRICKS</Bonus>
 			<iCost>1404</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<BonusProductionModifiers>
 				<BonusProductionModifier>
@@ -9651,6 +10307,10 @@
 			<iPrereqPopulation>3</iPrereqPopulation>
 			<ObsoleteTech>TECH_STEAM_POWER</ObsoleteTech>
 			<iCost>1800</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<BonusProductionModifiers>
 				<BonusProductionModifier>
 					<BonusType>BONUS_MARBLE</BonusType>
@@ -9707,6 +10367,10 @@
 			<Bonus>BONUS_STONE</Bonus>
 			<FreeBuilding>BUILDING_COURTHOUSE</FreeBuilding>
 			<iCost>1008</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<iHurryCostModifier>50</iHurryCostModifier>
 			<iConquestProb>100</iConquestProb>
 			<iHappiness>1</iHappiness>
@@ -9768,6 +10432,10 @@
 			</TechTypes>
 			<iPrereqPopulation>3</iPrereqPopulation>
 			<iCost>1008</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<BonusProductionModifiers>
 				<BonusProductionModifier>
 					<BonusType>BONUS_STONE</BonusType>
@@ -9844,6 +10512,10 @@
 				<BuildingType>BUILDING_MANUFACTURING_DISTRICT</BuildingType>
 			</PrereqOrBuildings>
 			<iCost>1008</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<iHappiness>1</iHappiness>
 			<ExtraFreeBonuses>
 				<ExtraFreeBonus>
@@ -9899,6 +10571,10 @@
 				<Bonus>BONUS_WOOD</Bonus>
 			</PrereqBonuses>
 			<iCost>1350</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<iHurryCostModifier>50</iHurryCostModifier>
 			<iConquestProb>100</iConquestProb>
 			<iStateReligionHappiness>1</iStateReligionHappiness>
@@ -9960,6 +10636,10 @@
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<iHurryAngerModifier>-50</iHurryAngerModifier>
 			<iCost>1920</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<iHurryCostModifier>50</iHurryCostModifier>
 			<iConquestProb>100</iConquestProb>
 			<iStateReligionHappiness>2</iStateReligionHappiness>
@@ -10014,6 +10694,10 @@
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<bNukeImmune>1</bNukeImmune>
 			<iCost>4800</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<iConquestProb>100</iConquestProb>
 			<iAsset>10</iAsset>
@@ -10063,6 +10747,10 @@
 			<PrereqTech>TECH_NATIONALISM</PrereqTech>
 			<iPrereqPopulation>3</iPrereqPopulation>
 			<iCost>3330</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<BonusProductionModifiers>
 				<BonusProductionModifier>
 					<BonusType>BONUS_MARBLE</BonusType>
@@ -10109,6 +10797,10 @@
 			</PrereqBonuses>
 			<ObsoleteTech>TECH_STEAM_POWER</ObsoleteTech>
 			<iCost>1680</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<YieldChanges>
@@ -10154,6 +10846,10 @@
 			<GreatPeopleUnitType>UNIT_PROPHET</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<iCost>624</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<iStateReligionHappiness>1</iStateReligionHappiness>
 			<iAsset>10</iAsset>
@@ -10223,6 +10919,10 @@
 			</PrereqOrBuildings>
 			<ObsoleteTech>TECH_MANUFACTURING</ObsoleteTech>
 			<iCost>1800</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -10275,6 +10975,10 @@
 				<BuildingType>BUILDING_HINDU_MANDIR</BuildingType>
 			</PrereqInCityBuildings>
 			<iCost>2208</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<BonusProductionModifiers>
 				<BonusProductionModifier>
 					<BonusType>BONUS_STONE</BonusType>
@@ -10356,6 +11060,10 @@
 			<fVisibilityPriority>100</fVisibilityPriority>
 			<PrereqTech>TECH_ANCIENT_MEDICINE</PrereqTech>
 			<iCost>1458</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -10420,6 +11128,10 @@
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<bNukeImmune>1</bNukeImmune>
 			<iCost>7380</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<iConquestProb>100</iConquestProb>
 			<iAsset>10</iAsset>
@@ -10496,6 +11208,10 @@
 				<BuildingType>BUILDING_MOVIE_STUDIO</BuildingType>
 			</PrereqInCityBuildings>
 			<iCost>4980</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<CommerceModifiers>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -10548,6 +11264,10 @@
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<bNukeImmune>1</bNukeImmune>
 			<iCost>1800</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<iConquestProb>100</iConquestProb>
 			<iAsset>10</iAsset>
@@ -10609,6 +11329,10 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_MEGACITIES</PrereqTech>
 			<iCost>15750</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<CommerceChanges>
 				<iCommerce>10</iCommerce>
 			</CommerceChanges>
@@ -10639,6 +11363,10 @@
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_REPRESENTATIVE_DEMOCRACY</PrereqTech>
 			<iCost>3480</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -10688,6 +11416,10 @@
 				<BuildingType>BUILDING_MAJOR_LEAGUE_STADIUM</BuildingType>
 			</PrereqInCityBuildings>
 			<iCost>7380</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<iHealth>1</iHealth>
 			<iHappiness>10</iHappiness>
 			<CommerceChanges>
@@ -10723,6 +11455,10 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_BATTLEFIELD_SPORTS</PrereqTech>
 			<iCost>26910</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<CommerceChanges>
 				<iCommerce>10</iCommerce>
 			</CommerceChanges>
@@ -10748,6 +11484,10 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_SUPERSONIC_RAILS</PrereqTech>
 			<iCost>24870</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<FreeBuilding>BUILDING_VACTRAIN_TERMINAL</FreeBuilding>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MEGATOWER_OFFICE_LEVEL</BuildingType>
@@ -10785,6 +11525,10 @@
 				</PrereqTerrain>
 			</PrereqOrTerrain>
 			<iCost>7680</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<CommerceModifiers>
 				<iCommerce>50</iCommerce>
 			</CommerceModifiers>
@@ -10831,6 +11575,10 @@
 				<BuildingType>BUILDING_COURTHOUSE</BuildingType>
 			</PrereqInCityBuildings>
 			<iCost>3480</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<CommerceChanges>
 				<iCommerce>2</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -10865,6 +11613,10 @@
 			<PrereqTech>TECH_NAVAL_CANNON</PrereqTech>
 			<ObsoleteTech>TECH_LOGISTICS</ObsoleteTech>
 			<iCost>2640</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<SpecialistExtraCommerces>
 				<iCommerce>1</iCommerce>
 			</SpecialistExtraCommerces>
@@ -10904,6 +11656,10 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_PLANETARY_ECONOMICS</PrereqTech>
 			<iCost>26910</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<YieldChanges>
 				<iYield>0</iYield>
 				<iYield>0</iYield>
@@ -10950,6 +11706,10 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_FLASH_MEMORY</PrereqTech>
 			<iCost>12630</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<GlobalBuildingExtraCommerces>
 				<BuildingExtraCommerce>
 					<BuildingType>BUILDING_COMPUTER_NETWORK</BuildingType>
@@ -11005,6 +11765,10 @@
 			</PrereqBonuses>
 			<ObsoleteTech>TECH_RIFLING</ObsoleteTech>
 			<iCost>1566</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<BonusProductionModifiers>
 				<BonusProductionModifier>
 					<BonusType>BONUS_STONE</BonusType>
@@ -11083,6 +11847,10 @@
 			<iMinAreaSize>10</iMinAreaSize>
 			<bNukeImmune>1</bNukeImmune>
 			<iCost>1566</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<iConquestProb>100</iConquestProb>
 			<iTradeRoutes>1</iTradeRoutes>
 			<iAsset>14</iAsset>
@@ -11137,6 +11905,10 @@
 				<BuildingType>BUILDING_MASK_CARVER</BuildingType>
 			</PrereqOrBuildings>
 			<iCost>300</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<CommerceChanges>
 				<iCommerce>1</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -11175,6 +11947,10 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_MEGACITIES</PrereqTech>
 			<iCost>15750</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<CommerceChanges>
 				<iCommerce>8</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -11213,6 +11989,10 @@
 			<ReligionType>RELIGION_JUDAISM</ReligionType>
 			<StateReligion>RELIGION_JUDAISM</StateReligion>
 			<iCost>1200</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
@@ -11290,6 +12070,10 @@
 			<iPrereqPopulation>3</iPrereqPopulation>
 			<ObsoleteTech>TECH_AUTOMATIC_WEAPONS</ObsoleteTech>
 			<iCost>2280</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<BonusProductionModifiers>
 				<BonusProductionModifier>
 					<BonusType>BONUS_STONE</BonusType>
@@ -11359,6 +12143,10 @@
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<bNukeImmune>1</bNukeImmune>
 			<iCost>4620</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<iConquestProb>100</iConquestProb>
 			<iHappiness>2</iHappiness>
@@ -11438,6 +12226,10 @@
 			</PrereqInCityBuildings>
 			<ObsoleteTech>TECH_COMPUTER_NETWORKS</ObsoleteTech>
 			<iCost>2970</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<iHappiness>3</iHappiness>
 			<CommerceChanges>
 				<iCommerce>-10</iCommerce>
@@ -11483,6 +12275,10 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_MARINE_ARCHITECTURE</PrereqTech>
 			<iCost>17190</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<bWater>1</bWater>
 			<iMinAreaSize>10</iMinAreaSize>
 			<CommerceChanges>
@@ -11536,6 +12332,10 @@
 				<BuildingType>BUILDING_MODERN_WATERWORKS</BuildingType>
 			</PrereqOrBuildings>
 			<iCost>1512</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<iHealth>1</iHealth>
 			<YieldChanges>
 				<iYield>2</iYield>
@@ -11593,6 +12393,10 @@
 				<BuildingType>BUILDING_SKYSCRAPER</BuildingType>
 			</PrereqInCityBuildings>
 			<iCost>7380</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<iHappiness>1</iHappiness>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -11654,6 +12458,10 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_MEGACITIES</PrereqTech>
 			<iCost>15750</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<CommerceChanges>
 				<iCommerce>5</iCommerce>
 				<iCommerce>15</iCommerce>
@@ -11688,6 +12496,10 @@
 			<ReligionType>RELIGION_BUDDHISM</ReligionType>
 			<StateReligion>RELIGION_BUDDHISM</StateReligion>
 			<iCost>1566</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -11752,6 +12564,10 @@
 			<GreatPeopleUnitType>UNIT_GREAT_ENGINEER</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<iCost>1800</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<iDefense>75</iDefense>
 			<iAsset>10</iAsset>
@@ -11802,6 +12618,10 @@
 			<iPrereqPopulation>7</iPrereqPopulation>
 			<ObsoleteTech>TECH_FIBER_OPTICS</ObsoleteTech>
 			<iCost>5940</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<BonusProductionModifiers>
 				<BonusProductionModifier>
 					<BonusType>BONUS_STONE</BonusType>
@@ -11855,6 +12675,10 @@
 				<BuildingType>BUILDING_MEAT_INDUSTRY_CONGLOMERATE</BuildingType>
 			</PrereqOrBuildings>
 			<iCost>876</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<BonusProductionModifiers>
 				<BonusProductionModifier>
 					<BonusType>BONUS_STONE</BonusType>
@@ -11917,6 +12741,10 @@
 			</PrereqOrBuildings>
 			<ObsoleteTech>TECH_MASS_MEDIA</ObsoleteTech>
 			<iCost>270</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<BonusProductionModifiers>
 				<BonusProductionModifier>
@@ -11974,6 +12802,10 @@
 			<PrereqTech>TECH_HYDRAULIC_MINING</PrereqTech>
 			<ObsoleteTech>TECH_NITROGLYCERIN</ObsoleteTech>
 			<iCost>1152</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<iConquestProb>100</iConquestProb>
 			<YieldChanges>
 				<iYield>0</iYield>
@@ -12020,6 +12852,10 @@
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<bNukeImmune>1</bNukeImmune>
 			<iCost>8070</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<iConquestProb>100</iConquestProb>
 			<iAsset>10</iAsset>
@@ -12101,6 +12937,10 @@
 				<BuildingType>BUILDING_BUDDHIST_TEMPLE</BuildingType>
 			</PrereqOrBuildings>
 			<iCost>5700</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -12167,6 +13007,10 @@
 				<BuildingType>BUILDING_MUSEUM</BuildingType>
 			</PrereqInCityBuildings>
 			<iCost>3330</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<iHappiness>1</iHappiness>
 			<CommerceChanges>
 				<iCommerce>3</iCommerce>
@@ -12223,6 +13067,10 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_ORGANIC_CITIES</PrereqTech>
 			<iCost>35430</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<YieldChanges>
 				<iYield>20</iYield>
 			</YieldChanges>
@@ -12275,6 +13123,10 @@
 			<iPrereqPopulation>7</iPrereqPopulation>
 			<ObsoleteTech>TECH_THERMODYNAMICS</ObsoleteTech>
 			<iCost>2064</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<CommerceModifiers>
 				<iCommerce>0</iCommerce>
 				<iCommerce>25</iCommerce>
@@ -12343,6 +13195,10 @@
 			</PrereqBonuses>
 			<iHurryAngerModifier>-50</iHurryAngerModifier>
 			<iCost>1350</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<iHurryCostModifier>50</iHurryCostModifier>
 			<iConquestProb>100</iConquestProb>
 			<iStateReligionHappiness>1</iStateReligionHappiness>
@@ -12397,6 +13253,10 @@
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<bNukeImmune>1</bNukeImmune>
 			<iCost>7680</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<iConquestProb>100</iConquestProb>
 			<iHappiness>2</iHappiness>
@@ -12457,6 +13317,10 @@
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<bNukeImmune>1</bNukeImmune>
 			<iCost>5220</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<iHurryCostModifier>200</iHurryCostModifier>
 			<iConquestProb>100</iConquestProb>
 			<iStateReligionHappiness>2</iStateReligionHappiness>
@@ -12505,6 +13369,10 @@
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_SCIENTIFIC_METHOD</PrereqTech>
 			<iCost>2850</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<CommerceModifiers>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -12596,6 +13464,10 @@
 				<BuildingType>BUILDING_ORDINANCE_GAMBLING_BAN</BuildingType>
 			</ReplacementBuildings>
 			<iCost>8070</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<iHappiness>3</iHappiness>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -12663,6 +13535,10 @@
 			<bTeamShare>1</bTeamShare>
 			<bNukeImmune>1</bNukeImmune>
 			<iCost>2208</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<iConquestProb>100</iConquestProb>
 			<iStateReligionHappiness>2</iStateReligionHappiness>
@@ -12734,6 +13610,10 @@
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<bNukeImmune>1</bNukeImmune>
 			<iCost>6180</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<iConquestProb>100</iConquestProb>
 			<iAsset>10</iAsset>
@@ -12867,6 +13747,10 @@
 			</PrereqOrBuildings>
 			<ObsoleteTech>TECH_COMBUSTION</ObsoleteTech>
 			<iCost>2640</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -12927,6 +13811,10 @@
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<bNukeImmune>1</bNukeImmune>
 			<iCost>5700</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<iConquestProb>100</iConquestProb>
 			<iAsset>10</iAsset>
@@ -12954,6 +13842,10 @@
 			<iPrereqPopulation>3</iPrereqPopulation>
 			<ObsoleteTech>TECH_COMMUNISM</ObsoleteTech>
 			<iCost>2280</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -13082,6 +13974,10 @@
 				<BuildingType>BUILDING_GRAND_FIRE_FESTIVAL</BuildingType>
 			</PrereqNotInCityBuildings>
 			<iCost>516</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<iHappiness>3</iHappiness>
 			<YieldChanges>
 				<iYield>-2</iYield>
@@ -13242,6 +14138,10 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_ECOLOGICAL_ENGINEERING</PrereqTech>
 			<iCost>12630</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<PrereqOrTerrain>
 				<PrereqTerrain>
 					<TerrainType>TERRAIN_DESERT</TerrainType>
@@ -13292,6 +14192,10 @@
 			<bTeamShare>1</bTeamShare>
 			<bNukeImmune>1</bNukeImmune>
 			<iCost>1860</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<iConquestProb>100</iConquestProb>
 			<iMaintenanceModifier>-25</iMaintenanceModifier>
@@ -13334,6 +14238,10 @@
 			</PrereqBonuses>
 			<ObsoleteTech>TECH_ASTRONOMY</ObsoleteTech>
 			<iCost>624</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<iHappiness>1</iHappiness>
@@ -13415,6 +14323,10 @@
 				</And>
 			</ConstructCondition>
 			<iCost>1404</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<BonusProductionModifiers>
 				<BonusProductionModifier>
 					<BonusType>BONUS_MARBLE</BonusType>
@@ -13471,6 +14383,10 @@
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<iHurryAngerModifier>-50</iHurryAngerModifier>
 			<iCost>1566</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<iHurryCostModifier>50</iHurryCostModifier>
 			<iConquestProb>100</iConquestProb>
 			<iGreatPeopleRateModifier>50</iGreatPeopleRateModifier>
@@ -13572,6 +14488,10 @@
 			</PrereqOrBuildings>
 			<ObsoleteTech>TECH_CIVIL_ENGINEERING</ObsoleteTech>
 			<iCost>876</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -13622,6 +14542,10 @@
 			<ReligionType>RELIGION_NAGHUALISM</ReligionType>
 			<StateReligion>RELIGION_NAGHUALISM</StateReligion>
 			<iCost>1458</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<BonusProductionModifiers>
 				<BonusProductionModifier>
 					<BonusType>BONUS_STONE</BonusType>
@@ -13695,6 +14619,10 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_STATISTICS</PrereqTech>
 			<iCost>3780</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>15</iCommerce>
@@ -13737,6 +14665,10 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_ABSTRACT_MATHEMATICS</PrereqTech>
 			<iCost>5700</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>25</iCommerce>
@@ -13782,6 +14714,10 @@
 				<BuildingType>BUILDING_MANUFACTURING_DISTRICT</BuildingType>
 			</PrereqOrBuildings>
 			<iCost>2550</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<iHappiness>1</iHappiness>
 			<ExtraFreeBonuses>
 				<ExtraFreeBonus>
@@ -13834,6 +14770,10 @@
 			<iMinAreaSize>10</iMinAreaSize>
 			<Bonus>BONUS_STONE</Bonus>
 			<iCost>624</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<PlotYieldChanges>
 				<PlotYieldChange>
 					<PlotType>PLOT_OCEAN</PlotType>
@@ -13892,6 +14832,10 @@
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<bNukeImmune>1</bNukeImmune>
 			<iCost>8070</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<iConquestProb>100</iConquestProb>
 			<iAsset>10</iAsset>
@@ -13964,6 +14908,10 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_TIMELINE_RECTIFICATION</PrereqTech>
 			<iCost>161730</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<CommerceChanges>
 				<iCommerce>10</iCommerce>
 				<iCommerce>10</iCommerce>
@@ -14001,6 +14949,10 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_TELEGRAPH</PrereqTech>
 			<iCost>4260</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<ObsoleteTech>TECH_DIRECT_MERCHANDISING</ObsoleteTech>
 			<CommerceChanges>
 				<iCommerce>10</iCommerce>
@@ -14045,6 +14997,10 @@
 				</PrereqTerrain>
 			</PrereqOrTerrain>
 			<iCost>5940</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<BonusProductionModifiers>
 				<BonusProductionModifier>
 					<BonusType>BONUS_STONE</BonusType>
@@ -14107,6 +15063,10 @@
 			</PrereqOrBuildings>
 			<ObsoleteTech>TECH_NATIONALISM</ObsoleteTech>
 			<iCost>1800</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -14150,6 +15110,10 @@
 				</PrereqBuilding>
 			</PrereqAmountBuildings>
 			<iCost>2640</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<ExtraFreeBonuses>
 				<ExtraFreeBonus>
 					<FreeBonus>BONUS_CRYSTAL_GLASSWARE</FreeBonus>
@@ -14206,6 +15170,10 @@
 			<iPrereqPopulation>7</iPrereqPopulation>
 			<Bonus>BONUS_NANOBOTS</Bonus>
 			<iCost>32730</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<HealUnitCombatTypes>
 				<HealUnitCombatType>
 					<UnitCombatType>UNITCOMBAT_HEALS_AS_NANOMORPH</UnitCombatType>
@@ -14254,6 +15222,10 @@
 			<GreatPeopleUnitType>UNIT_ARTIST</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<iCost>1350</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<iHurryCostModifier>50</iHurryCostModifier>
 			<iConquestProb>100</iConquestProb>
 			<iAnarchyModifier>-50</iAnarchyModifier>
@@ -14316,6 +15288,10 @@
 				<BuildingType>BUILDING_INDUSTRIAL_PARK</BuildingType>
 			</PrereqInCityBuildings>
 			<iCost>38430</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<GreatPeopleUnitType>UNIT_GREAT_ENGINEER</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>4</iGreatPeopleRateChange>
 			<FreeBuilding>BUILDING_ADVANCED_SHIELDING</FreeBuilding>
@@ -14353,6 +15329,10 @@
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<bNukeImmune>1</bNukeImmune>
 			<iCost>1296</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<iConquestProb>100</iConquestProb>
 			<iAsset>6</iAsset>
@@ -14502,6 +15482,10 @@
 			</PrereqNotInCityBuildings>
 			<ObsoleteTech>TECH_COPPER_WORKING</ObsoleteTech>
 			<iCost>60</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<FreeBuilding>BUILDING_C_AC_NEANDERTHAL</FreeBuilding>
 			<iConquestProb>100</iConquestProb>
 			<iHurryCostModifier>200</iHurryCostModifier>
@@ -14527,6 +15511,10 @@
 			<GreatPeopleUnitType>UNIT_PROPHET</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<iCost>1566</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<iHurryCostModifier>50</iHurryCostModifier>
 			<iConquestProb>100</iConquestProb>
 			<iHappiness>1</iHappiness>
@@ -14610,6 +15598,10 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_AUTOMATED_URBANIZATION</PrereqTech>
 			<iCost>22830</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<CommerceChanges>
 				<iCommerce>25</iCommerce>
 				<iCommerce>20</iCommerce>
@@ -14667,6 +15659,10 @@
 			</ConstructCondition>
 			<ObsoleteTech>TECH_MEGASTRUCTURE_ENGINEERING</ObsoleteTech>
 			<iCost>3780</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -14733,6 +15729,10 @@
 			</PrereqInCityBuildings>
 			<ObsoleteTech>TECH_QUANTUM_PHYSICS</ObsoleteTech>
 			<iCost>3090</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<CommerceChanges>
 				<iCommerce>-50</iCommerce>
 				<iCommerce>25</iCommerce>
@@ -14797,6 +15797,10 @@
 			<GreatPeopleUnitType>UNIT_PROPHET</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<iCost>1008</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<iHurryCostModifier>50</iHurryCostModifier>
 			<iConquestProb>100</iConquestProb>
 			<iDomesticGreatGeneralRateModifier>50</iDomesticGreatGeneralRateModifier>
@@ -14879,6 +15883,10 @@
 			</PrereqOrBuildings>
 			<ObsoleteTech>TECH_INDUSTRIALISM</ObsoleteTech>
 			<iCost>708</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<CommerceModifiers>
 				<iCommerce>0</iCommerce>
 				<iCommerce>7</iCommerce>
@@ -14931,6 +15939,10 @@
 				<BuildingType>BUILDING_C_L_AFRICAN</BuildingType>
 			</PrereqInCityBuildings>
 			<iCost>1008</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<iHappiness>1</iHappiness>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -15014,6 +16026,10 @@
 			</PrereqAndCivics>
 			<bRequiresActiveCivics>1</bRequiresActiveCivics>
 			<iCost>2460</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -15068,6 +16084,10 @@
 			<iPrereqPopulation>7</iPrereqPopulation>
 			<ObsoleteTech>TECH_MEGASTRUCTURE_ENGINEERING</ObsoleteTech>
 			<iCost>1992</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<BonusProductionModifiers>
 				<BonusProductionModifier>
 					<BonusType>BONUS_STONE</BonusType>
@@ -15126,6 +16146,10 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_ORGANIC_CITIES</PrereqTech>
 			<iCost>35430</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<YieldModifiers>
 				<iYield>5</iYield>
 				<iYield>30</iYield>
@@ -15169,6 +16193,10 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_MARINE_ARCHITECTURE</PrereqTech>
 			<iCost>17190</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<bWater>1</bWater>
 			<iMinAreaSize>10</iMinAreaSize>
 			<CommerceChanges>
@@ -15216,6 +16244,10 @@
 				<BuildingType>BUILDING_MAJOR_LEAGUE_STADIUM</BuildingType>
 			</PrereqOrBuildings>
 			<iCost>1404</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<iHappiness>10</iHappiness>
 			<CommerceChanges>
 				<iCommerce>10</iCommerce>
@@ -15251,6 +16283,10 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_MEGACITIES</PrereqTech>
 			<iCost>15750</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<CommerceChanges>
 				<iCommerce>60</iCommerce>
 			</CommerceChanges>
@@ -15277,6 +16313,10 @@
 			<PrereqTech>TECH_DIVINATION</PrereqTech>
 			<iPrereqPopulation>3</iPrereqPopulation>
 			<iCost>1008</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<BonusProductionModifiers>
 				<BonusProductionModifier>
 					<BonusType>BONUS_MARBLE</BonusType>
@@ -15335,6 +16375,10 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_ATOMIC_SCALE_ENGINEERING</PrereqTech>
 			<iCost>54630</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<YieldChanges>
 				<iYield>6</iYield>
 				<iYield>20</iYield>
@@ -15381,6 +16425,10 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_FANTASY_MATERIALS</PrereqTech>
 			<iCost>118530</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<CommerceChanges>
 				<iCommerce>10</iCommerce>
 			</CommerceChanges>
@@ -15425,6 +16473,10 @@
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<bNukeImmune>1</bNukeImmune>
 			<iCost>3930</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<iConquestProb>100</iConquestProb>
 			<iForeignTradeRouteModifier>50</iForeignTradeRouteModifier>
@@ -15500,6 +16552,10 @@
 				<BuildingType>BUILDING_MODERN_WATERWORKS</BuildingType>
 			</PrereqOrBuildings>
 			<iCost>1512</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<iHealth>1</iHealth>
 			<iHappiness>2</iHappiness>
 			<CommerceChanges>
@@ -15547,6 +16603,10 @@
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<bNukeImmune>1</bNukeImmune>
 			<iCost>5940</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<iConquestProb>100</iConquestProb>
 			<iGlobalMaintenanceModifier>-25</iGlobalMaintenanceModifier>
@@ -15615,6 +16675,10 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_NOVO_PALEONTOLOGY</PrereqTech>
 			<iCost>31530</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<CommerceChanges>
 				<iCommerce>10</iCommerce>
 				<iCommerce>10</iCommerce>
@@ -15678,6 +16742,10 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_UNMANNED_NAVAL_VEHICLES</PrereqTech>
 			<iCost>12030</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<bWater>1</bWater>
 			<iMinAreaSize>10</iMinAreaSize>
 			<CommerceChanges>
@@ -15730,6 +16798,10 @@
 			</PrereqInCityBuildings>
 			<ObsoleteTech>TECH_SCIENTIFIC_METHOD</ObsoleteTech>
 			<iCost>1566</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -15802,6 +16874,10 @@
 			<iMinAreaSize>10</iMinAreaSize>
 			<bNukeImmune>1</bNukeImmune>
 			<iCost>4800</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<iConquestProb>100</iConquestProb>
 			<iAirUnitCapacity>4</iAirUnitCapacity>
@@ -15862,6 +16938,10 @@
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_ANTIBIOTICS</PrereqTech>
 			<iCost>4800</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<SpecialistExtraCommerces>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -15916,6 +16996,10 @@
 				</PrereqBuilding>
 			</PrereqAmountBuildings>
 			<iCost>6780</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<GreatPeopleUnitType>UNIT_GREAT_SPY</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<iGlobalExperience>2</iGlobalExperience>
@@ -15948,6 +17032,10 @@
 			<GreatPeopleUnitType>UNIT_ARTIST</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<iCost>4620</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<iAsset>10</iAsset>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -15996,6 +17084,10 @@
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<bNukeImmune>1</bNukeImmune>
 			<iCost>1104</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<iConquestProb>100</iConquestProb>
 			<iDomesticGreatGeneralRateModifier>50</iDomesticGreatGeneralRateModifier>
@@ -16041,6 +17133,10 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_CHEMISTRY</PrereqTech>
 			<iCost>2970</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<CommerceChanges>
 				<iCommerce>30</iCommerce>
 			</CommerceChanges>
@@ -16088,6 +17184,10 @@
 			</PrereqOrTerrain>
 			<ObsoleteTech>TECH_ECONOMICS</ObsoleteTech>
 			<iCost>960</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<BonusProductionModifiers>
 				<BonusProductionModifier>
 					<BonusType>BONUS_STONE</BonusType>
@@ -16167,6 +17267,10 @@
 			<GreatPeopleUnitType>UNIT_PROPHET</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>4</iGreatPeopleRateChange>
 			<iCost>1620</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<iConquestProb>100</iConquestProb>
 			<iHealth>2</iHealth>
 			<iGlobalHealth>2</iGlobalHealth>
@@ -16209,6 +17313,10 @@
 			<Bonus>BONUS_BRICKS</Bonus>
 			<ObsoleteTech>TECH_CIVIL_ENGINEERING</ObsoleteTech>
 			<iCost>1920</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -16266,6 +17374,10 @@
 			</PrereqOrBuildings>
 			<ObsoleteTech>TECH_JOURNALISM</ObsoleteTech>
 			<iCost>1296</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<CommerceChanges>
 				<iCommerce>-20</iCommerce>
 				<iCommerce>25</iCommerce>
@@ -16327,6 +17439,10 @@
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<bNukeImmune>1</bNukeImmune>
 			<iCost>21150</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<iConquestProb>100</iConquestProb>
 			<iMinLatitude>45</iMinLatitude>
@@ -16381,6 +17497,10 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_MEDIA_HIVEMIND</PrereqTech>
 			<iCost>21990</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<CommerceChanges>
 				<iCommerce>10</iCommerce>
 			</CommerceChanges>
@@ -16423,6 +17543,10 @@
 			<iPrereqPopulation>3</iPrereqPopulation>
 			<iCitiesPrereq>4</iCitiesPrereq>
 			<iCost>1512</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<iHealth>1</iHealth>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -16475,6 +17599,10 @@
 			<iPrereqPopulation>3</iPrereqPopulation>
 			<ObsoleteTech>TECH_NATIONALISM</ObsoleteTech>
 			<iCost>1920</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -16531,6 +17659,10 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_POSTMODERNISM</PrereqTech>
 			<iCost>7680</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<CommerceChanges>
 				<iCommerce>10</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -16564,6 +17696,10 @@
 				<BuildingType>BUILDING_CUSTOMS_OFFICE</BuildingType>
 			</PrereqInCityBuildings>
 			<iCost>3210</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -16625,6 +17761,10 @@
 			<ReligionType>RELIGION_BUDDHISM</ReligionType>
 			<StateReligion>RELIGION_BUDDHISM</StateReligion>
 			<iCost>2208</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<CommerceModifiers>
 				<iCommerce>10</iCommerce>
 				<iCommerce>25</iCommerce>
@@ -16705,6 +17845,10 @@
 				</PrereqBuilding>
 			</PrereqAmountBuildings>
 			<iCost>13830</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<CommerceChanges>
 				<iCommerce>-5</iCommerce>
 			</CommerceChanges>
@@ -16760,6 +17904,10 @@
 			</PrereqBonuses>
 			<FreeBuilding>BUILDING_SCHOOL_OF_SCRIBES</FreeBuilding>
 			<iCost>1056</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<iHurryCostModifier>50</iHurryCostModifier>
 			<iConquestProb>100</iConquestProb>
 			<iStateReligionHappiness>3</iStateReligionHappiness>
@@ -16829,6 +17977,10 @@
 				<Bonus>BONUS_TABLETS</Bonus>
 			</PrereqBonuses>
 			<iCost>1566</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<iHurryCostModifier>50</iHurryCostModifier>
 			<iConquestProb>100</iConquestProb>
 			<iGlobalHealth>1</iGlobalHealth>
@@ -16926,6 +18078,10 @@
 				<BuildingType>BUILDING_MANUFACTURING_DISTRICT</BuildingType>
 			</PrereqOrBuildings>
 			<iCost>1200</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<CommerceChanges>
 				<iCommerce>1</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -16972,6 +18128,10 @@
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<bNukeImmune>1</bNukeImmune>
 			<iCost>4800</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<iConquestProb>100</iConquestProb>
 			<iAsset>10</iAsset>
@@ -17027,6 +18187,10 @@
 			<bRiver>1</bRiver>
 			<bNukeImmune>1</bNukeImmune>
 			<iCost>4980</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<iConquestProb>100</iConquestProb>
 			<iHealth>-5</iHealth>
@@ -17116,6 +18280,10 @@
 			<PrereqTech>TECH_ELECTRONICS</PrereqTech>
 			<iPrereqPopulation>3</iPrereqPopulation>
 			<iCost>6480</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<CommerceModifiers>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -17166,6 +18334,10 @@
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<bNukeImmune>1</bNukeImmune>
 			<iCost>3210</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<iConquestProb>100</iConquestProb>
 			<iAsset>10</iAsset>
@@ -17234,6 +18406,10 @@
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<bNukeImmune>1</bNukeImmune>
 			<iCost>6780</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<iConquestProb>100</iConquestProb>
 			<iTradeRoutes>3</iTradeRoutes>
@@ -17259,6 +18435,10 @@
 			<PrereqTech>TECH_HELIOCENTRISM</PrereqTech>
 			<ObsoleteTech>TECH_RADAR</ObsoleteTech>
 			<iCost>2730</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<iConquestProb>100</iConquestProb>
 			<iHappiness>-2</iHappiness>
 			<CommerceChanges>
@@ -17312,6 +18492,10 @@
 			<iPrereqPopulation>7</iPrereqPopulation>
 			<ObsoleteTech>TECH_PERSONAL_COMPUTERS</ObsoleteTech>
 			<iCost>2064</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<BonusProductionModifiers>
 				<BonusProductionModifier>
 					<BonusType>BONUS_STONE</BonusType>
@@ -17374,6 +18558,10 @@
 			<PrereqTech>TECH_GUILDS</PrereqTech>
 			<iPrereqPopulation>3</iPrereqPopulation>
 			<iCost>1992</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<CommerceChanges>
 				<iCommerce>6</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -17427,6 +18615,10 @@
 			<iMinAreaSize>10</iMinAreaSize>
 			<bNukeImmune>1</bNukeImmune>
 			<iCost>1920</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<iConquestProb>100</iConquestProb>
 			<iHappiness>1</iHappiness>
@@ -17521,6 +18713,10 @@
 			<iMinAreaSize>10</iMinAreaSize>
 			<bNukeImmune>1</bNukeImmune>
 			<iCost>4800</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<iConquestProb>100</iConquestProb>
 			<iAirModifier>-25</iAirModifier>
@@ -17581,6 +18777,10 @@
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<bNukeImmune>1</bNukeImmune>
 			<iCost>2136</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<iConquestProb>100</iConquestProb>
 			<iTradeRoutes>2</iTradeRoutes>
@@ -17687,6 +18887,10 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_SUPERSTRING_THEORY</PrereqTech>
 			<iCost>12030</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<CommerceChanges>
 				<iCommerce>-10</iCommerce>
 				<iCommerce>25</iCommerce>
@@ -17721,6 +18925,10 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_NEW_URBANISM</PrereqTech>
 			<iCost>9240</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<CommerceChanges>
 				<iCommerce>20</iCommerce>
 			</CommerceChanges>
@@ -17743,6 +18951,10 @@
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<bNukeImmune>1</bNukeImmune>
 			<iCost>876</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<iConquestProb>100</iConquestProb>
 			<iAsset>10</iAsset>
@@ -17819,6 +19031,10 @@
 				</FreePromoType>
 			</FreePromoTypes>
 			<iCost>1860</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<iConquestProb>100</iConquestProb>
 			<iAsset>2</iAsset>
 			<CommerceChanges>
@@ -17869,6 +19085,10 @@
 				</PrereqBuilding>
 			</PrereqAmountBuildings>
 			<iCost>7680</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<BonusProductionModifiers>
 				<BonusProductionModifier>
 					<BonusType>BONUS_ALUMINUM_WARES</BonusType>
@@ -17934,6 +19154,10 @@
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<bNukeImmune>1</bNukeImmune>
 			<iCost>2064</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<iConquestProb>100</iConquestProb>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -17979,6 +19203,10 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_MEGASTRUCTURE_ENGINEERING</PrereqTech>
 			<iCost>32730</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<CommerceChanges>
 				<iCommerce>3</iCommerce>
 				<iCommerce>3</iCommerce>
@@ -18022,6 +19250,10 @@
 				<Bonus>BONUS_GOLD_WARES</Bonus>
 			</PrereqBonuses>
 			<iCost>1566</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<BonusProductionModifiers>
 				<BonusProductionModifier>
 					<BonusType>BONUS_GOLD_WARES</BonusType>
@@ -18079,6 +19311,10 @@
 				<BuildingType>BUILDING_LIBRARY</BuildingType>
 			</PrereqInCityBuildings>
 			<iCost>1350</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<CommerceChanges>
 				<iCommerce>-10</iCommerce>
 				<iCommerce>10</iCommerce>
@@ -18131,6 +19367,10 @@
 			<iPrereqPopulation>7</iPrereqPopulation>
 			<Bonus>BONUS_MICROCHIPS</Bonus>
 			<iCost>8850</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<GlobalCommerceModifiers>
 				<iCommerce>0</iCommerce>
 				<iCommerce>5</iCommerce>
@@ -18184,6 +19424,10 @@
 			</PrereqOrBuildings>
 			<ObsoleteTech>TECH_MERCANTILISM</ObsoleteTech>
 			<iCost>1350</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<CommerceModifiers>
 				<iCommerce>25</iCommerce>
 			</CommerceModifiers>
@@ -18262,6 +19506,10 @@
 			</PrereqBonuses>
 			<ObsoleteTech>TECH_MEGASTRUCTURE_ENGINEERING</ObsoleteTech>
 			<iCost>7680</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<iHappiness>2</iHappiness>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -18305,6 +19553,10 @@
 			<PrereqTech>TECH_PERSPECTIVE</PrereqTech>
 			<iPrereqPopulation>7</iPrereqPopulation>
 			<iCost>2136</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<BonusProductionModifiers>
 				<BonusProductionModifier>
 					<BonusType>BONUS_MARBLE</BonusType>
@@ -18398,6 +19650,10 @@
 				<BuildingType>BUILDING_GRAND_MARINE_FESTIVAL</BuildingType>
 			</PrereqNotInCityBuildings>
 			<iCost>516</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<iHappiness>3</iHappiness>
 			<YieldChanges>
 				<iYield>-2</iYield>
@@ -18568,6 +19824,10 @@
 				<BuildingType>BUILDING_MUSEUM</BuildingType>
 			</PrereqInCityBuildings>
 			<iCost>2850</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<iHappiness>2</iHappiness>
 			<CommerceChanges>
 				<iCommerce>5</iCommerce>
@@ -18638,6 +19898,10 @@
 				<BuildingType>BUILDING_POLLUTION_BLACKENED_SKIES</BuildingType>
 			</ReplacementBuildings>
 			<iCost>32730</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<iHealth>5</iHealth>
 			<iHappiness>2</iHappiness>
 			<YieldChanges>
@@ -18672,6 +19936,10 @@
 			<GreatPeopleUnitType>UNIT_SCIENTIST</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<iCost>1404</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<iHurryCostModifier>50</iHurryCostModifier>
 			<iConquestProb>100</iConquestProb>
 			<iGreatPeopleRateModifier>10</iGreatPeopleRateModifier>
@@ -18745,6 +20013,10 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_MEGACITIES</PrereqTech>
 			<iCost>15750</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<YieldChanges>
 				<iYield>0</iYield>
 				<iYield>0</iYield>
@@ -18775,6 +20047,10 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<iCost>52530</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -18803,6 +20079,10 @@
 			<iPrereqPopulation>13</iPrereqPopulation>
 			<Bonus>BONUS_NANOTUBES</Bonus>
 			<iCost>24870</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<BonusProductionModifiers>
 				<BonusProductionModifier>
 					<BonusType>BONUS_NANOTUBES</BonusType>
@@ -18870,6 +20150,10 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_SUPERSONIC_FLIGHT</PrereqTech>
 			<iCost>8070</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<CommerceChanges>
 				<iCommerce>5</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -18922,6 +20206,10 @@
 			<iPrereqPopulation>3</iPrereqPopulation>
 			<ObsoleteTech>TECH_PERSONAL_COMPUTERS</ObsoleteTech>
 			<iCost>2640</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<BonusProductionModifiers>
 				<BonusProductionModifier>
 					<BonusType>BONUS_STONE</BonusType>
@@ -18988,6 +20276,10 @@
 				</PrereqBuilding>
 			</PrereqAmountBuildings>
 			<iCost>17910</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<iHappiness>3</iHappiness>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -19015,6 +20307,10 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_MODERN_PHYSICS</PrereqTech>
 			<iCost>6780</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>25</iCommerce>
@@ -19075,6 +20371,10 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_WEAPONIZED_DISINTEGRATION</PrereqTech>
 			<iCost>60930</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<iUnitUpgradePriceModifier>-5</iUnitUpgradePriceModifier>
 			<iGlobalExperience>2</iGlobalExperience>
 			<UnitCombatFreeExperiences>
@@ -19119,6 +20419,10 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<iCost>110130</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -19146,6 +20450,10 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_MASS_DRIVER</PrereqTech>
 			<iCost>20310</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<iTradeRouteModifier>25</iTradeRouteModifier>
 			<FreeBuilding>BUILDING_MAGLEV_LAUNCHER</FreeBuilding>
 			<PrereqInCityBuildings>
@@ -19182,6 +20490,10 @@
 			</PrereqAndCivics>
 			<bRequiresActiveCivics>1</bRequiresActiveCivics>
 			<iCost>3480</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<BonusProductionModifiers>
 				<BonusProductionModifier>
 					<BonusType>BONUS_COPPER_WARES</BonusType>
@@ -19237,6 +20549,10 @@
 			<Bonus>BONUS_STONE</Bonus>
 			<ObsoleteTech>TECH_MODERN_SANITATION</ObsoleteTech>
 			<iCost>624</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<iHurryCostModifier>200</iHurryCostModifier>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -19288,6 +20604,10 @@
 				<BuildingType>BUILDING_C_L_MIDDLE_EASTERN</BuildingType>
 			</PrereqInCityBuildings>
 			<iCost>372</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<CommerceChanges>
 				<iCommerce>1</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -19344,6 +20664,10 @@
 				<BuildingType>BUILDING_ORDINANCE_GAMBLING_BAN</BuildingType>
 			</ReplacementBuildings>
 			<iCost>8070</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<iHappiness>3</iHappiness>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -19402,6 +20726,10 @@
 			</PrereqOrCivics>
 			<bRequiresActiveCivics>1</bRequiresActiveCivics>
 			<iCost>4800</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -19433,6 +20761,10 @@
 			<GreatPeopleUnitType>UNIT_PROPHET</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<iCost>2208</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<iHurryCostModifier>50</iHurryCostModifier>
 			<iConquestProb>100</iConquestProb>
 			<iGreatPeopleRateModifier>25</iGreatPeopleRateModifier>
@@ -19499,6 +20831,10 @@
 				<BuildingType>BUILDING_C_L_OCEANIAN</BuildingType>
 			</PrereqInCityBuildings>
 			<iCost>2064</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<CommerceChanges>
@@ -19546,6 +20882,10 @@
 			</PrereqOrBuildings>
 			<ObsoleteTech>TECH_ELECTRONICS</ObsoleteTech>
 			<iCost>1680</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<CommerceChanges>
@@ -19612,6 +20952,10 @@
 			<iHurryAngerModifier>-50</iHurryAngerModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iCost>9630</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<iConquestProb>100</iConquestProb>
 			<iMinLatitude>50</iMinLatitude>
@@ -19656,6 +21000,10 @@
 				<BuildingType>BUILDING_OPERA_HOUSE</BuildingType>
 			</PrereqInCityBuildings>
 			<iCost>4620</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -19716,6 +21064,10 @@
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<bNukeImmune>1</bNukeImmune>
 			<iCost>7680</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<iConquestProb>100</iConquestProb>
 			<iTeamsPrereq>4</iTeamsPrereq>
@@ -19762,6 +21114,10 @@
 			<iPrereqPopulation>3</iPrereqPopulation>
 			<Bonus>BONUS_MARBLE</Bonus>
 			<iCost>3330</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -19809,6 +21165,10 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_COLONY_ARCOLOGY</PrereqTech>
 			<iCost>50430</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<CommerceChanges>
 				<iCommerce>-50</iCommerce>
 				<iCommerce>50</iCommerce>
@@ -19853,6 +21213,10 @@
 			<ReligionType>RELIGION_TAOISM</ReligionType>
 			<StateReligion>RELIGION_TAOISM</StateReligion>
 			<iCost>2640</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<BonusProductionModifiers>
 				<BonusProductionModifier>
 					<BonusType>BONUS_MARBLE</BonusType>
@@ -19932,6 +21296,10 @@
 			<PrereqTech>TECH_TERRA_COMPUTER</PrereqTech>
 			<iPrereqPopulation>7</iPrereqPopulation>
 			<iCost>38430</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>20</iCommerce>
@@ -19978,6 +21346,10 @@
 			<PrereqTech>TECH_MONARCHY</PrereqTech>
 			<iPrereqPopulation>3</iPrereqPopulation>
 			<iCost>1200</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<ConstructSound>AS2D_BUILD_TERRA_COTTA</ConstructSound>
@@ -20049,6 +21421,10 @@
 				<BuildingType>BUILDING_MANUFACTURING_DISTRICT</BuildingType>
 			</PrereqOrBuildings>
 			<iCost>1296</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<ExtraFreeBonuses>
 				<ExtraFreeBonus>
 					<FreeBonus>BONUS_TERRA_SIGILLATA</FreeBonus>
@@ -20107,6 +21483,10 @@
 			</PrereqInCityBuildings>
 			<ObsoleteTech>TECH_FREE_ARTISTRY</ObsoleteTech>
 			<iCost>1620</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<CommerceChanges>
@@ -20168,6 +21548,10 @@
 			<PrereqTech>TECH_GEOCENTRISM</PrereqTech>
 			<ObsoleteTech>TECH_HELIOCENTRISM</ObsoleteTech>
 			<iCost>1680</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<iConquestProb>100</iConquestProb>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -20205,6 +21589,10 @@
 			<MovieDefineTag>ART_DEF_MOVIE_THE_ATOMIUM</MovieDefineTag>
 			<PrereqTech>TECH_FISSION</PrereqTech>
 			<iCost>6480</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<iConquestProb>100</iConquestProb>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -20268,6 +21656,10 @@
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<bNukeImmune>1</bNukeImmune>
 			<iCost>10110</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<iConquestProb>100</iConquestProb>
 			<iAsset>16</iAsset>
@@ -20316,6 +21708,10 @@
 			<PrereqTech>TECH_SHIP_BUILDING</PrereqTech>
 			<FreeBuilding>BUILDING_THOR_ALTAR</FreeBuilding>
 			<iCost>1350</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<iHurryCostModifier>50</iHurryCostModifier>
 			<iConquestProb>100</iConquestProb>
 			<iWarWearinessModifier>-50</iWarWearinessModifier>
@@ -20372,6 +21768,10 @@
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<bNukeImmune>1</bNukeImmune>
 			<iCost>11550</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<iConquestProb>100</iConquestProb>
 			<iAsset>10</iAsset>
@@ -20419,6 +21819,10 @@
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<bNukeImmune>1</bNukeImmune>
 			<iCost>7080</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<iConquestProb>100</iConquestProb>
 			<iAsset>10</iAsset>
@@ -20467,6 +21871,10 @@
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_FEUDALISM</PrereqTech>
 			<iCost>1860</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -20520,6 +21928,10 @@
 				<Bonus>BONUS_SCULPTURES</Bonus>
 			</PrereqBonuses>
 			<iCost>1056</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<iHurryCostModifier>50</iHurryCostModifier>
 			<iConquestProb>100</iConquestProb>
 			<iStateReligionHappiness>3</iStateReligionHappiness>
@@ -20614,6 +22026,10 @@
 				<BuildingType>BUILDING_BLOCKCHAIN_FINANCIAL_SERVICES</BuildingType>
 			</PrereqOrBuildings>
 			<iCost>7080</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -20660,6 +22076,10 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_SUPERSTRONG_ALLOYS</PrereqTech>
 			<iCost>24870</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<bWater>1</bWater>
 			<iMinAreaSize>10</iMinAreaSize>
 			<YieldChanges>
@@ -20688,6 +22108,10 @@
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<bNukeImmune>1</bNukeImmune>
 			<iCost>2136</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<iConquestProb>100</iConquestProb>
 			<iTradeRoutes>2</iTradeRoutes>
@@ -20796,6 +22220,10 @@
 				<BuildingType>BUILDING_CONSTRUCTION_FIRM</BuildingType>
 			</PrereqInCityBuildings>
 			<iCost>7080</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<CommerceChanges>
 				<iCommerce>10</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -20846,6 +22274,10 @@
 			<iMinAreaSize>10</iMinAreaSize>
 			<bNukeImmune>1</bNukeImmune>
 			<iCost>4800</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<iConquestProb>100</iConquestProb>
 			<iForeignTradeRouteModifier>50</iForeignTradeRouteModifier>
@@ -20904,6 +22336,10 @@
 			</PrereqOrBuildings>
 			<ObsoleteTech>TECH_VIRTUAL_SOCIETY</ObsoleteTech>
 			<iCost>1566</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<iHappiness>1</iHappiness>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -20945,6 +22381,10 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_MEGASTRUCTURE_ENGINEERING</PrereqTech>
 			<iCost>32730</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>10</iCommerce>
@@ -20985,6 +22425,10 @@
 				<BuildingType>BUILDING_SKYSCRAPER</BuildingType>
 			</PrereqInCityBuildings>
 			<iCost>7080</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<GreatPeopleUnitType>UNIT_MERCHANT</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<VictoryPrereq>VICTORY_DIPLOMATIC</VictoryPrereq>
@@ -21017,6 +22461,10 @@
 			<GreatPeopleUnitType>UNIT_SCIENTIST</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<iCost>1860</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<iHurryCostModifier>50</iHurryCostModifier>
 			<iConquestProb>100</iConquestProb>
 			<iGreatPeopleRateModifier>25</iGreatPeopleRateModifier>
@@ -21101,6 +22549,10 @@
 			</PrereqOrBuildings>
 			<ObsoleteTech>TECH_SCREW_PROPELLER</ObsoleteTech>
 			<iCost>2460</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<GreatPeopleUnitType>UNIT_MERCHANT</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<DomainFreeExperiences>
@@ -21151,6 +22603,10 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_UTOPIA_DESTINY</PrereqTech>
 			<iCost>31530</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>5</iCommerce>
@@ -21183,6 +22639,10 @@
 			</TechTypes>
 			<ObsoleteTech>TECH_SCULPTURE</ObsoleteTech>
 			<iCost>240</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<iHappiness>1</iHappiness>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -21226,6 +22686,10 @@
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_DIVINE_RIGHT</PrereqTech>
 			<iCost>2640</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<BonusProductionModifiers>
 				<BonusProductionModifier>
 					<BonusType>BONUS_MARBLE</BonusType>
@@ -21287,6 +22751,10 @@
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<bNukeImmune>1</bNukeImmune>
 			<iCost>7680</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<iConquestProb>100</iConquestProb>
 			<iAsset>10</iAsset>
@@ -21370,6 +22838,10 @@
 				<BuildingType>BUILDING_STOCK_MARKET</BuildingType>
 			</PrereqInCityBuildings>
 			<iCost>2850</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<CommerceModifiers>
 				<iCommerce>25</iCommerce>
 			</CommerceModifiers>
@@ -21419,6 +22891,10 @@
 			</PrereqOrBuildings>
 			<ObsoleteTech>TECH_STEAM_POWER</ObsoleteTech>
 			<iCost>1680</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<YieldModifiers>
@@ -21472,6 +22948,10 @@
 			<GreatPeopleUnitType>UNIT_ARTIST</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<iCost>7380</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<iHealth>-1</iHealth>
 			<iAsset>10</iAsset>
@@ -21560,6 +23040,10 @@
 			<GreatPeopleUnitType>UNIT_ARTIST</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<iCost>3330</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<iAsset>10</iAsset>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -21621,6 +23105,10 @@
 				<BuildingType>BUILDING_WIKIA</BuildingType>
 			</PrereqInCityBuildings>
 			<iCost>12630</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<GreatPeopleUnitType>UNIT_SCIENTIST</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
 			<iFreeTechs>1</iFreeTechs>
@@ -21662,6 +23150,10 @@
 				<BuildingType>BUILDING_HYPERMARKET</BuildingType>
 			</PrereqOrBuildings>
 			<iCost>7080</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -21704,6 +23196,10 @@
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<bNukeImmune>1</bNukeImmune>
 			<iCost>6180</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<iConquestProb>100</iConquestProb>
 			<iHealth>-3</iHealth>
@@ -21754,6 +23250,10 @@
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<bNukeImmune>1</bNukeImmune>
 			<iCost>8460</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<iConquestProb>100</iConquestProb>
 			<iGlobalHappiness>1</iGlobalHappiness>
@@ -21809,6 +23309,10 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_PLANETARY_ECONOMICS</PrereqTech>
 			<iCost>26910</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<YieldChanges>
 				<iYield>0</iYield>
 				<iYield>40</iYield>
@@ -21844,6 +23348,10 @@
 				<BuildingType>BUILDING_PRESS_AGENCY</BuildingType>
 			</PrereqInCityBuildings>
 			<iCost>7080</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -21904,6 +23412,10 @@
 				<Bonus>BONUS_STEEL_WARES</Bonus>
 			</PrereqBonuses>
 			<iCost>7080</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<CommerceChanges>
 				<iCommerce>6</iCommerce>
 			</CommerceChanges>
@@ -21943,6 +23455,10 @@
 			<bNeedStateReligionInCity>1</bNeedStateReligionInCity>
 			<PrereqReligion>RELIGION_TAOISM</PrereqReligion>
 			<iCost>1566</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<iHurryCostModifier>50</iHurryCostModifier>
 			<iConquestProb>100</iConquestProb>
 			<iGlobalHealth>1</iGlobalHealth>
@@ -22031,6 +23547,10 @@
 				<BuildingType>BUILDING_NATIONAL_AQUARIUM</BuildingType>
 			</PrereqOrBuildings>
 			<iCost>8070</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<iHappiness>1</iHappiness>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -22094,6 +23614,10 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_MEGASTRUCTURE_ENGINEERING</PrereqTech>
 			<iCost>32730</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<CommerceChanges>
 				<iCommerce>10</iCommerce>
 			</CommerceChanges>
@@ -22135,6 +23659,10 @@
 				</PrereqBuilding>
 			</PrereqAmountBuildings>
 			<iCost>9630</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<iHappiness>3</iHappiness>
 			<CommerceModifiers>
 				<iCommerce>15</iCommerce>
@@ -22172,6 +23700,10 @@
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<bNukeImmune>1</bNukeImmune>
 			<iCost>4620</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<iConquestProb>100</iConquestProb>
 			<iAsset>10</iAsset>
@@ -22217,6 +23749,10 @@
 			</PrereqInCityBuildings>
 			<ObsoleteTech>TECH_SCREW_PROPELLER</ObsoleteTech>
 			<iCost>2460</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -22252,6 +23788,10 @@
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<bNukeImmune>1</bNukeImmune>
 			<iCost>7080</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<iConquestProb>100</iConquestProb>
 			<iAsset>12</iAsset>
@@ -22293,6 +23833,10 @@
 			</PrereqOrBuildings>
 			<ObsoleteTech>TECH_RIFLING</ObsoleteTech>
 			<iCost>516</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
 			<GreatPeopleUnitType>UNIT_GREAT_GENERAL</GreatPeopleUnitType>
@@ -22354,6 +23898,10 @@
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<bNukeImmune>1</bNukeImmune>
 			<iCost>26910</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<iConquestProb>100</iConquestProb>
 			<iAsset>20</iAsset>
