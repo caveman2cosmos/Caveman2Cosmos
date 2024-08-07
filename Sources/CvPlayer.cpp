@@ -7191,6 +7191,8 @@ int CvPlayer::getProductionNeeded(BuildingTypes eBuilding) const
         totalModifier -= 0.1f;
     } else if (iCostBySize == 2) {
         totalModifier += 0.1f;
+    } else if (iCostBySize == 3) {
+        totalModifier += 0.2f;
     }
 
     if (iCostByCount == 0) {
