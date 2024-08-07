@@ -76,6 +76,8 @@ class ANewDawnSettings:
 				ANewDawnOpt.setNoAutoCorporationFounding(data3)
 			elif data2 == int(ModderGameOptionTypes.MODDERGAMEOPTION_AI_USE_FLEXIBLE_DIFFICULTY):
 				ANewDawnOpt.setFlexibleDifficultyAI(data3)
+			elif data2 == int(ModderGameOptionTypes.MODDERGAMEOPTION_USE_HISTORICAL_ACCURATE_CALENDAR):
+				ANewDawnOpt.setHistoricalAccurateCalendar(data3)
 		#Change Difficulty
 		elif protocol == DIFFICULTY_EVENT_ID:
 			pPlayer = GC.getPlayer(data1)
@@ -270,6 +272,10 @@ def changedFlexibleDifficultyAI(option, value):
 	GC.getGame().setModderGameOption(ModderGameOptionTypes.MODDERGAMEOPTION_AI_USE_FLEXIBLE_DIFFICULTY, value)
 	CyMessageControl().sendModNetMessage(MODDERGAMEOPTION_EVENT_ID, GC.getGame().getActivePlayer(), int(ModderGameOptionTypes.MODDERGAMEOPTION_AI_USE_FLEXIBLE_DIFFICULTY), int(value), 0)
 
+def changedHistoricalAccurateCalendar(option, value):
+	GC.getGame().setModderGameOption(ModderGameOptionTypes.MODDERGAMEOPTION_USE_HISTORICAL_ACCURATE_CALENDAR, value)
+	CyMessageControl().sendModNetMessage(MODDERGAMEOPTION_EVENT_ID, GC.getGame().getActivePlayer(), int(ModderGameOptionTypes.MODDERGAMEOPTION_USE_HISTORICAL_ACCURATE_CALENDAR), int(value), 0)
+
 def changedInfrastructureIgnoresImprovements(option, value):
 	GC.getActivePlayer().setModderOption(ModderOptionTypes.MODDEROPTION_INFRASTRUCTURE_IGNORES_IMPROVEMENTS, value)
 	CyMessageControl().sendModNetMessage(MODDEROPTION_EVENT_ID, GC.getGame().getActivePlayer(), int(ModderOptionTypes.MODDEROPTION_INFRASTRUCTURE_IGNORES_IMPROVEMENTS), int(value), 0)
@@ -313,6 +319,7 @@ def setXMLOptionsfromIniFile():
 	changedSeaTunnels(ANewDawnOpt, ANewDawnOpt.isSeaTunnels())
 	changedWarPrizes(ANewDawnOpt, ANewDawnOpt.isWarPrizes())
 	changedFlexibleDifficultyAI(ANewDawnOpt, ANewDawnOpt.isFlexibleDifficultyAI())
+	changedHistoricalAccurateCalendar(ANewDawnOpt, ANewDawnOpt.isHistoricalAccurateCalendar())
 	changedInfrastructureIgnoresImprovements(ANewDawnOpt, ANewDawnOpt.isInfrastructureIgnoresImprovements())
 
 	ANewDawnOpt.setPlayerColor(0)

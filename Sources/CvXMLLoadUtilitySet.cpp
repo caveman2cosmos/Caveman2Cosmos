@@ -196,6 +196,11 @@ bool CvXMLLoadUtility::SetGlobalDefines()
 		FErrorMsg("TechDiffusion_GlobalDefines Failed to load!");
 	}
 
+	if (!ReadGlobalDefines("xml\\EraRanges_GlobalDefines.xml", cache))
+	{
+		FErrorMsg("EraRanges_GlobalDefines Failed to load!");
+	}
+
 	// MRGENIE - TGA_INDEXATION - 02/19/08 - Reading the Defines to know the modded TGA icons
 	if (!ReadGlobalDefines("res\\Fonts\\GameFont_GlobalDefines.xml", cache))
 	{

@@ -358,6 +358,7 @@ public:
 
 protected:
 	void doFlexibleDifficulty();
+	void doCalculateCurrentTick();
 	void doHightoLow();
 	void doIncreasingDifficulty();
 	void doFinalFive();
