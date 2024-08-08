@@ -10783,7 +10783,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=10, y=53
-	FeatureType=FEATURE_INFECTIOUS_SMOG, FeatureVariety=0
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -20268,7 +20267,6 @@ BeginPlot
 	x=19, y=50
 	RiverNSDirection=2
 	isWOfRiver
-	FeatureType=FEATURE_INFECTIOUS_SMOG, FeatureVariety=0
 	TerrainType=TERRAIN_DUNES
 	PlotType=2
 EndPlot
@@ -27729,7 +27727,6 @@ BeginPlot
 	x=26, y=50
 	RiverNSDirection=2
 	isWOfRiver
-	FeatureType=FEATURE_INFECTIOUS_SMOG, FeatureVariety=0
 	TerrainType=TERRAIN_DUNES
 	PlotType=2
 EndPlot
@@ -29894,7 +29891,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=28, y=52
-	FeatureType=FEATURE_INFECTIOUS_SMOG, FeatureVariety=0
 	TerrainType=TERRAIN_GRASSLAND
 	PlotType=1
 EndPlot
@@ -39337,7 +39333,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=37, y=25
-	FeatureType=FEATURE_INFECTIOUS_SMOG, FeatureVariety=0
 	TerrainType=TERRAIN_DESERT
 	PlotType=1
 EndPlot
@@ -54064,7 +54059,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=51, y=59
-	FeatureType=FEATURE_INFECTIOUS_SMOG, FeatureVariety=0
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -58287,7 +58281,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=55, y=55
-	FeatureType=FEATURE_INFECTIOUS_SMOG, FeatureVariety=0
 	TerrainType=TERRAIN_DUNES
 	PlotType=2
 EndPlot
@@ -62428,7 +62421,6 @@ BeginPlot
 	x=59, y=20
 	isNOfRiver
 	RiverWEDirection=3
-	FeatureType=FEATURE_INFECTIOUS_SMOG, FeatureVariety=0
 	TerrainType=TERRAIN_PLAINS
 	PlotType=2
 EndPlot
@@ -64874,7 +64866,6 @@ BeginPlot
 	x=61, y=57
 	RiverNSDirection=0
 	isWOfRiver
-	FeatureType=FEATURE_INFECTIOUS_SMOG, FeatureVariety=0
 	TerrainType=TERRAIN_DUNES
 	PlotType=2
 EndPlot
@@ -68131,7 +68122,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=64, y=58
-	FeatureType=FEATURE_INFECTIOUS_SMOG, FeatureVariety=0
 	TerrainType=TERRAIN_ROCKY
 	PlotType=2
 EndPlot
@@ -72328,7 +72318,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=68, y=40
-	FeatureType=FEATURE_INFECTIOUS_SMOG, FeatureVariety=0
 	TerrainType=TERRAIN_PLAINS
 	PlotType=1
 EndPlot
@@ -77644,7 +77633,6 @@ BeginPlot
 	x=73, y=47
 	isNOfRiver
 	RiverWEDirection=1
-	FeatureType=FEATURE_INFECTIOUS_SMOG, FeatureVariety=0
 	TerrainType=TERRAIN_DESERT
 	PlotType=2
 EndPlot
@@ -83937,7 +83925,6 @@ BeginPlot
 	x=79, y=43
 	isNOfRiver
 	RiverWEDirection=3
-	FeatureType=FEATURE_INFECTIOUS_SMOG, FeatureVariety=0
 	TerrainType=TERRAIN_DUNES
 	PlotType=2
 EndPlot
@@ -93574,7 +93561,6 @@ BeginPlot
 	isNOfRiver
 	RiverWEDirection=1
 	isWOfRiver
-	FeatureType=FEATURE_INFECTIOUS_SMOG, FeatureVariety=0
 	TerrainType=TERRAIN_PLAINS
 	PlotType=2
 EndPlot
@@ -102147,7 +102133,6 @@ BeginPlot
 	x=96, y=48
 	RiverNSDirection=2
 	isWOfRiver
-	FeatureType=FEATURE_INFECTIOUS_SMOG, FeatureVariety=0
 	TerrainType=TERRAIN_DUNES
 	PlotType=1
 EndPlot
