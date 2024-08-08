@@ -7188,29 +7188,29 @@ int CvPlayer::getProductionNeeded(BuildingTypes eBuilding) const
     float totalModifier = 1.0f;
 
     if (iCostBySize == 0) {
-        totalModifier -= 0.1f;
+        totalModifier -= 0.2f;
     } else if (iCostBySize == 2) {
-        totalModifier += 0.1f;
+        totalModifier += 0.15f;
     } else if (iCostBySize == 3) {
-        totalModifier += 0.2f;
+        totalModifier += 0.3f;
     }
 
     if (iCostByCount == 0) {
-        totalModifier -= 0.1f;
+        totalModifier -= 0.05f;
     } else if (iCostByCount == 2) {
-        totalModifier += 0.1f;
+        totalModifier += 0.15f;
     }
 
     if (iCostByMaterials == 0) {
         totalModifier -= 0.1f;
     } else if (iCostByMaterials == 2) {
-        totalModifier += 0.1f;
+        totalModifier += 0.15f;
     }
 
     if (iCostByComplexity == 0) {
-        totalModifier -= 0.1f;
+        totalModifier -= 0.2f;
     } else if (iCostByComplexity == 2) {
-        totalModifier += 0.1f;
+        totalModifier += 0.2f;
     }
 
     iBaseCost = static_cast<int>(iBaseCost);
