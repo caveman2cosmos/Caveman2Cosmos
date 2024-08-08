@@ -9836,28 +9836,35 @@ void CvGame::doCalculateCurrentTick()
 	//logging::logMsg("C2C.log", "[BUG] bHistoricalCalendar: %S", bHistoricalCalendar);
 	if (bHistoricalCalendar) 
 	{
-		bool isDiff = true;
-		if (getGameTurn() > 0) {
-			int delted = CvDate::getDate(getGameTurn()).GetTick() - CvDate::getDate(getGameTurn()-1).GetTick();
-			bool isDiff = (m_currentDate.GetTick() - CvDate::getDate(getGameTurn()-1).GetTick()) != delted;
+		if (turnHACValues.find(m_iDateTurn) == turnHACValues.end()) 
+		{
+			bool isDiff = true;
+			if (getGameTurn() > 0) {
+				int delted = CvDate::getDate(getGameTurn()).GetTick() - CvDate::getDate(getGameTurn()-1).GetTick();
+				bool isDiff = (m_currentDate.GetTick() - CvDate::getDate(getGameTurn()-1).GetTick()) != delted;
+			}
+			else
+			{
+				bool isDiff = true;
+			}
+			uint32_t currentTick = calculateCurrentTick();
+
+			uint32_t endTechTick = GC.getDefineINT("HISTORICAL_ACCURATE_ERA_RANGE_FUTURE_START");
+			endTechTick = (200000 + endTechTick) * 360;
+			if (currentTick > endTechTick) //more than 6000 AD
+			{
+				m_currentDate.increment();
+			}
+			//oldYear = 
+			if (currentTick > m_currentDate.GetTick() ||  m_currentDate.GetTick() == (CvDate::getDate(getGameTurn()).GetTick())) {
+				m_currentDate.setTick(currentTick);
+			}
+			turnHACValues[m_iDateTurn] = currentTick;
 		}
 		else
 		{
-			bool isDiff = true;
+			m_currentDate.setTick(turnHACValues[m_iDateTurn]);
 		}
-		uint32_t currentTick = calculateCurrentTick();
-
-		uint32_t endTechTick = GC.getDefineINT("HISTORICAL_ACCURATE_ERA_RANGE_FUTURE_START");
-		endTechTick = (200000 + endTechTick) * 360;
-		if (currentTick > endTechTick) //more than 6000 AD
-		{
-			m_currentDate.increment();
-		}
-		//oldYear = 
-		if (currentTick > m_currentDate.GetTick() ||  m_currentDate.GetTick() == (CvDate::getDate(getGameTurn()).GetTick())) {
-			m_currentDate.setTick(currentTick);
-		}
-		
 	}
 }
 

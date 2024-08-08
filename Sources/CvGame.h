@@ -381,6 +381,7 @@ protected:
 	int m_iEstimateEndTurn;
 	CvDate m_currentDate;
 	int m_iDateTurn;
+	std::map<int, int> turnHACValues;
 
 	int m_iTurnSlice;
 	int m_iMinGameSliceToCycleUnit;
