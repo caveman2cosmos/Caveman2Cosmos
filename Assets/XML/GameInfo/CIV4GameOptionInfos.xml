@@ -658,6 +658,13 @@
 			<bDefault>0</bDefault>
 			<bVisible>1</bVisible>
 		</GameOptionInfo>
+		<GameOptionInfo>
+			<Type>GAMEOPTION_REALISTIC_BUILDING_COST</Type>
+			<Description>TXT_KEY_GAMEOPTION_REALISTIC_BUILDING_COST</Description>
+			<Help>TXT_KEY_GAMEOPTION_REALISTIC_BUILDING_COST_HELP</Help>
+			<bDefault>0</bDefault>
+			<bVisible>1</bVisible>
+		</GameOptionInfo>
 		<!-- Challenge -->
 		<GameOptionInfo>
 			<Type>GAMEOPTION_CHALLENGE_CUT_LOSERS</Type>
@@ -713,13 +720,6 @@
 			<Type>GAMEOPTION_UNSUPPORTED_MULTIMAPS</Type>
 			<Description>TXT_KEY_GAMEOPTION_UNSUPPORTED_MULTIMAPS</Description>
 			<Help>TXT_KEY_GAMEOPTION_UNSUPPORTED_MULTIMAPS_HELP</Help>
-			<bDefault>0</bDefault>
-			<bVisible>1</bVisible>
-		</GameOptionInfo>
-		<GameOptionInfo>
-			<Type>GAMEOPTION_REALISTIC_BUILDING_COST</Type>
-			<Description>TXT_KEY_GAMEOPTION_REALISTIC_BUILDING_COST</Description>
-			<Help>TXT_KEY_GAMEOPTION_REALISTIC_BUILDING_COST_HELP</Help>
 			<bDefault>0</bDefault>
 			<bVisible>1</bVisible>
 		</GameOptionInfo>
