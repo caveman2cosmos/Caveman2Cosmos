@@ -1667,10 +1667,10 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_REALISTIC_BUILDING_COST</Tag>
-		<English>Realistic building cost.</English>
+		<English>Advanced - Realistic building cost</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_REALISTIC_BUILDING_COST_HELP</Tag>
-		<English>Realistic building costs.</English>
+		<English>Changes building cost values to more closely represent their size complexity and material cost.</English>
 	</TEXT>
 </Civ4GameText>
