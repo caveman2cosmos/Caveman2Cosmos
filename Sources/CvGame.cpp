@@ -3331,15 +3331,21 @@ void CvGame::setGameTurn(int iNewValue)
 		GC.getInitCore().setGameTurn(iNewValue);
 		FASSERT_NOT_NEGATIVE(getGameTurn());
 
-		if (m_iDateTurn == iNewValue - 1)
-		{
-			m_currentDate.increment();
-		}
-		else
-		{
-			m_currentDate = CvDate::getDate(iNewValue);
+		bool bHistoricalCalendar = isModderGameOption(MODDERGAMEOPTION_USE_HISTORICAL_ACCURATE_CALENDAR);
+
+		if (!bHistoricalCalendar) {
+			if (m_iDateTurn == iNewValue - 1)
+			{
+				m_currentDate.increment();
+			}
+			else
+			{
+				m_currentDate = CvDate::getDate(iNewValue);
+			}
 		}
 		m_iDateTurn = iNewValue;
+
+		doCalculateCurrentTick();
 
 		updateBuildingCommerce();
 
@@ -3376,6 +3382,7 @@ CvDate CvGame::getCurrentDate()
 		m_currentDate = CvDate::getDate(getGameTurn());
 		m_iDateTurn = getGameTurn();
 	}
+	doCalculateCurrentTick();
 	return m_currentDate;
 }
 
@@ -9820,6 +9827,44 @@ void CvGame::doIncreasingDifficulty()
 	if (bHumanHandicapChanged)
 	{
 		averageHandicaps();
+	}
+}
+
+void CvGame::doCalculateCurrentTick()
+{
+	bool bHistoricalCalendar = isModderGameOption(MODDERGAMEOPTION_USE_HISTORICAL_ACCURATE_CALENDAR);
+	//logging::logMsg("C2C.log", "[BUG] bHistoricalCalendar: %S", bHistoricalCalendar);
+	if (bHistoricalCalendar) 
+	{
+		if (turnHACValues.find(m_iDateTurn) == turnHACValues.end()) 
+		{
+			bool isDiff = true;
+			if (getGameTurn() > 0) {
+				int delted = CvDate::getDate(getGameTurn()).GetTick() - CvDate::getDate(getGameTurn()-1).GetTick();
+				bool isDiff = (m_currentDate.GetTick() - CvDate::getDate(getGameTurn()-1).GetTick()) != delted;
+			}
+			else
+			{
+				bool isDiff = true;
+			}
+			uint32_t currentTick = calculateCurrentTick();
+
+			uint32_t endTechTick = GC.getDefineINT("HISTORICAL_ACCURATE_ERA_RANGE_FUTURE_START");
+			endTechTick = (200000 + endTechTick) * 360;
+			if (currentTick > endTechTick) //more than 6000 AD
+			{
+				m_currentDate.increment();
+			}
+			//oldYear = 
+			if (currentTick > m_currentDate.GetTick() ||  m_currentDate.GetTick() == (CvDate::getDate(getGameTurn()).GetTick())) {
+				m_currentDate.setTick(currentTick);
+			}
+			turnHACValues[m_iDateTurn] = currentTick;
+		}
+		else
+		{
+			m_currentDate.setTick(turnHACValues[m_iDateTurn]);
+		}
 	}
 }
 

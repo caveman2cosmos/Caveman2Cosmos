@@ -29,7 +29,7 @@ class RoMOptionsTab(BugOptionsTab.BugOptionsTab):
 		self.addTextDropdown(screen, left, left, "RoMSettings__PlayerColor", False, "LAYOUT_LEFT") # This might be OOS safe, but I'm not sure... Toffer.
 		screen.setEnabled(self.addTextDropdown(screen, left, left, "RoMSettings__CurrentDifficulty", False, "LAYOUT_LEFT"), bCanAdjustSettings)
 		self.addSpacer(screen, left, "")
-
+		screen.setEnabled(self.addCheckbox(screen, left, "RoMSettings__HistoricalAccurateCalendar"), bCanAdjustSettings)
 		#Flexible Difficulty
 		screen.setEnabled(self.addCheckbox(screen, left, "RoMSettings__EnableFlexibleDifficulty"), bCanAdjustSettings)
 		screen.setEnabled(self.addTextDropdown(screen, left, left, "RoMSettings__FlexibleDifficultyMinimumDiff", False, "LAYOUT_LEFT"), bCanAdjustSettings)
@@ -39,6 +39,7 @@ class RoMOptionsTab(BugOptionsTab.BugOptionsTab):
 		screen.setEnabled(self.addTextDropdown(screen, left, left, "RoMSettings__FlexibleDifficultyAIMinimumDiff", False, "LAYOUT_LEFT"), bCanAdjustSettings)
 		screen.setEnabled(self.addTextDropdown(screen, left, left, "RoMSettings__FlexibleDifficultyAIMaximumDiff", False, "LAYOUT_LEFT"), bCanAdjustSettings)
 		screen.setEnabled(self.addIntDropdown(screen, left, left, "RoMSettings__FlexibleDifficultyAITurnIncrements", False, "LAYOUT_LEFT"), bCanAdjustSettings)
+        
 
 		#City Management
 		self.addLabel(screen, center, "RoMSettings__CityManagement")

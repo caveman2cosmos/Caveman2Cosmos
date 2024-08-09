@@ -208,13 +208,13 @@ public:
 	CMessageQueue& getHotMessageQueue() const 	{ return *m_hotJoinMsgQueue; }
 	CMessageControl& getMessageControl() const 	{ return *m_messageControl; }
 	CvDropMgr& getDropMgr() const 				{ return *m_dropMgr; }
-	FAStar& getPathFinder() const;
-	FAStar& getInterfacePathFinder() const;
-	FAStar& getStepFinder() const;
-	FAStar& getRouteFinder() const;
-	FAStar& getBorderFinder() const;
-	FAStar& getAreaFinder() const;
-	FAStar& getPlotGroupFinder() const;
+	FAStar& getPathFinder(MapTypes map = NO_MAP) const;
+	FAStar& getInterfacePathFinder(MapTypes map = NO_MAP) const;
+	FAStar& getStepFinder(MapTypes map = NO_MAP) const;
+	FAStar& getRouteFinder(MapTypes map = NO_MAP) const;
+	FAStar& getBorderFinder(MapTypes map = NO_MAP) const;
+	FAStar& getAreaFinder(MapTypes map = NO_MAP) const;
+	FAStar& getPlotGroupFinder(MapTypes map = NO_MAP) const;
 
 	std::vector<CvInterfaceModeInfo*>& getInterfaceModeInfos();
 	CvInterfaceModeInfo& getInterfaceModeInfo(InterfaceModeTypes e) const;

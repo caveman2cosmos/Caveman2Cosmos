@@ -10,6 +10,7 @@
 #include "FProfiler.h"
 
 #include "CvGameCoreDLL.h"
+#include "CvGameCoreUtils.h"
 #include "CvGameAI.h"
 #include "CvGlobals.h"
 #include "CvInfos.h"
@@ -37,6 +38,11 @@ int CvDate::getDay() const
 uint32_t CvDate::GetTick() const
 {
 	return m_iTick;
+}
+
+void CvDate::setTick(uint32_t newTick) 
+{
+	m_iTick = newTick;
 }
 
 int CvDate::getMonth() const
@@ -72,6 +78,7 @@ SeasonTypes CvDate::getSeason() const
 	return NO_SEASON; // This will never be executed
 }
 
+
 CvDateIncrement CvDate::getIncrement(GameSpeedTypes eGameSpeed) const
 {
 	PROFILE_EXTRA_FUNC();
@@ -100,8 +107,21 @@ CvDateIncrement CvDate::getIncrement(GameSpeedTypes eGameSpeed) const
 void CvDate::increment(GameSpeedTypes eGameSpeed)
 {
 	const CvDateIncrement inc = getIncrement(eGameSpeed);
-	m_iTick += inc.m_iIncrementDay;
-	m_iTick += (inc.m_iIncrementMonth * 30);
+
+	double dateModifier = 1.0;
+	GameSpeedTypes eActualGameSpeed = eGameSpeed;
+	if (eGameSpeed == NO_GAMESPEED)
+	{
+		eActualGameSpeed = GC.getGame().getGameSpeedType();
+	}
+	CvGameSpeedInfo& kInfo = GC.getGameSpeedInfo(eActualGameSpeed);
+
+	int incrementValue = 0;
+	incrementValue += static_cast<uint32_t>(inc.m_iIncrementDay);
+	incrementValue += static_cast<uint32_t>(inc.m_iIncrementMonth * 30);
+
+
+	m_iTick += incrementValue;
 }
 
 void CvDate::increment(int iTurns, GameSpeedTypes eGameSpeed)
@@ -189,7 +209,22 @@ CvDate CvDate::getDate(int iTurn, GameSpeedTypes eGameSpeed)
 			date = aIncrements[i].m_endDate;
 		}
 	}
-	date.increment(iRemainingTurns, eGameSpeed);
+
+	//date.increment(iRemainingTurns, eGameSpeed);
+	bool bHistoricalCalendar = GC.getGame().isModderGameOption(MODDERGAMEOPTION_USE_HISTORICAL_ACCURATE_CALENDAR);
+	if (bHistoricalCalendar) 
+	{
+		uint32_t currentTick = calculateCurrentTick();
+
+		if (currentTick > date.GetTick())
+		{
+			date.setTick(currentTick);
+		}
+	}
+	else
+	{
+		date.increment(iRemainingTurns, eGameSpeed);
+	}
 	return date;
 }
 
