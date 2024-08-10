@@ -156,7 +156,7 @@ public:
 	int getPopulation() const;
 	void setPopulation(int iNewValue);
 	void changePopulation(int iChange);
-	int64_t getRealPopulation() const;
+	int getRealPopulation() const;
 
 	int getHighestPopulation() const;
 	void setHighestPopulation(int iNewValue);
