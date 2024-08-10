@@ -380,6 +380,10 @@
 				</And>
 			</ConstructCondition>
 			<iCost>60</iCost>
+			<iCostSizeModifier>0</iCostSizeModifier>
+			<iCostCountModifier>0</iCostCountModifier>
+			<iCostMaterialsModifier>0</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<ObsoleteTech>TECH_MIND_UPLOADING</ObsoleteTech>
 			<iAsset>1</iAsset>
 			<iPower>1</iPower>
@@ -665,6 +669,10 @@
 			</ReplacementBuildings>
 			<ObsoletesToBuilding>BUILDING_TELEPORT_BOOTH</ObsoletesToBuilding>
 			<iCost>830</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<FreeBuilding>BUILDING_ORDINANCE_EFFECT_CARPOOL</FreeBuilding>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
@@ -1176,6 +1184,10 @@
 			</PrereqInCityBuildings>
 			<iPrereqPopulation>3</iPrereqPopulation>
 			<iCost>1345</iCost>
+			<iCostSizeModifier>0</iCostSizeModifier>
+			<iCostCountModifier>0</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<FreeBuilding>BUILDING_ORDINANCE_EFFECT_CLEAN_AIR_ACT</FreeBuilding>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
@@ -1219,6 +1231,10 @@
 			</PrereqInCityBuildings>
 			<iPrereqPopulation>7</iPrereqPopulation>
 			<iCost>1345</iCost>
+			<iCostSizeModifier>0</iCostSizeModifier>
+			<iCostCountModifier>0</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<FreeBuilding>BUILDING_ORDINANCE_EFFECT_CLEAN_WATER_ACT</FreeBuilding>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
@@ -5615,6 +5631,10 @@
 			</ReplacementBuildings>
 			<ObsoletesToBuilding>BUILDING_TELEPORT_BOOTH</ObsoletesToBuilding>
 			<iCost>1345</iCost>
+			<iCostSizeModifier>0</iCostSizeModifier>
+			<iCostCountModifier>0</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<FreeBuilding>BUILDING_ORDINANCE_EFFECT_AUTOMOBILE_EMISSION_REDUCTION_ACT</FreeBuilding>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
@@ -8352,6 +8372,10 @@
 			</PrereqInCityBuildings>
 			<iPrereqPopulation>3</iPrereqPopulation>
 			<iCost>800</iCost>
+			<iCostSizeModifier>0</iCostSizeModifier>
+			<iCostCountModifier>0</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<PropertiesAllCities>
 				<Property>
 					<PropertyType>PROPERTY_FLAMMABILITY</PropertyType>
@@ -8436,6 +8460,10 @@
 				<BuildingType>BUILDING_NIGHT_CLUB</BuildingType>
 			</PrereqOrBuildings>
 			<iCost>60</iCost>
+			<iCostSizeModifier>0</iCostSizeModifier>
+			<iCostCountModifier>0</iCostCountModifier>
+			<iCostMaterialsModifier>0</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<ObsoleteTech>TECH_MIND_UPLOADING</ObsoleteTech>
 			<iAsset>1</iAsset>
 			<iPower>1</iPower>
@@ -11499,6 +11527,10 @@
 			</PrereqInCityBuildings>
 			<iPrereqPopulation>7</iPrereqPopulation>
 			<iCost>1685</iCost>
+			<iCostSizeModifier>0</iCostSizeModifier>
+			<iCostCountModifier>0</iCostCountModifier>
+			<iCostMaterialsModifier>0</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<FreeBuilding>BUILDING_ORDINANCE_SMOKING_PROHIBITION</FreeBuilding>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
@@ -11589,6 +11621,10 @@
 			</PrereqInCityBuildings>
 			<iPrereqPopulation>3</iPrereqPopulation>
 			<iCost>800</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>2</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<FreeBuilding>BUILDING_SAFETY_NEIGHBORHOOD_WATCH</FreeBuilding>
 			<iAsset>1</iAsset>
 			<Flavors>
@@ -13535,6 +13571,10 @@
 			</ReplacementBuildings>
 			<ObsoletesToBuilding>BUILDING_TELEPORT_BOOTH</ObsoletesToBuilding>
 			<iCost>830</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>2</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>2</iCostComplexityModifier>
 			<FreeBuilding>BUILDING_ORDINANCE_EFFECT_COMMUTER_SHUTTLE_SERVICE</FreeBuilding>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
@@ -14186,6 +14226,10 @@
 			</PrereqInCityBuildings>
 			<iPrereqPopulation>3</iPrereqPopulation>
 			<iCost>1080</iCost>
+			<iCostSizeModifier>0</iCostSizeModifier>
+			<iCostCountModifier>2</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<PropertiesAllCities>
 				<Property>
 					<PropertyType>PROPERTY_FLAMMABILITY</PropertyType>
@@ -14591,6 +14635,10 @@
 			</PrereqInCityBuildings>
 			<iPrereqPopulation>7</iPrereqPopulation>
 			<iCost>1475</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>2</iCostComplexityModifier>
 			<FreeBuilding>BUILDING_ORDINANCE_EFFECT_TIRE_RECYCLING_PROGRAM</FreeBuilding>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
@@ -16008,6 +16056,10 @@
 			</PrereqInCityBuildings>
 			<iPrereqPopulation>3</iPrereqPopulation>
 			<iCost>870</iCost>
+			<iCostSizeModifier>0</iCostSizeModifier>
+			<iCostCountModifier>0</iCostCountModifier>
+			<iCostMaterialsModifier>0</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<FreeBuilding>BUILDING_SAFETY_YOUTH_CURFEW</FreeBuilding>
 			<iAsset>1</iAsset>
 			<Flavors>

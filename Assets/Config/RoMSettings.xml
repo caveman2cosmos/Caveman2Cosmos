@@ -46,6 +46,9 @@
 			<option id="FlexibleDifficultyAI" key="FlexibleDifficultyAI" type="boolean" default="False" get="isFlexibleDifficultyAI" set="setFlexibleDifficultyAI">
 				<change module="ANewDawnSettings" function="changedFlexibleDifficultyAI"/>
 			</option>
+			<option id="HistoricalAccurateCalendar" key="HistoricalAccurateCalendar" type="boolean" default="False" get="isHistoricalAccurateCalendar" set="setHistoricalAccurateCalendar">
+				<change module="ANewDawnSettings" function="changedHistoricalAccurateCalendar"/>
+			</option>
 			<option id="MercyRule" key="MercyRule" type="boolean" default="False" get="isMercyRule" set="setMercyRule">
 				<change module="ANewDawnSettings" function="changedMercyRule"/>
 			</option>

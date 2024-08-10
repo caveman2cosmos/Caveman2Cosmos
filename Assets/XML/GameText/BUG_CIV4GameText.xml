@@ -6768,6 +6768,14 @@
 		<Russian>Ãèáêèé óðîâ. ñëîæíîñòè</Russian>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_BUG_OPT_ROMSETTINGS__HISTORICALACCURATECALENDAR_HOVER</Tag>
+		<English>This feature will change the date calculation algorithm, making them more historically accurate depending on the global technological level for greater game immersion. Changes will take effect after loading a save.[NEWLINE][NEWLINE]WARNING! This feature is experimental. Please report any issues with it to us on Discord.</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUG_OPT_ROMSETTINGS__HISTORICALACCURATECALENDAR_TEXT</Tag>
+		<English>[BETA] Historical Accurate Calendar</English>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_ROMSETTINGS__FLEXIBLEDIFFICULTYAI_HOVER</Tag>
 		<English>All AI players will also use Flexible Difficulty, and human players will be alerted when AI difficulty changes.</English>
 		<Russian>Âñå èãðîêè ÈÈ áóäóò èñïîëüçîâàòü ãèáêóþ ñëîæíîñòü, à ÷åëîâå÷åñêèå èãðîêè áóäóò îïîâåùåíû, êîãäà èçìåíèòñÿ óðîâåíü ñëîæíîñòè äëÿ ÈÈ.</Russian>

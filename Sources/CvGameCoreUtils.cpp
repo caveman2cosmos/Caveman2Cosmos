@@ -2,6 +2,7 @@
 #include "CvBuildingInfo.h"
 #include "CvCity.h"
 #include "CvGameAI.h"
+#include "CvGame.h"
 #include "CvGlobals.h"
 #include "CvInfos.h"
 #include "CvImprovementInfo.h"
@@ -3739,16 +3740,197 @@ void shuffle(int* piShuffle, int iNum, CvRandom& rand)
 	}
 }
 
+#define NUM_ERAS 14
+
+struct EraYearRange
+{
+    int startYear;
+    int endYear;
+};
+
+void initEraYearRanges(EraYearRange eraYearRanges[NUM_ERAS])
+{
+	eraYearRanges[0].startYear = GC.getDefineINT("HISTORICAL_ACCURATE_ERA_RANGE_PREHISTORIC_START");
+	eraYearRanges[0].endYear = GC.getDefineINT("HISTORICAL_ACCURATE_ERA_RANGE_PREHISTORIC_END");
+
+	eraYearRanges[1].startYear = GC.getDefineINT("HISTORICAL_ACCURATE_ERA_RANGE_ANCIENT_START");
+	eraYearRanges[1].endYear = GC.getDefineINT("HISTORICAL_ACCURATE_ERA_RANGE_ANCIENT_END");
+
+	eraYearRanges[2].startYear = GC.getDefineINT("HISTORICAL_ACCURATE_ERA_RANGE_CLASSIC_START");
+	eraYearRanges[2].endYear = GC.getDefineINT("HISTORICAL_ACCURATE_ERA_RANGE_CLASSIC_END");
+
+	eraYearRanges[3].startYear = GC.getDefineINT("HISTORICAL_ACCURATE_ERA_RANGE_MEDIEVAL_START");
+	eraYearRanges[3].endYear = GC.getDefineINT("HISTORICAL_ACCURATE_ERA_RANGE_MEDIEVAL_END");
+
+	eraYearRanges[4].startYear = GC.getDefineINT("HISTORICAL_ACCURATE_ERA_RANGE_RENAISSANCE_START");
+	eraYearRanges[4].endYear = GC.getDefineINT("HISTORICAL_ACCURATE_ERA_RANGE_RENAISSANCE_END");
+
+	eraYearRanges[5].startYear = GC.getDefineINT("HISTORICAL_ACCURATE_ERA_RANGE_INDUSTRIAL_START");
+	eraYearRanges[5].endYear = GC.getDefineINT("HISTORICAL_ACCURATE_ERA_RANGE_INDUSTRIAL_END");
+
+	eraYearRanges[6].startYear = GC.getDefineINT("HISTORICAL_ACCURATE_ERA_RANGE_ATOMIC_START");
+	eraYearRanges[6].endYear = GC.getDefineINT("HISTORICAL_ACCURATE_ERA_RANGE_ATOMIC_END");
+
+	eraYearRanges[7].startYear = GC.getDefineINT("HISTORICAL_ACCURATE_ERA_RANGE_INFORMATION_START");
+	eraYearRanges[7].endYear = GC.getDefineINT("HISTORICAL_ACCURATE_ERA_RANGE_INFORMATION_END");
+
+	eraYearRanges[8].startYear = GC.getDefineINT("HISTORICAL_ACCURATE_ERA_RANGE_NANOTECH_START");
+	eraYearRanges[8].endYear = GC.getDefineINT("HISTORICAL_ACCURATE_ERA_RANGE_NANOTECH_END");
+
+	eraYearRanges[9].startYear = GC.getDefineINT("HISTORICAL_ACCURATE_ERA_RANGE_TRANSHUMAN_START");
+	eraYearRanges[9].endYear = GC.getDefineINT("HISTORICAL_ACCURATE_ERA_RANGE_TRANSHUMAN_END");
+
+	eraYearRanges[10].startYear = GC.getDefineINT("HISTORICAL_ACCURATE_ERA_RANGE_GALACTIC_START");
+	eraYearRanges[10].endYear = GC.getDefineINT("HISTORICAL_ACCURATE_ERA_RANGE_GALACTIC_END");
+
+	eraYearRanges[11].startYear = GC.getDefineINT("HISTORICAL_ACCURATE_ERA_RANGE_COSMIC_START");
+	eraYearRanges[11].endYear = GC.getDefineINT("HISTORICAL_ACCURATE_ERA_RANGE_COSMIC_END");
+
+	eraYearRanges[12].startYear = GC.getDefineINT("HISTORICAL_ACCURATE_ERA_RANGE_TRANSCENDENT_START");
+	eraYearRanges[12].endYear = GC.getDefineINT("HISTORICAL_ACCURATE_ERA_RANGE_TRANSCENDENT_END");
+
+	eraYearRanges[13].startYear = GC.getDefineINT("HISTORICAL_ACCURATE_ERA_RANGE_FUTURE_START");
+	eraYearRanges[13].endYear = GC.getDefineINT("HISTORICAL_ACCURATE_ERA_RANGE_FUTURE_END");
+}
+double customDatePolynomial(double x) {
+	return tanh(30.0 * x) * pow(x, 0.5);
+}
+
+void calculatePlayerInfluence(double playerInfluences[NUM_ERAS], const int totalTechsInEra[NUM_ERAS], const int playerTechsInEra[NUM_ERAS])
+{
+    for (int iEra = 0; iEra < NUM_ERAS; ++iEra)
+    {
+        if (totalTechsInEra[iEra] == 0)
+        {
+            playerInfluences[iEra] = 0.0;
+        }
+        else
+        {
+            //playerInfluences[iEra] = pow(static_cast<double>(playerTechsInEra[iEra]) / totalTechsInEra[iEra], 0.5);
+			playerInfluences[iEra] = customDatePolynomial(static_cast<double>(playerTechsInEra[iEra]) / totalTechsInEra[iEra]);
+        }
+        //logging::logMsg("C2C.log", "[CALENDAR] Player influence in era %d: %f", iEra, playerInfluences[iEra]);
+    }
+}
+
+void calculateTotalInfluence(double totalInfluences[NUM_ERAS], double weight[NUM_ERAS])
+{
+    int numPlayers = 0;
+
+    for (int iPlayer = 0; iPlayer < MAX_PLAYERS; ++iPlayer)
+    {
+        CvPlayer& player = GET_PLAYER((PlayerTypes)iPlayer);
+		CvTeam& teammm = GET_TEAM(player.getTeam());
+
+        if (player.isAlive() && (player.isHuman() || player.isNormalAI()))
+        {
+            numPlayers++;
+            int playerTechsInEra[NUM_ERAS] = {0};
+			int totalTechsInEra[NUM_ERAS] = {0};
+            //double iResearchProgress = team.getResearchProgress(eTech);
+            for (int iTech = 0; iTech < GC.getNumTechInfos(); ++iTech)
+            {
+                TechTypes eTech = (TechTypes)iTech;
+                EraTypes eEra = (EraTypes)GC.getTechInfo(eTech).getEra();
+
+                if (eEra >= 0 && eEra < GC.getNumEraInfos())
+                {
+					CvTeam& team = GET_TEAM(player.getTeam());
+					totalTechsInEra[eEra] += team.getResearchCost(eTech);
+					int iResearchProgress = 0;
+                    if (GET_TEAM(player.getTeam()).isHasTech(eTech)) 
+                    {
+                        //playerTechsInEra[eEra]++;
+						//playerTechsInEra[eEra] += GC.getTechInfo(eTech).getResearchCost();
+						playerTechsInEra[eEra] += team.getResearchCost(eTech);
+                    }
+					else
+					{
+						iResearchProgress = GET_TEAM(player.getTeam()).getResearchProgress(player.getCurrentResearch());
+					}
+
+					// If there is progress, add the player's current research progress
+					if (iResearchProgress > 0 && player.getCurrentResearch() == eTech) {
+						playerTechsInEra[eEra] += iResearchProgress;
+						//logging::logMsg("C2C.log", "[TECH] Player %d research tech %S, progress = %d", iPlayer, GC.getTechInfo(eTech).getDescription(), iResearchProgress);
+					}
+                }
+            }
+            double playerInfluences[NUM_ERAS] = {0.0};
+			//const char* playerName = player.getName();
+			//logging::logMsg("C2C.log", "[TECH] its Player %S influence", player.getName());
+            calculatePlayerInfluence(playerInfluences, totalTechsInEra, playerTechsInEra);
+
+            for (int iEra = 0; iEra < NUM_ERAS; ++iEra)
+            {
+                totalInfluences[iEra] += playerInfluences[iEra];
+            }
+        }
+    }
+
+    for (int iEra = 0; iEra < NUM_ERAS; ++iEra)
+    {
+        totalInfluences[iEra] /= numPlayers; 
+        weight[iEra] = totalInfluences[iEra] * pow(5.0, iEra); 
+        //logging::logMsg("C2C.log", "[CALENDAR] Era %d: Total Influence = %f, Weight = %f", iEra, totalInfluences[iEra], weight[iEra]);
+    }
+}
+
+int calculateYearFromInfluence(int eraStart, int eraEnd, double influence)
+{
+    return eraStart + static_cast<int>((eraEnd - eraStart) * influence);
+}
+
+int calculateTickFromInfluence(int eraStart, int eraEnd, double influence)
+{
+	return (abs(200000 + eraStart) * 360) + static_cast<int>((eraEnd - eraStart) * influence * 360);
+}
+
+int calculateCurrentTick()
+{
+	int totalTechsInEra[NUM_ERAS] = { 0 };
+	double totalInfluences[NUM_ERAS] = { 0.0 };
+	double weight[NUM_ERAS] = { 0.0 };
+	EraYearRange eraYearRanges[NUM_ERAS];
+
+	initEraYearRanges(eraYearRanges); //initialize era ranges from XML global defines
+	calculateTotalInfluence(totalInfluences, weight); //calculate influence from players techs
+
+	double weightedTicks = 0.0;
+	double totalWeight = 0.0;
+
+	for (int iEra = 0; iEra < NUM_ERAS; ++iEra)
+	{
+		int tick = calculateTickFromInfluence(eraYearRanges[iEra].startYear, eraYearRanges[iEra].endYear, totalInfluences[iEra]);
+		weightedTicks += tick * weight[iEra];
+		totalWeight += weight[iEra];
+		logging::logMsg("C2C.log", "[CALENDAR] Era %d: Year = %d", iEra, tick);
+	}
+	if (weightedTicks == 0.0 && totalWeight == 0.0)
+	{
+		weightedTicks = 0;
+		totalWeight = 1.0;
+	}
+	int currentTick = static_cast<int>(weightedTicks / totalWeight);
+	int target_year = -200000 + (currentTick / 360);
+	logging::logMsg("C2C.log", "[CALENDAR] Weighted Ticks = %f, Total Weight = %f, Current Ticks = %d", weightedTicks, totalWeight, currentTick);
+	logging::logMsg("C2C.log", "[CALENDAR] TARGET_YEAR = %d", target_year);
+	return currentTick;
+}
+
 int getTurnYearForGame(int iGameTurn, int iStartYear, CalendarTypes eCalendar, GameSpeedTypes eSpeed)
 {
 	if (eCalendar == CALENDAR_DEFAULT)
 	{
 		if (iGameTurn == GC.getGame().getGameTurn())
 		{
+			//logging::logMsg("C2C.log", "[CALENDAR] year: %d", GC.getGame().getCurrentDate().getYear());
 			return GC.getGame().getCurrentDate().getYear();
 		}
+		
 		return CvDate::getDate(iGameTurn, eSpeed).getYear();
 	}
+	//logging::logMsg("C2C.log", "[CALENDAR] its getTurnMonthForGame");
 	return getTurnMonthForGame(iGameTurn, iStartYear, eCalendar, eSpeed) / std::max(1, GC.getNumMonthInfos());
 }
 
