@@ -221,8 +221,8 @@
 									return plot.getTerrainType() in valid_terrains
 								def doOutcome(unit,plot,eDefPlayer, eDefUnitType):
 									gc = CyGlobalContext()
-									gc.getPlayer(unit.getOwner()).initUnit(gc.getInfoTypeForString('UNIT_LUNAR_REWARD'),plot.getX(),plot.getY(),UnitAITypes.NO_UNITAI,DirectionTypes.DIRECTION_SOUTH)
-									gc.getMapByIndex(MapTypes.MAP_EARTH).moveUnitToMap(unit, 1, true)
+									newUnit = gc.getPlayer(unit.getOwner()).initUnit(gc.getInfoTypeForString('UNIT_LUNAR_REWARD'),plot.getX(),plot.getY(),UnitAITypes.NO_UNITAI,DirectionTypes.DIRECTION_SOUTH)
+									gc.getMapByIndex(MapTypes.MAP_EARTH).moveUnitToMap(newUnit, 1)
 								def getDisplay(unit,plot):
 									return u"Launch to the Moon"
 								def getAIValue(unit, plot):
@@ -3475,7 +3475,7 @@
 									return plot.getTerrainType() in valid_terrains
 								def doOutcome(unit,plot,eDefPlayer, eDefUnitType):
 									gc = CyGlobalContext()
-									gc.getPlayer(unit.getOwner()).initUnit(gc.getInfoTypeForString('UNIT_CAPTURED_ASTEROID'),plot.getX(),plot.getY(),UnitAITypes.NO_UNITAI,DirectionTypes.DIRECTION_SOUTH)
+									newUnit = gc.getPlayer(unit.getOwner()).initUnit(gc.getInfoTypeForString('UNIT_CAPTURED_ASTEROID'),plot.getX(),plot.getY(),UnitAITypes.NO_UNITAI,DirectionTypes.DIRECTION_SOUTH)
 								def getDisplay(unit,plot):
 									return u"Capture an asteroid."
 								def getAIValue(unit, plot):
@@ -3645,7 +3645,7 @@
 									return plot.getTerrainType() in valid_terrains
 								def doOutcome(unit,plot,eDefPlayer, eDefUnitType):
 									gc = CyGlobalContext()
-									gc.getPlayer(unit.getOwner()).initUnit(gc.getInfoTypeForString('UNIT_CAPTURED_ASTEROID'),plot.getX(),plot.getY(),UnitAITypes.NO_UNITAI,DirectionTypes.DIRECTION_SOUTH)
+									newUnit = gc.getPlayer(unit.getOwner()).initUnit(gc.getInfoTypeForString('UNIT_CAPTURED_ASTEROID'),plot.getX(),plot.getY(),UnitAITypes.NO_UNITAI,DirectionTypes.DIRECTION_SOUTH)
 								def getDisplay(unit,plot):
 									return u"Capture an asteroid."
 								def getAIValue(unit, plot):
@@ -3846,7 +3846,7 @@
 									return plot.getTerrainType() in valid_terrains
 								def doOutcome(unit,plot,eDefPlayer, eDefUnitType):
 									gc = CyGlobalContext()
-									gc.getPlayer(unit.getOwner()).initUnit(gc.getInfoTypeForString('UNIT_CAPTURED_ASTEROID'),plot.getX(),plot.getY(),UnitAITypes.NO_UNITAI,DirectionTypes.DIRECTION_SOUTH)
+									newUnit = gc.getPlayer(unit.getOwner()).initUnit(gc.getInfoTypeForString('UNIT_CAPTURED_ASTEROID'),plot.getX(),plot.getY(),UnitAITypes.NO_UNITAI,DirectionTypes.DIRECTION_SOUTH)
 								def getDisplay(unit,plot):
 									return u"Capture an asteroid."
 								def getAIValue(unit, plot):
@@ -6790,8 +6790,8 @@
 									return plot.getTerrainType() in valid_terrains
 								def doOutcome(unit,plot,eDefPlayer, eDefUnitType):
 									gc = CyGlobalContext()
-									unit = gc.getPlayer(unit.getOwner()).initUnit(gc.getInfoTypeForString('UNIT_LOE_REWARD'),plot.getX(),plot.getY(),UnitAITypes.NO_UNITAI,DirectionTypes.DIRECTION_SOUTH)
-									gc.getMapByIndex(MapTypes.MAP_EARTH).moveUnitToMap(unit, 1, true)
+									newUnit = gc.getPlayer(unit.getOwner()).initUnit(gc.getInfoTypeForString('UNIT_LOE_REWARD'),plot.getX(),plot.getY(),UnitAITypes.NO_UNITAI,DirectionTypes.DIRECTION_SOUTH)
+									gc.getMapByIndex(MapTypes.MAP_EARTH).moveUnitToMap(newUnit, 1)
 								def getDisplay(unit,plot):
 									return u"Place Satellite in Low-Earth Orbit."
 								def getAIValue(unit, plot):
@@ -6823,9 +6823,8 @@
 									return plot.getTerrainType() in valid_terrains
 								def doOutcome(unit,plot,eDefPlayer, eDefUnitType):
 									gc = CyGlobalContext()
-									gc.getPlayer(unit.getOwner()).initUnit(gc.getInfoTypeForString('UNIT_CISLUNAR_REWARD'),plot.getX(),plot.getY(),UnitAITypes.NO_UNITAI,DirectionTypes.DIRECTION_SOUTH)
-									gc.getMapByIndex(MapTypes.MAP_EARTH).moveUnitToMap(unit, 1, true)
-
+									newUnit = gc.getPlayer(unit.getOwner()).initUnit(gc.getInfoTypeForString('UNIT_CISLUNAR_REWARD'),plot.getX(),plot.getY(),UnitAITypes.NO_UNITAI,DirectionTypes.DIRECTION_SOUTH)
+									gc.getMapByIndex(MapTypes.MAP_EARTH).moveUnitToMap(newUnit, 1)
 								def getDisplay(unit,plot):
 									return u"Place Satellite in Geosynchronous Orbit"
 								def getAIValue(unit, plot):
@@ -6960,8 +6959,8 @@
 									return plot.getImprovementType() in valid_terrains
 								def doOutcome(unit,plot,eDefPlayer, eDefUnitType):
 									gc = CyGlobalContext()
-									gc.getPlayer(unit.getOwner()).initUnit(gc.getInfoTypeForString('UNIT_SS1_REWARD'),plot.getX(),plot.getY(),UnitAITypes.NO_UNITAI,DirectionTypes.DIRECTION_SOUTH)
-									gc.getMapByIndex(MapTypes.MAP_EARTH).moveUnitToMap(unit, 1, true)
+									newUnit = gc.getPlayer(unit.getOwner()).initUnit(gc.getInfoTypeForString('UNIT_SS1_REWARD'),plot.getX(),plot.getY(),UnitAITypes.NO_UNITAI,DirectionTypes.DIRECTION_SOUTH)
+									gc.getMapByIndex(MapTypes.MAP_EARTH).moveUnitToMap(newUnit, 1)
 								def getDisplay(unit,plot):
 									return u"Conduct Scientific Mission"
 								def getAIValue(unit, plot):
@@ -6993,8 +6992,8 @@
 									return plot.getImprovementType() in valid_terrains
 								def doOutcome(unit,plot,eDefPlayer, eDefUnitType):
 									gc = CyGlobalContext()
-									gc.getPlayer(unit.getOwner()).initUnit(gc.getInfoTypeForString('UNIT_SS2_REWARD'),plot.getX(),plot.getY(),UnitAITypes.NO_UNITAI,DirectionTypes.DIRECTION_SOUTH)
-									gc.getMapByIndex(MapTypes.MAP_EARTH).moveUnitToMap(unit, 1, true)
+									newUnit = gc.getPlayer(unit.getOwner()).initUnit(gc.getInfoTypeForString('UNIT_SS2_REWARD'),plot.getX(),plot.getY(),UnitAITypes.NO_UNITAI,DirectionTypes.DIRECTION_SOUTH)
+									gc.getMapByIndex(MapTypes.MAP_EARTH).moveUnitToMap(newUnit, 1)
 								def getDisplay(unit,plot):
 									return u"Conduct Scientific Mission"
 								def getAIValue(unit, plot):
@@ -7026,8 +7025,8 @@
 									return plot.getImprovementType() in valid_terrains
 								def doOutcome(unit,plot,eDefPlayer, eDefUnitType):
 									gc = CyGlobalContext()
-									gc.getPlayer(unit.getOwner()).initUnit(gc.getInfoTypeForString('UNIT_SS3_REWARD'),plot.getX(),plot.getY(),UnitAITypes.NO_UNITAI,DirectionTypes.DIRECTION_SOUTH)
-									gc.getMapByIndex(MapTypes.MAP_EARTH).moveUnitToMap(unit, 1, true)
+									newUnit = gc.getPlayer(unit.getOwner()).initUnit(gc.getInfoTypeForString('UNIT_SS3_REWARD'),plot.getX(),plot.getY(),UnitAITypes.NO_UNITAI,DirectionTypes.DIRECTION_SOUTH)
+									gc.getMapByIndex(MapTypes.MAP_EARTH).moveUnitToMap(newUnit, 1)
 								def getDisplay(unit,plot):
 									return u"Conduct Scientific Mission"
 								def getAIValue(unit, plot):
@@ -7135,8 +7134,8 @@
 									return plot.getTerrainType() in valid_terrains
 								def doOutcome(unit,plot,eDefPlayer, eDefUnitType):
 									gc = CyGlobalContext()
-									gc.getPlayer(unit.getOwner()).initUnit(gc.getInfoTypeForString('UNIT_INNER_SOLAR_SYSTEM_REWARD'),plot.getX(),plot.getY(),UnitAITypes.NO_UNITAI,DirectionTypes.DIRECTION_SOUTH)
-									gc.getMapByIndex(MapTypes.MAP_EARTH).moveUnitToMap(unit, 1, true)
+									newUnit = gc.getPlayer(unit.getOwner()).initUnit(gc.getInfoTypeForString('UNIT_INNER_SOLAR_SYSTEM_REWARD'),plot.getX(),plot.getY(),UnitAITypes.NO_UNITAI,DirectionTypes.DIRECTION_SOUTH)
+									gc.getMapByIndex(MapTypes.MAP_EARTH).moveUnitToMap(newUnit, 1)
 								def getDisplay(unit,plot):
 									return u"Explore Inner Solar System"
 								def getAIValue(unit, plot):
@@ -7168,8 +7167,8 @@
 									return plot.getTerrainType() in valid_terrains
 								def doOutcome(unit,plot,eDefPlayer, eDefUnitType):
 									gc = CyGlobalContext()
-									gc.getPlayer(unit.getOwner()).initUnit(gc.getInfoTypeForString('UNIT_OUTER_SOLAR_SYSTEM_REWARD'),plot.getX(),plot.getY(),UnitAITypes.NO_UNITAI,DirectionTypes.DIRECTION_SOUTH)
-									gc.getMapByIndex(MapTypes.MAP_EARTH).moveUnitToMap(unit, 1, true)
+									newUnit = gc.getPlayer(unit.getOwner()).initUnit(gc.getInfoTypeForString('UNIT_OUTER_SOLAR_SYSTEM_REWARD'),plot.getX(),plot.getY(),UnitAITypes.NO_UNITAI,DirectionTypes.DIRECTION_SOUTH)
+									gc.getMapByIndex(MapTypes.MAP_EARTH).moveUnitToMap(newUnit, 1)
 								def getDisplay(unit,plot):
 									return u"Explore Outer Solar System"
 								def getAIValue(unit, plot):
@@ -7201,8 +7200,8 @@
 									return plot.getTerrainType() in valid_terrains
 								def doOutcome(unit,plot,eDefPlayer, eDefUnitType):
 									gc = CyGlobalContext()
-									gc.getPlayer(unit.getOwner()).initUnit(gc.getInfoTypeForString('UNIT_TRANSNEPTUNIAN_REWARD'),plot.getX(),plot.getY(),UnitAITypes.NO_UNITAI,DirectionTypes.DIRECTION_SOUTH)
-									gc.getMapByIndex(MapTypes.MAP_EARTH).moveUnitToMap(unit, 1, true)
+									newUnit = gc.getPlayer(unit.getOwner()).initUnit(gc.getInfoTypeForString('UNIT_TRANSNEPTUNIAN_REWARD'),plot.getX(),plot.getY(),UnitAITypes.NO_UNITAI,DirectionTypes.DIRECTION_SOUTH)
+									gc.getMapByIndex(MapTypes.MAP_EARTH).moveUnitToMap(newUnit, 1)
 								def getDisplay(unit,plot):
 									return u"Explore Transneptunian Space"
 								def getAIValue(unit, plot):
@@ -7236,8 +7235,8 @@
 									return plot.getTerrainType() in valid_terrains
 								def doOutcome(unit,plot,eDefPlayer, eDefUnitType):
 									gc = CyGlobalContext()
-									gc.getPlayer(unit.getOwner()).initUnit(gc.getInfoTypeForString('UNIT_MERCURY_REWARD'),plot.getX(),plot.getY(),UnitAITypes.NO_UNITAI,DirectionTypes.DIRECTION_SOUTH)
-									gc.getMapByIndex(MapTypes.MAP_EARTH).moveUnitToMap(unit, 1, true)
+									newUnit = gc.getPlayer(unit.getOwner()).initUnit(gc.getInfoTypeForString('UNIT_MERCURY_REWARD'),plot.getX(),plot.getY(),UnitAITypes.NO_UNITAI,DirectionTypes.DIRECTION_SOUTH)
+									gc.getMapByIndex(MapTypes.MAP_EARTH).moveUnitToMap(newUnit, 1)
 								def getDisplay(unit,plot):
 									return u"Explore this planet."
 								def getAIValue(unit, plot):
@@ -7271,8 +7270,8 @@
 									return plot.getTerrainType() in valid_terrains
 								def doOutcome(unit,plot,eDefPlayer, eDefUnitType):
 									gc = CyGlobalContext()
-									gc.getPlayer(unit.getOwner()).initUnit(gc.getInfoTypeForString('UNIT_VENUS_REWARD'),plot.getX(),plot.getY(),UnitAITypes.NO_UNITAI,DirectionTypes.DIRECTION_SOUTH)
-									gc.getMapByIndex(MapTypes.MAP_EARTH).moveUnitToMap(unit, 1, true)
+									newUnit = gc.getPlayer(unit.getOwner()).initUnit(gc.getInfoTypeForString('UNIT_VENUS_REWARD'),plot.getX(),plot.getY(),UnitAITypes.NO_UNITAI,DirectionTypes.DIRECTION_SOUTH)
+									gc.getMapByIndex(MapTypes.MAP_EARTH).moveUnitToMap(newUnit, 1)
 								def getDisplay(unit,plot):
 									return u"Explore this planet."
 								def getAIValue(unit, plot):
@@ -7306,8 +7305,8 @@
 									return plot.getTerrainType() in valid_terrains
 								def doOutcome(unit,plot,eDefPlayer, eDefUnitType):
 									gc = CyGlobalContext()
-									gc.getPlayer(unit.getOwner()).initUnit(gc.getInfoTypeForString('UNIT_MARS_REWARD'),plot.getX(),plot.getY(),UnitAITypes.NO_UNITAI,DirectionTypes.DIRECTION_SOUTH)
-									gc.getMapByIndex(MapTypes.MAP_EARTH).moveUnitToMap(unit, 1, true)
+									newUnit = gc.getPlayer(unit.getOwner()).initUnit(gc.getInfoTypeForString('UNIT_MARS_REWARD'),plot.getX(),plot.getY(),UnitAITypes.NO_UNITAI,DirectionTypes.DIRECTION_SOUTH)
+									gc.getMapByIndex(MapTypes.MAP_EARTH).moveUnitToMap(newUnit, 1)
 								def getDisplay(unit,plot):
 									return u"Explore this planet."
 								def getAIValue(unit, plot):
@@ -7341,8 +7340,8 @@
 									return plot.getTerrainType() in valid_terrains
 								def doOutcome(unit,plot,eDefPlayer, eDefUnitType):
 									gc = CyGlobalContext()
-									gc.getPlayer(unit.getOwner()).initUnit(gc.getInfoTypeForString('UNIT_ASTEROID_REWARD'),plot.getX(),plot.getY(),UnitAITypes.NO_UNITAI,DirectionTypes.DIRECTION_SOUTH)
-									gc.getMapByIndex(MapTypes.MAP_EARTH).moveUnitToMap(unit, 1, true)
+									newUnit = gc.getPlayer(unit.getOwner()).initUnit(gc.getInfoTypeForString('UNIT_ASTEROID_REWARD'),plot.getX(),plot.getY(),UnitAITypes.NO_UNITAI,DirectionTypes.DIRECTION_SOUTH)
+									gc.getMapByIndex(MapTypes.MAP_EARTH).moveUnitToMap(newUnit, 1)
 								def getDisplay(unit,plot):
 									return u"Explore this planet."
 								def getAIValue(unit, plot):
@@ -7376,8 +7375,8 @@
 									return plot.getTerrainType() in valid_terrains
 								def doOutcome(unit,plot,eDefPlayer, eDefUnitType):
 									gc = CyGlobalContext()
-									gc.getPlayer(unit.getOwner()).initUnit(gc.getInfoTypeForString('UNIT_JUPITER_REWARD'),plot.getX(),plot.getY(),UnitAITypes.NO_UNITAI,DirectionTypes.DIRECTION_SOUTH)
-									gc.getMapByIndex(MapTypes.MAP_EARTH).moveUnitToMap(unit, 1, true)
+									newUnit = gc.getPlayer(unit.getOwner()).initUnit(gc.getInfoTypeForString('UNIT_JUPITER_REWARD'),plot.getX(),plot.getY(),UnitAITypes.NO_UNITAI,DirectionTypes.DIRECTION_SOUTH)
+									gc.getMapByIndex(MapTypes.MAP_EARTH).moveUnitToMap(newUnit, 1)
 								def getDisplay(unit,plot):
 									return u"Explore this planet."
 								def getAIValue(unit, plot):
@@ -7411,8 +7410,8 @@
 									return plot.getTerrainType() in valid_terrains
 								def doOutcome(unit,plot,eDefPlayer, eDefUnitType):
 									gc = CyGlobalContext()
-									gc.getPlayer(unit.getOwner()).initUnit(gc.getInfoTypeForString('UNIT_SATURN_REWARD'),plot.getX(),plot.getY(),UnitAITypes.NO_UNITAI,DirectionTypes.DIRECTION_SOUTH)
-									gc.getMapByIndex(MapTypes.MAP_EARTH).moveUnitToMap(unit, 1, true)
+									newUnit = gc.getPlayer(unit.getOwner()).initUnit(gc.getInfoTypeForString('UNIT_SATURN_REWARD'),plot.getX(),plot.getY(),UnitAITypes.NO_UNITAI,DirectionTypes.DIRECTION_SOUTH)
+									gc.getMapByIndex(MapTypes.MAP_EARTH).moveUnitToMap(newUnit, 1)
 								def getDisplay(unit,plot):
 									return u"Explore this planet."
 								def getAIValue(unit, plot):
@@ -7446,8 +7445,8 @@
 									return plot.getTerrainType() in valid_terrains
 								def doOutcome(unit,plot,eDefPlayer, eDefUnitType):
 									gc = CyGlobalContext()
-									gc.getPlayer(unit.getOwner()).initUnit(gc.getInfoTypeForString('UNIT_EUROPA_REWARD'),plot.getX(),plot.getY(),UnitAITypes.NO_UNITAI,DirectionTypes.DIRECTION_SOUTH)
-									gc.getMapByIndex(MapTypes.MAP_EARTH).moveUnitToMap(unit, 1, true)
+									newUnit = gc.getPlayer(unit.getOwner()).initUnit(gc.getInfoTypeForString('UNIT_EUROPA_REWARD'),plot.getX(),plot.getY(),UnitAITypes.NO_UNITAI,DirectionTypes.DIRECTION_SOUTH)
+									gc.getMapByIndex(MapTypes.MAP_EARTH).moveUnitToMap(newUnit, 1)
 								def getDisplay(unit,plot):
 									return u"Explore this planet."
 								def getAIValue(unit, plot):
@@ -7481,8 +7480,8 @@
 									return plot.getTerrainType() in valid_terrains
 								def doOutcome(unit,plot,eDefPlayer, eDefUnitType):
 									gc = CyGlobalContext()
-									gc.getPlayer(unit.getOwner()).initUnit(gc.getInfoTypeForString('UNIT_TITAN_REWARD'),plot.getX(),plot.getY(),UnitAITypes.NO_UNITAI,DirectionTypes.DIRECTION_SOUTH)
-									gc.getMapByIndex(MapTypes.MAP_EARTH).moveUnitToMap(unit, 1, true)
+									newUnit = gc.getPlayer(unit.getOwner()).initUnit(gc.getInfoTypeForString('UNIT_TITAN_REWARD'),plot.getX(),plot.getY(),UnitAITypes.NO_UNITAI,DirectionTypes.DIRECTION_SOUTH)
+									gc.getMapByIndex(MapTypes.MAP_EARTH).moveUnitToMap(newUnit, 1)
 								def getDisplay(unit,plot):
 									return u"Explore this planet."
 								def getAIValue(unit, plot):
@@ -7516,8 +7515,8 @@
 									return plot.getTerrainType() in valid_terrains
 								def doOutcome(unit,plot,eDefPlayer, eDefUnitType):
 									gc = CyGlobalContext()
-									gc.getPlayer(unit.getOwner()).initUnit(gc.getInfoTypeForString('UNIT_URANUS_REWARD'),plot.getX(),plot.getY(),UnitAITypes.NO_UNITAI,DirectionTypes.DIRECTION_SOUTH)
-									gc.getMapByIndex(MapTypes.MAP_EARTH).moveUnitToMap(unit, 1, true)
+									newUnit = gc.getPlayer(unit.getOwner()).initUnit(gc.getInfoTypeForString('UNIT_URANUS_REWARD'),plot.getX(),plot.getY(),UnitAITypes.NO_UNITAI,DirectionTypes.DIRECTION_SOUTH)
+									gc.getMapByIndex(MapTypes.MAP_EARTH).moveUnitToMap(newUnit, 1)
 								def getDisplay(unit,plot):
 									return u"Explore this planet."
 								def getAIValue(unit, plot):
@@ -7551,8 +7550,8 @@
 									return plot.getTerrainType() in valid_terrains
 								def doOutcome(unit,plot,eDefPlayer, eDefUnitType):
 									gc = CyGlobalContext()
-									gc.getPlayer(unit.getOwner()).initUnit(gc.getInfoTypeForString('UNIT_NEPTUNE_REWARD'),plot.getX(),plot.getY(),UnitAITypes.NO_UNITAI,DirectionTypes.DIRECTION_SOUTH)
-									gc.getMapByIndex(MapTypes.MAP_EARTH).moveUnitToMap(unit, 1, true)
+									newUnit = gc.getPlayer(unit.getOwner()).initUnit(gc.getInfoTypeForString('UNIT_NEPTUNE_REWARD'),plot.getX(),plot.getY(),UnitAITypes.NO_UNITAI,DirectionTypes.DIRECTION_SOUTH)
+									gc.getMapByIndex(MapTypes.MAP_EARTH).moveUnitToMap(newUnit, 1)
 								def getDisplay(unit,plot):
 									return u"Explore this planet."
 								def getAIValue(unit, plot):
@@ -7586,8 +7585,8 @@
 									return plot.getTerrainType() in valid_terrains
 								def doOutcome(unit,plot,eDefPlayer, eDefUnitType):
 									gc = CyGlobalContext()
-									gc.getPlayer(unit.getOwner()).initUnit(gc.getInfoTypeForString('UNIT_KBO_REWARD'),plot.getX(),plot.getY(),UnitAITypes.NO_UNITAI,DirectionTypes.DIRECTION_SOUTH)
-									gc.getMapByIndex(MapTypes.MAP_EARTH).moveUnitToMap(unit, 1, true)
+									newUnit = gc.getPlayer(unit.getOwner()).initUnit(gc.getInfoTypeForString('UNIT_KBO_REWARD'),plot.getX(),plot.getY(),UnitAITypes.NO_UNITAI,DirectionTypes.DIRECTION_SOUTH)
+									gc.getMapByIndex(MapTypes.MAP_EARTH).moveUnitToMap(newUnit, 1)
 								def getDisplay(unit,plot):
 									return u"Explore this planet."
 								def getAIValue(unit, plot):
@@ -7619,8 +7618,8 @@
 									return gc.getInfoTypeForString("FEATURE_SEDNOID") == plot.getFeatureType()
 								def doOutcome(unit,plot,eDefPlayer, eDefUnitType):
 									gc = CyGlobalContext()
-									gc.getPlayer(unit.getOwner()).initUnit(gc.getInfoTypeForString('UNIT_SEDNOID_REWARD'),plot.getX(),plot.getY(),UnitAITypes.NO_UNITAI,DirectionTypes.DIRECTION_SOUTH)
-									gc.getMapByIndex(MapTypes.MAP_EARTH).moveUnitToMap(unit, 1, true)
+									newUnit = gc.getPlayer(unit.getOwner()).initUnit(gc.getInfoTypeForString('UNIT_SEDNOID_REWARD'),plot.getX(),plot.getY(),UnitAITypes.NO_UNITAI,DirectionTypes.DIRECTION_SOUTH)
+									gc.getMapByIndex(MapTypes.MAP_EARTH).moveUnitToMap(newUnit, 1)
 								def getDisplay(unit,plot):
 									return u"Explore this planet."
 								def getAIValue(unit, plot):
@@ -7652,8 +7651,8 @@
 									return plot.getBonusType(unit.getTeam()) in valid_bonuses
 								def doOutcome(unit,plot,eDefPlayer, eDefUnitType):
 									gc = CyGlobalContext()
-									gc.getPlayer(unit.getOwner()).initUnit(gc.getInfoTypeForString('UNIT_SOLAR_SYSTEM_LIFE_REWARD'),plot.getX(),plot.getY(),UnitAITypes.NO_UNITAI,DirectionTypes.DIRECTION_SOUTH)
-									gc.getMapByIndex(MapTypes.MAP_EARTH).moveUnitToMap(unit, 1, true)
+									newUnit = gc.getPlayer(unit.getOwner()).initUnit(gc.getInfoTypeForString('UNIT_SOLAR_SYSTEM_LIFE_REWARD'),plot.getX(),plot.getY(),UnitAITypes.NO_UNITAI,DirectionTypes.DIRECTION_SOUTH)
+									gc.getMapByIndex(MapTypes.MAP_EARTH).moveUnitToMap(newUnit, 1)
 								def getDisplay(unit,plot):
 									return u"Explore a nearby star"
 								def getAIValue(unit, plot):
@@ -7848,8 +7847,8 @@
 									return plot.getFeatureType() in valid_features
 								def doOutcome(unit,plot,eDefPlayer, eDefUnitType):
 									gc = CyGlobalContext()
-									gc.getPlayer(unit.getOwner()).initUnit(gc.getInfoTypeForString('UNIT_OORT_CLOUD_REWARD'),plot.getX(),plot.getY(),UnitAITypes.NO_UNITAI,DirectionTypes.DIRECTION_SOUTH)
-									gc.getMapByIndex(MapTypes.MAP_EARTH).moveUnitToMap(unit, 1, true)
+									newUnit = gc.getPlayer(unit.getOwner()).initUnit(gc.getInfoTypeForString('UNIT_OORT_CLOUD_REWARD'),plot.getX(),plot.getY(),UnitAITypes.NO_UNITAI,DirectionTypes.DIRECTION_SOUTH)
+									gc.getMapByIndex(MapTypes.MAP_EARTH).moveUnitToMap(newUnit, 1)
 								def getDisplay(unit,plot):
 									return u"Explore the Oort Cloud."
 								def getAIValue(unit, plot):
@@ -7881,8 +7880,8 @@
 									return plot.getTerrainType() in valid_terrains
 								def doOutcome(unit,plot,eDefPlayer, eDefUnitType):
 									gc = CyGlobalContext()
-									gc.getPlayer(unit.getOwner()).initUnit(gc.getInfoTypeForString('UNIT_INTERSTELLAR_REWARD'),plot.getX(),plot.getY(),UnitAITypes.NO_UNITAI,DirectionTypes.DIRECTION_SOUTH)
-									gc.getMapByIndex(MapTypes.MAP_EARTH).moveUnitToMap(unit, 1, true)
+									newUnit = gc.getPlayer(unit.getOwner()).initUnit(gc.getInfoTypeForString('UNIT_INTERSTELLAR_REWARD'),plot.getX(),plot.getY(),UnitAITypes.NO_UNITAI,DirectionTypes.DIRECTION_SOUTH)
+									gc.getMapByIndex(MapTypes.MAP_EARTH).moveUnitToMap(newUnit, 1)
 								def getDisplay(unit,plot):
 									return u"Explore a nearby star"
 								def getAIValue(unit, plot):
@@ -7916,8 +7915,8 @@
 									return plot.getFeatureType() in valid_features
 								def doOutcome(unit,plot,eDefPlayer, eDefUnitType):
 									gc = CyGlobalContext()
-									gc.getPlayer(unit.getOwner()).initUnit(gc.getInfoTypeForString('UNIT_EXOPLANET_REWARD'),plot.getX(),plot.getY(),UnitAITypes.NO_UNITAI,DirectionTypes.DIRECTION_SOUTH)
-									gc.getMapByIndex(MapTypes.MAP_EARTH).moveUnitToMap(unit, 1, true)
+									newUnit = gc.getPlayer(unit.getOwner()).initUnit(gc.getInfoTypeForString('UNIT_EXOPLANET_REWARD'),plot.getX(),plot.getY(),UnitAITypes.NO_UNITAI,DirectionTypes.DIRECTION_SOUTH)
+									gc.getMapByIndex(MapTypes.MAP_EARTH).moveUnitToMap(newUnit, 1)
 								def getDisplay(unit,plot):
 									return u"Explore this planet."
 								def getAIValue(unit, plot):
@@ -7949,8 +7948,8 @@
 									return plot.getBonusType(-1) in valid_bonuses
 								def doOutcome(unit,plot,eDefPlayer, eDefUnitType):
 									gc = CyGlobalContext()
-									gc.getPlayer(unit.getOwner()).initUnit(gc.getInfoTypeForString('UNIT_INTERSTELLAR_LIFE_REWARD'),plot.getX(),plot.getY(),UnitAITypes.NO_UNITAI,DirectionTypes.DIRECTION_SOUTH)
-									gc.getMapByIndex(MapTypes.MAP_EARTH).moveUnitToMap(unit, 1, true)
+									newUnit = gc.getPlayer(unit.getOwner()).initUnit(gc.getInfoTypeForString('UNIT_INTERSTELLAR_LIFE_REWARD'),plot.getX(),plot.getY(),UnitAITypes.NO_UNITAI,DirectionTypes.DIRECTION_SOUTH)
+									gc.getMapByIndex(MapTypes.MAP_EARTH).moveUnitToMap(newUnit, 1)
 								def getDisplay(unit,plot):
 									return u"Explore a nearby star"
 								def getAIValue(unit, plot):
@@ -8077,8 +8076,8 @@
 									return plot.getTerrainType() in valid_terrains
 								def doOutcome(unit,plot,eDefPlayer, eDefUnitType):
 									gc = CyGlobalContext()
-									gc.getPlayer(unit.getOwner()).initUnit(gc.getInfoTypeForString('UNIT_GALACTIC_REWARD'),plot.getX(),plot.getY(),UnitAITypes.NO_UNITAI,DirectionTypes.DIRECTION_SOUTH)
-									gc.getMapByIndex(MapTypes.MAP_EARTH).moveUnitToMap(unit, 1, true)
+									newUnit = gc.getPlayer(unit.getOwner()).initUnit(gc.getInfoTypeForString('UNIT_GALACTIC_REWARD'),plot.getX(),plot.getY(),UnitAITypes.NO_UNITAI,DirectionTypes.DIRECTION_SOUTH)
+									gc.getMapByIndex(MapTypes.MAP_EARTH).moveUnitToMap(newUnit, 1)
 								def getDisplay(unit,plot):
 									return u"Explore the galaxy"
 								def getAIValue(unit, plot):
@@ -8110,8 +8109,8 @@
 									return plot.getBonusType(-1) in valid_bonuses
 								def doOutcome(unit,plot,eDefPlayer, eDefUnitType):
 									gc = CyGlobalContext()
-									gc.getPlayer(unit.getOwner()).initUnit(gc.getInfoTypeForString('UNIT_ANCIENT_CIVILIZATION_REWARD'),plot.getX(),plot.getY(),UnitAITypes.NO_UNITAI,DirectionTypes.DIRECTION_SOUTH)
-									gc.getMapByIndex(MapTypes.MAP_EARTH).moveUnitToMap(unit, 1, true)
+									newUnit = gc.getPlayer(unit.getOwner()).initUnit(gc.getInfoTypeForString('UNIT_ANCIENT_CIVILIZATION_REWARD'),plot.getX(),plot.getY(),UnitAITypes.NO_UNITAI,DirectionTypes.DIRECTION_SOUTH)
+									gc.getMapByIndex(MapTypes.MAP_EARTH).moveUnitToMap(newUnit, 1)
 								def getDisplay(unit,plot):
 									return u"Excavate an ancient civilization"
 								def getAIValue(unit, plot):
@@ -8143,8 +8142,8 @@
 									return plot.getTerrainType() in valid_terrains
 								def doOutcome(unit,plot,eDefPlayer, eDefUnitType):
 									gc = CyGlobalContext()
-									gc.getPlayer(unit.getOwner()).initUnit(gc.getInfoTypeForString('UNIT_GALACTIC_CORE_REWARD'),plot.getX(),plot.getY(),UnitAITypes.NO_UNITAI,DirectionTypes.DIRECTION_SOUTH)
-									gc.getMapByIndex(MapTypes.MAP_EARTH).moveUnitToMap(unit, 1, true)
+									newUnit = gc.getPlayer(unit.getOwner()).initUnit(gc.getInfoTypeForString('UNIT_GALACTIC_CORE_REWARD'),plot.getX(),plot.getY(),UnitAITypes.NO_UNITAI,DirectionTypes.DIRECTION_SOUTH)
+									gc.getMapByIndex(MapTypes.MAP_EARTH).moveUnitToMap(newUnit, 1)
 								def getDisplay(unit,plot):
 									return u"Explore the galactic core."
 								def getAIValue(unit, plot):
@@ -8288,8 +8287,8 @@
 									return plot.getFeatureType() in valid_features
 								def doOutcome(unit,plot,eDefPlayer, eDefUnitType):
 									gc = CyGlobalContext()
-									gc.getPlayer(unit.getOwner()).initUnit(gc.getInfoTypeForString('UNIT_INTERGALACTIC_REWARD'),plot.getX(),plot.getY(),UnitAITypes.NO_UNITAI,DirectionTypes.DIRECTION_SOUTH)
-									gc.getMapByIndex(MapTypes.MAP_EARTH).moveUnitToMap(unit, 1, true)
+									newUnit = gc.getPlayer(unit.getOwner()).initUnit(gc.getInfoTypeForString('UNIT_INTERGALACTIC_REWARD'),plot.getX(),plot.getY(),UnitAITypes.NO_UNITAI,DirectionTypes.DIRECTION_SOUTH)
+									gc.getMapByIndex(MapTypes.MAP_EARTH).moveUnitToMap(newUnit, 1)
 								def getDisplay(unit,plot):
 									return u"Explore a distant galaxy"
 								def getAIValue(unit, plot):
@@ -8321,8 +8320,8 @@
 									return plot.getBonusType(-1) in valid_bonuses
 								def doOutcome(unit,plot,eDefPlayer, eDefUnitType):
 									gc = CyGlobalContext()
-									gc.getPlayer(unit.getOwner()).initUnit(gc.getInfoTypeForString('UNIT_ANCIENT_CIVILIZATION_REWARD'),plot.getX(),plot.getY(),UnitAITypes.NO_UNITAI,DirectionTypes.DIRECTION_SOUTH)
-									gc.getMapByIndex(MapTypes.MAP_EARTH).moveUnitToMap(unit, 1, true)
+									newUnit = gc.getPlayer(unit.getOwner()).initUnit(gc.getInfoTypeForString('UNIT_ANCIENT_CIVILIZATION_REWARD'),plot.getX(),plot.getY(),UnitAITypes.NO_UNITAI,DirectionTypes.DIRECTION_SOUTH)
+									gc.getMapByIndex(MapTypes.MAP_EARTH).moveUnitToMap(newUnit, 1)
 								def getDisplay(unit,plot):
 									return u"Excavate an ancient civilization"
 								def getAIValue(unit, plot):
@@ -8514,8 +8513,8 @@
 									return plot.getTerrainType() in valid_terrains
 								def doOutcome(unit,plot,eDefPlayer, eDefUnitType):
 									gc = CyGlobalContext()
-									gc.getPlayer(unit.getOwner()).initUnit(gc.getInfoTypeForString('UNIT_DISTANT_COSMOS_REWARD'),plot.getX(),plot.getY(),UnitAITypes.NO_UNITAI,DirectionTypes.DIRECTION_SOUTH)
-									gc.getMapByIndex(MapTypes.MAP_EARTH).moveUnitToMap(unit, 1, true)
+									newUnit = gc.getPlayer(unit.getOwner()).initUnit(gc.getInfoTypeForString('UNIT_DISTANT_COSMOS_REWARD'),plot.getX(),plot.getY(),UnitAITypes.NO_UNITAI,DirectionTypes.DIRECTION_SOUTH)
+									gc.getMapByIndex(MapTypes.MAP_EARTH).moveUnitToMap(newUnit, 1)
 								def getDisplay(unit,plot):
 									return u"Explore the far universe"
 								def getAIValue(unit, plot):
@@ -8627,8 +8626,8 @@
 									return plot.getTerrainType() in valid_terrains
 								def doOutcome(unit,plot,eDefPlayer, eDefUnitType):
 									gc = CyGlobalContext()
-									gc.getPlayer(unit.getOwner()).initUnit(gc.getInfoTypeForString('UNIT_HYPERSPACE_REWARD'),plot.getX(),plot.getY(),UnitAITypes.NO_UNITAI,DirectionTypes.DIRECTION_SOUTH)
-									gc.getMapByIndex(MapTypes.MAP_EARTH).moveUnitToMap(unit, 1, true)
+									newUnit = gc.getPlayer(unit.getOwner()).initUnit(gc.getInfoTypeForString('UNIT_HYPERSPACE_REWARD'),plot.getX(),plot.getY(),UnitAITypes.NO_UNITAI,DirectionTypes.DIRECTION_SOUTH)
+									gc.getMapByIndex(MapTypes.MAP_EARTH).moveUnitToMap(newUnit, 1)
 								def getDisplay(unit,plot):
 									return u"Explore hyperspace"
 								def getAIValue(unit, plot):
@@ -8660,8 +8659,8 @@
 									return plot.getTerrainType() in valid_terrains
 								def doOutcome(unit,plot,eDefPlayer, eDefUnitType):
 									gc = CyGlobalContext()
-									gc.getPlayer(unit.getOwner()).initUnit(gc.getInfoTypeForString('UNIT_MULTIVERSE_REWARD'),plot.getX(),plot.getY(),UnitAITypes.NO_UNITAI,DirectionTypes.DIRECTION_SOUTH)
-									gc.getMapByIndex(MapTypes.MAP_EARTH).moveUnitToMap(unit, 1, true)
+									newUnit = gc.getPlayer(unit.getOwner()).initUnit(gc.getInfoTypeForString('UNIT_MULTIVERSE_REWARD'),plot.getX(),plot.getY(),UnitAITypes.NO_UNITAI,DirectionTypes.DIRECTION_SOUTH)
+									gc.getMapByIndex(MapTypes.MAP_EARTH).moveUnitToMap(newUnit, 1)
 								def getDisplay(unit,plot):
 									return u"Explore multiverse"
 								def getAIValue(unit, plot):
@@ -8790,8 +8789,8 @@
 									return plot.getImprovementType() in valid_terrains
 								def doOutcome(unit,plot,eDefPlayer, eDefUnitType):
 									gc = CyGlobalContext()
-									gc.getPlayer(unit.getOwner()).initUnit(gc.getInfoTypeForString('UNIT_SS1_REWARD'),plot.getX(),plot.getY(),UnitAITypes.NO_UNITAI,DirectionTypes.DIRECTION_SOUTH)
-									gc.getMapByIndex(MapTypes.MAP_EARTH).moveUnitToMap(unit, 1, true)
+									newUnit = gc.getPlayer(unit.getOwner()).initUnit(gc.getInfoTypeForString('UNIT_SS1_REWARD'),plot.getX(),plot.getY(),UnitAITypes.NO_UNITAI,DirectionTypes.DIRECTION_SOUTH)
+									gc.getMapByIndex(MapTypes.MAP_EARTH).moveUnitToMap(newUnit, 1)
 								def getDisplay(unit,plot):
 									return u"Conduct Scientific Mission"
 								def getAIValue(unit, plot):
@@ -8823,8 +8822,8 @@
 									return plot.getImprovementType() in valid_terrains
 								def doOutcome(unit,plot,eDefPlayer, eDefUnitType):
 									gc = CyGlobalContext()
-									gc.getPlayer(unit.getOwner()).initUnit(gc.getInfoTypeForString('UNIT_SS2_REWARD'),plot.getX(),plot.getY(),UnitAITypes.NO_UNITAI,DirectionTypes.DIRECTION_SOUTH)
-									gc.getMapByIndex(MapTypes.MAP_EARTH).moveUnitToMap(unit, 1, true)
+									newUnit = gc.getPlayer(unit.getOwner()).initUnit(gc.getInfoTypeForString('UNIT_SS2_REWARD'),plot.getX(),plot.getY(),UnitAITypes.NO_UNITAI,DirectionTypes.DIRECTION_SOUTH)
+									gc.getMapByIndex(MapTypes.MAP_EARTH).moveUnitToMap(newUnit, 1)
 								def getDisplay(unit,plot):
 									return u"Conduct Scientific Mission"
 								def getAIValue(unit, plot):
@@ -8856,8 +8855,8 @@
 									return plot.getImprovementType() in valid_terrains
 								def doOutcome(unit,plot,eDefPlayer, eDefUnitType):
 									gc = CyGlobalContext()
-									gc.getPlayer(unit.getOwner()).initUnit(gc.getInfoTypeForString('UNIT_SS3_REWARD'),plot.getX(),plot.getY(),UnitAITypes.NO_UNITAI,DirectionTypes.DIRECTION_SOUTH)
-									gc.getMapByIndex(MapTypes.MAP_EARTH).moveUnitToMap(unit, 1, true)
+									newUnit = gc.getPlayer(unit.getOwner()).initUnit(gc.getInfoTypeForString('UNIT_SS3_REWARD'),plot.getX(),plot.getY(),UnitAITypes.NO_UNITAI,DirectionTypes.DIRECTION_SOUTH)
+									gc.getMapByIndex(MapTypes.MAP_EARTH).moveUnitToMap(newUnit, 1)
 								def getDisplay(unit,plot):
 									return u"Conduct Scientific Mission"
 								def getAIValue(unit, plot):

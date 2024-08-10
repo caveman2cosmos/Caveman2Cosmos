@@ -1665,4 +1665,12 @@
 		<Tag>TXT_KEY_GAMEOPTION_UNSUPPORTED_MULTIMAPS_HELP</Tag>
 		<English>Enables multiple maps for testing.</English>
 	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_GAMEOPTION_REALISTIC_BUILDING_COST</Tag>
+		<English>Advanced - Realistic building cost</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_GAMEOPTION_REALISTIC_BUILDING_COST_HELP</Tag>
+		<English>Changes building cost values to more closely represent their size complexity and material cost.</English>
+	</TEXT>
 </Civ4GameText>
