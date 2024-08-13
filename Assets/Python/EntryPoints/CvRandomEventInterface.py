@@ -942,6 +942,29 @@ def canTriggerWhaleOfAThing(argsList):
 		return False
 	return True
 
+######## FOUND_PEARLS ###########
+
+def canTriggerFoundPearls(argsList):
+	data = argsList[0]
+	player = GC.getPlayer(data.ePlayer)
+
+	iNumCoastalCities = player.countNumCoastalCities()
+	if 0.35 > ( iNumCoastalCities / player.getNumCities()):
+		return False
+	return True
+
+
+######## FOUND_PEARLS ###########
+
+def canTriggerFoundLobster(argsList):
+	data = argsList[0]
+	player = GC.getPlayer(data.ePlayer)
+
+	iNumCoastalCities = player.countNumCoastalCities()
+	if 0.35 > ( iNumCoastalCities / player.getNumCities()):
+		return False
+	return True
+
 ######## HIYOSILVER ###########
 
 def canTriggerHiyoSilver(argsList):

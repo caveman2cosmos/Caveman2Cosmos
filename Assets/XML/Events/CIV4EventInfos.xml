@@ -7,6 +7,44 @@
 	<EventInfos>
 
 		<EventInfo>
+			<Type>EVENT_POOR_HARVEST_1</Type>
+			<Description>TXT_KEY_EVENT_POOR_HARVEST_1</Description>
+			<bPickCity>1</bPickCity>
+			<iFood>-200</iFood>
+			<bGameSpeedScale>1</bGameSpeedScale>
+			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
+			<iAIValue>1</iAIValue>
+		</EventInfo>
+
+		<EventInfo>
+			<Type>EVENT_POOR_HARVEST_2</Type>
+			<Description>TXT_KEY_EVENT_POOR_HARVEST_2</Description>
+			<iGold>-50</iGold>
+			<bGameSpeedScale>1</bGameSpeedScale>
+			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
+			<iAIValue>1</iAIValue>
+		</EventInfo>
+
+		<EventInfo>
+			<Type>EVENT_GREAT_HARVEST_1</Type>
+			<Description>TXT_KEY_EVENT_GREAT_HARVEST_1</Description>
+			<bPickCity>1</bPickCity>
+			<iFood>200</iFood>
+			<bGameSpeedScale>1</bGameSpeedScale>
+			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
+			<iAIValue>1</iAIValue>
+		</EventInfo>
+
+		<EventInfo>
+			<Type>EVENT_GREAT_HARVEST_2</Type>
+			<Description>TXT_KEY_EVENT_GREAT_HARVEST_2</Description>
+			<iGold>50</iGold>
+			<bGameSpeedScale>1</bGameSpeedScale>
+			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
+			<iAIValue>1</iAIValue>
+		</EventInfo>
+
+		<EventInfo>
 			<Type>EVENT_FOREST_FIRE_1</Type>
 			<Description>TXT_KEY_EVENT_FOREST_FIRE_1</Description>
 			<iGold>-100</iGold>
@@ -63,14 +101,14 @@
 		<EventInfo>
 			<Type>EVENT_FOREST_MASSIVE_WILDFIRE_1</Type>
 			<Description>TXT_KEY_EVENT_FOREST_MASSIVE_WILDFIRE_1</Description>
-			<iGold>-150</iGold>
+			<iGold>-100</iGold>
 			<bGameSpeedScale>1</bGameSpeedScale>
 			<FeatureType>FEATURE_FOREST</FeatureType>
 			<iFeatureChange>-1</iFeatureChange>
 			<AdditionalEvents>
 				<EventChance>
 					<Event>EVENT_FOREST_WILDFIRE_SAVED</Event>
-					<iEventChance>55</iEventChance>
+					<iEventChance>75</iEventChance>
 				</EventChance>
 				<EventChance>
 					<Event>EVENT_WILDFIRE_CATCHES_CITY</Event>
@@ -383,6 +421,60 @@
 			<Type>EVENT_WASHED_OUT_2</Type>
 			<Description>TXT_KEY_EVENT_WASHED_OUT_2</Description>
 			<iGold>-30</iGold>
+			<bGameSpeedScale>1</bGameSpeedScale>
+			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
+			<iAIValue>1</iAIValue>
+		</EventInfo>
+
+		<EventInfo>
+			<Type>EVENT_WASHED_OUT_3</Type>
+			<Description>TXT_KEY_EVENT_WASHED_OUT_2</Description>
+			<iGold>-40</iGold>
+			<bGameSpeedScale>1</bGameSpeedScale>
+			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
+			<iAIValue>1</iAIValue>
+		</EventInfo>
+
+		<EventInfo>
+			<Type>EVENT_WASHED_OUT_4</Type>
+			<Description>TXT_KEY_EVENT_WASHED_OUT_2</Description>
+			<iGold>-50</iGold>
+			<bGameSpeedScale>1</bGameSpeedScale>
+			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
+			<iAIValue>1</iAIValue>
+		</EventInfo>
+
+		<EventInfo>
+			<Type>EVENT_WASHED_OUT_5</Type>
+			<Description>TXT_KEY_EVENT_WASHED_OUT_2</Description>
+			<iGold>-60</iGold>
+			<bGameSpeedScale>1</bGameSpeedScale>
+			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
+			<iAIValue>1</iAIValue>
+		</EventInfo>
+
+		<EventInfo>
+			<Type>EVENT_WASHED_OUT_6</Type>
+			<Description>TXT_KEY_EVENT_WASHED_OUT_2</Description>
+			<iGold>-70</iGold>
+			<bGameSpeedScale>1</bGameSpeedScale>
+			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
+			<iAIValue>1</iAIValue>
+		</EventInfo>
+
+		<EventInfo>
+			<Type>EVENT_WASHED_OUT_7</Type>
+			<Description>TXT_KEY_EVENT_WASHED_OUT_2</Description>
+			<iGold>-80</iGold>
+			<bGameSpeedScale>1</bGameSpeedScale>
+			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
+			<iAIValue>1</iAIValue>
+		</EventInfo>
+
+		<EventInfo>
+			<Type>EVENT_WASHED_OUT_8</Type>
+			<Description>TXT_KEY_EVENT_WASHED_OUT_2</Description>
+			<iGold>-90</iGold>
 			<bGameSpeedScale>1</bGameSpeedScale>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<iAIValue>1</iAIValue>
@@ -1414,7 +1506,6 @@
 		<EventInfo>
 			<Type>EVENT_BLIZZARD_1</Type>
 			<Description>TXT_KEY_EVENT_BLIZZARD_1</Description>
-			<iImprovementChange>-1</iImprovementChange>
 			<iRouteChange>-1</iRouteChange>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<iAIValue>1</iAIValue>
@@ -1422,8 +1513,97 @@
 
 		<EventInfo>
 			<Type>EVENT_BLIZZARD_2</Type>
+			<Description>TXT_KEY_EVENT_BLIZZARD_1</Description>
+			<iImprovementChange>-1</iImprovementChange>
+			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
+			<iAIValue>1</iAIValue>
+		</EventInfo>
+
+		<EventInfo>
+			<Type>EVENT_BLIZZARD_3</Type>
+			<Description>TXT_KEY_EVENT_BLIZZARD_2</Description>
+			<iGold>-30</iGold>
+			<bGameSpeedScale>1</bGameSpeedScale>
+			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
+			<iAIValue>2</iAIValue>
+		</EventInfo>
+
+		<EventInfo>
+			<Type>EVENT_BLIZZARD_4</Type>
+			<Description>TXT_KEY_EVENT_BLIZZARD_2</Description>
+			<iGold>-40</iGold>
+			<bGameSpeedScale>1</bGameSpeedScale>
+			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
+			<iAIValue>2</iAIValue>
+		</EventInfo>
+
+		<EventInfo>
+			<Type>EVENT_BLIZZARD_5</Type>
 			<Description>TXT_KEY_EVENT_BLIZZARD_2</Description>
 			<iGold>-50</iGold>
+			<bGameSpeedScale>1</bGameSpeedScale>
+			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
+			<iAIValue>2</iAIValue>
+		</EventInfo>
+
+		<EventInfo>
+			<Type>EVENT_BLIZZARD_6</Type>
+			<Description>TXT_KEY_EVENT_BLIZZARD_2</Description>
+			<iGold>-60</iGold>
+			<bGameSpeedScale>1</bGameSpeedScale>
+			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
+			<iAIValue>2</iAIValue>
+		</EventInfo>
+
+		<EventInfo>
+			<Type>EVENT_BLIZZARD_7</Type>
+			<Description>TXT_KEY_EVENT_BLIZZARD_2</Description>
+			<iGold>-70</iGold>
+			<bGameSpeedScale>1</bGameSpeedScale>
+			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
+			<iAIValue>2</iAIValue>
+		</EventInfo>
+
+		<EventInfo>
+			<Type>EVENT_BLIZZARD_8</Type>
+			<Description>TXT_KEY_EVENT_BLIZZARD_2</Description>
+			<iGold>-80</iGold>
+			<bGameSpeedScale>1</bGameSpeedScale>
+			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
+			<iAIValue>2</iAIValue>
+		</EventInfo>
+
+		<EventInfo>
+			<Type>EVENT_BLIZZARD_9</Type>
+			<Description>TXT_KEY_EVENT_BLIZZARD_2</Description>
+			<iGold>-90</iGold>
+			<bGameSpeedScale>1</bGameSpeedScale>
+			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
+			<iAIValue>2</iAIValue>
+		</EventInfo>
+
+		<EventInfo>
+			<Type>EVENT_BLIZZARD_10</Type>
+			<Description>TXT_KEY_EVENT_BLIZZARD_2</Description>
+			<iGold>-100</iGold>
+			<bGameSpeedScale>1</bGameSpeedScale>
+			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
+			<iAIValue>2</iAIValue>
+		</EventInfo>
+
+		<EventInfo>
+			<Type>EVENT_BLIZZARD_11</Type>
+			<Description>TXT_KEY_EVENT_BLIZZARD_2</Description>
+			<iGold>-110</iGold>
+			<bGameSpeedScale>1</bGameSpeedScale>
+			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
+			<iAIValue>2</iAIValue>
+		</EventInfo>
+
+		<EventInfo>
+			<Type>EVENT_BLIZZARD_12</Type>
+			<Description>TXT_KEY_EVENT_BLIZZARD_2</Description>
+			<iGold>-80</iGold>
 			<bGameSpeedScale>1</bGameSpeedScale>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<iAIValue>2</iAIValue>
@@ -1512,6 +1692,36 @@
 		</EventInfo>
 
 		<EventInfo>
+			<Type>EVENT_PURE_COAL_1</Type>
+			<Description>TXT_KEY_EVENT_PURE_COAL_1</Description>
+			<PlotExtraYields>
+				<PlotExtraYield>
+					<YieldType>YIELD_PRODUCTION</YieldType>
+					<iExtraYield>2</iExtraYield>
+				</PlotExtraYield>
+			</PlotExtraYields>
+			<PythonCallback>applyLandmarkFromEvent</PythonCallback>
+			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
+			<iAIValue>1</iAIValue>
+		</EventInfo>
+
+		<EventInfo>
+			<Type>EVENT_PURE_COAL_2</Type>
+			<Description>TXT_KEY_EVENT_PURE_COAL_2</Description>
+			<iGold>-300</iGold>
+			<bGameSpeedScale>1</bGameSpeedScale>
+			<PlotExtraYields>
+				<PlotExtraYield>
+					<YieldType>YIELD_PRODUCTION</YieldType>
+					<iExtraYield>3</iExtraYield>
+				</PlotExtraYield>
+			</PlotExtraYields>
+			<PythonCallback>applyLandmarkFromEvent</PythonCallback>
+			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
+			<iAIValue>1</iAIValue>
+		</EventInfo>
+
+		<EventInfo>
 			<Type>EVENT_CLUNKER_COAL_1</Type>
 			<Description>TXT_KEY_EVENT_CLUNKER_COAL_1</Description>
 			<PlotExtraYields>
@@ -1532,6 +1742,36 @@
 				<PlotExtraYield>
 					<YieldType>YIELD_PRODUCTION</YieldType>
 					<iExtraYield>-1</iExtraYield>
+				</PlotExtraYield>
+			</PlotExtraYields>
+			<PythonCallback>applyLandmarkFromEvent</PythonCallback>
+			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
+			<iAIValue>1</iAIValue>
+		</EventInfo>
+
+		<EventInfo>
+			<Type>EVENT_PURE_CRUDE_1</Type>
+			<Description>TXT_KEY_EVENT_PURE_CRUDE_1</Description>
+			<PlotExtraYields>
+				<PlotExtraYield>
+					<YieldType>YIELD_PRODUCTION</YieldType>
+					<iExtraYield>2</iExtraYield>
+				</PlotExtraYield>
+			</PlotExtraYields>
+			<PythonCallback>applyLandmarkFromEvent</PythonCallback>
+			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
+			<iAIValue>1</iAIValue>
+		</EventInfo>
+
+		<EventInfo>
+			<Type>EVENT_PURE_CRUDE_2</Type>
+			<Description>TXT_KEY_EVENT_PURE_CRUDE_2</Description>
+			<iGold>-400</iGold>
+			<bGameSpeedScale>1</bGameSpeedScale>
+			<PlotExtraYields>
+				<PlotExtraYield>
+					<YieldType>YIELD_PRODUCTION</YieldType>
+					<iExtraYield>3</iExtraYield>
 				</PlotExtraYield>
 			</PlotExtraYields>
 			<PythonCallback>applyLandmarkFromEvent</PythonCallback>
@@ -1617,6 +1857,366 @@
 			<FeatureType>FEATURE_FOREST</FeatureType>
 			<iFeatureChange>1</iFeatureChange>
 			<BonusType>BONUS_APPLE</BonusType>
+			<iBonusChange>1</iBonusChange>
+			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
+			<iAIValue>1</iAIValue>
+		</EventInfo>
+
+		<EventInfo>
+			<Type>EVENT_PISTACHIO</Type>
+			<Description>TXT_KEY_EVENT_PISTACHIO_1</Description>
+			<BonusType>BONUS_PISTACHIO</BonusType>
+			<iBonusChange>1</iBonusChange>
+			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
+			<iAIValue>1</iAIValue>
+		</EventInfo>
+
+		<EventInfo>
+			<Type>EVENT_ALMOND</Type>
+			<Description>TXT_KEY_EVENT_ALMONDS_1</Description>
+			<BonusType>BONUS_ALMONDS</BonusType>
+			<iBonusChange>1</iBonusChange>
+			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
+			<iAIValue>1</iAIValue>
+		</EventInfo>
+
+		<EventInfo>
+			<Type>EVENT_SQUASH</Type>
+			<Description>TXT_KEY_EVENT_SQUASH_1</Description>
+			<BonusType>BONUS_SQUASH</BonusType>
+			<iBonusChange>1</iBonusChange>
+			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
+			<iAIValue>1</iAIValue>
+		</EventInfo>
+
+		<EventInfo>
+			<Type>EVENT_COCONUT</Type>
+			<Description>TXT_KEY_EVENT_COCONUT_1</Description>
+			<BonusType>BONUS_COCONUT</BonusType>
+			<iBonusChange>1</iBonusChange>
+			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
+			<iAIValue>1</iAIValue>
+		</EventInfo>
+
+		<EventInfo>
+			<Type>EVENT_GUAVAS</Type>
+			<Description>TXT_KEY_EVENT_GUAVAS_1</Description>
+			<BonusType>BONUS_GUAVAS</BonusType>
+			<iBonusChange>1</iBonusChange>
+			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
+			<iAIValue>1</iAIValue>
+		</EventInfo>
+
+		<EventInfo>
+			<Type>EVENT_PAPAYA</Type>
+			<Description>TXT_KEY_EVENT_PAPAYA_1</Description>
+			<BonusType>BONUS_PAPAYA</BonusType>
+			<iBonusChange>1</iBonusChange>
+			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
+			<iAIValue>1</iAIValue>
+		</EventInfo>
+
+		<EventInfo>
+			<Type>EVENT_LEMON</Type>
+			<Description>TXT_KEY_EVENT_LEMONS_1</Description>
+			<BonusType>BONUS_LEMONS</BonusType>
+			<iBonusChange>1</iBonusChange>
+			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
+			<iAIValue>1</iAIValue>
+		</EventInfo>
+
+		<EventInfo>
+			<Type>EVENT_POMEGRANATE</Type>
+			<Description>TXT_KEY_EVENT_POMEGRANATE_1</Description>
+			<BonusType>BONUS_POMEGRANATE</BonusType>
+			<iBonusChange>1</iBonusChange>
+			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
+			<iAIValue>1</iAIValue>
+		</EventInfo>
+
+		<EventInfo>
+			<Type>EVENT_MANGO</Type>
+			<Description>TXT_KEY_EVENT_MANGO_1</Description>
+			<BonusType>BONUS_MANGO</BonusType>
+			<iBonusChange>1</iBonusChange>
+			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
+			<iAIValue>1</iAIValue>
+		</EventInfo>
+
+		<EventInfo>
+			<Type>EVENT_BANANA</Type>
+			<Description>TXT_KEY_EVENT_BANANA_1</Description>
+			<BonusType>BONUS_BANANA</BonusType>
+			<iBonusChange>1</iBonusChange>
+			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
+			<iAIValue>1</iAIValue>
+		</EventInfo>
+
+		<EventInfo>
+			<Type>EVENT_POTATOES</Type>
+			<Description>TXT_KEY_EVENT_POTATOES_1</Description>
+			<BonusType>BONUS_POTATOES</BonusType>
+			<iBonusChange>1</iBonusChange>
+			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
+			<iAIValue>1</iAIValue>
+		</EventInfo>
+
+		<EventInfo>
+			<Type>EVENT_BARLEY</Type>
+			<Description>TXT_KEY_EVENT_BARLEY_1</Description>
+			<BonusType>BONUS_BARLEY</BonusType>
+			<iBonusChange>1</iBonusChange>
+			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
+			<iAIValue>1</iAIValue>
+		</EventInfo>
+
+		<EventInfo>
+			<Type>EVENT_MELONS</Type>
+			<Description>TXT_KEY_EVENT_MELONS_1</Description>
+			<BonusType>BONUS_MELONS</BonusType>
+			<iBonusChange>1</iBonusChange>
+			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
+			<iAIValue>1</iAIValue>
+		</EventInfo>
+
+		<EventInfo>
+			<Type>EVENT_RICE</Type>
+			<Description>TXT_KEY_EVENT_RICE_1</Description>
+			<BonusType>BONUS_RICE</BonusType>
+			<iBonusChange>1</iBonusChange>
+			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
+			<iAIValue>1</iAIValue>
+		</EventInfo>
+
+		<EventInfo>
+			<Type>EVENT_WHEAT</Type>
+			<Description>TXT_KEY_EVENT_WHEAT_1</Description>
+			<BonusType>BONUS_WHEAT</BonusType>
+			<iBonusChange>1</iBonusChange>
+			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
+			<iAIValue>1</iAIValue>
+		</EventInfo>
+
+		<EventInfo>
+			<Type>EVENT_DATES</Type>
+			<Description>TXT_KEY_EVENT_DATES_1</Description>
+			<BonusType>BONUS_DATES</BonusType>
+			<iBonusChange>1</iBonusChange>
+			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
+			<iAIValue>1</iAIValue>
+		</EventInfo>
+
+		<EventInfo>
+			<Type>EVENT_PUMPKIN</Type>
+			<Description>TXT_KEY_EVENT_PUMPKIN_1</Description>
+			<BonusType>BONUS_PUMPKIN</BonusType>
+			<iBonusChange>1</iBonusChange>
+			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
+			<iAIValue>1</iAIValue>
+		</EventInfo>
+
+		<EventInfo>
+			<Type>EVENT_OLIVES</Type>
+			<Description>TXT_KEY_EVENT_OLIVES_1</Description>
+			<BonusType>BONUS_OLIVES</BonusType>
+			<iBonusChange>1</iBonusChange>
+			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
+			<iAIValue>1</iAIValue>
+		</EventInfo>
+
+		<EventInfo>
+			<Type>EVENT_CORN</Type>
+			<Description>TXT_KEY_EVENT_CORN_1</Description>
+			<BonusType>BONUS_CORN</BonusType>
+			<iBonusChange>1</iBonusChange>
+			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
+			<iAIValue>1</iAIValue>
+		</EventInfo>
+
+		<EventInfo>
+			<Type>EVENT_FIG</Type>
+			<Description>TXT_KEY_EVENT_FIG_1</Description>
+			<BonusType>BONUS_FIG</BonusType>
+			<iBonusChange>1</iBonusChange>
+			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
+			<iAIValue>1</iAIValue>
+		</EventInfo>
+
+		<EventInfo>
+			<Type>EVENT_PEYOTE</Type>
+			<Description>TXT_KEY_EVENT_PEYOTE_1</Description>
+			<BonusType>BONUS_PEYOTE</BonusType>
+			<iBonusChange>1</iBonusChange>
+			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
+			<iAIValue>1</iAIValue>
+		</EventInfo>
+
+		<EventInfo>
+			<Type>EVENT_PRICKLY_PEAR</Type>
+			<Description>TXT_KEY_EVENT_PRICKLY_PEAR_1</Description>
+			<BonusType>BONUS_PRICKLY_PEAR</BonusType>
+			<iBonusChange>1</iBonusChange>
+			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
+			<iAIValue>1</iAIValue>
+		</EventInfo>
+
+		<EventInfo>
+			<Type>EVENT_VANILLA</Type>
+			<Description>TXT_KEY_EVENT_VANILLA_1</Description>
+			<BonusType>BONUS_VANILLA</BonusType>
+			<iBonusChange>1</iBonusChange>
+			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
+			<iAIValue>1</iAIValue>
+		</EventInfo>
+
+		<EventInfo>
+			<Type>EVENT_TEA</Type>
+			<Description>TXT_KEY_EVENT_TEA_1</Description>
+			<BonusType>BONUS_TEA</BonusType>
+			<iBonusChange>1</iBonusChange>
+			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
+			<iAIValue>1</iAIValue>
+		</EventInfo>
+
+		<EventInfo>
+			<Type>EVENT_COFFEE</Type>
+			<Description>TXT_KEY_EVENT_COFFEE_1</Description>
+			<BonusType>BONUS_COFFEE</BonusType>
+			<iBonusChange>1</iBonusChange>
+			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
+			<iAIValue>1</iAIValue>
+		</EventInfo>
+
+		<EventInfo>
+			<Type>EVENT_COCOA</Type>
+			<Description>TXT_KEY_EVENT_COCOA_1</Description>
+			<BonusType>BONUS_COCOA</BonusType>
+			<iBonusChange>1</iBonusChange>
+			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
+			<iAIValue>1</iAIValue>
+		</EventInfo>
+
+		<EventInfo>
+			<Type>EVENT_KAVA</Type>
+			<Description>TXT_KEY_EVENT_KAVA_1</Description>
+			<BonusType>BONUS_KAVA</BonusType>
+			<iBonusChange>1</iBonusChange>
+			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
+			<iAIValue>1</iAIValue>
+		</EventInfo>
+
+		<EventInfo>
+			<Type>EVENT_SUGAR</Type>
+			<Description>TXT_KEY_EVENT_SUGAR_1</Description>
+			<BonusType>BONUS_SUGAR</BonusType>
+			<iBonusChange>1</iBonusChange>
+			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
+			<iAIValue>1</iAIValue>
+		</EventInfo>
+
+		<EventInfo>
+			<Type>EVENT_COCA</Type>
+			<Description>TXT_KEY_EVENT_COCA_1</Description>
+			<BonusType>BONUS_COCA</BonusType>
+			<iBonusChange>1</iBonusChange>
+			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
+			<iAIValue>1</iAIValue>
+		</EventInfo>
+
+		<EventInfo>
+			<Type>EVENT_TOBACCO</Type>
+			<Description>TXT_KEY_EVENT_TOBACCO_1</Description>
+			<BonusType>BONUS_TOBACCO</BonusType>
+			<iBonusChange>1</iBonusChange>
+			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
+			<iAIValue>1</iAIValue>
+		</EventInfo>
+
+		<EventInfo>
+			<Type>EVENT_COTTON</Type>
+			<Description>TXT_KEY_EVENT_COTTON_1</Description>
+			<BonusType>BONUS_COTTON</BonusType>
+			<iBonusChange>1</iBonusChange>
+			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
+			<iAIValue>1</iAIValue>
+		</EventInfo>
+
+		<EventInfo>
+			<Type>EVENT_INDIGO</Type>
+			<Description>TXT_KEY_EVENT_INDIGO_1</Description>
+			<BonusType>BONUS_INDIGO</BonusType>
+			<iBonusChange>1</iBonusChange>
+			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
+			<iAIValue>1</iAIValue>
+		</EventInfo>
+
+		<EventInfo>
+			<Type>EVENT_FLAX</Type>
+			<Description>TXT_KEY_EVENT_FLAX_1</Description>
+			<BonusType>BONUS_FLAX</BonusType>
+			<iBonusChange>1</iBonusChange>
+			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
+			<iAIValue>1</iAIValue>
+		</EventInfo>
+
+		<EventInfo>
+			<Type>EVENT_HEMP</Type>
+			<Description>TXT_KEY_EVENT_HEMP_1</Description>
+			<BonusType>BONUS_HEMP</BonusType>
+			<iBonusChange>1</iBonusChange>
+			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
+			<iAIValue>1</iAIValue>
+		</EventInfo>
+
+		<EventInfo>
+			<Type>EVENT_RUBBER</Type>
+			<Description>TXT_KEY_EVENT_RUBBER_1</Description>
+			<BonusType>BONUS_RUBBER</BonusType>
+			<iBonusChange>1</iBonusChange>
+			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
+			<iAIValue>1</iAIValue>
+		</EventInfo>
+
+		<EventInfo>
+			<Type>EVENT_OPIUM</Type>
+			<Description>TXT_KEY_EVENT_OPIUM_1</Description>
+			<BonusType>BONUS_OPIUM</BonusType>
+			<iBonusChange>1</iBonusChange>
+			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
+			<iAIValue>1</iAIValue>
+		</EventInfo>
+
+		<EventInfo>
+			<Type>EVENT_HENNA</Type>
+			<Description>TXT_KEY_EVENT_HENNA_1</Description>
+			<BonusType>BONUS_HENNA</BonusType>
+			<iBonusChange>1</iBonusChange>
+			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
+			<iAIValue>1</iAIValue>
+		</EventInfo>
+
+		<EventInfo>
+			<Type>EVENT_SILK</Type>
+			<Description>TXT_KEY_EVENT_SILK_1</Description>
+			<BonusType>BONUS_SILK</BonusType>
+			<iBonusChange>1</iBonusChange>
+			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
+			<iAIValue>1</iAIValue>
+		</EventInfo>
+
+		<EventInfo>
+			<Type>EVENT_PAPYRUS</Type>
+			<Description>TXT_KEY_EVENT_PAPYRUS_11</Description>
+			<BonusType>BONUS_PAPYRUS</BonusType>
+			<iBonusChange>1</iBonusChange>
+			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
+			<iAIValue>1</iAIValue>
+		</EventInfo>
+
+		<EventInfo>
+			<Type>EVENT_INCENSE</Type>
+			<Description>TXT_KEY_EVENT_INCENSE_1</Description>
+			<BonusType>BONUS_INCENSE</BonusType>
 			<iBonusChange>1</iBonusChange>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<iAIValue>1</iAIValue>
@@ -1715,7 +2315,7 @@
 			<Type>EVENT_BREAKTHROUGH_1</Type>
 			<Description>TXT_KEY_EVENT_BREAKTHROUGH_1</Description>
 			<iTechPercent>50</iTechPercent>
-			<iTechMinTurnsLeft>7</iTechMinTurnsLeft>
+			<iTechMinTurnsLeft>6</iTechMinTurnsLeft>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<iAIValue>1</iAIValue>
 		</EventInfo>
@@ -2074,6 +2674,266 @@
 			<Type>EVENT_WHALEOFATHING</Type>
 			<Description>TXT_KEY_EVENT_WHALEOFATHING_1</Description>
 			<BonusType>BONUS_WHALE</BonusType>
+			<iBonusChange>1</iBonusChange>
+			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
+			<iAIValue>1</iAIValue>
+		</EventInfo>
+
+		<EventInfo>
+			<Type>EVENT_FOUND_MUREX</Type>
+			<Description>TXT_KEY_EVENT_FOUND_MUREX_1</Description>
+			<BonusType>BONUS_MUREX</BonusType>
+			<iBonusChange>1</iBonusChange>
+			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
+			<iAIValue>1</iAIValue>
+		</EventInfo>
+
+		<EventInfo>
+			<Type>EVENT_FOUND_CLAM</Type>
+			<Description>TXT_KEY_EVENT_FOUND_CLAM_1</Description>
+			<BonusType>BONUS_CLAM</BonusType>
+			<iBonusChange>1</iBonusChange>
+			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
+			<iAIValue>1</iAIValue>
+		</EventInfo>
+
+		<EventInfo>
+			<Type>EVENT_FOUND_CRAB</Type>
+			<Description>TXT_KEY_EVENT_FOUND_CRAB_1</Description>
+			<BonusType>BONUS_CRAB</BonusType>
+			<iBonusChange>1</iBonusChange>
+			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
+			<iAIValue>1</iAIValue>
+		</EventInfo>
+
+		<EventInfo>
+			<Type>EVENT_FOUND_SHRIMP</Type>
+			<Description>TXT_KEY_EVENT_FOUND_SHRIMP_1</Description>
+			<BonusType>BONUS_SHRIMP</BonusType>
+			<iBonusChange>1</iBonusChange>
+			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
+			<iAIValue>1</iAIValue>
+		</EventInfo>
+
+		<EventInfo>
+			<Type>EVENT_FOUND_FISH</Type>
+			<Description>TXT_KEY_EVENT_FOUND_FISH_1</Description>
+			<BonusType>BONUS_FISH</BonusType>
+			<iBonusChange>1</iBonusChange>
+			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
+			<iAIValue>1</iAIValue>
+		</EventInfo>
+
+		<EventInfo>
+			<Type>EVENT_FOUND_LOBSTER</Type>
+			<Description>TXT_KEY_EVENT_FOUND_LOBSTER_1</Description>
+			<BonusType>BONUS_LOBSTER</BonusType>
+			<iBonusChange>1</iBonusChange>
+			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
+			<iAIValue>1</iAIValue>
+		</EventInfo>
+
+		<EventInfo>
+			<Type>EVENT_FOUND_PEARLS</Type>
+			<Description>TXT_KEY_EVENT_PEARLS_FOUND_1</Description>
+			<BonusType>BONUS_PEARLS</BonusType>
+			<iBonusChange>1</iBonusChange>
+			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
+			<iAIValue>1</iAIValue>
+		</EventInfo>
+
+		<EventInfo>
+			<Type>EVENT_GOLD_MINE_1</Type>
+			<Description>TXT_KEY_EVENT_GOLD_MINE_1</Description>
+			<BonusType>BONUS_GOLD_ORE</BonusType>
+			<iBonusChange>1</iBonusChange>
+			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
+			<iAIValue>1</iAIValue>
+		</EventInfo>
+
+		<EventInfo>
+			<Type>EVENT_GOLD_MINE_2</Type>
+			<Description>TXT_KEY_EVENT_GOLD_MINE_2</Description>
+			<iGold>-200</iGold>
+			<bGameSpeedScale>1</bGameSpeedScale>
+			<ImprovementType>IMPROVEMENT_MINE</ImprovementType>
+			<iImprovementChange>1</iImprovementChange>
+			<BonusType>BONUS_GOLD_ORE</BonusType>
+			<iBonusChange>1</iBonusChange>
+			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
+			<iAIValue>1</iAIValue>
+		</EventInfo>
+
+		<EventInfo>
+			<Type>EVENT_SAPPHIRES_1</Type>
+			<Description>TXT_KEY_EVENT_SAPPHIRES_1</Description>
+			<BonusType>BONUS_SAPPHIRES</BonusType>
+			<iBonusChange>1</iBonusChange>
+			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
+			<iAIValue>1</iAIValue>
+		</EventInfo>
+
+		<EventInfo>
+			<Type>EVENT_URANIUM_1</Type>
+			<Description>TXT_KEY_EVENT_URANIUM_1</Description>
+			<BonusType>BONUS_URANIUM</BonusType>
+			<iBonusChange>1</iBonusChange>
+			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
+			<iAIValue>1</iAIValue>
+		</EventInfo>
+
+		<EventInfo>
+			<Type>EVENT_URANIUM_2</Type>
+			<Description>TXT_KEY_EVENT_URANIUM_2</Description>
+			<iGold>-500</iGold>
+			<bGameSpeedScale>1</bGameSpeedScale>
+			<ImprovementType>IMPROVEMENT_MINE</ImprovementType>
+			<iImprovementChange>1</iImprovementChange>
+			<BonusType>BONUS_URANIUM</BonusType>
+			<iBonusChange>1</iBonusChange>
+			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
+			<iAIValue>1</iAIValue>
+		</EventInfo>
+
+		<EventInfo>
+			<Type>EVENT_PLATINUM_1</Type>
+			<Description>TXT_KEY_EVENT_PLATINUM_1</Description>
+			<BonusType>BONUS_PLATINUM_ORE</BonusType>
+			<iBonusChange>1</iBonusChange>
+			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
+			<iAIValue>1</iAIValue>
+		</EventInfo>
+
+		<EventInfo>
+			<Type>EVENT_LEAD_1</Type>
+			<Description>TXT_KEY_EVENT_LEAD_1</Description>
+			<BonusType>BONUS_LEAD_ORE</BonusType>
+			<iBonusChange>1</iBonusChange>
+			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
+			<iAIValue>1</iAIValue>
+		</EventInfo>
+
+		<EventInfo>
+			<Type>EVENT_TITANIUM_1</Type>
+			<Description>TXT_KEY_EVENT_TITANIUM_1</Description>
+			<BonusType>BONUS_TITANIUM_ORE</BonusType>
+			<iBonusChange>1</iBonusChange>
+			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
+			<iAIValue>1</iAIValue>
+		</EventInfo>
+
+		<EventInfo>
+			<Type>EVENT_TURQUOISE_1</Type>
+			<Description>TXT_KEY_EVENT_TURQUOISE_1</Description>
+			<BonusType>BONUS_TURQUOISE</BonusType>
+			<iBonusChange>1</iBonusChange>
+			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
+			<iAIValue>1</iAIValue>
+		</EventInfo>
+
+		<EventInfo>
+			<Type>EVENT_COPPER_1</Type>
+			<Description>TXT_KEY_EVENT_COPPER_1</Description>
+			<BonusType>BONUS_COPPER_ORE</BonusType>
+			<iBonusChange>1</iBonusChange>
+			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
+			<iAIValue>1</iAIValue>
+		</EventInfo>
+
+		<EventInfo>
+			<Type>EVENT_SULPHUR_1</Type>
+			<Description>TXT_KEY_EVENT_SULPHUR_1</Description>
+			<BonusType>BONUS_SULPHUR</BonusType>
+			<iBonusChange>1</iBonusChange>
+			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
+			<iAIValue>1</iAIValue>
+		</EventInfo>
+
+		<EventInfo>
+			<Type>EVENT_MARBLE_1</Type>
+			<Description>TXT_KEY_EVENT_MARBLE_1</Description>
+			<BonusType>BONUS_MARBLE</BonusType>
+			<iBonusChange>1</iBonusChange>
+			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
+			<iAIValue>1</iAIValue>
+		</EventInfo>
+
+		<EventInfo>
+			<Type>EVENT_RUBIES_1</Type>
+			<Description>TXT_KEY_EVENT_RUBIE_1</Description>
+			<BonusType>BONUS_RUBIES</BonusType>
+			<iBonusChange>1</iBonusChange>
+			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
+			<iAIValue>1</iAIValue>
+		</EventInfo>
+
+		<EventInfo>
+			<Type>EVENT_MANGANESE_1</Type>
+			<Description>TXT_KEY_EVENT_MANGANESE_1</Description>
+			<BonusType>BONUS_MANGANESE</BonusType>
+			<iBonusChange>1</iBonusChange>
+			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
+			<iAIValue>1</iAIValue>
+		</EventInfo>
+
+		<EventInfo>
+			<Type>EVENT_IRON_1</Type>
+			<Description>TXT_KEY_EVENT_IRON_1</Description>
+			<BonusType>BONUS_IRON_ORE</BonusType>
+			<iBonusChange>1</iBonusChange>
+			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
+			<iAIValue>1</iAIValue>
+		</EventInfo>
+
+		<EventInfo>
+			<Type>EVENT_DIAMOND_1</Type>
+			<Description>TXT_KEY_EVENT_DIAMOND_1</Description>
+			<BonusType>BONUS_DIAMOND</BonusType>
+			<iBonusChange>1</iBonusChange>
+			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
+			<iAIValue>1</iAIValue>
+		</EventInfo>
+
+		<EventInfo>
+			<Type>EVENT_BAUXITE_1</Type>
+			<Description>TXT_KEY_EVENT_BAUXITE_1</Description>
+			<BonusType>BONUS_BAUXITE_ORE</BonusType>
+			<iBonusChange>1</iBonusChange>
+			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
+			<iAIValue>1</iAIValue>
+		</EventInfo>
+
+		<EventInfo>
+			<Type>EVENT_AMBER_1</Type>
+			<Description>TXT_KEY_EVENT_AMBER_1</Description>
+			<BonusType>BONUS_AMBER</BonusType>
+			<iBonusChange>1</iBonusChange>
+			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
+			<iAIValue>1</iAIValue>
+		</EventInfo>
+
+		<EventInfo>
+			<Type>EVENT_COAL_1</Type>
+			<Description>TXT_KEY_EVENT_COAL_1</Description>
+			<BonusType>BONUS_COAL</BonusType>
+			<iBonusChange>1</iBonusChange>
+			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
+			<iAIValue>1</iAIValue>
+		</EventInfo>
+
+		<EventInfo>
+			<Type>EVENT_STONE_1</Type>
+			<Description>TXT_KEY_EVENT_STONE_1</Description>
+			<BonusType>BONUS_STONE</BonusType>
+			<iBonusChange>1</iBonusChange>
+			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
+			<iAIValue>1</iAIValue>
+		</EventInfo>
+
+		<EventInfo>
+			<Type>EVENT_OIL_1</Type>
+			<Description>TXT_KEY_EVENT_OIL_1</Description>
+			<BonusType>BONUS_OIL</BonusType>
 			<iBonusChange>1</iBonusChange>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<iAIValue>1</iAIValue>
@@ -5944,6 +6804,95 @@
 		</EventInfo>
 
 		<EventInfo>
+			<Type>EVENT_SANDSTORM_3</Type>
+			<Description>TXT_KEY_EVENT_SANDSTORM_2</Description>
+			<iGold>-40</iGold>
+			<bGameSpeedScale>1</bGameSpeedScale>
+			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
+			<iAIValue>1</iAIValue>
+		</EventInfo>
+
+		<EventInfo>
+			<Type>EVENT_SANDSTORM_4</Type>
+			<Description>TXT_KEY_EVENT_SANDSTORM_2</Description>
+			<iGold>-50</iGold>
+			<bGameSpeedScale>1</bGameSpeedScale>
+			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
+			<iAIValue>1</iAIValue>
+		</EventInfo>
+
+		<EventInfo>
+			<Type>EVENT_SANDSTORM_5</Type>
+			<Description>TXT_KEY_EVENT_SANDSTORM_2</Description>
+			<iGold>-60</iGold>
+			<bGameSpeedScale>1</bGameSpeedScale>
+			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
+			<iAIValue>1</iAIValue>
+		</EventInfo>
+
+		<EventInfo>
+			<Type>EVENT_SANDSTORM_6</Type>
+			<Description>TXT_KEY_EVENT_SANDSTORM_2</Description>
+			<iGold>-70</iGold>
+			<bGameSpeedScale>1</bGameSpeedScale>
+			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
+			<iAIValue>1</iAIValue>
+		</EventInfo>
+
+		<EventInfo>
+			<Type>EVENT_SANDSTORM_7</Type>
+			<Description>TXT_KEY_EVENT_SANDSTORM_2</Description>
+			<iGold>-80</iGold>
+			<bGameSpeedScale>1</bGameSpeedScale>
+			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
+			<iAIValue>1</iAIValue>
+		</EventInfo>
+
+		<EventInfo>
+			<Type>EVENT_SANDSTORM_8</Type>
+			<Description>TXT_KEY_EVENT_SANDSTORM_2</Description>
+			<iGold>-90</iGold>
+			<bGameSpeedScale>1</bGameSpeedScale>
+			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
+			<iAIValue>1</iAIValue>
+		</EventInfo>
+
+		<EventInfo>
+			<Type>EVENT_SANDSTORM_9</Type>
+			<Description>TXT_KEY_EVENT_SANDSTORM_2</Description>
+			<iGold>-100</iGold>
+			<bGameSpeedScale>1</bGameSpeedScale>
+			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
+			<iAIValue>1</iAIValue>
+		</EventInfo>
+
+		<EventInfo>
+			<Type>EVENT_SANDSTORM_10</Type>
+			<Description>TXT_KEY_EVENT_SANDSTORM_2</Description>
+			<iGold>-110</iGold>
+			<bGameSpeedScale>1</bGameSpeedScale>
+			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
+			<iAIValue>1</iAIValue>
+		</EventInfo>
+
+		<EventInfo>
+			<Type>EVENT_SANDSTORM_11</Type>
+			<Description>TXT_KEY_EVENT_SANDSTORM_1</Description>
+			<iImprovementChange>-1</iImprovementChange>
+			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
+			<iAIValue>1</iAIValue>
+		</EventInfo>
+
+		<EventInfo>
+			<Type>EVENT_SANDSTORM_12</Type>
+			<Description>TXT_KEY_EVENT_SANDSTORM_2</Description>
+			<iGold>-80</iGold>
+			<bGameSpeedScale>1</bGameSpeedScale>
+			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
+			<iAIValue>1</iAIValue>
+		</EventInfo>
+
+		<EventInfo>
 			<Type>EVENT_ARCHERY_FOUNDED_1</Type>
 			<Description>TXT_KEY_EVENT_ARCHERY_FOUNDED_1</Description>
 			<FreeUnit>UNIT_ARCHER</FreeUnit>
@@ -7607,6 +8556,69 @@
 			<Type>EVENT_BISON_MIGRATION_1</Type>
 			<Description>TXT_KEY_EVENT_GAME_MIGRATION_1</Description>
 			<BonusType>BONUS_BISON</BonusType>
+			<iBonusChange>1</iBonusChange>
+			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
+			<iAIValue>1</iAIValue>
+		</EventInfo>
+
+		<EventInfo>
+			<Type>EVENT_GUINEA_PIGS_MIGRATION_1</Type>
+			<Description>TXT_KEY_EVENT_GAME_MIGRATION_1</Description>
+			<BonusType>BONUS_GUINEA_PIGS</BonusType>
+			<iBonusChange>1</iBonusChange>
+			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
+			<iAIValue>1</iAIValue>
+		</EventInfo>
+
+		<EventInfo>
+			<Type>EVENT_BEAVER_MIGRATION_1</Type>
+			<Description>TXT_KEY_EVENT_GAME_MIGRATION_1</Description>
+			<BonusType>BONUS_BEAVERS</BonusType>
+			<iBonusChange>1</iBonusChange>
+			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
+			<iAIValue>1</iAIValue>
+		</EventInfo>
+
+		<EventInfo>
+			<Type>EVENT_RABBIT_MIGRATION_1</Type>
+			<Description>TXT_KEY_EVENT_GAME_MIGRATION_1</Description>
+			<BonusType>BONUS_RABBIT</BonusType>
+			<iBonusChange>1</iBonusChange>
+			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
+			<iAIValue>1</iAIValue>
+		</EventInfo>
+
+		<EventInfo>
+			<Type>EVENT_COW_MIGRATION_1</Type>
+			<Description>TXT_KEY_EVENT_GAME_MIGRATION_1</Description>
+			<BonusType>BONUS_COW</BonusType>
+			<iBonusChange>1</iBonusChange>
+			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
+			<iAIValue>1</iAIValue>
+		</EventInfo>
+
+		<EventInfo>
+			<Type>EVENT_SHEEP_MIGRATION_1</Type>
+			<Description>TXT_KEY_EVENT_GAME_MIGRATION_1</Description>
+			<BonusType>BONUS_SHEEP</BonusType>
+			<iBonusChange>1</iBonusChange>
+			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
+			<iAIValue>1</iAIValue>
+		</EventInfo>
+
+		<EventInfo>
+			<Type>EVENT_PIG_MIGRATION_1</Type>
+			<Description>TXT_KEY_EVENT_GAME_MIGRATION_1</Description>
+			<BonusType>BONUS_PIG</BonusType>
+			<iBonusChange>1</iBonusChange>
+			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
+			<iAIValue>1</iAIValue>
+		</EventInfo>
+
+		<EventInfo>
+			<Type>EVENT_POULTRY_MIGRATION_1</Type>
+			<Description>TXT_KEY_EVENT_GAME_MIGRATION_1</Description>
+			<BonusType>BONUS_POULTRY</BonusType>
 			<iBonusChange>1</iBonusChange>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<iAIValue>1</iAIValue>
