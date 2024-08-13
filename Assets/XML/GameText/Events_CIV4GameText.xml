@@ -103,6 +103,94 @@
 		<Russian>В державе %s1_civ_adjective начались антимонархические выступления под предлогом, что королевские прерогативы ущемляют авторитет религиозных учреждений.</Russian>
 		<Spanish>Anti-monárquicos %s1:3_civ_adjective están protestando, diciendo que las instituciones religiosas apenas tiene poder frente al Rey.</Spanish>
 	</TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENTTRIGGER_SQUASH</Tag>
+        <English>A %s1_civ_adjective workers have found a new source of food called squash.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENTTRIGGER_MELONS</Tag>
+        <English>A %s1_civ_adjective workers have found a new source of food called melon.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENTTRIGGER_PUMPKIN</Tag>
+        <English>A %s1_civ_adjective workers have found a new source of food called pumpkin.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENTTRIGGER_LEMONS</Tag>
+        <English>A %s1_civ_adjective workers have found a new source of food called lemon.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENTTRIGGER_ALMONDS</Tag>
+        <English>A %s1_civ_adjective workers have found a new source of food called almond.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENTTRIGGER_PISTACHIO</Tag>
+        <English>A %s1_civ_adjective workers have found a new source of food called pistachio.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENTTRIGGER_COCONUT</Tag>
+        <English>A %s1_civ_adjective workers have found a new source of food called coconut.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENTTRIGGER_GUAVA</Tag>
+        <English>A %s1_civ_adjective workers have found a new source of food called guava.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENTTRIGGER_PAPAYA</Tag>
+        <English>A %s1_civ_adjective workers have found a new source of food called papaya.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENTTRIGGER_POMEGRANATE</Tag>
+        <English>A %s1_civ_adjective workers have found a new source of food called pomegranate.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENTTRIGGER_MANGO</Tag>
+        <English>A %s1_civ_adjective workers have found a new source of food called mango.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENTTRIGGER_BANANA</Tag>
+        <English>A %s1_civ_adjective workers have found a new source of food called banana.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENTTRIGGER_POTATOES</Tag>
+        <English>A %s1_civ_adjective workers have found a new source of food called potato.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENTTRIGGER_BARLEY</Tag>
+        <English>A %s1_civ_adjective workers have found a new source of food called barley.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENTTRIGGER_RICE</Tag>
+        <English>A %s1_civ_adjective workers have found a new source of food called rice.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENTTRIGGER_WHEAT</Tag>
+        <English>A %s1_civ_adjective workers have found a new source of food called wheat.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENTTRIGGER_CORN</Tag>
+        <English>A %s1_civ_adjective workers have found a new source of food called corn.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENTTRIGGER_OLIVES</Tag>
+        <English>A %s1_civ_adjective workers have found a new source of food called olive.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENTTRIGGER_FIG</Tag>
+        <English>A %s1_civ_adjective workers have found a new source of food called fig.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENTTRIGGER_DATES</Tag>
+        <English>A %s1_civ_adjective workers have found a new source of food called dates.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENTTRIGGER_PEYOTE</Tag>
+        <English>A %s1_civ_adjective workers have found a new source of food called peyote.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENTTRIGGER_PRICLY_PEAR</Tag>
+        <English>A %s1_civ_adjective workers have found a new source of food called prickly pear.</English>
+    </TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_APPLESEED</Tag>
 		<English>A %s1_civ_adjective folk hero has caused the creation of a new forest of apple trees.</English>
@@ -488,6 +576,10 @@
 		<Italian>I mercanti %s1:3_civ_adjective stanno offrendo forti sconti sul carbone di scarto, che è pieno di impurità.</Italian>
 		<Spanish>Los mercaderes %s1:3_civ_adjective están ofreciendo descuentos por la compra al por mayor de carbón de turba, que está lleno de impurezas.</Spanish>
 	</TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENTTRIGGER_PURE_COAL</Tag>
+        <English>%s1_civ_adjective merchants are increasing prices on tons of their pure coal, which is the cleanest coal in the market.</English>
+    </TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_COASTAL_REEF</Tag>
 		<English>One of our ships sank when caught in surprise by a treacherous coastal reef.</English>
@@ -1121,15 +1213,31 @@
 		<Spanish>Los empresarios %s1:3_civ_adjective han inventado el restaurante de comida rápida. Gracias a la publicidad en la radio, este fenómeno se está difundiendo rápidamente.</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_EVENTTRIGGER_HAPPY_HUNTING</Tag>
-		<English>Surplus game harvested by hunters near the %s1_civ_adjective city of %s2_city has fueled a minor population boom.</English>
-		<French>Un surplus de gibier débusqué par des chasseurs %s1:3_civ_adjective près de la ville de %s2_city a donné lieu à une augmentation de la nourriture disponible dans la ville.</French>
-		<German>Die erfolgreiche Jagd auf besonders große Wildbestände nahe der %[s1_civ_adjective]en Stadt %s2_city bewirkt einen kleinen Bevölkerungsanstieg.</German>
-		<Italian>L'abbondante selvaggina procurata dai cacciatori vicino alla città %s1:2_civ_adjective di %s2_city ha causato un piccolo boom demografico.</Italian>
-		<Polish>Naddatek upolowanych zwierz&#185;t nieopodal %s1_civ_adjective city of %s2_city doprowadzi&#179; do rozkwitu lokalnej populacji.</Polish>
-		<Russian>Изобилие дичи, добытой охотниками народа %s1_civ_adjective, привело к небольшому росту населения в городе %s2_city.</Russian>
-		<Spanish>El excedente logrado por los cazadores cerca de la ciudad %s1:2_civ_adjective de %s2_city ha impulsado un pequeño crecimiento de la población.</Spanish>
+		<Tag>TXT_KEY_EVENTTRIGGER_GREAT_HARVEST</Tag>
+		<English>Surplus crops harvested by workers near the %s1_civ_adjective city of %s2_city. They have been blessed.</English>
 	</TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_TRIGGER_GREAT_HARVEST_1</Tag>
+        <English>Surplus crops have been harvested what shall we do with it?</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENTTRIGGER_POOR_HARVEST</Tag>
+        <English>Crops have failed this year near the %s1_civ_adjective city of %s2_city. Hard times are comming.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_TRIGGER_POOR_HARVEST_1</Tag>
+        <English>The crops this year have failed what shall we do?</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENTTRIGGER_HAPPY_HUNTING</Tag>
+        <English>Surplus game harvested by hunters near the %s1_civ_adjective city of %s2_city has fueled a minor population boom.</English>
+        <French>Un surplus de gibier débusqué par des chasseurs %s1:3_civ_adjective près de la ville de %s2_city a donné lieu à une augmentation de la nourriture disponible dans la ville.</French>
+        <German>Die erfolgreiche Jagd auf besonders große Wildbestände nahe der %[s1_civ_adjective]en Stadt %s2_city bewirkt einen kleinen Bevölkerungsanstieg.</German>
+        <Italian>L'abbondante selvaggina procurata dai cacciatori vicino alla città %s1:2_civ_adjective di %s2_city ha causato un piccolo boom demografico.</Italian>
+        <Polish>Naddatek upolowanych zwierz&#185;t nieopodal %s1_civ_adjective city of %s2_city doprowadzi&#179; do rozkwitu lokalnej populacji.</Polish>
+        <Russian>Изобилие дичи, добытой охотниками народа %s1_civ_adjective, привело к небольшому росту населения в городе %s2_city.</Russian>
+        <Spanish>El excedente logrado por los cazadores cerca de la ciudad %s1:2_civ_adjective de %s2_city ha impulsado un pequeño crecimiento de la población.</Spanish>
+    </TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_HARBORMASTER_DONE</Tag>
 		<English>The seaworthy %s1_civ_adjective people have completed the quest of The Harbormaster!</English>
@@ -1250,6 +1358,146 @@
 		<Italian>I minatori %s1:3_civ_adjective si sono arricchiti con la scoperta di nuovi filoni di argento.</Italian>
 		<Spanish>El imperio %s1:1_civ_adjective se ha hecho rico con el descubrimiento de nuevos filones de plata.</Spanish>
 	</TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENTTRIGGER_GOLD_MINE</Tag>
+        <English>%s1_civ_adjective miners have struck it rich with the discovery of new veins of Gold ore.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENTTRIGGER_PLATINUM</Tag>
+        <English>%s1_civ_adjective miners have struck it rich with the discovery of new veins of Platinum ore.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENTTRIGGER_LEAD</Tag>
+        <English>%s1_civ_adjective miners have found lead ore.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENTTRIGGER_TITANIUM</Tag>
+        <English>%s1_civ_adjective miners have found titanium ore.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENTTRIGGER_TURQUOISE</Tag>
+        <English>%s1_civ_adjective miners have found turquoise ore.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENTTRIGGER_SULPHUR</Tag>
+        <English>%s1_civ_adjective miners have found sulphur ore.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENTTRIGGER_TEA</Tag>
+        <English>%s1_civ_adjective scouts have found tea.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENTTRIGGER_VANILLA</Tag>
+        <English>%s1_civ_adjective workers have found vanilla.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENTTRIGGER_COFFEE</Tag>
+        <English>%s1_civ_adjective workers have found coffee.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENTTRIGGER_KAVA</Tag>
+        <English>%s1_civ_adjective workers have found kava.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENTTRIGGER_SUGAR</Tag>
+        <English>%s1_civ_adjective workers have found sugar.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENTTRIGGER_COCA</Tag>
+        <English>%s1_civ_adjective workers have found coca.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENTTRIGGER_TOBACCO</Tag>
+        <English>%s1_civ_adjective workers have found tobacco.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENTTRIGGER_COTTON</Tag>
+        <English>%s1_civ_adjective workers have found cotton.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENTTRIGGER_INDIGO</Tag>
+        <English>%s1_civ_adjective workers have found indigo.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENTTRIGGER_FLAX</Tag>
+        <English>%s1_civ_adjective workers have found flax.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENTTRIGGER_HEMP</Tag>
+        <English>%s1_civ_adjective workers have found hemp.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENTTRIGGER_RUBBER</Tag>
+        <English>%s1_civ_adjective workers have found rubber.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENTTRIGGER_OPIUM</Tag>
+        <English>%s1_civ_adjective workers have found opium.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENTTRIGGER_HENNA</Tag>
+        <English>%s1_civ_adjective workers have found henna.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENTTRIGGER_INCENSE</Tag>
+        <English>%s1_civ_adjective workers have found incense.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENTTRIGGER_PAPYRUS</Tag>
+        <English>%s1_civ_adjective workers have found papyrus.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENTTRIGGER_SILK</Tag>
+        <English>%s1_civ_adjective workers have silk bugs.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENTTRIGGER_STONE</Tag>
+        <English>%s1_civ_adjective workers have found stone.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENTTRIGGER_COAL</Tag>
+        <English>%s1_civ_adjective miners have found coal.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENTTRIGGER_AMBER</Tag>
+        <English>%s1_civ_adjective miners have found amber.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENTTRIGGER_BAUXITE</Tag>
+        <English>%s1_civ_adjective miners have found bauxite ore.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENTTRIGGER_DIAMOND</Tag>
+        <English>%s1_civ_adjective miners have found diamonds.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENTTRIGGER_IRON</Tag>
+        <English>%s1_civ_adjective miners have found iron ore.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENTTRIGGER_MANGANESE</Tag>
+        <English>%s1_civ_adjective miners have found manganese ore.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENTTRIGGER_RUBIES</Tag>
+        <English>%s1_civ_adjective miners have found rubies.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENTTRIGGER_MARBLE</Tag>
+        <English>%s1_civ_adjective miners have found marble ore.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENTTRIGGER_COPPER</Tag>
+        <English>%s1_civ_adjective miners have found copper ore.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENTTRIGGER_SAPPHIRES</Tag>
+        <English>%s1_civ_adjective miners have struck it rich with the discovery of new sapphires.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENTTRIGGER_URANIUM</Tag>
+        <English>%s1_civ_adjective miners have struck it rich with the discovery of uranium.</English>
+    </TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_HOLY_MOUNTAIN_DONE</Tag>
 		<English>The faithful %s3_religion_adjective people are inspired by the divine providence of the %s1_civ_adjective Empire for completing the Quest of the Holy Mountain!</English>
@@ -2200,6 +2448,10 @@
 		<Russian>Песчаные бури в державе %s1_civ_adjective погребли торговые пути под слоем песка около города %s2_city.</Russian>
 		<Spanish>Una tormenta de arena ha hecho desaparecer bajo la arena algunos de los caminos cerca de la ciudad %s1:2_civ_adjective de %s2_city.</Spanish>
 	</TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENTTRIGGER_SANDSTORM_IMPROVEMENT</Tag>
+        <English>Sandstorm has hit some of our facilities near %s1_civ_adjective city of %s2_city.</English>
+    </TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_SEA_TURTLES</Tag>
 		<English>%s1_civ_adjective people are now harvesting sea turtles on an annual basis.</English>
@@ -2348,6 +2600,10 @@
 		<Italian>I mercanti %s1:3_civ_adjective stanno facendo sconti sul loro petrolio grezzo, che è pieno di impurità.</Italian>
 		<Spanish>Los mercaderes %s1:3_civ_adjective están ofreciendo descuentos por la compra al por mayor de crudo ácido, que está lleno de impurezas.</Spanish>
 	</TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENTTRIGGER_PURE_CRUDE</Tag>
+        <English>%s1_civ_adjective merchants are increasing prices on barrels of their pure crude oil, which is as pure as it gets.</English>
+    </TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_SPICY_1</Tag>
 		<English>A %s1_civ_adjective chef has identified a new and valuable type of spice.</English>
@@ -2736,7 +2992,35 @@
 		<Italian>È stato localizzato un nuovo branco di balene davanti alla costa %s1:2_civ_adjective.</Italian>
 		<Spanish>Se ha localizado un nuevo caladero de ballenas en la costa %s1:2_civ_adjective.</Spanish>
 	</TEXT>
-	<TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENTTRIGGER_FOUND_PEARLS</Tag>
+        <English>A new source of Pearls has been located off the %s1_civ_adjective coast.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENTTRIGGER_FOUND_LOBSTER</Tag>
+        <English>A new source of Lobster has been located off the %s1_civ_adjective coast.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENTTRIGGER_FOUND_FISH</Tag>
+        <English>A new source of Fish has been located off the %s1_civ_adjective coast.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENTTRIGGER_FOUND_SHRIMP</Tag>
+        <English>A new source of Shrimp has been located off the %s1_civ_adjective coast.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENTTRIGGER_FOUND_CRAB</Tag>
+        <English>A new source of Crab has been located off the %s1_civ_adjective coast.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENTTRIGGER_FOUND_CLAM</Tag>
+        <English>A new source of Clam has been located off the %s1_civ_adjective coast.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENTTRIGGER_FOUND_MUREX</Tag>
+        <English>A new source of Murex has been located off the %s1_civ_adjective coast.</English>
+    </TEXT>
+    <TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_WININGMONKS</Tag>
 		<English>%s1_civ_adjective monks who have grown their vineyards over the years are now producing Wines in significant quantities.</English>
 		<French>Les moines %s1_civ_adjective qui ont fait pousser leurs vignes pendant des années produisent à présent du vin en quantité importante.</French>
@@ -3104,6 +3388,162 @@
 		<Russian>В этом есть доля истины: наши священники нуждаются в большем влиянии.</Russian>
 		<Spanish>Es un argumento válido, nuestro clérigos necesitan más influencia.</Spanish>
 	</TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_COCOA_1</Tag>
+        <English>This looks tasty.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_INCENSE_1</Tag>
+        <English>This smells beautifully.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_PAPYRUS_11</Tag>
+        <English>We can use this to improve our society.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_SUGAR_1</Tag>
+        <English>This is sweet.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_KAVA_1</Tag>
+        <English>This plant looks interesting.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_COFFEE_1</Tag>
+        <English>This plant has good taste.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_TEA_1</Tag>
+        <English>This plant smells nice.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_VANILLA_1</Tag>
+        <English>This plant tastes very nice.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_COCA_1</Tag>
+        <English>This plant looks interesting.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_TOBACCO_1</Tag>
+        <English>This is great news.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_COTTON_1</Tag>
+        <English>This seems like a valuable resource.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_INDIGO_1</Tag>
+        <English>Great, this resource is valuable.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_FLAX_1</Tag>
+        <English>Great, let us use this to our benefit.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_HEMP_1</Tag>
+        <English>Great, we can make use of this.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_RUBBER_1</Tag>
+        <English>Hmm interesting, this resource will be very useful.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_OPIUM_1</Tag>
+        <English>Hmm interesting, this will boost our economy.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_HENNA_1</Tag>
+        <English>We can use it to create colors.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_SILK_1</Tag>
+        <English>Great lets put this to use.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_PEYOTE_1</Tag>
+        <English>Peyote you say.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_FIG_1</Tag>
+        <English>Hmm let me taste some of them figs.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_ALMONDS_1</Tag>
+        <English>A great snack.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_PISTACHIO_1</Tag>
+        <English>A great snack.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_SQUASH_1</Tag>
+        <English>Hmmm, this is not that bad.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_COCONUT_1</Tag>
+        <English>Hard to open but it is delicious.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_GUAVAS_1</Tag>
+        <English>This fruit is wonderful.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_PAPAYA_1</Tag>
+        <English>This fruit is wonderful.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_LEMONS_1</Tag>
+        <English>Quite refreshing, we need more.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_POMEGRANATE_1</Tag>
+        <English>Quite refreshing, we need more.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_MANGO_1</Tag>
+        <English>Use this fruit as a desert, it is quite good.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_BANANA_1</Tag>
+        <English>Use this fruit as a desert, it is quite good.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_POTATOES_1</Tag>
+        <English>This root food is actually good.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_BARLEY_1</Tag>
+        <English>This crops will serve us well.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_MELONS_1</Tag>
+        <English>This food is a great snack.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_RICE_1</Tag>
+        <English>The crops that will feed our civilization.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_WHEAT_1</Tag>
+        <English>The crops that will feed our civilization.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_DATES_1</Tag>
+        <English>This fruit is sweet.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_PUMPKIN_1</Tag>
+        <English>Damn, these pumpkins are massive.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_OLIVES_1</Tag>
+        <English>Nice, lets make oil from this one.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_CORN_1</Tag>
+        <English>Not bad, the more food the better.</English>
+    </TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_APPLESEED_1</Tag>
 		<English>How many trees were planted? That's amazing!</English>
@@ -4476,6 +4916,14 @@
 		<Italian>Carbone di scarto? Che disastro. Rende di meno sul mercato, ma brucia comunque, no? Pensaci tu.</Italian>
 		<Spanish>¿Carbón de turba? Qué desastre. Bueno, cada tonelada vale menos, pero sigue quemando, ¿no? Tendremos que conformarnos.</Spanish>
 	</TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_PURE_COAL_1</Tag>
+        <English>Great this is a welcomed news.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_PURE_COAL_2</Tag>
+        <English>Open another shaft invest into exploiting this resource to its limit.</English>
+    </TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_COASTAL_REEF_STUCK</Tag>
 		<English>Repair the ship and get it back to course as soon as possible.</English>
@@ -6580,6 +7028,22 @@
 		<Tag>TXT_KEY_EVENT_HAPPY_HUNTING_2</Tag>
 		<English>Organise a great hunt, we must use this time of plenty to stock up on food.</English>
 	</TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_GREAT_HARVEST_1</Tag>
+        <English>Store the food, you can never have enough food.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_GREAT_HARVEST_2</Tag>
+        <English>Sell the excess. Gold is more needed than food.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_POOR_HARVEST_1</Tag>
+        <English>There is nothing we can do, let us pray for next year's harvest.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_POOR_HARVEST_2</Tag>
+        <English>Buy the food we need no matter the cost.</English>
+    </TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_HAPPY_TO_PLAYER</Tag>
 		<English>[ICON_BULLET]%D1[ICON_UNHAPPY] in all cities. %s3_playerName gets %D2[ICON_HAPPY]</English>
@@ -7013,6 +7477,90 @@
 		<Italian>Finanzia un programma per regolarizzare il traffico aereo, migliorare la sicurezza e assicurare l'attuabilità del traffico aereo commerciale.</Italian>
 		<Spanish>Que se financie una campaña de regulación del tráfico aéreo, se mejore la seguridad y se asegure la viabilidad de los viajes comerciales aéreos.</Spanish>
 	</TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_GOLD_MINE_1</Tag>
+        <English>That sounds like welcome news for our economy.</English>
+        <French>Cela semble être une bonne nouvelle pour notre économie.</French>
+        <German>Klingt nach guten Neuigkeiten für unsere Wirtschaft.</German>
+        <Italian>Sembrano buone notizie per la nostra economia.</Italian>
+        <Spanish>Parecen ser buenas nuevas para nuestra economía.</Spanish>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_URANIUM_1</Tag>
+        <English>This is great. We will use it to the best of our abilities.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_PLATINUM_1</Tag>
+        <English>This is great. We are going to make some good profits.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_TITANIUM_1</Tag>
+        <English>This is great. This ore will boost our industry.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_SALT_1</Tag>
+        <English>This is great. This will be useful.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_STONE_1</Tag>
+        <English>This is great. This will boost our industry.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_OIL_1</Tag>
+        <English>This is great. This will boost our industry.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_COAL_1</Tag>
+        <English>This is great. This ore will boost our industry.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_AMBER_1</Tag>
+        <English>This is great. This ore will boost our economy.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_BAUXITE_1</Tag>
+        <English>This is great. This ore will boost our industry.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_DIAMOND_1</Tag>
+        <English>This is great. This ore will boost our economy.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_IRON_1</Tag>
+        <English>This is great. This ore will boost our industry.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_MANGANESE_1</Tag>
+        <English>This is great. This ore will boost our economy.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_RUBIE_1</Tag>
+        <English>This is great. This ore will boost our economy.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_MARBLE_1</Tag>
+        <English>This is great. This ore will boost our economy.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_COPPER_1</Tag>
+        <English>This is great. This ore will boost our economy.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_TURQUOISE_1</Tag>
+        <English>This is great. This ore will boost our economy.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_LEAD_1</Tag>
+        <English>This is great. This ore will boost our industry.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_SAPPHIRES_1</Tag>
+        <English>That sounds like welcome news for our economy.</English>
+        <French>Cela semble être une bonne nouvelle pour notre économie.</French>
+        <German>Klingt nach guten Neuigkeiten für unsere Wirtschaft.</German>
+        <Italian>Sembrano buone notizie per la nostra economia.</Italian>
+        <Spanish>Parecen ser buenas nuevas para nuestra economía.</Spanish>
+    </TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_HIYOSILVER_1</Tag>
 		<English>That sounds like welcome news for our economy.</English>
@@ -7021,7 +7569,23 @@
 		<Italian>Sembrano buone notizie per la nostra economia.</Italian>
 		<Spanish>Parecen ser buenas nuevas para nuestra economía.</Spanish>
 	</TEXT>
-	<TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_GOLD_MINE_2</Tag>
+        <English>Commit our government to harvesting this new resource immediately.</English>
+        <French>Ordonner à notre gouvernement de s'atteler à l'exploitation de cette nouvelle ressource.</French>
+        <German>Wir sollten diese neue Ressource umgehend nutzen.</German>
+        <Italian>Impegna immediatamente il nostro governo nella raccolta di questa nuova risorsa.</Italian>
+        <Spanish>Ordenad al gobierno que recolecte este nuevo recurso de inmediato.</Spanish>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_URANIUM_2</Tag>
+        <English>Commit our government to harvesting this new resource immediately.</English>
+        <French>Ordonner à notre gouvernement de s'atteler à l'exploitation de cette nouvelle ressource.</French>
+        <German>Wir sollten diese neue Ressource umgehend nutzen.</German>
+        <Italian>Impegna immediatamente il nostro governo nella raccolta di questa nuova risorsa.</Italian>
+        <Spanish>Ordenad al gobierno que recolecte este nuevo recurso de inmediato.</Spanish>
+    </TEXT>
+    <TEXT>
 		<Tag>TXT_KEY_EVENT_HIYOSILVER_2</Tag>
 		<English>Commit our government to harvesting this new resource immediately.</English>
 		<French>Ordonner à notre gouvernement de s'atteler à l'exploitation de cette nouvelle ressource.</French>
@@ -9890,6 +10454,14 @@
 		<Italian>Petrolio impuro? Che disastro. Ha un valore unitario più basso, ma brucia comunque, no? Pensaci tu.</Italian>
 		<Spanish>¿Crudo ácido? Qué desastre. Bueno, cada barril vale menos, pero sigue quemando, ¿no? Tendremos que conformarnos.</Spanish>
 	</TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_PURE_CRUDE_1</Tag>
+        <English>Great we are lucky.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_PURE_CRUDE_2</Tag>
+        <English>Expand the operation, let us get the most of it.</English>
+    </TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_SPACE_PRODUCTION_CITY</Tag>
 		<English>[ICON_BULLET][ICON_BULLET]%D1_Mod%% Spaceship Production in %s2_city</English>
@@ -10749,6 +11321,94 @@
 		<Italian>Con la soppressione, da parte umana, dei predatori naturali, la popolazione di antilopi è cresciuta abbastanza da servire come fonte di cibo a lungo termine.</Italian>
 		<Spanish>Con la desaparición de los depredadores naturales debida a la acción del hombre, la población de antílopes ha crecido tanto como para servir de fuente continua de alimentos.</Spanish>
 	</TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_TRIGGER_SQUASH_1</Tag>
+        <English>We have found a new source of food, people call it squash.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_TRIGGER_MELON_1</Tag>
+        <English>We have found a new source of food, people call it melon.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_TRIGGER_PUMPKIN_1</Tag>
+        <English>We have found a new source of food, people call it pumpkin.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_TRIGGER_ALMOND_1</Tag>
+        <English>We have found a new source of food, people call it almond.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_TRIGGER_PISTACHIO_1</Tag>
+        <English>We have found a new source of food, people call it pistachio.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_TRIGGER_COCONUT_1</Tag>
+        <English>We have found a new source of food, people call it coconut.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_TRIGGER_GUAVA_1</Tag>
+        <English>We have found a new source of food, people call it guava.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_TRIGGER_PAPAYA_1</Tag>
+        <English>We have found a new source of food, people call it papaya.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_TRIGGER_LEMONS_1</Tag>
+        <English>We have found a new source of food, people call it lemon.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_TRIGGER_POMEGRANATE_1</Tag>
+        <English>We have found a new source of food, people call it pomegranate.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_TRIGGER_MANGO_1</Tag>
+        <English>We have found a new source of food, people call it mango.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_TRIGGER_BANANA_1</Tag>
+        <English>We have found a new source of food, people call it banana.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_TRIGGER_POTATO_1</Tag>
+        <English>We have found a new source of food, people call it potato.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_TRIGGER_BARLEY_1</Tag>
+        <English>We have found a new source of food, people call it barley.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_TRIGGER_RICE_1</Tag>
+        <English>We have found a new source of food, people call it rice.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_TRIGGER_WHEAT_1</Tag>
+        <English>We have found a new source of food, people call it wheat.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_TRIGGER_CORN_1</Tag>
+        <English>We have found a new source of food, people call it corn.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_TRIGGER_OLIVE_1</Tag>
+        <English>We have found a new source of food, people call it olive.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_TRIGGER_FIG_1</Tag>
+        <English>We have found a new source of food, people call it fig.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_TRIGGER_DATES_1</Tag>
+        <English>We have found a new source of food, people call it dates.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_TRIGGER_PEYOTE_1</Tag>
+        <English>We have found a new source of food, people call it peyote.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_TRIGGER_PRICKLY_PEAR_1</Tag>
+        <English>We have found a new source of food, people call it prickly pear.</English>
+    </TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_TRIGGER_APPLESEED_1</Tag>
 		<English>A passionate young man has undertaken a crusade to plant as many new apple trees as he can.</English>
@@ -11155,6 +11815,10 @@
 		<Italian>La maggior parte del carbone estratto da una delle nostre miniere è pieno di roccia, scisto e altre impurità. Ci è capitata una fonte di carbone di scarto!</Italian>
 		<Spanish>La mayor parte del carbón extraído de uno de nuestros emplazamientos está lleno de roca, esquisto y otras impurezas. ¡Hemos dado con un filón de carbón de turba!</Spanish>
 	</TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_TRIGGER_PURE_COAL_1</Tag>
+        <English>Most of the coal being mined from one of our sites is of the highest quality. We are gonna make a profit.</English>
+    </TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_TRIGGER_COCK_FIGHTS</Tag>
 		<English>Animal rights activists in %s2_city demand that you put a stop to the inhumane practice of cock fighting that is still common in certain parts of the city.</English>
@@ -11872,6 +12536,142 @@
 		<Italian>Dei mercanti sconsiderati hanno usato l'idrogeno, invece dell'elio, per riempire i loro dirigibili: uno di questi ha preso fuoco ed è precipitato con un fatale e spettacolare incidente.</Italian>
 		<Spanish>Los imprudentes mercaderes han usado hidrógeno en vez de helio para llenar sus dirigibles, y uno de ellos se ha incendiado y estrellado en un accidente tan espectacular como mortal.</Spanish>
 	</TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_TRIGGER_SULPHUR_1</Tag>
+        <English>Prospectors have discovered rich new veins of Sulphur ore.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_TRIGGER_TEA_1</Tag>
+        <English>Our workers have found plants, they call it tea.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_TRIGGER_VANILLA_1</Tag>
+        <English>Our workers have found a plant, they call it vanilla.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_TRIGGER_COFFEE_1</Tag>
+        <English>Our workers have found a plant, they call it coffee.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_TRIGGER_SUGAR_1</Tag>
+        <English>We have found sugar, this is sweet.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_TRIGGER_COCA_1</Tag>
+        <English>We have found coca, time to earn money.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_TRIGGER_TOBACCO_1</Tag>
+        <English>We have found tobacco, time to earn money.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_TRIGGER_COTTON_1</Tag>
+        <English>We have found cotton, our industry will prosper.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_TRIGGER_INDIGO_1</Tag>
+        <English>We have found indigo, great we can use it to for our commercial needs.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_TRIGGER_FLAX_1</Tag>
+        <English>We have found flax, great we can use it to for our industrial needs.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_TRIGGER_HEMP_1</Tag>
+        <English>We have found hemp, great we can use it to for our industrial needs.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_TRIGGER_RUBBER_1</Tag>
+        <English>Rubber threes grow here, we can use it to get rubber.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_TRIGGER_OPIUM_1</Tag>
+        <English>We have found a place where natural opium grows.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_TRIGGER_HENNA_1</Tag>
+        <English>We found a place where henna flourishes.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_TRIGGER_INCENSE_1</Tag>
+        <English>A natural grow of incense was discovered.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_TRIGGER_PAPYRUS_11</Tag>
+        <English>We have discovered a place where papyrus grows abundant.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_TRIGGER_SILK_1</Tag>
+        <English>Workers have discovered a new source of silk.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_TRIGGER_STONE_1</Tag>
+        <English>Workers have discovered a new source of stone.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_TRIGGER_COAL_1</Tag>
+        <English>Prospectors have discovered a new source of coal.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_TRIGGER_AMBER_1</Tag>
+        <English>Prospectors have discovered a new source of amber.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_TRIGGER_BAUXITE_1</Tag>
+        <English>Prospectors have discovered a new source of bauxite ore.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_TRIGGER_DIAMOND_1</Tag>
+        <English>Prospectors have discovered a new source of diamonds.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_TRIGGER_IRON_1</Tag>
+        <English>Prospectors have discovered a new source of iron ore.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_TRIGGER_MANGANESE_1</Tag>
+        <English>Prospectors have discovered a new source of manganese ore.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_TRIGGER_RUBIE_1</Tag>
+        <English>Prospectors have discovered a new source of rubies.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_TRIGGER_MARBLE_1</Tag>
+        <English>Prospectors have discovered a new source of marble.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_TRIGGER_COPPER_1</Tag>
+        <English>Prospectors have discovered rich new veins of Copper ore.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_TRIGGER_TURQUOISE_1</Tag>
+        <English>Prospectors have discovered rich new veins of Turquoise ore.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_TRIGGER_TITANIUM_1</Tag>
+        <English>Prospectors have discovered rich new veins of Titanium ore.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_TRIGGER_LEAD_1</Tag>
+        <English>Prospectors have discovered rich new veins of Lead ore.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_TRIGGER_PLATINUM_1</Tag>
+        <English>Prospectors have discovered rich new veins of Platinum ore.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_TRIGGER_GOLD_MINE_1</Tag>
+        <English>Prospectors have discovered rich new veins of Gold ore.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_TRIGGER_SAPPHIRES_1</Tag>
+        <English>Prospectors have discovered sapphires.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_TRIGGER_URANIUM_1</Tag>
+        <English>Prospectors have discovered uranium.</English>
+    </TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_TRIGGER_HIYOSILVER_1</Tag>
 		<English>Prospectors have discovered rich new veins of Silver ore.</English>
@@ -12741,6 +13541,10 @@
 		<Polish>Szalej&#185;ca burza piaskowa zasypa&#179;a drogi w pobli&#191;u miasta %s2_city.</Polish>
 		<Russian>Песчаная буря около %s2_city засыпала песком окрестные дороги и караванные тропы.</Russian>
 	</TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_TRIGGER_SANDSTORM_2</Tag>
+        <English>Sandstorm has hit us hard near %s2_city.</English>
+    </TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_TRIGGER_SEA_TURTLES_1</Tag>
 		<English>The locals have figured out the mating cycles of the sea turtles who flock to the shore in massive quantities. They have begun to harvest the turtles and eggs, in a way that does not endanger the long term survival of the creatures.</English>
@@ -12881,6 +13685,10 @@
 		<Italian>Gran parte del petrolio estratto da uno dei nostri pozzi è denso di zolfo e altre impurità. Ci è capitata una fonte di petrolio impuro!</Italian>
 		<Spanish>Todo el petróleo en crudo que bombeamos está lleno de azufre y otras impurezas. ¡Hemos dado con un depósito de crudo ácido!</Spanish>
 	</TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_TRIGGER_PURE_CRUDE_1</Tag>
+        <English>Most of the crude oil being pumped from one of our sites is pure and has no imperfections. We struck rich!</English>
+    </TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_TRIGGER_SPICY_1</Tag>
 		<English>An innovative chef has discovered a new type of spice, which grows only in a forest near %s2_city.</English>
@@ -13296,7 +14104,31 @@
 		<Italian>I marinai hanno individuato una nuova popolazione di balene.</Italian>
 		<Spanish>Los marineros han avistado una nueva población de ballenas.</Spanish>
 	</TEXT>
-	<TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_TRIGGER_FOUND_LOBSTERS_1</Tag>
+        <English>Divers have spotted a new source of lobsters.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_TRIGGER_FOUND_FISH_1</Tag>
+        <English>Sailors have spotted a new source of fish.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_TRIGGER_FOUND_SHRIMP_1</Tag>
+        <English>Sailors have spotted a new source of shrimp.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_TRIGGER_FOUND_CRAB_1</Tag>
+        <English>Sailors have spotted a new source of crab.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_TRIGGER_FOUND_CLAM_1</Tag>
+        <English>Sailors have spotted a new source of clam.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_TRIGGER_FOUND_MUREX_1</Tag>
+        <English>Sailors have spotted a new source of murex.</English>
+    </TEXT>
+    <TEXT>
 		<Tag>TXT_KEY_EVENT_TRIGGER_WININGMONKS_1</Tag>
 		<English>Monks from the Monastery in %s2_city have grown their private vineyards large enough for them to become nationally significant.</English>
 		<French>Les moines de la ville : %s2_city ont suffisamment fait pousser leurs vignes pour que cela ait un impact au niveau national.</French>
@@ -13820,6 +14652,62 @@
 		<Italian>Sembrano buone notizie per la nostra economia.</Italian>
 		<Spanish>Parecen ser buenas nuevas para nuestra economía.</Spanish>
 	</TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_FOUND_MUREX_1</Tag>
+        <English>That sounds like welcome news for our economy.</English>
+        <French>Cela semble être une bonne nouvelle pour notre économie.</French>
+        <German>Klingt nach guten Neuigkeiten für unsere Wirtschaft.</German>
+        <Italian>Sembrano buone notizie per la nostra economia.</Italian>
+        <Spanish>Parecen ser buenas nuevas para nuestra economía.</Spanish>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_FOUND_CLAM_1</Tag>
+        <English>That sounds like welcome news for our economy.</English>
+        <French>Cela semble être une bonne nouvelle pour notre économie.</French>
+        <German>Klingt nach guten Neuigkeiten für unsere Wirtschaft.</German>
+        <Italian>Sembrano buone notizie per la nostra economia.</Italian>
+        <Spanish>Parecen ser buenas nuevas para nuestra economía.</Spanish>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_FOUND_CRAB_1</Tag>
+        <English>That sounds like welcome news for our economy.</English>
+        <French>Cela semble être une bonne nouvelle pour notre économie.</French>
+        <German>Klingt nach guten Neuigkeiten für unsere Wirtschaft.</German>
+        <Italian>Sembrano buone notizie per la nostra economia.</Italian>
+        <Spanish>Parecen ser buenas nuevas para nuestra economía.</Spanish>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_FOUND_SHRIMP_1</Tag>
+        <English>That sounds like welcome news for our economy.</English>
+        <French>Cela semble être une bonne nouvelle pour notre économie.</French>
+        <German>Klingt nach guten Neuigkeiten für unsere Wirtschaft.</German>
+        <Italian>Sembrano buone notizie per la nostra economia.</Italian>
+        <Spanish>Parecen ser buenas nuevas para nuestra economía.</Spanish>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_FOUND_FISH_1</Tag>
+        <English>That sounds like welcome news for our economy.</English>
+        <French>Cela semble être une bonne nouvelle pour notre économie.</French>
+        <German>Klingt nach guten Neuigkeiten für unsere Wirtschaft.</German>
+        <Italian>Sembrano buone notizie per la nostra economia.</Italian>
+        <Spanish>Parecen ser buenas nuevas para nuestra economía.</Spanish>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_FOUND_LOBSTER_1</Tag>
+        <English>That sounds like welcome news for our economy.</English>
+        <French>Cela semble être une bonne nouvelle pour notre économie.</French>
+        <German>Klingt nach guten Neuigkeiten für unsere Wirtschaft.</German>
+        <Italian>Sembrano buone notizie per la nostra economia.</Italian>
+        <Spanish>Parecen ser buenas nuevas para nuestra economía.</Spanish>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_PEARLS_FOUND_1</Tag>
+        <English>That sounds like welcome news for our economy.</English>
+        <French>Cela semble être une bonne nouvelle pour notre économie.</French>
+        <German>Klingt nach guten Neuigkeiten für unsere Wirtschaft.</German>
+        <Italian>Sembrano buone notizie per la nostra economia.</Italian>
+        <Spanish>Parecen ser buenas nuevas para nuestra economía.</Spanish>
+    </TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_WININGMONKS_1</Tag>
 		<English>That sounds like welcome news for our economy.</English>
