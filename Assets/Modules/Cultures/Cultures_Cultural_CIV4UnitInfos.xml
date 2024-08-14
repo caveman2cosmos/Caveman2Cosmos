@@ -28646,8 +28646,10 @@
 			<Description>TXT_KEY_UNIT_WAPITI</Description>
 			<Civilopedia>TXT_KEY_UNIT_WAPITI_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_GROWTH</Advisor>
+			<bBarbCoExist>1</bBarbCoExist>
 			<bNoBadGoodies>1</bNoBadGoodies>
-			<bOnlyDefensive>1</bOnlyDefensive>
+			<bPassage>1</bPassage>
+			<bUpgradeAnywhere>1</bUpgradeAnywhere>
 			<bMilitarySupport>1</bMilitarySupport>
 			<bMilitaryProduction>1</bMilitaryProduction>
 			<bPillage>1</bPillage>
@@ -28674,7 +28676,8 @@
 					<UnitAIType>UNITAI_HUNTER</UnitAIType>
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
-			</NotUnitAIs>
+			</NotUnitAIs>			
+			<SeeInvisible>INVISIBLE_CAMOUFLAGE</SeeInvisible>
 			<PrereqTech>TECH_ROAD_BUILDING</PrereqTech>
 			<BonusType>BONUS_PILAGA</BonusType>
 			<iCost>190</iCost>
@@ -48122,8 +48125,10 @@
 			<Description>TXT_KEY_UNIT_TIGURINI_SCOUTS</Description>
 			<Civilopedia>TXT_KEY_UNIT_TIGURINI_SCOUTS_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_GROWTH</Advisor>
+			<bBarbCoExist>1</bBarbCoExist>
 			<bNoBadGoodies>1</bNoBadGoodies>
-			<bOnlyDefensive>1</bOnlyDefensive>
+			<bPassage>1</bPassage>
+			<bUpgradeAnywhere>1</bUpgradeAnywhere>
 			<bMilitarySupport>1</bMilitarySupport>
 			<bMilitaryProduction>1</bMilitaryProduction>
 			<bPillage>1</bPillage>
@@ -48151,6 +48156,7 @@
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</NotUnitAIs>
+			<SeeInvisible>INVISIBLE_CAMOUFLAGE</SeeInvisible>
 			<PrereqTech>TECH_ROAD_BUILDING</PrereqTech>
 			<BonusType>BONUS_HELVETIAN</BonusType>
 			<iCost>190</iCost>
