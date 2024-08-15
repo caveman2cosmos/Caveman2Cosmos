@@ -4072,6 +4072,9 @@
 			<BonusesRequired>
 				<BonusType>BONUS_GEMSTONE</BonusType>
 			</BonusesRequired>
+			<OrPreReqs>
+				<PrereqTech>TECH_INDUSTRIAL_LIFESTYLE</PrereqTech>
+			</OrPreReqs>
 			<Events>
 				<Event>EVENT_GIRLS_BEST_FRIEND_1</Event>
 			</Events>
@@ -7354,6 +7357,72 @@
 			</OrPreReqs>
 			<ObsoleteTechs>
 				<ObsoleteTech>TECH_ARTILLERY</ObsoleteTech>
+			</ObsoleteTechs>
+			<bRecurring>1</bRecurring>
+		</EventTriggerInfo>
+
+		<EventTriggerInfo>
+			<Type>EVENTTRIGGER_GREAT_STORY</Type>
+			<WorldNewsTexts>
+				<Text>TXT_KEY_EVENTTRIGGER_GREAT_STORY</Text>
+			</WorldNewsTexts>
+			<TriggerTexts>
+				<TriggerText>
+					<Text>TXT_KEY_EVENT_TRIGGER_GREAT_STORY_1</Text>
+					<Era>NONE</Era>
+				</TriggerText>
+			</TriggerTexts>
+			<iPercentGamesActive>100</iPercentGamesActive>
+			<iWeight>15</iWeight>
+			<bProbabilityBuildingMultiply>1</bProbabilityBuildingMultiply>
+			<BuildingsRequired>
+				<Building>BUILDING_STORYTELLER</Building>
+			</BuildingsRequired>
+			<iNumBuildings>1</iNumBuildings>
+			<iNumPlotsRequired>1</iNumPlotsRequired>
+			<bOwnPlot>1</bOwnPlot>
+			<Events>
+				<Event>EVENT_GREAT_STORY_1</Event>
+				<Event>EVENT_GREAT_STORY_2</Event>
+				<Event>EVENT_GREAT_STORY_3</Event>
+			</Events>
+			<OrPreReqs>
+				<PrereqTech>TECH_ORAL_TRADITION</PrereqTech>
+			</OrPreReqs>
+			<ObsoleteTechs>
+				<ObsoleteTech>TECH_LITERATURE</ObsoleteTech>
+			</ObsoleteTechs>
+			<bRecurring>1</bRecurring>
+		</EventTriggerInfo>
+
+		<EventTriggerInfo>
+			<Type>EVENTTRIGGER_COMMUNITY_BOND</Type>
+			<WorldNewsTexts>
+				<Text>TXT_KEY_EVENTTRIGGER_COMMUNITY_BOND</Text>
+			</WorldNewsTexts>
+			<TriggerTexts>
+				<TriggerText>
+					<Text>TXT_KEY_EVENT_TRIGGER_COMMUNITY_BOND_1</Text>
+					<Era>NONE</Era>
+				</TriggerText>
+			</TriggerTexts>
+			<iPercentGamesActive>100</iPercentGamesActive>
+			<iWeight>15</iWeight>
+			<bProbabilityBuildingMultiply>1</bProbabilityBuildingMultiply>
+			<BuildingsRequired>
+				<Building>BUILDING_COMMUNITY_DISCUSSIONS</Building>
+			</BuildingsRequired>
+			<iNumBuildings>1</iNumBuildings>
+			<iNumPlotsRequired>1</iNumPlotsRequired>
+			<bOwnPlot>1</bOwnPlot>
+			<Events>
+				<Event>EVENT_COMMUNITY_BOND</Event>
+			</Events>
+			<OrPreReqs>
+				<PrereqTech>TECH_ORAL_TRADITION</PrereqTech>
+			</OrPreReqs>
+			<ObsoleteTechs>
+				<ObsoleteTech>TECH_RENAISSANCE_LIFESTYLE</ObsoleteTech>
 			</ObsoleteTechs>
 			<bRecurring>1</bRecurring>
 		</EventTriggerInfo>
@@ -12762,35 +12831,6 @@
 		</EventTriggerInfo>
 
 		<EventTriggerInfo>
-			<Type>EVENTTRIGGER_SANDSTORM_PATH</Type>
-			<WorldNewsTexts>
-				<Text>TXT_KEY_EVENTTRIGGER_SANDSTORM</Text>
-			</WorldNewsTexts>
-			<TriggerTexts>
-				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_SANDSTORM_1</Text>
-					<Era>NONE</Era>
-				</TriggerText>
-			</TriggerTexts>
-			<iPercentGamesActive>100</iPercentGamesActive>
-			<iWeight>60</iWeight>
-			<iNumPlotsRequired>1</iNumPlotsRequired>
-			<bOwnPlot>1</bOwnPlot>
-			<TerrainsRequired>
-				<TerrainType>TERRAIN_DESERT</TerrainType>
-				<TerrainType>TERRAIN_DUNES</TerrainType>
-			</TerrainsRequired>
-			<RoutesRequired>
-				<RouteType>ROUTE_PATH</RouteType>
-			</RoutesRequired>
-			<Events>
-				<Event>EVENT_SANDSTORM_1</Event>
-				<Event>EVENT_SANDSTORM_2</Event>
-			</Events>
-			<bRecurring>1</bRecurring>
-		</EventTriggerInfo>
-
-		<EventTriggerInfo>
 			<Type>EVENTTRIGGER_SANDSTORM_TRAIL</Type>
 			<WorldNewsTexts>
 				<Text>TXT_KEY_EVENTTRIGGER_SANDSTORM</Text>
@@ -12811,6 +12851,35 @@
 			</TerrainsRequired>
 			<RoutesRequired>
 				<RouteType>ROUTE_TRAIL</RouteType>
+			</RoutesRequired>
+			<Events>
+				<Event>EVENT_SANDSTORM_1</Event>
+				<Event>EVENT_SANDSTORM_2</Event>
+			</Events>
+			<bRecurring>1</bRecurring>
+		</EventTriggerInfo>
+
+		<EventTriggerInfo>
+			<Type>EVENTTRIGGER_SANDSTORM_PATH</Type>
+			<WorldNewsTexts>
+				<Text>TXT_KEY_EVENTTRIGGER_SANDSTORM</Text>
+			</WorldNewsTexts>
+			<TriggerTexts>
+				<TriggerText>
+					<Text>TXT_KEY_EVENT_TRIGGER_SANDSTORM_1</Text>
+					<Era>NONE</Era>
+				</TriggerText>
+			</TriggerTexts>
+			<iPercentGamesActive>100</iPercentGamesActive>
+			<iWeight>60</iWeight>
+			<iNumPlotsRequired>1</iNumPlotsRequired>
+			<bOwnPlot>1</bOwnPlot>
+			<TerrainsRequired>
+				<TerrainType>TERRAIN_DESERT</TerrainType>
+				<TerrainType>TERRAIN_DUNES</TerrainType>
+			</TerrainsRequired>
+			<RoutesRequired>
+				<RouteType>ROUTE_PATH</RouteType>
 			</RoutesRequired>
 			<Events>
 				<Event>EVENT_SANDSTORM_1</Event>
