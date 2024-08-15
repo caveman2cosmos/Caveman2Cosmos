@@ -7,6 +7,49 @@
 	<EventInfos>
 
 		<EventInfo>
+			<Type>EVENT_COMMUNITY_BOND</Type>
+			<Description>TXT_KEY_EVENT_COMMUNITY_BOND_1</Description>
+			<bPickCity>1</bPickCity>
+			<iCulture>130</iCulture>
+			<iHappyTurns>5</iHappyTurns>
+			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
+			<iAIValue>1</iAIValue>
+		</EventInfo>
+
+		<EventInfo>
+			<Type>EVENT_GREAT_STORY_1</Type>
+			<Description>TXT_KEY_EVENT_GREAT_STORY_1</Description>
+			<bPickCity>1</bPickCity>
+			<iCulture>200</iCulture>
+			<bGameSpeedScale>1</bGameSpeedScale>
+			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
+			<iAIValue>1</iAIValue>
+		</EventInfo>
+
+		<EventInfo>
+			<Type>EVENT_GREAT_STORY_2</Type>
+			<Description>TXT_KEY_EVENT_GREAT_STORY_2</Description>
+			<iTechPercent>15</iTechPercent>
+			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
+			<iAIValue>1</iAIValue>
+		</EventInfo>
+
+		<EventInfo>
+			<Type>EVENT_GREAT_STORY_3</Type>
+			<Description>TXT_KEY_EVENT_GREAT_STORY_3</Description>
+			<bPickCity>1</bPickCity>
+			<BuildingExtraCommerces>
+				<BuildingExtraCommerce>
+					<Building>BUILDING_STORYTELLER</Building>
+					<CommerceType>COMMERCE_CULTURE</CommerceType>
+					<iExtraCommerce>1</iExtraCommerce>
+				</BuildingExtraCommerce>
+			</BuildingExtraCommerces>
+			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
+			<iAIValue>1</iAIValue>
+		</EventInfo>
+
+		<EventInfo>
 			<Type>EVENT_POOR_HARVEST_1</Type>
 			<Description>TXT_KEY_EVENT_POOR_HARVEST_1</Description>
 			<bPickCity>1</bPickCity>
@@ -101,7 +144,7 @@
 		<EventInfo>
 			<Type>EVENT_FOREST_MASSIVE_WILDFIRE_1</Type>
 			<Description>TXT_KEY_EVENT_FOREST_MASSIVE_WILDFIRE_1</Description>
-			<iGold>-100</iGold>
+			<iGold>-80</iGold>
 			<bGameSpeedScale>1</bGameSpeedScale>
 			<FeatureType>FEATURE_FOREST</FeatureType>
 			<iFeatureChange>-1</iFeatureChange>
@@ -122,7 +165,7 @@
 		<EventInfo>
 			<Type>EVENT_FOREST_MASSIVE_WILDFIRE_2</Type>
 			<Description>TXT_KEY_EVENT_FOREST_MASSIVE_WILDFIRE_2</Description>
-			<iGold>-50</iGold>
+			<iGold>-40</iGold>
 			<bGameSpeedScale>1</bGameSpeedScale>
 			<FeatureType>FEATURE_FOREST</FeatureType>
 			<iFeatureChange>-1</iFeatureChange>
@@ -420,7 +463,7 @@
 		<EventInfo>
 			<Type>EVENT_WASHED_OUT_2</Type>
 			<Description>TXT_KEY_EVENT_WASHED_OUT_2</Description>
-			<iGold>-30</iGold>
+			<iGold>-20</iGold>
 			<bGameSpeedScale>1</bGameSpeedScale>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<iAIValue>1</iAIValue>
@@ -1522,7 +1565,7 @@
 		<EventInfo>
 			<Type>EVENT_BLIZZARD_3</Type>
 			<Description>TXT_KEY_EVENT_BLIZZARD_2</Description>
-			<iGold>-30</iGold>
+			<iGold>-20</iGold>
 			<bGameSpeedScale>1</bGameSpeedScale>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<iAIValue>2</iAIValue>
@@ -6797,7 +6840,7 @@
 		<EventInfo>
 			<Type>EVENT_SANDSTORM_2</Type>
 			<Description>TXT_KEY_EVENT_SANDSTORM_2</Description>
-			<iGold>-30</iGold>
+			<iGold>-20</iGold>
 			<bGameSpeedScale>1</bGameSpeedScale>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<iAIValue>1</iAIValue>
