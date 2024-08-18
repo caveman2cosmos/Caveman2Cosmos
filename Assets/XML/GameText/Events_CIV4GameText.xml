@@ -1238,6 +1238,14 @@
         <Russian>Изобилие дичи, добытой охотниками народа %s1_civ_adjective, привело к небольшому росту населения в городе %s2_city.</Russian>
         <Spanish>El excedente logrado por los cazadores cerca de la ciudad %s1:2_civ_adjective de %s2_city ha impulsado un pequeño crecimiento de la población.</Spanish>
     </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENTTRIGGER_GREAT_STORY</Tag>
+        <English>A %s1_civ_adjective storyteller from the city of %s2_city has told an amazing story captivating the tribe.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENTTRIGGER_COMMUNITY_BOND</Tag>
+        <English>A %s1_civ_adjective community discussion in the city of %s2_city has brought their people closer.</English>
+    </TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_HARBORMASTER_DONE</Tag>
 		<English>The seaworthy %s1_civ_adjective people have completed the quest of The Harbormaster!</English>
@@ -8224,6 +8232,22 @@
 		<Italian>Un matrimonio %s5_religion_adjective tra uno dei nostri cittadini e una dell'Impero %s1_civ_adjective è stato onorato con una festa nazionale, con tanto di esotico regalo nuziale e donazioni alle nostre istituzioni religiose. La nostra popolazione è entusiasta del gesto.</Italian>
 		<Spanish>Un matrimonio %s5:1_religion_adjective entre una de nuestras familias y otra %s1:2_civ_adjective ha sido honrado con una fiesta nacional, incluyendo regalos de bodas increíbles y generosas donaciones a nuestras instituciones religiosas. Nuestro pueblo está emocionado con ese gesto.</Spanish>
 	</TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_COMMUNITY_BOND_1</Tag>
+        <English>We are all one.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_GREAT_STORY_1</Tag>
+        <English>This story was truly amazing.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_GREAT_STORY_2</Tag>
+        <English>This story inspired one of our tribesmen to a new idea.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_GREAT_STORY_3</Tag>
+        <English>Let us remember this story and preserve it for generations to come.</English>
+    </TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_KNOWLEDGE_INHERITANCE_1</Tag>
 		<English>A thinker? Let's see what interesting ideas he has.</English>
@@ -12413,6 +12437,14 @@
 		<Italian>Di recente è stato lanciato un nuovo tipo di ristorante con servizio rapido, che vende principalmente hamburger. Grazie alla pubblicità radiofonica la catena si sta espandendo in tutta la nazione.</Italian>
 		<Spanish>Recientemente se ha inaugurado un nuevo tipo de restaurante donde el servicio es rápido y se venden principalmente hamburguesas. Gracias a una exitosa campaña de publicidad en la radio, la cadena se está extendiendo por toda la nación.</Spanish>
 	</TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_TRIGGER_COMMUNITY_BOND_1</Tag>
+        <English>People from %s2_city has recently bonded and our now more united.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_TRIGGER_GREAT_STORY_1</Tag>
+        <English>Story teller near %s2_city has recently told a fascinating story captivating his people.</English>
+    </TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_TRIGGER_HAPPY_HUNTING_1</Tag>
 		<English>Moose herds near %s2_city have grown particularly large. Our hunters have harvested a cache of surplus food.</English>
