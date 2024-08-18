@@ -7,6 +7,145 @@
 	<EventInfos>
 
 		<EventInfo>
+			<Type>EVENT_PRIME_STUD_1</Type>
+			<Description>TXT_KEY_EVENT_PRIME_STUD_1</Description>
+			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
+			<iAIValue>1</iAIValue>
+		</EventInfo>
+
+		<EventInfo>
+			<Type>EVENT_PRIME_STUD_2</Type>
+			<Description>TXT_KEY_EVENT_PRIME_STUD_2</Description>
+			<WorldNewsTexts>
+				<Text>TXT_KEY_PRIME_STUD</Text>
+			</WorldNewsTexts>
+			<iGold>-50</iGold>
+			<bGameSpeedScale>1</bGameSpeedScale>
+			<BuildingExtraYields>
+				<BuildingExtraYield>
+					<Building>BUILDING_FARM_ANIMAL_HORSE</Building>
+					<YieldType>YIELD_PRODUCTION</YieldType>
+					<iExtraYield>1</iExtraYield>
+				</BuildingExtraYield>
+			</BuildingExtraYields>
+			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
+			<iAIValue>1</iAIValue>
+		</EventInfo>
+
+		<EventInfo>
+			<Type>EVENT_CHILD_WIZE_COUNCIL_1</Type>
+			<Description>TXT_KEY_EVENT_WIZE_COUNCIL_1</Description>
+			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
+			<iAIValue>1</iAIValue>
+		</EventInfo>
+
+		<EventInfo>
+			<Type>EVENT_CHILD_WIZE_COUNCIL_2</Type>
+			<iRevoltTurns>1</iRevoltTurns>
+			<Description>TXT_KEY_EVENT_WIZE_COUNCIL_2</Description>
+			<iHappyTurns>-50</iHappyTurns>
+			<BuildingExtraCommerces>
+				<BuildingExtraCommerce>
+					<Building>BUILDING_ELDER_COUNCIL</Building>
+					<CommerceType>COMMERCE_CULTURE</CommerceType>
+					<iExtraCommerce>1</iExtraCommerce>
+				</BuildingExtraCommerce>
+				<BuildingExtraCommerce>
+					<Building>BUILDING_ELDER_COUNCIL</Building>
+					<CommerceType>COMMERCE_RESEARCH</CommerceType>
+					<iExtraCommerce>1</iExtraCommerce>
+				</BuildingExtraCommerce>
+			</BuildingExtraCommerces>
+			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
+			<iAIValue>1</iAIValue>
+		</EventInfo>
+
+		<EventInfo>
+			<Type>EVENT_CHILD_LABOUR_INCIDENT_1</Type>
+			<Description>TXT_KEY_EVENT_CHILD_LABOUR_INCIDENT_1</Description>
+			<iRevoltTurns>3</iRevoltTurns>
+			<BuildingExtraYields>
+				<BuildingExtraYield>
+					<Building>BUILDING_CHILD_LABOR_CREW</Building>
+					<YieldType>YIELD_PRODUCTION</YieldType>
+					<iExtraYield>-1</iExtraYield>
+				</BuildingExtraYield>
+			</BuildingExtraYields>
+			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
+			<iAIValue>1</iAIValue>
+		</EventInfo>
+
+		<EventInfo>
+			<Type>EVENT_CHILD_LABOUR_INCIDENT_2</Type>
+			<Description>TXT_KEY_EVENT_CHILD_LABOUR_INCIDENT_2</Description>
+			<iGold>-50</iGold>
+			<bGameSpeedScale>1</bGameSpeedScale>
+			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
+			<iAIValue>1</iAIValue>
+		</EventInfo>
+
+		<EventInfo>
+			<Type>EVENT_CHILD_LABOUR_INCIDENT_3</Type>
+			<Description>TXT_KEY_EVENT_CHILD_LABOUR_INCIDENT_3</Description>
+			<iGold>-20</iGold>
+			<bGameSpeedScale>1</bGameSpeedScale>
+			<BuildingExtraYields>
+				<BuildingExtraYield>
+					<Building>BUILDING_CHILD_LABOR_CREW</Building>
+					<YieldType>YIELD_PRODUCTION</YieldType>
+					<iExtraYield>1</iExtraYield>
+				</BuildingExtraYield>
+			</BuildingExtraYields>
+			<BuildingExtraCommerces>
+				<BuildingExtraCommerce>
+					<Building>BUILDING_CHILD_LABOR_CREW</Building>
+					<CommerceType>COMMERCE_GOLD</CommerceType>
+					<iExtraCommerce>-1</iExtraCommerce>
+				</BuildingExtraCommerce>
+			</BuildingExtraCommerces>
+			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
+			<iAIValue>1</iAIValue>
+		</EventInfo>
+
+		<EventInfo>
+			<Type>EVENT_WAR_TAXES_1</Type>
+			<Description>TXT_KEY_EVENT_WAR_TAXES_1</Description>
+			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
+			<iAIValue>1</iAIValue>
+		</EventInfo>
+
+		<EventInfo>
+			<Type>EVENT_WAR_TAXES_2</Type>
+			<Description>TXT_KEY_EVENT_WAR_TAXES_2</Description>
+			<iGold>200</iGold>
+			<bGameSpeedScale>1</bGameSpeedScale>
+			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
+			<iAIValue>1</iAIValue>
+		</EventInfo>
+
+		<EventInfo>
+			<Type>EVENT_WAR_TAXES_3</Type>
+			<Description>TXT_KEY_EVENT_WAR_TAXES_3</Description>
+			<WorldNewsTexts>
+				<Text>TXT_KEY_EVENT_WAR_TAXES_2</Text>
+			</WorldNewsTexts>
+			<iHappy>-1</iHappy>
+			<PythonCallback>applyWarTax</PythonCallback>
+			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
+			<iAIValue>1</iAIValue>
+		</EventInfo>
+
+		<EventInfo>
+			<Type>EVENT_BONUS_TAX</Type>
+			<Description>TXT_KEY_EVENT_BONUS_TAX_1</Description>
+			<bPickCity>1</bPickCity>
+			<iGold>80</iGold>
+			<bGameSpeedScale>1</bGameSpeedScale>
+			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
+			<iAIValue>1</iAIValue>
+		</EventInfo>
+
+		<EventInfo>
 			<Type>EVENT_COMMUNITY_BOND</Type>
 			<Description>TXT_KEY_EVENT_COMMUNITY_BOND_1</Description>
 			<bPickCity>1</bPickCity>
@@ -20,7 +159,7 @@
 			<Type>EVENT_GREAT_STORY_1</Type>
 			<Description>TXT_KEY_EVENT_GREAT_STORY_1</Description>
 			<bPickCity>1</bPickCity>
-			<iCulture>200</iCulture>
+			<iCulture>233</iCulture>
 			<bGameSpeedScale>1</bGameSpeedScale>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<iAIValue>1</iAIValue>
@@ -29,7 +168,7 @@
 		<EventInfo>
 			<Type>EVENT_GREAT_STORY_2</Type>
 			<Description>TXT_KEY_EVENT_GREAT_STORY_2</Description>
-			<iTechPercent>15</iTechPercent>
+			<iTechPercent>5</iTechPercent>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<iAIValue>1</iAIValue>
 		</EventInfo>
@@ -2664,7 +2803,7 @@
 			<Type>EVENT_INFLUENZA_1</Type>
 			<Description>TXT_KEY_EVENT_INFLUENZA_1</Description>
 			<bPickCity>1</bPickCity>
-			<iGold>-1000</iGold>
+			<iGold>-700</iGold>
 			<bGameSpeedScale>1</bGameSpeedScale>
 			<iPopulationChange>-2</iPopulationChange>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
@@ -2675,7 +2814,7 @@
 			<Type>EVENT_INFLUENZA_2</Type>
 			<Description>TXT_KEY_EVENT_INFLUENZA_2</Description>
 			<bPickCity>1</bPickCity>
-			<iPopulationChange>-4</iPopulationChange>
+			<iPopulationChange>-3</iPopulationChange>
 			<PythonCallback>applyInfluenza2</PythonCallback>
 			<PythonHelp>getHelpInfluenza2</PythonHelp>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>

@@ -852,7 +852,7 @@ def applyInfluenza2(argsList):
 
   for i in xrange(iNumCities):
     (iDist, loopCity) = listCities[i]
-    loopCity.changePopulation(-2)
+    loopCity.changePopulation(-1)
     szBuffer = TRNSLTR.getText("TXT_KEY_EVENT_INFLUENZA_HIT_CITY", (loopCity.getNameKey(), ))
     CyInterface().addMessage(data.ePlayer, False, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_PILLAGE", InterfaceMessageTypes.MESSAGE_TYPE_INFO, None, GC.getCOLOR_RED(), loopCity.getX(), loopCity.getY(), True, True)
 
@@ -1284,6 +1284,26 @@ def getHelpHeroicGesture2(argsList):
 	data = argsList[1]
 	destPlayer = GC.getPlayer(data.eOtherPlayer)
 	return TRNSLTR.getText("TXT_KEY_EVENT_ATTITUDE_GOOD", (1, destPlayer.getNameKey()))
+
+######## WAR_TAX ########
+
+def canTriggerWarTax(argsList):
+	data = argsList[0]
+	player = GC.getPlayer(data.ePlayer)
+	destPlayer = GC.getPlayer(data.eOtherPlayer)
+
+	if not GC.getTeam(player.getTeam()).canChangeWarPeace(destPlayer.getTeam()):
+		return False
+
+	if GC.getTeam(player.getTeam()).AI_getAtWarCounter(destPlayer.getTeam()) < 10:
+		return False
+
+	return True
+
+def applyWarTax(argsList):
+	data = argsList[1]
+	player = GC.getPlayer(data.ePlayer)
+	player.changeGold(+400 * player.getNumCities())
 
 ######## GREAT_MEDIATOR ###########
 
