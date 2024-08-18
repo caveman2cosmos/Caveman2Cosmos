@@ -2,7 +2,7 @@
 <Civ4GameText xmlns="http://www.firaxis.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.firaxis.com ../Schema/Civ4Gametext.xsd">
 	<TEXT>
 		<Tag>TXT_KEY_EVENTOTHER_FUTBOL_WAR_1</Tag>
-		<English>The %s1_civ_adjective empire's response to the football violence has been inadequate and we have declared war on them!</English>
+		<English>The %s1_civ_adjective empire's response to the football violence has been inadequate, and we have declared war on them!</English>
 		<French>La réponse de l'empire des %s1:3_civ_adjective à la violence après le match de football a été insatisfaisante et nous leur avons déclaré la guerre!</French>
 		<German>Die Antwort des %s1_civ_adjective Reiches zur Fußballgewalttätigkeit ist unzulänglich gewesen und wir haben ihnen den Krieg erklärt!</German>
 		<Italian>La risposta dell'Impero %s1_civ_adjective alle violenze durante la partita di calcio è stata inadeguata e quindi dichiariamo guerra!</Italian>
@@ -753,7 +753,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_DOCK_WORKERS_STRIKE_BADLY</Tag>
-		<English>The Dock workers in the %s1_civ_adjective empire has caused widespread rioting and looting!</English>
+		<English>The Docks workers in the %s1_civ_adjective empire has caused widespread rioting and looting!</English>
 		<French>Les grèves des Dockers de tout %s1_civ_adjective empire ont engendré des soulèvements et des pillages!</French>
 		<Italian>I lavoratori portuali dell'Impero %s1_civ_adjective hanno causato sommosse e saccheggi diffusi!</Italian>
 		<Polish>Pracownicy portowi z imperium %s1_civ_adjective spowodowali zamieszanie oraz grabierze!</Polish>
