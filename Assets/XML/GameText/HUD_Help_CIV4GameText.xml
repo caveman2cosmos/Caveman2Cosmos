@@ -43,6 +43,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_HUD_BUTTON_ADVISOR_HERITAGE</Tag>
 		<English>Heritage Advisor</English>
+		<Russian>Советник по наследию</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HUD_BUTTON_ADVISOR_INTELLIGENCE</Tag>
@@ -88,11 +89,13 @@
 		<Tag>TXT_KEY_HUD_BUTTON_TOGGLE_BARE_MAP</Tag>
 		<English>[COLOR_HIGHLIGHT_TEXT]Toggle bare map [COLOR_GREEN_LIGHT]&lt;Ctrl+B&gt;[COLOR_REVERT][NEWLINE]Makes it easier to see the landscape.</English>
 		<Italian>[COLOR_HIGHLIGHT_TEXT]Attiva/disattiva mappa nuda [COLOR_GREEN_LIGHT]&lt;Ctrl+B&gt;[COLOR_REVERT][NEWLINE]Rende più semplice vedere le caratteristiche del terreno.</Italian>
+		<Russian>[COLOR_HIGHLIGHT_TEXT]Переключить пустую карту [COLOR_GREEN_LIGHT]&lt;Ctrl+B&gt;[COLOR_REVERT][NEWLINE]Позволяет лучше рассмотреть ландшафт.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HUD_BUTTON_TOGGLE_SCORE</Tag>
 		<English>[COLOR_HIGHLIGHT_TEXT]Toggle score list[COLOR_REVERT][NEWLINE]Click your own list entry to minimize score list.</English>
 		<Italian>[COLOR_HIGHLIGHT_TEXT]Attiva/disattiva l'elenco dei punteggi[COLOR_REVERT][NEWLINE]Fai clic sulla tua voce nell'elenco per ridurlo a icona.</Italian>
+		<Russian>[COLOR_HIGHLIGHT_TEXT]Переключить список очков[COLOR_REVERT][NEWLINE]Щелкните по своей записи в списке, чтобы свернуть список очков.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PARALLEL_MAPS_SCREEN_HOVER</Tag>
