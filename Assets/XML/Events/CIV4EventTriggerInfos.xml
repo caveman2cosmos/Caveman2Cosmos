@@ -2508,12 +2508,13 @@
 			<iNumPlotsRequired>1</iNumPlotsRequired>
 			<bOwnPlot>1</bOwnPlot>
 			<Events>
-				<Event>EVENT_CHILD_WIZE_COUNCIL_1</Event>
-				<Event>EVENT_CHILD_WIZE_COUNCIL_2</Event>
+				<Event>EVENT_WIZE_COUNCIL_1</Event>
+				<Event>EVENT_WIZE_COUNCIL_2</Event>
 			</Events>
 			<OrPreReqs>
 				<PrereqTech>TECH_CULTURAL_IDENTITY</PrereqTech>
 			</OrPreReqs>
+			<bPickCity>1</bPickCity>
 		</EventTriggerInfo>
 
 		<EventTriggerInfo>
@@ -2536,6 +2537,7 @@
 			<iNumBuildings>1</iNumBuildings>
 			<iNumPlotsRequired>1</iNumPlotsRequired>
 			<bOwnPlot>1</bOwnPlot>
+			<bPickCity>1</bPickCity>
 			<Events>
 				<Event>EVENT_CHILD_LABOUR_INCIDENT_1</Event>
 				<Event>EVENT_CHILD_LABOUR_INCIDENT_2</Event>
@@ -15797,11 +15799,14 @@
 			</TriggerTexts>
 			<EventArt>Art/Event_Images/clayevent.dds</EventArt>
 			<iPercentGamesActive>100</iPercentGamesActive>
-			<iWeight>5</iWeight>
+			<iWeight>1</iWeight>
 			<bOwnPlot>1</bOwnPlot>
 			<FeaturesRequired>
 				<FeatureType>FEATURE_FLOOD_PLAINS</FeatureType>
 			</FeaturesRequired>
+			<BonusesRequired>
+				<BonusType>NONE</BonusType>
+			</BonusesRequired>
 			<Events>
 				<Event>EVENT_CLAY_1</Event>
 			</Events>

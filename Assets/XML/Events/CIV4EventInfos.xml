@@ -33,15 +33,16 @@
 		</EventInfo>
 
 		<EventInfo>
-			<Type>EVENT_CHILD_WIZE_COUNCIL_1</Type>
+			<Type>EVENT_WIZE_COUNCIL_1</Type>
 			<Description>TXT_KEY_EVENT_WIZE_COUNCIL_1</Description>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<iAIValue>1</iAIValue>
 		</EventInfo>
 
 		<EventInfo>
-			<Type>EVENT_CHILD_WIZE_COUNCIL_2</Type>
+			<Type>EVENT_WIZE_COUNCIL_2</Type>
 			<iRevoltTurns>1</iRevoltTurns>
+			<bPickCity>1</bPickCity>
 			<Description>TXT_KEY_EVENT_WIZE_COUNCIL_2</Description>
 			<iHappyTurns>-50</iHappyTurns>
 			<BuildingExtraCommerces>
@@ -64,6 +65,7 @@
 			<Type>EVENT_CHILD_LABOUR_INCIDENT_1</Type>
 			<Description>TXT_KEY_EVENT_CHILD_LABOUR_INCIDENT_1</Description>
 			<iRevoltTurns>3</iRevoltTurns>
+			<bPickCity>1</bPickCity>
 			<BuildingExtraYields>
 				<BuildingExtraYield>
 					<Building>BUILDING_CHILD_LABOR_CREW</Building>
@@ -327,12 +329,10 @@
 			<FeatureType>FEATURE_FOREST</FeatureType>
 			<iFeatureChange>-1</iFeatureChange>
 			<iImprovementChange>-1</iImprovementChange>
-			<iRouteChange>-1</iRouteChange>
-			<iUnitImmobileTurns>1</iUnitImmobileTurns>
 			<AdditionalEvents>
 				<EventChance>
 					<Event>EVENT_WILDFIRE_CATCHES_CITY</Event>
-					<iEventChance>50</iEventChance>
+					<iEventChance>60</iEventChance>
 				</EventChance>
 			</AdditionalEvents>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
