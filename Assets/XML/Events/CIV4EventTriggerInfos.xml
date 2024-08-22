@@ -12579,9 +12579,11 @@
 					<Era>NONE</Era>
 				</TriggerText>
 			</TriggerTexts>
-			<EventArt>Art/Event_Images/GreatMediator.dds</EventArt>
 			<iPercentGamesActive>100</iPercentGamesActive>
 			<iWeight>60</iWeight>
+			<OrPreReqs>
+				<PrereqTech>TECH_WARFARE</PrereqTech>
+			</OrPreReqs>
 			<Events>
 				<Event>EVENT_WAR_TAXES_1</Event>
 				<Event>EVENT_WAR_TAXES_2</Event>

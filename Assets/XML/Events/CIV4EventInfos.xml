@@ -119,7 +119,7 @@
 		<EventInfo>
 			<Type>EVENT_WAR_TAXES_2</Type>
 			<Description>TXT_KEY_EVENT_WAR_TAXES_2</Description>
-			<iGold>200</iGold>
+			<iGold>100</iGold>
 			<bGameSpeedScale>1</bGameSpeedScale>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<iAIValue>1</iAIValue>
@@ -310,7 +310,6 @@
 			<bGameSpeedScale>1</bGameSpeedScale>
 			<FeatureType>FEATURE_FOREST</FeatureType>
 			<iFeatureChange>-1</iFeatureChange>
-			<iUnitImmobileTurns>1</iUnitImmobileTurns>
 			<AdditionalEvents>
 				<EventChance>
 					<Event>EVENT_WILDFIRE_CATCHES_CITY</Event>
