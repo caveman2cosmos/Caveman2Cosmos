@@ -498,7 +498,7 @@
 			<TechPrereq>TECH_WEATHER_CONTROL</TechPrereq>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iCost>55240</iCost>
-			<MovieDefineTag>ART_DEF_MOVIE_EDEN</MovieDefineTag>
+						<MovieDefineTag>ART_DEF_MOVIE_EDEN</MovieDefineTag>
 			<Button>Art/Interface/Buttons/Buildings/Eden.dds</Button>
 		</ProjectInfo>
 		<ProjectInfo>
