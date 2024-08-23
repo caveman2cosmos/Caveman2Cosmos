@@ -5,23 +5,27 @@
 		<English>Idea Class (Culture)</English>
 		<French>Classe d'Idée (Culture)</French>
 		<Italian>Classe di idee (Cultura)</Italian>
+		<Russian>Класс идеи (культура)</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IDEACLASS_HERITAGE</Tag>
 		<English>Idea Class (Heritage)</English>
 		<French>Classe d'Idée (Héritage)</French>
 		<Italian>Classe di idee (Eredità culturale)</Italian>
+		<Russian>Класс идеи (культурное наследие)</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IDEA_CULTURE_CELTIC</Tag>
 		<English>Idea (Celtic Culture)</English>
 		<French>Classe d'Idée (Culture celte)</French>
 		<Italian>Idea (Cultura celtica)</Italian>
+		<Russian>Идея (кельтская культура)</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IDEA_HERITAGE_EUROPEAN</Tag>
 		<English>Idea (European Heritage)</English>
 		<French>Classe d'Idée (Héritage Européen)</French>
 		<Italian>Idea (Eredità culturale europea)</Italian>
+		<Russian>Идея (европейское культурное наследие)</Russian>
 	</TEXT>
 </Civ4GameText>

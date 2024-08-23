@@ -7,6 +7,7 @@
 		<German>[ICON_BULLET]kann %F1_CmrcIcon-Rate anpassen</German>
 		<Italian>[ICON_BULLET]Può regolare il ritmo del %F1_CmrcIcon</Italian>
 		<Spanish>[ICON_BULLET]Puede ajustar el ritmo de %F1_CmrcIcon</Spanish>
+		<Russian>[ICON_BULLET]Может регулировать %F1_CmrcIcon ставку</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDINGHELP_AFFLICTION_OUTBREAK_LEVEL_CHANGE</Tag>
@@ -14,11 +15,13 @@
 		<French>[ICON_BULLET]Modifie les chances d'épidémie de %s1_Affliction de %d2_Amount.</French>
 		<Italian>[ICON_BULLET]Modifica le chance di un'epidemia di %s1_Affliction del %d2_Amount.</Italian>
 		<Polish>[ICON_BULLET]Reguluje szanse na wybuch: %s1_Affliction o %d2_Amount.</Polish>
+		<Russian>[ICON_BULLET]Изменяет базовый порог вспышки %s1_Affliction на %d2_Amount.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDINGHELP_AID_RATE</Tag>
 		<English>[ICON_BULLET]%D1_Amount Aid in Overcoming %s2_Type Afflictions within the City</English>
 		<French>[ICON_BULLET]%D1_Amount d'aide pour surmonter les afflications de type %s2_Type au sein de la ville</French>
+		<Russian>[ICON_BULLET]%D1_Amount помощь внутри города в преодолении болезней в количестве %s2_Type</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDINGHELP_AIRLIFT</Tag>
