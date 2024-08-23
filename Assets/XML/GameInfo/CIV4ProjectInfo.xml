@@ -11,6 +11,10 @@
 			<TechPrereq>TECH_FIBER_OPTICS</TechPrereq>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iCost>14760</iCost>
+			<iCostSizeModifier>0</iCostSizeModifier>
+			<iCostCountModifier>0</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>2</iCostComplexityModifier>
 			<BonusProductionModifiers>
 				<BonusProductionModifier>
 					<BonusType>BONUS_COPPER_WIRES</BonusType>
@@ -40,6 +44,10 @@
 			<TechPrereq>TECH_COMMUNICATION_NETWORKS</TechPrereq>
 			<iMaxTeamInstances>1</iMaxTeamInstances>
 			<iCost>15400</iCost>
+			<iCostSizeModifier>2</iCostSizeModifier>
+			<iCostCountModifier>2</iCostCountModifier>
+			<iCostMaterialsModifier>2</iCostMaterialsModifier>
+			<iCostComplexityModifier>2</iCostComplexityModifier>
 			<iNukeInterception>25</iNukeInterception>
 			<iGlobalMaintenanceModifier>10</iGlobalMaintenanceModifier>
 			<iNumCitiesMaintenanceModifier>10</iNumCitiesMaintenanceModifier>
@@ -62,6 +70,10 @@
 			<TechPrereq>TECH_GUIDED_WEAPONS</TechPrereq>
 			<iMaxTeamInstances>1</iMaxTeamInstances>
 			<iCost>12840</iCost>
+			<iCostSizeModifier>2</iCostSizeModifier>
+			<iCostCountModifier>2</iCostCountModifier>
+			<iCostMaterialsModifier>2</iCostMaterialsModifier>
+			<iCostComplexityModifier>2</iCostComplexityModifier>
 			<iNukeInterception>10</iNukeInterception>
 			<iGlobalMaintenanceModifier>5</iGlobalMaintenanceModifier>
 			<iNumCitiesMaintenanceModifier>5</iNumCitiesMaintenanceModifier>
@@ -83,6 +95,10 @@
 			<TechPrereq>TECH_PHOTON_THERMODYNAMICS</TechPrereq>
 			<iMaxTeamInstances>1</iMaxTeamInstances>
 			<iCost>33160</iCost>
+			<iCostSizeModifier>2</iCostSizeModifier>
+			<iCostCountModifier>2</iCostCountModifier>
+			<iCostMaterialsModifier>2</iCostMaterialsModifier>
+			<iCostComplexityModifier>2</iCostComplexityModifier>
 			<iNukeInterception>15</iNukeInterception>
 			<iGlobalMaintenanceModifier>5</iGlobalMaintenanceModifier>
 			<iNumCitiesMaintenanceModifier>5</iNumCitiesMaintenanceModifier>
@@ -108,6 +124,10 @@
 			<TechPrereq>TECH_RAILGUN</TechPrereq>
 			<iMaxTeamInstances>1</iMaxTeamInstances>
 			<iCost>21000</iCost>
+			<iCostSizeModifier>2</iCostSizeModifier>
+			<iCostCountModifier>2</iCostCountModifier>
+			<iCostMaterialsModifier>2</iCostMaterialsModifier>
+			<iCostComplexityModifier>2</iCostComplexityModifier>
 			<iNukeInterception>25</iNukeInterception>
 			<iGlobalMaintenanceModifier>15</iGlobalMaintenanceModifier>
 			<BonusProductionModifiers>
@@ -137,6 +157,10 @@
 			<TechPrereq>TECH_ASTRO_ENVIRONMENTAL_SYSTEMS</TechPrereq>
 			<iMaxTeamInstances>1</iMaxTeamInstances>
 			<iCost>12320</iCost>
+			<iCostSizeModifier>3</iCostSizeModifier>
+			<iCostCountModifier>0</iCostCountModifier>
+			<iCostMaterialsModifier>2</iCostMaterialsModifier>
+			<iCostComplexityModifier>2</iCostComplexityModifier>
 			<BonusProductionModifiers>
 				<BonusProductionModifier>
 					<BonusType>BONUS_ALUMINUM_INGOTS</BonusType>
@@ -156,6 +180,10 @@
 			<TechPrereq>TECH_MOLECULAR_SCANNING</TechPrereq>
 			<iMaxTeamInstances>1</iMaxTeamInstances>
 			<iCost>57640</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>0</iCostCountModifier>
+			<iCostMaterialsModifier>2</iCostMaterialsModifier>
+			<iCostComplexityModifier>2</iCostComplexityModifier>
 			<bSpaceship>1</bSpaceship>
 			<PrereqProjects>
 				<PrereqProject>
@@ -188,6 +216,10 @@
 			<TechPrereq>TECH_EXTRATERRESTRIAL_AGRICULTURE</TechPrereq>
 			<iMaxTeamInstances>1</iMaxTeamInstances>
 			<iCost>62440</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>0</iCostCountModifier>
+			<iCostMaterialsModifier>2</iCostMaterialsModifier>
+			<iCostComplexityModifier>2</iCostComplexityModifier>
 			<bSpaceship>1</bSpaceship>
 			<PrereqProjects>
 				<PrereqProject>
@@ -220,6 +252,10 @@
 			<TechPrereq>TECH_NANOTROIDS</TechPrereq>
 			<iMaxTeamInstances>1</iMaxTeamInstances>
 			<iCost>62440</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>0</iCostCountModifier>
+			<iCostMaterialsModifier>2</iCostMaterialsModifier>
+			<iCostComplexityModifier>2</iCostComplexityModifier>
 			<bSpaceship>1</bSpaceship>
 			<PrereqProjects>
 				<PrereqProject>
@@ -246,6 +282,10 @@
 			<TechPrereq>TECH_NANOMORPHICS</TechPrereq>
 			<iMaxTeamInstances>1</iMaxTeamInstances>
 			<iCost>53240</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>0</iCostCountModifier>
+			<iCostMaterialsModifier>2</iCostMaterialsModifier>
+			<iCostComplexityModifier>2</iCostComplexityModifier>
 			<bSpaceship>1</bSpaceship>
 			<PrereqProjects>
 				<PrereqProject>
@@ -278,6 +318,10 @@
 			<TechPrereq>TECH_NUCLEAR_PULSE_PROPULSION</TechPrereq>
 			<iMaxTeamInstances>2</iMaxTeamInstances>
 			<iCost>62440</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>0</iCostCountModifier>
+			<iCostMaterialsModifier>2</iCostMaterialsModifier>
+			<iCostComplexityModifier>2</iCostComplexityModifier>
 			<bSpaceship>1</bSpaceship>
 			<PrereqProjects>
 				<PrereqProject>
@@ -311,6 +355,10 @@
 			<TechPrereq>TECH_NANOSHIELDING</TechPrereq>
 			<iMaxTeamInstances>5</iMaxTeamInstances>
 			<iCost>55240</iCost>
+			<iCostSizeModifier>2</iCostSizeModifier>
+			<iCostCountModifier>0</iCostCountModifier>
+			<iCostMaterialsModifier>2</iCostMaterialsModifier>
+			<iCostComplexityModifier>2</iCostComplexityModifier>
 			<bSpaceship>1</bSpaceship>
 			<PrereqProjects>
 				<PrereqProject>
@@ -350,6 +398,10 @@
 			<TechPrereq>TECH_SOLAR_ORDNANCE</TechPrereq>
 			<iMaxTeamInstances>5</iMaxTeamInstances>
 			<iCost>60040</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>2</iCostMaterialsModifier>
+			<iCostComplexityModifier>2</iCostComplexityModifier>
 			<bSpaceship>1</bSpaceship>
 			<PrereqProjects>
 				<PrereqProject>
@@ -388,6 +440,10 @@
 			<TechPrereq>TECH_CLONING</TechPrereq>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iCost>15400</iCost>
+			<iCostSizeModifier>0</iCostSizeModifier>
+			<iCostCountModifier>0</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>2</iCostComplexityModifier>
 			<EveryoneSpecialBuilding>SPECIALBUILDING_CLONING_LABORATORY</EveryoneSpecialBuilding>
 			<BonusProductionModifiers>
 				<BonusProductionModifier>
@@ -407,6 +463,10 @@
 			<TechPrereq>TECH_ASTRONAUTICS</TechPrereq>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iCost>11800</iCost>
+			<iCostSizeModifier>3</iCostSizeModifier>
+			<iCostCountModifier>0</iCostCountModifier>
+			<iCostMaterialsModifier>2</iCostMaterialsModifier>
+			<iCostComplexityModifier>2</iCostComplexityModifier>
 			<EveryoneSpecialBuilding>SPECIALBUILDING_DEEP_SPACE_RESEARCH_INSTITUTE</EveryoneSpecialBuilding>
 			<BonusProductionModifiers>
 				<BonusProductionModifier>
@@ -427,6 +487,10 @@
 			<TechPrereq>TECH_LIBERALISM</TechPrereq>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iCost>4120</iCost>
+			<iCostSizeModifier>0</iCostSizeModifier>
+			<iCostCountModifier>2</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>2</iCostComplexityModifier>
 			<iTechShare>2</iTechShare>
 			<CommerceModifiers>
 				<iCommerce>0</iCommerce>
@@ -445,6 +509,10 @@
 			<TechPrereq>TECH_SPACE_STATIONS</TechPrereq>
 			<iMaxTeamInstances>1</iMaxTeamInstances>
 			<iCost>13480</iCost>
+			<iCostSizeModifier>3</iCostSizeModifier>
+			<iCostCountModifier>0</iCostCountModifier>
+			<iCostMaterialsModifier>2</iCostMaterialsModifier>
+			<iCostComplexityModifier>2</iCostComplexityModifier>
 			<EveryoneSpecialBuilding>SPECIALBUILDING_SPACE_LABORATORY</EveryoneSpecialBuilding>
 			<BonusProductionModifiers>
 				<BonusProductionModifier>
@@ -466,6 +534,10 @@
 			<MovieDefineTag>ART_DEF_MOVIE_FUSION_PLANT</MovieDefineTag>
 			<iMaxTeamInstances>1</iMaxTeamInstances>
 			<iCost>18440</iCost>
+			<iCostSizeModifier>3</iCostSizeModifier>
+			<iCostCountModifier>0</iCostCountModifier>
+			<iCostMaterialsModifier>2</iCostMaterialsModifier>
+			<iCostComplexityModifier>2</iCostComplexityModifier>
 			<EveryoneSpecialBuilding>SPECIALBUILDING_D_T_FUSION_POWER_PLANT</EveryoneSpecialBuilding>
 			<Button>Art/Interface/Buttons/buildings/ITER.dds</Button>
 		</ProjectInfo>
@@ -479,6 +551,10 @@
 			<TechPrereq>TECH_GLOBALIZATION</TechPrereq>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iCost>9440</iCost>
+			<iCostSizeModifier>3</iCostSizeModifier>
+			<iCostCountModifier>0</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<EveryoneSpecialBuilding>SPECIALBUILDING_WORLD_BANK</EveryoneSpecialBuilding>
 			<BonusProductionModifiers>
 				<BonusProductionModifier>
@@ -498,6 +574,10 @@
 			<TechPrereq>TECH_WEATHER_CONTROL</TechPrereq>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iCost>55240</iCost>
+			<iCostSizeModifier>3</iCostSizeModifier>
+			<iCostCountModifier>0</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>2</iCostComplexityModifier>
 			<MovieDefineTag>ART_DEF_MOVIE_EDEN</MovieDefineTag>
 			<Button>Art/Interface/Buttons/Buildings/Eden.dds</Button>
 		</ProjectInfo>
@@ -511,6 +591,10 @@
 			<TechPrereq>TECH_PERSONALIZED_HEALTH</TechPrereq>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iCost>21000</iCost>
+			<iCostSizeModifier>0</iCostSizeModifier>
+			<iCostCountModifier>0</iCostCountModifier>
+			<iCostMaterialsModifier>2</iCostMaterialsModifier>
+			<iCostComplexityModifier>2</iCostComplexityModifier>
 			<iGlobalHealth>2</iGlobalHealth>
 			<iGlobalHappiness>1</iGlobalHappiness>
 			<iWorldHealth>2</iWorldHealth>
@@ -527,6 +611,10 @@
 			<TechPrereq>TECH_GENETICS</TechPrereq>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iCost>12840</iCost>
+			<iCostSizeModifier>0</iCostSizeModifier>
+			<iCostCountModifier>0</iCostCountModifier>
+			<iCostMaterialsModifier>2</iCostMaterialsModifier>
+			<iCostComplexityModifier>2</iCostComplexityModifier>
 			<iGlobalHealth>1</iGlobalHealth>
 			<iWorldHealth>1</iWorldHealth>
 			<CommerceModifiers>
@@ -544,6 +632,10 @@
 			<TechPrereq>TECH_ANTI_AGING_MEDICINE</TechPrereq>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iCost>31800</iCost>
+			<iCostSizeModifier>0</iCostSizeModifier>
+			<iCostCountModifier>0</iCostCountModifier>
+			<iCostMaterialsModifier>2</iCostMaterialsModifier>
+			<iCostComplexityModifier>2</iCostComplexityModifier>
 			<iGlobalHealth>1</iGlobalHealth>
 			<iGlobalHappiness>1</iGlobalHappiness>
 			<iWorldHappiness>1</iWorldHappiness>
@@ -565,6 +657,10 @@
 			<TechPrereq>TECH_PALEONTOLOGY</TechPrereq>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iCost>4440</iCost>
+			<iCostSizeModifier>0</iCostSizeModifier>
+			<iCostCountModifier>0</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<iGlobalHealth>1</iGlobalHealth>
 			<iGlobalHappiness>1</iGlobalHappiness>
 			<CommerceModifiers>
@@ -583,6 +679,10 @@
 			<TechPrereq>TECH_SUPERSTRING_THEORY</TechPrereq>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iCost>16040</iCost>
+			<iCostSizeModifier>0</iCostSizeModifier>
+			<iCostCountModifier>0</iCostCountModifier>
+			<iCostMaterialsModifier>0</iCostMaterialsModifier>
+			<iCostComplexityModifier>2</iCostComplexityModifier>
 			<iGlobalHappiness>1</iGlobalHappiness>
 			<CommerceModifiers>
 				<iCommerce>10</iCommerce>
