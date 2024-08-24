@@ -10034,7 +10034,7 @@
 		<Italian>Unità missionario</Italian>
 		<Spanish>Misioneros</Spanish>
 		<Polish>Misjonarze</Polish>
-		<Russian>Ìèññèîíåðû</Russian>
+		<Russian>Миссионеры</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_MOTILITY_AERIAL</Tag>
@@ -10557,7 +10557,7 @@
 			<Plural>0:1</Plural>
 		</Spanish>
 		<Polish>Awansowany (ARMED_GUARD)</Polish>
-		<Russian>Ïðîäâ.(Âîîðóæ. ñòðàæà)</Russian>
+		<Russian>Продв.(Вооруж. стража)</Russian>
 		<Italian>Unità con promozione guardia armata</Italian>
 	</TEXT>
 	<TEXT>
@@ -10575,7 +10575,7 @@
 			<Plural>0:1</Plural>
 		</Spanish>
 		<Polish>Awansowany (Ostro&#191;ny)</Polish>
-		<Russian>Ïðîäâ.(Îñòîðîæíî)</Russian>
+		<Russian>Продв.(Осторожно)</Russian>
 		<Italian>Unità con promozione cauto</Italian>
 	</TEXT>
 	<TEXT>
@@ -10605,7 +10605,7 @@
 			<Plural>1</Plural>
 		</French>
 		<German>(Beförderung) Gefangene transportieren</German>
-		<Russian>Ïðîäâ.(Òðàíñï. ïëåííèêîâ)</Russian>
+		<Russian>Продв.(Трансп. пленников)</Russian>
 		<Italian>Unità con promozione trasporto dei prigionieri</Italian>
 	</TEXT>
 	<TEXT>
@@ -10622,7 +10622,7 @@
 			<Plural>0:1</Plural>
 		</Spanish>
 		<Polish>Awansowany (Transport My&#156;liwc&#243;w)</Polish>
-		<Russian>Ïðîäâ.(Àâèàíîñåö)</Russian>
+		<Russian>Продв.(Авианосец)</Russian>
 		<Italian>Unità con promozione trasporto di caccia</Italian>
 	</TEXT>
 	<TEXT>

@@ -30,7 +30,7 @@ Questi edifici automatici possono essere visualizzati nella scheda edifici speci
 	<TEXT>
 		<Tag>TXT_KEY_CONCEPT_HOUSING_PEDIA</Tag>
 		<English>Housing represents buildings that are automatically built when conditions are met. See also [LINK=CONCEPT_AUTO_BUILDINGS]Automatic Builds[\LINK].</English>
-		<Russian>[H1]Жилища в С2С[\H1][TAB]Статья находится в редакции. Подробности см. в разделе:[LINK=CONCEPT_AUTO_BUILDINGS]Автоматически построенные здания[\LINK].[PARAGRAPH:2][COLOR_HIGHLIGHT_TEXT]Примечание:[COLOR_REVERT] планомерное улучшение состояния жилого фонда ваших граждан - это хороший способ улучшить производительность вашей экономики.</Russian>
 		<Italian>Gli alloggi rappresentano gli edifici che vengono costruiti automaticamente quando le condizioni sono soddisfatte. Vedi anche [LINK=CONCEPT_AUTO_BUILDINGS]Edifici costruiti automaticamente[\LINK].</Italian>
+		<Russian>Жилье представляет собой постройки, которые автоматически возводятся при соблюдении определенных условий. Смотрите также [LINK=CONCEPT_AUTO_BUILDINGS]Автоматически построенные здания[\LINK].[PARAGRAPH:2][COLOR_HIGHLIGHT_TEXT]Примечание:[COLOR_REVERT] планомерное улучшение состояния жилого фонда ваших граждан - хороший способ улучшить производительность вашей экономики.</Russian>
 	</TEXT>
 </Civ4GameText>
