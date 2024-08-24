@@ -17088,7 +17088,7 @@
 		<Italian>La tua %s1_unit ha ricevuto in battaglia la promozione %s2_promotion.</Italian>
 		<Spanish>[NUM1:Tu:Tu:Tus:Tus] %s1_unit [NUM1:ha:ha:han:han] ascendido a %s2_promotion tras la batalla.</Spanish>
 		<Polish>Twoja jednostka %s1_unit otrzyma&#179;a dodatkow&#185; promocj&#234; w walce (%s2_promotion).</Polish>
-		<Russian>Âàø %s1_unit áûë ïîâûøåí %s2_promotion â ñðàæåíèè.</Russian>
+		<Russian>Ваш %s1_unit был повышен %s2_promotion в сражении.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISC_YOUSINK_AIRBOMB4SUCCESS</Tag>
@@ -19326,6 +19326,7 @@
 		<German>Standardeinstellungen wiederherstellen</German>
 		<Italian>Ripristina opzioni predefinite</Italian>
 		<Spanish>Restablecer valores predeterminados</Spanish>
+		<Russian>Восстановить стандартные</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_OPTIONS_SAVED_PROFILE</Tag>
@@ -19358,6 +19359,7 @@
 		<German>Sprache</German>
 		<Italian>Lingua</Italian>
 		<Spanish>Idioma</Spanish>
+		<Russian>Язык</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_OPTIONS_SCREEN_OTHER</Tag>
@@ -20002,6 +20004,7 @@
 		<German>Beraterhilfe</German>
 		<Italian>Suggerimenti </Italian>
 		<Spanish>Ayuda de consejeros</Spanish>
+		<Russian>Советы от Сида</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PLAYER_OPTION_ADVISOR_HELP_HELP</Tag>
@@ -20010,6 +20013,7 @@
 		<German>Der Berater wird eingeblendet, um dem Spieler zusätzliche Hilfestellung bei der Auswahl eines Forschungs- oder Bauprojekts zu geben</German>
 		<Italian>[BOLD]Quando si deve scegliere una costruzione o una ricerca un suggerimento su cosa fare offrirà [COLOR_HIGHLIGHT_TEXT]aiuto extra[COLOR_REVERT][\BOLD]</Italian>
 		<Spanish>Sid proporciona ayuda al jugador en relación a la investigación y las opciones de construcción.</Spanish>
+		<Russian>Сид оказывает дополнительную помощь игроку в исследованиях и выборе зданий</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PLAYER_OPTION_ADVISOR_POPUPS</Tag>
@@ -20018,6 +20022,7 @@
 		<German>Berater-Popups</German>
 		<Italian>Suggerimenti pop-up</Italian>
 		<Spanish>Ventanas de consejeros</Spanish>
+		<Russian>Подсказки советника</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PLAYER_OPTION_ADVISOR_POPUPS_HELP</Tag>
@@ -20026,6 +20031,7 @@
 		<German>Der Berater unterbricht gelegentlich das Spiel, um ein neues Bauprojekt in einer Stadt vorzuschlagen</German>
 		<Italian>[BOLD]Un pop-up interromperà saltuariamente il gioco per suggerire una [COLOR_HIGHLIGHT_TEXT]scelta di costruzione[COLOR_REVERT] da realizzare in una città[\BOLD]</Italian>
 		<Spanish>El consejero interrumpe de vez en cuando para sugerir algo nuevo que construir en una ciudad.</Spanish>
+		<Russian>Советник время от времени прерывает игру, чтобы предложить выбрать новое здание в городе</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PLAYER_OPTION_AUTO_PROMOTION</Tag>
@@ -20034,6 +20040,7 @@
 		<German>Auto-Einheitenbeförderung</German>
 		<Italian>Promozioni automatiche</Italian>
 		<Spanish>Ascenso automático de unidades</Spanish>
+		<Russian>Автоповышение подразделений</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PLAYER_OPTION_AUTO_PROMOTION_HELP</Tag>
@@ -20042,6 +20049,7 @@
 		<German>Die eigenen Einheiten werden zu Beginn jeder Runde automatisch befördert (sofern möglich)</German>
 		<Italian>[BOLD]All'inizio di ogni turno le unità del giocatore vengono [COLOR_HIGHLIGHT_TEXT]automaticamente promosse[COLOR_REVERT] (quando possibile)[\BOLD]</Italian>
 		<Spanish>Las unidades del jugador ascienden automáticamente (a ser posible) al principio de cada turno.</Spanish>
+		<Russian>Подразделения игрока автоматически повышаются в звании (если это возможно) в начале каждого хода</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PLAYER_OPTION_DETAILED_CITY_INFO</Tag>
@@ -20066,6 +20074,7 @@
 		<German>Popups minimieren</German>
 		<Italian>Minimizzazione pop-up</Italian>
 		<Spanish>Minimizar ventanas emergentes</Spanish>
+		<Russian>Свернуть всплывающие окна</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PLAYER_OPTION_MINIMIZE_POPUPS_HELP</Tag>
@@ -20074,6 +20083,7 @@
 		<German>Popups werden verkleinert dargestellt, bis der Spieler alle Einheiten fortbewegt hat</German>
 		<Italian>[BOLD]I pop-up [COLOR_HIGHLIGHT_TEXT]vengono minimizzati[COLOR_REVERT] finché il giocatore non ha mosso tutte le sue unità[\BOLD]</Italian>
 		<Spanish>Los elementos emergentes quedarán ocultos hasta que el jugador haya movido todas las unidades.</Spanish>
+		<Russian>Всплывающие окна будут свернуты до тех пор, пока игрок не переместит все подразделения</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PLAYER_OPTION_MISSIONARIES_AUTOMATED</Tag>
@@ -20270,6 +20280,7 @@
 		<German>Schnelle Bewegungen</German>
 		<Italian>Azioni rapide</Italian>
 		<Spanish>Movimientos rápidos</Spanish>
+		<Russian>Быстрые ходы</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PLAYER_OPTION_QUICK_MOVES_HELP</Tag>
@@ -20279,7 +20290,7 @@
 		<Italian>[BOLD]Tutte le azioni del giocatore vengono [COLOR_HIGHLIGHT_TEXT]velocizzate[COLOR_REVERT][\BOLD]</Italian>
 		<Spanish>Todos los movimientos del jugador se aceleran.</Spanish>
 		<Polish>Wszystkie ruchy gracza ulegaj&#185; przyspieszeniu</Polish>
-		<Russian>Âñå õîäû èãðîêîâ óñêîðÿþòñÿ</Russian>
+		<Russian>Все ходы игрока ускоряются</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PLAYER_OPTION_RIGHT_CLICK_MENU</Tag>
@@ -20288,6 +20299,7 @@
 		<German>Kontextmenü</German>
 		<Italian>Menu con il tasto destro del mouse</Italian>
 		<Spanish>Menú de clic derecho</Spanish>
+		<Russian>Меню по правому клику</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PLAYER_OPTION_RIGHT_CLICK_MENU_HELP</Tag>
@@ -20296,6 +20308,7 @@
 		<German>Kontextmenü per RECHTSKLICK öffnen (normalerweise mit [UMSCHALTEN + LINKSKLICK] verfügbar)</German>
 		<Italian>[BOLD]Apre il [COLOR_HIGHLIGHT_TEXT]menu contestuale[COLOR_REVERT] con il pulsante destro del mouse (se quest'opzione è disattivata il menu si apre con [MAIUSC] + pulsante sinistro del mouse)[\BOLD]</Italian>
 		<Spanish>El menú contextual se activa haciendo CLIC DERECHO (normalmente es con [MAYÚÚS + CLIC IZQUIERDO])</Spanish>
+		<Russian>Открывать контекстное меню правой кнопкой мыши (обычно доступно с помощью SHIFT + ЛКМ)</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PLAYER_OPTION_SHOW_ENEMY_MOVES</Tag>
@@ -20304,6 +20317,7 @@
 		<German>Feindliche Bewegungen zeigen</German>
 		<Italian>Mostra movimenti unità nemiche</Italian>
 		<Spanish>Mostrar movimientos de enemigos</Spanish>
+		<Russian>Показывать перемещения врагов</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PLAYER_OPTION_SHOW_ENEMY_MOVES_HELP</Tag>
@@ -20312,6 +20326,7 @@
 		<German>Fortbewegung feindlicher Einheiten zwischen den Runden anzeigen</German>
 		<Italian>[BOLD]Mostra le [COLOR_HIGHLIGHT_TEXT]azioni delle unità nemiche[COLOR_REVERT] tra un turno e l'altro[\BOLD]</Italian>
 		<Spanish>Muestra los movimientos de las unidades enemigas entre turno y turno.</Spanish>
+		<Russian>Показывать перемещения вражеских подразделений между ходами игрока</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PLAYER_OPTION_SHOW_FRIENDLY_MOVES</Tag>
@@ -20320,6 +20335,7 @@
 		<German>Freundliche Bewegungen zeigen</German>
 		<Italian>Mostra azioni delle unità amiche</Italian>
 		<Spanish>Mostrar movimientos de amigos</Spanish>
+		<Russian>Показывать перемещения союзников</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PLAYER_OPTION_SHOW_FRIENDLY_MOVES_HELP</Tag>
@@ -20328,6 +20344,7 @@
 		<German>Fortbewegung freundlicher Einheiten zwischen den Runden anzeigen</German>
 		<Italian>[BOLD]Mostra le [COLOR_HIGHLIGHT_TEXT]azioni delle unità amiche[COLOR_REVERT] tra un turno e l'altro[\BOLD]</Italian>
 		<Spanish>Muestra los movimientos de las unidades amistosas entre turno y turno.</Spanish>
+		<Russian>Показывать перемещения подразделений союзников между ходами игрока</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PLAYER_OPTION_SHOW_HEALTH_BARS</Tag>
@@ -20336,6 +20353,7 @@
 		<German>Lebensbalken einblenden</German>
 		<Italian>Mostra le barre dei punti vita</Italian>
 		<Spanish>Mostrar barras de salud</Spanish>
+		<Russian>Показывать полоски здоровья</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PLAYER_OPTION_SHOW_HEALTH_BARS_HELP</Tag>
@@ -20344,6 +20362,7 @@
 		<German>Lebensbalken der Einheiten einblenden</German>
 		<Italian>[BOLD]Attiva la [COLOR_HIGHLIGHT_TEXT]visualizzazione delle barre dei punti vita[COLOR_REVERT] delle unità[\BOLD]</Italian>
 		<Spanish>Mostrar barras de Salud de las unidades.</Spanish>
+		<Russian>Показывать полоски здоровья подразделений</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PLAYER_OPTION_STACK_ATTACK</Tag>
@@ -20352,6 +20371,7 @@
 		<German>Stapelangriff</German>
 		<Italian>Attacco della pila</Italian>
 		<Spanish>Ataque conjunto</Spanish>
+		<Russian>Атака стеком</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PLAYER_OPTION_STACK_ATTACK_HELP</Tag>
@@ -20360,6 +20380,7 @@
 		<German>Alle gewählten Einheiten greifen in schneller Folge nacheinander an (Hinweis: Diese Einstellung bezieht sich ausschließlich auf die Darstellung auf der Karte - die zugrunde liegenden Kampfeinstellungen bleiben unverändert)</German>
 		<Italian>[BOLD]Tutte le unità selezionate attaccheranno in [COLOR_HIGHLIGHT_TEXT]rapida successione[COLOR_REVERT] (è solo una comodità in termini di interfaccia, la [COLOR_HIGHLIGHT_TEXT]meccanica[COLOR_REVERT] di gioco resta invariata)[\BOLD]</Italian>
 		<Spanish>Todas las unidades seleccionadas atacarán en rápida sucesión (nota: esto se hace solamente a conveniencia de la interfaz, no tiene efecto alguno en la mecánica de combate subyacente).</Spanish>
+		<Russian>Все выбранные юниты будут атаковать в быстрой последовательности (примечание: это чисто интерфейсное удобство - основная механика боя останется неизменной)</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PLAYER_OPTION_WAIT_AT_END_OF_TURN</Tag>
@@ -20368,6 +20389,7 @@
 		<German>Am Ende einer Runde warten</German>
 		<Italian>Attesa alla fine del turno</Italian>
 		<Spanish>Esperar al final del turno</Spanish>
+		<Russian>Ждать в конце хода</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PLAYER_OPTION_WAIT_AT_END_OF_TURN_HELP</Tag>
@@ -20376,6 +20398,7 @@
 		<German>Das Spiel wird erst nach Beendigung der Runde durch den Spieler fortgesetzt</German>
 		<Italian>[BOLD]Il gioco [COLOR_HIGHLIGHT_TEXT]non proseguirà[COLOR_REVERT] finché il giocatore non specifica che intende finire il turno[\BOLD]</Italian>
 		<Spanish>La partida no avanzará hasta que el jugador especifique que el turno debe finalizar.</Spanish>
+		<Russian>Игра не будет продолжаться до тех пор, пока игрок не укажет, что ход должен закончиться</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PLAYER_OPTION_WORKERS_LEAVE_OLD_IMPS</Tag>
@@ -20384,6 +20407,7 @@
 		<German>Automat. Bautrupps lassen alte Modernis. unverändert</German>
 		<Italian>I lavoratori non sostituiscono i vecchi miglioramenti</Italian>
 		<Spanish>Los trabajadores automatizados abandonan las mejoras antiguas</Spanish>
+		<Russian>Автоматизированные рабочие оставляют старые улучшения</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PLAYER_OPTION_WORKERS_LEAVE_OLD_IMPS_HELP</Tag>
@@ -20392,6 +20416,7 @@
 		<German>Automatisierte Bautrupps verändern keine zuvor errichteten Modernisierungen</German>
 		<Italian>[BOLD]I lavoratori in modalità automatica [COLOR_HIGHLIGHT_TEXT]non modificheranno[COLOR_REVERT] i miglioramenti precedentemente costruiti[\BOLD]</Italian>
 		<Spanish>Los Trabajadores automatizados no cambiarán las mejoras construidas previamente.</Spanish>
+		<Russian>Автоматизированные рабочие не будут заменять ранее построенные улучшения</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PLAYER_OPTION_WORKERS_START_AUTO</Tag>
@@ -20400,6 +20425,7 @@
 		<German>Automatisierte Bautrupps</German>
 		<Italian>I lavoratori cominciano automatizzati</Italian>
 		<Spanish>Los trabajadores empiezan automatizados</Spanish>
+		<Russian>Рабочие начинают автоматизированными</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PLAYER_OPTION_WORKERS_START_AUTO_HELP</Tag>
@@ -20408,6 +20434,7 @@
 		<German>Alle Bautrupps und Arbeitsboote sind beim Spielstart automatisiert</German>
 		<Italian>[BOLD]I lavoratori e le barche da lavoro cominciano in [COLOR_HIGHLIGHT_TEXT]modalità automatica[COLOR_REVERT][\BOLD]</Italian>
 		<Spanish>Todos los Trabajadores y Barcos faeneros empiezan la partida automatizados.</Spanish>
+		<Russian>Все рабочие и рабочие лодки начинают игру как автоматизированные</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PLAYER_REASSIGNED</Tag>
@@ -29063,7 +29090,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Italian>Costruisci %s1 %s2</Italian>  <!-- victory info screen -->
 		<Spanish>Construir %s1 %s2</Spanish>
 		<Polish>Buduje: %s1 %s2</Polish>
-		<Russian>Ïðîèçâåñòè (%s2): %s1 øò.</Russian>
+		<Russian>Произвести (%s2): %s1 ив.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_VICTORY_SCREEN_BUILT</Tag>
