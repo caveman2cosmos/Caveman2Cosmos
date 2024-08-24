@@ -5,140 +5,143 @@
 		<English>Circle the Wagons</English>
 		<Italian>Serrare le fila</Italian>
 		<French>Serrer les coudes</French>
-		<Russian>Êðóã ïîâîçîê</Russian>
+		<Russian>Круг повозок</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CARAVAN_GUARD_I</Tag>
 		<English>Caravan Guards I</English>
 		<French>Gardes de caravane I</French>
 		<Italian>Guardia da carovana I</Italian>
-		<Russian>Ñòðàæ êàðàâàíà I</Russian>
+		<Russian>Стража каравана I</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CARAVAN_GUARD_II</Tag>
 		<English>Caravan Guards II</English>
 		<French>Gardes de caravane II</French>
 		<Italian>Guardia da carovana II</Italian>
-		<Russian>Ñòðàæ êàðàâàíà II</Russian>
+		<Russian>Стража каравана II</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CARAVAN_GUARD_III</Tag>
 		<English>Caravan Guards III</English>
 		<French>Gardes de caravane III</French>
 		<Italian>Guardia da carovana III</Italian>
-		<Russian>Ñòðàæ êàðàâàíà III</Russian>
+		<Russian>Стража каравана III</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CARAVAN_MARINES_I</Tag>
 		<English>Caravan Marines I</English>
 		<French>Garde-côtes de caravane I</French>
 		<Italian>Guardia marina da carovana I</Italian>
-		<Russian>Ìîðñêîé êàðàâàí I</Russian>
+		<Russian>Морской караван I</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CARAVAN_MARINES_II</Tag>
 		<English>Caravan Marines II</English>
 		<French>Garde-côtes de caravane II</French>
 		<Italian>Guardia marina da carovana II</Italian>
-		<Russian>Ìîðñêîé êàðàâàí II</Russian>
+		<Russian>Морской караван II</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CARAVAN_MARINES_III</Tag>
 		<English>Caravan Marines III</English>
 		<French>Garde-côtes de caravane III</French>
 		<Italian>Guardia marina da carovana III</Italian>
-		<Russian>Ìîðñêîé êàðàâàí III</Russian>
+		<Russian>Морской караван III</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CARAVAN_MOVEMENT_I</Tag>
 		<English>Caravan Land Movement I</English>
 		<French>Dépl. terrestre des caravanes I</French>
 		<Italian>Movimento terrestre carovana I</Italian>
-		<Russian>Ïðîâîäíèê êàðàâàíîâ I</Russian>
+		<Russian>Проводник караванов I</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CARAVAN_MOVEMENT_II</Tag>
 		<English>Caravan Land Movement II</English>
 		<French>Dépl. terrestre des caravanes II</French>
 		<Italian>Movimento terrestre carovana II</Italian>
-		<Russian>Ïðîâîäíèê êàðàâàíîâ II</Russian>
+		<Russian>Проводник караванов II</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CARAVAN_MOVEMENT_III</Tag>
 		<English>Caravan Land Movement III</English>
 		<French>Dépl. terrestre des caravanes III</French>
 		<Italian>Movimento terrestre carovana III</Italian>
-		<Russian>Ïðîâîäíèê êàðàâàíîâ III</Russian>
+		<Russian>Проводник караванов III</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CARAVAN_SEA_MOVEMENT_I</Tag>
 		<English>Caravan Sea Movement I</English>
 		<French>Dépl. en mer des caravanes I</French>
 		<Italian>Movimento marino carovana I</Italian>
-		<Russian>Ïðîâîäíèê ìîðñêèõ êàðàâàíîâ I</Russian>
+		<Russian>Проводник морских караванов I</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CARAVAN_SEA_MOVEMENT_II</Tag>
 		<English>Caravan Sea Movement II</English>
 		<French>Dépl. en mer des caravanes II</French>
 		<Italian>Movimento marino carovana II</Italian>
-		<Russian>Ïðîâîäíèê ìîðñêèõ êàðàâàíîâ II</Russian>
+		<Russian>Проводник морских караванов II</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CARAVAN_SEA_MOVEMENT_III</Tag>
 		<English>Caravan Sea Movement III</English>
 		<French>Dépl. en mer des caravanes III</French>
 		<Italian>Movimento marino carovana III</Italian>
-		<Russian>Ïðîâîäíèê ìîðñêèõ êàðàâàíîâ III</Russian>
+		<Russian>Проводник морских караванов III</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CARAVAN_SHALLOW_DRAFT</Tag>
 		<English>Shallow Draft</English>
 		<French>Remorqueur</French>
 		<Italian>Fondali bassi</Italian>
-		<Russian>Ìàëàÿ îñàäêà</Russian>
+		<Russian>Малая осадка</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_AFFLICTION_DISEASE_COMMON_COLD</Tag>
 		<English>Disease - Common Cold</English>
 		<Italian>Malattia - Raffreddore comune</Italian>
+		<Russian>Болезнь (простуда)</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_CARAVAN_GUARD</Tag>
 		<English>Caravan Guards (Land) Promotion Line</English>
 		<French>Spécialisation Garde de caravane (Terrestre)</French>
 		<Italian>linea di promozione Guardia da carovana</Italian>
-		<Russian>Îõðàíà êàðàâàíîâ</Russian>
+		<Russian>Специализация на охране караванов</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_CARAVAN_MARINES</Tag>
 		<English>Caravan Marines (Sea) Promotion Line</English>
 		<French>Spécialisation Garde-côtes de caravane (Sea)</French>
 		<Italian>linea di promozione Guardia marina da carovana</Italian>
-		<Russian>Ìîðñêîé êàðàâàí</Russian>
+		<Russian>Специализация на охране морских караванов</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_CARAVAN_MOVEMENT</Tag>
 		<English>Caravan Movement (Land) Promotion Line</English>
 		<French>Spécialisation Dépl. de caravane (Terrestre)</French>
 		<Italian>linea di promozione Movimento terrestre carovana</Italian>
-		<Russian>Ïðîâîäíèê êàðàâàíîâ</Russian>
+		<Russian>Специализация проводника караванов</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_CARAVAN_SEA_MOVEMENT</Tag>
 		<English>Caravan Movement (Sea) Promotion Line</English>
 		<French>Spécialisation Dépl. de caravane (Mer)</French>
 		<Italian>linea di promozione Movimento marino carovana</Italian>
-		<Russian>Ñóäîïðîõîä÷èê</Russian>
+		<Russian>Специализация проводника морских караванов</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_EQUIPMENT_EARLY_MELEE_ARMOR</Tag>
 		<English>Early melee armor</English>
 		<Italian>Armature antica da corpo a corpo</Italian>
+		<Russian>Ранняя броня для ближнего боя</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_EQUIPMENT_EARLY_RANGED_ARMOR</Tag>
 		<English>Early ranged armor</English>
 		<Italian>Armature antica da distanza</Italian>
+		<Russian>Ранняя броня для дальнего боя</Russian>
 	</TEXT>
 </Civ4GameText>

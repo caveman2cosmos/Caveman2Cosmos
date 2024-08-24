@@ -595,7 +595,7 @@
 		<German>[ICON_BULLET]%d1_Num Zusatzchance für Erstschlag</German>
 		<Italian>[ICON_BULLET]Probabilità di [COLOR_HIGHLIGHT_TEXT]primo colpo supplementare[COLOR_REVERT]: [COLOR_HIGHLIGHT_TEXT]+%d1_Num%[COLOR_REVERT]</Italian> <!-- Subcombat type Exile) -->
 		<Spanish>[ICON_BULLET]Probabilidad de %d1_Num [NUM1:ataque de iniciativa adicional:ataques de iniciativa adicionales]</Spanish>
-		<Russian>[ICON_BULLET]Âåðîÿòíîñòü äîïîëíèòåëüíîãî Ïåðâîãî óäàðà (%d1_Num)</Russian>
+		<Russian>[ICON_BULLET]Вероятность дополнительного Первого удара (%d1_Num)</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONHELP_FRIENDLY_LANDS</Tag>
@@ -604,7 +604,7 @@
 		<German>pro Runde auf befreundetem Gebiet</German>
 		<Italian>Danno a turno in territorio amico</Italian>
 		<Spanish>Daño/turno en tierra amiga</Spanish>
-		<Russian>(% óùåðáà çà õîä íà äðóæåñòâåííîé òåððèòîðèè)</Russian>
+		<Russian>(% ущерба за ход на дружественной территории)</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONHELP_HEALS_SAME</Tag>
@@ -613,7 +613,7 @@
 		<German>[ICON_BULLET]Extra-Heilung von Einheiten auf demselben Geländefeld um %d1_Amount%%[SPACE]</German>
 		<Italian>[ICON_BULLET]Cura le unità nella stessa casella del %d1_Amount%%[SPACE]</Italian>
 		<Spanish>[ICON_BULLET]Cura a las unidades en la misma casilla un %d1_Amount%% más de[SPACE]</Spanish>
-		<Russian>[ICON_BULLET]Ëå÷èò þíèòîâ íà îäíîé äîï. êëåòêå %d1_Amount%%[SPACE]</Russian>
+		<Russian>[ICON_BULLET]Лечит подразделения на одной дополнительной клетке %d1_Amount%%[SPACE]</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONHELP_MOVE</Tag>
@@ -622,7 +622,7 @@
 		<German>[ICON_BULLET]%D1_Change Bewegungsrate</German>
 		<Italian>[ICON_BULLET]%D1_Change di aumento della portata di movimento</Italian>
 		<Spanish>[ICON_BULLET]%D1_Change al alcance del movimiento</Spanish>
-		<Russian>[ICON_BULLET]%D1_Change Äèàïàçîíà äâèæåíèÿ</Russian>
+		<Russian>[ICON_BULLET]%D1_Change Диапазона движения</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONHELP_MOVE_DISCOUNT</Tag>
