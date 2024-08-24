@@ -19359,6 +19359,7 @@
 		<German>Sprache</German>
 		<Italian>Lingua</Italian>
 		<Spanish>Idioma</Spanish>
+		<Russian>Язык</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_OPTIONS_SCREEN_OTHER</Tag>
@@ -20406,6 +20407,7 @@
 		<German>Automat. Bautrupps lassen alte Modernis. unverändert</German>
 		<Italian>I lavoratori non sostituiscono i vecchi miglioramenti</Italian>
 		<Spanish>Los trabajadores automatizados abandonan las mejoras antiguas</Spanish>
+		<Russian>Автоматизированные рабочие оставляют старые улучшения</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PLAYER_OPTION_WORKERS_LEAVE_OLD_IMPS_HELP</Tag>
@@ -20414,6 +20416,7 @@
 		<German>Automatisierte Bautrupps verändern keine zuvor errichteten Modernisierungen</German>
 		<Italian>[BOLD]I lavoratori in modalità automatica [COLOR_HIGHLIGHT_TEXT]non modificheranno[COLOR_REVERT] i miglioramenti precedentemente costruiti[\BOLD]</Italian>
 		<Spanish>Los Trabajadores automatizados no cambiarán las mejoras construidas previamente.</Spanish>
+		<Russian>Автоматизированные рабочие не будут заменять ранее построенные улучшения</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PLAYER_OPTION_WORKERS_START_AUTO</Tag>
@@ -20422,6 +20425,7 @@
 		<German>Automatisierte Bautrupps</German>
 		<Italian>I lavoratori cominciano automatizzati</Italian>
 		<Spanish>Los trabajadores empiezan automatizados</Spanish>
+		<Russian>Рабочие начинают автоматизированными</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PLAYER_OPTION_WORKERS_START_AUTO_HELP</Tag>
@@ -20430,6 +20434,7 @@
 		<German>Alle Bautrupps und Arbeitsboote sind beim Spielstart automatisiert</German>
 		<Italian>[BOLD]I lavoratori e le barche da lavoro cominciano in [COLOR_HIGHLIGHT_TEXT]modalità automatica[COLOR_REVERT][\BOLD]</Italian>
 		<Spanish>Todos los Trabajadores y Barcos faeneros empiezan la partida automatizados.</Spanish>
+		<Russian>Все рабочие и рабочие лодки начинают игру как автоматизированные</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PLAYER_REASSIGNED</Tag>
