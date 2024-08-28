@@ -8841,7 +8841,7 @@
 			<Plural>0:1</Plural>
 		</Spanish>
 		<Polish>Kierownicy</Polish>
-		<Russian>Ìåíåäæìåíò</Russian>
+		<Russian>Менеджеры</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_EXPLORER</Tag>
@@ -8858,7 +8858,7 @@
 			<Plural>0:1</Plural>
 		</Spanish>
 		<Polish>Odkrywcy</Polish>
-		<Russian>Èññëåäîâàòåëè</Russian>
+		<Russian>Исследователи</Russian>
 		<Italian>Unità esploratore</Italian>
 	</TEXT>
 	<TEXT>
@@ -8876,7 +8876,7 @@
 			<Plural>0:1</Plural>
 		</Spanish>
 		<Polish>Koty</Polish>
-		<Russian>Êîøà÷üè</Russian>
+		<Russian>Кошки</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_FISH_BONEY</Tag>

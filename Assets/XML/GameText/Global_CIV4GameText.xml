@@ -8865,6 +8865,7 @@
 		<German>Filmqualität</German>
 		<Italian>Qualità dei filmati</Italian>
 		<Spanish>Calidad de Película</Spanish>
+		<Russian>Уровень качества видео</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GRAPHIC_OPTION_FROZEN_ANIMATIONS</Tag>
@@ -19066,6 +19067,7 @@
 		<German>Anfangsmenü</German>
 		<Italian>Schermo del titolo</Italian>
 		<Spanish>Menú inicial</Spanish>
+		<Russian>Стиль главного меню</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_OPTIONS_24CLOCK</Tag>
@@ -19098,6 +19100,7 @@
 		<German>Antialiasing MultiSample</German>
 		<Italian>Anti-aliasing multisamples</Italian>
 		<Spanish>Anti-Aliasing MultiSamples</Spanish>
+		<Russian>Степень сглаживания MSAA</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_OPTIONS_AUDIO</Tag>
@@ -19106,6 +19109,7 @@
 		<German>Audio</German>
 		<Italian>Audio</Italian>
 		<Spanish>Sonido</Spanish>
+		<Russian>Звук</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_OPTIONS_BANDWIDTH_DESC</Tag>
@@ -19202,6 +19206,7 @@
 		<German>Spiel</German>
 		<Italian>Gioco</Italian>
 		<Spanish>Juego</Spanish>
+		<Russian>Игра</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_OPTIONS_GRAPHICS</Tag>
@@ -19210,6 +19215,7 @@
 		<German>Grafik</German>
 		<Italian>Grafica</Italian>
 		<Spanish>Gráficos</Spanish>
+		<Russian>Графика</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_OPTIONS_HOURS</Tag>
@@ -19335,6 +19341,7 @@
 		<German>%s1_Profile gespeichert!</German>
 		<Italian>Il profilo %s1_Profile è stato salvato</Italian>
 		<Spanish>Se ha guardado "%s1_Profile"</Spanish>
+		<Russian>Профиль %s1_Profile сохранен</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_OPTIONS_SCREEN_GLOBE</Tag>
@@ -19343,6 +19350,7 @@
 		<German>Weltqualität</German>
 		<Italian>Qualità del pianeta</Italian>
 		<Spanish>Calidad del globo</Spanish>
+		<Russian>Уровень отрисовки планеты</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_OPTIONS_SCREEN_GRAPHICS_LEVEL</Tag>
@@ -19351,6 +19359,7 @@
 		<German>Grafikstufe</German>
 		<Italian>Qualità grafica</Italian>
 		<Spanish>Nivel gráfico</Spanish>
+		<Russian>Уровень графики</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_OPTIONS_SCREEN_LANGUAGE</Tag>
@@ -19368,6 +19377,7 @@
 		<German>Sonstige</German>
 		<Italian>Altre opzioni</Italian>
 		<Spanish>Otros</Spanish>
+		<Russian>Прочие</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_OPTIONS_SCREEN_PROFILES</Tag>
@@ -19376,6 +19386,7 @@
 		<German>Profile</German>
 		<Italian>Profili</Italian>
 		<Spanish>Perfiles</Spanish>
+		<Russian>Профили</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_OPTIONS_SCREEN_PROFILE_NAME</Tag>
@@ -19384,6 +19395,7 @@
 		<German>Profilname</German>
 		<Italian>Nome profilo</Italian>
 		<Spanish>Nombre del perfil</Spanish>
+		<Russian>Имя профиля</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_OPTIONS_SCREEN_RENDER_QUALITY_LEVEL</Tag>
@@ -19392,6 +19404,7 @@
 		<German>Renderqualitätsstufe</German>
 		<Italian>Qualità del render</Italian>
 		<Spanish>Nivel de calidad del renderizado</Spanish>
+		<Russian>Уровень качества рендеринга</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_OPTIONS_SCREEN_RES</Tag>
@@ -19400,6 +19413,7 @@
 		<German>Auflösung</German>
 		<Italian>Risoluzione video</Italian>
 		<Spanish>Resolución de pantalla</Spanish>
+		<Russian>Разрешение</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_OPTIONS_SINGLE_UNIT</Tag>
@@ -19408,6 +19422,7 @@
 		<German>Grafik als einzelne Einheit</German>
 		<Italian>Mostra grafica unità singola</Italian>
 		<Spanish>Gráficos de unidad individual</Spanish>
+		<Russian>Одиночные подразделения</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_OPTIONS_SINGLE_UNIT_HELP</Tag>
@@ -19416,6 +19431,7 @@
 		<German>Einheiten werden durch eine einzelne Figur dargestellt</German>
 		<Italian>[BOLD]Le unità vengono mostrate graficamente come una [COLOR_HIGHLIGHT_TEXT]singola unità[COLOR_REVERT][\BOLD]</Italian>
 		<Spanish>Las unidades se muestran con una sola figura.</Spanish>
+		<Russian>Подразделения из нескольких единиц будут отображаться как из одной</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_OPTIONS_SPEAKERS</Tag>
@@ -19950,6 +19966,7 @@
 		<German>Automatisierte Bautrupps verlassen Wälder</German>
 		<Italian>I lavoratori non tagliano le foreste</Italian>
 		<Spanish>Trabajadores automatizados abandonan bosques</Spanish>
+		<Russian>Автоматизированные рабочие сохраняют леса</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PLAYEROPTION_LEAVE_FORESTS_HELP</Tag>
@@ -19958,6 +19975,7 @@
 		<German>Automatisierte Bautrupps holzen keine Wälder ab</German>
 		<Italian>[BOLD]I lavoratori automatizzati [COLOR_HIGHLIGHT_TEXT]non abbattono[COLOR_REVERT] le foreste[\BOLD]</Italian>
 		<Spanish>Los trabajadores automatizados no talan los bosques.</Spanish>
+		<Russian>Автоматизированные рабочие не будут вырубать леса</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PLAYER_FREE_EXPERIENCE</Tag>
@@ -20092,6 +20110,7 @@
 		<German>Missionare und Vorstände automatisch starten</German>
 		<Italian>I missionari e i funzionari cominciano automatizzati</Italian>
 		<Spanish>Misioneros y ejecutivos empiezan automatizados</Spanish>
+		<Russian>Миссионеры и менеджеры начинают автоматизированными</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PLAYER_OPTION_MISSIONARIES_AUTOMATED_HELP</Tag>
@@ -20100,6 +20119,7 @@
 		<German>Alle Religionsmissionare und Vorstände von Kapitalgesellschaften beginnen das Spiel automatisch</German>
 		<Italian>[BOLD]I missionari religiosi e i funzionari corporativi cominciano in [COLOR_HIGHLIGHT_TEXT] modalità automatica[COLOR_REVERT][\BOLD]</Italian>
 		<Spanish>Todos los misioneros y ejecutivos empiezan la partida automatizados</Spanish>
+		<Russian>Все миссионеры и менеджеры корпораций начинают игру как автоматизированные</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PLAYER_OPTION_MODDER_1</Tag>
@@ -20109,7 +20129,7 @@
 		<Italian>I governatori cittadini costruiscono le barche da lavoro</Italian>
 		<Spanish>El gobernador de la ciudad construye barcos faeneros</Spanish>
 		<Polish>Gubernatorzy miasta buduj&#185; Statek konstrukcyjne</Polish>
-		<Russian>Îòêëþ÷èòü îáó÷åíèå ("Ïîñëåäíèé ðóáåæ")</Russian>
+		<Russian>Градоначальники строят рабочие лодки</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PLAYER_OPTION_MODDER_1_HELP</Tag>
@@ -20119,7 +20139,7 @@
 		<Italian>[BOLD]I governatori cittadini (quando la città è gestita dalla IA) possono [COLOR_HIGHLIGHT_TEXT]costruire le barche da lavoro[COLOR_REVERT] se è necessario[\BOLD]</Italian>
 		<Spanish>Los gobernadores de las ciudades pueden construir Barcos faeneros cuando sea necesario.</Spanish>
 		<Polish>Gubernatorzy miast mog&#185; budowa&#230; Statki konstrukcyjne kiedy trzeba</Polish>
-		<Russian>Ðåçåðâíûé ïàðàìåòð äëÿ ìîäèôèêàöèé 1.</Russian>
+		<Russian>Градоначальники могут строить рабочие лодки при необходимости</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PLAYER_OPTION_MODDER_2</Tag>
@@ -20129,7 +20149,7 @@
 		<Italian>I governatori cittadini costruiscono i lavoratori</Italian>
 		<Spanish>El gobernador de la ciudad entrena trabajadores</Spanish>
 		<Polish>Gubernatorzy buduj&#185; robotnik&#243;w</Polish>
-		<Russian>Ïàðàìåòð ìîäèôèêàöèè 2</Russian>
+		<Russian>Градоначальники обучают рабочих</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PLAYER_OPTION_MODDER_2_HELP</Tag>
@@ -20139,7 +20159,7 @@
 		<Italian>[BOLD]I governatori cittadini (quando la città è gestita dalla IA) possono [COLOR_HIGHLIGHT_TEXT] costruire i lavoratori[COLOR_REVERT] se è necessario[\BOLD]</Italian>
 		<Spanish>Los gobernadores de las ciudades pueden entrenar a Trabajadores cuando sea necesario.</Spanish>
 		<Polish>Gubernatorzy miast mog&#185; budowa&#230; Robotnik&#243;w kiedy trzeba</Polish>
-		<Russian>Ðåçåðâíûé ïàðàìåòð äëÿ ìîäèôèêàöèé 2.</Russian>
+		<Russian>Градоначальники могут обучать рабочих при необходимости</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PLAYER_OPTION_MODDER_3</Tag>
@@ -20149,7 +20169,7 @@
 		<Italian>IA alternativa per il governatore cittadino</Italian>
 		<Spanish>Gobernador IA de la ciudad</Spanish>
 		<Polish>Gubernator Miasta AI</Polish>
-		<Russian>Ïàðàìåòð ìîäèôèêàöèè 3</Russian>
+		<Russian>Альтернативный ИИ-градоначальник</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PLAYER_OPTION_MODDER_3_HELP</Tag>
@@ -20159,7 +20179,7 @@
 		<Italian>[BOLD]Il normale governatore cittadino per i giocatori umani è sostituito da quello [COLOR_HIGHLIGHT_TEXT]usato dall'IA[COLOR_REVERT][\BOLD]</Italian>
 		<Spanish>El gobernador usado normalmente en las ciudades del jugador humano es sustituido por el que usa la IA.</Spanish>
 		<Polish>Normalny Gubernator Miasta dla graczy ludzkich zosta&#179; zast&#185;piony tym dla AI.</Polish>
-		<Russian>Ðåçåðâíûé ïàðàìåòð äëÿ ìîäèôèêàöèé 3.</Russian>
+		<Russian>Привычный градоначальник для игроков-людей заменен на того, которого использует ИИ</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PLAYER_OPTION_NO_COMBAT_ZOOM</Tag>
@@ -20200,6 +20220,7 @@
 		<German>Kein Einheitendurchlauf</German>
 		<Italian>Nessun ciclo delle unità</Italian>
 		<Spanish>Sin alternar unidades</Spanish>
+		<Russian>Не переключать подразделения</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PLAYER_OPTION_NO_UNIT_CYCLING_HELP</Tag>
@@ -20208,6 +20229,7 @@
 		<German>Kein automatischer Einheitendurchlauf</German>
 		<Italian>[BOLD]Disattiva il [COLOR_HIGHLIGHT_TEXT]ciclo automatico[COLOR_REVERT] tra le unità[\BOLD]</Italian>
 		<Spanish>Las unidades no se alternan automáticamente.</Spanish>
+		<Russian>Отключить автоматическое переключение между подразделениями</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PLAYER_OPTION_NO_UNIT_RECOMMEND</Tag>
@@ -20216,6 +20238,7 @@
 		<German>Keine Einheitenempfehlungen</German>
 		<Italian>Nessun suggerimento per le azioni delle unità</Italian>
 		<Spanish>Sin recomendaciones de unidades</Spanish>
+		<Russian>Без рекомендаций по действиям подразделений</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PLAYER_OPTION_NO_UNIT_RECOMMEND_HELP</Tag>
@@ -20224,6 +20247,7 @@
 		<German>Keine Empfehlungen für Einheitenfortbewegung oder -aktionen</German>
 		<Italian>[BOLD][COLOR_HIGHLIGHT_TEXT]Disattiva i suggerimenti[COLOR_REVERT] sulle azioni e sui movimenti delle unità[\BOLD]</Italian>
 		<Spanish>No se dan recomendaciones para las acciones y el movimiento de las unidades.</Spanish>
+		<Russian>Отключить показ рекомендованных действий или передвижений для подразделений</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PLAYER_OPTION_NUMPAD_HELP</Tag>
@@ -20232,6 +20256,7 @@
 		<German>Ziffernblock-Hilfe</German>
 		<Italian>Aiuto del tastierino numerico</Italian>
 		<Spanish>Ayuda del teclado numérico</Spanish>
+		<Russian>Помощь с цифровым блоком</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PLAYER_OPTION_NUMPAD_HELP_HELP</Tag>
@@ -20240,6 +20265,7 @@
 		<German>Ziffernblock-Hilfe für Fortbewegung der Einheiten einblenden</German>
 		<Italian>[BOLD]Mostra l'[COLOR_HIGHLIGHT_TEXT]aiuto del tastierino numerico[COLOR_REVERT] per il movimento delle unità[\BOLD]</Italian>
 		<Spanish>Muestra la ayuda del teclado numérico para el movimiento de las unidades.</Spanish>
+		<Russian>Показывать подсказку о перемещении подразделений с помощью клавиш цифрового блока</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PLAYER_OPTION_QUICK_COMBAT_DEFENSE</Tag>
@@ -20407,7 +20433,7 @@
 		<German>Automat. Bautrupps lassen alte Modernis. unverändert</German>
 		<Italian>I lavoratori non sostituiscono i vecchi miglioramenti</Italian>
 		<Spanish>Los trabajadores automatizados abandonan las mejoras antiguas</Spanish>
-		<Russian>Автоматизированные рабочие оставляют старые улучшения</Russian>
+		<Russian>Автоматизированные рабочие сохраняют старые улучшения</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PLAYER_OPTION_WORKERS_LEAVE_OLD_IMPS_HELP</Tag>
@@ -22721,7 +22747,7 @@
 		<Italian>[NEWLINE][COLOR_YELLOW]Il tuo livello di difficoltà è %s1[COLOR_REVERT]</Italian>
 		<Spanish>[NEWLINE][COLOR_YELLOW]Tu nivel de dificultad es %s1[COLOR_REVERT]</Spanish>
 		<Polish>[NEWLINE][COLOR_YELLOW]Aktualny poziom trudno&#156;ci: %s1[COLOR_REVERT]</Polish>
-		<Russian>[NEWLINE][COLOR_YELLOW]Âàø óðîâåíü ñëîæíîñòè %s1[COLOR_REVERT]</Russian>
+		<Russian>[NEWLINE][COLOR_YELLOW]Ваш уровень сложности - %s1[COLOR_REVERT]</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_SCREEN_CONTINUE</Tag>
@@ -22730,6 +22756,7 @@
 		<German>Fortfahren</German>
 		<Italian>Continua</Italian>
 		<Spanish>Continuar</Spanish>
+		<Russian>Продолжить</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_SEALEVEL_HIGH</Tag>
@@ -22738,6 +22765,7 @@
 		<German>Hoch</German>
 		<Italian>Alta</Italian>
 		<Spanish>Alto</Spanish>
+		<Russian>Высокий</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_SEALEVEL_LOW</Tag>
@@ -22746,6 +22774,7 @@
 		<German>Niedrig</German>
 		<Italian>Bassa</Italian>
 		<Spanish>Bajo</Spanish>
+		<Russian>Низкий</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_SEALEVEL_MEDIUM</Tag>
@@ -22754,10 +22783,12 @@
 		<German>Mittel</German>
 		<Italian>Media</Italian>
 		<Spanish>Medio</Spanish>
+		<Russian>Средний</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_SEALEVEL_VERY_LOW</Tag>
 		<English>Very Low</English>
+		<Russian>Очень низкий</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_SEASON_FALL</Tag>

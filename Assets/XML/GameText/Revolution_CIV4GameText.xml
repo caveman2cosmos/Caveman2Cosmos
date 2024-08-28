@@ -58,7 +58,7 @@
 		<Italian>Opzioni interfaccia:</Italian>
 		<Spanish>Opciones de interfaz:</Spanish>
 		<Polish>Opcje Interfejsu:</Polish>
-		<Russian>Îïöèè èíòåðôåéñà:</Russian>
+		<Russian>Настройки интерфейса:</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_REVDCMTAB_NEWWORLD_OPTIONS</Tag>
@@ -68,7 +68,7 @@
 		<Italian>Opzioni mod New World:</Italian>
 		<Spanish>Opciones de Nuevo Mundo:</Spanish>
 		<Polish>Opcje Nowego &#156;wiata:</Polish>
-		<Russian>Опции New World:</Russian>
+		<Russian>Настройки Нового Света:</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_REVDCMTAB_RELIGION_OPTIONS</Tag>
@@ -78,7 +78,7 @@
 		<Italian>Opzioni religione:</Italian>
 		<Spanish>Opciones de religión:</Spanish>
 		<Polish>Opcje Religii:</Polish>
-		<Russian>Îïöèè ðåëèãèè:</Russian>
+		<Russian>Настройки религии:</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_REVDCMTAB_RESET_DEFAULTS</Tag>
