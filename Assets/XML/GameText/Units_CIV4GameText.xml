@@ -335,7 +335,7 @@
 		<Italian>Intercettazione</Italian> <!-- infoscreen Military -->
 		<Spanish>Interceptar</Spanish>
 		<Polish>Przechwy&#230;</Polish>
-		<Russian>Ïåðåõâàò</Russian>
+		<Russian>Перехватить</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITGROUPER_ORDER_GROUP_NONE</Tag>
@@ -345,7 +345,7 @@
 		<Italian>Nessun ordine</Italian> <!-- infoscreen Military -->
 		<Spanish>Ninguno</Spanish>
 		<Polish>Brak</Polish>
-		<Russian>Íåò</Russian>
+		<Russian>Нет</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITGROUPER_ORDER_GROUP_OTHER</Tag>
@@ -355,7 +355,7 @@
 		<Italian>Altri ordini</Italian> <!-- infoscreen Military -->
 		<Spanish>Otro</Spanish>
 		<Polish>Inne</Polish>
-		<Russian>Äðóãîå</Russian>
+		<Russian>Прочие</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITGROUPER_ORDER_GROUP_PATROL</Tag>
@@ -365,7 +365,7 @@
 		<Italian>Pattugliamento</Italian> <!-- infoscreen Military -->
 		<Spanish>Patrullar</Spanish>
 		<Polish>Patroluj</Polish>
-		<Russian>Ïàòðóëü</Russian>
+		<Russian>Патрулировать</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITGROUPER_ORDER_GROUP_PATROLSETTINGS</Tag>
@@ -373,7 +373,7 @@
 		<French>Patrouille Auto</French>
 		<Spanish>Patrulla automatizada</Spanish>
 		<Polish>Automatyczny Patrol</Polish>
-		<Russian>Àâòîìàòè÷åñêîå ïàòðóëèðîâàíèå</Russian>
+		<Russian>Автоматическое патрулирование</Russian>
 		<Italian>Pattugliamento automatizzato</Italian> <!-- infoscreen Military -->
 	</TEXT>
 	<TEXT>
@@ -382,7 +382,7 @@
 		<French>Pillage Auto</French>
 		<Spanish>Saqueo automatizado</Spanish>
 		<Polish>Automatyczne Pl&#185;drowanie</Polish>
-		<Russian>Àâòîìàòè÷åñêèé ãðàáåæ</Russian>
+		<Russian>Автоматический грабеж</Russian>
 		<Italian>Saccheggio automatizzato</Italian> <!-- infoscreen Military -->
 	</TEXT>
 	<TEXT>
@@ -8266,7 +8266,7 @@
 			<Plural>0:1</Plural>
 		</Spanish>
 		<Polish>Przedstawiciel M&#179;yn&#243;w Zbo&#191;owych</Polish>
-		<Russian>Ýìèññàð "ÏÇ"</Russian>
+		<Russian>Эмиссар "ОГ"</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_EXECUTIVE_2</Tag>
@@ -8590,7 +8590,7 @@
 			<Plural>0</Plural>
 		</Spanish>
 		<Polish>Przedstawiciel Cukierni Wonka</Polish>
-		<Russian>Øåô-ïîâàð ''ÊÂ''</Russian>
+		<Russian>Шеф-повар ''ЯВ''</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_EXILE</Tag>
@@ -8601,7 +8601,7 @@
 			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
-		<Russian>Èçãîé</Russian>
+		<Russian>Изгой</Russian>
 		<Italian>Esule</Italian>
 	</TEXT>
 	<TEXT>
