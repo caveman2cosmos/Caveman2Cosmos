@@ -23,7 +23,7 @@
 				</Module>
 				<Module> <!-- Pepper Space Program - units converted to support MultiMaps -->
 					<Directory>P2K_Multimaps_Test</Directory>
-					<bLoad>1</bLoad>
+					<bLoad>0</bLoad>
 				</Module>
 				<Module> <!-- Complex Traits -->
 					<Directory>Thunderbrd</Directory>

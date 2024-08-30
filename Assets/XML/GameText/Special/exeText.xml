@@ -34,7 +34,7 @@
 		<English>Space maps</English>
 		<Italian>Mappe dello spazio</Italian>
 		<Polish>Kosmiczne mapy</Polish>
-		<Russian>Космические карты</Russian>
+		<Russian>Карты с космосом</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_BUDDY_LIST_PLAYING_LOC</Tag>
@@ -2731,7 +2731,7 @@
 		<Italian>Opzioni</Italian>
 		<Spanish>Opciones</Spanish>
 		<Polish>Opcje</Polish>
-		<Russian>Опции</Russian>
+		<Russian>Настройки</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MAIN_MENU_PASSWORD</Tag>
@@ -3927,7 +3927,7 @@
 		<Italian>Opzioni</Italian>
 		<Spanish>Opciones</Spanish>
 		<Polish>Ustawienia</Polish>
-		<Russian>Опции</Russian>
+		<Russian>Настройки</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_OUTPUT_NOT_FOUND</Tag>

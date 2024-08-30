@@ -335,7 +335,7 @@
 		<Italian>Intercettazione</Italian> <!-- infoscreen Military -->
 		<Spanish>Interceptar</Spanish>
 		<Polish>Przechwy&#230;</Polish>
-		<Russian>Ïåðåõâàò</Russian>
+		<Russian>Перехватить</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITGROUPER_ORDER_GROUP_NONE</Tag>
@@ -345,7 +345,7 @@
 		<Italian>Nessun ordine</Italian> <!-- infoscreen Military -->
 		<Spanish>Ninguno</Spanish>
 		<Polish>Brak</Polish>
-		<Russian>Íåò</Russian>
+		<Russian>Нет</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITGROUPER_ORDER_GROUP_OTHER</Tag>
@@ -355,7 +355,7 @@
 		<Italian>Altri ordini</Italian> <!-- infoscreen Military -->
 		<Spanish>Otro</Spanish>
 		<Polish>Inne</Polish>
-		<Russian>Äðóãîå</Russian>
+		<Russian>Прочие</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITGROUPER_ORDER_GROUP_PATROL</Tag>
@@ -365,7 +365,7 @@
 		<Italian>Pattugliamento</Italian> <!-- infoscreen Military -->
 		<Spanish>Patrullar</Spanish>
 		<Polish>Patroluj</Polish>
-		<Russian>Ïàòðóëü</Russian>
+		<Russian>Патрулировать</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITGROUPER_ORDER_GROUP_PATROLSETTINGS</Tag>
@@ -373,7 +373,7 @@
 		<French>Patrouille Auto</French>
 		<Spanish>Patrulla automatizada</Spanish>
 		<Polish>Automatyczny Patrol</Polish>
-		<Russian>Àâòîìàòè÷åñêîå ïàòðóëèðîâàíèå</Russian>
+		<Russian>Автоматическое патрулирование</Russian>
 		<Italian>Pattugliamento automatizzato</Italian> <!-- infoscreen Military -->
 	</TEXT>
 	<TEXT>
@@ -382,7 +382,7 @@
 		<French>Pillage Auto</French>
 		<Spanish>Saqueo automatizado</Spanish>
 		<Polish>Automatyczne Pl&#185;drowanie</Polish>
-		<Russian>Àâòîìàòè÷åñêèé ãðàáåæ</Russian>
+		<Russian>Автоматический грабеж</Russian>
 		<Italian>Saccheggio automatizzato</Italian> <!-- infoscreen Military -->
 	</TEXT>
 	<TEXT>
@@ -7188,6 +7188,7 @@
 		<Tag>TXT_KEY_UNIT_DARTFROG_PEDIA</Tag>
 		<English>Poison dart frog (also dart-poison frog, poison frog or formerly poison arrow frog) is the common name of a group of frogs in the family Dendrobatidae which are native to Central and South America. These species are diurnal and often have brightly-colored bodies. Although all wild dendrobatids are at least somewhat toxic, levels of toxicity vary considerably from one species to the next and from one population to another. Many species are critically endangered. These amphibians are often called "dart frogs" due to the Amerindians' indigenous use of their toxic secretions to poison the tips of blowdarts. However, of over 175 species, only three have been documented as being used for this purpose (curare plants are more commonly used), and none come from the Dendrobates genus, which is characterized by the brilliant color and complex patterns of its members.</English>
 		<German>Als [COLOR_UNIT_TEXT]Baumsteigerfrosch[COLOR_REVERT] (auch Pfeilgiftfrosch oder Farbfrosch) bezeichnet man eine Familie der Froschlurche. Es existieren ca. 170 Arten.[NEWLINE]Baumsteigerfrösche leben fast ausschließilich im mittel- und südamerikanischen Regenwald, die meisten von ihnen sind mit 12 bis 50 Millimetern sehr klein und farbenfroh. Weitere Merkmale sind das Fehlen der Gaumenbeine (Gesichtsschädelknochen) und der Schwimmhäute zwischen der ersten und zweiten bzw. der zweiten und dritten Zehe. Zur Fortpflanzung laichen die kleineren Arten auf Blättern, die größeren in Höhlen. Sie verzehren giftige Beutetiere wie Milben, Ameisen und Käfer, um ihren Giftvorrat, der über 200 Alkaloide umfasst, aufrecht zu erhalten. Nachzuchten in Gefangenschaft haben aufgrund des abweichenden Nahrungsangebots oft kein Hautgift mehr. Einige Arten sind von Natur aus ungiftig und tragen ihre auffälige Signalfarbe nur, um Fressfeinde zu täuschen (Mimikry).[NEWLINE]Indigene Völker benutzen das Gift bei der Jagd mit dem Blasrohr, indem sie es auf die Pfeile auftragen (daher die Bezeichnung Pfeilgiftfrosch). Jedoch bilden nur wenige Arten ein für den Menschen tödliches Gift aus. Einige Gattungen der Baumsteigerfrösche stehen unter Artenschutz, ihre Bestände sind durch illegalen Handel und die Abholzung des Regenwaldes stark gefährdet. In kühleren Regionen der Anden droht zudem ein Pilzbefall, der tödlich verlaufen kann.</German>
+		<Russian>Древолазы - распространенное название семейства Dendrobatidae - лягушек, обитающих в Центральной и Южной Америке. Эти виды ведут дневной образ жизни и часто имеют ярко окрашенное тело. Хотя все дикие древолазы, по крайней мере, в некоторой степени токсичны, уровни токсичности значительно варьируются от одного вида к другому и от одной популяции к другой. Многие виды находятся под угрозой исчезновения. В англоязычной среде этих земноводных часто называют "dart frog" (дротиковыми лягушками) из-за того, что индейцы использовали их ядовитые выделения для отравления наконечников дротиков. Однако из более чем 175 видов только три были документально подтверждены как используемые для этой цели (чаще используются растения кураре), и ни один из них не относится к роду Dendrobates, который отличается яркой окраской и сложными узорами своих представителей.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_DECAREME</Tag>
@@ -8265,7 +8266,7 @@
 			<Plural>0:1</Plural>
 		</Spanish>
 		<Polish>Przedstawiciel M&#179;yn&#243;w Zbo&#191;owych</Polish>
-		<Russian>Ýìèññàð "ÏÇ"</Russian>
+		<Russian>Эмиссар "ОГ"</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_EXECUTIVE_2</Tag>
@@ -8589,7 +8590,7 @@
 			<Plural>0</Plural>
 		</Spanish>
 		<Polish>Przedstawiciel Cukierni Wonka</Polish>
-		<Russian>Øåô-ïîâàð ''ÊÂ''</Russian>
+		<Russian>Шеф-повар ''ЯВ''</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_EXILE</Tag>
@@ -8600,7 +8601,7 @@
 			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
-		<Russian>Èçãîé</Russian>
+		<Russian>Изгой</Russian>
 		<Italian>Esule</Italian>
 	</TEXT>
 	<TEXT>

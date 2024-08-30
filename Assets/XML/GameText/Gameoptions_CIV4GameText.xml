@@ -853,7 +853,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_NO_EVENTS_HELP</Tag>
-		<English>Random Events do not occur.[NEWLINE]ALERT: DO enable this option for multiplayer games to increase game stability.[NEWLINE]WARNING: Events are currently unsupported - may be buggy and/or unbalanced.</English>
+		<English>Random Events do not occur.[NEWLINE]ALERT: DO enable this option for multiplayer games to increase game stability.</English>
 		<French>Les événements aléatoires ne se produisent pas</French>
 		<German>Es finden keine Zufallsereignisse statt.</German>
 		<Italian>Non si verificano eventi casuali</Italian>
@@ -1656,10 +1656,6 @@
 		<Tag>TXT_KEY_GAMEOPTION_EXP_STRICT_VICINITY_HELP</Tag>
 		<English>Buildings and wonders that require a terrain type, feature, or improvement in city vicinity also require that tile to be culturally owned instead of possibly in neutral terrain. Works best when combined with Culture options of 1 Tile Start and/or Realistic Spread.</English>
 		<Italian>Gli edifici e le meraviglie che richiedono un tipo di terreno, una caratteristica o un miglioramento nelle vicinanze della città richiedono anche che quella casella sia di proprietà culturale invece che su un terreno neutrale (funziona meglio se combinato con le opzioni le città iniziano con una sola casella e/o diffusione culturale realistica)</Italian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_GAMEOPTION_UNSUPPORTED_MULTIMAPS</Tag>
-		<English>Unsupported - Multiple Maps</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_UNSUPPORTED_MULTIMAPS_HELP</Tag>
