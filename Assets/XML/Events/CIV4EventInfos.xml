@@ -161,7 +161,7 @@
 			<Type>EVENT_GREAT_STORY_1</Type>
 			<Description>TXT_KEY_EVENT_GREAT_STORY_1</Description>
 			<bPickCity>1</bPickCity>
-			<iCulture>233</iCulture>
+			<iCulture>433</iCulture>
 			<bGameSpeedScale>1</bGameSpeedScale>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<iAIValue>1</iAIValue>
@@ -170,7 +170,7 @@
 		<EventInfo>
 			<Type>EVENT_GREAT_STORY_2</Type>
 			<Description>TXT_KEY_EVENT_GREAT_STORY_2</Description>
-			<iTechPercent>5</iTechPercent>
+			<iTechPercent>7</iTechPercent>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<iAIValue>1</iAIValue>
 		</EventInfo>
@@ -285,7 +285,7 @@
 		<EventInfo>
 			<Type>EVENT_FOREST_MASSIVE_WILDFIRE_1</Type>
 			<Description>TXT_KEY_EVENT_FOREST_MASSIVE_WILDFIRE_1</Description>
-			<iGold>-80</iGold>
+			<iGold>-70</iGold>
 			<bGameSpeedScale>1</bGameSpeedScale>
 			<FeatureType>FEATURE_FOREST</FeatureType>
 			<iFeatureChange>-1</iFeatureChange>
@@ -306,7 +306,7 @@
 		<EventInfo>
 			<Type>EVENT_FOREST_MASSIVE_WILDFIRE_2</Type>
 			<Description>TXT_KEY_EVENT_FOREST_MASSIVE_WILDFIRE_2</Description>
-			<iGold>-40</iGold>
+			<iGold>-30</iGold>
 			<bGameSpeedScale>1</bGameSpeedScale>
 			<FeatureType>FEATURE_FOREST</FeatureType>
 			<iFeatureChange>-1</iFeatureChange>
@@ -324,10 +324,9 @@
 			<Type>EVENT_FOREST_MASSIVE_WILDFIRE_3</Type>
 			<Description>TXT_KEY_EVENT_FOREST_MASSIVE_WILDFIRE_3</Description>
 			<bPickCity>1</bPickCity>
-			<iHurryAnger>1</iHurryAnger>
+			<iHurryAnger>2</iHurryAnger>
 			<FeatureType>FEATURE_FOREST</FeatureType>
 			<iFeatureChange>-1</iFeatureChange>
-			<iImprovementChange>-1</iImprovementChange>
 			<AdditionalEvents>
 				<EventChance>
 					<Event>EVENT_WILDFIRE_CATCHES_CITY</Event>
