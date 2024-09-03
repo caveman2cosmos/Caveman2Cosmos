@@ -2,7 +2,7 @@
 <Civ4GameText xmlns="http://www.firaxis.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.firaxis.com ../Schema/Civ4Gametext.xsd">
 	<TEXT>
 		<Tag>TXT_KEY_EVENTOTHER_FUTBOL_WAR_1</Tag>
-		<English>The %s1_civ_adjective empire's response to the football violence has been inadequate and we have declared war on them!</English>
+		<English>The %s1_civ_adjective empire's response to the football violence has been inadequate, and we have declared war on them!</English>
 		<French>La réponse de l'empire des %s1:3_civ_adjective à la violence après le match de football a été insatisfaisante et nous leur avons déclaré la guerre!</French>
 		<German>Die Antwort des %s1_civ_adjective Reiches zur Fußballgewalttätigkeit ist unzulänglich gewesen und wir haben ihnen den Krieg erklärt!</German>
 		<Italian>La risposta dell'Impero %s1_civ_adjective alle violenze durante la partita di calcio è stata inadeguata e quindi dichiariamo guerra!</Italian>
@@ -49,6 +49,10 @@
 		<Russian>Академия в городе %s1_civ_adjective в городе %s2_city получила щедрое финансирование от богатых спонсоров.</Russian>
 		<Spanish>La Academia de la ciudad %s1:2_civ_adjective de %s2_city ha recibido generosas donaciones de parte de adinerados empresarios.</Spanish>
 	</TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENTTRIGGER_ADD_ONE_POPULATION_WORLD</Tag>
+        <English>A wandering group of people has demanded to join %s2_civ_adjective.</English>
+    </TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_ADD_ONE_POPULATION</Tag>
 		<English>A wandering group of people has demanded to join our city.</English>
@@ -508,6 +512,10 @@
 		<Polish>Ogie&#241; szaleje w miastach %s1_civ_adjective.</Polish>
 		<Russian>В городах народа %s1_civ_adjective свирепствуют пожары.</Russian>
 	</TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENTTRIGGER_WAR_TAXES</Tag>
+        <English>%s1_civ_adjective ruler has initiated war taxes. The situation must be getting desperate.</English>
+    </TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_CITY_RUINS</Tag>
 		<English>%s1_civ_adjective explorers have discovered valuable information buried in ruins near %s2_city.</English>
@@ -753,7 +761,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_DOCK_WORKERS_STRIKE_BADLY</Tag>
-		<English>The Dock workers in the %s1_civ_adjective empire has caused widespread rioting and looting!</English>
+		<English>The Docks workers in the %s1_civ_adjective empire has caused widespread rioting and looting!</English>
 		<French>Les grèves des Dockers de tout %s1_civ_adjective empire ont engendré des soulèvements et des pillages!</French>
 		<Italian>I lavoratori portuali dell'Impero %s1_civ_adjective hanno causato sommosse e saccheggi diffusi!</Italian>
 		<Polish>Pracownicy portowi z imperium %s1_civ_adjective spowodowali zamieszanie oraz grabierze!</Polish>
@@ -1237,6 +1245,26 @@
         <Polish>Naddatek upolowanych zwierz&#185;t nieopodal %s1_civ_adjective city of %s2_city doprowadzi&#179; do rozkwitu lokalnej populacji.</Polish>
         <Russian>Изобилие дичи, добытой охотниками народа %s1_civ_adjective, привело к небольшому росту населения в городе %s2_city.</Russian>
         <Spanish>El excedente logrado por los cazadores cerca de la ciudad %s1:2_civ_adjective de %s2_city ha impulsado un pequeño crecimiento de la población.</Spanish>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENTTRIGGER_GREAT_STORY</Tag>
+        <English>A %s1_civ_adjective storyteller from the city of %s2_city has told an amazing story captivating the tribe.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_PRIME_STUD</Tag>
+        <English>A %s1_civ_adjective have found prime steeds for their stables.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_CHILD_WISE_COUNCIL</Tag>
+        <English>A %s1_civ_adjective council has welcomed a wise elder his wisdom will lead them to greatness.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_CHILD_LABOUR_INCIDENT</Tag>
+        <English>A %s1_civ_adjective have terrible incident happen at one of their children work camps.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENTTRIGGER_COMMUNITY_BOND</Tag>
+        <English>A %s1_civ_adjective community discussion in the city of %s2_city has brought their people closer.</English>
     </TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_HARBORMASTER_DONE</Tag>
@@ -6820,6 +6848,42 @@
 		<Italian>[ICON_BULLET]Tutte le nazioni del mondo subiscono una perdita del %d1%% del proprio tesoro.</Italian>
 		<Spanish>[ICON_BULLET]Todas las naciones del mundo sufren una pérdida del %d1%% en su erario nacional.</Spanish>
 	</TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_WAR_TAXES_2</Tag>
+        <English>There will be no tax, but we will ask those who can and are willing to protect their country to give what they can.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_CHILD_LABOUR_INCIDENT_1</Tag>
+        <English>There is nothing we can do.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_WIZE_COUNCIL_1</Tag>
+        <English>We can't support him, angering our people is not worth it.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_WIZE_COUNCIL_2</Tag>
+        <English>His wisdom is needed. The people may be angry now, but they will understand in time.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_PRIME_STUD_2</Tag>
+        <English>This sounds good, send a merchant get me that stud.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_PRIME_STUD_1</Tag>
+        <English>We have no need, our own horses are good enough.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_CHILD_LABOUR_INCIDENT_2</Tag>
+        <English>Pay out the, the grieving families. Let them mourn in peace.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_CHILD_LABOUR_INCIDENT_3</Tag>
+        <English>Get a watcher to make sure the work is safe and productive. Might cost us but will help in the long run. Also organise a grieving ceremony.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_WAR_TAXES_1</Tag>
+        <English>We do not need extra gold, let us not put pressure on our people.</English>
+    </TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_GREAT_MEDIATOR_1</Tag>
 		<English>We do not want peace! Let the war continue.</English>
@@ -6828,6 +6892,10 @@
 		<Italian>Non vogliamo la pace! Che continui la guerra.</Italian>
 		<Spanish>¡No queremos la paz! Que siga la guerra.</Spanish>
 	</TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_WAR_TAXES_3</Tag>
+        <English>Squeeze every coin you can, we will not lose this war. I care not what the people think.</English>
+    </TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_GREAT_MEDIATOR_2</Tag>
 		<English>Peace would benefit both sides. Give our blessing to this mediator, and may his words prove sharper than their hatreds.</English>
@@ -8224,6 +8292,26 @@
 		<Italian>Un matrimonio %s5_religion_adjective tra uno dei nostri cittadini e una dell'Impero %s1_civ_adjective è stato onorato con una festa nazionale, con tanto di esotico regalo nuziale e donazioni alle nostre istituzioni religiose. La nostra popolazione è entusiasta del gesto.</Italian>
 		<Spanish>Un matrimonio %s5:1_religion_adjective entre una de nuestras familias y otra %s1:2_civ_adjective ha sido honrado con una fiesta nacional, incluyendo regalos de bodas increíbles y generosas donaciones a nuestras instituciones religiosas. Nuestro pueblo está emocionado con ese gesto.</Spanish>
 	</TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_BONUS_TAX_1</Tag>
+        <English>Great news.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_COMMUNITY_BOND_1</Tag>
+        <English>We are all one.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_GREAT_STORY_1</Tag>
+        <English>This story was truly amazing.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_GREAT_STORY_2</Tag>
+        <English>This story inspired one of our tribesmen to a new idea.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_GREAT_STORY_3</Tag>
+        <English>Let us remember this story and preserve it for generations to come.</English>
+    </TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_KNOWLEDGE_INHERITANCE_1</Tag>
 		<English>A thinker? Let's see what interesting ideas he has.</English>
@@ -8646,14 +8734,10 @@
 		<Italian>Applaudiamo le imprese del nostro onorato mastro fabbro.</Italian>
 		<Spanish>Loados sean los logros de nuestro reverenciado gran maestro herrero.</Spanish>
 	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_EVENT_MEDIATOR_WORLD_2</Tag>
-		<English>A great mediator has attempted to broker peace between the %s1_civ_adjective and %s3_adjective Empires!</English>
-		<French>Un important médiateur a amené les empires %s1_civ_adjective et %s3_adjective à faire la paix !</French>
-		<German>Ein Vermittler hat für Frieden zwischen dem %s1:2_civ_adjective und dem %s3:2_adjective Reich gesorgt!</German>
-		<Italian>Un grande mediatore ha negoziato la pace tra l'Impero %s1_civ_adjective e quello %s3_adjective!</Italian>
-		<Spanish>Un gran mediador ha negociado la paz entre los imperios %s1:1_civ_adjective y %s3:1_civ_adjective!</Spanish>
-	</TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_WAR_TAXES_2</Tag>
+        <English>The %s1_civ_adjective is in total war mode and are taxing their people to the bone.</English>
+    </TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_MEGA_ATTACK</Tag>
 		<English>An accident has led to an escape of animals at Pleistocene Park! Several people are dead and dozens are injured.</English>
@@ -12337,6 +12421,10 @@
 		<Italian>Una frode corporativa all'interno della nostra stessa [COLOR_HIGHLIGHT_TEXT]%s11_corporation[COLOR_REVERT] ha fatto crollare il prezzo delle azioni della compagnia, che a loro volta hanno trascinato con sé il mercato azionario, innescando una depressione economica globale.</Italian>
 		<Spanish>El fraude de nuestra [COLOR_HIGHLIGHT_TEXT]%s11_corporation[COLOR_REVERT] ha hecho bajar en picado la cotización de sus acciones, ha arrastrado tras de sí al resto del mercado y ha desencadenando una recesión económica mundial.</Spanish>
 	</TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_TRIGGER_WAR_TAXES_1</Tag>
+        <English>We are at war, the coffers need filling should we muster war taxes?</English>
+    </TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_TRIGGER_GREAT_MEDIATOR_1</Tag>
 		<English>A great mediator has emerged, offering to arbitrate the dispute between %s1_civ_adjective leadership and our nation. This could be a chance for peace.</English>
@@ -12413,6 +12501,30 @@
 		<Italian>Di recente è stato lanciato un nuovo tipo di ristorante con servizio rapido, che vende principalmente hamburger. Grazie alla pubblicità radiofonica la catena si sta espandendo in tutta la nazione.</Italian>
 		<Spanish>Recientemente se ha inaugurado un nuevo tipo de restaurante donde el servicio es rápido y se venden principalmente hamburguesas. Gracias a una exitosa campaña de publicidad en la radio, la cadena se está extendiendo por toda la nación.</Spanish>
 	</TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_PRIME_STUD1_1</Tag>
+        <English>We have found big and healthy studs, taking them into our herds will grant us better horses.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_WISE_COUNCIL1_1</Tag>
+        <English>A very wise elder has come to lead our council, should we support him. His ideas are sometimes controversial and might anger our people or the elders.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_CHILD_LABOUR_INCIDENT1_1</Tag>
+        <English>A tragic incident has happened in a labour camp near %s2_city. A few children were crushed and died working in unsafe conditions. We can't let this happen again.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_TRIGGER_BONUS_TAX_1</Tag>
+        <English>The tax office from %s2_city is reporting bigger tax income this season.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_TRIGGER_COMMUNITY_BOND_1</Tag>
+        <English>People from %s2_city have recently bonded and are now more united.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_TRIGGER_GREAT_STORY_1</Tag>
+        <English>Story teller near %s2_city has recently told a fascinating story captivating his people.</English>
+    </TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_TRIGGER_HAPPY_HUNTING_1</Tag>
 		<English>Moose herds near %s2_city have grown particularly large. Our hunters have harvested a cache of surplus food.</English>

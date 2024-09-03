@@ -2462,6 +2462,93 @@
 		-->
 
 		<EventTriggerInfo>
+			<Type>EVENTTRIGGER_PRIME_STUD</Type>
+			<TriggerTexts>
+				<TriggerText>
+					<Text>TXT_KEY_EVENT_PRIME_STUD1_1</Text>
+					<Era>NONE</Era>
+				</TriggerText>
+			</TriggerTexts>
+			<iPercentGamesActive>100</iPercentGamesActive>
+			<iWeight>8</iWeight>
+			<bProbabilityBuildingMultiply>1</bProbabilityBuildingMultiply>
+			<BuildingsRequired>
+				<Building>BUILDING_FARM_ANIMAL_HORSE</Building>
+			</BuildingsRequired>
+			<iNumBuildings>1</iNumBuildings>
+			<iNumPlotsRequired>1</iNumPlotsRequired>
+			<bOwnPlot>1</bOwnPlot>
+			<Events>
+				<Event>EVENT_PRIME_STUD_1</Event>
+				<Event>EVENT_PRIME_STUD_2</Event>
+			</Events>
+			<OrPreReqs>
+				<PrereqTech>TECH_EQUINE_DOMESTICATION</PrereqTech>
+			</OrPreReqs>
+		</EventTriggerInfo>
+
+		<EventTriggerInfo>
+			<Type>EVENTTRIGGER_WISE_COUNCIL</Type>
+			<WorldNewsTexts>
+				<Text>TXT_KEY_CHILD_WISE_COUNCIL</Text>
+			</WorldNewsTexts>
+			<TriggerTexts>
+				<TriggerText>
+					<Text>TXT_KEY_EVENT_WISE_COUNCIL1_1</Text>
+					<Era>NONE</Era>
+				</TriggerText>
+			</TriggerTexts>
+			<iPercentGamesActive>100</iPercentGamesActive>
+			<iWeight>5</iWeight>
+			<bProbabilityBuildingMultiply>1</bProbabilityBuildingMultiply>
+			<BuildingsRequired>
+				<Building>BUILDING_ELDER_COUNCIL</Building>
+			</BuildingsRequired>
+			<iNumBuildings>1</iNumBuildings>
+			<iNumPlotsRequired>1</iNumPlotsRequired>
+			<bOwnPlot>1</bOwnPlot>
+			<Events>
+				<Event>EVENT_WIZE_COUNCIL_1</Event>
+				<Event>EVENT_WIZE_COUNCIL_2</Event>
+			</Events>
+			<OrPreReqs>
+				<PrereqTech>TECH_CULTURAL_IDENTITY</PrereqTech>
+			</OrPreReqs>
+			<bPickCity>1</bPickCity>
+		</EventTriggerInfo>
+
+		<EventTriggerInfo>
+			<Type>EVENTTRIGGER_CHILD_LABOUR_INCIDENT</Type>
+			<WorldNewsTexts>
+				<Text>TXT_KEY_CHILD_LABOUR_INCIDENT</Text>
+			</WorldNewsTexts>
+			<TriggerTexts>
+				<TriggerText>
+					<Text>TXT_KEY_EVENT_CHILD_LABOUR_INCIDENT1_1</Text>
+					<Era>NONE</Era>
+				</TriggerText>
+			</TriggerTexts>
+			<iPercentGamesActive>100</iPercentGamesActive>
+			<iWeight>5</iWeight>
+			<bProbabilityBuildingMultiply>1</bProbabilityBuildingMultiply>
+			<BuildingsRequired>
+				<Building>BUILDING_CHILD_LABOR_CREW</Building>
+			</BuildingsRequired>
+			<iNumBuildings>1</iNumBuildings>
+			<iNumPlotsRequired>1</iNumPlotsRequired>
+			<bOwnPlot>1</bOwnPlot>
+			<bPickCity>1</bPickCity>
+			<Events>
+				<Event>EVENT_CHILD_LABOUR_INCIDENT_1</Event>
+				<Event>EVENT_CHILD_LABOUR_INCIDENT_2</Event>
+				<Event>EVENT_CHILD_LABOUR_INCIDENT_3</Event>
+			</Events>
+			<OrPreReqs>
+				<PrereqTech>TECH_COOPERATION</PrereqTech>
+			</OrPreReqs>
+		</EventTriggerInfo>
+
+		<EventTriggerInfo>
 			<Type>EVENTTRIGGER_MAN_NAMED_JED</Type>
 			<WorldNewsTexts>
 				<Text>TXT_KEY_EVENT_TRIGGER_MAN_NAMED_JED</Text>
@@ -4072,6 +4159,9 @@
 			<BonusesRequired>
 				<BonusType>BONUS_GEMSTONE</BonusType>
 			</BonusesRequired>
+			<OrPreReqs>
+				<PrereqTech>TECH_INDUSTRIAL_LIFESTYLE</PrereqTech>
+			</OrPreReqs>
 			<Events>
 				<Event>EVENT_GIRLS_BEST_FRIEND_1</Event>
 			</Events>
@@ -7180,6 +7270,35 @@
         Recurring regular events
         -->
 
+<!--		<EventTriggerInfo>-->
+<!--			<Type>EVENTTRIGGER_SALTPE</Type>-->
+<!--			<WorldNewsTexts>-->
+<!--				<Text>TXT_KEY_EVENTTRIGGER_SALTPETER</Text>-->
+<!--			</WorldNewsTexts>-->
+<!--			<TriggerTexts>-->
+<!--				<TriggerText>-->
+<!--					<Text>TXT_KEY_EVENT_TRIGGER_SALTPETER_1</Text>-->
+<!--					<Era>NONE</Era>-->
+<!--				</TriggerText>-->
+<!--			</TriggerTexts>-->
+<!--			<EventArt>Art/Event_Images/SaltpeterEvent.dds</EventArt>-->
+<!--			<iPercentGamesActive>100</iPercentGamesActive>-->
+<!--			<iWeight>5</iWeight>-->
+<!--			<iNumPlotsRequired>4</iNumPlotsRequired>-->
+<!--			<bOwnPlot>1</bOwnPlot>-->
+<!--			<iPlotType>1</iPlotType>-->
+<!--			<FeaturesRequired>-->
+<!--				<FeatureType>FEATURE_FOREST</FeatureType>-->
+<!--			</FeaturesRequired>-->
+<!--			<Events>-->
+<!--				<Event>EVENT_SALTPETER_1</Event>-->
+<!--			</Events>-->
+<!--			<OrPreReqs>-->
+<!--				<PrereqTech>TECH_GUNPOWDER</PrereqTech>-->
+<!--			</OrPreReqs>-->
+<!--			<bGlobal>1</bGlobal>-->
+<!--		</EventTriggerInfo>-->
+
 		<EventTriggerInfo>
 			<Type>EVENTTRIGGER_FOREST_FIRE</Type>
 			<WorldNewsTexts>
@@ -7354,6 +7473,104 @@
 			</OrPreReqs>
 			<ObsoleteTechs>
 				<ObsoleteTech>TECH_ARTILLERY</ObsoleteTech>
+			</ObsoleteTechs>
+			<bRecurring>1</bRecurring>
+		</EventTriggerInfo>
+
+		<EventTriggerInfo>
+			<Type>EVENTTRIGGER_GREAT_STORY</Type>
+			<WorldNewsTexts>
+				<Text>TXT_KEY_EVENTTRIGGER_GREAT_STORY</Text>
+			</WorldNewsTexts>
+			<TriggerTexts>
+				<TriggerText>
+					<Text>TXT_KEY_EVENT_TRIGGER_GREAT_STORY_1</Text>
+					<Era>NONE</Era>
+				</TriggerText>
+			</TriggerTexts>
+			<iPercentGamesActive>100</iPercentGamesActive>
+			<iWeight>15</iWeight>
+			<bProbabilityBuildingMultiply>1</bProbabilityBuildingMultiply>
+			<BuildingsRequired>
+				<Building>BUILDING_STORYTELLER</Building>
+			</BuildingsRequired>
+			<iNumBuildings>1</iNumBuildings>
+			<iNumPlotsRequired>1</iNumPlotsRequired>
+			<bOwnPlot>1</bOwnPlot>
+			<Events>
+				<Event>EVENT_GREAT_STORY_1</Event>
+				<Event>EVENT_GREAT_STORY_2</Event>
+				<Event>EVENT_GREAT_STORY_3</Event>
+			</Events>
+			<OrPreReqs>
+				<PrereqTech>TECH_ORAL_TRADITION</PrereqTech>
+			</OrPreReqs>
+			<ObsoleteTechs>
+				<ObsoleteTech>TECH_LITERATURE</ObsoleteTech>
+			</ObsoleteTechs>
+			<bRecurring>1</bRecurring>
+		</EventTriggerInfo>
+
+		<EventTriggerInfo>
+			<Type>EVENTTRIGGER_COMMUNITY_BOND</Type>
+			<WorldNewsTexts>
+				<Text>TXT_KEY_EVENTTRIGGER_COMMUNITY_BOND</Text>
+			</WorldNewsTexts>
+			<TriggerTexts>
+				<TriggerText>
+					<Text>TXT_KEY_EVENT_TRIGGER_COMMUNITY_BOND_1</Text>
+					<Era>NONE</Era>
+				</TriggerText>
+			</TriggerTexts>
+			<iPercentGamesActive>100</iPercentGamesActive>
+			<iWeight>20</iWeight>
+			<bProbabilityBuildingMultiply>1</bProbabilityBuildingMultiply>
+			<BuildingsRequired>
+				<Building>BUILDING_COMMUNITY_DISCUSSIONS</Building>
+			</BuildingsRequired>
+			<iNumBuildings>1</iNumBuildings>
+			<iNumPlotsRequired>1</iNumPlotsRequired>
+			<bOwnPlot>1</bOwnPlot>
+			<Events>
+				<Event>EVENT_COMMUNITY_BOND</Event>
+			</Events>
+			<OrPreReqs>
+				<PrereqTech>TECH_ORAL_TRADITION</PrereqTech>
+			</OrPreReqs>
+			<ObsoleteTechs>
+				<ObsoleteTech>TECH_RENAISSANCE_LIFESTYLE</ObsoleteTech>
+			</ObsoleteTechs>
+			<bRecurring>1</bRecurring>
+		</EventTriggerInfo>
+
+		<EventTriggerInfo>
+			<Type>EVENTTRIGGER_BONUS_TAX</Type>
+			<WorldNewsTexts>
+				<Text>TXT_KEY_EVENTTRIGGER_BONUS_TAX</Text>
+			</WorldNewsTexts>
+			<TriggerTexts>
+				<TriggerText>
+					<Text>TXT_KEY_EVENT_TRIGGER_BONUS_TAX_1</Text>
+					<Era>NONE</Era>
+				</TriggerText>
+			</TriggerTexts>
+			<iPercentGamesActive>100</iPercentGamesActive>
+			<iWeight>5</iWeight>
+			<bProbabilityBuildingMultiply>1</bProbabilityBuildingMultiply>
+			<BuildingsRequired>
+				<Building>BUILDING_TAXPERSON</Building>
+			</BuildingsRequired>
+			<iNumBuildings>1</iNumBuildings>
+			<iNumPlotsRequired>1</iNumPlotsRequired>
+			<bOwnPlot>1</bOwnPlot>
+			<Events>
+				<Event>EVENT_BONUS_TAX</Event>
+			</Events>
+			<OrPreReqs>
+				<PrereqTech>TECH_ARITHMETIC</PrereqTech>
+			</OrPreReqs>
+			<ObsoleteTechs>
+				<ObsoleteTech>TECH_CITY_PLANNING</ObsoleteTech>
 			</ObsoleteTechs>
 			<bRecurring>1</bRecurring>
 		</EventTriggerInfo>
@@ -7549,7 +7766,7 @@
 			</TriggerTexts>
 			<EventArt>Art/Event_Images/WashedOutEvent.dds</EventArt>
 			<iPercentGamesActive>100</iPercentGamesActive>
-			<iWeight>100</iWeight>
+			<iWeight>18</iWeight>
 			<iNumPlotsRequired>1</iNumPlotsRequired>
 			<bOwnPlot>1</bOwnPlot>
 			<RoutesRequired>
@@ -7575,7 +7792,7 @@
 			</TriggerTexts>
 			<EventArt>Art/Event_Images/WashedOutEvent.dds</EventArt>
 			<iPercentGamesActive>100</iPercentGamesActive>
-			<iWeight>100</iWeight>
+			<iWeight>18</iWeight>
 			<iNumPlotsRequired>1</iNumPlotsRequired>
 			<bOwnPlot>1</bOwnPlot>
 			<RoutesRequired>
@@ -7601,7 +7818,7 @@
 			</TriggerTexts>
 			<EventArt>Art/Event_Images/WashedOutEvent.dds</EventArt>
 			<iPercentGamesActive>100</iPercentGamesActive>
-			<iWeight>100</iWeight>
+			<iWeight>18</iWeight>
 			<iNumPlotsRequired>1</iNumPlotsRequired>
 			<bOwnPlot>1</bOwnPlot>
 			<RoutesRequired>
@@ -7627,7 +7844,7 @@
 			</TriggerTexts>
 			<EventArt>Art/Event_Images/WashedOutEvent.dds</EventArt>
 			<iPercentGamesActive>100</iPercentGamesActive>
-			<iWeight>100</iWeight>
+			<iWeight>18</iWeight>
 			<iNumPlotsRequired>1</iNumPlotsRequired>
 			<bOwnPlot>1</bOwnPlot>
 			<RoutesRequired>
@@ -7653,7 +7870,7 @@
 			</TriggerTexts>
 			<EventArt>Art/Event_Images/WashedOutEvent.dds</EventArt>
 			<iPercentGamesActive>100</iPercentGamesActive>
-			<iWeight>100</iWeight>
+			<iWeight>18</iWeight>
 			<iNumPlotsRequired>1</iNumPlotsRequired>
 			<bOwnPlot>1</bOwnPlot>
 			<RoutesRequired>
@@ -7679,7 +7896,7 @@
 			</TriggerTexts>
 			<EventArt>Art/Event_Images/WashedOutEvent.dds</EventArt>
 			<iPercentGamesActive>100</iPercentGamesActive>
-			<iWeight>100</iWeight>
+			<iWeight>18</iWeight>
 			<iNumPlotsRequired>1</iNumPlotsRequired>
 			<bOwnPlot>1</bOwnPlot>
 			<RoutesRequired>
@@ -7705,7 +7922,7 @@
 			</TriggerTexts>
 			<EventArt>Art/Event_Images/WashedOutEvent.dds</EventArt>
 			<iPercentGamesActive>100</iPercentGamesActive>
-			<iWeight>100</iWeight>
+			<iWeight>18</iWeight>
 			<iNumPlotsRequired>1</iNumPlotsRequired>
 			<bOwnPlot>1</bOwnPlot>
 			<RoutesRequired>
@@ -10374,7 +10591,7 @@
 			</TriggerTexts>
 			<EventArt>Art/Event_Images/SetbackEvent.dds</EventArt>
 			<iPercentGamesActive>100</iPercentGamesActive>
-			<iWeight>10</iWeight>
+			<iWeight>8</iWeight>
 			<bOwnPlot>1</bOwnPlot>
 			<Events>
 				<Event>EVENT_BREAKTHROUGH_1</Event>
@@ -10396,7 +10613,7 @@
 				</TriggerText>
 			</TriggerTexts>
 			<iPercentGamesActive>100</iPercentGamesActive>
-			<iWeight>10</iWeight>
+			<iWeight>8</iWeight>
 			<bOwnPlot>1</bOwnPlot>
 			<Events>
 				<Event>EVENT_SETBACK_1</Event>
@@ -10533,8 +10750,8 @@
 			</TriggerTexts>
 			<EventArt>Art/Event_Images/InfluenzaEvent.dds</EventArt>
 			<iPercentGamesActive>100</iPercentGamesActive>
-			<iWeight>50</iWeight>
-			<iMinPopulation>5</iMinPopulation>
+			<iWeight>40</iWeight>
+			<iMinPopulation>4</iMinPopulation>
 			<BuildingsRequired>
 				<Building>BUILDING_DISEASE_COMMON_COLD</Building>
 			</BuildingsRequired>
@@ -12352,6 +12569,32 @@
 		</EventTriggerInfo>
 
 		<EventTriggerInfo>
+			<Type>EVENTTRIGGER_WAR_TAXES</Type>
+			<WorldNewsTexts>
+				<Text>TXT_KEY_EVENTTRIGGER_WAR_TAXES</Text>
+			</WorldNewsTexts>
+			<TriggerTexts>
+				<TriggerText>
+					<Text>TXT_KEY_EVENT_TRIGGER_WAR_TAXES_1</Text>
+					<Era>NONE</Era>
+				</TriggerText>
+			</TriggerTexts>
+			<EventArt>Art/Event_Images/GreatMediator.dds</EventArt>
+			<iPercentGamesActive>100</iPercentGamesActive>
+			<iWeight>60</iWeight>
+			<Events>
+				<Event>EVENT_WAR_TAXES_1</Event>
+				<Event>EVENT_WAR_TAXES_2</Event>
+				<Event>EVENT_WAR_TAXES_3</Event>
+			</Events>
+			<bPickPlayer>1</bPickPlayer>
+			<bOtherPlayerWar>1</bOtherPlayerWar>
+			<bShowPlot>0</bShowPlot>
+			<bRecurring>1</bRecurring>
+			<PythonCanDo>canTriggerWarTax</PythonCanDo>
+		</EventTriggerInfo>
+
+		<EventTriggerInfo>
 			<Type>EVENTTRIGGER_GREAT_MEDIATOR</Type>
 			<TriggerTexts>
 				<TriggerText>
@@ -12762,35 +13005,6 @@
 		</EventTriggerInfo>
 
 		<EventTriggerInfo>
-			<Type>EVENTTRIGGER_SANDSTORM_PATH</Type>
-			<WorldNewsTexts>
-				<Text>TXT_KEY_EVENTTRIGGER_SANDSTORM</Text>
-			</WorldNewsTexts>
-			<TriggerTexts>
-				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_SANDSTORM_1</Text>
-					<Era>NONE</Era>
-				</TriggerText>
-			</TriggerTexts>
-			<iPercentGamesActive>100</iPercentGamesActive>
-			<iWeight>60</iWeight>
-			<iNumPlotsRequired>1</iNumPlotsRequired>
-			<bOwnPlot>1</bOwnPlot>
-			<TerrainsRequired>
-				<TerrainType>TERRAIN_DESERT</TerrainType>
-				<TerrainType>TERRAIN_DUNES</TerrainType>
-			</TerrainsRequired>
-			<RoutesRequired>
-				<RouteType>ROUTE_PATH</RouteType>
-			</RoutesRequired>
-			<Events>
-				<Event>EVENT_SANDSTORM_1</Event>
-				<Event>EVENT_SANDSTORM_2</Event>
-			</Events>
-			<bRecurring>1</bRecurring>
-		</EventTriggerInfo>
-
-		<EventTriggerInfo>
 			<Type>EVENTTRIGGER_SANDSTORM_TRAIL</Type>
 			<WorldNewsTexts>
 				<Text>TXT_KEY_EVENTTRIGGER_SANDSTORM</Text>
@@ -12802,7 +13016,7 @@
 				</TriggerText>
 			</TriggerTexts>
 			<iPercentGamesActive>100</iPercentGamesActive>
-			<iWeight>60</iWeight>
+			<iWeight>35</iWeight>
 			<iNumPlotsRequired>1</iNumPlotsRequired>
 			<bOwnPlot>1</bOwnPlot>
 			<TerrainsRequired>
@@ -12811,6 +13025,35 @@
 			</TerrainsRequired>
 			<RoutesRequired>
 				<RouteType>ROUTE_TRAIL</RouteType>
+			</RoutesRequired>
+			<Events>
+				<Event>EVENT_SANDSTORM_1</Event>
+				<Event>EVENT_SANDSTORM_2</Event>
+			</Events>
+			<bRecurring>1</bRecurring>
+		</EventTriggerInfo>
+
+		<EventTriggerInfo>
+			<Type>EVENTTRIGGER_SANDSTORM_PATH</Type>
+			<WorldNewsTexts>
+				<Text>TXT_KEY_EVENTTRIGGER_SANDSTORM</Text>
+			</WorldNewsTexts>
+			<TriggerTexts>
+				<TriggerText>
+					<Text>TXT_KEY_EVENT_TRIGGER_SANDSTORM_1</Text>
+					<Era>NONE</Era>
+				</TriggerText>
+			</TriggerTexts>
+			<iPercentGamesActive>100</iPercentGamesActive>
+			<iWeight>35</iWeight>
+			<iNumPlotsRequired>1</iNumPlotsRequired>
+			<bOwnPlot>1</bOwnPlot>
+			<TerrainsRequired>
+				<TerrainType>TERRAIN_DESERT</TerrainType>
+				<TerrainType>TERRAIN_DUNES</TerrainType>
+			</TerrainsRequired>
+			<RoutesRequired>
+				<RouteType>ROUTE_PATH</RouteType>
 			</RoutesRequired>
 			<Events>
 				<Event>EVENT_SANDSTORM_1</Event>
@@ -12831,7 +13074,7 @@
 				</TriggerText>
 			</TriggerTexts>
 			<iPercentGamesActive>100</iPercentGamesActive>
-			<iWeight>60</iWeight>
+			<iWeight>35</iWeight>
 			<iNumPlotsRequired>1</iNumPlotsRequired>
 			<bOwnPlot>1</bOwnPlot>
 			<TerrainsRequired>
@@ -12860,7 +13103,7 @@
 				</TriggerText>
 			</TriggerTexts>
 			<iPercentGamesActive>100</iPercentGamesActive>
-			<iWeight>60</iWeight>
+			<iWeight>35</iWeight>
 			<iNumPlotsRequired>1</iNumPlotsRequired>
 			<bOwnPlot>1</bOwnPlot>
 			<TerrainsRequired>
@@ -12889,7 +13132,7 @@
 				</TriggerText>
 			</TriggerTexts>
 			<iPercentGamesActive>100</iPercentGamesActive>
-			<iWeight>60</iWeight>
+			<iWeight>35</iWeight>
 			<iNumPlotsRequired>1</iNumPlotsRequired>
 			<bOwnPlot>1</bOwnPlot>
 			<TerrainsRequired>
@@ -12918,7 +13161,7 @@
 				</TriggerText>
 			</TriggerTexts>
 			<iPercentGamesActive>100</iPercentGamesActive>
-			<iWeight>60</iWeight>
+			<iWeight>35</iWeight>
 			<iNumPlotsRequired>1</iNumPlotsRequired>
 			<bOwnPlot>1</bOwnPlot>
 			<TerrainsRequired>
@@ -12947,7 +13190,7 @@
 				</TriggerText>
 			</TriggerTexts>
 			<iPercentGamesActive>100</iPercentGamesActive>
-			<iWeight>60</iWeight>
+			<iWeight>35</iWeight>
 			<iNumPlotsRequired>1</iNumPlotsRequired>
 			<bOwnPlot>1</bOwnPlot>
 			<TerrainsRequired>
@@ -12976,7 +13219,7 @@
 				</TriggerText>
 			</TriggerTexts>
 			<iPercentGamesActive>100</iPercentGamesActive>
-			<iWeight>60</iWeight>
+			<iWeight>35</iWeight>
 			<iNumPlotsRequired>1</iNumPlotsRequired>
 			<bOwnPlot>1</bOwnPlot>
 			<TerrainsRequired>
@@ -13005,7 +13248,7 @@
 				</TriggerText>
 			</TriggerTexts>
 			<iPercentGamesActive>100</iPercentGamesActive>
-			<iWeight>60</iWeight>
+			<iWeight>35</iWeight>
 			<iNumPlotsRequired>1</iNumPlotsRequired>
 			<bOwnPlot>1</bOwnPlot>
 			<TerrainsRequired>
@@ -15336,6 +15579,9 @@
 		<EventTriggerInfo>
 			<Type>EVENTTRIGGER_ADD_ONE_POPULATION</Type>
 			<Description>TXT_KEY_EVENTTRIGGER_ADD_ONE_POPULATION</Description>
+			<WorldNewsTexts>
+				<Text>TXT_KEY_EVENTTRIGGER_ADD_ONE_POPULATION_WORLD</Text>
+			</WorldNewsTexts>
 			<TriggerTexts>
 				<TriggerText>
 					<Text>TXT_KEY_EVENTTRIGGER_ADD_ONE_POPULATION</Text>
@@ -15343,7 +15589,7 @@
 				</TriggerText>
 			</TriggerTexts>
 			<iPercentGamesActive>100</iPercentGamesActive>
-			<iWeight>2</iWeight>
+			<iWeight>4</iWeight>
 			<bRecurring>1</bRecurring>
 			<bPickCity>1</bPickCity>
 			<Events>
@@ -15553,11 +15799,14 @@
 			</TriggerTexts>
 			<EventArt>Art/Event_Images/clayevent.dds</EventArt>
 			<iPercentGamesActive>100</iPercentGamesActive>
-			<iWeight>5</iWeight>
+			<iWeight>1</iWeight>
 			<bOwnPlot>1</bOwnPlot>
 			<FeaturesRequired>
 				<FeatureType>FEATURE_FLOOD_PLAINS</FeatureType>
 			</FeaturesRequired>
+			<BonusesRequired>
+				<BonusType>NONE</BonusType>
+			</BonusesRequired>
 			<Events>
 				<Event>EVENT_CLAY_1</Event>
 			</Events>

@@ -8166,7 +8166,7 @@
 				<SubCombatType>UNITCOMBAT_WEAPON_METHOD_HAND_TO_HAND_ONLY</SubCombatType>
 				<SubCombatType>UNITCOMBAT_WEAPON_STYLE_H2H_TWO_HANDED</SubCombatType>
 				<SubCombatType>UNITCOMBAT_WEAPON_STYLE_SIDEARM_SINGLE_HAND_ONLY</SubCombatType>
-				<SubCombatType>UNITCOMBAT_WEAPON_H2H_LONG_BLADE</SubCombatType>
+				<SubCombatType>UNITCOMBAT_WEAPON_H2H_LONG_POLEARM</SubCombatType>
 				<SubCombatType>UNITCOMBAT_WEAPON_SIDEARM_SHORT_BLADE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_ARMOR_HEAVY</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
@@ -43411,7 +43411,10 @@
 			<Description>TXT_KEY_UNIT_UNMANNED_TRIKE</Description>
 			<Civilopedia>TXT_KEY_UNIT_UNMANNED_TRIKE_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_GROWTH</Advisor>
-			<bOnlyDefensive>1</bOnlyDefensive>
+			<bBarbCoExist>1</bBarbCoExist>
+			<bNoBadGoodies>1</bNoBadGoodies>
+			<bNoDefensiveBonus>1</bNoDefensiveBonus>
+			<bPassage>1</bPassage>
 			<bMilitarySupport>1</bMilitarySupport>
 			<bMilitaryProduction>1</bMilitaryProduction>
 			<bIgnoreTerrainCost>1</bIgnoreTerrainCost>
@@ -43425,6 +43428,7 @@
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
+			<SeeInvisible>INVISIBLE_CAMOUFLAGE</SeeInvisible>
 			<PrereqTech>TECH_MILITARY_ROBOTICS</PrereqTech>
 			<BonusType>BONUS_TIRES</BonusType>
 			<PrereqBonuses>
