@@ -148,7 +148,7 @@
 		</EventInfo>
 
 		<EventInfo>
-			<Type>EVENT_BONUS_TAX_CLASIC</Type>
+			<Type>EVENT_BONUS_TAX_CLASSIC</Type>
 			<Description>TXT_KEY_EVENT_BONUS_TAX_1</Description>
 			<bPickCity>1</bPickCity>
 			<iGold>120</iGold>

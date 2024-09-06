@@ -7576,7 +7576,7 @@
 		</EventTriggerInfo>
 
         <EventTriggerInfo>
-            <Type>EVENTTRIGGER_BONUS_TAX_CLASIC</Type>
+            <Type>EVENTTRIGGER_BONUS_TAX_CLASSIC</Type>
             <WorldNewsTexts>
                 <Text>TXT_KEY_EVENTTRIGGER_BONUS_TAX</Text>
             </WorldNewsTexts>
@@ -7596,13 +7596,13 @@
             <iNumPlotsRequired>1</iNumPlotsRequired>
             <bOwnPlot>1</bOwnPlot>
             <Events>
-                <Event>EVENT_BONUS_TAX_CLASIC</Event>
+                <Event>EVENT_BONUS_TAX_CLASSIC</Event>
             </Events>
             <OrPreReqs>
-                <PrereqTech>TECH_CITY_PLANING</PrereqTech>
+                <PrereqTech>TECH_CITY_PLANNING</PrereqTech>
             </OrPreReqs>
             <ObsoleteTechs>
-                <ObsoleteTech>TECH_CIVIC_ENGINEERING</ObsoleteTech>
+                <ObsoleteTech>TECH_CIVIL_ENGINEERING</ObsoleteTech>
             </ObsoleteTechs>
             <bRecurring>1</bRecurring>
         </EventTriggerInfo>
@@ -7631,7 +7631,7 @@
 				<Event>EVENT_BONUS_TAX_MODERN</Event>
 			</Events>
 			<OrPreReqs>
-				<PrereqTech>TECH_CIVIC_ENGINEERING</PrereqTech>
+				<PrereqTech>TECH_CIVIL_ENGINEERING</PrereqTech>
 			</OrPreReqs>
 			<bRecurring>1</bRecurring>
 		</EventTriggerInfo>
