@@ -12514,6 +12514,10 @@
         <English>A tragic incident has happened in a labour camp near %s2_city. A few children were crushed and died working in unsafe conditions. We can't let this happen again.</English>
     </TEXT>
     <TEXT>
+        <Tag>TXT_KEY_EVENTTRIGGER_BONUS_TAX</Tag>
+        <English>The tax office from %s2_city is reporting bigger tax income this season.</English>
+    </TEXT>
+    <TEXT>
         <Tag>TXT_KEY_EVENT_TRIGGER_BONUS_TAX_1</Tag>
         <English>The tax office from %s2_city is reporting bigger tax income this season.</English>
     </TEXT>

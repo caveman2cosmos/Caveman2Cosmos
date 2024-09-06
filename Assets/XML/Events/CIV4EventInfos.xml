@@ -41,7 +41,7 @@
 
 		<EventInfo>
 			<Type>EVENT_WIZE_COUNCIL_2</Type>
-			<iRevoltTurns>1</iRevoltTurns>
+			<iRevoltTurns>2</iRevoltTurns>
 			<bPickCity>1</bPickCity>
 			<Description>TXT_KEY_EVENT_WIZE_COUNCIL_2</Description>
 			<iHappyTurns>-50</iHappyTurns>
@@ -138,10 +138,30 @@
 		</EventInfo>
 
 		<EventInfo>
-			<Type>EVENT_BONUS_TAX</Type>
+			<Type>EVENT_BONUS_TAX_PREHISTORIC</Type>
 			<Description>TXT_KEY_EVENT_BONUS_TAX_1</Description>
 			<bPickCity>1</bPickCity>
-			<iGold>80</iGold>
+			<iGold>40</iGold>
+			<bGameSpeedScale>1</bGameSpeedScale>
+			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
+			<iAIValue>1</iAIValue>
+		</EventInfo>
+
+		<EventInfo>
+			<Type>EVENT_BONUS_TAX_CLASIC</Type>
+			<Description>TXT_KEY_EVENT_BONUS_TAX_1</Description>
+			<bPickCity>1</bPickCity>
+			<iGold>120</iGold>
+			<bGameSpeedScale>1</bGameSpeedScale>
+			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
+			<iAIValue>1</iAIValue>
+		</EventInfo>
+
+		<EventInfo>
+			<Type>EVENT_BONUS_TAX_MODERN</Type>
+			<Description>TXT_KEY_EVENT_BONUS_TAX_1</Description>
+			<bPickCity>1</bPickCity>
+			<iGold>300</iGold>
 			<bGameSpeedScale>1</bGameSpeedScale>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<iAIValue>1</iAIValue>
@@ -231,7 +251,7 @@
 		<EventInfo>
 			<Type>EVENT_FOREST_FIRE_1</Type>
 			<Description>TXT_KEY_EVENT_FOREST_FIRE_1</Description>
-			<iGold>-100</iGold>
+			<iGold>-50</iGold>
 			<bGameSpeedScale>1</bGameSpeedScale>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<iAIValue>2</iAIValue>
@@ -240,11 +260,10 @@
 		<EventInfo>
 			<Type>EVENT_FOREST_FIRE_2</Type>
 			<Description>TXT_KEY_EVENT_FOREST_FIRE_2</Description>
-			<iGold>-25</iGold>
+			<iGold>-15</iGold>
 			<bGameSpeedScale>1</bGameSpeedScale>
 			<FeatureType>FEATURE_FOREST</FeatureType>
 			<iFeatureChange>-1</iFeatureChange>
-			<iUnitImmobileTurns>1</iUnitImmobileTurns>
 			<AdditionalEvents>
 				<EventChance>
 					<Event>EVENT_FOREST_FIRE_END</Event>
@@ -264,7 +283,6 @@
 			<iFeatureChange>-1</iFeatureChange>
 			<iImprovementChange>-1</iImprovementChange>
 			<iRouteChange>-1</iRouteChange>
-			<iUnitImmobileTurns>1</iUnitImmobileTurns>
 			<AdditionalEvents>
 				<EventChance>
 					<Event>EVENT_FOREST_FIRE_END</Event>
@@ -285,7 +303,7 @@
 		<EventInfo>
 			<Type>EVENT_FOREST_MASSIVE_WILDFIRE_1</Type>
 			<Description>TXT_KEY_EVENT_FOREST_MASSIVE_WILDFIRE_1</Description>
-			<iGold>-70</iGold>
+			<iGold>-60</iGold>
 			<bGameSpeedScale>1</bGameSpeedScale>
 			<FeatureType>FEATURE_FOREST</FeatureType>
 			<iFeatureChange>-1</iFeatureChange>
@@ -306,7 +324,7 @@
 		<EventInfo>
 			<Type>EVENT_FOREST_MASSIVE_WILDFIRE_2</Type>
 			<Description>TXT_KEY_EVENT_FOREST_MASSIVE_WILDFIRE_2</Description>
-			<iGold>-30</iGold>
+			<iGold>-25</iGold>
 			<bGameSpeedScale>1</bGameSpeedScale>
 			<FeatureType>FEATURE_FOREST</FeatureType>
 			<iFeatureChange>-1</iFeatureChange>
@@ -324,7 +342,7 @@
 			<Type>EVENT_FOREST_MASSIVE_WILDFIRE_3</Type>
 			<Description>TXT_KEY_EVENT_FOREST_MASSIVE_WILDFIRE_3</Description>
 			<bPickCity>1</bPickCity>
-			<iHurryAnger>2</iHurryAnger>
+			<iHurryAnger>3</iHurryAnger>
 			<FeatureType>FEATURE_FOREST</FeatureType>
 			<iFeatureChange>-1</iFeatureChange>
 			<AdditionalEvents>
@@ -9362,7 +9380,8 @@
 		<EventInfo>
 			<Type>EVENT_FORTIFIED_CAVE_IN_DISREPAIR_2</Type>
 			<Description>TXT_KEY_EVENT_FORT_IN_DISREPAIR_2</Description>
-			<iGold>-25</iGold>
+			<iGold>-15</iGold>
+			<bGameSpeedScale></bGameSpeedScale>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<iAIValue>2</iAIValue>
 		</EventInfo>
@@ -9379,7 +9398,8 @@
 		<EventInfo>
 			<Type>EVENT_ABATIS_IN_DISREPAIR_2</Type>
 			<Description>TXT_KEY_EVENT_FORT_IN_DISREPAIR_2</Description>
-			<iGold>-50</iGold>
+			<iGold>-5</iGold>
+			<bGameSpeedScale>1</bGameSpeedScale>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<iAIValue>2</iAIValue>
 		</EventInfo>
@@ -9396,7 +9416,8 @@
 		<EventInfo>
 			<Type>EVENT_PALISADE_IN_DISREPAIR_2</Type>
 			<Description>TXT_KEY_EVENT_FORT_IN_DISREPAIR_2</Description>
-			<iGold>-100</iGold>
+			<iGold>-25</iGold>
+			<bGameSpeedScale>1</bGameSpeedScale>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<iAIValue>2</iAIValue>
 		</EventInfo>
@@ -9413,7 +9434,8 @@
 		<EventInfo>
 			<Type>EVENT_BUNKER_IN_DISREPAIR_2</Type>
 			<Description>TXT_KEY_EVENT_FORT_IN_DISREPAIR_2</Description>
-			<iGold>-500</iGold>
+			<iGold>-100</iGold>
+			<bGameSpeedScale>1</bGameSpeedScale>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<iAIValue>2</iAIValue>
 		</EventInfo>
@@ -9430,7 +9452,7 @@
 		<EventInfo>
 			<Type>EVENT_FUTURE_BUNKER_IN_DISREPAIR_2</Type>
 			<Description>TXT_KEY_EVENT_FORT_IN_DISREPAIR_2</Description>
-			<iGold>-2000</iGold>
+			<iGold>-500</iGold>
 			<bGameSpeedScale>1</bGameSpeedScale>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<iAIValue>2</iAIValue>

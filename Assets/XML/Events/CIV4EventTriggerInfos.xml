@@ -7544,7 +7544,7 @@
 		</EventTriggerInfo>
 
 		<EventTriggerInfo>
-			<Type>EVENTTRIGGER_BONUS_TAX</Type>
+			<Type>EVENTTRIGGER_BONUS_TAX_PREHISTORIC</Type>
 			<WorldNewsTexts>
 				<Text>TXT_KEY_EVENTTRIGGER_BONUS_TAX</Text>
 			</WorldNewsTexts>
@@ -7564,7 +7564,7 @@
 			<iNumPlotsRequired>1</iNumPlotsRequired>
 			<bOwnPlot>1</bOwnPlot>
 			<Events>
-				<Event>EVENT_BONUS_TAX</Event>
+				<Event>EVENT_BONUS_TAX_PREHISTORIC</Event>
 			</Events>
 			<OrPreReqs>
 				<PrereqTech>TECH_ARITHMETIC</PrereqTech>
@@ -7572,6 +7572,67 @@
 			<ObsoleteTechs>
 				<ObsoleteTech>TECH_CITY_PLANNING</ObsoleteTech>
 			</ObsoleteTechs>
+			<bRecurring>1</bRecurring>
+		</EventTriggerInfo>
+
+        <EventTriggerInfo>
+            <Type>EVENTTRIGGER_BONUS_TAX_CLASIC</Type>
+            <WorldNewsTexts>
+                <Text>TXT_KEY_EVENTTRIGGER_BONUS_TAX</Text>
+            </WorldNewsTexts>
+            <TriggerTexts>
+                <TriggerText>
+                    <Text>TXT_KEY_EVENT_TRIGGER_BONUS_TAX_1</Text>
+                    <Era>NONE</Era>
+                </TriggerText>
+            </TriggerTexts>
+            <iPercentGamesActive>100</iPercentGamesActive>
+            <iWeight>5</iWeight>
+            <bProbabilityBuildingMultiply>1</bProbabilityBuildingMultiply>
+            <BuildingsRequired>
+                <Building>BUILDING_OFFICIUM</Building>
+            </BuildingsRequired>
+            <iNumBuildings>1</iNumBuildings>
+            <iNumPlotsRequired>1</iNumPlotsRequired>
+            <bOwnPlot>1</bOwnPlot>
+            <Events>
+                <Event>EVENT_BONUS_TAX_CLASIC</Event>
+            </Events>
+            <OrPreReqs>
+                <PrereqTech>TECH_CITY_PLANING</PrereqTech>
+            </OrPreReqs>
+            <ObsoleteTechs>
+                <ObsoleteTech>TECH_CIVIC_ENGINEERING</ObsoleteTech>
+            </ObsoleteTechs>
+            <bRecurring>1</bRecurring>
+        </EventTriggerInfo>
+
+		<EventTriggerInfo>
+			<Type>EVENTTRIGGER_BONUS_TAX_MODERN</Type>
+			<WorldNewsTexts>
+				<Text>TXT_KEY_EVENTTRIGGER_BONUS_TAX</Text>
+			</WorldNewsTexts>
+			<TriggerTexts>
+				<TriggerText>
+					<Text>TXT_KEY_EVENT_TRIGGER_BONUS_TAX_1</Text>
+					<Era>NONE</Era>
+				</TriggerText>
+			</TriggerTexts>
+			<iPercentGamesActive>100</iPercentGamesActive>
+			<iWeight>5</iWeight>
+			<bProbabilityBuildingMultiply>1</bProbabilityBuildingMultiply>
+			<BuildingsRequired>
+				<Building>BUILDING_MODERN_OFFICES</Building>
+			</BuildingsRequired>
+			<iNumBuildings>1</iNumBuildings>
+			<iNumPlotsRequired>1</iNumPlotsRequired>
+			<bOwnPlot>1</bOwnPlot>
+			<Events>
+				<Event>EVENT_BONUS_TAX_MODERN</Event>
+			</Events>
+			<OrPreReqs>
+				<PrereqTech>TECH_CIVIC_ENGINEERING</PrereqTech>
+			</OrPreReqs>
 			<bRecurring>1</bRecurring>
 		</EventTriggerInfo>
 
@@ -10591,7 +10652,7 @@
 			</TriggerTexts>
 			<EventArt>Art/Event_Images/SetbackEvent.dds</EventArt>
 			<iPercentGamesActive>100</iPercentGamesActive>
-			<iWeight>8</iWeight>
+			<iWeight>9</iWeight>
 			<bOwnPlot>1</bOwnPlot>
 			<Events>
 				<Event>EVENT_BREAKTHROUGH_1</Event>
@@ -10613,7 +10674,7 @@
 				</TriggerText>
 			</TriggerTexts>
 			<iPercentGamesActive>100</iPercentGamesActive>
-			<iWeight>8</iWeight>
+			<iWeight>9</iWeight>
 			<bOwnPlot>1</bOwnPlot>
 			<Events>
 				<Event>EVENT_SETBACK_1</Event>
@@ -13949,7 +14010,7 @@
 			</TriggerTexts>
 			<EventArt>Art/Event_Images/FortInDisrepair.dds</EventArt>
 			<iPercentGamesActive>100</iPercentGamesActive>
-			<iWeight>75</iWeight>
+			<iWeight>35</iWeight>
 			<iNumPlotsRequired>1</iNumPlotsRequired>
 			<bOwnPlot>1</bOwnPlot>
 			<ImprovementsRequired>
@@ -15010,7 +15071,7 @@
 			</TriggerTexts>
 			<EventArt>Art/Event_Images/FortInDisrepair.dds</EventArt>
 			<iPercentGamesActive>100</iPercentGamesActive>
-			<iWeight>125</iWeight>
+			<iWeight>35</iWeight>
 			<iNumPlotsRequired>1</iNumPlotsRequired>
 			<bOwnPlot>1</bOwnPlot>
 			<ImprovementsRequired>
@@ -15036,7 +15097,7 @@
 			</TriggerTexts>
 			<EventArt>Art/Event_Images/FortInDisrepair.dds</EventArt>
 			<iPercentGamesActive>100</iPercentGamesActive>
-			<iWeight>125</iWeight>
+			<iWeight>35</iWeight>
 			<iNumPlotsRequired>1</iNumPlotsRequired>
 			<bOwnPlot>1</bOwnPlot>
 			<ImprovementsRequired>
@@ -15062,7 +15123,7 @@
 			</TriggerTexts>
 			<EventArt>Art/Event_Images/FortInDisrepair.dds</EventArt>
 			<iPercentGamesActive>100</iPercentGamesActive>
-			<iWeight>125</iWeight>
+			<iWeight>35</iWeight>
 			<iNumPlotsRequired>1</iNumPlotsRequired>
 			<bOwnPlot>1</bOwnPlot>
 			<ImprovementsRequired>
@@ -15088,7 +15149,7 @@
 			</TriggerTexts>
 			<EventArt>Art/Event_Images/FortInDisrepair.dds</EventArt>
 			<iPercentGamesActive>100</iPercentGamesActive>
-			<iWeight>150</iWeight>
+			<iWeight>35</iWeight>
 			<iNumPlotsRequired>1</iNumPlotsRequired>
 			<bOwnPlot>1</bOwnPlot>
 			<ImprovementsRequired>
@@ -15114,7 +15175,7 @@
 			</TriggerTexts>
 			<EventArt>Art/Event_Images/FortInDisrepair.dds</EventArt>
 			<iPercentGamesActive>100</iPercentGamesActive>
-			<iWeight>125</iWeight>
+			<iWeight>35</iWeight>
 			<iNumPlotsRequired>1</iNumPlotsRequired>
 			<bOwnPlot>1</bOwnPlot>
 			<ImprovementsRequired>
