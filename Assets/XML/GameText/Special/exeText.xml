@@ -2279,7 +2279,7 @@
 		<Italian>Avvia!</Italian>
 		<Spanish>Iniciar</Spanish>
 		<Polish>Start!</Polish>
-		<Russian>Старт!</Russian>
+		<Russian>Начать</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MAIN_MENU_LEADERS_TITLE</Tag>
@@ -2799,7 +2799,7 @@
 		<Italian>Versione OK!</Italian>
 		<Spanish>Versión correcta</Spanish>
 		<Polish>Najnowsza wersja!</Polish>
-		<Russian>Версия корректна</Russian>
+		<Russian>Последняя версия</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MAIN_MENU_PBEM</Tag>

@@ -8730,6 +8730,7 @@
 		<German>Globale Ansicht</German>
 		<Italian>Attiva/disattiva visuale del pianeta</Italian>
 		<Spanish>Vista global</Spanish>
+		<Russian>Обзор планеты</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GOLDEN_AGE_YIELD</Tag>
@@ -8737,7 +8738,7 @@
 		<French>Pendant les Ages d'Or, dans toutes les Villes</French>
 		<Italian>Durante le età dell'oro in tutte le città</Italian>
 		<Polish>Podczas Z&#179;otej Ery we wszystkich Miastach</Polish>
-		<Russian>Для всех городов в течение Золотого века</Russian>
+		<Russian>Для всех городов во время Золотого века</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GOOD_HEALTH_FROM_SPECIALISTS</Tag>
@@ -8756,6 +8757,7 @@
 		<German>Stadtradius anzeigen</German>
 		<Italian>Mostra caselle nel raggio delle città</Italian>
 		<Spanish>Mostrar radio urbano</Spanish>
+		<Russian>Показывать радиус города</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GRAPHICOPTION_CITY_RADIUS_HELP</Tag>
@@ -8764,6 +8766,7 @@
 		<German>Zeigt Stadtradius bei Auswahl eines Siedlers an</German>
 		<Italian>[BOLD][COLOR_HIGHLIGHT_TEXT]Mostra le caselle nel raggio[COLOR_REVERT] delle città quando si seleziona un'unità colonizzatore[\BOLD]</Italian>
 		<Spanish>Para ver el radio urbano al seleccionar a un colono</Spanish>
+		<Russian>Отображать радиус города, когда выбран поселенец</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GRAPHICOPTION_EFFECTS_DISABLED</Tag>
@@ -8772,6 +8775,7 @@
 		<German>Effekte deaktiviert</German>
 		<Italian>Effetti particellari disattivati</Italian>
 		<Spanish>Efectos desactivados</Spanish>
+		<Russian>Убрать эффекты частиц</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GRAPHICOPTION_EFFECTS_DISABLED_HELP</Tag>
@@ -8780,6 +8784,7 @@
 		<German>Schaltet Partikeleffekte aus</German>
 		<Italian>[BOLD]Gli effetti particellari [COLOR_HIGHLIGHT_TEXT]vengono disattivati[COLOR_REVERT][\BOLD]</Italian>
 		<Spanish>Desactiva los efectos de partículas.</Spanish>
+		<Russian>Отключить эффекты частиц</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GRAPHICOPTION_FULLSCREEN</Tag>
@@ -8788,6 +8793,7 @@
 		<German>Vollbild-Modus</German>
 		<Italian>Modalità schermo intero</Italian>
 		<Spanish>Modo pantalla completa</Spanish>
+		<Russian>Полноэкранный режим</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GRAPHICOPTION_FULLSCREEN_HELP</Tag>
@@ -8796,6 +8802,7 @@
 		<German>Wenn dieser nicht eingestellt ist, läuft das Spiel in einem Fenster.</German>
 		<Italian>[BOLD]Se non attiva il gioco viene [COLOR_HIGHLIGHT_TEXT]avviato in finestra[COLOR_REVERT][\BOLD]</Italian>
 		<Spanish>El juego se ejecutará en una ventana cuando no se indique lo contrario.</Spanish>
+		<Russian>Если отключено, то игра будет работать в оконном режиме</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GRAPHICOPTION_GLOBE_VIEW_BUILDINGS_DISABLED</Tag>
@@ -8804,6 +8811,7 @@
 		<German>Globusansicht Gebäude deaktiviert</German>
 		<Italian>Edifici disattivati nella visuale globale</Italian>
 		<Spanish>Edificios desactivados en vista global</Spanish>
+		<Russian>Отключить здания в обзоре планеты</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GRAPHICOPTION_GLOBE_VIEW_BUILDINGS_DISABLED_HELP</Tag>
@@ -8812,6 +8820,7 @@
 		<German>Gebäudemodelle erscheinen nicht in Globusansicht</German>
 		<Italian>[BOLD]I modelli degli edifici [COLOR_HIGHLIGHT_TEXT]non verranno mostrati[COLOR_REVERT] nella visuale globale[\BOLD]</Italian>
 		<Spanish>Los modelos de los edificios no se mostrarán en la vista global.</Spanish>
+		<Russian>Модели зданий не будут отображаться при обзоре планеты</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GRAPHICOPTION_HIRES_TERRAIN</Tag>
@@ -8820,6 +8829,7 @@
 		<German>Hohes Geländedetails</German>
 		<Italian>Dettaglio alto del terreno</Italian>
 		<Spanish>Detalle del terreno alto</Spanish>
+		<Russian>Высокодетализированная поверхность</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GRAPHICOPTION_HIRES_TERRAIN_HELP</Tag>
@@ -8828,6 +8838,7 @@
 		<German>Es werden hohes Geländedetails verwendet</German>
 		<Italian>[BOLD]Verrà utilizzato un [COLOR_HIGHLIGHT_TEXT]dettaglio alto[COLOR_REVERT] del terreno[\BOLD]</Italian>
 		<Spanish>Se usará un nivel de detalle del terreno más alto</Spanish>
+		<Russian>Будет использоваться более детализированная поверхность</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GRAPHICOPTION_LOWRES_TEXTURES</Tag>
@@ -8836,11 +8847,13 @@
 		<German>Texturen mit niedriger Auflösung</German>
 		<Italian>Texture a bassa risoluzione</Italian>
 		<Spanish>Texturas de baja resolución</Spanish>
+		<Russian>Текстуры низкого разрешения</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GRAPHICOPTION_LOWRES_TEXTURES_HELP</Tag>
 		<English>Lower resolution textures will be used.[NEWLINE]Causes graphical glitches when selected.</English>
 		<Italian>[BOLD]Le texture usate saranno in [COLOR_HIGHLIGHT_TEXT]bassa risoluzione[COLOR_REVERT]  (può causare difetti grafici)[\BOLD]</Italian>
+		<Russian>Будут использоваться текстуры более низкого разрешения.[NEWLINE]Вызывает графические ошибки при активации.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GRAPHICOPTION_NO_MOVIES</Tag>
@@ -8849,6 +8862,7 @@
 		<German>Keine Filme</German>
 		<Italian>Nessun filmato</Italian>
 		<Spanish>Sin películas</Spanish>
+		<Russian>Отключить видеоролики</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GRAPHICOPTION_NO_MOVIES_HELP</Tag>
@@ -8857,6 +8871,7 @@
 		<German>Überspringt Wunder-, Religions- und Siegfilme</German>
 		<Italian>[BOLD]I filmati delle meraviglie, delle religioni e della vittoria [COLOR_HIGHLIGHT_TEXT]non verranno visualizzati[COLOR_REVERT][\BOLD]</Italian>
 		<Spanish>Para omitir las películas de maravillas, religiones y victoria</Spanish>
+		<Russian>Не показывть видеоролики победы, чудес и религий</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GRAPHICS_SETTINGS_MOVIE_QUALITY</Tag>
@@ -8865,7 +8880,7 @@
 		<German>Filmqualität</German>
 		<Italian>Qualità dei filmati</Italian>
 		<Spanish>Calidad de Película</Spanish>
-		<Russian>Уровень качества видео</Russian>
+		<Russian>Уровень качества видеороликов</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GRAPHIC_OPTION_FROZEN_ANIMATIONS</Tag>
@@ -8874,11 +8889,13 @@
 		<German>Animationen gestoppt</German>
 		<Italian>Nessuna animazione</Italian>
 		<Spanish>Animaciones estáticas</Spanish>
+		<Russian>Заморозить анимации</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GRAPHIC_OPTION_FROZEN_ANIMATIONS_HELP</Tag>
 		<English>No unit or improvement animations.[NEWLINE]Causes graphical glitches when selected.</English>
 		<Italian>[BOLD]Le animazioni delle unità e dei miglioramenti [COLOR_HIGHLIGHT_TEXT]vengono disattivate[COLOR_REVERT] (può causare difetti grafici)[\BOLD]</Italian>
+		<Russian>У подразделений и улучшений не будет анимаций.[NEWLINE]Вызывает графические ошибки при активции.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GRAPH_SMOOTHING</Tag>
@@ -8936,7 +8953,7 @@
 		<Italian>Capitano</Italian> <!-- Also in the city screen, revolution panel -->
 		<Spanish>Jefe</Spanish>
 		<Polish>W&#243;dz</Polish>
-		<Russian>Âîæäü</Russian>
+		<Russian>Вождь</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HANDICAP_CHIEFTAIN_HELP</Tag>
@@ -8945,6 +8962,7 @@
 		<German>Diesen relativ einfachen Schwierigkeitsgrad sollten Sie wählen, wenn Sie eine neue Strategie testen möchten. Barbaren und wilde Tiere sind in diesem Fall stärker und aggressiver. Außerdem erhalten Sie weniger Boni.</German>
 		<Italian>Un livello di difficoltà abbastanza facile, utile per provare nuove strategie (i barbari e gli animali selvaggi sono più forti e aggressivi, inoltre non otterrai così tanti bonus come al livello precedente)</Italian>
 		<Spanish>Un nivel de dificultad relativamente bajo, bueno para probar nuevas estrategias. Los bárbaros y animales salvajes son más fuertes y agresivos y no se reciben tantas bonificaciones.</Spanish>
+		<Russian>Относительно низкий уровень сложности - хорошо подходит для того, чтобы попробовать новую стратегию. Варвары и дикие животные сильнее и агрессивнее, и вы получаете не так много бонусов.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HANDICAP_DEITY</Tag>
@@ -8954,7 +8972,7 @@
 		<Italian>Divinità</Italian>
 		<Spanish>Deidad</Spanish>
 		<Polish>B&#243;stwo</Polish>
-		<Russian>Áîæåñòâî</Russian>
+		<Russian>Божество</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HANDICAP_DEITY_HELP</Tag>
@@ -8963,6 +8981,7 @@
 		<German>Ha ha ha! Viel Glück, Wurm!</German>
 		<Italian>Muhahaha! Buona fortuna, ne avrai bisogno!</Italian>
 		<Spanish>¡Jaaaaaaajajajajajá! ¡Buena suerte, infeliz!</Spanish>
+		<Russian>Ну... удачи, приятель</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HANDICAP_EMPEROR</Tag>
@@ -8972,7 +8991,7 @@
 		<Italian>Imperatore</Italian>
 		<Spanish>Emperador</Spanish>
 		<Polish>Cesarz</Polish>
-		<Russian>Èìïåðàòîð</Russian>
+		<Russian>Император</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HANDICAP_EMPEROR_HELP</Tag>
@@ -8981,6 +9000,7 @@
 		<German>Sie sind der geborene Kaiser? Beweisen Sie es, indem Sie Ihre schnellen und aggressiven Gegner bezwingen, während Sie Ihr notorisch unzufriedenes Volk glücklich machen. Dieser Herausforderung sind nur wahre Civilization-Experten gewachsen.</German>
 		<Italian>Sei pronto a essere un imperatore? Dovrai affrontare con coraggio i rapidi e aggressivi avversari e, allo stesso tempo, cercare di soddisfare la tua popolazione che è ancora più difficile da compiacere e motivare, una vera sfida per gli esperti di Civ</Italian>
 		<Spanish>¿Estáis listo para ser emperador? De ser así, tendréis que demostrar vuestra valía derrotando a adversarios más rápidos y agresivos a la vez que cuidáis de una población más difícil de motivar y complacer. Esto es una prueba de verdad para los expertos en Civilization.</Spanish>
+		<Russian>Готовы ли вы стать императором? Если да, то вам придется доказать свою компетентность, одолев быстрых и агрессивных противников и справившись с населением, которое сложнее мотивировать и ублажать. Это настоящее испытание, специально для знатоков игры.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HANDICAP_IMMORTAL</Tag>
@@ -8990,7 +9010,7 @@
 		<Italian>Immortale</Italian>
 		<Spanish>Inmortal</Spanish>
 		<Polish>Nie&#156;miertelny</Polish>
-		<Russian>Áåññìåðòíûé</Russian>
+		<Russian>Бессмертный</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HANDICAP_IMMORTAL_HELP</Tag>
@@ -8999,6 +9019,7 @@
 		<German>Nur wenige Herrscher werden durch ihre Leistungen unsterblich. Dieser Herausforderung sind nur die Besten der Besten gewachsen.</German>
 		<Italian>Solo in pochi possono appartenere alle schiere degli immortali, la prova è molto impegnativa, anche per i più esperti</Italian>
 		<Spanish>Solo unos cuantos pueden contarse entre las filas de los inmortales. Esto resulta una prueba demoledora para todos, excepto para los más experimentados.</Spanish>
+		<Russian>Лишь немногие могут претендовать на членство в рядах Бессмертных. Это тяжелое испытание для всех, кроме самых опытных.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HANDICAP_MONARCH</Tag>
@@ -9008,7 +9029,7 @@
 		<Italian>Monarca</Italian>
 		<Spanish>Monarca</Spanish>
 		<Polish>Monarcha</Polish>
-		<Russian>Ìîíàðõ</Russian>
+		<Russian>Король</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HANDICAP_MONARCH_HELP</Tag>
@@ -9017,18 +9038,21 @@
 		<German>Dieser Schwierigkeitsgrad ist wahrlich königlich. Ihre Unterhaltskosten erreichen nun schwindelnde Höhen, Ihre Forschungen kommen nur langsam voran und Ihr Volk ist alles andere als genügsam. Zu allem Überfluss müssen Sie sich mit überaus geschickten Computergegnern herumschlagen.</German>
 		<Italian>A livello monarca, la sfida comincia a farsi impegnativa: i costi di mantenimento sono superiore, la ricerca più lenta, la gente più difficile da accontentare e gli avversari AI semplicemente più scaltri</Italian>
 		<Spanish>Para los Monarcas, el reto empieza a ponerse serio en este nivel. El mantenimiento es más alto, la investigación, más lenta, vuestro pueblo es más difícil de complacer y los oponentes que lleva el ordenador son más astutos.</Spanish>
+		<Russian>На этом уровне сложность определенно начинает нарастать. Расходы на содержание выше, исследования медленнее, вашим подданым сложнее угодить, а компьютерные противники просто умнее.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HANDICAP_NIGHTMARE</Tag>
 		<English>Nightmare</English>
 		<French>Cauchemar</French>
 		<Italian>Incubo</Italian>
+		<Russian>Всемогущий</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HANDICAP_NIGHTMARE_HELP</Tag>
 		<English>MUAHAHAHAHA! Survive this!</English>
 		<French>MOUAHAHAHAHA! Essayez de Survivre à cela !</French>
 		<Italian>MUAHAHAHAHA! Prova a sopravvivere se ci riesci!</Italian>
+		<Russian>Докажи, что ты превыше любого бога!</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HANDICAP_NOBLE</Tag>
@@ -9037,7 +9061,7 @@
 		<German>Fürst</German>
 		<Italian>Nobile</Italian>
 		<Polish>Szlachcic</Polish>
-		<Russian>Àðèñòîêðàò</Russian>
+		<Russian>Аристократ</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HANDICAP_NOBLE_HELP</Tag>
@@ -9046,6 +9070,7 @@
 		<German>Da Adlige sehr viele Pflichten wahrnehmen müssen, ist dieser Schwierigkeitsgrad sehr ausgewogen und eignet sich vor allem für erfahrene Civilization-Spieler.</German>
 		<Italian>I nobili devono saper bilanciare le loro molte responsabilità così questo livello è il più bilanciato (i veterani di Civ lo troveranno il livello ideale per iniziare)</Italian>
 		<Spanish>Los Nobles tienen que equilibrar sus diversas responsabilidades, así que éste es el nivel más equilibrado. Los veteranos del Civi comprobarán que este nivel es un punto estupendo por el que empezar. </Spanish>
+		<Russian>Аристократам нужно маневрировать между своими многочисленными обязанностями, поэтому это самая сбалансированная сложность. Для ветеранов игры эта сложность будет отличным местом для старта.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HANDICAP_PRINCE</Tag>
@@ -9054,7 +9079,7 @@
 		<Italian>Principe</Italian>
 		<Spanish>Príncipe</Spanish>
 		<Polish>Ksi&#185;&#191;&#234;</Polish>
-		<Russian>Ïðèíö</Russian>
+		<Russian>Принц</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HANDICAP_PRINCE_HELP</Tag>
@@ -9063,6 +9088,7 @@
 		<German>Als Prinz müssen Sie beweisen, dass Sie wirklich von königlichem Blut sind. Um Ihnen das Leben schwer zu machen, produziert und forscht die KI des Spiels in diesem Schwierigkeitsgrad etwas schneller als Sie. Sie müssen sich also anstrengen, wenn Sie das Spiel gewinnen möchten.</German>
 		<Italian>A livello principe, si dovrà dimostrare di essere di vera stirpe reale! (Gli avversari IA possono produrre e fare ricerche un po' più velocemente di te, pertanto dovrai giocare una grande partita per poter vincere)</Italian>
 		<Spanish>Como Príncipe, tendréis que demostrar que tenéis sangre real de verdad. La IA producirá e investigará algo más deprisa que vos, por lo que tendréis que jugar mucho mejor para lograr la victoria.</Spanish>
+		<Russian>В роли принца придется доказывать свою принадлежность к королевскому роду. Произоводство и исследования у ИИ немного быстрее, чем у вас, поэтому придется играть намного лучше, чтобы одержать победу.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HANDICAP_SETTLER</Tag>
@@ -9084,7 +9110,7 @@
 			<Plural>0</Plural>
 		</Spanish>
 		<Polish>Osadnik</Polish>
-		<Russian>Ïîñåëåíåö</Russian>
+		<Russian>Поселенец</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HANDICAP_SETTLER_HELP</Tag>
@@ -9093,6 +9119,7 @@
 		<German>Die einfachste Schwierigkeitsstufe ist eine gute Wahl, wenn Sie Ihr allererstes Spiel starten oder eine neue Strategie ausprobieren möchten. Als Siedleranführer werden Sie feststellen: Barbaren und wilde Tiere sind weniger aggressiv, Ihre Bürger bleiben länger gesund und zufrieden und Sie erhalten darüber hinaus viele Produktionsboni.</German>
 		<Italian>Il livello di difficoltà più semplice e ideale per iniziare la tua prima partita oppure per quando desideri provare una nuova strategia (i barbari e gli animali selvaggi saranno meno aggressivi, i tuoi cittadini saranno più felici, godranno di buona salute più a lungo e potrai contare su molti bonus produttivi)</Italian>
 		<Spanish>El nivel de dificultad más fácil y una manera excelente de empezar con vuestra primera partida o probar una estrategia nueva. Como Colono, veréis que los bárbaros y animales salvajes son menos agresivos, que los ciudadanos están más felices y sanos y que habrá muchas bonificaciones a la producción para ayudaros.</Spanish>
+		<Russian>Самый низкий уровень сложности - прекрасное условие, чтобы сыграть свою первую партию или попробовать другую стратегию. Варвары и дикие животные менее агрессивны, население дольше остается счастливым и здоровым, а также множество бонусов к производству - в помощь вам.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HANDICAP_WARLORD</Tag>
@@ -19076,6 +19103,7 @@
 		<German>24-Stunden-Anzeige</German>
 		<Italian>Orologio 24 ore</Italian>
 		<Spanish>Reloj de 24 horas</Spanish>
+		<Russian>24-часовые часы</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_OPTIONS_ALARMON</Tag>
@@ -19084,6 +19112,7 @@
 		<German>Alarm ein</German>
 		<Italian>Attiva avviso</Italian>
 		<Spanish>Alarma activada</Spanish>
+		<Russian>Включить будильник</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_OPTIONS_AMBIENCEVOLUME</Tag>
@@ -19092,6 +19121,7 @@
 		<German>Umgebungslautstärke</German>
 		<Italian>Ambiente</Italian>
 		<Spanish>Volumen del sonido ambiental</Spanish>
+		<Russian>Громкость окружения</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_OPTIONS_ANTIALIAS</Tag>
@@ -19118,6 +19148,7 @@
 		<German>Wählen Sie eine Verbindungsgeschwindigkeit</German>
 		<Italian>Tipo di connessione</Italian>
 		<Spanish>Selecciona tu velocidad de conexión</Spanish>
+		<Russian>Выберите тип подключения к сети</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_OPTIONS_BROADBAND_LBL</Tag>
@@ -19126,6 +19157,7 @@
 		<German>Breitband (Kabel/DSL)</German>
 		<Italian> Banda larga (Cavo o adsl)</Italian>
 		<Spanish>Banda ancha (Cable/ADSL)</Spanish>
+		<Russian>Широкополосное (кабель/xDSL)</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_OPTIONS_BROWSE</Tag>
@@ -19134,6 +19166,7 @@
 		<German>Durchsuchen ...</German>
 		<Italian>Cerca</Italian>
 		<Spanish>Examinar...</Spanish>
+		<Russian>Обзор...</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_OPTIONS_CAPTUREVOLUME</Tag>
@@ -19150,6 +19183,7 @@
 		<German>Sprachaufnahmegerät</German>
 		<Italian>Microfono</Italian>
 		<Spanish>Dispositivo de captura de la voz</Spanish>
+		<Russian>Устройство захвата голоса</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_OPTIONS_CLOCK</Tag>
@@ -19158,6 +19192,7 @@
 		<German>Uhr</German>
 		<Italian>Orologio</Italian>
 		<Spanish>Reloj</Spanish>
+		<Russian>Часы</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_OPTIONS_CLOCK_ON</Tag>
@@ -19166,6 +19201,7 @@
 		<German>Uhr ein</German>
 		<Italian>Orologio attivo</Italian>
 		<Spanish>Reloj activado</Spanish>
+		<Russian>Включить часы</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_OPTIONS_CUSTOM_MUSIC</Tag>
@@ -19174,6 +19210,7 @@
 		<German>Eigener Musikordner</German>
 		<Italian>Cartella musica personale</Italian>
 		<Spanish>Carpeta de música personalizada</Spanish>
+		<Russian>Пользовательская папка с музыкой</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_OPTIONS_DELETED_PROFILE</Tag>
@@ -19182,6 +19219,7 @@
 		<German>%s1_Profile gelöscht!</German>
 		<Italian>Il profilo %s1_Profile è stato cancellato</Italian>
 		<Spanish>Se ha borrado "%s1_Profile"</Spanish>
+		<Russian>Профиль %s1_Profile удален</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_OPTIONS_DELETE_PROFILE</Tag>
@@ -19190,6 +19228,7 @@
 		<German>Profil löschen</German>
 		<Italian>Elimina profilo</Italian>
 		<Spanish>Borrar perfil</Spanish>
+		<Russian>Удалить профиль</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_OPTIONS_EFFECTSVOLUME</Tag>
@@ -19198,6 +19237,7 @@
 		<German>Soundlautstärke</German>
 		<Italian>Effetti sonori</Italian>
 		<Spanish>Volumen de los efectos de sonido</Spanish>
+		<Russian>Громкость эффектов</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_OPTIONS_GAME</Tag>
@@ -19224,6 +19264,7 @@
 		<German>Stunden:</German>
 		<Italian>Imposta avviso tra (h):</Italian>
 		<Spanish>Horas:</Spanish>
+		<Russian>Время будильника, часы:</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_OPTIONS_INTERFACEVOLUME</Tag>
@@ -19232,6 +19273,7 @@
 		<German>Interfacelautstärke</German>
 		<Italian>Interfaccia</Italian>
 		<Spanish>Volumen de la interfaz</Spanish>
+		<Russian>Громкость интерфейса</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_OPTIONS_LOADED_PROFILE</Tag>
@@ -19256,6 +19298,7 @@
 		<German>Gesamtlautstärke</German>
 		<Italian>Generale</Italian>
 		<Spanish>Control del volumen</Spanish>
+		<Russian>Общая громкость</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_OPTIONS_MINS</Tag>
@@ -19264,6 +19307,7 @@
 		<German>Minuten:</German>
 		<Italian>Imposta avviso tra (min):</Italian>
 		<Spanish>Minutos</Spanish>
+		<Russian>Время будильника, минуты:</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_OPTIONS_MODEM_LBL</Tag>
@@ -19272,6 +19316,7 @@
 		<German>Modem</German>
 		<Italian> Modem</Italian>
 		<Spanish>Módem</Spanish>
+		<Russian>Модем</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_OPTIONS_MUSICVOLUME</Tag>
@@ -19280,6 +19325,7 @@
 		<German>Musiklautstärke</German>
 		<Italian>Musica</Italian>
 		<Spanish>Volumen de la música</Spanish>
+		<Russian>Громкость музыки</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_OPTIONS_NEED_TO_RESTART</Tag>
@@ -19288,6 +19334,7 @@
 		<German>Zur Übernahme der Änderungen muss das Programm neu gestartet werden</German>
 		<Italian>Il gioco deve essere riavviato perché i cambiamenti abbiano effetto</Italian>
 		<Spanish>Hay que reiniciar el programa para que los cambios surtan efecto</Spanish>
+		<Russian>Чтобы изменения вступили в силу, необходимо перезапустить игру</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_OPTIONS_NETWORK</Tag>
@@ -19296,6 +19343,7 @@
 		<German>Netzwerk</German>
 		<Italian>Rete</Italian>
 		<Spanish>Red</Spanish>
+		<Russian>Сеть</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_OPTIONS_NEW_PROFILE</Tag>
@@ -19304,6 +19352,7 @@
 		<German>Neues Profil erstellen</German>
 		<Italian>Crea nuovo profilo</Italian>
 		<Spanish>Crear nuevo perfil</Spanish>
+		<Russian>Создать новый профиль</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_OPTIONS_NO_SOUND</Tag>
@@ -19312,6 +19361,7 @@
 		<German>Kein Sound</German>
 		<Italian>Muto</Italian>
 		<Spanish>Sin sonido</Spanish>
+		<Russian>Выключить</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_OPTIONS_PLAYBACKVOLUME</Tag>
@@ -19324,6 +19374,7 @@
 		<German>Sprachwiedergabegerät</German>
 		<Italian>Riproduzione vocale</Italian>
 		<Spanish>Dispositivo de reproducción de la voz</Spanish>
+		<Russian>Устройство воспроизведения голоса</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_OPTIONS_RESET</Tag>
@@ -19440,6 +19491,7 @@
 		<German>Lautsprecher</German>
 		<Italian>Altoparlanti</Italian>
 		<Spanish>Altavoces</Spanish>
+		<Russian>Динамики</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_OPTIONS_SPEECHVOLUME</Tag>
@@ -19448,6 +19500,7 @@
 		<German>Sprachlautstärke</German>
 		<Italian>Dialoghi</Italian>
 		<Spanish>Volumen de los diálogos</Spanish>
+		<Russian>Громкость речи</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_OPTIONS_VOICE</Tag>
@@ -19456,6 +19509,7 @@
 		<German>Sprachchat ein</German>
 		<Italian>Attiva chat vocale</Italian>
 		<Spanish>Activar conversaciones de voz</Spanish>
+		<Russian>Включить голосовой чат</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_OPTION_SOUND_HEADPHONES</Tag>
@@ -19464,6 +19518,7 @@
 		<German>Lautsprecher</German>
 		<Italian>Cuffie</Italian>
 		<Spanish>Auriculares</Spanish>
+		<Russian>Наушники</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_OPTION_SOUND_MONO</Tag>
@@ -19472,6 +19527,7 @@
 		<German>Mono</German>
 		<Italian>Mono</Italian>
 		<Spanish>Mono</Spanish>
+		<Russian>Моно</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_OPTION_SOUND_STEREO</Tag>
@@ -19480,6 +19536,7 @@
 		<German>Stereo</German>
 		<Italian>Stereo</Italian>
 		<Spanish>Estereo</Spanish>
+		<Russian>Стерео</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_OPTION_SOUND_SYSTEM_CONFIG</Tag>
@@ -19488,6 +19545,7 @@
 		<German>Systemkonfiguration verwenden</German>
 		<Italian>Configurazione di sistema</Italian>
 		<Spanish>Usar config. sistema</Spanish>
+		<Russian>Использовать системные настройки</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_OR</Tag>
@@ -19496,6 +19554,7 @@
 		<German>[SPACE]oder[SPACE]</German>
 		<Italian>[COLOR_REVERT][SPACE]o[SPACE][COLOR_HIGHLIGHT_TEXT]</Italian>
 		<Spanish>[SPACE]o[SPACE]</Spanish>
+		<Russian>[SPACE]или[SPACE]</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_ORBITAL</Tag>
@@ -20076,6 +20135,7 @@
 		<German>Detaillierte Stadt-Info</German>
 		<Italian>Informazioni città dettagliate</Italian>
 		<Spanish>Información detallada de la ciudad</Spanish>
+		<Russian>Подробная информация о городе</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PLAYER_OPTION_DETAILED_CITY_INFO_HELP</Tag>
@@ -20084,6 +20144,7 @@
 		<German>Zusatzinformationen in der Stadt-Leiste einblenden</German>
 		<Italian>[BOLD][COLOR_HIGHLIGHT_TEXT]Mostra informazioni aggiuntive[COLOR_REVERT] nella barra della città[\BOLD]</Italian>
 		<Spanish>Mostrar información adicional en la barra de la ciudad.</Spanish>
+		<Russian>Отображать больше сведений на панели города</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PLAYER_OPTION_MINIMIZE_POPUPS</Tag>
@@ -20179,7 +20240,7 @@
 		<Italian>[BOLD]Il normale governatore cittadino per i giocatori umani è sostituito da quello [COLOR_HIGHLIGHT_TEXT]usato dall'IA[COLOR_REVERT][\BOLD]</Italian>
 		<Spanish>El gobernador usado normalmente en las ciudades del jugador humano es sustituido por el que usa la IA.</Spanish>
 		<Polish>Normalny Gubernator Miasta dla graczy ludzkich zosta&#179; zast&#185;piony tym dla AI.</Polish>
-		<Russian>Привычный градоначальник для игроков-людей заменен на того, которого использует ИИ</Russian>
+		<Russian>Привычный для игроков-людей градоначальник заменен на того, которого использует ИИ</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PLAYER_OPTION_NO_COMBAT_ZOOM</Tag>
@@ -20188,6 +20249,7 @@
 		<German>Kein Kampfzoom</German>
 		<Italian>Nessuno zoom in combattimento</Italian>
 		<Spanish>Sin zoom de combate</Spanish>
+		<Russian>Бои без приближения камеры</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PLAYER_OPTION_NO_COMBAT_ZOOM_HELP</Tag>
@@ -20196,6 +20258,7 @@
 		<German>Kein Kamerazoom im Kampf</German>
 		<Italian>[BOLD][COLOR_HIGHLIGHT_TEXT]Disattiva lo zoom[COLOR_REVERT] durante i combattimenti[\BOLD]</Italian>
 		<Spanish>La cámara no se acerca durante el combate.</Spanish>
+		<Russian>Отключить приближение камеры во время боя</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PLAYER_OPTION_NO_ENEMY_GLOW</Tag>
@@ -20204,6 +20267,7 @@
 		<German>Keine Feindkennzeichnung</German>
 		<Italian>Nessun lampeggio per il nemico</Italian>
 		<Spanish>Sin brillo enemigo</Spanish>
+		<Russian>Без подстветки врагов</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PLAYER_OPTION_NO_ENEMY_GLOW_HELP</Tag>
@@ -20212,6 +20276,7 @@
 		<German>Feindliche Einheiten auf Ihrem Territorium werden nicht auf der Karte gekennzeichnet</German>
 		<Italian>[BOLD]Le unità nemiche nel tuo territorio [COLOR_HIGHLIGHT_TEXT]non vengono evidenziate[COLOR_REVERT] sulla mappa[\BOLD]</Italian>
 		<Spanish>Las unidades enemigas en vuestro territorio no aparecen resaltadas en el mapa</Spanish>
+		<Russian>Вражеские подразделения на вашей территории не будут подсвечиваться на карте</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PLAYER_OPTION_NO_UNIT_CYCLING</Tag>
@@ -20274,6 +20339,7 @@
 		<German>Schneller Kampf (Defensive)</German>
 		<Italian>Combattimento rapido (Difensivo)</Italian>
 		<Spanish>Combate rápido (defensa)</Spanish>
+		<Russian>Ускоренные битвы (защита)</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PLAYER_OPTION_QUICK_COMBAT_DEFENSE_HELP</Tag>
@@ -20282,6 +20348,7 @@
 		<German>Alle eigenen Gefechte werden beschleunigt (nur in der Defensive)</German>
 		<Italian>[BOLD]I combattimenti del giocatore vengono [COLOR_HIGHLIGHT_TEXT]velocizzati[COLOR_REVERT] (in difesa)[\BOLD]</Italian>
 		<Spanish>Los combates del jugador se aceleran (cuando defiende).</Spanish>
+		<Russian>Сражения игрока становятся более быстрыми (при обороне)</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PLAYER_OPTION_QUICK_COMBAT_OFFENSE</Tag>
@@ -20290,6 +20357,7 @@
 		<German>Schneller Kampf (Offensive)</German>
 		<Italian>Combattimento rapido (Offensivo)</Italian>
 		<Spanish>Combate rápido (ataque)</Spanish>
+		<Russian>Ускоренные битвы (нападения)</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PLAYER_OPTION_QUICK_COMBAT_OFFENSE_HELP</Tag>
@@ -20298,6 +20366,7 @@
 		<German>Alle eigenen Gefechte werden beschleunigt (nur in der Offensive)</German>
 		<Italian>[BOLD]I combattimenti del giocatore vengono [COLOR_HIGHLIGHT_TEXT]velocizzati[COLOR_REVERT] (in attacco)[\BOLD]</Italian>
 		<Spanish>Los combates del jugador se aceleran (cuando ataca).</Spanish>
+		<Russian>Сражения игрока становятся более быстрыми (при нападении)</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PLAYER_OPTION_QUICK_MOVES</Tag>
@@ -20343,7 +20412,7 @@
 		<German>Feindliche Bewegungen zeigen</German>
 		<Italian>Mostra movimenti unità nemiche</Italian>
 		<Spanish>Mostrar movimientos de enemigos</Spanish>
-		<Russian>Показывать перемещения врагов</Russian>
+		<Russian>Показывать перемещения противников</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PLAYER_OPTION_SHOW_ENEMY_MOVES_HELP</Tag>
