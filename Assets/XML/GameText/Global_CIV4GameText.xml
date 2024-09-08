@@ -6213,7 +6213,7 @@
 		<English>End Year</English>
 		<French>Année de fin</French>
 		<Polish>Zako&#241;cz Rok</Polish>
-		<Russian>Îêîí÷àíèå õîäà</Russian>
+		<Russian>Окончание хода</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_ENHANCED_TECH_CONQUEST_FAIL</Tag>
@@ -6223,7 +6223,7 @@
 		<Italian>Non hai trovato niente che valesse la pena di imparare dagli abitanti di %s</Italian>
 		<Spanish>No has encontrado nada que aprender de los habitantes de %s</Spanish>
 		<Polish>Nie znalaz&#179;e&#156; niczego wartego do nauczenia od mieszka&#241;c&#243;w %s</Polish>
-		<Russian>Âû òàê è íå íàøëè íè÷åãî ñòîÿùåãî äëÿ èçó÷åíèÿ ó òóçåìöåâ %s.</Russian>
+		<Russian>Вы так и не нашли ничего стоящего для изучения у туземцев %s.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_ENHANCED_TECH_CONQUEST_SUCESS</Tag>
@@ -8380,21 +8380,22 @@
 		<German>Spezialeinheiten</German>
 		<Italian>Unità uniche</Italian>
 		<Spanish>Unidades exclusivas</Spanish>
+		<Russian>Уникальные подразделения</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMESPEED_BLITZ</Tag>
 		<English>Blitz</English>
 		<French>Eclair</French>
-		<Russian>Молния</Russian>
 		<Italian>Veloce</Italian>
+		<Russian>Кратковременная</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMESPEED_BLITZ_HELP</Tag>
 		<English>One of the fastest gamespeeds available, nice for test runs and for the impatient gamer.</English>
 		<French>L'une des vitesses de jeu les plus rapides disponibles, idéale pour les tests et pour le joueur impatient.</French>
 		<German>Eine der schnellsten verfügbaren Spielgeschwindigkeiten, gut geeignet für Testläufe und ungeduldige Spieler.</German>
-		<Russian>Один из самых быстрых режимов скорости, удобный для тестовых запусков и для нетерпеливых игроков.</Russian>
 		<Italian>Una delle velocità di gioco più elevate, ideale per le test run e per i giocatori più impazienti</Italian>
+		<Russian>Одна из самых высоких игровых скоростей. Удобна для тестовых запусков и нетерпеливых игроков.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMESPEED_EONS</Tag>
@@ -8403,7 +8404,7 @@
 		<German>Äonen</German>
 		<Spanish>Eones</Spanish>
 		<Polish>Wieki</Polish>
-		<Russian>Óëèòêà</Russian>
+		<Russian>Вечная</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMESPEED_EONS_HELP</Tag>
@@ -8413,7 +8414,7 @@
 		<Italian>Come suggerito dal nome, una partita a questa velocità impiegherà eoni per finire</Italian>
 		<Spanish>Como su propio nombre indica, tardarás eones en finalizar una partida a esta velocidad.</Spanish>
 		<Polish>Jak sama nazwa wskazuje gra ma zaj&#185;&#230; Wieki nim zostanie uko&#241;czona.</Polish>
-		<Russian>Как следует из названия, игра, начатая на этой скорости, займет вечность.</Russian>
+		<Russian>Как следует из названия, партия, начатая на этой скорости, займет вечность.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMESPEED_EPIC</Tag>
@@ -8431,15 +8432,15 @@
 			<Plural>0</Plural>
 		</Spanish>
 		<Polish>D&#179;uga</Polish>
-		<Russian>Ýïè÷åñêàÿ</Russian>
+		<Russian>Эпическая</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMESPEED_EPIC_HELP</Tag>
 		<English>Experience your very own epic.</English>
 		<French>Vivez votre propre épopée.</French>
 		<German>Erlebe mit dieser Spielgeschwindigkeit dein eigenes Epos, dass sich über einige Tage hinziehen kann.</German>
-		<Russian>Сотворите свою собственную эпичную игру.</Russian>
 		<Italian>Vivi la tua epica personale a questa velocità</Italian>
+		<Russian>Расскажите эпос о себе.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMESPEED_ETERNITY</Tag>
@@ -8449,7 +8450,7 @@
 		<Italian>Eternità</Italian>
 		<Spanish>Eternidad</Spanish>
 		<Polish>Wieczno&#156;&#230;</Polish>
-		<Russian>Âå÷íîñòü</Russian>
+		<Russian>Бесконечная</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMESPEED_ETERNITY_HELP</Tag>
@@ -8459,22 +8460,22 @@
 		<Italian>Aspettati di spendere tutto il tempo del mondo per completare questa partita!</Italian>
 		<Spanish>¡Espera gastar todo tu tiempo en completar estas partidas!</Spanish>
 		<Polish>Spodziewaj si&#234; sp&#234;dzenia ca&#179;ego swojego czasu przy tych rozgrywkach!</Polish>
-		<Russian>Îæèäàéòå ïðîâîäèòü âñå âðåìÿ, çàêàí÷èâàÿ ýòè èãðû!</Russian>
+		<Russian>Ожидайте, что вы потратите все свое время на прохождение этой игры</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMESPEED_LONG</Tag>
 		<English>Long</English>
 		<German>Langsam</German>
-		<Russian>Долгая</Russian>
 		<Italian>Lunga</Italian>
+		<Russian>Долгая</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMESPEED_LONG_HELP</Tag>
 		<English>Not fast, nor slow, but something in between.</English>
 		<French>Ni rapide, ni lent, mais quelque chose entre les deux.</French>
 		<German>Das Spiel läuft leicht langsamer als normal ab.</German>
-		<Russian>Не быстро и не медленно, но что-то среднее.</Russian>
 		<Italian>Non veloce, né lenta, ma più o meno nel mezzo</Italian>
+		<Russian>Не быстро и не медленно, а что-то среднее.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMESPEED_MARATHON</Tag>
@@ -8491,15 +8492,15 @@
 			<Plural>0</Plural>
 		</Spanish>
 		<Polish>Maraton</Polish>
-		<Russian>Ìàðàôîí</Russian>
+		<Russian>Марафонская</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMESPEED_MARATHON_HELP</Tag>
 		<English>Your game will last for a few weeks.</English>
 		<French>Votre jeu durera quelques semaines.</French>
 		<German>Das Spiel wird sich über einige Wochen hinziehen.</German>
-		<Russian>Ваша игра продлится несколько недель.</Russian>
 		<Italian>La tua partita durerà per alcune settimane</Italian>
+		<Russian>Эта игра продлится всего несколько недель.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMESPEED_NORMAL</Tag>
@@ -8516,15 +8517,15 @@
 			<Plural>0</Plural>
 		</Spanish>
 		<Polish>Normalna</Polish>
-		<Russian>Íîðìàëüíàÿ</Russian>
+		<Russian>Нормальная</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMESPEED_NORMAL_HELP</Tag>
 		<English>This is standard speed.</English>
 		<French>C'est la vitesse standard.</French>
 		<German>Dies ist die normale Standardgeschwindigkeit.</German>
-		<Russian>Это стандартная скорость.</Russian>
 		<Italian>Questa è la velocità standard</Italian>
+		<Russian>Это обычная скорость.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMESPEED_SNAIL</Tag>
@@ -8534,7 +8535,7 @@
 		<Italian>Lumaca</Italian>
 		<Spanish>Caracol</Spanish>
 		<Polish>&#140;limak</Polish>
-		<Russian>Óëèòêà (3000)</Russian>
+		<Russian>Чрезмерная</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMESPEED_SNAIL_HELP</Tag>
@@ -8544,14 +8545,14 @@
 		<Italian>Questa velocità di gioco estremamente lenta condurrà a partite che possono durare settimane o persino mesi!</Italian>
 		<Spanish>¡Esta velocidad de juego tan lenta hará que las partidas duren semanas, o incluso meses!</Spanish>
 		<Polish>Ta ekstremalnie wolna szybko&#156;&#230; gry sprawia, &#191;e pojedy&#241;cza gra mo&#191;e trwa&#230; tygodniami a nawet miesi&#185;cami!</Polish>
-		<Russian>Ýêñòðåìàëüíî ìåäëåííàÿ ñêîðîñòü, äëÿ òåõ êòî ëþáèò èãðàòü íåäåëÿìè, èëè äàæå ìåñÿöàìè!</Russian>
+		<Russian>Экстремально низкая скорость. Для тех кто любит играть месяцами.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMESPEED_ULTRAFAST</Tag>
 		<English>Ultrafast</English>
 		<French>Ultrarapide</French>
 		<German>Superschnell</German>
-		<Russian>Ультра</Russian>
+		<Russian>Моментальная</Russian>
 		<Italian>Ultra veloce</Italian>
 	</TEXT>
 	<TEXT>
@@ -8559,7 +8560,7 @@
 		<English>The fastest speed. Designed for testing purposes only.</English>
 		<French>La vitesse la plus rapide. Conçu à des fins de test uniquement.</French>
 		<German>Diese absolut höchste Spielgeschwindigkeit ist nur für Testzwecke gedacht.</German>
-		<Russian>Самая быстрая скорость. Предназначена только для тестирования.</Russian>
+		<Russian>Самая высокая скорость. Предназначена только для тестирования.</Russian>
 		<Italian>La velocità di gioco più veloce (pensata solo per eseguire test)</Italian>
 	</TEXT>
 	<TEXT>
@@ -9019,7 +9020,7 @@
 		<German>Nur wenige Herrscher werden durch ihre Leistungen unsterblich. Dieser Herausforderung sind nur die Besten der Besten gewachsen.</German>
 		<Italian>Solo in pochi possono appartenere alle schiere degli immortali, la prova è molto impegnativa, anche per i più esperti</Italian>
 		<Spanish>Solo unos cuantos pueden contarse entre las filas de los inmortales. Esto resulta una prueba demoledora para todos, excepto para los más experimentados.</Spanish>
-		<Russian>Лишь немногие могут претендовать на членство в рядах Бессмертных. Это тяжелое испытание для всех, кроме самых опытных.</Russian>
+		<Russian>Лишь немногие могут претендовать на место в рядах Бессмертных. Это тяжелое испытание для всех, кроме самых опытных.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HANDICAP_MONARCH</Tag>
@@ -9119,7 +9120,7 @@
 		<German>Die einfachste Schwierigkeitsstufe ist eine gute Wahl, wenn Sie Ihr allererstes Spiel starten oder eine neue Strategie ausprobieren möchten. Als Siedleranführer werden Sie feststellen: Barbaren und wilde Tiere sind weniger aggressiv, Ihre Bürger bleiben länger gesund und zufrieden und Sie erhalten darüber hinaus viele Produktionsboni.</German>
 		<Italian>Il livello di difficoltà più semplice e ideale per iniziare la tua prima partita oppure per quando desideri provare una nuova strategia (i barbari e gli animali selvaggi saranno meno aggressivi, i tuoi cittadini saranno più felici, godranno di buona salute più a lungo e potrai contare su molti bonus produttivi)</Italian>
 		<Spanish>El nivel de dificultad más fácil y una manera excelente de empezar con vuestra primera partida o probar una estrategia nueva. Como Colono, veréis que los bárbaros y animales salvajes son menos agresivos, que los ciudadanos están más felices y sanos y que habrá muchas bonificaciones a la producción para ayudaros.</Spanish>
-		<Russian>Самый низкий уровень сложности - прекрасное условие, чтобы сыграть свою первую партию или попробовать другую стратегию. Варвары и дикие животные менее агрессивны, население дольше остается счастливым и здоровым, а также множество бонусов к производству - в помощь вам.</Russian>
+		<Russian>Самый низкая сложность - прекрасное условие, чтобы сыграть свою первую партию или попробовать другую стратегию. Варвары и дикие животные менее агрессивны, население дольше остается счастливым и здоровым, а также множество бонусов к производству - в помощь вам.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HANDICAP_WARLORD</Tag>
@@ -9141,7 +9142,7 @@
 			<Plural>0</Plural>
 		</Spanish>
 		<Polish>Dow&#243;dca</Polish>
-		<Russian>Ïîëêîâîäåö</Russian>
+		<Russian>Полководец</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HANDICAP_WARLORD_HELP</Tag>
@@ -9150,6 +9151,7 @@
 		<German>Kriegsherren haben es etwas schwerer, da Barbaren und wilde Tiere stärker und aggressiver sind. Außerdem erhalten Sie als Kriegsherr weniger Boni.</German>
 		<Italian>A livello guerriero si ha una vita un po' più difficile: i tuoi avversari sono meno permissivi e più aggressivi... Fai attenzione!</Italian>
 		<Spanish>Los Caudillos lo tienen un poco más crudo. Los oponentes son menos clementes y más peligrosos. ¡Mucho cuidado!</Spanish>
+		<Russian>Полководцам приходится немного сложнее. Ваши противники менее снисходительны и более агрессивны - будьте внимательны.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HAPPY_BIG_CITY</Tag>
@@ -12042,6 +12044,7 @@
 		<German>Weltkugeldrehung</German>
 		<Italian>Tipo di pianeta</Italian>
 		<Spanish>Cobertura del mundo</Spanish>
+		<Russian>Форма мира</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MAP_WRAP_CYLINDER</Tag>
@@ -12050,6 +12053,7 @@
 		<German>Zylindrisch</German>
 		<Italian>Cilindrico</Italian>
 		<Spanish>Cilíndrica</Spanish>
+		<Russian>Цилиндрическая</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MAP_WRAP_FLAT</Tag>
@@ -12058,6 +12062,7 @@
 		<German>Flach</German>
 		<Italian>Piatto</Italian>
 		<Spanish>Plana</Spanish>
+		<Russian>Плоская</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MAP_WRAP_TOROID</Tag>
@@ -12066,6 +12071,7 @@
 		<German>Ringförmig</German>
 		<Italian>Toroidale</Italian>
 		<Spanish>Toroidal</Spanish>
+		<Russian>Тороидальная</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MARAUDER_FROM</Tag>
