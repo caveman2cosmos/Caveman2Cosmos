@@ -6265,7 +6265,7 @@
 			<Plural>0</Plural>
 		</German>
 		<Italian>Era atomica</Italian>
-		<Russian>Ядерная эра</Russian>
+		<Russian>Ядерная эпоха</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_ERA_ATOMIC_STRATEGY</Tag>
@@ -6302,7 +6302,7 @@
 			<Plural>0</Plural>
 		</German>
 		<Italian>Era cosmica</Italian>
-		<Russian>Космическая</Russian>
+		<Russian>Космическая эпоха</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_ERA_COSMIC_STRATEGY</Tag>
@@ -6346,7 +6346,7 @@
 		<Italian>Era galattica</Italian>
 		<Spanish>Época galáctica</Spanish>
 		<Polish>Galaktyczna</Polish>
-		<Russian>Галактическая</Russian>
+		<Russian>Галактическая эпоха</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_ERA_GALACTIC_STRATEGY</Tag>
@@ -6366,7 +6366,7 @@
 		<Italian>Era industriale</Italian>
 		<Spanish>Época industrial</Spanish>
 		<Polish>Przemys&#179;owa</Polish>
-		<Russian>Новое время</Russian>
+		<Russian>Индустриальная эпоха</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_ERA_INDUSTRIAL_STRATEGY</Tag>
@@ -6420,7 +6420,7 @@
 			<Plural>0</Plural>
 		</German>
 		<Italian>Era nanotecnologica</Italian>
-		<Russian>Нанотех</Russian>
+		<Russian>Эпоха нанотехнологий</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_ERA_NANOTECH_STRATEGY</Tag>
@@ -6440,7 +6440,7 @@
 		<Italian>Era preistorica</Italian>
 		<Spanish>Prehistoria</Spanish>
 		<Polish>Prehistoryczna</Polish>
-		<Russian>Каменный век</Russian>
+		<Russian>Доисторическая эпоха</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_ERA_PREHISTORIC_STRATEGY</Tag>
@@ -6467,6 +6467,7 @@
 		<French>Vous venez d'entrer dans une nouvelle ère (%s1_era) !</French>
 		<German>Ihr habt das Zeitalter %s1 erreicht!</German>
 		<Italian>Sei entrato nell'%s1_era!</Italian>
+		<Russian>Для вас наступил новый исторический период: «%s1_era»</Russian>
 		<Spanish>Habéis entrado en [NUM1:el:la:los:las] %s1_era.</Spanish>
 	</TEXT>
 	<TEXT>
@@ -6479,7 +6480,7 @@
 			<Plural>0</Plural>
 		</German>
 		<Italian>Era della trascendenza</Italian>
-		<Russian>Эра Трансцендентности</Russian>
+		<Russian>Трансцендентная эпоха</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_ERA_TRANSCENDENT_STRATEGY</Tag>
@@ -6499,7 +6500,7 @@
 		<Italian>Era transumana</Italian>
 		<Spanish>Época transhumana</Spanish>
 		<Polish>Transhumanistyczna</Polish>
-		<Russian>Трансгуманизм</Russian>
+		<Russian>Эпоха трансгуманизма</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_ERA_TRANSHUMAN_STRATEGY</Tag>
