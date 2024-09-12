@@ -181,7 +181,7 @@
 			<Type>EVENT_GREAT_STORY_1</Type>
 			<Description>TXT_KEY_EVENT_GREAT_STORY_1</Description>
 			<bPickCity>1</bPickCity>
-			<iCulture>433</iCulture>
+			<iCulture>533</iCulture>
 			<bGameSpeedScale>1</bGameSpeedScale>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<iAIValue>1</iAIValue>
@@ -190,7 +190,18 @@
 		<EventInfo>
 			<Type>EVENT_GREAT_STORY_2</Type>
 			<Description>TXT_KEY_EVENT_GREAT_STORY_2</Description>
-			<iTechPercent>7</iTechPercent>
+			<BuildingExtraCommerces>
+				<BuildingExtraCommerce>
+					<Building>BUILDING_STORYTELLER</Building>
+					<CommerceType>COMMERCE_RESEARCH</CommerceType>
+					<iExtraCommerce>1</iExtraCommerce>
+				</BuildingExtraCommerce>
+				<BuildingExtraCommerce>
+					<Building>BUILDING_STORYTELLER</Building>
+					<CommerceType>COMMERCE_GOLD</CommerceType>
+					<iExtraCommerce>-1</iExtraCommerce>
+				</BuildingExtraCommerce>
+			</BuildingExtraCommerces>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<iAIValue>1</iAIValue>
 		</EventInfo>
@@ -204,6 +215,11 @@
 					<Building>BUILDING_STORYTELLER</Building>
 					<CommerceType>COMMERCE_CULTURE</CommerceType>
 					<iExtraCommerce>1</iExtraCommerce>
+				</BuildingExtraCommerce>
+				<BuildingExtraCommerce>
+					<Building>BUILDING_STORYTELLER</Building>
+					<CommerceType>COMMERCE_CULTURE</CommerceType>
+					<iExtraCommerce>-1</iExtraCommerce>
 				</BuildingExtraCommerce>
 			</BuildingExtraCommerces>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
@@ -282,7 +298,6 @@
 			<FeatureType>FEATURE_FOREST</FeatureType>
 			<iFeatureChange>-1</iFeatureChange>
 			<iImprovementChange>-1</iImprovementChange>
-			<iRouteChange>-1</iRouteChange>
 			<AdditionalEvents>
 				<EventChance>
 					<Event>EVENT_FOREST_FIRE_END</Event>
