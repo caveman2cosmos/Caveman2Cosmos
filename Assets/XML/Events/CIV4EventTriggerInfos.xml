@@ -7523,7 +7523,7 @@
 				</TriggerText>
 			</TriggerTexts>
 			<iPercentGamesActive>100</iPercentGamesActive>
-			<iWeight>20</iWeight>
+			<iWeight>28</iWeight>
 			<bProbabilityBuildingMultiply>1</bProbabilityBuildingMultiply>
 			<BuildingsRequired>
 				<Building>BUILDING_COMMUNITY_DISCUSSIONS</Building>

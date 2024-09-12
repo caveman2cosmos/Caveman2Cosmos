@@ -1230,7 +1230,7 @@
     </TEXT>
     <TEXT>
         <Tag>TXT_KEY_EVENTTRIGGER_POOR_HARVEST</Tag>
-        <English>Crops have failed this year near the %s1_civ_adjective city of %s2_city. Hard times are comming.</English>
+        <English>Crops have failed this year near the %s1_civ_adjective city of %s2_city. Hard times are approaching.</English>
     </TEXT>
     <TEXT>
         <Tag>TXT_KEY_EVENT_TRIGGER_POOR_HARVEST_1</Tag>
@@ -8306,11 +8306,11 @@
     </TEXT>
     <TEXT>
         <Tag>TXT_KEY_EVENT_GREAT_STORY_2</Tag>
-        <English>This story inspired one of our tribesmen to a new idea.</English>
+        <English>Make sure this story is preserved, our people will draw inspiration from it for centuries to come.</English>
     </TEXT>
     <TEXT>
         <Tag>TXT_KEY_EVENT_GREAT_STORY_3</Tag>
-        <English>Let us remember this story and preserve it for generations to come.</English>
+        <English>Let us remember this story and preserve it for generations to come. This stories will endure</English>
     </TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_KNOWLEDGE_INHERITANCE_1</Tag>
