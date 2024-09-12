@@ -1230,7 +1230,7 @@
     </TEXT>
     <TEXT>
         <Tag>TXT_KEY_EVENTTRIGGER_POOR_HARVEST</Tag>
-        <English>Crops have failed this year near the %s1_civ_adjective city of %s2_city. Hard times are comming.</English>
+        <English>Crops have failed this year near the %s1_civ_adjective city of %s2_city. Hard times are approaching.</English>
     </TEXT>
     <TEXT>
         <Tag>TXT_KEY_EVENT_TRIGGER_POOR_HARVEST_1</Tag>
@@ -8306,11 +8306,11 @@
     </TEXT>
     <TEXT>
         <Tag>TXT_KEY_EVENT_GREAT_STORY_2</Tag>
-        <English>This story inspired one of our tribesmen to a new idea.</English>
+        <English>Make sure this story is preserved, our people will draw inspiration from it for centuries to come.</English>
     </TEXT>
     <TEXT>
         <Tag>TXT_KEY_EVENT_GREAT_STORY_3</Tag>
-        <English>Let us remember this story and preserve it for generations to come.</English>
+        <English>Let us remember this story and preserve it for generations to come. This stories will endure</English>
     </TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_KNOWLEDGE_INHERITANCE_1</Tag>
@@ -9880,7 +9880,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_RABBI_3</Tag>
-		<English>Works like these can easily make the local Monastery a site of interests to tourists worldwide.</English>
+		<English>Works like these can easily make the local monastery a site of interest to tourists from afar.</English>
 		<French>De tels ouvrages peuvent sûrement faire du monastère local une attraction touristique majeure!</French>
 		<German>Sorgt dafür, dass das örtliche Kloster zu einem lohnenden Ziel für Pilger und Touristen aus aller Welt wird.</German>
 		<Italian>Opere come queste possono facilmente rendere il monastero locale un'attrazione turistica a livello mondiale</Italian>
@@ -12512,6 +12512,10 @@
     <TEXT>
         <Tag>TXT_KEY_EVENT_CHILD_LABOUR_INCIDENT1_1</Tag>
         <English>A tragic incident has happened in a labour camp near %s2_city. A few children were crushed and died working in unsafe conditions. We can't let this happen again.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENTTRIGGER_BONUS_TAX</Tag>
+        <English>The tax office from %s2_city is reporting bigger tax income this season.</English>
     </TEXT>
     <TEXT>
         <Tag>TXT_KEY_EVENT_TRIGGER_BONUS_TAX_1</Tag>
