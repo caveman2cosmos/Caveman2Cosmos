@@ -2279,7 +2279,7 @@
 		<Italian>Avvia!</Italian>
 		<Spanish>Iniciar</Spanish>
 		<Polish>Start!</Polish>
-		<Russian>Старт!</Russian>
+		<Russian>Начать</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MAIN_MENU_LEADERS_TITLE</Tag>
@@ -2799,7 +2799,7 @@
 		<Italian>Versione OK!</Italian>
 		<Spanish>Versión correcta</Spanish>
 		<Polish>Najnowsza wersja!</Polish>
-		<Russian>Версия корректна</Russian>
+		<Russian>Последняя версия</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MAIN_MENU_PBEM</Tag>
@@ -3569,7 +3569,7 @@
 		<Italian>Era iniziale:</Italian>
 		<Spanish>Época:</Spanish>
 		<Polish>Epoka:</Polish>
-		<Russian>Эпоха:</Russian>
+		<Russian>Период:</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MENU_FINAL_SETUP</Tag>
@@ -3639,7 +3639,7 @@
 		<Italian>Velocità:</Italian>
 		<Spanish>Velocidad:</Spanish>
 		<Polish>Szybko&#156;&#230;:</Polish>
-		<Russian>Скорость:</Russian>
+		<Russian>Продолжительность:</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MENU_YOUR_DETAILS</Tag>

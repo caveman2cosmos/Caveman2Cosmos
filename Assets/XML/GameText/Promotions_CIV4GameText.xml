@@ -4025,6 +4025,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_ACE</Tag>
 		<English>Veteran Pilot II</English>
+		<Russian>Пилот-ветеран II</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_ADHERENT</Tag>
@@ -15015,7 +15016,7 @@
 		<Italian>Analisi del terreno I</Italian>
 		<Spanish>Análisis del terreno 1.0</Spanish>
 		<Polish>Analizator Terenu 1.0</Polish>
-		<Russian>Ðåêîãíîñöèðîâêà 1.0</Russian>
+		<Russian>Рекогносцировка 1.0</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_TERRAIN_ANALYSIS2</Tag>
@@ -15025,7 +15026,7 @@
 		<Italian>Analisi del terreno II</Italian>
 		<Spanish>Análisis del terreno 2.0</Spanish>
 		<Polish>Analizator Terenu 2.0</Polish>
-		<Russian>Ðåêîãíîñöèðîâêà 2.0</Russian>
+		<Russian>Рекогносцировка 2.0</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_TERRAIN_ANALYSIS3</Tag>
@@ -15035,11 +15036,12 @@
 		<Italian>Analisi del terreno III</Italian>
 		<Spanish>Análisis del terreno 3.0</Spanish>
 		<Polish>Analizator Terenu 3.0</Polish>
-		<Russian>Ðåêîãíîñöèðîâêà 3.0</Russian>
+		<Russian>Рекогносцировка 3.0</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_TOPGUN</Tag>
 		<English>Veteran Pilot III</English>
+		<Russian>Пилот-ветеран III</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_TORPEDOES</Tag>
@@ -15049,7 +15051,7 @@
 		<Italian>Torpedini</Italian>
 		<Spanish>Torpedos</Spanish>
 		<Polish>Torpedy</Polish>
-		<Russian>Òîðïåäû</Russian>
+		<Russian>Торпеды</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_TO_THE_DEATH1</Tag>
@@ -15543,6 +15545,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_VETERAN</Tag>
 		<English>Veteran Pilot I</English>
+		<Russian>Пилот-ветеран I</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_VIRGO</Tag>
