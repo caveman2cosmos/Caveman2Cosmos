@@ -1986,7 +1986,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_LEADER_ABUBAKR</Tag>
 		<English>Abu Bakr</English>
-		<Russian>Àáó Áàêð</Russian>
+		<Russian>Абу Бакр</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_LEADER_ABUBAKR_PEDIA</Tag>
@@ -1998,7 +1998,7 @@
 		<Tag>TXT_KEY_LEADER_AFONSO</Tag>
 		<English>Afonso I</English>
 		<German>Alfons I.</German>
-		<Russian>Àôîíñó I</Russian>
+		<Russian>Афонсу I</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_LEADER_AFONSO_PEDIA</Tag>
@@ -2009,7 +2009,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_LEADER_ATOTOZTLI</Tag>
 		<English>Atotoztli</English>
-		<Russian>Àòîòîçòëè</Russian>
+		<Russian>Атотоцли</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_LEADER_ATOTOZTLI_PEDIA</Tag>
@@ -2045,7 +2045,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</Polish>
-		<Russian>Âàñèëèé</Russian>
+		<Russian>Василий</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_LEADER_BASIL_PEDIA</Tag>
@@ -2058,7 +2058,7 @@
 		<English>Ben Gurion</English>
 		<French>Ben Gourion</French>
 		<Spanish>Ben-Gurión</Spanish>
-		<Russian>Áåí-Ãóðèîí</Russian>
+		<Russian>Бен-Гурион</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_LEADER_BEN_GURION_PEDIA</Tag>
@@ -2070,7 +2070,7 @@
 		<English>Caligula</English>
 		<Italian>Caligola</Italian>
 		<Polish>Kaligula</Polish>
-		<Russian>Êàëèãóëà</Russian>
+		<Russian>Калигула</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_LEADER_CALIGULA_PEDIA</Tag>
@@ -2081,7 +2081,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_LEADER_CETSHWAYO</Tag>
 		<English>Cetshwayo</English>
-		<Russian>Êåò÷âàéî</Russian>
+		<Russian>Кетчвайо</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_LEADER_CETSHWAYO_PEDIA</Tag>
@@ -2097,7 +2097,7 @@
 		<Italian>Carlo V</Italian>
 		<Spanish>Carlos I</Spanish>
 		<Polish>Karol V</Polish>
-		<Russian>Êàðë V</Russian>
+		<Russian>Карл V</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_LEADER_CHARLES_V_PEDIA</Tag>
@@ -2110,7 +2110,7 @@
 		<English>Chief Head Hunter</English>
 		<French>Chef des Réducteurs de Tête</French>
 		<Polish>W&#243;dz &#163;owca G&#179;&#243;w</Polish>
-		<Russian>Îõîòíèê çà ñêàëüïàìè</Russian>
+		<Russian>Главный охотник за головами</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_LEADER_CHIEF_HEAD_HUNTER_PEDIA</Tag>
@@ -2123,7 +2123,7 @@
 		<English>Cleopatra</English>
 		<French>Clèopatre</French>
 		<Polish>Kleopatra</Polish>
-		<Russian>Êëåîïàòðà</Russian>
+		<Russian>Клеопатра</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_LEADER_CLEOPATRA_PEDIA</Tag>
@@ -2134,7 +2134,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_LEADER_CUNHAMBEBE</Tag>
 		<English>Cunhambebe</English>
-		<Russian>Êóíõàìáåáå</Russian>
+		<Russian>Кунхамбебе</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_LEADER_CUNHAMBEBE_PEDIA</Tag>
@@ -2146,7 +2146,7 @@
 		<Tag>TXT_KEY_LEADER_DAVID</Tag>
 		<English>David</English>
 		<Italian>Davide</Italian>
-		<Russian>Äàâèä</Russian>
+		<Russian>Давид</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_LEADER_DAVID_PEDIA</Tag>
@@ -2156,7 +2156,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_LEADER_DE_WITT</Tag>
 		<English>Johan de Witt</English>
-		<Russian>ßí äå Âèòò</Russian>
+		<Russian>Ян де Витт</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_LEADER_DE_WITT_PEDIA</Tag>
@@ -2168,7 +2168,7 @@
 		<Tag>TXT_KEY_LEADER_DIDO</Tag>
 		<English>Dido</English>
 		<French>Didon</French>
-		<Russian>Äèäîíà</Russian>
+		<Russian>Дидона</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_LEADER_DIDO_PEDIA</Tag>
@@ -2179,7 +2179,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_LEADER_FRANCO</Tag>
 		<English>Francisco Franco</English>
-		<Russian>Ôðàíêî</Russian>
+		<Russian>Франсиско Франко</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_LEADER_FRANCO_PEDIA</Tag>
@@ -2210,7 +2210,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</Spanish>
-		<Russian>Àäðèàí</Russian>
+		<Russian>Адриан</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_LEADER_HADRIAN_PEDIA</Tag>
@@ -2221,7 +2221,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_LEADER_HARUN</Tag>
 		<English>Harun al-Rashid</English>
-		<Russian>Õàðóí àð-Ðàøèä</Russian>
+		<Russian>Харун ар-Рашид</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_LEADER_HARUN_PEDIA</Tag>
@@ -2232,7 +2232,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_LEADER_HEKE</Tag>
 		<English>Heke</English>
-		<Russian>Õåêå</Russian>
+		<Russian>Хеке</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_LEADER_HEKE_PEDIA</Tag>
@@ -2245,7 +2245,7 @@
 		<English>Henry VIII</English>
 		<Italian>Enrico VIII</Italian>
 		<Polish>Henryk VIII</Polish>
-		<Russian>Ãåíðèõ VIII</Russian>
+		<Russian>Генрих VIII</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_LEADER_HENRY_VIII_PEDIA</Tag>
@@ -2256,7 +2256,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_LEADER_HIAWATHA</Tag>
 		<English>Hiawatha</English>
-		<Russian>Ãàéàâàòà</Russian>
+		<Russian>Гайавата</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_LEADER_HIAWATHA_PEDIA</Tag>
@@ -2267,7 +2267,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_LEADER_HIROHITO</Tag>
 		<English>Hirohito</English>
-		<Russian>Õèðîõèòî</Russian>
+		<Russian>Хирохито</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_LEADER_HIROHITO_PEDIA</Tag>
@@ -2278,7 +2278,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_LEADER_HITLER</Tag>
 		<English>Hitler</English>
-		<Russian>Ãèòëåð</Russian>
+		<Russian>Гитлер</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_LEADER_HITLER_PEDIA</Tag>
@@ -2304,7 +2304,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</Polish>
-		<Russian>Ãåíðèõ Ìîðåïëàâàòåëü</Russian>
+		<Russian>Генрих Мореплаватель</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_LEADER_HTN_PEDIA</Tag>
@@ -2315,7 +2315,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_LEADER_ITZCOATL</Tag>
 		<English>Itzcoatl</English>
-		<Russian>Èöêîàòëü</Russian>
+		<Russian>Ицкоатль</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_LEADER_ITZCOATL_PEDIA</Tag>
@@ -2329,7 +2329,7 @@
 		<German>Ivan IV.</German>
 		<Spanish>Iván IV</Spanish>
 		<Polish>Iwan IV</Polish>
-		<Russian>Èâàí Ãðîçíûé</Russian>
+		<Russian>Иван Грозный</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_LEADER_IVAN_PEDIA</Tag>
@@ -2340,7 +2340,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_LEADER_JAYAVARMAN</Tag>
 		<English>Jayavarman VII</English>
-		<Russian>Äæàÿâàðìàí VII</Russian>
+		<Russian>Джаяварман VII</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_LEADER_JAYAVARMAN_PEDIA</Tag>
@@ -2355,7 +2355,7 @@
 		<German>Johanna von Orléans</German>
 		<Italian>Giovanna d'Arco</Italian>
 		<Polish>Joanna d'Arc</Polish>
-		<Russian>Æàííà ä'Àðê</Russian>
+		<Russian>Жанна д'Арк</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_LEADER_JOANOFARC_PEDIA</Tag>
@@ -2365,8 +2365,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_LEADER_KIM</Tag>
-		<English>Kim Jong Il</English>
-		<Russian>Êèì ×åí Èð</Russian>
+		<English>Kim Jong II</English>
+		<Russian>Ким Чен Ир</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_LEADER_KIM_PEDIA</Tag>
@@ -2377,7 +2377,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_LEADER_LENIN</Tag>
 		<English>Lenin</English>
-		<Russian>Ëåíèí</Russian>
+		<Russian>Ленин</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_LEADER_LENIN_PEDIA</Tag>
@@ -2408,7 +2408,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</Spanish>
-		<Russian>Ëåîíèä I</Russian>
+		<Russian>Леонид I</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_LEADER_LEONIDAS_PEDIA</Tag>
@@ -2419,7 +2419,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_LEADER_LOGAN</Tag>
 		<English>Logan</English>
-		<Russian>Ëîãàí</Russian>
+		<Russian>Логан</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_LEADER_LOGAN_PEDIA</Tag>
@@ -2434,7 +2434,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_LEADER_MEIJI</Tag>
 		<English>Meiji</English>
-		<Russian>Ìýéäçè</Russian>
+		<Russian>Мэйдзи</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_LEADER_MEIJI_PEDIA</Tag>
@@ -2450,7 +2450,7 @@
 		<Italian>Nabucodonosor II</Italian>
 		<Spanish>Nabucodonosor II</Spanish>
 		<Polish>Nabuchodonozor II</Polish>
-		<Russian>Íàâóõîäîíîñîð II</Russian>
+		<Russian>Навуходоносор II</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_LEADER_NEBUCHADREZZAR_PEDIA</Tag>
@@ -2463,7 +2463,7 @@
 		<English>Nefertiti</English>
 		<French>Néfertiti</French>
 		<Polish>Nefretete</Polish>
-		<Russian>Íåôåðòèòè</Russian>
+		<Russian>Нефертити</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_LEADER_NEFERTITI_PEDIA</Tag>
@@ -2475,7 +2475,7 @@
 		<Tag>TXT_KEY_LEADER_PACHACUTI</Tag>
 		<English>Pachacuti</English>
 		<French>Pachacutec</French>
-		<Russian>Ïà÷àêóòåê</Russian>
+		<Russian>Пачакутек</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_LEADER_PACHACUTI_PEDIA</Tag>
@@ -2486,7 +2486,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_LEADER_PEDRO_II</Tag>
 		<English>Dom Pedro II</English>
-		<Russian>Ïåäðó II</Russian>
+		<Russian>Педру II</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_LEADER_PEDRO_II_PEDIA</Tag>
@@ -2498,7 +2498,7 @@
 		<Tag>TXT_KEY_LEADER_PHILIP_II</Tag>
 		<English>Philip II</English>
 		<Polish>Filip II</Polish>
-		<Russian>Ôèëèïï II</Russian>
+		<Russian>Филипп II</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_LEADER_PHILIP_II_PEDIA</Tag>
@@ -2509,7 +2509,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_LEADER_RICHELIEU</Tag>
 		<English>Richelieu</English>
-		<Russian>Ðèøåëüå</Russian>
+		<Russian>Ришелье</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_LEADER_RICHELIEU_PEDIA</Tag>
@@ -2520,7 +2520,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_LEADER_SEJONG</Tag>
 		<English>Sejong</English>
-		<Russian>Ñå÷æîí</Russian>
+		<Russian>Седжон</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_LEADER_SEJONG_PEDIA</Tag>
@@ -2533,7 +2533,7 @@
 		<Tag>TXT_KEY_LEADER_SENNACHERIB</Tag>
 		<English>Sennacherib</English>
 		<Polish>Sennacheryb</Polish>
-		<Russian>Ñèíàõõåðèá</Russian>
+		<Russian>Синаххериб</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_LEADER_SENNACHERIB_PEDIA</Tag>
@@ -2546,7 +2546,7 @@
 		<English>Smoke Jaguar</English>
 		<French>Jaguar Nébuleux</French>
 		<Polish>Dymi&#185;cy Jaguar</Polish>
-		<Russian>Äûì÷àòûé ßãóàð</Russian>
+		<Russian>Как-Ути-Виц-Кавиль</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_LEADER_SMOKE_JAGUAR_PEDIA</Tag>
@@ -2561,7 +2561,7 @@
 		<German>Salomo</German>
 		<Italian>Salomone</Italian>
 		<Spanish>Salomón</Spanish>
-		<Russian>Ñîëîìîí</Russian>
+		<Russian>Соломон</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_LEADER_SOLOMON_PEDIA</Tag>
@@ -2571,7 +2571,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_LEADER_TAIZONG</Tag>
 		<English>Taizong</English>
-		<Russian>Òàéöçóí</Russian>
+		<Russian>Тай-цзун</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_LEADER_TAIZONG_PEDIA</Tag>
@@ -2584,7 +2584,7 @@
 		<English>Theodora</English>
 		<French>Théodora</French>
 		<Polish>Teodora</Polish>
-		<Russian>Ôåîäîðà</Russian>
+		<Russian>Феодора</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_LEADER_THEODORA_PEDIA</Tag>
@@ -2608,19 +2608,19 @@
 	<TEXT>
 		<Tag>TXT_KEY_LEADER_WRUB</Tag>
 		<English>Wrub</English>
-		<Russian>Ãðóá</Russian>
+		<Russian>Груб</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_LEADER_WRUB_PEDIA</Tag>
 		<English>Wrub sounds good for a Neanderthal leader, as, obviously, there are no records for any.</English>
 		<Spanish>No suena mal Wrub como lider Neandertal, menos aún cuando no se puede decir nada en contra.</Spanish>
 		<Polish>Wrub to przypuszczalny w&#243;dz neandertalczyk&#243;w.</Polish>
-		<Russian>Ãðóá çâó÷èò íåïëîõî äëÿ ëèäåðà íåàíäåðòàëüöà,âåäü, ÷òî î÷åâèäíî, î íåì íåò íèêàêèõ çàïèñåé.</Russian>
+		<Russian>Груб - звучит неплохо для лидера-неандертальца, ведь очевидно, что никаких записей о нем не существует.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_LEADER_WU</Tag>
 		<English>Wu</English>
-		<Russian>Ó Öçýòÿíü</Russian>
+		<Russian>У Цзэтянь</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_LEADER_WU_PEDIA</Tag>
@@ -2632,7 +2632,7 @@
 		<Tag>TXT_KEY_LEADER_YAGAN</Tag>
 		<English>Yagan</English>
 		<Polish>Jagan</Polish>
-		<Russian>ßãàí</Russian>
+		<Russian>Яган</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_LEADER_YAGAN_PEDIA</Tag>
@@ -2644,7 +2644,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_LEADER_YUNUPINGU</Tag>
 		<English>Yunupingu</English>
-		<Russian>Þíóïèíãó</Russian>
+		<Russian>Юнупингу</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_LEADER_YUNUPINGU_PEDIA</Tag>

@@ -1059,7 +1059,7 @@
 		<Italian>[NEWLINE]L'unità ricerca e distrugge i miglioramenti nemici.</Italian>
 		<Spanish>Envía a la unidad a encontrar y destrozar mejoras de terreno enemigas.</Spanish>
 		<Polish>Wy&#156;lij jednostk&#234; do wyszukania oraz zniszczenia wrogich ulepsze&#241;</Polish>
-		<Russian>Ïîñëàòü þíèò èñêàòü è ðàçðóøàòü óñîâåðøåíñòâîâàíèÿ âðàãà</Russian>
+		<Russian>Отправить подразделение искать и разрушать улучшения врага</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_ACTION_AUTOMATE_PIRATE</Tag>
@@ -8373,7 +8373,7 @@
 		<Italian>%d1%: da Accordi di libero mercato</Italian>
 		<Spanish>%d1%: por Acuerdo de Libre Comercio</Spanish>
 		<Polish>%d1%: z Wolnych Um&#243;w Handlowych</Polish>
-		<Russian>%d1%: Èç ñîãëàøåíèÿ î ñâîáîäíîé òîðãîâëå</Russian>
+		<Russian>%d1%: Из соглашения о свободной торговле</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_FREE_UNITS</Tag>
@@ -8397,7 +8397,7 @@
 		<French>L'une des vitesses de jeu les plus rapides disponibles, idéale pour les tests et pour le joueur impatient.</French>
 		<German>Eine der schnellsten verfügbaren Spielgeschwindigkeiten, gut geeignet für Testläufe und ungeduldige Spieler.</German>
 		<Italian>Una delle velocità di gioco più elevate, ideale per le test run e per i giocatori più impazienti</Italian>
-		<Russian>Одна из самых высоких игровых скоростей. Удобна для тестовых запусков и нетерпеливых игроков.</Russian>
+		<Russian>Одна из самых высоких скоростей игры. Удобна для тестовых запусков и нетерпеливых игроков.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMESPEED_EONS</Tag>
@@ -8562,8 +8562,8 @@
 		<English>The fastest speed. Designed for testing purposes only.</English>
 		<French>La vitesse la plus rapide. Conçu à des fins de test uniquement.</French>
 		<German>Diese absolut höchste Spielgeschwindigkeit ist nur für Testzwecke gedacht.</German>
-		<Russian>Самая высокая скорость. Предназначена только для тестирования.</Russian>
 		<Italian>La velocità di gioco più veloce (pensata solo per eseguire test)</Italian>
+		<Russian>Самая высокая скорость. Предназначена только для тестирования.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAME_END_SCREEN_TITLE</Tag>
@@ -8571,6 +8571,7 @@
 		<French>Votre place dans l'histoire</French>
 		<German>Euer Platz in der Geschichte</German>
 		<Italian>Il tuo posto nella storia</Italian>
+		<Russian>Ваше место в истории</Russian>
 		<Spanish>Tu lugar en la Historia</Spanish>
 	</TEXT>
 	<TEXT>
@@ -8832,7 +8833,7 @@
 		<German>Hohes Geländedetails</German>
 		<Italian>Dettaglio alto del terreno</Italian>
 		<Spanish>Detalle del terreno alto</Spanish>
-		<Russian>Высокодетализированная поверхность</Russian>
+		<Russian>Высокодетальный ландшафт</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GRAPHICOPTION_HIRES_TERRAIN_HELP</Tag>
@@ -8841,7 +8842,7 @@
 		<German>Es werden hohes Geländedetails verwendet</German>
 		<Italian>[BOLD]Verrà utilizzato un [COLOR_HIGHLIGHT_TEXT]dettaglio alto[COLOR_REVERT] del terreno[\BOLD]</Italian>
 		<Spanish>Se usará un nivel de detalle del terreno más alto</Spanish>
-		<Russian>Будет использоваться более детализированная поверхность</Russian>
+		<Russian>Будет использоваться более детализированный ландшафт</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GRAPHICOPTION_LOWRES_TEXTURES</Tag>
@@ -8984,7 +8985,7 @@
 		<German>Ha ha ha! Viel Glück, Wurm!</German>
 		<Italian>Muhahaha! Buona fortuna, ne avrai bisogno!</Italian>
 		<Spanish>¡Jaaaaaaajajajajajá! ¡Buena suerte, infeliz!</Spanish>
-		<Russian>Ну... удачи, приятель</Russian>
+		<Russian>Ну... удачи вам</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HANDICAP_EMPEROR</Tag>
@@ -9055,7 +9056,7 @@
 		<English>MUAHAHAHAHA! Survive this!</English>
 		<French>MOUAHAHAHAHA! Essayez de Survivre à cela !</French>
 		<Italian>MUAHAHAHAHA! Prova a sopravvivere se ci riesci!</Italian>
-		<Russian>Докажи, что ты превыше любого бога!</Russian>
+		<Russian>Докажите, что вы превыше любого бога!</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HANDICAP_NOBLE</Tag>
@@ -10657,6 +10658,7 @@
 		<French>%s1_leader des %s2_civ_short_name</French>
 		<German>%s1_leader von %s2_civ_short_name</German>
 		<Italian>%s1_leader leader della %s2:2_civ_short_name</Italian> <!-- victory info screen -->
+		<Russian>%s1_leader из %s2_civ_short_name</Russian>
 		<Spanish>%s1_leader de %s2_civ_short_name</Spanish>
 	</TEXT>
 	<TEXT>
@@ -19129,7 +19131,7 @@
 		<German>Umgebungslautstärke</German>
 		<Italian>Ambiente</Italian>
 		<Spanish>Volumen del sonido ambiental</Spanish>
-		<Russian>Громкость окружения</Russian>
+		<Russian>Окружение</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_OPTIONS_ANTIALIAS</Tag>
@@ -19218,7 +19220,7 @@
 		<German>Eigener Musikordner</German>
 		<Italian>Cartella musica personale</Italian>
 		<Spanish>Carpeta de música personalizada</Spanish>
-		<Russian>Пользовательская папка с музыкой</Russian>
+		<Russian>Сторонняя музыка</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_OPTIONS_DELETED_PROFILE</Tag>
@@ -19245,7 +19247,7 @@
 		<German>Soundlautstärke</German>
 		<Italian>Effetti sonori</Italian>
 		<Spanish>Volumen de los efectos de sonido</Spanish>
-		<Russian>Громкость эффектов</Russian>
+		<Russian>Эффекты</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_OPTIONS_GAME</Tag>
@@ -19281,7 +19283,7 @@
 		<German>Interfacelautstärke</German>
 		<Italian>Interfaccia</Italian>
 		<Spanish>Volumen de la interfaz</Spanish>
-		<Russian>Громкость интерфейса</Russian>
+		<Russian>Интерфейс</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_OPTIONS_LOADED_PROFILE</Tag>
@@ -19333,7 +19335,7 @@
 		<German>Musiklautstärke</German>
 		<Italian>Musica</Italian>
 		<Spanish>Volumen de la música</Spanish>
-		<Russian>Громкость музыки</Russian>
+		<Russian>Музыка</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_OPTIONS_NEED_TO_RESTART</Tag>
@@ -19508,7 +19510,7 @@
 		<German>Sprachlautstärke</German>
 		<Italian>Dialoghi</Italian>
 		<Spanish>Volumen de los diálogos</Spanish>
-		<Russian>Громкость речи</Russian>
+		<Russian>Речь</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_OPTIONS_VOICE</Tag>
@@ -20365,7 +20367,7 @@
 		<German>Schneller Kampf (Offensive)</German>
 		<Italian>Combattimento rapido (Offensivo)</Italian>
 		<Spanish>Combate rápido (ataque)</Spanish>
-		<Russian>Ускоренные битвы (нападения)</Russian>
+		<Russian>Ускоренные битвы (атака)</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PLAYER_OPTION_QUICK_COMBAT_OFFENSE_HELP</Tag>
@@ -20420,7 +20422,7 @@
 		<German>Feindliche Bewegungen zeigen</German>
 		<Italian>Mostra movimenti unità nemiche</Italian>
 		<Spanish>Mostrar movimientos de enemigos</Spanish>
-		<Russian>Показывать перемещения противников</Russian>
+		<Russian>Показывать перемещения врагов</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PLAYER_OPTION_SHOW_ENEMY_MOVES_HELP</Tag>
@@ -20429,7 +20431,7 @@
 		<German>Fortbewegung feindlicher Einheiten zwischen den Runden anzeigen</German>
 		<Italian>[BOLD]Mostra le [COLOR_HIGHLIGHT_TEXT]azioni delle unità nemiche[COLOR_REVERT] tra un turno e l'altro[\BOLD]</Italian>
 		<Spanish>Muestra los movimientos de las unidades enemigas entre turno y turno.</Spanish>
-		<Russian>Показывать перемещения вражеских подразделений между ходами игрока</Russian>
+		<Russian>Показывать перемещения подразделений противников между вашими ходами</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PLAYER_OPTION_SHOW_FRIENDLY_MOVES</Tag>
@@ -20447,7 +20449,7 @@
 		<German>Fortbewegung freundlicher Einheiten zwischen den Runden anzeigen</German>
 		<Italian>[BOLD]Mostra le [COLOR_HIGHLIGHT_TEXT]azioni delle unità amiche[COLOR_REVERT] tra un turno e l'altro[\BOLD]</Italian>
 		<Spanish>Muestra los movimientos de las unidades amistosas entre turno y turno.</Spanish>
-		<Russian>Показывать перемещения подразделений союзников между ходами игрока</Russian>
+		<Russian>Показывать перемещения подразделений союзников между вашими ходами</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PLAYER_OPTION_SHOW_HEALTH_BARS</Tag>
@@ -20483,7 +20485,7 @@
 		<German>Alle gewählten Einheiten greifen in schneller Folge nacheinander an (Hinweis: Diese Einstellung bezieht sich ausschließlich auf die Darstellung auf der Karte - die zugrunde liegenden Kampfeinstellungen bleiben unverändert)</German>
 		<Italian>[BOLD]Tutte le unità selezionate attaccheranno in [COLOR_HIGHLIGHT_TEXT]rapida successione[COLOR_REVERT] (è solo una comodità in termini di interfaccia, la [COLOR_HIGHLIGHT_TEXT]meccanica[COLOR_REVERT] di gioco resta invariata)[\BOLD]</Italian>
 		<Spanish>Todas las unidades seleccionadas atacarán en rápida sucesión (nota: esto se hace solamente a conveniencia de la interfaz, no tiene efecto alguno en la mecánica de combate subyacente).</Spanish>
-		<Russian>Все выбранные юниты будут атаковать в быстрой последовательности (примечание: это чисто интерфейсное удобство - основная механика боя останется неизменной)</Russian>
+		<Russian>Все выбранные подразделения будут атаковать в быстрой последовательности (чисто интерфейсное удобство - основная механика боя останется неизменной)</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PLAYER_OPTION_WAIT_AT_END_OF_TURN</Tag>
@@ -26412,7 +26414,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 			<Plural>0</Plural>
 		</Spanish>
 		<Polish>Zaratusztrianizm</Polish>
-		<Russian>Çîðîàñòðèçì</Russian>
+		<Russian>Зороастризм</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_ZOROASTRIANISM_ADJECTIVE</Tag>
@@ -26426,7 +26428,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 			<Plural>0:0:1:1</Plural>
 		</Spanish>
 		<Polish>Zaratustria&#241;ski</Polish>
-		<Russian>Çîðîàñòðèåö</Russian>
+		<Russian>Зороастриец</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_ZOROASTRIANISM_PEDIA</Tag>

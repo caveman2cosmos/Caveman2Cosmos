@@ -534,7 +534,7 @@
 		<Italian>Leader e civiltà verranno scelti casualmente.</Italian>
 		<Spanish>La civilización y el líder se elegirán al azar.</Spanish>
 		<Polish>Cywilizacja oraz przyw&#243;dca zostan&#185; wybrani losowo.</Polish>
-		<Russian>Цивилизация и предводитель будут выбраны случайно.</Russian>
+		<Russian>Цивилизация и лидер будут выбраны случайно.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIV_SELECT_RANDOM_LEADER</Tag>
@@ -544,7 +544,7 @@
 		<Italian>Il leader verrà scelto casualmente.</Italian>
 		<Spanish>El líder se elegirá al azar.</Spanish>
 		<Polish>Przyw&#243;dca zostanie wybrany losowo.</Polish>
-		<Russian>Предводитель будет выбран случайно.</Russian>
+		<Russian>Лидер будет выбран случайно.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_COMBAT_MESSAGE_LOG</Tag>
@@ -1639,7 +1639,7 @@
 		<Italian>Descrizione del leader</Italian>
 		<Spanish>Descripción del líder</Spanish>
 		<Polish>Opis przyw&#243;dcy</Polish>
-		<Russian>Описание предводителя</Russian>
+		<Russian>Описание лидера</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_LOADSAVE_ALL_FILES</Tag>
@@ -1818,7 +1818,7 @@
 		<Italian>Informazioni su Civ 4</Italian>
 		<Spanish>Acerca de Civilization IV</Spanish>
 		<Polish>Informacje o Cywilizacji 4</Polish>
-		<Russian>Об игре "Цивилизация IV"</Russian>
+		<Russian>Информация об Civilization IV</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MAIN_MENU_ABOUT_THIS_BUILD</Tag>
@@ -1868,7 +1868,7 @@
 		<Italian>IA</Italian>
 		<Spanish>IA</Spanish>
 		<Polish>SI</Polish>
-		<Russian>ИИ</Russian>
+		<Russian>Компьютер</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MAIN_MENU_ALREADY_PATCHING_DESC</Tag>
@@ -1942,7 +1942,7 @@
 		<Italian>Scegli un file da caricare</Italian>
 		<Spanish>Elegir la partida a cargar</Spanish>
 		<Polish>WCZYTAJ ZAPISAN&#165; GR&#202;</Polish>
-		<Russian>Выберите игру для загрузки</Russian>
+		<Russian>Выберите сохранение</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MAIN_MENU_CIVILOPEDIA</Tag>
@@ -1978,7 +1978,7 @@
 		<Italian>Versione di Civ:</Italian>
 		<Spanish>Versión de Civilization:</Spanish>
 		<Polish>Wersja Cywilizacji:</Polish>
-		<Russian>Версия Цивилизации:</Russian>
+		<Russian>Версия игры:</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MAIN_MENU_CLOSED</Tag>
@@ -2013,7 +2013,7 @@
 		<Italian>Crea una partita</Italian>
 		<Spanish>Crear una partida</Spanish>
 		<Polish>STW&#211;RZ NOW&#165; GR&#202;!</Polish>
-		<Russian>Создать игру!</Russian>
+		<Russian>Создать игру</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MAIN_MENU_CREDITS</Tag>
@@ -2150,7 +2150,7 @@
 		<Italian>Indietro</Italian>
 		<Spanish>Volver</Spanish>
 		<Polish>WR&#211;&#198;</Polish>
-		<Russian>Вернуться</Russian>
+		<Russian>Назад</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MAIN_MENU_HALL_OF_FAME</Tag>
@@ -2289,7 +2289,7 @@
 		<Italian>LEADER</Italian>
 		<Spanish>LÍDERES</Spanish>
 		<Polish>PRZYW&#211;DCY</Polish>
-		<Russian>ПРЕДВОДИТЕЛИ</Russian>
+		<Russian>ЛИДЕРЫ</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MAIN_MENU_LOADSAVE_CANCEL</Tag>
@@ -2369,7 +2369,7 @@
 		<Italian>Seleziona una cartella</Italian>
 		<Spanish>Escoge una carpeta</Spanish>
 		<Polish>Wybierz folder</Polish>
-		<Russian>Пожалуйста, выберите папку</Russian>
+		<Russian>Выберите папку</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MAIN_MENU_LOADSAVE_SIZE</Tag>
@@ -2655,7 +2655,7 @@
 		<Italian>%s1_leader è stato scelto da più di un giocatore. Tutti i giocatori devono scegliere un unico leader per giocare anonimamente.</Italian>
 		<Spanish>%s1_leader ha sido elegido por más de un jugador. Se deben escoger nombres únicos de líderes para permanecer en el anonimato.</Spanish>
 		<Polish>%s1_leader zosta&#179;/a wybrany/a przez wi&#234;cej ni&#191; jednego gracza. Ka&#191;dy z graczy musi wybra&#230; unikatowego przyw&#243;dc&#234; dla anonimowej gry.</Polish>
-		<Russian>%s1_leader выбран более чем одним игроком. Всем необходимо взять уникального предводителя для анонимной игры.</Russian>
+		<Russian>%s1_leader выбран более чем одним игроком. Для анонимной игры каждому необходим уникальный лидер.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MAIN_MENU_NOT_UNIQUE_TITLE</Tag>
@@ -2665,7 +2665,7 @@
 		<Italian>Nomi leader duplicati</Italian>
 		<Spanish>Duplicar nombres de líderes</Spanish>
 		<Polish>Duplikat imion przyw&#243;dc&#243;w</Polish>
-		<Russian>Имя предводителя дублируется</Russian>
+		<Russian>Имя лидера повторяется</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MAIN_MENU_NO_AVAILABLE_CIV_DESC</Tag>
@@ -2899,7 +2899,7 @@
 		<Italian>Casuale</Italian>
 		<Spanish>Al azar</Spanish>
 		<Polish>Losowy/a</Polish>
-		<Russian>Случайный</Russian>
+		<Russian>По воле случая</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MAIN_MENU_RANDOM_DESC</Tag>
@@ -2909,7 +2909,7 @@
 		<Italian>Il tuo leader verrà scelto casualmente.</Italian>
 		<Spanish>Tu líder se elegirá al azar.</Spanish>
 		<Polish>Tw&#243;j przyw&#243;dca zostanie wybrany losowo.</Polish>
-		<Russian>Предводитель будет выбран случайным образом.</Russian>
+		<Russian>Лидер будет выбран случайным образом.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MAIN_MENU_RANDOM_TOOLTIP</Tag>
@@ -3589,7 +3589,7 @@
 		<Italian>Nome giocatore:</Italian>
 		<Spanish>Nombre del líder:</Spanish>
 		<Polish>Imi&#234; przyw&#243;dcy:</Polish>
-		<Russian>Имя предводителя:</Russian>
+		<Russian>Имя лидера:</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MENU_LEADER_TYPE</Tag>
@@ -3599,7 +3599,7 @@
 		<Italian>Personaggio leader:</Italian>
 		<Spanish>Tipo de líder:</Spanish>
 		<Polish>Rodzaj przyw&#243;dcy:</Polish>
-		<Russian>Тип предводителя:</Russian>
+		<Russian>Тип лидера:</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MENU_MAP</Tag>
@@ -3639,7 +3639,7 @@
 		<Italian>Velocità:</Italian>
 		<Spanish>Velocidad:</Spanish>
 		<Polish>Szybko&#156;&#230;:</Polish>
-		<Russian>Продолжительность:</Russian>
+		<Russian>Длительность:</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MENU_YOUR_DETAILS</Tag>
@@ -3659,7 +3659,7 @@
 		<Italian>Avevi qualcosa da fare? Sono le %s1_TimeStr</Italian>
 		<Spanish>¡RIIIIIIIIING! Hora: %s1_TimeStr.</Spanish>
 		<Polish>Dzy&#241;! Dzy&#241;! Czas: %s1_TimeStr.</Polish>
-		<Russian>ВНИМАНИЕ! Настало %s1_TimeStr.</Russian>
+		<Russian>ВНИМАНИЕ! Время %s1_TimeStr.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISC_ALARM_WILL_GO_OFF</Tag>
