@@ -2961,6 +2961,7 @@
 		<German>Für Namensänderung anklicken</German>
 		<Italian>Clicca per cambiare il nome della città</Italian> <!-- city screen hover on city name -->
 		<Spanish>Haz clic para cambiar el nombre</Spanish>
+		<Russian>Нажмите, чтобы изменить название</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CHANGE_PRODUCTION</Tag>
@@ -2969,6 +2970,7 @@
 		<German>Produktion ändern</German>
 		<Italian>Cambia produzione</Italian>
 		<Spanish>Cambiar producción</Spanish>
+		<Russian>Изменить производство</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CHEATERS_NEVER_PROSPER</Tag>
@@ -2978,7 +2980,7 @@
 		<Italian>[COLOR_NEGATIVE_TEXT]Hai già scelto la/e tecnologia/e gratuita/e [COLOR_REVERT]</Italian>
 		<Spanish>[COLOR_NEGATIVE_TEXT]Ya has escogido tu(s) tecnología(s) gratis[COLOR_REVERT]</Spanish>
 		<Polish>[COLOR_NEGATIVE_TEXT]Ju&#191; wybra&#179;e&#156; swoje darmowe technologie[COLOR_REVERT]</Polish>
-		<Russian>[COLOR_NEGATIVE_TEXT]Âû óæå âûáðàëè âàøó ñâîáîäíóþ òåõíîëîãèþ(è)[COLOR_REVERT]</Russian>
+		<Russian>[COLOR_NEGATIVE_TEXT]Вы уже выбрали бесплатные технологии[COLOR_REVERT]</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CHOOSE_ESPIONAGE_MISSION</Tag>
@@ -3250,6 +3252,7 @@
 		<French>Fondation de : %s1</French>
 		<German>Gegründet: %s1</German>
 		<Italian>Fondata nel [COLOR_HIGHLIGHT_TEXT]%s1[COLOR_REVERT]</Italian> <!-- city screen hover city name -->
+		<Russian>Основан в %s1</Russian>
 		<Spanish>Fundada: %s1</Spanish>
 	</TEXT>
 	<TEXT>
@@ -4510,6 +4513,7 @@
 		<German>Einheit auflösen</German>
 		<Italian>Elimina unità</Italian>
 		<Spanish>Borrar la unidad</Spanish>
+		<Russian>Удалить подразделение</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_COMMAND_DELETE_HELP</Tag>
@@ -4518,6 +4522,7 @@
 		<German>Klicken Sie hier, um die Einheit aus dem Spiel zu entfernen.</German>
 		<Italian>[NEWLINE]Rimuovi l'unità dalla partita</Italian>
 		<Spanish>Hacer clic en esta orden para eliminar a la unidad de la partida.</Spanish>
+		<Russian>Нажмите, чтобы убрать подразделение из игры.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_COMMAND_GIFT</Tag>
@@ -8985,7 +8990,7 @@
 		<German>Ha ha ha! Viel Glück, Wurm!</German>
 		<Italian>Muhahaha! Buona fortuna, ne avrai bisogno!</Italian>
 		<Spanish>¡Jaaaaaaajajajajajá! ¡Buena suerte, infeliz!</Spanish>
-		<Russian>Ну... удачи вам</Russian>
+		<Russian>Ну... удачи вам.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HANDICAP_EMPEROR</Tag>
@@ -13298,6 +13303,7 @@
 		<French>[ICON_BULLET]Construction possible de : [COLOR_BUILDING_TEXT]%s1_BldgName[COLOR_REVERT]</French>
 		<German>[ICON_BULLET]Ermöglicht Bau von: [COLOR_BUILDING_TEXT]%s1_BldgName[COLOR_REVERT]</German>
 		<Italian>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Permette di costruire[COLOR_REVERT] tutti gli edifici di tipo: [COLOR_BUILDING_TEXT]%s1_BldgName[COLOR_REVERT]</Italian> <!--tech Oral tradition, Sedentary LifeStyle pedia -->
+		<Russian>[ICON_BULLET]Позволит построить [COLOR_BUILDING_TEXT]%s1_BldgName[COLOR_REVERT]</Russian>
 		<Spanish>[ICON_BULLET]Se pueden construir [COLOR_BUILDING_TEXT]%s1:2_BldgName[COLOR_REVERT]</Spanish>
 	</TEXT>
 	<TEXT>
@@ -13307,6 +13313,7 @@
 		<German>Kapitulation</German>
 		<Italian>Capitolazione</Italian>
 		<Spanish>Capitulación</Spanish>
+		<Russian>Капитуляция</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISC_CAPITULATE_AGREEMENT</Tag>
@@ -14088,6 +14095,7 @@
 		<French>Distance du palais</French>
 		<German>Entfernung zum Palast</German>
 		<Italian>Distanza dal palazzo</Italian>
+		<Russian>Расстояние от дворца</Russian>
 		<Spanish>Lejanía con palacio</Spanish>
 	</TEXT>
 	<TEXT>
@@ -14098,7 +14106,7 @@
 		<Italian>Ambasciata</Italian>
 		<Spanish>Embajada</Spanish>
 		<Polish>Ambasada</Polish>
-		<Russian>Ïîñîëüñòâî</Russian>
+		<Russian>Посольство</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISC_EMPIRE_SPLIT</Tag>
@@ -14114,6 +14122,7 @@
 		<French>[ICON_BULLET]Permet[SPACE]:[SPACE]</French>
 		<German>[ICON_BULLET]ermöglicht:[SPACE]</German>
 		<Italian>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Abilita [COLOR_REVERT]l'uso di[SPACE]</Italian> <!--tech Cave Dwelling pedia and hover (civics, promotions)-->
+		<Russian>[ICON_BULLET]Разблокирует[SPACE]</Russian>
 		<Spanish>[ICON_BULLET]Permite[SPACE]</Spanish>
 	</TEXT>
 	<TEXT>
@@ -14692,6 +14701,7 @@
 		<French>%D1_Change[ICON_HEALTHY] (niveau de difficulté)</French>
 		<German>%D1_Change[ICON_HEALTHY] durch Schwierigkeitsgrad</German>
 		<Italian>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]%D1_Change[COLOR_REVERT] [ICON_HEALTHY] dal livello di difficoltà</Italian> <!-- city screen health panel hover -->
+		<Russian>%D1_Change[ICON_HEALTHY] от уровня сложности</Russian>
 		<Spanish>%D1_Change [ICON_HEALTHY] por nivel de dificultad</Spanish>
 	</TEXT>
 	<TEXT>
@@ -14839,7 +14849,7 @@
 		<English>%D1_Change[ICON_HEALTHY] from Fresh Water</English>
 		<French>%D1_Change[ICON_HEALTHY] (eau douce)</French>
 		<German>%D1_Change[ICON_HEALTHY] durch Süßwasser</German>
-		<Italian>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]%D1_Change[COLOR_REVERT] [ICON_HEALTHY] dall'acqua dolce</Italian> <!-- city screen health panel hover --> 
+		<Italian>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]%D1_Change[COLOR_REVERT] [ICON_HEALTHY] dall'acqua dolce</Italian> <!-- city screen health panel hover -->
 		<Spanish>%D1_Change [ICON_HEALTHY] por agua dulce</Spanish>
 	</TEXT>
 	<TEXT>
@@ -14847,7 +14857,8 @@
 		<English>%D1_Change[ICON_UNHEALTHY] from Difficulty Level</English>
 		<French>%D1_Change[ICON_UNHEALTHY] (niveau de difficulté)</French>
 		<German>%D1_Change[ICON_UNHEALTHY] durch Schwierigkeitsgrad</German>
-		<Italian>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]%D1_Change[COLOR_REVERT] [ICON_UNHEALTHY] dal livello di difficoltà</Italian> <!-- city screen health panel hover --> 
+		<Italian>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]%D1_Change[COLOR_REVERT] [ICON_UNHEALTHY] dal livello di difficoltà</Italian> <!-- city screen health panel hover -->
+		<Russian>%D1_Change[ICON_UNHEALTHY] от уровня сложности</Russian>
 		<Spanish>%D1_Change [ICON_UNHEALTHY] por nivel de dificultad</Spanish>
 	</TEXT>
 	<TEXT>
@@ -15336,6 +15347,7 @@
 		<French>[NEWLINE][ICON_BULLET]Mène vers :[SPACE]</French>
 		<German>[NEWLINE][ICON_BULLET]Führt zu:[SPACE]</German>
 		<Italian>[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Conduce[COLOR_HIGHLIGHT_TEXT] alle tecnologie:[SPACE]</Italian> <!--any tech hover -->
+		<Russian>[NEWLINE][ICON_BULLET]Откроет для изучения[SPACE]</Russian>
 		<Spanish>[NEWLINE][ICON_BULLET]Lleva a[SPACE]</Spanish>
 	</TEXT>
 	<TEXT>
@@ -15346,7 +15358,7 @@
 		<Italian>Diritto di passaggio</Italian>
 		<Spanish>Derecho de paso</Spanish>
 		<Polish>Prawo przej&#156;cia</Polish>
-		<Russian>Ïðàâî ïðîõîäà</Russian>
+		<Russian>Право прохода</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISC_LOCAL_REPEL_HOVER</Tag>
@@ -19914,7 +19926,8 @@
 		<English>Leads To</English>
 		<French>Mène à :</French>
 		<German>Führt zu</German>
-		<Italian>Conduce a</Italian> 
+		<Italian>Conduce a</Italian>
+		<Russian>Откроет для изучения</Russian>
 		<Spanish>Lleva a</Spanish>
 	</TEXT>
 	<TEXT>
@@ -28143,6 +28156,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<French>[ICON_BULLET]Peut construire :[SPACE]</French>
 		<German>[ICON_BULLET]Ermöglicht Bau von:[SPACE]</German>
 		<Italian>[ICON_BULLET]Permette la [COLOR_HIGHLIGHT_TEXT]costruzione[COLOR_REVERT] di[SPACE]</Italian> <!-- unit Storyteller -->
+		<Russian>[ICON_BULLET]Позволит построить[SPACE]</Russian>
 		<Spanish>[ICON_BULLET]Puede erigir[SPACE]</Spanish>
 	</TEXT>
 	<TEXT>
@@ -30142,7 +30156,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Italian>Hai completato %s1</Italian>
 		<Spanish>Habéis completado %s1</Spanish>
 		<Polish>Sko&#241;czy&#179;e&#156; %s1</Polish>
-		<Russian>Âû ïîñòðîèëè %s1.</Russian>
+		<Russian>Вы построили чудо: %s1</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_WORLD_BUILDER</Tag>
@@ -30176,7 +30190,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 			<Plural>0</Plural>
 		</Spanish>
 		<Polish>Najmniejszy</Polish>
-		<Russian>Äóýëü</Russian>
+		<Russian>XXS</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_WORLD_GIANT</Tag>
@@ -30186,7 +30200,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Italian>Gigante</Italian>
 		<Spanish>Gigante</Spanish>
 		<Polish>Olbrzymia</Polish>
-		<Russian>Ãèãàíòñêèé</Russian>
+		<Russian>XH</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_WORLD_GIGANTIC</Tag>
@@ -30196,7 +30210,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Italian>Gigantesca</Italian>
 		<Spanish>Gigantesco</Spanish>
 		<Polish>Gigantyczna</Polish>
-		<Russian>Èñïîëèíñêèé</Russian>
+		<Russian>G</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_WORLD_HUGE</Tag>
@@ -30222,7 +30236,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 			<Plural>0</Plural>
 		</Spanish>
 		<Polish>Wielki</Polish>
-		<Russian>Îãðîìíûé</Russian>
+		<Russian>H</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_WORLD_LARGE</Tag>
@@ -30248,7 +30262,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 			<Plural>0</Plural>
 		</Spanish>
 		<Polish>Du&#191;y</Polish>
-		<Russian>Áîëüøîé</Russian>
+		<Russian>L</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_WORLD_NAPALM_1</Tag>
@@ -30258,7 +30272,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Italian>I governi dei vari stati del mondo hanno reagito con disappunto alla notizia che gli aerei d'attacco %s1:3_civ_adjective saranno equipaggiati con bombe incendiarie al napalm.</Italian>
 		<Spanish>Los gobiernos del mundo han reaccionado con desagrado a las informaciones que indican que la primera línea de ataque de la aviación %s1:2_civ_adjective será equipada con bombas incendiarias de napalm.</Spanish>
 		<Polish>&#140;wiatowe rz&#185;dy zareagowa&#179;y bardzo niech&#234;tnie na wie&#156;&#230; o tym, &#191;e samoloty szturmowe %s1_civ_adjective zostan&#185; uzbrojone w bomby z napalmem.</Polish>
-		<Russian>Ìèðîâîå ñîîáùåñòâî âûðàçèëî ñâîå íåäîâîëüñòâî ïî ïîâîäó íîâîñòåé î %s1_civ_adjective àâèàóäàðå íàíåñåííûì ñàìîëåòîì ñíàðÿæåííûì çàæèãàòåëüíûìè íàïàëìîâûìè áîìáàìè.</Russian>
+		<Russian>%s1_civ_adjective самолеты будут оснащены зажигательными напалмовыми бомбами - мировые правительства выразили свое недовольство по этому поводу.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_WORLD_NAPALM_2</Tag>
@@ -30268,7 +30282,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Italian>La nazione %s1:2_civ_adjective nega le voci secondo cui sta ricercando una bomba incendiaria migliorata per le proprie forze aeree.</Italian>
 		<Spanish>La nación %s1:2_civ_adjective niega los informes que indican que está investigando una bomba incendiaria mejorada para sus fuerzas aéreas.</Spanish>
 		<Polish>Nar&#243;d %s1_civ_adjective zaprzecza pog&#179;oskom jakoby opracowywa&#179; udoskonalon&#185; wersj&#234; bomb dla samolot&#243;w szturmowych.</Polish>
-		<Russian>%s1_civ_adjective íàöèÿ îïðîâåðãëà äîíåñåíèÿ îá ðàçðàáîòêå óëó÷øåííûõ çàæèãàòåëüíûõ áîìá äëÿ èõ âîçäóøíûõ ñèë.</Russian>
+		<Russian>%s1_civ_adjective нация опровергает сообщения о разработке улучшенных зажигательных бомб для своих ВВС.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_WORLD_SMALL</Tag>
@@ -30290,7 +30304,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 			<Plural>0</Plural>
 		</Spanish>
 		<Polish>Ma&#179;y</Polish>
-		<Russian>Ìàëåíüêèé</Russian>
+		<Russian>S</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_WORLD_STANDARD</Tag>
@@ -30316,7 +30330,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 			<Plural>0</Plural>
 		</Spanish>
 		<Polish>Normalny</Polish>
-		<Russian>Ñòàíäàðòíûé</Russian>
+		<Russian>M</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_WORLD_TINY</Tag>
@@ -30338,7 +30352,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 			<Plural>0</Plural>
 		</Spanish>
 		<Polish>Malutki</Polish>
-		<Russian>Êðîøå÷íûé</Russian>
+		<Russian>XS</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_WORST_ENEMY_IS</Tag>

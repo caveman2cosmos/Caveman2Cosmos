@@ -324,17 +324,20 @@
 		<French>%s1 de base : %d2 %F3</French>
 		<German>Grundwert %s1: %d2 %F3</German>
 		<Italian>%s1 [COLOR_HIGHLIGHT_TEXT]base[COLOR_REVERT]: [COLOR_HIGHLIGHT_TEXT]%d2[COLOR_REVERT] %F3[NEWLINE]</Italian> <!-- city screen research, culture panel hover upper right -->
+		<Russian>Базов. %s1: %d2 %F3</Russian>
 		<Spanish>%s1 base: %d2 %F3</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISC_HELP_FINAL_YIELD</Tag>
 		<English>Total: %d1 %F2</English>
 		<Italian>[NEWLINE][COLOR_HIGHLIGHT_TEXT]Totale:[COLOR_REVERT] [COLOR_HIGHLIGHT_TEXT]%d1[COLOR_REVERT] %F2[NEWLINE]</Italian> <!-- city screen research, culture panel hover upper right -->
+		<Russian>Всего: %d1 %F2</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISC_HELP_TOTAL_YIELD_MOD</Tag>
 		<English>Sum: %d1%% = %s2%F3</English>
 		<Italian>[NEWLINE][COLOR_HIGHLIGHT_TEXT]Totale[COLOR_REVERT] % = [COLOR_HIGHLIGHT_TEXT]%d1%%[COLOR_REVERT]  =  [COLOR_HIGHLIGHT_TEXT]%s2[COLOR_REVERT] %F3 (da arrotondare)</Italian> <!-- city screen, hover gold in upper left> -->
+		<Russian>Итого: %d1%% = %s2%F3</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISC_HELP_YIELD_OTHER</Tag>

@@ -2425,7 +2425,7 @@
 			<Plural>0:0:1:1</Plural>
 		</Spanish>
 		<Polish>Rzymian</Polish>
-		<Russian>ðèìëÿíå</Russian>
+		<Russian>Римск.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVILIZATION_ROME</Tag>
@@ -2447,7 +2447,7 @@
 			<Plural>0</Plural>
 		</Spanish>
 		<Polish>Imperium Rzymskie</Polish>
-		<Russian>Ðèìñêàÿ èìïåðèÿ</Russian>
+		<Russian>Римская империя</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVILIZATION_ROME_PEDIA</Tag>
@@ -2477,7 +2477,7 @@
 			<Plural>0</Plural>
 		</Spanish>
 		<Polish>Rzym</Polish>
-		<Russian>Ðèìëÿíå</Russian>
+		<Russian>Римляне</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVILIZATION_RUSSIA_ADJECTIVE</Tag>
@@ -2499,7 +2499,7 @@
 			<Plural>0:0:1:1</Plural>
 		</Spanish>
 		<Polish>Rosjan</Polish>
-		<Russian>ðóññêèå</Russian>
+		<Russian>Русск.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVILIZATION_RUSSIA</Tag>
@@ -2521,7 +2521,7 @@
 			<Plural>0</Plural>
 		</Spanish>
 		<Polish>Imperium Rosyjskie</Polish>
-		<Russian>Ðîññèÿ</Russian>
+		<Russian>Российская Империя</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVILIZATION_RUSSIA_PEDIA</Tag>
@@ -2551,7 +2551,7 @@
 			<Plural>0</Plural>
 		</Spanish>
 		<Polish>Rosja</Polish>
-		<Russian>Ðóññêèå</Russian>
+		<Russian>Россия</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVILIZATION_SIAM_ADJECTIVE</Tag>
