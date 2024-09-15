@@ -645,7 +645,7 @@
 		<German>Unterkategorien</German>
 		<Spanish>Subtipos de combate</Spanish>
 		<Polish>Typy Walki</Polish>
-		<Russian>Подтипы боевых действий</Russian>
+		<Russian>Атрибуты</Russian>
 		<Italian>Sottotipi di combattimento</Italian>
 	</TEXT>
 	<TEXT>
@@ -707,7 +707,7 @@
 		<English>Combat Types</English>
 		<Italian>Sottotipi di combattimento</Italian>
 		<German>Kategorien</German>
-		<Russian>Типы боевых действий</Russian>
+		<Russian>Атрибуты</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PEDIA_CATEGORY_UNIT_UPGRADES</Tag>

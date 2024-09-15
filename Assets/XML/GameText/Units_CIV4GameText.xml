@@ -655,7 +655,7 @@
 		<Italian>[ICON_BULLET]Non può [COLOR_HIGHLIGHT_TEXT]conquistare[COLOR_REVERT] città o [COLOR_HIGHLIGHT_TEXT]catturare[COLOR_REVERT] unità nemiche</Italian> <!-- unit trained dogs -->
 		<Spanish>[ICON_BULLET]No puede capturar ciudades o unidades enemigas</Spanish>
 		<Polish>[ICON_BULLET]Nie mo&#191;na zaj&#185;&#230; wrogiego miasta lub jednostki.</Polish>
-		<Russian>[ICON_BULLET]Íå ìîæåò çàõâàòûâàòü âðàæåñêèå ãîðîäà èëè þíèòû.</Russian>
+		<Russian>[ICON_BULLET]Не может захватывать вражеские города или подразделения</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITHELP_CAN_ONLY_TRAVERSE</Tag>
@@ -674,7 +674,7 @@
 		<German>[ICON_BULLET]Gefangennahme: %D1%%</German>
 		<Italian>[ICON_BULLET]Probabilità di [COLOR_HIGHLIGHT_TEXT]catturare[COLOR_REVERT] un'unità nemica: [COLOR_HIGHLIGHT_TEXT]%D1%%[COLOR_REVERT]</Italian> <!-- Subcombat type Wields (H2H Martial Arts) -->
 		<Polish>[ICON_BULLET]%D1%% szansy na Przej&#234;cie.</Polish>
-		<Russian>[ICON_BULLET]%D1%% øàíñîâ çàõâàòèòü.</Russian>
+		<Russian>[ICON_BULLET]%D1%% шанс захватить вражеское подразделение.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITHELP_CAPTURE_RESISTANCE_MODIFIER</Tag>
@@ -683,7 +683,7 @@
 		<German>[ICON_BULLET]Gefangennahme entgehen: %D1%%</German>
 		<Italian>[ICON_BULLET]Probabilità di [COLOR_HIGHLIGHT_TEXT]sfuggire[COLOR_REVERT] alla cattura: [COLOR_HIGHLIGHT_TEXT]%D1%%[COLOR_REVERT]</Italian> <!-- Subcombat type Wields SiegeDesign (Gunpowder) -->
 		<Polish>[ICON_BULLET]%D1%% szansy na unikni&#234;cia Przej&#234;cia.</Polish>
-		<Russian>[ICON_BULLET]%D1%% øàíñîâ èçáåæàòü çàõâàòà.</Russian>
+		<Russian>[ICON_BULLET]%D1%% шанс избежать захвата.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITHELP_CHANCE_OF_WORSENING</Tag>

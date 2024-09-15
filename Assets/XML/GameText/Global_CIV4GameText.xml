@@ -10663,7 +10663,7 @@
 		<French>%s1_leader des %s2_civ_short_name</French>
 		<German>%s1_leader von %s2_civ_short_name</German>
 		<Italian>%s1_leader leader della %s2:2_civ_short_name</Italian> <!-- victory info screen -->
-		<Russian>%s1_leader из %s2_civ_short_name</Russian>
+		<Russian>%s1_leader и %s2_civ_short_name</Russian>
 		<Spanish>%s1_leader de %s2_civ_short_name</Spanish>
 	</TEXT>
 	<TEXT>
@@ -10673,6 +10673,7 @@
 		<German>Befreien</German>
 		<Italian>Libera</Italian>
 		<Spanish>Liberar</Spanish>
+		<Russian>Освободить</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_LIBERATE_CITY_HELP</Tag>
@@ -30272,7 +30273,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Italian>I governi dei vari stati del mondo hanno reagito con disappunto alla notizia che gli aerei d'attacco %s1:3_civ_adjective saranno equipaggiati con bombe incendiarie al napalm.</Italian>
 		<Spanish>Los gobiernos del mundo han reaccionado con desagrado a las informaciones que indican que la primera línea de ataque de la aviación %s1:2_civ_adjective será equipada con bombas incendiarias de napalm.</Spanish>
 		<Polish>&#140;wiatowe rz&#185;dy zareagowa&#179;y bardzo niech&#234;tnie na wie&#156;&#230; o tym, &#191;e samoloty szturmowe %s1_civ_adjective zostan&#185; uzbrojone w bomby z napalmem.</Polish>
-		<Russian>%s1_civ_adjective самолеты будут оснащены зажигательными напалмовыми бомбами - мировые правительства выразили свое недовольство по этому поводу.</Russian>
+		<Russian>%s1_civ_adjective самолеты будут оснащены бомбами с напалмом - мировые правительства выразили свое недовольство по этому поводу.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_WORLD_NAPALM_2</Tag>
@@ -30499,7 +30500,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<French>Utiliser CTRL pour voir les modif. de Combat</French>
 		<German>[COLOR_HIGHLIGHT_TEXT]&lt;STRG&gt;[COLOR_REVERT] für Anzeige der militärischen Daten</German>
 		<Polish>Naci&#156;nij CTRL aby zobaczy&#230; Modyfikatory Bojowe</Polish>
-		<Russian>Íàæìèòå CTRL äëÿ ïðîñìîòðà ìîäèôèêàòîðîâ áîÿ</Russian>
+		<Russian>Нажмите CTRL для просмотра боевых модификаторов</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_TB_UNIT_VIEW_2</Tag>
@@ -30508,7 +30509,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<French>Utiliser ALT pour voir les Informations Civiles</French>
 		<German>[COLOR_HIGHLIGHT_TEXT]&lt;ALT&gt;[COLOR_REVERT] für Anzeige der zivilen Daten</German>
 		<Polish>Naci&#156;nij ALT aby zobaczy&#230; Informacje Nie-bojowe</Polish>
-		<Russian>Íàæìèòå ALT äëÿ ïðîñìîòðà èíôîðìàöèè î öèâ.</Russian>
+		<Russian>Нажмите ALT для просмотра гражданских модификаторов</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_TB_UNIT_VIEW_3</Tag>
@@ -30517,7 +30518,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<French>Utiliser SHIFT pour voir les Classes de combat</French>
 		<German>[COLOR_HIGHLIGHT_TEXT]&lt;UMSCHALT&gt;[COLOR_REVERT] für Anzeige der Kategorien</German>
 		<Polish>Naci&#156;nij SHIFT aby zobaczy&#230; Klasy Bojowe</Polish>
-		<Russian>Íàæìèòå SHIFT äëÿ ïðîñìîòðà áîåâûõ êëàññîâ</Russian>
+		<Russian>Нажмите SHIFT для просмотра атрибутов</Russian>
 	</TEXT>
 </Civ4GameText>
 

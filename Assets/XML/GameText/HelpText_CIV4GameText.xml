@@ -97,7 +97,7 @@
 		<Italian>[ICON_BULLET]Permette al miglioramento [COLOR_HIGHLIGHT_TEXT]%s1[COLOR_REVERT] di evolvere in [COLOR_HIGHLIGHT_TEXT]%s2[COLOR_REVERT]</Italian> <!-- tech Naturopaty -->
 		<Spanish>[ICON_BULLET]Permite [NUM1:al:a la:a los:a las] %s1 mejorar a %s2</Spanish>
 		<Polish>[ICON_BULLET]Umo&#191;liwia ulepszenie %s1 do %s2.</Polish>
-		<Russian>[ICON_BULLET]Ïîçâîëÿåò %s1 ìîäåðíèçèðîâàòü äî %s2.</Russian>
+		<Russian>[ICON_BULLET]Позволит улучшить %s1 до %s2.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECHHELP_CAN_CONSTRUCT</Tag>
