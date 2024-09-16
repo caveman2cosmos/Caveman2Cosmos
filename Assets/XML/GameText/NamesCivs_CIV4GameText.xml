@@ -1366,7 +1366,7 @@
 			<Plural>0:0:1:1</Plural>
 		</Spanish>
 		<Polish>Ink&#243;w</Polish>
-		<Russian>èíêè</Russian>
+		<Russian>Инкск.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVILIZATION_INCA</Tag>
@@ -1388,7 +1388,7 @@
 			<Plural>0</Plural>
 		</Spanish>
 		<Polish>Imperium Ink&#243;w</Polish>
-		<Russian>Èìïåðèÿ èíêîâ</Russian>
+		<Russian>Инки</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVILIZATION_INCA_PEDIA</Tag>
@@ -1418,7 +1418,7 @@
 			<Plural>0</Plural>
 		</Spanish>
 		<Polish>Inkowie</Polish>
-		<Russian>Èíêè</Russian>
+		<Russian>Инки</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVILIZATION_INDIA_ADJECTIVE</Tag>
@@ -1440,7 +1440,7 @@
 			<Plural>0:0:1:1</Plural>
 		</Spanish>
 		<Polish>Hindus&#243;w</Polish>
-		<Russian>èíäèéöû</Russian>
+		<Russian>Индийск.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVILIZATION_INDIA</Tag>
@@ -1462,7 +1462,7 @@
 			<Plural>0</Plural>
 		</Spanish>
 		<Polish>Imperium Indyjskie</Polish>
-		<Russian>Èíäèÿ</Russian>
+		<Russian>Индийцы</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVILIZATION_INDIA_PEDIA</Tag>
@@ -1492,35 +1492,35 @@
 			<Plural>0</Plural>
 		</Spanish>
 		<Polish>Indie</Polish>
-		<Russian>Èíäèéöû</Russian>
+		<Russian>Индийцы</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVILIZATION_NPC_INSECTOID_ADJECTIVE</Tag>
 		<English>Insectoids</English>
 		<French>Insectoïdes</French>
 		<German>insektoid</German>
-		<Russian>èíñåêòîèäû</Russian>
+		<Russian>Инсектоидск.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVILIZATION_NPC_INSECTOID</Tag>
 		<English>NPC Insectoids</English>
 		<French>Insectoïdes</French>
 		<German>Insektoiden</German>
-		<Russian>Èíñåêòîèäû</Russian>
+		<Russian>Неигровые инсектоиды</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVILIZATION_NPC_INSECTOID_PEDIA</Tag>
 		<English>Insects, both Terran and Extra-Terrestrial. In space, they are a terrifyingly evolved horrific foe.</English>
 		<French>Insectes terriens et extraterrestres. Dans l'espace, ils sont un ennemi horrible terriblement évolué.</French>
 		<German>Ein Insektenvolk, das sowohl terrestrische als auch extraterrestrische Spezies beinhaltet. Im Weltall stellen sie durch ihre fortschrittlichen Einheiten eine ernste Bedrohung dar.</German>
-		<Russian>[NEWLINE][TAB]Насекомые, как земные, так и внеземные. В космосе они развитые и внушающие страх противники.</Russian>
+		<Russian>Насекомые, как земные, так и внеземные. В космосе они развитые и внушающие страх противники.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVILIZATION_NPC_INSECTOID_SHORT</Tag>
 		<English>Insectoids</English>
 		<French>Insectoïdes</French>
 		<German>Insektoiden</German>
-		<Russian>Èíñåêòîèäû</Russian>
+		<Russian>Инсектоиды</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVILIZATION_IROQUOIS_ADJECTIVE</Tag>
@@ -1538,7 +1538,7 @@
 			<Plural>0:0:1:1</Plural>
 		</Spanish>
 		<Polish>Irokez&#243;w</Polish>
-		<Russian>èðîêåçû</Russian>
+		<Russian>Ирокезск.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVILIZATION_IROQUOIS</Tag>
@@ -1548,7 +1548,7 @@
 		<Italian>Impero irochese</Italian>
 		<Spanish>Imperio Iroqués</Spanish>
 		<Polish>Imperium Irokeskie</Polish>
-		<Russian>Ïëåìåíà èðîêåçîâ</Russian>
+		<Russian>Ирокезы</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVILIZATION_IROQUOIS_PEDIA</Tag>
@@ -1564,7 +1564,7 @@
 		<Italian>Irochesi</Italian>
 		<Spanish>Confederación Iroquesa</Spanish>
 		<Polish>Irokezi</Polish>
-		<Russian>Èðîêåçû</Russian>
+		<Russian>Ирокезы</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVILIZATION_JAPAN_ADJECTIVE</Tag>
@@ -1586,7 +1586,7 @@
 			<Plural>0:0:1:1</Plural>
 		</Spanish>
 		<Polish>Japo&#241;czyk&#243;w</Polish>
-		<Russian>ÿïîíöû</Russian>
+		<Russian>Японск.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVILIZATION_JAPAN</Tag>
@@ -1608,7 +1608,7 @@
 			<Plural>0</Plural>
 		</Spanish>
 		<Polish>Imperium Japo&#241;skie</Polish>
-		<Russian>ßïîíèÿ</Russian>
+		<Russian>Японцы</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVILIZATION_JAPAN_PEDIA</Tag>
@@ -1637,7 +1637,7 @@
 			<Plural>0</Plural>
 		</Spanish>
 		<Polish>Japonia</Polish>
-		<Russian>ßïîíöû</Russian>
+		<Russian>Японцы</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVILIZATION_KHMER_ADJECTIVE</Tag>
@@ -1659,7 +1659,7 @@
 			<Plural>0:0:1:1</Plural>
 		</Spanish>
 		<Polish>Khmer&#243;w</Polish>
-		<Russian>êõìåðû:êõìåðû</Russian>
+		<Russian>Кхмерск.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVILIZATION_KHMER</Tag>
@@ -1681,7 +1681,7 @@
 			<Plural>0</Plural>
 		</Spanish>
 		<Polish>Imperium Khmeryjskie</Polish>
-		<Russian>Êõìåðñêàÿ èìïåðèÿ</Russian>
+		<Russian>Кхмеры</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVILIZATION_KHMER_PEDIA</Tag>
@@ -1711,7 +1711,7 @@
 			<Plural>0</Plural>
 		</Spanish>
 		<Polish>Khmerzy</Polish>
-		<Russian>Êõìåðû</Russian>
+		<Russian>Кхмеры</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVILIZATION_KOREA_ADJECTIVE</Tag>
@@ -1733,7 +1733,7 @@
 			<Plural>0:0:1:1</Plural>
 		</Spanish>
 		<Polish>Korea&#241;czyk&#243;w</Polish>
-		<Russian>êîðåéöû:êîðåéöû</Russian>
+		<Russian>Корейск.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVILIZATION_KOREA</Tag>
@@ -1753,6 +1753,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</Italian>
+		<Russian>Корейцы</Russian>
 		<Spanish>
 			<Text>Imperio Coreano</Text>
 			<Gender>Male</Gender>
@@ -1785,6 +1786,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</Italian>
+		<Russian>Корейцы</Russian>
 		<Spanish>
 			<Text>Corea</Text>
 			<Gender>Female</Gender>
@@ -1811,7 +1813,7 @@
 			<Plural>0:0:1:1</Plural>
 		</Spanish>
 		<Polish>Malijczyk&#243;w</Polish>
-		<Russian>ìàëèéöû</Russian>
+		<Russian>Малийск.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVILIZATION_MALI</Tag>
@@ -1833,7 +1835,7 @@
 			<Plural>0</Plural>
 		</Spanish>
 		<Polish>Imperium Malijskie</Polish>
-		<Russian>Ìàëè</Russian>
+		<Russian>Малийцы</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVILIZATION_MALI_PEDIA</Tag>
@@ -1861,7 +1863,7 @@
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</Spanish>
-		<Russian>Ìàëèéöû</Russian>
+		<Russian>Малийцы</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVILIZATION_MAYA_ADJECTIVE</Tag>
@@ -1883,7 +1885,7 @@
 			<Plural>0:0:1:1</Plural>
 		</Spanish>
 		<Polish>Maj&#243;w</Polish>
-		<Russian>ìàéÿ:ìàéÿ</Russian>
+		<Russian>Майяск.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVILIZATION_MAYA</Tag>
@@ -1905,7 +1907,7 @@
 			<Plural>0</Plural>
 		</Spanish>
 		<Polish>Imperium Maj&#243;w</Polish>
-		<Russian>Èìïåðèÿ ìàéÿ</Russian>
+		<Russian>Майя</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVILIZATION_MAYA_PEDIA</Tag>
@@ -1935,7 +1937,7 @@
 			<Plural>0</Plural>
 		</Spanish>
 		<Polish>Majowie</Polish>
-		<Russian>Ìàéÿ</Russian>
+		<Russian>Майя</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVILIZATION_MONGOL_ADJECTIVE</Tag>
@@ -1957,7 +1959,7 @@
 			<Plural>0:0:1:1</Plural>
 		</Spanish>
 		<Polish>Mongo&#179;&#243;w</Polish>
-		<Russian>ìîíãîëû</Russian>
+		<Russian>Монгольск.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVILIZATION_MONGOL</Tag>
@@ -1979,7 +1981,7 @@
 			<Plural>0</Plural>
 		</Spanish>
 		<Polish>Imperium Mongolskie</Polish>
-		<Russian>Ìîíãîëèÿ</Russian>
+		<Russian>Монголы</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVILIZATION_MONGOL_PEDIA</Tag>
@@ -2008,7 +2010,7 @@
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</Spanish>
-		<Russian>Ìîíãîëû</Russian>
+		<Russian>Монголы</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVILIZATION_SIOUX_ADJECTIVE</Tag>
@@ -2030,11 +2032,12 @@
 			<Plural>0:0:1:1</Plural>
 		</Spanish>
 		<Polish>Indian</Polish>
-		<Russian>èíäåéöû:èíäåéöû</Russian>
+		<Russian>Сиуск.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVILIZATION_SIOUX</Tag>
 		<English>Sioux Empire</English>
+		<Russian>Сиу</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVILIZATION_SIOUX_PEDIA</Tag>
@@ -2047,6 +2050,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_CIVILIZATION_SIOUX_SHORT</Tag>
 		<English>Sioux</English>
+		<Russian>Сиу</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVILIZATION_NETHERLANDS_ADJECTIVE</Tag>
@@ -2068,7 +2072,7 @@
 			<Plural>0:0:1:1</Plural>
 		</Spanish>
 		<Polish>Holendr&#243;w</Polish>
-		<Russian>ãîëëàíäöû:ãîëëàíäöû</Russian>
+		<Russian>Голландск.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVILIZATION_NETHERLANDS</Tag>
@@ -2090,7 +2094,7 @@
 			<Plural>0</Plural>
 		</Spanish>
 		<Polish>Imperium Holenderskie</Polish>
-		<Russian>Íèäåðëàíäû</Russian>
+		<Russian>Голландцы</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVILIZATION_NETHERLANDS_PEDIA</Tag>
@@ -2120,33 +2124,34 @@
 			<Plural>0</Plural>
 		</Spanish>
 		<Polish>Holandia</Polish>
-		<Russian>Ãîëëàíäöû</Russian>
+		<Russian>Голландцы</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVILIZATION_NPC_NEANDERTHAL_ADJECTIVE</Tag>
 		<English>Neanderthals</English>
 		<French>Néanderthaliens</French>
 		<German>neandertalisch</German>
-		<Russian>íåàíäåðòàëüöû</Russian>
+		<Russian>Неандертальск.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVILIZATION_NPC_NEANDERTHAL</Tag>
 		<English>NPC Neanderthals</English>
 		<French>Néanderthaliens</French>
 		<German>Reich der Neandertaler</German>
-		<Russian>Íåàíäåðòàëüöû</Russian>
+		<Russian>Неигровые неандертальцы</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVILIZATION_NPC_NEANDERTHAL_PEDIA</Tag>
 		<English>Neanderthal Barbarians</English>
 		<French>Barbares Neanderthal</French>
+		<Russian>Варвары-неандертальцы</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVILIZATION_NPC_NEANDERTHAL_SHORT</Tag>
 		<English>Neanderthals</English>
 		<French>Néanderthaliens</French>
 		<German>Neandertal</German>
-		<Russian>Íåàíäåðòàëüöû</Russian>
+		<Russian>Неандертальцы</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVILIZATION_OTTOMAN_ADJECTIVE</Tag>
@@ -2168,7 +2173,7 @@
 			<Plural>0:0:1:1</Plural>
 		</Spanish>
 		<Polish>Turk&#243;w</Polish>
-		<Russian>òóðêè:òóðêè</Russian>
+		<Russian>Турецк.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVILIZATION_OTTOMAN</Tag>
@@ -2188,6 +2193,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</Italian>
+		<Russian>Турки</Russian>
 		<Spanish>
 			<Text>Imperio Otomano</Text>
 			<Gender>Male</Gender>
@@ -2222,7 +2228,7 @@
 			<Plural>0</Plural>
 		</Spanish>
 		<Polish>Turcy</Polish>
-		<Russian>Òóðêè</Russian>
+		<Russian>Турки</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVILIZATION_PERSIA_ADJECTIVE</Tag>
@@ -2244,7 +2250,7 @@
 			<Plural>0:0:1:1</Plural>
 		</Spanish>
 		<Polish>Pers&#243;w</Polish>
-		<Russian>ïåðñû</Russian>
+		<Russian>Персидск.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVILIZATION_PERSIA</Tag>
@@ -2266,7 +2272,7 @@
 			<Plural>0</Plural>
 		</Spanish>
 		<Polish>Imperium Perskie</Polish>
-		<Russian>Ïåðñèÿ</Russian>
+		<Russian>Персы</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVILIZATION_PERSIA_PEDIA</Tag>
@@ -2296,7 +2302,7 @@
 			<Plural>0</Plural>
 		</Spanish>
 		<Polish>Persja</Polish>
-		<Russian>Ïåðñû</Russian>
+		<Russian>Персы</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVILIZATION_POLYNESIA_ADJECTIVE</Tag>
@@ -2310,7 +2316,7 @@
 		</Italian>
 		<Spanish>Polinesiano</Spanish>
 		<Polish>Polinezyjski</Polish>
-		<Russian>Полинезийский</Russian>
+		<Russian>Полинезийск.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVILIZATION_POLYNESIA</Tag>
@@ -2320,7 +2326,7 @@
 		<Italian>Impero polinesiano</Italian>
 		<Spanish>Polinesiano Imperio</Spanish>
 		<Polish>Imperium Polinezji</Polish>
-		<Russian>Ïîëèíåçèÿ</Russian>
+		<Russian>Полинезийцы</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVILIZATION_POLYNESIA_PEDIA</Tag>
@@ -2339,7 +2345,7 @@
 		<Italian>Polinesia</Italian>
 		<Spanish>Polinesia</Spanish>
 		<Polish>Polinezja</Polish>
-		<Russian>Ïîëèíåçèÿ</Russian>
+		<Russian>Полинезийцы</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVILIZATION_PORTUGAL_ADJECTIVE</Tag>
@@ -2361,7 +2367,7 @@
 			<Plural>0:0:1:1</Plural>
 		</Spanish>
 		<Polish>Portugalczyk&#243;w</Polish>
-		<Russian>ïîðòóãàëüöû:ïîðòóãàëüöû</Russian>
+		<Russian>Португальск.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVILIZATION_PORTUGAL</Tag>
@@ -2383,7 +2389,7 @@
 			<Plural>0</Plural>
 		</Spanish>
 		<Polish>Imperium Portugalskie</Polish>
-		<Russian>Ïîðòóãàëèÿ</Russian>
+		<Russian>Португальцы</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVILIZATION_PORTUGAL_PEDIA</Tag>
@@ -2412,7 +2418,7 @@
 			<Plural>0</Plural>
 		</Spanish>
 		<Polish>Portugalia</Polish>
-		<Russian>Ïîðòóãàëüöû</Russian>
+		<Russian>Португальцы</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVILIZATION_ROME_ADJECTIVE</Tag>
@@ -2456,7 +2462,7 @@
 			<Plural>0</Plural>
 		</Spanish>
 		<Polish>Imperium Rzymskie</Polish>
-		<Russian>Римская империя</Russian>
+		<Russian>Римляне</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVILIZATION_ROME_PEDIA</Tag>
@@ -2530,7 +2536,7 @@
 			<Plural>0</Plural>
 		</Spanish>
 		<Polish>Imperium Rosyjskie</Polish>
-		<Russian>Россия</Russian>
+		<Russian>Русские</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVILIZATION_RUSSIA_PEDIA</Tag>
@@ -2560,7 +2566,7 @@
 			<Plural>0</Plural>
 		</Spanish>
 		<Polish>Rosja</Polish>
-		<Russian>Россия</Russian>
+		<Russian>Русские</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVILIZATION_SIAM_ADJECTIVE</Tag>
@@ -2582,7 +2588,7 @@
 			<Plural>0:0:1:1</Plural>
 		</Spanish>
 		<Polish>Taj&#243;w</Polish>
-		<Russian>ñèàìöû</Russian>
+		<Russian>Сиамск.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVILIZATION_SIAM</Tag>
@@ -2592,7 +2598,7 @@
 		<Italian>Impero siamese</Italian>
 		<Spanish>Imperio Siamés</Spanish>
 		<Polish>Imperium Syjamskie</Polish>
-		<Russian>Ñèàì</Russian>
+		<Russian>Сиамцы</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVILIZATION_SIAM_PEDIA</Tag>
@@ -2605,7 +2611,7 @@
 		<English>Siam</English>
 		<French>Siam</French>
 		<Polish>Syjam</Polish>
-		<Russian>Ñèàìöû</Russian>
+		<Russian>Сиамцы</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVILIZATION_SPAIN_ADJECTIVE</Tag>
@@ -2627,7 +2633,7 @@
 			<Plural>0:0:1:1</Plural>
 		</Spanish>
 		<Polish>Hiszpan&#243;w</Polish>
-		<Russian>èñïàíöû</Russian>
+		<Russian>Испанск.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVILIZATION_SPAIN</Tag>
@@ -2649,7 +2655,7 @@
 			<Plural>0</Plural>
 		</Spanish>
 		<Polish>Imperium Hiszpa&#241;skie</Polish>
-		<Russian>Èñïàíèÿ</Russian>
+		<Russian>Испанцы</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVILIZATION_SPAIN_PEDIA</Tag>
@@ -2679,7 +2685,7 @@
 			<Plural>0</Plural>
 		</Spanish>
 		<Polish>Hiszpania</Polish>
-		<Russian>Èñïàíöû</Russian>
+		<Russian>Испанцы</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVILIZATION_SUMERIA_ADJECTIVE</Tag>
@@ -2701,7 +2707,7 @@
 			<Plural>0:0:1:1</Plural>
 		</Spanish>
 		<Polish>Sumer&#243;w</Polish>
-		<Russian>øóìåðû:øóìåðû</Russian>
+		<Russian>Шумерск.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVILIZATION_SUMERIA</Tag>
@@ -2723,7 +2729,7 @@
 			<Plural>0</Plural>
 		</Spanish>
 		<Polish>Imperium Sumeryjskie</Polish>
-		<Russian>Øóìåðñêîå öàðñòâî</Russian>
+		<Russian>Шумеры</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVILIZATION_SUMERIA_PEDIA</Tag>
@@ -2753,7 +2759,7 @@
 			<Plural>0</Plural>
 		</Spanish>
 		<Polish>Sumer</Polish>
-		<Russian>Øóìåðû</Russian>
+		<Russian>Шумеры</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVILIZATION_AMERICA_ADJECTIVE</Tag>
@@ -2775,11 +2781,12 @@
 			<Plural>0:0:1:1</Plural>
 		</Spanish>
 		<Polish>Amerykanie</Polish>
-		<Russian>àìåðèêàíöû</Russian>
+		<Russian>Американск.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVILIZATION_AMERICA</Tag>
 		<English>American Empire</English>
+		<Russian>Американцы</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVILIZATION_AMERICA_SHORT</Tag>
@@ -2801,7 +2808,7 @@
 			<Plural>1</Plural>
 		</Spanish>
 		<Polish>Ameryka</Polish>
-		<Russian>Àìåðèêàíöû</Russian>
+		<Russian>Американцы</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVILIZATION_SCANDINAVIA_ADJECTIVE</Tag>
@@ -2823,7 +2830,7 @@
 			<Plural>0:0:1:1</Plural>
 		</Spanish>
 		<Polish>Wiking&#243;w</Polish>
-		<Russian>âèêèíãè</Russian>
+		<Russian>Викингск.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVILIZATION_SCANDINAVIA</Tag>
@@ -2845,7 +2852,7 @@
 			<Plural>0</Plural>
 		</Spanish>
 		<Polish>Imperium Wiking&#243;w</Polish>
-		<Russian>Ñêàíäèíàâèÿ</Russian>
+		<Russian>Викинги</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVILIZATION_SCANDINAVIA_PEDIA</Tag>
@@ -2875,7 +2882,7 @@
 			<Plural>0</Plural>
 		</Spanish>
 		<Polish>Skandynawia</Polish>
-		<Russian>Âèêèíãè</Russian>
+		<Russian>Викинги</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVILIZATION_ZULU_ADJECTIVE</Tag>
