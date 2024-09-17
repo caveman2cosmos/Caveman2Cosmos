@@ -3029,7 +3029,7 @@
 		<Italian>Clima</Italian>
 		<Spanish>CLIMA</Spanish>
 		<Polish>KLIMAT</Polish>
-		<Russian>КЛИМАТ</Russian>
+		<Russian>Климат</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MAIN_MENU_SELECT_DIFFICULTY_TITLE</Tag>
@@ -3039,7 +3039,7 @@
 		<Italian>DifficoltÀ</Italian>
 		<Spanish>DIFICULTAD</Spanish>
 		<Polish>POZIOM TRUDNO&#140;CI</Polish>
-		<Russian>СЛОЖНОСТЬ</Russian>
+		<Russian>Сложность</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MAIN_MENU_SELECT_GAME_SPEED</Tag>

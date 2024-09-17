@@ -11320,6 +11320,7 @@
 		<French>1 par joueur</French>
 		<German>1 pro Spieler</German>
 		<Italian>1 per giocatore</Italian>
+		<Russian>1 на игрока</Russian>
 		<Spanish>1 por jugador</Spanish>
 	</TEXT>
 	<TEXT>
@@ -11328,6 +11329,7 @@
 		<French>Un immense continent contenant une forêt luxuriante dotée d'une faune et d'une flore extrêmement riches.</French>
 		<German>Auf einem riesigen einzelnen Kontinent befindet sich ein Paradies aus Grasland und Wald mit reicher Tier- und Pflanzenwelt.</German>
 		<Italian>Un singolo, enorme continente che contiene foreste e praterie ricche di fauna.</Italian>
+		<Russian>Один огромный континент, где находится рай из лугов и лесов, богатый дикой природой.</Russian>
 		<Spanish>Un paraíso de praderas y bosques, rico en fauna, se concentra en un continente, único y enorme.</Spanish>
 	</TEXT>
 	<TEXT>
@@ -11336,6 +11338,7 @@
 		<French>Archipel</French>
 		<German>Archipel</German>
 		<Italian>Arcipelago</Italian>
+		<Russian>Архипелаг</Russian>
 		<Spanish>Archipiélago</Spanish>
 	</TEXT>
 	<TEXT>
@@ -11344,6 +11347,7 @@
 		<French>La carte marine par excellence pour Civilization IV. Il faudra une flotte puissante !</French>
 		<German>Die ultimative Wasserkarte für Civilization IV. Schlagkräftige Marineflotten sind hier ein Muss!</German>
 		<Italian>La mappa acquatica definitiva di Civilization IV: una potente flotta navale è d'obbligo!</Italian>
+		<Russian>Ультимативная водная карта. Без сильного флота не обойтись.</Russian>
 		<Spanish>El mapa acuático definitivo para Civilization IV. Las armadas poderosas no son opcionales.</Spanish>
 	</TEXT>
 	<TEXT>
@@ -11360,6 +11364,7 @@
 		<French>Une Pangée circulaire dans laquelle tous les joueurs disposent de toutes les ressources stratégiques à quelques cases de leur point de départ.</French>
 		<German>Ein runder Pangäa-Kontinent, auf dem allen Spielern im Umkreis weniger Geländefelder um ihre Startstandorte die meisten lebensnotwendigen strategischen Ressourcen zur Verfügung stehen.</German>
 		<Italian>Una pangea circolare dove tutti i giocatori dispongono delle risorse strategiche fondamentali a poca distanza dal punto di partenza.</Italian>
+		<Russian>Кольцевая Пангея, где все игроки гарантированно имеют самые важные стратегические ресурсы в пределах нескольких клеток от их стартовой позиции.</Russian>
 		<Spanish>Una Pangea perfecta en la que todos los jugadores cuentan con los recursos estratégicos más vitales a pocas casillas de su lugar de salida.</Spanish>
 	</TEXT>
 	<TEXT>
@@ -11368,6 +11373,7 @@
 		<French>La carte affiche en même temps les grands et les petits continents. Vous pouvez les séparer ou les laisser se superposer.</French>
 		<German>Die Karte weist eine Mischung großer und kleiner Landmassen aus. Sie können die beiden geografischen Landflächenarten separieren oder zufällig mischen.</German>
 		<Italian>Mondo realistico con grandi e piccole zone di terraferma. La maggior parte delle civiltà inizierà su un continente, qualcuna potrebbe iniziare su un isola.</Italian>
+		<Russian>Реалистичный мир с сильно рандомизированными участками суши, большими и малыми. Большинство цивилизаций появятся на континентах. Остальные, возможно, начнут на цепях островов.</Russian>
 		<Spanish>El mapa proporciona una combinación de masas terrestres grandes y pequeñas. Es posible mantener ambos tipos separados o bien solaparlos en un conglomerado creado al azar.</Spanish>
 	</TEXT>
 	<TEXT>
@@ -11392,6 +11398,7 @@
 		<French>Carte générée aléatoirement avec deux continents ou plus.</French>
 		<German>Zufällig generierte Karte mit zwei oder mehr Kontinenten.</German>
 		<Italian>Genera casualmente una mappa con due o più continenti.</Italian>
+		<Russian>Карта с двумя или более континентами.</Russian>
 		<Spanish>Mapa generado al azar con dos o más continentes.</Spanish>
 	</TEXT>
 	<TEXT>
@@ -11480,6 +11487,7 @@
 		<French>Un type de carte imprévisible.</French>
 		<German>Ein unvorhersehbarer Kartentyp.</German>
 		<Italian>Un tipo di mappa imprevedibile.</Italian>
+		<Russian>Карта непредсказуемого типа.</Russian>
 		<Spanish>Un tipo de mapa inesperado.</Spanish>
 	</TEXT>
 	<TEXT>
@@ -11504,6 +11512,7 @@
 		<French>Un vaste océan central est entouré d'un large anneau de terre.</French>
 		<German>In der Mitte dieser Karte befindet sich ein großes Meer, das von einem dicken Landring umschlossen ist.</German>
 		<Italian>Un ampio mare riempie il centro della mappa, circondato da uno spesso anello di terra.</Italian>
+		<Russian>В центре находится большое море, окруженное плотным кольцом суши.</Russian>
 		<Spanish>Un gran mar puebla el centro, rodeado por un grueso anillo de tierra.</Spanish>
 	</TEXT>
 	<TEXT>
@@ -11576,6 +11585,7 @@
 		<French>Le monde généré aléatoirement ne contient pas d'océan, uniquement des lacs.</French>
 		<German>Zufällig generierte Welt ohne Ozeane, aber mit Seen gespickt.</German>
 		<Italian>Genera casualmente una mappa senza oceani, ma con diversi laghi.</Italian>
+		<Russian>Изрешеченный озерами мир без океанов.</Russian>
 		<Spanish>Un mundo generado al azar, sin océanos pero salpicado de lagos.</Spanish>
 	</TEXT>
 	<TEXT>
@@ -11600,6 +11610,7 @@
 		<French>2 à 4 continents organisés en deux hémisphères, séparés par l'océan. De plus petites îles peuvent aussi être présentes.</French>
 		<German>2 - 4 Kontinente in der Ost- und der Westhemisphäre, die durch einen Ozean voneinander getrennt sind. Es könnte auch kleinere Inseln geben.</German>
 		<Italian>Da 2 a 4 continenti disposti negli emisferi orientale e occidentale, separati dall'oceano. Possono esserci anche isole più piccole.</Italian>
+		<Russian>Два-четыре континента, расположенных в Восточном и Западном полушариях, разделенных океаном. Также могут присутствовать небольшие острова.</Russian>
 		<Spanish>Entre dos y cuatro continentes situados en ambos hemisferios, separados por el océano. También habrá pequeñas islas.</Spanish>
 	</TEXT>
 	<TEXT>
@@ -11768,6 +11779,7 @@
 		<French>Pan-Gaia: "Une terre", un seul et énorme continent.</French>
 		<German>Pangäa: "Eine Erde", ein einziger gewaltiger Kontinent.</German>
 		<Italian>Pan-Gaia: un solo enorme continente.</Italian>
+		<Russian>Всеземля: один огромный континент.</Russian>
 		<Spanish>Pan-gea ("una Tierra"), un solo continente enorme.</Spanish>
 	</TEXT>
 	<TEXT>
@@ -11784,6 +11796,7 @@
 		<French>Port Civ4 officiel de PerfectWorld 3 de Civ5, avec un nouveau générateur de masse terrestre Perlin Noise et un nouveau système de climatisation en option. Le placement de la rivière, du lac, des entités et des ressources reste inchangé par rapport à PerfectWorld 2.</French>
 		<German>Hierbei handelt es sich um eine Civ4-Portierung des Civ5-Mods "PerfectWorld 3". Sie enthält den auf Perlin-Noise basierenden Landmasse-Generator und ein optionales neues Klimasystem. Die aus "PerfectWorld 2" bekannte Platzierung von Flüssen, Seen, Geländeeigenschaften und Ressourcen wurde unverändert beibehalten.</German>
 		<Italian>Port ufficiale per Civ4 del generatore PerfectWorld 3 da Civ5, con il nuovo generatore di continenti e un nuovo sistema climatico opzionale. Il posizionamento di fiumi, laghi, caratteristiche e risorse non cambiano rispetto a PerfectWorld 2.</Italian>
+		<Russian>Официальный порт PerfectWorld 3 из Civilization V c новым генератором суши на основе шума Перлина и опциональной новой системой климата. Расположения рек, озер, особенностей ландшафта и ресурсов осталось идентичным PerfectWorld 2.</Russian>
 		<Spanish>Versión oficial para Civ4 del generador 'PerfectWorld 3' de Civ5, con el nuevo generador de continentes 'Perlin Noise' y un nuevo sistema climático opcional. El método para colocar los ríos, lagos, características y recursos permanece inalterado respecto a PerfectWorld 2.</Spanish>
 	</TEXT>
 	<TEXT>
@@ -11792,6 +11805,7 @@
 		<French>Carte aléatoire qui simule la tectonique des plaques de type terrestre, les vents géostrophiques et de mousson et les précipitations.</French>
 		<German>Eine Zufallskarte, die eine erdähnliche Plattentektonik, geostrophische und Monsunwinde und Regenfälle simuliert.</German>
 		<Italian>Mappa random che simula una tettonica a placche simile a quella terrestre, venti geostrofici e monsonici e piogge.</Italian>
+		<Russian>Карта, имитирующая тектонику земных плит, геострофические и муссонные ветры и осадки.</Russian>
 		<Spanish>Mapa aleatorio que simula una tectónica de placas similar a la de la Tierra, vientos geostróficos y de monzón, y lluvia.</Spanish>
 	</TEXT>
 	<TEXT>
