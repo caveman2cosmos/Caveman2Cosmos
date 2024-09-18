@@ -4076,6 +4076,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_CIV_UNKNOWN</Tag>
 		<English>UNKNOWN CIV</English>
+		<Russian>Неизвестная цивилизация</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CLIMATE_ARID</Tag>
@@ -4083,6 +4084,7 @@
 		<French>Aride</French>
 		<German>Trocken</German>
 		<Italian>Arido</Italian>
+		<Russian>Засушливый</Russian>
 		<Spanish>Árido</Spanish>
 	</TEXT>
 	<TEXT>
@@ -4091,6 +4093,7 @@
 		<French>Polaire</French>
 		<German>Kalt</German>
 		<Italian>Freddo</Italian>
+		<Russian>Холодный</Russian>
 		<Spanish>Frío</Spanish>
 	</TEXT>
 	<TEXT>
@@ -4099,6 +4102,7 @@
 		<French>Rocheux</French>
 		<German>Felsig</German>
 		<Italian>Rigido</Italian>
+		<Russian>Горный</Russian>
 		<Spanish>Rocoso</Spanish>
 	</TEXT>
 	<TEXT>
@@ -4107,6 +4111,7 @@
 		<French>Tempéré</French>
 		<German>Gemäßigt</German>
 		<Italian>Temperato</Italian>
+		<Russian>Умеренный</Russian>
 		<Spanish>Templado</Spanish>
 	</TEXT>
 	<TEXT>
@@ -4115,6 +4120,7 @@
 		<French>Tropical</French>
 		<German>Tropisch</German>
 		<Italian>Tropicale</Italian>
+		<Russian>Тропический</Russian>
 		<Spanish>Tropical</Spanish>
 	</TEXT>
 	<TEXT>
@@ -8360,6 +8366,7 @@
 		<French>Technologies de départ[SPACE] </French>
 		<German>Starttechnologien</German>
 		<Italian>[BOLD]Tecnologie iniziali[\BOLD]</Italian>
+		<Russian>Стартовые технологии</Russian>
 		<Spanish>Tecnologías iniciales</Spanish>
 	</TEXT>
 	<TEXT>
@@ -8368,6 +8375,7 @@
 		<French>Aucune technologie de départ</French>
 		<German>Keine Starttechnologien</German>
 		<Italian>[BOLD]Nessuna tecnologia iniziale[\BOLD]</Italian>
+		<Russian>Нет стартовых технологии</Russian>
 		<Spanish>Sin tecnologías iniciales</Spanish>
 	</TEXT>
 	<TEXT>
@@ -9128,7 +9136,7 @@
 		<German>Die einfachste Schwierigkeitsstufe ist eine gute Wahl, wenn Sie Ihr allererstes Spiel starten oder eine neue Strategie ausprobieren möchten. Als Siedleranführer werden Sie feststellen: Barbaren und wilde Tiere sind weniger aggressiv, Ihre Bürger bleiben länger gesund und zufrieden und Sie erhalten darüber hinaus viele Produktionsboni.</German>
 		<Italian>Il livello di difficoltà più semplice e ideale per iniziare la tua prima partita oppure per quando desideri provare una nuova strategia (i barbari e gli animali selvaggi saranno meno aggressivi, i tuoi cittadini saranno più felici, godranno di buona salute più a lungo e potrai contare su molti bonus produttivi)</Italian>
 		<Spanish>El nivel de dificultad más fácil y una manera excelente de empezar con vuestra primera partida o probar una estrategia nueva. Como Colono, veréis que los bárbaros y animales salvajes son menos agresivos, que los ciudadanos están más felices y sanos y que habrá muchas bonificaciones a la producción para ayudaros.</Spanish>
-		<Russian>Самый низкая сложность - прекрасное условие, чтобы сыграть свою первую партию или попробовать другую стратегию. Варвары и дикие животные менее агрессивны, население дольше остается счастливым и здоровым, а также множество бонусов к производству - в помощь вам.</Russian>
+		<Russian>Самая низкая сложность - прекрасное условие, чтобы сыграть свою первую партию или попробовать другую стратегию. Варвары и дикие животные менее агрессивны, население дольше остается счастливым и здоровым, а также множество бонусов к производству - в помощь вам.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HANDICAP_WARLORD</Tag>
@@ -11364,7 +11372,7 @@
 		<French>Une Pangée circulaire dans laquelle tous les joueurs disposent de toutes les ressources stratégiques à quelques cases de leur point de départ.</French>
 		<German>Ein runder Pangäa-Kontinent, auf dem allen Spielern im Umkreis weniger Geländefelder um ihre Startstandorte die meisten lebensnotwendigen strategischen Ressourcen zur Verfügung stehen.</German>
 		<Italian>Una pangea circolare dove tutti i giocatori dispongono delle risorse strategiche fondamentali a poca distanza dal punto di partenza.</Italian>
-		<Russian>Кольцевая Пангея, где все игроки гарантированно имеют самые важные стратегические ресурсы в пределах нескольких клеток от их стартовой позиции.</Russian>
+		<Russian>Кольцевой единый континет, где все игроки гарантированно имеют самые важные стратегические ресурсы в пределах нескольких клеток от их стартовой позиции.</Russian>
 		<Spanish>Una Pangea perfecta en la que todos los jugadores cuentan con los recursos estratégicos más vitales a pocas casillas de su lugar de salida.</Spanish>
 	</TEXT>
 	<TEXT>
@@ -11398,7 +11406,7 @@
 		<French>Carte générée aléatoirement avec deux continents ou plus.</French>
 		<German>Zufällig generierte Karte mit zwei oder mehr Kontinenten.</German>
 		<Italian>Genera casualmente una mappa con due o più continenti.</Italian>
-		<Russian>Карта с двумя или более континентами.</Russian>
+		<Russian>Два континента или больше.</Russian>
 		<Spanish>Mapa generado al azar con dos o más continentes.</Spanish>
 	</TEXT>
 	<TEXT>
@@ -11487,7 +11495,7 @@
 		<French>Un type de carte imprévisible.</French>
 		<German>Ein unvorhersehbarer Kartentyp.</German>
 		<Italian>Un tipo di mappa imprevedibile.</Italian>
-		<Russian>Карта непредсказуемого типа.</Russian>
+		<Russian>Непредсказуемая карта.</Russian>
 		<Spanish>Un tipo de mapa inesperado.</Spanish>
 	</TEXT>
 	<TEXT>
@@ -11779,7 +11787,7 @@
 		<French>Pan-Gaia: "Une terre", un seul et énorme continent.</French>
 		<German>Pangäa: "Eine Erde", ein einziger gewaltiger Kontinent.</German>
 		<Italian>Pan-Gaia: un solo enorme continente.</Italian>
-		<Russian>Всеземля: один огромный континент.</Russian>
+		<Russian>Один огромный континент.</Russian>
 		<Spanish>Pan-gea ("una Tierra"), un solo continente enorme.</Spanish>
 	</TEXT>
 	<TEXT>
@@ -11796,7 +11804,7 @@
 		<French>Port Civ4 officiel de PerfectWorld 3 de Civ5, avec un nouveau générateur de masse terrestre Perlin Noise et un nouveau système de climatisation en option. Le placement de la rivière, du lac, des entités et des ressources reste inchangé par rapport à PerfectWorld 2.</French>
 		<German>Hierbei handelt es sich um eine Civ4-Portierung des Civ5-Mods "PerfectWorld 3". Sie enthält den auf Perlin-Noise basierenden Landmasse-Generator und ein optionales neues Klimasystem. Die aus "PerfectWorld 2" bekannte Platzierung von Flüssen, Seen, Geländeeigenschaften und Ressourcen wurde unverändert beibehalten.</German>
 		<Italian>Port ufficiale per Civ4 del generatore PerfectWorld 3 da Civ5, con il nuovo generatore di continenti e un nuovo sistema climatico opzionale. Il posizionamento di fiumi, laghi, caratteristiche e risorse non cambiano rispetto a PerfectWorld 2.</Italian>
-		<Russian>Официальный порт PerfectWorld 3 из Civilization V c новым генератором суши на основе шума Перлина и опциональной новой системой климата. Расположения рек, озер, особенностей ландшафта и ресурсов осталось идентичным PerfectWorld 2.</Russian>
+		<Russian>Официальный порт PerfectWorld 3 из Civilization V c новым генератором суши на основе шума Перлина и опциональной новой системой климата. Расположения рек, озер, особенностей ландшафта и ресурсов остались идентичны PerfectWorld 2.</Russian>
 		<Spanish>Versión oficial para Civ4 del generador 'PerfectWorld 3' de Civ5, con el nuevo generador de continentes 'Perlin Noise' y un nuevo sistema climático opcional. El método para colocar los ríos, lagos, características y recursos permanece inalterado respecto a PerfectWorld 2.</Spanish>
 	</TEXT>
 	<TEXT>
@@ -11805,7 +11813,7 @@
 		<French>Carte aléatoire qui simule la tectonique des plaques de type terrestre, les vents géostrophiques et de mousson et les précipitations.</French>
 		<German>Eine Zufallskarte, die eine erdähnliche Plattentektonik, geostrophische und Monsunwinde und Regenfälle simuliert.</German>
 		<Italian>Mappa random che simula una tettonica a placche simile a quella terrestre, venti geostrofici e monsonici e piogge.</Italian>
-		<Russian>Карта, имитирующая тектонику земных плит, геострофические и муссонные ветры и осадки.</Russian>
+		<Russian>Имитирование землеподобных тектоники литосферных плит, геострофических и муссонных ветров и осадков.</Russian>
 		<Spanish>Mapa aleatorio que simula una tectónica de placas similar a la de la Tierra, vientos geostróficos y de monzón, y lluvia.</Spanish>
 	</TEXT>
 	<TEXT>
@@ -11814,6 +11822,7 @@
 		<French>Générateur de cartes, capable de créer des formes de continent très imprévisibles, tout en gardant la taille du continent sous contrôle et équilibre.</French>
 		<German>Ein Kartengenerator, der in der Lage ist, unvorhersehbare Kontinentformen zu erschaffen, der aber dabei die Kontinentgröße ausgeglichen und kontrollierbar hält.</German>
 		<Italian>Generatore di mappe, capace di creare continenti con forme molto imprevedibili, mantenendo la dimensione dei continenti controllata e bilanciata.</Italian>
+		<Russian>Генератор, способный создавать континенты самых непредсказуемых форм, при этом оставляя их сбаласнированными и контролируемого размера.</Russian>
 		<Spanish>Generador de mapas capaz de crear continentes con formas impredecibles, manteniendo sus dimensiones controladas y balanceadas.</Spanish>
 	</TEXT>
 	<TEXT>
@@ -11878,6 +11887,7 @@
 		<French>Crée aléatoirement une carte Pangée, Continents, Archipel ou Mixte.</French>
 		<German>Erstellt auf Zufallsbasis eine Pangäa-, Kontinent-, Archipel- oder Fraktal-Karte.</German>
 		<Italian>Genera casualmente una mappa di tipo pangea, continenti, arcipelago o frattale.</Italian>
+		<Russian>Неконтролируеммо создает одну из карт: фрактальную, архипелах, несколько континентов или единый.</Russian>
 		<Spanish>Genera al azar un mapa de tipo Pangea, Continentes, Archipiélago o Fractal.</Spanish>
 	</TEXT>
 	<TEXT>
@@ -11951,7 +11961,7 @@
 		<German>Tectonics - eine Karte, die Plattentektonik simuliert. Version 3.16_mst</German>
 		<Italian>Una mappa tettonica che simula la tettonica a placche. (ver. 3.16_mst)</Italian>
 		<Spanish>Tectonics - un mapa que simula la tectónica de placas. Versión 3.16_mst</Spanish>
-		<Russian>Ñîçäàíèå ãîðíûõ ãðÿä è ìîäåëèðîâàíèå òåêòîíèêè ïëèò äàþò áîëåå ðåàëèñòè÷íóþ/çåìëåïîäîáíóþ ìåñòíîñòü (ãîðíûå îáëàñòè, ãîðû áëèç ïîáåðåæèé, êàê Àíäû èëè êîíòèíåíòàëüíûå ìàññèâû, êàê Ãèìàëàè).</Russian>
+		<Russian>Смоделировать тектонику литосферных плит и создание горных гряд для более реалистичного или землеподобного ландшафта: горные области, горы близ побережий, как Анды или континентальные массивы, как Гималаи.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MAP_SCRIPT_TERRA</Tag>
@@ -11967,6 +11977,7 @@
 		<French>Des continents similaires à ceux de la Terre sont créés aléatoirement. Tous les joueurs commencent dans l'Antiquité. Ces cartes sont immenses !</French>
 		<German>Terra generiert zufällige Landflächen, ähnlich wie die auf dem Planeten Erde. Alle Spieler beginnen zunächst in der Alten Welt. Diese Kartenvarianten sind besonders groß!</German>
 		<Italian>Genera delle masse terrestri casuali simili a quelle del nostro pianeta. Tutti i giocatori iniziano nel vecchio mondo. Queste mappe sono molto grandi.</Italian>
+		<Russian>Массивы суши, похожие на земные континенты. Все игроки начинают в Старом Свете. Очень большой размер карты!</Russian>
 		<Spanish>Terra genera al azar masas de tierra similares a las del planeta Tierra. Todos los jugadores empiezan en el Viejo Mundo. ¡Estos mapas son supergrandes!</Spanish>
 	</TEXT>
 	<TEXT>
@@ -23042,6 +23053,7 @@
 		<French>Climat : %s1</French>
 		<German>Klima: %s1</German>
 		<Italian>Clima %s1</Italian>
+		<Russian>%s1 климат</Russian>
 		<Spanish>Clima: %s1</Spanish>
 	</TEXT>
 	<TEXT>

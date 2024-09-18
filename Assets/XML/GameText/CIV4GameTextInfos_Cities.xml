@@ -27,8 +27,8 @@
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_AANG_THONG</Tag>
 		<English>Aang Thong</English>
-		<Russian>Ангтхонг</Russian>
 		<Italian>Ang Thong</Italian>
+		<Russian>Ангтхонг</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_AARHUS</Tag>
@@ -60,18 +60,19 @@
 		<Tag>TXT_KEY_CITY_NAME_ABYDOS</Tag>
 		<English>Abydos</English>
 		<Italian>Abido</Italian>
-		<Spanish>Abidos</Spanish>
 		<Russian>Абидос</Russian>
+		<Spanish>Abidos</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_ABZU</Tag>
 		<English>Abzu</English>
-		<Russian>Абзу</Russian>
 		<Italian>Apsû</Italian>
+		<Russian>Абзу</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_ACEM</Tag>
 		<English>Acem</English>
+		<Russian>Акем</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_ACEMHOYUK</Tag>
@@ -81,12 +82,13 @@
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_ACHRIDA</Tag>
 		<English>Achrida</English>
-		<Russian>Ахрида</Russian>
 		<Italian>Ocrida</Italian>
+		<Russian>Ахрида</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_ACHU</Tag>
 		<English>Achu</English>
+		<Russian>Ачу</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_ACHUAR</Tag>
@@ -111,8 +113,8 @@
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_ACTIA_NICOPOLIS</Tag>
 		<English>Actia Nicopolis</English>
-		<Russian>Актиа Никополис</Russian>
 		<Italian>Nicopolis</Italian>
+		<Russian>Актиа Никополис</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_ACUERA</Tag>
@@ -205,8 +207,8 @@
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_AD_DAR_AL_BAIDAA</Tag>
 		<English>ad-dar al-bayda'</English>
-		<Russian>Аддар-аль-Байда</Russian>
 		<Italian>Dar al-Bayda</Italian>
+		<Russian>Аддар-аль-Байда</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_AFOLA</Tag>
@@ -231,10 +233,12 @@
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_AHHIYAWA</Tag>
 		<English>Ahhiyawa</English>
+		<Russian>Ахиява</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_AHLAT</Tag>
 		<English>Ahlat</English>
+		<Russian>Ахлат</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_AHMEDABAD</Tag>
@@ -255,6 +259,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_AIRAI</Tag>
 		<English>Airai</English>
+		<Russian>Аираи<Russian/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_AIX_EN_PROVENCE</Tag>
@@ -277,7 +282,7 @@
 		<German>Chenmet-Min</German>
 		<Italian>Khent-menu</Italian>
 		<Spanish>Jent-Min</Spanish>
-		<Russian>Îêñèðèíõ</Russian>
+		<Russian>Кент-Мин</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_AKITA</Tag>
@@ -293,11 +298,12 @@
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_AKORIS</Tag>
 		<English>Mer-Nefer</English>
-		<Russian>Ìåð-Íåôåð</Russian>
+		<Russian>Мер-Нефер</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_AKSHAK</Tag>
 		<English>Aksak</English>
+		<Russian>Аксак</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_AKSUM</Tag>
