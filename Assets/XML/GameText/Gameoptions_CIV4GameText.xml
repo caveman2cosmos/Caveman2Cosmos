@@ -853,7 +853,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_NO_EVENTS_HELP</Tag>
-		<English>Random Events do not occur.[NEWLINE]ALERT: DO enable this option for multiplayer games to increase game stability.[NEWLINE]WARNING: Events are currently unsupported - may be buggy and/or unbalanced.</English>
+		<English>Random Events do not occur.[NEWLINE]ALERT: DO enable this option for multiplayer games to increase game stability.</English>
 		<French>Les événements aléatoires ne se produisent pas</French>
 		<German>Es finden keine Zufallsereignisse statt.</German>
 		<Italian>Non si verificano eventi casuali</Italian>

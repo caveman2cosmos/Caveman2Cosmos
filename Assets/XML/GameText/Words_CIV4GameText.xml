@@ -146,6 +146,7 @@
 		<English>Spot</English>
 		<German>Sicht</German>
 		<Italian>Tipo e forza d'[COLOR_HIGHLIGHT_TEXT]individuazione[COLOR_REVERT]:</Italian> <!-- unit Ambusher with Hide and Seek active -->
+		<Russian>Тип и мощность обнаружения</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_WORD_TEAM</Tag>

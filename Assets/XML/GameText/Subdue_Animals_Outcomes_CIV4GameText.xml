@@ -13,7 +13,7 @@
 		<French>Animal contre animal ou animal contre homme dans un combat spectaculaire.</French>
 		<Italian>Combattimenti di animali contro animali o animali contro uomini.</Italian>
 		<Polish>Zwierz&#234; kontra zwierz&#234; lub zwierz&#234; kontra cz&#179;owiek w walce na arenie!</Polish>
-		<Russian>Æèâîòíîå vrs. æèâîòíîå èëè æèâîòíîå vrs. ÷åëîâåê â çàõâàòûâàþùåé áîðüáå.</Russian>
+		<Russian>Животное против животного или животное против человека в захватывающей борьбе.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISSION_ANIMAL_COMBAT_HELP</Tag>
@@ -21,7 +21,7 @@
 		<French>Procure un gain temporaire de bonheur.</French>
 		<Italian>[NEWLINE]Fornisce un aumento temporaneo di felicità.</Italian>
 		<Polish>Tymczasowo zwi&#234;ksza zadowolenie miejskiej populacji.</Polish>
-		<Russian>Îáåñïå÷èâàåò ïîâûøåíèå ñ÷àñòüÿ.</Russian>
+		<Russian>Обеспечивает повышение счастья.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISSION_ANIMAL_STUDY</Tag>
@@ -29,7 +29,7 @@
 		<French>Étudier l'animal.</French>
 		<Italian>Studia animale.</Italian>
 		<Polish>Zbadaj zwierz&#234;.</Polish>
-		<Russian>Îáó÷èòü æèâîòíîå.</Russian>
+		<Russian>Обучить животное.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISSION_ANIMAL_STUDY_HELP</Tag>
@@ -37,14 +37,14 @@
 		<French>Procure un bonus de science.</French>
 		<Italian>[NEWLINE]Fornisce un aumento di ricerca.</Italian>
 		<Polish>Dostarcza ma&#179;&#185; ilo&#156;&#230; nauki.</Polish>
-		<Russian>Îáåñïå÷èâàåò ïîâûøåíèå íàóêè.</Russian>
+		<Russian>Обеспечивает повышение науки.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISSION_BUILD_DOMESTICATED_HERD</Tag>
 		<English>Settle domesticated animal as resource on the map.</English>
 		<French>Installer l'animal domestique comme ressource sur la carte.</French>
 		<Polish>Osad&#159; udomowione zwierz&#234; na mapie jako surowiec.</Polish>
-		<Russian>Ïîñåëèòü ïðèðó÷åííîå æèâîòíîå êàê ðåñóðñ íà êàðòå</Russian>
+		<Russian>Поселить прирученное животное как ресурс на карте</Russian>
 		<Italian>Posiziona l'animale domestico come risorsa sulla mappa.</Italian>
 	</TEXT>
 	<TEXT>
@@ -106,7 +106,7 @@
 		<French>Le Peuple apprécie les jeux.</French>
 		<Italian>La popolazione ha apprezzato i giochi.</Italian>
 		<Polish>Ludzie pokochali walki na arenie.</Polish>
-		<Russian>Ëþäè íàñëàæäàëèñü èãðàìè.</Russian>
+		<Russian>Люди наслаждались играми.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_OUTCOME_ANIMAL_RECORD_TALE_CAVE</Tag>
@@ -138,7 +138,7 @@
 		<French>Cette histoire fait partie à présent de votre Patrimoine culturel.</French>
 		<Italian>La storia è entrata a far parte della nostra eredità culturale.</Italian>
 		<Polish>Opowie&#156;&#230; sta&#179;a si&#234; cz&#234;&#156;ci&#185; Twojego dziedzictwa kulturowego.</Polish>
-		<Russian>Ðàññêàç - òåïåðü ÷àñòü íàøåãî êóëüòóðíîãî íàñëåäèÿ.</Russian>
+		<Russian>Рассказ - теперь часть нашего культурного наследия.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_OUTCOME_ANIMAL_RECORD_TALE_ORAL</Tag>
@@ -146,7 +146,7 @@
 		<French>L'unité est utilisée pour procurer un bonus de culture et de science, dépendant des bâtiments présents dans la ville (Peintures des cavernes, Hutte du Conteur d'histoire, Ecole des scribes, Bibliothèque ou Université).</French>
 		<Italian>Consumerà l'unità fornendo un aumento di cultura e ricerca. Si ottengono risultati migliori in una città con: capanna del cantastorie, pitture rupestri, scuola di scribi, biblioteca o università.</Italian>
 		<Polish>Ta akcja usunie jednostk&#234; dostarczaj&#185;c ma&#179;ej ilo&#156;ci kultury i nauki. Lepsze rezultaty mog&#185; by&#230; osi&#185;gni&#234;te je&#156;li w mie&#156;cie znajduj&#185; si&#234; odpowiednie budynki: Malunki Naskalne, Chata Opowiadacza, Szko&#179;a Skryb&#243;w, Biblioteka, Uniwersytet.</Polish>
-		<Russian>Ýòî áóäåò ïîòðåáëÿòü îòðÿä, îáåñïå÷èâàþùóþ êóëüòóðó è íàó÷íîå ïîâûøåíèå, îñíîâàííîå, íà êîòîðîì çäàíèå äîñòóïíî â ãîðîäå (Íàñêàëüíûå ðèñóíêè èëè Õèæèíà Ðàñêàç÷èêà Èñòîðèè).</Russian>
+		<Russian>Это будет потреблять отряд, обеспечивающую культуру и научное повышение, основанное, на котором здание доступно в городе (Наскальные рисунки или Хижина Расказчика Истории).</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_OUTCOME_ANIMAL_RECORD_TALE_SCRIBE</Tag>
@@ -177,7 +177,7 @@
 		<English>Attempt to settle the domesticated subdued animal into a herd resource and build a pasture.</English>
 		<French>Tenter d'installer l'animal apprivoisé et domestiqué dans une ressource de troupeau et de construire un pâturage.</French>
 		<Polish>Spr&#243;buj zmieni&#230; oswojone zwierz&#234; w stado (surowiec na mapie) i zbuduj pastwisko.</Polish>
-		<Russian>Ïîïûòüñÿ ïîäñåëèòü ïðèðó÷åííîå æèâîòíîå â ñòàäî ðåñóðñà è ïîñòðîèòü ïàñòáèùå.</Russian>
+		<Russian>Попыться подселить прирученное животное в стадо ресурса и построить пастбище.</Russian>
 		<Italian>Prova a convertire l'animale domato in una mandria e costruire un pascolo.</Italian>
 	</TEXT>
 	<TEXT>
@@ -185,7 +185,7 @@
 		<English>Domesticated animals are now bred on this plot.</English>
 		<French>Les animaux domestiques sont maintenant élevés sur cette case.</French>
 		<Polish>Od tego momentu stada zwierz&#185;t zasiedlaj&#185; ten teren.</Polish>
-		<Russian>Îòíûíå íà ýòîì ó÷àñòêå ðàçâîäÿò îäîìàøíåííûõ æèâîòíûõ.</Russian>
+		<Russian>Отныне на этом участке разводят одомашненных животных.</Russian>
 		<Italian>Gli animali addomesticati sono ora presenti su questa casella.</Italian>
 	</TEXT>
 </Civ4GameText>

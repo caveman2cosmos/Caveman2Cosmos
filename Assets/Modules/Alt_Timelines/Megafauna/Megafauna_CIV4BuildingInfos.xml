@@ -402,9 +402,6 @@
 					<iFlavor>5</iFlavor>
 				</Flavor>
 			</Flavors>
-			<PrereqOrBuildings>
-				<BuildingType>BUILDING_ENCLOSURE_BIG_CAT</BuildingType>
-			</PrereqOrBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_EFFECT_HERITAGE_BIG_CATS</Type>
