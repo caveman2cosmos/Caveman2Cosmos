@@ -3049,7 +3049,7 @@
 		<Italian>Seleziona la velocità di gioco</Italian>
 		<Spanish>¿A qué velocidad ha de ir el juego?</Spanish>
 		<Polish>Jak d&#179;uga powinna by&#230; rozgrywka?</Polish>
-		<Russian>Насколько длинной будет партия?</Russian>
+		<Russian>Насколько долгой будет партия?</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MAIN_MENU_SELECT_GAME_SPEED_TITLE</Tag>
@@ -3059,7 +3059,7 @@
 		<Italian>VELOCITÀ DI GIOCO</Italian>
 		<Spanish>VELOCIDAD DE JUEGO</Spanish>
 		<Polish>D&#163;UGO&#140;&#198; ROZGRYWKI</Polish>
-		<Russian>СКОРОСТЬ ИГРЫ</Russian>
+		<Russian>Длительность</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MAIN_MENU_SELECT_SEALEVEL_TITLE</Tag>
@@ -3609,7 +3609,7 @@
 		<Italian>Mappa:</Italian>
 		<Spanish>Mapa:</Spanish>
 		<Polish>Mapa:</Polish>
-		<Russian>Генератор карты:</Russian>
+		<Russian>Карта:</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MENU_SEALEVEL</Tag>

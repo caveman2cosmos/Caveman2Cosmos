@@ -8540,7 +8540,7 @@
 		<French>C'est la vitesse standard.</French>
 		<German>Dies ist die normale Standardgeschwindigkeit.</German>
 		<Italian>Questa è la velocità standard</Italian>
-		<Russian>Это обычная скорость.</Russian>
+		<Russian>Обычная скорость.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMESPEED_SNAIL</Tag>
@@ -11276,6 +11276,7 @@
 		<French>Equilibré</French>
 		<German>Ausgewogen</German>
 		<Italian>Bilanciata</Italian>
+		<Russian>Сбалансированно</Russian>
 		<Spanish>Equilibrado</Spanish>
 	</TEXT>
 	<TEXT>
@@ -11337,7 +11338,7 @@
 		<French>Un immense continent contenant une forêt luxuriante dotée d'une faune et d'une flore extrêmement riches.</French>
 		<German>Auf einem riesigen einzelnen Kontinent befindet sich ein Paradies aus Grasland und Wald mit reicher Tier- und Pflanzenwelt.</German>
 		<Italian>Un singolo, enorme continente che contiene foreste e praterie ricche di fauna.</Italian>
-		<Russian>Один огромный континент, где находится рай из лугов и лесов, богатый дикой природой.</Russian>
+		<Russian>Один континент, где находится рай из лугов и лесов, богатый дикой природой.</Russian>
 		<Spanish>Un paraíso de praderas y bosques, rico en fauna, se concentra en un continente, único y enorme.</Spanish>
 	</TEXT>
 	<TEXT>
@@ -11372,7 +11373,7 @@
 		<French>Une Pangée circulaire dans laquelle tous les joueurs disposent de toutes les ressources stratégiques à quelques cases de leur point de départ.</French>
 		<German>Ein runder Pangäa-Kontinent, auf dem allen Spielern im Umkreis weniger Geländefelder um ihre Startstandorte die meisten lebensnotwendigen strategischen Ressourcen zur Verfügung stehen.</German>
 		<Italian>Una pangea circolare dove tutti i giocatori dispongono delle risorse strategiche fondamentali a poca distanza dal punto di partenza.</Italian>
-		<Russian>Кольцевой единый континет, где все игроки гарантированно имеют самые важные стратегические ресурсы в пределах нескольких клеток от их стартовой позиции.</Russian>
+		<Russian>Один круговой континет. Все игроки гарантированно имеют самые важные стратегические ресурсы в пределах нескольких клеток от их стартовой позиции.</Russian>
 		<Spanish>Una Pangea perfecta en la que todos los jugadores cuentan con los recursos estratégicos más vitales a pocas casillas de su lugar de salida.</Spanish>
 	</TEXT>
 	<TEXT>
@@ -11495,7 +11496,7 @@
 		<French>Un type de carte imprévisible.</French>
 		<German>Ein unvorhersehbarer Kartentyp.</German>
 		<Italian>Un tipo di mappa imprevedibile.</Italian>
-		<Russian>Непредсказуемая карта.</Russian>
+		<Russian>Непредсказуемый тип карты.</Russian>
 		<Spanish>Un tipo de mapa inesperado.</Spanish>
 	</TEXT>
 	<TEXT>
@@ -11520,7 +11521,7 @@
 		<French>Un vaste océan central est entouré d'un large anneau de terre.</French>
 		<German>In der Mitte dieser Karte befindet sich ein großes Meer, das von einem dicken Landring umschlossen ist.</German>
 		<Italian>Un ampio mare riempie il centro della mappa, circondato da uno spesso anello di terra.</Italian>
-		<Russian>В центре находится большое море, окруженное плотным кольцом суши.</Russian>
+		<Russian>Окруженное плотным кольцом суши большое море в центре.</Russian>
 		<Spanish>Un gran mar puebla el centro, rodeado por un grueso anillo de tierra.</Spanish>
 	</TEXT>
 	<TEXT>
@@ -11618,7 +11619,7 @@
 		<French>2 à 4 continents organisés en deux hémisphères, séparés par l'océan. De plus petites îles peuvent aussi être présentes.</French>
 		<German>2 - 4 Kontinente in der Ost- und der Westhemisphäre, die durch einen Ozean voneinander getrennt sind. Es könnte auch kleinere Inseln geben.</German>
 		<Italian>Da 2 a 4 continenti disposti negli emisferi orientale e occidentale, separati dall'oceano. Possono esserci anche isole più piccole.</Italian>
-		<Russian>Два-четыре континента, расположенных в Восточном и Западном полушариях, разделенных океаном. Также могут присутствовать небольшие острова.</Russian>
+		<Russian>От двух до четырех континентов, расположенных в Восточном и Западном полушариях, разделенных океаном. Также могут присутствовать небольшие острова.</Russian>
 		<Spanish>Entre dos y cuatro continentes situados en ambos hemisferios, separados por el océano. También habrá pequeñas islas.</Spanish>
 	</TEXT>
 	<TEXT>
@@ -11787,7 +11788,7 @@
 		<French>Pan-Gaia: "Une terre", un seul et énorme continent.</French>
 		<German>Pangäa: "Eine Erde", ein einziger gewaltiger Kontinent.</German>
 		<Italian>Pan-Gaia: un solo enorme continente.</Italian>
-		<Russian>Один огромный континент.</Russian>
+		<Russian>Один континент.</Russian>
 		<Spanish>Pan-gea ("una Tierra"), un solo continente enorme.</Spanish>
 	</TEXT>
 	<TEXT>
@@ -11822,7 +11823,7 @@
 		<French>Générateur de cartes, capable de créer des formes de continent très imprévisibles, tout en gardant la taille du continent sous contrôle et équilibre.</French>
 		<German>Ein Kartengenerator, der in der Lage ist, unvorhersehbare Kontinentformen zu erschaffen, der aber dabei die Kontinentgröße ausgeglichen und kontrollierbar hält.</German>
 		<Italian>Generatore di mappe, capace di creare continenti con forme molto imprevedibili, mantenendo la dimensione dei continenti controllata e bilanciata.</Italian>
-		<Russian>Генератор, способный создавать континенты самых непредсказуемых форм, при этом оставляя их сбаласнированными и контролируемого размера.</Russian>
+		<Russian>Континенты самых непредсказуемых форм, при этом сбаласнированные и контролируемого размера.</Russian>
 		<Spanish>Generador de mapas capaz de crear continentes con formas impredecibles, manteniendo sus dimensiones controladas y balanceadas.</Spanish>
 	</TEXT>
 	<TEXT>
@@ -11887,7 +11888,7 @@
 		<French>Crée aléatoirement une carte Pangée, Continents, Archipel ou Mixte.</French>
 		<German>Erstellt auf Zufallsbasis eine Pangäa-, Kontinent-, Archipel- oder Fraktal-Karte.</German>
 		<Italian>Genera casualmente una mappa di tipo pangea, continenti, arcipelago o frattale.</Italian>
-		<Russian>Неконтролируеммо создает одну из карт: фрактальную, архипелах, несколько континентов или единый.</Russian>
+		<Russian>Неконтролируемая генерация фрактальной карты, архипелага, одного или нескольких континентов.</Russian>
 		<Spanish>Genera al azar un mapa de tipo Pangea, Continentes, Archipiélago o Fractal.</Spanish>
 	</TEXT>
 	<TEXT>
@@ -11977,7 +11978,7 @@
 		<French>Des continents similaires à ceux de la Terre sont créés aléatoirement. Tous les joueurs commencent dans l'Antiquité. Ces cartes sont immenses !</French>
 		<German>Terra generiert zufällige Landflächen, ähnlich wie die auf dem Planeten Erde. Alle Spieler beginnen zunächst in der Alten Welt. Diese Kartenvarianten sind besonders groß!</German>
 		<Italian>Genera delle masse terrestri casuali simili a quelle del nostro pianeta. Tutti i giocatori iniziano nel vecchio mondo. Queste mappe sono molto grandi.</Italian>
-		<Russian>Массивы суши, похожие на земные континенты. Все игроки начинают в Старом Свете. Очень большой размер карты!</Russian>
+		<Russian>Массивы суши, похожие на земные. Все игроки начинают в Старом Свете. Очень большой размер карты!</Russian>
 		<Spanish>Terra genera al azar masas de tierra similares a las del planeta Tierra. Todos los jugadores empiezan en el Viejo Mundo. ¡Estos mapas son supergrandes!</Spanish>
 	</TEXT>
 	<TEXT>
@@ -30357,7 +30358,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 			<Plural>0</Plural>
 		</Spanish>
 		<Polish>Normalny</Polish>
-		<Russian>M</Russian>
+		<Russian>Обычно</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_WORLD_TINY</Tag>
