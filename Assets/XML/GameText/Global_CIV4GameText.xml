@@ -7912,7 +7912,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_FINANCE_ADVISOR_UNIT_UPKEEP_MOD_TRAIT</Tag>
 		<English>[NEWLINE][SPACE][SPACE] * Trait change: %s1 [ICON_GOLD]</English>
-		<Russian>[NEWLINE][SPACE][SPACE] * Смена черт лидера: %s1 [ICON_GOLD]</Russian>
+		<Russian>[NEWLINE][SPACE][SPACE] * Смена качеств лидера: %s1 [ICON_GOLD]</Russian>
 		<Italian>[NEWLINE]SPACE][SPACE][ICON_BULLET]Cambio di tratto del leader: [COLOR_HIGHLIGHT_TEXT]%s1[COLOR_REVERT] [ICON_GOLD]</Italian> <!-- financial advisor screen hover on unit maintenance costs -->
 	</TEXT>
 	<TEXT>
@@ -16699,7 +16699,7 @@
 		<German>Drücken Sie &lt;UMSCHALT&gt; beim Aufrufen dieser Daten, um ausführliche Informationen über die nächste Eigenschaft dieses Oberhaupts zu erhalten.</German>
 		<Italian>Tieni premuto SHIFT e sposta sopra il cursore del mouse per vedere le caratteristiche approfondite del prossimo tratto.</Italian>
 		<Polish>Przytrzymaj wci&#156;ni&#234;ty SHIFT i najed&#159; myszk&#185; by otworzy&#230; pe&#179;ne okno nast&#234;pnej cechy.</Polish>
-		<Russian>Удерживайте Shift и наведите курсор мыши еще раз, чтобы открыть полный экран с характеристиками черт.</Russian>
+		<Russian>Удерживайте Shift и наведите курсор мыши еще раз, чтобы открыть полный экран с характеристиками качеств.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISC_TRAIT_DEFENSE_HOVER</Tag>
@@ -20003,6 +20003,7 @@
 		<French>Traits de caractère</French>
 		<German>Charakterzüge</German>
 		<Italian>Tratti</Italian>
+		<Russian>Качества</Russian>
 		<Spanish>Rasgos</Spanish>
 	</TEXT>
 	<TEXT>
@@ -22277,7 +22278,7 @@
 		<Italian>Caselle nel raggio d'azione della città</Italian>
 		<Spanish>Casillas en el radio de la ciudad</Spanish>
 		<Polish>Pola w zasi&#234;gu miasta</Polish>
-		<Russian>Участки в городской черте</Russian>
+		<Russian>Участки в черте города</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_RELIGION_ALL_CITIES</Tag>
@@ -27787,6 +27788,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<French>Chm</French>
 		<German>Chm</German>
 		<Italian>Carismatico</Italian>
+		<Russian>Хрзм.</Russian>
 		<Spanish>Car</Spanish>
 	</TEXT>
 	<TEXT>
@@ -27795,6 +27797,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<French>Imp</French>
 		<German>Imp</German>
 		<Italian>Imperialista</Italian>
+		<Russian>Имп.</Russian>
 		<Spanish>Imp</Spanish>
 	</TEXT>
 	<TEXT>
@@ -27803,6 +27806,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<French>Pro</French>
 		<German>Stz</German>
 		<Italian>Protettivo</Italian>
+		<Russian>Зщт.</Russian>
 		<Spanish>Pro</Spanish>
 	</TEXT>
 	<TEXT>
@@ -30228,7 +30232,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Italian>Gigante</Italian>
 		<Spanish>Gigante</Spanish>
 		<Polish>Olbrzymia</Polish>
-		<Russian>XH</Russian>
+		<Russian>H</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_WORLD_GIGANTIC</Tag>
@@ -30238,7 +30242,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Italian>Gigantesca</Italian>
 		<Spanish>Gigantesco</Spanish>
 		<Polish>Gigantyczna</Polish>
-		<Russian>G</Russian>
+		<Russian>XH</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_WORLD_HUGE</Tag>
@@ -30264,7 +30268,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 			<Plural>0</Plural>
 		</Spanish>
 		<Polish>Wielki</Polish>
-		<Russian>H</Russian>
+		<Russian>XL</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_WORLD_LARGE</Tag>

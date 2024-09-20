@@ -5,13 +5,14 @@
 		<English>Culture - City starts with 1 tile</English>
 		<French>Ville avec 1 seule Case</French>
 		<German>Städte beginnen nur mit dem Startfeld</German>
-		<Russian>Ãîðîäà ñòàðòóþò ñ 1 êëåòêè</Russian>
+		<Russian>Города стартуют с 1 клетки</Russian>
 		<Italian>Le città iniziano con una sola casella</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_CULTURE_1_CITY_TILE_FOUNDING_HELP</Tag>
 		<English>All city founding starts with the main city tile only. A small amount of generated culture is required to acquire the adjacent tiles, after which culture progresses normally. Scaled for Game Speeds.[NEWLINE]This option will partially override "Minimum City Borders"; if MCB is also enabled, founded cities will not immediately have all adjacent 8 tiles, but nor will they be lost when acquired.</English>
 		<Italian>Tutte le nuove città iniziano solo con la casella della città principale, è necessario generare una piccola quantità di cultura per acquisire le caselle adiacenti, dopodiché la cultura progredisce normalmente (scalato rispetto alla velocità di gioco)[NEWLINE][NEWLINE]Sostituirà parzialmente l'opzione confini minimi della città se anche è abilitata (le città fondate non avranno immediatamente tutte le 8 caselle adiacenti, ma non andranno perse una volta acquisite)</Italian>
+		<Russian>При основании каждого города, ему будет доступна только его главная клетка. Для приобретения соседних требуется небольшое количество сгенерированной культуры (зависит от длительности игры), после чего культура будет развиваться как обычно.[NEWLINE]Эта настройка частично отменяет «Минимальные границы городов» - если включить их одновременно, то основанные города не будут сразу иметь все соседние восемь клеток, но и не потеряют их после приобретения.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_ADVANCED_DIPLOMACY</Tag>
@@ -21,7 +22,7 @@
 		<Italian>Diplomazia avanzata</Italian>
 		<Spanish>Diplomacia avanzada</Spanish>
 		<Polish>Zaawansowana dyplomacja</Polish>
-		<Russian>Óëó÷øåííàÿ äèïëîìàòèÿ</Russian>
+		<Russian>Улучшенная дипломатия</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_ADVANCED_DIPLOMACY_HELP</Tag>
@@ -31,7 +32,7 @@
 		<Italian>Diplomazia avanzata offre nuove opportunità di commercio, dalle ambasciate al commercio di lavoratori e unità militari</Italian>
 		<Spanish>Diplomacia avanzada añade nuevas opciones diplomáticas, desde embajadas hasta comercio de unidades militares y trabajadores.</Spanish>
 		<Polish>Zaawansowana dyplomacja dodaje nowe opcje handlowe. Dodaje ambasady by handlowa&#230; jednostkami i robotnikami.</Polish>
-		<Russian>Óëó÷øåííàÿ äèïëîìàòèÿ äîáàâëÿåò íîâûå äèïëîìàòè÷åñêèå âîçìîæíîñòè, îò ïîñîëüñòâ äî òîðãîâëè âîåííûìè è ðàáî÷èìè þíèòàìè.</Russian>
+		<Russian>Добавить новые дипломатические возможности, от посольств до торговли военными и рабочими подразделениями.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_ADVANCED_ESPIONAGE</Tag>
@@ -41,7 +42,7 @@
 		<Italian>Spionaggio avanzato</Italian>
 		<Spanish>Espionaje avanzado</Spanish>
 		<Polish>Zaawansowane Szpiegostwo</Polish>
-		<Russian>Óëó÷øåííûé øïèîíàæ</Russian>
+		<Russian>Улучшенный шпионаж</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_ADVANCED_ESPIONAGE_HELP</Tag>
@@ -51,7 +52,7 @@
 		<Italian>Permette potenti attacchi con lo spionaggio, inclusi sabotaggio nucleare, aiuti a fazioni ribelli e anarchia diffusa in tutto l'impero [NEWLINE][NEWLINE]Gli effetti dello spionaggio, come l'avvelenamento dell'acqua, sono correlati alla velocità di gioco</Italian>
 		<Spanish>Permite poderosos actos ofensivos para los espías, como sabotaje nuclear, ayuda a organizaciones rebeldes, incluso provocar la anarquía de todo el imperio. Además, los efectos de otras misiones de espionaje, como envenenar el agua, estarán correctamente escalados según la velocidad de la partida.</Spanish>
 		<Polish>Pozwala na mocniejsze ataki szpieg&#243;w, nawet na sabota&#191; nuklearny, pomoc rebelii, oraz doprowadzenia do anarchii. Efekty czasowe takie jak zatrucie &#159;r&#243;de&#179; jest dostosowane do pr&#234;dko&#156;ci gry.</Polish>
-		<Russian>Óñèëèâàåò øïèîíñêèå íàïàäåíèÿ, âêëþ÷àÿ ÿäåðíûé ñàáîòàæ, ïîìîãàÿ ôðàêöèÿì ïîâñòàíöåâ, è âûçûâàÿ àíàðõèþ âî âñåé èìïåðèè. Êðîìå òîãî ñêîðîñòü, øïèîíñêèõ ýôôåêòîâ, òàêèõ êàê îòðàâëåíèå âîäû, èçìåðÿåòñÿ ïðàâèëüíî.</Russian>
+		<Russian>Разрешить мощные шпионские атаки, включая ядерный саботаж, помощь фракциям повстанцев, и вызывая анархию во всей цивилизации. Кроме того, эффекты шпионажа, такие как отравление воды, будут корректно масштабироваться с учетом длительности игры.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_ADVANCED_NUKES</Tag>
@@ -329,7 +330,7 @@
 		<German>Komplexe Charakterzüge</German>
 		<Italian>Tratti complessi</Italian>
 		<Polish>Z&#179;o&#191;one Cechy</Polish>
-		<Russian>Ñëîæíûé õàðàêòåð</Russian>
+		<Russian>Сложные характеры</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_LEADER_COMPLEX_TRAITS_HELP</Tag>
@@ -338,7 +339,7 @@
 		<German>Die bereits existierenden Charakterzüge für Staatsoberhäupter werden vertieft und um vollkommen neue ergänzt.</German>
 		<Italian>Aggiunge nuove caratteristiche per i leader, approfondendo e rafforzando le caratteristiche esistenti</Italian>
 		<Polish>Dodaje nowe cechy oraz pog&#179;&#234;bia i wzmacnia istniej&#185;ce</Polish>
-		<Russian>Äîáàâëÿåò íîâûå è óãëóáëÿåò è óñèëèâàåò ñóùåñòâóþùèå õàðàêòåðèñòèêè.</Russian>
+		<Russian>Добавить новые, углубить и усилить существующие качества.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_MAP_CULTURALLY_LINKED_STARTS</Tag>
@@ -1130,7 +1131,7 @@
 		<German>Reine Charakterzüge</German>
 		<Italian>Tratti puri</Italian>
 		<Polish>Czyste Cechy</Polish>
-		<Russian>×èñòûå õàðàêòåðèñòèêè</Russian>
+		<Russian>Точные характеристики</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_LEADER_PURE_TRAITS_HELP</Tag>
@@ -1139,7 +1140,7 @@
 		<German>Entfernt negative Elemente von positiven Charakterzügen und positive Elemente von negativen Charakterzügen.</German>
 		<Italian>Rimuove le penalità negative dai tratti positivi e i bonus positivi dai tratti negativi</Italian>
 		<Polish>Usuwa Negatywne dzia&#179;ania z Pozytywnych Cech i Pozytywne dzia&#179;ania z Negatywnych Cech.</Polish>
-		<Russian>Óäàëÿåò êàê øòðàôû äëÿ ïîëîæèòåëüíûõ õàðàêòåðèñòèê, òàê è ïîëîæèòåëüíûå áîíóñû îòðèöàòåëüíûõ.</Russian>
+		<Russian>Удалить штрафы у положительных качеств и бонусы у отрицательных.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_BARBARIAN_RAGING</Tag>

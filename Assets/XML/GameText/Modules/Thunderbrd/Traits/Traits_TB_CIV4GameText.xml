@@ -4,14 +4,14 @@
 		<Tag>TXT_KEY_TRAIT_AERIAL</Tag>
 		<English>Aerial CT</English>
 		<French>Aérien</French>
-		<Russian>Авиатор</Russian>
+		<Russian>Авиация</Russian>
 		<Italian>Aereo</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_AERIAL1</Tag>
 		<English>Aerial I</English>
 		<French>Aérien I</French>
-		<Russian>Авиатор I</Russian>
+		<Russian>Авиация I</Russian>
 		<Italian>Aereo I</Italian>
 	</TEXT>
 	<TEXT>
@@ -40,7 +40,7 @@ Penalties:
 	[ICON_BULLET]The largest cities in your nation are less happy. Your people like having room to breathe.
 	[ICON_BULLET]Your people are more easily captured since they tend to go where the wind takes them.
 	[ICON_BULLET]Your cities suffer more Air Pollution since experimentation with vapors and a preference for burning trash into smoke is prevalent.</English>
-		<Russian>Положительная черта
+		<Russian>Положительное качество
 'Небо предлагает свободу и силу. Те, кто контролирует небо, контролируют Землю под собой. Никто не может устоять против ударов с небес.'
 Хотя это требует определенных затрат, и многие предпочитают витать в облаках, а не на грешной земле, сосредоточившись на текущих делах, этот возвышенный лидер вдохновляет своих людей смотреть вверх и за горизонт и побуждает их осваивать все в пределах видимости.
 Основные преимущества:
@@ -70,7 +70,7 @@ Penalties:
 		<Tag>TXT_KEY_TRAIT_AERIAL2</Tag>
 		<English>Aerial II</English>
 		<French>Aérien II</French>
-		<Russian>Авиатор II</Russian>
+		<Russian>Авиация II</Russian>
 		<Italian>Aereo II</Italian>
 	</TEXT>
 	<TEXT>
@@ -108,7 +108,7 @@ Penalties:
 	[ICON_BULLET]The largest cities in your nation are less happy. Your people like having room to breathe.
 	[ICON_BULLET]Your people are more easily captured since they tend to go where the wind takes them.
 	[ICON_BULLET]Your cities suffer more Air Pollution since experimentation with vapors and a preference for burning trash into smoke is prevalent.</English>
-		<Russian>Положительная черта
+		<Russian>Положительное качество
 'Небо предлагает свободу и силу. Те, кто контролирует небо, контролируют Землю под собой. Никто не может устоять против ударов с небес.'
 Хотя это требует определенных затрат, и многие предпочитают витать в облаках, а не на грешной земле, сосредоточившись на текущих делах, этот возвышенный лидер вдохновляет своих людей смотреть вверх и за горизонт и побуждает их осваивать все в пределах видимости.
 Основные преимущества:
@@ -146,7 +146,7 @@ Penalties:
 		<Tag>TXT_KEY_TRAIT_AERIAL3</Tag>
 		<English>Aerial III</English>
 		<French>Aérien III</French>
-		<Russian>Авиатор III</Russian>
+		<Russian>Авиация III</Russian>
 		<Italian>Aereo III</Italian>
 	</TEXT>
 	<TEXT>
@@ -181,7 +181,7 @@ Penalties:
 	[ICON_BULLET]The largest cities in your nation are less happy. Your people like having room to breathe.
 	[ICON_BULLET]Your people are more easily captured since they tend to go where the wind takes them.
 	[ICON_BULLET]Your cities suffer more Air Pollution since experimentation with vapors and a preference for burning trash into smoke is prevalent.</English>
-		<Russian>Положительная черта
+		<Russian>Положительное качество
 'Небо предлагает свободу и силу. Те, кто контролирует небо, контролируют Землю под собой. Никто не может устоять против ударов с небес.'
 Хотя это требует определенных затрат, и многие предпочитают витать в облаках, а не на грешной земле, сосредоточившись на текущих делах, этот возвышенный лидер вдохновляет своих людей смотреть вверх и за горизонт и побуждает их осваивать все в пределах видимости.
 Основные преимущества:
@@ -252,7 +252,7 @@ Penalties:
 	[ICON_BULLET]The largest cities in your nation are less happy. Your people like having room to breathe.
 	[ICON_BULLET]Your people are more easily captured since they tend to go where the wind takes them.
 	[ICON_BULLET]Your cities suffer more Air Pollution since experimentation with vapors and a preference for burning trash into smoke is prevalent.</English>
-		<Russian>Положительная черта
+		<Russian>Положительное качество
 'Небо предлагает свободу и силу. Те, кто контролирует небо, контролируют Землю под собой. Никто не может устоять против ударов с небес.'
 Хотя это требует определенных затрат, и многие предпочитают витать в облаках, а не на грешной земле, сосредоточившись на текущих делах, этот возвышенный лидер вдохновляет своих людей смотреть вверх и за горизонт и побуждает их осваивать все в пределах видимости.
 Основные преимущества:
@@ -1119,9 +1119,9 @@ Penalties:
 	[ICON_BULLET]Great People are slower to be born because your people spend more time laboring in the fields than on personal development.
 	[ICON_BULLET]Suffers slightly more Water Pollution.
 	[ICON_BULLET]Your citizens suffer minor Education penalties.</English>
-		<Russian>Положительная черта
+		<Russian>Положительное качество
 'Плодородие - это сущность силы. Обрабатывая землю, вы заботитесь о своих людях, и у вас всегда все будет в достатке.'
-Земля ваша изобильна, однако ваш народ долго и в поте лица трудится от зари до зари, дабы прокормить себя, поэтому у вас остается меньше времени для более сложных дел. Это простая, но эффективная черта для роста, но она также может обеспечить более быстрое обучение военных отрядов.
+Земля ваша изобильна, однако ваш народ долго и в поте лица трудится от зари до зари, дабы прокормить себя, поэтому у него остается меньше времени для более сложных дел. Это простое, но эффективное качество для роста, но оно также может обеспечить более быстрое обучение военных подразделений.
 Основные преимущества:
 	[ICON_BULLET]Каждая клетка с +7 [ICON_FOOD] и выше производит дополнительную пищу;
 	[ICON_BULLET]Все города получают дополнительную базовую пищу;
@@ -1174,11 +1174,11 @@ Penalties:
 	[ICON_BULLET]Your largest cities are significantly less happy since your people prefer rural living.
 	[ICON_BULLET]Suffers slightly more Water Pollution.
 	[ICON_BULLET]Your citizens suffer minor Education penalties.</English>
-		<Russian>Положительная черта
+		<Russian>Положительное качество
 'Плодородие - это сущность силы. Обрабатывая землю, вы заботитесь о своих людях, и у вас всегда все будет в достатке.'
-Земля ваша изобильна, однако ваш народ долго и в поте лица трудится от зари до зари, дабы прокормить себя, поэтому у вас остается меньше времени для более сложных дел. Это простая, но эффективная черта для роста, но она также может обеспечить более быстрое обучение военных отрядов.
+Земля ваша изобильна, однако ваш народ долго и в поте лица трудится от зари до зари, дабы прокормить себя, поэтому у него остается меньше времени для более сложных дел. Это простое, но эффективное качество для роста, но оно также может обеспечить более быстрое обучение военных подразделений.
 Основные преимущества:
-	[ICON_BULLET]Каждая клетка, производящая 6 коммерции, получает доп. [ICON_GOLD];
+	[ICON_BULLET]Каждая клетка, производящая 6 коммерции, получает дополнительное [ICON_GOLD];
 	[ICON_BULLET]Все города получают дополнительную базовую пищу;
 	[ICON_BULLET]Все города получают значительный процентный модификатор к пище;
 Побочные преимущества:
@@ -1228,11 +1228,11 @@ Penalties:
 	[ICON_BULLET]Your largest cities are much less happy since your people prefer rural living.
 	[ICON_BULLET]Suffers slightly more Water Pollution.
 	[ICON_BULLET]Your citizens suffer minor Education penalties.</English>
-		<Russian>Положительная черта
+		<Russian>Положительное качество
 'Плодородие - это сущность силы. Обрабатывая землю, вы заботитесь о своих людях, и у вас всегда все будет в достатке.'
-Земля ваша изобильна, однако ваш народ долго и в поте лица трудится от зари до зари, дабы прокормить себя, поэтому у вас остается меньше времени для более сложных дел. Это простая, но эффективная черта для роста, но она также может обеспечить более быстрое обучение военных отрядов.
+Земля ваша изобильна, однако ваш народ долго и в поте лица трудится от зари до зари, дабы прокормить себя, поэтому у него остается меньше времени для более сложных дел. Это простое, но эффективное качество для роста, но оно также может обеспечить более быстрое обучение военных подразделений.
 Основные преимущества:
-	[ICON_BULLET]Каждая клетка, производящая 5 коммерции, получает доп. [ICON_GOLD];
+	[ICON_BULLET]Каждая клетка, производящая 5 коммерции, получает дополнительное [ICON_GOLD];
 	[ICON_BULLET]Все города получают дополнительную базовую пищу;
 	[ICON_BULLET]Все города получают значительный процентный модификатор к пище;
 Побочные преимущества:
@@ -1276,9 +1276,9 @@ Penalties:
 	[ICON_BULLET]Your largest cities are less happy since your people prefer rural living.
 	[ICON_BULLET]Suffers more Water Pollution.
 	[ICON_BULLET]Your citizens suffer Education penalties.</English>
-		<Russian>Положительная черта
+		<Russian>Положительное качествл
 'Плодородие - это сущность силы. Обрабатывая землю, вы заботитесь о своих людях, и у вас всегда все будет в достатке.'
-Земля ваша изобильна, однако ваш народ долго и в поте лица трудится от зари до зари, дабы прокормить себя, поэтому у вас остается меньше времени для более сложных дел. Это простая, но эффективная черта для роста, но она также может обеспечить более быстрое обучение военных отрядов.
+Земля ваша изобильна, однако ваш народ долго и в поте лица трудится от зари до зари, дабы прокормить себя, поэтому у него остается меньше времени для более сложных дел. Это простое, но эффективное качество для роста, но оно также может обеспечить более быстрое обучение военных подразделений.
 Основные преимущества:
 	[ICON_BULLET]Каждая клетка с +7 [ICON_FOOD] и выше производит дополнительную пищу;
 	[ICON_BULLET]Все города получают дополнительную базовую пищу;
@@ -2224,7 +2224,7 @@ Benefits:
 	[ICON_BULLET]You can draft a few more citizens than normal during a conscript action in a city.
 	[ICON_BULLET]Maintenance from Number of Cities is significantly reduced due to allowing numerous budget debts to go unpaid.
 	[ICON_BULLET]Gain an extra result from each Goody Hut you explore.</English>
-		<Russian>Отрицательная черта
+		<Russian>Отрицательное качество
 'Бюджет не имеет значения. В моем распоряжении будет огромная армия и все, что я пожелаю. Государь я или нет?'
 Ваш народ изрядно пострадал из-за ваших злоупотреблений властью, но из-за своего отчаянного экономического положения они быстро согласятся устроиться на правительственных подрядах в строительстве и служить в армии. Перерасход и неспособность разумно инвестировать приводит к дефициту бюджета.
 Основные штрафы:
@@ -2280,7 +2280,7 @@ Benefits:
 	[ICON_BULLET]You can draft a some more citizens than normal during a conscript action in a city.
 	[ICON_BULLET]Maintenance from Number of Cities is significantly reduced due to allowing numerous budget debts to go unpaid.
 	[ICON_BULLET]Military units are trained faster.</English>
-		<Russian>Отрицательная черта
+		<Russian>Отрицательное качество
 'Бюджет не имеет значения. В моем распоряжении будет огромная армия и все, что я пожелаю. Государь я или нет?'
 Ваш народ изрядно пострадал из-за ваших злоупотреблений властью, но из-за своего отчаянного экономического положения они быстро согласятся устроиться на правительственных подрядах в строительстве и служить в армии. Перерасход и неспособность разумно инвестировать приводит к дефициту бюджета.
 Основные штрафы:
@@ -2337,7 +2337,7 @@ Benefits:
 	[ICON_BULLET]You can draft a some more citizens than normal during a conscript action in a city.
 	[ICON_BULLET]Maintenance from Number of Cities is significantly reduced due to allowing numerous budget debts to go unpaid.
 	[ICON_BULLET]Military units are trained faster.</English>
-		<Russian>Отрицательная черта
+		<Russian>Отрицательное качество
 'Бюджет не имеет значения. В моем распоряжении будет огромная армия и все, что я пожелаю. Государь я или нет?'
 Ваш народ изрядно пострадал из-за ваших злоупотреблений властью, но из-за своего отчаянного экономического положения они быстро согласятся устроиться на правительственных подрядах в строительстве и служить в армии. Перерасход и неспособность разумно инвестировать приводит к дефициту бюджета.
 Основные штрафы:
@@ -2387,7 +2387,7 @@ Benefits:
 	[ICON_BULLET]Maintenance from Number of Cities is significantly reduced due to allowing numerous budget debts to go unpaid.
 	[ICON_BULLET]Military units are trained significantly faster.
 	[ICON_BULLET]Gain an extra result from each Goody Hut you explore.</English>
-		<Russian>Отрицательная черта
+		<Russian>Отрицательное качество
 'Бюджет не имеет значения. В моем распоряжении будет огромная армия и все, что я пожелаю. Государь я или нет?'
 Ваш народ изрядно пострадал из-за ваших злоупотреблений властью, но из-за своего отчаянного экономического положения они быстро согласятся устроиться на правительственных подрядах в строительстве и служить в армии. Перерасход и неспособность разумно инвестировать приводит к дефициту бюджета.
 Основные штрафы:
@@ -4620,14 +4620,14 @@ Benefits:
 		<Tag>TXT_KEY_TRAIT_COMPLEX_PROTECTIVE</Tag>
 		<English>Protective CT</English>
 		<French>Protecteur</French>
-		<Russian>Ïîêðîâèòåëü</Russian>
+		<Russian>Защита</Russian>
 		<Italian>Protettivo</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_PROTECTIVE1</Tag>
 		<English>Protective I</English>
 		<French>Protecteur I</French>
-		<Russian>Ïîêðîâèòåëü I</Russian>
+		<Russian>Защита I</Russian>
 		<Italian>Protettivo I</Italian>
 	</TEXT>
 	<TEXT>
@@ -4948,9 +4948,9 @@ Penalties:
 	[ICON_BULLET]All Religions are harder to spread.
 	[ICON_BULLET]Your cities suffer an increased amount of Air Pollution. A lot of experiments involve exotic gasses and chemicals and technology is often based on ways to apply fire.
 	[ICON_BULLET]Your cities are a little more Educated since knowledge is a social value in your nation.</English>
-		<Russian>Положительная черта
+		<Russian>Положительное качество
 'Знание - истинный источник всей силы. Понять, как устроен мир, чтобы найти в нем свою судьбу.'
-Есть ли что-нибудь более выгодное, чем ускорение темпов исследований? Превосходство ваших соперников в техническом прогрессе - самая фундаментальная стратегия победы в любой игре Civilization во всех ее версиях. Однако есть некоторые неудобства, с которыми вам придется столкнуться здесь, и вы можете найти некоторых других лидеров с другими чертами, которые находят способы компенсировать эту разницу, могут бросить вызов и угрожать вам, независимо от вашего небольшого научного преимущества.
+Есть ли что-нибудь более выгодное, чем ускорение темпов исследований? Превосходство ваших соперников в техническом прогрессе - самая фундаментальная стратегия победы в любой игре Civilization во всех ее версиях. Однако есть некоторые неудобства, с которыми вам придется столкнуться здесь, и вы можете найти некоторых других лидеров с другими качествами, которые находят способы компенсировать эту разницу, могут бросить вызов и угрожать вам, независимо от вашего небольшого научного преимущества.
 Основные преимущества:
 	[ICON_BULLET]Все города производят еще пару базовых [ICON_RESEARCH];
 	[ICON_BULLET]Все города получают значительный модификатор в процентах к исследованиям;
@@ -5012,9 +5012,9 @@ Penalties:
 	[ICON_BULLET]All Religions are harder to spread, non-State Religions a bit tougher still.
 	[ICON_BULLET]Your cities suffer an increased amount of Air Pollution. A lot of experiments involve exotic gasses and chemicals and technology is often based on ways to apply fire.
 	[ICON_BULLET]Your cities are a little more Educated since knowledge is a social value in your nation.</English>
-		<Russian>Положительная черта
+		<Russian>Положительное качество
 'Знание - истинный источник всей силы. Понять, как устроен мир, чтобы найти в нем свою судьбу.'
-Есть ли что-нибудь более выгодное, чем ускорение темпов исследований? Превосходство ваших соперников в техническом прогрессе - самая фундаментальная стратегия победы в любой игре Civilization во всех ее версиях. Однако есть некоторые неудобства, с которыми вам придется столкнуться здесь, и вы можете найти некоторых других лидеров с другими чертами, которые находят способы компенсировать эту разницу, могут бросить вызов и угрожать вам, независимо от вашего небольшого научного преимущества.
+Есть ли что-нибудь более выгодное, чем ускорение темпов исследований? Превосходство ваших соперников в техническом прогрессе - самая фундаментальная стратегия победы в любой игре Civilization во всех ее версиях. Однако есть некоторые неудобства, с которыми вам придется столкнуться здесь, и вы можете найти некоторых других лидеров с другими качествами, которые находят способы компенсировать эту разницу, могут бросить вызов и угрожать вам, независимо от вашего небольшого научного преимущества.
 Основные преимущества:
 	[ICON_BULLET]Все города производят больше базовых исследований;
 	[ICON_BULLET]Все города получают значительный модификатор в процентах к исследованиям;
@@ -5080,9 +5080,9 @@ Penalties:
 	[ICON_BULLET]All Religions are harder to spread, non-State Religions a bit tougher still.
 	[ICON_BULLET]Your cities suffer an increased amount of Air Pollution. A lot of experiments involve exotic gasses and chemicals and technology is often based on ways to apply fire.
 	[ICON_BULLET]Your cities are a little more Educated since knowledge is a social value in your nation.</English>
-		<Russian>Положительная черта
+		<Russian>Положительное качество
 'Знание - истинный источник всей силы. Понять, как устроен мир, чтобы найти в нем свою судьбу.'
-Есть ли что-нибудь более выгодное, чем ускорение темпов исследований? Превосходство ваших соперников в техническом прогрессе - самая фундаментальная стратегия победы в любой игре Civilization во всех ее версиях. Однако есть некоторые неудобства, с которыми вам придется столкнуться здесь, и вы можете найти некоторых других лидеров с другими чертами, которые находят способы компенсировать эту разницу, могут бросить вызов и угрожать вам, независимо от вашего небольшого научного преимущества.
+Есть ли что-нибудь более выгодное, чем ускорение темпов исследований? Превосходство ваших соперников в техническом прогрессе - самая фундаментальная стратегия победы в любой игре Civilization во всех ее версиях. Однако есть некоторые неудобства, с которыми вам придется столкнуться здесь, и вы можете найти некоторых других лидеров с другими качествами, которые находят способы компенсировать эту разницу, могут бросить вызов и угрожать вам, независимо от вашего небольшого научного преимущества.
 Основные преимущества:
 	[ICON_BULLET]Все города производят гораздо больше базовых исследований;
 	[ICON_BULLET]Все города получают значительный модификатор в процентах к исследованиям;
@@ -5141,9 +5141,9 @@ Penalties:
 	[ICON_BULLET]Military units are significantly slower to train. Your citizens are reluctant to be considered brutish warriors.
 	[ICON_BULLET]All Religions are harder to spread, a bit more so if not your State Religion.
 	[ICON_BULLET]Your cities suffer an increased amount of Air Pollution. A lot of experiments involve exotic gasses and chemicals and technology is often based on ways to apply fire.</English>
-		<Russian>Положительная черта
+		<Russian>Положительное качество
 'Знание - истинный источник всей силы. Понять, как устроен мир, чтобы найти в нем свою судьбу.'
-Есть ли что-нибудь более выгодное, чем ускорение темпов исследований? Превосходство ваших соперников в техническом прогрессе - самая фундаментальная стратегия победы в любой игре Civilization во всех ее версиях. Однако есть некоторые неудобства, с которыми вам придется столкнуться здесь, и вы можете найти некоторых других лидеров с другими чертами, которые находят способы компенсировать эту разницу, могут бросить вызов и угрожать вам, независимо от вашего небольшого научного преимущества.
+Есть ли что-нибудь более выгодное, чем ускорение темпов исследований? Превосходство ваших соперников в техническом прогрессе - самая фундаментальная стратегия победы в любой игре Civilization во всех ее версиях. Однако есть некоторые неудобства, с которыми вам придется столкнуться здесь, и вы можете найти некоторых других лидеров с другими качествами, которые находят способы компенсировать эту разницу, могут бросить вызов и угрожать вам, независимо от вашего небольшого научного преимущества.
 Основные преимущества:
 	[ICON_BULLET]Все города производят еще пару базовых [ICON_RESEARCH];
 	[ICON_BULLET]Все города получают значительный модификатор в процентах к исследованиям;

@@ -498,7 +498,7 @@
 		<Tag>TXT_KEY_BUILDINGHELP_FREE_TRAIT</Tag>
 		<English>[ICON_BULLET]As long as this building is active, its owning player gains the %s1_Trait Trait.</English>
 		<French>[ICON_BULLET]Tant que ce bâtiment est actif, le joueur le possédant gagne le trait %s1_Trait.</French>
-		<Russian>[ICON_BULLET]Пока это здание активно, владеющий им игрок сохраняет черту %s1_Trait.</Russian>
+		<Russian>[ICON_BULLET]Пока это здание активно, владеющий им игрок сохраняет качество %s1_Trait.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDINGHELP_FREE_XP</Tag>
@@ -693,7 +693,7 @@
 		<German>[ICON_BULLET]%D1_change[ICON_HAPPY] für Staatsoberhäupter mit dem Charakterzug: %s2:2_trait</German>
 		<Italian>[ICON_BULLET]Felicità [COLOR_HIGHLIGHT_TEXT]%D1_change[COLOR_REVERT] [ICON_HAPPY] con un leader [COLOR_HIGHLIGHT_TEXT]%s2_trait[COLOR_REVERT]</Italian>
 		<Spanish>[ICON_BULLET]%D1_change [ICON_HAPPY] con líder %s2:1_trait</Spanish>
-		<Russian>[ICON_BULLET]%D1_change[ICON_HAPPY] для предподителей с чертой %s2_trait</Russian>
+		<Russian>[ICON_BULLET]%D1_change[ICON_HAPPY] для лидеров с качеством %s2_trait</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDINGHELP_HAPPY_CHANGE_ALL_CITIES</Tag>

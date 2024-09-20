@@ -219,7 +219,7 @@
 		<French>[ICON_BULLET]Peut être recherchée par un [COLOR_UNIT_TEXT]%s1_great_person[COLOR_REVERT].</French>
 		<German>[ICON_BULLET]kann von der Persönlichkeit [COLOR_UNIT_TEXT]%s1_great_person[COLOR_REVERT] erforscht werden</German>
 		<Italian>[ICON_BULLET]Questa tecnologia può [COLOR_HIGHLIGHT_TEXT]essere ricercata[COLOR_REVERT] da un [COLOR_HIGHLIGHT_TEXT]%s1_great_person[COLOR_REVERT]</Italian> <!-- tech Scavenging -->
-		<Russian>[ICON_BULLET][COLOR_UNIT_TEXT]%s1_great_person[COLOR_REVERT] может это изучить</Russian>
+		<Russian>[ICON_BULLET][COLOR_UNIT_TEXT]%s1_great_person[COLOR_REVERT] может изучить это</Russian>
 		<Spanish>[ICON_BULLET]Esta tecnología puede investigarla un [COLOR_UNIT_TEXT]%s1_great_person[COLOR_REVERT]</Spanish>
 	</TEXT>
 	<TEXT>
