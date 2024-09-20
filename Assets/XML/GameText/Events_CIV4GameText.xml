@@ -6084,7 +6084,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_FAUX_PAS_OTHER_2</Tag>
-		<English>The %s1_civ_adjective ambassador has committed a faux pas. They have apologised and offed gifts to amend their mistake.</English>
+		<English>The %s1_civ_adjective ambassador has committed a faux pas. They have apologised and offered gifts in an effort to make amends.</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_FAVORITE_SON_1</Tag>
@@ -6866,7 +6866,7 @@
     </TEXT>
     <TEXT>
         <Tag>TXT_KEY_EVENT_PRIME_STUD_2</Tag>
-        <English>This sounds good, send a merchant get me that stud.</English>
+        <English>Send a merchant at once for some of these fine steeds.</English>
     </TEXT>
     <TEXT>
         <Tag>TXT_KEY_EVENT_PRIME_STUD_1</Tag>
@@ -12503,7 +12503,7 @@
 	</TEXT>
     <TEXT>
         <Tag>TXT_KEY_EVENT_PRIME_STUD1_1</Tag>
-        <English>We have found big and healthy studs, taking them into our herds will grant us better horses.</English>
+        <English>We have found big and healthy studs; taking them into our herds will grant us better horses.</English>
     </TEXT>
     <TEXT>
         <Tag>TXT_KEY_EVENT_WISE_COUNCIL1_1</Tag>
