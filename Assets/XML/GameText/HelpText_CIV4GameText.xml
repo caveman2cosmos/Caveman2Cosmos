@@ -97,7 +97,7 @@
 		<Italian>[ICON_BULLET]Permette al miglioramento [COLOR_HIGHLIGHT_TEXT]%s1[COLOR_REVERT] di evolvere in [COLOR_HIGHLIGHT_TEXT]%s2[COLOR_REVERT]</Italian> <!-- tech Naturopaty -->
 		<Spanish>[ICON_BULLET]Permite [NUM1:al:a la:a los:a las] %s1 mejorar a %s2</Spanish>
 		<Polish>[ICON_BULLET]Umo&#191;liwia ulepszenie %s1 do %s2.</Polish>
-		<Russian>[ICON_BULLET]Ïîçâîëÿåò %s1 ìîäåðíèçèðîâàòü äî %s2.</Russian>
+		<Russian>[ICON_BULLET]Позволит улучшить %s1 до %s2.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECHHELP_CAN_CONSTRUCT</Tag>
@@ -105,6 +105,7 @@
 		<French>[ICON_BULLET]Peut construire :[SPACE]</French>
 		<German>[ICON_BULLET]Ermöglicht Bau von:[SPACE]</German>
 		<Italian>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Permette la costruzione[COLOR_REVERT] di edifici del tipo:[SPACE]</Italian> <!--tech Cave Dwelling hover -->
+		<Russian>[ICON_BULLET]Позволит построить[SPACE]</Russian>
 		<Spanish>[ICON_BULLET]Puede erigir[SPACE]</Spanish>
 	</TEXT>
 	<TEXT>
@@ -209,7 +210,7 @@
 		<Tag>TXT_KEY_TECHHELP_GLOBAL</Tag>
 		<English>[ICON_BULLET]Can only be researched once in a game.</English>
 		<French>[ICON_BULLET]Ne peut être recherché qu'une seule fois dans une partie.</French>
-		<Russian>[ICON_BULLET]Можно исследовать лишь однажды за всю игру.</Russian>
+		<Russian>[ICON_BULLET]Можно исследовать лишь единожды за всю игру.</Russian>
 		<Italian>[ICON_BULLET]Solo la [COLOR_HIGHLIGHT_TEXT]prima civiltà[COLOR_REVERT] che completerà la ricerca acquisirà questa tecnologia</Italian> <!-- Any religion tech in the game -->
 	</TEXT>
 	<TEXT>
@@ -218,6 +219,7 @@
 		<French>[ICON_BULLET]Peut être recherchée par un [COLOR_UNIT_TEXT]%s1_great_person[COLOR_REVERT].</French>
 		<German>[ICON_BULLET]kann von der Persönlichkeit [COLOR_UNIT_TEXT]%s1_great_person[COLOR_REVERT] erforscht werden</German>
 		<Italian>[ICON_BULLET]Questa tecnologia può [COLOR_HIGHLIGHT_TEXT]essere ricercata[COLOR_REVERT] da un [COLOR_HIGHLIGHT_TEXT]%s1_great_person[COLOR_REVERT]</Italian> <!-- tech Scavenging -->
+		<Russian>[ICON_BULLET][COLOR_UNIT_TEXT]%s1_great_person[COLOR_REVERT] может это изучить</Russian>
 		<Spanish>[ICON_BULLET]Esta tecnología puede investigarla un [COLOR_UNIT_TEXT]%s1_great_person[COLOR_REVERT]</Spanish>
 	</TEXT>
 	<TEXT>

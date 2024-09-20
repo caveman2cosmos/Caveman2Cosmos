@@ -79,6 +79,7 @@
 		<French>[ICON_BULLET]Rend l'unité incapable de capturer les villes ou unités ennemies</French>
 		<German>[ICON_BULLET]Unfähigkeit zur Einnahme von Städten und Einheiten: +1</German>
 		<Italian>[ICON_BULLET]Aggiunge un [COLOR_HIGHLIGHT_TEXT]motivo[COLOR_REVERT] per cui l'unità non è in grado di [COLOR_HIGHLIGHT_TEXT]catturare[COLOR_REVERT] città o unità nemiche</Italian>  <!-- Subcombat type Wild -->
+		<Russian>[ICON_BULLET]Не может захватывать вражеские города или подразделения</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONHELP_ADDS_COLD_IMMUNITY</Tag>

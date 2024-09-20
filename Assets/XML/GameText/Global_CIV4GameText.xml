@@ -1059,7 +1059,7 @@
 		<Italian>[NEWLINE]L'unità ricerca e distrugge i miglioramenti nemici.</Italian>
 		<Spanish>Envía a la unidad a encontrar y destrozar mejoras de terreno enemigas.</Spanish>
 		<Polish>Wy&#156;lij jednostk&#234; do wyszukania oraz zniszczenia wrogich ulepsze&#241;</Polish>
-		<Russian>Ïîñëàòü þíèò èñêàòü è ðàçðóøàòü óñîâåðøåíñòâîâàíèÿ âðàãà</Russian>
+		<Russian>Отправить подразделение искать и разрушать улучшения врага</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_ACTION_AUTOMATE_PIRATE</Tag>
@@ -2961,6 +2961,7 @@
 		<German>Für Namensänderung anklicken</German>
 		<Italian>Clicca per cambiare il nome della città</Italian> <!-- city screen hover on city name -->
 		<Spanish>Haz clic para cambiar el nombre</Spanish>
+		<Russian>Нажмите, чтобы изменить название</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CHANGE_PRODUCTION</Tag>
@@ -2969,6 +2970,7 @@
 		<German>Produktion ändern</German>
 		<Italian>Cambia produzione</Italian>
 		<Spanish>Cambiar producción</Spanish>
+		<Russian>Изменить производство</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CHEATERS_NEVER_PROSPER</Tag>
@@ -2978,7 +2980,7 @@
 		<Italian>[COLOR_NEGATIVE_TEXT]Hai già scelto la/e tecnologia/e gratuita/e [COLOR_REVERT]</Italian>
 		<Spanish>[COLOR_NEGATIVE_TEXT]Ya has escogido tu(s) tecnología(s) gratis[COLOR_REVERT]</Spanish>
 		<Polish>[COLOR_NEGATIVE_TEXT]Ju&#191; wybra&#179;e&#156; swoje darmowe technologie[COLOR_REVERT]</Polish>
-		<Russian>[COLOR_NEGATIVE_TEXT]Âû óæå âûáðàëè âàøó ñâîáîäíóþ òåõíîëîãèþ(è)[COLOR_REVERT]</Russian>
+		<Russian>[COLOR_NEGATIVE_TEXT]Вы уже выбрали бесплатные технологии[COLOR_REVERT]</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CHOOSE_ESPIONAGE_MISSION</Tag>
@@ -3250,6 +3252,7 @@
 		<French>Fondation de : %s1</French>
 		<German>Gegründet: %s1</German>
 		<Italian>Fondata nel [COLOR_HIGHLIGHT_TEXT]%s1[COLOR_REVERT]</Italian> <!-- city screen hover city name -->
+		<Russian>Основан в %s1</Russian>
 		<Spanish>Fundada: %s1</Spanish>
 	</TEXT>
 	<TEXT>
@@ -4073,6 +4076,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_CIV_UNKNOWN</Tag>
 		<English>UNKNOWN CIV</English>
+		<Russian>Неизвестная цивилизация</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CLIMATE_ARID</Tag>
@@ -4080,6 +4084,7 @@
 		<French>Aride</French>
 		<German>Trocken</German>
 		<Italian>Arido</Italian>
+		<Russian>Засушливый</Russian>
 		<Spanish>Árido</Spanish>
 	</TEXT>
 	<TEXT>
@@ -4088,6 +4093,7 @@
 		<French>Polaire</French>
 		<German>Kalt</German>
 		<Italian>Freddo</Italian>
+		<Russian>Холодный</Russian>
 		<Spanish>Frío</Spanish>
 	</TEXT>
 	<TEXT>
@@ -4096,6 +4102,7 @@
 		<French>Rocheux</French>
 		<German>Felsig</German>
 		<Italian>Rigido</Italian>
+		<Russian>Горный</Russian>
 		<Spanish>Rocoso</Spanish>
 	</TEXT>
 	<TEXT>
@@ -4104,6 +4111,7 @@
 		<French>Tempéré</French>
 		<German>Gemäßigt</German>
 		<Italian>Temperato</Italian>
+		<Russian>Умеренный</Russian>
 		<Spanish>Templado</Spanish>
 	</TEXT>
 	<TEXT>
@@ -4112,6 +4120,7 @@
 		<French>Tropical</French>
 		<German>Tropisch</German>
 		<Italian>Tropicale</Italian>
+		<Russian>Тропический</Russian>
 		<Spanish>Tropical</Spanish>
 	</TEXT>
 	<TEXT>
@@ -4510,6 +4519,7 @@
 		<German>Einheit auflösen</German>
 		<Italian>Elimina unità</Italian>
 		<Spanish>Borrar la unidad</Spanish>
+		<Russian>Удалить подразделение</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_COMMAND_DELETE_HELP</Tag>
@@ -4518,6 +4528,7 @@
 		<German>Klicken Sie hier, um die Einheit aus dem Spiel zu entfernen.</German>
 		<Italian>[NEWLINE]Rimuovi l'unità dalla partita</Italian>
 		<Spanish>Hacer clic en esta orden para eliminar a la unidad de la partida.</Spanish>
+		<Russian>Нажмите, чтобы убрать подразделение из игры.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_COMMAND_GIFT</Tag>
@@ -8355,6 +8366,7 @@
 		<French>Technologies de départ[SPACE] </French>
 		<German>Starttechnologien</German>
 		<Italian>[BOLD]Tecnologie iniziali[\BOLD]</Italian>
+		<Russian>Стартовые технологии</Russian>
 		<Spanish>Tecnologías iniciales</Spanish>
 	</TEXT>
 	<TEXT>
@@ -8363,6 +8375,7 @@
 		<French>Aucune technologie de départ</French>
 		<German>Keine Starttechnologien</German>
 		<Italian>[BOLD]Nessuna tecnologia iniziale[\BOLD]</Italian>
+		<Russian>Нет стартовых технологии</Russian>
 		<Spanish>Sin tecnologías iniciales</Spanish>
 	</TEXT>
 	<TEXT>
@@ -8373,7 +8386,7 @@
 		<Italian>%d1%: da Accordi di libero mercato</Italian>
 		<Spanish>%d1%: por Acuerdo de Libre Comercio</Spanish>
 		<Polish>%d1%: z Wolnych Um&#243;w Handlowych</Polish>
-		<Russian>%d1%: Èç ñîãëàøåíèÿ î ñâîáîäíîé òîðãîâëå</Russian>
+		<Russian>%d1%: Из соглашения о свободной торговле</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_FREE_UNITS</Tag>
@@ -8397,7 +8410,7 @@
 		<French>L'une des vitesses de jeu les plus rapides disponibles, idéale pour les tests et pour le joueur impatient.</French>
 		<German>Eine der schnellsten verfügbaren Spielgeschwindigkeiten, gut geeignet für Testläufe und ungeduldige Spieler.</German>
 		<Italian>Una delle velocità di gioco più elevate, ideale per le test run e per i giocatori più impazienti</Italian>
-		<Russian>Одна из самых высоких игровых скоростей. Удобна для тестовых запусков и нетерпеливых игроков.</Russian>
+		<Russian>Одна из самых высоких скоростей игры. Удобна для тестовых запусков и нетерпеливых игроков.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMESPEED_EONS</Tag>
@@ -8527,7 +8540,7 @@
 		<French>C'est la vitesse standard.</French>
 		<German>Dies ist die normale Standardgeschwindigkeit.</German>
 		<Italian>Questa è la velocità standard</Italian>
-		<Russian>Это обычная скорость.</Russian>
+		<Russian>Обычная скорость.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMESPEED_SNAIL</Tag>
@@ -8562,8 +8575,8 @@
 		<English>The fastest speed. Designed for testing purposes only.</English>
 		<French>La vitesse la plus rapide. Conçu à des fins de test uniquement.</French>
 		<German>Diese absolut höchste Spielgeschwindigkeit ist nur für Testzwecke gedacht.</German>
-		<Russian>Самая высокая скорость. Предназначена только для тестирования.</Russian>
 		<Italian>La velocità di gioco più veloce (pensata solo per eseguire test)</Italian>
+		<Russian>Самая высокая скорость. Предназначена только для тестирования.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAME_END_SCREEN_TITLE</Tag>
@@ -8571,6 +8584,7 @@
 		<French>Votre place dans l'histoire</French>
 		<German>Euer Platz in der Geschichte</German>
 		<Italian>Il tuo posto nella storia</Italian>
+		<Russian>Ваше место в истории</Russian>
 		<Spanish>Tu lugar en la Historia</Spanish>
 	</TEXT>
 	<TEXT>
@@ -8832,7 +8846,7 @@
 		<German>Hohes Geländedetails</German>
 		<Italian>Dettaglio alto del terreno</Italian>
 		<Spanish>Detalle del terreno alto</Spanish>
-		<Russian>Высокодетализированная поверхность</Russian>
+		<Russian>Высокодетальный ландшафт</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GRAPHICOPTION_HIRES_TERRAIN_HELP</Tag>
@@ -8841,7 +8855,7 @@
 		<German>Es werden hohes Geländedetails verwendet</German>
 		<Italian>[BOLD]Verrà utilizzato un [COLOR_HIGHLIGHT_TEXT]dettaglio alto[COLOR_REVERT] del terreno[\BOLD]</Italian>
 		<Spanish>Se usará un nivel de detalle del terreno más alto</Spanish>
-		<Russian>Будет использоваться более детализированная поверхность</Russian>
+		<Russian>Будет использоваться более детализированный ландшафт</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GRAPHICOPTION_LOWRES_TEXTURES</Tag>
@@ -8984,7 +8998,7 @@
 		<German>Ha ha ha! Viel Glück, Wurm!</German>
 		<Italian>Muhahaha! Buona fortuna, ne avrai bisogno!</Italian>
 		<Spanish>¡Jaaaaaaajajajajajá! ¡Buena suerte, infeliz!</Spanish>
-		<Russian>Ну... удачи, приятель</Russian>
+		<Russian>Ну... удачи вам.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HANDICAP_EMPEROR</Tag>
@@ -9055,7 +9069,7 @@
 		<English>MUAHAHAHAHA! Survive this!</English>
 		<French>MOUAHAHAHAHA! Essayez de Survivre à cela !</French>
 		<Italian>MUAHAHAHAHA! Prova a sopravvivere se ci riesci!</Italian>
-		<Russian>Докажи, что ты превыше любого бога!</Russian>
+		<Russian>Докажите, что вы превыше любого бога!</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HANDICAP_NOBLE</Tag>
@@ -9122,7 +9136,7 @@
 		<German>Die einfachste Schwierigkeitsstufe ist eine gute Wahl, wenn Sie Ihr allererstes Spiel starten oder eine neue Strategie ausprobieren möchten. Als Siedleranführer werden Sie feststellen: Barbaren und wilde Tiere sind weniger aggressiv, Ihre Bürger bleiben länger gesund und zufrieden und Sie erhalten darüber hinaus viele Produktionsboni.</German>
 		<Italian>Il livello di difficoltà più semplice e ideale per iniziare la tua prima partita oppure per quando desideri provare una nuova strategia (i barbari e gli animali selvaggi saranno meno aggressivi, i tuoi cittadini saranno più felici, godranno di buona salute più a lungo e potrai contare su molti bonus produttivi)</Italian>
 		<Spanish>El nivel de dificultad más fácil y una manera excelente de empezar con vuestra primera partida o probar una estrategia nueva. Como Colono, veréis que los bárbaros y animales salvajes son menos agresivos, que los ciudadanos están más felices y sanos y que habrá muchas bonificaciones a la producción para ayudaros.</Spanish>
-		<Russian>Самый низкая сложность - прекрасное условие, чтобы сыграть свою первую партию или попробовать другую стратегию. Варвары и дикие животные менее агрессивны, население дольше остается счастливым и здоровым, а также множество бонусов к производству - в помощь вам.</Russian>
+		<Russian>Самая низкая сложность - прекрасное условие, чтобы сыграть свою первую партию или попробовать другую стратегию. Варвары и дикие животные менее агрессивны, население дольше остается счастливым и здоровым, а также множество бонусов к производству - в помощь вам.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HANDICAP_WARLORD</Tag>
@@ -10657,6 +10671,7 @@
 		<French>%s1_leader des %s2_civ_short_name</French>
 		<German>%s1_leader von %s2_civ_short_name</German>
 		<Italian>%s1_leader leader della %s2:2_civ_short_name</Italian> <!-- victory info screen -->
+		<Russian>%s1_leader и %s2_civ_short_name</Russian>
 		<Spanish>%s1_leader de %s2_civ_short_name</Spanish>
 	</TEXT>
 	<TEXT>
@@ -10666,6 +10681,7 @@
 		<German>Befreien</German>
 		<Italian>Libera</Italian>
 		<Spanish>Liberar</Spanish>
+		<Russian>Освободить</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_LIBERATE_CITY_HELP</Tag>
@@ -11260,6 +11276,7 @@
 		<French>Equilibré</French>
 		<German>Ausgewogen</German>
 		<Italian>Bilanciata</Italian>
+		<Russian>Сбалансированно</Russian>
 		<Spanish>Equilibrado</Spanish>
 	</TEXT>
 	<TEXT>
@@ -11312,6 +11329,7 @@
 		<French>1 par joueur</French>
 		<German>1 pro Spieler</German>
 		<Italian>1 per giocatore</Italian>
+		<Russian>1 на игрока</Russian>
 		<Spanish>1 por jugador</Spanish>
 	</TEXT>
 	<TEXT>
@@ -11320,6 +11338,7 @@
 		<French>Un immense continent contenant une forêt luxuriante dotée d'une faune et d'une flore extrêmement riches.</French>
 		<German>Auf einem riesigen einzelnen Kontinent befindet sich ein Paradies aus Grasland und Wald mit reicher Tier- und Pflanzenwelt.</German>
 		<Italian>Un singolo, enorme continente che contiene foreste e praterie ricche di fauna.</Italian>
+		<Russian>Один континент, где находится рай из лугов и лесов, богатый дикой природой.</Russian>
 		<Spanish>Un paraíso de praderas y bosques, rico en fauna, se concentra en un continente, único y enorme.</Spanish>
 	</TEXT>
 	<TEXT>
@@ -11328,6 +11347,7 @@
 		<French>Archipel</French>
 		<German>Archipel</German>
 		<Italian>Arcipelago</Italian>
+		<Russian>Архипелаг</Russian>
 		<Spanish>Archipiélago</Spanish>
 	</TEXT>
 	<TEXT>
@@ -11336,6 +11356,7 @@
 		<French>La carte marine par excellence pour Civilization IV. Il faudra une flotte puissante !</French>
 		<German>Die ultimative Wasserkarte für Civilization IV. Schlagkräftige Marineflotten sind hier ein Muss!</German>
 		<Italian>La mappa acquatica definitiva di Civilization IV: una potente flotta navale è d'obbligo!</Italian>
+		<Russian>Ультимативная водная карта. Без сильного флота не обойтись.</Russian>
 		<Spanish>El mapa acuático definitivo para Civilization IV. Las armadas poderosas no son opcionales.</Spanish>
 	</TEXT>
 	<TEXT>
@@ -11352,6 +11373,7 @@
 		<French>Une Pangée circulaire dans laquelle tous les joueurs disposent de toutes les ressources stratégiques à quelques cases de leur point de départ.</French>
 		<German>Ein runder Pangäa-Kontinent, auf dem allen Spielern im Umkreis weniger Geländefelder um ihre Startstandorte die meisten lebensnotwendigen strategischen Ressourcen zur Verfügung stehen.</German>
 		<Italian>Una pangea circolare dove tutti i giocatori dispongono delle risorse strategiche fondamentali a poca distanza dal punto di partenza.</Italian>
+		<Russian>Один круговой континет. Все игроки гарантированно имеют самые важные стратегические ресурсы в пределах нескольких клеток от их стартовой позиции.</Russian>
 		<Spanish>Una Pangea perfecta en la que todos los jugadores cuentan con los recursos estratégicos más vitales a pocas casillas de su lugar de salida.</Spanish>
 	</TEXT>
 	<TEXT>
@@ -11360,6 +11382,7 @@
 		<French>La carte affiche en même temps les grands et les petits continents. Vous pouvez les séparer ou les laisser se superposer.</French>
 		<German>Die Karte weist eine Mischung großer und kleiner Landmassen aus. Sie können die beiden geografischen Landflächenarten separieren oder zufällig mischen.</German>
 		<Italian>Mondo realistico con grandi e piccole zone di terraferma. La maggior parte delle civiltà inizierà su un continente, qualcuna potrebbe iniziare su un isola.</Italian>
+		<Russian>Реалистичный мир с сильно рандомизированными участками суши, большими и малыми. Большинство цивилизаций появятся на континентах. Остальные, возможно, начнут на цепях островов.</Russian>
 		<Spanish>El mapa proporciona una combinación de masas terrestres grandes y pequeñas. Es posible mantener ambos tipos separados o bien solaparlos en un conglomerado creado al azar.</Spanish>
 	</TEXT>
 	<TEXT>
@@ -11384,6 +11407,7 @@
 		<French>Carte générée aléatoirement avec deux continents ou plus.</French>
 		<German>Zufällig generierte Karte mit zwei oder mehr Kontinenten.</German>
 		<Italian>Genera casualmente una mappa con due o più continenti.</Italian>
+		<Russian>Два континента или больше.</Russian>
 		<Spanish>Mapa generado al azar con dos o más continentes.</Spanish>
 	</TEXT>
 	<TEXT>
@@ -11472,6 +11496,7 @@
 		<French>Un type de carte imprévisible.</French>
 		<German>Ein unvorhersehbarer Kartentyp.</German>
 		<Italian>Un tipo di mappa imprevedibile.</Italian>
+		<Russian>Непредсказуемый тип карты.</Russian>
 		<Spanish>Un tipo de mapa inesperado.</Spanish>
 	</TEXT>
 	<TEXT>
@@ -11496,6 +11521,7 @@
 		<French>Un vaste océan central est entouré d'un large anneau de terre.</French>
 		<German>In der Mitte dieser Karte befindet sich ein großes Meer, das von einem dicken Landring umschlossen ist.</German>
 		<Italian>Un ampio mare riempie il centro della mappa, circondato da uno spesso anello di terra.</Italian>
+		<Russian>Окруженное плотным кольцом суши большое море в центре.</Russian>
 		<Spanish>Un gran mar puebla el centro, rodeado por un grueso anillo de tierra.</Spanish>
 	</TEXT>
 	<TEXT>
@@ -11568,6 +11594,7 @@
 		<French>Le monde généré aléatoirement ne contient pas d'océan, uniquement des lacs.</French>
 		<German>Zufällig generierte Welt ohne Ozeane, aber mit Seen gespickt.</German>
 		<Italian>Genera casualmente una mappa senza oceani, ma con diversi laghi.</Italian>
+		<Russian>Изрешеченный озерами мир без океанов.</Russian>
 		<Spanish>Un mundo generado al azar, sin océanos pero salpicado de lagos.</Spanish>
 	</TEXT>
 	<TEXT>
@@ -11592,6 +11619,7 @@
 		<French>2 à 4 continents organisés en deux hémisphères, séparés par l'océan. De plus petites îles peuvent aussi être présentes.</French>
 		<German>2 - 4 Kontinente in der Ost- und der Westhemisphäre, die durch einen Ozean voneinander getrennt sind. Es könnte auch kleinere Inseln geben.</German>
 		<Italian>Da 2 a 4 continenti disposti negli emisferi orientale e occidentale, separati dall'oceano. Possono esserci anche isole più piccole.</Italian>
+		<Russian>От двух до четырех континентов, расположенных в Восточном и Западном полушариях, разделенных океаном. Также могут присутствовать небольшие острова.</Russian>
 		<Spanish>Entre dos y cuatro continentes situados en ambos hemisferios, separados por el océano. También habrá pequeñas islas.</Spanish>
 	</TEXT>
 	<TEXT>
@@ -11760,6 +11788,7 @@
 		<French>Pan-Gaia: "Une terre", un seul et énorme continent.</French>
 		<German>Pangäa: "Eine Erde", ein einziger gewaltiger Kontinent.</German>
 		<Italian>Pan-Gaia: un solo enorme continente.</Italian>
+		<Russian>Один континент.</Russian>
 		<Spanish>Pan-gea ("una Tierra"), un solo continente enorme.</Spanish>
 	</TEXT>
 	<TEXT>
@@ -11776,6 +11805,7 @@
 		<French>Port Civ4 officiel de PerfectWorld 3 de Civ5, avec un nouveau générateur de masse terrestre Perlin Noise et un nouveau système de climatisation en option. Le placement de la rivière, du lac, des entités et des ressources reste inchangé par rapport à PerfectWorld 2.</French>
 		<German>Hierbei handelt es sich um eine Civ4-Portierung des Civ5-Mods "PerfectWorld 3". Sie enthält den auf Perlin-Noise basierenden Landmasse-Generator und ein optionales neues Klimasystem. Die aus "PerfectWorld 2" bekannte Platzierung von Flüssen, Seen, Geländeeigenschaften und Ressourcen wurde unverändert beibehalten.</German>
 		<Italian>Port ufficiale per Civ4 del generatore PerfectWorld 3 da Civ5, con il nuovo generatore di continenti e un nuovo sistema climatico opzionale. Il posizionamento di fiumi, laghi, caratteristiche e risorse non cambiano rispetto a PerfectWorld 2.</Italian>
+		<Russian>Официальный порт PerfectWorld 3 из Civilization V c новым генератором суши на основе шума Перлина и опциональной новой системой климата. Расположения рек, озер, особенностей ландшафта и ресурсов остались идентичны PerfectWorld 2.</Russian>
 		<Spanish>Versión oficial para Civ4 del generador 'PerfectWorld 3' de Civ5, con el nuevo generador de continentes 'Perlin Noise' y un nuevo sistema climático opcional. El método para colocar los ríos, lagos, características y recursos permanece inalterado respecto a PerfectWorld 2.</Spanish>
 	</TEXT>
 	<TEXT>
@@ -11784,6 +11814,7 @@
 		<French>Carte aléatoire qui simule la tectonique des plaques de type terrestre, les vents géostrophiques et de mousson et les précipitations.</French>
 		<German>Eine Zufallskarte, die eine erdähnliche Plattentektonik, geostrophische und Monsunwinde und Regenfälle simuliert.</German>
 		<Italian>Mappa random che simula una tettonica a placche simile a quella terrestre, venti geostrofici e monsonici e piogge.</Italian>
+		<Russian>Имитирование землеподобных тектоники литосферных плит, геострофических и муссонных ветров и осадков.</Russian>
 		<Spanish>Mapa aleatorio que simula una tectónica de placas similar a la de la Tierra, vientos geostróficos y de monzón, y lluvia.</Spanish>
 	</TEXT>
 	<TEXT>
@@ -11792,6 +11823,7 @@
 		<French>Générateur de cartes, capable de créer des formes de continent très imprévisibles, tout en gardant la taille du continent sous contrôle et équilibre.</French>
 		<German>Ein Kartengenerator, der in der Lage ist, unvorhersehbare Kontinentformen zu erschaffen, der aber dabei die Kontinentgröße ausgeglichen und kontrollierbar hält.</German>
 		<Italian>Generatore di mappe, capace di creare continenti con forme molto imprevedibili, mantenendo la dimensione dei continenti controllata e bilanciata.</Italian>
+		<Russian>Континенты самых непредсказуемых форм, при этом сбаласнированные и контролируемого размера.</Russian>
 		<Spanish>Generador de mapas capaz de crear continentes con formas impredecibles, manteniendo sus dimensiones controladas y balanceadas.</Spanish>
 	</TEXT>
 	<TEXT>
@@ -11856,6 +11888,7 @@
 		<French>Crée aléatoirement une carte Pangée, Continents, Archipel ou Mixte.</French>
 		<German>Erstellt auf Zufallsbasis eine Pangäa-, Kontinent-, Archipel- oder Fraktal-Karte.</German>
 		<Italian>Genera casualmente una mappa di tipo pangea, continenti, arcipelago o frattale.</Italian>
+		<Russian>Неконтролируемая генерация фрактальной карты, архипелага, одного или нескольких континентов.</Russian>
 		<Spanish>Genera al azar un mapa de tipo Pangea, Continentes, Archipiélago o Fractal.</Spanish>
 	</TEXT>
 	<TEXT>
@@ -11929,7 +11962,7 @@
 		<German>Tectonics - eine Karte, die Plattentektonik simuliert. Version 3.16_mst</German>
 		<Italian>Una mappa tettonica che simula la tettonica a placche. (ver. 3.16_mst)</Italian>
 		<Spanish>Tectonics - un mapa que simula la tectónica de placas. Versión 3.16_mst</Spanish>
-		<Russian>Ñîçäàíèå ãîðíûõ ãðÿä è ìîäåëèðîâàíèå òåêòîíèêè ïëèò äàþò áîëåå ðåàëèñòè÷íóþ/çåìëåïîäîáíóþ ìåñòíîñòü (ãîðíûå îáëàñòè, ãîðû áëèç ïîáåðåæèé, êàê Àíäû èëè êîíòèíåíòàëüíûå ìàññèâû, êàê Ãèìàëàè).</Russian>
+		<Russian>Смоделировать тектонику литосферных плит и создание горных гряд для более реалистичного или землеподобного ландшафта: горные области, горы близ побережий, как Анды или континентальные массивы, как Гималаи.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MAP_SCRIPT_TERRA</Tag>
@@ -11945,6 +11978,7 @@
 		<French>Des continents similaires à ceux de la Terre sont créés aléatoirement. Tous les joueurs commencent dans l'Antiquité. Ces cartes sont immenses !</French>
 		<German>Terra generiert zufällige Landflächen, ähnlich wie die auf dem Planeten Erde. Alle Spieler beginnen zunächst in der Alten Welt. Diese Kartenvarianten sind besonders groß!</German>
 		<Italian>Genera delle masse terrestri casuali simili a quelle del nostro pianeta. Tutti i giocatori iniziano nel vecchio mondo. Queste mappe sono molto grandi.</Italian>
+		<Russian>Массивы суши, похожие на земные. Все игроки начинают в Старом Свете. Очень большой размер карты!</Russian>
 		<Spanish>Terra genera al azar masas de tierra similares a las del planeta Tierra. Todos los jugadores empiezan en el Viejo Mundo. ¡Estos mapas son supergrandes!</Spanish>
 	</TEXT>
 	<TEXT>
@@ -13296,6 +13330,7 @@
 		<French>[ICON_BULLET]Construction possible de : [COLOR_BUILDING_TEXT]%s1_BldgName[COLOR_REVERT]</French>
 		<German>[ICON_BULLET]Ermöglicht Bau von: [COLOR_BUILDING_TEXT]%s1_BldgName[COLOR_REVERT]</German>
 		<Italian>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Permette di costruire[COLOR_REVERT] tutti gli edifici di tipo: [COLOR_BUILDING_TEXT]%s1_BldgName[COLOR_REVERT]</Italian> <!--tech Oral tradition, Sedentary LifeStyle pedia -->
+		<Russian>[ICON_BULLET]Позволит построить [COLOR_BUILDING_TEXT]%s1_BldgName[COLOR_REVERT]</Russian>
 		<Spanish>[ICON_BULLET]Se pueden construir [COLOR_BUILDING_TEXT]%s1:2_BldgName[COLOR_REVERT]</Spanish>
 	</TEXT>
 	<TEXT>
@@ -13305,6 +13340,7 @@
 		<German>Kapitulation</German>
 		<Italian>Capitolazione</Italian>
 		<Spanish>Capitulación</Spanish>
+		<Russian>Капитуляция</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISC_CAPITULATE_AGREEMENT</Tag>
@@ -14086,6 +14122,7 @@
 		<French>Distance du palais</French>
 		<German>Entfernung zum Palast</German>
 		<Italian>Distanza dal palazzo</Italian>
+		<Russian>Расстояние от дворца</Russian>
 		<Spanish>Lejanía con palacio</Spanish>
 	</TEXT>
 	<TEXT>
@@ -14096,7 +14133,7 @@
 		<Italian>Ambasciata</Italian>
 		<Spanish>Embajada</Spanish>
 		<Polish>Ambasada</Polish>
-		<Russian>Ïîñîëüñòâî</Russian>
+		<Russian>Посольство</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISC_EMPIRE_SPLIT</Tag>
@@ -14112,6 +14149,7 @@
 		<French>[ICON_BULLET]Permet[SPACE]:[SPACE]</French>
 		<German>[ICON_BULLET]ermöglicht:[SPACE]</German>
 		<Italian>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Abilita [COLOR_REVERT]l'uso di[SPACE]</Italian> <!--tech Cave Dwelling pedia and hover (civics, promotions)-->
+		<Russian>[ICON_BULLET]Разблокирует[SPACE]</Russian>
 		<Spanish>[ICON_BULLET]Permite[SPACE]</Spanish>
 	</TEXT>
 	<TEXT>
@@ -14690,6 +14728,7 @@
 		<French>%D1_Change[ICON_HEALTHY] (niveau de difficulté)</French>
 		<German>%D1_Change[ICON_HEALTHY] durch Schwierigkeitsgrad</German>
 		<Italian>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]%D1_Change[COLOR_REVERT] [ICON_HEALTHY] dal livello di difficoltà</Italian> <!-- city screen health panel hover -->
+		<Russian>%D1_Change[ICON_HEALTHY] от уровня сложности</Russian>
 		<Spanish>%D1_Change [ICON_HEALTHY] por nivel de dificultad</Spanish>
 	</TEXT>
 	<TEXT>
@@ -14837,7 +14876,7 @@
 		<English>%D1_Change[ICON_HEALTHY] from Fresh Water</English>
 		<French>%D1_Change[ICON_HEALTHY] (eau douce)</French>
 		<German>%D1_Change[ICON_HEALTHY] durch Süßwasser</German>
-		<Italian>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]%D1_Change[COLOR_REVERT] [ICON_HEALTHY] dall'acqua dolce</Italian> <!-- city screen health panel hover --> 
+		<Italian>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]%D1_Change[COLOR_REVERT] [ICON_HEALTHY] dall'acqua dolce</Italian> <!-- city screen health panel hover -->
 		<Spanish>%D1_Change [ICON_HEALTHY] por agua dulce</Spanish>
 	</TEXT>
 	<TEXT>
@@ -14845,7 +14884,8 @@
 		<English>%D1_Change[ICON_UNHEALTHY] from Difficulty Level</English>
 		<French>%D1_Change[ICON_UNHEALTHY] (niveau de difficulté)</French>
 		<German>%D1_Change[ICON_UNHEALTHY] durch Schwierigkeitsgrad</German>
-		<Italian>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]%D1_Change[COLOR_REVERT] [ICON_UNHEALTHY] dal livello di difficoltà</Italian> <!-- city screen health panel hover --> 
+		<Italian>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]%D1_Change[COLOR_REVERT] [ICON_UNHEALTHY] dal livello di difficoltà</Italian> <!-- city screen health panel hover -->
+		<Russian>%D1_Change[ICON_UNHEALTHY] от уровня сложности</Russian>
 		<Spanish>%D1_Change [ICON_UNHEALTHY] por nivel de dificultad</Spanish>
 	</TEXT>
 	<TEXT>
@@ -15334,6 +15374,7 @@
 		<French>[NEWLINE][ICON_BULLET]Mène vers :[SPACE]</French>
 		<German>[NEWLINE][ICON_BULLET]Führt zu:[SPACE]</German>
 		<Italian>[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Conduce[COLOR_HIGHLIGHT_TEXT] alle tecnologie:[SPACE]</Italian> <!--any tech hover -->
+		<Russian>[NEWLINE][ICON_BULLET]Откроет для изучения[SPACE]</Russian>
 		<Spanish>[NEWLINE][ICON_BULLET]Lleva a[SPACE]</Spanish>
 	</TEXT>
 	<TEXT>
@@ -15344,7 +15385,7 @@
 		<Italian>Diritto di passaggio</Italian>
 		<Spanish>Derecho de paso</Spanish>
 		<Polish>Prawo przej&#156;cia</Polish>
-		<Russian>Ïðàâî ïðîõîäà</Russian>
+		<Russian>Право прохода</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISC_LOCAL_REPEL_HOVER</Tag>
@@ -19129,7 +19170,7 @@
 		<German>Umgebungslautstärke</German>
 		<Italian>Ambiente</Italian>
 		<Spanish>Volumen del sonido ambiental</Spanish>
-		<Russian>Громкость окружения</Russian>
+		<Russian>Окружение</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_OPTIONS_ANTIALIAS</Tag>
@@ -19218,7 +19259,7 @@
 		<German>Eigener Musikordner</German>
 		<Italian>Cartella musica personale</Italian>
 		<Spanish>Carpeta de música personalizada</Spanish>
-		<Russian>Пользовательская папка с музыкой</Russian>
+		<Russian>Сторонняя музыка</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_OPTIONS_DELETED_PROFILE</Tag>
@@ -19245,7 +19286,7 @@
 		<German>Soundlautstärke</German>
 		<Italian>Effetti sonori</Italian>
 		<Spanish>Volumen de los efectos de sonido</Spanish>
-		<Russian>Громкость эффектов</Russian>
+		<Russian>Эффекты</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_OPTIONS_GAME</Tag>
@@ -19281,7 +19322,7 @@
 		<German>Interfacelautstärke</German>
 		<Italian>Interfaccia</Italian>
 		<Spanish>Volumen de la interfaz</Spanish>
-		<Russian>Громкость интерфейса</Russian>
+		<Russian>Интерфейс</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_OPTIONS_LOADED_PROFILE</Tag>
@@ -19333,7 +19374,7 @@
 		<German>Musiklautstärke</German>
 		<Italian>Musica</Italian>
 		<Spanish>Volumen de la música</Spanish>
-		<Russian>Громкость музыки</Russian>
+		<Russian>Музыка</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_OPTIONS_NEED_TO_RESTART</Tag>
@@ -19508,7 +19549,7 @@
 		<German>Sprachlautstärke</German>
 		<Italian>Dialoghi</Italian>
 		<Spanish>Volumen de los diálogos</Spanish>
-		<Russian>Громкость речи</Russian>
+		<Russian>Речь</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_OPTIONS_VOICE</Tag>
@@ -19912,7 +19953,8 @@
 		<English>Leads To</English>
 		<French>Mène à :</French>
 		<German>Führt zu</German>
-		<Italian>Conduce a</Italian> 
+		<Italian>Conduce a</Italian>
+		<Russian>Откроет для изучения</Russian>
 		<Spanish>Lleva a</Spanish>
 	</TEXT>
 	<TEXT>
@@ -20365,7 +20407,7 @@
 		<German>Schneller Kampf (Offensive)</German>
 		<Italian>Combattimento rapido (Offensivo)</Italian>
 		<Spanish>Combate rápido (ataque)</Spanish>
-		<Russian>Ускоренные битвы (нападения)</Russian>
+		<Russian>Ускоренные битвы (атака)</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PLAYER_OPTION_QUICK_COMBAT_OFFENSE_HELP</Tag>
@@ -20420,7 +20462,7 @@
 		<German>Feindliche Bewegungen zeigen</German>
 		<Italian>Mostra movimenti unità nemiche</Italian>
 		<Spanish>Mostrar movimientos de enemigos</Spanish>
-		<Russian>Показывать перемещения противников</Russian>
+		<Russian>Показывать перемещения врагов</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PLAYER_OPTION_SHOW_ENEMY_MOVES_HELP</Tag>
@@ -20429,7 +20471,7 @@
 		<German>Fortbewegung feindlicher Einheiten zwischen den Runden anzeigen</German>
 		<Italian>[BOLD]Mostra le [COLOR_HIGHLIGHT_TEXT]azioni delle unità nemiche[COLOR_REVERT] tra un turno e l'altro[\BOLD]</Italian>
 		<Spanish>Muestra los movimientos de las unidades enemigas entre turno y turno.</Spanish>
-		<Russian>Показывать перемещения вражеских подразделений между ходами игрока</Russian>
+		<Russian>Показывать перемещения подразделений противников между вашими ходами</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PLAYER_OPTION_SHOW_FRIENDLY_MOVES</Tag>
@@ -20447,7 +20489,7 @@
 		<German>Fortbewegung freundlicher Einheiten zwischen den Runden anzeigen</German>
 		<Italian>[BOLD]Mostra le [COLOR_HIGHLIGHT_TEXT]azioni delle unità amiche[COLOR_REVERT] tra un turno e l'altro[\BOLD]</Italian>
 		<Spanish>Muestra los movimientos de las unidades amistosas entre turno y turno.</Spanish>
-		<Russian>Показывать перемещения подразделений союзников между ходами игрока</Russian>
+		<Russian>Показывать перемещения подразделений союзников между вашими ходами</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PLAYER_OPTION_SHOW_HEALTH_BARS</Tag>
@@ -20483,7 +20525,7 @@
 		<German>Alle gewählten Einheiten greifen in schneller Folge nacheinander an (Hinweis: Diese Einstellung bezieht sich ausschließlich auf die Darstellung auf der Karte - die zugrunde liegenden Kampfeinstellungen bleiben unverändert)</German>
 		<Italian>[BOLD]Tutte le unità selezionate attaccheranno in [COLOR_HIGHLIGHT_TEXT]rapida successione[COLOR_REVERT] (è solo una comodità in termini di interfaccia, la [COLOR_HIGHLIGHT_TEXT]meccanica[COLOR_REVERT] di gioco resta invariata)[\BOLD]</Italian>
 		<Spanish>Todas las unidades seleccionadas atacarán en rápida sucesión (nota: esto se hace solamente a conveniencia de la interfaz, no tiene efecto alguno en la mecánica de combate subyacente).</Spanish>
-		<Russian>Все выбранные юниты будут атаковать в быстрой последовательности (примечание: это чисто интерфейсное удобство - основная механика боя останется неизменной)</Russian>
+		<Russian>Все выбранные подразделения будут атаковать в быстрой последовательности (чисто интерфейсное удобство - основная механика боя останется неизменной)</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PLAYER_OPTION_WAIT_AT_END_OF_TURN</Tag>
@@ -23012,6 +23054,7 @@
 		<French>Climat : %s1</French>
 		<German>Klima: %s1</German>
 		<Italian>Clima %s1</Italian>
+		<Russian>%s1 климат</Russian>
 		<Spanish>Clima: %s1</Spanish>
 	</TEXT>
 	<TEXT>
@@ -26412,7 +26455,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 			<Plural>0</Plural>
 		</Spanish>
 		<Polish>Zaratusztrianizm</Polish>
-		<Russian>Çîðîàñòðèçì</Russian>
+		<Russian>Зороастризм</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_ZOROASTRIANISM_ADJECTIVE</Tag>
@@ -26426,7 +26469,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 			<Plural>0:0:1:1</Plural>
 		</Spanish>
 		<Polish>Zaratustria&#241;ski</Polish>
-		<Russian>Çîðîàñòðèåö</Russian>
+		<Russian>Зороастриец</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_ZOROASTRIANISM_PEDIA</Tag>
@@ -28141,6 +28184,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<French>[ICON_BULLET]Peut construire :[SPACE]</French>
 		<German>[ICON_BULLET]Ermöglicht Bau von:[SPACE]</German>
 		<Italian>[ICON_BULLET]Permette la [COLOR_HIGHLIGHT_TEXT]costruzione[COLOR_REVERT] di[SPACE]</Italian> <!-- unit Storyteller -->
+		<Russian>[ICON_BULLET]Позволит построить[SPACE]</Russian>
 		<Spanish>[ICON_BULLET]Puede erigir[SPACE]</Spanish>
 	</TEXT>
 	<TEXT>
@@ -30140,7 +30184,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Italian>Hai completato %s1</Italian>
 		<Spanish>Habéis completado %s1</Spanish>
 		<Polish>Sko&#241;czy&#179;e&#156; %s1</Polish>
-		<Russian>Âû ïîñòðîèëè %s1.</Russian>
+		<Russian>Вы построили чудо: %s1</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_WORLD_BUILDER</Tag>
@@ -30174,7 +30218,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 			<Plural>0</Plural>
 		</Spanish>
 		<Polish>Najmniejszy</Polish>
-		<Russian>Äóýëü</Russian>
+		<Russian>XXS</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_WORLD_GIANT</Tag>
@@ -30184,7 +30228,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Italian>Gigante</Italian>
 		<Spanish>Gigante</Spanish>
 		<Polish>Olbrzymia</Polish>
-		<Russian>Ãèãàíòñêèé</Russian>
+		<Russian>XH</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_WORLD_GIGANTIC</Tag>
@@ -30194,7 +30238,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Italian>Gigantesca</Italian>
 		<Spanish>Gigantesco</Spanish>
 		<Polish>Gigantyczna</Polish>
-		<Russian>Èñïîëèíñêèé</Russian>
+		<Russian>G</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_WORLD_HUGE</Tag>
@@ -30220,7 +30264,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 			<Plural>0</Plural>
 		</Spanish>
 		<Polish>Wielki</Polish>
-		<Russian>Îãðîìíûé</Russian>
+		<Russian>H</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_WORLD_LARGE</Tag>
@@ -30246,7 +30290,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 			<Plural>0</Plural>
 		</Spanish>
 		<Polish>Du&#191;y</Polish>
-		<Russian>Áîëüøîé</Russian>
+		<Russian>L</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_WORLD_NAPALM_1</Tag>
@@ -30256,7 +30300,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Italian>I governi dei vari stati del mondo hanno reagito con disappunto alla notizia che gli aerei d'attacco %s1:3_civ_adjective saranno equipaggiati con bombe incendiarie al napalm.</Italian>
 		<Spanish>Los gobiernos del mundo han reaccionado con desagrado a las informaciones que indican que la primera línea de ataque de la aviación %s1:2_civ_adjective será equipada con bombas incendiarias de napalm.</Spanish>
 		<Polish>&#140;wiatowe rz&#185;dy zareagowa&#179;y bardzo niech&#234;tnie na wie&#156;&#230; o tym, &#191;e samoloty szturmowe %s1_civ_adjective zostan&#185; uzbrojone w bomby z napalmem.</Polish>
-		<Russian>Ìèðîâîå ñîîáùåñòâî âûðàçèëî ñâîå íåäîâîëüñòâî ïî ïîâîäó íîâîñòåé î %s1_civ_adjective àâèàóäàðå íàíåñåííûì ñàìîëåòîì ñíàðÿæåííûì çàæèãàòåëüíûìè íàïàëìîâûìè áîìáàìè.</Russian>
+		<Russian>%s1_civ_adjective самолеты будут оснащены бомбами с напалмом - мировые правительства выразили свое недовольство по этому поводу.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_WORLD_NAPALM_2</Tag>
@@ -30266,7 +30310,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Italian>La nazione %s1:2_civ_adjective nega le voci secondo cui sta ricercando una bomba incendiaria migliorata per le proprie forze aeree.</Italian>
 		<Spanish>La nación %s1:2_civ_adjective niega los informes que indican que está investigando una bomba incendiaria mejorada para sus fuerzas aéreas.</Spanish>
 		<Polish>Nar&#243;d %s1_civ_adjective zaprzecza pog&#179;oskom jakoby opracowywa&#179; udoskonalon&#185; wersj&#234; bomb dla samolot&#243;w szturmowych.</Polish>
-		<Russian>%s1_civ_adjective íàöèÿ îïðîâåðãëà äîíåñåíèÿ îá ðàçðàáîòêå óëó÷øåííûõ çàæèãàòåëüíûõ áîìá äëÿ èõ âîçäóøíûõ ñèë.</Russian>
+		<Russian>%s1_civ_adjective нация опровергает сообщения о разработке улучшенных зажигательных бомб для своих ВВС.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_WORLD_SMALL</Tag>
@@ -30288,7 +30332,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 			<Plural>0</Plural>
 		</Spanish>
 		<Polish>Ma&#179;y</Polish>
-		<Russian>Ìàëåíüêèé</Russian>
+		<Russian>S</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_WORLD_STANDARD</Tag>
@@ -30314,7 +30358,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 			<Plural>0</Plural>
 		</Spanish>
 		<Polish>Normalny</Polish>
-		<Russian>Ñòàíäàðòíûé</Russian>
+		<Russian>Обычно</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_WORLD_TINY</Tag>
@@ -30336,7 +30380,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 			<Plural>0</Plural>
 		</Spanish>
 		<Polish>Malutki</Polish>
-		<Russian>Êðîøå÷íûé</Russian>
+		<Russian>XS</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_WORST_ENEMY_IS</Tag>
@@ -30483,7 +30527,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<French>Utiliser CTRL pour voir les modif. de Combat</French>
 		<German>[COLOR_HIGHLIGHT_TEXT]&lt;STRG&gt;[COLOR_REVERT] für Anzeige der militärischen Daten</German>
 		<Polish>Naci&#156;nij CTRL aby zobaczy&#230; Modyfikatory Bojowe</Polish>
-		<Russian>Íàæìèòå CTRL äëÿ ïðîñìîòðà ìîäèôèêàòîðîâ áîÿ</Russian>
+		<Russian>Нажмите CTRL для просмотра боевых модификаторов</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_TB_UNIT_VIEW_2</Tag>
@@ -30492,7 +30536,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<French>Utiliser ALT pour voir les Informations Civiles</French>
 		<German>[COLOR_HIGHLIGHT_TEXT]&lt;ALT&gt;[COLOR_REVERT] für Anzeige der zivilen Daten</German>
 		<Polish>Naci&#156;nij ALT aby zobaczy&#230; Informacje Nie-bojowe</Polish>
-		<Russian>Íàæìèòå ALT äëÿ ïðîñìîòðà èíôîðìàöèè î öèâ.</Russian>
+		<Russian>Нажмите ALT для просмотра гражданских модификаторов</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_TB_UNIT_VIEW_3</Tag>
@@ -30501,7 +30545,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<French>Utiliser SHIFT pour voir les Classes de combat</French>
 		<German>[COLOR_HIGHLIGHT_TEXT]&lt;UMSCHALT&gt;[COLOR_REVERT] für Anzeige der Kategorien</German>
 		<Polish>Naci&#156;nij SHIFT aby zobaczy&#230; Klasy Bojowe</Polish>
-		<Russian>Íàæìèòå SHIFT äëÿ ïðîñìîòðà áîåâûõ êëàññîâ</Russian>
+		<Russian>Нажмите SHIFT для просмотра атрибутов</Russian>
 	</TEXT>
 </Civ4GameText>
 

@@ -110,6 +110,7 @@
 		<French>Climat :</French>
 		<German>Klima:</German>
 		<Italian>Clima:</Italian>
+		<Russian>Климат:</Russian>
 		<Spanish>Clima:</Spanish>
 	</TEXT>
 	<TEXT>
@@ -183,7 +184,7 @@
 		<German>Zeitalter:</German>
 		<Italian>Era:</Italian>
 		<Spanish>Época:</Spanish>
-		<Russian>Период:</Russian>
+		<Russian>Исходный период:</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PITBOSS_ERROR_HOSTING</Tag>
@@ -385,6 +386,7 @@
 		<German>Karte:</German>
 		<Italian>Mappa:</Italian>
 		<Spanish>Mapa:</Spanish>
+		<Russian>Карта:</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PITBOSS_MAXTURN_ERROR_DESC</Tag>
@@ -874,7 +876,7 @@
 		<French>Vitesse :</French>
 		<German>Geschwindigkeit:</German>
 		<Italian>Velocità:</Italian>
-		<Russian>Продолжительность:</Russian>
+		<Russian>Длительность:</Russian>
 		<Spanish>Velocidad:</Spanish>
 	</TEXT>
 	<TEXT>

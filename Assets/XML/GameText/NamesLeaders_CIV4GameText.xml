@@ -24,7 +24,7 @@
 			<Plural>0</Plural>
 		</Spanish>
 		<Polish>Aleksander</Polish>
-		<Russian>Александр Великий</Russian>
+		<Russian>Александр Македонский</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_LEADER_ALEXANDER_PEDIA</Tag>
@@ -41,7 +41,7 @@
 		<Italian>Assurbanipal</Italian>
 		<Spanish>Asurbanipal</Spanish>
 		<Polish>Aszurbanipal</Polish>
-		<Russian>Àøøóðáàíàïàë</Russian>
+		<Russian>Ашшурбанапал</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_LEADER_ASHUR_PEDIA</Tag>
@@ -69,7 +69,7 @@
 			<Plural>0</Plural>
 		</Spanish>
 		<Polish>Asioka</Polish>
-		<Russian>Àøîêà</Russian>
+		<Russian>Ашока</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_LEADER_ASOKA_PEDIA</Tag>
@@ -97,6 +97,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</Italian>
+		<Russian>Октавиан Август</Russian>
 		<Spanish>
 			<Text>César Augusto</Text>
 			<Gender>Male</Gender>
@@ -131,7 +132,7 @@
 			<Plural>0</Plural>
 		</Spanish>
 		<Polish>Barbarzy&#241;ca</Polish>
-		<Russian>Âîæäü</Russian>
+		<Russian>Вождь</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_LEADER_BARBARIAN_PEDIA</Tag>
@@ -162,7 +163,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</Spanish>
-		<Russian>Áèñìàðê</Russian>
+		<Russian>Бисмарк</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_LEADER_BISMARCK_PEDIA</Tag>
@@ -196,7 +197,7 @@
 			<Plural>0</Plural>
 		</Spanish>
 		<Polish>Boudika</Polish>
-		<Russian>Áîóäèêà</Russian>
+		<Russian>Боудикка</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_LEADER_BOUDICA_PEDIA</Tag>
@@ -224,6 +225,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</Italian>
+		<Russian>Бренн</Russian>
 		<Spanish>
 			<Text>Breno</Text>
 			<Gender>Male</Gender>
@@ -248,7 +250,7 @@
 			<Plural>0</Plural>
 		</Spanish>
 		<Polish>Kanut Wielki</Polish>
-		<Russian>Êíóä</Russian>
+		<Russian>Кнуд Великий</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_LEADER_CANUTE_PEDIA</Tag>
@@ -275,7 +277,7 @@
 			<Plural>0</Plural>
 		</Spanish>
 		<Polish>Katarzyna</Polish>
-		<Russian>Åêàòåðèíà II</Russian>
+		<Russian>Екатерина II</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_LEADER_CATHERINE_PEDIA</Tag>
@@ -305,7 +307,7 @@
 			<Plural>0</Plural>
 		</Spanish>
 		<Polish>Karol Wielki</Polish>
-		<Russian>Êàðë Âåëèêèé</Russian>
+		<Russian>Карл Великий</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_LEADER_CHARLEMAGNE_PEDIA</Tag>
@@ -338,7 +340,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</Spanish>
-		<Russian>Ìàî Öçýäóí</Russian>
+		<Russian>Мао Цзэдун</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_LEADER_CHINESE_LEADER_PEDIA</Tag>
@@ -356,7 +358,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</Spanish>
-		<Russian>Êðèñòèàí IV</Russian>
+		<Russian>Кристиан IV</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_LEADER_CHRISTIAN_IV_PEDIA</Tag>
@@ -382,6 +384,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</Italian>
+		<Russian>Черчилль</Russian>
 		<Spanish>
 			<Text>Churchill</Text>
 			<Gender>Male</Gender>
@@ -396,7 +399,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</Spanish>
-		<Russian>Êåðòèí</Russian>
+		<Russian>Кэртин</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_LEADER_CURTIN_PEDIA</Tag>
@@ -423,7 +426,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</Spanish>
-		<Russian>Êèð</Russian>
+		<Russian>Кир</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_LEADER_CYRUS_PEDIA</Tag>
@@ -453,7 +456,7 @@
 			<Plural>0</Plural>
 		</Spanish>
 		<Polish>Dariusz I</Polish>
-		<Russian>Äàðèé I</Russian>
+		<Russian>Дарий I</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_LEADER_DARIUS_PEDIA</Tag>
@@ -466,7 +469,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_LEADER_DEGANAWIDA</Tag>
 		<English>Deganawida</English>
-		<Russian>Äåãàíàâèäà</Russian>
+		<Russian>Деганавида</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_LEADER_DEGANAWIDA_PEDIA</Tag>
@@ -497,7 +500,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</Spanish>
-		<Russian>Øàðëü äå Ãîëëü</Russian>
+		<Russian>Шарль де Голль</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_LEADER_DE_GAULLE_PEDIA</Tag>
@@ -522,7 +525,7 @@
 			<Plural>0</Plural>
 		</Spanish>
 		<Polish>El&#191;bieta</Polish>
-		<Russian>Åëèçàâåòà I</Russian>
+		<Russian>Елизавета I</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_LEADER_ELIZABETH_PEDIA</Tag>
@@ -556,7 +559,7 @@
 			<Plural>0</Plural>
 		</Spanish>
 		<Polish>Fryderyk</Polish>
-		<Russian>Ôðèäðèõ II</Russian>
+		<Russian>Фридрих II</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_LEADER_FREDERICK_PEDIA</Tag>
@@ -589,7 +592,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</Spanish>
-		<Russian>Ãàíäè</Russian>
+		<Russian>Ганди</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_LEADER_GANDHI_PEDIA</Tag>
@@ -619,7 +622,7 @@
 			<Plural>0</Plural>
 		</Spanish>
 		<Polish>Czyngis-Chan</Polish>
-		<Russian>×èíãèñõàí</Russian>
+		<Russian>Чингисхан</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_LEADER_GENGHIS_KHAN_PEDIA</Tag>
@@ -653,7 +656,7 @@
 			<Plural>0</Plural>
 		</Spanish>
 		<Polish>Gilgamesz</Polish>
-		<Russian>Ãèëüãàìåø</Russian>
+		<Russian>Гильгамеш</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_LEADER_GILGAMESH_PEDIA</Tag>
@@ -668,7 +671,7 @@
 		<English>The Green Man</English>
 		<French>dame Nature</French>
 		<German>Der Grüne Mann</German>
-		<Russian>Çåëåíûé ÷åëîâåê</Russian>
+		<Russian>Зеленый человек</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_LEADER_GREEN_MAN_PEDIA</Tag>
@@ -695,7 +698,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</Spanish>
-		<Russian>Õàììóðàïè</Russian>
+		<Russian>Хаммурапи</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_LEADER_HAMMURABI_PEDIA</Tag>
@@ -723,6 +726,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</Italian>
+		<Russian>Ганнибал</Russian>
 		<Spanish>
 			<Text>Aníbal</Text>
 			<Gender>Male</Gender>
@@ -747,7 +751,7 @@
 		</French>
 		<German>Hatschepsut</German>
 		<Polish>Hatszepsut</Polish>
-		<Russian>Õàòøåïñóò</Russian>
+		<Russian>Хатшепсут</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_LEADER_HATSHEPSUT_PEDIA</Tag>
@@ -780,7 +784,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</Spanish>
-		<Russian>Óàéíà Êàïàê</Russian>
+		<Russian>Уайна Капак</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_LEADER_HUAYNA_CAPAC_PEDIA</Tag>
@@ -804,7 +808,7 @@
 			<Plural>0</Plural>
 		</Spanish>
 		<Polish>Izabela</Polish>
-		<Russian>Èçàáåëëà</Russian>
+		<Russian>Изабелла</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_LEADER_ISABELLA_PEDIA</Tag>
@@ -838,7 +842,7 @@
 			<Plural>0</Plural>
 		</Spanish>
 		<Polish>Jan II</Polish>
-		<Russian>Æóàí II</Russian>
+		<Russian>Жуан II</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_LEADER_JOAO_PEDIA</Tag>
@@ -876,7 +880,7 @@
 			<Plural>0</Plural>
 		</Spanish>
 		<Polish>Juliusz Cezar</Polish>
-		<Russian>Þëèé Öåçàðü</Russian>
+		<Russian>Юлий Цезарь</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_LEADER_JULIUS_CAESAR_PEDIA</Tag>
@@ -906,7 +910,7 @@
 			<Plural>0</Plural>
 		</Spanish>
 		<Polish>Justynian I</Polish>
-		<Russian>Þñòèíèàí I</Russian>
+		<Russian>Юстиниан I</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_LEADER_JUSTINIAN_PEDIA</Tag>
@@ -919,7 +923,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_LEADER_KAMEHAMEHA</Tag>
 		<English>Kamehameha</English>
-		<Russian>Êàìåàìåà</Russian>
+		<Russian>Камеамеа</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_LEADER_KAMEHAMEHA_PEDIA</Tag>
@@ -954,7 +958,7 @@
 			<Plural>0</Plural>
 		</Spanish>
 		<Polish>Kubilaj Chan</Polish>
-		<Russian>Õóáèëàé-õàí</Russian>
+		<Russian>Хубилай</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_LEADER_KUBLAI_KHAN_PEDIA</Tag>
@@ -979,7 +983,7 @@
 		<French>Félicitations! En résultat de votre expansion culturelle nationale, la personnalité de votre Leader s'est affirmée. Sélectionnez un trait à ajouter à votre profil, [COLOR_WARNING_TEXT]OU un trait négatif à enlever![COLOR_REVERT]</French>
 		<Italian>Congratulazioni! Come risultato dell'espansione della tua cultura nazionale, la personalità del tuo leader si è evoluta. Seleziona un nuovo tratto da aggiungere al tuo leader[COLOR_WARNING_TEXT]O seleziona un tratto negativo da rimuovere![COLOR_REVERT]</Italian>
 		<Polish>Gratulacje! Dzi&#234;ki rozszerzaniu Narodowego Dziedzictwa kulturowego, Twoja osobowo&#156;&#230; staje si&#234; g&#179;&#234;bsza. Wybierz now&#185; cech&#234; by doda&#230; j&#185; do Twojego profilu, [COLOR_WARNING_TEXT]LUB wybierz Negatywn&#185; Cech&#234; by j&#185; usun&#185;&#230;![COLOR_REVERT]</Polish>
-		<Russian>Поздравляем! В результате расширения национальной культуры личность вашего лидера стала прогрессировала. Выберите новую черту, которую нужно добавить в профиль вашего лидера [COLOR_WARNING_TEXT], ИЛИ выберите отрицательную черту для удаления![COLOR_REVERT]</Russian>
+		<Russian>Поздравляем! В результате расширения национальной культуры личность вашего лидера стала более глубокой. Выберите черту, которую нужно добавить для вашего лидера [COLOR_WARNING_TEXT], или выберите отрицательную черту для удаления.[COLOR_REVERT]</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_LEADER_LEVELUP_NEGATIVE</Tag>
@@ -987,7 +991,7 @@
 		<French>Le pouvoir corrompt, et le pouvoir absolu corrompt absolument. En résultat supplémentaire de l'expansion nationale de la culture, la personnalité de votre chef s'est dégradée également. Sélectionnez un nouveau trait négatif à ajouter à votre profil. [COLOR_HIGHLIGHT_TEXT]OU un trait positif à enlever![COLOR_REVERT]</French>
 		<Italian>Il potere corrompe, e il potere assoluto corrompe ancora di più. Come risultato dell'espansione della tua cultura nazionale, la personalità del tuo leader si è evoluta in modo negativo. Seleziona un nuovo tratto negativo da aggiungere al tuo leader[COLOR_WARNING_TEXT]O seleziona un tratto positivo da rimuovere![COLOR_REVERT]</Italian>
 		<Polish>W&#179;adza psuje, a w&#179;adza absolutna psuje absolutnie. Dodatkowym rezultatem Twojego Rozszerzania Kultury jest pog&#179;&#234;bienie Twoich Negatywnych cech. Wybierz now&#185; cech&#234; by doda&#230; j&#185; do Twojego profilu, [COLOR_WARNING_TEXT]LUB wybierz Pozytywn&#185; Cech&#234; by j&#185; usun&#185;&#230;![COLOR_REVERT]</Polish>
-		<Russian>Власть развращает, а абсолютная власть развращает абсолютно. В результате расширения национальной культуры личность вашего лидера также усилилась в негативном направлении. Выберите новую отрицательную черту, которую нужно добавить в профиль своего лидера [COLOR_HIGHLIGHT_TEXT], ИЛИ выберите положительную черту для удаления![COLOR_REVERT]</Russian>
+		<Russian>Власть развращает, а абсолютная власть развращает абсолютно. В результате расширения национальной культуры личность вашего лидера углубилась в негативном направлении. Выберите отрицательную черту, которую нужно добавить для вашего лидера [COLOR_HIGHLIGHT_TEXT], или выберите положительную черту для удаления.[COLOR_REVERT]</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_LEADER_LEVEL_PROGRESS_1</Tag>
@@ -996,11 +1000,12 @@
 		<German>Bisheriger Kulturzuwachs: %s1</German>
 		<Italian>Cultura nazionale ottenuta: %s1</Italian>
 		<Polish>Zdobyta Kultura Narodowa: %s1</Polish>
-		<Russian>Накоплено Национальной культуры: %s1</Russian>
+		<Russian>Национальная культура[NEWLINE][ICON_BULLET]%s1[ICON_CULTURE]</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_LEADER_LEVEL_PROGRESS_2</Tag>
 		<English>[ICON_BULLET]%s1[ICON_CULTURE] (Level %d2)</English>
+		<Russian>[ICON_BULLET]%s1[ICON_CULTURE] (Уровень %d2)</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_LEADER_LEVEL_PROGRESS_3</Tag>
@@ -1009,7 +1014,7 @@
 		<German>Bis zur Auswahl einer neuen Eigenschaft [NUM1:wird:werden] noch %s1 [ICON_CULTURE] benötigt.</German>
 		<Italian>Richiede %s1 per selezionare un nuovo tratto</Italian>
 		<Polish>Wymaga: %s1 do Wyboru Nowej Cechy</Polish>
-		<Russian>Требуется еще: %s1 до выбора новой черты</Russian>
+		<Russian>[ICON_BULLET]%s1[ICON_CULTURE] (осталось)</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_LEADER_LINCOLN</Tag>
@@ -1034,7 +1039,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</Spanish>
-		<Russian>Ëèíêîëüí</Russian>
+		<Russian>Линкольн</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_LEADER_LINCOLN_PEDIA</Tag>
@@ -1068,7 +1073,7 @@
 			<Plural>0</Plural>
 		</Spanish>
 		<Polish>Ludwik XIV</Polish>
-		<Russian>Ëþäîâèê XIV</Russian>
+		<Russian>Людовик XIV</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_LEADER_LOUISXIV_PEDIA</Tag>
@@ -1096,7 +1101,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</Spanish>
-		<Russian>Ìàíñà Ìóñà</Russian>
+		<Russian>Манса Муса</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_LEADER_MANSA_MUSA_PEDIA</Tag>
@@ -1115,7 +1120,7 @@
 			<Plural>0</Plural>
 		</Spanish>
 		<Polish>Ma&#179;gorzata I</Polish>
-		<Russian>Ìàðãàðåò I</Russian>
+		<Russian>Маргрете I</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_LEADER_MARGRETE_PEDIA</Tag>
@@ -1141,6 +1146,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</Italian>
+		<Russian>Мехмед II</Russian>
 		<Spanish>
 			<Text>Mehmet II</Text>
 			<Gender>Male</Gender>
@@ -1159,7 +1165,7 @@
 		<Tag>TXT_KEY_LEADER_MENELIK</Tag>
 		<English>Menelik II</English>
 		<German>Menelik II.</German>
-		<Russian>Ìåíåëèê II</Russian>
+		<Russian>Менелик II</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_LEADER_MENELIK_PEDIA</Tag>
@@ -1175,7 +1181,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</Spanish>
-		<Russian>Ìåíçèñ</Russian>
+		<Russian>Мензис</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_LEADER_MENZIES_PEDIA</Tag>
@@ -1186,7 +1192,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_LEADER_MONGKUT</Tag>
 		<English>Mongkut</English>
-		<Russian>Ìîíãêóò</Russian>
+		<Russian>Монгкут</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_LEADER_MONGKUT_PEDIA</Tag>
@@ -1217,7 +1223,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</Spanish>
-		<Russian>Ìîíòåñóìà</Russian>
+		<Russian>Монтесума</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_LEADER_MONTEZUMA_PEDIA</Tag>
@@ -1250,7 +1256,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</Spanish>
-		<Russian>Íàïîëåîí</Russian>
+		<Russian>Наполеон</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_LEADER_NAPOLEON_PEDIA</Tag>
@@ -1283,7 +1289,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</Spanish>
-		<Russian>Ïàêàëü II</Russian>
+		<Russian>Пакаль II</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_LEADER_PACAL_PEDIA</Tag>
@@ -1317,7 +1323,7 @@
 			<Plural>0</Plural>
 		</Spanish>
 		<Polish>Perykles</Polish>
-		<Russian>Ïåðèêë</Russian>
+		<Russian>Перикл</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_LEADER_PERICLES_PEDIA</Tag>
@@ -1351,7 +1357,7 @@
 			<Plural>0</Plural>
 		</Spanish>
 		<Polish>Piotr</Polish>
-		<Russian>Ïåòð I</Russian>
+		<Russian>Петр I</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_LEADER_PETER_PEDIA</Tag>
@@ -1384,7 +1390,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</Spanish>
-		<Russian>Öèíü Øèõóàí</Russian>
+		<Russian>Цинь Шихуанди</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_LEADER_QIN_SHI_HUANG_PEDIA</Tag>
@@ -1412,6 +1418,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</Italian>
+		<Russian>Рагнар</Russian>
 		<Spanish>
 			<Text>Ragnar</Text>
 			<Gender>Male</Gender>
@@ -1444,6 +1451,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</Italian>
+		<Russian>Рамсес II</Russian>
 		<Spanish>
 			<Text>Ramsés II</Text>
 			<Gender>Male</Gender>
@@ -1461,7 +1469,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_LEADER_RAMKHAM</Tag>
 		<English>Ramkhamhaeng</English>
-		<Russian>Ðàìà Êàìõåíã</Russian>
+		<Russian>Рамакхамхаенг</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_LEADER_RAMKHAM_PEDIA</Tag>
@@ -1480,7 +1488,7 @@
 			<Plural>0</Plural>
 		</Spanish>
 		<Polish>Czerwona Chmura</Polish>
-		<Russian>Êðàñíîå Îáëàêî</Russian>
+		<Russian>Красное Облако</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_LEADER_RED_CLOUD_PEDIA</Tag>
@@ -1511,7 +1519,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</Spanish>
-		<Russian>Ðóçâåëüò</Russian>
+		<Russian>Рузвельт</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_LEADER_ROOSEVELT_PEDIA</Tag>
@@ -1545,7 +1553,7 @@
 			<Plural>0</Plural>
 		</Spanish>
 		<Polish>Saladyn</Polish>
-		<Russian>Ñàëàäèí</Russian>
+		<Russian>Салах ад-Дин</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_LEADER_SALADIN_PEDIA</Tag>
@@ -1558,7 +1566,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_LEADER_SALAMASINA</Tag>
 		<English>Salamasina</English>
-		<Russian>Ñàëàìàñèíà</Russian>
+		<Russian>Саламасина</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_LEADER_SALAMASINA_PEDIA</Tag>
@@ -1571,7 +1579,7 @@
 		<German>Selassie I.</German>
 		<Italian>Haile Selassie I</Italian>
 		<Spanish>Haile Selassie I</Spanish>
-		<Russian>Ñåëàññè I</Russian>
+		<Russian>Хайле Селассие</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_LEADER_SELASSIE_PEDIA</Tag>
@@ -1597,6 +1605,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</Italian>
+		<Russian>Чака</Russian>
 		<Spanish>
 			<Text>Chaka</Text>
 			<Gender>Male</Gender>
@@ -1635,7 +1644,7 @@
 			<Plural>0</Plural>
 		</Spanish>
 		<Polish>Siedz&#185;cy Byk</Polish>
-		<Russian>Ñèäÿùèé Áûê</Russian>
+		<Russian>Сидящий Бык</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_LEADER_SITTING_BULL_PEDIA</Tag>
@@ -1663,6 +1672,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</Italian>
+		<Russian>Сталин</Russian>
 		<Spanish>
 			<Text>Stalin</Text>
 			<Gender>Male</Gender>
@@ -1689,7 +1699,7 @@
 			<Plural>0</Plural>
 		</Spanish>
 		<Polish>Sulejman</Polish>
-		<Russian>Ñóëåéìàí I</Russian>
+		<Russian>Сулейман I</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_LEADER_SULEIMAN_PEDIA</Tag>
@@ -1703,7 +1713,7 @@
 		<Tag>TXT_KEY_LEADER_SUPPI</Tag>
 		<English>Suppiluliuma</English>
 		<Spanish>Shubiluliuma</Spanish>
-		<Russian>Ñóïïèëóëèóìà</Russian>
+		<Russian>Суппилулиума</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_LEADER_SUPPI_PEDIA</Tag>
@@ -1735,7 +1745,7 @@
 			<Plural>0</Plural>
 		</Spanish>
 		<Polish>Surjawarman II</Polish>
-		<Russian>Ñóðüÿâàðìàí II</Russian>
+		<Russian>Сурьяварман II</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_LEADER_SURYAVARMAN_PEDIA</Tag>
@@ -1768,7 +1778,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</Spanish>
-		<Russian>Òîêóãàâà</Russian>
+		<Russian>Токугава</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_LEADER_TOKUGAWA_PEDIA</Tag>
@@ -1788,7 +1798,7 @@
 			<Plural>0</Plural>
 		</Italian>
 		<Polish>Wiktoria</Polish>
-		<Russian>Âèêòîðèÿ</Russian>
+		<Russian>Виктория</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_LEADER_VICTORIA_PEDIA</Tag>
@@ -1816,6 +1826,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</Italian>
+		<Russian>Тхэджо</Russian>
 		<Spanish>
 			<Text>Wang Kon</Text>
 			<Gender>Male</Gender>
@@ -1850,7 +1861,7 @@
 			<Plural>0</Plural>
 		</Spanish>
 		<Polish>Waszyngton</Polish>
-		<Russian>Äæîðäæ Âàøèíãòîí</Russian>
+		<Russian>Джордж Вашингтон</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_LEADER_WASHINGTON_PEDIA</Tag>
@@ -1884,7 +1895,7 @@
 			<Plural>0</Plural>
 		</Spanish>
 		<Polish>Wilhelm I</Polish>
-		<Russian>Âèëüãåëüì I</Russian>
+		<Russian>Вильгельм I</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_LEADER_WILLEM_VAN_ORANJE_PEDIA</Tag>
@@ -1926,7 +1937,7 @@
 			<Plural>0</Plural>
 		</Spanish>
 		<Polish>Zera Jaykob</Polish>
-		<Russian>Çàðà-ßêîá</Russian>
+		<Russian>Зэра Яыкоб</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_LEADER_ZARA_YAQOB_PEDIA</Tag>
