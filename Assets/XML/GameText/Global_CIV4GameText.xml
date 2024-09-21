@@ -2714,7 +2714,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CAN_NOT_AUTOMATE_PROTECT_YOURSELF</Tag>
-		<English>[COLOR_WARNING_TEXT]You can not protect yourself![COLOR_REVERT]</English>
+		<English>[COLOR_WARNING_TEXT]You cannot protect yourself![COLOR_REVERT]</English>
 		<French>[COLOR_WARNING_TEXT]L'unité ne peut pas se protéger elle-même![COLOR_REVERT]</French>
 		<Italian>[COLOR_WARNING_TEXT]Non puoi proteggere te stesso![COLOR_REVERT]</Italian>
 		<Spanish>[COLOR_WARNING_TEXT]¡No puedes protegerte a tí mismo![COLOR_REVERT]</Spanish>
@@ -20655,7 +20655,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PLOT_HOVER_CITY_ZOC</Tag>
-		<English>[COLOR_HIGHLIGHT_TEXT]Your units can not enter this tile because it is inside of a nearby city's Zone of Control. Capture the city to restore normal movement.[COLOR_REVERT]</English>
+		<English>[COLOR_HIGHLIGHT_TEXT]Your units cannot enter this tile because it is inside of a nearby city's Zone of Control. Capture the city to restore normal movement.[COLOR_REVERT]</English>
 		<French>[COLOR_HIGHLIGHT_TEXT]Vos unités ne peuvent entrer dans cette case car celle-ci fait partie de la zone protégée par la ville. Capturez la ville pour pouvoir y pénétrer.[COLOR_REVERT]</French>
 		<German>[COLOR_HIGHLIGHT_TEXT]Eure Einheiten können dieses Feld nicht betreten, weil es sich in der Kontrollzone einer nahegelegenen Stadt befindet. Erobert die Stadt, um normale Bewegung zu ermöglichen.[COLOR_REVERT]</German>
 		<Italian>[COLOR_HIGHLIGHT_TEXT]Le tue unità non possono attraversare questa casella perché è all'interno della zona di controllo di una città. Cattura la città per ripristinare il movimento normale.[COLOR_REVERT]</Italian>
@@ -20665,7 +20665,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PLOT_HOVER_FORT_ZOC</Tag>
-		<English>[COLOR_HIGHLIGHT_TEXT]Your units can not enter this tile because it is inside of a nearby improvement's Zone of Control. Destroy the improvement, or it's defenders to restore normal movement.[COLOR_REVERT]</English>
+		<English>[COLOR_HIGHLIGHT_TEXT]Your units cannot enter this tile because it is inside of a nearby improvement's Zone of Control. Destroy the improvement, or it's defenders to restore normal movement.[COLOR_REVERT]</English>
 		<French>[COLOR_HIGHLIGHT_TEXT]Vos unités ne peuvent entrer dans cette case car celle-ci fait partie de la zone protégée par un aménagement à proximité. Détruisez cet aménagement ou ces défenseurs afin de retrouver une liberté de mouvement dans ce périmètre.[COLOR_REVERT]</French>
 		<German>[COLOR_HIGHLIGHT_TEXT]Eure Einheiten können dieses Feld nicht betreten, weil es sich in der Kontrollzone einer nahegelegenen Modernisierung befindet. Zerstört die Modernisierung oder vernichtet ihre Verteidiger, um normale Bewegung zu ermöglichen.[COLOR_REVERT]</German>
 		<Italian>[COLOR_HIGHLIGHT_TEXT]Le tue unità non possono attraversare questa casella perché è all'interno della zona di controlli di un miglioramento vicino. Distruggi il miglioramento o i suoi difensori per ripristinare il normale movimento.[COLOR_REVERT]</Italian>
@@ -20675,7 +20675,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PLOT_HOVER_MAX_CITY_DEFENSES</Tag>
-		<English>[COLOR_HIGHLIGHT_TEXT]Your units can not enter %s1_cityName because it has the protection of its %s2_buildingName. Either destroy the %s3_buildingName, or reduce the city defenses to [COLOR_REVERT][COLOR_WARNING_TEXT]%d4%[COLOR_REVERT][COLOR_HIGHLIGHT_TEXT] to attack the city.[COLOR_REVERT]</English>
+		<English>[COLOR_HIGHLIGHT_TEXT]Your units cannot enter %s1_cityName because it has the protection of its %s2_buildingName. Either destroy the %s3_buildingName, or reduce the city defenses to [COLOR_REVERT][COLOR_WARNING_TEXT]%d4%[COLOR_REVERT][COLOR_HIGHLIGHT_TEXT] to attack the city.[COLOR_REVERT]</English>
 		<French>[COLOR_HIGHLIGHT_TEXT]Vos unités ne peuvent entrer dans %s1_cityName car celle-ci est protégée par [NUM2:le:la:les:les] %s2_buildingName. Détruisez [NUM3:le:la:les:les] %s3_buildingName, ou réduisez les défenses de la ville à moins de [COLOR_REVERT][COLOR_WARNING_TEXT]%d4%[COLOR_REVERT][COLOR_HIGHLIGHT_TEXT] pour la conquérir.[COLOR_REVERT]</French>
 		<German>[COLOR_HIGHLIGHT_TEXT]Eure Einheiten können %s1_cityName nicht betreten, da die Stadt von schweren Toren geschützt wird. Ihr müsst diese entweder zerstören oder die Stadtverteidigung auf [COLOR_REVERT][COLOR_WARNING_TEXT]%d4%[COLOR_REVERT][COLOR_HIGHLIGHT_TEXT] senken, bevor Ihr die Stadt einnehmen könnt.[COLOR_REVERT]</German>
 		<Italian>[COLOR_HIGHLIGHT_TEXT]Le tue unità non possono attaccare %s1_cityName perché la città è protetta dall'edificio %s2_buildingName. Distruggi il %s3_buildingName, o riduci le difese cittadine a [COLOR_REVERT][COLOR_WARNING_TEXT]%d4%[COLOR_REVERT][COLOR_HIGHLIGHT_TEXT] per attaccare la città.[COLOR_REVERT]</Italian>
@@ -20685,7 +20685,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PLOT_HOVER_UNIT_ZOC</Tag>
-		<English>[COLOR_HIGHLIGHT_TEXT]Your units can not enter this tile because it is inside of a nearby unit's Zone of Control. Destroy the unit to restore normal movement.[COLOR_REVERT]</English>
+		<English>[COLOR_HIGHLIGHT_TEXT]Your units cannot enter this tile because it is inside of a nearby unit's Zone of Control. Destroy the unit to restore normal movement.[COLOR_REVERT]</English>
 		<French>[COLOR_HIGHLIGHT_TEXT]Vos unités ne peuvent entrer dans cette case car celle-ci est protégée par une unité à proximité. Il vous faudra détruire l'unité avant de pouvoir y pénétrer.[COLOR_REVERT]</French>
 		<German>[COLOR_HIGHLIGHT_TEXT]Eure Einheiten können dieses Feld nicht betreten, weil es sich in der Kontrollzone einer Einheit befindet. Zerstört die Einheit, um normale Bewegung zu ermöglichen.[COLOR_REVERT]</German>
 		<Italian>[COLOR_HIGHLIGHT_TEXT]Le tue unità non possono attraversare questa casella perché è all'interno della zona di controllo di una unità. Distruggi l'unità per ripristinare il normale movimento.[COLOR_REVERT]</Italian>
