@@ -2468,7 +2468,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_SANDSTORM</Tag>
-		<English>Sandstorm has made some of the routes disappear in the sand near the %s1_civ_adjective city of %s2_city.</English>
+		<English>A sandstorm has made some of the routes disappear in the sand near the %s1_civ_adjective city of %s2_city.</English>
 		<French>Des Tempêtes de sable ont fait disparaître des routes près de la ville %s1:2_civ_adjective de %s2_city.</French>
 		<German>Durch Sandstürme sind in der Nähe der %s1_civ_adjective Stadt %s2_city einige Straßen im Sand verschwunden.</German>
 		<Italian>Una tempesta di sabbia ha fatto scomparire le vie di comunicazione vicino alla città %s1:2_civ_adjective di %s2_city.</Italian>
@@ -2478,7 +2478,7 @@
 	</TEXT>
     <TEXT>
         <Tag>TXT_KEY_EVENTTRIGGER_SANDSTORM_IMPROVEMENT</Tag>
-        <English>Sandstorm has hit some of our facilities near %s1_civ_adjective city of %s2_city.</English>
+        <English>A sandstorm has hit some of our facilities near %s1_civ_adjective city of %s2_city.</English>
     </TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_SEA_TURTLES</Tag>
@@ -13649,7 +13649,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_TRIGGER_SANDSTORM_1</Tag>
-		<English>Sandstorm has made the routes vanish in the sand near %s2_city.</English>
+		<English>A sandstorm has made the routes vanish in the sand near %s2_city.</English>
 		<French>Des Tempêtes de sable ont fait disparaitre des routes près de %s2_city.</French>
 		<German>Durch Sandstürme sind einige Straßen in der Nähe von %s2_city verschwunden.</German>
 		<Italian>Una tempesta di sabbia ha fatto scomparire le vie di comunicazione vicino a %s2_city.</Italian>
@@ -13659,7 +13659,7 @@
 	</TEXT>
     <TEXT>
         <Tag>TXT_KEY_EVENT_TRIGGER_SANDSTORM_2</Tag>
-        <English>Sandstorm has hit us hard near %s2_city.</English>
+        <English>A sandstorm has hit us hard near %s2_city.</English>
     </TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_TRIGGER_SEA_TURTLES_1</Tag>
