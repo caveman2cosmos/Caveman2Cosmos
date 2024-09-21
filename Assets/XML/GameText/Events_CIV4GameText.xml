@@ -1252,15 +1252,15 @@
     </TEXT>
     <TEXT>
         <Tag>TXT_KEY_PRIME_STUD</Tag>
-        <English>A %s1_civ_adjective have found prime steeds for their stables.</English>
+        <English>A %s1_civ_adjective merchant has found prime steeds for their stables.</English>
     </TEXT>
     <TEXT>
         <Tag>TXT_KEY_CHILD_WISE_COUNCIL</Tag>
-        <English>A %s1_civ_adjective council has welcomed a wise elder his wisdom will lead them to greatness.</English>
+        <English>A %s1_civ_adjective council has welcomed a wise elder; his wisdom will lead them to greatness.</English>
     </TEXT>
     <TEXT>
         <Tag>TXT_KEY_CHILD_LABOUR_INCIDENT</Tag>
-        <English>A %s1_civ_adjective have terrible incident happen at one of their children work camps.</English>
+        <English>A terrible incident has happened at one of the %s1_civ_adjective child labour camps.</English>
     </TEXT>
     <TEXT>
         <Tag>TXT_KEY_EVENTTRIGGER_COMMUNITY_BOND</Tag>
