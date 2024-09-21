@@ -5792,7 +5792,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_REVDCM__SS_BRIBE_HOVER</Tag>
-		<English>Spies can bribe workers to join the spy's civilization and abandon it's current owner</English>
+		<English>Spies can bribe workers to join the spy's civilization, abandoning their current owner</English>
 		<French>Les Espions peuvent soudoyer et corrompre les Ouvriers, les incitant à quitter leur civilisation pour rejoindre celle de l'Espion.</French>
 		<German>Spione können Bautrupps bestechen, sich ihrer Nation anzuschließen</German>
 		<Spanish>Los espías pueden sobornar a trabajadores para unirse a la civilización del propietario del espía y abandonar a su nación actual.</Spanish>
