@@ -12014,6 +12014,15 @@
 		<Spanish>Islas diminutas</Spanish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_MAP_SCRIPT_TOTESTRA_DESCR</Tag>
+		<English>Random map that simulates earth-like plate tectonics, geostrophic and monsoon winds and rainfall.</English>
+		<French>Carte aléatoire qui simule la tectonique des plaques de type terrestre, les vents géostrophiques et de mousson et les précipitations.</French>
+		<German>Eine Zufallskarte, die eine erdähnliche Plattentektonik, geostrophische und Monsunwinde und Regenfälle simuliert.</German>
+		<Italian>Mappa random che simula una tettonica a placche simile a quella terrestre, venti geostrofici e monsonici e piogge.</Italian>
+		<Russian>Имитирование землеподобных тектоники литосферных плит, геострофических и муссонных ветров и осадков.</Russian>
+		<Spanish>Mapa aleatorio que simula una tectónica de placas similar a la de la Tierra, vientos geostróficos y de monzón, y lluvia.</Spanish>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_MAP_SCRIPT_VARIED</Tag>
 		<English>Varied</English>
 		<French>Varié</French>
