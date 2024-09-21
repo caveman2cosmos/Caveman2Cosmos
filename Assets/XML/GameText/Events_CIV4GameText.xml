@@ -4174,7 +4174,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_BROKEN_DAM_1</Tag>
-		<English>That is very unfortunate, but we can not help. Tell the local authorities they'll have to handle the situation.</English>
+		<English>That is very unfortunate, but we cannot help. Tell the local authorities they'll have to handle the situation.</English>
 		<French>C'est malheureux, mais nous ne pouvons rien y faire. Mettez les autorités locales en charge de la situation.</French>
 		<German>Wir können uns derzeit keine Hilfsmaßnahmen leisten. Die lokalen Behörden müssen mit dieser Situation selbst fertig werden.</German>
 		<Italian>È una cosa molto spiacevole, ma non possiamo fare nulla. Avverti le autorità locali che dovranno occuparsi della situazione.</Italian>
@@ -4597,7 +4597,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_CHARIOTRY_FOUNDED_3</Tag>
-		<English>We can not afford this now.</English>
+		<English>We cannot afford this now.</English>
 		<French>Nous ne pouvons pas nous le permettre pour l'instant.</French>
 		<German>Wir können uns das jetzt nicht leisten.</German>
 		<Italian>Non possiamo permettercelo per il momento.</Italian>

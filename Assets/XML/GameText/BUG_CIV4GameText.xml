@@ -6947,7 +6947,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_ROMSETTINGS__HIDEUNAVAILABLEBUILDS_HOVER</Tag>
-		<English>Worker actions that can not be performed will be hidden from the action bar.</English>
+		<English>Worker actions that cannot be performed will be hidden from the action bar.</English>
 		<French>Les Aménagements que les Ouvriers ne peuvent pas préparer sont masquées de la barre d'action.</French>
 		<German>Bautrupp-Befehle, die auf dem betreffenden Feld nicht ausgeführt werden können, werden in der Aktionsleiste nicht mehr angezeigt.</German>
 		<Italian>[BOLD]Le azioni dei lavoratori che [COLOR_HIGHLIGHT_TEXT]non possono essere effettuate[COLOR_REVERT] non verranno visualizzate sulla barra delle azioni[\BOLD]</Italian>

@@ -165,7 +165,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_BARBARIAN_ALWAYS_RAZE_HELP</Tag>
-		<English>Barbarians can not keep captured cities, and will always raze them.</English>
+		<English>Barbarians cannot keep captured cities, and will always raze them.</English>
 		<French>Les Barbares ne gardent pas les ville capturées, mais les pillent et les rasent systématiquement.</French>
 		<German>Die Barbaren können eroberte Städte nicht behalten und werden sie deshalb immer dem Erdboden gleichmachen.</German>
 		<Italian>I barbari non possono gestire le città conquistate e le raderanno sempre al suolo</Italian>
@@ -639,7 +639,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_RELIGION_LIMITED_HELP</Tag>
-		<English>Civilizations can not found a new religion when controlling a Holy City.</English>
+		<English>Civilizations cannot found a new religion when controlling a Holy City.</English>
 		<French>Les Civilizations ne peuvent plus fonder de nouvelle religion lorsqu'elles possèdent déjà une Ville Sainte.</French>
 		<German>Eine Zivilisation kann keine neuen Religionen mehr begründen, wenn sie bereits eine Heilige Stadt kontrolliert.</German>
 		<Italian>Le civiltà non possono fondare una nuova religione quando controllano una città santa</Italian>
@@ -1449,7 +1449,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_ENABLE_UNITED_NATIONS_HELP</Tag>
-		<English>The United Nations and Apostolic Palace can still be built, even when diplomatic victory is not enabled. Players will be able to hold UN elections, but can not win by becoming the Secretary General.</English>
+		<English>The United Nations and Apostolic Palace can still be built, even when diplomatic victory is not enabled. Players will be able to hold UN elections, but cannot win by becoming the Secretary General.</English>
 		<French>Les Nations Unies et le Palais Apostolique peuvent être construit même si la victoire diplomatique n'est pas activée. Les Joueurs peuvent conduire des Elections, mais ne gagneront pas en étant élu Secrétaire général.</French>
 		<German>Die Vereinten Nationen und der Apostolische Palast können auch dann gebaut werden, wenn der diplomatische Sieg nicht ausgewählt wurde. Spieler werden auch weiterhin in der Lage sein, UN-Wahlen abzuhalten, aber sie können nicht dadurch gewinnen, dass sie zum Generalsekretär gewählt werden.</German>
 		<Italian>Le nazioni unite e il palazzo apostolico possono essere costruiti lo stesso anche quando la vittoria diplomatica non è abilitata (i giocatori potranno tenere le elezioni delle nazioni unite, ma non potranno vincere diventando il segretario generale)</Italian>
