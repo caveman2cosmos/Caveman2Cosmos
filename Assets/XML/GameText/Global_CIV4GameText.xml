@@ -20240,7 +20240,7 @@
 		<German>Alle Religionsmissionare und Vorstände von Kapitalgesellschaften beginnen das Spiel automatisch</German>
 		<Italian>[BOLD]I missionari religiosi e i funzionari corporativi cominciano in [COLOR_HIGHLIGHT_TEXT] modalità automatica[COLOR_REVERT][\BOLD]</Italian>
 		<Spanish>Todos los misioneros y ejecutivos empiezan la partida automatizados</Spanish>
-		<Russian>Все миссионеры и менеджеры корпораций начинают игру как автоматизированные</Russian>
+		<Russian>Все миссионеры и менеджеры корпораций появляются в игре автоматизированными</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PLAYER_OPTION_MODDER_1</Tag>
@@ -20589,7 +20589,7 @@
 		<German>Alle Bautrupps und Arbeitsboote sind beim Spielstart automatisiert</German>
 		<Italian>[BOLD]I lavoratori e le barche da lavoro cominciano in [COLOR_HIGHLIGHT_TEXT]modalità automatica[COLOR_REVERT][\BOLD]</Italian>
 		<Spanish>Todos los Trabajadores y Barcos faeneros empiezan la partida automatizados.</Spanish>
-		<Russian>Все рабочие и рабочие лодки начинают игру как автоматизированные</Russian>
+		<Russian>Все рабочие и рабочие лодки появляются в игре автоматизированными</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PLAYER_REASSIGNED</Tag>
