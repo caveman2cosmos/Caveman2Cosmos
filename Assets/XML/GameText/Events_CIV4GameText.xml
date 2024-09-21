@@ -9829,7 +9829,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_QUICKSAND</Tag>
-		<English>Your troops are stuck in Quicksand.</English>
+		<English>Your troops are stuck in quicksand.</English>
 		<French>Vos troupes sont prises au piège dans des sables mouvants.</French>
 		<Polish>Twoje wojska ugrz&#234;z&#179;y w lotnych piaskach.</Polish>
 		<Russian>Ваши войска застряли в Зыбучих Песках.</Russian>
@@ -9843,7 +9843,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_QUICKSAND_2</Tag>
-		<English>Stay Calm and pull them out.</English>
+		<English>Stay calm and pull them out.</English>
 		<French>Restez calme et tirez-les de là.</French>
 		<Polish>Uspok&#243;jcie si&#234; i wyci&#185;gnijcie ich.</Polish>
 		<Russian>Сохраняйте спокойствие и отправьте поисковую партию.</Russian>
