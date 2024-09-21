@@ -5792,7 +5792,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_REVDCM__SS_BRIBE_HOVER</Tag>
-		<English>Spies can bribe workers to join the spy's civilization and abandon it's current owner</English>
+		<English>Spies can bribe workers to join the spy's civilization, abandoning their current owner</English>
 		<French>Les Espions peuvent soudoyer et corrompre les Ouvriers, les incitant à quitter leur civilisation pour rejoindre celle de l'Espion.</French>
 		<German>Spione können Bautrupps bestechen, sich ihrer Nation anzuschließen</German>
 		<Spanish>Los espías pueden sobornar a trabajadores para unirse a la civilización del propietario del espía y abandonar a su nación actual.</Spanish>
@@ -6626,7 +6626,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_ROMSETTINGS__BATTLEFIELDPROMOTIONS_HOVER</Tag>
-		<English>Units that preform particularly well in combat may earn a promotion in the midst of battle instead of XP.</English>
+		<English>Units that perform particularly well in combat may earn a promotion in the midst of battle instead of XP.</English>
 		<French>Les Unités qui se distinguent particulièrement au combat peuvent obtenir des promotions pendant le combat, à la place de l'EXP.</French>
 		<German>Einheiten, die besonders erfolgreich kämpfen, können direkt in der Schlacht eine Beförderung erhalten (statt Erfahrungspunkten).</German>
 		<Italian>[BOLD]Le unità potrebbero [COLOR_HIGHLIGHT_TEXT]ottenere delle promozioni[COLOR_REVERT] nel bel mezzo della battaglia invece dei punti esperienza[\BOLD]</Italian>
@@ -6947,7 +6947,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_ROMSETTINGS__HIDEUNAVAILABLEBUILDS_HOVER</Tag>
-		<English>Worker Builds that can not be preformed will be hidden from the action bar.</English>
+		<English>Worker actions that cannot be performed will be hidden from the action bar.</English>
 		<French>Les Aménagements que les Ouvriers ne peuvent pas préparer sont masquées de la barre d'action.</French>
 		<German>Bautrupp-Befehle, die auf dem betreffenden Feld nicht ausgeführt werden können, werden in der Aktionsleiste nicht mehr angezeigt.</German>
 		<Italian>[BOLD]Le azioni dei lavoratori che [COLOR_HIGHLIGHT_TEXT]non possono essere effettuate[COLOR_REVERT] non verranno visualizzate sulla barra delle azioni[\BOLD]</Italian>
