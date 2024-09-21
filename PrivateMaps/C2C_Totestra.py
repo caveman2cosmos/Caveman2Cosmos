@@ -5639,8 +5639,7 @@ def getDescription():
 		A map's Description is displayed in the main menu when players go to begin a game.
 		For no description return an empty string.
 		"""
-		return "Random map that simulates earth-like plate tectonics, " +\
-		"geostrophic and monsoon winds and rainfall."
+		return "TXT_KEY_MAP_SCRIPT_TOTESTRA_DESCR"
 
 def getWrapX():
 		return mc.WrapX
