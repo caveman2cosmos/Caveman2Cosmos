@@ -4935,6 +4935,7 @@
 		<French>grandissante</French>
 		<German>Wachsend</German>
 		<Italian>In sviluppo</Italian>
+		<Russian>Развивающийся</Russian>
 		<Spanish>Creciente</Spanish>
 	</TEXT>
 	<TEXT>
@@ -4944,7 +4945,7 @@
 		<Italian>Elegante</Italian>
 		<Spanish>Elegante</Spanish>
 		<Polish>Wytworna</Polish>
-		<Russian>Ýëåãàíòíûé</Russian>
+		<Russian>Элегантный</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CULTURELEVEL_FLEDGLING</Tag>
@@ -4952,6 +4953,7 @@
 		<French>naissante</French>
 		<German>Beginnend</German>
 		<Italian>Principiante</Italian>
+		<Russian>Юнец</Russian>
 		<Spanish>Incipiente</Spanish>
 	</TEXT>
 	<TEXT>
@@ -4961,7 +4963,7 @@
 		<German>Erhaben</German>
 		<Spanish>Ilustre</Spanish>
 		<Polish>Znamienna</Polish>
-		<Russian>Çíàìåíèòûé</Russian>
+		<Russian>Прославленный</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CULTURELEVEL_IMPRESSIVE</Tag>
@@ -4970,7 +4972,7 @@
 		<Italian>Impressionante</Italian>
 		<Spanish>Impresionante</Spanish>
 		<Polish>Imponuj&#185;ca</Polish>
-		<Russian>Âïå÷àòëÿþùèé</Russian>
+		<Russian>Впечатляющий</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CULTURELEVEL_INFLUENTIAL</Tag>
@@ -4979,6 +4981,7 @@
 		<German>Einflussreich</German>
 		<Italian>Influente</Italian>
 		<Spanish>Influyente</Spanish>
+		<Russian>Влиятельный</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CULTURELEVEL_LEGENDARY</Tag>
@@ -4988,14 +4991,14 @@
 		<German>Legendär</German>
 		<Spanish>Legendario</Spanish>
 		<Polish>Legendarna</Polish>
-		<Russian>Ìàêñèìàëüíûé </Russian>
+		<Russian>Легендарный</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CULTURELEVEL_MONUMENTAL</Tag>
 		<English>Monumental</English>
 		<Italian>Monumentale</Italian>
 		<Polish>Monumentalna</Polish>
-		<Russian>Ìîíóìåíòàëüíûé</Russian>
+		<Russian>Монументальный</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CULTURELEVEL_NONE</Tag>
@@ -5003,6 +5006,7 @@
 		<French>inexistant</French>
 		<German>Null</German>
 		<Italian>Nessuno</Italian>
+		<Russian>Нулевой</Russian>
 		<Spanish>Inexistente</Spanish>
 	</TEXT>
 	<TEXT>
@@ -5013,7 +5017,7 @@
 		<German>Phänomenal</German>
 		<Spanish>Fenomenal</Spanish>
 		<Polish>Fenomenalna</Polish>
-		<Russian>Ôåíîìåíàëüíûé</Russian>
+		<Russian>Феноменальный</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CULTURELEVEL_POOR</Tag>
@@ -5031,7 +5035,7 @@
 		<Italian>Prominente</Italian>
 		<Spanish>Prominente</Spanish>
 		<Polish>S&#179;awna</Polish>
-		<Russian>Çíàìåíèòûé</Russian>
+		<Russian>Выдающийся</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CULTURELEVEL_REFINED</Tag>
@@ -5039,27 +5043,33 @@
 		<French>raffinée</French>
 		<German>Fortgeschritten</German>
 		<Italian>Raffinato</Italian>
+		<Russian>Выдающийся</Russian>
 		<Spanish>Refinada</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CULTURELEVEL_MINISCULE</Tag>
 		<English>Miniscule</English>
+		<Russian>Маленький</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CULTURELEVEL_MINOR</Tag>
 		<English>Minor</English>
+		<Russian>Незначительный</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CULTURELEVEL_TREMENDOUS</Tag>
 		<English>Tremendous</English>
+		<Russian>Великолепный</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CULTURELEVEL_STUPENDOUS</Tag>
 		<English>Stupendous</English>
+		<Russian>Потрясающий</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CULTURELEVEL_MAJESTIC</Tag>
 		<English>Majestic</English>
+		<Russian>Величественный</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CURE_AFFLICTION</Tag>
@@ -16925,7 +16935,7 @@
 		<French>Une unité %s1_EnUName ennemie a été pressée contre nos défenses exigeants, pour être ensuite défaite par notre %s2_UnitName!</French>
 		<Italian>Un'unità nemica di %s1_EnUName ha continuato a spingere contro le nostre difesa, ma è stata sconfitta dalla nostra unità %s2_UnitName!</Italian>
 		<Polish>Wroga jednostka: %s1_EnUName zosta&#179;a pokonana przez nasz&#185; wspania&#179;&#185; jednostk&#234;: %s2_UnitName!</Polish>
-		<Russian>Вражеский %s1_EnUName упорно пробовал на зуб нашу оборону, чтобы в итоге быть отброшенным назад нашим %s2_UnitName!</Russian>
+		<Russian>%s1_EnUName врага упорно пробовало на зуб нашу оборону, чтобы в итоге быть отброшенным назад нашим %s2_UnitName!</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISC_UNYIELDING_YOU_DESTROYED_ENEMY</Tag>

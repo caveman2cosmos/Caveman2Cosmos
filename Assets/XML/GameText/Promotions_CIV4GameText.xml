@@ -834,7 +834,7 @@
 		<French>[ICON_BULLET]%D1_Change%% chance par round d'Ecraser les défenseurs.</French>
 		<Italian>[ICON_BULLET]%D1_Change%% di chance a turno di mettere in fuga i difensori.</Italian>
 		<Polish>[ICON_BULLET]%D1_Change%% szansy na rund&#234; do Odrzucenia Obro&#241;cy.</Polish>
-		<Russian>[ICON_BULLET]+%D1_Change%% øàíñà çà õîä îãëóøèòü îáîðîíÿþùåãîñÿ.</Russian>
+		<Russian>[ICON_BULLET]%D1_Change%% шанс за ход отбросить обороняющегося.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONHELP_KNOCKBACK_RETRIES</Tag>
@@ -842,7 +842,7 @@
 		<French>[ICON_BULLET]%D1_Change Tentatives d'écrasement</French>
 		<Italian>[ICON_BULLET]%D1_Change tentativi di Sbaraglio</Italian>
 		<Polish>[ICON_BULLET]%D1_Change pr&#243;b odrzutu</Polish>
-		<Russian>[ICON_BULLET]+%D1_Change ïîïûòêè îãëóøåíèÿ</Russian>
+		<Russian>[ICON_BULLET]+%D1_Change попытки оглушения</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONHELP_KNOCKBACK_VERSUS</Tag>

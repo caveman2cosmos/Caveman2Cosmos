@@ -2987,7 +2987,7 @@
 		<German>Zeigt die Wahrscheinlichkeit an, dass in einer Stadt auf Grund von kulturellem Druck Unruhen ausbrechen</German>
 		<Italian>[BOLD]Attiva la [COLOR_HIGHLIGHT_TEXT]visualizzazione della probabilità che la città si rivolti[COLOR_REVERT] a causa della [COLOR_HIGHLIGHT_TEXT]pressione culturale[COLOR_REVERT][\BOLD]</Italian>
 		<Spanish>Cuando se activa, muestra la probabilidad de que se produzca una revuelta en la ciudad a causa de la presión cultural.</Spanish>
-		<Russian>Êîãäà óñòàíîâëåí, îòîáðàæàåò âåðîÿòíîñòü ÷òî ãîðîä âîññòàíåò èç-çà êóëüòóðíîãî äàâëåíèÿ.</Russian>
+		<Russian>Когда установлен, отображает вероятность что город восстанет из-за культурного давления.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_CITYBAR__REVOLTCHANCE_TEXT</Tag>
@@ -2996,7 +2996,7 @@
 		<German>Unruhe-Wahrscheinlichkeit</German>
 		<Italian>Probabilità di rivolta</Italian>
 		<Spanish>Probabilidad de revuelta</Spanish>
-		<Russian>Øàíñ ðåâîëþöèè</Russian>
+		<Russian>Шанс революции</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_CITYBAR__SPECIALISTS_HOVER</Tag>
