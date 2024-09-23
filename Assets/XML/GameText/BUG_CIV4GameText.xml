@@ -1696,7 +1696,7 @@
 		<German>Stammesdörfer</German>
 		<Italian>Scoperta villaggi tribali</Italian>
 		<Spanish>Aldeas tribales</Spanish>
-		<Russian>Òóçåìíûå äåðåâíè</Russian>
+		<Russian>Деревни туземцев</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_AUTOLOG__LOGGP_HOVER</Tag>
@@ -1891,7 +1891,7 @@
 		<German>Vasallen</German>
 		<Italian>Variazioni vassallaggio</Italian>
 		<Spanish>Estados vasallos</Spanish>
-		<Russian>Ñîñòîÿíèå âàññàëîâ</Russian>
+		<Russian>Состояние вассалов</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_AUTOLOG__LOGWARDEMAND_HOVER</Tag>
