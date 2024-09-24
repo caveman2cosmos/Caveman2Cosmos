@@ -127,7 +127,7 @@
 		<German>Beschwerden</German>
 		<Spanish>Alteraciones de estado</Spanish>
 		<Polish>Os&#179;abienia</Polish>
-		<Russian>(П) Бедствия</Russian>
+		<Russian>Бедствия</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PEDIA_CATEGORY_ALL_ERAS</Tag>
@@ -135,7 +135,7 @@
 		<French>Toutes les Eres</French>
 		<Italian>Tutte le ere</Italian>
 		<German>Alle Zeitalter</German>
-		<Russian>Все эпохи</Russian>
+		<Russian>Все периоды</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PEDIA_CATEGORY_ANIMALISTIC_BUILDINGS</Tag>
@@ -327,7 +327,7 @@
 		<German>Ausrüstung</German>
 		<Spanish>Equipamiento</Spanish>
 		<Polish>Ekwipunek</Polish>
-		<Russian>(P) Снаряжение</Russian>
+		<Russian>Арматура</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PEDIA_CATEGORY_ERAS</Tag>
