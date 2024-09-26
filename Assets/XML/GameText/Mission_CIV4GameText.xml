@@ -154,14 +154,14 @@
 		<Italian>Assassina unità</Italian>
 		<Spanish>Asesinar unidad</Spanish>
 		<Polish>Skrytob&#243;jstwo</Polish>
-		<Russian>Отравить отряд</Russian>
+		<Russian>Убить подразделение</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISSION_ASSASSINATE</Tag>
 		<English>Assassinate enemy Units on the same tile!</English>
 		<French>Assassiner une unité ennemie de la même case!</French>
 		<Italian>[NEWLINE]Assassina unità nemiche (sulla stessa casella)</Italian>
-		<Russian>Убейте вражеские юниты на этой клетке!</Russian>
+		<Russian>Убить вражеские единицы на этой клетке.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISSION_ASSASSINATE_HELP</Tag>
@@ -917,7 +917,7 @@
 		<English>Ranged Assault</English>
 		<French>Assaut à distance</French>
 		<Polish>Atak dystansowy</Polish>
-		<Russian>Дальняя бомбардировка</Russian>
+		<Russian>Дальняя атака</Russian>
 		<Italian>Assalto dalla distanza</Italian>
 	</TEXT>
 	<TEXT>
