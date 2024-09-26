@@ -111,7 +111,7 @@ class PediaLeader:
 		iAdjacent = CvLeaderHeadInfo.getMaxWarMinAdjacentLandPercent()
 
 		szStatsText = szfont3b
-		szStatsText += TRNSLTR.getText("TXT_KEY_PEDIA_PERSONALITY") + ":\n"
+		szStatsText += TRNSLTR.getText("TXT_KEY_PEDIA_PERSONALITY", ()) + ":\n"
 		szStatsText += szfont3
 		szStatsText += TRNSLTR.getText("TXT_KEY_PEDIA_WONDER", (CvLeaderHeadInfo.getWonderConstructRand(),))
 		szStatsText += TRNSLTR.getText("TXT_KEY_PEDIA_ATTITUDE", (CvLeaderHeadInfo.getBaseAttitude(), CvLeaderHeadInfo.getWarmongerRespect()))
