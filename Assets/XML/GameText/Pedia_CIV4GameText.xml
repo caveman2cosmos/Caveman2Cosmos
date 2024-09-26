@@ -868,12 +868,6 @@
 		<Russian>Во владении</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PEDIA_PERSONALITY</Tag>
-		<English>Personailty</English>
-		<German>Personailty</German>
-		<Russian>Характеристика</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_PEDIA_QUOTE</Tag>
 		<English>Quote</English>
 		<French>Citations</French>
