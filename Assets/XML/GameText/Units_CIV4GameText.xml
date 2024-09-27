@@ -455,7 +455,7 @@
 		<French>Améliorations Auto</French>
 		<Spanish>Mejora automatizada</Spanish>
 		<Polish>Autotematyczne Ulepszenie</Polish>
-		<Russian>Àâòîóëó÷øåíèå</Russian>
+		<Russian>Автоулучшение</Russian>
 		<Italian>Modernizzazione automatizzata</Italian> <!-- infoscreen Military -->
 	</TEXT>
 	<TEXT>
@@ -465,7 +465,7 @@
 		<Italian>Promozione</Italian> <!-- infoscreen Military -->
 		<Spanish>Ascensos</Spanish>
 		<Polish>Promocje</Polish>
-		<Russian>Óëó÷øåíèÿ</Russian>
+		<Russian>Квалификации</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITGROUPER_PROMOTION_GROUP_NONE</Tag>
@@ -4368,7 +4368,7 @@
 			<Gender>Female</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
-		<Russian>Ãðóïïà ëþäåé</Russian>
+		<Russian>Родовая община</Russian>
 		<Italian>Comitiva ancestrale</Italian>
 	</TEXT>
 	<TEXT>

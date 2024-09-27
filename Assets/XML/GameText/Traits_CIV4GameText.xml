@@ -231,7 +231,7 @@
 		<French>[ICON_BULLET]Reçoit un Spécialiste gratuit pour chaque Merveille Nationale construite.</French>
 		<Italian>[ICON_BULLET]Ottieni un cittadino specialista gratuito per ogni Meraviglia Nazionale nella città in cui è costruito.</Italian>
 		<Polish>[ICON_BULLET]Otrzymujesz darmowego Specjaliste na ka&#191;dy Cud Narodowy kt&#243;ry wybudujesz.</Polish>
-		<Russian>[ICON_BULLET]Получает бесплатного специалиста за каждое Национальное Чудо, где оно построено.</Russian>
+		<Russian>[ICON_BULLET]Получает бесплатного специалиста за каждое построенное национальное чудо.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAITHELP_FREE_SPEC_TP</Tag>
@@ -247,7 +247,7 @@
 		<French>[ICON_BULLET]Reçoit un Spécialiste gratuit pour chaque Merveille Mondiale construite.</French>
 		<Italian>[ICON_BULLET]Ottieni un cittadino specialista gratuito per ogni meraviglia mondiale nella città in cui è costruito.</Italian>
 		<Polish>[ICON_BULLET]Otrzymujesz darmowego Specjaliste na ka&#191;dy Wielki Cud kt&#243;ry wybudujesz.</Polish>
-		<Russian>[ICON_BULLET]Получает бесплатного специалиста за каждое Чудо Света, где оно построено.</Russian>
+		<Russian>[ICON_BULLET]Получает бесплатного специалиста за каждое построенное великое чудо.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAITHELP_FREE_UNIT_UPKEEP_MILITARY_PER_100_POP</Tag>
@@ -314,7 +314,7 @@
 		<Italian>[ICON_BULLET]%d1 [NUM1:turno massimo:turni massimi] di Anarchia</Italian>
 		<Spanish>[ICON_BULLET]Máx. %d1 [NUM1:turno:turnos] de anarquía</Spanish>
 		<Polish>[ICON_BULLET]Maksymalna ilo&#156;&#230; tur Anarchii: %d1</Polish>
-		<Russian>[ICON_BULLET]Макс. %d1 [NUM1:Turn:Turns] к продолжительности Анархии</Russian>
+		<Russian>[ICON_BULLET]Максимум ходов анархии: %d1</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAITHELP_MAX_TRADE_ROUTES</Tag>
@@ -569,7 +569,7 @@
 		<Italian>[ICON_BULLET]%D1%% produzione di Meraviglie</Italian>
 		<Spanish>[ICON_BULLET]%D1%% a la producción de maravillas</Spanish>
 		<Polish>[ICON_BULLET]%D1%% do Produkcji Cud&#243;w</Polish>
-		<Russian>[ICON_BULLET]%D1%% к строительству Чудес</Russian>
+		<Russian>[ICON_BULLET]%D1%% к строительству чудес</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAITHELP_WORKER_SPEED_NEGATIVE</Tag>
@@ -577,7 +577,7 @@
 		<French>[ICON_BULLET]Les Ouvriers construisent les aménagements avec un pénalité de %D1_Modifier%%</French>
 		<Italian>[ICON_BULLET]I lavoratori costruiscono i miglioramenti con una velocità modificata del %D1_Modifier%%</Italian><!--Aerial CT trait in the pedia-->
 		<Polish>[ICON_BULLET]Robotnicy buduj&#185; ulepszenia z pr&#234;dko&#156;ci&#185;: %D1_Modifier%%</Polish>
-		<Russian>[ICON_BULLET]Рабочие строят улучшения на %D1_Modifier%% медленнее</Russian>
+		<Russian>[ICON_BULLET]Рабочие создают надстройки на %D1_Modifier%% медленнее</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAITHELP_WORKER_SPEED_POSITIVE</Tag>
@@ -585,7 +585,7 @@
 		<French>[ICON_BULLET]Les Ouvriers construisent les aménagements %D1_Modifier%% plus vite</French>
 		<Italian>[ICON_BULLET]I lavoratori costruiscono i miglioramenti il %D1_Modifier%% più velocemente</Italian>
 		<Polish>[ICON_BULLET]Robotnicy buduj&#185; ulepszenia szybciej o: %D1_Modifier%%</Polish>
-		<Russian>[ICON_BULLET]Рабочие строят улучшения на %D1_Modifier%% быстрее</Russian>
+		<Russian>[ICON_BULLET]Рабочие создают надстройки на %D1_Modifier%% быстрее</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAITHELP_WORLD_WONDER_PRODUCTION_MODIFIER</Tag>
@@ -595,7 +595,7 @@
 		<Italian>[ICON_BULLET]%D1%% produzione di meraviglie mondiali</Italian>
 		<Spanish>[ICON_BULLET]%D1%% a la producción de maravillas del mundo</Spanish>
 		<Polish>[ICON_BULLET]%D1%% do Budowy Wielkich Cud&#243;w</Polish>
-		<Russian>[ICON_BULLET]%D1%% к строительству Великих Чудес</Russian>
+		<Russian>[ICON_BULLET]%D1%% к строительству великих чудес</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAITHELP_YIELD_CHANGES</Tag>

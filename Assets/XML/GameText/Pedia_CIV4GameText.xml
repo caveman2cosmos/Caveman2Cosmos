@@ -218,7 +218,7 @@
 		<French>Spéciaux</French>
 		<Italian>Altri edifici</Italian>
 		<German>Besonderheiten</German>
-		<Russian>Особые</Russian>
+		<Russian>Специальные</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PEDIA_CATEGORY_BUILDING_TREE</Tag>
@@ -353,7 +353,7 @@
 			<Plural>1</Plural>
 		</Spanish>
 		<Polish>Cechy Terenu</Polish>
-		<Russian>Особенности</Russian>
+		<Russian>Особенности ландшафта</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PEDIA_CATEGORY_GREAT_WONDERS</Tag>
@@ -417,7 +417,7 @@
 			<Plural>1</Plural>
 		</Spanish>
 		<Polish>Ulepszenia</Polish>
-		<Russian>Улучшения</Russian>
+		<Russian>Надстройки</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PEDIA_CATEGORY_LANDSCAPE</Tag>
@@ -505,7 +505,7 @@
 			<Plural>1</Plural>
 		</Spanish>
 		<Polish>Promocje</Polish>
-		<Russian>Повышения</Russian>
+		<Russian>Квалификации</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PEDIA_CATEGORY_PROMOTION_TREE</Tag>
@@ -515,7 +515,7 @@
 		<Italian>Albero promozioni</Italian>
 		<Spanish>Árbol de ascensos</Spanish>
 		<Polish>Drzewko prom.</Polish>
-		<Russian>Древо повышений</Russian>
+		<Russian>Древо квалификаций</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PEDIA_CATEGORY_RELIGION</Tag>

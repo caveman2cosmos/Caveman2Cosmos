@@ -5372,7 +5372,7 @@
 		<Italian>Miglioramenti</Italian>
 		<Spanish>Mejoras</Spanish>
 		<Polish>Ulepszenia</Polish>
-		<Russian>Улучшения</Russian>
+		<Russian>Надстройки</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_WB_AS_TECH</Tag>
@@ -5492,7 +5492,7 @@
 		<Italian>Miglioramenti</Italian>
 		<Spanish>Mejoras</Spanish>
 		<Polish>Ulepszenia</Polish>
-		<Russian>Улучшения</Russian>
+		<Russian>Надстройки</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_WB_LANDMARK_PLOTS</Tag>
@@ -5551,7 +5551,7 @@
 		<Italian>Promozioni</Italian>
 		<Spanish>Ascensos</Spanish>
 		<Polish>Awanse</Polish>
-		<Russian>Повышения</Russian>
+		<Russian>Квалификации</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_WB_REGENERATE_MAP</Tag>

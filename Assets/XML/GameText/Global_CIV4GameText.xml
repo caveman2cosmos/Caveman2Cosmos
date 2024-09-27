@@ -10751,7 +10751,7 @@
 		<Italian>Escludi [COLOR_HIGHLIGHT_TEXT]grandi meraviglie[COLOR_REVERT]</Italian>  <!-- city screen building filter option -->
 		<Spanish>Ocultar Maravillas del mundo</Spanish>
 		<Polish>Ukryj cuda &#156;wiata</Polish>
-		<Russian>Ñêðûòü Ìèðîâûå ×óäåñà</Russian>
+		<Russian>Скрыть великие чудеса</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_LIST_BUILDING_FILTER_HIDE_NATIONAL_WONDER</Tag>
@@ -10761,7 +10761,7 @@
 		<Italian>Escludi [COLOR_HIGHLIGHT_TEXT]meraviglie nazionali[COLOR_REVERT]</Italian>  <!-- city screen building filter option -->
 		<Spanish>Ocultar Maravillas nacionales</Spanish>
 		<Polish>Ukryj cuda narodowe</Polish>
-		<Russian>Ñêðûòü Íàö. ×óäåñà</Russian>
+		<Russian>Скрыть национальные чудеса</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_LIST_BUILDING_FILTER_HIDE_NORMAL</Tag>
@@ -15364,7 +15364,7 @@
 		<Italian>Miglioramenti</Italian>
 		<Spanish>Mejoras</Spanish>
 		<Polish>Ulepszenia</Polish>
-		<Russian>Ïðîìûøëåííîñòü</Russian>
+		<Russian>Надстройки</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISC_IMPR_GOOD_HEALTH</Tag>
@@ -15513,6 +15513,7 @@
 		<German>[SPACE][COLOR_WARNING_TEXT](Max.: %d1_Num)[COLOR_REVERT]</German>
 		<Italian>[SPACE][COLOR_WARNING_TEXT](Max: %d1_Num)[COLOR_REVERT]</Italian>
 		<Spanish>[SPACE][COLOR_WARNING_TEXT](Máx.: %d1_Num)[COLOR_REVERT]</Spanish>
+		<Russian>[SPACE][COLOR_WARNING_TEXT](максимум: %d1_Num)[COLOR_REVERT]</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISC_MAX_SPECIALISTS</Tag>
@@ -15521,6 +15522,7 @@
 		<German>[COLOR_WARNING_TEXT]Max.: %d1_Num[COLOR_REVERT]</German>
 		<Italian>[COLOR_WARNING_TEXT]Massimo: %d1_Num[COLOR_REVERT]</Italian>
 		<Spanish>[COLOR_WARNING_TEXT]Máx.: %d1_Num[COLOR_REVERT]</Spanish>
+		<Russian>[COLOR_WARNING_TEXT]Максимум: %d1_Num[COLOR_REVERT]</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISC_MELTDOWN_CITY</Tag>
@@ -20089,6 +20091,7 @@
 		<German>Weltwunder</German>
 		<Italian>Meraviglia mondiale</Italian>
 		<Spanish>Maravilla del mundo</Spanish>
+		<Russian>Великое чудо</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PEDIA_YIELDS</Tag>
@@ -20605,7 +20608,7 @@
 		<German>Automat. Bautrupps lassen alte Modernis. unverändert</German>
 		<Italian>I lavoratori non sostituiscono i vecchi miglioramenti</Italian>
 		<Spanish>Los trabajadores automatizados abandonan las mejoras antiguas</Spanish>
-		<Russian>Автоматизированные рабочие сохраняют старые улучшения</Russian>
+		<Russian>Автоматизированные рабочие сохраняют надстройки</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PLAYER_OPTION_WORKERS_LEAVE_OLD_IMPS_HELP</Tag>
@@ -20614,7 +20617,7 @@
 		<German>Automatisierte Bautrupps verändern keine zuvor errichteten Modernisierungen</German>
 		<Italian>[BOLD]I lavoratori in modalità automatica [COLOR_HIGHLIGHT_TEXT]non modificheranno[COLOR_REVERT] i miglioramenti precedentemente costruiti[\BOLD]</Italian>
 		<Spanish>Los Trabajadores automatizados no cambiarán las mejoras construidas previamente.</Spanish>
-		<Russian>Автоматизированные рабочие не будут заменять ранее построенные улучшения</Russian>
+		<Russian>Автоматизированные рабочие не будут заменять ранее возведенные надстройки улучшения</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PLAYER_OPTION_WORKERS_START_AUTO</Tag>
@@ -27140,7 +27143,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 			<Plural>1</Plural>
 		</Spanish>
 		<Polish>&#140;wiatowe cuda</Polish>
-		<Russian>Ìèðîâûå ×óäåñà</Russian>
+		<Russian>Великие чудеса</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRADABLE_UNIT</Tag>
@@ -27236,7 +27239,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 			<Plural>1</Plural>
 		</Spanish>
 		<Polish>Miasta</Polish>
-		<Russian>Ãîðîäà</Russian>
+		<Russian>Города</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRADE_CONTACT</Tag>
@@ -27780,7 +27783,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Italian>Lavoratori</Italian>
 		<Spanish>Trabajadores</Spanish>
 		<Polish>Robotnicy</Polish>
-		<Russian>Ðàáî÷èå</Russian>
+		<Russian>Рабочие</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRADE_WORKERS</Tag>
@@ -27790,7 +27793,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Italian>Lavoratori</Italian>
 		<Spanish>Trabajadores</Spanish>
 		<Polish>Robotnicy</Polish>
-		<Russian>Ðàáî÷èå</Russian>
+		<Russian>Рабочие</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRADE_WORLD_MAP_STRING</Tag>

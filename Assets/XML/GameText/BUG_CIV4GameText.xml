@@ -1732,7 +1732,7 @@
 		<German>Modernisierungen</German>
 		<Italian>Azioni dei miglioramenti</Italian>
 		<Spanish>Mejoras</Spanish>
-		<Russian>Óëó÷øåíèÿ</Russian>
+		<Russian>Надстройки</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_AUTOLOG__LOGPILLAGE_HOVER</Tag>
@@ -6994,14 +6994,14 @@
 		<Tag>TXT_KEY_BUG_OPT_ROMSETTINGS__INFRASTRUCTUREIGNORESIMPROVEMENTS_HOVER</Tag>
 		<English>Workers Automated to Improve Infrastructure will only build Routes</English>
 		<French>Les Ouvriers automatisés pour améliorer l'infrastructure construisent uniquement des routes.</French>
-		<Russian>Àâòî-ðàáîòíèêè áóäóò ñòðîèòü èñêëþ÷èòåëüíî äîðîãè</Russian>
+		<Russian>Автоматизированые на улучшение инфраструктуры рабочие будут строить исключительно дороги</Russian>
 		<Italian>[BOLD]I lavoratori automatizzati con il comando [COLOR_HIGHLIGHT_TEXT]costruzione automatica infrastrutture[COLOR_REVERT] costruiscono [COLOR_HIGHLIGHT_TEXT]solo percorsi[COLOR_REVERT][\BOLD]</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_ROMSETTINGS__INFRASTRUCTUREIGNORESIMPROVEMENTS_TEXT</Tag>
 		<English>Infrastructure Ignores Improvements</English>
 		<French>Infrastructures, mais pas améliorations</French>
-		<Russian>Èíôðàñòðóêòóðà èãíîðèðóåò óëó÷øåíèÿ</Russian>
+		<Russian>Инфраструктура игнорирует улучшения</Russian>
 		<Italian>Miglioramenti esclusi</Italian>
 	</TEXT>
 	<TEXT>
@@ -7020,7 +7020,7 @@
 		<German>Maximale Bombardierungsverteidigung</German>
 		<Italian>Difesa dal bombardamento</Italian>
 		<Spanish>Máximo de defensa contra bombardeo</Spanish>
-		<Russian>Ìàêñ. çàù. îò îáñòðåëîâ</Russian>
+		<Russian>Максимальная защита от обстрелов</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_ROMSETTINGS__MINCITYDISTANCE_HOVER</Tag>
@@ -8145,7 +8145,7 @@ uno de s, A, a, p, g, n, o, r (véase archivo de ayuda)</Spanish>
 		<German>Städte</German>
 		<Italian>Città</Italian> <!-- infoscreen Religion -->
 		<Spanish>Ciudades</Spanish>
-		<Russian>Ãîðîäà</Russian>
+		<Russian>Города</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_RELIGIOUS_MISSIONARY</Tag>

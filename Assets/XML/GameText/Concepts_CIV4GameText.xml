@@ -549,7 +549,7 @@
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</Spanish>
-		<Russian>Ãîðîäà</Russian>
+		<Russian>Города</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CONCEPT_CITIES_PEDIA</Tag>
@@ -1202,7 +1202,7 @@
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</Spanish>
-		<Russian>Óëó÷øåíèÿ</Russian>
+		<Russian>Надстройки</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CONCEPT_IMPROVEMENTS_PEDIA</Tag>
@@ -1675,7 +1675,7 @@
 			<Gender>Male</Gender>
 			<Plural>1</Plural>
 		</Spanish>
-		<Russian>Êâàëèôèêàöèè</Russian>
+		<Russian>Квалификации</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CONCEPT_PROMOTIONS_PEDIA</Tag>
