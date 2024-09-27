@@ -3229,7 +3229,7 @@
 		<Italian>Condizioni vittoria</Italian>
 		<Spanish>Victorias</Spanish>
 		<Polish>ZWYCI&#202;STWA</Polish>
-		<Russian>Победы</Russian>
+		<Russian>Условия победы</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MAIN_MENU_WAITING_FOR_CIVS</Tag>
@@ -3259,7 +3259,7 @@
 		<Italian>RICEZIONE MAPPA IN CORSO...</Italian>
 		<Spanish>RECIBIENDO MAPA...</Spanish>
 		<Polish>OTRZYMYWANIE MAPY...</Polish>
-		<Russian>ПОЛУЧЕНИЕ КАРТЫ...</Russian>
+		<Russian>Получение карты...</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MAP_UPDATE_SEND</Tag>
@@ -3269,7 +3269,7 @@
 		<Italian>INVIO MAPPA IN CORSO...</Italian>
 		<Spanish>ENVIANDO MAPA...</Spanish>
 		<Polish>WYSY&#163;ANIE MAPY...</Polish>
-		<Russian>ОТПРАВКА КАРТЫ...</Russian>
+		<Russian>Отправка карты...</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MAP_UPDATE_TITLE</Tag>
@@ -3509,7 +3509,7 @@
 		<Italian>Indirizzo e-mail:</Italian>
 		<Spanish>Dirección de e-mail:</Spanish>
 		<Polish>Adres e-mail:</Polish>
-		<Russian>Адрес e-mail:</Russian>
+		<Russian>Электронная почта:</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MENU_CIV_PASSWORD</Tag>

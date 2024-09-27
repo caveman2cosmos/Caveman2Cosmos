@@ -524,7 +524,7 @@
 		<Italian>[NEWLINE]Disarmato:[SPACE]</Italian>
 		<Spanish>[NEWLINE]Ileso:[SPACE]</Spanish>
 		<Polish>[NEWLINE]Brak obra&#191;e&#241;:[SPACE]</Polish>
-		<Russian>[NEWLINE]Öåëûé:[SPACE]</Russian>
+		<Russian>[NEWLINE]Целый:[SPACE]</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_ACO_UNROUNDEDXP</Tag>
@@ -534,7 +534,7 @@
 		<Italian>[NEWLINE]XP non arrotondati:[SPACE]</Italian>
 		<Polish>[NEWLINE]Nie zaokr&#185;glone XP:[SPACE]</Polish>
 		<Spanish>[NEWLINE]PX no redondeados:[SPACE]</Spanish>
-		<Russian>[NEWLINE]Íåîêðóãëåííûé XP:[SPACE]</Russian>
+		<Russian>[NEWLINE]Неокругленный опыт:[SPACE]</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_ACO_VICTORY</Tag>
@@ -544,7 +544,7 @@
 		<Italian>[COLOR_POSITIVE_TEXT]Vittoria[COLOR_REVERT]</Italian>
 		<Polish>[COLOR_POSITIVE_TEXT]Zwyci&#234;stwo[COLOR_REVERT]</Polish>
 		<Spanish>[COLOR_POSITIVE_TEXT]Victoria[COLOR_REVERT]</Spanish>
-		<Russian>[COLOR_POSITIVE_TEXT]Ïîáåäà[COLOR_REVERT]</Russian>
+		<Russian>[COLOR_POSITIVE_TEXT]Победа[COLOR_REVERT]</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_ACO_VS</Tag>
@@ -8386,7 +8386,7 @@
 		<French>Aucune technologie de départ</French>
 		<German>Keine Starttechnologien</German>
 		<Italian>[BOLD]Nessuna tecnologia iniziale[\BOLD]</Italian>
-		<Russian>Нет стартовых технологии</Russian>
+		<Russian>Нет стартовых технологий</Russian>
 		<Spanish>Sin tecnologías iniciales</Spanish>
 	</TEXT>
 	<TEXT>
@@ -27816,7 +27816,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 			<Plural>0</Plural>
 		</Spanish>
 		<Polish>Mapy &#140;wiata</Polish>
-		<Russian>Êàðòà ìèðà</Russian>
+		<Russian>Карта мира</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAITHELP_FREE_PROMOTIONS</Tag>
@@ -27825,6 +27825,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<German>[NEWLINE][SPACE][SPACE][ICON_BULLET]Freie Beförderung (%s1)</German>
 		<Italian>[NEWLINE][SPACE][SPACE][ICON_BULLET]Promozione gratuita (%s1)</Italian>
 		<Spanish>[NEWLINE][SPACE][SPACE][ICON_BULLET]Ascenso gratis (%s1)</Spanish>
+		<Russian>[NEWLINE][SPACE][SPACE][ICON_BULLET]Бесплатная квалификация (%s1)</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAITHELP_PLAYER_UNKNOWN</Tag>
@@ -29172,7 +29173,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 			<Plural>0</Plural>
 		</Spanish>
 		<Polish>Kultura</Polish>
-		<Russian>Êóëüòóðà</Russian>
+		<Russian>Культурная</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_VICTORY_DIPLOMATIC</Tag>
@@ -29194,7 +29195,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 			<Plural>0</Plural>
 		</Spanish>
 		<Polish>Dyplomacja</Polish>
-		<Russian>Äèïëîìàòèÿ</Russian>
+		<Russian>Дипломатическая</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_VICTORY_DOMINATION</Tag>
@@ -29216,7 +29217,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 			<Plural>0</Plural>
 		</Spanish>
 		<Polish>Dominacja</Polish>
-		<Russian>Äîìèíèðîâàíèå</Russian>
+		<Russian>Доминирование</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_VICTORY_RELIGIOUS</Tag>
@@ -29234,7 +29235,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 			<Plural>0</Plural>
 		</Spanish>
 		<Polish>Religia</Polish>
-		<Russian>Ðåëèãèîçíûé</Russian>
+		<Russian>Религиозная</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_VICTORY_RELIGIOUS_PEDIA</Tag>
@@ -29244,7 +29245,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Italian>Religious Victory</Italian>
 		<Spanish>Victoria religiosa -- Deberás controlar la Ciudad Santa de tu religión y propagarla al menos al 70% de la población mundial.</Spanish>
 		<Polish>Zwyci&#234;stwo Religijne wymaga kontrolowania &#140;wi&#234;tego Miasta i posiadania 75% wp&#179;ywu religii.</Polish>
-		<Russian>Религиозная победа - Вы должны контролировать священный город своей религии и распространять свою религию по крайней мере на 70% остального мира.</Russian>
+		<Russian>Необходимо контролировать священный город своей религии и распространить ее, как минимум, на 70% остального мира.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_VICTORY_RESET</Tag>
@@ -29266,7 +29267,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Italian>Scientifica</Italian>
 		<Spanish>Científica</Spanish>
 		<Polish>Zwyci&#234;stwo Naukowe</Polish>
-		<Russian>Íàó÷íàÿ</Russian>
+		<Russian>Научная</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_VICTORY_SCORE</Tag>
@@ -29288,7 +29289,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 			<Plural>0</Plural>
 		</Spanish>
 		<Polish>Wynik</Polish>
-		<Russian>Счет</Russian>
+		<Russian>По очкам</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_VICTORY_SCREEN_BUILDING</Tag>
@@ -29458,7 +29459,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<German>Punkte</German>
 		<Spanish>Puntos</Spanish>
 		<Polish>Punkt&#243;w</Polish>
-		<Russian>Î÷êè</Russian>
+		<Russian>Очки</Russian>
 		<Italian>Punteggio</Italian> <!-- victory info screen -->
 	</TEXT>
 	<TEXT>
@@ -29525,7 +29526,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 			<Plural>0</Plural>
 		</Spanish>
 		<Polish>Wy&#156;cig Kosmiczny</Polish>
-		<Russian>Êîñì. ãîíêà</Russian>
+		<Russian>Космическая гонка</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_VICTORY_TEAM_HAS_LAUNCHED</Tag>
@@ -29559,7 +29560,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 			<Plural>0</Plural>
 		</Spanish>
 		<Polish>Czas</Polish>
-		<Russian>Âðåìÿ</Russian>
+		<Russian>По времени</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_VICTORY_TOTAL</Tag>
@@ -29568,7 +29569,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<German>Meistersieg</German>
 		<Spanish>Maestría</Spanish>
 		<Polish>Totalna dominacja</Polish>
-		<Russian>Ïðåâîñõîäñòâî</Russian>
+		<Russian>Превосходство</Russian>
 		<Italian>Maestria</Italian>
 	</TEXT>
 	<TEXT>
@@ -29579,7 +29580,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Italian>Mastery Victory</Italian>
 		<Spanish>Victoria por maestría -- Una condición de victoria combinada que requiere el control de la mayoría del territorio, población, cultura y fé del planeta.</Spanish>
 		<Polish>Dominacja -- Z&#179;o&#191;one zwyci&#234;stwo wymagaj&#185;ce kontrolowania znacznej powierzchni terenu, populacji, kultury i religii na planecie.</Polish>
-		<Russian>Превосходство - комбинированная победа, требующая контроля над большинством земель, населения, культуры и религии на планете.</Russian>
+		<Russian>Комбинированное условие победы, требующее контроля над большинством земель, населения, культуры и религии на планете.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_VICTORY_YOU_HAVE_LAUNCHED</Tag>
@@ -29588,6 +29589,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<German>Ihr habt Euer Raumschiff gestartet!</German>
 		<Italian>Hai lanciato la tua astronave!</Italian>
 		<Spanish>¡Se ha lanzado una nave espacial!</Spanish>
+		<Russian>Вы запустили космический корабль!</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_VOTESOURCE_FULL_MEMBER</Tag>

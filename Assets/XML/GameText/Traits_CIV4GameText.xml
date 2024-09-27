@@ -684,7 +684,7 @@
 		<Tag>TXT_KEY_TRAIT_ANCIENT_WAY_OF_THE_CENTAUR</Tag>
 		<English>Ancient Way of the Centaur</English>
 		<French>Ancienne voie du centaure</French>
-		<Russian>«Путь Кентавра»</Russian>
+		<Russian>Древний путь кентавра</Russian>
 		<Italian>Antica tradizione del centauro</Italian>
 	</TEXT>
 	<TEXT>
@@ -701,7 +701,7 @@
 		<Tag>TXT_KEY_TRAIT_ANCIENT_WAY_OF_THE_FEATHER</Tag>
 		<English>Ancient Way of the Feather</English>
 		<French>Ancienne Voie de la Plume</French>
-		<Russian>«Путь Пера»</Russian>
+		<Russian>Древний путь пера</Russian>
 		<Italian>Antica tradizione della piuma</Italian>
 	</TEXT>
 	<TEXT>
@@ -718,7 +718,7 @@
 		<Tag>TXT_KEY_TRAIT_ANCIENT_WAY_OF_THE_FIST</Tag>
 		<English>Ancient Way of the Fist</English>
 		<French>Ancienne voie du poing</French>
-		<Russian>«Путь кулака»</Russian>
+		<Russian>Древний путь кулака</Russian>
 		<Italian>Antica tradizione del pugno</Italian>
 	</TEXT>
 	<TEXT>
@@ -735,13 +735,13 @@
 		<Tag>TXT_KEY_TRAIT_ANCIENT_WAY_OF_THE_LEECH</Tag>
 		<English>Ancient Way of the Leech</English>
 		<French>Ancienne Voie de la Goule</French>
-		<Russian>«Путь пиявки»</Russian>
+		<Russian>Древний путь пиявки</Russian>
 		<Italian>Antica tradizione della sanguisuga</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_ANCIENT_WAY_OF_THE_LEECH_PEDIA</Tag>
 		<English>Way of the Leech Trait is only available with the Ancient Ways Group Wonders. All Health Care Units gain the Way of the Leech promotion, giving them Units heal in Same tile Extra 8% Damage/turn, -4 Disease Turn/City and -2 Disease Turn/Plot. This promotion is only available during the Ancient era, it will be obsolete with Classical.</English>
-		<Russian>«Путь пиявки» доступен только с чудесами группы Древних Путей. Все подразделения здравоохранения получают поощрение «Путь пиявки», что дает им возможность лечить отряды в одной и той же плитке, дополнительно 8% урона/за ход, -4 хода от заболеваемости/в городе и -2 хода от заболеваемости/на местности. Эта акция доступна только в Древнюю эпоху, она будет устаревшей с технологией Античного образа жизни.</Russian>
+		<Russian>Качество «Древний путь пиявки» доступно только с чудесами группы Древних Путей. Все подразделения здравоохранения получают поощрение «Путь пиявки», что дает им возможность лечить отряды в одной и той же плитке, дополнительно 8% урона/за ход, -4 хода от заболеваемости/в городе и -2 хода от заболеваемости/на местности. Эта акция доступна только в Древнюю эпоху, она будет устаревшей с технологией Античного образа жизни.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_ANCIENT_WAY_OF_THE_LEECH_SHORT</Tag>
@@ -752,7 +752,7 @@
 		<Tag>TXT_KEY_TRAIT_ANCIENT_WAY_OF_THE_SHADOWS</Tag>
 		<English>Ancient Way of the Shadows</English>
 		<French>Ancienne Voie des Ombres</French>
-		<Russian>«Путь теней»</Russian>
+		<Russian>Древний путь теней</Russian>
 		<Italian>Antica tradizione dell'ombra</Italian>
 	</TEXT>
 	<TEXT>
@@ -769,7 +769,7 @@
 		<Tag>TXT_KEY_TRAIT_ANCIENT_WAY_OF_THE_WARRIOR</Tag>
 		<English>Ancient Way of the Warrior</English>
 		<French>Ancienne Voie du Guerrier</French>
-		<Russian>«Путь воина»</Russian>
+		<Russian>Древний путь воина</Russian>
 		<Italian>Antica tradizione del guerriero</Italian>
 	</TEXT>
 	<TEXT>
@@ -786,7 +786,7 @@
 		<Tag>TXT_KEY_TRAIT_ANCIENT_WAY_OF_THE_WAVES</Tag>
 		<English>Ancient Way of the Waves</English>
 		<French>Ancienne Voie des Vagues</French>
-		<Russian>«Путь волн»</Russian>
+		<Russian>Древний путь волн</Russian>
 		<Italian>Antica tradizione delle onde</Italian>
 	</TEXT>
 	<TEXT>
@@ -803,7 +803,7 @@
 		<Tag>TXT_KEY_TRAIT_ANCIENT_WAY_OF_THE_WILD</Tag>
 		<English>Ancient Way of the Wild</English>
 		<French>Ancienne Voie de la Nature Sauvage</French>
-		<Russian>«Путь дикости»</Russian>
+		<Russian>Древний путь дикаря</Russian>
 		<Italian>Antica tradizione della natura selvaggia</Italian>
 	</TEXT>
 	<TEXT>
@@ -820,7 +820,7 @@
 		<Tag>TXT_KEY_TRAIT_ANCIENT_WAY_OF_THE_WIND</Tag>
 		<English>Ancient Way of the Wind</English>
 		<French>Ancienne Voie du Vent</French>
-		<Russian>«Путь Ветра»</Russian>
+		<Russian>Древний путь ветра</Russian>
 		<Italian>Antica tradizione del vento</Italian>
 	</TEXT>
 	<TEXT>
@@ -837,7 +837,7 @@
 		<Tag>TXT_KEY_TRAIT_ANCIENT_WAY_OF_THE_WOLF</Tag>
 		<English>Ancient Way of the Wolf</English>
 		<French>Ancienne voie du Loup</French>
-		<Russian>«Путь Волка»</Russian>
+		<Russian>Древний путь волка</Russian>
 		<Italian>Antica tradizione del lupo</Italian>
 	</TEXT>
 	<TEXT>
@@ -870,12 +870,13 @@
 			<Plural>0:0:1:1</Plural>
 		</Spanish>
 		<Polish>Anty-Klerykalny</Polish>
-		<Russian>Áåçáîæíèê</Russian>
+		<Russian>Антиклерикализм</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_ANTI_CLERICAL0</Tag>
 		<English>Anti Clerical 0</English>
 		<Italian>Anticlericale I</Italian>
+		<Russian>Антиклерикализм I</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_ANTI_CLERICAL_PEDIA</Tag>
@@ -903,7 +904,7 @@
 			<Plural>0</Plural>
 		</Spanish>
 		<Polish>AnK</Polish>
-		<Russian>Áåçá.</Russian>
+		<Russian>Анкл.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_ASTROLOGICAL_INFLUENCE_OF_AQUARIUS</Tag>
@@ -1093,7 +1094,7 @@
 			<Plural>0:0:1:1</Plural>
 		</Spanish>
 		<Polish>Dziki</Polish>
-		<Russian>Âàðâàð</Russian>
+		<Russian>Варварство</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_BARBARIAN_PEDIA</Tag>
@@ -1120,7 +1121,7 @@
 			<Plural>0</Plural>
 		</Spanish>
 		<Polish>Dzi</Polish>
-		<Russian>Âàðâ.</Russian>
+		<Russian>Врвр.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_BARBARIC</Tag>
@@ -1146,12 +1147,13 @@
 			<Plural>0:0:1:1</Plural>
 		</Spanish>
 		<Polish>Barbarzy&#241;ski</Polish>
-		<Russian>Ãðóáûé</Russian>
+		<Russian>Неотесанность</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_BARBARIC0</Tag>
 		<English>Barbaric 0</English>
 		<Italian>Barbaro I</Italian>
+		<Russian>Неотесанность I</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_BARBARIC_PEDIA</Tag>
@@ -1178,7 +1180,7 @@
 			<Plural>0</Plural>
 		</Spanish>
 		<Polish>Barb</Polish>
-		<Russian>Ãðóá.</Russian>
+		<Russian>Неот.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_CHARISMATIC</Tag>
@@ -1199,11 +1201,13 @@
 			<Gender>Male:Female</Gender>
 			<Plural>0</Plural>
 		</Spanish>
+		<Russian>Харизма</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_CHARISMATIC0</Tag>
 		<English>Charismatic 0</English>
 		<Italian>Carismatico I</Italian>
+		<Russian>Харизма I</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_CHARISMATIC_PEDIA</Tag>
@@ -1227,12 +1231,13 @@
 			<Plural>0</Plural>
 		</Spanish>
 		<Polish>Kreatywny:Kreatywna:Kreatywny:Kreatywna'</Polish>
-		<Russian>Ìåöåíàò</Russian>
+		<Russian>Меценатство</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_CREATIVE0</Tag>
 		<English>Creative 0</English>
 		<Italian>Creativo I</Italian>
+		<Russian>Меценатство I</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_CREATIVE_PEDIA</Tag>
@@ -1247,6 +1252,7 @@
 		<German>Kre</German>
 		<Italian>Creativo</Italian>
 		<Spanish>Cre</Spanish>
+		<Russian>Мцнт.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_CRUEL</Tag>
@@ -1268,12 +1274,13 @@
 			<Plural>0:0:1:1</Plural>
 		</Spanish>
 		<Polish>Okrutny</Polish>
-		<Russian>Æåñòîêèé</Russian>
+		<Russian>Жестокость</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_CRUEL0</Tag>
 		<English>Cruel 0</English>
 		<Italian>Crudele I</Italian>
+		<Russian>Жестокость I</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_CRUEL_PEDIA</Tag>
@@ -1301,7 +1308,7 @@
 			<Plural>0</Plural>
 		</Spanish>
 		<Polish>Okr</Polish>
-		<Russian>Æåñò.</Russian>
+		<Russian>Жест.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_DECEIVER</Tag>
@@ -1315,16 +1322,18 @@
 			<Plural>0:0:1:1</Plural>
 		</Spanish>
 		<Polish>K&#179;amca</Polish>
-		<Russian>Èíòðèãàí</Russian>
+		<Russian>Интриганство</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_DECEIVER0</Tag>
 		<English>Deceiver 0</English>
 		<Italian>Imbroglione I</Italian>
+		<Russian>Интриганство I</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_DECEIVER_PEDIA</Tag>
 		<English>Deception is favourite past time of leader</English>
+		<Russian>Плетение интриг - любимое занятие таких лидеров.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_DECEIVER_SHORT</Tag>
@@ -1334,7 +1343,7 @@
 		<Italian>Imbroglione</Italian>
 		<Spanish>Tra</Spanish>
 		<Polish>K&#179;a</Polish>
-		<Russian>Èíòð.</Russian>
+		<Russian>Интр.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_EXCESSIVE</Tag>
@@ -1356,17 +1365,18 @@
 			<Plural>0:0:1:1</Plural>
 		</Spanish>
 		<Polish>Przesadny</Polish>
-		<Russian>Íåóìåðåííûé</Russian>
+		<Russian>Расточительность</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_EXCESSIVE0</Tag>
 		<English>Excessive 0</English>
 		<Italian>Eccessivo I</Italian>
+		<Russian>Расточительность I</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_EXCESSIVE_PEDIA</Tag>
 		<English>The opulent court of this ruler is a real strain on the state budget. - TR Team.</English>
-		<Russian>Пышный двор этого правителя ложится тяжелым бременем на государственный бюджет.</Russian>
+		<Russian>Пышный двор этих лидеров ложится тяжелым бременем на государственный бюджет.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_EXCESSIVE_SHORT</Tag>
@@ -1388,7 +1398,7 @@
 			<Plural>0</Plural>
 		</Spanish>
 		<Polish>Prze</Polish>
-		<Russian>Íåóì.</Russian>
+		<Russian>Рстч.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_EXPANSIVE</Tag>
@@ -1410,12 +1420,13 @@
 			<Plural>0</Plural>
 		</Spanish>
 		<Polish>Ekspansywny:Ekspansywna:Ekspansywny:Ekspansywna</Polish>
-		<Russian>Ýêñïàíñèîíèñò</Russian>
+		<Russian>Экспансионизм</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_EXPANSIVE0</Tag>
 		<English>Expansive 0</English>
 		<Italian>Espansionista I</Italian>
+		<Russian>Экспансионизм I</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_EXPANSIVE_PEDIA</Tag>
@@ -1430,6 +1441,7 @@
 		<German>Exp</German>
 		<Italian>Espansionista</Italian>
 		<Spanish>Com</Spanish>
+		<Russian>Эксп.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_FANATICAL</Tag>
@@ -1451,17 +1463,18 @@
 			<Plural>0:0:1:1</Plural>
 		</Spanish>
 		<Polish>Fanatyczny</Polish>
-		<Russian>Ôàíàòèê</Russian>
+		<Russian>Фанатизм</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_FANATICAL0</Tag>
 		<English>Fanatical 0</English>
 		<Italian>Fanatico I</Italian>
+		<Russian>Фанатизм I</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_FANATICAL_PEDIA</Tag>
 		<English>This ruler puts blind faith above all other merits; talented but sceptically minded people will find themselves unwanted at his court. - TR Team.</English>
-		<Russian>Этот правитель ставит слепую веру выше всех других достоинств; талантливые, но скептически настроенные люди окажутся нежелательными при его дворе.</Russian>
+		<Russian>Эти лидеры ставят слепую веру выше всех других достоинств; талантливые, но скептически настроенные люди окажутся нежелательными при их дворе.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_FANATICAL_SHORT</Tag>
@@ -1482,7 +1495,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</Spanish>
-		<Russian>Ôàí.</Russian>
+		<Russian>Фнт.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_FINANCIAL</Tag>
@@ -1500,12 +1513,13 @@
 			<Plural>0</Plural>
 		</Spanish>
 		<Polish>Finansowy:Finansowa:Finansowy:Finansowa'</Polish>
-		<Russian>Ôèíàíñèñò</Russian>
+		<Russian>Коммерция</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_FINANCIAL0</Tag>
 		<English>Financial 0</English>
 		<Italian>Economista I</Italian>
+		<Russian>Коммерция I</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_FINANCIAL_PEDIA</Tag>
@@ -1519,6 +1533,7 @@
 		<German>Fin</German>
 		<Italian>Economista</Italian>
 		<Spanish>Fin</Spanish>
+		<Russian>Комм.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_FOREIGN</Tag>
@@ -1540,12 +1555,13 @@
 			<Plural>0:0:1:1</Plural>
 		</Spanish>
 		<Polish>Cudoziemski</Polish>
-		<Russian>Êñåíîôèë</Russian>
+		<Russian>Ксенофилия</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_FOREIGN0</Tag>
 		<English>Foreign 0</English>
 		<Italian>Straniero I</Italian>
+		<Russian>Ксенофилия I</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_FOREIGN_PEDIA</Tag>
@@ -1572,7 +1588,7 @@
 			<Plural>0</Plural>
 		</Spanish>
 		<Polish>Cdz</Polish>
-		<Russian>Êñåí.</Russian>
+		<Russian>Ксфл.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_HUMANITARIAN</Tag>
@@ -1586,23 +1602,25 @@
 			<Plural>0:0:1:1</Plural>
 		</Spanish>
 		<Polish>Humanitarny</Polish>
-		<Russian>Ãóìàíèñò</Russian>
+		<Russian>Гуманизм</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_HUMANITARIAN0</Tag>
 		<English>Humanitarian 0</English>
 		<Italian>Filantropo I</Italian>
+		<Russian>Гуманизм I</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_HUMANITARIAN_PEDIA</Tag>
 		<English>Humanitarian leaders try to make everyone happy and healthy</English>
+		<Russian>Такие лидеры стараются сделать всех счастливыми и здоровыми.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_HUMANITARIAN_SHORT</Tag>
 		<English>Hum</English>
 		<French>Hum</French>
 		<Italian>Filantropo</Italian>
-		<Russian>Ãóì.</Russian>
+		<Russian>Гум.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_HUNTER_GATHERER</Tag>
@@ -1624,12 +1642,13 @@
 			<Plural>0:0:1:1</Plural>
 		</Spanish>
 		<Polish>&#163;owco-Zbieracz</Polish>
-		<Russian>Ñîáèðàòåëü</Russian>
+		<Russian>Охота и собирательство</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_HUNTER_GATHERER0</Tag>
 		<English>Hunter-Gatherer 0</English>
 		<Italian>Cacciatore-raccoglitore I</Italian>
+		<Russian>Охота и собирательство I</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_HUNTER_GATHERER_PEDIA</Tag>
@@ -1656,7 +1675,7 @@
 			<Plural>0</Plural>
 		</Spanish>
 		<Polish>&#163;-Z</Polish>
-		<Russian>Ñîá.</Russian>
+		<Russian>О-С.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_IDEALISTIC</Tag>
@@ -1678,12 +1697,13 @@
 			<Plural>0:0:1:1</Plural>
 		</Spanish>
 		<Polish>Perfekcjonista</Polish>
-		<Russian>Èäåàëèñò</Russian>
+		<Russian>Идеализм</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_IDEALISTIC0</Tag>
 		<English>Idealistic 0</English>
 		<Italian>Idealista I</Italian>
+		<Russian>Идеализм I</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_IDEALISTIC_PEDIA</Tag>
@@ -1711,7 +1731,7 @@
 			<Plural>0</Plural>
 		</Spanish>
 		<Polish>Perf</Polish>
-		<Russian>Èä.</Russian>
+		<Russian>Идеа.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_IMPERIALIST</Tag>
@@ -1724,11 +1744,13 @@
 		</German>
 		<Italian>Imperialista</Italian>
 		<Spanish>Imperialista</Spanish>
+		<Russian>Империализм</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_IMPERIALIST0</Tag>
 		<English>Imperialistic 0</English>
 		<Italian>Imperialista I</Italian>
+		<Russian>Империализм I</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_IMPERIALIST_PEDIA</Tag>
@@ -1751,12 +1773,13 @@
 			<Plural>0</Plural>
 		</Spanish>
 		<Polish>Pracowity:Pracowita:Pracowity:Pracowita</Polish>
-		<Russian>Òðóäîëþáèâûé</Russian>
+		<Russian>Строительство</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_INDUSTRIOUS0</Tag>
 		<English>Industrious 0</English>
 		<Italian>Industrioso I</Italian>
+		<Russian>Строительство I</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_INDUSTRIOUS_PEDIA</Tag>
@@ -1770,6 +1793,7 @@
 		<German>Ind</German>
 		<Italian>Industrioso</Italian>
 		<Spanish>Dil</Spanish>
+		<Russian>Стро.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_ISOLATIONIST</Tag>
@@ -1791,17 +1815,18 @@
 			<Plural>0:0:1:1</Plural>
 		</Spanish>
 		<Polish>Izolacjonista</Polish>
-		<Russian>Èçîëÿöèîíèñò</Russian>
+		<Russian>Изоляционизм</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_ISOLATIONIST0</Tag>
 		<English>Isolationist 0</English>
 		<Italian>Isolazionista I</Italian>
+		<Russian>Изоляционизм I</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_ISOLATIONIST_PEDIA</Tag>
 		<English>This leader believes in completely self-reliant state to the point where he is ready to cut off most connections to the outside world. - TR Team.</English>
-		<Russian>Этот лидер верит в успешность полностью самодостаточного государства до такой степени, что он готов отсечь большинство связей с внешним миром.</Russian>
+		<Russian>Эти лидеры верят в успешность полностью самодостаточного государства до такой степени, что готовы отсечь большинство связей с внешним миром.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_ISOLATIONIST_SHORT</Tag>
@@ -1823,7 +1848,7 @@
 			<Plural>0</Plural>
 		</Spanish>
 		<Polish>Izo</Polish>
-		<Russian>Èçîë.</Russian>
+		<Russian>Изол.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_MEGALOMANIAC</Tag>
@@ -1845,12 +1870,13 @@
 			<Plural>0:0:1:1</Plural>
 		</Spanish>
 		<Polish>Megaloman</Polish>
-		<Russian>Ìåãàëîìàíüÿê</Russian>
+		<Russian>Мегаломания</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_MEGALOMANIAC0</Tag>
 		<English>Megalomaniac 0</English>
 		<Italian>Megalomane I</Italian>
+		<Russian>Мегаломания I</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_MEGALOMANIAC_PEDIA</Tag>
@@ -1876,7 +1902,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</Spanish>
-		<Russian>Ìåã.</Russian>
+		<Russian>Мгл.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_NOMAD</Tag>
@@ -1890,16 +1916,18 @@
 			<Plural>0:0:1:1</Plural>
 		</Spanish>
 		<Polish>Koczownik</Polish>
-		<Russian>Êî÷åâíèê</Russian>
+		<Russian>Кочевничество</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_NOMAD0</Tag>
 		<English>Nomad 0</English>
 		<Italian>Nomade I</Italian>
+		<Russian>Кочевничество I</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_NOMAD_PEDIA</Tag>
 		<English>This leader dislikes being stationary</English>
+		<Russian>Такие лидеры не любят жить на одном месте.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_NOMAD_SHORT</Tag>
@@ -1907,8 +1935,8 @@
 		<French>Nom.</French>
 		<Spanish>Nóm</Spanish>
 		<Polish>Kcz</Polish>
-		<Russian>Êî÷.</Russian>
 		<Italian>Nomade</Italian>
+		<Russian>Кчв.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_ORGANIZED</Tag>
@@ -1926,12 +1954,13 @@
 			<Plural>0</Plural>
 		</Spanish>
 		<Polish>Zorganizowany:Zorganizowana:Zorganizowany:Zorganizowana</Polish>
-		<Russian>Îðãàíèçàòîð</Russian>
+		<Russian>Организованность</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_ORGANIZED0</Tag>
 		<English>Organized 0</English>
 		<Italian>Organizzato I</Italian>
+		<Russian>Организованность I</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_ORGANIZED_PEDIA</Tag>
@@ -1945,6 +1974,7 @@
 		<German>Org</German>
 		<Italian>Organizzato</Italian>
 		<Spanish>Org</Spanish>
+		<Russian>Орг.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_PHILOSOPHICAL</Tag>
@@ -1962,12 +1992,13 @@
 			<Plural>0</Plural>
 		</Spanish>
 		<Polish>Filozoficzny:Filozoficzna:Filozoficzny:Filozoficzna</Polish>
-		<Russian>Ôèëîñîô</Russian>
+		<Russian>Философия</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_PHILOSOPHICAL0</Tag>
 		<English>Philosophical 0</English>
 		<Italian>Filosofo I</Italian>
+		<Russian>Философия I</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_PHILOSOPHICAL_PEDIA</Tag>
@@ -1981,6 +2012,7 @@
 		<German>Phi</German>
 		<Italian>Filosofo</Italian>
 		<Spanish>Fil</Spanish>
+		<Russian>Фил.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_POLITICIAN</Tag>
@@ -2002,12 +2034,13 @@
 			<Plural>0:0:1:1</Plural>
 		</Spanish>
 		<Polish>Polityk</Polish>
-		<Russian>Ïîëèòèêàí</Russian>
+		<Russian>Политика</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_POLITICIAN0</Tag>
 		<English>Politician 0</English>
 		<Italian>Politico I</Italian>
+		<Russian>Политика I</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_POLITICIAN_PEDIA</Tag>
@@ -2034,7 +2067,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</Spanish>
-		<Russian>Ïîë.</Russian>
+		<Russian>Плтк.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_POPULIST</Tag>
@@ -2056,12 +2089,13 @@
 			<Plural>0:0:1:1</Plural>
 		</Spanish>
 		<Polish>Populista</Polish>
-		<Russian>Ïîïóëèñò</Russian>
+		<Russian>Популизм</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_POPULIST0</Tag>
 		<English>Populist 0</English>
 		<Italian>Populista I</Italian>
+		<Russian>Популизм I</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_POPULIST_PEDIA</Tag>
@@ -2087,7 +2121,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</Spanish>
-		<Russian>Ïîï.</Russian>
+		<Russian>Пплз.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_PROGRESSIST</Tag>
@@ -2109,12 +2143,13 @@
 			<Plural>0:0:1:1</Plural>
 		</Spanish>
 		<Polish>Progresywny</Polish>
-		<Russian>Ïðîãðåññèâíûé</Russian>
+		<Russian>Прогрессивизм</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_PROGRESSIST0</Tag>
 		<English>Progressist 0</English>
 		<Italian>Progressista I</Italian>
+		<Russian>Прогрессивизм I</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_PROGRESSIST_PEDIA</Tag>
@@ -2142,7 +2177,7 @@
 			<Plural>0</Plural>
 		</Spanish>
 		<Polish>Pro</Polish>
-		<Russian>Ïðîã.</Russian>
+		<Russian>Пргc.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_PROTECTIVE</Tag>
@@ -2158,17 +2193,18 @@
 			<Plural>0:0</Plural>
 		</German>
 		<Italian>Protettivo</Italian>
-		<Russian>Защита</Russian>
 		<Spanish>
 			<Text>Protector:Protectora</Text>
 			<Gender>Male:Female</Gender>
 			<Plural>0</Plural>
 		</Spanish>
+		<Russian>Защита</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_PROTECTIVE0</Tag>
 		<English>Protective 0</English>
 		<Italian>Protettivo I</Italian>
+		<Russian>Защита I</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_PROTECTIVE_PEDIA</Tag>
@@ -2195,12 +2231,13 @@
 			<Plural>0:0:1:1</Plural>
 		</Spanish>
 		<Polish>Rewolucyjny</Polish>
-		<Russian>Ðåâîëþöèîíåð</Russian>
+		<Russian>Революционность</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_REVOLUTIONARY0</Tag>
 		<English>Revolutionary 0</English>
 		<Italian>Rivoluzionario I</Italian>
+		<Russian>Революционность I</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_REVOLUTIONARY_PEDIA</Tag>
@@ -2227,7 +2264,7 @@
 			<Plural>0</Plural>
 		</Spanish>
 		<Polish>Rew</Polish>
-		<Russian>Ðåâ.</Russian>
+		<Russian>Рвлц.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_SCIENTIFIC</Tag>
@@ -2241,16 +2278,18 @@
 			<Plural>0:0:1:1</Plural>
 		</Spanish>
 		<Polish>Naukowy</Polish>
-		<Russian>Ó÷åíûé</Russian>
+		<Russian>Наука</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_SCIENTIFIC0</Tag>
 		<English>Scientific 0</English>
 		<Italian>Scientifico I</Italian>
+		<Russian>Наука I</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_SCIENTIFIC_PEDIA</Tag>
 		<English>This leader gets boost to research</English>
+		<Russian>Такие лидеры ускоряют исследования.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_SCIENTIFIC_SHORT</Tag>
@@ -2259,7 +2298,7 @@
 		<German>Wis</German>
 		<Spanish>Cie</Spanish>
 		<Polish>Nau</Polish>
-		<Russian>Ó÷.</Russian>
+		<Russian>Нк.</Russian>
 		<Italian>Scientifico</Italian>
 	</TEXT>
 	<TEXT>
@@ -2274,16 +2313,18 @@
 			<Plural>0:0:1:1</Plural>
 		</Spanish>
 		<Polish>&#175;eglarski</Polish>
-		<Russian>Ìîðåïëàâàòåëü</Russian>
+		<Russian>Мореплавание</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_SEAFARING0</Tag>
 		<English>Seafaring 0</English>
 		<Italian>Marinaio I</Italian>
+		<Russian>Мореплавание I</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_SEAFARING_PEDIA</Tag>
 		<English>This leader specializes in seafaring</English>
+		<Russian>Такие лидеры специализируются на плавании по воде.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_SEAFARING_SHORT</Tag>
@@ -2293,7 +2334,7 @@
 		<Italian>Marinaio</Italian>
 		<Spanish>Mar</Spanish>
 		<Polish>&#175;eg.</Polish>
-		<Russian>Ìîð.</Russian>
+		<Russian>Мрпл.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_SPIRITUAL</Tag>
@@ -2311,12 +2352,13 @@
 			<Plural>0</Plural>
 		</Spanish>
 		<Polish>Uduchowiony:Uduchowiona:Uduchowiony:Uduchowiona'</Polish>
-		<Russian>Ìèñòèê</Russian>
+		<Russian>Мистицизм</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_SPIRITUAL0</Tag>
 		<English>Spiritual 0</English>
 		<Italian>Spirituale I</Italian>
+		<Russian>Мистицизм I</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_SPIRITUAL_PEDIA</Tag>
@@ -2330,6 +2372,7 @@
 		<German>Spi</German>
 		<Italian>Spirituale</Italian>
 		<Spanish>Esp</Spanish>
+		<Russian>Мист.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_TEMPERAMENTAL</Tag>
@@ -2351,12 +2394,13 @@
 			<Plural>0:0:1:1</Plural>
 		</Spanish>
 		<Polish>Wybuchowy</Polish>
-		<Russian>Òåìïåðàìåíòíûé</Russian>
+		<Russian>Непостоянство</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_TEMPERAMENTAL0</Tag>
 		<English>Temperamental 0</English>
 		<Italian>Volubile I</Italian>
+		<Russian>Непостоянство I</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_TEMPERAMENTAL_PEDIA</Tag>
@@ -2383,6 +2427,6 @@
 			<Plural>0</Plural>
 		</Spanish>
 		<Polish>Wyb</Polish>
-		<Russian>Òåìï.</Russian>
+		<Russian>Нпст.</Russian>
 	</TEXT>
 </Civ4GameText>
