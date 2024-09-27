@@ -683,6 +683,16 @@ bool CyUnit::isCommander() const
 	return m_pUnit->isCommander();
 }
 
+void CyUnit::setCommodore(bool bNewValue)
+{
+	m_pUnit->setCommodore(bNewValue);
+}
+
+bool CyUnit::isCommodore() const
+{
+	return m_pUnit->isCommodore();
+}
+
 int CyUnit::getControlPointsLeft() const
 {
 	return m_pUnit->getCommanderComp()->getControlPointsLeft();

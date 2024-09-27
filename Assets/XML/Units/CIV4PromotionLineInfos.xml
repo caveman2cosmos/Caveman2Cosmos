@@ -951,6 +951,7 @@
 			<Button>Art/Interface/Buttons/promotions/operations1.dds</Button>
 			<UnitCombatPrereqTypes>
 				<UnitCombatPrereqType>UNITCOMBAT_COMMANDER</UnitCombatPrereqType>
+				<UnitCombatPrereqType>UNITCOMBAT_COMMODORE</UnitCombatPrereqType>
 			</UnitCombatPrereqTypes>
 		</PromotionLineInfo>
 		<PromotionLineInfo>
@@ -959,6 +960,7 @@
 			<Button>Art/Interface/Buttons/promotions/morale1.dds</Button>
 			<UnitCombatPrereqTypes>
 				<UnitCombatPrereqType>UNITCOMBAT_COMMANDER</UnitCombatPrereqType>
+				<UnitCombatPrereqType>UNITCOMBAT_COMMODORE</UnitCombatPrereqType>
 			</UnitCombatPrereqTypes>
 		</PromotionLineInfo>
 		<PromotionLineInfo>
@@ -967,6 +969,7 @@
 			<Button>Art/Interface/Buttons/promotions/tactics1.dds</Button>
 			<UnitCombatPrereqTypes>
 				<UnitCombatPrereqType>UNITCOMBAT_COMMANDER</UnitCombatPrereqType>
+				<UnitCombatPrereqType>UNITCOMBAT_COMMODORE</UnitCombatPrereqType>
 			</UnitCombatPrereqTypes>
 		</PromotionLineInfo>
 		<PromotionLineInfo>
@@ -975,6 +978,7 @@
 			<Button>Art/Interface/Buttons/promotions/initiative1.dds</Button>
 			<UnitCombatPrereqTypes>
 				<UnitCombatPrereqType>UNITCOMBAT_COMMANDER</UnitCombatPrereqType>
+				<UnitCombatPrereqType>UNITCOMBAT_COMMODORE</UnitCombatPrereqType>
 			</UnitCombatPrereqTypes>
 		</PromotionLineInfo>
 		<PromotionLineInfo>
@@ -983,6 +987,7 @@
 			<Button>Art/Interface/Buttons/promotions/SelfPreservation1.dds</Button>
 			<UnitCombatPrereqTypes>
 				<UnitCombatPrereqType>UNITCOMBAT_COMMANDER</UnitCombatPrereqType>
+				<UnitCombatPrereqType>UNITCOMBAT_COMMODORE</UnitCombatPrereqType>
 			</UnitCombatPrereqTypes>
 		</PromotionLineInfo>
 		<PromotionLineInfo>
@@ -991,6 +996,7 @@
 			<Button>art/Buttons/Promotions/CommanderCommand1.dds</Button>
 			<UnitCombatPrereqTypes>
 				<UnitCombatPrereqType>UNITCOMBAT_COMMANDER</UnitCombatPrereqType>
+				<UnitCombatPrereqType>UNITCOMBAT_COMMODORE</UnitCombatPrereqType>
 			</UnitCombatPrereqTypes>
 		</PromotionLineInfo>
 		<PromotionLineInfo>
@@ -999,6 +1005,7 @@
 			<Button>art/Buttons/Promotions/CommanderGeneralStaff1.dds</Button>
 			<UnitCombatPrereqTypes>
 				<UnitCombatPrereqType>UNITCOMBAT_COMMANDER</UnitCombatPrereqType>
+				<UnitCombatPrereqType>UNITCOMBAT_COMMODORE</UnitCombatPrereqType>
 			</UnitCombatPrereqTypes>
 		</PromotionLineInfo>
 		<PromotionLineInfo>
@@ -2427,6 +2434,7 @@
 			<Button>Art/Interface/Buttons/Promotions/flaming1.dds</Button>
 			<UnitCombatPrereqTypes>
 				<UnitCombatPrereqType>UNITCOMBAT_COMMANDER</UnitCombatPrereqType>
+				<UnitCombatPrereqType>UNITCOMBAT_COMMODORE</UnitCombatPrereqType>
 			</UnitCombatPrereqTypes>
 		</PromotionLineInfo>
 		<PromotionLineInfo>
@@ -2445,6 +2453,7 @@
 			<Button>Art/Interface/Buttons/Promotions/flaming1.dds</Button>
 			<UnitCombatPrereqTypes>
 				<UnitCombatPrereqType>UNITCOMBAT_COMMANDER</UnitCombatPrereqType>
+				<UnitCombatPrereqType>UNITCOMBAT_COMMODORE</UnitCombatPrereqType>
 			</UnitCombatPrereqTypes>
 		</PromotionLineInfo>
 		<PromotionLineInfo>
@@ -2462,6 +2471,7 @@
 			<Button>Art/Interface/Buttons/Promotions/flaming1.dds</Button>
 			<UnitCombatPrereqTypes>
 				<UnitCombatPrereqType>UNITCOMBAT_COMMANDER</UnitCombatPrereqType>
+				<UnitCombatPrereqType>UNITCOMBAT_COMMODORE</UnitCombatPrereqType>
 			</UnitCombatPrereqTypes>
 		</PromotionLineInfo>
 		<PromotionLineInfo>
@@ -2926,6 +2936,7 @@
 				<UnitCombatPrereqType>UNITCOMBAT_LAW_ENFORCEMENT</UnitCombatPrereqType>
 				<UnitCombatPrereqType>UNITCOMBAT_SPY</UnitCombatPrereqType>
 				<UnitCombatPrereqType>UNITCOMBAT_COMMANDER</UnitCombatPrereqType>
+				<UnitCombatPrereqType>UNITCOMBAT_COMMODORE</UnitCombatPrereqType>
 				<UnitCombatPrereqType>UNITCOMBAT_ADMINISTRATOR</UnitCombatPrereqType>
 			</UnitCombatPrereqTypes>
 			<NotOnUnitCombatTypes>

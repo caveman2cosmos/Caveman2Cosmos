@@ -169,6 +169,8 @@ void CvPythonUnitLoader::CyUnitPythonInterface1(boost::python::class_<CyUnit>& i
 
 		.def("setCommander", &CyUnit::setCommander, "void (bool bNewVal)")
 		.def("isCommander", &CyUnit::isCommander, "bool ()")
+		.def("setCommodore", &CyUnit::setCommodore, "void (bool bNewVal)")
+        .def("isCommodore", &CyUnit::isCommodore, "bool ()")
 		.def("getControlPointsLeft", &CyUnit::getControlPointsLeft, "int ()")
 		.def("getControlPoints", &CyUnit::getControlPoints, "int ()")
 		.def("getRealExperience", &CyUnit::getRealExperience, "float ()")

@@ -225,6 +225,7 @@ CvUnit::~CvUnit()
 	SAFE_DELETE_ARRAY(m_aiExtraVisibilityIntensitySameTile);
 	SAFE_DELETE_ARRAY(m_aiNegatesInvisibleCount);
 	SAFE_DELETE(m_commander);
+	SAFE_DELETE(m_commodore);
 	SAFE_DELETE(m_worker);
 }
 
@@ -755,7 +756,9 @@ void CvUnit::reset(int iID, UnitTypes eUnit, PlayerTypes eOwner, bool bConstruct
 	m_iSleepTimer = 0;
 	//@MOD Commanders: reset parameters
 	m_iCommanderID = -1;
+	m_iCommodoreID = -1;
 	m_iUsedCommanderID = -1;
+	m_iUsedCommodoreID = -1;
 	m_eOriginalOwner = eOwner;
 	m_eNewDomainCargo = NO_DOMAIN;
 	m_eNewSpecialCargo = NO_SPECIALUNIT;
@@ -888,6 +891,7 @@ void CvUnit::reset(int iID, UnitTypes eUnit, PlayerTypes eOwner, bool bConstruct
 
 	// Toffer - UnitComponents
 	m_commander = NULL;
+	m_commodore = NULL;
 	m_worker = NULL;
 }
 
@@ -1106,7 +1110,9 @@ CvUnit& CvUnit::operator=(const CvUnit& other)
 	m_movementCharacteristicsHash = other.m_movementCharacteristicsHash;
 	m_iSleepTimer = other.m_iSleepTimer;
 	m_iCommanderID = other.m_iCommanderID;
+	m_iCommodoreID = other.m_iCommodoreID;
 	m_iUsedCommanderID = other.m_iUsedCommanderID;
+	m_iUsedCommodoreID = other.m_iUsedCommodoreID;
 	m_eOriginalOwner = other.m_eOriginalOwner;
 	m_eNewDomainCargo = other.m_eNewDomainCargo;
 	m_eNewSpecialCargo = other.m_eNewSpecialCargo;
@@ -1224,6 +1230,12 @@ CvUnit& CvUnit::operator=(const CvUnit& other)
 		m_commander = new UnitCompCommander(this, m_pUnitInfo);
 		*m_commander = *other.m_commander;
 	}
+	if (other.m_commodore)
+    {
+    	SAFE_DELETE(m_commodore);
+    	m_commodore = new UnitCompCommodore(this, m_pUnitInfo);
+    	*m_commodore = *other.m_commodore;
+    }
 	if (other.m_worker)
 	{
 		SAFE_DELETE(m_worker);
@@ -1699,6 +1711,7 @@ void CvUnit::killUnconditional(bool bDelay, PlayerTypes ePlayer, bool bMessaged)
 		AI_killed(); // Update AI counts for this unit
 
 		setCommander(false);
+		setCommodore(false);
 		setXY(INVALID_PLOT_COORD, INVALID_PLOT_COORD, true);
 		joinGroup(NULL, false, false);
 
@@ -1767,6 +1780,10 @@ void CvUnit::doTurn()
 	if (isCommander())
 	{
 		m_commander->restoreControlPoints();
+	}
+    if (isCommodore())
+	{
+		m_commodore->restoreControlPoints();
 	}
 	gDLL->getInterfaceIFace()->setDirty(InfoPane_DIRTY_BIT, true);
 
@@ -3271,6 +3288,9 @@ void CvUnit::updateCombat(CvUnit* pSelectedDefender, bool bSamePlot, bool bSteal
 			//USE commanders here (so their command points will be decreased) for attacker and defender:
 			this->tryUseCommander();
 			pDefender->tryUseCommander();
+
+			this->tryUseCommodore();
+           	pDefender->tryUseCommodore();
 
 			CvBattleDefinition kBattle(pPlot, this, pDefender);
 
@@ -9958,6 +9978,11 @@ bool CvUnit::canJoin(const CvPlot* pPlot, SpecialistTypes eSpecialist) const
 		return false;
 	}
 
+    if (isCommodore() || isDelayedDeath())
+	{
+		return false;
+	}
+
 	if (!m_pUnitInfo->getGreatPeoples(eSpecialist))
 	{
 		return false;
@@ -10010,6 +10035,11 @@ bool CvUnit::canConstruct(const CvPlot* pPlot, BuildingTypes eBuilding, bool bTe
 	}
 
 	if (isDelayedDeath() || isCommander())
+	{
+		return false;
+	}
+
+	if (isDelayedDeath() || isCommodore())
 	{
 		return false;
 	}
@@ -10080,6 +10110,11 @@ bool CvUnit::canAddHeritage(const CvPlot* pPlot, const HeritageTypes eType, cons
 	}
 
 	if (isDelayedDeath() || isCommander() || !canPerformActionSM())
+	{
+		return false;
+	}
+
+    if (isDelayedDeath() || isCommodore() || !canPerformActionSM())
 	{
 		return false;
 	}
@@ -11441,6 +11476,11 @@ int CvUnit::canLead(const CvPlot* pPlot, int iUnitId) const
 		return 0;
 	}
 
+	if (isCommodore())
+	{
+		return 0;
+	}
+
 	if (isTrap())
 	{
 		return 0;
@@ -11457,6 +11497,7 @@ int CvUnit::canLead(const CvPlot* pPlot, int iUnitId) const
 				pUnit->getOwner() == getOwner() &&
 				!pUnit->isTrap() &&
 				!pUnit->isCommander() &&
+				!pUnit->isCommodore() &&
 				pUnit->canPromote((PromotionTypes)kUnitInfo.getLeaderPromotion(), getID()))
 			{
 				++iNumUnits;
@@ -11516,7 +11557,7 @@ bool CvUnit::giveExperience()
 			foreach_(CvUnit* pUnit, pPlot->units())
 			{
 				if (pUnit != this && pUnit->getOwner() == getOwner() && !pUnit->isTrap()
-				&& !pUnit->isCommander() && pUnit->canAcquirePromotionAny())
+				&& !pUnit->isCommander() && !pUnit->isCommodore() && pUnit->canAcquirePromotionAny())
 				{
 					pUnit->changeExperience(i < (iTotalExperience % iNumUnits) ? iMinExperiencePerUnit + 1 : iMinExperiencePerUnit);
 				}
@@ -12160,6 +12201,7 @@ BuildTypes CvUnit::getBuildType() const
 		case MISSION_CLAIM_TERRITORY:
 		case MISSION_ESPIONAGE_SLEEP:
 		case MISSION_GREAT_COMMANDER:
+		case MISSION_GREAT_COMMODORE:
 		case MISSION_SHADOW:
 		case MISSION_AMBUSH:
 		case MISSION_ASSASSINATE:
@@ -12629,7 +12671,7 @@ static int iNextCombatCacheLRU = 1;
 static void FlushCombatStrCache(CvUnit* pMovingUnit)
 {
 	PROFILE_EXTRA_FUNC();
-	if ( pMovingUnit == NULL || pMovingUnit->isCommander() )
+	if ( pMovingUnit == NULL || pMovingUnit->isCommander() || pMovingUnit->isCommodore())
 	{
 		memset(CombatStrCache, 0, sizeof(CombatStrCache));
 
@@ -13882,6 +13924,12 @@ int CvUnit::experienceNeeded(int iLvlOffset) const
 		iExperienceNeeded *= 3;
 		iExperienceNeeded /= 2;
 	}
+
+    if (isCommodore())
+	{
+		iExperienceNeeded *= 3;
+		iExperienceNeeded /= 2;
+	}
 	return iExperienceNeeded;
 }
 
@@ -14119,7 +14167,7 @@ bool CvUnit::isInquisitor() const
 }
 
 
-int CvUnit::maxInterceptionProbability(bool bIgnoreCommanders) const
+int CvUnit::maxInterceptionProbability(bool bIgnoreCommanders, bool bIgnoreCommodores) const
 {
 	return std::min(GC.getDefineINT("MAX_INTERCEPTION_PROBABILITY"),std::max(0, m_pUnitInfo->getInterceptionProbability() + getExtraIntercept(bIgnoreCommanders)));
 }
@@ -14135,7 +14183,7 @@ int CvUnit::currInterceptionProbability() const
 }
 
 
-int CvUnit::evasionProbability(bool bIgnoreCommanders) const
+int CvUnit::evasionProbability(bool bIgnoreCommanders, bool bIgnoreCommodores) const
 {
 	return std::min(GC.getDefineINT("MAX_EVASION_PROBABILITY"),std::max(0, m_pUnitInfo->getEvasionProbability() + getExtraEvasion(bIgnoreCommanders)));
 }
@@ -14365,6 +14413,14 @@ int CvUnit::strAdjperRndTotal() const
 			iStrAdjperRnd += pCommander->m_iExtraStrAdjperRnd;
 		}
 	}
+    if (!isCommodore())
+	{
+		const CvUnit* pCommodore = getCommodore();
+		if (pCommodore)
+		{
+			iStrAdjperRnd += pCommodore->m_iExtraStrAdjperRnd;
+		}
+	}
 #ifdef BATTLEWORN
 	iStrAdjperRnd += m_pUnitInfo->getStrAdjperRnd();
 #endif
@@ -14384,6 +14440,14 @@ int CvUnit::strAdjperAttTotal() const
 		if (pCommander)
 		{
 			iStrAdjperAtt += pCommander->m_iExtraStrAdjperAtt;
+		}
+	}
+    if (!isCommodore())
+	{
+		const CvUnit* pCommodore = getCommodore();
+		if (pCommodore)
+		{
+			iStrAdjperAtt += pCommodore->m_iExtraStrAdjperAtt;
 		}
 	}
 #ifdef BATTLEWORN
@@ -14412,6 +14476,15 @@ int CvUnit::strAdjperDefTotal() const
 			iStrAdjperDef += pCommander->m_iExtraStrAdjperDef;
 		}
 	}
+
+    if (!isCommodore())
+	{
+		const CvUnit* pCommodore = getCommodore();
+		if (pCommodore)
+		{
+			iStrAdjperDef += pCommodore->m_iExtraStrAdjperDef;
+		}
+	}
 #ifdef BATTLEWORN
 	iStrAdjperDef += m_pUnitInfo->getStrAdjperDef();
 #endif
@@ -14429,6 +14502,14 @@ int CvUnit::withdrawAdjperAttTotal() const
 			iWithdrawAdjperAtt += pCommander->m_iExtraWithdrawAdjperAtt;
 		}
 	}
+	if (!isCommodore())
+    	{
+    		const CvUnit* pCommodore = getCommodore();
+    		if (pCommodore)
+    		{
+    			iWithdrawAdjperAtt += pCommodore->m_iExtraWithdrawAdjperAtt;
+    		}
+    	}
 #ifdef BATTLEWORN
 	iWithdrawAdjperAtt += m_pUnitInfo->getWithdrawAdjperAtt();
 #endif
@@ -16075,6 +16156,12 @@ void CvUnit::changeExperience100(int iChange, int iMax, bool bFromCombat, bool b
 			getUsedCommander()->changeExperience100(60, iMax); //0.6 xp every time, make global define?
 			m_iUsedCommanderID = -1;
 		}
+
+		if (getUsedCommodore())
+        {
+        	getUsedCommodore()->changeExperience100(60, iMax); //0.6 xp every time, make global define?
+        	m_iUsedCommodoreID = -1;
+        }
 	}
 	if (iChange == 0)
 	{
@@ -16906,7 +16993,7 @@ void CvUnit::changeExtraAirRange(int iChange)
 	m_iExtraAirRange += iChange;
 }
 
-int CvUnit::getExtraIntercept(bool bIgnoreCommanders) const
+int CvUnit::getExtraIntercept(bool bIgnoreCommanders, bool bIgnoreCommodores) const
 {
 	if (!bIgnoreCommanders && !isCommander())
 	{
@@ -16924,7 +17011,7 @@ void CvUnit::changeExtraIntercept(int iChange)
 	m_iExtraIntercept += iChange;
 }
 
-int CvUnit::getExtraEvasion(bool bIgnoreCommanders) const
+int CvUnit::getExtraEvasion(bool bIgnoreCommanders, bool bIgnoreCommodores) const
 {
 	if (!bIgnoreCommanders && !isCommander())
 	{
@@ -16978,7 +17065,7 @@ void CvUnit::changeExtraChanceFirstStrikes(int iChange)
 	m_iExtraChanceFirstStrikes += iChange;
 }
 
-int CvUnit::getExtraWithdrawal(bool bIgnoreCommanders) const
+int CvUnit::getExtraWithdrawal(bool bIgnoreCommanders, bool bIgnoreCommodores) const
 {
 	if (!bIgnoreCommanders && !isCommander())
 	{
@@ -16997,7 +17084,7 @@ void CvUnit::changeExtraWithdrawal(int iChange)
 }
 
 //TB Combat Mods Begin
-int CvUnit::getExtraAttackCombatModifier(bool bIgnoreCommanders) const
+int CvUnit::getExtraAttackCombatModifier(bool bIgnoreCommanders, bool bIgnoreCommodores) const
 {
 	if (!bIgnoreCommanders && !isCommander())
 	{
@@ -17015,7 +17102,7 @@ void CvUnit::changeExtraAttackCombatModifier(int iChange)
 	m_iExtraAttackCombatModifier +=iChange;
 }
 
-int CvUnit::getExtraDefenseCombatModifier(bool bIgnoreCommanders) const
+int CvUnit::getExtraDefenseCombatModifier(bool bIgnoreCommanders, bool bIgnoreCommodores) const
 {
 	if (noDefensiveBonus())
 	{
@@ -17037,7 +17124,7 @@ void CvUnit::changeExtraDefenseCombatModifier(int iChange)
 	m_iExtraDefenseCombatModifier +=iChange;
 }
 
-int CvUnit::getExtraPursuit(bool bIgnoreCommanders) const
+int CvUnit::getExtraPursuit(bool bIgnoreCommanders, bool bIgnoreCommodores) const
 {
 	if (!bIgnoreCommanders && !isCommander())
 	{
@@ -17055,7 +17142,7 @@ void CvUnit::changeExtraPursuit(int iChange)
 	m_iExtraPursuit +=iChange;
 }
 
-int CvUnit::getExtraEarlyWithdraw(bool bIgnoreCommanders) const
+int CvUnit::getExtraEarlyWithdraw(bool bIgnoreCommanders, bool bIgnoreCommodores) const
 {
 	if (!bIgnoreCommanders && !isCommander())
 	{
@@ -17073,7 +17160,7 @@ void CvUnit::changeExtraEarlyWithdraw(int iChange)
 	m_iExtraEarlyWithdraw +=iChange;
 }
 
-int CvUnit::getExtraVSBarbs(bool bIgnoreCommanders) const
+int CvUnit::getExtraVSBarbs(bool bIgnoreCommanders, bool bIgnoreCommodores) const
 {
 	if (!bIgnoreCommanders && !isCommander())
 	{
@@ -17092,7 +17179,7 @@ void CvUnit::changeExtraVSBarbs(int iChange)
 	FASSERT_NOT_NEGATIVE(m_iExtraVSBarbs);
 }
 
-int CvUnit::getExtraReligiousCombatModifier(bool bIgnoreCommanders) const
+int CvUnit::getExtraReligiousCombatModifier(bool bIgnoreCommanders, bool bIgnoreCommodores) const
 {
 	if (!bIgnoreCommanders && !isCommander())
 	{
@@ -17110,7 +17197,7 @@ void CvUnit::changeExtraReligiousCombatModifier(int iChange)
 	m_iExtraReligiousCombatModifier += iChange;
 }
 
-int CvUnit::getExtraArmor(bool bIgnoreCommanders) const
+int CvUnit::getExtraArmor(bool bIgnoreCommanders, bool bIgnoreCommodores) const
 {
 	if (!bIgnoreCommanders && !isCommander())
 	{
@@ -17128,7 +17215,7 @@ void CvUnit::changeExtraArmor(int iChange)
 	m_iExtraArmor += iChange;
 }
 
-int CvUnit::getExtraPuncture(bool bIgnoreCommanders) const
+int CvUnit::getExtraPuncture(bool bIgnoreCommanders, bool bIgnoreCommodores) const
 {
 	if (!bIgnoreCommanders && !isCommander())
 	{
@@ -17146,7 +17233,7 @@ void CvUnit::changeExtraPuncture(int iChange)
 	m_iExtraPuncture += iChange;
 }
 
-int CvUnit::getExtraDamageModifier(bool bIgnoreCommanders) const
+int CvUnit::getExtraDamageModifier(bool bIgnoreCommanders, bool bIgnoreCommodores) const
 {
 	if (!bIgnoreCommanders && !isCommander())
 	{
@@ -17258,7 +17345,7 @@ void CvUnit::recalculateUnitUpkeep()
 // ! Upkeep
 
 
-int CvUnit::getExtraOverrun(bool bIgnoreCommanders) const
+int CvUnit::getExtraOverrun(bool bIgnoreCommanders, bool bIgnoreCommodores) const
 {
 	if (!bIgnoreCommanders && !isCommander())
 	{
@@ -17277,7 +17364,7 @@ void CvUnit::changeExtraOverrun(int iChange)
 	FASSERT_NOT_NEGATIVE(m_iExtraOverrun);
 }
 
-int CvUnit::getExtraRepel(bool bIgnoreCommanders) const
+int CvUnit::getExtraRepel(bool bIgnoreCommanders, bool bIgnoreCommodores) const
 {
 	if (noDefensiveBonus())
 	{
@@ -17338,7 +17425,7 @@ void CvUnit::changeExtraRepelRetries(int iChange)
 	FASSERT_NOT_NEGATIVE(m_iExtraRepelRetries);
 }
 
-int CvUnit::getExtraUnyielding(bool bIgnoreCommanders) const
+int CvUnit::getExtraUnyielding(bool bIgnoreCommanders, bool bIgnoreCommodores) const
 {
 	if (!bIgnoreCommanders && !isCommander())
 	{
@@ -17357,7 +17444,7 @@ void CvUnit::changeExtraUnyielding(int iChange)
 	FASSERT_NOT_NEGATIVE(m_iExtraUnyielding);
 }
 
-int CvUnit::getExtraKnockback(bool bIgnoreCommanders) const
+int CvUnit::getExtraKnockback(bool bIgnoreCommanders, bool bIgnoreCommodores) const
 {
 	if (!bIgnoreCommanders && !isCommander())
 	{
@@ -17376,7 +17463,7 @@ void CvUnit::changeExtraKnockback(int iChange)
 	FASSERT_NOT_NEGATIVE(m_iExtraKnockback);
 }
 
-int CvUnit::getExtraKnockbackRetries(bool bIgnoreCommanders) const
+int CvUnit::getExtraKnockbackRetries(bool bIgnoreCommanders, bool bIgnoreCommodores) const
 {
 	if (!bIgnoreCommanders && !isCommander())
 	{
@@ -17494,7 +17581,7 @@ void CvUnit::changeExtraWithdrawAdjperAtt(int iChange)
 	FASSERT_NOT_NEGATIVE(m_iExtraWithdrawAdjperAtt);
 }
 
-int CvUnit::getExtraUnnerve(bool bIgnoreCommanders) const
+int CvUnit::getExtraUnnerve(bool bIgnoreCommanders, bool bIgnoreCommodores) const
 {
 	if (!bIgnoreCommanders && !isCommander())
 	{
@@ -17513,7 +17600,7 @@ void CvUnit::changeExtraUnnerve(int iChange)
 	FASSERT_NOT_NEGATIVE(m_iExtraUnnerve);
 }
 
-int CvUnit::getExtraEnclose(bool bIgnoreCommanders) const
+int CvUnit::getExtraEnclose(bool bIgnoreCommanders, bool bIgnoreCommodores) const
 {
 	if (!bIgnoreCommanders && !isCommander())
 	{
@@ -17532,7 +17619,7 @@ void CvUnit::changeExtraEnclose(int iChange)
 	FASSERT_NOT_NEGATIVE(m_iExtraEnclose);
 }
 
-int CvUnit::getExtraLunge(bool bIgnoreCommanders) const
+int CvUnit::getExtraLunge(bool bIgnoreCommanders, bool bIgnoreCommodores) const
 {
 	if (!bIgnoreCommanders && !isCommander())
 	{
@@ -17551,7 +17638,7 @@ void CvUnit::changeExtraLunge(int iChange)
 	FASSERT_NOT_NEGATIVE(m_iExtraLunge);
 }
 
-int CvUnit::getExtraDynamicDefense(bool bIgnoreCommanders) const
+int CvUnit::getExtraDynamicDefense(bool bIgnoreCommanders, bool bIgnoreCommodores) const
 {
 	if (!bIgnoreCommanders && !isCommander())
 	{
@@ -17666,7 +17753,7 @@ void CvUnit::changeCureAfflictionCount(PromotionLineTypes ePromotionLineType, in
 }
 #endif // OUTBREAKS_AND_AFFLICTIONS
 
-int CvUnit::getExtraFortitude(bool bIgnoreCommanders) const
+int CvUnit::getExtraFortitude(bool bIgnoreCommanders, bool bIgnoreCommodores) const
 {
 	if (!bIgnoreCommanders && !isCommander())
 	{
@@ -17685,7 +17772,7 @@ void CvUnit::changeExtraFortitude(int iChange)
 	FASSERT_NOT_NEGATIVE(m_iExtraFortitude);
 }
 
-int CvUnit::getExtraDodgeModifier (bool bIgnoreCommanders) const
+int CvUnit::getExtraDodgeModifier (bool bIgnoreCommanders, bool bIgnoreCommodores) const
 {
 	if (!bIgnoreCommanders && !isCommander())
 	{
@@ -17703,7 +17790,7 @@ void CvUnit::changeExtraDodgeModifier(int iChange)
 	m_iExtraDodgeModifier +=iChange;
 }
 
-int CvUnit::getExtraPrecisionModifier(bool bIgnoreCommanders) const
+int CvUnit::getExtraPrecisionModifier(bool bIgnoreCommanders, bool bIgnoreCommodores) const
 {
 	if (!bIgnoreCommanders && !isCommander())
 	{
@@ -17721,7 +17808,7 @@ void CvUnit::changeExtraPrecisionModifier(int iChange)
 	m_iExtraPrecisionModifier +=iChange;
 }
 
-int CvUnit::getExtraPowerShots(bool bIgnoreCommanders) const
+int CvUnit::getExtraPowerShots(bool bIgnoreCommanders, bool bIgnoreCommodores) const
 {
 	if (!bIgnoreCommanders && !isCommander())
 	{
@@ -17740,7 +17827,7 @@ void CvUnit::changeExtraPowerShots(int iChange)
 	FASSERT_NOT_NEGATIVE(m_iExtraPowerShots);
 }
 
-int CvUnit::getExtraPowerShotCombatModifier(bool bIgnoreCommanders) const
+int CvUnit::getExtraPowerShotCombatModifier(bool bIgnoreCommanders, bool bIgnoreCommodores) const
 {
 	if (!bIgnoreCommanders && !isCommander())
 	{
@@ -17759,7 +17846,7 @@ void CvUnit::changeExtraPowerShotCombatModifier(int iChange)
 	FASSERT_NOT_NEGATIVE(m_iExtraPowerShotCombatModifier);
 }
 
-int CvUnit::getExtraPowerShotPunctureModifier(bool bIgnoreCommanders) const
+int CvUnit::getExtraPowerShotPunctureModifier(bool bIgnoreCommanders, bool bIgnoreCommodores) const
 {
 	if (!bIgnoreCommanders && !isCommander())
 	{
@@ -17778,7 +17865,7 @@ void CvUnit::changeExtraPowerShotPunctureModifier(int iChange)
 	FASSERT_NOT_NEGATIVE(m_iExtraPowerShotPunctureModifier);
 }
 
-int CvUnit::getExtraPowerShotPrecisionModifier(bool bIgnoreCommanders) const
+int CvUnit::getExtraPowerShotPrecisionModifier(bool bIgnoreCommanders, bool bIgnoreCommodores) const
 {
 	if (!bIgnoreCommanders && !isCommander())
 	{
@@ -17797,7 +17884,7 @@ void CvUnit::changeExtraPowerShotPrecisionModifier(int iChange)
 	FASSERT_NOT_NEGATIVE(m_iExtraPowerShotPrecisionModifier);
 }
 
-int CvUnit::getExtraPowerShotCriticalModifier(bool bIgnoreCommanders) const
+int CvUnit::getExtraPowerShotCriticalModifier(bool bIgnoreCommanders, bool bIgnoreCommodores) const
 {
 	if (!bIgnoreCommanders && !isCommander())
 	{
@@ -17816,7 +17903,7 @@ void CvUnit::changeExtraPowerShotCriticalModifier(int iChange)
 	FASSERT_NOT_NEGATIVE(m_iExtraPowerShotCriticalModifier);
 }
 
-int CvUnit::getExtraCriticalModifier(bool bIgnoreCommanders) const
+int CvUnit::getExtraCriticalModifier(bool bIgnoreCommanders, bool bIgnoreCommodores) const
 {
 	if (!bIgnoreCommanders && !isCommander())
 	{
@@ -17835,7 +17922,7 @@ void CvUnit::changeExtraCriticalModifier(int iChange)
 	FASSERT_NOT_NEGATIVE(m_iExtraCriticalModifier);
 }
 
-int CvUnit::getExtraEndurance(bool bIgnoreCommanders) const
+int CvUnit::getExtraEndurance(bool bIgnoreCommanders, bool bIgnoreCommodores) const
 {
 	if (!bIgnoreCommanders && !isCommander())
 	{
@@ -17854,7 +17941,7 @@ void CvUnit::changeExtraEndurance(int iChange)
 	FASSERT_NOT_NEGATIVE(m_iExtraEndurance);
 }
 
-int CvUnit::getExtraPoisonProbabilityModifier(bool bIgnoreCommanders) const
+int CvUnit::getExtraPoisonProbabilityModifier(bool bIgnoreCommanders, bool bIgnoreCommodores) const
 {
 	if (!bIgnoreCommanders && !isCommander())
 	{
@@ -20649,6 +20736,11 @@ void CvUnit::processPromotion(PromotionTypes eIndex, bool bAdding, bool bInitial
 		m_commander->changeControlPoints(kPromotion.getControlPoints() * iChange);
 		m_commander->changeCommandRange(kPromotion.getCommandRange() * iChange);
 	}
+	if (isCommodore())
+    {
+    	m_commodore->changeControlPoints(kPromotion.getControlPoints() * iChange);
+    	m_commodore->changeCommandRange(kPromotion.getCommandRange() * iChange);
+    }
 
 	changeImmuneToFirstStrikesCount((kPromotion.isImmuneToFirstStrikes()) ? iChange : 0);
 
@@ -21452,6 +21544,7 @@ void CvUnit::read(FDataStreamBase* pStream)
 	WRAPPER_READ(wrapper, "CvUnit", &m_iSleepTimer);
 
 	WRAPPER_READ(wrapper, "CvUnit", &m_iCommanderID);
+	WRAPPER_READ(wrapper, "CvUnit", &m_iCommodoreID);
 
 	WRAPPER_READ(wrapper, "CvUnit", (int*)&m_eOriginalOwner);
 
@@ -22804,6 +22897,29 @@ void CvUnit::read(FDataStreamBase* pStream)
 		}
 	}
 	{
+		bool bCommodore = false;
+		WRAPPER_READ_DECORATED(wrapper, "CvUnit", &bCommodore, "m_bCommodore");
+
+		if (bCommodore)
+		{
+			int iExtraControlPoints = 0;
+			int iExtraCommandRange = 0;
+			short iControlPointsLeft = 0;
+			WRAPPER_READ_DECORATED(wrapper, "CvUnit", &iExtraControlPoints, "m_iExtraControlPoints");
+			WRAPPER_READ_DECORATED(wrapper, "CvUnit", &iExtraCommandRange, "m_iExtraCommandRange");
+			WRAPPER_READ_DECORATED(wrapper, "CvUnit", &iControlPointsLeft, "m_iControlPointsLeft");
+
+			m_commodore = (
+				new UnitCompCommodore(
+					this,
+					m_pUnitInfo->getControlPoints() + iExtraControlPoints,
+					iControlPointsLeft,
+					m_pUnitInfo->getCommandRange() + iExtraCommandRange
+				)
+			);
+		}
+	}
+	{
 		bool bWorker = false;
 		WRAPPER_READ_DECORATED(wrapper, "CvUnit", &bWorker, "m_worker");
 
@@ -22944,6 +23060,7 @@ void CvUnit::write(FDataStreamBase* pStream)
 	WRAPPER_WRITE(wrapper, "CvUnit", m_iCanLeadThroughPeaksCount);
 	WRAPPER_WRITE(wrapper, "CvUnit", m_iSleepTimer);
 	WRAPPER_WRITE(wrapper, "CvUnit", m_iCommanderID);
+	WRAPPER_WRITE(wrapper, "CvUnit", m_iCommodoreID);
 
 	WRAPPER_WRITE(wrapper, "CvUnit", m_eOriginalOwner);
 
@@ -23670,6 +23787,14 @@ void CvUnit::write(FDataStreamBase* pStream)
 		WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", m_commander->getCommandRange() - m_pUnitInfo->getCommandRange(), "m_iExtraCommandRange");
 		WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", m_commander->getControlPointsLeft(), "m_iControlPointsLeft");
 	}
+
+	WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", isCommodore(), "m_bCommodore");
+    	if (m_commodore)
+    	{
+    		WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", m_commodore->getControlPoints() - m_pUnitInfo->getControlPoints(), "m_iExtraControlPoints");
+    		WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", m_commodore->getCommandRange() - m_pUnitInfo->getCommandRange(), "m_iExtraCommandRange");
+    		WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", m_commodore->getControlPointsLeft(), "m_iControlPointsLeft");
+    	}
 
 	WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", isWorker(), "m_worker");
 	if (m_worker)
@@ -27956,6 +28081,146 @@ CvUnit* CvUnit::getLastCommander() const
 }
 
 
+UnitCompCommodore* CvUnit::getCommodoreComp() const
+{
+	return m_commodore;
+}
+
+bool CvUnit::isCommodore() const
+{
+	return m_commodore != NULL;
+}
+
+bool CvUnit::isCommodoreReady() const
+{
+	return m_commodore ? m_commodore->isReady() : false;
+}
+
+void CvUnit::setCommodore(bool bNewVal)
+{
+	PROFILE_EXTRA_FUNC();
+	if (isCommodore() == bNewVal) return;
+
+	if (bNewVal)
+	{
+		m_commodore = new UnitCompCommodore(this, m_pUnitInfo);
+
+		foreach_(const UnitCombatTypes eSubCombat, m_pUnitInfo->getSubCombatTypes())
+		{
+			if (GC.getUnitCombatInfo(eSubCombat).getQualityBase() > -10)
+			{
+				setHasUnitCombat(eSubCombat, false);
+			}
+		}
+		plot()->countCommodore(true, this);
+	}
+	else
+	{
+		if (m_commodore->isReady())
+		{
+			plot()->countCommodore(false, this);
+		}
+		delete m_commodore;
+		m_commodore = NULL;
+	}
+	GET_PLAYER(getOwner()).listCommodore(bNewVal, this);
+}
+
+CvUnit* CvUnit::getCommodore() const
+{
+	PROFILE_FUNC();
+
+	FAssertMsg(plot() != NULL, "TEST");
+	// This routine gets called a lot, so short-circuit when no commodore is around.
+	if (plot() == NULL || !plot()->inCommandCommodoreField(getOwner()))
+	{
+		return NULL;
+	}
+	CvUnit* pBestCommodore = getLastCommodore();
+
+	if (pBestCommodore) //return already used one if it is not dead.
+	{
+		if (plotDistance(pBestCommodore->getX(), pBestCommodore->getY(), getX(), getY()) <= pBestCommodore->getCommodoreComp()->getCommandRange())
+		{
+			return pBestCommodore;
+		}
+		// The one we used would have been the cached one so will have to search again
+		pBestCommodore = NULL;
+	}
+
+	int iBestCommodoreDistance = 9999999;
+
+	const CvPlayer& player = GET_PLAYER(getOwner());
+	const std::vector<CvUnit*> commodores = player.getCommodores();
+
+	for (int i = commodores.size() - 1; i > -1; i--) //loop through player's commodores
+	{
+		CvUnit* com = commodores[i];
+
+		if (com->getCommodoreComp()->getControlPointsLeft() <= 0)
+		{
+			continue;
+		}
+		const CvPlot* comPlot = com->plot();
+
+		FAssertMsg(comPlot != NULL, "Unexpected... CTD incoming");
+
+		const int iDistance = plotDistance(comPlot->getX(), comPlot->getY(), getX(), getY());
+
+		if (iDistance > com->getCommodoreComp()->getCommandRange())
+		{
+			continue;
+		}
+		if (pBestCommodore == NULL
+		// Best commodore is at shorter distance, or at same distance but has more XP:
+		|| (iBestCommodoreDistance < iDistance || iBestCommodoreDistance == iDistance && com->getExperience() > pBestCommodore->getExperience()))
+		{
+			pBestCommodore = com;
+			iBestCommodoreDistance = iDistance;
+		}
+	}
+	m_iCommodoreID = pBestCommodore ? pBestCommodore->getID() : -1;
+
+	return pBestCommodore;
+}
+
+void CvUnit::tryUseCommodore()
+{
+	CvUnit* pCommodore = getCommodore();
+
+	if (pCommodore) //commander is used when any unit under his command fights in combat
+	{
+		m_iUsedCommodoreID = pCommodore->getID();
+
+		pCommodore->m_commodore->changeControlPointsLeft(-1);
+
+		if (!pCommodore->m_commodore->isReady())
+		{
+			FlushCombatStrCache(NULL);
+			nullLastCommodore();
+		}
+	}
+}
+
+void CvUnit::nullLastCommodore()
+{
+	m_iCommodoreID = -1;
+}
+
+// This only exist during combat with the purpose of remembering what commodore should get exp.
+CvUnit* CvUnit::getUsedCommodore() const
+{
+	return (m_iUsedCommodoreID == -1 ? NULL : GET_PLAYER(getOwner()).getUnit(m_iUsedCommodoreID));
+}
+
+// This ties a commodore to this unit for as long as said commodore is valid;
+//	it cease to be valid mid combat when it expends its last CP.
+CvUnit* CvUnit::getLastCommodore() const
+{
+	return (m_iCommodoreID == -1 ? NULL : GET_PLAYER(getOwner()).getUnit(m_iCommodoreID));
+}
+
+
 int CvUnit::interceptionChance(const CvPlot* pPlot) const
 {
 	PROFILE_EXTRA_FUNC();
@@ -29282,7 +29547,7 @@ int CvUnit::getCityFlankSupportPercentModifier() const
 	return iModifier;
 }
 
-int CvUnit::getExtraFrontSupportPercent(bool bIgnoreCommanders) const
+int CvUnit::getExtraFrontSupportPercent(bool bIgnoreCommanders, bool bIgnoreCommodores) const
 {
 	if (!bIgnoreCommanders && !isCommander())
 	{
@@ -29301,7 +29566,7 @@ void CvUnit::changeExtraFrontSupportPercent(int iChange)
 	FASSERT_NOT_NEGATIVE(m_iExtraFrontSupportPercent);
 }
 
-int CvUnit::getExtraShortRangeSupportPercent(bool bIgnoreCommanders) const
+int CvUnit::getExtraShortRangeSupportPercent(bool bIgnoreCommanders, bool bIgnoreCommodores) const
 {
 	if (!bIgnoreCommanders && !isCommander())
 	{
@@ -29320,7 +29585,7 @@ void CvUnit::changeExtraShortRangeSupportPercent(int iChange)
 	FASSERT_NOT_NEGATIVE(m_iExtraShortRangeSupportPercent);
 }
 
-int CvUnit::getExtraMediumRangeSupportPercent(bool bIgnoreCommanders) const
+int CvUnit::getExtraMediumRangeSupportPercent(bool bIgnoreCommanders, bool bIgnoreCommodores) const
 {
 	if (!bIgnoreCommanders && !isCommander())
 	{
@@ -29339,7 +29604,7 @@ void CvUnit::changeExtraMediumRangeSupportPercent(int iChange)
 	FASSERT_NOT_NEGATIVE(m_iExtraMediumRangeSupportPercent);
 }
 
-int CvUnit::getExtraLongRangeSupportPercent(bool bIgnoreCommanders) const
+int CvUnit::getExtraLongRangeSupportPercent(bool bIgnoreCommanders, bool bIgnoreCommodores) const
 {
 	if (!bIgnoreCommanders && !isCommander())
 	{
@@ -29358,7 +29623,7 @@ void CvUnit::changeExtraLongRangeSupportPercent(int iChange)
 	FASSERT_NOT_NEGATIVE(m_iExtraLongRangeSupportPercent);
 }
 
-int CvUnit::getExtraFlankSupportPercent(bool bIgnoreCommanders) const
+int CvUnit::getExtraFlankSupportPercent(bool bIgnoreCommanders, bool bIgnoreCommodores) const
 {
 	if (!bIgnoreCommanders && !isCommander())
 	{

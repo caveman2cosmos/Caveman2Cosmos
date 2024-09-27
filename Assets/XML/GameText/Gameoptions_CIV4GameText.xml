@@ -493,6 +493,10 @@
 		<Russian>Âåëèêèå ïîëêîâîäöû</Russian>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_GAMEOPTION_UNIT_GREAT_COMMODORES</Tag>
+		<English>Unit - Great Commodores</English>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_UNIT_GREAT_COMMANDERS_HELP</Tag>
 		<English>Great Commanders give Great Generals many bonuses for leading troops into battle, instead of just attaching to a squad of existing troops.</English>
 		<French>Les Commandants Illustres donne aux Généraux Illustres de nombreux bonus au combat, au lieu de ne faire que s'associer à une unité.</French>
@@ -501,6 +505,10 @@
 		<Spanish>Los Grandes comandantes aportan muchas de las bonificaciones de los Grandes generales por liderar a las tropas en la batalla, en lugar de unirse a una unidad existente.</Spanish>
 		<Polish>Wielcy Dow&#243;dcy daj&#185; Wielkim Genera&#179;om wiele premii dla oddzia&#179;&#243;w prowadzonych do walki, a nie tylko jednemu oddzia&#179;owi.</Polish>
 		<Russian>Âåëèêèå ïîëêîâîäöû äàþò âåëèêèõ ãåíåðàëîâ, êîòîðûå ïðåäîñòàâëÿþò ìíîãî áîíóñîâ âîéñêàì ÷òî îíè âåäóò â áîé, âìåñòî ïðîñòîãî ïðèñîåäèíåíèÿ ê ñîñòàâó äåéñòâóþùèõ âîéñê.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_GAMEOPTION_UNIT_GREAT_COMMODORES_HELP</Tag>
+		<English>Great Commodores lead their fleets into open combat on the open seas.</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_COMBAT_HEART_OF_WAR</Tag>

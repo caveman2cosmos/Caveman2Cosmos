@@ -38542,7 +38542,7 @@
 			<Combat>UNITCOMBAT_PRODIGY</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_CAPTAIN</SubCombatType>
-				<SubCombatType>UNITCOMBAT_COMMANDER</SubCombatType>
+				<SubCombatType>UNITCOMBAT_COMMODORE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_ATTACHE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_HUMAN</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>

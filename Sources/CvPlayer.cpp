@@ -1447,6 +1447,7 @@ void CvPlayer::reset(PlayerTypes eID, bool bConstructorCall)
 	m_iFocusPlotY = -1;
 
 	m_commanders.clear();
+	m_commodores.clear();
 	m_commandFieldPlots.clear();
 	m_idleCities.clear();
 	m_myHeritage.clear();
@@ -18903,12 +18904,18 @@ void CvPlayer::read(FDataStreamBase* pStream)
 		}
 		//Must be loaded AFTER units.
 		m_commanders.clear();
+		m_commodores.clear();
 		foreach_(CvUnit* unitX, units())
 		{
 			if (unitX->isCommander()) //search for GGs among loaded units and add them to m_commanders array
 			{
 				m_commanders.push_back(unitX);
 			}
+
+			if (unitX->isCommodore()) //search for GAs among loaded units and add them to m_commodores array
+            {
+            	m_commodores.push_back(unitX);
+            }
 
 			if (unitX->isZoneOfControl())
 			{
@@ -28718,6 +28725,17 @@ void CvPlayer::recalculateModifiers()
 			com->plot()->countCommander(true, com);
 		}
 	}
+
+    // Recalc plot commodore counts
+	for (int i = m_commodores.size() - 1; i > -1; i--)
+	{
+		CvUnit* com = m_commodores[i];
+
+		if (com->isCommodoreReady())
+		{
+			com->plot()->countCommodore(true, com);
+		}
+	}
 }
 
 bool CvPlayer::upgradeAvailable(UnitTypes eFromUnit, UnitTypes eToUnit) const
@@ -30694,6 +30712,35 @@ void CvPlayer::listCommander(bool bAdd, CvUnit* unit)
 				if (unitX->getLastCommander() && unitX->getLastCommander()->getID() == iID)
 				{
 					unitX->nullLastCommander();
+				}
+			}
+			break;
+		}
+	}
+}
+
+
+void CvPlayer::listCommodore(bool bAdd, CvUnit* unit)
+{
+	PROFILE_EXTRA_FUNC();
+	if (bAdd)
+	{
+		m_commodores.push_back(unit);
+		return;
+	}
+	const int iID = unit->getID();
+
+	for (int i = 0; i < static_cast<int>(m_commodores.size()); i++)
+	{
+		if (m_commodores[i]->getID() == iID)
+		{
+			m_commodores.erase(m_commodores.begin() + i);
+
+			foreach_(CvUnit* unitX, units())
+			{
+				if (unitX->getLastCommodore() && unitX->getLastCommodore()->getID() == iID)
+				{
+					unitX->nullLastCommodore();
 				}
 			}
 			break;
