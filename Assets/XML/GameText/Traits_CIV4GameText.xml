@@ -52,6 +52,7 @@
 		<Tag>TXT_KEY_TRAITHELP_BONUS_HAPPINESS_CHANGE_END</Tag>
 		<English>Resources</English>
 		<Italian> </Italian><!--Aerial CT trait in the pedia, appears with  _CHANGE_ADDITIONA and CHANGE_FIRST-->
+		<Russian>Ресурсы</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAITHELP_BONUS_HAPPINESS_CHANGE_FIRST</Tag>

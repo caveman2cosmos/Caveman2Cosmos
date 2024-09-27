@@ -601,7 +601,7 @@
 		<Italian>Costante</Italian>
 		<Spanish>Constante</Spanish>
 		<Polish>Bez zmian</Polish>
-		<Russian>Áåç èçìåíåíèé</Russian>
+		<Russian>Без изменений</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_ADVISOR_HEALTH</Tag>
@@ -4084,7 +4084,7 @@
 		<French>Aride</French>
 		<German>Trocken</German>
 		<Italian>Arido</Italian>
-		<Russian>Засушливый</Russian>
+		<Russian>Засушливо</Russian>
 		<Spanish>Árido</Spanish>
 	</TEXT>
 	<TEXT>
@@ -8292,6 +8292,7 @@
 		<German>Ressourcen</German>
 		<Italian>Risorse</Italian>
 		<Spanish>Recursos</Spanish>
+		<Russian>Ресурсы</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_FOREIGN_ADVISOR_TECHS</Tag>
@@ -8542,7 +8543,7 @@
 			<Plural>0</Plural>
 		</Spanish>
 		<Polish>Normalna</Polish>
-		<Russian>Нормальная</Russian>
+		<Russian>Нормально</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMESPEED_NORMAL_HELP</Tag>
@@ -9422,6 +9423,7 @@
 		<German>Startzeitalter</German>
 		<Italian>Era inizio</Italian>
 		<Spanish>Inicio</Spanish>
+		<Russian>Начало</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HOF_WINLOSS_LOSS</Tag>
@@ -11376,6 +11378,7 @@
 		<German>Dürrestufe</German>
 		<Italian>Livello di ariditÀ</Italian>
 		<Spanish>Nivel de aridez</Spanish>
+		<Russian>Уровень сухости</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MAP_SCRIPT_BALANCED_DESCR</Tag>
@@ -11427,6 +11430,7 @@
 		<German>Kontinentgröße</German>
 		<Italian>Tipo di continenti</Italian>
 		<Spanish>Tamaño de los continentes</Spanish>
+		<Russian>Размер континентов</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MAP_SCRIPT_COPY</Tag>
@@ -11475,6 +11479,7 @@
 		<German>60%% Wasser</German>
 		<Italian>60%% d'acqua</Italian>
 		<Spanish>60%% agua</Spanish>
+		<Russian>60% воды</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MAP_SCRIPT_EARTH_70</Tag>
@@ -11483,6 +11488,7 @@
 		<German>Erdähnlich (70%% Wasser)</German>
 		<Italian>Simile alla Terra (70%% d'acqua)</Italian>
 		<Spanish>Similar a la Tierra (70%% agua)</Spanish>
+		<Russian>Землеподобно (70% воды)</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MAP_SCRIPT_EXTRAS</Tag>
@@ -11524,6 +11530,7 @@
 		<German>Hills</German>
 		<Italian>Colline</Italian>
 		<Spanish>Colina</Spanish>
+		<Russian>Холмы</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MAP_SCRIPT_INLAND_SEA_DESCR</Tag>
@@ -11549,6 +11556,7 @@
 		<German>Inseln</German>
 		<Italian>Isole</Italian>
 		<Spanish>Islas</Spanish>
+		<Russian>Острова</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MAP_SCRIPT_ISLANDS_DESCR</Tag>
@@ -11565,6 +11573,7 @@
 		<German>Gemischte Inseln</German>
 		<Italian>Isole sovrapposte</Italian>
 		<Spanish>Islas mezcladas</Spanish>
+		<Russian>Острова вперемешку</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MAP_SCRIPT_ISLANDS_SIZE</Tag>
@@ -11573,6 +11582,7 @@
 		<German>Inselgröße</German>
 		<Italian>Tipo di isole</Italian>
 		<Spanish>Tamaño de las islas</Spanish>
+		<Russian>Разме островов</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MAP_SCRIPT_ISLAND_OVERLAP</Tag>
@@ -11581,6 +11591,7 @@
 		<German>Inselüberlagerung</German>
 		<Italian>Tipo di contatto tra le isole</Italian>
 		<Spanish>Solapamiento de islas</Spanish>
+		<Russian>Положение островов</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MAP_SCRIPT_ISLAND_REGION_SEPARATE</Tag>
@@ -11589,6 +11600,7 @@
 		<German>Separate Inselregionen</German>
 		<Italian>Regioni isolane separate</Italian>
 		<Spanish>Región de islas separada</Spanish>
+		<Russian>Регионы островов разделены</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MAP_SCRIPT_LAKES</Tag>
@@ -11597,6 +11609,7 @@
 		<German>Seen (30%% Wasser)</German>
 		<Italian>Laghi (30%% d'acqua)</Italian>
 		<Spanish>Lagos (30%% agua)</Spanish>
+		<Russian>Озера (30% воды)</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MAP_SCRIPT_LAKES_DESCR</Tag>
@@ -11622,6 +11635,7 @@
 		<German>Landmassentyp</German>
 		<Italian>Tipo di continenti</Italian>
 		<Spanish>Tipo de masa de tierra</Spanish>
+		<Russian>Тип суши</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MAP_SCRIPT_LEFT_AND_RIGHT_DESCR</Tag>
@@ -11647,6 +11661,7 @@
 		<German>Massive Kontinente</German>
 		<Italian>Continenti enormi</Italian>
 		<Spanish>Continentes enormes</Spanish>
+		<Russian>Большие континенты</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MAP_SCRIPT_MEDITERRANEAN</Tag>
@@ -11655,6 +11670,7 @@
 		<German>Mediterran</German>
 		<Italian>Mediterraneo</Italian>
 		<Spanish>Mediterráneo</Spanish>
+		<Russian>Средиземноморский</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MAP_SCRIPT_MIRROR_DESCR</Tag>
@@ -11695,6 +11711,7 @@
 		<German>Natürlich</German>
 		<Italian>Naturale</Italian>
 		<Spanish>Natural</Spanish>
+		<Russian>Естественный</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MAP_SCRIPT_NORMAL_CONTINENTS</Tag>
@@ -11703,6 +11720,7 @@
 		<German>Normale Kontinente</German>
 		<Italian>Continenti normali</Italian>
 		<Spanish>Continentes normales</Spanish>
+		<Russian>Обычные континенты</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MAP_SCRIPT_NORMAL_PEAKS</Tag>
@@ -11719,6 +11737,7 @@
 		<German>Kein Eis</German>
 		<Italian>Senza ghiaccio</Italian>
 		<Spanish>Sin hielo</Spanish>
+		<Russian>Нет льда</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MAP_SCRIPT_NO_JUNGLES</Tag>
@@ -11743,6 +11762,7 @@
 		<German>Anzahl der Kontinente</German>
 		<Italian>Numero di continenti</Italian>
 		<Spanish>Número de continentes</Spanish>
+		<Russian>Количество континентов</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MAP_SCRIPT_NUMBER_OF_LARGE_ISLANDS</Tag>
@@ -11791,6 +11811,7 @@
 		<German>Pangäa</German>
 		<Italian>Pangea</Italian>
 		<Spanish>Pangea</Spanish>
+		<Russian>Один континент</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MAP_SCRIPT_PANGAEA_DESCR</Tag>
@@ -11808,6 +11829,7 @@
 		<German>Gipfel</German>
 		<Italian>Montagne</Italian>
 		<Spanish>Picos</Spanish>
+		<Russian>Горы</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MAP_SCRIPT_PERFECTMONGOOSE_DESCR</Tag>
@@ -11843,6 +11865,7 @@
 		<German>Gedrängt</German>
 		<Italian>Chiuso</Italian>
 		<Spanish>Escaso</Spanish>
+		<Russian>Сжатый</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MAP_SCRIPT_RANDOM</Tag>
@@ -11851,6 +11874,7 @@
 		<German>Zufällig</German>
 		<Italian>Casuale</Italian>
 		<Spanish>Al azar</Spanish>
+		<Russian>Случайно</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MAP_SCRIPT_REFLECTION</Tag>
@@ -11891,6 +11915,7 @@
 		<German>Küste</German>
 		<Italian>Tipo di costa</Italian>
 		<Spanish>Litoral</Spanish>
+		<Russian>Тип береговой линии</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MAP_SCRIPT_SHUFFLE_DESCR</Tag>
@@ -11924,6 +11949,7 @@
 		<German>Gewundene Kontinente</German>
 		<Italian>Continenti serpeggianti</Italian>
 		<Spanish>Continentes tortuosos</Spanish>
+		<Russian>Извилистые континенты</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MAP_SCRIPT_SOLID</Tag>
@@ -11932,6 +11958,7 @@
 		<German>Solide</German>
 		<Italian>Compatto</Italian>
 		<Spanish>Compacto</Spanish>
+		<Russian>Цельный</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MAP_SCRIPT_START_ANYWHERE</Tag>
@@ -11981,6 +12008,7 @@
 		<German>Zufällige Anordnung der Erde</German>
 		<Italian>Come la Terra (casuale)</Italian>
 		<Spanish>Tierra real al azar</Spanish>
+		<Russian>Случайно, как на Земле</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MAP_SCRIPT_TERRA_DESCR</Tag>
@@ -11988,8 +12016,8 @@
 		<French>Des continents similaires à ceux de la Terre sont créés aléatoirement. Tous les joueurs commencent dans l'Antiquité. Ces cartes sont immenses !</French>
 		<German>Terra generiert zufällige Landflächen, ähnlich wie die auf dem Planeten Erde. Alle Spieler beginnen zunächst in der Alten Welt. Diese Kartenvarianten sind besonders groß!</German>
 		<Italian>Genera delle masse terrestri casuali simili a quelle del nostro pianeta. Tutti i giocatori iniziano nel vecchio mondo. Queste mappe sono molto grandi.</Italian>
-		<Russian>Массивы суши, похожие на земные. Все игроки начинают в Старом Свете. Очень большой размер карты!</Russian>
 		<Spanish>Terra genera al azar masas de tierra similares a las del planeta Tierra. Todos los jugadores empiezan en el Viejo Mundo. ¡Estos mapas son supergrandes!</Spanish>
+		<Russian>Массивы суши, похожие на земные. Все игроки начинают в Старом Свете. Очень большой размер карты!</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MAP_SCRIPT_TERRA_OLD_WORLD_START</Tag>
@@ -11998,6 +12026,7 @@
 		<German>Zufällige Anordnung der Erde (Start Alte Welt)</German>
 		<Italian>Come la Terra (casuale e partenza nel vecchio mondo)</Italian>
 		<Spanish>Tierra real al azar (inicio en Viejo Mundo)</Spanish>
+		<Russian>Случайно, как на Земле (в Старом Свете)</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MAP_SCRIPT_THIN_PEAKS</Tag>
@@ -12022,6 +12051,7 @@
 		<German>Winzige Inseln</German>
 		<Italian>Isole minuscole</Italian>
 		<Spanish>Islas diminutas</Spanish>
+		<Russian>Крошечные острова</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MAP_SCRIPT_TOTESTRA_DESCR</Tag>
@@ -12039,6 +12069,7 @@
 		<German>Abwechslungsreich</German>
 		<Italian>Continenti vari</Italian>
 		<Spanish>Variado</Spanish>
+		<Russian>Разнообразные континенты</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MAP_SCRIPT_VARIOUS_TINY_ISLANDS</Tag>
@@ -12055,6 +12086,7 @@
 		<German>Feucht</German>
 		<Italian>Umido</Italian>
 		<Spanish>Húmedo</Spanish>
+		<Russian>Влажно</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MAP_SCRIPT_WIDE_CONTINENTS</Tag>
@@ -12099,7 +12131,7 @@
 		<German>Weltkugeldrehung</German>
 		<Italian>Tipo di pianeta</Italian>
 		<Spanish>Cobertura del mundo</Spanish>
-		<Russian>Форма мира</Russian>
+		<Russian>Смыкание краев мира</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MAP_WRAP_CYLINDER</Tag>
@@ -12108,7 +12140,7 @@
 		<German>Zylindrisch</German>
 		<Italian>Cilindrico</Italian>
 		<Spanish>Cilíndrica</Spanish>
-		<Russian>Цилиндрическая</Russian>
+		<Russian>Цилиндрическое</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MAP_WRAP_FLAT</Tag>
@@ -12117,7 +12149,7 @@
 		<German>Flach</German>
 		<Italian>Piatto</Italian>
 		<Spanish>Plana</Spanish>
-		<Russian>Плоская</Russian>
+		<Russian>Плоское</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MAP_WRAP_TOROID</Tag>
@@ -12126,7 +12158,7 @@
 		<German>Ringförmig</German>
 		<Italian>Toroidale</Italian>
 		<Spanish>Toroidal</Spanish>
-		<Russian>Тороидальная</Russian>
+		<Russian>Тороидальное</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MARAUDER_FROM</Tag>
@@ -16315,6 +16347,7 @@
 			<Gender>Male</Gender>
 			<Plural>1</Plural>
 		</Spanish>
+		<Russian>Реки</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISC_SABOTAGE_NEAR</Tag>
@@ -27557,7 +27590,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 			<Plural>1</Plural>
 		</Spanish>
 		<Polish>Surowce</Polish>
-		<Russian>Ðåñóðñû</Russian>
+		<Russian>Ресурсы</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRADE_ROUTE_HELP_BASE</Tag>

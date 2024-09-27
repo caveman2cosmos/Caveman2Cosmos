@@ -2285,7 +2285,7 @@
 		<French>[ICON_BULLET]Inflexible: Soustrait %d1_Amount des valeurs d'Expulsion/Ecrasement de l'ennemi.</French>
 		<Italian>[ICON_BULLET]Inflessibile: sottrae %d1_Amount dai valori nemici di sbaraglio e respinta.</Italian>
 		<Polish>[ICON_BULLET]Nieust&#234;pliwy: Odejmuje %d1_Amount z wrogiej warto&#156;ci Odrzutu i Odpychania.</Polish>
-		<Russian>[ICON_BULLET]Стойкость: вычитает %d1_Amount из вражеских значений отбрасывания и отражения.</Russian>
+		<Russian>[ICON_BULLET]Стойкость: вычитает %d1_Amount из значений отбрасывания и отражения у врага.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITHELP_UNYIELDING_TOTAL_MODIFIER</Tag>

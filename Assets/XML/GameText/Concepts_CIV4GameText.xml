@@ -365,7 +365,7 @@
 		<French>Ressources</French>
 		<Italian>Risorse</Italian>
 		<Spanish>Recursos</Spanish>
-		<Russian>Ðåñóðñû</Russian>
+		<Russian>Ресурсы</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CONCEPT_BORDERS</Tag>
@@ -1828,7 +1828,7 @@
 			<Gender>Male</Gender>
 			<Plural>1</Plural>
 		</Spanish>
-		<Russian>Ðåñóðñû</Russian>
+		<Russian>Ресурсы</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CONCEPT_RESOURCES_PEDIA</Tag>
