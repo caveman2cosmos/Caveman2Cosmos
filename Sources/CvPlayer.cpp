@@ -1447,8 +1447,9 @@ void CvPlayer::reset(PlayerTypes eID, bool bConstructorCall)
 	m_iFocusPlotY = -1;
 
 	m_commanders.clear();
-	m_commodores.clear();
 	m_commandFieldPlots.clear();
+	m_commodores.clear();
+	m_commodoreFieldPlots.clear();
 	m_idleCities.clear();
 	m_myHeritage.clear();
 }
@@ -19745,6 +19746,21 @@ void CvPlayer::read(FDataStreamBase* pStream)
 				}
 			}
 		}
+		{
+			uint iSize = 0;
+			WRAPPER_READ_DECORATED(wrapper, "CvPlayer", &iSize, "numCommodoreFieldPlots");
+			for (uint i = 0; i < iSize; i++)
+			{
+				short iX = -1;
+				short iY = -1;
+				WRAPPER_READ_DECORATED(wrapper, "CvPlayer", &iX, "CommodoreFieldPlotX");
+				WRAPPER_READ_DECORATED(wrapper, "CvPlayer", &iY, "CommodoreFieldPlotY");
+				if (iX > -1 && iY > -1)
+				{
+					setCommodoreFieldPlot(true, GC.getMap().plot(iX, iY));
+				}
+			}
+		}
 		WRAPPER_READ(wrapper, "CvPlayer", &m_iCorporateMaintenance);
 		// @SAVEBREAK - delete
 		m_iCorporateMaintenance += m_iCorporateTaxIncome;
@@ -20565,6 +20581,15 @@ void CvPlayer::write(FDataStreamBase* pStream)
 			{
 				WRAPPER_WRITE_DECORATED(wrapper, "CvPlayer", (short)plotX->getX(), "CommandFieldPlotX");
 				WRAPPER_WRITE_DECORATED(wrapper, "CvPlayer", (short)plotX->getY(), "CommandFieldPlotY");
+			}
+		}
+		{
+			uint iSize = m_commodoreFieldPlots.size();
+			WRAPPER_WRITE_DECORATED(wrapper, "CvPlayer", iSize, "numCommodoreFieldPlots");
+			foreach_(const CvPlot* plotX, m_commodoreFieldPlots)
+			{
+				WRAPPER_WRITE_DECORATED(wrapper, "CvPlayer", (short)plotX->getX(), "CommodoreFieldPlotX");
+				WRAPPER_WRITE_DECORATED(wrapper, "CvPlayer", (short)plotX->getY(), "CommodoreFieldPlotY");
 			}
 		}
 		WRAPPER_WRITE(wrapper, "CvPlayer", m_iCorporateMaintenance);
@@ -28119,6 +28144,7 @@ void CvPlayer::clearModifierTotals()
 	m_goldenAgeOnBirthOfGreatPersonCount.clear();
 	m_greatPeopleRateforUnit.clear();
 	m_commandFieldPlots.clear();
+	m_commodoreFieldPlots.clear();
 
 	for (int iI = 0; iI < GC.getNumFeatureInfos(); iI++)
 	{
@@ -30766,6 +30792,28 @@ void CvPlayer::setCommandFieldPlot(bool bNewValue, CvPlot* aPlot)
 	else if (itr != m_commandFieldPlots.end())
 	{
 		m_commandFieldPlots.erase(itr);
+	}
+	else FErrorMsg("Vector element to remove was missing!");
+}
+
+
+void CvPlayer::setCommodoreFieldPlot(bool bNewValue, CvPlot* aPlot)
+{
+	FAssert(bNewValue || !m_commodoreFieldPlots.empty());
+
+	std::vector<CvPlot*>::iterator itr = find(m_commodoreFieldPlots.begin(), m_commodoreFieldPlots.end(), aPlot);
+
+	if (bNewValue)
+	{
+		if (itr == m_commodoreFieldPlots.end())
+		{
+			m_commodoreFieldPlots.push_back(aPlot);
+		}
+		else FErrorMsg("Tried to add a duplicate vector element!");
+	}
+	else if (itr != m_commodoreFieldPlots.end())
+	{
+		m_commodoreFieldPlots.erase(itr);
 	}
 	else FErrorMsg("Vector element to remove was missing!");
 }

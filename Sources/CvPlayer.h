@@ -80,8 +80,9 @@ protected:
 
 	std::vector<int> m_idleCities;
 	std::vector<CvUnit*> m_commanders;
-	std::vector<CvUnit*> m_commodores;
 	std::vector<CvPlot*> m_commandFieldPlots;
+	std::vector<CvUnit*> m_commodores;
+	std::vector<CvPlot*> m_commodoreFieldPlots;
 
 	void processHeritage(const HeritageTypes eType, const int iChange);
 	std::vector<HeritageTypes> m_myHeritage;
@@ -1408,6 +1409,9 @@ public:
 
 	void setCommandFieldPlot(bool bNewValue, CvPlot* aPlot);
 	std::vector<CvPlot*> getCommandFieldPlots() const { return m_commandFieldPlots; }
+
+	void setCommodoreFieldPlot(bool bNewValue, CvPlot* aPlot);
+	std::vector<CvPlot*> getCommodoreFieldPlots() const { return m_commodoreFieldPlots; }
 
 	int getFreeSpecialistCount(SpecialistTypes eIndex) const;
 	void setFreeSpecialistCount(SpecialistTypes eIndex, int iNewValue);

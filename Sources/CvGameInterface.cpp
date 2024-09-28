@@ -483,7 +483,7 @@ void CvGame::updateColoredPlots()
         	NiColorA cmField(GC.getColorInfo(GC.getCOLOR_YELLOW()).getColor());
         	cmField.a = 0.75f;
             // ERROR IS HERE FOR NOW maybe
-        	foreach_(const CvPlot* plotX, player.getCommandFieldPlots())
+        	foreach_(const CvPlot* plotX, player.getCommodoreFieldPlots())
         	{
         		gDLL->getEngineIFace()->fillAreaBorderPlot(plotX->getX(), plotX->getY(), cmField, AREA_BORDER_LAYER_COMMAND_FIELD);
         	}

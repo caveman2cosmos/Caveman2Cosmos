@@ -11274,7 +11274,7 @@ void CvPlot::read(FDataStreamBase* pStream)
 			FAssert(uCount16 > 0);
             m_commodoreCount.insert(std::make_pair(uType8, uCount16));
 
-			// Toffer - This is too early to set the player cahce, players haven't been read in yet,
+			// Toffer - This is too early to set the player cache, players haven't been read in yet,
 			//	so the cache will be cleared at the player reset before read.
 			//GET_PLAYER(static_cast<PlayerTypes>(uType8)).setCommandFieldPlot(true, this);
 		}
@@ -13684,7 +13684,7 @@ void CvPlot::changeCommodoreCount(const PlayerTypes ePlayer, const bool bAdd)
 		if (bAdd) // Add commodore count
 		{
 			m_commodoreCount.insert(std::make_pair(static_cast<uint8_t>(ePlayer), 1));
-			GET_PLAYER(ePlayer).setCommandFieldPlot(true, this);
+			GET_PLAYER(ePlayer).setCommodoreFieldPlot(true, this);
 		}
 		else FErrorMsg("Expected commodore addition for first player entry on this plot");
 	}
@@ -13692,7 +13692,7 @@ void CvPlot::changeCommodoreCount(const PlayerTypes ePlayer, const bool bAdd)
 	{
 		FAssertMsg(itr->second > 0, "This change would bring the count to a negative value! Code copes with it though")
 		m_commodoreCount.erase(itr->first);
-		GET_PLAYER(ePlayer).setCommandFieldPlot(false, this);
+		GET_PLAYER(ePlayer).setCommodoreFieldPlot(false, this);
 	}
 	else // change commodore count
 	{
