@@ -763,14 +763,14 @@
 		<Italian>Seleziona un edificio da demolire.</Italian>
 		<Spanish>Elige un edificio a demoler.</Spanish>
 		<Polish>Wybierz budynek do wyburzenia.</Polish>
-		<Russian>Âûáåðèòå çäàíèå äëÿ ñíîñà.</Russian>
+		<Russian>Выберите здание для сноса.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_ABANDON_CITY_HEADER2</Tag>
 		<English>Demolition value is based on the building production cost.[NEWLINE]The abandon city value is based on population size.</English>
 		<German>Der Abrisswert eines Gebäudes basiert auf den Produktionskosten.[NEWLINE]Der Geldwert einer aufgegebenen Stadt errechnet sich aus der Bevölkerungsanzahl.</German>
 		<French>La valeur de démolition est basée sur le coût de production du bâtiment.[NEWLINE]La valeur de la ville abandonnée est basée sur la taille de la population.</French>
-		<Russian>% îò ïðîèçâîäñòâåííîé ñòîèìîñòè çäàíèÿ áóäåò êîíâåðòèðîâàíî â çîëîòî.</Russian>
+		<Russian>Затраты на снос основываются на стоимости строительства.[NEWLINE]Стоимость покидания города зависит от численности населения.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_ABANDON_CITY_HEADER3</Tag>
@@ -1959,7 +1959,7 @@
 		<Italian>Automazione totale</Italian>
 		<Spanish>Automatización completa</Spanish>
 		<Polish>Pe&#179;na automatyzacja</Polish>
-		<Russian>Ïîëíîñòüþ àâòîìàòè÷åñêè</Russian>
+		<Russian>Полная автоматизация</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_AIAUTOPLAY_FULLY_AUTO</Tag>
@@ -1989,7 +1989,7 @@
 		<Italian>Nessuna automazione</Italian>
 		<Spanish>Sin automatización</Spanish>
 		<Polish>Brak automatyzacji</Polish>
-		<Russian>Áåç àâòîìàòèçàöèè</Russian>
+		<Russian>Без автоматизации</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_AIAUTOPLAY_TURNS</Tag>
@@ -1999,7 +1999,7 @@
 		<Italian>Per quanti turni vuoi lasciare il controllo all'IA?</Italian>
 		<Spanish>¿Durante cuántos turnos quieres que la IA tome el control?</Spanish>
 		<Polish>Ile tur SI ma kontrolowa&#230; twoj&#185; cywilizacj&#234;?</Polish>
-		<Russian>Ñêîëüêî õîäîâ âû õîòèòå îñóùåñòâëÿòü êîíòðîëü ÈÈ?</Russian>
+		<Russian>Сколько ходов вашу цилизацию будет контролировать компьютер?</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_AIAUTOPLAY_TURN_ON</Tag>
@@ -2009,7 +2009,7 @@
 		<Italian>Attivare l'Automazione dell'IA?</Italian>
 		<Spanish>¿Activar el control automático de la IA?</Spanish>
 		<Polish>Czy w&#179;&#185;czy&#230; autogr&#234;?</Polish>
-		<Russian>Âêëþ÷èòü àâòîêîíòðîëü ÈÈ?</Russian>
+		<Russian>Включить автоуправление?</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_ALL_DIFFICULTIES</Tag>
@@ -22495,7 +22495,7 @@
 		<Italian>Crea un Promemoria</Italian>
 		<Spanish>Crear recordatorio</Spanish>
 		<Polish>Stw&#243;rz Przypomnienie</Polish>
-		<Russian>Ñîçäàòü íàïîìèíàíèå</Russian>
+		<Russian>Создать напоминание</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_REMINDER_PROMPT</Tag>
@@ -22505,7 +22505,7 @@
 		<Italian>Inserisci il numero di turni che devono passare prima che il promemoria scada ed il messaggio venga visualizzato.</Italian>
 		<Spanish>Introduce el número de turnos hasta que el recordatorio y su mensaje se desactiven.</Spanish>
 		<Polish>Wpisz liczb&#234; tur po kt&#243;rych przypomnienie si&#234; uaktywni i wiadomo&#156;&#230; zostanie wy&#156;wietlona.</Polish>
-		<Russian>Ââåäèòå ÷èñëî õîäîâ äî óõîäà íàïîìèíàíèÿ è îòîáðàæåíèÿ ñîîáùåíèÿ.</Russian>
+		<Russian>Введите число ходов до появления напоминания и демонстрируемое им сообщение.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_REMIND_NEXT_TURN_PROMPT</Tag>

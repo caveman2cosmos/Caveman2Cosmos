@@ -4788,7 +4788,7 @@
 		<Italian>Inserisci didascalia</Italian>
 		<Spanish>Escribir un encabezamiento</Spanish>
 		<Polish>Dodaj podpis</Polish>
-		<Russian>Введите надпись</Russian>
+		<Russian>Введите текст</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_SMTP_PASSWORD</Tag>
