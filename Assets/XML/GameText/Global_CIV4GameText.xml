@@ -770,14 +770,14 @@
 		<English>Demolition value is based on the building production cost.[NEWLINE]The abandon city value is based on population size.</English>
 		<German>Der Abrisswert eines Gebäudes basiert auf den Produktionskosten.[NEWLINE]Der Geldwert einer aufgegebenen Stadt errechnet sich aus der Bevölkerungsanzahl.</German>
 		<French>La valeur de démolition est basée sur le coût de production du bâtiment.[NEWLINE]La valeur de la ville abandonnée est basée sur la taille de la population.</French>
-		<Russian>Затраты на снос основываются на стоимости строительства.[NEWLINE]Стоимость покидания города зависит от численности населения.</Russian>
+		<Russian>Затраты на снос основываются на стоимости строительства.[NEWLINE]Цена покидания города зависит от численности населения.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_ABANDON_CITY_HEADER3</Tag>
 		<English>Abandoning a City where the majority nationality is not your own will give a diplomatic penalty.</English>
 		<German>Eine Stadt, in der überwiegend fremde Nationalitäten leben, aufzugeben, hat schwere diplomatische Konsequenzen.</German>
 		<French>L'abandon d'une ville dont la nationalité majoritaire n'est pas la vôtre entraînera une sanction diplomatique.</French>
-		<Russian>Разрушение города, где большинство горожан имеет другую национальность, приведет к ухудшению отношений с другими цивилизациями.</Russian>
+		<Russian>Покидание города, где у большинства жителей чужая национальность, приведет к ухудшению отношений с другими цивилизациями.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_ACTION_ALL_UNITS</Tag>
