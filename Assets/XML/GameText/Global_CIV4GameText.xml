@@ -1678,6 +1678,7 @@
 		<German>Alle Ressourcen anzeigen ein/aus</German>
 		<Italian>Abilita/disabilita la visualizzazione di tutte le risorse</Italian>
 		<Spanish>Activar visor de todos los recursos</Spanish>
+		<Russian>Переключить отображение всех ресурсов</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_ACTION_RETIRE</Tag>
@@ -1798,6 +1799,7 @@
 		<German>Feindanzeige ein-/ausblenden</German>
 		<Italian>Abilita o disabilita la visualizzazione delle unità nemiche</Italian>
 		<Spanish>Activar el visor de unidades enemigas</Spanish>
+		<Russian>Переключить показ вражеских единиц</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_ACTION_WILL_DESTROY_IMP</Tag>
@@ -5103,7 +5105,7 @@
 		<Italian>Il sole sorge nell'anno %s1_year. Da tempi immemori, la popolazione %s2:2_civ ha condotto una vita nomade. Dopo anni di vagabondaggi, sono infine pronti a stabilirsi e a fondare la tua prima città.[NEWLINE][NEWLINE]%s3_leader, il tuo popolo ti ha conferito il potere assoluto, credendo che tu possa sviluppare una civiltà in grado di resistere alla prova del tempo!</Italian>
 		<Spanish>El sol se alza en el año %s1_year. Desde tiempos inmemoriales, los %s2:3_civ han llevado una vida nómada. Tras años de deambular, están listos para asentarse y fundar vuestra primera ciudad.[NEWLINE][NEWLINE]%s3_leader, vuestro pueblo os ha conferido poder absoluto, confiando en que podáis desarrollar una civilización que supere los retos del tiempo.</Spanish>
 		<Polish>S&#179;o&#241;ce wsta&#179;o w roku %s1_year. Od niepami&#234;tnych czas&#243;w, ludzie z %s2_civ &#191;yli koczowniczym trybem &#191;ycia. Lata takiego &#191;ycia nauczy&#179;y ich jak &#191;y&#230; z niebezpieczn&#185; natur&#185; i osi&#185;&#156;&#230; by rozprzestrzenia&#230; swoj&#185; kultur&#234;.[NEWLINE][NEWLINE]%s3_leader, Twoi ludzi&#234; widz&#185; w Tobie najsilniejszego, zaufali Ci by&#156; zbudowa&#179; Cywilizacj&#234; kt&#243;ra przetrwa pr&#243;b&#234; czasu!</Polish>
-		<Russian>%s1_year... Ñ íåçàïàìÿòíûõ âðåìåí %s2_civ âåëè êî÷åâîé îáðàç æèçíè, íî òåïåðü ëþäè ãîòîâû îñåñòü è îñíîâàòü ïåðâûé ãîðîä. [NEWLINE][NEWLINE]%s3_leader, ëþäè ââåðÿþò âàì ñâîè ñóäüáû è íàäåëÿþò íåîãðàíè÷åííîé âëàñòüþ â íàäåæäå, ÷òî âû ïðåâðàòèòå ñâîé íàðîä â ìîãó÷óþ äåðæàâó, ñïîñîáíóþ âûñòîÿòü âåêà è òûñÿ÷åëåòèÿ.</Russian>
+		<Russian>Год %s1_year.. %s2_civ народ с незапамятных времен вел кочевой образ жизни. После множества лет скитаний люди готовы осесть и основать первый город.[NEWLINE][NEWLINE]Они вверяют вам свои судьбы, %s3_leader, и наделяют неограниченной властью в надежде, что вы построите могучую цивлизацию, способную пройти испытание временем.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DAWN_OF_MAN_SCREEN_TITLE</Tag>
@@ -5113,6 +5115,7 @@
 		<German>Der Beginn der Menschheit</German>
 		<Italian>L'alba dell'umanità</Italian>
 		<Spanish>Los Albores del Hombre</Spanish>
+		<Russian>Заря человечества</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DECLARE_WAR_NO</Tag>
@@ -8646,6 +8649,7 @@
 		<German>Erleichtert das Auffinden von Ressourcenvorkommen</German>
 		<Italian>[NEWLINE]Facilita la scoperta delle risorse</Italian>
 		<Spanish>Hace que sea más fácil encontrar recursos</Spanish>
+		<Russian>Облегчить поиск ресурсов</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GLOBELAYER_RESOURCES_GENERAL</Tag>
@@ -8710,6 +8714,7 @@
 		<German>Schaltet die Anzeige der Einheitenpositionen und -dichte ein/aus</German>
 		<Italian>[NEWLINE]Attiva o disattiva la visualizzazione della posizione e le informazioni sulla densità delle unità</Italian>
 		<Spanish>Activa el visor de la posición de las unidades y de la información de la densidad</Spanish>
+		<Russian>Переключить отображение информации о местоположении и сгруппированности подразделений врага</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GLOBELAYER_UNITS_ALLMILITARY</Tag>
@@ -20682,6 +20687,7 @@
 		<German>Defensivbonus: %D1_Mod%%</German>
 		<Italian>[COLOR_HIGHLIGHT_TEXT]Bonus difensivo[COLOR_REVERT] casella: %D1_Mod%%</Italian>
 		<Spanish>Bonificación de defensa: %D1_Mod%%</Spanish>
+		<Russian>Бонус к защите: %D1_Mod%%</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PLOT_DAMAGE</Tag>
@@ -23110,8 +23116,8 @@
 		<French>Climat : %s1</French>
 		<German>Klima: %s1</German>
 		<Italian>Clima %s1</Italian>
-		<Russian>%s1 климат</Russian>
 		<Spanish>Clima: %s1</Spanish>
+		<Russian>%s1 климат</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_SETTINGS_DIFFICULTY_GAME</Tag>
@@ -23120,6 +23126,7 @@
 		<German>Spiel schwierigkeit: %s1</German>
 		<Italian>Difficoltà partita: [COLOR_HIGHLIGHT_TEXT]%s1[COLOR_REVERT]</Italian> <!-- victory info screen -->
 		<Spanish>Dificultad partida: %s1</Spanish>
+		<Russian>Выбранная сложность: %s1 </Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_SETTINGS_DIFFICULTY_PLAYER</Tag>
@@ -26668,7 +26675,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Italian>Influenza sulla casella</Italian>
 		<Spanish>Influencia</Spanish>
 		<Polish>Wp&#179;yw Pola</Polish>
-		<Russian>Âëèÿíèå êëåòêè</Russian>
+		<Russian>Влияние клетки</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TIME_AD</Tag>
@@ -26678,7 +26685,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Italian>%d1_Date d.C.</Italian>
 		<Spanish>%d1_Date d.C.</Spanish>
 		<Polish>%d1_Date N.E.</Polish>
-		<Russian>%d1_Date AD</Russian>
+		<Russian>%d1_Date н. э.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TIME_AD_SAVE</Tag>
@@ -26696,7 +26703,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Italian>%d1_Date a.C.</Italian>
 		<Spanish>%d1_Date a.C.</Spanish>
 		<Polish>%d1_Date P.N.E.</Polish>
-		<Russian>%d1_Date BC</Russian>
+		<Russian>%d1_Date до н. э.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TIME_BC_SAVE</Tag>
@@ -30152,6 +30159,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<German>Runde beenden [COLOR_HIGHLIGHT_TEXT]&lt;UMSCHALTEN-EINGABETASTE&gt;[COLOR_REVERT]</German>
 		<Italian>Fine turno [COLOR_HIGHLIGHT_TEXT]&lt;MAIUSC-INVIO&gt;[COLOR_REVERT]</Italian>
 		<Spanish>Terminar turno [COLOR_HIGHLIGHT_TEXT]&lt;MAYÚS-INTRO&gt;[COLOR_REVERT]</Spanish>
+		<Russian>Завершить ход [COLOR_HIGHLIGHT_TEXT]&lt;SHIFT+ENTER&gt;[COLOR_REVERT]</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_WIDGET_HELP</Tag>
@@ -30160,6 +30168,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<German>Zivilopädie</German>
 		<Italian>Civilopedia</Italian>
 		<Spanish>Civilopedia</Spanish>
+		<Russian>Цивилопедия</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_WIDGET_LAUNCH_VICTORY</Tag>

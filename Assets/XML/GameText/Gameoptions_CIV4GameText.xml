@@ -1345,7 +1345,7 @@
 		<German>Mit dieser Modifikation werden alle Einheiten neben ihren normalen Werten auch durch ihre Größe, Gruppenstärke und Kampfqualität definiert. (Hinweis: Die KI ist noch nicht ausgereift.)</German>
 		<Italian>Le unità vengono differenziate in base alla loro stazza, al loro volume e alle qualità in combattimento (Nota: AI in sviluppo)</Italian>
 		<Polish>Jednostki sa modyfikowane przez ich Wielko&#156;&#230;, Rozmiar i Waleczno&#156;&#230; (Informacja: AI w trakcie implementacji)</Polish>
-		<Russian>Подразделения получат атрибуты, соответсвующие размеру, количеству и боевым свойствам. (Примечание: ИИ в стадии разработки).</Russian>
+		<Russian>Подразделения получат атрибуты, соответсвующие размеру, численности и боевым свойствам. (Примечание: ИИ в стадии разработки).</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_UNSUPPORTED_START_AS_MINORS</Tag>

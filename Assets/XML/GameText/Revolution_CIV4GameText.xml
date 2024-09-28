@@ -1905,7 +1905,7 @@
 		<Italian>[NEWLINE]Per aprire questo popup: Ctrl+Shift+Q[NEWLINE]</Italian>  <!-- Bug mod recap screen Ctrl+Shift+Q -->
 		<Spanish>Ctrl+Shift+Q = Este cuadro</Spanish>
 		<Polish>Ctrl+Shift+Q = To Okienko</Polish>
-		<Russian>Ctrl+Shift+Q - открыть эту подсказку</Russian>
+		<Russian>Ctrl+Shift+Q - Открыть эту подсказку</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_REV_MOD_INITIALIZING_INQUISITIONS_ENABLED</Tag>
@@ -1915,6 +1915,7 @@
 		<Italian>[NEWLINE]Opzione inquisizione attivata</Italian>
 		<Spanish>[NEWLINE]Inquisición activada</Spanish>
 		<Polish>[NEWLINE]W&#179;&#185;czona Inkwizycja</Polish>
+		<Russian>[NEWLINE]Инквизиция включена</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_REV_MOD_INITIALIZING_PILLAGE_INFLUENCE</Tag>
