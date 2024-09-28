@@ -191,6 +191,8 @@ public:
     int getControlPoints() const;
 	void setCommodore(bool bNewValue);
     bool isCommodore() const;
+	int getCommodoreControlPointsLeft() const;
+	int getCommodoreControlPoints() const;
 	float getRealExperience() const;
 
 protected:

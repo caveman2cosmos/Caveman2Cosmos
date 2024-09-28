@@ -703,6 +703,16 @@ int CyUnit::getControlPoints() const
 	return m_pUnit->getCommanderComp()->getControlPoints();
 }
 
+int CyUnit::getCommodoreControlPointsLeft() const
+{
+	return m_pUnit->getCommodoreComp()->getControlPointsLeft();
+}
+
+int CyUnit::getCommodoreControlPoints() const
+{
+	return m_pUnit->getCommodoreComp()->getControlPoints();
+}
+
 float CyUnit::getRealExperience() const
 {
 	return (float)m_pUnit->getExperience100() / 100;
