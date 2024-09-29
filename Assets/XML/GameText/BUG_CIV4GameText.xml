@@ -118,6 +118,7 @@
 		<Tag>TXT_KEY_BUG_FINANCIAL_ADVISOR_BUILDING_COUNT_AVERAGE</Tag>
 		<English>(%d1 × %s2[ICON_GOLD] = %s3[ICON_GOLD])</English>
 		<Italian>(%d1 × %s2 [ICON_GOLD] = %s3 [ICON_GOLD])</Italian>
+		<Russian>(%d1 × %s2[ICON_GOLD] = %s3[ICON_GOLD])</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_FINANCIAL_ADVISOR_COMMERCE</Tag>
@@ -126,7 +127,7 @@
 		<German>Handel insgesamt</German>
 		<Italian>Commercio totale</Italian>
 		<Spanish>Comercio total</Spanish>
-		<Russian>Îáùàÿ òîðãîâëÿ</Russian>
+		<Russian>Общая торговля</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_FINANCIAL_ADVISOR_DOMESTIC_TRADE</Tag>
@@ -135,7 +136,7 @@
 		<German>Gesamteinkommen durch inländische Handelsverbindungen</German>
 		<Italian>Commercio totale dalle rotte commerciali interne</Italian>
 		<Spanish>Comercio total procedente del comercio interior</Spanish>
-		<Russian>Âñÿ òîðãîâëÿ îò âíóòðåííèõ òîðãîâûõ ìàðøðóòîâ</Russian>
+		<Russian>Общий объем торговли по внутренним торговым маршрутам</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_FINANCIAL_ADVISOR_FOREIGN_TRADE</Tag>
@@ -144,7 +145,7 @@
 		<German>Gesamteinkommen durch ausländische Handelsverbindungen</German>
 		<Italian>Commercio totale dalle rotte commerciali estere</Italian>
 		<Spanish>Comercio total proveniente del comercio exterior</Spanish>
-		<Russian>Âñÿ òîðãîâëÿ îò èíîñòðàííûõ òîðãîâûõ ìàðøðóòîâ</Russian>
+		<Russian>Общий объем торговли по иностранным торговым маршрутам</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_FINANCIAL_ADVISOR_SPECIALISTS</Tag>
@@ -153,13 +154,13 @@
 		<German>Gesamteinkommen durch Spezialisten</German>
 		<Italian>Oro totale ottenuto dagli specialisti</Italian>
 		<Spanish>Oro total obtenido de especialistas</Spanish>
-		<Russian>Âñåãî çîëîòà îò ñïåöèàëèñòîâ</Russian>
+		<Russian>Общий доход золота от специалистов</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_FINANCIAL_ADVISOR_SPECIALIST_GOLD</Tag>
 		<English>[NEWLINE]%s1[ICON_GOLD]: %s3 (%d2)</English>
 		<Italian>[NEWLINE]%s1 [ICON_GOLD]: %s3 (%d2)</Italian>
-		<Russian>[NEWLINE]%d1[ICON_GOLD]: %s3 (%d2)</Russian>
+		<Russian>[NEWLINE]%s1[ICON_GOLD]: %s3 (%d2)</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_FINANCIAL_ADVISOR_SPECIALIST_TOTAL_GOLD</Tag>
@@ -168,7 +169,7 @@
 		<German>[NEWLINE]------------------------[NEWLINE]SPEZIALISTEN GESAMT: %d1[ICON_GOLD]</German>
 		<Italian>[NEWLINE]------------------------[NEWLINE]TOTALE SPECIALISTI: %d1[ICON_GOLD]</Italian>
 		<Spanish>[NEWLINE]------------------------[NEWLINE]TOTAL DE ESPECIALISTAS: %d1[ICON_GOLD]</Spanish>
-		<Russian>[NEWLINE]------------------------[NEWLINE]ÂÑÅÃÎ ÑÏÅÖÈÀËÈÑÒÎÂ: %d1[ICON_GOLD]</Russian>
+		<Russian>[NEWLINE]------------------------[NEWLINE]ВСЕГО СПЕЦИАЛИСТОВ: %d1[ICON_GOLD]</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_FOREIGN_TRADE_HEADING</Tag>
@@ -177,7 +178,7 @@
 		<German>Handel mit %%s1_PlyrName (%s2_CivName)</German>
 		<Italian>Commercio con %%s1_PlyrName (%s2_CivName)</Italian>
 		<Spanish>Comercio con %%s1_PlyrName de %s2_CivName</Spanish>
-		<Russian>Òîðãîâëÿ ñ %s1_PlyrName èç %s2_CivName</Russian>
+		<Russian>%s2_CivName и %s1_PlyrName торгуют с вами</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPTBUTTON_EXIT_HOVER</Tag>
@@ -429,7 +430,7 @@
 		<German>Berater</German>
 		<Italian>Schermi informazioni</Italian>
 		<Spanish>Consejeros</Spanish>
-		<Russian>Ñîâåòíèêè</Russian>
+		<Russian>Советники</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPTTAB_ALERTS</Tag>
@@ -1465,7 +1466,7 @@
 		<German>Stadtgrenzen</German>
 		<Italian>Espansione confini</Italian>
 		<Spanish>Fronteras</Spanish>
-		<Russian>Ãðàíèöû ãîðîäà</Russian>
+		<Russian>Границы города</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_AUTOLOG__LOGCITYFOUNDED_HOVER</Tag>
@@ -1537,7 +1538,7 @@
 		<German>Zerstörungen</German>
 		<Italian>Città rase al suolo</Italian>
 		<Spanish>Ciudad arrasada</Spanish>
-		<Russian>Ãîðîä ñíåñåí</Russian>
+		<Russian>Город снесен</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_AUTOLOG__LOGCITYWHIPSTATUS_HOVER</Tag>
@@ -1696,7 +1697,7 @@
 		<German>Stammesdörfer</German>
 		<Italian>Scoperta villaggi tribali</Italian>
 		<Spanish>Aldeas tribales</Spanish>
-		<Russian>Òóçåìíûå äåðåâíè</Russian>
+		<Russian>Деревни туземцев</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_AUTOLOG__LOGGP_HOVER</Tag>
@@ -1732,7 +1733,7 @@
 		<German>Modernisierungen</German>
 		<Italian>Azioni dei miglioramenti</Italian>
 		<Spanish>Mejoras</Spanish>
-		<Russian>Óëó÷øåíèÿ</Russian>
+		<Russian>Надстройки</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_AUTOLOG__LOGPILLAGE_HOVER</Tag>
@@ -1891,7 +1892,7 @@
 		<German>Vasallen</German>
 		<Italian>Variazioni vassallaggio</Italian>
 		<Spanish>Estados vasallos</Spanish>
-		<Russian>Ñîñòîÿíèå âàññàëîâ</Russian>
+		<Russian>Состояние вассалов</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_AUTOLOG__LOGWARDEMAND_HOVER</Tag>
@@ -2987,7 +2988,7 @@
 		<German>Zeigt die Wahrscheinlichkeit an, dass in einer Stadt auf Grund von kulturellem Druck Unruhen ausbrechen</German>
 		<Italian>[BOLD]Attiva la [COLOR_HIGHLIGHT_TEXT]visualizzazione della probabilità che la città si rivolti[COLOR_REVERT] a causa della [COLOR_HIGHLIGHT_TEXT]pressione culturale[COLOR_REVERT][\BOLD]</Italian>
 		<Spanish>Cuando se activa, muestra la probabilidad de que se produzca una revuelta en la ciudad a causa de la presión cultural.</Spanish>
-		<Russian>Êîãäà óñòàíîâëåí, îòîáðàæàåò âåðîÿòíîñòü ÷òî ãîðîä âîññòàíåò èç-çà êóëüòóðíîãî äàâëåíèÿ.</Russian>
+		<Russian>Когда установлен, отображает вероятность что город восстанет из-за культурного давления.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_CITYBAR__REVOLTCHANCE_TEXT</Tag>
@@ -2996,7 +2997,7 @@
 		<German>Unruhe-Wahrscheinlichkeit</German>
 		<Italian>Probabilità di rivolta</Italian>
 		<Spanish>Probabilidad de revuelta</Spanish>
-		<Russian>Øàíñ ðåâîëþöèè</Russian>
+		<Russian>Шанс революции</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_CITYBAR__SPECIALISTS_HOVER</Tag>
@@ -4272,6 +4273,7 @@
 		<Tag>TXT_KEY_BUG_OPT_MAININTERFACE__AUTOENDTURNDELAY_TEXT</Tag>
 		<English>Auto-end turn delay</English>
 		<Italian>Ritardo fine turno</Italian>
+		<Russian>Задержка автозавершения хода</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_MAININTERFACE__CYCLEDELAYMIN_HOVER</Tag>
@@ -4357,7 +4359,7 @@
 		<German>Sichtfeld</German>
 		<Italian>Campo visivo</Italian>
 		<Spanish>Campo de visión</Spanish>
-		<Russian>Âèäèìàÿ îáëàñòü</Russian>
+		<Russian>Угол обзора</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_MAININTERFACE__GPBAR_TYPES_HOVER</Tag>
@@ -5029,7 +5031,7 @@
 		<German>Ressourcen</German>
 		<Italian>Risorse</Italian>
 		<Spanish>Recursos</Spanish>
-		<Russian>Ðåñóðñû</Russian>
+		<Russian>Ресурсы</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_MORECIV4LERTS__CITYFOUNDED_HOVER</Tag>
@@ -5792,7 +5794,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_REVDCM__SS_BRIBE_HOVER</Tag>
-		<English>Spies can bribe workers to join the spy's civilization and abandon it's current owner</English>
+		<English>Spies can bribe workers to join the spy's civilization, abandoning their current owner</English>
 		<French>Les Espions peuvent soudoyer et corrompre les Ouvriers, les incitant à quitter leur civilisation pour rejoindre celle de l'Espion.</French>
 		<German>Spione können Bautrupps bestechen, sich ihrer Nation anzuschließen</German>
 		<Spanish>Los espías pueden sobornar a trabajadores para unirse a la civilización del propietario del espía y abandonar a su nación actual.</Spanish>
@@ -6626,7 +6628,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_ROMSETTINGS__BATTLEFIELDPROMOTIONS_HOVER</Tag>
-		<English>Units that preform particularly well in combat may earn a promotion in the midst of battle instead of XP.</English>
+		<English>Units that perform particularly well in combat may earn a promotion in the midst of battle instead of XP.</English>
 		<French>Les Unités qui se distinguent particulièrement au combat peuvent obtenir des promotions pendant le combat, à la place de l'EXP.</French>
 		<German>Einheiten, die besonders erfolgreich kämpfen, können direkt in der Schlacht eine Beförderung erhalten (statt Erfahrungspunkten).</German>
 		<Italian>[BOLD]Le unità potrebbero [COLOR_HIGHLIGHT_TEXT]ottenere delle promozioni[COLOR_REVERT] nel bel mezzo della battaglia invece dei punti esperienza[\BOLD]</Italian>
@@ -6947,7 +6949,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_ROMSETTINGS__HIDEUNAVAILABLEBUILDS_HOVER</Tag>
-		<English>Worker Builds that can not be preformed will be hidden from the action bar.</English>
+		<English>Worker actions that cannot be performed will be hidden from the action bar.</English>
 		<French>Les Aménagements que les Ouvriers ne peuvent pas préparer sont masquées de la barre d'action.</French>
 		<German>Bautrupp-Befehle, die auf dem betreffenden Feld nicht ausgeführt werden können, werden in der Aktionsleiste nicht mehr angezeigt.</German>
 		<Italian>[BOLD]Le azioni dei lavoratori che [COLOR_HIGHLIGHT_TEXT]non possono essere effettuate[COLOR_REVERT] non verranno visualizzate sulla barra delle azioni[\BOLD]</Italian>
@@ -6994,14 +6996,14 @@
 		<Tag>TXT_KEY_BUG_OPT_ROMSETTINGS__INFRASTRUCTUREIGNORESIMPROVEMENTS_HOVER</Tag>
 		<English>Workers Automated to Improve Infrastructure will only build Routes</English>
 		<French>Les Ouvriers automatisés pour améliorer l'infrastructure construisent uniquement des routes.</French>
-		<Russian>Àâòî-ðàáîòíèêè áóäóò ñòðîèòü èñêëþ÷èòåëüíî äîðîãè</Russian>
+		<Russian>Автоматизированые на улучшение инфраструктуры рабочие будут строить исключительно дороги</Russian>
 		<Italian>[BOLD]I lavoratori automatizzati con il comando [COLOR_HIGHLIGHT_TEXT]costruzione automatica infrastrutture[COLOR_REVERT] costruiscono [COLOR_HIGHLIGHT_TEXT]solo percorsi[COLOR_REVERT][\BOLD]</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_ROMSETTINGS__INFRASTRUCTUREIGNORESIMPROVEMENTS_TEXT</Tag>
 		<English>Infrastructure Ignores Improvements</English>
 		<French>Infrastructures, mais pas améliorations</French>
-		<Russian>Èíôðàñòðóêòóðà èãíîðèðóåò óëó÷øåíèÿ</Russian>
+		<Russian>Инфраструктура игнорирует улучшения</Russian>
 		<Italian>Miglioramenti esclusi</Italian>
 	</TEXT>
 	<TEXT>
@@ -7020,7 +7022,7 @@
 		<German>Maximale Bombardierungsverteidigung</German>
 		<Italian>Difesa dal bombardamento</Italian>
 		<Spanish>Máximo de defensa contra bombardeo</Spanish>
-		<Russian>Ìàêñ. çàù. îò îáñòðåëîâ</Russian>
+		<Russian>Максимальная защита от обстрелов</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_ROMSETTINGS__MINCITYDISTANCE_HOVER</Tag>
@@ -7783,7 +7785,7 @@
 		<German>Größe</German>
 		<Italian>Dimensioni icone ricerca</Italian>
 		<Spanish>Tamaño</Spanish>
-		<Russian>Ðàçìåð</Russian>
+		<Russian>Размер</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_SCORES__SHOWDEAD_HOVER</Tag>
@@ -8145,7 +8147,7 @@ uno de s, A, a, p, g, n, o, r (véase archivo de ayuda)</Spanish>
 		<German>Städte</German>
 		<Italian>Città</Italian> <!-- infoscreen Religion -->
 		<Spanish>Ciudades</Spanish>
-		<Russian>Ãîðîäà</Russian>
+		<Russian>Города</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_RELIGIOUS_MISSIONARY</Tag>
@@ -8259,7 +8261,7 @@ uno de s, A, a, p, g, n, o, r (véase archivo de ayuda)</Spanish>
 		<German>Diplomatischer Sieg</German>
 		<Italian>Vittoria diplomatica</Italian>
 		<Spanish>Victoria diplomática</Spanish>
-		<Russian>Äèïëîìàòè÷åñêàÿ ïîáåäà</Russian>
+		<Russian>Дипломатическая победа</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_VICTORY_TURNS_NEXT_VOTE</Tag>

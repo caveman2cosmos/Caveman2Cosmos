@@ -757,7 +757,7 @@
 		<Italian>Città</Italian>
 		<Spanish>Ciudades</Spanish>
 		<Polish>miasta</Polish>
-		<Russian>Ãîðîäà</Russian>
+		<Russian>Города</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_REV_CITIES_OF</Tag>
@@ -1685,7 +1685,7 @@
 		<Italian>[NEWLINE]La mod [COLOR_HIGHLIGHT_TEXT]civiltà barbare[COLOR_REVERT] si [COLOR_HIGHLIGHT_TEXT]disattiverà con %d1 civiltà[COLOR_REVERT]</Italian>
 		<Spanish>[NEWLINE][SPACE]BarbarianCiv se detendrá al llegar a %d1 civilizaciones</Spanish>
 		<Polish>[NEWLINE][SPACE]Mod BarbarianCiv zatrzyma si&#234; przy %d1 Cywilizacjach</Polish>
-		<Russian>[NEWLINE][SPACE]BarbarianCiv áóäåò îñòàíîâëåí íà %d1 öèâèëèçàöèÿõ</Russian>
+		<Russian>[NEWLINE][SPACE]Опция «Цивилизации варваров» остановится при числе цивилизаций - %d1</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_REV_MOD_DEFAULT_NUM_PLAYERS</Tag>
@@ -1695,7 +1695,7 @@
 		<Italian>[NEWLINE]Numero predefinito di giocatori: [COLOR_HIGHLIGHT_TEXT]%d1[COLOR_REVERT][\H2]</Italian>
 		<Spanish>[NEWLINE]Numero de jugadores por defecto: %d1</Spanish>
 		<Polish>[NEWLINE]Domy&#156;lna ilo&#156;&#230; graczy: %d1</Polish>
-		<Russian>[NEWLINE]Êîëè÷åñòâî èãðîêîâ ïî óìîë÷àíèþ: %d1</Russian>
+		<Russian>[NEWLINE]Количество игроков по умолчанию: %d1</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_REV_MOD_INITIALIZING_AI_AUTOPLAY</Tag>
@@ -1704,6 +1704,7 @@
 		<German>[NEWLINE]STRG-UMSCHALT-X = KI Autoplay</German>
 		<Italian>[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]CTRL-SHIFT-X[COLOR_REVERT] = Gioco automatico IA</Italian> <!-- Bug mod recap screen Ctrl+Shift+Q -->
 		<Spanish>[NEWLINE]CTRL-SHIFT-X = Juego automático de la IA</Spanish>
+		<Russian>[NEWLINE]CTRL+SHIFT+X - Компьютер сделает указанное число ходов за вас</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_REV_MOD_INITIALIZING_ALT_B_SHORTCUT</Tag>
@@ -1712,6 +1713,7 @@
 		<Spanish>[NEWLINE]ALT-B = Registrar estadísticas de batalla</Spanish>
 		<Polish>[NEWLINE]ALT-B = loguj statystyki bitwy!</Polish>
 		<Italian>[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]ALT-B[COLOR_REVERT] = Registra statistiche di battaglia</Italian>  <!-- Bug mod recap screen Ctrl+Shift+Q -->
+		<Russian>[NEWLINE]ALT+B - Журнал статистики сражений</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_REV_MOD_INITIALIZING_ALT_CTRL_N_ARROW_SHORTCUT</Tag>
@@ -1720,6 +1722,7 @@
 		<Spanish>[NEWLINE]ALT-CTRL-FLECHA ARR = Probar nombrado de unidad</Spanish>
 		<Polish>[NEWLINE]ALT-CTRL-N ARROW = Testuj Nazewnictwo jednostek!</Polish>
 		<Italian>[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]ALT-CTRL-N ARROW[COLOR_REVERT] = Test di denominazione delle unità</Italian> <!-- Bug mod recap screen Ctrl+Shift+Q -->
+		<Russian>[NEWLINE]ALT+CTRL+N ARROW - Тест именования подразделений</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_REV_MOD_INITIALIZING_ALT_E_SHORTCUT</Tag>
@@ -1728,6 +1731,7 @@
 		<Spanish>[NEWLINE]ALT-E = Crear entrada del registro</Spanish>
 		<Polish>[NEWLINE]ALT-E = Stw&#243;rz wpis do logu!</Polish>
 		<Italian>[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]ALT-E[COLOR_REVERT] = Crea voce sul registro automatico</Italian> <!-- Bug mod recap screen Ctrl+Shift+Q -->
+		<Russian>[NEWLINE]ALT+E - Создать запись в журнале</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_REV_MOD_INITIALIZING_ALT_F_SHORTCUT</Tag>
@@ -1736,6 +1740,7 @@
 		<Spanish>[NEWLINE]ALT-F = Vista global</Spanish>
 		<Polish>[NEWLINE]ALT-F = Widok satelitarny!</Polish>
 		<Italian>[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]ALT-F[COLOR_REVERT] = Visione satellitare</Italian> <!-- Bug mod recap screen Ctrl+Shift+Q -->
+		<Russian>[NEWLINE]ALT+F - Обзор со спутника</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_REV_MOD_INITIALIZING_ALT_I_SHORTCUT</Tag>
@@ -1744,6 +1749,7 @@
 		<Spanish>[NEWLINE]ALT-I = Ocultar interfaz</Spanish>
 		<Polish>[NEWLINE]ALT-I = Brak Interfejsu!</Polish>
 		<Italian>[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]ALT-I[COLOR_REVERT] = Nessuna interfaccia utente</Italian> <!-- Bug mod recap screen Ctrl+Shift+Q -->
+		<Russian>[NEWLINE]ALT+I - Отключить интерфейс</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_REV_MOD_INITIALIZING_ALT_L_SHORTCUT</Tag>
@@ -1752,6 +1758,7 @@
 		<Spanish>[NEWLINE]ALT-L = Activar/desactivar registro (con Autolog activo)</Spanish>
 		<Polish>[NEWLINE]ALT-L = Strat/Stop logowanie (Autologowanie musi by&#230; w&#179;&#185;czone.)</Polish>
 		<Italian>[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]ALT-L[COLOR_REVERT] = Avvia o arresta il registro automatico</Italian> <!-- Bug mod recap screen Ctrl+Shift+Q -->
+		<Russian>[NEWLINE]ALT+L - Начать/прекратить журналирование (автожурнал должен быть включен)</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_REV_MOD_INITIALIZING_ALT_M_SHORTCUT</Tag>
@@ -1760,6 +1767,7 @@
 		<Spanish>[NEWLINE]ALT-M, ALT-CTRL-R = Crear notificación</Spanish>
 		<Polish>[NEWLINE]ALT-M, ALT-CTRL-R = Stw&#243;rz przypomnienie!</Polish>
 		<Italian>[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]ALT-M[COLOR_REVERT], [COLOR_HIGHLIGHT_TEXT]ALT-CTRL-R[COLOR_REVERT] = Crea promemoria</Italian> <!-- Bug mod recap screen Ctrl+Shift+Q -->
+		<Russian>[NEWLINE]ALT+M, ALT+CTRL+R - Создать напоминание</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_REV_MOD_INITIALIZING_ALT_O_SHORTCUT</Tag>
@@ -1768,6 +1776,7 @@
 		<Spanish>[NEWLINE]ALT-O = Cambiar perspectiva</Spanish>
 		<Polish>[NEWLINE]ALT-O = Zmie&#241; perspektyw&#234;!</Polish>
 		<Italian>[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]ALT-O[COLOR_REVERT] = Cambia prospettiva della mappa</Italian> <!-- Bug mod recap screen Ctrl+Shift+Q -->
+		<Russian>[NEWLINE]ALT+O - Изменить перспективу</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_REV_MOD_INITIALIZING_ALT_S_SHORTCUT</Tag>
@@ -1776,6 +1785,7 @@
 		<Spanish>[NEWLINE]ALT-S = Añadir marcador</Spanish>
 		<Polish>[NEWLINE]ALT-S = Dodaj znak!</Polish>
 		<Italian>[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]ALT-S[COLOR_REVERT] = Aggiungi segnale sulla mappa</Italian> <!-- Bug mod recap screen Ctrl+Shift+Q -->
+		<Russian>[NEWLINE]ALT+S - Поставить метку на карте</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_REV_MOD_INITIALIZING_ALT_X_SHORTCUT</Tag>
@@ -1784,6 +1794,7 @@
 		<Spanish>[NEWLINE]ALT-X = Editar mapa de puntos</Spanish>
 		<Polish>[NEWLINE]ALT-X = Edytuj kropki mapy!</Polish>
 		<Italian>[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]ALT-X[COLOR_REVERT] = Modifica dotmap</Italian> <!-- Bug mod recap screen Ctrl+Shift+Q -->
+		<Russian>[NEWLINE]ALT+X - Редактировать карту точек городов</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_REV_MOD_INITIALIZING_BUG_OPTIONS_SHORTCUT</Tag>
@@ -1793,6 +1804,7 @@
 		<Italian>[NEWLINE][H2][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]CTRL-ALT-O[COLOR_REVERT] = Opzioni di gioco</Italian> <!-- Bug mod recap screen Ctrl+Shift+Q -->
 		<Spanish>[NEWLINE]CTRL-ALT-O = Opciones de juego</Spanish>
 		<Polish>[NEWLINE]CTRL-ALT-O = Opcje Gry</Polish>
+		<Russian>[NEWLINE]CTRL+ALT+O - Настройки интерфейса</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_REV_MOD_INITIALIZING_CTRL_A_SHORTCUT</Tag>
@@ -1801,6 +1813,7 @@
 		<Spanish>[NEWLINE]CTRL-A = Abandonar ciudad o demoler edificios</Spanish>
 		<Polish>[NEWLINE]CTRL-A = Opu&#156;&#230; miasto lub zniszcz budynek!</Polish>
 		<Italian>[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]CTRL-A[COLOR_REVERT] = Abbandona città o demolisci edifici</Italian> <!-- Bug mod recap screen Ctrl+Shift+Q -->
+		<Russian>[NEWLINE]CTRL+A - Забросить город или снести здания (на экране города)</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_REV_MOD_INITIALIZING_CTRL_I_SHORTCUT</Tag>
@@ -1809,6 +1822,7 @@
 		<Spanish>[NEWLINE]CTRL-I = Minimizar interfaz</Spanish>
 		<Polish>[NEWLINE]CTRL-I = Minimalizuj interfejs!</Polish>
 		<Italian>[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]CTRL-I[COLOR_REVERT] = Minimizza l'interfaccia utente</Italian> <!-- Bug mod recap screen Ctrl+Shift+Q -->
+		<Russian>[NEWLINE]CTRL+I - Минимизировать интерфейс</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_REV_MOD_INITIALIZING_CTRL_L_ARROW_SHORTCUT</Tag>
@@ -1817,6 +1831,7 @@
 		<Spanish>[NEWLINE]CTRL-FLECHA IZQ = Ángulo 45º a la derecha</Spanish>
 		<Polish>[NEWLINE]CTRL-Strza&#179;ka w lewo = obr&#243;&#230; o 45 stopni w lewo!</Polish>
 		<Italian>[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]CTRL-L ARROW[COLOR_REVERT] = Ruota mappa di 45° in senso orario</Italian> <!-- Bug mod recap screen Ctrl+Shift+Q -->
+		<Russian>[NEWLINE]CTRL+Влево - Повернуть карту на 45 по часовой стрелке</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_REV_MOD_INITIALIZING_CTRL_R_ARROW_SHORTCUT</Tag>
@@ -1825,6 +1840,7 @@
 		<Spanish>[NEWLINE]CTRL-FLECHA DER = Ángulo 45º a la izquierda</Spanish>
 		<Polish>[NEWLINE]CTRL-Strza&#179;ka w prawo = obr&#243;&#230; o 45 stopni w prawo!</Polish>
 		<Italian>[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]CTRL-R ARROW[COLOR_REVERT] = Ruota mappa di 45° in senso antiorario</Italian> <!-- Bug mod recap screen Ctrl+Shift+Q -->
+		<Russian>[NEWLINE]CTRL+Вправо - Повернуть карту на 45 против часовой стрелке</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_REV_MOD_INITIALIZING_CTRL_SHIFT_L_SHORTCUT</Tag>
@@ -1833,6 +1849,7 @@
 		<Spanish>[NEWLINE]CTRL-SHIFT-L = Nuevo líder</Spanish>
 		<Polish>[NEWLINE]CTRL-SHIFT-L = Nowy Przyw&#243;dca!</Polish>
 		<Italian>[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]CTRL-SHIFT-L[COLOR_REVERT] = Nuovo leader</Italian> <!-- Bug mod recap screen Ctrl+Shift+Q -->
+		<Russian>[NEWLINE]CTRL+SHIFT+L - Новый лидер</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_REV_MOD_INITIALIZING_CTRL_SHIFT_M_SHORTCUT</Tag>
@@ -1841,6 +1858,7 @@
 		<Spanish>[NEWLINE]CTRL-SHIFT-M = Turno jugado por la IA</Spanish>
 		<Polish>[NEWLINE]CTRL-SHIFT-M = Tura rozgrywana przez AI!</Polish>
 		<Italian>[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]CTRL-SHIFT-M[COLOR_REVERT] = Fai giocare il turno all'IA</Italian> <!-- Bug mod recap screen Ctrl+Shift+Q -->
+		<Russian>[NEWLINE]CTRL+SHIFT+M - Компьютер сделает ход за вас</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_REV_MOD_INITIALIZING_CTRL_SHIFT_P_SHORTCUT</Tag>
@@ -1849,6 +1867,7 @@
 		<Spanish>[NEWLINE]CTRL-SHIFT-P = Nueva civilización</Spanish>
 		<Polish>[NEWLINE]CTRL-SHIFT-P = Nowa Cywilizacja!</Polish>
 		<Italian>[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]CTRL-SHIFT-P[COLOR_REVERT] = Nuova civiltà</Italian> <!-- Bug mod recap screen Ctrl+Shift+Q -->
+		<Russian>[NEWLINE]CTRL+SHIFT+P - Новая цивилизация</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_REV_MOD_INITIALIZING_CTRL_X_SHORTCUT</Tag>
@@ -1857,6 +1876,7 @@
 		<Spanish>[NEWLINE]CTRL-X = Mostrar/ocultar mapa de puntos</Spanish>
 		<Polish>[NEWLINE]CTRL-X = Poka&#191;/Ukryj kropki mapy!</Polish>
 		<Italian>[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]CTRL-X [COLOR_REVERT]= Mostra o nascondi dotmap</Italian>  <!-- Bug mod recap screen Ctrl+Shift+Q -->
+		<Russian>[NEWLINE]CTRL+X - Показать/скрыть карту точек городов</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_REV_MOD_INITIALIZING_EMERGENCY_DRAFT</Tag>
@@ -1875,6 +1895,7 @@
 		<Italian>[NEWLINE]Scorciatoie di gioco:[NEWLINE]</Italian> <!-- Bug mod recap screen Ctrl+Shift+Q -->
 		<Spanish>[NEWLINE]Atajos de teclado:</Spanish>
 		<Polish>[NEWLINE]Skr&#243;ty w Grze:</Polish>
+		<Russian>[NEWLINE]Горячие клавиши:</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_REV_MOD_INITIALIZING_INIT_POPUP</Tag>
@@ -1884,6 +1905,7 @@
 		<Italian>[NEWLINE]Per aprire questo popup: Ctrl+Shift+Q[NEWLINE]</Italian>  <!-- Bug mod recap screen Ctrl+Shift+Q -->
 		<Spanish>Ctrl+Shift+Q = Este cuadro</Spanish>
 		<Polish>Ctrl+Shift+Q = To Okienko</Polish>
+		<Russian>Ctrl+Shift+Q - Открыть эту подсказку</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_REV_MOD_INITIALIZING_INQUISITIONS_ENABLED</Tag>
@@ -1893,6 +1915,7 @@
 		<Italian>[NEWLINE]Opzione inquisizione attivata</Italian>
 		<Spanish>[NEWLINE]Inquisición activada</Spanish>
 		<Polish>[NEWLINE]W&#179;&#185;czona Inkwizycja</Polish>
+		<Russian>[NEWLINE]Инквизиция включена</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_REV_MOD_INITIALIZING_PILLAGE_INFLUENCE</Tag>
@@ -1910,6 +1933,7 @@
 		<Spanish>[NEWLINE]SHIFT-F5 = Guardado rápido</Spanish>
 		<Polish>[NEWLINE]SHIFT-F5 = Szybki Zapis!</Polish>
 		<Italian>[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]SHIFT-F5[COLOR_REVERT] = Salvataggio rapido</Italian> <!-- Bug mod recap screen Ctrl+Shift+Q -->
+		<Russian>[NEWLINE]SHIFT-F5 - быстрое сохранение</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_REV_MOD_INITIALIZING_SHIFT_F8_SHORTCUT</Tag>
@@ -1918,6 +1942,7 @@
 		<Spanish>[NEWLINE]SHIFT-F8 = Carga rápida</Spanish>
 		<Polish>[NEWLINE]SHIFT-F8 = Szybkie Wczytywanie!</Polish>
 		<Italian>[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]SHIFT-F8[COLOR_REVERT] = Caricamento rapido</Italian> <!-- Bug mod recap screen Ctrl+Shift+Q -->
+		<Russian>[NEWLINE]SHIFT+F8 - быстрая загрузка</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_REV_MOD_MAX_CIVS_IN_DLL</Tag>
@@ -1927,7 +1952,7 @@
 		<Italian>[NEWLINE][NEWLINE][COLOR_HIGHLIGHT_TEXT]Numero massimo[COLOR_REVERT] civiltà (dal file DLL): %d1</Italian> <!-- Bug mod recap screen Ctrl+Shift+Q -->
 		<Spanish>[NEWLINE][NEWLINE]Máximo de civilizaciones de la DLL: %d1</Spanish>
 		<Polish>[NEWLINE][NEWLINE]Maks ilo&#156;&#230; cywilizacji w DLL: %d1</Polish>
-		<Russian>[NEWLINE][NEWLINE]Ìàêñèìàëüíîå êîëè÷åñòâî öèâèëèçàöèé â DLL: %d1</Russian>
+		<Russian>[NEWLINE][NEWLINE]Максимум цивилизаций в DLL файле: %d1</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_REV_MOD_REVS_WILL_STOP_AT</Tag>
@@ -1937,7 +1962,7 @@
 		<Italian>[NEWLINE]L'opzione [COLOR_HIGHLIGHT_TEXT]rivoluzioni[COLOR_REVERT] si [COLOR_HIGHLIGHT_TEXT]interromperà con %d1 civiltà[COLOR_REVERT]</Italian> <!-- Bug mod recap screen Ctrl+Shift+Q -->
 		<Spanish>[NEWLINE][SPACE]Revolution se detendrá al llegar a %d1 civilizaciones</Spanish>
 		<Polish>[NEWLINE][SPACE]Rewolucje zatrzymaj&#185; si&#234; przy %d1 Cywilizacjach</Polish>
-		<Russian>[NEWLINE][SPACE]Revolution ìîä áóäåò îñòàíîâëåí íà %d1 öèâèëèçàöèÿõ.</Russian>
+		<Russian>[NEWLINE][SPACE]Опция «Революции» остановится при числе цивилизаций - %d1</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_REV_MOD_TURNS_IN_GAME</Tag>
@@ -1947,7 +1972,7 @@
 		<Italian>[NEWLINE]Turni della partita: [COLOR_HIGHLIGHT_TEXT]%d1[COLOR_REVERT]</Italian> <!-- Bug mod recap screen Ctrl+Shift+Q -->
 		<Spanish>[NEWLINE]Turnos de la partida: %d1</Spanish>
 		<Polish>[NEWLINE]Tur w grze: %d1</Polish>
-		<Russian>[NEWLINE]Õîäîâ â èãðå: %d1</Russian>
+		<Russian>[NEWLINE]Ходов в партии: %d1</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_REV_NONE</Tag>
@@ -1957,7 +1982,7 @@
 		<Italian>Nessuno</Italian>
 		<Spanish>Ninguna</Spanish>
 		<Polish>Brak</Polish>
-		<Russian>Íåò</Russian>
+		<Russian>Нет</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_REV_PEACEFUL_CONCLUSION</Tag>

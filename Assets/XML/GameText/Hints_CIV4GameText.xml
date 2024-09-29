@@ -199,7 +199,7 @@
 		<Italian>*Suggerimento del BUG Team*: Sfrutta le caratteristiche della tua Civiltà e specializza il tuo Impero. È inutile essere Carismatico e Aggressivo se poi non cominci nemmeno una guerra.</Italian>
 		<Spanish>*Consejo de BUG*: Juega bien los rasgos de tu civilización, y especializa tu imperio. No tiene ninguna utilidad ser un líder Carismático y Agresivo y no comenzar ninguna guerra.</Spanish>
 		<Polish>*Podpowied&#159; do BUG'a*: Wykorzystuj dobrze cechy twojej cywilizacji i specjalizuj swoje imperium. Bezu&#191;yteczne jest bycie Charyzmatycznym lub Agresywnym bez wszczynania wojen.</Polish>
-		<Russian>*BUG Hint*: Воспользуйтесь чертами своей Цивилизации и определите вектор развития вашей державы. Бессмысленно выбирать харизматичного и агрессивного лидера и никогда не начинать войну.</Russian>
+		<Russian>*BUG Hint*: Оглядывайтесь на качества лидера вашей цивилизации для определения вектора развития. Бессмысленно быть харизматичным и агрессивным и никогда не начинать войну.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_HINT_9</Tag>
@@ -273,7 +273,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_HINT_INTERFACE_7</Tag>
-		<English>*BUG Hint*: To create rally points, select the city, or cities, you are building units it, hold down the [SHIFT] key and Right Click on the tile you want your rally point to be at. You will see a yellow circle showing the rally point.[NEWLINE]To cancel orders select the same city or cities, [SHIFT] and Right click on any city square, and it will cancel the rally orders.</English>
+		<English>*BUG Hint*: To create rally points, select the city or cities you are building units in, hold down the [SHIFT] key, and right-click on the tile you want your rally point to be at. You will see a yellow circle showing the rally point.[NEWLINE]To cancel orders select the same city or cities, [SHIFT] and right-click on any city square, and it will cancel the rally orders.</English>
 		<French>*Conseils du BUG*: Pour créer des points de rassemblement, sélectionnez la ville ou les villes où vous construisez vos unités, gardez [SHIFT] enfoncé et cliquez avec le bouton de droite sur la case où vous voulez que vos unités aillent. Un cercle jaune indiquera le point de rassemblement.[NEWLINE]Pour annuler cet ordre, sélectionnez la même ville, gardez [SHIFT] enfoncé et cliquez avec le bouton de droite et cliquez sur une case de ville.</French>
 		<German>[BUG] Tipp... Bei gedrückter [SHIFT]-Taste in Verbindung mit einem Rechtsklick lässt sich für eine oder mehrere Städte ein Sammelpunkt für Einheiten setzen. Der Sammelpunkt wird durch einen gelben Kreis markiert. Wird bei gedrückter [SHIFT]-Taste in Verbindung mit einem Rechtsklick ein Stadtgeländefeld ausgewählt, lässt sich der Sammelpunkt wieder aufheben.</German>
 		<Italian>*Suggerimento del BUG Team*: Per creare punti di raduno, seleziona la città (o le città) in cui stai costruendo le unità, tieni premuto il tasto Maiusc e clicca col destro sulla casella dove vuoi collocare il punto di raduno. Vedrai un cerchio giallo indicare il punto di raduno.[NEWLINE]Per cancellare il punto di raduno, seleziona la stessa (o le stesse) città, tieni premuto il tasto Maiusc e clicca col destro su una qualunque casella cittadina.</Italian>

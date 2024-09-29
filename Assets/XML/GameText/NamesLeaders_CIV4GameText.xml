@@ -983,7 +983,7 @@
 		<French>Félicitations! En résultat de votre expansion culturelle nationale, la personnalité de votre Leader s'est affirmée. Sélectionnez un trait à ajouter à votre profil, [COLOR_WARNING_TEXT]OU un trait négatif à enlever![COLOR_REVERT]</French>
 		<Italian>Congratulazioni! Come risultato dell'espansione della tua cultura nazionale, la personalità del tuo leader si è evoluta. Seleziona un nuovo tratto da aggiungere al tuo leader[COLOR_WARNING_TEXT]O seleziona un tratto negativo da rimuovere![COLOR_REVERT]</Italian>
 		<Polish>Gratulacje! Dzi&#234;ki rozszerzaniu Narodowego Dziedzictwa kulturowego, Twoja osobowo&#156;&#230; staje si&#234; g&#179;&#234;bsza. Wybierz now&#185; cech&#234; by doda&#230; j&#185; do Twojego profilu, [COLOR_WARNING_TEXT]LUB wybierz Negatywn&#185; Cech&#234; by j&#185; usun&#185;&#230;![COLOR_REVERT]</Polish>
-		<Russian>Поздравляем! В результате расширения национальной культуры личность вашего лидера стала более глубокой. Выберите черту, которую нужно добавить для вашего лидера [COLOR_WARNING_TEXT], или выберите отрицательную черту для удаления.[COLOR_REVERT]</Russian>
+		<Russian>Поздравляем! В результате расширения национальной культуры личность вашего лидера стала более глубокой. Выберите качество, которое нужно добавить вашему лидеру [COLOR_WARNING_TEXT], или выберите отрицательное качество для удаления.[COLOR_REVERT]</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_LEADER_LEVELUP_NEGATIVE</Tag>
@@ -991,7 +991,7 @@
 		<French>Le pouvoir corrompt, et le pouvoir absolu corrompt absolument. En résultat supplémentaire de l'expansion nationale de la culture, la personnalité de votre chef s'est dégradée également. Sélectionnez un nouveau trait négatif à ajouter à votre profil. [COLOR_HIGHLIGHT_TEXT]OU un trait positif à enlever![COLOR_REVERT]</French>
 		<Italian>Il potere corrompe, e il potere assoluto corrompe ancora di più. Come risultato dell'espansione della tua cultura nazionale, la personalità del tuo leader si è evoluta in modo negativo. Seleziona un nuovo tratto negativo da aggiungere al tuo leader[COLOR_WARNING_TEXT]O seleziona un tratto positivo da rimuovere![COLOR_REVERT]</Italian>
 		<Polish>W&#179;adza psuje, a w&#179;adza absolutna psuje absolutnie. Dodatkowym rezultatem Twojego Rozszerzania Kultury jest pog&#179;&#234;bienie Twoich Negatywnych cech. Wybierz now&#185; cech&#234; by doda&#230; j&#185; do Twojego profilu, [COLOR_WARNING_TEXT]LUB wybierz Pozytywn&#185; Cech&#234; by j&#185; usun&#185;&#230;![COLOR_REVERT]</Polish>
-		<Russian>Власть развращает, а абсолютная власть развращает абсолютно. В результате расширения национальной культуры личность вашего лидера углубилась в негативном направлении. Выберите отрицательную черту, которую нужно добавить для вашего лидера [COLOR_HIGHLIGHT_TEXT], или выберите положительную черту для удаления.[COLOR_REVERT]</Russian>
+		<Russian>Власть развращает, а абсолютная власть развращает абсолютно. В результате расширения национальной культуры личность вашего лидера углубилась в негативном направлении. Выберите отрицательное качество, которое нужно добавить вашему лидеру [COLOR_HIGHLIGHT_TEXT], или выберите положительное качество для удаления.[COLOR_REVERT]</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_LEADER_LEVEL_PROGRESS_1</Tag>

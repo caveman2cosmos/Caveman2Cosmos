@@ -127,7 +127,7 @@
 		<German>Beschwerden</German>
 		<Spanish>Alteraciones de estado</Spanish>
 		<Polish>Os&#179;abienia</Polish>
-		<Russian>(П) Бедствия</Russian>
+		<Russian>Бедствия</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PEDIA_CATEGORY_ALL_ERAS</Tag>
@@ -135,7 +135,7 @@
 		<French>Toutes les Eres</French>
 		<Italian>Tutte le ere</Italian>
 		<German>Alle Zeitalter</German>
-		<Russian>Все эпохи</Russian>
+		<Russian>Все периоды</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PEDIA_CATEGORY_ANIMALISTIC_BUILDINGS</Tag>
@@ -218,7 +218,7 @@
 		<French>Spéciaux</French>
 		<Italian>Altri edifici</Italian>
 		<German>Besonderheiten</German>
-		<Russian>Особые</Russian>
+		<Russian>Специальные</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PEDIA_CATEGORY_BUILDING_TREE</Tag>
@@ -327,7 +327,7 @@
 		<German>Ausrüstung</German>
 		<Spanish>Equipamiento</Spanish>
 		<Polish>Ekwipunek</Polish>
-		<Russian>(P) Снаряжение</Russian>
+		<Russian>Арматура</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PEDIA_CATEGORY_ERAS</Tag>
@@ -353,7 +353,7 @@
 			<Plural>1</Plural>
 		</Spanish>
 		<Polish>Cechy Terenu</Polish>
-		<Russian>Особенности</Russian>
+		<Russian>Особенности ландшафта</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PEDIA_CATEGORY_GREAT_WONDERS</Tag>
@@ -417,7 +417,7 @@
 			<Plural>1</Plural>
 		</Spanish>
 		<Polish>Ulepszenia</Polish>
-		<Russian>Улучшения</Russian>
+		<Russian>Надстройки</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PEDIA_CATEGORY_LANDSCAPE</Tag>
@@ -505,7 +505,7 @@
 			<Plural>1</Plural>
 		</Spanish>
 		<Polish>Promocje</Polish>
-		<Russian>Повышения</Russian>
+		<Russian>Квалификации</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PEDIA_CATEGORY_PROMOTION_TREE</Tag>
@@ -515,7 +515,7 @@
 		<Italian>Albero promozioni</Italian>
 		<Spanish>Árbol de ascensos</Spanish>
 		<Polish>Drzewko prom.</Polish>
-		<Russian>Древо повышений</Russian>
+		<Russian>Древо квалификаций</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PEDIA_CATEGORY_RELIGION</Tag>
@@ -539,14 +539,14 @@
 		<Tag>TXT_KEY_PEDIA_CATEGORY_HERITAGE</Tag>
 		<English>Heritage</English>
 		<French>Héritage</French>
+		<Italian>Patrimonio culturale</Italian>
 		<Spanish>
 			<Text>Patrimonio</Text>
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</Spanish>
 		<Polish>Dziedziczenie</Polish>
-		<Russian>Íàñëåäèå</Russian>
-		<Italian>Patrimonio culturale</Italian>
+		<Russian>Культурное наследие</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PEDIA_CATEGORY_RELIGIOUS_BUILDINGS</Tag>
@@ -866,6 +866,12 @@
 		<German>im Besitz:</German>
 		<Italian>proprio</Italian>
 		<Russian>Во владении</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PEDIA_PERSONALITY</Tag>
+		<English>Personailty</English>
+		<German>Personailty</German>
+		<Russian>Характеристика</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PEDIA_QUOTE</Tag>

@@ -455,7 +455,7 @@
 		<French>Améliorations Auto</French>
 		<Spanish>Mejora automatizada</Spanish>
 		<Polish>Autotematyczne Ulepszenie</Polish>
-		<Russian>Àâòîóëó÷øåíèå</Russian>
+		<Russian>Автоулучшение</Russian>
 		<Italian>Modernizzazione automatizzata</Italian> <!-- infoscreen Military -->
 	</TEXT>
 	<TEXT>
@@ -465,7 +465,7 @@
 		<Italian>Promozione</Italian> <!-- infoscreen Military -->
 		<Spanish>Ascensos</Spanish>
 		<Polish>Promocje</Polish>
-		<Russian>Óëó÷øåíèÿ</Russian>
+		<Russian>Квалификации</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITGROUPER_PROMOTION_GROUP_NONE</Tag>
@@ -1395,6 +1395,7 @@
 		<French>[ICON_BULLET]Ecrasement: %d1_Amount%% de chances par round de force le Défenseur à se retirer.</French>
 		<Italian>[ICON_BULLET]Sbaraglio: %d1_Amount%% di probabilità a turno di costringere i difensori a ritirarsi.</Italian>
 		<Polish>[ICON_BULLET]Odrzut: %d1_Amount%% szansy na rund&#234; do zmuszenia obro&#241;cy do ucieczki.</Polish>
+		<Russian>[ICON_BULLET]Отбрасывание: при атаке заставляет обороняющихся отступить с вероятностью %d1_Amount%% каждый раунд.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITHELP_KNOCKBACK_RETRIES</Tag>
@@ -1957,7 +1958,7 @@
 		<French>[ICON_BULLET]Expulsion: Lors de la défense, force les attaquants à abandonner les combats, avec une probabilité de %d1_Amount%% pour chaque round.</French>
 		<Italian>[ICON_BULLET]Respinta: in fase difensiva, forza gli attaccanti a cercare di ritirarsi con il %d1_Amount%% di probabilità ogni turno.</Italian>
 		<Polish>[ICON_BULLET]Odpychanie: Kiedy si&#234; bronisz, si&#179;y atakuj&#185;ce mog&#185; uciec (%d1_Amount%% szansy/tur&#234;).</Polish>
-		<Russian>[ICON_BULLET]Отражение: при обороне заставляет атакующих врагов отступить с вероятностью %d1_Amount%% каждый раунд.</Russian>
+		<Russian>[ICON_BULLET]Отражение: при обороне заставляет атакующих отступить с вероятностью %d1_Amount%% каждый раунд.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITHELP_REPEL_RETRIES</Tag>
@@ -2284,6 +2285,7 @@
 		<French>[ICON_BULLET]Inflexible: Soustrait %d1_Amount des valeurs d'Expulsion/Ecrasement de l'ennemi.</French>
 		<Italian>[ICON_BULLET]Inflessibile: sottrae %d1_Amount dai valori nemici di sbaraglio e respinta.</Italian>
 		<Polish>[ICON_BULLET]Nieust&#234;pliwy: Odejmuje %d1_Amount z wrogiej warto&#156;ci Odrzutu i Odpychania.</Polish>
+		<Russian>[ICON_BULLET]Стойкость: вычитает %d1_Amount из значений отбрасывания и отражения у врага.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITHELP_UNYIELDING_TOTAL_MODIFIER</Tag>
@@ -4366,7 +4368,7 @@
 			<Gender>Female</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
-		<Russian>Ãðóïïà ëþäåé</Russian>
+		<Russian>Родовая община</Russian>
 		<Italian>Comitiva ancestrale</Italian>
 	</TEXT>
 	<TEXT>

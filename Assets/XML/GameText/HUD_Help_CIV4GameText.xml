@@ -22,7 +22,7 @@
 		<Italian>Lista città</Italian>
 		<French>Conseiller Interne</French>
 		<German>Inland</German>
-		<Russian>Главный советник</Russian>
+		<Russian>Владения</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HUD_BUTTON_ADVISOR_FINANCE</Tag>
@@ -30,7 +30,7 @@
 		<Italian>Informazioni economia</Italian>
 		<French>Conseiller Financier</French>
 		<German>Finanzen</German>
-		<Russian>Советник по финансам</Russian>
+		<Russian>Финансы</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HUD_BUTTON_ADVISOR_FOREIGN</Tag>
@@ -38,12 +38,12 @@
 		<Italian>Politica estera</Italian>
 		<French>Conseiller des Affaires Etrangères</French>
 		<German>Ausland</German>
-		<Russian>Советник МИД</Russian>
+		<Russian>Дипломатия</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HUD_BUTTON_ADVISOR_HERITAGE</Tag>
 		<English>Heritage Advisor</English>
-		<Russian>Советник по наследию</Russian>
+		<Russian>Культурное наследие</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HUD_BUTTON_ADVISOR_INTELLIGENCE</Tag>
@@ -51,7 +51,7 @@
 		<French>Conseiller d'Espionnage</French>
 		<Italian>Informazioni spionaggio</Italian>
 		<German>Geheimdienst</German>
-		<Russian>Советник по шпионажу</Russian>
+		<Russian>Шпионаж</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HUD_BUTTON_ADVISOR_MILITARY</Tag>
@@ -59,7 +59,7 @@
 		<French>Conseiller Militaire</French>
 		<Italian>Informazioni militari</Italian>
 		<German>Militär</German>
-		<Russian>Военный советник</Russian>
+		<Russian>Боевые действия</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HUD_BUTTON_ADVISOR_PARTISAN</Tag>
@@ -75,7 +75,7 @@
 		<French>Conseiller Religieux</French>
 		<Italian>Informazioni religioni</Italian>
 		<German>Glaube</German>
-		<Russian>Советник по религиям</Russian>
+		<Russian>Религия</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HUD_BUTTON_ADVISOR_TECHNOLOGY</Tag>
@@ -83,7 +83,7 @@
 		<Italian>Informazioni tecnologia</Italian>
 		<French>Conseiller Technologique</French>
 		<German>Technologien</German>
-		<Russian>Научный советник</Russian>
+		<Russian>Технологии</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HUD_BUTTON_TOGGLE_BARE_MAP</Tag>

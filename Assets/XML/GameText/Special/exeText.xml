@@ -1324,7 +1324,7 @@
 		<Italian>[NEWLINE]Informazioni dettagliate sul mondo di gioco.</Italian>
 		<Spanish>Hace que aparezca información detallada sobre el mundo de la partida.</Spanish>
 		<Polish>Pokazuje szczeg&#243;&#179;owe informacje o twoim &#156;wiecie gry.</Polish>
-		<Russian>Выводить подробную информацию о мире вашей игры.</Russian>
+		<Russian>Показать подробную информацию о мире.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HOST_CONNECT_FAILURE_DESC</Tag>
@@ -2150,7 +2150,7 @@
 		<Italian>Indietro</Italian>
 		<Spanish>Volver</Spanish>
 		<Polish>WR&#211;&#198;</Polish>
-		<Russian>Назад</Russian>
+		<Russian>Вернуться</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MAIN_MENU_HALL_OF_FAME</Tag>
@@ -2289,7 +2289,7 @@
 		<Italian>LEADER</Italian>
 		<Spanish>LÍDERES</Spanish>
 		<Polish>PRZYW&#211;DCY</Polish>
-		<Russian>ЛИДЕРЫ</Russian>
+		<Russian>Лидеры</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MAIN_MENU_LOADSAVE_CANCEL</Tag>
@@ -2819,7 +2819,7 @@
 		<Italian> - In attesa del Pitboss</Italian>
 		<Spanish> - Esperando Pitboss</Spanish>
 		<Polish> - Oczekiwanie na PitBossa</Polish>
-		<Russian> - В ожидании ПитБосса</Russian>
+		<Russian> - Ожидание пит-босса</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MAIN_MENU_PLAYERNAME_MISSING_DESC</Tag>
@@ -2859,7 +2859,7 @@
 		<Italian>DETTAGLI GIOCATORE</Italian>
 		<Spanish>DETALLES DEL JUGADOR</Spanish>
 		<Polish>SZCZEG&#211;&#163;Y GRACZA</Polish>
-		<Russian>СВЕДЕНИЯ ОБ ИГРОКЕ</Russian>
+		<Russian>Сведения об игроке</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MAIN_MENU_PLAYER_NAME</Tag>
@@ -2889,7 +2889,7 @@
 		<Italian>Partita veloce</Italian>
 		<Spanish>Jugar ya</Spanish>
 		<Polish>Prosta gra</Polish>
-		<Russian>Быстрая игра</Russian>
+		<Russian>Новая игра</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MAIN_MENU_RANDOM</Tag>
@@ -3229,7 +3229,7 @@
 		<Italian>Condizioni vittoria</Italian>
 		<Spanish>Victorias</Spanish>
 		<Polish>ZWYCI&#202;STWA</Polish>
-		<Russian>Победы</Russian>
+		<Russian>Условия победы</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MAIN_MENU_WAITING_FOR_CIVS</Tag>
@@ -3259,7 +3259,7 @@
 		<Italian>RICEZIONE MAPPA IN CORSO...</Italian>
 		<Spanish>RECIBIENDO MAPA...</Spanish>
 		<Polish>OTRZYMYWANIE MAPY...</Polish>
-		<Russian>ПОЛУЧЕНИЕ КАРТЫ...</Russian>
+		<Russian>Получение карты...</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MAP_UPDATE_SEND</Tag>
@@ -3269,7 +3269,7 @@
 		<Italian>INVIO MAPPA IN CORSO...</Italian>
 		<Spanish>ENVIANDO MAPA...</Spanish>
 		<Polish>WYSY&#163;ANIE MAPY...</Polish>
-		<Russian>ОТПРАВКА КАРТЫ...</Russian>
+		<Russian>Отправка карты...</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MAP_UPDATE_TITLE</Tag>
@@ -3509,7 +3509,7 @@
 		<Italian>Indirizzo e-mail:</Italian>
 		<Spanish>Dirección de e-mail:</Spanish>
 		<Polish>Adres e-mail:</Polish>
-		<Russian>Адрес e-mail:</Russian>
+		<Russian>Электронная почта:</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MENU_CIV_PASSWORD</Tag>
@@ -4788,7 +4788,7 @@
 		<Italian>Inserisci didascalia</Italian>
 		<Spanish>Escribir un encabezamiento</Spanish>
 		<Polish>Dodaj podpis</Polish>
-		<Russian>Введите надпись</Russian>
+		<Russian>Введите текст</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_SMTP_PASSWORD</Tag>
@@ -5372,7 +5372,7 @@
 		<Italian>Miglioramenti</Italian>
 		<Spanish>Mejoras</Spanish>
 		<Polish>Ulepszenia</Polish>
-		<Russian>Улучшения</Russian>
+		<Russian>Надстройки</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_WB_AS_TECH</Tag>
@@ -5492,7 +5492,7 @@
 		<Italian>Miglioramenti</Italian>
 		<Spanish>Mejoras</Spanish>
 		<Polish>Ulepszenia</Polish>
-		<Russian>Улучшения</Russian>
+		<Russian>Надстройки</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_WB_LANDMARK_PLOTS</Tag>
@@ -5551,7 +5551,7 @@
 		<Italian>Promozioni</Italian>
 		<Spanish>Ascensos</Spanish>
 		<Polish>Awanse</Polish>
-		<Russian>Повышения</Russian>
+		<Russian>Квалификации</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_WB_REGENERATE_MAP</Tag>
@@ -5561,7 +5561,7 @@
 		<Italian>Rigenera la mappa utilizzando l'attuale script</Italian>
 		<Spanish>Regenerar mapa empleando la actual secuencia de comandos de mapa</Spanish>
 		<Polish>Odt&#243;rz map&#234; u&#191;ywaj&#185;c obecnego skryptu</Polish>
-		<Russian>Пересоздать карту, используя текущий скрипт</Russian>
+		<Russian>Пересоздать карту, используя текущие настройки</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_WB_REVEAL_ALL</Tag>
