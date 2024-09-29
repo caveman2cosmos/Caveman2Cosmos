@@ -581,7 +581,7 @@
 		<Italian>Clicca per corrompere</Italian>
 		<Spanish>Clic para sobornar</Spanish>
 		<Polish>Kliknij, aby przekupi&#230;</Polish>
-		<Russian>Ïîäêóïèòü </Russian>
+		<Russian>Подкупить</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_ADVISOR_CRITICAL</Tag>
@@ -1444,6 +1444,7 @@
 		<German>Geländefelder anzeigen ein/aus</German>
 		<Italian>Abilita/disabilita griglia</Italian>
 		<Spanish>Activar casillas</Spanish>
+		<Russian>Переключить показ клеток</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_ACTION_GRID_HELP</Tag>
@@ -1452,6 +1453,7 @@
 		<German>Rasterlinien ein-/ausblenden.</German>
 		<Italian>[NEWLINE] Attiva o disattiva la griglia</Italian>
 		<Spanish>Activar cuadrícula</Spanish>
+		<Russian>Переключить отображение клеточной решетки</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_ACTION_INFILTRATE_MISSION_FOREIGN</Tag>
@@ -1824,6 +1826,7 @@
 		<German>Ertragsanzeige umschalten</German>
 		<Italian>Abilita o disabilita la visualizzazione della produzione</Italian>
 		<Spanish>Activar visor de rendimiento</Spanish>
+		<Russian>Переключить обзор выработки клеток</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_ACTION_YIELDS_HELP</Tag>
@@ -1832,6 +1835,7 @@
 		<German>Nahrungs-/Produktions-/Wirtschaftssymbole ein-/ausblenden.</German>
 		<Italian>[NEWLINE]Attiva o disattiva la visibilità delle icone di cibo, produzione e commercio.</Italian>
 		<Spanish>Activa la visibilidad de iconos de alimentos / producción / comercio</Spanish>
+		<Russian>Переключить видимость иконок еды/производства/денег</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_ACTUAL_EFFECTS</Tag>
@@ -5533,6 +5537,7 @@
 		<German>Inlandsberater</German>
 		<Italian>Lista città</Italian> <!--infoscreen city list-->
 		<Spanish>Consejero de Interior</Spanish>
+		<Russian>Владения</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DOMESTIC_GREAT_GENERAL_MODIFIER</Tag>
@@ -7937,8 +7942,8 @@
 	<TEXT>
 		<Tag>TXT_KEY_FINANCE_ADVISOR_UNIT_UPKEEP_TOTAL_2</Tag>
 		<English>[NEWLINE]--------------------------------[NEWLINE] Total unit upkeep: %d1 [ICON_GOLD]</English>
-		<Russian>[NEWLINE]--------------------------------[NEWLINE] Общее содержание войск: %d1 [ICON_GOLD]</Russian>
 		<Italian>[NEWLINE]--------------------------------[NEWLINE] Costi di mantenimento totali unità: [COLOR_HIGHLIGHT_TEXT]%d1[COLOR_REVERT] [ICON_GOLD]</Italian> <!-- financial advisor screen hover on unit maintenance costs -->
+		<Russian>[NEWLINE]--------------------------------[NEWLINE] Общие затраты на содержание: %d1 [ICON_GOLD]</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_FINANCIAL_ADVISOR_COST_PER_TURN</Tag>
@@ -7955,6 +7960,7 @@
 		<German>Gesamtausgaben</German>
 		<Italian>Spese totali</Italian> <!-- financial infoscreen -->
 		<Spanish>Gastos totales</Spanish>
+		<Russian>Итоговый расход</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_FINANCIAL_ADVISOR_EXPENSES_HEADER</Tag>
@@ -7963,6 +7969,7 @@
 		<German>Ausgaben</German>
 		<Italian>Spese</Italian> <!-- financial infoscreen -->
 		<Spanish>Gastos</Spanish>
+		<Russian>Расход</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_FINANCIAL_ADVISOR_INCOME</Tag>
@@ -7971,6 +7978,7 @@
 		<German>Gesamteinnahmen</German>
 		<Italian>Entrate totali</Italian> <!-- financial infoscreen -->
 		<Spanish>Ingresos totales</Spanish>
+		<Russian>Итоговый доход</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_FINANCIAL_ADVISOR_INCOME_HEADER</Tag>
@@ -7979,6 +7987,7 @@
 		<German>Einnahmen</German>
 		<Italian>Entrate</Italian> <!-- financial infoscreen -->
 		<Spanish>Ingresos</Spanish>
+		<Russian>Доход</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_FINANCIAL_ADVISOR_INFLATION</Tag>
@@ -7987,6 +7996,7 @@
 		<German>Inflation</German>
 		<Italian>Costi di inflazione</Italian> <!-- financial infoscreen -->
 		<Spanish>Inflación</Spanish>
+		<Russian>Инфляция</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_FINANCIAL_ADVISOR_NET_INCOME</Tag>
@@ -8011,6 +8021,7 @@
 		<German>Steuern</German>
 		<Italian>Tasse</Italian> <!-- financial infoscreen -->
 		<Spanish>Impuestos</Spanish>
+		<Russian>Налоги</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_FINANCIAL_ADVISOR_TITLE</Tag>
@@ -8019,6 +8030,7 @@
 		<German>Finanzberater</German>
 		<Italian>Informazioni economia</Italian> <!-- financial infoscreen -->
 		<Spanish>Consejero financiero</Spanish>
+		<Russian>Финансы</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_FINANCIAL_ADVISOR_TREASURY</Tag>
@@ -8027,6 +8039,7 @@
 		<German>Schatzkammer: %d1 [ICON_GOLD]</German>
 		<Italian>Tesoreria: [COLOR_HIGHLIGHT_TEXT]%d1[COLOR_REVERT] [ICON_GOLD]</Italian> <!-- financial infoscreen -->
 		<Spanish>Tesoro: %d1 [ICON_GOLD]</Spanish>
+		<Russian>Казначейство: %d1 [ICON_GOLD]</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_FINANCIAL_ADVISOR_UNITSUPPLY</Tag>
@@ -8035,6 +8048,7 @@
 		<German>Einheitennachschub</German>
 		<Italian>Supporto unità</Italian> <!-- financial infoscreen -->
 		<Spanish>Suministro de las unidades</Spanish>
+		<Russian>Поставки</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_FIRST_FLANK_SUPPORT</Tag>
@@ -20062,8 +20076,8 @@
 		<French>Traits de caractère</French>
 		<German>Charakterzüge</German>
 		<Italian>Tratti</Italian>
-		<Russian>Качества</Russian>
 		<Spanish>Rasgos</Spanish>
+		<Russian>Качества</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PEDIA_UNITS_ENABLED</Tag>
@@ -25211,6 +25225,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<German>Runde beenden mit &lt;EINGABETASTE&gt; ...</German>
 		<Italian>Premi &lt;INVIO&gt; per terminare il turno...</Italian>
 		<Spanish>Pulsar &lt;INTRO&gt; para terminar el turno...</Spanish>
+		<Russian>Нажмите &lt;ENTER&gt; чтобы закончить ход...</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_SYSTEM_GAME_PAUSED</Tag>

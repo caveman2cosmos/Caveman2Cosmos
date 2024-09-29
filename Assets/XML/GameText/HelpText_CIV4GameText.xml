@@ -123,6 +123,7 @@
 		<German>[ICON_BULLET]Ausbildung von:[SPACE]</German>
 		<Italian>[ICON_BULLET]Permette l'addestramento di unità del tipo:[SPACE]</Italian> <!--tech Nomadism hover -->
 		<Spanish>[ICON_BULLET]Puede preparar[SPACE]</Spanish>
+		<Russian>[ICON_BULLET]Позволит обучать[SPACE]</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECHHELP_CHOOSER_TITLE</Tag>

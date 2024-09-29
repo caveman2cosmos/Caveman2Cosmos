@@ -1324,7 +1324,7 @@
 		<Italian>[NEWLINE]Informazioni dettagliate sul mondo di gioco.</Italian>
 		<Spanish>Hace que aparezca información detallada sobre el mundo de la partida.</Spanish>
 		<Polish>Pokazuje szczeg&#243;&#179;owe informacje o twoim &#156;wiecie gry.</Polish>
-		<Russian>Выводить подробную информацию о мире вашей игры.</Russian>
+		<Russian>Показать подробную информацию о мире.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HOST_CONNECT_FAILURE_DESC</Tag>
@@ -2819,7 +2819,7 @@
 		<Italian> - In attesa del Pitboss</Italian>
 		<Spanish> - Esperando Pitboss</Spanish>
 		<Polish> - Oczekiwanie na PitBossa</Polish>
-		<Russian> - В ожидании ПитБосса</Russian>
+		<Russian> - Ожидание пит-босса</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MAIN_MENU_PLAYERNAME_MISSING_DESC</Tag>
@@ -2859,7 +2859,7 @@
 		<Italian>DETTAGLI GIOCATORE</Italian>
 		<Spanish>DETALLES DEL JUGADOR</Spanish>
 		<Polish>SZCZEG&#211;&#163;Y GRACZA</Polish>
-		<Russian>СВЕДЕНИЯ ОБ ИГРОКЕ</Russian>
+		<Russian>Сведения об игроке</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MAIN_MENU_PLAYER_NAME</Tag>

@@ -187,14 +187,14 @@
 	<TEXT>
 		<Tag>TXT_KEY_WB_ERASE_ALL_PLOTS</Tag>
 		<English>Erase all plots</English>
-		<Russian>Очистить все клетки</Russian>
 		<Italian>Cancella tutte le caselle</Italian>
+		<Russian>Очистить все клетки</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_WB_ESTIMATED_END_TURN</Tag>
 		<English>[COLOR_LIGHT_GREY]Estimated End Turn: %s[COLOR_REVERT]</English>
-		<Russian>[COLOR_LIGHT_GREY]Ожидаемый конец хода: %s[COLOR_REVERT]</Russian>
 		<Italian>[COLOR_LIGHT_GREY]Fine turno stimata: %s[COLOR_REVERT]</Italian>
+		<Russian>[COLOR_LIGHT_GREY]Ожидаемый конец хода: %s[COLOR_REVERT]</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_WB_EVER</Tag>

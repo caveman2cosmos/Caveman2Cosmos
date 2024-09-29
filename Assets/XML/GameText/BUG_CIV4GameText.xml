@@ -118,6 +118,7 @@
 		<Tag>TXT_KEY_BUG_FINANCIAL_ADVISOR_BUILDING_COUNT_AVERAGE</Tag>
 		<English>(%d1 × %s2[ICON_GOLD] = %s3[ICON_GOLD])</English>
 		<Italian>(%d1 × %s2 [ICON_GOLD] = %s3 [ICON_GOLD])</Italian>
+		<Russian>(%d1 × %s2[ICON_GOLD] = %s3[ICON_GOLD])</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_FINANCIAL_ADVISOR_COMMERCE</Tag>
@@ -126,7 +127,7 @@
 		<German>Handel insgesamt</German>
 		<Italian>Commercio totale</Italian>
 		<Spanish>Comercio total</Spanish>
-		<Russian>Îáùàÿ òîðãîâëÿ</Russian>
+		<Russian>Общая торговля</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_FINANCIAL_ADVISOR_DOMESTIC_TRADE</Tag>
@@ -135,7 +136,7 @@
 		<German>Gesamteinkommen durch inländische Handelsverbindungen</German>
 		<Italian>Commercio totale dalle rotte commerciali interne</Italian>
 		<Spanish>Comercio total procedente del comercio interior</Spanish>
-		<Russian>Âñÿ òîðãîâëÿ îò âíóòðåííèõ òîðãîâûõ ìàðøðóòîâ</Russian>
+		<Russian>Общий объем торговли по внутренним торговым маршрутам</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_FINANCIAL_ADVISOR_FOREIGN_TRADE</Tag>
@@ -144,7 +145,7 @@
 		<German>Gesamteinkommen durch ausländische Handelsverbindungen</German>
 		<Italian>Commercio totale dalle rotte commerciali estere</Italian>
 		<Spanish>Comercio total proveniente del comercio exterior</Spanish>
-		<Russian>Âñÿ òîðãîâëÿ îò èíîñòðàííûõ òîðãîâûõ ìàðøðóòîâ</Russian>
+		<Russian>Общий объем торговли по иностранным торговым маршрутам</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_FINANCIAL_ADVISOR_SPECIALISTS</Tag>
@@ -153,13 +154,13 @@
 		<German>Gesamteinkommen durch Spezialisten</German>
 		<Italian>Oro totale ottenuto dagli specialisti</Italian>
 		<Spanish>Oro total obtenido de especialistas</Spanish>
-		<Russian>Âñåãî çîëîòà îò ñïåöèàëèñòîâ</Russian>
+		<Russian>Общий доход золота от специалистов</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_FINANCIAL_ADVISOR_SPECIALIST_GOLD</Tag>
 		<English>[NEWLINE]%s1[ICON_GOLD]: %s3 (%d2)</English>
 		<Italian>[NEWLINE]%s1 [ICON_GOLD]: %s3 (%d2)</Italian>
-		<Russian>[NEWLINE]%d1[ICON_GOLD]: %s3 (%d2)</Russian>
+		<Russian>[NEWLINE]%s1[ICON_GOLD]: %s3 (%d2)</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_FINANCIAL_ADVISOR_SPECIALIST_TOTAL_GOLD</Tag>
@@ -168,7 +169,7 @@
 		<German>[NEWLINE]------------------------[NEWLINE]SPEZIALISTEN GESAMT: %d1[ICON_GOLD]</German>
 		<Italian>[NEWLINE]------------------------[NEWLINE]TOTALE SPECIALISTI: %d1[ICON_GOLD]</Italian>
 		<Spanish>[NEWLINE]------------------------[NEWLINE]TOTAL DE ESPECIALISTAS: %d1[ICON_GOLD]</Spanish>
-		<Russian>[NEWLINE]------------------------[NEWLINE]ÂÑÅÃÎ ÑÏÅÖÈÀËÈÑÒÎÂ: %d1[ICON_GOLD]</Russian>
+		<Russian>[NEWLINE]------------------------[NEWLINE]ВСЕГО СПЕЦИАЛИСТОВ: %d1[ICON_GOLD]</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_FOREIGN_TRADE_HEADING</Tag>
@@ -177,7 +178,7 @@
 		<German>Handel mit %%s1_PlyrName (%s2_CivName)</German>
 		<Italian>Commercio con %%s1_PlyrName (%s2_CivName)</Italian>
 		<Spanish>Comercio con %%s1_PlyrName de %s2_CivName</Spanish>
-		<Russian>Òîðãîâëÿ ñ %s1_PlyrName èç %s2_CivName</Russian>
+		<Russian>%s1_PlyrName и %s2_CivName торгуют с нами</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPTBUTTON_EXIT_HOVER</Tag>
@@ -429,7 +430,7 @@
 		<German>Berater</German>
 		<Italian>Schermi informazioni</Italian>
 		<Spanish>Consejeros</Spanish>
-		<Russian>Ñîâåòíèêè</Russian>
+		<Russian>Советники</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPTTAB_ALERTS</Tag>
@@ -4272,6 +4273,7 @@
 		<Tag>TXT_KEY_BUG_OPT_MAININTERFACE__AUTOENDTURNDELAY_TEXT</Tag>
 		<English>Auto-end turn delay</English>
 		<Italian>Ritardo fine turno</Italian>
+		<Russian>Задержка автозавершения хода</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_MAININTERFACE__CYCLEDELAYMIN_HOVER</Tag>
