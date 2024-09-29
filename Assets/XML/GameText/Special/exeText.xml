@@ -2150,7 +2150,7 @@
 		<Italian>Indietro</Italian>
 		<Spanish>Volver</Spanish>
 		<Polish>WR&#211;&#198;</Polish>
-		<Russian>Вернутся</Russian>
+		<Russian>Вернуться</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MAIN_MENU_HALL_OF_FAME</Tag>
@@ -2289,7 +2289,7 @@
 		<Italian>LEADER</Italian>
 		<Spanish>LÍDERES</Spanish>
 		<Polish>PRZYW&#211;DCY</Polish>
-		<Russian>ЛИДЕРЫ</Russian>
+		<Russian>Лидеры</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MAIN_MENU_LOADSAVE_CANCEL</Tag>
@@ -2889,7 +2889,7 @@
 		<Italian>Partita veloce</Italian>
 		<Spanish>Jugar ya</Spanish>
 		<Polish>Prosta gra</Polish>
-		<Russian>Быстрая игра</Russian>
+		<Russian>Новая игра</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MAIN_MENU_RANDOM</Tag>
@@ -5561,7 +5561,7 @@
 		<Italian>Rigenera la mappa utilizzando l'attuale script</Italian>
 		<Spanish>Regenerar mapa empleando la actual secuencia de comandos de mapa</Spanish>
 		<Polish>Odt&#243;rz map&#234; u&#191;ywaj&#185;c obecnego skryptu</Polish>
-		<Russian>Пересоздать карту, используя текущий скрипт</Russian>
+		<Russian>Пересоздать карту, используя текущие настройки</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_WB_REVEAL_ALL</Tag>

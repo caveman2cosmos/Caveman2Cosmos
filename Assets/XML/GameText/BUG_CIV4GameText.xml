@@ -178,7 +178,7 @@
 		<German>Handel mit %%s1_PlyrName (%s2_CivName)</German>
 		<Italian>Commercio con %%s1_PlyrName (%s2_CivName)</Italian>
 		<Spanish>Comercio con %%s1_PlyrName de %s2_CivName</Spanish>
-		<Russian>%s1_PlyrName и %s2_CivName торгуют с нами</Russian>
+		<Russian>%s2_CivName и %s1_PlyrName торгуют с вами</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPTBUTTON_EXIT_HOVER</Tag>
@@ -7785,7 +7785,7 @@
 		<German>Größe</German>
 		<Italian>Dimensioni icone ricerca</Italian>
 		<Spanish>Tamaño</Spanish>
-		<Russian>Ðàçìåð</Russian>
+		<Russian>Размер</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_SCORES__SHOWDEAD_HOVER</Tag>

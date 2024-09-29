@@ -1804,7 +1804,7 @@
 		<Italian>[NEWLINE][H2][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]CTRL-ALT-O[COLOR_REVERT] = Opzioni di gioco</Italian> <!-- Bug mod recap screen Ctrl+Shift+Q -->
 		<Spanish>[NEWLINE]CTRL-ALT-O = Opciones de juego</Spanish>
 		<Polish>[NEWLINE]CTRL-ALT-O = Opcje Gry</Polish>
-		<Russian>[NEWLINE]CTRL+ALT+O - Дополнительные настройки игры</Russian>
+		<Russian>[NEWLINE]CTRL+ALT+O - Настройки интерфейса</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_REV_MOD_INITIALIZING_CTRL_A_SHORTCUT</Tag>

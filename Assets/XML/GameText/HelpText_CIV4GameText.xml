@@ -105,7 +105,7 @@
 		<French>[ICON_BULLET]Peut construire :[SPACE]</French>
 		<German>[ICON_BULLET]Ermöglicht Bau von:[SPACE]</German>
 		<Italian>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Permette la costruzione[COLOR_REVERT] di edifici del tipo:[SPACE]</Italian> <!--tech Cave Dwelling hover -->
-		<Russian>[ICON_BULLET]Позволит построить[SPACE]</Russian>
+		<Russian>[ICON_BULLET]Позволит построить:[SPACE]</Russian>
 		<Spanish>[ICON_BULLET]Puede erigir[SPACE]</Spanish>
 	</TEXT>
 	<TEXT>

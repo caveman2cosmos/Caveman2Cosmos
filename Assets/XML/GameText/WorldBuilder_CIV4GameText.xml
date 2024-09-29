@@ -337,9 +337,9 @@
 		<Tag>TXT_KEY_WB_LATITUDE</Tag>
 		<English>Latitude: %d1</English>
 		<Spanish>Latitud: %d1</Spanish>
+		<Italian>Latitudine: %d1</Italian>
 		<Polish>Szeroko&#156;&#230;: %d1</Polish>
 		<Russian>Широта: %d1</Russian>
-		<Italian>Latitudine: %d1</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_WB_MADE_ATTACK</Tag>
