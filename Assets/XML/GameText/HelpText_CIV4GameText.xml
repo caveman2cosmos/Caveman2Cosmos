@@ -105,7 +105,7 @@
 		<French>[ICON_BULLET]Peut construire :[SPACE]</French>
 		<German>[ICON_BULLET]Ermöglicht Bau von:[SPACE]</German>
 		<Italian>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Permette la costruzione[COLOR_REVERT] di edifici del tipo:[SPACE]</Italian> <!--tech Cave Dwelling hover -->
-		<Russian>[ICON_BULLET]Позволит построить[SPACE]</Russian>
+		<Russian>[ICON_BULLET]Позволит построить:[SPACE]</Russian>
 		<Spanish>[ICON_BULLET]Puede erigir[SPACE]</Spanish>
 	</TEXT>
 	<TEXT>
@@ -123,6 +123,7 @@
 		<German>[ICON_BULLET]Ausbildung von:[SPACE]</German>
 		<Italian>[ICON_BULLET]Permette l'addestramento di unità del tipo:[SPACE]</Italian> <!--tech Nomadism hover -->
 		<Spanish>[ICON_BULLET]Puede preparar[SPACE]</Spanish>
+		<Russian>[ICON_BULLET]Позволит обучать[SPACE]</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECHHELP_CHOOSER_TITLE</Tag>
@@ -219,7 +220,7 @@
 		<French>[ICON_BULLET]Peut être recherchée par un [COLOR_UNIT_TEXT]%s1_great_person[COLOR_REVERT].</French>
 		<German>[ICON_BULLET]kann von der Persönlichkeit [COLOR_UNIT_TEXT]%s1_great_person[COLOR_REVERT] erforscht werden</German>
 		<Italian>[ICON_BULLET]Questa tecnologia può [COLOR_HIGHLIGHT_TEXT]essere ricercata[COLOR_REVERT] da un [COLOR_HIGHLIGHT_TEXT]%s1_great_person[COLOR_REVERT]</Italian> <!-- tech Scavenging -->
-		<Russian>[ICON_BULLET][COLOR_UNIT_TEXT]%s1_great_person[COLOR_REVERT] может это изучить</Russian>
+		<Russian>[ICON_BULLET][COLOR_UNIT_TEXT]%s1_great_person[COLOR_REVERT] может изучить это</Russian>
 		<Spanish>[ICON_BULLET]Esta tecnología puede investigarla un [COLOR_UNIT_TEXT]%s1_great_person[COLOR_REVERT]</Spanish>
 	</TEXT>
 	<TEXT>

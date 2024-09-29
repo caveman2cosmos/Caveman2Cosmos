@@ -7,6 +7,7 @@
 		<German>Beyond The Sword-Gebäude</German>
 		<Italian>Edifici di Beyond the Sword</Italian>
 		<Spanish>Edificios de "Beyond The Sword"</Spanish>
+		<Russian>Здания из «Эпохи огня»</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BTS_CIVS</Tag>
@@ -174,7 +175,7 @@
 		<English>1. AI Autoplay</English>
 		<French>1. IA Automatique</French>
 		<Spanish>1. Juego automático de la IA</Spanish>
-		<Russian>1. Àâòîóïðàâëåíèå</Russian>
+		<Russian>1. Автоуправление</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CONCEPT_AIAUTOPLAY_PEDIA</Tag>
@@ -365,7 +366,7 @@
 		<French>Ressources</French>
 		<Italian>Risorse</Italian>
 		<Spanish>Recursos</Spanish>
-		<Russian>Ðåñóðñû</Russian>
+		<Russian>Ресурсы</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CONCEPT_BORDERS</Tag>
@@ -549,7 +550,7 @@
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</Spanish>
-		<Russian>Ãîðîäà</Russian>
+		<Russian>Города</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CONCEPT_CITIES_PEDIA</Tag>
@@ -1202,7 +1203,7 @@
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</Spanish>
-		<Russian>Óëó÷øåíèÿ</Russian>
+		<Russian>Надстройки</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CONCEPT_IMPROVEMENTS_PEDIA</Tag>
@@ -1345,7 +1346,7 @@
 			<Gender>Male</Gender>
 			<Plural>1</Plural>
 		</Spanish>
-		<Russian>Ëèäåðû</Russian>
+		<Russian>Лидеры</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CONCEPT_LEADERS_PEDIA</Tag>
@@ -1675,7 +1676,7 @@
 			<Gender>Male</Gender>
 			<Plural>1</Plural>
 		</Spanish>
-		<Russian>Êâàëèôèêàöèè</Russian>
+		<Russian>Квалификации</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CONCEPT_PROMOTIONS_PEDIA</Tag>
@@ -1690,7 +1691,7 @@
 		<Tag>TXT_KEY_CONCEPT_RBOMBARD</Tag>
 		<English>1. Ranged Assault</English>
 		<French>1. Attaque à distance</French>
-		<Russian>1. Äàëüíÿÿ áîìáàðäèðîâêà</Russian>
+		<Russian>1. Дальняя атака</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CONCEPT_RBOMBARD_PEDIA</Tag>
@@ -1828,7 +1829,7 @@
 			<Gender>Male</Gender>
 			<Plural>1</Plural>
 		</Spanish>
-		<Russian>Ðåñóðñû</Russian>
+		<Russian>Ресурсы</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CONCEPT_RESOURCES_PEDIA</Tag>
@@ -2674,7 +2675,7 @@ Remember: If you're having trouble with which civic to choose, just think of his
 		<Tag>TXT_KEY_CONCEPT_ROM_RELIGIOUS_VICTORY</Tag>
 		<English>2. Victory - Religious</English>
 		<Spanish>2. Victoria religiosa</Spanish>
-		<Russian>2. Ðåëèãèîçíàÿ ïîáåäà</Russian>
+		<Russian>2. Религиозная победа</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CONCEPT_ROM_RELIGIOUS_VICTORY_PEDIA</Tag>
@@ -2690,7 +2691,7 @@ Remember: If you're having trouble with which civic to choose, just think of his
 		<Tag>TXT_KEY_CONCEPT_ROM_SCIENTIFIC_VICTORY</Tag>
 		<English>2. Victory - Scientific</English>
 		<Spanish>2. Victoria científica</Spanish>
-		<Russian>2. Íàó÷íàÿ ïîáåäà</Russian>
+		<Russian>2. Научная победа</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CONCEPT_ROM_SCIENTIFIC_VICTORY_PEDIA</Tag>
@@ -2747,7 +2748,7 @@ Remember: If you're having trouble with which civic to choose, just think of his
 		<German>2. Skrupellose KI</German>
 		<Italian>2. IA spietata</Italian>
 		<Spanish>2. IA despiadada</Spanish>
-		<Russian>2. Áåçæàëîñòíûå ïðîòèâíèêè</Russian>
+		<Russian>2. Безжалостный ИИ</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CONCEPT_RUTHLESS_AI_PEDIA</Tag>
@@ -3082,6 +3083,7 @@ Remember: If you're having trouble with which civic to choose, just think of his
 		<French>Etats vassaux</French>
 		<German>Vasallenstaaten</German>
 		<Italian>Stati vassalli</Italian>
+		<Russian>Вассальные государства</Russian>
 		<Spanish>Los estados vasallos</Spanish>
 	</TEXT>
 	<TEXT>

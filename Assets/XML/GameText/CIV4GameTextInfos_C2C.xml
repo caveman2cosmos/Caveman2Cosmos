@@ -46,7 +46,7 @@
 		<German>[ICON_BULLET]freies Gebäude [LINK=%s1_NameType][COLOR_BUILDING_TEXT]%s2_Name[COLOR_REVERT][\LINK] in jeder Stadt</German>
 		<Italian>[ICON_BULLET]Edificio [COLOR_BUILDING_TEXT][LINK=%s1_NameType]%s2_Name[\LINK][COLOR_REVERT] [COLOR_HIGHLIGHT_TEXT]gratuito in tutte le città[COLOR_REVERT]</Italian> <!-- city screen local culture building hover -->
 		<Spanish>[ICON_BULLET][NUM1:Un:Una:Unos:Unas] [COLOR_BUILDING_TEXT][LINK=%s1_NameType]%s2:1_Name[\LINK][COLOR_REVERT] gratis en todas las ciudades.</Spanish>
-		<Russian>[ICON_BULLET]Бесплатный [COLOR_BUILDING_TEXT][LINK=%s1_NameType]%s2_Name[\LINK][COLOR_REVERT] в каждом городе</Russian>
+		<Russian>[ICON_BULLET]Бесплатно построит в каждом городе: [COLOR_BUILDING_TEXT][LINK=%s1_NameType]%s2_Name[\LINK][COLOR_REVERT].</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDINGHELP_FREE_SPECIALIST</Tag>
@@ -288,7 +288,7 @@
 		<Italian>[ICON_BULLET][COLOR_REVERT]Può esistere su una %s1_MapCat</Italian>
 		<German>[ICON_BULLET]kann nur auf einem %s1_MapCat existieren</German>
 		<French>[ICON_BULLET]Ne peut exister que sur une %s1_MapCat.</French>
-		<Russian>[ICON_BULLET]Расположение: только %s1_MapCat.</Russian>
+		<Russian>[ICON_BULLET]Расположение: %s1_MapCat и нигде больше.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MAP_CATEGORY_TERRAIN</Tag>
@@ -432,7 +432,7 @@
 		<German>Das Wunder %s1_WndrName wurde in einem fernen Land errichtet!</German>
 		<Italian>La meraviglia %s1_WndrName è stata costruita in una terra lontana!</Italian>
 		<Spanish>Han construido %s1_WndrName en una tierra muy lejana.</Spanish>
-		<Russian>%s1_WndrName было воздвигнуто в далекой стране!</Russian>
+		<Russian>Чудо «%s1_WndrName» было воздвигнуто в далекой стране!</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISC_YOUR_CRIMINAL_CAUGHT</Tag>
@@ -448,7 +448,7 @@
 		<Italian>[NEWLINE]Opzioni BUG attive[NEWLINE](modificabili in opzioni BUG mod -> tab Caveman2Cosmos -> sezione impostazioni di gioco)[NEWLINE]</Italian>  <!-- Bug mod recap screen Ctrl+Shift+Q -->
 		<Spanish>Opciones de BUG:</Spanish>
 		<Polish>Opcje 'BUG':</Polish>
-		<Russian>Îïöèè BUG:</Russian>
+		<Russian>Опции BUG:</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_OPTIONS_DCM</Tag>
@@ -458,6 +458,7 @@
 		<Italian>[NEWLINE]Opzioni DCM attive[NEWLINE](modificabili in opzioni BUG mod -> tab RevDCM -> opzioni assedio e aeronautica)[NEWLINE]</Italian>  <!-- Bug mod recap screen Ctrl+Shift+Q -->
 		<Spanish>Opciones de DCM:</Spanish>
 		<Polish>Opcje DCM:</Polish>
+		<Russian>Опции DCM:</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_OPTIONS_GAME_REV</Tag>
@@ -465,7 +466,7 @@
 		<French>Options du Jeu:</French>
 		<Spanish>Opciones de juego:</Spanish>
 		<Polish>Opcje Gry:</Polish>
-		<Russian>Îïöèè Revolution:</Russian>
+		<Russian>Опции игры:</Russian>
 		<Italian>Opzioni di gioco attive[NEWLINE](modificabili prima dell'inizio della partita nello schermo di personalizzazione partita o scenario)[NEWLINE]</Italian>  <!-- Bug mod recap screen Ctrl+Shift+Q -->
 	</TEXT>
 	<TEXT>
@@ -476,6 +477,7 @@
 		<Italian>[NEWLINE]Opzioni IDW attive[NEWLINE](modificabili in opzioni BUG mod -> tab RevDCM -> opzioni IDW e influenza culturale)[NEWLINE]</Italian> <!-- Bug mod recap screen Ctrl+Shift+Q -->
 		<Spanish>Opciones de IDW:</Spanish>
 		<Polish>Opcje IDW:</Polish>
+		<Russian>Опции IDW:</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_OPTIONS_SS</Tag>
@@ -485,6 +487,7 @@
 		<Italian>[NEWLINE]Opzioni spie attive[NEWLINE](modificabili in opzioni BUG mod -> tab RevDCM -> opzioni spie)[NEWLINE]</Italian>
 		<Spanish>Opciones de Super Spies:</Spanish>
 		<Polish>Opcje Super Szpieg&#243;w:</Polish>
+		<Russian>Опции «Супершпионов»:</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PER_POP</Tag>
@@ -518,7 +521,7 @@
 		<German>[ICON_BULLET][COLOR_WARNING_TEXT]erforderlich: [LINK=%s1_NameType]%s2_Name[\LINK] (%d3/%d4)[COLOR_REVERT]</German>
 		<Italian>[COLOR_WARNING_TEXT][ICON_BULLET]Il progetto richiede [LINK=%s1_NameType]%s2_Name[\LINK] (%d3/%d4)[COLOR_REVERT]</Italian>
 		<Spanish>[COLOR_WARNING_TEXT]Requiere [LINK=%s1_NameType]%s2_Name[\LINK] (%d3/%d4)[COLOR_REVERT]</Spanish>
-		<Russian>[COLOR_WARNING_TEXT]Требует [LINK=%s1_NameType]%s2_Name[\LINK] (%d3/%d4)[COLOR_REVERT]</Russian>
+		<Russian>[COLOR_WARNING_TEXT]Необходимо [LINK=%s1_NameType]%s2_Name[\LINK] (%d3/%d4)[COLOR_REVERT]</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROJECTHELP_REQUIRES_ANYONE</Tag>
@@ -858,6 +861,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_NATIONAL_SOURCES</Tag>
 		<English>Traits/Civics/Heritage.</English>
+		<Russian>Качества/Парадигмы/Культурное наследие.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITHELP_WITHDRAWL_PROBABILITY</Tag>

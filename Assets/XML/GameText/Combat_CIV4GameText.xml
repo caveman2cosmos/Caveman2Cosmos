@@ -765,6 +765,7 @@
 		<French>Retraite rapide de l'Attaquant:</French>
 		<Italian>Ritirata rapida degli attaccanti:</Italian>
 		<Polish>Wczesna Ucieczka Atakuj&#185;cego:</Polish>
+		<Russian>Ранний отход атакующего:</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_COMBAT_WITHDRAW_ODDS_ATTACKER_FRAYED</Tag>
@@ -800,6 +801,7 @@
 		<French>Retraite rapide du Défenseur:</French>
 		<German>Früher Rückzug (Verteidiger):</German>
 		<Italian>Ritirata rapida dei difensori:</Italian>
+		<Russian>Ранний отход защищающегося:</Russian>
 		<Polish>Wczesna Ucieczka Obro&#241;cy:</Polish>
 	</TEXT>
 	<TEXT>
@@ -16073,7 +16075,7 @@
 			<Plural>0:1</Plural>
 		</Spanish>
 		<Polish>Robotnicy</Polish>
-		<Russian>Ðàáîòíèêè</Russian>
+		<Russian>Рабочие</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_WORMHOLE_SPACESHIP</Tag>

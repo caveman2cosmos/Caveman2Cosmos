@@ -136,6 +136,7 @@
 		<German>Schwierigkeit</German>
 		<Italian>Difficoltà</Italian>
 		<Spanish>Dificultad</Spanish>
+		<Russian>Сложность</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PITBOSS_DIRECTIP</Tag>
@@ -338,6 +339,7 @@
 		<German>Staatsoberhaupt</German>
 		<Italian>Leader</Italian>
 		<Spanish>Líder</Spanish>
+		<Russian>Лидер</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PITBOSS_LOADGAME</Tag>
@@ -346,6 +348,7 @@
 		<German>Spiel laden</German>
 		<Italian>Carica partita</Italian>
 		<Spanish>Cargar partida</Spanish>
+		<Russian>Загрузить игру</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PITBOSS_LOAD_ERROR</Tag>
@@ -659,6 +662,7 @@
 		<German>Zufällig</German>
 		<Italian>Casuale</Italian>
 		<Spanish>Al azar</Spanish>
+		<Russian>Случайно</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PITBOSS_SAVE</Tag>
@@ -683,6 +687,7 @@
 		<German>Spiel speichern unter</German>
 		<Italian>Salva partita come</Italian>
 		<Spanish>Guardar partida como</Spanish>
+		<Russian>Сохранить игру как</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PITBOSS_SAVE_AS_TEXT</Tag>
@@ -715,6 +720,7 @@
 		<German>Spiel speichern</German>
 		<Italian>Salva partita</Italian>
 		<Spanish>Guardar partida</Spanish>
+		<Russian>Сохранить игру</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PITBOSS_SAVE_SUCCESS</Tag>
