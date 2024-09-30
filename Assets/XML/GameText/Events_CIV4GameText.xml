@@ -3190,11 +3190,15 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_ADD_ONE_POPULATION</Tag>
-		<English>Join the city.</English>
+		<English>Let's hope our people will accept these new folks.</English>
 	</TEXT>
     <TEXT>
         <Tag>TXT_KEY_EVENT_ADD_ONE_POPULATION1</Tag>
         <English>Chase them away we can't afford to feed more mouths.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_ADD_ONE_POPULATION2</Tag>
+        <English>%s1_civ_adjective city of %s2_city is having riots as the poeple feel their culture and way of life is treathened by outsiders.</English>
     </TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_AIRLINER_CRASH_1</Tag>
@@ -7603,6 +7607,10 @@
     </TEXT>
     <TEXT>
         <Tag>TXT_KEY_EVENT_RUBIE_1</Tag>
+        <English>This is great. This ore will boost our economy.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_SULPHUR_1</Tag>
         <English>This is great. This ore will boost our economy.</English>
     </TEXT>
     <TEXT>
