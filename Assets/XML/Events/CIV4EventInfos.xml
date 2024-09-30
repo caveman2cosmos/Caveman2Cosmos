@@ -10217,7 +10217,9 @@
 
 		<EventInfo>
 			<Type>EVENT_ADD_ONE_POPULATION_3</Type>
-			<WorldNewsTexts>TXT_KEY_EVENT_ADD_ONE_POPULATION2</WorldNewsTexts>
+			<WorldNewsTexts>
+				<Text>TXT_KEY_NEWS_EVENT_BEST_HUNTERS_1</Text>
+			</WorldNewsTexts>
 			<iHurryAnger>3</iHurryAnger>
 			<iRevoltTurns>3</iRevoltTurns>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
