@@ -7544,6 +7544,38 @@
 		</EventTriggerInfo>
 
 		<EventTriggerInfo>
+			<Type>EVENTTRIGGER_BONUS_TAX</Type>
+			<WorldNewsTexts>
+				<Text>TXT_KEY_EVENTTRIGGER_BONUS_TAX</Text>
+			</WorldNewsTexts>
+			<TriggerTexts>
+				<TriggerText>
+					<Text>TXT_KEY_EVENT_TRIGGER_BONUS_TAX_1</Text>
+					<Era>NONE</Era>
+				</TriggerText>
+			</TriggerTexts>
+			<iPercentGamesActive>0</iPercentGamesActive>
+			<iWeight>5</iWeight>
+			<bProbabilityBuildingMultiply>1</bProbabilityBuildingMultiply>
+			<BuildingsRequired>
+				<Building>BUILDING_TAXPERSON</Building>
+			</BuildingsRequired>
+			<iNumBuildings>1</iNumBuildings>
+			<iNumPlotsRequired>1</iNumPlotsRequired>
+			<bOwnPlot>1</bOwnPlot>
+			<Events>
+				<Event>EVENT_BONUS_TAX_PREHISTORIC</Event>
+			</Events>
+			<OrPreReqs>
+				<PrereqTech>TECH_ARITHMETIC</PrereqTech>
+			</OrPreReqs>
+			<ObsoleteTechs>
+				<ObsoleteTech>TECH_CITY_PLANNING</ObsoleteTech>
+			</ObsoleteTechs>
+			<bRecurring>1</bRecurring>
+		</EventTriggerInfo>
+
+		<EventTriggerInfo>
 			<Type>EVENTTRIGGER_BONUS_TAX_PREHISTORIC</Type>
 			<WorldNewsTexts>
 				<Text>TXT_KEY_EVENTTRIGGER_BONUS_TAX</Text>
