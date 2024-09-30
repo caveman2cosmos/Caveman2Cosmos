@@ -297,7 +297,6 @@
 			<iHurryAnger>3</iHurryAnger>
 			<FeatureType>FEATURE_FOREST</FeatureType>
 			<iFeatureChange>-1</iFeatureChange>
-			<iImprovementChange>-1</iImprovementChange>
 			<AdditionalEvents>
 				<EventChance>
 					<Event>EVENT_FOREST_FIRE_END</Event>
@@ -322,10 +321,12 @@
 			<bGameSpeedScale>1</bGameSpeedScale>
 			<FeatureType>FEATURE_FOREST</FeatureType>
 			<iFeatureChange>-1</iFeatureChange>
+			<FeatureType>FEATURE_FOREST_BURNT</FeatureType>
+			<iFeatureChange>1</iFeatureChange>
 			<AdditionalEvents>
 				<EventChance>
 					<Event>EVENT_FOREST_WILDFIRE_SAVED</Event>
-					<iEventChance>75</iEventChance>
+					<iEventChance>85</iEventChance>
 				</EventChance>
 				<EventChance>
 					<Event>EVENT_WILDFIRE_CATCHES_CITY</Event>
@@ -343,6 +344,8 @@
 			<bGameSpeedScale>1</bGameSpeedScale>
 			<FeatureType>FEATURE_FOREST</FeatureType>
 			<iFeatureChange>-1</iFeatureChange>
+			<FeatureType>FEATURE_FOREST_BURNT</FeatureType>
+			<iFeatureChange>1</iFeatureChange>
 			<AdditionalEvents>
 				<EventChance>
 					<Event>EVENT_WILDFIRE_CATCHES_CITY</Event>
@@ -360,6 +363,8 @@
 			<iHurryAnger>3</iHurryAnger>
 			<FeatureType>FEATURE_FOREST</FeatureType>
 			<iFeatureChange>-1</iFeatureChange>
+			<FeatureType>FEATURE_FOREST_BURNT</FeatureType>
+			<iFeatureChange>1</iFeatureChange>
 			<AdditionalEvents>
 				<EventChance>
 					<Event>EVENT_WILDFIRE_CATCHES_CITY</Event>
@@ -373,6 +378,8 @@
 		<EventInfo>
 			<Type>EVENT_FOREST_WILDFIRE_SAVED</Type>
 			<Description>TXT_KEY_EVENT_WILDFIRE_2</Description>
+			<FeatureType>FEATURE_FOREST_BURNT</FeatureType>
+			<iFeatureChange>-1</iFeatureChange>
 			<FeatureType>FEATURE_FOREST</FeatureType>
 			<iFeatureChange>1</iFeatureChange>
 		</EventInfo>
@@ -10189,15 +10196,30 @@
 			<Type>EVENT_ADD_ONE_POPULATION_1</Type>
 			<Description>TXT_KEY_EVENT_ADD_ONE_POPULATION</Description>
 			<bPickCity>1</bPickCity>
+			<iHappy>-1</iHappy>
+			<AdditionalEvents>
+				<EventChance>
+					<Event>EVENT_ADD_ONE_POPULATION_3</Event>
+					<iEventChance>50</iEventChance>
+				</EventChance>
+			</AdditionalEvents>
 			<iPopulationChange>1</iPopulationChange>
-			<iGold>-100</iGold>
+			<iGold>-80</iGold>
 			<bGameSpeedScale>1</bGameSpeedScale>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 		</EventInfo>
 
 		<EventInfo>
 			<Type>EVENT_ADD_ONE_POPULATION_2</Type>
-			<Description>TXT_KEY_EVENT_ADD_ONE_POPULATION1</Description>
+			<Description>TXT_KEY_EVENT_ADD_ONE_POPULATION2</Description>
+			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
+		</EventInfo>
+
+		<EventInfo>
+			<Type>EVENT_ADD_ONE_POPULATION_3</Type>
+			<WorldNewsTexts>TXT_KEY_EVENT_ADD_ONE_POPULATION2</WorldNewsTexts>
+			<iHurryAnger>3</iHurryAnger>
+			<iRevoltTurns>3</iRevoltTurns>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 		</EventInfo>
 

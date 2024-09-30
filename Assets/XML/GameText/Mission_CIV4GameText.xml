@@ -154,14 +154,14 @@
 		<Italian>Assassina unità</Italian>
 		<Spanish>Asesinar unidad</Spanish>
 		<Polish>Skrytob&#243;jstwo</Polish>
-		<Russian>Отравить отряд</Russian>
+		<Russian>Убить подразделение</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISSION_ASSASSINATE</Tag>
 		<English>Assassinate enemy Units on the same tile!</English>
 		<French>Assassiner une unité ennemie de la même case!</French>
 		<Italian>[NEWLINE]Assassina unità nemiche (sulla stessa casella)</Italian>
-		<Russian>Убейте вражеские юниты на этой клетке!</Russian>
+		<Russian>Убить вражеские единицы на этой клетке.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISSION_ASSASSINATE_HELP</Tag>
@@ -226,9 +226,9 @@
 		<English>Select a Promotion Line and gain an additional auto-promotion from the next level on that line for each round (up to 5) that the unit stays building up the ability. Unit loses all Build Up promotions when it next moves. (An alternative form of Fortification.)</English>
 		<French>Permet de cumuler le retranchement tout en choisissant une Spécialisation permettant de développer des compétences (sous forme de promotion) à chaque tour tant que l'unité reste sur place. (Il s'agit d'une alternative à 'Se retrancher F'.)</French>
 		<German>Einheit zum Training in einer bestimmten Beförderungsreihe abstellen. Pro Runde Training erhält die Einheit eine Zusatzbeförderung (maximal 5 Runden lang). Diese Beförderungen sind nicht dauerhaft. Sie gehen verloren, sobald sich die Einheit bewegt.</German>
+		<Italian>[NEWLINE]Auto-promozione sulla linea selezionata (max 5 turni). Muovere l'unità fa perdere tutti i vantaggi dell'allenamento.</Italian>
 		<Polish>Wybierz Lini&#234; Promocji i otrzymaj dodatkow&#185; auto-promocj&#234; z nast&#234;pnego poziomu tej linii promocji za ka&#191;da tur&#234; Koncentracji na danym terenie (max 5 promocji). Jednostka traci Koncentracj&#234; kiedy si&#234; poruszy. (To jest alternatywa do Fortyfikacji jednostek).</Polish>
 		<Russian>Выберите линейку Квалификации и получите возможность для доп. автоматического продвижения на следующий уровень в этой строке на каждый ход (до 5), т.е. прокачать навык для отряда. Юнит игнорирует все альт. линии прокачки, весь следующий ход. (Альтер. форма фортификации.)</Russian>
-		<Italian>[NEWLINE]Auto-promozione sulla linea selezionata (max 5 turni). Muovere l'unità fa perdere tutti i vantaggi dell'allenamento.</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISSION_BUILD_CITY</Tag>
@@ -237,6 +237,7 @@
 		<German>Stadt gründen</German>
 		<Italian>Fonda una città</Italian>
 		<Spanish>Construir ciudad</Spanish>
+		<Russian>Основать город</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISSION_BUILD_CITY_HELP</Tag>
@@ -245,6 +246,7 @@
 		<German>Opfern Sie einen [COLOR_UNIT_TEXT]Siedler[COLOR_REVERT], damit dieser an seinem aktuellen Standort eine Stadt gründet.</German>
 		<Italian>[NEWLINE]L'[COLOR_UNIT_TEXT]unità colonizzatore[COLOR_REVERT] fonda una città sulla casella su cui si trova e viene sacrificata nel processo.</Italian>
 		<Spanish>Esta orden hace que el [COLOR_UNIT_TEXT]Colono[COLOR_REVERT] construya una ciudad en el lugar en que se encuentre. El [COLOR_UNIT_TEXT]Colono[COLOR_REVERT] se consumirá en el proceso.</Spanish>
+		<Russian>Создать город на текущей позиции [COLOR_UNIT_TEXT]градостроителя[COLOR_REVERT]. Подразделение будет потеряно.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISSION_BUILD_IMPROVEMENT</Tag>
@@ -917,7 +919,7 @@
 		<English>Ranged Assault</English>
 		<French>Assaut à distance</French>
 		<Polish>Atak dystansowy</Polish>
-		<Russian>Дальняя бомбардировка</Russian>
+		<Russian>Дальняя атака</Russian>
 		<Italian>Assalto dalla distanza</Italian>
 	</TEXT>
 	<TEXT>

@@ -1252,15 +1252,15 @@
     </TEXT>
     <TEXT>
         <Tag>TXT_KEY_PRIME_STUD</Tag>
-        <English>A %s1_civ_adjective have found prime steeds for their stables.</English>
+        <English>A %s1_civ_adjective merchant has found prime steeds for their stables.</English>
     </TEXT>
     <TEXT>
         <Tag>TXT_KEY_CHILD_WISE_COUNCIL</Tag>
-        <English>A %s1_civ_adjective council has welcomed a wise elder his wisdom will lead them to greatness.</English>
+        <English>A %s1_civ_adjective council has welcomed a wise elder; his wisdom will lead them to greatness.</English>
     </TEXT>
     <TEXT>
         <Tag>TXT_KEY_CHILD_LABOUR_INCIDENT</Tag>
-        <English>A %s1_civ_adjective have terrible incident happen at one of their children work camps.</English>
+        <English>A terrible incident has happened at one of the %s1_civ_adjective child labour camps.</English>
     </TEXT>
     <TEXT>
         <Tag>TXT_KEY_EVENTTRIGGER_COMMUNITY_BOND</Tag>
@@ -2468,7 +2468,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_SANDSTORM</Tag>
-		<English>Sandstorm has made some of the routes disappear in the sand near the %s1_civ_adjective city of %s2_city.</English>
+		<English>A sandstorm has made some of the routes disappear in the sand near the %s1_civ_adjective city of %s2_city.</English>
 		<French>Des Tempêtes de sable ont fait disparaître des routes près de la ville %s1:2_civ_adjective de %s2_city.</French>
 		<German>Durch Sandstürme sind in der Nähe der %s1_civ_adjective Stadt %s2_city einige Straßen im Sand verschwunden.</German>
 		<Italian>Una tempesta di sabbia ha fatto scomparire le vie di comunicazione vicino alla città %s1:2_civ_adjective di %s2_city.</Italian>
@@ -2478,7 +2478,7 @@
 	</TEXT>
     <TEXT>
         <Tag>TXT_KEY_EVENTTRIGGER_SANDSTORM_IMPROVEMENT</Tag>
-        <English>Sandstorm has hit some of our facilities near %s1_civ_adjective city of %s2_city.</English>
+        <English>A sandstorm has hit some of our facilities near %s1_civ_adjective city of %s2_city.</English>
     </TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_SEA_TURTLES</Tag>
@@ -3190,11 +3190,15 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_ADD_ONE_POPULATION</Tag>
-		<English>Join the city.</English>
+		<English>Let's hope our people will accept these new folks.</English>
 	</TEXT>
     <TEXT>
         <Tag>TXT_KEY_EVENT_ADD_ONE_POPULATION1</Tag>
         <English>Chase them away we can't afford to feed more mouths.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_ADD_ONE_POPULATION2</Tag>
+        <English>%s1_civ_adjective city of %s2_city is having riots as the poeple feel their culture and way of life is treathened by outsiders.</English>
     </TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_AIRLINER_CRASH_1</Tag>
@@ -4174,7 +4178,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_BROKEN_DAM_1</Tag>
-		<English>That is very unfortunate, but we can not help. Tell the local authorities they'll have to handle the situation.</English>
+		<English>That is very unfortunate, but we cannot help. Tell the local authorities they'll have to handle the situation.</English>
 		<French>C'est malheureux, mais nous ne pouvons rien y faire. Mettez les autorités locales en charge de la situation.</French>
 		<German>Wir können uns derzeit keine Hilfsmaßnahmen leisten. Die lokalen Behörden müssen mit dieser Situation selbst fertig werden.</German>
 		<Italian>È una cosa molto spiacevole, ma non possiamo fare nulla. Avverti le autorità locali che dovranno occuparsi della situazione.</Italian>
@@ -4597,7 +4601,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_CHARIOTRY_FOUNDED_3</Tag>
-		<English>We can not afford this now.</English>
+		<English>We cannot afford this now.</English>
 		<French>Nous ne pouvons pas nous le permettre pour l'instant.</French>
 		<German>Wir können uns das jetzt nicht leisten.</German>
 		<Italian>Non possiamo permettercelo per il momento.</Italian>
@@ -6084,7 +6088,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_FAUX_PAS_OTHER_2</Tag>
-		<English>The %s1_civ_adjective ambassador has committed a faux pas. They have apologised and offed gifts to amend their mistake.</English>
+		<English>The %s1_civ_adjective ambassador has committed a faux pas. They have apologised and offered gifts in an effort to make amends.</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_FAVORITE_SON_1</Tag>
@@ -6866,7 +6870,7 @@
     </TEXT>
     <TEXT>
         <Tag>TXT_KEY_EVENT_PRIME_STUD_2</Tag>
-        <English>This sounds good, send a merchant get me that stud.</English>
+        <English>Send a merchant at once for some of these fine steeds.</English>
     </TEXT>
     <TEXT>
         <Tag>TXT_KEY_EVENT_PRIME_STUD_1</Tag>
@@ -7603,6 +7607,10 @@
     </TEXT>
     <TEXT>
         <Tag>TXT_KEY_EVENT_RUBIE_1</Tag>
+        <English>This is great. This ore will boost our economy.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_SULPHUR_1</Tag>
         <English>This is great. This ore will boost our economy.</English>
     </TEXT>
     <TEXT>
@@ -9829,7 +9837,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_QUICKSAND</Tag>
-		<English>Your troops are stuck in Quicksand.</English>
+		<English>Your troops are stuck in quicksand.</English>
 		<French>Vos troupes sont prises au piège dans des sables mouvants.</French>
 		<Polish>Twoje wojska ugrz&#234;z&#179;y w lotnych piaskach.</Polish>
 		<Russian>Ваши войска застряли в Зыбучих Песках.</Russian>
@@ -9843,7 +9851,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_QUICKSAND_2</Tag>
-		<English>Stay Calm and pull them out.</English>
+		<English>Stay calm and pull them out.</English>
 		<French>Restez calme et tirez-les de là.</French>
 		<Polish>Uspok&#243;jcie si&#234; i wyci&#185;gnijcie ich.</Polish>
 		<Russian>Сохраняйте спокойствие и отправьте поисковую партию.</Russian>
@@ -12503,7 +12511,7 @@
 	</TEXT>
     <TEXT>
         <Tag>TXT_KEY_EVENT_PRIME_STUD1_1</Tag>
-        <English>We have found big and healthy studs, taking them into our herds will grant us better horses.</English>
+        <English>We have found big and healthy studs; taking them into our herds will grant us better horses.</English>
     </TEXT>
     <TEXT>
         <Tag>TXT_KEY_EVENT_WISE_COUNCIL1_1</Tag>
@@ -13649,7 +13657,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_TRIGGER_SANDSTORM_1</Tag>
-		<English>Sandstorm has made the routes vanish in the sand near %s2_city.</English>
+		<English>A sandstorm has made the routes vanish in the sand near %s2_city.</English>
 		<French>Des Tempêtes de sable ont fait disparaitre des routes près de %s2_city.</French>
 		<German>Durch Sandstürme sind einige Straßen in der Nähe von %s2_city verschwunden.</German>
 		<Italian>Una tempesta di sabbia ha fatto scomparire le vie di comunicazione vicino a %s2_city.</Italian>
@@ -13659,7 +13667,7 @@
 	</TEXT>
     <TEXT>
         <Tag>TXT_KEY_EVENT_TRIGGER_SANDSTORM_2</Tag>
-        <English>Sandstorm has hit us hard near %s2_city.</English>
+        <English>A sandstorm has hit us hard near %s2_city.</English>
     </TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_TRIGGER_SEA_TURTLES_1</Tag>

@@ -110,6 +110,7 @@
 		<French>Climat :</French>
 		<German>Klima:</German>
 		<Italian>Clima:</Italian>
+		<Russian>Климат:</Russian>
 		<Spanish>Clima:</Spanish>
 	</TEXT>
 	<TEXT>
@@ -135,6 +136,7 @@
 		<German>Schwierigkeit</German>
 		<Italian>Difficoltà</Italian>
 		<Spanish>Dificultad</Spanish>
+		<Russian>Сложность</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PITBOSS_DIRECTIP</Tag>
@@ -183,7 +185,7 @@
 		<German>Zeitalter:</German>
 		<Italian>Era:</Italian>
 		<Spanish>Época:</Spanish>
-		<Russian>Период:</Russian>
+		<Russian>Исходный период:</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PITBOSS_ERROR_HOSTING</Tag>
@@ -337,6 +339,7 @@
 		<German>Staatsoberhaupt</German>
 		<Italian>Leader</Italian>
 		<Spanish>Líder</Spanish>
+		<Russian>Лидер</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PITBOSS_LOADGAME</Tag>
@@ -345,6 +348,7 @@
 		<German>Spiel laden</German>
 		<Italian>Carica partita</Italian>
 		<Spanish>Cargar partida</Spanish>
+		<Russian>Загрузить игру</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PITBOSS_LOAD_ERROR</Tag>
@@ -385,6 +389,7 @@
 		<German>Karte:</German>
 		<Italian>Mappa:</Italian>
 		<Spanish>Mapa:</Spanish>
+		<Russian>Карта:</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PITBOSS_MAXTURN_ERROR_DESC</Tag>
@@ -657,6 +662,7 @@
 		<German>Zufällig</German>
 		<Italian>Casuale</Italian>
 		<Spanish>Al azar</Spanish>
+		<Russian>Случайно</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PITBOSS_SAVE</Tag>
@@ -681,6 +687,7 @@
 		<German>Spiel speichern unter</German>
 		<Italian>Salva partita come</Italian>
 		<Spanish>Guardar partida como</Spanish>
+		<Russian>Сохранить игру как</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PITBOSS_SAVE_AS_TEXT</Tag>
@@ -713,6 +720,7 @@
 		<German>Spiel speichern</German>
 		<Italian>Salva partita</Italian>
 		<Spanish>Guardar partida</Spanish>
+		<Russian>Сохранить игру</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PITBOSS_SAVE_SUCCESS</Tag>
@@ -874,7 +882,7 @@
 		<French>Vitesse :</French>
 		<German>Geschwindigkeit:</German>
 		<Italian>Velocità:</Italian>
-		<Russian>Продолжительность:</Russian>
+		<Russian>Длительность:</Russian>
 		<Spanish>Velocidad:</Spanish>
 	</TEXT>
 	<TEXT>
