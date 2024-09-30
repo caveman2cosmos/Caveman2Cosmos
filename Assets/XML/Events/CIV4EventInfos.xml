@@ -10211,14 +10211,14 @@
 
 		<EventInfo>
 			<Type>EVENT_ADD_ONE_POPULATION_2</Type>
-			<Description>TXT_KEY_EVENT_ADD_ONE_POPULATION2</Description>
+			<Description>TXT_KEY_EVENT_ADD_ONE_POPULATION1</Description>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 		</EventInfo>
 
 		<EventInfo>
 			<Type>EVENT_ADD_ONE_POPULATION_3</Type>
 			<WorldNewsTexts>
-				<Text>TXT_KEY_NEWS_EVENT_BEST_HUNTERS_1</Text>
+				<Text>TXT_KEY_EVENT_ADD_ONE_POPULATION2</Text>
 			</WorldNewsTexts>
 			<iHurryAnger>3</iHurryAnger>
 			<iRevoltTurns>3</iRevoltTurns>
