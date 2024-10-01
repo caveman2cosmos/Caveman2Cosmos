@@ -6908,6 +6908,10 @@
 		<Italian>La pace sarebbe un bene per entrambi. Approviamo questo mediatore e possano le sue parole dimostrarsi più acute del nostro odio.</Italian>
 		<Spanish>La paz beneficiaría a ambos bandos. Que este mediador reciba nuestra bendición, y que sus palabras resulten más afiladas que el odio del enemigo.</Spanish>
 	</TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_MEDIATOR_WORLD_2</Tag>
+        <English>A great mediator has offered to arbitrate peace between %s1_civ_adjective and %s2_civ_adjective.</English>
+    </TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_GREAT_MEDIATOR_OTHER_3</Tag>
 		<English>A great mediator has offered to arbitrate our grievance with the %s1_civ_adjective Empire. This opens the door to a possible peace treaty. Do you wish to end the war?</English>
