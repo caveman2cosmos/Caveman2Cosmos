@@ -1715,7 +1715,7 @@
 		<German>Große Persönlichkeiten</German>
 		<Italian>Nascita gran personaggi</Italian>
 		<Spanish>Grandes personajes</Spanish>
-		<Russian>Âåëèêèé ÷åëîâåê</Russian>
+		<Russian>Великие люди</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_AUTOLOG__LOGIMPROVEMENTS_HOVER</Tag>
@@ -6928,6 +6928,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_ROMSETTINGS__GREATERGREATFARMER_TEXT</Tag>
 		<English>Greater Great Farmer</English>
+		<Russian>Еще более великий фермер</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_ROMSETTINGS__HIDEREPLACEDBUILDINGS_HOVER</Tag>
