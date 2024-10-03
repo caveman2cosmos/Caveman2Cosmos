@@ -786,6 +786,7 @@
 		<German>[SPACE](&lt;ALT&gt; für alle Einheiten)</German>
 		<Italian>[SPACE](&lt;ALT&gt; per tutte le unità)</Italian>
 		<Spanish>[SPACE](&lt;ALT&gt; para todas las unidades)</Spanish>
+		<Russian>[SPACE](&lt;ALT&gt; для всех на клетке)</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_ACTION_ASSASSIN_MISSION</Tag>
@@ -859,7 +860,7 @@
 		<Italian>Pattugliamento confini automatico</Italian>
 		<Spanish>Patrulla fronteriza automatizada</Spanish>
 		<Polish>Automatyczne Patrolowanie Granic</Polish>
-		<Russian>Àâòîìàòèçèðîâàòü ïîãðàíè÷íóþ ñëóæáó</Russian>
+		<Russian>Автоматическая пограничная служба</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_ACTION_AUTOMATE_BORDER_PATROL_HELP</Tag>
@@ -869,7 +870,7 @@
 		<Italian>[NEWLINE]L'unità pattuglia i confini della tua civiltà e a attacca unità nemiche invaditrici.</Italian>
 		<Spanish>Envía a la unidad a patrullar las fronteras de tu civilización y matar a los invasores enemigos.</Spanish>
 		<Polish>Wy&#156;lij jednostk&#234; do patrolowania granic Twojego imperium i niszczenie wrogich jednostek</Polish>
-		<Russian>Ïîñëàòü þíèò ïàòðóëèðîâàòü ãðàíèöû âàøåé öèâèëèçàöèè è óáèâàòü âòîðãøèåñÿ âðàæåñêèå þíèòû</Russian>
+		<Russian>Отправить единицу патрулировать границы вашей цивилизации и уничтожать вторгшиеся вражеские подразделения.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_ACTION_AUTOMATE_BUILD</Tag>
@@ -945,7 +946,7 @@
 		<Italian>Difesa cittadina automatica</Italian>
 		<Spanish>Defensa de ciudad automatizada</Spanish>
 		<Polish>Automatyczna Obrona Miasta</Polish>
-		<Russian>Àâòîìàòèçèðîâàòü çàùèòó ãîðîäîâ</Russian>
+		<Russian>Автоматическая защита города</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_ACTION_AUTOMATE_CITY_DEFENSE_HELP</Tag>
@@ -955,7 +956,7 @@
 		<Italian>[NEWLINE]L'unità proteggerà la città dagli attaccanti vicini.</Italian>
 		<Spanish>La unidad protegerá a la ciudad de los atacantes cercanos.</Spanish>
 		<Polish>B&#234;dzie broni&#179;a miasta przed agresorami.</Polish>
-		<Russian>Çàùèòèòü ãîðîä îò ñîñåäñêèõ íàïàäàþùèõ.</Russian>
+		<Russian>Самостоятельно защищать город от ближайших нападающих.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_ACTION_AUTOMATE_CITY_HELP</Tag>
@@ -992,7 +993,7 @@
 		<Italian>Caccia automatica</Italian>
 		<Spanish>Caza automatizada</Spanish>
 		<Polish>Automatyczne Polowanie</Polish>
-		<Russian>Автоматизировать облаву</Russian>
+		<Russian>Автоматизировать зачистку</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_ACTION_AUTOMATE_HUNT_HELP</Tag>
@@ -1050,7 +1051,7 @@
 		<Italian>Saccheggio automatico</Italian>
 		<Spanish>Saqueo automatizadoAutomate Pillage</Spanish>
 		<Polish>Automatyczne Pl&#185;drowanie</Polish>
-		<Russian>Àâòîìàòèçèðîâàòü ãðàáåæ</Russian>
+		<Russian>Автоматический вандализм</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_ACTION_AUTOMATE_PILLAGE_HELP</Tag>
@@ -1060,7 +1061,7 @@
 		<Italian>[NEWLINE]L'unità ricerca e distrugge i miglioramenti nemici.</Italian>
 		<Spanish>Envía a la unidad a encontrar y destrozar mejoras de terreno enemigas.</Spanish>
 		<Polish>Wy&#156;lij jednostk&#234; do wyszukania oraz zniszczenia wrogich ulepsze&#241;</Polish>
-		<Russian>Отправить подразделение искать и разрушать улучшения врага</Russian>
+		<Russian>Отправить подразделение искать и разрушать надстройки врага.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_ACTION_AUTOMATE_PIRATE</Tag>
@@ -4506,6 +4507,7 @@
 		<German>Letzte Mission abbrechen</German>
 		<Italian>Annulla ultima missione</Italian>
 		<Spanish>Cancelar última misión</Spanish>
+		<Russian>Отменить последний приказ</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_COMMAND_CANCEL_ALL</Tag>
@@ -4514,6 +4516,7 @@
 		<German>Alle Einsätze abbrechen</German>
 		<Italian>Annulla tutte le missioni</Italian>
 		<Spanish>Cancelar todas las misiones</Spanish>
+		<Russian>Отменить все задания</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_COMMAND_CANCEL_ALL_HELP</Tag>
@@ -4522,6 +4525,7 @@
 		<German>Löschen Sie alle Befehle der aktuellen Einheit.</German>
 		<Italian>[NEWLINE]Annulla tutti gli ordini.</Italian>
 		<Spanish>Esto cancelará todas las órdenes que haya en cola para la unidad que tengáis seleccionada.</Spanish>
+		<Russian>Все указания в списке у выбранного подразделения будут отменены.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_COMMAND_CANCEL_HELP</Tag>
@@ -4530,6 +4534,7 @@
 		<German>Löschen Sie den letzten Befehl in der Befehlsliste der Einheit. Haben Sie dieser versehentlich einen falschen Befehl erteilt, ist diese Funktion sehr nützlich.</German>
 		<Italian>[NEWLINE]Annulla l'ultimo ordine.</Italian>
 		<Spanish>Esto cancelará la última orden en la cola de órdenes de la unidad. Es muy útil si ponéis sin querer una orden incorrecta en la cola.</Spanish>
+		<Russian>Последнее задание в списке у выбранного подразделения будет отменено. Весьма полезно, если вы случайно добавили неподходящее указание.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_COMMAND_DELETE</Tag>
@@ -4633,7 +4638,7 @@
 		<French>Remplacer l'Equipement de l'unité (termine le tour)</French>
 		<Italian>Sostituisci equipaggiamento (fine turno)</Italian>
 		<Polish>Zamie&#241; Ekwipunek dla Jednostki</Polish>
-		<Russian>Сменить снаряжение отряду (завершает ход)</Russian>
+		<Russian>Сменить снаряжение подразделению (завершает ход)</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_COMMAND_SPLIT</Tag>
@@ -4641,16 +4646,16 @@
 		<French>Divise cette unité en 3 unités plus faibles</French>
 		<German>Einheit in drei schwächere Einheiten aufteilen</German>
 		<Polish>Podziel t&#185; jednostk&#234; by otrzyma&#230; trzy s&#179;absze.</Polish>
-		<Russian>Разделить отряд на три менее мощных</Russian>
 		<Italian>Dividi unità in tre</Italian>
+		<Russian>Разделить подразделение на три менее мощных</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_COMMAND_STATUS</Tag>
 		<English>Set Status</English>
 		<French>Changer de Statut</French>
 		<German>Statusänderung</German>
-		<Russian>Установить статус</Russian>
 		<Italian>Imposta stato</Italian>
+		<Russian>Установить статус</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_COMMAND_STOP_AUTOMATION</Tag>
@@ -4715,6 +4720,7 @@
 		<German>Einheit wecken</German>
 		<Italian>Sveglia unità</Italian>
 		<Spanish>Despertar a la unidad</Spanish>
+		<Russian>Разбудить подразделение</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_COMMAND_WAKE_HELP</Tag>
@@ -4723,6 +4729,7 @@
 		<German>Wecken Sie eine Einheit auf und erteilen Sie ihr Befehle. Die Einheit verliert dadurch nicht ihren Befestigungsbonus.</German>
 		<Italian>[NEWLINE]Sveglia l'unità senza perdere i bonus della fortificazione o allenamento.</Italian>
 		<Spanish>Esto despertará a la unidad para que se le puedan dar órdenes. Despertar a una unidad no elimina las bonificaciones que tenga por fortificación.</Spanish>
+		<Russian>Можно будет снова отдавать приказы единице. Пробуждение не снимает бонус от укрепления.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_COMMERCE_CULTURE</Tag>
@@ -7297,7 +7304,7 @@
 		<French>Le Mont Fuji</French>
 		<German>Fuji</German>
 		<Polish>Fud&#191;i</Polish>
-		<Russian>Ãîðà Ôóäçè</Russian>
+		<Russian>Гора Фудзи</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_FEATURE_FUJI_PEDIA</Tag>
@@ -7333,7 +7340,7 @@
 		<French>La Grande Barrière de Corail (Balise)</French>
 		<German>Great Barrier Reef (Leuchtfeuer)</German>
 		<Polish>Wielka Rafa Koralowa (Boja)</Polish>
-		<Russian>Áàðüåðíûé ðèô (áóé)</Russian>
+		<Russian>Буй на Большом Барьерном рифе</Russian>
 		<Italian>Segnalatore sulla grande barriera corallina</Italian>
 	</TEXT>
 	<TEXT>
@@ -7342,7 +7349,7 @@
 		<French>La Grande Barrière de Corail (Phare)</French>
 		<German>Great Barrier Reef (Leuchtturm)</German>
 		<Polish>Wielka Rafa Koralowa (Latarnia Morska)</Polish>
-		<Russian>Áàðüåðíûé ðèô (ìàÿê)</Russian>
+		<Russian>Маяк на Большом Барьерном рифе</Russian>
 		<Italian>Faro sulla grande barriera corallina</Italian>
 	</TEXT>
 	<TEXT>
@@ -10006,6 +10013,7 @@
 		<German>Gehe-zu-Modus</German>
 		<Italian>Muovi unità</Italian>
 		<Spanish>Modo Ir a</Spanish>
+		<Russian>Отправиться к</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_INTERFACEMODE_GO_TO_ALL</Tag>
@@ -10014,6 +10022,7 @@
 		<German>Gehe-zu-Modus (Alle Einheiten)</German>
 		<Italian>Muovi tutte le unità</Italian>
 		<Spanish>Modo Ir a (todas las unidades)</Spanish>
+		<Russian>Всем отправиться к</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_INTERFACEMODE_GO_TO_ALL_HELP</Tag>
@@ -10022,6 +10031,7 @@
 		<German>Erteilen Sie allen Einheiten auf dem Feld der gewählten Einheit den Marschbefehl.</German>
 		<Italian>[NEWLINE]Muovi tutte le unità sulla casella selezionata.</Italian>
 		<Spanish>Ordena moverse a todas las unidades de la casilla seleccionada actualmente.</Spanish>
+		<Russian>Приказать двигаться всем подразделениям на данном участке.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_INTERFACEMODE_GO_TO_HELP</Tag>
@@ -10030,6 +10040,7 @@
 		<German>Schicken Sie die gewählte Einheit auf ein bestimmtes Geländefeld.</German>
 		<Italian>[NEWLINE]Muovi l'unità su una casella specifica.</Italian>
 		<Spanish>Ordena a la unidad seleccionada que se mueva hasta una casilla.</Spanish>
+		<Russian>Приказать выбранному подразделению переместиться на клетку.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_INTERFACEMODE_GO_TO_SENTRY</Tag>
@@ -10039,7 +10050,7 @@
 		<Italian>Muovi e sentinella</Italian>
 		<Spanish>Modo Ir a y vigilar</Spanish>
 		<Polish>Id&#159; do i Wartuj</Polish>
-		<Russian>Èäòè ê, â ðåæèìå ñòîðîæà</Russian>
+		<Russian>Отправиться к, наблюдая</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_INTERFACEMODE_GO_TO_SENTRY_HELP</Tag>
@@ -10049,7 +10060,7 @@
 		<Italian>[NEWLINE]L'unità si fermerà prima della destinazione se un'unità nemica dello stesso tipo entra nel suo raggio di visibilità.</Italian>
 		<Spanish>Ordena a la unidad seleccionada que se mueva hasta una casilla. La unidad parará antes de llegar a su destino si una unidad enemiga del mismo tipo se sitúa en su campo de visión.</Spanish>
 		<Polish>Wyznacz kratk&#234; do ruchu dla jednostki. Jednostka b&#234;dzie tak d&#179;ugo pod&#185;&#191;a&#230; a&#191; nie spotka innej wrogiej jednostki</Polish>
-		<Russian>Ïðèêàçàòü âûáðàíûì ïîäðàçäåëåíèÿì èäòè â óêàçàííîå ìåñòî ìåñòî. Ïîäðàçäåëåíèå îñòàíîâèòñÿ íå äîñòèãíóâ òî÷êè íàçíà÷åíèÿ â ñëó÷àå, åñëè âðàæåñêèå âîéñêà âûáðàííîãî òèïà ïîÿâÿòñÿ â çîíå âèäèìîñòè. </Russian>
+		<Russian>Приказать выбраному подразделению двигаться на указанное место. Оно остановится не достигнув точки назначения, если в его зоне видимости появятся вражеские единицы того же типа.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_INTERFACEMODE_GO_TO_TYPE</Tag>
@@ -10058,6 +10069,7 @@
 		<German>Gehe-zu-Modus (Gleiche Einheiten)</German>
 		<Italian>Muovi unità dello stesso tipo</Italian>
 		<Spanish>Modo Ir a (mismo tipo de unidad)</Spanish>
+		<Russian>Всем одинаковым отправиться к</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_INTERFACEMODE_GO_TO_TYPE_HELP</Tag>
@@ -10066,6 +10078,7 @@
 		<German>Erteilen Sie allen Einheiten des gewählten Typs den Marschbefehl.</German>
 		<Italian>[NEWLINE]Muovi tutte le unità dello stesso tipo di quella selezionata.</Italian>
 		<Spanish>Ordena moverse a todas las unidades del tipo seleccionado actualmente.</Spanish>
+		<Russian>Приказать двигаться всем подразделениям выбранного типа.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_INTERFACEMODE_GRIP</Tag>
@@ -11290,7 +11303,7 @@
 		<Italian>Meraviglie nazionali:</Italian>  <!-- city screen on the city name bar in azure upper left -->
 		<Spanish>M. N</Spanish>
 		<Polish>C.N</Polish>
-		<Russian>Í. ×</Russian>
+		<Russian>Нац. Ч.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MAIN_MENU</Tag>
@@ -11307,6 +11320,7 @@
 		<German>Optionen</German>
 		<Italian>Opzioni</Italian>
 		<Spanish>Opciones</Spanish>
+		<Russian>Настройки</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MAIN_MENU_FORCED_DISCONNECT_INGAME</Tag>
@@ -14875,8 +14889,8 @@
 		<French>Militaire Illustre: %d1_Curr/%d2_Need Expérience (%s3_GMP)</French>
 		<German>Großer Feldherr: %d1_Curr/%d2_Need Erfahrung (%s3_GMP)</German>
 		<Polish>Wielki Dow&#243;dca: %d1_Curr/%d2_Need XP (%s3_GMP)</Polish>
-		<Russian>Âåëèêèé âîåííûé ëèäåð: %d1_Curr/%d2_Need îïûòà (%s3_GMP)</Russian>
 		<Italian>[ICON_BULLET]Esperienza gran personaggio militare: [COLOR_HIGHLIGHT_TEXT]%d1_Curr [COLOR_REVERT]/[COLOR_HIGHLIGHT_TEXT] %d2_Need[COLOR_REVERT][NEWLINE][ICON_BULLET]Tipo: [COLOR_HIGHLIGHT_TEXT]%s3_GMP[COLOR_REVERT]</Italian> <!-- main map UI great military person hover -->
+		<Russian>Великий военный: %d1_Curr/%d2_Need опыта (%s3_GMP)</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISC_GREAT_MILITARY_PERSON_BREAKDOWN</Tag>
@@ -14889,6 +14903,7 @@
 		<German>Große Persönlichkeit: %d1_Curr/%d2_Need [ICON_GREATPEOPLE]</German>
 		<Italian>[ICON_BULLET]Gran personaggio: [COLOR_HIGHLIGHT_TEXT]%d1_Curr[COLOR_REVERT] / [COLOR_HIGHLIGHT_TEXT]%d2_Need[COLOR_REVERT] [ICON_GREATPEOPLE]</Italian> <!-- city screen, hover great people bar -->
 		<Spanish>Grandes personajes: %d1_Curr/%d2_Need [ICON_GREATPEOPLE]</Spanish>
+		<Russian>Великий человек: %d1_Curr/%d2_Need [ICON_GREATPEOPLE]</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISC_HAPPINESS_ALL_CITIES</Tag>
@@ -19074,7 +19089,7 @@
 		<German>[ICON_BULLET]Einheiten können gegnerische Einheiten mit %D1%% Wahrscheinlichkeit gefangen nehmen.</German>
 		<Italian>[ICON_BULLET]Le unità hanno il %D1%% di chance di catturare altre unità.</Italian>
 		<Polish>[ICON_BULLET]Jednostki maj&#185; %D1%% szansy na Przej&#234;cie.</Polish>
-		<Russian>[ICON_BULLET]%D1%% øàíñîâ çàõâàòèòü.</Russian>
+		<Russian>[ICON_BULLET]%D1%% шанс захватить вражеское подразделение.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_NATIONAL_CAPTURE_RESISTANCE_MODIFIER</Tag>
@@ -19083,7 +19098,7 @@
 		<German>[ICON_BULLET]Einheiten können der Gefangennahme mit %D1%% Wahrscheinlichkeit entgehen.</German>
 		<Italian>[ICON_BULLET]Aumenta le probabilità delle unità di [COLOR_HIGHLIGHT_TEXT]evitare la cattura[COLOR_REVERT] del [COLOR_HIGHLIGHT_TEXT]%D1%%[COLOR_REVERT]</Italian><!--Aerial CT trait in the pedia, city screen building list Palace building -->
 		<Polish>[ICON_BULLET]Jednostki maj&#185; %D1%% szansy na unikni&#234;cie Przej&#234;cia.</Polish>
-		<Russian>[ICON_BULLET]%D1%% øàíñîâ èçáåæàòü çàõâàòà.</Russian>
+		<Russian>[ICON_BULLET]%D1%% шанс избежать захвата.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_NEVER_MIND</Tag>
@@ -19092,6 +19107,7 @@
 		<German>Schon gut ...</German>
 		<Italian>Annulla</Italian>
 		<Spanish>No importa...</Spanish>
+		<Russian>О чем мы говорили?..</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_NEWS_EVENT_BEST_HUNTERS_1</Tag>
@@ -21301,6 +21317,7 @@
 		<German>Optionen</German>
 		<Italian>[BOLD][COLOR_BLACK]Opzioni[COLOR_REVERT][\BOLD]</Italian>
 		<Spanish>Opciones</Spanish>
+		<Russian>Настройки</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_POPUP_PASSED</Tag>
@@ -22957,7 +22974,7 @@
 		<Italian>[NEWLINE][NEWLINE][COLOR_GREEN]&lt;ALT&gt;[COLOR_REVERT] per tutte le unità del tipo di quella attiva</Italian>
 		<Spanish>[SPACE](&lt;ALT&gt; para todas las unidades del mismo tipo que la unidad activa)</Spanish>
 		<Polish>[SPACE](ALT) dla wszystkich jednostek tego samego typu co jednostka aktywna)</Polish>
-		<Russian>[SPACE](&lt;ALT&gt; äëÿ âñåõ þíèòîâ òèïà àêòèâíîãî)</Russian>
+		<Russian>[SPACE](&lt;ALT&gt; для всех единиц выбранного типа)</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_SCORE_BREAKDOWN</Tag>
@@ -24652,8 +24669,8 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
 		<Polish>Wielki Admira&#179;</Polish>
-		<Russian>Âåëèêèé àäìèðàë</Russian>
 		<Italian>Gran ammiraglio</Italian>
+		<Russian>Великий адмирал</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_SPECIALIST_GREAT_ARTIST</Tag>
@@ -24675,7 +24692,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 			<Plural>0:1</Plural>
 		</Spanish>
 		<Polish>Wielki Artysta</Polish>
-		<Russian>Âåëèêèé àðòèñò</Russian>
+		<Russian>Великий художник</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_SPECIALIST_GREAT_DOCTOR</Tag>
@@ -24685,8 +24702,8 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
-		<Russian>Âåëèêèé âðà÷</Russian>
 		<Italian>Gran medico</Italian>
+		<Russian>Великий врач</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_SPECIALIST_GREAT_ENGINEER</Tag>
@@ -24708,7 +24725,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 			<Plural>0:1</Plural>
 		</Spanish>
 		<Polish>Wielki In&#191;ynier</Polish>
-		<Russian>Âåëèêèé èíæåíåð</Russian>
+		<Russian>Великий инженер</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_SPECIALIST_GREAT_HUNTER</Tag>
@@ -24721,7 +24738,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 			<Plural>0:1</Plural>
 		</Spanish>
 		<Polish>Wielki &#163;owca</Polish>
-		<Russian>Âåëèêèé îõîòíèê</Russian>
+		<Russian>Великий охотник</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_SPECIALIST_GREAT_HUNTER_PEDIA</Tag>
@@ -24730,7 +24747,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Italian>Un cacciatore particolarmente esperto che viene stanziato nella tua città.</Italian>
 		<Spanish>Un cazador extraordinariamente curtido que se ha establecido en tu ciudad.</Spanish>
 		<Polish>Wielki &#163;owca</Polish>
-		<Russian>Великий охотник</Russian>
+		<Russian>Особенно опытный охотник, который находится в вашем городе.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_SPECIALIST_GREAT_MERCHANT</Tag>
@@ -24752,7 +24769,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 			<Plural>0:1</Plural>
 		</Spanish>
 		<Polish>Wielki Kupiec</Polish>
-		<Russian>Âåëèêèé òîðãîâåö</Russian>
+		<Russian>Великий торговец</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_SPECIALIST_GREAT_MILITARY_INSTRUCTOR</Tag>
@@ -24773,7 +24790,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 			<Gender>Male</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Russian>Âåëèêèé âîåííûé èíñòðóêòîð</Russian>
+		<Russian>Великий военный инструктор</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_SPECIALIST_GREAT_PROPHET</Tag>
@@ -24795,7 +24812,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 			<Plural>0:1</Plural>
 		</Spanish>
 		<Polish>Wielki Prorok</Polish>
-		<Russian>Âåëèêèé ïðîðîê</Russian>
+		<Russian>Великий пророк</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_SPECIALIST_GREAT_SCIENTIST</Tag>
@@ -24817,7 +24834,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 			<Plural>0:1</Plural>
 		</Spanish>
 		<Polish>Wielki Naukowiec</Polish>
-		<Russian>Âåëèêèé ó÷åíûé</Russian>
+		<Russian>Великий ученый</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_SPECIALIST_GREAT_SLEUTH</Tag>
@@ -24828,7 +24845,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 			<Gender>male:male:male:male:male:male:male:male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
-		<Russian>Âåëèêèé ñûùèê</Russian>
+		<Russian>Великий сыщик</Russian>
 		<Italian>Gran investigatore</Italian>
 	</TEXT>
 	<TEXT>
@@ -24851,7 +24868,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 			<Plural>0:1</Plural>
 		</Spanish>
 		<Polish>Wielki Szpieg</Polish>
-		<Russian>Âåëèêèé øïèîí</Russian>
+		<Russian>Великий шпион</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_SPECIALIST_INVESTIGATOR</Tag>
@@ -25258,7 +25275,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<German>Runde beenden mit &lt;EINGABETASTE&gt; ...</German>
 		<Italian>Premi &lt;INVIO&gt; per terminare il turno...</Italian>
 		<Spanish>Pulsar &lt;INTRO&gt; para terminar el turno...</Spanish>
-		<Russian>Нажмите &lt;ENTER&gt; чтобы закончить ход...</Russian>
+		<Russian>Нажмите &lt;ENTER&gt; чтобы закончить ход</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_SYSTEM_GAME_PAUSED</Tag>
@@ -28292,6 +28309,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<German>[ICON_BULLET]Keine Fortbewegung auf</German>
 		<Italian>[ICON_BULLET][COLOR_WARNING_TEXT]Non può passare[COLOR_REVERT] nelle caselle di tipo</Italian> <!-- unit Canoe -->
 		<Spanish>[ICON_BULLET]No puede entrar en</Spanish>
+		<Russian>[ICON_BULLET]Не может перемещаться по клеткам следующих типов:</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITHELP_CAN_CONSTRUCT</Tag>
@@ -28299,7 +28317,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<French>[ICON_BULLET]Peut construire :[SPACE]</French>
 		<German>[ICON_BULLET]Ermöglicht Bau von:[SPACE]</German>
 		<Italian>[ICON_BULLET]Permette la [COLOR_HIGHLIGHT_TEXT]costruzione[COLOR_REVERT] di[SPACE]</Italian> <!-- unit Storyteller -->
-		<Russian>[ICON_BULLET]Позволит построить:[SPACE]</Russian>
+		<Russian>[ICON_BULLET]Может построить:[SPACE]</Russian>
 		<Spanish>[ICON_BULLET]Puede erigir[SPACE]</Spanish>
 	</TEXT>
 	<TEXT>
@@ -28437,6 +28455,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<German>[ICON_BULLET]kann eine [LINK=CONCEPT_CITIES]neue Stadt[\LINK] gründen</German>
 		<Italian>[ICON_BULLET]L'unità può [COLOR_HIGHLIGHT_TEXT]fondare[COLOR_REVERT] una nuova [LINK=CONCEPT_CITIES]città[\LINK]</Italian> <!-- unit Venus Settler -->
 		<Spanish>[ICON_BULLET]Puede fundar una [LINK=CONCEPT_CITIES]nueva ciudad[\LINK]</Spanish>
+		<Russian>[ICON_BULLET]Может основать [LINK=CONCEPT_CITIES]город[\LINK]</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITHELP_GOLDEN_AGE</Tag>
@@ -28445,6 +28464,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<German>[ICON_BULLET]kann ein Goldenes Zeitalter beginnen</German>
 		<Italian>[ICON_BULLET]L'unità può [COLOR_HIGHLIGHT_TEXT]dare avvio a un età dell'oro[COLOR_REVERT]</Italian> <!-- unit great artist -->
 		<Spanish>[ICON_BULLET]Puede iniciar una edad de oro</Spanish>
+		<Russian>[ICON_BULLET]Может начать золотой век</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITHELP_GREAT_WORK</Tag>
@@ -28607,6 +28627,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<German>[ICON_BULLET]kann nur verteidigen</German>
 		<Italian>[ICON_BULLET]L'unità può [COLOR_WARNING_TEXT]solo difendersi[COLOR_REVERT]</Italian> <!-- unit Pack Lllama -->
 		<Spanish>[ICON_BULLET]Sólo puede defender</Spanish>
+		<Russian>[ICON_BULLET]Не может атаковать</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITHELP_PARADROP_RANGE</Tag>
@@ -28623,6 +28644,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<German>[ICON_BULLET]kann errichtet werden von[SPACE]</German>
 		<Italian>[ICON_BULLET]Può essere costruito da:[NEWLINE][TAB]</Italian>
 		<Spanish>[ICON_BULLET]Construible por[SPACE]</Spanish>
+		<Russian>[ICON_BULLET]Для создания требуется:[SPACE]</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITHELP_REQUIRES_HOLY_CITY</Tag>
@@ -28649,6 +28671,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<German>Einheitenstapel (%d1):</German>
 		<Italian>Gruppo unità (%d1):</Italian>
 		<Spanish>Apilamiento (%d1):</Spanish>
+		<Russian>Группа единиц (%d1):</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITHELP_STEALTH_COMBAT_ATTACK</Tag>
@@ -30191,6 +30214,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<German>Bildet eine Gruppe</German>
 		<Italian>Crea un gruppo</Italian>
 		<Spanish>Crea un grupo</Spanish>
+		<Russian>Объединить в группу</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_WIDGET_DELETE_GROUP</Tag>
@@ -30199,6 +30223,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<German>Löst eine Gruppe auf</German>
 		<Italian>Separa il gruppo</Italian>
 		<Spanish>Separa el grupo</Spanish>
+		<Russian>Разделить группу</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_WIDGET_END_TURN</Tag>
