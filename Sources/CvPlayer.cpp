@@ -7213,11 +7213,12 @@ int CvPlayer::getProductionNeeded(BuildingTypes eBuilding) const
         totalModifier += 0.2f;
     }
 
-    iBaseCost = static_cast<int>(iBaseCost);
+    //iBaseCost = static_cast<int>(iBaseCost);
 
     // Apply total modifier to base cost
     if(GC.getGame().isOption(GAMEOPTION_REALISTIC_BUILDING_COST)){
-        iBaseCost = iBaseCost * totalModifier;
+		FAssert(iBaseCost * totalModifier < MAX_INT);
+        iBaseCost = static_cast<int>(iBaseCost * totalModifier);
     }
 
 	uint64_t iProductionNeeded = (uint64_t) 100*iBaseCost;
