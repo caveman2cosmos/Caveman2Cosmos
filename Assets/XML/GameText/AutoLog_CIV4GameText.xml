@@ -689,7 +689,7 @@
 		<Italian>Questa partita non viene registrata</Italian>
 		<Spanish>Registro desactivado para esta partida</Spanish>
 		<Polish>Nie Loguj tej Gry</Polish>
-		<Russian>Нет регистрации в этой игре</Russian>
+		<Russian>Нет журналирования в этой игре</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_AUTOLOG_NO_STATE_RELIGION</Tag>
@@ -699,7 +699,7 @@
 		<Italian>nessuna religione di stato</Italian>
 		<Spanish>Sin religión oficial</Spanish>
 		<Polish>brak religii pa&#241;stwowej</Polish>
-		<Russian>нет государственной религии</Russian>
+		<Russian>апатеизм</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_AUTOLOG_ON_A_LAKE</Tag>
