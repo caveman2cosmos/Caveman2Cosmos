@@ -1786,7 +1786,7 @@
 			<Plural>0:0:1:1</Plural>
 		</Italian>
 		<Polish>Aboryge&#241;ska</Polish>
-		<Russian>Аборигенск.</Russian>
+		<Russian>Австралоидск.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVILIZATION_ABORIGINES</Tag>
@@ -1795,7 +1795,7 @@
 		<German>Reich der Aborigenes</German>
 		<Italian>Impero Aborigeno</Italian>
 		<Polish>Imperium Aborygen&#243;w</Polish>
-		<Russian>Аборигены</Russian>
+		<Russian>Австралоиды</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVILIZATION_ABORIGINES_PEDIA</Tag>
@@ -1810,7 +1810,7 @@
 		<French>Aborigènes</French>
 		<Italian>Aborigeni</Italian>
 		<Polish>Aborygeni</Polish>
-		<Russian>Аборигены</Russian>
+		<Russian>Австралоиды</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVILIZATION_BRAZIL_ADJECTIVE</Tag>
