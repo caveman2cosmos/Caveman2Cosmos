@@ -50,7 +50,7 @@
 		<Italian>Nessuna unità</Italian> <!-- infoscreen Military -->
 		<Spanish>Ninguno</Spanish>
 		<Polish>Automatyczne Ulepszenia</Polish>
-		<Russian>Íåò</Russian>
+		<Russian>Нет</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITGROUPER_LEVEL_GROUP</Tag>
@@ -475,7 +475,7 @@
 		<Italian>Nessuno</Italian> <!-- infoscreen Military -->
 		<Spanish>Ninguno</Spanish>
 		<Polish>Brak</Polish>
-		<Russian>Íåò</Russian>
+		<Russian>Нет</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITGROUPER_TYPE_GROUPING</Tag>
@@ -1304,7 +1304,7 @@
 		<Italian>No filtro</Italian> <!-- building list infoscreen -->
 		<Spanish>Ninguno</Spanish>
 		<Polish>Brak</Polish>
-		<Russian>Íåò</Russian>
+		<Russian>Нет</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITHELP_HURRY_FOOD</Tag>

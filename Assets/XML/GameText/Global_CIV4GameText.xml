@@ -591,7 +591,7 @@
 		<Italian>Critico</Italian>
 		<Spanish>Crítico</Spanish>
 		<Polish>Krytyczne</Polish>
-		<Russian>Êðèòè÷åñêàÿ</Russian>
+		<Russian>Критическое</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_ADVISOR_FLAT</Tag>
@@ -5032,8 +5032,8 @@
 		<French>inexistant</French>
 		<German>Null</German>
 		<Italian>Nessuno</Italian>
-		<Russian>Нулевой</Russian>
 		<Spanish>Inexistente</Spanish>
+		<Russian>Нулевой</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CULTURELEVEL_PHENOMENAL</Tag>
@@ -11639,7 +11639,7 @@
 		<German>Inselgröße</German>
 		<Italian>Tipo di isole</Italian>
 		<Spanish>Tamaño de las islas</Spanish>
-		<Russian>Разме островов</Russian>
+		<Russian>Размер островов</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MAP_SCRIPT_ISLAND_OVERLAP</Tag>
@@ -11657,7 +11657,7 @@
 		<German>Separate Inselregionen</German>
 		<Italian>Regioni isolane separate</Italian>
 		<Spanish>Región de islas separada</Spanish>
-		<Russian>Регионы островов разделены</Russian>
+		<Russian>Островные регионы разделены</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MAP_SCRIPT_LAKES</Tag>
@@ -12024,6 +12024,7 @@
 		<German>Beliebiger Start</German>
 		<Italian>Cominciare dappertutto</Italian>
 		<Spanish>Empezar en cualquier lado</Spanish>
+		<Russian>Начать в любом месте</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MAP_SCRIPT_START_SEPARATED</Tag>
@@ -19164,6 +19165,7 @@
 		<Italian>[COLOR_GREEN]Nessuna[COLOR_REVERT]</Italian>
 		<Spanish>Ninguno</Spanish>
 		<Polish>Brak</Polish>
+		<Russian>Нет</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_NON_APPLICABLE</Tag>
@@ -24375,6 +24377,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<German>Start</German>
 		<Italian>Lancio!</Italian> <!-- Victory screen, spaceship detail screen -->
 		<Spanish>Lanzar</Spanish>
+		<Russian>Запуск</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_SPACE_SHIP_SCREEN_REQUIRED_LABEL</Tag>
