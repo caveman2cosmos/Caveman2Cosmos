@@ -4036,6 +4036,7 @@
 		<German>Unterhalt: %d1[ICON_GOLD] pro Runde</German>
 		<Italian>Costi di mantenimento forme di governo: %d1[ICON_GOLD] a turno</Italian>
 		<Spanish>Mantenimiento: %d1 [ICON_GOLD] por turno</Spanish>
+		<Russian>Потребляют: %d1[ICON_GOLD] за ход</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVICHELP_STATE_RELIGION_HAPPINESS</Tag>
@@ -12165,22 +12166,27 @@
 	<TEXT>
 		<Tag>TXT_KEY_MAP_TITAN</Tag>
 		<English>Titan</English>
+		<Russian>Титан</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MAP_TRANSNEPTUNIAN</Tag>
 		<English>Kuiper Belt</English>
+		<Russian>Пояс Койпера</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MAP_UNIVERSE</Tag>
 		<English>Universe</English>
+		<Russian>Вселенная</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MAP_VENUS</Tag>
 		<English>Venus</English>
+		<Russian>Венера</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MAP_VIRGO_SUPERCLUSTER</Tag>
 		<English>Virgo Supercluster</English>
+		<Russian>Сверхскопление Девы</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MAP_WORLD_WRAP</Tag>
@@ -12189,7 +12195,7 @@
 		<German>Weltkugeldrehung</German>
 		<Italian>Tipo di pianeta</Italian>
 		<Spanish>Cobertura del mundo</Spanish>
-		<Russian>Смыкание краев мира</Russian>
+		<Russian>Мир</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MAP_WRAP_CYLINDER</Tag>
@@ -12198,7 +12204,7 @@
 		<German>Zylindrisch</German>
 		<Italian>Cilindrico</Italian>
 		<Spanish>Cilíndrica</Spanish>
-		<Russian>Цилиндрическое</Russian>
+		<Russian>Цилиндрический</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MAP_WRAP_FLAT</Tag>
@@ -12207,7 +12213,7 @@
 		<German>Flach</German>
 		<Italian>Piatto</Italian>
 		<Spanish>Plana</Spanish>
-		<Russian>Плоское</Russian>
+		<Russian>Плоский</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MAP_WRAP_TOROID</Tag>
@@ -12216,7 +12222,7 @@
 		<German>Ringförmig</German>
 		<Italian>Toroidale</Italian>
 		<Spanish>Toroidal</Spanish>
-		<Russian>Тороидальное</Russian>
+		<Russian>Тороидальный</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MARAUDER_FROM</Tag>
@@ -12821,6 +12827,7 @@
 		<German>Das ist bereits Eure Staatsreligion</German>
 		<Italian>È la nostra [COLOR_HIGHLIGHT_TEXT]credenza religiosa attuale[COLOR_REVERT].</Italian> <!-- infoscreen Religion -->
 		<Spanish>Ésa ya es vuestra religión oficial</Spanish>
+		<Russian>Это официальная вера вашей страны</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISC_ALTERNATIVELY_DERIVED</Tag>
@@ -13408,6 +13415,7 @@
 		<German>Kann nicht zur Religion [COLOR_HIGHLIGHT_TEXT]%s1_RelName konvertieren[COLOR_REVERT]</German>
 		<Italian>Non è possibile passare a: [COLOR_HIGHLIGHT_TEXT]%s1:2_RelName[COLOR_REVERT]</Italian> <!-- infoscreen Religion -->
 		<Spanish>No se puede convertir al [COLOR_HIGHLIGHT_TEXT]%s1_RelName[COLOR_REVERT]</Spanish>
+		<Russian>Нельзя сменить на [COLOR_HIGHLIGHT_TEXT]%s1_RelName[COLOR_REVERT]</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISC_CANNOT_DECLARE_WAR</Tag>
@@ -15647,6 +15655,7 @@
 		<German>Keine Staatsreligion</German>
 		<Italian>Irreligiosità</Italian> <!-- infoscreen Religion -->
 		<Spanish>Sin religión oficial</Spanish>
+		<Russian>Апатеизм</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISC_NO_UNIT</Tag>
@@ -20890,6 +20899,7 @@
 		<German>Debug-Tool zulassen</German>
 		<Italian>Consenti gli strumenti di debug</Italian>
 		<Spanish>Permitir herramientas de depuración</Spanish>
+		<Russian>Разрешить инструменты отладки</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_POPUP_ALARM_TITLE</Tag>
@@ -21044,6 +21054,7 @@
 		<German>Euer Steckbrief</German>
 		<Italian>[BOLD][COLOR_BLACK]Dettagli giocatore[COLOR_REVERT][\BOLD]</Italian>
 		<Spanish>Detalles</Spanish>
+		<Russian>Ваша держава</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_POPUP_DIPLOMATIC_VOTING_FAILURE</Tag>
@@ -21148,6 +21159,7 @@
 		<German>Weltenbauer öffnen</German>
 		<Italian>[BOLD][COLOR_BLACK]Editor[COLOR_REVERT][\BOLD]</Italian>
 		<Spanish>Entrar en el Creador de mundos</Spanish>
+		<Russian>Открыть редактор карты</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_POPUP_ENTER_WITH_OPEN_BORDERS</Tag>
@@ -21206,6 +21218,7 @@
 		<German>Spieldetails</German>
 		<Italian>[BOLD][COLOR_BLACK]Dettagli partita[COLOR_REVERT][\BOLD]</Italian>
 		<Spanish>Detalles de la partida</Spanish>
+		<Russian>Сведения об игре</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_POPUP_GOLD_CITY_CAPTURE</Tag>
@@ -22472,6 +22485,7 @@
 		<German>%D1 EP</German>
 		<Italian>%D1 XP</Italian>
 		<Spanish>%D1 PX</Spanish>
+		<Russian>%D1 ОО</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_RELIGION_HOLY_CITY</Tag>
@@ -22480,6 +22494,7 @@
 		<German>Heilige Stadt (bei Staatsreligion [ICON_RELIGION])</German>
 		<Italian>Città Santa (se c'è la religione ufficiale [ICON_RELIGION])</Italian>
 		<Spanish>Ciudad santa (si hay [ICON_RELIGION] oficial)</Spanish>
+		<Russian>Священный город (если официальная религия [ICON_RELIGION])</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_RELIGION_SCREEN_DATE_FOUNDED</Tag>
@@ -22488,6 +22503,7 @@
 		<German>Gründungsdatum:</German>
 		<Italian>Fondata:</Italian> <!-- infoscreen Religion and Corporation -->
 		<Spanish>Fecha de fundación:</Spanish>
+		<Russian>Создана в:</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_RELIGION_SCREEN_HOLY_CITY</Tag>
@@ -22496,6 +22512,7 @@
 		<German>Heilige Stadt:</German>
 		<Italian>Città Santa</Italian> <!-- infoscreen Religion -->
 		<Spanish>Ciudad santa</Spanish>
+		<Russian>Священный город:</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_RELIGION_SCREEN_INFLUENCE</Tag>
@@ -22504,6 +22521,7 @@
 		<German>Einfluss:</German>
 		<Italian>Influenza</Italian> <!-- infoscreen Religion -->
 		<Spanish>Influencia:</Spanish>
+		<Russian>Влияние:</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_RELIGION_SCREEN_NOT_FOUNDED</Tag>
@@ -22512,6 +22530,7 @@
 		<German>Nicht gegründet</German>
 		<Italian>No</Italian> <!-- infoscreen Corporation -->
 		<Spanish>Sin fundar</Spanish>
+		<Russian>Не создана</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_RELIGION_SCREEN_NO_STATE</Tag>
@@ -22520,6 +22539,7 @@
 		<German>Keine Religion</German>
 		<Italian>Irreligiosità</Italian> <!-- infoscreen Religion -->
 		<Spanish>No oficial</Spanish>
+		<Russian>Отсутсвует</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_RELIGION_SCREEN_TITLE</Tag>
@@ -22528,6 +22548,7 @@
 		<German>Religionsberater</German>
 		<Italian>Informazioni religioni</Italian> <!-- infoscreen Religion title -->
 		<Spanish>Consejero religioso</Spanish>
+		<Russian>Религии</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_RELIGION_UNIT_PROD_MOD</Tag>
@@ -22587,7 +22608,7 @@
 		<Italian>Mostrare nuovamente il promemoria il prossimo turno?</Italian>
 		<Spanish>¿Volver a mostrar el recordatorio el próximo turno?</Spanish>
 		<Polish>Pokaza&#230; przypomnienie ponownie w nast&#234;pnej turze?</Polish>
-		<Russian>Ïîêàçûâàòü íàïîìèíàíèå ñíîâà íà ñëåäóþùåì õîäó?</Russian>
+		<Russian>Еще раз показать напоминание на следующем ходу?</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_REMOVED_BUILDINGS_WARTIME</Tag>
