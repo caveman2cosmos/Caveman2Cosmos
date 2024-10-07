@@ -643,7 +643,7 @@
 		<Italian>Accelera cibo</Italian>
 		<Spanish>Envío alimentario</Spanish>
 		<Polish>Przy&#156;piesz &#191;ywno&#156;&#230;</Polish>
-		<Russian>Быстрая еда</Russian>
+		<Russian>Добавить пищу</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISSION_HURRY_FOOD_HELP</Tag>
@@ -653,7 +653,7 @@
 		<Italian>[NEWLINE]Incrementa le riserve di cibo della città. Consuma l'unità nel processo.</Italian>
 		<Spanish>Esta orden incrementará la comida almacenada en las ciudades. Consumirá a la unidad.</Spanish>
 		<Polish>Ten rozkaz zwi&#234;kszy zaopatrzenie miasta w &#191;ywno&#156;&#230;. Jest to zu&#191;ywane przez jednostki.</Polish>
-		<Russian>Этот приказ увеличит городскую поставку продовольствия. Это потребляет отряд.</Russian>
+		<Russian>Подразделение исчезнет, увеличив поставки продовольствия в городе.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISSION_HURRY_PRODUCTION</Tag>
@@ -662,6 +662,7 @@
 		<German>Produktion beschleunigen</German>
 		<Italian>Accelera produzione</Italian>
 		<Spanish>Acelerar la producción</Spanish>
+		<Russian>Ускорить производство</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISSION_HURRY_PRODUCTION_HELP</Tag>
@@ -670,7 +671,7 @@
 		<German>Opfern Sie die Große Persönlichkeit, um die aktuelle Produktion der Stadt zu beschleunigen.</German>
 		<Italian>[NEWLINE]La produzione attuale della città viene accelerata. L'unità viene sacrificata nel processo.</Italian>
 		<Spanish>El gran personaje acelera la producción que la ciudad esté llevando a cabo, consumiéndose en el proceso.</Spanish>
-		<Russian>Этот приказ ускорит текущее строительство в городе. Он потребляет отряд.</Russian>
+		<Russian>Подразделение исчезнет, ускорив текущее производство города.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISSION_INFILTRATE</Tag>
