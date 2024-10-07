@@ -5351,6 +5351,7 @@
 		<German>Demografien</German>
 		<Italian>Dati demografici</Italian> <!-- info screen table first column -->
 		<Spanish>Estadísticas</Spanish>
+		<Russian>Сведения о стране</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DEMO_SCREEN_VALUE</Tag>
@@ -5359,6 +5360,7 @@
 		<German>Wert</German>
 		<Italian>Valore</Italian> <!-- info screen demo table -->
 		<Spanish>Valor</Spanish>
+		<Russian>Значение</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DIFFICULTY_DECREASED</Tag>
@@ -8967,7 +8969,7 @@
 		<Tag>TXT_KEY_GRAPHIC_OPTION_FROZEN_ANIMATIONS_HELP</Tag>
 		<English>No unit or improvement animations.[NEWLINE]Causes graphical glitches when selected.</English>
 		<Italian>[BOLD]Le animazioni delle unità e dei miglioramenti [COLOR_HIGHLIGHT_TEXT]vengono disattivate[COLOR_REVERT] (può causare difetti grafici)[\BOLD]</Italian>
-		<Russian>У подразделений и улучшений не будет анимаций.[NEWLINE]Вызывает графические ошибки при активции.</Russian>
+		<Russian>У подразделений и улучшений не будет анимаций.[NEWLINE]Вызывает графические ошибки при активации.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GRAPH_SMOOTHING</Tag>
@@ -8977,7 +8979,7 @@
 		<Italian>Fattore di smoothing %d1_Num</Italian>
 		<Spanish>Factor de suavizado %d1_Num</Spanish>
 		<Polish>Wsp&#243;&#179;czynnik Wyg&#179;adzania %d1_Num</Polish>
-		<Russian>Коэффициент плавности %d1_Num</Russian>
+		<Russian>Плавность: %d1_Num</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GROWTH</Tag>
@@ -9707,6 +9709,7 @@
 		<German>Ges. Geschichte</German>
 		<Italian>Intera storia</Italian> <!-- Info screen title -->
 		<Spanish>Toda la historia</Spanish>
+		<Russian>Вся история</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_INFO_GRAPH</Tag>
@@ -9715,6 +9718,7 @@
 		<German>DIAGRAMM</German>
 		<Italian>Grafici</Italian> <!-- Info screen title -->
 		<Spanish>GRÁFICA</Spanish>
+		<Russian>Графики</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_INFO_RIVAL_BEST</Tag>
@@ -9723,6 +9727,7 @@
 		<German>Besten herausfordern</German>
 		<Italian>Migliore rivale</Italian> <!-- Info screen title -->
 		<Spanish>Mejor rival</Spanish>
+		<Russian>Сильнейший соперник</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_INFO_RIVAL_WORST</Tag>
@@ -9731,6 +9736,7 @@
 		<German>Schlechtesten herausfordern</German>
 		<Italian>Peggiore rivale</Italian> <!-- Info screen title -->
 		<Spanish>Peor rival</Spanish>
+		<Russian>Слабейший соперник</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_INFO_SCREEN</Tag>
@@ -9739,6 +9745,7 @@
 		<German>Info-Bildschirm</German>
 		<Italian>Statistiche</Italian> <!-- Info screen title -->
 		<Spanish>Pantalla de información</Spanish>
+		<Russian>Экран информации</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_INFO_SCREEN_BUILT</Tag>
@@ -9747,6 +9754,7 @@
 		<German>Errichtet</German>
 		<Italian>Totale</Italian> <!-- info screen unit and building tab -->
 		<Spanish>Construido</Spanish>
+		<Russian>Создано</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_INFO_SCREEN_CITIES_BUILT</Tag>
@@ -9755,6 +9763,7 @@
 		<German>Gegründete Städte</German>
 		<Italian>Città fondate::</Italian> <!-- info screen unit and building tab -->
 		<Spanish>Ciudades construidas</Spanish>
+		<Russian>Построено городов</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_INFO_SCREEN_CITIES_RAZED</Tag>
@@ -9763,6 +9772,7 @@
 		<German>Vernichtete Städte</German>
 		<Italian>Città rase al suolo:</Italian> <!-- info screen unit and building tab -->
 		<Spanish>Ciudades arrasadas</Spanish>
+		<Russian>Разрушено городов</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_INFO_SCREEN_KILLED</Tag>
@@ -9771,6 +9781,7 @@
 		<German>Gefallene</German>
 		<Italian>Uccisi</Italian> <!-- info screen unit and building tab -->
 		<Spanish>Bajas</Spanish>
+		<Russian>Убито</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_INFO_SCREEN_LOST</Tag>
@@ -9779,6 +9790,7 @@
 		<German>Verluste</German>
 		<Italian>Persi</Italian> <!-- info screen unit and building tab -->
 		<Spanish>Pérdidas</Spanish>
+		<Russian>Потеряно</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_INFO_SCREEN_RELIGIONS_FOUNDED</Tag>
@@ -9795,6 +9807,7 @@
 		<German>Statistik</German>
 		<Italian>Unità ed edifici</Italian>
 		<Spanish>Estadísticas</Spanish>
+		<Russian>Статистика</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_INFO_SCREEN_TIME_PLAYED</Tag>
@@ -20089,6 +20102,7 @@
 		<German>Nationales Wunder</German>
 		<Italian>Meraviglia Nazionale</Italian>
 		<Spanish>Maravilla nacional</Spanish>
+		<Russian>Национальное чудо</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PEDIA_RANGE</Tag>
@@ -27217,7 +27231,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 			<Plural>1</Plural>
 		</Spanish>
 		<Polish>Narodowe cuda</Polish>
-		<Russian>Íàöèîíàëüíûå ×óäåñà</Russian>
+		<Russian>Национальные чудеса</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TOP_CITIES_SCREEN_WORLD_WONDERS</Tag>
@@ -29579,10 +29593,10 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Tag>TXT_KEY_VICTORY_SCREEN_RIVAL_CIV</Tag>
 		<English>Rival Civilization</English>
 		<French>Civilisation Rivale</French>
+		<Italian>Civiltà rivali</Italian> <!-- victory info screen -->
 		<Spanish>Civilización rival</Spanish>
 		<Polish>Rywale</Polish>
-		<Russian>Ñîïåðíèêè</Russian>
-		<Italian>Civiltà rivali</Italian> <!-- victory info screen -->
+		<Russian>Соперники</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_VICTORY_SCREEN_TITLE</Tag>
@@ -29591,6 +29605,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<German>Siegbedingungen</German>
 		<Italian>Dettagli partita</Italian> <!-- victory info screen -->
 		<Spanish>Condiciones para la victoria</Spanish>
+		<Russian>Условия победы</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_VICTORY_SCREEN_TOTALS</Tag>
