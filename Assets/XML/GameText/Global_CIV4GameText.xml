@@ -2038,7 +2038,7 @@
 		<German>Alle Startzeitalter</German>
 		<Italian>Tutte le ere iniziali</Italian>
 		<Spanish>Todas las épocas de inic.</Spanish>
-		<Russian>Любой начальный период</Russian>
+		<Russian>Любой исходный период</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_ALL_GAME_SPEEDS</Tag>
@@ -4955,6 +4955,7 @@
 		<German>Strg+</German>
 		<Italian>Ctrl+</Italian>
 		<Spanish>Ctrl+</Spanish>
+		<Russian>Ctrl+</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CULTURELEVEL_DEVELOPING</Tag>
@@ -4962,8 +4963,8 @@
 		<French>grandissante</French>
 		<German>Wachsend</German>
 		<Italian>In sviluppo</Italian>
-		<Russian>Развивающийся</Russian>
 		<Spanish>Creciente</Spanish>
+		<Russian>Развивающийся</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CULTURELEVEL_ELEGANT</Tag>
@@ -4972,7 +4973,7 @@
 		<Italian>Elegante</Italian>
 		<Spanish>Elegante</Spanish>
 		<Polish>Wytworna</Polish>
-		<Russian>Элегантный</Russian>
+		<Russian>Прекрасный</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CULTURELEVEL_FLEDGLING</Tag>
@@ -4980,8 +4981,8 @@
 		<French>naissante</French>
 		<German>Beginnend</German>
 		<Italian>Principiante</Italian>
-		<Russian>Юнец</Russian>
 		<Spanish>Incipiente</Spanish>
+		<Russian>Зарождающийся</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CULTURELEVEL_ILLUSTRIOUS</Tag>
@@ -5053,6 +5054,7 @@
 		<German>Gering</German>
 		<Italian>Povero</Italian>
 		<Spanish>Pobre</Spanish>
+		<Russian>Бедный</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CULTURELEVEL_PROMINENT</Tag>
@@ -5070,8 +5072,8 @@
 		<French>raffinée</French>
 		<German>Fortgeschritten</German>
 		<Italian>Raffinato</Italian>
-		<Russian>Выдающийся</Russian>
 		<Spanish>Refinada</Spanish>
+		<Russian>Изысканный</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CULTURELEVEL_MINISCULE</Tag>
@@ -12264,6 +12266,7 @@
 		<German>Mitglieder</German>
 		<Italian>Membri congressi</Italian>
 		<Spanish>Miembros</Spanish>
+		<Russian>Члены</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MEMORY_ACCEPTED_CIVIC</Tag>
@@ -23236,6 +23239,7 @@
 		<German>Spieler schwierigkeit: %s1</German>
 		<Italian>Difficoltà giocatore: [COLOR_HIGHLIGHT_TEXT]%s1[COLOR_REVERT]</Italian> <!--Scoreboard hover on civ name in lower right -->
 		<Spanish>Dificultad el jugador: %s1</Spanish>
+		<Russian>Сложность игрока: %s1</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_SETTINGS_GAME_SPEED</Tag>
@@ -23244,6 +23248,7 @@
 		<German>Spielgeschwindigkeit: %s1</German>
 		<Italian>Velocità di gioco: [COLOR_HIGHLIGHT_TEXT]%s1[COLOR_REVERT]</Italian> <!-- victory info screen -->
 		<Spanish>Velocidad de juego: %s1</Spanish>
+		<Russian>Длительность игры: %s1</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_SETTINGS_MAP_SIZE</Tag>
@@ -23252,6 +23257,7 @@
 		<German>Weltgröße %s1</German>
 		<Italian>Dimensione del mondo: %s1</Italian> <!-- victory info screen -->
 		<Spanish>Tamaño del mundo: %s1</Spanish>
+		<Russian>Размер мира: %s1</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_SETTINGS_SEA_LEVEL</Tag>
@@ -23260,6 +23266,7 @@
 		<German>Meeresspiegel: %s1</German>
 		<Italian>Altezza mare: %s1</Italian> <!-- victory info screen -->
 		<Spanish>Nivel del mar: %s1</Spanish>
+		<Russian>Уровень моря: %s1</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_SETTINGS_STARTING_ERA</Tag>
@@ -23268,6 +23275,7 @@
 		<German>Startzeitalter %s1</German>
 		<Italian>Era iniziale: %s1</Italian> <!-- victory info screen -->
 		<Spanish>Época de inicio: %s1</Spanish>
+		<Russian>Исходный период: %s1</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_SET_WARNING_COLOR</Tag>
@@ -29433,6 +29441,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Tag>TXT_KEY_VICTORY_SCREEN_CITIES</Tag>
 		<English>Monumental Cities</English>
 		<Italian>Città monumentali</Italian> <!-- victory info screen -->
+		<Russian>Монументальных культурой городов</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_VICTORY_SCREEN_CITY_CULTURE</Tag>
@@ -29442,16 +29451,17 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<German>%d1 Städte mit Kulturstufe %s2</German>
 		<Italian>%d1 città con la cultura %s2</Italian>  <!-- victory info screen -->
 		<Spanish>%d1 ciudades con cultura %s2</Spanish>
+		<Russian>Городов с уровнем культуры «%s2»: %d1</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_VICTORY_SCREEN_CONDITION</Tag>
 		<English>Category</English>
 		<French>Categorie</French>
 		<German>Kathegorie</German>
+		<Italian>Categoria</Italian> <!-- victory info screen -->
 		<Spanish>Categoría</Spanish>
 		<Polish>Kategoria</Polish>
-		<Russian>Êàòåãîðèè</Russian>
-		<Italian>Categoria</Italian> <!-- victory info screen -->
+		<Russian>Категории</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_VICTORY_SCREEN_ELECTION</Tag>
@@ -29461,6 +29471,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<German>Wahl durch %s1 initiiert</German>
 		<Italian>Elezioni richieste da %s1</Italian>  <!-- victory info screen -->
 		<Spanish>Votación iniciada por %s1</Spanish>
+		<Russian>%s1 инициировал выборы</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_VICTORY_SCREEN_ELIMINATE_ALL</Tag>
@@ -29485,8 +29496,8 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<German>gestartet</German>
 		<Spanish>Lanzada</Spanish>
 		<Polish>Wystartowa&#179;</Polish>
-		<Russian>Çàïóùåí</Russian>
 		<Italian>Lanciata</Italian>  <!-- victory info screen -->
+		<Russian>Запущен</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_VICTORY_SCREEN_NOTLAUNCHED</Tag>
@@ -29494,9 +29505,9 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<French>Pas Lancé</French>
 		<German>nicht gestartet</German>
 		<Spanish>No lanzada</Spanish>
-		<Polish>Nie wystartowa&#179;</Polish>
-		<Russian>Íå çàïóùåí</Russian>
 		<Italian>Non ancora lanciata</Italian> <!-- victory info screen -->
+		<Polish>Nie wystartowa&#179;</Polish>
+		<Russian>Не запущен</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_VICTORY_SCREEN_NOT_BUILT</Tag>
@@ -29505,24 +29516,25 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<German>Noch nicht errichtet</German>
 		<Italian>Congresso non istituito</Italian>  <!-- victory info screen -->
 		<Spanish>Sin construir aún</Spanish>
+		<Russian>Не построено</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_VICTORY_SCREEN_NO_HOLY</Tag>
 		<English>No Holy City</English>
 		<French>Pas de Ville Sainte</French>
 		<Spanish>No posee la Ciudad Santa</Spanish>
-		<Polish>Brak &#140;wi&#234;tych Miast</Polish>
-		<Russian>Íåò Ñâÿùåííûõ ãîðîäîâ</Russian>
 		<Italian>Nessuna città santa</Italian> <!-- victory info screen -->
+		<Polish>Brak &#140;wi&#234;tych Miast</Polish>
+		<Russian>Нет священного города</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_VICTORY_SCREEN_OTHER_CIV_SCORE</Tag>
 		<English>Other Civ's Scores</English>
 		<French>Score des autres Civs</French>
+		<Italian>Punteggio altre civiltà</Italian> <!-- victory info screen -->
 		<Spanish>Puntuación de otras civilizaciones</Spanish>
 		<Polish>Inne Wyniki Cywilizacji:</Polish>
-		<Russian>Î÷êè äð. öèâèëèçàöèé</Russian>
-		<Italian>Punteggio altre civiltà</Italian> <!-- victory info screen -->
+		<Russian>Очки других цивилизаций</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_VICTORY_SCREEN_PERCENTAGE</Tag>
@@ -29530,7 +29542,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<French>Statut</French>
 		<Italian>Stati</Italian> <!-- victory info screen, pedia screen Status name -->
 		<Spanish>Estado</Spanish>
-		<Russian>Ñòàòóñ</Russian>
+		<Russian>Статус</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_VICTORY_SCREEN_PERCENT_CULTURE</Tag>
@@ -29539,6 +29551,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<German>%d1%% der Kultur</German>
 		<Italian>%d1%% di cultura</Italian>  <!-- victory info screen -->
 		<Spanish>%d1%% de cultura</Spanish>
+		<Russian>%d1%% культуры</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_VICTORY_SCREEN_PERCENT_LAND</Tag>
@@ -29547,6 +29560,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<German>%d1%% des Landgebiets</German>
 		<Italian>%d1%% della superficie</Italian>  <!-- victory info screen -->
 		<Spanish>%d1%% del área terrestre</Spanish>
+		<Russian>%d1%% суши</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_VICTORY_SCREEN_PERCENT_POP</Tag>
@@ -29555,6 +29569,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<German>%d1%% der Weltbevölkerung</German>
 		<Italian>%d1%% della popolazione mondiale</Italian>  <!-- victory info screen -->
 		<Spanish>%d1%% de la población mundial</Spanish>
+		<Russian>%d1%% мирового населения</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_VICTORY_SCREEN_PERCENT_RELIGION</Tag>
@@ -29563,6 +29578,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<German>%d1%% des religiösen Einflusses</German>
 		<Italian>%d1%% di influenza religiosa</Italian>  <!-- victory info screen -->
 		<Spanish>%d1%% de influencia religiosa</Spanish>
+		<Russian>%d1%% религиозного влияния</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_VICTORY_SCREEN_PLAYER_VOTES</Tag>
@@ -29596,7 +29612,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Italian>Civiltà rivali</Italian> <!-- victory info screen -->
 		<Spanish>Civilización rival</Spanish>
 		<Polish>Rywale</Polish>
-		<Russian>Соперники</Russian>
+		<Russian>Соперник</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_VICTORY_SCREEN_TITLE</Tag>
@@ -29605,26 +29621,26 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<German>Siegbedingungen</German>
 		<Italian>Dettagli partita</Italian> <!-- victory info screen -->
 		<Spanish>Condiciones para la victoria</Spanish>
-		<Russian>Условия победы</Russian>
+		<Russian>Путь к победе</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_VICTORY_SCREEN_TOTALS</Tag>
 		<English>Mastery Score</English>
 		<French>Score de Maîtrise</French>
 		<German>Meistersieg-Wertung</German>
+		<Italian>Punteggio maestria</Italian> <!-- victory info screen -->
 		<Spanish>Puntos de Maestría</Spanish>
 		<Polish>Wynik dominacji</Polish>
-		<Russian>Î÷êè Ïîáåäû</Russian>
-		<Italian>Punteggio maestria</Italian> <!-- victory info screen -->
+		<Russian>Очки превосходства</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_VICTORY_SCREEN_UNKNOWN</Tag>
 		<English>Unknown</English>
 		<French>Inconnu</French>
+		<Italian>Civiltà sconosciuta</Italian> <!-- victory info screen -->
 		<Spanish>Desconocido</Spanish>
 		<Polish>Nieznane</Polish>
-		<Russian>Íåèçâ.</Russian>
-		<Italian>Civiltà sconosciuta</Italian> <!-- victory info screen -->
+		<Russian>Неизвестно</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_VICTORY_SPACE_RACE</Tag>
@@ -29655,6 +29671,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<German>Das Team %s1_team_name hat sein Raumschiff gestartet!</German>
 		<Italian>%s1_team_name ha lanciato un'astronave!</Italian>
 		<Spanish>¡%s1_team_name ha lanzado una nave espacial!</Spanish>
+		<Russian>Команда «%s1_team_name» запустила космический корабль!</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_VICTORY_TIME</Tag>
@@ -29687,10 +29704,10 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<English>Mastery</English>
 		<French>Maîtrise</French>
 		<German>Meistersieg</German>
+		<Italian>Maestria</Italian>
 		<Spanish>Maestría</Spanish>
 		<Polish>Totalna dominacja</Polish>
 		<Russian>Превосходство</Russian>
-		<Italian>Maestria</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_VICTORY_TOTAL_PEDIA</Tag>
@@ -29965,6 +29982,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<German>Resolutionen</German>
 		<Italian>Risoluzioni congressi</Italian> <!-- victory conditions infoscreen, tab resolutions -->
 		<Spanish>Resoluciones</Spanish>
+		<Russian>Резолюции</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_WARPLAN_LIMITED_TARGET_IS</Tag>
