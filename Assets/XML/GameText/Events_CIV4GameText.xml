@@ -3903,7 +3903,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_BLACKBEARD</Tag>
-		<English>The infamous Pirate [COLOR_NEGATIVE_TEXT]Blackbeard[COLOR_REVERT] has set sail for our waters, seeking plunder and mayhem! His flotilla is just over the horizon!</English>
+		<English>The infamous pirate [COLOR_NEGATIVE_TEXT]Blackbeard[COLOR_REVERT] has set sail for our waters, seeking plunder and mayhem! His flotilla is just over the horizon!</English>
 		<French>Le pirate infâme [COLOR_NEGATIVE_TEXT]Blackbeard[COLOR_REVERT] a dirigé ses voiles vers nos eaux! Sa flotille est visible juste au-dessus de l'horizon!</French>
 		<German>Der berüchtigte Pirat [COLOR_NEGATIVE_TEXT]Blackbeard[COLOR_REVERT] hat Segel auf unsere Gewässer gesetzt und sucht Plünderung und Chaos! Seine Flotille liegt direkt hinter dem Horizont!</German>
 		<Italian>Il malfamato pirata [COLOR_NEGATIVE_TEXT]Barbanera[COLOR_REVERT] sta facendo rotta per le nostre coste! La sua flotta è già visibile all'orizzonte!</Italian>
@@ -9654,7 +9654,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_PIRATE_MAP_2</Tag>
-		<English>Make a big to-do over it, then burn the map and claim it was the Pirates' revenge!</English>
+		<English>Make a big to-do over it, then burn the map and claim it was the pirates' revenge!</English>
 		<French>Faites-en une copie, puis brûlez la carte et prétendez que c'était la vengeance des Pirates!</French>
 	</TEXT>
 	<TEXT>
@@ -14862,7 +14862,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_WORLD_BLACKBEARD</Tag>
-		<English>The infamous Pirate [COLOR_NEGATIVE_TEXT]Blackbeard[COLOR_REVERT] is attacking %s1_civ_adjective shipping!</English>
+		<English>The infamous pirate [COLOR_NEGATIVE_TEXT]Blackbeard[COLOR_REVERT] is attacking %s1_civ_adjective shipping!</English>
 		<French>Le pirate infâme [COLOR_NEGATIVE_TEXT]Blackbeard[COLOR_REVERT] attaque des bateaux %s1:3_civ_adjective!</French>
 		<German>Der berüchtigte Pirat [COLOR_NEGATIVE_TEXT]Blackbeard[COLOR_REVERT] greift %s1_civ_adjective Schiffe an!</German>
 		<Italian>Il pirata malfamato [COLOR_NEGATIVE_TEXT]Barbanera[COLOR_REVERT] sta attaccando le navi %s1:3_civ_adjective!</Italian>
@@ -14991,7 +14991,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_WORLD_HENRY_MORGAN</Tag>
-		<English>The notorious Pirate [COLOR_NEGATIVE_TEXT]Henry Morgan[COLOR_REVERT] is attacking the %s1_civ_adjective fleet!</English>
+		<English>The notorious pirate [COLOR_NEGATIVE_TEXT]Henry Morgan[COLOR_REVERT] is attacking the %s1_civ_adjective fleet!</English>
 		<French>Le fameux Pirate [COLOR_NEGATIVE_TEXT]Henry Morgan[COLOR_REVERT] attaque la flotte des %s1:3_civ_adjective!</French>
 		<German>Der gefürchtete Pirat [COLOR_NEGATIVE_TEXT]Henry Morgan[COLOR_REVERT] greift die %s1_civ_adjective Flotte an!</German>
 		<Italian>Il famoso pirata Henry Morgan sta attaccando la flotta %s1:2_civ_adjective!</Italian>
@@ -15001,7 +15001,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_WORLD_ILLYRIAN_PIRATES</Tag>
-		<English>The [COLOR_NEGATIVE_TEXT]Illyrian Pirates[COLOR_REVERT] have declared war on %s1_civ_adjective merchant shipping!</English>
+		<English>The [COLOR_NEGATIVE_TEXT]Illyrian pirates[COLOR_REVERT] have declared war on %s1_civ_adjective merchant shipping!</English>
 		<French>Les [COLOR_NEGATIVE_TEXT]Pirates d'Illyrian[COLOR_REVERT] ont déclaré la guerre à la marine marchande %s1:2_civ_adjective!</French>
 		<German>Die [COLOR_NEGATIVE_TEXT]Illyrischen Piraten[COLOR_REVERT] haben den %s1_civ_adjective Handelsschiffen den Krieg erklärt!</German>
 		<Italian>I [COLOR_NEGATIVE_TEXT]pirati dell'Illiria[COLOR_REVERT] stanno attaccando le navi mercantili %s1:4_civ_adjective!</Italian>
@@ -15061,7 +15061,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_WORLD_MALACCAN_PIRATES</Tag>
-		<English>The [COLOR_NEGATIVE_TEXT]Malaccan Pirates[COLOR_REVERT] are hijacking merchant ships and kidnapping sailors in %s1_civ_adjective waters!</English>
+		<English>The [COLOR_NEGATIVE_TEXT]Malaccan pirates[COLOR_REVERT] are hijacking merchant ships and kidnapping sailors in %s1_civ_adjective waters!</English>
 		<French>Les pirates de Malacca détournent les bateaux marchands et enlèvent des marins dans les eaux %s1:4_civ_adjective!</French>
 		<German>Die [COLOR_NEGATIVE_TEXT]Malaccanischen Piraten[COLOR_REVERT] überfallen Handelsschiffe und entführen Seeleute im %s1_civ_adjective Gewässer.</German>
 		<Italian>I pirati della Malacca stanno dirottando le navi mercantili e stanno rapinando i marinai nelle acque %s1:4_civ_adjective.</Italian>
@@ -15111,7 +15111,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_WORLD_STEDE_BONNET</Tag>
-		<English>The famous Pirate [COLOR_NEGATIVE_TEXT]Stede Bonnet[COLOR_REVERT] is attacking the %s1_civ_adjective fleet!</English>
+		<English>The famous pirate [COLOR_NEGATIVE_TEXT]Stede Bonnet[COLOR_REVERT] is attacking the %s1_civ_adjective fleet!</English>
 		<French>Le fameux Pirate [COLOR_NEGATIVE_TEXT]Stede Bonnet[COLOR_REVERT] attaque la flotte des %s1:3_civ_adjective!</French>
 		<German>Der Pirat [COLOR_NEGATIVE_TEXT]Stede Bonnet[COLOR_REVERT] greift die %s1_civ_adjective Flotte an!</German>
 		<Italian>Il famoso pirata Stede Bonnet sta attaccando la flotta %s1:2_civ_adjective!</Italian>
