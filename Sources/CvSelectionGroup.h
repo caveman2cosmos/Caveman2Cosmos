@@ -346,6 +346,7 @@ public:
 	bool meetsUnitSelectionCriteria(const CvUnitSelectionCriteria* criteria) const;
 	int getStrength() const;
 	bool hasCommander() const;
+	bool hasCommodore() const;
 	bool hasUnitOfAI(UnitAITypes eUnitAI) const;
 	int	getWorstDamagePercent(UnitCombatTypes eIgnoreUnitCombat = NO_UNITCOMBAT) const;
 	void validateLocations(bool bFixup = false) const;

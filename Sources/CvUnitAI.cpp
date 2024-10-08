@@ -26399,6 +26399,58 @@ bool CvUnitAI::AI_command()
 	return false;
 }
 
+//bool CvUnitAI::AI_commod()
+//{
+//	PROFILE_EXTRA_FUNC();
+//
+//	if (!GC.getGame().isOption(GAMEOPTION_UNIT_GREAT_COMMODORES)
+//	|| !getUnitInfo().isGreatAdmiral()
+//	|| isCommmodore())
+//	{
+//		return false;
+//	}
+//	const int iNumCommodores = GET_PLAYER(getOwner()).getCommodores().size();
+//
+//	bool bCommand = iNumCommodores < 2 + GET_PLAYER(getOwner()).getNumCities() / 5;
+//
+//	if (!bCommand)
+//	{
+//		for (int iPlayer = 0; iPlayer < MAX_PLAYERS; iPlayer++)
+//		{
+//			if (GET_TEAM(GET_PLAYER((PlayerTypes)iPlayer).getTeam()).isAtWar(getTeam())
+//			&& iNumCommodores < static_cast<int>(GET_PLAYER((PlayerTypes)iPlayer).getCommodores().size()))
+//			{
+//				bCommand = true;
+//				break;
+//			}
+//		}
+//	}
+//
+//	if (!bCommand && GET_TEAM(getTeam()).getAnyWarPlanCount(true) > iNumCommodores)
+//	{
+//		bCommand = true;
+//	}
+//
+//	if (bCommand && plot()->getPlotCity())
+//	{
+//		const int iTotalThreat = std::max(1, GET_PLAYER(getOwner()).AI_getTotalAreaCityThreat(area(), NULL));
+//		const int iOurThreat = plot()->getPlotCity()->AI_cityThreat();
+//
+//		// Unlikely to level the commodore fast enough to be useful, leading troops will bring more immediate benefits
+//		const int iNumCities = std::max(1, GET_PLAYER(getOwner()).getNumCities());
+//		if (iOurThreat > 2 * iTotalThreat / iNumCities)
+//		{
+//			bCommand = false;
+//		}
+//	}
+//	if (bCommand)
+//	{
+//		setCommodore(true);
+//		return true;
+//	}
+//	return false;
+//}
+
 bool CvUnitAI::AI_AutomatedPillage(int iBonusValueThreshold)
 {
 	PROFILE_FUNC();
