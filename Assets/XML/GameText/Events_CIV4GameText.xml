@@ -2895,7 +2895,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_TREASURY_PLUNDERED_1</Tag>
-		<English>Group of thieves have plundered Treasury in %s2_city!</English>
+		<English>A group of thieves has plundered the treasury in %s2_city!</English>
 		<French>Un Groupe de voleurs a pillé le trésor de %s2_city!</French>
 		<German>Eine Diebesgruppe hat die Schatzkammer in %s2_city geplündert!</German>
 		<Italian>Un gruppo di ladri ha svuotato le casse cittadine di %s2_city!</Italian>
@@ -14032,7 +14032,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_TRIGGER_TRADE_FOUNDED_1</Tag>
-		<English>Group of merchants in %s2_city have formed a Trade Caravan and are ready to seek out market opportunities in distant lands.</English>
+		<English>A group of merchants in %s2_city have formed a trade caravan and are ready to seek out market opportunities in distant lands.</English>
 		<French>Un Groupe de marchands de %s2_city a formé une Caravane Commerciale et ils sont prêts à chercher des opportunités commerciales chez nos voisins.</French>
 		<German>Eine Gruppe von Händlern in %s2_city haben eine Handelskaravane begründet und sind bereit, in fernen Ländern nach neuen Märkten zu suchen.</German>
 		<Italian>Gruppi di mercanti a %s2_city hanno formato una carovana commerciale e sono pronti a cercare nuove opportunità di guadagno in terre distanti.</Italian>
