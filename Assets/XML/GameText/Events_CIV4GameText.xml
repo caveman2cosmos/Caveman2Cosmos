@@ -918,7 +918,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_FAUX_PAS</Tag>
-		<English>A faux pas committed by the %s1_civ_adjective ambassador has caused quite a stir in the %s4_civ_adjective Capital.</English>
+		<English>A faux pas committed by the %s1_civ_adjective ambassador has caused quite a stir in the %s4_civ_adjective capital.</English>
 		<French>Une gaffe commise par l'ambassadeur %s1:1_civ_adjective a provoqué de grands remous dans la capitale %s4:2_civ_adjective. </French>
 		<German>Ein Fauxpas des %s1:2_civ_adjective Botschafters hat in der %s4:2_civ_adjective Hauptstadt für ziemliche Aufregung gesorgt.</German>
 		<Italian>Una gaffe commessa dall'ambasciatore %s1_civ_adjective ha causato agitazione nella capitale %s4:2_civ_adjective.</Italian>
