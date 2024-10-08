@@ -2342,7 +2342,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_QUICKSAND</Tag>
-		<English>Some units of the %s1_civ_adjective empire got stuck in the sand dunes.</English>
+		<English>Some units of the %s1_civ_adjective empire got stuck among sand dunes.</English>
 		<French>Des unités de l'empire %s1_civ_adjective ont été pris au piège dans des sables mouvants.</French>
 		<Italian>Alcune unità dell'Impero %s1_civ_adjective sono rimaste bloccate fra le dune.</Italian>
 		<Polish>Niekt&#243;re jednostki w Imperium %s1_civ_adjective utkn&#234;&#179;y w lotnych piaskach.</Polish>
@@ -2741,7 +2741,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_TARPIT</Tag>
-		<English>Some units of the %s1_civ_adjective empire got stuck in the tar pit.</English>
+		<English>Some units of the %s1_civ_adjective empire got stuck in a tar pit.</English>
 		<French>Des unités de l'empire %s1_civ_adjective ont été pris au piège dans des fosses de goudron.</French>
 		<Italian>Alcune unità dell'Impero %s1_civ_adjective sono rimaste intrappolate nelle fosse di catrame.</Italian>
 		<Polish>Niekt&#243;re jednostki z imperium %s1_civ_adjective utkne&#179;y w do&#179;ach ze smo&#179;&#185;.</Polish>
