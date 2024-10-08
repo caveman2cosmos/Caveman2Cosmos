@@ -6020,7 +6020,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_FAMOUS_DOCTOR_1</Tag>
-		<English>Put this money towards a research hospital annex onto our university.</English>
+		<English>Put this money towards a research hospital annex for our university.</English>
 		<French>Investir cet argent pour établir un centre de recherche médicale en annexe de notre université.</French>
 		<German>Verwendet das Geld für ein Forschungskrankenhaus als Erweiterung unserer Universität.</German>
 		<Italian>Usa questi soldi per un ospedale di ricerca annesso all'università.</Italian>
@@ -6040,7 +6040,7 @@
 	</TEXT>
     <TEXT>
         <Tag>TXT_KEY_EVENT_FAMOUS_DOCTOR_3</Tag>
-        <English>Pocket the money who cares what he wanted. The country needs it most.</English>
+        <English>Pocket the money - who cares what he wanted, the country needs it most.</English>
     </TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_FARM_BANDITS_1</Tag>
