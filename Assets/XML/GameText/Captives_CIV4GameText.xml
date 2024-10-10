@@ -135,7 +135,7 @@
 		<French>La Ville a %d1 Artistes. Vous en tuez %d1 et %d1 sont faits prisonniers. (Prisonnier - Artiste)</French>
 		<Italian>La città aveva %d1 artisti: ne hai uccisi %d1 e catturati %d1.</Italian>
 		<Polish>Miasto mia&#179;o %d1 Artyst&#243;w. Zabi&#179;e&#156; %d1 a %d1 zosta&#179;o pojmanych. (Jeniec - Artysta)</Polish>
-		<Russian>В городе было %d1 художников. Вы убили %d1, а захватили %d1. (Пленник - художник)</Russian>
+		<Russian>В городе находились художники в количестве: %d1. Вы убили: %d1, а захватили: %d1. (пленник-художник)</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MSG_CITY_HAD_DOCTORS</Tag>
@@ -143,7 +143,7 @@
 		<French>La Ville a %d1 Médecins. Vous en tuez %d1 et %d1 sont faits prisonniers. (Prisonnier - Médecin)</French>
 		<Italian>La città aveva %d1 dottori: ne hai uccisi %d1 e catturati %d1.</Italian>
 		<Polish>Miasto mia&#179;o %d1 Lekarzy. Zabi&#179;e&#156; %d1 a %d1 zosta&#179;o pojmanych. (Jeniec - Lekarz)</Polish>
-		<Russian>В городе было %d1 докторов. Вы убили %d1, а захватили %d1. (Пленник - доктор)</Russian>
+		<Russian>В городе находились врачи в количестве: %d1. Вы убили: %d1, а захватили %d1. (пленник-врач)</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MSG_CITY_HAD_ENGINEERS</Tag>
@@ -151,7 +151,7 @@
 		<French>La Ville a %d1 Ingénieurs. Vous en tuez %d1 et %d1 sont faits prisonniers. (Prisonnier - Ingénieur)</French>
 		<Italian>La città aveva %d1 ingegneri: ne hai uccisi %d1 e catturati %d1.</Italian>
 		<Polish>Miasto mia&#179;o %d1 In&#191;ynier&#243;w. Zabi&#179;e&#156; %d1 a %d1 zosta&#179;o pojmanych. (Jeniec - In&#191;ynier)</Polish>
-		<Russian>В городе было %d1 инженеров. Вы убили %d1, а захватили %d1. (Пленник - инженер)</Russian>
+		<Russian>В городе находились инженеры в количестве: %d1. Вы убили: %d1, а захватили: %d1. (пленник-инженер)</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MSG_CITY_HAD_GENERALS</Tag>
@@ -159,13 +159,13 @@
 		<French>La Ville a %d1 Généraux. Vous en tuez %d1. %d1 conduisent les rebelles et %d1 sont faits prisonniers. (Prisonnier - Général)</French>
 		<Italian>La città aveva %d1 generali: ne hai uccisi %d1, %d1 ora guidano ribelli o partigiani, mentre %d1 sono stati catturati.</Italian>
 		<Polish>Obron&#185; miasta dowodzi&#179;o %d1 Genera&#179;&#243;w. Zabi&#179;e&#156; %d1. %d1 przesz&#179;o do podziemia i dowodzi teraz partyzantami a %d1 zosta&#179;o pojmanych. (Jeniec - Genera&#179;)</Polish>
-		<Russian>В городе было %d1 генералов. Вы убили %d1. %d1 возглавили повстанцев или партизан, а %d1 были захвачены. (Пленник - генерал)</Russian>
+		<Russian>В городе находились генералы в количестве: %d1. Убитых вами: %d1, возглавивших повстанцев или партизан: %d1, захваченых: %d1. (пленник-генерал)</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MSG_CITY_HAD_MERCHANTS</Tag>
 		<English>The city had %d1 Merchants. You killed %d1 and %d1 were captured. (Captive - Merchant)</English>
 		<Italian>La città aveva %d1 mercanti: ne hai uccisi %d1 e catturati %d1.</Italian>
-		<Russian>В городе было %d1 торговцев. Вы убили %d1, а захватили %d1. (Пленник - торговец)</Russian>
+		<Russian>В городе находились торговцы в количестве: %d1. Вы убили: %d1, а захватили: %d1. (пленник-торговец)</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MSG_CITY_HAD_PRIESTS</Tag>
@@ -173,7 +173,7 @@
 		<French>La Ville a %d1 Prêtres. Vous en tuez %d1 et %d1 sont faits prisonniers. (Prisonnier - Prêtre)</French>
 		<Italian>La città aveva %d1 sacerdoti: ne hai uccisi %d1 e catturati %d1.</Italian>
 		<Polish>Miasto mia&#179;o %d1 Kap&#179;an&#243;w. Zabi&#179;e&#156; %d1 a %d1 zosta&#179;o pojmanych. (Jeniec - Kap&#179;an)</Polish>
-		<Russian>В городе было %d1 священников. Вы убили %d1, а захватили %d1. (Пленник - священник)</Russian>
+		<Russian>В городе находились священники в количестве: %d1. Вы убили: %d1, а захватили: %d1. (пленник-священник)</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MSG_CITY_HAD_SCIENTISTS</Tag>
@@ -181,7 +181,7 @@
 		<French>La Ville a %d1 Scientifiques. Vous en tuez %d1 et %d1 sont faits prisonniers. (Prisonnier - Scientifique)</French>
 		<Italian>La città aveva %d1 scienziati: ne hai uccisi %d1 e catturati %d1.</Italian>
 		<Polish>Miasto mia&#179;o %d1 Naukowc&#243;w. Zabi&#179;e&#156; %d1 a %d1 zosta&#179;o pojmanych. (Jeniec - Naukowiec)</Polish>
-		<Russian>В городе было %d1 ученых. Вы убили %d1, а захватили %d1. (Пленник - ученый)</Russian>
+		<Russian>В городе находились ученые в количестве: %d1. Вы убили: %d1, а захватили: %d1. (пленник-ученый)</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MSG_CITY_HAD_SPIES</Tag>
@@ -189,14 +189,14 @@
 		<French>Il semble que la ville possède %d1 Espions illustres. Vous en capturez %d1 (Prisonnier - Espion). Les autres sont considérés morts ou en fuite.</French>
 		<Italian>Secondo alcune voci la città aveva %d1 grandi spie: ne hai catturate %d1. Si ritiene che le altre siano morte o fuggite.</Italian>
 		<Polish>Chodzi&#179;y pog&#179;oski, &#191;e w mie&#156;cie rezydowa&#179;o %d1 Wielkich Szpieg&#243;w. Pojma&#179;e&#156; %d1 (Jeniec - Szpieg). Reszta poleg&#179;a lub uciek&#179;a.</Polish>
-		<Russian>По слухам, в городе было %d1 великих шпионов. Вы захватили %d1 (Пленник - шпион). Остальные, предположительно, мертвы или сбежали.</Russian>
+		<Russian>По слухам, в городе находились великие шпионы в количестве: %d1. Вы заполучили пленников-шпионов: %d1. Остальные, предположительно, мертвы или сбежали.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MSG_CIVILIAN_CAPTIVE</Tag>
 		<English>You have captured %d1 civilian unit(s) (Captive - Civilian).</English>
 		<French>Vous avez capturé %d1 unité civile (Prisonnier - Civil).</French>
 		<Italian>Hai catturato %d1 unità civile(i).</Italian>
-		<Russian>Вы захватили гражданские подразделения в количестве %d1 (Пленник - гражданский).</Russian>
+		<Russian>Вы захватили гражданские подразделения в количестве: %d1 (пленник-гражданский).</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MSG_MILITARY_CAPTIVE</Tag>
@@ -204,7 +204,7 @@
 		<French>Vous avez capturé une unité militaire (Prisonnier de Guerre).</French>
 		<Italian>Hai catturato un'unità militare.</Italian>
 		<Polish>Pojma&#179;e&#156; jednostk&#234; wojskow&#185; (Jeniec Wojenny).</Polish>
-		<Russian>Вы захватили военное подразделение (Пленник - военный).</Russian>
+		<Russian>Вы захватили военное подразделение (пленник-военный).</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MSG_NEANDERTHAL_CAPTIVE</Tag>
@@ -212,7 +212,7 @@
 		<French>Vous avez capturé une unité de Néanderthal (Prisonnier - Neanderthal).</French>
 		<Italian>Hai catturato un'unità Neanderthal.</Italian>
 		<Polish>Pojma&#179;e&#156; Neandertalczyk&#243;w (Jeniec - Neandertalczyk).</Polish>
-		<Russian>Вы захватили неандертальское подразделение (Пленник - неандерталец).</Russian>
+		<Russian>Вы захватили неандертальское подразделение (пленник-неандерталец).</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_OUTCOME_JOIN_CITY_FREED_SLAVE</Tag>
@@ -443,7 +443,7 @@
 		<English>Captive - Civilian</English>
 		<French>Prisonnier - Civil</French>
 		<Italian>Prigioniero civile</Italian>
-		<Russian>Пленник - гражданский</Russian>
+		<Russian>Пленник-гражданский</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_CAPTIVE_CIVILIAN_HELP</Tag>
@@ -464,14 +464,14 @@
 		<English>Captive - Immigrant</English>
 		<French>Prisonnier - Immigrant</French>
 		<Italian>Prigioniero emigrante</Italian>
-		<Russian>Пленник - иммигрант</Russian>
+		<Russian>Пленник-иммигрант</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_CAPTIVE_MILITARY</Tag>
 		<English>Captive - Military</English>
 		<French>Prisonnier - Militaire</French>
 		<Italian>Prigioniero militare</Italian>
-		<Russian>Пленник - военный</Russian>
+		<Russian>Пленник-военный</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_CAPTIVE_MILITARY_HELP</Tag>
@@ -492,14 +492,14 @@
 		<English>Captive - Neanderthal</English>
 		<French>Prisonnier - Néanderthal</French>
 		<Italian>Prigioniero neanderthal</Italian>
-		<Russian>Пленник - неандерталец</Russian>
+		<Russian>Пленник-неандерталец</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_FREED_SLAVE</Tag>
 		<English>Captive - Freed Slave</English>
 		<French>Prisonnier - Esclave libéré</French>
 		<Italian>Prigioniero schiavo liberato</Italian>
-		<Russian>Пленник - освобожденный раб</Russian>
+		<Russian>Пленник-освобожденный раб</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_FREED_SLAVE_HELP</Tag>

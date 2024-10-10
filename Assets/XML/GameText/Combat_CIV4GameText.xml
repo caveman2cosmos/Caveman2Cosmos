@@ -11534,7 +11534,7 @@
 			<Plural>0:1</Plural>
 		</Spanish>
 		<Polish>Osadnik</Polish>
-		<Russian>Êîëîíèçàòîðû</Russian>
+		<Russian>Градостроитель</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_SHIELD_ATTOMETER</Tag>
@@ -11558,7 +11558,7 @@
 			<Plural>0:1</Plural>
 		</Spanish>
 		<Polish>Tarcza (Puklerz)</Polish>
-		<Russian>Ùèò (Êóëà÷íûé)</Russian>
+		<Russian>Кулачный щит</Russian>
 		<Italian>Scudo di tipo brocchiero</Italian>
 	</TEXT>
 	<TEXT>
@@ -11566,7 +11566,7 @@
 		<English>Shield (Crystal)</English>
 		<French>(Protection) Cristal</French>
 		<Polish>Tarcza (Kryszta&#179;owa)</Polish>
-		<Russian>Ùèò (Êðèñòàëë.)</Russian>
+		<Russian>Кристалический щит</Russian>
 		<Italian>Scudo di tipo cristallo</Italian>
 	</TEXT>
 	<TEXT>
@@ -11574,7 +11574,7 @@
 		<English>Shield (Electromagnetic)</English>
 		<French>(Protection) Électromagnétique</French>
 		<Polish>Tarcza (Elektromagnetyczna)</Polish>
-		<Russian>Ùèò (Ýëåêòðîìàãí.)</Russian>
+		<Russian>Электромагнитный щит</Russian>
 		<Italian>Scudo di tipo elettromagnetico</Italian>
 	</TEXT>
 	<TEXT>
@@ -11591,7 +11591,7 @@
 			<Plural>0:1</Plural>
 		</Spanish>
 		<Polish>Tarcza (Energetyczna)</Polish>
-		<Russian>Ùèò(Ýíåðãî)</Russian>
+		<Russian>Энергетический щит</Russian>
 		<Italian>Scudo di tipo energetico</Italian>
 	</TEXT>
 	<TEXT>
@@ -11599,7 +11599,7 @@
 		<English>Shield (Force Field)</English>
 		<French>(Protection) Champ de Force</French>
 		<Polish>Tarcza (Pole Si&#179;owe)</Polish>
-		<Russian>Ùèò (Ñèëîâîå ïîëå)</Russian>
+		<Russian>Щит-силовое поле</Russian>
 		<Italian>Scudo di tipo campo di forza</Italian>
 	</TEXT>
 	<TEXT>
@@ -11607,7 +11607,7 @@
 		<English>Shield (Gravity)</English>
 		<French>(Protection) Gravité</French>
 		<Polish>Tarcza (Grawitacyjna)</Polish>
-		<Russian>Ùèò (Ãðàâèòàöèÿ)</Russian>
+		<Russian>Гравитационный щит</Russian>
 		<Italian>Scudo di tipo a gravità</Italian>
 	</TEXT>
 	<TEXT>
@@ -11624,7 +11624,7 @@
 			<Plural>0:1</Plural>
 		</Spanish>
 		<Polish>Tarcza (Du&#191;a)</Polish>
-		<Russian>Ùèò(Áîëüøîé)</Russian>
+		<Russian>Большой щит</Russian>
 		<Italian>Scudo di tipo grande</Italian>
 	</TEXT>
 	<TEXT>
@@ -11641,7 +11641,7 @@
 			<Plural>0:1</Plural>
 		</Spanish>
 		<Polish>Materia&#179; Tarczy (Ko&#156;&#230;)</Polish>
-		<Russian>Ìàò. ùèòà(Êîñòü)</Russian>
+		<Russian>Материал щита - кость</Russian>
 		<Italian>Materiale scudo osso</Italian>
 	</TEXT>
 	<TEXT>
@@ -11658,7 +11658,7 @@
 			<Plural>0:1</Plural>
 		</Spanish>
 		<Polish>Materia&#179; Tarczy (Br&#185;z)</Polish>
-		<Russian>Ìàò. ùèòà(Áðîíçà)</Russian>
+		<Russian>Материал щита - бронза</Russian>
 		<Italian>Materiale scudo bronzo</Italian>
 	</TEXT>
 	<TEXT>

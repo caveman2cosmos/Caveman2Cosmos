@@ -1933,7 +1933,7 @@
 		<Spanish>[NEWLINE]SHIFT-F5 = Guardado rápido</Spanish>
 		<Polish>[NEWLINE]SHIFT-F5 = Szybki Zapis!</Polish>
 		<Italian>[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]SHIFT-F5[COLOR_REVERT] = Salvataggio rapido</Italian> <!-- Bug mod recap screen Ctrl+Shift+Q -->
-		<Russian>[NEWLINE]SHIFT-F5 - быстрое сохранение</Russian>
+		<Russian>[NEWLINE]SHIFT+F5 - быстрое сохранение</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_REV_MOD_INITIALIZING_SHIFT_F8_SHORTCUT</Tag>

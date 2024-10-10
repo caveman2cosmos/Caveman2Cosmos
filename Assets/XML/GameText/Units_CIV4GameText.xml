@@ -50,7 +50,7 @@
 		<Italian>Nessuna unità</Italian> <!-- infoscreen Military -->
 		<Spanish>Ninguno</Spanish>
 		<Polish>Automatyczne Ulepszenia</Polish>
-		<Russian>Íåò</Russian>
+		<Russian>Нет</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITGROUPER_LEVEL_GROUP</Tag>
@@ -475,7 +475,7 @@
 		<Italian>Nessuno</Italian> <!-- infoscreen Military -->
 		<Spanish>Ninguno</Spanish>
 		<Polish>Brak</Polish>
-		<Russian>Íåò</Russian>
+		<Russian>Нет</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITGROUPER_TYPE_GROUPING</Tag>
@@ -665,7 +665,7 @@
 		<Italian>[ICON_BULLET][COLOR_WARNING_TEXT]Non può attraversare[COLOR_REVERT] le caselle con la caratteristica</Italian> <!-- unit Workboat (Prehistoric) -->
 		<Spanish>No puede atravesar</Spanish>
 		<Polish>Nie mo&#191;na przebi&#230;</Polish>
-		<Russian>Íå ìîæåò ïåðåñå÷ü</Russian>
+		<Russian>[ICON_BULLET]Не может пересекать следующие особенности ландшафта:</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITHELP_CAPTURE_PROBABILITY_MODIFIER</Tag>
@@ -1304,7 +1304,7 @@
 		<Italian>No filtro</Italian> <!-- building list infoscreen -->
 		<Spanish>Ninguno</Spanish>
 		<Polish>Brak</Polish>
-		<Russian>Íåò</Russian>
+		<Russian>Нет</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITHELP_HURRY_FOOD</Tag>
@@ -3575,7 +3575,7 @@
 			<Plural>0:1</Plural>
 		</Spanish>
 		<Polish>Wielki Artysta</Polish>
-		<Russian>Âåëèêèé àðòèñò</Russian>
+		<Russian>Великий художник</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_ARWA_AL_SULAYHI</Tag>
@@ -7425,8 +7425,8 @@
 		<Tag>TXT_KEY_UNIT_DOCTOR</Tag>
 		<English>Great Doctor</English>
 		<French>Médecin Illustre</French>
-		<Russian>Âðà÷</Russian>
 		<Italian>Gran medico</Italian>
+		<Russian>Великий врач</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_DOLPHIN</Tag>
@@ -10015,15 +10015,15 @@
 			<Plural>0</Plural>
 		</Spanish>
 		<Polish>&#175;ar&#179;acz Bia&#179;y</Polish>
-		<Russian>Áåëàÿ àêóëà</Russian>
+		<Russian>Большая белая акула</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_GREAT_ADMIRAL</Tag>
 		<English>Great Admiral</English>
 		<French>Amiral Illustre</French>
 		<Polish>Wielki Admira&#179;</Polish>
-		<Russian>Âåëèêèé àäìèðàë</Russian>
 		<Italian>Gran ammiraglio</Italian>
+		<Russian>Великий адмирал</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_GREAT_BOMBARD</Tag>
@@ -10040,7 +10040,7 @@
 			<Plural>0</Plural>
 		</Spanish>
 		<Polish>Wielka Bombarda</Polish>
-		<Russian>Âåëèêàÿ áîìáàðäà</Russian>
+		<Russian>Большая бомбарда</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_GREAT_BOMBARD_PEDIA</Tag>
@@ -10052,8 +10052,8 @@
 		<Tag>TXT_KEY_UNIT_GREAT_DETECTIVE</Tag>
 		<English>Great Detective</English>
 		<French>Détective illustre</French>
-		<Russian>Âåëèêèé ñûùèê</Russian>
 		<Italian>Gran investigatore</Italian>
+		<Russian>Великий сыщик</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_GREAT_ENGINEER</Tag>
@@ -10071,7 +10071,7 @@
 			<Plural>0:1</Plural>
 		</Spanish>
 		<Polish>Wielki In&#191;ynier</Polish>
-		<Russian>Âåëèêèé èíæåíåð</Russian>
+		<Russian>Великий инженер</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_GREAT_FARMER_PEDIA</Tag>
@@ -10094,7 +10094,7 @@
 			<Gender>Male</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Russian>Âåëèêèé ãåíåðàë</Russian>
+		<Russian>Великий генерал</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_GREAT_HUNTER</Tag>
@@ -10107,7 +10107,7 @@
 			<Plural>0</Plural>
 		</Spanish>
 		<Polish>Wielki &#163;owca</Polish>
-		<Russian>Âåëèêèé îõîòíèê</Russian>
+		<Russian>Великий охотник</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_GREAT_HUNTER_PEDIA</Tag>
@@ -10138,7 +10138,7 @@
 			<Plural>0:1</Plural>
 		</Spanish>
 		<Polish>Wielki Szpieg</Polish>
-		<Russian>Âåëèêèé øïèîí</Russian>
+		<Russian>Великий шпион</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_GREAT_STATESMAN</Tag>
@@ -10151,7 +10151,7 @@
 		</German>
 		<Italian>Gran uomo di stato</Italian>
 		<Polish>Wielki Ustawodawca</Polish>
-		<Russian>Âåëèêèé ïîëèòèê</Russian>
+		<Russian>Великий политик</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_GREEK_PHALANX</Tag>
@@ -14975,7 +14975,7 @@
 			<Plural>0:1</Plural>
 		</Spanish>
 		<Polish>Wielki Kupiec</Polish>
-		<Russian>Âåëèêèé òîðãîâåö</Russian>
+		<Russian>Великий торговец</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_MERCHANT_FLEET</Tag>
@@ -18389,7 +18389,7 @@
 			<Plural>0:1</Plural>
 		</Spanish>
 		<Polish>Wielki Prorok</Polish>
-		<Russian>Âåëèêèé ïðîðîê</Russian>
+		<Russian>Великий пророк</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_PUBLIC_FORCES</Tag>
@@ -19589,7 +19589,7 @@
 			<Plural>0:1</Plural>
 		</Spanish>
 		<Polish>Wielki Naukowiec</Polish>
-		<Russian>Âåëèêèé ó÷åíûé</Russian>
+		<Russian>Великий ученый</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SCIPIO_AFRICANUS</Tag>

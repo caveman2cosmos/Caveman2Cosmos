@@ -2625,7 +2625,7 @@
 		<Italian>Nessuna</Italian>
 		<Spanish>No</Spanish>
 		<Polish>&#175;aden</Polish>
-		<Russian>None</Russian>
+		<Russian>Нет</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MAIN_MENU_NOT_READY_DESC</Tag>
@@ -2731,7 +2731,7 @@
 		<Italian>Opzioni</Italian>
 		<Spanish>Opciones</Spanish>
 		<Polish>Opcje</Polish>
-		<Russian>Настройки</Russian>
+		<Russian>Опции</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MAIN_MENU_PASSWORD</Tag>
@@ -5482,7 +5482,7 @@
 		<Italian>Esci dall'editor</Italian>
 		<Spanish>Salir del Creador de mundos</Spanish>
 		<Polish>Opu&#156;&#230; edytor</Polish>
-		<Russian>Закрыть миростроитель</Russian>
+		<Russian>Закрыть редактор карты</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_WB_IMPROVEMENTS</Tag>

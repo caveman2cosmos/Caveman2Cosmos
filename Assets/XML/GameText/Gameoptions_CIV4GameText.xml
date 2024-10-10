@@ -78,7 +78,7 @@
 		<Tag>TXT_KEY_GAMEOPTION_ADVANCED_ROUTES</Tag>
 		<English>Advanced - Routes</English>
 		<Italian>Percorsi avanzati</Italian>
-		<Russian>Улучшенные маршруты</Russian>
+		<Russian>Сложная постройка дорог</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_ADVANCED_ROUTES_HELP</Tag>
@@ -959,8 +959,8 @@
 		<Tag>TXT_KEY_GAMEOPTION_TECH_NO_HANDICAPS_FOR_HUMANS</Tag>
 		<English>Tech - No Technology Handicaps for Humans</English>
 		<French>Pas de Diff. Tech pour les Joueurs</French>
-		<Russian>Нет помех в науч. гонке живым игрокам</Russian>
 		<Italian>Nessun handicap tecnologico per i giocatori umani</Italian>
+		<Russian>Без снисхождений в научной гонке для живых игроков</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_TECH_NO_HANDICAPS_FOR_HUMANS_HELP</Tag>

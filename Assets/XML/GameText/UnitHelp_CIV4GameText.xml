@@ -208,7 +208,7 @@
 		<German>Unbeweglich (%d1)</German>
 		<Italian>Impossibile muoversi (%d1)</Italian>
 		<Spanish>No se puede mover (%d1)</Spanish>
-		<Russian>Неподвижен (%d1)</Russian>
+		<Russian>Не может двигаться (%d1)</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITHELP_INVISIBILITY_SPOT_PLOT_RANGE_VALUE</Tag>

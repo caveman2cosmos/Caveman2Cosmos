@@ -59,7 +59,7 @@
 		<German>Mythos des Dachses</German>
 		<Italian>Mito del tasso</Italian>
 		<Polish>Mit - Borsuk</Polish>
-		<Russian>Ìèô î áàðñóêå</Russian>
+		<Russian>Мифы о барсуке</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HERITAGE_FOLKLORE_BEAVER</Tag>
@@ -68,13 +68,14 @@
 		<German>Mythos des Bibers</German>
 		<Italian>Mito del castoro</Italian>
 		<Polish>Mit - B&#243;br</Polish>
-		<Russian>Ìèô î áîáðå</Russian>
+		<Russian>Мифы о бобре</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HERITAGE_FOLKLORE_BOAR_WILD</Tag>
 		<English>Tale, Wild Boar</English>
 		<German>Mythos des Wildschweins</German>
 		<Italian>Mito del cinghiale selvatico</Italian>
+		<Russian>Мифы о дикой свинье</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HERITAGE_FOLKLORE_CAIMAN_BLACK</Tag>
@@ -83,7 +84,7 @@
 		<German>Mythos des Mohrenkaimans</German>
 		<Italian>Mito del caimano nero</Italian>
 		<Polish>Mit - Kajman</Polish>
-		<Russian>Ìèô î êàéìàíå</Russian>
+		<Russian>Мифы о черном каймане</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HERITAGE_FOLKLORE_CAPYBARA</Tag>
@@ -91,7 +92,7 @@
 		<French>Mythe du Cabiaï</French>
 		<German>Mythos des Wasserschweins</German>
 		<Italian>Mito del capibara</Italian>
-		<Russian>Ìèô î âîäîñâèíêå</Russian>
+		<Russian>Мифы о капибаре</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HERITAGE_FOLKLORE_CHEETAH</Tag>
@@ -99,7 +100,7 @@
 		<French>Mythe du Cheetah</French>
 		<German>Mythos des Gepards</German>
 		<Italian>Mito del ghepardo</Italian>
-		<Russian>Ìèô î ãåïàðäå</Russian>
+		<Russian>Мифы о гепарде</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HERITAGE_FOLKLORE_COBRA</Tag>
@@ -107,11 +108,12 @@
 		<French>Mythe du Cobra</French>
 		<German>Mythos der Kobra</German>
 		<Italian>Mito del cobra</Italian>
-		<Russian>Ìèô î êîáðå</Russian>
+		<Russian>Мифы о кобре</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HERITAGE_FOLKLORE_CROCODILE_MUGGER</Tag>
 		<English>Tale, Mugger Crocodile</English>
+		<Russian>Мифы о болотном крокодиле</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HERITAGE_FOLKLORE_CROCODILE_NILE</Tag>
@@ -120,7 +122,7 @@
 		<German>Mythos des Nilkrokodils</German>
 		<Italian>Mito del coccodrillo del Nilo</Italian>
 		<Polish>Mit - Krokodyl Nilowy</Polish>
-		<Russian>Ìèô î íèë. êðîêîäèëå</Russian>
+		<Russian>Мифы о нильском крокодиле</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HERITAGE_FOLKLORE_CROCODILE_SALTWATER</Tag>
@@ -128,6 +130,7 @@
 		<French>Mythe du Crocodile de mer</French>
 		<German>Mythos des Salzwasserkrokodils</German>
 		<Italian>Mito del coccodrillo marino</Italian>
+		<Russian>Мифы о гребнистом крокодиле</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HERITAGE_FOLKLORE_CUSCUS_SPOTTED</Tag>
@@ -135,7 +138,7 @@
 		<French>Mythe du Couscous</French>
 		<German>Mythos des Tüpfelkuskus</German>
 		<Italian>Mito del cusco maculato</Italian>
-		<Russian>Ìèô î êóñêóñå</Russian>
+		<Russian>Мифы о пятнистом кускусе</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HERITAGE_FOLKLORE_DART_FROG</Tag>
@@ -143,7 +146,7 @@
 		<French>Mythe de la Grenouille venimeuse</French>
 		<German>Mythos des Baumsteigerfroschs</German>
 		<Italian>Mito della rana velenosa</Italian>
-		<Russian>История о древолазе</Russian>
+		<Russian>Мифы о древолазе</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HERITAGE_FOLKLORE_DINGO</Tag>
@@ -151,7 +154,7 @@
 		<French>Mythe du Dingo</French>
 		<German>Mythos des Dingos</German>
 		<Italian>Mito del dingo</Italian>
-		<Russian>Ìèô î äèíãî</Russian>
+		<Russian>Мифы о собаке динго</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HERITAGE_FOLKLORE_ELEPHANT_AFRICAN</Tag>
@@ -159,7 +162,7 @@
 		<French>Mythe de l'Eléphant d'Afrique</French>
 		<German>Mythos des Afrikanischen Elefanten</German>
 		<Italian>Mito dell'elefante africano</Italian>
-		<Russian>Ìèô îá àôð. ñëîíå</Russian>
+		<Russian>Мифы об африканском слоне</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HERITAGE_FOLKLORE_ELEPHANT_ASIAN</Tag>
@@ -167,7 +170,7 @@
 		<French>Mythe de l'Eléphant d'Asie</French>
 		<German>Mythos des Asiatischen Elefanten</German>
 		<Italian>Mito dell'elefante asiatico</Italian>
-		<Russian>Ìèô îá àçèàò. ñëîíå</Russian>
+		<Russian>Мифы об азиатском слоне</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HERITAGE_FOLKLORE_FOX_ARCTIC</Tag>
@@ -175,7 +178,7 @@
 		<French>Mythe du Renard arctique</French>
 		<German>Mythos des Polarfuchses</German>
 		<Italian>Mito della volpe artica</Italian>
-		<Russian>Ìèô î ïåñöå</Russian>
+		<Russian>Мифы о песце</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HERITAGE_FOLKLORE_FOX_FENNEC</Tag>
@@ -183,7 +186,7 @@
 		<French>Mythe du Fennec</French>
 		<German>Mythos des Fenneks</German>
 		<Italian>Mito della volpe del deserto</Italian>
-		<Russian>Ìèô î ëèñèöå-ôåíåê</Russian>
+		<Russian>Мифы о фенеке</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HERITAGE_FOLKLORE_FOX_RED</Tag>
@@ -191,7 +194,7 @@
 		<French>Mythe du Renard Roux</French>
 		<German>Mythos des Rotfuchses</German>
 		<Italian>Mito della volpe rossa</Italian>
-		<Russian>Ìèô î ëèñèöå</Russian>
+		<Russian>Мифы о лисице</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HERITAGE_FOLKLORE_GHARIAL</Tag>
@@ -200,7 +203,7 @@
 		<German>Mythos des Gavials</German>
 		<Italian>Mito del gaviale</Italian>
 		<Polish>Mit - Gawial</Polish>
-		<Russian>Ìèô î ãàâèàëå</Russian>
+		<Russian>Мифы о гангском гавиале</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HERITAGE_FOLKLORE_HIPPOPOTAMUS</Tag>
@@ -208,7 +211,7 @@
 		<French>Mythe de l'Hippopotame</French>
 		<German>Mythos des Flusspferds</German>
 		<Italian>Mito dell'ippopotamo</Italian>
-		<Russian>Ìèô î áåãåìîòå</Russian>
+		<Russian>Мифы о бегемоте</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HERITAGE_FOLKLORE_HIPPOPOTAMUS_PYGMY</Tag>
@@ -216,7 +219,7 @@
 		<French>Mythe de l'Hippopotame nain</French>
 		<German>Mythos des Zwergflusspferdes</German>
 		<Italian>Mito dell'ippopotamo pigmeo</Italian>
-		<Russian>Ìèô î êàðë. áåãåìîòå</Russian>
+		<Russian>Мифы о карликовом бегемоте</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HERITAGE_FOLKLORE_HORSE</Tag>
@@ -225,7 +228,7 @@
 		<German>Mythos des Pferdes</German>
 		<Italian>Mito del cavallo</Italian>
 		<Polish>Mit Koni</Polish>
-		<Russian>Ìèô î ëîøàäè</Russian>
+		<Russian>Мифы о лошади</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HERITAGE_FOLKLORE_HYENA_STRIPED</Tag>
@@ -233,7 +236,7 @@
 		<French>Mythe de la Hyène rayée</French>
 		<German>Mythos der Hyäne</German>
 		<Italian>Mito della iena striata</Italian>
-		<Russian>Ìèô î ãèåíå</Russian>
+		<Russian>Мифы о полосатой гиене</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HERITAGE_FOLKLORE_IGUANA</Tag>
@@ -241,7 +244,7 @@
 		<French>Mythe de l'Iguane</French>
 		<German>Mythos des Leguans</German>
 		<Italian>Mito dell'iguana</Italian>
-		<Russian>Ìèô î èãóàíå</Russian>
+		<Russian>Мифы об игуане</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HERITAGE_FOLKLORE_JAGUAR</Tag>
@@ -249,11 +252,12 @@
 		<French>Mythe du Jaguar</French>
 		<German>Mythos des Jaguars</German>
 		<Italian>Mito del giaguaro</Italian>
-		<Russian>Ìèô îá ÿãóàðå</Russian>
+		<Russian>Мифы о ягуаре</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HERITAGE_FOLKLORE_JAGUAR_BLACK</Tag>
 		<English>Tale, Black Jaguar</English>
+		<Russian>Мифы о черном ягуаре</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HERITAGE_FOLKLORE_KANGAROO_GREY</Tag>
@@ -261,7 +265,7 @@
 		<French>Mythe du Kangourou gris</French>
 		<German>Mythos des Grauen Riesenkängurus</German>
 		<Italian>Mito del canguro grigio</Italian>
-		<Russian>Ìèô î ñåðîì êåíãóðó</Russian>
+		<Russian>Мифы о сером кенгуру</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HERITAGE_FOLKLORE_KANGAROO_RED</Tag>
@@ -269,7 +273,7 @@
 		<French>Mythe du Kangourou roux</French>
 		<German>Mythos des Roten Riesenkängurus</German>
 		<Italian>Mito del canguro rosso</Italian>
-		<Russian>Ìèô î êðàñí.êåíãóðó</Russian>
+		<Russian>Мифы о большом рыжем кенгуру</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HERITAGE_FOLKLORE_KOALA</Tag>
@@ -277,7 +281,7 @@
 		<French>Mythe du Koala</French>
 		<German>Mythos des Koalas</German>
 		<Italian>Mito del koala</Italian>
-		<Russian>Ìèô î êîàëå</Russian>
+		<Russian>Мифы о коале</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HERITAGE_FOLKLORE_KOMODO_DRAGON</Tag>
@@ -285,7 +289,7 @@
 		<French>Mythe du Dragon de Komodo</French>
 		<German>Mythos des Komodowarans</German>
 		<Italian>Mito del drago di Komodo</Italian>
-		<Russian>Ìèô î êîì. âàðàíå</Russian>
+		<Russian>Мифы о комодском варане</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HERITAGE_FOLKLORE_LEOPARD_SNOW</Tag>
@@ -293,7 +297,7 @@
 		<French>Mythe du Léopard des neiges</French>
 		<German>Mythos des Schneeleoparden</German>
 		<Italian>Mito del leopardo delle nevi</Italian>
-		<Russian>Ìèô î ñíåæíîì áàðñå</Russian>
+		<Russian>Мифы об ирбисе</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HERITAGE_FOLKLORE_LION</Tag>
@@ -302,7 +306,7 @@
 		<German>Mythos des Löwen</German>
 		<Italian>Mito del leone</Italian>
 		<Polish>Mit Lwa</Polish>
-		<Russian>Ìèô î ëüâå</Russian>
+		<Russian>Мифы о льве</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HERITAGE_FOLKLORE_LION_CAVE</Tag>
@@ -310,7 +314,7 @@
 		<French>Mythe du Lion des cavernes</French>
 		<German>Mythos des Höhlenlöwen</German>
 		<Italian>Mito del leone delle caverne</Italian>
-		<Russian>Ìèô î ïåù. ëüâå</Russian>
+		<Russian>Мифы о пещерном льве</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HERITAGE_FOLKLORE_LIZARD</Tag>
@@ -319,7 +323,7 @@
 		<German>Mythos der Echse</German>
 		<Italian>Mito della lucertola</Italian>
 		<Polish>Mit - Jaszczurka</Polish>
-		<Russian>Ìèô î ÿùåðèöå</Russian>
+		<Russian>Мифы о ящерице</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HERITAGE_FOLKLORE_LYNX</Tag>
@@ -327,7 +331,7 @@
 		<French>Mythe du Lynx</French>
 		<German>Mythos des Luchses</German>
 		<Italian>Mito della lince</Italian>
-		<Russian>Ìèô î ðûñè</Russian>
+		<Russian>Мифы о рыси</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HERITAGE_FOLKLORE_MACAW</Tag>
@@ -335,7 +339,7 @@
 		<French>Mythe de l'Ara</French>
 		<Italian>Mito del pappagallo ara</Italian>
 		<Polish>Mit - Papuga Ara</Polish>
-		<Russian>Ìèô î ïîïóãàå àðà</Russian>
+		<Russian>Мифы о попугае ара</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HERITAGE_FOLKLORE_MAMMOTH</Tag>
@@ -344,7 +348,7 @@
 		<German>Mythos des Mammuts</German>
 		<Italian>Mito del mammut</Italian>
 		<Polish>Mit Mamut&#243;w</Polish>
-		<Russian>Ìèô î ìàìîíòå</Russian>
+		<Russian>Мифы о мамонте</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HERITAGE_FOLKLORE_MONITOR_NILE</Tag>
@@ -352,7 +356,7 @@
 		<French>Mythe du Varan du Nil</French>
 		<German>Mythos des Nilwarans</German>
 		<Italian>Mito del varano del Nilo</Italian>
-		<Russian>Ìèô î íèë. âàðàíå</Russian>
+		<Russian>Мифы о нильском варане</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HERITAGE_FOLKLORE_NUMBAT</Tag>
@@ -360,7 +364,7 @@
 		<French>Mythe du Numbat</French>
 		<German>Mythos des Numbats</German>
 		<Italian>Mito del numbat</Italian>
-		<Russian>Ìèô î ñóì÷. ìóðàâüåäå</Russian>
+		<Russian>Мифы о сумчатом. муравьеде</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HERITAGE_FOLKLORE_OTTER_SEA</Tag>
@@ -368,7 +372,7 @@
 		<French>Mythe de la Loutre de mer</French>
 		<German>Mythos des Seeotters</German>
 		<Italian>Mito della lontra marina</Italian>
-		<Russian>Ìèô î êàëàíå</Russian>
+		<Russian>Мифы о калане</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HERITAGE_FOLKLORE_OWL_BARN</Tag>
@@ -376,7 +380,7 @@
 		<French>Mythe de la Chouette effraie</French>
 		<Italian>Mito del barbagianni comune</Italian>
 		<Polish>Mit - P&#179;omyk&#243;wka Zwyczajna</Polish>
-		<Russian>Ìèô î ñèïóõå</Russian>
+		<Russian>Мифы о сипухе</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HERITAGE_FOLKLORE_OWL_BARRED</Tag>
@@ -384,7 +388,7 @@
 		<French>Mythe de la Chouette rayée</French>
 		<Italian>Mito dell'allocco barrato</Italian>
 		<Polish>Mit - Puszczyk</Polish>
-		<Russian>Ìèô î ñû÷å</Russian>
+		<Russian>Мифы о пестрой неясыти</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HERITAGE_FOLKLORE_OWL_GREAT_HORNED</Tag>
@@ -392,7 +396,7 @@
 		<French>Mythe du Hibou grand duc</French>
 		<German>Mythos des Uhus</German>
 		<Italian>Mito del gufo della Virginia</Italian>
-		<Russian>Ìèô î ôèëèíå</Russian>
+		<Russian>Мифы о виргинском филине</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HERITAGE_FOLKLORE_PALEOLITHIC_MARSUPIAL</Tag>
@@ -401,7 +405,7 @@
 		<German>Mythos des Urzeitbeuteltiers</German>
 		<Italian>Mito del marsupiale paleolitico</Italian>
 		<Polish>Mit Paleolitycznych Torbaczy</Polish>
-		<Russian>Ìèô î äðåâ. ñóì÷àòîì</Russian>
+		<Russian>Мифы о древнем сумчатом</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HERITAGE_FOLKLORE_PARROT_AFRICAN_GREY</Tag>
@@ -409,7 +413,7 @@
 		<French>Mythe du Perroquet jaco</French>
 		<Italian>Mito del pappagallo cenerino</Italian>
 		<Polish>Mit - &#175;ako</Polish>
-		<Russian>Ìèô îá àôð. ïîïóãàå</Russian>
+		<Russian>Мифы о попугае жако</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HERITAGE_FOLKLORE_PENGUIN_AFRICAN</Tag>
@@ -417,7 +421,7 @@
 		<French>Mythe du Manchot du Cap</French>
 		<Italian>Mito del pinguino africano</Italian>
 		<Polish>Mit - Pingwin Przyl&#185;dkowy</Polish>
-		<Russian>Ìèô îá àôð. ïèíãâèíå</Russian>
+		<Russian>Мифы об африканском пингвине</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HERITAGE_FOLKLORE_PENGUIN_EMPEROR</Tag>
@@ -425,7 +429,7 @@
 		<French>Mythe du Manchot Empereur</French>
 		<German>Mythos des Kaiserpinguins</German>
 		<Italian>Mito del pinguino imperatore</Italian>
-		<Russian>Ìèô îá èìï. ïèíãâèíå</Russian>
+		<Russian>Мифы об императорском пингвине</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HERITAGE_FOLKLORE_PENGUIN_GALAPAGOS</Tag>
@@ -434,7 +438,7 @@
 		<German>Mythos des Galápagos-Pinguins</German>
 		<Italian>Mito del pinguino delle Galapagos</Italian>
 		<Polish>Mit - Pingwin R&#243;wnikowy</Polish>
-		<Russian>Ìèô îá î÷ê. ïèíãâèíå</Russian>
+		<Russian>Мифы о галапагосском пингвине</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HERITAGE_FOLKLORE_PENGUIN_ROCKHOPPER</Tag>
@@ -442,7 +446,7 @@
 		<French>Mythe du Gorfou sauteur</French>
 		<German>Mythos des Felsenpinguins</German>
 		<Italian>Mito del pinguino saltarocce</Italian>
-		<Russian>Ìèô î ñêàë. ïèíãâèíå</Russian>
+		<Russian>Мифы о хохлатом пингвине</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HERITAGE_FOLKLORE_PLATYPUS</Tag>
@@ -450,7 +454,7 @@
 		<French>Mythe de l'Ornithorynque</French>
 		<German>Mythos des Schnabeltiers</German>
 		<Italian>Mito dell'ornitorinco</Italian>
-		<Russian>Ìèô îá óòêîíîñå</Russian>
+		<Russian>Мифы об утконосе</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HERITAGE_FOLKLORE_POSSUM_BRUSHTAIL</Tag>
@@ -458,11 +462,12 @@
 		<French>Mythe du Phalanger commun</French>
 		<German>Mythos des Kusus</German>
 		<Italian>Mito del tricosuro volpino</Italian>
-		<Russian>Ìèô î ïîññóìå</Russian>
+		<Russian>Мифы о кузу</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HERITAGE_FOLKLORE_POSSUM_DIDELPHIS</Tag>
 		<English>Tale, Didelphis Possum</English>
+		<Russian>Мифы о виргинском опоссуме</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HERITAGE_FOLKLORE_PROCOPTODON</Tag>
@@ -470,7 +475,7 @@
 		<French>Mythe du Procoptodon</French>
 		<German>Mythos des Procoptodons</German>
 		<Italian>Mito del procoptodonte</Italian>
-		<Russian>Ìèô î ïðîêîïòîäîíå</Russian>
+		<Russian>Мифы о прокоптодоне</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HERITAGE_FOLKLORE_PYTHON_BALL</Tag>
@@ -479,7 +484,7 @@
 		<German>Mythos des Königspythons</German>
 		<Italian>Mito del pitone reale</Italian>
 		<Polish>Mit - Pyton Kr&#243;lewski</Polish>
-		<Russian>Ìèô î êîð. ïèòîíå</Russian>
+		<Russian>Мифы о королевском питоне</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HERITAGE_FOLKLORE_QUOLL</Tag>
@@ -487,7 +492,7 @@
 		<French>Mythe du Chat marsupial</French>
 		<German>Mythos des Beutelmarders</German>
 		<Italian>Mito del quoll tigre</Italian>
-		<Russian>Ìèô î ñóì÷.êóíèöå</Russian>
+		<Russian>Мифы о пятнистой сумчатой кунице</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HERITAGE_FOLKLORE_RACCOON</Tag>
@@ -495,7 +500,7 @@
 		<French>Mythe du Raton-Laveur</French>
 		<German>Mythos des Waschbären</German>
 		<Italian>Mito del procione</Italian>
-		<Russian>Ìèô î åíîòå</Russian>
+		<Russian>Мифы о еноте</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HERITAGE_FOLKLORE_RATEL</Tag>
@@ -503,7 +508,7 @@
 		<French>Mythe du Ratel</French>
 		<German>Mythos des Honigdachses</German>
 		<Italian>Mito del tasso del miele</Italian>
-		<Russian>Ìèô î ìåäîåäå</Russian>
+		<Russian>Мифы о медоеде</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HERITAGE_FOLKLORE_RED_PANDA</Tag>
@@ -511,7 +516,7 @@
 		<French>Mythe du Panda roux</French>
 		<Italian>Mito del panda rosso</Italian>
 		<Polish>Mit - Panda Czerwona</Polish>
-		<Russian>Ìèô î êðàñíîé ïàíäå</Russian>
+		<Russian>Мифы о красной панде</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HERITAGE_FOLKLORE_SKUNK</Tag>
@@ -519,12 +524,13 @@
 		<French>Mythe de la Moufette</French>
 		<German>Mythos des Stinktiers</German>
 		<Italian>Mito della puzzola</Italian>
-		<Russian>Ìèô î ñêóíñå</Russian>
+		<Russian>Мифы о скунсе</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HERITAGE_FOLKLORE_SWINE</Tag>
 		<English>Tale, Swine</English>
 		<Italian>Mito del maiale</Italian>
+		<Russian>Мифы о свинье</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HERITAGE_FOLKLORE_TAPIR_BAIRDS</Tag>
@@ -533,7 +539,7 @@
 		<German>Mythos des Baird-Tapirs</German>
 		<Italian>Mito del tapiro di Baird</Italian>
 		<Polish>Mit - Tapir Panamski</Polish>
-		<Russian>Ìèô î òàïèðå Áýðäà</Russian>
+		<Russian>Мифы о тапире Бэрда</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HERITAGE_FOLKLORE_TAPIR_LOWLAND</Tag>
@@ -542,7 +548,7 @@
 		<German>Mythos des Flachlandtapirs</German>
 		<Italian>Mito del tapiro di pianura</Italian>
 		<Polish>Mit - Tapir</Polish>
-		<Russian>Ìèô î áðàç. òàïèðå</Russian>
+		<Russian>Мифы о равнинном тапире</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HERITAGE_FOLKLORE_TAPIR_MALAYAN</Tag>
@@ -551,7 +557,7 @@
 		<German>Mythos des Schabrackentapirs</German>
 		<Italian>Mito del tapiro malese</Italian>
 		<Polish>Mit - Tapir Malajski</Polish>
-		<Russian>Ìèô î ìàë. òàïèðå</Russian>
+		<Russian>Мифы о чепрачном тапире</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HERITAGE_FOLKLORE_TAPIR_MOUNTAIN</Tag>
@@ -560,7 +566,7 @@
 		<German>Mythos des Bergtapirs</German>
 		<Italian>Mito del tapiro delle Ande</Italian>
 		<Polish>Mit - Tapir G&#243;rski</Polish>
-		<Russian>Ìèô î ãîðíîì òàïèðå</Russian>
+		<Russian>Мифы о горном тапире</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HERITAGE_FOLKLORE_TARANTULA_DESERT</Tag>
@@ -568,6 +574,7 @@
 		<French>Mythe de la Tarentule du désert</French>
 		<German>Mythos der Wüstenvogelspinne</German>
 		<Italian>Mito della tarantola del deserto</Italian>
+		<Russian>Мифы о пустынном тарантуле</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HERITAGE_FOLKLORE_TARANTULA_JUNGLE</Tag>
@@ -575,12 +582,14 @@
 		<French>Mythe de la Tarentule de la jungle</French>
 		<German>Mythos der Dschungelvogelspinne</German>
 		<Italian>Mito della tarantola della giungla</Italian>
+		<Russian>Мифы о тропическом тарантуле</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HERITAGE_FOLKLORE_TASMANIAN_DEVIL</Tag>
 		<English>Tale, Tasmanian Devil</English>
 		<German>Mythos des Tasmanischen Teufels</German>
 		<Italian>Mito del diavolo della Tasmania</Italian>
+		<Russian>Мифы о тасманийском дьяволе</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HERITAGE_FOLKLORE_THYLACINE</Tag>
@@ -588,7 +597,7 @@
 		<French>Mythe du Thylacine</French>
 		<German>Mythos des Beutelwolfs</German>
 		<Italian>Mito del tilacino</Italian>
-		<Russian>Ìèô î ñóì÷. âîëêå</Russian>
+		<Russian>Мифы о сумчатом волке</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HERITAGE_FOLKLORE_TIGER_BENGAL</Tag>
@@ -597,7 +606,7 @@
 		<German>Mythos des Bengalischen Tigers</German>
 		<Italian>Mito della tigre del Bengala</Italian>
 		<Polish>Mit - Tygrys Bengalski</Polish>
-		<Russian>Ìèô î áåíãàë. òèãðå</Russian>
+		<Russian>Мифы о бенгальском тигре</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HERITAGE_FOLKLORE_TIGER_SIBERIAN</Tag>
@@ -605,7 +614,7 @@
 		<French>Mythe du Tigre de Sibérie</French>
 		<German>Mythos des Sibirischen Tigers</German>
 		<Italian>Mito della tigre siberiana</Italian>
-		<Russian>Ìèô î ñèá. òèãðå</Russian>
+		<Russian>Мифы об амурском тигре</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HERITAGE_FOLKLORE_TORTOISE_DESERT</Tag>
@@ -613,7 +622,7 @@
 		<French>Mythe de la Tortue du désert</French>
 		<German>Mythos der Gopherschildkröte</German>
 		<Italian>Mito della tartaruga del deserto</Italian>
-		<Russian>Ìèô î ãîôåðå</Russian>
+		<Russian>Мифы о пустынной черепахе</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HERITAGE_FOLKLORE_TORTOISE_GALAPAGOS</Tag>
@@ -621,7 +630,7 @@
 		<French>Mythe de la Tortue des Galapagos</French>
 		<German>Mythos der Riesenschildkröte</German>
 		<Italian>Mito della tartaruga delle Galapagos</Italian>
-		<Russian>Ìèô î ñëîíîâîé ÷åðåïàõå</Russian>
+		<Russian>Мифы о слоновой черепахе</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HERITAGE_FOLKLORE_TURTLE_SEA</Tag>
@@ -630,7 +639,7 @@
 		<German>Mythos der Meeresschildkröte</German>
 		<Italian>Mito della tartaruga di mare</Italian>
 		<Polish>Mit &#175;&#243;&#179;wia Morskiego</Polish>
-		<Russian>Ìèô î ìîð. ÷åðåïàõå</Russian>
+		<Russian>Мифы о морской черепахе</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HERITAGE_FOLKLORE_UNICORN</Tag>
@@ -639,7 +648,7 @@
 		<German>Mythos der Einhörner</German>
 		<Italian>Mito dell'unicorno</Italian>
 		<Polish>Mit Jednoro&#191;ca</Polish>
-		<Russian>Ìèô îá åäèíîðîãå</Russian>
+		<Russian>Мифы о единороге</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HERITAGE_FOLKLORE_USSURI_DHOLE</Tag>
@@ -647,7 +656,7 @@
 		<French>Mythe du Cuon d'Asie</French>
 		<German>Mythos des Rothundes</German>
 		<Italian>Mito del cuon rutilano</Italian>
-		<Russian>Ìèô î êðàñíîì âîëêå</Russian>
+		<Russian>Мифы о китайском красном волке</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HERITAGE_FOLKLORE_VIPER_CHAIN</Tag>
@@ -655,7 +664,7 @@
 		<French>Mythe de la Vipère de Russell</French>
 		<German>Mythos der Kettenviper</German>
 		<Italian>Mito della vipera di Russell</Italian>
-		<Russian>Ìèô î ãàäþêå</Russian>
+		<Russian>Мифы о цепочной гадюке</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HERITAGE_FOLKLORE_VIPER_PIT</Tag>
@@ -663,13 +672,14 @@
 		<French>Mythe de la Vipère</French>
 		<German>Mythos der Viper</German>
 		<Italian>Mito della vipera</Italian>
-		<Russian>Ìèô î ãàäþêå</Russian>
+		<Russian>Мифы о гремучей змее</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HERITAGE_FOLKLORE_WALLABY</Tag>
 		<English>Tale, Wallaby</English>
 		<German>Mythos des Wallabys</German>
 		<Italian>Mito del wallaby</Italian>
+		<Russian>Мифы о валлаби</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HERITAGE_FOLKLORE_WALLAROO</Tag>
@@ -677,7 +687,7 @@
 		<French>Mythe du Wallaroo</French>
 		<German>Mythos des Bergkängurus</German>
 		<Italian>Mito del wallaroo</Italian>
-		<Russian>Ìèô î êåíãóðó</Russian>
+		<Russian>Мифы о валлару</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HERITAGE_FOLKLORE_WARTHOG</Tag>
@@ -686,7 +696,7 @@
 		<German>Mythos des Warzenschweins</German>
 		<Italian>Mito del facocero</Italian>
 		<Polish>Mit - Guziec</Polish>
-		<Russian>Ìèô î áîðîäàâî÷íèêå</Russian>
+		<Russian>Мифы о бородавочнике</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HERITAGE_FOLKLORE_WOLF</Tag>
@@ -694,7 +704,7 @@
 		<French>Mythe du Loup gris</French>
 		<German>Mythos des Wolfes</German>
 		<Italian>Mito del lupo grigio</Italian>
-		<Russian>Ìèô î âîëêå</Russian>
+		<Russian>Мифы о волке</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HERITAGE_FOLKLORE_WOLF_DIRE</Tag>
@@ -702,7 +712,7 @@
 		<French>Mythe du Loup sinistre</French>
 		<German>Mythos des Canis dirus</German>
 		<Italian>Mito dell'enocione</Italian>
-		<Russian>Ìèô î ëþòîâîëêå</Russian>
+		<Russian>Мифы об ужасном волке</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HERITAGE_FOLKLORE_WOLF_ETHIOPIAN</Tag>
@@ -710,7 +720,7 @@
 		<French>Mythe du loup d'Éthiopie</French>
 		<German>Mythos des Äthiopischen Wolfs</German>
 		<Italian>Mito del lupo etiope</Italian>
-		<Russian>Ìèô îá ýô. øàêàëå</Russian>
+		<Russian>Мифы об эфиопском шакале</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HERITAGE_FOLKLORE_WOLF_MANED</Tag>
@@ -718,7 +728,7 @@
 		<French>Mythe du Loup à crinière</French>
 		<German>Mythos des Mähnenwolfs</German>
 		<Italian>Mito del lupo dalla criniera</Italian>
-		<Russian>Ìèô î ãðèâ. âîëêå</Russian>
+		<Russian>Мифы о гривистом волке</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HERITAGE_FOLKLORE_WOLVERINE</Tag>
@@ -726,7 +736,7 @@
 		<French>Mythe du Carcajou</French>
 		<German>Mythos des Vielfraßes</German>
 		<Italian>Mito del ghiottone</Italian>
-		<Russian>Ìèô î ðîñîìàõå</Russian>
+		<Russian>Мифы о росомахе</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HERITAGE_FOLKLORE_WOMBAT</Tag>
@@ -734,11 +744,12 @@
 		<French>Mythe du Wombat</French>
 		<German>Mythos des Wombats</German>
 		<Italian>Mito del vombato</Italian>
-		<Russian>Ìèô î âîìáàòå</Russian>
+		<Russian>Мифы о вомбате</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HERITAGE_TAXON_AMPHIBIA</Tag>
 		<English>Taxon Amphibia</English>
+		<Russian>Таксон «Земноводные»</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HERITAGE_TAXON_AMPHIBIA_PEDIA</Tag>
@@ -747,6 +758,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_HERITAGE_TAXON_ARACHNIDA</Tag>
 		<English>Taxon Arachnida</English>
+		<Russian>Таксон «Арахниды»</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HERITAGE_TAXON_ARACHNIDA_PEDIA</Tag>
@@ -755,6 +767,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_HERITAGE_TAXON_CANIDAE</Tag>
 		<English>Taxon Canidae</English>
+		<Russian>Таксон «Волчьи»</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HERITAGE_TAXON_CANIDAE_PEDIA</Tag>
@@ -763,6 +776,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_HERITAGE_TAXON_CROCODILIA</Tag>
 		<English>Taxon Crocodilia</English>
+		<Russian>Таксон «Крокодилы»</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HERITAGE_TAXON_CROCODILIA_PEDIA</Tag>
@@ -771,6 +785,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_HERITAGE_TAXON_ELEPHANTIDAE</Tag>
 		<English>Taxon Elephantidae</English>
+		<Russian>Таксон «Слоновые»</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HERITAGE_TAXON_ELEPHANTIDAE_PEDIA</Tag>
@@ -779,6 +794,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_HERITAGE_TAXON_FELINAE</Tag>
 		<English>Taxon Felinae</English>
+		<Russian>Таксон «Малые кошки»</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HERITAGE_TAXON_FELINAE_PEDIA</Tag>
@@ -787,6 +803,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_HERITAGE_TAXON_HIPPOPOTAMIDAE</Tag>
 		<English>Taxon Hippopotamidae</English>
+		<Russian>Таксон «Бегемотовые»</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HERITAGE_TAXON_HIPPOPOTAMIDAE_PEDIA</Tag>
@@ -795,6 +812,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_HERITAGE_TAXON_HYAENIDAE</Tag>
 		<English>Taxon Hyaenidae</English>
+		<Russian>Таксон «Гиеновые»</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HERITAGE_TAXON_HYAENIDAE_PEDIA</Tag>
@@ -803,6 +821,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_HERITAGE_TAXON_MARSUPIALIA</Tag>
 		<English>Taxon Marsupialia</English>
+		<Russian>Таксон «Сумчатые»</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HERITAGE_TAXON_MARSUPIALIA_PEDIA</Tag>
@@ -811,6 +830,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_HERITAGE_TAXON_MONOTREMATA</Tag>
 		<English>Taxon Monotremata</English>
+		<Russian>Таксон «Однопроходные»</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HERITAGE_TAXON_MONOTREMATA_PEDIA</Tag>
@@ -819,6 +839,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_HERITAGE_TAXON_MUSTELOIDEA</Tag>
 		<English>Taxon Musteloidea</English>
+		<Russian>Таксон «Куницеобразные»</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HERITAGE_TAXON_MUSTELOIDEA_PEDIA</Tag>
@@ -827,6 +848,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_HERITAGE_TAXON_PANTHERINAE</Tag>
 		<English>Taxon Pantherinae</English>
+		<Russian>Таксон «Большие кошки»</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HERITAGE_TAXON_PANTHERINAE_PEDIA</Tag>
@@ -835,6 +857,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_HERITAGE_TAXON_REPTILIA</Tag>
 		<English>Taxon Reptilia</English>
+		<Russian>Таксон «Пресмыкающиеся»</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HERITAGE_TAXON_REPTILIA_PEDIA</Tag>
@@ -843,6 +866,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_HERITAGE_TAXON_RODENTIA</Tag>
 		<English>Taxon Rodentia</English>
+		<Russian>Таксон «Грызуны»</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HERITAGE_TAXON_RODENTIA_PEDIA</Tag>
@@ -851,6 +875,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_HERITAGE_TAXON_SERPENTES</Tag>
 		<English>Taxon Serpentes</English>
+		<Russian>Таксон «Змеи»</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HERITAGE_TAXON_SERPENTES_PEDIA</Tag>
@@ -859,6 +884,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_HERITAGE_TAXON_SPHENISCIDAE</Tag>
 		<English>Taxon Spheniscidae</English>
+		<Russian>Таксон «Пингвиновые»</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HERITAGE_TAXON_SPHENISCIDAE_PEDIA</Tag>
@@ -867,6 +893,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_HERITAGE_TAXON_SQUAMATA</Tag>
 		<English>Taxon Squamata</English>
+		<Russian>Таксон «Чешуйчатые»</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HERITAGE_TAXON_SQUAMATA_PEDIA</Tag>
@@ -875,6 +902,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_HERITAGE_TAXON_STRIGIFORMES</Tag>
 		<English>Taxon Strigiformes</English>
+		<Russian>Таксон «Совообразные»</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HERITAGE_TAXON_STRIGIFORMES_PEDIA</Tag>
@@ -883,6 +911,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_HERITAGE_TAXON_SUIDAE</Tag>
 		<English>Taxon Suidae</English>
+		<Russian>Таксон «Свиные»</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HERITAGE_TAXON_SUIDAE_PEDIA</Tag>
@@ -891,6 +920,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_HERITAGE_TAXON_TAPIRIDAE</Tag>
 		<English>Taxon Tapiridae</English>
+		<Russian>Таксон «Тапировые»</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HERITAGE_TAXON_TAPIRIDAE_PEDIA</Tag>
@@ -899,6 +929,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_HERITAGE_TAXON_TESTUDINES</Tag>
 		<English>Taxon Testudines</English>
+		<Russian>Таксон «Черепахи»</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HERITAGE_TAXON_TESTUDINES_PEDIA</Tag>

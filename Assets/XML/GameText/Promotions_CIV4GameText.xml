@@ -8821,7 +8821,7 @@
 		<English>Status (Forced March)</English>
 		<French>Statut (Marche forcée)</French>
 		<German>Gewaltmarsch</German>
-		<Russian>Статус (Принуд. марш)</Russian>
+		<Russian>Принудительный марш</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_FORESTRY</Tag>
@@ -12310,14 +12310,14 @@
 		<Italian>Algoritmo quantico</Italian>
 		<Spanish>Algoritmos cuánticos</Spanish>
 		<Polish>Algorytmy Kwantowe</Polish>
-		<Russian>Êâàíòîâûå àëãîðèòìû</Russian>
+		<Russian>Квантовые алгоритмы</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_QUICK_MARCH_STATUS</Tag>
 		<English>Status (Quick March)</English>
 		<French>Statut (Marche éclair)</French>
 		<German>Eilmarsch</German>
-		<Russian>Статус (Ускорен. марш)</Russian>
+		<Russian>Ускоренный марш</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_RACING_DOG1</Tag>

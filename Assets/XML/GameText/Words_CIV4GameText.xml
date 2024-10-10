@@ -8,7 +8,7 @@
 		<Spanish>Carga</Spanish>
 		<Italian>Carico</Italian> <!--infoscreen building list-->
 		<Polish>&#163;adowno&#156;&#230;</Polish>
-		<Russian>Транспорт</Russian>
+		<Russian>Груз</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_WORD_CITY</Tag>
@@ -132,7 +132,7 @@
 		<Italian>sulla propria casella</Italian> <!-- unit Enforcers -->
 		<Spanish>Casilla</Spanish>
 		<Polish>Pole</Polish>
-		<Russian>Участок</Russian>
+		<Russian>Клетка</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_WORD_RECOMMENDATIONS</Tag>
@@ -165,7 +165,7 @@
 		<Italian>unità</Italian>
 		<Spanish>Unidad</Spanish>
 		<Polish>Jednostka</Polish>
-		<Russian>Отряд</Russian>
+		<Russian>Подразделение</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_WORD_WITH</Tag>
