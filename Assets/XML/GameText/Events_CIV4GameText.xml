@@ -918,7 +918,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_FAUX_PAS</Tag>
-		<English>A faux pas committed by the %s1_civ_adjective ambassador has caused quite a stir in the %s4_civ_adjective Capital.</English>
+		<English>A faux pas committed by the %s1_civ_adjective ambassador has caused quite a stir in the %s4_civ_adjective capital.</English>
 		<French>Une gaffe commise par l'ambassadeur %s1:1_civ_adjective a provoqué de grands remous dans la capitale %s4:2_civ_adjective. </French>
 		<German>Ein Fauxpas des %s1:2_civ_adjective Botschafters hat in der %s4:2_civ_adjective Hauptstadt für ziemliche Aufregung gesorgt.</German>
 		<Italian>Una gaffe commessa dall'ambasciatore %s1_civ_adjective ha causato agitazione nella capitale %s4:2_civ_adjective.</Italian>
@@ -2342,7 +2342,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_QUICKSAND</Tag>
-		<English>Some units of the %s1_civ_adjective empire got stuck in the sand dunes.</English>
+		<English>Some units of the %s1_civ_adjective empire got stuck among sand dunes.</English>
 		<French>Des unités de l'empire %s1_civ_adjective ont été pris au piège dans des sables mouvants.</French>
 		<Italian>Alcune unità dell'Impero %s1_civ_adjective sono rimaste bloccate fra le dune.</Italian>
 		<Polish>Niekt&#243;re jednostki w Imperium %s1_civ_adjective utkn&#234;&#179;y w lotnych piaskach.</Polish>
@@ -2741,7 +2741,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_TARPIT</Tag>
-		<English>Some units of the %s1_civ_adjective empire got stuck in the tar pit.</English>
+		<English>Some units of the %s1_civ_adjective empire got stuck in a tar pit.</English>
 		<French>Des unités de l'empire %s1_civ_adjective ont été pris au piège dans des fosses de goudron.</French>
 		<Italian>Alcune unità dell'Impero %s1_civ_adjective sono rimaste intrappolate nelle fosse di catrame.</Italian>
 		<Polish>Niekt&#243;re jednostki z imperium %s1_civ_adjective utkne&#179;y w do&#179;ach ze smo&#179;&#185;.</Polish>
@@ -2895,7 +2895,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_TREASURY_PLUNDERED_1</Tag>
-		<English>Group of thieves have plundered Treasury in %s2_city!</English>
+		<English>A group of thieves has plundered the treasury in %s2_city!</English>
 		<French>Un Groupe de voleurs a pillé le trésor de %s2_city!</French>
 		<German>Eine Diebesgruppe hat die Schatzkammer in %s2_city geplündert!</German>
 		<Italian>Un gruppo di ladri ha svuotato le casse cittadine di %s2_city!</Italian>
@@ -3907,7 +3907,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_BLACKBEARD</Tag>
-		<English>The infamous Pirate [COLOR_NEGATIVE_TEXT]Blackbeard[COLOR_REVERT] has set sail for our waters, seeking plunder and mayhem! His flotilla is just over the horizon!</English>
+		<English>The infamous pirate [COLOR_NEGATIVE_TEXT]Blackbeard[COLOR_REVERT] has set sail for our waters, seeking plunder and mayhem! His flotilla is just over the horizon!</English>
 		<French>Le pirate infâme [COLOR_NEGATIVE_TEXT]Blackbeard[COLOR_REVERT] a dirigé ses voiles vers nos eaux! Sa flotille est visible juste au-dessus de l'horizon!</French>
 		<German>Der berüchtigte Pirat [COLOR_NEGATIVE_TEXT]Blackbeard[COLOR_REVERT] hat Segel auf unsere Gewässer gesetzt und sucht Plünderung und Chaos! Seine Flotille liegt direkt hinter dem Horizont!</German>
 		<Italian>Il malfamato pirata [COLOR_NEGATIVE_TEXT]Barbanera[COLOR_REVERT] sta facendo rotta per le nostre coste! La sua flotta è già visibile all'orizzonte!</Italian>
@@ -6020,7 +6020,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_FAMOUS_DOCTOR_1</Tag>
-		<English>Put this money towards a research hospital annex onto our university.</English>
+		<English>Put this money towards a research hospital annex for our university.</English>
 		<French>Investir cet argent pour établir un centre de recherche médicale en annexe de notre université.</French>
 		<German>Verwendet das Geld für ein Forschungskrankenhaus als Erweiterung unserer Universität.</German>
 		<Italian>Usa questi soldi per un ospedale di ricerca annesso all'università.</Italian>
@@ -6040,7 +6040,7 @@
 	</TEXT>
     <TEXT>
         <Tag>TXT_KEY_EVENT_FAMOUS_DOCTOR_3</Tag>
-        <English>Pocket the money who cares what he wanted. The country needs it most.</English>
+        <English>Pocket the money - who cares what he wanted, the country needs it most.</English>
     </TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_FARM_BANDITS_1</Tag>
@@ -9026,7 +9026,7 @@
     </TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_MUSICOFGODS_1</Tag>
-		<English>Enact more stringent noise pollution laws, these nerds should be doing something more productive than making "music".</English>
+		<English>Enact more stringent noise pollution laws; these nerds should be doing something more productive than making "music".</English>
 		<Polish>Wprowadzi&#230; wi&#234;ksze obostrzenia prawne dotycz&#185;ce zak&#179;&#243;cania porz&#185;dku. Te nerdy powinny zaj&#185;&#230; si&#234; czym&#156; produktywnym, a nie tworzeniem "muzyki".</Polish>
 		<Russian>Принять более строгие законы о шумовом загрязнении. Эти хипстеры и стиляги должны заниматься чем-то более продуктивным и полезным, нежели музыкой.</Russian>
 	</TEXT>
@@ -9666,7 +9666,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_PIRATE_MAP_2</Tag>
-		<English>Make a big to-do over it, then burn the map and claim it was the Pirates' revenge!</English>
+		<English>Make a big to-do over it, then burn the map and claim it was the pirates' revenge!</English>
 		<French>Faites-en une copie, puis brûlez la carte et prétendez que c'était la vengeance des Pirates!</French>
 	</TEXT>
 	<TEXT>
@@ -13352,7 +13352,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_TRIGGER_MUSICOFGODS</Tag>
-		<English>Some electricity nuts have started using gigantic solid state Tesla coils to create unspeakably loud low fidelity music. The spectacle of lightning bolts playing the theme of Spectral Exterminators The Motion Picture have attracted significant audiences wherever they perform.</English>
+		<English>Some eccentrics have started using gigantic solid state Tesla coils to create unspeakably loud low fidelity music. The spectacle of lightning bolts playing the theme of Spectral Exterminators The Motion Picture has attracted significant audiences wherever they perform.</English>
 		<Polish>Jacy&#156; zwariowani in&#191;ynierowie zacz&#234;li u&#191;ywa&#230; gigantycznych cewek Tesli do produkcji muzyki. Koncerty przez nich organizowane owocuj&#185; w orgie &#156;wiat&#179;a i d&#159;wi&#234;ku i przyci&#185;gaj&#185; t&#179;umy spragnionych atrakcji widz&#243;w.</Polish>
 		<Russian>Некоторые электрические муфты начали использовать как гигантские твердотельные катушки Теслы для создания невероятно громкой музыки с низким качеством воспроизведения. Зрелище со светомузыкой на тему Spectral Exterminators The Motion Picture, привлекло значительную аудиторию, где бы они ни выступали.</Russian>
 	</TEXT>
@@ -14032,7 +14032,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_TRIGGER_TRADE_FOUNDED_1</Tag>
-		<English>Group of merchants in %s2_city have formed a Trade Caravan and are ready to seek out market opportunities in distant lands.</English>
+		<English>A group of merchants in %s2_city have formed a trade caravan and are ready to seek out market opportunities in distant lands.</English>
 		<French>Un Groupe de marchands de %s2_city a formé une Caravane Commerciale et ils sont prêts à chercher des opportunités commerciales chez nos voisins.</French>
 		<German>Eine Gruppe von Händlern in %s2_city haben eine Handelskaravane begründet und sind bereit, in fernen Ländern nach neuen Märkten zu suchen.</German>
 		<Italian>Gruppi di mercanti a %s2_city hanno formato una carovana commerciale e sono pronti a cercare nuove opportunità di guadagno in terre distanti.</Italian>
@@ -14874,7 +14874,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_WORLD_BLACKBEARD</Tag>
-		<English>The infamous Pirate [COLOR_NEGATIVE_TEXT]Blackbeard[COLOR_REVERT] is attacking %s1_civ_adjective shipping!</English>
+		<English>The infamous pirate [COLOR_NEGATIVE_TEXT]Blackbeard[COLOR_REVERT] is attacking %s1_civ_adjective shipping!</English>
 		<French>Le pirate infâme [COLOR_NEGATIVE_TEXT]Blackbeard[COLOR_REVERT] attaque des bateaux %s1:3_civ_adjective!</French>
 		<German>Der berüchtigte Pirat [COLOR_NEGATIVE_TEXT]Blackbeard[COLOR_REVERT] greift %s1_civ_adjective Schiffe an!</German>
 		<Italian>Il pirata malfamato [COLOR_NEGATIVE_TEXT]Barbanera[COLOR_REVERT] sta attaccando le navi %s1:3_civ_adjective!</Italian>
@@ -15003,7 +15003,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_WORLD_HENRY_MORGAN</Tag>
-		<English>The notorious Pirate [COLOR_NEGATIVE_TEXT]Henry Morgan[COLOR_REVERT] is attacking the %s1_civ_adjective fleet!</English>
+		<English>The notorious pirate [COLOR_NEGATIVE_TEXT]Henry Morgan[COLOR_REVERT] is attacking the %s1_civ_adjective fleet!</English>
 		<French>Le fameux Pirate [COLOR_NEGATIVE_TEXT]Henry Morgan[COLOR_REVERT] attaque la flotte des %s1:3_civ_adjective!</French>
 		<German>Der gefürchtete Pirat [COLOR_NEGATIVE_TEXT]Henry Morgan[COLOR_REVERT] greift die %s1_civ_adjective Flotte an!</German>
 		<Italian>Il famoso pirata Henry Morgan sta attaccando la flotta %s1:2_civ_adjective!</Italian>
@@ -15013,7 +15013,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_WORLD_ILLYRIAN_PIRATES</Tag>
-		<English>The [COLOR_NEGATIVE_TEXT]Illyrian Pirates[COLOR_REVERT] have declared war on %s1_civ_adjective merchant shipping!</English>
+		<English>The [COLOR_NEGATIVE_TEXT]Illyrian pirates[COLOR_REVERT] have declared war on %s1_civ_adjective merchant shipping!</English>
 		<French>Les [COLOR_NEGATIVE_TEXT]Pirates d'Illyrian[COLOR_REVERT] ont déclaré la guerre à la marine marchande %s1:2_civ_adjective!</French>
 		<German>Die [COLOR_NEGATIVE_TEXT]Illyrischen Piraten[COLOR_REVERT] haben den %s1_civ_adjective Handelsschiffen den Krieg erklärt!</German>
 		<Italian>I [COLOR_NEGATIVE_TEXT]pirati dell'Illiria[COLOR_REVERT] stanno attaccando le navi mercantili %s1:4_civ_adjective!</Italian>
@@ -15073,7 +15073,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_WORLD_MALACCAN_PIRATES</Tag>
-		<English>The [COLOR_NEGATIVE_TEXT]Malaccan Pirates[COLOR_REVERT] are hijacking merchant ships and kidnapping sailors in %s1_civ_adjective waters!</English>
+		<English>The [COLOR_NEGATIVE_TEXT]Malaccan pirates[COLOR_REVERT] are hijacking merchant ships and kidnapping sailors in %s1_civ_adjective waters!</English>
 		<French>Les pirates de Malacca détournent les bateaux marchands et enlèvent des marins dans les eaux %s1:4_civ_adjective!</French>
 		<German>Die [COLOR_NEGATIVE_TEXT]Malaccanischen Piraten[COLOR_REVERT] überfallen Handelsschiffe und entführen Seeleute im %s1_civ_adjective Gewässer.</German>
 		<Italian>I pirati della Malacca stanno dirottando le navi mercantili e stanno rapinando i marinai nelle acque %s1:4_civ_adjective.</Italian>
@@ -15123,7 +15123,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_WORLD_STEDE_BONNET</Tag>
-		<English>The famous Pirate [COLOR_NEGATIVE_TEXT]Stede Bonnet[COLOR_REVERT] is attacking the %s1_civ_adjective fleet!</English>
+		<English>The famous pirate [COLOR_NEGATIVE_TEXT]Stede Bonnet[COLOR_REVERT] is attacking the %s1_civ_adjective fleet!</English>
 		<French>Le fameux Pirate [COLOR_NEGATIVE_TEXT]Stede Bonnet[COLOR_REVERT] attaque la flotte des %s1:3_civ_adjective!</French>
 		<German>Der Pirat [COLOR_NEGATIVE_TEXT]Stede Bonnet[COLOR_REVERT] greift die %s1_civ_adjective Flotte an!</German>
 		<Italian>Il famoso pirata Stede Bonnet sta attaccando la flotta %s1:2_civ_adjective!</Italian>
