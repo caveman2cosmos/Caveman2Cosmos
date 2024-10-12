@@ -175,16 +175,16 @@
 		<English>Automate Build Ups</English>
 		<French>Automatise les retranchements</French>
 		<German>Training (automatisiert)</German>
-		<Russian>Автоматизировать сбор</Russian>
 		<Italian>Allenamento automatico</Italian>
+		<Russian>Автоматизировать действия</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISSION_AUTO_BUILDUP_HELP</Tag>
 		<English>Automate build up selections for all units selected.</English>
 		<French>Automatise les retranchements pour toutes les unités sélectionnées.</French>
 		<German>Automatisches Training der ausgewählten Einheiten.</German>
-		<Russian>Автоматизировать выбор для всех указанных отрядов.</Russian>
 		<Italian>[NEWLINE]Automatizza gli allenamenti per tutte le unità selezionate.</Italian>
+		<Russian>Все выбранные единицы будут сами решать, что делать.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISSION_BOMBARD</Tag>
@@ -456,14 +456,15 @@
 		<German>Verschanzen</German>
 		<Italian>Fortificazione</Italian>
 		<Spanish>Fortificar</Spanish>
+		<Russian>Укрепиться</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISSION_FORTIFY_HELP</Tag>
 		<English>The unit "digs in" to better withstand enemy attack. A unit gets a cumulative 5%% defensive bonus (plus it's Dig In ability) for each turn it is fortified, capping out at 5 rounds. Note that on Hide and Seek games, Fortified units automatically lose all invisibility.</English>
 		<French>L'unité s'installe et profite du terrain pour mieux résister aux attaques ennemies. Une unité obtient un bonus défensif cumulatif de 5%% (plus sa capacité de retranchement) pour chaque tour où elle est fortifiée, plafonnant à 5 tours. Notez qu'avec le mode de combat cache-cache, les unités fortifiées perdent automatiquement toute invisibilité.</French>
 		<German>Einheit in Befestigungsmodus versetzen zur besseren Verteidigung im Falle eines Angriffs. Pro befestigter Runde erhält die Einheit einen zusätzlichen Verteidigungsbonus von 5%%, bis zu einem Maximum von 25%%. Befestigte Einheiten verlieren im "Versteckspiel" jegliche Unsichtbarkeit.</German>
-		<Russian>Отряд «окапывается» для лучшего противодействия вражеской атаке. Он получает накопительный 5%-ный защитный бонус (плюс способность «Окапывание») за каждый ход, пока отряд стоит на месте в течении 5 ходов. Обратите внимание, что в игровом режиме «Прятки» укрепленные отряды автоматически теряют всякую скрытность и маскировку.</Russian>
 		<Italian>[NEWLINE]Bonus difensivo del 5% (più i vantaggi della sua abilità) per ogni turno (max 5 turni). Con l'opzione "nascondino" attiva, le unità fortificate perdono l'invisibilità</Italian>
+		<Russian>Поздразделение «окапается» для лучшего противодействия вражеской атаке. Оно будет получать накопительный 5%-ный бонус к защите (плюс способность «Окапывание») за каждый ход (но не более пяти), пока стоит на месте. Обратите внимание, что с включенной игровой опцией «Игра в прятки» укрепившиеся единицы автоматически теряют всю маскировку.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISSION_GOTO</Tag>
@@ -471,19 +472,19 @@
 		<French>Aller à la Ville</French>
 		<German>Zielstadt</German>
 		<Spanish>Ir a ciudad</Spanish>
+		<Italian>Via a una città</Italian>
 		<Polish>Id&#159; do Miasta</Polish>
 		<Russian>Идти к городу</Russian>
-		<Italian>Via a una città</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISSION_GOTO_HELP</Tag>
 		<English>Select a city to send this unit to. The city does not need to be inside the current Viewport.</English>
 		<French>Sélectionner une ville où envoyer l'unité (n'a pas besoin d'être dans la fenêtre de vue).</French>
 		<German>Ausgewählte Einheit zu einer beliebigen Zielstadt (auch außerhalb des aktuellen Sichtfelds) beordern.</German>
+		<Italian>[NEWLINE]Manda l'unità a una città specifica.</Italian>
 		<Spanish>Selecciona una ciudad a la que enviar la unidad. No es necesario que dicha ciudad se encuentre dentro de la Vista parcial actual.</Spanish>
 		<Polish>Wybierz miasto do kt&#243;rego si&#234; ma uda&#230; jednostka. Miasto nie musi znajdowa&#230; si&#234; na bie&#191;&#185;cym Viewporcie.</Polish>
-		<Russian>Выберите город, куда вы намерены отправить этот отряд. Города не должны быть внутри текущего видового экрана.</Russian>
-		<Italian>[NEWLINE]Manda l'unità a una città specifica.</Italian>
+		<Russian>Выберите город, куда нужно отправить данную единицу. Города не должны быть внутри текущего обзорного экрана.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISSION_GO_TO_MAP_CISLUNAR</Tag>
@@ -597,22 +598,23 @@
 		<German>Bis zur vollständigen Heilung verschanzen</German>
 		<Italian>Fortificazione (fino alla guarigione)</Italian>
 		<Spanish>Fortificar hasta curarse</Spanish>
+		<Russian>Укрепиться до исцеления</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISSION_HEAL_BUILDUP</Tag>
 		<English>Automate Build Up Selections for Healing</English>
 		<French>Retranchement avec Spécialisation de Soin.</French>
 		<German>Training (automatisiert) - Heilung</German>
-		<Russian>Автоматизировать лечение</Russian>
 		<Italian>Automatizza selezione degli allenamenti per la guarigione</Italian>
+		<Russian>Автоматизировать лечение</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISSION_HEAL_BUILDUP_HELP</Tag>
 		<English>Automate build up selections (with emphasis on healing) for all units selected until fully healed. Turns to heal is maximum - with this mission, units may take less time to heal (but may also be weaker while doing so.)</English>
 		<French>Automatise la sélection du retranchement (spécialisation soins) pour toutes les unités sélectionnées, jusqu'à qu'elles soient complètement guéries. Le nombre de tours indiqué est un maximum - Car le bonus de soin est incrémental - l'unité met moins de temps pour se soigner, mais est plus vulnérable.</French>
 		<German>Automatische Steigerung der Regeneration der ausgewählten Einheiten bis zur kompletten Wiederherstellung. Einheiten sind auf diesem Weg schneller wieder einsatzbereit, dafür sind sie in der Rekonvaleszenzzeit aber schwächer und ungeschützter.</German>
-		<Russian>Автоматизировать действия (с акцентом на исцеление) для всех отобранных юнитов до полного излечения. С этой командой отрядам может потребоваться меньше времени для исцеления (но снижая его эффективность).</Russian>
 		<Italian>[NEWLINE]Automatizza le selezioni degli allenamenti (con enfasi sulla guarigione) per tutte le unità selezionate finché non sono completamente guarite.</Italian>
+		<Russian>Автоматизировать действия (с упором на исцеление) всех выбранных единиц до их полного восстановления. У подразделений с этим указанием может уйти меньше времени - а также может снизиться эффективность - до окончания лечения.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISSION_HEAL_HELP</Tag>
@@ -621,15 +623,17 @@
 		<German>Einheit ruhen und heilen lassen, bis diese wieder volle Stärke besitzt.</German>
 		<Italian>[NEWLINE]L'unità rimane inattiva finché non ritorna al massimo delle forze.</Italian>
 		<Spanish>La unidad permanecerá inactiva hasta que recobre el total de su fuerza.</Spanish>
-		<Russian>Отряд остается неактивным, пока полностью не восстановит силы.</Russian>
+		<Russian>Единица останется неактивной, пока полностью не восстановит силы.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISSION_HERITAGE</Tag>
 		<English>Add Heritage</English>
+		<Russian>Добавить культурное наследние</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISSION_HERITAGE_HELP</Tag>
 		<English>[ICON_BULLET]Consumes the unit.</English>
+		<Russian>[ICON_BULLET]Подразделение исчезнет в процессе.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISSION_HURRY_FOOD</Tag>
@@ -639,7 +643,7 @@
 		<Italian>Accelera cibo</Italian>
 		<Spanish>Envío alimentario</Spanish>
 		<Polish>Przy&#156;piesz &#191;ywno&#156;&#230;</Polish>
-		<Russian>Быстрая еда</Russian>
+		<Russian>Добавить пищу</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISSION_HURRY_FOOD_HELP</Tag>
@@ -649,7 +653,7 @@
 		<Italian>[NEWLINE]Incrementa le riserve di cibo della città. Consuma l'unità nel processo.</Italian>
 		<Spanish>Esta orden incrementará la comida almacenada en las ciudades. Consumirá a la unidad.</Spanish>
 		<Polish>Ten rozkaz zwi&#234;kszy zaopatrzenie miasta w &#191;ywno&#156;&#230;. Jest to zu&#191;ywane przez jednostki.</Polish>
-		<Russian>Этот приказ увеличит городскую поставку продовольствия. Это потребляет отряд.</Russian>
+		<Russian>Подразделение исчезнет, увеличив поставки продовольствия в городе.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISSION_HURRY_PRODUCTION</Tag>
@@ -658,6 +662,7 @@
 		<German>Produktion beschleunigen</German>
 		<Italian>Accelera produzione</Italian>
 		<Spanish>Acelerar la producción</Spanish>
+		<Russian>Ускорить производство</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISSION_HURRY_PRODUCTION_HELP</Tag>
@@ -666,7 +671,7 @@
 		<German>Opfern Sie die Große Persönlichkeit, um die aktuelle Produktion der Stadt zu beschleunigen.</German>
 		<Italian>[NEWLINE]La produzione attuale della città viene accelerata. L'unità viene sacrificata nel processo.</Italian>
 		<Spanish>El gran personaje acelera la producción que la ciudad esté llevando a cabo, consumiéndose en el proceso.</Spanish>
-		<Russian>Этот приказ ускорит текущее строительство в городе. Он потребляет отряд.</Russian>
+		<Russian>Подразделение исчезнет, ускорив текущее производство города.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISSION_INFILTRATE</Tag>
@@ -776,6 +781,7 @@
 		<German>Fortbewegen nach</German>
 		<Italian>Muovi</Italian>
 		<Spanish>Mover a</Spanish>
+		<Russian>Двигаться к</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISSION_MOVE_TO_HELP</Tag>
@@ -784,6 +790,7 @@
 		<German>Schicken Sie Ihre Einheit auf ein bestimmtes Geländefeld.</German>
 		<Italian>[NEWLINE] Muovi l'unità su una specifica casella.</Italian>
 		<Spanish>Para decirle a la unidad que vaya a una casilla concreta.</Spanish>
+		<Russian>Приказать подразделению переместиться на опредленную клетку</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISSION_MOVE_TO_SENTRY</Tag>
@@ -793,7 +800,7 @@
 		<Italian>Movimento e sentinella</Italian>
 		<Spanish>Moverse y vigilar</Spanish>
 		<Polish>Ruch i Warta</Polish>
-		<Russian>Двигаться и сторожить</Russian>
+		<Russian>Перемещаться, наблюдая</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISSION_MOVE_TO_SENTRY_HELP</Tag>
@@ -803,7 +810,7 @@
 		<Italian>[NEWLINE]L'unità si muove finché un'unità nemica dello stesso tipo non entra nel suo raggio di visibilità.</Italian>
 		<Spanish>La unidad se mueve hasta que una unidad enemiga del mismo tipo se sitúe en su campo de visión.</Spanish>
 		<Polish>Jednostka b&#234;dzie porusza&#230; si&#234; tak d&#179;ugo a&#191; nie spotka wrogiej jednostki</Polish>
-		<Russian>Подразделение будет двигаться, пока вражеские войска подобного типа не окажутся в зоне видимости.</Russian>
+		<Russian>Единица будет двигаться до тех пор, пока в ее зоне видимости не окажутся вражеские подразделения того же типа.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISSION_MOVE_TO_UNIT</Tag>
@@ -812,6 +819,7 @@
 		<German>Einheit fortbewegen nach</German>
 		<Italian>Muovi verso unità</Italian>
 		<Spanish>Llevar hasta la unidad</Spanish>
+		<Russian>Переместиться к подразделению</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISSION_MOVE_TO_UNIT_HELP</Tag>
@@ -820,6 +828,7 @@
 		<German>Schicken Sie Ihre Einheit zu einer anderen Einheit.</German>
 		<Italian>[NEWLINE]L'unità si muove verso un'altra unità.</Italian>
 		<Spanish>Para decirle a la unidad que vaya hasta otra unidad.</Spanish>
+		<Russian>Приказать единице двигаться к указанному подразделению.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISSION_NUKE</Tag>
@@ -1013,6 +1022,7 @@
 		<German>Wache</German>
 		<Italian>Sentinella</Italian>
 		<Spanish>Vigilar</Spanish>
+		<Russian>Наблюдать</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISSION_SENTRY_HELP</Tag>
@@ -1021,7 +1031,7 @@
 		<German>Einheit in den Wachmodus versetzen. Die Einheit wird erst wieder aktiv, wenn eine feindliche Einheit ein Nachbarfeld betritt.</German>
 		<Italian>[NEWLINE]Unità inattiva finché un'unità nemica non entra in una delle caselle adiacenti.</Italian>
 		<Spanish>La unidad permanecerá inactiva hasta que una unidad enemiga entre en cualquier casilla adyacente.</Spanish>
-		<Russian>Отряд остается неактивным, пока вражеский юнит не войдет в любую соседнюю клетку.</Russian>
+		<Russian>Единица останется неактивной до тех пор, пока в любую соседнюю к ней клетку не войдет враг.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISSION_SENTRY_LAND_UNITS</Tag>
@@ -1031,7 +1041,7 @@
 		<Italian>Sentinella (unità terrestri)</Italian>
 		<Spanish>Vigilar (unidades terrestres)</Spanish>
 		<Polish>Warta (Jednostki l&#185;dowe)</Polish>
-		<Russian>Сторожить (Наземные войска)</Russian>
+		<Russian>Наблюдать за сушей</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISSION_SENTRY_LAND_UNITS_HELP</Tag>
@@ -1041,7 +1051,7 @@
 		<Italian>[NEWLINE]Unità inattiva finché un'unità terrestre nemica non entra nel suo raggio di visibilità.</Italian>
 		<Spanish>La unidad permanecerá inactiva hasta que una unidad terrestre enemiga se sitúe en su campo de visión.</Spanish>
 		<Polish>Jednostka pozostaje bezczynna, dop&#243;ki wroga jednostka l&#185;dowa nie zbli&#191;y si&#234; do zasi&#234;gu.</Polish>
-		<Russian>Подразделение будет неактивно, пока вражеские наземные подразделения не появятся в зоне видимости.</Russian>
+		<Russian>Единица будет неактивна до тех пор, пока в ее зоне видимости не появятся вражеские наземные подразделения.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISSION_SENTRY_NAVAL_UNITS</Tag>
@@ -1051,7 +1061,7 @@
 		<Italian>Sentinella (unità navali)</Italian>
 		<Spanish>Vigilar (unidades navales)</Spanish>
 		<Polish>Wartownik (Jednostki morskie)</Polish>
-		<Russian>Сторожить (Корабли)</Russian>
+		<Russian>Наблюдать за водой</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISSION_SENTRY_NAVAL_UNITS_HELP</Tag>
@@ -1061,7 +1071,7 @@
 		<Italian>[NEWLINE]Unità inattiva finché un'unità navale nemica non entra nel suo raggio di visibilità.</Italian>
 		<Spanish>La unidad permanecerá inactiva hasta que una unidad naval enemiga se sitúe en su campo de visión.</Spanish>
 		<Polish>Jednostka pozostaje bezczynna, dop&#243;ki wroga jednostka morska nie zbli&#191;y si&#234; do zasi&#234;gu.</Polish>
-		<Russian>Подразделение будет неактивно, пока вражеские корабли не появятся в зоне видимости.</Russian>
+		<Russian>Единица будет неактивна до тех пор, пока в ее зоне видимости не появятся вражеские плавсредства.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISSION_SENTRY_WHILE_HEAL</Tag>
@@ -1071,7 +1081,7 @@
 		<Italian>Sentinella (fino alla guarigione)</Italian>
 		<Spanish>Vigilar hasta curarse</Spanish>
 		<Polish>Ulecz</Polish>
-		<Russian>Сторожить до исцеления</Russian>
+		<Russian>Наблюдать до исцеления</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISSION_SENTRY_WHILE_HEAL_HELP</Tag>
@@ -1081,7 +1091,7 @@
 		<Italian>[NEWLINE]L'unità rimane inattiva finché non ritorna a piena forza o un'unità nemica non entra nel suo raggio di visibilità.</Italian>
 		<Spanish>La unidad permanecerá inactiva hasta que recobre el total de su fuerza o una unidad enemiga se sitúe en su campo de visión.</Spanish>
 		<Polish>Jednostka pozostaje bezczynna, dop&#243;ki nie osi&#185;ga pe&#179;nej si&#179;y lub jednostka wroga nie zbli&#191;y si&#234; do zasi&#234;gu.</Polish>
-		<Russian>Подразделение будет неактивно до тех пор, пока не достигнет полной силы или вражеский отряд не появится в зоне видимости.</Russian>
+		<Russian>Единица будет неактивна до тех пор, пока полностью не восстановит силы или в ее зоне видимости не появится вражеское подразделение.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISSION_SKIP</Tag>
@@ -1090,6 +1100,7 @@
 		<German>Runde überspringen</German>
 		<Italian>Salta turno</Italian>
 		<Spanish>Saltar turno</Spanish>
+		<Russian>Пропустить ход</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISSION_SKIP_HELP</Tag>
@@ -1098,6 +1109,7 @@
 		<German>Tun Sie gar nichts, wartet die Einheit in der nächsten Runde auf weitere Befehle.</German>
 		<Italian>[NEWLINE]Nessun ordine. L'unità attenderà altri ordini al turno successivo.</Italian>
 		<Spanish>La unidad no hará nada, despertará y volverá a solicitar órdenes al turno siguiente.</Spanish>
+		<Russian>Ничего не делать. На следующий ход подраздлеение снова обратится за поручением.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISSION_SLEEP</Tag>

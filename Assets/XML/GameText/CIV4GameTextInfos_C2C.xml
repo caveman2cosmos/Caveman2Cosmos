@@ -288,7 +288,7 @@
 		<Italian>[ICON_BULLET][COLOR_REVERT]Può esistere su una %s1_MapCat</Italian>
 		<German>[ICON_BULLET]kann nur auf einem %s1_MapCat existieren</German>
 		<French>[ICON_BULLET]Ne peut exister que sur une %s1_MapCat.</French>
-		<Russian>[ICON_BULLET]Расположение: %s1_MapCat и нигде больше.</Russian>
+		<Russian>[ICON_BULLET]Допустимое расположение: %s1_MapCat.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MAP_CATEGORY_TERRAIN</Tag>
@@ -885,8 +885,8 @@
 		<Tag>TXT_KEY_UPGRADES</Tag>
 		<English>[ICON_BULLET]Upgrades:[SPACE]</English>
 		<German>[ICON_BULLET]mögliche Upgrades:[SPACE]</German>
-		<Russian>[ICON_BULLET]Улучшение:[SPACE]</Russian>
 		<Italian>[ICON_BULLET]Promozioni:[SPACE]</Italian>
+		<Russian>[ICON_BULLET]Улучшения:[SPACE]</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UPGRADE_TIME</Tag>
