@@ -3328,38 +3328,38 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_PROPERTY_SPAWN_BARB</Tag>
-		<English>A troublemaking %s1 has emerged to wreak havoc in the City of %s2!</English>
+		<English>A troublemaking %s1 has emerged to wreak havoc in the city of %s2!</English>
 		<French>Un trouble %s1 a émergé et créé des ravages dans la ville de %s2!</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_PROPERTY_SPAWN_FRIENDLY</Tag>
-		<English>A %s1 has risen among the people in the City of %s2!</English>
+		<English>A %s1 has risen among the people in the city of %s2!</English>
 		<French>Un %s1 est apparu parmi les habitants de la ville de %s2!</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_RELIGIOUSLY_DISABLED_BUILDINGS</Tag>
-		<English>As it is now frowned upon to do so, the Citizens of the City of %s1 have minimized worship of %s2, thus the %s3 is not fully operational at this time.</English>
+		<English>As it is now frowned upon to do so, the citizens of the city of %s1 have minimized worship of %s2; hence, the %s3 is not fully operational.</English>
 		<French>Comme c'est devenu plutôt mal vu, Les citoyens de la ville de %s1 ont cessé de vénérer %s2. Ainsi le bâtiment: %s3 n'est plus totalement opérationnel actuellement.</French>
 		<Italian>Dato che ora il loro culto viene osteggiato, alcuni abitanti di %s1 hanno minimizzato la venerazione di %s2, perciò [NUM3:il:la:gli:le] %s3 [NUM3:non è più completamente operativo:non è più completamente operativa:non sono più completamente operativi:non sono più completamente operative]</Italian>
 		<Polish>Z dezaprobat&#185;, mieszka&#241;cy miasta: %s1 minimalizuj&#185; prac&#234; w: %s2, wi&#234;c: %s3 nie jest w pe&#179;ni funkcjonalne.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_RELIGIOUSLY_DISABLED_COMPLETELY_BUILDINGS</Tag>
-		<English>As it is now illegal to do so, the Citizens of the City of %s1 have ceased worshiping %s2, thus the %s3 is completely inoperational at this time.</English>
+		<English>As it is now illegal to do so, the citizens of the city of %s1 have ceased worshiping %s2; hence, the %s3 is completely inoperational at this time.</English>
 		<French>Comme c'est devenu illégal, Les citoyens de la ville de %s1 ont cessé d'adorer %s2, et le bâtiment: %s3 n'est plus du tout opérationnel.</French>
 		<Italian>Dato che ora è illegale, gli abitanti di %s1 hanno smesso di venerare %s2, perciò [NUM3:il:la:gli:le] %s3 [NUM3:è inoperativo:è inoperativa:sono inoperativi:sono inoperative].</Italian>
 		<Polish>Jest to nielegalne wi&#234;c, niekt&#243;rzy z miastaL %s1 porzucili prace w: %s2, wi&#234;c: %s3 jest kompletnie niefunkcjonalne.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_RELIGIOUSLY_RESTORED_BUILDINGS</Tag>
-		<English>As it is no longer illegal to do so, some Citizens of the City of %s1 have returned to %s2 worship, thus the %s3 is in full operation once more.</English>
+		<English>As it is no longer illegal to do so, some citizens of the city of %s1 have returned to %s2 worship; hence, the %s3 is in full operation once more.</English>
 		<French>Comme ce n'est plus illégal, certains citoyens de la Ville de %s1 sont retourné à des croyances de %s2. Aussi, le bâtiment: %s3 est à nouveau opérationnel.</French>
 		<Italian>Dato che non è più illegale, alcuni abitanti di %s1 sono tornati a venerare %s2, perciò [NUM3:il:la:gli:le] %s3 [NUM3:è di nuovo completamente operativo:è di nuovo completamente operativa:sono di nuovo completamente operativi:sono di nuovo completamente operative].</Italian>
 		<Polish>Nie jest to ju&#191; nielegalne, niekt&#243;rzy mieszka&#241;cy miasta: %s1 przywr&#243;cili prac&#234; w: %s2, wi&#234;c %s3 zn&#243;w jest w pe&#179;ni funkcjonalne.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_REMOVED_BUILDINGS_CIVICS</Tag>
-		<English>The %s1 in the City of %s2 is no longer functioning and has ceased doing business. Your civic changes have ended its usefulness. Change your social policies to restore the %s3 back to working order.</English>
+		<English>The %s1 in the city of %s2 is no longer functioning and has ceased doing business. Your civic changes have ended its usefulness. Change your social policies to restore the %s3 back to working order.</English>
 		<French>[NUM1:Le:La:Les:Les] %s1 de la Ville de %s2 ne fonctionne plus. Les changements de Doctrines l'ont rendu inutile. Changez à nouveau ces doctrines pour permettre [NUM3:au:à la:aux:aux] %s3 de fonctionner à nouveau.</French>
 		<German>Das Gebäude %s1 in %s2 hat die Arbeit eingestellt. Die Änderung Eurer Gesellschaftsform hat es nutzlos werden lassen. Ändert Eure Sozialpolitik, wenn es den Betrieb wieder aufnehmen soll.</German>
 		<Italian>L'edificio %s1 nella città di %s2 non funziona più. Il cambio delle tue forme di governo lo ha reso obsoleto. Cambia le tue politiche sociali per ripristinare l'edificio %s3.</Italian>
@@ -3369,7 +3369,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_REMOVED_BUILDINGS_POPULATION</Tag>
-		<English>The %s1 in the City of %s2 has shut down to a lack of manpower.</English>
+		<English>The %s1 in the city of %s2 has shut down to a lack of manpower.</English>
 		<French>[NUM1:Le:La:Les:Les] %s1 dans la ville de %s2 [NUM1:est arrêté:est arrêtée:sont arrêtés:sont arrêtées] en raison d'un manque de main d'oeuvre.</French>
 		<German>Das Gebäude %s1 in %s2 wurde aufgrund eines Mangels an Arbeitskräften geschlossen.</German>
 		<Italian>%s1 nella città di %s2 ha chiuso per mancanza di manodopera.</Italian>
@@ -3379,7 +3379,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_REMOVED_BUILDINGS_POWER</Tag>
-		<English>The %s1 in the City of %s2 has shut down to a lack of power.</English>
+		<English>The %s1 in the city of %s2 has shut down to a lack of power.</English>
 		<French>Le bâtiment [COLOR_BUILDING_TEXT]%s1[COLOR_REVERT] de %s2 est éteint par manque d'énergie.</French>
 		<German>Das Gebäude %s1 in %s2 wurde aufgrund von akutem Energiemangel abgeschaltet.</German>
 		<Italian>L'edificio %s1 nella città di %s2 ha chiuso per mancanza di energia.</Italian>
@@ -3389,7 +3389,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_REMOVED_BUILDINGS_RESOURCES</Tag>
-		<English>The %s1 in the City of %s2 is no longer functioning and has ceased doing business. Regain access to resources or change the conditions in the city to restore the %s3 back to working order.</English>
+		<English>The %s1 in the city of %s2 is no longer functioning and has ceased doing business. Regain access to resources or change the conditions in the city to restore the %s3 back to working order.</English>
 		<French>Le bâtiment [COLOR_BUILDING_TEXT]%s1[COLOR_REVERT] de %s2 est désactivé.</French>
 		<German>Das Gebäude %s1 in %s2 hat die Arbeit eingestellt. Ihr müsst den Zugang zu den betreffenden Rohstoffen wiederherstellen oder die störenden Rahmenbedingungen in der Stadt beseitigen, um es wieder in Betrieb zu nehmen.</German>
 		<Italian>L'edificio %s1 nella città di %s2 non funziona più. Riottieni accesso alle risorse o cambia le condizioni in città per ripristinare l'edificio %s3.</Italian>
@@ -3399,7 +3399,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_REMOVED_FRESH_WATER</Tag>
-		<English>The %s1 in the City of %s2 has shut down to a lack of fresh water.</English>
+		<English>The %s1 in the city of %s2 has shut down to a lack of fresh water.</English>
 		<French>Le Batiment %s1 de la Ville de %s2 ne fonctionne plus en raison d'un manque d'eau douce.</French>
 		<Italian>L'edificio %s1 nella città di %s2 è stato chiuso per mancanza di acqua dolce.</Italian>
 		<Spanish>[NUM1:El:La:Los:Las] %s1 en la ciudad de %s2 [NUM1:ha:ha:han:han] cerrado por falta de agua dulce.</Spanish>
@@ -3407,7 +3407,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_REMOVED_MAX_POPULATION</Tag>
-		<English>The %s1 in the City of %s2 has shut down due to the population level being too high.</English>
+		<English>The %s1 in the city of %s2 has shut down due to the population level being too high.</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_REPEL</Tag>
@@ -3419,7 +3419,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_RESTORED_BUILDINGS</Tag>
-		<English>The City of %s1 has had its [COLOR_BUILDING_TEXT]%s2[COLOR_REVERT] restored and in working condition again.</English>
+		<English>The city of %s1 has had its [COLOR_BUILDING_TEXT]%s2[COLOR_REVERT] restored to working condition again.</English>
 		<French>Le bâtiment [COLOR_BUILDING_TEXT]%s2[COLOR_REVERT] de %s1 est à nouveau fonctionnel.</French>
 		<Polish>Miasto %s1 przywr&#243;ci&#179;o %s2 do pracy.</Polish>
 	</TEXT>
