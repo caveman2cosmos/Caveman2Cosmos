@@ -3211,7 +3211,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SOLAR_WORKER_HELP</Tag>
-		<English>[ICON_BULLET]This unit can build route on Orbit terrain enabling trade and resource flow between Earth and space colonies.</English>
+		<English>[ICON_BULLET]This unit can build routes on Orbit terrain enabling trade and resource flow between Earth and space colonies.</English>
 		<Italian>[ICON_BULLET]L'unità può [COLOR_HIGHLIGHT_TEXT]costruire percorsi[COLOR_REVERT] sulle caselle dell'orbita consentendo il [COLOR_HIGHLIGHT_TEXT]commercio[COLOR_REVERT] e il [COLOR_HIGHLIGHT_TEXT]flusso di risorse[COLOR_REVERT] tra la Terra e le colonie spaziali</Italian> <!-- unit Solar Workship -->
 	</TEXT>
 	<TEXT>
