@@ -4216,7 +4216,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_BROTHERS_IN_NEED_10</Tag>
-		<English>Their front lines are static. Give them some of our Tanks!</English>
+		<English>Their front lines are static. Give them some of our tanks!</English>
 		<French>Leurs lignes de front sont statiques. Donnez-leur de nos réservoirs!</French>
 		<German>Ihre Fronten sind statisch. Gib ihnen einige unserer Panzer!</German>
 		<Italian>Le loro linee del fronte sono statiche. Date loro alcuni dei nostri carri armati!</Italian>
@@ -4225,7 +4225,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_BROTHERS_IN_NEED_11</Tag>
-		<English>Having air superiority is paramount in the field of battle. Send them some of our Aircrafts!</English>
+		<English>Having air superiority is paramount in the field of battle. Send them some of our aircraft!</English>
 		<French>Avoir la supériorité aérienne est primordial sur le champ de bataille. Envoyez-leur des avions!</French>
 		<German>Luftüberlegenheit ist im Kampfbereich von größter Bedeutung. Schicken Sie ihnen einige unserer Flugzeuge!</German>
 		<Italian>Avere superiorità aerea è fondamentale sul campo della battaglia. Inviate loro alcuni dei nostri velivoli!</Italian>
@@ -4234,7 +4234,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_BROTHERS_IN_NEED_12</Tag>
-		<English>Their adversary is too strong, this calls for desperate measures. Give them some of our Uranium.</English>
+		<English>Their adversary is too strong. This calls for desperate measures; give them some of our uranium.</English>
 		<French>Leur adversaire est trop fort, cela appelle des mesures désespérées. Donnez-leur de notre uranium.</French>
 		<German>Ihr Gegner ist zu stark, dies erfordert verzweifelte Maßnahmen. Gib ihnen etwas von unserem Uran.</German>
 		<Italian>Il loro avversario è troppo forte, questo richiede misure drastiche. Date loro un po' del nostro uranio.</Italian>
@@ -4243,7 +4243,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_BROTHERS_IN_NEED_13</Tag>
-		<English>Their mechanical units are weak. Send them some of our Androids!</English>
+		<English>Their mechanical units are weak. Send them some of our androids!</English>
 		<French>Leurs unités mécaniques sont faibles. Envoyez-leur des androïdes!</French>
 		<German>Ihre mechanischen Einheiten sind schwach. Sende ihnen einige unserer Androiden!</German>
 		<Italian>Le loro unità meccaniche sono deboli. Mandate loro alcuni dei nostri androidi!</Italian>
@@ -4256,15 +4256,15 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_BROTHERS_IN_NEED_15</Tag>
-		<English>Send them obsidian to build durable weapons.</English>
+		<English>Send them obsidian, to build durable weapons.</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_BROTHERS_IN_NEED_16</Tag>
-		<English>We dont have much but we can always send them gold.</English>
+		<English>We don't have much, but we can always send them gold.</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_BROTHERS_IN_NEED_2</Tag>
-		<English>Offer to send them a large supply of Copper for weapon making.</English>
+		<English>Offer to send them a large supply of copper for weapon making.</English>
 		<French>Proposer à nos frères de leur envoyer une grande quantité de cuivre pour la fabrication de leurs armes.</French>
 		<German>Bietet ihnen eine große Lieferung Kupfer an, damit sie Waffen herstellen können.</German>
 		<Italian>Offrite loro l'invio di una grande quantità di rame per produrre armi.</Italian>
@@ -4272,7 +4272,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_BROTHERS_IN_NEED_3</Tag>
-		<English>Provide Iron so that they may craft strong weaponry.</English>
+		<English>Provide iron so that they may craft strong weaponry.</English>
 		<French>Donner du fer à nos frères pour qu'ils puissent fabriquer de puissantes armes.</French>
 		<German>Bietet ihnen Eisen an, damit sie hochwertige Waffen herstellen können.</German>
 		<Italian>Fornite loro del ferro, in modo che possano costruire armi più resistenti.</Italian>
@@ -4280,7 +4280,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_BROTHERS_IN_NEED_4</Tag>
-		<English>Send large herds of war-trained Horses to our brothers.</English>
+		<English>Send large herds of war-trained horses to our brothers.</English>
 		<French>Envoyer de nombreux chevaux de guerre à nos frères.</French>
 		<German>Schickt unseren Brüdern möglichst viele Schlachtrösser.</German>
 		<Italian>Inviate grandi mandrie di cavalli da guerra ai nostri fratelli.</Italian>
@@ -4288,7 +4288,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_BROTHERS_IN_NEED_5</Tag>
-		<English>War Elephants are what they need. Send in the jumbos!</English>
+		<English>War elephants are what they need. Send in the jumbos!</English>
 		<French>Il leur faut des éléphants de guerre. Offrir des éléphants.</French>
 		<German>Sie brauchen Kriegselefanten. Schickt ihnen die Jumbos!</German>
 		<Italian>Gli elefanti da guerra sono ciò di cui hanno bisogno. Mandateglieli!</Italian>
@@ -4296,7 +4296,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_BROTHERS_IN_NEED_6</Tag>
-		<English>Their army cannot fight without weapons. Send them some of our Firearms!</English>
+		<English>Their army cannot fight without weapons. Send them some of our firearms!</English>
 		<French>Leur armée ne peut pas se battre sans armes. Envoyez-leur des armes à feu!</French>
 		<German>Ihre Armee kann nicht ohne Waffen kämpfen. Sende ihnen einige unserer Feuerwaffen!</German>
 		<Italian>Il loro esercito non può combattere senza armi. Inviate loro alcune delle nostre armi da fuoco!</Italian>
@@ -4305,7 +4305,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_BROTHERS_IN_NEED_7</Tag>
-		<English>Weapons are useless without Ammunition. Give them access to a few of our stockpiles!</English>
+		<English>Weapons are useless without ammunition. Give them access to a few of our stockpiles!</English>
 		<French>Les armes sont inutiles sans munitions. Donnez-leur accès à quelques-uns de nos stocks!</French>
 		<German>Waffen sind ohne Munition unbrauchbar. Gib ihnen Zugang zu einigen unserer Vorräte!</German>
 		<Italian>Le armi sono inutili senza munizioni. Date loro l'accesso ad alcune delle nostre scorte!</Italian>
@@ -4314,7 +4314,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_BROTHERS_IN_NEED_8</Tag>
-		<English>Their navy is lacking. Provide them with our strongest Steel!</English>
+		<English>Their navy is lacking. Provide them with our strongest ateel!</English>
 		<French>Leur marine fait défaut. Fournissez-leur notre acier le plus fort!</French>
 		<German>Ihre Marine fehlt. Versorgen Sie sie mit unserem stärksten Stahl!</German>
 		<Italian>La loro Marina è carente. Fornite loro il nostro acciaio più resistente!</Italian>
@@ -4323,7 +4323,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_BROTHERS_IN_NEED_9</Tag>
-		<English>Their vehicles require fuel. Send them Oil Products!</English>
+		<English>Their vehicles require fuel. Send them oil products!</English>
 		<French>Leurs véhicules ont besoin de carburant. Envoyez-leur des produits pétroliers!</French>
 		<German>Ihre Fahrzeuge benötigen Kraftstoff. Schicken Sie ihnen Ölprodukte!</German>
 		<Italian>I loro veicoli richiedono carburante. Inviate loro prodotti petroliferi!</Italian>
@@ -4332,7 +4332,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_BROTHERS_IN_NEED_OTHER_10</Tag>
-		<English>Our %s1_civ_adjective religious brothers have gifted us with [COLOR_HIGHLIGHT_TEXT]Tanks[COLOR_REVERT] to aid us in our war effort!</English>
+		<English>Our %s1_civ_adjective religious brothers have gifted us with [COLOR_HIGHLIGHT_TEXT]tanks[COLOR_REVERT] to aid us in our war effort!</English>
 		<French>Nos frères %s1:3_civ_adjective nous ont offert de l'[COLOR_HIGHLIGHT_TEXT]Char de combat[COLOR_REVERT] pour soutenir notre effort de guerre!</French>
 		<German>Unsere %s1:2_civ_adjective Glaubensbrüder unterstützen unsere Kriegsbemühungen mit [COLOR_HIGHLIGHT_TEXT]Panzer[COLOR_REVERT]!</German>
 		<Italian>I nostri fratelli di fede %s1:2_civ_adjective ci hanno donato dei [COLOR_HIGHLIGHT_TEXT]Carri armati[COLOR_REVERT] per aiutarci nello sforzo bellico!</Italian>
@@ -4341,7 +4341,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_BROTHERS_IN_NEED_OTHER_11</Tag>
-		<English>Our %s1_civ_adjective religious brothers have gifted us with [COLOR_HIGHLIGHT_TEXT]Aircrafts[COLOR_REVERT] to aid us in our war effort!</English>
+		<English>Our %s1_civ_adjective religious brothers have gifted us with [COLOR_HIGHLIGHT_TEXT]aircraft[COLOR_REVERT] to aid us in our war effort!</English>
 		<French>Nos frères %s1:3_civ_adjective nous ont offert de l'[COLOR_HIGHLIGHT_TEXT]Avions[COLOR_REVERT] pour soutenir notre effort de guerre!</French>
 		<German>Unsere %s1:2_civ_adjective Glaubensbrüder unterstützen unsere Kriegsbemühungen mit [COLOR_HIGHLIGHT_TEXT]Flugzeuge[COLOR_REVERT]!</German>
 		<Italian>I nostri fratelli di fede %s1:2_civ_adjective ci hanno donato degli [COLOR_HIGHLIGHT_TEXT]Aerei[COLOR_REVERT] per aiutarci nello sforzo bellico!</Italian>
@@ -4350,7 +4350,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_BROTHERS_IN_NEED_OTHER_12</Tag>
-		<English>Our %s1_civ_adjective religious brothers have gifted us with [COLOR_HIGHLIGHT_TEXT]Uranium[COLOR_REVERT] to aid us in our war effort!</English>
+		<English>Our %s1_civ_adjective religious brothers have gifted us with [COLOR_HIGHLIGHT_TEXT]uranium[COLOR_REVERT] to aid us in our war effort!</English>
 		<French>Nos frères %s1:3_civ_adjective nous ont offert de l'[COLOR_HIGHLIGHT_TEXT]Uranium[COLOR_REVERT] pour soutenir notre effort de guerre!</French>
 		<German>Unsere %s1:2_civ_adjective Glaubensbrüder unterstützen unsere Kriegsbemühungen mit [COLOR_HIGHLIGHT_TEXT]Uran[COLOR_REVERT]!</German>
 		<Italian>I nostri fratelli di fede %s1:2_civ_adjective ci hanno donato dell'[COLOR_HIGHLIGHT_TEXT]Uranio[COLOR_REVERT] per aiutarci nello sforzo bellico!</Italian>
@@ -4359,7 +4359,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_BROTHERS_IN_NEED_OTHER_13</Tag>
-		<English>Our %s1_civ_adjective religious brothers have gifted us with [COLOR_HIGHLIGHT_TEXT]Androids[COLOR_REVERT] to aid us in our war effort!</English>
+		<English>Our %s1_civ_adjective religious brothers have gifted us with [COLOR_HIGHLIGHT_TEXT]androids[COLOR_REVERT] to aid us in our war effort!</English>
 		<French>Nos frères %s1:3_civ_adjective nous ont offert de l'[COLOR_HIGHLIGHT_TEXT]Androides[COLOR_REVERT] pour soutenir notre effort de guerre!</French>
 		<German>Unsere %s1:2_civ_adjective Glaubensbrüder unterstützen unsere Kriegsbemühungen mit [COLOR_HIGHLIGHT_TEXT]Androiden[COLOR_REVERT]!</German>
 		<Italian>I nostri fratelli di fede %s1:2_civ_adjective ci hanno donato degli [COLOR_HIGHLIGHT_TEXT]androidi[COLOR_REVERT] per aiutarci nello sforzo bellico!</Italian>
@@ -4368,19 +4368,19 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_BROTHERS_IN_NEED_OTHER_14</Tag>
-		<English>Our %s1_civ_adjective religious brothers have gifted us with [COLOR_HIGHLIGHT_TEXT]Stone[COLOR_REVERT] to aid us in our war effort!</English>
+		<English>Our %s1_civ_adjective religious brothers have gifted us with [COLOR_HIGHLIGHT_TEXT]stone[COLOR_REVERT] to aid us in our war effort!</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_BROTHERS_IN_NEED_OTHER_15</Tag>
-		<English>Our %s1_civ_adjective religious brothers have gifted us with [COLOR_HIGHLIGHT_TEXT]Obsidian[COLOR_REVERT] to aid us in our war effort!</English>
+		<English>Our %s1_civ_adjective religious brothers have gifted us with [COLOR_HIGHLIGHT_TEXT]obsidian[COLOR_REVERT] to aid us in our war effort!</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_BROTHERS_IN_NEED_OTHER_16</Tag>
-		<English>Our %s1_civ_adjective religious brothers have gifted us with [COLOR_HIGHLIGHT_TEXT]Gold[COLOR_REVERT] to aid us in our war effort!</English>
+		<English>Our %s1_civ_adjective religious brothers have gifted us with [COLOR_HIGHLIGHT_TEXT]gold[COLOR_REVERT] to aid us in our war effort!</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_BROTHERS_IN_NEED_OTHER_2</Tag>
-		<English>Our %s1_civ_adjective religious brothers have gifted us with [COLOR_HIGHLIGHT_TEXT]Copper[COLOR_REVERT] to aid us in our war effort!</English>
+		<English>Our %s1_civ_adjective religious brothers have gifted us with [COLOR_HIGHLIGHT_TEXT]copper[COLOR_REVERT] to aid us in our war effort!</English>
 		<French>Nos frères %s1:3_civ_adjective nous ont offert du [COLOR_HIGHLIGHT_TEXT]cuivre[COLOR_REVERT] pour soutenir notre effort de guerre !</French>
 		<German>Unsere %s1:2_civ_adjective Glaubensbrüder unterstützen unsere Kriegsbemühungen mit [COLOR_HIGHLIGHT_TEXT]Kupferlieferungen[COLOR_REVERT]!</German>
 		<Italian>I nostri fratelli di fede %s1:2_civ_adjective ci hanno donato del [COLOR_HIGHLIGHT_TEXT]rame[COLOR_REVERT] per aiutarci nello sforzo bellico!</Italian>
@@ -4388,7 +4388,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_BROTHERS_IN_NEED_OTHER_3</Tag>
-		<English>Our %s1_civ_adjective religious brothers have gifted us with [COLOR_HIGHLIGHT_TEXT]Iron[COLOR_REVERT] to aid us in our war effort!</English>
+		<English>Our %s1_civ_adjective religious brothers have gifted us with [COLOR_HIGHLIGHT_TEXT]iron[COLOR_REVERT] to aid us in our war effort!</English>
 		<French>Nos frères %s1:3_civ_adjective nous ont offert du [COLOR_HIGHLIGHT_TEXT]fer[COLOR_REVERT] pour soutenir notre effort de guerre !</French>
 		<German>Unsere %s1:2_civ_adjective Glaubensbrüder unterstützen unsere Kriegsbemühungen mit [COLOR_HIGHLIGHT_TEXT]Eisenlieferungen[COLOR_REVERT]!</German>
 		<Italian>I nostri fratelli di fede %s1:2_civ_adjective ci hanno donato del [COLOR_HIGHLIGHT_TEXT]ferro[COLOR_REVERT] per aiutarci nello sforzo bellico!</Italian>
@@ -4396,7 +4396,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_BROTHERS_IN_NEED_OTHER_4</Tag>
-		<English>Our %s1_civ_adjective religious brothers have gifted us with [COLOR_HIGHLIGHT_TEXT]Horses[COLOR_REVERT] to aid us in our war effort!</English>
+		<English>Our %s1_civ_adjective religious brothers have gifted us with [COLOR_HIGHLIGHT_TEXT]horses[COLOR_REVERT] to aid us in our war effort!</English>
 		<French>Nos frères %s1:3_civ_adjective nous ont offert des [COLOR_HIGHLIGHT_TEXT]chevaux[COLOR_REVERT] pour soutenir notre effort de guerre !</French>
 		<German>Unsere %s1:2_civ_adjective Glaubensbrüder unterstützen unsere Kriegsbemühungen mit [COLOR_HIGHLIGHT_TEXT]Pferdelieferungen[COLOR_REVERT]!</German>
 		<Italian>I nostri fratelli di fede %s1:2_civ_adjective ci hanno donato dei [COLOR_HIGHLIGHT_TEXT]cavalli[COLOR_REVERT] per aiutarci nello sforzo bellico!</Italian>
@@ -4404,7 +4404,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_BROTHERS_IN_NEED_OTHER_5</Tag>
-		<English>Our %s1_civ_adjective religious brothers have gifted us with [COLOR_HIGHLIGHT_TEXT]Ivory[COLOR_REVERT] to aid us in our war effort!</English>
+		<English>Our %s1_civ_adjective religious brothers have gifted us with [COLOR_HIGHLIGHT_TEXT]elephants[COLOR_REVERT] to aid us in our war effort!</English>
 		<French>Nos frères %s1:3_civ_adjective nous ont offert de l'[COLOR_HIGHLIGHT_TEXT]ivoire[COLOR_REVERT] pour soutenir notre effort de guerre !</French>
 		<German>Unsere %s1:2_civ_adjective Glaubensbrüder unterstützen unsere Kriegsbemühungen mit [COLOR_HIGHLIGHT_TEXT]Elfenbeinlieferungen[COLOR_REVERT]!</German>
 		<Italian>I nostri fratelli di fede %s1:2_civ_adjective ci hanno donato dell'[COLOR_HIGHLIGHT_TEXT]avorio[COLOR_REVERT] per aiutarci nello sforzo bellico!</Italian>
@@ -4412,7 +4412,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_BROTHERS_IN_NEED_OTHER_6</Tag>
-		<English>Our %s1_civ_adjective religious brothers have gifted us with [COLOR_HIGHLIGHT_TEXT]Firearms[COLOR_REVERT] to aid us in our war effort!</English>
+		<English>Our %s1_civ_adjective religious brothers have gifted us with [COLOR_HIGHLIGHT_TEXT]firearms[COLOR_REVERT] to aid us in our war effort!</English>
 		<French>Nos frères %s1:3_civ_adjective nous ont offert du [COLOR_HIGHLIGHT_TEXT]Armes à feu[COLOR_REVERT] pour soutenir notre effort de guerre!</French>
 		<German>Unsere %[s1_civ_adjective]en Glaubensbrüder unterstützen unsere Kriegsbemühungen mit [COLOR_HIGHLIGHT_TEXT]Feuerarme[COLOR_REVERT]!</German>
 		<Italian>I nostri fratelli di fede %s1:2_civ_adjective ci hanno donato delle [COLOR_HIGHLIGHT_TEXT]armi da fuoco[COLOR_REVERT] per aiutare il nostro sforzo bellico!</Italian>
@@ -4421,7 +4421,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_BROTHERS_IN_NEED_OTHER_7</Tag>
-		<English>Our %s1_civ_adjective religious brothers have gifted us with [COLOR_HIGHLIGHT_TEXT]Ammunition[COLOR_REVERT] to aid us in our war effort!</English>
+		<English>Our %s1_civ_adjective religious brothers have gifted us with [COLOR_HIGHLIGHT_TEXT]ammunition[COLOR_REVERT] to aid us in our war effort!</English>
 		<French>Nos frères %s1:3_civ_adjective nous ont offert du [COLOR_HIGHLIGHT_TEXT]Munition[COLOR_REVERT] pour soutenir notre effort de guerre!</French>
 		<German>Unsere %[s1_civ_adjective]en Glaubensbrüder unterstützen unsere Kriegsbemühungen mit [COLOR_HIGHLIGHT_TEXT]Munition[COLOR_REVERT]!</German>
 		<Italian>I nostri fratelli di fede %s1:2_civ_adjective ci hanno donato delle [COLOR_HIGHLIGHT_TEXT]cartucce[COLOR_REVERT] per aiutare il nostro sforzo bellico!</Italian>
@@ -4430,7 +4430,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_BROTHERS_IN_NEED_OTHER_8</Tag>
-		<English>Our %s1_civ_adjective religious brothers have gifted us with [COLOR_HIGHLIGHT_TEXT]Steel[COLOR_REVERT] to aid us in our war effort!</English>
+		<English>Our %s1_civ_adjective religious brothers have gifted us with [COLOR_HIGHLIGHT_TEXT]steel[COLOR_REVERT] to aid us in our war effort!</English>
 		<French>Nos frères %s1:3_civ_adjective nous ont offert du [COLOR_HIGHLIGHT_TEXT]Acier[COLOR_REVERT] pour soutenir notre effort de guerre!</French>
 		<German>Unsere %[s1_civ_adjective]en Glaubensbrüder unterstützen unsere Kriegsbemühungen mit [COLOR_HIGHLIGHT_TEXT]Stehlen[COLOR_REVERT]!</German>
 		<Italian>I nostri fratelli di fede %s1:2_civ_adjective ci hanno donato dell'[COLOR_HIGHLIGHT_TEXT]acciaio[COLOR_REVERT] per aiutarci nello sforzo bellico!</Italian>
@@ -4439,7 +4439,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_BROTHERS_IN_NEED_OTHER_9</Tag>
-		<English>Our %s1_civ_adjective religious brothers have gifted us with [COLOR_HIGHLIGHT_TEXT]Oil Products[COLOR_REVERT] to aid us in our war effort!</English>
+		<English>Our %s1_civ_adjective religious brothers have gifted us with [COLOR_HIGHLIGHT_TEXT]oil products[COLOR_REVERT] to aid us in our war effort!</English>
 		<French>Nos frères %s1:3_civ_adjective nous ont offert de l'[COLOR_HIGHLIGHT_TEXT]Produits pétroliers[COLOR_REVERT] pour soutenir notre effort de guerre!</French>
 		<German>Unsere %s1:2_civ_adjective Glaubensbrüder unterstützen unsere Kriegsbemühungen mit [COLOR_HIGHLIGHT_TEXT]Ölprodukte[COLOR_REVERT]!</German>
 		<Italian>I nostri fratelli di fede %s1:2_civ_adjective ci hanno donato dei [COLOR_HIGHLIGHT_TEXT]prodotti petroliferi[COLOR_REVERT] per aiutarci nello sforzo bellico!</Italian>
