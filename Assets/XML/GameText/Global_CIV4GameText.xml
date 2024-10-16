@@ -9389,7 +9389,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HAPPY_WORLD_PROJECT</Tag>
-		<English>+%d1_Change[ICON_HAPPY]: "Other Nation's Technological Breakthroughs have benefited the World!"</English>
+		<English>+%d1_Change[ICON_HAPPY]: "Other nations' technological breakthroughs have benefited the world!"</English>
 		<French>+%d1_Change[ICON_HAPPY]: "Les Avancées Technologiques d'autres Nations ont permis d'améliorer le Monde Entier!"</French>
 		<German>+%d1_Change[ICON_HAPPY]: "Die technologischen Errungenschaften anderer Nationen haben der Welt geholfen!"</German>
 		<Italian>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]+%d1_Change[COLOR_REVERT] [ICON_HAPPY]: Le innovazioni tecnologiche straniere hanno portato benefici a tutto il mondo!</Italian> <!-- city screen hover happiness panel upper right -->
@@ -28209,7 +28209,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNHAPPY_WORLD_PROJECT</Tag>
-		<English>+%d1_Change[ICON_UNHAPPY]: "Other Nation's Technological Breakthroughs have harmed the World!"</English>
+		<English>+%d1_Change[ICON_UNHAPPY]: "Other nations' technological breakthroughs have harmed the world!"</English>
 		<French>+%d1_Change[ICON_UNHAPPY]: "Les Avancées Technologiques d'autres Nations ont des conséquences néfastes pour le Monde Entier!"</French>
 		<German>+%d1_Change[ICON_UNHAPPY]: "Die technologischen Errungenschaften anderer Nationen fügen der Welt Schaden zu!"</German>
 		<Italian>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]+%d1_Change[COLOR_REVERT] [ICON_UNHAPPY]: Le innovazioni tecnologiche straniere hanno causato danni in tutto il mondo!</Italian> <!-- city screen hover happiness panel upper right -->
@@ -28219,7 +28219,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNHEALTHY_TECH_SPECIALIST</Tag>
-		<English>+%d1[ICON_UNHEALTHY] "Our advanced society has made the efforts of some professions produce filthy bi-products!"</English>
+		<English>+%d1[ICON_UNHEALTHY] "Our advanced society has made the efforts of some professions produce filthy byproducts!"</English>
 		<French>+%d1[ICON_UNHEALTHY] "Notre société avancée a fait des efforts au niveau de certaines professions pour produire des sous-produits grossiers!"</French>
 		<Italian>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]+%d1[COLOR_REVERT] [ICON_UNHEALTHY]: Molte professioni nella nostra società avanzata producono pericolosi prodotti di scarto!</Italian> <!-- city screen hover happiness panel upper right -->
 		<Polish>+%d1[ICON_UNHEALTHY] "Nasze nowoczesne spo&#179;ecze&#241;stwo doprowadzi&#179;o, &#191;e niekt&#243;re zawody produkuj&#185; kiepskiej jako&#156;ci p&#243;&#179;-produkty!"</Polish>
