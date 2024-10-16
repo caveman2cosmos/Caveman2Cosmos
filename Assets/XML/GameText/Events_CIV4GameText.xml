@@ -514,7 +514,7 @@
 	</TEXT>
     <TEXT>
         <Tag>TXT_KEY_EVENTTRIGGER_WAR_TAXES</Tag>
-        <English>%s1_civ_adjective ruler has initiated war taxes. The situation must be getting desperate.</English>
+        <English>The %s1_civ_adjective ruler has levied war taxes. The situation must be getting desperate.</English>
     </TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_CITY_RUINS</Tag>
@@ -12435,7 +12435,7 @@
 	</TEXT>
     <TEXT>
         <Tag>TXT_KEY_EVENT_TRIGGER_WAR_TAXES_1</Tag>
-        <English>We are at war, the coffers need filling should we muster war taxes?</English>
+        <English>We are at war and the coffers need filling - should we levy war taxes?</English>
     </TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_TRIGGER_GREAT_MEDIATOR_1</Tag>
