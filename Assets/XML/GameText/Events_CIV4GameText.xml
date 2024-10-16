@@ -205,7 +205,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_ARTIFICIAL_ELEMENT_1</Tag>
-		<English>The %s1_civ_adjective scientists in %s2_city have discovered first artificial element with their accelerator!</English>
+		<English>%s1_civ_adjective scientists in %s2_city have discovered the first artificial element with their accelerator!</English>
 		<French>Les scientifique %s1:3_civ_adjective de %s2_city ont découvert le premier élément artificiel avec leur accélérateur!</French>
 		<German>Die %s1_civ_adjective Wissenschaftler in %s2_city haben mit ihrem Teilchenbeschleuniger das erste künstliche Element erschaffen!</German>
 		<Italian>Gli scienziati %s1:3_civ_adjective di %s2_city hanno scoperto il primo elemento artificiale all'interno del loro acceleratore!</Italian>
@@ -11529,7 +11529,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_TRIGGER_ARTIFICIAL_ELEMENT_1</Tag>
-		<English>The scientists in %s2_city have discovered first artificial element with the accelerator! More elements might be found in near future now that the methods to create them have been proven.</English>
+		<English>Scientists in %s2_city have discovered the first artificial element using a particle accelerator! More elements might be found in the near future now that the methods to create them have been discovered.</English>
 		<French>Nos scientifiques de %s2_city ont découvert le premier élément artificiel avec un accélérateur à particules! d'autres éléments pourraient être découvert dans un futur proche, maintenant que la méthodologie pour leur création a été prouvée.</French>
 		<German>Die Wissenschaftler in %s2_city haben mit ihrem Teilchenbeschleuniger das erste künstliche Element erschaffen! Jetzt, wo die Methode etabliert ist, könnten weitere künstliche Elemente gefunden werden.</German>
 		<Italian>Gli scienziati di %s2_city hanno scoperto il primo elemento artificiale all'interno del loro acceleratore! È possibile che in futuro vengano scoperti altri elementi, ora che il metodo per crearli è stato provato.</Italian>
