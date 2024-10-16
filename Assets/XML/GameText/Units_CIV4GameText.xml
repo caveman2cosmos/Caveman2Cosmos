@@ -8938,7 +8938,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_FF_DESTROYER_PEDIA</Tag>
-		<English>Fusion Engines are the powerhouse of a late game vehicles. Engines provide the power necessary to move a vehicle and fire its weapons. Unlike internal combustion engines, Fusion Engines generate power by fusing hydrogen isotopes (1H) much like the center of a sun. Despite conventional thought, these Engines are not potential mini-nuclear explosions. When damaged to a significant degree they will automatically shut down all fusion reactions and power down.</English>
+		<English>Fusion engines are the powerhouse of late game vehicles. Engines provide the power necessary to move a vehicle and fire its weapons. Unlike internal combustion engines, fusion engines generate power by fusing hydrogen isotopes, much like the center of a sun. Despite conventional expectations, these engines are not potential nuclear explosions. When damaged to a significant degree they will automatically shut down all fusion reactions and power down.</English>
 		<Russian>Термоядерные реакторы являются двигателями поздней игры. Они обеспечивают мощность, необходимую для передвижения транспортного средства и ведения огня его орудиями. В отличие от двигателей внутреннего сгорания, термоядерные реакторы вырабатывают энергию путем слияния изотопов водорода (1H) так же, как в центре Солнца. Несмотря на традиционную мысль, эти реакторы не являются потенциальными источниками радиационной опасности. При значительном повреждении они автоматически блокируют все реакции синтеза и отключают питание.</Russian>
 	</TEXT>
 	<TEXT>
@@ -9387,7 +9387,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_FUSION_CARRIER_PEDIA</Tag>
-		<English>Fusion Engines are the powerhouse of a late game vehicles. Engines provide the power necessary to move a vehicle and fire its weapons. Unlike internal combustion engines, Fusion Engines generate power by fusing hydrogen isotopes (1H) much like the center of a sun. Despite conventional thought, these Engines are not potential mini-nuclear explosions. When damaged to a significant degree they will automatically shut down all fusion reactions and power down.</English>
+		<English>Fusion engines are the powerhouse of late game vehicles. Engines provide the power necessary to move a vehicle and fire its weapons. Unlike internal combustion engines, fusion engines generate power by fusing hydrogen isotopes, much like the center of a sun. Despite conventional expectations, these engines are not potential nuclear explosions. When damaged to a significant degree they will automatically shut down all fusion reactions and power down.</English>
 		<Polish>Lotniskowiec Fuzyjny jest bardzo silna niewykrywalna jednostka ale gl&#243;wnie sluzy do transportowania 10 mysliwc&#243;w.</Polish>
 		<Russian>Термоядерные реакторы являются двигателями поздней игры. Они обеспечивают мощность, необходимую для передвижения транспортного средства и ведения огня его орудиями. В отличие от двигателей внутреннего сгорания, термоядерные реакторы вырабатывают энергию путем слияния изотопов водорода (1H) так же, как в центре Солнца. Несмотря на традиционную мысль, эти реакторы не являются потенциальными источниками радиационной опасности. При значительном повреждении они автоматически блокируют все реакции синтеза и отключают питание.</Russian>
 	</TEXT>
@@ -9406,8 +9406,8 @@
 		<Russian>Àòîìíûé êðåéñåð</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_FUSION_CRUISER_PEDIA</Tag>
-		<English>Fusion Engines are the powerhouse of a late game vehicles. Engines provide the power necessary to move a vehicle and fire its weapons. Unlike internal combustion engines, Fusion Engines generate power by fusing hydrogen isotopes (1H) much like the center of a sun. Despite conventional thought, these Engines are not potential mini-nuclear explosions. When damaged to a significant degree they will automatically shut down all fusion reactions and power down.</English>
+	  <Tag>TXT_KEY_UNIT_FUSION_CRUISER_PEDIA</Tag>
+	  <English>Fusion engines are the powerhouse of late game vehicles. Engines provide the power necessary to move a vehicle and fire its weapons. Unlike internal combustion engines, fusion engines generate power by fusing hydrogen isotopes, much like the center of a sun. Despite conventional expectations, these engines are not potential nuclear explosions. When damaged to a significant degree they will automatically shut down all fusion reactions and power down.</English>
 		<Polish>Kr&#185;&#191;ownik Fuzyjny mo&#191;e transportowa&#230; 6 bomb, a tak&#191;e zatapia&#230; wrogie statki wojenne. Dodatkowo bez problemu wykrywa statki podwodne oraz mo&#191;e broni&#230; bombardowanego miasta.</Polish>
 		<Russian>Термоядерные реакторы являются двигателями поздней игры. Они обеспечивают мощность, необходимую для передвижения транспортного средства и ведения огня его орудиями. В отличие от двигателей внутреннего сгорания, термоядерные реакторы вырабатывают энергию путем слияния изотопов водорода (1H) так же, как в центре Солнца. Несмотря на традиционную мысль, эти реакторы не являются потенциальными источниками радиационной опасности. При значительном повреждении они автоматически блокируют все реакции синтеза и отключают питание.</Russian>
 	</TEXT>
@@ -9486,7 +9486,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_FUSION_SUBMARINE_PEDIA</Tag>
-		<English>Fusion Engines are the powerhouse of a late game vehicles. Engines provide the power necessary to move a vehicle and fire its weapons. Unlike internal combustion engines, Fusion Engines generate power by fusing hydrogen isotopes (1H) much like the center of a sun. Despite conventional thought, these Engines are not potential mini-nuclear explosions. When damaged to a significant degree they will automatically shut down all fusion reactions and power down.</English>
+		<English>Fusion engines are the powerhouse of late game vehicles. Engines provide the power necessary to move a vehicle and fire its weapons. Unlike internal combustion engines, fusion engines generate power by fusing hydrogen isotopes, much like the center of a sun. Despite conventional expectations, these engines are not potential nuclear explosions. When damaged to a significant degree they will automatically shut down all fusion reactions and power down.</English>
 		<Russian>Термоядерные реакторы являются двигателями поздней игры. Они обеспечивают мощность, необходимую для передвижения транспортного средства и ведения огня его орудиями. В отличие от двигателей внутреннего сгорания, термоядерные реакторы вырабатывают энергию путем слияния изотопов водорода (1H) так же, как в центре Солнца. Несмотря на традиционную мысль, эти реакторы не являются потенциальными источниками радиационной опасности. При значительном повреждении они автоматически блокируют все реакции синтеза и отключают питание.</Russian>
 	</TEXT>
 	<TEXT>
@@ -9505,7 +9505,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_FUSION_TRANSPORT_PEDIA</Tag>
-		<English>Fusion Engines are the powerhouse of a late game vehicles. Engines provide the power necessary to move a vehicle and fire its weapons. Unlike internal combustion engines, Fusion Engines generate power by fusing hydrogen isotopes (1H) much like the center of a sun. Despite conventional thought, these Engines are not potential mini-nuclear explosions. When damaged to a significant degree they will automatically shut down all fusion reactions and power down.</English>
+		<English>Fusion engines are the powerhouse of late game vehicles. Engines provide the power necessary to move a vehicle and fire its weapons. Unlike internal combustion engines, fusion engines generate power by fusing hydrogen isotopes, much like the center of a sun. Despite conventional expectations, these engines are not potential nuclear explosions. When damaged to a significant degree they will automatically shut down all fusion reactions and power down.</English>
 		<Russian>Термоядерные реакторы являются двигателями поздней игры. Они обеспечивают мощность, необходимую для передвижения транспортного средства и ведения огня его орудиями. В отличие от двигателей внутреннего сгорания, термоядерные реакторы вырабатывают энергию путем слияния изотопов водорода (1H) так же, как в центре Солнца. Несмотря на традиционную мысль, эти реакторы не являются потенциальными источниками радиационной опасности. При значительном повреждении они автоматически блокируют все реакции синтеза и отключают питание.</Russian>
 	</TEXT>
 	<TEXT>
