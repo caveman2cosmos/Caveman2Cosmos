@@ -591,7 +591,7 @@
 		<Italian>Critico</Italian>
 		<Spanish>Crítico</Spanish>
 		<Polish>Krytyczne</Polish>
-		<Russian>Êðèòè÷åñêàÿ</Russian>
+		<Russian>Критическое</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_ADVISOR_FLAT</Tag>
@@ -786,6 +786,7 @@
 		<German>[SPACE](&lt;ALT&gt; für alle Einheiten)</German>
 		<Italian>[SPACE](&lt;ALT&gt; per tutte le unità)</Italian>
 		<Spanish>[SPACE](&lt;ALT&gt; para todas las unidades)</Spanish>
+		<Russian>[SPACE](&lt;ALT&gt; для всех на клетке)</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_ACTION_ASSASSIN_MISSION</Tag>
@@ -859,7 +860,7 @@
 		<Italian>Pattugliamento confini automatico</Italian>
 		<Spanish>Patrulla fronteriza automatizada</Spanish>
 		<Polish>Automatyczne Patrolowanie Granic</Polish>
-		<Russian>Àâòîìàòèçèðîâàòü ïîãðàíè÷íóþ ñëóæáó</Russian>
+		<Russian>Автоматическая пограничная служба</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_ACTION_AUTOMATE_BORDER_PATROL_HELP</Tag>
@@ -869,7 +870,7 @@
 		<Italian>[NEWLINE]L'unità pattuglia i confini della tua civiltà e a attacca unità nemiche invaditrici.</Italian>
 		<Spanish>Envía a la unidad a patrullar las fronteras de tu civilización y matar a los invasores enemigos.</Spanish>
 		<Polish>Wy&#156;lij jednostk&#234; do patrolowania granic Twojego imperium i niszczenie wrogich jednostek</Polish>
-		<Russian>Ïîñëàòü þíèò ïàòðóëèðîâàòü ãðàíèöû âàøåé öèâèëèçàöèè è óáèâàòü âòîðãøèåñÿ âðàæåñêèå þíèòû</Russian>
+		<Russian>Отправить единицу патрулировать границы вашей цивилизации и уничтожать вторгшиеся вражеские подразделения.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_ACTION_AUTOMATE_BUILD</Tag>
@@ -945,7 +946,7 @@
 		<Italian>Difesa cittadina automatica</Italian>
 		<Spanish>Defensa de ciudad automatizada</Spanish>
 		<Polish>Automatyczna Obrona Miasta</Polish>
-		<Russian>Àâòîìàòèçèðîâàòü çàùèòó ãîðîäîâ</Russian>
+		<Russian>Автоматическая защита города</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_ACTION_AUTOMATE_CITY_DEFENSE_HELP</Tag>
@@ -955,7 +956,7 @@
 		<Italian>[NEWLINE]L'unità proteggerà la città dagli attaccanti vicini.</Italian>
 		<Spanish>La unidad protegerá a la ciudad de los atacantes cercanos.</Spanish>
 		<Polish>B&#234;dzie broni&#179;a miasta przed agresorami.</Polish>
-		<Russian>Çàùèòèòü ãîðîä îò ñîñåäñêèõ íàïàäàþùèõ.</Russian>
+		<Russian>Самостоятельно защищать город от ближайших нападающих.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_ACTION_AUTOMATE_CITY_HELP</Tag>
@@ -992,7 +993,7 @@
 		<Italian>Caccia automatica</Italian>
 		<Spanish>Caza automatizada</Spanish>
 		<Polish>Automatyczne Polowanie</Polish>
-		<Russian>Автоматизировать облаву</Russian>
+		<Russian>Автоматизировать зачистку</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_ACTION_AUTOMATE_HUNT_HELP</Tag>
@@ -1050,7 +1051,7 @@
 		<Italian>Saccheggio automatico</Italian>
 		<Spanish>Saqueo automatizadoAutomate Pillage</Spanish>
 		<Polish>Automatyczne Pl&#185;drowanie</Polish>
-		<Russian>Àâòîìàòèçèðîâàòü ãðàáåæ</Russian>
+		<Russian>Автоматический вандализм</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_ACTION_AUTOMATE_PILLAGE_HELP</Tag>
@@ -1060,7 +1061,7 @@
 		<Italian>[NEWLINE]L'unità ricerca e distrugge i miglioramenti nemici.</Italian>
 		<Spanish>Envía a la unidad a encontrar y destrozar mejoras de terreno enemigas.</Spanish>
 		<Polish>Wy&#156;lij jednostk&#234; do wyszukania oraz zniszczenia wrogich ulepsze&#241;</Polish>
-		<Russian>Отправить подразделение искать и разрушать улучшения врага</Russian>
+		<Russian>Отправить подразделение искать и разрушать надстройки врага.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_ACTION_AUTOMATE_PIRATE</Tag>
@@ -2037,7 +2038,7 @@
 		<German>Alle Startzeitalter</German>
 		<Italian>Tutte le ere iniziali</Italian>
 		<Spanish>Todas las épocas de inic.</Spanish>
-		<Russian>Любой начальный период</Russian>
+		<Russian>Любой исходный период</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_ALL_GAME_SPEEDS</Tag>
@@ -3327,38 +3328,38 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_PROPERTY_SPAWN_BARB</Tag>
-		<English>A troublemaking %s1 has emerged to wreak havoc in the City of %s2!</English>
+		<English>A troublemaking %s1 has emerged to wreak havoc in the city of %s2!</English>
 		<French>Un trouble %s1 a émergé et créé des ravages dans la ville de %s2!</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_PROPERTY_SPAWN_FRIENDLY</Tag>
-		<English>A %s1 has risen among the people in the City of %s2!</English>
+		<English>A %s1 has risen among the people in the city of %s2!</English>
 		<French>Un %s1 est apparu parmi les habitants de la ville de %s2!</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_RELIGIOUSLY_DISABLED_BUILDINGS</Tag>
-		<English>As it is now frowned upon to do so, the Citizens of the City of %s1 have minimized worship of %s2, thus the %s3 is not fully operational at this time.</English>
+		<English>As it is now frowned upon to do so, the citizens of the city of %s1 have minimized worship of %s2; hence, the %s3 is not fully operational.</English>
 		<French>Comme c'est devenu plutôt mal vu, Les citoyens de la ville de %s1 ont cessé de vénérer %s2. Ainsi le bâtiment: %s3 n'est plus totalement opérationnel actuellement.</French>
 		<Italian>Dato che ora il loro culto viene osteggiato, alcuni abitanti di %s1 hanno minimizzato la venerazione di %s2, perciò [NUM3:il:la:gli:le] %s3 [NUM3:non è più completamente operativo:non è più completamente operativa:non sono più completamente operativi:non sono più completamente operative]</Italian>
 		<Polish>Z dezaprobat&#185;, mieszka&#241;cy miasta: %s1 minimalizuj&#185; prac&#234; w: %s2, wi&#234;c: %s3 nie jest w pe&#179;ni funkcjonalne.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_RELIGIOUSLY_DISABLED_COMPLETELY_BUILDINGS</Tag>
-		<English>As it is now illegal to do so, the Citizens of the City of %s1 have ceased worshiping %s2, thus the %s3 is completely inoperational at this time.</English>
+		<English>As it is now illegal to do so, the citizens of the city of %s1 have ceased worshiping %s2; hence, the %s3 is completely inoperational at this time.</English>
 		<French>Comme c'est devenu illégal, Les citoyens de la ville de %s1 ont cessé d'adorer %s2, et le bâtiment: %s3 n'est plus du tout opérationnel.</French>
 		<Italian>Dato che ora è illegale, gli abitanti di %s1 hanno smesso di venerare %s2, perciò [NUM3:il:la:gli:le] %s3 [NUM3:è inoperativo:è inoperativa:sono inoperativi:sono inoperative].</Italian>
 		<Polish>Jest to nielegalne wi&#234;c, niekt&#243;rzy z miastaL %s1 porzucili prace w: %s2, wi&#234;c: %s3 jest kompletnie niefunkcjonalne.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_RELIGIOUSLY_RESTORED_BUILDINGS</Tag>
-		<English>As it is no longer illegal to do so, some Citizens of the City of %s1 have returned to %s2 worship, thus the %s3 is in full operation once more.</English>
+		<English>As it is no longer illegal to do so, some citizens of the city of %s1 have returned to %s2 worship; hence, the %s3 is in full operation once more.</English>
 		<French>Comme ce n'est plus illégal, certains citoyens de la Ville de %s1 sont retourné à des croyances de %s2. Aussi, le bâtiment: %s3 est à nouveau opérationnel.</French>
 		<Italian>Dato che non è più illegale, alcuni abitanti di %s1 sono tornati a venerare %s2, perciò [NUM3:il:la:gli:le] %s3 [NUM3:è di nuovo completamente operativo:è di nuovo completamente operativa:sono di nuovo completamente operativi:sono di nuovo completamente operative].</Italian>
 		<Polish>Nie jest to ju&#191; nielegalne, niekt&#243;rzy mieszka&#241;cy miasta: %s1 przywr&#243;cili prac&#234; w: %s2, wi&#234;c %s3 zn&#243;w jest w pe&#179;ni funkcjonalne.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_REMOVED_BUILDINGS_CIVICS</Tag>
-		<English>The %s1 in the City of %s2 is no longer functioning and has ceased doing business. Your civic changes have ended its usefulness. Change your social policies to restore the %s3 back to working order.</English>
+		<English>The %s1 in the city of %s2 is no longer functioning and has ceased doing business. Your civic changes have ended its usefulness. Change your social policies to restore the %s3 back to working order.</English>
 		<French>[NUM1:Le:La:Les:Les] %s1 de la Ville de %s2 ne fonctionne plus. Les changements de Doctrines l'ont rendu inutile. Changez à nouveau ces doctrines pour permettre [NUM3:au:à la:aux:aux] %s3 de fonctionner à nouveau.</French>
 		<German>Das Gebäude %s1 in %s2 hat die Arbeit eingestellt. Die Änderung Eurer Gesellschaftsform hat es nutzlos werden lassen. Ändert Eure Sozialpolitik, wenn es den Betrieb wieder aufnehmen soll.</German>
 		<Italian>L'edificio %s1 nella città di %s2 non funziona più. Il cambio delle tue forme di governo lo ha reso obsoleto. Cambia le tue politiche sociali per ripristinare l'edificio %s3.</Italian>
@@ -3368,7 +3369,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_REMOVED_BUILDINGS_POPULATION</Tag>
-		<English>The %s1 in the City of %s2 has shut down to a lack of manpower.</English>
+		<English>The %s1 in the city of %s2 has shut down to a lack of manpower.</English>
 		<French>[NUM1:Le:La:Les:Les] %s1 dans la ville de %s2 [NUM1:est arrêté:est arrêtée:sont arrêtés:sont arrêtées] en raison d'un manque de main d'oeuvre.</French>
 		<German>Das Gebäude %s1 in %s2 wurde aufgrund eines Mangels an Arbeitskräften geschlossen.</German>
 		<Italian>%s1 nella città di %s2 ha chiuso per mancanza di manodopera.</Italian>
@@ -3378,7 +3379,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_REMOVED_BUILDINGS_POWER</Tag>
-		<English>The %s1 in the City of %s2 has shut down to a lack of power.</English>
+		<English>The %s1 in the city of %s2 has shut down to a lack of power.</English>
 		<French>Le bâtiment [COLOR_BUILDING_TEXT]%s1[COLOR_REVERT] de %s2 est éteint par manque d'énergie.</French>
 		<German>Das Gebäude %s1 in %s2 wurde aufgrund von akutem Energiemangel abgeschaltet.</German>
 		<Italian>L'edificio %s1 nella città di %s2 ha chiuso per mancanza di energia.</Italian>
@@ -3388,7 +3389,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_REMOVED_BUILDINGS_RESOURCES</Tag>
-		<English>The %s1 in the City of %s2 is no longer functioning and has ceased doing business. Regain access to resources or change the conditions in the city to restore the %s3 back to working order.</English>
+		<English>The %s1 in the city of %s2 is no longer functioning and has ceased doing business. Regain access to resources or change the conditions in the city to restore the %s3 back to working order.</English>
 		<French>Le bâtiment [COLOR_BUILDING_TEXT]%s1[COLOR_REVERT] de %s2 est désactivé.</French>
 		<German>Das Gebäude %s1 in %s2 hat die Arbeit eingestellt. Ihr müsst den Zugang zu den betreffenden Rohstoffen wiederherstellen oder die störenden Rahmenbedingungen in der Stadt beseitigen, um es wieder in Betrieb zu nehmen.</German>
 		<Italian>L'edificio %s1 nella città di %s2 non funziona più. Riottieni accesso alle risorse o cambia le condizioni in città per ripristinare l'edificio %s3.</Italian>
@@ -3398,7 +3399,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_REMOVED_FRESH_WATER</Tag>
-		<English>The %s1 in the City of %s2 has shut down to a lack of fresh water.</English>
+		<English>The %s1 in the city of %s2 has shut down to a lack of fresh water.</English>
 		<French>Le Batiment %s1 de la Ville de %s2 ne fonctionne plus en raison d'un manque d'eau douce.</French>
 		<Italian>L'edificio %s1 nella città di %s2 è stato chiuso per mancanza di acqua dolce.</Italian>
 		<Spanish>[NUM1:El:La:Los:Las] %s1 en la ciudad de %s2 [NUM1:ha:ha:han:han] cerrado por falta de agua dulce.</Spanish>
@@ -3406,7 +3407,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_REMOVED_MAX_POPULATION</Tag>
-		<English>The %s1 in the City of %s2 has shut down due to the population level being too high.</English>
+		<English>The %s1 in the city of %s2 has shut down due to the population level being too high.</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_REPEL</Tag>
@@ -3418,7 +3419,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_RESTORED_BUILDINGS</Tag>
-		<English>The City of %s1 has had its [COLOR_BUILDING_TEXT]%s2[COLOR_REVERT] restored and in working condition again.</English>
+		<English>The city of %s1 has had its [COLOR_BUILDING_TEXT]%s2[COLOR_REVERT] restored to working condition again.</English>
 		<French>Le bâtiment [COLOR_BUILDING_TEXT]%s2[COLOR_REVERT] de %s1 est à nouveau fonctionnel.</French>
 		<Polish>Miasto %s1 przywr&#243;ci&#179;o %s2 do pracy.</Polish>
 	</TEXT>
@@ -4035,6 +4036,7 @@
 		<German>Unterhalt: %d1[ICON_GOLD] pro Runde</German>
 		<Italian>Costi di mantenimento forme di governo: %d1[ICON_GOLD] a turno</Italian>
 		<Spanish>Mantenimiento: %d1 [ICON_GOLD] por turno</Spanish>
+		<Russian>Потребляют: %d1[ICON_GOLD] за ход</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVICHELP_STATE_RELIGION_HAPPINESS</Tag>
@@ -4506,6 +4508,7 @@
 		<German>Letzte Mission abbrechen</German>
 		<Italian>Annulla ultima missione</Italian>
 		<Spanish>Cancelar última misión</Spanish>
+		<Russian>Отменить последний приказ</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_COMMAND_CANCEL_ALL</Tag>
@@ -4514,6 +4517,7 @@
 		<German>Alle Einsätze abbrechen</German>
 		<Italian>Annulla tutte le missioni</Italian>
 		<Spanish>Cancelar todas las misiones</Spanish>
+		<Russian>Отменить все задания</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_COMMAND_CANCEL_ALL_HELP</Tag>
@@ -4522,6 +4526,7 @@
 		<German>Löschen Sie alle Befehle der aktuellen Einheit.</German>
 		<Italian>[NEWLINE]Annulla tutti gli ordini.</Italian>
 		<Spanish>Esto cancelará todas las órdenes que haya en cola para la unidad que tengáis seleccionada.</Spanish>
+		<Russian>Все указания в списке у выбранного подразделения будут отменены.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_COMMAND_CANCEL_HELP</Tag>
@@ -4530,6 +4535,7 @@
 		<German>Löschen Sie den letzten Befehl in der Befehlsliste der Einheit. Haben Sie dieser versehentlich einen falschen Befehl erteilt, ist diese Funktion sehr nützlich.</German>
 		<Italian>[NEWLINE]Annulla l'ultimo ordine.</Italian>
 		<Spanish>Esto cancelará la última orden en la cola de órdenes de la unidad. Es muy útil si ponéis sin querer una orden incorrecta en la cola.</Spanish>
+		<Russian>Последнее задание в списке у выбранного подразделения будет отменено. Весьма полезно, если вы случайно добавили неподходящее указание.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_COMMAND_DELETE</Tag>
@@ -4633,7 +4639,7 @@
 		<French>Remplacer l'Equipement de l'unité (termine le tour)</French>
 		<Italian>Sostituisci equipaggiamento (fine turno)</Italian>
 		<Polish>Zamie&#241; Ekwipunek dla Jednostki</Polish>
-		<Russian>Сменить снаряжение отряду (завершает ход)</Russian>
+		<Russian>Сменить снаряжение подразделению (завершает ход)</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_COMMAND_SPLIT</Tag>
@@ -4641,16 +4647,16 @@
 		<French>Divise cette unité en 3 unités plus faibles</French>
 		<German>Einheit in drei schwächere Einheiten aufteilen</German>
 		<Polish>Podziel t&#185; jednostk&#234; by otrzyma&#230; trzy s&#179;absze.</Polish>
-		<Russian>Разделить отряд на три менее мощных</Russian>
 		<Italian>Dividi unità in tre</Italian>
+		<Russian>Разделить подразделение на три менее мощных</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_COMMAND_STATUS</Tag>
 		<English>Set Status</English>
 		<French>Changer de Statut</French>
 		<German>Statusänderung</German>
-		<Russian>Установить статус</Russian>
 		<Italian>Imposta stato</Italian>
+		<Russian>Установить статус</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_COMMAND_STOP_AUTOMATION</Tag>
@@ -4715,6 +4721,7 @@
 		<German>Einheit wecken</German>
 		<Italian>Sveglia unità</Italian>
 		<Spanish>Despertar a la unidad</Spanish>
+		<Russian>Разбудить подразделение</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_COMMAND_WAKE_HELP</Tag>
@@ -4723,6 +4730,7 @@
 		<German>Wecken Sie eine Einheit auf und erteilen Sie ihr Befehle. Die Einheit verliert dadurch nicht ihren Befestigungsbonus.</German>
 		<Italian>[NEWLINE]Sveglia l'unità senza perdere i bonus della fortificazione o allenamento.</Italian>
 		<Spanish>Esto despertará a la unidad para que se le puedan dar órdenes. Despertar a una unidad no elimina las bonificaciones que tenga por fortificación.</Spanish>
+		<Russian>Можно будет снова отдавать приказы единице. Пробуждение не снимает бонус от укрепления.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_COMMERCE_CULTURE</Tag>
@@ -4947,6 +4955,7 @@
 		<German>Strg+</German>
 		<Italian>Ctrl+</Italian>
 		<Spanish>Ctrl+</Spanish>
+		<Russian>Ctrl+</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CULTURELEVEL_DEVELOPING</Tag>
@@ -4954,8 +4963,8 @@
 		<French>grandissante</French>
 		<German>Wachsend</German>
 		<Italian>In sviluppo</Italian>
-		<Russian>Развивающийся</Russian>
 		<Spanish>Creciente</Spanish>
+		<Russian>Развивающийся</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CULTURELEVEL_ELEGANT</Tag>
@@ -4964,7 +4973,7 @@
 		<Italian>Elegante</Italian>
 		<Spanish>Elegante</Spanish>
 		<Polish>Wytworna</Polish>
-		<Russian>Элегантный</Russian>
+		<Russian>Прекрасный</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CULTURELEVEL_FLEDGLING</Tag>
@@ -4972,8 +4981,8 @@
 		<French>naissante</French>
 		<German>Beginnend</German>
 		<Italian>Principiante</Italian>
-		<Russian>Юнец</Russian>
 		<Spanish>Incipiente</Spanish>
+		<Russian>Зарождающийся</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CULTURELEVEL_ILLUSTRIOUS</Tag>
@@ -5025,8 +5034,8 @@
 		<French>inexistant</French>
 		<German>Null</German>
 		<Italian>Nessuno</Italian>
-		<Russian>Нулевой</Russian>
 		<Spanish>Inexistente</Spanish>
+		<Russian>Нулевой</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CULTURELEVEL_PHENOMENAL</Tag>
@@ -5045,6 +5054,7 @@
 		<German>Gering</German>
 		<Italian>Povero</Italian>
 		<Spanish>Pobre</Spanish>
+		<Russian>Бедный</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CULTURELEVEL_PROMINENT</Tag>
@@ -5062,8 +5072,8 @@
 		<French>raffinée</French>
 		<German>Fortgeschritten</German>
 		<Italian>Raffinato</Italian>
-		<Russian>Выдающийся</Russian>
 		<Spanish>Refinada</Spanish>
+		<Russian>Изысканный</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CULTURELEVEL_MINISCULE</Tag>
@@ -5343,6 +5353,7 @@
 		<German>Demografien</German>
 		<Italian>Dati demografici</Italian> <!-- info screen table first column -->
 		<Spanish>Estadísticas</Spanish>
+		<Russian>Сведения о стране</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DEMO_SCREEN_VALUE</Tag>
@@ -5351,6 +5362,7 @@
 		<German>Wert</German>
 		<Italian>Valore</Italian> <!-- info screen demo table -->
 		<Spanish>Valor</Spanish>
+		<Russian>Значение</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DIFFICULTY_DECREASED</Tag>
@@ -7297,7 +7309,7 @@
 		<French>Le Mont Fuji</French>
 		<German>Fuji</German>
 		<Polish>Fud&#191;i</Polish>
-		<Russian>Ãîðà Ôóäçè</Russian>
+		<Russian>Гора Фудзи</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_FEATURE_FUJI_PEDIA</Tag>
@@ -7333,7 +7345,7 @@
 		<French>La Grande Barrière de Corail (Balise)</French>
 		<German>Great Barrier Reef (Leuchtfeuer)</German>
 		<Polish>Wielka Rafa Koralowa (Boja)</Polish>
-		<Russian>Áàðüåðíûé ðèô (áóé)</Russian>
+		<Russian>Буй на Большом Барьерном рифе</Russian>
 		<Italian>Segnalatore sulla grande barriera corallina</Italian>
 	</TEXT>
 	<TEXT>
@@ -7342,7 +7354,7 @@
 		<French>La Grande Barrière de Corail (Phare)</French>
 		<German>Great Barrier Reef (Leuchtturm)</German>
 		<Polish>Wielka Rafa Koralowa (Latarnia Morska)</Polish>
-		<Russian>Áàðüåðíûé ðèô (ìàÿê)</Russian>
+		<Russian>Маяк на Большом Барьерном рифе</Russian>
 		<Italian>Faro sulla grande barriera corallina</Italian>
 	</TEXT>
 	<TEXT>
@@ -8959,7 +8971,7 @@
 		<Tag>TXT_KEY_GRAPHIC_OPTION_FROZEN_ANIMATIONS_HELP</Tag>
 		<English>No unit or improvement animations.[NEWLINE]Causes graphical glitches when selected.</English>
 		<Italian>[BOLD]Le animazioni delle unità e dei miglioramenti [COLOR_HIGHLIGHT_TEXT]vengono disattivate[COLOR_REVERT] (può causare difetti grafici)[\BOLD]</Italian>
-		<Russian>У подразделений и улучшений не будет анимаций.[NEWLINE]Вызывает графические ошибки при активции.</Russian>
+		<Russian>У подразделений и улучшений не будет анимаций.[NEWLINE]Вызывает графические ошибки при активации.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GRAPH_SMOOTHING</Tag>
@@ -8969,7 +8981,7 @@
 		<Italian>Fattore di smoothing %d1_Num</Italian>
 		<Spanish>Factor de suavizado %d1_Num</Spanish>
 		<Polish>Wsp&#243;&#179;czynnik Wyg&#179;adzania %d1_Num</Polish>
-		<Russian>Коэффициент плавности %d1_Num</Russian>
+		<Russian>Плавность: %d1_Num</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GROWTH</Tag>
@@ -9377,7 +9389,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HAPPY_WORLD_PROJECT</Tag>
-		<English>+%d1_Change[ICON_HAPPY]: "Other Nation's Technological Breakthroughs have benefited the World!"</English>
+		<English>+%d1_Change[ICON_HAPPY]: "Other nations' technological breakthroughs have benefited the world!"</English>
 		<French>+%d1_Change[ICON_HAPPY]: "Les Avancées Technologiques d'autres Nations ont permis d'améliorer le Monde Entier!"</French>
 		<German>+%d1_Change[ICON_HAPPY]: "Die technologischen Errungenschaften anderer Nationen haben der Welt geholfen!"</German>
 		<Italian>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]+%d1_Change[COLOR_REVERT] [ICON_HAPPY]: Le innovazioni tecnologiche straniere hanno portato benefici a tutto il mondo!</Italian> <!-- city screen hover happiness panel upper right -->
@@ -9699,6 +9711,7 @@
 		<German>Ges. Geschichte</German>
 		<Italian>Intera storia</Italian> <!-- Info screen title -->
 		<Spanish>Toda la historia</Spanish>
+		<Russian>Вся история</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_INFO_GRAPH</Tag>
@@ -9707,6 +9720,7 @@
 		<German>DIAGRAMM</German>
 		<Italian>Grafici</Italian> <!-- Info screen title -->
 		<Spanish>GRÁFICA</Spanish>
+		<Russian>Графики</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_INFO_RIVAL_BEST</Tag>
@@ -9715,6 +9729,7 @@
 		<German>Besten herausfordern</German>
 		<Italian>Migliore rivale</Italian> <!-- Info screen title -->
 		<Spanish>Mejor rival</Spanish>
+		<Russian>Сильнейший соперник</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_INFO_RIVAL_WORST</Tag>
@@ -9723,6 +9738,7 @@
 		<German>Schlechtesten herausfordern</German>
 		<Italian>Peggiore rivale</Italian> <!-- Info screen title -->
 		<Spanish>Peor rival</Spanish>
+		<Russian>Слабейший соперник</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_INFO_SCREEN</Tag>
@@ -9731,6 +9747,7 @@
 		<German>Info-Bildschirm</German>
 		<Italian>Statistiche</Italian> <!-- Info screen title -->
 		<Spanish>Pantalla de información</Spanish>
+		<Russian>Экран информации</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_INFO_SCREEN_BUILT</Tag>
@@ -9739,6 +9756,7 @@
 		<German>Errichtet</German>
 		<Italian>Totale</Italian> <!-- info screen unit and building tab -->
 		<Spanish>Construido</Spanish>
+		<Russian>Создано</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_INFO_SCREEN_CITIES_BUILT</Tag>
@@ -9747,6 +9765,7 @@
 		<German>Gegründete Städte</German>
 		<Italian>Città fondate::</Italian> <!-- info screen unit and building tab -->
 		<Spanish>Ciudades construidas</Spanish>
+		<Russian>Построено городов</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_INFO_SCREEN_CITIES_RAZED</Tag>
@@ -9755,6 +9774,7 @@
 		<German>Vernichtete Städte</German>
 		<Italian>Città rase al suolo:</Italian> <!-- info screen unit and building tab -->
 		<Spanish>Ciudades arrasadas</Spanish>
+		<Russian>Разрушено городов</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_INFO_SCREEN_KILLED</Tag>
@@ -9763,6 +9783,7 @@
 		<German>Gefallene</German>
 		<Italian>Uccisi</Italian> <!-- info screen unit and building tab -->
 		<Spanish>Bajas</Spanish>
+		<Russian>Убито</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_INFO_SCREEN_LOST</Tag>
@@ -9771,6 +9792,7 @@
 		<German>Verluste</German>
 		<Italian>Persi</Italian> <!-- info screen unit and building tab -->
 		<Spanish>Pérdidas</Spanish>
+		<Russian>Потеряно</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_INFO_SCREEN_RELIGIONS_FOUNDED</Tag>
@@ -9787,6 +9809,7 @@
 		<German>Statistik</German>
 		<Italian>Unità ed edifici</Italian>
 		<Spanish>Estadísticas</Spanish>
+		<Russian>Статистика</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_INFO_SCREEN_TIME_PLAYED</Tag>
@@ -10006,6 +10029,7 @@
 		<German>Gehe-zu-Modus</German>
 		<Italian>Muovi unità</Italian>
 		<Spanish>Modo Ir a</Spanish>
+		<Russian>Отправиться к</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_INTERFACEMODE_GO_TO_ALL</Tag>
@@ -10014,6 +10038,7 @@
 		<German>Gehe-zu-Modus (Alle Einheiten)</German>
 		<Italian>Muovi tutte le unità</Italian>
 		<Spanish>Modo Ir a (todas las unidades)</Spanish>
+		<Russian>Всем отправиться к</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_INTERFACEMODE_GO_TO_ALL_HELP</Tag>
@@ -10022,6 +10047,7 @@
 		<German>Erteilen Sie allen Einheiten auf dem Feld der gewählten Einheit den Marschbefehl.</German>
 		<Italian>[NEWLINE]Muovi tutte le unità sulla casella selezionata.</Italian>
 		<Spanish>Ordena moverse a todas las unidades de la casilla seleccionada actualmente.</Spanish>
+		<Russian>Приказать двигаться всем подразделениям на данном участке.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_INTERFACEMODE_GO_TO_HELP</Tag>
@@ -10030,6 +10056,7 @@
 		<German>Schicken Sie die gewählte Einheit auf ein bestimmtes Geländefeld.</German>
 		<Italian>[NEWLINE]Muovi l'unità su una casella specifica.</Italian>
 		<Spanish>Ordena a la unidad seleccionada que se mueva hasta una casilla.</Spanish>
+		<Russian>Приказать выбранному подразделению переместиться на клетку.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_INTERFACEMODE_GO_TO_SENTRY</Tag>
@@ -10039,7 +10066,7 @@
 		<Italian>Muovi e sentinella</Italian>
 		<Spanish>Modo Ir a y vigilar</Spanish>
 		<Polish>Id&#159; do i Wartuj</Polish>
-		<Russian>Èäòè ê, â ðåæèìå ñòîðîæà</Russian>
+		<Russian>Отправиться к, наблюдая</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_INTERFACEMODE_GO_TO_SENTRY_HELP</Tag>
@@ -10049,7 +10076,7 @@
 		<Italian>[NEWLINE]L'unità si fermerà prima della destinazione se un'unità nemica dello stesso tipo entra nel suo raggio di visibilità.</Italian>
 		<Spanish>Ordena a la unidad seleccionada que se mueva hasta una casilla. La unidad parará antes de llegar a su destino si una unidad enemiga del mismo tipo se sitúa en su campo de visión.</Spanish>
 		<Polish>Wyznacz kratk&#234; do ruchu dla jednostki. Jednostka b&#234;dzie tak d&#179;ugo pod&#185;&#191;a&#230; a&#191; nie spotka innej wrogiej jednostki</Polish>
-		<Russian>Ïðèêàçàòü âûáðàíûì ïîäðàçäåëåíèÿì èäòè â óêàçàííîå ìåñòî ìåñòî. Ïîäðàçäåëåíèå îñòàíîâèòñÿ íå äîñòèãíóâ òî÷êè íàçíà÷åíèÿ â ñëó÷àå, åñëè âðàæåñêèå âîéñêà âûáðàííîãî òèïà ïîÿâÿòñÿ â çîíå âèäèìîñòè. </Russian>
+		<Russian>Приказать выбраному подразделению двигаться на указанное место. Оно остановится не достигнув точки назначения, если в его зоне видимости появятся вражеские единицы того же типа.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_INTERFACEMODE_GO_TO_TYPE</Tag>
@@ -10058,6 +10085,7 @@
 		<German>Gehe-zu-Modus (Gleiche Einheiten)</German>
 		<Italian>Muovi unità dello stesso tipo</Italian>
 		<Spanish>Modo Ir a (mismo tipo de unidad)</Spanish>
+		<Russian>Всем одинаковым отправиться к</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_INTERFACEMODE_GO_TO_TYPE_HELP</Tag>
@@ -10066,6 +10094,7 @@
 		<German>Erteilen Sie allen Einheiten des gewählten Typs den Marschbefehl.</German>
 		<Italian>[NEWLINE]Muovi tutte le unità dello stesso tipo di quella selezionata.</Italian>
 		<Spanish>Ordena moverse a todas las unidades del tipo seleccionado actualmente.</Spanish>
+		<Russian>Приказать двигаться всем подразделениям выбранного типа.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_INTERFACEMODE_GRIP</Tag>
@@ -11290,7 +11319,7 @@
 		<Italian>Meraviglie nazionali:</Italian>  <!-- city screen on the city name bar in azure upper left -->
 		<Spanish>M. N</Spanish>
 		<Polish>C.N</Polish>
-		<Russian>Í. ×</Russian>
+		<Russian>Нац. Ч.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MAIN_MENU</Tag>
@@ -11307,6 +11336,7 @@
 		<German>Optionen</German>
 		<Italian>Opzioni</Italian>
 		<Spanish>Opciones</Spanish>
+		<Russian>Настройки</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MAIN_MENU_FORCED_DISCONNECT_INGAME</Tag>
@@ -11625,7 +11655,7 @@
 		<German>Inselgröße</German>
 		<Italian>Tipo di isole</Italian>
 		<Spanish>Tamaño de las islas</Spanish>
-		<Russian>Разме островов</Russian>
+		<Russian>Размер островов</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MAP_SCRIPT_ISLAND_OVERLAP</Tag>
@@ -11643,7 +11673,7 @@
 		<German>Separate Inselregionen</German>
 		<Italian>Regioni isolane separate</Italian>
 		<Spanish>Región de islas separada</Spanish>
-		<Russian>Регионы островов разделены</Russian>
+		<Russian>Островные регионы разделены</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MAP_SCRIPT_LAKES</Tag>
@@ -12010,6 +12040,7 @@
 		<German>Beliebiger Start</German>
 		<Italian>Cominciare dappertutto</Italian>
 		<Spanish>Empezar en cualquier lado</Spanish>
+		<Russian>Начать в любом месте</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MAP_SCRIPT_START_SEPARATED</Tag>
@@ -12150,22 +12181,27 @@
 	<TEXT>
 		<Tag>TXT_KEY_MAP_TITAN</Tag>
 		<English>Titan</English>
+		<Russian>Титан</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MAP_TRANSNEPTUNIAN</Tag>
 		<English>Kuiper Belt</English>
+		<Russian>Пояс Койпера</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MAP_UNIVERSE</Tag>
 		<English>Universe</English>
+		<Russian>Вселенная</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MAP_VENUS</Tag>
 		<English>Venus</English>
+		<Russian>Венера</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MAP_VIRGO_SUPERCLUSTER</Tag>
 		<English>Virgo Supercluster</English>
+		<Russian>Сверхскопление Девы</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MAP_WORLD_WRAP</Tag>
@@ -12174,7 +12210,7 @@
 		<German>Weltkugeldrehung</German>
 		<Italian>Tipo di pianeta</Italian>
 		<Spanish>Cobertura del mundo</Spanish>
-		<Russian>Смыкание краев мира</Russian>
+		<Russian>Мир</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MAP_WRAP_CYLINDER</Tag>
@@ -12183,7 +12219,7 @@
 		<German>Zylindrisch</German>
 		<Italian>Cilindrico</Italian>
 		<Spanish>Cilíndrica</Spanish>
-		<Russian>Цилиндрическое</Russian>
+		<Russian>Цилиндрический</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MAP_WRAP_FLAT</Tag>
@@ -12192,7 +12228,7 @@
 		<German>Flach</German>
 		<Italian>Piatto</Italian>
 		<Spanish>Plana</Spanish>
-		<Russian>Плоское</Russian>
+		<Russian>Плоский</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MAP_WRAP_TOROID</Tag>
@@ -12201,7 +12237,7 @@
 		<German>Ringförmig</German>
 		<Italian>Toroidale</Italian>
 		<Spanish>Toroidal</Spanish>
-		<Russian>Тороидальное</Russian>
+		<Russian>Тороидальный</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MARAUDER_FROM</Tag>
@@ -12230,6 +12266,7 @@
 		<German>Mitglieder</German>
 		<Italian>Membri congressi</Italian>
 		<Spanish>Miembros</Spanish>
+		<Russian>Члены</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MEMORY_ACCEPTED_CIVIC</Tag>
@@ -12806,6 +12843,7 @@
 		<German>Das ist bereits Eure Staatsreligion</German>
 		<Italian>È la nostra [COLOR_HIGHLIGHT_TEXT]credenza religiosa attuale[COLOR_REVERT].</Italian> <!-- infoscreen Religion -->
 		<Spanish>Ésa ya es vuestra religión oficial</Spanish>
+		<Russian>Это официальная вера вашей страны</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISC_ALTERNATIVELY_DERIVED</Tag>
@@ -13393,6 +13431,7 @@
 		<German>Kann nicht zur Religion [COLOR_HIGHLIGHT_TEXT]%s1_RelName konvertieren[COLOR_REVERT]</German>
 		<Italian>Non è possibile passare a: [COLOR_HIGHLIGHT_TEXT]%s1:2_RelName[COLOR_REVERT]</Italian> <!-- infoscreen Religion -->
 		<Spanish>No se puede convertir al [COLOR_HIGHLIGHT_TEXT]%s1_RelName[COLOR_REVERT]</Spanish>
+		<Russian>Нельзя сменить на [COLOR_HIGHLIGHT_TEXT]%s1_RelName[COLOR_REVERT]</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISC_CANNOT_DECLARE_WAR</Tag>
@@ -14875,8 +14914,8 @@
 		<French>Militaire Illustre: %d1_Curr/%d2_Need Expérience (%s3_GMP)</French>
 		<German>Großer Feldherr: %d1_Curr/%d2_Need Erfahrung (%s3_GMP)</German>
 		<Polish>Wielki Dow&#243;dca: %d1_Curr/%d2_Need XP (%s3_GMP)</Polish>
-		<Russian>Âåëèêèé âîåííûé ëèäåð: %d1_Curr/%d2_Need îïûòà (%s3_GMP)</Russian>
 		<Italian>[ICON_BULLET]Esperienza gran personaggio militare: [COLOR_HIGHLIGHT_TEXT]%d1_Curr [COLOR_REVERT]/[COLOR_HIGHLIGHT_TEXT] %d2_Need[COLOR_REVERT][NEWLINE][ICON_BULLET]Tipo: [COLOR_HIGHLIGHT_TEXT]%s3_GMP[COLOR_REVERT]</Italian> <!-- main map UI great military person hover -->
+		<Russian>Великий военный: %d1_Curr/%d2_Need опыта (%s3_GMP)</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISC_GREAT_MILITARY_PERSON_BREAKDOWN</Tag>
@@ -14889,6 +14928,7 @@
 		<German>Große Persönlichkeit: %d1_Curr/%d2_Need [ICON_GREATPEOPLE]</German>
 		<Italian>[ICON_BULLET]Gran personaggio: [COLOR_HIGHLIGHT_TEXT]%d1_Curr[COLOR_REVERT] / [COLOR_HIGHLIGHT_TEXT]%d2_Need[COLOR_REVERT] [ICON_GREATPEOPLE]</Italian> <!-- city screen, hover great people bar -->
 		<Spanish>Grandes personajes: %d1_Curr/%d2_Need [ICON_GREATPEOPLE]</Spanish>
+		<Russian>Великий человек: %d1_Curr/%d2_Need [ICON_GREATPEOPLE]</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISC_HAPPINESS_ALL_CITIES</Tag>
@@ -15631,6 +15671,7 @@
 		<German>Keine Staatsreligion</German>
 		<Italian>Irreligiosità</Italian> <!-- infoscreen Religion -->
 		<Spanish>Sin religión oficial</Spanish>
+		<Russian>Апатеизм</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISC_NO_UNIT</Tag>
@@ -19074,7 +19115,7 @@
 		<German>[ICON_BULLET]Einheiten können gegnerische Einheiten mit %D1%% Wahrscheinlichkeit gefangen nehmen.</German>
 		<Italian>[ICON_BULLET]Le unità hanno il %D1%% di chance di catturare altre unità.</Italian>
 		<Polish>[ICON_BULLET]Jednostki maj&#185; %D1%% szansy na Przej&#234;cie.</Polish>
-		<Russian>[ICON_BULLET]%D1%% øàíñîâ çàõâàòèòü.</Russian>
+		<Russian>[ICON_BULLET]%D1%% шанс захватить вражеское подразделение.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_NATIONAL_CAPTURE_RESISTANCE_MODIFIER</Tag>
@@ -19083,7 +19124,7 @@
 		<German>[ICON_BULLET]Einheiten können der Gefangennahme mit %D1%% Wahrscheinlichkeit entgehen.</German>
 		<Italian>[ICON_BULLET]Aumenta le probabilità delle unità di [COLOR_HIGHLIGHT_TEXT]evitare la cattura[COLOR_REVERT] del [COLOR_HIGHLIGHT_TEXT]%D1%%[COLOR_REVERT]</Italian><!--Aerial CT trait in the pedia, city screen building list Palace building -->
 		<Polish>[ICON_BULLET]Jednostki maj&#185; %D1%% szansy na unikni&#234;cie Przej&#234;cia.</Polish>
-		<Russian>[ICON_BULLET]%D1%% øàíñîâ èçáåæàòü çàõâàòà.</Russian>
+		<Russian>[ICON_BULLET]%D1%% шанс избежать захвата.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_NEVER_MIND</Tag>
@@ -19092,6 +19133,7 @@
 		<German>Schon gut ...</German>
 		<Italian>Annulla</Italian>
 		<Spanish>No importa...</Spanish>
+		<Russian>О чем мы говорили?..</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_NEWS_EVENT_BEST_HUNTERS_1</Tag>
@@ -19148,6 +19190,7 @@
 		<Italian>[COLOR_GREEN]Nessuna[COLOR_REVERT]</Italian>
 		<Spanish>Ninguno</Spanish>
 		<Polish>Brak</Polish>
+		<Russian>Нет</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_NON_APPLICABLE</Tag>
@@ -20062,6 +20105,7 @@
 		<German>Nationales Wunder</German>
 		<Italian>Meraviglia Nazionale</Italian>
 		<Spanish>Maravilla nacional</Spanish>
+		<Russian>Национальное чудо</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PEDIA_RANGE</Tag>
@@ -20872,6 +20916,7 @@
 		<German>Debug-Tool zulassen</German>
 		<Italian>Consenti gli strumenti di debug</Italian>
 		<Spanish>Permitir herramientas de depuración</Spanish>
+		<Russian>Разрешить инструменты отладки</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_POPUP_ALARM_TITLE</Tag>
@@ -21026,6 +21071,7 @@
 		<German>Euer Steckbrief</German>
 		<Italian>[BOLD][COLOR_BLACK]Dettagli giocatore[COLOR_REVERT][\BOLD]</Italian>
 		<Spanish>Detalles</Spanish>
+		<Russian>Ваша держава</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_POPUP_DIPLOMATIC_VOTING_FAILURE</Tag>
@@ -21130,6 +21176,7 @@
 		<German>Weltenbauer öffnen</German>
 		<Italian>[BOLD][COLOR_BLACK]Editor[COLOR_REVERT][\BOLD]</Italian>
 		<Spanish>Entrar en el Creador de mundos</Spanish>
+		<Russian>Открыть редактор карты</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_POPUP_ENTER_WITH_OPEN_BORDERS</Tag>
@@ -21188,6 +21235,7 @@
 		<German>Spieldetails</German>
 		<Italian>[BOLD][COLOR_BLACK]Dettagli partita[COLOR_REVERT][\BOLD]</Italian>
 		<Spanish>Detalles de la partida</Spanish>
+		<Russian>Сведения об игре</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_POPUP_GOLD_CITY_CAPTURE</Tag>
@@ -21301,6 +21349,7 @@
 		<German>Optionen</German>
 		<Italian>[BOLD][COLOR_BLACK]Opzioni[COLOR_REVERT][\BOLD]</Italian>
 		<Spanish>Opciones</Spanish>
+		<Russian>Настройки</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_POPUP_PASSED</Tag>
@@ -22453,6 +22502,7 @@
 		<German>%D1 EP</German>
 		<Italian>%D1 XP</Italian>
 		<Spanish>%D1 PX</Spanish>
+		<Russian>%D1 ОО</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_RELIGION_HOLY_CITY</Tag>
@@ -22461,6 +22511,7 @@
 		<German>Heilige Stadt (bei Staatsreligion [ICON_RELIGION])</German>
 		<Italian>Città Santa (se c'è la religione ufficiale [ICON_RELIGION])</Italian>
 		<Spanish>Ciudad santa (si hay [ICON_RELIGION] oficial)</Spanish>
+		<Russian>Священный город (если официальная религия [ICON_RELIGION])</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_RELIGION_SCREEN_DATE_FOUNDED</Tag>
@@ -22469,6 +22520,7 @@
 		<German>Gründungsdatum:</German>
 		<Italian>Fondata:</Italian> <!-- infoscreen Religion and Corporation -->
 		<Spanish>Fecha de fundación:</Spanish>
+		<Russian>Создана в:</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_RELIGION_SCREEN_HOLY_CITY</Tag>
@@ -22477,6 +22529,7 @@
 		<German>Heilige Stadt:</German>
 		<Italian>Città Santa</Italian> <!-- infoscreen Religion -->
 		<Spanish>Ciudad santa</Spanish>
+		<Russian>Священный город:</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_RELIGION_SCREEN_INFLUENCE</Tag>
@@ -22485,6 +22538,7 @@
 		<German>Einfluss:</German>
 		<Italian>Influenza</Italian> <!-- infoscreen Religion -->
 		<Spanish>Influencia:</Spanish>
+		<Russian>Влияние:</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_RELIGION_SCREEN_NOT_FOUNDED</Tag>
@@ -22493,6 +22547,7 @@
 		<German>Nicht gegründet</German>
 		<Italian>No</Italian> <!-- infoscreen Corporation -->
 		<Spanish>Sin fundar</Spanish>
+		<Russian>Не создана</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_RELIGION_SCREEN_NO_STATE</Tag>
@@ -22501,6 +22556,7 @@
 		<German>Keine Religion</German>
 		<Italian>Irreligiosità</Italian> <!-- infoscreen Religion -->
 		<Spanish>No oficial</Spanish>
+		<Russian>Отсутсвует</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_RELIGION_SCREEN_TITLE</Tag>
@@ -22509,6 +22565,7 @@
 		<German>Religionsberater</German>
 		<Italian>Informazioni religioni</Italian> <!-- infoscreen Religion title -->
 		<Spanish>Consejero religioso</Spanish>
+		<Russian>Религии</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_RELIGION_UNIT_PROD_MOD</Tag>
@@ -22568,7 +22625,7 @@
 		<Italian>Mostrare nuovamente il promemoria il prossimo turno?</Italian>
 		<Spanish>¿Volver a mostrar el recordatorio el próximo turno?</Spanish>
 		<Polish>Pokaza&#230; przypomnienie ponownie w nast&#234;pnej turze?</Polish>
-		<Russian>Ïîêàçûâàòü íàïîìèíàíèå ñíîâà íà ñëåäóþùåì õîäó?</Russian>
+		<Russian>Еще раз показать напоминание на следующем ходу?</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_REMOVED_BUILDINGS_WARTIME</Tag>
@@ -22957,7 +23014,7 @@
 		<Italian>[NEWLINE][NEWLINE][COLOR_GREEN]&lt;ALT&gt;[COLOR_REVERT] per tutte le unità del tipo di quella attiva</Italian>
 		<Spanish>[SPACE](&lt;ALT&gt; para todas las unidades del mismo tipo que la unidad activa)</Spanish>
 		<Polish>[SPACE](ALT) dla wszystkich jednostek tego samego typu co jednostka aktywna)</Polish>
-		<Russian>[SPACE](&lt;ALT&gt; äëÿ âñåõ þíèòîâ òèïà àêòèâíîãî)</Russian>
+		<Russian>[SPACE](&lt;ALT&gt; для всех единиц выбранного типа)</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_SCORE_BREAKDOWN</Tag>
@@ -23182,6 +23239,7 @@
 		<German>Spieler schwierigkeit: %s1</German>
 		<Italian>Difficoltà giocatore: [COLOR_HIGHLIGHT_TEXT]%s1[COLOR_REVERT]</Italian> <!--Scoreboard hover on civ name in lower right -->
 		<Spanish>Dificultad el jugador: %s1</Spanish>
+		<Russian>Сложность игрока: %s1</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_SETTINGS_GAME_SPEED</Tag>
@@ -23190,6 +23248,7 @@
 		<German>Spielgeschwindigkeit: %s1</German>
 		<Italian>Velocità di gioco: [COLOR_HIGHLIGHT_TEXT]%s1[COLOR_REVERT]</Italian> <!-- victory info screen -->
 		<Spanish>Velocidad de juego: %s1</Spanish>
+		<Russian>Длительность игры: %s1</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_SETTINGS_MAP_SIZE</Tag>
@@ -23198,6 +23257,7 @@
 		<German>Weltgröße %s1</German>
 		<Italian>Dimensione del mondo: %s1</Italian> <!-- victory info screen -->
 		<Spanish>Tamaño del mundo: %s1</Spanish>
+		<Russian>Размер мира: %s1</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_SETTINGS_SEA_LEVEL</Tag>
@@ -23206,6 +23266,7 @@
 		<German>Meeresspiegel: %s1</German>
 		<Italian>Altezza mare: %s1</Italian> <!-- victory info screen -->
 		<Spanish>Nivel del mar: %s1</Spanish>
+		<Russian>Уровень моря: %s1</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_SETTINGS_STARTING_ERA</Tag>
@@ -23214,6 +23275,7 @@
 		<German>Startzeitalter %s1</German>
 		<Italian>Era iniziale: %s1</Italian> <!-- victory info screen -->
 		<Spanish>Época de inicio: %s1</Spanish>
+		<Russian>Исходный период: %s1</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_SET_WARNING_COLOR</Tag>
@@ -24358,6 +24420,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<German>Start</German>
 		<Italian>Lancio!</Italian> <!-- Victory screen, spaceship detail screen -->
 		<Spanish>Lanzar</Spanish>
+		<Russian>Запуск</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_SPACE_SHIP_SCREEN_REQUIRED_LABEL</Tag>
@@ -24652,8 +24715,8 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
 		<Polish>Wielki Admira&#179;</Polish>
-		<Russian>Âåëèêèé àäìèðàë</Russian>
 		<Italian>Gran ammiraglio</Italian>
+		<Russian>Великий адмирал</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_SPECIALIST_GREAT_ARTIST</Tag>
@@ -24675,7 +24738,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 			<Plural>0:1</Plural>
 		</Spanish>
 		<Polish>Wielki Artysta</Polish>
-		<Russian>Âåëèêèé àðòèñò</Russian>
+		<Russian>Великий художник</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_SPECIALIST_GREAT_DOCTOR</Tag>
@@ -24685,8 +24748,8 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
-		<Russian>Âåëèêèé âðà÷</Russian>
 		<Italian>Gran medico</Italian>
+		<Russian>Великий врач</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_SPECIALIST_GREAT_ENGINEER</Tag>
@@ -24708,7 +24771,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 			<Plural>0:1</Plural>
 		</Spanish>
 		<Polish>Wielki In&#191;ynier</Polish>
-		<Russian>Âåëèêèé èíæåíåð</Russian>
+		<Russian>Великий инженер</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_SPECIALIST_GREAT_HUNTER</Tag>
@@ -24721,7 +24784,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 			<Plural>0:1</Plural>
 		</Spanish>
 		<Polish>Wielki &#163;owca</Polish>
-		<Russian>Âåëèêèé îõîòíèê</Russian>
+		<Russian>Великий охотник</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_SPECIALIST_GREAT_HUNTER_PEDIA</Tag>
@@ -24730,7 +24793,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Italian>Un cacciatore particolarmente esperto che viene stanziato nella tua città.</Italian>
 		<Spanish>Un cazador extraordinariamente curtido que se ha establecido en tu ciudad.</Spanish>
 		<Polish>Wielki &#163;owca</Polish>
-		<Russian>Великий охотник</Russian>
+		<Russian>Особенно опытный охотник, который находится в вашем городе.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_SPECIALIST_GREAT_MERCHANT</Tag>
@@ -24752,7 +24815,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 			<Plural>0:1</Plural>
 		</Spanish>
 		<Polish>Wielki Kupiec</Polish>
-		<Russian>Âåëèêèé òîðãîâåö</Russian>
+		<Russian>Великий торговец</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_SPECIALIST_GREAT_MILITARY_INSTRUCTOR</Tag>
@@ -24773,7 +24836,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 			<Gender>Male</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Russian>Âåëèêèé âîåííûé èíñòðóêòîð</Russian>
+		<Russian>Великий военный инструктор</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_SPECIALIST_GREAT_PROPHET</Tag>
@@ -24795,7 +24858,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 			<Plural>0:1</Plural>
 		</Spanish>
 		<Polish>Wielki Prorok</Polish>
-		<Russian>Âåëèêèé ïðîðîê</Russian>
+		<Russian>Великий пророк</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_SPECIALIST_GREAT_SCIENTIST</Tag>
@@ -24817,7 +24880,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 			<Plural>0:1</Plural>
 		</Spanish>
 		<Polish>Wielki Naukowiec</Polish>
-		<Russian>Âåëèêèé ó÷åíûé</Russian>
+		<Russian>Великий ученый</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_SPECIALIST_GREAT_SLEUTH</Tag>
@@ -24828,7 +24891,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 			<Gender>male:male:male:male:male:male:male:male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
-		<Russian>Âåëèêèé ñûùèê</Russian>
+		<Russian>Великий сыщик</Russian>
 		<Italian>Gran investigatore</Italian>
 	</TEXT>
 	<TEXT>
@@ -24851,7 +24914,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 			<Plural>0:1</Plural>
 		</Spanish>
 		<Polish>Wielki Szpieg</Polish>
-		<Russian>Âåëèêèé øïèîí</Russian>
+		<Russian>Великий шпион</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_SPECIALIST_INVESTIGATOR</Tag>
@@ -25258,7 +25321,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<German>Runde beenden mit &lt;EINGABETASTE&gt; ...</German>
 		<Italian>Premi &lt;INVIO&gt; per terminare il turno...</Italian>
 		<Spanish>Pulsar &lt;INTRO&gt; para terminar el turno...</Spanish>
-		<Russian>Нажмите &lt;ENTER&gt; чтобы закончить ход...</Russian>
+		<Russian>Нажмите &lt;ENTER&gt; чтобы закончить ход</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_SYSTEM_GAME_PAUSED</Tag>
@@ -27176,7 +27239,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 			<Plural>1</Plural>
 		</Spanish>
 		<Polish>Narodowe cuda</Polish>
-		<Russian>Íàöèîíàëüíûå ×óäåñà</Russian>
+		<Russian>Национальные чудеса</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TOP_CITIES_SCREEN_WORLD_WONDERS</Tag>
@@ -28146,7 +28209,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNHAPPY_WORLD_PROJECT</Tag>
-		<English>+%d1_Change[ICON_UNHAPPY]: "Other Nation's Technological Breakthroughs have harmed the World!"</English>
+		<English>+%d1_Change[ICON_UNHAPPY]: "Other nations' technological breakthroughs have harmed the world!"</English>
 		<French>+%d1_Change[ICON_UNHAPPY]: "Les Avancées Technologiques d'autres Nations ont des conséquences néfastes pour le Monde Entier!"</French>
 		<German>+%d1_Change[ICON_UNHAPPY]: "Die technologischen Errungenschaften anderer Nationen fügen der Welt Schaden zu!"</German>
 		<Italian>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]+%d1_Change[COLOR_REVERT] [ICON_UNHAPPY]: Le innovazioni tecnologiche straniere hanno causato danni in tutto il mondo!</Italian> <!-- city screen hover happiness panel upper right -->
@@ -28156,7 +28219,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNHEALTHY_TECH_SPECIALIST</Tag>
-		<English>+%d1[ICON_UNHEALTHY] "Our advanced society has made the efforts of some professions produce filthy bi-products!"</English>
+		<English>+%d1[ICON_UNHEALTHY] "Our advanced society has made the efforts of some professions produce filthy byproducts!"</English>
 		<French>+%d1[ICON_UNHEALTHY] "Notre société avancée a fait des efforts au niveau de certaines professions pour produire des sous-produits grossiers!"</French>
 		<Italian>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]+%d1[COLOR_REVERT] [ICON_UNHEALTHY]: Molte professioni nella nostra società avanzata producono pericolosi prodotti di scarto!</Italian> <!-- city screen hover happiness panel upper right -->
 		<Polish>+%d1[ICON_UNHEALTHY] "Nasze nowoczesne spo&#179;ecze&#241;stwo doprowadzi&#179;o, &#191;e niekt&#243;re zawody produkuj&#185; kiepskiej jako&#156;ci p&#243;&#179;-produkty!"</Polish>
@@ -28292,6 +28355,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<German>[ICON_BULLET]Keine Fortbewegung auf</German>
 		<Italian>[ICON_BULLET][COLOR_WARNING_TEXT]Non può passare[COLOR_REVERT] nelle caselle di tipo</Italian> <!-- unit Canoe -->
 		<Spanish>[ICON_BULLET]No puede entrar en</Spanish>
+		<Russian>[ICON_BULLET]Не может перемещаться по клеткам следующих типов:</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITHELP_CAN_CONSTRUCT</Tag>
@@ -28299,7 +28363,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<French>[ICON_BULLET]Peut construire :[SPACE]</French>
 		<German>[ICON_BULLET]Ermöglicht Bau von:[SPACE]</German>
 		<Italian>[ICON_BULLET]Permette la [COLOR_HIGHLIGHT_TEXT]costruzione[COLOR_REVERT] di[SPACE]</Italian> <!-- unit Storyteller -->
-		<Russian>[ICON_BULLET]Позволит построить:[SPACE]</Russian>
+		<Russian>[ICON_BULLET]Может построить:[SPACE]</Russian>
 		<Spanish>[ICON_BULLET]Puede erigir[SPACE]</Spanish>
 	</TEXT>
 	<TEXT>
@@ -28437,6 +28501,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<German>[ICON_BULLET]kann eine [LINK=CONCEPT_CITIES]neue Stadt[\LINK] gründen</German>
 		<Italian>[ICON_BULLET]L'unità può [COLOR_HIGHLIGHT_TEXT]fondare[COLOR_REVERT] una nuova [LINK=CONCEPT_CITIES]città[\LINK]</Italian> <!-- unit Venus Settler -->
 		<Spanish>[ICON_BULLET]Puede fundar una [LINK=CONCEPT_CITIES]nueva ciudad[\LINK]</Spanish>
+		<Russian>[ICON_BULLET]Может основать [LINK=CONCEPT_CITIES]город[\LINK]</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITHELP_GOLDEN_AGE</Tag>
@@ -28445,6 +28510,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<German>[ICON_BULLET]kann ein Goldenes Zeitalter beginnen</German>
 		<Italian>[ICON_BULLET]L'unità può [COLOR_HIGHLIGHT_TEXT]dare avvio a un età dell'oro[COLOR_REVERT]</Italian> <!-- unit great artist -->
 		<Spanish>[ICON_BULLET]Puede iniciar una edad de oro</Spanish>
+		<Russian>[ICON_BULLET]Может начать золотой век</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITHELP_GREAT_WORK</Tag>
@@ -28607,6 +28673,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<German>[ICON_BULLET]kann nur verteidigen</German>
 		<Italian>[ICON_BULLET]L'unità può [COLOR_WARNING_TEXT]solo difendersi[COLOR_REVERT]</Italian> <!-- unit Pack Lllama -->
 		<Spanish>[ICON_BULLET]Sólo puede defender</Spanish>
+		<Russian>[ICON_BULLET]Не может атаковать</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITHELP_PARADROP_RANGE</Tag>
@@ -28623,6 +28690,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<German>[ICON_BULLET]kann errichtet werden von[SPACE]</German>
 		<Italian>[ICON_BULLET]Può essere costruito da:[NEWLINE][TAB]</Italian>
 		<Spanish>[ICON_BULLET]Construible por[SPACE]</Spanish>
+		<Russian>[ICON_BULLET]Для создания требуется:[SPACE]</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITHELP_REQUIRES_HOLY_CITY</Tag>
@@ -28649,6 +28717,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<German>Einheitenstapel (%d1):</German>
 		<Italian>Gruppo unità (%d1):</Italian>
 		<Spanish>Apilamiento (%d1):</Spanish>
+		<Russian>Группа единиц (%d1):</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITHELP_STEALTH_COMBAT_ATTACK</Tag>
@@ -29372,6 +29441,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Tag>TXT_KEY_VICTORY_SCREEN_CITIES</Tag>
 		<English>Monumental Cities</English>
 		<Italian>Città monumentali</Italian> <!-- victory info screen -->
+		<Russian>Монументальных культурой городов</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_VICTORY_SCREEN_CITY_CULTURE</Tag>
@@ -29381,16 +29451,17 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<German>%d1 Städte mit Kulturstufe %s2</German>
 		<Italian>%d1 città con la cultura %s2</Italian>  <!-- victory info screen -->
 		<Spanish>%d1 ciudades con cultura %s2</Spanish>
+		<Russian>Городов с уровнем культуры «%s2»: %d1</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_VICTORY_SCREEN_CONDITION</Tag>
 		<English>Category</English>
 		<French>Categorie</French>
 		<German>Kathegorie</German>
+		<Italian>Categoria</Italian> <!-- victory info screen -->
 		<Spanish>Categoría</Spanish>
 		<Polish>Kategoria</Polish>
-		<Russian>Êàòåãîðèè</Russian>
-		<Italian>Categoria</Italian> <!-- victory info screen -->
+		<Russian>Категории</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_VICTORY_SCREEN_ELECTION</Tag>
@@ -29400,6 +29471,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<German>Wahl durch %s1 initiiert</German>
 		<Italian>Elezioni richieste da %s1</Italian>  <!-- victory info screen -->
 		<Spanish>Votación iniciada por %s1</Spanish>
+		<Russian>%s1 инициировал выборы</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_VICTORY_SCREEN_ELIMINATE_ALL</Tag>
@@ -29424,8 +29496,8 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<German>gestartet</German>
 		<Spanish>Lanzada</Spanish>
 		<Polish>Wystartowa&#179;</Polish>
-		<Russian>Çàïóùåí</Russian>
 		<Italian>Lanciata</Italian>  <!-- victory info screen -->
+		<Russian>Запущен</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_VICTORY_SCREEN_NOTLAUNCHED</Tag>
@@ -29433,9 +29505,9 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<French>Pas Lancé</French>
 		<German>nicht gestartet</German>
 		<Spanish>No lanzada</Spanish>
-		<Polish>Nie wystartowa&#179;</Polish>
-		<Russian>Íå çàïóùåí</Russian>
 		<Italian>Non ancora lanciata</Italian> <!-- victory info screen -->
+		<Polish>Nie wystartowa&#179;</Polish>
+		<Russian>Не запущен</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_VICTORY_SCREEN_NOT_BUILT</Tag>
@@ -29444,24 +29516,25 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<German>Noch nicht errichtet</German>
 		<Italian>Congresso non istituito</Italian>  <!-- victory info screen -->
 		<Spanish>Sin construir aún</Spanish>
+		<Russian>Не построено</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_VICTORY_SCREEN_NO_HOLY</Tag>
 		<English>No Holy City</English>
 		<French>Pas de Ville Sainte</French>
 		<Spanish>No posee la Ciudad Santa</Spanish>
-		<Polish>Brak &#140;wi&#234;tych Miast</Polish>
-		<Russian>Íåò Ñâÿùåííûõ ãîðîäîâ</Russian>
 		<Italian>Nessuna città santa</Italian> <!-- victory info screen -->
+		<Polish>Brak &#140;wi&#234;tych Miast</Polish>
+		<Russian>Нет священного города</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_VICTORY_SCREEN_OTHER_CIV_SCORE</Tag>
 		<English>Other Civ's Scores</English>
 		<French>Score des autres Civs</French>
+		<Italian>Punteggio altre civiltà</Italian> <!-- victory info screen -->
 		<Spanish>Puntuación de otras civilizaciones</Spanish>
 		<Polish>Inne Wyniki Cywilizacji:</Polish>
-		<Russian>Î÷êè äð. öèâèëèçàöèé</Russian>
-		<Italian>Punteggio altre civiltà</Italian> <!-- victory info screen -->
+		<Russian>Очки других цивилизаций</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_VICTORY_SCREEN_PERCENTAGE</Tag>
@@ -29469,7 +29542,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<French>Statut</French>
 		<Italian>Stati</Italian> <!-- victory info screen, pedia screen Status name -->
 		<Spanish>Estado</Spanish>
-		<Russian>Ñòàòóñ</Russian>
+		<Russian>Статус</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_VICTORY_SCREEN_PERCENT_CULTURE</Tag>
@@ -29478,6 +29551,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<German>%d1%% der Kultur</German>
 		<Italian>%d1%% di cultura</Italian>  <!-- victory info screen -->
 		<Spanish>%d1%% de cultura</Spanish>
+		<Russian>%d1%% культуры</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_VICTORY_SCREEN_PERCENT_LAND</Tag>
@@ -29486,6 +29560,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<German>%d1%% des Landgebiets</German>
 		<Italian>%d1%% della superficie</Italian>  <!-- victory info screen -->
 		<Spanish>%d1%% del área terrestre</Spanish>
+		<Russian>%d1%% суши</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_VICTORY_SCREEN_PERCENT_POP</Tag>
@@ -29494,6 +29569,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<German>%d1%% der Weltbevölkerung</German>
 		<Italian>%d1%% della popolazione mondiale</Italian>  <!-- victory info screen -->
 		<Spanish>%d1%% de la población mundial</Spanish>
+		<Russian>%d1%% мирового населения</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_VICTORY_SCREEN_PERCENT_RELIGION</Tag>
@@ -29502,6 +29578,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<German>%d1%% des religiösen Einflusses</German>
 		<Italian>%d1%% di influenza religiosa</Italian>  <!-- victory info screen -->
 		<Spanish>%d1%% de influencia religiosa</Spanish>
+		<Russian>%d1%% религиозного влияния</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_VICTORY_SCREEN_PLAYER_VOTES</Tag>
@@ -29532,10 +29609,10 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Tag>TXT_KEY_VICTORY_SCREEN_RIVAL_CIV</Tag>
 		<English>Rival Civilization</English>
 		<French>Civilisation Rivale</French>
+		<Italian>Civiltà rivali</Italian> <!-- victory info screen -->
 		<Spanish>Civilización rival</Spanish>
 		<Polish>Rywale</Polish>
-		<Russian>Ñîïåðíèêè</Russian>
-		<Italian>Civiltà rivali</Italian> <!-- victory info screen -->
+		<Russian>Соперник</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_VICTORY_SCREEN_TITLE</Tag>
@@ -29544,25 +29621,26 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<German>Siegbedingungen</German>
 		<Italian>Dettagli partita</Italian> <!-- victory info screen -->
 		<Spanish>Condiciones para la victoria</Spanish>
+		<Russian>Путь к победе</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_VICTORY_SCREEN_TOTALS</Tag>
 		<English>Mastery Score</English>
 		<French>Score de Maîtrise</French>
 		<German>Meistersieg-Wertung</German>
+		<Italian>Punteggio maestria</Italian> <!-- victory info screen -->
 		<Spanish>Puntos de Maestría</Spanish>
 		<Polish>Wynik dominacji</Polish>
-		<Russian>Î÷êè Ïîáåäû</Russian>
-		<Italian>Punteggio maestria</Italian> <!-- victory info screen -->
+		<Russian>Очки превосходства</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_VICTORY_SCREEN_UNKNOWN</Tag>
 		<English>Unknown</English>
 		<French>Inconnu</French>
+		<Italian>Civiltà sconosciuta</Italian> <!-- victory info screen -->
 		<Spanish>Desconocido</Spanish>
 		<Polish>Nieznane</Polish>
-		<Russian>Íåèçâ.</Russian>
-		<Italian>Civiltà sconosciuta</Italian> <!-- victory info screen -->
+		<Russian>Неизвестно</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_VICTORY_SPACE_RACE</Tag>
@@ -29593,6 +29671,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<German>Das Team %s1_team_name hat sein Raumschiff gestartet!</German>
 		<Italian>%s1_team_name ha lanciato un'astronave!</Italian>
 		<Spanish>¡%s1_team_name ha lanzado una nave espacial!</Spanish>
+		<Russian>Команда «%s1_team_name» запустила космический корабль!</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_VICTORY_TIME</Tag>
@@ -29625,10 +29704,10 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<English>Mastery</English>
 		<French>Maîtrise</French>
 		<German>Meistersieg</German>
+		<Italian>Maestria</Italian>
 		<Spanish>Maestría</Spanish>
 		<Polish>Totalna dominacja</Polish>
 		<Russian>Превосходство</Russian>
-		<Italian>Maestria</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_VICTORY_TOTAL_PEDIA</Tag>
@@ -29903,6 +29982,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<German>Resolutionen</German>
 		<Italian>Risoluzioni congressi</Italian> <!-- victory conditions infoscreen, tab resolutions -->
 		<Spanish>Resoluciones</Spanish>
+		<Russian>Резолюции</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_WARPLAN_LIMITED_TARGET_IS</Tag>
@@ -30191,6 +30271,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<German>Bildet eine Gruppe</German>
 		<Italian>Crea un gruppo</Italian>
 		<Spanish>Crea un grupo</Spanish>
+		<Russian>Объединить в группу</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_WIDGET_DELETE_GROUP</Tag>
@@ -30199,6 +30280,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<German>Löst eine Gruppe auf</German>
 		<Italian>Separa il gruppo</Italian>
 		<Spanish>Separa el grupo</Spanish>
+		<Russian>Разделить группу</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_WIDGET_END_TURN</Tag>

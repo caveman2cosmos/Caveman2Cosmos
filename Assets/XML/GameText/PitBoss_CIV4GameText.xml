@@ -218,6 +218,7 @@
 		<German>Beenden</German>
 		<Italian>Esci</Italian>
 		<Spanish>Salir</Spanish>
+		<Russian>Выход</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PITBOSS_EXIT_TEXT</Tag>
@@ -526,6 +527,7 @@
 		<German>Keine Szenarios gefunden</German>
 		<Italian>Nessun scenario trovato</Italian>
 		<Spanish>No se han encontrado escenarios</Spanish>
+		<Russian>Сценарии не найдены</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PITBOSS_PASSWORD</Tag>
