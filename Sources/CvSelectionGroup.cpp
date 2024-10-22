@@ -1164,12 +1164,20 @@ bool CvSelectionGroup::canStartMission(int iMission, int iData1, int iData2, CvP
 			}
 			case MISSION_GREAT_COMMANDER:
 			{
-				if (GC.getGame().isOption(GAMEOPTION_UNIT_GREAT_COMMANDERS) && unitX->getUnitInfo().isGreatGeneral() && !unitX->isCommander())
+				if (GC.getGame().isOption(GAMEOPTION_UNIT_GREAT_COMMANDERS) && unitX->getUnitInfo().isGreatGeneral() && !unitX->isCommander() && !unitX->isCommodore())
 				{
 					return true;
 				}
 				break;
 			}
+			case MISSION_GREAT_COMMODORE:
+			{
+            	if (GC.getGame().isOption(GAMEOPTION_UNIT_GREAT_COMMODORES) && unitX->getUnitInfo().isGreatGeneral() && !unitX->isCommodore() && !unitX->isCommander())
+            	{
+            		return true;
+            	}
+            	break;
+            }
 			case MISSION_ASSASSINATE:
 			{
 				if (unitX->canAmbush(pPlot, true))
@@ -1830,6 +1838,15 @@ bool CvSelectionGroup::startMission()
 							}
 							break;
 						}
+						case MISSION_GREAT_COMMODORE:
+                        {
+                        	if (pLoopUnit->getUnitInfo().isGreatGeneral() && !pLoopUnit->isCommodore())
+                        	{
+                        		pLoopUnit->setCommodore(true);
+                        		bAction = true;
+                        	}
+                        	break;
+                        }
 						case MISSION_SHADOW:
 						{
 							CvPlot* pShadowPlot = GC.getMap().plot(headMissionQueueNode()->m_data.iData1, headMissionQueueNode()->m_data.iData2);
@@ -5870,6 +5887,11 @@ int CvSelectionGroup::getStrength() const
 bool CvSelectionGroup::hasCommander() const
 {
 	return algo::any_of(units(), CvUnit::fn::isCommander());
+}
+
+bool CvSelectionGroup::hasCommodore() const
+{
+	return algo::any_of(units(), CvUnit::fn::isCommodore());
 }
 
 void CvSelectionGroup::validateLocations(bool bFixup) const
