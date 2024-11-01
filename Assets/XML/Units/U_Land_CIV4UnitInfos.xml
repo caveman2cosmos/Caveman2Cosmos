@@ -38575,6 +38575,12 @@
 					<bGreatPeople>1</bGreatPeople>
 				</GreatPeople>
 			</GreatPeoples>
+            <UnitUpgrades>
+                <UnitType>UNIT_MASTER_SAILOR_WAR_CANOE</UnitType>
+                <UnitType>UNIT_MASTER_SAILOR_KAYAK</UnitType>
+                <UnitType>UNIT_MASTER_SAILOR_UBOAT</UnitType>
+                <UnitType>UNIT_MASTER_SAILOR_EARLY_CARRIER</UnitType>
+            </UnitUpgrades>
 			<Buildings>
 				<BuildingType>BUILDING_TRADITION_SEA_HUNTING</BuildingType>
 				<BuildingType>BUILDING_TRADITION_NAVAL_MASCOT</BuildingType>
