@@ -27959,7 +27959,7 @@ bool CvUnit::isCommanderReady() const
 void CvUnit::setCommander(bool bNewVal)
 {
 	PROFILE_EXTRA_FUNC();
-	if (isCommander() == bNewVal) return;
+	if (isCommander() == bNewVal || getDomainType() == DOMAIN_SEA) return;
 
 	if (bNewVal)
 	{
@@ -27992,7 +27992,7 @@ CvUnit* CvUnit::getCommander() const
 
 	FAssertMsg(plot() != NULL, "TEST");
 	// This routine gets called a lot, so short-circuit when no commander is around.
-	if (plot() == NULL || !plot()->inCommandField(getOwner()))
+	if (plot() == NULL || !plot()->inCommandField(getOwner()) || getDomainType() == DOMAIN_SEA)
 	{
 		return NULL;
 	}
@@ -28132,7 +28132,7 @@ CvUnit* CvUnit::getCommodore() const
 
 	FAssertMsg(plot() != NULL, "TEST");
 	// This routine gets called a lot, so short-circuit when no commodore is around.
-	if (plot() == NULL || !plot()->inCommandCommodoreField(getOwner()))
+	if (plot() == NULL || !plot()->inCommandCommodoreField(getOwner()) || getDomainType() == DOMAIN_LAND)
 	{
 		return NULL;
 	}
@@ -28188,7 +28188,7 @@ void CvUnit::tryUseCommodore()
 {
 	CvUnit* pCommodore = getCommodore();
 
-	if (pCommodore) //commander is used when any unit under his command fights in combat
+	if (pCommodore) //commodore is used when any unit under his command fights in combat
 	{
 		m_iUsedCommodoreID = pCommodore->getID();
 
