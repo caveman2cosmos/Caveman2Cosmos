@@ -45,7 +45,7 @@ public:
 	void changeControlPoints(const int iChange);
 	void changeControlPointsLeft(const int iChange);
 	inline short getControlPoints() const { return m_iControlPoints; }
-	inline short getControlPointsLeft() const { return m_iControlPoints; }
+	inline short getControlPointsLeft() const { return m_iControlPointsLeft; }
 	void restoreControlPoints();
 
 	inline bool isReady() const { return m_bReady; }
