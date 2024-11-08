@@ -11836,7 +11836,7 @@
 	</TEXT>
     <TEXT>
         <Tag>TXT_KEY_EVENT_TRIGGER_CITY_RUINS_PREHISTORIC_1</Tag>
-        <English>A few of our men were scavenging around this ruins near %s2_city when they found something.</English>
+        <English>A few of our men found something while scavenging in the ruins near %s2_city.</English>
     </TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_TRIGGER_CITY_RUINS_ANCIENT_1</Tag>
@@ -12535,31 +12535,31 @@
     </TEXT>
     <TEXT>
         <Tag>TXT_KEY_EVENT_TRIGGER_BONUS_TAX_1</Tag>
-        <English>The tax man from %s2_city is reporting bigger tax income this season.</English>
+        <English>The taxman from %s2_city is reporting bigger tax income this season.</English>
     </TEXT>
     <TEXT>
         <Tag>TXT_KEY_EVENT_TRIGGER_BONUS_TAX_2</Tag>
-        <English>The officium from %s2_city has reported that more tax has been collected then usual.</English>
+        <English>The officium in %s2_city has reported that more tax has been collected then usual.</English>
     </TEXT>
     <TEXT>
         <Tag>TXT_KEY_EVENT_TRIGGER_BONUS_TAX_3</Tag>
-        <English>The tax deppartment from %s2_city was very succesfull in collecting taxes this year.</English>
+        <English>The tax department from %s2_city was very successful in collecting taxes this year.</English>
     </TEXT>
     <TEXT>
         <Tag>TXT_KEY_EVENT_TRIGGER_COMMUNITY_BOND_1</Tag>
-        <English>Our people sat around a small fire trying to warmup from the frigid colds in %s2_city. Seing everyone together made the people feel more united as they exchanged stories.</English>
+        <English>Our people sat around a small fire trying to warm up from the cold in %s2_city. Seeing everyone together and exchanging stories made the people feel more united.</English>
     </TEXT>
     <TEXT>
         <Tag>TXT_KEY_EVENT_TRIGGER_COMMUNITY_BOND_2</Tag>
-        <English>A community discussion in %s2_city has recently made our people feel more as one.</English>
+        <English>A community discussion in %s2_city has recently made our people feel more united.</English>
     </TEXT>
     <TEXT>
         <Tag>TXT_KEY_EVENT_TRIGGER_COMMUNITY_BOND_3</Tag>
-        <English>People sat in the local %s2_city field and talked about life. Such moments bring our people together.</English>
+        <English>People sat in the local %s2_city fields and talked about life. Such moments bring our people together.</English>
     </TEXT>
     <TEXT>
         <Tag>TXT_KEY_EVENT_TRIGGER_COMMUNITY_BOND_4</Tag>
-        <English>Peasants and a lord started loudly discusing about life in %s2_city, many people joined in. Our people feel more unit now.</English>
+        <English>Peasants and a lord started loudly discussing life in %s2_city and many people joined in. Our people feel more united now.</English>
     </TEXT>
     <TEXT>
         <Tag>TXT_KEY_EVENT_TRIGGER_COMMUNITY_BOND_5</Tag>
@@ -12567,11 +12567,11 @@
     </TEXT>
     <TEXT>
         <Tag>TXT_KEY_EVENT_TRIGGER_COMMUNITY_BOND_6</Tag>
-        <English>Factory workers organized a family union meeting to discuss events in %s2_city</English>
+        <English>Factory workers organized a union meeting to discuss events in %s2_city.</English>
     </TEXT>
     <TEXT>
         <Tag>TXT_KEY_EVENT_TRIGGER_COMMUNITY_BOND_7</Tag>
-        <English>Local community near %s2_city decided to organize a event to discuss the wellbeing of the ommunity</English>
+        <English>A local community near %s2_city decided to organize a event to discuss the wellbeing of the community.</English>
     </TEXT>
     <TEXT>
         <Tag>TXT_KEY_EVENT_TRIGGER_COMMUNITY_BOND_8</Tag>
@@ -12579,15 +12579,15 @@
     </TEXT>
     <TEXT>
         <Tag>TXT_KEY_EVENT_TRIGGER_GREAT_STORY_1</Tag>
-        <English>Story teller near %s2_city has recently told a fascinating story about our ancestors</English>
+        <English>A storyteller near %s2_city has recently told a fascinating story about our ancestors.</English>
     </TEXT>
     <TEXT>
         <Tag>TXT_KEY_EVENT_TRIGGER_GREAT_STORY_2</Tag>
-        <English>A profound epic was told in %s2_city and captivated the audience for a long time.</English>
+        <English>A profound epic was recited in %s2_city, captivating the audience for a long time.</English>
     </TEXT>
     <TEXT>
         <Tag>TXT_KEY_EVENT_TRIGGER_GREAT_STORY_3</Tag>
-        <English>A phylosophical story captured the attention of the people and was talked for days in the %s2_city.</English>
+        <English>A philosophical story captured the attention of the people in %s2_city. It was spoken about for days.</English>
     </TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_TRIGGER_HAPPY_HUNTING_1</Tag>
