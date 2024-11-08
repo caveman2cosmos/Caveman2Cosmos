@@ -12539,11 +12539,11 @@
     </TEXT>
     <TEXT>
         <Tag>TXT_KEY_EVENT_TRIGGER_BONUS_TAX_2</Tag>
-        <English>The officium in %s2_city has reported that more tax has been collected then usual.</English>
+        <English>The officium in %s2_city has reported that more tax has been collected than usual.</English>
     </TEXT>
     <TEXT>
         <Tag>TXT_KEY_EVENT_TRIGGER_BONUS_TAX_3</Tag>
-        <English>The tax department from %s2_city was very successful in collecting taxes this year.</English>
+        <English>The tax department in %s2_city was very successful in collecting taxes this year.</English>
     </TEXT>
     <TEXT>
         <Tag>TXT_KEY_EVENT_TRIGGER_COMMUNITY_BOND_1</Tag>
