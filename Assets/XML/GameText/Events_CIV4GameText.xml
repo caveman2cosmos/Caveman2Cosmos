@@ -11834,6 +11834,10 @@
 		<Polish>Po&#191;ar zniszczy&#179; budynek w mie&#156;cie! Po&#191;ar szaleje w mie&#156;cie, a lokalne si&#179;y przeciwpo&#191;arowe nie mog&#185; nic z tym zrobic. Prosz&#185; o wsparcie poniewa&#191; los ca&#179;ego miasta jest zagro&#191;ony!</Polish>
 		<Russian>Пожар уничтожил здание в городе! Пламя выходит из-под контроля в некоторых частях города, а местные силы парализованы. Они требуют быстрого подкрепления, чтобы сдержать пламя и защитить город от широкомасштабного разрушения.</Russian>
 	</TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_TRIGGER_CITY_RUINS_PREHISTORIC_1</Tag>
+        <English>A few of our men were scavenging around this ruins near %s2_city when they found something.</English>
+    </TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_TRIGGER_CITY_RUINS_ANCIENT_1</Tag>
 		<English>Scouts exploring ruins near %s2_city have discovered a cache of knowledge.</English>
@@ -12531,15 +12535,59 @@
     </TEXT>
     <TEXT>
         <Tag>TXT_KEY_EVENT_TRIGGER_BONUS_TAX_1</Tag>
-        <English>The tax office from %s2_city is reporting bigger tax income this season.</English>
+        <English>The tax man from %s2_city is reporting bigger tax income this season.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_TRIGGER_BONUS_TAX_2</Tag>
+        <English>The officium from %s2_city has reported that more tax has been collected then usual.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_TRIGGER_BONUS_TAX_3</Tag>
+        <English>The tax deppartment from %s2_city was very succesfull in collecting taxes this year.</English>
     </TEXT>
     <TEXT>
         <Tag>TXT_KEY_EVENT_TRIGGER_COMMUNITY_BOND_1</Tag>
-        <English>People from %s2_city have recently bonded and are now more united.</English>
+        <English>Our people sat around a small fire trying to warmup from the frigid colds in %s2_city. Seing everyone together made the people feel more united as they exchanged stories.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_TRIGGER_COMMUNITY_BOND_2</Tag>
+        <English>A community discussion in %s2_city has recently made our people feel more as one.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_TRIGGER_COMMUNITY_BOND_3</Tag>
+        <English>People sat in the local %s2_city field and talked about life. Such moments bring our people together.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_TRIGGER_COMMUNITY_BOND_4</Tag>
+        <English>Peasants and a lord started loudly discusing about life in %s2_city, many people joined in. Our people feel more unit now.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_TRIGGER_COMMUNITY_BOND_5</Tag>
+        <English>People from %s2_city decided to organize a discussion on many topics in the town square. Our people are more united then ever.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_TRIGGER_COMMUNITY_BOND_6</Tag>
+        <English>Factory workers organized a family union meeting to discuss events in %s2_city</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_TRIGGER_COMMUNITY_BOND_7</Tag>
+        <English>Local community near %s2_city decided to organize a event to discuss the wellbeing of the ommunity</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_TRIGGER_COMMUNITY_BOND_8</Tag>
+        <English>%s2_city organized a event where people can come from all walks of life and share their story.</English>
     </TEXT>
     <TEXT>
         <Tag>TXT_KEY_EVENT_TRIGGER_GREAT_STORY_1</Tag>
-        <English>Story teller near %s2_city has recently told a fascinating story captivating his people.</English>
+        <English>Story teller near %s2_city has recently told a fascinating story about our ancestors</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_TRIGGER_GREAT_STORY_2</Tag>
+        <English>A profound epic was told in %s2_city and captivated the audience for a long time.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_TRIGGER_GREAT_STORY_3</Tag>
+        <English>A phylosophical story captured the attention of the people and was talked for days in the %s2_city.</English>
     </TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_TRIGGER_HAPPY_HUNTING_1</Tag>
