@@ -1560,7 +1560,7 @@ public:
 	int featureWorkPercent(FeatureTypes eIndex) const;
 	int buildWorkPercent(BuildTypes eIndex) const;
 
-	int getExtraUnitCombatModifier(UnitCombatTypes eIndex, const bool bIntrinsic = true) const;
+	int getExtraUnitCombatModifier(UnitCombatTypes eIndex, const bool bCommander = true, const bool bCommodore = true) const;
 	void changeExtraUnitCombatModifier(UnitCombatTypes eIndex, int iChange);
 	//TB Combat Mods (adjusted the following line to include ", bool bEquip = false, bool bAfflict = false, bool bPromote = false"
 	bool canAcquirePromotion(PromotionTypes ePromotion, PromotionRequirements::flags requirements) const;
@@ -2310,58 +2310,58 @@ public:
 	void statusUpdate(PromotionTypes eStatus);
 
 	int flankingStrengthbyUnitCombatTotal(UnitCombatTypes eCombatType) const;
-	int getExtraFlankingStrengthbyUnitCombatType(UnitCombatTypes eIndex, const bool bIntrinsic = true) const;
+	int getExtraFlankingStrengthbyUnitCombatType(UnitCombatTypes eIndex, const bool bCommander = true, const bool bCommodore = true) const;
 	void changeExtraFlankingStrengthbyUnitCombatType(UnitCombatTypes eIndex, int iChange);
 
 	int withdrawOnTerrainTotal(TerrainTypes eTerrainType) const;
-	int getExtraWithdrawOnTerrainType(TerrainTypes eIndex, const bool bIntrinsic = true) const;
+	int getExtraWithdrawOnTerrainType(TerrainTypes eIndex, const bool bCommander = true, const bool bCommodore = true) const;
 	void changeExtraWithdrawOnTerrainType(TerrainTypes eIndex, int iChange);
 
 	int withdrawOnFeatureTotal(FeatureTypes eFeatureType) const;
-	int getExtraWithdrawOnFeatureType(FeatureTypes eIndex, const bool bIntrinsic = true) const;
+	int getExtraWithdrawOnFeatureType(FeatureTypes eIndex, const bool bCommander = true, const bool bCommodore = true) const;
 	void changeExtraWithdrawOnFeatureType(FeatureTypes eIndex, int iChange);
 
 	int withdrawVSUnitCombatTotal(UnitCombatTypes eCombatType) const;
-	int getExtraWithdrawVSUnitCombatType(UnitCombatTypes eIndex, const bool bIntrinsic = true) const;
+	int getExtraWithdrawVSUnitCombatType(UnitCombatTypes eIndex, const bool bCommander = true, const bool bCommodore = true) const;
 	void changeExtraWithdrawVSUnitCombatType(UnitCombatTypes eIndex, int iChange);
 
 	int pursuitVSUnitCombatTotal(UnitCombatTypes eCombatType) const;
-	int getExtraPursuitVSUnitCombatType(UnitCombatTypes eIndex, const bool bIntrinsic = true) const;
+	int getExtraPursuitVSUnitCombatType(UnitCombatTypes eIndex, const bool bCommander = true, const bool bCommodore = true) const;
 	void changeExtraPursuitVSUnitCombatType(UnitCombatTypes eIndex, int iChange);
 
 	int repelVSUnitCombatTotal(UnitCombatTypes eCombatType) const;
-	int getExtraRepelVSUnitCombatType(UnitCombatTypes eIndex, const bool bIntrinsic = true) const;
+	int getExtraRepelVSUnitCombatType(UnitCombatTypes eIndex, const bool bCommander = true, const bool bCommodore = true) const;
 	void changeExtraRepelVSUnitCombatType(UnitCombatTypes eIndex, int iChange);
 
 	int knockbackVSUnitCombatTotal(UnitCombatTypes eCombatType) const;
-	int getExtraKnockbackVSUnitCombatType(UnitCombatTypes eIndex, const bool bIntrinsic = true) const;
+	int getExtraKnockbackVSUnitCombatType(UnitCombatTypes eIndex, const bool bCommander = true, const bool bCommodore = true) const;
 	void changeExtraKnockbackVSUnitCombatType(UnitCombatTypes eIndex, int iChange);
 
 	int punctureVSUnitCombatTotal(UnitCombatTypes eCombatType) const;
-	int getExtraPunctureVSUnitCombatType(UnitCombatTypes eIndex, const bool bIntrinsic = true) const;
+	int getExtraPunctureVSUnitCombatType(UnitCombatTypes eIndex, const bool bCommander = true, const bool bCommodore = true) const;
 	void changeExtraPunctureVSUnitCombatType(UnitCombatTypes eIndex, int iChange);
 
 	int armorVSUnitCombatTotal(UnitCombatTypes eCombatType) const;
-	int getExtraArmorVSUnitCombatType(UnitCombatTypes eIndex, const bool bIntrinsic = true) const;
+	int getExtraArmorVSUnitCombatType(UnitCombatTypes eIndex, const bool bCommander = true, const bool bCommodore = true) const;
 	void changeExtraArmorVSUnitCombatType(UnitCombatTypes eIndex, int iChange);
 
 	int dodgeVSUnitCombatTotal(UnitCombatTypes eCombatType) const;
-	int getExtraDodgeVSUnitCombatType(UnitCombatTypes eIndex, const bool bIntrinsic = true) const;
+	int getExtraDodgeVSUnitCombatType(UnitCombatTypes eIndex, const bool bCommander = true, const bool bCommodore = true) const;
 	void changeExtraDodgeVSUnitCombatType(UnitCombatTypes eIndex, int iChange);
 
 	int precisionVSUnitCombatTotal(UnitCombatTypes eCombatType) const;
-	int getExtraPrecisionVSUnitCombatType(UnitCombatTypes eIndex, const bool bIntrinsic = true) const;
+	int getExtraPrecisionVSUnitCombatType(UnitCombatTypes eIndex, const bool bCommander = true, const bool bCommodore = true) const;
 	void changeExtraPrecisionVSUnitCombatType(UnitCombatTypes eIndex, int iChange);
 
 	int criticalVSUnitCombatTotal(UnitCombatTypes eCombatType) const;
-	int getExtraCriticalVSUnitCombatType(UnitCombatTypes eIndex, const bool bIntrinsic = true) const;
+	int getExtraCriticalVSUnitCombatType(UnitCombatTypes eIndex, const bool bCommander = true, const bool bCommodore = true) const;
 	void changeExtraCriticalVSUnitCombatType(UnitCombatTypes eIndex, int iChange);
 
 	int roundStunVSUnitCombatTotal(UnitCombatTypes eCombatType) const;
-	int getExtraRoundStunVSUnitCombatType(UnitCombatTypes eIndex, const bool bIntrinsic = true) const;
+	int getExtraRoundStunVSUnitCombatType(UnitCombatTypes eIndex, const bool bCommander = true, const bool bCommodore = true) const;
 	void changeExtraRoundStunVSUnitCombatType(UnitCombatTypes eIndex, int iChange);
 
-	int getExtraRoundStunProb(const bool bIntrinsic = true) const;
+	int getExtraRoundStunProb(const bool bCommander = true, const bool bCommodore = true) const;
 	void changeExtraRoundStunProb(int iChange);
 	int roundStunProbTotal() const;
 

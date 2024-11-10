@@ -754,7 +754,7 @@ void CvUnit::reset(int iID, UnitTypes eUnit, PlayerTypes eOwner, bool bConstruct
 	}
 
 	m_iSleepTimer = 0;
-	//@MOD Commanders: reset parameters
+	//@MOD Commanders/Commodores: reset parameters
 	m_iCommanderID = -1;
 	m_iCommodoreID = -1;
 	m_iUsedCommanderID = -1;
@@ -3289,6 +3289,7 @@ void CvUnit::updateCombat(CvUnit* pSelectedDefender, bool bSamePlot, bool bSteal
 			this->tryUseCommander();
 			pDefender->tryUseCommander();
 
+            //USE commodore here (so their command points will be decreased) for attacker and defender:
 			this->tryUseCommodore();
            	pDefender->tryUseCommodore();
 
@@ -14169,7 +14170,7 @@ bool CvUnit::isInquisitor() const
 
 int CvUnit::maxInterceptionProbability(bool bIgnoreCommanders, bool bIgnoreCommodores) const
 {
-	return std::min(GC.getDefineINT("MAX_INTERCEPTION_PROBABILITY"),std::max(0, m_pUnitInfo->getInterceptionProbability() + getExtraIntercept(bIgnoreCommanders)));
+	return std::min(GC.getDefineINT("MAX_INTERCEPTION_PROBABILITY"),std::max(0, m_pUnitInfo->getInterceptionProbability() + getExtraIntercept(bIgnoreCommanders, bIgnoreCommodores)));
 }
 
 
@@ -14185,7 +14186,7 @@ int CvUnit::currInterceptionProbability() const
 
 int CvUnit::evasionProbability(bool bIgnoreCommanders, bool bIgnoreCommodores) const
 {
-	return std::min(GC.getDefineINT("MAX_EVASION_PROBABILITY"),std::max(0, m_pUnitInfo->getEvasionProbability() + getExtraEvasion(bIgnoreCommanders)));
+	return std::min(GC.getDefineINT("MAX_EVASION_PROBABILITY"),std::max(0, m_pUnitInfo->getEvasionProbability() + getExtraEvasion(bIgnoreCommanders, bIgnoreCommodores)));
 }
 
 
@@ -14849,7 +14850,7 @@ int CvUnit::unitDefenseModifier(UnitTypes eUnit) const
 int CvUnit::unitCombatModifier(UnitCombatTypes eUnitCombat) const
 {
 	FASSERT_BOUNDS(0, GC.getNumUnitCombatInfos(), eUnitCombat);
-	return (m_pUnitInfo->getUnitCombatModifier(eUnitCombat) + getExtraUnitCombatModifier(eUnitCombat, isCommander()));
+	return (m_pUnitInfo->getUnitCombatModifier(eUnitCombat) + getExtraUnitCombatModifier(eUnitCombat, isCommander(), isCommodore()));
 }
 
 
@@ -16910,6 +16911,14 @@ int CvUnit::getExtraVisibilityRange() const
 			return m_iExtraVisibilityRange + pCommander->m_iExtraVisibilityRange;
 		}
 	}
+	if (!isCommodore())
+    	{
+    		const CvUnit* pCommodore = getCommodore();
+    		if (pCommodore)
+    		{
+    			return m_iExtraVisibilityRange + pCommodore->m_iExtraVisibilityRange;
+    		}
+    	}
 	return m_iExtraVisibilityRange;
 }
 
@@ -16944,6 +16953,14 @@ int CvUnit::getExtraMoves() const
 			return m_iExtraMoves + pCommander->m_iExtraMoves;
 		}
 	}
+	if (!isCommodore())
+    	{
+    		const CvUnit* pCommodore = getCommodore();
+    		if (pCommodore)
+    		{
+    			return m_iExtraMoves + pCommodore->m_iExtraMoves;
+    		}
+    	}
 	return m_iExtraMoves;
 }
 
@@ -16965,6 +16982,14 @@ int CvUnit::getExtraMoveDiscount() const
 			return m_iExtraMoveDiscount + pCommander->m_iExtraMoveDiscount;
 		}
 	}
+	if (!isCommodore())
+    	{
+    		const CvUnit* pCommodore = getCommodore();
+    		if (pCommodore)
+    		{
+    			return m_iExtraMoveDiscount + pCommodore->m_iExtraMoveDiscount;
+    		}
+    	}
 	return m_iExtraMoveDiscount;
 }
 
@@ -16985,6 +17010,15 @@ int CvUnit::getExtraAirRange() const
 			return m_iExtraAirRange + pCommander->m_iExtraAirRange;
 		}
 	}
+	if (!isCommodore())
+    	{
+    		const CvUnit* pCommodore = getCommodore();
+    		if (pCommodore)
+    		{
+    			return m_iExtraAirRange + pCommodore->m_iExtraAirRange;
+    		}
+    	}
+
 	return m_iExtraAirRange;
 }
 
@@ -17003,6 +17037,14 @@ int CvUnit::getExtraIntercept(bool bIgnoreCommanders, bool bIgnoreCommodores) co
 			return m_iExtraIntercept + pCommander->m_iExtraIntercept;
 		}
 	}
+	if (!bIgnoreCommodores && !isCommodore())
+    	{
+    		const CvUnit* pCommodore = getCommodore();
+    		if (pCommodore)
+    		{
+    			return m_iExtraIntercept + pCommodore->m_iExtraIntercept;
+    		}
+    	}
 	return m_iExtraIntercept;
 }
 
@@ -17021,6 +17063,14 @@ int CvUnit::getExtraEvasion(bool bIgnoreCommanders, bool bIgnoreCommodores) cons
 			return m_iExtraEvasion + pCommander->m_iExtraEvasion;
 		}
 	}
+	if (!bIgnoreCommodores && !isCommodore())
+    	{
+    		const CvUnit* pCommodore = getCommodore();
+    		if (pCommodore)
+    		{
+    			return m_iExtraEvasion + pCommodore->m_iExtraEvasion;
+    		}
+    	}
 	return m_iExtraEvasion;
 }
 
@@ -17039,6 +17089,14 @@ int CvUnit::getExtraFirstStrikes() const
 			return std::max(0, m_iExtraFirstStrikes + pCommander->getExtraFirstStrikes());
 		}
 	}
+	if (!isCommodore())
+    	{
+    		const CvUnit* pCommodore = getCommodore();
+    		if (pCommodore)
+    		{
+    			return std::max(0, m_iExtraFirstStrikes + pCommodore->getExtraFirstStrikes());
+    		}
+    	}
 	return std::max(0, m_iExtraFirstStrikes);
 }
 
@@ -17057,6 +17115,14 @@ int CvUnit::getExtraChanceFirstStrikes() const
 			return std::max(0, m_iExtraChanceFirstStrikes + pCommander->getExtraChanceFirstStrikes());
 		}
 	}
+	if (!isCommodore())
+    	{
+    		const CvUnit* pCommodore = getCommodore();
+    		if (pCommodore)
+    		{
+    			return std::max(0, m_iExtraChanceFirstStrikes + pCommodore->getExtraChanceFirstStrikes());
+    		}
+    	}
 	return std::max(0, m_iExtraChanceFirstStrikes);
 }
 
@@ -17075,6 +17141,14 @@ int CvUnit::getExtraWithdrawal(bool bIgnoreCommanders, bool bIgnoreCommodores) c
 			return m_iExtraWithdrawal + pCommander->m_iExtraWithdrawal;
 		}
 	}
+	if (!bIgnoreCommodores && !isCommodore())
+    	{
+    		const CvUnit* pCommodore = getCommodore();
+    		if (pCommodore)
+    		{
+    			return m_iExtraWithdrawal + pCommodore->m_iExtraWithdrawal;
+    		}
+    	}
 	return m_iExtraWithdrawal;
 }
 
@@ -17094,6 +17168,14 @@ int CvUnit::getExtraAttackCombatModifier(bool bIgnoreCommanders, bool bIgnoreCom
 			return m_iExtraAttackCombatModifier + pCommander->m_iExtraAttackCombatModifier;
 		}
 	}
+	if (!bIgnoreCommodores && !isCommodore())
+    	{
+    		const CvUnit* pCommodore = getCommodore();
+    		if (pCommodore)
+    		{
+    			return m_iExtraAttackCombatModifier + pCommodore->m_iExtraAttackCombatModifier;
+    		}
+    	}
 	return m_iExtraAttackCombatModifier;
 }
 
@@ -17116,6 +17198,14 @@ int CvUnit::getExtraDefenseCombatModifier(bool bIgnoreCommanders, bool bIgnoreCo
 			return m_iExtraDefenseCombatModifier + pCommander->m_iExtraDefenseCombatModifier;
 		}
 	}
+	if (!bIgnoreCommodores && !isCommodore())
+    	{
+    		const CvUnit* pCommodore = getCommodore();
+    		if (pCommodore)
+    		{
+    			return m_iExtraDefenseCombatModifier + pCommodore->m_iExtraDefenseCombatModifier;
+    		}
+    	}
 	return m_iExtraDefenseCombatModifier;
 }
 
@@ -17134,6 +17224,14 @@ int CvUnit::getExtraPursuit(bool bIgnoreCommanders, bool bIgnoreCommodores) cons
 			return m_iExtraPursuit + pCommander->m_iExtraPursuit;
 		}
 	}
+	if (!bIgnoreCommodores && !isCommodore())
+    	{
+    		const CvUnit* pCommodore = getCommodore();
+    		if (pCommodore)
+    		{
+    			return m_iExtraPursuit + pCommodore->m_iExtraPursuit;
+    		}
+    	}
 	return m_iExtraPursuit;
 }
 
@@ -17152,6 +17250,14 @@ int CvUnit::getExtraEarlyWithdraw(bool bIgnoreCommanders, bool bIgnoreCommodores
 			return m_iExtraEarlyWithdraw + pCommander->m_iExtraEarlyWithdraw;
 		}
 	}
+	if (!bIgnoreCommodores && !isCommodore())
+    	{
+    		const CvUnit* pCommodore = getCommodore();
+    		if (pCommodore)
+    		{
+    			return m_iExtraEarlyWithdraw + pCommodore->m_iExtraEarlyWithdraw;
+    		}
+    	}
 	return m_iExtraEarlyWithdraw;
 }
 
@@ -17170,6 +17276,14 @@ int CvUnit::getExtraVSBarbs(bool bIgnoreCommanders, bool bIgnoreCommodores) cons
 			return m_iExtraVSBarbs + pCommander->m_iExtraVSBarbs;
 		}
 	}
+	if (!bIgnoreCommodores && !isCommodore())
+    	{
+    		const CvUnit* pCommodore = getCommodore();
+    		if (pCommodore)
+    		{
+    			return m_iExtraVSBarbs + pCommodore->m_iExtraVSBarbs;
+    		}
+    	}
 	return m_iExtraVSBarbs;
 }
 
@@ -17189,6 +17303,14 @@ int CvUnit::getExtraReligiousCombatModifier(bool bIgnoreCommanders, bool bIgnore
 			return m_iExtraReligiousCombatModifier + pCommander->m_iExtraReligiousCombatModifier;
 		}
 	}
+	if (!bIgnoreCommodores && !isCommodore())
+    	{
+    		const CvUnit* pCommodore = getCommodore();
+    		if (pCommodore)
+    		{
+    			return m_iExtraReligiousCombatModifier + pCommodore->m_iExtraReligiousCombatModifier;
+    		}
+    	}
 	return m_iExtraReligiousCombatModifier;
 }
 
@@ -17207,6 +17329,14 @@ int CvUnit::getExtraArmor(bool bIgnoreCommanders, bool bIgnoreCommodores) const
 			return std::max(0, m_iExtraArmor + pCommander->m_iExtraArmor);
 		}
 	}
+	if (!bIgnoreCommodores && !isCommodore())
+    	{
+    		const CvUnit* pCommodore = getCommodore();
+    		if (pCommodore)
+    		{
+    			return std::max(0, m_iExtraArmor + pCommodore->m_iExtraArmor);
+    		}
+    	}
 	return std::max(0, m_iExtraArmor);
 }
 
@@ -17225,6 +17355,14 @@ int CvUnit::getExtraPuncture(bool bIgnoreCommanders, bool bIgnoreCommodores) con
 			return std::max(0, m_iExtraPuncture + pCommander->getExtraPuncture());
 		}
 	}
+	if (!bIgnoreCommodores && !isCommodore())
+    	{
+    		const CvUnit* pCommodore = getCommodore();
+    		if (pCommodore)
+    		{
+    			return std::max(0, m_iExtraPuncture + pCommodore->getExtraPuncture());
+    		}
+    	}
 	return std::max(0, m_iExtraPuncture);
 }
 
@@ -17243,6 +17381,14 @@ int CvUnit::getExtraDamageModifier(bool bIgnoreCommanders, bool bIgnoreCommodore
 			return m_iExtraDamageModifier + pCommander->m_iExtraDamageModifier;
 		}
 	}
+	if (!bIgnoreCommodores && !isCommodore())
+    	{
+    		const CvUnit* pCommodore = getCommodore();
+    		if (pCommodore)
+    		{
+    			return m_iExtraDamageModifier + pCommodore->m_iExtraDamageModifier;
+    		}
+    	}
 	return m_iExtraDamageModifier;
 }
 
@@ -17355,6 +17501,14 @@ int CvUnit::getExtraOverrun(bool bIgnoreCommanders, bool bIgnoreCommodores) cons
 			return m_iExtraOverrun + pCommander->m_iExtraOverrun;
 		}
 	}
+	if (!bIgnoreCommodores && !isCommodore())
+    	{
+    		const CvUnit* pCommodore = getCommodore();
+    		if (pCommodore)
+    		{
+    			return m_iExtraOverrun + pCommodore->m_iExtraOverrun;
+    		}
+    	}
 	return m_iExtraOverrun;
 }
 
@@ -17378,6 +17532,14 @@ int CvUnit::getExtraRepel(bool bIgnoreCommanders, bool bIgnoreCommodores) const
 			return m_iExtraRepel + pCommander->m_iExtraRepel;
 		}
 	}
+	if (!bIgnoreCommodores && !isCommodore())
+    	{
+    		const CvUnit* pCommodore = getCommodore();
+    		if (pCommodore)
+    		{
+    			return m_iExtraRepel + pCommodore->m_iExtraRepel;
+    		}
+    	}
 	return m_iExtraRepel;
 }
 
@@ -17397,6 +17559,14 @@ int CvUnit::getExtraFortRepel() const
 			return m_iExtraFortRepel + pCommander->m_iExtraFortRepel;
 		}
 	}
+	if (!isCommodore())
+    	{
+    		const CvUnit* pCommodore = getCommodore();
+    		if (pCommodore)
+    		{
+    			return m_iExtraFortRepel + pCommodore->m_iExtraFortRepel;
+    		}
+    	}
 	return m_iExtraFortRepel;
 }
 
@@ -17416,6 +17586,14 @@ int CvUnit::getExtraRepelRetries() const
 			return m_iExtraRepelRetries + pCommander->m_iExtraRepelRetries;
 		}
 	}
+	if (!isCommodore())
+    	{
+    		const CvUnit* pCommodore = getCommodore();
+    		if (pCommodore)
+    		{
+    			return m_iExtraRepelRetries + pCommodore->m_iExtraRepelRetries;
+    		}
+    	}
 	return m_iExtraRepelRetries;
 }
 
@@ -17435,6 +17613,14 @@ int CvUnit::getExtraUnyielding(bool bIgnoreCommanders, bool bIgnoreCommodores) c
 			return m_iExtraUnyielding + pCommander->m_iExtraUnyielding;
 		}
 	}
+	if (!bIgnoreCommodores && !isCommodore())
+    	{
+    		const CvUnit* pCommodore = getCommodore();
+    		if (pCommodore)
+    		{
+    			return m_iExtraUnyielding + pCommodore->m_iExtraUnyielding;
+    		}
+    	}
 	return m_iExtraUnyielding;
 }
 
@@ -17454,6 +17640,14 @@ int CvUnit::getExtraKnockback(bool bIgnoreCommanders, bool bIgnoreCommodores) co
 			return m_iExtraKnockback + pCommander->m_iExtraKnockback;
 		}
 	}
+	if (!bIgnoreCommodores && !isCommodore())
+    	{
+    		const CvUnit* pCommodore = getCommodore();
+    		if (pCommodore)
+    		{
+    			return m_iExtraKnockback + pCommodore->m_iExtraKnockback;
+    		}
+    	}
 	return m_iExtraKnockback;
 }
 
@@ -17473,6 +17667,14 @@ int CvUnit::getExtraKnockbackRetries(bool bIgnoreCommanders, bool bIgnoreCommodo
 			return m_iExtraKnockbackRetries + pCommander->m_iExtraKnockbackRetries;
 		}
 	}
+	if (!bIgnoreCommodores && !isCommodore())
+    	{
+    		const CvUnit* pCommodore = getCommodore();
+    		if (pCommodore)
+    		{
+    			return m_iExtraKnockbackRetries + pCommodore->m_iExtraKnockbackRetries;
+    		}
+    	}
 	return m_iExtraKnockbackRetries;
 }
 
@@ -17591,6 +17793,14 @@ int CvUnit::getExtraUnnerve(bool bIgnoreCommanders, bool bIgnoreCommodores) cons
 			return m_iExtraUnnerve + pCommander->m_iExtraUnnerve;
 		}
 	}
+	if (!bIgnoreCommodores && !isCommodore())
+    	{
+    		const CvUnit* pCommodore = getCommodore();
+    		if (pCommodore)
+    		{
+    			return m_iExtraUnnerve + pCommodore->m_iExtraUnnerve;
+    		}
+    	}
 	return m_iExtraUnnerve;
 }
 
@@ -17610,6 +17820,14 @@ int CvUnit::getExtraEnclose(bool bIgnoreCommanders, bool bIgnoreCommodores) cons
 			return m_iExtraEnclose + pCommander->m_iExtraEnclose;
 		}
 	}
+	if (!bIgnoreCommodores && !isCommodore())
+    	{
+    		const CvUnit* pCommodore = getCommodore();
+    		if (pCommodore)
+    		{
+    			return m_iExtraEnclose + pCommodore->m_iExtraEnclose;
+    		}
+    	}
 	return m_iExtraEnclose;
 }
 
@@ -17629,6 +17847,14 @@ int CvUnit::getExtraLunge(bool bIgnoreCommanders, bool bIgnoreCommodores) const
 			return m_iExtraLunge + pCommander->m_iExtraLunge;
 		}
 	}
+	if (!bIgnoreCommodores && !isCommodore())
+    	{
+    		const CvUnit* pCommodore = getCommodore();
+    		if (pCommodore)
+    		{
+    			return m_iExtraLunge + pCommodore->m_iExtraLunge;
+    		}
+    	}
 	return m_iExtraLunge;
 }
 
@@ -17648,6 +17874,14 @@ int CvUnit::getExtraDynamicDefense(bool bIgnoreCommanders, bool bIgnoreCommodore
 			return m_iExtraDynamicDefense + pCommander->m_iExtraDynamicDefense;
 		}
 	}
+	if (!bIgnoreCommodores && !isCommodore())
+    	{
+    		const CvUnit* pCommodore = getCommodore();
+    		if (pCommodore)
+    		{
+    			return m_iExtraDynamicDefense + pCommodore->m_iExtraDynamicDefense;
+    		}
+    	}
 	return m_iExtraDynamicDefense;
 }
 
@@ -17763,6 +17997,14 @@ int CvUnit::getExtraFortitude(bool bIgnoreCommanders, bool bIgnoreCommodores) co
 			return m_iExtraFortitude + pCommander->m_iExtraFortitude;
 		}
 	}
+	if (!bIgnoreCommodores && !isCommodore())
+    	{
+    		const CvUnit* pCommodore = getCommodore();
+    		if (pCommodore)
+    		{
+    			return m_iExtraFortitude + pCommodore->m_iExtraFortitude;
+    		}
+    	}
 	return m_iExtraFortitude;
 }
 
@@ -17782,6 +18024,14 @@ int CvUnit::getExtraDodgeModifier (bool bIgnoreCommanders, bool bIgnoreCommodore
 			return m_iExtraDodgeModifier + pCommander->m_iExtraDodgeModifier;
 		}
 	}
+	if (!bIgnoreCommodores && !isCommodore())
+    	{
+    		const CvUnit* pCommodore = getCommodore();
+    		if (pCommodore)
+    		{
+    			return m_iExtraDodgeModifier + pCommodore->m_iExtraDodgeModifier;
+    		}
+    	}
 	return m_iExtraDodgeModifier;
 }
 
@@ -17800,6 +18050,14 @@ int CvUnit::getExtraPrecisionModifier(bool bIgnoreCommanders, bool bIgnoreCommod
 			return m_iExtraPrecisionModifier + pCommander->m_iExtraPrecisionModifier;
 		}
 	}
+	if (!bIgnoreCommodores && !isCommodore())
+    	{
+    		const CvUnit* pCommodore = getCommodore();
+    		if (pCommodore)
+    		{
+    			return m_iExtraPrecisionModifier + pCommodore->m_iExtraPrecisionModifier;
+    		}
+    	}
 	return m_iExtraPrecisionModifier;
 }
 
@@ -17818,6 +18076,14 @@ int CvUnit::getExtraPowerShots(bool bIgnoreCommanders, bool bIgnoreCommodores) c
 			return m_iExtraPowerShots + pCommander->m_iExtraPowerShots;
 		}
 	}
+	if (!bIgnoreCommodores && !isCommodore())
+    	{
+    		const CvUnit* pCommodore = getCommodore();
+    		if (pCommodore)
+    		{
+    			return m_iExtraPowerShots + pCommodore->m_iExtraPowerShots;
+    		}
+    	}
 	return m_iExtraPowerShots;
 }
 
@@ -17837,6 +18103,14 @@ int CvUnit::getExtraPowerShotCombatModifier(bool bIgnoreCommanders, bool bIgnore
 			return m_iExtraPowerShotCombatModifier + pCommander->m_iExtraPowerShotCombatModifier;
 		}
 	}
+	if (!bIgnoreCommodores && !isCommodore())
+    	{
+    		const CvUnit* pCommodore = getCommodore();
+    		if (pCommodore)
+    		{
+    			return m_iExtraPowerShotCombatModifier + pCommodore->m_iExtraPowerShotCombatModifier;
+    		}
+    	}
 	return m_iExtraPowerShotCombatModifier;
 }
 
@@ -17856,6 +18130,14 @@ int CvUnit::getExtraPowerShotPunctureModifier(bool bIgnoreCommanders, bool bIgno
 			return m_iExtraPowerShotPunctureModifier + pCommander->m_iExtraPowerShotPunctureModifier;
 		}
 	}
+	if (!bIgnoreCommodores && !isCommodore())
+    	{
+    		const CvUnit* pCommodore = getCommodore();
+    		if (pCommodore)
+    		{
+    			return m_iExtraPowerShotPunctureModifier + pCommodore->m_iExtraPowerShotPunctureModifier;
+    		}
+    	}
 	return m_iExtraPowerShotPunctureModifier;
 }
 
@@ -17875,6 +18157,14 @@ int CvUnit::getExtraPowerShotPrecisionModifier(bool bIgnoreCommanders, bool bIgn
 			return m_iExtraPowerShotPrecisionModifier + pCommander->m_iExtraPowerShotPrecisionModifier;
 		}
 	}
+	if (!bIgnoreCommodores && !isCommodore())
+    	{
+    		const CvUnit* pCommodore = getCommodore();
+    		if (pCommodore)
+    		{
+    			return m_iExtraPowerShotPrecisionModifier + pCommodore->m_iExtraPowerShotPrecisionModifier;
+    		}
+    	}
 	return m_iExtraPowerShotPrecisionModifier;
 }
 
@@ -17894,6 +18184,14 @@ int CvUnit::getExtraPowerShotCriticalModifier(bool bIgnoreCommanders, bool bIgno
 			return m_iExtraPowerShotCriticalModifier + pCommander->m_iExtraPowerShotCriticalModifier;
 		}
 	}
+	if (!bIgnoreCommodores && !isCommodore())
+    	{
+    		const CvUnit* pCommodore = getCommodore();
+    		if (pCommodore)
+    		{
+    			return m_iExtraPowerShotCriticalModifier + pCommodore->m_iExtraPowerShotCriticalModifier;
+    		}
+    	}
 	return m_iExtraPowerShotCriticalModifier;
 }
 
@@ -17913,6 +18211,14 @@ int CvUnit::getExtraCriticalModifier(bool bIgnoreCommanders, bool bIgnoreCommodo
 			return m_iExtraCriticalModifier + pCommander->m_iExtraCriticalModifier;
 		}
 	}
+	if (!bIgnoreCommodores && !isCommodore())
+    	{
+    		const CvUnit* pCommodore = getCommodore();
+    		if (pCommodore)
+    		{
+    			return m_iExtraCriticalModifier + pCommodore->m_iExtraCriticalModifier;
+    		}
+    	}
 	return m_iExtraCriticalModifier;
 }
 
@@ -17930,6 +18236,14 @@ int CvUnit::getExtraEndurance(bool bIgnoreCommanders, bool bIgnoreCommodores) co
 		if (pCommander)
 		{
 			return m_iExtraEndurance + pCommander->m_iExtraEndurance;
+		}
+	}
+	if (!bIgnoreCommodores && !isCommodore())
+	{
+		const CvUnit* pCommodore = getCommodore();
+		if (pCommodore)
+		{
+			return m_iExtraEndurance + pCommodore->m_iExtraEndurance;
 		}
 	}
 	return m_iExtraEndurance;
@@ -17951,6 +18265,14 @@ int CvUnit::getExtraPoisonProbabilityModifier(bool bIgnoreCommanders, bool bIgno
 			return m_iExtraPoisonProbabilityModifier + pCommander->m_iExtraPoisonProbabilityModifier;
 		}
 	}
+	if (!bIgnoreCommodores && !isCommodore())
+    	{
+    		const CvUnit* pCommodore = getCommodore();
+    		if (pCommodore)
+    		{
+    			return m_iExtraPoisonProbabilityModifier + pCommodore->m_iExtraPoisonProbabilityModifier;
+    		}
+    	}
 	return m_iExtraPoisonProbabilityModifier;
 }
 
@@ -17971,6 +18293,14 @@ int CvUnit::getExtraCollateralDamage() const
 			return m_iExtraCollateralDamage + pCommander->m_iExtraCollateralDamage;
 		}
 	}
+	if (!isCommodore())
+    	{
+    		const CvUnit* pCommodore = getCommodore();
+    		if (pCommodore)
+    		{
+    			return m_iExtraCollateralDamage + pCommodore->m_iExtraCollateralDamage;
+    		}
+    	}
 	return m_iExtraCollateralDamage;
 }
 
@@ -17990,6 +18320,14 @@ int CvUnit::getExtraEnemyHeal() const
 			return m_iExtraEnemyHeal + pCommander->m_iExtraEnemyHeal;
 		}
 	}
+	if (!isCommodore())
+    	{
+    		const CvUnit* pCommodore = getCommodore();
+    		if (pCommodore)
+    		{
+    			return m_iExtraEnemyHeal + pCommodore->m_iExtraEnemyHeal;
+    		}
+    	}
 	return m_iExtraEnemyHeal;
 }
 
@@ -18008,6 +18346,14 @@ int CvUnit::getExtraNeutralHeal() const
 			return m_iExtraNeutralHeal + pCommander->m_iExtraNeutralHeal;
 		}
 	}
+	if (!isCommodore())
+    	{
+    		const CvUnit* pCommodore = getCommodore();
+    		if (pCommodore)
+    		{
+    			return m_iExtraNeutralHeal + pCommodore->m_iExtraNeutralHeal;
+    		}
+    	}
 	return m_iExtraNeutralHeal;
 }
 
@@ -18026,6 +18372,14 @@ int CvUnit::getExtraFriendlyHeal() const
 			return m_iExtraFriendlyHeal + pCommander->m_iExtraFriendlyHeal;
 		}
 	}
+	if (!isCommodore())
+    	{
+    		const CvUnit* pCommodore = getCommodore();
+    		if (pCommodore)
+    		{
+    			return m_iExtraFriendlyHeal + pCommodore->m_iExtraFriendlyHeal;
+    		}
+    	}
 	return m_iExtraFriendlyHeal;
 }
 
@@ -18067,6 +18421,14 @@ int CvUnit::getExtraCombatPercent() const
 			return m_iExtraCombatPercent + pCommander->m_iExtraCombatPercent;
 		}
 	}
+	if (!isCommodore())
+    	{
+    		const CvUnit* pCommodore = getCommodore();
+    		if (pCommodore)
+    		{
+    			return m_iExtraCombatPercent + pCommodore->m_iExtraCombatPercent;
+    		}
+    	}
 	return m_iExtraCombatPercent;
 }
 
@@ -18090,6 +18452,14 @@ int CvUnit::getExtraCityAttackPercent() const
 			return m_iExtraCityAttackPercent + pCommander->m_iExtraCityAttackPercent;
 		}
 	}
+	if (!isCommodore())
+    	{
+    		const CvUnit* pCommodore = getCommodore();
+    		if (pCommodore)
+    		{
+    			return m_iExtraCityAttackPercent + pCommodore->m_iExtraCityAttackPercent;
+    		}
+    	}
 	return m_iExtraCityAttackPercent;
 }
 
@@ -18113,6 +18483,14 @@ int CvUnit::getExtraCityDefensePercent() const
 			return m_iExtraCityDefensePercent + pCommander->m_iExtraCityDefensePercent;
 		}
 	}
+	if (!isCommodore())
+    	{
+    		const CvUnit* pCommodore = getCommodore();
+    		if (pCommodore)
+    		{
+    			return m_iExtraCityDefensePercent + pCommodore->m_iExtraCityDefensePercent;
+    		}
+    	}
 	return m_iExtraCityDefensePercent;
 }
 
@@ -18136,6 +18514,14 @@ int CvUnit::getExtraHillsAttackPercent() const
 			return m_iExtraHillsAttackPercent + pCommander->m_iExtraHillsAttackPercent;
 		}
 	}
+	if (!isCommodore())
+    	{
+    		const CvUnit* pCommodore = getCommodore();
+    		if (pCommodore)
+    		{
+    			return m_iExtraHillsAttackPercent + pCommodore->m_iExtraHillsAttackPercent;
+    		}
+    	}
 	return m_iExtraHillsAttackPercent;
 }
 
@@ -18159,6 +18545,14 @@ int CvUnit::getExtraHillsDefensePercent() const
 			return m_iExtraHillsDefensePercent + pCommander->m_iExtraHillsDefensePercent;
 		}
 	}
+	if (!isCommodore())
+    	{
+    		const CvUnit* pCommodore = getCommodore();
+    		if (pCommodore)
+    		{
+    			return m_iExtraHillsDefensePercent + pCommodore->m_iExtraHillsDefensePercent;
+    		}
+    	}
 	return m_iExtraHillsDefensePercent;
 }
 
@@ -18241,9 +18635,10 @@ void CvUnit::changeUpgradeDiscount(int iChange)
 
 int CvUnit::getExperiencePercent() const
 {
-	if (isCommander())
+
+	if ((isCommander())||(isCommodore()))
 	{
-		return 0; // Afforess - Great Commanders can not gain XP faster
+		return 0; // Afforess - Great Commanders/Commodores can not gain XP faster
 	}
 	const CvUnit* pCommander = getCommander();
 
@@ -18251,6 +18646,14 @@ int CvUnit::getExperiencePercent() const
 	{
 		return m_iExperiencePercent + pCommander->getExperiencePercent();
 	}
+
+	const CvUnit* pCommodore = getCommodore();
+
+		if (pCommodore)
+    	{
+    		return m_iExperiencePercent + pCommodore->getExperiencePercent();
+    	}
+
 	return m_iExperiencePercent;
 }
 
@@ -18912,6 +19315,14 @@ int CvUnit::getExtraDomainModifier(DomainTypes eIndex) const
 			return m_aiExtraDomainModifier[eIndex] + pCommander->m_aiExtraDomainModifier[eIndex];
 		}
 	}
+	if (!isCommodore())
+    	{
+    		const CvUnit* pCommodore = getCommodore();
+    		if (pCommodore)
+    		{
+    			return m_aiExtraDomainModifier[eIndex] + pCommodore->m_aiExtraDomainModifier[eIndex];
+    		}
+    	}
 	return m_aiExtraDomainModifier[eIndex];
 }
 
@@ -19141,6 +19552,14 @@ int CvUnit::getExtraTerrainAttackPercent(TerrainTypes eIndex) const
 			return (info ? info->m_iExtraTerrainAttackPercent : 0) + pCommander->getExtraTerrainAttackPercent(eIndex);
 		}
 	}
+	if (!isCommodore())
+    	{
+    		const CvUnit* pCommodore = getCommodore();
+    		if (pCommodore)
+    		{
+    			return (info ? info->m_iExtraTerrainAttackPercent : 0) + pCommodore->getExtraTerrainAttackPercent(eIndex);
+    		}
+    	}
 	return info ? info->m_iExtraTerrainAttackPercent : 0;
 }
 
@@ -19171,6 +19590,14 @@ int CvUnit::getExtraTerrainDefensePercent(TerrainTypes eIndex) const
 			return (info ? info->m_iExtraTerrainDefensePercent : 0) + pCommander->getExtraTerrainDefensePercent(eIndex);
 		}
 	}
+	if (!isCommodore())
+    	{
+    		const CvUnit* pCommodore = getCommodore();
+    		if (pCommodore)
+    		{
+    			return (info ? info->m_iExtraTerrainDefensePercent : 0) + pCommodore->getExtraTerrainDefensePercent(eIndex);
+    		}
+    	}
 	return info ? info->m_iExtraTerrainDefensePercent : 0;
 }
 
@@ -19201,6 +19628,14 @@ int CvUnit::getExtraFeatureAttackPercent(FeatureTypes eIndex) const
 			return (info ? info->m_iExtraFeatureAttackPercent : 0) + pCommander->getExtraFeatureAttackPercent(eIndex);
 		}
 	}
+	if (!isCommodore())
+    	{
+    		const CvUnit* pCommodore = getCommodore();
+    		if (pCommodore)
+    		{
+    			return (info ? info->m_iExtraFeatureAttackPercent : 0) + pCommodore->getExtraFeatureAttackPercent(eIndex);
+    		}
+    	}
 	return info ? info->m_iExtraFeatureAttackPercent : 0;
 }
 
@@ -19230,6 +19665,14 @@ int CvUnit::getExtraFeatureDefensePercent(FeatureTypes eIndex) const
 			return (info ? info->m_iExtraFeatureDefensePercent : 0) + pCommander->getExtraFeatureDefensePercent(eIndex);
 		}
 	}
+	if (!isCommodore())
+    	{
+    		const CvUnit* pCommodore = getCommodore();
+    		if (pCommodore)
+    		{
+    			return (info ? info->m_iExtraFeatureDefensePercent : 0) + pCommodore->getExtraFeatureDefensePercent(eIndex);
+    		}
+    	}
 	return info ? info->m_iExtraFeatureDefensePercent : 0;
 }
 
@@ -19245,13 +19688,13 @@ void CvUnit::changeExtraFeatureDefensePercent(FeatureTypes eIndex, int iChange)
 	}
 }
 
-int CvUnit::getExtraUnitCombatModifier(UnitCombatTypes eIndex, const bool bIntrinsic) const
+int CvUnit::getExtraUnitCombatModifier(UnitCombatTypes eIndex, const bool bCommander, const bool bCommodore) const
 {
 	FASSERT_BOUNDS(0, GC.getNumUnitCombatInfos(), eIndex);
 
 	const UnitCombatKeyedInfo* info = findUnitCombatKeyedInfo(eIndex);
 
-	if (!bIntrinsic)
+	if (!bCommander)
 	{
 		const CvUnit* pCommander = getCommander();
 		if (pCommander)
@@ -19259,6 +19702,14 @@ int CvUnit::getExtraUnitCombatModifier(UnitCombatTypes eIndex, const bool bIntri
 			return (info ? info->m_iExtraUnitCombatModifier : 0) + pCommander->getExtraUnitCombatModifier(eIndex);
 		}
 	}
+	if (!bCommodore)
+    	{
+    		const CvUnit* pCommodore = getCommodore();
+    		if (pCommodore)
+    		{
+    			return (info ? info->m_iExtraUnitCombatModifier : 0) + pCommodore->getExtraUnitCombatModifier(eIndex);
+    		}
+    	}
 	return info ? info->m_iExtraUnitCombatModifier : 0;
 }
 
@@ -19817,6 +20268,11 @@ bool CvUnit::isPromotionValid(PromotionTypes ePromotion, bool bFree, bool bKeepC
 	{
 		return false;
 	}
+
+	if (isCommodore() && (promo.getGroupChange() != 0 || promo.getQualityChange() != 0))
+    	{
+    		return false;
+    	}
 
 	if (isBlendIntoCity() && promo.getCityDefensePercent() != 0)
 	{
@@ -28755,6 +29211,15 @@ int CvUnit::getTerrainProtectedCount(TerrainTypes eIndex) const
 			iTotal += pCommander->getTerrainProtectedCount(eIndex);
 		}
 	}
+
+	if (!isCommodore())
+    	{
+    		const CvUnit* pCommodore = getCommodore();
+    		if (pCommodore)
+    		{
+    			iTotal += pCommodore->getTerrainProtectedCount(eIndex);
+    		}
+    	}
 	return iTotal;
 }
 
@@ -29557,6 +30022,14 @@ int CvUnit::getExtraFrontSupportPercent(bool bIgnoreCommanders, bool bIgnoreComm
 			return m_iExtraFrontSupportPercent + pCommander->m_iExtraFrontSupportPercent;
 		}
 	}
+	if (!bIgnoreCommodores && !isCommodore())
+    	{
+    		const CvUnit* pCommodore = getCommodore();
+    		if (pCommodore)
+    		{
+    			return m_iExtraFrontSupportPercent + pCommodore->m_iExtraFrontSupportPercent;
+    		}
+    	}
 	return m_iExtraFrontSupportPercent;
 }
 
@@ -29576,6 +30049,14 @@ int CvUnit::getExtraShortRangeSupportPercent(bool bIgnoreCommanders, bool bIgnor
 			return m_iExtraShortRangeSupportPercent + pCommander->m_iExtraShortRangeSupportPercent;
 		}
 	}
+	if (!bIgnoreCommodores && !isCommodore())
+    	{
+    		const CvUnit* pCommodore = getCommodore();
+    		if (pCommodore)
+    		{
+    			return m_iExtraShortRangeSupportPercent + pCommodore->m_iExtraShortRangeSupportPercent;
+    		}
+    	}
 	return m_iExtraShortRangeSupportPercent;
 }
 
@@ -29595,6 +30076,14 @@ int CvUnit::getExtraMediumRangeSupportPercent(bool bIgnoreCommanders, bool bIgno
 			return m_iExtraMediumRangeSupportPercent + pCommander->m_iExtraMediumRangeSupportPercent;
 		}
 	}
+	if (!bIgnoreCommodores && !isCommodore())
+    	{
+    		const CvUnit* pCommodore = getCommodore();
+    		if (pCommodore)
+    		{
+    			return m_iExtraMediumRangeSupportPercent + pCommodore->m_iExtraMediumRangeSupportPercent;
+    		}
+    	}
 	return m_iExtraMediumRangeSupportPercent;
 }
 
@@ -29614,6 +30103,14 @@ int CvUnit::getExtraLongRangeSupportPercent(bool bIgnoreCommanders, bool bIgnore
 			return m_iExtraLongRangeSupportPercent + pCommander->m_iExtraLongRangeSupportPercent;
 		}
 	}
+	if (!bIgnoreCommodores && !isCommodore())
+    	{
+    		const CvUnit* pCommodore = getCommodore();
+    		if (pCommodore)
+    		{
+    			return m_iExtraLongRangeSupportPercent + pCommodore->m_iExtraLongRangeSupportPercent;
+    		}
+    	}
 	return m_iExtraLongRangeSupportPercent;
 }
 
@@ -29633,6 +30130,14 @@ int CvUnit::getExtraFlankSupportPercent(bool bIgnoreCommanders, bool bIgnoreComm
 			return m_iExtraFlankSupportPercent + pCommander->m_iExtraFlankSupportPercent;
 		}
 	}
+	if (!bIgnoreCommodores && !isCommodore())
+    	{
+    		const CvUnit* pCommodore = getCommodore();
+    		if (pCommodore)
+    		{
+    			return m_iExtraFlankSupportPercent + pCommodore->m_iExtraFlankSupportPercent;
+    		}
+    	}
 	return m_iExtraFlankSupportPercent;
 }
 
@@ -31127,7 +31632,7 @@ void CvUnit::checkPromotionObsoletion()
 {
 	PROFILE_FUNC();
 
-	if (isCommander())
+	if ((isCommander())||(isCommodore()))
 	{
 		for (int iI = GC.getNumUnitCombatInfos() - 1; iI > -1; iI--)
 		{
@@ -31942,6 +32447,11 @@ bool CvUnit::meetsUnitSelectionCriteria(const CvUnitSelectionCriteria* criteria)
 		{
 			return false;
 		}
+
+		if (criteria->m_bIsCommodore && !isCommodore())
+        {
+        	return false;
+        }
 	}
 
 	return true;
@@ -32180,18 +32690,18 @@ int CvUnit::flankingStrengthbyUnitCombatTotal(UnitCombatTypes eCombatType) const
 		std::max(
 			0,
 			m_pUnitInfo->getFlankingStrengthbyUnitCombatType(eCombatType)
-			+ getExtraFlankingStrengthbyUnitCombatType(eCombatType, isCommander())
+			+ getExtraFlankingStrengthbyUnitCombatType(eCombatType, isCommander(), isCommodore)
 		)
 	);
 }
 
-int CvUnit::getExtraFlankingStrengthbyUnitCombatType(UnitCombatTypes eIndex, const bool bIntrinsic) const
+int CvUnit::getExtraFlankingStrengthbyUnitCombatType(UnitCombatTypes eIndex, const bool bCommander, const bool bCommodore) const
 {
 	FASSERT_BOUNDS(0, GC.getNumUnitCombatInfos(), eIndex);
 
 	const UnitCombatKeyedInfo* info = findUnitCombatKeyedInfo(eIndex);
 
-	if (!bIntrinsic)
+	if (!bCommander)
 	{
 		const CvUnit* pCommander = getCommander();
 		if (pCommander)
@@ -32199,6 +32709,14 @@ int CvUnit::getExtraFlankingStrengthbyUnitCombatType(UnitCombatTypes eIndex, con
 			return (info ? info->m_iExtraFlankingStrengthbyUnitCombatType : 0) + pCommander->getExtraFlankingStrengthbyUnitCombatType(eIndex);
 		}
 	}
+	if (!bCommodore)
+    	{
+    		const CvUnit* pCommodore = getCommodore();
+    		if (pCommodore)
+    		{
+    			return (info ? info->m_iExtraFlankingStrengthbyUnitCombatType : 0) + pCommodore->getExtraFlankingStrengthbyUnitCombatType(eIndex);
+    		}
+    	}
 	return info ? info->m_iExtraFlankingStrengthbyUnitCombatType : 0;
 }
 
@@ -32220,18 +32738,18 @@ int CvUnit::withdrawOnTerrainTotal(TerrainTypes eTerrainType) const
 		std::max(
 			0,
 			m_pUnitInfo->getWithdrawOnTerrainType(eTerrainType)
-			+ getExtraWithdrawOnTerrainType(eTerrainType, isCommander())
+			+ getExtraWithdrawOnTerrainType(eTerrainType, isCommander(), isCommodore())
 		)
 	);
 }
 
-int CvUnit::getExtraWithdrawOnTerrainType(TerrainTypes eIndex, const bool bIntrinsic) const
+int CvUnit::getExtraWithdrawOnTerrainType(TerrainTypes eIndex, const bool bCommander, const bool bCommodore) const
 {
 	FASSERT_BOUNDS(0, GC.getNumTerrainInfos(), eIndex);
 
 	const TerrainKeyedInfo* info = findTerrainKeyedInfo(eIndex);
 
-	if (!bIntrinsic)
+	if (!bCommander)
 	{
 		const CvUnit* pCommander = getCommander();
 		if (pCommander)
@@ -32239,6 +32757,14 @@ int CvUnit::getExtraWithdrawOnTerrainType(TerrainTypes eIndex, const bool bIntri
 			return (info ? info->m_iExtraWithdrawOnTerrainType : 0) + pCommander->getExtraWithdrawOnTerrainType(eIndex);
 		}
 	}
+	if (!bCommodore)
+    	{
+    		const CvUnit* pCommodore = getCommodore();
+    		if (pCommodore)
+    		{
+    			return (info ? info->m_iExtraWithdrawOnTerrainType : 0) + pCommodore->getExtraWithdrawOnTerrainType(eIndex);
+    		}
+    	}
 	return info ? info->m_iExtraWithdrawOnTerrainType : 0;
 }
 
@@ -32262,18 +32788,18 @@ int CvUnit::withdrawOnFeatureTotal(FeatureTypes eFeatureType) const
 		std::max(
 			0,
 			m_pUnitInfo->getWithdrawOnFeatureType(eFeatureType)
-			+ getExtraWithdrawOnFeatureType(eFeatureType, isCommander())
+			+ getExtraWithdrawOnFeatureType(eFeatureType, isCommander(), isCommodore())
 		)
 	);
 }
 
-int CvUnit::getExtraWithdrawOnFeatureType(FeatureTypes eIndex, const bool bIntrinsic) const
+int CvUnit::getExtraWithdrawOnFeatureType(FeatureTypes eIndex, const bool bCommander, const bool bCommodore) const
 {
 	FASSERT_BOUNDS(0, GC.getNumFeatureInfos(), eIndex);
 
 	const FeatureKeyedInfo* info = findFeatureKeyedInfo(eIndex);
 
-	if (!bIntrinsic)
+	if (!bCommander)
 	{
 		const CvUnit* pCommander = getCommander();
 		if (pCommander)
@@ -32281,6 +32807,14 @@ int CvUnit::getExtraWithdrawOnFeatureType(FeatureTypes eIndex, const bool bIntri
 			return (info ? info->m_iExtraWithdrawOnFeatureType : 0) + pCommander->getExtraWithdrawOnFeatureType(eIndex);
 		}
 	}
+	if (!bCommodore)
+    	{
+    		const CvUnit* pCommodore = getCommodore();
+    		if (pCommodore)
+    		{
+    			return (info ? info->m_iExtraWithdrawOnFeatureType : 0) + pCommodore->getExtraWithdrawOnFeatureType(eIndex);
+    		}
+    	}
 	return info ? info->m_iExtraWithdrawOnFeatureType : 0;
 }
 
@@ -32302,19 +32836,19 @@ int CvUnit::withdrawVSUnitCombatTotal(UnitCombatTypes eCombatType) const
 		std::max(
 			0,
 			m_pUnitInfo->getWithdrawVSUnitCombatType(eCombatType)
-			+ getExtraWithdrawVSUnitCombatType(eCombatType, isCommander())
+			+ getExtraWithdrawVSUnitCombatType(eCombatType, isCommander(), isCommodore())
 		)
 	);
 }
 
 
-int CvUnit::getExtraWithdrawVSUnitCombatType(UnitCombatTypes eIndex, const bool bIntrinsic) const
+int CvUnit::getExtraWithdrawVSUnitCombatType(UnitCombatTypes eIndex, const bool bCommander, const bool bCommodore) const
 {
 	FASSERT_BOUNDS(0, GC.getNumUnitCombatInfos(), eIndex);
 
 	const UnitCombatKeyedInfo* info = findUnitCombatKeyedInfo(eIndex);
 
-	if (!bIntrinsic)
+	if (!bCommander)
 	{
 		const CvUnit* pCommander = getCommander();
 		if (pCommander)
@@ -32322,6 +32856,14 @@ int CvUnit::getExtraWithdrawVSUnitCombatType(UnitCombatTypes eIndex, const bool 
 			return (info ? info->m_iExtraWithdrawVSUnitCombatType : 0) + pCommander->getExtraWithdrawVSUnitCombatType(eIndex);
 		}
 	}
+	if (!bCommodore)
+    	{
+    		const CvUnit* pCommodore = getCommodore();
+    		if (pCommodore)
+    		{
+    			return (info ? info->m_iExtraWithdrawVSUnitCombatType : 0) + pCommodore->getExtraWithdrawVSUnitCombatType(eIndex);
+    		}
+    	}
 	return info ? info->m_iExtraWithdrawVSUnitCombatType : 0;
 }
 
@@ -32343,18 +32885,18 @@ int CvUnit::pursuitVSUnitCombatTotal(UnitCombatTypes eCombatType) const
 		std::max(
 			0,
 			m_pUnitInfo->getPursuitVSUnitCombatType(eCombatType)
-			+ getExtraPursuitVSUnitCombatType(eCombatType, isCommander())
+			+ getExtraPursuitVSUnitCombatType(eCombatType, isCommander(), isCommodore())
 		)
 	);
 }
 
-int CvUnit::getExtraPursuitVSUnitCombatType(UnitCombatTypes eIndex, const bool bIntrinsic) const
+int CvUnit::getExtraPursuitVSUnitCombatType(UnitCombatTypes eIndex, const bool bCommander, const bool bCommodore) const
 {
 	FASSERT_BOUNDS(0, GC.getNumUnitCombatInfos(), eIndex);
 
 	const UnitCombatKeyedInfo* info = findUnitCombatKeyedInfo(eIndex);
 
-	if (!bIntrinsic)
+	if (!bCommander)
 	{
 		const CvUnit* pCommander = getCommander();
 		if (pCommander)
@@ -32362,6 +32904,14 @@ int CvUnit::getExtraPursuitVSUnitCombatType(UnitCombatTypes eIndex, const bool b
 			return (info ? info->m_iExtraPursuitVSUnitCombatType : 0) + pCommander->getExtraPursuitVSUnitCombatType(eIndex);
 		}
 	}
+	if (!bCommodore)
+    	{
+    		const CvUnit* pCommodore = getCommodore();
+    		if (pCommodore)
+    		{
+    			return (info ? info->m_iExtraPursuitVSUnitCombatType : 0) + pCommodore->getExtraPursuitVSUnitCombatType(eIndex);
+    		}
+    	}
 	return info ? info->m_iExtraPursuitVSUnitCombatType : 0;
 }
 
@@ -32384,18 +32934,18 @@ int CvUnit::repelVSUnitCombatTotal(UnitCombatTypes eCombatType) const
 		std::max(
 			0,
 			m_pUnitInfo->getRepelVSUnitCombatType(eCombatType)
-			+ getExtraRepelVSUnitCombatType(eCombatType, isCommander())
+			+ getExtraRepelVSUnitCombatType(eCombatType, isCommander(), isCommodore())
 		)
 	);
 }
 
-int CvUnit::getExtraRepelVSUnitCombatType(UnitCombatTypes eIndex, const bool bIntrinsic) const
+int CvUnit::getExtraRepelVSUnitCombatType(UnitCombatTypes eIndex, const bool bCommander, const bool bCommodore) const
 {
 	FASSERT_BOUNDS(0, GC.getNumUnitCombatInfos(), eIndex);
 
 	const UnitCombatKeyedInfo* info = findUnitCombatKeyedInfo(eIndex);
 
-	if (!bIntrinsic)
+	if (!bCommander)
 	{
 		const CvUnit* pCommander = getCommander();
 		if (pCommander)
@@ -32403,6 +32953,14 @@ int CvUnit::getExtraRepelVSUnitCombatType(UnitCombatTypes eIndex, const bool bIn
 			return (info ? info->m_iExtraRepelVSUnitCombatType : 0) + pCommander->getExtraRepelVSUnitCombatType(eIndex);
 		}
 	}
+	if (!bCommodore)
+    	{
+    		const CvUnit* pCommodore = getCommodore();
+    		if (pCommodore)
+    		{
+    			return (info ? info->m_iExtraRepelVSUnitCombatType : 0) + pCommodore->getExtraRepelVSUnitCombatType(eIndex);
+    		}
+    	}
 	return info ? info->m_iExtraRepelVSUnitCombatType : 0;
 }
 
@@ -32424,23 +32982,31 @@ int CvUnit::knockbackVSUnitCombatTotal(UnitCombatTypes eCombatType) const
 		std::max(
 			0,
 			m_pUnitInfo->getKnockbackVSUnitCombatType(eCombatType)
-			+ getExtraKnockbackVSUnitCombatType(eCombatType, isCommander())
+			+ getExtraKnockbackVSUnitCombatType(eCombatType, isCommander(), isCommodore())
 		)
 	);
 }
 
-int CvUnit::getExtraKnockbackVSUnitCombatType(UnitCombatTypes eIndex, const bool bIntrinsic) const
+int CvUnit::getExtraKnockbackVSUnitCombatType(UnitCombatTypes eIndex, const bool bCommander, const bool bCommodore) const
 {
 	FASSERT_BOUNDS(0, GC.getNumUnitCombatInfos(), eIndex);
 
 	const UnitCombatKeyedInfo* info = findUnitCombatKeyedInfo(eIndex);
 
-	if (!bIntrinsic)
+	if (!bCommander)
 	{
 		const CvUnit* pCommander = getCommander();
 		if (pCommander)
 		{
 			return (info ? info->m_iExtraKnockbackVSUnitCombatType : 0) + pCommander->getExtraKnockbackVSUnitCombatType(eIndex);
+		}
+	}
+	if (!bCommodore)
+	{
+		const CvUnit* pCommodore = getCommodore();
+		if (pCommodore)
+		{
+			return (info ? info->m_iExtraKnockbackVSUnitCombatType : 0) + pCommodore->getExtraKnockbackVSUnitCombatType(eIndex);
 		}
 	}
 	return info ? info->m_iExtraKnockbackVSUnitCombatType : 0;
@@ -32463,18 +33029,18 @@ int CvUnit::punctureVSUnitCombatTotal(UnitCombatTypes eCombatType) const
 		std::max(
 			0,
 			m_pUnitInfo->getPunctureVSUnitCombatType(eCombatType)
-			+ getExtraPunctureVSUnitCombatType(eCombatType, isCommander())
+			+ getExtraPunctureVSUnitCombatType(eCombatType, isCommander(), isCommodore())
 		)
 	);
 }
 
-int CvUnit::getExtraPunctureVSUnitCombatType(UnitCombatTypes eIndex, const bool bIntrinsic) const
+int CvUnit::getExtraPunctureVSUnitCombatType(UnitCombatTypes eIndex, const bool bCommander, const bool bCommodore) const
 {
 	FASSERT_BOUNDS(0, GC.getNumUnitCombatInfos(), eIndex);
 
 	const UnitCombatKeyedInfo* info = findUnitCombatKeyedInfo(eIndex);
 
-	if (!bIntrinsic)
+	if (!bCommander)
 	{
 		const CvUnit* pCommander = getCommander();
 		if (pCommander)
@@ -32482,6 +33048,14 @@ int CvUnit::getExtraPunctureVSUnitCombatType(UnitCombatTypes eIndex, const bool 
 			return (info ? info->m_iExtraPunctureVSUnitCombatType : 0) + pCommander->getExtraPunctureVSUnitCombatType(eIndex);
 		}
 	}
+	if (!bCommodore)
+    	{
+    		const CvUnit* pCommodore = getCommodore();
+    		if (pCommodore)
+    		{
+    			return (info ? info->m_iExtraPunctureVSUnitCombatType : 0) + pCommodore->getExtraPunctureVSUnitCombatType(eIndex);
+    		}
+    	}
 	return info ? info->m_iExtraPunctureVSUnitCombatType : 0;
 }
 
@@ -32503,18 +33077,18 @@ int CvUnit::armorVSUnitCombatTotal(UnitCombatTypes eCombatType) const
 		std::max(
 			0,
 			m_pUnitInfo->getArmorVSUnitCombatType(eCombatType)
-			+ getExtraArmorVSUnitCombatType(eCombatType, isCommander())
+			+ getExtraArmorVSUnitCombatType(eCombatType, isCommander(), isCommodore())
 		)
 	);
 }
 
-int CvUnit::getExtraArmorVSUnitCombatType(UnitCombatTypes eIndex, const bool bIntrinsic) const
+int CvUnit::getExtraArmorVSUnitCombatType(UnitCombatTypes eIndex, const bool bCommander, const bool bCommodore) const
 {
 	FASSERT_BOUNDS(0, GC.getNumUnitCombatInfos(), eIndex);
 
 	const UnitCombatKeyedInfo* info = findUnitCombatKeyedInfo(eIndex);
 
-	if (!bIntrinsic)
+	if (!bCommander)
 	{
 		const CvUnit* pCommander = getCommander();
 		if (pCommander)
@@ -32522,6 +33096,14 @@ int CvUnit::getExtraArmorVSUnitCombatType(UnitCombatTypes eIndex, const bool bIn
 			return (info ? info->m_iExtraArmorVSUnitCombatType : 0) + pCommander->getExtraArmorVSUnitCombatType(eIndex);
 		}
 	}
+	if (!bCommodore)
+    	{
+    		const CvUnit* pCommodore = getCommodore();
+    		if (pCommodore)
+    		{
+    			return (info ? info->m_iExtraArmorVSUnitCombatType : 0) + pCommodore->getExtraArmorVSUnitCombatType(eIndex);
+    		}
+    	}
 	return info ? info->m_iExtraArmorVSUnitCombatType : 0;
 }
 
@@ -32542,18 +33124,18 @@ int CvUnit::dodgeVSUnitCombatTotal(UnitCombatTypes eCombatType) const
 		std::max(
 			0,
 			m_pUnitInfo->getDodgeVSUnitCombatType(eCombatType)
-			+ getExtraDodgeVSUnitCombatType(eCombatType, isCommander())
+			+ getExtraDodgeVSUnitCombatType(eCombatType, isCommander(), isCommodore())
 		)
 	);
 }
 
-int CvUnit::getExtraDodgeVSUnitCombatType(UnitCombatTypes eIndex, const bool bIntrinsic) const
+int CvUnit::getExtraDodgeVSUnitCombatType(UnitCombatTypes eIndex, const bool bCommander, const bool bCommodore) const
 {
 	FASSERT_BOUNDS(0, GC.getNumUnitCombatInfos(), eIndex);
 
 	const UnitCombatKeyedInfo* info = findUnitCombatKeyedInfo(eIndex);
 
-	if (!bIntrinsic)
+	if (!bCommander)
 	{
 		const CvUnit* pCommander = getCommander();
 		if (pCommander)
@@ -32561,6 +33143,14 @@ int CvUnit::getExtraDodgeVSUnitCombatType(UnitCombatTypes eIndex, const bool bIn
 			return (info ? info->m_iExtraDodgeVSUnitCombatType : 0) + pCommander->getExtraDodgeVSUnitCombatType(eIndex);
 		}
 	}
+	if (!bCommodore)
+    	{
+    		const CvUnit* pCommodore = getCommodore();
+    		if (pCommodore)
+    		{
+    			return (info ? info->m_iExtraDodgeVSUnitCombatType : 0) + pCommodore->getExtraDodgeVSUnitCombatType(eIndex);
+    		}
+    	}
 	return info ? info->m_iExtraDodgeVSUnitCombatType : 0;
 }
 
@@ -32581,18 +33171,18 @@ int CvUnit::precisionVSUnitCombatTotal(UnitCombatTypes eCombatType) const
 		std::max(
 			0,
 			m_pUnitInfo->getPrecisionVSUnitCombatType(eCombatType)
-			+ getExtraPrecisionVSUnitCombatType(eCombatType, isCommander())
+			+ getExtraPrecisionVSUnitCombatType(eCombatType, isCommander(), isCommodore())
 		)
 	);
 }
 
-int CvUnit::getExtraPrecisionVSUnitCombatType(UnitCombatTypes eIndex, const bool bIntrinsic) const
+int CvUnit::getExtraPrecisionVSUnitCombatType(UnitCombatTypes eIndex, const bool bCommander, const bool bCommodore) const
 {
 	FASSERT_BOUNDS(0, GC.getNumUnitCombatInfos(), eIndex);
 
 	const UnitCombatKeyedInfo* info = findUnitCombatKeyedInfo(eIndex);
 
-	if (!bIntrinsic)
+	if (!bCommander)
 	{
 		const CvUnit* pCommander = getCommander();
 		if (pCommander)
@@ -32600,6 +33190,14 @@ int CvUnit::getExtraPrecisionVSUnitCombatType(UnitCombatTypes eIndex, const bool
 			return (info ? info->m_iExtraPrecisionVSUnitCombatType : 0) + pCommander->getExtraPrecisionVSUnitCombatType(eIndex);
 		}
 	}
+	if (!bCommodore)
+    	{
+    		const CvUnit* pCommodore = getCommodore();
+    		if (pCommodore)
+    		{
+    			return (info ? info->m_iExtraPrecisionVSUnitCombatType : 0) + pCommodore->getExtraPrecisionVSUnitCombatType(eIndex);
+    		}
+    	}
 	return info ? info->m_iExtraPrecisionVSUnitCombatType : 0;
 }
 
@@ -32620,18 +33218,18 @@ int CvUnit::criticalVSUnitCombatTotal(UnitCombatTypes eCombatType) const
 		std::max(
 			0,
 			m_pUnitInfo->getCriticalVSUnitCombatType(eCombatType)
-			+ getExtraCriticalVSUnitCombatType(eCombatType, isCommander())
+			+ getExtraCriticalVSUnitCombatType(eCombatType, isCommander(), isCommodore())
 		)
 	);
 }
 
-int CvUnit::getExtraCriticalVSUnitCombatType(UnitCombatTypes eIndex, const bool bIntrinsic) const
+int CvUnit::getExtraCriticalVSUnitCombatType(UnitCombatTypes eIndex, const bool bCommander, const bool bCommodore) const
 {
 	FASSERT_BOUNDS(0, GC.getNumUnitCombatInfos(), eIndex);
 
 	const UnitCombatKeyedInfo* info = findUnitCombatKeyedInfo(eIndex);
 
-	if (!bIntrinsic)
+	if (!bCommander)
 	{
 		const CvUnit* pCommander = getCommander();
 		if (pCommander)
@@ -32639,6 +33237,14 @@ int CvUnit::getExtraCriticalVSUnitCombatType(UnitCombatTypes eIndex, const bool 
 			return (info ? info->m_iExtraCriticalVSUnitCombatType : 0) + pCommander->getExtraCriticalVSUnitCombatType(eIndex);
 		}
 	}
+	if (!bCommodore)
+    	{
+    		const CvUnit* pCommodore = getCommodore();
+    		if (pCommodore)
+    		{
+    			return (info ? info->m_iExtraCriticalVSUnitCombatType : 0) + pCommodore->getExtraCriticalVSUnitCombatType(eIndex);
+    		}
+    	}
 	return info ? info->m_iExtraCriticalVSUnitCombatType : 0;
 }
 
@@ -32659,18 +33265,18 @@ int CvUnit::roundStunVSUnitCombatTotal(UnitCombatTypes eCombatType) const
 		std::max(
 			0,
 			m_pUnitInfo->getRoundStunVSUnitCombatType(eCombatType)
-			+ getExtraRoundStunVSUnitCombatType(eCombatType, isCommander())
+			+ getExtraRoundStunVSUnitCombatType(eCombatType, isCommander(), isCommodore())
 		)
 	);
 }
 
-int CvUnit::getExtraRoundStunVSUnitCombatType(UnitCombatTypes eIndex, const bool bIntrinsic) const
+int CvUnit::getExtraRoundStunVSUnitCombatType(UnitCombatTypes eIndex, const bool bCommander, const bool bCommodore) const
 {
 	FASSERT_BOUNDS(0, GC.getNumUnitCombatInfos(), eIndex);
 
 	const UnitCombatKeyedInfo* info = findUnitCombatKeyedInfo(eIndex);
 
-	if (!bIntrinsic)
+	if (!bCommander)
 	{
 		const CvUnit* pCommander = getCommander();
 		if (pCommander)
@@ -32678,6 +33284,14 @@ int CvUnit::getExtraRoundStunVSUnitCombatType(UnitCombatTypes eIndex, const bool
 			return (info ? info->m_iExtraRoundStunVSUnitCombatType : 0) + pCommander->getExtraRoundStunVSUnitCombatType(eIndex);
 		}
 	}
+	if (!bCommodore)
+    	{
+    		const CvUnit* pCommodore = getCommodore();
+    		if (pCommodore)
+    		{
+    			return (info ? info->m_iExtraRoundStunVSUnitCombatType : 0) + pCommodore->getExtraRoundStunVSUnitCombatType(eIndex);
+    		}
+    	}
 	return info ? info->m_iExtraRoundStunVSUnitCombatType : 0;
 }
 
@@ -32692,9 +33306,9 @@ void CvUnit::changeExtraRoundStunVSUnitCombatType(UnitCombatTypes eIndex, int iC
 }
 
 
-int CvUnit::getExtraRoundStunProb(const bool bIntrinsic) const
+int CvUnit::getExtraRoundStunProb(const bool bCommander, const bool bCommodore) const
 {
-	if (!bIntrinsic)
+	if (!bCommander)
 	{
 		const CvUnit* pCommander = getCommander();
 		if (pCommander)
@@ -32702,6 +33316,14 @@ int CvUnit::getExtraRoundStunProb(const bool bIntrinsic) const
 			return m_iExtraRoundStunProb + pCommander->m_iExtraRoundStunProb;
 		}
 	}
+	if (!bCommodore)
+    	{
+    		const CvUnit* pCommodore = getCommodore();
+    		if (pCommodore)
+    		{
+    			return m_iExtraRoundStunProb + pCommodore->m_iExtraRoundStunProb;
+    		}
+    	}
 	return m_iExtraRoundStunProb;
 }
 
@@ -32713,7 +33335,7 @@ void CvUnit::changeExtraRoundStunProb(int iChange)
 
 int CvUnit::roundStunProbTotal() const
 {
-	return std::max(0, m_pUnitInfo->getRoundStunProb() + getExtraRoundStunProb(isCommander()));
+	return std::max(0, m_pUnitInfo->getRoundStunProb() + getExtraRoundStunProb(isCommander(), isCommodore()));
 }
 
 int CvUnit::roundStunVSOpponentProbTotal(CvUnit* pOpponent) const
@@ -33748,6 +34370,14 @@ int CvUnit::captureProbabilityTotal() const
 			iData += pCommander->m_iExtraCaptureProbabilityModifier;
 		}
 	}
+	if (!isCommodore())
+    	{
+    		const CvUnit* pCommodore = getCommodore();
+    		if (pCommodore)
+    		{
+    			iData += pCommodore->m_iExtraCaptureProbabilityModifier;
+    		}
+    	}
 	iData += GET_PLAYER(getOwner()).getExtraNationalCaptureProbabilityModifier();
 
 	if (plot()->isCity(false, getTeam()))
@@ -33775,6 +34405,14 @@ int CvUnit::captureResistanceTotal() const
 			iData += pCommander->m_iExtraCaptureResistanceModifier;
 		}
 	}
+	if (!isCommodore())
+    	{
+    		const CvUnit* pCommodore = getCommodore();
+    		if (pCommodore)
+    		{
+    			iData += pCommodore->m_iExtraCaptureResistanceModifier;
+    		}
+    	}
 	iData += GET_PLAYER(getOwner()).getExtraNationalCaptureResistanceModifier();
 
 	if (plot()->isCity(false, getTeam()))
@@ -33802,6 +34440,14 @@ int CvUnit::breakdownChanceTotal() const
 			iData += pCommander->m_iExtraBreakdownChance;
 		}
 	}
+	if (!isCommodore())
+    	{
+    		const CvUnit* pCommodore = getCommodore();
+    		if (pCommodore)
+    		{
+    			iData += pCommodore->m_iExtraBreakdownChance;
+    		}
+    	}
 	return std::max(0, iData);
 }
 
@@ -33822,6 +34468,14 @@ int CvUnit::breakdownDamageTotal() const
 			iData += pCommander->m_iExtraBreakdownDamage;
 		}
 	}
+	if (!isCommodore())
+    	{
+    		const CvUnit* pCommodore = getCommodore();
+    		if (pCommodore)
+    		{
+    			iData += pCommodore->m_iExtraBreakdownDamage;
+    		}
+    	}
 	return std::max(0, iData);
 }
 
@@ -35001,6 +35655,14 @@ int CvUnit::getExtraBombardRate() const
 			return m_iExtraBombardRate + pCommander->m_iExtraBombardRate;
 		}
 	}
+	if (!isCommodore())
+    	{
+    		const CvUnit* pCommodore = getCommodore();
+    		if (pCommodore)
+    		{
+    			return m_iExtraBombardRate + pCommodore->m_iExtraBombardRate;
+    		}
+    	}
 	return m_iExtraBombardRate;
 }
 
@@ -35024,6 +35686,12 @@ int CvUnit::getBombardRate() const
 		{
 			return m_iSMBombardRate + pCommander->m_iExtraBombardRate;
 		}
+
+		const CvUnit* pCommodore = getCommodore();
+        if (pCommodore)
+        {
+        	return m_iSMBombardRate + pCommodore->m_iExtraBombardRate;
+        }
 		return m_iSMBombardRate;
 	}
 	return std::max(0, m_pUnitInfo->getBombardRate() + getExtraBombardRate());
@@ -35298,6 +35966,14 @@ int CvUnit::getExtraRBombardDamage() const
 			return m_iExtraRBombardDamage + pCommander->m_iExtraRBombardDamage;
 		}
 	}
+	if (!isCommodore())
+    {
+    	const CvUnit* pCommodore = getCommodore();
+    	if (pCommodore)
+    	{
+    		return m_iExtraRBombardDamage + pCommodore->m_iExtraRBombardDamage;
+    	}
+    }
 	return m_iExtraRBombardDamage;
 }
 
@@ -35366,6 +36042,14 @@ int CvUnit::getExtraRBombardDamageLimit() const
 			return m_iExtraRBombardDamageLimit + pCommander->m_iExtraRBombardDamageLimit;
 		}
 	}
+	if (!isCommodore())
+    	{
+    		const CvUnit* pCommodore = getCommodore();
+    		if (pCommodore)
+    		{
+    			return m_iExtraRBombardDamageLimit + pCommodore->m_iExtraRBombardDamageLimit;
+    		}
+    	}
 	return m_iExtraRBombardDamageLimit;
 }
 
@@ -35431,6 +36115,14 @@ int CvUnit::getExtraRBombardDamageMaxUnits() const
 			return m_iExtraRBombardDamageMaxUnits + pCommander->m_iExtraRBombardDamageMaxUnits;
 		}
 	}
+	if (!isCommodore())
+    	{
+    		const CvUnit* pCommodore = getCommodore();
+    		if (pCommodore)
+    		{
+    			return m_iExtraRBombardDamageMaxUnits + pCommodore->m_iExtraRBombardDamageMaxUnits;
+    		}
+    	}
 	return m_iExtraRBombardDamageMaxUnits;
 }
 
@@ -35487,6 +36179,14 @@ int CvUnit::getExtraDCMBombRange() const
 			return m_iExtraDCMBombRange + pCommander->m_iExtraDCMBombRange;
 		}
 	}
+	if (!isCommodore())
+    	{
+    		const CvUnit* pCommodore = getCommodore();
+    		if (pCommodore)
+    		{
+    			return m_iExtraDCMBombRange + pCommodore->m_iExtraDCMBombRange;
+    		}
+    	}
 	return m_iExtraDCMBombRange;
 }
 
@@ -35542,6 +36242,14 @@ int CvUnit::getExtraDCMBombAccuracy() const
 			return m_iExtraDCMBombAccuracy + pCommander->m_iExtraDCMBombAccuracy;
 		}
 	}
+	if (!isCommodore())
+    	{
+    		const CvUnit* pCommodore = getCommodore();
+    		if (pCommodore)
+    		{
+    			return m_iExtraDCMBombAccuracy + pCommodore->m_iExtraDCMBombAccuracy;
+    		}
+    	}
 	return m_iExtraDCMBombAccuracy;
 }
 
@@ -36228,6 +36936,14 @@ int CvUnit::getExtraVisibilityIntensityType(InvisibleTypes eIndex) const
 			return m_aiExtraVisibilityIntensity[eIndex] + pCommander->m_aiExtraVisibilityIntensity[eIndex];
 		}
 	}
+	if (!isCommodore())
+    	{
+    		const CvUnit* pCommodore = getCommodore();
+    		if (pCommodore)
+    		{
+    			return m_aiExtraVisibilityIntensity[eIndex] + pCommodore->m_aiExtraVisibilityIntensity[eIndex];
+    		}
+    	}
 	return m_aiExtraVisibilityIntensity[eIndex];
 }
 
@@ -36292,6 +37008,14 @@ int CvUnit::getExtraInvisibilityIntensityType(InvisibleTypes eIndex) const
 			return m_aiExtraInvisibilityIntensity[eIndex] + pCommander->m_aiExtraInvisibilityIntensity[eIndex];
 		}
 	}
+	if (!isCommodore())
+    	{
+    		const CvUnit* pCommodore = getCommodore();
+    		if (pCommodore)
+    		{
+    			return m_aiExtraInvisibilityIntensity[eIndex] + pCommodore->m_aiExtraInvisibilityIntensity[eIndex];
+    		}
+    	}
 	return m_aiExtraInvisibilityIntensity[eIndex];
 }
 
