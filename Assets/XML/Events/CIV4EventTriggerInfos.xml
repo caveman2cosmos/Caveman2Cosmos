@@ -7311,11 +7311,67 @@
 				</TriggerText>
 				<TriggerText>
 					<Text>TXT_KEY_EVENT_TRIGGER_FOREST_FIRE_2</Text>
-					<Era>NONE</Era>
+					<Era>C2C_ERA_ANCIENT</Era>
+				</TriggerText>
+				<TriggerText>
+					<Text>TXT_KEY_EVENT_TRIGGER_FOREST_FIRE_2</Text>
+					<Era>C2C_ERA_CLASSICAL</Era>
+				</TriggerText>
+				<TriggerText>
+					<Text>TXT_KEY_EVENT_TRIGGER_FOREST_FIRE_2</Text>
+					<Era>C2C_ERA_MEDIEVAL</Era>
+				</TriggerText>
+				<TriggerText>
+					<Text>TXT_KEY_EVENT_TRIGGER_FOREST_FIRE_2</Text>
+					<Era>C2C_ERA_RENAISSANCE</Era>
+				</TriggerText>
+				<TriggerText>
+					<Text>TXT_KEY_EVENT_TRIGGER_FOREST_FIRE_2</Text>
+					<Era>C2C_ERA_INDUSTRIAL</Era>
+				</TriggerText>
+				<TriggerText>
+					<Text>TXT_KEY_EVENT_TRIGGER_FOREST_FIRE_2</Text>
+					<Era>C2C_ERA_ATOMIC</Era>
+				</TriggerText>
+				<TriggerText>
+					<Text>TXT_KEY_EVENT_TRIGGER_FOREST_FIRE_2</Text>
+					<Era>C2C_ERA_INFORMATION</Era>
+				</TriggerText>
+				<TriggerText>
+					<Text>TXT_KEY_EVENT_TRIGGER_FOREST_FIRE_2</Text>
+					<Era>C2C_ERA_NANOTECH</Era>
 				</TriggerText>
 				<TriggerText>
 					<Text>TXT_KEY_EVENT_TRIGGER_FOREST_FIRE_3</Text>
-					<Era>NONE</Era>
+					<Era>C2C_ERA_ANCIENT</Era>
+				</TriggerText>
+				<TriggerText>
+					<Text>TXT_KEY_EVENT_TRIGGER_FOREST_FIRE_3</Text>
+					<Era>C2C_ERA_CLASSICAL</Era>
+				</TriggerText>
+				<TriggerText>
+					<Text>TXT_KEY_EVENT_TRIGGER_FOREST_FIRE_3</Text>
+					<Era>C2C_ERA_MEDIEVAL</Era>
+				</TriggerText>
+				<TriggerText>
+					<Text>TXT_KEY_EVENT_TRIGGER_FOREST_FIRE_3</Text>
+					<Era>C2C_ERA_RENAISSANCE</Era>
+				</TriggerText>
+				<TriggerText>
+					<Text>TXT_KEY_EVENT_TRIGGER_FOREST_FIRE_3</Text>
+					<Era>C2C_ERA_INDUSTRIAL</Era>
+				</TriggerText>
+				<TriggerText>
+					<Text>TXT_KEY_EVENT_TRIGGER_FOREST_FIRE_3</Text>
+					<Era>C2C_ERA_ATOMIC</Era>
+				</TriggerText>
+				<TriggerText>
+					<Text>TXT_KEY_EVENT_TRIGGER_FOREST_FIRE_3</Text>
+					<Era>C2C_ERA_INFORMATION</Era>
+				</TriggerText>
+				<TriggerText>
+					<Text>TXT_KEY_EVENT_TRIGGER_FOREST_FIRE_3</Text>
+					<Era>C2C_ERA_NANOTECH</Era>
 				</TriggerText>
 			</TriggerTexts>
 			<EventArt>Art/Event_Images/ForestFireEvent.dds</EventArt>
@@ -7391,6 +7447,10 @@
 				<Text>TXT_KEY_EVENTTRIGGER_CITY_RUINS</Text>
 			</WorldNewsTexts>
 			<TriggerTexts>
+				<TriggerText>
+					<Text>TXT_KEY_EVENT_TRIGGER_CITY_RUINS_PREHISTORIC_1</Text>
+					<Era>C2C_ERA_PREHISTORIC</Era>
+				</TriggerText>
 				<TriggerText>
 					<Text>TXT_KEY_EVENT_TRIGGER_CITY_RUINS_ANCIENT_1</Text>
 					<Era>C2C_ERA_ANCIENT</Era>
@@ -7485,7 +7545,15 @@
 			<TriggerTexts>
 				<TriggerText>
 					<Text>TXT_KEY_EVENT_TRIGGER_GREAT_STORY_1</Text>
-					<Era>NONE</Era>
+					<Era>C2C_ERA_PREHISTORIC</Era>
+				</TriggerText>
+				<TriggerText>
+					<Text>TXT_KEY_EVENT_TRIGGER_GREAT_STORY_2</Text>
+					<Era>C2C_ERA_ANCIENT</Era>
+				</TriggerText>
+				<TriggerText>
+					<Text>TXT_KEY_EVENT_TRIGGER_GREAT_STORY_3</Text>
+					<Era>C2C_ERA_CLASSICAL</Era>
 				</TriggerText>
 			</TriggerTexts>
 			<iPercentGamesActive>100</iPercentGamesActive>
@@ -7519,7 +7587,35 @@
 			<TriggerTexts>
 				<TriggerText>
 					<Text>TXT_KEY_EVENT_TRIGGER_COMMUNITY_BOND_1</Text>
-					<Era>NONE</Era>
+					<Era>C2C_ERA_PREHISTORIC</Era>
+				</TriggerText>
+				<TriggerText>
+					<Text>TXT_KEY_EVENT_TRIGGER_COMMUNITY_BOND_2</Text>
+					<Era>C2C_ERA_ANCIENT</Era>
+				</TriggerText>
+				<TriggerText>
+					<Text>TXT_KEY_EVENT_TRIGGER_COMMUNITY_BOND_3</Text>
+					<Era>C2C_ERA_CLASSICAL</Era>
+				</TriggerText>
+				<TriggerText>
+					<Text>TXT_KEY_EVENT_TRIGGER_COMMUNITY_BOND_4</Text>
+					<Era>C2C_ERA_MEDIEVAL</Era>
+				</TriggerText>
+				<TriggerText>
+					<Text>TXT_KEY_EVENT_TRIGGER_COMMUNITY_BOND_5</Text>
+					<Era>C2C_ERA_RENAISSANCE</Era>
+				</TriggerText>
+				<TriggerText>
+					<Text>TXT_KEY_EVENT_TRIGGER_COMMUNITY_BOND_6</Text>
+					<Era>C2C_ERA_INDUSTRIAL</Era>
+				</TriggerText>
+				<TriggerText>
+					<Text>TXT_KEY_EVENT_TRIGGER_COMMUNITY_BOND_7</Text>
+					<Era>C2C_ERA_ATOMIC</Era>
+				</TriggerText>
+				<TriggerText>
+					<Text>TXT_KEY_EVENT_TRIGGER_COMMUNITY_BOND_8</Text>
+					<Era>C2C_ERA_INFORMATION</Era>
 				</TriggerText>
 			</TriggerTexts>
 			<iPercentGamesActive>100</iPercentGamesActive>
@@ -7537,41 +7633,6 @@
 			<OrPreReqs>
 				<PrereqTech>TECH_ORAL_TRADITION</PrereqTech>
 			</OrPreReqs>
-			<ObsoleteTechs>
-				<ObsoleteTech>TECH_RENAISSANCE_LIFESTYLE</ObsoleteTech>
-			</ObsoleteTechs>
-			<bRecurring>1</bRecurring>
-		</EventTriggerInfo>
-
-		<EventTriggerInfo>
-			<Type>EVENTTRIGGER_BONUS_TAX</Type>
-			<WorldNewsTexts>
-				<Text>TXT_KEY_EVENTTRIGGER_BONUS_TAX</Text>
-			</WorldNewsTexts>
-			<TriggerTexts>
-				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_BONUS_TAX_1</Text>
-					<Era>NONE</Era>
-				</TriggerText>
-			</TriggerTexts>
-			<iPercentGamesActive>0</iPercentGamesActive>
-			<iWeight>5</iWeight>
-			<bProbabilityBuildingMultiply>1</bProbabilityBuildingMultiply>
-			<BuildingsRequired>
-				<Building>BUILDING_TAXPERSON</Building>
-			</BuildingsRequired>
-			<iNumBuildings>1</iNumBuildings>
-			<iNumPlotsRequired>1</iNumPlotsRequired>
-			<bOwnPlot>1</bOwnPlot>
-			<Events>
-				<Event>EVENT_BONUS_TAX_PREHISTORIC</Event>
-			</Events>
-			<OrPreReqs>
-				<PrereqTech>TECH_ARITHMETIC</PrereqTech>
-			</OrPreReqs>
-			<ObsoleteTechs>
-				<ObsoleteTech>TECH_CITY_PLANNING</ObsoleteTech>
-			</ObsoleteTechs>
 			<bRecurring>1</bRecurring>
 		</EventTriggerInfo>
 
@@ -7614,7 +7675,7 @@
             </WorldNewsTexts>
             <TriggerTexts>
                 <TriggerText>
-                    <Text>TXT_KEY_EVENT_TRIGGER_BONUS_TAX_1</Text>
+                    <Text>TXT_KEY_EVENT_TRIGGER_BONUS_TAX_2</Text>
                     <Era>NONE</Era>
                 </TriggerText>
             </TriggerTexts>
@@ -7646,7 +7707,7 @@
 			</WorldNewsTexts>
 			<TriggerTexts>
 				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_BONUS_TAX_1</Text>
+					<Text>TXT_KEY_EVENT_TRIGGER_BONUS_TAX_3</Text>
 					<Era>NONE</Era>
 				</TriggerText>
 			</TriggerTexts>
@@ -7859,7 +7920,7 @@
 			</TriggerTexts>
 			<EventArt>Art/Event_Images/WashedOutEvent.dds</EventArt>
 			<iPercentGamesActive>100</iPercentGamesActive>
-			<iWeight>18</iWeight>
+			<iWeight>16</iWeight>
 			<iNumPlotsRequired>1</iNumPlotsRequired>
 			<bOwnPlot>1</bOwnPlot>
 			<RoutesRequired>
@@ -15956,6 +16017,9 @@
 		</EventTriggerInfo>
 		<EventTriggerInfo>
 			<Type>EVENTTRIGGER_BLIZZARD</Type>
+		</EventTriggerInfo>
+		<EventTriggerInfo>
+			<Type>EVENTTRIGGER_BONUS_TAX</Type>
 		</EventTriggerInfo>
 		<!-- !SAVEBREAK -->
 	</EventTriggerInfos>
