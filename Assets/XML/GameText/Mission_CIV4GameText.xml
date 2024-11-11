@@ -582,6 +582,14 @@
 		<Russian>Полевой командир</Russian>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_MISSION_GREAT_COMMODORE</Tag>
+		<English>Sea commodore</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISSION_GREAT_COMMODORE_HELP</Tag>
+		<English>Sea commodore, will lose its ability to join cities make wonders, but will get the ability to earn experience promotions and lead naval units into battle.</English>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_MISSION_GREAT_COMMANDER_HELP</Tag>
 		<English>Turns the Great General into a Field Commander: it loses its abilities to join cities, units, or construct wonders, but acquires the ability to earn experience, gain promotions, and lead units in the field.</English>
 		<French>Converti le Général Illustre en Commandant de Terrain, qui perd la possibilité de s'associer aux Villes et Unités, mais peut acquérir de l'expérience et des promotions, et mener les Unités sur le terrain.</French>

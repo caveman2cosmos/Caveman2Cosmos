@@ -3183,6 +3183,10 @@
 		<Russian>Áîåâàÿ ìîðàëü</Russian>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_PROMOTIONLINE_MORALE_SHIPS</Tag>
+		<English>Ship Morale Promotion Line</English>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_NAVIGATION</Tag>
 		<English>Navigation Promotion Line</English>
 		<French>Spécialisation Navigation</French>
@@ -11190,6 +11194,10 @@
 		<German>Kampfmoral</German>
 		<Italian>Morale</Italian>
 		<Spanish>Moral</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROMOTION_SHIP_MORALE1</Tag>
+		<English>Ship Morale I</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_MORALE1</Tag>

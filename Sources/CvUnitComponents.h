@@ -31,6 +31,36 @@ private:
 	short m_iCommandRange;
 	bool m_bReady;
 };
+
+//------------------------------------------------------------------------------------------------------
+//  CLASS: UnitCompCommodore
+//------------------------------------------------------------------------------------------------------
+class UnitCompCommodore
+{
+public:
+	UnitCompCommodore(const CvUnit* unit, short iCP, short iCPL, short iCR);
+	UnitCompCommodore(const CvUnit* unit, CvUnitInfo* unitInfo);
+	~UnitCompCommodore();
+
+	void changeControlPoints(const int iChange);
+	void changeControlPointsLeft(const int iChange);
+	inline short getControlPoints() const { return m_iControlPoints; }
+	inline short getControlPointsLeft() const { return m_iControlPointsLeft; }
+	void restoreControlPoints();
+
+	inline bool isReady() const { return m_bReady; }
+
+	void changeCommandRange(const int iChange);
+	inline short getCommandRange() const { return m_iCommandRange; }
+
+private:
+	const CvUnit* m_unit;
+	short m_iControlPoints;
+	short m_iControlPointsLeft;
+	short m_iCommandRange;
+	bool m_bReady;
+};
+
 //------------------------------------------------------------------------------------------------------
 //  CLASS: UnitCompWorker
 //------------------------------------------------------------------------------------------------------

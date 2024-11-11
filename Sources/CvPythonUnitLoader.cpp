@@ -171,6 +171,10 @@ void CvPythonUnitLoader::CyUnitPythonInterface1(boost::python::class_<CyUnit>& i
 		.def("isCommander", &CyUnit::isCommander, "bool ()")
 		.def("getControlPointsLeft", &CyUnit::getControlPointsLeft, "int ()")
 		.def("getControlPoints", &CyUnit::getControlPoints, "int ()")
+		.def("setCommodore", &CyUnit::setCommodore, "void (bool bNewVal)")
+		.def("isCommodore", &CyUnit::isCommodore, "bool ()")
+		.def("getCommodoreControlPointsLeft", &CyUnit::getCommodoreControlPointsLeft, "int ()")
+		.def("getCommodoreControlPoints", &CyUnit::getCommodoreControlPoints, "int ()")
 		.def("getRealExperience", &CyUnit::getRealExperience, "float ()")
 
 		.def("captureProbabilityTotal", &CyUnit::captureProbabilityTotal, "int ()")

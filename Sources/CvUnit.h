@@ -521,6 +521,8 @@ protected:
 		m_commander;
 	UnitCompWorker*
 		m_worker;
+	UnitCompCommodore*
+        m_commodore;
 
 public:
 	bool isInBattle() const;
@@ -616,6 +618,17 @@ public:
 
 	CvUnit* getUsedCommander() const;
 	CvUnit* getLastCommander() const;
+
+	CvUnit* getCommodore() const;
+    void tryUseCommodore();
+    bool isCommodore() const;
+    bool isCommodoreReady() const;
+    void setCommodore(bool bNewVal);
+    void nullLastCommodore();
+   	UnitCompCommodore* getCommodoreComp() const;
+
+    CvUnit* getUsedCommodore() const;
+    CvUnit* getLastCommodore() const;
 
 	int getZoneOfControlCount() const;
 	bool isZoneOfControl() const;
@@ -960,9 +973,9 @@ public:
 	bool isNukeImmune() const;
 	bool isInquisitor() const;
 
-	int maxInterceptionProbability(bool bIgnoreCommanders = false) const;
+	int maxInterceptionProbability(bool bIgnoreCommanders = false, bool bIgnoreCommodores = false) const;
 	int currInterceptionProbability() const;
-	int evasionProbability(bool bIgnoreCommanders = false) const;
+	int evasionProbability(bool bIgnoreCommanders = false, bool bIgnoreCommodores = false) const;
 	int withdrawalProbability() const;
 //TB Combat Mods Begin
 	int attackCombatModifierTotal() const;
@@ -1233,10 +1246,10 @@ public:
 	int getExtraAirRange() const;
 	void changeExtraAirRange(int iChange);
 
-	int getExtraIntercept(bool bIgnoreCommanders = false) const;
+	int getExtraIntercept(bool bIgnoreCommanders = false,bool bIgnoreCommodores = false) const;
 	void changeExtraIntercept(int iChange);
 
-	int getExtraEvasion(bool bIgnoreCommanders = false) const;
+	int getExtraEvasion(bool bIgnoreCommanders = false, bool bIgnoreCommodores = false) const;
 	void changeExtraEvasion(int iChange);
 
 	int getExtraFirstStrikes() const;
@@ -1245,35 +1258,35 @@ public:
 	int getExtraChanceFirstStrikes() const;
 	void changeExtraChanceFirstStrikes(int iChange);
 
-	int getExtraWithdrawal(bool bIgnoreCommanders = false) const;
+	int getExtraWithdrawal(bool bIgnoreCommanders = false, bool bIgnoreCommodores = false) const;
 	void changeExtraWithdrawal(int iChange);
 
 	//TB Combat Mods Start
-	int getExtraAttackCombatModifier (bool bIgnoreCommanders = false) const;
+	int getExtraAttackCombatModifier (bool bIgnoreCommanders = false, bool bIgnoreCommodores = false) const;
 	void changeExtraAttackCombatModifier (int iChange);
 
-	int getExtraDefenseCombatModifier (bool bIgnoreCommanders = false) const;
+	int getExtraDefenseCombatModifier (bool bIgnoreCommanders = false, bool bIgnoreCommodores = false) const;
 	void changeExtraDefenseCombatModifier (int iChange);
 
-	int getExtraPursuit (bool bIgnoreCommanders = false) const;
+	int getExtraPursuit (bool bIgnoreCommanders = false, bool bIgnoreCommodores = false) const;
 	void changeExtraPursuit (int iChange);
 
-	int getExtraEarlyWithdraw (bool bIgnoreCommanders = false) const;
+	int getExtraEarlyWithdraw (bool bIgnoreCommanders = false, bool bIgnoreCommodores = false) const;
 	void changeExtraEarlyWithdraw (int iChange);
 
-	int getExtraVSBarbs (bool bIgnoreCommanders = false) const;
+	int getExtraVSBarbs (bool bIgnoreCommanders = false, bool bIgnoreCommodores = false) const;
 	void changeExtraVSBarbs (int iChange);
 
-	int getExtraReligiousCombatModifier(bool bIgnoreCommanders = false) const;
+	int getExtraReligiousCombatModifier(bool bIgnoreCommanders = false, bool bIgnoreCommodores = false) const;
 	void changeExtraReligiousCombatModifier(int iChange);
 
-	int getExtraArmor (bool bIgnoreCommanders = false) const;
+	int getExtraArmor (bool bIgnoreCommanders = false,bool bIgnoreCommodores = false) const;
 	void changeExtraArmor (int iChange);
 
-	int getExtraPuncture (bool bIgnoreCommanders = false) const;
+	int getExtraPuncture (bool bIgnoreCommanders = false, bool bIgnoreCommodores = false) const;
 	void changeExtraPuncture (int iChange);
 
-	int getExtraDamageModifier (bool bIgnoreCommanders = false) const;
+	int getExtraDamageModifier (bool bIgnoreCommanders = false, bool bIgnoreCommodores = false) const;
 	void changeExtraDamageModifier (int iChange);
 
 	void changeExtraUpkeep100(const int iChange);
@@ -1286,10 +1299,10 @@ public:
 	int getUpkeepMultiplierSM() const;
 	int getUpkeep100() const;
 
-	int getExtraOverrun(bool bIgnoreCommanders = false) const;
+	int getExtraOverrun(bool bIgnoreCommanders = false, bool bIgnoreCommodores = false) const;
 	void changeExtraOverrun (int iChange);
 
-	int getExtraRepel(bool bIgnoreCommanders = false) const;
+	int getExtraRepel(bool bIgnoreCommanders = false, bool bIgnoreCommodores = false) const;
 	void changeExtraRepel (int iChange);
 
 	int getExtraFortRepel() const;
@@ -1298,13 +1311,13 @@ public:
 	int getExtraRepelRetries() const;
 	void changeExtraRepelRetries (int iChange);
 
-	int getExtraUnyielding (bool bIgnoreCommanders = false) const;
+	int getExtraUnyielding (bool bIgnoreCommanders = false, bool bIgnoreCommodores = false) const;
 	void changeExtraUnyielding (int iChange);
 
-	int getExtraKnockback (bool bIgnoreCommanders = false) const;
+	int getExtraKnockback (bool bIgnoreCommanders = false, bool bIgnoreCommodores = false) const;
 	void changeExtraKnockback (int iChange);
 
-	int getExtraKnockbackRetries (bool bIgnoreCommanders = false) const;
+	int getExtraKnockbackRetries (bool bIgnoreCommanders = false, bool bIgnoreCommodores = false) const;
 	void changeExtraKnockbackRetries (int iChange);
 
 	int getStampedeCount() const;
@@ -1332,16 +1345,16 @@ public:
 	void changeExtraStrAdjperDef(int iChange);
 	void changeExtraWithdrawAdjperAtt(int iChange);
 
-	int getExtraUnnerve (bool bIgnoreCommanders = false) const;
+	int getExtraUnnerve (bool bIgnoreCommanders = false, bool bIgnoreCommodores = false) const;
 	void changeExtraUnnerve (int iChange);
 
-	int getExtraEnclose (bool bIgnoreCommanders = false) const;
+	int getExtraEnclose (bool bIgnoreCommanders = false, bool bIgnoreCommodores = false) const;
 	void changeExtraEnclose (int iChange);
 
-	int getExtraLunge (bool bIgnoreCommanders = false) const;
+	int getExtraLunge (bool bIgnoreCommanders = false, bool bIgnoreCommodores = false) const;
 	void changeExtraLunge (int iChange);
 
-	int getExtraDynamicDefense (bool bIgnoreCommanders = false) const;
+	int getExtraDynamicDefense (bool bIgnoreCommanders = false, bool bIgnoreCommodores = false) const;
 	void changeExtraDynamicDefense (int iChange);
 
 	int getExtraStrength () const;
@@ -1361,34 +1374,34 @@ public:
 	bool hasExtraCureAffliction(PromotionLineTypes ePromotionLineType) const;
 	void changeCureAfflictionCount(PromotionLineTypes ePromotionLineType, int iChange);
 
-	int getExtraFortitude (bool bIgnoreCommanders = false) const;
+	int getExtraFortitude (bool bIgnoreCommanders = false, bool bIgnoreCommodores = false) const;
 	void changeExtraFortitude (int iChange);
 
-	int getExtraDodgeModifier (bool bIgnoreCommanders = false) const;
+	int getExtraDodgeModifier (bool bIgnoreCommanders = false, bool bIgnoreCommodores = false) const;
 	void changeExtraDodgeModifier (int iChange);
 
-	int getExtraPrecisionModifier (bool bIgnoreCommanders = false) const;
+	int getExtraPrecisionModifier (bool bIgnoreCommanders = false, bool bIgnoreCommodores = false) const;
 	void changeExtraPrecisionModifier (int iChange);
 
-	int getExtraPowerShots (bool bIgnoreCommanders = false) const;
+	int getExtraPowerShots (bool bIgnoreCommanders = false, bool bIgnoreCommodores = false) const;
 	void changeExtraPowerShots (int iChange);
 
-	int getExtraPowerShotCombatModifier (bool bIgnoreCommanders = false) const;
+	int getExtraPowerShotCombatModifier (bool bIgnoreCommanders = false, bool bIgnoreCommodores = false) const;
 	void changeExtraPowerShotCombatModifier (int iChange);
 
-	int getExtraPowerShotPunctureModifier (bool bIgnoreCommanders = false) const;
+	int getExtraPowerShotPunctureModifier (bool bIgnoreCommanders = false, bool bIgnoreCommodores = false) const;
 	void changeExtraPowerShotPunctureModifier (int iChange);
 
-	int getExtraPowerShotPrecisionModifier (bool bIgnoreCommanders = false) const;
+	int getExtraPowerShotPrecisionModifier (bool bIgnoreCommanders = false, bool bIgnoreCommodores = false) const;
 	void changeExtraPowerShotPrecisionModifier (int iChange);
 
-	int getExtraPowerShotCriticalModifier (bool bIgnoreCommanders = false) const;
+	int getExtraPowerShotCriticalModifier (bool bIgnoreCommanders = false, bool bIgnoreCommodores = false) const;
 	void changeExtraPowerShotCriticalModifier (int iChange);
 
-	int getExtraCriticalModifier (bool bIgnoreCommanders = false) const;
+	int getExtraCriticalModifier (bool bIgnoreCommanders = false, bool bIgnoreCommodores = false) const;
 	void changeExtraCriticalModifier (int iChange);
 
-	int getExtraEndurance (bool bIgnoreCommanders = false) const;
+	int getExtraEndurance (bool bIgnoreCommanders = false, bool bIgnoreCommodores = false) const;
 	void changeExtraEndurance (int iChange);
 
 	int getDealColdDamageCount() const;
@@ -1401,7 +1414,7 @@ public:
 	bool mayColdImmune() const;
 	void changeColdImmuneCount(int iChange);
 
-	int getExtraPoisonProbabilityModifier (bool bIgnoreCommanders = false) const;
+	int getExtraPoisonProbabilityModifier (bool bIgnoreCommanders = false, bool bIgnoreCommodores = false) const;
 	void changeExtraPoisonProbabilityModifier (int iChange);
 	//TB Combat Mods End
 
@@ -1547,7 +1560,7 @@ public:
 	int featureWorkPercent(FeatureTypes eIndex) const;
 	int buildWorkPercent(BuildTypes eIndex) const;
 
-	int getExtraUnitCombatModifier(UnitCombatTypes eIndex, const bool bIntrinsic = true) const;
+	int getExtraUnitCombatModifier(UnitCombatTypes eIndex, const bool bCommander = true, const bool bCommodore = true) const;
 	void changeExtraUnitCombatModifier(UnitCombatTypes eIndex, int iChange);
 	//TB Combat Mods (adjusted the following line to include ", bool bEquip = false, bool bAfflict = false, bool bPromote = false"
 	bool canAcquirePromotion(PromotionTypes ePromotion, PromotionRequirements::flags requirements) const;
@@ -1727,6 +1740,9 @@ protected:
 	mutable int m_iCommanderID; //id of commander. used for game save/load
 	int m_iUsedCommanderID;
 	mutable int m_iCommanderCacheTurn;
+	mutable int m_iCommodoreID; //id of commodore. used for game save/load
+    int m_iUsedCommodoreID;
+    mutable int m_iCommodoreCacheTurn;
 #define	NO_COMMANDER_ID	-2	//	Pseudo-id used to signify an assertion that the unit has no commander
 	int m_iPreCombatDamage;
 
@@ -2159,19 +2175,19 @@ public:
 	int getCityLongRangeSupportPercentModifier() const;
 	int getCityFlankSupportPercentModifier() const;
 
-	int getExtraFrontSupportPercent (bool bIgnoreCommanders = false) const;
+	int getExtraFrontSupportPercent (bool bIgnoreCommanders = false, bool bIgnoreCommodores = false) const;
 	void changeExtraFrontSupportPercent (int iChange);
 
-	int getExtraShortRangeSupportPercent (bool bIgnoreCommanders = false) const;
+	int getExtraShortRangeSupportPercent (bool bIgnoreCommanders = false, bool bIgnoreCommodores = false) const;
 	void changeExtraShortRangeSupportPercent (int iChange);
 
-	int getExtraMediumRangeSupportPercent (bool bIgnoreCommanders = false) const;
+	int getExtraMediumRangeSupportPercent (bool bIgnoreCommanders = false, bool bIgnoreCommodores = false) const;
 	void changeExtraMediumRangeSupportPercent (int iChange);
 
-	int getExtraLongRangeSupportPercent (bool bIgnoreCommanders = false) const;
+	int getExtraLongRangeSupportPercent (bool bIgnoreCommanders = false, bool bIgnoreCommodores = false) const;
 	void changeExtraLongRangeSupportPercent (int iChange);
 
-	int getExtraFlankSupportPercent (bool bIgnoreCommanders = false) const;
+	int getExtraFlankSupportPercent (bool bIgnoreCommanders = false, bool bIgnoreCommodores = false) const;
 	void changeExtraFlankSupportPercent (int iChange);
 
 	int frontSupportPercentTotal() const;
@@ -2294,58 +2310,58 @@ public:
 	void statusUpdate(PromotionTypes eStatus);
 
 	int flankingStrengthbyUnitCombatTotal(UnitCombatTypes eCombatType) const;
-	int getExtraFlankingStrengthbyUnitCombatType(UnitCombatTypes eIndex, const bool bIntrinsic = true) const;
+	int getExtraFlankingStrengthbyUnitCombatType(UnitCombatTypes eIndex, const bool bCommander = true, const bool bCommodore = true) const;
 	void changeExtraFlankingStrengthbyUnitCombatType(UnitCombatTypes eIndex, int iChange);
 
 	int withdrawOnTerrainTotal(TerrainTypes eTerrainType) const;
-	int getExtraWithdrawOnTerrainType(TerrainTypes eIndex, const bool bIntrinsic = true) const;
+	int getExtraWithdrawOnTerrainType(TerrainTypes eIndex, const bool bCommander = true, const bool bCommodore = true) const;
 	void changeExtraWithdrawOnTerrainType(TerrainTypes eIndex, int iChange);
 
 	int withdrawOnFeatureTotal(FeatureTypes eFeatureType) const;
-	int getExtraWithdrawOnFeatureType(FeatureTypes eIndex, const bool bIntrinsic = true) const;
+	int getExtraWithdrawOnFeatureType(FeatureTypes eIndex, const bool bCommander = true, const bool bCommodore = true) const;
 	void changeExtraWithdrawOnFeatureType(FeatureTypes eIndex, int iChange);
 
 	int withdrawVSUnitCombatTotal(UnitCombatTypes eCombatType) const;
-	int getExtraWithdrawVSUnitCombatType(UnitCombatTypes eIndex, const bool bIntrinsic = true) const;
+	int getExtraWithdrawVSUnitCombatType(UnitCombatTypes eIndex, const bool bCommander = true, const bool bCommodore = true) const;
 	void changeExtraWithdrawVSUnitCombatType(UnitCombatTypes eIndex, int iChange);
 
 	int pursuitVSUnitCombatTotal(UnitCombatTypes eCombatType) const;
-	int getExtraPursuitVSUnitCombatType(UnitCombatTypes eIndex, const bool bIntrinsic = true) const;
+	int getExtraPursuitVSUnitCombatType(UnitCombatTypes eIndex, const bool bCommander = true, const bool bCommodore = true) const;
 	void changeExtraPursuitVSUnitCombatType(UnitCombatTypes eIndex, int iChange);
 
 	int repelVSUnitCombatTotal(UnitCombatTypes eCombatType) const;
-	int getExtraRepelVSUnitCombatType(UnitCombatTypes eIndex, const bool bIntrinsic = true) const;
+	int getExtraRepelVSUnitCombatType(UnitCombatTypes eIndex, const bool bCommander = true, const bool bCommodore = true) const;
 	void changeExtraRepelVSUnitCombatType(UnitCombatTypes eIndex, int iChange);
 
 	int knockbackVSUnitCombatTotal(UnitCombatTypes eCombatType) const;
-	int getExtraKnockbackVSUnitCombatType(UnitCombatTypes eIndex, const bool bIntrinsic = true) const;
+	int getExtraKnockbackVSUnitCombatType(UnitCombatTypes eIndex, const bool bCommander = true, const bool bCommodore = true) const;
 	void changeExtraKnockbackVSUnitCombatType(UnitCombatTypes eIndex, int iChange);
 
 	int punctureVSUnitCombatTotal(UnitCombatTypes eCombatType) const;
-	int getExtraPunctureVSUnitCombatType(UnitCombatTypes eIndex, const bool bIntrinsic = true) const;
+	int getExtraPunctureVSUnitCombatType(UnitCombatTypes eIndex, const bool bCommander = true, const bool bCommodore = true) const;
 	void changeExtraPunctureVSUnitCombatType(UnitCombatTypes eIndex, int iChange);
 
 	int armorVSUnitCombatTotal(UnitCombatTypes eCombatType) const;
-	int getExtraArmorVSUnitCombatType(UnitCombatTypes eIndex, const bool bIntrinsic = true) const;
+	int getExtraArmorVSUnitCombatType(UnitCombatTypes eIndex, const bool bCommander = true, const bool bCommodore = true) const;
 	void changeExtraArmorVSUnitCombatType(UnitCombatTypes eIndex, int iChange);
 
 	int dodgeVSUnitCombatTotal(UnitCombatTypes eCombatType) const;
-	int getExtraDodgeVSUnitCombatType(UnitCombatTypes eIndex, const bool bIntrinsic = true) const;
+	int getExtraDodgeVSUnitCombatType(UnitCombatTypes eIndex, const bool bCommander = true, const bool bCommodore = true) const;
 	void changeExtraDodgeVSUnitCombatType(UnitCombatTypes eIndex, int iChange);
 
 	int precisionVSUnitCombatTotal(UnitCombatTypes eCombatType) const;
-	int getExtraPrecisionVSUnitCombatType(UnitCombatTypes eIndex, const bool bIntrinsic = true) const;
+	int getExtraPrecisionVSUnitCombatType(UnitCombatTypes eIndex, const bool bCommander = true, const bool bCommodore = true) const;
 	void changeExtraPrecisionVSUnitCombatType(UnitCombatTypes eIndex, int iChange);
 
 	int criticalVSUnitCombatTotal(UnitCombatTypes eCombatType) const;
-	int getExtraCriticalVSUnitCombatType(UnitCombatTypes eIndex, const bool bIntrinsic = true) const;
+	int getExtraCriticalVSUnitCombatType(UnitCombatTypes eIndex, const bool bCommander = true, const bool bCommodore = true) const;
 	void changeExtraCriticalVSUnitCombatType(UnitCombatTypes eIndex, int iChange);
 
 	int roundStunVSUnitCombatTotal(UnitCombatTypes eCombatType) const;
-	int getExtraRoundStunVSUnitCombatType(UnitCombatTypes eIndex, const bool bIntrinsic = true) const;
+	int getExtraRoundStunVSUnitCombatType(UnitCombatTypes eIndex, const bool bCommander = true, const bool bCommodore = true) const;
 	void changeExtraRoundStunVSUnitCombatType(UnitCombatTypes eIndex, int iChange);
 
-	int getExtraRoundStunProb(const bool bIntrinsic = true) const;
+	int getExtraRoundStunProb(const bool bCommander = true, const bool bCommodore = true) const;
 	void changeExtraRoundStunProb(int iChange);
 	int roundStunProbTotal() const;
 
@@ -3016,6 +3032,7 @@ public:
 		DECLARE_MAP_FUNCTOR_CONST(CvUnit, bool, alwaysInvisible);
 		DECLARE_MAP_FUNCTOR_CONST(CvUnit, bool, IsSelected);
 		DECLARE_MAP_FUNCTOR_CONST(CvUnit, bool, isCommander);
+		DECLARE_MAP_FUNCTOR_CONST(CvUnit, bool, isCommodore);
 		DECLARE_MAP_FUNCTOR_CONST(CvUnit, bool, isGoldenAge);
 		DECLARE_MAP_FUNCTOR_CONST(CvUnit, bool, isBlockading);
 		DECLARE_MAP_FUNCTOR_CONST(CvUnit, bool, isSpy);
