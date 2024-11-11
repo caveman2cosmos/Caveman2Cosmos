@@ -7316,6 +7316,16 @@
 			<iControlPoints>10</iControlPoints>
 		</PromotionInfo>
 		<PromotionInfo>
+			<Type>PROMOTION_SHIP_MORALE1</Type>
+			<Description>TXT_KEY_PROMOTION_SHIP_MORALE1</Description>
+			<Sound>AS2D_IF_LEVELUP</Sound>
+			<PromotionLine>PROMOTIONLINE_MORALE_SHIPS</PromotionLine>
+			<iLinePriority>1</iLinePriority>
+			<iCombatPercent>10</iCombatPercent>
+			<Button>Art/Interface/Buttons/promotions/shipMorale1.dds</Button>
+			<iCaptureResistanceModifierChange>5</iCaptureResistanceModifierChange>
+		</PromotionInfo>
+		<PromotionInfo>
 			<Type>PROMOTION_MORALE1</Type>
 			<Description>TXT_KEY_PROMOTION_MORALE1</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>

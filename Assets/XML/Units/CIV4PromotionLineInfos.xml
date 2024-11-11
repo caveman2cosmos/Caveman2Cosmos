@@ -946,6 +946,14 @@
 			</UnitCombatPrereqTypes>
 		</PromotionLineInfo>
 		<PromotionLineInfo>
+			<Type>PROMOTIONLINE_MORALE_SHIPS</Type>
+			<Description>TXT_KEY_PROMOTIONLINE_MORALE_SHIPS</Description>
+			<Button>Art/Interface/Buttons/promotions/shipMorale1.dds</Button>
+			<UnitCombatPrereqTypes>
+				<UnitCombatPrereqType>UNITCOMBAT_COMMODORE</UnitCombatPrereqType>
+			</UnitCombatPrereqTypes>
+		</PromotionLineInfo>
+		<PromotionLineInfo>
 			<Type>PROMOTIONLINE_OPERATIONS</Type>
 			<Description>TXT_KEY_PROMOTIONLINE_OPERATIONS</Description>
 			<Button>Art/Interface/Buttons/promotions/operations1.dds</Button>
