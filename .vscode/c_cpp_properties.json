@@ -16,7 +16,8 @@
         "_DEBUG",
         "_UNICODE",
         "_MSC_VER=900",
-        "FP_PROFILE_EXTRA_ENABLE"
+        "FP_PROFILE_EXTRA_ENABLE",
+        "_MOD_FRACTRADE"
       ],
       "windowsSdkVersion": "10.0.22621.0",
       "cStandard": "c99",
