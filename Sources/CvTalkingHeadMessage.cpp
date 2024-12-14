@@ -210,7 +210,7 @@ int CvTalkingHeadMessage::getExpireTurn() const
 	case MESSAGE_TYPE_CHAT:
 		iExpireTurn += 20;
 		break;
-    case MESSAGE_TYPE_COMBAT_MESSAGE:
+	case MESSAGE_TYPE_COMBAT_MESSAGE:
 		iExpireTurn += 20;
 		break;
 	case MESSAGE_TYPE_MINOR_EVENT:
