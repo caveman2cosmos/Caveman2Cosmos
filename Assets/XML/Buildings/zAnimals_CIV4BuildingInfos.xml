@@ -19,6 +19,10 @@
 				<BuildingType>BUILDING_ZOO</BuildingType>
 			</PrereqOrBuildings>
 			<iCost>306</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>0</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
@@ -65,6 +69,10 @@
 			<ConstructSound>AS2D_BUILD_STABLE</ConstructSound>
 			<PrereqTech>TECH_SPECIALIZATION</PrereqTech>
 			<iCost>176</iCost>
+			<iCostSizeModifier>2</iCostSizeModifier>
+			<iCostCountModifier>0</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>2</iCostComplexityModifier>
 			<iAsset>4</iAsset>
 			<Flavors>
 				<Flavor>
@@ -134,6 +142,10 @@
 				<BuildingType>BUILDING_MILITARY_STANDARD_ANIMAL_MASCOT</BuildingType>
 			</PrereqInCityBuildings>
 			<iCost>92</iCost>
+			<iCostSizeModifier>0</iCostSizeModifier>
+			<iCostCountModifier>2</iCostCountModifier>
+			<iCostMaterialsModifier>0</iCostMaterialsModifier>
+			<iCostComplexityModifier>0</iCostComplexityModifier>
 			<ObsoleteTech>TECH_AVIATION</ObsoleteTech>
 			<UnitProductionModifiers>
 				<UnitProductionModifier>
@@ -186,6 +198,10 @@
 				<Type>HERITAGE_FOLKLORE_BEAVER</Type>
 			</PrereqOrHeritage>
 			<iCost>70</iCost>
+			<iCostSizeModifier>0</iCostSizeModifier>
+			<iCostCountModifier>2</iCostCountModifier>
+			<iCostMaterialsModifier>0</iCostMaterialsModifier>
+			<iCostComplexityModifier>0</iCostComplexityModifier>
 			<ObsoleteTech>TECH_AVIATION</ObsoleteTech>
 			<UnitCombatProdModifiers>
 				<UnitCombatProdModifier>
@@ -215,6 +231,10 @@
 				<Type>HERITAGE_TAXON_MUSTELOIDEA</Type>
 			</PrereqOrHeritage>
 			<iCost>306</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>0</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<iHappiness>1</iHappiness>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -252,6 +272,10 @@
 				<BuildingType>BUILDING_GOVERNORS_MENAGERIE</BuildingType>
 			</PrereqOrBuildings>
 			<iCost>306</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>0</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<iHappiness>1</iHappiness>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -299,6 +323,10 @@
 				<Type>HERITAGE_TAXON_PANTHERINAE</Type>
 			</PrereqOrHeritage>
 			<iCost>306</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>0</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<iHappiness>1</iHappiness>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -374,6 +402,10 @@
 				</And>
 			</ConstructCondition>
 			<iCost>306</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>0</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<iHappiness>1</iHappiness>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -438,6 +470,10 @@
 				<Type>HERITAGE_TAXON_MARSUPIALIA</Type>
 			</PrereqOrHeritage>
 			<iCost>306</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>0</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<ObsoleteTech>TECH_ADVANCED_AVIATION</ObsoleteTech>
 			<iHappiness>1</iHappiness>
 			<CommerceChanges>
@@ -494,6 +530,10 @@
 				<BuildingType>BUILDING_MEAT_INDUSTRY_CONGLOMERATE</BuildingType>
 			</PrereqOrBuildings>
 			<iCost>92</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<CommerceChanges>
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
@@ -556,6 +596,10 @@
 			<ConstructSound>AS2D_BUILD_CARNIVAL</ConstructSound>
 			<PrereqTech>TECH_TRADE</PrereqTech>
 			<iCost>153</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<iHappiness>1</iHappiness>
 			<CommerceModifiers>
 				<iCommerce>0</iCommerce>
@@ -751,6 +795,10 @@
 				<BuildingType>BUILDING_CENTER_FOR_SHARK_STUDIES</BuildingType>
 			</PrereqNotInCityBuildings>
 			<iCost>1260</iCost>
+			<iCostSizeModifier>2</iCostSizeModifier>
+			<iCostCountModifier>0</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>2</iCostComplexityModifier>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>2</iCommerce>
@@ -791,6 +839,10 @@
 				<BuildingType>BUILDING_CENTER_FOR_SHARK_STUDIES</BuildingType>
 			</PrereqNotInCityBuildings>
 			<iCost>1260</iCost>
+			<iCostSizeModifier>2</iCostSizeModifier>
+			<iCostCountModifier>0</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>2</iCostComplexityModifier>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>2</iCommerce>
@@ -858,6 +910,10 @@
 				</And>
 			</ConstructCondition>
 			<iCost>3690</iCost>
+			<iCostSizeModifier>3</iCostSizeModifier>
+			<iCostCountModifier>0</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<YieldChanges>
 				<iYield>4</iYield>
 			</YieldChanges>
@@ -916,6 +972,10 @@
 				<BuildingType>BUILDING_FOLKLORE_CRAB</BuildingType>
 			</PrereqInCityBuildings>
 			<iCost>3690</iCost>
+			<iCostSizeModifier>0</iCostSizeModifier>
+			<iCostCountModifier>2</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<iHappiness>1</iHappiness>
 			<YieldChanges>
 				<iYield>4</iYield>
@@ -944,6 +1004,10 @@
 				<BuildingType>BUILDING_FOLKLORE_T_BEAR</BuildingType>
 			</PrereqInCityBuildings>
 			<iCost>306</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>0</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<ObsoleteTech>TECH_ADVANCED_AVIATION</ObsoleteTech>
 			<iHappiness>1</iHappiness>
 			<CommerceChanges>
@@ -1004,6 +1068,10 @@
 				<BuildingType>BUILDING_REPET</BuildingType>
 			</PrereqOrBuildings>
 			<iCost>92</iCost>
+			<iCostSizeModifier>2</iCostSizeModifier>
+			<iCostCountModifier>0</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<UnitCombatFreeExperiences>
 				<UnitCombatFreeExperience>
 					<UnitCombatType>UNITCOMBAT_ANIMAL</UnitCombatType>
@@ -1078,6 +1146,10 @@
 			<iAsset>2</iAsset>
 			<iPower>2</iPower>
 			<iCost>184</iCost>
+			<iCostSizeModifier>0</iCostSizeModifier>
+			<iCostCountModifier>2</iCostCountModifier>
+			<iCostMaterialsModifier>0</iCostMaterialsModifier>
+			<iCostComplexityModifier>0</iCostComplexityModifier>
 			<PrereqTech>TECH_POULTRY_DOMESTICATION</PrereqTech>
 			<FreeBuilding>BUILDING_FLOCKS_OF_DUCK</FreeBuilding>
 			<bNeverCapture>1</bNeverCapture>
@@ -1215,6 +1287,10 @@
 				<BuildingType>BUILDING_ZOO</BuildingType>
 			</PrereqOrBuildings>
 			<iCost>306</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>0</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<iHappiness>1</iHappiness>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -1314,6 +1390,10 @@
 				</And>
 			</ConstructCondition>
 			<iCost>292</iCost>
+			<iCostSizeModifier>2</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<iHappiness>1</iHappiness>
 			<YieldChanges>
 				<iYield>1</iYield>
@@ -1343,6 +1423,10 @@
 				<Type>HERITAGE_FOLKLORE_PLATYPUS</Type>
 			</PrereqOrHeritage>
 			<iCost>850</iCost>
+			<iCostSizeModifier>2</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<ObsoleteTech>TECH_VERTICAL_FLIGHT</ObsoleteTech>
 			<CommerceChanges>
 				<iCommerce>1</iCommerce>
@@ -1448,6 +1532,10 @@
 			<FreeStartEra>C2C_ERA_CLASSICAL</FreeStartEra>
 			<PrereqTech>TECH_MONARCHY</PrereqTech>
 			<iCost>300</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>0</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<Bonus>BONUS_BRICKS</Bonus>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_GOVERNORS_PETS</BuildingType>
@@ -1482,6 +1570,10 @@
 			<FreeStartEra>C2C_ERA_ANCIENT</FreeStartEra>
 			<PrereqTech>TECH_CHIEFDOM</PrereqTech>
 			<iCost>120</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>0</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<iHappiness>1</iHappiness>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -1567,6 +1659,10 @@
 				<BuildingType>BUILDING_MASTER_HUNTER_TRADITION</BuildingType>
 			</PrereqOrBuildings>
 			<iCost>320</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>0</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<YieldChanges>
 				<iYield>1</iYield>
 			</YieldChanges>
@@ -1656,6 +1752,10 @@
 				<BuildingType>BUILDING_FOLKLORE_T_FISH</BuildingType>
 			</PrereqInCityBuildings>
 			<iCost>1260</iCost>
+			<iCostSizeModifier>2</iCostSizeModifier>
+			<iCostCountModifier>0</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>2</iCostComplexityModifier>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
@@ -1681,6 +1781,10 @@
 				<Type>HERITAGE_TAXON_MARSUPIALIA</Type>
 			</PrereqOrHeritage>
 			<iCost>306</iCost>
+			<iCostSizeModifier>2</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -1940,6 +2044,10 @@
 			<ArtDefineTag>ART_DEF_BUILDING_ANIMAL_TRAINER_DONKEY</ArtDefineTag>
 			<PrereqTech>TECH_EQUINE_DOMESTICATION</PrereqTech>
 			<iCost>92</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -2012,6 +2120,10 @@
 				<BuildingType>BUILDING_FOLKLORE_GIANT_SQUID</BuildingType>
 			</PrereqOrBuildings>
 			<iCost>264</iCost>
+			<iCostSizeModifier>0</iCostSizeModifier>
+			<iCostCountModifier>2</iCostCountModifier>
+			<iCostMaterialsModifier>0</iCostMaterialsModifier>
+			<iCostComplexityModifier>0</iCostComplexityModifier>
 			<iConquestProb>25</iConquestProb>
 			<iAsset>2</iAsset>
 			<UnitCombatFreeExperiences>
@@ -2048,6 +2160,10 @@
 				<Type>HERITAGE_FOLKLORE_TASMANIAN_DEVIL</Type>
 			</PrereqOrHeritage>
 			<iCost>1600</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>0</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -2246,6 +2362,10 @@
 				<BuildingType>BUILDING_FOLKLORE_PEACOCK</BuildingType>
 			</PrereqInCityBuildings>
 			<iCost>184</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>0</iCostMaterialsModifier>
+			<iCostComplexityModifier>0</iCostComplexityModifier>
 			<FreeBuilding>BUILDING_FLOCKS_OF_PEACOCK</FreeBuilding>
 			<bNeverCapture>1</bNeverCapture>
 			<YieldChanges>
@@ -2304,6 +2424,10 @@
 				<BuildingType>BUILDING_FOLKLORE_DUCK</BuildingType>
 			</PrereqOrBuildings>
 			<iCost>184</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>0</iCostMaterialsModifier>
+			<iCostComplexityModifier>0</iCostComplexityModifier>
 			<ExtraFreeBonuses>
 				<ExtraFreeBonus>
 					<FreeBonus>BONUS_POULTRY</FreeBonus>
@@ -2341,6 +2465,10 @@
 				<BuildingType>BUILDING_FOLKLORE_T_OLD_MAN_OF_THE_FOREST</BuildingType>
 			</PrereqInCityBuildings>
 			<iCost>306</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>0</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -2461,6 +2589,10 @@
 				<Type>HERITAGE_TAXON_REPTILIA</Type>
 			</PrereqOrHeritage>
 			<iCost>306</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>0</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -2497,6 +2629,10 @@
 				<Type>HERITAGE_TAXON_RODENTIA</Type>
 			</PrereqOrHeritage>
 			<iCost>306</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>0</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -2635,6 +2771,10 @@
 				<BuildingType>BUILDING_CENTER_FOR_WHALE_STUDIES</BuildingType>
 			</PrereqNotInCityBuildings>
 			<iCost>1260</iCost>
+			<iCostSizeModifier>2</iCostSizeModifier>
+			<iCostCountModifier>0</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>2</iCostComplexityModifier>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -2659,6 +2799,10 @@
 				<BuildingType>BUILDING_FOLKLORE_SEA_LION</BuildingType>
 			</PrereqInCityBuildings>
 			<iCost>306</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>0</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -2730,6 +2874,10 @@
 				<Type>HERITAGE_FOLKLORE_VIPER_PIT</Type>
 			</PrereqOrHeritage>
 			<iCost>100</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>0</iCostMaterialsModifier>
+			<iCostComplexityModifier>0</iCostComplexityModifier>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
@@ -2770,6 +2918,10 @@
 				<Type>HERITAGE_FOLKLORE_VIPER_PIT</Type>
 			</PrereqOrHeritage>
 			<iCost>80</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>0</iCostCountModifier>
+			<iCostMaterialsModifier>0</iCostMaterialsModifier>
+			<iCostComplexityModifier>0</iCostComplexityModifier>
 			<iHappiness>1</iHappiness>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -2855,6 +3007,10 @@
 				<Type>HERITAGE_FOLKLORE_TURTLE_SEA</Type>
 			</PrereqOrHeritage>
 			<iCost>90</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<ObsoleteTech>TECH_PLASTICS</ObsoleteTech>
 			<CommerceChanges>
 				<iCommerce>1</iCommerce>
@@ -2973,6 +3129,10 @@
 				<BuildingType>BUILDING_FOLKLORE_WALRUS</BuildingType>
 			</PrereqOrBuildings>
 			<iCost>306</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>0</iCostCountModifier>
+			<iCostMaterialsModifier>0</iCostMaterialsModifier>
+			<iCostComplexityModifier>0</iCostComplexityModifier>
 			<ObsoleteTech>TECH_ADVANCED_AVIATION</ObsoleteTech>
 			<iHappiness>1</iHappiness>
 			<CommerceChanges>
@@ -3005,6 +3165,10 @@
 				<BuildingType>BUILDING_FOLKLORE_WILD_TURKEY</BuildingType>
 			</PrereqInCityBuildings>
 			<iCost>184</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>1</iCostCountModifier>
+			<iCostMaterialsModifier>0</iCostMaterialsModifier>
+			<iCostComplexityModifier>0</iCostComplexityModifier>
 			<FreeBuilding>BUILDING_FLOCKS_OF_TURKEY</FreeBuilding>
 			<bNeverCapture>1</bNeverCapture>
 			<YieldChanges>
@@ -3035,6 +3199,10 @@
 				<BuildingType>BUILDING_FOLKLORE_WALRUS</BuildingType>
 			</PrereqInCityBuildings>
 			<iCost>1070</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>0</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -3075,6 +3243,10 @@
 				<BuildingType>BUILDING_ZOO</BuildingType>
 			</PrereqOrBuildings>
 			<iCost>306</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>0</iCostCountModifier>
+			<iCostMaterialsModifier>1</iCostMaterialsModifier>
+			<iCostComplexityModifier>1</iCostComplexityModifier>
 			<iHappiness>1</iHappiness>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>

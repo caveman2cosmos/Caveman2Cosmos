@@ -50,7 +50,7 @@
 		<Italian>Nessuna unità</Italian> <!-- infoscreen Military -->
 		<Spanish>Ninguno</Spanish>
 		<Polish>Automatyczne Ulepszenia</Polish>
-		<Russian>Íåò</Russian>
+		<Russian>Нет</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITGROUPER_LEVEL_GROUP</Tag>
@@ -335,7 +335,7 @@
 		<Italian>Intercettazione</Italian> <!-- infoscreen Military -->
 		<Spanish>Interceptar</Spanish>
 		<Polish>Przechwy&#230;</Polish>
-		<Russian>Ïåðåõâàò</Russian>
+		<Russian>Перехватить</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITGROUPER_ORDER_GROUP_NONE</Tag>
@@ -345,7 +345,7 @@
 		<Italian>Nessun ordine</Italian> <!-- infoscreen Military -->
 		<Spanish>Ninguno</Spanish>
 		<Polish>Brak</Polish>
-		<Russian>Íåò</Russian>
+		<Russian>Нет</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITGROUPER_ORDER_GROUP_OTHER</Tag>
@@ -355,7 +355,7 @@
 		<Italian>Altri ordini</Italian> <!-- infoscreen Military -->
 		<Spanish>Otro</Spanish>
 		<Polish>Inne</Polish>
-		<Russian>Äðóãîå</Russian>
+		<Russian>Прочие</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITGROUPER_ORDER_GROUP_PATROL</Tag>
@@ -365,7 +365,7 @@
 		<Italian>Pattugliamento</Italian> <!-- infoscreen Military -->
 		<Spanish>Patrullar</Spanish>
 		<Polish>Patroluj</Polish>
-		<Russian>Ïàòðóëü</Russian>
+		<Russian>Патрулировать</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITGROUPER_ORDER_GROUP_PATROLSETTINGS</Tag>
@@ -373,7 +373,7 @@
 		<French>Patrouille Auto</French>
 		<Spanish>Patrulla automatizada</Spanish>
 		<Polish>Automatyczny Patrol</Polish>
-		<Russian>Àâòîìàòè÷åñêîå ïàòðóëèðîâàíèå</Russian>
+		<Russian>Автоматическое патрулирование</Russian>
 		<Italian>Pattugliamento automatizzato</Italian> <!-- infoscreen Military -->
 	</TEXT>
 	<TEXT>
@@ -382,7 +382,7 @@
 		<French>Pillage Auto</French>
 		<Spanish>Saqueo automatizado</Spanish>
 		<Polish>Automatyczne Pl&#185;drowanie</Polish>
-		<Russian>Àâòîìàòè÷åñêèé ãðàáåæ</Russian>
+		<Russian>Автоматический грабеж</Russian>
 		<Italian>Saccheggio automatizzato</Italian> <!-- infoscreen Military -->
 	</TEXT>
 	<TEXT>
@@ -455,7 +455,7 @@
 		<French>Améliorations Auto</French>
 		<Spanish>Mejora automatizada</Spanish>
 		<Polish>Autotematyczne Ulepszenie</Polish>
-		<Russian>Àâòîóëó÷øåíèå</Russian>
+		<Russian>Автоулучшение</Russian>
 		<Italian>Modernizzazione automatizzata</Italian> <!-- infoscreen Military -->
 	</TEXT>
 	<TEXT>
@@ -465,7 +465,7 @@
 		<Italian>Promozione</Italian> <!-- infoscreen Military -->
 		<Spanish>Ascensos</Spanish>
 		<Polish>Promocje</Polish>
-		<Russian>Óëó÷øåíèÿ</Russian>
+		<Russian>Квалификации</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITGROUPER_PROMOTION_GROUP_NONE</Tag>
@@ -475,7 +475,7 @@
 		<Italian>Nessuno</Italian> <!-- infoscreen Military -->
 		<Spanish>Ninguno</Spanish>
 		<Polish>Brak</Polish>
-		<Russian>Íåò</Russian>
+		<Russian>Нет</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITGROUPER_TYPE_GROUPING</Tag>
@@ -655,7 +655,7 @@
 		<Italian>[ICON_BULLET]Non può [COLOR_HIGHLIGHT_TEXT]conquistare[COLOR_REVERT] città o [COLOR_HIGHLIGHT_TEXT]catturare[COLOR_REVERT] unità nemiche</Italian> <!-- unit trained dogs -->
 		<Spanish>[ICON_BULLET]No puede capturar ciudades o unidades enemigas</Spanish>
 		<Polish>[ICON_BULLET]Nie mo&#191;na zaj&#185;&#230; wrogiego miasta lub jednostki.</Polish>
-		<Russian>[ICON_BULLET]Íå ìîæåò çàõâàòûâàòü âðàæåñêèå ãîðîäà èëè þíèòû.</Russian>
+		<Russian>[ICON_BULLET]Не может захватывать вражеские города или подразделения</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITHELP_CAN_ONLY_TRAVERSE</Tag>
@@ -665,7 +665,7 @@
 		<Italian>[ICON_BULLET][COLOR_WARNING_TEXT]Non può attraversare[COLOR_REVERT] le caselle con la caratteristica</Italian> <!-- unit Workboat (Prehistoric) -->
 		<Spanish>No puede atravesar</Spanish>
 		<Polish>Nie mo&#191;na przebi&#230;</Polish>
-		<Russian>Íå ìîæåò ïåðåñå÷ü</Russian>
+		<Russian>[ICON_BULLET]Не может пересекать следующие особенности ландшафта:</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITHELP_CAPTURE_PROBABILITY_MODIFIER</Tag>
@@ -674,7 +674,7 @@
 		<German>[ICON_BULLET]Gefangennahme: %D1%%</German>
 		<Italian>[ICON_BULLET]Probabilità di [COLOR_HIGHLIGHT_TEXT]catturare[COLOR_REVERT] un'unità nemica: [COLOR_HIGHLIGHT_TEXT]%D1%%[COLOR_REVERT]</Italian> <!-- Subcombat type Wields (H2H Martial Arts) -->
 		<Polish>[ICON_BULLET]%D1%% szansy na Przej&#234;cie.</Polish>
-		<Russian>[ICON_BULLET]%D1%% øàíñîâ çàõâàòèòü.</Russian>
+		<Russian>[ICON_BULLET]%D1%% шанс захватить вражеское подразделение.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITHELP_CAPTURE_RESISTANCE_MODIFIER</Tag>
@@ -683,7 +683,7 @@
 		<German>[ICON_BULLET]Gefangennahme entgehen: %D1%%</German>
 		<Italian>[ICON_BULLET]Probabilità di [COLOR_HIGHLIGHT_TEXT]sfuggire[COLOR_REVERT] alla cattura: [COLOR_HIGHLIGHT_TEXT]%D1%%[COLOR_REVERT]</Italian> <!-- Subcombat type Wields SiegeDesign (Gunpowder) -->
 		<Polish>[ICON_BULLET]%D1%% szansy na unikni&#234;cia Przej&#234;cia.</Polish>
-		<Russian>[ICON_BULLET]%D1%% øàíñîâ èçáåæàòü çàõâàòà.</Russian>
+		<Russian>[ICON_BULLET]%D1%% шанс избежать захвата.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITHELP_CHANCE_OF_WORSENING</Tag>
@@ -1304,7 +1304,7 @@
 		<Italian>No filtro</Italian> <!-- building list infoscreen -->
 		<Spanish>Ninguno</Spanish>
 		<Polish>Brak</Polish>
-		<Russian>Íåò</Russian>
+		<Russian>Нет</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITHELP_HURRY_FOOD</Tag>
@@ -1395,6 +1395,7 @@
 		<French>[ICON_BULLET]Ecrasement: %d1_Amount%% de chances par round de force le Défenseur à se retirer.</French>
 		<Italian>[ICON_BULLET]Sbaraglio: %d1_Amount%% di probabilità a turno di costringere i difensori a ritirarsi.</Italian>
 		<Polish>[ICON_BULLET]Odrzut: %d1_Amount%% szansy na rund&#234; do zmuszenia obro&#241;cy do ucieczki.</Polish>
+		<Russian>[ICON_BULLET]Отбрасывание: при атаке заставляет обороняющихся отступить с вероятностью %d1_Amount%% каждый раунд.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITHELP_KNOCKBACK_RETRIES</Tag>
@@ -1957,7 +1958,7 @@
 		<French>[ICON_BULLET]Expulsion: Lors de la défense, force les attaquants à abandonner les combats, avec une probabilité de %d1_Amount%% pour chaque round.</French>
 		<Italian>[ICON_BULLET]Respinta: in fase difensiva, forza gli attaccanti a cercare di ritirarsi con il %d1_Amount%% di probabilità ogni turno.</Italian>
 		<Polish>[ICON_BULLET]Odpychanie: Kiedy si&#234; bronisz, si&#179;y atakuj&#185;ce mog&#185; uciec (%d1_Amount%% szansy/tur&#234;).</Polish>
-		<Russian>[ICON_BULLET]Отражение: при обороне заставляет атакующих врагов отступить с вероятностью %d1_Amount%% каждый раунд.</Russian>
+		<Russian>[ICON_BULLET]Отражение: при обороне заставляет атакующих отступить с вероятностью %d1_Amount%% каждый раунд.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITHELP_REPEL_RETRIES</Tag>
@@ -2284,6 +2285,7 @@
 		<French>[ICON_BULLET]Inflexible: Soustrait %d1_Amount des valeurs d'Expulsion/Ecrasement de l'ennemi.</French>
 		<Italian>[ICON_BULLET]Inflessibile: sottrae %d1_Amount dai valori nemici di sbaraglio e respinta.</Italian>
 		<Polish>[ICON_BULLET]Nieust&#234;pliwy: Odejmuje %d1_Amount z wrogiej warto&#156;ci Odrzutu i Odpychania.</Polish>
+		<Russian>[ICON_BULLET]Стойкость: вычитает %d1_Amount из значений отбрасывания и отражения у врага.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITHELP_UNYIELDING_TOTAL_MODIFIER</Tag>
@@ -3573,7 +3575,7 @@
 			<Plural>0:1</Plural>
 		</Spanish>
 		<Polish>Wielki Artysta</Polish>
-		<Russian>Âåëèêèé àðòèñò</Russian>
+		<Russian>Великий художник</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_ARWA_AL_SULAYHI</Tag>
@@ -4366,7 +4368,7 @@
 			<Gender>Female</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
-		<Russian>Ãðóïïà ëþäåé</Russian>
+		<Russian>Родовая община</Russian>
 		<Italian>Comitiva ancestrale</Italian>
 	</TEXT>
 	<TEXT>
@@ -7188,6 +7190,7 @@
 		<Tag>TXT_KEY_UNIT_DARTFROG_PEDIA</Tag>
 		<English>Poison dart frog (also dart-poison frog, poison frog or formerly poison arrow frog) is the common name of a group of frogs in the family Dendrobatidae which are native to Central and South America. These species are diurnal and often have brightly-colored bodies. Although all wild dendrobatids are at least somewhat toxic, levels of toxicity vary considerably from one species to the next and from one population to another. Many species are critically endangered. These amphibians are often called "dart frogs" due to the Amerindians' indigenous use of their toxic secretions to poison the tips of blowdarts. However, of over 175 species, only three have been documented as being used for this purpose (curare plants are more commonly used), and none come from the Dendrobates genus, which is characterized by the brilliant color and complex patterns of its members.</English>
 		<German>Als [COLOR_UNIT_TEXT]Baumsteigerfrosch[COLOR_REVERT] (auch Pfeilgiftfrosch oder Farbfrosch) bezeichnet man eine Familie der Froschlurche. Es existieren ca. 170 Arten.[NEWLINE]Baumsteigerfrösche leben fast ausschließilich im mittel- und südamerikanischen Regenwald, die meisten von ihnen sind mit 12 bis 50 Millimetern sehr klein und farbenfroh. Weitere Merkmale sind das Fehlen der Gaumenbeine (Gesichtsschädelknochen) und der Schwimmhäute zwischen der ersten und zweiten bzw. der zweiten und dritten Zehe. Zur Fortpflanzung laichen die kleineren Arten auf Blättern, die größeren in Höhlen. Sie verzehren giftige Beutetiere wie Milben, Ameisen und Käfer, um ihren Giftvorrat, der über 200 Alkaloide umfasst, aufrecht zu erhalten. Nachzuchten in Gefangenschaft haben aufgrund des abweichenden Nahrungsangebots oft kein Hautgift mehr. Einige Arten sind von Natur aus ungiftig und tragen ihre auffälige Signalfarbe nur, um Fressfeinde zu täuschen (Mimikry).[NEWLINE]Indigene Völker benutzen das Gift bei der Jagd mit dem Blasrohr, indem sie es auf die Pfeile auftragen (daher die Bezeichnung Pfeilgiftfrosch). Jedoch bilden nur wenige Arten ein für den Menschen tödliches Gift aus. Einige Gattungen der Baumsteigerfrösche stehen unter Artenschutz, ihre Bestände sind durch illegalen Handel und die Abholzung des Regenwaldes stark gefährdet. In kühleren Regionen der Anden droht zudem ein Pilzbefall, der tödlich verlaufen kann.</German>
+		<Russian>Древолазы - распространенное название семейства Dendrobatidae - лягушек, обитающих в Центральной и Южной Америке. Эти виды ведут дневной образ жизни и часто имеют ярко окрашенное тело. Хотя все дикие древолазы, по крайней мере, в некоторой степени токсичны, уровни токсичности значительно варьируются от одного вида к другому и от одной популяции к другой. Многие виды находятся под угрозой исчезновения. В англоязычной среде этих земноводных часто называют "dart frog" (дротиковыми лягушками) из-за того, что индейцы использовали их ядовитые выделения для отравления наконечников дротиков. Однако из более чем 175 видов только три были документально подтверждены как используемые для этой цели (чаще используются растения кураре), и ни один из них не относится к роду Dendrobates, который отличается яркой окраской и сложными узорами своих представителей.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_DECAREME</Tag>
@@ -7422,8 +7425,8 @@
 		<Tag>TXT_KEY_UNIT_DOCTOR</Tag>
 		<English>Great Doctor</English>
 		<French>Médecin Illustre</French>
-		<Russian>Âðà÷</Russian>
 		<Italian>Gran medico</Italian>
+		<Russian>Великий врач</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_DOLPHIN</Tag>
@@ -8265,7 +8268,7 @@
 			<Plural>0:1</Plural>
 		</Spanish>
 		<Polish>Przedstawiciel M&#179;yn&#243;w Zbo&#191;owych</Polish>
-		<Russian>Ýìèññàð "ÏÇ"</Russian>
+		<Russian>Эмиссар "ОГ"</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_EXECUTIVE_2</Tag>
@@ -8589,7 +8592,7 @@
 			<Plural>0</Plural>
 		</Spanish>
 		<Polish>Przedstawiciel Cukierni Wonka</Polish>
-		<Russian>Øåô-ïîâàð ''ÊÂ''</Russian>
+		<Russian>Шеф-повар ''ЯВ''</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_EXILE</Tag>
@@ -8600,7 +8603,7 @@
 			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
-		<Russian>Èçãîé</Russian>
+		<Russian>Изгой</Russian>
 		<Italian>Esule</Italian>
 	</TEXT>
 	<TEXT>
@@ -8906,7 +8909,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_FERAL_PEDIA</Tag>
-		<English>Super Soldiers are foremost amongst the defenders of humanity, the greatest of the known in human history warriors. They are barely human at all, but superhuman; having been made superior in all respects to a normal man by a harsh regime of genetic modification, psycho-conditioning and rigorous training. Super Soldiers are untouched by plague or any natural disease and can suffer wounds that would kill a lesser being several times over, and live to fight again. Clad in ancient Power Armour and wielding the most potent weapons known to Man, the Super Soldiers are terrifying foes.</English>
+		<English>Super soldiers are foremost amongst the defenders of their nation, the greatest warriors known in human history. They are barely human at all, but superhuman; having been made superior in all respects to a normal man by a harsh regime of genetic modification, psycho-conditioning, and rigorous training. Super soldiers are immune to any natural disease, and can suffer wounds that would kill a lesser being several times over and live to fight again. Clad in power armour and wielding the most potent weapons, the super soldiers are terrifying foes.</English>
 		<Russian>Суперсолдаты - главные защитники человечества, величайшие из известных воинов в истории человечества. Хоть они и являются предтавителями человеческой расы, но в то же время обладают сверхчеловеческими возможностями; превосходя во всех отношениях обычных людей благодаря жесткому геномному редактированию, психоконтролю и строгой выучке. Суперсолдаты не подвержены чуме или каким-либо природным заболеваниям и могут переносить ранения, при которых не способны выжить обычные Homo Sapiens, тогда как суперсолдаты восстанавливаются до следующего боя. Суперсолдаты, экипированные древней Силовой броней и самым мощным оружием, известным человеку, являются ужасающими противниками.</Russian>
 	</TEXT>
 	<TEXT>
@@ -8935,7 +8938,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_FF_DESTROYER_PEDIA</Tag>
-		<English>Fusion Engines are the powerhouse of a late game vehicles. Engines provide the power necessary to move a vehicle and fire its weapons. Unlike internal combustion engines, Fusion Engines generate power by fusing hydrogen isotopes (1H) much like the center of a sun. Despite conventional thought, these Engines are not potential mini-nuclear explosions. When damaged to a significant degree they will automatically shut down all fusion reactions and power down.</English>
+		<English>Fusion engines are the powerhouse of late game vehicles. Engines provide the power necessary to move a vehicle and fire its weapons. Unlike internal combustion engines, fusion engines generate power by fusing hydrogen isotopes, much like the center of a sun. Despite conventional expectations, these engines are not potential nuclear explosions. When damaged to a significant degree they will automatically shut down all fusion reactions and power down.</English>
 		<Russian>Термоядерные реакторы являются двигателями поздней игры. Они обеспечивают мощность, необходимую для передвижения транспортного средства и ведения огня его орудиями. В отличие от двигателей внутреннего сгорания, термоядерные реакторы вырабатывают энергию путем слияния изотопов водорода (1H) так же, как в центре Солнца. Несмотря на традиционную мысль, эти реакторы не являются потенциальными источниками радиационной опасности. При значительном повреждении они автоматически блокируют все реакции синтеза и отключают питание.</Russian>
 	</TEXT>
 	<TEXT>
@@ -9384,7 +9387,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_FUSION_CARRIER_PEDIA</Tag>
-		<English>Fusion Engines are the powerhouse of a late game vehicles. Engines provide the power necessary to move a vehicle and fire its weapons. Unlike internal combustion engines, Fusion Engines generate power by fusing hydrogen isotopes (1H) much like the center of a sun. Despite conventional thought, these Engines are not potential mini-nuclear explosions. When damaged to a significant degree they will automatically shut down all fusion reactions and power down.</English>
+		<English>Fusion engines are the powerhouse of late game vehicles. Engines provide the power necessary to move a vehicle and fire its weapons. Unlike internal combustion engines, fusion engines generate power by fusing hydrogen isotopes, much like the center of a sun. Despite conventional expectations, these engines are not potential nuclear explosions. When damaged to a significant degree they will automatically shut down all fusion reactions and power down.</English>
 		<Polish>Lotniskowiec Fuzyjny jest bardzo silna niewykrywalna jednostka ale gl&#243;wnie sluzy do transportowania 10 mysliwc&#243;w.</Polish>
 		<Russian>Термоядерные реакторы являются двигателями поздней игры. Они обеспечивают мощность, необходимую для передвижения транспортного средства и ведения огня его орудиями. В отличие от двигателей внутреннего сгорания, термоядерные реакторы вырабатывают энергию путем слияния изотопов водорода (1H) так же, как в центре Солнца. Несмотря на традиционную мысль, эти реакторы не являются потенциальными источниками радиационной опасности. При значительном повреждении они автоматически блокируют все реакции синтеза и отключают питание.</Russian>
 	</TEXT>
@@ -9403,8 +9406,8 @@
 		<Russian>Àòîìíûé êðåéñåð</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_FUSION_CRUISER_PEDIA</Tag>
-		<English>Fusion Engines are the powerhouse of a late game vehicles. Engines provide the power necessary to move a vehicle and fire its weapons. Unlike internal combustion engines, Fusion Engines generate power by fusing hydrogen isotopes (1H) much like the center of a sun. Despite conventional thought, these Engines are not potential mini-nuclear explosions. When damaged to a significant degree they will automatically shut down all fusion reactions and power down.</English>
+	  <Tag>TXT_KEY_UNIT_FUSION_CRUISER_PEDIA</Tag>
+	  <English>Fusion engines are the powerhouse of late game vehicles. Engines provide the power necessary to move a vehicle and fire its weapons. Unlike internal combustion engines, fusion engines generate power by fusing hydrogen isotopes, much like the center of a sun. Despite conventional expectations, these engines are not potential nuclear explosions. When damaged to a significant degree they will automatically shut down all fusion reactions and power down.</English>
 		<Polish>Kr&#185;&#191;ownik Fuzyjny mo&#191;e transportowa&#230; 6 bomb, a tak&#191;e zatapia&#230; wrogie statki wojenne. Dodatkowo bez problemu wykrywa statki podwodne oraz mo&#191;e broni&#230; bombardowanego miasta.</Polish>
 		<Russian>Термоядерные реакторы являются двигателями поздней игры. Они обеспечивают мощность, необходимую для передвижения транспортного средства и ведения огня его орудиями. В отличие от двигателей внутреннего сгорания, термоядерные реакторы вырабатывают энергию путем слияния изотопов водорода (1H) так же, как в центре Солнца. Несмотря на традиционную мысль, эти реакторы не являются потенциальными источниками радиационной опасности. При значительном повреждении они автоматически блокируют все реакции синтеза и отключают питание.</Russian>
 	</TEXT>
@@ -9483,7 +9486,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_FUSION_SUBMARINE_PEDIA</Tag>
-		<English>Fusion Engines are the powerhouse of a late game vehicles. Engines provide the power necessary to move a vehicle and fire its weapons. Unlike internal combustion engines, Fusion Engines generate power by fusing hydrogen isotopes (1H) much like the center of a sun. Despite conventional thought, these Engines are not potential mini-nuclear explosions. When damaged to a significant degree they will automatically shut down all fusion reactions and power down.</English>
+		<English>Fusion engines are the powerhouse of late game vehicles. Engines provide the power necessary to move a vehicle and fire its weapons. Unlike internal combustion engines, fusion engines generate power by fusing hydrogen isotopes, much like the center of a sun. Despite conventional expectations, these engines are not potential nuclear explosions. When damaged to a significant degree they will automatically shut down all fusion reactions and power down.</English>
 		<Russian>Термоядерные реакторы являются двигателями поздней игры. Они обеспечивают мощность, необходимую для передвижения транспортного средства и ведения огня его орудиями. В отличие от двигателей внутреннего сгорания, термоядерные реакторы вырабатывают энергию путем слияния изотопов водорода (1H) так же, как в центре Солнца. Несмотря на традиционную мысль, эти реакторы не являются потенциальными источниками радиационной опасности. При значительном повреждении они автоматически блокируют все реакции синтеза и отключают питание.</Russian>
 	</TEXT>
 	<TEXT>
@@ -9502,7 +9505,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_FUSION_TRANSPORT_PEDIA</Tag>
-		<English>Fusion Engines are the powerhouse of a late game vehicles. Engines provide the power necessary to move a vehicle and fire its weapons. Unlike internal combustion engines, Fusion Engines generate power by fusing hydrogen isotopes (1H) much like the center of a sun. Despite conventional thought, these Engines are not potential mini-nuclear explosions. When damaged to a significant degree they will automatically shut down all fusion reactions and power down.</English>
+		<English>Fusion engines are the powerhouse of late game vehicles. Engines provide the power necessary to move a vehicle and fire its weapons. Unlike internal combustion engines, fusion engines generate power by fusing hydrogen isotopes, much like the center of a sun. Despite conventional expectations, these engines are not potential nuclear explosions. When damaged to a significant degree they will automatically shut down all fusion reactions and power down.</English>
 		<Russian>Термоядерные реакторы являются двигателями поздней игры. Они обеспечивают мощность, необходимую для передвижения транспортного средства и ведения огня его орудиями. В отличие от двигателей внутреннего сгорания, термоядерные реакторы вырабатывают энергию путем слияния изотопов водорода (1H) так же, как в центре Солнца. Несмотря на традиционную мысль, эти реакторы не являются потенциальными источниками радиационной опасности. При значительном повреждении они автоматически блокируют все реакции синтеза и отключают питание.</Russian>
 	</TEXT>
 	<TEXT>
@@ -10012,15 +10015,15 @@
 			<Plural>0</Plural>
 		</Spanish>
 		<Polish>&#175;ar&#179;acz Bia&#179;y</Polish>
-		<Russian>Áåëàÿ àêóëà</Russian>
+		<Russian>Большая белая акула</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_GREAT_ADMIRAL</Tag>
 		<English>Great Admiral</English>
 		<French>Amiral Illustre</French>
 		<Polish>Wielki Admira&#179;</Polish>
-		<Russian>Âåëèêèé àäìèðàë</Russian>
 		<Italian>Gran ammiraglio</Italian>
+		<Russian>Великий адмирал</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_GREAT_BOMBARD</Tag>
@@ -10037,7 +10040,7 @@
 			<Plural>0</Plural>
 		</Spanish>
 		<Polish>Wielka Bombarda</Polish>
-		<Russian>Âåëèêàÿ áîìáàðäà</Russian>
+		<Russian>Большая бомбарда</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_GREAT_BOMBARD_PEDIA</Tag>
@@ -10049,8 +10052,8 @@
 		<Tag>TXT_KEY_UNIT_GREAT_DETECTIVE</Tag>
 		<English>Great Detective</English>
 		<French>Détective illustre</French>
-		<Russian>Âåëèêèé ñûùèê</Russian>
 		<Italian>Gran investigatore</Italian>
+		<Russian>Великий сыщик</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_GREAT_ENGINEER</Tag>
@@ -10068,7 +10071,7 @@
 			<Plural>0:1</Plural>
 		</Spanish>
 		<Polish>Wielki In&#191;ynier</Polish>
-		<Russian>Âåëèêèé èíæåíåð</Russian>
+		<Russian>Великий инженер</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_GREAT_FARMER_PEDIA</Tag>
@@ -10091,7 +10094,7 @@
 			<Gender>Male</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Russian>Âåëèêèé ãåíåðàë</Russian>
+		<Russian>Великий генерал</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_GREAT_HUNTER</Tag>
@@ -10104,7 +10107,7 @@
 			<Plural>0</Plural>
 		</Spanish>
 		<Polish>Wielki &#163;owca</Polish>
-		<Russian>Âåëèêèé îõîòíèê</Russian>
+		<Russian>Великий охотник</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_GREAT_HUNTER_PEDIA</Tag>
@@ -10135,7 +10138,7 @@
 			<Plural>0:1</Plural>
 		</Spanish>
 		<Polish>Wielki Szpieg</Polish>
-		<Russian>Âåëèêèé øïèîí</Russian>
+		<Russian>Великий шпион</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_GREAT_STATESMAN</Tag>
@@ -10148,7 +10151,7 @@
 		</German>
 		<Italian>Gran uomo di stato</Italian>
 		<Polish>Wielki Ustawodawca</Polish>
-		<Russian>Âåëèêèé ïîëèòèê</Russian>
+		<Russian>Великий политик</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_GREEK_PHALANX</Tag>
@@ -11434,7 +11437,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_HTSNIPER_PEDIA</Tag>
-		<English>The peak of stealth warfare, they wield the silent and lethal coilgun which fires a projectile through magnetic forces rather than gunpowder. The pellets they fire are even of a special material to avoid generating a sonic boom as they leave the barrel. They train by firing at a complex set of satellite targets from the ground. This is the most lethal human assassin ever to be devised. Many of them may well be equipped with bionic enhancements to steady their hands and enhance the accuity of their eyesight, perhaps even adding new forms of visual input allowing them to see units cloaked in invisibility fabrics much like they, themselves are.</English>
+		<English>The peak of stealth warfare, they wield the silent and lethal coilgun which fires a projectile through magnetic forces rather than gunpowder. The pellets they fire are even of a special material to avoid generating a sonic boom as they leave the barrel. They train by firing at a complex set of satellite targets from the ground. This is the most lethal human assassin ever to be devised. Many of them may well be equipped with bionic enhancements to steady their hands and enhance the acuity of their eyesight, perhaps even adding new forms of visual input allowing them to see units cloaked in invisibility fabrics much like they, themselves are.</English>
 		<Russian>На пике стелс-войны они вооружены бесшумной и смертоносной пушкой Гаусса, стреляющей с помощью магнитных сил, а не пороха. Гранулы, которыми они стреляют, тоже сделаны из специального материала для избежания появления звукового удара, когда они покидают ствол. Они тренируются, стреляя с земли по сложному набору спутниковых целей. Это самый смертоносный убийца из когда-либо придуманных. Многие из них вполне могут быть оснащены бионическими усовершенствованиями для стабилизации рук и улучшения зрения, возможно, даже с добавлением новых форм визуального ввода, позволяющих им видеть отрядов, замаскированных невидимой тканью, так же, как они сами.</Russian>
 	</TEXT>
 	<TEXT>
@@ -11597,7 +11600,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_HYBRID_GUNSHIP_PEDIA</Tag>
-		<English>Hybrid Gunships are the primary heavy air transport and combat vehicle used by the future armies. Both types of Hybrid Gunships, the heavy quad engined version and the lighter version are equipped with a 20mm M61 Vulcan turret on the front of the aircraft under the cockpit, are fired by the gunner While the pilot may fire a forward machine gun and launch missiles.</English>
+		<English>Hybrid Gunships are the primary heavy air transport and combat vehicle used by the future armies. A typical hybrid gunship is equipped with a 20mm M61 Vulcan turret on the front of the aircraft under the cockpit. This is fired by the gunner, while the pilot may fire a forward machine gun and launch missiles.</English>
 		<Russian>Гибридные вертолеты являются основной тяжелой авиационной транспортной и боевой машиной, используемой будущими армиями. Оба типа гибридных вертолетов, версия с тяжелым четырехдвигательным двигателем и более легкая версия оснащены 20-миллиметровой турелью M61 Vulcan на передней части самолета под кабиной, стреляют из спаренных пушек, в то время как пилот может запустить передний пулемет и запустить ракеты.</Russian>
 	</TEXT>
 	<TEXT>
@@ -14073,20 +14076,20 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_LUIS</Tag>
-		<English>Lus Alves de Lima e Silva</English>
+		<English>Luís Alves de Lima e Silva</English>
 		<Spanish>
 			<Text>Luís Alves de Lima e Silva</Text>
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</Spanish>
-		<Polish>Luis Alves de Lima e Silva</Polish>
+		<Polish>Luís Alves de Lima e Silva</Polish>
 		<Russian>Ëóèø Àëâèø</Russian>
-		<Italian>Luis Alves de Lima e Silva</Italian>
+		<Italian>Luís Alves de Lima e Silva</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_LUIS_PEDIA</Tag>
-		<English>Lus Alves de Lima e Silva (August 25, 1803May 7, 1880), was a Brazilian military leader and statesman. In more than one occasion, he served as Prime Minister of the Brazilian Empire. Considered one of the most important heroes in Brazilian military history, Caxias fought in the Argentina-Brazil War, the War of Tatters, Platine War, and, most notably, in the War of Triple Alliance. He was the only Brazilian not related to the House of Braganza to receive the honorary title of Duke (the others being Auguste de Beauharnais, Duke of Santa Cruz and the Duchesses of Gois and Cear, illegitimate daughters of Emperor Pedro I), and the only Duke to be created in the reign of Emperor Pedro II. Caxias entered the military while in adolescence, and rapidly rose to the ranks of General and Baron, subsequently becoming Marshal, Count, Marquis, Senator, and Aide-de-Camp to the Emperor. He was twice Minister of War and also President of the Council, exerting great political influence as a conservative leader. Caxias was superseded as commander of the Brazilian Forces by the Count d'Eu after the capture of Asuncin, and received the title of Duke in 1869. The Brazilian holiday Dia do Soldado (Portuguese, "Day of the Soldier") is celebrated on his birthday, August 25, and the cities of Duque de Caxias and Caxias do Sul are named in his honor. He is honoured as the Patron of the Brazilian Army.</English>
-		<Polish>Lus Alves de Lima e Silva, ks. Caxias, (sierpie&#241; 25, 1803 - maj 7, 1880), by&#179; brazylijskim dow&#243;dc&#185; wojskowym i politykiem. S&#179;u&#191;y&#179; tak&#191;e jako premier Cesarstwa Brazylii. Uwa&#191;any za jednego z najwa&#191;niejszych bohater&#243;w w historii brazylijskiej wojskowo&#156;ci, Caxias walczy&#179; w Wojnie Brazylijsko-Argenty&#241;skiej, w Powstanie Farrapos, w Wojnie o Platyn&#234;, oraz, w najs&#179;ynniejszej Wojnie z Paragwajem. By&#179; jedynym brazylijczykiem, nie zwi&#185;zanym z Dynasti&#185; Braganza, kt&#243;ry otrzyma&#179; tytu&#179; Diuka. Jest honorowym patronem brazylijskiej armii.</Polish>
+		<English>Luís Alves de Lima e Silva, Duke of Caxias (August 25, 1803May 7, 1880), was a Brazilian military leader and statesman. In more than one occasion, he served as Prime Minister of the Brazilian Empire. Considered one of the most important heroes in Brazilian military history, Caxias fought in the Argentina-Brazil War, the War of Tatters, Platine War, and, most notably, in the War of Triple Alliance. He was the only Brazilian not related to the House of Braganza to receive the honorary title of Duke (the others being Auguste de Beauharnais, Duke of Santa Cruz and the Duchesses of Gois and Cear, illegitimate daughters of Emperor Pedro I), and the only Duke to be created in the reign of Emperor Pedro II. Caxias entered the military while in adolescence, and rapidly rose to the ranks of General and Baron, subsequently becoming Marshal, Count, Marquis, Senator, and Aide-de-Camp to the Emperor. He was twice Minister of War and also President of the Council, exerting great political influence as a conservative leader. Caxias was superseded as commander of the Brazilian Forces by the Count d'Eu after the capture of Asuncin, and received the title of Duke in 1869. The Brazilian holiday Dia do Soldado (Portuguese, "Day of the Soldier") is celebrated on his birthday, August 25, and the cities of Duque de Caxias and Caxias do Sul are named in his honor. He is honoured as the Patron of the Brazilian Army.</English>
+		<Polish>Luís Alves de Lima e Silva, ks. Caxias, (sierpie&#241; 25, 1803 - maj 7, 1880), by&#179; brazylijskim dow&#243;dc&#185; wojskowym i politykiem. S&#179;u&#191;y&#179; tak&#191;e jako premier Cesarstwa Brazylii. Uwa&#191;any za jednego z najwa&#191;niejszych bohater&#243;w w historii brazylijskiej wojskowo&#156;ci, Caxias walczy&#179; w Wojnie Brazylijsko-Argenty&#241;skiej, w Powstanie Farrapos, w Wojnie o Platyn&#234;, oraz, w najs&#179;ynniejszej Wojnie z Paragwajem. By&#179; jedynym brazylijczykiem, nie zwi&#185;zanym z Dynasti&#185; Braganza, kt&#243;ry otrzyma&#179; tytu&#179; Diuka. Jest honorowym patronem brazylijskiej armii.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_LULE_NOMADS</Tag>
@@ -14972,7 +14975,7 @@
 			<Plural>0:1</Plural>
 		</Spanish>
 		<Polish>Wielki Kupiec</Polish>
-		<Russian>Âåëèêèé òîðãîâåö</Russian>
+		<Russian>Великий торговец</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_MERCHANT_FLEET</Tag>
@@ -18130,7 +18133,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_POLICE_MECH_PEDIA</Tag>
-		<English>Battle Armor, or their lighter Power Armor variety, are armored infantry. Battle armor's improved resilience, atmospheric containment, and firepower make it more effective than standard infantry in a variety of roles, but much more expensive. Battle armor first evolved from Exoskeletons during the Star League in the early twenty-eighth century, but did not come to prominence on the battlefield until Clan Wolf debuted the Elemental in the mid-twenty-ninth century. Inner Sphere armies began deploying battle armor in the mid-thirty-first century. These battlesuits were based off of Clan battle armor captured or salvaged during Operation REVIVAL.</English>
+		<English>Police mechs are designed for urban environments, emphasising pacification and crimefighting rather than maximum firepower and armour. A fine example of this type of unit is the superb AV-98 Ingram manufactured by Shinohara Heavy Industries.</English>
 		<Italian>Unità per il controllo dei riottosi.</Italian>
 		<Polish>Jednostka przeznaczona do t&#179;umienia zamieszek</Polish>
 		<Russian>Боевая броня или их более легкая разновидность силовой брони является основной экипировкой для тяжелой пехоты будущего. Повышенная сопротивляемость боевой брони, внутренний климат-контроль и огневая мощь делают ее более эффективной, чем стандартную пехоту в различных ролях, но и намного дороже. Боевая броня впервые эволюционировала из экзоскелетов во время Звездной Лиги в начале двадцать восьмого века, но не получила широкого распространения на полях сражений, пока клан Волка не дебютировал с элементалем в середине двадцать девятого века. Армии Внутренней Сферы начали использовать боевую броню в середине тридцать первого века. Эти боевые костюмы были созданы на основе боевой брони клана, захваченной или спасенной во время операции «Возрождение».</Russian>
@@ -18222,7 +18225,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_POWER_ARMORED_INFANTRY_PEDIA</Tag>
-		<English>Battle Armor, or their lighter Power Armor variety, are armored infantry. Battle armor's improved resilience, atmospheric containment, and firepower make it more effective than standard infantry in a variety of roles, but much more expensive. Battle armor first evolved from Exoskeletons during the Star League in the early twenty-eighth century, but did not come to prominence on the battlefield until Clan Wolf debuted the Elemental in the mid-twenty-ninth century. Inner Sphere armies began deploying battle armor in the mid-thirty-first century. These battlesuits were based off of Clan battle armor captured or salvaged during Operation REVIVAL.</English>
+		<English>Battle Armor is heavier armored infantry than Power Armor. Battle armor's improved resilience, mobility, atmospheric containment, and firepower make it more effective than standard infantry in a variety of roles, but much more expensive. It is typically deployed in platoons of around five suits, operating to support mechanised units in a similar way to conventional infantry.</English>
 		<Russian>Боевая броня или их более легкая разновидность силовой брони является основной экипировкой для тяжелой пехоты будущего. Повышенная сопротивляемость боевой брони, внутренний климат-контроль и огневая мощь делают ее более эффективной, чем стандартную пехоту в различных ролях, но и намного дороже. Боевая броня впервые эволюционировала из экзоскелетов во время Звездной Лиги в начале двадцать восьмого века, но не получила широкого распространения на полях сражений, пока клан Волка не дебютировал с элементалем в середине двадцать девятого века. Армии Внутренней Сферы начали использовать боевую броню в середине тридцать первого века. Эти боевые костюмы были созданы на основе боевой брони клана, захваченной или спасенной во время операции «Возрождение».</Russian>
 	</TEXT>
 	<TEXT>
@@ -18386,7 +18389,7 @@
 			<Plural>0:1</Plural>
 		</Spanish>
 		<Polish>Wielki Prorok</Polish>
-		<Russian>Âåëèêèé ïðîðîê</Russian>
+		<Russian>Великий пророк</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_PUBLIC_FORCES</Tag>
@@ -19586,7 +19589,7 @@
 			<Plural>0:1</Plural>
 		</Spanish>
 		<Polish>Wielki Naukowiec</Polish>
-		<Russian>Âåëèêèé ó÷åíûé</Russian>
+		<Russian>Великий ученый</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SCIPIO_AFRICANUS</Tag>
@@ -20620,7 +20623,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SLOOP_OF_WAR_PEDIA</Tag>
-		<English>In the 18th and the earlier part of the 19th centuries, a sloop-of-war was a small sailing warship, with a single gun deck that carried up to eighteen guns. In the first half of the 18th century, most naval sloops were two-masted vessels. The first three-masted sloops appeared during the 1740s, and from the mid-1750s most new sloops were built with a three-masted (ship) rig. A sloop-of-war was smaller than a sailing frigate and was (by virtue of having too few guns) outside the rating system. In general, a sloop-of-war would be under the command of a master and commander rather than a post captain, although in day-to-day use at sea the commanding officer of any naval vessels would be addressed as "captain". sloops were small warships intended for colonial "gunboat diplomacy" deployments, surveying duties and to act during wartime as convoy escorts. As they were not intended to deploy with the fleet, sloops had a maximum speed of less than 20 knots (37 km/h). USS Constellation constructed in 1854 is a sloop-of-war and the second United States Navy ship to carry this famous name. USS Constellation is one of the last sail-only warship designed and built by the U.S. Navy. Constellation spent much of the war as a deterrent to Confederate cruisers and commerce raiders in the Mediterranean Sea. The sloop of War is a pirate hunter in this naval mod for CIV4.</English>
+		<English>In the 18th and the earlier part of the 19th centuries, a sloop-of-war was a small sailing warship with a single gun deck that carried up to eighteen guns. In the first half of the 18th century, most naval sloops were two-masted vessels. The first three-masted sloops appeared during the 1740s, and from the mid-1750s most new sloops were built with a three-masted (ship) rig. A sloop-of-war was smaller than a sailing frigate and was (by virtue of having too few guns) outside the rating system. In general, a sloop-of-war would be under the command of a master and commander rather than a post captain, although in day-to-day use at sea the commanding officer of any naval vessels would be addressed as "Captain". Sloops were small warships intended for colonial "gunboat diplomacy" deployments, surveying duties, and to act during wartime as convoy escorts. USS Constellation, constructed in 1854 (the last sail-only warships designed and built by the US Navy), is a sloop-of-war and the second United States Navy ship to carry this famous name. She spent much of the US Civil War as a deterrent to Confederate cruisers and commerce raiders in the Mediterranean Sea.</English>
 		<Polish>Klasa niewielkich okr&#234;t&#243;w, pocz&#185;tkowo &#191;aglowych, p&#243;&#159;niej o nap&#234;dzie &#156;rubowym, obecnie nieistniej&#185;ca. W okresie obu wojen &#156;wiatowych slupy stanowi&#179;y klas&#234; okr&#234;t&#243;w eskortowych &#156;redniej wielko&#156;ci. Nazwa tej klasy funkcjonowa&#179;a g&#179;&#243;wnie w krajach anglosaskich.</Polish>
 	</TEXT>
 	<TEXT>
@@ -20922,7 +20925,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SPECIAL_INFANTRY_PEDIA</Tag>
-		<English>Special Infantry, are the elite special forces units of the future battlefield. Trained from their youth by the Schola Progenium in the arts of war, Special Infantry Troopers are, perhaps, the finest soldiers ever to serve in the Human History. Armed with their trademark Hellguns and Hellpistols, these soldiers take combat to the heart of the enemy with blinding speed and deadly precision</English>
+		<English>Special Infantry are the elite special forces units of the future battlefield - still highly trained for specialised operations such as reconnaissance, unconventional warfare, and counter-terrorism, but now augmented with technological aids such as near-perfect night vision and killer drones.</English>
 		<Russian>Спецназ - это элитные подразделения спецназа будущего поля боя. С юности обученные искусству войны в Схола Прогениум, специальные пехотные солдаты, возможно, являются лучшими солдатами, когда-либо служившими в истории человечества. Вооруженные своими фирменными Hellguns и Hellpistols, эти солдаты вступают в бой в самое сердце врага с ослепляющей скоростью и смертельной точностью.</Russian>
 	</TEXT>
 	<TEXT>
@@ -23455,7 +23458,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_WALKER_ARTILLERY_PEDIA</Tag>
-		<English>The Walker Artillery is an artillery unit fit to fight in the Transhuman Era. Using powerful electromagnetic servos to move over any terrain, and its ordinances posses more range and firepower than any other unit.</English>
+		<English>The Walker Artillery is an artillery unit fit to fight in the Transhuman Era. Its powerful electromagnetic servos let it move over any terrain, and its main armament gives it more range and firepower than any other unit.</English>
 		<Italian>L'artiglieria semovente è un'unità di artiglieria dell'era transumana; usa dei motori elettromagnetici per muoversi sopra ogni terreno e possiede più raggio d'azione e potenza di fuoco di ogni altra unità.</Italian>
 		<Polish>Krocz&#185;ca artyleria mo&#191;e bombardowa&#230; do trzech kwadrat&#243;w, co czyni go bardzo &#156;miertelne, gdy chroniony w stos.</Polish>
 		<Russian>Шагающая артиллерия - артиллерийское подразделение, пригодное для сражений в Трансчеловеческую Эру. Для перемещения по любой местности в ней используют мощные электромагнитные сервоприводы, и боеприпасы к ней обладают большей дальностью и огневой мощью, чем у предшестенников.</Russian>
@@ -23480,13 +23483,13 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_WALKER_MECH_PEDIA</Tag>
-		<English>Medium 'Mechs weigh between 40 and 55 tons and are very versatile. Some, such as the Hellspawn, have significant electronics payloads and are used as scout 'Mechs; others like the Hunchback carry powerful weapons and can serve as front-line or fire support units. In the BattleTech universe, the medium 'Mech is the workhorse 'Mech of most armies. Those that max out the engine can serve as useful recon units.</English>
+		<English>Units of this type weigh between 40 and 55 tons and are very versatile. Unlike Power or Battle Armor, the pilot sits in the head, affording them an excellent field of view.</English>
 		<German>Mechwalker sind Eliteinfanterieeinheiten der Zukunft. Es handelt sich dabei um riesige, metallene, mit Waffen gespickte Roboter, die entweder aus der Ferne oder durch einen im Inneren des gepanzerten Exoskeletts sitzenden Soldaten gesteuert werden.</German>
 		<Russian>Средние мехи весят от 40 до 55 тонн и очень универсальны. Некоторые из них, такие как Hellspawn, имеют значительные электронные компоненты и используются в качестве роботов-разведчиков; другие, такие как «Горбун», несут мощное вооружение и могут служить в качестве передовых или огневой поддержки. Во вселенной BattleTech средний «механоид» - это мех «рабочей лошадки» большинства армий. Те, у кого наиболее мощные двигатели, могут служить полезными разведывательными единицами.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_WALKER_PEDIA</Tag>
-		<English>A walker was any vehicle, usually military, that used legs as its primary method of locomotion rather than the more common repulsors, wheels, or treads. The term could also refer to especially large droids with legs (usually combat droids), though such droids were usually referred to using more specific terminology (such as "spider droid").</English>
+		<English>A walker is any vehicle, usually military, that used legs as its primary method of locomotion rather than the more common wheels, or treads. The term could also refer to especially large robots with legs (usually combat robots), though such droids were usually referred to using more specific terminology (such as "spider bot").</English>
 		<Polish>Artyleria Walker jest jednostka artylerii pasuje do walki w erze Transhuman. Za pomoc&#185; pot&#234;&#191;nychelektromagnetyczne serwa przenie&#156;&#230; na ka&#191;dy teren i jego obrz&#234;dy posiadaj&#185; wi&#234;cej zakres i ognia ni&#191; inne jednostki.</Polish>
 		<Russian>Шагоход - это любое транспортное средство, обычно военное, использующее ноги-опоры качестве основного метода передвижения, а не более распространенные репульсоры, колеса или гусеницы. Этот термин также может относиться к особенно большим дроидам с ногами (обычно боевым дроидам), хотя такие дроиды обычно упоминаются с использованием более конкретной терминологии (например, «дроид-паук»).</Russian>
 	</TEXT>

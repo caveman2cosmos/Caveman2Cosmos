@@ -18600,6 +18600,11 @@
 					<iAttitudeChange>4</iAttitudeChange>
 					<Description>TXT_KEY_CIVIC_SPEAK_SAME</Description>
 				</CivicAttitudeChange>
+				<CivicAttitudeChange>
+					<CivicType>CIVIC_XENOSEMIOTIC</CivicType>
+					<iAttitudeChange>5</iAttitudeChange>
+					<Description>TXT_KEY_CIVIC_SPEAK_SAME</Description>
+				</CivicAttitudeChange>
 			</CivicAttitudeChanges>
 		</CivicInfo>
 		<CivicInfo>
@@ -18707,6 +18712,11 @@
 				<CivicAttitudeChange>
 					<CivicType>CIVIC_TELEPATHIC</CivicType>
 					<iAttitudeChange>4</iAttitudeChange>
+					<Description>TXT_KEY_CIVIC_SPEAK_SAME</Description>
+				</CivicAttitudeChange>
+				<CivicAttitudeChange>
+					<CivicType>CIVIC_XENOSEMIOTIC</CivicType>
+					<iAttitudeChange>5</iAttitudeChange>
 					<Description>TXT_KEY_CIVIC_SPEAK_SAME</Description>
 				</CivicAttitudeChange>
 			</CivicAttitudeChanges>
@@ -18837,6 +18847,11 @@
 					<iAttitudeChange>4</iAttitudeChange>
 					<Description>TXT_KEY_CIVIC_SPEAK_SAME</Description>
 				</CivicAttitudeChange>
+				<CivicAttitudeChange>
+					<CivicType>CIVIC_XENOSEMIOTIC</CivicType>
+					<iAttitudeChange>5</iAttitudeChange>
+					<Description>TXT_KEY_CIVIC_SPEAK_SAME</Description>
+				</CivicAttitudeChange>
 			</CivicAttitudeChanges>
 		</CivicInfo>
 		<CivicInfo>
@@ -18965,6 +18980,11 @@
 					<iAttitudeChange>4</iAttitudeChange>
 					<Description>TXT_KEY_CIVIC_SPEAK_SAME</Description>
 				</CivicAttitudeChange>
+				<CivicAttitudeChange>
+					<CivicType>CIVIC_XENOSEMIOTIC</CivicType>
+					<iAttitudeChange>5</iAttitudeChange>
+					<Description>TXT_KEY_CIVIC_SPEAK_SAME</Description>
+				</CivicAttitudeChange>
 			</CivicAttitudeChanges>
 		</CivicInfo>
 		<CivicInfo>
@@ -19086,6 +19106,11 @@
 				<CivicAttitudeChange>
 					<CivicType>CIVIC_TELEPATHIC</CivicType>
 					<iAttitudeChange>4</iAttitudeChange>
+					<Description>TXT_KEY_CIVIC_SPEAK_SAME</Description>
+				</CivicAttitudeChange>
+				<CivicAttitudeChange>
+					<CivicType>CIVIC_XENOSEMIOTIC</CivicType>
+					<iAttitudeChange>5</iAttitudeChange>
 					<Description>TXT_KEY_CIVIC_SPEAK_SAME</Description>
 				</CivicAttitudeChange>
 			</CivicAttitudeChanges>
@@ -19211,6 +19236,11 @@
 					<iAttitudeChange>4</iAttitudeChange>
 					<Description>TXT_KEY_CIVIC_SPEAK_SAME</Description>
 				</CivicAttitudeChange>
+				<CivicAttitudeChange>
+					<CivicType>CIVIC_XENOSEMIOTIC</CivicType>
+					<iAttitudeChange>5</iAttitudeChange>
+					<Description>TXT_KEY_CIVIC_SPEAK_SAME</Description>
+				</CivicAttitudeChange>
 			</CivicAttitudeChanges>
 		</CivicInfo>
 		<CivicInfo>
@@ -19334,6 +19364,11 @@
 					<iAttitudeChange>4</iAttitudeChange>
 					<Description>TXT_KEY_CIVIC_SPEAK_SAME</Description>
 				</CivicAttitudeChange>
+				<CivicAttitudeChange>
+					<CivicType>CIVIC_XENOSEMIOTIC</CivicType>
+					<iAttitudeChange>5</iAttitudeChange>
+					<Description>TXT_KEY_CIVIC_SPEAK_SAME</Description>
+				</CivicAttitudeChange>
 			</CivicAttitudeChanges>
 		</CivicInfo>
 		<CivicInfo>
@@ -19455,6 +19490,11 @@
 				<CivicAttitudeChange>
 					<CivicType>CIVIC_TELEPATHIC</CivicType>
 					<iAttitudeChange>4</iAttitudeChange>
+					<Description>TXT_KEY_CIVIC_SPEAK_SAME</Description>
+				</CivicAttitudeChange>
+				<CivicAttitudeChange>
+					<CivicType>CIVIC_XENOSEMIOTIC</CivicType>
+					<iAttitudeChange>5</iAttitudeChange>
 					<Description>TXT_KEY_CIVIC_SPEAK_SAME</Description>
 				</CivicAttitudeChange>
 			</CivicAttitudeChanges>
@@ -19589,6 +19629,11 @@
 				<CivicAttitudeChange>
 					<CivicType>CIVIC_TELEPATHIC</CivicType>
 					<iAttitudeChange>4</iAttitudeChange>
+					<Description>TXT_KEY_CIVIC_SPEAK_SAME</Description>
+				</CivicAttitudeChange>
+				<CivicAttitudeChange>
+					<CivicType>CIVIC_XENOSEMIOTIC</CivicType>
+					<iAttitudeChange>5</iAttitudeChange>
 					<Description>TXT_KEY_CIVIC_SPEAK_SAME</Description>
 				</CivicAttitudeChange>
 			</CivicAttitudeChanges>

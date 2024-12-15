@@ -22,7 +22,7 @@
 		<German>[ICON_BULLET]Diplomatische Strafe: %D1_Num (wird zu einem Bonus bei Anführern mit derselben Charaktereigenschaft)</German>
 		<Italian>[ICON_BULLET]%D1_Num di penalità nei rapporti diplomatici (diventa un bonus nei confronti di leader con lo stesso tratto)</Italian>
 		<Polish>[ICON_BULLET]%D1_Num Kary do Dyplomacji (zamienne na bonus do Przyw&#243;dc&#243;w z t&#185; sam&#185; cech&#185;)</Polish>
-		<Russian>[ICON_BULLET]%D1_Num штрафа к Дипломатии (превращается в бонус с лидерами с той же чертой)</Russian>
+		<Russian>[ICON_BULLET]%D1_Num штрафа к Дипломатии (превращается в бонус с лидерами с тем же качеством)</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAITHELP_ATTITUDE_MODIFIER_POSITIVE</Tag>
@@ -52,6 +52,7 @@
 		<Tag>TXT_KEY_TRAITHELP_BONUS_HAPPINESS_CHANGE_END</Tag>
 		<English>Resources</English>
 		<Italian> </Italian><!--Aerial CT trait in the pedia, appears with  _CHANGE_ADDITIONA and CHANGE_FIRST-->
+		<Russian>Ресурсы</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAITHELP_BONUS_HAPPINESS_CHANGE_FIRST</Tag>
@@ -120,7 +121,7 @@
 		<Italian>[ICON_BULLET]Costi di mantenimento della forma di governo %D1%%</Italian><!--Aerial CT trait in the pedia-->
 		<Spanish>[ICON_BULLET]%D1%% al mantenimiento de principios</Spanish>
 		<Polish>[ICON_BULLET]%D1%% do Utrzymania Doktryny</Polish>
-		<Russian>[ICON_BULLET]%D1%% для обслуживания Парадигм</Russian>
+		<Russian>[ICON_BULLET]%D1%% для обслуживания парадигм</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAITHELP_CIVILIZATION</Tag>
@@ -128,7 +129,7 @@
 		<French>[ICON_BULLET]Les Civilizations peuvent avoir ce Trait - N'est pas disponible à la sélection</French>
 		<Italian>[ICON_BULLET]Le civiltà possono ottenere questo tratto; non è disponibile nella selezione dei leader</Italian>
 		<Polish>[ICON_BULLET]Tylko Cywilizacja mo&#191;e otrzyma&#230; t&#185; cech&#234; - Niedost&#234;pne dla Przyw&#243;dc&#243;w</Polish>
-		<Russian>[ICON_BULLET]Цивилизации могут получить эту черту, недоступную на выбор лидеру</Russian>
+		<Russian>[ICON_BULLET]Цивилизации могут получить это качество, недоступное на выбор лидеру</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAITHELP_COMMERCE_CHANGES</Tag>
@@ -154,7 +155,7 @@
 		<German>[ICON_BULLET][COLOR_WARNING_TEXT]nur bei aktivierter Einstellung "Führungskräfteentwicklung" verfügbar[COLOR_REVERT]</German>
 		<Italian>[ICON_BULLET][COLOR_WARNING_TEXT]Questo tratto è disponibile solo se l'opzione "Personalità in sviluppo" è attivata[COLOR_REVERT]</Italian>
 		<Polish>[ICON_BULLET][COLOR_WARNING_TEXT]Cecha dost&#234;pna tylko dla Przyw&#243;dc&#243;w w grze z opcj&#185; Ulepszenie Przyw&#243;dc&#243;w[COLOR_REVERT]</Polish>
-		<Russian>[ICON_BULLET][COLOR_WARNING_TEXT]Эта черта доступна только лидерам при игре в режиме с «Развивающимися лидерами».[COLOR_REVERT]</Russian>
+		<Russian>[ICON_BULLET][COLOR_WARNING_TEXT]Это качество доступно только лидерам, если включена опция «Развивающиеся лидеры».[COLOR_REVERT]</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAITHELP_DISABLED_ON</Tag>
@@ -163,14 +164,14 @@
 		<German>[ICON_BULLET][COLOR_WARNING_TEXT]bei aktivierter Einstellung "Führungskräfteentwicklung" nicht verfügbar[COLOR_REVERT]</German>
 		<Italian>[ICON_BULLET][COLOR_WARNING_TEXT]Questo tratto è disponibile solo se l'opzione "Personalità in sviluppo" è disattivata[COLOR_REVERT]</Italian>
 		<Polish>[ICON_BULLET][COLOR_WARNING_TEXT]Cecha dost&#234;pna tylko dla Przyw&#243;dc&#243;w bez gry z opcj&#185; Ulepszenie Przyw&#243;dc&#243;w[COLOR_REVERT]</Polish>
-		<Russian>[ICON_BULLET][COLOR_WARNING_TEXT]Эта черта доступна только лидерам, если не включена опция «Развивающиеся лидеры».[COLOR_REVERT]</Russian>
+		<Russian>[ICON_BULLET][COLOR_WARNING_TEXT]Это качество доступно только лидерам, если не включена опция «Развивающиеся лидеры».[COLOR_REVERT]</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAITHELP_DISALLOWED</Tag>
 		<English>[ICON_BULLET][COLOR_WARNING_TEXT]Leaders with this trait may not select %s1_Trait Trait[COLOR_REVERT]</English>
 		<French>[ICON_BULLET][COLOR_WARNING_TEXT]Les leaders possédant ce trait ne peuvent pas sélectionner le Trait : %s1_Trait[COLOR_REVERT]</French>
 		<German>[ICON_BULLET][COLOR_WARNING_TEXT]"%s1_Trait" nicht gleichzeitig auswählbar[COLOR_REVERT]</German>
-		<Russian>[ICON_BULLET][COLOR_WARNING_TEXT]Лидеры с этой особенностью не могут выбирать черту %s1_Trait[COLOR_REVERT]</Russian>
+		<Russian>[ICON_BULLET][COLOR_WARNING_TEXT]Лидеры с этим особенностью не могут выбирать качество %s1_Trait[COLOR_REVERT]</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAITHELP_DOUBLE_SPEED</Tag>
@@ -230,7 +231,7 @@
 		<French>[ICON_BULLET]Reçoit un Spécialiste gratuit pour chaque Merveille Nationale construite.</French>
 		<Italian>[ICON_BULLET]Ottieni un cittadino specialista gratuito per ogni Meraviglia Nazionale nella città in cui è costruito.</Italian>
 		<Polish>[ICON_BULLET]Otrzymujesz darmowego Specjaliste na ka&#191;dy Cud Narodowy kt&#243;ry wybudujesz.</Polish>
-		<Russian>[ICON_BULLET]Получает бесплатного специалиста за каждое Национальное Чудо, где оно построено.</Russian>
+		<Russian>[ICON_BULLET]Получает бесплатного специалиста за каждое построенное национальное чудо.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAITHELP_FREE_SPEC_TP</Tag>
@@ -246,7 +247,7 @@
 		<French>[ICON_BULLET]Reçoit un Spécialiste gratuit pour chaque Merveille Mondiale construite.</French>
 		<Italian>[ICON_BULLET]Ottieni un cittadino specialista gratuito per ogni meraviglia mondiale nella città in cui è costruito.</Italian>
 		<Polish>[ICON_BULLET]Otrzymujesz darmowego Specjaliste na ka&#191;dy Wielki Cud kt&#243;ry wybudujesz.</Polish>
-		<Russian>[ICON_BULLET]Получает бесплатного специалиста за каждое Чудо Света, где оно построено.</Russian>
+		<Russian>[ICON_BULLET]Получает бесплатного специалиста за каждое построенное великое чудо.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAITHELP_FREE_UNIT_UPKEEP_MILITARY_PER_100_POP</Tag>
@@ -313,7 +314,7 @@
 		<Italian>[ICON_BULLET]%d1 [NUM1:turno massimo:turni massimi] di Anarchia</Italian>
 		<Spanish>[ICON_BULLET]Máx. %d1 [NUM1:turno:turnos] de anarquía</Spanish>
 		<Polish>[ICON_BULLET]Maksymalna ilo&#156;&#230; tur Anarchii: %d1</Polish>
-		<Russian>[ICON_BULLET]Макс. %d1 [NUM1:Turn:Turns] к продолжительности Анархии</Russian>
+		<Russian>[ICON_BULLET]Максимум ходов анархии: %d1</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAITHELP_MAX_TRADE_ROUTES</Tag>
@@ -372,7 +373,7 @@
 		<German>[ICON_BULLET][COLOR_WARNING_TEXT]negative Charaktereigenschaft[COLOR_REVERT]</German>
 		<Italian>[ICON_BULLET][COLOR_WARNING_TEXT]Questo è un tratto negativo[COLOR_REVERT]</Italian>
 		<Polish>[ICON_BULLET][COLOR_WARNING_TEXT]To jest Negatywna Cecha[COLOR_REVERT]</Polish>
-		<Russian>[ICON_BULLET][COLOR_WARNING_TEXT]Это негативная черта[COLOR_REVERT]</Russian>
+		<Russian>[ICON_BULLET][COLOR_WARNING_TEXT]Негативное качество[COLOR_REVERT]</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAITHELP_NONSTATE_RELIGIOUS_COMMERCE</Tag>
@@ -568,7 +569,7 @@
 		<Italian>[ICON_BULLET]%D1%% produzione di Meraviglie</Italian>
 		<Spanish>[ICON_BULLET]%D1%% a la producción de maravillas</Spanish>
 		<Polish>[ICON_BULLET]%D1%% do Produkcji Cud&#243;w</Polish>
-		<Russian>[ICON_BULLET]%D1%% к строительству Чудес</Russian>
+		<Russian>[ICON_BULLET]%D1%% к строительству чудес</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAITHELP_WORKER_SPEED_NEGATIVE</Tag>
@@ -576,7 +577,7 @@
 		<French>[ICON_BULLET]Les Ouvriers construisent les aménagements avec un pénalité de %D1_Modifier%%</French>
 		<Italian>[ICON_BULLET]I lavoratori costruiscono i miglioramenti con una velocità modificata del %D1_Modifier%%</Italian><!--Aerial CT trait in the pedia-->
 		<Polish>[ICON_BULLET]Robotnicy buduj&#185; ulepszenia z pr&#234;dko&#156;ci&#185;: %D1_Modifier%%</Polish>
-		<Russian>[ICON_BULLET]Рабочие строят улучшения на %D1_Modifier%% медленнее</Russian>
+		<Russian>[ICON_BULLET]Рабочие создают надстройки на %D1_Modifier%% медленнее</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAITHELP_WORKER_SPEED_POSITIVE</Tag>
@@ -584,7 +585,7 @@
 		<French>[ICON_BULLET]Les Ouvriers construisent les aménagements %D1_Modifier%% plus vite</French>
 		<Italian>[ICON_BULLET]I lavoratori costruiscono i miglioramenti il %D1_Modifier%% più velocemente</Italian>
 		<Polish>[ICON_BULLET]Robotnicy buduj&#185; ulepszenia szybciej o: %D1_Modifier%%</Polish>
-		<Russian>[ICON_BULLET]Рабочие строят улучшения на %D1_Modifier%% быстрее</Russian>
+		<Russian>[ICON_BULLET]Рабочие создают надстройки на %D1_Modifier%% быстрее</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAITHELP_WORLD_WONDER_PRODUCTION_MODIFIER</Tag>
@@ -594,7 +595,7 @@
 		<Italian>[ICON_BULLET]%D1%% produzione di meraviglie mondiali</Italian>
 		<Spanish>[ICON_BULLET]%D1%% a la producción de maravillas del mundo</Spanish>
 		<Polish>[ICON_BULLET]%D1%% do Budowy Wielkich Cud&#243;w</Polish>
-		<Russian>[ICON_BULLET]%D1%% к строительству Великих Чудес</Russian>
+		<Russian>[ICON_BULLET]%D1%% к строительству великих чудес</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAITHELP_YIELD_CHANGES</Tag>
@@ -622,12 +623,13 @@
 			<Plural>0</Plural>
 		</Spanish>
 		<Polish>Agresywny:Agresywna:Agresywny:Agresywna</Polish>
-		<Russian>Ìèëèòàðèñò</Russian>
+		<Russian>Милитаризм</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_AGGRESSIVE0</Tag>
 		<English>Aggressive 0</English>
 		<Italian>Aggressivo I</Italian>
+		<Russian>Милитаризм I</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_AGGRESSIVE_PEDIA</Tag>
@@ -642,6 +644,7 @@
 		<French>Agr</French>
 		<German>Agg</German>
 		<Italian>Aggressivo</Italian>
+		<Russian>Млт.</Russian>
 		<Spanish>Agr</Spanish>
 	</TEXT>
 	<TEXT>
@@ -656,30 +659,32 @@
 			<Plural>0:0:1:1</Plural>
 		</Spanish>
 		<Polish>Rolniczy</Polish>
-		<Russian>Çåìëåäåëåö</Russian>
+		<Russian>Сельское хозяйство</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_AGRICULTURAL0</Tag>
 		<English>Agricultural 0</English>
 		<Italian>Agricolo I</Italian>
+		<Russian>Сельское хозяйство I</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_AGRICULTURAL_PEDIA</Tag>
 		<English>This leaders likes agriculture</English>
+		<Russian>Эти лидеры любят сельское хозяйство</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_AGRICULTURAL_SHORT</Tag>
 		<English>Agr</English>
 		<French>Agr.</French>
 		<Polish>Rol.</Polish>
-		<Russian>Çåìë.</Russian>
+		<Russian>Слхз.</Russian>
 		<Italian>Agricolo</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_ANCIENT_WAY_OF_THE_CENTAUR</Tag>
 		<English>Ancient Way of the Centaur</English>
 		<French>Ancienne voie du centaure</French>
-		<Russian>«Путь Кентавра»</Russian>
+		<Russian>Древний путь кентавра</Russian>
 		<Italian>Antica tradizione del centauro</Italian>
 	</TEXT>
 	<TEXT>
@@ -696,7 +701,7 @@
 		<Tag>TXT_KEY_TRAIT_ANCIENT_WAY_OF_THE_FEATHER</Tag>
 		<English>Ancient Way of the Feather</English>
 		<French>Ancienne Voie de la Plume</French>
-		<Russian>«Путь Пера»</Russian>
+		<Russian>Древний путь пера</Russian>
 		<Italian>Antica tradizione della piuma</Italian>
 	</TEXT>
 	<TEXT>
@@ -713,7 +718,7 @@
 		<Tag>TXT_KEY_TRAIT_ANCIENT_WAY_OF_THE_FIST</Tag>
 		<English>Ancient Way of the Fist</English>
 		<French>Ancienne voie du poing</French>
-		<Russian>«Путь кулака»</Russian>
+		<Russian>Древний путь кулака</Russian>
 		<Italian>Antica tradizione del pugno</Italian>
 	</TEXT>
 	<TEXT>
@@ -730,13 +735,13 @@
 		<Tag>TXT_KEY_TRAIT_ANCIENT_WAY_OF_THE_LEECH</Tag>
 		<English>Ancient Way of the Leech</English>
 		<French>Ancienne Voie de la Goule</French>
-		<Russian>«Путь пиявки»</Russian>
+		<Russian>Древний путь пиявки</Russian>
 		<Italian>Antica tradizione della sanguisuga</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_ANCIENT_WAY_OF_THE_LEECH_PEDIA</Tag>
 		<English>Way of the Leech Trait is only available with the Ancient Ways Group Wonders. All Health Care Units gain the Way of the Leech promotion, giving them Units heal in Same tile Extra 8% Damage/turn, -4 Disease Turn/City and -2 Disease Turn/Plot. This promotion is only available during the Ancient era, it will be obsolete with Classical.</English>
-		<Russian>«Путь пиявки» доступен только с чудесами группы Древних Путей. Все подразделения здравоохранения получают поощрение «Путь пиявки», что дает им возможность лечить отряды в одной и той же плитке, дополнительно 8% урона/за ход, -4 хода от заболеваемости/в городе и -2 хода от заболеваемости/на местности. Эта акция доступна только в Древнюю эпоху, она будет устаревшей с технологией Античного образа жизни.</Russian>
+		<Russian>Качество «Древний путь пиявки» доступно только с чудесами группы Древних Путей. Все подразделения здравоохранения получают поощрение «Путь пиявки», что дает им возможность лечить отряды в одной и той же плитке, дополнительно 8% урона/за ход, -4 хода от заболеваемости/в городе и -2 хода от заболеваемости/на местности. Эта акция доступна только в Древнюю эпоху, она будет устаревшей с технологией Античного образа жизни.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_ANCIENT_WAY_OF_THE_LEECH_SHORT</Tag>
@@ -747,7 +752,7 @@
 		<Tag>TXT_KEY_TRAIT_ANCIENT_WAY_OF_THE_SHADOWS</Tag>
 		<English>Ancient Way of the Shadows</English>
 		<French>Ancienne Voie des Ombres</French>
-		<Russian>«Путь теней»</Russian>
+		<Russian>Древний путь теней</Russian>
 		<Italian>Antica tradizione dell'ombra</Italian>
 	</TEXT>
 	<TEXT>
@@ -764,7 +769,7 @@
 		<Tag>TXT_KEY_TRAIT_ANCIENT_WAY_OF_THE_WARRIOR</Tag>
 		<English>Ancient Way of the Warrior</English>
 		<French>Ancienne Voie du Guerrier</French>
-		<Russian>«Путь воина»</Russian>
+		<Russian>Древний путь воина</Russian>
 		<Italian>Antica tradizione del guerriero</Italian>
 	</TEXT>
 	<TEXT>
@@ -781,7 +786,7 @@
 		<Tag>TXT_KEY_TRAIT_ANCIENT_WAY_OF_THE_WAVES</Tag>
 		<English>Ancient Way of the Waves</English>
 		<French>Ancienne Voie des Vagues</French>
-		<Russian>«Путь волн»</Russian>
+		<Russian>Древний путь волн</Russian>
 		<Italian>Antica tradizione delle onde</Italian>
 	</TEXT>
 	<TEXT>
@@ -798,7 +803,7 @@
 		<Tag>TXT_KEY_TRAIT_ANCIENT_WAY_OF_THE_WILD</Tag>
 		<English>Ancient Way of the Wild</English>
 		<French>Ancienne Voie de la Nature Sauvage</French>
-		<Russian>«Путь дикости»</Russian>
+		<Russian>Древний путь дикаря</Russian>
 		<Italian>Antica tradizione della natura selvaggia</Italian>
 	</TEXT>
 	<TEXT>
@@ -815,7 +820,7 @@
 		<Tag>TXT_KEY_TRAIT_ANCIENT_WAY_OF_THE_WIND</Tag>
 		<English>Ancient Way of the Wind</English>
 		<French>Ancienne Voie du Vent</French>
-		<Russian>«Путь Ветра»</Russian>
+		<Russian>Древний путь ветра</Russian>
 		<Italian>Antica tradizione del vento</Italian>
 	</TEXT>
 	<TEXT>
@@ -832,7 +837,7 @@
 		<Tag>TXT_KEY_TRAIT_ANCIENT_WAY_OF_THE_WOLF</Tag>
 		<English>Ancient Way of the Wolf</English>
 		<French>Ancienne voie du Loup</French>
-		<Russian>«Путь Волка»</Russian>
+		<Russian>Древний путь волка</Russian>
 		<Italian>Antica tradizione del lupo</Italian>
 	</TEXT>
 	<TEXT>
@@ -865,12 +870,13 @@
 			<Plural>0:0:1:1</Plural>
 		</Spanish>
 		<Polish>Anty-Klerykalny</Polish>
-		<Russian>Áåçáîæíèê</Russian>
+		<Russian>Антиклерикализм</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_ANTI_CLERICAL0</Tag>
 		<English>Anti Clerical 0</English>
 		<Italian>Anticlericale I</Italian>
+		<Russian>Антиклерикализм I</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_ANTI_CLERICAL_PEDIA</Tag>
@@ -898,7 +904,7 @@
 			<Plural>0</Plural>
 		</Spanish>
 		<Polish>AnK</Polish>
-		<Russian>Áåçá.</Russian>
+		<Russian>Анкл.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_ASTROLOGICAL_INFLUENCE_OF_AQUARIUS</Tag>
@@ -1088,7 +1094,7 @@
 			<Plural>0:0:1:1</Plural>
 		</Spanish>
 		<Polish>Dziki</Polish>
-		<Russian>Âàðâàð</Russian>
+		<Russian>Варварство</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_BARBARIAN_PEDIA</Tag>
@@ -1115,7 +1121,7 @@
 			<Plural>0</Plural>
 		</Spanish>
 		<Polish>Dzi</Polish>
-		<Russian>Âàðâ.</Russian>
+		<Russian>Врвр.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_BARBARIC</Tag>
@@ -1141,12 +1147,13 @@
 			<Plural>0:0:1:1</Plural>
 		</Spanish>
 		<Polish>Barbarzy&#241;ski</Polish>
-		<Russian>Ãðóáûé</Russian>
+		<Russian>Неотесанность</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_BARBARIC0</Tag>
 		<English>Barbaric 0</English>
 		<Italian>Barbaro I</Italian>
+		<Russian>Неотесанность I</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_BARBARIC_PEDIA</Tag>
@@ -1173,7 +1180,7 @@
 			<Plural>0</Plural>
 		</Spanish>
 		<Polish>Barb</Polish>
-		<Russian>Ãðóá.</Russian>
+		<Russian>Неот.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_CHARISMATIC</Tag>
@@ -1194,11 +1201,13 @@
 			<Gender>Male:Female</Gender>
 			<Plural>0</Plural>
 		</Spanish>
+		<Russian>Харизма</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_CHARISMATIC0</Tag>
 		<English>Charismatic 0</English>
 		<Italian>Carismatico I</Italian>
+		<Russian>Харизма I</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_CHARISMATIC_PEDIA</Tag>
@@ -1222,12 +1231,13 @@
 			<Plural>0</Plural>
 		</Spanish>
 		<Polish>Kreatywny:Kreatywna:Kreatywny:Kreatywna'</Polish>
-		<Russian>Ìåöåíàò</Russian>
+		<Russian>Меценатство</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_CREATIVE0</Tag>
 		<English>Creative 0</English>
 		<Italian>Creativo I</Italian>
+		<Russian>Меценатство I</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_CREATIVE_PEDIA</Tag>
@@ -1242,6 +1252,7 @@
 		<German>Kre</German>
 		<Italian>Creativo</Italian>
 		<Spanish>Cre</Spanish>
+		<Russian>Мцнт.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_CRUEL</Tag>
@@ -1263,12 +1274,13 @@
 			<Plural>0:0:1:1</Plural>
 		</Spanish>
 		<Polish>Okrutny</Polish>
-		<Russian>Æåñòîêèé</Russian>
+		<Russian>Жестокость</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_CRUEL0</Tag>
 		<English>Cruel 0</English>
 		<Italian>Crudele I</Italian>
+		<Russian>Жестокость I</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_CRUEL_PEDIA</Tag>
@@ -1296,7 +1308,7 @@
 			<Plural>0</Plural>
 		</Spanish>
 		<Polish>Okr</Polish>
-		<Russian>Æåñò.</Russian>
+		<Russian>Жест.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_DECEIVER</Tag>
@@ -1310,16 +1322,18 @@
 			<Plural>0:0:1:1</Plural>
 		</Spanish>
 		<Polish>K&#179;amca</Polish>
-		<Russian>Èíòðèãàí</Russian>
+		<Russian>Интриганство</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_DECEIVER0</Tag>
 		<English>Deceiver 0</English>
 		<Italian>Imbroglione I</Italian>
+		<Russian>Интриганство I</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_DECEIVER_PEDIA</Tag>
 		<English>Deception is favourite past time of leader</English>
+		<Russian>Плетение интриг - любимое занятие таких лидеров.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_DECEIVER_SHORT</Tag>
@@ -1329,7 +1343,7 @@
 		<Italian>Imbroglione</Italian>
 		<Spanish>Tra</Spanish>
 		<Polish>K&#179;a</Polish>
-		<Russian>Èíòð.</Russian>
+		<Russian>Интр.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_EXCESSIVE</Tag>
@@ -1351,17 +1365,18 @@
 			<Plural>0:0:1:1</Plural>
 		</Spanish>
 		<Polish>Przesadny</Polish>
-		<Russian>Íåóìåðåííûé</Russian>
+		<Russian>Расточительность</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_EXCESSIVE0</Tag>
 		<English>Excessive 0</English>
 		<Italian>Eccessivo I</Italian>
+		<Russian>Расточительность I</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_EXCESSIVE_PEDIA</Tag>
 		<English>The opulent court of this ruler is a real strain on the state budget. - TR Team.</English>
-		<Russian>Пышный двор этого правителя ложится тяжелым бременем на государственный бюджет.</Russian>
+		<Russian>Пышный двор этих лидеров ложится тяжелым бременем на государственный бюджет.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_EXCESSIVE_SHORT</Tag>
@@ -1383,7 +1398,7 @@
 			<Plural>0</Plural>
 		</Spanish>
 		<Polish>Prze</Polish>
-		<Russian>Íåóì.</Russian>
+		<Russian>Рстч.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_EXPANSIVE</Tag>
@@ -1405,12 +1420,13 @@
 			<Plural>0</Plural>
 		</Spanish>
 		<Polish>Ekspansywny:Ekspansywna:Ekspansywny:Ekspansywna</Polish>
-		<Russian>Ýêñïàíñèîíèñò</Russian>
+		<Russian>Экспансионизм</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_EXPANSIVE0</Tag>
 		<English>Expansive 0</English>
 		<Italian>Espansionista I</Italian>
+		<Russian>Экспансионизм I</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_EXPANSIVE_PEDIA</Tag>
@@ -1425,6 +1441,7 @@
 		<German>Exp</German>
 		<Italian>Espansionista</Italian>
 		<Spanish>Com</Spanish>
+		<Russian>Эксп.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_FANATICAL</Tag>
@@ -1446,17 +1463,18 @@
 			<Plural>0:0:1:1</Plural>
 		</Spanish>
 		<Polish>Fanatyczny</Polish>
-		<Russian>Ôàíàòèê</Russian>
+		<Russian>Фанатизм</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_FANATICAL0</Tag>
 		<English>Fanatical 0</English>
 		<Italian>Fanatico I</Italian>
+		<Russian>Фанатизм I</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_FANATICAL_PEDIA</Tag>
 		<English>This ruler puts blind faith above all other merits; talented but sceptically minded people will find themselves unwanted at his court. - TR Team.</English>
-		<Russian>Этот правитель ставит слепую веру выше всех других достоинств; талантливые, но скептически настроенные люди окажутся нежелательными при его дворе.</Russian>
+		<Russian>Эти лидеры ставят слепую веру выше всех других достоинств; талантливые, но скептически настроенные люди окажутся нежелательными при их дворе.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_FANATICAL_SHORT</Tag>
@@ -1477,7 +1495,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</Spanish>
-		<Russian>Ôàí.</Russian>
+		<Russian>Фнт.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_FINANCIAL</Tag>
@@ -1495,12 +1513,13 @@
 			<Plural>0</Plural>
 		</Spanish>
 		<Polish>Finansowy:Finansowa:Finansowy:Finansowa'</Polish>
-		<Russian>Ôèíàíñèñò</Russian>
+		<Russian>Коммерция</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_FINANCIAL0</Tag>
 		<English>Financial 0</English>
 		<Italian>Economista I</Italian>
+		<Russian>Коммерция I</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_FINANCIAL_PEDIA</Tag>
@@ -1514,6 +1533,7 @@
 		<German>Fin</German>
 		<Italian>Economista</Italian>
 		<Spanish>Fin</Spanish>
+		<Russian>Комм.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_FOREIGN</Tag>
@@ -1535,12 +1555,13 @@
 			<Plural>0:0:1:1</Plural>
 		</Spanish>
 		<Polish>Cudoziemski</Polish>
-		<Russian>Êñåíîôèë</Russian>
+		<Russian>Ксенофилия</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_FOREIGN0</Tag>
 		<English>Foreign 0</English>
 		<Italian>Straniero I</Italian>
+		<Russian>Ксенофилия I</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_FOREIGN_PEDIA</Tag>
@@ -1567,7 +1588,7 @@
 			<Plural>0</Plural>
 		</Spanish>
 		<Polish>Cdz</Polish>
-		<Russian>Êñåí.</Russian>
+		<Russian>Ксфл.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_HUMANITARIAN</Tag>
@@ -1581,23 +1602,25 @@
 			<Plural>0:0:1:1</Plural>
 		</Spanish>
 		<Polish>Humanitarny</Polish>
-		<Russian>Ãóìàíèñò</Russian>
+		<Russian>Гуманизм</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_HUMANITARIAN0</Tag>
 		<English>Humanitarian 0</English>
 		<Italian>Filantropo I</Italian>
+		<Russian>Гуманизм I</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_HUMANITARIAN_PEDIA</Tag>
 		<English>Humanitarian leaders try to make everyone happy and healthy</English>
+		<Russian>Такие лидеры стараются сделать всех счастливыми и здоровыми.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_HUMANITARIAN_SHORT</Tag>
 		<English>Hum</English>
 		<French>Hum</French>
 		<Italian>Filantropo</Italian>
-		<Russian>Ãóì.</Russian>
+		<Russian>Гум.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_HUNTER_GATHERER</Tag>
@@ -1619,12 +1642,13 @@
 			<Plural>0:0:1:1</Plural>
 		</Spanish>
 		<Polish>&#163;owco-Zbieracz</Polish>
-		<Russian>Ñîáèðàòåëü</Russian>
+		<Russian>Охота и собирательство</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_HUNTER_GATHERER0</Tag>
 		<English>Hunter-Gatherer 0</English>
 		<Italian>Cacciatore-raccoglitore I</Italian>
+		<Russian>Охота и собирательство I</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_HUNTER_GATHERER_PEDIA</Tag>
@@ -1651,7 +1675,7 @@
 			<Plural>0</Plural>
 		</Spanish>
 		<Polish>&#163;-Z</Polish>
-		<Russian>Ñîá.</Russian>
+		<Russian>О-С.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_IDEALISTIC</Tag>
@@ -1673,12 +1697,13 @@
 			<Plural>0:0:1:1</Plural>
 		</Spanish>
 		<Polish>Perfekcjonista</Polish>
-		<Russian>Èäåàëèñò</Russian>
+		<Russian>Идеализм</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_IDEALISTIC0</Tag>
 		<English>Idealistic 0</English>
 		<Italian>Idealista I</Italian>
+		<Russian>Идеализм I</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_IDEALISTIC_PEDIA</Tag>
@@ -1706,7 +1731,7 @@
 			<Plural>0</Plural>
 		</Spanish>
 		<Polish>Perf</Polish>
-		<Russian>Èä.</Russian>
+		<Russian>Идеа.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_IMPERIALIST</Tag>
@@ -1719,11 +1744,13 @@
 		</German>
 		<Italian>Imperialista</Italian>
 		<Spanish>Imperialista</Spanish>
+		<Russian>Империализм</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_IMPERIALIST0</Tag>
 		<English>Imperialistic 0</English>
 		<Italian>Imperialista I</Italian>
+		<Russian>Империализм I</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_IMPERIALIST_PEDIA</Tag>
@@ -1746,12 +1773,13 @@
 			<Plural>0</Plural>
 		</Spanish>
 		<Polish>Pracowity:Pracowita:Pracowity:Pracowita</Polish>
-		<Russian>Òðóäîëþáèâûé</Russian>
+		<Russian>Строительство</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_INDUSTRIOUS0</Tag>
 		<English>Industrious 0</English>
 		<Italian>Industrioso I</Italian>
+		<Russian>Строительство I</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_INDUSTRIOUS_PEDIA</Tag>
@@ -1765,6 +1793,7 @@
 		<German>Ind</German>
 		<Italian>Industrioso</Italian>
 		<Spanish>Dil</Spanish>
+		<Russian>Стро.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_ISOLATIONIST</Tag>
@@ -1786,17 +1815,18 @@
 			<Plural>0:0:1:1</Plural>
 		</Spanish>
 		<Polish>Izolacjonista</Polish>
-		<Russian>Èçîëÿöèîíèñò</Russian>
+		<Russian>Изоляционизм</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_ISOLATIONIST0</Tag>
 		<English>Isolationist 0</English>
 		<Italian>Isolazionista I</Italian>
+		<Russian>Изоляционизм I</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_ISOLATIONIST_PEDIA</Tag>
 		<English>This leader believes in completely self-reliant state to the point where he is ready to cut off most connections to the outside world. - TR Team.</English>
-		<Russian>Этот лидер верит в успешность полностью самодостаточного государства до такой степени, что он готов отсечь большинство связей с внешним миром.</Russian>
+		<Russian>Эти лидеры верят в успешность полностью самодостаточного государства до такой степени, что готовы отсечь большинство связей с внешним миром.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_ISOLATIONIST_SHORT</Tag>
@@ -1818,7 +1848,7 @@
 			<Plural>0</Plural>
 		</Spanish>
 		<Polish>Izo</Polish>
-		<Russian>Èçîë.</Russian>
+		<Russian>Изол.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_MEGALOMANIAC</Tag>
@@ -1840,12 +1870,13 @@
 			<Plural>0:0:1:1</Plural>
 		</Spanish>
 		<Polish>Megaloman</Polish>
-		<Russian>Ìåãàëîìàíüÿê</Russian>
+		<Russian>Мегаломания</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_MEGALOMANIAC0</Tag>
 		<English>Megalomaniac 0</English>
 		<Italian>Megalomane I</Italian>
+		<Russian>Мегаломания I</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_MEGALOMANIAC_PEDIA</Tag>
@@ -1871,7 +1902,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</Spanish>
-		<Russian>Ìåã.</Russian>
+		<Russian>Мгл.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_NOMAD</Tag>
@@ -1885,16 +1916,18 @@
 			<Plural>0:0:1:1</Plural>
 		</Spanish>
 		<Polish>Koczownik</Polish>
-		<Russian>Êî÷åâíèê</Russian>
+		<Russian>Кочевничество</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_NOMAD0</Tag>
 		<English>Nomad 0</English>
 		<Italian>Nomade I</Italian>
+		<Russian>Кочевничество I</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_NOMAD_PEDIA</Tag>
 		<English>This leader dislikes being stationary</English>
+		<Russian>Такие лидеры не любят жить на одном месте.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_NOMAD_SHORT</Tag>
@@ -1902,8 +1935,8 @@
 		<French>Nom.</French>
 		<Spanish>Nóm</Spanish>
 		<Polish>Kcz</Polish>
-		<Russian>Êî÷.</Russian>
 		<Italian>Nomade</Italian>
+		<Russian>Кчв.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_ORGANIZED</Tag>
@@ -1921,17 +1954,18 @@
 			<Plural>0</Plural>
 		</Spanish>
 		<Polish>Zorganizowany:Zorganizowana:Zorganizowany:Zorganizowana</Polish>
-		<Russian>Îðãàíèçàòîð</Russian>
+		<Russian>Организованность</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_ORGANIZED0</Tag>
 		<English>Organized 0</English>
 		<Italian>Organizzato I</Italian>
+		<Russian>Организованность I</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_ORGANIZED_PEDIA</Tag>
 		<English>Although Organized has a direct economic benefit--reducing the overhead of civics--it isn't nearly as big a boost in that regard as Financial. Nevertheless, saved GPT is saved GPT and is nothing to sneeze at.[PARAGRAPH:1][H1]High-Priority Technologies[\H1][PARAGRAPH:1][ICON_BULLET][LINK=TECH_MONOTHEISM]Monotheism[\LINK][PARAGRAPH:1][ICON_BULLET][LINK=TECH_CODE_OF_LAWS]Code of Laws[\LINK][PARAGRAPH:1][ICON_BULLET][LINK=TECH_SAILING]Sailing[\LINK][PARAGRAPH:1][ICON_BULLET][LINK=TECH_ASSEMBLY_LINE]Assembly Line[\LINK][PARAGRAPH:1][H1]Useful Wonders[\H1][PARAGRAPH:1][ICON_BULLET][LINK=BUILDING_THE_GREAT_LIGHTHOUSE]The Great Lighthouse[\LINK][PARAGRAPH:1][ICON_BULLET][LINK=BUILDING_FORBIDDEN_PALACE]The Forbidden Palace[\LINK][PARAGRAPH:1][ICON_BULLET][LINK=BUILDING_CRISTO_REDENTOR]Cristo Redentor[\LINK][PARAGRAPH:1][H1]Best Buildings[\H1][PARAGRAPH:1][ICON_BULLET][LINK=BUILDING_COURTHOUSE]Courthouse[\LINK][PARAGRAPH:1][ICON_BULLET][LINK=BUILDING_LIGHTHOUSE]Lighthouse[\LINK][PARAGRAPH:1][ICON_BULLET][LINK=BUILDING_FACTORY]Factory[\LINK][PARAGRAPH:1][H1]Useful Civics[\H1][PARAGRAPH:1][ICON_BULLET][LINK=CIVIC_BUREAUCRACY]Bureaucracy[\LINK][PARAGRAPH:1][ICON_BULLET][LINK=CIVIC_STATE_OWNED]State Property[\LINK][PARAGRAPH:1][H1]How to Use It[\H1][PARAGRAPH:1]Similar to Spiritual, technologies that enable civics--especially higher cost civics--are priorities. Unlike Spiritual, however, switching civics is not something to do constantly (unless you're Asoka, who has the best of both worlds in this regard). Also remember to choose a civic because you'll benefit from it, not just because it's available or because Organized will make it cheaper.[PARAGRAPH:1]The big benefits from Organized, however, are the cheap buildings--three of the best in the game. To leverage the lighthouses, try to build several coastal cities. Cheap courthouses make new cities cheaper, so you can employ this into a REX strategy or into warmongering or both.[PARAGRAPH:1]In fact, I tend to consider Organized to be a warmonger's trait (especially for Hammurabi, Julius Caesar, and Napoleon, whose companion traits are also warmonger-friendly). This is because my first build in a conquered city is a courthouse to reduce its maintenance cost, and Organized makes those courthouses cheaper to build--or whip.[PARAGRAPH:1]Finally, factories are one of the best late-game buildings, and the 2.08 patch has made them cheap for Organized.[PARAGRAPH:1]Technology priorities are obviously Sailing, Code of Laws, and Assembly Line for the cheap buildings. Other tech targets are those that enable some of the more useful but expensive civics, especially Civil Service for the powerful Bureaucracy civic. Its high upkeep cost will be cut in half for an Organized leader, increasing its utility. The same goes for Organized Religion (enabled by Monotheism) and Police State (enabled by Fascism).[PARAGRAPH:1][H1]The Downside[\H1][PARAGRAPH:1]Like many traits, as the game progresses, Organized gets weaker. Your economy grows and high-upkeep civics gradually become more affordable. As a result, the addition of a late cheap building (factories) in the 2.08 patch was a welcome late-game boost to Organized. Nevertheless, the best period for Organized is definitely the mid-game when you're probably running Bureaucracy and Organized Religion and are still building your economy.</English>
-		<Russian>Хотя у Организованного лидера есть прямая экономическая выгода - сокращение накладных расходов на обслуживание Парадигм - это столь сильное преимущество, как финансовые выгоды.[PARAGRAPH:1][H1]Приоритетные технологии[\H1][PARAGRAPH:1][ICON_BULLET][LINK=TECH_MONOTHEISM]Единобожие[\LINK][PARAGRAPH:1][ICON_BULLET][LINK=TECH_CODE_OF_LAWS]Свод законов[\LINK][PARAGRAPH:1][ICON_BULLET][LINK=TECH_SAILING]Парусное оснащение[\LINK][PARAGRAPH:1][ICON_BULLET][LINK=TECH_ASSEMBLY_LINE]Сборочная линия[\LINK][PARAGRAPH:1][H1]Полезные Чудеса[\H1][PARAGRAPH:1][ICON_BULLET][LINK=BUILDING_THE_GREAT_LIGHTHOUSE]Великий Маяк[\LINK][PARAGRAPH:1][ICON_BULLET][LINK=BUILDING_FORBIDDEN_PALACE]Запретный дворец[\LINK][PARAGRAPH:1][ICON_BULLET][LINK=BUILDING_CRISTO_REDENTOR]Кристо Редентор[\LINK][PARAGRAPH:1][H1]Лучшие Здания[\H1][PARAGRAPH:1][ICON_BULLET][LINK=BUILDING_COURTHOUSE]Здание суда[\LINK][PARAGRAPH:1][ICON_BULLET][LINK=BUILDING_LIGHTHOUSE]Маяк[\LINK][PARAGRAPH:1][ICON_BULLET][LINK=BUILDING_FACTORY]Фабрика[\LINK][PARAGRAPH:1][H1]Полезные парадигмы[\H1][PARAGRAPH:1][ICON_BULLET][LINK=CIVIC_BUREAUCRACY]Бюрократия[\LINK][PARAGRAPH:1][ICON_BULLET][LINK=CIVIC_STATE_OWNED]Государственная собственность[\LINK][PARAGRAPH:1][H1]Как это использовать?[\H1][PARAGRAPH:1]Подобно «Духовным» чертам, технологии, обеспечивающие гражданское право, особенно гражданские, с более высокими затратами, являются приоритетными для такого типа лидеров. Однако, в отличие от Духовного лидера, переключение гражданских навыков не является чем-то постоянным (если только вы не царь Ашока, у которого в этом отношении есть лучшее из обеих черт). Также не забудьте выбирать соответствующие парадигмы сообразно их пользе, а не только потому, что они легко доступны или потому что Организованный лидер сделает их дешевле.[PARAGRAPH:1]Однако наибольшие преимущества у Организованных лидеров - это дешевые здания, три из лучших в игре. Чтобы использовать маяки, постарайтесь построить несколько прибрежных городов. Дешевые здания суда делают новые города дешевле, так что вы можете использовать это в стратегии REX или в войне или в обоих.[PARAGRAPH:1]Фактически, я склонен расценивать черту Организованный идеальной для поджигателей войны (особенно для Хаммурапи, Юлия Цезаря и Наполеона, чьи сопутствующие черты также подходят для провоцирования войны). Поэтому моя первая постройка в завоеванном городе - это здание суда, чтобы уменьшить расходы на его обслуживание, и Организованный лидер делает эти здания дешевле в строительстве или при ускорении производства.[PARAGRAPH:1]Наконец, фабрики - одно из лучших зданий поздней игры, и патч 2.08 сделал их дешевыми для Организованных лидеров.[PARAGRAPH:1]Технологические приоритеты - это Парусный спорт, Свод законов и Сборочный конвейер для дешевых зданий. Другими техническими целями являются те, которые позволяют использовать некоторые из более полезных, но дорогих гражданских прав, особенно государственную службу для влиятельной гражданской бюрократии. Его высокая стоимость обслуживания будет сокращена вдвое для Организованного лидера, что увеличит его полезность. То же самое касается Организованной Религии (включенной Монотеизмом) и Полицейского Государства (включенной Фашизмом).[PARAGRAPH:1][H1]Обратная сторона[\H1][PARAGRAPH:1]Как и многие черты, по ходу игры, Организованный становится слабее. Ваша экономика растет, и гражданское население с высоким уровнем содержания постепенно становится более доступным. В результате, добавление позднего дешевого здания (фабрики) в патч 2.08 стало долгожданным дополнением поздней игры для Организованный. Тем не менее, лучший период для Организованного - это определенно середина игры, когда вы, вероятно, используете бюрократию и Организованную религию и все еще строите свою экономику.</Russian>
+		<Russian>Хотя у Организованного лидера есть прямая экономическая выгода - сокращение накладных расходов на обслуживание парадигм - это столь сильное преимущество, как финансовые выгоды.[PARAGRAPH:1][H1]Приоритетные технологии[\H1][PARAGRAPH:1][ICON_BULLET][LINK=TECH_MONOTHEISM]Единобожие[\LINK][PARAGRAPH:1][ICON_BULLET][LINK=TECH_CODE_OF_LAWS]Свод законов[\LINK][PARAGRAPH:1][ICON_BULLET][LINK=TECH_SAILING]Парусное оснащение[\LINK][PARAGRAPH:1][ICON_BULLET][LINK=TECH_ASSEMBLY_LINE]Сборочная линия[\LINK][PARAGRAPH:1][H1]Полезные Чудеса[\H1][PARAGRAPH:1][ICON_BULLET][LINK=BUILDING_THE_GREAT_LIGHTHOUSE]Великий Маяк[\LINK][PARAGRAPH:1][ICON_BULLET][LINK=BUILDING_FORBIDDEN_PALACE]Запретный дворец[\LINK][PARAGRAPH:1][ICON_BULLET][LINK=BUILDING_CRISTO_REDENTOR]Кристо Редентор[\LINK][PARAGRAPH:1][H1]Лучшие Здания[\H1][PARAGRAPH:1][ICON_BULLET][LINK=BUILDING_COURTHOUSE]Здание суда[\LINK][PARAGRAPH:1][ICON_BULLET][LINK=BUILDING_LIGHTHOUSE]Маяк[\LINK][PARAGRAPH:1][ICON_BULLET][LINK=BUILDING_FACTORY]Фабрика[\LINK][PARAGRAPH:1][H1]Полезные парадигмы[\H1][PARAGRAPH:1][ICON_BULLET][LINK=CIVIC_BUREAUCRACY]Бюрократия[\LINK][PARAGRAPH:1][ICON_BULLET][LINK=CIVIC_STATE_OWNED]Государственная собственность[\LINK][PARAGRAPH:1][H1]Как это использовать?[\H1][PARAGRAPH:1]Подобно «Духовным» качествам, технологии, обеспечивающие гражданское право, особенно гражданские, с более высокими затратами, являются приоритетными для такого типа лидеров. Однако, в отличие от Духовного лидера, переключение гражданских навыков не является чем-то постоянным (если только вы не царь Ашока, у которого в этом отношении есть лучшее из обеих качеств). Также не забудьте выбирать соответствующие парадигмы сообразно их пользе, а не только потому, что они легко доступны или потому что Организованный лидер сделает их дешевле.[PARAGRAPH:1]Однако наибольшие преимущества у Организованных лидеров - это дешевые здания, три из лучших в игре. Чтобы использовать маяки, постарайтесь построить несколько прибрежных городов. Дешевые здания суда делают новые города дешевле, так что вы можете использовать это в стратегии REX или в войне или в обоих.[PARAGRAPH:1]Фактически, я склонен расценивать качество Организованный идеальной для поджигателей войны (особенно для Хаммурапи, Юлия Цезаря и Наполеона, чьи сопутствующие качества также подходят для провоцирования войны). Поэтому моя первая постройка в завоеванном городе - это здание суда, чтобы уменьшить расходы на его обслуживание, и Организованный лидер делает эти здания дешевле в строительстве или при ускорении производства.[PARAGRAPH:1]Наконец, фабрики - одно из лучших зданий поздней игры, и патч 2.08 сделал их дешевыми для Организованных лидеров.[PARAGRAPH:1]Технологические приоритеты - это Парусный спорт, Свод законов и Сборочный конвейер для дешевых зданий. Другими техническими целями являются те, которые позволяют использовать некоторые из более полезных, но дорогих гражданских прав, особенно государственную службу для влиятельной гражданской бюрократии. Его высокая стоимость обслуживания будет сокращена вдвое для Организованного лидера, что увеличит его полезность. То же самое касается Организованной Религии (включенной Монотеизмом) и Полицейского Государства (включенной Фашизмом).[PARAGRAPH:1][H1]Обратная сторона[\H1][PARAGRAPH:1]Как и многие качества, по ходу игры, Организованный становится слабее. Ваша экономика растет, и гражданское население с высоким уровнем содержания постепенно становится более доступным. В результате, добавление позднего дешевого здания (фабрики) в патч 2.08 стало долгожданным дополнением поздней игры для Организованный. Тем не менее, лучший период для Организованного - это определенно середина игры, когда вы, вероятно, используете бюрократию и Организованную религию и все еще строите свою экономику.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_ORGANIZED_SHORT</Tag>
@@ -1940,6 +1974,7 @@
 		<German>Org</German>
 		<Italian>Organizzato</Italian>
 		<Spanish>Org</Spanish>
+		<Russian>Орг.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_PHILOSOPHICAL</Tag>
@@ -1957,12 +1992,13 @@
 			<Plural>0</Plural>
 		</Spanish>
 		<Polish>Filozoficzny:Filozoficzna:Filozoficzny:Filozoficzna</Polish>
-		<Russian>Ôèëîñîô</Russian>
+		<Russian>Философия</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_PHILOSOPHICAL0</Tag>
 		<English>Philosophical 0</English>
 		<Italian>Filosofo I</Italian>
+		<Russian>Философия I</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_PHILOSOPHICAL_PEDIA</Tag>
@@ -1976,6 +2012,7 @@
 		<German>Phi</German>
 		<Italian>Filosofo</Italian>
 		<Spanish>Fil</Spanish>
+		<Russian>Фил.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_POLITICIAN</Tag>
@@ -1997,12 +2034,13 @@
 			<Plural>0:0:1:1</Plural>
 		</Spanish>
 		<Polish>Polityk</Polish>
-		<Russian>Ïîëèòèêàí</Russian>
+		<Russian>Политика</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_POLITICIAN0</Tag>
 		<English>Politician 0</English>
 		<Italian>Politico I</Italian>
+		<Russian>Политика I</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_POLITICIAN_PEDIA</Tag>
@@ -2029,7 +2067,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</Spanish>
-		<Russian>Ïîë.</Russian>
+		<Russian>Плтк.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_POPULIST</Tag>
@@ -2051,12 +2089,13 @@
 			<Plural>0:0:1:1</Plural>
 		</Spanish>
 		<Polish>Populista</Polish>
-		<Russian>Ïîïóëèñò</Russian>
+		<Russian>Популизм</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_POPULIST0</Tag>
 		<English>Populist 0</English>
 		<Italian>Populista I</Italian>
+		<Russian>Популизм I</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_POPULIST_PEDIA</Tag>
@@ -2082,7 +2121,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</Spanish>
-		<Russian>Ïîï.</Russian>
+		<Russian>Пплз.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_PROGRESSIST</Tag>
@@ -2104,12 +2143,13 @@
 			<Plural>0:0:1:1</Plural>
 		</Spanish>
 		<Polish>Progresywny</Polish>
-		<Russian>Ïðîãðåññèâíûé</Russian>
+		<Russian>Прогрессивизм</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_PROGRESSIST0</Tag>
 		<English>Progressist 0</English>
 		<Italian>Progressista I</Italian>
+		<Russian>Прогрессивизм I</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_PROGRESSIST_PEDIA</Tag>
@@ -2137,7 +2177,7 @@
 			<Plural>0</Plural>
 		</Spanish>
 		<Polish>Pro</Polish>
-		<Russian>Ïðîã.</Russian>
+		<Russian>Пргc.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_PROTECTIVE</Tag>
@@ -2158,11 +2198,13 @@
 			<Gender>Male:Female</Gender>
 			<Plural>0</Plural>
 		</Spanish>
+		<Russian>Защита</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_PROTECTIVE0</Tag>
 		<English>Protective 0</English>
 		<Italian>Protettivo I</Italian>
+		<Russian>Защита I</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_PROTECTIVE_PEDIA</Tag>
@@ -2189,12 +2231,13 @@
 			<Plural>0:0:1:1</Plural>
 		</Spanish>
 		<Polish>Rewolucyjny</Polish>
-		<Russian>Ðåâîëþöèîíåð</Russian>
+		<Russian>Революционность</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_REVOLUTIONARY0</Tag>
 		<English>Revolutionary 0</English>
 		<Italian>Rivoluzionario I</Italian>
+		<Russian>Революционность I</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_REVOLUTIONARY_PEDIA</Tag>
@@ -2221,7 +2264,7 @@
 			<Plural>0</Plural>
 		</Spanish>
 		<Polish>Rew</Polish>
-		<Russian>Ðåâ.</Russian>
+		<Russian>Рвлц.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_SCIENTIFIC</Tag>
@@ -2235,16 +2278,18 @@
 			<Plural>0:0:1:1</Plural>
 		</Spanish>
 		<Polish>Naukowy</Polish>
-		<Russian>Ó÷åíûé</Russian>
+		<Russian>Наука</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_SCIENTIFIC0</Tag>
 		<English>Scientific 0</English>
 		<Italian>Scientifico I</Italian>
+		<Russian>Наука I</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_SCIENTIFIC_PEDIA</Tag>
 		<English>This leader gets boost to research</English>
+		<Russian>Такие лидеры ускоряют исследования.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_SCIENTIFIC_SHORT</Tag>
@@ -2253,7 +2298,7 @@
 		<German>Wis</German>
 		<Spanish>Cie</Spanish>
 		<Polish>Nau</Polish>
-		<Russian>Ó÷.</Russian>
+		<Russian>Нк.</Russian>
 		<Italian>Scientifico</Italian>
 	</TEXT>
 	<TEXT>
@@ -2268,16 +2313,18 @@
 			<Plural>0:0:1:1</Plural>
 		</Spanish>
 		<Polish>&#175;eglarski</Polish>
-		<Russian>Ìîðåïëàâàòåëü</Russian>
+		<Russian>Мореплавание</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_SEAFARING0</Tag>
 		<English>Seafaring 0</English>
 		<Italian>Marinaio I</Italian>
+		<Russian>Мореплавание I</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_SEAFARING_PEDIA</Tag>
 		<English>This leader specializes in seafaring</English>
+		<Russian>Такие лидеры специализируются на плавании по воде.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_SEAFARING_SHORT</Tag>
@@ -2287,7 +2334,7 @@
 		<Italian>Marinaio</Italian>
 		<Spanish>Mar</Spanish>
 		<Polish>&#175;eg.</Polish>
-		<Russian>Ìîð.</Russian>
+		<Russian>Мрпл.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_SPIRITUAL</Tag>
@@ -2305,12 +2352,13 @@
 			<Plural>0</Plural>
 		</Spanish>
 		<Polish>Uduchowiony:Uduchowiona:Uduchowiony:Uduchowiona'</Polish>
-		<Russian>Ìèñòèê</Russian>
+		<Russian>Мистицизм</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_SPIRITUAL0</Tag>
 		<English>Spiritual 0</English>
 		<Italian>Spirituale I</Italian>
+		<Russian>Мистицизм I</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_SPIRITUAL_PEDIA</Tag>
@@ -2324,6 +2372,7 @@
 		<German>Spi</German>
 		<Italian>Spirituale</Italian>
 		<Spanish>Esp</Spanish>
+		<Russian>Мист.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_TEMPERAMENTAL</Tag>
@@ -2345,12 +2394,13 @@
 			<Plural>0:0:1:1</Plural>
 		</Spanish>
 		<Polish>Wybuchowy</Polish>
-		<Russian>Òåìïåðàìåíòíûé</Russian>
+		<Russian>Непостоянство</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_TEMPERAMENTAL0</Tag>
 		<English>Temperamental 0</English>
 		<Italian>Volubile I</Italian>
+		<Russian>Непостоянство I</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_TEMPERAMENTAL_PEDIA</Tag>
@@ -2377,6 +2427,6 @@
 			<Plural>0</Plural>
 		</Spanish>
 		<Polish>Wyb</Polish>
-		<Russian>Òåìï.</Russian>
+		<Russian>Нпст.</Russian>
 	</TEXT>
 </Civ4GameText>

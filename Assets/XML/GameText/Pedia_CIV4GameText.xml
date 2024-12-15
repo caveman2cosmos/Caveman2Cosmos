@@ -127,7 +127,7 @@
 		<German>Beschwerden</German>
 		<Spanish>Alteraciones de estado</Spanish>
 		<Polish>Os&#179;abienia</Polish>
-		<Russian>(П) Бедствия</Russian>
+		<Russian>Бедствия</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PEDIA_CATEGORY_ALL_ERAS</Tag>
@@ -135,7 +135,7 @@
 		<French>Toutes les Eres</French>
 		<Italian>Tutte le ere</Italian>
 		<German>Alle Zeitalter</German>
-		<Russian>Все эпохи</Russian>
+		<Russian>Все периоды</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PEDIA_CATEGORY_ANIMALISTIC_BUILDINGS</Tag>
@@ -218,7 +218,7 @@
 		<French>Spéciaux</French>
 		<Italian>Altri edifici</Italian>
 		<German>Besonderheiten</German>
-		<Russian>Особые</Russian>
+		<Russian>Специальные</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PEDIA_CATEGORY_BUILDING_TREE</Tag>
@@ -327,7 +327,7 @@
 		<German>Ausrüstung</German>
 		<Spanish>Equipamiento</Spanish>
 		<Polish>Ekwipunek</Polish>
-		<Russian>(P) Снаряжение</Russian>
+		<Russian>Арматура</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PEDIA_CATEGORY_ERAS</Tag>
@@ -335,7 +335,7 @@
 		<French>Eres</French>
 		<Italian>Ere</Italian>
 		<German>Zeitalter</German>
-		<Russian>Эпохи</Russian>
+		<Russian>Периоды</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PEDIA_CATEGORY_FEATURE</Tag>
@@ -353,7 +353,7 @@
 			<Plural>1</Plural>
 		</Spanish>
 		<Polish>Cechy Terenu</Polish>
-		<Russian>Особенности</Russian>
+		<Russian>Особенности ландшафта</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PEDIA_CATEGORY_GREAT_WONDERS</Tag>
@@ -417,7 +417,7 @@
 			<Plural>1</Plural>
 		</Spanish>
 		<Polish>Ulepszenia</Polish>
-		<Russian>Улучшения</Russian>
+		<Russian>Надстройки</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PEDIA_CATEGORY_LANDSCAPE</Tag>
@@ -505,7 +505,7 @@
 			<Plural>1</Plural>
 		</Spanish>
 		<Polish>Promocje</Polish>
-		<Russian>Повышения</Russian>
+		<Russian>Квалификации</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PEDIA_CATEGORY_PROMOTION_TREE</Tag>
@@ -515,7 +515,7 @@
 		<Italian>Albero promozioni</Italian>
 		<Spanish>Árbol de ascensos</Spanish>
 		<Polish>Drzewko prom.</Polish>
-		<Russian>Древо повышений</Russian>
+		<Russian>Древо квалификаций</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PEDIA_CATEGORY_RELIGION</Tag>
@@ -539,14 +539,14 @@
 		<Tag>TXT_KEY_PEDIA_CATEGORY_HERITAGE</Tag>
 		<English>Heritage</English>
 		<French>Héritage</French>
+		<Italian>Patrimonio culturale</Italian>
 		<Spanish>
 			<Text>Patrimonio</Text>
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</Spanish>
 		<Polish>Dziedziczenie</Polish>
-		<Russian>Íàñëåäèå</Russian>
-		<Italian>Patrimonio culturale</Italian>
+		<Russian>Культурное наследие</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PEDIA_CATEGORY_RELIGIOUS_BUILDINGS</Tag>
@@ -645,7 +645,7 @@
 		<German>Unterkategorien</German>
 		<Spanish>Subtipos de combate</Spanish>
 		<Polish>Typy Walki</Polish>
-		<Russian>Подтипы боевых действий</Russian>
+		<Russian>Атрибуты</Russian>
 		<Italian>Sottotipi di combattimento</Italian>
 	</TEXT>
 	<TEXT>
@@ -707,7 +707,7 @@
 		<English>Combat Types</English>
 		<Italian>Sottotipi di combattimento</Italian>
 		<German>Kategorien</German>
-		<Russian>Типы боевых действий</Russian>
+		<Russian>Атрибуты</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PEDIA_CATEGORY_UNIT_UPGRADES</Tag>
@@ -866,6 +866,12 @@
 		<German>im Besitz:</German>
 		<Italian>proprio</Italian>
 		<Russian>Во владении</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PEDIA_PERSONALITY</Tag>
+		<English>Personailty</English>
+		<German>Personailty</German>
+		<Russian>Характеристика</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PEDIA_QUOTE</Tag>
@@ -1035,7 +1041,7 @@
 		<French>« Qui sommes-nous, qu'est chacun de nous, sinon une combinaison d'expériences, d'informations, de lectures, de rêveries ? Chaque vie est une encyclopédie, une bibliothèque, un inventaire d'objets, un échantillonnage de styles, où tout peut se mêler et se réorganiser de toutes les manières possibles. » - Italo Calvino, Leçons américaines : Six propositions pour le prochain millénaire</French>
 		<German>„Wer sind wir denn, wer ist jeder von uns, wenn nicht eine Kombination von Erfahrungen, Informationen, Lektüren und Phantasien? Jedes Leben ist eine Enzyklopädie, eine Bibliothek, ein Inventar von Objekten, eine Musterkollektion von Stilen, worin alles jederzeit auf jede mögliche Weise neu gemischt und neu geordnet werden kann.“ - Italo Calvino, Sechs Vorschläge für das nächste Jahrtausend</German>
 		<Italian>«Chi siamo noi, chi è ciascuno di noi se non una combinazione d'esperienza, d'informazioni, di letture, d'immaginazioni? Ogni vita è un'enciclopedia, una biblioteca, un inventario di oggetti, un campionario di stili, dove tutto può essere continuamente rimescolato e riordinato in tutti i modi possibili.» - Italo Calvino, Lezioni americane. Sei proposte per il prossimo millennio</Italian>
-		<Russian>"Кто мы, если не сочетание переживаний, сведений, прочитанных книг, фантазий? Каждая жизнь — это энциклопедия, библиотека, реестр вещей, собрание стилей, где содержимое постоянно перемешивается и реорганизовывается всевозможными способами" - Итало Кальвино, Шесть заметок для будущего тысячелетия</Russian>
+		<Russian>"Кто мы, если не сочетание переживаний, сведений, прочитанных книг, фантазий? Каждая жизнь - это энциклопедия, библиотека, реестр вещей, собрание стилей, где содержимое постоянно перемешивается и реорганизовывается всевозможными способами" - Итало Кальвино, Шесть заметок для будущего тысячелетия</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PEDIA_WONDER</Tag>

@@ -7,6 +7,7 @@
 		<German>[ICON_BULLET]kann %F1_CmrcIcon-Rate anpassen</German>
 		<Italian>[ICON_BULLET]Può regolare il ritmo del %F1_CmrcIcon</Italian>
 		<Spanish>[ICON_BULLET]Puede ajustar el ritmo de %F1_CmrcIcon</Spanish>
+		<Russian>[ICON_BULLET]Может регулировать %F1_CmrcIcon ставку</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDINGHELP_AFFLICTION_OUTBREAK_LEVEL_CHANGE</Tag>
@@ -14,11 +15,13 @@
 		<French>[ICON_BULLET]Modifie les chances d'épidémie de %s1_Affliction de %d2_Amount.</French>
 		<Italian>[ICON_BULLET]Modifica le chance di un'epidemia di %s1_Affliction del %d2_Amount.</Italian>
 		<Polish>[ICON_BULLET]Reguluje szanse na wybuch: %s1_Affliction o %d2_Amount.</Polish>
+		<Russian>[ICON_BULLET]Изменяет базовый порог вспышки %s1_Affliction на %d2_Amount.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDINGHELP_AID_RATE</Tag>
 		<English>[ICON_BULLET]%D1_Amount Aid in Overcoming %s2_Type Afflictions within the City</English>
 		<French>[ICON_BULLET]%D1_Amount d'aide pour surmonter les afflications de type %s2_Type au sein de la ville</French>
+		<Russian>[ICON_BULLET]%D1_Amount помощь внутри города в преодолении болезней в количестве %s2_Type</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDINGHELP_AIRLIFT</Tag>
@@ -96,7 +99,7 @@
 		<Italian>[ICON_BULLET]Viene [COLOR_HIGHLIGHT_TEXT]costruito automaticamente[COLOR_REVERT] dai tuoi cittadini quando i prerequisiti sono soddisfatti</Italian> <!-- city screen hover automated building -->
 		<Spanish>Este edificio será automáticamente construido por tus ciudadanos cuando se cumplan todos sus requisitos</Spanish>
 		<Polish>Ten budynek zostanie wzniesiony przez mieszka&#241;c&#243;w miasta gdy wymagania zostan&#185; spe&#179;nione</Polish>
-		<Russian>Ýòî çäàíèå ñòðîèòñÿ àâòîìàòè÷åñêè âàøèìè ãðàæäàíàìè ïðè âûïîëíåíèè âñåõ íåîáõîäèìûõ óñëîâèé</Russian>
+		<Russian>Cтроится автоматически при выполнении необходимых условий</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDINGHELP_BIRTH_RATE_MOD</Tag>
@@ -201,7 +204,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDINGHELP_COASTAL_TRADE_ROUTES</Tag>
-		<English>[ICON_BULLET]%D1_Change Trade Routes in All Coastal Cities</English>
+		<English>[ICON_BULLET]Торговых путей во всех прибрежных городах: %D1_Change</English>
 		<French>[ICON_BULLET]%D1_Change Routes commerciales dans toutes les villes côtières</French>
 		<German>[ICON_BULLET]%D1_Change Handelswege in allen Küstenstädten</German>
 		<Italian>[ICON_BULLET]%D1_Change rotte commerciali in tutte le città costiere</Italian>
@@ -495,7 +498,7 @@
 		<Tag>TXT_KEY_BUILDINGHELP_FREE_TRAIT</Tag>
 		<English>[ICON_BULLET]As long as this building is active, its owning player gains the %s1_Trait Trait.</English>
 		<French>[ICON_BULLET]Tant que ce bâtiment est actif, le joueur le possédant gagne le trait %s1_Trait.</French>
-		<Russian>[ICON_BULLET]Пока это здание активно, владеющий им игрок сохраняет черту %s1_Trait.</Russian>
+		<Russian>[ICON_BULLET]Пока это здание активно, владеющий им игрок сохраняет качество %s1_Trait.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDINGHELP_FREE_XP</Tag>
@@ -690,7 +693,7 @@
 		<German>[ICON_BULLET]%D1_change[ICON_HAPPY] für Staatsoberhäupter mit dem Charakterzug: %s2:2_trait</German>
 		<Italian>[ICON_BULLET]Felicità [COLOR_HIGHLIGHT_TEXT]%D1_change[COLOR_REVERT] [ICON_HAPPY] con un leader [COLOR_HIGHLIGHT_TEXT]%s2_trait[COLOR_REVERT]</Italian>
 		<Spanish>[ICON_BULLET]%D1_change [ICON_HAPPY] con líder %s2:1_trait</Spanish>
-		<Russian>[ICON_BULLET]%D1_change[ICON_HAPPY] для предподителей с чертой %s2_trait</Russian>
+		<Russian>[ICON_BULLET]%D1_change[ICON_HAPPY] для лидеров с качеством %s2_trait</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDINGHELP_HAPPY_CHANGE_ALL_CITIES</Tag>
@@ -1628,12 +1631,12 @@
 		<German>[ICON_BULLET]Arbeitstrupps errichten Modernisierungen %D1_Mod%% schneller</German>
 		<Italian>[ICON_BULLET]I lavoratori costruiscono i miglioramenti il %D1_Mod%% più rapidamente</Italian>
 		<Spanish>[ICON_BULLET]Los trabajadores construyen mejoras un %D1_Mod%% más rápido</Spanish>
-		<Russian>[ICON_BULLET]Рабочие строят улучшения на %D1_Mod%% быстрее</Russian>
+		<Russian>[ICON_BULLET]Рабочие создают надстройки на %D1_Mod%% быстрее</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDINGHELP_WORLD_WONDERS_PER_CITY</Tag>
 		<English>[COLOR_WARNING_TEXT]This city's current culture level can only support %d1_Num World Wonders.[COLOR_REVERT]</English>
-		<Russian>[COLOR_WARNING_TEXT]Уровень культуры этого города может поддерживать мировые чудеса только в количестве: %d1_Num.[COLOR_REVERT]</Russian>
+		<Russian>[COLOR_WARNING_TEXT]Уровень культуры этого города может поддерживать великие чудеса только в количестве: %d1_Num.[COLOR_REVERT]</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDINGHELP_WORLD_WONDER_ALLOWED</Tag>
@@ -1642,7 +1645,7 @@
 		<German>[ICON_BULLET]Weltwunder (%d1_Num zulässig)</German>
 		<Italian>[ICON_BULLET]Meraviglia mondiale (%d1_Num [NUM1:permessa:permesse])</Italian>
 		<Spanish>[ICON_BULLET]Maravilla del mundo (%d1_Num [NUM1:permitida:permitidas])</Spanish>
-		<Russian>[ICON_BULLET]Мировое чудо (может быть только %d1_Num)</Russian>
+		<Russian>[ICON_BULLET]Великое чудо (может быть только %d1_Num)</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDINGHELP_WORLD_WONDER_LEFT</Tag>
@@ -1651,7 +1654,7 @@
 		<German>[SPACE](Weltwunder: %d1_Num übrig)</German>
 		<Italian>[SPACE](Meraviglia mondiale: %d1_Num [NUM1:rimasta:rimaste])</Italian>
 		<Spanish>[SPACE](Maravilla del mundo: %d1_Num [NUM1:restante:restantes])</Spanish>
-		<Russian>[SPACE](Мировое чудо: %d1_Num осталось)</Russian>
+		<Russian>[SPACE](Великое чудо: осталось %d1_Num)</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDINGHELP_ZONE_OF_CONTROL</Tag>

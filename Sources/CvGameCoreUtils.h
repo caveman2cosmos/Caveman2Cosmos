@@ -356,6 +356,8 @@ DllExport int* shuffle(int iNum, CvRandom& rand);
 void shuffleArray(int* piShuffle, int iNum, CvRandom& rand);
 void shuffle(int* piShuffle, int iNum, CvRandom& rand);
 
+int calculateCurrentTick();
+int getMinimalTickForEras(GameSpeedTypes eGameSpeed);
 int getTurnMonthForGame(int iGameTurn, int iStartYear, CalendarTypes eCalendar, GameSpeedTypes eSpeed);
 int getTurnYearForGame(int iGameTurn, int iStartYear, CalendarTypes eCalendar, GameSpeedTypes eSpeed);
 

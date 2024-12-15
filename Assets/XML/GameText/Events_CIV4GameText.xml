@@ -2,7 +2,7 @@
 <Civ4GameText xmlns="http://www.firaxis.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.firaxis.com ../Schema/Civ4Gametext.xsd">
 	<TEXT>
 		<Tag>TXT_KEY_EVENTOTHER_FUTBOL_WAR_1</Tag>
-		<English>The %s1_civ_adjective empire's response to the football violence has been inadequate and we have declared war on them!</English>
+		<English>The %s1_civ_adjective empire's response to the football violence has been inadequate, and we have declared war on them!</English>
 		<French>La réponse de l'empire des %s1:3_civ_adjective à la violence après le match de football a été insatisfaisante et nous leur avons déclaré la guerre!</French>
 		<German>Die Antwort des %s1_civ_adjective Reiches zur Fußballgewalttätigkeit ist unzulänglich gewesen und wir haben ihnen den Krieg erklärt!</German>
 		<Italian>La risposta dell'Impero %s1_civ_adjective alle violenze durante la partita di calcio è stata inadeguata e quindi dichiariamo guerra!</Italian>
@@ -49,6 +49,10 @@
 		<Russian>Академия в городе %s1_civ_adjective в городе %s2_city получила щедрое финансирование от богатых спонсоров.</Russian>
 		<Spanish>La Academia de la ciudad %s1:2_civ_adjective de %s2_city ha recibido generosas donaciones de parte de adinerados empresarios.</Spanish>
 	</TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENTTRIGGER_ADD_ONE_POPULATION_WORLD</Tag>
+        <English>A wandering group of people has demanded to join %s2_civ_adjective.</English>
+    </TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_ADD_ONE_POPULATION</Tag>
 		<English>A wandering group of people has demanded to join our city.</English>
@@ -103,6 +107,94 @@
 		<Russian>В державе %s1_civ_adjective начались антимонархические выступления под предлогом, что королевские прерогативы ущемляют авторитет религиозных учреждений.</Russian>
 		<Spanish>Anti-monárquicos %s1:3_civ_adjective están protestando, diciendo que las instituciones religiosas apenas tiene poder frente al Rey.</Spanish>
 	</TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENTTRIGGER_SQUASH</Tag>
+        <English>A %s1_civ_adjective workers have found a new source of food - squashes.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENTTRIGGER_MELONS</Tag>
+        <English>A %s1_civ_adjective workers have found a new source of food - melons.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENTTRIGGER_PUMPKIN</Tag>
+        <English>A %s1_civ_adjective workers have found a new source of food - pumpkins.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENTTRIGGER_LEMONS</Tag>
+        <English>A %s1_civ_adjective workers have found a new source of food - lemons.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENTTRIGGER_ALMONDS</Tag>
+        <English>A %s1_civ_adjective workers have found a new source of food - almonds.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENTTRIGGER_PISTACHIO</Tag>
+        <English>A %s1_civ_adjective workers have found a new source of food - pistachios.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENTTRIGGER_COCONUT</Tag>
+        <English>A %s1_civ_adjective workers have found a new source of food - coconuts.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENTTRIGGER_GUAVA</Tag>
+        <English>A %s1_civ_adjective workers have found a new source of food - guavas.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENTTRIGGER_PAPAYA</Tag>
+        <English>A %s1_civ_adjective workers have found a new source of food - papayas.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENTTRIGGER_POMEGRANATE</Tag>
+        <English>A %s1_civ_adjective workers have found a new source of food - pomegranates.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENTTRIGGER_MANGO</Tag>
+        <English>A %s1_civ_adjective workers have found a new source of food - mangos.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENTTRIGGER_BANANA</Tag>
+        <English>A %s1_civ_adjective workers have found a new source of food - bananas.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENTTRIGGER_POTATOES</Tag>
+        <English>A %s1_civ_adjective workers have found a new source of food - potatoes.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENTTRIGGER_BARLEY</Tag>
+        <English>A %s1_civ_adjective workers have found a new source of food - barley.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENTTRIGGER_RICE</Tag>
+        <English>A %s1_civ_adjective workers have found a new source of food - rice.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENTTRIGGER_WHEAT</Tag>
+        <English>A %s1_civ_adjective workers have found a new source of food - wheat.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENTTRIGGER_CORN</Tag>
+        <English>A %s1_civ_adjective workers have found a new source of food - corn.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENTTRIGGER_OLIVES</Tag>
+        <English>A %s1_civ_adjective workers have found a new source of food - olives.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENTTRIGGER_FIG</Tag>
+        <English>A %s1_civ_adjective workers have found a new source of food - figs.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENTTRIGGER_DATES</Tag>
+        <English>A %s1_civ_adjective workers have found a new source of food - dates.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENTTRIGGER_PEYOTE</Tag>
+        <English>A %s1_civ_adjective workers have found a new source of food - peyote.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENTTRIGGER_PRICLY_PEAR</Tag>
+        <English>A %s1_civ_adjective workers have found a new source of food - prickly pears.</English>
+    </TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_APPLESEED</Tag>
 		<English>A %s1_civ_adjective folk hero has caused the creation of a new forest of apple trees.</English>
@@ -113,7 +205,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_ARTIFICIAL_ELEMENT_1</Tag>
-		<English>The %s1_civ_adjective scientists in %s2_city have discovered first artificial element with their accelerator!</English>
+		<English>%s1_civ_adjective scientists in %s2_city have discovered the first artificial element with their accelerator!</English>
 		<French>Les scientifique %s1:3_civ_adjective de %s2_city ont découvert le premier élément artificiel avec leur accélérateur!</French>
 		<German>Die %s1_civ_adjective Wissenschaftler in %s2_city haben mit ihrem Teilchenbeschleuniger das erste künstliche Element erschaffen!</German>
 		<Italian>Gli scienziati %s1:3_civ_adjective di %s2_city hanno scoperto il primo elemento artificiale all'interno del loro acceleratore!</Italian>
@@ -420,6 +512,10 @@
 		<Polish>Ogie&#241; szaleje w miastach %s1_civ_adjective.</Polish>
 		<Russian>В городах народа %s1_civ_adjective свирепствуют пожары.</Russian>
 	</TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENTTRIGGER_WAR_TAXES</Tag>
+        <English>The %s1_civ_adjective ruler has levied war taxes. The situation must be getting desperate.</English>
+    </TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_CITY_RUINS</Tag>
 		<English>%s1_civ_adjective explorers have discovered valuable information buried in ruins near %s2_city.</English>
@@ -488,6 +584,10 @@
 		<Italian>I mercanti %s1:3_civ_adjective stanno offrendo forti sconti sul carbone di scarto, che è pieno di impurità.</Italian>
 		<Spanish>Los mercaderes %s1:3_civ_adjective están ofreciendo descuentos por la compra al por mayor de carbón de turba, que está lleno de impurezas.</Spanish>
 	</TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENTTRIGGER_PURE_COAL</Tag>
+        <English>%s1_civ_adjective merchants are increasing prices on tons of their pure coal, which is the cleanest coal in the market.</English>
+    </TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_COASTAL_REEF</Tag>
 		<English>One of our ships sank when caught in surprise by a treacherous coastal reef.</English>
@@ -661,7 +761,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_DOCK_WORKERS_STRIKE_BADLY</Tag>
-		<English>The Dock workers in the %s1_civ_adjective empire has caused widespread rioting and looting!</English>
+		<English>The Docks workers in the %s1_civ_adjective empire has caused widespread rioting and looting!</English>
 		<French>Les grèves des Dockers de tout %s1_civ_adjective empire ont engendré des soulèvements et des pillages!</French>
 		<Italian>I lavoratori portuali dell'Impero %s1_civ_adjective hanno causato sommosse e saccheggi diffusi!</Italian>
 		<Polish>Pracownicy portowi z imperium %s1_civ_adjective spowodowali zamieszanie oraz grabierze!</Polish>
@@ -818,7 +918,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_FAUX_PAS</Tag>
-		<English>A faux pas committed by the %s1_civ_adjective ambassador has caused quite a stir in the %s4_civ_adjective Capital.</English>
+		<English>A faux pas committed by the %s1_civ_adjective ambassador has caused quite a stir in the %s4_civ_adjective capital.</English>
 		<French>Une gaffe commise par l'ambassadeur %s1:1_civ_adjective a provoqué de grands remous dans la capitale %s4:2_civ_adjective. </French>
 		<German>Ein Fauxpas des %s1:2_civ_adjective Botschafters hat in der %s4:2_civ_adjective Hauptstadt für ziemliche Aufregung gesorgt.</German>
 		<Italian>Una gaffe commessa dall'ambasciatore %s1_civ_adjective ha causato agitazione nella capitale %s4:2_civ_adjective.</Italian>
@@ -1121,15 +1221,51 @@
 		<Spanish>Los empresarios %s1:3_civ_adjective han inventado el restaurante de comida rápida. Gracias a la publicidad en la radio, este fenómeno se está difundiendo rápidamente.</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_EVENTTRIGGER_HAPPY_HUNTING</Tag>
-		<English>Surplus game harvested by hunters near the %s1_civ_adjective city of %s2_city has fueled a minor population boom.</English>
-		<French>Un surplus de gibier débusqué par des chasseurs %s1:3_civ_adjective près de la ville de %s2_city a donné lieu à une augmentation de la nourriture disponible dans la ville.</French>
-		<German>Die erfolgreiche Jagd auf besonders große Wildbestände nahe der %[s1_civ_adjective]en Stadt %s2_city bewirkt einen kleinen Bevölkerungsanstieg.</German>
-		<Italian>L'abbondante selvaggina procurata dai cacciatori vicino alla città %s1:2_civ_adjective di %s2_city ha causato un piccolo boom demografico.</Italian>
-		<Polish>Naddatek upolowanych zwierz&#185;t nieopodal %s1_civ_adjective city of %s2_city doprowadzi&#179; do rozkwitu lokalnej populacji.</Polish>
-		<Russian>Изобилие дичи, добытой охотниками народа %s1_civ_adjective, привело к небольшому росту населения в городе %s2_city.</Russian>
-		<Spanish>El excedente logrado por los cazadores cerca de la ciudad %s1:2_civ_adjective de %s2_city ha impulsado un pequeño crecimiento de la población.</Spanish>
+		<Tag>TXT_KEY_EVENTTRIGGER_GREAT_HARVEST</Tag>
+		<English>Surplus crops harvested by workers near the %s1_civ_adjective city of %s2_city. They have been blessed.</English>
 	</TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_TRIGGER_GREAT_HARVEST_1</Tag>
+        <English>Surplus crops have been harvested what shall we do with it?</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENTTRIGGER_POOR_HARVEST</Tag>
+        <English>Crops have failed this year near the %s1_civ_adjective city of %s2_city. Hard times are approaching.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_TRIGGER_POOR_HARVEST_1</Tag>
+        <English>The crops this year have failed what shall we do?</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENTTRIGGER_HAPPY_HUNTING</Tag>
+        <English>Surplus game harvested by hunters near the %s1_civ_adjective city of %s2_city has fueled a minor population boom.</English>
+        <French>Un surplus de gibier débusqué par des chasseurs %s1:3_civ_adjective près de la ville de %s2_city a donné lieu à une augmentation de la nourriture disponible dans la ville.</French>
+        <German>Die erfolgreiche Jagd auf besonders große Wildbestände nahe der %[s1_civ_adjective]en Stadt %s2_city bewirkt einen kleinen Bevölkerungsanstieg.</German>
+        <Italian>L'abbondante selvaggina procurata dai cacciatori vicino alla città %s1:2_civ_adjective di %s2_city ha causato un piccolo boom demografico.</Italian>
+        <Polish>Naddatek upolowanych zwierz&#185;t nieopodal %s1_civ_adjective city of %s2_city doprowadzi&#179; do rozkwitu lokalnej populacji.</Polish>
+        <Russian>Изобилие дичи, добытой охотниками народа %s1_civ_adjective, привело к небольшому росту населения в городе %s2_city.</Russian>
+        <Spanish>El excedente logrado por los cazadores cerca de la ciudad %s1:2_civ_adjective de %s2_city ha impulsado un pequeño crecimiento de la población.</Spanish>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENTTRIGGER_GREAT_STORY</Tag>
+        <English>A %s1_civ_adjective storyteller from the city of %s2_city has told an amazing story captivating the tribe.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_PRIME_STUD</Tag>
+        <English>A %s1_civ_adjective merchant has found prime steeds for their stables.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_CHILD_WISE_COUNCIL</Tag>
+        <English>A %s1_civ_adjective council has welcomed a wise elder; his wisdom will lead them to greatness.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_CHILD_LABOUR_INCIDENT</Tag>
+        <English>A terrible incident has happened at one of the %s1_civ_adjective child labour camps.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENTTRIGGER_COMMUNITY_BOND</Tag>
+        <English>A %s1_civ_adjective community discussion in the city of %s2_city has brought their people closer.</English>
+    </TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_HARBORMASTER_DONE</Tag>
 		<English>The seaworthy %s1_civ_adjective people have completed the quest of The Harbormaster!</English>
@@ -1250,6 +1386,146 @@
 		<Italian>I minatori %s1:3_civ_adjective si sono arricchiti con la scoperta di nuovi filoni di argento.</Italian>
 		<Spanish>El imperio %s1:1_civ_adjective se ha hecho rico con el descubrimiento de nuevos filones de plata.</Spanish>
 	</TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENTTRIGGER_GOLD_MINE</Tag>
+        <English>%s1_civ_adjective miners have struck it rich with the discovery of new veins of Gold ore.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENTTRIGGER_PLATINUM</Tag>
+        <English>%s1_civ_adjective miners have struck it rich with the discovery of new veins of Platinum ore.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENTTRIGGER_LEAD</Tag>
+        <English>%s1_civ_adjective miners have found lead ore.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENTTRIGGER_TITANIUM</Tag>
+        <English>%s1_civ_adjective miners have found titanium ore.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENTTRIGGER_TURQUOISE</Tag>
+        <English>%s1_civ_adjective miners have found turquoise ore.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENTTRIGGER_SULPHUR</Tag>
+        <English>%s1_civ_adjective miners have found sulphur ore.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENTTRIGGER_TEA</Tag>
+        <English>%s1_civ_adjective scouts have found tea.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENTTRIGGER_VANILLA</Tag>
+        <English>%s1_civ_adjective workers have found vanilla.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENTTRIGGER_COFFEE</Tag>
+        <English>%s1_civ_adjective workers have found coffee.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENTTRIGGER_KAVA</Tag>
+        <English>%s1_civ_adjective workers have found kava.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENTTRIGGER_SUGAR</Tag>
+        <English>%s1_civ_adjective workers have found sugar.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENTTRIGGER_COCA</Tag>
+        <English>%s1_civ_adjective workers have found coca.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENTTRIGGER_TOBACCO</Tag>
+        <English>%s1_civ_adjective workers have found tobacco.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENTTRIGGER_COTTON</Tag>
+        <English>%s1_civ_adjective workers have found cotton.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENTTRIGGER_INDIGO</Tag>
+        <English>%s1_civ_adjective workers have found indigo.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENTTRIGGER_FLAX</Tag>
+        <English>%s1_civ_adjective workers have found flax.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENTTRIGGER_HEMP</Tag>
+        <English>%s1_civ_adjective workers have found hemp.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENTTRIGGER_RUBBER</Tag>
+        <English>%s1_civ_adjective workers have found rubber.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENTTRIGGER_OPIUM</Tag>
+        <English>%s1_civ_adjective workers have found opium.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENTTRIGGER_HENNA</Tag>
+        <English>%s1_civ_adjective workers have found henna.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENTTRIGGER_INCENSE</Tag>
+        <English>%s1_civ_adjective workers have found incense.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENTTRIGGER_PAPYRUS</Tag>
+        <English>%s1_civ_adjective workers have found papyrus.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENTTRIGGER_SILK</Tag>
+        <English>%s1_civ_adjective workers have silk bugs.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENTTRIGGER_STONE</Tag>
+        <English>%s1_civ_adjective workers have found stone.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENTTRIGGER_COAL</Tag>
+        <English>%s1_civ_adjective miners have found coal.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENTTRIGGER_AMBER</Tag>
+        <English>%s1_civ_adjective miners have found amber.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENTTRIGGER_BAUXITE</Tag>
+        <English>%s1_civ_adjective miners have found bauxite ore.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENTTRIGGER_DIAMOND</Tag>
+        <English>%s1_civ_adjective miners have found diamonds.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENTTRIGGER_IRON</Tag>
+        <English>%s1_civ_adjective miners have found iron ore.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENTTRIGGER_MANGANESE</Tag>
+        <English>%s1_civ_adjective miners have found manganese ore.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENTTRIGGER_RUBIES</Tag>
+        <English>%s1_civ_adjective miners have found rubies.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENTTRIGGER_MARBLE</Tag>
+        <English>%s1_civ_adjective miners have found marble ore.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENTTRIGGER_COPPER</Tag>
+        <English>%s1_civ_adjective miners have found copper ore.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENTTRIGGER_SAPPHIRES</Tag>
+        <English>%s1_civ_adjective miners have struck it rich with the discovery of new sapphires.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENTTRIGGER_URANIUM</Tag>
+        <English>%s1_civ_adjective miners have struck it rich with the discovery of uranium.</English>
+    </TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_HOLY_MOUNTAIN_DONE</Tag>
 		<English>The faithful %s3_religion_adjective people are inspired by the divine providence of the %s1_civ_adjective Empire for completing the Quest of the Holy Mountain!</English>
@@ -2066,7 +2342,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_QUICKSAND</Tag>
-		<English>Some units of the %s1_civ_adjective empire got stuck in the sand dunes.</English>
+		<English>Some units of the %s1_civ_adjective empire got stuck among sand dunes.</English>
 		<French>Des unités de l'empire %s1_civ_adjective ont été pris au piège dans des sables mouvants.</French>
 		<Italian>Alcune unità dell'Impero %s1_civ_adjective sono rimaste bloccate fra le dune.</Italian>
 		<Polish>Niekt&#243;re jednostki w Imperium %s1_civ_adjective utkn&#234;&#179;y w lotnych piaskach.</Polish>
@@ -2192,7 +2468,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_SANDSTORM</Tag>
-		<English>Sandstorm has made some of the routes disappear in the sand near the %s1_civ_adjective city of %s2_city.</English>
+		<English>A sandstorm has made some of the routes disappear in the sand near the %s1_civ_adjective city of %s2_city.</English>
 		<French>Des Tempêtes de sable ont fait disparaître des routes près de la ville %s1:2_civ_adjective de %s2_city.</French>
 		<German>Durch Sandstürme sind in der Nähe der %s1_civ_adjective Stadt %s2_city einige Straßen im Sand verschwunden.</German>
 		<Italian>Una tempesta di sabbia ha fatto scomparire le vie di comunicazione vicino alla città %s1:2_civ_adjective di %s2_city.</Italian>
@@ -2200,6 +2476,10 @@
 		<Russian>Песчаные бури в державе %s1_civ_adjective погребли торговые пути под слоем песка около города %s2_city.</Russian>
 		<Spanish>Una tormenta de arena ha hecho desaparecer bajo la arena algunos de los caminos cerca de la ciudad %s1:2_civ_adjective de %s2_city.</Spanish>
 	</TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENTTRIGGER_SANDSTORM_IMPROVEMENT</Tag>
+        <English>A sandstorm has hit some of our facilities near %s1_civ_adjective city of %s2_city.</English>
+    </TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_SEA_TURTLES</Tag>
 		<English>%s1_civ_adjective people are now harvesting sea turtles on an annual basis.</English>
@@ -2348,6 +2628,10 @@
 		<Italian>I mercanti %s1:3_civ_adjective stanno facendo sconti sul loro petrolio grezzo, che è pieno di impurità.</Italian>
 		<Spanish>Los mercaderes %s1:3_civ_adjective están ofreciendo descuentos por la compra al por mayor de crudo ácido, que está lleno de impurezas.</Spanish>
 	</TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENTTRIGGER_PURE_CRUDE</Tag>
+        <English>%s1_civ_adjective merchants are increasing prices on barrels of their pure crude oil, which is as pure as it gets.</English>
+    </TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_SPICY_1</Tag>
 		<English>A %s1_civ_adjective chef has identified a new and valuable type of spice.</English>
@@ -2457,7 +2741,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_TARPIT</Tag>
-		<English>Some units of the %s1_civ_adjective empire got stuck in the tar pit.</English>
+		<English>Some units of the %s1_civ_adjective empire got stuck in a tar pit.</English>
 		<French>Des unités de l'empire %s1_civ_adjective ont été pris au piège dans des fosses de goudron.</French>
 		<Italian>Alcune unità dell'Impero %s1_civ_adjective sono rimaste intrappolate nelle fosse di catrame.</Italian>
 		<Polish>Niekt&#243;re jednostki z imperium %s1_civ_adjective utkne&#179;y w do&#179;ach ze smo&#179;&#185;.</Polish>
@@ -2611,7 +2895,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_TREASURY_PLUNDERED_1</Tag>
-		<English>Group of thieves have plundered Treasury in %s2_city!</English>
+		<English>A group of thieves has plundered the treasury in %s2_city!</English>
 		<French>Un Groupe de voleurs a pillé le trésor de %s2_city!</French>
 		<German>Eine Diebesgruppe hat die Schatzkammer in %s2_city geplündert!</German>
 		<Italian>Un gruppo di ladri ha svuotato le casse cittadine di %s2_city!</Italian>
@@ -2736,7 +3020,35 @@
 		<Italian>È stato localizzato un nuovo branco di balene davanti alla costa %s1:2_civ_adjective.</Italian>
 		<Spanish>Se ha localizado un nuevo caladero de ballenas en la costa %s1:2_civ_adjective.</Spanish>
 	</TEXT>
-	<TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENTTRIGGER_FOUND_PEARLS</Tag>
+        <English>A new source of Pearls has been located off the %s1_civ_adjective coast.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENTTRIGGER_FOUND_LOBSTER</Tag>
+        <English>A new source of Lobster has been located off the %s1_civ_adjective coast.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENTTRIGGER_FOUND_FISH</Tag>
+        <English>A new source of Fish has been located off the %s1_civ_adjective coast.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENTTRIGGER_FOUND_SHRIMP</Tag>
+        <English>A new source of Shrimp has been located off the %s1_civ_adjective coast.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENTTRIGGER_FOUND_CRAB</Tag>
+        <English>A new source of Crab has been located off the %s1_civ_adjective coast.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENTTRIGGER_FOUND_CLAM</Tag>
+        <English>A new source of Clam has been located off the %s1_civ_adjective coast.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENTTRIGGER_FOUND_MUREX</Tag>
+        <English>A new source of Murex has been located off the %s1_civ_adjective coast.</English>
+    </TEXT>
+    <TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_WININGMONKS</Tag>
 		<English>%s1_civ_adjective monks who have grown their vineyards over the years are now producing Wines in significant quantities.</English>
 		<French>Les moines %s1_civ_adjective qui ont fait pousser leurs vignes pendant des années produisent à présent du vin en quantité importante.</French>
@@ -2878,11 +3190,15 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_ADD_ONE_POPULATION</Tag>
-		<English>Join the city.</English>
+		<English>Let's hope our people will accept these new folks.</English>
 	</TEXT>
     <TEXT>
         <Tag>TXT_KEY_EVENT_ADD_ONE_POPULATION1</Tag>
         <English>Chase them away we can't afford to feed more mouths.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_ADD_ONE_POPULATION2</Tag>
+        <English>%s1_civ_adjective city of %s2_city is having riots as the poeple feel their culture and way of life is treathened by outsiders.</English>
     </TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_AIRLINER_CRASH_1</Tag>
@@ -3104,6 +3420,162 @@
 		<Russian>В этом есть доля истины: наши священники нуждаются в большем влиянии.</Russian>
 		<Spanish>Es un argumento válido, nuestro clérigos necesitan más influencia.</Spanish>
 	</TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_COCOA_1</Tag>
+        <English>This looks tasty.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_INCENSE_1</Tag>
+        <English>This smells beautifully.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_PAPYRUS_11</Tag>
+        <English>We can use this to improve our society.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_SUGAR_1</Tag>
+        <English>This is sweet.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_KAVA_1</Tag>
+        <English>This plant looks interesting.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_COFFEE_1</Tag>
+        <English>This plant has good taste.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_TEA_1</Tag>
+        <English>This plant smells nice.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_VANILLA_1</Tag>
+        <English>This plant tastes very nice.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_COCA_1</Tag>
+        <English>This plant looks interesting.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_TOBACCO_1</Tag>
+        <English>This is great news.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_COTTON_1</Tag>
+        <English>This seems like a valuable resource.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_INDIGO_1</Tag>
+        <English>Great, this resource is valuable.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_FLAX_1</Tag>
+        <English>Great, let us use this to our benefit.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_HEMP_1</Tag>
+        <English>Great, we can make use of this.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_RUBBER_1</Tag>
+        <English>Hm, interesting, this resource will be very useful.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_OPIUM_1</Tag>
+        <English>Hm, interesting, this will boost our economy.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_HENNA_1</Tag>
+        <English>We can use it to create colors.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_SILK_1</Tag>
+        <English>Great, let's put this to use.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_PEYOTE_1</Tag>
+        <English>Peyote, you say.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_FIG_1</Tag>
+        <English>Hmm let me taste some of them figs.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_ALMONDS_1</Tag>
+        <English>A great snack.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_PISTACHIO_1</Tag>
+        <English>A great snack.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_SQUASH_1</Tag>
+        <English>Hmmm, this is not that bad.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_COCONUT_1</Tag>
+        <English>Hard to open but it is delicious.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_GUAVAS_1</Tag>
+        <English>This fruit is wonderful.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_PAPAYA_1</Tag>
+        <English>This fruit is wonderful.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_LEMONS_1</Tag>
+        <English>Quite refreshing, we need more.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_POMEGRANATE_1</Tag>
+        <English>Quite refreshing, we need more.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_MANGO_1</Tag>
+        <English>Use this fruit as a dessert, it is quite good.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_BANANA_1</Tag>
+        <English>Use this fruit as a dessert, it is quite good.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_POTATOES_1</Tag>
+        <English>This root food is actually good.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_BARLEY_1</Tag>
+        <English>This crops will serve us well.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_MELONS_1</Tag>
+        <English>This food is a great snack.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_RICE_1</Tag>
+        <English>The crops that will feed our civilization.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_WHEAT_1</Tag>
+        <English>The crops that will feed our civilization.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_DATES_1</Tag>
+        <English>This fruit is sweet.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_PUMPKIN_1</Tag>
+        <English>Damn, these pumpkins are massive.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_OLIVES_1</Tag>
+        <English>Nice, lets make oil from this one.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_CORN_1</Tag>
+        <English>Not bad, the more food the better.</English>
+    </TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_APPLESEED_1</Tag>
 		<English>How many trees were planted? That's amazing!</English>
@@ -3435,7 +3907,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_BLACKBEARD</Tag>
-		<English>The infamous Pirate [COLOR_NEGATIVE_TEXT]Blackbeard[COLOR_REVERT] has set sail for our waters, seeking plunder and mayhem! His flotilla is just over the horizon!</English>
+		<English>The infamous pirate [COLOR_NEGATIVE_TEXT]Blackbeard[COLOR_REVERT] has set sail for our waters, seeking plunder and mayhem! His flotilla is just over the horizon!</English>
 		<French>Le pirate infâme [COLOR_NEGATIVE_TEXT]Blackbeard[COLOR_REVERT] a dirigé ses voiles vers nos eaux! Sa flotille est visible juste au-dessus de l'horizon!</French>
 		<German>Der berüchtigte Pirat [COLOR_NEGATIVE_TEXT]Blackbeard[COLOR_REVERT] hat Segel auf unsere Gewässer gesetzt und sucht Plünderung und Chaos! Seine Flotille liegt direkt hinter dem Horizont!</German>
 		<Italian>Il malfamato pirata [COLOR_NEGATIVE_TEXT]Barbanera[COLOR_REVERT] sta facendo rotta per le nostre coste! La sua flotta è già visibile all'orizzonte!</Italian>
@@ -3706,7 +4178,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_BROKEN_DAM_1</Tag>
-		<English>That is very unfortunate, but we can not help. Tell the local authorities they'll have to handle the situation.</English>
+		<English>That is very unfortunate, but we cannot help. Tell the local authorities they'll have to handle the situation.</English>
 		<French>C'est malheureux, mais nous ne pouvons rien y faire. Mettez les autorités locales en charge de la situation.</French>
 		<German>Wir können uns derzeit keine Hilfsmaßnahmen leisten. Die lokalen Behörden müssen mit dieser Situation selbst fertig werden.</German>
 		<Italian>È una cosa molto spiacevole, ma non possiamo fare nulla. Avverti le autorità locali che dovranno occuparsi della situazione.</Italian>
@@ -3744,7 +4216,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_BROTHERS_IN_NEED_10</Tag>
-		<English>Their front lines are static. Give them some of our Tanks!</English>
+		<English>Their front lines are static. Give them some of our tanks!</English>
 		<French>Leurs lignes de front sont statiques. Donnez-leur de nos réservoirs!</French>
 		<German>Ihre Fronten sind statisch. Gib ihnen einige unserer Panzer!</German>
 		<Italian>Le loro linee del fronte sono statiche. Date loro alcuni dei nostri carri armati!</Italian>
@@ -3753,7 +4225,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_BROTHERS_IN_NEED_11</Tag>
-		<English>Having air superiority is paramount in the field of battle. Send them some of our Aircrafts!</English>
+		<English>Having air superiority is paramount in the field of battle. Send them some of our aircraft!</English>
 		<French>Avoir la supériorité aérienne est primordial sur le champ de bataille. Envoyez-leur des avions!</French>
 		<German>Luftüberlegenheit ist im Kampfbereich von größter Bedeutung. Schicken Sie ihnen einige unserer Flugzeuge!</German>
 		<Italian>Avere superiorità aerea è fondamentale sul campo della battaglia. Inviate loro alcuni dei nostri velivoli!</Italian>
@@ -3762,7 +4234,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_BROTHERS_IN_NEED_12</Tag>
-		<English>Their adversary is too strong, this calls for desperate measures. Give them some of our Uranium.</English>
+		<English>Their adversary is too strong. This calls for desperate measures; give them some of our uranium.</English>
 		<French>Leur adversaire est trop fort, cela appelle des mesures désespérées. Donnez-leur de notre uranium.</French>
 		<German>Ihr Gegner ist zu stark, dies erfordert verzweifelte Maßnahmen. Gib ihnen etwas von unserem Uran.</German>
 		<Italian>Il loro avversario è troppo forte, questo richiede misure drastiche. Date loro un po' del nostro uranio.</Italian>
@@ -3771,7 +4243,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_BROTHERS_IN_NEED_13</Tag>
-		<English>Their mechanical units are weak. Send them some of our Androids!</English>
+		<English>Their mechanical units are weak. Send them some of our androids!</English>
 		<French>Leurs unités mécaniques sont faibles. Envoyez-leur des androïdes!</French>
 		<German>Ihre mechanischen Einheiten sind schwach. Sende ihnen einige unserer Androiden!</German>
 		<Italian>Le loro unità meccaniche sono deboli. Mandate loro alcuni dei nostri androidi!</Italian>
@@ -3784,15 +4256,15 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_BROTHERS_IN_NEED_15</Tag>
-		<English>Send them obsidian to build durable weapons.</English>
+		<English>Send them obsidian, to build durable weapons.</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_BROTHERS_IN_NEED_16</Tag>
-		<English>We dont have much but we can always send them gold.</English>
+		<English>We don't have much, but we can always send them gold.</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_BROTHERS_IN_NEED_2</Tag>
-		<English>Offer to send them a large supply of Copper for weapon making.</English>
+		<English>Offer to send them a large supply of copper for weapon making.</English>
 		<French>Proposer à nos frères de leur envoyer une grande quantité de cuivre pour la fabrication de leurs armes.</French>
 		<German>Bietet ihnen eine große Lieferung Kupfer an, damit sie Waffen herstellen können.</German>
 		<Italian>Offrite loro l'invio di una grande quantità di rame per produrre armi.</Italian>
@@ -3800,7 +4272,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_BROTHERS_IN_NEED_3</Tag>
-		<English>Provide Iron so that they may craft strong weaponry.</English>
+		<English>Provide iron so that they may craft strong weaponry.</English>
 		<French>Donner du fer à nos frères pour qu'ils puissent fabriquer de puissantes armes.</French>
 		<German>Bietet ihnen Eisen an, damit sie hochwertige Waffen herstellen können.</German>
 		<Italian>Fornite loro del ferro, in modo che possano costruire armi più resistenti.</Italian>
@@ -3808,7 +4280,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_BROTHERS_IN_NEED_4</Tag>
-		<English>Send large herds of war-trained Horses to our brothers.</English>
+		<English>Send large herds of war-trained horses to our brothers.</English>
 		<French>Envoyer de nombreux chevaux de guerre à nos frères.</French>
 		<German>Schickt unseren Brüdern möglichst viele Schlachtrösser.</German>
 		<Italian>Inviate grandi mandrie di cavalli da guerra ai nostri fratelli.</Italian>
@@ -3816,7 +4288,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_BROTHERS_IN_NEED_5</Tag>
-		<English>War Elephants are what they need. Send in the jumbos!</English>
+		<English>War elephants are what they need. Send in the jumbos!</English>
 		<French>Il leur faut des éléphants de guerre. Offrir des éléphants.</French>
 		<German>Sie brauchen Kriegselefanten. Schickt ihnen die Jumbos!</German>
 		<Italian>Gli elefanti da guerra sono ciò di cui hanno bisogno. Mandateglieli!</Italian>
@@ -3824,7 +4296,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_BROTHERS_IN_NEED_6</Tag>
-		<English>Their army cannot fight without weapons. Send them some of our Firearms!</English>
+		<English>Their army cannot fight without weapons. Send them some of our firearms!</English>
 		<French>Leur armée ne peut pas se battre sans armes. Envoyez-leur des armes à feu!</French>
 		<German>Ihre Armee kann nicht ohne Waffen kämpfen. Sende ihnen einige unserer Feuerwaffen!</German>
 		<Italian>Il loro esercito non può combattere senza armi. Inviate loro alcune delle nostre armi da fuoco!</Italian>
@@ -3833,7 +4305,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_BROTHERS_IN_NEED_7</Tag>
-		<English>Weapons are useless without Ammunition. Give them access to a few of our stockpiles!</English>
+		<English>Weapons are useless without ammunition. Give them access to a few of our stockpiles!</English>
 		<French>Les armes sont inutiles sans munitions. Donnez-leur accès à quelques-uns de nos stocks!</French>
 		<German>Waffen sind ohne Munition unbrauchbar. Gib ihnen Zugang zu einigen unserer Vorräte!</German>
 		<Italian>Le armi sono inutili senza munizioni. Date loro l'accesso ad alcune delle nostre scorte!</Italian>
@@ -3842,7 +4314,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_BROTHERS_IN_NEED_8</Tag>
-		<English>Their navy is lacking. Provide them with our strongest Steel!</English>
+		<English>Their navy is lacking. Provide them with our strongest steel!</English>
 		<French>Leur marine fait défaut. Fournissez-leur notre acier le plus fort!</French>
 		<German>Ihre Marine fehlt. Versorgen Sie sie mit unserem stärksten Stahl!</German>
 		<Italian>La loro Marina è carente. Fornite loro il nostro acciaio più resistente!</Italian>
@@ -3851,7 +4323,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_BROTHERS_IN_NEED_9</Tag>
-		<English>Their vehicles require fuel. Send them Oil Products!</English>
+		<English>Their vehicles require fuel. Send them oil products!</English>
 		<French>Leurs véhicules ont besoin de carburant. Envoyez-leur des produits pétroliers!</French>
 		<German>Ihre Fahrzeuge benötigen Kraftstoff. Schicken Sie ihnen Ölprodukte!</German>
 		<Italian>I loro veicoli richiedono carburante. Inviate loro prodotti petroliferi!</Italian>
@@ -3860,7 +4332,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_BROTHERS_IN_NEED_OTHER_10</Tag>
-		<English>Our %s1_civ_adjective religious brothers have gifted us with [COLOR_HIGHLIGHT_TEXT]Tanks[COLOR_REVERT] to aid us in our war effort!</English>
+		<English>Our %s1_civ_adjective religious brothers have gifted us with [COLOR_HIGHLIGHT_TEXT]tanks[COLOR_REVERT] to aid us in our war effort!</English>
 		<French>Nos frères %s1:3_civ_adjective nous ont offert de l'[COLOR_HIGHLIGHT_TEXT]Char de combat[COLOR_REVERT] pour soutenir notre effort de guerre!</French>
 		<German>Unsere %s1:2_civ_adjective Glaubensbrüder unterstützen unsere Kriegsbemühungen mit [COLOR_HIGHLIGHT_TEXT]Panzer[COLOR_REVERT]!</German>
 		<Italian>I nostri fratelli di fede %s1:2_civ_adjective ci hanno donato dei [COLOR_HIGHLIGHT_TEXT]Carri armati[COLOR_REVERT] per aiutarci nello sforzo bellico!</Italian>
@@ -3869,7 +4341,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_BROTHERS_IN_NEED_OTHER_11</Tag>
-		<English>Our %s1_civ_adjective religious brothers have gifted us with [COLOR_HIGHLIGHT_TEXT]Aircrafts[COLOR_REVERT] to aid us in our war effort!</English>
+		<English>Our %s1_civ_adjective religious brothers have gifted us with [COLOR_HIGHLIGHT_TEXT]aircraft[COLOR_REVERT] to aid us in our war effort!</English>
 		<French>Nos frères %s1:3_civ_adjective nous ont offert de l'[COLOR_HIGHLIGHT_TEXT]Avions[COLOR_REVERT] pour soutenir notre effort de guerre!</French>
 		<German>Unsere %s1:2_civ_adjective Glaubensbrüder unterstützen unsere Kriegsbemühungen mit [COLOR_HIGHLIGHT_TEXT]Flugzeuge[COLOR_REVERT]!</German>
 		<Italian>I nostri fratelli di fede %s1:2_civ_adjective ci hanno donato degli [COLOR_HIGHLIGHT_TEXT]Aerei[COLOR_REVERT] per aiutarci nello sforzo bellico!</Italian>
@@ -3878,7 +4350,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_BROTHERS_IN_NEED_OTHER_12</Tag>
-		<English>Our %s1_civ_adjective religious brothers have gifted us with [COLOR_HIGHLIGHT_TEXT]Uranium[COLOR_REVERT] to aid us in our war effort!</English>
+		<English>Our %s1_civ_adjective religious brothers have gifted us with [COLOR_HIGHLIGHT_TEXT]uranium[COLOR_REVERT] to aid us in our war effort!</English>
 		<French>Nos frères %s1:3_civ_adjective nous ont offert de l'[COLOR_HIGHLIGHT_TEXT]Uranium[COLOR_REVERT] pour soutenir notre effort de guerre!</French>
 		<German>Unsere %s1:2_civ_adjective Glaubensbrüder unterstützen unsere Kriegsbemühungen mit [COLOR_HIGHLIGHT_TEXT]Uran[COLOR_REVERT]!</German>
 		<Italian>I nostri fratelli di fede %s1:2_civ_adjective ci hanno donato dell'[COLOR_HIGHLIGHT_TEXT]Uranio[COLOR_REVERT] per aiutarci nello sforzo bellico!</Italian>
@@ -3887,7 +4359,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_BROTHERS_IN_NEED_OTHER_13</Tag>
-		<English>Our %s1_civ_adjective religious brothers have gifted us with [COLOR_HIGHLIGHT_TEXT]Androids[COLOR_REVERT] to aid us in our war effort!</English>
+		<English>Our %s1_civ_adjective religious brothers have gifted us with [COLOR_HIGHLIGHT_TEXT]androids[COLOR_REVERT] to aid us in our war effort!</English>
 		<French>Nos frères %s1:3_civ_adjective nous ont offert de l'[COLOR_HIGHLIGHT_TEXT]Androides[COLOR_REVERT] pour soutenir notre effort de guerre!</French>
 		<German>Unsere %s1:2_civ_adjective Glaubensbrüder unterstützen unsere Kriegsbemühungen mit [COLOR_HIGHLIGHT_TEXT]Androiden[COLOR_REVERT]!</German>
 		<Italian>I nostri fratelli di fede %s1:2_civ_adjective ci hanno donato degli [COLOR_HIGHLIGHT_TEXT]androidi[COLOR_REVERT] per aiutarci nello sforzo bellico!</Italian>
@@ -3896,19 +4368,19 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_BROTHERS_IN_NEED_OTHER_14</Tag>
-		<English>Our %s1_civ_adjective religious brothers have gifted us with [COLOR_HIGHLIGHT_TEXT]Stone[COLOR_REVERT] to aid us in our war effort!</English>
+		<English>Our %s1_civ_adjective religious brothers have gifted us with [COLOR_HIGHLIGHT_TEXT]stone[COLOR_REVERT] to aid us in our war effort!</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_BROTHERS_IN_NEED_OTHER_15</Tag>
-		<English>Our %s1_civ_adjective religious brothers have gifted us with [COLOR_HIGHLIGHT_TEXT]Obsidian[COLOR_REVERT] to aid us in our war effort!</English>
+		<English>Our %s1_civ_adjective religious brothers have gifted us with [COLOR_HIGHLIGHT_TEXT]obsidian[COLOR_REVERT] to aid us in our war effort!</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_BROTHERS_IN_NEED_OTHER_16</Tag>
-		<English>Our %s1_civ_adjective religious brothers have gifted us with [COLOR_HIGHLIGHT_TEXT]Gold[COLOR_REVERT] to aid us in our war effort!</English>
+		<English>Our %s1_civ_adjective religious brothers have gifted us with [COLOR_HIGHLIGHT_TEXT]gold[COLOR_REVERT] to aid us in our war effort!</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_BROTHERS_IN_NEED_OTHER_2</Tag>
-		<English>Our %s1_civ_adjective religious brothers have gifted us with [COLOR_HIGHLIGHT_TEXT]Copper[COLOR_REVERT] to aid us in our war effort!</English>
+		<English>Our %s1_civ_adjective religious brothers have gifted us with [COLOR_HIGHLIGHT_TEXT]copper[COLOR_REVERT] to aid us in our war effort!</English>
 		<French>Nos frères %s1:3_civ_adjective nous ont offert du [COLOR_HIGHLIGHT_TEXT]cuivre[COLOR_REVERT] pour soutenir notre effort de guerre !</French>
 		<German>Unsere %s1:2_civ_adjective Glaubensbrüder unterstützen unsere Kriegsbemühungen mit [COLOR_HIGHLIGHT_TEXT]Kupferlieferungen[COLOR_REVERT]!</German>
 		<Italian>I nostri fratelli di fede %s1:2_civ_adjective ci hanno donato del [COLOR_HIGHLIGHT_TEXT]rame[COLOR_REVERT] per aiutarci nello sforzo bellico!</Italian>
@@ -3916,7 +4388,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_BROTHERS_IN_NEED_OTHER_3</Tag>
-		<English>Our %s1_civ_adjective religious brothers have gifted us with [COLOR_HIGHLIGHT_TEXT]Iron[COLOR_REVERT] to aid us in our war effort!</English>
+		<English>Our %s1_civ_adjective religious brothers have gifted us with [COLOR_HIGHLIGHT_TEXT]iron[COLOR_REVERT] to aid us in our war effort!</English>
 		<French>Nos frères %s1:3_civ_adjective nous ont offert du [COLOR_HIGHLIGHT_TEXT]fer[COLOR_REVERT] pour soutenir notre effort de guerre !</French>
 		<German>Unsere %s1:2_civ_adjective Glaubensbrüder unterstützen unsere Kriegsbemühungen mit [COLOR_HIGHLIGHT_TEXT]Eisenlieferungen[COLOR_REVERT]!</German>
 		<Italian>I nostri fratelli di fede %s1:2_civ_adjective ci hanno donato del [COLOR_HIGHLIGHT_TEXT]ferro[COLOR_REVERT] per aiutarci nello sforzo bellico!</Italian>
@@ -3924,7 +4396,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_BROTHERS_IN_NEED_OTHER_4</Tag>
-		<English>Our %s1_civ_adjective religious brothers have gifted us with [COLOR_HIGHLIGHT_TEXT]Horses[COLOR_REVERT] to aid us in our war effort!</English>
+		<English>Our %s1_civ_adjective religious brothers have gifted us with [COLOR_HIGHLIGHT_TEXT]horses[COLOR_REVERT] to aid us in our war effort!</English>
 		<French>Nos frères %s1:3_civ_adjective nous ont offert des [COLOR_HIGHLIGHT_TEXT]chevaux[COLOR_REVERT] pour soutenir notre effort de guerre !</French>
 		<German>Unsere %s1:2_civ_adjective Glaubensbrüder unterstützen unsere Kriegsbemühungen mit [COLOR_HIGHLIGHT_TEXT]Pferdelieferungen[COLOR_REVERT]!</German>
 		<Italian>I nostri fratelli di fede %s1:2_civ_adjective ci hanno donato dei [COLOR_HIGHLIGHT_TEXT]cavalli[COLOR_REVERT] per aiutarci nello sforzo bellico!</Italian>
@@ -3932,7 +4404,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_BROTHERS_IN_NEED_OTHER_5</Tag>
-		<English>Our %s1_civ_adjective religious brothers have gifted us with [COLOR_HIGHLIGHT_TEXT]Ivory[COLOR_REVERT] to aid us in our war effort!</English>
+		<English>Our %s1_civ_adjective religious brothers have gifted us with [COLOR_HIGHLIGHT_TEXT]elephants[COLOR_REVERT] to aid us in our war effort!</English>
 		<French>Nos frères %s1:3_civ_adjective nous ont offert de l'[COLOR_HIGHLIGHT_TEXT]ivoire[COLOR_REVERT] pour soutenir notre effort de guerre !</French>
 		<German>Unsere %s1:2_civ_adjective Glaubensbrüder unterstützen unsere Kriegsbemühungen mit [COLOR_HIGHLIGHT_TEXT]Elfenbeinlieferungen[COLOR_REVERT]!</German>
 		<Italian>I nostri fratelli di fede %s1:2_civ_adjective ci hanno donato dell'[COLOR_HIGHLIGHT_TEXT]avorio[COLOR_REVERT] per aiutarci nello sforzo bellico!</Italian>
@@ -3940,7 +4412,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_BROTHERS_IN_NEED_OTHER_6</Tag>
-		<English>Our %s1_civ_adjective religious brothers have gifted us with [COLOR_HIGHLIGHT_TEXT]Firearms[COLOR_REVERT] to aid us in our war effort!</English>
+		<English>Our %s1_civ_adjective religious brothers have gifted us with [COLOR_HIGHLIGHT_TEXT]firearms[COLOR_REVERT] to aid us in our war effort!</English>
 		<French>Nos frères %s1:3_civ_adjective nous ont offert du [COLOR_HIGHLIGHT_TEXT]Armes à feu[COLOR_REVERT] pour soutenir notre effort de guerre!</French>
 		<German>Unsere %[s1_civ_adjective]en Glaubensbrüder unterstützen unsere Kriegsbemühungen mit [COLOR_HIGHLIGHT_TEXT]Feuerarme[COLOR_REVERT]!</German>
 		<Italian>I nostri fratelli di fede %s1:2_civ_adjective ci hanno donato delle [COLOR_HIGHLIGHT_TEXT]armi da fuoco[COLOR_REVERT] per aiutare il nostro sforzo bellico!</Italian>
@@ -3949,7 +4421,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_BROTHERS_IN_NEED_OTHER_7</Tag>
-		<English>Our %s1_civ_adjective religious brothers have gifted us with [COLOR_HIGHLIGHT_TEXT]Ammunition[COLOR_REVERT] to aid us in our war effort!</English>
+		<English>Our %s1_civ_adjective religious brothers have gifted us with [COLOR_HIGHLIGHT_TEXT]ammunition[COLOR_REVERT] to aid us in our war effort!</English>
 		<French>Nos frères %s1:3_civ_adjective nous ont offert du [COLOR_HIGHLIGHT_TEXT]Munition[COLOR_REVERT] pour soutenir notre effort de guerre!</French>
 		<German>Unsere %[s1_civ_adjective]en Glaubensbrüder unterstützen unsere Kriegsbemühungen mit [COLOR_HIGHLIGHT_TEXT]Munition[COLOR_REVERT]!</German>
 		<Italian>I nostri fratelli di fede %s1:2_civ_adjective ci hanno donato delle [COLOR_HIGHLIGHT_TEXT]cartucce[COLOR_REVERT] per aiutare il nostro sforzo bellico!</Italian>
@@ -3958,7 +4430,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_BROTHERS_IN_NEED_OTHER_8</Tag>
-		<English>Our %s1_civ_adjective religious brothers have gifted us with [COLOR_HIGHLIGHT_TEXT]Steel[COLOR_REVERT] to aid us in our war effort!</English>
+		<English>Our %s1_civ_adjective religious brothers have gifted us with [COLOR_HIGHLIGHT_TEXT]steel[COLOR_REVERT] to aid us in our war effort!</English>
 		<French>Nos frères %s1:3_civ_adjective nous ont offert du [COLOR_HIGHLIGHT_TEXT]Acier[COLOR_REVERT] pour soutenir notre effort de guerre!</French>
 		<German>Unsere %[s1_civ_adjective]en Glaubensbrüder unterstützen unsere Kriegsbemühungen mit [COLOR_HIGHLIGHT_TEXT]Stehlen[COLOR_REVERT]!</German>
 		<Italian>I nostri fratelli di fede %s1:2_civ_adjective ci hanno donato dell'[COLOR_HIGHLIGHT_TEXT]acciaio[COLOR_REVERT] per aiutarci nello sforzo bellico!</Italian>
@@ -3967,7 +4439,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_BROTHERS_IN_NEED_OTHER_9</Tag>
-		<English>Our %s1_civ_adjective religious brothers have gifted us with [COLOR_HIGHLIGHT_TEXT]Oil Products[COLOR_REVERT] to aid us in our war effort!</English>
+		<English>Our %s1_civ_adjective religious brothers have gifted us with [COLOR_HIGHLIGHT_TEXT]oil products[COLOR_REVERT] to aid us in our war effort!</English>
 		<French>Nos frères %s1:3_civ_adjective nous ont offert de l'[COLOR_HIGHLIGHT_TEXT]Produits pétroliers[COLOR_REVERT] pour soutenir notre effort de guerre!</French>
 		<German>Unsere %s1:2_civ_adjective Glaubensbrüder unterstützen unsere Kriegsbemühungen mit [COLOR_HIGHLIGHT_TEXT]Ölprodukte[COLOR_REVERT]!</German>
 		<Italian>I nostri fratelli di fede %s1:2_civ_adjective ci hanno donato dei [COLOR_HIGHLIGHT_TEXT]prodotti petroliferi[COLOR_REVERT] per aiutarci nello sforzo bellico!</Italian>
@@ -4129,7 +4601,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_CHARIOTRY_FOUNDED_3</Tag>
-		<English>We can not afford this now.</English>
+		<English>We cannot afford this now.</English>
 		<French>Nous ne pouvons pas nous le permettre pour l'instant.</French>
 		<German>Wir können uns das jetzt nicht leisten.</German>
 		<Italian>Non possiamo permettercelo per il momento.</Italian>
@@ -4476,6 +4948,14 @@
 		<Italian>Carbone di scarto? Che disastro. Rende di meno sul mercato, ma brucia comunque, no? Pensaci tu.</Italian>
 		<Spanish>¿Carbón de turba? Qué desastre. Bueno, cada tonelada vale menos, pero sigue quemando, ¿no? Tendremos que conformarnos.</Spanish>
 	</TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_PURE_COAL_1</Tag>
+        <English>Great this is a welcomed news.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_PURE_COAL_2</Tag>
+        <English>Open another shaft invest into exploiting this resource to its limit.</English>
+    </TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_COASTAL_REEF_STUCK</Tag>
 		<English>Repair the ship and get it back to course as soon as possible.</English>
@@ -5540,7 +6020,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_FAMOUS_DOCTOR_1</Tag>
-		<English>Put this money towards a research hospital annex onto our university.</English>
+		<English>Put this money towards a research hospital annex for our university.</English>
 		<French>Investir cet argent pour établir un centre de recherche médicale en annexe de notre université.</French>
 		<German>Verwendet das Geld für ein Forschungskrankenhaus als Erweiterung unserer Universität.</German>
 		<Italian>Usa questi soldi per un ospedale di ricerca annesso all'università.</Italian>
@@ -5560,7 +6040,7 @@
 	</TEXT>
     <TEXT>
         <Tag>TXT_KEY_EVENT_FAMOUS_DOCTOR_3</Tag>
-        <English>Pocket the money who cares what he wanted. The country needs it most.</English>
+        <English>Pocket the money - who cares what he wanted, the country needs it most.</English>
     </TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_FARM_BANDITS_1</Tag>
@@ -5608,7 +6088,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_FAUX_PAS_OTHER_2</Tag>
-		<English>The %s1_civ_adjective ambassador has committed a faux pas. They have apologised and offed gifts to amend their mistake.</English>
+		<English>The %s1_civ_adjective ambassador has committed a faux pas. They have apologised and offered gifts in an effort to make amends.</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_FAVORITE_SON_1</Tag>
@@ -6372,6 +6852,42 @@
 		<Italian>[ICON_BULLET]Tutte le nazioni del mondo subiscono una perdita del %d1%% del proprio tesoro.</Italian>
 		<Spanish>[ICON_BULLET]Todas las naciones del mundo sufren una pérdida del %d1%% en su erario nacional.</Spanish>
 	</TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_WAR_TAXES_2</Tag>
+        <English>There will be no tax, but we will ask those who can and are willing to protect their country to give what they can.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_CHILD_LABOUR_INCIDENT_1</Tag>
+        <English>There is nothing we can do.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_WIZE_COUNCIL_1</Tag>
+        <English>We can't support him, angering our people is not worth it.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_WIZE_COUNCIL_2</Tag>
+        <English>His wisdom is needed. The people may be angry now, but they will understand in time.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_PRIME_STUD_2</Tag>
+        <English>Send a merchant at once for some of these fine steeds.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_PRIME_STUD_1</Tag>
+        <English>We have no need, our own horses are good enough.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_CHILD_LABOUR_INCIDENT_2</Tag>
+        <English>Pay out the, the grieving families. Let them mourn in peace.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_CHILD_LABOUR_INCIDENT_3</Tag>
+        <English>Get a watcher to make sure the work is safe and productive. Might cost us but will help in the long run. Also organise a grieving ceremony.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_WAR_TAXES_1</Tag>
+        <English>We do not need extra gold, let us not put pressure on our people.</English>
+    </TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_GREAT_MEDIATOR_1</Tag>
 		<English>We do not want peace! Let the war continue.</English>
@@ -6380,6 +6896,10 @@
 		<Italian>Non vogliamo la pace! Che continui la guerra.</Italian>
 		<Spanish>¡No queremos la paz! Que siga la guerra.</Spanish>
 	</TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_WAR_TAXES_3</Tag>
+        <English>Squeeze every coin you can, we will not lose this war. I care not what the people think.</English>
+    </TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_GREAT_MEDIATOR_2</Tag>
 		<English>Peace would benefit both sides. Give our blessing to this mediator, and may his words prove sharper than their hatreds.</English>
@@ -6388,6 +6908,10 @@
 		<Italian>La pace sarebbe un bene per entrambi. Approviamo questo mediatore e possano le sue parole dimostrarsi più acute del nostro odio.</Italian>
 		<Spanish>La paz beneficiaría a ambos bandos. Que este mediador reciba nuestra bendición, y que sus palabras resulten más afiladas que el odio del enemigo.</Spanish>
 	</TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_MEDIATOR_WORLD_2</Tag>
+        <English>A great mediator has offered to arbitrate peace between %s1_civ_adjective and %s2_civ_adjective.</English>
+    </TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_GREAT_MEDIATOR_OTHER_3</Tag>
 		<English>A great mediator has offered to arbitrate our grievance with the %s1_civ_adjective Empire. This opens the door to a possible peace treaty. Do you wish to end the war?</English>
@@ -6580,6 +7104,22 @@
 		<Tag>TXT_KEY_EVENT_HAPPY_HUNTING_2</Tag>
 		<English>Organise a great hunt, we must use this time of plenty to stock up on food.</English>
 	</TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_GREAT_HARVEST_1</Tag>
+        <English>Store the food, you can never have enough food.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_GREAT_HARVEST_2</Tag>
+        <English>Sell the excess. Gold is more needed than food.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_POOR_HARVEST_1</Tag>
+        <English>There is nothing we can do, let us pray for next year's harvest.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_POOR_HARVEST_2</Tag>
+        <English>Buy the food we need no matter the cost.</English>
+    </TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_HAPPY_TO_PLAYER</Tag>
 		<English>[ICON_BULLET]%D1[ICON_UNHAPPY] in all cities. %s3_playerName gets %D2[ICON_HAPPY]</English>
@@ -7013,6 +7553,94 @@
 		<Italian>Finanzia un programma per regolarizzare il traffico aereo, migliorare la sicurezza e assicurare l'attuabilità del traffico aereo commerciale.</Italian>
 		<Spanish>Que se financie una campaña de regulación del tráfico aéreo, se mejore la seguridad y se asegure la viabilidad de los viajes comerciales aéreos.</Spanish>
 	</TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_GOLD_MINE_1</Tag>
+        <English>That sounds like welcome news for our economy.</English>
+        <French>Cela semble être une bonne nouvelle pour notre économie.</French>
+        <German>Klingt nach guten Neuigkeiten für unsere Wirtschaft.</German>
+        <Italian>Sembrano buone notizie per la nostra economia.</Italian>
+        <Spanish>Parecen ser buenas nuevas para nuestra economía.</Spanish>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_URANIUM_1</Tag>
+        <English>This is great. We will use it to the best of our abilities.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_PLATINUM_1</Tag>
+        <English>This is great. We are going to make some good profits.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_TITANIUM_1</Tag>
+        <English>This is great. This ore will boost our industry.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_SALT_1</Tag>
+        <English>This is great. This will be useful.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_STONE_1</Tag>
+        <English>This is great. This will boost our industry.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_OIL_1</Tag>
+        <English>This is great. This will boost our industry.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_COAL_1</Tag>
+        <English>This is great. This ore will boost our industry.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_AMBER_1</Tag>
+        <English>This is great. This ore will boost our economy.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_BAUXITE_1</Tag>
+        <English>This is great. This ore will boost our industry.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_DIAMOND_1</Tag>
+        <English>This is great. This ore will boost our economy.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_IRON_1</Tag>
+        <English>This is great. This ore will boost our industry.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_MANGANESE_1</Tag>
+        <English>This is great. This ore will boost our economy.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_RUBIE_1</Tag>
+        <English>This is great. This ore will boost our economy.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_SULPHUR_1</Tag>
+        <English>This is great. This ore will boost our economy.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_MARBLE_1</Tag>
+        <English>This is great. This ore will boost our economy.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_COPPER_1</Tag>
+        <English>This is great. This ore will boost our economy.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_TURQUOISE_1</Tag>
+        <English>This is great. This ore will boost our economy.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_LEAD_1</Tag>
+        <English>This is great. This ore will boost our industry.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_SAPPHIRES_1</Tag>
+        <English>That sounds like welcome news for our economy.</English>
+        <French>Cela semble être une bonne nouvelle pour notre économie.</French>
+        <German>Klingt nach guten Neuigkeiten für unsere Wirtschaft.</German>
+        <Italian>Sembrano buone notizie per la nostra economia.</Italian>
+        <Spanish>Parecen ser buenas nuevas para nuestra economía.</Spanish>
+    </TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_HIYOSILVER_1</Tag>
 		<English>That sounds like welcome news for our economy.</English>
@@ -7021,7 +7649,23 @@
 		<Italian>Sembrano buone notizie per la nostra economia.</Italian>
 		<Spanish>Parecen ser buenas nuevas para nuestra economía.</Spanish>
 	</TEXT>
-	<TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_GOLD_MINE_2</Tag>
+        <English>Commit our government to harvesting this new resource immediately.</English>
+        <French>Ordonner à notre gouvernement de s'atteler à l'exploitation de cette nouvelle ressource.</French>
+        <German>Wir sollten diese neue Ressource umgehend nutzen.</German>
+        <Italian>Impegna immediatamente il nostro governo nella raccolta di questa nuova risorsa.</Italian>
+        <Spanish>Ordenad al gobierno que recolecte este nuevo recurso de inmediato.</Spanish>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_URANIUM_2</Tag>
+        <English>Commit our government to harvesting this new resource immediately.</English>
+        <French>Ordonner à notre gouvernement de s'atteler à l'exploitation de cette nouvelle ressource.</French>
+        <German>Wir sollten diese neue Ressource umgehend nutzen.</German>
+        <Italian>Impegna immediatamente il nostro governo nella raccolta di questa nuova risorsa.</Italian>
+        <Spanish>Ordenad al gobierno que recolecte este nuevo recurso de inmediato.</Spanish>
+    </TEXT>
+    <TEXT>
 		<Tag>TXT_KEY_EVENT_HIYOSILVER_2</Tag>
 		<English>Commit our government to harvesting this new resource immediately.</English>
 		<French>Ordonner à notre gouvernement de s'atteler à l'exploitation de cette nouvelle ressource.</French>
@@ -7660,6 +8304,26 @@
 		<Italian>Un matrimonio %s5_religion_adjective tra uno dei nostri cittadini e una dell'Impero %s1_civ_adjective è stato onorato con una festa nazionale, con tanto di esotico regalo nuziale e donazioni alle nostre istituzioni religiose. La nostra popolazione è entusiasta del gesto.</Italian>
 		<Spanish>Un matrimonio %s5:1_religion_adjective entre una de nuestras familias y otra %s1:2_civ_adjective ha sido honrado con una fiesta nacional, incluyendo regalos de bodas increíbles y generosas donaciones a nuestras instituciones religiosas. Nuestro pueblo está emocionado con ese gesto.</Spanish>
 	</TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_BONUS_TAX_1</Tag>
+        <English>Great news.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_COMMUNITY_BOND_1</Tag>
+        <English>We are all one.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_GREAT_STORY_1</Tag>
+        <English>This story was truly amazing.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_GREAT_STORY_2</Tag>
+        <English>Make sure this story is preserved, our people will draw inspiration from it for centuries to come.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_GREAT_STORY_3</Tag>
+        <English>Let us remember this story and preserve it for generations to come. This stories will endure</English>
+    </TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_KNOWLEDGE_INHERITANCE_1</Tag>
 		<English>A thinker? Let's see what interesting ideas he has.</English>
@@ -8082,14 +8746,10 @@
 		<Italian>Applaudiamo le imprese del nostro onorato mastro fabbro.</Italian>
 		<Spanish>Loados sean los logros de nuestro reverenciado gran maestro herrero.</Spanish>
 	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_EVENT_MEDIATOR_WORLD_2</Tag>
-		<English>A great mediator has attempted to broker peace between the %s1_civ_adjective and %s3_adjective Empires!</English>
-		<French>Un important médiateur a amené les empires %s1_civ_adjective et %s3_adjective à faire la paix !</French>
-		<German>Ein Vermittler hat für Frieden zwischen dem %s1:2_civ_adjective und dem %s3:2_adjective Reich gesorgt!</German>
-		<Italian>Un grande mediatore ha negoziato la pace tra l'Impero %s1_civ_adjective e quello %s3_adjective!</Italian>
-		<Spanish>Un gran mediador ha negociado la paz entre los imperios %s1:1_civ_adjective y %s3:1_civ_adjective!</Spanish>
-	</TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_WAR_TAXES_2</Tag>
+        <English>The %s1_civ_adjective is in total war mode and are taxing their people to the bone.</English>
+    </TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_MEGA_ATTACK</Tag>
 		<English>An accident has led to an escape of animals at Pleistocene Park! Several people are dead and dozens are injured.</English>
@@ -8366,7 +9026,7 @@
     </TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_MUSICOFGODS_1</Tag>
-		<English>Enact more stringent noise pollution laws, these nerds should be doing something more productive than making "music".</English>
+		<English>Enact more stringent noise pollution laws; these nerds should be doing something more productive than making "music".</English>
 		<Polish>Wprowadzi&#230; wi&#234;ksze obostrzenia prawne dotycz&#185;ce zak&#179;&#243;cania porz&#185;dku. Te nerdy powinny zaj&#185;&#230; si&#234; czym&#156; produktywnym, a nie tworzeniem "muzyki".</Polish>
 		<Russian>Принять более строгие законы о шумовом загрязнении. Эти хипстеры и стиляги должны заниматься чем-то более продуктивным и полезным, нежели музыкой.</Russian>
 	</TEXT>
@@ -9006,7 +9666,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_PIRATE_MAP_2</Tag>
-		<English>Make a big to-do over it, then burn the map and claim it was the Pirates' revenge!</English>
+		<English>Make a big to-do over it, then burn the map and claim it was the pirates' revenge!</English>
 		<French>Faites-en une copie, puis brûlez la carte et prétendez que c'était la vengeance des Pirates!</French>
 	</TEXT>
 	<TEXT>
@@ -9181,7 +9841,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_QUICKSAND</Tag>
-		<English>Your troops are stuck in Quicksand.</English>
+		<English>Your troops are stuck in quicksand.</English>
 		<French>Vos troupes sont prises au piège dans des sables mouvants.</French>
 		<Polish>Twoje wojska ugrz&#234;z&#179;y w lotnych piaskach.</Polish>
 		<Russian>Ваши войска застряли в Зыбучих Песках.</Russian>
@@ -9195,7 +9855,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_QUICKSAND_2</Tag>
-		<English>Stay Calm and pull them out.</English>
+		<English>Stay calm and pull them out.</English>
 		<French>Restez calme et tirez-les de là.</French>
 		<Polish>Uspok&#243;jcie si&#234; i wyci&#185;gnijcie ich.</Polish>
 		<Russian>Сохраняйте спокойствие и отправьте поисковую партию.</Russian>
@@ -9232,7 +9892,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_RABBI_3</Tag>
-		<English>Works like these can easily make the local Monastery a site of interests to tourists worldwide.</English>
+		<English>Works like these can easily make the local monastery a site of interest to tourists from afar.</English>
 		<French>De tels ouvrages peuvent sûrement faire du monastère local une attraction touristique majeure!</French>
 		<German>Sorgt dafür, dass das örtliche Kloster zu einem lohnenden Ziel für Pilger und Touristen aus aller Welt wird.</German>
 		<Italian>Opere come queste possono facilmente rendere il monastero locale un'attrazione turistica a livello mondiale</Italian>
@@ -9890,6 +10550,14 @@
 		<Italian>Petrolio impuro? Che disastro. Ha un valore unitario più basso, ma brucia comunque, no? Pensaci tu.</Italian>
 		<Spanish>¿Crudo ácido? Qué desastre. Bueno, cada barril vale menos, pero sigue quemando, ¿no? Tendremos que conformarnos.</Spanish>
 	</TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_PURE_CRUDE_1</Tag>
+        <English>Great we are lucky.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_PURE_CRUDE_2</Tag>
+        <English>Expand the operation, let us get the most of it.</English>
+    </TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_SPACE_PRODUCTION_CITY</Tag>
 		<English>[ICON_BULLET][ICON_BULLET]%D1_Mod%% Spaceship Production in %s2_city</English>
@@ -10749,6 +11417,94 @@
 		<Italian>Con la soppressione, da parte umana, dei predatori naturali, la popolazione di antilopi è cresciuta abbastanza da servire come fonte di cibo a lungo termine.</Italian>
 		<Spanish>Con la desaparición de los depredadores naturales debida a la acción del hombre, la población de antílopes ha crecido tanto como para servir de fuente continua de alimentos.</Spanish>
 	</TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_TRIGGER_SQUASH_1</Tag>
+        <English>We have found a new source of food, people call it squash.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_TRIGGER_MELON_1</Tag>
+        <English>We have found a new source of food, people call it melon.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_TRIGGER_PUMPKIN_1</Tag>
+        <English>We have found a new source of food, people call it pumpkin.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_TRIGGER_ALMOND_1</Tag>
+        <English>We have found a new source of food, people call it almond.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_TRIGGER_PISTACHIO_1</Tag>
+        <English>We have found a new source of food, people call it pistachio.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_TRIGGER_COCONUT_1</Tag>
+        <English>We have found a new source of food, people call it coconut.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_TRIGGER_GUAVA_1</Tag>
+        <English>We have found a new source of food, people call it guava.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_TRIGGER_PAPAYA_1</Tag>
+        <English>We have found a new source of food, people call it papaya.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_TRIGGER_LEMONS_1</Tag>
+        <English>We have found a new source of food, people call it lemon.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_TRIGGER_POMEGRANATE_1</Tag>
+        <English>We have found a new source of food, people call it pomegranate.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_TRIGGER_MANGO_1</Tag>
+        <English>We have found a new source of food, people call it mango.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_TRIGGER_BANANA_1</Tag>
+        <English>We have found a new source of food, people call it banana.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_TRIGGER_POTATO_1</Tag>
+        <English>We have found a new source of food, people call it potato.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_TRIGGER_BARLEY_1</Tag>
+        <English>We have found a new source of food, people call it barley.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_TRIGGER_RICE_1</Tag>
+        <English>We have found a new source of food, people call it rice.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_TRIGGER_WHEAT_1</Tag>
+        <English>We have found a new source of food, people call it wheat.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_TRIGGER_CORN_1</Tag>
+        <English>We have found a new source of food, people call it corn.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_TRIGGER_OLIVE_1</Tag>
+        <English>We have found a new source of food, people call it olive.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_TRIGGER_FIG_1</Tag>
+        <English>We have found a new source of food, people call it fig.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_TRIGGER_DATES_1</Tag>
+        <English>We have found a new source of food, people call it dates.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_TRIGGER_PEYOTE_1</Tag>
+        <English>We have found a new source of food, people call it peyote.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_TRIGGER_PRICKLY_PEAR_1</Tag>
+        <English>We have found a new source of food, people call it prickly pear.</English>
+    </TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_TRIGGER_APPLESEED_1</Tag>
 		<English>A passionate young man has undertaken a crusade to plant as many new apple trees as he can.</English>
@@ -10773,7 +11529,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_TRIGGER_ARTIFICIAL_ELEMENT_1</Tag>
-		<English>The scientists in %s2_city have discovered first artificial element with the accelerator! More elements might be found in near future now that the methods to create them have been proven.</English>
+		<English>Scientists in %s2_city have discovered the first artificial element using a particle accelerator! More elements might be found in the near future now that the methods to create them have been discovered.</English>
 		<French>Nos scientifiques de %s2_city ont découvert le premier élément artificiel avec un accélérateur à particules! d'autres éléments pourraient être découvert dans un futur proche, maintenant que la méthodologie pour leur création a été prouvée.</French>
 		<German>Die Wissenschaftler in %s2_city haben mit ihrem Teilchenbeschleuniger das erste künstliche Element erschaffen! Jetzt, wo die Methode etabliert ist, könnten weitere künstliche Elemente gefunden werden.</German>
 		<Italian>Gli scienziati di %s2_city hanno scoperto il primo elemento artificiale all'interno del loro acceleratore! È possibile che in futuro vengano scoperti altri elementi, ora che il metodo per crearli è stato provato.</Italian>
@@ -10912,7 +11668,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_TRIGGER_BLIZZARD_2</Tag>
-		<English>Massive snowfall has buried a region of our territory near %s2_city.</English>
+		<English>A massive snowfall has buried a region of our territory near %s2_city.</English>
 		<French>Des chutes de neige colossales ont enseveli une de nos régions près de %s2_city.</French>
 		<German>Eine Region unseres Territoriums nahe der Stadt %s2_city wurde unter einer massiven Schneedecke begraben.</German>
 		<Italian>Una massiccia nevicata ha colpito una regione del nostro territorio vicino a %s2_city.</Italian>
@@ -11078,6 +11834,10 @@
 		<Polish>Po&#191;ar zniszczy&#179; budynek w mie&#156;cie! Po&#191;ar szaleje w mie&#156;cie, a lokalne si&#179;y przeciwpo&#191;arowe nie mog&#185; nic z tym zrobic. Prosz&#185; o wsparcie poniewa&#191; los ca&#179;ego miasta jest zagro&#191;ony!</Polish>
 		<Russian>Пожар уничтожил здание в городе! Пламя выходит из-под контроля в некоторых частях города, а местные силы парализованы. Они требуют быстрого подкрепления, чтобы сдержать пламя и защитить город от широкомасштабного разрушения.</Russian>
 	</TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_TRIGGER_CITY_RUINS_PREHISTORIC_1</Tag>
+        <English>A few of our men found something while scavenging in the ruins near %s2_city.</English>
+    </TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_TRIGGER_CITY_RUINS_ANCIENT_1</Tag>
 		<English>Scouts exploring ruins near %s2_city have discovered a cache of knowledge.</English>
@@ -11155,6 +11915,10 @@
 		<Italian>La maggior parte del carbone estratto da una delle nostre miniere è pieno di roccia, scisto e altre impurità. Ci è capitata una fonte di carbone di scarto!</Italian>
 		<Spanish>La mayor parte del carbón extraído de uno de nuestros emplazamientos está lleno de roca, esquisto y otras impurezas. ¡Hemos dado con un filón de carbón de turba!</Spanish>
 	</TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_TRIGGER_PURE_COAL_1</Tag>
+        <English>Most of the coal being mined from one of our sites is of the highest quality. We are gonna make a profit.</English>
+    </TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_TRIGGER_COCK_FIGHTS</Tag>
 		<English>Animal rights activists in %s2_city demand that you put a stop to the inhumane practice of cock fighting that is still common in certain parts of the city.</English>
@@ -11673,6 +12437,10 @@
 		<Italian>Una frode corporativa all'interno della nostra stessa [COLOR_HIGHLIGHT_TEXT]%s11_corporation[COLOR_REVERT] ha fatto crollare il prezzo delle azioni della compagnia, che a loro volta hanno trascinato con sé il mercato azionario, innescando una depressione economica globale.</Italian>
 		<Spanish>El fraude de nuestra [COLOR_HIGHLIGHT_TEXT]%s11_corporation[COLOR_REVERT] ha hecho bajar en picado la cotización de sus acciones, ha arrastrado tras de sí al resto del mercado y ha desencadenando una recesión económica mundial.</Spanish>
 	</TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_TRIGGER_WAR_TAXES_1</Tag>
+        <English>We are at war and the coffers need filling - should we levy war taxes?</English>
+    </TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_TRIGGER_GREAT_MEDIATOR_1</Tag>
 		<English>A great mediator has emerged, offering to arbitrate the dispute between %s1_civ_adjective leadership and our nation. This could be a chance for peace.</English>
@@ -11749,6 +12517,78 @@
 		<Italian>Di recente è stato lanciato un nuovo tipo di ristorante con servizio rapido, che vende principalmente hamburger. Grazie alla pubblicità radiofonica la catena si sta espandendo in tutta la nazione.</Italian>
 		<Spanish>Recientemente se ha inaugurado un nuevo tipo de restaurante donde el servicio es rápido y se venden principalmente hamburguesas. Gracias a una exitosa campaña de publicidad en la radio, la cadena se está extendiendo por toda la nación.</Spanish>
 	</TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_PRIME_STUD1_1</Tag>
+        <English>We have found big and healthy studs; taking them into our herds will grant us better horses.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_WISE_COUNCIL1_1</Tag>
+        <English>A very wise elder has come to lead our council, should we support him. His ideas are sometimes controversial and might anger our people or the elders.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_CHILD_LABOUR_INCIDENT1_1</Tag>
+        <English>A tragic incident has happened in a labour camp near %s2_city. A few children were crushed and died working in unsafe conditions. We can't let this happen again.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENTTRIGGER_BONUS_TAX</Tag>
+        <English>The tax office from %s2_city is reporting bigger tax income this season.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_TRIGGER_BONUS_TAX_1</Tag>
+        <English>The taxman from %s2_city is reporting bigger tax income this season.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_TRIGGER_BONUS_TAX_2</Tag>
+        <English>The officium in %s2_city has reported that more tax has been collected than usual.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_TRIGGER_BONUS_TAX_3</Tag>
+        <English>The tax department in %s2_city was very successful in collecting taxes this year.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_TRIGGER_COMMUNITY_BOND_1</Tag>
+        <English>Our people sat around a small fire trying to warm up from the cold in %s2_city. Seeing everyone together and exchanging stories made the people feel more united.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_TRIGGER_COMMUNITY_BOND_2</Tag>
+        <English>A community discussion in %s2_city has recently made our people feel more united.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_TRIGGER_COMMUNITY_BOND_3</Tag>
+        <English>People sat in the local %s2_city fields and talked about life. Such moments bring our people together.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_TRIGGER_COMMUNITY_BOND_4</Tag>
+        <English>Peasants and a lord started loudly discussing life in %s2_city and many people joined in. Our people feel more united now.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_TRIGGER_COMMUNITY_BOND_5</Tag>
+        <English>People from %s2_city decided to organize a discussion on many topics in the town square. Our people are more united then ever.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_TRIGGER_COMMUNITY_BOND_6</Tag>
+        <English>Factory workers organized a union meeting to discuss events in %s2_city.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_TRIGGER_COMMUNITY_BOND_7</Tag>
+        <English>A local community near %s2_city decided to organize a event to discuss the wellbeing of the community.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_TRIGGER_COMMUNITY_BOND_8</Tag>
+        <English>%s2_city organized a event where people can come from all walks of life and share their story.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_TRIGGER_GREAT_STORY_1</Tag>
+        <English>A storyteller near %s2_city has recently told a fascinating story about our ancestors.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_TRIGGER_GREAT_STORY_2</Tag>
+        <English>A profound epic was recited in %s2_city, captivating the audience for a long time.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_TRIGGER_GREAT_STORY_3</Tag>
+        <English>A philosophical story captured the attention of the people in %s2_city. It was spoken about for days.</English>
+    </TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_TRIGGER_HAPPY_HUNTING_1</Tag>
 		<English>Moose herds near %s2_city have grown particularly large. Our hunters have harvested a cache of surplus food.</English>
@@ -11872,6 +12712,142 @@
 		<Italian>Dei mercanti sconsiderati hanno usato l'idrogeno, invece dell'elio, per riempire i loro dirigibili: uno di questi ha preso fuoco ed è precipitato con un fatale e spettacolare incidente.</Italian>
 		<Spanish>Los imprudentes mercaderes han usado hidrógeno en vez de helio para llenar sus dirigibles, y uno de ellos se ha incendiado y estrellado en un accidente tan espectacular como mortal.</Spanish>
 	</TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_TRIGGER_SULPHUR_1</Tag>
+        <English>Prospectors have discovered rich new veins of Sulphur ore.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_TRIGGER_TEA_1</Tag>
+        <English>Our workers have found plants, they call it tea.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_TRIGGER_VANILLA_1</Tag>
+        <English>Our workers have found a plant, they call it vanilla.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_TRIGGER_COFFEE_1</Tag>
+        <English>Our workers have found a plant, they call it coffee.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_TRIGGER_SUGAR_1</Tag>
+        <English>We have found sugar, this is sweet.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_TRIGGER_COCA_1</Tag>
+        <English>We have found coca, time to earn money.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_TRIGGER_TOBACCO_1</Tag>
+        <English>We have found tobacco, time to earn money.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_TRIGGER_COTTON_1</Tag>
+        <English>We have found cotton, our industry will prosper.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_TRIGGER_INDIGO_1</Tag>
+        <English>We have found indigo, great we can use it to for our commercial needs.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_TRIGGER_FLAX_1</Tag>
+        <English>We have found flax, great we can use it to for our industrial needs.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_TRIGGER_HEMP_1</Tag>
+        <English>We have found hemp, great we can use it to for our industrial needs.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_TRIGGER_RUBBER_1</Tag>
+        <English>Rubber threes grow here, we can use it to get rubber.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_TRIGGER_OPIUM_1</Tag>
+        <English>We have found a place where natural opium grows.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_TRIGGER_HENNA_1</Tag>
+        <English>We found a place where henna flourishes.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_TRIGGER_INCENSE_1</Tag>
+        <English>A natural grow of incense was discovered.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_TRIGGER_PAPYRUS_11</Tag>
+        <English>We have discovered a place where papyrus grows abundant.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_TRIGGER_SILK_1</Tag>
+        <English>Workers have discovered a new source of silk.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_TRIGGER_STONE_1</Tag>
+        <English>Workers have discovered a new source of stone.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_TRIGGER_COAL_1</Tag>
+        <English>Prospectors have discovered a new source of coal.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_TRIGGER_AMBER_1</Tag>
+        <English>Prospectors have discovered a new source of amber.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_TRIGGER_BAUXITE_1</Tag>
+        <English>Prospectors have discovered a new source of bauxite ore.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_TRIGGER_DIAMOND_1</Tag>
+        <English>Prospectors have discovered a new source of diamonds.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_TRIGGER_IRON_1</Tag>
+        <English>Prospectors have discovered a new source of iron ore.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_TRIGGER_MANGANESE_1</Tag>
+        <English>Prospectors have discovered a new source of manganese ore.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_TRIGGER_RUBIE_1</Tag>
+        <English>Prospectors have discovered a new source of rubies.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_TRIGGER_MARBLE_1</Tag>
+        <English>Prospectors have discovered a new source of marble.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_TRIGGER_COPPER_1</Tag>
+        <English>Prospectors have discovered rich new veins of Copper ore.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_TRIGGER_TURQUOISE_1</Tag>
+        <English>Prospectors have discovered rich new veins of Turquoise ore.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_TRIGGER_TITANIUM_1</Tag>
+        <English>Prospectors have discovered rich new veins of Titanium ore.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_TRIGGER_LEAD_1</Tag>
+        <English>Prospectors have discovered rich new veins of Lead ore.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_TRIGGER_PLATINUM_1</Tag>
+        <English>Prospectors have discovered rich new veins of Platinum ore.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_TRIGGER_GOLD_MINE_1</Tag>
+        <English>Prospectors have discovered rich new veins of Gold ore.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_TRIGGER_SAPPHIRES_1</Tag>
+        <English>Prospectors have discovered sapphires.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_TRIGGER_URANIUM_1</Tag>
+        <English>Prospectors have discovered uranium.</English>
+    </TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_TRIGGER_HIYOSILVER_1</Tag>
 		<English>Prospectors have discovered rich new veins of Silver ore.</English>
@@ -12424,7 +13400,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_TRIGGER_MUSICOFGODS</Tag>
-		<English>Some electricity nuts have started using gigantic solid state Tesla coils to create unspeakably loud low fidelity music. The spectacle of lightning bolts playing the theme of Spectral Exterminators The Motion Picture have attracted significant audiences wherever they perform.</English>
+		<English>Some eccentrics have started using gigantic solid state Tesla coils to create unspeakably loud low fidelity music. The spectacle of lightning bolts playing the theme of Spectral Exterminators The Motion Picture has attracted significant audiences wherever they perform.</English>
 		<Polish>Jacy&#156; zwariowani in&#191;ynierowie zacz&#234;li u&#191;ywa&#230; gigantycznych cewek Tesli do produkcji muzyki. Koncerty przez nich organizowane owocuj&#185; w orgie &#156;wiat&#179;a i d&#159;wi&#234;ku i przyci&#185;gaj&#185; t&#179;umy spragnionych atrakcji widz&#243;w.</Polish>
 		<Russian>Некоторые электрические муфты начали использовать как гигантские твердотельные катушки Теслы для создания невероятно громкой музыки с низким качеством воспроизведения. Зрелище со светомузыкой на тему Spectral Exterminators The Motion Picture, привлекло значительную аудиторию, где бы они ни выступали.</Russian>
 	</TEXT>
@@ -12733,7 +13709,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_TRIGGER_SANDSTORM_1</Tag>
-		<English>Sandstorm has made the routes vanish in the sand near %s2_city.</English>
+		<English>A sandstorm has made the routes vanish in the sand near %s2_city.</English>
 		<French>Des Tempêtes de sable ont fait disparaitre des routes près de %s2_city.</French>
 		<German>Durch Sandstürme sind einige Straßen in der Nähe von %s2_city verschwunden.</German>
 		<Italian>Una tempesta di sabbia ha fatto scomparire le vie di comunicazione vicino a %s2_city.</Italian>
@@ -12741,6 +13717,10 @@
 		<Polish>Szalej&#185;ca burza piaskowa zasypa&#179;a drogi w pobli&#191;u miasta %s2_city.</Polish>
 		<Russian>Песчаная буря около %s2_city засыпала песком окрестные дороги и караванные тропы.</Russian>
 	</TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_TRIGGER_SANDSTORM_2</Tag>
+        <English>A sandstorm has hit us hard near %s2_city.</English>
+    </TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_TRIGGER_SEA_TURTLES_1</Tag>
 		<English>The locals have figured out the mating cycles of the sea turtles who flock to the shore in massive quantities. They have begun to harvest the turtles and eggs, in a way that does not endanger the long term survival of the creatures.</English>
@@ -12881,6 +13861,10 @@
 		<Italian>Gran parte del petrolio estratto da uno dei nostri pozzi è denso di zolfo e altre impurità. Ci è capitata una fonte di petrolio impuro!</Italian>
 		<Spanish>Todo el petróleo en crudo que bombeamos está lleno de azufre y otras impurezas. ¡Hemos dado con un depósito de crudo ácido!</Spanish>
 	</TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_TRIGGER_PURE_CRUDE_1</Tag>
+        <English>Most of the crude oil being pumped from one of our sites is pure and has no imperfections. We struck rich!</English>
+    </TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_TRIGGER_SPICY_1</Tag>
 		<English>An innovative chef has discovered a new type of spice, which grows only in a forest near %s2_city.</English>
@@ -13096,7 +14080,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_TRIGGER_TRADE_FOUNDED_1</Tag>
-		<English>Group of merchants in %s2_city have formed a Trade Caravan and are ready to seek out market opportunities in distant lands.</English>
+		<English>A group of merchants in %s2_city have formed a trade caravan and are ready to seek out market opportunities in distant lands.</English>
 		<French>Un Groupe de marchands de %s2_city a formé une Caravane Commerciale et ils sont prêts à chercher des opportunités commerciales chez nos voisins.</French>
 		<German>Eine Gruppe von Händlern in %s2_city haben eine Handelskaravane begründet und sind bereit, in fernen Ländern nach neuen Märkten zu suchen.</German>
 		<Italian>Gruppi di mercanti a %s2_city hanno formato una carovana commerciale e sono pronti a cercare nuove opportunità di guadagno in terre distanti.</Italian>
@@ -13296,7 +14280,31 @@
 		<Italian>I marinai hanno individuato una nuova popolazione di balene.</Italian>
 		<Spanish>Los marineros han avistado una nueva población de ballenas.</Spanish>
 	</TEXT>
-	<TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_TRIGGER_FOUND_LOBSTERS_1</Tag>
+        <English>Divers have spotted a new source of lobsters.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_TRIGGER_FOUND_FISH_1</Tag>
+        <English>Sailors have spotted a new source of fish.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_TRIGGER_FOUND_SHRIMP_1</Tag>
+        <English>Sailors have spotted a new source of shrimp.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_TRIGGER_FOUND_CRAB_1</Tag>
+        <English>Sailors have spotted a new source of crab.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_TRIGGER_FOUND_CLAM_1</Tag>
+        <English>Sailors have spotted a new source of clam.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_TRIGGER_FOUND_MUREX_1</Tag>
+        <English>Sailors have spotted a new source of murex.</English>
+    </TEXT>
+    <TEXT>
 		<Tag>TXT_KEY_EVENT_TRIGGER_WININGMONKS_1</Tag>
 		<English>Monks from the Monastery in %s2_city have grown their private vineyards large enough for them to become nationally significant.</English>
 		<French>Les moines de la ville : %s2_city ont suffisamment fait pousser leurs vignes pour que cela ait un impact au niveau national.</French>
@@ -13820,6 +14828,62 @@
 		<Italian>Sembrano buone notizie per la nostra economia.</Italian>
 		<Spanish>Parecen ser buenas nuevas para nuestra economía.</Spanish>
 	</TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_FOUND_MUREX_1</Tag>
+        <English>That sounds like welcome news for our economy.</English>
+        <French>Cela semble être une bonne nouvelle pour notre économie.</French>
+        <German>Klingt nach guten Neuigkeiten für unsere Wirtschaft.</German>
+        <Italian>Sembrano buone notizie per la nostra economia.</Italian>
+        <Spanish>Parecen ser buenas nuevas para nuestra economía.</Spanish>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_FOUND_CLAM_1</Tag>
+        <English>That sounds like welcome news for our economy.</English>
+        <French>Cela semble être une bonne nouvelle pour notre économie.</French>
+        <German>Klingt nach guten Neuigkeiten für unsere Wirtschaft.</German>
+        <Italian>Sembrano buone notizie per la nostra economia.</Italian>
+        <Spanish>Parecen ser buenas nuevas para nuestra economía.</Spanish>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_FOUND_CRAB_1</Tag>
+        <English>That sounds like welcome news for our economy.</English>
+        <French>Cela semble être une bonne nouvelle pour notre économie.</French>
+        <German>Klingt nach guten Neuigkeiten für unsere Wirtschaft.</German>
+        <Italian>Sembrano buone notizie per la nostra economia.</Italian>
+        <Spanish>Parecen ser buenas nuevas para nuestra economía.</Spanish>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_FOUND_SHRIMP_1</Tag>
+        <English>That sounds like welcome news for our economy.</English>
+        <French>Cela semble être une bonne nouvelle pour notre économie.</French>
+        <German>Klingt nach guten Neuigkeiten für unsere Wirtschaft.</German>
+        <Italian>Sembrano buone notizie per la nostra economia.</Italian>
+        <Spanish>Parecen ser buenas nuevas para nuestra economía.</Spanish>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_FOUND_FISH_1</Tag>
+        <English>That sounds like welcome news for our economy.</English>
+        <French>Cela semble être une bonne nouvelle pour notre économie.</French>
+        <German>Klingt nach guten Neuigkeiten für unsere Wirtschaft.</German>
+        <Italian>Sembrano buone notizie per la nostra economia.</Italian>
+        <Spanish>Parecen ser buenas nuevas para nuestra economía.</Spanish>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_FOUND_LOBSTER_1</Tag>
+        <English>That sounds like welcome news for our economy.</English>
+        <French>Cela semble être une bonne nouvelle pour notre économie.</French>
+        <German>Klingt nach guten Neuigkeiten für unsere Wirtschaft.</German>
+        <Italian>Sembrano buone notizie per la nostra economia.</Italian>
+        <Spanish>Parecen ser buenas nuevas para nuestra economía.</Spanish>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_PEARLS_FOUND_1</Tag>
+        <English>That sounds like welcome news for our economy.</English>
+        <French>Cela semble être une bonne nouvelle pour notre économie.</French>
+        <German>Klingt nach guten Neuigkeiten für unsere Wirtschaft.</German>
+        <Italian>Sembrano buone notizie per la nostra economia.</Italian>
+        <Spanish>Parecen ser buenas nuevas para nuestra economía.</Spanish>
+    </TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_WININGMONKS_1</Tag>
 		<English>That sounds like welcome news for our economy.</English>
@@ -13858,7 +14922,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_WORLD_BLACKBEARD</Tag>
-		<English>The infamous Pirate [COLOR_NEGATIVE_TEXT]Blackbeard[COLOR_REVERT] is attacking %s1_civ_adjective shipping!</English>
+		<English>The infamous pirate [COLOR_NEGATIVE_TEXT]Blackbeard[COLOR_REVERT] is attacking %s1_civ_adjective shipping!</English>
 		<French>Le pirate infâme [COLOR_NEGATIVE_TEXT]Blackbeard[COLOR_REVERT] attaque des bateaux %s1:3_civ_adjective!</French>
 		<German>Der berüchtigte Pirat [COLOR_NEGATIVE_TEXT]Blackbeard[COLOR_REVERT] greift %s1_civ_adjective Schiffe an!</German>
 		<Italian>Il pirata malfamato [COLOR_NEGATIVE_TEXT]Barbanera[COLOR_REVERT] sta attaccando le navi %s1:3_civ_adjective!</Italian>
@@ -13987,7 +15051,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_WORLD_HENRY_MORGAN</Tag>
-		<English>The notorious Pirate [COLOR_NEGATIVE_TEXT]Henry Morgan[COLOR_REVERT] is attacking the %s1_civ_adjective fleet!</English>
+		<English>The notorious pirate [COLOR_NEGATIVE_TEXT]Henry Morgan[COLOR_REVERT] is attacking the %s1_civ_adjective fleet!</English>
 		<French>Le fameux Pirate [COLOR_NEGATIVE_TEXT]Henry Morgan[COLOR_REVERT] attaque la flotte des %s1:3_civ_adjective!</French>
 		<German>Der gefürchtete Pirat [COLOR_NEGATIVE_TEXT]Henry Morgan[COLOR_REVERT] greift die %s1_civ_adjective Flotte an!</German>
 		<Italian>Il famoso pirata Henry Morgan sta attaccando la flotta %s1:2_civ_adjective!</Italian>
@@ -13997,7 +15061,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_WORLD_ILLYRIAN_PIRATES</Tag>
-		<English>The [COLOR_NEGATIVE_TEXT]Illyrian Pirates[COLOR_REVERT] have declared war on %s1_civ_adjective merchant shipping!</English>
+		<English>The [COLOR_NEGATIVE_TEXT]Illyrian pirates[COLOR_REVERT] have declared war on %s1_civ_adjective merchant shipping!</English>
 		<French>Les [COLOR_NEGATIVE_TEXT]Pirates d'Illyrian[COLOR_REVERT] ont déclaré la guerre à la marine marchande %s1:2_civ_adjective!</French>
 		<German>Die [COLOR_NEGATIVE_TEXT]Illyrischen Piraten[COLOR_REVERT] haben den %s1_civ_adjective Handelsschiffen den Krieg erklärt!</German>
 		<Italian>I [COLOR_NEGATIVE_TEXT]pirati dell'Illiria[COLOR_REVERT] stanno attaccando le navi mercantili %s1:4_civ_adjective!</Italian>
@@ -14057,7 +15121,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_WORLD_MALACCAN_PIRATES</Tag>
-		<English>The [COLOR_NEGATIVE_TEXT]Malaccan Pirates[COLOR_REVERT] are hijacking merchant ships and kidnapping sailors in %s1_civ_adjective waters!</English>
+		<English>The [COLOR_NEGATIVE_TEXT]Malaccan pirates[COLOR_REVERT] are hijacking merchant ships and kidnapping sailors in %s1_civ_adjective waters!</English>
 		<French>Les pirates de Malacca détournent les bateaux marchands et enlèvent des marins dans les eaux %s1:4_civ_adjective!</French>
 		<German>Die [COLOR_NEGATIVE_TEXT]Malaccanischen Piraten[COLOR_REVERT] überfallen Handelsschiffe und entführen Seeleute im %s1_civ_adjective Gewässer.</German>
 		<Italian>I pirati della Malacca stanno dirottando le navi mercantili e stanno rapinando i marinai nelle acque %s1:4_civ_adjective.</Italian>
@@ -14107,7 +15171,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_WORLD_STEDE_BONNET</Tag>
-		<English>The famous Pirate [COLOR_NEGATIVE_TEXT]Stede Bonnet[COLOR_REVERT] is attacking the %s1_civ_adjective fleet!</English>
+		<English>The famous pirate [COLOR_NEGATIVE_TEXT]Stede Bonnet[COLOR_REVERT] is attacking the %s1_civ_adjective fleet!</English>
 		<French>Le fameux Pirate [COLOR_NEGATIVE_TEXT]Stede Bonnet[COLOR_REVERT] attaque la flotte des %s1:3_civ_adjective!</French>
 		<German>Der Pirat [COLOR_NEGATIVE_TEXT]Stede Bonnet[COLOR_REVERT] greift die %s1_civ_adjective Flotte an!</German>
 		<Italian>Il famoso pirata Stede Bonnet sta attaccando la flotta %s1:2_civ_adjective!</Italian>

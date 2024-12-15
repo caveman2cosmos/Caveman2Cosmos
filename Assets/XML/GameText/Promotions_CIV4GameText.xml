@@ -79,6 +79,7 @@
 		<French>[ICON_BULLET]Rend l'unité incapable de capturer les villes ou unités ennemies</French>
 		<German>[ICON_BULLET]Unfähigkeit zur Einnahme von Städten und Einheiten: +1</German>
 		<Italian>[ICON_BULLET]Aggiunge un [COLOR_HIGHLIGHT_TEXT]motivo[COLOR_REVERT] per cui l'unità non è in grado di [COLOR_HIGHLIGHT_TEXT]catturare[COLOR_REVERT] città o unità nemiche</Italian>  <!-- Subcombat type Wild -->
+		<Russian>[ICON_BULLET]Не может захватывать вражеские города или подразделения</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONHELP_ADDS_COLD_IMMUNITY</Tag>
@@ -833,7 +834,7 @@
 		<French>[ICON_BULLET]%D1_Change%% chance par round d'Ecraser les défenseurs.</French>
 		<Italian>[ICON_BULLET]%D1_Change%% di chance a turno di mettere in fuga i difensori.</Italian>
 		<Polish>[ICON_BULLET]%D1_Change%% szansy na rund&#234; do Odrzucenia Obro&#241;cy.</Polish>
-		<Russian>[ICON_BULLET]+%D1_Change%% øàíñà çà õîä îãëóøèòü îáîðîíÿþùåãîñÿ.</Russian>
+		<Russian>[ICON_BULLET]%D1_Change%% шанс за ход отбросить обороняющегося.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONHELP_KNOCKBACK_RETRIES</Tag>
@@ -841,7 +842,7 @@
 		<French>[ICON_BULLET]%D1_Change Tentatives d'écrasement</French>
 		<Italian>[ICON_BULLET]%D1_Change tentativi di Sbaraglio</Italian>
 		<Polish>[ICON_BULLET]%D1_Change pr&#243;b odrzutu</Polish>
-		<Russian>[ICON_BULLET]+%D1_Change ïîïûòêè îãëóøåíèÿ</Russian>
+		<Russian>[ICON_BULLET]+%D1_Change попытки оглушения</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONHELP_KNOCKBACK_VERSUS</Tag>
@@ -4025,6 +4026,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_ACE</Tag>
 		<English>Veteran Pilot II</English>
+		<Russian>Пилот-ветеран II</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_ADHERENT</Tag>
@@ -8819,7 +8821,7 @@
 		<English>Status (Forced March)</English>
 		<French>Statut (Marche forcée)</French>
 		<German>Gewaltmarsch</German>
-		<Russian>Статус (Принуд. марш)</Russian>
+		<Russian>Принудительный марш</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_FORESTRY</Tag>
@@ -12308,14 +12310,14 @@
 		<Italian>Algoritmo quantico</Italian>
 		<Spanish>Algoritmos cuánticos</Spanish>
 		<Polish>Algorytmy Kwantowe</Polish>
-		<Russian>Êâàíòîâûå àëãîðèòìû</Russian>
+		<Russian>Квантовые алгоритмы</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_QUICK_MARCH_STATUS</Tag>
 		<English>Status (Quick March)</English>
 		<French>Statut (Marche éclair)</French>
 		<German>Eilmarsch</German>
-		<Russian>Статус (Ускорен. марш)</Russian>
+		<Russian>Ускоренный марш</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_RACING_DOG1</Tag>
@@ -15015,7 +15017,7 @@
 		<Italian>Analisi del terreno I</Italian>
 		<Spanish>Análisis del terreno 1.0</Spanish>
 		<Polish>Analizator Terenu 1.0</Polish>
-		<Russian>Ðåêîãíîñöèðîâêà 1.0</Russian>
+		<Russian>Рекогносцировка 1.0</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_TERRAIN_ANALYSIS2</Tag>
@@ -15025,7 +15027,7 @@
 		<Italian>Analisi del terreno II</Italian>
 		<Spanish>Análisis del terreno 2.0</Spanish>
 		<Polish>Analizator Terenu 2.0</Polish>
-		<Russian>Ðåêîãíîñöèðîâêà 2.0</Russian>
+		<Russian>Рекогносцировка 2.0</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_TERRAIN_ANALYSIS3</Tag>
@@ -15035,11 +15037,12 @@
 		<Italian>Analisi del terreno III</Italian>
 		<Spanish>Análisis del terreno 3.0</Spanish>
 		<Polish>Analizator Terenu 3.0</Polish>
-		<Russian>Ðåêîãíîñöèðîâêà 3.0</Russian>
+		<Russian>Рекогносцировка 3.0</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_TOPGUN</Tag>
 		<English>Veteran Pilot III</English>
+		<Russian>Пилот-ветеран III</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_TORPEDOES</Tag>
@@ -15049,7 +15052,7 @@
 		<Italian>Torpedini</Italian>
 		<Spanish>Torpedos</Spanish>
 		<Polish>Torpedy</Polish>
-		<Russian>Òîðïåäû</Russian>
+		<Russian>Торпеды</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_TO_THE_DEATH1</Tag>
@@ -15543,6 +15546,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_VETERAN</Tag>
 		<English>Veteran Pilot I</English>
+		<Russian>Пилот-ветеран I</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_VIRGO</Tag>
