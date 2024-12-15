@@ -3815,6 +3815,11 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_TOUCAN</Tag>
 		<English>Subdued Toucan</English>
+		<German>
+			<Text>Gefangener Tukan:Gefangenen Tukans:Gefangenen Tukan:Gefangenen Tukan:Gefangene Tukane:Gefangenen Tukane:Gefangenen Tukanen:Gefangenen Tukane</Text>
+			<Gender>Male</Gender>
+			<Plural>0:0:0:0:1:1:1:1</Plural>
+		</German>
 		<French>Toucan (App.)</French>
 		<Italian>Tucano domato</Italian>
 		<Polish>Poskromiony Tukan</Polish>
