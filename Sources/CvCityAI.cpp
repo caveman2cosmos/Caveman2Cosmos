@@ -7321,6 +7321,7 @@ int CvCityAI::AI_getGoodTileCount() const
 				{
 					// This check is necessary to stop oscillation which can result
 					// when best build changes food situation for city, changing the best build.
+					// this signature is erroring out in vscode, but it does compile and work as intended, so we ignore the error
 					eBuild = scoring::min_score(
 						pLoopPlot->units() | filtered(CvUnit::fn::getBuildType() != NO_BUILD)
 						| transformed(CvUnit::fn::getBuildType()),
