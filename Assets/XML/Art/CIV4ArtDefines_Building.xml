@@ -17133,6 +17133,16 @@
 			<KFM/>
 			<Button>art/Craft/art/woodgatherer.dds</Button>
 		</BuildingArtInfo>
+        <BuildingArtInfo>
+            <Type>ART_DEF_BUILDING_PRIME_TIMBER_CAMP</Type>
+            <LSystem/>
+            <bAnimated>0</bAnimated>
+            <fScale>0</fScale>
+            <fInterfaceScale>0</fInterfaceScale>
+            <NIF/>
+            <KFM/>
+            <Button>art/Craft/art/primetimbercamp.dds</Button>
+        </BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_MUSHROOM_GATHERER</Type>
 			<LSystem/>
