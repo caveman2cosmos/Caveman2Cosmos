@@ -832,6 +832,8 @@ class CvUnitDesc:
 		)
 		if unit.isCommander():
 			f.write("\t\tCommander=1\n")
+		if unit.isCommodore():
+			f.write("\t\tCommodore=1\n")
 		if unit.getNameNoDesc():
 			f.write("\t\tUnitName=%s\n" % unit.getNameNoDesc().encode(fEncode))
 		if unit.getLeaderUnitType() != -1:
@@ -886,6 +888,7 @@ class CvUnitDesc:
 		self.isPatrol = False
 		self.isPlunder = False
 		self.bCommander = False
+		self.bCommodore = False
 		self.szUnitAIType = "NO_UNITAI"
 		self.iImmobile = 0
 		self.iBaseCombatStr = -1
@@ -916,6 +919,11 @@ class CvUnitDesc:
 			v = parser.findTokenValue(toks, "Commander")
 			if v != -1:
 				self.bCommander = True
+				continue
+
+			v = parser.findTokenValue(toks, "Commodore")
+			if v != -1:
+				self.bCommodore = True
 				continue
 
 			v = parser.findTokenValue(toks, "LeaderUnitType")
@@ -1009,6 +1017,8 @@ class CvUnitDesc:
 
 		if self.bCommander:
 			unit.setCommander(True)
+		if self.bCommodore:
+			unit.setCommodore(True)
 		if self.leaderUnitType != None:
 			leaderUnitTypeNum = GC.getInfoTypeForString(self.leaderUnitType)
 			if leaderUnitTypeNum > -1:

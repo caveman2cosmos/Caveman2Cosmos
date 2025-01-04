@@ -4126,6 +4126,7 @@ void getMissionTypeString(CvWString& szString, MissionTypes eMissionType)
 	case MISSION_CLAIM_TERRITORY: szString = L"MISSION_CLAIM_TERRITORY"; break;
 	case MISSION_ESPIONAGE_SLEEP: szString = L"MISSION_ESPIONAGE_SLEEP"; break;
 	case MISSION_GREAT_COMMANDER: szString = L"MISSION_GREAT_COMMANDER"; break;
+	case MISSION_GREAT_COMMODORE: szString = L"MISSION_GREAT_COMMODORE"; break;
 	case MISSION_SHADOW: szString = L"MISSION_SHADOW"; break;
 	case MISSION_GOTO: szString = L"MISSION_GOTO"; break;
 	case MISSION_BUTCHER: szString = L"MISSION_BUTCHER"; break;

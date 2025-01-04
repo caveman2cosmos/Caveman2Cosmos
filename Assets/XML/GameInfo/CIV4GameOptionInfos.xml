@@ -595,6 +595,13 @@
 			<bVisible>1</bVisible>
 		</GameOptionInfo>
 		<GameOptionInfo>
+			<Type>GAMEOPTION_UNIT_GREAT_COMMODORES</Type>
+			<Description>TXT_KEY_GAMEOPTION_UNIT_GREAT_COMMODORES</Description>
+			<Help>TXT_KEY_GAMEOPTION_UNIT_GREAT_COMMODORES_HELP</Help>
+			<bDefault>0</bDefault>
+			<bVisible>1</bVisible>
+		</GameOptionInfo>
+		<GameOptionInfo>
 			<Type>GAMEOPTION_UNIT_XP_FROM_SPECIALISTS</Type>
 			<Description>TXT_KEY_GAMEOPTION_UNIT_XP_FROM_SPECIALISTS</Description>
 			<Help>TXT_KEY_GAMEOPTION_UNIT_XP_FROM_SPECIALISTS_HELP</Help>

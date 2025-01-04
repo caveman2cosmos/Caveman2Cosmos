@@ -4552,6 +4552,10 @@
 		<Russian>Âîåííûå ðàáî÷èå</Russian>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_UNITCOMBAT_COMMODORE</Tag>
+		<English>Commodore</English>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_COMMANDER</Tag>
 		<English>Commanders</English>
 		<French>Unités de Commandement</French>

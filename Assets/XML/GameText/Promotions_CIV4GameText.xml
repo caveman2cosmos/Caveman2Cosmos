@@ -2539,6 +2539,10 @@
 		<Russian>Êîìàíäèð</Russian>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_PROMOTIONLINE_SHIP_COMMAND</Tag>
+		<English>Ship Command Promotion Line</English>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_CONNIVING</Tag>
 		<English>Conniving Promotion Line</English>
 		<French>Spécialisation Connivence</French>
@@ -2865,6 +2869,10 @@
 		<Russian>Øòàá êîìàíäîâàíèÿ</Russian>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_PROMOTIONLINE_ADMIRAL_STAFF</Tag>
+		<English>Admiral Staff Promotion Line</English>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_GOAD</Tag>
 		<English>Goad Promotion Line</English>
 		<French>Spécialisation Incitation</French>
@@ -3033,6 +3041,10 @@
 		<Russian>Èíèöèàòèâà</Russian>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_PROMOTIONLINE_SHIP_INITIATIVE</Tag>
+		<English>Ship Initiative Promotion Line</English>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_INNOCENT_MERCHANTS</Tag>
 		<English>Innocent Merchants Promotion Line</English>
 		<French>Spécialisation Marchand Innocent</French>
@@ -3183,6 +3195,10 @@
 		<Russian>Áîåâàÿ ìîðàëü</Russian>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_PROMOTIONLINE_MORALE_SHIPS</Tag>
+		<English>Ship Morale Promotion Line</English>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_NAVIGATION</Tag>
 		<English>Navigation Promotion Line</English>
 		<French>Spécialisation Navigation</French>
@@ -3220,6 +3236,10 @@
 		<Italian>Operazioni</Italian>
 		<Polish>Linia Promocji: Operacje</Polish>
 		<Russian>Ïëàíèðîâàíèå îïåðàöèé</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROMOTIONLINE_SHIP_OPERATIONS</Tag>
+		<English>Ship Operations Promotion Line</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_ORGANIZED</Tag>
@@ -3556,6 +3576,10 @@
 		<Russian>Ñàìîîáîðîíà</Russian>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_PROMOTIONLINE_STRIKEFORCE</Tag>
+		<English>Ship Strike Force Promotion Line</English>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_SELF_HEAL</Tag>
 		<English>Self Heal Promotion Line</English>
 		<French>Spécialisation Guérison Auto.</French>
@@ -3760,6 +3784,10 @@
 		<Russian>Òàêòèêà áîÿ</Russian>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_PROMOTIONLINE_SHIP_TACTICS</Tag>
+		<English>Ship Tactics Promotion Line</English>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_TAKE_PRISONERS</Tag>
 		<English>Take Prisoners Promotion Line</English>
 		<French>Spécialisation Capture</French>
@@ -3856,6 +3884,10 @@
 		<French>Spécialisation Obeisance</French>
 		<Polish>Linia Promocji: Bezwarunkowe Pos&#179;usze&#241;stwo</Polish>
 		<Russian>Ïîðàáîòèòåëü</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROMOTIONLINE_UNQUESTIONING_SHIP_OBEDIENCE</Tag>
+		<English>Ship Unquestioning Obedience Promotion Line</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_URBAN_TACTICS</Tag>
@@ -7136,6 +7168,86 @@
 		<Russian>Êîìàíäèð IX</Russian>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_PROMOTION_SHIP_COMMAND1</Tag>
+		<English>Command I</English>
+		<French>Commandement I</French>
+		<Italian>Comando I</Italian>
+		<Polish>Dowodzenie I</Polish>
+		<Russian>Êîìàíäèð I</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROMOTION_SHIP_COMMAND10</Tag>
+		<English>Command X</English>
+		<French>CommandementX</French>
+		<Italian>Comando X</Italian>
+		<Polish>Dowodzenie X</Polish>
+		<Russian>Êîìàíäèð X</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROMOTION_SHIP_COMMAND2</Tag>
+		<English>Command II</English>
+		<French>Commandement II</French>
+		<Italian>Comando II</Italian>
+		<Polish>Dowodzenie II</Polish>
+		<Russian>Êîìàíäèð II</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROMOTION_SHIP_COMMAND3</Tag>
+		<English>Command III</English>
+		<French>Commandement III</French>
+		<Italian>Comando III</Italian>
+		<Polish>Dowodzenie III</Polish>
+		<Russian>Êîìàíäèð III</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROMOTION_SHIP_COMMAND4</Tag>
+		<English>Command IV</English>
+		<French>Commandement IV</French>
+		<Italian>Comando IV</Italian>
+		<Polish>Dowodzenie IV</Polish>
+		<Russian>Êîìàíäèð IV</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROMOTION_SHIP_COMMAND5</Tag>
+		<English>Command V</English>
+		<French>Commandement V</French>
+		<Italian>Comando V</Italian>
+		<Polish>Dowodzenie V</Polish>
+		<Russian>Êîìàíäèð V</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROMOTION_SHIP_COMMAND6</Tag>
+		<English>Command VI</English>
+		<French>Commandement VI</French>
+		<Italian>Comando VI</Italian>
+		<Polish>Dowodzenie VI</Polish>
+		<Russian>Êîìàíäèð VI</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROMOTION_SHIP_COMMAND7</Tag>
+		<English>Command VII</English>
+		<French>Commandement VII</French>
+		<Italian>Comando VII</Italian>
+		<Polish>Dowodzenie VII</Polish>
+		<Russian>Êîìàíäèð VII</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROMOTION_SHIP_COMMAND8</Tag>
+		<English>Command VIII</English>
+		<French>Commandement VIII</French>
+		<Italian>Comando VIII</Italian>
+		<Polish>Dowodzenie VIII</Polish>
+		<Russian>Êîìàíäèð VIII</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROMOTION_SHIP_COMMAND9</Tag>
+		<English>Command IX</English>
+		<French>Commandement IX</French>
+		<Italian>Comando IX</Italian>
+		<Polish>Dowodzenie IX</Polish>
+		<Russian>Êîìàíäèð IX</Russian>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_COMMANDO</Tag>
 		<English>Commando</English>
 		<French>
@@ -7233,6 +7345,16 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_CONTROL</Tag>
+		<English>Strategic Command</English>
+		<French>Commandement Stratégique</French>
+		<German>Strategisches Kommando</German>
+		<Italian>Comando strategico</Italian>
+		<Spanish>Comando estratégico</Spanish>
+		<Polish>Strategiczne Rozkazy</Polish>
+		<Russian>Êîíòðîëü</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROMOTION_SHIP_CONTROL</Tag>
 		<English>Strategic Command</English>
 		<French>Commandement Stratégique</French>
 		<German>Strategisches Kommando</German>
@@ -9144,6 +9266,46 @@
 		<Russian>Ãåíøòàá IX</Russian>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_PROMOTION_ADMIRAL_STAFF1</Tag>
+		<English>Admiral Staff I</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROMOTION_ADMIRAL_STAFF10</Tag>
+		<English>Admiral Staff X</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROMOTION_ADMIRAL_STAFF2</Tag>
+		<English>Admiral Staff II</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROMOTION_ADMIRAL_STAFF3</Tag>
+		<English>Admiral Staff III</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROMOTION_ADMIRAL_STAFF4</Tag>
+		<English>Admiral Staff IV</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROMOTION_ADMIRAL_STAFF5</Tag>
+		<English>Admiral Staff V</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROMOTION_ADMIRAL_STAFF6</Tag>
+		<English>Admiral Staff VI</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROMOTION_ADMIRAL_STAFF7</Tag>
+		<English>Admiral Staff VII</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROMOTION_ADMIRAL_STAFF8</Tag>
+		<English>Admiral Staff VIII</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROMOTION_ADMIRAL_STAFF9</Tag>
+		<English>Admiral Staff IX</English>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_GENTLEMEN</Tag>
 		<English>Gentlemen</English>
 		<French>Gentilhomme</French>
@@ -10102,6 +10264,38 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_INITIATIVE4</Tag>
+		<English>Initiative IV</English>
+		<Italian>Iniziativa IV</Italian>
+		<Spanish>Iniciativa IV</Spanish>
+		<Polish>Inicjatywa IV</Polish>
+		<Russian>Èíèöèàòèâà IV</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROMOTION_SHIP_INITIATIVE1</Tag>
+		<English>Initiative I</English>
+		<Italian>Iniziativa I</Italian>
+		<Spanish>Iniciativa I</Spanish>
+		<Polish>Inicjatywa I</Polish>
+		<Russian>Èíèöèàòèâà I</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROMOTION_SHIP_INITIATIVE2</Tag>
+		<English>Initiative II</English>
+		<Italian>Iniziativa II</Italian>
+		<Spanish>Iniciativa II</Spanish>
+		<Polish>Inicjatywa II</Polish>
+		<Russian>Èíèöèàòèâà II</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROMOTION_SHIP_INITIATIVE3</Tag>
+		<English>Initiative III</English>
+		<Italian>Iniziativa III</Italian>
+		<Spanish>Iniciativa III</Spanish>
+		<Polish>Inicjatywa III</Polish>
+		<Russian>Èíèöèàòèâà III</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROMOTION_SHIP_INITIATIVE4</Tag>
 		<English>Initiative IV</English>
 		<Italian>Iniziativa IV</Italian>
 		<Spanish>Iniciativa IV</Spanish>
@@ -11192,6 +11386,26 @@
 		<Spanish>Moral</Spanish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_PROMOTION_SHIP_MORALE1</Tag>
+		<English>Ship Morale I</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROMOTION_SHIP_MORALE2</Tag>
+		<English>Ship Morale I</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROMOTION_SHIP_MORALE3</Tag>
+		<English>Ship Morale I</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROMOTION_SHIP_MORALE4</Tag>
+		<English>Ship Morale I</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROMOTION_SHIP_MORALE5</Tag>
+		<English>Ship Morale I</English>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_MORALE1</Tag>
 		<English>Morale I</English>
 		<French>Moral I</French>
@@ -11556,6 +11770,46 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_OPERATIONS4</Tag>
+		<English>Operations IV</English>
+		<French>Opérations IV</French>
+		<German>Operationen IV</German>
+		<Italian>Operazioni IV</Italian>
+		<Spanish>Operaciones IV</Spanish>
+		<Polish>Operacje IV</Polish>
+		<Russian>Ïëàíèðîâàíèå IV</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROMOTION_SHIP_OPERATIONS1</Tag>
+		<English>Operations I</English>
+		<French>Opérations I</French>
+		<German>Operationen I</German>
+		<Italian>Operazioni I</Italian>
+		<Spanish>Operaciones I</Spanish>
+		<Polish>Operacje I</Polish>
+		<Russian>Ïëàíèðîâàíèå I</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROMOTION_SHIP_OPERATIONS2</Tag>
+		<English>Operations II</English>
+		<French>Opérations II</French>
+		<German>Operationen II</German>
+		<Italian>Operazioni II</Italian>
+		<Spanish>Operaciones II</Spanish>
+		<Polish>Operacje II</Polish>
+		<Russian>Ïëàíèðîâàíèå II</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROMOTION_SHIP_OPERATIONS3</Tag>
+		<English>Operations III</English>
+		<French>Opérations III</French>
+		<German>Operationen III</German>
+		<Italian>Operazioni III</Italian>
+		<Spanish>Operaciones III</Spanish>
+		<Polish>Operacje III</Polish>
+		<Russian>Ïëàíèðîâàíèå III</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROMOTION_SHIP_OPERATIONS4</Tag>
 		<English>Operations IV</English>
 		<French>Opérations IV</French>
 		<German>Operationen IV</German>
@@ -13457,6 +13711,36 @@
 		<Russian>Óäàðíàÿ ñèëà III</Russian>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_PROMOTION_SHIP_STRIKEFORCE1</Tag>
+		<English>Strike Force I</English>
+		<French>Force de Frappe I</French>
+		<German>Eingreiftruppe I</German>
+		<Italian>Forza d'assalto I</Italian>
+		<Spanish>Fuerzas de asalto I</Spanish>
+		<Polish>Si&#179;y Uderzeniowe I</Polish>
+		<Russian>Óäàðíàÿ ñèëà I</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROMOTION_SHIP_STRIKEFORCE2</Tag>
+		<English>Strike Force II</English>
+		<French>Force de Frappe II</French>
+		<German>Eingreiftruppe II</German>
+		<Italian>Forza d'assalto II</Italian>
+		<Spanish>Fuerzas de asalto II</Spanish>
+		<Polish>Si&#179;y Uderzeniowe II</Polish>
+		<Russian>Óäàðíàÿ ñèëà II</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROMOTION_SHIP_STRIKEFORCE3</Tag>
+		<English>Strike Force III</English>
+		<French>Force de Frappe III</French>
+		<German>Eingreiftruppe III</German>
+		<Italian>Forza d'assalto III</Italian>
+		<Spanish>Fuerzas de asalto III</Spanish>
+		<Polish>Si&#179;y Uderzeniowe III</Polish>
+		<Russian>Óäàðíàÿ ñèëà III</Russian>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_SELF_DESTRUCT</Tag>
 		<English>Self-Destruct</English>
 		<French>Auto-Destruct.</French>
@@ -14859,6 +15143,46 @@
 		<German>Taktik</German>
 		<Italian>Tattica</Italian>
 		<Spanish>Tácticas</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROMOTION_SHIP_TACTICS1</Tag>
+		<English>Tactics I</English>
+		<French>Tactiques I</French>
+		<German>Taktiken I</German>
+		<Italian>Tattica I</Italian>
+		<Spanish>Tácticas I</Spanish>
+		<Polish>Taktyka I</Polish>
+		<Russian>Òàêòèêà I</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROMOTION_SHIP_TACTICS2</Tag>
+		<English>Tactics II</English>
+		<French>Tactiques II</French>
+		<German>Taktiken II</German>
+		<Italian>Tattica II</Italian>
+		<Spanish>Tácticas II</Spanish>
+		<Polish>Taktyka II</Polish>
+		<Russian>Òàêòèêà II</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROMOTION_SHIP_TACTICS3</Tag>
+		<English>Tactics III</English>
+		<French>Tactiques III</French>
+		<German>Taktiken III</German>
+		<Italian>Tattica III</Italian>
+		<Spanish>Tácticas III</Spanish>
+		<Polish>Taktyka III</Polish>
+		<Russian>Òàêòèêà III</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROMOTION_SHIP_TACTICS4</Tag>
+		<English>Tactics IV</English>
+		<French>Tactiques IV</French>
+		<German>Taktiken IV</German>
+		<Italian>Tattica IV</Italian>
+		<Spanish>Tácticas IV</Spanish>
+		<Polish>Taktyka IV</Polish>
+		<Russian>Òàêòèêà IV</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_TACTICS1</Tag>
