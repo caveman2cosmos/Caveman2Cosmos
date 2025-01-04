@@ -8871,6 +8871,7 @@
 				</UnitAI>
 			</UnitAIs>
 			<PrereqTech>TECH_NAVAL_WARFARE</PrereqTech>
+			<ObsoleteTech>TECH_SEAFARING</ObsoleteTech>
 			<iCost>-1</iCost>
 			<iMinAreaSize>10</iMinAreaSize>
 			<iBaseUpkeep>1</iBaseUpkeep>
@@ -9017,6 +9018,7 @@
 				</UnitAI>
 			</UnitAIs>
 			<PrereqTech>TECH_SEAFARING</PrereqTech>
+			<ObsoleteTech>TECH_SHIP_BUILDING</ObsoleteTech>
 			<iCost>-1</iCost>
 			<iMinAreaSize>10</iMinAreaSize>
 			<iBaseUpkeep>1</iBaseUpkeep>
@@ -9107,6 +9109,7 @@
 				</UnitAI>
 			</UnitAIs>
 			<PrereqTech>TECH_ANCIENT_BALLISTICS</PrereqTech>
+			<ObsoleteTech>TECH_ANCIENT_MACHINERY</ObsoleteTech>
 			<iCost>-1</iCost>
 			<iMinAreaSize>10</iMinAreaSize>
 			<iBaseUpkeep>1</iBaseUpkeep>
@@ -9215,6 +9218,7 @@
 			<TechTypes>
 				<PrereqTech>TECH_SHIP_BUILDING</PrereqTech>
 			</TechTypes>
+			<ObsoleteTech>TECH_RUDDER</ObsoleteTech>
 			<iCost>-1</iCost>
 			<iMinAreaSize>10</iMinAreaSize>
 			<iBaseUpkeep>1</iBaseUpkeep>
@@ -9332,6 +9336,7 @@
 			<TechTypes>
 				<PrereqTech>TECH_RUDDER</PrereqTech>
 			</TechTypes>
+			<ObsoleteTech>TECH_COMPASS</ObsoleteTech>
 			<iCost>-1</iCost>
 			<iMinAreaSize>10</iMinAreaSize>
 			<iBaseUpkeep>1</iBaseUpkeep>
@@ -9467,6 +9472,7 @@
 				</UnitAI>
 			</UnitAIs>
 			<PrereqTech>TECH_COMPASS</PrereqTech>
+			<ObsoleteTech>TECH_GRAND_WAR</ObsoleteTech>
 			<iCost>-1</iCost>
 			<iMinAreaSize>10</iMinAreaSize>
 			<iBaseUpkeep>1</iBaseUpkeep>
@@ -9596,6 +9602,7 @@
 				</FreePromotion>
 			</FreePromotions>
 			<PrereqTech>TECH_GRAND_WAR</PrereqTech>
+			<ObsoleteTech>TECH_COMBUSTION</ObsoleteTech>
 			<iCost>-1</iCost>
 			<iMinAreaSize>10</iMinAreaSize>
 			<iBaseUpkeep>1</iBaseUpkeep>
@@ -9699,6 +9706,7 @@
 			<TechTypes>
 				<PrereqTech>TECH_COMBUSTION</PrereqTech>
 			</TechTypes>
+			<ObsoleteTech>TECH_INDUSTRIALISM</ObsoleteTech>
 			<BonusType>BONUS_COAL</BonusType>
 			<PrereqBonuses>
 				<BonusType>BONUS_STEEL_WARES</BonusType>
@@ -9811,6 +9819,7 @@
 			<TechTypes>
 				<PrereqTech>TECH_ARTILLERY</PrereqTech>
 			</TechTypes>
+			<ObsoleteTech>TECH_MECHANIZED_WARFARE</ObsoleteTech>
 			<iCost>-1</iCost>
 			<iMinAreaSize>10</iMinAreaSize>
 			<iBaseUpkeep>2</iBaseUpkeep>
@@ -9908,6 +9917,7 @@
 				</FreePromotion>
 			</FreePromotions>
 			<PrereqTech>TECH_MECHANIZED_WARFARE</PrereqTech>
+			<ObsoleteTech>TECH_SEMICONDUCTORS</ObsoleteTech>
 			<BonusType>BONUS_STEEL_WARES</BonusType>
 			<PrereqBonuses>
 				<BonusType>BONUS_PETROLEUM_PRODUCTS</BonusType>
@@ -10014,6 +10024,7 @@
 				<BonusType>BONUS_PETROLEUM_PRODUCTS</BonusType>
 				<BonusType>BONUS_URANIUM</BonusType>
 			</PrereqBonuses>
+			<ObsoleteTech>TECH_ADVANCED_WARMACHINES</ObsoleteTech>
 			<FreePromotions>
 				<FreePromotion>
 					<PromotionType>PROMOTION_NAVIGATION1</PromotionType>

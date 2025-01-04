@@ -7723,8 +7723,8 @@
 			<Type>PROMOTION_SHIP_OPERATIONS3</Type>
 			<Description>TXT_KEY_PROMOTION_SHIP_OPERATIONS3</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
-			<PromotionPrereq>PROMOTION_OPERATIONS2</PromotionPrereq>
-			<PromotionPrereqOr1>PROMOTION_TACTICS4</PromotionPrereqOr1>
+			<PromotionPrereq>PROMOTION_SHIP_OPERATIONS2</PromotionPrereq>
+			<PromotionPrereqOr1>PROMOTION_SHIP_TACTICS4</PromotionPrereqOr1>
 			<PromotionLine>PROMOTIONLINE_SHIP_OPERATIONS</PromotionLine>
 			<iLinePriority>3</iLinePriority>
 			<iNeutralHealChange>5</iNeutralHealChange>
