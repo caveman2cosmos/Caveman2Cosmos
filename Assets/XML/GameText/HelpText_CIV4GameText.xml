@@ -175,6 +175,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_TECHHELP_LANGUAGE</Tag>
 		<English>[ICON_BULLET]Enables folklore heritage.</English>
+		<German>[ICON_BULLET]ermöglicht Folklore und kulturelles Erbe</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECHHELP_ERA_ADVANCE</Tag>

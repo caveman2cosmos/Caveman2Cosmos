@@ -26223,11 +26223,11 @@ void CvPlayerAI::AI_setPushReligiousVictory()
 	}
 
 	bool bStateReligionBest = true;
-	for (iI = 0; iI < GC.getNumReligionInfos(); iI++)
+	for (int iJ = 0; iJ < GC.getNumReligionInfos(); iJ++)
 	{
-		if (eStateReligion != (ReligionTypes)iI)
+		if (eStateReligion != (ReligionTypes)iJ)
 		{
-			if (GC.getGame().calculateReligionPercent((ReligionTypes)iI) > iStateReligionInfluence)
+			if (GC.getGame().calculateReligionPercent((ReligionTypes)iJ) > iStateReligionInfluence)
 			{
 				bStateReligionBest = false;
 				break;

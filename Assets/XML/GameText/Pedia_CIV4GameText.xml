@@ -539,6 +539,7 @@
 		<Tag>TXT_KEY_PEDIA_CATEGORY_HERITAGE</Tag>
 		<English>Heritage</English>
 		<French>Héritage</French>
+		<German>Kulturelles Erbe</German>
 		<Italian>Patrimonio culturale</Italian>
 		<Spanish>
 			<Text>Patrimonio</Text>
@@ -587,6 +588,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_PEDIA_CATEGORY_SPACE_BUILDINGS</Tag>
 		<English>Space</English>
+		<German>Weltall</German>
 		<Italian>Edifici spaziali</Italian>
 		<Russian>Космические</Russian>
 	</TEXT>
@@ -635,6 +637,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_PEDIA_CATEGORY_SPREAD_UNITS</Tag>
 		<English>Spreading Units</English>
+		<German>Verbreitung</German>
 		<Italian>Unità di diffusione</Italian>
 		<Russian>Распределяющие подразделения</Russian>
 	</TEXT>
