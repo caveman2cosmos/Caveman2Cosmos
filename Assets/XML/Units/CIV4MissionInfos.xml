@@ -1023,7 +1023,7 @@
 			<bCtrlDownAlt>0</bCtrlDownAlt>
 			<iHotKeyPriorityAlt>0</iHotKeyPriorityAlt>
 			<bVisible>1</bVisible>
-			<Button>Art/Interface/Buttons/promotions/field_commander.dds</Button>
+			<Button>Art/Interface/Buttons/promotions/field_commodore.dds</Button>
 		</MissionInfo>
 		<MissionInfo>
 			<Type>MISSION_SHADOW</Type>
