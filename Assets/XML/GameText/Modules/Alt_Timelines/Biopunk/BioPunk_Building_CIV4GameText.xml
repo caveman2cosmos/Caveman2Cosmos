@@ -26,6 +26,7 @@
 		<English>[COLOR_BUILDING_TEXT]Biopunk[COLOR_REVERT] is a subgenre of speculative fiction, emerged during the 1990s and focusing on the near-future unintended consequences of the biotechnology revolution, following the discovery of recombinant DNA. Biopunk fiction typically describes the struggles of individuals or groups, often the product of ruthless human experimentation, against a backdrop of totalitarian governments or megacorporations which misuse biotechnologies as means of social control or profiteering.</English>
 		<Italian>Il [COLOR_BUILDING_TEXT]Biopunk[COLOR_REVERT] è un sottogenere della narrativa fantascientifica, emerso negli anni novanta del XX secolo e che si concentra sulle conseguenze indesiderate della imminente rivoluzione biotecnologica, dovuta alla scoperta del DNA ricombinante. La narrativa biopunk solitamente descrive le lotte di singoli individui o piccoli gruppi, spesso prodotti di sperimentazioni senza scrupoli sugli esseri umani, che combattono contro governi totalitari o megacorporazioni che usano impropriamente le biotecnologie come mezzi di controllo sociale o per ottenere profitti.</Italian>
 		<Russian>[COLOR_BUILDING_TEXT]Biopunk[COLOR_REVERT] - поджанр спекулятивной фантастики, возникший в 1990-х и посвященный непредвиденным последствиям биотехнологической революции ближайшего будущего, последовавшей за открытием рекомбинантной ДНК. Биопанк-фантастика обычно описывает борьбу отдельных людей или групп, часто являющихся продуктом безжалостных экспериментов над людьми, на фоне тоталитарных правительств или мегакорпораций, злоупотребляющих биотехнологиями как средствами социального контроля или наживы.</Russian>
+		<Polish>[COLOR_BUILDING_TEXT]Biopunk[COLOR_REVERT] to podgatunek fikcji spekulatywnej, kt&#243;ry pojawi&#179; si&#234; w latach 90. XX wieku i skupia&#179; si&#234; na niezamierzonych konsekwencjach rewolucji biotechnologicznej w niedalekiej przysz&#179;o&#156;ci, po odkryciu rekombinowanego DNA. Fikcja biopunkowa zazwyczaj opisuje zmagania jednostek lub grup, cz&#234;sto b&#234;d&#185;ce wynikiem bezwzgl&#234;dnych eksperyment&#243;w na ludziach, na tle totalitarnych rz&#185;d&#243;w lub megakorporacji, kt&#243;re nadu&#191;ywaj&#185; biotechnologii jako &#156;rodka kontroli spo&#179;ecznej lub spekulacji.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_BIOPUNK_LAB</Tag>
@@ -95,6 +96,7 @@
 		<Tag>TXT_KEY_BUILDING_DESIGNED_ANIMAL_ZOO_PEDIA</Tag>
 		<English>Animals are designed by gene manipulation and exposed in zoos.</English>
 		<Russian>Генетически модифицированные животные выставляются на показ в парке зооморфов.</Russian>
+		<Polish>Zwierz&#234;ta s&#185; projektowane poprzez manipulacj&#234; genami i wystawiane w ogrodach zoologicznych.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MICROBIOLOGY_ARTIST</Tag>
@@ -114,7 +116,7 @@
 		<Tag>TXT_KEY_BUILDING_PHEROMONE_LAB</Tag>
 		<English>Pheromone Lab</English>
 		<French>Laboratoire de Phéromones</French>
-		<Polish>Laboratorium Fromon&#243;w</Polish>
+		<Polish>Laboratorium Feromon&#243;w</Polish>
 		<Russian>Лаборатория ферамонов</Russian>
 		<Italian>Laboratorio di feromoni</Italian>
 	</TEXT>
@@ -122,6 +124,7 @@
 		<Tag>TXT_KEY_BUILDING_PHEROMONE_LAB_PEDIA</Tag>
 		<English>A pheromone is a secreted or excreted chemical factor that triggers a social response in members of the same species. Pheromones are chemicals capable of acting outside the body of the secreting individual to impact the behavior of the receiving individual. There are alarm pheromones, food trail pheromones, sex pheromones, and many others that affect behavior or physiology. Pheromones are used from basic unicellular prokaryotes to complex multicellular eukaryotes. Their use among insects has been particularly well documented. In addition, some vertebrates and plants communicate by using pheromones.</English>
 		<Russian>Феромоны - собирательное название веществ - продуктов внешней секреции, выделяемых некоторыми видами животных и обеспечивающих химическую коммуникацию между особями одного вида. Феромоны - биологические маркеры собственного вида, летучие хемосигналы, управляющие нейроэндокринными поведенческими реакциями, процессами развития, а также многими другими процессами, связанными с социальным поведением и размножением. Феромоны модифицируют поведение, физиологическое и эмоциональное состояние или метаболизм других особей того же вида.</Russian>
+		<Polish>Feromon to wydzielany lub wydalany czynnik chemiczny, kt&#243;ry wywo&#179;uje reakcj&#234; spo&#179;eczn&#185; u przedstawicieli tego samego gatunku. Feromony to substancje chemiczne zdolne do dzia&#179;ania na zewn&#185;trz cia&#179;a wydzielaj&#185;cej osoby i wp&#179;ywania na zachowanie osoby otrzymuj&#185;cej. Istniej&#185; feromony alarmowe, feromony &#156;ladu pokarmowego, feromony p&#179;ciowe i wiele innych, kt&#243;re wp&#179;ywaj&#185; na zachowanie lub fizjologi&#234;. Feromony s&#185; stosowane od podstawowych jednokom&#243;rkowych prokariot&#243;w po z&#179;o&#191;one wielokom&#243;rkowe eukarionty. Szczeg&#243;lnie dobrze udokumentowano ich zastosowanie w&#156;r&#243;d owad&#243;w. Ponadto niekt&#243;re kr&#234;gowce i ro&#156;liny komunikuj&#185; si&#234; za pomoc&#185; feromon&#243;w.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_PROTEIN_ARTIST</Tag>
@@ -163,6 +166,7 @@
 		<Tag>TXT_KEY_BUILDING_SPECIES_REVIVAL_LAB_PEDIA</Tag>
 		<English>In biology, cloning is the process of producing similar populations of genetically identical individuals that occurs in nature when organisms such as bacteria, insects or plants reproduce asexually. Cloning in biotechnology refers to processes used to create copies of DNA fragments (molecular cloning), cells (cell cloning), or organisms. The term also refers to the production of multiple copies of a product such as digital media or software.</English>
 		<Russian>Клонирование в биологии - появление естественным путем или получение нескольких генетически идентичных организмов путем бесполого (в том числе вегетативного) размножения. Термин "клонирование" в том же смысле нередко применяют и по отношению к клеткам многоклеточных организмов. Клонированием называют также получение нескольких идентичных копий наследственных молекул (молекулярное клонирование). Наконец, клонированием также часто называют биотехнологические методы, используемые для искусственного получения клонов организмов, клеток или молекул.</Russian>
+		<Polish>W biologii klonowanie to proces wytwarzania podobnych populacji genetycznie identycznych osobnik&#243;w, kt&#243;ry zachodzi w przyrodzie, gdy organizmy takie jak bakterie, owady lub ro&#156;liny rozmna&#191;aj&#185; si&#234; bezp&#179;ciowo. Klonowanie w biotechnologii odnosi si&#234; do proces&#243;w stosowanych do tworzenia kopii fragment&#243;w DNA (klonowanie molekularne), kom&#243;rek (klonowanie kom&#243;rek) lub organizm&#243;w. Termin ten odnosi si&#234; r&#243;wnie&#191; do produkcji wielu kopii produktu, takiego jak no&#156;niki cyfrowe lub oprogramowanie.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_WEAPONIZED_FLORA</Tag>
@@ -176,5 +180,6 @@
 		<Tag>TXT_KEY_BUILDING_WEAPONIZED_FLORA_PEDIA</Tag>
 		<English>Weaponizing the plants allows users to grasp and strike continuously with vines and roots, project thorns at a distance, and quickly regenerate the withering weapons at the user's will. They can cause horticulture found, i.e. wrap of vines, to grow and climb around a target's neck, causing choking, or even strike with plants. A more subtle technique is to release damaging toxins and pheromones, affecting targets in which conditions should be treated quickly with ailments.</English>
 		<Russian>Военная оранжерея позволяет использовать плющи и корни для захвата и атаки, шипы для дистанционной атаки и быструю регенерацию. Может управлять созданными агрокультурами, то есть использовать плющи для удушения атакующего противника и атаковать при помощи растений. Наиболее коварен способ нанесения повреждений при помощи токсинов и феромонов, вызывающих недомогание, влияющее на характеристики пораженного объекта, которое стоит лечить незамедлительно.</Russian>
+		<Polish>Uzbrojenie ro&#156;lin pozwala u&#191;ytkownikom chwyta&#230; i uderza&#230; w spos&#243;b ci&#185;g&#179;y pn&#185;czami i korzeniami, wyrzuca&#230; ciernie na odleg&#179;o&#156;&#230; i szybko regenerowa&#230; mia&#191;d&#191;&#185;c&#185; bro&#241; zgodnie z wol&#185; u&#191;ytkownika. Mog&#185; powodowa&#230; wzrost znalezionych ro&#156;lin ogrodniczych, tj. owini&#234;cie pn&#185;czy, i wspi&#185;&#230; si&#234; na szyj&#234; celu, powoduj&#185;c zad&#179;awienie, a nawet uderzenie ro&#156;linami. Bardziej subteln&#185; technik&#185; jest uwolnienie szkodliwych toksyn i feromon&#243;w, oddzia&#179;uj&#185;cych na cele, w kt&#243;rych nale&#191;y szybko leczy&#230; dolegliwo&#156;ci.</Polish>
 	</TEXT>
 </Civ4GameText>
