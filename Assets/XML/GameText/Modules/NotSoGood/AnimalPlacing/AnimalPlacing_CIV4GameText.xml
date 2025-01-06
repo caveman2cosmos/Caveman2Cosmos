@@ -157,7 +157,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_BONUS_GUINEA_PIGS</Tag>
 		<English>Place [LINK=BONUS_GUINEA_PIGS]Guinea Pigs Bonus[\LINK]</English>
-		<English>Umieść rodzinę [LINK=BONUS_GUINEA_PIGS]Świnek morskich[\LINK]</English>
+		<Polish>Umieść rodzinę [LINK=BONUS_GUINEA_PIGS]Świnek morskich[\LINK]</Polish>
 		<Russian>Разводить морских свинок</Russian>
 		<Italian>[LINK=BONUS_GUINEA_PIGS]Porcellino d'india[\LINK] (risorsa collocata)</Italian>
 	</TEXT>
@@ -206,7 +206,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_BONUS_KAVA</Tag>
 		<English>Place [LINK=BONUS_KAVA]Kava Bonus[\LINK]</English>
-		<English>Zasiej [LINK=BONUS_KAVA]Pieprz metystynowy[\LINK]</English>
+		<Polish>Zasiej [LINK=BONUS_KAVA]Pieprz metystynowy[\LINK]</Polish>
 		<Russian>Посадить каву</Russian>
 		<Italian>[LINK=BONUS_KAVA]Kava[\LINK] (risorsa collocata)</Italian>
 	</TEXT>
@@ -283,7 +283,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_BONUS_PARROTS</Tag>
 		<English>Place [LINK=BONUS_PARROTS]Parrots Bonus[\LINK]</English>
-		<English>Umieść [LINK=BONUS_PARROTS]Papugi[\LINK]</English>
+		<Polish>Umieść [LINK=BONUS_PARROTS]Papugi[\LINK]</Polish>
 		<Russian>Разводить попугаев</Russian>
 		<Italian>[LINK=BONUS_PARROTS]Parrocchetti[\LINK] (risorsa collocata)</Italian>
 	</TEXT>
