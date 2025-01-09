@@ -6,6 +6,7 @@
 		<French>Aérien</French>
 		<Russian>Авиация</Russian>
 		<Italian>Aereo</Italian>
+		<Polish>Lotniczy CT</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_AERIAL1</Tag>
@@ -13,6 +14,7 @@
 		<French>Aérien I</French>
 		<Russian>Авиация I</Russian>
 		<Italian>Aereo I</Italian>
+		<Polish>Lotnik I</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_AERIAL1_PEDIA</Tag>
@@ -65,6 +67,7 @@ Penalties:
 	[ICON_BULLET]Ваши отряды проще захватить, поскольку они стремятся идти туда, куда их уносит ветер;
 	[ICON_BULLET]Ваши города сильнее страдают от загрязнения воздуха, так как здесь преобладают эксперименты с парами и предпочитают сжигать мусор.
 		</Russian>
+		<Polish>Pozytywna cecha [NEWLINE]"Niebo oferuje wolność i moc. Ci, którzy kontrolują niebo, kontrolują Ziemię w dole. Nikt nie jest w stanie przeciwstawić się atakom z niebios". [NEWLINE]Chociaż wiąże się to z pewnymi kosztami i wielu woli żyć z głową w chmurach niż nogami na ziemi i skupić na trudach, jakie mają do wykonania, ten wzniosły przywódca inspiruje swój lud do patrzenia w górę i ku horyzontowi oraz popycha ich do opanowania wszystkiego, co jest w zasięgu wzroku. [NEWLINE]Główne korzyści: [NEWLINE][ICON_BULLET]Bezpłatna promocja strategii powietrznych dla łuczników, Jednostek rzucających, prochowych, balonów i helikopterów. Zapewnia dodatkowe pierwsze uderzenie, premie do trafienia i obrażeń przy atakach dystansowych oraz ulepszenia w zakresie wycofywania się. [NEWLINE]Korzyści dodatkowe: [NEWLINE][ICON_BULLET]Budynki powietrzne są szybciej budowane. [NEWLINE][ICON_BULLET]Wielki lotnik (jeszcze nie dostępny - na razie generał) (specjalista) zyskuje dodatkowy plon żywności. [NEWLINE][ICON_BULLET]Wielki lotnik (jeszcze nie dostępny - na razie generał) (specjalista) zyskuje dwa dodatkowe badania. [NEWLINE][ICON_BULLET]Technologie reprezentujące postęp w branży powietrznej i broni dystansowej są odkrywane szybciej. [NEWLINE][ICON_BULLET]Jednostki łuczników i rzucające zyskują dodatkowe punkty doświadczenia podczas szkolenia. [NEWLINE][ICON_BULLET]Łucznicy i Jednostki rzucające są szybsze w szkoleniu.[NEWLINE][ICON_BULLET] Koszt Utrzymania z powodu dystansu jest zmniejszony, ponieważ do ciebie należy dalekosiężna ludność. [NEWLINE][ICON_BULLET]Wszystkie miasta zyskują dodatkowy szlak handlowy od twoich dalekosiężnych kupców. [NEWLINE][ICON_BULLET]Twoje miasta są nieco trudniejsze do zbombardowania, ponieważ twoi ludzie są lepiej przygotowani do stawienia czoła zagrożeniom ze strony powietrznej. [NEWLINE][ICON_BULLET]Dostęp do papug i drobiu sprawia, że Twoi ludzie są szczęśliwsi. Lubią ptaki. [NEWLINE]Kary:[NEWLINE][ICON_BULLET] Ogólne koszty za utrzymania się zwiększają, ponieważ podstawy są często pomijane, co prowadzi do kosztownych niepowodzeń, a ludzie nie znoszą prostszych zadań, przez co wymagają więcej za ich wykonanie. [NEWLINE][ICON_BULLET]Budowa ulepszeń pól jest znacznie wolniejsza. [NEWLINE][ICON_BULLET]Robotnicy są znacznie wolniejsi. [NEWLINE][ICON_BULLET]Wyższe koszty utrzymania z liczby miast. Twoi ludzie pracują lepiej przy większych odległościach między miastami, niż gdyby byli skupieni blisko siebie. [NEWLINE][ICON_BULLET]Największe miasta w Twoim kraju są mniej szczęśliwe. Twoi ludzie lubią mieć miejsce do oddychania. [NEWLINE][ICON_BULLET]Twoi ludzie są łatwiejsi do schwytania, ponieważ mają tendencję do chodzenia tam, gdzie zabiera ich wiatr. [NEWLINE][ICON_BULLET]Powietrze w Twoich miastach jest bardziej zanieczyszczone, ponieważ przeważają eksperymenty z oparami i preferencja spalania śmieci.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_AERIAL2</Tag>
@@ -72,6 +75,7 @@ Penalties:
 		<French>Aérien II</French>
 		<Russian>Авиация II</Russian>
 		<Italian>Aereo II</Italian>
+		<Polish>Lotnik II</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_AERIAL2_PEDIA</Tag>
@@ -141,6 +145,7 @@ Penalties:
 	[ICON_BULLET]Ваши отряды проще захватить, поскольку они стремятся идти туда, куда их уносит ветер;
 	[ICON_BULLET]Ваши города сильнее страдают от загрязнения воздуха, так как здесь преобладают эксперименты с парами и предпочитают сжигать мусор.
 		</Russian>
+		<Polish>Pozytywna cecha [NEWLINE]"Niebo oferuje wolność i moc. Ci, którzy kontrolują niebo, kontrolują Ziemię w dole. Nikt nie jest w stanie przeciwstawić się atakom z niebios". [NEWLINE]Chociaż wiąże się to z pewnymi kosztami i wielu woli żyć z głową w chmurach niż nogami na ziemi i skupić na trudach, jakie mają do wykonania, ten wzniosły przywódca inspiruje swój lud do patrzenia w górę i ku horyzontowi oraz popycha ich do opanowania wszystkiego, co jest w zasięgu wzroku. [NEWLINE]Główne korzyści: [NEWLINE][ICON_BULLET]Bezpłatna promocja strategii powietrznych dla łuczników, Jednostek rzucających, prochowych, balonów i helikopterów oraz nowoczesne jednostki oblężnicze i wyrzutnie rakiet. Daje dodatkową szansę na pierwsze uderzenie, premię do trafienia przy atakach dystansowych i ulepszenie przechwytywania. [NEWLINE][ICON_BULLET]Wszystkie miasta korzystają z wyższego maksymalnego limitu szlaków handlowych.[NEWLINE] Unikalne korzyści: [NEWLINE][ICON_BULLET]Wszystkie miasta i forty mogą utrzymywać stacjonującą w nich dodatkową jednostkę powietrzną. [NEWLINE][ICON_BULLET]Powietrze jednostki zyskują dodatkowe pole zasięgu, do którego mogą dotrzeć podczas misji. [NEWLINE][ICON_BULLET]Zapewnia dodatkowe pierwsze uderzenie, premie do trafienia i obrażeń przy atakach dystansowych oraz ulepszenia w zakresie wycofywania się. [NEWLINE]Korzyści dodatkowe: [NEWLINE][ICON_BULLET]Budynki powietrzne są szybciej budowane. [NEWLINE][ICON_BULLET]Wielki lotnik (jeszcze nie dostępny - na razie generał) (specjalista) zyskuje dodatkowy punkt Bogactwa. [NEWLINE][ICON_BULLET]Wielki lotnik (jeszcze nie dostępny - na razie generał) (specjalista) zyskuje dwa dodatkowe punkty Wywiadu. [NEWLINE][ICON_BULLET]Technologie reprezentujące postęp w branży powietrznej i broni dystansowej są odkrywane szybciej. [NEWLINE][ICON_BULLET]Jednostki prochowe, Oblężnicze, Wyrzutnie rakiet, Balony, oraz Helikoptery otrzymują po wyszkoleniu dodatkowy punkt doświadczenia. [NEWLINE][ICON_BULLET]Jednostki prochowe, Oblężnicze, Wyrzutnie rakiet, Balony, oraz Helikoptery są szkolone szybciej. [NEWLINE][ICON_BULLET]Wielcy lotnicy pojawiają się znacznie szybciej. (na razie Wielcy generałowie) [NEWLINE][ICON_BULLET]Jednostki powietrzne zyskują dodatkowe punkty doświadczenia podczas szkolenia. [NEWLINE][ICON_BULLET]Jednostki powietrzne są szybsze w szkoleniu.[NEWLINE][ICON_BULLET] Koszt Utrzymania z powodu dystansu jest zmniejszony, ponieważ do ciebie należy dalekosiężna ludność. [NEWLINE][ICON_BULLET]Wszystkie miasta zyskują dodatkowy szlak handlowy od twoich dalekosiężnych kupców. [NEWLINE][ICON_BULLET]Twoje miasta są nieco trudniejsze do zbombardowania, ponieważ twoi ludzie są lepiej przygotowani do stawienia czoła zagrożeniom ze strony powietrznej. [NEWLINE]Kary:[NEWLINE][ICON_BULLET] Ogólne koszty za utrzymania się zwiększają, ponieważ podstawy są często pomijane, co prowadzi do kosztownych niepowodzeń, a ludzie nie znoszą prostszych zadań, przez co wymagają więcej za ich wykonanie. [NEWLINE][ICON_BULLET]Budowa ulepszeń pól jest znacznie wolniejsza. [NEWLINE][ICON_BULLET]Robotnicy są znacznie wolniejsi. [NEWLINE][ICON_BULLET]Wyższe koszty utrzymania z liczby miast. Twoi ludzie pracują lepiej przy większych odległościach między miastami, niż gdyby byli skupieni blisko siebie. [NEWLINE][ICON_BULLET]Największe miasta w Twoim kraju są mniej szczęśliwe. Twoi ludzie lubią mieć miejsce do oddychania. [NEWLINE][ICON_BULLET]Twoi ludzie są łatwiejsi do schwytania, ponieważ mają tendencję do chodzenia tam, gdzie zabiera ich wiatr. [NEWLINE][ICON_BULLET]Powietrze w Twoich miastach jest bardziej zanieczyszczone, ponieważ przeważają eksperymenty z oparami i preferencja spalania śmieci.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_AERIAL3</Tag>
@@ -148,6 +153,7 @@ Penalties:
 		<French>Aérien III</French>
 		<Russian>Авиация III</Russian>
 		<Italian>Aereo III</Italian>
+		<Polish>Lotnik III</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_AERIAL3_PEDIA</Tag>
@@ -212,6 +218,7 @@ Penalties:
 	[ICON_BULLET]Ваши отряды проще захватить, поскольку они стремятся идти туда, куда их уносит ветер;
 	[ICON_BULLET]Ваши города сильнее страдают от загрязнения воздуха, так как здесь преобладают эксперименты с парами и предпочитают сжигать мусор.
 		</Russian>
+		<Polish>Pozytywna cecha [NEWLINE]"Niebo oferuje wolność i moc. Ci, którzy kontrolują niebo, kontrolują Ziemię w dole. Nikt nie jest w stanie przeciwstawić się atakom z niebios". [NEWLINE]Chociaż wiąże się to z pewnymi kosztami i wielu woli żyć z głową w chmurach niż nogami na ziemi i skupić na trudach, jakie mają do wykonania, ten wzniosły przywódca inspiruje swój lud do patrzenia w górę i ku horyzontowi oraz popycha ich do opanowania wszystkiego, co jest w zasięgu wzroku. [NEWLINE]Główne korzyści: [NEWLINE][ICON_BULLET]Bezpłatny awans przewagi w powietrzu dla jednostek bojowych. Daje podstawową premię do modyfikatora walki i zwiększoną szansę na unik. [NEWLINE][ICON_BULLET]Wszystkie miasta korzystają z wyższego maksymalnego limitu szlaków handlowych.[NEWLINE] Unikalne korzyści: [NEWLINE][ICON_BULLET]Wszystkie miasta i forty mogą utrzymywać stacjonujące w nich dwie dodatkowe jednostki powietrzne. [NEWLINE][ICON_BULLET]Pociski zyskują dodatkowe dwa pola zasięgu. [NEWLINE][ICON_BULLET]Powietrzne jednostki zyskują dodatkowe dwa pola zasięgu, do którego mogą dotrzeć podczas misji. [NEWLINE][ICON_BULLET]Zapewnia dodatkowe pierwsze uderzenie, premie do trafienia i obrażeń przy atakach dystansowych oraz ulepszenia w zakresie wycofywania się. [NEWLINE]Korzyści dodatkowe: [NEWLINE][ICON_BULLET]Budynki powietrzne są szybciej budowane. [NEWLINE][ICON_BULLET]Wielki lotnik (jeszcze nie dostępny - na razie generał) (specjalista) zyskuje dodatkowy punkt produkcji. [NEWLINE][ICON_BULLET]Wielki lotnik (jeszcze nie dostępny - na razie generał) (specjalista) zyskuje dwa dodatkowe punkty złota. [NEWLINE][ICON_BULLET]Technologie reprezentujące postęp w branży powietrznej i broni dystansowej są odkrywane szybciej. [NEWLINE][ICON_BULLET]Jednostki powietrzne zyskują dodatkowe punkty doświadczenia podczas szkolenia. [NEWLINE][ICON_BULLET]Jednostki powietrzne są szybsze w szkoleniu.[NEWLINE][ICON_BULLET] Koszt Utrzymania z powodu dystansu jest zmniejszony, ponieważ do ciebie należy dalekosiężna ludność. [NEWLINE][ICON_BULLET]Wszystkie miasta zyskują dodatkowy szlak handlowy od twoich dalekosiężnych kupców. [NEWLINE][ICON_BULLET]Twoje miasta są nieco trudniejsze do zbombardowania, ponieważ twoi ludzie są lepiej przygotowani do stawienia czoła zagrożeniom ze strony powietrznej. [NEWLINE][ICON_BULLET]Jednostki zdolne do przenoszenia pocisków mogą ich teraz przenosić więcej. [NEWLINE]Kary:[NEWLINE][ICON_BULLET] Ogólne koszty za utrzymania się zwiększają, ponieważ podstawy są często pomijane, co prowadzi do kosztownych niepowodzeń, a ludzie nie znoszą prostszych zadań, przez co wymagają więcej za ich wykonanie. [NEWLINE][ICON_BULLET]Budowa ulepszeń pól jest znacznie wolniejsza. [NEWLINE][ICON_BULLET]Robotnicy są znacznie wolniejsi. [NEWLINE][ICON_BULLET]Wyższe koszty utrzymania z liczby miast. Twoi ludzie pracują lepiej przy większych odległościach między miastami, niż gdyby byli skupieni blisko siebie. [NEWLINE][ICON_BULLET]Największe miasta w Twoim kraju są mniej szczęśliwe. Twoi ludzie lubią mieć miejsce do oddychania. [NEWLINE][ICON_BULLET]Twoi ludzie są łatwiejsi do schwytania, ponieważ mają tendencję do chodzenia tam, gdzie zabiera ich wiatr. [NEWLINE][ICON_BULLET]Powietrze w Twoich miastach jest bardziej zanieczyszczone, ponieważ przeważają eksperymenty z oparami i preferencja spalania śmieci.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_AERIAL_PEDIA</Tag>
@@ -290,12 +297,14 @@ Penalties:
 	[ICON_BULLET]Ваши отряды проще захватить, поскольку они стремятся идти туда, куда их уносит ветер;
 	[ICON_BULLET]Ваши города сильнее страдают от загрязнения воздуха, так как здесь преобладают эксперименты с парами и предпочитают сжигать мусор.
 		</Russian>
+		<Polish>Cecha pozytywna [NEWLINE]"Niebo oferuje wolność i moc. Ci, którzy kontrolują niebo, kontrolują Ziemię poniżej. Nikt nie może przeciwstawić się atakom z niebios." [NEWLINE]Chociaż wiąże się to z pewnymi kosztami i wielu woli żyć z głową w chmurach niż nogami na ziemi, skupiając się na trudach, jakie mają przed sobą, ten wzniosły przywódca inspiruje swój lud, aby spoglądał w górę i ku horyzontowi, i popycha ich do opanowania wszystkiego w zasięgu wzroku. [NEWLINE]Główne korzyści: [NEWLINE][ICON_BULLET]Bezpłatna promocja powietrzna dla jednostek łuczników, rzucających, prochowych, balonowych i helikopterów. Zapewnia dodatkowe pierwsze uderzenie, premie do trafienia i obrażeń przy atakach dystansowych oraz ulepszenia wycofywania się. [NEWLINE][ICON_BULLET]Bezpłatna promocja przewagi w powietrzu dla jednostek bojowych. Daje podstawowy bonus modyfikatora walki i zwiększoną szansę na unik. [NEWLINE][ICON_BULLET]Wszystkie miasta korzystają z wyższego maksymalnego limitu szlaków handlowych. [NEWLINE]Unikalne korzyści: [NEWLINE][ICON_BULLET]Wszystkie miasta i forty mogą utrzymywać w nich stacjonującą dodatkową jednostkę Powietrzną. [NEWLINE][ICON_BULLET]Pociski zyskują dodatkowe pole zasięgu. [NEWLINE][ICON_BULLET]Jednostki powietrzne zyskują dodatkowe pole zasięgu, do którego mogą dotrzeć podczas misji. [NEWLINE]Dodatkowe korzyści: [NEWLINE][ICON_BULLET]Budynki powietrzne są szybsze w budowie. [NEWLINE][ICON_BULLET]Ulepszenia oparte na powietrzu dają większe bogactwo. [NEWLINE][ICON_BULLET]Ulepszenia oparte na powietrzu można szybciej ulepszyć, jeśli to możliwe. [NEWLINE][ICON_BULLET]Ulepszenia oparte na powietrzu można szybciej zbudować przez Twoich robotników. [NEWLINE][ICON_BULLET]Wielki Lotnik (w oczekiwaniu – na razie Generał) (specjaliści) zyskują dodatkowy punkt bogactwa.[NEWLINE][ICON_BULLET]Wielki Lotnik (w oczekiwaniu – na razie Generałe) (specjaliści) zyskują dwa dodatkowe punkty Szpiegostwa.[NEWLINE][ICON_BULLET]Jednostki Domeny Powietrznej zyskują dodatkowy punkt doświadczenia podczas szkolenia.[NEWLINE][ICON_BULLET]Jednostki Domeny Powietrznej są szybsze w szkoleniu.[NEWLINE][ICON_BULLET]Technologie reprezentujące postęp w broni powietrznej, kosmicznej i dystansowej są odkrywane szybciej.[NEWLINE][ICON_BULLET]Jednostki rzucające, łuczników, prochu, oblężnicze, wyrzutnie rakiet, balony i helikoptery zyskują dodatkowy punkt doświadczenia podczas szkolenia.[NEWLINE][ICON_BULLET]ednostki rzucające, łuczników, prochu, oblężnicze, wyrzutnie rakiet, balony i helikoptery są szybsze w szkoleniu.[NEWLINE][ICON_BULLET]Koszt Utrzymania z powodu dystansu jest zmniejszony, ponieważ do ciebie należy dalekosiężna ludność.[NEWLINE][ICON_BULLET]Wszystkie miasta zyskują dodatkowy szlak handlowy od twoich odległych kupców.[NEWLINE][ICON_BULLET]Wielcy lotnicy rodzą się szybciej. (W oczekiwaniu – na razie są to Generałowie)[NEWLINE][ICON_BULLET]woje miasto jest trudniejsze do zbombardowania, ponieważ twoi ludzie są lepiej przygotowani na stawienie czoła zagrożeniom z góry. [NEWLINE][ICON_BULLET]Jednostki, które mogą przenosić pociski, zyskują kilka dodatkowych miejsc. [NEWLINE][ICON_BULLET]Dostęp do papug i drobiu sprawia, że Twoi ludzie są szczęśliwsi. Lubią ptaki.[NEWLINE]Kary:[NEWLINE][ICON_BULLET]Znaczna ogólna kara za utrzymanie, ponieważ podstawy są często pomijane, co prowadzi do kosztownych niepowodzeń, a ludzie nie lubią prostszych zadań, przez co wymagają więcej za ich wykonanie.[NEWLINE][ICON_BULLET]Ogólna szybkość ulepszeń jest znacznie mniejsza.[NEWLINE][ICON_BULLET]Pracownicy są o połowę wolniejsi.[NEWLINE][ICON_BULLET]Wyższe koszty utrzymania z powodu liczby miast. Twoi ludzie pracują lepiej, gdy są większe odległości między miastami, niż gdy są skupieni blisko siebie.[NEWLINE][ICON_BULLET]Największe miasta w twoim kraju są mniej szczęśliwe. Twoi ludzie lubią mieć dużo przestrzeni.[NEWLINE][ICON_BULLET]Twoi ludzie są łatwiejsi do schwytania, ponieważ mają tendencję do podążania tam, gdzie niesie ich wiatr.[NEWLINE][ICON_BULLET]woje miasta są bardziej zanieczyszczone powietrzem, ponieważ przeważają eksperymenty z oparami i upodobanie do spalania śmieci.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_AERIAL_STRATEGY</Tag>
 		<English>Air based military strength, empowering throwing, archery, gun and flying units.</English>
 		<French>Force militaire aérienne, habilitant les unités de lancer, de tir à l'arc, de canon et de vol.</French>
 		<Russian>Â âîîðóæåííûõ ñèëàõ äåëàåòñÿ óïîð íà ðàçâèòèè àâèàöèè è âîçäóõîïëàâàíèÿ, à òàêæå íà âîîðóæåíèå ìåòàòåëüíûõ, ñòðåëêîâûõ, çåíèòíûõ îòðÿäàõ.</Russian>
+		<Polish>Siła militarna oparta na lotnictwie, wzmacniająca jednostki rzucające, łucznicze, strzeleckie i latające.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_ALOOF</Tag>
@@ -303,6 +312,7 @@ Penalties:
 		<French>Distant</French>
 		<Russian>Áåçðàçëè÷íûé</Russian>
 		<Italian>Distante</Italian>
+		<Polish>Powściągliwy CT</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_ALOOF1</Tag>
@@ -310,6 +320,7 @@ Penalties:
 		<French>Distant I</French>
 		<Russian>Áåçðàçëè÷íûé I</Russian>
 		<Italian>Distante I</Italian>
+		<Polish>Powściągliwy I</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_ALOOF1_PEDIA</Tag>
@@ -335,6 +346,28 @@ Benefits:
 	[ICON_BULLET]Significant decrease in the Maintenance from Number of Cities since you have found numerous ways to make a country with more decentralization work effectively.
 	[ICON_BULLET]Get one more trade route in every city since there is greater cooperation between cities in this sort of nation.
 	[ICON_BULLET]Foreign trade routes are more productive since you and your people like to import more examples of what a larger nation can obtain.</English>
+		<Polish>Negatywna cecha
+"Ten irytujący tłum biurokratów, którzy mnie otaczają, nieustannie próbuje zwrócić moją uwagę, wciągnąć mnie w lokalną politykę i sprawić, że przeoczę potrzeby reszty imperium i nie tylko. To frustrująceż Zdecentralizowany naród i tak jest lepszy" 
+Ten przywódca bardzo słabo radzi sobie ze strategią supermiasta, a znacznie lepiej radzi sobie z rozprzestrzenianiem wysiłków swojego narodu na jak największą liczbę zdecentralizowanych miast. Nie jest to aż tak zła cecha, dla gracza, który woli nie polegać na kilku wysokiej jakości centrach produkcyjnych. Twój przywódca stara się unikać rządzenia i woli myśleć więcej o tym, w jaki sposób zamierza się rozwijać.
+ Podstawowe kary:
+ [ICON_BULLET]Stolica produkuje mniej żywności, produkcji i bogactwa. 
+ [ICON_BULLET]Stolica produkuje mniej złota, badań, kultury i szpiegostwa. 
+ [ICON_BULLET]Jednostki wyszkolone w stolicy zyskują mniej dodatkowe punkty doświadczenia niż normalnie. 
+ [ICON_BULLET]Jednostki wyszkolone w Świętym Mieście twojej religii zyskują mniej dodatkowych punktów doświadczenia niż normalnie. 
+ Kary poboczne: 
+ [ICON_BULLET]Wielcy wojskowi są generowani wolniej w bitwach toczących się w twoich granicach. 
+ [ICON_BULLET]Cuda narodowe są budowane wolniej w twoich miastach. 
+ [ICON_BULLET]W przypadku opcji Rewolucji zwiększa się niestabilność Świętego Miasta. 
+ [ICON_BULLET]Budynki Administracyjne i Dumy Narodowej są wznoszone wolniej. 
+ [ICON_BULLET]Budynki Administracyjne i Dumy Narodowej generują mniej szczęścia w twoich miastach lub nie generują go wcale. 
+ [ICON_BULLET]Twoje jednostki zyskują nieco mniej doświadczenia w walce w twoich granicach. 
+ [ICON_BULLET]Święte Miasta wyznań niepaństwowych produkują jednostki z karą do punktów doświadczenia. 
+ Korzyści:
+ [ICON_BULLET]W opcji Rewolucja odległość odgrywa mniejszą rolę w powodowaniu niestabilności.
+ [ICON_BULLET]Znaczący spadek kosztów za odległości od stolicy, ponieważ lubisz spędzać czas na zastanawianiu się, jak zwiększyć efektywność kraju zajmującego większą powierzchnię. 
+ [ICON_BULLET]Znaczące zmniejszenie kosztów utrzymania na podstawie liczby miast, ponieważ znalazłeś wiele sposobów na sprawienie, aby kraj o większej decentralizacji działał skutecznie. 
+ [ICON_BULLET]Dodatkowy szlak handlowy w każdym mieście, ponieważ w tego rodzaju kraju istnieje większa współpraca między miastami. 
+ [ICON_BULLET]Zagraniczne szlaki handlowe są bardziej produktywne, ponieważ ty i twoi ludzie lubicie importować więcej przykładów tego, co może uzyskać większy naród.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_ALOOF2</Tag>
@@ -342,6 +375,7 @@ Benefits:
 		<French>Distant II</French>
 		<Russian>Áåçðàçëè÷íûé II</Russian>
 		<Italian>Distante II</Italian>
+		<Polish>Powściągliwy II</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_ALOOF2_PEDIA</Tag>
@@ -368,6 +402,29 @@ Benefits:
 	[ICON_BULLET]Strong decrease in the Maintenance from Number of Cities since you have found numerous ways to make a country with more decentralization work effectively.
 	[ICON_BULLET]Get one more trade route in every city since there is greater cooperation between cities in this sort of nation.
 	[ICON_BULLET]Foreign trade routes are more productive since you and your people like to import more examples of what a larger nation can obtain.</English>
+		<Polish>Negatywna cecha
+"Ten irytujący tłum biurokratów, którzy mnie otaczają, nieustannie próbuje zwrócić moją uwagę, wciągnąć mnie w lokalną politykę i sprawić, że przeoczę potrzeby reszty imperium i nie tylko. To frustrująceż Zdecentralizowany naród i tak jest lepszy" 
+Ten przywódca bardzo słabo radzi sobie ze strategią supermiasta, a znacznie lepiej radzi sobie z rozprzestrzenianiem wysiłków swojego narodu na jak największą liczbę zdecentralizowanych miast. Nie jest to aż tak zła cecha, dla gracza, który woli nie polegać na kilku wysokiej jakości centrach produkcyjnych. Twój przywódca stara się unikać rządzenia i woli myśleć więcej o tym, w jaki sposób zamierza się rozwijać.
+ Podstawowe kary:
+ [ICON_BULLET]Stolica produkuje mniej żywności, produkcji i bogactwa. 
+ [ICON_BULLET]Stolica produkuje mniej złota, badań, kultury i szpiegostwa.
+ [ICON_BULLET]Jednostki wyszkolone w stolicy zyskują znacznie mniej dodatkowych punktów doświadczenia niż normalnie. 
+ [ICON_BULLET]Jednostki wyszkolone w Świętym Mieście twojego eligii zyskują znacznie mniej dodatkowych punktów doświadczenia niż normalnie. 
+ Kary dodatkowe: 
+ [ICON_BULLET]Wielcy wojskowi są generowani wolniej w bitwach toczących się w twoich granicach.
+ [ICON_BULLET]Cuda są budowane wolniej w twoich miastach. 
+ [ICON_BULLET]W przypadku opcji Rewolucji zwiększa się niestabilność Świętego Miasta.
+ [ICON_BULLET]Budynki Administracyjne i Dumy Narodowej są wznoszone wolniej. 
+ [ICON_BULLET]Budynki Administracyjne i Dumy Narodowej generują mniej szczęścia w twoich miastach lub nie generują ich wcale.
+ [ICON_BULLET]Największe miasta w twoim imperium są trochę mniej szczęśliwe, czując się ignorowane przez przywódcę. 
+ [ICON_BULLET]Twoje jednostki zyskują nieco mniej doświadczenia w walce w twoich granicach. 
+ [ICON_BULLET]Święte Miasta religii niepaństwowych produkują jednostki z karą do punktów doświadczenia. 
+ Korzyści: 
+ [ICON_BULLET]W przypadku opcji Rewolucja odległość odgrywa mniejszą rolę w tworzeniu niestabilności.
+ [ICON_BULLET] Silny spadek Kosztów Utrzymania od Odległość do Stolicy, gdy lubisz spędzać czas na zastanawianiu się, jak uczynić naród zajmujący więcej ziemi bardziej wydajnym. 
+ [ICON_BULLET]Silny spadek Kosztów Utrzymania od Liczby Miast ponieważ znalazłeś wiele sposobów, aby kraj z większą decentralizacją działał efektywnie. 
+ [ICON_BULLET]Dodatkowy szlak handlowy w każdym mieście, ponieważ w tego rodzaju kraju istnieje lepsza współpraca między miastami. 
+ [ICON_BULLET]Zagraniczne szlaki handlowe są bardziej produktywne, ponieważ ty i twoi ludzie lubicie importować więcej przykładów, co za większy naród można uzyskać.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_ALOOF3</Tag>
@@ -375,6 +432,7 @@ Benefits:
 		<French>Distant III</French>
 		<Russian>Áåçðàçëè÷íûé III</Russian>
 		<Italian>Distante III</Italian>
+		<Polish>Powściągliwy III</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_ALOOF3_PEDIA</Tag>
@@ -400,6 +458,28 @@ Benefits:
 	[ICON_BULLET]Large decrease in the Maintenance from Number of Cities since you have found numerous ways to make a country with more decentralization work effectively.
 	[ICON_BULLET]Get one more trade route in every city since there is greater cooperation between cities in this sort of nation.
 	[ICON_BULLET]Foreign trade routes are more productive since you and your people like to import more examples of what a larger nation can obtain.</English>
+		<Polish>Negatywna cecha
+"Ten irytujący tłum biurokratów, którzy mnie otaczają, nieustannie próbuje zwrócić moją uwagę, wciągnąć mnie w lokalną politykę i sprawić, że przeoczę potrzeby reszty imperium i nie tylko. To frustrująceż Zdecentralizowany naród i tak jest lepszy" 
+Ten przywódca bardzo słabo radzi sobie ze strategią supermiasta, a znacznie lepiej radzi sobie z rozprzestrzenianiem wysiłków swojego narodu na jak największą liczbę zdecentralizowanych miast. Nie jest to aż tak zła cecha, dla gracza, który woli nie polegać na kilku wysokiej jakości centrach produkcyjnych. Twój przywódca stara się unikać rządzenia i woli myśleć więcej o tym, w jaki sposób zamierza się rozwijać.
+ Podstawowe kary: 
+ [ICON_BULLET]Stolica produkuje mniej żywności, produkcji i bogactwa. 
+ [ICON_BULLET]Stolica produkuje mniej złota, badań, kultury i szpiegostwa. 
+ [ICON_BULLET]Jednostki wyszkolone w zakresie stolicy zyskują znacznie mniej dodatkowych punktów doświadczenia niż normalnie. 
+ [ICON_BULLET]Jednostki wyszkolone w Świętym Mieście twojej religii zyskują znacznie mniej dodatkowych punktów doświadczenia niż normalnie.
+ Kary dodatkowe: 
+ [ICON_BULLET]Wielcy generałowie są generowani wolniej w bitwach toczących się w twoich granicach.
+ [ICON_BULLET]Cuda są budowane znacznie wolniej w twoich miastach. 
+ [ICON_BULLET]W przypadku opcji Rewolucji zwiększa się niestabilność Świętego Miasta. 
+ [ICON_BULLET]Budynki Administracyjne i Dumy Narodowej generują mniej szczęścia w twoich miastach. 
+ [ICON_BULLET]Największe miasta w twoim imperium są mniej szczęśliwe, czując się ignorowane przez przywódców.
+ [ICON_BULLET]Twoje jednostki zyskują znacznie mniej doświadczenia w walce w twoich granicach. 
+ [ICON_BULLET]Święte Miasta religii niepaństwowych produkują jednostki ze znaczną karą do punktów doświadczenia.
+ Korzyści: 
+ [ICON_BULLET]W opcji Rewolucja odległość odgrywa mniejszą rolę w powodowaniu niestabilności.
+ [ICON_BULLET]Duże zmniejszenie kosztów utrzymania z powodu odległości do stolicy, ponieważ lubisz spędzać czas na zastanawianiu się, jak uczynić naród zajmujący więcej ziemi bardziej wydajnym. 
+ [ICON_BULLET]Duży spadekkosztów utrzymania z liczby miast, ponieważ znalazłeś wiele sposobów, aby kraj o większej decentralizacji działał skutecznie. 
+ [ICON_BULLET]Dodatkowy szlak handlowy w każdym mieście, ponieważ w tego rodzaju kraju istnieje większa współpraca między miastami. 
+ [ICON_BULLET]Zagraniczne szlaki handlowe są bardziej produktywne, ponieważ ty i twoi ludzie lubimy importować więcej przykładów tego, co może uzyskać większy naród.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_ALOOF_PEDIA</Tag>
@@ -426,12 +506,35 @@ Benefits:
 	[ICON_BULLET]Huge decrease in the Maintenance from Number of Cities since you have found numerous ways to make a country with more decentralization work effectively.
 	[ICON_BULLET]Get one more trade route in every city since there is greater cooperation between cities in this sort of nation.
 	[ICON_BULLET]Foreign trade routes are significantly more productive since you and your people like to import more examples of what a larger nation can obtain.</English>
+		<Polish>Negatywna cecha
+"Ten irytujący tłum biurokratów, którzy mnie otaczają, nieustannie próbuje zwrócić moją uwagę, wciągnąć mnie w lokalną politykę i sprawić, że przeoczę potrzeby reszty imperium i nie tylko. To frustrująceż Zdecentralizowany naród i tak jest lepszy" 
+Ten przywódca bardzo słabo radzi sobie ze strategią supermiasta, a znacznie lepiej radzi sobie z rozprzestrzenianiem wysiłków swojego narodu na jak największą liczbę zdecentralizowanych miast. Nie jest to aż tak zła cecha, dla gracza, który woli nie polegać na kilku wysokiej jakości centrach produkcyjnych. Twój przywódca stara się unikać rządzenia i woli myśleć więcej o tym, w jaki sposób zamierza się rozwijać.
+ Podstawowe kary: 
+ [ICON_BULLET]Stolica produkuje mniej żywności, produkcji i bogactwa. 
+ [ICON_BULLET]Stolica produkuje mniej złota, badań, kultury i szpiegostwa. 
+ [ICON_BULLET]Jednostki wyszkolone w zakresie stolicy zyskują znacznie mniej dodatkowych punktów doświadczenia niż normalnie. 
+ [ICON_BULLET]Jednostki wyszkolone w Świętym Mieście twojej religii zyskują znacznie mniej dodatkowych punktów doświadczenia niż normalnie.
+ Kary dodatkowe: 
+ [ICON_BULLET]Wielcy generałowie są generowani wolniej w bitwach toczących się w twoich granicach.
+ [ICON_BULLET]Cuda są budowane znacznie wolniej w twoich miastach. 
+ [ICON_BULLET]W przypadku opcji Rewolucji zwiększa się niestabilność Świętego Miasta. 
+ [ICON_BULLET]Budynki Administracyjne i Dumy Narodowej generują mniej szczęścia w twoich miastach. 
+ [ICON_BULLET]Największe miasta w twoim imperium są mniej szczęśliwe, czując się ignorowane przez przywódców.
+ [ICON_BULLET]Twoje jednostki zyskują znacznie mniej doświadczenia w walce w twoich granicach. 
+ [ICON_BULLET]Święte Miasta religii niepaństwowych produkują jednostki ze znaczną karą do punktów doświadczenia.
+ Korzyści: 
+ [ICON_BULLET]W opcji Rewolucja odległość odgrywa mniejszą rolę w powodowaniu niestabilności.
+ [ICON_BULLET]Duże zmniejszenie kosztów utrzymania z powodu odległości do stolicy, ponieważ lubisz spędzać czas na zastanawianiu się, jak uczynić naród zajmujący więcej ziemi bardziej wydajnym. 
+ [ICON_BULLET]Duży spadekkosztów utrzymania z liczby miast, ponieważ znalazłeś wiele sposobów, aby kraj o większej decentralizacji działał skutecznie. 
+ [ICON_BULLET]Dodatkowy szlak handlowy w każdym mieście, ponieważ w tego rodzaju kraju istnieje większa współpraca między miastami. 
+ [ICON_BULLET]Zagraniczne szlaki handlowe są bardziej produktywne, ponieważ ty i twoi ludzie lubimy importować więcej przykładów tego, co może uzyskać większy naród.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_ALOOF_STRATEGY</Tag>
 		<English>Although there are dramatic decreases in upkeep for large empires, this Leader is highly penalized in his centers of power, the capital and holy cities.</English>
 		<French>Bien qu'il y ait une diminution spectaculaire de l'entretien des grands empires, ce chef est fortement pénalisé dans ses centres de pouvoir, la capitale et les villes saintes.</French>
 		<Russian>Íåñìîòðÿ íà ðåçêîå ñíèæåíèå óðîâíÿ ôèíàíñîâûõ ðàñõîäîâ äëÿ êðóïíûõ èìïåðèé, ýòîò Ëèäåð ïîëó÷àåò øòðàôû â ñòîëèöå è Ñâÿùåííûõ ãîðîäàõ, êîòîðûå ìåäëåííåå ðàçâèâàþòñÿ.</Russian>
+		<Polish>Chociaż w przypadku dużych imperiów następuje dramatyczny spadek kosztów utrzymania, ten Przywódca jest surowo karany w swoich ośrodkach władzy, stolicach i świętych miastach.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_BIGOT</Tag>
@@ -439,6 +542,7 @@ Benefits:
 		<French>Bigot</French>
 		<Russian>Ðåòðîãðàä</Russian>
 		<Italian>Bigotto</Italian>
+		<Polish>Bigot CT</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_BIGOT1</Tag>
@@ -446,6 +550,7 @@ Benefits:
 		<French>Bigot I</French>
 		<Russian>Ðåòðîãðàä I</Russian>
 		<Italian>Bigotto I</Italian>
+		<Polish>Bigot I</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_BIGOT1_PEDIA</Tag>
@@ -470,6 +575,27 @@ Benefits:
 	[ICON_BULLET]Slave type specialists gain an additional Production.
 	[ICON_BULLET]Slave type specialists generate an additional Culture and Gold.
 	[ICON_BULLET]As soon as you conquer a city, it automatically drafts as much of the population as you can for an immediate unit boost.</English>
+		<Polish>Negatywna cecha
+"Zdecydowanie przeciwny przyznaniu pewnym grupom społeczeństwa równego statusu". 
+Twój przywódca i osoby w jego społeczeństwie o podobnym dziedzictwie lubią podkreślać swoją dominację i opinie na temat innych. Jego naród marginalizuje całe grupy etniczne, zwykle te zdominowane, aby zmusić je do stworzenia dużej siły roboczej i regularnej siły militarnej, które można w pełni wykorzystać. W jego społeczeństwie krążą silne nurty urazy, ale on uważa, że warto, ponieważ jego 'typ' osoby, z jego szczególną wiarą, jest wyraźnie lepszy i ma na celu panowanie nad innymi. 
+Podstawowe kary: 
+[ICON_BULLET]Każda religia niepaństwowa obecna w mieście powoduje niezadowolenie.
+[ICON_BULLET] Twoje miasta wymagają nieco więcej jedzenia, aby się rozwijać. 
+Dodatkowe kary:
+ [ICON_BULLET]wszystkie twoje miasta[ICON_BULLET] są mniej szczęśliwe. 
+ [ICON_BULLET]Wielcy ludzie wolniej rodzą się tutaj, gdzie tak wielu jest otwarcie uciskanych. 
+ [ICON_BULLET]Czas spędzony w Anarchii po przyjęciu nowej religii państwowej zostaje podwojony.
+ [ICON_BULLET]Możesz werbować jeszcze więcej osób ze swojej populacji do akcji poboru.
+ [ICON_BULLET]Twoje największe miasta są mniej szczęśliwe, ponieważ często skupiają większe grupy marginalizowanych elementów społeczeństwa. 
+ [ICON_BULLET]Ponosisz karę dyplomatyczną, większość zagranicznych przywódców jest albo zniesmaczona postawą waszego Przywódcy, albo nawet osobiście pochodzi z grup etnicznych, które wasze społeczeństwo uważa za gorszych obywateli.
+ [ICON_BULLET]Twoje zagraniczne szlaki handlowe są mniej opłacalne ze względu na pogardę waszej kultury dla zagranicznych grup etnicznych.
+ [ICON_BULLET]Twoje miasta cierpią z powodu wzrostu przestępczości. 
+ [ICON_BULLET]Twoje miasta cierpią z powodu wzrostu chorób. 
+ [ICON_BULLET]Twoje miasta cierpią z powodu spadku poziomu edukacji. 
+ Korzyści: 
+ [ICON_BULLET]Specjaliści typu niewolniczego zyskują dodatkową produkcję. 
+ [ICON_BULLET]Specjaliści typu niewolniczego generują dodatkową kulturę i złoto. 
+ [ICON_BULLET]Gdy tylko podbijesz miasto, automatycznie werbuje ono jak największą populację w celu natychmiastowego wzmocnienia obrony.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_BIGOT2</Tag>
@@ -477,6 +603,7 @@ Benefits:
 		<French>Bigot II</French>
 		<Russian>Ðåòðîãðàä II</Russian>
 		<Italian>Bigotto II</Italian>
+		<Polish>Bigot II</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_BIGOT2_PEDIA</Tag>
@@ -502,6 +629,28 @@ Benefits:
 	[ICON_BULLET]Slave type specialists generate an additional Culture and Gold.
 	[ICON_BULLET]You can train Inquisitors and send them to attempt to eliminate all non-state religions from cities.
 	[ICON_BULLET]Your cities are all founded with your state religion in place from the beginning.</English>
+		<Polish>Negatywna cecha
+"Zdecydowanie przeciwny przyznaniu pewnym grupom społeczeństwa równego statusu". 
+Twój przywódca i osoby w jego społeczeństwie o podobnym dziedzictwie lubią podkreślać swoją dominację i opinie na temat innych. Jego naród marginalizuje całe grupy etniczne, zwykle te zdominowane, aby zmusić je do stworzenia dużej siły roboczej i regularnej siły militarnej, które można w pełni wykorzystać. W jego społeczeństwie krążą silne nurty urazy, ale on uważa, że warto, ponieważ jego 'typ' osoby, z jego szczególną wiarą, jest wyraźnie lepszy i ma na celu panowanie nad innymi. 
+Podstawowe kary: 
+[ICON_BULLET]Każda religia niepaństwowa obecna w mieście powoduje niezadowolenie.
+[ICON_BULLET]Twoje miasta wymagają nieco więcej jedzenia, aby się rozwijać.
+[ICON_BULLET]Religie niepaństwowe idą o krok dalej  w przypadku opcji Wykluczanie religii, i mogą równie dobrze zniszczyć wszystkie budynki religii niepaństwowej, a nie tylko wyłączyć. 
+Kary dodatkowe: 
+[ICON_BULLET]Wszystkie Twoje miasta są mniej szczęśliwe. 
+[ICON_BULLET]Wielcy ludzie rodzą się nieco wolniej tutaj, gdzie tak wielu jest otwarcie uciskanych.
+ [ICON_BULLET]Możesz werbować jeszcze więcej członków swojej populacji w akcji poboru.
+ [ICON_BULLET]Twoje największe miasta są mniej szczęśliwe, ponieważ często skupiają większe grupy marginalizowanych elementów społeczeństwa. 
+ [ICON_BULLET]Ponosisz karę dyplomatyczną, ponieważ większość zagranicznych przywódców jest albo zniesmaczona postawą Twojego Przywódcy, albo nawet osobiście pochodzi z grup etnicznych ludzi, które Twoje społeczeństwo uważa za gorszych obywateli. 
+ [ICON_BULLET]Twoje zagraniczne szlaki handlowe są umiarkowanie mniej zyskowne ze względu na pogardę, jaką charakteryzuje twoja kultura dla obcych grup etnicznych.
+ [ICON_BULLET]Twoje miasta cierpią z powodu wzrostu przestępczości.
+ [ICON_BULLET]Twoje miasta cierpią z powodu wzrostu chorób.
+ [ICON_BULLET]Twoje miasta cierpią z powodu spadku poziomu edukacji.
+ Korzyści: 
+ [ICON_BULLET]Specjaliści typu niewolniczego zyskują dodatkową produkcję. 
+ [ICON_BULLET]Specjaliści typu niewolniczego generują dodatkową kulturę i złoto.
+ [ICON_BULLET]Możesz szkolić Inkwizytorów i wysyłać ich, aby próbowali wyeliminować z miast wszystkie religie niepaństwowe.
+ [ICON_BULLET]Wszystkie Twoje miasta są zakładane z twoją religią państwową.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_BIGOT3</Tag>
@@ -509,6 +658,7 @@ Benefits:
 		<French>Bigot III</French>
 		<Russian>Ðåòðîãðàä III</Russian>
 		<Italian>Bigotto III</Italian>
+		<Polish>Bigot III</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_BIGOT3_PEDIA</Tag>
@@ -534,6 +684,27 @@ Benefits:
 	[ICON_BULLET]Android type specialists generate a few additional Culture and Gold.
 	[ICON_BULLET]The presence of your State Religion makes your cities significantly happier.
 	[ICON_BULLET]Cities with your State Religion construct buildings much faster.</English>
+		<Polish>Negatywna cecha
+"Zdecydowanie przeciwny przyznaniu pewnym grupom społeczeństwa równego statusu". 
+Twój przywódca i osoby w jego społeczeństwie o podobnym dziedzictwie lubią podkreślać swoją dominację i opinie na temat innych. Jego naród marginalizuje całe grupy etniczne, zwykle te zdominowane, aby zmusić je do stworzenia dużej siły roboczej i regularnej siły militarnej, które można w pełni wykorzystać. W jego społeczeństwie krążą silne nurty urazy, ale on uważa, że warto, ponieważ jego 'typ' osoby, z jego szczególną wiarą, jest wyraźnie lepszy i ma na celu panowanie nad innymi. 
+Podstawowe kary:
+ [ICON_BULLET]Każda religia niepaństwowa obecna w państwie miasto dodaje nieszczęścia.
+ [ICON_BULLET]Ponosisz znaczną karę dyplomatyczną, ponieważ większość zagranicznych przywódców jest albo zniesmaczona postawą twojego Przywódcy, albo nawet osobiście pochodzi z grup etnicznych ludzi, które twoje społeczeństwo uważa za gorszych obywateli.
+ [ICON_BULLET]Twoje miasta wymagają znacznie więcej żywności. 
+ Kary dodatkowe:
+ [ICON_BULLET]Wszystkie Twoje miasta są mniej szczęśliwe. 
+ [ICON_BULLET]Wielcy ludzie rodzą się znacznie wolniej tutaj, gdzie tak wielu jest otwarcie uciskanych.
+ [ICON_BULLET]Możesz werbować znacznie więcej swojej populacji w akcji poboru. 
+ [ICON_BULLET]Twoje największe miasta są mniej szczęśliwe ponieważ społeczności te często skupiają większe grupy marginalizowanych elementów społeczeństwa.
+ [ICON_BULLET]Złote wieki trwają znacznie krócej, ponieważ tak wiele osób jest całkowicie uciskanych. 
+[ICON_BULLET]Twoje zagraniczne szlaki handlowe są znacznie mniej opłacalne z powodu pogardy waszej kultury dla zagranicznych grup etnicznych.
+ [ICON_BULLET]Twoje miasta cierpią z powodu wzrostu przestępczości. 
+ [ICON_BULLET]Twoje miasta cierpią z powodu wzrostu chorób. 
+ [ICON_BULLET]Twoje miasta cierpią z powodu spadku edukacji. 
+ Korzyści:
+ [ICON_BULLET]Specjaliści typu Android zyskują kilka dodatkowych punktów Produkcji. Specjaliści typu Android generują kilka dodatkowyvh punktów Kultury i Złota 
+ [ICON_BULLET]Obecność twojej religii państwowej sprawia, że twoje miasta są znacznie szczęśliwsze. 
+ [ICON_BULLET]Miasta z twoją religią państwową wznoszą budynki znacznie szybciej.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_BIGOT_PEDIA</Tag>
@@ -561,12 +732,37 @@ Benefits:
 	[ICON_BULLET]You can train Inquisitors and send them to attempt to eliminate all non-state religions from cities.
 	[ICON_BULLET]Your cities are all founded with your state religion in place from the beginning.
 	[ICON_BULLET]As soon as you conquer a city, it automatically drafts as much of the population as you can for an immediate unit boost.</English>
+		<Polish>Negatywna cecha
+"Zdecydowanie przeciwny przyznaniu pewnym grupom społeczeństwa równego statusu". 
+Twój przywódca i osoby w jego społeczeństwie o podobnym dziedzictwie lubią podkreślać swoją dominację i opinie na temat innych. Jego naród marginalizuje całe grupy etniczne, zwykle te zdominowane, aby zmusić je do stworzenia dużej siły roboczej i regularnej siły militarnej, które można w pełni wykorzystać. W jego społeczeństwie krążą silne nurty urazy, ale on uważa, że warto, ponieważ jego 'typ' osoby, z jego szczególną wiarą, jest wyraźnie lepszy i ma na celu panowanie nad innymi. 
+Podstawowe kary:
+ [ICON_BULLET]Każda religia niepaństwowa obecna w mieście powoduje nieszczęście.
+ [ICON_BULLET] woje miasta potrzebują więcej jedzenia, aby się rozwijać. 
+ [ICON_BULLET]Religie niepaństwowe idą o krok dalej  w przypadku opcji Wykluczanie religii, i mogą równie dobrze zniszczyć wszystkie budynki religii niepaństwowej, a nie tylko wyłączyć.  
+ kary dodatkowe:
+ [ICON_BULLET]Twoje wasze miasta są mniej szczęśliwe. 
+ [ICON_BULLET]Wielcy ludzie rodzą się znacznie wolniej tutaj, gdzie tak wielu jest otwarcie uciskanych. 
+ [ICON_BULLET]Czas spędzony w Anarchii po przyjęciu nowej religii państwowej zostaje podwojony.
+ [ICON_BULLET]Możeszpowołać do wojska jeszcze kilku członków swojej populacji w ramach akcji poboru. 
+ [ICON_BULLET]Twoje największe miasta są mniej szczęśliwe, ponieważ społeczności te często mają większe grupy marginalizowanych elementów społeczeństwa. 
+ [ICON_BULLET]Ponosisz karę dyplomatyczną, ponieważ większość zagranicznych przywódców jest albo zniesmaczona postawą twojego Przywódcy lub nawet osobiście pochodzą z grup etnicznych ludzi, które twoje społeczeństwo uważa za gorszych obywateli.
+ [ICON_BULLET]Twoje zagraniczne szlaki handlowe są znacznie mniej opłacalne z powodu pogardy, z jaką twoja kultura traktuje obce grupy etniczne.
+ [ICON_BULLET]Twoje miasta cierpią z powodu wzrostu przestępczości.
+ [ICON_BULLET]Twoje miasta cierpią z powodu wzrostu chorób.
+ [ICON_BULLET]Twoje miasta cierpią z powodu spadku poziomu edukacji.
+ Korzyści: 
+ [ICON_BULLET]Specjaliści typu niewolniczego zyskują dodatkową produkcję.
+ [ICON_BULLET]Specjaliści typu niewolniczego generują dodatkową kulturę i złoto.
+ [ICON_BULLET]Możesz szkolić Inkwizytorów i wysyłać ich, aby próbowali wyeliminować wszystkie niepaństwoweh religie z miast.
+ [ICON_BULLET]Wszystkie Twoje miasta są zakładane z religią państwową. 
+[ICON_BULLET]Gdy tylko podbijesz miasto, automatycznie werbuje ono jak największą populację w celu natychmiastowego wzmocnienia obrony.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_BIGOT_STRATEGY</Tag>
 		<English>Less happy. Not as quick to birth Great People or grow cities. Stronger slaves, a more conscriptable populace and you draft a segment of any conquered population as soon as you invade a city. Reluctant to adopt new religious views and more judgmental and suppressive of those not adopted, but cities automatically adopt your State Religion. Diplomatic and foreign trade penalty. Suffers from higher crime and disease and lower education.</English>
 		<French>Moins heureux. Pas aussi rapide pour faire naître des Personnages illustres ou développer des villes. Des esclaves plus forts et une population plus enrôlable et vous rédigez un segment de toute population conquise dès que vous envahissez une ville. Réticents à adopter de nouvelles opinions religieuses et plus de jugement et de suppression de ceux qui ne sont pas adoptés, mais les villes adoptent automatiquement votre religion d'État. Sanction diplomatique et commerce extérieur. Souffre d'une criminalité et d'une maladie plus élevées et d'une éducation plus faible.</French>
 		<Russian>Íàñòðîåíèÿ ëþäåé îñòàâëÿþò æåëàòü ëó÷øåãî. Íå òàê áûñòðî ïîÿâëÿþòñÿ Âåëèêèå ëþäè è ðàñòóò ãîðîäà. Ïðè çàõâàòå âðàæåñêîãî ãîðîäà âû ïîëó÷èòå áîëüøå ðàáîâ è âîåíîïëåííûõ, ÷åì ó äðóãèõ ëèäåðîâ.Ãîðîäà àâòîìàòè÷åñêè ïðèíèìàþò âàøó ãîñóäàðñòâåííóþ ðåëèãèþ, íî ïðè ýòîì â îáùåñòâå ïðàâÿò áàë íåâåæåñòâî, êñåíîôîáèÿ è ìðàêîáåñèå. Ñòðàíà ïîëó÷àåò øòðàôû âî âíåøíåé òîðãîâëå è â äèïëîìàòèè. Öèâèëèçàöèÿ ñòðàäàåò îò âûñîêîãî óðîâíÿ ïðåñòóïíîñòè è çàáîëåâàåìîñòè è íèçêîãî óðîâíÿ ãðàìîòíîñòè.</Russian>
+		<Polish>Mniej szczęśliwi. Nie tak szybko rodzą się Wielcy Ludzie i rozwijają miasta. Silniejsi niewolnicy, większa liczba ludności, którą można werbować, a ty wybierasz część podbitej populacji, gdy tylko zdobędziesz miasto. Niechętni do przyjmowania nowych poglądów religijnych i bardziej osądzający i tłumiący te, które nie zostały przyjęte, ale miasta automatycznie przyjmują twoją religię państwową. Kara dyplomatyczna i handlowa. Cierpi z powodu większej przestępczości i chorób oraz niższego wykształcenia.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_CARELESS</Tag>
@@ -574,6 +770,7 @@ Benefits:
 		<French>Négligent</French>
 		<Russian>Áåñïå÷íûé</Russian>
 		<Italian>Superficiale</Italian>
+		<Polish>Nieostrożny CT</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_CARELESS1</Tag>
@@ -581,6 +778,7 @@ Benefits:
 		<French>Négligent I</French>
 		<Russian>Áåñïå÷íûé I</Russian>
 		<Italian>Superficiale I</Italian>
+		<Polish>Nieostrożny I</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_CARELESS1_PEDIA</Tag>
@@ -604,6 +802,26 @@ Benefits:
 	[ICON_BULLET]Military units cost less to train and are thus faster to produce since the training is lax.
 	[ICON_BULLET]Golden Ages are increased by a quarter as long as normal. Relaxed demands and expectations allow people to sustain elation at their accomplishments longer.
 	[ICON_BULLET]Units are less expensive to upgrade since quality demands are not as high.</English>
+		<Polish>Negatywna cecha
+"Kogo obchodzi, czy nasze armie są dobrze wyszkolone i na najwyższym poziomie. Poddaj je zbyt dużej presji, a prawdopodobnie uciekną. I tak są tam głównie na pokaz. Skoro tak bardzo się tym przejmujesz, dlaczego nie przejmujesz dowodzenia" 
+Ten przywódca po prostu nie lubi skupiać się na swoich siłach zbrojnych i pozwala organizacji kierować sobą tak bardzo, jak tylko może. Nieczęsto poświęca czas na nagradzanie, szkolenie lub dyscyplinowanie swoich podwładnych, w wyniku czego jego wojsko może łatwo zostać niedoszkolone i nieprzygotowane do prawdziwego konfliktu.
+ Podstawowe kary: 
+ [ICON_BULLET]Mniej początkowych punktów doświadczenia dla wszystkich jednostek, co potencjalnie pozwala im zacząć z deficytem doświadczenia.
+ [ICON_BULLET]Więcej doświadczenia wymaganego, aby jednostki zdobywały poziomy.
+ [ICON_BULLET]Znaczna kara w postaci punktów doświadczenia przyznawanych jednostkom szkolonym w stolicy. Im bliżej dowództwa najwyższego szczebla, tym bardziej koncentruje się szkolenie na stylu, a nie na treści. 
+ Kary dodatkowe: 
+ [ICON_BULLET]Znaczące zmniejszenie tempa zdobywania wielkich wojskowych. 
+ [ICON_BULLET]Dalsze zmniejszenie tempa zdobywania wielkich wojskowych, gdy doświadczenie zdobywa się w twoich granicach. 
+ [ICON_BULLET]Budynki szkolenia wojskowego są droższe w budowie. 
+ [ICON_BULLET]Technologie, które przynoszą korzyści w szkoleniu wojskowym, są wolniej odkrywane. 
+ [ICON_BULLET]Twoje jednostki zdobywają mniej doświadczenia, walcząc w twoich granicach. Znane miejsca do odpoczynku i relaksu są zbyt łatwo dostępne. 
+ [ICON_BULLET]Bardziej podatny na szpiegostwo, ponieważ nie dba się o poufne informacje.
+ [ICON_BULLET]Wielcy Generałowie rzadziej rodzą się jako zwyczajni Wielcy Ludzie. 
+ Korzyści: 
+ [ICON_BULLET]Nieznacznie zwiększona stopa zarabiania standardowych Wielkich Ludzi. Wolny czas i brak rygorystycznego egzekwowania procedur wojskowych pozwala wojskowej części populacji na odkrywanie osobistych zainteresowań, a tym samym otwiera ścieżki do osobistych osiągnięć.
+ [ICON_BULLET]Szkolenie jednostek wojskowych jest tańsze, a zatem są szybsze w produkcji, ponieważ szkolenie jest luźne. 
+ [ICON_BULLET]Długość Złotych Wieków jest zwiększona o jedną czwartą. Spokojne wymagania i oczekiwania pozwalają ludziom dłużej cieszyć się swoimi osiągnięciami. 
+ [ICON_BULLET]Modernizacja jednostek jest tańsza, ponieważ wymagania jakościowe nie są tak wysokie.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_CARELESS2</Tag>
@@ -611,6 +829,7 @@ Benefits:
 		<French>Négligent II</French>
 		<Russian>Áåñïå÷íûé II</Russian>
 		<Italian>Superficiale II</Italian>
+		<Polish>Nieostrożny II</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_CARELESS2_PEDIA</Tag>
@@ -634,6 +853,26 @@ Benefits:
 	[ICON_BULLET]Military units cost less to train and are thus faster to produce since the training is lax.
 	[ICON_BULLET]Golden Ages are increased by a quarter as long as normal. Relaxed demands and expectations allow people to sustain elation at their accomplishments longer.
 	[ICON_BULLET]Units are less expensive to upgrade since quality demands are not as high.</English>
+		<Polish>Negatywna cecha
+"Kogo obchodzi, czy nasze armie są dobrze wyszkolone i na najwyższym poziomie. Poddaj je zbyt dużej presji, a prawdopodobnie uciekną. I tak są tam głównie na pokaz. Skoro tak bardzo się tym przejmujesz, dlaczego nie przejmujesz dowodzenia" 
+Ten przywódca po prostu nie lubi skupiać się na swoich siłach zbrojnych i pozwala organizacji kierować sobą tak bardzo, jak tylko może. Nieczęsto poświęca czas na nagradzanie, szkolenie lub dyscyplinowanie swoich podwładnych, w wyniku czego jego wojsko może łatwo zostać niedoszkolone i nieprzygotowane do prawdziwego konfliktu.
+ Podstawowe kary:
+ [ICON_BULLET]Mniej początkowych punktów doświadczenia dla wszystkich jednostek, co potencjalnie pozwala im zacząć z deficytem doświadczenia.
+ [ICON_BULLET]Więcej doświadczenia wymaganego, aby jednostki zdobywały poziomy.
+ [ICON_BULLET]Znaczna kara w postaci punktów doświadczenia przyznawanych jednostkom szkolonym w stolicy. Im bliżej dowództwa najwyższego szczebla, tym bardziej koncentruje się szkolenie na stylu, a nie na treści.
+ Kary dodatkowe:
+ [ICON_BULLET]Znaczące zmniejszenie tempa zdobywania wielkich wojskowych. 
+ [ICON_BULLET]Dalsze zmniejszenie tempa zdobywania wielkich wojskowych, gdy doświadczenie w tym celu zdobywa się w twoich granicach. 
+ [ICON_BULLET]Budynki szkolenia wojskowego są droższe w budowie. 
+ [ICON_BULLET]Technologie, które przynoszą korzyści w szkoleniu wojskowym, są wolniej odkrywane. 
+ [ICON_BULLET]Twoje jednostki zdobywają mniej doświadczenia, walcząc w twoich granicach. Znane miejsca do odpoczynku i relaksu są zbyt łatwo dostępne. 
+ [ICON_BULLET]Bardziej podatne na szpiegostwo, ponieważ nie dba się o poufne informacje.
+ [ICON_BULLET]Wielcy Admirałowie znacznie rzadziej rodzą się jako zwyczajni Wielcy Ludzie.
+ Korzyści: 
+ [ICON_BULLET]Zwiększona stopa zarabiania standardowych Wielkich Ludzi. Wolny czas i brak rygorystycznego egzekwowania procedur wojskowych pozwala wojskowej części populacji na odkrywanie osobistych zainteresowań, a tym samym otwiera ścieżki do osobistych osiągnięć.
+ [ICON_BULLET]Szkolenie jednostek wojskowych jest tańsze, a zatem są szybsze w produkcji, ponieważ szkolenie jest luźne.
+ [ICON_BULLET]Złote Wieki są zwiększone o jedną czwartą w stosunku do normalnego. Spokojne wymagania i oczekiwania pozwalają ludziom dłużej cieszyć się swoimi osiągnięciami. 
+ [ICON_BULLET]Modernizacja jednostek jest tańsza, ponieważ wymagania jakościowe nie są tak wysokie.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_CARELESS3</Tag>
@@ -641,6 +880,7 @@ Benefits:
 		<French>Négligent III</French>
 		<Russian>Áåñïå÷íûé III</Russian>
 		<Italian>Superficiale III</Italian>
+		<Polish>Nieostrożny III</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_CARELESS3_PEDIA</Tag>
@@ -664,6 +904,26 @@ Benefits:
 	[ICON_BULLET]Military units cost less to train and are thus faster to produce since the training is lax.
 	[ICON_BULLET]Golden Ages are increased by a quarter as long as normal. Relaxed demands and expectations allow people to sustain elation at their accomplishments longer.
 	[ICON_BULLET]Units are less expensive to upgrade since quality demands are not as high.</English>
+		<Polish>Negatywna cecha
+"Kogo obchodzi, czy nasze armie są dobrze wyszkolone i na najwyższym poziomie. Poddaj je zbyt dużej presji, a prawdopodobnie uciekną. I tak są tam głównie na pokaz. Skoro tak bardzo się tym przejmujesz, dlaczego nie przejmujesz dowodzenia" 
+Ten przywódca po prostu nie lubi skupiać się na swoich siłach zbrojnych i pozwala organizacji kierować sobą tak bardzo, jak tylko może. Nieczęsto poświęca czas na nagradzanie, szkolenie lub dyscyplinowanie swoich podwładnych, w wyniku czego jego wojsko może łatwo zostać niedoszkolone i nieprzygotowane do prawdziwego konfliktu.
+ Podstawowe kary:
+ [ICON_BULLET]Mniej początkowych punktów doświadczenia dla wszystkich jednostek, co potencjalnie pozwala im zacząć z deficytem doświadczenia.
+ [ICON_BULLET]Więcej doświadczenia wymaganego, aby jednostki zdobywały poziomy.
+ [ICON_BULLET]Znaczna kara w postaci punktów doświadczenia przyznawanych jednostkom szkolonym w stolicy. Im bliżej dowództwa najwyższego szczebla, tym bardziej koncentruje się szkolenie na stylu, a nie na treści. 
+ Kary dodatkowe:
+ [ICON_BULLET]Znaczące zmniejszenie tempa zdobywania wielkich wojskowych. 
+ [ICON_BULLET]Dalsze zmniejszenie tempa zdobywania wielkich wojskowych, gdy doświadczenie w tym celu zdobywa się w twoich granicach. 
+ [ICON_BULLET]Budynki szkolenia wojskowego są droższe w budowie. 
+ [ICON_BULLET]Technologie, które przynoszą korzyści w szkoleniu wojskowym, są wolniej odkrywane. 
+ [ICON_BULLET]Twoje jednostki zdobywają mniej doświadczenia, walcząc w twoich granicach. Znane miejsca do odpoczynku i relaksu są zbyt łatwo dostępne. 
+ [ICON_BULLET]Bardziej narażeni na szpiegostwo, ponieważ nie dba się o poufne informacje.
+ [ICON_BULLET]Wielcy lotnicy (w oczekiwaniu - na razie generałowie) znacznie rzadziej rodzą się jako zwyczajni Wielcy Ludzie.
+ Korzyści: 
+ [ICON_BULLET]Zwiększony wskaźnik zdobywania standardowych Wielkich Ludzi. Wolny czas i brak rygorystycznego egzekwowania procedur wojskowych pozwala wojskowej części populacji na odkrywanie osobistych zainteresowań, a tym samym otwiera ścieżki do osobistych osiągnięć. 
+ [ICON_BULLET]Szkolenie jednostek wojskowych jest tańsze, a zatem są szybsze w produkcji, ponieważ szkolenie jest luźne. 
+ [ICON_BULLET]Złote Wieki są dłuższe o jedną czwartą. Spokojne wymagania i oczekiwania pozwalają ludziom dłużej cieszyć się swoimi osiągnięciami. 
+ [ICON_BULLET]Modernizacja jednostek jest tańsza, ponieważ wymagania jakościowe nie są tak wysokie.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_CARELESS_PEDIA</Tag>
@@ -687,12 +947,33 @@ Benefits:
 	[ICON_BULLET]Military units cost less to train and are thus faster to produce since the training is lax.
 	[ICON_BULLET]Golden Ages are increased by half as long as normal. Relaxed demands and expectations allow people to sustain elation at their accomplishments longer.
 	[ICON_BULLET]Units are less expensive to upgrade since quality demands are not as high.</English>
+		<Polish>Negatywna cecha
+"Kogo obchodzi, czy nasze armie są dobrze wyszkolone i na najwyższym poziomie. Poddaj je zbyt dużej presji, a prawdopodobnie uciekną. I tak są tam głównie na pokaz. Skoro tak bardzo się tym przejmujesz, dlaczego nie przejmujesz dowodzenia" 
+Ten przywódca po prostu nie lubi skupiać się na swoich siłach zbrojnych i pozwala organizacji kierować sobą tak bardzo, jak tylko może. Nieczęsto poświęca czas na nagradzanie, szkolenie lub dyscyplinowanie swoich podwładnych, w wyniku czego jego wojsko może łatwo zostać niedoszkolone i nieprzygotowane do prawdziwego konfliktu.
+ Podstawowe kary:
+ [ICON_BULLET]Mniej początkowych punktów doświadczenia dla wszystkich jednostek, co potencjalnie pozwala im zacząć z deficytem doświadczenia.
+ [ICON_BULLET]Więcej doświadczenia wymaganego, aby jednostki zdobywały poziomy.
+ [ICON_BULLET]Silna kara w postaci punktów doświadczenia przyznawanych jednostkom szkolonym w stolicy. Im bliżej dowództwa najwyższego szczebla, tym bardziej koncentruje się szkolenie na stylu, a nie na treści.
+ Kary dodatkowe:
+ [ICON_BULLET]Znaczne zmniejszenie tempa zdobywania wielkich wojskowych.
+ [ICON_BULLET]Dalsza redukcja tempa zdobywania wielkich wojskowych, gdy doświadczenie zdobywa się w twoich granicach. 
+ [ICON_BULLET]Budynki szkolenia wojskowego są droższe w budowie. 
+ [ICON_BULLET]Technologie, które przynoszą korzyści w szkoleniu wojskowym, są wolniej odkrywane. 
+ [ICON_BULLET]Twoje jednostki zdobywają mniej doświadczenia, walcząc w twoich granicach. Znane miejsca odpoczynku i relaksu są zbyt łatwo dostępne. 
+ [ICON_BULLET]Znacznie bardziej podatni na szpiegostwo, ponieważ nie dba się o poufne informacje. 
+ [ICON_BULLET]Wielcy Generałowie rzadziej rodzą się jako zwyczajni Wielcy Ludzie.
+ Korzyści: 
+ [ICON_BULLET]Zwiększona stopa zarabiania standardowych Wielkich Ludzi. Wolny czas i brak rygorystycznego egzekwowania procedur wojskowych pozwala wojskowej części populacji na odkrywanie osobistych zainteresowań, a tym samym otwiera ścieżki do osobistych osiągnięć. 
+ [ICON_BULLET]Szkolenie jednostek wojskowych jest tańsze, a zatem są szybsze w produkcji, ponieważ szkolenie jest luźne. 
+ [ICON_BULLET]Złote Wieki są dłuższe o połowę. Spokojne wymagania i oczekiwania pozwalają ludziom dłużej cieszyć się swoimi osiągnięciami. 
+ [ICON_BULLET]Modernizacja jednostek jest tańsza, ponieważ wymagania jakościowe nie są tak wysokie.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_CARELESS_STRATEGY</Tag>
 		<English>Undisciplined military at every level.</English>
 		<French>Des militaires indisciplinés à tous les niveaux.</French>
 		<Russian>Íåäèñöèïëèíèðîâàííûå âîåííûå îòðÿäû íà êàæäîì óðîâíå.</Russian>
+		<Polish>Niezdyscyplinowane wojsko na każdym szczeblu.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_CIVILIZED</Tag>
@@ -700,6 +981,7 @@ Benefits:
 		<French>Civilisé</French>
 		<Russian>Öèâèëèçîâàííûé</Russian>
 		<Italian>Civilizzato</Italian>
+		<Polish>Cywilizowany CT</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_CIVILIZED1</Tag>
@@ -707,6 +989,7 @@ Benefits:
 		<French>Civilisé I</French>
 		<Russian>Öèâèëèçîâàííûé I</Russian>
 		<Italian>Civilizzato I</Italian>
+		<Polish>Cywilizowany I</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_CIVILIZED1_PEDIA</Tag>
@@ -734,6 +1017,30 @@ Penalties:
 	[ICON_BULLET]Military units take longer to train. The people have a hard time embracing their more violent and savage natures.
 	[ICON_BULLET]Your people take longer to get over being whipped to rush construction or training since that is just not refined behavior.
 	[ICON_BULLET]Your cities require a bit more food to grow since carnal activities are more private and restrained here.</English>
+		<Polish>Cecha pozytywna 
+"Musimy wznieść się ponad nasze dzikie korzenie. Tylko wyrafinowana cywilizacja może prosperować. Nie możemy żyć jak barbarzyńcy".
+ Ten przywódca ceni wyrafinowanie i spokojne, racjonalne, powściągliwe zachowanie. Uwielbia postęp i rozwój, jaki osiąga jego cywilizacja. Doskonałość i dyscyplina są wartościami, podobnie jak inteligencja i kompetencje, a ten system wartości rozprzestrzenia się po całym imperium. Sama wojna jest uważana za barbarzyńską praktykę i on i jego ludzie jej unikają, chociaż podchodzą do walki z większą dyscypliną, co dobrze służy im w walce z chaotycznymi przeciwnikami. 
+ Główne korzyści: 
+ [ICON_BULLET]Wszystkie miasta zyskują procentowy modyfikator do badań i szpiegostwa. 
+ [ICON_BULLET]Wszystkie miasta zyskują procentowy modyfikator do Żywności i Bogzctwa. 
+ Unikalne korzyści: 
+ [ICON_BULLET]Największa anarchia, jakiej może doświadczyć ten naród, jest ograniczona do 10 tur, ewentualnie modyfikowana szybkością gry. Cywilizowani ludzie szybciej znajdują porozumienie i nienawidzą nieskutecznego zarządzania, więc tolerują to tylko przez ograniczony czas. 
+[ICON_BULLET]Wszystkie jednostki wojskowe i morskie otrzymują awans Cywilizowany I, który daje solidną premię do Obrony, małą karę do Ataku i dużą premia przeciwko barbarzyńcom i jednostkom ukrytej narodowości. 
+Korzyści dodatkowe: 
+[ICON_BULLET]Zdobywasz Wielkich Ludzi nieco szybciej niż normalnie, ponieważ bycie najlepszym w tym, co robisz, jest bardzo ważne dla tego społeczeństwa ceniącego doskonałość. 
+[ICON_BULLET]Cuda świata są szybciej budowane, ponieważ pokazują, że twoje społeczeństwo jest zaawansowane i skuteczne.
+ [ICON_BULLET]Cuda narodowe i projekty zespołowe są szybciej budowane, ponieważ wszystko, co odzwierciedla twój stopień cywilizowanych osiągnięć, ma dla tego przywódcy ogromne znaczenie.
+ [ICON_BULLET]Wszystkie miasta otrzymują dodatkowy punkt badań i szpiegostwa. 
+ [ICON_BULLET]Wszystkie miasta otrzymują dodatkowy punkt Żywności i Bogactwa. 
+ [ICON_BULLET]Trasy są budowane znacznie szybciej przez Twoich robotników. Infrastruktura jest podstawą społeczeństwa. 
+ [ICON_BULLET]Ulepszenia same w sobie aktualizują się szybciej, ponieważ działanie na przestarzałych systemach jest bardzo niewyrafinowane. 
+ Kary:
+ [ICON_BULLET] Utrzymanie jest ogólnie droższe ze względu na większe wydatki na zapewnienie jakości we wszystkich operacjach.
+ [ICON_BULLET] Wymaga trochę więcej doświadczenia dla twoich jednostek, aby zdobywały poziomy, ponieważ brakuje im podstawowej agresji bardziej dzikich typów. 
+ [ICON_BULLET]Twoi ludzie cierpią z powodu większego zmęczenia wojną, ponieważ przemoc, choć czasami konieczna, jest niepokojąco niecywilizowana. 
+ [ICON_BULLET]Wojskowe jednostki szkolą się dłużej. Ludziom trudno jest zaakceptować swoją bardziej brutalną i dziką naturę. 
+ [ICON_BULLET]Waszym ludziom potrzeba więcej czasu, aby otrząsnąć się z chłosty za przyspieszenie budowy lub szkolenia, ponieważ nie jest to wyrafinowane zachowanie. 
+ [ICON_BULLET]Wasze miasta potrzebują nieco więcej żywności, aby się rozwijać, ponieważ cielesne czynności są bardziej tutaj prywatne i powściągliwie.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_CIVILIZED2</Tag>
@@ -741,6 +1048,7 @@ Penalties:
 		<French>Civilisé II</French>
 		<Russian>Öèâèëèçîâàííûé II</Russian>
 		<Italian>Civilizzato II</Italian>
+		<Polish>Cywilizowany II</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_CIVILIZED2_PEDIA</Tag>
@@ -768,6 +1076,30 @@ Penalties:
 	[ICON_BULLET]Military units take longer to train. The people have a hard time embracing their more violent and savage natures.
 	[ICON_BULLET]Your people take longer to get over being whipped to rush construction or training since that is just not refined behavior.
 	[ICON_BULLET]Your cities require a bit more food to grow since carnal activities are more private and restrained here.</English>
+		<Polish>Cecha Pozytywna
+		"Musimy wznieść się ponad nasze dzikie korzenie. Tylko wyrafinowana cywilizacja może prosperować. Nie możemy żyć jak barbarzyńcy".
+ Ten przywódca ceni wyrafinowanie i spokojne, racjonalne, powściągliwe zachowanie. Uwielbia postęp i rozwój, jaki osiąga jego cywilizacja. Doskonałość i dyscyplina są wartościami, podobnie jak inteligencja i kompetencje, a ten system wartości rozprzestrzenia się po całym imperium. Sama wojna jest uważana za barbarzyńską praktykę i on i jego ludzie jej unikają, chociaż podchodzą do walki z większą dyscypliną, co dobrze służy im w walce z chaotycznymi przeciwnikami. 
+ Główne korzyści:
+ [ICON_BULLET]Wszystkie miasta zyskują procentowy modyfikator do badań i szpiegostwa. 
+ [ICON_BULLET]Wszystkie miasta zyskują procentowy modyfikator do Żywności i Bogactwa.
+ Unikalne korzyści: 
+ [ICON_BULLET]Największa anarchia, jakiej może doświadczyć ten naród, jest ograniczona do 6 tur, ewentualnie modyfikowana szybkością gry. Cywilizowani ludzie szybciej znajdują porozumienie i nienawidzą nieefektywnego zarządzania, więc tolerują to tylko przez tak długi czas. 
+ [ICON_BULLET]Wszystkie jednostki Bojowe i Morskie zyskują Awans Cywilizowany II, który daje solidną premię do Obrony, małą karę do Ataku i dużą premia przeciwko jednostkom zbójów. 
+ Korzyści dodatkowe: 
+ [ICON_BULLET]Zarabiasz wspaniałych ludzi szybciej niż normalnie, ponieważ bycie najlepszym w tym, co robisz, jest bardzo ważne dla tego społeczeństwa ceniącego doskonałość.
+ [ICON_BULLET]Cuda świata są znacznie szybsze w budowie, ponieważ pokazują, że twoje społeczeństwo jest zaawansowane i skuteczne.
+ [ICON_BULLET] Cuda narodowe i projekty zespołowe są budowane szybciej, ponieważ wszystko, co odzwierciedla stopień[ICON_BULLET] cywilizowanych osiągnięć, ma dla tego przywódcy ogromne znaczenie. 
+ [ICON_BULLET]Wszystkie miasta otrzymują dodatkową bazę Badań i Szpiegostwa. 
+ [ICON_BULLET]Wszystkie miasta otrzymują dodatkową bazę Żywności i Bogactwa.
+ [ICON_BULLET]Trasy są budowane znacznie szybciej przez Twoich pracowników. Infrastruktura jest podstawą społeczeństwa. 
+ [ICON_BULLET]Ulepszenia same w sobie aktualizują się szybciej, ponieważ działanie na przestarzałych systemach jest bardzo niewyrafinowane. 
+ Kary:
+ [ICON_BULLET] Utrzymanie jest  ogólnie droższe ze względu na większe wydatki na zapewnienie jakości we wszystkich operacjach.
+ [ICON_BULLET] Wymaga trochę więcej doświadczenia dla twoich jednostek, aby zdobywały poziomy, ponieważ brakuje im podstawowej agresji bardziej dzikich typów. 
+ [ICON_BULLET]Twoi ludzie cierpią z powodu większego zmęczenia wojną, ponieważ przemoc, choć czasami konieczna, jest niepokojąco niecywilizowana. 
+ [ICON_BULLET]Wojskowe jednostki szkolą się dłużej. Ludziom trudno jest zaakceptować swoją bardziej brutalną i dziką naturę.
+ [ICON_BULLET]Waszym ludziom potrzeba więcej czasu, aby otrząsnąć się z chłosty za przyspieszenie budowy lub szkolenia, ponieważ nie jest to wyrafinowane zachowanie. 
+ [ICON_BULLET]Wasze miasta potrzebują nieco więcej żywności, aby się rozwijać, ponieważ cielesne czynności są bardziej tutaj prywatnie i powściągliwie.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_CIVILIZED3</Tag>
@@ -775,6 +1107,7 @@ Penalties:
 		<French>Civilisé III</French>
 		<Russian>Öèâèëèçîâàííûé III</Russian>
 		<Italian>Civilizzato III</Italian>
+		<Polish>Cywilizowany III</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_CIVILIZED3_PEDIA</Tag>
@@ -802,6 +1135,30 @@ Penalties:
 	[ICON_BULLET]Military units take longer to train. The people have a hard time embracing their more violent and savage natures.
 	[ICON_BULLET]Your people take significantly longer to get over being whipped to rush construction or training since that is just not refined behavior.
 	[ICON_BULLET]Your cities require a bit more food to grow since carnal activities are more private and restrained here.</English>
+		<Polish>Cecha Pozytywna
+		"Musimy wznieść się ponad nasze dzikie korzenie. Tylko wyrafinowana cywilizacja może prosperować. Nie możemy żyć jak barbarzyńcy".
+ Ten przywódca ceni wyrafinowanie i spokojne, racjonalne, powściągliwe zachowanie. Uwielbia postęp i rozwój, jaki osiąga jego cywilizacja. Doskonałość i dyscyplina są wartościami, podobnie jak inteligencja i kompetencje, a ten system wartości rozprzestrzenia się po całym imperium. Sama wojna jest uważana za barbarzyńską praktykę i on i jego ludzie jej unikają, chociaż podchodzą do walki z większą dyscypliną, co dobrze służy im w walce z chaotycznymi przeciwnikami. 
+ Główne korzyści:
+ [ICON_BULLET]Wszystkie miasta zyskują procentowy modyfikator do badań i szpiegostwa. 
+ [ICON_BULLET]Wszystkie miasta zyskują procentowy modyfikator do Żywności i Bogactwa.
+ Unikalne korzyści:
+ [ICON_BULLET]Największa anarchia, jakiej może doświadczyć ten naród, ogranicza się do 4 tur, modyfikowanych szybkością gry. Cywilizowani ludzie szybciej znajdują porozumienie i nienawidzą nieskutecznego rządzenia, więc tolerują to tylko przez tak długi czas.
+ [ICON_BULLET]Wszystkie jednostki bojowników i morskie otrzymują awans Cywilizowany III, który daje solidną premię do obrony, małą karę do ataku i dużą premia przeciwko jednostkom przestępczym.
+ Korzyści dodatkowe: 
+ [ICON_BULLET]Zarabiasz wspaniałych ludzi szybciej niż normalnie, ponieważ bycie najlepszym w tym, co robisz, jest bardzo ważne dla tego społeczeństwa ceniącego doskonałość.
+ [ICON_BULLET]Cuda świata są znacznie szybsze w budowie, ponieważ pokazują, że twoje społeczeństwo jest zaawansowane i skuteczne.
+ [ICON_BULLET] Cuda narodowe i projekty zespołowe są budowane szybciej, ponieważ wszystko, co odzwierciedla stopień cywilizowanych osiągnięć, ma dla tego przywódcy ogromne znaczenie. 
+ [ICON_BULLET]Wszystkie miasta otrzymują dodatkową bazę Badań i Szpiegostwa. 
+ [ICON_BULLET]Wszystkie miasta otrzymują dodatkową bazę Żywności i Bogactwa.
+ [ICON_BULLET]Trasy są budowane znacznie szybciej przez Twoich pracowników. Infrastruktura jest podstawą społeczeństwa. 
+ [ICON_BULLET]Ulepszenia same w sobie aktualizują się szybciej, ponieważ działanie na przestarzałych systemach jest bardzo niewyrafinowane. 
+ Kary:
+ [ICON_BULLET] Utrzymanie jest  ogólnie droższe ze względu na większe wydatki na zapewnienie jakości we wszystkich operacjach.
+ [ICON_BULLET] Wymaga trochę więcej doświadczenia dla twoich jednostek, aby zdobywały poziomy, ponieważ brakuje im podstawowej agresji bardziej dzikich typów. 
+ [ICON_BULLET]Twoi ludzie cierpią z powodu większego zmęczenia wojną, ponieważ przemoc, choć czasami konieczna, jest niepokojąco niecywilizowana. 
+ [ICON_BULLET]Wojskowe jednostki szkolą się dłużej. Ludziom trudno jest zaakceptować swoją bardziej brutalną i dziką naturę.
+ [ICON_BULLET]Waszym ludziom potrzeba więcej czasu, aby otrząsnąć się z chłosty za przyspieszenie budowy lub szkolenia, ponieważ nie jest to wyrafinowane zachowanie. 
+ [ICON_BULLET]Wasze miasta potrzebują nieco więcej żywności, aby się rozwijać, ponieważ cielesne czynności są bardziej tutaj prywatnie i powściągliwie.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_CIVILIZED_PEDIA</Tag>
@@ -829,12 +1186,37 @@ Penalties:
 	[ICON_BULLET]Military units take significantly longer to train. The people have a hard time embracing their more violent and savage natures.
 	[ICON_BULLET]Your people take longer to get over being whipped to rush construction or training since that is just not refined behavior.
 	[ICON_BULLET]Your cities require a bit more food to grow since carnal activities are more private and restrained here.</English>
+		<Polish>Cecha Pozytywna
+		"Musimy wznieść się ponad nasze dzikie korzenie. Tylko wyrafinowana cywilizacja może prosperować. Nie możemy żyć jak barbarzyńcy".
+ Ten przywódca ceni wyrafinowanie i spokojne, racjonalne, powściągliwe zachowanie. Uwielbia postęp i rozwój, jaki osiąga jego cywilizacja. Doskonałość i dyscyplina są wartościami, podobnie jak inteligencja i kompetencje, a ten system wartości rozprzestrzenia się po całym imperium. Sama wojna jest uważana za barbarzyńską praktykę i on i jego ludzie jej unikają, chociaż podchodzą do walki z większą dyscypliną, co dobrze służy im w walce z chaotycznymi przeciwnikami. 
+ Główne korzyści:
+ [ICON_BULLET]Wszystkie miasta zyskują procentowy modyfikator do badań i szpiegostwa. 
+ [ICON_BULLET]Wszystkie miasta zyskują procentowy modyfikator do Żywności i Bogactwa.
+ Unikalne korzyści:
+ [ICON_BULLET]Największa anarchia, jakiej może doświadczyć ten naród, jest ograniczona do kilku tur, ewentualnie modyfikowana szybkością gry. Cywilizowani ludzie szybciej znajdują porozumienie i nienawidzą nieefektywnego zarządzania, więc tolerują to tylko przez tak długi czas. 
+ [ICON_BULLET]Wszystkie jednostki kombatantów i bojowników morskich zyskują awans Cywilizowany, który daje solidną premię do obrony, małą karę do ataku i dużą premię przeciwko Barbarzyńcom i jednostkom Ukrytej Narodowości.
+ Korzyści dodatkowe: 
+ [ICON_BULLET]Zarabiasz wspaniałych ludzi szybciej niż normalnie, ponieważ bycie najlepszym w tym, co robisz, jest bardzo ważne dla tego społeczeństwa ceniącego doskonałość.
+ [ICON_BULLET]Cuda świata są znacznie szybsze w budowie, ponieważ pokazują, że twoje społeczeństwo jest zaawansowane i skuteczne.
+ [ICON_BULLET] Cuda narodowe i projekty zespołowe są budowane szybciej, ponieważ wszystko, co odzwierciedla stopień cywilizowanych osiągnięć, ma dla tego przywódcy ogromne znaczenie. 
+ [ICON_BULLET]Wszystkie miasta otrzymują dodatkową bazę Badań i Szpiegostwa. 
+ [ICON_BULLET]Wszystkie miasta otrzymują dodatkową bazę Żywności i Bogactwa.
+ [ICON_BULLET]Trasy są budowane znacznie szybciej przez Twoich pracowników. Infrastruktura jest podstawą społeczeństwa. 
+ [ICON_BULLET]Ulepszenia same w sobie aktualizują się szybciej, ponieważ działanie na przestarzałych systemach jest bardzo niewyrafinowane. 
+ Kary:
+ [ICON_BULLET] Utrzymanie jest  ogólnie droższe ze względu na większe wydatki na zapewnienie jakości we wszystkich operacjach.
+ [ICON_BULLET] Wymaga trochę więcej doświadczenia dla twoich jednostek, aby zdobywały poziomy, ponieważ brakuje im podstawowej agresji bardziej dzikich typów. 
+ [ICON_BULLET]Twoi ludzie cierpią z powodu większego zmęczenia wojną, ponieważ przemoc, choć czasami konieczna, jest niepokojąco niecywilizowana. 
+ [ICON_BULLET]Wojskowe jednostki szkolą się dłużej. Ludziom trudno jest zaakceptować swoją bardziej brutalną i dziką naturę.
+ [ICON_BULLET]Waszym ludziom potrzeba więcej czasu, aby otrząsnąć się z chłosty za przyspieszenie budowy lub szkolenia, ponieważ nie jest to wyrafinowane zachowanie. 
+ [ICON_BULLET]Wasze miasta potrzebują nieco więcej żywności, aby się rozwijać, ponieważ cielesne czynności są bardziej tutaj prywatnie i powściągliwie.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_CIVILIZED_STRATEGY</Tag>
 		<English>Weak at war but strong at research and culture. Builds Wonders faster.</English>
 		<French>Faible en guerre mais fort en recherche et en culture. Construit des merveilles plus rapidement.</French>
 		<Russian>Ñëàá â âîéíå, íî ñèëåí â èññëåäîâàíèÿõ è êóëüòóðå. Ñòðîèò ×óäåñà áûñòðåå ïðî÷èõ ëèäåðîâ.</Russian>
+		<Polish>Słabi na wojnie, ale silni w badaniach i kulturze. Szybciej buduje cuda.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_AGGRESSIVE</Tag>
@@ -843,6 +1225,7 @@ Penalties:
 		<German>Aggressiv</German>
 		<Russian>Àãðåññèâíûé</Russian>
 		<Italian>Aggressivo</Italian>
+		<Polish>Agresywny CT</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_AGGRESSIVE1</Tag>
@@ -851,6 +1234,7 @@ Penalties:
 		<German>Aggressiv I</German>
 		<Russian>Àãðåññèâíûé I</Russian>
 		<Italian>Aggressivo I</Italian>
+		<Polish>Agresywny I</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_AGGRESSIVE1_PEDIA</Tag>
