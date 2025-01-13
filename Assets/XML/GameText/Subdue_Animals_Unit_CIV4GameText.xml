@@ -865,7 +865,7 @@
 			<Plural>0</Plural>
 		</Spanish>
 		<Polish>Puchacz Wirginijski</Polish>
-		<Russian>Ôèëèí</Russian>
+		<Russian>Виргинский филин</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_HORNEDOWL_PEDIA</Tag>
@@ -1365,8 +1365,8 @@
 			<Gender>Neuter</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
-		<Russian>Карликовый бегемот</Russian>
 		<Italian>Ippopotamo pigmeo</Italian>
+		<Russian>Карликовый бегемот</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_PYGMYHIPPO_PEDIA</Tag>
@@ -2387,7 +2387,7 @@
 			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
-		<Russian>Ëèñèöà-ôåíåê (ðó÷í.)</Russian>
+		<Russian>Ручной фенек</Russian>
 		<Italian>Volpe del deserto domata</Italian>
 	</TEXT>
 	<TEXT>
@@ -3414,8 +3414,8 @@
 			<Gender>Neuter</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
-		<Russian>Карликовый бегемот (ручн.)</Russian>
 		<Italian>Ippopotamo pigmeo domato</Italian>
+		<Russian>Ручной карликовый бегемот</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_QUOLL</Tag>
@@ -3815,6 +3815,11 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_TOUCAN</Tag>
 		<English>Subdued Toucan</English>
+		<German>
+			<Text>Gefangener Tukan:Gefangenen Tukans:Gefangenen Tukan:Gefangenen Tukan:Gefangene Tukane:Gefangenen Tukane:Gefangenen Tukanen:Gefangenen Tukane</Text>
+			<Gender>Male</Gender>
+			<Plural>0:0:0:0:1:1:1:1</Plural>
+		</German>
 		<French>Toucan (App.)</French>
 		<Italian>Tucano domato</Italian>
 		<Polish>Poskromiony Tukan</Polish>

@@ -293,6 +293,7 @@ void CvPlot::reset(int iX, int iY, bool bConstructorCall)
 
 	m_Properties.clear();
 	m_commanderCount.clear();
+	m_commodoreCount.clear();
 	m_cultureRatesThisTurn.clear();
 	m_cultureRatesLastTurn.clear();
 	m_influencedByCityByPlayer.clear();
@@ -316,6 +317,7 @@ void CvPlot::clearModifierTotals()
 		m_baseYields[iI] = 0;
 	}
 	m_commanderCount.clear();
+	m_commodoreCount.clear();
 
 	getProperties()->clearForRecalculate();
 
@@ -10454,6 +10456,11 @@ void CvPlot::addUnit(CvUnit* pUnit, bool bUpdate)
 	{
 		countCommander(true, pUnit);
 	}
+
+	if (pUnit->isCommodoreReady())
+    {
+    	countCommodore(true, pUnit);
+    }
 }
 
 
@@ -10464,6 +10471,11 @@ void CvPlot::removeUnit(CvUnit* pUnit, bool bUpdate)
 	{
 		countCommander(false, pUnit);
 	}
+
+	if (pUnit->isCommodoreReady())
+    {
+    	countCommodore(false, pUnit);
+    }
 
 	for (CLLNode<IDInfo>* pUnitNode = headUnitNode(); pUnitNode != NULL; )
 	{
@@ -11248,15 +11260,21 @@ void CvPlot::read(FDataStreamBase* pStream)
 		uint16_t uCount16 = 0;
 
 		WRAPPER_READ_DECORATED(wrapper, "CvPlot", &iSize, "iCommanderCountSize");
+		WRAPPER_READ_DECORATED(wrapper, "CvPlot", &iSize, "iCommodoreCountSize");
 		while (iSize-- > 0)
 		{
 			WRAPPER_READ_DECORATED(wrapper, "CvPlot", &uType8, "iCommanderCountPlayer");
 			WRAPPER_READ_DECORATED(wrapper, "CvPlot", &uCount16, "iCommanderCountCount");
+			WRAPPER_READ_DECORATED(wrapper, "CvPlot", &uType8, "iCommodoreCountPlayer");
+            WRAPPER_READ_DECORATED(wrapper, "CvPlot", &uCount16, "iCommodoreCountCount");
 
 			FAssert(uCount16 > 0);
 			m_commanderCount.insert(std::make_pair(uType8, uCount16));
 
-			// Toffer - This is too early to set the player cahce, players haven't been read in yet,
+			FAssert(uCount16 > 0);
+            m_commodoreCount.insert(std::make_pair(uType8, uCount16));
+
+			// Toffer - This is too early to set the player cache, players haven't been read in yet,
 			//	so the cache will be cleared at the player reset before read.
 			//GET_PLAYER(static_cast<PlayerTypes>(uType8)).setCommandFieldPlot(true, this);
 		}
@@ -11658,6 +11676,14 @@ void CvPlot::write(FDataStreamBase* pStream)
 		{
 			WRAPPER_WRITE_DECORATED(wrapper, "CvPlot", it->first, "iCommanderCountPlayer");
 			WRAPPER_WRITE_DECORATED(wrapper, "CvPlot", it->second, "iCommanderCountCount");
+		}
+	}
+	{
+		WRAPPER_WRITE_DECORATED(wrapper, "CvPlot", (short)m_commodoreCount.size(), "iCommodoreCountSize");
+		for (std::map<uint8_t, uint16_t>::const_iterator it = m_commodoreCount.begin(), itEnd = m_commodoreCount.end(); it != itEnd; ++it)
+		{
+			WRAPPER_WRITE_DECORATED(wrapper, "CvPlot", it->first, "iCommodoreCountPlayer");
+			WRAPPER_WRITE_DECORATED(wrapper, "CvPlot", it->second, "iCommodoreCountCount");
 		}
 	}
 
@@ -13626,6 +13652,57 @@ void CvPlot::changeCommanderCount(const PlayerTypes ePlayer, const bool bAdd)
 bool CvPlot::inCommandField(const PlayerTypes ePlayer) const
 {
 	return m_commanderCount.find(static_cast<uint8_t>(ePlayer)) != m_commanderCount.end();
+}
+
+
+void CvPlot::countCommodore(bool bNewVal, const CvUnit* com)
+{
+	PROFILE_EXTRA_FUNC();
+	const short iRange = com->getCommodoreComp()->getCommandRange();
+
+	const PlayerTypes eComOwner = com->getOwner();
+
+	std::map<uint8_t, uint16_t>::const_iterator itr = m_commodoreCount.find(static_cast<uint8_t>(eComOwner));
+
+	if (iRange > 0)
+	{
+		foreach_(CvPlot* plotX, rect(iRange, iRange))
+		{
+			plotX->changeCommodoreCount(eComOwner, bNewVal);
+		}
+	}
+	else changeCommodoreCount(eComOwner, bNewVal);
+}
+
+
+void CvPlot::changeCommodoreCount(const PlayerTypes ePlayer, const bool bAdd)
+{
+	std::map<uint8_t, uint16_t>::const_iterator itr = m_commodoreCount.find(static_cast<uint8_t>(ePlayer));
+
+	if (itr == m_commodoreCount.end())
+	{
+		if (bAdd) // Add commodore count
+		{
+			m_commodoreCount.insert(std::make_pair(static_cast<uint8_t>(ePlayer), 1));
+			GET_PLAYER(ePlayer).setCommodoreFieldPlot(true, this);
+		}
+		else FErrorMsg("Expected commodore addition for first player entry on this plot");
+	}
+	else if (!bAdd && itr->second < 2) // Remove commodore count
+	{
+		FAssertMsg(itr->second > 0, "This change would bring the count to a negative value! Code copes with it though")
+		m_commodoreCount.erase(itr->first);
+		GET_PLAYER(ePlayer).setCommodoreFieldPlot(false, this);
+	}
+	else // change commodore count
+	{
+		m_commodoreCount[itr->first] += bAdd ? 1 : -1;
+	}
+}
+
+bool CvPlot::inCommandCommodoreField(const PlayerTypes ePlayer) const
+{
+	return m_commodoreCount.find(static_cast<uint8_t>(ePlayer)) != m_commodoreCount.end();
 }
 
 

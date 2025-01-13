@@ -212,9 +212,9 @@
 		<English>Shows the BUG Option Screen.</English>
 		<French>Affiche l'écran d'Options du Mod BUG.</French>
 		<German>Ruft den Optionsbildschirm der BUG Mod auf</German>
-		<Spanish>Muestra la pantalla Opciones del Mod BUG.</Spanish>
-		<Russian>Ïîêàçàòü ýêðàí îïöèé èíòåðôåéñà.</Russian>
 		<Italian>Opzioni BUG mod</Italian>
+		<Spanish>Muestra la pantalla Opciones del Mod BUG.</Spanish>
+		<Russian>Дополнительные опции игры</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPTLABEL_AUTOMATEDSETTINGS__AIRSETTINGS</Tag>
@@ -1592,7 +1592,7 @@
 		<German>Gesellschaftsformen</German>
 		<Italian>Variazioni forme di governo</Italian>
 		<Spanish>Principios</Spanish>
-		<Russian>Ïàðàäèãìû</Russian>
+		<Russian>Парадигмы</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_AUTOLOG__LOGCOMBAT_HOVER</Tag>
@@ -1715,7 +1715,7 @@
 		<German>Große Persönlichkeiten</German>
 		<Italian>Nascita gran personaggi</Italian>
 		<Spanish>Grandes personajes</Spanish>
-		<Russian>Âåëèêèé ÷åëîâåê</Russian>
+		<Russian>Великие люди</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_AUTOLOG__LOGIMPROVEMENTS_HOVER</Tag>
@@ -6928,6 +6928,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_ROMSETTINGS__GREATERGREATFARMER_TEXT</Tag>
 		<English>Greater Great Farmer</English>
+		<Russian>Еще более великий фермер</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_ROMSETTINGS__HIDEREPLACEDBUILDINGS_HOVER</Tag>
@@ -7989,7 +7990,7 @@
 		<German>Optionen der BUG Mod</German>
 		<Italian>Opzioni BUG Mod</Italian>
 		<Spanish>Opciones del Mod BUG</Spanish>
-		<Russian>Îïöèè èíòåðôåéñà</Russian>
+		<Russian>Дополнительные опции игры</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_UNITNAMING__DEFAULT_HOVER</Tag>

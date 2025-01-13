@@ -4255,6 +4255,14 @@ class CvMainInterface:
 						screen.appendTableRow(unitTable)
 						screen.setTableText(unitTable, 1, iRow, "<font=1>" + szTxt2, "", eWidGen, 0, 0, 1<<0)
 						iRow += 1
+					if CyUnit.isCommodore():
+						szTxt2 = u"%d/%d " %(CyUnit.getCommodoreControlPointsLeft(), CyUnit.getCommodoreControlPoints())
+						screen.appendTableRow(unitTable)
+						screen.setTableText(unitTable, 0, iRow, "<font=1>Control:", "", eWidGen, 0, 0, 1<<0)
+						iRow += 1
+						screen.appendTableRow(unitTable)
+						screen.setTableText(unitTable, 1, iRow, "<font=1>" + szTxt2, "", eWidGen, 0, 0, 1<<0)
+						iRow += 1
 			if CySelectionGroup:
 				if iMissionCount > 1:
 					for i in xrange(iMissionCount):

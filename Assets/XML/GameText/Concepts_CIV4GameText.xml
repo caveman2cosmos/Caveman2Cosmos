@@ -619,7 +619,7 @@
 			<Gender>Male</Gender>
 			<Plural>1</Plural>
 		</Spanish>
-		<Russian>Ïàðàäèãìû</Russian>
+		<Russian>Парадигмы</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CONCEPT_CIVICS_PEDIA</Tag>
@@ -2836,7 +2836,7 @@ Remember: If you're having trouble with which civic to choose, just think of his
 		<German>Raumschiff</German>
 		<Italian>Costruzione astronave</Italian>
 		<Spanish>Nave espacial</Spanish>
-		<Russian>Êîñì. êîðàáëü</Russian>
+		<Russian>Космический корабль</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CONCEPT_SPACESHIP_PEDIA</Tag>
@@ -2866,7 +2866,7 @@ Remember: If you're having trouble with which civic to choose, just think of his
 			<Gender>Male</Gender>
 			<Plural>1</Plural>
 		</Spanish>
-		<Russian>Ñïåöèàëèñòû</Russian>
+		<Russian>Специалисты</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CONCEPT_SPECIALISTS_PEDIA</Tag>

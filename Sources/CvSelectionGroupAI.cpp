@@ -568,6 +568,18 @@ static bool isClearlySuperior(CvUnit* pUnit, CvUnit* pOtherUnit, const CvPlot* p
 		}
 	}
 
+	if (!pUnit->isCommodore())
+	{
+		const CvUnit* pCommodore = pUnit->getCommodore();
+		if (pCommodore)
+		{
+			for (std::map<UnitCombatTypes, UnitCombatKeyedInfo>::const_iterator it = pCommodore->getUnitCombatKeyedInfo().begin(), end = pCommodore->getUnitCombatKeyedInfo().end(); it != end; ++it)
+			{
+				iTotalCombatMods += it->second.m_iExtraUnitCombatModifier;
+			}
+		}
+	}
+
 	for (std::map<UnitCombatTypes, UnitCombatKeyedInfo>::const_iterator it = pOtherUnit->getUnitCombatKeyedInfo().begin(), end = pOtherUnit->getUnitCombatKeyedInfo().end(); it != end; ++it)
 	{
 		iOtherTotalCombatMods += it->second.m_iExtraUnitCombatModifier;
@@ -584,6 +596,18 @@ static bool isClearlySuperior(CvUnit* pUnit, CvUnit* pOtherUnit, const CvPlot* p
 			}
 		}
 	}
+
+    if (!pOtherUnit->isCommodore())
+    	{
+    		const CvUnit* pOtherCommodore = pOtherUnit->getCommodore();
+    		if (pOtherCommodore)
+    		{
+    			for (std::map<UnitCombatTypes, UnitCombatKeyedInfo>::const_iterator it = pOtherCommodore->getUnitCombatKeyedInfo().begin(), end = pOtherCommodore->getUnitCombatKeyedInfo().end(); it != end; ++it)
+    			{
+    				iOtherTotalCombatMods += it->second.m_iExtraUnitCombatModifier;
+    			}
+    		}
+    	}
 
 	return iTotalCombatMods >= iOtherTotalCombatMods;
 }

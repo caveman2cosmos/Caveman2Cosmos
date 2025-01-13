@@ -970,6 +970,62 @@
 			</UnitCombatPrereqTypes>
 		</PromotionLineInfo>
 		<PromotionLineInfo>
+			<Type>PROMOTIONLINE_MORALE_SHIPS</Type>
+			<Description>TXT_KEY_PROMOTIONLINE_MORALE_SHIPS</Description>
+			<Button>Art/Interface/Buttons/promotions/shipMorale1.dds</Button>
+			<UnitCombatPrereqTypes>
+				<UnitCombatPrereqType>UNITCOMBAT_COMMODORE</UnitCombatPrereqType>
+			</UnitCombatPrereqTypes>
+		</PromotionLineInfo>
+		<PromotionLineInfo>
+			<Type>PROMOTIONLINE_SHIP_TACTICS</Type>
+			<Description>TXT_KEY_PROMOTIONLINE_SHIP_TACTICS</Description>
+			<Button>Art/Interface/Buttons/promotions/shipTactics1.dds</Button>
+			<UnitCombatPrereqTypes>
+				<UnitCombatPrereqType>UNITCOMBAT_COMMODORE</UnitCombatPrereqType>
+			</UnitCombatPrereqTypes>
+		</PromotionLineInfo>
+		<PromotionLineInfo>
+			<Type>PROMOTIONLINE_SHIP_INITIATIVE</Type>
+			<Description>TXT_KEY_PROMOTIONLINE_SHIP_INITIATIVE</Description>
+			<Button>Art/Interface/Buttons/promotions/shipInitiative1.dds</Button>
+			<UnitCombatPrereqTypes>
+				<UnitCombatPrereqType>UNITCOMBAT_COMMODORE</UnitCombatPrereqType>
+			</UnitCombatPrereqTypes>
+		</PromotionLineInfo>
+		<PromotionLineInfo>
+			<Type>PROMOTIONLINE_SHIP_OPERATIONS</Type>
+			<Description>TXT_KEY_PROMOTIONLINE_SHIP_OPERATIONS</Description>
+			<Button>Art/Interface/Buttons/promotions/shipOperations1.dds</Button>
+			<UnitCombatPrereqTypes>
+				<UnitCombatPrereqType>UNITCOMBAT_COMMODORE</UnitCombatPrereqType>
+			</UnitCombatPrereqTypes>
+		</PromotionLineInfo>
+		<PromotionLineInfo>
+			<Type>PROMOTIONLINE_SHIP_STRIKEFORCE</Type>
+			<Description>TXT_KEY_PROMOTIONLINE_STRIKEFORCE</Description>
+			<Button>Art/Interface/Buttons/promotions/shipStrikeForce1.dds</Button>
+			<UnitCombatPrereqTypes>
+				<UnitCombatPrereqType>UNITCOMBAT_COMMODORE</UnitCombatPrereqType>
+			</UnitCombatPrereqTypes>
+		</PromotionLineInfo>
+		<PromotionLineInfo>
+			<Type>PROMOTIONLINE_SHIP_COMMAND</Type>
+			<Description>TXT_KEY_PROMOTIONLINE_SHIP_COMMAND</Description>
+			<Button>art/Buttons/Promotions/CommodoreCommand1.dds</Button>
+			<UnitCombatPrereqTypes>
+				<UnitCombatPrereqType>UNITCOMBAT_COMMODORE</UnitCombatPrereqType>
+			</UnitCombatPrereqTypes>
+		</PromotionLineInfo>
+		<PromotionLineInfo>
+			<Type>PROMOTIONLINE_ADMIRAL_STAFF</Type>
+			<Description>TXT_KEY_PROMOTIONLINE_GENERAL_STAFF</Description>
+			<Button>art/Buttons/Promotions/CommodoreAdmiralStaff1.dds</Button>
+			<UnitCombatPrereqTypes>
+				<UnitCombatPrereqType>UNITCOMBAT_COMMODORE</UnitCombatPrereqType>
+			</UnitCombatPrereqTypes>
+		</PromotionLineInfo>
+		<PromotionLineInfo>
 			<Type>PROMOTIONLINE_INITIATIVE</Type>
 			<Description>TXT_KEY_PROMOTIONLINE_INITIATIVE</Description>
 			<Button>Art/Interface/Buttons/promotions/initiative1.dds</Button>

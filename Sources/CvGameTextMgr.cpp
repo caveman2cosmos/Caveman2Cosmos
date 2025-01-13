@@ -610,6 +610,15 @@ void CvGameTextMgr::setUnitHelp(CvWStringBuffer &szString, const CvUnit* pUnit, 
 		}
 	}
 
+	{
+		UnitCompCommodore* commodore = pUnit->getCommodoreComp();
+		if (commodore)
+		{
+			szString.append(gDLL->getText("TXT_KEY_UNITHELP_COMMAND_RANGE", commodore->getCommandRange()));
+			szString.append(gDLL->getText("TXT_KEY_UNITHELP_COMMAND_POINTS", commodore->getControlPointsLeft(), commodore->getControlPoints()));
+		}
+	}
+
 	if (pUnit->getOwner() != GC.getGame().getActivePlayer() && !pUnit->isAnimal() && !pUnit->isHiddenNationality())
 	{
 		szString.append(L", ");

@@ -1003,6 +1003,29 @@
 			<Button>Art/Interface/Buttons/promotions/field_commander.dds</Button>
 		</MissionInfo>
 		<MissionInfo>
+			<Type>MISSION_GREAT_COMMODORE</Type>
+			<Description>TXT_KEY_MISSION_GREAT_COMMODORE</Description>
+			<Help>TXT_KEY_MISSION_GREAT_COMMODORE_HELP</Help>
+			<Waypoint>NONE</Waypoint>
+			<EntityEventType>ENTITY_EVENT_GREAT_EVENT</EntityEventType>
+			<iTime>16</iTime>
+			<bTarget>0</bTarget>
+			<bBuild>0</bBuild>
+			<bSound>1</bSound>
+			<HotKey/>
+			<bAltDown>0</bAltDown>
+			<bShiftDown>0</bShiftDown>
+			<bCtrlDown>0</bCtrlDown>
+			<iHotKeyPriority>0</iHotKeyPriority>
+			<HotKeyAlt/>
+			<bAltDownAlt>0</bAltDownAlt>
+			<bShiftDownAlt>0</bShiftDownAlt>
+			<bCtrlDownAlt>0</bCtrlDownAlt>
+			<iHotKeyPriorityAlt>0</iHotKeyPriorityAlt>
+			<bVisible>1</bVisible>
+			<Button>Art/Interface/Buttons/promotions/field_commodore.dds</Button>
+		</MissionInfo>
+		<MissionInfo>
 			<Type>MISSION_SHADOW</Type>
 			<Description>TXT_KEY_ACTION_AUTOMATE_PROTECT</Description>
 			<Help>TXT_KEY_ACTION_AUTOMATE_PROTECT_HELP</Help>

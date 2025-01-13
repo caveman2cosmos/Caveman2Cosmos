@@ -590,6 +590,15 @@
 			<Button>Art/Interface/Buttons/units/sparth/categories/commanders.dds</Button>
 		</UnitCombatInfo>
 		<UnitCombatInfo>
+			<Type>UNITCOMBAT_COMMODORE</Type>
+			<Description>TXT_KEY_UNITCOMBAT_COMMODORE</Description>
+			<Categories>
+				<Category>CATEGORY_UNITCOMBAT_GROUP_PRIMARY_ROLE</Category>
+			</Categories>
+			<bCannotMergeSplit>1</bCannotMergeSplit>
+			<Button>Art/Interface/Buttons/units/sparth/categories/commanders.dds</Button>
+		</UnitCombatInfo>
+		<UnitCombatInfo>
 			<Type>UNITCOMBAT_TRADE</Type>
 			<Description>TXT_KEY_UNITCOMBAT_TRADE</Description>
 			<Categories>
