@@ -71,7 +71,7 @@
 		<French>Spécialisation Cupide</French>
 		<Italian>Avaro</Italian>
 		<Russian>Covetous Promotion Line</Russian>
-		<Polish>&#140;cie&#191;ka awansu (Chciwy)</Polish>
+		<Polish>&#140;cie&#191;ka awansu (Po&#191;&#185;dliwy)</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_COWARDLY</Tag>
@@ -219,7 +219,7 @@
 		<French>Spécialisation Honnête</French>
 		<Italian>Onesto</Italian>
 		<Russian>Honest Promotion Line</Russian>
-		<Polish>&#140;cie&#191;ka awansu (Uczciwy)</Polish>
+		<Polish>&#140;cie&#191;ka awansu (Szczery)</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_HUMANITARIAN_PROMOTION</Tag>
@@ -299,7 +299,7 @@
 		<French>Spécialisation Médical</French>
 		<Italian>Medico</Italian>
 		<Russian>Medical Promotion Line</Russian>
-		<Polish>&#140;cie&#191;ka</Polish>
+		<Polish>&#140;cie&#191;ka awansu (Medycyna)</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_MEDICAL_PROMOTION</Tag>
@@ -315,7 +315,7 @@
 		<French>Spécialisation Humble</French>
 		<Italian>Mite</Italian>
 		<Russian>Meek Promotion Line</Russian>
-		<Polish>&#140;cie&#191;ka awansu (Cichy)</Polish>
+		<Polish>&#140;cie&#191;ka awansu (&#163;agodny)</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_MEEK_PROMOTION</Tag>
@@ -323,7 +323,7 @@
 		<French>Spécialisation Doux</French>
 		<Italian>Mite2</Italian>
 		<Russian>Meek Promotion Line</Russian>
-		<Polish>&#140;cie&#191;ka awansu (Cichy)</Polish>
+		<Polish>&#140;cie&#191;ka awansu (&#163;agodny)</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_MINIMALIST</Tag>
