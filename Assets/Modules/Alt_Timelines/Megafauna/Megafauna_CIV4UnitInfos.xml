@@ -3442,8 +3442,6 @@
 			<iEarlyWithdraw>25</iEarlyWithdraw>
 			<iCollateralDamageLimit>100</iCollateralDamageLimit>
 			<iCollateralDamageMaxUnits>4</iCollateralDamageMaxUnits>
-			<iCityDefense>50</iCityDefense>
-			<iHillsDefense>25</iHillsDefense>
 			<TerrainAttacks>
 				<TerrainAttack>
 					<TerrainType>TERRAIN_GRASSLAND</TerrainType>
