@@ -3690,7 +3690,7 @@
 					</ActionOutcomes>
 				</Action>
 				<Action>
-					<MissionType>MISSION_CAPTIVE_UPGRADE_TO_NEANDERTHAL_TRACKER</MissionType>
+					<MissionType>MISSION_CAPTIVE_UPGRADE_TO_NEANDERTHAL_CHASER</MissionType>
 					<iCost>
 						<Adapt>
 							<ID>ADAPT_DEFAULT</ID>
@@ -3699,9 +3699,9 @@
 					</iCost>
 					<ActionOutcomes>
 						<Outcome>
-							<OutcomeType>OUTCOME_UPGRADE_TO_NEANDERTHAL_TRACKER</OutcomeType>
+							<OutcomeType>OUTCOME_UPGRADE_TO_NEANDERTHAL_CHASER</OutcomeType>
 							<iChance>100</iChance>
-							<UnitType>UNIT_NEANDERTHAL_TRACKER</UnitType>
+							<UnitType>UNIT_NEANDERTHAL_CHASER</UnitType>
 							<bUnitToCity>
 								<Constant>0</Constant>
 							</bUnitToCity>
