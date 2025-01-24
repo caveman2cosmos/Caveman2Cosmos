@@ -7403,7 +7403,7 @@
 			</TriggerTexts>
 			<EventArt>Art/Event_Images/ForestFireEvent.dds</EventArt>
 			<iPercentGamesActive>100</iPercentGamesActive>
-			<iWeight>4</iWeight>
+			<iWeight>3</iWeight>
 			<iNumPlotsRequired>1</iNumPlotsRequired>
 			<FeaturesRequired>
 				<FeatureType>FEATURE_FOREST</FeatureType>

@@ -4769,6 +4769,10 @@
 		<Tag>TXT_KEY_EVENT_WILDFIRE_2</Tag>
 		<English>We managed to save the forest.</English>
 	</TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_WILDFIRE_3</Tag>
+        <English>We did not manage to save the forest.</English>
+    </TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_CITYFIRE_MINOR_1</Tag>
 		<English>We had minor fire.</English>

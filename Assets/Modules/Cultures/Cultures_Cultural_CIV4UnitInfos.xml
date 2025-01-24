@@ -39462,6 +39462,7 @@
 				<SubCombatType>UNITCOMBAT_WEAPON_H2H_SHORT_POLEARM</SubCombatType>
 				<SubCombatType>UNITCOMBAT_WEAPON_SIDEARM_KNIFE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_ARMOR_LIGHT</SubCombatType>
+                <SubCombatType>UNITCOMBAT_WEAPON_DIST_SHORTBOW</SubCombatType>
 				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_CHARGING</SubCombatType>
 				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_STOMP</SubCombatType>
 				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_FLEEING</SubCombatType>
@@ -43423,12 +43424,14 @@
 			<Civilopedia>TXT_KEY_UNIT_QHATUQ_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_GROWTH</Advisor>
 			<bNoBadGoodies>1</bNoBadGoodies>
-			<bOnlyDefensive>1</bOnlyDefensive>
+            <bBarbCoExist>1</bBarbCoExist>
+            <bPassage>1</bPassage>
+            <bUpgradeAnywhere>1</bUpgradeAnywhere>
 			<bMilitarySupport>1</bMilitarySupport>
 			<bMilitaryProduction>1</bMilitaryProduction>
 			<bPillage>1</bPillage>
 			<UnitUpgrades>
-				<UnitType>UNIT_ADVENTURER</UnitType>
+				<UnitType>UNIT_EXPLORER</UnitType>
 			</UnitUpgrades>
 			<UnitAIs>
 				<UnitAI>
