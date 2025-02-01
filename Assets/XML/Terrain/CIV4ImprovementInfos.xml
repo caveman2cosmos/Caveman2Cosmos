@@ -6557,6 +6557,16 @@
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
+					<BonusType>BONUS_TIN_ORE</BonusType>
+					<bBonusMakesValid>1</bBonusMakesValid>
+					<bBonusTrade>1</bBonusTrade>
+					<YieldChanges>
+						<iYieldChange>0</iYieldChange>
+						<iYieldChange>0</iYieldChange>
+						<iYieldChange>1</iYieldChange>
+					</YieldChanges>
+				</BonusTypeStruct>
+				<BonusTypeStruct>
 					<BonusType>BONUS_SILVER_ORE</BonusType>
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>

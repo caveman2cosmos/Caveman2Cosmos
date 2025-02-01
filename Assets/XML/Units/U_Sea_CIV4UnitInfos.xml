@@ -6755,7 +6755,7 @@
 			<FormationType>FORMATION_TYPE_MACHINE</FormationType>
 		</UnitInfo>
 		<UnitInfo>
-			<Type>UNIT_KAYAK</Type>
+			<Type>UNIT_MASTER_SAILOR_KAYAK</Type>
 			<Combat>UNITCOMBAT_WOODEN_SHIPS</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_RECON</SubCombatType>
@@ -7929,7 +7929,7 @@
 			<FormationType>FORMATION_TYPE_MACHINE</FormationType>
 		</UnitInfo>
 		<UnitInfo>
-			<Type>UNIT_FF_DESTROYER_I</Type>
+			<Type>UNIT_MASTER_SAILOR_FF_DESTROYER_I</Type>
 			<Combat>UNITCOMBAT_NUCLEAR_SHIPS</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_DESTROYER</SubCombatType>
