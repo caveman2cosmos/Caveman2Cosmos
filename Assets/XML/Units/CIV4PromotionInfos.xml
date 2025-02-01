@@ -10864,7 +10864,6 @@
 			<Type>PROMOTION_RESCUE_DOG1</Type>
 			<Description>TXT_KEY_PROMOTION_RESCUE_DOG1</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
-			<PromotionPrereq>PROMOTION_COMBAT2</PromotionPrereq>
 			<TechPrereq>TECH_BATTLEFIELD_MEDICINE</TechPrereq>
 			<PromotionLine>PROMOTIONLINE_RESCUE_DOG</PromotionLine>
 			<iLinePriority>1</iLinePriority>
