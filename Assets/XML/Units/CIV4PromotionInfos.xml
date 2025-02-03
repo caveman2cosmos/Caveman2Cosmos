@@ -1868,7 +1868,7 @@
 			<Description>TXT_KEY_PROMOTION_HUNTER2</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<PromotionPrereq>PROMOTION_HUNTER1</PromotionPrereq>
-			<TechPrereq>TECH_TRACKING</TechPrereq>
+			<TechPrereq>TECH_TRAPPING</TechPrereq>
 			<PromotionLine>PROMOTIONLINE_HUNTER</PromotionLine>
 			<iLinePriority>2</iLinePriority>
 			<NotOnDomainTypes>
@@ -16190,7 +16190,7 @@
 			<Type>PROMOTION_ENTRAPMENT1</Type>
 			<Description>TXT_KEY_PROMOTION_ENTRAPMENT1</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
-			<TechPrereq>TECH_HUNTING</TechPrereq>
+			<TechPrereq>TECH_TRAPPING</TechPrereq>
 			<PromotionLine>PROMOTIONLINE_ENTRAPMENT</PromotionLine>
 			<iLinePriority>1</iLinePriority>
 			<iCaptureProbabilityModifierChange>10</iCaptureProbabilityModifierChange>
