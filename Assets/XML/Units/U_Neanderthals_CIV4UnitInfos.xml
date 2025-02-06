@@ -1335,7 +1335,7 @@
 				<UnitType>UNIT_WARDOG</UnitType>
 			</UnitUpgrades>
 			<ObsoleteTech>TECH_SEDENTARY_LIFESTYLE</ObsoleteTech>
-			<iCost>92</iCost>
+			<iCost>70</iCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<SeeInvisible>INVISIBLE_CAMOUFLAGE</SeeInvisible>
@@ -1345,7 +1345,7 @@
 					<iIntensity>1</iIntensity>
 				</VisibilityIntensityType>
 			</VisibilityIntensityTypes>
-			<iCombat>5</iCombat>
+			<iCombat>4</iCombat>
 			<iXPValueAttack>3</iXPValueAttack>
 			<iXPValueDefense>1</iXPValueDefense>
 			<iAnimalCombat>15</iAnimalCombat>
@@ -3690,7 +3690,7 @@
 					</ActionOutcomes>
 				</Action>
 				<Action>
-					<MissionType>MISSION_CAPTIVE_UPGRADE_TO_NEANDERTHAL_TRACKER</MissionType>
+					<MissionType>MISSION_CAPTIVE_UPGRADE_TO_NEANDERTHAL_CHASER</MissionType>
 					<iCost>
 						<Adapt>
 							<ID>ADAPT_DEFAULT</ID>
@@ -3699,9 +3699,9 @@
 					</iCost>
 					<ActionOutcomes>
 						<Outcome>
-							<OutcomeType>OUTCOME_UPGRADE_TO_NEANDERTHAL_TRACKER</OutcomeType>
+							<OutcomeType>OUTCOME_UPGRADE_TO_NEANDERTHAL_CHASER</OutcomeType>
 							<iChance>100</iChance>
-							<UnitType>UNIT_NEANDERTHAL_TRACKER</UnitType>
+							<UnitType>UNIT_NEANDERTHAL_CHASER</UnitType>
 							<bUnitToCity>
 								<Constant>0</Constant>
 							</bUnitToCity>

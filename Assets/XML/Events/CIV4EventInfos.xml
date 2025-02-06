@@ -317,16 +317,18 @@
 		<EventInfo>
 			<Type>EVENT_FOREST_MASSIVE_WILDFIRE_1</Type>
 			<Description>TXT_KEY_EVENT_FOREST_MASSIVE_WILDFIRE_1</Description>
-			<iGold>-60</iGold>
+			<iGold>-50</iGold>
 			<bGameSpeedScale>1</bGameSpeedScale>
 			<FeatureType>FEATURE_FOREST</FeatureType>
 			<iFeatureChange>-1</iFeatureChange>
-			<FeatureType>FEATURE_FOREST_BURNT</FeatureType>
-			<iFeatureChange>1</iFeatureChange>
 			<AdditionalEvents>
 				<EventChance>
 					<Event>EVENT_FOREST_WILDFIRE_SAVED</Event>
 					<iEventChance>85</iEventChance>
+				</EventChance>
+				<EventChance>
+					<Event>EVENT_FOREST_BURNED</Event>
+					<iEventChance>10</iEventChance>
 				</EventChance>
 				<EventChance>
 					<Event>EVENT_WILDFIRE_CATCHES_CITY</Event>
@@ -340,7 +342,7 @@
 		<EventInfo>
 			<Type>EVENT_FOREST_MASSIVE_WILDFIRE_2</Type>
 			<Description>TXT_KEY_EVENT_FOREST_MASSIVE_WILDFIRE_2</Description>
-			<iGold>-25</iGold>
+			<iGold>-20</iGold>
 			<bGameSpeedScale>1</bGameSpeedScale>
 			<FeatureType>FEATURE_FOREST</FeatureType>
 			<iFeatureChange>-1</iFeatureChange>
@@ -378,9 +380,14 @@
 		<EventInfo>
 			<Type>EVENT_FOREST_WILDFIRE_SAVED</Type>
 			<Description>TXT_KEY_EVENT_WILDFIRE_2</Description>
-			<FeatureType>FEATURE_FOREST_BURNT</FeatureType>
-			<iFeatureChange>-1</iFeatureChange>
 			<FeatureType>FEATURE_FOREST</FeatureType>
+			<iFeatureChange>1</iFeatureChange>
+		</EventInfo>
+
+		<EventInfo>
+			<Type>EVENT_FOREST_BURNED</Type>
+			<Description>TXT_KEY_EVENT_WILDFIRE_3</Description>
+			<FeatureType>FEATURE_FOREST_BURNT</FeatureType>
 			<iFeatureChange>1</iFeatureChange>
 		</EventInfo>
 
@@ -2841,7 +2848,8 @@
 			<Type>EVENT_INFLUENZA_1</Type>
 			<Description>TXT_KEY_EVENT_INFLUENZA_1</Description>
 			<bPickCity>1</bPickCity>
-			<iGold>-700</iGold>
+			<iGold>-400</iGold>
+			<PrereqTech>TECH_BIOLOGY</PrereqTech>
 			<bGameSpeedScale>1</bGameSpeedScale>
 			<iPopulationChange>-2</iPopulationChange>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
@@ -8432,15 +8440,6 @@
 		</EventInfo>
 
 		<EventInfo>
-			<Type>EVENT_SOCIAL_STAGNATION_3</Type>
-			<Description>TXT_KEY_EVENT_SOCIAL_STAGNATION_3</Description>
-			<bPickCity>1</bPickCity>
-			<iPopulationChange>-1</iPopulationChange>
-			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
-			<iAIValue>1</iAIValue>
-		</EventInfo>
-
-		<EventInfo>
 			<Type>EVENT_LARGE_RECESSION_1</Type>
 			<Description>TXT_KEY_EVENT_LARGE_RECESSION_1</Description>
 			<iInflationMod>15</iInflationMod>
@@ -10396,6 +10395,18 @@
 					<UnitType>UNIT_HUNTER</UnitType>
 					<Promotion>PROMOTION_HUNTING_STRIKE1</Promotion>
 				</PromoteUnit>
+				<PromoteUnit>
+					<UnitType>UNIT_MASTER_CHASER</UnitType>
+					<Promotion>PROMOTION_HUNTING_STRIKE1</Promotion>
+				</PromoteUnit>
+				<PromoteUnit>
+					<UnitType>UNIT_MASTER_TRACKER</UnitType>
+					<Promotion>PROMOTION_HUNTING_STRIKE1</Promotion>
+				</PromoteUnit>
+				<PromoteUnit>
+					<UnitType>UNIT_MASTER_HUNTER</UnitType>
+					<Promotion>PROMOTION_HUNTING_STRIKE1</Promotion>
+				</PromoteUnit>
 			</PromoteUnits>
 			<PythonCanDo>canDoBestHunters1</PythonCanDo>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
@@ -10420,6 +10431,18 @@
 				<PromoteUnit>
 					<UnitType>UNIT_HUNTER</UnitType>
 					<Promotion>PROMOTION_HUNTING_SIGHT1</Promotion>
+				</PromoteUnit>
+				<PromoteUnit>
+					<UnitType>UNIT_MASTER_CHASER</UnitType>
+					<Promotion>PROMOTION_HUNTING_STRIKE1</Promotion>
+				</PromoteUnit>
+				<PromoteUnit>
+					<UnitType>UNIT_MASTER_TRACKER</UnitType>
+					<Promotion>PROMOTION_HUNTING_STRIKE1</Promotion>
+				</PromoteUnit>
+				<PromoteUnit>
+					<UnitType>UNIT_MASTER_HUNTER</UnitType>
+					<Promotion>PROMOTION_HUNTING_STRIKE1</Promotion>
 				</PromoteUnit>
 			</PromoteUnits>
 			<PythonCanDo>canDoBestHunters2</PythonCanDo>
@@ -10446,6 +10469,18 @@
 				<PromoteUnit>
 					<UnitType>UNIT_HUNTER</UnitType>
 					<Promotion>PROMOTION_GREAT_HUNTER</Promotion>
+				</PromoteUnit>
+				<PromoteUnit>
+					<UnitType>UNIT_MASTER_CHASER</UnitType>
+					<Promotion>PROMOTION_HUNTING_STRIKE1</Promotion>
+				</PromoteUnit>
+				<PromoteUnit>
+					<UnitType>UNIT_MASTER_TRACKER</UnitType>
+					<Promotion>PROMOTION_HUNTING_STRIKE1</Promotion>
+				</PromoteUnit>
+				<PromoteUnit>
+					<UnitType>UNIT_MASTER_HUNTER</UnitType>
+					<Promotion>PROMOTION_HUNTING_STRIKE1</Promotion>
 				</PromoteUnit>
 			</PromoteUnits>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>

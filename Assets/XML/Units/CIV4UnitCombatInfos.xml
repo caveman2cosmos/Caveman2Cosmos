@@ -4253,55 +4253,6 @@
 			<Categories>
 				<Category>CATEGORY_UNITCOMBAT_GROUP_TAXONOMY</Category>
 			</Categories>
-			<InvisibleTerrainChanges>
-				<InvisibleTerrainChange>
-					<InvisibleType>INVISIBLE_CAMOUFLAGE</InvisibleType>
-					<TerrainType>TERRAIN_LUSH</TerrainType>
-					<iIntensity>1</iIntensity>
-				</InvisibleTerrainChange>
-				<InvisibleTerrainChange>
-					<InvisibleType>INVISIBLE_CAMOUFLAGE</InvisibleType>
-					<TerrainType>TERRAIN_MARSH</TerrainType>
-					<iIntensity>2</iIntensity>
-				</InvisibleTerrainChange>
-				<InvisibleTerrainChange>
-					<InvisibleType>INVISIBLE_CAMOUFLAGE</InvisibleType>
-					<TerrainType>TERRAIN_MUDDY</TerrainType>
-					<iIntensity>1</iIntensity>
-				</InvisibleTerrainChange>
-			</InvisibleTerrainChanges>
-			<InvisibleFeatureChanges>
-				<InvisibleFeatureChange>
-					<InvisibleType>INVISIBLE_CAMOUFLAGE</InvisibleType>
-					<FeatureType>FEATURE_JUNGLE</FeatureType>
-					<iIntensity>1</iIntensity>
-				</InvisibleFeatureChange>
-				<InvisibleFeatureChange>
-					<InvisibleType>INVISIBLE_CAMOUFLAGE</InvisibleType>
-					<FeatureType>FEATURE_OASIS</FeatureType>
-					<iIntensity>1</iIntensity>
-				</InvisibleFeatureChange>
-				<InvisibleFeatureChange>
-					<InvisibleType>INVISIBLE_CAMOUFLAGE</InvisibleType>
-					<FeatureType>FEATURE_FLOOD_PLAINS</FeatureType>
-					<iIntensity>1</iIntensity>
-				</InvisibleFeatureChange>
-				<InvisibleFeatureChange>
-					<InvisibleType>INVISIBLE_CAMOUFLAGE</InvisibleType>
-					<FeatureType>FEATURE_SWAMP</FeatureType>
-					<iIntensity>2</iIntensity>
-				</InvisibleFeatureChange>
-				<InvisibleFeatureChange>
-					<InvisibleType>INVISIBLE_CAMOUFLAGE</InvisibleType>
-					<FeatureType>FEATURE_MANGROVE</FeatureType>
-					<iIntensity>2</iIntensity>
-				</InvisibleFeatureChange>
-				<InvisibleFeatureChange>
-					<InvisibleType>INVISIBLE_CAMOUFLAGE</InvisibleType>
-					<FeatureType>FEATURE_VERY_TALL_GRASS</FeatureType>
-					<iIntensity>1</iIntensity>
-				</InvisibleFeatureChange>
-			</InvisibleFeatureChanges>
 			<Button>Art/Interface/Buttons/units/sparth/categories/reptile.dds</Button>
 		</UnitCombatInfo>
 		<UnitCombatInfo>
@@ -4424,7 +4375,7 @@
 				<InvisibleFeatureChange>
 					<InvisibleType>INVISIBLE_CAMOUFLAGE</InvisibleType>
 					<FeatureType>FEATURE_JUNGLE</FeatureType>
-					<iIntensity>2</iIntensity>
+					<iIntensity>1</iIntensity>
 				</InvisibleFeatureChange>
 				<InvisibleFeatureChange>
 					<InvisibleType>INVISIBLE_CAMOUFLAGE</InvisibleType>
@@ -4444,7 +4395,7 @@
 				<InvisibleFeatureChange>
 					<InvisibleType>INVISIBLE_CAMOUFLAGE</InvisibleType>
 					<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
-					<iIntensity>2</iIntensity>
+					<iIntensity>1</iIntensity>
 				</InvisibleFeatureChange>
 				<InvisibleFeatureChange>
 					<InvisibleType>INVISIBLE_CAMOUFLAGE</InvisibleType>
@@ -4495,6 +4446,45 @@
 			</Categories>
 			<iStealthStrikesChange>1</iStealthStrikesChange>
 			<iStealthCombatModifierChange>25</iStealthCombatModifierChange>
+			<InvisibleTerrainChanges>
+				<InvisibleTerrainChange>
+					<InvisibleType>INVISIBLE_CAMOUFLAGE</InvisibleType>
+					<TerrainType>TERRAIN_MARSH</TerrainType>
+					<iIntensity>1</iIntensity>
+				</InvisibleTerrainChange>
+				<InvisibleTerrainChange>
+					<InvisibleType>INVISIBLE_CAMOUFLAGE</InvisibleType>
+					<TerrainType>TERRAIN_MUDDY</TerrainType>
+					<iIntensity>1</iIntensity>
+				</InvisibleTerrainChange>
+			</InvisibleTerrainChanges>
+			<InvisibleFeatureChanges>
+				<InvisibleFeatureChange>
+					<InvisibleType>INVISIBLE_CAMOUFLAGE</InvisibleType>
+					<FeatureType>FEATURE_OASIS</FeatureType>
+					<iIntensity>1</iIntensity>
+				</InvisibleFeatureChange>
+				<InvisibleFeatureChange>
+					<InvisibleType>INVISIBLE_CAMOUFLAGE</InvisibleType>
+					<FeatureType>FEATURE_FLOOD_PLAINS</FeatureType>
+					<iIntensity>1</iIntensity>
+				</InvisibleFeatureChange>
+				<InvisibleFeatureChange>
+					<InvisibleType>INVISIBLE_CAMOUFLAGE</InvisibleType>
+					<FeatureType>FEATURE_SWAMP</FeatureType>
+					<iIntensity>1</iIntensity>
+				</InvisibleFeatureChange>
+				<InvisibleFeatureChange>
+					<InvisibleType>INVISIBLE_CAMOUFLAGE</InvisibleType>
+					<FeatureType>FEATURE_MANGROVE</FeatureType>
+					<iIntensity>1</iIntensity>
+				</InvisibleFeatureChange>
+				<InvisibleFeatureChange>
+					<InvisibleType>INVISIBLE_CAMOUFLAGE</InvisibleType>
+					<FeatureType>FEATURE_PEAT_BOG</FeatureType>
+					<iIntensity>1</iIntensity>
+				</InvisibleFeatureChange>
+			</InvisibleFeatureChanges>
 			<Button>Art/Interface/Buttons/units/sparth/categories/reptile.dds</Button>
 		</UnitCombatInfo>
 		<UnitCombatInfo>
@@ -5094,6 +5084,12 @@
 				<Category>CATEGORY_UNITCOMBAT_GROUP_NATURAL</Category>
 			</Categories>
 			<iWithdrawalChange>5</iWithdrawalChange>
+			<InvisibilityIntensityChangeTypes>
+				<InvisibilityIntensityChangeType>
+					<InvisibleType>INVISIBLE_CAMOUFLAGE</InvisibleType>
+					<iIntensity>1</iIntensity>
+				</InvisibilityIntensityChangeType>
+			</InvisibilityIntensityChangeTypes>
 			<Button>Art/Interface/Buttons/units/sparth/categories/nature_burrowing.dds</Button>
 		</UnitCombatInfo>
 		<UnitCombatInfo>
@@ -5244,7 +5240,7 @@
 			<InvisibilityIntensityChangeTypes>
 				<InvisibilityIntensityChangeType>
 					<InvisibleType>INVISIBLE_CAMOUFLAGE</InvisibleType>
-					<iIntensity>1</iIntensity>
+					<iIntensity>2</iIntensity>
 				</InvisibilityIntensityChangeType>
 			</InvisibilityIntensityChangeTypes>
 			<Button>Art/Interface/Buttons/units/sparth/categories/nature_camoflaged.dds</Button>
@@ -5391,11 +5387,6 @@
 			</WithdrawModifierOnTerrainTypeChanges>
 			<InvisibleTerrainChanges>
 				<InvisibleTerrainChange>
-					<InvisibleType>INVISIBLE_CAMOUFLAGE</InvisibleType>
-					<TerrainType>TERRAIN_MARSH</TerrainType>
-					<iIntensity>1</iIntensity>
-				</InvisibleTerrainChange>
-				<InvisibleTerrainChange>
 					<InvisibleType>INVISIBLE_SUBMARINE</InvisibleType>
 					<TerrainType>TERRAIN_COAST_POLAR</TerrainType>
 					<iIntensity>1</iIntensity>
@@ -5489,27 +5480,7 @@
 				</InvisibleFeatureChange>
 				<InvisibleFeatureChange>
 					<InvisibleType>INVISIBLE_CAMOUFLAGE</InvisibleType>
-					<FeatureType>FEATURE_FLOOD_PLAINS</FeatureType>
-					<iIntensity>1</iIntensity>
-				</InvisibleFeatureChange>
-				<InvisibleFeatureChange>
-					<InvisibleType>INVISIBLE_CAMOUFLAGE</InvisibleType>
 					<FeatureType>FEATURE_KELP</FeatureType>
-					<iIntensity>1</iIntensity>
-				</InvisibleFeatureChange>
-				<InvisibleFeatureChange>
-					<InvisibleType>INVISIBLE_CAMOUFLAGE</InvisibleType>
-					<FeatureType>FEATURE_MANGROVE</FeatureType>
-					<iIntensity>1</iIntensity>
-				</InvisibleFeatureChange>
-				<InvisibleFeatureChange>
-					<InvisibleType>INVISIBLE_CAMOUFLAGE</InvisibleType>
-					<FeatureType>FEATURE_OASIS</FeatureType>
-					<iIntensity>1</iIntensity>
-				</InvisibleFeatureChange>
-				<InvisibleFeatureChange>
-					<InvisibleType>INVISIBLE_CAMOUFLAGE</InvisibleType>
-					<FeatureType>FEATURE_PEAT_BOG</FeatureType>
 					<iIntensity>1</iIntensity>
 				</InvisibleFeatureChange>
 				<InvisibleFeatureChange>
@@ -5530,11 +5501,6 @@
 				<InvisibleFeatureChange>
 					<InvisibleType>INVISIBLE_CAMOUFLAGE</InvisibleType>
 					<FeatureType>FEATURE_SEA_GRASS</FeatureType>
-					<iIntensity>1</iIntensity>
-				</InvisibleFeatureChange>
-				<InvisibleFeatureChange>
-					<InvisibleType>INVISIBLE_CAMOUFLAGE</InvisibleType>
-					<FeatureType>FEATURE_SWAMP</FeatureType>
 					<iIntensity>1</iIntensity>
 				</InvisibleFeatureChange>
 			</InvisibleFeatureChanges>
@@ -5575,27 +5541,12 @@
 			<InvisibleFeatureChanges>
 				<InvisibleFeatureChange>
 					<InvisibleType>INVISIBLE_CAMOUFLAGE</InvisibleType>
-					<FeatureType>FEATURE_FOREST</FeatureType>
-					<iIntensity>1</iIntensity>
-				</InvisibleFeatureChange>
-				<InvisibleFeatureChange>
-					<InvisibleType>INVISIBLE_CAMOUFLAGE</InvisibleType>
 					<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
 					<iIntensity>1</iIntensity>
 				</InvisibleFeatureChange>
 				<InvisibleFeatureChange>
 					<InvisibleType>INVISIBLE_CAMOUFLAGE</InvisibleType>
 					<FeatureType>FEATURE_JUNGLE</FeatureType>
-					<iIntensity>1</iIntensity>
-				</InvisibleFeatureChange>
-				<InvisibleFeatureChange>
-					<InvisibleType>INVISIBLE_CAMOUFLAGE</InvisibleType>
-					<FeatureType>FEATURE_MANGROVE</FeatureType>
-					<iIntensity>1</iIntensity>
-				</InvisibleFeatureChange>
-				<InvisibleFeatureChange>
-					<InvisibleType>INVISIBLE_CAMOUFLAGE</InvisibleType>
-					<FeatureType>FEATURE_SWAMP</FeatureType>
 					<iIntensity>1</iIntensity>
 				</InvisibleFeatureChange>
 			</InvisibleFeatureChanges>

@@ -21,6 +21,7 @@
 		<English>An [COLOR_BUILDING_TEXT]automaton clock[COLOR_REVERT], or automata clock, is a type of striking clock featuring automatons. Clocks like these were built from the 1st century BC through to Victorian times in Europe. Automatons usually perform on the hour, half-hour or quarter-hour, usually to strike bells.</English>
 		<Italian>Un [COLOR_BUILDING_TEXT]orologio automatico[COLOR_REVERT] è un tipo di orologio a suoneria con automi. Questo tipo di orologi sono stati costruiti dal I secolo a.C. fino all'epoca vittoriana in Europa. Gli automi si attivano ogni 15, 30 o 60 minuti, perlopiù per suonare le campane e segnare così l'orario.</Italian>
 		<Russian>Àâòîìàòè÷åñêèå ÷àñû - ýòî òèï ÷àñîâ ñ àâòîìàòèçèðîâàííûì áîåì. Ýòè ÷àñû ñîçäàâàëèñü â Åâðîïå íà÷èíàÿ ñî ñðåäíåâåêîâüÿ è äî âèêòîðèàíñêîé ýïîõè. Òðàäèöèè èçîáðåòàòåëüñòâà äåëàþò èõ áîëåå ðàñïðîñòðàíåíûìè â íàøåé ñòðàíå, ÷åì â äðóãèõ. Àâòîìàò, êàê ïðàâèëî, óñòàíàâëèâàëè íà ÷àñ, ïîë÷àñà èëè ÷åòâåðòü ÷àñà, îáû÷íî ñ óäàðàìè êîëîêîëà.</Russian>
+		<Polish>[COLOR_BUILDING_TEXT]Automat zegarowy[COLOR_REVERT] lub zegar automatowy to rodzaj uderzaj&#185;cego zegara wyposa&#191;onego w automaty. Takie zegary budowano w Europie od I wieku p.n.e. a&#191; do czas&#243;w wiktoria&#241;skich. Automaty zwykle graj&#185; co godzin&#234;, p&#243;&#179; godziny lub kwadrans, zwykle uderzaj&#185;c w dzwony.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ORNITHOPTER_AERIE</Tag>
@@ -44,6 +45,7 @@
 		<French>Un [COLOR_BUILDING_TEXT]aire d'ornithoptères[COLOR_REVERT] est un petit aérodrome, d'où peuvent décoller les [COLOR_UNIT_TEXT]ornithoptères[COLOR_REVERT].</French>
 		<Italian>Un [COLOR_BUILDING_TEXT]nido per ornitotteri[COLOR_REVERT] è un primitivo aeroporto, ideato per gli [COLOR_UNIT_TEXT]ornitotteri[COLOR_REVERT].</Italian>
 		<Russian>Îðíèòîïòåðíàÿ ïëîùàäêà - ýòî äðåâíèé àýðîïîðò äëÿ îðíèòîïòåðîâ.</Russian>
+		<Polish>[COLOR_BUILDING_TEXT]Baza Ornitopter&#243;w, [COLOR_REVERT]to wczesne lotnisko dla [COLOR_UNIT_TEXT]ornitopter&#243;w[COLOR_REVERT].</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_CLOCKPUNK</Tag>
@@ -58,6 +60,7 @@
 		<French>Le [COLOR_BUILDING_TEXT]Clockpunk[COLOR_REVERT] est un sous-genre de fiction spéculative similaire au steampunk. Il décrit des technologies avancées basées sur des ressorts et des horloges, au lieu des technologies actuelles, tout en conservant un design pré-moderne. Clockpunk est très intensément basé sur les œuvres de Léonard de Vinci et, en tant que tel, il se déroule généralement à la Renaissance ou à une époque similaire à la Renaissance.</French>
 		<Italian>Il [COLOR_BUILDING_TEXT]Clockpunk[COLOR_REVERT] è un sottogenere della letteratura fantascientifica simile allo steampunk. Ritrae tecnologie avanzate basate su molle e orologi, al contrario dei meccanismi attuali, pur mantenendo un design pre-moderno. Il Clockpunk si basa ampiamente sulle opere di Leonardo da Vinci e, pertanto, è tipicamente ambientato durante il Rinascimento o in uno scenario simile all'epoca rinascimentale.</Italian>
 		<Russian>Клокпанк - жанр научной фантастики, моделирующий мир как правило, стоящий на технологическом уровне эпохи Возрождения, где в совершенстве освоены технологии использования энергии пружин и маховиков.</Russian>
+		<Polish>[COLOR_BUILDING_TEXT]Clockpunk[COLOR_REVERT] to podgatunek fikcji spekulatywnej podobny do steampunku. Przedstawia zaawansowane technologie oparte na spr&#234;&#191;ynach i mechanizmie zegarowym, a nie na obecnych technologiach, pomimo zachowania przednowoczesnego designu. Clockpunk bardzo intensywnie opiera si&#234; na dzie&#179;ach Leonarda da Vinci i jako taki rozgrywa si&#234; zazwyczaj w epoce renesansu lub jej podobnej.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CLOCKWORK_WORKSHOP</Tag>
@@ -80,6 +83,7 @@
 		<English>A [COLOR_BUILDING_TEXT]Clockwork Workshop[COLOR_REVERT] is a building that is specifically intended to produce and adjust the inner workings of either mechanical clocks or other machines that work similarly, using a complex series of gears.</English>
 		<Italian>Un [COLOR_BUILDING_TEXT]laboratorio di orologeria[COLOR_REVERT] è un edificio che è specificamente progettato per produrre e aggiustare i meccanismi interni di orologi meccanici o altre macchine che funzionano in modo simile, utilizzando una complessa serie di ingranaggi.</Italian>
 		<Russian>×àñîâîé ìåõàíèçì - ýòî âíóòðåííÿÿ êîíñòðóêöèÿ ìåõàíè÷åñêèõ ÷àñîâ èëè óñòðîéñòâî, ðàáîòàþùåå àíàëîãè÷íûì îáðàçîì. Â ÷àñòíîñòè, ýòîò òåðìèí îáîçíà÷àåò ìåõàíè÷åñêîå óñòðîéñòâî ñ èñïîëüçîâàíèåì ñëîæíîé ïîñëåäîâàòåëüíîñòè øåñòåðåí.</Russian>
+		<Polish>[COLOR_BUILDING_TEXT]Warsztat Zegarmistrzowski[COLOR_REVERT], to budynek przeznaczony specjalnie do produkcji i regulacji wewn&#234;trznego dzia&#179;ania zegar&#243;w mechanicznych lub innych maszyn, kt&#243;re dzia&#179;aj&#185; podobnie, przy u&#191;yciu z&#179;o&#191;onej serii przek&#179;adni.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ORCHESTRION_THEATER</Tag>
@@ -91,7 +95,7 @@
 		</French>
 		<Italian>Teatro d'orchestrion</Italian>
 		<Polish>
-			<Text>Teatr Orchestrion</Text>
+			<Text>Teatr Orkiestrion</Text>
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</Polish>
@@ -102,6 +106,7 @@
 		<English>An [COLOR_BUILDING_TEXT]orchestrion[COLOR_REVERT] is a generic name for a machine that plays music and is designed to sound like an orchestra or band. Orchestrions may be operated by means of a large pinned cylinder, by a music roll or, less commonly, a book music. The sound is usually produced by pipes, though they will be voiced differently to those found in a pipe organ, as well as percussion instruments. Many orchestrions contain a piano as well. Orchestrion theaters comprise enormous wall-sized machines, usually complete with mechanical dolls moving in time to the music, and seats from which citizens can appreciate the works of our music roll composers.</English>
 		<Italian>L'[COLOR_BUILDING_TEXT]orchestrion[COLOR_REVERT] è una macchina progettata per produrre il suono di un'intera orchestra o banda. Gli orchestrion possono essere azionati da un grande cilindro a rilievi oppure da un rotolo musicale. Solitamente il suono è prodotto da canne, anche se è diverso da quello prodotto dalle canne di un organo, così come da uno strumento a percussione. Molti orchestrion contengono anche un piano. I teatri-orchestrion comprendono enormi macchine, di solito complete di bambole meccaniche che si muovono a tempo con la musica, e posti dai quali i cittadini possono apprezzare le opere dei nostri compositori.</Italian>
 		<Russian>Îðêåñòðèîí - íàçâàíèå ðÿäà ìóçûêàëüíûõ èíñòðóìåíòîâ, ïðèñïîñîáëåííûõ äëÿ èìèòàöèè çâó÷àíèÿ îðêåñòðà.[PARAGRAPH:1]Èíñòðóìåíò èìåë âèä øêàôà, âíóòðè êîòîðîãî áûë ïîìåùåí ïðóæèííûé èëè ïíåâìàòè÷åñêèé ìåõàíèçì, êîòîðûé ïðè âáðàñûâàíèè ìîíåòû ïðèâîäèëñÿ â äåéñòâèå. Ðàñïîëîæåíèå ñòðóí èëè òðóá èíñòðóìåíòà áûëî ïîäîáðàíî òàêèì îáðàçîì, ÷òîáû ïðè ðàáîòå ìåõàíèçìà çâó÷àëè îïðåäåë¸ííûå ìóçûêàëüíûå ïðîèçâåäåíèÿ.</Russian>
+		<Polish>[COLOR_BUILDING_TEXT]Orkiestrion, [COLOR_REVERT]to og&#243;lna nazwa maszyny odtwarzaj&#185;cej muzyk&#234;, zaprojektowanej tak, aby brzmia&#179;a jak orkiestra lub zesp&#243;&#179;. Orkiestriony mo&#191;na obs&#179;ugiwa&#230; za pomoc&#185; du&#191;ego cylindra z przegubami, rolki muzycznej lub rzadziej muzyki ksi&#185;&#191;kowej. D&#159;wi&#234;k jest zwykle wytwarzany przez piszcza&#179;ki, chocia&#191; b&#234;d&#185; one brzmia&#179;y inaczej ni&#191; te, kt&#243;re mo&#191;na znale&#159;&#230; w organach piszcza&#179;kowych, a tak&#191;e w instrumentach perkusyjnych. W wielu orkiestronach znajduje si&#234; r&#243;wnie&#191; fortepian. Teatry Orkiestrion sk&#179;adaj&#185; si&#234; z ogromnych maszyn wielko&#156;ci &#156;ciany, zwykle wyposa&#191;onych w mechaniczne lalki poruszaj&#185;ce si&#234; w rytm muzyki, oraz siedzenia, z kt&#243;rych obywatele mog&#185; podziwia&#230; dzie&#179;a naszych kompozytor&#243;w.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_STEP_RECKONER_MANUFACTURE</Tag>
@@ -124,12 +129,14 @@
 		<English>A [COLOR_BUILDING_TEXT]Step Reckoner[COLOR_REVERT] is a portable cranked mechanical calculator that can perform all four basic arithmetic operations (addition, subtraction, multiplication, and division). They're a real step up from the abacus, when it comes to calculating arithmetic.</English>
 		<Italian>Un [COLOR_BUILDING_TEXT]calcolatore meccanico[COLOR_REVERT] è uno strumento portatile in grado di effettuare le quattro operazioni aritmetiche di base (addizione, sottrazione, moltiplicazione e divisione). È un grande passo avanti rispetto all'abaco, per quanto riguarda i calcoli aritmetici.</Italian>
 		<Russian>Ñ÷åòíûå ìàøèíû - ýòî ïåðåíîñíûå ìåõàíè÷åñêèå êàëüêóëÿòîðû, êîòîðûå óìåþò âûïîëíÿòü ïðîñòåéøèå àðèôìåòè÷åñêèå îïåðàöèè.[PARAGRAPH:1]Ýòè ìåõàíèçìû - ñåðüåçíûé øàã âïåðåä, ïî ñðàâíåíèþ ñî ñ÷åòàìè. Äðóãèå, ìåíåå èçîáðåòàòåëüíûå ñòðàíû óòâåðæäàþò, ÷òî îíè ñëîæíû è íåíàäåæíû, íî ìû ñïðàâëÿåìñÿ ñ íèìè ïðîñòî îòëè÷íî.</Russian>
+		<Polish>[COLOR_BUILDING_TEXT]Maszyna licz&#185;ca[COLOR_REVERT] to przeno&#156;ny kalkulator mechaniczny z korb&#185;, kt&#243;ry mo&#191;e wykonywa&#230; wszystkie cztery podstawowe operacje arytmetyczne (dodawanie, odejmowanie, mno&#191;enie i dzielenie). S&#185; prawdziwym krokiem naprz&#243;d w stosunku do liczyd&#179;a, je&#156;li chodzi o obliczenia arytmetyczne.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_CLOCKPUNK</Tag>
 		<English>Clockpunk</English>
 		<Russian>Клокпанк</Russian>
 		<Italian>Clockpunk (cultura alternativa)</Italian>
+		<Polish>Clockpunk</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_CLOCKPUNK_PEDIA</Tag>
@@ -137,13 +144,14 @@
 		<French>Le [COLOR_TECH_TEXT]Clockpunk[COLOR_REVERT] est un sous-genre de fiction spéculative similaire au steampunk. Il décrit des technologies avancées basées sur des ressorts et des horloges, au lieu des technologies actuelles, tout en conservant un design pré-moderne. Clockpunk est très intensément basé sur les œuvres de Léonard de Vinci et, en tant que tel, il se déroule généralement à la Renaissance ou à une époque similaire à la Renaissance.</French>
 		<Italian>Il [COLOR_TECH_TEXT]Clockpunk[COLOR_REVERT] è un sottogenere della letteratura fantascientifica simile allo steampunk. Ritrae tecnologie avanzate basate su molle e orologi, al contrario dei meccanismi attuali, pur mantenendo un design pre-moderno. Il Clockpunk si basa ampiamente sulle opere di Leonardo da Vinci e, pertanto, è tipicamente ambientato durante il Rinascimento o in uno scenario simile all'epoca rinascimentale.</Italian>
 		<Russian>[COLOR_TECH_TEXT]Клокпанк[COLOR_REVERT] - это жанр спекулятивной фантастики, который похож на стимпанк, но отличается по своей технологии. Как и в случае с стимпанком, в нем представлены передовые технологии, основанные на модернистских моделях, а не на паровой энергии промышленной эпохи, и используемая в жанре технология основана на пружинах, часовом механизме и тому подобном. Клокпанк как правило основан на работах Леонардо да Винчи и, как таковой, он обычно устанавливается во времена Ренессанса. Идея довольно новая, однако в этом жанре создано очень мало работ. Среди произведений клокпанка можно упомянуть «Ангел Паскуале» Пола Дж. Маколи, Джек Фауст Майкла Свонвика, а также грядущий роман «Главный источник» Джея Лейка. Также есть элементы клокпанка в серии комиксов Marvel 1602 и ее продолжениях, а также в романах Терри Пратчетта Discworld, прежде всего космический челнок да Винчи в «Последнем герое». Приключенческая игра Benot Sokal Syberia также может считаться клокпанком, поскольку в ней представлены пружинные машины и часовые автоматы.</Russian>
+		<Polish>[COLOR_TECH_TEXT]Clockpunk[COLOR_REVERT], to podgatunek fikcji spekulatywnej podobny do steampunku. Przedstawia zaawansowane technologie oparte na spr&#234;&#191;ynach i mechanizmie zegarowym, a nie na obecnych technologiach, pomimo zachowania przednowoczesnego designu. Clockpunk bardzo intensywnie opiera si&#234; na dzie&#179;ach Leonarda da Vinci i jako taki rozgrywa si&#234; zazwyczaj w epoce renesansu lub jej podobnej.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_CLOCKPUNK_QUOTE</Tag>
 		<English>«A clockwork heart can't replace the real thing.» - Dru Pagliassotti, Clockwork Heart</English>
 		<French>« Un cœur d'horlogerie ne peut pas remplacer la chose réelle. » - Dru Pagliassotti, Le Cœur d'Horlogerie</French>
 		<Italian>«Un cuore meccanico non può sostituirne uno vero.» - Dru Pagliassotti, Clockwork Heart</Italian>
-		<Polish>«Mechaniczne serce mo&#191;e zast&#185;pi&#230; rzeczywiste.» - Dru Pagliassotti, Clockwork Heart</Polish>
+		<Polish>«Mechaniczne serce nie mo&#191;e zast&#185;pi&#230; rzeczywistego.» - Dru Pagliassotti, Clockwork Heart</Polish>
 		<Russian>«Механическое сердце не способно заменить настоящее и живое». - Дрю Паглиассотти, Заводное Сердце</Russian>
 	</TEXT>
 	<TEXT>
@@ -167,6 +175,7 @@
 		<English>A [COLOR_UNIT_TEXT]Clockwork Golem[COLOR_REVERT] is a combat unit, with good all-around skills and generally man-like in shape. In most cases, melee weapons are built directly onto its arms and a cannon is mounted in its chest. Despite moving with a variety of whirrs, clicks, and other mechanical sounds, it's a perfectly functioning and potentially deadly machine.</English>
 		<Italian>Un [COLOR_UNIT_TEXT]golem meccanico[COLOR_REVERT] è un unità da combattimento, piuttosto equilibrata nelle sue caratteristiche e solitamente di aspetto quasi umano. In molti casi, vengono progettati con delle armi da combattimento già integrate nelle braccia e un cannone nel petto. Pur emettendo una serie di rumori meccanici, è un'unità perfettamente funzionante e potenzialmente letale.</Italian>
 		<Russian>Äâóíîãèé áðîíèðîâàííûé áîåâîé þíèò</Russian>
+		<Polish>[COLOR_UNIT_TEXT]Mechaniczny Golem[COLOR_REVERT], to jednostka bojowa, posiadaj&#185;ca dobre wszechstronne umiej&#234;tno&#156;ci i og&#243;lnie kszta&#179;tem przypominaj&#185;ca cz&#179;owieka. W wi&#234;kszo&#156;ci przypadk&#243;w bro&#241; bia&#179;a jest wbudowana bezpo&#156;rednio w jego ramiona, a armata jest zamontowana w jego piersi. Pomimo poruszania si&#234;, wydaj&#185;c r&#243;&#191;norodne warkoty, klikni&#234;cia i inne mechaniczne d&#159;wi&#234;ki, jest to doskonale funkcjonuj&#185;ca i potencjalnie zab&#243;jcza maszyna.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_DAVINCI_TANK</Tag>
@@ -189,6 +198,7 @@
 		<English>A [COLOR_UNIT_TEXT]Da Vinci Tank[COLOR_REVERT] is a prototype of modern tanks, designed by Leonardo da Vinci. It has a conical cover, inspired by a turtle's shell, made of wood and reinforced with metal plates that add to the thickness. Its slanting angles deflect enemy fire. The machine is powered by two large inside cranks, operated by four strong men. The vehicle is equipped with an array of light cannons, placed around the perimeter.</English>
 		<Italian>Il [COLOR_UNIT_TEXT]carro armato di Leonardo[COLOR_REVERT] è un prototipo dei moderni carri armati, progettato da Leonardo da Vinci. Ha una copertura conica, ispirata a un guscio di tartaruga, realizzata in legno e rinforzata con piastre metalliche che ne aumentano lo spessore. I suoi angoli obliqui deviano il fuoco nemico. La macchina è alimentata da due grandi pedivelle interne, azionate da quattro uomini forti. Il veicolo è dotato di una serie di cannoni leggeri, disposti attorno al perimetro.</Italian>
 		<Russian>Êîëåñíûé áðîíèðîâàííûé áîåâîé þíèò</Russian>
+		<Polish>[COLOR_UNIT_TEXT]Czo&#179;g Da Vinci[COLOR_REVERT], to prototyp nowoczesnego czo&#179;gu, zaprojektowany przez Leonarda da Vinci. Posiada sto&#191;kow&#185; pokryw&#234; inspirowan&#185; skorup&#185; &#191;&#243;&#179;wia, wykonan&#185; z drewna i wzmocnion&#185; metalowymi p&#179;ytkami, kt&#243;re dodaj&#185; grubo&#156;ci. Jego sko&#156;ne k&#185;ty odbijaj&#185; ogie&#241; wroga. Maszyna nap&#234;dzana jest dwoma du&#191;ymi wewn&#234;trznymi korbami, obs&#179;ugiwanymi przez czterech silnych m&#234;&#191;czyzn. Pojazd jest wyposa&#191;ony w szereg lekkich dzia&#179; rozmieszczonych na ca&#179;ym obwodzie.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_ORNITHOPTER</Tag>
@@ -211,6 +221,7 @@
 		<English>An [COLOR_UNIT_TEXT]ornithopter[COLOR_REVERT] is a prototype for aircraft, that allows a man to fly by flapping its wings. Designers were inspired and sought to imitate the flapping-wing flight of birds, bats, and insects. Though machines may differ in form, they are usually built on the same scale as these flying creatures. There are two general types of ornithopters: those with engines, and those powered by the muscles of the pilot.</English>
 		<Italian>Un [COLOR_UNIT_TEXT]ornitottero[COLOR_REVERT] è un prototipo di velivolo, che consente a un uomo di volare sbattendo le ali. I designer sono stati ispirati e hanno cercato di imitare il volo ad ali battenti di uccelli, pipistrelli e insetti. Sebbene le macchine possano differire nella forma, di solito sono costruite sulla stessa scala di queste creature volanti. Esistono due tipi generali di ornitotteri: quelli a motore e quelli alimentati dai muscoli del pilota.</Italian>
 		<Russian>Îðíèòîïòåð - âîçäóøíîå ñóäíî òÿæåëåå âîçäóõà, êîòîðîå ïîääåðæèâàåòñÿ â ïîëåòå â îñíîâíîì çà ñ÷åò ðåàêöèé âîçäóõà ñ åãî ïëîñêîñòÿìè, êîòîðûì ïðèäà¸òñÿ ìàõîâîå äâèæåíèå. Â ðóññêîì ÿçûêå òàêæå ðàñïðîñòðàíåíû ñèíîíèìû ? ìàõîëåò, ïòèöåêðûëûé ëåòàòåëüíûé àïïàðàò.</Russian>
+		<Polish>[COLOR_UNIT_TEXT]Ornitopter[COLOR_REVERT], to prototyp samolotu, kt&#243;ry pozwala cz&#179;owiekowi lata&#230; poprzez machanie skrzyd&#179;ami. Projektanci inspirowali si&#234; i starali si&#234; na&#156;ladowa&#230; lot machaj&#185;cych skrzyde&#179; ptak&#243;w, nietoperzy i owad&#243;w. Chocia&#191; maszyny mog&#185; r&#243;&#191;ni&#230; si&#234; kszta&#179;tem, zwykle s&#185; zbudowane w tej samej skali, co te lataj&#185;ce stworzenia. Istniej&#185; dwa g&#179;&#243;wne typy ornitopter&#243;w: te z silnikami i te nap&#234;dzane mi&#234;&#156;niami pilota.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_REPEATING_CROSSBOWMAN</Tag>
@@ -222,7 +233,7 @@
 		</French>
 		<Italian>Balestriere a ripetizione</Italian>
 		<Polish>
-			<Text>Kusza Samopowtarzlna</Text>
+			<Text>Kusznik z samopowtarzaln&#185; kusz&#185;</Text>
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</Polish>
@@ -233,6 +244,7 @@
 		<English>A [COLOR_UNIT_TEXT]Repeating Crossbowman[COLOR_REVERT] is a clockpunk-style crossbowman equipped with an enhanced crossbow: the separate actions of stringing the bow, placing the bolt and shooting it can be accomplished with a simple one-handed movement, while keeping the crossbow stationary. This allows a higher rate of fire than a normal crossbow. There is a magazine containing a number of bolts on top of the bow, and the mechanism is worked by moving a rectangular lever forward and backward.</English>
 		<Italian>Un [COLOR_UNIT_TEXT]balestriere a ripetizione[COLOR_REVERT] è un balestriere in stile clockpunk dotato di una balestra potenziata, con la quale è possibile tendere la corda, posizionare la freccia e lanciarla con un semplice movimento di una mano, mantenendo ferma la balestra. Questo consente una capacità di fuoco maggiore rispetto a una normale balestra. Sopra la corda, c'è un caricatore con un determinato numero di frecce, mentre il meccanismo viene azionato muovendo una leva rettangolare avanti e indietro.</Italian>
 		<Russian>Ñòðåëîìåò - ýòî ìíîãîçàðÿäíûé àðáàëåò. Â ýòîì àðáàëåòå äåéñòâèÿ ïî íàòÿæåíèþ òåòèâû, óêëàäêå ñíàðÿäà è ñïóñêó òåòèâû ïðîèçâîäÿòñÿ îäíèì äâèæåíèåì ðóêè. Áëàãîäàðÿ óñòàíàâëèâàåìûì íà îðóæèå ìàãàçèíàì ñ áîëòàìè ìíîãîçàðÿäíûé àðáàëåò ïîçâîëÿåò çíà÷èòåëüíî óâåëè÷èòü òåìï ñòðåëüáû ïî ñðàâíåíèþ ñ îáû÷íûì àðáàëåòîì.</Russian>
+		<Polish>[COLOR_UNIT_TEXT]Wojownik z samopowtarzaln&#185; kusz&#185;[COLOR_REVERT], to kusznik w stylu clockpunk wyposa&#191;ony w ulepszon&#185; kusz&#234;: oddzielne czynno&#156;ci, takie jak naci&#185;gni&#234;cie &#179;uku, za&#179;o&#191;enie be&#179;tu i oddanie strza&#179;u, mo&#191;na wykona&#230; prostym ruchem jedn&#185; r&#234;k&#185;, utrzymuj&#185;c kusz&#234; nieruchomo. Pozwala to na wi&#234;ksz&#185; szybkostrzelno&#156;&#230; ni&#191; zwyk&#179;a kusza. Na &#179;uku znajduje si&#234; magazynek zawieraj&#185;cy szereg &#156;rub, a mechanizm obs&#179;uguje si&#234; poprzez przesuwanie prostok&#185;tnej d&#159;wigni do przodu i do ty&#179;u.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_ZEPHYR</Tag>
@@ -250,5 +262,6 @@
 		<English>A [COLOR_UNIT_TEXT]zephyr[COLOR_REVERT] is a clockpunk-style airship. It is a wooden ship supported by one or more hot air balloons, that allow the ship to float in the air. It is a rather popular form of transport in clockpunk stories.</English>
 		<Italian>Uno [COLOR_UNIT_TEXT]zefiro[COLOR_REVERT] è un dirigibile in stile clockpunk. È una nave di legno sostenuta da una o più mongolfiere, che consentono alla nave di fluttuare in aria. È una forma di trasporto piuttosto popolare nei racconti clockpunk.</Italian>
 		<Russian>Äèðèæàáëè - ýòî ïîïóëÿðíûé âèä òðàíñïîðòà â êëîêïàíêå. Îíè èìåþò ìíîãî ðàçíîâèäíîñòåé. Îäèí èç îñíîâíûõ âèäîâ äèðèæàáëåé èçâåñòåí êàê "ìÿãêàÿ ñèñòåìà", òàêèå äèðèæàáëè íàçûâàþò Çåôèð. Îíè ðåäêè â ñòèìïàíêå, ãäå ïðåäïî÷òåíèå îòäàåòñÿ áîëåå ïðîìûøëåííîé è ìåõàíè÷åñêîé ýñòåòèêå. Ïîëóæåñòêèå òèïû äèðèæàáëåé âñòðå÷àþòñÿ ÷àùå, ÷åì ìÿãêèå. Îíè ñîäåðæàò âíóòðåííèé êàðêàñ, èçâåñòíûé êàê êèëü.</Russian>
+		<Polish>[COLOR_UNIT_TEXT]Zefir[COLOR_REVERT], to sterowiec w stylu clockpunk. Jest to drewniany statek podtrzymywany przez jeden lub wi&#234;cej balon&#243;w na ogrzane powietrze, kt&#243;re pozwalaj&#185; statkowi unosi&#230; si&#234; w powietrzu. Jest to do&#156;&#230; popularna forma transportu w opowie&#156;ciach clockpunkowych.</Polish>
 	</TEXT>
 </Civ4GameText>

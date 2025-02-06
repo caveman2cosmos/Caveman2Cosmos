@@ -6,6 +6,7 @@
 		<French>Construire un [LINK=IMPROVEMENT_ARCOLOGY_MOON]Arcologie de Lune[\LINK]</French>
 		<Russian>Ñîçäàòü Àðêîëîãèþ Ëóíû</Russian>
 		<Italian>[LINK=IMPROVEMENT_ARCOLOGY_MOON]Luna arcologica[\LINK] (costruzione)</Italian>
+		<Polish>Zbuduj[LINK=IMPROVEMENT_ARCOLOGY_MOON] Arkologi&#234; ksi&#234;&#191;ycow&#185;[\LINK]</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_ARTIFICIAL_PLANET</Tag>
@@ -13,6 +14,7 @@
 		<French>Construire un [LINK=IMPROVEMENT_ARTIFICIAL_PLANET]Planète Artificielle[\LINK]</French>
 		<Russian>Ñòðîèòü èñê. ïëàíåòó</Russian>
 		<Italian>[LINK=IMPROVEMENT_ARTIFICIAL_PLANET]Pianeta artificiale[\LINK] (costruzione)</Italian>
+		<Polish>Zbuduj[LINK=IMPROVEMENT_ARTIFICIAL_PLANET] sztuczn&#185; planet&#234;[\LINK]</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_ASPATIAL_ROUTE</Tag>
@@ -20,6 +22,7 @@
 		<French>Construire un [LINK=ROUTE_ASPATIAL_ROUTE]Route Aspatiale[\LINK]</French>
 		<Russian>Îòêðûòü àñòð. âðàòà</Russian>
 		<Italian>[LINK=ROUTE_ASPATIAL_ROUTE]Strada spaziale[\LINK] (costruzione)</Italian>
+		<Polish>Utw&#243;rz[LINK=ROUTE_ASPATIAL_ROUTE] tras&#234; ponadprzestrzenn&#185;[\LINK]</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_ASTEROID_MINE</Tag>
@@ -27,16 +30,19 @@
 		<French>Construire un [LINK=IMPROVEMENT_ASTEROID_MINE]Mine d'Astéroide[\LINK]</French>
 		<Russian>Ñòðîèòü àñòåð. øàõòó</Russian>
 		<Italian>[LINK=IMPROVEMENT_ASTEROID_MINE]Miniera su asteroide[\LINK] (costruzione)</Italian>
+		<Polish>Zbuduj[LINK=IMPROVEMENT_ASTEROID_MINE] asteroidaln&#185; kopalni&#234; [\LINK]</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_BIOTIC_GALAXY</Tag>
 		<English>Build [LINK=IMPROVEMENT_BIOTIC_GALAXY]Biotic Galaxy[\LINK]</English>
 		<Italian>[LINK=IMPROVEMENT_BIOTIC_GALAXY]Galassia biotica[\LINK] (costruzione)</Italian>
+		<Polish>Zbuduj[LINK=IMPROVEMENT_BIOTIC_GALAXY] Biotyczn&#185; Galaktyk&#234;[\LINK]</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_BIOTIC_NEUTRON_STAR</Tag>
 		<English>Build [LINK=IMPROVEMENT_BIOTIC_NEUTRON_STAR]Biotic Neutron Star[\LINK]</English>
 		<Italian>[LINK=IMPROVEMENT_BIOTIC_NEUTRON_STAR]Stella biotica di neutroni[\LINK] (costruzione)</Italian>
+		<Polish>Zbuduj[LINK=IMPROVEMENT_BIOTIC_NEUTRON_STAR] biotyczn&#185; gwiazd&#234; neutronow&#185;[\LINK]</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_BLUE_SUPERGIANT_COLONY</Tag>
@@ -44,6 +50,7 @@
 		<French>Construire un [LINK=IMPROVEMENT_BLUE_SUPERGIANT_COLONY]Colonie de Supergéante bleue[\LINK]</French>
 		<Russian>Строить колонию (Голуб. сверхгигант)</Russian>
 		<Italian>[LINK=IMPROVEMENT_BLUE_SUPERGIANT_COLONY]Colonia su supergigante blu[\LINK] (costruzione)</Italian>
+		<Polish>Zbuduj[LINK=IMPROVEMENT_BLUE_SUPERGIANT_COLONY] koloni&#234; niebieskiego nadolbrzyma[\LINK]</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_BRANE_FACTORY</Tag>
@@ -51,6 +58,7 @@
 		<French>Construire un [LINK=IMPROVEMENT_BRANE_FACTORY]Usine de Brane[\LINK]</French>
 		<Russian>Ñòðîèòü ôàáðèêó áðàíû</Russian>
 		<Italian>[LINK=IMPROVEMENT_BRANE_FACTORY]Fabbrica nello spazio brana[\LINK] (costruzione)</Italian>
+		<Polish>Zbuduj[LINK=IMPROVEMENT_BRANE_FACTORY] fabryk&#234; Bran[\LINK]</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_BRANE_FARM</Tag>
@@ -58,6 +66,7 @@
 		<French>Construire un [LINK=IMPROVEMENT_BRANE_FARM]Ferme de Brane[\LINK]</French>
 		<Russian>Ñòðîèòü ôåðìó áðàíû</Russian>
 		<Italian>[LINK=IMPROVEMENT_BRANE_FARM]Coltivazione di brana[\LINK] (costruzione)</Italian>
+		<Polish>Zbuduj[LINK=IMPROVEMENT_BRANE_FARM] farm&#234; Bran[\LINK]</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_CISLUNAR_BASE</Tag>
@@ -65,6 +74,7 @@
 		<French>Construire un [LINK=IMPROVEMENT_CISLUNAR_BASE]Base Cislunaire[\LINK]</French>
 		<Russian>Ñòðîèòü îêîëîëóííóþ áàçó</Russian>
 		<Italian>[LINK=IMPROVEMENT_CISLUNAR_BASE]Base cislunare[\LINK] (costruzione)</Italian>
+		<Polish>Zbuduj[LINK=IMPROVEMENT_CISLUNAR_BASE] baz&#234; Cislunarn&#185;[\LINK]</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_CISLUNAR_EXPANSION_MODULE</Tag>
@@ -72,6 +82,7 @@
 		<French>Construire un [LINK=IMPROVEMENT_CISLUNAR_EXPANSION_MODULE]Module d'Expansion Cislunaire[\LINK]</French>
 		<Russian>Ñòðîèòü [LINK=IMPROVEMENT_CISLUNAR_EXPANSION_MODULE]Îêîëîëóííûé ìîäóëü[\LINK]</Russian>
 		<Italian>[LINK=IMPROVEMENT_CISLUNAR_EXPANSION_MODULE]Modulo di espansione cislunare[\LINK] (costruzione)</Italian>
+		<Polish>Zbuduj[LINK=IMPROVEMENT_CISLUNAR_EXPANSION_MODULE] Cislunarny modu&#179; rozszerze&#241; [\LINK]</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_COMPACT_WORMHOLE</Tag>
@@ -79,6 +90,7 @@
 		<French>Construire un [LINK=ROUTE_COMPACT_WORMHOLE]Compact Trou de Ver[\LINK]</French>
 		<Russian>Ñòðîèòü [LINK=ROUTE_COMPACT_WORMHOLE]Ìàëóþ ÷åðâîòî÷èíó[\LINK]</Russian>
 		<Italian>[LINK=ROUTE_COMPACT_WORMHOLE]Miniwormhole[\LINK] (costruzione)</Italian>
+		<Polish>Stw&#243;rz[LINK=ROUTE_COMPACT_WORMHOLE] kompaktowy tunel czasoprzestrzenny[\LINK]</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_COSMIC_EXPANSION_NODE</Tag>
@@ -86,6 +98,7 @@
 		<French>Construire un [LINK=IMPROVEMENT_COSMIC_EXPANSION_NODE]Nœud d'expansion cosmique[\LINK]</French>
 		<Russian>Ñòðîèòü ÓÏÐ</Russian>
 		<Italian>[LINK=IMPROVEMENT_COSMIC_EXPANSION_NODE]Nodo di espansione cosmica[\LINK] (costruzione)</Italian>
+		<Polish>Zbuduj[LINK=IMPROVEMENT_COSMIC_EXPANSION_NODE] w&#234;ze&#179; ekspansji kosmosu[\LINK]</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_DISTANT_FUTURE_CITY</Tag>
@@ -93,6 +106,7 @@
 		<French>Construire un [LINK=IMPROVEMENT_DISTANT_FUTURE_CITY]Ville du Futur lointain[\LINK]</French>
 		<Russian>Ñòðîèòü ãîðîä äàë. áóäóùåãî</Russian>
 		<Italian>[LINK=IMPROVEMENT_DISTANT_FUTURE_CITY]Città del futuro[\LINK] (costruzione)</Italian>
+		<Polish>Zbuduj[LINK=IMPROVEMENT_DISTANT_FUTURE_CITY] miasto w odleg&#179;ej przysz&#179;o&#156;ci[\LINK]</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_DISTANT_PAST_CITY</Tag>
@@ -100,6 +114,7 @@
 		<French>Construire un [LINK=IMPROVEMENT_DISTANT_PAST_CITY]Ville du passé lointain[\LINK]</French>
 		<Russian>Ñòðîèòü ãîðîä äàë. ïðîøëîãî</Russian>
 		<Italian>[LINK=IMPROVEMENT_DISTANT_PAST_CITY]Città del passato[\LINK]</Italian>
+		<Polish>Zbuduj[LINK=IMPROVEMENT_DISTANT_PAST_CITY] miasto z odleg&#179;ej przesz&#179;o&#156;ci[\LINK]</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_DISTANT_RESEARCH_BASE</Tag>
@@ -107,6 +122,7 @@
 		<French>Construire un [LINK=IMPROVEMENT_DISTANT_RESEARCH_BASE]Base de Recherche Distante[\LINK]</French>
 		<Russian>Ñòðîèòü äàëüí. èññëåä. áàçó.</Russian>
 		<Italian>[LINK=IMPROVEMENT_DISTANT_RESEARCH_BASE]Base cosmica di ricerca[\LINK] (costruzione)</Italian>
+		<Polish>Zbuduj[LINK=IMPROVEMENT_DISTANT_RESEARCH_BASE] odleg&#179;&#185; baz&#234; badawcz&#185;[\LINK]</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_DYSON_SPHERE</Tag>
@@ -114,6 +130,7 @@
 		<French>Construire un [LINK=IMPROVEMENT_DYSON_SPHERE]Sphère de Dyson[\LINK]</French>
 		<Russian>Ñòðîèòü Ñôåðó Äàéñîíà</Russian>
 		<Italian>[LINK=IMPROVEMENT_DYSON_SPHERE]Sfera di Dyson[\LINK] (costruzione)</Italian>
+		<Polish>Zbuduj[LINK=IMPROVEMENT_DYSON_SPHERE] sfer&#234; Dysona[\LINK]</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_HELIOFORMED_BROWN_DWARF</Tag>
@@ -121,6 +138,7 @@
 		<French>Hélioformer une [LINK=IMPROVEMENT_HELIOFORMED_BROWN_DWARF]Naine Brune[\LINK]</French>
 		<Russian>Ñîçäàòü [LINK=IMPROVEMENT_HELIOFORMED_BROWN_DWARF]Êîðè÷íåâûé êàðëèê[\LINK]</Russian>
 		<Italian>[LINK=IMPROVEMENT_HELIOFORMED_BROWN_DWARF]Nana bruna elioformata[\LINK] (costruzione)</Italian>
+		<Polish>Zbuduj[LINK=IMPROVEMENT_HELIOFORMED_BROWN_DWARF] helioformowanego br&#185;zowego kar&#179;a[\LINK]</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_HYPERLANE</Tag>
@@ -128,6 +146,7 @@
 		<French>Construire un [LINK=ROUTE_HYPERLANE]Hyperligne[\LINK]</French>
 		<Russian>Ïðîëîæèòü ãèïåðëàéí</Russian>
 		<Italian>[LINK=ROUTE_HYPERLANE]Iperstrada[\LINK] (costruzione)</Italian>
+		<Polish>Zr&#243;b[LINK=ROUTE_HYPERLANE] Autostrad&#234; mi&#234;dzygwiezdn&#185;[\LINK]</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_HYPERSPACE_BUNKER</Tag>
@@ -135,6 +154,7 @@
 		<French>Construire un [LINK=IMPROVEMENT_HYPERSPACE_BUNKER]Bunker de l'Hyperespace[\LINK]</French>
 		<Russian>Ñòðîèòü ãèïåðêîñì. áóíêåð</Russian>
 		<Italian>[LINK=IMPROVEMENT_HYPERSPACE_BUNKER]Bunker nell'iperspazio[\LINK] (costruzione)</Italian>
+		<Polish>Zbuduj[LINK=IMPROVEMENT_HYPERSPACE_BUNKER] bunkier nadprzestrzenny[\LINK]</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_INTERGALACTIC_BASE</Tag>
@@ -142,6 +162,7 @@
 		<French>Construire un [LINK=IMPROVEMENT_INTERGALACTIC_BASE]Base Intergalactique[\LINK]</French>
 		<Russian>Ñòðîèòü ìåæãàëàêò. áàçó</Russian>
 		<Italian>[LINK=IMPROVEMENT_INTERGALACTIC_BASE]Base intergalattica[\LINK] (costruzione)</Italian>
+		<Polish>Zbuduj[LINK=IMPROVEMENT_INTERGALACTIC_BASE] baz&#234; mi&#234;dzygalaktyczn&#185;[\LINK]</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_INTERGALACTIC_COLONY</Tag>
@@ -149,6 +170,7 @@
 		<French>Construire un [LINK=IMPROVEMENT_INTERGALACTIC_COLONY]Colonie Intergalactique[\LINK]</French>
 		<Russian>Ñòðîèòü ìåæãàë. êîëîíèþ</Russian>
 		<Italian>[LINK=IMPROVEMENT_INTERGALACTIC_COLONY]Colonia intergalattica[\LINK] (costruzione)</Italian>
+		<Polish>Zbuduj[LINK=IMPROVEMENT_INTERGALACTIC_COLONY] koloni&#234; mi&#234;dzygalaktyczn&#185;[\LINK]</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_INTERGALACTIC_RESEARCH_BASE</Tag>
@@ -156,6 +178,7 @@
 		<French>Construire un [LINK=IMPROVEMENT_INTERGALACTIC_RESEARCH_BASE]Base de Recherche Intergalactique[\LINK]</French>
 		<Russian>Ñòðîèòü ìåæãëàêò. áàçó.</Russian>
 		<Italian>[LINK=IMPROVEMENT_INTERGALACTIC_RESEARCH_BASE]Base di ricerca intergalattica[\LINK] (costruzione)</Italian>
+		<Polish>Zbuduj[LINK=IMPROVEMENT_INTERGALACTIC_RESEARCH_BASE] mi&#234;dzygalaktyczn&#185; baz&#234; badawcz&#185;[\LINK]</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_INTERSTELLAR_BASE</Tag>
@@ -163,6 +186,7 @@
 		<French>Construire un [LINK=IMPROVEMENT_INTERSTELLAR_BASE]Base Interstellaire[\LINK]</French>
 		<Russian>Ñòðîèòü [LINK=IMPROVEMENT_INTERSTELLAR_BASE]Ìåæçâåçäíóþ áàçó[\LINK]</Russian>
 		<Italian>[LINK=IMPROVEMENT_INTERSTELLAR_BASE]Base interstellare[\LINK]</Italian>
+		<Polish>Zbuduj[LINK=IMPROVEMENT_INTERSTELLAR_BASE] baz&#234; mi&#234;dzygwiezdn&#185;[\LINK]</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_INTERSTELLAR_COLONY</Tag>
@@ -170,6 +194,7 @@
 		<French>Construire un [LINK=IMPROVEMENT_INTERSTELLAR_COLONY]Colonie Interstellaire[\LINK]</French>
 		<Russian>Ñòðîèòü ìåæçâ. êîëîíèþ</Russian>
 		<Italian>[LINK=IMPROVEMENT_INTERSTELLAR_COLONY]Colonia interstellare[\LINK] (costruzione)</Italian>
+		<Polish>Zbuduj[LINK=IMPROVEMENT_INTERSTELLAR_COLONY] mi&#234;dzygwiezdn&#185; koloni&#234;[\LINK]</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_INTERSTELLAR_RESEARCH_BASE</Tag>
@@ -177,6 +202,7 @@
 		<French>Construire un [LINK=IMPROVEMENT_INTERSTELLAR_RESEARCH_BASE]Base de Recherche Interstellaire[\LINK]</French>
 		<Russian>Ñòðîèòü ìåæçâåçä. èññëåä. áàçó.</Russian>
 		<Italian>[LINK=IMPROVEMENT_INTERSTELLAR_RESEARCH_BASE]Base di ricerca interstellare[\LINK] (costruzione)</Italian>
+		<Polish>Zbuduj[LINK=IMPROVEMENT_INTERSTELLAR_RESEARCH_BASE] mi&#234;dzygwiezdn&#185; baz&#234; badawcz&#185;[\LINK]</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_INTERSTELLAR_TRADING_POST</Tag>
@@ -184,6 +210,7 @@
 		<French>Construire un [LINK=IMPROVEMENT_INTERSTELLAR_TRADING_POST]Station commerciale Interstellaire[\LINK]</French>
 		<Russian>Ñòðîèòü [LINK=IMPROVEMENT_INTERSTELLAR_TRADING_POST]Ìåæçâ. òîðãîâûé ïîñò[\LINK]</Russian>
 		<Italian>[LINK=IMPROVEMENT_INTERSTELLAR_TRADING_POST]Stazione commerciale interstellare[\LINK] (costruzione)</Italian>
+		<Polish>Zbuduj[LINK=IMPROVEMENT_INTERSTELLAR_TRADING_POST] mi&#234;dzygwiezdn&#185; plac&#243;wk&#234; handlow&#185;[\LINK]</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_JOVIAN_FLOATING_CITY</Tag>
@@ -191,6 +218,7 @@
 		<French>Construire un [LINK=IMPROVEMENT_JOVIAN_FLOATING_CITY]Ville flottante Jovienne[\LINK]</French>
 		<Russian>Строить Облачной город</Russian>
 		<Italian>[LINK=IMPROVEMENT_JOVIAN_FLOATING_CITY]Città gioviana volante[\LINK] (costruzione)</Italian>
+		<Polish>Zbuduj[LINK=IMPROVEMENT_JOVIAN_FLOATING_CITY] p&#179;ywaj&#185;ce miasto Jowisza[\LINK]</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_JOVIAN_LUNAR_ARCOLOGY</Tag>
@@ -198,6 +226,7 @@
 		<French>Construire un [LINK=IMPROVEMENT_JOVIAN_LUNAR_ARCOLOGY]Jovian Arcologie Lunaire[\LINK]</French>
 		<Russian>Ñòðîèòü Àðêîïîëèñ</Russian>
 		<Italian>[LINK=IMPROVEMENT_JOVIAN_LUNAR_ARCOLOGY]Arcologia sulla luna gioviana[\LINK] (costruzione)</Italian>
+		<Polish>Zbuduj[LINK=IMPROVEMENT_JOVIAN_LUNAR_ARCOLOGY] Arkologi&#234; Jowiszowego Ksi&#234;&#191;yca[\LINK]</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_JOVIAN_LUNAR_BASE</Tag>
@@ -205,6 +234,7 @@
 		<French>Construire un [LINK=IMPROVEMENT_JOVIAN_LUNAR_BASE]Base Lunaire Jovienne[\LINK]</French>
 		<Russian>Ñòðîèòü ÁÂÑ</Russian>
 		<Italian>[LINK=IMPROVEMENT_JOVIAN_LUNAR_BASE]Base sulla luna gioviana[\LINK] (costruzione)</Italian>
+		<Polish>Zbuduj[LINK=IMPROVEMENT_JOVIAN_LUNAR_BASE] baz&#234; ksi&#234;&#191;ycow&#185; na Jowiszu[\LINK]</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_JOVIAN_SCOOP</Tag>
@@ -212,6 +242,7 @@
 		<French>Construire un [LINK=IMPROVEMENT_JOVIAN_SCOOP]Scoop Jovienne[\LINK]</French>
 		<Russian>Ñòðîèòü ãàçîêîìïðåññîð</Russian>
 		<Italian>[LINK=IMPROVEMENT_JOVIAN_SCOOP]Collettore gioviano[\LINK] (costruzione)</Italian>
+		<Polish>Zbuduj[LINK=IMPROVEMENT_JOVIAN_SCOOP] Jowiszowski Scoop[\LINK]</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_LISTENING_NODE</Tag>
@@ -228,6 +259,7 @@
 		<French>Construire un [LINK=IMPROVEMENT_LUNAR_ARCOLOGY]Arcologie Lunaire[\LINK]</French>
 		<Russian>Ñòðîèòü ëóííûé àðêîïîëèñ</Russian>
 		<Italian>[LINK=IMPROVEMENT_LUNAR_ARCOLOGY]Arcologia lunare[\LINK] (costruzione)</Italian>
+		<Polish>Zbuduj[LINK=IMPROVEMENT_LUNAR_ARCOLOGY] Arkologi&#234; Ksi&#234;&#191;ycow&#185;[\LINK]</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_LUNAR_BASE</Tag>
@@ -235,6 +267,7 @@
 		<French>Construire un [LINK=IMPROVEMENT_LUNAR_BASE]Base Lunaire[\LINK]</French>
 		<Russian>Ñòðîèòü [LINK=IMPROVEMENT_LUNAR_BASE]Ëóííóþ áàçó[\LINK]</Russian>
 		<Italian>[LINK=IMPROVEMENT_LUNAR_BASE]Base lunare[\LINK] (costruzione)</Italian>
+		<Polish>Zbuduj[LINK=IMPROVEMENT_LUNAR_BASE] baz&#234; ksi&#234;&#191;ycow&#185;[\LINK]</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_LUNAR_HABITATION_COMPLEX</Tag>
@@ -242,6 +275,7 @@
 		<French>Construire un [LINK=IMPROVEMENT_LUNAR_HABITATION_COMPLEX]Complexe d'Habitation Lunaire[\LINK]</French>
 		<Russian>Ëóííûé æèëîé êîìïëåêñ</Russian>
 		<Italian>[LINK=IMPROVEMENT_LUNAR_HABITATION_COMPLEX]Complesso abitativo lunare[\LINK] (costruzione)</Italian>
+		<Polish>Zbuduj[LINK=IMPROVEMENT_LUNAR_HABITATION_COMPLEX] ksi&#234;&#191;ycowy kompleks mieszkalny[\LINK]</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_LUNAR_MINE</Tag>
@@ -249,6 +283,7 @@
 		<French>Construire un [LINK=IMPROVEMENT_LUNAR_MINE]Mine Lunaire[\LINK]</French>
 		<Russian>Ëóííàÿ øàõòà</Russian>
 		<Italian>[LINK=IMPROVEMENT_LUNAR_MINE]Miniera lunare[\LINK] (costruzione)</Italian>
+		<Polish>Zbuduj[LINK=IMPROVEMENT_LUNAR_MINE] kopalni&#234; ksi&#234;&#191;ycow&#185;[\LINK]</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_LUNAR_MINING_OUTPOST</Tag>
@@ -256,6 +291,7 @@
 		<French>Construire un [LINK=IMPROVEMENT_LUNAR_MINING_OUTPOST]Avant-poste Minier lunaire[\LINK]</French>
 		<Russian>Ëóííàÿ ãîðíàÿ çàñòàâà</Russian>
 		<Italian>[LINK=IMPROVEMENT_LUNAR_MINING_OUTPOST]Avamposto minerario lunare[\LINK] (costruzione)</Italian>
+		<Polish>Zbuduj[LINK=IMPROVEMENT_LUNAR_MINING_OUTPOST] ksi&#234;&#191;ycow&#185; plac&#243;wk&#234; g&#243;rnicz&#185;[\LINK]</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_LUNAR_OUTPOST</Tag>
@@ -263,12 +299,14 @@
 		<French>Construire un [LINK=IMPROVEMENT_LUNAR_OUTPOST]Avant-Poste Lunaire[\LINK]</French>
 		<Russian>Ëóííûé àâàíïîñò</Russian>
 		<Italian>[LINK=IMPROVEMENT_LUNAR_OUTPOST]Avamposto lunare[\LINK] (costruzione)</Italian>
+		<Polish>Zbuduj[LINK=IMPROVEMENT_LUNAR_OUTPOST] ksi&#234;&#191;ycow&#185; plac&#243;wk&#234;[\LINK]</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_LUNAR_PATH</Tag>
 		<English>Make [LINK=ROUTE_LUNAR_PATH]Lunar Path[\LINK]</English>
 		<Russian>Ïðîëîæèòü [LINK=ROUTE_LUNAR_PATH]Ëóí. òðàññó[\LINK]</Russian>
 		<Italian>[LINK=ROUTE_LUNAR_PATH]Sentiero lunare[\LINK] (costruzione)</Italian>
+		<Polish>Utw&#243;rz[LINK=ROUTE_LUNAR_PATH] &#156;cie&#191;k&#234; ksi&#234;&#191;ycow&#185;[\LINK]</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_MARTIAN_FARM</Tag>
@@ -276,6 +314,7 @@
 		<French>Construire un [LINK=IMPROVEMENT_MARTIAN_FARM]Ferme Martienne[\LINK]</French>
 		<Russian>Ñòðîèòü [LINK=IMPROVEMENT_MARTIAN_FARM]Ìàðñ. ôåðìó[\LINK]</Russian>
 		<Italian>[LINK=IMPROVEMENT_MARTIAN_FARM]Fattoria marziana[\LINK] (costruzione)</Italian>
+		<Polish>Zbuduj[LINK=IMPROVEMENT_MARTIAN_FARM] farm&#234; marsja&#241;sk&#185;[\LINK]</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_MARTIAN_MINE</Tag>
@@ -283,6 +322,7 @@
 		<French>Construire un [LINK=IMPROVEMENT_MARTIAN_MINE]Mine Martienne[\LINK]</French>
 		<Russian>Êîïàòü [LINK=IMPROVEMENT_MARTIAN_MINE]Ìàðñ. øàõòó[\LINK]</Russian>
 		<Italian>[LINK=IMPROVEMENT_MARTIAN_MINE]Miniera marziana[\LINK] (costruzione)</Italian>
+		<Polish>Zbuduj[LINK=IMPROVEMENT_MARTIAN_MINE] marsja&#241;sk&#185; kopalni&#234;[\LINK]</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_MEGAWORMHOLE</Tag>
@@ -290,6 +330,7 @@
 		<French>Construire un [LINK=ROUTE_MEGAWORMHOLE]Méga-Trou de Ver[\LINK]</French>
 		<Russian>Ñîçäàòü [LINK=ROUTE_MEGAWORMHOLE]Áîë. ÷åðâîòî÷èíó[\LINK]</Russian>
 		<Italian>[LINK=ROUTE_MEGAWORMHOLE]Megawormhole[\LINK] (costruzione)</Italian>
+		<Polish>Zr&#243;b[LINK=ROUTE_MEGAWORMHOLE] Wielki tunel czasoprzestrzenny[\LINK]</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_MERCURY_COLONY</Tag>
@@ -297,6 +338,7 @@
 		<French>Construire un [LINK=IMPROVEMENT_MERCURY_COLONY]Colonie de Mercure[\LINK]</French>
 		<Russian>Ñòðîèòü ìåðê. êîëîíèþ</Russian>
 		<Italian>[LINK=IMPROVEMENT_MERCURY_COLONY]Colonia su Mercurio[\LINK]</Italian>
+		<Polish>Zbuduj[LINK=IMPROVEMENT_MERCURY_COLONY] koloni&#234; Merkurego[\LINK]</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_MERCURY_SOLAR_ARRAY</Tag>
@@ -304,6 +346,7 @@
 		<French>Construire un [LINK=IMPROVEMENT_MERCURY_SOLAR_ARRAY]Panneau Solaire sur Mercure[\LINK]</French>
 		<Russian>Ñòðîèòü ìåðê. ñîëí. áàò.</Russian>
 		<Italian>[LINK=IMPROVEMENT_MERCURY_SOLAR_ARRAY]Formazione di pannelli solari di Mercurio[\LINK] (costruzione)</Italian>
+		<Polish>Zbuduj[LINK=IMPROVEMENT_MERCURY_SOLAR_ARRAY] Merkurja&#241;sk&#185; farm&#234; s&#179;oneczn&#185;[\LINK]</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_NEUTRON_STAR_COLONY</Tag>
@@ -311,6 +354,7 @@
 		<French>Construire un [LINK=IMPROVEMENT_NEUTRON_STAR_COLONY]Colonie d'Etoile à Neutron[\LINK]</French>
 		<Russian>Ñòðîèòü ÊÍÇ</Russian>
 		<Italian>[LINK=IMPROVEMENT_NEUTRON_STAR_COLONY]Colonia sulla stella di neutroni[\LINK] (costruzione)</Italian>
+		<Polish>Zbuduj[LINK=IMPROVEMENT_NEUTRON_STAR_COLONY] koloni&#234; gwiazd neutronowych[\LINK]</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_OBSERVABLE_UNIVERSE_COLONY</Tag>
@@ -318,6 +362,7 @@
 		<French>Construire un [LINK=IMPROVEMENT_OBSERVABLE_UNIVERSE_COLONY]Colonie dans l'Univers Observable[\LINK]</French>
 		<Russian>Ñòðîèòü âñåëåíñê. êîëîíèþ</Russian>
 		<Italian>[LINK=IMPROVEMENT_OBSERVABLE_UNIVERSE_COLONY]Colonia dell'universo osservabile[\LINK] (costruzione)</Italian>
+		<Polish>Zbuduj[LINK=IMPROVEMENT_OBSERVABLE_UNIVERSE_COLONY] koloni&#234; obserwowalnego wszech&#156;wiata[\LINK]</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_ORBITAL_TRAJECTORY</Tag>
@@ -325,6 +370,7 @@
 		<French>Construire un [LINK=ROUTE_ORBITAL_TRAJECTORY]Trajectoire Orbitale[\LINK]</French>
 		<Russian>Ïðîëîæèòü îðáèò. òðàåêòîðèþ</Russian>
 		<Italian>[LINK=ROUTE_ORBITAL_TRAJECTORY]Traiettoria orbitale[\LINK] (costruzione)</Italian>
+		<Polish>Utw&#243;rz[LINK=ROUTE_ORBITAL_TRAJECTORY] trajektori&#234; orbity[\LINK]</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_PARALLEL_UNIVERSE</Tag>
@@ -332,6 +378,7 @@
 		<French>Construire un [LINK=IMPROVEMENT_PARALLEL_UNIVERSE]Univers Parallèle[\LINK]</French>
 		<Russian>Ñîçäàòü ïàðàëë. âñåëåííóþ</Russian>
 		<Italian>[LINK=IMPROVEMENT_PARALLEL_UNIVERSE]Universo parallelo[\LINK] (costruzione)</Italian>
+		<Polish>Zbuduj[LINK=IMPROVEMENT_PARALLEL_UNIVERSE] r&#243;wnoleg&#179;y wszech&#156;wiat[\LINK]</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_PARATERRAFORMED_ASTEROID</Tag>
@@ -339,22 +386,26 @@
 		<French>Construire un [LINK=IMPROVEMENT_PARATERRAFORMED_ASTEROID]Astéroïde Paraterraformé[\LINK]</French>
 		<Russian>Ïàðàòåððàôîðì. àñòåðîèäà</Russian>
 		<Italian>[LINK=IMPROVEMENT_PARATERRAFORMED_ASTEROID]Asteroide terraformato[\LINK] (costruzione)</Italian>
+		<Polish>Zbuduj[LINK=IMPROVEMENT_PARATERRAFORMED_ASTEROID] paraterraformowan&#185; asteroid&#234;[\LINK]</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_PLACE_ASTEROID</Tag>
 		<English>Create [LINK=FEATURE_ASTEROIDS]Asteroid[\LINK]</English>
 		<Italian>[LINK=FEATURE_ASTEROIDS]Asteroide[\LINK] (costruzione)</Italian>
+		<Polish>Stw&#243;rz[LINK=FEATURE_ASTEROIDS] asteroid&#234;[\LINK]</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_PLACE_GALAXY</Tag>
 		<English>Create [LINK=FEATURE_GALAXY]Galaxy[\LINK]</English>
 		<Italian>[LINK=FEATURE_GALAXY]Galassia[\LINK] (costruzione)</Italian>
+		<Polish>Stw&#243;rz[LINK=FEATURE_GALAXY] Galaktyk&#234;[\LINK]</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_PLANETARY_MAGLEV</Tag>
 		<English>Make [LINK=ROUTE_PLANETARY_MAGLEV]Planetary Maglev[\LINK]</English>
 		<Russian>Ñòðîèòü [LINK=ROUTE_PLANETARY_MAGLEV]Ìîíîðåëüñ[\LINK]</Russian>
 		<Italian>[LINK=ROUTE_PLANETARY_MAGLEV]Ferrovia a levitazione magnetica planetaria[\LINK] (costruzione)</Italian>
+		<Polish>Zr&#243;b[LINK=ROUTE_PLANETARY_MAGLEV] Planetarn&#185; kolej magnetyczn&#185;[\LINK]</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_SATELLITE_STATION</Tag>
@@ -362,6 +413,7 @@
 		<French>Construire un [LINK=IMPROVEMENT_SATELLITE_STATION]Station Satellite[\LINK]</French>
 		<Russian>Ñòðîèòü îðá. ñòàíöèþ</Russian>
 		<Italian>[LINK=IMPROVEMENT_SATELLITE_STATION]Stazione satellitare del cilindro di O'Neill[\LINK] (costruzione)</Italian>
+		<Polish>Zbuduj[LINK=IMPROVEMENT_SATELLITE_STATION] stacj&#234; kosmiczn&#185;[\LINK]</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_SOLAR_CONCENTRATOR</Tag>
@@ -369,6 +421,7 @@
 		<French>Construire un [LINK=IMPROVEMENT_SOLAR_CONCENTRATOR]Concentrateur Solaire[\LINK]</French>
 		<Russian>Ñòðîèòü ñîëí. êîíöåíòðàòîð</Russian>
 		<Italian>[LINK=IMPROVEMENT_SOLAR_CONCENTRATOR]Concentratore di luce solare[\LINK] (costruzione)</Italian>
+		<Polish>Zbuduj[LINK=IMPROVEMENT_SOLAR_CONCENTRATOR] koncentrator s&#179;oneczny[\LINK]</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_SOLAR_SYSTEM_BASE</Tag>
@@ -376,6 +429,7 @@
 		<French>Construire un [LINK=IMPROVEMENT_SOLAR_SYSTEM_BASE]Base du Système Solaire[\LINK]</French>
 		<Russian>Ñòðîèòü [LINK=IMPROVEMENT_SOLAR_SYSTEM_BASE]Ìåæïëàíåò. ñòàíöèþ[\LINK]</Russian>
 		<Italian>[LINK=IMPROVEMENT_SOLAR_SYSTEM_BASE]Base del sistema solare[\LINK] (costruzione)</Italian>
+		<Polish>Zbuduj[LINK=IMPROVEMENT_SOLAR_SYSTEM_BASE] baz&#234; Uk&#179;adu S&#179;onecznego[\LINK]</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_SOLAR_TRADING_POST</Tag>
@@ -383,11 +437,13 @@
 		<French>Construire un [LINK=IMPROVEMENT_SOLAR_TRADING_POST]Station de commerce Solaire[\LINK]</French>
 		<Russian>Ñòðîèòü ñîëí. òîðãîâûé ïîñò</Russian>
 		<Italian>[LINK=IMPROVEMENT_SOLAR_TRADING_POST]Base commerciale solare[\LINK] (costruzione)</Italian>
+		<Polish>Zbuduj[LINK=IMPROVEMENT_SOLAR_TRADING_POST] Solarny Punkt Handlowy[\LINK]</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_SOLAR_TRAJECTORY</Tag>
 		<English>Make [LINK=ROUTE_SOLAR_TRAJECTORY]Solar Trajectory[\LINK]</English>
 		<Italian>[LINK=ROUTE_SOLAR_TRAJECTORY]Traiettoria solare[\LINK] (costruzione)</Italian>
+		<Polish>Utw&#243;rz[LINK=ROUTE_SOLAR_TRAJECTORY] trajektori&#234; s&#179;oneczn&#185;[\LINK]</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_SPACE_SOLAR_ARRAY</Tag>
@@ -395,6 +451,7 @@
 		<French>Construire un [LINK=IMPROVEMENT_SPACE_SOLAR_ARRAY]Réseau solaire spatial[\LINK]</French>
 		<Russian>Ñòðîèòü ñîëí. áàòàðåþ</Russian>
 		<Italian>[LINK=IMPROVEMENT_SPACE_SOLAR_ARRAY]Formazione di pannelli solari spaziale[\LINK] (costruzione)</Italian>
+		<Polish>Zbuduj[LINK=IMPROVEMENT_SPACE_SOLAR_ARRAY] kosmiczn&#185; farm&#234; s&#179;oneczn&#185;[\LINK]</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_SPACE_STATION_LV1</Tag>
@@ -402,16 +459,19 @@
 		<French>Construire un [LINK=IMPROVEMENT_SPACE_STATION_LV1]Station spatiale[\LINK]</French>
 		<Russian>Ñòðîèòü [LINK=IMPROVEMENT_SPACE_STATION_LV1]Êîñìè÷. ñòàíöèþ[\LINK]</Russian>
 		<Italian>[LINK=IMPROVEMENT_SPACE_STATION_LV1]Stazione spaziale (livello 1)[\LINK] (costruzione)</Italian>
+		<Polish>Zbuduj[LINK=IMPROVEMENT_SPACE_STATION_LV1] stacj&#234; kosmiczn&#185;[\LINK]</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_SPACE_STATION_LV2</Tag>
 		<English>Build [LINK=IMPROVEMENT_SPACE_STATION_LV2]Space Station Lv. 2[\LINK]</English>
 		<Italian>[LINK=IMPROVEMENT_SPACE_STATION_LV2]Stazione spaziale (livello 2)[\LINK] (costruzione)</Italian>
+		<Polish>Zbuduj[LINK=IMPROVEMENT_SPACE_STATION_LV2] stacj&#234; kosmiczn&#185; (poziom 2)[\LINK]</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_SPACE_STATION_LV3</Tag>
 		<English>Build [LINK=IMPROVEMENT_SPACE_STATION_LV3]Space Station Lv. 3[\LINK]</English>
 		<Italian>[LINK=IMPROVEMENT_SPACE_STATION_LV3]Stazione spaziale (livello 3)[\LINK] (costruzione)</Italian>
+		<Polish>Zbuduj[LINK=IMPROVEMENT_SPACE_STATION_LV3] stacj&#234; kosmiczn&#185; (poziom 3)[\LINK]</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_SPIRITUAL_REALM</Tag>
@@ -419,6 +479,7 @@
 		<French>Construire un [LINK=IMPROVEMENT_SPIRITUAL_REALM]Royaume Spirituel[\LINK]</French>
 		<Russian>Ñîòâîðèòü Äóõîâíîå öàðñòâî</Russian>
 		<Italian>[LINK=IMPROVEMENT_SPIRITUAL_REALM]Regno spirituale[\LINK] (costruzione)</Italian>
+		<Polish>Zbuduj[LINK=IMPROVEMENT_SPIRITUAL_REALM] Sfer&#234; duchow&#185;[\LINK]</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_STAR_SCOOP</Tag>
@@ -426,6 +487,7 @@
 		<French>Construire un [LINK=IMPROVEMENT_STAR_SCOOP]Scoop d'Etoile[\LINK]</French>
 		<Russian>Строить плазмокомпрессор</Russian>
 		<Italian>[LINK=IMPROVEMENT_STAR_SCOOP]Collettore stellare[\LINK] (costruzione)</Italian>
+		<Polish>Zbuduj[LINK=IMPROVEMENT_STAR_SCOOP] Gwiezdny Scoop[\LINK]</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_SUN_SCOOP</Tag>
@@ -433,6 +495,7 @@
 		<French>Construire un [LINK=IMPROVEMENT_SUN_SCOOP]Scoop du Soleil[\LINK]</French>
 		<Russian>Ñòðîèòü ïëàçìîêîìïðåññîð</Russian>
 		<Italian>[LINK=IMPROVEMENT_SUN_SCOOP]Collettore solare[\LINK] (costruzione)</Italian>
+		<Polish>Zbuduj[LINK=IMPROVEMENT_SUN_SCOOP] S&#179;oneczny Scoop[\LINK]</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_SUPERCLUSTER_COLONY</Tag>
@@ -440,6 +503,7 @@
 		<French>Construire un [LINK=IMPROVEMENT_SUPERCLUSTER_COLONY]Colonie de Supercluster[\LINK]</French>
 		<Russian>Ñòðîèòü ìåòàãàëàêò. êîëîíèþ</Russian>
 		<Italian>[LINK=IMPROVEMENT_SUPERCLUSTER_COLONY]Colonia del superammasso[\LINK] (costruzione)</Italian>
+		<Polish>Zbuduj[LINK=IMPROVEMENT_SUPERCLUSTER_COLONY] koloni&#234; supergromad[\LINK]</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_SUPERNOVA_MINE</Tag>
@@ -447,6 +511,7 @@
 		<French>Construire un [LINK=IMPROVEMENT_SUPERNOVA_MINE]Mine de Supernova[\LINK]</French>
 		<Russian>Ñòðîèòü Çâåçäíûé êàðüåð</Russian>
 		<Italian>[LINK=IMPROVEMENT_SUPERNOVA_MINE]Miniera per supernova[\LINK] (costruzione)</Italian>
+		<Polish>Zbuduj[LINK=IMPROVEMENT_SUPERNOVA_MINE] kopalni&#234; supernowej[\LINK]</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_TERRAFORMED_PLANET</Tag>
@@ -454,41 +519,49 @@
 		<French>Terraformer la [LINK=IMPROVEMENT_TERRAFORMED_PLANET]Planète[\LINK]</French>
 		<Russian>Òåððàôîðì. ïëàíåòó</Russian>
 		<Italian>[LINK=IMPROVEMENT_TERRAFORMED_PLANET]Pianeta terraformato[\LINK] (costruzione)</Italian>
+		<Polish>Zbuduj[LINK=IMPROVEMENT_TERRAFORMED_PLANET] terraformowan&#185; planet&#234;[\LINK]</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_TERRAFORM_BRANESPACE</Tag>
 		<English>Terraform towards [LINK=TERRAIN_BRANESPACE]Branespace[\LINK]</English>
 		<Italian>[LINK=TERRAIN_BRANESPACE]Spazio brana[\LINK] (terraformazione)</Italian>
+		<Polish>Terraformuj w kierunku[LINK=TERRAIN_BRANESPACE] Przestrzeni Bran[\LINK]</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_TERRAFORM_FUTURE</Tag>
 		<English>Terraform towards [LINK=TERRAIN_DISTANT_FUTURE]Distant Future[\LINK]</English>
 		<Italian>[LINK=TERRAIN_DISTANT_FUTURE]Futuro distante[\LINK] (terraformazione)</Italian>
+		<Polish>Terraformuj w kierunku[LINK=TERRAIN_DISTANT_FUTURE] odleg&#179;ej przysz&#179;o&#156;ci[\LINK]</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_TERRAFORM_HYPERSPACE</Tag>
 		<English>Terraform towards [LINK=TERRAIN_HYPERSPACE]Hyperspace[\LINK]</English>
 		<Italian>[LINK=TERRAIN_HYPERSPACE]Iperspazio[\LINK] (terraformazione)</Italian>
+		<Polish>Terraformuj w stron&#234;[LINK=TERRAIN_HYPERSPACE] nadprzestrzeni[\LINK]</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_TERRAFORM_MARS</Tag>
 		<English>Terraform towards [LINK=TERRAIN_GREEN_MARS]Green Mars[\LINK]</English>
 		<Italian>[LINK=TERRAIN_GREEN_MARS]Marte verde[\LINK] (terraformazione)</Italian>
+		<Polish>Terraformuj w kierunku[LINK=TERRAIN_GREEN_MARS] Zielonego Marsa[\LINK]</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_TERRAFORM_MOON</Tag>
 		<English>Terraform towards [LINK=TERRAIN_GREEN_MOON]Green Moon[\LINK]</English>
 		<Italian>[LINK=TERRAIN_GREEN_MOON]Luna verde[\LINK] (terraformazione)</Italian>
+		<Polish>Terraformuj w stron&#234;[LINK=TERRAIN_GREEN_MOON] Zielonego Ksi&#234;&#191;yca[\LINK]</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_TERRAFORM_NEUTRON_STAR</Tag>
 		<English>Terraform towards [LINK=TERRAIN_NEUTRON_STAR]Neutron Star[\LINK]</English>
 		<Italian>[LINK=TERRAIN_NEUTRON_STAR]Stella di neutroni[\LINK] (terraformazione)</Italian>
+		<Polish>Terraformuj w kierunku[LINK=TERRAIN_NEUTRON_STAR] Gwiazdy Neutronowej[\LINK]</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_TERRAFORM_PAST</Tag>
 		<English>Terraform towards [LINK=TERRAIN_DISTANT_PAST]Distant Past[\LINK]</English>
 		<Italian>[LINK=TERRAIN_DISTANT_PAST]Passato distante[\LINK] (terraformazione)</Italian>
+		<Polish>Terraformuj ku [LINK=TERRAIN_DISTANT_PAST]odleg&#179;ej przesz&#179;o&#156;ci[\LINK]</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_TIME_MANIFOLD</Tag>
@@ -496,11 +569,13 @@
 		<French>Construire un [LINK=IMPROVEMENT_TIME_MANIFOLD]Manifold du Temps[\LINK]</French>
 		<Russian>Ïðîëîæèòü âðåìåí. êîëîäåö</Russian>
 		<Italian>[LINK=IMPROVEMENT_TIME_MANIFOLD]Molteplicità temporale[\LINK] (costruzione)</Italian>
+		<Polish>Zbuduj[LINK=IMPROVEMENT_TIME_MANIFOLD]Zakrzywienie czasu[\LINK]</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_TRUE_VACUUM</Tag>
 		<English>Build [LINK=IMPROVEMENT_TRUE_VACUUM]True Vacuum[\LINK]</English>
 		<Italian>[LINK=IMPROVEMENT_TRUE_VACUUM]Vuoto assoluto[\LINK] (costruzione)</Italian>
+		<Polish>Zbuduj[LINK=IMPROVEMENT_TRUE_VACUUM] prawdziw&#185; pr&#243;&#191;ni&#234;[\LINK]</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_VENUS_AERIAL_FARM</Tag>
@@ -508,6 +583,7 @@
 		<French>Construire un [LINK=IMPROVEMENT_VENUS_AERIAL_FARM]Ferme aérienne de Vénus[\LINK]</French>
 		<Russian>Ñòðîèòü àýðîôåðìó</Russian>
 		<Italian>[LINK=IMPROVEMENT_VENUS_AERIAL_FARM]Coltivazione aerea di Venere[\LINK] (costruzione)</Italian>
+		<Polish>Zbuduj[LINK=IMPROVEMENT_VENUS_AERIAL_FARM] powietrzn&#185; farm&#234; Wenus[\LINK]</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_VENUS_SURFACE_MINE</Tag>
@@ -515,6 +591,7 @@
 		<French>Construire un [LINK=IMPROVEMENT_VENUS_SURFACE_MINE]Mine de Surface de Vénus[\LINK]</French>
 		<Russian>Ñòðîèòü âåíåð. øàõòó</Russian>
 		<Italian>[LINK=IMPROVEMENT_VENUS_SURFACE_MINE]Miniera di superficie di Venere[\LINK] (costruzione)</Italian>
+		<Polish>Zbuduj[LINK=IMPROVEMENT_VENUS_SURFACE_MINE] kopalni&#234; powierzchniow&#185; Wenus[\LINK]</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_WORMHOLE</Tag>
@@ -522,6 +599,7 @@
 		<French>Construire un [LINK=ROUTE_WORMHOLE]Trou de Ver[\LINK]</French>
 		<Russian>Ïðîëîæèòü ÷åðâîòî÷èíó</Russian>
 		<Italian>[LINK=ROUTE_WORMHOLE]Wormhole[\LINK] (costruzione)</Italian>
+		<Polish>Zr&#243;b[LINK=ROUTE_WORMHOLE] tunel czasoprzestrzenny[\LINK]</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_ARCOLOGY_MOON</Tag>
@@ -529,12 +607,14 @@
 		<French>Arcologie de Lune</French>
 		<Russian>Àðêîëîãèÿ Ëóíû</Russian>
 		<Italian>Luna arcologica</Italian>
+		<Polish>Arkologia Ksi&#234;&#191;ycowa</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_ARCOLOGY_MOON_PEDIA</Tag>
 		<English>This is a Moon-sized arcology that is large enough to generate a substantial amount of gravity.</English>
 		<French>Il s'agit d'une arcologie de la taille de la Lune qui est suffisamment grande pour générer une quantité substantielle de gravité.</French>
 		<Russian>Ýòî àðêîëîãèÿ ðàçìåðîì ñ Ëóíó, äîñòàòî÷íî áîëüøàÿ, ÷òîáû ãåíåðèðîâàòü çíà÷èòåëüíîå êîëè÷åñòâî ãðàâèòàöèè.</Russian>
+		<Polish>Jest to arkologia wielko&#156;ci Ksi&#234;&#191;yca, kt&#243;ra jest wystarczaj&#185;co du&#191;a, aby wytworzy&#230; znaczn&#185; ilo&#156;&#230; grawitacji.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_ARTIFICIAL_PLANET</Tag>
@@ -542,12 +622,14 @@
 		<French>Planète Artificielle</French>
 		<Russian>Èñêóñòâåííàÿ ïëàíåòà</Russian>
 		<Italian>Pianeta artificiale</Italian>
+		<Polish>Sztuczna planeta</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_ARTIFICIAL_PLANET_PEDIA</Tag>
 		<English>A completely artificial planet, assembled from stray material in the stellar neighborhood.</English>
 		<French>Une planète complètement artificielle, assemblée à partir de matériaux parasites dans le quartier stellaire.</French>
 		<Russian>Ïîëíîñòüþ èñêóññòâåííàÿ ïëàíåòà, ñîáðàííàÿ èç ÷óæåðîäíûõ ìàòåðèàëîâ â çâåçäíîé îêðåñòíîñòè.</Russian>
+		<Polish>Ca&#179;kowicie sztuczna planeta, z&#179;o&#191;ona z bezpa&#241;skiego materia&#179;u w s&#185;siedztwie gwiazd.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_ASTEROID_MINE</Tag>
@@ -555,12 +637,14 @@
 		<French>Mine d'Astéroide</French>
 		<Russian>Àñòåðîèäíàÿ øàõòà</Russian>
 		<Italian>Miniera su asteroide</Italian>
+		<Polish>Kopalnia Asteroidalna</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_ASTEROID_MINE_PEDIA</Tag>
 		<English>Asteroid Mine</English>
 		<French>Mine d'Astéroide</French>
 		<Russian>Àñòåðîèäíàÿ øàõòà</Russian>
+		<Polish>Kopalnia Asteroidalna</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_BIOTIC_GALAXY</Tag>
@@ -568,12 +652,14 @@
 		<French>Galaxie Biotique</French>
 		<Russian>Áèîãàëàêòèêà</Russian>
 		<Italian>Galassia biotica</Italian>
+		<Polish>Galaktyka Biotyczna</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_BIOTIC_GALAXY_PEDIA</Tag>
 		<English>Life has been spread throughout this galaxy.</English>
 		<French>La vie s'est répandue dans cette galaxie.</French>
 		<Russian>Æèçíü ðàñïðîñòðàíèëàñü ïî âñåé ýòîé ãàëàêòèêå.</Russian>
+		<Polish>&#175;ycie rozprzestrzeni&#179;o si&#234; po ca&#179;ej galaktyce.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_BIOTIC_NEUTRON_STAR</Tag>
@@ -581,12 +667,14 @@
 		<French>Etoile à Neutron Biotique</French>
 		<Russian>Áèîíåéòðîííàÿ çâåçäà</Russian>
 		<Italian>Stella biotica di neutroni</Italian>
+		<Polish>Biotyczna gwiazda neutronowa</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_BIOTIC_NEUTRON_STAR_PEDIA</Tag>
 		<English>Using some unknown exotic lifeforms, this neutron star has been made into a functioning ecosystem.</English>
 		<French>À l'aide de formes de vie exotiques inconnues, cette étoile à neutrons a été transformée en écosystème fonctionnel.</French>
 		<Russian>Èñïîëüçóÿ íåêîòîðûå íåèçâåñòíûå ýêçîòè÷åñêèå ôîðìû æèçíè, ýòà íåéòðîííàÿ çâåçäà áûëà ïðåâðàùåíà â ôóíêöèîíèðóþùóþ ýêîñèñòåìó.</Russian>
+		<Polish>Wykorzystuj&#185;c nieznane egzotyczne formy &#191;ycia, ta gwiazda neutronowa zosta&#179;a przekszta&#179;cona w funkcjonuj&#185;cy ekosystem.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_BLUE_SUPERGIANT_COLONY</Tag>
@@ -594,12 +682,14 @@
 		<French>Colonie de Supergéante bleue</French>
 		<Russian>Колония голубого сверхгиганта</Russian>
 		<Italian>Colonia su supergigante blu</Italian>
+		<Polish>Kolonia Niebieskiego Nadolbrzyma</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_BLUE_SUPERGIANT_COLONY_PEDIA</Tag>
 		<English>It is hard to colonize a blue supergiant due to its intense heat, X-ray radiation, and unstable characteristics. But here you go.</English>
 		<French>Il est difficile de coloniser une supergéante bleue en raison de sa chaleur intense, de son rayonnement X et de ses caractéristiques instables. Mais voilà.</French>
 		<Russian>Трудно колонизировать систему голубого сверхгиганта из-за его высокой температуры, мощного рентгеновского излучения и высокой переменности светимости звезды. Но когда это останавливало человеческую жадность и любопытство?</Russian>
+		<Polish>Trudno jest skolonizowa&#230; niebieskiego nadolbrzyma ze wzgl&#234;du na jego intensywne ciep&#179;o, promieniowanie rentgenowskie i niestabilno&#156;&#230;. Ale prosz&#234; bardzo.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_BRANE_FACTORY</Tag>
@@ -607,12 +697,14 @@
 		<French>Usine de Brane</French>
 		<Russian>Ôàáðèêà Áðàíû</Russian>
 		<Italian>Fabbrica nello spazio brana</Italian>
+		<Polish>Fabryka Bran</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_BRANE_FACTORY_PEDIA</Tag>
 		<English>A factory that lives in branespace.</English>
 		<French>Une usine qui vit dans l'espace de Brane.</French>
 		<Russian>Ñ ïîìîùüþ ýòîé ôàáðèêè âû ìîæåòå ñòðóêòóðèðîâàòü îáû÷íîå ïðîñòðàíñòâî äî òðåòüåãî êâàíòîâîãî ñîñòîÿíèÿ: îò òî÷êè äî ñòðóí, îò ñòðóíû äî ìåìáðàíû.</Russian>
+		<Polish>Fabryka &#191;yj&#185;ca w przestrzeni Bran.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_BRANE_FARM</Tag>
@@ -620,12 +712,14 @@
 		<French>Ferme de Brane</French>
 		<Russian>Ôåðìà áðàíû</Russian>
 		<Italian>Coltivazione di brana</Italian>
+		<Polish>Farma Bran</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_BRANE_FARM_PEDIA</Tag>
 		<English>What do your digital, dematerialized post-post-transhumanoids eat anyway? This late in the game there is still a food mechanism, so they must eat something.</English>
 		<French>Que mangent de toute façon vos post-post-transhumanoïdes numériques et dématérialisés? À la fin du jeu, il y a toujours un mécanisme alimentaire, ils doivent donc manger quelque chose.</French>
 		<Russian>×òî âîîáùå åäÿò âàøè öèôðîâûå äåìàòåðèàëèçîâàííûå ïîñò-ïîñòòðàíãóìàíîèäû? Â ýòîì êîíöå èãðû âñå åùå åñòü ìåõàíèçì ïèòàíèÿ, ïîýòîìó îíè äîëæíû ÷òî-òî åñòü.</Russian>
+		<Polish>Co w og&#243;le jedz&#185; wasze cyfrowe, zdematerializowane post-post-transhumanoidy? Na tak p&#243;&#159;nym etapie gry nadal istnieje mechanizm jedzenia, wi&#234;c musz&#185; co&#156; zje&#156;&#230;.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_CISLUNAR_BASE</Tag>
@@ -633,11 +727,13 @@
 		<French>Base Cislunaire</French>
 		<Russian>Îêîëîëóííàÿ áàçà</Russian>
 		<Italian>Base cislunare</Italian>
+		<Polish>Baza Cislunarna</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_CISLUNAR_BASE_PEDIA</Tag>
 		<English>A military base in cislunar space.</English>
 		<Russian>Âîåííàÿ áàçà íà ëóííîé îðáèòå.</Russian>
+		<Polish>Baza wojskowa w przestrzeni cislunarnej.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_CISLUNAR_EXPANSION_MODULE</Tag>
@@ -645,11 +741,13 @@
 		<French>Module d'Expansion Cislunaire</French>
 		<Russian>Îêîëîëóííûé ìîäóëü</Russian>
 		<Italian>Modulo di espansione cislunare</Italian>
+		<Polish>Modu&#179; rozszerze&#241; Cislunar</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_CISLUNAR_EXPANSION_MODULE_PEDIA</Tag>
 		<English>An expanded module for a cislunar colony.</English>
 		<Russian>Ðàñøèðåííûé ìîäóëü äëÿ îêîëîëóííîé êîëîíèè.</Russian>
+		<Polish>Rozbudowany modu&#179; kolonii cislunarnej.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_COSMIC_EXPANSION_NODE</Tag>
@@ -657,12 +755,14 @@
 		<French>Noeud d'Expansion cosmique</French>
 		<Russian>Óçåë ïðîñòð. ðàñøèðåíèÿ</Russian>
 		<Italian>Nodo di espansione cosmica</Italian>
+		<Polish>W&#234;ze&#179; ekspanji kosmicznej</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_COSMIC_EXPANSION_NODE_PEDIA</Tag>
 		<English>This mysterious facility harvests dark energy.</English>
 		<French>Cette installation mystérieuse récolte l'énergie sombre.</French>
 		<Russian>Ýòîò òàèíñòâåííûé îáúåêò ñîáèðàåò òåìíóþ ýíåðãèþ.</Russian>
+		<Polish>Ta tajemnicza plac&#243;wka zbiera ciemn&#185; energi&#234;.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_DISTANT_FUTURE_CITY</Tag>
@@ -670,12 +770,14 @@
 		<French>Ville du Futur lointain</French>
 		<Russian>Ãîðîä äàë. áóäóùåãî</Russian>
 		<Italian>Città del futuro</Italian>
+		<Polish>Miasto w odleg&#179;ej przysz&#179;o&#156;ci</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_DISTANT_FUTURE_CITY_PEDIA</Tag>
 		<English>A city that exists in the distant future.</English>
 		<French>Une ville qui existe dans un futur lointain.</French>
 		<Russian>Ãîðîä, êîòîðûé ñóùåñòâóåò â äàëåêîì áóäóùåì.</Russian>
+		<Polish>Miasto, kt&#243;re istnieje w odleg&#179;ej przysz&#179;o&#156;ci.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_DISTANT_PAST_CITY</Tag>
@@ -683,12 +785,14 @@
 		<French>Ville du passé lointain</French>
 		<Russian>Ãîðîä äàë. ïðîøëîãî</Russian>
 		<Italian>Città del passato</Italian>
+		<Polish>Miasto w odleg&#179;ej przesz&#179;o&#156;ci</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_DISTANT_PAST_CITY_PEDIA</Tag>
 		<English>A city that exists in the distant past.</English>
 		<French>Une ville qui existe dans un passé lointain.</French>
 		<Russian>Ãîðîä, êîòîðûé ñóùåñòâóåò â äàëåêîì ïðîøëîì.</Russian>
+		<Polish>Miasto, kt&#243;re istnieje w odleg&#179;ej przesz&#179;o&#156;ci.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_DISTANT_RESEARCH_BASE</Tag>
@@ -696,12 +800,14 @@
 		<French>Base de Recherche Distante</French>
 		<Russian>Äàëüíÿÿ èññëåä. áàçà</Russian>
 		<Italian>Base cosmica di ricerca </Italian>
+		<Polish>Odleg&#179;a Baza Badawcza</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_DISTANT_RESEARCH_BASE_PEDIA</Tag>
 		<English>A research base that studies biology, geology, and other sciences beyond the cosmic horizon.</English>
 		<French>Une base de recherche qui étudie la biologie, la géologie et d'autres sciences au-delà de l'horizon cosmique.</French>
 		<Russian>Íàó÷íî-èññëåäîâàòåëüñêàÿ áàçà, êîòîðàÿ èçó÷àåò áèîëîãèþ, ãåîëîãèþ è äðóãèå íàóêè çà ïðåäåëàìè êîñìè÷åñêîãî ãîðèçîíòà.</Russian>
+		<Polish>Baza badawcza zajmuj&#185;ca si&#234; biologi&#185;, geologi&#185; i innymi naukami wykraczaj&#185;cymi poza kosmiczny horyzont.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_DYSON_SPHERE</Tag>
@@ -709,12 +815,14 @@
 		<French>Sphère de Dyson</French>
 		<Russian>Ñôåðà Äàéñîíà</Russian>
 		<Italian>Sfera di Dyson</Italian>
+		<Polish>Sfera Dysona</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_DYSON_SPHERE_PEDIA</Tag>
 		<English>A Dyson Sphere is a solar collector that encompasses an entire star.</English>
 		<French>A Sphère de Dyson is a solar collector that encompasses an entire star.</French>
 		<Russian>Ñôåðà Äàéñîíà - ýòî ñîëíå÷íûé êîëëåêòîð, îõâàòûâàþùèé öåëóþ çâåçäó.</Russian>
+		<Polish>Sfera Dysona to kolektor s&#179;oneczny obejmuj&#185;cy ca&#179;&#185; gwiazd&#234;.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_HELIOFORMED_BROWN_DWARF</Tag>
@@ -722,12 +830,14 @@
 		<French>Naine brune Hélioformée</French>
 		<Russian>Ãåëèîôîðì. êîðè÷. êàðëèê</Russian>
 		<Italian>Nana bruna elioformata</Italian>
+		<Polish>Helioformowany br&#185;zowy karze&#179;</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_HELIOFORMED_BROWN_DWARF_PEDIA</Tag>
 		<English>A brown dwarf that has been ignited into a red dwarf</English>
 		<French>Une naine brune qui s'est enflammée en une naine rouge</French>
 		<Russian>Êîðè÷íåâûé êàðëèê, êîòîðûé ïåðåðîäèëñÿ â êðàñíîãî êàðëèêà</Russian>
+		<Polish>Br&#185;zowy karze&#179;, kt&#243;ry zosta&#179; spalony i zmieni&#179; si&#234; w czerwonego kar&#179;a</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_HYPERSPACE_BUNKER</Tag>
@@ -735,12 +845,14 @@
 		<French>Bunker de l'Hyperespace</French>
 		<Russian>Ãèïåðêîñìè÷. áóíêåð</Russian>
 		<Italian>Bunker nell'iperspazio</Italian>
+		<Polish>Bunkier nadprzestrzenny</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_HYPERSPACE_BUNKER_PEDIA</Tag>
 		<English>A military base in hyperspace.</English>
 		<French>A military base in hyperespace.</French>
 		<Russian>Âîåííàÿ áàçà â ãèïåðïðîñòðàíñòâå.</Russian>
+		<Polish>Baza wojskowa w nadprzestrzeni.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_INTERGALACTIC_BASE</Tag>
@@ -748,12 +860,14 @@
 		<French>Base Intergalactique</French>
 		<Russian>Ìåæãàëàêòè÷. áàçà</Russian>
 		<Italian>Base intergalattica</Italian>
+		<Polish>Baza Mi&#234;dzygalaktyczna</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_INTERGALACTIC_BASE_PEDIA</Tag>
 		<English>A military base in intergalactic space.</English>
 		<French>Une base militaire dans l'espace intergalactique.</French>
 		<Russian>Âîåííàÿ áàçà â ìåæãàëàêòè÷åñêîì ïðîñòðàíñòâå.</Russian>
+		<Polish>Baza wojskowa w przestrzeni mi&#234;dzygalaktycznej.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_INTERGALACTIC_COLONY</Tag>
@@ -761,12 +875,14 @@
 		<French>Colonie Intergalactique</French>
 		<Russian>Ìåæãàëàêò. êîëîíèÿ</Russian>
 		<Italian>Colonia intergalattica</Italian>
+		<Polish>Kolonia Mi&#234;dzygalaktyczna</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_INTERGALACTIC_COLONY_PEDIA</Tag>
 		<English>A developed dwarf galaxy</English>
 		<French>Une galaxie drawf développée</French>
 		<Russian>Ðàçâèòàÿ êàðëèêîâàÿ ãàëàêòèêà</Russian>
+		<Polish>Rozwini&#234;ta galaktyka kar&#179;owata</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_INTERGALACTIC_RESEARCH_BASE</Tag>
@@ -774,12 +890,14 @@
 		<French>Base de Recherche Intergalactique</French>
 		<Russian>Ìåæãàëàêò. èññëåä. áàçà</Russian>
 		<Italian>Base di ricerca intergalattica</Italian>
+		<Polish>Mi&#234;dzygalaktyczna Baza Badawcza</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_INTERGALACTIC_RESEARCH_BASE_PEDIA</Tag>
 		<English>A research base that studies biology, geology, and other sciences on distant galaxies.</English>
 		<French>Une base de recherche qui étudie la biologie, la géologie et d'autres sciences sur les galaxies lointaines.</French>
 		<Russian>Èññëåäîâàòåëüñêàÿ áàçà, êîòîðàÿ èçó÷àåò áèîëîãèþ, ãåîëîãèþ è äðóãèå íàóêè î äàëåêèõ ãàëàêòèêàõ.</Russian>
+		<Polish>Baza badawcza zajmuj&#185;ca si&#234; biologi&#185;, geologi&#185; i innymi naukami o odleg&#179;ych galaktykach.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_INTERSTELLAR_BASE</Tag>
@@ -787,11 +905,13 @@
 		<French>Base Interstellaire</French>
 		<Russian>Ìåæçâåçäíàÿ áàçà</Russian>
 		<Italian>Base interstellare</Italian>
+		<Polish>Baza Mi&#234;dzygwiezdna</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_INTERSTELLAR_BASE_PEDIA</Tag>
 		<English>A military base in interstellar space.</English>
 		<Russian>Âîåííàÿ áàçà â ìåæçâåçäíîì ïðîñòðàíñòâå.</Russian>
+		<Polish>Baza wojskowa w przestrzeni mi&#234;dzygwiezdnej.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_INTERSTELLAR_COLONY</Tag>
@@ -799,11 +919,13 @@
 		<French>Colonie Interstellaire</French>
 		<Russian>Ìåæçâåçä. êîëîíèÿ</Russian>
 		<Italian>Colonia interstellare</Italian>
+		<Polish>Kolonia Mi&#234;dzygwiezdna</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_INTERSTELLAR_COLONY_PEDIA</Tag>
 		<English>A colony of the regional interstellar power.</English>
 		<Russian>Êîëîíèÿ ðåãèîíàëüíîé ìåæçâåçäíîé äåðæàâû.</Russian>
+		<Polish>Kolonia regionalnej pot&#234;gi mi&#234;dzygwiezdnej.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_INTERSTELLAR_RESEARCH_BASE</Tag>
@@ -811,12 +933,14 @@
 		<French>Base de Recherche Interstellaire</French>
 		<Russian>Ìåæçâåçä. èññëåä. áàçà</Russian>
 		<Italian>Base di ricerca interstellare</Italian>
+		<Polish>Mi&#234;dzygwiezdna Baza Badawcza</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_INTERSTELLAR_RESEARCH_BASE_PEDIA</Tag>
 		<English>A research base that studies biology, geology, and other sciences on distant planets.</English>
 		<French>Une base de recherche qui étudie la biologie, la géologie et d'autres sciences sur des planètes lointaines.</French>
 		<Russian>Íàó÷íî-èññëåäîâàòåëüñêàÿ áàçà, êîòîðàÿ èçó÷àåò áèîëîãèþ, ãåîëîãèþ è äðóãèå íàóêè íà äàëåêèõ ïëàíåòàõ.</Russian>
+		<Polish>Baza badawcza zajmuj&#185;ca si&#234; biologi&#185;, geologi&#185; i innymi naukami na odleg&#179;ych planetach.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_INTERSTELLAR_TRADING_POST</Tag>
@@ -824,12 +948,14 @@
 		<French>Station commerciale Interstellaire</French>
 		<Russian>Ìåæçâåçä. òîðãîâûé ïîñò</Russian>
 		<Italian>Stazione commerciale interstellare</Italian>
+		<Polish>Mi&#234;dzygwiezdna plac&#243;wka handlowa</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_INTERSTELLAR_TRADING_POST_PEDIA</Tag>
 		<English>A trading post on a rogue planet</English>
 		<French>Un poste de traite sur une planète voyou</French>
 		<Russian>Òîðãîâûé ïîñò íà áëóæäàþùåé ïëàíåòå</Russian>
+		<Polish>Punkt handlowy na samotnej planecie</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_JOVIAN_FLOATING_CITY</Tag>
@@ -837,12 +963,14 @@
 		<French>Ville flottante Jovienne</French>
 		<Russian>Îáëà÷íîé ãîðîä</Russian>
 		<Italian>Città gioviana volante</Italian>
+		<Polish>Jowiszowe p&#179;ywaj&#185;ce miasto</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_JOVIAN_FLOATING_CITY_PEDIA</Tag>
 		<English>This massive city floats effortlessly over the clouds of a gas giant.</English>
 		<French>Cette ville massive flotte sans effort sur les nuages d'une géante gazeuse.</French>
 		<Russian>Ýòîò ìàññèâíûé ãîðîä áåç îñîáûõ óñèëèé ïëàâàåò íàä îáëàêàìè ãàçîâîãî ãèãàíòà.</Russian>
+		<Polish>To ogromne miasto bez wysi&#179;ku unosi si&#234; nad chmurami gazowego giganta.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_JOVIAN_LUNAR_ARCOLOGY</Tag>
@@ -850,12 +978,14 @@
 		<French>Jovian Arcologie Lunaire</French>
 		<Russian>Àðêîïîëèñ</Russian>
 		<Italian>Arcologia sulla luna gioviana</Italian>
+		<Polish>Jowiszowa arkologia ksi&#234;&#191;ycowa</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_JOVIAN_LUNAR_ARCOLOGY_PEDIA</Tag>
 		<English>A megastructure on some outer lunar moon.</English>
 		<French>Une mégastructure sur une lune lunaire extérieure.</French>
 		<Russian>Ìåãàñòðóêòóðû íà îäíîé èç ëóí âíåøíèõ ïëàíåò.</Russian>
+		<Polish>Megastruktura na zewn&#234;trznym ksi&#234;&#191;ycu ksi&#234;&#191;ycowym.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_JOVIAN_LUNAR_BASE</Tag>
@@ -863,12 +993,14 @@
 		<French>Base Lunaire Jovienne</French>
 		<Russian>Áàçà âíåøíèõ ñïóòíèêîâ</Russian>
 		<Italian>Base sulla luna gioviana</Italian>
+		<Polish>Jowiszowa baza ksi&#234;&#191;ycowa</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_JOVIAN_LUNAR_BASE_PEDIA</Tag>
 		<English>This base is a town on an outer Solar System moon.</English>
 		<French>Cette base est une ville sur une lune extérieure du système solaire.</French>
 		<Russian>Ýòà áàçà - ãîðîä íà îäíîé ëóí âíåøíèõ ïëàíåò Ñîëíå÷íîé ñèñòåìû.</Russian>
+		<Polish>Baza ta to miasto na zewn&#234;trznym ksi&#234;&#191;ycu Uk&#179;adu S&#179;onecznego.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_JOVIAN_SCOOP</Tag>
@@ -876,12 +1008,14 @@
 		<French>Scoop Jovienne</French>
 		<Russian>Ãàçîêîìïðåññîð</Russian>
 		<Italian>Collettore gioviano</Italian>
+		<Polish>Jowiszowa &#179;y&#191;ka</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_JOVIAN_SCOOP_PEDIA</Tag>
 		<English>This device extracts material from the outer atmosphere of a gas giant.</English>
 		<French>Cet appareil extrait du matériau de l'atmosphère extérieure d'une géante gazeuse.</French>
 		<Russian>Ýòî óñòðîéñòâî èçâëåêàåò öåííûå ðåñóðñû èç âíåøíåé àòìîñôåðû ãàçîâîãî ãèãàíòà.</Russian>
+		<Polish>To urz&#185;dzenie wydobywa materi&#234; z zewn&#234;trznej atmosfery gazowego giganta.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_LISTENING_NODE</Tag>
@@ -902,12 +1036,14 @@
 		<French>Arcologie Lunaire</French>
 		<Russian>Ëóííûé àðêîïîëèñ</Russian>
 		<Italian>Arcologia lunare</Italian>
+		<Polish>Arkologia ksi&#234;&#191;ycowa</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_LUNAR_ARCOLOGY_PEDIA</Tag>
 		<English>A megastructure on the Moon.</English>
 		<French>Une mégastructure sur la Lune.</French>
 		<Russian>Ëóííàÿ ìåãàñòðóêòóðà.</Russian>
+		<Polish>Megastruktura na Ksi&#234;&#191;ycu.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_LUNAR_BASE</Tag>
@@ -915,12 +1051,14 @@
 		<French>Base Lunaire</French>
 		<Russian>Ëóííàÿ áàçà</Russian>
 		<Italian>Base lunare</Italian>
+		<Polish>Baza Ksi&#234;&#191;ycowa</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_LUNAR_BASE_PEDIA</Tag>
 		<English>Lunar Base</English>
 		<French>Base Lunaire</French>
 		<Russian>Ëóííàÿ áàçà</Russian>
+		<Polish>Baza Ksi&#234;&#191;ycowa</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_LUNAR_HABITATION_COMPLEX</Tag>
@@ -928,10 +1066,12 @@
 		<French>Complexe d'Habitation Lunaire</French>
 		<Russian>Ëóííûé æèëîé êîìïëåêñ</Russian>
 		<Italian>Complesso abitativo lunare</Italian>
+		<Polish>Ksi&#234;&#191;ycowy Kompleks Mieszkaniowy</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_LUNAR_HABITATION_COMPLEX_PEDIA</Tag>
 		<English>Lunar equivalent of suburbs</English>
+		<Polish>Ksi&#234;&#191;ycowy odpowiednik przedmie&#156;&#230;</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_LUNAR_MINE</Tag>
@@ -939,12 +1079,14 @@
 		<French>Mine Lunaire</French>
 		<Russian>Ëóííàÿ øàõòà</Russian>
 		<Italian>Miniera lunare</Italian>
+		<Polish>Kopalnia Ksi&#234;&#191;ycowa</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_LUNAR_MINE_PEDIA</Tag>
 		<English>Lunar Mine</English>
 		<French>Mine Lunaire</French>
 		<Russian>Ëóííàÿ øàõòà</Russian>
+		<Polish>Kopalnia Ksi&#234;&#191;ycowa</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_LUNAR_MINING_OUTPOST</Tag>
@@ -952,12 +1094,14 @@
 		<French>Avant-poste Minier lunaire</French>
 		<Russian>Ëóííàÿ ãîðíàÿ çàñòàâà</Russian>
 		<Italian>Avamposto minerario lunare</Italian>
+		<Polish>Ksi&#234;&#191;ycowa plac&#243;wka g&#243;rnicza</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_LUNAR_MINING_OUTPOST_PEDIA</Tag>
 		<English>Lunar Mining Outpost</English>
 		<French>Avant-poste Minier lunaire</French>
 		<Russian>Ëóííàÿ ãîðíàÿ çàñòàâà</Russian>
+		<Polish>Ksi&#234;&#191;ycowa plac&#243;wka g&#243;rnicza</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_LUNAR_OUTPOST</Tag>
@@ -965,12 +1109,14 @@
 		<French>Avant-Poste Lunaire</French>
 		<Russian>Ëóííûé àâàíïîñò</Russian>
 		<Italian>Avamposto lunare</Italian>
+		<Polish>Posterunek Ksi&#234;&#191;ycowy</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_LUNAR_OUTPOST_PEDIA</Tag>
 		<English>Lunar Outpost.</English>
 		<French>Avant-Poste Lunaire</French>
 		<Russian>Ëóííûé àâàíïîñò</Russian>
+		<Polish>Posterunek Ksi&#234;&#191;ycowy.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_MARTIAN_FARM</Tag>
@@ -978,12 +1124,14 @@
 		<French>Ferme Martienne</French>
 		<Russian>Ìàðñèàíñêàÿ ôåðìà</Russian>
 		<Italian>Fattoria marziana</Italian>
+		<Polish>Farma marsja&#241;ska</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_MARTIAN_FARM_PEDIA</Tag>
 		<English>A farm on Mars.</English>
 		<French>Une ferme sur Mars.</French>
 		<Russian>Çàùèùåííàÿ è âûñîêîòåõíîëîãè÷íàÿ ôåðìà íà ìàðñèàíñêîé ïîâåðõíîñòè.</Russian>
+		<Polish>Farma na Marsie.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_MARTIAN_MINE</Tag>
@@ -991,12 +1139,14 @@
 		<French>Mine Martienne</French>
 		<Russian>Ìàðñèàíñêàÿ øàõòà</Russian>
 		<Italian>Miniera marziana </Italian>
+		<Polish>Kopalnia marsja&#241;ska</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_MARTIAN_MINE_PEDIA</Tag>
 		<English>A mine on Mars.</English>
 		<French>Une mine sur Mars.</French>
 		<Russian>Ãîðíàÿ ðàçðàáîòêà è ðóäíèêè íà Ìàðñå.</Russian>
+		<Polish>Kopalnia na Marsie.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_MERCURY_COLONY</Tag>
@@ -1004,12 +1154,14 @@
 		<French>Colonie de Mercure</French>
 		<Russian>Ìåðêóðèàí. êîëîíèÿ</Russian>
 		<Italian>Colonia su Mercurio</Italian>
+		<Polish>Kolonia Merkurego</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_MERCURY_COLONY_PEDIA</Tag>
 		<English>This small town on the surface of Mercury is a rough place to live.</English>
 		<French>Cette petite ville à la surface de Mercure est un endroit difficile à vivre.</French>
 		<Russian>Ýòîò ìàëåíüêèé ãîðîäîê íà ïîâåðõíîñòè Ìåðêóðèÿ - òðóäíîå è îïàñíîå ìåñòî äëÿ æèçíè.</Russian>
+		<Polish>To ma&#179;e miasteczko na powierzchni Merkurego to trudne miejsce do &#191;ycia.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_MERCURY_SOLAR_ARRAY</Tag>
@@ -1017,12 +1169,14 @@
 		<French>Panneau Solaire sur Mercure</French>
 		<Russian>Ìåðêóð. ñîëí. áàòàðåÿ</Russian>
 		<Italian>Formazione di pannelli solari di Mercurio</Italian>
+		<Polish>Farma s&#179;oneczna Merkurego</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_MERCURY_SOLAR_ARRAY_PEDIA</Tag>
 		<English>An array of solar panels on Mercury. Due to the heat, they require special engineering, but they collect a lot of power.</English>
 		<French>Un tableau de panneaux solaires sur Mercure. En raison de la chaleur, ils nécessitent une ingénierie spéciale, mais ils collectent beaucoup d'énergie.</French>
 		<Russian>Ìàññèâ ñîëíå÷íûõ ïàíåëåé íà Ìåðêóðèè. Èç-çà æàðû èì òðåáóåòñÿ ñïåöèàëüíàÿ èíæåíåðèÿ, íî îíè ñîáèðàþò ìíîãî ýíåðãèè.</Russian>
+		<Polish>Szereg paneli s&#179;onecznych na Merkurym. Ze wzgl&#234;du na ciep&#179;o wymagaj&#185; specjalnej konstrukcji, ale gromadz&#185; du&#191;o energii.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_NEUTRON_STAR_COLONY</Tag>
@@ -1030,12 +1184,14 @@
 		<French>Colonie d'Etoile à Neutron</French>
 		<Russian>Êîëîíèÿ íåéòðîí. çâåçäû</Russian>
 		<Italian>Colonia sulla stella di neutroni</Italian>
+		<Polish>Kolonia Gwiazdy Neutronowej</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_NEUTRON_STAR_COLONY_PEDIA</Tag>
 		<English>A city on a neutron star? It can be done with Neutronium.</English>
 		<French>Une ville sur une étoile à neutrons? Cela peut être fait avec du neutronium.</French>
 		<Russian>Ãîðîä íà íåéòðîííîé çâåçäå? Ýòî ìîæíî ñäåëàòü ñ ïîìîùüþ íåéòðîíèÿ.</Russian>
+		<Polish>Miasto na gwie&#159;dzie neutronowej? Mo&#191;na to zrobi&#230; za pomoc&#185; Neutronium.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_OBSERVABLE_UNIVERSE_COLONY</Tag>
@@ -1043,12 +1199,14 @@
 		<French>Colonie dans l'Univers Observable</French>
 		<Russian>Êîëîíèÿ íàáëþäàåìîé Âñåëåííîé</Russian>
 		<Italian>Colonia dell'universo osservabile</Italian>
+		<Polish>Kolonia obserwowalnego wszech&#156;wiata</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_OBSERVABLE_UNIVERSE_COLONY_PEDIA</Tag>
 		<English>This colony spans at least to the cosmic horizon of a central point. You think that's enough?</English>
 		<French>Cette colonie s'étend au moins jusqu'à l'horizon cosmique d'un point central. Tu crois que ça suffit?</French>
 		<Russian>Ýòà êîëîíèÿ ïðîñòèðàåòñÿ êàê ìèíèìóì äî êîñìè÷åñêîãî ãîðèçîíòà öåíòðàëüíîé òî÷êè. Âû äóìàåòå, ýòîãî äîñòàòî÷íî?</Russian>
+		<Polish>Ta kolonia rozci&#185;ga si&#234; przynajmniej do kosmicznego horyzontu centralnego punktu. My&#156;lisz, &#191;e to wystarczy?</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_PARALLEL_UNIVERSE</Tag>
@@ -1056,12 +1214,14 @@
 		<French>Univers Parallèle</French>
 		<Russian>Ïàðàëëåëüíàÿ âñåëåííàÿ</Russian>
 		<Italian>Universo parallelo</Italian>
+		<Polish>Wszech&#156;wiat r&#243;wnoleg&#179;y</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_PARALLEL_UNIVERSE_PEDIA</Tag>
 		<English>A parallel universe has been colonized or created as a colony</English>
 		<French>Un univers parallèle a été colonisé ou créé en tant que colonie</French>
 		<Russian>Ïàðàëëåëüíàÿ âñåëåííàÿ áûëà êîëîíèçèðîâàíà èëè ñîçäàíà êàê êîëîíèÿ</Russian>
+		<Polish>R&#243;wnoleg&#179;y wszech&#156;wiat zosta&#179; skolonizowany lub stworzony jako kolonia</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_PARATERRAFORMED_ASTEROID</Tag>
@@ -1069,12 +1229,14 @@
 		<French>Astéroïde Paraterraformé</French>
 		<Russian>Ïàðàòåððàôîðì. àñòåðîèä</Russian>
 		<Italian>Asteroide paraterraformato</Italian>
+		<Polish>Paraterraformowana asteroida</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_PARATERRAFORMED_ASTEROID_PEDIA</Tag>
 		<English>This asteroid or other such object has been terraformed.</English>
 		<French>Cet astéroïde ou autre objet similaire a été terraformé.</French>
 		<Russian>Ýòîò àñòåðîèä èëè äðóãîé ïîäîáíûé îáúåêò áûë òåððàôîðìèðîâàí.</Russian>
+		<Polish>Ta asteroida lub inny podobny obiekt uleg&#179; terraformacji.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_SATELLITE_STATION</Tag>
@@ -1082,12 +1244,14 @@
 		<French>Station Satellite</French>
 		<Russian>Îðáèòàëüíàÿ ñòàíöèÿ</Russian>
 		<Italian>Stazione satellitare del cilindro di O'Neill</Italian>
+		<Polish>Stacja satelitarna</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_SATELLITE_STATION_PEDIA</Tag>
 		<English>A satellite station to an O'Neill cylinder.</English>
 		<French>Une station satellite à un cylindre O'Neill.</French>
 		<Russian>Ñïóòíèêîâàÿ ñòàíöèÿ ê öèëèíäðó Î'Íèëà.</Russian>
+		<Polish>Stacja satelitarna do cylindra O&#179;Neilla.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_SOLAR_CONCENTRATOR</Tag>
@@ -1095,6 +1259,7 @@
 		<French>Concentrateur Solaire</French>
 		<Russian>Ñîëíå÷. êîíöåíòðàòîð</Russian>
 		<Italian>Concentratore di luce solare</Italian>
+		<Polish>Koncentrator s&#179;oneczny</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_SOLAR_SYSTEM_BASE</Tag>
@@ -1102,12 +1267,14 @@
 		<French>Base du Système Solaire</French>
 		<Russian>Ìåæïëàíåòíàÿ ñòàíöèÿ</Russian>
 		<Italian>Base del sistema solare</Italian>
+		<Polish>Baza Uk&#179;adu S&#179;onecznego</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_SOLAR_SYSTEM_BASE_PEDIA</Tag>
 		<English>A large military base in solar orbit.</English>
 		<French>Une grande base militaire en orbite solaire.</French>
 		<Russian>Êðóïíàÿ âîåííàÿ áàçà íà ñîëíå÷íîé îðáèòå.</Russian>
+		<Polish>Du&#191;a baza wojskowa na orbicie s&#179;onecznej.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_SOLAR_TRADING_POST</Tag>
@@ -1115,12 +1282,14 @@
 		<French>Station de commerce Solaire</French>
 		<Russian>Ñîëí. òîðãîâûé ïîñò</Russian>
 		<Italian>Base commerciale solare</Italian>
+		<Polish>Punkt Handlowy Energii S&#179;onecznej</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_SOLAR_TRADING_POST_PEDIA</Tag>
 		<English>A trading post in orbit around the Sun</English>
 		<French>Un poste de traite en orbite autour du Soleil</French>
 		<Russian>Òîðãîâûé ïîñò íà îðáèòå âîêðóã Ñîëíöà.</Russian>
+		<Polish>Punkt handlowy na orbicie wok&#243;&#179; S&#179;o&#241;ca</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_SPACE_SOLAR_ARRAY</Tag>
@@ -1128,6 +1297,7 @@
 		<French>Réseau solaire spatial</French>
 		<Russian>Êîñì. ñîëíå÷. áàòàðåÿ</Russian>
 		<Italian>Formazione di pannelli solari spaziale</Italian>
+		<Polish>Kosmiczny Farma s&#179;oneczna</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_SPACE_STATION_LV1</Tag>
@@ -1135,12 +1305,14 @@
 		<French>Station spatiale Niv. 1</French>
 		<Russian>Êîñìè÷. ñòàíöèÿ (óð.1)</Russian>
 		<Italian>Stazione spaziale (livello 1)</Italian>
+		<Polish>Stacja Kosmiczna poz. 1</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_SPACE_STATION_LV1_PEDIA</Tag>
 		<English>An early space station.</English>
 		<French>Une première station spatiale.</French>
 		<Russian>Ðàííÿÿ êîñìè÷åñêàÿ ñòàíöèÿ.</Russian>
+		<Polish>Wczesna stacja kosmiczna.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_SPACE_STATION_LV2</Tag>
@@ -1148,12 +1320,14 @@
 		<French>Station spatiale Niv. 2</French>
 		<Russian>Êîñìè÷. ñòàíöèÿ (óð.2)</Russian>
 		<Italian>Stazione spaziale (livello 2)</Italian>
+		<Polish>Stacja Kosmiczna poz. 2</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_SPACE_STATION_LV2_PEDIA</Tag>
 		<English>An intermediate space station.</English>
 		<French>Une station spatiale intermédiaire.</French>
 		<Russian>Ñðåäíÿÿ êîñìè÷åñêàÿ ñòàíöèÿ.</Russian>
+		<Polish>Po&#156;rednia stacja kosmiczna.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_SPACE_STATION_LV3</Tag>
@@ -1161,12 +1335,14 @@
 		<French>Station spatiale Niv. 3</French>
 		<Russian>Êîñìè÷. ñòàíöèÿ (óð.3)</Russian>
 		<Italian>Stazione spaziale (livello 3)</Italian>
+		<Polish>Stacja Kosmiczna poz. 3</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_SPACE_STATION_LV3_PEDIA</Tag>
 		<English>An advanced space station.</English>
 		<French>Une station spatiale avancée.</French>
 		<Russian>Ïðîäâèíóòàÿ êîñìè÷åñêàÿ ñòàíöèÿ.</Russian>
+		<Polish>Zaawansowana stacja kosmiczna.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_SPIRITUAL_REALM</Tag>
@@ -1174,12 +1350,14 @@
 		<French>Royaume Spirituel</French>
 		<Russian>Äóõîâíîå öàðñòâî</Russian>
 		<Italian>Regno spirituale</Italian>
+		<Polish>Strefa duchowa</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_SPIRITUAL_REALM_PEDIA</Tag>
 		<English>This is a mysterious spirit realm.</English>
 		<French>Ceci est un royaume spirituel mystérieux.</French>
 		<Russian>Ýòî òàèíñòâåííîå äóõîâíîå öàðñòâî.</Russian>
+		<Polish>To tajemnicza kraina duch&#243;w.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_STAR_SCOOP</Tag>
@@ -1187,12 +1365,14 @@
 		<French>Scoop d'Etoile</French>
 		<Russian>Звезд. плазмокомпрессор</Russian>
 		<Italian>Collettore stellare</Italian>
+		<Polish>&#163;y&#191;ka Gwiezdna</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_STAR_SCOOP_PEDIA</Tag>
 		<English>Harvest material directly from a star.</English>
 		<French>Récoltez le matériel directement d'une étoile.</French>
 		<Russian>Собирайте плазму прямо со звезды.</Russian>
+		<Polish>Zbierz materia&#179; bezpo&#156;rednio z gwiazdy.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_SUN_SCOOP</Tag>
@@ -1200,12 +1380,14 @@
 		<French>Scoop du Soleil</French>
 		<Russian>Ïëàçìîêîìïðåññîð</Russian>
 		<Italian>Collettore solare</Italian>
+		<Polish>&#163;y&#191;ka s&#179;o&#241;ca</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_SUN_SCOOP_PEDIA</Tag>
 		<English>This device extracts material and energy directly from the Sun.</English>
 		<French>Cet appareil extrait la matière et l'énergie directement du soleil.</French>
 		<Russian>Ýòî óñòðîéñòâî èçâëåêàåò ìàòåðèàë è ýíåðãèþ íåïîñðåäñòâåííî èç Ñîëíöà.</Russian>
+		<Polish>Urz&#185;dzenie to pobiera materi&#234; i energi&#234; bezpo&#156;rednio ze S&#179;o&#241;ca.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_SUPERCLUSTER_COLONY</Tag>
@@ -1213,12 +1395,14 @@
 		<French>Colonie de Supercluster</French>
 		<Russian>Êîëîíèÿ â ñâåðõñêîïëåíèè</Russian>
 		<Italian>Colonia del superammasso</Italian>
+		<Polish>Kolonia supergromady</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_SUPERCLUSTER_COLONY_PEDIA</Tag>
 		<English>A colony spanning an entire supercluster.</English>
 		<French>Une colonie couvrant tout un superamas.</French>
 		<Russian>Êîëîíèÿ, îõâàòûâàþùàÿ âñå ñâåðõñêîïëåíèå.</Russian>
+		<Polish>Kolonia obejmuj&#185;ca ca&#179;&#185; supergromad&#234;.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_SUPERNOVA_MINE</Tag>
@@ -1226,12 +1410,14 @@
 		<French>Mine de Supernova</French>
 		<Russian>Çâåçäíûé êàðüåð</Russian>
 		<Italian>Miniera per supernova</Italian>
+		<Polish>Kopalnia Supernowej</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_SUPERNOVA_MINE_PEDIA</Tag>
 		<English>Harnessing the resources released from an induced supernova</English>
 		<French>Exploiter les ressources libérées d'une supernova induite</French>
 		<Russian>Èñïîëüçîâàíèå ðåñóðñîâ, îñâîáîæäåííûõ îò âçîðâàâøåéñÿ ñâåðõíîâîé</Russian>
+		<Polish>Wykorzystanie zasob&#243;w uwolnionych w wyniku indukowanej supernowej</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_TERRAFORMED_PLANET</Tag>
@@ -1239,12 +1425,14 @@
 		<French>Planète Terraformée</French>
 		<Russian>Òåððàôîðì. ïëàíåòà</Russian>
 		<Italian>Pianeta terraformato</Italian>
+		<Polish>Terraformowana planeta</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_TERRAFORMED_PLANET_PEDIA</Tag>
 		<English>A terraformed planet in the galactic vicinity</English>
 		<French>Une planète terraformée au voisinage galactique</French>
 		<Russian>Òåððàôîðìèðîâàííàÿ ïëàíåòà íà ïðîñòîðàõ ãàëàêòèêè</Russian>
+		<Polish>Terraformowana planeta w pobli&#191;u galaktyki</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_TIME_MANIFOLD</Tag>
@@ -1252,12 +1440,14 @@
 		<French>Manifold du Temps</French>
 		<Russian>Âðåìåííîé êîëîäåö</Russian>
 		<Italian>Molteplicità temporale</Italian>
+		<Polish>Zakrzywienie Czasu</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_TIME_MANIFOLD_PEDIA</Tag>
 		<English>This indescribable time manifold is home to a vast civilization.</English>
 		<French>Cette variété de temps indescriptible abrite une vaste civilisation.</French>
 		<Russian>Ýòî íåîïèñóåìîå âðåìåííîå ìíîãîîáðàçèå ÿâëÿåòñÿ äîìîì äëÿ îãðîìíîé öèâèëèçàöèè.</Russian>
+		<Polish>Ta nieopisana rozmaito&#156;&#230; czasu jest domem dla ogromnej cywilizacji.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_TRUE_VACUUM</Tag>
@@ -1265,12 +1455,14 @@
 		<French>Vrai Vide</French>
 		<Russian>Èñòèííûé âàêóóì</Russian>
 		<Italian>Vuoto assoluto</Italian>
+		<Polish>Prawdziwa pr&#243;&#191;nia</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_TRUE_VACUUM_PEDIA</Tag>
 		<English>The true vacuum at a lower energy level than the false metastable vacuum.</English>
 		<French>Le vrai vide à un niveau d'énergie inférieur au faux vide métastable.</French>
 		<Russian>Èñòèííûé âàêóóì íà áîëåå íèçêîì óðîâíå ýíåðãèè, ÷åì ëîæíûé ìåòàñòàáèëüíûé âàêóóì.</Russian>
+		<Polish>Prawdziwa pr&#243;&#191;nia na ni&#191;szym poziomie energii ni&#191; fa&#179;szywa pr&#243;&#191;nia metastabilna.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_VENUS_AERIAL_FARM</Tag>
@@ -1278,11 +1470,13 @@
 		<French>Ferme aérienne de Vénus</French>
 		<Russian>Âåíåðèàí. àýðîôåðìà</Russian>
 		<Italian>Coltivazione aerea di Venere</Italian>
+		<Polish>Farma powietrzna Wenus</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_VENUS_AERIAL_FARM_PEDIA</Tag>
 		<English>A high-tech farm that floats on the clouds of Venus.</English>
 		<Russian>Âûñîêîòåõíîëîãè÷íàÿ ôåðìà, êîòîðàÿ ïàðèò ñðåäè îáëàêîâ Âåíåðû.</Russian>
+		<Polish>Zaawansowana technologicznie farma unosz&#185;ca si&#234; na chmurach Wenus.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_VENUS_SURFACE_MINE</Tag>
@@ -1290,11 +1484,13 @@
 		<French>Mine de surface de Vénus</French>
 		<Russian>Âåíåðèàí. øàõòà</Russian>
 		<Italian>Miniera di superficie di Venere</Italian>
+		<Polish>Kopalnia powierzchniowa Wenus</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_VENUS_SURFACE_MINE_PEDIA</Tag>
 		<English>A mine on the surface of Venus. It is very challenging to build due to the intense heat, pressure, and corrosive atmosphere at the surface.</English>
 		<Russian>Øàõòà íà ïîâåðõíîñòè Âåíåðû. Ýòî êðàéíå ñëîæíî ïîñòðîèòü èç-çà âûñîêîé òåìïåðàòóðû, ýêñòðåìàëüíîãî äàâëåíèÿ è àãðåññèâíîé àòìîñôåðû ó ïîâåðõíîñòè.</Russian>
+		<Polish>Kopalnia na powierzchni Wenus. Jej zbudowanie jest bardzo trudne ze wzgl&#234;du na wysok&#185; temperatur&#234;, ci&#156;nienie i korozyjn&#185; atmosfer&#234; panuj&#185;c&#185; na powierzchni.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISSION_CAPTURE_ASTEROID</Tag>
@@ -1302,6 +1498,7 @@
 		<French>Capturer un astéroïde</French>
 		<Russian>Çàõâàò àñòåðîèäà</Russian>
 		<Italian>Cattura asteroide</Italian>
+		<Polish>Przechwy&#230; asteroid&#234;</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISSION_CAPTURE_ASTEROID_HELP</Tag>
@@ -1309,6 +1506,7 @@
 		<French>Capturer un astéroïde</French>
 		<Russian>Çàõâàò àñòåðîèäà</Russian>
 		<Italian>[NEWLINE]Cattura un asteroide.</Italian>
+		<Polish>Przechwy&#230; asteroid&#234;</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISSION_EXPLORE_ANCIENT_CIVILIZATION</Tag>
@@ -1316,6 +1514,7 @@
 		<French>Explorer une civilization antique</French>
 		<Russian>Èçó÷àòü äðåâí. öèâèë.</Russian>
 		<Italian>Esplora antica civiltà</Italian>
+		<Polish>Eksploruj staro&#191;ytn&#185; cywilizacj&#234;</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISSION_EXPLORE_ANCIENT_CIVILIZATION_HELP</Tag>
@@ -1323,6 +1522,7 @@
 		<French>Explorer une civilization antique</French>
 		<Russian>Èçó÷åíèå äðåâí. öèâèëèçàöèè</Russian>
 		<Italian>[NEWLINE]Esplora un'antica civiltà.</Italian>
+		<Polish>Eksploruj staro&#191;ytn&#185; cywilizacj&#234;</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISSION_EXPLORE_ASTEROID</Tag>
@@ -1330,6 +1530,7 @@
 		<French>Explorer un astéroïde</French>
 		<Russian>Èññëåä. àñòåðîèä</Russian>
 		<Italian>Esplora asteroide</Italian>
+		<Polish>Eksploruj asteroid&#234;</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISSION_EXPLORE_ASTEROID_HELP</Tag>
@@ -1337,6 +1538,7 @@
 		<French>Explorer un astéroïde</French>
 		<Russian>Исследовать астероид</Russian>
 		<Italian>[NEWLINE]Esplora un asteroide.</Italian>
+		<Polish>Eksploruj asteroid&#234;</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISSION_EXPLORE_DISTANT</Tag>
@@ -1344,6 +1546,7 @@
 		<French>Explorer le cosmos lointain</French>
 		<Russian>Èññëåä. äàë. êîñìîñà</Russian>
 		<Italian>Esplora distanze siderali</Italian>
+		<Polish>Eksploruj odleg&#179;y kosmos</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISSION_EXPLORE_DISTANT_COSMOS</Tag>
@@ -1351,6 +1554,7 @@
 		<French>Explorer le Cosmos lointain</French>
 		<Russian>Èññëåä. äàë. êîñìîñ</Russian>
 		<Italian>Esplora spazio distante</Italian>
+		<Polish>Eksploruj odleg&#179;y kosmos</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISSION_EXPLORE_DISTANT_COSMOS_HELP</Tag>
@@ -1358,6 +1562,7 @@
 		<French>Explorer le cosmos distant</French>
 		<Russian>Èññëåäîâàíèå äàë. êîñìîñà</Russian>
 		<Italian>[NEWLINE]Esplora lo spazio distante.</Italian>
+		<Polish>Eksploruj odleg&#179;y kosmos</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISSION_EXPLORE_DISTANT_HELP</Tag>
@@ -1365,6 +1570,7 @@
 		<French>Explorer le cosmos distant</French>
 		<Russian>Èññëåäîâàíèå äàëüíåãî êîñìîñà.</Russian>
 		<Italian>[NEWLINE]Esplora le distanze siderali.</Italian>
+		<Polish>Eksploruj odleg&#179;y kosmos</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISSION_EXPLORE_EUROPA</Tag>
@@ -1372,6 +1578,7 @@
 		<French>Explorer la Lune Europe</French>
 		<Russian>Èññëåä. Åâðîïó</Russian>
 		<Italian>Esplora satellite Europa</Italian>
+		<Polish>Eksploruj Europ&#234;</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISSION_EXPLORE_EUROPA_HELP</Tag>
@@ -1379,6 +1586,7 @@
 		<French>Explorer la Lune Europe</French>
 		<Russian>Èññëåäîâàíèå Åâðîïû</Russian>
 		<Italian>[NEWLINE]Esplora il satellite Europa.</Italian>
+		<Polish>Eksploruj Europ&#234;</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISSION_EXPLORE_EXOPLANET</Tag>
@@ -1386,6 +1594,7 @@
 		<French>Explore une exoplanète</French>
 		<Russian>Èññëåä. ýêçîïëàíåòó</Russian>
 		<Italian>Esplora esopianeta</Italian>
+		<Polish>Eksploruj egzoplanet&#234;</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISSION_EXPLORE_EXOPLANET_HELP</Tag>
@@ -1393,6 +1602,7 @@
 		<French>Explore une exoplanète</French>
 		<Russian>Èññëåäîâàíèå Ýêçîïëàíåòû</Russian>
 		<Italian>[NEWLINE]Esplora un esopianeta.</Italian>
+		<Polish>Eksploruj egzoplanet&#234;</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISSION_EXPLORE_GALACTIC</Tag>
@@ -1400,6 +1610,7 @@
 		<French>Explore l'espace galactique</French>
 		<Russian>Èññëåä. âíóòðèãàë. ïðîñòð.</Russian>
 		<Italian>Esplora spazio galattico</Italian>
+		<Polish>Eksploruj przestrze&#241; galaktyczn&#185;</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISSION_EXPLORE_GALACTIC_CORE</Tag>
@@ -1407,6 +1618,7 @@
 		<French>Explorer le cœur de la galaxie</French>
 		<Russian>Èññëåä. ãàëàêò. ÿäðî</Russian>
 		<Italian>Esplora centro della galassia</Italian>
+		<Polish>Eksploruj centrum Galaktyki</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISSION_EXPLORE_GALACTIC_CORE_HELP</Tag>
@@ -1414,6 +1626,7 @@
 		<French>Explorer le cœur de la galaxie</French>
 		<Russian>Èññëåäîâàíèå ãàëàêò. ÿäðà</Russian>
 		<Italian>[NEWLINE]Esplora il centro della galassia.</Italian>
+		<Polish>Eksploruj j&#185;dro galaktyki.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISSION_EXPLORE_GALACTIC_HELP</Tag>
@@ -1421,6 +1634,7 @@
 		<French>Explorer les confins de la galaxie</French>
 		<Russian>Èññëåäîâàíèå äàëüíèõ óãîëêîâ ãàëàêòèêè.</Russian>
 		<Italian>[NEWLINE]Esplora lo spazio galattico.</Italian>
+		<Polish>Eksploruj najdalsze zak&#185;tki galaktyki</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISSION_EXPLORE_HYPERSPACE</Tag>
@@ -1428,6 +1642,7 @@
 		<French>Explorer l'hyperespace</French>
 		<Russian>Èññëåä. ãèïåðïð.</Russian>
 		<Italian>Esplora iperspazio</Italian>
+		<Polish>Eksploruj hiperprzestrze&#241;</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISSION_EXPLORE_HYPERSPACE_HELP</Tag>
@@ -1435,6 +1650,7 @@
 		<French>Explorer l'hyperespace</French>
 		<Russian>Èññëåäîâàíèå ãèïåðïðîñòðàíñòâà.</Russian>
 		<Italian>[NEWLINE]Esplora l'iperspazio.</Italian>
+		<Polish>Eksploruj hiperprzestrze&#241;</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISSION_EXPLORE_INNER_SOLAR_SYSTEM</Tag>
@@ -1442,6 +1658,7 @@
 		<French>Explorez le système solaire intérieur</French>
 		<Russian>Èññëåä. áëèæ. ïëàíåòû</Russian>
 		<Italian>Esplora sistema solare interno.</Italian>
+		<Polish>Eksploruj wewn&#234;trzny uk&#179;ad s&#179;oneczny</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISSION_EXPLORE_INNER_SOLAR_SYSTEM_HELP</Tag>
@@ -1449,6 +1666,7 @@
 		<French>Explorer le système solaire intérieur</French>
 		<Russian>Èññëåäîâàíèå âíóòðåííèõ ïëàíåò Ñîëíå÷íîé ñèñòåìû</Russian>
 		<Italian>[NEWLINE]Esplora il sistema solare interno.</Italian>
+		<Polish>Eksploruj wewn&#234;trzny uk&#179;ad s&#179;oneczny</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISSION_EXPLORE_INTERGALACTIC</Tag>
@@ -1456,6 +1674,7 @@
 		<French>Explorer l'espace intergalactique</French>
 		<Russian>Èññëåä. ìåæãàë. ïðîñòð.</Russian>
 		<Italian>Esplora spazio intergalattico</Italian>
+		<Polish>Eksploruj przestrze&#241; mi&#234;dzygalaktyczn&#185;</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISSION_EXPLORE_INTERGALACTIC_HELP</Tag>
@@ -1463,6 +1682,7 @@
 		<French>Explorer une galaxie proche</French>
 		<Russian>Èññëåäîâàíèå áëèçëåæàùåé ãàëàêòèêè.</Russian>
 		<Italian>[NEWLINE]Esplora lo spazio intergalattico.</Italian>
+		<Polish>Eksploruj "poblisk&#185;" galaktyk&#234;</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISSION_EXPLORE_INTERSTELLAR</Tag>
@@ -1470,12 +1690,14 @@
 		<French>Explorer l'espace interstellaire</French>
 		<Russian>Èññëåä. ìåæçâ. ïðîñò.</Russian>
 		<Italian>Esplora spazio interstellare</Italian>
+		<Polish>Eksploruj przestrze&#241; mi&#234;dzygwiezdn&#185;</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISSION_EXPLORE_INTERSTELLAR_HELP</Tag>
 		<English>Explore the interstellar space near the Sun</English>
 		<Russian>Èññëåäîâàíèå ìåæçâåçäíîãî ïðîñòðàíñòâà âáëèçè Ñîëíå÷íîé ñèñòåìû.</Russian>
 		<Italian>[NEWLINE]Esplora lo spazio interstellare.</Italian>
+		<Polish>Eksploruj przestrze&#241; mi&#234;dzygwiezdn&#185; w pobli&#191;u S&#179;o&#241;ca</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISSION_EXPLORE_INTERSTELLAR_LIFE</Tag>
@@ -1483,6 +1705,7 @@
 		<French>Rechercher de la Vie Extrasolaire</French>
 		<Russian>Ïîèñê âíåñîëí. æèçíè</Russian>
 		<Italian>Cerca vita fuori dal sistema solare</Italian>
+		<Polish>Szukaj &#191;ycia pozas&#179;onecznego</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISSION_EXPLORE_INTERSTELLAR_LIFE_HELP</Tag>
@@ -1490,6 +1713,7 @@
 		<French>Rechercher de la vie au-delà du Système solaire</French>
 		<Russian>Ïîèñê ìåæçâåçä. æèçíè</Russian>
 		<Italian>[NEWLINE]Ricerca della vita fuori dal sistema solare.</Italian>
+		<Polish>Szukaj &#191;ycia poza Uk&#179;adem S&#179;onecznym</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISSION_EXPLORE_JUPITER</Tag>
@@ -1497,6 +1721,7 @@
 		<French>Explorer Jupiter</French>
 		<Russian>Èññëåä. Þïèòåð</Russian>
 		<Italian>Esplora Giove</Italian>
+		<Polish>Eksploruj Jowisza</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISSION_EXPLORE_JUPITER_HELP</Tag>
@@ -1504,6 +1729,7 @@
 		<French>Explorer Jupiter</French>
 		<Russian>Èññëåäîâàíèå Þïèòåðà</Russian>
 		<Italian>[NEWLINE]Esplora Giove.</Italian>
+		<Polish>Eksploruj Jowisza</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISSION_EXPLORE_KBO</Tag>
@@ -1511,6 +1737,7 @@
 		<French>Explorer un objet de la Ceinture de Kuiper</French>
 		<Russian>Èññëåä. ÎÏÊ</Russian>
 		<Italian>Esplora fascia di Kuiper</Italian>
+		<Polish>Eksploruj obiekt Pasa Kuipera</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISSION_EXPLORE_KBO_HELP</Tag>
@@ -1518,6 +1745,7 @@
 		<French>Explorer un objet de la Ceinture de Kuiper</French>
 		<Russian>Èññëåäîâàíèå Îá. ïîÿñà Êîéïåðà</Russian>
 		<Italian>[NEWLINE]Esplora la fascia di Kuiper.</Italian>
+		<Polish>Eksploruj obiekt Pasa Kuipera</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISSION_EXPLORE_MARS</Tag>
@@ -1525,6 +1753,7 @@
 		<French>Explorer Mars</French>
 		<Russian>Èññëåä. Ìàðñ</Russian>
 		<Italian>Esplora Marte</Italian>
+		<Polish>Eksploruj Marsa</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISSION_EXPLORE_MARS_HELP</Tag>
@@ -1532,6 +1761,7 @@
 		<French>Explorer Mars</French>
 		<Russian>Èññëåäîâàíèå Ìàðñà</Russian>
 		<Italian>[NEWLINE]Esplora Marte.</Italian>
+		<Polish>Eksploruj Marsa</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISSION_EXPLORE_MERCURY</Tag>
@@ -1539,6 +1769,7 @@
 		<French>Explorer Mercure</French>
 		<Russian>Èññëåä. Ìåðêóðèé</Russian>
 		<Italian>Esplora Mercurio</Italian>
+		<Polish>Eksploruj Merkurego</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISSION_EXPLORE_MERCURY_HELP</Tag>
@@ -1546,6 +1777,7 @@
 		<French>Explorer Mercure</French>
 		<Russian>Èññëåäîâàíèå Ìåðêóðèÿ</Russian>
 		<Italian>[NEWLINE]Esplora Mercurio.</Italian>
+		<Polish>Eksploruj Merkurego</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISSION_EXPLORE_MOON</Tag>
@@ -1553,6 +1785,7 @@
 		<French>Explorer la Lune</French>
 		<Russian>Èññëåä. Ëóíû</Russian>
 		<Italian>Esplora luna</Italian>
+		<Polish>Eksploruj Ksi&#234;&#191;yc</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISSION_EXPLORE_MOON_HELP</Tag>
@@ -1560,6 +1793,7 @@
 		<French>Lancer un rover sur la Lune</French>
 		<Russian>Çàïóñê ëóíîõîäà</Russian>
 		<Italian>[NEWLINE]Lancia un rover sulla luna.</Italian>
+		<Polish>Wystrzel &#179;azik na Ksi&#234;&#191;yc</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISSION_EXPLORE_MOON_SURFACE</Tag>
@@ -1567,6 +1801,7 @@
 		<French>Explorer la surface de la Lune</French>
 		<Russian>Èññëåä. ëóí. ïîâåðõíîñòü</Russian>
 		<Italian>Esplora superficie lunare</Italian>
+		<Polish>Eksploruj powierzchni&#234; Ksi&#234;&#191;yca</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISSION_EXPLORE_MOON_SURFACE_HELP</Tag>
@@ -1574,6 +1809,7 @@
 		<French>Explorer la surface de la Lune</French>
 		<Russian>Èññëåäîâàíèå ëóííîé ïîâåðõíîñòè</Russian>
 		<Italian>[NEWLINE]Esplora la superficie lunare.</Italian>
+		<Polish>Zbadaj powierzchni&#234; Ksi&#234;&#191;yca</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISSION_EXPLORE_MULTIVERSE</Tag>
@@ -1581,6 +1817,7 @@
 		<French>Explorer le multiverse</French>
 		<Russian>Èññëåä. ìóëüòèâñåëåí.</Russian>
 		<Italian>Esplora multiverso</Italian>
+		<Polish>Eksploruj Wielo&#156;wiat</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISSION_EXPLORE_MULTIVERSE_HELP</Tag>
@@ -1588,6 +1825,7 @@
 		<French>Explorer le multivers</French>
 		<Russian>Èññëåäîâàíèå ìóëüòèâñåëåííîé</Russian>
 		<Italian>[NEWLINE]Esplora il multiverso.</Italian>
+		<Polish>Eksploruj wielo&#156;wiat</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISSION_EXPLORE_NEPTUNE</Tag>
@@ -1595,6 +1833,7 @@
 		<French>Explorer Neptune</French>
 		<Russian>Èññëåä. Íåïòóí</Russian>
 		<Italian>Esplora Nettuno</Italian>
+		<Polish>Eksploruj Neptuna</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISSION_EXPLORE_NEPTUNE_HELP</Tag>
@@ -1602,6 +1841,7 @@
 		<French>Explorer Neptune</French>
 		<Russian>Èññëåäîâàíèå Íåïòóíà</Russian>
 		<Italian>[NEWLINE]Esplora Nettuno.</Italian>
+		<Polish>Eksploruj Neptuna</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISSION_EXPLORE_OORT_CLOUD</Tag>
@@ -1609,6 +1849,7 @@
 		<French>Explorer un objet du Nuage d'Oort</French>
 		<Russian>Èññëåä. Îáë. Îîðòà</Russian>
 		<Italian>Esplora oggetto della nube di Oort</Italian>
+		<Polish>Zbadaj obiekt ob&#179;oku Oorta</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISSION_EXPLORE_OORT_CLOUD_HELP</Tag>
@@ -1616,6 +1857,7 @@
 		<French>Explorer un objet du Nuage d'Oort</French>
 		<Russian>Èññëåäîâàíèå Îáëàêà Îîðòà</Russian>
 		<Italian>[NEWLINE]Esplora un oggetto della nube di Oort.</Italian>
+		<Polish>Zbadaj obiekt Ob&#179;oku Oorta</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISSION_EXPLORE_OUTER_SOLAR_SYSTEM</Tag>
@@ -1623,6 +1865,7 @@
 		<French>Explorez après le Système solaire</French>
 		<Russian>Èññëåä. âíåø. ïëàíåò</Russian>
 		<Italian>Esplora sistema solare esterno</Italian>
+		<Polish>Eksploruj zewn&#234;trzny Uk&#179;ad S&#179;oneczny</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISSION_EXPLORE_OUTER_SOLAR_SYSTEM_HELP</Tag>
@@ -1630,6 +1873,7 @@
 		<French>Explorer l'extérieur du Système Solaire</French>
 		<Russian>Èññëåäîâàíèå âíåøíèõ ïëàíåò Ñîëíå÷íîé ñèñòåìû</Russian>
 		<Italian>[NEWLINE]Esplora il sistema solare esterno.</Italian>
+		<Polish>Eksploruj zewn&#234;trzny Uk&#179;ad S&#179;oneczny</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISSION_EXPLORE_SATURN</Tag>
@@ -1637,6 +1881,7 @@
 		<French>Explorer Saturne</French>
 		<Russian>Èññëåä. Ñàòóðí</Russian>
 		<Italian>Esplora Saturno</Italian>
+		<Polish>Eksploruj Saturna</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISSION_EXPLORE_SATURN_HELP</Tag>
@@ -1644,6 +1889,7 @@
 		<French>Explorer Saturne</French>
 		<Russian>Èññëåäîâàíèå Ñàòóðíà</Russian>
 		<Italian>[NEWLINE]Esplora Saturno.</Italian>
+		<Polish>Eksploruj Saturna</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISSION_EXPLORE_SEDNOID</Tag>
@@ -1651,6 +1897,7 @@
 		<French>Explorer un Objet Sednoïde</French>
 		<Russian>Èññëåä. Ñåäíîèä</Russian>
 		<Italian>Esplora oggetto sednoide</Italian>
+		<Polish>Zbadaj obiekt Sednoid</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISSION_EXPLORE_SEDNOID_HELP</Tag>
@@ -1658,6 +1905,7 @@
 		<French>Explorer un Objet Sednoïde</French>
 		<Russian>Èññëåäîâàíèå Ñåäíîèäà</Russian>
 		<Italian>[NEWLINE]Esplora un oggetto sednoide.</Italian>
+		<Polish>Zbadaj obiekt Sednoid</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISSION_EXPLORE_SOLAR_SYSTEM_LIFE</Tag>
@@ -1665,6 +1913,7 @@
 		<French>Rechercher de la vie extraterrestre</French>
 		<Russian>Ïîèñê âíåçåì. æèçíè</Russian>
 		<Italian>Cerca vita extraterrestre</Italian>
+		<Polish>Szukaj &#191;ycia pozaziemskiego</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISSION_EXPLORE_SOLAR_SYSTEM_LIFE_HELP</Tag>
@@ -1672,6 +1921,7 @@
 		<French>Rechercher de la vie microbienne</French>
 		<Russian>Ïîèñê âíåçåì. ìèêðîáîâ</Russian>
 		<Italian>[NEWLINE]Ricerca della vita microbica.</Italian>
+		<Polish>Szukaj &#191;ycia mikrobiologicznego</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISSION_EXPLORE_SS1</Tag>
@@ -1679,6 +1929,7 @@
 		<French>Station spatiale Resupply (Niv. 1)</French>
 		<Russian>Ïîïîëíåíèå êîñìè÷åñêîé ñòàíöèè (Óð. 1)</Russian>
 		<Italian>Rifornisci stazione spaziale(livello 1)</Italian>
+		<Polish>Zaopatrzenie stacji kosmicznej (poz. 1)</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISSION_EXPLORE_SS1_HELP</Tag>
@@ -1686,6 +1937,7 @@
 		<French>Resupply the Station spatiale</French>
 		<Russian>Ïîïîëíèòü êîñìè÷åñêóþ ñòàíöèþ</Russian>
 		<Italian>[NEWLINE]Rifornisci stazione spaziale(livello 1).</Italian>
+		<Polish>Zaopatrz stacj&#234; kosmiczn&#185;</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISSION_EXPLORE_SS2</Tag>
@@ -1693,6 +1945,7 @@
 		<French>Station spatiale Resupply (Niv. 2)</French>
 		<Russian>Ïîïîëíåíèå êîñìè÷åñêîé ñòàíöèè (Óð. 2)</Russian>
 		<Italian>Rifornisci stazione spaziale(livello 2)</Italian>
+		<Polish>Zaopatrzenie stacji kosmicznej (poz. 2)</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISSION_EXPLORE_SS2_HELP</Tag>
@@ -1700,6 +1953,7 @@
 		<French>Resupply the Station spatiale</French>
 		<Russian>Ïîïîëíèòü êîñìè÷åñêóþ ñòàíöèþ</Russian>
 		<Italian>[NEWLINE]Rifornisci stazione spaziale(livello 2).</Italian>
+		<Polish>Zaopatrz stacj&#234; kosmiczn&#185;</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISSION_EXPLORE_SS3</Tag>
@@ -1707,6 +1961,7 @@
 		<French>Station spatiale Resupply (Niv. 3)</French>
 		<Russian>Ïîïîëíåíèå êîñìè÷åñêîé ñòàíöèè (Óð. 3)</Russian>
 		<Italian>Rifornisci stazione spaziale(livello 3)</Italian>
+		<Polish>Zaopatrzenie stacji kosmicznej (poz. 3)</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISSION_EXPLORE_SS3_HELP</Tag>
@@ -1714,6 +1969,7 @@
 		<French>Resupply the Station spatiale</French>
 		<Russian>Ïîïîëíèòü êîñìè÷åñêóþ ñòàíöèþ</Russian>
 		<Italian>[NEWLINE]Rifornisci stazione spaziale(livello 3).</Italian>
+		<Polish>Zaopatrz stacj&#234; kosmiczn&#185;</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISSION_EXPLORE_TITAN</Tag>
@@ -1721,6 +1977,7 @@
 		<French>Explorer Titan</French>
 		<Russian>Èññëåä. Òèòàí</Russian>
 		<Italian>Esplora Titano</Italian>
+		<Polish>Eksploruj Tytana</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISSION_EXPLORE_TITAN_HELP</Tag>
@@ -1728,6 +1985,7 @@
 		<French>Explorer Titan</French>
 		<Russian>Èññëåäîâàíèå Òèòàíà</Russian>
 		<Italian>[NEWLINE]Esplora Titano.</Italian>
+		<Polish>Eksploruj Tytana</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISSION_EXPLORE_TRANSNEPTUNIAN</Tag>
@@ -1735,6 +1993,7 @@
 		<French>Explorez l'espace transneptunien</French>
 		<Russian>Èññëåä. òðàíñíåï. êîñìîñ</Russian>
 		<Italian>Esplora spazio transnettuniano</Italian>
+		<Polish>Eksploruj przestrze&#241; transneptunow&#185;</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISSION_EXPLORE_TRANSNEPTUNIAN_HELP</Tag>
@@ -1742,6 +2001,7 @@
 		<French>Explorer l'espace dans le système solaire au-delà de Neptune</French>
 		<Russian>Èññëåäîâàíèå ïðîñòðàíñòâà Ñîëíå÷íîé ñèñòåìû çà ïðåäåëàìè îðáèòû Íåïòóíà</Russian>
 		<Italian>[NEWLINE]Esplora lo spazio oltre Nettuno.</Italian>
+		<Polish>Eksploruj przestrze&#241; w Uk&#179;adzie S&#179;onecznym poza Neptunem</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISSION_EXPLORE_URANUS</Tag>
@@ -1749,6 +2009,7 @@
 		<French>Explorer Uranus</French>
 		<Russian>Èññëåä. Óðàí</Russian>
 		<Italian>Esplora Urano</Italian>
+		<Polish>Eksploruj Urana</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISSION_EXPLORE_URANUS_HELP</Tag>
@@ -1756,6 +2017,7 @@
 		<French>Explorer Uranus</French>
 		<Russian>Èññëåäîâàíèå Óðàíà</Russian>
 		<Italian>[NEWLINE]Esplora Urano.</Italian>
+		<Polish>Eksploruj Urana</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISSION_EXPLORE_VENUS</Tag>
@@ -1763,6 +2025,7 @@
 		<French>Explorer Vénus</French>
 		<Russian>Èññëåä. Âåíåðó</Russian>
 		<Italian>Esplora Venere</Italian>
+		<Polish>Eksploruj Wenus</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISSION_EXPLORE_VENUS_HELP</Tag>
@@ -1770,6 +2033,7 @@
 		<French>Explorer Vénus</French>
 		<Russian>Èññëåäîâàíèå Âåíåðû</Russian>
 		<Italian>[NEWLINE]Esplora Venere.</Italian>
+		<Polish>Eksploruj Wenus</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISSION_LAUNCH_SATELLITE</Tag>
@@ -1777,6 +2041,7 @@
 		<French>Lancement d'un satellite en orbite terrestre basse</French>
 		<Russian>Çàïóñê ñïóòíèêà (Îêîëîçåì. îðáèòà)</Russian>
 		<Italian>Lancia satellite</Italian>
+		<Polish>Wystrzel satelit&#234; na nisk&#185; orbit&#234; oko&#179;oziemsk&#185;</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISSION_LAUNCH_SATELLITE_CISLUNAR</Tag>
@@ -1784,6 +2049,7 @@
 		<French>Lancer un satellite en orbite géosynchrone</French>
 		<Russian>Çàïóñê ñïóòíèêà íà ãåîñèíõðîííóþ îðáèòó</Russian>
 		<Italian>Lancia satellite in orbita geosincrona</Italian>
+		<Polish>Wystrzel satelit&#234; na orbit&#234; geosynchroniczn&#185;</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISSION_LAUNCH_SATELLITE_CISLUNAR_HELP</Tag>
@@ -1791,6 +2057,7 @@
 		<French>Lancer un satellite en orbite géosynchrone ou au-delà</French>
 		<Russian>Çàïóñòèòü ñïóòíèê íà ãåîñèíõðîííóþ îðáèòó èëè äàëüøå</Russian>
 		<Italian>[NEWLINE]Lancio di un satellite in orbita geosincrona.</Italian>
+		<Polish>Wystrzel satelit&#234; na orbit&#234; geosynchroniczn&#185; lub poza ni&#185;</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISSION_LAUNCH_SATELLITE_HELP</Tag>
@@ -1798,6 +2065,7 @@
 		<French>Lancer un satellite en orbite</French>
 		<Russian>Âûâåñòè ñïóòíèê íà îðáèòó</Russian>
 		<Italian>[NEWLINE]Lancio di un satellite in orbita terrestre bassa.</Italian>
+		<Polish>Wystrzel satelit&#234; na orbit&#234;</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISSION_PLANET_LAND</Tag>
@@ -1805,6 +2073,7 @@
 		<French>Terre</French>
 		<Russian>Ñîâåðøèòü ïîñàäêó</Russian>
 		<Italian>Atterra</Italian>
+		<Polish>Ziemia</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISSION_PLANET_LAND_HELP</Tag>
@@ -1812,6 +2081,7 @@
 		<French>Construire une ville</French>
 		<Russian>Ñòðîèòü ãîðîä</Russian>
 		<Italian>[NEWLINE]Fonda una città.</Italian>
+		<Polish>Zbuduj miasto</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISSION_SAMPLE_STUDY</Tag>
@@ -1819,6 +2089,7 @@
 		<French>Analyser les Données de Mission</French>
 		<Russian>Àíàëèç äàííûõ ìèññèè</Russian>
 		<Italian>Analizza i dati della missione</Italian>
+		<Polish>Analizuj dane misji</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISSION_SAMPLE_STUDY_HELP</Tag>
@@ -1826,6 +2097,7 @@
 		<French>Analyser les Données de Mission</French>
 		<Russian>Àíàëèç äàííûõ ìèññèè</Russian>
 		<Italian>[NEWLINE]Analisi dei dati della missione.</Italian>
+		<Polish>Analizuj dane misji</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_OUTCOME_CAPTURE_ASTEROID</Tag>
@@ -1833,6 +2105,7 @@
 		<French>Faire une Mission de Recherche</French>
 		<Russian>Èññëåäîâ. ìèññèþ</Russian>
 		<Italian>Effettua missione di ricerca (cattura un asteroide)</Italian>
+		<Polish>Wykonaj misj&#234; badawcz&#185;</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_OUTCOME_CAPTURE_ASTEROID_MESSAGE</Tag>
@@ -1840,6 +2113,7 @@
 		<French>Asteroïde Capturé !</French>
 		<Russian>Àñòåðîèä çàõâà÷åí!</Russian>
 		<Italian>Hai catturato un asteroide!</Italian>
+		<Polish>Przechwycono asteroid&#234;!</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_OUTCOME_EXPLORE_ANCIENT_CIVILIZATION</Tag>
@@ -1847,6 +2121,7 @@
 		<French>Faire une Mission de Recherche</French>
 		<Russian>Íà÷àòü ìèññèþ</Russian>
 		<Italian>Effettua missione di ricerca (esplora un'antica civiltà)</Italian>
+		<Polish>Wykonaj misj&#234; badawcz&#185;</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_OUTCOME_EXPLORE_ANCIENT_CIVILIZATION_MESSAGE</Tag>
@@ -1854,6 +2129,7 @@
 		<French>Mission Réussie !</French>
 		<Russian>Ìèññèÿ âûïîëíåíà!</Russian>
 		<Italian>Esplorazione dell'antica civiltà completata!</Italian>
+		<Polish>Misja zako&#241;czona sukcesem&#191;</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_OUTCOME_EXPLORE_ASTEROID</Tag>
@@ -1861,6 +2137,7 @@
 		<French>Faire une Mission de Recherche</French>
 		<Russian>Íà÷àòü ìèññèþ</Russian>
 		<Italian>Effettua missione di ricerca (esplora un asteroide)</Italian>
+		<Polish>Wykonaj misj&#234; badawcz&#185;</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_OUTCOME_EXPLORE_ASTEROID_MESSAGE</Tag>
@@ -1868,6 +2145,7 @@
 		<French>Mission Réussie !</French>
 		<Russian>Ìèññèÿ âûïîëíåíà!</Russian>
 		<Italian>Esplorazione dell'asteroide completata!</Italian>
+		<Polish>Misja zako&#241;czona sukcesem!</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_OUTCOME_EXPLORE_DISTANT_COSMOS</Tag>
@@ -1875,6 +2153,7 @@
 		<French>Faire une Mission de Recherche</French>
 		<Russian>Íà÷àòü ìèññèþ</Russian>
 		<Italian>Effettua missione di ricerca (esplora lo spazio distante)</Italian>
+		<Polish>Wykonaj misj&#234; badawcz&#185;</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_OUTCOME_EXPLORE_DISTANT_COSMOS_MESSAGE</Tag>
@@ -1882,6 +2161,7 @@
 		<French>Mission Réussie !</French>
 		<Russian>Ìèññèÿ âûïîëíåíà!</Russian>
 		<Italian>Esplorazione dello spazio distante completata!</Italian>
+		<Polish>Misja zako&#241;czona sukcesem!</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_OUTCOME_EXPLORE_EXOPLANET</Tag>
@@ -1889,6 +2169,7 @@
 		<French>Faire une Mission de Recherche</French>
 		<Russian>Íà÷àòü ìèññèþ</Russian>
 		<Italian>Effettua missione di ricerca (esplora un esopianeta)</Italian>
+		<Polish>Wykonaj misj&#234; badawcz&#185;</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_OUTCOME_EXPLORE_EXOPLANET_MESSAGE</Tag>
@@ -1896,6 +2177,7 @@
 		<French>Mission Réussie !</French>
 		<Russian>Ìèññèÿ âûïîëíåíà!</Russian>
 		<Italian>Esplorazione dell'esopianeta completata!</Italian>
+		<Polish>Misja zako&#241;czona sukcesem!</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_OUTCOME_EXPLORE_GALACTIC</Tag>
@@ -1903,6 +2185,7 @@
 		<French>Faire une Mission de Recherche</French>
 		<Russian>Íà÷àòü ìèññèþ</Russian>
 		<Italian>Effettua missione di ricerca (esplora lo spazio galattico)</Italian>
+		<Polish>Wykonaj misj&#234; badawcz&#185;</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_OUTCOME_EXPLORE_GALACTIC_CORE</Tag>
@@ -1910,6 +2193,7 @@
 		<French>Faire une Mission de Recherche</French>
 		<Russian>Íà÷àòü ìèññèþ</Russian>
 		<Italian>Effettua missione di ricerca (esplora il centro della galassia)</Italian>
+		<Polish>Wykonaj misj&#234; badawcz&#185;</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_OUTCOME_EXPLORE_GALACTIC_CORE_MESSAGE</Tag>
@@ -1917,6 +2201,7 @@
 		<French>Mission Réussie !</French>
 		<Russian>Ìèññèÿ âûïîëíåíà!</Russian>
 		<Italian>Esplorazione del centro della galassia completata!</Italian>
+		<Polish>Misja zako&#241;czona sukcesem!</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_OUTCOME_EXPLORE_GALACTIC_MESSAGE</Tag>
@@ -1924,6 +2209,7 @@
 		<French>Mission Réussie !</French>
 		<Russian>Ìèññèÿ âûïîëíåíà!</Russian>
 		<Italian>Esplorazione dello spazio galattico completata!</Italian>
+		<Polish>Misja zako&#241;czona sukcesem!</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_OUTCOME_EXPLORE_HYPERSPACE</Tag>
@@ -1931,6 +2217,7 @@
 		<French>Faire une Mission de Recherche</French>
 		<Russian>Íà÷àòü ìèññèþ</Russian>
 		<Italian>Effettua missione di ricerca (esplora l'iperspazio)</Italian>
+		<Polish>Wykonaj misj&#234; badawcz&#185;</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_OUTCOME_EXPLORE_HYPERSPACE_MESSAGE</Tag>
@@ -1938,6 +2225,7 @@
 		<French>Mission Réussie !</French>
 		<Russian>Ìèññèÿ âûïîëíåíà!</Russian>
 		<Italian>Esplorazione dell'iperspazio completata!</Italian>
+		<Polish>Misja zako&#241;czona sukcesem!</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_OUTCOME_EXPLORE_INNER_SOLAR_SYSTEM</Tag>
@@ -1945,6 +2233,7 @@
 		<French>Faire une Mission de Recherche</French>
 		<Russian>Íà÷àòü ìèññèþ</Russian>
 		<Italian>Effettua missione di ricerca (esplora il sistema solare interno)</Italian>
+		<Polish>Wykonaj misj&#234; badawcz&#185;</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_OUTCOME_EXPLORE_INNER_SOLAR_SYSTEM_MESSAGE</Tag>
@@ -1952,6 +2241,7 @@
 		<French>Mission Réussie !</French>
 		<Russian>Ìèññèÿ âûïîëíåíà!</Russian>
 		<Italian>Esplorazione del sistema solare interno completata!</Italian>
+		<Polish>Misja zako&#241;czona sukcesem!</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_OUTCOME_EXPLORE_INTERGALACTIC</Tag>
@@ -1959,6 +2249,7 @@
 		<French>Faire une Mission de Recherche</French>
 		<Russian>Íà÷àòü ìèññèþ</Russian>
 		<Italian>Effettua missione di ricerca (esplora lo spazio intergalattico)</Italian>
+		<Polish>Wykonaj misj&#234; badawcz&#185;</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_OUTCOME_EXPLORE_INTERGALACTIC_MESSAGE</Tag>
@@ -1966,6 +2257,7 @@
 		<French>Mission Réussie !</French>
 		<Russian>Ìèññèÿ âûïîëíåíà!</Russian>
 		<Italian>Esplorazione dello spazio intergalattico completata!</Italian>
+		<Polish>Misja zako&#241;czona sukcesem!</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_OUTCOME_EXPLORE_INTERSTELLAR</Tag>
@@ -1973,6 +2265,7 @@
 		<French>Faire une Mission de Recherche</French>
 		<Russian>Do Research Mission</Russian>
 		<Italian>Effettua missione di ricerca (esplora dello spazio interstellare)</Italian>
+		<Polish>Wykonaj misj&#234; badawcz&#185;</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_OUTCOME_EXPLORE_INTERSTELLAR_LIFE</Tag>
@@ -1980,6 +2273,7 @@
 		<French>Faire une Mission de Recherche</French>
 		<Russian>Íà÷àòü ìèññèþ</Russian>
 		<Italian>Effettua missione di ricerca (ricerca della vita fuori dal sistema solare)</Italian>
+		<Polish>Wykonaj misj&#234; badawcz&#185;</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_OUTCOME_EXPLORE_INTERSTELLAR_LIFE_MESSAGE</Tag>
@@ -1987,6 +2281,7 @@
 		<French>Mission Réussie !</French>
 		<Russian>Ìèññèÿ âûïîëíåíà!</Russian>
 		<Italian>Ricerca della vita fuori dal sistema solare completata!</Italian>
+		<Polish>Misja zako&#241;czona sukcesem!</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_OUTCOME_EXPLORE_INTERSTELLAR_MESSAGE</Tag>
@@ -1994,6 +2289,7 @@
 		<French>Mission Réussie !</French>
 		<Russian>Ìèññèÿ âûïîëíåíà!</Russian>
 		<Italian>Esplorazione dello spazio interstellare completata!</Italian>
+		<Polish>Misja zako&#241;czona sukcesem!</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_OUTCOME_EXPLORE_JMOON</Tag>
@@ -2001,6 +2297,7 @@
 		<French>Faire une Mission de Recherche</French>
 		<Russian>Íà÷àòü ìèññèþ</Russian>
 		<Italian>Effettua missione di ricerca (esplora le lune di Giove)</Italian>
+		<Polish>Wykonaj misj&#234; badawcz&#185;</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_OUTCOME_EXPLORE_JMOON_MESSAGE</Tag>
@@ -2008,6 +2305,7 @@
 		<French>Mission Réussie !</French>
 		<Russian>Ìèññèÿ âûïîëíåíà!</Russian>
 		<Italian>Esplorazione delle lune completata!</Italian>
+		<Polish>Misja zako&#241;czona sukcesem!</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_OUTCOME_EXPLORE_MOON</Tag>
@@ -2015,6 +2313,7 @@
 		<French>Explorer la Lune</French>
 		<Russian>Èññëåä. Ëóíû</Russian>
 		<Italian>Effettua missione di ricerca (esplora la luna)</Italian>
+		<Polish>Eksploruj Ksi&#234;&#191;yc</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_OUTCOME_EXPLORE_MOON_MESSAGE</Tag>
@@ -2022,6 +2321,7 @@
 		<French>Rover lancé !</French>
 		<Russian>Ëóíîõîä ïîåõàë!</Russian>
 		<Italian>Rover lunare partito!</Italian>
+		<Polish>&#163;azik wystartowa&#179;!</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_OUTCOME_EXPLORE_MOON_SURFACE</Tag>
@@ -2029,6 +2329,7 @@
 		<French>Explorer la Lune</French>
 		<Russian>Èññëåä. Ëóíû</Russian>
 		<Italian>Effettua missione di ricerca (esplora la superficie lunare)</Italian>
+		<Polish>Eksploruj Ksi&#234;&#191;yc</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_OUTCOME_EXPLORE_MOON_SURFACE_MESSAGE</Tag>
@@ -2036,6 +2337,7 @@
 		<French>Un petit pas pour l'homme</French>
 		<Russian>Îäèí ìàëåíüêèé øàã äëÿ ÷åëîâåêà...</Russian>
 		<Italian>Esplorazione della superficie lunare completata!</Italian>
+		<Polish>Jeden ma&#179;y krok dla cz&#179;owieka</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_OUTCOME_EXPLORE_MULTIVERSE</Tag>
@@ -2043,6 +2345,7 @@
 		<French>Faire une Mission de Recherche</French>
 		<Russian>Íà÷àòü ìèññèþ</Russian>
 		<Italian>Effettua missione di ricerca (esplora il multiverso)</Italian>
+		<Polish>Wykonaj misj&#234; badawcz&#185;</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_OUTCOME_EXPLORE_MULTIVERSE_MESSAGE</Tag>
@@ -2050,6 +2353,7 @@
 		<French>Mission Réussie !</French>
 		<Russian>Ìèññèÿ âûïîëíåíà!</Russian>
 		<Italian>Esplorazione del multiverso completata!</Italian>
+		<Polish>Misja zako&#241;czona sukcesem!</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_OUTCOME_EXPLORE_OORT_CLOUD</Tag>
@@ -2057,6 +2361,7 @@
 		<French>Faire une Mission de Recherche</French>
 		<Russian>Íà÷àòü ìèññèþ</Russian>
 		<Italian>Effettua missione di ricerca (Esplora un oggetto della nube di Oort)</Italian>
+		<Polish>Wykonaj misj&#234; badawcz&#185;</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_OUTCOME_EXPLORE_OORT_CLOUD_MESSAGE</Tag>
@@ -2064,6 +2369,7 @@
 		<French>Mission Réussie !</French>
 		<Russian>Ìèññèÿ âûïîëíåíà!</Russian>
 		<Italian>Esplorazione di un oggetto della nube di Oort completata!</Italian>
+		<Polish>Misja zako&#241;czona sukcesem!</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_OUTCOME_EXPLORE_OUTER_SOLAR_SYSTEM</Tag>
@@ -2071,6 +2377,7 @@
 		<French>Faire une Mission de Recherche</French>
 		<Russian>Íà÷àòü ìèññèþ</Russian>
 		<Italian>Effettua missione di ricerca (esplora il sistema solare esterno)</Italian>
+		<Polish>Wykonaj misj&#234; badawcz&#185;</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_OUTCOME_EXPLORE_OUTER_SOLAR_SYSTEM_MESSAGE</Tag>
@@ -2078,6 +2385,7 @@
 		<French>Mission Réussie !</French>
 		<Russian>Ìèññèÿ âûïîëíåíà!</Russian>
 		<Italian>Esplorazione del sistema solare esterno completata!</Italian>
+		<Polish>Misja zako&#241;czona sukcesem!</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_OUTCOME_EXPLORE_PLANET</Tag>
@@ -2085,6 +2393,7 @@
 		<French>Faire une Mission de Recherche</French>
 		<Russian>Íà÷àòü ìèññèþ</Russian>
 		<Italian>Effettua missione di ricerca (esplora un pianeta)</Italian>
+		<Polish>Wykonaj misj&#234; badawcz&#185;</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_OUTCOME_EXPLORE_PLANET_MESSAGE</Tag>
@@ -2092,6 +2401,7 @@
 		<French>Mission Réussie !</French>
 		<Russian>Ìèññèÿ âûïîëíåíà!</Russian>
 		<Italian>Esplorazione di un pianeta completata!</Italian>
+		<Polish>Misja zako&#241;czona sukcesem!</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_OUTCOME_EXPLORE_SEDNOID</Tag>
@@ -2099,6 +2409,7 @@
 		<French>Faire une Mission de Recherche</French>
 		<Russian>Íà÷àòü ìèññèþ</Russian>
 		<Italian>Effettua missione di ricerca (esplora un oggetto sednoide)</Italian>
+		<Polish>Wykonaj misj&#234; badawcz&#185;</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_OUTCOME_EXPLORE_SEDNOID_MESSAGE</Tag>
@@ -2106,6 +2417,7 @@
 		<French>Mission Réussie !</French>
 		<Russian>Ìèññèÿ âûïîëíåíà!</Russian>
 		<Italian>Esplorazione di un oggetto sednoide completata!</Italian>
+		<Polish>Misja zako&#241;czona sukcesem!</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_OUTCOME_EXPLORE_SOLAR_SYSTEM_LIFE</Tag>
@@ -2113,6 +2425,7 @@
 		<French>Faire une Mission de Recherche</French>
 		<Russian>Íà÷àòü ìèññèþ</Russian>
 		<Italian>Effettua missione di ricerca (cerca vita extraterrestre)</Italian>
+		<Polish>Wykonaj misj&#234; badawcz&#185;</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_OUTCOME_EXPLORE_SOLAR_SYSTEM_LIFE_MESSAGE</Tag>
@@ -2120,6 +2433,7 @@
 		<French>Mission Réussie !</French>
 		<Russian>Ìèññèÿ âûïîëíåíà!</Russian>
 		<Italian>Ricerca di vita extraterrestre completata!</Italian>
+		<Polish>Misja zako&#241;czona sukcesem!</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_OUTCOME_EXPLORE_SS1</Tag>
@@ -2127,6 +2441,7 @@
 		<French>Faire une Mission de Recherche</French>
 		<Russian>Íà÷àòü ìèññèþ</Russian>
 		<Italian>Effettua missione di ricerca (rifornisci stazione spaziale livello 1)</Italian>
+		<Polish>Wykonaj misj&#234; badawcz&#185;</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_OUTCOME_EXPLORE_SS1_MESSAGE</Tag>
@@ -2134,6 +2449,7 @@
 		<French>Mission Réussie !</French>
 		<Russian>Ìèññèÿ âûïîëíåíà!</Russian>
 		<Italian>Rifornimento stazione spaziale livello 1 completato!</Italian>
+		<Polish>Misja zako&#241;czona sukcesem!</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_OUTCOME_EXPLORE_SS2</Tag>
@@ -2141,6 +2457,7 @@
 		<French>Faire une Mission de Recherche</French>
 		<Russian>Íà÷àòü ìèññèþ</Russian>
 		<Italian>Effettua missione di ricerca (rifornisci stazione spaziale livello 2)</Italian>
+		<Polish>Wykonaj misj&#234; badawcz&#185;</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_OUTCOME_EXPLORE_SS2_MESSAGE</Tag>
@@ -2148,6 +2465,7 @@
 		<French>Mission Réussie !</French>
 		<Russian>Ìèññèÿ âûïîëíåíà!</Russian>
 		<Italian>Rifornimento stazione spaziale livello 2 completato!</Italian>
+		<Polish>Misja zako&#241;czona sukcesem!</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_OUTCOME_EXPLORE_SS3</Tag>
@@ -2155,6 +2473,7 @@
 		<French>Faire une Mission de Recherche</French>
 		<Russian>Íà÷àòü ìèññèþ</Russian>
 		<Italian>Effettua missione di ricerca (rifornisci stazione spaziale livello 3)</Italian>
+		<Polish>Wykonaj misj&#234; badawcz&#185;</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_OUTCOME_EXPLORE_SS3_MESSAGE</Tag>
@@ -2162,6 +2481,7 @@
 		<French>Mission Réussie !</French>
 		<Russian>Ìèññèÿ âûïîëíåíà!</Russian>
 		<Italian>Rifornimento stazione spaziale livello 3 completato!</Italian>
+		<Polish>Misja zako&#241;czona sukcesem!</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_OUTCOME_EXPLORE_TRANSNEPTUNIAN</Tag>
@@ -2169,6 +2489,7 @@
 		<French>Faire une Mission de Recherche</French>
 		<Russian>Íà÷àòü ìèññèþ</Russian>
 		<Italian>Effettua missione di ricerca (esplora lo spazio transnettuniano)</Italian>
+		<Polish>Wykonaj misj&#234; badawcz&#185;</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_OUTCOME_EXPLORE_TRANSNEPTUNIAN_MESSAGE</Tag>
@@ -2176,6 +2497,7 @@
 		<French>Mission Réussie !</French>
 		<Russian>Ìèññèÿ âûïîëíåíà!</Russian>
 		<Italian>Esplorazione dello spazio transnettuniano completata!</Italian>
+		<Polish>Misja zako&#241;czona sukcesem!</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_OUTCOME_LAUNCH_SATELLITE</Tag>
@@ -2183,6 +2505,7 @@
 		<French>Lancer un Satellite</French>
 		<Russian>Çàïóñê ñïóòíèêà</Russian>
 		<Italian>Lancia satellite in orbita terrestre bassa</Italian>
+		<Polish>Wystrzel satelit&#234;</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_OUTCOME_LAUNCH_SATELLITE_CISLUNAR</Tag>
@@ -2190,6 +2513,7 @@
 		<French>Lancer un Satellite</French>
 		<Russian>Çàïóñê ñïóòíèêà</Russian>
 		<Italian>Lancia satellite in orbita geosincrona</Italian>
+		<Polish>Wystrzel satelit&#234;</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_OUTCOME_LAUNCH_SATELLITE_CISLUNAR_MESSAGE</Tag>
@@ -2197,6 +2521,7 @@
 		<French>Décollage !</French>
 		<Russian>Êëþ÷ íà ñòàðò!</Russian>
 		<Italian>Lancio del satellite in orbita geosincrona completato!</Italian>
+		<Polish>Start!</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_OUTCOME_LAUNCH_SATELLITE_MESSAGE</Tag>
@@ -2204,6 +2529,7 @@
 		<French>Décollage !</French>
 		<Russian>Êëþ÷ íà ñòàðò!</Russian>
 		<Italian>Lancio del satellite in orbita terrestre bassa completato!</Italian>
+		<Polish>Start!</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_OUTCOME_SAMPLE_STUDY</Tag>
@@ -2211,6 +2537,7 @@
 		<French>Faire une Mission de Recherche</French>
 		<Russian>Do Research Mission</Russian>
 		<Italian>Effettua missione di ricerca</Italian>
+		<Polish>Wykonaj misj&#234; badawcz&#185;</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_OUTCOME_SAMPLE_STUDY_MESSAGE</Tag>
@@ -2218,6 +2545,7 @@
 		<French>Analyse Réussie !</French>
 		<Russian>Àíàëèç çàâåðøåí!</Russian>
 		<Italian>Analisi completata con successo!</Italian>
+		<Polish>Analiza powiod&#179;a si&#234;!</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_OUTCOME_UPGRADE_TO_PLANET_SETTLER</Tag>
@@ -2225,6 +2553,7 @@
 		<French>Fonder une Ville</French>
 		<Russian>Ñòðîèòü ãîðîä</Russian>
 		<Italian>Fonda una città</Italian>
+		<Polish>Za&#179;&#243;&#191; miasto</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_OUTCOME_UPGRADE_TO_PLANET_SETTLER_MESSAGE</Tag>
@@ -2232,6 +2561,7 @@
 		<French>Ville fondée !</French>
 		<Russian>Ãîðîä áûë îñíîâàí!</Russian>
 		<Italian>Nuova città stabilita!</Italian>
+		<Polish>Miasto za&#179;o&#191;one!</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_ROUTE_ASPATIAL_ROUTE</Tag>
@@ -2239,6 +2569,7 @@
 		<French>Route Aspatiale</French>
 		<Russian>Âíåïðîñòð. ìàðøðóò</Russian>
 		<Italian>Strada aspaziale</Italian>
+		<Polish>Trasa podprzestrzenna</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_ROUTE_COMPACT_WORMHOLE</Tag>
@@ -2246,6 +2577,7 @@
 		<French>Compact Trou de Ver</French>
 		<Russian>Ìàëàÿ ÷åðâîòî÷èíà</Russian>
 		<Italian>Miniwormhole</Italian>
+		<Polish>Kompaktowy tunel czasoprzestrzenny</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_ROUTE_HYPERLANE</Tag>
@@ -2253,12 +2585,14 @@
 		<French>Hyperligne</French>
 		<Russian>Ãèïåðëàéí</Russian>
 		<Italian>Iperstrada</Italian>
+		<Polish>Hiperlane</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_ROUTE_LUNAR_PATH</Tag>
 		<English>Lunar Path</English>
 		<Russian>Лунная дорога</Russian>
 		<Italian>Sentiero lunare</Italian>
+		<Polish>Ksi&#234;&#191;ycowa Drogaa</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_ROUTE_MEGAWORMHOLE</Tag>
@@ -2266,6 +2600,7 @@
 		<French>Méga-Trou de Ver</French>
 		<Russian>Áîëüøàÿ ÷åðâîòî÷èíà</Russian>
 		<Italian>Megawormhole</Italian>
+		<Polish>Wielki tunel czasoprzestrzenny</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_ROUTE_ORBITAL_TRAJECTORY</Tag>
@@ -2273,12 +2608,14 @@
 		<French>Trajectoire Orbitale</French>
 		<Russian>Îðáèò. òðàåêòîðèÿ</Russian>
 		<Italian>Traiettoria orbitale</Italian>
+		<Polish>Trajektoria orbity</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_ROUTE_PLANETARY_MAGLEV</Tag>
 		<English>Planetary Maglev</English>
 		<Russian>Планетарный маглев</Russian>
 		<Italian>Ferrovia a levitazione magnetica planetaria</Italian>
+		<Polish>Planetarna kolej magnetyczna</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_ROUTE_SOLAR_TRAJECTORY</Tag>
@@ -2286,6 +2623,7 @@
 		<French>Trajectoire Solaire</French>
 		<Russian>Ñîëí. òðàåêòîðèÿ</Russian>
 		<Italian>Traiettoria solare</Italian>
+		<Polish>Trajektoria S&#179;o&#241;ca</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_ROUTE_WORMHOLE</Tag>
@@ -2293,6 +2631,7 @@
 		<French>Trou de Ver</French>
 		<Russian>×åðâîòî÷èíà</Russian>
 		<Italian>Wormhole</Italian>
+		<Polish>Tunel czasoprzestrzenny</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_ANCIENT_CIVILIZATION_REWARD</Tag>
@@ -2300,12 +2639,14 @@
 		<French>Retour de Mission (Ancient Civilization)</French>
 		<Russian>Ýôôåêò (Äðåâí. öèâèë.)</Russian>
 		<Italian>Antica civiltà (ricompensa missione)</Italian>
+		<Polish>Nagroda za misj&#234; (staro&#191;ytna cywilizacja)</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_ANCIENT_CIVILIZATION_REWARD_PEDIA</Tag>
 		<English>A reward for completing planetary exploration</English>
 		<French>Une récompense pour avoir terminé l'exploration planétaire</French>
 		<Russian>Íàãðàäà îò èññëåäîâàíèÿ ïëàíåò çåìíîé ãðóïïû</Russian>
+		<Polish>Nagroda za uko&#241;czenie eksploracji planet</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_ASTEROID_REWARD</Tag>
@@ -2313,12 +2654,14 @@
 		<French>Retour de Mission (Asteroid)</French>
 		<Russian>Ýôôåêò (Àñòåðîèä)</Russian>
 		<Italian>Asteroide (ricompensa missione)</Italian>
+		<Polish>Nagroda za misj&#234; (Asteroida)</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_ASTEROID_REWARD_PEDIA</Tag>
 		<English>A reward for completing planetary exploration</English>
 		<French>Une récompense pour avoir terminé l'exploration planétaire</French>
 		<Russian>Íàãðàäà îò èññëåäîâàíèÿ ïëàíåò çåìíîé ãðóïïû</Russian>
+		<Polish>Nagroda za uko&#241;czenie eksploracji planet</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_ATTACKSHIP</Tag>
@@ -2326,12 +2669,14 @@
 		<French>Vaisseau d'Attaque</French>
 		<Russian>Ìåæïëàíåòíûé êîðâåò</Russian>
 		<Italian>Astronave d'attacco</Italian>
+		<Polish>Statek szturmowy</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_ATTACKSHIP_PEDIA</Tag>
 		<English>An attack ship for the solar system. Meant for invading O'Neill colonies.</English>
 		<French>Un Vaisseau d'attaque pour le système solaire. Destiné à envahir les colonies O'Neill.</French>
 		<Russian>Áîåâîé êîðàáëü äëÿ ñîëíå÷íîé ñèñòåìû. Ïðåäíàçíà÷åí äëÿ âòîðæåíèÿ â êîëîíèþ Î'Íèëà.</Russian>
+		<Polish>Statek szturmowy dla uk&#179;ad&#243;w s&#179;onecznych. Przeznaczony do inwazji na kolonie O'Neilla.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_BACTERIA_SWARM</Tag>
@@ -2339,11 +2684,13 @@
 		<French>Essain de bactéries</French>
 		<Russian>Áàêòåðèàëüíûé ðîé</Russian>
 		<Italian>Sciame di batteri</Italian>
+		<Polish>R&#243;j bakterii</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_BACTERIA_SWARM_PEDIA</Tag>
 		<English>A swarm of bacteria that can cross interstellar voids.</English>
 		<Russian>Ðîé áàêòåðèé, êîòîðûå ìîãóò ïåðåñåêàòü ìåæçâåçäíûå ïóñòîòû.</Russian>
+		<Polish>R&#243;j bakterii potrafi&#185;cy przenika&#230; mi&#234;dzygwiezdne przestrzenie.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_BRACEWELL_PROBE</Tag>
@@ -2351,12 +2698,14 @@
 		<French>Sonde Bracewell</French>
 		<Russian>Çîíä Áðåéñâåëëà</Russian>
 		<Italian>Sonda di Bracewell</Italian>
+		<Polish>Sonda Bracewella</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_BRACEWELL_PROBE_PEDIA</Tag>
 		<English>A Bracewell probe to explore the galaxy. This is a self-replicating, artificially intelligent device.</English>
 		<French>Une sonde Bracewell pour explorer la galaxie. Il s'agit d'un appareil à réplication automatique et artificiellement intelligent.</French>
 		<Russian>Çîíä äëÿ èññëåäîâàíèÿ ãàëàêòèêè. Ýòî ñàìîâîñïðîèçâîäÿùååñÿ, èñêóññòâåííî èíòåëëåêòóàëüíîå óñòðîéñòâî.</Russian>
+		<Polish>Sonda Bracewell do badania galaktyki. To samoreplikuj&#185;ce si&#234;, sztucznie inteligentne urz&#185;dzenie.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_CAPTURED_ASTEROID</Tag>
@@ -2364,12 +2713,14 @@
 		<French>Astéroide capturé</French>
 		<Russian>Çàõâà÷åííûé àñòåðîèä</Russian>
 		<Italian>Asteroide catturato</Italian>
+		<Polish>Przechwycona asteroida</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_CAPTURED_ASTEROID_PEDIA</Tag>
 		<English>An asteroid captured for economic use.</English>
 		<French>Un astéroïde capturé à des fins économiques.</French>
 		<Russian>Àñòåðîèä, çàõâà÷åííûé äëÿ õîçÿéñòâåííîãî èñïîëüçîâàíèÿ.</Russian>
+		<Polish>Asteroida przechwycona do cel&#243;w gospodarczych.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_CAPTURED_COMET</Tag>
@@ -2377,12 +2728,14 @@
 		<French>Comète capturée</French>
 		<Russian>Çàõâà÷åííàÿ êîìåòà</Russian>
 		<Italian>Cometa catturata</Italian>
+		<Polish>Przechwycona kometa</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_CAPTURED_COMET_PEDIA</Tag>
 		<English>An comet captured for economic use.</English>
 		<French>Une comète capturée à des fins économiques.</French>
 		<Russian>Êîìåòà, çàõâà÷åííàÿ äëÿ õîçÿéñòâåííîãî èñïîëüçîâàíèÿ.</Russian>
+		<Polish>Kometa przechwycona do cel&#243;w gospodarczych.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_CHRONOFORM_SHIP</Tag>
@@ -2390,12 +2743,14 @@
 		<French>Vaisseau Chronomorphe</French>
 		<Russian>Õðîíîôîðìåð</Russian>
 		<Italian>Astronave cronocinetica</Italian>
+		<Polish>Statek do chronoformowania</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_CHRONOFORM_SHIP_PEDIA</Tag>
 		<English>The Chronoformimg Ship is capable of manipulating space and time, creating portals outside of ordinary spacetime.</English>
 		<French>Le Vaisseau Chronomorphe est capable de manipuler l'espace et le temps, créant des portails en dehors de l'espace-temps ordinaire.</French>
 		<Russian>Êîðàáëü-õðîíîôîðìåð ñïîñîáåí ìàíèïóëèðîâàòü ïðîñòðàíñòâîì è âðåìåíåì, ñîçäàâàÿ ïîðòàëû âíå îáû÷íîãî ïðîñòðàíñòâà-âðåìåíè.</Russian>
+		<Polish>Statek chronoformuj&#185;vy jest w stanie manipulowa&#230; przestrzeni&#185; i czasem, tworz&#185;c portale poza zwyk&#179;&#185; czasoprzestrzeni&#185;.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_CISLUNARSETTLER</Tag>
@@ -2403,6 +2758,7 @@
 		<French>Colon Cislunaire</French>
 		<Russian>Ëóííûé ïîñåëåíåö</Russian>
 		<Italian>Colonizzatore cislunare</Italian>
+		<Polish>Osadnik Cislunarny</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_CISLUNARSETTLER_HELP</Tag>
@@ -2410,6 +2766,7 @@
 		<French>[ICON_BULLET]Peut construire les Villes de l'espace cislunaire</French>
 		<Russian>[ICON_BULLET][COLOR_YELLOW]Ïîäñêàçêà: [COLOR_REVERT]Ìîæåò ñòðîèòü ãîðîäà è êîëîíèè â îêîëîëóííîì ïðîñòðàíñòâå</Russian>
 		<Italian>[ICON_BULLET]L'unità può [COLOR_HIGHLIGHT_TEXT]fondare città[COLOR_REVERT]  nello spazio cislunare</Italian>
+		<Polish>[ICON_BULLET]Mo&#191;e budowa&#230; miasta w przestrzeni Cislunarnej</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_CISLUNAR_INFANTRY</Tag>
@@ -2417,12 +2774,14 @@
 		<French>Infanterie Cislunaire</French>
 		<Russian>Ëóííàÿ îõðàíà</Russian>
 		<Italian>Fanteria cislunare</Italian>
+		<Polish>Piechota Cislunarna</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_CISLUNAR_INFANTRY_PEDIA</Tag>
 		<English>Basic defender for cislunar colonies.</English>
 		<French>Défenseur de base des colonies cislunaires.</French>
 		<Russian>Îñíîâíîé çàùèòíèê ëóííûõ êîëîíèé.</Russian>
+		<Polish>Podstawowy obro&#241;ca kolonii cislunarnych.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_CISLUNAR_INVADER</Tag>
@@ -2430,12 +2789,14 @@
 		<French>Force d'invasion Cislunaire</French>
 		<Russian>Ëóííûé øòóðìîâèê</Russian>
 		<Italian>Astronave cislunare da invasione</Italian>
+		<Polish>Si&#179;y Inwazyjne Cislunar</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_CISLUNAR_INVADER_PEDIA</Tag>
 		<English>An attack ship for cislunar space. Meant for invading space stations.</English>
 		<French>Un Vaisseau d'attaque pour l'espace cislunaire. Destiné à envahir les stations spatiales.</French>
 		<Russian>Øòóðìîâîé êîðàáëü äëÿ îêîëîëóííîãî ïðîñòðàíñòâà. Ïðåäíàçíà÷åí äëÿ âòîðæåíèÿ íà êîñìè÷åñêèå ñòàíöèè.</Russian>
+		<Polish>Statek szturmowy w przestrzeni cislunarnej. Przeznaczony do inwazji na stacje kosmiczne.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_CISLUNAR_REWARD</Tag>
@@ -2443,12 +2804,14 @@
 		<French>Retour de Mission (Cislunar)</French>
 		<Russian>Ýôôåêò (Îêîëîëóí.)</Russian>
 		<Italian>Spazio cislunare (ricompensa missione)</Italian>
+		<Polish>Nagroda za misj&#234; (Cislunar)</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_CISLUNAR_REWARD_PEDIA</Tag>
 		<English>A reward from exploring cislunar space</English>
 		<French>Une récompense de l'exploration de l'espace cislunaire space</French>
 		<Russian>Íàãðàäà îò èçó÷åíèÿ îêîëîëóííîãî ïðîñòðàíñòâà</Russian>
+		<Polish>Nagroda za eksploracj&#234; przestrzeni cislunarnej</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_CISLUNAR_WORKER</Tag>
@@ -2456,6 +2819,7 @@
 		<French>Vaisseau-atelier Cislunaire</French>
 		<Russian>Ëóííûé ðàáî÷èé äðîí</Russian>
 		<Italian>Astronave da lavoro cislunare</Italian>
+		<Polish>Warsztat Cislunar</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_CONSTRUCTION_SHIP</Tag>
@@ -2463,10 +2827,12 @@
 		<French>Vaisseau de construction</French>
 		<Russian>Ñòðîèòåëüíûé ìîäóëü</Russian>
 		<Italian>Astronave costruttrice</Italian>
+		<Polish>Statek konstrukcyjny</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_CONSTRUCTION_SHIP_PEDIA</Tag>
 		<English>Space worker used to build earliest improvements on Moon, Mars and Venus. [LINK=UNIT_LUNAR_BULLDOZER]Lunar Bulldozer[\LINK] at [LINK=TECH_LUNAR_COLONIZATION]Lunar Colonization[\LINK] is early unit dedicated to resource extraction.</English>
+		<Polish>Pracownik kosmiczny budowa&#179; najwcze&#156;niejsze ulepszenia na Ksi&#234;&#191;ycu, Marsie i Wenus. [LINK=UNIT_LUNAR_BULLDOZER]Ksi&#234;&#191;ycowy buldo&#191;er[\LINK] w [LINK=TECH_LUNAR_COLONIZATION]Kolonizacji Ksi&#234;&#191;yca[\LINK], to wczesna jednostka zajmuj&#185;ca si&#234; wydobywaniem zasob&#243;w.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_COSMIC_WORKER</Tag>
@@ -2474,12 +2840,14 @@
 		<French>Ouvrier Cosmique</French>
 		<Russian>Àñòðîèíæåíåð</Russian>
 		<Italian>Lavoratore cosmico</Italian>
+		<Polish>Kosmiczny robotnik</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_COSMIC_WORKER_PEDIA</Tag>
 		<English>This highly advanced worker can freely move about all terrains and build almost anything in space.</English>
 		<French>Cet Ouvrier très avancé peut se déplacer librement sur tous les terrains et construire presque n'importe quoi dans l'espace.</French>
 		<Russian>Ýòîò âûñîêîïðîôåññèîíàëüíûé ðàáîòíèê ìîæåò ñâîáîäíî ïåðåäâèãàòüñÿ ïî ëþáîé ìåñòíîñòè è ñòðîèòü ïðàêòè÷åñêè âñå â êîñìîñå.</Russian>
+		<Polish>Ten wysoce zaawansowany robotnik mo&#191;e swobodnie porusza&#230; si&#234; po ka&#191;dym terenie i budowa&#230; niemal wszystko w kosmosie.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_COSMIC_WORK_CREW</Tag>
@@ -2487,12 +2855,14 @@
 		<French>Equipage d'ouvriers Cosmic</French>
 		<Russian>Áðèãàäà àñòðîðàáîòíèêîâ</Russian>
 		<Italian>Squadra di lavoro cosmica</Italian>
+		<Polish>Kosmiczna za&#179;oga robocza</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_COSMIC_WORK_CREW_PEDIA</Tag>
 		<English>These brave workers go out into space.</English>
 		<French>Ces braves ouvriers sortent dans l'espace.</French>
 		<Russian>Ýòè õðàáðûå ðàáî÷èå âûõîäÿò â êîñìîñ.</Russian>
+		<Polish>Ci odwa&#191;ni pracownicy wyruszaj&#185; w kosmos.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_CYBERNETIC_WORK_CREW</Tag>
@@ -2500,12 +2870,14 @@
 		<French>Equipage d'ouvriers Cybernetic</French>
 		<Russian>Áðèãàäà êèáåððàáî÷èõ</Russian>
 		<Italian>Squadra di lavoro cibernetica</Italian>
+		<Polish>Cybernetyczna za&#179;oga robocza</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_CYBERNETIC_WORK_CREW_PEDIA</Tag>
 		<English>These brave workers go out into space.</English>
 		<French>Ces braves ouvriers sortent dans l'espace.</French>
 		<Russian>Ýòè õðàáðûå ðàáî÷èå âûõîäÿò â êîñìîñ.</Russian>
+		<Polish>Ci odwa&#191;ni pracownicy wyruszaj&#185; w kosmos.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_DEEPSPACE_INFANTRY</Tag>
@@ -2513,12 +2885,14 @@
 		<French>Infanterie de l'Espace lointain</French>
 		<Russian>Ïëàíåòàðíûé îõðàííèê</Russian>
 		<Italian>Fanteria dello spazio profondo</Italian>
+		<Polish>Piechota Dalekiego kosmosu</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_DEEPSPACE_INFANTRY_PEDIA</Tag>
 		<English>Basic defender for solar system colonies.</English>
 		<French>Défenseur de base pour les colonies du système solaire.</French>
 		<Russian>Îñíîâíîé çàùèòíèê êîëîíèé Ñîëíå÷íîé ñèñòåìû.</Russian>
+		<Polish>Podstawowy obro&#241;ca kolonii Uk&#179;adu S&#179;onecznego.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_DISTANT_COSMOS_REWARD</Tag>
@@ -2526,12 +2900,14 @@
 		<French>Retour de Mission (Distant Cosmos)</French>
 		<Russian>Ýôôåêò (Äàëüíèé êîñìîñ)</Russian>
 		<Italian>Spazio distante (ricompensa missione)</Italian>
+		<Polish>Nagroda za misj&#234; (Odleg&#179;y Kosmos)</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_DISTANT_COSMOS_REWARD_PEDIA</Tag>
 		<English>A reward for completing planetary exploration</English>
 		<French>Une récompense pour avoir terminé l'exploration planétaire</French>
 		<Russian>Íàãðàäà îò èññëåäîâàíèÿ ïëàíåò çåìíîé ãðóïïû</Russian>
+		<Polish>Nagroda za uko&#241;czenie eksploracji planet</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_ENERGY_ENTITY</Tag>
@@ -2539,12 +2915,14 @@
 		<French>Essaim d'énergie</French>
 		<Russian>Ñãóñòîê ýíåðãèè</Russian>
 		<Italian>Sciame di energia</Italian>
+		<Polish>R&#243;j Energii</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_ENERGY_ENTITY_PEDIA</Tag>
 		<English>A swarm of energy that can cross interdimensional voids.</English>
 		<French>Un essaim d'énergie qui peut traverser des vides interdimensionnels.</French>
 		<Russian>Ýíåðãåòè÷åñêèé ñãóñòîê, êîòîðûé ìîæåò ïåðåñåêàòü ìåæïðîñòðàíñòâåííûå ïóñòîòû.</Russian>
+		<Polish>R&#243;j energii, kt&#243;ry mo&#191;e przekracza&#230; mi&#234;dzywymiarowe pr&#243;&#191;nie.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_EUROPA_REWARD</Tag>
@@ -2552,12 +2930,14 @@
 		<French>Retour de Mission (Europa)</French>
 		<Russian>Ýôôåêò (Åâðîïà)</Russian>
 		<Italian>Europa (ricompensa missione)</Italian>
+		<Polish>Nagroda za misj&#234; (Europa)</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_EUROPA_REWARD_PEDIA</Tag>
 		<English>A reward for completing planetary exploration</English>
 		<French>Une récompense pour avoir terminé l'exploration planétaire</French>
 		<Russian>Íàãðàäà îò èññëåäîâàíèÿ ïîÿñà àñòåðîèäîâ</Russian>
+		<Polish>Nagroda za uko&#241;czenie eksploracji planet</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_EXOPLANET_REWARD</Tag>
@@ -2565,12 +2945,14 @@
 		<French>Retour de Mission (Exoplanet)</French>
 		<Russian>Ýôôåêò (Ýêçîïëàíåòà)</Russian>
 		<Italian>Esopianeta (ricompensa missione)</Italian>
+		<Polish>Nagroda za misj&#234; (Egzoplaneta)</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_EXOPLANET_REWARD_PEDIA</Tag>
 		<English>A reward for completing planetary exploration</English>
 		<French>Une récompense pour avoir terminé l'exploration planétaire</French>
 		<Russian>Íàãðàäà îò èññëåäîâàíèÿ âíåøíèõ ïëàíåò-ãèãàíòîâ</Russian>
+		<Polish>Nagroda za uko&#241;czenie eksploracji planet</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_GALACTIC_CORE_REWARD</Tag>
@@ -2578,12 +2960,14 @@
 		<French>Retour de Mission (Galactic Core)</French>
 		<Russian>Ýôôåêò (ßäðî ãàëàêò.)</Russian>
 		<Italian>Centro della galassia (ricompensa missione)</Italian>
+		<Polish>Nagroda za misj&#234; (Centrum Galaktyki)</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_GALACTIC_CORE_REWARD_PEDIA</Tag>
 		<English>A reward for completing planetary exploration</English>
 		<French>Une récompense pour avoir terminé l'exploration planétaire</French>
 		<Russian>Íàãðàäà îò èññëåäîâàíèÿ ëóí ãàçîâûõ ãèãàíòîâ</Russian>
+		<Polish>Nagroda za uko&#241;czenie eksploracji planet</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_GALACTIC_REWARD</Tag>
@@ -2591,12 +2975,14 @@
 		<French>Retour de Mission (Galactic)</French>
 		<Russian>Ýôôåêò (Ãàëàêòè÷.)</Russian>
 		<Italian>Spazio galattico (ricompensa missione)</Italian>
+		<Polish>Nagroda za misj&#234; (Galaktyka)</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_GALACTIC_REWARD_PEDIA</Tag>
 		<English>A reward from exploring galactic space</English>
 		<French>Une récompense de l'exploration de l'espace galactic space</French>
 		<Russian>Íàãðàäà îò èññëåäîâàíèÿ ðóêàâîâ Ìëå÷íîãî ïóòè</Russian>
+		<Polish>Nagroda za eksploracj&#234; przestrzeni galaktycznej</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_HEAVY_ROCKET</Tag>
@@ -2604,10 +2990,12 @@
 		<French>Fusée Lourde</French>
 		<Russian>Òÿæåëàÿ ðàêåòà</Russian>
 		<Italian>Razzo spaziale pesante</Italian>
+		<Polish>Ci&#234;&#191;ka rakieta</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_HEAVY_ROCKET_PEDIA</Tag>
 		<English>This heavy, commercially-developed rocket is an upgrade to your old space shuttles.</English>
+		<Polish>Ta ci&#234;&#191;ka, komercyjna rakieta stanowi ulepszenie Twoich starych prom&#243;w kosmicznych.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_HYPERINTELLIGENT_WORK_CREW</Tag>
@@ -2615,12 +3003,14 @@
 		<French>Equipage d'ouvriers Hyperintelligent</French>
 		<Russian>Áðèãàäà íîîñàïèåíòîâ</Russian>
 		<Italian>Squadra di lavoro iperintelligente</Italian>
+		<Polish>Hiperinteligentna za&#179;oga robocza</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_HYPERINTELLIGENT_WORK_CREW_PEDIA</Tag>
 		<English>These brave workers go out into space.</English>
 		<French>Ces braves ouvriers sortent dans l'espace.</French>
 		<Russian>Ýòè õðàáðûå ðàáî÷èå âûõîäÿò â êîñìîñ.</Russian>
+		<Polish>Ci odwa&#191;ni pracownicy wyruszaj&#185; w kosmos.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_HYPERSHIP</Tag>
@@ -2628,6 +3018,7 @@
 		<French>HyperVaisseau-Colonisateur</French>
 		<Russian>Ãèïåðêîðàáëü-ìàòêà</Russian>
 		<Italian>Ipernave colonizzatrice</Italian>
+		<Polish>Staket Zasiewowy</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_HYPERSHIP_HELP</Tag>
@@ -2635,6 +3026,7 @@
 		<French>[ICON_BULLET]Peut construire les Villes dans l'espace extragalactique, le Cosmos lointain et l'Hyperespace. Lors de la colonisation, le terrain se transforme en hyperespace</French>
 		<Russian>[ICON_BULLET][COLOR_YELLOW]Ïîäñêàçêà: [COLOR_REVERT]Ìîæåò ñòðîèòü ãîðîäà âî âíåãàëàêòè÷åñêîì êîñìîñå, äàëüíåì êîñìîñå è ãèïåðïðîñòðàíñòâå[NEWLINE][ICON_BULLET]Ïîñëå çàñåëåíèÿ ïðåâðàùàåò ìåñòíîñòü â ãèïåðïðîñòðàíñòâî</Russian>
 		<Italian>[ICON_BULLET]L'unità può [COLOR_HIGHLIGHT_TEXT]fondare città[COLOR_REVERT] nello spazio extragalattico, nel cosmo distante e nell'iperspazio.[NEWLINE][ICON_BULLET]Al momento dell'insediamento [COLOR_HIGHLIGHT_TEXT]trasforma[COLOR_REVERT] la casella in [COLOR_HIGHLIGHT_TEXT]iperspazio[COLOR_REVERT]</Italian>
+		<Polish>[ICON_BULLET]Mo&#191;e budowa&#230; miasta w przestrzeni pozagalaktycznej, odleg&#179;ym kosmosie i hiperprzestrzeni. Po osiedleniu przekszta&#179;ca teren w nadprzestrze&#241;</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_HYPERSPACE_DEFENDER</Tag>
@@ -2642,12 +3034,14 @@
 		<French>Défenseur de l'Hyperespace</French>
 		<Russian>Çâåçäíûé ïîãðàíè÷íèê</Russian>
 		<Italian>Difensore iperspaziale</Italian>
+		<Polish>Obro&#241;ca Nadprzestrzeni</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_HYPERSPACE_DEFENDER_PEDIA</Tag>
 		<English>Basic defensive unit for hyperspace colonies.</English>
 		<French>Unité basique défensive pour les colonies d'hyperespace.</French>
 		<Russian>Çàùèòíûé îòðÿä äëÿ êîëîíèé â ãèïåðêîñìîñå.</Russian>
+		<Polish>Podstawowa jednostka obronna kolonii nadprzestrzennych.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_HYPERSPACE_REWARD</Tag>
@@ -2655,12 +3049,14 @@
 		<French>Retour de Mission (Hyperespace)</French>
 		<Russian>Ýôôåêò (Ãèïåðêîñìîñ)</Russian>
 		<Italian>Iperspazio (ricompensa missione)</Italian>
+		<Polish>Nagroda za misj&#234; (Nadprzestrze&#241;)</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_HYPERSPACE_REWARD_PEDIA</Tag>
 		<English>A reward for completing planetary exploration</English>
 		<French>Une récompense pour avoir terminé l'exploration planétaire</French>
 		<Russian>Íàãðàäà îò èññëåäîâàíèÿ âíåøíèõ ïëàíåò-ãèãàíòîâ</Russian>
+		<Polish>Nagroda za uko&#241;czenie eksploracji planet</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_HYPER_BATTLECRUISER</Tag>
@@ -2668,12 +3064,14 @@
 		<French>Croiseur de Bataille à Neutronium</French>
 		<Russian>Íåéòðîííûé òÿæ. êðåéñåð</Russian>
 		<Italian>Incrociatore da battaglia al neutronio</Italian>
+		<Polish>Kr&#185;&#191;ownik Neutronium</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_HYPER_BATTLECRUISER_PEDIA</Tag>
 		<English>The ultimate offensive unit. Can traverse any territory.</English>
 		<French>L'unité offensive ultime. Peut traverser n'importe quel territoire.</French>
 		<Russian>Ñàìàÿ ïðîäâèíóòàÿ íàñòóïàòåëüíàÿ åäèíèöà. Ìîæåò ïåðåñå÷ü ëþáóþ òåððèòîðèþ.</Russian>
+		<Polish>Najlepsza jednostka ofensywna. Mo&#191;e przemierza&#230; dowolne terytorium.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_INNER_SOLAR_SYSTEM_REWARD</Tag>
@@ -2681,12 +3079,14 @@
 		<French>Retour de Mission (Inner Solar System)</French>
 		<Russian>Ýôôåêò (Âíóòð. ïëàíåòû)</Russian>
 		<Italian>Sistema solare interno (ricompensa missione)</Italian>
+		<Polish>Nagroda za misj&#234; (wewn&#234;trzny uk&#179;ad s&#179;oneczny)</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_INNER_SOLAR_SYSTEM_REWARD_PEDIA</Tag>
 		<English>A reward from exploring the inner Solar System</English>
 		<French>Une récompense de l'exploration de l'intérieur du Système solaire</French>
 		<Russian>Íàãðàäà îò èññëåäîâàíèÿ Ñîëíå÷íîé ñèñòåìû</Russian>
+		<Polish>Nagroda za eksploracj&#234; wewn&#234;trznego Uk&#179;adu S&#179;onecznego</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_INTERDIMENSIONAL_PROBE</Tag>
@@ -2694,11 +3094,13 @@
 		<French>Sonde Interdimensional</French>
 		<Russian>Ìåæïðîñòðàíñòâåííûé çîíä</Russian>
 		<Italian>Sonda interdimensionale</Italian>
+		<Polish>Sonda mi&#234;dzywymiarowa</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_INTERDIMENSIONAL_PROBE_PEDIA</Tag>
 		<English>The Interdimensional Probe can explore hyperspace and other exotic locations.</English>
 		<Russian>Ìåæïðîñòðàíñòâåííûé çîíä ìîæåò èññëåäîâàòü ãèïåðïðîñòðàíñòâî è äðóãèå ýêçîòè÷åñêèå ëîêàöèè.</Russian>
+		<Polish>Sonda Mi&#234;dzywymiarowa mo&#191;e eksplorowa&#230; hiperprzestrze&#241; i inne egzotyczne lokalizacje.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_INTERGALACTIC_REWARD</Tag>
@@ -2706,12 +3108,14 @@
 		<French>Retour de Mission (Intergalactic)</French>
 		<Russian>Ýôôåêò (Ìåæãàëàêò.)</Russian>
 		<Italian>Spazio intergalattico (ricompensa missione)</Italian>
+		<Polish>Nagroda za misj&#234; (mi&#234;dzygalaktyczna)</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_INTERGALACTIC_REWARD_PEDIA</Tag>
 		<English>A reward from exploring intergalactic space</English>
 		<French>Une récompense de l'exploration de l'espace intergalactic space</French>
 		<Russian>Íàãðàäà îò èññëåäîâàíèÿ ìåæãàëàêòè÷åñêîãî ïðîñòðàíñòâà</Russian>
+		<Polish>Nagroda za eksploracj&#234; przestrzeni mi&#234;dzygalaktycznej</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_INTERSTELLAR_LIFE_REWARD</Tag>
@@ -2719,12 +3123,14 @@
 		<French>Retour de Mission (Interstellar Life)</French>
 		<Russian>Ýôôåêò (Ìåæçâåçäí.)</Russian>
 		<Italian>Forma di vita interstellare (ricompensa missione)</Italian>
+		<Polish>Nagroda za misj&#234; (&#175;ycie mi&#234;dzygwiezdne)</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_INTERSTELLAR_LIFE_REWARD_PEDIA</Tag>
 		<English>A reward for completing planetary exploration</English>
 		<French>Une récompense pour avoir terminé l'exploration planétaire</French>
 		<Russian>Íàãðàäà îò èññëåäîâàíèÿ Òèòàíà</Russian>
+		<Polish>Nagroda za uko&#241;czenie eksploracji planet</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_INTERSTELLAR_PROBE</Tag>
@@ -2732,11 +3138,13 @@
 		<French>Sonde Interstellar</French>
 		<Russian>Ìåæçâåçäíûé çîíä</Russian>
 		<Italian>Sonda interstellare</Italian>
+		<Polish>Sonda mi&#234;dzygwiazdowa</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_INTERSTELLAR_PROBE_PEDIA</Tag>
 		<English>An interstellar probe to explore nearby stars</English>
 		<Russian>Ìåæçâåçäíûé çîíä äëÿ èññëåäîâàíèÿ áëèæàéøèõ çâåçä</Russian>
+		<Polish>Sonda mi&#234;dzygwiazdowa do badania pobliskich gwiazd</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_INTERSTELLAR_REWARD</Tag>
@@ -2744,12 +3152,14 @@
 		<French>Retour de Mission (Interstellar)</French>
 		<Russian>Ýôôåêò (Ìåæçâåçä.)</Russian>
 		<Italian>Spazio interstellare (ricompensa missione)</Italian>
+		<Polish>Nagroda za misj&#234; (mi&#234;dzygwiezdn&#185;)</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_INTERSTELLAR_REWARD_PEDIA</Tag>
 		<English>A reward from exploring interstellar space</English>
 		<French>Une récompense de l'exploration de l'espace interstellaire space</French>
 		<Russian>Íàãðàäà îò èññëåäîâàíèÿ ìåæçâåçäíîãî ïðîñòðàíñòâà</Russian>
+		<Polish>Nagroda za eksploracj&#234; przestrzeni mi&#234;dzygwiezdnej</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_INTERSTELLAR_WORKER</Tag>
@@ -2757,12 +3167,14 @@
 		<French>Vaisseau-ouvrier Interstellaire</French>
 		<Russian>Ìåæçâåçäíûé èíæåíåð</Russian>
 		<Italian>Lavoratore interstellare</Italian>
+		<Polish>Mi&#234;dzygwiezdny rzemie&#156;lnik</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_INTERSTELLAR_WORKER_PEDIA</Tag>
 		<English>Worker in interstellar space</English>
 		<French>in interstellaire space Ouvrier</French>
 		<Russian>Ðàáî÷èé ìåæçâåçäíîãî ïðîñòðàíñòâà</Russian>
+		<Polish>Pracownik w przestrzeni mi&#234;dzygwiezdnej</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_INT_BATTLECRUISER</Tag>
@@ -2770,12 +3182,14 @@
 		<French>Croiseur Interstellaire</French>
 		<Russian>Çâåçäíûé êðåéñåð</Russian>
 		<Italian>Incrociatore da battaglia interstellare</Italian>
+		<Polish>Mi&#234;dzygwiezdny kr&#185;&#191;ownik liniowy</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_INT_BATTLECRUISER_PEDIA</Tag>
 		<English>An attack ship for interstellar space. Meant for invading colonies.</English>
 		<French>Un navire d'attaque pour l'espace interstellaire. Destiné à envahir les colonies.</French>
 		<Russian>Øòóðìîâîé êîðàáëü ìåæçâåçäíîãî ïðîñòðàíñòâà. Ïðåäíàçíà÷åí äëÿ âòîðæåíèÿ â êîëîíèè.</Russian>
+		<Polish>Statek szturmowy w przestrze&#241; mi&#234;dzygwiezdn&#185;. Przeznaczony do inwazji na kolonie.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_INT_INVADER</Tag>
@@ -2783,12 +3197,14 @@
 		<French>Envahisseur Interstellaire</French>
 		<Russian>Ìåæçâåçäíûé øòóðìîâèê</Russian>
 		<Italian>Invasore interstellare</Italian>
+		<Polish>Mi&#234;dzygwiezdny Naje&#159;d&#159;ca</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_INT_INVADER_PEDIA</Tag>
 		<English>An attack ship for interstellar space. Meant for invading colonies.</English>
 		<French>Un vaisseau d'attaque pour l'espace interstellaire. Destiné à envahir les colonies.</French>
 		<Russian>Îñíîâíîé áîåâîé êîðàáëü ìåæçâåçäíîãî ïðîñòðàíñòâà. Ïðåäíàçíà÷åí äëÿ âòîðæåíèÿ â êîëîíèè.</Russian>
+		<Polish>Statek szturmowy w przestrze&#241; mi&#234;dzygwiezdn&#185;. Przeznaczony do inwazji na kolonie.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_JUPITER_REWARD</Tag>
@@ -2796,12 +3212,14 @@
 		<French>Retour de Mission (Jupiter)</French>
 		<Russian>Ýôôåêò (Þïèòåð)</Russian>
 		<Italian>Giove (ricompensa missione)</Italian>
+		<Polish>Nagroda za misj&#234; (Jowisz)</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_JUPITER_REWARD_PEDIA</Tag>
 		<English>A reward for completing planetary exploration</English>
 		<French>Une récompense pour avoir terminé l'exploration planétaire</French>
 		<Russian>Íàãðàäà îò èññëåäîâàíèÿ âíåøíèõ ïëàíåò-ãèãàíòîâ</Russian>
+		<Polish>Nagroda za uko&#241;czenie eksploracji planet</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_KBO_REWARD</Tag>
@@ -2809,12 +3227,14 @@
 		<French>Retour de Mission (KBO)</French>
 		<Russian>Ýôôåêò (Ìàëûå ëóíû)</Russian>
 		<Italian>Fascia di Kuiper (ricompensa missione)</Italian>
+		<Polish>Nagroda za misj&#234; (KBO)</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_KBO_REWARD_PEDIA</Tag>
 		<English>A reward for completing planetary exploration</English>
 		<French>Une récompense pour avoir terminé l'exploration planétaire</French>
 		<Russian>Íàãðàäà îò èññëåäîâàíèÿ âíåøíèõ ïëàíåò-ãèãàíòîâ</Russian>
+		<Polish>Nagroda za uko&#241;czenie eksploracji planet</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_LIFE_SWARM</Tag>
@@ -2822,12 +3242,14 @@
 		<French>Essaim vivant</French>
 		<Russian>Ñåìÿ Æèçíè</Russian>
 		<Italian>Sciame vivente avanzato</Italian>
+		<Polish>R&#243;j &#175;ycia</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_LIFE_SWARM_PEDIA</Tag>
 		<English>A swarm of advanced life that can cross intergalactic voids.</English>
 		<French>Un essaim de vie avancée qui peut traverser des vides intergalactiques.</French>
 		<Russian>Ðîé ïðîäâèíóòûõ ôîðì æèçíè, êîòîðûé ìîæåò ïåðåñåêàòü ìåæãàëàêòè÷åñêèå ïóñòîòû.</Russian>
+		<Polish>R&#243;j zaawansowanego &#191;ycia, kt&#243;ry mo&#191;e przekracza&#230; mi&#234;dzygalaktyczne pr&#243;&#191;nie.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_LOE_REWARD</Tag>
@@ -2835,12 +3257,14 @@
 		<French>Retour de Mission (Orbite terrestre basse)</French>
 		<Russian>Äîáû÷à (íèçê. çåìí. îðáèòà)</Russian>
 		<Italian>Orbita terrestre bassa (ricompensa missione)</Italian>
+		<Polish>Nagroda za misj&#234; (niska orbita oko&#179;oziemska)</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_LOE_REWARD_PEDIA</Tag>
 		<English>A reward for completing orbital exploration</English>
 		<French>Une récompense pour avoir terminé l'exploration orbitale</French>
 		<Russian>Íàãðàäà çà çàâåðøåíèå èññëåäîâàíèÿ îðáèòû</Russian>
+		<Polish>Nagroda za uko&#241;czenie eksploracji orbity</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_LUNARSETTLER</Tag>
@@ -2848,12 +3272,14 @@
 		<French>Colon Lunaire</French>
 		<Russian>Ëóííûé êîëîíèñò</Russian>
 		<Italian>Colonizzatore lunare</Italian>
+		<Polish>Ksi&#234;&#191;ycowy Osadnik</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_LUNARSETTLER_HELP</Tag>
 		<English>[ICON_BULLET]Can build cities on the Moon.</English>
 		<Russian>[ICON_BULLET][COLOR_YELLOW]Ïîäñêàçêà: [COLOR_REVERT]Ìîæåò ñòðîèòü ãîðîäà íà ëóííîé ïîâåðõíîñòè</Russian>
 		<Italian>[ICON_BULLET]L'unità può [COLOR_HIGHLIGHT_TEXT]fondare città[COLOR_REVERT] sulla luna</Italian>
+		<Polish>[ICON_BULLET]Potrafi budowa&#230; miasta na Ksi&#234;&#191;ycu.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_LUNAR_BULLDOZER</Tag>
@@ -2861,10 +3287,12 @@
 		<French>Bulldozer lunaire</French>
 		<Russian>Ëóííûé êîìáàéí</Russian>
 		<Italian>Scavatore lunare</Italian>
+		<Polish>Buldo&#191;er ksi&#234;&#191;ycowy</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_LUNAR_BULLDOZER_PEDIA</Tag>
 		<English>Early lunar worker dedicated to resource extraction.</English>
+		<Polish>Wczesny pracownik ksi&#234;&#191;ycowy zajmuj&#185;cy si&#234; wydobywaniem zasob&#243;w.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_LUNAR_INFANTRY</Tag>
@@ -2872,12 +3300,14 @@
 		<French>Infanterie lunaire</French>
 		<Russian>Ëóííàÿ ïåõîòà</Russian>
 		<Italian>Fanteria lunare</Italian>
+		<Polish>Piechota Ksi&#234;&#191;ycowa</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_LUNAR_INFANTRY_PEDIA</Tag>
 		<English>Basic unit for lunar colonies.</English>
 		<French>Unité de base pour les colonies lunaires.</French>
 		<Russian>Îñíîâíîé ïåõîòíûé îòðÿä ëóííûõ êîëîíèé.</Russian>
+		<Polish>Podstawowa jednostka kolonii ksi&#234;&#191;ycowych.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_LUNAR_REWARD</Tag>
@@ -2885,12 +3315,14 @@
 		<French>Retour de Mission (Lunar)</French>
 		<Russian>Ýôôåêò (Ëóíà)</Russian>
 		<Italian>Superficie lunare (ricompensa missione)</Italian>
+		<Polish>Nagroda za misj&#234; (Ksi&#234;&#191;yc)</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_LUNAR_REWARD_PEDIA</Tag>
 		<English>A reward from exploring the Moon</English>
 		<French>Une récompense de l'exploration de la Lune</French>
 		<Russian>Íàãðàäà îò èññëåäîâàíèÿ Ëóíû</Russian>
+		<Polish>Nagroda za eksploracj&#234; Ksi&#234;&#191;yca</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_LUNAR_ROVER</Tag>
@@ -2913,6 +3345,7 @@
 		<French>Ouvrier Lunaire</French>
 		<Russian>Ëóííûé ðàáî÷èé</Russian>
 		<Italian>Lavoratore lunare</Italian>
+		<Polish>Pracownik ksi&#234;&#191;ycowy</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_MAGSAIL_WORKER</Tag>
@@ -2920,12 +3353,14 @@
 		<French>Ouvrier Magsail</French>
 		<Russian>Ìàãíèòíûé ïàðóñíèê</Russian>
 		<Italian>Lavoratore con vela magnetica</Italian>
+		<Polish>Pracownik Magsail&#179;a</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_MAGSAIL_WORKER_PEDIA</Tag>
 		<English>Better space worker.</English>
 		<French>Ouvrier spatial amélioré.</French>
 		<Russian>Áîëåå ïðîäâèíóòûé òèï êîñìè÷åñêîãî ðàáîòíèêà.</Russian>
+		<Polish>Lepszy pracownik kosmiczny.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_MARSSETTLER</Tag>
@@ -2933,6 +3368,7 @@
 		<French>Colon Martien</French>
 		<Russian>Ìàðñèàíñêèé êîëîíèñò</Russian>
 		<Italian>Colonizzatore marziano</Italian>
+		<Polish>Osadnik marsja&#241;ski</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_MARS_REWARD</Tag>
@@ -2940,12 +3376,14 @@
 		<French>Retour de Mission (Mars)</French>
 		<Russian>Ýôôåêò (Ìàðñ)</Russian>
 		<Italian>Marte (ricompensa missione)</Italian>
+		<Polish>Nagroda za misj&#234; (Mars)</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_MARS_REWARD_PEDIA</Tag>
 		<English>A reward for completing planetary exploration</English>
 		<French>Une récompense pour avoir terminé l'exploration planétaire</French>
 		<Russian>Íàãðàäà îò èññëåäîâàíèÿ äàëüíèõ ïëàíåò</Russian>
+		<Polish>Nagroda za uko&#241;czenie eksploracji planet</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_MARTIAN_INFANTRY</Tag>
@@ -2953,12 +3391,14 @@
 		<French>Infanterie Martienne</French>
 		<Russian>Ìàðñèàíñêàÿ ïåõîòà</Russian>
 		<Italian>Fanteria marziana</Italian>
+		<Polish>Piechota marsja&#241;ska</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_MARTIAN_INFANTRY_PEDIA</Tag>
 		<English>Basic unit for Martian colonies.</English>
 		<French>Unité de base pour les colonies martiennes.</French>
 		<Russian>Îñíîâíàÿ ïåõîòà äëÿ ìàðñèàíñêèõ êîëîíèé.</Russian>
+		<Polish>Podstawowa jednostka dla kolonii marsja&#241;skich.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_MARTIAN_WORKER</Tag>
@@ -2966,6 +3406,7 @@
 		<French>Ouvrier Martien</French>
 		<Russian>Ìàðñèàíñêèé ðàáî÷èé</Russian>
 		<Italian>Lavoratore marziano</Italian>
+		<Polish>Robotnik marsja&#241;ski</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_MERCURY_REWARD</Tag>
@@ -2973,12 +3414,14 @@
 		<French>Retour de Mission (Mercury)</French>
 		<Russian>Ýôôåêò (Ìåðêóðèé)</Russian>
 		<Italian>Mercurio (ricompensa missione)</Italian>
+		<Polish>Nagroda za misj&#234; (Merkury)</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_MERCURY_REWARD_PEDIA</Tag>
 		<English>A reward for completing planetary exploration</English>
 		<French>Une récompense pour avoir terminé l'exploration planétaire</French>
 		<Russian>Íàãðàäà îò èññëåäîâàíèÿ îáúåêòîâ ïîÿñà Êîéïåðà</Russian>
+		<Polish>Nagroda za uko&#241;czenie eksploracji planet</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_MULTIVERSE_REWARD</Tag>
@@ -2986,12 +3429,14 @@
 		<French>Retour de Mission (Multiverse)</French>
 		<Russian>Ýôôåêò (Âñåëåííàÿ)</Russian>
 		<Italian>Multiverso (ricompensa missione)</Italian>
+		<Polish>Nagroda za misj&#234; (wielo&#156;wiat)</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_MULTIVERSE_REWARD_PEDIA</Tag>
 		<English>A reward for completing planetary exploration</English>
 		<French>Une récompense pour avoir terminé l'exploration planétaire</French>
 		<Russian>Íàãðàäà îò èññëåäîâàíèÿ ýêçîïëàíåò</Russian>
+		<Polish>Nagroda za uko&#241;czenie eksploracji planet</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_NANOWORKER</Tag>
@@ -2999,12 +3444,14 @@
 		<French>Nano-ouvrier</French>
 		<Russian>Íàíîáîò</Russian>
 		<Italian>Nanolavoratore</Italian>
+		<Polish>Nanopracownik</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_NANOWORKER_PEDIA</Tag>
 		<English>Advanced worker. A swarm of solar-powered nanobots that can move freely throughout the Solar System.</English>
 		<French>Ouvrier avancé. Un essaim de nanobots à énergie solaire qui peuvent se déplacer librement dans tout le système solaire.</French>
 		<Russian>Ïðîäâèíóòûé ðàáîòíèê. Ðîé íàíîáîòîâ íà ñîëíå÷íîé ýíåðãèè, êîòîðûå ìîãóò ñâîáîäíî ïåðåìåùàòüñÿ ïî âñåé Ñîëíå÷íîé ñèñòåìå.</Russian>
+		<Polish>Zaawansowany pracownik. R&#243;j nanobot&#243;w zasilanych energi&#185; s&#179;oneczn&#185;, kt&#243;re mog&#185; swobodnie porusza&#230; si&#234; po ca&#179;ym Uk&#179;adzie S&#179;onecznym.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_NEPTUNE_REWARD</Tag>
@@ -3012,12 +3459,14 @@
 		<French>Retour de Mission (Neptune)</French>
 		<Russian>Ýôôåêò (Íåïòóí)</Russian>
 		<Italian>Nettuno (ricompensa missione)</Italian>
+		<Polish>Nagroda za misj&#234; (Neptun)</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_NEPTUNE_REWARD_PEDIA</Tag>
 		<English>A reward for completing planetary exploration</English>
 		<French>Une récompense pour avoir terminé l'exploration planétaire</French>
 		<Russian>Íàãðàäà îò èññëåäîâàíèÿ îáúåêòîâ Îáëàêà Îîðòà</Russian>
+		<Polish>Nagroda za uko&#241;czenie eksploracji planet</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_ONEILLSETTLER</Tag>
@@ -3025,6 +3474,7 @@
 		<French>Colon Espace lointain</French>
 		<Russian>Êîñìè÷åñêèé êîëîíèñò</Russian>
 		<Italian>Colonizzatore dello spazio profondo</Italian>
+		<Polish>Osadnik g&#179;&#234;bokiego kosmosu</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_ONEILLSETTLER_HELP</Tag>
@@ -3032,6 +3482,7 @@
 		<French>[ICON_BULLET]Peut construire les Villes dans le système solaire</French>
 		<Russian>[ICON_BULLET][COLOR_YELLOW]Ïîäñêàçêà: [COLOR_REVERT]Ìîæåò îñíîâàòü ãîðîä â ïðåäåëàõ Ñîëíå÷íîé ñèñòåìû</Russian>
 		<Italian>[ICON_BULLET]L'unità può [COLOR_HIGHLIGHT_TEXT]fondare città[COLOR_REVERT] nel sistema solare</Italian>
+		<Polish>[ICON_BULLET]Potrafi budowa&#230; miasta w Uk&#179;adzie S&#179;onecznym</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_OORT_CLOUD_REWARD</Tag>
@@ -3039,12 +3490,14 @@
 		<French>Retour de Mission (Oort Cloud)</French>
 		<Russian>Ýôôåêò (Îáëàêî Îîðòà)</Russian>
 		<Italian>Oggetto della nube di Oort (ricompensa missione)</Italian>
+		<Polish>Nagroda za misj&#234; (Chmura Oorta)</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_OORT_CLOUD_REWARD_PEDIA</Tag>
 		<English>A reward for completing planetary exploration</English>
 		<French>Une récompense pour avoir terminé l'exploration planétaire</French>
 		<Russian>Íàãðàäà îò èññëåäîâàíèÿ îáúåêòîâ äàëüíåãî êîñìîñà</Russian>
+		<Polish>Nagroda za uko&#241;czenie eksploracji planet</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_OUTER_SOLAR_SYSTEM_REWARD</Tag>
@@ -3052,12 +3505,14 @@
 		<French>Retour de Mission (Outer Solar System)</French>
 		<Russian>Ýôôåêò (Âíåø. ïëàíåòû)</Russian>
 		<Italian>Sistema solare esterno (ricompensa missione)</Italian>
+		<Polish>Nagroda za misj&#234; (zewn&#234;trzny uk&#179;ad s&#179;oneczny)</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_OUTER_SOLAR_SYSTEM_REWARD_PEDIA</Tag>
 		<English>A reward from exploring the outer Solar System</English>
 		<French>Une récompense de l'exploration deouter Solar System</French>
 		<Russian>Íàãðàäà îò èññëåäîâàíèÿ îêðàèí Ñîëíå÷íîé ñèñòåìû</Russian>
+		<Polish>Nagroda za eksploracj&#234; zewn&#234;trznego Uk&#179;adu S&#179;onecznego</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_PLANETARYSETTLER</Tag>
@@ -3065,6 +3520,7 @@
 		<French>Colon Planétaire</French>
 		<Russian>Ïëàíåòàðíûé êîëîíèñò</Russian>
 		<Italian>Colonizzatore planetario</Italian>
+		<Polish>Osadnik planetarny</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_PLANETARYSETTLER_HELP</Tag>
@@ -3072,6 +3528,7 @@
 		<French>[ICON_BULLET]Peut construire les Villes sur Mars et Vénus</French>
 		<Russian>[ICON_BULLET][COLOR_YELLOW]Ïîäñêàçêà: [COLOR_REVERT]Ìîæåò îñíîâàòü ãîðîä íà ìàðñèàíñêîé èëè âåíåðèàíñêîé ïîâåðõíîñòè</Russian>
 		<Italian>[ICON_BULLET]L'unità può [COLOR_HIGHLIGHT_TEXT]fondare città[COLOR_REVERT] su Marte e Venere</Italian>
+		<Polish>[ICON_BULLET]Potrafi budowa&#230; miasta na Marsie i Wenus</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_PLANETARY_INFANTRY</Tag>
@@ -3079,12 +3536,14 @@
 		<French>Infanterie planétaire</French>
 		<Russian>Êîñìîäåñàíòíèê</Russian>
 		<Italian>Fanteria planetaria</Italian>
+		<Polish>Piechota Planetarna</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_PLANETARY_INFANTRY_PEDIA</Tag>
 		<English>Basic unit for planetary colonies.</English>
 		<French>Unité de base pour les colonies planétaires.</French>
 		<Russian>Ñòàíäàðòíûé îòðÿä äëÿ äàëüíèõ êîëîíèé.</Russian>
+		<Polish>Podstawowa jednostka dla kolonii planetarnych.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_PLANET_PROBE</Tag>
@@ -3092,12 +3551,14 @@
 		<French>Sonde Interplanétaire</French>
 		<Russian>Ìåæïëàíåòíûé çîíä</Russian>
 		<Italian>Sonda interplanetaria</Italian>
+		<Polish>Sonda mi&#234;dzyplanetarna</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_PLANET_PROBE_PEDIA</Tag>
 		<English>An interplanetary probe to explore the Solar System</English>
 		<French>Une sonde interplanétaire pour explorer le système solaire</French>
 		<Russian>Ìåæïëàíåòíûé çîíä äëÿ èññëåäîâàíèÿ Ñîëíå÷íîé ñèñòåìû</Russian>
+		<Polish>Sonda mi&#234;dzyplanetarna do badania Uk&#179;adu S&#179;onecznego</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_POSTHUMAN_WORK_CREW</Tag>
@@ -3105,12 +3566,14 @@
 		<French>Equipage d'ouvriers Posthuman</French>
 		<Russian>Áðèãàäà ïîñòëþäåé</Russian>
 		<Italian>Squadra di lavoro postumana</Italian>
+		<Polish>Postludzka za&#179;oga pracownik&#243;w</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_POSTHUMAN_WORK_CREW_PEDIA</Tag>
 		<English>These brave workers go out into space.</English>
 		<French>Ces braves ouvriers sortent dans l'espace.</French>
 		<Russian>Ýòè õðàáðûå ðàáî÷èå âûõîäÿò â êîñìîñ.</Russian>
+		<Polish>Ci odwa&#191;ni pracownicy wyruszaj&#185; w kosmos.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_QUANTUM_PROBE</Tag>
@@ -3118,11 +3581,13 @@
 		<French>Sonde Quantum</French>
 		<Russian>Êâàíòîâûé çîíä</Russian>
 		<Italian>Sonda quantistica</Italian>
+		<Polish>Sonda kwantowa</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_QUANTUM_PROBE_PEDIA</Tag>
 		<English>The Quantum Probe uses quantum ramjet technology to break the boundaries of the observable universe.</English>
 		<Russian>Êâàíòîâûé çîíä èñïîëüçóåò òåõíîëîãèþ êâàíòîâîãî ÏÂÐÄ, ÷òîáû ïðåîäîëåòü ãðàíèöû íàáëþäàåìîé âñåëåííîé.</Russian>
+		<Polish>Sonda kwantowa wykorzystuje technologi&#234; kwantowego strumienia do przekraczania granic obserwowalnego wszech&#156;wiata.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SATELLITE</Tag>
@@ -3130,12 +3595,14 @@
 		<French>Satellite</French>
 		<Russian>Ñïóòíèê</Russian>
 		<Italian>Satellite</Italian>
+		<Polish>Satelita</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SATELLITE_PEDIA</Tag>
 		<English>This is a satellite, your first unit that can go into space.</English>
 		<French>Il s'agit d'un satellite, votre première unité qui peut aller dans l'espace.</French>
 		<Russian>Ñïóòíèê ÿâÿëåòñÿ âàøèì ñàìûì ïåðâûì þíèòîì â áëèæíåì êîñìîñå.</Russian>
+		<Polish>To satelita, Twoja pierwsza jednostka, kt&#243;ra mo&#191;e wyruszy&#230; w przestrze&#241; kosmiczn&#185;.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SATURN_REWARD</Tag>
@@ -3143,12 +3610,14 @@
 		<French>Retour de Mission (Saturn)</French>
 		<Russian>Ýôôåêò (Ñàòóðí)</Russian>
 		<Italian>Saturno (ricompensa missione)</Italian>
+		<Polish>Nagroda za misj&#234; (Saturn)</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SATURN_REWARD_PEDIA</Tag>
 		<English>A reward for completing planetary exploration</English>
 		<French>Une récompense pour avoir terminé l'exploration planétaire</French>
 		<Russian>Íàãðàäà îò èññëåäîâàíèÿ îáúåêòîâ â ãèïåðêîñìîñå</Russian>
+		<Polish>Nagroda za uko&#241;czenie eksploracji planet</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SEDNOID_REWARD</Tag>
@@ -3156,12 +3625,14 @@
 		<French>Retour de Mission (Sednoid)</French>
 		<Russian>Ýôôåêò (Ñåäíîèä)</Russian>
 		<Italian>Oggetto sednoide (ricompensa missione)</Italian>
+		<Polish>Nagroda za misj&#234; (Sednoid)</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SEDNOID_REWARD_PEDIA</Tag>
 		<English>A reward for completing planetary exploration</English>
 		<French>Une récompense pour avoir terminé l'exploration planétaire</French>
 		<Russian>Íàãðàäà îò èññëåäîâàíèÿ îáúåêòîâ ìóëüòèâñåëåííîé</Russian>
+		<Polish>Nagroda za uko&#241;czenie eksploracji planet</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SHAPESHIFTING_WORK_CREW</Tag>
@@ -3169,12 +3640,14 @@
 		<French>Equipage d'ouvriers Shapeshifting</French>
 		<Russian>Áðèãàäà ïîëèìîðôîâ</Russian>
 		<Italian>Squadra di lavoro di mutaforma</Italian>
+		<Polish>Zmieniaj&#185;ca kszta&#179;t za&#179;oga robocza</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SHAPESHIFTING_WORK_CREW_PEDIA</Tag>
 		<English>These brave workers go out into space.</English>
 		<French>Ces braves ouvriers sortent dans l'espace.</French>
 		<Russian>Ýòè õðàáðûå ðàáî÷èå âûõîäÿò â êîñìîñ.</Russian>
+		<Polish>Ci odwa&#191;ni pracownicy wyruszaj&#185; w kosmos.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SOLARSAIL_WORKER</Tag>
@@ -3182,12 +3655,14 @@
 		<French>Ouvrier Solar Sail</French>
 		<Russian>Ñîëíå÷íûé ïàðóñíèê</Russian>
 		<Italian>Lavoratore con vela solare</Italian>
+		<Polish>Pracownik &#191;agli s&#179;onecznych</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SOLARSAIL_WORKER_PEDIA</Tag>
 		<English>Earliest space worker.</English>
 		<French>Les premiers ouvriers spatiaux.</French>
 		<Russian>Ñàìûé ðàííèé ðàáîòíèê áëèæíåãî êîñìîñà.</Russian>
+		<Polish>Najwcze&#156;niejszy pracownik kosmiczny.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SOLAR_SYSTEM_LIFE_REWARD</Tag>
@@ -3195,12 +3670,14 @@
 		<French>Retour de Mission (Solar System Life)</French>
 		<Russian>Ýôôåêò (Ñîëí. ñèñòåìà)</Russian>
 		<Italian>Forma di vita del sistema solare (ricompensa missione)</Italian>
+		<Polish>Nagroda za misj&#234; (&#191;ycie w Uk&#179;adzie S&#179;onecznym)</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SOLAR_SYSTEM_LIFE_REWARD_PEDIA</Tag>
 		<English>A reward for completing planetary exploration</English>
 		<French>Une récompense pour avoir terminé l'exploration planétaire</French>
 		<Russian>Íàãðàäà îò èññëåäîâàíèÿ àðòåôàêòîâ ïîãèáøèõ êñåíîöèâèëèçàöèé</Russian>
+		<Polish>Nagroda za uko&#241;czenie eksploracji planet</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SOLAR_WORKER</Tag>
@@ -3208,11 +3685,13 @@
 		<French>Vaisseau-atelier Solaire</French>
 		<Russian>Ñîëíå÷íûé äðîí</Russian>
 		<Italian>Astronave da lavoro solare</Italian>
+		<Polish>Robotnik S&#179;oneczny</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SOLAR_WORKER_HELP</Tag>
 		<English>[ICON_BULLET]This unit can build routes on Orbit terrain enabling trade and resource flow between Earth and space colonies.</English>
 		<Italian>[ICON_BULLET]L'unità può [COLOR_HIGHLIGHT_TEXT]costruire percorsi[COLOR_REVERT] sulle caselle dell'orbita consentendo il [COLOR_HIGHLIGHT_TEXT]commercio[COLOR_REVERT] e il [COLOR_HIGHLIGHT_TEXT]flusso di risorse[COLOR_REVERT] tra la Terra e le colonie spaziali</Italian> <!-- unit Solar Workship -->
+		<Polish>[ICON_BULLET]Jednostka ta mo&#191;e budowa&#230; trasy na terenie orbity, umo&#191;liwiaj&#185;ce handel i przep&#179;yw zasob&#243;w pomi&#234;dzy koloniami ziemskimi i kosmicznymi.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SPACEUNIT_HELP</Tag>
@@ -3220,6 +3699,7 @@
 		<French>[ICON_BULLET]Bien que cette unité puisse être construite sur Terre, elle n'est utile qu'en dehors de la Terre.</French>
 		<Russian>[ICON_BULLET][COLOR_YELLOW]Ïîäñêàçêà: [COLOR_REVERT]Õîòÿ ýòî óñòðîéñòâî ìîæåò áûòü ïîñòðîåíî íà Çåìëå, õîòÿ ïîëåçíî òîëüêî çà åå ïðåäåëàìè.</Russian>
 		<Italian>[ICON_BULLET]L'unità può [COLOR_HIGHLIGHT_TEXT]essere costruita[COLOR_REVERT] sulla Terra ma è [COLOR_HIGHLIGHT_TEXT]utile[COLOR_REVERT] solo al di fuori di essa.[NEWLINE][ICON_BULLET]È necessario utilizzare una [COLOR_HIGHLIGHT_TEXT]mappa dello spazio[COLOR_REVERT] per poter utilizzare le unità spaziali</Italian> <!-- unit Lunar Rover -->
+		<Polish>[ICON_BULLET]Chocia&#191; t&#234; jednostk&#234; mo&#191;na zbudowa&#230; na Ziemi, jest ona u&#191;yteczna tylko poza Ziemi&#185;. [NEWLINE][COLOR_YELLOW]Aby u&#191;ywa&#230; jednostek kosmicznych, musisz gra&#230; w niestandardowym scenariuszu (Kosmiczne Mapy - ...)![COLOR_REVERT]</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SPACE_SHUTTLE</Tag>
@@ -3227,12 +3707,14 @@
 		<French>Navette Spatiale</French>
 		<Russian>Êîñìè÷åñêèé ÷åëíîê</Russian>
 		<Italian>Shuttle spaziale</Italian>
+		<Polish>Prom kosmiczny</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SPACE_SHUTTLE_PEDIA</Tag>
 		<English>This is a space shuttle. Its primary job is construction and resupply of your space stations.</English>
 		<French>Ceci est une navette spatiale. Son travail principal est la construction et le réapprovisionnement de vos stations spatiales.</French>
 		<Russian>Ýòî êîñìè÷åñêèé ÷åëíîê. Åãî îñíîâíàÿ ðàáîòà - ñòðîèòåëüñòâî è ñíàáæåíèå âàøèõ êîñìè÷åñêèõ ñòàíöèé.</Russian>
+		<Polish>To jest prom kosmiczny. Jego g&#179;&#243;wnym zadaniem jest budowa i zaopatrzanie stacji kosmicznych.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SPACE_WORK_CREW</Tag>
@@ -3240,12 +3722,14 @@
 		<French>Equipage d'ouvriers de l'espace</French>
 		<Russian>Áðèãàäà êîñìîðàáî÷èõ</Russian>
 		<Italian>Squadra di lavoro spaziale</Italian>
+		<Polish>Za&#179;oga Pracy Kosmicznej</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SPACE_WORK_CREW_PEDIA</Tag>
 		<English>These brave workers go out into space.</English>
 		<French>Ces braves ouvriers sortent dans l'espace.</French>
 		<Russian>Ýòè õðàáðûå ðàáî÷èå âûõîäÿò â êîñìîñ.</Russian>
+		<Polish>Ci odwa&#191;ni pracownicy wyruszaj&#185; w kosmos.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SS1_REWARD</Tag>
@@ -3253,12 +3737,14 @@
 		<French>Retour de Mission (Station spatiale Niv. 1)</French>
 		<Russian>Ýôôåêò (Óð. êîñì. ñòàíöèè. 1)</Russian>
 		<Italian>Stazione spaziale livello 1 (ricompensa missione)</Italian>
+		<Polish>Nagroda za misj&#234; (Stacja Kosmiczna poz. 1)</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SS1_REWARD_PEDIA</Tag>
 		<English>A reward from your Low Earth Orbit space station</English>
 		<French>Une récompense de votre station spatiale de basse orbite terrestre</French>
 		<Russian>Íàãðàäà îò âàøåé êîñìè÷åñêîé ñòàíöèè íà îêîëîçåìíîé îðáèòå</Russian>
+		<Polish>Nagroda ze stacji kosmicznej na niskiej orbicie oko&#179;oziemskiej</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SS2_REWARD</Tag>
@@ -3266,12 +3752,14 @@
 		<French>Retour de Mission (Station spatiale Niv. 2)</French>
 		<Russian>Ýôôåêò (Óð. êîñì. ñòàíöèè. 2)</Russian>
 		<Italian>Stazione spaziale livello 2 (ricompensa missione)</Italian>
+		<Polish>Nagroda za misj&#234; (Stacja Kosmiczna poz. 2)</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SS2_REWARD_PEDIA</Tag>
 		<English>A reward from your Low Earth Orbit space station</English>
 		<French>Une récompense de votre station spatiale de basse orbite terrestre</French>
 		<Russian>Íàãðàäà îò âàøåé êîñìè÷åñêîé ñòàíöèè íà îêîëîçåìíîé îðáèòå</Russian>
+		<Polish>Nagroda ze stacji kosmicznej na niskiej orbicie oko&#179;oziemskiej</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SS3_REWARD</Tag>
@@ -3279,12 +3767,14 @@
 		<French>Retour de Mission (Station spatiale Niv. 3)</French>
 		<Russian>Ýôôåêò (Óð. êîñì. ñòàíöèè. 3)</Russian>
 		<Italian>Stazione spaziale livello 3 (ricompensa missione)</Italian>
+		<Polish>Nagroda za misj&#234; (Stacja Kosmiczna poz. 3)</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SS3_REWARD_PEDIA</Tag>
 		<English>A reward from your Low Earth Orbit space station</English>
 		<French>Une récompense de votre station spatiale de basse orbite terrestre</French>
 		<Russian>Íàãðàäà îò âàøåé êîñìè÷åñêîé ñòàíöèè íà îêîëîçåìíîé îðáèòå</Russian>
+		<Polish>Nagroda ze stacji kosmicznej na niskiej orbicie oko&#179;oziemskiej</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_TITAN_REWARD</Tag>
@@ -3292,12 +3782,14 @@
 		<French>Retour de Mission (Titan)</French>
 		<Russian>Ýôôåêò (Òèòàí)</Russian>
 		<Italian>Titano (ricompensa missione)</Italian>
+		<Polish>Nagroda za misj&#234; (Tytan)</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_TITAN_REWARD_PEDIA</Tag>
 		<English>A reward for completing planetary exploration</English>
 		<French>Une récompense pour avoir terminé l'exploration planétaire</French>
 		<Russian>Íàãðàäà îò èññëåäîâàíèÿ äàëüíèõ ìèðîâ</Russian>
+		<Polish>Nagroda za uko&#241;czenie eksploracji planet</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_TRANSHUMAN_WORK_CREW</Tag>
@@ -3305,12 +3797,14 @@
 		<French>Equipage d'ouvriers Transhuman</French>
 		<Russian>Áðèãàäà òðàíñëþäåé</Russian>
 		<Italian>Squadra di lavoro transumana</Italian>
+		<Polish>Transhumaniczna za&#179;oga robocza</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_TRANSHUMAN_WORK_CREW_PEDIA</Tag>
 		<English>These brave workers go out into space.</English>
 		<French>Ces braves ouvriers sortent dans l'espace.</French>
 		<Russian>Ýòè õðàáðûå ðàáî÷èå âûõîäÿò â êîñìîñ.</Russian>
+		<Polish>Ci odwa&#191;ni pracownicy wyruszaj&#185; w kosmos.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_TRANSNEPTUNIAN_REWARD</Tag>
@@ -3318,12 +3812,14 @@
 		<French>Retour de Mission (Transneptunian)</French>
 		<Russian>Ýôôåêò (Òðàíñíåïòóí.)</Russian>
 		<Italian>Spazio transnettuniano (ricompensa missione)</Italian>
+		<Polish>Nagroda za misj&#234; (Transneptun)</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_TRANSNEPTUNIAN_REWARD_PEDIA</Tag>
 		<English>A reward from exploring Transneptunian space</English>
 		<French>Une récompense de l'exploration de l'espace Transneptunian space</French>
 		<Russian>Íàãðàäà îò èññëåäîâàíèÿ îáúåêòîâ çà îðáèòîé Íåïòóíà</Russian>
+		<Polish>Nagroda za eksploracj&#234; przestrzeni transneptunskiej</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_URANUS_REWARD</Tag>
@@ -3331,12 +3827,14 @@
 		<French>Retour de Mission (Uranus)</French>
 		<Russian>Ýôôåêò (Óðàí)</Russian>
 		<Italian>Urano (ricompensa missione)</Italian>
+		<Polish>Nagroda za misj&#234; (Uran)</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_URANUS_REWARD_PEDIA</Tag>
 		<English>A reward for completing planetary exploration</English>
 		<French>Une récompense pour avoir terminé l'exploration planétaire</French>
 		<Russian>Íàãðàäà îò èññëåäîâàíèÿ îáúåêòîâ äàëüíåãî êîñìîñà</Russian>
+		<Polish>Nagroda za uko&#241;czenie eksploracji planet</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_VENUS_INFANTRY</Tag>
@@ -3344,12 +3842,14 @@
 		<French>Infanterie de Vénus</French>
 		<Russian>Âåíåðèàíñêàÿ ïåõîòà</Russian>
 		<Italian>Fanteria di Venere</Italian>
+		<Polish>Piechota Wenus</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_VENUS_INFANTRY_PEDIA</Tag>
 		<English>Basic unit for Venus colonies.</English>
 		<French>Unité de base pour les colonies de Vénus.</French>
 		<Russian>Áàçîâûé îòðÿä äëÿ âåíåðèàíñêèõ êîëîíèé.</Russian>
+		<Polish>Podstawowa jednostka dla kolonii Wenus.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_VENUS_REWARD</Tag>
@@ -3357,12 +3857,14 @@
 		<French>Retour de Mission (Vénus)</French>
 		<Russian>Ýôôåêò (Âåíåðà)</Russian>
 		<Italian>Venere (ricompensa missione)</Italian>
+		<Polish>Nagroda za misj&#234; (Wenus)</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_VENUS_REWARD_PEDIA</Tag>
 		<English>A reward for completing planetary exploration</English>
 		<French>Une récompense pour avoir terminé l'exploration planétaire</French>
 		<Russian>Íàãðàäà îò èññëåäîâàíèÿ îáúåêòîâ äàëüíåãî êîñìîñà</Russian>
+		<Polish>Nagroda za uko&#241;czenie eksploracji planet</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_VENUS_SETTLER</Tag>
@@ -3370,6 +3872,7 @@
 		<French>Colon Vénus</French>
 		<Russian>Âåíåðèàíñêèé êîëîíèñò</Russian>
 		<Italian>Colonizzatore di Venere</Italian>
+		<Polish>Osadnik Wenus</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_VENUS_WORKER</Tag>
@@ -3377,6 +3880,7 @@
 		<French>Ouvrier Vénus</French>
 		<Russian>Âåíåðèàíñêèé ðàáî÷èé</Russian>
 		<Italian>Lavoratore di Venere</Italian>
+		<Polish>Pracownik Wenus</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_VON_NEUMANN_PROBE</Tag>
@@ -3384,12 +3888,14 @@
 		<French>Sonde Von Neumann</French>
 		<Russian>Çîíä Íåéìàíà</Russian>
 		<Italian>Sonda di Von Neumann</Italian>
+		<Polish>Sonda von Neumanna</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_VON_NEUMANN_PROBE_PEDIA</Tag>
 		<English>The Von Neumann probe is more advanced than the Bracewell probe. It can seed life and travel to nearby galaxies.</English>
 		<French>La sonde Von Neumann est plus avancée que la sonde Bracewell. Il peut semer la vie et voyager dans les galaxies voisines.</French>
 		<Russian>Çîíä ôîí Íåéìàíà áîëåå ïðîäâèíóò, ÷åì çîíä Áðåéñâåëëà. Îí ìîæåò ñåÿòü æèçíü è ïóòåøåñòâîâàòü â áëèçëåæàùèå ãàëàêòèêè.</Russian>
+		<Polish>Sonda Von Neumanna jest bardziej zaawansowana ni&#191; sonda Bracewella. Mo&#191;e zasia&#230; &#191;ycie i podr&#243;&#191;owa&#230; do pobliskich galaktyk.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_WARLORDVI</Tag>
@@ -3397,6 +3903,7 @@
 		<French>Général de l'espace</French>
 		<Russian>Ïîëêîâîäåö</Russian>
 		<Italian>Generale militare</Italian>
+		<Polish>Genera&#179; wata&#191;k&#243;w</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_WARLORDVII</Tag>
@@ -3404,6 +3911,7 @@
 		<French>Marschal spatial</French>
 		<Russian>Ìàðøàë</Russian>
 		<Italian>Colonnello militare supremo</Italian>
+		<Polish>Marsza&#179;ek Wojownika</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_WARLORDVIII</Tag>
@@ -3411,21 +3919,25 @@
 		<French>Suzerain Spatial</French>
 		<Russian>Ýêçàðõ</Russian>
 		<Italian>Comandante militare supremo</Italian>
+		<Polish>W&#179;adca Wojownik&#243;w</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_WARLORDVIIIS</Tag>
 		<English>Captured Overlord</English>
 		<Italian>Comandante militare supremo prigioniero</Italian>
+		<Polish>Schwytany W&#179;adca</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_WARLORDVIIS</Tag>
 		<English>Captured Marshal</English>
 		<Italian>Colonnello militare supremo prigioniero</Italian>
+		<Polish>Schwytany marsza&#179;ek</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_WARLORDVIS</Tag>
 		<English>Captured General</English>
 		<Italian>Generale militare prigioniero</Italian>
+		<Polish>Schwytany genera&#179;</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_WORLDSHIP</Tag>
@@ -3433,6 +3945,7 @@
 		<French>Vaisseau-monde</French>
 		<Russian>Ïåðåñåëåí÷. çâåçäîëåò</Russian>
 		<Italian>Astronave mondo</Italian>
+		<Polish>Statek-&#156;wiat</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_WORLDSHIP2</Tag>
@@ -3440,6 +3953,7 @@
 		<French>Vaisseau-Colonisateur Génétique</French>
 		<Russian>Êîðàáëü Ïîêîëåíèé</Russian>
 		<Italian>Astronave madre genetica</Italian>
+		<Polish>Statek zasiewu genetycznego</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_WORLDSHIP2_HELP</Tag>
@@ -3447,6 +3961,7 @@
 		<French>[ICON_BULLET]Peut construire les Villes dans le bras d'Orion et la Voie lactée</French>
 		<Russian>[ICON_BULLET][COLOR_YELLOW]Ïîäñêàçêà: [COLOR_REVERT]Ìîæåò ñòðîèòü ãîðîäà â ðóêàâå Îðèîíà â ãàëàêòèêå Ìëå÷íûé Ïóòü</Russian>
 		<Italian>[ICON_BULLET]L'unità può [COLOR_HIGHLIGHT_TEXT]fondare città[COLOR_REVERT] sul braccio di Orione e nella via lattea</Italian>
+		<Polish>[ICON_BULLET]Mo&#191;e budowa&#230; miasta w Ramieniu Oriona i Drodze Mlecznej</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_WORLDSHIP3</Tag>
@@ -3454,6 +3969,7 @@
 		<French>Vaisseau-Colonisateur Alcubierre</French>
 		<Russian>Çâåçäîëåò Àëüêóáüåððå</Russian>
 		<Italian>Astronave madre di Alcubierre</Italian>
+		<Polish>Statek siewny Alcubierre</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_WORLDSHIP3_HELP</Tag>
@@ -3461,6 +3977,7 @@
 		<French>[ICON_BULLET]Peut construire les Villes dans la Voie lactée, et tout l'Univers</French>
 		<Russian>[ICON_BULLET][COLOR_YELLOW]Ïîäñêàçêà: [COLOR_REVERT]Ìîæåò ñòðîèòü ãîðîäà â îñòàëüíîé ÷àñòè Ìëå÷íîãî Ïóòè è ïðî÷èõ ãàëàêòèêàõ</Russian>
 		<Italian>[ICON_BULLET]L'unità può [COLOR_HIGHLIGHT_TEXT]fondare città[COLOR_REVERT] nella via lattea e nell'universo</Italian>
+		<Polish>[ICON_BULLET]Mo&#191;e budowa&#230; miasta w Drodze Mlecznej i Wszech&#156;wiecie</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_WORLDSHIP4</Tag>
@@ -3468,6 +3985,7 @@
 		<French>Vaisseau-Colonisateur Quantique</French>
 		<Russian>Êâàíòîâûé êîðàáëü</Russian>
 		<Italian>Astronave madre quantistica</Italian>
+		<Polish>Kwantowy statek siewny</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_WORLDSHIP4_HELP</Tag>
@@ -3475,6 +3993,7 @@
 		<French>[ICON_BULLET]Peut construire les Villes dans l'Univers, et plus loin</French>
 		<Russian>[ICON_BULLET][COLOR_YELLOW]Ïîäñêàçêà: [COLOR_REVERT]Ìîæíî ñòðîèòü ãîðîäà â ëþáîì ñåêòîðå Âñåëåííîé è çà åå ïðåäåëàìè</Russian>
 		<Italian>[ICON_BULLET]L'unità può [COLOR_HIGHLIGHT_TEXT]fondare città[COLOR_REVERT] nell'universo e oltre</Italian>
+		<Polish>[ICON_BULLET]Mo&#191;e budowa&#230; miasta we wszech&#156;wiecie i poza nim</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_WORLDSHIP_DEFENDER</Tag>
@@ -3482,12 +4001,14 @@
 		<French>Vaisseau-monde de Défense</French>
 		<Russian>Çâåçäíûé ïàòðóëü</Russian>
 		<Italian>Astronave mondo di difesa</Italian>
+		<Polish>Obro&#241;ca Statku-&#156;wiata</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_WORLDSHIP_DEFENDER_PEDIA</Tag>
 		<English>Basic defender for worldship colonies.</English>
 		<French>Défenseur de base pour les colonies du Vaisseau-Monde.</French>
 		<Russian>Îñíîâíîé çàùèòíûé îòðÿä äàëüíèõ êîëîíèé.</Russian>
+		<Polish>Podstawowy obro&#241;ca kolonii &#156;wiatowych.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_WORLDSHIP_HELP</Tag>
@@ -3495,5 +4016,6 @@
 		<French>[ICON_BULLET]Peut construire les Villes dans le nuage d'Oort, et l'espace transtellaire</French>
 		<Russian>[ICON_BULLET][COLOR_YELLOW]Ïîäñêàçêà: [COLOR_REVERT]Ìîæåò ñòðîèòü ãîðîäà â Îáëàêå Îîðòà è ìåæçâåçäíîì ïðîñòðàíñòâå</Russian>
 		<Italian>[ICON_BULLET]L'unità può [COLOR_HIGHLIGHT_TEXT]fondare città[COLOR_REVERT] nello spazio transtellare e sulle caselle delle stelle</Italian>
+		<Polish>[ICON_BULLET]Mo&#191;e budowa&#230; miasta w przestrzeni mi&#234;dzygwiezdnej i na terenach gwiezdnych.[NEWLINE] Kolonie mi&#234;dzygwiezdne i gwiezdne s&#185; zupe&#179;nie inne.</Polish>
 	</TEXT>
 </Civ4GameText>
