@@ -7733,6 +7733,7 @@
 				<TerrainType>TERRAIN_TRENCH</TerrainType>
 				<TerrainType>TERRAIN_TRENCH_POLAR</TerrainType>
 				<TerrainType>TERRAIN_TRENCH_TROPICAL</TerrainType>
+				<TerrainType>TERRAIN_PEAK</TerrainType>
 			</TerrainImpassableTypes>
 			<iCombat>1</iCombat>
 			<iAggression>1</iAggression>
@@ -7847,6 +7848,7 @@
 				<TerrainType>TERRAIN_TRENCH</TerrainType>
 				<TerrainType>TERRAIN_TRENCH_POLAR</TerrainType>
 				<TerrainType>TERRAIN_TRENCH_TROPICAL</TerrainType>
+				<TerrainType>TERRAIN_PEAK</TerrainType>
 			</TerrainImpassableTypes>
 			<iCombat>1</iCombat>
 			<iAggression>1</iAggression>
@@ -8751,6 +8753,7 @@
 				<TerrainType>TERRAIN_SEA_TROPICAL</TerrainType>
 				<TerrainType>TERRAIN_TAIGA</TerrainType>
 				<TerrainType>TERRAIN_TUNDRA</TerrainType>
+				<TerrainType>TERRAIN_PEAK</TerrainType>
 			</TerrainImpassableTypes>
 			<iCombat>1</iCombat>
 			<iAggression>0</iAggression>
@@ -11417,6 +11420,7 @@
 				<TerrainType>TERRAIN_TRENCH</TerrainType>
 				<TerrainType>TERRAIN_TRENCH_POLAR</TerrainType>
 				<TerrainType>TERRAIN_TRENCH_TROPICAL</TerrainType>
+				<TerrainType>TERRAIN_PEAK</TerrainType>
 			</TerrainImpassableTypes>
 			<iCombat>1</iCombat>
 			<iAggression>0</iAggression>
@@ -11540,6 +11544,7 @@
 				<TerrainType>TERRAIN_TRENCH_POLAR</TerrainType>
 				<TerrainType>TERRAIN_TRENCH_TROPICAL</TerrainType>
 				<TerrainType>TERRAIN_TUNDRA</TerrainType>
+				<TerrainType>TERRAIN_PEAK</TerrainType>
 			</TerrainImpassableTypes>
 			<iCombat>2</iCombat>
 			<iAggression>3</iAggression>
@@ -11854,6 +11859,7 @@
 				<TerrainType>TERRAIN_TRENCH_POLAR</TerrainType>
 				<TerrainType>TERRAIN_TRENCH_TROPICAL</TerrainType>
 				<TerrainType>TERRAIN_TUNDRA</TerrainType>
+				<TerrainType>TERRAIN_PEAK</TerrainType>
 			</TerrainImpassableTypes>
 			<iCombat>1</iCombat>
 			<iAggression>0</iAggression>
@@ -11987,6 +11993,7 @@
 				<TerrainType>TERRAIN_TRENCH</TerrainType>
 				<TerrainType>TERRAIN_TRENCH_POLAR</TerrainType>
 				<TerrainType>TERRAIN_TRENCH_TROPICAL</TerrainType>
+				<TerrainType>TERRAIN_PEAK</TerrainType>
 			</TerrainImpassableTypes>
 			<iCombat>1</iCombat>
 			<iAggression>0</iAggression>
@@ -12460,6 +12467,7 @@
 				<TerrainType>TERRAIN_SEA_DEEP_TROPICAL</TerrainType>
 				<TerrainType>TERRAIN_SEA_POLAR</TerrainType>
 				<TerrainType>TERRAIN_SEA_TROPICAL</TerrainType>
+				<TerrainType>TERRAIN_PEAK</TerrainType>
 			</TerrainImpassableTypes>
 			<iCombat>1</iCombat>
 			<iAggression>3</iAggression>
@@ -14150,6 +14158,7 @@
 				<TerrainType>TERRAIN_SEA_TROPICAL</TerrainType>
 				<TerrainType>TERRAIN_TAIGA</TerrainType>
 				<TerrainType>TERRAIN_TUNDRA</TerrainType>
+				<TerrainType>TERRAIN_PEAK</TerrainType>
 			</TerrainImpassableTypes>
 			<iCombat>1</iCombat>
 			<iAggression>0</iAggression>
@@ -14951,6 +14960,7 @@
 				<TerrainType>TERRAIN_SEA_DEEP_TROPICAL</TerrainType>
 				<TerrainType>TERRAIN_SEA_POLAR</TerrainType>
 				<TerrainType>TERRAIN_SEA_TROPICAL</TerrainType>
+				<TerrainType>TERRAIN_PEAK</TerrainType>
 			</TerrainImpassableTypes>
 			<iCombat>1</iCombat>
 			<iAggression>0</iAggression>
@@ -16428,6 +16438,7 @@
 				<TerrainType>TERRAIN_SALT_FLATS</TerrainType>
 				<TerrainType>TERRAIN_TAIGA</TerrainType>
 				<TerrainType>TERRAIN_TUNDRA</TerrainType>
+				<TerrainType>TERRAIN_PEAK</TerrainType>
 			</TerrainImpassableTypes>
 			<FeatureImpassableTypes>
 				<FeatureType>FEATURE_JUNGLE</FeatureType>
@@ -18288,6 +18299,7 @@
 				<TerrainType>TERRAIN_SEA_TROPICAL</TerrainType>
 				<TerrainType>TERRAIN_TAIGA</TerrainType>
 				<TerrainType>TERRAIN_TUNDRA</TerrainType>
+				<TerrainType>TERRAIN_PEAK</TerrainType>
 			</TerrainImpassableTypes>
 			<FeatureImpassableTypes>
 				<FeatureType>FEATURE_JUNGLE</FeatureType>
@@ -18650,6 +18662,7 @@
 				<TerrainType>TERRAIN_SALT_FLATS</TerrainType>
 				<TerrainType>TERRAIN_TAIGA</TerrainType>
 				<TerrainType>TERRAIN_TUNDRA</TerrainType>
+				<TerrainType>TERRAIN_PEAK</TerrainType>
 			</TerrainImpassableTypes>
 			<iCombat>1</iCombat>
 			<iAggression>0</iAggression>
@@ -19199,6 +19212,7 @@
 				<TerrainType>TERRAIN_DUNES</TerrainType>
 				<TerrainType>TERRAIN_ICE</TerrainType>
 				<TerrainType>TERRAIN_SALT_FLATS</TerrainType>
+				<TerrainType>TERRAIN_PEAK</TerrainType>
 			</TerrainImpassableTypes>
 			<iCombat>1</iCombat>
 			<iAggression>0</iAggression>
@@ -20572,6 +20586,7 @@
 				<TerrainType>TERRAIN_SALT_FLATS</TerrainType>
 				<TerrainType>TERRAIN_TAIGA</TerrainType>
 				<TerrainType>TERRAIN_TUNDRA</TerrainType>
+				<TerrainType>TERRAIN_PEAK</TerrainType>
 			</TerrainImpassableTypes>
 			<iCombat>1</iCombat>
 			<iAggression>3</iAggression>
@@ -20832,6 +20847,7 @@
 				<TerrainType>TERRAIN_TRENCH</TerrainType>
 				<TerrainType>TERRAIN_TRENCH_POLAR</TerrainType>
 				<TerrainType>TERRAIN_TRENCH_TROPICAL</TerrainType>
+				<TerrainType>TERRAIN_PEAK</TerrainType>
 			</TerrainImpassableTypes>
 			<FeatureImpassableTypes>
 				<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
@@ -21229,6 +21245,7 @@
 				<TerrainType>TERRAIN_SALT_FLATS</TerrainType>
 				<TerrainType>TERRAIN_TAIGA</TerrainType>
 				<TerrainType>TERRAIN_TUNDRA</TerrainType>
+				<TerrainType>TERRAIN_PEAK</TerrainType>
 			</TerrainImpassableTypes>
 			<FeatureImpassableTypes>
 				<FeatureType>FEATURE_JUNGLE</FeatureType>
@@ -22452,6 +22469,7 @@
 				<TerrainType>TERRAIN_BADLAND</TerrainType>
 				<TerrainType>TERRAIN_SALT_FLATS</TerrainType>
 				<TerrainType>TERRAIN_SCRUB</TerrainType>
+				<TerrainType>TERRAIN_PEAK</TerrainType>
 			</TerrainImpassableTypes>
 			<FeatureImpassableTypes>
 				<FeatureType>FEATURE_BAMBOO</FeatureType>
@@ -23209,6 +23227,7 @@
 				<TerrainType>TERRAIN_SEA_TROPICAL</TerrainType>
 				<TerrainType>TERRAIN_TAIGA</TerrainType>
 				<TerrainType>TERRAIN_TUNDRA</TerrainType>
+				<TerrainType>TERRAIN_PEAK</TerrainType>
 			</TerrainImpassableTypes>
 			<iCombat>1</iCombat>
 			<iAggression>1</iAggression>
@@ -24035,6 +24054,7 @@
 				<TerrainType>TERRAIN_SEA_TROPICAL</TerrainType>
 				<TerrainType>TERRAIN_TAIGA</TerrainType>
 				<TerrainType>TERRAIN_TUNDRA</TerrainType>
+				<TerrainType>TERRAIN_PEAK</TerrainType>
 			</TerrainImpassableTypes>
 			<FeatureImpassableTypes>
 				<FeatureType>FEATURE_JUNGLE</FeatureType>
@@ -26344,6 +26364,7 @@
 				<TerrainType>TERRAIN_TRENCH</TerrainType>
 				<TerrainType>TERRAIN_TRENCH_POLAR</TerrainType>
 				<TerrainType>TERRAIN_TRENCH_TROPICAL</TerrainType>
+				<TerrainType>TERRAIN_PEAK</TerrainType>
 			</TerrainImpassableTypes>
 			<iCombat>1</iCombat>
 			<iAggression>0</iAggression>
@@ -26622,6 +26643,7 @@
 				<TerrainType>TERRAIN_SEA_DEEP_TROPICAL</TerrainType>
 				<TerrainType>TERRAIN_SEA_POLAR</TerrainType>
 				<TerrainType>TERRAIN_SEA_TROPICAL</TerrainType>
+				<TerrainType>TERRAIN_PEAK</TerrainType>
 			</TerrainImpassableTypes>
 			<iCombat>1</iCombat>
 			<iAggression>0</iAggression>
@@ -27327,6 +27349,7 @@
 				<TerrainType>TERRAIN_TRENCH_POLAR</TerrainType>
 				<TerrainType>TERRAIN_TRENCH_TROPICAL</TerrainType>
 				<TerrainType>TERRAIN_TUNDRA</TerrainType>
+				<TerrainType>TERRAIN_PEAK</TerrainType>
 			</TerrainImpassableTypes>
 			<FeatureImpassableTypes>
 				<FeatureType>FEATURE_JUNGLE</FeatureType>
