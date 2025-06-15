@@ -364,10 +364,12 @@ Using both <iGlobalTurns> and <iTurns> will not yield predictable results:
 			<!--			<iMinLongitude>-60</iMinLongitude>-->
 			<!--			<iMaxLongitude>60</iMaxLongitude>-->
 			<TerrainTypes>
-				<TerrainType>TERRAIN_SAVANNA</TerrainType>
 				<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 				<TerrainType>TERRAIN_SCRUB</TerrainType>
 			</TerrainTypes>
+			<FeatureTypes>
+				<FeatureType>FEATURE_SAVANNA</FeatureType>
+			</FeatureTypes>
 		</SpawnInfo>
 		<SpawnInfo>
 			<Type>SPAWN_COW_BONUS</Type>
@@ -396,9 +398,11 @@ Using both <iGlobalTurns> and <iTurns> will not yield predictable results:
 			<TerrainTypes>
 				<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 				<TerrainType>TERRAIN_PLAINS</TerrainType>
-				<TerrainType>TERRAIN_SAVANNA</TerrainType>
 				<TerrainType>TERRAIN_SCRUB</TerrainType>
 			</TerrainTypes>
+			<FeatureTypes>
+				<FeatureType>FEATURE_SAVANNA</FeatureType>
+			</FeatureTypes>
 		</SpawnInfo>
 		<SpawnInfo>
 			<Type>SPAWN_DEER_BONUS</Type>
@@ -508,13 +512,13 @@ Using both <iGlobalTurns> and <iTurns> will not yield predictable results:
 			<!--			<iMinLatitude>0</iMinLatitude>-->
 			<!--			<iMaxLongitude>60</iMaxLongitude>-->
 			<TerrainTypes>
-				<TerrainType>TERRAIN_SAVANNA</TerrainType>
 				<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 				<TerrainType>TERRAIN_SCRUB</TerrainType>
 				<TerrainType>TERRAIN_LUSH</TerrainType>
 			</TerrainTypes>
 			<FeatureTypes>
 				<FeatureType>FEATURE_JUNGLE</FeatureType>
+				<FeatureType>FEATURE_SAVANNA</FeatureType>
 				<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
 				<FeatureType>FEATURE_FLOOD_PLAINS</FeatureType>
 			</FeatureTypes>
@@ -1427,8 +1431,8 @@ Using both <iGlobalTurns> and <iTurns> will not yield predictable results:
 			<!--			<iMaxLongitude>-125</iMaxLongitude>-->
 			<FeatureTypes>
 				<FeatureType>FEATURE_FOREST</FeatureType>
-				<FeatureType>FEATURE_SWAMP </FeatureType>
-				<FeatureType>FEATURE_FLOOD_PLAINS </FeatureType>
+				<FeatureType>FEATURE_SWAMP</FeatureType>
+				<FeatureType>FEATURE_FLOOD_PLAINS</FeatureType>
 			</FeatureTypes>
 			<TerrainTypes>
 				<TerrainType>TERRAIN_TUNDRA</TerrainType>
@@ -1860,11 +1864,9 @@ Using both <iGlobalTurns> and <iTurns> will not yield predictable results:
 			<!--			<bLatitudeAbs>0</bLatitudeAbs>-->
 			<!--			<iMinLatitude>40</iMinLatitude>-->
 			<rateOverrideDefineName>ANIMAL_SPAWN_MODIFIER</rateOverrideDefineName>
-			<FeatureTypes>
-				<FeatureType>FEATURE_SCRUB</FeatureType>
-			</FeatureTypes>
 			<TerrainTypes>
 				<TerrainType>TERRAIN_TAIGA</TerrainType>
+				<TerrainType>TERRAIN_SCRUB</TerrainType>
 				<TerrainType>TERRAIN_TUNDRA</TerrainType>
 				<TerrainType>TERRAIN_PERMAFROST</TerrainType>
 			</TerrainTypes>
@@ -1930,7 +1932,7 @@ Using both <iGlobalTurns> and <iTurns> will not yield predictable results:
 			<FeatureTypes>
 				<FeatureType>FEATURE_FOREST</FeatureType>
 				<FeatureType>FEATURE_SAVANNA</FeatureType>
-				<FeatureType>FEATURE_FOREST_ANCIENT </FeatureType>
+				<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
 			</FeatureTypes>
 			<FeatureTerrainTypes>
 				<TerrainType>TERRAIN_PLAINS</TerrainType>
@@ -2365,7 +2367,7 @@ Using both <iGlobalTurns> and <iTurns> will not yield predictable results:
 			<!--			<iMaxLongitude>60</iMaxLongitude>-->
 			<rateOverrideDefineName>ANIMAL_SPAWN_MODIFIER</rateOverrideDefineName>
 			<BonusTypes>
-				<BonusType>BONUS_ELEPHANT</BonusType>
+				<BonusType>BONUS_ELEPHANTS</BonusType>
 			</BonusTypes>
 		</SpawnInfo>
 		<SpawnInfo>
@@ -2500,8 +2502,10 @@ Using both <iGlobalTurns> and <iTurns> will not yield predictable results:
 			<FeatureTypes>
 				<FeatureType>FEATURE_FOREST</FeatureType>
 				<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
-				<FeatureType>FEATURE_SCRUB</FeatureType>
 			</FeatureTypes>
+			<TerrainTypes>
+				<TerrainType>TERRAIN_SCRUB</TerrainType>
+			</TerrainTypes>
 		</SpawnInfo>
 		<SpawnInfo>
 			<Type>SPAWN_WALRUS_NATIVE</Type>
@@ -2579,7 +2583,7 @@ Using both <iGlobalTurns> and <iTurns> will not yield predictable results:
 			<!--			<iMinLongitude>-60</iMinLongitude>-->
 			<!--			<iMaxLongitude>60</iMaxLongitude>-->
 			<BonusTypes>
-				<BonusType>BONUS_ELEPHANT</BonusType>
+				<BonusType>BONUS_ELEPHANTS</BonusType>
 			</BonusTypes>
 			<FeatureTypes>
 				<FeatureType>FEATURE_SAVANNA</FeatureType>
@@ -3325,10 +3329,10 @@ Using both <iGlobalTurns> and <iTurns> will not yield predictable results:
 				<TerrainType>TERRAIN_PLAINS</TerrainType>
 				<TerrainType>TERRAIN_SCRUB</TerrainType>
 				<TerrainType>TERRAIN_DESERT</TerrainType>
+				<TerrainType>TERRAIN_SCRUB</TerrainType>
 			</TerrainTypes>
 			<FeatureTypes>
-				<FeatureType>FEATURE_SCRUB</FeatureType>
-				<FeatureType>FEATURE_FEATURE_VERY_TALL_GRASS</FeatureType>
+				<FeatureType>FEATURE_VERY_TALL_GRASS</FeatureType>
 			</FeatureTypes>
 		</SpawnInfo>
 		<SpawnInfo>
@@ -3395,8 +3399,10 @@ Using both <iGlobalTurns> and <iTurns> will not yield predictable results:
 				<TerrainType>TERRAIN_SCRUB</TerrainType>
 				<TerrainType>TERRAIN_ROCKY</TerrainType>
 				<TerrainType>TERRAIN_TAIGA</TerrainType>
-				<TerrainType>TERRAIN_FOREST</TerrainType>
 			</TerrainTypes>
+			<FeatureTypes>
+				<FeatureType>FEATURE_FOREST</FeatureType>
+			</FeatureTypes>
 		</SpawnInfo>
 		<SpawnInfo>
 			<Type>SPAWN_FENNECFOX_NATIVE</Type>
@@ -3465,10 +3471,10 @@ Using both <iGlobalTurns> and <iTurns> will not yield predictable results:
 			<!--			<iMaxLongitude>160</iMaxLongitude>-->
 			<FeatureTypes>
 				<FeatureType>FEATURE_FOREST</FeatureType>
-				<FeatureType>FEATURE_SCRUB</FeatureType>
 			</FeatureTypes>
 			<TerrainTypes>
 				<TerrainType>TERRAIN_LUSH</TerrainType>
+				<TerrainType>TERRAIN_SCRUB</TerrainType>
 				<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 				<TerrainType>TERRAIN_PLAINS</TerrainType>
 				<TerrainType>TERRAIN_ROCKY</TerrainType>
@@ -3492,10 +3498,10 @@ Using both <iGlobalTurns> and <iTurns> will not yield predictable results:
 			<!--			<iMaxLongitude>160</iMaxLongitude>-->
 			<FeatureTypes>
 				<FeatureType>FEATURE_FOREST</FeatureType>
-				<FeatureType>FEATURE_SCRUB</FeatureType>
 			</FeatureTypes>
 			<TerrainTypes>
 				<TerrainType>TERRAIN_MUDDY</TerrainType>
+				<TerrainType>TERRAIN_SCRUB</TerrainType>
 				<TerrainType>TERRAIN_LUSH</TerrainType>
 				<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 				<TerrainType>TERRAIN_PLAINS</TerrainType>
@@ -3539,10 +3545,12 @@ Using both <iGlobalTurns> and <iTurns> will not yield predictable results:
 			<!--			<iMinLatitude>20</iMinLatitude>-->
 			<!--			<iMaxLatitude>70</iMaxLatitude>-->
 			<TerrainTypes>
-				<TerrainType>TERRAIN_FOREST</TerrainType>
 				<TerrainType>TERRAIN_TAIGA</TerrainType>
 				<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 			</TerrainTypes>
+			<FeatureTypes>
+				<FeatureType>FEATURE_FOREST</FeatureType>
+			</FeatureTypes>
 		</SpawnInfo>
 		<SpawnInfo>
 			<Type>SPAWN_WOLF_PACK</Type>
@@ -3912,10 +3920,10 @@ Using both <iGlobalTurns> and <iTurns> will not yield predictable results:
 			<TerrainTypes>
 				<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 				<TerrainType>TERRAIN_PLAINS</TerrainType>
+				<TerrainType>TERRAIN_SCRUB</TerrainType>
 			</TerrainTypes>
 			<FeatureTypes>
 				<FeatureType>FEATURE_FOREST</FeatureType>
-				<FeatureType>FEATURE_SCRUB</FeatureType>
 			</FeatureTypes>
 		</SpawnInfo>
 		<SpawnInfo>
@@ -4281,7 +4289,6 @@ Using both <iGlobalTurns> and <iTurns> will not yield predictable results:
 			<rateOverrideDefineName>ANIMAL_SPAWN_MODIFIER</rateOverrideDefineName>
 			<FeatureTypes>
 				<FeatureType>FEATURE_FOREST</FeatureType>
-				<FeatureType>FEATURE_TAIGA</FeatureType>
 			</FeatureTypes>
 			<FeatureTerrainTypes>
 				<TerrainType>TERRAIN_PLAINS</TerrainType>
@@ -4750,7 +4757,7 @@ Using both <iGlobalTurns> and <iTurns> will not yield predictable results:
 			<TerrainTypes>
 				<TerrainType>TERRAIN_TAIGA</TerrainType>
 				<TerrainType>TERRAIN_TUNDRA</TerrainType>
-				<TerrainType>TERRAIN_GRASS</TerrainType>
+				<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 				<TerrainType>TERRAIN_PLAINS</TerrainType>
 			</TerrainTypes>
 		</SpawnInfo>
@@ -4806,7 +4813,7 @@ Using both <iGlobalTurns> and <iTurns> will not yield predictable results:
 			<TerrainTypes>
 				<TerrainType>TERRAIN_LUSH</TerrainType>
 				<TerrainType>TERRAIN_MUDDY</TerrainType>
-				<TerrainType>TERRAIN_NARSH</TerrainType>
+				<TerrainType>TERRAIN_MARSH</TerrainType>
 			</TerrainTypes>
 		</SpawnInfo>
 		<SpawnInfo>
