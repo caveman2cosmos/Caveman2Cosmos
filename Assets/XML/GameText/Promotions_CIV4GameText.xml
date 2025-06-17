@@ -2,7 +2,7 @@
 <Civ4GameText xmlns="http://www.firaxis.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.firaxis.com ../Schema/Civ4Gametext.xsd">
 	<TEXT>
 		<Tag>TXT_KEY_PROMOHELP_CHANGE_NOT_SPECIAL_CARGO</Tag>
-		<English>[NEWLINE][ICON_BULLET]Does not allow transport of %s1 Units</English>
+		<English>[NEWLINE][ICON_BULLET]Does not allow transport of %s1 Units.</English>
 		<French>[NEWLINE][ICON_BULLET]Ne permet pas le transport de %s1 Unités</French>
 		<Polish>[NEWLINE][ICON_BULLET]Nie pozwala na transport %s1</Polish>
 		<Russian>[NEWLINE][ICON_BULLET]Не способен перевозить %s1 юнитов</Russian>
@@ -15,14 +15,14 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOHELP_INVISIBILITY_NEGATES_VEIL</Tag>
-		<English>[ICON_BULLET]Negates %F1_Invisible Veil</English>
+		<English>[ICON_BULLET]Negates %F1_Invisible Veil.</English>
 		<French>[ICON_BULLET]Invisibilité (%F1_Invisible): Désactivé.</French>
 		<German>[ICON_BULLET]Unsichtbarkeit (%F1_Invisible): aufgehoben</German>
 		<Russian>[ICON_BULLET]Обнаруживает %F1_Invisible</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOHELP_INVISIBILITY_SPOT_CHANGE</Tag>
-		<English>[ICON_BULLET]%D1_Mod %F2_Icon Spot</English>
+		<English>[ICON_BULLET]%D1_Mod %F2_Icon Spot.</English>
 		<French>[ICON_BULLET]%D1_Mod de Gain de Visibilité (%F2_Icon)</French>
 		<German>[ICON_BULLET]%D1_Mod %F2_Icon-Sicht</German>
 	</TEXT>
@@ -42,21 +42,21 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOHELP_INVISIBILITY_SPOT_RANGE_CHANGE</Tag>
-		<English>[ICON_BULLET]%D1_Mod %F2_Icon Spot Range</English>
+		<English>[ICON_BULLET]%D1_Mod %F2_Icon Spot Range.</English>
 		<French>[ICON_BULLET]%D1_Mod Portée de maintien de la Perception (%F2_Icon)</French>
 		<German>[ICON_BULLET]%D1_Mod %F2_Icon-Sichtweite</German>
 		<Italian>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Raggio di individuazione[COLOR_REVERT] di tipo %F2_Icon: [COLOR_HIGHLIGHT_TEXT]%D1_Mod[COLOR_REVERT]</Italian> <!-- unit Workboat (Prehistoric) with Hide and Seek -->
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOHELP_INVISIBILITY_SPOT_SAME_TILE_CHANGE</Tag>
-		<English>[ICON_BULLET]%D1_Mod %F2_Icon Spot on Same Tile</English>
+		<English>[ICON_BULLET]%D1_Mod %F2_Icon Spot on Same Tile.</English>
 		<French>[ICON_BULLET]%D1_Mod Perception (%F2_Icon) lorsque sur la même case.</French>
 		<German>[ICON_BULLET]%D1_Mod %F2_Icon-Sicht in gleichem Gelände</German>
 		<Italian>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Individuazione[COLOR_REVERT] sulla [COLOR_HIGHLIGHT_TEXT]stessa casella[COLOR_REVERT]: [COLOR_HIGHLIGHT_TEXT]%D1_Mod[COLOR_REVERT] %F2_Icon</Italian>  <!-- unit Ambusher with Hide and Seek option -->
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOHELP_INVISIBILITY_VEIL_INTENSITY_CHANGE</Tag>
-		<English>[ICON_BULLET]%D1_Mod %F2_Icon Veil</English>
+		<English>[ICON_BULLET]%D1_Mod %F2_Icon Veil.</English>
 		<French>[ICON_BULLET]%D1_Mod en type d'invisibilité: %F2_Icon</French>
 		<German>[ICON_BULLET]%D1_Mod %F2_Icon-Unsichtbarkeit</German>
 		<Italian>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Occultamento[COLOR_REVERT] di tipo %F2_Icon: [COLOR_HIGHLIGHT_TEXT]%D1_Mod[COLOR_REVERT]</Italian> <!-- unit Ambusher with Hide and Seek option -->
@@ -75,7 +75,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONHELP_ADDS_CANNOT_CAPTURE</Tag>
-		<English>[ICON_BULLET]Gives cause for unit to be unable to capture enemy Cities or Units</English>
+		<English>[ICON_BULLET]Gives cause for unit to be unable to capture enemy Cities or Units.</English>
 		<French>[ICON_BULLET]Rend l'unité incapable de capturer les villes ou unités ennemies</French>
 		<German>[ICON_BULLET]Unfähigkeit zur Einnahme von Städten und Einheiten: +1</German>
 		<Italian>[ICON_BULLET]Aggiunge un [COLOR_HIGHLIGHT_TEXT]motivo[COLOR_REVERT] per cui l'unità non è in grado di [COLOR_HIGHLIGHT_TEXT]catturare[COLOR_REVERT] città o unità nemiche</Italian>  <!-- Subcombat type Wild -->
@@ -157,7 +157,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONHELP_ANIMAL_IGNORES_BORDERS</Tag>
-		<English>[ICON_BULLET]Gives this Animal %D1_Reasons Causes to Ignore Border Restrictions</English>
+		<English>[ICON_BULLET]Gives this Animal %D1_Reasons Causes to Ignore Border Restrictions.</English>
 		<French>[ICON_BULLET]Donne à cet Animal %D1_Reasons raisons d'ignorer les restrictions de frontière</French>
 		<Russian>[ICON_BULLET]Дает возможность этому животному %D1_Reasons игнорировать наличие границ</Russian>
 		<Italian>[ICON_BULLET]L'animale ha [COLOR_HIGHLIGHT_TEXT]%D1_Reasons[COLOR_REVERT] [NUM1:ragione:ragioni] di [COLOR_HIGHLIGHT_TEXT]ignorare i confini[COLOR_REVERT]</Italian> <!-- Subcombat type Reckless Animal -->
@@ -242,7 +242,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONHELP_BUILDING_PREREQ</Tag>
-		<English>[ICON_BULLET]May only have promotion while in a city with a %s1_Building constructed (or plots with other specific improvement(s) or specific buildings in a city if also listed).</English>
+		<English>[ICON_BULLET]May only have promotion while in a city with a %s1_Building constructed (or plots with other specific Improvement(s) or specific buildings in a city if also listed).</English>
 		<French>[ICON_BULLET]Peut seulement avoir la promotion lorsque situé dans une ville avec le bâtiment '%s1_Building' construit (ou sur une case avec un aménagement spécifique, ou plusieurs bâtiments en cas de liste).</French>
 	</TEXT>
 	<TEXT>
@@ -255,7 +255,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONHELP_CAN_LEAD_THROUGH_PEAKS</Tag>
-		<English>[ICON_BULLET]Can lead units through Peaks</English>
+		<English>[ICON_BULLET]Can lead units through Peaks.</English>
 		<French>[ICON_BULLET]Peut mener les unités à travers les montagnes</French>
 		<German>[ICON_BULLET]kann andere Einheiten durchs Gebirge führen</German>
 		<Italian>[ICON_BULLET]Può condurre unità attraverso le montagne</Italian>
@@ -265,7 +265,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONHELP_CAN_MOVE_PEAKS</Tag>
-		<English>[ICON_BULLET]Can Pass through Peaks</English>
+		<English>[ICON_BULLET]Can Pass through Peaks.</English>
 		<French>[ICON_BULLET]Peut passer les Sommets</French>
 		<German>[ICON_BULLET]kann Gebirge überqueren</German>
 		<Italian>[ICON_BULLET]L'unità può [COLOR_HIGHLIGHT_TEXT]attraversare le montagne[COLOR_REVERT]</Italian> <!-- promotion Mountaineer -->
@@ -737,7 +737,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONHELP_IGNORE_TERRAIN_DAMAGE</Tag>
-		<English>[ICON_BULLET]Can Safely Traverse %s1 without recieving damage</English>
+		<English>[ICON_BULLET]Can Safely Traverse %s1 without receiving damage.</English>
 		<French>[ICON_BULLET]Peut traverser %s1 sans recevoir de dommages</French>
 		<German>[ICON_BULLET]kann %s1 sicher passieren, ohne Schaden zu nehmen</German>
 		<Italian>[ICON_BULLET]Può attraversare %s1 senza ricevere danni</Italian>
@@ -763,7 +763,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONHELP_IMPROVEMENT_PREREQ</Tag>
-		<English>[ICON_BULLET]May only have promotion while on plots with %s1_Feature improvement (or other specific improvement(s) or specific buildings in a city if also listed).</English>
+		<English>[ICON_BULLET]May only have promotion while on plots with %s1_Feature Improvement (or other specific Improvement(s) or specific buildings in a city if also listed).</English>
 		<French>[ICON_BULLET]Peut seulement avoir la promotion lorsque situé sur des case avec l'aménagement '%s1_Feature' (ou dans une ville avec un bâtiment spécifique, ou plusieurs aménagements en cas de liste).</French>
 	</TEXT>
 	<TEXT>
@@ -796,7 +796,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONHELP_INTENSIFIES</Tag>
-		<English>[ICON_BULLET]Intensifies: Chance to Overcome is reduced by cumulative %D1_Change%% each turn</English>
+		<English>[ICON_BULLET]Intensifies: Chance to Overcome is reduced by cumulative %D1_Change%% each turn.</English>
 		<French>[ICON_BULLET]Intensification: La probabilité de supématie est réduite progressivement, de %D1_Change%% à chaque tour</French>
 		<Italian>[ICON_BULLET]Intensificazione: le chance di Superamento vengono ridotte di %D1_Change%% ogni turno</Italian>
 		<Polish>[ICON_BULLET]Wzmocnienie: Szansa na wyleczenie zmniejsza si&#234; o %D1_Change%% w ka&#191;dej turze</Polish>
@@ -923,7 +923,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONHELP_MARAUDER_PILLAGE</Tag>
-		<English>[ICON_BULLET]Pillages twice the [ICON_GOLD] and potentially twice the Improvement</English>
+		<English>[ICON_BULLET]Pillages twice the [ICON_GOLD] and potentially twice the Improvement.</English>
 		<French>[ICON_BULLET]Les pillages rapportent deux fois plus d'[ICON_GOLD], y compris pour les aménagements</French>
 		<Spanish>[ICON_BULLET]Saquea el doble de [ICON_GOLD] y potencialmente el doble de la mejora</Spanish>
 		<Polish>[ICON_BULLET]Pl&#185;druje podw&#243;jnie [ICON_GOLD] i potencjalnie dwukrotnie ulepszenie</Polish>
@@ -940,7 +940,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONHELP_MAX_UNITS_CHANGE</Tag>
-		<English>[ICON_BULLET]+%d1 Increase to Maximum Number of Units affected by Collateral Damage</English>
+		<English>[ICON_BULLET]+%d1 Increase to Maximum Number of Units affected by Collateral Damage.</English>
 		<French>[ICON_BULLET]+%d1 d'augmentation du numbre maximum d'unités affectées par les dégâts collatéraux</French>
 		<German>[ICON_BULLET]+%d1 Erhöhung der maximalen Anzahl von durch Kollateralschaden getroffene Einheiten</German>
 		<Spanish>[ICON_BULLET]El número máximo de unidades afectadas por daños colaterales aumenta en +%d1</Spanish>
@@ -957,7 +957,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONHELP_MOVING_PILLAGE</Tag>
-		<English>[ICON_BULLET]Automatically pillages improvements on move.</English>
+		<English>[ICON_BULLET]Automatically pillages Improvements on move.</English>
 		<French>[ICON_BULLET]Réalise automatiquement les pillages des aménagements lors de ses déplacements.</French>
 		<Spanish>[ICON_BULLET]Saquea automáticamente las mejoras en movimiento</Spanish>
 		<Polish>[ICON_BULLET]Automatyczne pl&#185;drowanie przy ruchu.</Polish>
@@ -1020,12 +1020,12 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONHELP_ONEUP</Tag>
-		<English>[ICON_BULLET]This Promotion gives the Unit an Extra Life</English>
-		<French>[ICON_BULLET]Cet Promotion donne le Groupe une Vie Suplementaire</French>
-		<German>[ICON_BULLET]Diese Beförderung gibt dieser Einheit ein zusätzliches Leben</German>
-		<Spanish>[ICON_BULLET]Este ascenso otorga una vida adicional a la unidad</Spanish>
-		<Polish>[ICON_BULLET]Daje jednostce dodatkowe &#191;ycie</Polish>
-		<Russian>[ICON_BULLET]Эта квалификация дает отряду дополнительную жизнь</Russian>
+		<English>[ICON_BULLET]This Promotion gives the Unit an Extra Life.</English>
+		<French>[ICON_BULLET]Cet Promotion donne le Groupe une Vie Suplementaire.</French>
+		<German>[ICON_BULLET]Diese Beförderung gibt dieser Einheit ein zusätzliches Leben.</German>
+		<Spanish>[ICON_BULLET]Este ascenso otorga una vida adicional a la unidad.</Spanish>
+		<Polish>[ICON_BULLET]Daje jednostce dodatkowe &#191;ycie.</Polish>
+		<Russian>[ICON_BULLET]Эта квалификация дает отряду дополнительную жизнь.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONHELP_ONSLAUGHT</Tag>
@@ -1222,7 +1222,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONHELP_RADIATION_SPY</Tag>
-		<English>[ICON_BULLET]Creates fallout on sabotaged improvements.</English>
+		<English>[ICON_BULLET]Creates fallout on sabotaged Improvements.</English>
 		<French>[ICON_BULLET]Génère des dommages radioactifs lors du sabotage d'aménagements.</French>
 		<German>[ICON_BULLET]Verursacht radioaktiven Niederschlag auf sabotierten Modernisierungen.</German>
 		<Italian>[ICON_BULLET]L'unità aggiunge la [COLOR_HIGHLIGHT_TEXT]contaminazione[COLOR_REVERT] sui [COLOR_HIGHLIGHT_TEXT]miglioramenti sabotati[COLOR_REVERT]</Italian> <!-- promotion Alchemist III -->
@@ -1263,7 +1263,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONHELP_REMOVES_CANNOT_CAPTURE</Tag>
-		<English>[ICON_BULLET]Removes a cause for unit to be unable to capture enemy Cities or Units</English>
+		<English>[ICON_BULLET]Removes a cause for unit to be unable to capture enemy Cities or Units.</English>
 		<French>[ICON_BULLET]Enlève l'incapacité de l'unité de capturer les villes ou unités ennemies</French>
 		<German>[ICON_BULLET]Unfähigkeit zur Einnahme von Städten und die Gefangennahme von Einheiten: -1</German>
 	</TEXT>
@@ -1418,14 +1418,14 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONHELP_STR_ADJ_PER_TURN_NEGATIVE</Tag>
-		<English>[ICON_BULLET]Drops Unit's Base Strength by %D1_Change each turn - recovered when Overcome</English>
+		<English>[ICON_BULLET]Drops Unit's Base Strength by %D1_Change each turn - recovered when Overcome.</English>
 		<French>[ICON_BULLET]Diminue la Puissance de %D1_Change à chaque tour - récupéré en cas de rémission</French>
 		<Italian>[ICON_BULLET]Diminuisce la forza base dell'unità del %D1_Change a turno - recupera con Superamento</Italian>
 		<Polish>[ICON_BULLET]Obni&#191;a si&#179;&#234; jednostki o %D1_Change w ka&#191;dej turze - przywraca przy wyleczeniu</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONHELP_STR_ADJ_PER_TURN_POSITIVE</Tag>
-		<English>[ICON_BULLET]Enhances Unit's Base Strength by %D1_Change each turn - rescinded when Overcome</English>
+		<English>[ICON_BULLET]Enhances Unit's Base Strength by %D1_Change each turn - rescinded when Overcome.</English>
 		<French>[ICON_BULLET]Augmente la Puissance de %D1_Change à chaque tour - annulé en cas de rémission</French>
 		<Italian>[ICON_BULLET]Aumenta la forza base dell'unità del %D1_Change a turno - perde con Superamento</Italian>
 		<Polish>[ICON_BULLET]Podwy&#191;sza si&#179;&#234; jednostki o %D1_Change w ka&#191;dej turze - obni&#191;a przy wyleczeniu</Polish>
@@ -1487,7 +1487,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONHELP_TERRAIN_PREREQ</Tag>
-		<English>[ICON_BULLET]May only have promotion while on plots with %s1_Terrain terrain (or other specific terrain(s) if also is listed).</English>
+		<English>[ICON_BULLET]May only have Promotion while on plots with %s1_Terrain terrain (or other specific terrain(s) if also is listed).</English>
 		<French>[ICON_BULLET]Peut seulement avoir la promotion lorsque situé sur des cases avec le type de terrain '%s1_Feature' (ou plusieurs types spécifiques en cas de liste).</French>
 	</TEXT>
 	<TEXT>
@@ -1691,7 +1691,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONHELP_VICTORY_PILLAGE</Tag>
-		<English>[ICON_BULLET]Reaps the Profits of Pillaging on a Combat Victory (no loss of improvement though).</English>
+		<English>[ICON_BULLET]Reaps the Profits of Pillaging on a Combat Victory (no loss of Improvement though).</English>
 		<French>[ICON_BULLET]Récupère les profits d'un pillage en cas de Victoire (Les aménagements restent intacts cependant).</French>
 		<Spanish>[ICON_BULLET]Obtiene los beneficios de un saqueo en cada victoria (sin perderse la mejora)</Spanish>
 		<Polish>[ICON_BULLET]Czerpanie zysk&#243;w z Pl&#185;drowania po Wygranej Walce (nie niszczy ulepsze&#241;).</Polish>
@@ -1726,21 +1726,21 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONHELP_WEAKEN_PER_TURN_NEGATIVE</Tag>
-		<English>[ICON_BULLET]Enhances Unit's Combat % by %D1_Change each turn - rescinded when Overcome</English>
+		<English>[ICON_BULLET]Enhances Unit's Combat % by %D1_Change each turn - rescinded when Overcome.</English>
 		<French>[ICON_BULLET]Augmente le %% de Combat de %D1_Change chaque tour - annulé en cas de rémission</French>
 		<Italian>[ICON_BULLET]Aumenta la % di Combattimento dell'unità del %D1_Change a turno - perde con Superamento</Italian>
 		<Polish>[ICON_BULLET]Zwi&#234;ksza % waleczno&#156;ci jednostki %D1_Change w ka&#191;dej turze - obni&#191;a przy wyleczeniu</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONHELP_WEAKEN_PER_TURN_POSITIVE</Tag>
-		<English>[ICON_BULLET]Drops Unit's Combat % by %D1_Change each turn - recovered when Overcome</English>
+		<English>[ICON_BULLET]Drops Unit's Combat % by %D1_Change each turn - recovered when Overcome.</English>
 		<French>[ICON_BULLET]Diminue le % de Combat de %D1_Change chaque tour - récupéré en cas de rémission</French>
 		<Italian>[ICON_BULLET]Diminuisce la % di Combattimento dell'unità del %D1_Change a turno - recupera con Superamento</Italian>
 		<Polish>[ICON_BULLET]Obni&#191;a % waleczno&#156;ci jednostki o %D1_Change w ka&#191;dej turze - przywraca przy wyleczeniu</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONHELP_WEAROFF</Tag>
-		<English>[ICON_BULLET]Wears off: Adds cumulative %D1_Change%% to Overcome each turn</English>
+		<English>[ICON_BULLET]Wears off: Adds cumulative %D1_Change%% to Overcome each turn.</English>
 		<French>[ICON_BULLET]Perturbé: Ajoute %D1_Change%% cumulable en suprématie à chaque tour</French>
 		<Italian>[ICON_BULLET]Affievolimento: le chance di Superamento aumentano di %D1_Change%% ogni turno</Italian>
 		<Polish>[ICON_BULLET]S&#179;abo&#156;&#230;: Dodaje %D1_Change%% do wyleczenia w ka&#191;dej turze</Polish>
@@ -1983,7 +1983,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_BUILD_UP_ANTI_AIR_HELP</Tag>
-		<English>Each Round spent building up Anti-Air improves the unit's [COLOR_HIGHLIGHT_TEXT]Interception Ability[COLOR_REVERT] up to a limit of 5 rounds for maximum bonus, provided each promotion level is qualified for by the unit.</English>
+		<English>Each Round spent building up Anti-Air improves the Unit's [COLOR_HIGHLIGHT_TEXT]Interception Ability[COLOR_REVERT] up to a limit of 5 turns for maximum bonus, provided each Promotion level is qualified for by the Unit.</English>
 		<French>A chaque tour la Spécialisation Défense Anti-Aérienne augmente [COLOR_HIGHLIGHT_TEXT]la capacité d'interception[COLOR_REVERT] de l'unité, avec un bonus maximum au bout de 5 tours.</French>
 		<Russian>Каждый раунд, потраченный на фокус ПВО, усиляет вероятность [COLOR_HIGHLIGHT_TEXT]перехвата[COLOR_REVERT] вплоть до 5 раундов для максимального бонуса, при условии, что каждый уровень квалификации соответствует требованиям отряда.</Russian>
 		<Italian>[NEWLINE]Migliora l'abilità [COLOR_HIGHLIGHT_TEXT]intercettazione[COLOR_REVERT]. Max 5 turni (necessita delle rispettive promozioni).</Italian>
@@ -1998,7 +1998,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_BUILD_UP_BLEND_INTO_CROWD_HELP</Tag>
-		<English>On the first, third and fifth rounds spent building up Blend Into Crowd, the unit gains 1 intensity of [COLOR_HIGHLIGHT_TEXT]Disguise Invisibility[COLOR_REVERT] up to a maximum bonus of +3, provided each promotion level is qualified for by the unit.</English>
+		<English>On the first, third, and fifth turns spent building up Blend Into Crowd, the Unit gains 1 intensity of [COLOR_HIGHLIGHT_TEXT]Disguise Invisibility[COLOR_REVERT] up to a maximum bonus of +3, provided each Promotion level is qualified for by the Unit.</English>
 		<French>Lors du premier, troisième et cinquième round passé en développement de la spécialisation Caché dans la foule, L'unité gagne 1 en intensité de [COLOR_HIGHLIGHT_TEXT]Déguisement[COLOR_REVERT] jusqu'à un bonus maximum de +3, reçu pour chaque niveau de promotion obtenu par l'unité.</French>
 		<German>Dieses Training gibt der Einheit in der ersten, dritten und fünften Runde je 1 Punkt auf [COLOR_HIGHLIGHT_TEXT]Unsichtbarkeit (Verkleidung)[COLOR_REVERT] bis zu einem Maximum von 3 Punkten.</German>
 		<Russian>В первом, третьем и пятом раундах, потраченных на фокус конспирации, отряд получает 1 к навыку [COLOR_HIGHLIGHT_TEXT]маскировки[COLOR_REVERT] до максимального бонуса +3, при условии, что каждый уровень квалификации соответствует требованиям отряда.</Russian>
@@ -2014,7 +2014,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_BUILD_UP_CHASE_PLANS_HELP</Tag>
-		<English>Each Round spent building up Chase Plans improves the unit's [COLOR_HIGHLIGHT_TEXT]Pursuit[COLOR_REVERT] ability up to a limit of 5 rounds for maximum bonus, provided each promotion level is qualified for by the unit.</English>
+		<English>Each turn spent building up Chase Plans improves the Unit's [COLOR_HIGHLIGHT_TEXT]Pursuit[COLOR_REVERT] ability up to a limit of 5 turns for maximum bonus, provided each Promotion level is qualified for by the Unit.</English>
 		<French>A chaque tour la Spécialisation Stratégie de chasse augmente [COLOR_HIGHLIGHT_TEXT]la poursuite[COLOR_REVERT] de l'unité, avec un bonus maximum au bout de 5 tours.</French>
 		<Russian>Каждый раунд, потраченный на фокус к погоне, улучшает способность отряда к [COLOR_HIGHLIGHT_TEXT]преследованию[COLOR_REVERT] до ограничения в 5 раундов для получения максимального бонуса, при условии, что каждый уровень квалификации соответствует требованиям отряда.</Russian>
 		<Italian>[NEWLINE][ICON_BULLET]Migliora l'abilità [COLOR_HIGHLIGHT_TEXT]inseguimento[COLOR_REVERT][NEWLINE][ICON_BULLET]Max 5 turni (necessita delle rispettive promozioni)</Italian>
@@ -2029,7 +2029,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_BUILD_UP_CHECKPOINTS_HELP</Tag>
-		<English>On the first, third and fifth rounds spent building up Checkpoints, the unit gains 1 intensity of [COLOR_HIGHLIGHT_TEXT]Disguise Vision[COLOR_REVERT] up to a maximum bonus of +3, provided each promotion level is qualified for by the unit.</English>
+		<English>On the first, third, and fifth turns spent building up Checkpoints, the Unit gains 1 intensity of [COLOR_HIGHLIGHT_TEXT]Disguise Vision[COLOR_REVERT] up to a maximum bonus of +3, provided each Promotion level is qualified for by the Unit.</English>
 		<French>Lors du premier, troisième et cinquième round passé en développement de la spécialisation Checkpoints, L'unité gagne 1 en intensité de [COLOR_HIGHLIGHT_TEXT]Détection des Déguisements[COLOR_REVERT] jusqu'à un bonus maximum de +3, reçu pour chaque niveau de promotion obtenu par l'unité.</French>
 		<German>Das Training der Personenkontrolle erhöht in der ersten, dritten und fünften Runde die Fähigkeit der Einheit zur [COLOR_HIGHLIGHT_TEXT]Erkennung von Verkleidungen[COLOR_REVERT] um 1 (maximal 3).</German>
 		<Russian>В первом, третьем и пятом раундах, потраченных на фокус на контрольных точках, отряд получает 1 к [COLOR_HIGHLIGHT_TEXT]обнаружению[COLOR_REVERT] скрытых отрядов до максимального бонуса +3, при условии, что отряд соответствует каждому уровню квалификации.</Russian>
@@ -2045,7 +2045,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_BUILD_UP_CLEVERNESS_HELP</Tag>
-		<English>Each round spent building up Cleverness, the unit gains +.2% [COLOR_HIGHLIGHT_TEXT]Insidiousness[COLOR_REVERT] (to aid in getting away with its crimes) up to a maximum bonus of +1.0, provided each promotion level is qualified for by the unit.</English>
+		<English>Each round spent building up Cleverness, the Unit gains +.2% [COLOR_HIGHLIGHT_TEXT]Insidiousness[COLOR_REVERT] (to aid in getting away with its crimes) up to a maximum bonus of +1.0, provided each Promotion level is qualified for by the unit.</English>
 		<French>Pour chaque tour passé en Spécialisation Ruse, l'unité gagne +0.2% [COLOR_HIGHLIGHT_TEXT]d'Incidiosité[COLOR_REVERT] (pour l'aider à s'affranchir de ses crimes), jusqu'à un maximum de +1, et ceci procuré pour chaque niveau de promotion que peut avoir l'unité.</French>
 		<German>Jede Runde Cleverness-Training bringt der Einheit einen 0,2%-Bonus auf [COLOR_HIGHLIGHT_TEXT]Hinterlist[COLOR_REVERT] bis zu einem Maximum von 1%, wodurch sie eher mit ihren Verbrechen davonkommt.</German>
 		<Russian>За каждый раунд, потраченный на фокус к сообразительности, отряд получает +2% к [COLOR_HIGHLIGHT_TEXT]беззаконию[COLOR_REVERT] (чтобы избежать возмездия за свои преступления) до максимального бонуса +1,0, при условии, что каждый уровень квалификации соответствует требованиям отряда.</Russian>
@@ -2061,7 +2061,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_BUILD_UP_CONCEALMENT_HELP</Tag>
-		<English>On the first, third and fifth rounds spent building up Concealment, the unit gains 1 intensity of [COLOR_HIGHLIGHT_TEXT]Camouflage Invisibility[COLOR_REVERT] up to a maximum bonus of +3, provided each promotion level is qualified for by the unit.</English>
+		<English>On the first, third, and fifth turns spent building up Concealment, the unit gains 1 intensity of [COLOR_HIGHLIGHT_TEXT]Camouflage Invisibility[COLOR_REVERT] up to a maximum bonus of +3, provided each Promotion level is qualified for by the Unit.</English>
 		<French>Lors du premier, troisième et cinquième round passé en développement de la spécialisation Dissimulation, L'unité gagne 1 en intensité de [COLOR_HIGHLIGHT_TEXT]Camouflage [COLOR_REVERT] jusqu'à un bonus maximum de +3, reçu pour chaque niveau de promotion obtenu par l'unité.</French>
 		<German>Durch Training in Verschleierung erhält die Einheit in der ersten, dritten und fünften Runde je 1 Punkt auf [COLOR_HIGHLIGHT_TEXT]Unsichtbarkeit (Tarnung)[COLOR_REVERT] bis zu einem Maximum von 3 Punkten.</German>
 		<Russian>В первом, третьем и пятом раундах, потраченных на фокус к маскировке, отряд получает 1 к навыку [COLOR_HIGHLIGHT_TEXT]маскировки[COLOR_REVERT] до максимального бонуса +3, при условии, что каждый уровень квалификации соответствует требованиям отряда.</Russian>
@@ -2077,7 +2077,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_BUILD_UP_CONTROL_CENTER_HELP</Tag>
-		<English>Each Round spent building up Control Center improves the unit's [COLOR_HIGHLIGHT_TEXT]Tech Healing Ability[COLOR_REVERT] up to a limit of 5 rounds for maximum bonus, provided each promotion level is qualified for by the unit.</English>
+		<English>Each turn spent building up Control Center improves the Unit's [COLOR_HIGHLIGHT_TEXT]Tech Healing Ability[COLOR_REVERT] up to a limit of 5 turns for maximum bonus, provided each Promotion level is qualified for by the Unit.</English>
 		<French>A chaque tour la Spécialisation Centre de Contrôle augmente [COLOR_HIGHLIGHT_TEXT]la capacité de Réparation Tech.[COLOR_REVERT] de l'unité, avec un bonus maximum au bout de 5 tours.</French>
 		<Russian>Каждый раунд, потраченный на данный фокус, улучшает способность к [COLOR_HIGHLIGHT_TEXT]ремонту[COLOR_REVERT] механизированных отрядов до 5 раундов для получения максимального бонуса, при условии, что каждый уровень квалификации соответствует требованиям отряда.</Russian>
 		<Italian>[NEWLINE][ICON_BULLET]Migliora l'abilità [COLOR_HIGHLIGHT_TEXT]capacità di guarigione tecnologica[COLOR_REVERT][NEWLINE][ICON_BULLET]Max 5 turni (necessita delle rispettive promozioni)</Italian>
@@ -2093,10 +2093,10 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_BUILD_UP_CRIME_FIGHTING_HELP</Tag>
-		<English>Each Round spent building up Crime Fighting cumulatively improves the unit's ability to [COLOR_HIGHLIGHT_TEXT]Reduce Crime[COLOR_REVERT] in the city and tile that the unit is on, up to a limit of 5 rounds for maximum bonus of -15 Crime, provided each promotion level is qualified for by the unit.</English>
+		<English>Each turn spent building up Crime Fighting cumulatively improves the Unit's ability to [COLOR_HIGHLIGHT_TEXT]Reduce Crime[COLOR_REVERT] in the city and tile that the unit is on, up to a limit of 5 turns for maximum bonus of -15 Crime, provided each Promotion level is qualified for by the Unit.</English>
 		<French>A chaque tour la Spécialisation Anti-Criminalité réduit [COLOR_HIGHLIGHT_TEXT]la criminalité[COLOR_REVERT] dans la ville et la case où se trouve l'unité, avec un bonus maximum au bout de 5 tours.</French>
 		<German>Durch Training in Verbrechensbekämpfung kann die Einheit die [COLOR_HIGHLIGHT_TEXT]Kriminalitätsrate[COLOR_REVERT] der Stadt oder des Feldes, auf dem sie sich befindet, (um maximal 15 Punkte bei 5 Runden Training) reduzieren.</German>
-		<Polish>Each Round spent building up Crime Fighting improves the unit's ability to [COLOR_HIGHLIGHT_TEXT]Reduce Crime[COLOR_REVERT] in the city and tile that the unit is on, up to a limit of 5 rounds for maximum bonus, provided each promotion level is qualified for by the unit.</Polish>
+		<Polish>Each turn spent building up Crime Fighting improves the Unit's ability to [COLOR_HIGHLIGHT_TEXT]Reduce Crime[COLOR_REVERT] in the city and tile that the Unit is on, up to a limit of 5 turns for maximum bonus, provided each Promotion level is qualified for by the unit.</Polish>
 		<Italian>[NEWLINE][ICON_BULLET]Migliora l'abilità [COLOR_HIGHLIGHT_TEXT]riduzione del crimine[COLOR_REVERT] (città e casella)[NEWLINE][ICON_BULLET]Max 5 turni (necessita delle rispettive promozioni)</Italian>
 	</TEXT>
 	<TEXT>
@@ -2110,7 +2110,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_BUILD_UP_DISEASE_CONTROL_HELP</Tag>
-		<English>Each Round spent building up Disease Control improves the unit's ability to [COLOR_HIGHLIGHT_TEXT]Reduce Disease[COLOR_REVERT] in the city and tile that the unit is on, up to a limit of 5 rounds for maximum bonus, provided each promotion level is qualified for by the unit.</English>
+		<English>Each turn spent building up Disease Control improves the Unit's ability to [COLOR_HIGHLIGHT_TEXT]Reduce Disease[COLOR_REVERT] in the city and tile that the Unit is on, up to a limit of 5 turns for maximum bonus, provided each Promotion level is qualified for by the unit.</English>
 		<French>A chaque tour la Spécialisation Contrôle Sanitaire réduit [COLOR_HIGHLIGHT_TEXT]les maladies[COLOR_REVERT] dans la ville et la case où se trouve l'unité, avec un bonus maximum au bout de 5 tours.</French>
 		<German>Durch Training in Krankheitsbekämpfung kann die Einheit die [COLOR_HIGHLIGHT_TEXT]Krankheitsrate[COLOR_REVERT] der Stadt oder des Feldes, auf dem sie sich befindet, reduzieren.</German>
 		<Polish>Each Round spent building up Disease Control improves the unit's ability to [COLOR_HIGHLIGHT_TEXT]Reduce Disease[COLOR_REVERT] in the city and tile that the unit is on, up to a limit of 5 rounds for maximum bonus of -15 Disease, provided each promotion level is qualified for by the unit.</Polish>
@@ -2126,7 +2126,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_BUILD_UP_DIVER_DEPLOYMENT_HELP</Tag>
-		<English>Each Round spent building up Diver Deployment improves the unit's [COLOR_HIGHLIGHT_TEXT]Naval Healing Ability[COLOR_REVERT] up to a limit of 5 rounds for maximum bonus, provided each promotion level is qualified for by the unit.</English>
+		<English>Each turn spent building up Diver Deployment improves the Unit's [COLOR_HIGHLIGHT_TEXT]Naval Healing Ability[COLOR_REVERT] up to a limit of 5 turns for maximum bonus, provided each Promotion level is qualified for by the Unit.</English>
 		<French>A chaque tour la Spécialisation Déploiement de plongeurs augmente [COLOR_HIGHLIGHT_TEXT]la capacité de réparation [COLOR_REVERT] de l'unité, avec un bonus maximum au bout de 5 tours.</French>
 		<Italian>[NEWLINE][ICON_BULLET]Migliora l'abilità [COLOR_HIGHLIGHT_TEXT]guarigione navale[COLOR_REVERT][NEWLINE][ICON_BULLET]Max 5 turni (necessita delle rispettive promozioni)</Italian>
 	</TEXT>
@@ -2140,7 +2140,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_BUILD_UP_ESCAPE_PLANS_HELP</Tag>
-		<English>Each Round spent building up Escape Plans improves the unit's [COLOR_HIGHLIGHT_TEXT]Withdrawal Modifier[COLOR_REVERT] up to a limit of 5 rounds for maximum bonus, provided each promotion level is qualified for by the unit.</English>
+		<English>Each turn spent building up Escape Plans improves the Unit's [COLOR_HIGHLIGHT_TEXT]Withdrawal Modifier[COLOR_REVERT] up to a limit of 5 turns for maximum bonus, provided each Promotion level is qualified for by the Unit.</English>
 		<French>A chaque tour la Spécialisation Plans d'évasion augmente [COLOR_HIGHLIGHT_TEXT]le coefficient d'évasion[COLOR_REVERT] de l'unité, avec un bonus maximum au bout de 5 tours.</French>
 		<Italian>[NEWLINE][ICON_BULLET]Migliora l'abilità [COLOR_HIGHLIGHT_TEXT]modificatore di ritirata[COLOR_REVERT][NEWLINE][ICON_BULLET]Max 5 turni (necessita delle rispettive promozioni)</Italian>
 	</TEXT>
@@ -2155,7 +2155,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_BUILD_UP_FIELD_HOSPITAL_HELP</Tag>
-		<English>Each Round spent building up Field Hospital improves the unit's [COLOR_HIGHLIGHT_TEXT]People Healing Ability[COLOR_REVERT] up to a limit of 5 rounds for maximum bonus, provided each promotion level is qualified for by the unit.</English>
+		<English>Each turn spent building up Field Hospital improves the Unit's [COLOR_HIGHLIGHT_TEXT]People Healing Ability[COLOR_REVERT] up to a limit of 5 turns for maximum bonus, provided each Promotion level is qualified for by the Unit.</English>
 		<French>A chaque tour la Spécialisation hôpital de campagne augmente [COLOR_HIGHLIGHT_TEXT]la capacité de soins pour les humains[COLOR_REVERT] de l'unité, avec un bonus maximum au bout de 5 tours.</French>
 		<German>Die Feldlazarett-Ausbildung steigert die Fähigkeit der Einheit, [COLOR_HIGHLIGHT_TEXT]Personen zu heilen[COLOR_REVERT].</German>
 		<Italian>[NEWLINE][ICON_BULLET]Migliora l'abilità [COLOR_HIGHLIGHT_TEXT]guarigione delle persone[COLOR_REVERT][NEWLINE][ICON_BULLET]Max 5 turni (necessita delle rispettive promozioni)</Italian>
@@ -2170,7 +2170,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_BUILD_UP_FIELD_MECHANIC_HELP</Tag>
-		<English>Each Round spent building up Field Mechanic improves the unit's [COLOR_HIGHLIGHT_TEXT]Mechanical Healing Ability[COLOR_REVERT] up to a limit of 5 rounds for maximum bonus, provided each promotion level is qualified for by the unit.</English>
+		<English>Each turn spent building up Field Mechanic improves the Unit's [COLOR_HIGHLIGHT_TEXT]Mechanical Healing Ability[COLOR_REVERT] up to a limit of 5 turns for maximum bonus, provided each Promotion level is qualified for by the Unit.</English>
 		<French>A chaque tour la Spécialisation Réparation mécanique augmente [COLOR_HIGHLIGHT_TEXT]la capacité de réparation des engins[COLOR_REVERT] de l'unité, avec un bonus maximum au bout de 5 tours.</French>
 		<Italian>[NEWLINE][ICON_BULLET]Migliora l'abilità [COLOR_HIGHLIGHT_TEXT]guarigione meccanica[COLOR_REVERT][NEWLINE][ICON_BULLET]Max 5 turni (necessita delle rispettive promozioni)</Italian>
 	</TEXT>
@@ -2185,7 +2185,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_BUILD_UP_FIELD_VET_HELP</Tag>
-		<English>Each Round spent building up Field Veterinarian improves the unit's [COLOR_HIGHLIGHT_TEXT]Animal Healing Ability[COLOR_REVERT] up to a limit of 5 rounds for maximum bonus, provided each promotion level is qualified for by the unit.</English>
+		<English>Each turn spent building up Field Veterinarian improves the Unit's [COLOR_HIGHLIGHT_TEXT]Animal Healing Ability[COLOR_REVERT] up to a limit of 5 turns for maximum bonus, provided each Promotion level is qualified for by the Unit.</English>
 		<French>A chaque tour la Spécialisation Vétérinaire de campagne augmente [COLOR_HIGHLIGHT_TEXT]la capacité de soins des Animaux[COLOR_REVERT] de l'unité, avec un bonus maximum au bout de 5 tours.</French>
 		<German>Die Ausbildung als Feldveterinär steigert die Fähigkeit der Einheit, [COLOR_HIGHLIGHT_TEXT]Tiere zu heilen[COLOR_REVERT].</German>
 		<Italian>[NEWLINE][ICON_BULLET]Migliora l'abilità [COLOR_HIGHLIGHT_TEXT]guarigione animale[COLOR_REVERT][NEWLINE][ICON_BULLET]Max 5 turni (necessita delle rispettive promozioni)</Italian>
@@ -2200,7 +2200,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_BUILD_UP_HEALTH_CARE_HELP</Tag>
-		<English>Each Round spent building up Health Care improves the unit's [COLOR_HIGHLIGHT_TEXT]Healing Support Capabilities[COLOR_REVERT] up to a limit of 5 rounds for maximum bonus, provided each promotion level is qualified for by the unit.</English>
+		<English>Each turn spent building up Health Care improves the Unit's [COLOR_HIGHLIGHT_TEXT]Healing Support Capabilities[COLOR_REVERT] up to a limit of 5 turns for maximum bonus, provided each Promotion level is qualified for by the Unit.</English>
 		<French>A chaque tour la Spécialisation Soins augmente [COLOR_HIGHLIGHT_TEXT]L'aide aux soins[COLOR_REVERT] de l'unité, avec un bonus maximum au bout de 5 tours.</French>
 		<Italian>[NEWLINE][ICON_BULLET]Migliora l'abilità [COLOR_HIGHLIGHT_TEXT]supporto alla guarigione[COLOR_REVERT][NEWLINE][ICON_BULLET]Max 5 turni (necessita delle rispettive promozioni)</Italian>
 	</TEXT>
@@ -2214,7 +2214,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_BUILD_UP_INSPECTIONS_HELP</Tag>
-		<English>Each round spent building up Inspections, the unit gains +.2% [COLOR_HIGHLIGHT_TEXT]Investigation[COLOR_REVERT] (to aid in catching local criminals) up to a maximum bonus of +1.0, provided each promotion level is qualified for by the unit.</English>
+		<English>Each turn spent building up Inspections, the unit gains +.2% [COLOR_HIGHLIGHT_TEXT]Investigation[COLOR_REVERT] (to aid in catching local criminals) up to a maximum bonus of +1.0, provided each Promotion level is qualified for by the Unit.</English>
 		<French>Pour chaque tour passé en Spécialisation Ruse, l'unité gagne +0.2% [COLOR_HIGHLIGHT_TEXT]d'Investigation[COLOR_REVERT] (pour l'aider à capturer des criminels locaux), jusqu'à un maximum de +1, et ceci procuré pour chaque niveau de promotion que peut avoir l'unité.</French>
 		<German>Das Training in Überprüfung steigert den [COLOR_HIGHLIGHT_TEXT]Ermittlungserfolg[COLOR_REVERT] bei der Jagd auf kriminelle Subjekte um 0,2 % pro Runde (maximal 1 %).</German>
 		<Italian>[NEWLINE][ICON_BULLET]Migliora di 0,2% l'abilità [COLOR_HIGHLIGHT_TEXT]investigazione[COLOR_REVERT][NEWLINE][ICON_BULLET]Max 5 turni (necessita delle rispettive promozioni)</Italian>
@@ -2229,7 +2229,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_BUILD_UP_LIE_IN_WAIT_HELP</Tag>
-		<English>Each round spent building up Lie in Wait, the unit gains +5% [COLOR_HIGHLIGHT_TEXT]Stealth Combat Modifier[COLOR_REVERT] up to a maximum bonus of +25%, AND +1 [COLOR_HIGHLIGHT_TEXT]Stealth Strikes[COLOR_REVERT] on the first and fifth rounds of building up up to a maximum of +2, provided each promotion level is qualified for by the unit. Unit also gains Stealth Defense and will thus surprise defend against enemy units attempting to move into the tile. Once the unit has revealed itself, it stays revealed and is no longer engaging in stealth combat thereafter for the remainder of the round.</English>
+		<English>Each turn spent building up Lie in Wait, the Unit gains +5% [COLOR_HIGHLIGHT_TEXT]Stealth Combat Modifier[COLOR_REVERT] up to a maximum bonus of +25%, AND +1 [COLOR_HIGHLIGHT_TEXT]Stealth Strikes[COLOR_REVERT] on the first and fifth turns of building up to a maximum of +2, provided each Promotion level is qualified for by the unit. Unit also gains Stealth Defense and will thus surprise defend against enemy units attempting to move into the tile. Once the Unit has revealed itself, it stays revealed and is no longer engaging in stealth combat thereafter for the remainder of the turn.</English>
 		<French>Chaque tour dépensé pour en se retrancher en Intrigue, l'unité gagne + 5% [COLOR_HIGHLIGHT_TEXT] Modificateur de combat furtif [COLOR_REVERT] jusqu'à un bonus maximum de + 25%, ET +1 [COLOR_HIGHLIGHT_TEXT] Frappes furtives [COLOR_REVERT] les premier et cinquième tours de construction jusqu'à un maximum de +2, à condition que chaque niveau de promotion soit qualifié par l'unité. L'unité gagne également la défense furtive et surprendra ainsi la défense contre les unités ennemies qui tentent de se déplacer dans la tuile. Une fois que l'unité s'est révélée, elle reste révélée et n'entreprend plus de combat furtif par la suite pour le reste du round.</French>
 		<German>Durch Training in Auflauern erhöht sich jede Runde der [COLOR_HIGHLIGHT_TEXT]Tarnmodifikator[COLOR_REVERT] der Einheit um 5% (maximal 25%). Außerdem erhält sie einen zusätzlichen Tarnangriff in der ersten und fünften Runde und kann sich außerdem gegen Tarnangriffe verteidigen. Wenn die Einheit sich gezeigt hat, bleibt sie sichtbar und hat für den Rest der Runde keine Tarnvorteile mehr.</German>
 		<Russian>За каждый ход, потраченный на эту квалификацию, отряд получает +5% к [COLOR_HIGHLIGHT_TEXT]скрытности[COLOR_REVERT] (максимум +25%), И +1 к [COLOR_HIGHLIGHT_TEXT]Скрытным атакам[COLOR_REVERT] на первом и пятом ходу, максимум до +2, ппри условии, что каждый следующий уровень квалификации выполняется отрядом. Отряд получает также защиту от скрытных атак и, таким образом, будет защищаться от вражеских отрядов, пытающихся проникнуть на занимаемую им клетку. Как только юнит обнаружил себя, он остается раскрытым и больше не участвует в стелс-битве до конца хода.</Russian>
@@ -2245,7 +2245,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_BUILD_UP_MAINTENANCE_HANGAR_HELP</Tag>
-		<English>Each Round spent building up Maintenance Hangar improves the unit's [COLOR_HIGHLIGHT_TEXT]Aircraft Healing Ability[COLOR_REVERT] up to a limit of 5 rounds for maximum bonus, provided each promotion level is qualified for by the unit.</English>
+		<English>Each turn spent building up Maintenance Hangar improves the Unit's [COLOR_HIGHLIGHT_TEXT]Aircraft Healing Ability[COLOR_REVERT] up to a limit of 5 turns for maximum bonus, provided each Promotion level is qualified for by the Unit.</English>
 		<French>A chaque tour la Spécialisation Hangar de maintenance augmente [COLOR_HIGHLIGHT_TEXT]la capacité de réparation des unités aériennes[COLOR_REVERT] de l'unité, avec un bonus maximum au bout de 5 tours.</French>
 		<Italian>[NEWLINE][ICON_BULLET]Migliora l'abilità [COLOR_HIGHLIGHT_TEXT]guarigione aerea[COLOR_REVERT][NEWLINE][ICON_BULLET]Max 5 turni (necessita delle rispettive promozioni)</Italian>
 	</TEXT>
@@ -2258,7 +2258,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_BUILD_UP_OBSERVATION_HELP</Tag>
-		<English>On the first rounds spent building up Observation, the unit gains 1 intensity of [COLOR_HIGHLIGHT_TEXT]Camouflage Vision[COLOR_REVERT]. On the third and fifth rounds, the unit gains 1 additional [COLOR_HIGHLIGHT_TEXT]Camouflage Vision Range[COLOR_REVERT], provided each promotion level is qualified for by the unit.</English>
+		<English>On the first turns spent building up Observation, the Unit gains 1 intensity of [COLOR_HIGHLIGHT_TEXT]Camouflage Vision[COLOR_REVERT]. On the third and fifth turns, the Unit gains 1 additional [COLOR_HIGHLIGHT_TEXT]Camouflage Vision Range[COLOR_REVERT], provided each Promotion level is qualified for by the Unit.</English>
 		<French>Lors du premier Round de développement de la spécialisation Observation, l'unité gagne 1 en intensité de [COLOR_HIGHLIGHT_TEXT]Détection du Camouflage[COLOR_REVERT]. Pour le troisième et le cinquième Round, elle gagne 1 en [COLOR_HIGHLIGHT_TEXT]Portée de détection ud Camouflage[COLOR_REVERT], et ce reçu pour chaque niveau de promotion obtenu par l'unité.</French>
 		<Italian>[NEWLINE][ICON_BULLET]Aumento di un livello dell'abilità [COLOR_HIGHLIGHT_TEXT]visibilità mimetica[COLOR_REVERT][NEWLINE][ICON_BULLET]Max +3. Aumento di un livello del [COLOR_HIGHLIGHT_TEXT]raggio di visibilità mimetica[COLOR_REVERT] (si attiva al 3° e 5° turno e necessita delle rispettive promozioni)</Italian>
 	</TEXT>
@@ -2271,7 +2271,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_BUILD_UP_PATRIOTISM_HELP</Tag>
-		<English>Each round spent building up Patriotism, the unit gains +2% [COLOR_HIGHLIGHT_TEXT]Revolt Protection[COLOR_REVERT] (to make a cultural revolution less likely in cities where the national culture isn't a majority for the owner) up to a maximum of +10%, provided each promotion level is qualified for by the unit.</English>
+		<English>Each turn spent building up Patriotism, the Unit gains +2% [COLOR_HIGHLIGHT_TEXT]Revolt Protection[COLOR_REVERT] (to make a Cultural Revolution less likely in cities where the national Culture isn't a majority for the owner) up to a maximum of +10%, provided each Promotion level is qualified for by the Unit.</English>
 		<French>Chaque tour passé à construire le patriotisme, l'unité gagne +2% [COLOR_HIGHLIGHT_TEXT]Protection contre les Révoltes[COLOR_REVERT] (pour rendre une révolution culturelle moins probable dans les villes où la culture nationale n'est pas majoritaire pour le propriétaire) jusqu'à un maximum de +10%, à condition que chaque niveau de promotion soit qualifié par l'unité.</French>
 		<Russian>За каждый ход, потраченный на эту квалификацию, отряд получает +2% к [COLOR_HIGHLIGHT_TEXT]Лояльности[COLOR_REVERT] (чтобы сделать культурную революцию менее вероятной в городах, где национальная культура цивилизации игрока в меньшинстве) до максимум +10%, при условии, что каждый следующий уровень квалификации выполняется отрядом.</Russian>
 		<Italian>[NEWLINE][ICON_BULLET]Migliora del 2% l'abilità [COLOR_HIGHLIGHT_TEXT]protezione dalle rivolte[COLOR_REVERT][NEWLINE][ICON_BULLET]Max 5 turni (necessita delle rispettive promozioni)</Italian>
@@ -2286,7 +2286,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_BUILD_UP_RANGE_TARGET_HELP</Tag>
-		<English>Each Round spent building up Range Targeting improves the unit's [COLOR_HIGHLIGHT_TEXT]First Strikes[COLOR_REVERT] up to a limit of 5 rounds for maximum bonus, provided each promotion level is qualified for by the unit.</English>
+		<English>Each turn spent building up Range Targeting improves the Unit's [COLOR_HIGHLIGHT_TEXT]First Strikes[COLOR_REVERT] up to a limit of 5 turns for maximum bonus, provided each Promotion level is qualified for by the Unit.</English>
 		<French>A chaque tour la Spécialisation Equipe de ciblage augmente [COLOR_HIGHLIGHT_TEXT]les premières attaques[COLOR_REVERT] de l'unité, avec un bonus maximum au bout de 5 tours.</French>
 		<Italian>[NEWLINE][ICON_BULLET]Migliora l'abilità [COLOR_HIGHLIGHT_TEXT]primi colpi[COLOR_REVERT][NEWLINE][ICON_BULLET]Max 5 turni (necessita delle rispettive promozioni)</Italian>
 	</TEXT>
@@ -2301,7 +2301,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_BUILD_UP_RESTFUL_RECOVERY_HELP</Tag>
-		<English>Each Round spent building up Restful Recovery improves the unit's [COLOR_HIGHLIGHT_TEXT]Self Healing[COLOR_REVERT] up to a limit of 5 rounds for maximum bonus, provided each promotion level is qualified for by the unit.</English>
+		<English>Each turn spent building up Restful Recovery improves the Unit's [COLOR_HIGHLIGHT_TEXT]Self Healing[COLOR_REVERT] up to a limit of 5 turns for maximum bonus, provided each Promotion level is qualified for by the Unit.</English>
 		<French>A chaque tour la Spécialisation Récupération augmente [COLOR_HIGHLIGHT_TEXT]l'auto-guérison[COLOR_REVERT] de l'unité, avec un bonus maximum au bout de 5 tours.</French>
 		<German>Das Wiederherstellungstraining erhöht jede Runde die [COLOR_HIGHLIGHT_TEXT]Selbstheilung[COLOR_REVERT] der Einheit um 1% (maximal 5%).</German>
 		<Italian>[NEWLINE][ICON_BULLET]Migliora l'abilità [COLOR_HIGHLIGHT_TEXT]autoguarigione[COLOR_REVERT][NEWLINE][ICON_BULLET]Max 5 turni (necessita delle rispettive promozioni)</Italian>
@@ -2316,7 +2316,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_BUILD_UP_REVOLUTIONARY_SENTIMENT_HELP</Tag>
-		<English>Each round spent building up Revolutionary Sentiment, the unit gains -2% [COLOR_HIGHLIGHT_TEXT]Revolt Protection[COLOR_REVERT] (to make a cultural revolution more likely in cities where the national culture isn't a majority for the owner) up to a maximum of -10%, provided each promotion level is qualified for by the unit.</English>
+		<English>Each turn spent building up Revolutionary Sentiment, the Unit gains -2% [COLOR_HIGHLIGHT_TEXT]Revolt Protection[COLOR_REVERT] (to make a Cultural Revolution more likely in cities where the national Culture isn't a majority for the owner) up to a maximum of -10%, provided each Promotion level is qualified for by the Unit.</English>
 		<French>Pour chaque tour dépensé en retranchement avec Sentiment révolutionnaire, l'unité reçoit -2% [COLOR_HIGHLIGHT_TEXT]en protection des Révoltes[COLOR_REVERT] (pour rendre une révolution culturelle plus probable dans les villes où la culture nationale n'est pas majoritaire pour le propriétaire) jusqu'à un maximum de -10%, à condition que chaque niveau de promotion soit qualifié par l'unité.</French>
 		<German>Jede Runde Training als Revoluzzer lässt die Einheit den [COLOR_HIGHLIGHT_TEXT]Schutz vor kulturbedingten Revolutionen[COLOR_REVERT] um 2% senken bis zu einem Maximum von 10% (was solche Revolutionen in Städten wahrscheinlicher macht, in denen die nationale Kultur unterrepräsentiert ist).</German>
 		<Russian>За каждый ход, потраченный на эту квалификацию, отряд получает -2% к [COLOR_HIGHLIGHT_TEXT]Лояльности[COLOR_REVERT] (чтобы сделать культурную революцию менее вероятной в городах, где национальная культура цивилизации игрока в меньшинстве) до максимум -10%, при условии, что каждый следующий уровень квалификации выполняется отрядом.</Russian>
@@ -2331,7 +2331,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_BUILD_UP_SCHEMES_HELP</Tag>
-		<English>Each round spent building up Schemes, the unit spreads +1 (+1 cumulative to the last round) [COLOR_HIGHLIGHT_TEXT]Crime[COLOR_REVERT] to the local city and plot, up to a maximum bonus of +15.</English>
+		<English>Each turn spent building up Schemes, the Unit spreads +1 (+1 cumulative to the last turn) [COLOR_HIGHLIGHT_TEXT]Crime[COLOR_REVERT] to the local city and plot, up to a maximum bonus of +15.</English>
 		<French>Chaque tour dépensé en retranchement Coup monté, l'unité propage +1 (+1 cumulatif jusqu'au dernier tour) [COLOR_HIGHLIGHT_TEXT]Crime[COLOR_REVERT] à la ville voisine et la case, jusqu'à un maximum de +15.</French>
 		<German>Durch Training in Verbrechensplanung erhöht die Einheit die [COLOR_HIGHLIGHT_TEXT]Kriminalitätsrate[COLOR_REVERT] von Städten und Feldern um 1 Punkt pro Runde (+1 Punkt kumulativ zur letzten Runde) bis zu einem Maximum von 15 Punkten.</German>
 		<Italian>[NEWLINE][ICON_BULLET]Aumenta di +1 la diffusione del [COLOR_HIGHLIGHT_TEXT]crimine[COLOR_REVERT][NEWLINE][ICON_BULLET]Max +15 (città e casella)</Italian>
@@ -2346,7 +2346,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_BUILD_UP_SECURITY_HELP</Tag>
-		<English>Each round spent building up Counter Espionage, the unit gains +5% [COLOR_HIGHLIGHT_TEXT]Interception Chance[COLOR_REVERT] (to catch enemy spies) up to a maximum of +25%, provided each promotion level is qualified for by the unit.</English>
+		<English>Each turn spent building up Counter Espionage, the Unit gains +5% [COLOR_HIGHLIGHT_TEXT]Interception Chance[COLOR_REVERT] (to catch enemy spies) up to a maximum of +25%, provided each Promotion level is qualified for by the Unit.</English>
 		<French>Pour chaque tour dépensé en retranchement Contre-Espionnage, L'unité gagne +5% [COLOR_HIGHLIGHT_TEXT]Prob. d'Interception[COLOR_REVERT] (pour attraper les espions ennemis) jusqu'à un maximum de +25%, à condition que chaque niveau de promotion soit qualifié par l'unité.</French>
 		<German>Das Spionageabwehr-Training erhöht die Effektivität der Einheit bei der [COLOR_HIGHLIGHT_TEXT]Enttarnung[COLOR_REVERT] von Spionen pro Runde um 5% bis zu einem Maximum von 25%.</German>
 		<Russian>За каждый ход, потраченный на подготовку к этой операции, отряд получает +5% к [COLOR_HIGHLIGHT_TEXT]шансу перехвата[COLOR_REVERT] вражеских шпионов (максимум +25%), при условии, что каждый следующий уровень квалификации выполняется отрядом.</Russian>
@@ -2362,7 +2362,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_BUILD_UP_SET_FOR_CHARGE_HELP</Tag>
-		<English>Each Round spent building up Set For Charge improves the unit's [COLOR_HIGHLIGHT_TEXT]Combat Modifier VS Mounted Units[COLOR_REVERT] when defending the tile they are on, up to a limit of 5 rounds for maximum bonus, provided each promotion level is qualified for by the unit.</English>
+		<English>Each turn spent building up Set For Charge improves the Unit's [COLOR_HIGHLIGHT_TEXT]Combat Modifier VS Mounted Units[COLOR_REVERT] when defending the tile they are on, up to a limit of 5 turns for maximum bonus, provided each Promotion level is qualified for by the Unit.</English>
 		<French>A chaque tour la Spécialisation Préparation contre les attaques montées augmente [COLOR_HIGHLIGHT_TEXT]Modif. de Combat contre les unités montées[COLOR_REVERT] de l'unité, avec un bonus maximum au bout de 5 tours.</French>
 		<Italian>[NEWLINE][ICON_BULLET]Migliora il modificatore di [COLOR_HIGHLIGHT_TEXT]combattimento contro unità su cavalcatura[COLOR_REVERT] in difesa[NEWLINE][ICON_BULLET]Max 5 turni (necessita delle rispettive promozioni)</Italian>
 	</TEXT>
@@ -2376,7 +2376,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_BUILD_UP_TEACH_HELP</Tag>
-		<English>Each Round spent building up Teaching improves the unit's ability to [COLOR_HIGHLIGHT_TEXT]Enhance Education[COLOR_REVERT] in the city they are in, up to a limit of 5 rounds for maximum bonus, provided each promotion level is qualified for by the unit.</English>
+		<English>Each turn spent building up Teaching improves the Unit's ability to [COLOR_HIGHLIGHT_TEXT]Enhance Education[COLOR_REVERT] in the city they are in, up to a limit of 5 turns for maximum bonus, provided each Promotion level is qualified for by the Unit.</English>
 		<French>A chaque tour la Spécialisation Instruction augmente [COLOR_HIGHLIGHT_TEXT]l'instruction[COLOR_REVERT] de l'unité, avec un bonus maximum au bout de 5 tours.</French>
 		<Italian>[NEWLINE][ICON_BULLET]Migliora l'abilità [COLOR_HIGHLIGHT_TEXT]istruzione avanzata[COLOR_REVERT][NEWLINE][ICON_BULLET]Max 5 turni (necessita delle rispettive promozioni)</Italian>
 	</TEXT>
@@ -2389,7 +2389,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_BUILD_UP_TERRITORIAL_VIGILANCE_HELP</Tag>
-		<English>On the first, third and fifth rounds spent building up Territorial Vigilance, the unit gains 1 intensity of [COLOR_HIGHLIGHT_TEXT]Camouflage Vision[COLOR_REVERT] up to a maximum bonus of +3, provided each promotion level is qualified for by the unit.</English>
+		<English>On the first, third, and fifth turns spent building up Territorial Vigilance, the Unit gains 1 intensity of [COLOR_HIGHLIGHT_TEXT]Camouflage Vision[COLOR_REVERT] up to a maximum bonus of +3, provided each Promotion level is qualified for by the Unit.</English>
 		<French>Lors du premier, troisième et cinquième round passé en développement de la spécialisation Surveillance du territoire, L'unité gagne 1 en intensité de [COLOR_HIGHLIGHT_TEXT]détection du Camouflage [COLOR_REVERT] jusqu'à un bonus maximum de +3, reçu pour chaque niveau de promotion obtenu par l'unité.</French>
 		<Italian>[NEWLINE][ICON_BULLET]Aumento di un livello dell'abilità [COLOR_HIGHLIGHT_TEXT]visibilità mimetica[COLOR_REVERT][NEWLINE][ICON_BULLET]Max +3 (necessita delle rispettive promozioni, si attiva al 1°, 3° e 5° turno)</Italian>
 	</TEXT>
@@ -2403,7 +2403,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_BUILD_UP_TRAP_HUNTING_HELP</Tag>
-		<English>Each Round spent building up Trap Hunting improves the unit's [COLOR_HIGHLIGHT_TEXT]Combat Modifier VS Animals[COLOR_REVERT] up to a limit of 5 rounds for maximum bonus, provided each promotion level is qualified for by the unit.</English>
+		<English>Each turn spent building up Trap Hunting improves the Unit's [COLOR_HIGHLIGHT_TEXT]Combat Modifier VS Animals[COLOR_REVERT] up to a limit of 5 turns for maximum bonus, provided each Promotion level is qualified for by the Unit.</English>
 		<French>A chaque tour la Spécialisation pose de piège augmente [COLOR_HIGHLIGHT_TEXT]Modif. de Combat contre les Animaux[COLOR_REVERT] de l'unité, avec un bonus maximum au bout de 5 tours.</French>
 		<Italian>[NEWLINE][ICON_BULLET]Migliora il modificatore di [COLOR_HIGHLIGHT_TEXT]combattimento contro animali[COLOR_REVERT][NEWLINE][ICON_BULLET]Max 5 turni (necessita delle rispettive promozioni)</Italian>
 	</TEXT>
@@ -4278,7 +4278,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_ANIMAL_HUNTER_HELP</Tag>
-		<English>[ICON_BULLET]Fights against animals after the normal experience limit will still give XP points.</English>
+		<English>[ICON_BULLET]Fights against animals after the normal Experience limit will still give XP points.</English>
 		<French>[ICON_BULLET]Les Combats contre les animaux continuent d'ajouter de l'EXP à l'unité.</French>
 		<German>[ICON_BULLET]EP für Kämpfe gegen Tiere über das Erfahrungslimit hinaus</German>
 		<Italian>[ICON_BULLET]I combattimenti contro gli animali dopo il normale limite di XP daranno ancora punti XP.</Italian>
@@ -4641,7 +4641,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_BARBARIAN_HUNTER_HELP</Tag>
-		<English>[ICON_BULLET]Fights against barbarians after the normal experience limit will still give XP points.</English>
+		<English>[ICON_BULLET]Fights against Barbarians after the normal Experience limit will still give XP points.</English>
 		<French>[ICON_BULLET]Les Combats contre les barbares continuent d'ajouter de l'EXP à l'unité.</French>
 		<German>[ICON_BULLET]EP für Kämpfe gegen Barbaren über das Erfahrungslimit hinaus</German>
 		<Italian>[ICON_BULLET]I combattimenti contro i barbari dopo il normale limite di XP daranno ancora punti XP.</Italian>
@@ -10203,7 +10203,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_INDUSTRYESPIONAGE_HELP</Tag>
-		<English>[ICON_BULLET]Plunders 4% of Enemy [ICON_RESEARCH] Reserves on Combat Victory</English>
+		<English>[ICON_BULLET]Plunders 4% of Enemy [ICON_RESEARCH] Reserves on Combat Victory.</English>
 		<French>[ICON_BULLET]Pille 4% de la réserve de [ICON_RESEARCH] ennemie en cas de Victoire au Combat</French>
 		<German>[ICON_BULLET]erbeutet 4% der gegnerischen [ICON_RESEARCH] bei einem Sieg im Kampf</German>
 		<Italian>[ICON_BULLET]Ruba 4% delle risorse nemiche di [ICON_RESEARCH] quando vince una battaglia</Italian>
@@ -10808,7 +10808,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_LIVE1_HELP</Tag>
-		<English>[ICON_BULLET]+1 Life[NEWLINE][ICON_BULLET]The unit will lose the promotion, when it is killed</English>
+		<English>[ICON_BULLET]+1 Life[NEWLINE][ICON_BULLET]The unit will lose the promotion, when it is killed.</English>
 		<French>[ICON_BULLET]+1 Vie[NEWLINE][ICON_BULLET]L'unité perd la promotion lorsqu'elle est tuée</French>
 		<German>[ICON_BULLET]+1 Leben[NEWLINE][ICON_BULLET]Wird die Beförderung verlieren, wenn sie getötet wird</German>
 		<Italian>[ICON_BULLET]+1 Vita[NEWLINE][ICON_BULLET]L'unità perderà la promozione, quando viene uccisa</Italian>
@@ -10827,7 +10827,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_LIVE2_HELP</Tag>
-		<English>[ICON_BULLET]+1 Life[NEWLINE][ICON_BULLET]The unit will lose the promotion, when it is killed</English>
+		<English>[ICON_BULLET]+1 Life[NEWLINE][ICON_BULLET]The unit will lose the promotion, when it is killed.</English>
 		<French>[ICON_BULLET]+1 Vie[NEWLINE][ICON_BULLET]L'unité perd la promotion lorsqu'elle est tuée</French>
 		<German>[ICON_BULLET]+1 Leben[NEWLINE][ICON_BULLET]Wird die Beförderung verlieren, wenn sie getötet wird</German>
 		<Italian>[ICON_BULLET]+1 Vita[NEWLINE][ICON_BULLET]L'unità perderà la promozione, quando viene uccisa</Italian>
@@ -13310,7 +13310,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_RETINUE_MESSENGER_HELP</Tag>
-		<English>[ICON_BULLET]10% Chance to Heal after Combat Victory</English>
+		<English>[ICON_BULLET]10% Chance to Heal after Combat Victory.</English>
 		<French>[ICON_BULLET]10% de Chances d'être soigné après une Victoire</French>
 		<Italian>[ICON_BULLET]10% di chance di guarire dopo una vittoria</Italian>
 		<Spanish>[ICON_BULLET]Probabilidad del 10% de curarse completamente tras una victoria</Spanish>
@@ -14367,7 +14367,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_SNEAK_HELP</Tag>
-		<English>[ICON_BULLET]Plunders 4% of Enemy [ICON_ESPIONAGE] Reserves on Combat Victory</English>
+		<English>[ICON_BULLET]Plunders 4% of Enemy [ICON_ESPIONAGE] Reserves on Combat Victory.</English>
 		<French>[ICON_BULLET]Pille 4% de la réserve d'[ICON_ESPIONAGE] après une Victoire au Combat</French>
 		<German>[ICON_BULLET]erbeutet 4% der gegnerischen [ICON_ESPIONAGE] bei einem Sieg im Kampf</German>
 		<Italian>[ICON_BULLET]Ruba 4% delle riserve nemiche di [ICON_ESPIONAGE] vincendo una battaglia</Italian>

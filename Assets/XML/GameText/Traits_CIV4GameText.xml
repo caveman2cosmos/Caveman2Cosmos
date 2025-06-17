@@ -2,7 +2,7 @@
 <Civ4GameText xmlns="http://www.firaxis.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.firaxis.com ../Schema/Civ4Gametext.xsd">
 	<TEXT>
 		<Tag>TXT_KEY_DOMESTIC_GREAT_GENERAL_MODIFIER_C2C</Tag>
-		<English>[ICON_BULLET]%D1%% Great Military People Emergence inside Cultural Borders</English>
+		<English>[ICON_BULLET]%D1%% Great Military People Emergence inside Cultural Borders.</English>
 		<French>[ICON_BULLET]%D1%% Émergence des militaires illustres à l'intérieur des frontières culturelles</French>
 		<German>[ICON_BULLET]%D1%% Geburtenrate für Große Feldherren innerhalb der eigenen Grenzen</German>
 		<Russian>[ICON_BULLET]%D1%% шансов на рождение Великого генерала внутри культурных границ</Russian>
@@ -17,7 +17,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAITHELP_ATTITUDE_MODIFIER_NEGATIVE</Tag>
-		<English>[ICON_BULLET]%D1_Num Diplomacy Penalty (inverts to a bonus with Leaders with same trait)</English>
+		<English>[ICON_BULLET]%D1_Num Diplomacy Penalty (inverts to a bonus with Leaders with same trait).</English>
 		<French>[ICON_BULLET]%D1_Num Pénalité Diplomatique (se compense avec un bonus pour un Leader du meme trait)</French>
 		<German>[ICON_BULLET]Diplomatische Strafe: %D1_Num (wird zu einem Bonus bei Anführern mit derselben Charaktereigenschaft)</German>
 		<Italian>[ICON_BULLET]%D1_Num di penalità nei rapporti diplomatici (diventa un bonus nei confronti di leader con lo stesso tratto)</Italian>
@@ -35,7 +35,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAITHELP_BOMBARD_DEFENSE_MOD</Tag>
-		<English>[ICON_BULLET]%D1_Mod%% Damage to Defenses and Units from Bombardment and Ranged Assault in all cities</English>
+		<English>[ICON_BULLET]%D1_Mod%% Damage to Defenses and Units from Bombardment and Ranged Assault in all cities.</English>
 		<French>[ICON_BULLET]%D1_Mod%% de Protection des Bombardements dans toutes les villes</French>
 		<German>[ICON_BULLET]%D1_Mod%% Schaden an der Verteidigung durch Bombardierung in all cities</German>
 		<Italian>[ICON_BULLET]Danni da bombardamento in tutte le tue città %D1_Mod%%</Italian><!--Aerial CT trait in the pedia-->
@@ -73,7 +73,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAITHELP_CAPITAL_XP_MODIFIER</Tag>
-		<English>[ICON_BULLET]%D1%% Free Experience to all units trained in a Capital or Government Center</English>
+		<English>[ICON_BULLET]%D1%% Free Experience to all units trained in a Capital or Government Center.</English>
 		<French>[ICON_BULLET]%D1%% EXP gratuite à toutes les unités formées dans la capitale ou un centre gouvernemental</French>
 		<Italian>[ICON_BULLET]%D1%% esperienza gratuita a tutte le unità addestrate nella capitale</Italian>
 		<Polish>[ICON_BULLET]%D1%% Darmowego do&#156;wiadczenia dla jednostek wytrenowanych w Stolicy</Polish>
@@ -81,7 +81,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAITHELP_CITY_START_CULTURE</Tag>
-		<English>[ICON_BULLET]New cities begin with %D1 culture</English>
+		<English>[ICON_BULLET]New cities begin with %D1 Culture.</English>
 		<French>[ICON_BULLET]Les nouvelles Villes commencent avec %D1 culture</French>
 		<Italian>[ICON_BULLET]Le nuove città cominciano con %D1 cultura</Italian>
 		<Polish>[ICON_BULLET]Nowe miasta rozpoczynaj&#185; z: %D1 kultury</Polish>
@@ -105,7 +105,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAITHELP_CIVIC_LEVEL_MODIFIER</Tag>
-		<English>[ICON_BULLET]%D1%% XP Needed for Unit Promotions</English>
+		<English>[ICON_BULLET]%D1%% XP Needed for Unit Promotions.</English>
 		<French>[ICON_BULLET]%D1%% EXP pour la promotion des unités</French>
 		<German>[ICON_BULLET]%D1%% EP für Einheitenbeförderungen erforderlich</German>
 		<Italian>[ICON_BULLET]%D1%% XP richiesti per la promozione</Italian>
@@ -125,7 +125,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAITHELP_CIVILIZATION</Tag>
-		<English>[ICON_BULLET]Civilizations can Earn this Trait - Not available for Leader selections</English>
+		<English>[ICON_BULLET]Civilizations can Earn this Trait - Not available for Leader selections.</English>
 		<French>[ICON_BULLET]Les Civilizations peuvent avoir ce Trait - N'est pas disponible à la sélection</French>
 		<Italian>[ICON_BULLET]Le civiltà possono ottenere questo tratto; non è disponibile nella selezione dei leader</Italian>
 		<Polish>[ICON_BULLET]Tylko Cywilizacja mo&#191;e otrzyma&#230; t&#185; cech&#234; - Niedost&#234;pne dla Przyw&#243;dc&#243;w</Polish>
@@ -150,7 +150,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAITHELP_DISABLED_OFF</Tag>
-		<English>[ICON_BULLET][COLOR_WARNING_TEXT]This trait is only for leaders when playing the Developing Leader Option[COLOR_REVERT]</English>
+		<English>[ICON_BULLET][COLOR_WARNING_TEXT]This trait is only for leaders when playing the Developing Leader Option[COLOR_REVERT].</English>
 		<French>[ICON_BULLET][COLOR_WARNING_TEXT]Ce trait est uniquement pour les joueurs ayant activé l'option Développement des Leader[COLOR_REVERT]</French>
 		<German>[ICON_BULLET][COLOR_WARNING_TEXT]nur bei aktivierter Einstellung "Führungskräfteentwicklung" verfügbar[COLOR_REVERT]</German>
 		<Italian>[ICON_BULLET][COLOR_WARNING_TEXT]Questo tratto è disponibile solo se l'opzione "Personalità in sviluppo" è attivata[COLOR_REVERT]</Italian>
@@ -159,7 +159,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAITHELP_DISABLED_ON</Tag>
-		<English>[ICON_BULLET][COLOR_WARNING_TEXT]This trait is only for leaders when not playing the Developing Leader Option[COLOR_REVERT]</English>
+		<English>[ICON_BULLET][COLOR_WARNING_TEXT]This trait is only for leaders when not playing the Developing Leader Option[COLOR_REVERT].</English>
 		<French>[ICON_BULLET][COLOR_WARNING_TEXT]Ce trait est uniquement pour les joueurs n'utilisant pas l'option Développement des Leader[COLOR_REVERT]</French>
 		<German>[ICON_BULLET][COLOR_WARNING_TEXT]bei aktivierter Einstellung "Führungskräfteentwicklung" nicht verfügbar[COLOR_REVERT]</German>
 		<Italian>[ICON_BULLET][COLOR_WARNING_TEXT]Questo tratto è disponibile solo se l'opzione "Personalità in sviluppo" è disattivata[COLOR_REVERT]</Italian>
@@ -211,7 +211,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAITHELP_FLIGHT_RANGE</Tag>
-		<English>[ICON_BULLET]%D1_Amount Flight Operation Range for Air units.</English>
+		<English>[ICON_BULLET]%D1_Amount Flight Operation Range for Air Units.</English>
 		<French>[ICON_BULLET]%D1_Amount de portée opérationnelle pour les unités aériennes.</French>
 		<Italian>[ICON_BULLET]Raggio d'azione per le unità aeree %D1_Amount</Italian><!--Aerial CT trait in the pedia-->
 		<Polish>[ICON_BULLET]%D1_Amount Zasi&#234;gu Operacyjnego dla jednostek Powietrznych.</Polish>
@@ -284,13 +284,13 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAITHELP_HOLY_CITY_NON_STATE_REL_XP_MODIFIER</Tag>
-		<English>[ICON_BULLET]%D1%% Free Experience to all units trained in Holy Cities of Non-State Religions</English>
+		<English>[ICON_BULLET]%D1%% Free Experience to all units trained in Holy Cities of Non-State Religions.</English>
 		<French>[ICON_BULLET]%D1%% EXP Gratuite pour toutes les unités formées dans les Villes Saintes des religions non étatiques</French>
 		<Russian>[ICON_BULLET]%D1%% бесплатного опыта всем отрядам, обученным в Священных городах негос. религий</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAITHELP_HOLY_CITY_STATE_REL_XP_MODIFIER</Tag>
-		<English>[ICON_BULLET]%D1%% Free Experience to all units trained in the Holy City of your State Religion</English>
+		<English>[ICON_BULLET]%D1%% Free Experience to all units trained in the Holy City of your State Religion.</English>
 		<French>[ICON_BULLET]%D1%% Expérience gratuite pour toutes les unités formées dans la ville sainte de votre religion d'État</French>
 		<Italian>[ICON_BULLET]%D1%% esperienza gratuita a tutte le unità addestrate nella Città santa della tua religione di stato.</Italian>
 		<Polish>[ICON_BULLET]%D1%% Darmowego do&#156;wiadczenia dla jednostek wytrenowanych w &#140;wi&#234;tym Mie&#156;cie Twojej Religi Narodowej</Polish>
@@ -335,7 +335,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAITHELP_MISSILE_CARGO_SPACE</Tag>
-		<English>[ICON_BULLET]%D1_Amount Cargo Space for all Missile Carrying units.</English>
+		<English>[ICON_BULLET]%D1_Amount Cargo Space for all Missile Carrying Units.</English>
 		<French>[ICON_BULLET]%D1_Amount Espace de chargement pour toutes les unités de transport de missiles.</French>
 		<Italian>[ICON_BULLET]Spazio di carico %D1_Amount per tutte le unità di trasporto missili.</Italian><!--Aerial CT trait in the pedia-->
 		<Polish>[ICON_BULLET]%D1_Amount Miejsc dla Rakiet dla jednostek przewo&#191;&#185;cych rakiety.</Polish>
@@ -343,7 +343,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAITHELP_MISSILE_RANGE</Tag>
-		<English>[ICON_BULLET]%D1_Amount Mission Operation Range for Missile units.</English>
+		<English>[ICON_BULLET]%D1_Amount Mission Operation Range for Missile Units.</English>
 		<French>[ICON_BULLET]%D1_Amount Portée opérationnelle pour les unités de missiles.</French>
 		<Russian>[ICON_BULLET]%D1_Amount к радиусу действия для всех типов ракет.</Russian>
 		<Italian>[ICON_BULLET]Raggio di azione per le unità missilistiche %D1_Amount</Italian><!--Aerial CT trait in the pedia-->
@@ -360,7 +360,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAITHELP_NAVAL_CARGO_SPACE</Tag>
-		<English>[ICON_BULLET]%D1_Amount Cargo Space for all transport-capable Naval units.</English>
+		<English>[ICON_BULLET]%D1_Amount Cargo Space for all transport-capable Naval Units.</English>
 		<French>[ICON_BULLET]%D1_Amount Espace de chargement pour toutes les unités navales de transport.</French>
 		<Italian>[ICON_BULLET]%D1_Amount allo spazio di trasporto per tutte le unità navali da trasporto.</Italian>
 		<Polish>[ICON_BULLET]%D1_Amount Miejsc dla wszystkich jednostek transportuj&#185;cych - morskich.</Polish>
@@ -377,7 +377,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAITHELP_NONSTATE_RELIGIOUS_COMMERCE</Tag>
-		<English>[ICON_BULLET]Non State [ICON_RELIGION] Still produces base [ICON_CULTURE], [ICON_GOLD], [ICON_RESEARCH] amounts.</English>
+		<English>[ICON_BULLET]Non-State [ICON_RELIGION] Still produces base [ICON_CULTURE], [ICON_GOLD], [ICON_RESEARCH] amounts.</English>
 		<French>
 			<Text>[ICON_BULLET]Le [ICON_RELIGION] (non officielle) produit encore [ICON_CULTURE], [ICON_GOLD], [ICON_RESEARCH]</Text>
 			<Gender>Male:Female:Male:Female</Gender>
@@ -395,7 +395,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAITHELP_NON_STATE_REL_SPREAD_MODIFIER</Tag>
-		<English>[ICON_BULLET]%D1%% chance to Spread Non State Religion with your Missionaries.</English>
+		<English>[ICON_BULLET]%D1%% chance to Spread Non-State Religion with your Missionaries.</English>
 		<French>[ICON_BULLET]%D1%% chances de propager la religion non étatique avec vos missionnaires.</French>
 		<Italian>[ICON_BULLET]%D1%% di diffondere una religione non di stato con i tuoi missionari.</Italian>
 		<Polish>[ICON_BULLET]%D1%% do szansy rozszerzenia Religi Nie-Pa&#241;stwowej przez Misjonarzy.</Polish>
@@ -403,7 +403,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAITHELP_NOT_ON_GAME_OPTION</Tag>
-		<English>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Deactivated when the %s2_Option Game Option is in use[COLOR_REVERT]</English>
+		<English>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Deactivated when the %s2_Option Game Option is in use[COLOR_REVERT].</English>
 		<French>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]désactivé lorsque l'option %s2_Option est active[COLOR_REVERT]</French>
 		<Italian>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Inattivo se l'opzione %s2_Option è attivata[COLOR_REVERT]</Italian>
 		<Polish>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Dezaktywuje si&#234; gdy opcja: %s2_Option jest aktywna[COLOR_REVERT]</Polish>
@@ -431,7 +431,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAITHELP_ON_GAME_OPTION</Tag>
-		<English>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Only active when the %s1_Option Game Option is in use[COLOR_REVERT]</English>
+		<English>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Only active when the %s1_Option Game Option is in use[COLOR_REVERT].</English>
 		<French>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]actif uniquement lorsque l'option %s1_Option est active[COLOR_REVERT]</French>
 		<German>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]nur bei aktivierter Einstellung "%s1_Option" verfügbar[COLOR_REVERT]</German>
 		<Italian>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Tratto attivo solo se l'opzione %s1_Option è stata selezionata[COLOR_REVERT]</Italian>
@@ -573,7 +573,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAITHELP_WORKER_SPEED_NEGATIVE</Tag>
-		<English>[ICON_BULLET]Workers build improvements with a %D1_Modifier%% speed penalty</English>
+		<English>[ICON_BULLET]Workers build Improvements with a %D1_Modifier%% speed penalty.</English>
 		<French>[ICON_BULLET]Les Ouvriers construisent les aménagements avec un pénalité de %D1_Modifier%%</French>
 		<Italian>[ICON_BULLET]I lavoratori costruiscono i miglioramenti con una velocità modificata del %D1_Modifier%%</Italian><!--Aerial CT trait in the pedia-->
 		<Polish>[ICON_BULLET]Robotnicy buduj&#185; ulepszenia z pr&#234;dko&#156;ci&#185;: %D1_Modifier%%</Polish>
@@ -581,7 +581,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAITHELP_WORKER_SPEED_POSITIVE</Tag>
-		<English>[ICON_BULLET]Workers build improvements %D1_Modifier%% faster</English>
+		<English>[ICON_BULLET]Workers build Improvements %D1_Modifier%% faster.</English>
 		<French>[ICON_BULLET]Les Ouvriers construisent les aménagements %D1_Modifier%% plus vite</French>
 		<Italian>[ICON_BULLET]I lavoratori costruiscono i miglioramenti il %D1_Modifier%% più velocemente</Italian>
 		<Polish>[ICON_BULLET]Robotnicy buduj&#185; ulepszenia szybciej o: %D1_Modifier%%</Polish>

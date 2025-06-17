@@ -20,7 +20,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISSION_AIRBOMB1_HELP</Tag>
-		<English>Select an air unit that can airbomb, select the airbomb defense mission, then click on the target city to reduce defense, or target improvement to destroy it.</English>
+		<English>Select an air unit that can airbomb, select the airbomb defense mission, then click on the target city to reduce defense, or target an Improvement to destroy it.</English>
 		<French>Sélectionnez une unité aérienne capable de bombarder, puis la mission de bombardement de défenses. Cliquez ensuite sur la cible pour réduire son pourcentage de défense ou ciblez une amélioration de terrain pour la détruire.</French>
 		<German>Wählen Sie eine Lufteinheit, die Luftbombardierungen durchführen kann, aktivieren Sie die Mission "Luftbombardierung Verteidigungen" und klicken Sie dann auf die Zielstadt, um deren Verteidigung zu schwächen, oder auf eine Modernisierung, um diese zu zerstören.</German>
 		<Italian>[NEWLINE]Seleziona "bombarda difese" e poi una città per abbatterne le difese oppure seleziona un miglioramento per distruggerlo.</Italian>
@@ -110,7 +110,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISSION_AIRBOMB_HELP</Tag>
-		<English>Destroys city fortifications and tile improvements.</English>
+		<English>Destroys city fortifications and tile Improvements.</English>
 		<French>Détruire les fortifications de la ville et les aménagements des cases.</French>
 		<German>Zerstören Sie Befestigungen und Modernisierungen.</German>
 		<Italian>[NEWLINE]Distrugge le fortificazioni della città e i miglioramenti delle casella.</Italian>
@@ -134,14 +134,14 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISSION_AMBUSH</Tag>
-		<English>Ambush enemy Units on the same tile!</English>
+		<English>Ambush enemy units on the same tile!</English>
 		<French>Tendre une Embuscade aux ennemis sur la même case!</French>
 		<Italian>[NEWLINE]Tendi un'imboscata (sulla stessa casella)</Italian>
 		<Russian>Устройте засаду вражеским отрядам на этой клетке!</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISSION_AMBUSH_HELP</Tag>
-		<English>Attacks best defender of enemy target(s) on same plot. WARNING: You should only have one unit selected at a time for this or else it will always choose the first available unit to attack with and will not show an accurate odds assessment.</English>
+		<English>Attacks the best defender of enemy target(s) on the same plot. WARNING: You should only have one unit selected at a time for this or else it will always choose the first available unit to attack with and will not show an accurate odds assessment.</English>
 		<French>Attaque le meilleur défenseur ennemi sur la même case. ATTENTION: Action à exécuter avec une seule unité sélectionnée. Sinon le combat sera lancé avec la première unité dans la liste!</French>
 		<Italian>[NEWLINE]Attacca l'unità nemica con la migliore difesa sulla stessa casella. ATTENZIONE: seleziona solo un'unità alla volta o il sistema sceglierà la prima unità disponibile per attaccare.</Italian>
 		<Russian>Атакует лучшего защитника среди вражеской цели(ей) на той же клетке. ВНИМАНИЕ: для этого нужно выбирать лишь один отряд за раз, иначе он всегда будет выбирать первый доступный отряд для атаки и покажет точную оценку шансов.</Russian>
@@ -158,14 +158,14 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISSION_ASSASSINATE</Tag>
-		<English>Assassinate enemy Units on the same tile!</English>
+		<English>Assassinate enemy units on the same tile!</English>
 		<French>Assassiner une unité ennemie de la même case!</French>
 		<Italian>[NEWLINE]Assassina unità nemiche (sulla stessa casella)</Italian>
 		<Russian>Убить вражеские единицы на этой клетке.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISSION_ASSASSINATE_HELP</Tag>
-		<English>Attacks best defender of enemy target(s), among unit types that this unit will target first in a stack, on same plot. Works inside a city. WARNING: You should only have one unit selected for this action.</English>
+		<English>Attacks the best defender of enemy target(s), prioritizing unit types this unit will targets first in a stack, on the same plot. Works inside a city. WARNING: You should only have one unit selected for this action.</English>
 		<French>Attaque le meilleur défenseur de la cible ennemie présente sur la même case. Utilisable dans une ville. ATTENTION: ne sélectionner qu'une seule unité pour cette action.</French>
 		<Italian>[NEWLINE]Attacca l'unità nemica con la migliore difesa sulla stessa casella, tra i tipi di unità che questa unità può attaccare per primi. Funziona all'interno di una città. ATTENZIONE: seleziona solo un'unità alla volta per questa azione.</Italian>
 		<Russian>Атакует лучшего защитника среди вражеской цели(ей) (из числа однородных с ним отрядов в стеке) на той же клетке. Работает внутри города. ВНИМАНИЕ: для этого действия у вас должен быть выбран лишь один отряд.</Russian>
@@ -223,7 +223,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISSION_BUILDUP_HELP</Tag>
-		<English>Select a Promotion Line and gain an additional auto-promotion from the next level on that line for each round (up to 5) that the unit stays building up the ability. Unit loses all Build Up promotions when it next moves. (An alternative form of Fortification.)</English>
+		<English>Select a Promotion Line. For each turn the unit remains stationary, it gains an  additional automatic Promotion from the next level in that line. Unit loses all Build Up Promotions when it next moves. (An alternative form of Fortification.)</English>
 		<French>Permet de cumuler le retranchement tout en choisissant une Spécialisation permettant de développer des compétences (sous forme de promotion) à chaque tour tant que l'unité reste sur place. (Il s'agit d'une alternative à 'Se retrancher F'.)</French>
 		<German>Einheit zum Training in einer bestimmten Beförderungsreihe abstellen. Pro Runde Training erhält die Einheit eine Zusatzbeförderung (maximal 5 Runden lang). Diese Beförderungen sind nicht dauerhaft. Sie gehen verloren, sobald sich die Einheit bewegt.</German>
 		<Italian>[NEWLINE]Auto-promozione sulla linea selezionata (max 5 turni). Muovere l'unità fa perdere tutti i vantaggi dell'allenamento.</Italian>
@@ -267,7 +267,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISSION_BUTCHER_HELP</Tag>
-		<English>Butchers a subdued animal, gives more resources in friendly territory and even more in city.</English>
+		<English>Butchers a Subdued Animal, gives resources in friendly territory and even more in city.</English>
 		<French>Abattre un animal apprivoisé donne davantage de ressources en territoire ami, et encore plus dans la ville.</French>
 		<Italian>[NEWLINE]Produce più risorse se si è in territorio amico e ancora di più nelle città.</Italian>
 		<Spanish>Descuartiza un animal domado; dará más recursos en el territorio propio, y aún más en una ciudad.</Spanish>
@@ -325,7 +325,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISSION_CONDUCT_TRADE_MISSION_HELP</Tag>
-		<English>Conduct a trade mission in this city. The amount of gold created is relative to the size of the city and distance to the city the unit was trained or born in, as well as if the city is foreign. It consumes a Great Person, but sends regular merchants and criminals back to the capital. Criminals, attempting to trade their contraband, may fail an investigation check for this mission and thus fail to derive the gold, lose their movement for the turn and become 'Wanted'.</English>
+		<English>Conduct a Trade Mission in this city. The amount of Gold created is relative to the size of the city and the distance to the city the unit was trained in, as well as if the city is foreign. It consumes a Great Person, but sends regular merchants and criminals back to the capital. Criminals, attempting to trade their contraband, may fail an investigation check for this mission and thus fail to derive the Gold, and they may lose their movement for the turn and become 'Wanted'.</English>
 		<Russian>Проведите торговую миссию в этом городе. Количество полученного золота зависит от размера города, в котором отряд был обучен, а также размера и расстояния до города в пункте назначения, и от того, является ли город иностранным. При этом тратится Великий человек, но отправляет в столицу обычных торговцев и преступников. Преступники, пытающиеся продать свою контрабанду, могут не пройти проверку правоохранителей в этой миссии и, таким образом, не получить золото, потерять очки движения на ход и оказаться в розыске.</Russian>
 		<Italian>[NEWLINE]Inizia una missione commerciale in questa città. La quantità di oro creata dipende dalle dimensioni e dalla distanza dalla città in cui l'unità è stata addestrata o in cui è nata, e dipende anche dal fatto che la città sia straniera. Consuma un gran personaggio, ma rimanda alla capitale mercanti e criminali regolari.</Italian>
 	</TEXT>
@@ -403,7 +403,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISSION_DISCOVER_TECH_HELP</Tag>
-		<English>This will have the Great Person help research a technology. It consumes the Great Person.</English>
+		<English>This will have the Great Person help research a Technology. It consumes the Great Person.</English>
 		<French>Ordonner au personnage illustre de découvrir automatiquement une nouvelle technologie. Le personnage illustre est alors détruit.</French>
 		<German>Opfern Sie die Große Persönlichkeit, damit diese automatisch eine Technologie entdeckt.</German>
 		<Italian>[NEWLINE]Il gran personaggio aiuta a scoprire una tecnologia. L'unità viene sacrificata nel processo.</Italian>
@@ -421,7 +421,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISSION_ESPIONAGE_SLEEP_HELP</Tag>
-		<English>This unit will gather intelligence and not awaken until it reaches the maximum espionage bonus</English>
+		<English>This unit will gather intelligence and not awaken until it reaches the maximum Espionage bonus</English>
 		<French>Cette Unité va récolter des Informations et devenir à nouveau active lorsqu'elle aura atteint son bonus maximum d'espionnage.</French>
 		<German>Diese Einheit wird Informationen sammeln und nicht aufwachen bis sie ihr Maximum an Spionagepunkten erreicht hat</German>
 		<Italian>[NEWLINE]L'unità raccoglierà informazioni e non si riattiverà finché non avrà raggiunto il massimo bonus di spionaggio.</Italian>
@@ -460,7 +460,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISSION_FORTIFY_HELP</Tag>
-		<English>The unit "digs in" to better withstand enemy attack. A unit gets a cumulative 5%% defensive bonus (plus it's Dig In ability) for each turn it is fortified, capping out at 5 rounds. Note that on Hide and Seek games, Fortified units automatically lose all invisibility.</English>
+		<English>The unit "digs in" to better withstand enemy attack. A unit gets a cumulative 5% defensive bonus (plus it's Dig In ability) for each turn it is fortified, capping out after 5 turns. Note that on Hide and Seek games, Fortified units automatically lose all invisibility.</English>
 		<French>L'unité s'installe et profite du terrain pour mieux résister aux attaques ennemies. Une unité obtient un bonus défensif cumulatif de 5%% (plus sa capacité de retranchement) pour chaque tour où elle est fortifiée, plafonnant à 5 tours. Notez qu'avec le mode de combat cache-cache, les unités fortifiées perdent automatiquement toute invisibilité.</French>
 		<German>Einheit in Befestigungsmodus versetzen zur besseren Verteidigung im Falle eines Angriffs. Pro befestigter Runde erhält die Einheit einen zusätzlichen Verteidigungsbonus von 5%%, bis zu einem Maximum von 25%%. Befestigte Einheiten verlieren im "Versteckspiel" jegliche Unsichtbarkeit.</German>
 		<Italian>[NEWLINE]Bonus difensivo del 5% (più i vantaggi della sua abilità) per ogni turno (max 5 turni). Con l'opzione "nascondino" attiva, le unità fortificate perdono l'invisibilità</Italian>
@@ -587,11 +587,11 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISSION_GREAT_COMMODORE_HELP</Tag>
-		<English>Sea commodore, will lose its ability to join cities make wonders, but will get the ability to earn experience promotions and lead naval units into battle.</English>
+		<English>Sea Commodore, will lose its ability to join cities make Wonders, but will get the ability to earn Experience, gain Promotions and lead naval units into battle.</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISSION_GREAT_COMMANDER_HELP</Tag>
-		<English>Turns the Great General into a Field Commander: it loses its abilities to join cities, units, or construct wonders, but acquires the ability to earn experience, gain promotions, and lead units in the field.</English>
+		<English>Turns the Great General into a Field Commander: it loses its abilities to join cities, units, or construct Wonders, but acquires the ability to earn Experience, gain Promotions, and lead units in the field.</English>
 		<French>Converti le Général Illustre en Commandant de Terrain, qui perd la possibilité de s'associer aux Villes et Unités, mais peut acquérir de l'expérience et des promotions, et mener les Unités sur le terrain.</French>
 		<German>Verwandelt den Großen General in einen Feldkommandeur, wodurch er seine normalen Fertigkeiten verliert. Dafür kann er nun Erfahrungspunkte und Beförderungen aus Schlachten erhalten, an denen er teilnimmt, und damit die Einheiten in seinem näheren Umfeld unterstützen.</German>
 		<Italian>[NEWLINE]Trasforma il gran generale in un comandante da campo: perderà l'abilità di unirsi a città ed unità e di costruire le Meraviglie, ma guadagnerà esperienza, promozioni e potrà condurre altre unità sul campo.</Italian>
@@ -655,7 +655,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISSION_HURRY_FOOD_HELP</Tag>
-		<English>This order will increase the cities food supply. It consumes the unit.</English>
+		<English>This order will increase the cities Food supply. It consumes the unit.</English>
 		<French>Cet Ordre va accroitre la réserve de nourriture des Villes. L'unité est détruite.</French>
 		<German>Dieser Befehl wird die Nahrungsmittelvorräte in der Stadt erhöhen. Die Einheit wird dabei verbraucht.</German>
 		<Italian>[NEWLINE]Incrementa le riserve di cibo della città. Consuma l'unità nel processo.</Italian>
@@ -708,7 +708,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISSION_INQUISITION_HELP</Tag>
-		<English>Allows the unit to remove all non-state religions.</English>
+		<English>Allows the unit to remove all Non-State Religions.</English>
 		<French>Permet à l'unité de purger la ville de toutes les religions non officielles.</French>
 		<German>Ermöglicht der Einheit alle nichtstaatlichen Religionen zu entfernen.</German>
 		<Italian>[NEWLINE]Permette all'unità di rimuovere tutte le religioni non di stato.</Italian>
@@ -742,7 +742,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISSION_JOIN_CITY_HELP</Tag>
-		<English>This order will make the Great Person join the city as a super specialist. It will consume the Great Person.</English>
+		<English>This order will make the Great Person join the city as a Super Specialist. It will consume the Great Person.</English>
 		<French>Ordonner à ce personnage illustre de rejoindre la ville en tant que super-spécialiste. Il est alors détruit.</French>
 		<German>Opfern Sie eine Große Persönlichkeit und befehlen Sie ihr, sich als Super-Spezialist in der Stadt anzusiedeln.</German>
 		<Italian>[NEWLINE]Il gran personaggio può unirsi alla città in veste di super specialista, venendo sacrificato nel processo.</Italian>
@@ -766,7 +766,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISSION_LAWYER_REMOVE_CORPORATIONS</Tag>
-		<English>[COLOR_HIGHLIGHT_TEXT]Litigate[COLOR_REVERT][NEWLINE]Take legal action and drive all corporations from the city.</English>
+		<English>[COLOR_HIGHLIGHT_TEXT]Litigate[COLOR_REVERT][NEWLINE]Take legal action and drive all Corporations from the city.</English>
 		<French>[COLOR_HIGHLIGHT_TEXT]mettre en litige[COLOR_REVERT][NEWLINE]Prendre des mesures juridiques et conduire toutes les entreprises de la ville au procès.</French>
 		<Italian>[COLOR_HIGHLIGHT_TEXT]Querela[COLOR_REVERT]</Italian>
 		<Spanish>[COLOR_HIGHLIGHT_TEXT]Denunciar[COLOR_REVERT][NEWLINE]Tomar acciones legales para expulsar a todas las corporaciones de la ciudad.</Spanish>
@@ -775,7 +775,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISSION_LAWYER_REMOVE_CORPORATIONS_HELP</Tag>
-		<English>[COLOR_HIGHLIGHT_TEXT]Litigate[COLOR_REVERT][NEWLINE]Take legal action and drive all corporations from the city.</English>
+		<English>[COLOR_HIGHLIGHT_TEXT]Litigate[COLOR_REVERT][NEWLINE]Take legal action and drive all Corporations from the city.</English>
 		<French>[COLOR_HIGHLIGHT_TEXT]mettre en litige[COLOR_REVERT][NEWLINE]Prendre des mesures juridiques et conduire toutes les entreprises de la ville au procès.</French>
 		<Italian>[NEWLINE]Tramite azioni legali rimuovi tutte le corporazioni dalla città.</Italian>
 		<Spanish>[ICON_BULLET]Puede tomar acciones legales</Spanish>
@@ -890,7 +890,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISSION_PILLAGE_HELP</Tag>
-		<English>The unit destroys an improvement in the tile it occupies.</English>
+		<English>The unit destroys an Improvement in the tile it occupies.</English>
 		<French>L'unité détruit un aménagement de terrain dans la case qu'elle occupe.</French>
 		<German>Die Einheit plündert und zerstört Landschaftsverbesserungen auf ihrem Geländefeld.</German>
 		<Italian>[NEWLINE]L'unità distrugge un miglioramento sulla casella che occupa.</Italian>
@@ -908,7 +908,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISSION_PLUNDER_HELP</Tag>
-		<English>The unit disrupts the trade route so that no intercontinental trade can pass through the blockaded tile</English>
+		<English>The unit disrupts the Trade Route so that no intercontinental trade can pass through the blockaded tile</English>
 		<French>L'unité effectue le blocus de la case pour empêcher tout commerce intercontinental par cette route commerciale.</French>
 		<German>Die Einheit unterbricht den Handelsweg, daher kann kein interkontinentaler Handel auf dem blockierten Geländefeld stattfinden</German>
 		<Italian>[NEWLINE]L'unità interrompe la rotta commerciale in modo che non possa passare dalla casella bloccata.</Italian>
@@ -985,7 +985,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISSION_ROUTE_TO_HELP</Tag>
-		<English>This order causes the worker to build a road (or railroad) to the location selected. The worker will follow the shortest path to the location. The worker wakes when it has completed the assignment.</English>
+		<English>This order causes the Worker to build a road Improvement (or railroad) to the location selected. The Worker will follow the shortest path to the location. The Worker wakes when it has completed the assignment.</English>
 		<French>Ordonner à l'ouvrier de construire une route (ou une voie ferrée) vers l'endroit indiqué. Il suivra le chemin le plus court et sera à nouveau disponible lorsqu'il aura terminé sa mission.</French>
 		<German>Befehlen Sie einem Bautrupp, eine Straße (oder Eisenbahnstrecke) zur gewählten Position zu bauen. Ihr Bautrupp wählt nun den kürzesten Weg und wartet nach dem Bau der Straße/Eisenbahnstrecke auf weitere Befehle.</German>
 		<Italian>[NEWLINE]Il lavoratore costruisce un percorso fino alla casella selezionata. Seguirà il percorso più breve per raggiungere la casella e interromperà l'automazione quando avrà completato il proprio incarico.</Italian>
@@ -1001,7 +1001,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISSION_SABOTAGE_HELP</Tag>
-		<English>The [COLOR_UNIT_TEXT]Spy[COLOR_REVERT] will attempt to sabotage the tile's improvement.</English>
+		<English>The [COLOR_UNIT_TEXT]Spy[COLOR_REVERT] will attempt to sabotage the tile's Improvement.</English>
 		<French>L'[COLOR_UNIT_TEXT]espion[COLOR_REVERT] tente de saboter un aménagement sur cette case.</French>
 		<German>Der [COLOR_UNIT_TEXT]Spion[COLOR_REVERT] versucht, alle Modernisierungen eines Geländefelds zu sabotieren.</German>
 		<Italian>[NEWLINE]La [COLOR_UNIT_TEXT]spia[COLOR_REVERT] tenterà di sabotare il miglioramento della casella.</Italian>
@@ -1153,7 +1153,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISSION_SPREAD_CORPORATION_HELP</Tag>
-		<English>This order will consume the [COLOR_UNIT_TEXT]Executive[COLOR_REVERT] unit but expand their corporation into the city.</English>
+		<English>This order will consume the [COLOR_UNIT_TEXT]Executive[COLOR_REVERT] unit but expand their Corporation into the city.</English>
 		<French>Cet ordre détruira le [COLOR_UNIT_TEXT]Directeur[COLOR_REVERT] mais développera sa société commerciale dans la ville.</French>
 		<German>Der [COLOR_UNIT_TEXT]Vorstand[COLOR_REVERT] wird geopfert, damit die Kapitalgesellschaft in die Stadt expandieren kann.</German>
 		<Italian>[NEWLINE]Il [COLOR_UNIT_TEXT]funzionario[COLOR_REVERT] viene consumato nel processo, ma la corporazione si espande nella città.</Italian>
@@ -1161,7 +1161,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISSION_SPREAD_HELP</Tag>
-		<English>This order will consume the [COLOR_UNIT_TEXT]Missionary[COLOR_REVERT] unit but spread their religion to the city.</English>
+		<English>This order will consume the [COLOR_UNIT_TEXT]Missionary[COLOR_REVERT] unit but spread their Religion to the city.</English>
 		<French>Cet ordre détruit le [COLOR_UNIT_TEXT]missionnaire[COLOR_REVERT], mais sa religion sera propagée à la ville.</French>
 		<German>Opfern Sie einen [COLOR_UNIT_TEXT]Missionar[COLOR_REVERT], damit dieser seine Religion in der Welt verbreitet.</German>
 		<Italian>[NEWLINE]Il [COLOR_UNIT_TEXT]missionario[COLOR_REVERT] viene consumato nel processo, ma la religione si diffonde nella città.</Italian>

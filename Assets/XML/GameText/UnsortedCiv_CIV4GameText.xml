@@ -30,7 +30,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>AI_DIPLO_DEMAND_TRIBUTE_POWER_EQUAL_HARUN_1</Tag>
-		<English>Of course you can refuse me this favor if you want, but it you do, I wouldn't hang out at the markets tonight...</English>
+		<English>Of course you can refuse me this favor if you want, but if you do, I wouldn't hang out at the markets tonight...</English>
 		<French>Bien sûr, vous pouvez me refuser cette faveur, si vous voulez, mais il vous le faites, je vous conseille de ne pas traîner dans les rues le soir...</French>
 		<Polish>Oczywi&#156;cie mo&#191;esz odwdzi&#234;czy&#230; si&#234; mi za t&#185; przys&#179;ug&#234;, ale je&#156;li nie chcesz to nie musisz...</Polish>
 		<Russian>Конечно, вы можете отказать мне в этом одолжении, если хотите, но если вы это сделаете, я бы не стал торчать сегодня на базарах...</Russian>
@@ -204,9 +204,9 @@
 	</TEXT>
 	<TEXT>
 		<Tag>AI_DIPLO_DEMAND_TRIBUTE_POWER_STRONGER_WRUB_1</Tag>
-		<English>Good days and pleasant nights, the neans dislike to take advantage of the weaks, but maybe you like to be in grace with the strongs...</English>
+		<English>Good days and pleasant nights, the Neans dislike to taking advantage of the weak, but perhaps you prefer to stay in the good graces of the strong.</English>
 		<French>Bons jours et nuits plaisantes, nous n'aimons pas tirer avantage des faibles, mais peut-être que vous voulez être dans de bonnes graces avec les plus forts...</French>
-		<Spanish>Buenos dias y placenteras noches, a los neans nos disgusta tomar ventaja de los debiles, pero quizas tu quieras estar en gracia con los fuertes...</Spanish>
+		<Spanish>Buenos dias y placenteras noches, a los Neans nos disgusta tomar ventaja de los debiles, pero quizas tu quieras estar en gracia con los fuertes...</Spanish>
 		<Polish>Dobrych dni i przyjemnych nocy, Neandertalczycy nie lubi&#185; gn&#234;bi&#230; s&#179;abszych, ale mo&#191;e jednak chcesz by&#230; w sojuszu z silniejszymi...</Polish>
 		<Russian>Õîðîøèå äíè è ïðèÿòíûå íî÷è, âîîáùå-òî íåïðèÿòíî èñïîëüçîâàòü ìîÿ ïðåèìóùåñòâî íàä òâîÿ íåìîùü, íî ìîæåò òâîÿ áóäåò áëàãîäàðíà çà ðåøèòåëüíîñòü...</Russian>
 	</TEXT>
@@ -254,7 +254,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>AI_DIPLO_DEMAND_TRIBUTE_POWER_WEAKER_HITLER_1</Tag>
-		<English>My milita- people needs stuff, and everything in [CT_EMPIRE], can I have stuff?</English>
+		<English>My people require resources. Everything in [CT_EMPIRE] belongs to those with strength. Surrender what I ask, or it will be taken.</English>
 	</TEXT>
 	<TEXT>
 		<Tag>AI_DIPLO_DEMAND_TRIBUTE_POWER_WEAKER_IVAN_1</Tag>
@@ -310,15 +310,15 @@
 	</TEXT>
 	<TEXT>
 		<Tag>AI_DIPLO_DEMAND_TRIBUTE_POWER_WEAKER_WRUB_1</Tag>
-		<English>Good days and pleasant nights, may your mighty people help the neans when they are in need.</English>
+		<English>Good days and pleasant nights, may your mighty people help the Neans in our time of need.</English>
 		<French>Bons jours et nuits plaisantes, que votre brillant peuple puisse venir en aide à ceux dans le besoin.</French>
-		<Spanish>Buenos dias y placenteras noches, podria tu fabuloso pueblo ayudar a los neans cuando lo necesitan.</Spanish>
+		<Spanish>Buenos dias y placenteras noches, podria tu fabuloso pueblo ayudar a los Neans cuando lo necesitan.</Spanish>
 		<Polish>Dobrych dni i przyjemnych nocy, niech Tw&#243;j silny lud pomo&#191;e nam kiedy potrzebujemy pomocy!</Polish>
 		<Russian>Äà ïîñëàòü âàì äîáðûé äóõè óäà÷à òâîåìó ìîãó÷èé ïëåìÿ, âû ïîìîæåòå íàì, êîãäà íàøà áûòü â áåäå?</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>AI_DIPLO_FIRST_CONTACT_LEADER_ABUBAKR_1</Tag>
-		<English>What you will need to understand, [CT_NAME], is that anyone who fights on behalf of Allah, when he dies, the first drop of blood that comes out, all of his sins will be forgiven.</English>
+		<English>What you must understand, [CT_NAME], is that anyone who dies fighting for Allah has all their sins forgiven with the first drop of blood.</English>
 		<French>Ce que vous aurez besoin de comprendre, [CT_NAME], est que toute personne qui se bat au nom d'Allah, lorsqu'il meurt, à la première goutte de sang versé, est pardonné de tous ses péchés.</French>
 		<Polish>[CT_NAME], musisz zrozumie&#230;, &#191;e ten kto walczy w imi&#234; Allaha, kiedy umiera, z pierwsza kropl&#185; przelanej krwi, wszystkie jego grzechy zostaj&#185; odpuszczone.</Polish>
 		<Russian>Что вам нужно понять, [CT_NAME], так это то, что любому, сражающемуся от имени Аллаха, после смерти простятся все грехи единственной каплей крови.</Russian>
@@ -385,7 +385,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>AI_DIPLO_FIRST_CONTACT_LEADER_CLEOPATRA_1</Tag>
-		<English>Do not underestimate our resolve, [CT_NAME]. All strange and terrible events are welcome by the [OUR_EMPIRE], but comforts we despise.</English>
+		<English>Do not underestimate our resolve, [CT_NAME]. The [OUR_EMPIRE] welcomes adversity, we reject complacency and comfort.</English>
 		<French>Ne sous-estimez pas ma détermination, [CT_NAME]. Tous les événements étranges et terribles sont les bienvenus par le [OUR_EMPIRE], mais nous méprisons confort.</French>
 		<German>Unterschätze unsere Entschlossenhait nicht, [CT_NAME]. Alle seltsamen und schrecklichen Ereignisse sind willkommen im [OUR_EMPIRE], aber wir verabscheuen die Bequemlichkeit.</German>
 		<Spanish>No subestimes nuestra determinación, [CT_NAME]. Todos los sucesos extraños y terribles son bienvenidos por el [OUR_EMPIRE], solamente despreciamos las comodidades.</Spanish>
@@ -394,7 +394,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>AI_DIPLO_FIRST_CONTACT_LEADER_CUNHAMBEBE_1</Tag>
-		<English>Greetings, [CT_NAME]! I am [OUR_NAME] of the [OUR_CIV_ADJ] people. Help us safe our precious rainforest and you'll have our eternal gratitude!</English>
+		<English>Greetings, [CT_NAME]! I am [OUR_NAME] of the [OUR_CIV_ADJ] people. Help us protect our rainforests and you'll have our eternal gratitude!</English>
 		<Italian>Saluti, [CT_NAME]! Io sono [OUR_NAME] del popolo [OUR_CIV_ADJ]. Aiutaci a salvare la nostra preziosa foresta pluviale e avrai la nostra eterna gratitudine!</Italian>
 		<Polish>Witam, [CT_NAME]! Jestem [OUR_NAME] z ludu [OUR_CIV_ADJ]. Pom&#243;&#191; nam zachowa&#230; cenny las deszczowy, a b&#234;dziemy dozgonnie wdzi&#234;czni!</Polish>
 		<Russian>Ïðèâåòñòâóþ, [CT_NAME]! ß, [OUR_NAME], èç íàðîäà [OUR_CIV_ADJ]. Ïîìîãèòå íàì ñáåðå÷ü íàø äîæäåâîé ëåñ è Âû áóäåòå èìåòü íàøó âå÷íóþ ïðèçíàòåëüíîñòü!</Russian>
@@ -616,7 +616,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>AI_DIPLO_FIRST_CONTACT_LEADER_SEJONG_1</Tag>
-		<English>I am honored to meet you. We will be watching you closely, [CT_NAME]. It is often darkest underneath the lampstand.</English>
+		<English>I am honored to meet you. We will be watching you closely, [CT_NAME]. It is often darkest beneath the lampstand.</English>
 		<French>Je suis honoré de vous rencontrer. Nous allons vous surveiller de près, [CT_NAME]. Il fait souvent plus sombre sous le chandelier.</French>
 		<German>Ich fühle mich geehrt, Dir zu begegnen. Wir werden Dich genau beobachten, [CT_NAME]. Unter dem Ständer der Leuchte ist es oft am dunkelsten.</German>
 		<Spanish>Es un honor conocerte. Te estaremos observando de cerca, [CT_NAME]. Normalmente lo más oscuro está debajo de la lámpara.</Spanish>
@@ -688,7 +688,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>AI_DIPLO_FIRST_CONTACT_LEADER_WRUB_1</Tag>
-		<English>Good days and pleasant nights, [CT_NAME]! I am [OUR_NAME] of the [OUR_EMPIRE]. Make no mistake, we are polite and kind people, apart from good-looking, wich is obvious, but if you are not as good as we are, our stones will taste your blood.</English>
+		<English>Good days and pleasant nights, [CT_NAME]! I am [OUR_NAME] of the [OUR_EMPIRE]. Make no mistake, we are polite and kind people, apart from good-looking, which is obvious, but if you are not as good as we are, our stones will taste your blood.</English>
 		<French>Bons jours et nuits plaisantes, [CT_NAME]! Je suis [OUR_NAME] de [OUR_EMPIRE]. Ne vous méprenez pas, nous sommes un peuple poli et gentil, même si notre apparence est plutôt brutale. Mais si vous n'êtes pas assez bons avec nous, nos pierres goûterons le sang.</French>
 		<Spanish>Buenos dias y placenteras noches, [CT_NAME]! Soy [OUR_NAME] de los [OUR_EMPIRE]. No te lleves a error, somos educados y amables, aparte de guapos, como es mas que obvio, pero si no resultas tan bueno como nosotros, nuestras piedras probaran tu sangre.</Spanish>
 		<Polish>Dobrych dni i przyjemnych nocy, [CT_NAME]! Jestem [OUR_NAME] z [OUR_EMPIRE]. Nie pope&#179;nij b&#179;edu, jeste&#156;my &#179;agodnymi i mi&#179;ymi lud&#159;mi, je&#156;li jednak Ty nie b&#234;dziesz dla mnie mi&#179;y, to nasze kamienie skosztuj&#185; Twojej krwi.</Polish>
@@ -711,7 +711,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>AI_DIPLO_FIRST_CONTACT_LEADER_YUNUPINGU_1</Tag>
-		<English>Welcome, [CT_NAME]. Know that the [OUR_CIV_SHORT] endeavour to live in peace with this land.</English>
+		<English>Welcome, [CT_NAME]. Know that the [OUR_CIV_SHORT] endeavor to live in peace with this land.</English>
 		<Italian>Benvenuto, [CT_NAME]. Sappi che gli [OUR_CIV_SHORT] desiderano vivere in pace con questa terra.</Italian>
 		<Polish>Witamy, [CT_NAME]. Wiedz, &#191;e g&#179;ownym celem [OUR_CIV_SHORT] jest &#191;ycie w harmonii z otaczaj&#185;cym nas &#156;wiatem.</Polish>
 		<Russian>Äîáðî ïîæàëîâàòü, [CT_NAME]. Âåäîìî ìíå, ÷òî [OUR_CIV_SHORT] ñòðåìÿòñÿ æèòü â ìèðå íà ýòîé çåìëå.</Russian>
@@ -1129,7 +1129,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>AI_DIPLO_REFUSE_TO_TALK_LEADER_WRUB_1</Tag>
-		<English>Don´t disturb, we have stones to sharp.</English>
+		<English>Don´t disturb, we have stones to sharpen.</English>
 		<French>Ne nous dérangez pas, nous avons des pierres à tailler.</French>
 		<Spanish>No molestes, tenemos piedras que afilar.</Spanish>
 		<Polish>Nie przeszkadzaj, mamy kamienie do zaostrzenia!</Polish>
@@ -2649,7 +2649,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_LEADER_YUNUPINGU_PEDIA</Tag>
-		<English>[H1]Galarrwuy Yunupingu [\H1][NEWLINE][BOLD]Community Leader, Australian Indigenous Community [\BOLD][NEWLINE][BOLD]Lived:[\BOLD] c.1948 - present[NEWLINE][PARAGRAPH:2][BOLD]Background:[\BOLD][NEWLINE]Galarrwuy Yunupingu is a leader in the Australian Indigenous community, and has been involved in the fight for Land Rights throughout his career. He was 1978 Australian of the Year.[PARAGRAPH:1]He was born at Melville Bay near Yirrkala on 1948 June 30, and is a member of the Gumatj clan of the Yolngu people. He attended Mission School at Yirrkala in his formative years, and moved to Brisbane to study at the Methodist Bible College for two years, returning to Gove in 1967. In the early 1960's with his father, the Gumatj clan leader Mungurrawuy, he entered the struggle for Land Rights, and helped draw up the Bark Petition at Yirrkala. He came to national attention in the late 1960's for his role in the landmark, but unsuccessful Gove Land Rights Case. This legal action was the first by Indigenous Australians to challenge mining companies' rights to exploit traditional lands. He became a prominent leader and strong voice on behalf of Aboriginal people in the Northern Territory and Australia, gaining respect and admiration from many. In 1969 he was elected to the Yirrkala town council.[PARAGRAPH:1]In 1975 he joined the Northern Land Council (NLC), the authority appointed under the Aboriginal Land Rights (NT) Act 1976 to represent traditional Aboriginal landowners and Aboriginal people. He was chairman of the NLC from 1977-1980, an executive member until 1983 when he was re-elected as chairman, and has remained in that position to date (2004). He has led a number of negotiations with mining and government bodies. As chair of the NLC, he led the Gagudju people in negotiations with mining and government bodies. Not opposed to mining in principle, Yunupingu sees it as a way for Aboriginal people to escape the welfare trap if it is conducted on the traditional owners' terms. These include a fair distribution of the economic benefits and respect for the land and specific sacred sites. He said: 'We will continue to fight for the right to make our own decisions about our own land.'[PARAGRAPH:1]In 1978 he was awarded the Honour of Australian of the Year for his negotiations on the Ranger uranium mine agreement. He said the award 'would help him to shake off the image of ratbag and radical' and would give him 'greater strength as an individual and as a leader'. It was also a recognition for Aboriginal people as 'the indigenous people of this country who must share in its future'. In 1985, he was made a Member of the Order of Australia (AM) for his services to the Aboriginal community. Galarrwuy Yunupingu is one of 100 "Australian Living National Treasures" selected by the National Trust as leaders in society "considered to have a great influence over our environment because of the standards and examples they set".</English>
+		<English>[H1]Galarrwuy Yunupingu [\H1][NEWLINE][BOLD]Community Leader, Australian Indigenous Community [\BOLD][NEWLINE][BOLD]Lived:[\BOLD] c.1948 - present[NEWLINE][PARAGRAPH:2][BOLD]Background:[\BOLD][NEWLINE]Galarrwuy Yunupingu is a leader in the Australian Indigenous community, and has been involved in the fight for Land Rights throughout his career. He was 1978 Australian of the Year.[PARAGRAPH:1]He was born at Melville Bay near Yirrkala on 1948 June 30, and is a member of the Gumatj clan of the Yolngu people. He attended Mission School at Yirrkala in his formative years, and moved to Brisbane to study at the Methodist Bible College for two years, returning to Gove in 1967. In the early 1960's with his father, the Gumatj clan leader Mungurrawuy, he entered the struggle for Land Rights, and helped draw up the Bark Petition at Yirrkala. He came to national attention in the late 1960's for his role in the landmark, but unsuccessful Gove Land Rights Case. This legal action was the first by Indigenous Australians to challenge mining companies rights to exploit traditional lands. He became a prominent leader and strong voice on behalf of Aboriginal people in the Northern Territory and Australia, gaining respect and admiration from many. In 1969 he was elected to the Yirrkala town council.[PARAGRAPH:1]In 1975 he joined the Northern Land Council (NLC), the authority appointed under the Aboriginal Land Rights (NT) Act 1976 to represent traditional Aboriginal landowners and Aboriginal people. He was chairman of the NLC from 1977-1980, and an executive member until 1983 when he was re-elected as chairman, and has remained in that position to date (2004). He has led a number of negotiations with mining and government bodies. As chair of the NLC, he led the Gagudju people in negotiations with mining and government bodies. Not opposed to mining in principle, Yunupingu sees it as a way for Aboriginal people to escape the welfare trap if it is conducted on the traditional owners terms. These include a fair distribution of the economic benefits and respect for the land and specific sacred sites. He said: 'We will continue to fight for the right to make our own decisions about our own land.'[PARAGRAPH:1]In 1978 he was awarded the Honour of Australian of the Year for his negotiations on the Ranger uranium mine agreement. He said the award 'would help him to shake off the image of ratbag and radical' and would give him 'greater strength as an individual and as a leader'. It was also a recognition for Aboriginal people as 'the indigenous people of this country who must share in its future'. In 1985, he was made a Member of the Order of Australia (AM) for his services to the Aboriginal community. Galarrwuy Yunupingu is one of 100 "Australian Living National Treasures" selected by the National Trust as leaders in society "considered to have a great influence over our environment because of the standards and examples they set".</English>
 		<Polish>[H1]Galarrwuy Yunupingu [\H1][NEWLINE][BOLD]Przyw&#243;dca Spo&#179;eczno&#156;ci Aborygen&#243;w[\BOLD][NEWLINE][BOLD]Urodzi&#179; si&#234;:[\BOLD] ok.1948[NEWLINE][PARAGRAPH:2][BOLD]T&#179;o:[\BOLD][NEWLINE]Galarrwuy Yunupingu is a leader in the Australian Indigenous community, and has been involved in the fight for Land Rights throughout his career. He was 1978 Australian of the Year.[PARAGRAPH:1]He was born at Melville Bay near Yirrkala on 1948 June 30, and is a member of the Gumatj clan of the Yolngu people. He attended Mission School at Yirrkala in his formative years, and moved to Brisbane to study at the Methodist Bible College for two years, returning to Gove in 1967. In the early 1960's with his father, the Gumatj clan leader Mungurrawuy, he entered the struggle for Land Rights, and helped draw up the Bark Petition at Yirrkala. He came to national attention in the late 1960's for his role in the landmark, but unsuccessful Gove Land Rights Case. This legal action was the first by Indigenous Australians to challenge mining companies' rights to exploit traditional lands. He became a prominent leader and strong voice on behalf of Aboriginal people in the Northern Territory and Australia, gaining respect and admiration from many. In 1969 he was elected to the Yirrkala town council.[PARAGRAPH:1]In 1975 he joined the Northern Land Council (NLC), the authority appointed under the Aboriginal Land Rights (NT) Act 1976 to represent traditional Aboriginal landowners and Aboriginal people. He was chairman of the NLC from 1977-1980, an executive member until 1983 when he was re-elected as chairman, and has remained in that position to date (2004). He has led a number of negotiations with mining and government bodies. As chair of the NLC, he led the Gagudju people in negotiations with mining and government bodies. Not opposed to mining in principle, Yunupingu sees it as a way for Aboriginal people to escape the welfare trap if it is conducted on the traditional owners' terms. These include a fair distribution of the economic benefits and respect for the land and specific sacred sites. He said: 'We will continue to fight for the right to make our own decisions about our own land.'[PARAGRAPH:1]In 1978 he was awarded the Honour of Australian of the Year for his negotiations on the Ranger uranium mine agreement. He said the award 'would help him to shake off the image of ratbag and radical' and would give him 'greater strength as an individual and as a leader'. It was also a recognition for Aboriginal people as 'the indigenous people of this country who must share in its future'. In 1985, he was made a Member of the Order of Australia (AM) for his services to the Aboriginal community. Galarrwuy Yunupingu is one of 100 "Australian Living National Treasures" selected by the National Trust as leaders in society "considered to have a great influence over our environment because of the standards and examples they set".</Polish>
 		<Russian>[H1]Ãàëàðâýé Þíóïèíãó[\H1][NEWLINE][BOLD]Ëèäåð çåìëÿ÷åñòâà àâñòðàëèéñêèõ àáîðèãåíîâ [\BOLD][NEWLINE][BOLD]Ãîäû æèçíè: [\BOLD]c.1948 - íàñò. âðåìÿ[NEWLINE][PARAGRAPH:2][BOLD]Áèîãðàôèÿ:[\BOLD][NEWLINE][TAB]Галарву Юнупингу - лидер австралийского коренного населения, на протяжении всей своей карьеры принимавший участие в борьбе за земельные права. Он был австралийцем 1978 года.[PARAGRAPH:1]Он родился в заливе Мелвилл недалеко от Йирркала 30 июня 1948 года и является членом клана Гуматж из народа Йолнгу. В годы становления он посещал миссионерскую школу в Йирркале и переехал в Брисбен, чтобы проучиться в методистском библейском колледже в течение двух лет, а затем вернулся в Гоув в 1967 году. В начале 1960-х вместе со своим отцом, лидером клана Гумати Мунгурравуй, он вступил в борьбу. за земельные права и помог составить петицию Барка в Йирркале. Он привлек национальное внимание в конце 1960-х годов благодаря своей роли в знаковом, но неудачном деле о земельных правах правительства. Этот судебный иск был первым иском коренных австралийцев, который оспорил права горнодобывающих компаний на использование традиционных земель. Он стал выдающимся лидером и сильным голосом от имени аборигенов Северной территории и Австралии, завоевав уважение и восхищение многих. В 1969 году он был избран депутатом городского совета Йирркала.[PARAGRAPH:1]В 1975 году он присоединился к Северному земельному совету (СЗС), органу, назначенному в соответствии с Законом 1976 года о земельных правах аборигенов (СЗ), чтобы представлять традиционных землевладельцев-аборигенов и аборигенов. Он был председателем СЗС с 1977-1980, исполнительным членом до 1983 года, когда он был переизбран председателем, и остается на этой должности до настоящего времени (2004). Он провел ряд переговоров с горнодобывающими и государственными органами. Как председатель СЗС, он руководил людьми Гагуджу на переговорах с горнодобывающими и государственными органами. Юнупингу, в принципе, не возражая против добычи полезных ископаемых, считает, что аборигены могут вырваться из ловушки благосостояния, если она будет вестись на условиях традиционных владельцев. К ним относятся справедливое распределение экономических выгод и уважение к земле и определенным священным местам. Он сказал: «Мы продолжим бороться за право принимать собственные решения относительно нашей собственной земли».[PARAGRAPH:1]В 1978 году он был удостоен звания «Австралиец года» за переговоры по соглашению о урановом руднике «Рейнджер». Он сказал, что эта награда «поможет ему избавиться от образа болвана и радикала» и придаст ему «большую силу как личность и как лидер». Это также было признанием аборигенов как «коренных жителей этой страны, которые должны участвовать в ее будущем». В 1985 году он стал членом Ордена Австралии за заслуги перед сообществом аборигенов. Галарву Юнупингу является одним из 100 «живых национальных сокровищ Австралии», выбранных Национальным фондом в качестве лидеров общества, «имеющих большое влияние на окружающую среду из-за установленных ими стандартов и примеров».</Russian>
 	</TEXT>

@@ -17,7 +17,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISSION_ANIMAL_COMBAT_HELP</Tag>
-		<English>Provides a temporary boost to happiness.</English>
+		<English>Provides a temporary boost to Happiness.</English>
 		<French>Procure un gain temporaire de bonheur.</French>
 		<Italian>[NEWLINE]Fornisce un aumento temporaneo di felicità.</Italian>
 		<Polish>Tymczasowo zwi&#234;ksza zadowolenie miejskiej populacji.</Polish>
@@ -33,7 +33,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISSION_ANIMAL_STUDY_HELP</Tag>
-		<English>Provides a boost to science.</English>
+		<English>Provides a boost to Science.</English>
 		<French>Procure un bonus de science.</French>
 		<Italian>[NEWLINE]Fornisce un aumento di ricerca.</Italian>
 		<Polish>Dostarcza ma&#179;&#185; ilo&#156;&#230; nauki.</Polish>
@@ -65,7 +65,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISSION_RECORD_TALE_HELP</Tag>
-		<English>Provides a small boost to culture and science.</English>
+		<English>Provides a small boost to Culture and Science.</English>
 		<French>Procure un bonus culturel et en science.</French>
 		<Italian>[NEWLINE]Fornisce un piccolo aumento di cultura e di ricerca.</Italian>
 		<Polish>Dostarcza ma&#179;ej ilo&#156;ci kultury i nauki.</Polish>
@@ -73,7 +73,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_OUTCOME_ANIMAL_COMBAT1</Tag>
-		<English>Cock fighting, Bear baiting, Stallion Fights. This will consume the unit providing a temporary happiness boost.</English>
+		<English>Cock fighting, Bear baiting, Stallion Fights. This will consume the unit providing a temporary Happiness boost.</English>
 		<French>Combat de Coqs affrontements d'ours, de félins. L'unité disparaîtra pour un gain temporaire de bonheur.</French>
 		<Italian>I combattimenti fra animali consumano l'unità selezionata, fornendo in cambio un aumento temporaneo di felicità.</Italian>
 		<Polish>Walki kogut&#243;w, szczucie nied&#159;dzwiedzia, walki ogier&#243;w. Ta akcja usunie jednostk&#234; w zamian tymczasowo zwi&#234;kszaj&#185;c zadowolenie miejskiej populacji.</Polish>
@@ -81,7 +81,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_OUTCOME_ANIMAL_COMBAT2</Tag>
-		<English>Man against animals in an arena, skill and style are the point. This will consume the unit providing a temporary happiness boost.</English>
+		<English>A man toys with animals in an arena, this will be a skillful display. This will consume the unit providing a temporary Happiness boost.</English>
 		<French>L'Homme contre l'animal dans l'arène. expérience et style sont au rendez-vous. L'unité disparaîtra pour un gain temporaire de bonheur.</French>
 		<Italian>Uomo contro un animale in un'arena: tutto ciò che conta sono stile e abilità. Consuma l'unità selezionata fornendo un aumento temporaneo di felicità.</Italian>
 		<Polish>Cz&#179;owiek przeciwko zwierz&#234;tom na arenie. Styl i finezja to podstawa. Ta akcja usunie jednostk&#234; w zamian tymczasowo zwi&#234;kszaj&#185;c zadowolenie miejskiej populacji.</Polish>
@@ -89,7 +89,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_OUTCOME_ANIMAL_COMBAT3</Tag>
-		<English>Man against animals in a colosseum, blood is the point. This will consume the unit providing a temporary happiness boost.</English>
+		<English>A man fights beasts in a colosseum, the crowds want to see blood. This will consume the unit providing a temporary Happiness boost.</English>
 		<French>L'homme contre les bêtes au Colisée, on réclame du sand. L'unité disparaîtra pour un gain temporaire de bonheur.</French>
 		<Italian>Uomo contro un animale in un'arena: ciò che la gente vuole è veder scorrere il sangue. Consuma l'unità selezionata fornendo un aumento temporaneo di felicità.</Italian>
 		<Polish>Cz&#179;owiek przeciwko bestii w koloseum. Krew si&#234; poleje. Ta akcja usunie jednostk&#234; w zamian tymczasowo zwi&#234;kszaj&#185;c zadowolenie miejskiej populacji.</Polish>
@@ -97,7 +97,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_OUTCOME_ANIMAL_COMBAT4</Tag>
-		<English>Various animal performances, slightly more civilized. This will consume the unit providing a temporary happiness boost.</English>
+		<English>Various animal performances, slightly more civilized. This will consume the unit providing a temporary boost to Happiness.</English>
 		<Italian>Varie esibizioni di animali, leggermente più civilizzate. Consumerà l'unità fornendo un aumento temporaneo di felicità.</Italian>
 	</TEXT>
 	<TEXT>
@@ -110,7 +110,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_OUTCOME_ANIMAL_RECORD_TALE_CAVE</Tag>
-		<English>This will consume the unit providing a culture and science boost. Better results can be had in a city with a School of Scribes, Library or University.</English>
+		<English>This will consume the unit providing a Culture and Science boost. Better results can be received in a city with Cave Paintings, School of Scribes, Library or University.</English>
 		<French>L'unité est utilisée pour procurer un bonus de culture et de science, dépendant des bâtiments présents dans la ville (Ecole des scribes, Bibliothèque ou université).</French>
 		<Italian>Consumerà l'unità fornendo un aumento di cultura e ricerca. Si ottengono risultati migliori in una città con: scuola di scribi, biblioteca o università.</Italian>
 		<Polish>Ta akcja usunie jednostk&#234; dostarczaj&#185;c ma&#179;ej ilo&#156;ci kultury i nauki. Lepsze rezultaty mog&#185; by&#230; osi&#185;gni&#234;te je&#156;li w mie&#156;cie znajduj&#185; si&#234; odpowiednie budynki: Szko&#179;a Skryb&#243;w, Biblioteka, Uniwersytet.</Polish>
@@ -118,7 +118,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_OUTCOME_ANIMAL_RECORD_TALE_FRESCO</Tag>
-		<English>This will consume the unit providing a culture and science boost. Better results can be had in a city with a School of Scribes, Library or University.</English>
+		<English>This will consume the unit providing a Culture and Science boost. Better results can be received in a city with Cave Paintings, School of Scribes, Library or University.</English>
 		<French>L'unité est utilisée pour procurer un bonus de culture et de science, dépendant des bâtiments présents dans la ville (Ecole des scribes, Bibliothèque ou université).</French>
 		<Italian>Consumerà l'unità fornendo un aumento di cultura e ricerca. Si ottengono risultati migliori in una città con: scuola di scribi, biblioteca o università.</Italian>
 		<Polish>Ta akcja usunie jednostk&#234; dostarczaj&#185;c ma&#179;ej ilo&#156;ci kultury i nauki. Lepsze rezultaty mog&#185; by&#230; osi&#185;gni&#234;te je&#156;li w mie&#156;cie znajduj&#185; si&#234; odpowiednie budynki: Szko&#179;a Skryb&#243;w, Biblioteka, Uniwersytet.</Polish>
@@ -126,7 +126,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_OUTCOME_ANIMAL_RECORD_TALE_LIBRARY</Tag>
-		<English>This will consume the unit providing a culture and science boost. Better results can be had in a city with a University.</English>
+		<English>This will consume the unit providing a Culture and Science boost. Better results can be received in a city with Cave Paintings, School of Scribes, Library or University.</English>
 		<French>L'unité est utilisée pour procurer un bonus de culture et de science, dépendant des bâtiments présents dans la ville (Université).</French>
 		<Italian>Consumerà l'unità fornendo un aumento di cultura e ricerca. Si ottengono risultati migliori in una città con un università.</Italian>
 		<Polish>Ta akcja usunie jednostk&#234; dostarczaj&#185;c ma&#179;ej ilo&#156;ci kultury i nauki. Lepsze rezultaty mog&#185; by&#230; osi&#185;gni&#234;te je&#156;li w mie&#156;cie znajduje si&#234; Uniwersytet.</Polish>
@@ -142,7 +142,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_OUTCOME_ANIMAL_RECORD_TALE_ORAL</Tag>
-		<English>This will consume the unit providing a culture and science boost. Better results can be had in a city with a Story Tellers Hut, Cave Paintings, School of Scribes, Library or University.</English>
+		<English>This will consume the unit providing a Culture and Science boost. Better results can be received in a city with Cave Paintings, School of Scribes, Library or University.</English>
 		<French>L'unité est utilisée pour procurer un bonus de culture et de science, dépendant des bâtiments présents dans la ville (Peintures des cavernes, Hutte du Conteur d'histoire, Ecole des scribes, Bibliothèque ou Université).</French>
 		<Italian>Consumerà l'unità fornendo un aumento di cultura e ricerca. Si ottengono risultati migliori in una città con: capanna del cantastorie, pitture rupestri, scuola di scribi, biblioteca o università.</Italian>
 		<Polish>Ta akcja usunie jednostk&#234; dostarczaj&#185;c ma&#179;ej ilo&#156;ci kultury i nauki. Lepsze rezultaty mog&#185; by&#230; osi&#185;gni&#234;te je&#156;li w mie&#156;cie znajduj&#185; si&#234; odpowiednie budynki: Malunki Naskalne, Chata Opowiadacza, Szko&#179;a Skryb&#243;w, Biblioteka, Uniwersytet.</Polish>
@@ -150,7 +150,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_OUTCOME_ANIMAL_RECORD_TALE_SCRIBE</Tag>
-		<English>This will consume the unit providing a culture and science boost. Better results can be had in a city with a Library or University.</English>
+		<English>This will consume the unit providing a Culture and Science boost. Better results can be received in a city with Cave Paintings, School of Scribes, Library or University.</English>
 		<French>L'unité est utilisée pour procurer un bonus de culture et de science, dépendant des bâtiments présents dans la ville (Bibliothèque ou université).</French>
 		<Italian>Consumerà l'unità fornendo un aumento di cultura e ricerca. Si ottengono risultati migliori in una città con: biblioteca o università.</Italian>
 		<Polish>Ta akcja usunie jednostk&#234; dostarczaj&#185;c ma&#179;ej ilo&#156;ci kultury i nauki. Lepsze rezultaty mog&#185; by&#230; osi&#185;gni&#234;te je&#156;li w mie&#156;cie znajduj&#185; si&#234; odpowiednie budynki: Biblioteka, Uniwersytet.</Polish>
@@ -158,7 +158,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_OUTCOME_ANIMAL_RECORD_TALE_STORY</Tag>
-		<English>This will consume the unit providing a culture and science boost. Better results can be had in a city with Cave Paintings, School of Scribes, Library or University.</English>
+		<English>This will consume the unit providing a Culture and Science boost. Better results can be received in a city with Cave Paintings, School of Scribes, Library or University.</English>
 		<French>L'unité est utilisée pour procurer un bonus de culture et de science, dépendant des bâtiments présents dans la ville (Cave Paintings, School of Scribes, Library or University.</French>
 		<Italian>Consumerà l'unità fornendo un aumento di cultura e ricerca. Si ottengono risultati migliori in una città con: pitture rupestri, scuola di scribi, biblioteca o università.</Italian>
 		<Polish>Ta akcja usunie jednostk&#234; dostarczaj&#185;c ma&#179;ej ilo&#156;ci kultury i nauki. Lepsze rezultaty mog&#185; by&#230; osi&#185;gni&#234;te je&#156;li w mie&#156;cie znajduj&#185; si&#234; odpowiednie budynki: Malunki Naskalne, Szko&#179;a Skryb&#243;w, Biblioteka, Uniwersytet.</Polish>
@@ -166,7 +166,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_OUTCOME_ANIMAL_RECORD_TALE_UNI</Tag>
-		<English>This will consume the unit providing a culture and science boost.</English>
+		<English>This will consume the unit providing a Culture and Science boost.</English>
 		<French>L'unité est utilisée pour procurer un bonus de culture et de science.</French>
 		<Italian>Consumerà l'unità fornendo un aumento di cultura e ricerca.</Italian>
 		<Polish>Ta akcja usunie jednostk&#234; dostarczaj&#185;c ma&#179;ej ilo&#156;ci kultury i nauki.</Polish>
