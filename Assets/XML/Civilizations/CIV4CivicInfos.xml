@@ -32,7 +32,7 @@
 			<Upkeep>NONE</Upkeep>
 			<iAIWeight>0</iAIWeight>
 			<iCityLimit>2</iCityLimit>
-			<iCityOverLimitUnhappy>8</iCityOverLimitUnhappy>
+			<iCityOverLimitUnhappy>6</iCityOverLimitUnhappy>
 			<iGreatPeopleRateModifier>0</iGreatPeopleRateModifier>
 			<iGreatGeneralRateModifier>0</iGreatGeneralRateModifier>
 			<iDomesticGreatGeneralRateModifier>0</iDomesticGreatGeneralRateModifier>
@@ -147,7 +147,7 @@
 			<iAnarchyLength>1</iAnarchyLength>
 			<Upkeep>UPKEEP_LOW</Upkeep>
 			<iCityLimit>5</iCityLimit>
-			<iCityOverLimitUnhappy>8</iCityOverLimitUnhappy>
+			<iCityOverLimitUnhappy>5</iCityOverLimitUnhappy>
 			<iAIWeight>0</iAIWeight>
 			<iGreatPeopleRateModifier>0</iGreatPeopleRateModifier>
 			<iGreatGeneralRateModifier>0</iGreatGeneralRateModifier>
@@ -269,7 +269,7 @@
 			<iAnarchyLength>1</iAnarchyLength>
 			<Upkeep>UPKEEP_LOW</Upkeep>
 			<iCityLimit>8</iCityLimit>
-			<iCityOverLimitUnhappy>10</iCityOverLimitUnhappy>
+			<iCityOverLimitUnhappy>5</iCityOverLimitUnhappy>
 			<iAIWeight>0</iAIWeight>
 			<iGreatPeopleRateModifier>0</iGreatPeopleRateModifier>
 			<iGreatGeneralRateModifier>0</iGreatGeneralRateModifier>
@@ -410,7 +410,7 @@
 			<iAnarchyLength>1</iAnarchyLength>
 			<Upkeep>UPKEEP_MEDIUM</Upkeep>
 			<iCityLimit>12</iCityLimit>
-			<iCityOverLimitUnhappy>12</iCityOverLimitUnhappy>
+			<iCityOverLimitUnhappy>5</iCityOverLimitUnhappy>
 			<iAIWeight>0</iAIWeight>
 			<iGreatPeopleRateModifier>0</iGreatPeopleRateModifier>
 			<iGreatGeneralRateModifier>10</iGreatGeneralRateModifier>
@@ -2542,7 +2542,6 @@
 			<Upkeep>UPKEEP_MEDIUM</Upkeep>
 			<iAIWeight>0</iAIWeight>
 			<iCityLimit>0</iCityLimit>
-			<iCityOverLimitUnhappy>0</iCityOverLimitUnhappy>
 			<iGreatPeopleRateModifier>5</iGreatPeopleRateModifier>
 			<iGreatGeneralRateModifier>5</iGreatGeneralRateModifier>
 			<iDomesticGreatGeneralRateModifier>5</iDomesticGreatGeneralRateModifier>
@@ -2692,7 +2691,6 @@
 			<Upkeep>UPKEEP_HIGH</Upkeep>
 			<iAIWeight>0</iAIWeight>
 			<iCityLimit>0</iCityLimit>
-			<iCityOverLimitUnhappy>0</iCityOverLimitUnhappy>
 			<iGreatPeopleRateModifier>0</iGreatPeopleRateModifier>
 			<iGreatGeneralRateModifier>0</iGreatGeneralRateModifier>
 			<iDomesticGreatGeneralRateModifier>0</iDomesticGreatGeneralRateModifier>
@@ -2827,7 +2825,6 @@
 			<Upkeep>UPKEEP_MEDIUM</Upkeep>
 			<iAIWeight>0</iAIWeight>
 			<iCityLimit>0</iCityLimit>
-			<iCityOverLimitUnhappy>0</iCityOverLimitUnhappy>
 			<iGreatPeopleRateModifier>0</iGreatPeopleRateModifier>
 			<iGreatGeneralRateModifier>10</iGreatGeneralRateModifier>
 			<iDomesticGreatGeneralRateModifier>10</iDomesticGreatGeneralRateModifier>
@@ -3276,7 +3273,6 @@
 			<iAnarchyLength>2</iAnarchyLength>
 			<Upkeep>UPKEEP_HIGH</Upkeep>
 			<iCityLimit>0</iCityLimit>
-			<iCityOverLimitUnhappy>0</iCityOverLimitUnhappy>
 			<iAIWeight>0</iAIWeight>
 			<iGreatPeopleRateModifier>0</iGreatPeopleRateModifier>
 			<iGreatGeneralRateModifier>0</iGreatGeneralRateModifier>
@@ -3376,7 +3372,6 @@
 			<iAnarchyLength>2</iAnarchyLength>
 			<Upkeep>UPKEEP_HIGH</Upkeep>
 			<iCityLimit>0</iCityLimit>
-			<iCityOverLimitUnhappy>0</iCityOverLimitUnhappy>
 			<iAIWeight>0</iAIWeight>
 			<iGreatPeopleRateModifier>0</iGreatPeopleRateModifier>
 			<iGreatGeneralRateModifier>0</iGreatGeneralRateModifier>
@@ -3917,7 +3912,6 @@
 			<Upkeep>UPKEEP_EXTREME</Upkeep>
 			<iAIWeight>0</iAIWeight>
 			<iCityLimit>0</iCityLimit>
-			<iCityOverLimitUnhappy>0</iCityOverLimitUnhappy>
 			<iGreatPeopleRateModifier>0</iGreatPeopleRateModifier>
 			<iGreatGeneralRateModifier>0</iGreatGeneralRateModifier>
 			<iDomesticGreatGeneralRateModifier>0</iDomesticGreatGeneralRateModifier>
@@ -4377,7 +4371,6 @@
 			<Upkeep>UPKEEP_MEDIUM</Upkeep>
 			<iAIWeight>0</iAIWeight>
 			<iCityLimit>0</iCityLimit>
-			<iCityOverLimitUnhappy>0</iCityOverLimitUnhappy>
 			<iGreatPeopleRateModifier>0</iGreatPeopleRateModifier>
 			<iGreatGeneralRateModifier>0</iGreatGeneralRateModifier>
 			<iDomesticGreatGeneralRateModifier>5</iDomesticGreatGeneralRateModifier>
@@ -4515,7 +4508,6 @@
 			<Upkeep>UPKEEP_MEDIUM</Upkeep>
 			<iAIWeight>0</iAIWeight>
 			<iCityLimit>0</iCityLimit>
-			<iCityOverLimitUnhappy>0</iCityOverLimitUnhappy>
 			<iGreatPeopleRateModifier>0</iGreatPeopleRateModifier>
 			<iGreatGeneralRateModifier>0</iGreatGeneralRateModifier>
 			<iDomesticGreatGeneralRateModifier>0</iDomesticGreatGeneralRateModifier>
@@ -4916,7 +4908,6 @@
 			<Upkeep>UPKEEP_HIGH</Upkeep>
 			<iAIWeight>0</iAIWeight>
 			<iCityLimit>0</iCityLimit>
-			<iCityOverLimitUnhappy>0</iCityOverLimitUnhappy>
 			<iGreatPeopleRateModifier>-10</iGreatPeopleRateModifier>
 			<iGreatGeneralRateModifier>0</iGreatGeneralRateModifier>
 			<iDomesticGreatGeneralRateModifier>0</iDomesticGreatGeneralRateModifier>
@@ -5205,7 +5196,6 @@
 			<Upkeep>UPKEEP_EXTREME</Upkeep>
 			<iAIWeight>0</iAIWeight>
 			<iCityLimit>0</iCityLimit>
-			<iCityOverLimitUnhappy>0</iCityOverLimitUnhappy>
 			<iGreatPeopleRateModifier>-10</iGreatPeopleRateModifier>
 			<iGreatGeneralRateModifier>0</iGreatGeneralRateModifier>
 			<iDomesticGreatGeneralRateModifier>0</iDomesticGreatGeneralRateModifier>
@@ -8891,7 +8881,6 @@
 			<Upkeep>UPKEEP_LOW</Upkeep>
 			<iAIWeight>0</iAIWeight>
 			<iCityLimit>0</iCityLimit>
-			<iCityOverLimitUnhappy>0</iCityOverLimitUnhappy>
 			<iGreatPeopleRateModifier>0</iGreatPeopleRateModifier>
 			<iGreatGeneralRateModifier>0</iGreatGeneralRateModifier>
 			<iDomesticGreatGeneralRateModifier>0</iDomesticGreatGeneralRateModifier>
@@ -9833,7 +9822,6 @@
 			<Upkeep>UPKEEP_MEDIUM</Upkeep>
 			<iAIWeight>0</iAIWeight>
 			<iCityLimit>0</iCityLimit>
-			<iCityOverLimitUnhappy>0</iCityOverLimitUnhappy>
 			<iGreatPeopleRateModifier>0</iGreatPeopleRateModifier>
 			<iGreatGeneralRateModifier>10</iGreatGeneralRateModifier>
 			<iDomesticGreatGeneralRateModifier>0</iDomesticGreatGeneralRateModifier>

@@ -1226,6 +1226,9 @@
 				<Event>EVENT_DISSIDENT_PRIEST_2</Event>
 				<Event>EVENT_DISSIDENT_PRIEST_3</Event>
 			</Events>
+			<AndPreReqs>
+				<PrereqTech>TECH_KEMETISM</PrereqTech>
+			</AndPreReqs>
 			<ObsoleteTechs>
 				<ObsoleteTech>TECH_PRINTING_PRESS</ObsoleteTech>
 			</ObsoleteTechs>

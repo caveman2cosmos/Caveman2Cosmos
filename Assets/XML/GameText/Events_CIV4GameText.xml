@@ -3620,7 +3620,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_ASSASSIN_DISCOVERED_1</Tag>
-		<English>Be discreet. Offer the to release the assassin to their government, but question him first.</English>
+		<English>Be discreet. Offer them to release the assassin to their government, but question him first.</English>
 		<French>Soyez discret. Rendez-le à son pays, mais interrogez-le d'abord.</French>
 		<German>Sei diskret. Bitte die Auslieferung des Attentäters an sein Heimatland an, aber verhöre ihn zuerst.</German>
 		<Italian>Sii discreto. Offri di riconsegnare l'assassino al suo governo, ma prima interrogalo.</Italian>
@@ -3658,6 +3658,10 @@
 		<Russian>[ICON_BULLET]Получить %d1 [NUM1:отряд:отрядов] [COLOR_UNIT_TEXT]Секироносцев[COLOR_REVERT].</Russian>
 		<Spanish>[ICON_BULLET]Recibes %d1 [COLOR_UNIT_TEXT][NUM1:Guerrero:Guerreros] con hacha[COLOR_REVERT].</Spanish>
 	</TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_ASSASSIN_DISCOVERED_3_STONE_HELP</Tag>
+        <English>[ICON_BULLET]Receive %d1 [COLOR_UNIT_TEXT][NUM1:Stone Axemen:Stone Axemen][COLOR_REVERT].</English>
+    </TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_ATTITUDE_BAD</Tag>
 		<English>[ICON_BULLET]Suffer a [COLOR_NEGATIVE_TEXT]%D1[COLOR_REVERT] relations hit with %s2_player</English>
@@ -6939,7 +6943,7 @@
         <English>Let us invest into promoting it even more.</English>
     </TEXT>
     <TEXT>
-        <Tag>TXT_KEY_EVENT_GREAT_MONUMENT_3</Tag>
+        <Tag>TXT_KEY_EVENT_GREAT_MONUMENTS_3</Tag>
         <English>Let's use this chance to promote our culture.</English>
     </TEXT>
 	<TEXT>
@@ -10658,7 +10662,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_SPY_DISCOVERED_1</Tag>
-		<English>Be discreet. Offer the to release the spy to their government, but question him first.</English>
+		<English>Be discreet. Offer them to release the spy to their government, but question him first.</English>
 		<French>Soyez discrets. Offrez de rendre l'espion a son gouvernement, mais questionnez-le d'abord.</French>
 		<German>Seid diskret. Bietet die Ausweisung des Spions an, aber verhört ihn gründlich.</German>
 		<Italian>Agiamo con discrezione. Offriamo al loro governo il rilascio della spia, dopo averlo interrogato.</Italian>

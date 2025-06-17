@@ -413,14 +413,14 @@
 				<iGlobalReligionCommerce>0</iGlobalReligionCommerce>
 			</GlobalReligionCommerces>
 			<HolyCityCommerces>
-				<iHolyCityCommerce>3</iHolyCityCommerce>
+				<iHolyCityCommerce>2</iHolyCityCommerce>
 				<iHolyCityCommerce>0</iHolyCityCommerce>
 				<iHolyCityCommerce>0</iHolyCityCommerce>
 			</HolyCityCommerces>
 			<StateReligionCommerces>
 				<iStateReligionCommerce>0</iStateReligionCommerce>
 				<iStateReligionCommerce>0</iStateReligionCommerce>
-				<iStateReligionCommerce>4</iStateReligionCommerce>
+				<iStateReligionCommerce>3</iStateReligionCommerce>
 			</StateReligionCommerces>
 			<Button>Art/Interface/Buttons/Religions/Taoism.dds</Button>
 			<TechButton>Art/Interface/Buttons/TechTree/Found_Taoism.dds</TechButton>
