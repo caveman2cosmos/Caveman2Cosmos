@@ -5,6 +5,13 @@
 			<Type>UNIT_GREAT_HUNTER</Type>
 			<Buildings>
 				<BuildingType>BUILDING_HERITAGE_BEARS</BuildingType>
+				<BuildingType>BUILDING_HERITAGE_BIG_CATS</BuildingType>
+				<BuildingType>BUILDING_HERITAGE_BISON</BuildingType>
+				<BuildingType>BUILDING_HERITAGE_DEER</BuildingType>
+				<BuildingType>BUILDING_HERITAGE_GIRAFFE</BuildingType>
+				<BuildingType>BUILDING_HERITAGE_MAMMOTH</BuildingType>
+				<BuildingType>BUILDING_HERITAGE_RHINOCEROS</BuildingType>
+				<BuildingType>BUILDING_HERITAGE_ZEBRA</BuildingType>
 			</Buildings>
 		</UnitInfo>
 		<UnitInfo>

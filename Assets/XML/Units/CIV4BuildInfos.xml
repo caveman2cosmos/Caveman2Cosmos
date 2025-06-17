@@ -333,7 +333,7 @@
 				</TerrainStruct>
 				<TerrainStruct>
 					<TerrainType>TERRAIN_PERMAFROST</TerrainType>
-					<PrereqTech>TECH_WEATHER_FORECASTING</PrereqTech>
+					<PrereqTech>TECH_RAILROAD</PrereqTech>
 					<iTime>0</iTime>
 				</TerrainStruct>
 				<TerrainStruct>
@@ -3249,7 +3249,7 @@
 			<Type>BUILD_LUMBERJACK</Type>
 			<Description>TXT_KEY_BUILD_LUMBERJACK</Description>
 			<PrereqTech>TECH_SEDENTARY_LIFESTYLE</PrereqTech>
-			<ObsoleteTech>TECH_MEDIEVAL_LIFESTYLE</ObsoleteTech>
+			<ObsoleteTech>TECH_MACHINERY</ObsoleteTech>
 			<iTime>200</iTime>
 			<iCost>1</iCost>
 			<bKill>0</bKill>

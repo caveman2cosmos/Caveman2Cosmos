@@ -204,7 +204,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDINGHELP_COASTAL_TRADE_ROUTES</Tag>
-		<English>[ICON_BULLET]Торговых путей во всех прибрежных городах: %D1_Change</English>
+		<English>[ICON_BULLET]%D1_Change Trade Routes in All Coastal Cities</English>
 		<French>[ICON_BULLET]%D1_Change Routes commerciales dans toutes les villes côtières</French>
 		<German>[ICON_BULLET]%D1_Change Handelswege in allen Küstenstädten</German>
 		<Italian>[ICON_BULLET]%D1_Change rotte commerciali in tutte le città costiere</Italian>

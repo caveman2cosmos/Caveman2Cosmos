@@ -365,6 +365,12 @@
 			<Help>TXT_KEY_UNIT_TAMED_ANIMALS_HELP</Help>
 			<bNoDefensiveBonus>1</bNoDefensiveBonus>
 			<bMilitaryTrade>1</bMilitaryTrade>
+			<FreePromotions>
+				<FreePromotion>
+					<PromotionType>PROMOTION_COLD1</PromotionType>
+					<bFreePromotion>1</bFreePromotion>
+				</FreePromotion>
+			</FreePromotions>
 			<Buildings>
 				<BuildingType>BUILDING_HERD_MAMMOTH</BuildingType>
 				<BuildingType>BUILDING_GOVERNORS_PETS</BuildingType>
@@ -487,7 +493,7 @@
 				<BuildingType>BUILDING_ANIMAL_TRAINER_MAMMOTH</BuildingType>
 			</PrereqOrBuildings>
 			<PrereqTech>TECH_MEGAFAUNA_DOMESTICATION</PrereqTech>
-			<ObsoleteTech>TECH_COPPER_WORKING</ObsoleteTech>
+			<ObsoleteTech>TECH_SEDENTARY_LIFESTYLE</ObsoleteTech>
 			<BonusType>BONUS_MAMMOTH</BonusType>
 			<iCost>130</iCost>
 			<iMoves>1</iMoves>

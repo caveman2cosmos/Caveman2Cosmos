@@ -377,7 +377,6 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<FreeBuilding>BUILDING_EFFECT_HERITAGE_BIG_CATS</FreeBuilding>
 			<Bonus>BONUS_CAT</Bonus>
 			<iCost>624</iCost>
 			<iTradeRoutes>1</iTradeRoutes>
@@ -402,6 +401,10 @@
 					<iFlavor>5</iFlavor>
 				</Flavor>
 			</Flavors>
+			<PrereqOrBuildings>
+				<BuildingType>BUILDING_FOLKLORE_SABRETOOTH</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_PALEOLITHIC_CAT</BuildingType>
+			</PrereqOrBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_EFFECT_HERITAGE_BIG_CATS</Type>
@@ -419,6 +422,44 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
+		</BuildingInfo>
+		<BuildingInfo>
+			<Type>BUILDING_HERITAGE_BIG_CATS</Type>
+			<SpecialBuildingType>SPECIALBUILDING_PUNK_MEGAFAUNA</SpecialBuildingType>
+			<Description>TXT_KEY_BUILDING_HERITAGE_BIG_CAT</Description>
+			<Civilopedia>TXT_KEY_BUILDING_HERITAGE_BIG_CAT_PEDIA</Civilopedia>
+			<Advisor>ADVISOR_MILITARY</Advisor>
+			<ArtDefineTag>ART_DEF_BUILDING_EFFECT_HERITAGE_BIG_CATS</ArtDefineTag>
+			<PrereqTech>TECH_HERITAGE</PrereqTech>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
+			<FreeBuilding>BUILDING_EFFECT_HERITAGE_BIG_CATS</FreeBuilding>
+			<iCost>139</iCost>
+			<iConquestProb>0</iConquestProb>
+			<iAsset>4</iAsset>
+			<iPower>2</iPower>
+			<ConstructSound>AS2D_BUILD_GRANARY</ConstructSound>
+			<Flavors>
+				<Flavor>
+					<FlavorType>FLAVOR_PRODUCTION</FlavorType>
+					<iFlavor>7</iFlavor>
+				</Flavor>
+				<Flavor>
+					<FlavorType>FLAVOR_MILITARY</FlavorType>
+					<iFlavor>5</iFlavor>
+				</Flavor>
+			</Flavors>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_ANIMAL_TRAINER_BIG_CATS</BuildingType>
+			</PrereqInCityBuildings>
+			<PropertyManipulators>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_EDUCATION</PropertyType>
+					<iAmountPerTurn>1</iAmountPerTurn>
+				</PropertySource>
+			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_ANIMAL_TRAINER_BISON</Type>

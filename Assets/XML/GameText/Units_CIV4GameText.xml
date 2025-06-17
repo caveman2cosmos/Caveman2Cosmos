@@ -3851,6 +3851,10 @@
 		<Russian>Óäàðíàÿ ïîäâ. ëîäêà</Russian>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_UNIT_MASTER_SAILOR_ATTACK_SUBMARINE</Tag>
+		<English>Great Attack Submarine</English>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_UNIT_ATTACK_SUBMARINE_PEDIA</Tag>
 		<English>An Attack Submarine is any submersible with the capacity to destroy enemy ships. In the past, nearly all subs would have been considered Attack Submarines, but with advances in technology, many shed their torpedoes for the capability to carry ballistic missiles. While able to attack land targets, such submarines are particularly vulnerable to attacks from their torpedo-armed cousins.</English>
 		<French>Le terme "sous-marin d'attaque" s'applique à tout submersible ayant la capacité de détruire les navires ennemis. Dans le passé, presque tous les sous-marins auraient été considérés comme des sous-marins d'attaque mais au fur et à mesure des avancées technologiques, nombre d'entre eux troquent leurs torpilles contre des missiles balistiques. Capables de s'attaquer à des cibles terrestres, ces sous-marins sont néanmoins particulièrement vulnérables aux attaques de leurs cousins armés de torpilles.</French>
@@ -4647,6 +4651,10 @@
 		</Spanish>
 		<Polish>Nowoczesny Pancernik</Polish>
 		<Russian>Ñîâð. ëèíêîð</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_MASTER_SAILOR_BATTLESHIP</Tag>
+		<English>Great Modern Battleship</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_BATTLESHIP_PEDIA</Tag>
@@ -5815,6 +5823,10 @@
 		<Russian>Êàðàâåëëà</Russian>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_UNIT_MASTER_SAILOR_CARAVEL</Tag>
+		<English>Great Caravel</English>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_UNIT_CARAVEL_PEDIA</Tag>
 		<English>The caravel was a small sailing ship with three or four masts, a broad bow, and a high, narrow stern. Though often used as a warship, the caravel could also carry just over 100 metric tons of cargo. The Spanish and the Portuguese used caravels for both commerce and exploration. Christopher Columbus' three ships, the "Nina," "Pinta," and "Santa Maria," were caravels that risked the hazards of an ocean crossing.</English>
 		<French>La caravelle est un petit bateau à trois ou quatre mâts, avec une large proue et une poupe étroite. Souvent utilisée pour la guerre, elle pouvait également transporter plus de 100 tonnes de marchandises. Les Espagnols et les Portugais l'utilisaient pour le commerce et l'exploration. Les trois navires de Christophe Colomb, la "Nina," la "Pinta," et la "Santa Maria," étaient des caravelles, et résistèrent aux dangers de la traversée de l'océan.</French>
@@ -5903,6 +5915,10 @@
 		</Spanish>
 		<Polish>Lotniskowiec</Polish>
 		<Russian>Àâèàíîñåö</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_MASTER_SAILOR_CARRIER</Tag>
+		<English>Great Carrier</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_CARRIER_OPS_HELP</Tag>
@@ -7206,6 +7222,10 @@
 		<Italian>Decireme</Italian>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_UNIT_MASTER_SAILOR_DECAREME</Tag>
+		<English>Great Deceres</English>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_UNIT_DECAREME_PEDIA</Tag>
 		<English>Most of the warships of the era were distinguished by their names, which were compounds of a number and a suffix. Thus, the English term quinquereme derives from Latin quinque-rmis and has the Greek equivalent -. Both are compounds featuring a prefix meaning "five": Latin quinque, ancient Greek. The Roman suffix is from rmus, "oar": "five-oar". As the vessel cannot have had only five oars, the word must be a figure of speech meaning something else. There are a number of possibilities. The - occurs only in suffix form, deriving from "to row". As "rower" is erets and "oar" is eretmon, -rs does not mean either of those but, being based on the verb, must mean "rowing". This meaning is no clearer than the Latin. Whatever the "five-oar" or the "five-row" originally meant was lost with knowledge of the construction, and is, from the 5th century on, a hotly debated issue. For the history of the interpretation efforts and current scholarly consensus, see below.[PARAGRAPH:2]Like the septireme, the deceres (Greek: dekrs) is attributed by Pliny to Alexander the Great, and they are present alongside "nines" in the fleet of Antigonus Monophthalmus in 315 BC. Indeed, it is most likely that the "ten" was derived from adding another oarsman to the "nine". A "ten" is mentioned as Philip V's flagship at Chios in 201 BC, and their last appearance was at Actium, where they constituted Antony's heaviest ships.</English>
 		<Polish>Dekarema.</Polish>
@@ -7296,6 +7316,10 @@
 		</Spanish>
 		<Polish>Wsp&#243;&#179;czesny Niszczyciel</Polish>
 		<Russian>Ñîâð. ýñìèíåö</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_MASTER_SAILOR_DESTROYER</Tag>
+		<English>Great Modern Destroyer</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_DESTROYER_PEDIA</Tag>
@@ -7567,6 +7591,10 @@
 		<Italian>Corazzata monocalibro</Italian>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_UNIT_MASTER_SAILOR_DREADNOUGHT_SHIP</Tag>
+		<English>Great Dreadnought</English>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_UNIT_DREADNOUGHT_SHIP_PEDIA</Tag>
 		<English>The dreadnought was the predominant type of 20th-century battleship. The first of the kind, the Royal Navy's Dreadnought had such an impact when launched in 1906 that battleships built after her were referred to as 'dreadnoughts', and earlier battleships became known as pre-dreadnoughts. Her design had two revolutionary features; an 'all-big-gun' armament scheme and steam turbine propulsion. The arrival of the dreadnoughts renewed the naval arms race, principally between Britain and Germany but reflected worldwide, as the new class of warships became a crucial symbol of national power.[PARAGRAPH:2]The concept of an all-big-gun ship had been in development for several years before Dreadnought's construction. The Imperial Japanese Navy had begun work on an all-big-gun battleship in 1904, but finished the ship as a pre-dreadnought; the United States Navy was also building all-big-gun battleships. Technical development continued rapidly through the dreadnought era. Successive designs increased rapidly in size and made use of improvements in armament, armor, and propulsion. Within ten years, new battleships outclassed Dreadnought herself. These more powerful vessels were known as 'super-dreadnoughts'. Most of the dreadnoughts were scrapped after the end of World War I under the terms of the Washington Naval Treaty, but many of the newer super-dreadnoughts continued serving through World War II.[PARAGRAPH:2]While dreadnought building consumed vast resources in the early 20th century, there was only one pitched battle between dreadnought fleets. At the Battle of Jutland, the British and German navies clashed with no decisive result. The term 'dreadnought' gradually dropped from use after World War I, as all battleships shared dreadnought characteristics; it can also be used to describe battlecruisers, the other type of ship resulting from the dreadnought revolution.</English>
 		<Polish>HMS Dreadnought? pancernik brytyjski o prze&#179;omowej konstrukcji, kt&#243;ry wszed&#179; do s&#179;u&#191;by w 1906 roku i zarazem sz&#243;sty okr&#234;t Royal Navy nosz&#185;cy t&#234; nazw&#234;. "Dreadnought" tak mocno zaznaczy&#179; si&#234; w rozwoju okr&#234;t&#243;w, &#191;e od jego nazwy pochodzi okre&#156;lenie rodzaju pancernik&#243;w? drednot&#243;w. Wszystkie okr&#234;ty, kt&#243;re by&#179;y oparte na wcze&#156;niejszych projektach, sta&#179;y si&#234; po jego wej&#156;ciu do s&#179;u&#191;by przestarza&#179;e i s&#185; obecnie okre&#156;lane jako przeddrednoty. Jego wej&#156;cie do s&#179;u&#191;by by&#179;o jedn&#185; z g&#179;&#243;wnych przes&#179;anek, kt&#243;re da&#179;y pocz&#185;tek nowemu wy&#156;cigowi zbroje&#241; morskich pomi&#234;dzy &#243;wczesnymi pot&#234;gami militarnymi (Wielk&#185; Brytani&#185; i Niemcami), co w konsekwencji by&#179;o jedn&#185; z przyczyn wybuchu I wojny &#156;wiatowej. "Dreadnought" by&#179; pierwszym pancernikiem, kt&#243;ry mia&#179; liczn&#185; artyleri&#234; g&#179;&#243;wn&#185; ujednoliconego kalibru, w przeciwie&#241;stwie do bezpo&#156;rednio poprzedzaj&#185;cych go pancernik&#243;w, kt&#243;re mia&#179;y kilka dzia&#179; du&#191;ego kalibru i kilka lub kilkana&#156;cie dzia&#179; drugiego? mniejszego g&#179;&#243;wnego kalibru oraz artyleri&#234; &#156;redni&#185;. By&#179; tak&#191;e pierwszym du&#191;ym okr&#234;tem nap&#234;dzanym przez turbiny parowe, co sprawi&#179;o, &#191;e w momencie uko&#241;czenia budowy by&#179; najszybszym pancernikiem na &#156;wiecie.</Polish>
@@ -7786,6 +7814,10 @@
 		</Spanish>
 		<Polish>Wczesny Lotniskowiec</Polish>
 		<Russian>Ðàííèé àâèàíîñåö</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_MASTER_SAILOR_EARLY_CARRIER</Tag>
+		<English>Great Early Carrier</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_EARLY_FIGHTER</Tag>
@@ -8937,6 +8969,10 @@
 		<Russian>Àòîìíûé ýñìèíåö</Russian>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_UNIT_MASTER_SAILOR_FF_DESTROYER_I</Tag>
+		<English>Great Fusion Destroyer</English>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_UNIT_FF_DESTROYER_PEDIA</Tag>
 		<English>Fusion engines are the powerhouse of late game vehicles. Engines provide the power necessary to move a vehicle and fire its weapons. Unlike internal combustion engines, fusion engines generate power by fusing hydrogen isotopes, much like the center of a sun. Despite conventional expectations, these engines are not potential nuclear explosions. When damaged to a significant degree they will automatically shut down all fusion reactions and power down.</English>
 		<Russian>Термоядерные реакторы являются двигателями поздней игры. Они обеспечивают мощность, необходимую для передвижения транспортного средства и ведения огня его орудиями. В отличие от двигателей внутреннего сгорания, термоядерные реакторы вырабатывают энергию путем слияния изотопов водорода (1H) так же, как в центре Солнца. Несмотря на традиционную мысль, эти реакторы не являются потенциальными источниками радиационной опасности. При значительном повреждении они автоматически блокируют все реакции синтеза и отключают питание.</Russian>
@@ -9307,6 +9343,10 @@
 		<Russian>Ôðåãàò</Russian>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_UNIT_MASTER_SAILOR_FRIGATE</Tag>
+		<English>Great Frigate</English>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_UNIT_FRIGATE_PEDIA</Tag>
 		<English>The frigate was a fast and powerful warship that evolved to fill several important roles, but one of its primary roles was to raid enemy shipping. These three masted ships were lighter and faster than the European great ship or man-of-war, and usually carried 36 or fewer guns. The frigate was powerful enough to overcome most of its prospective opponents and fast enough to escape those it could not outgun. Because of their speed and strength, frigates were often employed as escorts for merchant vessels during times of war. The frigate remained the most useful and dominant naval vessel until the development of the ironclad.</English>
 		<French>La frégate était un navire de guerre rapide et puissant dont l'évolution lui permit de remplir différents rôles. L'un des principaux était l'attaque des bateaux ennemis. Ces trois-mâts, plus légers et plus rapides que les grands vaisseaux de guerre européens, contenaient au maximum 36 pièces d'artillerie. La frégate était assez puissante pour triompher de la plupart de ses opposants et suffisamment rapide pour échapper à ceux qu'elle ne pouvait vaincre. Du fait de sa puissance de feu et de sa rapidité, la frégate fut souvent utilisée pour escorter des navires marchands en temps de guerre. La frégate fut le navire le plus puissant et le plus utile en activité jusqu'à l'arrivée des cuirassés.</French>
@@ -9366,6 +9406,10 @@
 		<Russian>Àòîìíûé ëèíêîð</Russian>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_UNIT_MASTER_SAILOR_FUSION_BATTLESHIP</Tag>
+		<English>Great Fusion Battleship</English>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_UNIT_FUSION_BATTLESHIP_PEDIA</Tag>
 		<English>Fusion Battleships are battleships with a fusion powersource, making them optimal for long-range journeys, and excellent for rapid fire railguns and taking fire with their fusion shields.</English>
 		<Polish>Pancernik Fuzyjny jest jedna z mocniejszych i zarazem silniejszych okr&#234;t&#243;w wojennych. Mo&#191;e bez problemu zatapia&#230; wi&#234;kszo&#156;&#230; innych</Polish>
@@ -9384,6 +9428,10 @@
 		</Spanish>
 		<Polish>Lotniskowiec Fuzyjny</Polish>
 		<Russian>Àòîìíûé àâèàíîñåö</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_MASTER_SAILOR_FUSION_CARRIER</Tag>
+		<English>Great Fusion Carrier</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_FUSION_CARRIER_PEDIA</Tag>
@@ -9483,6 +9531,10 @@
 		</Spanish>
 		<Polish>Fuzyjny Okr&#234;t Podwodny</Polish>
 		<Russian>Àòîìíàÿ ñóáìàðèíà</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_FUSION_MASTER_SAILOR_SUBMARINE</Tag>
+		<English>Great Fusion Submarine</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_FUSION_SUBMARINE_PEDIA</Tag>
@@ -9633,6 +9685,10 @@
 		</Spanish>
 		<Polish>Galeas</Polish>
 		<Russian>Ãàëåàñ</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_MASTER_SAILOR_GALLEASS</Tag>
+		<English>Great Galleass</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_GALLEASS_PEDIA</Tag>
@@ -11979,6 +12035,10 @@
 		<Russian>Æåëåçíûé ôðåãàò</Russian>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_UNIT_IRON_MASTER_SAILOR_FRIGATE</Tag>
+		<English>Great Iron Frigate</English>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_UNIT_IRON_FRIGATE_PEDIA</Tag>
 		<English>The first steam-powered screw frigates were built in the mid-1840s, and at the end of the decade the French Navy introduced steam power to its line of battle. The desire for change came from the ambition of Napoleon III to gain greater influence in Europe, which required a challenge to the British at sea. The introduction of the steam ship-of-the-line led to a building competition between France and Britain. By the end of the 1850s it was clear that France was unable to match British building of steam warships, and to regain the strategic initiative a dramatic change was required. The result was the first ocean-going ironclad, the La Gloire, begun in 1857 and launched in 1859. Britain's venture into iron was not in the form of an ironclad (a wooden hull armour plated) but the world's first all iron ship, (iron hull, armour plated) HMS Warrior. The Royal Navy had not been keen to sacrifice their advantage in steam ships of the line, but was determined that the first British iron ship would outmatch the French ships in every respect, particularly speed. A fast iron ship would have the advantage of being able to choose a range of engagement which could make her invulnerable to enemy fire. The British specification was more a large, powerful frigate than a ship-of-the-line. The resulting vessel was Warrior, built and launched in 1860, Britain's first iron warship. Warrior was a successful design; her weapons and armor were more effective than that of La Gloire, and with the largest set of steam engines yet fitted to a ship she could steam at 14.3 knots.</English>
 		<Polish>W 1783 francuski arystokrata, markiz Claude FranCois Jouffroy d'Abbans (1751-1832), zbudowa&#179; &#179;&#243;d&#159;, kt&#243;rej wios&#179;a by&#179;y nap&#234;dzane maszyn&#185; parow&#185;. Wynalazca nazwa&#179; &#179;&#243;d&#159; Pyroscaphe (ognisty statek) i pomy&#156;lnie przeprowadzi&#179; na rzece pr&#243;by pierwszego parowca. Pierwszy parowiec wyp&#179;yn&#185;&#179; w rejs w 1807 roku. Pocz&#185;tkowo parowce by&#179;y do&#156;&#230; niebezpieczne, gdy&#191; cz&#234;sto zdarza&#179;y si&#234; eksplozje niewystarczaj&#185;co wytrzyma&#179;ych kot&#179;&#243;w. Udoskonalono je w drugiej po&#179;owie XIX wieku i wtedy rejsy parowcami sta&#179;y si&#234; regularne.</Polish>
@@ -12876,6 +12936,10 @@
 		</Spanish>
 		<Polish>Kajak</Polish>
 		<Russian>Êàÿê</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_MASTER_SAILOR_KAYAK</Tag>
+		<English>Great Kayak</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_KAYAK_PEDIA</Tag>
@@ -14529,6 +14593,10 @@
 		</Spanish>
 		<Russian>Ìàíîâàð</Russian>
 		<Italian>Man of war</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_MASTER_SAILOR_MANOWAR</Tag>
+		<English>Great Man'O'War</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_MANOWAR_PEDIA</Tag>
@@ -16692,6 +16760,10 @@
 		<Russian>ßäåðíûé àâèàíîñåö</Russian>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_UNIT_MASTER_SAILOR_NUCLEAR_CARRIER</Tag>
+		<English>Great Modern Carrier</English>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_UNIT_NUCLEAR_CARRIER_PEDIA</Tag>
 		<English>An aircraft carrier is a warship designed to deploy and recover aircraft, acting as a sea-going airbase. Aircraft carriers thus allow a naval force to project air power great distances without having to depend on local bases for staging aircraft operations. They have evolved from wooden vessels used to deploy a balloon into nuclear powered warships that carry dozens of fixed and rotary wing aircraft.[PARAGRAPH:1]The US Navy built the first aircraft carrier to be powered by nuclear reactors. USS Enterprise is powered by eight nuclear reactors and was the second surface warship (after USS Long Beach) to be powered in this way. Subsequent supercarriers starting with USS Nimitz took advantage of this technology to increase their endurance utilizing only two reactors. The only other nation to have followed the US lead is France with Charles de Gaulle although nuclear power is used for submarine propulsion by France, Great Britain, China and the former Soviet Union.</English>
 		<Polish>Lotniskowce? klasa okr&#234;t&#243;w, kt&#243;rej g&#179;&#243;wnym zadaniem jest prowadzenie operacji bojowych za pomoc&#185; bazuj&#185;cych na nich samolot&#243;w i przystosowana do tego celu konstrukcyjnie, przede wszystkim przez posiadanie pok&#179;adu startowego. Pierwsze okr&#234;ty tej klasy powsta&#179;y pod koniec I wojny &#156;wiatowej, nast&#234;pnie odegra&#179;y du&#191;&#185; rol&#234; w walkach II wojny &#156;wiatowej, szczeg&#243;lnie na Pacyfiku. W chwili obecnej tylko USA posiadaj&#185; wi&#234;ksz&#185; flot&#234; lotniskowc&#243;w, ponadto Francja, Rosja i Brazylia maj&#185; nieliczne lotniskowce uderzeniowe, a Wielka Brytania, Indie, Hiszpania, W&#179;ochy oraz Tajlandia lekkie lotniskowce dla samolot&#243;w V/STOL. Lotniskowiec porusza si&#234; wraz z tzw. grup&#185; uderzeniow&#185;, sk&#179;adaj&#185;c&#185; si&#234; z fregat, niszczycieli, okr&#234;t&#243;w podwodnych. Grupa taka jest w stanie samodzielnie prowadzi&#230; dzia&#179;ania wojenne na wielkim obszarze.</Polish>
@@ -16709,6 +16781,10 @@
 		</Spanish>
 		<Polish>Nuklearny Okr&#234;t Podwodny</Polish>
 		<Russian>ßäåðíàÿ ñóáìàðèíà</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_NUCLEAR_MASTER_SAILOR_SUBMARINE</Tag>
+		<English>Nuclear Submarine</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_NUCLEAR_SUBMARINE_PEDIA</Tag>
@@ -17196,6 +17272,10 @@
 			<Plural>0</Plural>
 		</Spanish>
 		<Russian>Àóòðèãåð</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_MASTER_SAILOR_OUTRIGGER</Tag>
+		<English>Great Outrigger</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_OUTRIGGER_PEDIA</Tag>
@@ -18293,6 +18373,10 @@
 		<Italian>Corazzata policalibro</Italian>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_UNIT_MASTER_SAILOR_PRE_DREADNOUGHT</Tag>
+		<English>Great Pre-Dreadnought</English>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_UNIT_PRE_DREADNOUGHT_PEDIA</Tag>
 		<English>The dreadnought was the predominant type of 20th-century battleship. The first of the kind, the Royal Navy's Dreadnought had such an impact when launched in 1906 that battleships built after her were referred to as 'dreadnoughts', and earlier battleships became known as pre-dreadnoughts. Her design had two revolutionary features; an 'all-big-gun' armament scheme and steam turbine propulsion. The arrival of the dreadnoughts renewed the naval arms race, principally between Britain and Germany but reflected worldwide, as the new class of warships became a crucial symbol of national power.[PARAGRAPH:2]The concept of an all-big-gun ship had been in development for several years before Dreadnought's construction. The Imperial Japanese Navy had begun work on an all-big-gun battleship in 1904, but finished the ship as a pre-dreadnought; the United States Navy was also building all-big-gun battleships. Technical development continued rapidly through the dreadnought era. Successive designs increased rapidly in size and made use of improvements in armament, armor, and propulsion. Within ten years, new battleships outclassed Dreadnought herself. These more powerful vessels were known as 'super-dreadnoughts'. Most of the dreadnoughts were scrapped after the end of World War I under the terms of the Washington Naval Treaty, but many of the newer super-dreadnoughts continued serving through World War II.[PARAGRAPH:2]While dreadnought building consumed vast resources in the early 20th century, there was only one pitched battle between dreadnought fleets. At the Battle of Jutland, the British and German navies clashed with no decisive result. The term 'dreadnought' gradually dropped from use after World War I, as all battleships shared dreadnought characteristics; it can also be used to describe battlecruisers, the other type of ship resulting from the dreadnought revolution.</English>
 		<Polish>HMS Dreadnought? pancernik brytyjski o prze&#179;omowej konstrukcji, kt&#243;ry wszed&#179; do s&#179;u&#191;by w 1906 roku i zarazem sz&#243;sty okr&#234;t Royal Navy nosz&#185;cy t&#234; nazw&#234;. "Dreadnought" tak mocno zaznaczy&#179; si&#234; w rozwoju okr&#234;t&#243;w, &#191;e od jego nazwy pochodzi okre&#156;lenie rodzaju pancernik&#243;w? drednot&#243;w. Wszystkie okr&#234;ty, kt&#243;re by&#179;y oparte na wcze&#156;niejszych projektach, sta&#179;y si&#234; po jego wej&#156;ciu do s&#179;u&#191;by przestarza&#179;e i s&#185; obecnie okre&#156;lane jako przeddrednoty. Jego wej&#156;cie do s&#179;u&#191;by by&#179;o jedn&#185; z g&#179;&#243;wnych przes&#179;anek, kt&#243;re da&#179;y pocz&#185;tek nowemu wy&#156;cigowi zbroje&#241; morskich pomi&#234;dzy &#243;wczesnymi pot&#234;gami militarnymi (Wielk&#185; Brytani&#185; i Niemcami), co w konsekwencji by&#179;o jedn&#185; z przyczyn wybuchu I wojny &#156;wiatowej. "Dreadnought" by&#179; pierwszym pancernikiem, kt&#243;ry mia&#179; liczn&#185; artyleri&#234; g&#179;&#243;wn&#185; ujednoliconego kalibru, w przeciwie&#241;stwie do bezpo&#156;rednio poprzedzaj&#185;cych go pancernik&#243;w, kt&#243;re mia&#179;y kilka dzia&#179; du&#191;ego kalibru i kilka lub kilkana&#156;cie dzia&#179; drugiego? mniejszego g&#179;&#243;wnego kalibru oraz artyleri&#234; &#156;redni&#185;. By&#179; tak&#191;e pierwszym du&#191;ym okr&#234;tem nap&#234;dzanym przez turbiny parowe, co sprawi&#179;o, &#191;e w momencie uko&#241;czenia budowy by&#179; najszybszym pancernikiem na &#156;wiecie.</Polish>
@@ -18537,6 +18621,10 @@
 		</Spanish>
 		<Polish>Pentera</Polish>
 		<Russian>Îñàäíàÿ êâèíêâåðåìà</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_MASTER_SAILOR_QUINQUEREME</Tag>
+		<English>Great Siege Quinquereme</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_QUINQUEREME2</Tag>
@@ -20604,6 +20692,10 @@
 		<Russian>Øëþï</Russian>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_UNIT_MASTER_SAILOR_SLOOP</Tag>
+		<English>Great Sloop</English>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_UNIT_SLOOP_OF_WAR</Tag>
 		<English>Sloop of War</English>
 		<French>
@@ -20620,6 +20712,10 @@
 		</Spanish>
 		<Polish>Slup Wojenny</Polish>
 		<Russian>Âîåííûé øëþï</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_MASTER_SAILOR_SLOOP_OF_WAR</Tag>
+		<English>Great Sloop of War</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SLOOP_OF_WAR_PEDIA</Tag>
@@ -21124,6 +21220,10 @@
 		<Russian>Ñòåëñ-ýñìèíåö</Russian>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_UNIT_MASTER_SAILOR_STEALTH_DESTROYER</Tag>
+		<English>Great Stealth Destroyer</English>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_UNIT_STEALTH_DESTROYER_PEDIA</Tag>
 		<English>The elusive element of surprise has brought about deciding victories on land, at sea and in the air for centuries. But in the face of more precise forms of radar developed in the latter half of the twentieth century, new technology was needed to return the tactical advantage stealth once provided.[PARAGRAPH:1]Beginning in the 1980s, breakthroughs in naval stealth research, such as radar-silent construction materials and simplified superstructures, initiated the creation of the world's first stealth navies. Since that time, France, Sweden and the United States have all adopted their own stealth ships, capable of performing missions while remaining invisible to enemy radar.</English>
 		<French>La surprise a toujours été un élément crucial pour s'assurer la victoire lors de conflits terrestres, navals et aériens. Mais face aux nouveaux radars développés dans la seconde moitié du vingtième siècle, de nouvelles technologies sont nécessaires pour reprendre l'avantage tactique conféré par la furtivité.[PARAGRAPH:1]Dans les années 1980, les avancées en matière de furtivité navale, comme les matériaux de construction indétectables par les radars et les superstructures simplifiées, permettent la création des premiers navires furtifs. Depuis cette époque, la France, la Suède et les Etats-Unis ont tous adopté leurs propres navires furtifs, capables d'exécuter des missions en restant invisibles aux radars ennemis.</French>
@@ -21182,6 +21282,10 @@
 		</Spanish>
 		<Polish>Zaawansowany Okr&#234;t Pancerny</Polish>
 		<Russian>Ðàííèé ýñìèíåö</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_STEAM_MASTER_SAILOR_DESTROYER</Tag>
+		<English>Great Advanced Ironclad</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_STEFAN_RAZVAN</Tag>
@@ -22713,6 +22817,10 @@
 		</Spanish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_UNIT_MASTER_SAILOR_TRIREME</Tag>
+		<English>Great Trireme</English>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_UNIT_TRIREME_PEDIA</Tag>
 		<English>Triremes were ancient war galleys with three rows of oars on each side. The trireme was an improvement upon an older type of ship called the "pentekonter," which was similar in design but possessed only one row of oars on each side. (The standard "galleys" found in Civilization IV are pentekonters.) The staggered seating of the rowers on the trireme allowed for more people to be packed into roughly the same amount of space, and (more importantly) the extra manpower allowed triremes to travel at faster speeds. Some ancient sources claim that the trireme existed as far back as the eighth century BC, but the first known account of their use was by Polycrates of Samos in 525 BC during an invasion of Egypt. By the middle of the fifth century BC, triremes were in common use throughout Greece.[PARAGRAPH:1]The average trireme was about 35 meters long, carrying 170 oarsmen, 20 crew members, and 10 marines under the command of a captain. According to ancient sources, triremes could reach a maximum speed of about 20 km/hour in battle, or sustain a slower speed of 13 km/hour for a long stretch of time. Triremes also possessed sails but they were not used during combat. A Trireme's main offensive weapon was its "beak," a stout piece of sharpened wood (often clad in metal) which protruded directly forward from its bow, at or below the waterline. In battle the primary tactic was to use the beaks to ram and sink enemy ships, which required building up as much speed as possible to punch through the opposing ship's hull. This was a difficult task and required a great deal of cooperation from the rowers, as even a single rower moving out of place could greatly slow the ship. For this reason the rowers on Greek triremes were not slaves but instead well-trained free men who received good pay for their services.[PARAGRAPH:1]During the Persian War, the Greeks used their triremes to defeat the Persians at the decisive Battle of Salamis. Triremes also formed the backbone of the Athenian navy during the Peloponnesian War. As the war progressed Sparta and her allies created their own powerful fleet of triremes; these would be put into good use in 404 BC during the Battle at Aegospotami, when Lysander destroyed Athen's navy, cutting off the city-state's trade and eventually starving her into submission.[PARAGRAPH:1]Triremes would eventually be supplanted by the larger and faster quinqueremes, but the design was revived years later by the Romans, who, facing no major naval enemies, preferred the smaller and cheaper triremes to the more expensive quinqueremes.</English>
 		<French>La trirème est une galère de guerre disposant de trois rangs de rames sur chaque bord. Elle constitue une amélioration d'un type plus ancien de bateau appelé le pentécontère à la conception similaire mais avec un seul rang de rameurs sur chaque bord (le pentécontère est la "galère" standard de Civilization IV). L'échelonnement des rameurs sur la trirème permet d'en entasser plus sur une même surface et surtout lui permet de bénéficier d'une puissance supérieure autorisant une vitesse plus rapide. D'après certaines sources anciennes, la trirème existait déjà au huitième siècle av. J.-C., mais la première mention de son utilisation est faite par Polycrate de Samos en 525 av. J.-C. lors d'une invasion de l'Egypte. Au début du cinquième siècle av. J.-C., les trirèmes existent partout en Grèce.[PARAGRAPH:1]Une trirème mesure en moyenne 35 mètres de long et transporte 170 rameurs, 20 hommes d'équipage et 10 marins placés sous le commandement d'un capitaine. Elle peut atteindre une vitesse maximale de 20 km/h au combat et maintenir une vitesse de croisière de 13 km/h pendant une longue période. La trirème dispose aussi de voiles, mais celles-ci ne sont pas utilisées au combat. L'armement principal est constitué par un rostre, pièce de bois très robuste montée sur sa proue au niveau ou au-dessous de la ligne de flottaison et généralement renforcée de métal. Au combat, la principale tactique est d'utiliser le rostre pour éperonner et couler un navire ennemi, ce qui implique de prendre le plus de vitesse possible avant d'aller percuter la coque de l'embarcation adverse. C'est une manoeuvre difficile nécessitant l'entière coopération des rameurs, car même le déplacement d'un seul rameur peut grandement ralentir la trirème. C'est la raison pour laquelle les rameurs des trirèmes grecques ne sont pas des esclaves mais des hommes libres bien entraînés qui recevaient une bonne solde pour leurs services.[PARAGRAPH:1]Au cours des guerres médiques, les Grecs utilisent leurs trirèmes pour vaincre l'ennemi perse lors de la bataille décisive de Salamine. Les trirèmes forment aussi l'épine dorsale de la flotte athénienne au cours de la Guerre du Péloponnèse. Sparte et ses alliés constituent progressivement leur propre puissante flotte de trirèmes pendant la guerre. Elles s'avèrent très utiles en 404 av. J.-C. à la bataille d'Aigos Potamos quand Lysandre réussit à détruire la flotte athénienne et coupe les routes d'approvisionnement d'Athènes, affamant la cité-état ennemie et la soumettant enfin.[PARAGRAPH:1]Les trirèmes finissent par être supplantées par les plus grandes et plus rapides quinquérèmes, mais le modèle réapparaît bien des années plus tard chez les Romains qui, ne faisant face à aucune menace navale sérieuse, préfèrent les plus petites trirèmes aux quinquérèmes, bien plus coûteuses.</French>
@@ -23051,6 +23159,10 @@
 		<Polish>U-Boat</Polish>
 		<Russian>Ñóáìàðèíà</Russian>
 		<Italian>U-Boot</Italian>
+	</TEXT>
+		<TEXT>
+		<Tag>TXT_KEY_UNIT_MASTER_SAILOR_UBOAT</Tag>
+		<English>Great UBoat</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_UBOAT_PEDIA</Tag>
@@ -23660,6 +23772,10 @@
 		<Russian>Áîåâàÿ ãàëåðà</Russian>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_UNIT_MASTER_SAILOR_WARGALLEY</Tag>
+		<English>Great War Galley</English>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_UNIT_WARGALLEY_PEDIA</Tag>
 		<English>The galley was the first ship designed for war. Introduced by the Greeks, galleys were powered by banks of oars on each side, manned by well-trained oarsmen. These oarsmen were highly paid professionals or patriotic citizens, not slaves and prisoners as depicted in fiction. A huge, bronze "beak" mounted at the bow of the ship was used to ram and sink enemy ships. Because of its long, narrow hull, the galley was very unstable in all but the calmest waters, and as a consequence its crew rarely ventured out of sight of land for long periods of time, lest the ship be caught in a storm and unk.</English>
 		<French>La galère fut le premier navire conçu pour la guerre. Crée par les Grecs, elle était propulsée par plusieurs rangs de rameurs bien entraînés, installés de chaque côté du bateau. Contrairement à ce que l'on pense, ces rameurs étaient des professionnels ou des volontaires, et non des esclaves ou des prisonniers. Un énorme "éperon" en bronze était fixé sur la proue pour éperonner et couler les navires ennemis. La longue coque étroite du bateau le rendait instable dès que la mer s'agitait un peu, et les équipages évitaient généralement de s'aventurer trop longtemps loin des côtes, de peur qu'une tempête survienne et coule le navire.</French>
@@ -23837,6 +23953,10 @@
 		</Spanish>
 		<Polish>Piroga Wojenna</Polish>
 		<Russian>Áîåâîå êàíîý</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_MASTER_SAILOR_WAR_CANOE</Tag>
+		<English>Great War Canoe</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_WAR_CANOE_PEDIA</Tag>
@@ -24362,6 +24482,10 @@
 		<Russian>Ýñìèíåö</Russian>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_UNIT_MASTER_SAILOR_WW1_DESTROYER</Tag>
+		<English>Great Destroyer</English>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_UNIT_WW1_DESTROYER_PEDIA</Tag>
 		<English>In naval terminology, a destroyer is a fast maneuverable long-endurance warship intended to escort larger vessels in a fleet, convoy or battle group and defend them against smaller powerful short-range attackers. They were originally developed in the late 19th century as a defense against torpedo boats, and by the time of the Russo-Japanese War in 1904, these "torpedo boat destroyers" (T.B.D.) were "large, swift, and powerfully armed torpedo boats designed to destroy other torpedo boats." Although the term "destroyer" had been used interchangeably with "T.B.D." and "torpedo boat destroyer" by navies since 1892, the term "torpedo boat destroyer" had been generally shortened to simply "destroyer" by nearly all navies by the First World War.</English>
 		<Polish>Klasa niszczycieli, jako okr&#234;t&#243;w przeznaczonych do zwalczania torpedowc&#243;w i ochrony przed nimi zespo&#179;&#243;w floty, powsta&#179;a pod koniec XIX wieku. Pierwsze przeznaczone do tych zada&#241; jednostki powsta&#179;y w po&#179;owie lat 80. XIX wieku. Za protoplast&#243;w niszczycieli uwa&#191;ane s&#185; brytyjskie "Swift" i "Rattlesnake", nale&#191;&#185;ce do klas nazywanych torpedo boat catchers (dos&#179;ownie "&#179;apacze torpedowc&#243;w") i kanonierek torpedowych.</Polish>
@@ -24379,6 +24503,10 @@
 		</Spanish>
 		<Polish>Pancernik</Polish>
 		<Russian>Ëèíêîð</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_MASTER_SAILOR_WW2_BATTLESHIP</Tag>
+		<English>Great Battleship</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_WW2_BATTLESHIP_PEDIA</Tag>

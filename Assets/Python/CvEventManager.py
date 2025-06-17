@@ -819,7 +819,7 @@ class CvEventManager:
 				CyPlayer = GC.getPlayer(iPlayer)
 				ExcessHappy = CyPlayer.calculateTotalCityHappiness() - CyPlayer.calculateTotalCityUnhappiness()
 				if ExcessHappy > 0:
-					CyPlayer.changeGold(ExcessHappy * 2)
+					CyPlayer.changeGold(ExcessHappy * 50)
 
 
 

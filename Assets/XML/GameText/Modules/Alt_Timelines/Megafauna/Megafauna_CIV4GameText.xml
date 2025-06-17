@@ -178,6 +178,14 @@
 		<Polish>Tresura kota to proces modyfikowania zachowania dzikiego kota w celach rozrywkowych lub towarzyskich. Szkolenie jest powszechnie stosowane w celu ograniczenia niepo&#191;&#185;danych lub problematycznych zachowa&#241; dzikich kot&#243;w, poprawy interakcji mi&#234;dzy lud&#159;mi i kotami oraz umo&#191;liwienia im wygodnego wsp&#243;&#179;istnienia.</Polish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_BUILDING_HERITAGE_BIG_CAT</Tag>
+		<English>Heritage - Big Cat</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_HERITAGE_BIG_CAT_PEDIA</Tag>
+		<English>Instead of only being able to train Cat units in the city you built the wonder in this building allows them to be built in any of your cities. It can only be built in the city with the Cat Trainer World Wonder.</English>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ANIMAL_TRAINER_BISON</Tag>
 		<English>Animal Trainer (Bison)</English>
 		<French>

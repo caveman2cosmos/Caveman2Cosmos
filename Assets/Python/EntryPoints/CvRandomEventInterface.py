@@ -5106,14 +5106,30 @@ def doAssassinDiscovered3(argsList):
 	x = plot.getX()
 	y = plot.getY()
 
-	iUnit = GC.getInfoTypeForString("UNIT_AXEMAN")
+	iBronzeWorking = GC.getInfoTypeForString("TECH_BRONZE_WORKING")
+	hasBronze = GC.getTeam(CyPlayer.getTeam()).isHasTech(iBronzeWorking)
+
+	if hasBronze:
+		iUnit = GC.getInfoTypeForString("UNIT_AXEMAN")
+	else:
+		iUnit = GC.getInfoTypeForString("UNIT_STONE_AXEMAN")
+
 	iCount = 1 + CyPlayer.getNumCities() / 4
 	while iCount > 0:
 		CyPlayer.initUnit(iUnit, x, y, UnitAITypes.UNITAI_ATTACK, DirectionTypes.DIRECTION_SOUTH)
 		iCount -= 1
 
 def getHelpAssassinDiscovered3(argsList):
-  return TRNSLTR.getText("TXT_KEY_EVENT_ASSASSIN_DISCOVERED_3_HELP", (1+GC.getPlayer(argsList[1].ePlayer).getNumCities()/4,))
+	CyPlayer = GC.getPlayer(argsList[1].ePlayer)
+	iBronzeWorking = GC.getInfoTypeForString("TECH_BRONZE_WORKING")
+	hasBronze = GC.getTeam(CyPlayer.getTeam()).isHasTech(iBronzeWorking)
+
+	iCount = 1 + CyPlayer.getNumCities() / 4
+
+	if hasBronze:
+		return TRNSLTR.getText("TXT_KEY_EVENT_ASSASSIN_DISCOVERED_3_HELP", (iCount,))
+	else:
+		return TRNSLTR.getText("TXT_KEY_EVENT_ASSASSIN_DISCOVERED_3_HELP_STONE", (iCount,))
 
 ######## BLACK DEATH PLAGUE ###########
 
