@@ -105,7 +105,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROPERTY_CRIME_CHANGE</Tag>
-		<English>[ICON_BULLET]Changes crime rate by %D1</English>
+		<English>[ICON_BULLET]Changes Crime rate by %D1</English>
 		<French>[ICON_BULLET]Change le Taux de Criminalité de %D1</French>
 		<Spanish>[ICON_BULLET]Cambia la tasa de Criminalidad en %D1</Spanish>
 		<Russian>[ICON_BULLET]Óðîâåíü ïðåñòóïíîñòè èçìåíèòñÿ íà %D1</Russian>
@@ -113,7 +113,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROPERTY_CRIME_CHANGE_ALL_CITIES</Tag>
-		<English>[ICON_BULLET]Changes crime rate in all cities by %D1</English>
+		<English>[ICON_BULLET]Changes Crime rate in all cities by %D1</English>
 		<French>[ICON_BULLET]Change le Taux de Criminalité dans toutes les villes de %D1</French>
 		<Spanish>[ICON_BULLET]Cambia la tasa de Criminalidad en %D1 en todas las ciudades</Spanish>
 		<Russian>[ICON_BULLET]Óðîâåíü ïðåñòóïíîñòè èçìåíèòñÿ âî âñåõ ãîðîäàõ íà %D1</Russian>
@@ -129,7 +129,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROPERTY_CRIME_PREREQ_MAX</Tag>
-		<English>[COLOR_WARNING_TEXT]Needs a crime rate of at most %D1[COLOR_REVERT]</English>
+		<English>[COLOR_WARNING_TEXT]Needs a Crime rate of at most %D1[COLOR_REVERT]</English>
 		<French>[COLOR_WARNING_TEXT]Requiert un Taux de Criminalité au maximum de %D1[COLOR_REVERT]</French>
 		<Spanish>[COLOR_WARNING_TEXT]Requiere una tasa de Criminalidad de como máximo %D1[COLOR_REVERT]</Spanish>
 		<Russian>[COLOR_WARNING_TEXT]Ïîòðåáíîñòü â óðîâíå ïðåñòóïíîñòè ìàêñèìàëüíî %D1[COLOR_REVERT]</Russian>
@@ -137,7 +137,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROPERTY_CRIME_PREREQ_MIN</Tag>
-		<English>[COLOR_WARNING_TEXT]Needs a crime rate of at least %D1[COLOR_REVERT]</English>
+		<English>[COLOR_WARNING_TEXT]Needs a Crime rate of at least %D1[COLOR_REVERT]</English>
 		<French>[COLOR_WARNING_TEXT]Requiert un Taux de Criminalité d'au moins %D1[COLOR_REVERT]</French>
 		<Spanish>[COLOR_WARNING_TEXT]Requiere una tasa de Criminalidad de al menos %D1[COLOR_REVERT]</Spanish>
 		<Russian>[COLOR_WARNING_TEXT]Ïîòðåáíîñòü â óðîâåíå ïðåñòóïíîñòè, ïî êðàéíåé ìåðå, %D1 [COLOR_REVERT]</Russian>
@@ -252,7 +252,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROPERTY_FLAMMABILITY_CHANGE</Tag>
-		<English>[ICON_BULLET]Changes flammability by %D1</English>
+		<English>[ICON_BULLET]Changes Flammability by %D1</English>
 		<French>[ICON_BULLET]Change le risque d'incendie de %D1</French>
 		<Spanish>[ICON_BULLET]Cambia la inflamabilidad en %D1</Spanish>
 		<Russian>[ICON_BULLET]Âîñïëàìåíÿåìîñòü èçìåíèòñÿ íà %D1</Russian>
@@ -260,7 +260,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROPERTY_FLAMMABILITY_CHANGE_ALL_CITIES</Tag>
-		<English>[ICON_BULLET]Changes flammability in all cities by %D1</English>
+		<English>[ICON_BULLET]Changes Flammability in all cities by %D1</English>
 		<French>[ICON_BULLET]Change le risque d'incendie dans toutes les villes de %D1</French>
 		<Spanish>[ICON_BULLET]Cambia la inflamabilidad en %D1 en todas las ciudades</Spanish>
 		<Russian>[ICON_BULLET]Âîñïëàìåíÿåìîñòü èçìåíèòñÿ âî âñåõ ãîðîäàõ íà %D1</Russian>
@@ -276,7 +276,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROPERTY_FLAMMABILITY_PREREQ_MAX</Tag>
-		<English>[COLOR_WARNING_TEXT]Needs a flammability of at most %D1[COLOR_REVERT]</English>
+		<English>[COLOR_WARNING_TEXT]Needs a Flammability of at most %D1[COLOR_REVERT]</English>
 		<French>[COLOR_WARNING_TEXT]Requiert un risque d'incendie au maximum de %D1[COLOR_REVERT]</French>
 		<Spanish>[COLOR_WARNING_TEXT]Requiere una inflamabilidad de como máximo %D1[COLOR_REVERT]</Spanish>
 		<Russian>[COLOR_WARNING_TEXT]Ïîòðåáíîñòü Âîñïëàìåíÿåìîñòü ìàêñèìóì %D1[COLOR_REVERT]</Russian>
@@ -284,7 +284,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROPERTY_FLAMMABILITY_PREREQ_MIN</Tag>
-		<English>[COLOR_WARNING_TEXT]Needs a flammability of at least %D1[COLOR_REVERT]</English>
+		<English>[COLOR_WARNING_TEXT]Needs a Flammability of at least %D1[COLOR_REVERT]</English>
 		<French>[COLOR_WARNING_TEXT]Requiert un risque d'incendie d'au moins %D1[COLOR_REVERT]</French>
 		<Spanish>[COLOR_WARNING_TEXT]Requiere una inflamabilidad de al menos %D1[COLOR_REVERT]</Spanish>
 		<Russian>[COLOR_WARNING_TEXT]Ïîòðåáíîñòü Âîñïëàìåíÿåìîñòè, ïî êðàéíåé ìåðå, %D1[COLOR_REVERT]</Russian>

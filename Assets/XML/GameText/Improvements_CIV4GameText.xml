@@ -2403,7 +2403,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_WINERY_PEDIA</Tag>
-		<English>A winery is a building or property that produces wine, or a business involved in the production of wine, such as a wine company. Some wine companies own many wineries. Besides wine making equipment, larger wineries may also feature warehouses, bottling lines, laboratories, and large expanses of tanks known as tank farms. The oldest winery in the world found to date is a 6,000 year old winery in the Areni region of Armenia, which is still a wine making region today.</English>
+		<English>A winery is a building or property that produces wine, or a business involved in wine production, such as a wine company. Some wine companies own many wineries. Besides winemaking equipment, larger wineries may also feature warehouses, bottling lines, laboratories, and large expanses of tanks known as tank farms. The oldest winery in the world, dating back 6,000 years, is located in the Areni region of Armenia, which is still a winemaking region today.</English>
 		<Russian>* Âèíîäåëüíÿ: âñå öèâèëèçàöèè
 Âèíîäåëüíÿ - çäàíèå èëè èìåíèå, êîòîðîå ïðîèçâîäèò âèíî, èëè áèçíåñ, âîâëå÷åííûé â ïðîèçâîäñòâî âèíà, òèïà âèííîé êîìïàíèè. Íåêîòîðûå âèííûå êîìïàíèè èìåþò ìíîãî âèííûõ çàâîäîâ. Ïîìèìî âèíîäåëü÷åñêîãî îáîðóäîâàíèÿ, áîëüøèå âèííûå çàâîäû ìîãóò òàêæå îòëè÷àòüñÿ ñêëàäàìè, ëèíèÿìè áóòûëî÷íîãî ðîçëèâà, ëàáîðàòîðèÿìè, è áîëüøèìè ïðîòÿæåíèÿìè ðåçåðâóàðîâ, èçâåñòíûõ êàê ôåðìû ðåçåðâóàðîâ. Ñàìûé ñòàðûé âèííûé çàâîä â ìèðå, íàéäåííûé äî íàñòîÿùåãî âðåìåíè - 6 000-ëåòíèé âèííûé çàâîä â îáëàñòè Àðíè Àðìåíèè, êîòîðàÿ ñåãîäíÿ âñå åùå ÿâëÿåòñÿ âèíîäåëü÷åñêîé îáëàñòüþ. - Wikipedia</Russian>
 	</TEXT>
@@ -2472,7 +2472,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_WORKSHOP_PEDIA</Tag>
-		<English>A workshop is a room or building which provides both the area and tools (or machinery) that may be required for the manufacture or repair of manufactured goods. Apart from the larger factories, workshops were the only places of production in the days before industrialisation.</English>
+		<English>A workshop is a room or building which provides both the space and tools (or machinery) needed for the manufacture or repair of manufactured goods. Before industrialization, workshops, aside from larger manufactories, were the primary sites of production.</English>
 		<Russian>* Ìàñòåðñêàÿ: âñå öèâèëèçàöèè
 Âî âðåìÿ "èíäóñòðèàëüíîé ýðû", ìàñòåðñêàÿ ìîæåò áûòü çàëîì èëè çäàíèåì, êîòîðîå îáåñïå÷èâàåò è îáëàñòü è èíñòðóìåíòû (èëè ìàøèíû), êîòîðûå ìîãóò ïîòðåáîâàòüñÿ äëÿ èçãîòîâëåíèÿ èëè ðåìîíòà ïðîìûøëåííûõ òîâàðîâ.</Russian>
 	</TEXT>

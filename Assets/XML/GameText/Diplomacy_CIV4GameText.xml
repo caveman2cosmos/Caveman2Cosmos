@@ -1339,7 +1339,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>AI_DIPLO_DECLARE_WAR_5</Tag>
-		<English>The time for talking is over, [CT_NAME]! We shall shall settle this on the field of battle! ([OUR_NAME] declares war!)</English>
+		<English>The time for talking is over, [CT_NAME]! We shall settle this on the field of battle! ([OUR_NAME] declares war!)</English>
 		<French>L'heure n'est plus aux pourparlers, [CT_NAME]! Nous réglerons ceci sur le champ de bataille! ([OUR_NAME] vous déclare la guerre!)</French>
 		<German>Genug geredet, [CT_NAME]! Der Rest wird auf dem Schlachtfeld entschieden! Ich erkläre Euch den Krieg!</German>
 		<Italian>È finito il tempo delle chiacchiere, [CT_NAME]! Risolveremo la questione sul campo di battaglia! ([OUR_NAME] dichiara guerra!)</Italian>
@@ -1389,7 +1389,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>AI_DIPLO_DEMAND_REJECTED_POWER_EQUAL_1</Tag>
-		<English>Foolish stubborness will lead to your destruction, [CT_NAME].</English>
+		<English>Foolish stubbornness will lead to your destruction, [CT_NAME].</English>
 		<French>Cet entêtement stupide vous conduira à votre perte, [CT_NAME].</French>
 		<German>Eure Starrsinnigkeit kann Euch noch teuer zu stehen kommen, [CT_NAME].</German>
 		<Italian>La tua folle testardaggine ti porterà alla distruzione, [CT_NAME].</Italian>
@@ -1549,7 +1549,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>AI_DIPLO_DEMAND_REJECTED_POWER_WEAKER_5</Tag>
-		<English>Curses: foiled again!</English>
+		<English>Curses! Foiled again!</English>
 		<French>Malédiction! Encore une déception!</French>
 		<German>Verdammt! Ihr habt meine Pläne schon wieder durchkreuzt!</German>
 		<Italian>Dannazione! Un'altra delusione!</Italian>
@@ -2285,7 +2285,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>AI_DIPLO_DEMAND_TRIBUTE_POWER_STRONGER_CHINESE_LEADER_1</Tag>
-		<English>For too long have the glorious [CT_CIV_ADJ] workers put up with your contemptible bourgoise insolence! It's time for an immediate redistribution of wealth!</English>
+		<English>For too long, the glorious [CT_CIV_ADJ] workers have put up with your contemptible bourgeois insolence! It's time for an immediate redistribution of wealth!</English>
 		<French>Les glorieux travailleurs des [CT_CIV_ADJ] supportent depuis trop longtemps déjà votre insolence de bourgeois! Nous allons immédiatement redistribuer les richesses!</French>
 		<German>Euer offen zur Schau gestellter Reichtum ist eine Beleidigung der bescheidenen Völker! Es ist an der Zeit, für ausgeglichene Verhältnisse zu sorgen!</German>
 		<Italian>Per troppo tempo i gloriosi lavoratori [CT_CIV_ADJ:3] hanno dovuto sopportare la tua insolenza borghese! È ora di ridistribuire la ricchezza!</Italian>
@@ -2341,7 +2341,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>AI_DIPLO_DEMAND_TRIBUTE_POWER_STRONGER_GENGHIS_KHAN_1</Tag>
-		<English>When you find a hungry tiger at your door, commen sense says that you feed him.</English>
+		<English>When you find a hungry tiger at your door, common sense says that you feed him.</English>
 		<French>Si vous trouvez un tigre affamé devant votre porte, le bon sens exige que vous le nourrissiez.</French>
 		<German>Wenn ein hungriger Tiger vor Eurer Tür steht, solltet Ihr ihn füttern!</German>
 		<Italian>Il buon senso insegna che, se trovi una tigre affamata davanti alla porta di casa, è meglio darle da mangiare.</Italian>
@@ -2403,7 +2403,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>AI_DIPLO_DEMAND_TRIBUTE_POWER_STRONGER_JULIUS_CAESAR_1</Tag>
-		<English>Acceed to our demands or face us in battle.</English>
+		<English>Accede to our demands or face us in battle.</English>
 		<French>Si vous rejetez nos demandes, nous livrerons bataille.</French>
 		<German>Erfüllt meine Forderungen oder rüstet Euch für die Schlacht!</German>
 		<Italian>Accetta le nostre condizioni o affrontaci in battaglia.</Italian>
@@ -2863,7 +2863,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>AI_DIPLO_DEMAND_TRIBUTE_POWER_WEAKER_GENGHIS_KHAN_1</Tag>
-		<English>Bestow gifts upon your friends and you are likely to be rewarded a hundred times over. Ignore the advice of wise-men, and you risk being flogged about the head, neck, face, and shoulders.</English>
+		<English>Bestow gifts upon your friends and you are likely to be rewarded a hundred times over. Ignore the advice of wise men, and you risk being flogged about the head, neck, face, and shoulders.</English>
 		<French>Offrez des présents à vos amis et vous serez récompensés au centuple. Si vous oubliez les conseils des sages, vous risquez de vous faire flageller, empaler et mille autres doux supplices.</French>
 		<German>Kleine Geschenke erhalten die Freundschaft, denn Eure Freunde werden es Euch hundertfach danken. Wenn Ihr sie aber verweigert, riskiert Ihr buchstäblich Kopf und Kragen!</German>
 		<Italian>Concedete doni ai vostri amici e verrete ricompensati cento volte di più. Ignorate i consigli dei saggi e rischierete di farvi frustare.</Italian>
@@ -2937,11 +2937,11 @@
 	</TEXT>
 	<TEXT>
 		<Tag>AI_DIPLO_DEMAND_TRIBUTE_POWER_WEAKER_JOSEF_STALIN_1</Tag>
-		<English>It's time for a redistribution of wealth, [CT_NAME]. </English>
+		<English>It's time for a redistribution of wealth, [CT_NAME].</English>
 		<French>L'heure est venue de redistribuer un peu vos richesses, [CT_NAME].</French>
-		<German>Es ist an der Zeit, den vorhandenen Wohlstand etwas umzuschichten, [CT_NAME]. </German>
-		<Italian>Forse è il momento di una redistribuzione delle ricchezze, [CT_NAME]. </Italian>
-		<Spanish>Es hora de que se haga una redistribución de la riqueza, [CT_NAME]. </Spanish>
+		<German>Es ist an der Zeit, den vorhandenen Wohlstand etwas umzuschichten, [CT_NAME].</German>
+		<Italian>Forse è il momento di una redistribuzione delle ricchezze, [CT_NAME].</Italian>
+		<Spanish>Es hora de que se haga una redistribución de la riqueza, [CT_NAME].</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>AI_DIPLO_DEMAND_TRIBUTE_POWER_WEAKER_JULIUS_CAESAR_1</Tag>
@@ -3220,7 +3220,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>AI_DIPLO_FIRST_CONTACT_LEADER_BRENNUS_1</Tag>
-		<English>Greetings, [CT_NAME]! I am [OUR_NAME] of the warlike [OUR_CIV_ADJ] people!  My druids shall construct a huge stone circle to honor this auspicious occasion!</English>
+		<English>Greetings, [CT_NAME]! I am [OUR_NAME] of the warlike [OUR_CIV_ADJ] people! My druids shall construct a huge stone circle to honor this auspicious occasion!</English>
 		<French>Salutations, [CT_NAME] ! Je suis [OUR_NAME] du belliqueux peuple des [OUR_CIV_ADJ] ! Mes druides vont faire ériger un large cercle de pierres pour célébrer cette formidable rencontre !</French>
 		<German>Seid gegrüßt, [CT_NAME]! Ich bin [OUR_NAME], Staatsoberhaupt des kriegerischen [CT_CIV_ADJ:2] Volkes! Meine Druiden werden zur Feier dieses denkwürdigen Augenblicks einen riesigen Steinkreis errichten!</German>
 		<Italian>Salve, [CT_NAME]! Io sono [OUR_NAME] [OUR_CIV_ADJ]! I miei druidi erigeranno un enorme cerchio di pietre per commemorare questo incontro propizio!</Italian>
@@ -3404,7 +3404,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>AI_DIPLO_FIRST_CONTACT_LEADER_ISABELLA_1</Tag>
-		<English>Her most righteous majesty, Isabella, beloved of God and protector of the faith, does condescend to greet you, [CT_NAME]. Do tell me: are you a righteous people, or are you fiendish heathens who need to be wiped off of the face of this fair land?</English>
+		<English>Her most righteous majesty, Isabella, beloved of God and protector of the faith, does condescend to greet you, [CT_NAME]. Do tell me: are you a righteous people, or are you fiendish heathens who need to be wiped from the face of this fair land?</English>
 		<French>Sa très gracieuse majesté Isabelle, élue de Dieu et gardienne de la foi, daigne vous souhaiter la bienvenue, [CT_NAME]. Dites-moi: êtes-vous un peuple droit ou un ramassis de païens barbares qui ne méritent que d'être effacés de nos belles contrées?</French>
 		<German>Ihre Majestät von Gottes Gnaden, [OUR_NAME], heißt Euch willkommen. Sagt mir: Ist Euer Volk rechtschaffen oder seid Ihr ketzerische Heiden, die vom Angesicht dieser Erde getilgt werden sollten?</German>
 		<Italian>Sua maestà, la virtuosa Isabella, prediletta di Dio e protettrice della Fede, ti saluta, [CT_NAME]. Adesso dimmi, sei una persona onesta o infida, che merita di essere spazzata via da questa terra?</Italian>
@@ -3496,7 +3496,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>AI_DIPLO_FIRST_CONTACT_LEADER_MARGRETE_1</Tag>
-		<English>Greetings, [CT_NAME] of the [CT_EMPIRE]. I am [OUR_NAME] of [OUR_CIV_SHORT], although you may call me "Margrete, by the grace of God, Valdemar Daneking's daughter, and Denmark's rightful heir". What is it you wish to speak of?</English>
+		<English>Greetings, [CT_NAME] of the [CT_EMPIRE]. I am [OUR_NAME] of [OUR_CIV_SHORT], though you may call me "Margrete, by the grace of God, Valdemar Daneking's daughter, and Denmark's rightful heir". What is it you wish to speak of?</English>
 		<German>Grüße, [CT_NAME] vom [CT_EMPIRE]. Ich bin [OUR_NAME] von [OUR_CIV_SHORT], aber Du darfts mich auch "Margarete, von Gottes Gnaden, Tochter Waldemars, König der Dänen, und Dänemarks rechtmäßiger Erbe". Weshalb wünschst Du mich zu sprechen?</German>
 		<Polish>Pozdrowienia, [CT_NAME] z [CT_EMPIRE]. Jestem [OUR_NAME] z [OUR_CIV_SHORT], chocia&#191; mo&#191;esz zadzwoni&#230; do mnie "Margrete, przez wdzi&#234;k Boga, c&#243;rki Waldemara Daneking's i legalnego spadkobiercy Danii". Co to ty zechcie&#230; m&#243;wi&#230;?</Polish>
 		<Spanish>Saludos, [CT_NAME] del [CT_EMPIRE]. Soy [OUR_NAME] del [OUR_CIV_SHORT], aunque me puedes llamar "Margarita, por la gracia de Dios, esposa de Valdemar Daneking, y legítima heredera de Dinamarca". ¿Sobre qué asunto deseas hablar?</Spanish>
@@ -3512,7 +3512,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>AI_DIPLO_FIRST_CONTACT_LEADER_MENELIK_1</Tag>
-		<English>I am [OUR_NAME] of [OUR_CIV_SHORT]. Enemies have now come upon us to ruin our country and to change our religion. Our enemies have begun the affair by advancing and digging into the country like moles. With the help of God I will not deliver my country to them. Today, you who are strong, give me your strength, and you who are weak, help me by prayer.</English>
+		<English>I am [OUR_NAME] of [OUR_CIV_SHORT]. Enemies have now come upon us, seeking to ruin our country and to change our religion. Our enemies have begun the affair by advancing and digging into the country like moles. With the help of God I will not deliver my country to them. Today, you who are strong, give me your strength, and you who are weak, help me by prayer.</English>
 		<French>Je suis [OUR_NAME] de [OUR_CIV_SHORT]. Des Ennemis sont venus pour ruiner notre pays et changer notre religion. Nos have now come upon us to ruin our country and to change our religion. Nos ennemis ont commencé leurs affaires en creusant dans le pays comme des taupes. Avec l'aide de Dieu, je ne leur livrerai pas mon pays. Aujourd'hui, vous qui êtes forts, donnez-moi votre force, et vous qui êtes faibles, aidez-moi par la prière.</French>
 		<German>Ich bin [OUR_NAME] von [OUR_CIV_SHORT]. Feinde sind erschienen unser Land zu vernichten und unsere Religion zu verändern. Unsere Feinde begannen die Angelegenheit durch ihren Einmarsch und gruben sich dann wie Maulwürfe in unser Land hinein. Mit der Hilfe Gottes werden ich mein Land ihnen nicht übergeben müssen. Ihr, die Ihr stark seid, gebt mir Eure Stärke und Ihr, die Ihr schwach seid, helft mir durch das Gebet.</German>
 		<Italian>Io sono [OUR_NAME] dell'[OUR_CIV_SHORT]. I nemici sono venuti da noi per rovinare il nostro paese e cambiare la nostra religione. I nostri nemici hanno cominciato avanzando e scavando nel nostro territorio come talpe. Con l'aiuto di Dio non consegnerò a loro il mio paese. Oggi aiutami tu che sei forte, e prega per me tu che sei debole.</Italian>
@@ -3606,7 +3606,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>AI_DIPLO_FIRST_CONTACT_LEADER_RAMKHAM_1</Tag>
-		<English>The Lord of the realm does not levy toll on his subjects. Neither does he connive with thieves. I am [OUR_NAME] of [OUR_EMPIRE].</English>
+		<English>The lord of the realm does not levy a toll on his subjects. Nor does he connive with thieves. I am [OUR_NAME] of [OUR_EMPIRE].</English>
 		<French>Le Seigneur du royaume ne perçoit pas de taxes sur ses sujets. Il n'est pas non plus de connivence avec les voleurs. Je suis [OUR_NAME] de [OUR_EMPIRE].</French>
 		<German>Der Herr dieses Reiches erhebt keine Abgaben von seinem Volk. Ebenso verschwört er sich nicht mit Dieben. Ich bin [OUR_NAME] vom [OUR_EMPIRE].</German>
 		<Italian>Il signore del reame non tassa i propri sudditi. E non scende a patti con i ladri. Io sono [OUR_NAME] dell'[OUR_EMPIRE].</Italian>
@@ -3616,7 +3616,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>AI_DIPLO_FIRST_CONTACT_LEADER_SALADIN_1</Tag>
-		<English>Greetings, [CT_NAME]! It is an honor to meet you! May the heavens bestow upon you an empire only slightly less glorious than mine!</English>
+		<English>Greetings, [CT_NAME]! It is an honor to meet you! May the heavens bestow upon you an empire nearly as glorious than mine!</English>
 		<French>Mes hommages, [CT_NAME]! C'est un honneur de vous rencontrer! Puisse le ciel vous accorder un empire légèrement moins glorieux que le mien!</French>
 		<German>Zum Gruß, [CT_NAME]! Euch kennenzulernen ist mir eine Ehre! Möge der Himmel Euer Reich nur ein kleines bisschen weniger großzügig als meines segnen.</German>
 		<Italian>Saluti [CT_NAME]! È un onore incontrarti! Possa il cielo donarti un impero appena inferiore al mio!</Italian>
@@ -3626,7 +3626,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>AI_DIPLO_FIRST_CONTACT_LEADER_SELASSIE_1</Tag>
-		<English>It is the inaction of those who could have acted, [CT_NAME], that has made it possible for evil to triumph. The great [OUR_EMPIRE] will not stand idly by should evil present itself.</English>
+		<English>It is the inaction of those who could have acted, [CT_NAME], that has made it possible for evil to triumph. The great [OUR_EMPIRE] will not stand idly by if evil presents itself.</English>
 		<French>C'est l'inaction de ceux qui auraient pu agir, [CT_NAME], qui a permis au Mal de triompher. Le Grand [OUR_EMPIRE] ne restera pas les bras croisés, même si la Mal se présente en personne.</French>
 		<German>Es ist die Passivität von jenen, die hätten handeln können, [CT_NAME], die den Triumph des Bösen ermöglichte. Das große [OUR_EMPIRE] wird nicht untätig zusehen, wenn sich das Böse offenbaren sollte.</German>
 		<Italian>È l'inattività di coloro che avrebbero dovuto agire, [CT_NAME], che ha reso possibile al male di trionfare. Il grande [OUR_EMPIRE] non resterà inattivo quando il male si presenterà.</Italian>
@@ -3636,7 +3636,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>AI_DIPLO_FIRST_CONTACT_LEADER_SHAKA_1</Tag>
-		<English>Greetings, [CT_NAME]! The [OUR_CIV_ADJ] people always enjoy meeting vulnerable and undefended new civilizations!</English>
+		<English>Greetings, [CT_NAME]! The [OUR_CIV_ADJ] people always enjoy meeting new vulnerable and undefended civilizations!</English>
 		<French>Mes hommages, [CT_NAME] ! Le peuple des [OUR_CIV_ADJ] est toujours enchanté de rencontrer de nouvelles civilisations vulnérables et sans défense !</French>
 		<German>Seid gegrüßt, [CT_NAME]! Das [OUR_CIV_ADJ:3] Volk ist stets hoch erfreut, die Bekanntschaft schutz- und wehrloser neuer Zivilisationen zu machen!</German>
 		<Italian>Salve, [CT_NAME]! Il sovrano [OUR_CIV_ADJ] è sempre lieto di incontrare nuove civiltà vulnerabili e indifese!</Italian>
@@ -3724,7 +3724,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>AI_DIPLO_FIRST_CONTACT_LEADER_WINSTON_CHURCHILL_1</Tag>
-		<English>Welcome, [CT_NAME]! I hope that our two great nations can be firm friends and allies. However if you attack us we shall fight you on the beaches, we shall fight you on the landing grounds, we shall fight you in the fields and in the streets - well, you get the idea... </English>
+		<English>Welcome, [CT_NAME]! I hope that our two great nations can be firm friends and allies. However if you attack us, we shall fight you on the beaches, we shall fight you on the landing grounds, we shall fight you in the fields and in the streets - well, you get the idea...</English>
 		<French>Bienvenue, [CT_NAME] ! J'espère que nos deux grandes nations sauront établir une relation aussi solide qu'amicale. Toutefois, sachez que si vous nous attaquiez, je n'aurai rien d'autre à vous offrir que du sang, de la souffrance, des larmes et de la sueur, si vous voyez ce que je veux dire...</French>
 		<German>Willkommen, [CT_NAME]! Ich hoffe, unsere großen Zivilisationen können enge Freunde und Verbündete werden. Wenn Ihr uns jedoch angreifen solltet, werden wir zurückschlagen, wo immer wir Euch begegnen - in jedem Winkel der Erde, wenn Ihr versteht, was ich meine ... </German>
 		<Italian>Salve, [CT_NAME]! Spero che le nostre due grandi nazioni possano allearsi e godere di una salda amicizia. Ma se proverete ad attaccarci, vi combatteremo sulle coste, vi combatteremo in pianura, vi combatteremo per le strade cittadine... Insomma, hai capito, spero. </Italian>
@@ -3732,7 +3732,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>AI_DIPLO_FIRST_CONTACT_LEADER_ZARA_YAQOB_1</Tag>
-		<English>Hail to you, [CT_NAME]. I am [OUR_NAME], ruler of the god-fearing [OUR_CIV_ADJ] people! May the friendship between our two great civilizations last until we are much, much larger than you! </English>
+		<English>Hail to you, [CT_NAME]. I am [OUR_NAME], ruler of the god-fearing [OUR_CIV_ADJ] people! May the friendship between our two great civilizations last until we are much, much larger than you!</English>
 		<French>Mes respects, [CT_NAME] ! Je suis [OUR_NAME], chef des dévots [OUR_CIV_ADJ:3] ! Que l'amitié entre nos deux grandes civilisations dure jusqu'à ce que nous soyons bien plus puissants que vous !</French>
 		<German>Seid gegrüßt, [CT_NAME]. Ich bin [OUR_NAME], Staatsoberhaupt des gottesfürchtigen [OUR_CIV_ADJ:2] Volkes! Möge die Freundschaft zwischen unseren großartigen Nationen andauern, bis wir Euch haushoch überlegen sind! </German>
 		<Italian>Salute a te, [CT_NAME]. Sono [OUR_NAME], signore del popolo [OUR_CIV_ADJ], timorato di Dio! Possa l'amicizia tra le nostre due grandi civiltà durare fino a quando non saremo molto più vasti di voi! </Italian>
@@ -3889,7 +3889,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>AI_DIPLO_FR_GLAD_3</Tag>
-		<English>I'm glad that you found the offer acceptable, [CT_NAME]</English>
+		<English>I'm glad that you found the offer acceptable, [CT_NAME].</English>
 		<French>Vous avez trouvé notre offre acceptable et cela me réjouit, [CT_NAME].</French>
 		<German>Ich kann Euch zu dieser Entscheidung nur beglückwünschen, [CT_NAME].</German>
 		<Italian>Sono felice che reputi l'offerta accettabile, [CT_NAME]</Italian>
@@ -3919,7 +3919,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>AI_DIPLO_FR_GLAD_6</Tag>
-		<English>Wonderful! Let us celebrate!!</English>
+		<English>Wonderful! Let us celebrate!</English>
 		<French>Parfait! Fêtons cet événement!</French>
 		<German>Darauf sollten wir das Glas erheben, [CT_NAME]!</German>
 		<Italian>Stupendo! Festeggiamo!</Italian>
@@ -4739,7 +4739,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>AI_DIPLO_FUR_SORRY_2</Tag>
-		<English>How typical. Let's hear your brilliant. idea then.</English>
+		<English>How typical. Let's hear your brilliant idea then.</English>
 		<French>Ca ne m'étonne pas. Dans ce cas, avez-vous une meilleure idée?</French>
 		<German>Es ist immer wieder dasselbe mit Euch. Also lasst Euren brillanten Vorschlag hören.</German>
 		<Italian>Un classico. Allora sentiamo la tua brillante idea.</Italian>
@@ -5069,7 +5069,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>AI_DIPLO_GREETINGS_ATT_FR_LEADER_AUGUSTUS_CAESAR_1</Tag>
-		<English>Greetings, [CT_NAME]! What brings you to mighty [OUR_CIV_SHORT] today? Let's go over to the Coliseum and watch a bunch of prisoners get eaten by wild animals, shall we? </English>
+		<English>Greetings, [CT_NAME]! What brings you to mighty [OUR_CIV_SHORT] today? Let's go over to the Coliseum and watch a bunch of prisoners get eaten by wild animals, shall we?</English>
 		<French>Ave, [CT_NAME] ! Que nous vaut votre visite chez les puissants [OUR_CIV_SHORT] ? Rendons-nous donc au Colisée pour admirer le glorieux spectacle offert par des animaux sauvages dévorant des quelques esclaves ?</French>
 		<German>Seid gegrüßt, [CT_NAME]! Was führt Euch heute zum mächtigen Volk von [OUR_CIV_SHORT]? Lasst uns im Kolosseum ein paar Gladiatorenkämpfe anschauen, in Ordnung? </German>
 		<Italian>Salve, [CT_NAME]! Qual buon vento ti porta nella grandiosa capitale [OUR_CIV_ADJ] oggi? Perché non facciamo una capatina al Colosseo a vedere dei prigionieri mangiati vivi dalle fiere? </Italian>
@@ -5167,7 +5167,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>AI_DIPLO_GREETINGS_ATT_FR_LEADER_FRANKLIN_ROOSEVELT_1</Tag>
-		<English>How absolutely marvey to see you again, [CT_NAME]! Do sit down; my man will get you a Martini.</English>
+		<English>How absolutely marvelous to see you again, [CT_NAME]! Do sit down; my man will get you a martini.</English>
 		<French>Je suis positivement ravi de vous revoir, [CT_NAME]! Prenez un siège, mon domestique va vous servir un Martini.</French>
 		<German>Ich bin entzückt, Euch wiederzusehen, [CT_NAME]! Nehmt Platz, ich lasse Euch einen Martini bringen.</German>
 		<Italian>È una sorpresa eccezionale vederti di nuovo, [CT_NAME]! Siediti, ti farò portare un Martini.</Italian>
@@ -6407,7 +6407,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>AI_DIPLO_JOIN_WAR_5</Tag>
-		<English>The treacherous %s1 must be punished for their offences against civilization, [CT_NAME]! I assume we can count on your assistance?</English>
+		<English>The treacherous %s1 must be punished for their offenses against civilization, [CT_NAME]! I assume we can count on your assistance?</English>
 		<French>Les perfides %s1:3 doivent être punis pour leurs offenses envers la civilisation, [CT_NAME]! J'imagine que nous pouvons compter sur votre aide?</French>
 		<German>Das hinterhältige %[s1]e Reich muss endlich für seine Feindseligkeiten büßen. Kann ich mich auf Eure Unterstützung verlassen?</German>
 		<Italian>I traditori %s1 devono essere puniti per le loro offese nei confronti delle altre civiltà, [CT_NAME]! Possiamo contare sul tuo aiuto?</Italian>
@@ -6619,7 +6619,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>AI_DIPLO_NO_PEACE_LEADER_CHINESE_LEADER_1</Tag>
-		<English>There can never be peace in the unending war between the people and the bloodsucking bourgoise capitalist opressors who seek to enslave them! That would be you, punk.</English>
+		<English>There can never be peace in the unending war between the people and the bloodsucking bourgeois capitalist oppressors who seek to enslave them! That would be you, punk.</English>
 		<French>Il ne pourra jamais y avoir de paix entre le peuple et les oppresseurs capitalistes de la bourgeoisie qui le spolie et l'exploite! Je parle de vous, imbécile.</French>
 		<German>Nein, zwischen uns wird es niemals Frieden geben können, solange Ihr die Überlegenheit des richtigen Weges nicht anerkannt habt.</German>
 		<Italian>Non potrà mai regnare la pace nell'infinita guerra tra il popolo e l'oppressore borghese capitalista che lo vuole dominare... E l'oppressore sei tu!</Italian>
@@ -6711,7 +6711,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>AI_DIPLO_NO_PEACE_LEADER_HANNIBAL_1</Tag>
-		<English>And why in the world would I want to discuss peace when mighty [OUR_CIV_SHORT] is on the verge of wiping your puny civilization off of the planet?</English>
+		<English>And why in the world would I want to discuss peace when mighty [OUR_CIV_SHORT] is on the verge of wiping your puny civilization off the planet?</English>
 		<French>Et pourquoi voudrais-je parler de paix avec vous, alors que [OUR_CIV_SHORT] est sur le point de rayer, de toute sa majestueuse puissance, votre piteuse civilisation de la surface de la Terre ?</French>
 		<German>Warum in aller Welt sollten wir Friedensverhandlungen führen, wenn der vernichtende Sieg des mächtigen Volkes von [OUR_CIV_SHORT] über Eure jämmerliche Zivilisation so kurz bevorsteht?</German>
 		<Italian>E perché mai dovrei discutere di pace quando l'impero [OUR_CIV_ADJ] è sul punto di cancellare la tua ridicola civiltà dalla faccia del pianeta?</Italian>
@@ -6719,7 +6719,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>AI_DIPLO_NO_PEACE_LEADER_HATSHEPSUT_1</Tag>
-		<English>Gods do not negitiate with mortals - particularly with ugly little slimeballs such as yourself. Go back to your home to await your doom.</English>
+		<English>Gods do not negotiate with mortals - particularly with ugly little slimeballs such as yourself. Go back to your home to await your doom.</English>
 		<French>Les dieux ne négocient pas avec les mortels, encore moins avec des crétins aussi laids et aussi bêtes que vous. Rentrez chez vous pour y attendre la mort.</French>
 		<German>Die Götter verhandeln nicht mit Sterblichen - vor allem nicht mit so grässlichen kleinen Kriechern wie Euch! Kehrt heim und erwartet Euer Schicksal!</German>
 		<Italian>Gli dei non negoziano con i mortali, in particolar modo con gli esseri spregevoli come te. Torna a casa e attendi il tuo destino.</Italian>
@@ -6793,7 +6793,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>AI_DIPLO_NO_PEACE_LEADER_LINCOLN_1</Tag>
-		<English>As a friend of mine once said, 'No terms except unconditional and immediate surrender can be accepted.' Pithy, don't you agree?</English>
+		<English>As a friend of mine once said: 'No terms except unconditional and immediate surrender can be accepted.' Pithy, don't you agree?</English>
 		<French>Comme un ami m'a dit un jour, "Aucune condition ne saurait être acceptée, hormis une capitulation immédiate et inconditionnelle." Dommage, n'est-ce pas ?</French>
 		<German>Wie ein Freund von mir zu sagen pflegte: 'Ich akzeptiere nur die sofortige und bedingungslose Kapitulation'. Äußerst treffend, nicht wahr?</German>
 		<Italian>Come disse una volta un mio amico: "L'unica cosa accettabile è una resa incondizionata e immediata." Conciso, non trovi?</Italian>
@@ -6857,7 +6857,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>AI_DIPLO_NO_PEACE_LEADER_PERICLES_1</Tag>
-		<English>Peace? Don't be foolish. There can be no peace between Civilization and Barbarian. </English>
+		<English>Peace? Don't be foolish. There can be no peace between Civilization and Barbarian.</English>
 		<French>La paix ? Ne soyez pas ridicule. Il ne peut y avoir de paix entre des êtres civilisés et des barbares.</French>
 		<German>Frieden? Seid nicht albern! Zwischen zivilisierten Menschen und Barbaren kann es keinen Frieden geben! </German>
 		<Italian>Pace? Non essere stupido. Non può esserci pace tra civilizzato e barbaro. </Italian>
@@ -6911,7 +6911,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>AI_DIPLO_NO_PEACE_LEADER_SHAKA_1</Tag>
-		<English>Not a chance. The mighty [OUR_CIV_ADJ] people do not care to make peace with cattle-stealing brigands like you. </English>
+		<English>Not a chance. The mighty [OUR_CIV_ADJ] people do not care to make peace with cattle-stealing brigands like you.</English>
 		<French>N'y comptez pas ! Le puissant peuple des [OUR_CIV_ADJ] ne souhaite pas faire la paix avec des vils voleurs de bétail de votre espèce.</French>
 		<German>Keine Chance! Das mächtige [OUR_CIV_ADJ:3] Volk hat kein Interesse daran, mit miesen Viehdieben wie Euch Frieden zu schließen! </German>
 		<Italian>Neanche per idea. Al potente sovrano [OUR_CIV_ADJ] non può interessare la pace con briganti ladri di bestiame come voi. </Italian>
@@ -6989,7 +6989,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>AI_DIPLO_NO_PEACE_LEADER_WINSTON_CHURCHILL_1</Tag>
-		<English>The [OUR_CIV_ADJ] people shall accept no terms but unconditional surrender, [CT_NAME]. </English>
+		<English>The [OUR_CIV_ADJ] people shall accept no terms but unconditional surrender, [CT_NAME].</English>
 		<French>Le prestigieux peuple des [OUR_CIV_ADJ] est disposé à n'accepter rien d'autre qu'une reddition sans condition, [CT_NAME].</French>
 		<German>Das [OUR_CIV_ADJ:3] Volk erwartet Eure bedingungslose Kapitulation, nicht mehr und nicht weniger, [CT_NAME]! </German>
 		<Italian>Il sovrano [OUR_CIV_ADJ] non accetterà trattati che non prevedano una vostra resa incondizionata, [CT_NAME]. </Italian>
@@ -7393,7 +7393,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>AI_DIPLO_REFUSE_TO_TALK_LEADER_CHINESE_LEADER_1</Tag>
-		<English>[OUR_CIV_SHORT] will not listen to your bourgoise lies!</English>
+		<English>[OUR_CIV_SHORT] will not listen to your bourgeois lies!</English>
 		<French>Les [OUR_CIV_SHORT] n'écouteront pas vos mensonges!</French>
 		<German>Ich werde mir Euer verblendetes Gefasel nicht länger anhören!</German>
 		<Italian>[OUR_CIV_SHORT:1] non ascolterà le tue menzogne borghesi.</Italian>
@@ -7485,7 +7485,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>AI_DIPLO_REFUSE_TO_TALK_LEADER_HANNIBAL_1</Tag>
-		<English>Go away. [OUR_EMPIRE] has no time for your nonsense. </English>
+		<English>Go away. [OUR_EMPIRE] has no time for your nonsense.</English>
 		<French>Partez ! [OUR_EMPIRE] n'a pas de temps à perdre avec vos sottises.</French>
 		<German>Lasst mich in Ruhe! Das [OUR_EMPIRE:2] ist nicht an Euren Hirngespinsten interessiert! </German>
 		<Italian>Vattene. [OUR_EMPIRE] non ha tempo da perdere con le tue sciocchezze. </Italian>

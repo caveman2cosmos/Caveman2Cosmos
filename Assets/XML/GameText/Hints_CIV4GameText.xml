@@ -58,7 +58,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_HINT_15</Tag>
-		<English>*BUG Hint*: Station naval units near your water based resources, and put them on Sea Patrol to protect your resources.</English>
+		<English>*BUG Hint*: Station Naval Units near your water based resources, and put them on Sea Patrol to protect your resources.</English>
 		<French>*Conseils du BUG*: Stationnez des unités navales près de vos ressources maritimes, et faites les Patrouiller pour les protéger.</French>
 		<German>[BUG] Tipp... Marineeinheiten sollten in der Nähe von Meeres-Ressourcen stationiert und mit dem Auftrag "Seepatrouille" versehen werden, um diese zu verteidigen.</German>
 		<Italian>*Suggerimento del BUG Team*: Disloca le tue unità navali vicino alle tue risorse acquatiche e mettile di pattuglia per proteggerle.</Italian>
@@ -78,7 +78,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_HINT_17</Tag>
-		<English>*BUG Hint*: Watch your neighbors' civics changes. A change from Free Religion to Theocracy could mean an arms build-up.</English>
+		<English>*BUG Hint*: Watch your neighbors' Civic changes. A change from Free Religion to Theocracy could mean an arms build-up.</English>
 		<French>*Conseils du BUG*: Gardez un oeil sur les changements de Doctrines de vos voisins. Un changement de 'Liberté de Culte' vers 'Théocratie' peut indiquer la constitution d'une armée.</French>
 		<German>[BUG] Tipp... Ein Wechsel der Gesellschaftsform in einer benachbarten Zivilisation sollte aufmerksam verfolgt werden. Es könnte die Vorbereitung auf einen Krieg sein.</German>
 		<Italian>*Suggerimento del BUG Team*: Tieni d'occhio i cambiamenti di forma di governo dei tuoi vicini. Un cambiamento da Libertà Religiosa a Teocrazia può significare un aumento di aggressività.</Italian>
@@ -153,7 +153,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_HINT_4</Tag>
-		<English>*BUG Hint*: Save your promotions for when your unit is injured to speed up healing, and when you promote, use them to tailor your unit for the type of enemy you are facing.</English>
+		<English>*BUG Hint*: Save your Promotions for when your unit is injured to speed up healing, and when you promote, use them to tailor your unit for the type of enemy you are facing.</English>
 		<French>*Conseils du BUG*: Lorsque vous pouvez promouvoir une unité, attendez éventuellement le moment où elle aura besoin de soins. De plus, choisissez les promotions en fonction de l'ennemi que vous rencontrez.</French>
 		<German>[BUG] Tipp... Eine verfügbare Beförderung muss einer Einheit nicht sofort verliehen werden. Manchmal lohnt es sich zu warten, um im passenden Moment die bestgeeignete Beförderung und Bonusfähigkeit zu wählen. Eine Beförderung wirkt auf verletzte Einheiten übrigens heilsam.</German>
 		<Italian>*Suggerimento del BUG Team*: Risparmia le promozioni per accelerare la cura quando le tue unità vengono ferite, e quando le promuovi, ottimizza le tue unità contro il tipo di nemico che stai affrontando.</Italian>
@@ -173,7 +173,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_HINT_6</Tag>
-		<English>*BUG Hint*: Examine what resources are available before researching worker techs.</English>
+		<English>*BUG Hint*: Examine what resources are available before researching Worker techs.</English>
 		<French>*Conseils du BUG*: Examinez quelles ressources sont à votre disposition avant de choisir une technologie à rechercher.</French>
 		<German>[BUG] Tipp... Bevor Technologien erforscht werden, die die Fähigkeiten der Bautrupps erweitern, sollte zunächst das Umland erkundet werden, um die dort verfügbaren Ressourcen möglichst schnell erschließen und nutzen zu können.</German>
 		<Italian>*Suggerimento del BUG Team*: Esamina quali risorse sono disponibili prima di ricercare le tecnologie dei lavoratori.</Italian>
@@ -203,7 +203,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_HINT_9</Tag>
-		<English>*BUG Hint*: Selling resources that you no longer use, such as copper or iron, can pay off nicely over the long run. Just remember to sell them to somebody weaker than you!</English>
+		<English>*BUG Hint*: Selling resources that you no longer use, such as Copper or Iron, can pay off nicely over the long run. Just remember to sell them to somebody weaker than you!</English>
 		<French>*Conseils du BUG*: Vendre des ressources que vous n'utilisez plus, comme le Cuivre ou le Fer, peut être très profitable. Veillez juste à les vendre à un ami plus faible que vous!</French>
 		<German>[BUG] Tipp... Der Verkauf von zwischenzeitlich unbrauchbaren Ressourcen, wie Kupfer oder Eisen, kann langfristig vorteilhaft sein, wenn der Käufer ein momentan noch schwacher Verbündeter ist.</German>
 		<Italian>*Suggerimento del BUG Team*: Vendere le risorse che non usi più, come Rame o Ferro, può rendere parecchio a lungo termine. Però assicurati di venderle ad una nazione amica più debole!</Italian>
@@ -243,7 +243,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_HINT_INTERFACE_4</Tag>
-		<English>*BUG Hint*: To cancel all Worker Orders quickly, select a worker with orders, and while holding the [ALT] key, click the cancel orders button.</English>
+		<English>*BUG Hint*: To cancel all Worker orders quickly, select a Worker with orders, and while holding the [ALT] key, click the cancel orders button.</English>
 		<French>*Conseils du BUG*: Pour annuler tous les ordres des Ouvriers, sélectionnez un ouvrier avec des ordres, et en gardant [ALT] enfoncé, cliquez le bouton pour annuler les ordres.</French>
 		<German>[BUG] Tipp... Bei gedrückter [ALT]-Taste lassen sich die Missionen aller aktiven Bautrupps per Mausklick auf das Abbrechensymbol eines aktiven Bautrupps abbrechen.</German>
 		<Italian>*Suggerimento del BUG Team*: Per cancellare velocemente tutti gli ordini dei lavoratori, selezionane uno che abbia ordini attivi, tieni premuto il tasto [ALT] e clicca il pulsante di cancellazione degli ordini.</Italian>
@@ -292,7 +292,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_C2C_HINT_10</Tag>
-		<English>C2C: Build National Wonders such as the Department of Water or Department of Energy to give all your cities Water Pipes and Power Lines. This many buildings require these before they can be built, so it is a smart move that can save you time.</English>
+		<English>C2C: Build National Wonders such as the Department of Water or Department of Energy to give all your cities Water Pipes and Power Lines buildings. Many buildings require these prerequisite infrastructure buildings before they can be constructed, so this is a smart move that can save you time.</English>
 		<French>C2C: Construisez des merveilles nationales comme le ministère de l'Eau ou le département de l'énergie pour donner à toutes vos villes des conduites d'eau et des lignes électriques. de nombreux bâtiments ont besoin de ces instllations avant qu'ils ne puissent être construits, c'est donc une initiative intelligente qui peut vous faire économiser du temps.</French>
 		<Italian>C2C: Costruisci meraviglie Nazionali, come il Dipartimento delle acque e il Dipartimento dell'energia, per costruire Tubi dell'acqua e Linee elettriche. Molti edifici richiedono questi 2 speciali edifici, quindi costruire queste meraviglie può farti risparmiare molto tempo.</Italian>
 		<Spanish>C2C: Construye las maravillas nacionales del Departamento de aguas y el Departamento de electricidad para proporcionar Cañerías de agua y Tendido eléctrico a todas tus ciudades. Muchos edificios requieren de estos dos para poder construirse, por tanto sería una iniciativa inteligente que te ahorraría tiempo.</Spanish>
@@ -301,7 +301,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_C2C_HINT_11</Tag>
-		<English>C2C: NIMBY or Not In My Back Yard buildings are buildings that may give you a high financial gain, but at the price of happiness and/or health. Such buildings include the Federal Prison, Toxic Waste Dump and Poacher's Camp. Build them at your own risk.</English>
+		<English>C2C: NIMBY or Not In My Back Yard buildings are buildings that may give you a high financial gain, but at the price of Happiness and/or Health. Such buildings include the Federal Prison, Toxic Waste Dump and Poacher's Camp. Build them at your own risk.</English>
 		<French>C2C: les bâtiments NIMBY or 'Not In My Back Yard' sont des bâtiments qui peuvent vous donner un gain financier élevé, mais au prix du bonheur et / ou de santé. Ces bâtiments sont par exemple une prison fédérale, de gestion de déchets toxiques, des Camps de braconniers. A construire à vos propres risques.</French>
 		<Italian>C2C: NIMBY (Not In My Back Yard) sono edifici che possono darti un grande introito finanziario, ma la prezzo di felicità e/o salute. Edifici del genere sono la Prigione di Massima Sicurezza, la Discarica per Rifiuti Tossici e il Campo dei bracconieri. Costruiscili a tuo rischio e pericolo.</Italian>
 		<Spanish>C2C: Los edificios NIMBY, o 'No detrás de mi patio' ('Not In My Back Yard') son edificios que pueden aportar grandes ganancias, pero a costa de la salud y/o la felicidad. Este grupo incluye la Prisión nacional, el Vertedero de residuos tóxicos y el Campamento de cazadores furtivos. Constrúyelos bajo tu propia responsabilidad.</Spanish>
@@ -310,7 +310,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_C2C_HINT_12</Tag>
-		<English>C2C: There are many more science related buildings in C2C. They include such buildings as the Mathematics Academy, Physics Lab, Chemistry Lab and even Paleontology Lab.</English>
+		<English>C2C: There are many more Science related buildings in C2C. They include such buildings as the Mathematics Academy, Physics Lab, Chemistry Lab, and even Paleontology Lab.</English>
 		<French>C2C: Il ya des bâtiments scientifiques bien d'autres liées à C2C. Ils comprennent les bâtiments tels que l'Académie de Mathématiques, des Labo de Physique, laboratoire de chimie et même un laboratoire de paléontologie.</French>
 		<Italian>C2C: Ci sono molti edifici legati alla scienza in C2C. Includono edifici come l'Accademia di matematica, il Laboratorio di Fisica, il Laboratorio di Chimica e il Laboratorio di Paleontologia.</Italian>
 		<Spanish>C2C: En C2C hay muchos más edificios relacionados con la ciencia. Se han incluido edificios como la Academia de matemáticas, el Laboratorio de física, el Laboratorio de química y el Laboratorio de paleontología.</Spanish>
@@ -319,7 +319,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_C2C_HINT_13</Tag>
-		<English>C2C: There are many types of towers and walls in C2C. Each upgrade to a more advanced version as you progress through the tech tree.</English>
+		<English>C2C: There are many types of towers and walls in C2C. Each one upgrades to a more advanced version as you progress through the tech tree.</English>
 		<French>C2C: Il existe plusieurs types de tours et de murs défensifs dans C2C. Chaque type est une version plus avancée, à mesure que vous progressez à travers l'arbre technologique.</French>
 		<Italian>C2C: Ci sono molti tipi di torri e mura in C2C. Ogni miglioramento è una versione sempre più avanzata, procedendo lungo l'albero delle tecnologie.</Italian>
 		<Spanish>C2C: Existen muchos tipos de torretas y murallas en C2C. Cada uno de ellos mejora a versiones más avanzadas según progresas en el árbol de tecnologías.</Spanish>
@@ -328,7 +328,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_C2C_HINT_14</Tag>
-		<English>C2C: There are different types of Traps in C2C. While they can help defend your city or even provide you food, they can hurt your empires health and/or happiness. Thus build them only if you really need them.</English>
+		<English>C2C: There are different types of traps in C2C. While they can help defend your city and provide you Food, they can also negatively affect your empire's Health and/or Happiness. Build traps only if you really need them.</English>
 		<French>C2C: Il existe différents types de pièges dans C2C. Même s'ils peuvent aider à défendre votre ville ou même de vous fournir la nourriture, ils peuvent nuire à la santé ou au bonheur de votre empire. Ainsi ne les construisez que si vous avez vraiment besoin d'eux.</French>
 		<Italian>C2C: ci sono molti tipi di trappole in C2C. Anche se possono aiutare a difendere la tua città o perfino fornire del cibo, possono influire sulla salute e sulla felicità della tua città. Costruiscile solo se ne hai veramente bisogno.</Italian>
 		<Spanish>C2C: Hay diferentes clases de trampas en C2C. Aunque pueden ayudarte a defender tu ciudad o proporcionarte alimentos, también pueden afectar a la salud y/o la felicidad de tu imperio. Constrúyelas solo si realmente las necesitas.</Spanish>
@@ -337,7 +337,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_C2C_HINT_15</Tag>
-		<English>C2C: In the Prehistoric Era there are some 'Buildings' that do not require Shelter Building tech in order to be built. These include such buildings as Berry Bush, Wild Herbs and Carrion. This is because they represent your city gathering or scavenging for resources.</English>
+		<English>C2C: In the Prehistoric era there are some 'Buildings' that do not require the Shelter Building tech in order to be built. These include such buildings as Berry Bush, Wild Herbs, and Carrion. This is because they represent your city gathering or scavenging for resources.</English>
 		<French>C2C: Dans l'ère préhistorique il y a quelques bâtiments qui ne nécessitent pas les techniques de construction d'abris. Il s'agit notamment des bâtiments tels que les arbustes à baies, parcelles d'herbes sauvages. Ils représentent la cueillette et la récolte des ressources pour votre ville.</French>
 		<Italian>C2C: Nell'era preistorica ci sono alcuni "edifici" che non richiedono la tecnologia Costruzione di ripari. Tra questi edifici ci sono Erbe selvatiche e Carcasse; essi rappresentano la raccolta di risorse da parte della tua città.</Italian>
 		<Spanish>C2C: En la Prehistoria hay algunos 'edificios' que no requieren la tecnología de la Construcción de refugios para construirse, entre ellos los Arbustos de bayas, las Hierbas salvajes y la Carroña. Estos representa la necesidad de recolectar o rebuscar recursos de tu ciudad.</Spanish>
@@ -346,7 +346,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_C2C_HINT_16</Tag>
-		<English>C2C: There are many new Health related buildings in C2C. They include buildings such as the Retirement Home, Field Hospital, Optometrist and even an Insane Asylum!</English>
+		<English>C2C: There are many new Health related buildings in C2C. They include buildings such as the Retirement Home, Field Hospital, Optometrist, and even an Insane Asylum!</English>
 		<French>C2C: Il existe de nombreux bâtiments de la santé nouvelles liées à C2C. cela comprend des bâtiments tels que maison de retraite, hôpital de campagne, un optométriste et même un asile d'aliénés!</French>
 		<Italian>C2C: Ci sono molti nuovi edifici legati alla salute in C2C. Includono edifici come Casa di riposo, Ospedale da campo, Optometrista e perfino un Manicomio!</Italian>
 		<Spanish>C2C: Se han añadido multitud de nuevos edificios relacionados con la salud en C2C, como la Residencia de ancianos, el Hospital de campaña, la Consulta del oftalmólogo e incluso un Manicomio.</Spanish>
@@ -355,7 +355,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_C2C_HINT_17</Tag>
-		<English>C2C: There are many new Fire related buildings and techs in C2C. They include buildings such as the Fire Brigades, Fire Station and Fire Dock.</English>
+		<English>C2C: There are many new Fire related buildings and techs in C2C. They include buildings such as the Fire Brigades, Fire Station, and Fire Dock.</English>
 		<French>C2C: Il ya beaucoup de bâtiments et technologies liés à l'incendie dans C2C. cela comprend des bâtiments tels que les sapeurs-pompiers, caserne de pompiers et Dock feu.</French>
 		<Italian>C2C: Ci sono molti edifici e tecnologie legati al fuoco in C2C. Essi includono edifici come Vigli del fuoco, Caserma dei pompieri e Molo dei pompieri.</Italian>
 		<Spanish>C2C: En C2C hay nuevos edificios y tecnologías relacionadas con el fuego. Entre ellos están el Cuerpo de bomberos, el Cuartel de bomberos y el Muelle de bomberos.</Spanish>
@@ -364,7 +364,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_C2C_HINT_18</Tag>
-		<English>C2C: There are some alternative timeline techs in C2C such as Megafauna Domestication. While humans never domesticated Mammoths or Giant Ground Sloths (aka Megatherium) you now can in C2C if you build their wonders!</English>
+		<English>C2C: There are some alternative timeline techs in C2C such as Megafauna Domestication. While humans never domesticated Mammoths or Giant Ground Sloths (aka Megatherium) you now can in C2C if you build their Wonders!</English>
 		<French>C2C: Il ya quelques technologies alternatives au cours normale de l'histoire, telle que la domestication de la mégafaune. Bien que les humains n'ont jamais domestiqué les mammouths ou les autres pachidermes, vous pouvez maintenant le faire dans C2C si vous construisez leurs merveilles!</French>
 		<Italian>C2C: Ci sono alcune tecnologie legate a timeline alternative in C2C, come l'Addomesticazione della megafauna. Anche se gli uomini non hanno mai addomesticato Mammut e Megateri, ora puoi farlo in C2C costruendo le relative meraviglie!</Italian>
 		<Spanish>C2C: Hay algunas tecnologías sobre historia alternativa en C2C, como por ejemplo la Domesticación de mastodontes. Aunque los humanos no llegaron a domesticar mamuts o megaterios, ¡ahora puedes hacerlo en C2C si construyes la maravilla adecuada!</Spanish>
@@ -373,7 +373,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_C2C_HINT_19</Tag>
-		<English>C2C: There are many types of Animal related buildings in C2C. They include such buildings as a Zoo, Aquarium, Pet Shop, Dog Breeder, Chicken Coop, Elephant Trainer and even a Parrot Aviary!</English>
+		<English>C2C: There are many types of Animal related buildings in C2C. They include such buildings as a Zoo, Aquarium, Pet Shop, Dog Breeder, Chicken Coop, Elephant Trainer, and even a Parrot Aviary!</English>
 		<French>C2C: Il existe de nombreux types de bâtiments liés aux animaux dans C2C. cela comprend des bâtiments tels que zoo, aquarium, éleveurs de chiens, poulaillers, dresseurs d'éléphants et même volières de perroquets!</French>
 		<Italian>C2C: Ci sono molti edifici legati agli animali in C2C. Includono edifici come Zoo, Acquario, Negozio di animali, Allevamento di cani, Allevamento di polli, Addestratore elefanti e perfino una voliera per pappagalli!</Italian>
 		<Spanish>C2C: Existen diversos tipos de edificios relacionados con los animales en C2C, como el Parque zoológico, el Aquarium, la Tienda de mascotas, el Criador de perros, el Gallinero, el Domador de elefantes, ¡e incluso una Avícola de loros!</Spanish>
@@ -382,7 +382,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_C2C_HINT_2</Tag>
-		<English>C2C: If you have two different kinds of resources in your city vicinity, you may be able to build a Bonus Resource building.</English>
+		<English>C2C: If you have two different kinds of resources in your city's vicinity, you may be able to build a Bonus Resource building.</English>
 		<French>C2C: Si vous avez 2 types de ressources différents dans le territoire de votre ville, vous pourrez peut-être construire un bâtiment de ressource Bonus.</French>
 		<Italian>C2C: Se hai due diversi tipi di risorse vicino alla tua città, potresti essere in grado di costruire un edificio bonus.</Italian>
 		<Spanish>C2C: Si posees 2 recursos distintos en el radio de tu ciudad, tendrás a tu disposición un edificio de bonificación.</Spanish>
@@ -391,7 +391,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_C2C_HINT_20</Tag>
-		<English>C2C: There are some buildings that ONLY help produce buildings faster (not units). They include buildings such as the Carpenter's Workshop, Treadmill Crane and Construction Firm.</English>
+		<English>C2C: There are some buildings that ONLY help produce buildings faster (not units). They include buildings such as the Carpenter's Workshop, Treadmill Crane, and Construction Firm.</English>
 		<French>C2C: Il y a quelques bâtiments qui aident à la construction des autres bâtiments SEULEMENT (pas des unités). cela comprend des bâtiments tels que l'atelier du charpentier, Les Grues, les moulins, et l'entreprise de construction.</French>
 		<Italian>C2C: Alcuni edifici permettono di produrre più velocemente SOLO gli edifici (non le unità). Essi includono edifici come la Bottega del carpentiere, Gru medievale e Ditta di costruzioni.</Italian>
 		<Spanish>C2C: Algunos edificios solo ayudan a construir más rápido otros edificios (no así las unidades). Algunos de estos edificios son la Carpintería, la Grúa de rueda y la Empresa constructora.</Spanish>
@@ -400,7 +400,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_C2C_HINT_21</Tag>
-		<English>C2C: Build other buildings or units on top of already building the Captured Fire wonder. Once you unlock civics finish building the Captured Fire wonder and you can switch over to the tech during a free Golden Age without an anarchy penalty for switching over.</English>
+		<English>C2C: Build other buildings or units on top of already building the Captured Fire Wonder. Once you unlock Civics finish building the Captured Fire Wonder and you can switch over to the tech during a free Golden Age without an Anarchy penalty for switching over.</English>
 		<French>C2C: Construisez d'autres bâtiments ou unités au-dessus de la construction de la merveille de la maîtrise du feu. Une fois que vous avez débloqué les doctrines, terminez la construction de la merveille de la maîtrise du feu et vous pouvez passer à la technologie pendant un âge d'or gratuit sans pénalité d'anarchie pour le basculement.</French>
 		<Polish>C2C: Buduj jednostki i budowle dopiero wtedy gdy uko&#241;czysz Mieszkania w Jaskiniach. Kiedy tylko odblokujesz Tradycj&#234; Mowy, uko&#241;cz Mieszkania w Jaskiniach, dzi&#234;ki temu otrzymasz Z&#179;oty Wiek i b&#234;dziesz m&#243;g&#179; zmienia&#230; doktryny bez anarchii.</Polish>
 		<Russian>C2C: стройте другие здания или отряды на уже построенном Чуде Укрощение огня. Как только вы разблокируете соответствующие парадигмы, завершите строительство чудо Укрощение огня, вы сможете переключиться на нужную технологию во время бесплатного Золотого века без штрафа за анархию за переключение.</Russian>
@@ -425,7 +425,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_C2C_HINT_24</Tag>
-		<English>C2C: You may not want to build all the prehistoric buildings.</English>
+		<English>C2C: You may not want to build all the Prehistoric era buildings.</English>
 		<French>C2C: Ne construisez pas forcément tous les bâtiments préhistoriques.</French>
 		<Italian>C2C: Non dovresti costruire tutti gli edifici dell'era preistorica.</Italian>
 		<Spanish>C2C: Posiblemente construir todo edificio prehistórico no sea lo mejor...</Spanish>
@@ -443,7 +443,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_C2C_HINT_26</Tag>
-		<English>C2C: The Temple of Solomon from Judaism provides +15% to the city's gold production. Stack it with another Shrine. Shrines don't count as Wonders in C2C.</English>
+		<English>C2C: The Temple of Solomon from Judaism provides +15% to the city's Gold production. Stack it with another Shrine. Shrines don't count as Wonders in C2C.</English>
 		<French>C2C: Le Temple de Salomon du Judaisme procure +15% d'or à vos villes. Ajoutez-le avec un autre Sanctuaire, ils ne sont pas comptés comme des Merveilles dans C2C.</French>
 		<Italian>C2C: il Tempio di Salomone fornisce +15% alla produzione d'oro della città. Costruiscilo nella stessa città di un altro santuario; i santuari non contano come meraviglie in C2C.</Italian>
 		<Spanish>C2C: El Templo de Salomón, del Judaísmo, aumenta un +15% la producción de oro de la ciudad. Intenta crearlo en una ciudad con otro santuario; estos no cuentan como maravillas en C2C.</Spanish>
@@ -452,7 +452,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_C2C_HINT_27</Tag>
-		<English>C2C: Asatru can provide a lot of XP to melee units: +1-2 from the Monastery and Temple, +5 from the Odin's Shrine.</English>
+		<English>C2C: Asatru can provide a lot of XP to Melee units: +1-2 from the Monastery and Temple, +5 from the Odin's Shrine.</English>
 		<French>C2C: Asatru peut procurer beaucoup d'EXP aux unités: +1-2 du monastère et des Temples, +5 de l'Autel d'Odin.</French>
 		<Italian>C2C: Asatru fornisce molta XP alle unità da combattimento ravvicinato: +1-2 dal monastero e dal tempio, +5 dal Santuario di Odino.</Italian>
 		<Spanish>C2C: El Odinismo puede dar muchos PX a las unidades cuerpo a cuerpo: +1-2 del monasterio y del templo y +5 del Altar de Odín.</Spanish>
@@ -461,7 +461,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_C2C_HINT_28</Tag>
-		<English>C2C: The Kong Miao from Confucianism provides a free Morale promotion to that city's units.</English>
+		<English>C2C: The Kong Miao from Confucianism provides a free Morale Promotion to that city's units.</English>
 		<French>C2C: Le Kong Miao du Confucianisme donne la promotion 'Moral' aux unités de la ville.</French>
 		<German>C2C:The Kong Miao from Confucianism provides a free Morale promotion to that city's units.</German>
 		<Italian>C2C: Il Kong Miao fornisce la promozione gratuita Morale a tutte le unità prodotte in città.</Italian>
@@ -471,7 +471,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_C2C_HINT_29</Tag>
-		<English>C2C: With Divine Prophets, you can control which religions you found and where you found them.</English>
+		<English>C2C: With Divine Prophets, you can control which Religions you found and where you found them.</English>
 		<French>C2C: Avec les prophètes Divins, vous pouvez contrôler où et quand vous fondez une religion.</French>
 		<Italian>C2C: Con l'opzione Profeti Divini, puoi controllare quale religione fondare e dove vuoi fondarla.</Italian>
 		<Spanish>C2C: Con la opción 'Profetas divinos', puedes controlar qué religion fundar, y dónde hacerlo.</Spanish>
@@ -480,7 +480,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_C2C_HINT_3</Tag>
-		<English>C2C: The best location to found your first city is at the mouth of a river and on a coast. Try to avoid jungles and flood plains since they are very unhealthy. Seek out forests instead.</English>
+		<English>C2C: The best location to found your first city is at the mouth of a river and on a coast. Try to avoid jungles and flood plains since they are very Unhealthy. Seek out forests instead.</English>
 		<French>C2C: Pour fonder votre première ville, nous vous conseillons de choisir l'embouchure d'une rivière, avec un accès à la mer. Essayez d'éviter les jungles et les plaines inondables, car elles sont très malsaines. Cherchez les forêts à la place.</French>
 		<German>C2C: Die erste Stadt sollte am besten an einer Flussmündung oder an der Küste gegründet werden. Dschungel und Marschland sollten unbedingt gemieden werden, da sie der Gesundheit der Bevölkerung nicht gerade zuträglich sind. Wald ist da eine wesentlich gesündere Alternative.</German>
 		<Italian>C2C: Il posto migliore per fondare la tua prima città è alla foce di un fiume o sulla costa. Evita le foreste e i terreni alluvionali perché causano malattie; al contrario, prediligi le foreste.</Italian>
@@ -499,7 +499,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_C2C_HINT_31</Tag>
-		<English>C2C: When actually taking over another civilization's cities, take the time to build roads towards them while doing so and not after capturing them.</English>
+		<English>C2C: When actually taking over another civilization's cities, take the time to build Roads (an Improvement made by Workers) towards them while doing so and not after capturing them. This ensures faster unit movement.</English>
 		<French>C2C: Lors de vos conquêtes, prenez le temps de construire les routes nécessaires pour l'approvisionnement.</French>
 		<Italian>C2C: Quando conquisti le città di un'altra civiltà, prenditi il tempo per costruire le strade mentre ti avvicini, non dopo averle catturate.</Italian>
 		<Spanish>C2C: Al tratar de conquistar las ciudades de otra civilización, tómate el tiempo necesario para construir caminos hacia ellas mientras lo haces, y no después de capturarlas.</Spanish>
@@ -517,7 +517,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_C2C_HINT_33</Tag>
-		<English>C2C: When sending in spies, actually take the time to look at that Civs city list in the Espionage Screen. They may have a city that is insanely cheaper to spy on than any of the others.</English>
+		<English>C2C: When sending in Spies, actually take the time to look at that Civs city list in the Espionage Screen. They may have a city that is insanely cheaper to spy on than any of the others.</English>
 		<French>C2C: Avant d'envoyer vos espions, prenez le temps d'examiner quelle ville est la plus vulnérable.</French>
 		<Italian>C2C: Quando mandi in missione le spie, prenditi del tempo per guardare la lista delle città di quella civiltà nello schermo informazioni spionaggio. Potrebbero avere una città molto più economica da spiare rispetto ad altre.</Italian>
 		<Spanish>C2C: Cuando envíes espías, tómate tu tiempo para examinar la lista de ciudades de la civilización a espiar en el Consejero de Espionaje. Podrían tener una ciudad en la que espiar sea ilógicamente más barato.</Spanish>
@@ -535,7 +535,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_C2C_HINT_35</Tag>
-		<English>C2C: Hidden nationality units are your first line of defense, the proper way to use them is a preemptive strike.</English>
+		<English>C2C: Hidden Nationality Units are your first line of defense, the proper way to use them is a preemptive strike.</English>
 		<French>C2C: Les Unités sans nationalité sont votre première ligne de défense. Utilisez-les en préventif.</French>
 		<Italian>C2C: Le unità con nazionalità nascosta sono la tua prima linea di difesa; il modo esatto per utilizzarle è un attacco preventivo.</Italian>
 		<Spanish>C2C: Las unidades con nacionalidad oculta son tu primera línea de defensa; el modo más adecuado de usarlas es un ataque preventivo.</Spanish>
@@ -562,7 +562,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_C2C_HINT_38</Tag>
-		<English>C2C: If you're getting too many subdued animals, send small clusters of redundant predatory ones out on near city patrols.</English>
+		<English>C2C: If you're getting too many Subdued Animals, send small clusters of redundant predatory ones out on near city patrols.</English>
 		<French>C2C: si vous avez trop d'animaux apprivoisés, envoyez des petits groupes de prédateurs patrouiller près de vos villes.</French>
 		<Italian>C2C: se ottieni troppi animali domati, mandane alcuni a pattugliare vicino alle tue città.</Italian>
 		<Spanish>C2C: Si estás acumulando demasiados animales domados, envía pequeños grupos de depredadores repetidos a patrullar cerca de la ciudad.</Spanish>
@@ -571,7 +571,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_C2C_HINT_39</Tag>
-		<English>C2C: There are new types of Properties in C2C such as Crime, Flammability, Air Pollution, Water Pollution and Disease. Make sure to keep track of them or you could be in big trouble.</English>
+		<English>C2C: There are new types of Properties in C2C such as Crime, Flammability, Air Pollution, Water Pollution, and Disease. Make sure to keep track of them or you could be in big trouble.</English>
 		<French>C2C: Il y a de nouvelles propriétés, comme la criminalité, le risque d'invendie, les pollutions de l'air et de l'eau, et les maladies. Surveillez-les régulièrement si vous ne voulez pas vous retrouver en difficulté.</French>
 		<Italian>C2C: Ci sono nuove proprietà in C2C come Crimine, Rischio d'incendio, Inquinamento dell'aria, Inquinamento dell'acqua e Malattie. Tienine conto, o potresti avere dei seri problemi.</Italian>
 		<Spanish>C2C: Se han introducido las propiedades en C2C, como por ejemplo la criminalidad, la inflamabilidad, la polución del agua y del aire, y las enfermedades. Asegúrate de seguir su evolución, de lo contrario podrías verte en dificultades.</Spanish>
@@ -589,7 +589,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_C2C_HINT_40</Tag>
-		<English>C2C: Crime is a new concept in C2C. You can fight crime by producing anti-crime buildings and units such as Police Stations and Police Cars.</English>
+		<English>C2C: Crime is a new concept introduced in C2C. You can fight Crime by constructing anti-crime buildings and training specialized units, such as Police Stations and Police Cars.</English>
 		<French>C2C: La Criminalité est un nouveau concept dans C2C. Vous pouvez affronter et réduire cette criminalité par l'intermédiaire de bâtiments spécifiques, mais aussi avec des unités (Véhicule de police par exemple).</French>
 		<Italian>C2C: Crimine è un nuovo concetto di C2C. Puoi combattere il crimine producendo edifici ed unità anti-crimine, come Stazioni di Polizia e Macchine della Polizia.</Italian>
 		<Spanish>C2C: La criminalidad es un nuevo concepto de C2C. Puedes combatir el crimen produciendo edificios y unidades anticrimen, como las Comisarías de policía o los Coches de policía.</Spanish>
@@ -616,7 +616,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_C2C_HINT_43</Tag>
-		<English>C2C: Check out the various alt-timeline techs such as Clockpunk, Steampunk, Dieselpunk and Atompunk. Each have their own special buildings and units.</English>
+		<English>C2C: Check out the various alt-timeline techs such as Clockpunk, Steampunk, Dieselpunk, and Atompunk. Each have their own special buildings and units.</English>
 		<French>C2C: Vous pouvez trouver dans C2C des découvertes alternatives, comme le Clockpunk, Steampunk, Dieselpunk, Atmpunk. Chacune de ces découvertes dispose de bâtiments et unités spécifiques qui peuvent diversifier votre Gameplay.</French>
 		<Italian>C2C: Dai un'occhiata alle tecnologie delle timeline alternative Clockpunk, Steampunk, Dieselpunk and Atompunk. Ognuna ha i propri edifici e unità speciali.</Italian>
 		<Spanish>C2C: Prueba las diversas tecnologías de historia alternativa, como Clockpunk, Steampunk, Dieselpunk y Atompunk. Cada una de ellas tiene sus propios edificios y unidades especiales.</Spanish>
@@ -634,7 +634,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_C2C_HINT_45</Tag>
-		<English>C2C: Air and Water Pollution are new concepts in C2C. Some terrain can help fight pollution such as Forest, Jungle, Coral and Kelp. Peaks can even stop the spread of air pollution. Make sure to keep some forest around to reduce pollution or build parks in your cities.</English>
+		<English>C2C: Air and Water Pollution are new concepts in C2C. Some terrain can help fight Pollution such as Forest, Jungle, Coral, and Kelp. Peaks can even stop the spread of Air Pollution. Make sure to keep some forest around to reduce Pollution or build Parks in your cities.</English>
 		<French>C2C: Les pollutions de l'Air et de l'Eau sont des nouveaux concepts dans C2C. Certains types de terrain peuvent vous aider à vaincre ces pollutions (Forêt, Jungle, Corail, Les pics peuvent également éviter la propagation de la pollution. Economiser et n'exploitez donc pas tous ces terrains, et pensez à construire des parcs dans vos Villes.</French>
 		<Spanish>C2C: La polución del aire, y del agua, son nuevos conceptos de C2C. Algunos terrenos como el Bosque, la Selva, el Arrecife de coral y las Algas ayudan a luchar contra la polución. Los Picos pueden parar la propagación de la polución del aire. Asegúrate de mantener algunos bosques alrededor de tus ciudades para reducir la polución, o construye parques en ellas.</Spanish>
 		<Polish>C2C: Zanieczyszczenie Wody i Powietrza to nowe koncepcje w C2C. Niekt&#243;re typy terenu pomagaj&#185; walczy&#230; z zanieczyszczeniem (np. Lasy, D&#191;ungle). G&#243;ry te&#191; maj&#185; mo&#191;liwo&#156;&#230; zatrzymania zanieczyszczenia powietrza. Staraj si&#234; utrzyma&#230; kilka las&#243;w w oko&#179;o miasta by zredukowa&#230; zanieczyszczenie lub zbuduj parki w miastach.</Polish>
@@ -642,21 +642,21 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_C2C_HINT_46</Tag>
-		<English>C2C: Education is a new concept in C2C. Having more Education can help reduce crime, flammability and disease, but it will also give you more War Weariness.</English>
+		<English>C2C: Education is a new concept in C2C. Having more Education can help reduce Crime, Flammability, and Disease, but it will also give you more War Weariness.</English>
 		<French>C2C: L'éducation est un nouveau concept dans C2C. Avoir plus d'éducation peut aider à réduire la criminalité, le risque d'incendies et les maladies, mais cela vous donnera également plus de mécontentement lié à la guerre.</French>
 		<Polish>C2C: Edukacja to nowe system w C2C. Zwi&#234;kszaj&#185;c edukacje swojego spo&#179;ecze&#241;stwa jednocze&#156;nie zmniejszasz przest&#234;pczo&#156;&#230;, zagro&#191;enie po&#191;arowe i chorobowe. Niestety niezadowolenie z wojen wzrasta.</Polish>
 		<Russian>C2C: Îáðàçîâàíèå - ýòî íîâûé ïîêàçàòåëü â Ñ2Ñ. Èìåÿ áîëåå âûñîêèé óðîâåíü îáðàçîâàíèÿ ìîæíî çàìåòíî ñíèçèòü óðîâåíü ïðåñòóïíîñòè, ïîæàðîîïàñíîñòè è ýïèäåìèé, íî ýòî òàêæå óâåëè÷èò âàì óñòàëîñòü îò âîéíû.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_C2C_HINT_47</Tag>
-		<English>C2C: Pests are a new concept in C2C. These appear based on your city size and what resources you have access to. Unlike disease or crime, there is no pest property to lower. Thus they truly are PESTS!</English>
+		<English>C2C: Pests are a new concept in C2C. These appear based on your city size and what resources you have access to. Unlike Disease or Crime, there is no pest property to lower. Thus they truly are PESTS!</English>
 		<French>C2C: Les 'Parasites' constituent un nouveau concept dans C2C. Ceux-ci apparaissent en fonction de la taille de votre ville et des ressources auxquelles vous avez accès. Contrairement à la maladie ou au crime, il n'y a pas de propriété concernant les parasites, que l'on peut faire baisser . Ils sont donc vraiment des PESTES!</French>
 		<Polish>C2C: Szkodniki to nowy system w C2C. Szkodniki bazuj&#185; na wielko&#156;ci twojego miasta oraz na dost&#234;pie do surowc&#243;w. W przeciwie&#241;stwie do przest&#234;pczo&#156;ci i chor&#243;b nie da si&#234; zmniejszy&#230; lub usun&#185;&#230; szkodnik&#243;w z miasta.</Polish>
 		<Russian>C2C: Âðåäèòåëè - íîâàÿ êîíöåïöèÿ â Ñ2Ñ. Îíè ïîÿâëÿþòñÿ â çàâèñèìîñòè îò âåëè÷èíû ãîðîäà è äîñòóïíûõ âàì ðåñóðñîâ. Â îòëè÷èå îò áîëåçíåé èëè ïðåñòóïëåíèé, óùåðá îò âðåäèòåëåé íåëüçÿ ñîêðàòèòü. Òàêèì îáðàçîì, îíè äåéñòâèòåëüíî ÿâëÿþòñÿ âðåäèòåëÿìè!</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_C2C_HINT_48</Tag>
-		<English>C2C: Many of our tech audio quotes have been read by people on YouTube such as Grimith, Gnarlo and The Last Beluga.</English>
+		<English>C2C: Many of our tech audio quotes have been read by people on YouTube such as Grimith, Gnarlo, and The Last Beluga.</English>
 		<French>C2C: Beaucoup de nos citations audio des technologies ont été lues par des gens sur YouTube tels que Grimith, Gnarlo et The Last Beluga.</French>
 		<Polish>C2C: Wiele z naszych audio cytat&#243;w zosta&#179;o nagranych przez graczy z YouTube, takich jak Grimith, Gnarlo czy The Last Beluga.</Polish>
 	</TEXT>
@@ -669,7 +669,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_C2C_HINT_5</Tag>
-		<English>C2C: Power Plants have been redone for C2C. They not give you production based on their amount of power. You can also make more than one per city. However they require you have Power Lines in your city before building them. 100 MW = +1 Production</English>
+		<English>C2C: Power Plants have been redone for C2C. The amount of Production received is tied to the amount of power they generate. You can also make more than one Power Plant per city. However they require you have Power Lines in your city before building them. 100 MW = +1 Production</English>
 		<French>C2C: Les Centrales Électriques ont été revues pour C2C. Elles vous donneront de la production en fonction de leur quantité d'énergie. Vous pouvez ainsi en construire plus d'une par ville. Toutefois, il est nécessaire d'avoir des lignes électriques dans votre ville avant de les construire. 100 MW = +1 production</French>
 		<Italian>C2C: Le centrali elettriche sono state rifatte per C2C. Non danno produzione in base alla quantità di energia. Puoi anche farne più di una per città; in ogni caso, richiedono Linee Elettriche prima di essere costruite. 100 MW = +1 Produzione</Italian>
 		<Spanish>C2C: Las centrales eléctricas han sido rediseñadas en C2C. Estas proporcionarán producción en función de la energía que produzcan; además, puedes construir más de una por ciudad. Sin embargo, todas requieren la presencia de Tendido eléctrico en tu ciudad para poder construirse. 100 MW = +1 producción.</Spanish>
@@ -685,11 +685,11 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_C2C_HINT_51</Tag>
-		<English>C2C: City production popup now shows only few buildings and units for performance reasons. Click on Examine City to see all buildings and units you can build. Alternatively you can disable this popup in BUG settings - Caveman2Cosmos tab, and select No Production Popup.</English>
+		<English>C2C: For performance reasons, the city production popup now displays only a limited selection of buildings and units. Click on Examine City to see a full list of available options. Alternatively, you can disable this popup entirely in the BUG settings - Caveman2Cosmos tab, and select "No Production Popup."</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_C2C_HINT_6</Tag>
-		<English>C2C: The Prehistoric Era is a new era that comes before the Ancient Era. It represents human history before agriculture and a more sedentary lifestyle.</English>
+		<English>C2C: The Prehistoric Era is a new Era that precedes the Ancient Era. It represents human history before the advent of agriculture and a more sedentary way of life.</English>
 		<French>C2C: L'ère préhistorique est une nouvelle ère qui vient avant l'ère antique. Elle représente l'histoire humaine avant l'agriculture et un mode de vie plus sédentaire.</French>
 		<Italian>C2C: L'era preistorica è il periodo che precede l'Era Antica. Rappresenta la vita umana prima dell'agricoltura e della vita sedentaria.</Italian>
 		<Spanish>C2C: La Prehistoria es una nueva época que precede a la Edad Antigua. Representa la historia humana anterior a la agricultura y a un estilo de vida más sedentario.</Spanish>
@@ -698,7 +698,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_C2C_HINT_7</Tag>
-		<English>C2C: "Garbage" is a new civic in C2C. At first you cannot do much about garbage, but as you discover new techs you can remove it from your empire by throwing it into the sea, burring it in a landfill, shipping to another empire or even sending it off into space! However if you think you can handle some more trash you can even import it from other empires and gain a profit from it.</English>
+		<English>C2C: "Garbage" is a new Civic in C2C. Initially, you won't have many options for managing waste, but as you research new Technologies, you'll unlock various methods to handle it. You can choose how to remove garbage by dumping it into the sea, burning it in a landfill, shipping it to another empire, or even sending it off into space! However if you think you can handle some more trash you can import it from other empires and gain a profit from it.</English>
 		<French>C2C: "Gestion des déchêts " est une nouvelle doctrine de C2C. Au début, vous ne pouvez pas faire grand-chose au sujet des déchets, mais comme vous découvrirez de nouvelles technologies, vous pourrez supprimer ces ordures de votre empire, soit en le jetant dans la mer, en les enfouissant dans une décharge, en les expédiant vers un autre empire, voire en les envoyant dans l'espace! Toutefois, si souhaitez en faire une priorité et gérer les déchets un peu plus, vous aurez même la possibilité d'importer ceux d'autres empires et en tirer profit.</French>
 		<Italian>C2C: "Rifiuti" è una nuova forma di governo in C2C. All'inizio non puoi fare molto riguardo ai rifiuti, ma scoprendo nuove tecnologie puoi rimuoverli dal tuo impero, gettandoli in mare, seppellendoli nelle discariche, vendendoli ad altri imperi o perfino lanciandoli nello spazio! In ogni caso, puoi anche importarli da altri imperi per ottenere dei profitti.</Italian>
 		<Spanish>C2C: "Residuos" es una nueva categoría de principios de C2C. Al principio no puedes hacer gran cosa respecto a los residuos, pero una vez vayas descubriendo nuevas tecnologías, podrás eliminarlos de tu imperio, ya sea tirándolos al agua, enterrándolos en un vertedero, vendiéndoselos a otro imperio, ¡o incluso enviándolos al espacio! Sin embargo, si crees que puedes manipular algo más de basura, puedes importarla de otros imperios y sacar un beneficio de ello.</Spanish>
@@ -707,7 +707,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_C2C_HINT_8</Tag>
-		<English>C2C: There are lots of buildings to create now, however not all cities can build every type of building. Many are limited by resources in the city vicinity, what civic you have active and even what buildings you already have built.</English>
+		<English>C2C: There are lots of buildings to create now, however not all cities can build every type of building. Many are limited by resources in the city vicinity, what Civic you have active, and even what buildings you already have built.</English>
 		<French>C2C: Il ya beaucoup de bâtiments à construire à présent, mais ils ne sont pas tous disponibles dans toutes les villes. Beaucoup sont limités par les ressources entourant chaque ville, les doctrines adoptées et même les bâtiments que vous avez déjà construits.</French>
 		<Italian>C2C: Ci sono moltissimi edifici da costruire, anche se non tutte le città possono costruire ogni tipo di edificio. Molti sono limitati dalle risorse nelle vicinanze della città, dall'attuale forma di governo e dagli edifici che sono già stati costruiti.</Italian>
 		<Spanish>C2C: Ahora hay muchísimos edificios a construir, aunque no todas las ciudades pueden construir cada tipo de edificio. Muchos están limitados por algún recurso en el radio de la ciudad, por el principio que tengas activo, e incluso por los edificios ya construidos.</Spanish>
@@ -716,7 +716,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_C2C_HINT_9</Tag>
-		<English>C2C: There are different types of Water related buildings in C2C. While some will provide you with freshwater, they can still make your city unhealthy from waterborne diseases.</English>
+		<English>C2C: There are different types of Water related buildings in C2C. While some will provide you with freshwater, they can still make your city Unhealthy from waterborne diseases.</English>
 		<French>C2C: Il existe différents types de bâtiments liés à l'eau dans C2C. Alors que certains vous fourniront de l'eau douce, d'autres peuvent aggraver la santé de vos villes en propageant des maladies dans l'eau.</French>
 		<Italian>C2C: Ci sono molti edifici correlati all'acqua in C2C. Alcuni forniscono acqua fresca, ma possono causare insalubrità per le malattie presenti nell'acqua.</Italian>
 		<Spanish>C2C: Existen varios edificios relacionados con el agua en C2C. Aunque algunos te proporcionarán agua dulce, estos aún pueden volver tu ciudad insalubre mediante las enfermedades transmitidas por el agua.</Spanish>
@@ -733,7 +733,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HINT_10</Tag>
-		<English>Don't always promote a unit as soon as it is possible. It may be wise to wait and see what kinds of units your opponent has before using up a promotion. Also, wounded units heal some damage when a promotion is used.</English>
+		<English>Don't always promote a unit as soon as it is possible. It may be wise to wait and see what kinds of units your opponent has before using up a Promotion. Also, wounded units heal some damage when a Promotion is used.</English>
 		<French>Ne vous précipitez pas quand une unité a mérité une promotion ! Il est parfois plus sage d'attendre de voir quelles unités vous allez affronter avant de choisir le type de promotion. Sachez également que les unités blessées sont partiellement soignées lorsqu'elles sont promues.</French>
 		<German>Befördern Sie Einheiten nicht immer bei erster Gelegenheit. Manchmal ist es sinnvoller, abzuwarten, welche Einheiten der Gegner benutzt, bevor Sie sich mit der Beförderung Ihrer eigenen Einheiten befassen. Darüber hinaus regenerieren Beförderungen einen Teil der Gesundheit beschädigter Einheiten.</German>
 		<Italian>Non promuovere sempre un'unità appena possibile. È saggio aspettare e vedere quale tipo di unità usa il nemico primi di ricorrere a una promozione.</Italian>
@@ -741,7 +741,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HINT_11</Tag>
-		<English>An unescorted settler, galleon, or transport are all huge risks - make sure you are willing to take them!</English>
+		<English>An unescorted Settler, Galleon, or transport are all huge risks - make sure you are willing to take them!</English>
 		<French>Un colon, un galion ou un transport sans escorte courent tous d'énormes risques... voulez-vous vraiment les perdre?</French>
 		<German>Tipp... Wertvolle Einheiten ohne nennenswerte Verteidigungsfähigkeiten, wie Siedler und Galeonen, können leicht Opfer von Angriffen werden und verdienen deshalb auf fremdem Terrain einen Begleitschutz.</German>
 		<Italian>Un colone, un galeone o un trasporto senza scorta sono a rischio. Assicurati di non mandare mai in giro da sole queste unità!</Italian>
@@ -759,7 +759,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HINT_13</Tag>
-		<English>Check the foreign advisor often - knowing what your friends (and foes) can offer in trade is valuable information.</English>
+		<English>Check the Foreign Advisor often - knowing what your friends (and foes) can offer in Trade is valuable information.</English>
 		<French>Consultez souvent votre conseiller diplomatique. Il est essentiel de savoir ce que vos amis (et vos ennemis) peuvent vous proposer.</French>
 		<German>Werfen Sie regelmäßig einen Blick auf den Auslandsberater. Schließlich müssen Sie wissen, womit Ihre Freunde (und Feinde) handeln.</German>
 		<Italian>Consulta spesso lo schemo della politca estera per sapere chi tra gli amici (o i nemici) è in grado di fornire informazioni in cambio di qualcosa.</Italian>
@@ -776,7 +776,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HINT_15</Tag>
-		<English>Don't neglect your empire's culture - walls and castles will only work until gunpowder, but a high cultural influence boosts defense for all eras.</English>
+		<English>Don't neglect your empire's Culture - Walls and Castles will only work until Gunpowder, but a high Cultural influence boosts defense for all Eras.</English>
 		<French>Ne négligez pas la culture de votre empire. Remparts et châteaux ne sont efficaces que jusqu'à l'arrivée de la poudre à canon, mais une grande influence culturelle améliore les défenses à toutes les époques.</French>
 		<German>Vernachlässigen Sie die Kultur Ihres Reichs nicht! Mauern und Schlösser schützen Sie nur bis zur Erfindung des Schießpulvers. Ein großer kultureller Einfluss stärkt hingegen in allen Epochen Ihre Verteidigung.</German>
 		<Italian>Non trascurare la cultura del tuo impero: mura e castelli dureranno soltanto fino alla scoperta della polvere da sparo, ma una grande influenza culturale aumenterà le difese in tutte le epoche.</Italian>
@@ -794,7 +794,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HINT_17</Tag>
-		<English>Don't neglect cottages! They may start small, but once they mature, you'll be glad you built them.</English>
+		<English>Don't neglect Cottages! They may start small, but once they mature, you'll be glad you built them.</English>
 		<French>Ne négligez pas les cottages ! Ils commencent modestement, mais une fois qu'ils se seront développés, vous ne regretterez pas de les avoir construits !</French>
 		<German>Vernachlässigen Sie Ihre Hütten nicht! Sie sind zwar klein, aber eines Tages werden Sie froh sein, dass Sie sie gebaut haben!</German>
 		<Italian>Non trascurare le villette! Inizialmente sono abbastanza piccole ma, col tempo, sarai contento di averle realizzate.</Italian>
@@ -802,7 +802,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HINT_18</Tag>
-		<English>Take advantage of the opportunity to pillage a cottage improvement. The time required to advance each level of growth for a cottage can't be hurried, and the gold you get for pillaging them is unparalleled.</English>
+		<English>Take advantage of the opportunity to pillage a Cottage Improvement. The time required to advance each level of growth for a Cottage can't be hurried, and the Gold you get for pillaging them is unparalleled.</English>
 		<French>Profitez de la moindre occasion pour piller les cottages ! Il est impossible d'accélérer le développement des cottages et leur pillage rapporte un butin inégalé.</French>
 		<German>Sollten Sie die Chance haben, eine Hütten-Modernisierung zu plündern, nutzen Sie sie! Schließlich sparen Sie sich dadurch eine Menge Zeit für die Modernisierung. Und das erbeutete Gold kann sich auch sehen lassen!</German>
 		<Italian>Sfrutta l'opportunità di saccheggiare una villetta. Il tempo necessario richiesto per avanzare in ciascun livello di crescita di una villetta non può essere accelerato e l'oro che si ottiene saccheggiandola è ineguagliabile.</Italian>
@@ -826,7 +826,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HINT_20</Tag>
-		<English>Don't be afraid to attack with ranged units - archers and longbows may not be the best offensive units, but properly promoted, they can do a respectable job.</English>
+		<English>Don't be afraid to attack with ranged units - Archers and Longbows may not be the best offensive units, but properly promoted, they can do a respectable job.</English>
 		<French>N'hésitez pas à attaquer à distance. Les archers et archers (arcs longs) ne sont pas les meilleures unités de défense, mais ils obtiennent des résultats tout à fait honorables avec une bonne promotion.</French>
 		<German>Nutzen Sie Ihre Fernwaffen! Zugegeben, Bogenschützen und Langbogenschützen sind keine perfekten Offensiveinheiten. Nach einigen klugen Beförderungen machen sie ihre Sache in der Regel aber sehr gut.</German>
 		<Italian>Non avere paura di attaccare con unità che colpiscono da lontano: arcieri e archi lunghi possono non essere le armi migliori per lanciare l'offensiva, ma con qualche promozione sono in grado di farsi rispettare.</Italian>
@@ -834,7 +834,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HINT_21</Tag>
-		<English>The Flanking promotion only works when you attack - so it may help to leave these units a movement point to run away if they withdraw from an attack.</English>
+		<English>The Flanking Promotion only works when you attack - so it may help to leave these units a movement point to run away if they withdraw from an attack.</English>
 		<French>La promotion "contournement" ne fonctionne que lors des attaques. Pensez donc à laisser un point de mouvement à ces unités pour qu'elles puissent battre en retraite si besoin.</French>
 		<German>Die Beförderung "Flanke" nützt Ihnen nur etwas, wenn Sie angreifen. Achten Sie also darauf, dass die entsprechenden Einheiten noch einen Fortbewegungspunkt für einen geordneten Rückzug haben.</German>
 		<Italian>La promozione Attacco laterale funziona solo quando attacchi, perciò assicurati che queste unità abbiano la possibilità di muoversi ancora per poter fuggire da un attacco.</Italian>
@@ -842,7 +842,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HINT_22</Tag>
-		<English>Consider keeping one unit with the Medic promotion in every large stack - the bonus isn't cumulative, but it can make the difference in keeping an advance going.</English>
+		<English>Consider keeping one unit with the Medic Promotion in every large stack - the bonus isn't cumulative, but it can make the difference in keeping an advance going.</English>
 		<French>Conservez toujours une unité bénéficiant de la promotion "Infirmier" dans une grosse pile d'unités. Ce bonus n'est pas cumulatif, mais il peut faire la différence si vous avez besoin de poursuivre une technologie.</French>
 		<German>Weisen Sie jedem größeren Truppenverband eine Einheit mit der Beförderung "Sanitäter" zu. Die Boni werden nicht addiert, können aber über Sieg und Niederlage entscheiden.</German>
 		<Italian>Cerca di tenere sempre un'unità con la promozione Medico in ogni grosso gruppo; questo bonus non è cumulativo, ma può comunque fare la differenza.</Italian>
@@ -858,7 +858,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HINT_24</Tag>
-		<English>Watch for announcements about religions being founded and wonders being completed - this can give you a hint as to how advanced your foes may be.</English>
+		<English>Watch for announcements about Religions being founded and Wonders being completed - this can give you a hint as to how advanced your foes may be.</English>
 		<French>Soyez attentifs aux messages annonçant la fondation de nouvelles religions ou la construction de merveilles. Ils peuvent vous renseigner sur la progression de vos ennemis.</French>
 		<German>Achten Sie auf Informationen über neue Religionen und Wunder. So wissen Sie stets, wie fortschrittlich Ihre Gegner sind.</German>
 		<Italian>Tieni d'occhio gli annunci sulla fondazione di nuove religioni o sul completamento di una Meraviglia: così facendo, potrai farti un'idea dei progressi dei tuoi avversari.</Italian>
@@ -866,7 +866,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HINT_25</Tag>
-		<English>If you choose to have a state religion, work diligently to spread it to all your cities. Most religious civics only work in cities where your state religion is present.</English>
+		<English>If you choose to have a State Religion, work diligently to spread it to all your cities. Most Religious Civics only work in cities where your State Religion is present.</English>
 		<French>Si vous choisissez d'avoir une religion d'état, faites tout ce qui est en votre pouvoir pour qu'elle se propage à toutes vos villes. La plupart des doctrines religieuses ne sont possibles que dans les villes ayant adopté votre religion d'état.</French>
 		<German>Haben Sie eine Staatsreligion, sollten Sie dafür sorgen, dass diese in allen Städten Einzug hält. Überdies funktionieren religiöse Staatsformen nur in Städten mit Staatsreligion.</German>
 		<Italian>Se possiedi una religione ufficiale, assicurati che si diffonda in tutte le tue città. La maggior parte delle forme di governo religiose funzionano solamente nelle città dove è presente la religione ufficiale.</Italian>
@@ -874,7 +874,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HINT_26</Tag>
-		<English>Open Borders agreements are invitations for your missionaries - spread your state religion quickly and take advantage of the espionage benefits! If your religion spreads widely enough, your neighbors may convert to your faith, which can boost relations.</English>
+		<English>Open Borders agreements are invitations for your Missionaries - spread your State Religion quickly and take advantage of the Espionage benefits! If your Religion spreads widely enough, your neighbors may convert to your faith, which can boost Diplomatic Relations.</English>
 		<French>Les accords de libre passage sont des invitations pour vos missionnaires : propagez rapidement votre religion d'état pour profiter des avantages de l'espionnage ! Si votre religion se propage suffisamment, vos voisins se convertiront peut-être à votre foi, ce qui peut améliorer vos relations.</French>
 		<German>Offene Grenzen sind eine Einladung für Ihre Missionare. Verbreiten Sie Ihre Staatsreligion und nutzen Sie Ihre neu gewonnenen Spionagemöglichkeiten. Breitet sich Ihre Religion weit genug aus, nehmen Ihre Nachbarn diese möglicherweise an und stärken so die Beziehungen zu Ihrer Zivilisation.</German>
 		<Italian>Il diritto di passaggio è un invito per i tuoi missionari: diffondi la religione ufficiale rapidamente e trai vantaggio dallo spionaggio!</Italian>
@@ -882,7 +882,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HINT_27</Tag>
-		<English>Make sure you need every building your city creates. Cities bringing in no commerce can sometimes skip libraries, just as a city that will never see battle can skip walls and a castle.</English>
+		<English>Make sure you need every building your city creates. Cities bringing in no Commerce can sometimes skip Libraries, just as a city that will never see battle can skip Walls and a Castle.</English>
 		<French>Ne construisez que les bâtiments dont vos villes ont besoin. Celles qui ne produisent pas de commerce peuvent se passer de bibliothèque, celles qui ne verront jamais le combat n'ont besoin ni de remparts ni de châteaux.</French>
 		<German>Achten Sie darauf, dass Sie nur Gebäude errichten, die Ihre Stadt auch wirklich braucht. Städte, die nie Schauplatz eines Krieges sein werden, brauchen beispielsweise keine Mauern und Schlösser.</German>
 		<Italian>Assicurati di aver davvero bisogno degli edifici che costruisci: le città che non generano commercio possono fare a meno delle biblioteche, così come una città che non viene mai attaccata può rinunciare a mura e castello.</Italian>
@@ -890,7 +890,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HINT_28</Tag>
-		<English>Remember that you can build only two national wonders per city. Plan ahead: don't build both the Heroic and National Epics where you will one day want an Ironworks!</English>
+		<English>Remember that you can build only two National Wonders per city. Plan ahead: don't build both the Heroic and National Epics where you will one day want an Ironworks!</English>
 		<French>N'oubliez pas que le nombre de merveilles nationales est limité à 2 par ville. Planifiez votre production : ne construisez pas l'Epopée héroïque et l'Epopée nationale dans une ville où vous aurez un jour besoin d'une usine sidérurgique !</French>
 		<German>Denken Sie daran, dass Sie in jeder Stadt nur zwei Nationale Wunder bauen können. Planen Sie also voraus! Bauen Sie kein Helden- und Nationalepos, wenn Sie eines Tages die Eisenverarbeitung in einer Stadt etablieren möchten!</German>
 		<Italian>Ricorda che puoi costruire solamente due Meraviglie Nazionali per città: pianifica, non realizzare un Poema Epico o Poema Patriottico nel luogo in cui un giorno vorrai costruire una Ferriera!</Italian>
@@ -898,7 +898,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HINT_29</Tag>
-		<English>When facing a tough defender with weak units, bring overwhelming numbers. If your target survives the battle, it will have gained experience and then it will become even more dangerous!</English>
+		<English>When facing a tough defender with weak units, bring overwhelming numbers. If your target survives the battle, it will have gained Experience and then it will become even more dangerous!</English>
 		<French>Opposez de très nombreuses unités à un défenseur coriace disposant d'unités faibles. Si votre ennemi en réchappe, il aura gagné de l'expérience et sera alors d'autant plus dangereux !</French>
 		<German>Kämpfen Sie mit schwachen Einheiten gegen einen mächtigen Feind, ist die zahlenmäßige Überlegenheit Ihre einzige Chance. Sollte Ihr Gegner die Schlacht überleben, gewinnt er an Erfahrung und wird noch gefährlicher!</German>
 		<Italian>Quando affronti un avversario ostico con vecchie unità, portane un numero esagerato. Se il tuo bersaglio sopravvive alla battaglia, conquista più esperienza e diventa più pericoloso!</Italian>
@@ -906,7 +906,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HINT_3</Tag>
-		<English>A good time to check for trading possibilities with another civilization is right after researching a new technology - shop around and see what you can get for it before others beat you to it!</English>
+		<English>A good time to check for trading possibilities with another civilization is right after Researching a new Technology - shop around and see what you can get for it before others beat you to it!</English>
 		<French>Lorsque vous découvrez une nouvelle technologie, il est toujours bon d'examiner les possibilités d'échanges commerciaux avec les autres civilisations. Voyez ce qu'elles vous proposent et emparez-vous-en avant les autres !</French>
 		<German>Haben Sie eine neue Technologie erforscht, sollten Sie sich umgehend über die Handelsmöglichkeiten mit anderen Zivilisationen informieren. Sehen Sie sich um und finden Sie heraus, was Sie für sich herausschlagen können, bevor Ihnen jemand zuvorkommt.</German>
 		<Italian>Il momento giusto per cercare di commerciare con altre civiltà è quando si scopre una nuova tecnologia. Guardati attorno e vedi cosa puoi fare prima che gli altri te la facciano sotto al naso!</Italian>
@@ -922,7 +922,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HINT_31</Tag>
-		<English>Oil-based navies are a huge step up from coal-powered ironclads. If you are the first to build Destroyers, use them to prevent rivals from obtaining sea-based oil resources; protect your advantage as long as possible!</English>
+		<English>Oil-based navies are a huge step up from coal-powered Ironclads. If you are the first to build Destroyers, use them to prevent rivals from obtaining sea-based oil resources; protect your advantage as long as possible!</English>
 		<French>Les navires modernes fonctionnant avec du pétrole sont un progrès considérable par rapport aux cuirassés à vapeur. Si votre civilisation est la première à construire des destroyers, utilisez-les pour empêcher vos ennemis de s'emparer des ressources pétrolières en mer afin de profiter de votre avantage le plus longtemps possible !</French>
 		<German>Schiffe mit Dieselantrieb sind deutlich effektiver als kohlebetriebene Panzerschiffe. Haben Sie als erste Zivilisation Zerstörer, sollten Sie mit diesen Ölquellen verteidigen, um Ihren Vorteil möglichst lange zu wahren!</German>
 		<Italian>Le flotte navali a petrolio sono un enorme passo avanti rispetto alle corazzate alimentate a carbone. Se sarai il primo a costruire i cacciatorpedinieri, usali per impedire ai rivali di controllare risorse petrolifere marine. Proteggi i tuoi vantaggi il più a lungo possibile!</Italian>
@@ -930,7 +930,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HINT_32</Tag>
-		<English>A city's population growth is halted while training settlers and workers. It may be better in some cases to let a city grow before training these units.</English>
+		<English>A city's population growth is halted while training Settlers and Workers. It may be better in some cases to let a city grow before training these units.</English>
 		<French>La croissance démographique d'une ville est suspendue lorsqu'elle forme des colons ou des ouvriers. Dans certains cas, il peut être préférable de laisser croître la population d'une ville avant d'y produire ce type d'unités.</French>
 		<German>Während der Ausbildung von Siedlern und Bautrupps wächst Ihre Bevölkerung nicht weiter. Lassen Sie Ihre Städte also wachsen, bevor Sie die genannten Einheiten ausbilden.</German>
 		<Italian>Quando si addestrano coloni e lavoratori, la crescita di una città si interrompe. In alcuni casi è meglio attendere la crescita di una città prima di addestrare queste unità.</Italian>
@@ -938,7 +938,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HINT_33</Tag>
-		<English>Wars are rarely won in a day. If you lack the force to capture enemy cities, consider pillaging the countryside instead. You may lure your opponent's units out of their strongholds. Even if not, a war of attrition may lead to economic advantage, and ultimately to your victory.</English>
+		<English>Wars are rarely won in a day. If you lack the force to capture enemy cities, consider Pillaging the countryside instead. You may lure your opponent's units out of their strongholds. Even if not, a war of attrition may lead to economic advantage, and ultimately to your victory.</English>
 		<French>Les guerres se gagnent rarement en un jour. Si vous ne disposez pas des forces nécessaires pour capturer des villes ennemies, pillez les terres alentour. Vous pourriez alors attirer les unités ennemies hors de leur forteresse. Même si ce n'est pas le cas, une guerre d'usure peut vous donner un avantage économique et mène parfois à la victoire.</French>
 		<German>Kriege werden nur selten an einem Tag gewonnen. Sind Sie nicht in der Lage, feindliche Städte zu erobern, sollten Sie stattdessen das Umland plündern. Vielleicht können Sie Ihre Gegner auf diese Weise aus ihren Festungen locken. Abgesehen davon führt ein Zermürbungskrieg oft ebenfalls zum Sieg.</German>
 		<Italian>Raramente le guerre si vincono in una giornata. Se non hai la forza per catturare le città nemiche, prendi in considerazione l'ipotesi di saccheggiare i territori circostanti. Così facendo, potresti attirare i nemici fuori dalle loro fortezze; in caso contrario, una guerra di logoramento potrebbe portare un vantaggio economico e, alla fine, la vittoria.</Italian>
@@ -962,7 +962,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HINT_36</Tag>
-		<English>Grains, Livestock, and Seafood not only provide resources, but also rich yields to the local city. Cities planted near two or more of these food sources will grow quickly!</English>
+		<English>Grains, Livestock, and Seafood not only provide resources, but also rich yields to the local city. Cities planted near two or more of these Food sources will grow quickly!</English>
 		<French>Les céréales, le bétail et les fruits de mer fournissent non seulement des ressources mais permettent également d'enrichir la ville qui les produit. Les villes fondées près de deux telles sources de nourriture ou plus se développent rapidement !</French>
 		<German>Getreide, Vieh und Meeresfrüchte sind wichtige Ressourcen, die die Erträge einer Stadt steigern. Städte mit direktem Zugriff auf zwei oder mehr Nahrungsquellen wachsen schneller!</German>
 		<Italian>Grano, bestiame e frutti di mare forniscono risorse e ricchezza alle città vicine. Le città vicine ad almeno due di queste risorse cresceranno rapidamente!</Italian>
@@ -970,7 +970,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HINT_37</Tag>
-		<English>Scout your region! Discover what types of resources you have nearby and plan your research paths to enable you to hook up these resources sooner rather than later.</English>
+		<English>Scout your region! Discover what types of resources you have nearby and plan your Research paths to enable you to hook up these resources sooner rather than later.</English>
 		<French>Explorez votre région ! Découvrez les types de ressources que recèlent les environs et prévoyez vos recherches afin de pouvoir les exploiter au plus vite !</French>
 		<German>Erforschen Sie Ihre Umgebung! Informieren Sie sich über Ressourcen in Ihrer Nähe und planen Sie Ihre Forschung, um die Ressourcen möglichst schnell abbauen zu können.</German>
 		<Italian>Esplora la regione nella quale ti trovi! Scopri quale tipo di risorse hai vicine e pianifica la ricerca per arrivare a sfruttare velocemente queste risorse.</Italian>
@@ -978,7 +978,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HINT_38</Tag>
-		<English>If your enemy is too strong to tackle in the field, hide behind your city walls and buy time. Build unit types and choose promotions that will best counter the forces aligned against you.</English>
+		<English>If your enemy is too strong to tackle in the field, hide behind your city Walls and buy time. Build unit types and choose Promotions that will best counter the forces aligned against you.</English>
 		<French>Si vous n'êtes pas de taille à affronter votre ennemi sur le terrain, retranchez-vous derrière les murs de votre ville et gagnez du temps. Produisez des unités et choisissez des promotions qui vous permettront de contrer au mieux votre adversaire.</French>
 		<German>Ist ein Gegner für einen offenen Angriff zu stark, ziehen Sie sich hinter Ihre Stadtmauern zurück, um Zeit zu gewinnen. Bauen Sie nun Einheiten und wählen Sie Beförderungen, die Sie brauchen, um den Feind in die Knie zu zwingen.</German>
 		<Italian>Se il tuo nemico è troppo forte da affrontare sul campo di battaglia, nasconditi dietro le mura delle tue città e prendi tempo. Costruisci unità e scegli le promozioni migliori per fronteggiare le forze nemiche.</Italian>
@@ -986,7 +986,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HINT_39</Tag>
-		<English>Bigger is not always better. Overexpansion can stifle your economy and your research, even while it adds to your population and production.</English>
+		<English>Bigger is not always better. Overexpansion can stifle your economy and your Research, even while it adds to your Population and Production.</English>
 		<French>Grandir démesurément n'est pas la meilleure des solutions. Une expansion trop importante peut étouffer votre économie et vos recherches tout en augmentant votre population et votre production.</French>
 		<German>Die Größe Ihres Reichs ist nicht entscheidend! Expandieren Sie zu stark, geraten Wirtschaft und Forschung ins Stocken. Gleichzeitig werden allerdings Bevölkerung und Produktion größer.</German>
 		<Italian>Essere troppo grandi non sempre è un bene. L'espansione esagerata può soffocare la tua economia e la ricerca, malgrado aumenti la popolazione e la produzione.</Italian>
@@ -1010,7 +1010,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HINT_41</Tag>
-		<English>Wonders of the World not only provide unique benefits, they also inspire your populace. More great people will appear in cities that build ancient wonders or multiple great wonders.</English>
+		<English>Wonders of the World not only provide unique benefits, they also inspire your populace. More great people will appear in cities that build ancient Wonders or multiple Great Wonders.</English>
 		<French>Les merveilles vous apportent non seulement des avantages uniques, mais inspirent également votre population. Plus de personnages illustres feront leur apparition dans les villes hébergeant des merveilles anciennes ou multiples.</French>
 		<German>Weltwunder haben einzigartige Vorteile und inspirieren Ihre Untertanen. Aus diesem Grund bringen Städte, in denen Sie Weltwunder oder Nationale Wunder errichten, mehr Große Persönlichkeiten hervor.</German>
 		<Italian>Le Meraviglie del mondo non solo forniscono dei benefici molto utili, ma sono anche una fonte di ispirazione per la tua popolazione. Nelle città in cui si trovano delle meraviglie mondiali è più facile che appaiano dei gran personaggi.</Italian>
@@ -1018,7 +1018,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HINT_42</Tag>
-		<English>There are many ways to make your people happy: with religion, with luxurious resources, with city improvements, with civics, with culture rate. If you lack opportunities in some areas, focus your attention on the others. Avoid having Angry citizens whenever possible!</English>
+		<English>There are many ways to make your people Happy: with Religion, with luxurious Resources, with city Improvements, with Civics, and with Culture rate. If you lack opportunities in some areas, focus your attention on the others. Avoid having Angry citizens whenever possible!</English>
 		<French>Il existe de nombreuses façons de faire le bonheur de votre peuple : la religion, des ressources luxueuses, des aménagements urbains, différentes doctrines, un niveau de culture élevé. Si vous n'avez pas accès à certaines de ces possibilités, concentrez-vous sur les autres. Evitez toujours de mécontenter vos citoyens !</French>
 		<German>Es gibt verschiedene Möglichkeiten, Ihr Volk glücklich zu machen: Religionen, Luxusgüter, Modernisierungen, bestimmte Staatsformen und ein hoher Kulturwert steigern die Zufriedenheit Ihrer Bevölkerung. Egal, was Sie tun: Vermeiden Sie es, Ihre Untertanen zu verärgern!</German>
 		<Italian>Ci sono molti modi per rendere felice la tua gente: con la religione, le risorse di lusso, con i miglioramenti delle città, con nuove forme di governo o con la cultura. Se non puoi puntare su alcune di queste opzioni, concentra la tua attenzione sulle altre. Quando possibile, cerca di evitare la presenza di cittadini arrabbiati!</Italian>
@@ -1042,7 +1042,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HINT_45</Tag>
-		<English>If you are having trouble spreading a Corporation, make sure the city you are spreading it to has the appropriate resources and that your treasury has enough gold to fund the expansion. Keep in mind it costs significantly more to spread a Corporation to a foreign city than to your own. </English>
+		<English>If you are having trouble spreading a Corporation, make sure the city you are spreading it to has the appropriate resources and that your treasury has enough Gold to fund the expansion. Keep in mind it costs significantly more to spread a Corporation to a foreign city than to your own. </English>
 		<French>Si vous n'arrivez pas à développer une société commerciale, assurez-vous que la ville dans laquelle vous voulez l'implanter dispose des ressources nécessaires et que vous avez assez d'or dans votre trésor pour financer son développement. N'oubliez pas que cela coûte bien plus cher d'implanter une société commerciale dans une ville étrangère que de l'implanter dans l'une des vôtres.</French>
 		<German>Wenn Sie eine Kapitalgesellschaft expandieren wollen, stellen Sie sicher, dass die Stadt, in der sie angesiedelt werden soll, die passenden Ressourcen besitzt und hinreichend Gold für die Finanzierung der Expansion in Ihrer Schatzkammer bereitsteht. Beachten Sie, dass die Etablierung einer Kapitalgesellschaft in einer fremden Stadt deutlich teurer ist als die Ansiedelung in einer eigenen Stadt. </German>
 		<Italian>Se hai problemi a espandere la Corporazione, assicurati che la città verso la quale vuoi diffonderla sia dotata delle risorse appropriate e che tu possegga abbastanza oro per finanziare l'operazione. Tieni presente che diffondere la Corporazione in una città straniera, costa molto di più che farlo in una città propria. </Italian>
@@ -1074,7 +1074,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HINT_49</Tag>
-		<English>Remember to assign your Espionage points on the Espionage Screen [CTRL + E]. Accumulate enough EPs against an opponent and you will be able to see what they are researching, what's happening in and around their cities and perform Espionage Missions against them.</English>
+		<English>Remember to assign your Espionage points on the Espionage Screen [CTRL + E]. Accumulate enough EPs against an opponent and you will be able to see what they are Researching, what's happening in and around their cities and perform Espionage Missions against them.</English>
 		<French>Pensez à attribuer vos points d'espionnage dans l'écran d'espionnage [CTRL + E]. Accumulez assez de PE contre un adversaire et vous pourrez savoir ce qu'il recherche, ce qui se passe dans ses villes et autour, et lancer des missions d'espionnage contre lui.</French>
 		<German>Setzen Sie Ihre Spionagepunkte im Spionagebildschirm [STRG + E] ein. Wenn Sie genügend SP gegen eine feindliche Zivilisation ansammeln, können Sie in Erfahrung bringen, was dort gegenwärtig erforscht wird, was in und um deren Städte passiert, sowie gegen diese Nation gerichtete Spionagemissionen ausführen.</German>
 		<Italian>Ricorda di assegnare i tuoi punti spionaggio dalla schermata dello spionaggio[CTRL + E]. Accumula abbastanza PS contro un avversario e sarai in grado di visualizzare le ricerche in corso, cosa succede nelle loro città ed eseguire delle missioni di spionaggio.</Italian>
@@ -1082,7 +1082,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HINT_5</Tag>
-		<English>New civics are not always better civics! Don't switch automatically. Weigh your options; consider your needs and priorities.</English>
+		<English>New Civics are not always better Civics! Don't switch automatically. Weigh your options; consider your needs and priorities.</English>
 		<French>Une nouvelle doctrine n'est pas toujours meilleure ! N'en changez pas automatiquement ! Prenez le temps de la réflexion et évaluez vos besoins et priorités.</French>
 		<German>Neue Staatsformen sind nicht zwingend besser. Ändern Sie die Staatsform erst, wenn Sie die Vor- und Nachteile eines Wechsels gegeneinander abgewogen haben.</German>
 		<Italian>Una nuova forma di governo non è sempre e necessariamente la migliore! Valuta e considera bene bisogni e priorità del tuo impero.</Italian>
@@ -1098,7 +1098,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HINT_51</Tag>
-		<English>Good things come to spies who wait. Leaving a spy on a tile will reduce the costs of all Espionage Missions performed against objects in that tile. So leaving a Spy in an enemy city will make your Missions in that city significantly cheaper.</English>
+		<English>Good things come to Spies who wait. Leaving a Spy on a tile will reduce the costs of all Espionage Missions performed against objects in that tile. So leaving a Spy in an enemy city will make your Missions in that city significantly cheaper.</English>
 		<French>Un espion patient est toujours récompensé. Si vous laissez un espion sur une case, cela réduira le coût de toutes les missions d'espionnage lancées contre les éléments dans cette case. Si vous laissez un espion dans une ville étrangère, vos missions dans cette ville vous coûteront donc bien moins cher.</French>
 		<German>Gut Ding will Weile haben - das gilt auch für Spione. Wenn Sie einen Spion auf einem Geländefeld belassen, reduziert dies die Kosten für alle Spionagemissionen, die Sie gegen Objekte auf diesem Geländefeld ausführen. Dementsprechend werden Missionen, die Sie in einer feindlichen Stadt durchführen, ebenfalls erheblich preiswerter, wenn Sie Ihren Spion dort stationiert lassen.</German>
 		<Italian>La spia migliore è quella che sa aspettare. Lasciando una spia su una casella riduce i costi di tutte le missioni di spionaggio verso quella casella. Perciò, lasciando una spia in una città nemica, le missioni verso di questa costeranno meno.</Italian>
@@ -1114,7 +1114,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HINT_53</Tag>
-		<English>When on the defense, be sure to set your Fighters and Jet Fighters to the "Intercept" mission when they're not running missions. They will defend the skies from opposing Air Units, earning them valuable experience points.</English>
+		<English>When on the defense, be sure to set your Fighters and Jet Fighters to the "Intercept" mission when they're not running missions. They will defend the skies from opposing Air Units, earning them valuable Experience points.</English>
 		<French>Quand vous vous défendez, pensez à confier une mission d'interception à vos chasseurs et vos chasseurs à réaction, si vous n'avez aucune autre mission à leur confier. Ils chasseront les unités aériennes ennemies dans le ciel et gagneront de précieux points d'expérience.</French>
 		<German>Im Verteidigungsfall sollten Sie Ihre Jäger und Düsenjäger anweisen, Abfangmissionen durchzuführen, sofern keine anderen Missionen anstehen. Daraufhin werden sie den Luftraum gegen feindliche Lufteinheiten verteidigen und auf diese Weise gleichzeitig wertvolle Erfahrungspunkte sammeln.</German>
 		<Italian>Quando difendi, assicurati che i tuoi caccia e jet da combattimento siano impostati su "Intercetta" quando non hanno altre missioni assegnate. Così facendo, difenderanno i cieli dalle unità aeree rivali, conquistando dei punti esperienza importanti.</Italian>
@@ -1122,7 +1122,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HINT_54</Tag>
-		<English>If you're looking to reduce your city maintenance, consider turning your cities on distant continents into Colonies. To form a colony, go to the Domestic Advisor screen and select the "Colony" button.</English>
+		<English>If you're looking to reduce your City Maintenance, consider turning your cities on distant continents into Colonies. To form a colony, go to the Domestic Advisor screen and select the "Colony" button.</English>
 		<French>Si vous cherchez à réduire le coût d'entretien de vos villes, pensez à transformer en colonies vos villes situées sur des continents lointains. Pour former une colonie, ouvrez l'écran du conseiller aux affaires intérieures et cliquez sur le bouton "Colonie".</French>
 		<German>Wenn Sie Ihre Unterhaltskosten für Städte senken wollen, können Sie beispielsweise Ihre eigenen Städte auf entfernten Kontinenten in Kolonien umwandeln. Öffnen Sie dazu den Inlandsberater und klicken Sie auf den Kolonie-Button.</German>
 		<Italian>Se stai cercando di ridurre i costi di mantenimento della tua città, considera di trasformare quelle lontane in Colonie. Per formare una Colonia, vai allo schermo della lista delle città e seleziona la voce "Colonia".</Italian>
@@ -1130,7 +1130,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HINT_56</Tag>
-		<English>Intercontinental trade routes now yield more gold than normal trade routes. Build a Customs House to further cash in.</English>
+		<English>Intercontinental Trade Routes now yield more Gold than normal Trade Routes. Build a Customs House to further cash in.</English>
 		<French>Les routes commerciales intercontinentales rapportent désormais plus d'or que les routes commerciales normales. Construisez un poste de douane pour augmenter encore vos recettes.</French>
 		<German>Interkontinentale Handelswege erwirtschaften nun mehr Gold als normale Handelswege. Errichten Sie für zusätzliche Einnahmen ein Zollamt.</German>
 		<Italian>Le rotte commerciali intercontinentali ora producono più oro di quelle normali. Costruisci delle dogane per aumentare gli introiti.</Italian>
@@ -1138,7 +1138,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HINT_57</Tag>
-		<English>Naval Units performing "Blockade" Missions prevent all enemy trade from passing within their blockading range. Making sure an enemy city is within that range is a sure-fire way to stop enemy trade routes.</English>
+		<English>Naval Units performing "Blockade" Missions prevent all enemy trade from passing within their blockading range. Making sure an enemy city is within that range is a sure-fire way to stop enemy Trade Routes.</English>
 		<French>La Mission 'Blocus' des unités navales empêche tout le commerce ennemi de passer dans la portée du blocus. Placez donc vos unités en vous assurant que la ville ennemie est dans ce périmètre est un moyen sûr de bloquer les routes commerciales ennemies.</French>
 		<German>Tipp... Die Postierung eigener Marineeinheiten in Reichweite einer gegnerischen Küstenstadt und die Errichtung einer Seeblockade ist eine zuverlässige Methode, gegnerischen Handel zu verhindern.</German>
 		<Italian>Le unità navali che compiono la missione "Embargo" impediscono a tutto il commercio nemico di attraversare l'area bloccata. Assicurati che nel raggio d'azione ricada una città nemica per bloccare le rotte commerciali del nemico.</Italian>
@@ -1164,7 +1164,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HINT_6</Tag>
-		<English>Balance your research. Spending too much time on one type of research leads to long research times. Neglecting cheaper, older technologies can cost you.</English>
+		<English>Balance your Research. Spending too much time on one type of Research leads to long Research times. Neglecting cheaper, older Technologies can cost you.</English>
 		<French>Sachez équilibrer vos recherches. Passer trop de temps sur un type de recherche entraîne des durées d'investigation très longues. Ne négligez pas les technologies plus anciennes et moins coûteuses car cela pourrait vous handicaper plus tard.</French>
 		<German>Achten Sie auf eine ausgewogene Forschung. Investieren Sie zu viel Zeit in ein bestimmtes Forschungsprojekt, vernachlässigen Sie unweigerlich die Erforschung preiswerterer oder älterer Technologien.</German>
 		<Italian>Bilancia la tua ricerca: passando troppo tempo su un tipo di ricerca, si aumentano i tempi di sviluppo precludendo nuove scoperte alla tua civiltà.</Italian>
@@ -1172,7 +1172,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HINT_60</Tag>
-		<English>A unit led by a Warlord can receive the Medic III promotion to give you an advantage when pushing into enemy territory.</English>
+		<English>A unit led by a Warlord can receive the Medic III Promotion to give you an advantage when pushing into enemy territory.</English>
 		<French>Une unité menée par un chef de guerre peut recevoir la promotion Infirmier III, ce qui peut vous donner un avantage quand vous attaquez en territoire ennemi.</French>
 		<German>Eine von einem Kriegsherrn angeführte Einheit kann die "Sanitäter III"-Beförderung erhalten und Ihnen damit einen Vorteil beim Vorstoß in feindliches Territorium verschaffen.</German>
 		<Italian>Un'unità guidata da un Condottiero riceve la promozione Medico III per darti più vantaggio mentre avanzi in territorio nemico.</Italian>
@@ -1188,7 +1188,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HINT_62</Tag>
-		<English>Use the Submarine's stealth along with its ability to carry conventional and tactical nuclear missiles to launch a devastating opening attack on another landmass.</English>
+		<English>Use the Submarine's stealth along with its ability to carry conventional and tactical Nuclear Missiles to launch a devastating opening attack on another landmass.</English>
 		<French>Tirez parti de la furtivité du sous-marin et de sa capacité à transporter des missiles conventionnels et des missiles nucléaires pour lancer une attaque dévastatrice contre un autre continent.</French>
 		<German>Nutzen Sie die Tarnung Ihrer U-Boote und ihre Fähigkeit, konventionelle und taktische Atomraketen zu befördern, um vernichtende Startoffensiven auf gegnerische Landmassen auszuführen.</German>
 		<Italian>Usa l'invisibilità del sottomarino oltre all'abilità di trasportare missili tattici e nucleari per lanciarli e scatenare l'inferno sulla terraferma.</Italian>
@@ -1196,7 +1196,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HINT_63</Tag>
-		<English>Keep some spies in your borders for counter-espionage. Enemy spies can wreak havoc!</English>
+		<English>Keep some Spies in your borders for counter-Espionage. Enemy Spies can wreak havoc!</English>
 		<French>Gardez quelques espions à l'intérieur de vos frontières pour le contre-espionnage. Les espions ennemis peuvent faire des ravages !</French>
 		<German>Behalten Sie zum Zweck der Gegenspionage einige Spione innerhalb Ihrer Grenzen. Feindliche Spione können verheerende Schäden anrichten!</German>
 		<Italian>Tieni alcune spie all'interno dei tuoi confini per effettuare il controspionaggio. Le spie nemiche possono scatenare il caos!</Italian>
@@ -1204,7 +1204,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HINT_64</Tag>
-		<English>Short on gold? Send your spies to steal from your neighbors!</English>
+		<English>Short on Gold? Send your Spies to steal from your neighbors!</English>
 		<French>Vous manquez d'or ? Envoyez vos espions en voler à vos voisins !</French>
 		<German>Knapp bei Kasse? Dann senden Sie Ihre Spione aus, um die benachbarten Zivilisationen zu bestehlen!</German>
 		<Italian>Hai pochi soldi? Le tue spie possono rubare oro ai tuoi vicini!</Italian>
@@ -1220,7 +1220,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HINT_66</Tag>
-		<English>To build a Corporation Headquarters building, you need a specific type of Great Person. Check the Civilopedia for the type required by each Corporation so you can assign your specialists accordingly.</English>
+		<English>To build a Corporation Headquarters building, you need a specific type of Great Person. Check the Civilopedia for the type required by each Corporation so you can assign your Specialists accordingly.</English>
 		<French>Pour construire le bâtiment abritant le siège de votre société commerciale, vous devez disposer d'un type de personnage illustre bien précis. Consultez la Civilopédie pour connaître le type de personnage associé à votre société.</French>
 		<German>Um einen Unternehmenssitz zu errichten, benötigen Sie eine spezielle Große Persönlichkeit. Schlagen Sie in der Zivilopädie nach, welche Art Sie für die jeweilige Kapitalgesellschaft benötigen, damit Sie Ihre Spezialisten entsprechend zuweisen können.</German>
 		<Italian>Per costruire un quartier generale della Corporazione avrai bisogno di un Grande personaggio specifico. Controlla sulla Civilopedia il tipo richiesto da ogni Corporazione, in modo da poter assegnare gli specialisti nel migliore dei modi.</Italian>
@@ -1228,7 +1228,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HINT_67</Tag>
-		<English>If you choose to found a Corporation, remember that even though the Headquarters will enjoy extra income, each city hosting the corporation will suffer increased maintenance costs. Build Courthouses in all of your Corporation cities and Banks in your Headquarters, otherwise the Corporation may actually run at a net loss.</English>
+		<English>If you choose to found a Corporation, remember that even though the Headquarters will enjoy extra income, each city hosting the Corporation will suffer increased maintenance costs. Build Courthouses in all of your Corporation cities and Banks in your Headquarters, otherwise the Corporation may actually run at a net loss.</English>
 		<French>Si vous choisissez de fonder une société commerciale, sachez que même si le siège social bénéficiera de revenus supplémentaires, chaque ville abritant cette société subira une hausse de ses coûts d'entretien. Construisez des tribunaux dans toutes ces villes et des banques près de vos sièges sociaux, sous peine de subir une banqueroute.</French>
 		<German>Wenn Sie eine Kapitalgesellschaft gründen wollen, achten Sie darauf, dass der Unternehmenssitz zwar zusätzliche Einnahmen bringt, die Unterhaltskosten für Städte mit Kapitalgesellschaften jedoch höher sind. Errichten Sie Gerichtsgebäude in allen Ihren Städten mit Kapitalgesellschaften und Banken in Ihren Unternehmenssitzen, sonst könnte es sein, dass die Kapitalgesellschaft insgesamt Verluste einfährt.</German>
 		<Italian>Se decidi di fondare una Corporazione, ricorda che sebbene i quartieri generali beneficeranno di rendite extra, ogni città che ospita una corporazione vedrà aumentare i suoi costi di mantenimento. Costruisci Palazzi di giustizia nelle città con le Corporazioni e Banche nei quartieri generali, altrimenti la Corporazione potrebbe andare in passivo.</Italian>
@@ -1244,7 +1244,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HINT_69</Tag>
-		<English>You may be wise to keep some reserve gold in your treasury. You never know when your savings may help mitigate the effects of a disastrous event or grant you access to additional opportunities when a positive event rolls around.</English>
+		<English>You may be wise to keep some reserve Gold in your treasury. You never know when your savings may help mitigate the effects of a disastrous event or grant you access to additional opportunities when a positive event rolls around.</English>
 		<French>Faites en sorte de ne pas dilapider votre trésor. Vos économies pourraient un jour vous aider à atténuer les effets d'un évènement catastrophique ou vous donner accès à de nouvelles opportunités si un évènement positif devait survenir .</French>
 		<German>Es wäre klug, ein paar Goldreserven in der Schatzkammer zu belassen. Man weiß nie, wann das Ersparte dabei helfen könnte, die Auswirkungen eines verheerenden Ereignisses zu mildern, oder Ihnen zusätzliche Möglichkeiten bei einem positiven Ereignis verschafft.</German>
 		<Italian>Potrebbe essere saggio tenere una riserva d'oro nel tuo tesoro. Non si può mai sapere quando potrebbe rendersi necessario mitigare gli effetti di un evento catastrofico, o quando una serie positiva di eventi potrebbe permetterti di accedere ad altre opportunità.</Italian>
@@ -1252,7 +1252,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HINT_7</Tag>
-		<English>Units cost money in maintenance - don't use fifty when fifteen will do.</English>
+		<English>Units cost money in Maintenance - don't use fifty when fifteen will do.</English>
 		<French>L'entretien des unités n'est pas gratuit : n'en utilisez pas 50 là où 15 suffiraient !</French>
 		<German>Der Unterhalt Ihrer Einheiten kostet Geld. Ziehen Sie also nicht mit 50 Einheiten in die Schlacht, wenn 15 ausreichen.</German>
 		<Italian>Le unità hanno un costo di mantenimento: cerca sempre di usare il numero giusto di unità.</Italian>
@@ -1284,7 +1284,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HINT_73</Tag>
-		<English>To found a Corporation, you must have the correct type of Great Person, have researched the appropriate technologies and build it in a city with one or more of the resources that the Corporation demands. See the "Corporations" entry under the "Beyond the Sword Concepts" section for more details.</English>
+		<English>To found a Corporation, you must have the correct type of Great Person, have researched the appropriate Technologies and build it in a city with one or more of the Resources that the Corporation demands. See the "Corporations" entry under the "Beyond the Sword Concepts" section for more details.</English>
 		<French>Pour fonder une société commerciale, vous devez disposer du bon type de personnages illustres, avoir recherché les technologies appropriées, et la construire dans une ville disposant d'au moins une des ressources dont elle a besoin. Consultez l'entrée "Sociétés commerciales" dans la rubrique "Concepts de Beyond the Sword" pour en savoir plus.</French>
 		<German>Tipp... Zur Gründung einer Kapitalgesellschaft ist neben den technologischen Voraussetzungen eine entsprechende Große Persönlichkeit erforderlich, die den Hauptsitz der Kapitalgesellschaft in einer Stadt mit den erforderlichen Ressourcen gründet. Mehr dazu findet sich in der Civilopedia unter "Beyond the Sword-Konzepte - Kapitalgesellschaften".</German>
 		<Italian>Per fondare una corporazione devi avere il giusto tipo di Grande Personaggio, aver ricercato le tecnologie giuste e devi costruirla in una città con una o più delle risorse necessarie alla corporazione stessa. Consulta la voce "Corporazioni" nella sezione "Nozioni di Beyond the Sword" per ulteriori dettagli.</Italian>
@@ -1304,7 +1304,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HINT_9</Tag>
-		<English>Not every city can occupy an ideal location. Some cities can be placed to acquire resources or make use of marginal terrain. Keep an eye on your cities' maintenance costs, so that you do not expand too quickly only to stifle your economy.</English>
+		<English>Not every city can occupy an ideal location. Some cities can be placed to acquire resources or make use of marginal terrain. Keep an eye on your cities' Maintenance costs, so that you do not expand too quickly only to stifle your economy.</English>
 		<French>Toutes les villes ne peuvent pas être fondées à des emplacements parfaits. Certaines peuvent être placées stratégiquement pour exploiter des ressources ou occuper des terrains secondaires. Gardez toujours un oeil sur les coûts d'entretien de vos villes afin de ne pas croître trop rapidement au risque d'étouffer votre économie.</French>
 		<German>Sie können nicht alle Städte an idealen Standorten gründen. Platzieren Sie einige Städte in der Nähe von Rohstoffquellen oder in Randgebieten. Behalten Sie außerdem Ihre Kosten im Auge, da ein allzu schnelles Wachstum Ihre Wirtschaft schwächt.</German>
 		<Italian>Non tutte le città possono sorgere in un luogo ideale; alcune sono necessarie all'acquisizione di risorse e possono contare su poco territorio da sfruttare. Tieni sotto controllo i costi di mantenimento delle tue città, in modo da non espanderti troppo rapidamente e soffocare così la tua economia.</Italian>
@@ -1869,7 +1869,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_REVDCM_HINT_10</Tag>
-		<English>*Revolutions Mod Hint*: Spend a surplus wisely. If you waste it, you may not have the money to pay bribes or buy civic infrastructure vital to keep the people placid.</English>
+		<English>*Revolutions Mod Hint*: Spend a Surplus wisely. If you waste it, you may not have the money to pay Bribes or buy Civic infrastructure vital to keep the people placid.</English>
 		<French>*Conseil Mod Revolution*: Utilisez votre trésor intelligemment. Si vous le gaspillez, vous pourriez être à cours d'or pour corrompre ou payer des infrastructures vitales pour garder le peuple passif.</French>
 		<Italian>*Suggerimento del MOD 'Revolutions'*: Investi saggiamente i tuoi guadagni. Se li sprechi, resterai senza il denaro per corrompere o per mantenere le infrastrutture essenziali a mantenere tranquillo il popolo.</Italian>
 		<Spanish>*Consejo de Revolution*: Gasta tu tesoro sabiamente. Si lo desperdicias, puede que no tengas dinero para sobornar a los ciudadanos o establecer nuevas infraestructuras vitales para mantener a la gente tranquila.</Spanish>
@@ -1878,7 +1878,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_REVDCM_HINT_100</Tag>
-		<English>*Super Spies*: Once the era of bureaucratic espionage is possible, security bureau's and intelligence agencies matter!</English>
+		<English>*Super Spies*: Once the era of bureaucratic espionage is possible, Security Bureau's and Intelligence Agencies matter!</English>
 		<French>*Super Espions*: Dès que l'ère de l'espionnage bureaucratique est possible, les bureaux de sécurité et les agences prennent de l'importance!</French>
 		<Italian>*Suggerimento del MOD 'Super Spie'*: Quando diventa possibile lo spionaggio burocratico, 'Agenzia di Sicurezza' e 'Servizi Segreti' diventano importanti!</Italian>
 		<Spanish>*Consejo de Super Spies*: Una vez que sea posible el espionaje burocrático, ¡la Agencia de inteligencia y el Servicio de contraespionaje serán muy importantes!</Spanish>
@@ -1921,7 +1921,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_REVDCM_HINT_15</Tag>
-		<English>*Revolutions Mod Hint*: At some point, underlying rebellion can explode into violence no matter what you do. Be ready with law enforcement troops if needed!</English>
+		<English>*Revolutions Mod Hint*: At some point, underlying rebellion can explode into violence no matter what you do. Be ready with Law Enforcement troops if needed!</English>
 		<French>*Conseil Mod Revolution*: D'une certaine façon, la rébellion peut parfois exploser de manière violente indépendamment de vos actions. Soyez prêts à renforcer vos armées si nécessaire!</French>
 		<Italian>*Suggerimento del MOD 'Revolutions'*: Ad un certo punto, la rivolta può scoppiare in violenze, indipendentemente da quello che cerchi di fare! Sii pronto ad usare l'esercito per riportare l'ordine, se occorre!</Italian>
 		<Spanish>*Consejo de Revolution*: En algún momento, la revolución pueden estallar desencadenando la violencia, no importa lo que hagas. ¡Ten preparadas a las tropas para restablecer el orden si fuera necesario!</Spanish>
@@ -1929,7 +1929,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_REVDCM_HINT_16</Tag>
-		<English>*Revolutions Mod Hint*: If you face a revolt, don't panic. So long as you are not in the middle of a foreign war, you can apply military force on the rebels and gain experience!</English>
+		<English>*Revolutions Mod Hint*: If you face a revolt, don't panic. So long as you are not in the middle of a foreign war, you can apply military force on the rebels and gain Experience!</English>
 		<French>*Conseil Mod Revolution*: Si vous faites face à une révolte, ne paniquez pas. Tant que vous n'êtes pas impliqués dans une autre Guerre, vous pouvez utiliser vos forces militaires contre les rebelles et gagner de l'expérience!</French>
 		<Italian>*Suggerimento del MOD 'Revolutions'*: Se affronti una rivolta, stai calmo. Finché non ti troverai coinvolto in una guerra con civiltà straniere, puoi usare la tua forza militare contro i ribelli e acquisire esperienza!</Italian>
 		<Spanish>*Consejo de Revolution*: Si te enfrentas a una revuelta, no pierdas los nervios. Mientras que no te encuentres inmerso en una guerra con otra civilización, puedes dedicar todos tus recursos militares a aplastar a los rebeldes, ¡y ganarás experiencia!</Spanish>
@@ -1937,7 +1937,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_REVDCM_HINT_17</Tag>
-		<English>*Revolutions Mod Hint*: To protect your unstable cities, make sure you have law enforcement entrenched, and law enforcement units around the city too! Rebels will burn the countryside not just the city!</English>
+		<English>*Revolutions Mod Hint*: To protect your unstable cities, make sure you have Law Enforcement entrenched, and Law Enforcement units around the city too! Rebels will burn the countryside not just the city!</English>
 		<French>*Conseil Mod Revolution*: Pour protéger vos Villes instables, soyez sûrs d'avoir suffisamment de troupes, à la fois pour la ville et pour ses alentours! Les Rebelles brûleront la campagne, pas uniquement la ville!</French>
 		<Italian>*Suggerimento del MOD 'Revolutions'*: Per proteggere le città in rivolta, assicura la presenza di forze militari in città, e anche nei dintorni! I ribelli daranno saboteranno i miglioramenti esterni oltre che la città!</Italian>
 		<Spanish>*Consejo de Revolution*: Para proteger tus ciudades inestables, asegúrate que tienes una presencia militar importante en la ciudad, ¡así como en los alrededores de la ciudad! Los rebeldes pueden dedicarse también a incendiar las granjas.</Spanish>
@@ -1945,7 +1945,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_REVDCM_HINT_18</Tag>
-		<English>*Revolutions Mod Hint*: If a rebellion emerges, remember that not all rebels are visible. Rebel spies can do damage if you are not prepared...</English>
+		<English>*Revolutions Mod Hint*: If a rebellion emerges, remember that not all rebels are visible. Rebel Spies can do damage if you are not prepared...</English>
 		<French>*Conseil Mod Revolution*: Si une rébellion émerge, souvenez-vous que tous les rebelles ne sont pas forcément visibles: des espions peuvent également causer des dommages si vous n'êtes pas préparés...</French>
 		<Italian>*Suggerimento del MOD 'Revolutions'*: Se scoppia una rivolta, ricorda che non tutti i ribelli saranno visibili. Spie ribelli potranno far danni, se non sei preparato...</Italian>
 		<Spanish>*Consejo de Revolution*: Si emerge una revolución, recuerda que no todos los rebeldes son visibles. Los espías rebeldes pueden hacer mucho daño si no estás preparado...</Spanish>
@@ -1961,7 +1961,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_REVDCM_HINT_2</Tag>
-		<English>*Revolutions Mod Hint*: Customise the Revolution Watch Advisor to suit your playing style and imagination! Put the culture level column next to the Revolution trend column, it doesn't matter!</English>
+		<English>*Revolutions Mod Hint*: Customize the Revolution Watch Advisor to suit your playing style and imagination! Put the Culture level column next to the Revolution trend column, it doesn't matter!</English>
 		<French>*Conseil Mod Revolution*: Personnalisez l'Ecran de Conseiller de Révolution pour l'adapter à votre style de Jeu! Placez le niveau de Culture tout de suite à côté de la tendance de Revolution, peu importe!</French>
 		<Italian>*Suggerimento del MOD 'Revolutions'*: Personalizza la schermo informazioni rivolta per adattarla al tuo stile di gioco ed immaginazione! Inserisci la colonna del livello culturale vicino a quella della tendenza alla rivolta. non ti preoccupare!</Italian>
 		<Spanish>*Consejo de Revolution*: ¡Personaliza la pantalla del Consejero de Revolución para ajustarlo a tu estilo de juego! ¡Puedes colocar la columna de "Nivel cultural" junto a la columna de "Estabilidad", no pasa nada!</Spanish>
@@ -2002,7 +2002,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_REVDCM_HINT_24</Tag>
-		<English>*Revolutions Mod Hint*: Beware of the Domino Effect! If one city rebels, this can cascade into a regional or empire wide rebellion!</English>
+		<English>*Revolutions Mod Hint*: Beware of the Domino Effect! If one city rebels, this can cascade into a regional or empire-wide rebellion!</English>
 		<French>*Conseil Mod Revolution*: Attention à l'Effet Domino! Si une Ville se rebelle, cela peut se propager en une rebellion régionale, voire une révolution dans tout l'Empire!</French>
 		<Italian>*Suggerimento del MOD 'Revolutions'*: Attenzione all'effetto domino! Se in una città scoppia la rivolta, questa si potrà diffondere su scala regionale o anche nazionale!</Italian>
 		<Spanish>*Consejo de Revolution*: Ten cuidado con el efecto dominó! Si una ciudad se rebela, puede generar una cascada de rebeliones regionales, ¡o incluso a nivel de imperio!</Spanish>
@@ -2050,7 +2050,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_REVDCM_HINT_3</Tag>
-		<English>*Revolutions Mod Hint*: The Revolution Watch Advisor can also display important buildings constructed in a city that are relevant to Revolutions, especially cultural buildings like wonders, and theatres!</English>
+		<English>*Revolutions Mod Hint*: The Revolution Watch Advisor can also display important buildings constructed in a city that are relevant to Revolutions, especially cultural buildings like Wonders, and Theaters!</English>
 		<French>*Conseil Mod Revolution*: l'Ecran de Conseiller de Révolution peut également afficher les bâtiments construits, ayant une influence pour la stabilité de l'Empire, particulièrement les bâtiments culturels (Merveilles, théatres...)</French>
 		<Italian>*Suggerimento del MOD 'Revolutions'*: La schermo delle informazioni rivolta può mostrare edifici cittadini rilevanti per 'Revolutions', tipo edifici culturali come Meraviglie e Teatri!</Italian>
 		<Spanish>*Consejo de Revolution*: El Consejero de Revolución también puede mostrar edificios relevantes para la estabilidad construidos en una ciudad, especialmente edificios culturales como Maravillas y teatros.</Spanish>
@@ -2058,7 +2058,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_REVDCM_HINT_30</Tag>
-		<English>*Revolutions Mod Hint*: Without question, the most difficult aspect of Revolutions management, is the issue of distant settlements and colonies. These need special attention.</English>
+		<English>*Revolutions Mod Hint*: Without question, the most difficult aspect of Revolutions management, is the issue of distant settlements and Colonies. These need special attention.</English>
 		<French>*Conseil Mod Revolution*: Sans aucun doute, l'aspect le plus difficile dans Revolution est la gestion des Villes distantes et des colonies. Elles nécessitent une attention toute particulière.</French>
 		<Italian>*Suggerimento del MOD 'Revolutions'*: Senza dubbio, l'aspetto più difficile in 'Revolutions', è la gestione di colonie ed insediamenti lontani. Questi hanno bisogno di un'attenzione speciale.</Italian>
 		<Spanish>*Consejo de Revolution*: Sin lugar a dudas, el aspecto más complicado a manejar en Revolution, es lo concerniente a los asentamientos lejanos y colonias. Van a necesitar constante atención y cuidado.</Spanish>
@@ -2082,7 +2082,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_REVDCM_HINT_33</Tag>
-		<English>*Revolutions Mod Hint*: Religion plays a huge role in the stability of your society. Try to run your civics to match the religious needs of your society.</English>
+		<English>*Revolutions Mod Hint*: Religion plays a huge role in the stability of your society. Try to run your Civics to match the religious needs of your society.</English>
 		<French>*Conseil Mod Revolution*: La Religion joue une role très important dans la stabilité de votre société. Essayez d'adapter vos Doctrines pour vous adapter aux besoins de votre société.</French>
 		<Italian>*Suggerimento del MOD 'Revolutions'*: La religione svolge un ruolo enorme nella stabilità del tuo impero. Scegli forme di governo che vengano incontro alle esigenze religiose della tua società.</Italian>
 		<Spanish>*Consejo de Revolution*: La religión juega un papel muy importante en la estabilidad de tu sociedad. Intenta ajustar los principios a las necesidades religiosas de tu sociedad.</Spanish>
@@ -2091,7 +2091,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_REVDCM_HINT_34</Tag>
-		<English>*Revolutions Mod Hint*: If you are faced with an empire with many different faiths, fear not! So long as you don't attempt to run a theocracy or organised religious state, the people may really respect you!</English>
+		<English>*Revolutions Mod Hint*: If you are faced with an empire with many different faiths, fear not! So long as you don't attempt to run a theocracy or organized Religious State, the people may really respect you!</English>
 		<French>*Conseil Mod Revolution*: Si vous devez gérer un empire avec des croyances différentes, ne prenez pas peur! Tant que vous n'essayez pas de gouverner en Théocracie ou avec une religion d'état, le peuple peut très bien vous respecter!</French>
 		<Italian>*Suggerimento del MOD 'Revolutions'*: Se ti confronti con un impero con varie fedi diverse, non temere! Finché non scegli la 'Teocrazia' o la 'Religione Organizzata', il popolo potrà veramente rispettarti!</Italian>
 		<Spanish>*Consejo de Revolution*: Si encuentras de repente que tu imperio tiene distintas religiones, ¡no temas! Mientras que no intentes imponer la Teocracia o la Religión organizada, ¡el pueblo te respetara!</Spanish>
@@ -2100,7 +2100,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_REVDCM_HINT_35</Tag>
-		<English>*Revolutions Mod Hint*: If you want religious purity in your empire, do it wisely but be extra vigilant to non-state religions taking hold!</English>
+		<English>*Revolutions Mod Hint*: If you want religious purity in your empire, do it wisely but be extra vigilant to Non-State Religions taking hold!</English>
 		<French>*Conseil Mod Revolution*: Si vous voulez une pureté religieuse au sein de votre Empire, soyez très vigilant aux religions non officielles qui voudraient s'y implanter!</French>
 		<Italian>*Suggerimento del MOD 'Revolutions'*: Se desideri la purezza religiosa nel tuo impero, fallo con saggezza, ma sii molto vigile per non far sviluppare religioni non di Stato!</Italian>
 		<Spanish>*Consejo de Revolution*: Si pretendes tener pureza religiosa en tu imperio, hazlo sabiamente, pero mantente siempre alerta y vigila que las religiones no oficiales no se implanten en tu imperio.</Spanish>
@@ -2108,7 +2108,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_REVDCM_HINT_36</Tag>
-		<English>*Revolutions Mod Hint*: Without question, the management of holy city sites is one of the biggest challenges in Revolutions.</English>
+		<English>*Revolutions Mod Hint*: Without question, the management of Holy City sites is one of the biggest challenges in Revolutions.</English>
 		<French>*Conseil Mod Revolution*: Sans aucun doute, la gestion des Lieux sacrés de vos Villes est un des plus grands challenges de Revolutions.</French>
 		<Italian>*Suggerimento del MOD 'Revolutions'*: Senza dubbio, la gestione delle Città Sante è una delle maggiori sfide in 'Revolutions'.</Italian>
 		<Spanish>*Consejo de Revolution*: Sin lugar a dudas, la administración de las Ciudades Santas es uno de los mayores retos de Revolution.</Spanish>
@@ -2116,7 +2116,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_REVDCM_HINT_37</Tag>
-		<English>*Revolutions Mod Hint*: Under Revolutions you can hold firm more than one holy city in your empire. Two holy cities is fine, the challenge accumulates as the number of holy sites increase!</English>
+		<English>*Revolutions Mod Hint*: Under Revolutions you can hold firm more than one Holy City in your empire. Two Holy Cities is fine, the challenge accumulates as the number of Holy Sites increase!</English>
 		<French>*Conseil Mod Revolution*: Avec Revolutions vous pouvez tenir plus d'une Ville Sainte dans votre Empire. Deux Villes Saintes c'est bien, le Challenge commence lorsque vous accumulez les villes Saintes!</French>
 		<Italian>*Suggerimento del MOD 'Revolutions'*: In 'Revolutions' puoi controllare più di una Città Santa nel tuo impero. Con due tutto andrà bene, la sfida sarà più difficile con l'aumento delle Città Sante!</Italian>
 		<Spanish>*Consejo de Revolution*: En Revolution pues albergar más de una Ciudad Santa en tu imperio. Dos Ciudades Santas están bien, ¡pero el reto se incrementa según va creciendo el número de Ciudades Santas!</Spanish>
@@ -2148,7 +2148,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_REVDCM_HINT_40</Tag>
-		<English>*Revolutions Mod Hint*: Keep in mind the distinction between the general apathetic citizenry who are dictated by happiness and health, from the dissident minorities that have their own agendas.</English>
+		<English>*Revolutions Mod Hint*: Keep in mind the distinction between the general apathetic citizenry who are dictated by Happiness and Health, from the dissident minorities that have their own agendas.</English>
 		<French>*Conseil Mod Revolution*: Gardez à l'esprit la différence entre l'apathie de la majorité des citoyens dictée par le moral et la santé, et les minorités dissidentes qui ont leurs propres agendas.</French>
 		<Italian>*Suggerimento del MOD 'Revolutions'*: Tieni presente la differenza tra i comuni cittadini che sono influenzati da felicità e salute, e le minoranze dissidenti che hanno le proprie priorità.</Italian>
 		<Spanish>*Consejo de Revolution*: Ten presente la diferencia entre los ciudadanos comunes de a pie que se dejan influenciar por la felicidad y la salubridad, y aquellas minorías disidentes que poseen su propia agenda.</Spanish>
@@ -2164,7 +2164,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_REVDCM_HINT_42</Tag>
-		<English>*Revolutions Mod Hint*: Distant settlements need special attention. Give them extras like cultural assets, defence assets and military support to ensure that you are looking after them!</English>
+		<English>*Revolutions Mod Hint*: Distant settlements need special attention. Give them extras like cultural assets, defense assets, and military support to ensure that you are looking after them!</English>
 		<French>*Conseil Mod Revolution*: Les Villes distantes ont besoin d'une attention particulière. Donnez-leur des bâtiments supplémentaires (culturels, défensifs...) et également le soutien militaire nécessaire pour leur assurer que vous les considérez et ne les oubliez pas!</French>
 		<Italian>*Suggerimento del MOD 'Revolutions'*: Insediamenti lontani devono essere seguiti con attenzione. Sviluppa per loro infrastrutture culturali e militari aggiuntive, per convincerli che ti prendi cura di loro!</Italian>
 		<Spanish>*Consejo de Revolution*: Los asentamientos lejanos requieren especial cuidado. Proporciónales elementos como infraestructuras culturales o soporte militar... ¡para que sus habitantes noten que te preocupas por ellos!</Spanish>
@@ -2180,7 +2180,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_REVDCM_HINT_44</Tag>
-		<English>*Revolutions Mod Hint*:In big empires, it is often better to let a city or even a region break away. The break always may be weak and exploitable.</English>
+		<English>*Revolutions Mod Hint*: In big empires, it is often better to let a city or even a region break away. The break always may be weak and exploitable.</English>
 		<French>*Conseil Mod Revolution*:Dans le Grand Empire, il est souvent mieux de laisser une ville ou région accéder à l'indépendance. Ces dissidents sont souvent faibles et exploitables.</French>
 		<Italian>*Revolutions Mod Hint*:In vasti imperi, spesso è meglio separarsi da una città o anche da una regione. La regione separata può essere debole e attaccabile.</Italian>
 		<Spanish>*Consejo de Revolution*: En imperios grandes, a veces es mejor dar la independencia a una ciudad o incluso a una región. El nuevo estado siempre será débil y explotable.</Spanish>
@@ -2205,7 +2205,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_REVDCM_HINT_47</Tag>
-		<English>*Revolutions Mod Hint*: A cultural victory strategy has a spin off in Revolutions. The people will love you and you may wait for rival super powers to implode...</English>
+		<English>*Revolutions Mod Hint*: A Cultural Victory strategy has a spin off in Revolutions. The people will love you and you may wait for rival super powers to implode...</English>
 		<French>*Conseil Mod Revolution*: La Stratégie de Victoire culturelle a un avantage dans Revolutions. Le Peuple va vous adorer et vous pouvez toujours attendre les 'Super pouvoirs' de vos rivaux pour faire imploser votre Empire...</French>
 		<Italian>*Suggerimento del MOD 'Revolutions'*: Una strategia per la vittoria culturale in 'Revolutions' porta anche ad un altro scenario. Il popolo ti amerà e potrai attendere la caduta delle superpotenze rivali...</Italian>
 		<Spanish>*Consejo de Revolution*: Conseguir la victoria cultural en Revolution puede ser un interesante escenario. Deja que la gente te adore y espera a que las superpotencias rivales implosionen bajo su propio peso...</Spanish>
@@ -2230,7 +2230,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_REVDCM_HINT_5</Tag>
-		<English>*Revolutions Mod Hint*: The civ info screen can now graph the overall revolt stability of your empire, or your enemies empire! You just need sufficient espionage points...</English>
+		<English>*Revolutions Mod Hint*: The civ info screen can now graph the overall Revolt Stability of your empire, or your enemies empire! You just need sufficient Espionage points...</English>
 		<French>*Conseil Mod Revolution*: L'Ecran d'informations affiche maintenant un graphique de la stabilité de chaque Empire. Il faut juste suffisamment de points d'espionnage...</French>
 		<Italian>*Suggerimento del MOD 'Revolutions'*: la 'Schermata delle informazioni' ora può rappresentare graficamente la stabilità complessiva del tuo impero o degli imperi nemici! Hai solo bisogno di sufficienti punti spionaggio...</Italian>
 		<Spanish>*Consejo de Revolution*: La pantalla de información de la civilización puede representar gráficamente la estabilidad general de tu imperio, o la de tus enemigos! Tan solo necesitas los suficientes puntos de espionaje...</Spanish>
@@ -2246,7 +2246,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_REVDCM_HINT_51</Tag>
-		<English>*Revolutions Mod Hint*: Distant holy city sites are always going to be tricky to hold unless you concede at least in part, to the faith of that city.</English>
+		<English>*Revolutions Mod Hint*: Distant Holy City sites are always going to be tricky to hold unless you concede at least in part, to the faith of that city.</English>
 		<French>*Conseil Mod Revolution*: Une Ville Sainte Distante va être toujours particulièrement difficile à maintenir, sauf si vous concédez au moins un point, la foi dans cette ville.</French>
 		<Italian>*Suggerimento del MOD 'Revolutions'*: Una Città Santa lontana dalla capitale sarà difficile da mantenere, a meno che non ne ammetterai la fede - almeno in parte.</Italian>
 		<Spanish>*Consejo de Revolution*: Las Ciudades Santas lejanas van a ser normalmente más difíciles de mantener a menos que permitas desarrollar en parte la fé de dicha ciudad.</Spanish>
@@ -2254,7 +2254,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_REVDCM_HINT_52</Tag>
-		<English>*Barbarian Civ Hint*: It is not always wise to eliminate every last barbarian city before they evolve into minor civs. You may need trading partners!</English>
+		<English>*Barbarian Civ Hint*: It is not always wise to eliminate every last Barbarian city before they evolve into Minor Civs. You may need trading partners!</English>
 		<French>*Conseil Civ. Barbare*: Ce n'est pas toujours le meilleur choix d'éliminer les villes barbares pour les empêcher d'évoluer en civilisations mineures. Vous aurez peut-être besoin de partenaires pour le commerce!</French>
 		<Italian>*Suggerimento da 'Barbarian Civ'*: Non è sempre saggio eliminare fino all' ultima città barbarica, prima che si evolva in civiltà minori. Potresti avere bisogno di partner commerciali!</Italian>
 		<Spanish>*Consejo de BarbarianCiv*: No siempre es buena idea eliminar toda ciudad bárbara antes de que evolucionen en civilizaciones menores. ¡Puedes llegar a necesitar socios comerciales!</Spanish>
@@ -2263,7 +2263,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_REVDCM_HINT_53</Tag>
-		<English>*Barbarian Civ Hint*: Start a game with only yourself! Competitors will emerge. Just make sure you turn off conquest and domination victory conditions!</English>
+		<English>*Barbarian Civ Hint*: Start a game with only yourself! Competitors will emerge. Just make sure you turn off Conquest and Domination Victory conditions!</English>
 		<French>*Conseil Civ. Barbare*: Démarrez une partie tout seul! Les adversaires viendront progressivement. Il faut juste désactiver alors les victoires par conquête ou domination!</French>
 		<Italian>*Suggerimento da 'Barbarian Civ'*: Puoi iniziare una partita con solo te, come giocatore! I tuoi rivali compariranno. Solo fa' in modo togliere 'Conquista' e 'Dominazione' dalle condizioni di vittoria!</Italian>
 		<Spanish>*Consejo de BarbarianCiv*: ¡Comienza una partida tu solo como jugador! Los rivales irán apareciendo. Asegúrate que desactivas las victorias por Conquista y Dominación previamente.</Spanish>
@@ -2272,7 +2272,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_REVDCM_HINT_54</Tag>
-		<English>*Barbarian Civ Hint*: If a barbarian city emerges as a minor civilization, don't despair. Farm them accordingly and pounce on them if they are weak, for more rewards than if they had remained as barbarians!</English>
+		<English>*Barbarian Civ Hint*: If a Barbarian city emerges as a Minor Civilization, don't despair. Farm them accordingly and pounce on them if they are weak, for more rewards than if they had remained as Barbarians!</English>
 		<French>*Conseil Civ. Barbare*: Si une Ville barbare évolue en civilisation mineure, ne soyez pas désespéré. Accueillez-les et exploitez-les s'ils sont faibles. Cela vous rapportera plus que s'ils étaient resté barbares!</French>
 		<Italian>*Suggerimento da 'Barbarian Civ'*: Se una città barbarica si evolve in una Civiltà Minore, non disperare. Saccheggiali di conseguenza e attaccali se sono deboli, con un bottino maggiore di quello ricavato se fossero rimasti barbari!</Italian>
 		<Spanish>*Consejo de BarbarianCiv*: Si una ciudad bárbara se convierte de civilización menor, no desesperes. Deja que crezca adecuadamente y abalánzate sobre ellos si son débiles, así conseguirás más beneficios que si hubieran permanecido como barbaros.</Spanish>
@@ -2281,7 +2281,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_REVDCM_HINT_55</Tag>
-		<English>*Barbarian Civ Hint*: Barbarians evolve into minor civilizations. Minor civilizations evolve into full blooded civilizations. At each stage, they get stronger, economically and militarily.</English>
+		<English>*Barbarian Civ Hint*: Barbarians evolve into Minor Civilizations. Minor civilizations evolve into full blooded civilizations. At each stage, they get stronger, economically and militarily.</English>
 		<French>*Conseil Civ. Barbare*: Les Barbares évoluent en civilisations mineurs, puis en vraies Civilisations. A chaque étapes, il deviennent plus forts, économiquement et militairement.</French>
 		<Italian>*MOD Barbarian Civ Hint*: I Barbari si evolvono in Civiltà Minori. Civiltà Minori si evolvono in vere Civiltà. Ad ogni passaggio, diventano sempre più forti economicamente e militarmente.</Italian>
 		<Spanish>*Consejo de BarbarianCiv*: Las ciudades bárbaras evolucionan en civilizaciones menores. Las civilizaciones menores evolucionan a civilizaciones completas. En cada fase, se vuelven más fuertes, económica y militarmente.</Spanish>
@@ -2309,7 +2309,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_REVDCM_HINT_58</Tag>
-		<English>*Barbarian Civ Hint*: The emergence of minor civs with capable armies may appear unfair, but remember that they need something to ensure a chance of long term survival.</English>
+		<English>*Barbarian Civ Hint*: The emergence of Minor Civilizations with capable armies may appear unfair, but remember that they need something to ensure a chance of long-term survival.</English>
 		<French>*Conseil Civ. Barbare*: L'émergence de civilisations mineures avec une puissante armée peut vous apparaître injuste, mais n'oubliez-pas qu'il leur faut un minimum d'unités pour avoir une chance de survie à long terme.</French>
 		<Italian>*Suggerimento da 'Barbarian Civ'*: La nascita di Civiltà Minori con forze militari può sembrare ingiusta, ma ricorda che hanno bisogno di qualcosa che garantisca loro la possibilità di una lunga sopravvivenza.</Italian>
 		<Spanish>*Consejo de BarbarianCiv*: El hecho de que las civilizaciones menores aparezcan con ejércitos listos para el combate puede parecer injusto y desproporcionado, pero recuerda que necesitan algo para asegurar la supervivencia a largo plazo.</Spanish>
@@ -2408,7 +2408,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_REVDCM_HINT_68</Tag>
-		<English>*Revolutions Mod Hint*: Pay particular attention to the labour reforms your society adopts. It is these that the people must work under!</English>
+		<English>*Revolutions Mod Hint*: Pay particular attention to the labor reforms your society adopts. It is these that the people must work under!</English>
 		<French>*Conseil Mod Revolution*: Faites attention aux réformes de travail que votre société adopte. Ce sont celles-ci qui concernent directement votre peuple!</French>
 		<Italian>*Suggerimento del MOD 'Revolutions'*: Presta particolare attenzione alle politiche del lavoro che adotta la tua società. Sono quelle che dovrà seguire la tua gente!</Italian>
 		<Spanish>*Consejo de Revolution*: Presta particular atención a las reformas laborales que tu sociedad adopte. ¡Tu pueblo tendrá que trabajar bajo ellas!</Spanish>
@@ -2417,7 +2417,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_REVDCM_HINT_69</Tag>
-		<English>*Revolutions Mod Hint*: The Sevopedia now displays revolutions specific civic effects and leader traits can be customised for revolution effects!</English>
+		<English>*Revolutions Mod Hint*: The Sevopedia now displays Revolutions specific Civic effects and leader traits can be customized for revolution effects!</English>
 		<French>*Conseil Mod Revolution*: La Sevopedia affiche à présent les effets des doctrines et traits de caractères qui ont des effets sur la stabilité!</French>
 		<Italian>*Suggerimento del MOD 'Revolutions'*: La Sevopedia ora mostra gli effetti, specifici per le rivoluzioni, delle forme di governo, e ora i 'punti di forza' dei Leader possono essere personalizzati per gli effetti rivoluzionari!</Italian>
 		<Spanish>*Consejo de Revolution*: La Sevopedia muestra los efectos específicos de los principios sobre las revoluciones, y los rasgos de los líderes pueden ser personalizados para que adquieran efectos sobre las revoluciones.</Spanish>
@@ -2435,7 +2435,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_REVDCM_HINT_70</Tag>
-		<English>*Revolutions Mod Hint*: Don't be scared to run slavery! The citizens will endure the whipping... for a time!</English>
+		<English>*Revolutions Mod Hint*: Don't be scared to run Slavery! The citizens will endure the whipping... for a time!</English>
 		<French>*Conseil Mod Revolution*: Ne soyez pas effrayés par l'esclavage! Les citoyens vont endurer le fouet... pour un temps!</French>
 		<Italian>*Suggerimento del MOD 'Revolutions'*: Non abbiate paura di imporre lo Schiavismo! I cittadini sapranno sopportare le frustate... per un po'!</Italian>
 		<Spanish>*Consejo de Revolution*: ¡No tengas miedo de adoptar la Esclavitud! Los ciudadanos podrán soporta los latigazos... ¡al menos durante un tiempo!</Spanish>
@@ -2444,7 +2444,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_REVDCM_HINT_71</Tag>
-		<English>*Revolutions Mod Hint*: Really, in a diverse religious state, you wouldn't run organised religion, would you?</English>
+		<English>*Revolutions Mod Hint*: Really, in a diverse religious state, you wouldn't run organized religion, would you?</English>
 		<French>*Conseil Mod Revolution*: Réellement, dans un état avec une diversité religieuse, vous ne pourriez pas instaurer la religion organisé et une seul religion d'état, ou bien?</French>
 		<Italian>*Suggerimento del MOD 'Revolutions'*: In effetti, in uno stato con differenti religioni, non sceglierai la forma di governo 'Religione Organizzata', vero?</Italian>
 		<Spanish>*Consejo de Revolution*: De verdad, en un estado con diversidad religiosa, no tiene sentido adoptar la Religión organizada, en serio.</Spanish>
@@ -2471,7 +2471,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_REVDCM_HINT_74</Tag>
-		<English>*Revolutions Mod Hint*: There is nothing more fun than to slowly destabilise a super power by stagnating it, and to grab the spoils when it implodes!</English>
+		<English>*Revolutions Mod Hint*: There is nothing more fun than to slowly destabilize a super power by stagnating it, and to grab the spoils when it implodes!</English>
 		<French>*Conseil Mod Revolution*: Il n'y a rien de plus amusant que de déstabiliser lentement une super puissance en la faisant stagner, et de récupérer les restes lorsqu'elle implose!</French>
 		<Italian>*Suggerimento del MOD 'Revolutions'*: Non c'è niente di più divertente che destabilizzare lentamente una superpotenza, fermandone lo sviluppo, ed infine raccoglierne i resti quando crolla!</Italian>
 		<Spanish>*Consejo de Revolution*: No hay nada más divertido que desestabilizar a una superpotencia poco a poco estancándola, ¡y luego recoger los trocitos cuando implosione!</Spanish>
@@ -2504,7 +2504,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_REVDCM_HINT_78</Tag>
-		<English>*Revolutions Mod Hint*: If you have stabilised your domestic society and you are the leader the people want, any standard BtS strategy is available for you to implement.</English>
+		<English>*Revolutions Mod Hint*: If you have stabilized your domestic society and you are the leader the people want, any standard BtS strategy is available for you to implement.</English>
 		<French>*Conseil Mod Revolution*: Si vous avez stabilisé votre société et que vous êtes le leader que le peuple souhaite, n'importe laquelle des stratégies de BtS s'offre à vous.</French>
 		<Italian>*Suggerimento del MOD 'Revolutions'*: Se hai stabilizzato la tua civiltà e sei il leader che il popolo desidera, puoi attuare tutte le strategie definite per BtS.</Italian>
 		<Spanish>*Consejo de Revolution*: Si has conseguido estabilizar tus asuntos internos y eres el líder que la gente quiere, cualquier estrategia estándar usada en BtS funcionará a las mil maravillas.</Spanish>
@@ -2530,7 +2530,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_REVDCM_HINT_80</Tag>
-		<English>*DCM Hint*: Range bombarding cities has a slightly different effect to bombarding them directly. Range bombarding aims fire at the defenders of the city as well as the defences!</English>
+		<English>*DCM Hint*: Range bombarding cities has a slightly different effect to bombarding them directly. Range bombarding aims fire at the defenders of the city as well as the defenses!</English>
 		<French>*Conseils DCM*: Le bombardement à distance des villes a un effet relativement différent que le bombardement direct. Le bombardement à distance vise à la fois les défenseurs de la villes et ses défenses!</French>
 		<Italian>*Suggerimento da MOD 'RevDCM'*: Il 'Bombardamento ad Area' contro le città ha un effetto leggermente diverso dal bombardamento diretto. Il 'Bombardamento ad Area' ha come obbiettivo sia i difensori della città, che le sue difese!!</Italian>
 		<Spanish>*Consejo de DCM*: Realizar cañoneo de alcance sobre las ciudades tiene un efecto distinto que el bombardeo directo sobre la ciudad. ¡El cañoneo de alcance afecta a los defensores de la ciudad así como a sus defensas!</Spanish>
@@ -2538,7 +2538,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_REVDCM_HINT_81</Tag>
-		<English>*DCM Hint*: Range bombarding cities has much less impact on the defenders than the defences of the city. Defenders can seek cover even behind damaged walls... for a time.</English>
+		<English>*DCM Hint*: Range bombarding cities has much less impact on the defenders than on the defenses of the city. Defenders can seek cover even behind damaged walls... for a time.</English>
 		<French>*Conseils DCM*: Le Bombardement à distance des Villes a beaucoup moins d'impact sur les défenseurs que sur les défenses. Ceux-ci peuvent chercher à se protéger derrière les ruines... pour un temps.</French>
 		<Italian>*Suggerimento da MOD 'RevDCM'*: Il 'Bombardamento ad Area' contro le città ha meno impatto sui difensori che sulle difese. I difensori possono cercare riparo anche dietro le mura danneggiate... per una sola volta.</Italian>
 		<Spanish>*Consejo de DCM*: Realizar cañoneo de alcance sobre las ciudades produce mucho menos impacto sobre los defensores que sobre las defensas. Los defensores pues buscar cobijo incluso detrás de las murallas dañadas... al menos durante un tiempo.</Spanish>
@@ -2546,7 +2546,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_REVDCM_HINT_82</Tag>
-		<English>*DCM Hint*: If you want to take down a cities defences at maximum thrift, just straight bombard the city defences and leave the defenders until there is no where for them to hide.</English>
+		<English>*DCM Hint*: If you want to take down a cities defenses at maximum thrift, just straight bombard the city defenses and leave the defenders until there is nowhere for them to hide.</English>
 		<French>*Conseils DCM*: Si vous voulez abattre les défenses d'une ville le plus efficacement, Bomberez uniquement les défenses, et laissez les défenseurs jusqu'à qu'ils n'aient plus d'endroit où se cacher.</French>
 		<Italian>*Suggerimento da MOD 'RevDCM'*: Se vuoi abbattere le difese cittadine con il minimo costo, colpisci solo le difese e lascia stare i difensori, finché non rimane nulla in cui nascondersi.</Italian>
 		<Spanish>*Consejo de DCM*: Si quieres tomar una ciudad con el mínimo esfuerzo, bombardea únicamente las defensas enemigas y deja a los defensores para el momento en que no tengan dónde esconderse.</Spanish>
@@ -2562,7 +2562,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_REVDCM_HINT_84</Tag>
-		<English>*DCM Hint*: Properly set-up defensive structures like forts or field deployments with properly constructed front-lines, are by far the most effective way to range bombard.</English>
+		<English>*DCM Hint*: Properly set-up defensive structures like forts or field deployments with well constructed front-lines, are by far the most effective method to range bombard.</English>
 		<French>*Conseils DCM*: Placez bien les structures défensives comme les forts ou les barbelés pour en faire des lignes de front. C'est de loin la méthode la plus efficace pour utiliser le bombardement à distance en tout sécurité.</French>
 		<Italian>*Suggerimento da MOD 'RevDCM'*: Strutture difensive ben approntate come forti o spiegamenti di forze ben impostati, sono di gran lunga il modo più efficace di difendersi dal 'Bombardamento ad Area'.</Italian>
 		<Spanish>*Consejo de DCM*: Desplegar adecuadamente tus unidades en la frontera, junto con una buena ubicación de los fuertes, son por descontado la forma más efectiva de utilizar el cañoneo de alcance.</Spanish>
@@ -2587,7 +2587,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_REVDCM_HINT_87</Tag>
-		<English>*DCM Hint*: Range bombardment effect can be customised in GlobalDefinesAlt.xml</English>
+		<English>*DCM Hint*: Range bombardment effect can be customized in GlobalDefinesAlt.xml</English>
 		<French>*Conseils DCM*: les Effets du Bombardement à Distance peuvent être modifiés dans le fichier GlobalDefinesAlt.xml</French>
 		<Italian>*Suggerimento da MOD 'RevDCM'*: Gli effetti del 'Bombardamento ad Area' possono essere personalizzati nel file 'GlobalDefinesAlt.xml'</Italian>
 		<Spanish>*Consejo de DCM*: El efecto del cañoneo de alcance puede ser personalizado modificando el archivo GlobalDefinesAlt.xml</Spanish>
@@ -2605,7 +2605,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_REVDCM_HINT_89</Tag>
-		<English>*Revolutions Mod Hint*: Revolutions and its components are configurable and customisable in Revolution.ini</English>
+		<English>*Revolutions Mod Hint*: Revolutions and its components are configurable and customizable in Revolution.ini</English>
 		<French>*Conseil Mod Revolution*: Revolutions et ses composants est configurable et personnalisable dans le fichier Revolution.ini</French>
 		<Italian>*Suggerimento del MOD 'Revolutions'*: 'Revolutions' e i suoi componenti sono configurabili e personalizzabili nel file 'Revolution.ini'</Italian>
 		<Spanish>*Consejo de Revolution*: Revolution y sus componentes pueden ser configurados y personalizados en el archivo Revolution.ini</Spanish>
@@ -2630,7 +2630,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_REVDCM_HINT_91</Tag>
-		<English>*Revolutions Mod Hint*: From most difficult to least difficult are: Straight Revolutions, Limited Religions or Inquisitions, Limited Religion and Inquisitions.</English>
+		<English>*Revolutions Mod Hint*: From most difficult to least difficult, the order is: Straight Revolutions, Limited Religions or Inquisitions, Limited Religion, and Inquisitions.</English>
 		<French>*Conseil Mod Revolution*: Du plus difficile au plus facile: Revolutions, Religions limitées ou Inquisition, Religions limitées et Inquisition.</French>
 		<Italian>*Suggerimento del MOD 'Revolutions'*: In ordine di difficoltà decrescente ci sono: Rivoluzioni Complete, Religioni o Inquisizioni Limitate, Religioni E Inquisizioni Limitate.</Italian>
 		<Spanish>*Consejo de Revolution*: De más difícil a menos: Revolution completo, Religiones limitadas o Inquisición, Religiones limitadas e Inquisición.</Spanish>
@@ -2654,7 +2654,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_REVDCM_HINT_94</Tag>
-		<English>*Influence Driven War*: Keep an eye out for the culture mix of the tile you are contesting. It is possible that a 5% influence swing to you may be enough to win the territory!</English>
+		<English>*Influence Driven War*: Keep an eye out for the Culture mix of the tile you are contesting. It is possible that a 5% influence swing to you may be enough to win the territory!</English>
 		<French>*Influence Driven War*: Gardez un oeil aux informations de culture des cases que vous revendiquez. Il est possible que seulement 5% de modifications de l'influence soient suffisants pour gagner le territoire!</French>
 		<Italian>*Suggerimento da MOD 'IDW'*: Attento alle influenze culturali di una casella da conquistare. È possibile che una variazione del 5% dell'influenza culturale possa farti conquistare il territorio!</Italian>
 		<Spanish>*Consejo de IDW*: Presta atención a la mezcla cultural de la casilla que estás disputando. ¡Es posible que un pequeño cambio del 5% te otorgue el territorio!</Spanish>
@@ -2686,7 +2686,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_REVDCM_HINT_98</Tag>
-		<English>*Super Spies*: Be wary of counter espionage! AI's are very conscious about it against adversaries they do not trust. This will make you more vulnerable to espionage if ignored and more expensive for you to conduct!</English>
+		<English>*Super Spies*: Be wary of Counter-Espionage! AI's are highly alert to it when dealing with adversaries they do not trust. This will make you more vulnerable to Espionage if ignored and more expensive for you to conduct!</English>
 		<French>*Super Espions*: Faites attention au Contre-espionnage! l'IA est particulièrement attentive envers les adversaires qu'elle ne croit pas. Cela va vous rendre l'espionnage plus vulnérable si vous l'ignorez, et plus cher à conduire!</French>
 		<Italian>*Suggerimento del MOD 'Super Spie'*: Attento al Controspionaggio! L'IA lo conosce bene e lo usa contro gli avversari di cui non si fida. Se lo trascuri, sarai più vulnerabile allo spionaggio nemico e il tuo sarà più costoso!</Italian>
 		<Spanish>*Consejo de Super Spies*: ¡Estate atento al contraespionaje! La IA sabe cómo usarlo y lo utilizará contra los adversarios en los que no confíe. Esto te hará más vulnerable al espionaje si lo ignoras, y llevarlo a cabo por tu parte será mucho más costoso.</Spanish>
@@ -2695,7 +2695,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_REVDCM_HINT_99</Tag>
-		<English>*Super Spies*: Experiment with different combinations of spy promotions. Who knows, you might end up with your own James Bond!</English>
+		<English>*Super Spies*: Experiment with different combinations of spy Promotions. Who knows, you might end up with your own James Bond!</English>
 		<French>*Super Espions*: Expérimentez différentes combinaisons de promotions des espions. Qui sait, vous pourrez finir avec votre propre James Bond!</French>
 		<Italian>*Suggerimento del MOD 'Super Spie'*: Prova con diverse combinazioni di promozioni spia. Chi lo sa, potresti trovare il tuo James Bond!</Italian>
 		<Spanish>*Consejo de Super Spies*: Experimenta con diferentes combinaciones de ascensos para los espías. Quién sabe, ¡lo mismo acabas con tu propio James Bond!</Spanish>
@@ -2713,7 +2713,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_ROM_HINT_10</Tag>
-		<English>Caveman2Cosmos: There are several new Promotion lines and there has been made changes to almost all BtS promotions.</English>
+		<English>Caveman2Cosmos: There are several new Promotion lines and there has been a complete overhaul of original BtS Promotions system.</English>
 		<French>Caveman2Cosmos: Il y a quelques Promotions supplémentaires et les promotions originales ont été revues.</French>
 		<Italian>Caveman2Cosmos: Ci sono molte nuove linee di promozioni, e ci sono stati cambi a quasi tutte le promozioni di BtS.</Italian>
 		<Spanish>Caveman2Cosmos: Hay multitud de nuevas ramas de ascenso, y se han realizado cambios en casi todos los ascensos de Beyond the Sword.</Spanish>
@@ -2722,7 +2722,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_ROM_HINT_11</Tag>
-		<English>Caveman2Cosmos: Early gunpowder units now require the Sulphur resource.</English>
+		<English>Caveman2Cosmos: Early Gunpowder units now require the Sulfur resource.</English>
 		<French>Caveman2Cosmos: Les premières unités avec des armes à feu ont besoin de Soufre.</French>
 		<Italian>Caveman2Cosmos: Le prime unità con armi da fuoco ora richiedono la risorsa zolfo.</Italian>
 		<Spanish>Caveman2Cosmos: Las primeras unidades con armas de fuego requieren el recurso del Azufre.</Spanish>
@@ -2731,7 +2731,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_ROM_HINT_12</Tag>
-		<English>Caveman2Cosmos: Most gunpowder units require the Ammunition resource. Make sure you don't forget to build Weapon Factories.</English>
+		<English>Caveman2Cosmos: Most Gunpowder units require the Ammunition resource. Make sure you don't forget to build Weapon Factories.</English>
 		<French>Caveman2Cosmos: La plupart des Unités utilisant des armes à feu ont besoin de munitions à présent. Soyez sûr de ne pas oublier de construire une Usine d'armement.</French>
 		<Italian>Caveman2Cosmos: La maggior parte delle unità con armi da fuoco richiedono la risorsa Munizioni. Non dimenticarti di costruire le fabbriche di armi!</Italian>
 		<Spanish>Caveman2Cosmos: La mayoría de las unidades con armas de fuego requieren el recurso de las Municiones. No te olvides de construir algunas Fábricas de armas.</Spanish>
@@ -2740,7 +2740,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_ROM_HINT_13</Tag>
-		<English>Caveman2Cosmos: Naval units from the Industrial era start to require Steel resource. Build Steel Mills to produce Steel from Coal and Iron. If you don't have access to those resources, build Ironworks national wonder. It gives Steel without those other resources.</English>
+		<English>Caveman2Cosmos: Naval units from the Industrial era will require access to the Steel resource. To get the Steel resource, build Steel Mills to produce Steel from Coal and Iron resources. If you don't have access to those resources, build the Ironworks National Wonder. It gives Steel without needing Coal and Iron.</English>
 		<French>Caveman2Cosmos: Il vous faudra de l'Acier pour construire Les Unités Navales à partir de l'Ere industrielle. Construisez des Aciéries pour en produire à partir du charbon et du fer. Si vous ne possédez pas ces ressources, Construisez L'Usine sidérurgique (projet National) qui vous permettra d'obtenir de l'acier sans conditions.</French>
 		<Italian>Caveman2Cosmos: Le unità navali dell'era industriale richiedono la risorsa Acciaio. Costruisci le Acciaierie per produrre Acciaio, partendo da Ferro e Carbone. Se no hai accesso a queste risorse, costruisci la meraviglia nazionale Ferriera. Produce Acciaio senza il bisogno di queste risorse.</Italian>
 		<Spanish>Caveman2Cosmos: Las unidades navales comienzan a requerir el recurso del Acero a partir de la Época industrial. Construye Acerías para producir Acero a partir del Carbón y el Hierro. Si no tienes acceso a estos recursos, construye la maravilla nacional de la Metalurgia. Proporciona Acero sin necesidad de estos otros recursos.</Spanish>
@@ -2749,7 +2749,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_ROM_HINT_14</Tag>
-		<English>Caveman2Cosmos: Mod has been designed for big maps and the for Snail, Eternity, and Epic game speeds.</English>
+		<English>Caveman2Cosmos: This Mod has been designed for big maps and for the Snail, Eternity, and Epic game speeds.</English>
 		<French>Caveman2Cosmos: Le Mod a été conçu pour de grandes cartes et la vitesse de jeu Snail.</French>
 		<German>Caveman2Cosmos: Mod has been designed for big maps and for Snail, Eternity, and Epic game speeds.</German>
 		<Italian>Caveman2Cosmos: Questa mod è stata ideata per grandi mappe e per le velocità di gioco Lumaca, Eternità e Epica.</Italian>
@@ -2759,7 +2759,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_ROM_HINT_15</Tag>
-		<English>Caveman2Cosmos: Movement costs have been changed for certain terrain types. See terrain and feature civilopedia pages.</English>
+		<English>Caveman2Cosmos: Movement costs have been changed for certain terrain types. See the Terrain and Features pages in the Civilopedia.</English>
 		<French>Caveman2Cosmos: Les coûts de déplacement ont été modifiés pour certains types de terrain. Plus de détails aux rubriques correspondantes de la Civilopedia.</French>
 		<Italian>Caveman2Cosmos: I costi di movimento sono stati cambiati per certi tipi di terreno. Guarda le pagine riguardanti il terreno nella Civilopedia.</Italian>
 		<Spanish>Caveman2Cosmos: El coste de movimiento por ciertos tipos de terreno ha cambiado. Véase las entradas sobre terrenos y características de la Civilopedia.</Spanish>
@@ -2768,7 +2768,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_ROM_HINT_16</Tag>
-		<English>Caveman2Cosmos: Game start year has been set to 200 000 BC.[NEWLINE]All game speeds have more turns than in normal BtS game.</English>
+		<English>Caveman2Cosmos: Game start year has been set to 200,000 BC.[NEWLINE]All game speeds have more turns than in normal BtS game.</English>
 		<French>Caveman2Cosmos: L'année de Démarrage du Jeu est de 200 000 av. J-C. Il y a donc plus de tours que dans le jeu normal, quelle que soit la vitesse de jeu.</French>
 		<Italian>Caveman2Cosmos: Il gioco inizia nel 200 000 a.C.e tutte le velocità di gioco hanno più turni rispetto al normale BtS.</Italian>
 		<Spanish>Caveman2Cosmos: Se ha establecido el año de comienzo de la partida en el 200 000 a.C. Todas las velocidades de juego duran más turnos que en una partida estándar de Beyond the Sword.</Spanish>
@@ -2777,7 +2777,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_ROM_HINT_17</Tag>
-		<English>Caveman2Cosmos: Citizens now consume 3 food instead of 2. There are new building types that give bonuses to city's food production.</English>
+		<English>Caveman2Cosmos: Citizens now consume 3 Food instead of 2. There are new building types that give bonuses to city's Food production.</English>
 		<French>Caveman2Cosmos: Les Citoyens consomment maintenant 3 Nourriture au lieu de 2. Il y a des nouveaux bâtiments permettant d'obtenir des bonus de production de Nourriture.</French>
 		<Italian>Caveman2Cosmos: I cittadini ora consumano 3 cibo invece di 2. Ci sono nuovi edifici che danno bonus alla produzione di cibo.</Italian>
 		<Spanish>Caveman2Cosmos: Los ciudadanos consumen ahora 3 de alimentos en vez de 2. Se han incorporado nuevos tipos de edificios que proporcionan bonificaciones a la producción de alimentos.</Spanish>
@@ -2786,7 +2786,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_ROM_HINT_18</Tag>
-		<English>Caveman2Cosmos: There are new resources and new improvement types. New techs give bonuses to some improvements.</English>
+		<English>Caveman2Cosmos: There are new resources and new Improvement types. New techs give bonuses to some Improvements.</English>
 		<French>Caveman2Cosmos: Il y a de nouvelles ressources et de nouvelles améliorations de terrain. Les Nouvelles Techs donnent des bonus à certaines de ces améliorations.</French>
 		<Italian>Caveman2Cosmos: Ci sono nuove risorse e nuovi miglioramenti. Nuove tecnologie danno bonus ad alcuni miglioramenti.</Italian>
 		<Spanish>Caveman2Cosmos: Hay nuevos recursos y mejoras de terreno. Las nuevas tecnologías proporcionan bonificaciones a algunas mejoras.</Spanish>
@@ -2795,7 +2795,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_ROM_HINT_19</Tag>
-		<English>Caveman2Cosmos: The Encyclopedia project gives access to all techs that 3 other Civilizations have discovered. If you're falling behind in tech race, try to complete this project.</English>
+		<English>Caveman2Cosmos: The Encyclopedia project gives access to all techs that 3 other Civilizations have discovered. If you're falling behind in the tech race, try to complete this project.</English>
 		<French>Caveman2Cosmos: Le Projet 'Encyclopédie' donne accès à toutes les technologies découverte par au moins 3 civilisation. Donnez la priorité à ce projet si vous êtes en retard en recherche.</French>
 		<Italian>Caveman2Cosmos: L'Enciclopedia dà accesso a tutte e tecnologie che altre 3 civiltà hanno scoperto. Se stai perdendo la corsa alle tecnologie, cerca di completare questo progetto.</Italian>
 		<Spanish>Caveman2Cosmos: El proyecto de la Enciclopedia da acceso a todas las tecnologías descubiertas por otras 3 civilizaciones. Intenta completar este proyecto si te quedas atrás en la carrera tecnológica.</Spanish>
@@ -2804,7 +2804,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_ROM_HINT_2</Tag>
-		<English>Caveman2Cosmos: Religions have been changed to be more unique. This means that effects of each religion are slightly different and religious buildings have new effects.</English>
+		<English>Caveman2Cosmos: Religions have been changed to be more unique. This means that effects of each Religion are slightly different and Religious Buildings have new effects.</English>
 		<French>Caveman2Cosmos: Les Religions ont été modifiées pour être plus uniques. Cela signifie que les effets de chaque religion sont légèrement différents, et que les bâtiments religieux entraînent de nouveaux effets.</French>
 		<Italian>Caveman2Cosmos: Le religioni sono state cambiate per essere più uniche. Questo significa che ogni religione ha un effetto diverso, oltre al fatto che gli edifici religiosi hanno nuovi effetti.</Italian>
 		<Spanish>Caveman2Cosmos: Se han modificado las religiones para hacerlas más únicas. Esto significa que los efectos de cada religión son diferentes, y que los edificios religiosos aportan nuevos efectos.</Spanish>
@@ -2822,7 +2822,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_ROM_HINT_21</Tag>
-		<English>Caveman2Cosmos: Colonist builds city of size 3 with several buildings and Pioneer builds city of size 4 with many buildings.</English>
+		<English>Caveman2Cosmos: Colonists build cities starting at size 3 with several buildings already constructed. Pioneers found even larger cities at size 4 with many more buildings in place.</English>
 		<French>Caveman2Cosmos: Les Colonistes construisent des Villes de taille initiale 3 avec déjà quelques bâtiments, et les Pionniers des Villes de taille 4 avec beaucoup de bâtiments.</French>
 		<Italian>Caveman2Cosmos: Il Colono costruisce città di dimensione 3 con molti edifici; il Pioniere costruisce città di dimensione 4 con ancora più edifici.</Italian>
 		<Spanish>Caveman2Cosmos: El Colonizador construye ciudades de tamaño 3 con diversos edificios, y el Pionero construye ciudades de tamaño 4 con aún más edificios.</Spanish>
@@ -2831,7 +2831,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_ROM_HINT_22</Tag>
-		<English>Caveman2Cosmos: Most improvements no longer cut down forest or jungle. You can now have access to resources in jungle plots earlier.</English>
+		<English>Caveman2Cosmos: Most Improvements no longer cut down forest or jungle. You can now have access to resources in jungle plots earlier.</English>
 		<French>Caveman2Cosmos: La plupart des améliorations de terrain ne suppriment pas la forêt ou la jungle. Les ressources sont donc accessibles plus tôt.</French>
 		<Italian>Caveman2Cosmos: La maggior parte dei miglioramenti non eliminano più le foreste o le giungle. Ora puoi avere accesso molto presto alle risorse nella giungla.</Italian>
 		<Spanish>Caveman2Cosmos: La mayoría de las mejoras de terreno no eliminan el bosque o la selva. Ahora puedes tener acceso a los recursos en casillas de selva más pronto.</Spanish>
@@ -2840,7 +2840,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_ROM_HINT_23</Tag>
-		<English>Caveman2Cosmos: Religious Shrines are no longer marked as great wonders. You can build them in their Holy City even if it has the max amount of Great Wonders already.</English>
+		<English>Caveman2Cosmos: Religious Shrines are no longer marked as Great Wonders. You can build them in their Holy City even if it has the max amount of Great Wonders already.</English>
 		<French>Caveman2Cosmos: Les Lieux Saints ne sont plus considérés comme des Merveilles et ne comptent donc pas dans la limite de Merveilles par villes.</French>
 		<Italian>Caveman2Cosmos: Gli altari religiosi non sono più meraviglie mondiali. Ora puoi costruirli nella relativa città santa anche se ha già costruito il massimo numero disponibile di Meraviglie.</Italian>
 		<Spanish>Caveman2Cosmos: Los Altares religiosos han dejado de ser considerados Grandes maravillas. Puedes construirlos en su Ciudad Santa aunque ya tengas el máximo número de Grandes maravillas construidas en ella.</Spanish>
@@ -2849,7 +2849,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_ROM_HINT_24</Tag>
-		<English>Caveman2Cosmos: All religious buildings spread religion.</English>
+		<English>Caveman2Cosmos: All Religious Buildings spread Religion.</English>
 		<French>Caveman2Cosmos: Tous les bâtiments religieux propagent la religion associée.</French>
 		<Italian>Caveman2Cosmos: Tutti gli edifici religiosi diffondono la propria religione.</Italian>
 		<Spanish>Caveman2Cosmos: Todos los edificios religiosos propagan su religión.</Spanish>
@@ -2866,7 +2866,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_ROM_HINT_26</Tag>
-		<English>Caveman2Cosmos: This modpack includes many other mods that improve the gameplay with numerous new features. You can read all about them from the RoM Concepts pedia pages.</English>
+		<English>Caveman2Cosmos: This modpack includes many other mods that improve the gameplay with numerous new features. You can read all about them from the RoM Concepts Civilopedia pages.</English>
 		<French>Caveman2Cosmos: Ce 'modpack' inclus d'autres mods qui améliorent le gameplay avec de nombreuses nouvelles fonctionnalités. Se reporter aux pages Concept Rom de la Civilopédia.</French>
 		<Spanish>Caveman2Cosmos: Este mod incluye muchas otras modificaciones que mejoran la jugabilidad con multitud de nuevas características. Para saber más sobre ellas, consulta las entradas de 'Conceptos de RoM' en la Civilopedia.</Spanish>
 		<Polish>Caveman2Cosmos: Ten modpack zawiera wiele innych mod&#243;w, kt&#243;re ulepszaj&#185; gr&#234; licznymi nowymi cechami. Mo&#191;esz przeczyta&#230; wszystko o nich w Koncepcjach ROM w sevopedii</Polish>
@@ -2874,7 +2874,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_ROM_HINT_27</Tag>
-		<English>Caveman2Cosmos: Most terrain improvements do not remove forests and there are now several late game improvements which can be placed only on forest and on jungle plots, so think carefully when to chop down forests and when it's not the best option.</English>
+		<English>Caveman2Cosmos: Most terrain Improvements do not remove forests and there are now several late game Improvements which can be placed only on forest and on jungle plots, so think carefully when to chop down forests and when it's not the best option.</English>
 		<French>Caveman2Cosmos: La plupart des améliorations de terrain ne suppriment pas la forêt et il y a des aménagements qui doivent être placés sur la forêt ou la jungle. Soyez donc vigilant et réfléchissez avant de systématiquement déforester.</French>
 		<Spanish>Caveman2Cosmos: La mayoría de las mejoras de terreno no eliminan los bosques, y se han incluido numerosas mejoras que solo pueden ser creadas sobre bosques o selvas hacia el final de la partida, así que medita cuidadosamente si es adecuado talar los bosques.</Spanish>
 		<Polish>Caveman2Cosmos: Wi&#234;kszo&#156;&#230; ulepsze&#241; terenu nie usuwa las&#243;w i jest teraz wi&#234;cej ulepsze&#241; w p&#243;&#159;niejszej grze, kt&#243;re mog&#185; by&#230; zbudowane tylko na lesie lub d&#191;ungli, wi&#234;c przemy&#156;l ka&#191;de &#156;cinanie lasu czy jest to korzystne dla Ciebie.</Polish>
@@ -2882,7 +2882,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_ROM_HINT_28</Tag>
-		<English>Caveman2Cosmos: Scientific victory requires you to learn most Transhuman era technologies and then to build enough Paradise Gardens and Ascension Gate Great Wonder.</English>
+		<English>Caveman2Cosmos: Scientific victory requires you to learn most Transhuman era technologies and then to build enough Paradise Gardens and the Ascension Gate Great Wonder.</English>
 		<French>Caveman2Cosmos: La Victoire Scientifique nécessite la découverte de la plupart des technologies de l'ère Transhumaine, puis de construire suffisament de Jardins du Paradis et la Merveille Porte Ascensionnelle.</French>
 		<Spanish>Caveman2Cosmos: La victoria científica requiere que descubras la mayoría de tecnologías de la Época transhumana, y posteriormente construir suficientes Jardines del Paraíso y la Gran maravilla del Portal de la Ascensión.</Spanish>
 		<Polish>Caveman2Cosmos: Zwyci&#234;stwo naukowe wymaga do odkrycia wi&#234;kszo&#156;ci technologi z Ery Transhumanizmu i wybudowania Rajskich Ogrod&#243;w i Bramy O&#156;wiecenia.</Polish>
@@ -2898,7 +2898,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_ROM_HINT_3</Tag>
-		<English>Caveman2Cosmos: Civics have new categories and new options have been added to original categories. All civics have been changed with new effects.</English>
+		<English>Caveman2Cosmos: Civics have new categories and new options have been added to original categories. All Civics have been changed with new effects.</English>
 		<French>Caveman2Cosmos: Les Doctrines sont réparties avec nouvelles catégories et de nouvelles options et combinaisons ont été ajoutées. Tous les effets des doctrines ont été modifiés.</French>
 		<Italian>Caveman2Cosmos: Le forme di governo hanno nuove categorie, ognuna con nuove opzioni. Tutte le forme di governo sono state cambiate, fornendo nuovi bonus e malus.</Italian>
 		<Spanish>Caveman2Cosmos: Hay nuevas categorías de principios, y se han añadido nuevas opciones a las categorías originales. Todos los principios han sufrido cambios en sus efectos.</Spanish>
@@ -2907,7 +2907,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_ROM_HINT_30</Tag>
-		<English>Caveman2Cosmos: Always keep healthy pool of gold in your treasury. It might help you to survive better from certain random events.</English>
+		<English>Caveman2Cosmos: Always keep a healthy pool of Gold in your treasury. It might help you to survive better from certain random events.</English>
 		<French>Caveman2Cosmos: Gardez toujours une bonne reserve d'or dans votre trésor. Cela permet de mieux surmonter certains événements aléatoires.</French>
 		<Spanish>Caveman2Cosmos: Mantén siempre una buena suma de oro en tu tesoro. Esto podría ayudarte a superar mejor algunos sucesos aleatorios.</Spanish>
 		<Polish>Caveman2Cosmos: Zawsze trzymaj jakie&#156; rezerwy w skarbcu. Pomo&#191;e Ci to lepiej prze&#191;y&#230; losowe wydarzenia.</Polish>
@@ -2934,7 +2934,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_ROM_HINT_33</Tag>
-		<English>Caveman2Cosmos: New eras have been added to this mod. Such as the Prehistoric, Trans-Human and Galactic Era.</English>
+		<English>Caveman2Cosmos: New eras have been added to this mod. Such as the Prehistoric, Transhuman, and Galactic eras.</English>
 		<French>Caveman2Cosmos: De nouvelles Eres ont été ajoutées dans ce mod. les Eres préhistorique, Transhumaine et galactique vous permettent d'effectuer plus des dizaine de nouvelles Recherches, d'accéder à de nouvelle unités...</French>
 		<Italian>Caveman2Cosmos: Questa Mod presenta nuove ere, come quella preistorica, quella transumana e quella galattica.</Italian>
 		<Spanish>Caveman2Cosmos: Se han añadido nuevas épocas en este mod, como la Prehistoria, la Época transhumana y la Época galáctica.</Spanish>
@@ -2952,7 +2952,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_ROM_HINT_35</Tag>
-		<English>Caveman2Cosmos: The AI has been improved so be prepared for their new tactics. For more information see Better BtS AI pedia pages in RoM Concepts pedia section.</English>
+		<English>Caveman2Cosmos: The AI has been improved so be prepared for their new tactics. For more information see Better BtS AI Civilopedia pages in RoM Concepts Civilopedia section.</English>
 		<French>Caveman2Cosmos: L'IA a été améliorée, attendez-vous à de nouvelles tactiques. Pous plus d'infos, consultez les pages 'Better BtS AI' dans les concepts ROM de la Civilopédia.</French>
 		<Italian>Caveman2Cosmos: L'IA è stata migliorata, quindi sii pronto alle nuove tattiche. Per ulteriori informazioni, guarda la pagina della Civilopedia Better BtS AI.</Italian>
 		<Spanish>Caveman2Cosmos: La IA ha sido mejorada, así que prepárate frente a sus nuevas tácticas. Para más información, véase la página 'IA de BtS mejorada' en la sección 'Conceptos de RoM' de la Civilopedia.</Spanish>
@@ -2979,7 +2979,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_ROM_HINT_38</Tag>
-		<English>Caveman2Cosmos: Pressing [CTRL+A] in the city screen allows you to demolish buildings and even abandon the whole city. Abandoning the city gives workers and settlers if the city is large enough.</English>
+		<English>Caveman2Cosmos: Pressing [CTRL+A] in the city screen allows you to demolish buildings and even abandon the whole city. Abandoning the city gives Workers and Settlers if the city is large enough.</English>
 		<French>Caveman2Cosmos: En appuyant sur [CTRL+A] dans l'écran de ville, vous pouvez démolir des bâtiments et même abandonner la ville entière. La population de la ville est convertie en ouvriers et colons.</French>
 		<Italian>Caveman2Cosmos: Premendo [CTRL+A] nella schermata cittadina puoi demolire gli edifici e anche abbandonare l'intera città. Abbandonare la città fornisce lavoratori e coloni, se la città è abbastanza grande.</Italian>
 		<Spanish>Caveman2Cosmos: Pulsar [CTRL+A] en la Vista de ciudad te permite demoler edificios, e incluso abandonar completamente la ciudad. Abandonar una ciudad te proporcionará Trabajadores y Colonos si ésta es lo suficientemente grande.</Spanish>
@@ -2988,7 +2988,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_ROM_HINT_39</Tag>
-		<English>Caveman2Cosmos: The Route system has been completely redesigned and during the game you gain access to 8 different route types. Each route type has different movement speeds and some require resources and gold to build them. Advanced routes might be the key to victory during war times.</English>
+		<English>Caveman2Cosmos: The Route system has been completely redesigned and during the game you gain access to 8 different route types. Each route type has different movement speeds and some require resources and Gold to build them. Advanced routes might be the key to victory during war times.</English>
 		<French>Caveman2Cosmos: Le système de Routes a été complètement revu, et comporte maintenant 8 type de routes. Chaque type de route engendre des vitesses de déplacement différentes et certaines routes nécessite des ressources particulières et de l'or pour être construite. Les routes avancées peuvent être la clé de la Victoire en temps de Guerre.</French>
 		<Italian>Caveman2Cosmos: Il sistema stradale è stato completamente ridisegnato e durante il gioco puoi costruire 8 diversi tipi di strade. Ogni strada influisce in diverso modo sul movimento; alcune richiedono oro e risorse per essere costruite. Le strade più moderne sono la chiave per la vittoria durante la guerra.</Italian>
 		<Spanish>Caveman2Cosmos: El sistema de caminos ha sido rediseñado por completo, y tendrás acceso a 8 tipos diferentes de caminos durante el curso de la partida. Cada tipo tiene una velocidad de movimiento distinta, y algunos de ellos requieren algún recurso y/u oro para poder construirlos. Una red de caminos avanzados puede ser la clave para la victoria en tiempos de guerra.</Spanish>
@@ -3015,7 +3015,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_ROM_HINT_5</Tag>
-		<English>Caveman2Cosmos: Guard your coastal cities. Harbors, Ports, Commercial Ports and International Port have 100% conquer success rate. Don't let your enemy to get access to economy bonuses that those buildings give.</English>
+		<English>Caveman2Cosmos: Guard your coastal cities. Harbors, Ports, Commercial Ports, and International Port have 100% conquer success rate. Don't let your enemy to get access to economy bonuses that those buildings give.</English>
 		<French>Caveman2Cosmos: Faites Garder vos cités côtières. Les ports ont des taux de succès de conquête de 100%. Ne laissez pas vos ennemis bénéficier de ces bonus.</French>
 		<Italian>Caveman2Cosmos: Difendi le tue città costiere. Tutti i porti hanno una probabilità del 100% di essere conquistati; non lasciare che il tuo nemico abbia accesso ai bonus economici forniti da questi edifici.</Italian>
 		<Spanish>Caveman2Cosmos: Protege tus ciudades costeras. Los Muelles, Puertos, Puertos comerciales y Puertos internacionales tienen una probabilidad de mantenerse tras una conquista del 100%. No permitas que tus enemigos tengan acceso a las bonificaciones económicas de estos edificios.</Spanish>
@@ -3024,7 +3024,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_ROM_HINT_6</Tag>
-		<English>Caveman2Cosmos: The number of wonders you can build in a city is now determined by the Cultural Level of the city. Now culture is far more important</English>
+		<English>Caveman2Cosmos: The number of Wonders you can build in a city is now determined by the Cultural Level of the city. Now Culture is far more important.</English>
 		<French>Caveman2Cosmos: Vous pouvez construire au maximum 5 Merveilles et 6 Grands projets nationaux par Ville. Planifiez donc bien l'emplacement de ceux-ci.</French>
 		<Italian>Caveman2Cosmos: Il numero di meraviglie che puoi costruire in una città dipende dal livello culturale della città. Ora la cultura è molto più importante.</Italian>
 		<Spanish>Caveman2Cosmos: El número de maravillas que puedes construir en una ciudad depende del nivel cultural de dicha ciudad. Ahora la cultura es bastante más importante.</Spanish>
@@ -3033,7 +3033,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_ROM_HINT_7</Tag>
-		<English>Caveman2Cosmos: There are many new unit categories in this mod. See civilopedia to learn more about these units.</English>
+		<English>Caveman2Cosmos: There are many new unit categories in this mod. See Civilopedia to learn more about these units.</English>
 		<French>Caveman2Cosmos: Il y a beaucoup de nouvelles unités dans ce mod. Voir la civilopédia pour en apprendre plus sur ces unités.</French>
 		<Italian>Caveman2Cosmos: Ci sono nuove categorie di unità in questa mod. Guarda la Civilopedia per saperne di più!</Italian>
 		<Spanish>Caveman2Cosmos: Existen multitud de nuevas categorías de unidades en este mod. Véase la Civilopedia para saber más sobre estas unidades.</Spanish>
@@ -3042,7 +3042,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_ROM_HINT_8</Tag>
-		<English>Caveman2Cosmos: Mines work differently now. They automatically upgrade to Shaft Mines just like Cottages upgrades to Towns. Mines also give +1 hammer when you build a road there.</English>
+		<English>Caveman2Cosmos: Mines work differently now. They automatically upgrade to Shaft Mines just like Cottages upgrades to Towns. Mines also give +1 Production when you build a road there.</English>
 		<French>Caveman2Cosmos: Les aménagements de terrain comme les mines peuvent également évoluer: Elles sont améliorées automatiquement en puits de mine (même système que pour les cottages). De plus, construire une route près d'une mine permet +1 en production.</French>
 		<Italian>Caveman2Cosmos: Le miniere funzionano diversamente adesso; diventano automaticamente Miniere a cielo aperto, allo stesso modo in cui i villaggi diventano paesi. Inoltre, costruendo una strada le miniere ottengono +1 produzione.</Italian>
 		<Spanish>Caveman2Cosmos: Las minas funcionan de forma distinta: ahora mejoran automáticamente a Minas profundas tal y como las Villas mejoran a Pueblos. También proporcionan +1 a la producción al construir un camino hacia ellas.</Spanish>

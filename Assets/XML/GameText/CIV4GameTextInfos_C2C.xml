@@ -206,7 +206,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GOODY_EXPERIENCE</Tag>
-		<English>The villagers have provided your unit with experience!</English>
+		<English>The villagers have provided your unit with Experience!</English>
 		<French>Les villageois ont amélioré l'expérience de votre unité !</French>
 		<German>Die Bewohner haben Eurer Einheit zusätzliche Erfahrung verschafft!</German>
 		<Italian>Gli abitanti del villaggio hanno migliorato l'esperienza della tua unità!</Italian>
@@ -214,7 +214,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GOODY_GOLD</Tag>
-		<English>The villagers give you gold!</English>
+		<English>The villagers give you Gold!</English>
 		<French>Les villageois vous donnent de l'or !</French>
 		<German>Die Bewohner geben Euch Gold!</German>
 		<Italian>Gli abitanti del villaggio ti hanno donato dell'oro!</Italian>
@@ -507,7 +507,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROJECTHELP_DOUBLE_SPEED_WITH</Tag>
-		<English>Double production speed with [LINK=%s1_BonusType]%s2_Bonus[\LINK]</English>
+		<English>Double Production speed with [LINK=%s1_BonusType]%s2_Bonus[\LINK]</English>
 		<French>Vitesse de production doublée avec : [LINK=%s1_BonusType]%s2_Bonus[\LINK]</French>
 		<German>Doppelte Produktionsgeschwindigkeit mit Bonusgut [LINK=%s1_BonusType]%s2_Bonus[\LINK]</German>
 		<Italian>Raddoppia la velocità di produzione del progetto con la risorsa [LINK=%s1_BonusType]%s2_Bonus[\LINK]</Italian>
@@ -684,14 +684,14 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_REQUIRES_STATE_RELIGION</Tag>
-		<English>[COLOR_WARNING_TEXT]You must have a State [ICON_RELIGION] and it must be in the city[COLOR_REVERT]</English>
+		<English>[COLOR_WARNING_TEXT]You must have a State [ICON_RELIGION] and it must be in the city[COLOR_REVERT].</English>
 		<French>[COLOR_WARNING_TEXT]Vous devez avoir une [ICON_RELIGION] d'Etat, et celle-ci doit être présente dans la Ville[COLOR_REVERT]</French>
 		<Russian>[COLOR_WARNING_TEXT]У вас должна быть [ICON_RELIGION] государственной религией и иметь последователей в этом городе[COLOR_REVERT]</Russian>
 		<Italian>[COLOR_WARNING_TEXT]Devi avere uno religione di stato [ICON_RELIGION] e deve trovarsi nella città[COLOR_REVERT]</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_REQUIRES_TECH_ANYONE</Tag>
-		<English>[COLOR_WARNING_TEXT]Requires [COLOR_TECH_TEXT][LINK=%s1_techType]%s2_tech[\LINK][COLOR_REVERT] (any player)[COLOR_REVERT]</English>
+		<English>[COLOR_WARNING_TEXT]Requires [COLOR_TECH_TEXT][LINK=%s1_techType]%s2_tech[\LINK][COLOR_REVERT] (any player)[COLOR_REVERT].</English>
 		<French>[COLOR_WARNING_TEXT]Nécessite [COLOR_TECH_TEXT][LINK=%s1_techType]%s2_tech[\LINK][COLOR_REVERT] (n'importe quel joueur)[COLOR_REVERT]</French>
 		<German>[COLOR_WARNING_TEXT]Erfordert die Technologie [COLOR_TECH_TEXT][LINK=%s1_techType]%s2_tech[\LINK][COLOR_REVERT] (alle Spieler)[COLOR_REVERT]</German>
 		<Italian>[COLOR_WARNING_TEXT][ICON_BULLET]Richiede qualsiasi giocatore abbia scoperto la tecnologia [COLOR_TECH_TEXT][LINK=%s1_techType]%s2_tech[\LINK][COLOR_REVERT]</Italian>
@@ -715,7 +715,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECHHELP_FIRST_RECEIVES</Tag>
-		<English>[ICON_BULLET]First to Discover receives a [COLOR_UNIT_TEXT][LINK=%s1_UnitType]%s2_UnitName[\LINK][COLOR_REVERT]</English>
+		<English>[ICON_BULLET]First to Discover receives a [COLOR_UNIT_TEXT][LINK=%s1_UnitType]%s2_UnitName[\LINK][COLOR_REVERT].</English>
 		<French>[ICON_BULLET]Faire cette découverte avant les autres octroie 1 [COLOR_UNIT_TEXT][LINK=%s1_UnitType]%s2_UnitName[\LINK][COLOR_REVERT]</French>
 		<German>[ICON_BULLET]Der erste Entdecker erhält eine Einheit: [COLOR_UNIT_TEXT][LINK=%s1_UnitType]%s2_UnitName[\LINK][COLOR_REVERT]</German>
 		<Italian>[ICON_BULLET]La [COLOR_HIGHLIGHT_TEXT]prima civiltà[COLOR_REVERT] che scopre questa tecnologia [COLOR_HIGHLIGHT_TEXT]riceverà un'unità[COLOR_REVERT] di tipo [COLOR_UNIT_TEXT][LINK=%s1_UnitType]%s2_UnitName[\LINK][COLOR_REVERT]</Italian> <!--tech Gathering in the Pedia -->
@@ -744,7 +744,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRADE_ADOPT_CIVIC</Tag>
-		<English>Would adopt the %s1_CvcOptionName civic [COLOR_HIGHLIGHT_TEXT]%s2_CvcName[COLOR_REVERT].</English>
+		<English>Would adopt the %s1_CvcOptionName Civic [COLOR_HIGHLIGHT_TEXT]%s2_CvcName[COLOR_REVERT].</English>
 		<French>Adoptera la doctrine (%s1_CvcOptionName) : [COLOR_HIGHLIGHT_TEXT]%s2_CvcName[COLOR_REVERT].</French>
 		<German>Würde annehmen %s1_CvcOptionName - [COLOR_HIGHLIGHT_TEXT]%s2_CvcName[COLOR_REVERT].</German>
 		<Italian>Adotterà la forma di governo %s1_CvcOptionName - [COLOR_HIGHLIGHT_TEXT]%s2_CvcName[COLOR_REVERT].</Italian>
@@ -762,7 +762,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITHELP_ATTACK_MOD_VS_CLASS</Tag>
-		<English>[ICON_BULLET]%D1_Change%% Attack vs. [LINK=%s2_ClassType]%s3_Class[\LINK]</English>
+		<English>[ICON_BULLET]%D1_Change%% Attack vs. [LINK=%s2_ClassType]%s3_Class[\LINK].</English>
 		<French>[ICON_BULLET]%D1_Change%% en attaque contre [LINK=%s2_ClassType]%s3_Class[\LINK]</French>
 		<German>[ICON_BULLET]%D1_Change%% Angriff gegen Einheit [LINK=%s2_ClassType]%s3_Class[\LINK]</German>
 		<Italian>[ICON_BULLET]Modificatore di [COLOR_HIGHLIGHT_TEXT]attacco[COLOR_REVERT] contro le unità di tipo [LINK=%s2_ClassType]%s3:2_Class[\LINK]: [COLOR_HIGHLIGHT_TEXT]%D1_Change%%[COLOR_REVERT]</Italian> <!-- uniti Bisont Rider -->
@@ -771,7 +771,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITHELP_BOMBARD_RATE</Tag>
-		<English>[ICON_BULLET]Can Bombard City Defenses (-%d1_Mod%%/Turn)</English>
+		<English>[ICON_BULLET]Can Bombard City Defenses (-%d1_Mod%%/Turn).</English>
 		<French>[ICON_BULLET]Peut bombarder les défenses d'une ville (-%d1_Mod%%/tour)</French>
 		<German>[ICON_BULLET]kann Stadtbefestigungen bombardieren (-%d1_Mod%%/Runde)</German>
 		<Italian>[ICON_BULLET]L'unità può [COLOR_HIGHLIGHT_TEXT]bombardare[COLOR_REVERT] le difese cittadine e ridurle di [COLOR_HIGHLIGHT_TEXT]-%d1_Mod%%[COLOR_REVERT] a turno</Italian> <!-- unit Arsonist -->
@@ -780,7 +780,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITHELP_BOMB_RATE</Tag>
-		<English>[ICON_BULLET]Can Destroy Tile Improvements and Bomb City Defenses (-%d1_Mod%%/Turn)</English>
+		<English>[ICON_BULLET]Can Destroy Tile Improvements and Bomb City Defenses (-%d1_Mod%%/Turn).</English>
 		<French>[ICON_BULLET]Peut détruire les aménagements et bombarder les défenses des villes (-%d1_Mod%%/tour)</French>
 		<German>[ICON_BULLET]kann Landschaftsverbesserungen zerstören und Stadtbefestigungen bombardieren (-%d1_Mod%%/Runde)</German>
 		<Italian>[ICON_BULLET]L'unità può [COLOR_HIGHLIGHT_TEXT]distruggere i miglioramenti[COLOR_REVERT] delle caselle e [COLOR_HIGHLIGHT_TEXT]bombardare[COLOR_REVERT] le difese cittadine ([COLOR_HIGHLIGHT_TEXT]-%d1_Mod%%[COLOR_REVERT] a turno)</Italian> <!-- unit Ornithopter -->

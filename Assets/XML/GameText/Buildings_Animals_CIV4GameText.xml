@@ -75,7 +75,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_PRESENCE_OF_ORIGIN_PEDIA</Tag>
-		<English>[COLOR_BUILDING_TEXT]Folklore Presence autobuildings[COLOR_REVERT] require some points of interest on map. Its purpose is having folklore related to features to be able to spread to all cities.</English>
+		<English>[COLOR_BUILDING_TEXT]Folklore Presence[COLOR_REVERT] autobuildings require some points of interest on map. Its purpose is having folklore related to features to be able to spread to all cities.</English>
 		<German>Es gibt verschiedene Präsenz-Effekte, die durch spezielle Geländemerkmale in der Umgebung deiner Städte automatisch aktiviert werden. Sie sind der Ursprung einer Reihe von Mythen, Sagen und Legenden, die im Spiel durch Folkloreeffekte repräsentiert werden.</German>
 		<Italian>Gli [COLOR_BUILDING_TEXT]edifici automatici presenza del folklore[COLOR_REVERT] si attivano automaticamente in base alle caratteristiche del terreno intorno alle tue città. Sono l'origine di una serie di miti, saghe e leggende, che poi si diffondono in tutte le città.</Italian>
 	</TEXT>
@@ -111,7 +111,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_REQUIREMENT_PEDIA</Tag>
-		<English>[COLOR_BUILDING_TEXT]Folklore Requirements[COLOR_REVERT] autobuilding gives Language tech requirement for Folklore.[NEWLINE]In this way this tech doesn't have list of more than 200 Folklore pseudobuildings. Try catching all Folklore buildings!</English>
+		<English>[COLOR_BUILDING_TEXT]Folklore Requirements[COLOR_REVERT] autobuildings give the Language tech requirement for Folklore.[NEWLINE]This way, the tech doesn't need a list of more than 200 Folklore pseudobuildings. Try catching all Folklore buildings!</English>
 		<German>Die [COLOR_BUILDING_TEXT]Folklore-Grundlagen[COLOR_REVERT] sind ein automatischer Effekt, der die Voraussetzung für verschiedene Folkloreeffekte legt. Diese mehr als 200 Pseudogebäude können mit dem Entdecken spezieller Tiere und Landschaftseigenarten errichtet werden. Versucht doch einmal, alle Folklore-"Gebäude" zu errichten!</German>
 		<Italian>L'edificio automatico [COLOR_BUILDING_TEXT]requisito per il folklore[COLOR_REVERT] richiede la tecnologia Linguaggio come prerequisito per il Folklore.[NEWLINE]Ci sono oltre 200 edifici automatici che possono essere costruiti, scoprendo animali o luoghi. Prova a costruirli tutti!</Italian>
 	</TEXT>

@@ -3,7 +3,7 @@
 <Civ4GameText xmlns="http://www.firaxis.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.firaxis.com ../Schema/Civ4Gametext.xsd">
 	<TEXT>
 		<Tag>TXT_KEY_MSG_BIODOME</Tag>
-		<English>[COLOR_SELECTED_TEXT]A baby [COLOR_UNIT_TEXT]%s1[COLOR_SELECTED_TEXT] has been born in the [COLOR_HIGHLIGHT_TEXT]Biodome[COLOR_SELECTED_TEXT]! Ooh, it looks cute![COLOR_REVERT]</English>
+		<English>[COLOR_SELECTED_TEXT]A baby [COLOR_UNIT_TEXT]%s1[COLOR_SELECTED_TEXT] has been born in the [COLOR_HIGHLIGHT_TEXT]Biodome[COLOR_SELECTED_TEXT]! Ooh it looks cute![COLOR_REVERT]</English>
 		<French>[COLOR_SELECTED_TEXT]Un bébé [COLOR_UNIT_TEXT]%s1[COLOR_SELECTED_TEXT] est né dans le [COLOR_HIGHLIGHT_TEXT]Biodome[COLOR_SELECTED_TEXT]! Oh, comme il est mignon![COLOR_REVERT]</French>
 		<Italian>[COLOR_SELECTED_TEXT]Un piccolo di [COLOR_UNIT_TEXT]%s1[COLOR_SELECTED_TEXT] è nato nel [COLOR_HIGHLIGHT_TEXT]Biodome[COLOR_SELECTED_TEXT]! Che carino![COLOR_REVERT]</Italian>
 		<Polish>[COLOR_SELECTED_TEXT]Maly [COLOR_UNIT_TEXT]%s1[COLOR_SELECTED_TEXT] urodzil sie w [COLOR_HIGHLIGHT_TEXT]Biodomie[COLOR_SELECTED_TEXT]! O, jaki slodziak![COLOR_REVERT]</Polish>
@@ -17,7 +17,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MSG_FREED_SLAVES_AS_IMMIGRANTS</Tag>
-		<English>Some (%d1) of your slaves in %s2 have become %d3 immigrants.</English>
+		<English>Some (%d1) of your Slaves in %s2 have become %d3 Immigrants.</English>
 		<French>Certains (%d1) de vos esclaves de %S2 sont devenus %d3 émigrants.</French>
 		<German>Some (%d1) of your slaves in %s2 have become population(%d3).</German>
 		<Italian>Alcuni (%d1) dei tuoi schiavi di %s2 sono diventati %d3 immigrati.</Italian>
@@ -27,7 +27,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MSG_IMMIGRATION</Tag>
-		<English>%s1_city welcomes the new immigrants with open arms.</English>
+		<English>%s1_city welcomes the new Immigrants with open arms.</English>
 		<French>%s1_city accueille les nouveaux immigrants à bras ouverts.</French>
 		<Russian>%s1_city приветствует новых иммигрантов с распростертыми объятиями.</Russian>
 		<Italian>La città di %s1_city accoglie i nuovi immigrati a braccia aperte.</Italian>
@@ -50,7 +50,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MSG_INQUISITION</Tag>
-		<English>An inquisition in %s1_city has successfully purged all non-state religions and gold was confiscated from the victims.</English>
+		<English>An inquisition in %s1_city has successfully purged all Non-State Religions and Gold was confiscated from the victims.</English>
 		<French>Une inquisition à %s1_city a permis de purger toutes les religions non officielles et l'or des infidèles à été confisqué.</French>
 		<German>Eine Inquisition in %s1_city hat alle nicht-staatlichen Religionen erfolgreich eliminiert. Es wurde Gold von den Opfern konfisziert.</German>
 		<Italian>L'inquisizione nella città di %s1_city ha eliminato con successo tutte le religioni diverse da quella di Stato. L'oro è stato confiscato alle vittime</Italian>
@@ -60,7 +60,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MSG_INQUISITION_FAIL</Tag>
-		<English>An inquisition in %s1_city has failed to purge all non-state religions.</English>
+		<English>An inquisition in %s1_city has failed to purge all Non-State Religions.</English>
 		<French>L'inquisition menée à %s1_city n'a pas permis de purger toutes les religions non officielles.</French>
 		<German>Einer Inquisition in %s1_city gelang es nicht, nicht-staatliche Religionen zu eliminieren.</German>
 		<Italian>L'inquisizione nella città di %s1_city ha fallito l'eliminazione delle religioni non di Stato.</Italian>
@@ -128,7 +128,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MSG_WONDER_CAPTURED</Tag>
-		<English>%s1 has captured the wonder %s2!</English>
+		<English>%s1 has captured the Wonder %s2!</English>
 		<French>%s1 a capturé la merveille: %s2!</French>
 		<German>%s1 hat das Wunder %s2 erobert!</German>
 		<Italian>%s1 ha catturato la meraviglia %s2!</Italian>
@@ -136,7 +136,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MSG_WONDER_CAPTURED_YOU</Tag>
-		<English>You have captured the wonder %s1!</English>
+		<English>You have captured the Wonder %s1!</English>
 		<French>Vous avez capturé la merveille: %s1!</French>
 		<German>Ihr habt das Wunder %s1 erobert!</German>
 		<Italian>Hai catturato la meraviglia %s1!</Italian>
@@ -144,7 +144,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MSG_WONDER_DESTROYED</Tag>
-		<English>[COLOR_SELECTED_TEXT]%s1[COLOR_WARNING_TEXT] has destroyed the wonder [COLOR_HIGHLIGHT_TEXT]%s2[COLOR_WARNING_TEXT]!</English>
+		<English>[COLOR_SELECTED_TEXT]%s1[COLOR_WARNING_TEXT] has destroyed the Wonder [COLOR_HIGHLIGHT_TEXT]%s2[COLOR_WARNING_TEXT]!</English>
 		<French>[COLOR_SELECTED_TEXT]%s1[COLOR_WARNING_TEXT] a détruit la merveille: [COLOR_HIGHLIGHT_TEXT]%s2[COLOR_WARNING_TEXT]!</French>
 		<German>[COLOR_SELECTED_TEXT]%s1[COLOR_WARNING_TEXT] hat das Wunder [COLOR_HIGHLIGHT_TEXT]%s2[COLOR_WARNING_TEXT] zerstört!</German>
 		<Italian>[COLOR_SELECTED_TEXT]%s1[COLOR_WARNING_TEXT] ha distrutto la meraviglia [COLOR_HIGHLIGHT_TEXT]%s2[COLOR_WARNING_TEXT]!</Italian>
@@ -152,7 +152,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MSG_WONDER_DESTROYED_YOU</Tag>
-		<English>You have destroyed the wonder [COLOR_HIGHLIGHT_TEXT]%s1[COLOR_WARNING_TEXT]!</English>
+		<English>You have destroyed the Wonder [COLOR_HIGHLIGHT_TEXT]%s1[COLOR_WARNING_TEXT]!</English>
 		<French>Vous avez détruit la merveille: [COLOR_HIGHLIGHT_TEXT]%s1[COLOR_WARNING_TEXT]!</French>
 		<German>Ihr habt das Wunder [COLOR_HIGHLIGHT_TEXT]%s1[COLOR_WARNING_TEXT] zerstört!</German>
 		<Italian>Hai distrutto la meraviglia [COLOR_HIGHLIGHT_TEXT]%s1[COLOR_WARNING_TEXT]!</Italian>

@@ -271,7 +271,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_REV_BRIBE_CITY_LARGE</Tag>
-		<English>A lavish gift, at %d gold, to remind them of your benevolence and keep them from rebelling for longer.</English>
+		<English>A lavish gift, at %d Gold, to remind them of your benevolence and keep them from rebelling for longer.</English>
 		<French>Un cadeau somptueux, de %d d'or, pour leur rappeler votre bienveillance et vous assurer la tranquilité des dissidents pour un bon moment.</French>
 		<German>Ein verschwenderisches Geschenk in Höhe von %d Gold, um sie an Ihre Wohltätigkeit zu erinnern und sie für längere Zeit vom Rebellieren abzuhalten.</German>
 		<Italian>Un regalo sontuoso (%d [ICON_GOLD]), per ricordare loro la tua benevolenza e impedirgli di ribellarsi per molto tempo.</Italian>
@@ -281,7 +281,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_REV_BRIBE_CITY_MED</Tag>
-		<English>A middle-sized gift at a cost of %d gold to push rebelling further from their thoughts.</English>
+		<English>A middle-sized gift at a cost of %d Gold to push rebelling further from their thoughts.</English>
 		<French>Un cadeau de %d d'or permettra de faire oublier un peu plus longtemps ces pensées de rébellions.</French>
 		<German>Ein mittelgroßes Geschenk in Höhe von %d Gold um den Gedanken an Rebellion etwas länger aus ihren Gedanken zu streichen.</German>
 		<Italian>Un discreto regalo (%d [ICON_GOLD]), per allontanare la rivolta dai loro pensieri...</Italian>
@@ -321,7 +321,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_REV_BRIBE_CITY_POOR</Tag>
-		<English>Unfortunately, you do not have enough gold in the treasury to be able to bribe this city.</English>
+		<English>Unfortunately, you do not have enough Gold in the treasury to be able to bribe this city.</English>
 		<French>Malheureusement, vous n'avez pas assez d'or dans le trésor pour pouvoir corrompre cette ville.</French>
 		<German>Leider haben Sie nicht genügend Gold in der Schatzkammer, um diese Stadt bestechen zu können.</German>
 		<Italian>Purtroppo non hai abbastanza oro per poter corrompere questa città.</Italian>
@@ -341,7 +341,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_REV_BRIBE_CITY_SMALL</Tag>
-		<English>A small gift of %d gold to buy some time before they contemplate rebelling.</English>
+		<English>A small gift of %d Gold to buy some time before they contemplate rebelling.</English>
 		<French>Un petit cadeau de %d d'or pour acheter un peu de temps avant qu'ils n'envisagent de se rebeller.</French>
 		<German>Ein kleines Geschenk von %d Gold, um sich etwas Zeit kaufen zu können bis sie eine Rebellion in Erwägung ziehen.</German>
 		<Italian>Un piccolo regalo (%d [ICON_GOLD]) per guadagnare un po' di tempo prima che scoppi una rivolta.</Italian>
@@ -541,7 +541,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_REV_CAP_LEAD_BUYOFF</Tag>
-		<English>If you win a fair and open election, the protests will disappear and your power will not be questioned. It may also be possible to guarantee you 'victory', if you catch my drift, but it will be costly and the slight could be detected with very negative consequences. Denying their request for an election will call into question your committment to open government and make your opponents more likely to fight in the future!</English>
+		<English>If you win a fair and open election, the protests will disappear and your power will not be questioned. It may also be possible to guarantee you 'victory', if you catch my drift, but it will be costly and the slight could be detected with very negative consequences. Denying their request for an election will call into question your commitment to open government and make your opponents more likely to fight in the future!</English>
 		<French>Si vous remportez une élection ouverte et juste, les protestations disparaîtront et votre légitimité ne sera pas remise en cause. Il vous est également possible de vous assurer d'une victoire par des moyens détournés, mais ce sera un peu plus coûteux et pourrait entraîner de très fâcheuses conséquences si découvert. Ignorer leur demande d'une élection mettra en question tout votre engagement envers la nation et pourrait inciter vos adversaires à se battre à l'avenir!</French>
 		<German>Wenn Sie eine ehrliche und offene Wahl gewinnen, so werden die Proteste verschwinden und Ihre Macht wird nicht in Frage gestellt. Es könnte auch möglich sein, Ihnen den 'Wahlsieg' zu garantieren, wenn Sie meine Anspielung verstehen, aber es wäre sehr teuer und die Sache könnte auffliegen, mit sehr negativen Konsequenzen. Ihre Ablehnung der Wahlen würde Ihr Bekenntnis zur freien Regierung in Zweifel ziehen, damit würde sich die Gefahr dass Ihre Gegner in den Kampf ziehen erhöhen!</German>
 		<Italian>Se vincerai libere ed oneste elezioni, le proteste cesseranno ed il tuo potere non sarà contestato. È possibile anche "garantirsi la vittoria" - non so se mi spiego - ma ti costerà e l'imbroglio potrebbe essere scoperto, con conseguenze molto negative. Rifiutare la loro richiesta di un'elezione metterà in dubbio il tuo impegno per un governo democratico ed inciterà i vostri avversari a combattere in futuro!</Italian>
@@ -561,7 +561,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_REV_CAP_LEAD_CONCLUSION</Tag>
-		<English>The protesters have not yet turned to violence, and there is still time to bring the situation to a peaceful conclusion. Like all good despots, you are of course the best hope for your people. You just need to remind them of the glory of your rule, either by improving their situation, vanquishing your enemies, or moving lots of soldiers into their towns. Erecting shiny statues of yourself will also quiet the dissenters.[NEWLINE][NEWLINE]However, if you cling to power now, you may face a civil war in the future! Honouring their request would bring only a temporary end to your rule, as there is every reason to believe your heirs will regain power in the future.</English>
+		<English>The protesters have not yet turned to violence, and there is still time to bring the situation to a peaceful conclusion. Like all good despots, you are of course the best hope for your people. You just need to remind them of the glory of your rule, either by improving their situation, vanquishing your enemies, or moving lots of soldiers into their towns. Erecting shiny statues of yourself will also quiet the dissenters.[NEWLINE][NEWLINE]However, if you cling to power now, you may face a civil war in the future! Honoring their request would bring only a temporary end to your rule, as there is every reason to believe your heirs will regain power in the future.</English>
 		<French>Les protestataires ne se sont pas encore tournés vers la violence, et il est encore temps pour apporter à cette situation une conclusion paisible. Comme tous les bons despotes, vous êtes naturellement le meilleur espoir pour vos personnes. Vous devez juste leur rappeler la gloire de votre règne, en améliorant leur situation, vainquant vos ennemis, ou en plaçant un bon nombre de soldats dans leurs villes. La construction des statues à votre effigie apaisera également les dissidents.[NEWLINE][NEWLINE]Cependant, si vous vous accrochez au pouvoir maintenant, vous pourriez faire face à une guerre civile à l'avenir! Honorer leur demande apporterait seulement une fin provisoire de votre règne, car il y a tout lieu de croire que vos héritiers regagneront le pouvoir très rapidement.</French>
 		<German>Die Demonstranten sind noch nicht gewalttätig, also haben Sie Zeit, das Problem friedlich zu lösen. Wie alle guten Despoten sind Sie selbstverständlich die größte Hoffnung für Ihr Volk. Sie müssen sie lediglich an den Ruhm Ihrer Herrschaft erinnern, indem Sie entweder ihre Situation verbessern, Ihre Feinde vernichten oder Massen von Soldaten in ihre Städte schicken. Das Aufrichten von glänzenden Statuen Ihrer selbst wird die Abweichler ebenfalls ruhigstellen.[NEWLINE][NEWLINE]Wenn Sie jetzt allerdings zu sehr an der Macht hängen, könnten Sie sich in der Zukunft einem Bürgerkrieg gegenübersehen! Ihre Forderung zu erfüllen würde Ihre Herrschaft nur kurzzeitig beenden, es gibt berechtigten Grund zu glauben, dass Ihre Erben in der Zukunft die Macht zurückgewinnen werden.</German>
 		<Italian>I dimostranti non sono ancora passati alla violenza e sei ancora in tempo per giungere ad una conclusione pacifica. Come tutti i despoti illuminati, sei certamente la miglior speranza per la tua gente. Ti occorre solo ricordar loro la gloria del tuo governo, sia con il miglioramento della loro condizione, sia sgominando i nemici, sia con il rafforzamento delle guarnigioni nelle loro città. Anche la costruzione di splendide statue con la tua immagine calmerà i dissidenti.[NEWLINE][NEWLINE]Tuttavia, se ora ti aggrapperai al potere, potrai essere costretto ad affrontare una guerra civile in avvenire! Accettare la loro richiesta porterebbe soltanto ad una provvisoria interruzione del tuo governo, poiché c'è ragione di credere che i tuoi eredi riprenderanno il potere in futuro.</Italian>
@@ -661,7 +661,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_REV_CAP_RULE_TERRIBLE</Tag>
-		<English>This is truly a terrible situation. Like all good despots, you are of course the best hope for your people, but some how they simply cannot see the light. Now you must decide what legacy you will leave.[NEWLINE][NEWLINE]You could meet the challenge with force, and your cities would rise up as</English>
+		<English>This is truly a terrible situation. Like all good despots, you are, of course, the best hope for your people, but somehow they simply cannot see the light. Now you must decide what legacy you will leave.[NEWLINE][NEWLINE]You could meet the challenge with force, and your cities would rise up as</English>
 		<French>C'est vraiment une situation terrible. Comme tous les bons despotes, vous êtes naturellement le meilleur espoir pour votre peuple, mais certaines ne semblent pas pouvoir voir la lumière. Maintenant vous devez décider quel legs vous laisserez.[NEWLINE][NEWLINE]Vous pourriez relever le défi par la force, et vos villes se soulèveront en tant que</French>
 		<German>Dies ist wirklich eine schreckliche Situation. Wie alle guten Despote sind Sie selbstverständlich die größte Hoffnung für Ihr Volk, aber irgendwie erkennen sie einfach das Licht nicht. Jetzt müssen Sie sich entscheiden, welches Vermächtnis Sie hinterlassen.[NEWLINE][NEWLINE]Sie können der Herausforderung mit Gewalt begegnen, und Ihre Städte würden sich erheben als</German>
 		<Italian>Questa è veramente una situazione terribile. Come tutti i despoti illuminati, sei certamente la miglior speranza per la tua gente, ma per qualche motivo essi non vedono la luce. Ora devi decidere che eredità lascerai.[NEWLINE][NEWLINE]Puoi affrontare la sfida con la forza e le tue città si solleveranno come</Italian>
@@ -671,7 +671,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_REV_CAP_SPEECH_DENY</Tag>
-		<English>Young people speaking their minds, power to the people![NEWLINE][NEWLINE]The beatniks and journalists have not yet turned to violence, and there is still time to bring the situation to a peaceful conclusion. Honouring their request is by far the quickest and easiest path to keeping these cities in your empire for the foreseeable future. However, if you decide to keep your current practices, you may yet have time to improve other aspects of these cities so they would have nothing to complain about even if they could complain. You may also choose to bribe the agitators and they will drop their cause and say whatever you want them to.</English>
+		<English>Young people speaking their minds, power to the people![NEWLINE][NEWLINE]The beatniks and journalists have not yet turned to violence, and there is still time to bring the situation to a peaceful conclusion. Honoring their request is by far the quickest and easiest path to keeping these cities in your empire for the foreseeable future. However, if you decide to keep your current practices, you may yet have time to improve other aspects of these cities so they would have nothing to complain about even if they could complain. You may also choose to bribe the agitators and they will drop their cause and say whatever you want them to.</English>
 		<French>Les jeunes expriment leur pensée, le Pouvoir aux peuple![NEWLINE][NEWLINE]les beatniks et les journalistes ne se sont pas encore tournés vers la violence, et il est encore temps pour donner à la situation une conclusion paisible. Honorer leur demande est le chemin de loin le plus rapide et le plus facile pour maintenir ces villes dans votre empire. Cependant, si vous décidez de garder vos pratiques courantes, vous pouvez encore avoir le temps pour améliorer d'autres aspects de ces villes, et ainsi ils n'auraient plus de raisons de se plainder. Vous pouvez également choisir de soudoyer les agitateurs influents et ils abandonneront leur cause et déclareront ce que vous voulez qu'ils disent.</French>
 		<German>Junge Menschen äußern sich frei, alle Macht dem Volk![NEWLINE][NEWLINE]Die Halbstarken und die Journalisten sind noch nicht gewalttätig, also haben Sie Zeit, das Problem friedlich zu lösen. Ihre Forderungen zu erfüllen ist jedoch der schnellste und einfachste Weg diese Städte in der absehbaren Zukunft in Ihrem Imperium zu behalten. Sollten Sie sich entscheiden, Ihr gegenwärtiges Verhalten beibehalten, so könnten Sie immer noch genügend Zeit haben, andere Aspekte dieser Städte so zu verbessern, dass sie sich über nichts beschweren können, selbst wenn sie dazu in der Lage wären. Sie können die Aufrürer auch bestechen und sie werden ihre Sache fallen lassen und sagen, was immer Sie von ihnen wollen.</German>
 		<Italian>Giovani che esprimono il proprio pensiero, potere alla gente![NEWLINE][NEWLINE]I contestatori non sono ancora passati alla violenza e sei ancora in tempo per giungere ad una conclusione pacifica. Accettare la loro richiesta è la scelta più rapida e più semplice per mantenere queste città nel tuo impero, per il prossimo futuro. Tuttavia, anche se decidi di proseguire l'attuale politica, sei ancora in tempo per migliorare altri aspetti di queste città in modo che non protestino ancora, anche se ne avrebbero motivo. Puoi anche scegliere di corrompere gli agitatori, essi cominceranno ad abbandonare la loro causa e diranno qualunque cosa tu vorrai.</Italian>
@@ -851,7 +851,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_REV_CULT_PEACE</Tag>
-		<English>Demonstrations and riots have broken out in the streets![NEWLINE][NEWLINE]Denying their request will anger the people and perhaps fuel their revolutionary spirit. While they won't take up arms now, if you deny their request you should take action to increase their happiness or bond with your culture and religion. If there is a next time, you may face an uprising!</English>
+		<English>Demonstrations and riots have broken out in the streets![NEWLINE][NEWLINE]Denying their request will anger the people and perhaps fuel their revolutionary spirit. While they won't take up arms now, if you deny their request you should take action to increase their Happiness or bond with your Culture and Religion. If there is a next time, you may face an uprising!</English>
 		<French>Des manifestations et des émeutes ont éclaté dans les rues![NEWLINE][NEWLINE]Ignorer les revendications de vos citoyens va les mettre en colère et raviver leur esprit révolutionnaire. Bien qu'ils n'ont pas choisi de prendre les armes pour l'intant, vous devriez prendre des mesures pour augmenter leur bonheur ou leur souhait de culture ou de religion. S'il y a une prochaine fois, il pourrait y avoir un soulèvement!</French>
 		<German>Demonstrationen und Aufstände sind in den Straßen ausgebrochen![NEWLINE][NEWLINE]Ihre Forderungen zu verweigern wird die Leute verärgern und vielleicht ihren revolutionären Geist beflügeln. Wenn Sie ihre Forderungen ablehnen, so werden sie noch nicht zu den Waffen greifen. Sie sollten jedoch Maßnahmen ergreifen, um ihre Zufriedenheit zu erhöhen oder die Bindung an Ihre Kultur und Religion zu verbessern. Beim nächsten mal könnte es einen Aufstand geben!</German>
 		<Italian>Sono scoppiati dimostrazioni e tumulti![NEWLINE][NEWLINE]Rifiutare le loro richieste farà aumentare la rabbia e rinforzare lo spirito rivoluzionario. Anche se ora non prenderanno le armi, se non accetti le loro richieste dovresti comunque intervenire per aumentare la loro felicità e i legami con la tua cultura e la tua religione. Se ci sarà una prossima volta, potresti affrontare una vera rivolta!</Italian>
@@ -1021,7 +1021,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_REV_HL_EMAN_CIVIC</Tag>
-		<English>in your civic policy. Mass demonstrations have broken out, bringing production in your cities to a halt!</English>
+		<English>in your Civic policy. Mass demonstrations have broken out, bringing production in your cities to a halt!</English>
 		<French>dans votre doctrine civique. Les manifestations de masse ont éclaté, stoppant la production dans vos villes!</French>
 		<German>in Ihren Gesellschaftsformen. Massendemonstrationen sind ausgebrochen und die Produktion in Ihren Städten wurde zum Stillstand gebracht!</German>
 		<Italian>come forma di governo. Sono scoppiate manifestazioni di piazza, bloccando la produzione nelle tue città!</Italian>
@@ -1111,7 +1111,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_REV_HL_HOLY_RECLAIM</Tag>
-		<English>You must show your devotion by reclaiming your holy city,</English>
+		<English>You must show your devotion by reclaiming your Holy City,</English>
 		<French>Vous devez montrer votre dévotion en reprenant votre Ville Sainte,</French>
 		<German>Sie müssen Ihre Hingabe zeigen, indem Sie Ihre heilige Stadt zurückfordern,</German>
 		<Italian>Devi mostrare la tua devozione riconquistando la città santa,</Italian>
@@ -1161,7 +1161,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_REV_HL_HOLY_WORTHY</Tag>
-		<English>they are no longer worthy of holding the holy city of</English>
+		<English>they are no longer worthy of holding the Holy City of</English>
 		<French>ils ne sont plus dignes de posséder la Ville Sainte de</French>
 		<German>sie sind nicht mehr würdig, die heilige Stadt zu besitzen</German>
 		<Italian>non sono più degni di possedere la città santa di</Italian>
@@ -1231,7 +1231,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_REV_HUMAN_ELEC_BUYOFF</Tag>
-		<English>Success! You have successfully bought a victory in the election.[NEWLINE][NEWLINE]Your underhanded tactics and bribes were not detected and the rebellious cities accept their defeat in the polls and settle down for the time being. However, it will still be prudent to increase their happiness so you don't face this again soon.</English>
+		<English>Success! You have successfully bought a victory in the election.[NEWLINE][NEWLINE]Your underhanded tactics and bribes were not detected and the rebellious cities accept their defeat in the polls and settle down for the time being. However, it will still be prudent to increase their Happiness so you don't face this again soon.</English>
 		<French>Succès! Vous avez avec succès 'acheté' la victoire de cette l'élection.[NEWLINE][NEWLINE]Votre machination et la corruption n'ont pas été détectés et les villes rebelles acceptent leur défaite dans les scrutins et se résignent pour l'instant. Cependant, il serait prudent d'augmenter leur bonheur afin de ne plus avoir à faire face à de tels événements.</French>
 		<German>Erfolg! Sie haben sich erfolgreich einen Wahlsieg gekauft.[NEWLINE][NEWLINE]Ihre hinterhältigen Taktiken und Bestechungsgelder wurden nicht aufgedeckt und die rebellischen Städte nehmen ihre Niederlage in den Abstimmungen an und und beruhigen sich vorläufig. Dennoch wird es weiterhin sinnvoll sein ihre Zufriedenheit zu erhöhen, um so etwas nicht bald wieder zu erleben.</German>
 		<Italian>Successo! Hai comprato la vittoria delle elezioni.[NEWLINE][NEWLINE]Le tue losche tattiche e le tangenti non sono state scoperte: le città ribelli accettano la sconfitta elettorale e cessano le ostilità per il momento. Tuttavia, sarebbe prudente aumentare la loro felicità per non affrontare presto lo stesso pericolo...</Italian>
@@ -1251,7 +1251,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_REV_HUMAN_ELEC_VICTORY</Tag>
-		<English>Victory! You have won the election![NEWLINE][NEWLINE]The revolting cities accept the national decision and settle down for the time being. However, it will still be prudent to increase their happiness so you don't face this again soon.</English>
+		<English>Victory! You have won the election![NEWLINE][NEWLINE]The revolting cities accept the national decision and settle down for the time being. However, it will still be prudent to increase their Happiness so you don't face this again soon.</English>
 		<French>Victoire! Vous avez remporté l'élection![NEWLINE][NEWLINE]Les villes révoltées acceptent la décision nationale et se résignent pour l'instant. Cependant, il serait prudent d'augmenter leur bonheur afin de ne plus avoir à faire face à de tels événements.</French>
 		<German>Sieg! Sie haben die Wahl gewonnen![NEWLINE][NEWLINE]Die revoltierenden Städte akzeptieren die Entscheidung und beruhigen sich vorläufig. Dennoch wird es weiterhin sinnvoll sein ihre Zufriedenheit zu erhöhen, um so etwas nicht bald wieder zu erleben.</German>
 		<Italian>Vittoria! Hai vinto le elezioni![NEWLINE][NEWLINE]Le città in rivolta accettano la decisione nazionale e cessano le ostilità per il momento. Tuttavia, sarebbe prudente aumentare la loro felicità per non trovarsi presto di fronte a questo pericolo.</Italian>
@@ -1300,7 +1300,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_REV_IND_PEACE_ACTION</Tag>
-		<English>While they are not yet contemplating war, if you deny their request you should take immediate action to improve their situation. Increasing culture or strengthening the garrisons may lessen their resolve.</English>
+		<English>While they are not yet contemplating war, if you deny their request you should take immediate action to improve their situation. Increasing Culture or strengthening the garrisons may lessen their resolve.</English>
 		<French>Tandis qu'ils n'envisagent pas encore la guerre, si vous ignorez leur demande, vous devriez prendre des mesures immédiates pour améliorer leur situation. L'accroissement de la culture ou le renforcement des garnisons peut diminuer leur résolution.</French>
 		<German>Auch wenn sie noch keinen Krieg erwägen, sollten Sie, falls Sie ihre Forderung ablehnen sollten, sofort Maßnahmen ergreifen, um ihre Situation zu verbessern. Wachsende Kultur oder die Verstärkung der Garnisonen könnten ihre Entschlossenheit reduzieren.</German>
 		<Italian>Anche se ancora non stanno ancora pensando alla guerra, se non accetterai la loro richiesta dovresti agire rapidamente per migliorare la loro situazione. Aumentare l'influsso culturale o rinforzare le guarnigioni può far cambiare loro idea.</Italian>
@@ -1310,7 +1310,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_REV_IND_PEACE_ACTION2</Tag>
-		<English>You can also choose to payoff the revolutionaries. In exchange some gold, the revolutionaries will drop their grievances for the time being. Be warned, however, other cities may be more inclined to rebel after seeing you hand out money.</English>
+		<English>You can also choose to payoff the revolutionaries. In exchange for some Gold, the revolutionaries will drop their grievances for the time being. Be warned, however, other cities may be more inclined to rebel after seeing you hand out money.</English>
 		<French>Vous pouvez également choisir de soudoyer les révolutionnaires. En échange d'or, les révolutionnaires laisseraient tomber leurs réclamations pour l'instant. Soyez averti, cependant, d'autres villes peuvent être plus enclins pour se rebeller après vous avoir vu distribuer de l'argent.</French>
 		<German>Sie können auch wählen, die Revolutionäre auszuzahlen. Im Austausch für etwas Gold werden die Revolutionäre ihre Sorgen für eine Weile vergessen. Seien Sie jedoch gewarnt, dass andere Städte eher zu einer Rebellion neigen, wenn sie sehen, dass Sie Geld verteilen.</German>
 		<Italian>Puoi anche pensare di corrompere i ribelli. In cambio di oro, i ribelli abbasseranno le loro pretese, per il momento. Attento, però, altre città possono diventare più desiderose di ribellarsi, dopo che hanno capito che sei disposto a concedere il tuo oro...</Italian>
@@ -1629,7 +1629,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_REV_MESS_YOUR_CAPTURE_GOLD</Tag>
-		<English>The grateful city of %s gives you %d gold to support the rebellion!</English>
+		<English>The grateful city of %s gives you %d Gold to support the rebellion!</English>
 		<French>La ville de %s est très reconnaissante et vous donne %d d'or pour soutenir la rébellion!</French>
 		<German>Die dankbare Stadt %s gibt Ihnen %d Gold, um den Aufstand zu unterstützen!</German>
 		<Italian>La città di %s, per riconoscenza, ti dona %d oro per sostenere la rivolta!</Italian>
@@ -2006,7 +2006,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_REV_REL_CHANGE</Tag>
-		<English>requesting that you change your state religion to</English>
+		<English>requesting that you change your State Religion to</English>
 		<French>demandent que vous changiez votre religion d'état en</French>
 		<German>fordern, dass Sie Ihre Staatsreligion ändern zu</German>
 		<Italian>chiedendo che la religione di stato divenga</Italian>
@@ -2136,7 +2136,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_REV_REL_STATE_REL</Tag>
-		<English>have your current state religion.</English>
+		<English>have your current State Religion.</English>
 		<French>ont votre religion d'état actuelle.</French>
 		<German>haben die aktuelle Staatsreligion.</German>
 		<Italian>ha la tua attuale religione di stato.</Italian>
@@ -2156,7 +2156,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_REV_REL_THEOCRACY2</Tag>
-		<English>They have been oppressed for too long, and desire you to switch your religious civic policy to</English>
+		<English>They have been oppressed for too long, and desire you to switch your religious Civic policy to</English>
 		<French>Ils ont été opprimés trop longtemps, et désirent que vous changiez votre politique civique religieuse pour</French>
 		<German>Sie sind zu lang unterdrückt worden und sie wünschen, dass Sie Ihre religiöse Gesellschaftsform wechseln zu</German>
 		<Italian>Sono stati oppressi per troppo tempo e vogliono che tu cambi la forma di governo religiosa in</Italian>
