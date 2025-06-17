@@ -9397,6 +9397,7 @@
 			<iCostCountModifier>0</iCostCountModifier>
 			<iCostMaterialsModifier>1</iCostMaterialsModifier>
 			<iCostComplexityModifier>2</iCostComplexityModifier>
+			<bFreshWater>1</bFreshWater>
 			<BonusProductionModifiers>
 				<BonusProductionModifier>
 					<BonusType>BONUS_STONE</BonusType>
@@ -9562,7 +9563,6 @@
 			<Description>TXT_KEY_BUILDING_TEMPLE_OF_AH_CACAO</Description>
 			<Civilopedia>TXT_KEY_BUILDING_TEMPLE_OF_AH_CACAO_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_MILITARY</Advisor>
-			<Help>TXT_KEY_BUILDING_TEMPLE_OF_AH_CACAO_HELP</Help>
 			<ArtDefineTag>ART_DEF_BUILDING_TEMPLE_OF_AH_CACAO</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_GREAT_JAGUAR_TEMPLE</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -15479,7 +15479,7 @@
 			<PrereqNotInCityBuildings>
 				<BuildingType>BUILDING_C_AC_NEANDERTHAL</BuildingType>
 			</PrereqNotInCityBuildings>
-			<ObsoleteTech>TECH_COPPER_WORKING</ObsoleteTech>
+			<ObsoleteTech>TECH_SEDENTARY_LIFESTYLE</ObsoleteTech>
 			<iCost>60</iCost>
 			<iCostSizeModifier>0</iCostSizeModifier>
 			<iCostCountModifier>0</iCostCountModifier>

@@ -593,7 +593,7 @@
 		<SpecialistInfo>
 			<Type>SPECIALIST_GREAT_ADMIRAL</Type>
 			<Description>TXT_KEY_SPECIALIST_GREAT_ADMIRAL</Description>
-			<Civilopedia>TXT_KEY_CONCEPT_GREAT_GENERALS_PEDIA</Civilopedia>
+			<Civilopedia>TXT_KEY_CONCEPT_GREAT_ADMIRALS_PEDIA</Civilopedia>
 			<Texture>Art/Interface/MainScreen/CityScreen/specialist_great_admiral.dds</Texture>
 			<Categories>
 				<Category>CATEGORY_SPECIALIST_GROUP_MILITARY</Category>

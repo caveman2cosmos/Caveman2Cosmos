@@ -1268,6 +1268,10 @@
 			<iUpgradeTime>15</iUpgradeTime>
 			<iAirBombDefense>5</iAirBombDefense>
 			<iPillageGold>40</iPillageGold>
+			<bCarriesIrrigation>1</bCarriesIrrigation>
+			<IrrigatedYieldChange>
+				<iYield>1</iYield>
+			</IrrigatedYieldChange>
 			<BonusTypeStructs>
 				<BonusTypeStruct>
 					<BonusType>BONUS_APPLE</BonusType>
@@ -1542,6 +1546,12 @@
 				<iYieldChange>0</iYieldChange>
 				<iYieldChange>4</iYieldChange>
 			</YieldChanges>
+			<bCarriesIrrigation>1</bCarriesIrrigation>
+			<IrrigatedYieldChange>
+				<iYield>0</iYield>
+				<iYield>0</iYield>
+				<iYield>1</iYield>
+			</IrrigatedYieldChange>
 			<PrereqTech>TECH_CALENDAR</PrereqTech>
 			<iAdvancedStartCost>30</iAdvancedStartCost>
 			<iUpgradeTime>15</iUpgradeTime>

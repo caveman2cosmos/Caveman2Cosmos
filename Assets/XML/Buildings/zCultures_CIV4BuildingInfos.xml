@@ -60,7 +60,7 @@
 			<Civilopedia>TXT_KEY_BUILDING_C_AC_PEDIA</Civilopedia>
 			<Help>TXT_KEY_BUILDING_C_AC_HELP</Help>
 			<ArtDefineTag>ART_DEF_BUILDING_CULTURE_NEANDERTHAL</ArtDefineTag>
-			<ObsoleteTech>TECH_COPPER_WORKING</ObsoleteTech>
+			<ObsoleteTech>TECH_SEDENTARY_LIFESTYLE</ObsoleteTech>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -239,7 +239,7 @@
 				<BuildingType>BUILDING_C_N_NEANDERTHAL</BuildingType>
 			</PrereqNotInCityBuildings>
 			<FreeBuilding>BUILDING_C_AC_NEANDERTHAL</FreeBuilding>
-			<ObsoleteTech>TECH_COPPER_WORKING</ObsoleteTech>
+			<ObsoleteTech>TECH_SEDENTARY_LIFESTYLE</ObsoleteTech>
 			<bAutoBuild>1</bAutoBuild>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
@@ -633,7 +633,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_C_AC_NEANDERTHAL</BuildingType>
 			</PrereqInCityBuildings>
-			<ObsoleteTech>TECH_COPPER_WORKING</ObsoleteTech>
+			<ObsoleteTech>TECH_SEDENTARY_LIFESTYLE</ObsoleteTech>
 			<iCost>100</iCost>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -976,7 +976,7 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<ObsoleteTech>TECH_COPPER_WORKING</ObsoleteTech>
+			<ObsoleteTech>TECH_SEDENTARY_LIFESTYLE</ObsoleteTech>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
 			<FreeBuilding>BUILDING_C_AC_NEANDERTHAL</FreeBuilding>
