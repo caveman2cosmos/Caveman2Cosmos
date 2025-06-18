@@ -15026,7 +15026,7 @@ const {
 		}
 		if (directCommerceValue != 0)
 		{
-			// Make sure we don't reduce 1 to 0!
+			// Make sure we don't reduce 1 to 0! TEST TEST
 			if (directCommerceValue > 1) directCommerceValue /= 2;
 
 			if (bFinancialTrouble && iI == COMMERCE_GOLD)
