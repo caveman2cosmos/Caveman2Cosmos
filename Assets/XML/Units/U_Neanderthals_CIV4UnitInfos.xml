@@ -1408,7 +1408,7 @@
 				<BuildingType>BUILDING_C_AC_NEANDERTHAL</BuildingType>
 				<BuildingType>BUILDING_C_L_NEANDERTHAL</BuildingType>
 			</PrereqAndBuildings>
-			<ObsoleteTech>TECH_COPPER_WORKING</ObsoleteTech>
+			<ObsoleteTech>TECH_SEDENTARY_LIFESTYLE</ObsoleteTech>
 			<UnitUpgrades>
 				<UnitType>UNIT_ENFORCERS</UnitType>
 			</UnitUpgrades>
@@ -2196,7 +2196,7 @@
 			<UnitUpgrades>
 				<UnitType>UNIT_WAR_ELEPHANT</UnitType>
 			</UnitUpgrades>
-			<ObsoleteTech>TECH_COPPER_WORKING</ObsoleteTech>
+			<ObsoleteTech>TECH_SEDENTARY_LIFESTYLE</ObsoleteTech>
 			<iCost>122</iCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>1</iMoves>
@@ -3257,7 +3257,7 @@
 			<iCost>56</iCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>
-			<iCombat>4</iCombat>
+			<iCombat>3</iCombat>
 			<iXPValueAttack>2</iXPValueAttack>
 			<iXPValueDefense>1</iXPValueDefense>
 			<iCityAttack>-75</iCityAttack>
@@ -3641,7 +3641,83 @@
 						</Outcome>
 					</ActionOutcomes>
 				</Action>
-				<!-- <Action>
+				<Action>
+					<MissionType>MISSION_JOIN_CITY_AS_SLAVE_FOOD</MissionType>
+					<ActionOutcomes>
+						<Outcome>
+							<OutcomeType>OUTCOME_JOIN_AS_SLAVE_FOOD</OutcomeType>
+							<iChance>100</iChance>
+							<PlotCondition>
+								<And>
+									<Greater>
+										<Python>getNumNonSpecialistSlavesFood</Python>
+										<Constant>0</Constant>
+									</Greater>
+									<Is>TAG_OWNED</Is>
+								</And>
+							</PlotCondition>
+							<PythonCallback>doAddSettledSlaveFood</PythonCallback>
+						</Outcome>
+					</ActionOutcomes>
+				</Action>
+				<Action>
+					<MissionType>MISSION_JOIN_CITY_AS_SLAVE_PRODUCTION</MissionType>
+					<ActionOutcomes>
+						<Outcome>
+							<OutcomeType>OUTCOME_JOIN_AS_SLAVE_PRODUCTION</OutcomeType>
+							<iChance>100</iChance>
+							<PlotCondition>
+								<And>
+									<Greater>
+										<Python>getNumNonSpecialistSlavesProduction</Python>
+										<Constant>0</Constant>
+									</Greater>
+									<Is>TAG_OWNED</Is>
+								</And>
+							</PlotCondition>
+							<PythonCallback>doAddSettledSlaveProduction</PythonCallback>
+						</Outcome>
+					</ActionOutcomes>
+				</Action>
+				<Action>
+					<MissionType>MISSION_JOIN_CITY_AS_SLAVE_ENTERTAINMENT</MissionType>
+					<ActionOutcomes>
+						<Outcome>
+							<OutcomeType>OUTCOME_JOIN_AS_SLAVE_ENTERTAINMENT</OutcomeType>
+							<iChance>100</iChance>
+							<PlotCondition>
+								<And>
+									<Greater>
+										<Python>getNumNonSpecialistSlavesEntertainment</Python>
+										<Constant>0</Constant>
+									</Greater>
+									<Is>TAG_OWNED</Is>
+								</And>
+							</PlotCondition>
+							<PythonCallback>doAddSettledSlaveEntertainment</PythonCallback>
+						</Outcome>
+					</ActionOutcomes>
+				</Action>
+				<Action>
+					<MissionType>MISSION_JOIN_CITY_AS_SLAVE_MILITARY</MissionType>
+					<ActionOutcomes>
+						<Outcome>
+							<OutcomeType>OUTCOME_JOIN_AS_SLAVE_MILITARY</OutcomeType>
+							<iChance>100</iChance>
+							<PlotCondition>
+								<And>
+									<Greater>
+										<Python>getNumNonSpecialistSlavesMilitary</Python>
+										<Constant>0</Constant>
+									</Greater>
+									<Is>TAG_OWNED</Is>
+								</And>
+							</PlotCondition>
+							<PythonCallback>doAddSettledSlaveMilitary</PythonCallback>
+						</Outcome>
+					</ActionOutcomes>
+				</Action>
+				<Action>
 					<MissionType>MISSION_CAPTIVE_UPGRADE_TO_GATHERER</MissionType>
 					<iCost>
 						<Adapt>
@@ -3664,7 +3740,7 @@
 							</PlotCondition>
 						</Outcome>
 					</ActionOutcomes>
-				</Action> -->
+				</Action>
 				<Action>
 					<MissionType>MISSION_CAPTIVE_UPGRADE_TO_NEANDERTHAL_WARRIOR</MissionType>
 					<iCost>

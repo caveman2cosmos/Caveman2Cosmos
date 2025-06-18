@@ -38013,7 +38013,6 @@
 			<Buildings>
 				<BuildingType>BUILDING_TRADITION_WORK_ETHIC</BuildingType>
 				<BuildingType>BUILDING_IRONWORKS</BuildingType>
-				<BuildingType>BUILDING_PONT_DU_GARD</BuildingType>
 				<BuildingType>BUILDING_HQ_CREATIVE_CONSTRUCTIONS</BuildingType>
 				<BuildingType>BUILDING_HQ_MINING_INC</BuildingType>
 				<BuildingType>BUILDING_HQ_BULLSEYE</BuildingType>
@@ -38557,7 +38556,7 @@
 			</MapCategoryTypes>
 			<DefaultUnitAI>UNITAI_GREAT_ADMIRAL</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_GREAT_ADMIRAL</Description>
-			<Civilopedia>TXT_KEY_CONCEPT_GREAT_GENERALS_PEDIA</Civilopedia>
+			<Civilopedia>TXT_KEY_CONCEPT_GREAT_ADMIRALS_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<UnitAIs>
 				<UnitAI>

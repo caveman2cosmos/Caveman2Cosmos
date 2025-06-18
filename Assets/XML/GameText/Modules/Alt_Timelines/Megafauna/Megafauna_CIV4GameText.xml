@@ -142,7 +142,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HERITAGE_BEARS_PEDIA</Tag>
-		<English>Instead of only being able to train Bear units in the city you built the wonder in this building allows them to be built in any of your cities. It can only be built in the ciy with the Bear Trainer World Wonder.</English>
+		<English>Rather than being restricted to training Bear units only in the city where the wonder is built, this building allows you to train Bear units in any of your cities. However, it can only be constructed in the city with the Bear Trainer World Wonder.</English>
 		<Italian>Invece di poter addestrare le unità orso solo nella città in cui hai costruito la meraviglia, questo edificio permette di costruirle in qualsiasi tua città. Può essere costruito solo in una città con la meraviglia mondiale addestramento orsi.</Italian>
 		<Russian>Можно возвести исключительно в городе с великим чудом «Дрессировка медведей». Позволяет создавать медвежьи подразделения в любом вашем поселении, а не только в том, где стоит вышеупомянутое чудо.</Russian>
 		<Polish>Zamiast m&#243;c jedynie szkoli&#230; jednostki Nied&#159;wiedzi w mie&#156;cie, w kt&#243;rym zbudowa&#179;e&#156; cud, mo&#191;esz je budowa&#230; w dowolnym z Twoich miast. Mo&#191;na go zbudowa&#230; tylko w mie&#156;cie, w kt&#243;rym znajduje si&#234; Cud &#140;wiata Trenera Nied&#159;wiedzi.</Polish>
@@ -176,6 +176,14 @@
 		<Russian>Дрессировка кошки - это процесс изменения поведения дикой кошки в развлекательных или дружеских целях. Дрессировка обычно используется для уменьшения нежелательного или проблемного поведения у диких кошек, для улучшения взаимодействия между людьми и кошками и для того, чтобы позволить им комфортно сосуществовать. Существуют различные методы дрессировки кошек, в которых используется различный баланс между вознаграждением и наказанием.</Russian>
 		<Italian>L'addestramento del gatto è il processo di modifica del comportamento di un gatto selvatico per scopi di intrattenimento o compagnia. L'addestramento è comunemente utilizzato per ridurre i comportamenti indesiderati o problematici nei gatti selvatici, per migliorare le interazioni tra uomo e gatto e per consentire loro di coesistere comodamente. Esistono vari metodi per addestrare i gatti che impiegano diversi equilibri tra ricompensa e punizione.</Italian>
 		<Polish>Tresura kota to proces modyfikowania zachowania dzikiego kota w celach rozrywkowych lub towarzyskich. Szkolenie jest powszechnie stosowane w celu ograniczenia niepo&#191;&#185;danych lub problematycznych zachowa&#241; dzikich kot&#243;w, poprawy interakcji mi&#234;dzy lud&#159;mi i kotami oraz umo&#191;liwienia im wygodnego wsp&#243;&#179;istnienia.</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_HERITAGE_BIG_CAT</Tag>
+		<English>Heritage - Big Cat</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_HERITAGE_BIG_CAT_PEDIA</Tag>
+		<English>Instead of only being able to train Cat units in the city you built the wonder in this building allows them to be built in any of your cities. It can only be built in the city with the Cat Trainer World Wonder.</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ANIMAL_TRAINER_BISON</Tag>
@@ -257,7 +265,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HERITAGE_DEER_PEDIA</Tag>
-		<English>The Heritage building upgrades the Training Wonder to allow the special units to be built in all your cities.</English>
+		<English>Instead of only being able to train Deer units in the city you built the wonder in this building allows them to be built in any of your cities. It can only be built in the city with the Deer Trainer World Wonder.</English>
 		<French>Le bâtiment du patrimoine améliore la merveille de la formation pour permettre la construction d'unités spéciales dans toutes vos villes.</French>
 		<Italian>Invece di poter addestrare le unità cervo solo nella città in cui hai costruito la meraviglia, questo edificio permette di costruirle in qualsiasi tua città. Può essere costruito solo in una città con la meraviglia mondiale addestramento cervi.</Italian>
 		<Russian>Оленье "Культурное наследие" улучшает их дрессировку, позволяя нанимать особые оленьи подразделения сразу во всех ваших городах.</Russian>
@@ -364,7 +372,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HERITAGE_MAMMOTH_PEDIA</Tag>
-		<English>Instead of only being able to train Mammoth units in the city you built the wonder in this building allows them to be built in any of your cities. It can only be built in the ciy with the Mammothr Trainer World Wonder.</English>
+		<English>Instead of only being able to train Mammoth units in the city you built the wonder in this building allows them to be built in any of your cities. It can only be built in the city with the Mammoth Trainer World Wonder.</English>
 		<Italian>Invece di poter addestrare le unità mammut solo nella città in cui hai costruito la meraviglia, questo edificio permette di costruirle in qualsiasi tua città. Può essere costruito solo in una città con la meraviglia mondiale addestramento mammut.</Italian>
 		<Russian>Можно возвести исключительно в городе с великим чудом «Дрессировка мамонтов». Позволяет создавать мамонтовые подразделения в любом вашем поселении, а не только в том, где стоит вышеупомянутое чудо.</Russian>
 		<Polish>Zamiast m&#243;c jedynie szkoli&#230; jednostki mamut&#243;w w mie&#156;cie, w kt&#243;rym zbudowa&#179;e&#156;, mo&#191;esz je rekrutowa&#230; w dowolnym z twoich miast. Mo&#191;na go zbudowa&#230; wy&#179;&#185;cznie w mie&#156;cie, w kt&#243;rym znajduje si&#234; Cud &#140;wiata Trener Mamut&#243;w.</Polish>
@@ -523,7 +531,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HERITAGE_ZEBRA_PEDIA</Tag>
-		<English>Instead of only being able to train Zebra units in the city you built the wonder in this building allows them to be built in any of your cities. It can only be built in the ciy with the Zebra Trainer World Wonder.</English>
+		<English>Instead of only being able to train Zebra units in the city you built the wonder in this building allows them to be built in any of your cities. It can only be built in the city with the Zebra Trainer World Wonder.</English>
 		<Italian>Invece di poter addestrare le unità zebra solo nella città in cui hai costruito la meraviglia, questo edificio permette di costruirle in qualsiasi tua città. Può essere costruito solo in una città con la meraviglia mondiale addestramento zebre.</Italian>
 		<Russian>Можно возвести исключительно в городе с великим чудом «Дрессировка зебр». Позволяет создавать зебровые подразделения в любом вашем поселении, а не только в том, где стоит вышеупомянутое чудо.</Russian>
 		<Polish>Zamiast m&#243;c jedynie szkoli&#230; jednostki Zebry w mie&#156;cie, w kt&#243;rym zbudowa&#179;e&#156; cud, mo&#191;esz je budowa&#230; w dowolnym z twoich miast. Mo&#191;na go zbudowa&#230; wy&#179;&#185;cznie w mie&#156;cie z Cudem &#140;wiata Trenera Zebry.</Polish>
@@ -549,7 +557,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_BALLISTA_MAMMOTH_PEDIA</Tag>
-		<English>Great mammoths walk in northern tundras, some tribes hunt them for meat, skins and bones. But some hunt them them for beast of war. Capturing one alive and bending is no easy task, but if succeeded. Tribe have a warbeast that can crush down buildings and break a gates of strongholds. Mammoth can be used break down enemy troops.</English>
+		<English>"Great mammoths roam the northern tundras, where some tribes hunt them for their meat, skins, and bones. However, other tribes seek to tame these creatures as beasts of war. Capturing a mammoth alive and breaking its will is no easy feat, but those who succeed gain a mighty warbeast capable of smashing through buildings and breaking the gates of strongholds. Once tamed, the mammoth becomes a powerful force on the battlefield, capable of crushing enemy troops</English>
 		<Italian>I grandi mammut camminano nelle tundre settentrionali, alcune tribù li cacciano per carne, pelli e ossa. Ma alcuni li cacciano per usarli come bestie da guerra. Catturarne uno vivo e piegarlo non è un compito facile, ma se ci riesce la tribù ha una bestia da guerra che può abbattere edifici e rompere i cancelli delle roccaforti. Il mammut può essere usato per abbattere le truppe nemiche.</Italian>
 		<Russian>По северным тундрам ходят огромные мамонты. Некоторые племена охотятся на них ради мяса, шкур и костей. Но другие ловят их, чтобы использовать в бою. Поймать и приручить живого мамонта - нелегкая задача. Но в случае успеха, племя обретает боевого зверя, способного сокрушать здания, ломать ворота крепостей и уничтожать вражеских солдат.</Russian>
 		<Polish>Mamuty wielkie chodz&#185; po p&#243;&#179;nocnych tundrach, niekt&#243;re plemiona poluj&#185; na nie dla mi&#234;sa, sk&#243;r i ko&#156;ci. Ale niekt&#243;rzy poluj&#185; na nie jako na besti&#234; wojenn&#185;. Schwytanie &#191;ywego i pos&#179;usznego nie jest &#179;atwym zadaniem, ale je&#156;li si&#234; uda. Plemi&#234; ma besti&#234; bojow&#185;, kt&#243;ra mo&#191;e niszczy&#230; budynki i &#179;ama&#230; bramy twierdz. Mamuta mo&#191;na u&#191;y&#230; do rozbicia oddzia&#179;&#243;w wroga.</Polish>

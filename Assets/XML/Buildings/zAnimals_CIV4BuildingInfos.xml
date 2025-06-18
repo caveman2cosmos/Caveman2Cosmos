@@ -74,6 +74,14 @@
 			<iCostMaterialsModifier>1</iCostMaterialsModifier>
 			<iCostComplexityModifier>2</iCostComplexityModifier>
 			<iAsset>4</iAsset>
+			<PrereqOrBuildings>
+				<BuildingType>BUILDING_ANIMAL_TRAINER_CAMEL</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_TRAINER_LLAMA</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_TRAINER_BUFFALO</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_TRAINER_DONKEY</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_TRAINER_HORSE</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_TRAINER_ELEPHANT</BuildingType>
+			</PrereqOrBuildings>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_PRODUCTION</FlavorType>

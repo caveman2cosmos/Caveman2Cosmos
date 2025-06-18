@@ -15813,8 +15813,8 @@
 					<iUnitCombatMod>5</iUnitCombatMod>
 				</UnitCombatMod>
 				<UnitCombatMod>
-					<UnitCombatType>UNITCOMBAT_ANIMAL</UnitCombatType>
-					<iUnitCombatMod>25</iUnitCombatMod>
+					<UnitCombatType>UNITCOMBAT_THROWING</UnitCombatType>
+					<iUnitCombatMod>5</iUnitCombatMod>
 				</UnitCombatMod>
 			</UnitCombatMods>
 			<Button>art/Sports/Buttons/Martial_Arts1.dds</Button>
@@ -15841,8 +15841,8 @@
 					<iUnitCombatMod>10</iUnitCombatMod>
 				</UnitCombatMod>
 				<UnitCombatMod>
-					<UnitCombatType>UNITCOMBAT_ANIMAL</UnitCombatType>
-					<iUnitCombatMod>25</iUnitCombatMod>
+					<UnitCombatType>UNITCOMBAT_THROWING</UnitCombatType>
+					<iUnitCombatMod>10</iUnitCombatMod>
 				</UnitCombatMod>
 			</UnitCombatMods>
 			<Button>art/Sports/Buttons/Martial_Arts2.dds</Button>
@@ -15872,8 +15872,8 @@
 					<iUnitCombatMod>10</iUnitCombatMod>
 				</UnitCombatMod>
 				<UnitCombatMod>
-					<UnitCombatType>UNITCOMBAT_ANIMAL</UnitCombatType>
-					<iUnitCombatMod>50</iUnitCombatMod>
+					<UnitCombatType>UNITCOMBAT_THROWING</UnitCombatType>
+					<iUnitCombatMod>10</iUnitCombatMod>
 				</UnitCombatMod>
 			</UnitCombatMods>
 			<Button>art/Sports/Buttons/Martial_Arts3.dds</Button>

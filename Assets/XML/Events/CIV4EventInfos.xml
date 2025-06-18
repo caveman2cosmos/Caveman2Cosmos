@@ -10434,15 +10434,15 @@
 				</PromoteUnit>
 				<PromoteUnit>
 					<UnitType>UNIT_MASTER_CHASER</UnitType>
-					<Promotion>PROMOTION_HUNTING_STRIKE1</Promotion>
+					<Promotion>PROMOTION_HUNTING_SIGHT1</Promotion>
 				</PromoteUnit>
 				<PromoteUnit>
 					<UnitType>UNIT_MASTER_TRACKER</UnitType>
-					<Promotion>PROMOTION_HUNTING_STRIKE1</Promotion>
+					<Promotion>PROMOTION_HUNTING_SIGHT1</Promotion>
 				</PromoteUnit>
 				<PromoteUnit>
 					<UnitType>UNIT_MASTER_HUNTER</UnitType>
-					<Promotion>PROMOTION_HUNTING_STRIKE1</Promotion>
+					<Promotion>PROMOTION_HUNTING_SIGHT1</Promotion>
 				</PromoteUnit>
 			</PromoteUnits>
 			<PythonCanDo>canDoBestHunters2</PythonCanDo>
@@ -10472,15 +10472,15 @@
 				</PromoteUnit>
 				<PromoteUnit>
 					<UnitType>UNIT_MASTER_CHASER</UnitType>
-					<Promotion>PROMOTION_HUNTING_STRIKE1</Promotion>
+					<Promotion>PROMOTION_GREAT_HUNTER</Promotion>
 				</PromoteUnit>
 				<PromoteUnit>
 					<UnitType>UNIT_MASTER_TRACKER</UnitType>
-					<Promotion>PROMOTION_HUNTING_STRIKE1</Promotion>
+					<Promotion>PROMOTION_GREAT_HUNTER</Promotion>
 				</PromoteUnit>
 				<PromoteUnit>
 					<UnitType>UNIT_MASTER_HUNTER</UnitType>
-					<Promotion>PROMOTION_HUNTING_STRIKE1</Promotion>
+					<Promotion>PROMOTION_GREAT_HUNTER</Promotion>
 				</PromoteUnit>
 			</PromoteUnits>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>

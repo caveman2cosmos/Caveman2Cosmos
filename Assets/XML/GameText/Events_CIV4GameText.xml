@@ -1813,7 +1813,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_LOST_AT_SEA</Tag>
-		<English>On a sunny day, with no storms in sight, one of our expeditions has been lost at sea. Not only is the cause unknown, but there is no trace whatsoever of the expedition's equipment, crew or cargo. Several smaller vessels have also vanished without a trace in the same general region. Rumors are flying concerning this mystery.</English>
+		<English>On a sunny day, with no storms in sight, one of our expeditions has been lost at sea. Not only is the cause unknown, but there is no trace whatsoever of the expeditions equipment, crew or cargo. Several smaller vessels has also vanished without a trace in the same general region. Rumors are flying concerning this mystery.</English>
 		<French>Par une journée ensoleillée, sans tempête en vue, une de nos expéditions s'est perdue en mer. Non seulement la cause est inconnue, mais il n'y a aucune trace de l'équipement d'expédition, de l'équipage ou de la cargaison. Plusieurs petits navires ont également disparu sans laisser de trace dans la même région. Des rumeurs circulent concernant ce mystère.</French>
 		<Italian>In una giornata di sole, senza tempeste in vista, una delle nostre spedizioni è scomparsa in mare. Non solo la causa è sconosciuta, ma non c'è alcuna traccia delle attrezzature, dell'equipaggio o del carico della spedizione. Anche diverse navi più piccole sono scomparse senza lasciare traccia nella stessa regione. Le voci su questo mistero si susseguono.</Italian>
 		<Russian>В ясный погожий день была пропала без вести одна из наших морских экспедиций. Причина исчезновения неясна, как и не было обнаружено следов экипажа, судна и груза. Несколько небольших судов также исчезли без следа в той же области. Эта тайна овеяна множеством мрачных слухов.</Russian>
@@ -3620,7 +3620,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_ASSASSIN_DISCOVERED_1</Tag>
-		<English>Be discreet. Offer the to release the assassin to their government, but question him first.</English>
+		<English>Be discreet. Offer them to release the assassin to their government, but question him first.</English>
 		<French>Soyez discret. Rendez-le à son pays, mais interrogez-le d'abord.</French>
 		<German>Sei diskret. Bitte die Auslieferung des Attentäters an sein Heimatland an, aber verhöre ihn zuerst.</German>
 		<Italian>Sii discreto. Offri di riconsegnare l'assassino al suo governo, ma prima interrogalo.</Italian>
@@ -3658,6 +3658,10 @@
 		<Russian>[ICON_BULLET]Получить %d1 [NUM1:отряд:отрядов] [COLOR_UNIT_TEXT]Секироносцев[COLOR_REVERT].</Russian>
 		<Spanish>[ICON_BULLET]Recibes %d1 [COLOR_UNIT_TEXT][NUM1:Guerrero:Guerreros] con hacha[COLOR_REVERT].</Spanish>
 	</TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_ASSASSIN_DISCOVERED_3_STONE_HELP</Tag>
+        <English>[ICON_BULLET]Receive %d1 [COLOR_UNIT_TEXT][NUM1:Stone Axemen:Stone Axemen][COLOR_REVERT].</English>
+    </TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_ATTITUDE_BAD</Tag>
 		<English>[ICON_BULLET]Suffer a [COLOR_NEGATIVE_TEXT]%D1[COLOR_REVERT] relations hit with %s2_player</English>
@@ -6939,7 +6943,7 @@
         <English>Let us invest into promoting it even more.</English>
     </TEXT>
     <TEXT>
-        <Tag>TXT_KEY_EVENT_GREAT_MONUMENT_3</Tag>
+        <Tag>TXT_KEY_EVENT_GREAT_MONUMENTS_3</Tag>
         <English>Let's use this chance to promote our culture.</English>
     </TEXT>
 	<TEXT>
@@ -10556,7 +10560,7 @@
 	</TEXT>
     <TEXT>
         <Tag>TXT_KEY_EVENT_PURE_CRUDE_1</Tag>
-        <English>Great! We are lucky.</English>
+        <English>Great we are lucky.</English>
     </TEXT>
     <TEXT>
         <Tag>TXT_KEY_EVENT_PURE_CRUDE_2</Tag>
@@ -10658,7 +10662,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_SPY_DISCOVERED_1</Tag>
-		<English>Be discreet. Offer the to release the spy to their government, but question him first.</English>
+		<English>Be discreet. Offer them to release the spy to their government, but question him first.</English>
 		<French>Soyez discrets. Offrez de rendre l'espion a son gouvernement, mais questionnez-le d'abord.</French>
 		<German>Seid diskret. Bietet die Ausweisung des Spions an, aber verhört ihn gründlich.</German>
 		<Italian>Agiamo con discrezione. Offriamo al loro governo il rilascio della spia, dopo averlo interrogato.</Italian>

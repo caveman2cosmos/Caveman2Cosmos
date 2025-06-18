@@ -6779,7 +6779,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<DefaultUnitAI>UNITAI_EXPLORE_SEA</DefaultUnitAI>
-			<Description>TXT_KEY_UNIT_KAYAK</Description>
+			<Description>TXT_KEY_UNIT_MASTER_SAILOR_KAYAK</Description>
 			<Civilopedia>TXT_KEY_UNIT_KAYAK_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bNoBadGoodies>1</bNoBadGoodies>
@@ -6891,7 +6891,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<DefaultUnitAI>UNITAI_EXPLORE_SEA</DefaultUnitAI>
-			<Description>TXT_KEY_UNIT_OUTRIGGER</Description>
+			<Description>TXT_KEY_UNIT_MASTER_SAILOR_OUTRIGGER</Description>
 			<Civilopedia>TXT_KEY_UNIT_OUTRIGGER_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bNoBadGoodies>1</bNoBadGoodies>
@@ -7023,7 +7023,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<DefaultUnitAI>UNITAI_EXPLORE_SEA</DefaultUnitAI>
-			<Description>TXT_KEY_UNIT_CARAVEL</Description>
+			<Description>TXT_KEY_UNIT_MASTER_SAILOR_CARAVEL</Description>
 			<Civilopedia>TXT_KEY_UNIT_CARAVEL_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bRivalTerritory>1</bRivalTerritory>
@@ -7125,7 +7125,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<DefaultUnitAI>UNITAI_EXPLORE_SEA</DefaultUnitAI>
-			<Description>TXT_KEY_UNIT_SLOOP</Description>
+			<Description>TXT_KEY_UNIT_MASTER_SAILOR_SLOOP</Description>
 			<Civilopedia>TXT_KEY_UNIT_CARAVEL_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bRivalTerritory>1</bRivalTerritory>
@@ -7246,7 +7246,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<DefaultUnitAI>UNITAI_RESERVE_SEA</DefaultUnitAI>
-			<Description>TXT_KEY_UNIT_FRIGATE</Description>
+			<Description>TXT_KEY_UNIT_MASTER_SAILOR_FRIGATE</Description>
 			<Civilopedia>TXT_KEY_UNIT_FRIGATE_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -7363,7 +7363,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<DefaultUnitAI>UNITAI_ATTACK_SEA</DefaultUnitAI>
-			<Description>TXT_KEY_UNIT_IRON_FRIGATE</Description>
+			<Description>TXT_KEY_UNIT_IRON_MASTER_SAILOR_FRIGATE</Description>
 			<Civilopedia>TXT_KEY_UNIT_IRON_FRIGATE_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -7386,7 +7386,7 @@
 				</FreePromotion>
 			</FreePromotions>
 			<UnitUpgrades>
-				<UnitType>UNIT_STEAM_DESTROYER</UnitType>
+				<UnitType>UNIT_MASTER_SAILOR_STEAM_DESTROYER</UnitType>
 			</UnitUpgrades>
 			<UnitAIs>
 				<UnitAI>
@@ -7482,7 +7482,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<DefaultUnitAI>UNITAI_RESERVE_SEA</DefaultUnitAI>
-			<Description>TXT_KEY_UNIT_STEAM_DESTROYER</Description>
+			<Description>TXT_KEY_UNIT_STEAM_MASTER_SAILOR_DESTROYER</Description>
 			<Civilopedia>TXT_KEY_UNIT_DESTROYER_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -7593,7 +7593,7 @@
 			</MapCategoryTypes>
 			<DefaultUnitAI>UNITAI_RESERVE_SEA</DefaultUnitAI>
 			<SeeInvisible>INVISIBLE_SUBMARINE</SeeInvisible>
-			<Description>TXT_KEY_UNIT_WW1_DESTROYER</Description>
+			<Description>TXT_KEY_UNIT_MASTER_SAILOR_WW1_DESTROYER</Description>
 			<Civilopedia>TXT_KEY_UNIT_WW1_DESTROYER_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -7709,7 +7709,7 @@
 			</MapCategoryTypes>
 			<DefaultUnitAI>UNITAI_RESERVE_SEA</DefaultUnitAI>
 			<SeeInvisible>INVISIBLE_SUBMARINE</SeeInvisible>
-			<Description>TXT_KEY_UNIT_DESTROYER</Description>
+			<Description>TXT_KEY_UNIT_MASTER_SAILOR_DESTROYER</Description>
 			<Civilopedia>TXT_KEY_UNIT_DESTROYER_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -7837,7 +7837,7 @@
 			<DefaultUnitAI>UNITAI_RESERVE_SEA</DefaultUnitAI>
 			<Invisible>INVISIBLE_STEALTH</Invisible>
 			<SeeInvisible>INVISIBLE_STEALTH</SeeInvisible>
-			<Description>TXT_KEY_UNIT_STEALTH_DESTROYER</Description>
+			<Description>TXT_KEY_UNIT_MASTER_SAILOR_STEALTH_DESTROYER</Description>
 			<Civilopedia>TXT_KEY_UNIT_STEALTH_DESTROYER_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -7961,7 +7961,7 @@
 			<DefaultUnitAI>UNITAI_ATTACK_SEA</DefaultUnitAI>
 			<Invisible>INVISIBLE_STEALTH</Invisible>
 			<SeeInvisible>INVISIBLE_STEALTH</SeeInvisible>
-			<Description>TXT_KEY_UNIT_FF_DESTROYER_I</Description>
+			<Description>TXT_KEY_UNIT_MASTER_SAILOR_FF_DESTROYER_I</Description>
 			<Civilopedia>TXT_KEY_UNIT_FF_DESTROYER_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -8094,7 +8094,7 @@
 			<DefaultUnitAI>UNITAI_PIRATE_SEA</DefaultUnitAI>
 			<Invisible>INVISIBLE_SUBMARINE</Invisible>
 			<SeeInvisible>INVISIBLE_SUBMARINE</SeeInvisible>
-			<Description>TXT_KEY_UNIT_UBOAT</Description>
+			<Description>TXT_KEY_UNIT_MASTER_SAILOR_UBOAT</Description>
 			<Civilopedia>TXT_KEY_UNIT_UBOAT_PEDIA</Civilopedia>
 			<Help>TXT_KEY_UNIT_PIRATE_HELP</Help>
 			<Advisor>ADVISOR_MILITARY</Advisor>
@@ -8244,7 +8244,7 @@
 			<DefaultUnitAI>UNITAI_RESERVE_SEA</DefaultUnitAI>
 			<Invisible>INVISIBLE_SUBMARINE</Invisible>
 			<SeeInvisible>INVISIBLE_SUBMARINE</SeeInvisible>
-			<Description>TXT_KEY_UNIT_ATTACK_SUBMARINE</Description>
+			<Description>TXT_KEY_UNIT_MASTER_SAILOR_ATTACK_SUBMARINE</Description>
 			<Civilopedia>TXT_KEY_UNIT_ATTACK_SUBMARINE_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bRivalTerritory>1</bRivalTerritory>
@@ -8402,7 +8402,7 @@
 			<DefaultUnitAI>UNITAI_RESERVE_SEA</DefaultUnitAI>
 			<Invisible>INVISIBLE_SUBMARINE</Invisible>
 			<SeeInvisible>INVISIBLE_SUBMARINE</SeeInvisible>
-			<Description>TXT_KEY_UNIT_NUCLEAR_SUBMARINE</Description>
+			<Description>TXT_KEY_UNIT_NUCLEAR_MASTER_SAILOR_SUBMARINE</Description>
 			<Civilopedia>TXT_KEY_UNIT_NUCLEAR_SUBMARINE_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bRivalTerritory>1</bRivalTerritory>
@@ -8561,7 +8561,7 @@
 			<DefaultUnitAI>UNITAI_RESERVE_SEA</DefaultUnitAI>
 			<Invisible>INVISIBLE_SUBMARINE</Invisible>
 			<SeeInvisible>INVISIBLE_SUBMARINE</SeeInvisible>
-			<Description>TXT_KEY_UNIT_FUSION_SUBMARINE</Description>
+			<Description>TXT_KEY_UNIT_FUSION_MASTER_SAILOR_SUBMARINE</Description>
 			<Civilopedia>TXT_KEY_UNIT_FUSION_SUBMARINE_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bRivalTerritory>1</bRivalTerritory>
@@ -8694,7 +8694,6 @@
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_MACHINE</FormationType>
 		</UnitInfo>
-		<!--        //////////////////////////-->
 		<UnitInfo>
 			<Type>UNIT_MASTER_SAILOR_WAR_CANOE</Type>
 			<Combat>UNITCOMBAT_WOODEN_SHIPS</Combat>
@@ -8724,7 +8723,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<DefaultUnitAI>UNITAI_ATTACK_SEA</DefaultUnitAI>
-			<Description>TXT_KEY_UNIT_WAR_CANOE</Description>
+			<Description>TXT_KEY_UNIT_MASTER_SAILOR_WAR_CANOE</Description>
 			<Civilopedia>TXT_KEY_UNIT_WAR_CANOE_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -8831,7 +8830,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<DefaultUnitAI>UNITAI_ASSAULT_SEA</DefaultUnitAI>
-			<Description>TXT_KEY_UNIT_WARGALLEY</Description>
+			<Description>TXT_KEY_UNIT_MASTER_SAILOR_WARGALLEY</Description>
 			<Civilopedia>TXT_KEY_UNIT_WARGALLEY_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -8972,7 +8971,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<DefaultUnitAI>UNITAI_ATTACK_SEA</DefaultUnitAI>
-			<Description>TXT_KEY_UNIT_TRIREME</Description>
+			<Description>TXT_KEY_UNIT_MASTER_SAILOR_TRIREME</Description>
 			<Civilopedia>TXT_KEY_UNIT_TRIREME_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -9078,7 +9077,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<DefaultUnitAI>UNITAI_ATTACK_SEA</DefaultUnitAI>
-			<Description>TXT_KEY_UNIT_QUINQUEREME</Description>
+			<Description>TXT_KEY_UNIT_MASTER_SAILOR_QUINQUEREME</Description>
 			<Civilopedia>TXT_KEY_UNIT_QUINQUEREME_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -9179,7 +9178,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<DefaultUnitAI>UNITAI_ATTACK_SEA</DefaultUnitAI>
-			<Description>TXT_KEY_UNIT_DECAREME</Description>
+			<Description>TXT_KEY_UNIT_MASTER_SAILOR_DECAREME</Description>
 			<Civilopedia>TXT_KEY_UNIT_DECAREME_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -9288,7 +9287,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<DefaultUnitAI>UNITAI_ATTACK_SEA</DefaultUnitAI>
-			<Description>TXT_KEY_UNIT_GALLEASS</Description>
+			<Description>TXT_KEY_UNIT_MASTER_SAILOR_GALLEASS</Description>
 			<Civilopedia>TXT_KEY_UNIT_GALLEASS_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -9448,7 +9447,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<DefaultUnitAI>UNITAI_ATTACK_SEA</DefaultUnitAI>
-			<Description>TXT_KEY_UNIT_SLOOP_OF_WAR</Description>
+			<Description>TXT_KEY_UNIT_MASTER_SAILOR_SLOOP_OF_WAR</Description>
 			<Civilopedia>TXT_KEY_UNIT_SLOOP_OF_WAR_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -9547,7 +9546,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<DefaultUnitAI>UNITAI_ATTACK_SEA</DefaultUnitAI>
-			<Description>TXT_KEY_UNIT_MANOWAR</Description>
+			<Description>TXT_KEY_UNIT_MASTER_SAILOR_MANOWAR</Description>
 			<Civilopedia>TXT_KEY_UNIT_MANOWAR_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -9666,7 +9665,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<DefaultUnitAI>UNITAI_RESERVE_SEA</DefaultUnitAI>
-			<Description>TXT_KEY_UNIT_PRE_DREADNOUGHT</Description>
+			<Description>TXT_KEY_UNIT_MASTER_SAILOR_PRE_DREADNOUGHT</Description>
 			<Civilopedia>TXT_KEY_UNIT_PRE_DREADNOUGHT_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -9768,7 +9767,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<DefaultUnitAI>UNITAI_RESERVE_SEA</DefaultUnitAI>
-			<Description>TXT_KEY_UNIT_DREADNOUGHT_SHIP</Description>
+			<Description>TXT_KEY_UNIT_MASTER_SAILOR_DREADNOUGHT_SHIP</Description>
 			<Civilopedia>TXT_KEY_UNIT_DREADNOUGHT_SHIP_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -9877,7 +9876,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<DefaultUnitAI>UNITAI_ATTACK_SEA</DefaultUnitAI>
-			<Description>TXT_KEY_UNIT_WW2_BATTLESHIP</Description>
+			<Description>TXT_KEY_UNIT_MASTER_SAILOR_WW2_BATTLESHIP</Description>
 			<Civilopedia>TXT_KEY_UNIT_WW2_BATTLESHIP_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -9989,7 +9988,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<DefaultUnitAI>UNITAI_ATTACK_SEA</DefaultUnitAI>
-			<Description>TXT_KEY_UNIT_BATTLESHIP</Description>
+			<Description>TXT_KEY_UNIT_MASTER_SAILOR_BATTLESHIP</Description>
 			<Civilopedia>TXT_KEY_UNIT_BATTLESHIP_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -10106,7 +10105,7 @@
 			</MapCategoryTypes>
 			<DefaultUnitAI>UNITAI_ATTACK_SEA</DefaultUnitAI>
 			<SeeInvisible>INVISIBLE_STEALTH</SeeInvisible>
-			<Description>TXT_KEY_UNIT_FUSION_BATTLESHIP</Description>
+			<Description>TXT_KEY_UNIT_MASTER_SAILOR_FUSION_BATTLESHIP</Description>
 			<Civilopedia>TXT_KEY_UNIT_FUSION_BATTLESHIP_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -10210,7 +10209,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<DefaultUnitAI>UNITAI_CARRIER_SEA</DefaultUnitAI>
-			<Description>TXT_KEY_UNIT_EARLY_CARRIER</Description>
+			<Description>TXT_KEY_UNIT_MASTER_SAILOR_EARLY_CARRIER</Description>
 			<Civilopedia>TXT_KEY_UNIT_CARRIER_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -10337,7 +10336,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<DefaultUnitAI>UNITAI_CARRIER_SEA</DefaultUnitAI>
-			<Description>TXT_KEY_UNIT_CARRIER</Description>
+			<Description>TXT_KEY_UNIT_MASTER_SAILOR_CARRIER</Description>
 			<Civilopedia>TXT_KEY_UNIT_CARRIER_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -10465,7 +10464,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<DefaultUnitAI>UNITAI_CARRIER_SEA</DefaultUnitAI>
-			<Description>TXT_KEY_UNIT_NUCLEAR_CARRIER</Description>
+			<Description>TXT_KEY_UNIT_MASTER_SAILOR_NUCLEAR_CARRIER</Description>
 			<Civilopedia>TXT_KEY_UNIT_NUCLEAR_CARRIER_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -10604,7 +10603,7 @@
 			<DefaultUnitAI>UNITAI_CARRIER_SEA</DefaultUnitAI>
 			<Invisible>INVISIBLE_STEALTH</Invisible>
 			<SeeInvisible>INVISIBLE_STEALTH</SeeInvisible>
-			<Description>TXT_KEY_UNIT_FUSION_CARRIER</Description>
+			<Description>TXT_KEY_UNIT_MASTER_SAILOR_FUSION_CARRIER</Description>
 			<Civilopedia>TXT_KEY_UNIT_FUSION_CARRIER_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitarySupport>1</bMilitarySupport>

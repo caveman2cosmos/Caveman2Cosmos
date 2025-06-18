@@ -26,7 +26,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SLAVERY_ZORO_PEDIA</Tag>
-		<English>Zoroastrianism prohibits the owning of slaves. If you have in the city or as your state religion then your people will be angry if you also run Slavery. Zoroastrianism missionaries (Magi) can also end slavery in your nation like a Great Person can.</English>
+		<English>Zoroastrianism prohibits the owning of slaves. If Zoroastrianism is present in the city, or it is your State Religion then your people will be angry if you also run Slavery. Zoroastrian missionaries (Magi) can also end Slavery in your nation like a Great Person can.</English>
 		<Italian>Lo zoroastrismo proibisce la schiavitù; se lo zoroastrismo è presente in città o è la tua religione ufficiale, i cittadini si arrabbieranno se permetti la schiavitù. I magi, missionari di Zoroastro, possono eliminare la schiavitù dalla tua nazione proprio come farebbe un Grande Personaggio.</Italian>
 		<Polish>Zaratusztrianizm pot&#234;pia&#179; niewolnictwo w ka&#191;dej postaci.</Polish>
 		<Russian>Ó÷åíèå Çàðàòóñòðû çàïðåùàåò èíñòèòóò ðàáîâëàäåíèÿ. Åñëè â âàøåì ãîðîäå Çîðîàñòðèçì áóäåò ïðåäñòàâëåí â êà÷åñòâå ðàçðåøåííîé èëè ãîñóäàðñòâåííîé ðåëèãèè, òîãäà âàøè ëþäè áóäóò ïðîÿâëÿòü íåäîâîëüñòâî, ðàâíî êàê è â ñëó÷àå ââåäåíèÿ Ðàáîâëàäåíèÿ. Ìèññèîíåðû çîðîàñòðèçìà (âîëõâû) íàðàâíå ñ Âåëèêèìè ëþäüìè òàêæå ñïîñîáíû ëèêâèäèðîâàòü ðàáîâëàäåíèå â ñâîåé ñòðàíå.</Russian>
@@ -111,7 +111,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SLAVE_MARKET_HELP</Tag>
-		<English>[ICON_BULLET]Slave Market increases the outcomes from using Captives as Slaves - e.g. increases amount of gold you get from selling a captive into slavery.</English>
+		<English>[ICON_BULLET]The Slave Market improves the outcomes from using Captives as Slaves - e.g. increases the amount of Gold you get from selling a Captive into Slavery.</English>
 		<French>[ICON_BULLET]Le marché d'esclaves augmente les bénéfices de l'utilisation de prisonnier en tant qu'esclaves, ainsi que l'or que vous pouvez obtenir de la vente d'esclaves.</French>
 		<Italian>[ICON_BULLET]Il mercato degli schiavi migliora i risultati derivanti dall'usare dei prigionieri come schiavi, ad esempio incrementando la quantità di oro generata dalla vendita degli schiavi.</Italian>
 		<Polish>Targ Niewolnik&#243;w zwi&#234;ksza wp&#179;ywy z u&#191;ywania je&#241;c&#243;w jako niewolnik&#243;w.</Polish>
@@ -127,7 +127,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_WORLDVIEW_SLAVERY_HELP</Tag>
-		<English>[ICON_BULLET]Allows you to sell captives into slavery.</English>
+		<English>[ICON_BULLET]Allows you to sell Captives into Slavery.</English>
 		<French>[ICON_BULLET]vous permet de vendre les prisonniers en tant qu'esclaves.</French>
 		<Italian>[ICON_BULLET]Ti permette di vendere come schiavi i tuoi prigionieri.</Italian>
 		<Polish>Pozwala na sprzeda&#191; je&#241;c&#243;w w niewol&#234;.</Polish>
@@ -151,7 +151,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISSION_JOIN_CITY_AS_SETTLED_SLAVE_HELP</Tag>
-		<English>Slave Specialists increase the production of a city. They become Freed Slaves when you abandon slavery as a world view.</English>
+		<English>Slave Specialists increase the production of a city. They become Freed Slaves when you abandon Slavery as a world view.</English>
 		<French>Les Spécialistes esclaves augmentent la production de la ville. Ils deviennent libres lorsqu'on abandonne l'esclavage comme vision du monde.</French>
 		<Italian>[NEWLINE]Incrementano la produzione di una città. Diventano schiavi liberati quando abbandoni la schiavitù.</Italian>
 		<Polish>Specjalista-Niewolnik zwi&#234;ksza produkcj&#234; w mie&#156;cie. Zostaj&#185; Wyzwolonymi Niewolnikami kiedy Twoje imperium porzuci niewolnictwo.</Polish>
@@ -159,7 +159,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISSION_JOIN_CITY_AS_SLAVE_COMMERCE</Tag>
-		<English>Join city as a money producing slave.</English>
+		<English>Join city as a money producing (Gold) Slave.</English>
 		<French>Rejoindre la ville en tant qu'esclave (richesse).</French>
 		<Italian>Unisci a città (schiavo per il commercio)</Italian>
 		<Polish>Do&#179;&#185;cz niewolnika do miasta jako kupca.</Polish>
@@ -167,13 +167,13 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISSION_JOIN_CITY_AS_SLAVE_CRIME_PREVENTION</Tag>
-		<English>Join city as a crime prevention slave.</English>
+		<English>Join city as a Crime prevention Slave.</English>
 		<French>Rejoindre la ville en tant que force de l'ordre.</French>
 		<Italian>[NEWLINE]Si unisce alla città come schiavo per la prevenzione del crimine</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISSION_JOIN_CITY_AS_SLAVE_ENTERTAINMENT</Tag>
-		<English>Join city as an entertainment slave.</English>
+		<English>Join city as an Entertainment Slave.</English>
 		<French>Rejoindre la ville en tant que comédien</French>
 		<Italian>[NEWLINE]Si unisce alla città come schiavo per l'intrattenimento.</Italian>
 		<Polish>Do&#179;&#185;cz niewolnika do miasta jako akrobat&#234; lub klauna.</Polish>
@@ -181,7 +181,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISSION_JOIN_CITY_AS_SLAVE_FOOD</Tag>
-		<English>Join city as a food producing slave.</English>
+		<English>Join city as a Food producing Slave.</English>
 		<French>Rejoindre la ville en tant qu'esclave (nourriture).</French>
 		<Italian>[NEWLINE]Si unisce alla città come schiavo per la produzione di cibo.</Italian>
 		<Polish>Do&#179;&#185;cz do miasta jako niewolnika produkuj&#185;cego &#191;ywno&#156;&#230;.</Polish>
@@ -189,7 +189,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISSION_JOIN_CITY_AS_SLAVE_HEALTH</Tag>
-		<English>Join city as a health slave.</English>
+		<English>Join city as a Health Slave.</English>
 		<French>Rejoindre la ville en tant qu'esclave (Santé)</French>
 		<Italian>[NEWLINE]Si unisce alla città come schiavo per la salute.</Italian>
 		<Polish>Do&#179;&#185;cz niewolnika do miasta jako lekarza.</Polish>
@@ -197,7 +197,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISSION_JOIN_CITY_AS_SLAVE_MILITARY</Tag>
-		<English>Join city to work as a military slave.</English>
+		<English>Join city to work as a Military Slave.</English>
 		<French>Rejoindre la ville en tant qu'instructeur militaire</French>
 		<Italian>[NEWLINE]Si unisce alla città come schiavo per il supporto militare.</Italian>
 		<Polish>Do&#179;&#185;cz niewolnika do miasta jako tragarza i pomocnika wojskowego.</Polish>
@@ -205,7 +205,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISSION_JOIN_CITY_AS_SLAVE_PRODUCTION</Tag>
-		<English>Join city as a production producing slave.</English>
+		<English>Join city as a Production Slave.</English>
 		<French>Rejoindre la ville en tant qu'esclave (production).</French>
 		<Italian>[NEWLINE]Si unisce alla città come schiavo per la produzione industriale.</Italian>
 		<Polish>Do&#179;&#185;cz niewolnika do miasta jako robotnika produkcyjnego.</Polish>
@@ -213,13 +213,13 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISSION_JOIN_CITY_AS_SLAVE_SANITATION</Tag>
-		<English>Join city as a sanitation slave.</English>
+		<English>Join city as a sanitation (Disease) Slave.</English>
 		<French>Rejoindre la ville en tant que nettoyeur.</French>
 		<Italian>[NEWLINE]Si unisce alla città come schiavo per l'igiene.</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISSION_JOIN_CITY_AS_SLAVE_TUTOR</Tag>
-		<English>Join city as a tutor slave.</English>
+		<English>Join city as a tutor (Education) Slave.</English>
 		<French>Rejoindre la ville en tant qu'instructeur.</French>
 		<Italian>[NEWLINE]Si unisce alla città come schiavo tutore.</Italian>
 		<Polish>Do&#179;&#185;cz niewolnika do miasta jako nauczyciela.</Polish>
@@ -235,7 +235,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISSION_SELL_CAPTIVE</Tag>
-		<English>Sell your captive into slavery for money.</English>
+		<English>Sell your Captive into Slavery for Gold.</English>
 		<French>Vendre vos prisonniers comme esclaves.</French>
 		<Italian>Vendi prigioniero come schiavo.</Italian>
 		<Polish>Sprzedaj swoich je&#241;c&#243;w w niewol&#234;.</Polish>
@@ -243,7 +243,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISSION_SELL_CAPTIVE_HELP</Tag>
-		<English>The greater the slavery infrastructure the more money you will make.</English>
+		<English>The greater the slavery infrastructure the more Gold you will make.</English>
 		<French>Plus l'infrastructure d'Esclavage est importante, plus d'or vous gagnerez.</French>
 		<Italian>[NEWLINE]Più grande è l'infrastruttura schiavista, più soldi guadagnerai.</Italian>
 		<Polish>Czym wi&#234;ksza infrastuktura niewolnicza tym wi&#234;ksze pieni&#185;dze.</Polish>
@@ -275,7 +275,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_OUTCOME_JOIN_AS_SLAVE_COMMERCE_MESSAGE</Tag>
-		<English>Your captive has become a Slave Specialist (Commerce).</English>
+		<English>Your Captive has become a Slave Specialist (Commerce).</English>
 		<French>Votre Prisonnier est devenu un Esclave Spécialiste (Commerce).</French>
 		<Italian>Il tuo prigioniero è diventato uno schiavo specializzato nel commercio.</Italian>
 		<Polish>Tw&#243;j Niewolnik sta&#179; si&#234; Specjalist&#185; (Bogactwo).</Polish>
@@ -291,7 +291,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_OUTCOME_JOIN_AS_SLAVE_ENTERTAINMENT_MESSAGE</Tag>
-		<English>Your captive has become a Slave Specialist (Entertainment).</English>
+		<English>Your Captive has become a Slave Specialist (Entertainment).</English>
 		<French>Votre Prisonnier est devenu un Esclave Spécialiste (Comédien).</French>
 		<Italian>Il tuo prigioniero è diventato uno schiavo specializzato nell'intrattenimento.</Italian>
 		<Polish>Tw&#243;j Niewolnik sta&#179; si&#234; Specjalist&#185; (Rozrywka).</Polish>
@@ -307,7 +307,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_OUTCOME_JOIN_AS_SLAVE_FOOD_MESSAGE</Tag>
-		<English>Your captive has become a Slave Specialist (Food).</English>
+		<English>Your Captive has become a Slave Specialist (Food).</English>
 		<French>Votre Prisonnier est devenu un Esclave Spécialiste (Nourriture).</French>
 		<Italian>Il tuo prigioniero è diventato uno schiavo specializzato nella produzione di cibo.</Italian>
 		<Polish>Tw&#243;j Niewolnik sta&#179; si&#234; Specjalist&#185; (Po&#191;ywienie).</Polish>
@@ -323,7 +323,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_OUTCOME_JOIN_AS_SLAVE_HEALTH_MESSAGE</Tag>
-		<English>Your captive has become a Slave Specialist (Health).</English>
+		<English>Your Captive has become a Slave Specialist (Health).</English>
 		<French>Votre Prisonnier est devenu un Esclave Spécialiste (Santé).</French>
 		<Italian>Il tuo prigioniero è diventato uno schiavo specializzato in salute.</Italian>
 		<Polish>Tw&#243;j Niewolnik sta&#179; si&#234; Specjalist&#185; (Zdrowie).</Polish>
@@ -331,7 +331,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_OUTCOME_JOIN_AS_SLAVE_MESSAGE</Tag>
-		<English>Your captive has become a Slave Specialist.</English>
+		<English>Your Captive has become a Slave Specialist.</English>
 		<French>Votre prisonnier est devenu un spécialiste esclave.</French>
 		<Italian>Il tuo prigioniero è diventato uno schiavo specializzato.</Italian>
 		<Polish>Tw&#243;j jeniec zostaje Specjalist&#185;-Niewolnikiem.</Polish>
@@ -347,7 +347,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_OUTCOME_JOIN_AS_SLAVE_MILITARY_MESSAGE</Tag>
-		<English>Your captive has become a Slave Specialist (Military).</English>
+		<English>Your Captive has become a Slave Specialist (Military).</English>
 		<French>Votre Prisonnier est devenu un Esclave Spécialiste (Militaire).</French>
 		<Italian>Il tuo prigioniero è diventato uno schiavo specializzato nell'assistenza militare.</Italian>
 		<Polish>Tw&#243;j Niewolnik sta&#179; si&#234; Specjalist&#185; (Wojsko).</Polish>
@@ -363,7 +363,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_OUTCOME_JOIN_AS_SLAVE_PRODUCTION_MESSAGE</Tag>
-		<English>Your captive has become a Slave Specialist (Production).</English>
+		<English>Your Captive has become a Slave Specialist (Production).</English>
 		<French>Votre Prisonnier est devenu un Esclave Spécialiste (Production).</French>
 		<Italian>Il tuo prigioniero è diventato uno schiavo specializzato per la produzione industriale.</Italian>
 		<Polish>Tw&#243;j Niewolnik sta&#179; si&#234; Specjalist&#185; (Produkcja).</Polish>
@@ -371,7 +371,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_OUTCOME_JOIN_AS_SLAVE_TUTOR</Tag>
-		<English>Set city slave to work teach our children.</English>
+		<English>Assign the city slave to work as a tutor for our children.</English>
 		<French>Assigne l'esclave au travail d'enseignement.</French>
 		<Italian>Obbliga lo schiavo ad istruire i nostri giovani.</Italian>
 		<Polish>Do&#179;&#185;cz niewolnika do miasta by naucza&#230; dzieci i m&#179;odzie&#191;.</Polish>
@@ -379,7 +379,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_OUTCOME_JOIN_AS_SLAVE_TUTOR_MESSAGE</Tag>
-		<English>Your captive has become a Slave Specialist (Tutor).</English>
+		<English>Your Captive has become a Slave Specialist (Tutor).</English>
 		<French>Votre Prisonnier est devenu un Esclave Spécialiste (Enseignant).</French>
 		<Italian>Il tuo prigioniero è diventato uno schiavo specializzato in educazione.</Italian>
 		<Polish>Tw&#243;j Niewolnik sta&#179; si&#234; Specjalist&#185; (Nauczanie).</Polish>
@@ -403,7 +403,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_OUTCOME_SELL_CAPTIVE_MESSAGE</Tag>
-		<English>You have sold a captive into slavery.</English>
+		<English>You have sold a Captive into slavery.</English>
 		<French>Vous avez vendu des prisonniers en tant qu'esclaves.</French>
 		<Italian>Hai venduto un prigioniero come schiavo.</Italian>
 		<Polish>Sprzeda&#179;e&#156; swoich je&#241;c&#243;w w niewol&#234;.</Polish>
@@ -419,7 +419,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_OUTCOME_SELL_CAPTIVE_SLAVE_MARKET</Tag>
-		<English>You selling your slaves for 'top dollar'.</English>
+		<English>You are selling your Slaves for 'top dollar'.</English>
 		<French>Vous vendez vos esclaves contre de la 'monnaie sonnante'.</French>
 		<Italian>Stai vendendo i tuoi schiavi a peso d'oro!.</Italian>
 		<Polish>Sprzeda&#179;e&#156; swoich niewolnik&#243;w w najlepszej cenie.</Polish>
@@ -435,7 +435,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_SPECIALIST_SETTLED_CITIZEN_PEDIA</Tag>
-		<English>Settled Citizen WIP - When whipping they are used after ant Settled Slaves and before general population population.</English>
+		<English>Settled Citizen WIP - When whipping, they are used after any Settled Slaves and before the general population.</English>
 		<Italian>CONCETTO NON ANCORA REALIZZATO: quando viene sacrificata la popolazione cittadina, i cittadini residenti vengono usati dopo gli schiavi residenti ma prima della popolazione normale.</Italian>
 		<Polish>Osiad&#179;y Obywatel - Kiedy przyspieszasz budow&#234; mo&#191;esz ich u&#191;y&#230; ich zamiast populacji miasta.</Polish>
 		<Russian>Подселенные горожане - в случае принудительного труда они используются после городских рабов и перед остальным населением.</Russian>
@@ -506,7 +506,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_SPECIALIST_SETTLED_SLAVE_PEDIA</Tag>
-		<English>Captives can join a city as a Settled Slave specialists if the [LINK=CONCEPT_WORLD_VIEW]World View - Slavery[\LINK] is active. If you end the [LINK=CONCEPT_WORLD_VIEW]World View - Slavery[\LINK] these specialists wil become units depending on their speciality.[NEWLINE][ICON_BULLET]Settled Slave (Entertainment) become [LINK=UNIT_STORY_TELLER]Story Tellers[\LINK] or better.[NEWLINE][ICON_BULLET]Settled Slave (Food) become Food Caravans or better. (check if AI has been done for these)[NEWLINE][ICON_BULLET]Settled Slave (Health) become [LINK=UNIT_HEALER]Healers[\LINK] or better.[NEWLINE][ICON_BULLET]Settled Slave (Production) become [LINK=UNIT_EARLY_MERCHANT_C2C]Early Merchants[\LINK] or better.[NEWLINE][ICON_BULLET]Settled Slave, Settled Slave (Commerce and Tutor) become either become population or immigrants - one for each 3 slaves. Left overs become [LINK=UNIT_FREED_SLAVE]Captive - Freed Slaves[\LINK].(To be done) When whipping population to build they are first to go.</English>
+		<English>Captives can join a city as a Settled Slave specialists if the [LINK=CONCEPT_WORLD_VIEW]World View - Slavery[\LINK] is active. If you end the [LINK=CONCEPT_WORLD_VIEW]World View - Slavery[\LINK] these specialists will become units depending on their specialty.[NEWLINE][ICON_BULLET]Settled Slave (Entertainment) becomes [LINK=UNIT_STORY_TELLER]Story Tellers[\LINK] or better.[NEWLINE][ICON_BULLET]Settled Slave (Food) becomes Food Caravans or better. (check if AI has been done for these)[NEWLINE][ICON_BULLET]Settled Slave (Health) becomes [LINK=UNIT_HEALER]Healers[\LINK] or better.[NEWLINE][ICON_BULLET]Settled Slave (Production) becomes [LINK=UNIT_EARLY_MERCHANT_C2C]Early Merchants[\LINK] or better.[NEWLINE][ICON_BULLET]Settled Slave, Settled Slave (Commerce and Tutor) becomes either Population or Immigrants - one for each 3 Slaves. Leftovers become [LINK=UNIT_FREED_SLAVE]Captive - Freed Slaves[\LINK].(To be done) When whipping population to build, they are first to go.</English>
 		<Italian>I prigionieri possono unirsi alla città come schiavi residenti se la [LINK=CONCEPT_WORLD_VIEW]Schiavitù (concezione del mondo)[\LINK] è attiva. Quando la [LINK=CONCEPT_WORLD_VIEW]Schiavitù (concezione del mondo)[\LINK] termina questi specialisti diventano unità in base alla loro specializzazione.[NEWLINE][ICON_BULLET]Gli schiavi residenti legati all'intrattenimento diventano [LINK=UNIT_STORY_TELLER]Cantastorie[\LINK] o meglio.[NEWLINE][ICON_BULLET]Gli schiavi sedentari legati al cibo diventano carovane di cibo o meglio. (L'IA per questi non è ancora stata realizzata)[NEWLINE][ICON_BULLET]Gli schiavi sedentari legati alla salute diventano [LINK=UNIT_HEALER]Guaritori[\LINK] o meglio.[NEWLINE][ICON_BULLET]Gli schiavi sedentari legati alla produzione diventano [LINK=UNIT_EARLY_MERCHANT_C2C]Mercanti[\LINK] o meglio.[NEWLINE][ICON_BULLET]Gli schiavi sedentari generici e quelli legati al commercio e all'insegnamento diventano popolazione o immigrati - uno per ogni 3 schiavi. I rimanenti diventano [LINK=UNIT_FREED_SLAVE]schiavi liberati[\LINK].CONCETTO NON ANCORA REALIZZATO: quando viene sacrificata la popolazione cittadina, gli schiavi sedentari sono i primi ad essere sacrificati.</Italian>
 		<Polish>Je&#241;cy moga do&#179;&#185;czy&#230; do miasto jako Osiadli Niewolnicy (specjali&#156;ci) je&#156;li [LINK=CONCEPT_WORLD_VIEW]Swiatopogl&#185;d - Niewolnictwo[\LINK] jest aktywny. Je&#156;li zako&#241;czysz dzia&#179;anie tego Swiatopogl&#185;du to Ci specjali&#156;c zamieni&#185; si&#234; w jednostki (w zale&#191;no&#156;ci od typu specjalizacji).[NEWLINE][ICON_BULLET]Osiad&#179;y Niewolnik (Rozrywka) zostaj&#185; [LINK=UNIT_STORY_TELLER]Opowiadaczami[\LINK] lub lepiej.[NEWLINE][ICON_BULLET]Osiad&#179;y Niewolnik (&#175;ywno&#156;&#230;) zostaje Kawanan&#185; &#175;ywno&#156;ci lub lepiej.[NEWLINE][ICON_BULLET]Osiad&#179;y Niewolnik (Zdrowie) zostaj&#185; [LINK=UNIT_HEALER]Uzdrowicielami[\LINK] lub lepiej.[NEWLINE][ICON_BULLET]Osiad&#179;y Niewolnik (Produkcja) zostaj&#185; [LINK=UNIT_EARLY_MERCHANT_C2C]Wczesnymi Kupcami[\LINK] lub lepiej.[NEWLINE][ICON_BULLET]Osiad&#179;y Niewolnik, Osiad&#179;y Niewolnik (Bogactwo i Nauczanie) zwi&#234;kszaj&#185; populacj&#234; lub zostaj&#185; immigrantami. [LINK=UNIT_FREED_SLAVE]Wyzwoleni Niewolnicy[\LINK] - Kiedy przyspieszasz budow&#234; mo&#191;esz ich u&#191;y&#230; ich zamiast populacji miasta.</Polish>
 		<Russian>Пленники могут присоединиться к городу в качестве поселенных рабов-специалистов, если активно мировоззрение [LINK=CONCEPT_WORLD_VIEW]Рабовладение[\LINK]. В случае отмены [LINK=CONCEPT_WORLD_VIEW]Рабства[\LINK] в вашей державе эти специалисты станут соответствующими отрядами в зависимости от их специальности:[NEWLINE][ICON_BULLET]Рабы (культура) становятся [LINK=UNIT_STORY_TELLER]Сказителями[\LINK] или их более продвинутыми аналогами;[NEWLINE][ICON_BULLET]Рабы (пища) становятся продовольственными караванами;[NEWLINE][ICON_BULLET]Рабы (здоровье) становятся [LINK=UNIT_HEALER]Хилерами[\LINK] или их более продвинутыми аналогами;[NEWLINE][ICON_BULLET]Рабы (продукция) становятся [LINK=UNIT_EARLY_MERCHANT_C2C]Менялами[\LINK] или их более продвинутыми аналогами;[NEWLINE][ICON_BULLET]Рабы (деньги и наука) и пр. городские рабы становятся либо обычными жителями, либо иммигрантами - по одному на каждых 3 рабов. Все прочие становятся [LINK=UNIT_FREED_SLAVE]Пленными работниками[\LINK]. В случае использования принудительного труда эта категория жителей потратится в числе первых.</Russian>

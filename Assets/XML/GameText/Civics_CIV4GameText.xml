@@ -2,7 +2,7 @@
 <Civ4GameText xmlns="http://www.firaxis.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.firaxis.com ../Schema/Civ4Gametext.xsd">
 	<TEXT>
 		<Tag>TXT_KEY_CIVICHELP_ALLOWS_USE_OF_EXECUTIVES</Tag>
-		<English>[ICON_BULLET]Can train Units to Spread Corporations</English>
+		<English>[ICON_BULLET]Can train Units to Spread Corporations.</English>
 		<French>[ICON_BULLET]Peut entraîner des Unités pour propager les Corporations</French>
 		<German>[ICON_BULLET]kann Einheiten ausbilden, die neue Standorte für Kapitalgesellschaften erschließen können</German>
 		<Italian>[ICON_BULLET]Può costruire unità per diffondere le corporazioni</Italian>
@@ -12,7 +12,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVICHELP_ALLOW_INQUISITONS</Tag>
-		<English>[ICON_BULLET]Inquisitor Units may purge non state [ICON_RELIGION] from cities where State [ICON_RELIGION] is present.</English>
+		<English>[ICON_BULLET]Inquisitor Units may purge Non-State [ICON_RELIGION] from cities where State [ICON_RELIGION] is present.</English>
 		<French>[ICON_BULLET]Les Inquisiteurs peuvent purger les [ICON_RELIGION] non officielles dans les Villes où la [ICON_RELIGION] d'Etat est présente.</French>
 		<German>[ICON_BULLET]Inquisitoren können nicht-staatliche [ICON_RELIGION] aus Städten eliminieren, in denen die Staats-[ICON_RELIGION] vorhanden ist.</German>
 		<Italian>[ICON_BULLET]Gli Inquisitori possono eradicare [ICON_RELIGION] diverse da quella di Stato nelle città dove è presente la [ICON_RELIGION] di Stato.</Italian>
@@ -137,7 +137,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVICHELP_CITY_DISTANCE_BAD_MOD</Tag>
-		<English>[ICON_BULLET]%d1% to city distance instability penalty</English>
+		<English>[ICON_BULLET]%d1% to City Distance Instability penalty.</English>
 		<French>[ICON_BULLET]%d1% de pénalité : Distance des Villes</French>
 		<German>[ICON_BULLET]%d1% Instabilitätsmalus durch die Entfernung zwischen den Städten</German>
 		<Italian>[ICON_BULLET]Variazione della penalità instabilità per distanza: %d1%</Italian>
@@ -147,7 +147,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVICHELP_CITY_DISTANCE_GOOD_MOD</Tag>
-		<English>[ICON_BULLET]%d1% to city distance instability penalty</English>
+		<English>[ICON_BULLET]%d1% to City Distance Instability penalty.</English>
 		<French>[ICON_BULLET]%d1% de pénalité : Distance des Villes</French>
 		<German>[ICON_BULLET]%d1% Instabilitätsmalus durch die Entfernung zwischen den Städten</German>
 		<Italian>[ICON_BULLET]Variazione della penalità instabilità per distanza: %d1%</Italian>
@@ -157,7 +157,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVICHELP_CITY_LIMIT</Tag>
-		<English>[ICON_BULLET]Cannot settle more than %d1 cities</English>
+		<English>[ICON_BULLET]Cannot settle more than %d1 cities.</English>
 		<French>[ICON_BULLET]Ne peut fonder plus de %d1 villes</French>
 		<German>[ICON_BULLET]Eure Gesellschaftsform erlaubt es nicht, mehr als %d1 Städte zu gründen.</German>
 		<Italian>[ICON_BULLET]Non può fondare più di %d1 città</Italian>
@@ -174,7 +174,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVICHELP_CORPORATION_TAXES</Tag>
-		<English>[ICON_BULLET]%D1_Mod%% Tax Levy on Corporations</English>
+		<English>[ICON_BULLET]%D1_Mod%% Tax Levy on Corporations.</English>
 		<French>[ICON_BULLET]%D1_Mod%% de Taxes prélevées aux Corporations</French>
 		<German>[ICON_BULLET]%D1_Mod%% Unternehmenssteuern von Kapitalgesellschaften</German>
 		<Italian>[ICON_BULLET]%D1_Mod%% di tasse sulle corporazioni</Italian>
@@ -184,7 +184,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVICHELP_DISALLOW_INQUISITONS</Tag>
-		<English>[ICON_BULLET]Even if otherwise possible, Civic religious freedoms disables inquisitions.</English>
+		<English>[ICON_BULLET]Even if otherwise possible, Civic religious freedoms disables Inquisitions.</English>
 		<French>[ICON_BULLET]Dans tous les cas, La Doctrine 'Liberté de Culte' rend les inquisitions impossibles.</French>
 		<German>[ICON_BULLET]Gesellschaftsformen mit religiöser Freiheit verhindern Inquisitionen, selbst wenn ansonsten alle Vorgaben erfüllt sind.</German>
 		<Italian>[ICON_BULLET]Anche se è possibile il contrario, le forme di governo che danno libertà religiosa impediscono le inquisizioni.</Italian>
@@ -194,7 +194,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVICHELP_DISTANT_UNIT_SUPPLY_COST_MOD</Tag>
-		<English>[ICON_BULLET]%d1%% Increased Supply Cost for Distant Units</English>
+		<English>[ICON_BULLET]%d1%% Increased Supply Cost for Distant Units.</English>
 		<French>[ICON_BULLET]%d1%% Augmente le coût de Soutien des Unités distantes</French>
 		<German>[ICON_BULLET]%d1%% Erhöhte Versorgungskosten für weit entfernte Einheiten</German>
 		<Italian>[ICON_BULLET]%d1%% Costo di supporto aumentato per le unità distanti.</Italian>
@@ -204,7 +204,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVICHELP_DISTANT_UNIT_SUPPLY_COST_MOD_DECREASE</Tag>
-		<English>[ICON_BULLET]%d1%% Decreased Supply Cost for Distant Units</English>
+		<English>[ICON_BULLET]%d1%% Decreased Supply Cost for Distant Units.</English>
 		<French>[ICON_BULLET]%d1%% Diminue le coût de Soutien des Unités distantes</French>
 		<German>[ICON_BULLET]%d1%% Reduzierte Versorgungskosten für weit entfernte Einheiten</German>
 		<Italian>[ICON_BULLET]%d1%% Costo di supporto diminuito per le unità distanti.</Italian>
@@ -232,7 +232,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVICHELP_FOREIGN_TRADE_ROUTE_MOD</Tag>
-		<English>[ICON_BULLET]%D1_Mod%% Foreign Trade Route Yield in All Cities</English>
+		<English>[ICON_BULLET]%D1_Mod%% Foreign Trade Route Yield in All Cities.</English>
 		<French>[ICON_BULLET]%D1_Mod%% Les Routes commerciales étrangères sont réparties dans toutes les Villes</French>
 		<German>[ICON_BULLET]%D1_Mod%% Ertrag aus ausländischen Handelsrouten in allen Städten</German>
 		<Italian>[ICON_BULLET]%D1_Mod%% rendimento delle rotte cittadine estere in tutte le città</Italian>
@@ -242,12 +242,12 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVICHELP_FREEDOM_ANGER</Tag>
-		<English>[ICON_BULLET]Increases [ICON_UNHAPPY] equal to %d1%% population</English>
+		<English>[ICON_BULLET]Increases [ICON_UNHAPPY] equal to %d1%% population.</English>
 		<Russian>[ICON_BULLET]Увеличивает [ICON_UNHAPPY] на %d1%% населения</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVICHELP_FREEDOM_HAPPINESS</Tag>
-		<English>[ICON_BULLET]Decreases [ICON_UNHAPPY] equal to %d1%% population</English>
+		<English>[ICON_BULLET]Decreases [ICON_UNHAPPY] equal to %d1%% population.</English>
 		<Russian>[ICON_BULLET][ICON_HAPPY] Ïîâûøåíèå äëÿ âñåõ öèâèëèçàöèé áåç %s1_CivicName</Russian>
 	</TEXT>
 	<TEXT>
@@ -262,7 +262,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVICHELP_HAPPINESS</Tag>
-		<English>[ICON_BULLET]+%d1_Change[ICON_HAPPY] In all cities</English>
+		<English>[ICON_BULLET]+%d1_Change[ICON_HAPPY] In all cities.</English>
 		<French>[ICON_BULLET]+%d1_Change[ICON_HAPPY] dans toutes les Villes</French>
 		<German>[ICON_BULLET]+%d1_Change[ICON_HAPPY] in allen Städten</German>
 		<Italian>[ICON_BULLET]+%d1_Change[ICON_HAPPY] in tutte le città</Italian>
@@ -272,7 +272,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVICHELP_HOME_AREA_MAINT</Tag>
-		<English>[ICON_BULLET]No Maintenance Costs for All Cities on Home Continent</English>
+		<English>[ICON_BULLET]No Maintenance Costs for All Cities on Home Continent.</English>
 		<French>[ICON_BULLET]Pas de coût d'entretien pour toutes les Villes sur le continent d'origine</French>
 		<German>[ICON_BULLET]keine laufenden Kosten für Städte auf dem Heimatkontinent</German>
 		<Italian>[ICON_BULLET]Nessun costo di mantenimento per tutte le città sul continente natale</Italian>
@@ -282,7 +282,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVICHELP_HOME_AREA_MAINT_MOD</Tag>
-		<English>[ICON_BULLET]%D1_Mod%% Maintenance Costs for All Cities on Home Continent</English>
+		<English>[ICON_BULLET]%D1_Mod%% Maintenance Costs for All Cities on Home Continent.</English>
 		<French>[ICON_BULLET]%D1_Mod%% de coût d'entretien pour toutes les Villes sur le continent d'origine</French>
 		<German>[ICON_BULLET]%D1_Mod%% laufende Kosten für Städte auf dem Heimatkontinent</German>
 		<Italian>[ICON_BULLET]%D1_Mod%% costi di mantenimento per tutte le città sul continente natale</Italian>
@@ -332,7 +332,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVICHELP_LANDMARK_HAPPINESS</Tag>
-		<English>[ICON_BULLET]Landmarks give +%d1 [ICON_HAPPY] to nearby cities</English>
+		<English>[ICON_BULLET]Landmarks give +%d1 [ICON_HAPPY] to nearby cities.</English>
 		<French>[ICON_BULLET]Les Repères de terrain donnent +%d1 [ICON_HAPPY] aux Villes voisines</French>
 		<German>[ICON_BULLET]Landmarken geben +%d1 [ICON_HAPPY] in nahegelegenen Städten</German>
 		<Italian>[ICON_BULLET]Le località danno +%d1 [ICON_HAPPY] alle città vicine</Italian>
@@ -342,7 +342,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVICHELP_LANDMARK_UNHAPPINESS</Tag>
-		<English>[ICON_BULLET]Landmarks give +%d1 [ICON_UNHAPPY] to nearby cities</English>
+		<English>[ICON_BULLET]Landmarks give +%d1 [ICON_UNHAPPY] to nearby cities.</English>
 		<French>[ICON_BULLET]Les Repères de terrain donnent +%d1 [ICON_UNHAPPY] aux Villes voisines</French>
 		<German>[ICON_BULLET]Landmarken geben +%d1 [ICON_UNHAPPY] in nahegelegenen Städten</German>
 		<Italian>[ICON_BULLET]Le località danno +%d1 [ICON_UNHAPPY] alle città vicine</Italian>
@@ -352,7 +352,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVICHELP_NON_STATE_REL_HAPPINESS_AMBIGUOUS</Tag>
-		<English>[ICON_BULLET]%D1_Change %F2_HappyOrUn per Non-State [ICON_RELIGION] in a City</English>
+		<English>[ICON_BULLET]%D1_Change %F2_HappyOrUn per Non-State [ICON_RELIGION] in a City.</English>
 		<French>[ICON_BULLET]%D1_Change %F2_HappyOrUn par [ICON_RELIGION] non officielle dans une ville</French>
 		<German>[ICON_BULLET]%D1_Change %F2_HappyOrUn je Non-State [ICON_RELIGION]-Religion in einer Stadt</German>
 		<Italian>[ICON_BULLET]%D1_Change di %F2_HappyOrUn per [ICON_RELIGION] non di stato in una città</Italian>
@@ -362,7 +362,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVICHELP_NO_CAPITAL_ANGER</Tag>
-		<English>[ICON_BULLET]No [ICON_UNHAPPY] In the Capital City</English>
+		<English>[ICON_BULLET]No [ICON_UNHAPPY] In the Capital City.</English>
 		<French>[ICON_BULLET]Pas de [ICON_UNHAPPY] dans la Capitale</French>
 		<German>[ICON_BULLET]Keine [ICON_UNHAPPY] in der Hauptstadt</German>
 		<Italian>[ICON_BULLET]Niente [ICON_UNHAPPY] nella capitale</Italian>
@@ -372,7 +372,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVICHELP_NO_LANDMARK_ANGER</Tag>
-		<English>[ICON_BULLET]Damaging or Removing Landmarks causes no [ICON_UNHAPPY]</English>
+		<English>[ICON_BULLET]Damaging or Removing Landmarks causes no [ICON_UNHAPPY].</English>
 		<French>[ICON_BULLET]Endommager ou supprimer des repères de terrain n'engendre pas de [ICON_UNHAPPY]</French>
 		<German>[ICON_BULLET]Die Beschädigung oder Zerstörung von Landmarken erzeugt keine [ICON_UNHAPPY]</German>
 		<Italian>[ICON_BULLET]Danneggiare o rimuovere le località non causa [ICON_UNHAPPY]</Italian>
@@ -382,7 +382,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVICHELP_RELIGION_NO_SPREAD</Tag>
-		<English>[ICON_BULLET]No Religions will spread</English>
+		<English>[ICON_BULLET]No Religions will Spread.</English>
 		<French>[ICON_BULLET]Pas de propagation des Religions</French>
 		<German>[ICON_BULLET]Es werden keine Religionen verbreitet.</German>
 		<Italian>[ICON_BULLET]Nessuna religione si diffonderà</Italian>
@@ -392,7 +392,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVICHELP_RELIGION_SPREAD_RATE_FAST</Tag>
-		<English>[ICON_BULLET]Religions Spread %d1% Faster</English>
+		<English>[ICON_BULLET]Religions Spread %d1% Faster.</English>
 		<French>[ICON_BULLET]Les Religions se propagent %d1% plus vite</French>
 		<German>[ICON_BULLET]Religionen verbreiten sich %d1% schneller.</German>
 		<Italian>[ICON_BULLET]Le religioni si diffondono il %d1% più velocemente</Italian>
@@ -402,7 +402,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVICHELP_RELIGION_SPREAD_RATE_SLOW</Tag>
-		<English>[ICON_BULLET]Religions spread at %d1% of normal rate</English>
+		<English>[ICON_BULLET]Religions spread at %d1% of normal rate.</English>
 		<French>[ICON_BULLET]Les Religions se propagent à %d1% du taux normal</French>
 		<German>[ICON_BULLET]Religionen verbreiten sich mit %d1% der normalen Geschwindigkeit.</German>
 		<Italian>[ICON_BULLET]Le religioni si diffondono al %d1% della normale velocità</Italian>
@@ -412,19 +412,19 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVICHELP_REL_BUILDING</Tag>
-		<English>[ICON_BULLET]Cities with %F1_RelIcon Construct Buildings %D2_Mod%% as fast</English>
+		<English>[ICON_BULLET]Cities with %F1_RelIcon Construct Buildings %D2_Mod%% as fast.</English>
 		<French>[ICON_BULLET]Les Villes avec %F1_RelIcon construisent des bâtiments %D2_Mod%% plus rapidement</French>
 		<Russian>[ICON_BULLET]Города с %F1_RelIcon быстрее строят здания на %D2_Mod%%</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVICHELP_REL_TRAIN</Tag>
-		<English>[ICON_BULLET]Cities with %F1_RelIcon Train Units %D2_Mod%% as fast</English>
+		<English>[ICON_BULLET]Cities with %F1_RelIcon Train Units %D2_Mod%% as fast.</English>
 		<French>[ICON_BULLET]Les Villes avec %F1_RelIcon entraînent des unités %D2_Mod%% plus rapidement</French>
 		<Russian>[ICON_BULLET]Города с %F1_RelIcon быстрее обучают отряды на %D2_Mod%%</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVICHELP_REV_BAD_HOLY_CITY</Tag>
-		<English>[ICON_BULLET]%d1 instability penalty per turn if state religion holy city is owned by heathens</English>
+		<English>[ICON_BULLET]%d1 instability penalty per turn if State Religion Holy City is owned by heathens.</English>
 		<French>[ICON_BULLET]%d1 de pénalité par tour : la Ville Sainte de la Religion d'Etat est aux mains de païens.</French>
 		<German>[ICON_BULLET]Instabilitätsmalus von %d1 pro Runde, wenn die Heilige Stadt der Staatsreligion von Heiden beherrscht wird</German>
 		<Italian>[ICON_BULLET]Penalità instabilità: %d1/turno se la Città Santa della [ICON_RELIGION] di Stato è controllata da infedeli</Italian>
@@ -434,7 +434,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVICHELP_REV_BAD_RELIGION_MOD</Tag>
-		<English>[ICON_BULLET]+%s1% increase in instability penalties from non-state religions</English>
+		<English>[ICON_BULLET]+%s1% increase in instability penalties from Non-State Religions.</English>
 		<French>[ICON_BULLET]+%s1% de pénalité : Instabilité liée aux Religions non officielles</French>
 		<German>[ICON_BULLET]+%s1% Steigerung der Instabilitätsmali durch nicht-staatliche Religionen</German>
 		<Italian>[ICON_BULLET]Penalità instabilità: +%s1% per [ICON_RELIGION] NON di Stato</Italian>
@@ -464,7 +464,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVICHELP_REV_GOOD_HOLY_CITY</Tag>
-		<English>[ICON_BULLET]%d1 stability bonus per turn for owning state religion holy city</English>
+		<English>[ICON_BULLET]%d1 stability bonus per turn for owning State Religion Holy City.</English>
 		<French>[ICON_BULLET]%d1 de bonus par tour : la Ville Sainte de la Religion d'Etat fait partie de notre Empire.</French>
 		<German>[ICON_BULLET]Stabilitätsbonus von %d1 pro Runde für Besitz der Heiligen Stadt der Staatsreligion</German>
 		<Italian>[ICON_BULLET]Bonus stabilità %d1/turno per il controllo della Città Santa della [ICON_RELIGION] di Stato</Italian>
@@ -474,7 +474,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVICHELP_REV_GOOD_RELIGION_MOD</Tag>
-		<English>[ICON_BULLET]+%s1% increase in stability bonuses from state religion</English>
+		<English>[ICON_BULLET]+%s1% increase in stability bonuses from State Religion.</English>
 		<French>[ICON_BULLET]+%s1% de bonus : Stabilité liée à la Religion d'Etat</French>
 		<German>[ICON_BULLET]+%s1% Steigerung der Stabilitätsboni durch die Staatsreligion</German>
 		<Italian>[ICON_BULLET]Bonus stabilità: +%s1% per [ICON_RELIGION] di Stato</Italian>
@@ -484,7 +484,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVICHELP_REV_INDEX_LOCAL_BONUS</Tag>
-		<English>[ICON_BULLET]%d1 local stability bonus per turn in each city</English>
+		<English>[ICON_BULLET]%d1 local stability bonus per turn in each city.</English>
 		<French>[ICON_BULLET]%d1 de bonus par tour : Stabilité locale pour la ville</French>
 		<German>[ICON_BULLET]Stabilitätsbonus von %d1 pro Runde in jeder Stadt</German>
 		<Italian>[ICON_BULLET]Aumento [COLOR_HIGHLIGHT_TEXT]stabilità locale[COLOR_REVERT] in città: [COLOR_HIGHLIGHT_TEXT]%d1[COLOR_REVERT] a turno</Italian> <!-- unit alpha female building list hover with Revolution active -->
@@ -494,7 +494,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVICHELP_REV_INDEX_LOCAL_PENALTY</Tag>
-		<English>[ICON_BULLET]%d1 local instability penalty per turn</English>
+		<English>[ICON_BULLET]%d1 local instability penalty per turn.</English>
 		<French>[ICON_BULLET]%d1 de pénalité par tour : Instabilité locale pour la ville</French>
 		<German>[ICON_BULLET]Instabilitätsmalus von %d1 pro Runde in jeder Stadt</German>
 		<Italian>[ICON_BULLET]Penalità instabilità locale: %d1 a turno in città</Italian>
@@ -504,7 +504,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVICHELP_REV_INDEX_NATIONAL_BONUS</Tag>
-		<English>[ICON_BULLET]%d1 national stability bonus per turn</English>
+		<English>[ICON_BULLET]%d1 national stability bonus per turn.</English>
 		<French>[ICON_BULLET]%d1 de bonus par tour : Stabilité au niveau national</French>
 		<German>[ICON_BULLET]nationaler Stabilitätsbonus von %d1 pro Runde</German>
 		<Italian>[ICON_BULLET]Bonus stabilità nazionale: %d1 a turno</Italian>
@@ -514,7 +514,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVICHELP_REV_INDEX_NATIONAL_PENALTY</Tag>
-		<English>[ICON_BULLET]%d1 national instability penalty per turn</English>
+		<English>[ICON_BULLET]%d1 national instability penalty per turn.</English>
 		<French>[ICON_BULLET]%d1 de pénalité par tour : Instabilité au niveau national</French>
 		<German>[ICON_BULLET]nationaler Instabilitätsmalus von %d1 pro Runde</German>
 		<Italian>[ICON_BULLET]Penalità Instabilità Nazionale: %d1/turno</Italian>
@@ -534,7 +534,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVICHELP_REV_NATIONALITY_INCREASE_MOD</Tag>
-		<English>[ICON_BULLET]+%s1% Revolutionary sentiment (alienation)</English>
+		<English>[ICON_BULLET]+%s1% Revolutionary sentiment (alienation).</English>
 		<French>[ICON_BULLET]+%s1% Climat Révolutionaire (Aliénation)</French>
 		<German>[ICON_BULLET]+%s1% Revolutionäre Stimmung (Entfremdung)</German>
 		<Italian>[ICON_BULLET]Spirito rivoluzionario: +%s1% (Alienazione)</Italian>
@@ -544,7 +544,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVICHELP_REV_NATIONALITY_REDUCTION_MOD</Tag>
-		<English>[ICON_BULLET]%s1% Revolutionary sentiment (Patriotism).</English>
+		<English>[ICON_BULLET]%s1% Revolutionary sentiment (patriotism).</English>
 		<French>[ICON_BULLET]%s1% Climat Révolutionaire (Patriotisme).</French>
 		<German>[ICON_BULLET]%s1% Revolutionäre Stimmung (Patriotismus).</German>
 		<Italian>[ICON_BULLET]Spirito rivoluzionario: %s1% (Patriottismo).</Italian>
@@ -574,7 +574,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVICHELP_REV_SWITCH_TO_BONUS</Tag>
-		<English>[ICON_BULLET]%D1 one-time stability bonus for adopting civic</English>
+		<English>[ICON_BULLET]%D1 one-time stability bonus for adopting Civic.</English>
 		<French>[ICON_BULLET]%D1 de bonus unique de Stabilité : Adoption de la Doctrine</French>
 		<German>[ICON_BULLET]einmaliger Stabilitätsbonus von %D1 durch die Übernahme der Gesellschaftsform</German>
 		<Italian>[ICON_BULLET]Bonus stabilità per variazione forma di governo (%D1 una tantum)</Italian>
@@ -584,7 +584,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVICHELP_REV_SWITCH_TO_PENALTY</Tag>
-		<English>[ICON_BULLET]%D1 one-time instability penalty for adopting civic</English>
+		<English>[ICON_BULLET]%D1 one-time instability penalty for adopting Civic.</English>
 		<French>[ICON_BULLET]%D1 de penalité unique pour Instabilité : Adoption de la Doctrine</French>
 		<German>[ICON_BULLET]einmaliger Instabilitätsmalus von %D1 durch die Übernahme der Gesellschaftsform</German>
 		<Italian>[ICON_BULLET]%Penalità instabilità per variazione forma di governo (%D1 una tantum)</Italian>
@@ -594,7 +594,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVICHELP_SOFT_CITY_LIMIT</Tag>
-		<English>[ICON_BULLET]Settling more than %d1 cities will cause %d2 unhappiness in every city for each one over that limit</English>
+		<English>[ICON_BULLET]Settling more than %d1 cities will cause %d2 Unhappiness in every city for each one over that limit.</English>
 		<French>[ICON_BULLET]La fondation de plus de %d1 villes causera %d2 de mécontentement dans chaque ville, et ce pour chaque dépassement</French>
 		<Italian>[ICON_BULLET]Fondare più di %d1 città causerà %d2 di infelicità in tutte le città, per ogni città sopra il limite</Italian>
 		<Spanish>[ICON_BULLET]Fundar más de %d1 [NUM1:ciudad:ciudades] causará %d2[ICON_UNHAPPY] en todas las ciudades por cada ciudad sobre dicho límite</Spanish>
@@ -613,19 +613,19 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVICHELP_STATE_REL_BUILDING</Tag>
-		<English>[ICON_BULLET]Cities with State [ICON_RELIGION] Construct Buildings %D1_Mod%% as fast</English>
+		<English>[ICON_BULLET]Cities with State [ICON_RELIGION] Construct Buildings %D1_Mod%% as fast.</English>
 		<French>[ICON_BULLET]Les Villes avec la [ICON_RELIGION] d'état construisent des bâtiments %D1_Mod%% plus rapidement</French>
 		<Russian>[ICON_BULLET]Города с государственной [ICON_RELIGION] быстрее строят здания на %D1_Mod%%</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVICHELP_STATE_REL_TRAIN</Tag>
-		<English>[ICON_BULLET]Cities with State [ICON_RELIGION] Train Units %D1_Mod%% as fast</English>
+		<English>[ICON_BULLET]Cities with State [ICON_RELIGION] Train Units %D1_Mod%% as fast.</English>
 		<French>[ICON_BULLET]Les Villes avec la [ICON_RELIGION] d'état entraînent des unités %D1_Mod%% plus rapidement</French>
 		<Russian>[ICON_BULLET]Города с государственной [ICON_RELIGION] быстрее обучают отряды на %D1_Mod%%</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVICHELP_SUBSIDY</Tag>
-		<English>[ICON_BULLET]%D1_Mod%% Subsidy for Corporations</English>
+		<English>[ICON_BULLET]%D1_Mod%% Subsidy for Corporations.</English>
 		<French>[ICON_BULLET]%D1_Mod%% de subventions pour les Corporations</French>
 		<German>[ICON_BULLET]%D1_Mod%% Subventionen für Kapitalgesellschaften</German>
 		<Italian>[ICON_BULLET]%D1_Mod%% di sussidi per le corporazioni</Italian>
@@ -635,7 +635,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVICHELP_TAXATION_ANGER</Tag>
-		<English>[ICON_BULLET]Extra [ICON_UNHAPPY] In All Cities Per %d1% Tax Rate</English>
+		<English>[ICON_BULLET]Extra [ICON_UNHAPPY] In All Cities Per %d1% Tax Rate.</English>
 		<French>[ICON_BULLET][ICON_UNHAPPY] supplémentaires dans toutes les Villes pour %d1% de taxes</French>
 		<German>[ICON_BULLET]Zusätzlich [ICON_UNHAPPY] in allen Städten pro %d1% Steuerrate</German>
 		<Italian>[ICON_BULLET]Extra [ICON_UNHAPPY] in tutte le città ogni %d1% di tasse</Italian>
@@ -655,7 +655,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVICHELP_UNHAPPINESS</Tag>
-		<English>[ICON_BULLET]+%d1_Change[ICON_UNHAPPY] In all cities</English>
+		<English>[ICON_BULLET]+%d1_Change[ICON_UNHAPPY] In all cities.</English>
 		<French>[ICON_BULLET]+%d1_Change[ICON_UNHAPPY] dans toutes les Villes</French>
 		<German>[ICON_BULLET]+%d1_Change[ICON_UNHAPPY] in allen Städten</German>
 		<Spanish>[ICON_BULLET]+%d1_Change[ICON_UNHAPPY] en todas las ciudades</Spanish>
@@ -664,7 +664,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVICHELP_UNIT_COMBAT_PRODUCTION_MOD</Tag>
-		<English>[SPACE]Trained %D1%% Faster</English>
+		<English>[SPACE]Trained %D1%% Faster.</English>
 		<French>[SPACE]Entaînement %D1%% plus rapide</French>
 		<German>[SPACE]wurde %D1%% schneller ausgebildet</German>
 		<Italian>[SPACE]costruite il %D1%% più velocemente</Italian>
@@ -1081,7 +1081,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_AGRICULTURAL_GUILDS_PEDIA</Tag>
-		<English>A guild is an association of artisans or merchants who oversee the practice of their craft/trade in a particular area.[PARAGRAPH:2]European agriculture underwent a number of significant changes during the Middle Ages. Tools including the scythe and plow were improved from classical versions, a three field system of crop rotation was invented, and the moldboard plow and wheeled plow were increasingly used. Draft horses were bred and increasingly used as a working animal in many parts of Europe, while oxen continued to be used for this purpose. Metal horseshoes were widely adopted. Much of Europe had low population densities during this period, to which extensive farming was well-suited.</English>
+		<English>A guild is an association of artisans or merchants who oversee the practice of their craft/trade in a particular area.[PARAGRAPH:2]European agriculture underwent a number of significant changes during the Middle Ages. Tools including the scythe and plow were improved from classical versions, a three field system of crop rotation was invented, and the moldboard plow and wheeled plow were increasingly used. Draft horses were bred and increasingly used as a working animal in many parts of Europe, while oxen continued to be used for this purpose. Metal horseshoes were widely adopted. Much of Europe had low population densities during this period, which made it well-suited to extensive farming.</English>
 		<French>Une guilde est une association d'artisans ou de commerçants qui supervisent la pratique de leur artisanat / commerce dans un domaine particulier.[PARAGRAPH:2]L'agriculture européenne a subi un certain nombre de changements importants au Moyen Âge. Les outils, y compris la faux et la charrue, ont été améliorés par rapport aux versions classiques, un système de rotation des cultures à trois champs a été inventé et la charrue à versoir et la charrue à roues ont été de plus en plus utilisées. Les chevaux de trait étaient élevés et de plus en plus utilisés comme animaux de travail dans de nombreuses régions d'Europe, tandis que les bœufs continuaient d'être utilisés à cette fin. Les fers à cheval en métal ont été largement adoptés. Une grande partie de l'Europe avait de faibles densités de population au cours de cette période, à laquelle l'agriculture extensive convenait bien.</French>
 		<Polish>Gildia (niem. Gilde - zwi&#185;zek); tak&#191;e konfraternia (z &#179;ac. wsp&#243;&#179;bractwo) - w &#156;redniowiecznej Europie stowarzyszenie o charakterze obronnym, religijnym lub towarzyskim. W XI w. kupiectwo sta&#179;o si&#234; najbogatsz&#185; warstw&#185; miejskiej spo&#179;eczno&#156;ci. Wobec du&#191;ego zagro&#191;enia, jakie stanowi&#179;y na drogach bandy rabusi&#243;w, kupcy organizowali si&#234; w gildie, wsp&#243;lnie ponosz&#185;c koszty organizowania podr&#243;&#191;y i gromadzenia towar&#243;w, dzi&#234;ki czemu rozk&#179;ada&#179;o si&#234; ryzyko zwi&#185;zane z handlem. Nazw&#185; t&#185; okre&#156;lano w p&#243;&#179;nocnej Europie tak&#191;e cechy rzemie&#156;lnicze. Polska nazwa "gie&#179;da" pochodzi od dolnoniemieckiego s&#179;owa "die Gilde" ta ze staro skandynawskiej gildi - oznaczaj&#185;ca zebranie, stowarzyszenie, nast&#234;pnie cech rzemie&#156;lniczy.</Polish>
 		<Russian>Европейское сельское хозяйство претерпело ряд существенных изменений на протяжении Средних веков. Инструменты включая косу и плуг были улучшены от классической версии, была придумана трехпольная система севооборота, и активное использование отвального и колесного плуга. Тягловый скот все чаще используется как рабочие животные во многих частях Европы, в то время как волы продолжали использоваться для этой цели. Широко распространились металлические подковы. На большей части Европы была низкая плотность населения в этот период, на который пришелся расцвет экстенсивного земледелия.</Russian>
@@ -1109,7 +1109,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_ANARCHISM_PEDIA</Tag>
-		<English>Anarchism is a political philosophy that advocates self-governed societies based on voluntary institutions. These are often described as stateless societies, although several authors have defined them more specifically as institutions based on non-hierarchical or free associations. Anarchism holds the state to be undesirable, unnecessary and harmful.[PARAGRAPH:2]While opposition to the state is central, anarchism specifically entails opposing authority or hierarchical organisation in the conduct of all human relations. Anarchist economics and legal philosophy reflects anti-authoritarian interpretations of communism, collectivism, syndicalism, mutualism, or participatory economics. Anarchist schools of thought can differ fundamentally, supporting anything from extreme individualism to complete collectivism. Strains of anarchism have often been divided into the categories of social and individualist anarchism or similar dual classifications.[PARAGRAPH:2]Most contemporary anthropologists as well as anarcho-primitivists agree that for the longest period before recorded history human society was without a separate class of established authority or formal political institutions, as long before anarchism emerged as a distinct perspective, human beings lived for thousands of years in self-governing societies without a special ruling or political class. It was only after the rise of hierarchical societies that anarchist ideas were formulated as a critical response to and rejection of coercive political institutions and hierarchical social relationships.[PARAGRAPH:2]Ancient Greece also saw the first Western instance of anarchism as a philosophical ideal. The Cynics Diogenes of Sinope and Crates of Thebes are both supposed to have advocated anarchistic forms of society, although little remains of their writings. The Greek philosophers Plato and Aristotle used the term anarchy negatively in association with democracy which they mistrusted as inherently vulnerable and prone to deteriorate into tyranny.[PARAGRAPH:2]Modern anarchism sprang from the secular or religious thought of the Enlightenment, particularly Jean-Jacques Rousseau's arguments for the moral centrality of freedom. As part of the political turmoil of the 1790s in the wake of the French Revolution, William Godwin developed the first expression of modern anarchist thought. According to Peter Kropotkin, Godwin was "the first to formulate the political and economical conceptions of anarchism, even though he did not give that name to the ideas developed in his work".[PARAGRAPH:2]Henry David Thoreau was an important early influence in individualist anarchist thought in the United States and Europe. He is best known for his books Walden, a reflection upon simple living in natural surroundings; and his essay, Civil Disobedience, an argument for individual resistance to civil government in moral opposition to an unjust state. An important concern for American individualist anarchism was free love. Free love particularly stressed women's rights since most sexual laws discriminated against women, for example marriage laws and anti-birth control measures.</English>
+		<English>Anarchism is a political philosophy that advocates self-governed societies based on voluntary institutions. These are often described as stateless societies, although several authors have defined them more specifically as institutions based on non-hierarchical or free associations. Anarchism holds the state to be undesirable, unnecessary, and harmful.[PARAGRAPH:2]While opposition to the state is central, anarchism also entails opposition to authority and hierarchical organization in all aspects of human relations. Anarchist economics and legal philosophy reflect anti-authoritarian interpretations of communism, collectivism, syndicalism, mutualism, or participatory economics. Anarchist schools of thought can differ fundamentally, supporting anything from extreme individualism to complete collectivism. Strains of anarchism are often divided into categories such as social and individualist anarchism or similar dual classifications.[PARAGRAPH:2]Most contemporary anthropologists, as well as anarcho-primitivists, agree that for the longest period before recorded history, human society was without a separate class of established authority or formal political institutions. Long before anarchism emerged as a distinct perspective, human beings lived for thousands of years in self-governing societies without a specialized ruling or political class. It was only after the rise of hierarchical societies that anarchist ideas were formulated as a critical response to and rejection of coercive political institutions and hierarchical social relations.[PARAGRAPH:2]Ancient Greece also saw the first Western instance of anarchism as a philosophical ideal. The Cynics, such as Diogenes of Sinope and Crates of Thebes, are both believed to have advocated anarchistic forms of society, although little remains of their writings. The Greek philosophers Plato and Aristotle used the term "anarchy" negatively, associating it with democracy, which they mistrusted as inherently unstable and prone to deteriorate into tyranny.[PARAGRAPH:2]Modern anarchism sprang from the secular or religious thought of the Enlightenment, particularly Jean-Jacques Rousseau's arguments for the moral centrality of freedom. During the political turmoil of the 1790s in the wake of the French Revolution, William Godwin developed the first expression of modern anarchist thought. According to Peter Kropotkin, Godwin was "the first to formulate the political and economical conceptions of anarchism, even though he did not give that name to the ideas developed in his work."[PARAGRAPH:2]Henry David Thoreau was an important early influence in individualist anarchist thought in the United States and Europe. He is best known for his book Walden, a reflection upon simple living in natural surroundings, and his essay Civil Disobedience, an argument for individual resistance to civil government in moral opposition to an unjust state. An important concern for American individualist anarchism was free love. Free love particularly stressed women's rights since most sexual laws discriminated against women, for example, marriage laws and anti-birth control measures.</English>
 		<French>L'anarchisme regroupe plusieurs courants de philosophie politique développés depuis le XIXeme siècle sur un ensemble de théories et de pratiques anti-autoritaires. Le terme libertaire, souvent utilisé comme synonyme, est un néologisme créé en 1857 par Joseph Déjacque pour renforcer le caractère égalitaire.[PARAGRAPH:2]Fondé sur la négation du principe d'autorité dans l'organisation sociale et le refus de toute contrainte découlant des institutions basées sur ce principe, l'anarchisme a pour but de développer une société sans domination et sans exploitation, où les individus-producteurs coopèrent librement dans une dynamique d'autogestion et de fédéralisme. Contre l'oppression, l'anarchisme propose une société basée sur la solidarité comme solution aux antagonismes, la complémentarité de la liberté de chacun et celle de la collectivité, l'égalité des conditions de vie et la propriété commune autogérée. Il s'agit donc d'un mode politique qui cherche non pas à résoudre les différences opposant les membres constituants de la société mais à associer des forces autonomes et contradictoires.[PARAGRAPH:2]L'anarchisme est un mouvement pluriel qui embrasse l'ensemble des secteurs de la vie et de la société. Concept philosophique, c'est également « une idée pratique et matérielle, un mode d'être de la vie et des relations entre les êtres qui naît tout autant de la pratique que de la philosophie ; ou pour être plus précis qui naît toujours de la pratique, la philosophie n'étant elle-même qu'une pratique, importante mais parmi d'autres ». En 1928, Sébastien Faure, dans La Synthèse anarchiste, définit quatre grands courants qui cohabitent tout au long de l'histoire du mouvement : l'anarchisme individualiste qui insiste sur l'autonomie individuelle contre toute autorité ; le socialisme libertaire qui propose une gestion collective égalitaire de la société ; le communisme libertaire, qui de l'aphorisme « De chacun selon ses moyens, à chacun selon ses besoins » créé par Louis Blanc, veut économiquement partir du besoin des individus, pour ensuite produire le nécessaire pour y répondre ; l'anarcho-syndicalisme, qui propose une méthode, le syndicalisme, comme moyen de lutte et d'organisation de la société. Depuis, de nouvelles sensibilités se sont affirmées, telles l'anarcho-féminisme ou l'écologie sociale.</French>
 		<German>Anarchie bedeutet wörtlich Herrschaftslosigkeit. Der Begriff wird im Volksmund oft fälschlicherweise mit reinem Chaos, Gewaltherrschaft und Gesetzlosigkeit gleichgesetzt. Er bezeichnet aber eigentlich eine soziale Ordnung, in der die individuellen Freiheiten nicht durch Hierarchien und die Herrschaft von Menschen über andere Menschen eingeschränkt werden. Ohne eine lenkende Zentralgewalt übernimmt in einer anarchischen Gesellschaft jedes Individuum selbst beziehungsweise in Kooperation mit anderen für die eigenen Lebensumstände Verantwortung. Die Bürger können sich selbstbestimmt organisieren, z.B. in Kollektiven, Kommunen oder einfach in Vereinigungen Gleichgesinnter, es ist aber auch möglich, sich nur spontan und kurzfristig zur Umsetzung bestimmter Projekte zusammenzuschließen. Wichtig ist, dass es in solchen Zusammenschlüssen keine Hierarchien gibt und die Struktur immer von unten nach oben also ausgehend vom Individuum aufgebaut ist. Es ist unter Wissenschaftlern umstritten, ob die frühen Menschen in politischer Hinsicht herrschaftsfrei waren oder ob es auch in Sippen und Horden schon Führungspositionen gab.</German>
 		<Polish>Anarchizm - og&#243;lny termin oznaczaj&#185;cy r&#243;&#191;norodne doktryny polityczne iruchy spo&#179;eczne cechuj&#185;ce si&#234; niech&#234;ci&#185; wobec scentralizowanej w&#179;adzy(szczeg&#243;lnie pa&#241;stwa) i sformalizowanych instytucji i wskazuj&#185;ce, &#191;e s&#185; one &#159;r&#243;d&#179;em opresji spo&#179;ecznej i zagro&#191;eniem dla wolno&#156;ci.</Polish>
@@ -1132,7 +1132,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_ANTIRELIGION_PEDIA</Tag>
-		<English>Antireligion is opposition to religion of any kind. The term has been used to describe opposition to organized religion, religious practices or religious institutions. This term has also been used to describe opposition to specific forms of supernatural worship or practice, whether organized or not.[PARAGRAPH:2]Opposition to religion also goes beyond the misotheistic spectrum. As such it is distinct from deity-specific positions such as atheism (the denial of belief in deities) and antitheism (an opposition to belief in deities), although "antireligionists" may also be atheists or antitheists.[PARAGRAPH:2]An early form of mass antireligion was expressed during the Enlightenment, as early as the 17th century. Baron d'Holbach's book Christianity Unveiled published in 1761, attacked not only Christianity but religion in general as an impediment to the moral advancement of humanity. According to historian Michael Burleigh, antireligion found its first mass expression of barbarity in revolutionary France as "organised irreligion, an 'anti-clerical' and self-styled 'non-religious' state" responded violently to religious influence over society.[PARAGRAPH:2]The Soviet Union adopted the political ideology of Marxism-Leninism and viewed religion as closely tied with foreign nationality. It thus directed varying degrees of antireligious efforts at varying faiths, depending on what threat they posed to the Soviet state, and their willingness to subordinate itself to political authority. These antireligious campaigns were directed at all faiths, including Christian, Islamic, Buddhist, Jewish, and Shamanist religions. In the 1930s, during the Stalinist period, the government destroyed church buildings or put them into secular use (as museums of religion and atheism, clubs or storage facilities), executed clergy, prohibited the publication of most religious material and persecuted some members of religious groups.[PARAGRAPH:2]The People's Republic of Albania had an objective for the eventual elimination of all religion in Albania with the goal of creating an atheist nation, which it declared it had achieved in 1967. In 1976, Albania implemented a constitutional ban on religious activity and propaganda. The government nationalised most property of religious institutions and used it for non-religious purposes, such as cultural centers for young people. Religious literature was banned. Many clergy and theists were tried, tortured, and executed. All foreign Roman Catholic clergy were expelled in 1946. Albania was the only country that ever officially banned religion.[PARAGRAPH:2]Authorities in the People's Republic of Romania aimed to move towards an atheistic society, in which religion would be considered as the ideology of the bourgeoisie; the régime also set to propagate among the laboring masses in science, politics and culture to help them fight superstition and mysticism, and initiated an anti-religious campaign aimed to reducing the influence of religion in society.[PARAGRAPH:2]The Khmer Rouge attempted to eliminate Cambodia's cultural heritage, including its religions, particularly Theravada Buddhism. Over the four years of Khmer Rouge rule, at least 1.5 million Cambodians were executed. Of there sixty thousand Buddhist monks that previously existed, only three thousand survived the Khmer Rouge horror.[PARAGRAPH:2]Christopher Hitchens was a well-known religious critic of the 20th and 21th century who maintained opposition to religion, arguing that free expression and scientific discovery should replace religion as the method of teaching ethics and defining human civilization.</English>
+		<English>Antireligion is opposition to religion of any kind. The term has been used to describe opposition to organized religion, religious practices, or religious institutions. This term has also been used to describe opposition to specific forms of supernatural worship or practice, whether organized or not.[PARAGRAPH:2]Opposition to religion also goes beyond the misotheistic spectrum (hatred of God or gods). As such, it is distinct from deity-specific positions such as atheism (the denial of belief in deities) and antitheism (an opposition to belief in deities), although "antireligionists" may also be atheists or antitheists.[PARAGRAPH:2]An early form of mass antireligion was expressed during the Enlightenment, as early as the 17th century. Baron d'Holbach's book Christianity Unveiled, published in 1761, attacked not only Christianity but religion in general as an impediment to the moral advancement of humanity. According to historian Michael Burleigh, antireligion found its first mass expression of barbarity in revolutionary France as "organized irreligion, an 'anti-clerical' and self-styled 'non-religious' state" responded violently to religious influence over society.[PARAGRAPH:2]The Soviet Union adopted the political ideology of Marxism-Leninism and viewed religion as closely tied with foreign nationality. It thus directed varying degrees of antireligious efforts at varying faiths, depending on what threat they posed to the Soviet state, and their willingness to subordinate itself to political authority. These antireligious campaigns were directed at all faiths, including Christian, Islamic, Buddhist, Jewish, and Shamanist religions. In the 1930s, during the Stalinist period, the government destroyed church buildings or put them into secular use (as museums of religion and atheism, clubs, or storage facilities), executed clergy, prohibited the publication of most religious material, and persecuted some members of religious groups.[PARAGRAPH:2]The People's Republic of Albania had an objective for the eventual elimination of all religion in Albania with the goal of creating an atheist nation, which it declared it had achieved in 1967. In 1976, Albania implemented a constitutional ban on religious activity and propaganda. The government nationalized most property of religious institutions and used it for non-religious purposes, such as cultural centers for young people. Religious literature was banned. Many clergy and theists were tried, tortured, and executed. All foreign Roman Catholic clergy were expelled in 1946. Albania was the only country that ever officially banned religion.[PARAGRAPH:2]Authorities in the People's Republic of Romania aimed to move toward an atheistic society, in which religion would be considered as the ideology of the bourgeoisie; the régime also set to propagate among the laboring masses in science, politics and culture to help them fight superstition and mysticism, and initiated an anti-religious campaign aimed at reducing the influence of religion in society.[PARAGRAPH:2]The Khmer Rouge attempted to eliminate Cambodia's cultural heritage, including its religions, particularly Theravada Buddhism. Over the four years of Khmer Rouge rule, at least 1.5 million Cambodians were executed. Of the sixty thousand Buddhist monks that previously existed, only three thousand survived the Khmer Rouge horror.[PARAGRAPH:2]Christopher Hitchens was a prominent critic of religion whose work spanned the late 20th and 21st centuries. He argued that free expression and scientific understanding should replace religion as the foundation for teaching ethics and shaping human civilization.</English>
 		<French>L'antireligion est une opposition à toute religion. Le terme a été utilisé pour décrire l'opposition à la religion organisée, aux pratiques religieuses ou aux institutions religieuses. Ce terme a également été utilisé pour décrire l'opposition à des formes spécifiques de culte ou de pratique surnaturelle, qu'elles soient organisées ou non.[PARAGRAPH:2]L'opposition à la religion dépasse également le spectre misothéiste. En tant que tel, il est distinct des positions spécifiques aux divinités telles que l'athéisme (le déni de la croyance en des divinités) et l'antithéisme (une opposition à la croyance en des divinités), bien que les "antireligionists" puissent également être des athées ou des antithéistes.[PARAGRAPH:2]forme d'antireligion de masse a été exprimée pendant les Lumières, dès le 17ème siècle. Le livre du baron d'Holbach Christianity Unveiled publié en 1761, a attaqué non seulement le christianisme mais la religion en général comme un obstacle au progrès moral de l'humanité. Selon l'historien Michael Burleigh, l'antireligion a trouvé sa première expression de masse de barbarie dans la France révolutionnaire comme "irréligion organisée, un état" anti-clérical "et autoproclamé" non religieux "" a répondu violemment à l'influence religieuse sur la société.</French>
 		<Russian>Атеизм - в широком смысле - отвержение веры в существование богов; в более узком - убеждение в том, что богов не существует. В самом широком смысле атеизм - простое отсутствие веры в существование богов. Атеизм противоположен теизму, понимаемому в самом общем случае как вера в существование одного или нескольких богов. Атеизм часто понимается также как отрицание существования сверхъестественного вообще - богов, духов, других нематериальных существ и сил, загробной жизни и т. д. По отношению к религии атеизм - мировоззрение, отрицающее религию как веру в сверхъестественное.[PARAGRAPH:2]Для атеизма характерна убежденность в самодостаточности естественного мира (природы) и в человеческом (не сверхъестественном) происхождении всех религий, в том числе религий откровения. Многие из тех, кто считает себя атеистом, скептически относятся ко всем сверхъестественным существам, явлениям и силам, указывая на отсутствие эмпирических свидетельств их существования. Другие приводят доводы в пользу атеизма, опираясь на философию, социологию или историю. Большая часть атеистов является сторонниками светских философий, таких как гуманизм и натурализм. Не существует единой идеологии или шаблона поведения, присущего всем атеистам.[PARAGRAPH:2]Термин «атеизм» появился как уничижительный эпитет, применявшийся к любому человеку или учению, находившемуся в конфликте с установившейся религией. И только позднее это слово стало означать определенную философскую позицию. С распространением свободы убеждений, свободы мысли и совести, научного скептицизма и критики религии этот термин стал приобретать более конкретное значение и начал использоваться атеистами для самообозначения.[PARAGRAPH:2]Раннее Форма массовой антирелигиозности была выражена еще во времена Просвещения, еще в 17 веке. Книга барона д'Ольбаха «Разоблаченное христианство», опубликованная в 1761 году, осудила не только христианство, но и религию в целом как препятствие на пути нравственного развития человечества. Согласно историку Майклу Берли, антирелигия нашла свое первое массовое выражение варварства в революционной Франции как «организованное безбожие, "антиклерикальное" и самозваное "нерелигиозное" государство», бурно отреагировавшее на религиозное влияние на общество.[PARAGRAPH:2]Советский Союз принял политическую идеологию марксизма-ленинизма и рассматривал религию как тесно связанную с иностранным гражданством. Таким образом, он направил различные степени антирелигиозных усилий на различные конфессии, в зависимости от того, какую угрозу они представляли Советскому государству, и их готовности подчиниться политической власти. Эти антирелигиозные кампании были направлены против всех конфессий, включая христианские, исламские, буддистские, иудейские и шаманские религии. В 30-е годы, в сталинский период, правительство разрушало церковные здания или использовало их в светских целях (в качестве музеев религии и атеизма, клубов или хранилищ), организовывало гонения на духовенство, запрещало публикацию большинства религиозных материалов и преследовало некоторых религиозных деятелей или групп.[PARAGRAPH:2]Народная Республика Албания преследовала цель окончательной ликвидации всех религий в Албании с целью создания атеистической нации, которую она объявила в 1967 году. В 1976 году Албания ввела конституционный запрет на религиозную деятельность и пропаганду. Правительство национализировало большую часть имущества религиозных учреждений и использовало его в нерелигиозных целях, таких как культурные центры для молодежи. Религиозная литература была запрещена. Многие священнослужители и теисты предстали перед судом, подвергались пыткам и казни. Все иностранные римско-католические священнослужители были высланы в 1946 году. Албания была единственной страной, которая когда-либо официально запрещала религию.[PARAGRAPH:2]Власти Румынской Народной Республики стремились продвигаться к атеистическому обществу, в котором религия считалась бы идеологией. буржуазии; Режим также начал пропагандировать среди трудящихся масс в науке, политике и культуре, чтобы помочь им бороться с суевериями и мистикой, и инициировал антирелигиозную кампанию, направленную на уменьшение влияния религии в обществе.[PARAGRAPH:2]Попытка красных кхмеров уничтожить культурное наследие Камбоджи, включая ее религии, в частности буддизм тхеравады. За четыре года правления красных кхмеров казнили не менее 1,5 миллиона камбоджийцев. Из шестидесяти тысяч буддийских монахов, которые существовали ранее, только три тысячи пережили ужас красных кхмеров.[PARAGRAPH:2]Кристофер Хитченс и Ричард Докинз были известными критиками религии на рубеже 20-го и 21-го века, поддерживавшие оппозицию религии, утверждая, что свобода выражения и научные достижения должны заменить религию как метод преподавания этики и определения путей человеческой цивилизации.</Russian>
 	</TEXT>
@@ -1150,7 +1150,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_APOTHEOSIS_PEDIA</Tag>
-		<English>Apotheosis (also called divinization and deification) is the glorification of a subject to divine level.[PARAGRAPH:2]In religion, divinity or godhead is the state of things that are believed to come from a supernatural power or deity, such as a god, supreme being, creator deity, or spirits, and are therefore regarded as sacred and holy.[PARAGRAPH:2]Such things are regarded as divine due to their transcendental origins or because their attributes or qualities are superior or supreme relative to things of the Earth. In its most direct form, the operation of transcendent power implies some form of divine intervention.[PARAGRAPH:2]For pan- and polytheistic faiths this usually implies the direct action of one god or another on the course of human events. In Greek legend, for instance, it was Poseidon (god of the sea) who raised the storms which blew Odysseus' craft off course on his return journey, and Japanese tradition holds that a god-sent wind saved them from Mongol invasion. Prayers or propitiations are often offered to specific gods of pantheisms to garner favorable interventions in particular enterprises: e.g. safe journeys, success in war, or a season of bountiful crops. Many faiths around the world - from Japanese Shinto and Chinese traditional religion, to certain African practices and the faiths derived from those in the Caribbean, to Native American beliefs - hold that ancestral or household deities offer daily protection and blessings. In monotheistic religions, divine intervention may take very direct forms: miracles, visions, or intercessions by blessed figures.[PARAGRAPH:2]Transcendent force or power may also operate through more subtle and indirect paths. Monotheistic faiths generally support some version of divine providence, which acknowledges that the divinity of the faith has a profound but unknowable plan always unfolding in the world. Unforeseeable, overwhelming, or seemingly unjust events are often thrown on 'the will of the Divine', in deferences like the Muslim inshallah ('as God wills it') and Christian 'God works in mysterious ways'.[PARAGRAPH:2]In science fiction Arthur C Clarke's novel Childhood's End has the Overlords refer to Mankind's "apotheosis" when the world's children evolve into their union with the Overmind. Frank Herbert's novel The Godmakers has a main character Lewis Orne, for whom apotheosis occurs when a number of priests of the planet Amel, who practice 'religious engineering', set about creating a god.</English>
+		<English>Apotheosis (also called divinization and deification) is the glorification of a subject to a divine level.[PARAGRAPH:2]In religion, divinity or godhead is the state of things that are believed to come from a supernatural power or deity, such as a god, supreme being, creator deity, or spirits, and are therefore regarded as sacred and holy.[PARAGRAPH:2]Such things are regarded as divine due to their transcendental origins or because their attributes or qualities are superior or supreme relative to earthly things and the mundane. In its most direct form, the operation of transcendent power implies some form of divine intervention.[PARAGRAPH:2]For pan- and polytheistic faiths this usually implies the direct action of one god or another on the course of human events. In Greek legend, for instance, it was Poseidon (god of the sea) who raised the storms that blew Odysseus' craft off course on his return journey, and Japanese tradition holds that a god-sent wind saved them from Mongol invasion. Prayers or propitiations are often offered to specific gods of pantheisms to garner favorable interventions in particular enterprises: for example, safe journeys, success in war, or a season of bountiful crops. Many faiths around the world - from Japanese Shinto and Chinese traditional religion, to certain African practices and the faiths derived from those in the Caribbean, to Native American beliefs - hold that ancestral or household deities offer daily protection and blessings. In monotheistic religions, divine intervention may take very direct forms: miracles, visions, or intercessions by blessed figures.[PARAGRAPH:2]Transcendent force or power may also operate through more subtle and indirect paths. Monotheistic faiths generally support some version of divine providence, which acknowledges that the divinity of the faith has a profound but unknowable plan always unfolding in the world. Unforeseeable, overwhelming, or seemingly unjust events are often attributed to 'the will of the Divine', in phrases like the Muslim inshallah ("as God wills it") and Christian "God works in mysterious ways".[PARAGRAPH:2]In science fiction Arthur C. Clarke's novel Childhood's End has the Overlords refer to mankind's apotheosis when the world's children evolve into their union with the Overmind. Frank Herbert's novel The Godmakers has a main character, Lewis Orne, for whom apotheosis occurs when a number of priests of the planet Amel, who practice "religious engineering," set about creating a god.</English>
 		<French>L'apothéose (également appelée divinisation et déification) est la glorification d'un sujet au niveau divin.[PARAGRAPH:2]Dans la religion, la divinité ou la divinité est l'état des choses qui proviendraient d'un pouvoir ou d'une divinité surnaturelle, comme un dieu , être suprême, divinité créatrice ou esprits, et sont donc considérés comme sacrés et saints.[PARAGRAPH:2]De telles choses sont considérées comme divines en raison de leurs origines transcendantales ou parce que leurs attributs ou qualités sont supérieurs ou suprêmes par rapport aux choses de la Terre. Dans sa forme la plus directe, l'opération du pouvoir transcendant implique une certaine forme d'intervention divine.[PARAGRAPH:2]Pour les religions pan- et polythéistes, cela implique généralement l'action directe d'un dieu ou d'un autre au cours des événements humains. Dans la légende grecque, par exemple, c'est Poséidon (dieu de la mer) qui a soulevé les tempêtes qui ont fait dévier le vaisseau d'Ulysse lors de son voyage de retour, et la tradition japonaise soutient qu'un vent envoyé par Dieu les a sauvés de l'invasion mongole. Des prières ou des propitiations sont souvent offertes à des dieux spécifiques du panthéisme pour obtenir des interventions favorables dans des entreprises particulières: par ex. voyages sûrs, succès dans la guerre, ou une saison de récoltes abondantes. De nombreuses confessions à travers le monde - du shinto japonais et de la religion traditionnelle chinoise à certaines pratiques africaines et aux croyances dérivées de celles des Caraïbes, aux croyances amérindiennes - soutiennent que les divinités ancestrales ou domestiques offrent une protection et des bénédictions quotidiennes. Dans les religions monothéistes, l'intervention divine peut prendre des formes très directes: miracles, visions ou intercessions de personnages bénis.</French>
 		<Russian>Апофеоз (также называемый обожествлением) - это прославление субъекта до божественного уровня.[PARAGRAPH:2]В религии божественность или божество - это состояние вещей, которые, как полагают, происходят от сверхъестественной силы или божества, таких как бог, верховное существо, божество-создатель или духи, и поэтому считаются священными и святыми.[PARAGRAPH:2]Такие вещи считаются божественными из-за их трансцендентного происхождения или потому, что их атрибуты или качества превосходят или превосходят по отношению к вещам Земли. В своей самой прямой форме действие трансцендентной власти подразумевает некоторую форму божественного вмешательства.[PARAGRAPH:2]Для пан- и политеистических верований это обычно подразумевает прямое действие того или иного бога на ход человеческих событий. В греческой легенде, например, именно Посейдон (бог моря) поднял штормы, которые взорвали ремесло Одиссея с его курса на обратном пути, и японская традиция гласит, что посланный богом ветер спас их от монгольского нашествия. Молитвы или умилостивления часто предлагаются конкретным богам пантеизмов, чтобы добиться благоприятных вмешательств на определенных предприятиях: например, безопасных путешествий, успеха на войне или сезона обильных урожаев. Многие конфессии по всему миру - от японской синтоистской и традиционной китайской религии до определенных африканских практик и верований, происходящих от тех, кто живет в Карибском бассейне, до верований коренных американцев - считают, что божества предков или домашних хозяйств предлагают ежедневную защиту и благословения. В монотеистических религиях божественное вмешательство может принимать очень прямые формы: чудеса, видения или ходатайства благословенных фигур.[PARAGRAPH:2]Трансцендентная сила или сила также могут действовать через более тонкие и косвенные пути. Монотеистические веры обычно поддерживают какую-то версию божественного провидения, которая признает, что божественность веры имеет глубокий, но непостижимый план, который всегда разворачивается в мире. Непредсказуемые, ошеломляющие или, казалось бы, несправедливые события часто бросаются на «волю Божества», в таких обманах, как мусульманский иншалла («как хочет Бог») и христианский «Бог действует таинственными способами».[PARAGRAPH:2]В научная фантастика в романе Артура С. Кларка «Конец детства» повелители ссылаются на «апофеоз» человечества, когда дети мира превращаются в их союз с Сверхразумом. В романе Фрэнка Герберта «Создатели Бога» есть главный герой Льюис Орн, для которого наступает апофеоз, когда множество священников планеты Амель, практикующих «религиозную инженерию», приступают к созданию бога.</Russian>
 	</TEXT>
@@ -1175,14 +1175,14 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_APPRENTICESHIP_PEDIA</Tag>
-		<English>An apprenticeship is a system of training a new generation of practitioners of a trade or profession with on-the-job training and often some accompanying study (classroom work and reading).[PARAGRAPH:2]Most of their training is done while working for an employer who helps the apprentices learn their trade or profession, in exchange for their continued labor for an agreed period after they have achieved measurable competencies. Apprenticeships typically last 3 to 7 years. People who successfully complete an apprenticeship reach the "journeyman" or professional certification level of competence.[PARAGRAPH:2]The system of apprenticeship first developed in the later Middle Ages and came to be supervised by craft guilds and town governments. A master craftsman was entitled to employ young people as an inexpensive form of labour in exchange for providing food, lodging and formal training in the craft.[PARAGRAPH:2]Most apprentices were males, but female apprentices were found in crafts such as seamstress, tailor, cordwainer, baker and stationer. Apprentices usually began at ten to fifteen years of age, and would live in the master craftsman's household. Most apprentices aspired to becoming master craftsmen themselves on completion of their contract (usually a term of seven years), but some would spend time as a journeyman and a significant proportion would never acquire their own workshop.[PARAGRAPH:2]In contemporary times, governmental regulation and the licensing of technical colleges and vocational education formalized and bureaucratized the details of apprenticeship.</English>
+		<English>An apprenticeship is a system of training a new generation of practitioners of a trade or profession with on-the-job training and often some accompanying study (classroom work and reading).[PARAGRAPH:2]Most of their training is done while working for an employer who helps the apprentices learn their trade or profession, in exchange for their continued labor for an agreed amount of time after they have achieved measurable competencies. Apprenticeships typically last three to seven years. People who successfully complete an apprenticeship reach the journeyman or professional certification level of competence.[PARAGRAPH:2]The system of apprenticeship first developed in the later Middle Ages and came to be supervised by craft guilds and town governments. A master craftsman was entitled to employ young people as an inexpensive form of labor in exchange for providing food, lodging and formal training in the craft.[PARAGRAPH:2]Most apprentices were males, but female apprentices were found in crafts such as seamstress, tailor, cordwainer, baker, and stationer. Apprentices usually began at ages ten to fifteen, and would live in the master craftsman's household. Most apprentices aspired to becoming master craftsmen themselves on completion of their contract (usually a term of seven years), but some would spend time as a journeyman and a significant proportion would never acquire their own workshop.[PARAGRAPH:2]In contemporary times, governmental regulation and the licensing of technical colleges and vocational education formalized and bureaucratized the details of apprenticeship.</English>
 		<French>Un apprentissage est un système de formation d'une nouvelle génération de praticiens d'un métier ou d'une profession avec une formation en cours d'emploi et souvent des études d'accompagnement (travail en classe et lecture).[PARAGRAPH:2]La plupart de leur formation se fait en travaillant pour un employeur qui aide les apprentis à apprendre leur métier ou leur profession, en échange de leur travail continu pendant une période convenue après avoir acquis des compétences mesurables. L'apprentissage dure généralement de 3 à 7 ans. Les personnes qui réussissent un apprentissage atteignent le niveau de compétence "compagnon" ou certification professionnelle.[PARAGRAPH:2]Le système d'apprentissage s'est développé à la fin du Moyen Âge et a été supervisé par des guildes d'artisanat et des autorités municipales. Un maître artisan avait le droit d'employer des jeunes comme forme de travail bon marché en échange de la nourriture, du logement et d'une formation formelle à l'artisanat.</French>
 		<Polish>Praktyki robotnicze, pocz&#185;wszy od lat 70. XX w. dotyczy&#179;y zar&#243;wno student&#243;w rozpoczynaj&#185;cych studia, jak i studiuj&#185;cych na wy&#191;szych latach. W lecie, po egzaminie wst&#234;pnym na studia a przed rozpocz&#234;ciem roku akademickiego (1 pa&#159;dziernika) organizowano tzw. praktyki "zerowe", czyli na "zerowym roku". R&#243;wnie&#191; latem po pierwszym lub po drugim roku studi&#243;w, kiedy starano si&#234; kierowa&#230; student&#243;w do pracy w zak&#179;adach lub na stanowiska zbli&#191;onych do ich przysz&#179;ych kwalifikacji. Praktyki te nazywano "specjalistycznymi", cho&#230; czasem niewiele r&#243;&#191;ni&#179;y si&#234; od "zerowych".</Polish>
 		<Russian>Согласно древнему обычаю, всякий молодой человек, жадный до знаний, был вправе получить их. Даже в эти трудные времена жители племени готовы потуже затянуть пояса, лишь бы учителя продолжали передавать знания ученикам - ведь всем, от кузнеца до военачальника, время от времени необходим мудрый совет.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_APPRENTICESHIP_STRATEGY</Tag>
-		<English>People are educated from an early age the ways of practicing a specific craft by their parents or teachers.</English>
+		<English>From an early age, people are taught a specific craft by their parents or teachers. Through observation, imitation, and guided instruction, this early exposure builds foundational skills and often shapes a long-term engagement with the specialized craft in question, whether artistic, technical, or practical.</English>
 		<French>Les gens sont éduqués dès leur plus jeune âge sur les façons de pratiquer un métier spécifique par leurs parents ou leurs enseignants.</French>
 		<Spanish>Un contrato vinculante para servir a otros por un periodo establecido con el fin de aprender un arte u oficio. Aumenta un 25% la tasa de nacimiento de [COLOR_UNIT_TEXT]Grandes personajes[COLOR_REVERT], permite asignar [COLOR_HIGHLIGHT_TEXT]Ingenieros[COLOR_REVERT] de forma ilimitada.</Spanish>
 		<Russian>Люди с раннего возраста обучаются всевозможным ремеслам, как их родители или наставники.</Russian>
@@ -1195,7 +1195,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_ATOMIZED_PEDIA</Tag>
-		<English>The term vaporization has been used in a colloquial or hyperbolic way to refer to the physical destruction of an object that is exposed to intense heat or explosive force, where the object is actually blasted into small pieces rather than literally converted to gaseous form. Examples of this usage include the "vaporization" of the uninhabited Marshall Island of Elugelab in the 1952 Ivy Mike thermonuclear test.[PARAGRAPH:2]In science fiction we have the Martian "Heat Ray" in H. G. Wells' 1898 novella The War of the Worlds is one of the earliest examples of this, although it did tend to leave messy burnt bits around the edges of the blast zone.[PARAGRAPH:2]In Ringworld and Larry Niven's other Known Space stories, the Thrintun Slavers left a lot of their Lost Technology lying around in stasis, including a disintegrator digging tool that suppresses atomic valence, atoms simply fly apart., TV Tropes: Disintegrator Ray</English>
+		<English>The term vaporization has been used in a colloquial or hyperbolic way to refer to the physical destruction of an object that is exposed to intense heat or explosive force, where the object is actually blasted into small pieces rather than literally converted to gaseous form. Examples of this usage include the "vaporization" of the uninhabited Marshall Island of Elugelab in the 1952 Ivy Mike thermonuclear test.[PARAGRAPH:2]In science fiction, we have the Martian "Heat Ray" in H. G. Wells' 1898 novella The War of the Worlds is one of the earliest examples of this, although it did tend to leave messy burnt bits around the edges of the blast zone.[PARAGRAPH:2]In Ringworld and Larry Niven's other Known Space stories, the Thrintun Slavers left a lot of their Lost Technology lying around in stasis, including a disintegrator digging tool that suppresses atomic valence, causing atoms simply fly apart.</English>
 		<French>Le terme Atomisation, ou encore vaporisation a été utilisé de manière familière ou hyperbolique pour désigner la destruction physique d'un objet qui est exposé à une chaleur intense ou à une force explosive, où l'objet est en fait dynamité en petits morceaux plutôt que littéralement converti en forme gazeuse. Des exemples de cet usage incluent la "vaporisation" de l'île Marshall inhabitée d'Elugelab dans le test thermonucléaire Ivy Mike de 1952.[PARAGRAPH:2]Dans la science-fiction, nous avons le "Heat Ray" martien dans le roman de HG Wells, The War of the 1898, The War of the Worlds est l'un des premiers exemples de cela, bien qu'il ait tendance à laisser des morceaux brûlés en désordre sur les bords de la zone d'explosion. Technologie perdue qui traîne en stase, y compris un outil de creusement de désintégrateur qui supprime la valence atomique, les atomes se séparent simplement., TV Tropes: Disintegrator Ray</French>
 		<Russian>Термин испарение использовался в разговорной или гиперболической форме для обозначения физического разрушения объекта, который подвергается воздействию высокой температуры или взрывной силы, когда объект фактически взрывается на мелкие кусочки, а не буквально превращается в газообразную форму. Примеры такого использования включают «испарение» необитаемого острова Маршалл Элюгелаба в термоядерном тесте Айви-Майка в 1952 году.[PARAGRAPH:2]В научной фантастике у нас есть марсианский «Луч тепла» в повести Г. Г. Уэллса 1898 года «Война миров» - один из самых ранних примеров этого, хотя он имел тенденцию оставлять грязные обгоревшие кусочки по краям зоны взрыва.[PARAGRAPH:2]В других историях о «Кольце» и Ларри Нивене «Известные места» работорговцы Тринтуна оставили большую часть своей «Утерянной технологии» в безвыходном положении, включая инструмент для раскапывания дезинтегратора, который подавляет атомную валентность, атомы просто разлетаются.</Russian>
 	</TEXT>
@@ -1249,7 +1249,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_AUTOMATED_PEDIA</Tag>
-		<English>Automation is the technology by which a process or procedure is performed without human assistance.[PARAGRAPH:2]Technological unemployment is the loss of jobs caused by technological change. Such change typically includes the introduction of labour-saving "mechanical-muscle" machines or more efficient "mechanical-mind" processes mentioned above. Just as horses employed as prime movers were gradually made obsolete by the automobile, humans' jobs have also been affected throughout modern history.[PARAGRAPH:2]Historical examples include artisan weavers reduced to poverty after the introduction of mechanized looms. During World War II, Alan Turing's Bombe machine compressed and decoded thousands of man-years worth of encrypted data in a matter of hours. A contemporary example of technological unemployment is the displacement of retail cashiers by self-service tills.[PARAGRAPH:2]Prior to the 18th century both the elite and common people would generally take the pessimistic view on technological unemployment, at least in cases where the issue arose. Due to generally low unemployment in much of pre-modern history, the topic was rarely a prominent concern. In the 18th century fears over the impact of machinery on jobs intensified with the growth of mass unemployment, especially in Great Britain which was then at the forefront of the Industrial Revolution.[PARAGRAPH:2]During the second half of the 19th century, it became increasingly apparent that technological progress was benefiting all sections of society, including the working class. Concerns over the negative impact of innovation diminished. The term "Luddite fallacy" was coined to describe the thinking that innovation would have lasting harmful effects on employment.[PARAGRAPH:2]Perhaps the most cited advantage of automation in industry is that it is associated with faster production and cheaper labor costs. Another benefit could be that it replaces hard, physical, or monotonous work. Additionally, tasks that take place in hazardous environments or that are otherwise beyond human capabilities can be done by machines, as machines can operate even under extreme temperatures or in atmospheres that are radioactive or toxic.</English>
+		<English>Automation is the technology by which a process or procedure is performed without human assistance.[PARAGRAPH:2]Technological unemployment is the loss of jobs caused by technological change. Such change typically includes the introduction of labor-saving "mechanical-muscle" machines or more efficient "mechanical-mind" processes mentioned above. Just as horses employed as prime movers were gradually made obsolete by the automobile, humans' jobs have also been affected throughout modern history.[PARAGRAPH:2]Historical examples include artisan weavers reduced to poverty after the introduction of mechanized looms. During World War II, Alan Turing's Bombe machine compressed and decoded thousands of man-years worth of encrypted data in a matter of hours. A contemporary example of technological unemployment is the displacement of retail cashiers by self-service tills.[PARAGRAPH:2]Prior to the 18th century both the elite and common people would generally take the pessimistic view on technological unemployment, at least in cases where the issue arose. Due to generally low unemployment in much of pre-modern history, the topic was rarely a prominent concern. In the 18th century fears over the impact of machinery on jobs intensified with the growth of mass unemployment, especially in Great Britain which was then at the forefront of the Industrial Revolution.[PARAGRAPH:2]During the second half of the 19th century, it became increasingly apparent that technological progress was benefiting all sections of society, including the working class. Concerns over the negative impact of innovation diminished. The term "Luddite fallacy" was coined to describe the thinking that innovation would have lasting harmful effects on employment.[PARAGRAPH:2]Perhaps the most cited advantage of automation in industry is that it is associated with faster production and cheaper labor costs. Another benefit could be that it replaces hard, physical, or monotonous work. Additionally, tasks that take place in hazardous environments or that are otherwise beyond human capabilities can be done by machines, as machines can operate even under extreme temperatures or in atmospheres that are radioactive or toxic.</English>
 		<French>L'automatisation est la technologie par laquelle un processus ou une procédure est effectuée sans assistance humaine.[PARAGRAPH:2]Le chômage technologique est la perte d'emplois causée par le changement technologique. Un tel changement comprend généralement l'introduction de machines "mécaniques-musculaires" économes en main-d'oeuvre ou des processus "mécaniques-mentaux" plus efficaces mentionnés ci-dessus. Tout comme les chevaux employés comme moteurs principaux ont été progressivement rendus obsolètes par l'automobile, les emplois humains ont également été affectés tout au long de l'histoire moderne. Pendant la Seconde Guerre mondiale, la machine Bombe d'Alan Turing a compressé et décodé des milliers d'années-homme de données chiffrées en quelques heures. Un exemple contemporain de chômage technologique est le déplacement des caissiers de détail par des caisses libre-service.</French>
 		<Polish>Z robotami produkcja d&#243;br trwa&#179;a ca&#179;&#185; dob&#234;. Dla wszystkich z wyj&#185;tkiem najbardziej wykwalifikowana praca sta&#179;a si&#234; przestarza&#179;a produkcj&#185; masy. Bez potrzeby na prac&#234;, ludzie musieli co&#156;, zrobi&#230; z ca&#179;y czasem i tanimi dobrami. To prowadzi&#179;o do wieku wielkiego nadmiaru i upadku, jak r&#243;wnie&#191; r&#243;&#191;ne zmiany zdrowia, kt&#243;re towarzysz&#185; takiemu dogadzaniu.</Polish>
 		<Russian>Автоматизация - это технология, с помощью которой процесс или процедура выполняется без помощи человека.[PARAGRAPH:2]Технологическая безработица - это потеря рабочих мест, вызванная технологическими изменениями. Такие изменения обычно включают введение трудоемких «механически-мышечных» машин или более эффективных процессов «механического мышления», упомянутых выше. Точно так же, как лошади, которые использовались в качестве главных движителей, постепенно становились устаревшими из-за автомобиля, работа людей также страдала на протяжении всей современной истории.[PARAGRAPH:2]Исторические примеры включают ремесленников-ткачей, доведенных до нищеты после введения механизированных станков. Во время Второй мировой войны машина Alan Turing's Bombe сжимала и декодировала зашифрованные данные на тысячи человеко-лет за считанные часы. Современным примером технологической безработицы является смещение розничных кассиров с помощью самообслуживания.[PARAGRAPH:2]До 18-го века как элита, так и простые люди обычно принимали пессимистический взгляд на технологическую безработицу, по крайней мере, в тех случаях, когда возникла проблема. В целом из-за низкого уровня безработицы в большей части досовременной истории эта тема редко вызывала серьезную озабоченность. В 18 веке опасения по поводу воздействия техники на рабочие места усилились с ростом массовой безработицы, особенно в Великобритании, которая была тогда на переднем крае промышленной революции.[PARAGRAPH:2]Во второй половине 19-го века становилось все более очевидным, что технический прогресс приносит пользу всем слоям общества, включая рабочий класс. Обеспокоенность по поводу негативного влияния инноваций уменьшилась. Термин «ошибка Луддита» был придуман, чтобы описать мысль о том, что инновации будут иметь длительные вредные последствия для занятости.[PARAGRAPH:2]Возможно, наиболее цитируемым преимуществом автоматизации в промышленности является то, что она связана с более быстрым производством и более дешевыми затратами на рабочую силу. Еще одним преимуществом может быть то, что он заменяет тяжелую, физическую или монотонную работу. Кроме того, машины могут выполнять задачи, которые выполняются в опасных средах или которые находятся за пределами человеческих возможностей, поскольку машины могут работать даже при экстремальных температурах или в атмосфере, которая является радиоактивной или токсичной.</Russian>

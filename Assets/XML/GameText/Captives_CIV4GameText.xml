@@ -18,7 +18,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISSION_CAPTIVE_UPGRADE_TO_GATHERER</Tag>
-		<English>Upgrade to gatherer.</English>
+		<English>Upgrade a Captive to an Gatherer.</English>
 		<German>Bilde einen Gefangenen zum Sammler aus</German>
 		<French>Convertir en Cueilleuse</French>
 		<Italian>Converti prigioniero in un raccoglitore.</Italian>
@@ -27,7 +27,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISSION_CAPTIVE_UPGRADE_TO_IMMIGRANT</Tag>
-		<English>Upgrade to Immigrant.</English>
+		<English>Upgrade a Captive to an Immigrant.</English>
 		<French>Convertir en Immigrant</French>
 		<Italian>Converti prigioniero in un emigrante.</Italian>
 		<Polish>Ulepsz do Immigranta.</Polish>
@@ -57,7 +57,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISSION_CAPTIVE_UPGRADE_TO_SETTLER</Tag>
-		<English>Upgrade to Settler.</English>
+		<English>Upgrade a Captive to a Settler.</English>
 		<French>Convertir en Colon</French>
 		<Italian>Converti prigioniero in un colonizzatore.</Italian>
 		<Polish>Ulepsz do Osadnika.</Polish>
@@ -82,7 +82,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISSION_CAPTIVE_UPGRADE_TO_WORKER</Tag>
-		<English>Upgrade a Captive to worker.</English>
+		<English>Upgrade a Captive to a Worker.</English>
 		<French>Convertir en Ouvrier</French>
 		<German>Bilde einen Gefangenen zu einem beliebigen Arbeitstrupp aus</German>
 		<Italian>Converti prigioniero in un lavoratore.</Italian>
@@ -91,7 +91,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISSION_FREE_CAPTIVE</Tag>
-		<English>Set a captive free.</English>
+		<English>Set a Captive free.</English>
 		<French>Libérer un Prisonnier.</French>
 		<Italian>Libera prigioniero.</Italian>
 		<Polish>Uwolnij je&#241;ca.</Polish>
@@ -99,7 +99,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISSION_FREE_CAPTIVE_HELP</Tag>
-		<English>Setting a captive free adds food to the city store, as in Civ IV food represents population growth.</English>
+		<English>Setting a Captive free adds Food to the city store, as in Civ IV Food represents population growth.</English>
 		<French>Le fait de libérer un esclave augmente le stock de nourriture (dans Civ4, la nourriture représente l'accroissement de la population).</French>
 		<Italian>[NEWLINE]Aggiunge cibo alle riserve cittadine.</Italian>
 		<Polish>Uwolnienie je&#241;ca dodaje dostarcza miastu odrobin&#234; &#191;ywno&#156;ci, kt&#243;ra w CIV4 reprezentuje wzrost populacj&#234;.</Polish>
@@ -248,7 +248,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_OUTCOME_SET_CAPTIVE_FREE</Tag>
-		<English>Free the captive.</English>
+		<English>Free the Captive.</English>
 		<French>Libérer le Prisonnier.</French>
 		<Italian>Libera un prigioniero.</Italian>
 		<Polish>Uwolnij je&#241;ca.</Polish>
@@ -256,7 +256,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_OUTCOME_SET_CAPTIVE_FREE_MESSAGE</Tag>
-		<English>The captive has joined your city. This is represented as a boost to food.</English>
+		<English>The Captive has joined your city. This is represented as a boost to Food.</English>
 		<French>Le Prisonnier a rejoint votre ville. Représenté par un bonus de nourriture.</French>
 		<Italian>Il prigioniero si è unito alla tua città. Hai ricevuto un aumento di produzione di cibo.</Italian>
 		<Polish>Jeniec do&#179;&#185;czyl do Twojego miasta. Miasta uzysk&#179;o odrobin&#234; &#191;ywno&#156;ci z wzrostu populacji.</Polish>
@@ -264,7 +264,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_OUTCOME_UPGRADE_TO_ARCHER</Tag>
-		<English>Upgrade to Archer.</English>
+		<English>Upgrade a Captive to a Archer.</English>
 		<French>Convertir en Archer.</French>
 		<Italian>Converti il prigioniero in un arciere.</Italian>
 		<Polish>Ulepsz do &#163;ucznika.</Polish>
@@ -280,7 +280,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_OUTCOME_UPGRADE_TO_AXEMAN</Tag>
-		<English>Upgrade to Axeman.</English>
+		<English>Upgrade a Captive to a Axeman.</English>
 		<French>Convertir en Guerrier avec hache.</French>
 		<Italian>Converti il prigioniero in un guerriero con ascia.</Italian>
 		<Polish>Ulepsz do Topornika.</Polish>
@@ -296,7 +296,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_OUTCOME_UPGRADE_TO_GATHERER</Tag>
-		<English>Upgrade to Gatherer.</English>
+		<English>Upgrade a Captive to a Gatherer.</English>
 		<French>Convertir le prisonnier en Cueilleuse.</French>
 		<German>Ausbildung zum Sammler.</German>
 		<Italian>Il prigioniero è diventato un raccoglitore.</Italian>
@@ -330,7 +330,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_OUTCOME_UPGRADE_TO_NEANDERTHAL_GATHERER</Tag>
-		<English>Upgrade to Neanderthal Gatherer.</English>
+		<English>Upgrade a Captive to a Neanderthal Gatherer.</English>
 		<French>Améliorer en Cueilleuse Néanderthal.</French>
 		<Italian>Converti il prigioniero in un raccoglitore neanderthal.</Italian>
 		<Russian>Улучшить до неандертальского собирателя.</Russian>
@@ -344,7 +344,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_OUTCOME_UPGRADE_TO_NEANDERTHAL_TRACKER</Tag>
-		<English>Upgrade to Neanderthal Tracker.</English>
+		<English>Upgrade a Captive to a Neanderthal Tracker.</English>
 		<French>Améliorer en Pisteur néandertalien.</French>
 		<Italian>Converti il prigioniero in un inseguitore neanderthal.</Italian>
 		<Russian>Улучшить до неандертальского охотника.</Russian>
@@ -358,7 +358,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_OUTCOME_UPGRADE_TO_NEANDERTHAL_WARRIOR</Tag>
-		<English>Upgrade to Neanderthal Warrior.</English>
+		<English>Upgrade a Captive to a Neanderthal Warrior.</English>
 		<French>Convertir en Guerrier Néanderthal.</French>
 		<Italian>Converti il prigioniero in un guerriero neanderthal.</Italian>
 		<Polish>Ulepsz do Wojownika Neandertalczyk&#243;w.</Polish>
@@ -390,7 +390,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_OUTCOME_UPGRADE_TO_SPEARMAN</Tag>
-		<English>Upgrade to Spearman.</English>
+		<English>Upgrade a Captive to a Spearman.</English>
 		<French>Convertir en Guerrier avec lance.</French>
 		<Italian>Converti il prigioniero in un guerriero con lancia.</Italian>
 		<Polish>Ulepsz do W&#179;&#243;cznika.</Polish>
@@ -406,7 +406,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_OUTCOME_UPGRADE_TO_STONE_THROWER</Tag>
-		<English>Upgrade to Stone Thrower.</English>
+		<English>Upgrade a Captive to a Stone Thrower.</English>
 		<French>Convertir en Lanceur de pierres.</French>
 		<German>Ausbildung zum Steinewerfer</German>
 		<Italian>Converti il prigioniero in un lanciatore di pietre.</Italian>
@@ -424,7 +424,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_OUTCOME_UPGRADE_TO_WORKER</Tag>
-		<English>Upgrade to Worker.</English>
+		<English>Upgrade a Captive to a Worker.</English>
 		<French>Convertir le prisonnier en Ouvrier</French>
 		<Italian>Converti il prigioniero in un'unità lavoratore.</Italian>
 		<Polish>Ulepsz do Robotnika.</Polish>
@@ -447,14 +447,14 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_CAPTIVE_CIVILIAN_HELP</Tag>
-		<English>[ICON_BULLET] May join your cities (of less than size 7) or be sacrificed for culture or production. If you are running Slavery can be sold into slavery.</English>
-		<French>[ICON_BULLET] Peut rejoindre vos villes (de moins de 7 de population) ou être sacrifiés pour de la culture ou de la production. Si vous acceptez l'esclavage, peux être vendus en tant qu'esclave.</French>
+		<English>[ICON_BULLET]May join your cities (of less than size 7) or be sacrificed for Culture or Production. If you are running Slavery can be sold into slavery.</English>
+		<French>[ICON_BULLET]Peut rejoindre vos villes (de moins de 7 de population) ou être sacrifiés pour de la culture ou de la production. Si vous acceptez l'esclavage, peux être vendus en tant qu'esclave.</French>
 		<Italian>[ICON_BULLET]L'unità può [COLOR_HIGHLIGHT_TEXT]unirsi alle città[COLOR_REVERT] con popolazione inferiore a [COLOR_HIGHLIGHT_TEXT]7[COLOR_REVERT], essere [COLOR_HIGHLIGHT_TEXT]sacrificata[COLOR_REVERT] per [COLOR_HIGHLIGHT_TEXT]cultura[COLOR_REVERT] o [COLOR_HIGHLIGHT_TEXT]produzione[COLOR_REVERT] o essere [COLOR_HIGHLIGHT_TEXT]venduta come schiavo[COLOR_REVERT] (se la [COLOR_HIGHLIGHT_TEXT]visione del mondo schiavitù[COLOR_REVERT] è attiva)</Italian> <!-- unit Captive - Civilian -->
 		<Russian>[ICON_BULLET] Можно поселить в ваших городах (только где менее 7 жителей) или принести в жертву для очков культуры или производства. А также продать в рабство, если задействовано соответствующее мировоззрение.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_CAPTIVE_CIVILIAN_PEDIA</Tag>
-		<English>Civilian units captured in battle or from raiding cities.</English>
+		<English>Civilian units captured in battle or gained from raiding cities.</English>
 		<French>Unités civiles capturées au combat ou lors des attaques dans les villes.</French>
 		<Italian>Unità civili catturate in battaglia o da razzie di città.</Italian>
 		<Russian>Гражданские подразделения, захваченные в бою или при набеге на города.</Russian>
@@ -503,14 +503,14 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_FREED_SLAVE_HELP</Tag>
-		<English>[ICON_BULLET]May be set free (join your city population as food) or upgraded to workers.</English>
+		<English>[ICON_BULLET]May be set free (join your city population as Food) or be upgraded to Workers.</English>
 		<French>[ICON_BULLET]Peut être libéré (rejoint votre ville sous forme de réserve de nourriture) ou amélioré en ouvriers.</French>
 		<Russian>[ICON_BULLET]Может быть освобожден (увеличит количество еды в городе) или улучшен до рабочего.</Russian>
 		<Italian>[ICON_BULLET]L'unità può [COLOR_HIGHLIGHT_TEXT]essere liberata[COLOR_REVERT] (si unirà alla popolazione della città sotto forma di [COLOR_HIGHLIGHT_TEXT]cibo[COLOR_REVERT]) o essere [COLOR_HIGHLIGHT_TEXT]convertita in un'unità lavoratore[COLOR_REVERT]</Italian> <!-- unit Freed Slave -->
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_FREED_SLAVE_PEDIA</Tag>
-		<English>If you capture a city which has settled slaves in it some of them will become eligible for upgrade into workers. The cost of the upgrade represents the cost of providing them with the tools and infrastructure your other workers have.</English>
+		<English>If you capture a city which has settled slaves in it some of them will become eligible for upgrade into Workers. The cost of the upgrade represents the cost of providing them with the tools and infrastructure your other workers have.</English>
 		<French>Si vous capturez une ville qui y a installé des esclaves, certains d'entre eux deviendront éligibles pour être améliorés en ouvriers. Le coût de la mise à niveau représente le coût de leur fournir les outils et l'infrastructure dont disposent vos autres employés.</French>
 		<Italian>Se conquisti una città con degli schiavi, alcuni di loro potranno essere trasformati in lavoratori. Il costo della trasformazione rappresenta il costo del fornire loro gli strumenti e le infrastrutture che hanno gli altri lavoratori.</Italian>
 		<Russian>Если вы захватите город, где были поселены рабы, то некоторые из них получат шанс повышения до рабочих. Цена улучшения является затратами на обеспечение их инструментами и инфраструктурой, имеющимися у других ваших работников.</Russian>
