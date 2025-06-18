@@ -6600,7 +6600,7 @@
 			<BonusClassType>BONUSCLASS_PRODUCTION</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_OBSIDIAN</ArtDefineTag>
 			<TechReveal>TECH_GATHERING</TechReveal>
-			<TechCityTrade>TECH_OBSIDIAN_WEAPONS</TechCityTrade>
+			<TechCityTrade>TECH_HARD_HAMMER_PERCUSSION</TechCityTrade>
 			<YieldChanges>
 				<iYieldChange>0</iYieldChange>
 				<iYieldChange>2</iYieldChange>
