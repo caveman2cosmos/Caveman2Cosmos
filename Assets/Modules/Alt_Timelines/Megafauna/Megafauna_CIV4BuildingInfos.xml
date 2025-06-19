@@ -273,16 +273,15 @@
 			<ArtDefineTag>ART_DEF_BUILDING_ANIMAL_TRAINER_BEAR</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_BEAR_RIDER</MovieDefineTag>
 			<iCost>624</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>0</iCostCountModifier>
+			<iCostMaterialsModifier>0</iCostMaterialsModifier>
+			<iCostComplexityModifier>2</iCostComplexityModifier>
 			<iConquestProb>100</iConquestProb>
 			<iAsset>4</iAsset>
 			<iPower>2</iPower>
-			<YieldChanges>
-				<iYield>0</iYield>
-				<iYield>0</iYield>
-				<iYield>1</iYield>
-			</YieldChanges>
 			<CommerceChanges>
-				<iCommerce>1</iCommerce>
+				<iCommerce>-1</iCommerce>
 			</CommerceChanges>
 			<ConstructSound>AS2D_BUILD_GRANARY</ConstructSound>
 			<Flavors>
@@ -338,6 +337,10 @@
 			<PrereqTech>TECH_HERITAGE</PrereqTech>
 			<FreeBuilding>BUILDING_EFFECT_HERITAGE_BEARS</FreeBuilding>
 			<iCost>139</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>0</iCostCountModifier>
+			<iCostMaterialsModifier>0</iCostMaterialsModifier>
+			<iCostComplexityModifier>2</iCostComplexityModifier>
 			<iConquestProb>0</iConquestProb>
 			<iAsset>4</iAsset>
 			<iPower>2</iPower>
@@ -379,9 +382,15 @@
 			</MapCategoryTypes>
 			<Bonus>BONUS_CAT</Bonus>
 			<iCost>624</iCost>
-			<iTradeRoutes>1</iTradeRoutes>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>0</iCostCountModifier>
+			<iCostMaterialsModifier>0</iCostMaterialsModifier>
+			<iCostComplexityModifier>2</iCostComplexityModifier>
 			<iAsset>4</iAsset>
 			<iPower>2</iPower>
+			<CommerceChanges>
+				<iCommerce>-1</iCommerce>
+			</CommerceChanges>
 			<TechCommerceChanges>
 				<TechCommerceChange>
 					<TechType>TECH_TOURISM</TechType>
@@ -436,6 +445,10 @@
 			</MapCategoryTypes>
 			<FreeBuilding>BUILDING_EFFECT_HERITAGE_BIG_CATS</FreeBuilding>
 			<iCost>139</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>0</iCostCountModifier>
+			<iCostMaterialsModifier>0</iCostMaterialsModifier>
+			<iCostComplexityModifier>2</iCostComplexityModifier>
 			<iConquestProb>0</iConquestProb>
 			<iAsset>4</iAsset>
 			<iPower>2</iPower>
@@ -476,14 +489,15 @@
 			</MapCategoryTypes>
 			<Bonus>BONUS_BISON</Bonus>
 			<iCost>624</iCost>
-			<iHealth>-1</iHealth>
-			<iHappiness>1</iHappiness>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>0</iCostCountModifier>
+			<iCostMaterialsModifier>0</iCostMaterialsModifier>
+			<iCostComplexityModifier>2</iCostComplexityModifier>
 			<iAsset>4</iAsset>
 			<iPower>2</iPower>
-			<YieldChanges>
-				<iYield>0</iYield>
-				<iYield>1</iYield>
-			</YieldChanges>
+			<CommerceChanges>
+				<iCommerce>-1</iCommerce>
+			</CommerceChanges>
 			<ConstructSound>AS2D_BUILD_GRANARY</ConstructSound>
 			<Flavors>
 				<Flavor>
@@ -537,6 +551,10 @@
 			</MapCategoryTypes>
 			<FreeBuilding>BUILDING_EFFECT_HERITAGE_BISON</FreeBuilding>
 			<iCost>139</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>0</iCostCountModifier>
+			<iCostMaterialsModifier>0</iCostMaterialsModifier>
+			<iCostComplexityModifier>2</iCostComplexityModifier>
 			<iConquestProb>0</iConquestProb>
 			<iAsset>4</iAsset>
 			<iPower>2</iPower>
@@ -576,15 +594,17 @@
 			</MapCategoryTypes>
 			<Bonus>BONUS_DEER</Bonus>
 			<iCost>624</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>0</iCostCountModifier>
+			<iCostMaterialsModifier>0</iCostMaterialsModifier>
+			<iCostComplexityModifier>2</iCostComplexityModifier>
 			<iConquestProb>100</iConquestProb>
 			<iMinLatitude>45</iMinLatitude>
-			<iTradeRoutes>1</iTradeRoutes>
 			<iAsset>4</iAsset>
 			<iPower>2</iPower>
-			<YieldChanges>
-				<iYield>0</iYield>
-				<iYield>1</iYield>
-			</YieldChanges>
+			<CommerceChanges>
+				<iCommerce>-1</iCommerce>
+			</CommerceChanges>
 			<ConstructSound>AS2D_BUILD_GRANARY</ConstructSound>
 			<Flavors>
 				<Flavor>
@@ -638,6 +658,10 @@
 			<iMinLatitude>45</iMinLatitude>
 			<FreeBuilding>BUILDING_EFFECT_HERITAGE_DEER</FreeBuilding>
 			<iCost>139</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>0</iCostCountModifier>
+			<iCostMaterialsModifier>0</iCostMaterialsModifier>
+			<iCostComplexityModifier>2</iCostComplexityModifier>
 			<iConquestProb>0</iConquestProb>
 			<iAsset>4</iAsset>
 			<iPower>2</iPower>
@@ -676,15 +700,17 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<iCost>624</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>0</iCostCountModifier>
+			<iCostMaterialsModifier>0</iCostMaterialsModifier>
+			<iCostComplexityModifier>2</iCostComplexityModifier>
 			<iConquestProb>100</iConquestProb>
 			<iMaxLatitude>45</iMaxLatitude>
-			<iTradeRoutes>1</iTradeRoutes>
 			<iAsset>4</iAsset>
 			<iPower>2</iPower>
-			<YieldChanges>
-				<iYield>0</iYield>
-				<iYield>1</iYield>
-			</YieldChanges>
+			<CommerceChanges>
+				<iCommerce>-1</iCommerce>
+			</CommerceChanges>
 			<ConstructSound>AS2D_BUILD_GRANARY</ConstructSound>
 			<Flavors>
 				<Flavor>
@@ -733,6 +759,10 @@
 			<PrereqTech>TECH_HERITAGE</PrereqTech>
 			<FreeBuilding>BUILDING_EFFECT_HERITAGE_GIRAFFES</FreeBuilding>
 			<iCost>139</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>0</iCostCountModifier>
+			<iCostMaterialsModifier>0</iCostMaterialsModifier>
+			<iCostComplexityModifier>2</iCostComplexityModifier>
 			<iConquestProb>0</iConquestProb>
 			<iAsset>4</iAsset>
 			<iPower>2</iPower>
@@ -789,7 +819,7 @@
 			<iConquestProb>75</iConquestProb>
 			<YieldChanges>
 				<iYield>1</iYield>
-				<iYield>1</iYield>
+				<iYield>2</iYield>
 				<iYield>1</iYield>
 			</YieldChanges>
 			<ConstructSound>SND_AMB_HORSE_COBBLESTONES</ConstructSound>
@@ -809,24 +839,16 @@
 			</MapCategoryTypes>
 			<Bonus>BONUS_MAMMOTH</Bonus>
 			<iCost>624</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>0</iCostCountModifier>
+			<iCostMaterialsModifier>0</iCostMaterialsModifier>
+			<iCostComplexityModifier>2</iCostComplexityModifier>
 			<iMinLatitude>40</iMinLatitude>
-			<iHealth>-1</iHealth>
-			<iHappiness>1</iHappiness>
 			<iAsset>4</iAsset>
 			<iPower>2</iPower>
-			<YieldChanges>
-				<iYield>0</iYield>
-				<iYield>1</iYield>
-			</YieldChanges>
-			<TechYieldChanges>
-				<TechYieldChange>
-					<PrereqTech>TECH_CONSTRUCTION</PrereqTech>
-					<TechYield>
-						<iYield>0</iYield>
-						<iYield>500</iYield>
-					</TechYield>
-				</TechYieldChange>
-			</TechYieldChanges>
+			<CommerceChanges>
+				<iCommerce>-1</iCommerce>
+			</CommerceChanges>
 			<ConstructSound>AS2D_BUILD_GRANARY</ConstructSound>
 			<Flavors>
 				<Flavor>
@@ -881,6 +903,10 @@
 			<FreeBuilding>BUILDING_EFFECT_HERITAGE_MAMMOTHS</FreeBuilding>
 			<iMinLatitude>40</iMinLatitude>
 			<iCost>139</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>0</iCostCountModifier>
+			<iCostMaterialsModifier>0</iCostMaterialsModifier>
+			<iCostComplexityModifier>2</iCostComplexityModifier>
 			<iAsset>4</iAsset>
 			<iPower>2</iPower>
 			<ConstructSound>AS2D_BUILD_GRANARY</ConstructSound>
@@ -960,6 +986,10 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<iCost>800</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>0</iCostCountModifier>
+			<iCostMaterialsModifier>0</iCostMaterialsModifier>
+			<iCostComplexityModifier>2</iCostComplexityModifier>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<iAsset>2</iAsset>
 			<CommerceChanges>
@@ -997,14 +1027,16 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<iCost>624</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>0</iCostCountModifier>
+			<iCostMaterialsModifier>0</iCostMaterialsModifier>
+			<iCostComplexityModifier>2</iCostComplexityModifier>
 			<iConquestProb>100</iConquestProb>
 			<iAsset>4</iAsset>
 			<iPower>2</iPower>
-			<YieldChanges>
-				<iYield>0</iYield>
-				<iYield>0</iYield>
-				<iYield>1</iYield>
-			</YieldChanges>
+			<CommerceChanges>
+				<iCommerce>-1</iCommerce>
+			</CommerceChanges>
 			<ConstructSound>AS2D_BUILD_GRANARY</ConstructSound>
 			<Flavors>
 				<Flavor>
@@ -1057,6 +1089,10 @@
 			<PrereqTech>TECH_HERITAGE</PrereqTech>
 			<FreeBuilding>BUILDING_EFFECT_HERITAGE_RHINOS</FreeBuilding>
 			<iCost>139</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>0</iCostCountModifier>
+			<iCostMaterialsModifier>0</iCostMaterialsModifier>
+			<iCostComplexityModifier>2</iCostComplexityModifier>
 			<iConquestProb>0</iConquestProb>
 			<iAsset>4</iAsset>
 			<iPower>2</iPower>
@@ -1124,8 +1160,14 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<iCost>624</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>0</iCostCountModifier>
+			<iCostMaterialsModifier>0</iCostMaterialsModifier>
+			<iCostComplexityModifier>2</iCostComplexityModifier>
+			<CommerceChanges>
+				<iCommerce>-1</iCommerce>
+			</CommerceChanges>
 			<iMaxLatitude>45</iMaxLatitude>
-			<iTradeRoutes>1</iTradeRoutes>
 			<iAsset>4</iAsset>
 			<iPower>2</iPower>
 			<ConstructSound>AS2D_BUILD_GRANARY</ConstructSound>
@@ -1179,6 +1221,10 @@
 			<iMaxLatitude>45</iMaxLatitude>
 			<FreeBuilding>BUILDING_EFFECT_HERITAGE_ZEBRAS</FreeBuilding>
 			<iCost>139</iCost>
+			<iCostSizeModifier>1</iCostSizeModifier>
+			<iCostCountModifier>0</iCostCountModifier>
+			<iCostMaterialsModifier>0</iCostMaterialsModifier>
+			<iCostComplexityModifier>2</iCostComplexityModifier>
 			<iAsset>4</iAsset>
 			<iPower>2</iPower>
 			<ConstructSound>AS2D_BUILD_GRANARY</ConstructSound>
