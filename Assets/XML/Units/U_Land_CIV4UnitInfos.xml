@@ -45388,6 +45388,7 @@
 			<Advisor>ADVISOR_GROWTH</Advisor>
 			<bNoNonTypeProdMods>1</bNoNonTypeProdMods>
 			<bOnlyDefensive>1</bOnlyDefensive>
+            <bMilitaryTrade>1</bMilitaryTrade>
 			<bNoCapture>1</bNoCapture>
 			<bRivalTerritory>1</bRivalTerritory>
 			<bMilitarySupport>1</bMilitarySupport>
