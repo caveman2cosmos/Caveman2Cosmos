@@ -78,6 +78,24 @@
 			<iXPValueAttack>4</iXPValueAttack>
 			<iXPValueDefense>2</iXPValueDefense>
 			<iPursuit>30</iPursuit>
+			<BonusProductionModifiers>
+				<BonusProductionModifier>
+					<BonusType>BONUS_FLINT</BonusType>
+					<iProductonModifier>5</iProductonModifier>
+				</BonusProductionModifier>
+				<BonusProductionModifier>
+					<BonusType>BONUS_PRIME_TIMBER</BonusType>
+					<iProductonModifier>5</iProductonModifier>
+				</BonusProductionModifier>
+				<BonusProductionModifier>
+					<BonusType>BONUS_STONE</BonusType>
+					<iProductonModifier>5</iProductonModifier>
+				</BonusProductionModifier>
+				<BonusProductionModifier>
+					<BonusType>BONUS_OBSIDIAN</BonusType>
+					<iProductonModifier>5</iProductonModifier>
+				</BonusProductionModifier>
+			</BonusProductionModifiers>
 			<UnitCombatMods>
 				<UnitCombatMod>
 					<UnitCombatType>UNITCOMBAT_SIEGE_WOODEN</UnitCombatType>
@@ -3334,6 +3352,24 @@
 			<iXPValueDefense>2</iXPValueDefense>
 			<iWithdrawalProb>20</iWithdrawalProb>
 			<iPursuit>20</iPursuit>
+			<BonusProductionModifiers>
+				<BonusProductionModifier>
+					<BonusType>BONUS_FLINT</BonusType>
+					<iProductonModifier>5</iProductonModifier>
+				</BonusProductionModifier>
+				<BonusProductionModifier>
+					<BonusType>BONUS_PRIME_TIMBER</BonusType>
+					<iProductonModifier>5</iProductonModifier>
+				</BonusProductionModifier>
+				<BonusProductionModifier>
+					<BonusType>BONUS_STONE</BonusType>
+					<iProductonModifier>5</iProductonModifier>
+				</BonusProductionModifier>
+				<BonusProductionModifier>
+					<BonusType>BONUS_OBSIDIAN</BonusType>
+					<iProductonModifier>5</iProductonModifier>
+				</BonusProductionModifier>
+			</BonusProductionModifiers>
 			<UnitAttackMods>
 				<UnitAttackMod>
 					<UnitType>UNIT_ELEPHANT_RIDER</UnitType>
@@ -3476,6 +3512,24 @@
 					<iUnitCombatMod>25</iUnitCombatMod>
 				</UnitCombatMod>
 			</UnitCombatMods>
+			<BonusProductionModifiers>
+				<BonusProductionModifier>
+					<BonusType>BONUS_FLINT</BonusType>
+					<iProductonModifier>5</iProductonModifier>
+				</BonusProductionModifier>
+				<BonusProductionModifier>
+					<BonusType>BONUS_PRIME_TIMBER</BonusType>
+					<iProductonModifier>5</iProductonModifier>
+				</BonusProductionModifier>
+				<BonusProductionModifier>
+					<BonusType>BONUS_STONE</BonusType>
+					<iProductonModifier>5</iProductonModifier>
+				</BonusProductionModifier>
+				<BonusProductionModifier>
+					<BonusType>BONUS_OBSIDIAN</BonusType>
+					<iProductonModifier>5</iProductonModifier>
+				</BonusProductionModifier>
+			</BonusProductionModifiers>
 			<iAsset>2</iAsset>
 			<iPower>8</iPower>
 			<UnitMeshGroups>
