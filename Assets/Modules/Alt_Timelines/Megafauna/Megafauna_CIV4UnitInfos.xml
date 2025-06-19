@@ -2538,12 +2538,6 @@
 			<PrereqAndBuildings>
 				<BuildingType>BUILDING_EFFECT_HERITAGE_BIG_CATS</BuildingType>
 			</PrereqAndBuildings>
-			<BonusProductionModifiers>
-				<BonusProductionModifier>
-					<BonusType>BONUS_CAT</BonusType>
-					<iProductonModifier>15</iProductonModifier>
-				</BonusProductionModifier>
-			</BonusProductionModifiers>
 			<UnitUpgrades>
 				<UnitType>UNIT_WARCAT</UnitType>
 			</UnitUpgrades>
