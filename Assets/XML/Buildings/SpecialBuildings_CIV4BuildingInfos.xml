@@ -8427,7 +8427,7 @@
 			<Properties>
 				<Property>
 					<PropertyType>PROPERTY_FLAMMABILITY</PropertyType>
-					<iPropertyValue>5</iPropertyValue>
+					<iPropertyValue>3</iPropertyValue>
 				</Property>
 			</Properties>
 			<PropertyManipulators>

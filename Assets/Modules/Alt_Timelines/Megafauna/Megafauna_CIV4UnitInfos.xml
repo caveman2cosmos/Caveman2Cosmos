@@ -44,6 +44,7 @@
 			<bFirstStrikeImmune>1</bFirstStrikeImmune>
 			<bNoDefensiveBonus>1</bNoDefensiveBonus>
 			<bMilitaryTrade>1</bMilitaryTrade>
+			<bFirstStrikeImmune>1</bFirstStrikeImmune>
 			<UnitUpgrades>
 				<UnitType>UNIT_BEARKNIGHT</UnitType>
 			</UnitUpgrades>
@@ -286,12 +287,15 @@
 			<UnitUpgrades>
 				<UnitType>UNIT_WAR_MAMMOTH</UnitType>
 			</UnitUpgrades>
-			<iCost>94</iCost>
+			<iCost>135</iCost>
 			<iMoves>1</iMoves>
-			<iCombat>8</iCombat>
+			<iCombat>9</iCombat>
 			<iXPValueAttack>2</iXPValueAttack>
 			<iXPValueDefense>2</iXPValueDefense>
-			<iCityAttack>25</iCityAttack>
+			<iCityAttack>20</iCityAttack>
+			<iCollateralDamage>100</iCollateralDamage>
+			<iCollateralDamageLimit>75</iCollateralDamageLimit>
+			<iCollateralDamageMaxUnits>4</iCollateralDamageMaxUnits>
 			<UnitCombatMods>
 				<UnitCombatMod>
 					<UnitCombatType>UNITCOMBAT_SIEGE_WOODEN</UnitCombatType>
@@ -1682,6 +1686,7 @@
 			<bMilitarySupport>1</bMilitarySupport>
 			<bMilitaryProduction>1</bMilitaryProduction>
 			<bPillage>1</bPillage>
+			<bMilitaryTrade>1</bMilitaryTrade>
 			<bNoDefensiveBonus>1</bNoDefensiveBonus>
 			<UnitUpgrades>
 				<UnitType>UNIT_RHINO_SWORDSMAN</UnitType>
@@ -1697,9 +1702,9 @@
 				<BuildingType>BUILDING_EFFECT_HERITAGE_RHINOS</BuildingType>
 			</PrereqOrBuildings>
 			<PrereqTech>TECH_MEGAFAUNA_DOMESTICATION</PrereqTech>
-			<iCost>94</iCost>
+			<iCost>104</iCost>
 			<iMoves>1</iMoves>
-			<iCombat>4</iCombat>
+			<iCombat>5</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
 			<iXPValueDefense>2</iXPValueDefense>
 			<bStampede>1</bStampede>
@@ -2567,6 +2572,7 @@
 				</InvisibilityIntensityType>
 			</InvisibilityIntensityTypes>
 			<bNoCapture>1</bNoCapture>
+			<bMilitaryTrade>1</bMilitaryTrade>
 			<bMilitarySupport>1</bMilitarySupport>
 			<bMilitaryProduction>1</bMilitaryProduction>
 			<bNoDefensiveBonus>1</bNoDefensiveBonus>
@@ -5192,8 +5198,8 @@
 			<bMilitarySupport>1</bMilitarySupport>
 			<bMilitaryProduction>1</bMilitaryProduction>
 			<bPillage>1</bPillage>
-			<bFirstStrikeImmune>1</bFirstStrikeImmune>
 			<bNoDefensiveBonus>1</bNoDefensiveBonus>
+			<bMilitaryTrade>1</bMilitaryTrade>
 			<UnitUpgrades>
 				<UnitType>UNIT_AUTOGYRO</UnitType>
 				<UnitType>UNIT_ARMORED_CAR</UnitType>
@@ -5226,6 +5232,10 @@
 				<PrereqTech>TECH_CAMELID_DOMESTICATION</PrereqTech>
 			</TechTypes>
 			<BonusType>BONUS_LLAMA</BonusType>
+			<UnitCombatMod>
+				<UnitCombatType>UNITCOMBAT_MOUNTED</UnitCombatType>
+				<iUnitCombatMod>20</iUnitCombatMod>
+			</UnitCombatMod>
 			<iCost>100</iCost>
 			<iMoves>2</iMoves>
 			<iCombat>5</iCombat>

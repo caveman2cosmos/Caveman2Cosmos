@@ -1141,8 +1141,8 @@
 			</ReplacementBuildings>
 			<iAsset>3</iAsset>
 			<YieldChanges>
-				<iYield>1</iYield>
-				<iYield>1</iYield>
+				<iYield>2</iYield>
+				<iYield>2</iYield>
 			</YieldChanges>
 			<ConstructSound>SND_AMB_HORSE_COBBLESTONES</ConstructSound>
 		</BuildingInfo>
