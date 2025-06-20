@@ -179,6 +179,7 @@
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>
 			<bMilitaryProduction>1</bMilitaryProduction>
+            <bMilitaryTrade>1</bMilitaryTrade>
 			<bPillage>1</bPillage>
 			<UnitUpgrades>
 				<UnitType>UNIT_SWORDSMAN</UnitType>
@@ -467,6 +468,7 @@
 			<bMilitarySupport>1</bMilitarySupport>
 			<bMilitaryProduction>1</bMilitaryProduction>
 			<bPillage>1</bPillage>
+            <bMilitaryTrade>1</bMilitaryTrade>
 			<UnitUpgrades>
 				<UnitType>UNIT_PIKEMAN</UnitType>
 			</UnitUpgrades>
@@ -534,6 +536,10 @@
 					<BonusType>BONUS_IRON_WARES</BonusType>
 					<iProductonModifier>15</iProductonModifier>
 				</BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_PRIME_TIMBER</BonusType>
+                    <iProductonModifier>5</iProductonModifier>
+                </BonusProductionModifier>
 			</BonusProductionModifiers>
 			<iConscription>4</iConscription>
 			<iAsset>2</iAsset>
@@ -583,6 +589,7 @@
 			<bMilitarySupport>1</bMilitarySupport>
 			<bMilitaryProduction>1</bMilitaryProduction>
 			<bPillage>1</bPillage>
+            <bMilitaryTrade>1</bMilitaryTrade>
 			<UnitUpgrades>
 				<UnitType>UNIT_HEAVY_AXEMAN</UnitType>
 			</UnitUpgrades>
@@ -691,6 +698,7 @@
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>
 			<bMilitaryProduction>1</bMilitaryProduction>
+            <bMilitaryTrade>1</bMilitaryTrade>
 			<bPillage>1</bPillage>
 			<UnitUpgrades>
 				<UnitType>UNIT_EARLY_MACEMAN</UnitType>
@@ -735,6 +743,20 @@
 					<iUnitCombatMod>100</iUnitCombatMod>
 				</UnitCombatMod>
 			</UnitCombatMods>
+            <BonusProductionModifiers>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_STONE</BonusType>
+                    <iProductonModifier>15</iProductonModifier>
+                </BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_FLINT</BonusType>
+                    <iProductonModifier>15</iProductonModifier>
+                </BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_OBSIDIAN</BonusType>
+                    <iProductonModifier>15</iProductonModifier>
+                </BonusProductionModifier>
+            </BonusProductionModifiers>
 			<iConscription>4</iConscription>
 			<iAsset>2</iAsset>
 			<iPower>9</iPower>
@@ -999,6 +1021,7 @@
 			<bMilitarySupport>1</bMilitarySupport>
 			<bMilitaryProduction>1</bMilitaryProduction>
 			<bPillage>1</bPillage>
+            <bMilitaryTrade>1</bMilitaryTrade>
 			<UnitUpgrades>
 				<UnitType>UNIT_PIKEMAN</UnitType>
 			</UnitUpgrades>
@@ -1061,6 +1084,10 @@
 					<BonusType>BONUS_IRON_WARES</BonusType>
 					<iProductonModifier>15</iProductonModifier>
 				</BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_PRIME_TIMBER</BonusType>
+                    <iProductonModifier>15</iProductonModifier>
+                </BonusProductionModifier>
 			</BonusProductionModifiers>
 			<iConscription>3</iConscription>
 			<iAsset>2</iAsset>
@@ -1116,6 +1143,7 @@
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>
 			<bMilitaryProduction>1</bMilitaryProduction>
+            <bMilitaryTrade>1</bMilitaryTrade>
 			<bPillage>1</bPillage>
 			<UnitUpgrades>
 				<UnitType>UNIT_SKIRMISHER</UnitType>
@@ -1883,7 +1911,8 @@
 			<bMilitarySupport>1</bMilitarySupport>
 			<bMilitaryProduction>1</bMilitaryProduction>
 			<bPillage>1</bPillage>
-			<UnitUpgrades>
+            <bMilitaryTrade>1</bMilitaryTrade>
+            <UnitUpgrades>
 				<UnitType>UNIT_SKIRMISHER</UnitType>
 			</UnitUpgrades>
 			<UnitAIs>
@@ -1945,6 +1974,10 @@
 					<BonusType>BONUS_IRON_WARES</BonusType>
 					<iProductonModifier>15</iProductonModifier>
 				</BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_PRIME_TIMBER</BonusType>
+                    <iProductonModifier>15</iProductonModifier>
+                </BonusProductionModifier>
 			</BonusProductionModifiers>
 			<iConscription>6</iConscription>
 			<iAsset>2</iAsset>
@@ -2177,6 +2210,7 @@
 			<bFirstStrikeImmune>1</bFirstStrikeImmune>
 			<bNoDefensiveBonus>1</bNoDefensiveBonus>
 			<bIgnoreTerrainCost>1</bIgnoreTerrainCost>
+            <bMilitaryTrade>1</bMilitaryTrade>
 			<UnitUpgrades>
 				<UnitType>UNIT_CARROBALLISTA</UnitType>
 			</UnitUpgrades>
@@ -2211,6 +2245,24 @@
 			<iWithdrawalProb>25</iWithdrawalProb>
 			<iPursuit>25</iPursuit>
 			<iEarlyWithdraw>10</iEarlyWithdraw>
+            <BonusProductionModifiers>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_COPPER_WARES</BonusType>
+                    <iProductonModifier>5</iProductonModifier>
+                </BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_BRONZE_WARES</BonusType>
+                    <iProductonModifier>5</iProductonModifier>
+                </BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_IRON_WARES</BonusType>
+                    <iProductonModifier>5</iProductonModifier>
+                </BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_PRIME_TIMBER</BonusType>
+                    <iProductonModifier>10</iProductonModifier>
+                </BonusProductionModifier>
+            </BonusProductionModifiers>
 			<FeatureAttacks>
 				<FeatureAttack>
 					<FeatureType>FEATURE_FOREST</FeatureType>
@@ -2394,6 +2446,7 @@
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>
 			<bMilitaryProduction>1</bMilitaryProduction>
+            <bMilitaryTrade>1</bMilitaryTrade>
 			<bPillage>1</bPillage>
 			<bFirstStrikeImmune>1</bFirstStrikeImmune>
 			<UnitUpgrades>
@@ -2462,6 +2515,24 @@
 			</UnitCombatMods>
 			<iAsset>1</iAsset>
 			<iPower>7</iPower>
+            <BonusProductionModifiers>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_FLINT</BonusType>
+                    <iProductonModifier>5</iProductonModifier>
+                </BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_PRIME_TIMBER</BonusType>
+                    <iProductonModifier>5</iProductonModifier>
+                </BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_STONE</BonusType>
+                    <iProductonModifier>5</iProductonModifier>
+                </BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_OBSIDIAN</BonusType>
+                    <iProductonModifier>5</iProductonModifier>
+                </BonusProductionModifier>
+            </BonusProductionModifiers>
 			<UnitMeshGroups>
 				<iGroupSize>3</iGroupSize>
 				<fMaxSpeed>1.75</fMaxSpeed>
@@ -4046,6 +4117,7 @@
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>
 			<bMilitaryProduction>1</bMilitaryProduction>
+            <bMilitaryTrade>1</bMilitaryTrade>
 			<bPillage>1</bPillage>
 			<UnitUpgrades>
 				<UnitType>UNIT_AXEMAN</UnitType>
@@ -4296,6 +4368,7 @@
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>
 			<bMilitaryProduction>1</bMilitaryProduction>
+            <bMilitaryTrade>1</bMilitaryTrade>
 			<bPillage>1</bPillage>
 			<UnitUpgrades>
 				<UnitType>UNIT_PIKEMAN</UnitType>
@@ -4355,6 +4428,10 @@
 					<BonusType>BONUS_IRON_WARES</BonusType>
 					<iProductonModifier>15</iProductonModifier>
 				</BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_PRIME_TIMBER</BonusType>
+                    <iProductonModifier>15</iProductonModifier>
+                </BonusProductionModifier>
 			</BonusProductionModifiers>
 			<iConscription>3</iConscription>
 			<iAsset>2</iAsset>
@@ -5087,6 +5164,7 @@
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>
 			<bMilitaryProduction>1</bMilitaryProduction>
+            <bMilitaryTrade>1</bMilitaryTrade>
 			<bPillage>1</bPillage>
 			<UnitUpgrades>
 				<UnitType>UNIT_LIGHT_SWORDSMAN</UnitType>
@@ -6030,6 +6108,7 @@
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>
 			<bMilitaryProduction>1</bMilitaryProduction>
+            <bMilitaryTrade>1</bMilitaryTrade>
 			<bPillage>1</bPillage>
 			<UnitUpgrades>
 				<UnitType>UNIT_SWORDSMAN</UnitType>
@@ -6140,6 +6219,7 @@
 			<bMilitarySupport>1</bMilitarySupport>
 			<bMilitaryProduction>1</bMilitaryProduction>
 			<bPillage>1</bPillage>
+            <bMilitaryTrade>1</bMilitaryTrade>
 			<bIgnoreTerrainCost>1</bIgnoreTerrainCost>
 			<UnitUpgrades>
 				<UnitType>UNIT_SWORDSMAN</UnitType>
@@ -6181,6 +6261,20 @@
 			<iConscription>3</iConscription>
 			<iAsset>3</iAsset>
 			<iPower>5</iPower>
+            <BonusProductionModifiers>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_STONE</BonusType>
+                    <iProductonModifier>15</iProductonModifier>
+                </BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_FLINT</BonusType>
+                    <iProductonModifier>15</iProductonModifier>
+                </BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_OBSIDIAN</BonusType>
+                    <iProductonModifier>15</iProductonModifier>
+                </BonusProductionModifier>
+            </BonusProductionModifiers>
 			<UnitMeshGroups>
 				<iGroupSize>3</iGroupSize>
 				<fMaxSpeed>1.75</fMaxSpeed>
@@ -6713,6 +6807,7 @@
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>
 			<bMilitaryProduction>1</bMilitaryProduction>
+            <bMilitaryTrade>1</bMilitaryTrade>
 			<bPillage>1</bPillage>
 			<UnitUpgrades>
 				<UnitType>UNIT_MACEMAN</UnitType>
@@ -6758,6 +6853,14 @@
 					<BonusType>BONUS_PRIME_TIMBER</BonusType>
 					<iProductonModifier>15</iProductonModifier>
 				</BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_STONE</BonusType>
+                    <iProductonModifier>15</iProductonModifier>
+                </BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_FLINT</BonusType>
+                    <iProductonModifier>15</iProductonModifier>
+                </BonusProductionModifier>
 			</BonusProductionModifiers>
 			<iConscription>3</iConscription>
 			<iAsset>2</iAsset>
@@ -6809,6 +6912,7 @@
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>
 			<bMilitaryProduction>1</bMilitaryProduction>
+            <bMilitaryTrade>1</bMilitaryTrade>
 			<bPillage>1</bPillage>
 			<UnitUpgrades>
 				<UnitType>UNIT_SKIRMISHER</UnitType>
@@ -7096,21 +7200,20 @@
 			<Description>TXT_KEY_UNIT_CARIB_BLOWGUNNER</Description>
 			<Civilopedia>TXT_KEY_UNIT_CARIB_BLOWGUNNER_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_MILITARY</Advisor>
-			<VisibilityIntensityTypes>
-				<VisibilityIntensityType>
-					<InvisibleType>INVISIBLE_CAMOUFLAGE</InvisibleType>
-					<iIntensity>1</iIntensity>
-				</VisibilityIntensityType>
-			</VisibilityIntensityTypes>
-			<InvisibilityIntensityTypes>
-				<InvisibilityIntensityType>
-					<InvisibleType>INVISIBLE_CAMOUFLAGE</InvisibleType>
-					<iIntensity>1</iIntensity>
-				</InvisibilityIntensityType>
-			</InvisibilityIntensityTypes>
+            <BonusProductionModifiers>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_FLINT</BonusType>
+                    <iProductonModifier>5</iProductonModifier>
+                </BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_PRIME_TIMBER</BonusType>
+                    <iProductonModifier>5</iProductonModifier>
+                </BonusProductionModifier>
+            </BonusProductionModifiers>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>
 			<bMilitaryProduction>1</bMilitaryProduction>
+            <bMilitaryTrade>1</bMilitaryTrade>
 			<bPillage>1</bPillage>
 			<UnitUpgrades>
 				<UnitType>UNIT_ARCHER</UnitType>
@@ -7159,6 +7262,18 @@
 			<iConscription>4</iConscription>
 			<iAsset>2</iAsset>
 			<iPower>8</iPower>
+            <VisibilityIntensityTypes>
+                <VisibilityIntensityType>
+                    <InvisibleType>INVISIBLE_CAMOUFLAGE</InvisibleType>
+                    <iIntensity>1</iIntensity>
+                </VisibilityIntensityType>
+            </VisibilityIntensityTypes>
+            <InvisibilityIntensityTypes>
+                <InvisibilityIntensityType>
+                    <InvisibleType>INVISIBLE_CAMOUFLAGE</InvisibleType>
+                    <iIntensity>1</iIntensity>
+                </InvisibilityIntensityType>
+            </InvisibilityIntensityTypes>
 			<UnitMeshGroups>
 				<iGroupSize>2</iGroupSize>
 				<fMaxSpeed>1.75</fMaxSpeed>
@@ -7227,6 +7342,7 @@
 			<PrereqTech>TECH_TRACKING</PrereqTech>
 			<BonusType>BONUS_CREE</BonusType>
 			<iCost>38</iCost>
+            <bMilitaryTrade>1</bMilitaryTrade>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iCombat>4</iCombat>
@@ -7257,6 +7373,24 @@
 					<bUnitCombatTarget>1</bUnitCombatTarget>
 				</UnitCombatTarget>
 			</UnitCombatTargets>
+            <BonusProductionModifiers>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_STONE</BonusType>
+                    <iProductonModifier>10</iProductonModifier>
+                </BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_FLINT</BonusType>
+                    <iProductonModifier>10</iProductonModifier>
+                </BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_PRIME_TIMBER</BonusType>
+                    <iProductonModifier>10</iProductonModifier>
+                </BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_ROPE</BonusType>
+                    <iProductonModifier>10</iProductonModifier>
+                </BonusProductionModifier>
+            </BonusProductionModifiers>
 			<iAsset>1</iAsset>
 			<iPower>4</iPower>
 			<UnitMeshGroups>
@@ -7311,6 +7445,7 @@
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>
 			<bMilitaryProduction>1</bMilitaryProduction>
+            <bMilitaryTrade>1</bMilitaryTrade>
 			<bPillage>1</bPillage>
 			<bFirstStrikeImmune>1</bFirstStrikeImmune>
 			<UnitUpgrades>
@@ -7371,6 +7506,10 @@
 					<BonusType>BONUS_FLINT</BonusType>
 					<iProductonModifier>15</iProductonModifier>
 				</BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_PRIME_TIMBER</BonusType>
+                    <iProductonModifier>10</iProductonModifier>
+                </BonusProductionModifier>
 			</BonusProductionModifiers>
 			<iAsset>1</iAsset>
 			<iPower>4</iPower>
@@ -7531,6 +7670,7 @@
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>
 			<bMilitaryProduction>1</bMilitaryProduction>
+            <bMilitaryTrade>1</bMilitaryTrade>
 			<bPillage>1</bPillage>
 			<UnitUpgrades>
 				<UnitType>UNIT_EARLY_MACEMAN</UnitType>
@@ -7582,7 +7722,7 @@
 			<BonusProductionModifiers>
 				<BonusProductionModifier>
 					<BonusType>BONUS_PRIME_TIMBER</BonusType>
-					<iProductonModifier>15</iProductonModifier>
+					<iProductonModifier>20</iProductonModifier>
 				</BonusProductionModifier>
 			</BonusProductionModifiers>
 			<iConscription>4</iConscription>
@@ -7739,7 +7879,14 @@
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>
 			<bMilitaryProduction>1</bMilitaryProduction>
+            <bMilitaryTrade>1</bMilitaryTrade>
 			<bPillage>1</bPillage>
+            <BonusProductionModifiers>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_PRIME_TIMBER</BonusType>
+                    <iProductonModifier>10</iProductonModifier>
+                </BonusProductionModifier>
+            </BonusProductionModifiers>
 			<UnitUpgrades>
 				<UnitType>UNIT_ARCHER</UnitType>
 				<UnitType>UNIT_ATLATL</UnitType>
@@ -7950,6 +8097,7 @@
 			<bMilitarySupport>1</bMilitarySupport>
 			<bMilitaryProduction>1</bMilitaryProduction>
 			<bPillage>1</bPillage>
+            <bMilitaryTrade>1</bMilitaryTrade>
 			<UnitUpgrades>
 				<UnitType>UNIT_PIKEMAN</UnitType>
 				<UnitType>UNIT_LIGHT_SWORDSMAN</UnitType>
@@ -8005,6 +8153,10 @@
 					<BonusType>BONUS_IRON_WARES</BonusType>
 					<iProductonModifier>15</iProductonModifier>
 				</BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_PRIME_TIMBER</BonusType>
+                    <iProductonModifier>5</iProductonModifier>
+                </BonusProductionModifier>
 			</BonusProductionModifiers>
 			<iAsset>2</iAsset>
 			<iPower>6</iPower>
@@ -10750,7 +10902,8 @@
 			<PrereqTech>TECH_TRACKING</PrereqTech>
 			<ObsoleteTech>TECH_FLINTLOCK</ObsoleteTech>
 			<BonusType>BONUS_AKA</BonusType>
-			<iCost>34</iCost>
+            <bMilitaryTrade>1</bMilitaryTrade>
+			<iCost>28</iCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>1</iMoves>
 			<iCombat>3</iCombat>
@@ -10774,6 +10927,16 @@
 					<iUnitCombatMod>25</iUnitCombatMod>
 				</UnitCombatMod>
 			</UnitCombatMods>
+            <BonusProductionModifiers>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_FLINT</BonusType>
+                    <iProductonModifier>10</iProductonModifier>
+                </BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_PRIME_TIMBER</BonusType>
+                    <iProductonModifier>10</iProductonModifier>
+                </BonusProductionModifier>
+            </BonusProductionModifiers>
 			<iAsset>2</iAsset>
 			<iPower>8</iPower>
 			<UnitMeshGroups>
@@ -10937,6 +11100,7 @@
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>
 			<bMilitaryProduction>1</bMilitaryProduction>
+            <bMilitaryTrade>1</bMilitaryTrade>
 			<bPillage>1</bPillage>
 			<UnitUpgrades>
 				<UnitType>UNIT_HEAVY_AXEMAN</UnitType>
@@ -10972,7 +11136,13 @@
 			<PrereqBonuses>
 				<BonusType>BONUS_WOOD</BonusType>
 			</PrereqBonuses>
-			<iCost>42</iCost>
+            <BonusProductionModifiers>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_PRIME_TIMBER</BonusType>
+                    <iProductonModifier>30</iProductonModifier>
+                </BonusProductionModifier>
+            </BonusProductionModifiers>
+			<iCost>39</iCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>1</iMoves>
 			<iCombat>6</iCombat>
@@ -11230,6 +11400,12 @@
 				<SubCombatType>UNITCOMBAT_HEALS_AS_ANIMALS</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
+            <BonusProductionModifiers>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_FLINT</BonusType>
+                    <iProductonModifier>10</iProductonModifier>
+                </BonusProductionModifier>
+            </BonusProductionModifiers>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -11240,6 +11416,7 @@
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>
 			<bMilitaryProduction>1</bMilitaryProduction>
+            <bMilitaryTrade>1</bMilitaryTrade>
 			<bPillage>1</bPillage>
 			<bNoDefensiveBonus>1</bNoDefensiveBonus>
 			<UnitUpgrades>
@@ -12712,6 +12889,7 @@
 			<bMilitarySupport>1</bMilitarySupport>
 			<bMilitaryProduction>1</bMilitaryProduction>
 			<bPillage>1</bPillage>
+            <bMilitaryTrade>1</bMilitaryTrade>
 			<UnitUpgrades>
 				<UnitType>UNIT_SKIRMISHER</UnitType>
 			</UnitUpgrades>
@@ -12775,6 +12953,10 @@
 					<BonusType>BONUS_IRON_WARES</BonusType>
 					<iProductonModifier>15</iProductonModifier>
 				</BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_PRIME_TIMBER</BonusType>
+                    <iProductonModifier>15</iProductonModifier>
+                </BonusProductionModifier>
 			</BonusProductionModifiers>
 			<iAsset>2</iAsset>
 			<iPower>4</iPower>
@@ -13421,6 +13603,7 @@
 			<bMilitarySupport>1</bMilitarySupport>
 			<bMilitaryProduction>1</bMilitaryProduction>
 			<bPillage>1</bPillage>
+            <bMilitaryTrade>1</bMilitaryTrade>
 			<UnitUpgrades>
 				<UnitType>UNIT_LONGBOWMAN</UnitType>
 				<UnitType>UNIT_LIGHT_CROSSBOWMAN</UnitType>
@@ -13461,13 +13644,27 @@
 				</UnitMeshGroup>
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_RANGED</FormationType>
+            <BonusProductionModifiers>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_OBSIDIAN</BonusType>
+                    <iProductonModifier>10</iProductonModifier>
+                </BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_PRIME_TIMBER</BonusType>
+                    <iProductonModifier>10</iProductonModifier>
+                </BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_FEATHERS</BonusType>
+                    <iProductonModifier>5</iProductonModifier>
+                </BonusProductionModifier>
+            </BonusProductionModifiers>
 			<FreePromotions>
 				<FreePromotion>
 					<PromotionType>PROMOTION_POISON_TIPS</PromotionType>
 					<bFreePromotion>1</bFreePromotion>
 				</FreePromotion>
 				<FreePromotion>
-					<PromotionType>PROMOTION_HUNTER1</PromotionType>
+					<PromotionType>PROMOTION_HUNTING_STRIKE1</PromotionType>
 					<bFreePromotion>1</bFreePromotion>
 				</FreePromotion>
 			</FreePromotions>
@@ -13505,6 +13702,7 @@
 			<bPillage>1</bPillage>
 			<bMechanized>1</bMechanized>
 			<bRenderBelowWater>1</bRenderBelowWater>
+            <bMilitaryTrade>1</bMilitaryTrade>
 			<UnitUpgrades>
 				<UnitType>UNIT_GALLEY</UnitType>
 			</UnitUpgrades>
@@ -16436,6 +16634,7 @@
 			<bMilitarySupport>1</bMilitarySupport>
 			<bMilitaryProduction>1</bMilitaryProduction>
 			<bPillage>1</bPillage>
+            <bMilitaryTrade>1</bMilitaryTrade>
 			<UnitUpgrades>
 				<UnitType>UNIT_PIKEMAN</UnitType>
 			</UnitUpgrades>
@@ -16490,6 +16689,10 @@
 					<BonusType>BONUS_IRON_WARES</BonusType>
 					<iProductonModifier>15</iProductonModifier>
 				</BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_PRIME_TIMBER</BonusType>
+                    <iProductonModifier>15</iProductonModifier>
+                </BonusProductionModifier>
 			</BonusProductionModifiers>
 			<iAsset>2</iAsset>
 			<iPower>6</iPower>
@@ -16543,6 +16746,7 @@
 			<bMilitarySupport>1</bMilitarySupport>
 			<bMilitaryProduction>1</bMilitaryProduction>
 			<bPillage>1</bPillage>
+            <bMilitaryTrade>1</bMilitaryTrade>
 			<UnitUpgrades>
 				<UnitType>UNIT_SPEARMAN</UnitType>
 			</UnitUpgrades>
@@ -16588,6 +16792,10 @@
 					<BonusType>BONUS_FLINT</BonusType>
 					<iProductonModifier>15</iProductonModifier>
 				</BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_PRIME_TIMBER</BonusType>
+                    <iProductonModifier>15</iProductonModifier>
+                </BonusProductionModifier>
 			</BonusProductionModifiers>
 			<iConscription>3</iConscription>
 			<iAsset>3</iAsset>
@@ -16647,6 +16855,7 @@
 			<bMilitarySupport>1</bMilitarySupport>
 			<bMilitaryProduction>1</bMilitaryProduction>
 			<bPillage>1</bPillage>
+            <bMilitaryTrade>1</bMilitaryTrade>
 			<UnitUpgrades>
 				<UnitType>UNIT_PIKEMAN</UnitType>
 			</UnitUpgrades>
@@ -16709,6 +16918,10 @@
 					<BonusType>BONUS_IRON_WARES</BonusType>
 					<iProductonModifier>15</iProductonModifier>
 				</BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_PRIME_TIMBER</BonusType>
+                    <iProductonModifier>5</iProductonModifier>
+                </BonusProductionModifier>
 			</BonusProductionModifiers>
 			<iAsset>2</iAsset>
 			<iPower>8</iPower>
@@ -17933,12 +18146,30 @@
 			<BonusType>BONUS_JIVARO</BonusType>
 			<iCost>63</iCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
+            <bMilitaryTrade>1</bMilitaryTrade>
 			<iMoves>2</iMoves>
 			<iCombat>3</iCombat>
 			<iXPValueAttack>5</iXPValueAttack>
 			<iXPValueDefense>3</iXPValueDefense>
 			<iPursuit>40</iPursuit>
 			<iCityAttack>-75</iCityAttack>
+            <bAlwaysHostile>1</bAlwaysHostile>
+            <bHiddenNationality>1</bHiddenNationality>
+            <bAssassin>1</bAssassin>
+            <BonusProductionModifiers>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_ROPE</BonusType>
+                    <iProductonModifier>10</iProductonModifier>
+                </BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_FLINT</BonusType>
+                    <iProductonModifier>10</iProductonModifier>
+                </BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_PRIME_TIMBER</BonusType>
+                    <iProductonModifier>10</iProductonModifier>
+                </BonusProductionModifier>
+            </BonusProductionModifiers>
 			<UnitCombatMods>
 				<UnitCombatMod>
 					<UnitCombatType>UNITCOMBAT_EXPLORER</UnitCombatType>
@@ -18006,6 +18237,7 @@
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>
 			<bMilitaryProduction>1</bMilitaryProduction>
+            <bMilitaryTrade>1</bMilitaryTrade>
 			<bPillage>1</bPillage>
 			<UnitUpgrades>
 				<UnitType>UNIT_AXEMAN</UnitType>
@@ -18054,6 +18286,10 @@
 					<BonusType>BONUS_FLINT</BonusType>
 					<iProductonModifier>15</iProductonModifier>
 				</BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_OBSIDIAN</BonusType>
+                    <iProductonModifier>15</iProductonModifier>
+                </BonusProductionModifier>
 			</BonusProductionModifiers>
 			<iConscription>1</iConscription>
 			<iAsset>1</iAsset>
@@ -18112,6 +18348,7 @@
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>
 			<bMilitaryProduction>1</bMilitaryProduction>
+            <bMilitaryTrade>1</bMilitaryTrade>
 			<bPillage>1</bPillage>
 			<UnitUpgrades>
 				<UnitType>UNIT_PIKEMAN</UnitType>
@@ -18167,6 +18404,10 @@
 					<BonusType>BONUS_IRON_WARES</BonusType>
 					<iProductonModifier>15</iProductonModifier>
 				</BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_PRIME_TIMBER</BonusType>
+                    <iProductonModifier>5</iProductonModifier>
+                </BonusProductionModifier>
 			</BonusProductionModifiers>
 			<iAsset>2</iAsset>
 			<iPower>6</iPower>
@@ -18369,6 +18610,7 @@
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>
 			<bMilitaryProduction>1</bMilitaryProduction>
+            <bMilitaryTrade>1</bMilitaryTrade>
 			<bPillage>1</bPillage>
 			<UnitUpgrades>
 				<UnitType>UNIT_SWORDSMAN</UnitType>
@@ -19534,6 +19776,7 @@
 			<bMilitarySupport>1</bMilitarySupport>
 			<bMilitaryProduction>1</bMilitaryProduction>
 			<bPillage>1</bPillage>
+            <bMilitaryTrade>1</bMilitaryTrade>
 			<iNumHealSupport>2</iNumHealSupport>
 			<HealUnitCombatTypes>
 				<HealUnitCombatType>
@@ -19649,6 +19892,7 @@
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>
 			<bMilitaryProduction>1</bMilitaryProduction>
+            <bMilitaryTrade>1</bMilitaryTrade>
 			<bPillage>1</bPillage>
 			<UnitUpgrades>
 				<UnitType>UNIT_SWORDSMAN</UnitType>
@@ -19750,6 +19994,7 @@
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>
 			<bMilitaryProduction>1</bMilitaryProduction>
+            <bMilitaryTrade>1</bMilitaryTrade>
 			<bPillage>1</bPillage>
 			<UnitUpgrades>
 				<UnitType>UNIT_PIKEMAN</UnitType>
@@ -19806,6 +20051,10 @@
 					<BonusType>BONUS_IRON_WARES</BonusType>
 					<iProductonModifier>15</iProductonModifier>
 				</BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_PRIME_TIMBER</BonusType>
+                    <iProductonModifier>5</iProductonModifier>
+                </BonusProductionModifier>
 			</BonusProductionModifiers>
 			<iAsset>2</iAsset>
 			<iPower>6</iPower>
@@ -24056,6 +24305,7 @@
 			<bMilitarySupport>1</bMilitarySupport>
 			<bMilitaryProduction>1</bMilitaryProduction>
 			<bPillage>1</bPillage>
+            <bMilitaryTrade>1</bMilitaryTrade>
 			<bNoDefensiveBonus>1</bNoDefensiveBonus>
 			<UnitUpgrades>
 				<UnitType>UNIT_HORSE_ARCHER</UnitType>
@@ -24095,6 +24345,24 @@
 			<iWithdrawalProb>25</iWithdrawalProb>
 			<iPursuit>25</iPursuit>
 			<iEarlyWithdraw>30</iEarlyWithdraw>
+            <BonusProductionModifiers>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_COPPER_WARES</BonusType>
+                    <iProductonModifier>5</iProductonModifier>
+                </BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_BRONZE_WARES</BonusType>
+                    <iProductonModifier>5</iProductonModifier>
+                </BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_IRON_WARES</BonusType>
+                    <iProductonModifier>5</iProductonModifier>
+                </BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_PRIME_TIMBER</BonusType>
+                    <iProductonModifier>10</iProductonModifier>
+                </BonusProductionModifier>
+            </BonusProductionModifiers>
 			<FeatureAttacks>
 				<FeatureAttack>
 					<FeatureType>FEATURE_FOREST</FeatureType>
@@ -25863,6 +26131,7 @@
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitaryProduction>1</bMilitaryProduction>
 			<bMilitarySupport>1</bMilitarySupport>
+            <bMilitaryTrade>1</bMilitaryTrade>
 			<bPillage>1</bPillage>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -30891,6 +31160,7 @@
 			<bMilitarySupport>1</bMilitarySupport>
 			<bMilitaryProduction>1</bMilitaryProduction>
 			<bPillage>1</bPillage>
+            <bMilitaryTrade>1</bMilitaryTrade>
 			<bFirstStrikeImmune>1</bFirstStrikeImmune>
 			<bNoDefensiveBonus>1</bNoDefensiveBonus>
 			<UnitUpgrades>
@@ -30973,6 +31243,24 @@
 					<iUnitCombatMod>25</iUnitCombatMod>
 				</UnitCombatMod>
 			</UnitCombatMods>
+            <BonusProductionModifiers>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_FLINT</BonusType>
+                    <iProductonModifier>5</iProductonModifier>
+                </BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_PRIME_TIMBER</BonusType>
+                    <iProductonModifier>5</iProductonModifier>
+                </BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_STONE</BonusType>
+                    <iProductonModifier>5</iProductonModifier>
+                </BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_OBSIDIAN</BonusType>
+                    <iProductonModifier>5</iProductonModifier>
+                </BonusProductionModifier>
+            </BonusProductionModifiers>
 			<iAsset>2</iAsset>
 			<iPower>8</iPower>
 			<UnitMeshGroups>
@@ -36111,6 +36399,7 @@
 			<bMilitarySupport>1</bMilitarySupport>
 			<bMilitaryProduction>1</bMilitaryProduction>
 			<bPillage>1</bPillage>
+            <bMilitaryTrade>1</bMilitaryTrade>
 			<bNoDefensiveBonus>1</bNoDefensiveBonus>
 			<UnitUpgrades>
 				<UnitType>UNIT_CAMEL_KNIGHT</UnitType>
@@ -36142,7 +36431,13 @@
 			<PrereqBonuses>
 				<BonusType>BONUS_CAMEL</BonusType>
 			</PrereqBonuses>
-			<iCost>98</iCost>
+            <BonusProductionModifiers>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_FLINT</BonusType>
+                    <iProductonModifier>10</iProductonModifier>
+                </BonusProductionModifier>
+            </BonusProductionModifiers>
+			<iCost>100</iCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iCombat>6</iCombat>
@@ -36669,6 +36964,7 @@
 			<bNoCapture>1</bNoCapture>
 			<bRivalTerritory>1</bRivalTerritory>
 			<bMilitarySupport>1</bMilitarySupport>
+            <bMilitaryTrade>1</bMilitaryTrade>
 			<UnitUpgrades>
 				<UnitType>UNIT_TRADE_CARAVAN</UnitType>
 			</UnitUpgrades>
@@ -36691,7 +36987,81 @@
 			<ObsoleteTech>TECH_ENGINEERING</ObsoleteTech>
 			<PrereqTech>TECH_BARTER</PrereqTech>
 			<BonusType>BONUS_TUCANO</BonusType>
-			<Flavors>
+            <BonusProductionModifiers>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_HENNA</BonusType>
+                    <iProductonModifier>1</iProductonModifier>
+                </BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_INDIGO</BonusType>
+                    <iProductonModifier>1</iProductonModifier>
+                </BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_PAPYRUS</BonusType>
+                    <iProductonModifier>1</iProductonModifier>
+                </BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_OPIUM</BonusType>
+                    <iProductonModifier>1</iProductonModifier>
+                </BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_TOBACCO</BonusType>
+                    <iProductonModifier>1</iProductonModifier>
+                </BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_PARROTS</BonusType>
+                    <iProductonModifier>1</iProductonModifier>
+                </BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_COCA</BonusType>
+                    <iProductonModifier>1</iProductonModifier>
+                </BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_PEARLS</BonusType>
+                    <iProductonModifier>1</iProductonModifier>
+                </BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_AMBER</BonusType>
+                    <iProductonModifier>1</iProductonModifier>
+                </BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_RUBIES</BonusType>
+                    <iProductonModifier>1</iProductonModifier>
+                </BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_DIAMOND</BonusType>
+                    <iProductonModifier>1</iProductonModifier>
+                </BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_SAPPHIRES</BonusType>
+                    <iProductonModifier>1</iProductonModifier>
+                </BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_JADE</BonusType>
+                    <iProductonModifier>1</iProductonModifier>
+                </BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_TURQUOISE</BonusType>
+                    <iProductonModifier>1</iProductonModifier>
+                </BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_HORSE</BonusType>
+                    <iProductonModifier>2</iProductonModifier>
+                </BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_DONKEY</BonusType>
+                    <iProductonModifier>2</iProductonModifier>
+                </BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_LLAMA</BonusType>
+                    <iProductonModifier>2</iProductonModifier>
+                </BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_CAMEL</BonusType>
+                    <iProductonModifier>2</iProductonModifier>
+                </BonusProductionModifier>
+            </BonusProductionModifiers>
+            <Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_GOLD</FlavorType>
 					<iFlavor>10</iFlavor>
@@ -37788,6 +38158,7 @@
 			<bNoCapture>1</bNoCapture>
 			<bRivalTerritory>1</bRivalTerritory>
 			<bMilitarySupport>1</bMilitarySupport>
+            <bMilitaryTrade>1</bMilitaryTrade>
 			<UnitUpgrades>
 				<UnitType>UNIT_TRADE_CARAVAN</UnitType>
 			</UnitUpgrades>
@@ -37810,7 +38181,81 @@
 			<ObsoleteTech>TECH_ENGINEERING</ObsoleteTech>
 			<PrereqTech>TECH_BARTER</PrereqTech>
 			<BonusType>BONUS_VALDIVIAN</BonusType>
-			<Flavors>
+            <BonusProductionModifiers>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_HENNA</BonusType>
+                    <iProductonModifier>1</iProductonModifier>
+                </BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_INDIGO</BonusType>
+                    <iProductonModifier>1</iProductonModifier>
+                </BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_PAPYRUS</BonusType>
+                    <iProductonModifier>1</iProductonModifier>
+                </BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_OPIUM</BonusType>
+                    <iProductonModifier>1</iProductonModifier>
+                </BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_TOBACCO</BonusType>
+                    <iProductonModifier>1</iProductonModifier>
+                </BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_PARROTS</BonusType>
+                    <iProductonModifier>1</iProductonModifier>
+                </BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_COCA</BonusType>
+                    <iProductonModifier>1</iProductonModifier>
+                </BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_PEARLS</BonusType>
+                    <iProductonModifier>1</iProductonModifier>
+                </BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_AMBER</BonusType>
+                    <iProductonModifier>1</iProductonModifier>
+                </BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_RUBIES</BonusType>
+                    <iProductonModifier>1</iProductonModifier>
+                </BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_DIAMOND</BonusType>
+                    <iProductonModifier>1</iProductonModifier>
+                </BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_SAPPHIRES</BonusType>
+                    <iProductonModifier>1</iProductonModifier>
+                </BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_JADE</BonusType>
+                    <iProductonModifier>1</iProductonModifier>
+                </BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_TURQUOISE</BonusType>
+                    <iProductonModifier>1</iProductonModifier>
+                </BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_HORSE</BonusType>
+                    <iProductonModifier>2</iProductonModifier>
+                </BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_DONKEY</BonusType>
+                    <iProductonModifier>2</iProductonModifier>
+                </BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_LLAMA</BonusType>
+                    <iProductonModifier>2</iProductonModifier>
+                </BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_CAMEL</BonusType>
+                    <iProductonModifier>2</iProductonModifier>
+                </BonusProductionModifier>
+            </BonusProductionModifiers>
+            <Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_GOLD</FlavorType>
 					<iFlavor>10</iFlavor>
@@ -39488,6 +39933,7 @@
 			<bMilitarySupport>1</bMilitarySupport>
 			<bMilitaryProduction>1</bMilitaryProduction>
 			<bPillage>1</bPillage>
+            <bMilitaryTrade>1</bMilitaryTrade>
 			<bFirstStrikeImmune>1</bFirstStrikeImmune>
 			<bNoDefensiveBonus>1</bNoDefensiveBonus>
 			<UnitUpgrades>
@@ -39535,6 +39981,28 @@
 			<iPursuit>30</iPursuit>
 			<iCollateralDamageLimit>100</iCollateralDamageLimit>
 			<iCollateralDamageMaxUnits>4</iCollateralDamageMaxUnits>
+            <BonusProductionModifiers>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_FLINT</BonusType>
+                    <iProductonModifier>5</iProductonModifier>
+                </BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_PRIME_TIMBER</BonusType>
+                    <iProductonModifier>5</iProductonModifier>
+                </BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_STONE</BonusType>
+                    <iProductonModifier>5</iProductonModifier>
+                </BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_OBSIDIAN</BonusType>
+                    <iProductonModifier>5</iProductonModifier>
+                </BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_FEATHERS</BonusType>
+                    <iProductonModifier>5</iProductonModifier>
+                </BonusProductionModifier>
+            </BonusProductionModifiers>
 			<TerrainAttacks>
 				<TerrainAttack>
 					<TerrainType>TERRAIN_GRASSLAND</TerrainType>
@@ -40235,6 +40703,7 @@
 			<bNoCapture>1</bNoCapture>
 			<bRivalTerritory>1</bRivalTerritory>
 			<bMilitarySupport>1</bMilitarySupport>
+            <bMilitaryTrade>1</bMilitaryTrade>
 			<UnitUpgrades>
 				<UnitType>UNIT_TRADE_CARAVAN</UnitType>
 			</UnitUpgrades>
@@ -40257,7 +40726,81 @@
 			<ObsoleteTech>TECH_ENGINEERING</ObsoleteTech>
 			<PrereqTech>TECH_BARTER</PrereqTech>
 			<BonusType>BONUS_YOLNGU</BonusType>
-			<Flavors>
+            <BonusProductionModifiers>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_HENNA</BonusType>
+                    <iProductonModifier>1</iProductonModifier>
+                </BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_INDIGO</BonusType>
+                    <iProductonModifier>1</iProductonModifier>
+                </BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_PAPYRUS</BonusType>
+                    <iProductonModifier>1</iProductonModifier>
+                </BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_OPIUM</BonusType>
+                    <iProductonModifier>1</iProductonModifier>
+                </BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_TOBACCO</BonusType>
+                    <iProductonModifier>1</iProductonModifier>
+                </BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_PARROTS</BonusType>
+                    <iProductonModifier>1</iProductonModifier>
+                </BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_COCA</BonusType>
+                    <iProductonModifier>1</iProductonModifier>
+                </BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_PEARLS</BonusType>
+                    <iProductonModifier>1</iProductonModifier>
+                </BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_AMBER</BonusType>
+                    <iProductonModifier>1</iProductonModifier>
+                </BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_RUBIES</BonusType>
+                    <iProductonModifier>1</iProductonModifier>
+                </BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_DIAMOND</BonusType>
+                    <iProductonModifier>1</iProductonModifier>
+                </BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_SAPPHIRES</BonusType>
+                    <iProductonModifier>1</iProductonModifier>
+                </BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_JADE</BonusType>
+                    <iProductonModifier>1</iProductonModifier>
+                </BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_TURQUOISE</BonusType>
+                    <iProductonModifier>1</iProductonModifier>
+                </BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_HORSE</BonusType>
+                    <iProductonModifier>2</iProductonModifier>
+                </BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_DONKEY</BonusType>
+                    <iProductonModifier>2</iProductonModifier>
+                </BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_LLAMA</BonusType>
+                    <iProductonModifier>2</iProductonModifier>
+                </BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_CAMEL</BonusType>
+                    <iProductonModifier>2</iProductonModifier>
+                </BonusProductionModifier>
+            </BonusProductionModifiers>
+            <Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_GOLD</FlavorType>
 					<iFlavor>10</iFlavor>
@@ -43428,6 +43971,7 @@
             <bPassage>1</bPassage>
             <bUpgradeAnywhere>1</bUpgradeAnywhere>
 			<bMilitarySupport>1</bMilitarySupport>
+            <bMilitaryTrade>1</bMilitaryTrade>
 			<bMilitaryProduction>1</bMilitaryProduction>
 			<bPillage>1</bPillage>
 			<UnitUpgrades>
@@ -46144,7 +46688,22 @@
 			<BonusType>BONUS_FUEGIAN</BonusType>
 			<iCost>63</iCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
+            <bMilitaryTrade>1</bMilitaryTrade>
 			<iMoves>2</iMoves>
+            <BonusProductionModifiers>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_ROPE</BonusType>
+                    <iProductonModifier>10</iProductonModifier>
+                </BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_FLINT</BonusType>
+                    <iProductonModifier>10</iProductonModifier>
+                </BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_PRIME_TIMBER</BonusType>
+                    <iProductonModifier>10</iProductonModifier>
+                </BonusProductionModifier>
+            </BonusProductionModifiers>
 			<UnitUpgrades>
 				<UnitType>UNIT_RANGER</UnitType>
 			</UnitUpgrades>
@@ -50281,8 +50840,15 @@
 			<bNoCapture>1</bNoCapture>
 			<bNoDefensiveBonus>1</bNoDefensiveBonus>
 			<bPassage>1</bPassage>
+            <iAnimalCombat>50</iAnimalCombat>
 			<PrereqTech>TECH_CANINE_DOMESTICATION</PrereqTech>
 			<BonusType>BONUS_JOMON</BonusType>
+            <PursuitVSUnitCombatTypes>
+                <PursuitVSUnitCombatType>
+                    <PursuitVSUnitCombat>UNITCOMBAT_ANIMAL</PursuitVSUnitCombat>
+                    <iPursuitVSUnitCombat>25</iPursuitVSUnitCombat>
+                </PursuitVSUnitCombatType>
+            </PursuitVSUnitCombatTypes>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_DOG_BREEDER</BuildingType>
 				<BuildingType>BUILDING_REPET</BuildingType>

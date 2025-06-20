@@ -45388,6 +45388,7 @@
 			<Advisor>ADVISOR_GROWTH</Advisor>
 			<bNoNonTypeProdMods>1</bNoNonTypeProdMods>
 			<bOnlyDefensive>1</bOnlyDefensive>
+            <bMilitaryTrade>1</bMilitaryTrade>
 			<bNoCapture>1</bNoCapture>
 			<bRivalTerritory>1</bRivalTerritory>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -45843,7 +45844,7 @@
 			<iCost>-1</iCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>3</iMoves>
-			<iCombat>4</iCombat>
+			<iCombat>3</iCombat>
 			<iXPValueAttack>1</iXPValueAttack>
 			<iXPValueDefense>2</iXPValueDefense>
 			<iCityAttack>-75</iCityAttack>
@@ -45953,7 +45954,7 @@
 			<UnitUpgrades>
 				<UnitType>UNIT_MASTER_RANGER</UnitType>
 			</UnitUpgrades>
-			<iCombat>5</iCombat>
+			<iCombat>4</iCombat>
 			<iXPValueAttack>1</iXPValueAttack>
 			<iXPValueDefense>2</iXPValueDefense>
 			<iCityAttack>-75</iCityAttack>
@@ -46062,7 +46063,7 @@
 			<iCost>-1</iCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>3</iMoves>
-			<iCombat>6</iCombat>
+			<iCombat>5</iCombat>
 			<iXPValueAttack>1</iXPValueAttack>
 			<iXPValueDefense>2</iXPValueDefense>
 			<iPursuit>60</iPursuit>
@@ -46174,7 +46175,7 @@
 			<iCost>-1</iCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>3</iMoves>
-			<iCombat>8</iCombat>
+			<iCombat>7</iCombat>
 			<iXPValueAttack>1</iXPValueAttack>
 			<iXPValueDefense>2</iXPValueDefense>
 			<iPursuit>80</iPursuit>
@@ -46290,7 +46291,7 @@
 			<iCost>-1</iCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>3</iMoves>
-			<iCombat>11</iCombat>
+			<iCombat>10</iCombat>
 			<iXPValueAttack>1</iXPValueAttack>
 			<iXPValueDefense>2</iXPValueDefense>
 			<iPursuit>60</iPursuit>
@@ -46402,7 +46403,7 @@
 			<iCost>-1</iCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>4</iMoves>
-			<iCombat>16</iCombat>
+			<iCombat>15</iCombat>
 			<iXPValueAttack>1</iXPValueAttack>
 			<iXPValueDefense>2</iXPValueDefense>
 			<iPursuit>40</iPursuit>

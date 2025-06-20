@@ -98,6 +98,10 @@
 					<BonusType>BONUS_PRIME_TIMBER</BonusType>
 					<iProductonModifier>20</iProductonModifier>
 				</BonusProductionModifier>
+				<BonusProductionModifier>
+					<BonusType>BONUS_ROPE</BonusType>
+					<iProductonModifier>10</iProductonModifier>
+				</BonusProductionModifier>
 			</BonusProductionModifiers>
 			<DomainCargo>DOMAIN_LAND</DomainCargo>
 			<iCargo>1</iCargo>
@@ -12182,6 +12186,7 @@
 			<Type>UNIT_COG_MERCHANT</Type>
 			<iMaxPlayerInstances>3</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_TRADE</Combat>
+			<bMilitaryTrade>1</bMilitaryTrade>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_WOODEN_SHIPS</SubCombatType>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
@@ -12205,6 +12210,12 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
+			<BonusProductionModifiers>
+				<BonusProductionModifier>
+					<BonusType>BONUS_PRIME_TIMBER</BonusType>
+					<iProductonModifier>20</iProductonModifier>
+				</BonusProductionModifier>
+			</BonusProductionModifiers>
 			<DefaultUnitAI>UNITAI_ATTACK_SEA</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_COG_MERCHANT</Description>
 			<Civilopedia>TXT_KEY_UNIT_COG_MERCHANT_PEDIA</Civilopedia>
