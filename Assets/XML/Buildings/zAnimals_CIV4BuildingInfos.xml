@@ -443,7 +443,7 @@
 			<Advisor>ADVISOR_GROWTH</Advisor>
 			<ConstructSound>SND_AMB_HORSE_COBBLESTONES</ConstructSound>
 			<YieldChanges>
-				<iYield>1</iYield>
+				<iYield>3</iYield>
 				<iYield>1</iYield>
 			</YieldChanges>
 			<ExtraFreeBonuses>
@@ -503,7 +503,7 @@
 			<Advisor>ADVISOR_GROWTH</Advisor>
 			<ConstructSound>SND_AMB_HORSE_COBBLESTONES</ConstructSound>
 			<YieldChanges>
-				<iYield>1</iYield>
+				<iYield>3</iYield>
 				<iYield>1</iYield>
 			</YieldChanges>
 			<ObsoleteTech>TECH_REPLACEMENT_ORGANS</ObsoleteTech>
@@ -575,6 +575,7 @@
 			<PrereqTech>TECH_ANIMAL_HUSBANDRY</PrereqTech>
 			<YieldChanges>
 				<iYield>2</iYield>
+				<iYield>1</iYield>
 				<iYield>1</iYield>
 			</YieldChanges>
 			<ExtraFreeBonuses>
@@ -940,7 +941,7 @@
 			<ConstructSound>SND_AMB_HORSE_COBBLESTONES</ConstructSound>
 			<PrereqTech>TECH_ANIMAL_HUSBANDRY</PrereqTech>
 			<YieldChanges>
-				<iYield>2</iYield>
+				<iYield>3</iYield>
 				<iYield>1</iYield>
 			</YieldChanges>
 			<ExtraFreeBonuses>
@@ -1037,7 +1038,7 @@
 			<Advisor>ADVISOR_GROWTH</Advisor>
 			<ConstructSound>SND_AMB_HORSE_COBBLESTONES</ConstructSound>
 			<YieldChanges>
-				<iYield>1</iYield>
+				<iYield>3</iYield>
 				<iYield>1</iYield>
 			</YieldChanges>
 			<ExtraFreeBonuses>
@@ -1123,7 +1124,7 @@
 			<PrereqTech>TECH_ANIMAL_HUSBANDRY</PrereqTech>
 			<YieldChanges>
 				<iYield>0</iYield>
-				<iYield>1</iYield>
+				<iYield>3</iYield>
 				<iYield>1</iYield>
 			</YieldChanges>
 			<ExtraFreeBonuses>
@@ -1243,7 +1244,7 @@
 			<ConstructSound>SND_AMB_HORSE_COBBLESTONES</ConstructSound>
 			<YieldChanges>
 				<iYield>1</iYield>
-				<iYield>1</iYield>
+				<iYield>3</iYield>
 			</YieldChanges>
 			<ExtraFreeBonuses>
 				<ExtraFreeBonus>
@@ -1515,7 +1516,7 @@
 			<Advisor>ADVISOR_GROWTH</Advisor>
 			<ConstructSound>SND_AMB_HORSE_COBBLESTONES</ConstructSound>
 			<YieldChanges>
-				<iYield>1</iYield>
+				<iYield>2</iYield>
 				<iYield>1</iYield>
 				<iYield>1</iYield>
 			</YieldChanges>
@@ -1709,7 +1710,7 @@
 			<iConquestProb>75</iConquestProb>
 			<YieldChanges>
 				<iYield>1</iYield>
-				<iYield>1</iYield>
+				<iYield>3</iYield>
 			</YieldChanges>
 			<ConstructSound>SND_AMB_HORSE_COBBLESTONES</ConstructSound>
 		</BuildingInfo>
@@ -1724,7 +1725,7 @@
 			<ConstructSound>SND_AMB_HORSE_COBBLESTONES</ConstructSound>
 			<YieldChanges>
 				<iYield>1</iYield>
-				<iYield>1</iYield>
+				<iYield>3</iYield>
 			</YieldChanges>
 			<ExtraFreeBonuses>
 				<ExtraFreeBonus>
@@ -1846,6 +1847,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<FreeStartEra>C2C_ERA_ANCIENT</FreeStartEra>
+			<iHappiness>1</iHappiness>
 			<UnitCombatFreeExperiences>
 				<UnitCombatFreeExperience>
 					<UnitCombatType>UNITCOMBAT_HUNTER</UnitCombatType>
@@ -1865,21 +1867,97 @@
 					<BonusType>BONUS_KANGAROO</BonusType>
 					<iHealthChange>1</iHealthChange>
 				</BonusHealthChange>
-			</BonusHealthChanges>
-			<BonusHappinessChanges>
-				<BonusHappinessChange>
+				<BonusHealthChange>
+					<BonusType>BONUS_SEA_LION_AND_SEAL</BonusType>
+					<iHealthChange>1</iHealthChange>
+				</BonusHealthChange>
+				<BonusHealthChange>
 					<BonusType>BONUS_BEAVERS</BonusType>
-					<iHappinessChange>1</iHappinessChange>
-				</BonusHappinessChange>
-				<BonusHappinessChange>
-					<BonusType>BONUS_ELEPHANTS</BonusType>
-					<iHappinessChange>1</iHappinessChange>
-				</BonusHappinessChange>
-				<BonusHappinessChange>
+					<iHealthChange>1</iHealthChange>
+				</BonusHealthChange>
+				<BonusHealthChange>
+					<BonusType>BONUS_WALRUS</BonusType>
+					<iHealthChange>1</iHealthChange>
+				</BonusHealthChange>
+				<BonusHealthChange>
+					<BonusType>BONUS_ELEPHANT</BonusType>
+					<iHealthChange>1</iHealthChange>
+				</BonusHealthChange>
+				<BonusHealthChange>
+					<BonusType>BONUS_RABBIT</BonusType>
+					<iHealthChange>1</iHealthChange>
+				</BonusHealthChange>
+				<BonusHealthChange>
 					<BonusType>BONUS_MAMMOTH</BonusType>
-					<iHappinessChange>1</iHappinessChange>
-				</BonusHappinessChange>
-			</BonusHappinessChanges>
+					<iHealthChange>1</iHealthChange>
+				</BonusHealthChange>
+				<BonusHealthChange>
+					<BonusType>BONUS_PIG</BonusType>
+					<iHealthChange>1</iHealthChange>
+				</BonusHealthChange>
+			</BonusHealthChanges>
+			<BonusYieldChanges>
+				<BonusYieldChange>
+					<BonusType>BONUS_SEA_LION_AND_SEAL</BonusType>
+					<YieldChanges>
+						<iYield>1</iYield>
+					</YieldChanges>
+				</BonusYieldChange>
+				<BonusYieldChange>
+					<BonusType>BONUS_KANGAROO</BonusType>
+					<YieldChanges>
+						<iYield>1</iYield>
+					</YieldChanges>
+				</BonusYieldChange>
+				<BonusYieldChange>
+					<BonusType>BONUS_BEAVERS</BonusType>
+					<YieldChanges>
+						<iYield>1</iYield>
+					</YieldChanges>
+				</BonusYieldChange>
+				<BonusYieldChange>
+					<BonusType>BONUS_WALRUS</BonusType>
+					<YieldChanges>
+						<iYield>1</iYield>
+					</YieldChanges>
+				</BonusYieldChange>
+				<BonusYieldChange>
+					<BonusType>BONUS_RABBIT</BonusType>
+					<YieldChanges>
+						<iYield>1</iYield>
+					</YieldChanges>
+				</BonusYieldChange>
+				<BonusYieldChange>
+					<BonusType>BONUS_MAMMOTH</BonusType>
+					<YieldChanges>
+						<iYield>1</iYield>
+					</YieldChanges>
+				</BonusYieldChange>
+				<BonusYieldChange>
+					<BonusType>BONUS_DEER</BonusType>
+					<YieldChanges>
+						<iYield>1</iYield>
+					</YieldChanges>
+				</BonusYieldChange>
+				<BonusYieldChange>
+					<BonusType>BONUS_BISON</BonusType>
+					<YieldChanges>
+						<iYield>1</iYield>
+					</YieldChanges>
+				</BonusYieldChange>
+				<BonusYieldChange>
+					<BonusType>BONUS_ELEPHANTS</BonusType>
+					<YieldChanges>
+						<iYield>1</iYield>
+					</YieldChanges>
+				</BonusYieldChange>
+				<BonusYieldChange>
+					<BonusType>BONUS_PIG</BonusType>
+					<YieldChanges>
+						<iYield>1</iYield>
+					</YieldChanges>
+				</BonusYieldChange>
+			</BonusYieldChanges>
 			<iAsset>1</iAsset>
 			<iPower>4</iPower>
 			<iConquestProb>25</iConquestProb>
@@ -1897,12 +1975,12 @@
 			</MapCategoryTypes>
 			<FreeStartEra>C2C_ERA_ANCIENT</FreeStartEra>
 			<CommerceChanges>
-				<iCommerce>1</iCommerce>
+				<iCommerce>2</iCommerce>
 			</CommerceChanges>
 			<bApplyFreePromotionOnMove>1</bApplyFreePromotionOnMove>
 			<FreePromoTypes>
 				<FreePromoType>
-					<PromotionType>PROMOTION_HUNTER1</PromotionType>
+					<PromotionType>PROMOTION_ENTRAPMENT1</PromotionType>
 					<FreePromotionCondition>
 						<Has>
 							<GOMType>GOM_UNITCOMBAT</GOMType>
@@ -1911,6 +1989,7 @@
 					</FreePromotionCondition>
 				</FreePromoType>
 			</FreePromoTypes>
+			<iHappiness>1</iHappiness>
 			<UnitCombatFreeExperiences>
 				<UnitCombatFreeExperience>
 					<UnitCombatType>UNITCOMBAT_HUNTER</UnitCombatType>
@@ -1930,21 +2009,97 @@
 					<BonusType>BONUS_KANGAROO</BonusType>
 					<iHealthChange>1</iHealthChange>
 				</BonusHealthChange>
-			</BonusHealthChanges>
-			<BonusHappinessChanges>
-				<BonusHappinessChange>
+				<BonusHealthChange>
+					<BonusType>BONUS_SEA_LION_AND_SEAL</BonusType>
+					<iHealthChange>1</iHealthChange>
+				</BonusHealthChange>
+				<BonusHealthChange>
 					<BonusType>BONUS_BEAVERS</BonusType>
-					<iHappinessChange>1</iHappinessChange>
-				</BonusHappinessChange>
-				<BonusHappinessChange>
-					<BonusType>BONUS_ELEPHANTS</BonusType>
-					<iHappinessChange>1</iHappinessChange>
-				</BonusHappinessChange>
-				<BonusHappinessChange>
+					<iHealthChange>1</iHealthChange>
+				</BonusHealthChange>
+				<BonusHealthChange>
+					<BonusType>BONUS_WALRUS</BonusType>
+					<iHealthChange>1</iHealthChange>
+				</BonusHealthChange>
+				<BonusHealthChange>
+					<BonusType>BONUS_ELEPHANT</BonusType>
+					<iHealthChange>1</iHealthChange>
+				</BonusHealthChange>
+				<BonusHealthChange>
+					<BonusType>BONUS_RABBIT</BonusType>
+					<iHealthChange>1</iHealthChange>
+				</BonusHealthChange>
+				<BonusHealthChange>
 					<BonusType>BONUS_MAMMOTH</BonusType>
-					<iHappinessChange>1</iHappinessChange>
-				</BonusHappinessChange>
-			</BonusHappinessChanges>
+					<iHealthChange>1</iHealthChange>
+				</BonusHealthChange>
+				<BonusHealthChange>
+					<BonusType>BONUS_PIG</BonusType>
+					<iHealthChange>1</iHealthChange>
+				</BonusHealthChange>
+			</BonusHealthChanges>
+			<BonusYieldChanges>
+				<BonusYieldChange>
+					<BonusType>BONUS_SEA_LION_AND_SEAL</BonusType>
+					<YieldChanges>
+						<iYield>1</iYield>
+					</YieldChanges>
+				</BonusYieldChange>
+				<BonusYieldChange>
+					<BonusType>BONUS_KANGAROO</BonusType>
+					<YieldChanges>
+						<iYield>1</iYield>
+					</YieldChanges>
+				</BonusYieldChange>
+				<BonusYieldChange>
+					<BonusType>BONUS_BEAVERS</BonusType>
+					<YieldChanges>
+						<iYield>1</iYield>
+					</YieldChanges>
+				</BonusYieldChange>
+				<BonusYieldChange>
+					<BonusType>BONUS_WALRUS</BonusType>
+					<YieldChanges>
+						<iYield>1</iYield>
+					</YieldChanges>
+				</BonusYieldChange>
+				<BonusYieldChange>
+					<BonusType>BONUS_RABBIT</BonusType>
+					<YieldChanges>
+						<iYield>1</iYield>
+					</YieldChanges>
+				</BonusYieldChange>
+				<BonusYieldChange>
+					<BonusType>BONUS_MAMMOTH</BonusType>
+					<YieldChanges>
+						<iYield>1</iYield>
+					</YieldChanges>
+				</BonusYieldChange>
+				<BonusYieldChange>
+					<BonusType>BONUS_DEER</BonusType>
+					<YieldChanges>
+						<iYield>1</iYield>
+					</YieldChanges>
+				</BonusYieldChange>
+				<BonusYieldChange>
+					<BonusType>BONUS_BISON</BonusType>
+					<YieldChanges>
+						<iYield>1</iYield>
+					</YieldChanges>
+				</BonusYieldChange>
+				<BonusYieldChange>
+					<BonusType>BONUS_ELEPHANTS</BonusType>
+					<YieldChanges>
+						<iYield>1</iYield>
+					</YieldChanges>
+				</BonusYieldChange>
+				<BonusYieldChange>
+					<BonusType>BONUS_PIG</BonusType>
+					<YieldChanges>
+						<iYield>1</iYield>
+					</YieldChanges>
+				</BonusYieldChange>
+			</BonusYieldChanges>
 			<iAsset>1</iAsset>
 			<iPower>4</iPower>
 			<PropertyManipulators>
@@ -2104,7 +2259,7 @@
 			<iHappiness>1</iHappiness>
 			<iAsset>3</iAsset>
 			<YieldChanges>
-				<iYield>2</iYield>
+				<iYield>3</iYield>
 				<iYield>1</iYield>
 			</YieldChanges>
 			<ConstructSound>SND_AMB_HORSE_COBBLESTONES</ConstructSound>
@@ -2412,8 +2567,7 @@
 			<iAsset>3</iAsset>
 			<iConquestProb>75</iConquestProb>
 			<YieldChanges>
-				<iYield>1</iYield>
-				<iYield>1</iYield>
+				<iYield>3</iYield>
 				<iYield>1</iYield>
 			</YieldChanges>
 			<ConstructSound>SND_AMB_HORSE_COBBLESTONES</ConstructSound>
@@ -2454,7 +2608,7 @@
 			<iAsset>3</iAsset>
 			<iConquestProb>75</iConquestProb>
 			<YieldChanges>
-				<iYield>1</iYield>
+				<iYield>4</iYield>
 			</YieldChanges>
 			<ConstructSound>SND_AMB_HORSE_COBBLESTONES</ConstructSound>
 		</BuildingInfo>
@@ -2577,7 +2731,7 @@
 			<iAsset>3</iAsset>
 			<iConquestProb>75</iConquestProb>
 			<YieldChanges>
-				<iYield>1</iYield>
+				<iYield>3</iYield>
 				<iYield>1</iYield>
 			</YieldChanges>
 			<ConstructSound>SND_AMB_HORSE_COBBLESTONES</ConstructSound>
@@ -2685,7 +2839,7 @@
 			</MapCategoryTypes>
 			<iAsset>3</iAsset>
 			<YieldChanges>
-				<iYield>1</iYield>
+				<iYield>3</iYield>
 				<iYield>1</iYield>
 			</YieldChanges>
 			<iConquestProb>75</iConquestProb>
@@ -2839,7 +2993,7 @@
 			<Advisor>ADVISOR_GROWTH</Advisor>
 			<ConstructSound>SND_AMB_HORSE_COBBLESTONES</ConstructSound>
 			<YieldChanges>
-				<iYield>1</iYield>
+				<iYield>2</iYield>
 				<iYield>1</iYield>
 				<iYield>1</iYield>
 			</YieldChanges>

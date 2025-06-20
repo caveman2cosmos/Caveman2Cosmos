@@ -578,14 +578,14 @@
 				<iYield>0</iYield>
 			</Yields>
 			<Commerces>
-				<iCommerce>2</iCommerce>
+				<iCommerce>-1</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
 			</Commerces>
 			<UnitCombatExperienceTypes>
 				<UnitCombatExperienceType>
 					<UnitCombatType>UNITCOMBAT_COMBATANT</UnitCombatType>
-					<iModifier>2</iModifier>
+					<iModifier>3</iModifier>
 				</UnitCombatExperienceType>
 			</UnitCombatExperienceTypes>
 			<Button>,Art/Interface/MainScreen/CityScreen/Great_Engineer.dds,Art/Interface/Buttons/Warlords_Atlas_2.dds,2,6</Button>
