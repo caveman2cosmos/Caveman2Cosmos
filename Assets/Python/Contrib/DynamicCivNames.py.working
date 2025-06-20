@@ -302,21 +302,21 @@ def getNames(pPlayer):
 	shortName = civInfo.getShortDescription(0)	# Default
 	adjective = civInfo.getAdjective(0)	# Default
 
-	# Short name from capital if the civ has only one city.
+	# Short name from capital if civ has only one city.
 	if pPlayer.getNumCities() == 1:
 		shortName = getCapitalName(pPlayer)
 
 	return [shortName, adjective]
 
 
-def getNewNameAmerica(pPlayer, eRuleCivic, adjective):
+def getNewNameAmerica(eRuleCivic, adjective):
 	"""American-specific names."""
-	if isFederal(pPlayer, eRuleCivic):
+	if GC.getInfoTypeForString("CIVIC_FEDERALISM") == eRuleCivic:
 		newName = TRNSLTR.getText("TXT_KEY_MOD_DCN_UNITED_STATES_OF_AMERICA", ())
 		newShortName = TRNSLTR.getText("TXT_KEY_MOD_DCN_SHORTNAME_USA", ())
 		return [newName, newShortName, adjective]
 	
-	if isConfederacy(pPlayer, eRuleCivic):
+	if GC.getInfoTypeForString("CIVIC_CONFEDERACY") == eRuleCivic:
 		newName = TRNSLTR.getText("TXT_KEY_MOD_DCN_CONFEDERATE_STATES_OF_AMERICA", ())
 		newShortName = TRNSLTR.getText("TXT_KEY_MOD_DCN_SHORTNAME_CSA", ())
 		return [newName, newShortName, adjective]
@@ -324,28 +324,19 @@ def getNewNameAmerica(pPlayer, eRuleCivic, adjective):
 	return None
 
 
-def getNewNameGreece(pPlayer, eGovernmentCivic, eRuleCivic, eSocietyCivic, shortName, adjective):
+def getNewNameGreece(pPlayer, eRuleCivic, shortName, adjective):
 	"""Greek-specific names."""
-	if (
-		pPlayer.getNumCities() == 1 and
-		GC.getInfoTypeForString("CIVIC_ANARCHISM") != eGovernmentCivic and
-		GC.getInfoTypeForString("CIVIC_CHIEFDOM") != eGovernmentCivic and
-		GC.getInfoTypeForString("CIVIC_PRIMITIVE") != eSocietyCivic and
-		GC.getInfoTypeForString("CIVIC_TRIBAL") != eSocietyCivic
-	):
-		newName = TRNSLTR.getText("TXT_KEY_MOD_DCN_POLIS", ()) % shortName
-
-	if (
-		GC.getInfoTypeForString("CIVIC_CITY_STATES") == eRuleCivic and
-		pPlayer.getNumCities() > 1
-	):
-		newName = TRNSLTR.getText("TXT_KEY_MOD_DCN_HELLENIC_LEAGUE", ())
+	if GC.getInfoTypeForString("CIVIC_CITY_STATES") == eRuleCivic:
+		if pPlayer.getNumCities() == 1:
+			newName = TRNSLTR.getText("TXT_KEY_MOD_DCN_POLIS", ()) % shortName
+		else:
+			newName = TRNSLTR.getText("TXT_KEY_MOD_DCN_HELLENIC_LEAGUE", ())
 		return [newName, shortName, adjective]
 	
 	return None
 
 
-def getNewNameRussia(pPlayer, eGovernmentCivic, eRuleCivic, eSocietyCivic, shortName, adjective):
+def getNewNameRussia(pPlayer, eSocietyCivic, eGovernmentCivic):
 	"""Russian-specific names."""
 	if isSocialist(pPlayer, eSocietyCivic, eGovernmentCivic):
 		newName = TRNSLTR.getText("TXT_KEY_MOD_DCN_SOVIET_UNION", ())
@@ -353,59 +344,21 @@ def getNewNameRussia(pPlayer, eGovernmentCivic, eRuleCivic, eSocietyCivic, short
 		newAdjective = TRNSLTR.getText("TXT_KEY_MOD_DCN_ADJECTIVE_SOVIET", ())
 		return [newName, newShortName, newAdjective]
 	
-	if isFederal(pPlayer, eRuleCivic):
-		newName = TRNSLTR.getText("TXT_KEY_MOD_DCN_RUSSIAN_FEDERATION", ())
-		return [newName, shortName, adjective]
-	
 	return None
 
 
 def getNewNameCivSpecific(pPlayer, eGovernmentCivic, eRuleCivic, eSocietyCivic, shortName, adjective):
 	"""Names which are specific to certain civs."""
 	if pPlayer.getCivilizationType() == GC.getInfoTypeForString("CIVILIZATION_AMERICA"):
-		return getNewNameAmerica(pPlayer, eRuleCivic, adjective)
+		return getNewNameAmerica(eRuleCivic, adjective)
 	
 	if pPlayer.getCivilizationType() == GC.getInfoTypeForString("CIVILIZATION_GREECE"):
-		return getNewNameGreece(pPlayer, eGovernmentCivic, eRuleCivic, eSocietyCivic, shortName, adjective)
+		return getNewNameGreece(pPlayer, eRuleCivic, shortName, adjective)
 	
 	if pPlayer.getCivilizationType() == GC.getInfoTypeForString("CIVILIZATION_RUSSIA"):
-		return getNewNameRussia(pPlayer, eGovernmentCivic, eRuleCivic, eSocietyCivic, shortName, adjective)
+		return getNewNameRussia(pPlayer, eSocietyCivic, eGovernmentCivic)
 	
 	return None
-
-
-def isFederal(pPlayer, eRuleCivic):
-	"""Check if the civ is a federation."""
-	return (
-		GC.getInfoTypeForString("CIVIC_FEDERALISM") == eRuleCivic and
-		pPlayer.getNumCities() > 1
-	)
-
-
-def isConfederacy(pPlayer, eRuleCivic):
-	"""Check if the civ is a confederacy."""
-	return (
-		GC.getInfoTypeForString("CIVIC_CONFEDERACY") == eRuleCivic and
-		pPlayer.getNumCities() > 1
-	)
-
-
-def getMultiConditionNames(pPlayer, eGovernmentCivic, eRuleCivic, eSocietyCivic, shortName):
-	"""Get generic names resulting from multiple civ conditions."""
-	# Socialist civs.
-	if isSocialist(pPlayer, eSocietyCivic, eGovernmentCivic):
-		newName = TRNSLTR.getText("TXT_KEY_MOD_DCN_PEOPLES_REPUBLIC", ()) % shortName
-		return newName
-	
-	if isFederal(pPlayer, eRuleCivic):
-		newName = TRNSLTR.getText("TXT_KEY_MOD_DCN_FEDERATION", ()) % shortName
-		return newName
-	
-	if isConfederacy(pPlayer, eRuleCivic):
-		newName = TRNSLTR.getText("TXT_KEY_MOD_DCN_CONFEDERACY", ()) % shortName
-		return newName
-	
-	return None	
 	
 
 def newNameByCivics(iPlayer):
@@ -457,7 +410,7 @@ def newNameByCivics(iPlayer):
 	if newName is not None:
 		return [newName, shortName, adjective]
 
-	# Failsafe which should never be reached.
+	# A generic default name if nothing else is applicable.
 	newName = TRNSLTR.getText("TXT_KEY_MOD_DCN_NATION", ()) % adjective
 	return [newName, shortName, adjective]
 
@@ -545,10 +498,8 @@ def isSocialist(pPlayer, eSocietyCivic, eGovernmentCivic):
 		return False
 	
 	return (
+		GC.getInfoTypeForString("CIVIC_MARXIST") == eSocietyCivic and
 		(
-			GC.getInfoTypeForString("CIVIC_MARXIST") == eSocietyCivic or
-			GC.getInfoTypeForString("CIVIC_PROLETARIAT") == eSocietyCivic
-		) and (
 			GC.getInfoTypeForString("CIVIC_TOTALITARIANISM") == eGovernmentCivic or
 			GC.getInfoTypeForString("CIVIC_DEMOCRACY") == eGovernmentCivic or
 			GC.getInfoTypeForString("CIVIC_REPUBLIC") == eGovernmentCivic
@@ -576,6 +527,11 @@ def getPeasantSuffix(pPlayer, eSocietyCivic, eGovernmentCivic):
 
 def getNewNameGeneric(pPlayer, shortName, adjective, eGovernmentCivic, ePowerCivic, eSocietyCivic):
 	"""The most low-priority civ names."""
+	# Socialist civs.
+	if isSocialist(pPlayer, eSocietyCivic, eGovernmentCivic):
+		newName = TRNSLTR.getText("TXT_KEY_MOD_DCN_PEOPLES_REPUBLIC", ()) % shortName
+		return newName
+	
 	peasantSuffix = getPeasantSuffix(pPlayer, eSocietyCivic, eGovernmentCivic)
 
 	if GC.getInfoTypeForString("CIVIC_UNIVERSAL_EMPIRE") == eGovernmentCivic:
@@ -653,10 +609,6 @@ def getNewNameGeneric(pPlayer, shortName, adjective, eGovernmentCivic, ePowerCiv
 		else:
 			newName = TRNSLTR.getText("TXT_KEY_MOD_DCN_FAMILY", ()) % adjective
 
-		return newName
-	
-	if GC.getInfoTypeForString("CIVIC_ANARCHISM") == eGovernmentCivic:
-		newName = TRNSLTR.getText("TXT_KEY_MOD_DCN_SOCIETY", ()) % adjective
 		return newName
 	
 	return None
