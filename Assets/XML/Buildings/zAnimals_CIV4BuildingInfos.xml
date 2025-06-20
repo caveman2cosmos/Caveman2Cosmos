@@ -443,7 +443,7 @@
 			<Advisor>ADVISOR_GROWTH</Advisor>
 			<ConstructSound>SND_AMB_HORSE_COBBLESTONES</ConstructSound>
 			<YieldChanges>
-				<iYield>1</iYield>
+				<iYield>3</iYield>
 				<iYield>1</iYield>
 			</YieldChanges>
 			<ExtraFreeBonuses>
@@ -503,7 +503,7 @@
 			<Advisor>ADVISOR_GROWTH</Advisor>
 			<ConstructSound>SND_AMB_HORSE_COBBLESTONES</ConstructSound>
 			<YieldChanges>
-				<iYield>1</iYield>
+				<iYield>3</iYield>
 				<iYield>1</iYield>
 			</YieldChanges>
 			<ObsoleteTech>TECH_REPLACEMENT_ORGANS</ObsoleteTech>
@@ -575,6 +575,7 @@
 			<PrereqTech>TECH_ANIMAL_HUSBANDRY</PrereqTech>
 			<YieldChanges>
 				<iYield>2</iYield>
+				<iYield>1</iYield>
 				<iYield>1</iYield>
 			</YieldChanges>
 			<ExtraFreeBonuses>
@@ -940,7 +941,7 @@
 			<ConstructSound>SND_AMB_HORSE_COBBLESTONES</ConstructSound>
 			<PrereqTech>TECH_ANIMAL_HUSBANDRY</PrereqTech>
 			<YieldChanges>
-				<iYield>2</iYield>
+				<iYield>3</iYield>
 				<iYield>1</iYield>
 			</YieldChanges>
 			<ExtraFreeBonuses>
@@ -1037,7 +1038,7 @@
 			<Advisor>ADVISOR_GROWTH</Advisor>
 			<ConstructSound>SND_AMB_HORSE_COBBLESTONES</ConstructSound>
 			<YieldChanges>
-				<iYield>1</iYield>
+				<iYield>3</iYield>
 				<iYield>1</iYield>
 			</YieldChanges>
 			<ExtraFreeBonuses>
@@ -1123,7 +1124,7 @@
 			<PrereqTech>TECH_ANIMAL_HUSBANDRY</PrereqTech>
 			<YieldChanges>
 				<iYield>0</iYield>
-				<iYield>1</iYield>
+				<iYield>3</iYield>
 				<iYield>1</iYield>
 			</YieldChanges>
 			<ExtraFreeBonuses>
@@ -1243,7 +1244,7 @@
 			<ConstructSound>SND_AMB_HORSE_COBBLESTONES</ConstructSound>
 			<YieldChanges>
 				<iYield>1</iYield>
-				<iYield>1</iYield>
+				<iYield>3</iYield>
 			</YieldChanges>
 			<ExtraFreeBonuses>
 				<ExtraFreeBonus>
@@ -1515,7 +1516,7 @@
 			<Advisor>ADVISOR_GROWTH</Advisor>
 			<ConstructSound>SND_AMB_HORSE_COBBLESTONES</ConstructSound>
 			<YieldChanges>
-				<iYield>1</iYield>
+				<iYield>2</iYield>
 				<iYield>1</iYield>
 				<iYield>1</iYield>
 			</YieldChanges>
@@ -1709,7 +1710,7 @@
 			<iConquestProb>75</iConquestProb>
 			<YieldChanges>
 				<iYield>1</iYield>
-				<iYield>1</iYield>
+				<iYield>3</iYield>
 			</YieldChanges>
 			<ConstructSound>SND_AMB_HORSE_COBBLESTONES</ConstructSound>
 		</BuildingInfo>
@@ -1724,7 +1725,7 @@
 			<ConstructSound>SND_AMB_HORSE_COBBLESTONES</ConstructSound>
 			<YieldChanges>
 				<iYield>1</iYield>
-				<iYield>1</iYield>
+				<iYield>3</iYield>
 			</YieldChanges>
 			<ExtraFreeBonuses>
 				<ExtraFreeBonus>
@@ -2104,7 +2105,7 @@
 			<iHappiness>1</iHappiness>
 			<iAsset>3</iAsset>
 			<YieldChanges>
-				<iYield>2</iYield>
+				<iYield>3</iYield>
 				<iYield>1</iYield>
 			</YieldChanges>
 			<ConstructSound>SND_AMB_HORSE_COBBLESTONES</ConstructSound>
@@ -2412,8 +2413,7 @@
 			<iAsset>3</iAsset>
 			<iConquestProb>75</iConquestProb>
 			<YieldChanges>
-				<iYield>1</iYield>
-				<iYield>1</iYield>
+				<iYield>3</iYield>
 				<iYield>1</iYield>
 			</YieldChanges>
 			<ConstructSound>SND_AMB_HORSE_COBBLESTONES</ConstructSound>
@@ -2454,7 +2454,7 @@
 			<iAsset>3</iAsset>
 			<iConquestProb>75</iConquestProb>
 			<YieldChanges>
-				<iYield>1</iYield>
+				<iYield>4</iYield>
 			</YieldChanges>
 			<ConstructSound>SND_AMB_HORSE_COBBLESTONES</ConstructSound>
 		</BuildingInfo>
@@ -2577,7 +2577,7 @@
 			<iAsset>3</iAsset>
 			<iConquestProb>75</iConquestProb>
 			<YieldChanges>
-				<iYield>1</iYield>
+				<iYield>3</iYield>
 				<iYield>1</iYield>
 			</YieldChanges>
 			<ConstructSound>SND_AMB_HORSE_COBBLESTONES</ConstructSound>
@@ -2685,7 +2685,7 @@
 			</MapCategoryTypes>
 			<iAsset>3</iAsset>
 			<YieldChanges>
-				<iYield>1</iYield>
+				<iYield>3</iYield>
 				<iYield>1</iYield>
 			</YieldChanges>
 			<iConquestProb>75</iConquestProb>
@@ -2839,7 +2839,7 @@
 			<Advisor>ADVISOR_GROWTH</Advisor>
 			<ConstructSound>SND_AMB_HORSE_COBBLESTONES</ConstructSound>
 			<YieldChanges>
-				<iYield>1</iYield>
+				<iYield>2</iYield>
 				<iYield>1</iYield>
 				<iYield>1</iYield>
 			</YieldChanges>
