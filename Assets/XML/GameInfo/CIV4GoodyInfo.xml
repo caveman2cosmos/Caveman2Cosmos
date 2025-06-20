@@ -5,28 +5,20 @@
 			<Type>GOODY_LOW_GOLD</Type>
 			<Description>TXT_KEY_GOODY_GOLD</Description>
 			<Sound>AS2D_GOODY_GOLD</Sound>
-			<iGold>10</iGold>
-			<iGoldRand1>10</iGoldRand1>
-			<iGoldRand2>10</iGoldRand2>
-		</GoodyInfo>
-		<GoodyInfo>
-			<Type>GOODY_HIGH_GOLD</Type>
-			<Description>TXT_KEY_GOODY_GOLD</Description>
-			<Sound>AS2D_GOODY_GOLD</Sound>
 			<iGold>20</iGold>
 			<iGoldRand1>20</iGoldRand1>
 			<iGoldRand2>20</iGoldRand2>
 		</GoodyInfo>
 		<GoodyInfo>
-			<Type>GOODY_LOW_RESEARCH</Type>
-			<Description>TXT_KEY_GOODY_RESEARCH</Description>
+			<Type>GOODY_HIGH_GOLD</Type>
+			<Description>TXT_KEY_GOODY_GOLD</Description>
 			<Sound>AS2D_GOODY_GOLD</Sound>
-			<iResearch>5</iResearch>
-			<iGoldRand1>5</iGoldRand1>
-			<iGoldRand2>5</iGoldRand2>
+			<iGold>40</iGold>
+			<iGoldRand1>40</iGoldRand1>
+			<iGoldRand2>40</iGoldRand2>
 		</GoodyInfo>
 		<GoodyInfo>
-			<Type>GOODY_HIGH_RESEARCH</Type>
+			<Type>GOODY_LOW_RESEARCH</Type>
 			<Description>TXT_KEY_GOODY_RESEARCH</Description>
 			<Sound>AS2D_GOODY_GOLD</Sound>
 			<iResearch>10</iResearch>
@@ -34,18 +26,26 @@
 			<iGoldRand2>10</iGoldRand2>
 		</GoodyInfo>
 		<GoodyInfo>
+			<Type>GOODY_HIGH_RESEARCH</Type>
+			<Description>TXT_KEY_GOODY_RESEARCH</Description>
+			<Sound>AS2D_GOODY_GOLD</Sound>
+			<iResearch>20</iResearch>
+			<iGoldRand1>20</iGoldRand1>
+			<iGoldRand2>20</iGoldRand2>
+		</GoodyInfo>
+		<GoodyInfo>
 			<Type>GOODY_MAP</Type>
 			<Description>TXT_KEY_GOODY_MAP</Description>
 			<Sound>AS2D_GOODY_MAP</Sound>
-			<iMapOffset>4</iMapOffset>
-			<iMapRange>4</iMapRange>
-			<iMapProb>80</iMapProb>
+			<iMapOffset>5</iMapOffset>
+			<iMapRange>5</iMapRange>
+			<iMapProb>90</iMapProb>
 		</GoodyInfo>
 		<GoodyInfo>
 			<Type>GOODY_EXPERIENCE</Type>
 			<Description>TXT_KEY_GOODY_EXPERIENCE</Description>
 			<Sound>AS2D_GOODY_XP</Sound>
-			<iExperience>4</iExperience>
+			<iExperience>6</iExperience>
 		</GoodyInfo>
 		<GoodyInfo>
 			<Type>GOODY_HEALING</Type>
