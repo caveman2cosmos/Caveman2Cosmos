@@ -486,6 +486,10 @@
 				<BuildingType>BUILDING_LAUNCH_ARCOLOGY</BuildingType>
 			</ReplacementBuildings>
 			<iHealth>-1</iHealth>
+			<YieldChanges>
+				<iYield>0</iYield>
+				<iYield>2</iYield>
+			</YieldChanges>
 			<CommerceChanges>
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
