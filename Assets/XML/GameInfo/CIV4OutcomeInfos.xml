@@ -653,9 +653,9 @@
 			<bCity>0</bCity>
 		</OutcomeInfo>
 		<OutcomeInfo>
-			<Type>OUTCOME_UPGRADE_TO_NEANDERTHAL_CHASER</Type>
-			<Description>TXT_KEY_OUTCOME_UPGRADE_TO_NEANDERTHAL_CHASER</Description>
-			<Message>TXT_KEY_OUTCOME_UPGRADE_TO_NEANDERTHAL_CHASER_MESSAGE</Message>
+			<Type>OUTCOME_UPGRADE_TO_NEANDERTHAL_TRACKER</Type>
+			<Description>TXT_KEY_OUTCOME_UPGRADE_TO_NEANDERTHAL_TRACKER</Description>
+			<Message>TXT_KEY_OUTCOME_UPGRADE_TO_NEANDERTHAL_TRACKER_MESSAGE</Message>
 			<bNeutralTerritory>0</bNeutralTerritory>
 			<bHostileTerritory>0</bHostileTerritory>
 			<bCity>0</bCity>
