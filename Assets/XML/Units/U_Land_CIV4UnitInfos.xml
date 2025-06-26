@@ -44241,7 +44241,7 @@
 					<ActionOutcomes>
 						<Outcome>
 							<OutcomeType>OUTCOME_ENTERTAIN_CITY</OutcomeType>
-							<iChance>80</iChance>
+							<iChance>70</iChance>
 							<Commerces>
 								<iCommerce>0</iCommerce>
 								<iCommerce>0</iCommerce>
@@ -44257,7 +44257,7 @@
 						</Outcome>
 						<Outcome>
 							<OutcomeType>OUTCOME_ENTERTAIN_CITY_EXALTED</OutcomeType>
-							<iChance>20</iChance>
+							<iChance>30</iChance>
 							<Commerces>
 								<iCommerce>0</iCommerce>
 								<iCommerce>0</iCommerce>
@@ -44363,7 +44363,7 @@
 					<ActionOutcomes>
 						<Outcome>
 							<OutcomeType>OUTCOME_ENTERTAIN_CITY</OutcomeType>
-							<iChance>80</iChance>
+							<iChance>70</iChance>
 							<Commerces>
 								<iCommerce>0</iCommerce>
 								<iCommerce>0</iCommerce>
@@ -44379,7 +44379,7 @@
 						</Outcome>
 						<Outcome>
 							<OutcomeType>OUTCOME_ENTERTAIN_CITY_EXALTED</OutcomeType>
-							<iChance>20</iChance>
+							<iChance>30</iChance>
 							<Commerces>
 								<iCommerce>0</iCommerce>
 								<iCommerce>0</iCommerce>
@@ -44473,7 +44473,7 @@
 					<ActionOutcomes>
 						<Outcome>
 							<OutcomeType>OUTCOME_ENTERTAIN_CITY</OutcomeType>
-							<iChance>80</iChance>
+							<iChance>70</iChance>
 							<Commerces>
 								<iCommerce>0</iCommerce>
 								<iCommerce>0</iCommerce>
@@ -44489,7 +44489,7 @@
 						</Outcome>
 						<Outcome>
 							<OutcomeType>OUTCOME_ENTERTAIN_CITY_EXALTED</OutcomeType>
-							<iChance>20</iChance>
+							<iChance>30</iChance>
 							<Commerces>
 								<iCommerce>0</iCommerce>
 								<iCommerce>0</iCommerce>
@@ -44579,7 +44579,7 @@
 					<ActionOutcomes>
 						<Outcome>
 							<OutcomeType>OUTCOME_ENTERTAIN_CITY</OutcomeType>
-							<iChance>80</iChance>
+							<iChance>70</iChance>
 							<Commerces>
 								<iCommerce>0</iCommerce>
 								<iCommerce>0</iCommerce>
@@ -44595,7 +44595,7 @@
 						</Outcome>
 						<Outcome>
 							<OutcomeType>OUTCOME_ENTERTAIN_CITY_EXALTED</OutcomeType>
-							<iChance>20</iChance>
+							<iChance>30</iChance>
 							<Commerces>
 								<iCommerce>0</iCommerce>
 								<iCommerce>0</iCommerce>

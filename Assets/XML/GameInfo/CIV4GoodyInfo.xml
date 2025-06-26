@@ -865,7 +865,7 @@
 			<Sound>AS2D_GOODY_HOSTILE</Sound>
 			<bBad>1</bBad>
 			<bNaval>1</bNaval>
-			<BarbarianUnit>UNIT_DROMON</BarbarianUnit>
+			<BarbarianUnit>UNIT_DROMON_FIRE_SHIP</BarbarianUnit>
 			<iBarbarianUnitProb>40</iBarbarianUnitProb>
 			<iMinBarbarians>2</iMinBarbarians>
 			<EraType>C2C_ERA_CLASSICAL</EraType>

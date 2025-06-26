@@ -3718,30 +3718,6 @@
 					</ActionOutcomes>
 				</Action>
 				<Action>
-					<MissionType>MISSION_CAPTIVE_UPGRADE_TO_GATHERER</MissionType>
-					<iCost>
-						<Adapt>
-							<ID>ADAPT_DEFAULT</ID>
-							<Constant>15</Constant>
-						</Adapt>
-					</iCost>
-					<ActionOutcomes>
-						<Outcome>
-							<OutcomeType>OUTCOME_UPGRADE_TO_GATHERER</OutcomeType>
-							<iChance>100</iChance>
-							<UnitType>UNIT_GATHERER</UnitType>
-							<bUnitToCity>
-								<Constant>0</Constant>
-							</bUnitToCity>
-							<PlotCondition>
-								<Not>
-									<Is>TAG_ANARCHY</Is>
-								</Not>
-							</PlotCondition>
-						</Outcome>
-					</ActionOutcomes>
-				</Action>
-				<Action>
 					<MissionType>MISSION_CAPTIVE_UPGRADE_TO_NEANDERTHAL_WARRIOR</MissionType>
 					<iCost>
 						<Adapt>
@@ -3753,7 +3729,7 @@
 						<Outcome>
 							<OutcomeType>OUTCOME_UPGRADE_TO_NEANDERTHAL_WARRIOR</OutcomeType>
 							<iChance>100</iChance>
-							<UnitType>UNIT_NEANDERTHAL_WARRIOR</UnitType>
+							<UnitType>UNIT_NEANDERTHAL</UnitType>
 							<bUnitToCity>
 								<Constant>0</Constant>
 							</bUnitToCity>

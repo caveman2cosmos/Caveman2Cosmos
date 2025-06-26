@@ -9402,7 +9402,7 @@
 			<Type>EVENT_FORTIFIED_CAVE_IN_DISREPAIR_2</Type>
 			<Description>TXT_KEY_EVENT_FORT_IN_DISREPAIR_2</Description>
 			<iGold>-15</iGold>
-			<bGameSpeedScale></bGameSpeedScale>
+			<bGameSpeedScale>1</bGameSpeedScale>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<iAIValue>2</iAIValue>
 		</EventInfo>

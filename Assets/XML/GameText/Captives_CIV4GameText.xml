@@ -42,10 +42,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISSION_CAPTIVE_UPGRADE_TO_NEANDERTHAL_TRACKER</Tag>
-		<English>Upgrade a Captive to a Neanderthal Tracker.</English>
-		<French>Améliorez un prisonnier en un Pisteur néandertalien.</French>
-		<Italian>Converti prigioniero in un inseguitore neanderthal.</Italian>
-		<Russian>Улучшить пленника до неандертальского охотника.</Russian>
+		<English>Upgrade a Captive to a Neanderthal Chaser.</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISSION_CAPTIVE_UPGRADE_TO_NEANDERTHAL_WARRIOR</Tag>
@@ -344,17 +341,11 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_OUTCOME_UPGRADE_TO_NEANDERTHAL_TRACKER</Tag>
-		<English>Upgrade a Captive to a Neanderthal Tracker.</English>
-		<French>Améliorer en Pisteur néandertalien.</French>
-		<Italian>Converti il prigioniero in un inseguitore neanderthal.</Italian>
-		<Russian>Улучшить до неандертальского охотника.</Russian>
+		<English>Upgrade a Captive to a Neanderthal Chaser.</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_OUTCOME_UPGRADE_TO_NEANDERTHAL_TRACKER_MESSAGE</Tag>
-		<English>Your Captive has been upgraded to a Neanderthal Tracker.</English>
-		<French>Votre prisonnier a été converti en un Pisteur néandertalien.</French>
-		<Italian>Il prigioniero è diventato un inseguitore neanderthal.</Italian>
-		<Russian>Ваш пленник был повышен до неандертальского охотника.</Russian>
+		<English>Your Captive has been upgraded to a Neanderthal Chaser.</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_OUTCOME_UPGRADE_TO_NEANDERTHAL_WARRIOR</Tag>
