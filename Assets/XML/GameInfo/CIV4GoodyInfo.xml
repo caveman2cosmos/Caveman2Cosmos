@@ -1,6 +1,7 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <Civ4GoodyInfo xmlns="x-schema:../Schema/C2C_CIV4GameInfoSchema.xml">
 	<GoodyInfos>
+		<!--		Positive goody outcomes-->
 		<GoodyInfo>
 			<Type>GOODY_LOW_GOLD</Type>
 			<Description>TXT_KEY_GOODY_GOLD</Description>
@@ -8,6 +9,79 @@
 			<iGold>20</iGold>
 			<iGoldRand1>20</iGoldRand1>
 			<iGoldRand2>20</iGoldRand2>
+			<EraType>C2C_ERA_PREHISTORIC</EraType>
+		</GoodyInfo>
+		<GoodyInfo>
+			<Type>GOODY_LOW_ANCIENT_GOLD</Type>
+			<Description>TXT_KEY_GOODY_GOLD</Description>
+			<Sound>AS2D_GOODY_GOLD</Sound>
+			<iGold>40</iGold>
+			<iGoldRand1>40</iGoldRand1>
+			<iGoldRand2>40</iGoldRand2>
+			<EraType>C2C_ERA_ANCIENT</EraType>
+		</GoodyInfo>
+		<GoodyInfo>
+			<Type>GOODY_LOW_CLASSICAL_GOLD</Type>
+			<Description>TXT_KEY_GOODY_GOLD</Description>
+			<Sound>AS2D_GOODY_GOLD</Sound>
+			<iGold>80</iGold>
+			<iGoldRand1>80</iGoldRand1>
+			<iGoldRand2>80</iGoldRand2>
+			<EraType>C2C_ERA_CLASSICAL</EraType>
+		</GoodyInfo>
+		<GoodyInfo>
+			<Type>GOODY_LOW_MEDIEVAL_GOLD</Type>
+			<Description>TXT_KEY_GOODY_GOLD</Description>
+			<Sound>AS2D_GOODY_GOLD</Sound>
+			<iGold>160</iGold>
+			<iGoldRand1>160</iGoldRand1>
+			<iGoldRand2>160</iGoldRand2>
+			<EraType>C2C_ERA_MEDIEVAL</EraType>
+		</GoodyInfo>
+		<GoodyInfo>
+			<Type>GOODY_LOW_RENAISSANCE_GOLD</Type>
+			<Description>TXT_KEY_GOODY_GOLD</Description>
+			<Sound>AS2D_GOODY_GOLD</Sound>
+			<iGold>320</iGold>
+			<iGoldRand1>320</iGoldRand1>
+			<iGoldRand2>320</iGoldRand2>
+			<EraType>C2C_ERA_RENAISSANCE</EraType>
+		</GoodyInfo>
+		<GoodyInfo>
+			<Type>GOODY_LOW_INDUSTRIAL_GOLD</Type>
+			<Description>TXT_KEY_GOODY_GOLD</Description>
+			<Sound>AS2D_GOODY_GOLD</Sound>
+			<iGold>640</iGold>
+			<iGoldRand1>640</iGoldRand1>
+			<iGoldRand2>640</iGoldRand2>
+			<EraType>C2C_ERA_INDUSTRIAL</EraType>
+		</GoodyInfo>
+		<GoodyInfo>
+			<Type>GOODY_LOW_ATOMIC_GOLD</Type>
+			<Description>TXT_KEY_GOODY_GOLD</Description>
+			<Sound>AS2D_GOODY_GOLD</Sound>
+			<iGold>1280</iGold>
+			<iGoldRand1>1280</iGoldRand1>
+			<iGoldRand2>1280</iGoldRand2>
+			<EraType>C2C_ERA_ATOMIC</EraType>
+		</GoodyInfo>
+		<GoodyInfo>
+			<Type>GOODY_LOW_INFORMATION_GOLD</Type>
+			<Description>TXT_KEY_GOODY_GOLD</Description>
+			<Sound>AS2D_GOODY_GOLD</Sound>
+			<iGold>2560</iGold>
+			<iGoldRand1>2560</iGoldRand1>
+			<iGoldRand2>2560</iGoldRand2>
+			<EraType>C2C_ERA_INFORMATION</EraType>
+		</GoodyInfo>
+		<GoodyInfo>
+			<Type>GOODY_LOW_NANOTECH_GOLD</Type>
+			<Description>TXT_KEY_GOODY_GOLD</Description>
+			<Sound>AS2D_GOODY_GOLD</Sound>
+			<iGold>5120</iGold>
+			<iGoldRand1>5120</iGoldRand1>
+			<iGoldRand2>5120</iGoldRand2>
+			<EraType>C2C_ERA_NANOTECH</EraType>
 		</GoodyInfo>
 		<GoodyInfo>
 			<Type>GOODY_HIGH_GOLD</Type>
@@ -16,6 +90,79 @@
 			<iGold>40</iGold>
 			<iGoldRand1>40</iGoldRand1>
 			<iGoldRand2>40</iGoldRand2>
+			<EraType>C2C_ERA_PREHISTORIC</EraType>
+		</GoodyInfo>
+		<GoodyInfo>
+			<Type>GOODY_HIGH_ANCIENT_GOLD</Type>
+			<Description>TXT_KEY_GOODY_GOLD</Description>
+			<Sound>AS2D_GOODY_GOLD</Sound>
+			<iGold>80</iGold>
+			<iGoldRand1>80</iGoldRand1>
+			<iGoldRand2>80</iGoldRand2>
+			<EraType>C2C_ERA_ANCIENT</EraType>
+		</GoodyInfo>
+		<GoodyInfo>
+			<Type>GOODY_HIGH_CLASSICAL_GOLD</Type>
+			<Description>TXT_KEY_GOODY_GOLD</Description>
+			<Sound>AS2D_GOODY_GOLD</Sound>
+			<iGold>160</iGold>
+			<iGoldRand1>160</iGoldRand1>
+			<iGoldRand2>160</iGoldRand2>
+			<EraType>C2C_ERA_CLASSICAL</EraType>
+		</GoodyInfo>
+		<GoodyInfo>
+			<Type>GOODY_HIGH_MEDIEVAL_GOLD</Type>
+			<Description>TXT_KEY_GOODY_GOLD</Description>
+			<Sound>AS2D_GOODY_GOLD</Sound>
+			<iGold>320</iGold>
+			<iGoldRand1>320</iGoldRand1>
+			<iGoldRand2>320</iGoldRand2>
+			<EraType>C2C_ERA_MEDIEVAL</EraType>
+		</GoodyInfo>
+		<GoodyInfo>
+			<Type>GOODY_HIGH_RENAISSANCE_GOLD</Type>
+			<Description>TXT_KEY_GOODY_GOLD</Description>
+			<Sound>AS2D_GOODY_GOLD</Sound>
+			<iGold>640</iGold>
+			<iGoldRand1>640</iGoldRand1>
+			<iGoldRand2>640</iGoldRand2>
+			<EraType>C2C_ERA_RENAISSANCE</EraType>
+		</GoodyInfo>
+		<GoodyInfo>
+			<Type>GOODY_HIGH_INDUSTRIAL_GOLD</Type>
+			<Description>TXT_KEY_GOODY_GOLD</Description>
+			<Sound>AS2D_GOODY_GOLD</Sound>
+			<iGold>1280</iGold>
+			<iGoldRand1>1280</iGoldRand1>
+			<iGoldRand2>1280</iGoldRand2>
+			<EraType>C2C_ERA_INDUSTRIAL</EraType>
+		</GoodyInfo>
+		<GoodyInfo>
+			<Type>GOODY_HIGH_ATOMIC_GOLD</Type>
+			<Description>TXT_KEY_GOODY_GOLD</Description>
+			<Sound>AS2D_GOODY_GOLD</Sound>
+			<iGold>2560</iGold>
+			<iGoldRand1>2560</iGoldRand1>
+			<iGoldRand2>2560</iGoldRand2>
+			<EraType>C2C_ERA_ATOMIC</EraType>
+		</GoodyInfo>
+		<GoodyInfo>
+			<Type>GOODY_HIGH_INFORMATION_GOLD</Type>
+			<Description>TXT_KEY_GOODY_GOLD</Description>
+			<Sound>AS2D_GOODY_GOLD</Sound>
+			<iGold>5120</iGold>
+			<iGoldRand1>5120</iGoldRand1>
+			<iGoldRand2>5120</iGoldRand2>
+			<EraType>C2C_ERA_INFORMATION</EraType>
+		</GoodyInfo>
+		<GoodyInfo>
+			<Type>GOODY_HIGH_NANOTECH_GOLD</Type>
+			<Description>TXT_KEY_GOODY_GOLD</Description>
+			<Sound>AS2D_GOODY_GOLD</Sound>
+			<iGold>10240</iGold>
+			<iGoldRand1>10240</iGoldRand1>
+			<iGoldRand2>10240</iGoldRand2>
+			<EraType>C2C_ERA_NANOTECH</EraType>
 		</GoodyInfo>
 		<GoodyInfo>
 			<Type>GOODY_LOW_RESEARCH</Type>
@@ -24,6 +171,79 @@
 			<iResearch>10</iResearch>
 			<iGoldRand1>10</iGoldRand1>
 			<iGoldRand2>10</iGoldRand2>
+			<EraType>C2C_ERA_PREHISTORIC</EraType>
+		</GoodyInfo>
+		<GoodyInfo>
+			<Type>GOODY_LOW_ANCIENT_RESEARCH</Type>
+			<Description>TXT_KEY_GOODY_RESEARCH</Description>
+			<Sound>AS2D_GOODY_GOLD</Sound>
+			<iResearch>20</iResearch>
+			<iGoldRand1>20</iGoldRand1>
+			<iGoldRand2>20</iGoldRand2>
+			<EraType>C2C_ERA_ANCIENT</EraType>
+		</GoodyInfo>
+		<GoodyInfo>
+			<Type>GOODY_LOW_CLASSICAL_RESEARCH</Type>
+			<Description>TXT_KEY_GOODY_RESEARCH</Description>
+			<Sound>AS2D_GOODY_GOLD</Sound>
+			<iResearch>40</iResearch>
+			<iGoldRand1>40</iGoldRand1>
+			<iGoldRand2>40</iGoldRand2>
+			<EraType>C2C_ERA_CLASSICAL</EraType>
+		</GoodyInfo>
+		<GoodyInfo>
+			<Type>GOODY_LOW_MEDIEVAl_RESEARCH</Type>
+			<Description>TXT_KEY_GOODY_RESEARCH</Description>
+			<Sound>AS2D_GOODY_GOLD</Sound>
+			<iResearch>80</iResearch>
+			<iGoldRand1>80</iGoldRand1>
+			<iGoldRand2>80</iGoldRand2>
+			<EraType>C2C_ERA_MEDIEVAL</EraType>
+		</GoodyInfo>
+		<GoodyInfo>
+			<Type>GOODY_LOW_RENAISSANCE_RESEARCH</Type>
+			<Description>TXT_KEY_GOODY_RESEARCH</Description>
+			<Sound>AS2D_GOODY_GOLD</Sound>
+			<iResearch>160</iResearch>
+			<iGoldRand1>160</iGoldRand1>
+			<iGoldRand2>160</iGoldRand2>
+			<EraType>C2C_ERA_RENAISSANCE</EraType>
+		</GoodyInfo>
+		<GoodyInfo>
+			<Type>GOODY_LOW_INDUSTRIAL_RESEARCH</Type>
+			<Description>TXT_KEY_GOODY_RESEARCH</Description>
+			<Sound>AS2D_GOODY_GOLD</Sound>
+			<iResearch>320</iResearch>
+			<iGoldRand1>320</iGoldRand1>
+			<iGoldRand2>320</iGoldRand2>
+			<EraType>C2C_ERA_INDUSTRIAL</EraType>
+		</GoodyInfo>
+		<GoodyInfo>
+			<Type>GOODY_LOW_ATOMIC_RESEARCH</Type>
+			<Description>TXT_KEY_GOODY_RESEARCH</Description>
+			<Sound>AS2D_GOODY_GOLD</Sound>
+			<iResearch>640</iResearch>
+			<iGoldRand1>640</iGoldRand1>
+			<iGoldRand2>640</iGoldRand2>
+			<EraType>C2C_ERA_ATOMIC</EraType>
+		</GoodyInfo>
+		<GoodyInfo>
+			<Type>GOODY_LOW_INFORMATION_RESEARCH</Type>
+			<Description>TXT_KEY_GOODY_RESEARCH</Description>
+			<Sound>AS2D_GOODY_GOLD</Sound>
+			<iResearch>1280</iResearch>
+			<iGoldRand1>1280</iGoldRand1>
+			<iGoldRand2>1280</iGoldRand2>
+			<EraType>C2C_ERA_INFORMATION</EraType>
+		</GoodyInfo>
+		<GoodyInfo>
+			<Type>GOODY_LOW_NANOTECH_RESEARCH</Type>
+			<Description>TXT_KEY_GOODY_RESEARCH</Description>
+			<Sound>AS2D_GOODY_GOLD</Sound>
+			<iResearch>2560</iResearch>
+			<iGoldRand1>2560</iGoldRand1>
+			<iGoldRand2>2560</iGoldRand2>
+			<EraType>C2C_ERA_NANOTECH</EraType>
 		</GoodyInfo>
 		<GoodyInfo>
 			<Type>GOODY_HIGH_RESEARCH</Type>
@@ -32,6 +252,79 @@
 			<iResearch>20</iResearch>
 			<iGoldRand1>20</iGoldRand1>
 			<iGoldRand2>20</iGoldRand2>
+			<EraType>C2C_ERA_PREHISTORIC</EraType>
+		</GoodyInfo>
+		<GoodyInfo>
+			<Type>GOODY_HIGH_ANCIENT_RESEARCH</Type>
+			<Description>TXT_KEY_GOODY_RESEARCH</Description>
+			<Sound>AS2D_GOODY_GOLD</Sound>
+			<iResearch>40</iResearch>
+			<iGoldRand1>40</iGoldRand1>
+			<iGoldRand2>40</iGoldRand2>
+			<EraType>C2C_ERA_ANCIENT</EraType>
+		</GoodyInfo>
+		<GoodyInfo>
+			<Type>GOODY_HIGH_CLASSICAL_RESEARCH</Type>
+			<Description>TXT_KEY_GOODY_RESEARCH</Description>
+			<Sound>AS2D_GOODY_GOLD</Sound>
+			<iResearch>80</iResearch>
+			<iGoldRand1>80</iGoldRand1>
+			<iGoldRand2>80</iGoldRand2>
+			<EraType>C2C_ERA_CLASSICAL</EraType>
+		</GoodyInfo>
+		<GoodyInfo>
+			<Type>GOODY_HIGH_MEDIEVAl_RESEARCH</Type>
+			<Description>TXT_KEY_GOODY_RESEARCH</Description>
+			<Sound>AS2D_GOODY_GOLD</Sound>
+			<iResearch>160</iResearch>
+			<iGoldRand1>160</iGoldRand1>
+			<iGoldRand2>160</iGoldRand2>
+			<EraType>C2C_ERA_MEDIEVAL</EraType>
+		</GoodyInfo>
+		<GoodyInfo>
+			<Type>GOODY_HIGH_RENAISSANCE_RESEARCH</Type>
+			<Description>TXT_KEY_GOODY_RESEARCH</Description>
+			<Sound>AS2D_GOODY_GOLD</Sound>
+			<iResearch>320</iResearch>
+			<iGoldRand1>320</iGoldRand1>
+			<iGoldRand2>320</iGoldRand2>
+			<EraType>C2C_ERA_RENAISSANCE</EraType>
+		</GoodyInfo>
+		<GoodyInfo>
+			<Type>GOODY_HIGH_INDUSTRIAL_RESEARCH</Type>
+			<Description>TXT_KEY_GOODY_RESEARCH</Description>
+			<Sound>AS2D_GOODY_GOLD</Sound>
+			<iResearch>640</iResearch>
+			<iGoldRand1>640</iGoldRand1>
+			<iGoldRand2>640</iGoldRand2>
+			<EraType>C2C_ERA_INDUSTRIAL</EraType>
+		</GoodyInfo>
+		<GoodyInfo>
+			<Type>GOODY_HIGH_ATOMIC_RESEARCH</Type>
+			<Description>TXT_KEY_GOODY_RESEARCH</Description>
+			<Sound>AS2D_GOODY_GOLD</Sound>
+			<iResearch>1280</iResearch>
+			<iGoldRand1>1280</iGoldRand1>
+			<iGoldRand2>1280</iGoldRand2>
+			<EraType>C2C_ERA_ATOMIC</EraType>
+		</GoodyInfo>
+		<GoodyInfo>
+			<Type>GOODY_HIGH_INFORMATION_RESEARCH</Type>
+			<Description>TXT_KEY_GOODY_RESEARCH</Description>
+			<Sound>AS2D_GOODY_GOLD</Sound>
+			<iResearch>2560</iResearch>
+			<iGoldRand1>2560</iGoldRand1>
+			<iGoldRand2>2560</iGoldRand2>
+			<EraType>C2C_ERA_INFORMATION</EraType>
+		</GoodyInfo>
+		<GoodyInfo>
+			<Type>GOODY_HIGH_NANOTECH_RESEARCH</Type>
+			<Description>TXT_KEY_GOODY_RESEARCH</Description>
+			<Sound>AS2D_GOODY_GOLD</Sound>
+			<iResearch>5120</iResearch>
+			<iGoldRand1>5120</iGoldRand1>
+			<iGoldRand2>5120</iGoldRand2>
+			<EraType>C2C_ERA_NANOTECH</EraType>
 		</GoodyInfo>
 		<GoodyInfo>
 			<Type>GOODY_MAP</Type>
@@ -46,6 +339,70 @@
 			<Description>TXT_KEY_GOODY_EXPERIENCE</Description>
 			<Sound>AS2D_GOODY_XP</Sound>
 			<iExperience>6</iExperience>
+			<EraType>C2C_ERA_PREHISTORIC</EraType>
+		</GoodyInfo>
+		<GoodyInfo>
+			<Type>GOODY_LOW_ANCIENT_EXPERIENCE</Type>
+			<Description>TXT_KEY_GOODY_EXPERIENCE</Description>
+			<Sound>AS2D_GOODY_XP</Sound>
+			<iExperience>5</iExperience>
+			<EraType>C2C_ERA_ANCIENT</EraType>
+		</GoodyInfo>
+		<GoodyInfo>
+			<Type>GOODY_LOW_CLASSICAL_EXPERIENCE</Type>
+			<Description>TXT_KEY_GOODY_EXPERIENCE</Description>
+			<Sound>AS2D_GOODY_XP</Sound>
+			<iExperience>4</iExperience>
+			<EraType>C2C_ERA_CLASSICAL</EraType>
+		</GoodyInfo>
+		<GoodyInfo>
+			<Type>GOODY_LOW_MEDIEVAL_EXPERIENCE</Type>
+			<Description>TXT_KEY_GOODY_EXPERIENCE</Description>
+			<Sound>AS2D_GOODY_XP</Sound>
+			<iExperience>3</iExperience>
+			<EraType>C2C_ERA_MEDIEVAL</EraType>
+		</GoodyInfo>
+		<GoodyInfo>
+			<Type>GOODY_LOW_RENAISSANCE_EXPERIENCE</Type>
+			<Description>TXT_KEY_GOODY_EXPERIENCE</Description>
+			<Sound>AS2D_GOODY_XP</Sound>
+			<iExperience>2</iExperience>
+			<EraType>C2C_ERA_RENAISSANCE</EraType>
+		</GoodyInfo>
+		<GoodyInfo>
+			<Type>GOODY_HIGH_PREHISTORIC_EXPERIENCE</Type>
+			<Description>TXT_KEY_GOODY_EXPERIENCE</Description>
+			<Sound>AS2D_GOODY_XP</Sound>
+			<iExperience>12</iExperience>
+			<EraType>C2C_ERA_PREHISTORIC</EraType>
+		</GoodyInfo>
+		<GoodyInfo>
+			<Type>GOODY_HIGH_ANCIENT_EXPERIENCE</Type>
+			<Description>TXT_KEY_GOODY_EXPERIENCE</Description>
+			<Sound>AS2D_GOODY_XP</Sound>
+			<iExperience>11</iExperience>
+			<EraType>C2C_ERA_ANCIENT</EraType>
+		</GoodyInfo>
+		<GoodyInfo>
+			<Type>GOODY_HIGH_CLASSICAL_EXPERIENCE</Type>
+			<Description>TXT_KEY_GOODY_EXPERIENCE</Description>
+			<Sound>AS2D_GOODY_XP</Sound>
+			<iExperience>10</iExperience>
+			<EraType>C2C_ERA_CLASSICAL</EraType>
+		</GoodyInfo>
+		<GoodyInfo>
+			<Type>GOODY_HIGH_MEDIEVAL_EXPERIENCE</Type>
+			<Description>TXT_KEY_GOODY_EXPERIENCE</Description>
+			<Sound>AS2D_GOODY_XP</Sound>
+			<iExperience>9</iExperience>
+			<EraType>C2C_ERA_MEDIEVAL</EraType>
+		</GoodyInfo>
+		<GoodyInfo>
+			<Type>GOODY_HIGH_RENAISSANCE_EXPERIENCE</Type>
+			<Description>TXT_KEY_GOODY_EXPERIENCE</Description>
+			<Sound>AS2D_GOODY_XP</Sound>
+			<iExperience>8</iExperience>
+			<EraType>C2C_ERA_RENAISSANCE</EraType>
 		</GoodyInfo>
 		<GoodyInfo>
 			<Type>GOODY_HEALING</Type>
@@ -59,37 +416,128 @@
 			<Description>TXT_KEY_GOODY_TECH</Description>
 			<Sound/>
 			<bTech>1</bTech>
+			<EraType>C2C_ERA_PREHISTORIC</EraType>
+		</GoodyInfo>
+		<GoodyInfo>
+			<Type>GOODY_ANCIENT_TECH</Type>
+			<Description>TXT_KEY_GOODY_TECH</Description>
+			<Sound/>
+			<bTech>1</bTech>
+			<EraType>C2C_ERA_ANCIENT</EraType>
 		</GoodyInfo>
 		<GoodyInfo>
 			<Type>GOODY_WARRIOR</Type>
 			<Description>TXT_KEY_GOODY_WARRIOR</Description>
 			<Sound>AS2D_GOODY_WARRIOR</Sound>
 			<FreeUnit>UNIT_BRUTE</FreeUnit>
+			<EraType>C2C_ERA_PREHISTORIC</EraType>
+		</GoodyInfo>
+		<GoodyInfo>
+			<Type>GOODY_STONE_AXEMAN</Type>
+			<Description>TXT_KEY_GOODY_WARRIOR</Description>
+			<Sound>AS2D_GOODY_WARRIOR</Sound>
+			<FreeUnit>UNIT_STONE_AXEMAN</FreeUnit>
+			<EraType>C2C_ERA_ANCIENT</EraType>
+		</GoodyInfo>
+		<GoodyInfo>
+			<Type>GOODY_AXEMAN</Type>
+			<Description>TXT_KEY_GOODY_WARRIOR</Description>
+			<Sound>AS2D_GOODY_WARRIOR</Sound>
+			<FreeUnit>UNIT_AXEMAN</FreeUnit>
+			<EraType>C2C_ERA_CLASSICAL</EraType>
+		</GoodyInfo>
+		<GoodyInfo>
+			<Type>GOODY_STONE_THROWER</Type>
+			<Description>TXT_KEY_GOODY_WARRIOR</Description>
+			<Sound>AS2D_GOODY_WARRIOR</Sound>
+			<FreeUnit>UNIT_STONE_THROWER</FreeUnit>
+			<EraType>C2C_ERA_PREHISTORIC</EraType>
+		</GoodyInfo>
+		<GoodyInfo>
+			<Type>GOODY_ARCHER</Type>
+			<Description>TXT_KEY_GOODY_WARRIOR</Description>
+			<Sound>AS2D_GOODY_WARRIOR</Sound>
+			<FreeUnit>UNIT_ARCHER</FreeUnit>
+			<EraType>C2C_ERA_ANCIENT</EraType>
+		</GoodyInfo>
+		<GoodyInfo>
+			<Type>GOODY_COMPOSITE_BOWMAN</Type>
+			<Description>TXT_KEY_GOODY_WARRIOR</Description>
+			<Sound>AS2D_GOODY_WARRIOR</Sound>
+			<FreeUnit>UNIT_COMPOSITE_BOWMAN</FreeUnit>
+			<EraType>C2C_ERA_CLASSICAL</EraType>
+		</GoodyInfo>
+		<GoodyInfo>
+			<Type>GOODY_HORSEMAN</Type>
+			<Description>TXT_KEY_GOODY_WARRIOR</Description>
+			<Sound>AS2D_GOODY_WARRIOR</Sound>
+			<FreeUnit>UNIT_HORSEMAN</FreeUnit>
+			<EraType>C2C_ERA_ANCIENT</EraType>
+		</GoodyInfo>
+		<GoodyInfo>
+			<Type>GOODY_HORSEMAN_CLASSICAL</Type>
+			<Description>TXT_KEY_GOODY_WARRIOR</Description>
+			<Sound>AS2D_GOODY_WARRIOR</Sound>
+			<FreeUnit>UNIT_HORSEMAN</FreeUnit>
+			<EraType>C2C_ERA_CLASSICAL</EraType>
 		</GoodyInfo>
 		<GoodyInfo>
 			<Type>GOODY_SCOUT</Type>
 			<Description>TXT_KEY_GOODY_SCOUT</Description>
 			<Sound>AS2D_GOODY_SCOUT</Sound>
 			<FreeUnit>UNIT_WANDERER</FreeUnit>
+			<EraType>C2C_ERA_PREHISTORIC</EraType>
+		</GoodyInfo>
+		<GoodyInfo>
+			<Type>GOODY_SCOUT_ANCIENT</Type>
+			<Description>TXT_KEY_GOODY_SCOUT</Description>
+			<Sound>AS2D_GOODY_SCOUT</Sound>
+			<FreeUnit>UNIT_SCOUT</FreeUnit>
+			<EraType>C2C_ERA_ANCIENT</EraType>
 		</GoodyInfo>
 		<GoodyInfo>
 			<Type>GOODY_HUNTER</Type>
 			<Description>TXT_KEY_GOODY_HUNTER</Description>
 			<Sound>AS2D_GOODY_SCOUT</Sound>
 			<FreeUnit>UNIT_CHASER</FreeUnit>
+			<EraType>C2C_ERA_PREHISTORIC</EraType>
+		</GoodyInfo>
+		<GoodyInfo>
+			<Type>GOODY_HUNTER_ANCIENT</Type>
+			<Description>TXT_KEY_GOODY_HUNTER</Description>
+			<Sound>AS2D_GOODY_SCOUT</Sound>
+			<FreeUnit>UNIT_HUNTER</FreeUnit>
+			<EraType>C2C_ERA_ANCIENT</EraType>
 		</GoodyInfo>
 		<GoodyInfo>
 			<Type>GOODY_WISE_WOMAN</Type>
 			<Description>TXT_KEY_GOODY_WISE_WOMAN</Description>
 			<Sound>AS2D_GOODY_SCOUT</Sound>
 			<FreeUnit>UNIT_WISE_WOMAN</FreeUnit>
+			<EraType>C2C_ERA_PREHISTORIC</EraType>
+		</GoodyInfo>
+		<GoodyInfo>
+			<Type>GOODY_MEDICINE_MAN</Type>
+			<Description>TXT_KEY_GOODY_WISE_WOMAN</Description>
+			<Sound>AS2D_GOODY_SCOUT</Sound>
+			<FreeUnit>UNIT_MEDICINE_MAN</FreeUnit>
+			<EraType>C2C_ERA_ANCIENT</EraType>
 		</GoodyInfo>
 		<GoodyInfo>
 			<Type>GOODY_GATHERER</Type>
 			<Description>TXT_KEY_GOODY_GATHERER</Description>
 			<Sound>AS2D_GOODY_WORKER</Sound>
 			<FreeUnit>UNIT_GATHERER</FreeUnit>
+			<EraType>C2C_ERA_PREHISTORIC</EraType>
 		</GoodyInfo>
+		<GoodyInfo>
+			<Type>GOODY_WORKER</Type>
+			<Description>TXT_KEY_GOODY_GATHERER</Description>
+			<Sound>AS2D_GOODY_WORKER</Sound>
+			<FreeUnit>UNIT_WORKER</FreeUnit>
+			<EraType>C2C_ERA_ANCIENT</EraType>
+		</GoodyInfo>
+<!--		Negative goody outcomes-->
 		<GoodyInfo>
 			<Type>GOODY_BARBARIANS_WEAK</Type>
 			<Description>TXT_KEY_GOODY_BARBARIANS</Description>
@@ -333,13 +781,14 @@
 			<iMinBarbarians>2</iMinBarbarians>
 			<EraType>C2C_ERA_NANOTECH</EraType>
 		</GoodyInfo>
+		<!--	Naval barbarians	-->
 		<GoodyInfo>
 			<Type>GOODY_NAVAL_BARBARIANS_WEAK</Type>
 			<Description>TXT_KEY_GOODY_BARBARIANS</Description>
 			<Sound>AS2D_GOODY_HOSTILE</Sound>
 			<bBad>1</bBad>
 			<bNaval>1</bNaval>
-			<BarbarianUnit>UNIT_CANOE</BarbarianUnit>
+			<BarbarianUnit>UNIT_RAFT</BarbarianUnit>
 			<iBarbarianUnitProb>20</iBarbarianUnitProb>
 			<iMinBarbarians>1</iMinBarbarians>
 			<EraType>C2C_ERA_PREHISTORIC</EraType>
@@ -350,9 +799,20 @@
 			<Sound>AS2D_GOODY_HOSTILE</Sound>
 			<bBad>1</bBad>
 			<bNaval>1</bNaval>
-			<BarbarianUnit>UNIT_WAR_CANOE</BarbarianUnit>
+			<BarbarianUnit>UNIT_CANOE</BarbarianUnit>
 			<iBarbarianUnitProb>40</iBarbarianUnitProb>
 			<iMinBarbarians>2</iMinBarbarians>
+			<EraType>C2C_ERA_PREHISTORIC</EraType>
+		</GoodyInfo>
+		<GoodyInfo>
+			<Type>GOODY_NAVAL_BARBARIANS_VERY_STRONG</Type>
+			<Description>TXT_KEY_GOODY_BARBARIANS</Description>
+			<Sound>AS2D_GOODY_HOSTILE</Sound>
+			<bBad>1</bBad>
+			<bNaval>1</bNaval>
+			<BarbarianUnit>UNIT_WAR_CANOE</BarbarianUnit>
+			<iBarbarianUnitProb>40</iBarbarianUnitProb>
+			<iMinBarbarians>3</iMinBarbarians>
 			<EraType>C2C_ERA_PREHISTORIC</EraType>
 		</GoodyInfo>
 		<GoodyInfo>
@@ -361,7 +821,7 @@
 			<Sound>AS2D_GOODY_HOSTILE</Sound>
 			<bBad>1</bBad>
 			<bNaval>1</bNaval>
-			<BarbarianUnit>UNIT_WARGALLEY</BarbarianUnit>
+			<BarbarianUnit>UNIT_GALLEY</BarbarianUnit>
 			<iBarbarianUnitProb>20</iBarbarianUnitProb>
 			<iMinBarbarians>1</iMinBarbarians>
 			<EraType>C2C_ERA_ANCIENT</EraType>
@@ -372,9 +832,20 @@
 			<Sound>AS2D_GOODY_HOSTILE</Sound>
 			<bBad>1</bBad>
 			<bNaval>1</bNaval>
-			<BarbarianUnit>UNIT_TRIREME</BarbarianUnit>
+			<BarbarianUnit>UNIT_WARGALLEY</BarbarianUnit>
 			<iBarbarianUnitProb>40</iBarbarianUnitProb>
 			<iMinBarbarians>2</iMinBarbarians>
+			<EraType>C2C_ERA_ANCIENT</EraType>
+		</GoodyInfo>
+		<GoodyInfo>
+			<Type>GOODY_NAVAL_BARBARIANS_ANCIENT_VERY_STRONG</Type>
+			<Description>TXT_KEY_GOODY_BARBARIANS</Description>
+			<Sound>AS2D_GOODY_HOSTILE</Sound>
+			<bBad>1</bBad>
+			<bNaval>1</bNaval>
+			<BarbarianUnit>UNIT_TRIREME</BarbarianUnit>
+			<iBarbarianUnitProb>40</iBarbarianUnitProb>
+			<iMinBarbarians>3</iMinBarbarians>
 			<EraType>C2C_ERA_ANCIENT</EraType>
 		</GoodyInfo>
 		<GoodyInfo>
@@ -394,9 +865,20 @@
 			<Sound>AS2D_GOODY_HOSTILE</Sound>
 			<bBad>1</bBad>
 			<bNaval>1</bNaval>
-			<BarbarianUnit>UNIT_DECAREME</BarbarianUnit>
+			<BarbarianUnit>UNIT_DROMON_FIRE_SHIP</BarbarianUnit>
 			<iBarbarianUnitProb>40</iBarbarianUnitProb>
 			<iMinBarbarians>2</iMinBarbarians>
+			<EraType>C2C_ERA_CLASSICAL</EraType>
+		</GoodyInfo>
+		<GoodyInfo>
+			<Type>GOODY_NAVAL_BARBARIANS_CLASSICAL_VERY_STRONG</Type>
+			<Description>TXT_KEY_GOODY_BARBARIANS</Description>
+			<Sound>AS2D_GOODY_HOSTILE</Sound>
+			<bBad>1</bBad>
+			<bNaval>1</bNaval>
+			<BarbarianUnit>UNIT_DECAREME</BarbarianUnit>
+			<iBarbarianUnitProb>40</iBarbarianUnitProb>
+			<iMinBarbarians>3</iMinBarbarians>
 			<EraType>C2C_ERA_CLASSICAL</EraType>
 		</GoodyInfo>
 		<GoodyInfo>
@@ -405,7 +887,7 @@
 			<Sound>AS2D_GOODY_HOSTILE</Sound>
 			<bBad>1</bBad>
 			<bNaval>1</bNaval>
-			<BarbarianUnit>UNIT_GALLEASS</BarbarianUnit>
+			<BarbarianUnit>UNIT_COG</BarbarianUnit>
 			<iBarbarianUnitProb>20</iBarbarianUnitProb>
 			<iMinBarbarians>1</iMinBarbarians>
 			<EraType>C2C_ERA_MEDIEVAL</EraType>
@@ -416,9 +898,20 @@
 			<Sound>AS2D_GOODY_HOSTILE</Sound>
 			<bBad>1</bBad>
 			<bNaval>1</bNaval>
-			<BarbarianUnit>UNIT_SLOOP_OF_WAR</BarbarianUnit>
+			<BarbarianUnit>UNIT_GALLEASS</BarbarianUnit>
 			<iBarbarianUnitProb>40</iBarbarianUnitProb>
 			<iMinBarbarians>2</iMinBarbarians>
+			<EraType>C2C_ERA_MEDIEVAL</EraType>
+		</GoodyInfo>
+		<GoodyInfo>
+			<Type>GOODY_NAVAL_BARBARIANS_MEDIEVAL_VERY_STRONG</Type>
+			<Description>TXT_KEY_GOODY_BARBARIANS</Description>
+			<Sound>AS2D_GOODY_HOSTILE</Sound>
+			<bBad>1</bBad>
+			<bNaval>1</bNaval>
+			<BarbarianUnit>UNIT_SLOOP_OF_WAR</BarbarianUnit>
+			<iBarbarianUnitProb>40</iBarbarianUnitProb>
+			<iMinBarbarians>3</iMinBarbarians>
 			<EraType>C2C_ERA_MEDIEVAL</EraType>
 		</GoodyInfo>
 		<GoodyInfo>
@@ -427,7 +920,7 @@
 			<Sound>AS2D_GOODY_HOSTILE</Sound>
 			<bBad>1</bBad>
 			<bNaval>1</bNaval>
-			<BarbarianUnit>UNIT_FRIGATE</BarbarianUnit>
+			<BarbarianUnit>UNIT_BARBARY_CORSAIR</BarbarianUnit>
 			<iBarbarianUnitProb>20</iBarbarianUnitProb>
 			<iMinBarbarians>1</iMinBarbarians>
 			<EraType>C2C_ERA_RENAISSANCE</EraType>
@@ -438,98 +931,110 @@
 			<Sound>AS2D_GOODY_HOSTILE</Sound>
 			<bBad>1</bBad>
 			<bNaval>1</bNaval>
-			<BarbarianUnit>UNIT_MANOWAR</BarbarianUnit>
+			<BarbarianUnit>UNIT_FRIGATE</BarbarianUnit>
 			<iBarbarianUnitProb>40</iBarbarianUnitProb>
-			<iMinBarbarians>1</iMinBarbarians>
+			<iMinBarbarians>2</iMinBarbarians>
 			<EraType>C2C_ERA_RENAISSANCE</EraType>
 		</GoodyInfo>
 		<GoodyInfo>
-			<Type>GOODY_NAVAL_BARBARIANS_INDUSTRIAL_WEAK</Type>
+			<Type>GOODY_NAVAL_BARBARIANS_RENAISSANCE_VERY_STRONG</Type>
 			<Description>TXT_KEY_GOODY_BARBARIANS</Description>
 			<Sound>AS2D_GOODY_HOSTILE</Sound>
 			<bBad>1</bBad>
 			<bNaval>1</bNaval>
-			<BarbarianUnit>UNIT_IRONCLAD</BarbarianUnit>
-			<iBarbarianUnitProb>20</iBarbarianUnitProb>
-			<iMinBarbarians>1</iMinBarbarians>
-			<EraType>C2C_ERA_INDUSTRIAL</EraType>
-		</GoodyInfo>
-		<GoodyInfo>
-			<Type>GOODY_NAVAL_BARBARIANS_INDUSTRIAL_STRONG</Type>
-			<Description>TXT_KEY_GOODY_BARBARIANS</Description>
-			<Sound>AS2D_GOODY_HOSTILE</Sound>
-			<bBad>1</bBad>
-			<bNaval>1</bNaval>
-			<BarbarianUnit>UNIT_IRON_FRIGATE</BarbarianUnit>
+			<BarbarianUnit>UNIT_MANOWAR</BarbarianUnit>
 			<iBarbarianUnitProb>40</iBarbarianUnitProb>
-			<iMinBarbarians>2</iMinBarbarians>
-			<EraType>C2C_ERA_INDUSTRIAL</EraType>
+			<iMinBarbarians>3</iMinBarbarians>
+			<EraType>C2C_ERA_RENAISSANCE</EraType>
 		</GoodyInfo>
-		<GoodyInfo>
-			<Type>GOODY_NAVAL_BARBARIANS_MODERN_WEAK</Type>
-			<Description>TXT_KEY_GOODY_BARBARIANS</Description>
-			<Sound>AS2D_GOODY_HOSTILE</Sound>
-			<bBad>1</bBad>
-			<bNaval>1</bNaval>
-			<BarbarianUnit>UNIT_DESTROYER</BarbarianUnit>
-			<iBarbarianUnitProb>20</iBarbarianUnitProb>
-			<iMinBarbarians>1</iMinBarbarians>
-			<EraType>C2C_ERA_ATOMIC</EraType>
-		</GoodyInfo>
-		<GoodyInfo>
-			<Type>GOODY_NAVAL_BARBARIANS_MODERN_STRONG</Type>
-			<Description>TXT_KEY_GOODY_BARBARIANS</Description>
-			<Sound>AS2D_GOODY_HOSTILE</Sound>
-			<bBad>1</bBad>
-			<bNaval>1</bNaval>
-			<BarbarianUnit>UNIT_BATTLESHIP</BarbarianUnit>
-			<iBarbarianUnitProb>40</iBarbarianUnitProb>
-			<iMinBarbarians>2</iMinBarbarians>
-			<EraType>C2C_ERA_ATOMIC</EraType>
-		</GoodyInfo>
-		<GoodyInfo>
-			<Type>GOODY_NAVAL_BARBARIANS_INFORMATION_WEAK</Type>
-			<Description>TXT_KEY_GOODY_BARBARIANS</Description>
-			<Sound>AS2D_GOODY_HOSTILE</Sound>
-			<bBad>1</bBad>
-			<bNaval>1</bNaval>
-			<BarbarianUnit>UNIT_MODERN_FRIGATE</BarbarianUnit>
-			<iBarbarianUnitProb>20</iBarbarianUnitProb>
-			<iMinBarbarians>1</iMinBarbarians>
-			<EraType>C2C_ERA_INFORMATION</EraType>
-		</GoodyInfo>
-		<GoodyInfo>
-			<Type>GOODY_NAVAL_BARBARIANS_INFORMATION_STRONG</Type>
-			<Description>TXT_KEY_GOODY_BARBARIANS</Description>
-			<Sound>AS2D_GOODY_HOSTILE</Sound>
-			<bBad>1</bBad>
-			<bNaval>1</bNaval>
-			<BarbarianUnit>UNIT_STEALTH_DESTROYER</BarbarianUnit>
-			<iBarbarianUnitProb>40</iBarbarianUnitProb>
-			<iMinBarbarians>2</iMinBarbarians>
-			<EraType>C2C_ERA_INFORMATION</EraType>
-		</GoodyInfo>
-		<GoodyInfo>
-			<Type>GOODY_NAVAL_BARBARIANS_NANOTECH_WEAK</Type>
-			<Description>TXT_KEY_GOODY_BARBARIANS</Description>
-			<Sound>AS2D_GOODY_HOSTILE</Sound>
-			<bBad>1</bBad>
-			<bNaval>1</bNaval>
-			<BarbarianUnit>UNIT_STEALTH_DESTROYER</BarbarianUnit>
-			<iBarbarianUnitProb>20</iBarbarianUnitProb>
-			<iMinBarbarians>1</iMinBarbarians>
-			<EraType>C2C_ERA_NANOTECH</EraType>
-		</GoodyInfo>
-		<GoodyInfo>
-			<Type>GOODY_NAVAL_BARBARIANS_NANOTECH_STRONG</Type>
-			<Description>TXT_KEY_GOODY_BARBARIANS</Description>
-			<Sound>AS2D_GOODY_HOSTILE</Sound>
-			<bBad>1</bBad>
-			<bNaval>1</bNaval>
-			<BarbarianUnit>UNIT_FF_DESTROYER_I</BarbarianUnit>
-			<iBarbarianUnitProb>40</iBarbarianUnitProb>
-			<iMinBarbarians>2</iMinBarbarians>
-			<EraType>C2C_ERA_NANOTECH</EraType>
-		</GoodyInfo>
+<!--	Commented out since no sense for battleships to spawn from random islands....-->
+<!--		<GoodyInfo>-->
+<!--			<Type>GOODY_NAVAL_BARBARIANS_INDUSTRIAL_WEAK</Type>-->
+<!--			<Description>TXT_KEY_GOODY_BARBARIANS</Description>-->
+<!--			<Sound>AS2D_GOODY_HOSTILE</Sound>-->
+<!--			<bBad>1</bBad>-->
+<!--			<bNaval>1</bNaval>-->
+<!--			<BarbarianUnit>UNIT_IRONCLAD</BarbarianUnit>-->
+<!--			<iBarbarianUnitProb>20</iBarbarianUnitProb>-->
+<!--			<iMinBarbarians>1</iMinBarbarians>-->
+<!--			<EraType>C2C_ERA_INDUSTRIAL</EraType>-->
+<!--		</GoodyInfo>-->
+<!--		<GoodyInfo>-->
+<!--			<Type>GOODY_NAVAL_BARBARIANS_INDUSTRIAL_STRONG</Type>-->
+<!--			<Description>TXT_KEY_GOODY_BARBARIANS</Description>-->
+<!--			<Sound>AS2D_GOODY_HOSTILE</Sound>-->
+<!--			<bBad>1</bBad>-->
+<!--			<bNaval>1</bNaval>-->
+<!--			<BarbarianUnit>UNIT_IRON_FRIGATE</BarbarianUnit>-->
+<!--			<iBarbarianUnitProb>40</iBarbarianUnitProb>-->
+<!--			<iMinBarbarians>2</iMinBarbarians>-->
+<!--			<EraType>C2C_ERA_INDUSTRIAL</EraType>-->
+<!--		</GoodyInfo>-->
+<!--		<GoodyInfo>-->
+<!--			<Type>GOODY_NAVAL_BARBARIANS_MODERN_WEAK</Type>-->
+<!--			<Description>TXT_KEY_GOODY_BARBARIANS</Description>-->
+<!--			<Sound>AS2D_GOODY_HOSTILE</Sound>-->
+<!--			<bBad>1</bBad>-->
+<!--			<bNaval>1</bNaval>-->
+<!--			<BarbarianUnit>UNIT_DESTROYER</BarbarianUnit>-->
+<!--			<iBarbarianUnitProb>20</iBarbarianUnitProb>-->
+<!--			<iMinBarbarians>1</iMinBarbarians>-->
+<!--			<EraType>C2C_ERA_ATOMIC</EraType>-->
+<!--		</GoodyInfo>-->
+<!--		<GoodyInfo>-->
+<!--			<Type>GOODY_NAVAL_BARBARIANS_MODERN_STRONG</Type>-->
+<!--			<Description>TXT_KEY_GOODY_BARBARIANS</Description>-->
+<!--			<Sound>AS2D_GOODY_HOSTILE</Sound>-->
+<!--			<bBad>1</bBad>-->
+<!--			<bNaval>1</bNaval>-->
+<!--			<BarbarianUnit>UNIT_BATTLESHIP</BarbarianUnit>-->
+<!--			<iBarbarianUnitProb>40</iBarbarianUnitProb>-->
+<!--			<iMinBarbarians>2</iMinBarbarians>-->
+<!--			<EraType>C2C_ERA_ATOMIC</EraType>-->
+<!--		</GoodyInfo>-->
+<!--		<GoodyInfo>-->
+<!--			<Type>GOODY_NAVAL_BARBARIANS_INFORMATION_WEAK</Type>-->
+<!--			<Description>TXT_KEY_GOODY_BARBARIANS</Description>-->
+<!--			<Sound>AS2D_GOODY_HOSTILE</Sound>-->
+<!--			<bBad>1</bBad>-->
+<!--			<bNaval>1</bNaval>-->
+<!--			<BarbarianUnit>UNIT_MODERN_FRIGATE</BarbarianUnit>-->
+<!--			<iBarbarianUnitProb>20</iBarbarianUnitProb>-->
+<!--			<iMinBarbarians>1</iMinBarbarians>-->
+<!--			<EraType>C2C_ERA_INFORMATION</EraType>-->
+<!--		</GoodyInfo>-->
+<!--		<GoodyInfo>-->
+<!--			<Type>GOODY_NAVAL_BARBARIANS_INFORMATION_STRONG</Type>-->
+<!--			<Description>TXT_KEY_GOODY_BARBARIANS</Description>-->
+<!--			<Sound>AS2D_GOODY_HOSTILE</Sound>-->
+<!--			<bBad>1</bBad>-->
+<!--			<bNaval>1</bNaval>-->
+<!--			<BarbarianUnit>UNIT_STEALTH_DESTROYER</BarbarianUnit>-->
+<!--			<iBarbarianUnitProb>40</iBarbarianUnitProb>-->
+<!--			<iMinBarbarians>2</iMinBarbarians>-->
+<!--			<EraType>C2C_ERA_INFORMATION</EraType>-->
+<!--		</GoodyInfo>-->
+<!--		<GoodyInfo>-->
+<!--			<Type>GOODY_NAVAL_BARBARIANS_NANOTECH_WEAK</Type>-->
+<!--			<Description>TXT_KEY_GOODY_BARBARIANS</Description>-->
+<!--			<Sound>AS2D_GOODY_HOSTILE</Sound>-->
+<!--			<bBad>1</bBad>-->
+<!--			<bNaval>1</bNaval>-->
+<!--			<BarbarianUnit>UNIT_STEALTH_DESTROYER</BarbarianUnit>-->
+<!--			<iBarbarianUnitProb>20</iBarbarianUnitProb>-->
+<!--			<iMinBarbarians>1</iMinBarbarians>-->
+<!--			<EraType>C2C_ERA_NANOTECH</EraType>-->
+<!--		</GoodyInfo>-->
+<!--		<GoodyInfo>-->
+<!--			<Type>GOODY_NAVAL_BARBARIANS_NANOTECH_STRONG</Type>-->
+<!--			<Description>TXT_KEY_GOODY_BARBARIANS</Description>-->
+<!--			<Sound>AS2D_GOODY_HOSTILE</Sound>-->
+<!--			<bBad>1</bBad>-->
+<!--			<bNaval>1</bNaval>-->
+<!--			<BarbarianUnit>UNIT_FF_DESTROYER_I</BarbarianUnit>-->
+<!--			<iBarbarianUnitProb>40</iBarbarianUnitProb>-->
+<!--			<iMinBarbarians>2</iMinBarbarians>-->
+<!--			<EraType>C2C_ERA_NANOTECH</EraType>-->
+<!--		</GoodyInfo>-->
 	</GoodyInfos>
 </Civ4GoodyInfo>
