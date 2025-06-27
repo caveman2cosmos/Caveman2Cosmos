@@ -1502,7 +1502,7 @@
 			<bBuild>0</bBuild>
 			<bSound>0</bSound>
 			<bVisible>1</bVisible>
-			<Button>Art/Interface/Buttons/Units/sparth/tracker.dds</Button>
+			<Button>Art/Interface/Buttons/Units/sparth/chaser.dds</Button>
 		</MissionInfo>
 		<MissionInfo>
 			<Type>MISSION_HERITAGE</Type>

@@ -3264,6 +3264,10 @@
 		<Russian>Ïðèâåòñòâóþ, [CT_NAME]! Äëÿ ìåíÿ áîëüøàÿ ÷åñòü âñòðåòèòüñÿ ñ âàìè. ß îõîòíî ïîäåëþñü ñ âàìè ñâîèìè çíàíèÿìè.</Russian>
 	</TEXT>
 	<TEXT>
+		<Tag>AI_DIPLO_FIRST_CONTACT_LEADER_JIVARO_LEADER_1</Tag>
+		<English>Ha!, [CT_NAME]. Your head will be a good trophy. Don't worry it wont hurt a bit.</English>
+	</TEXT>
+	<TEXT>
 		<Tag>AI_DIPLO_FIRST_CONTACT_LEADER_CHRISTIAN_IV_1</Tag>
 		<English>Warm greetings to the [CT_EMPIRE]. I, [OUR_NAME], seek a peace above all earthly dignities, and a still and quiet conscience.</English>
 		<French>Salutations chaleureuses à l'[CT_EMPIRE]. Moi, [OUR_NAME], je recherche la paix auprès de toutes les dignités de la terre, et une conscience calme et paisible</French>

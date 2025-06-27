@@ -4590,6 +4590,10 @@
 		<Italian>Cavallo addomesticato</Italian>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_UNIT_TAMED_SHEEP</Tag>
+		<English>Tamed Sheep</English>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_UNIT_TAMED_HORSE_PAIR</Tag>
 		<English>Tamed Horse (Breeding Pair)</English>
 		<French>Couple reproducteur - Chevaux</French>

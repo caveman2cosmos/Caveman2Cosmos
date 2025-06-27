@@ -10286,7 +10286,7 @@
 			<ImprovementUpgrade>IMPROVEMENT_FORT</ImprovementUpgrade>
 			<iCulture>3</iCulture>
 			<iCultureRange>1</iCultureRange>
-			<iUniqueRange>2</iUniqueRange>
+			<iUniqueRange>0</iUniqueRange>
 			<bBombardable>1</bBombardable>
 			<bUpgradeRequiresFortify>1</bUpgradeRequiresFortify>
 			<bIsUniversalTradeBonusProvider>1</bIsUniversalTradeBonusProvider>
@@ -10314,7 +10314,7 @@
 			</FeatureMakesValids>
 			<iCulture>2</iCulture>
 			<ImprovementUpgrade>IMPROVEMENT_FORTIFIED_CAVE_WITH_CACHE</ImprovementUpgrade>
-			<iUniqueRange>2</iUniqueRange>
+			<iUniqueRange>0</iUniqueRange>
 			<bBombardable>1</bBombardable>
 			<bUpgradeRequiresFortify>1</bUpgradeRequiresFortify>
 			<bIsUniversalTradeBonusProvider>1</bIsUniversalTradeBonusProvider>
@@ -10501,6 +10501,7 @@
 			<iUniqueRange>2</iUniqueRange>
 			<bBombardable>1</bBombardable>
 			<bUpgradeRequiresFortify>1</bUpgradeRequiresFortify>
+			<bIsUniversalTradeBonusProvider>1</bIsUniversalTradeBonusProvider>
 		</ImprovementInfo>
 		<!-- FEATUREFORMING / TERRAFORMING -->
 		<!-- Plant Forest -->
