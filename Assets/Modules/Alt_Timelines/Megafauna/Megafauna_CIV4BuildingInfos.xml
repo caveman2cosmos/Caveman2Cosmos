@@ -464,7 +464,7 @@
 				</Flavor>
 			</Flavors>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_ANIMAL_TRAINER_BIG_CATS</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_TRAINER_BIG_CAT</BuildingType>
 			</PrereqInCityBuildings>
 			<PropertyManipulators>
 				<PropertySource>
