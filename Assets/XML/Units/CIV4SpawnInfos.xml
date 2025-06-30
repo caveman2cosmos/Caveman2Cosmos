@@ -1029,13 +1029,17 @@ Using both <iGlobalTurns> and <iTurns> will not yield predictable results:
 			<!--			<iMaxLatitude>20</iMaxLatitude>-->
 			<!--			<iMinLongitude>-60</iMinLongitude>-->
 			<!--			<iMaxLongitude>60</iMaxLongitude>-->
-			<FeatureTerrainTypes>
-				<FeatureType>FEATURE_SAVANNA</FeatureType>
-				<FeatureType>FEATURE_FOREST</FeatureType>
+			<FeatureTypes>
+				<FeatureType>
+					<FeatureType>FEATURE_SAVANNA</FeatureType>
+					<FeatureType>FEATURE_FOREST</FeatureType>
+				</FeatureType>
+			</FeatureTypes>
+			<TerrainTypes>
 				<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 				<TerrainType>TERRAIN_PLAINS</TerrainType>
 				<TerrainType>TERRAIN_SCRUB</TerrainType>
-			</FeatureTerrainTypes>
+			</TerrainTypes>
 		</SpawnInfo>
 		<SpawnInfo>
 			<Type>SPAWN_AARDVARK_NATIVE</Type>

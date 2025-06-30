@@ -1610,6 +1610,7 @@
 			<BonusClassType>BONUSCLASS_MANUFACTURED</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_OLIVE_OIL</ArtDefineTag>
 			<TechReveal>TECH_FERMENTATION</TechReveal>
+			<iHealth>1</iHealth>
 			<TechCityTrade>TECH_FERMENTATION</TechCityTrade>
 		</BonusInfo>
 		<!-- Omega Acids -->
@@ -1620,6 +1621,7 @@
 			<BonusClassType>BONUSCLASS_MANUFACTURED</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_OMEGA_FATTY_ACID</ArtDefineTag>
 			<TechReveal>TECH_MOLECULAR_BIOLOGY</TechReveal>
+			<iHealth>1</iHealth>
 			<TechCityTrade>TECH_MOLECULAR_BIOLOGY</TechCityTrade>
 		</BonusInfo>
 		<!-- Organic Computers -->

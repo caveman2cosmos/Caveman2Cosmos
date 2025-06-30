@@ -3146,7 +3146,7 @@
 			<iCost>92</iCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>
-			<iCombat>5</iCombat>
+			<iCombat>4</iCombat>
 			<iXPValueAttack>2</iXPValueAttack>
 			<iXPValueDefense>1</iXPValueDefense>
 			<iCityAttack>-75</iCityAttack>
@@ -3505,7 +3505,7 @@
 			<iCost>25</iCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>
-			<iCombat>4</iCombat>
+			<iCombat>3</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
 			<iXPValueDefense>4</iXPValueDefense>
 			<iWithdrawalProb>40</iWithdrawalProb>
@@ -3718,30 +3718,6 @@
 					</ActionOutcomes>
 				</Action>
 				<Action>
-					<MissionType>MISSION_CAPTIVE_UPGRADE_TO_GATHERER</MissionType>
-					<iCost>
-						<Adapt>
-							<ID>ADAPT_DEFAULT</ID>
-							<Constant>15</Constant>
-						</Adapt>
-					</iCost>
-					<ActionOutcomes>
-						<Outcome>
-							<OutcomeType>OUTCOME_UPGRADE_TO_GATHERER</OutcomeType>
-							<iChance>100</iChance>
-							<UnitType>UNIT_GATHERER</UnitType>
-							<bUnitToCity>
-								<Constant>0</Constant>
-							</bUnitToCity>
-							<PlotCondition>
-								<Not>
-									<Is>TAG_ANARCHY</Is>
-								</Not>
-							</PlotCondition>
-						</Outcome>
-					</ActionOutcomes>
-				</Action>
-				<Action>
 					<MissionType>MISSION_CAPTIVE_UPGRADE_TO_NEANDERTHAL_WARRIOR</MissionType>
 					<iCost>
 						<Adapt>
@@ -3753,7 +3729,7 @@
 						<Outcome>
 							<OutcomeType>OUTCOME_UPGRADE_TO_NEANDERTHAL_WARRIOR</OutcomeType>
 							<iChance>100</iChance>
-							<UnitType>UNIT_NEANDERTHAL_WARRIOR</UnitType>
+							<UnitType>UNIT_NEANDERTHAL</UnitType>
 							<bUnitToCity>
 								<Constant>0</Constant>
 							</bUnitToCity>
@@ -3766,7 +3742,7 @@
 					</ActionOutcomes>
 				</Action>
 				<Action>
-					<MissionType>MISSION_CAPTIVE_UPGRADE_TO_NEANDERTHAL_CHASER</MissionType>
+					<MissionType>MISSION_CAPTIVE_UPGRADE_TO_NEANDERTHAL_TRACKER</MissionType>
 					<iCost>
 						<Adapt>
 							<ID>ADAPT_DEFAULT</ID>
@@ -3775,7 +3751,7 @@
 					</iCost>
 					<ActionOutcomes>
 						<Outcome>
-							<OutcomeType>OUTCOME_UPGRADE_TO_NEANDERTHAL_CHASER</OutcomeType>
+							<OutcomeType>OUTCOME_UPGRADE_TO_NEANDERTHAL_TRACKER</OutcomeType>
 							<iChance>100</iChance>
 							<UnitType>UNIT_NEANDERTHAL_CHASER</UnitType>
 							<bUnitToCity>

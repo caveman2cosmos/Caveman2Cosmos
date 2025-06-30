@@ -364,6 +364,18 @@
 			<ActionSound>AS3D_UN_HORSE</ActionSound>
 		</UnitArtInfo>
 		<UnitArtInfo>
+			<Type>ART_DEF_UNIT_IBEX</Type>
+			<Button>Art/Interface/Buttons/Units/Ibex.dds</Button>
+			<fScale>15.0</fScale>
+			<fInterfaceScale>1</fInterfaceScale>
+			<NIF>Art/Units/Animals/Ibex/Ibex.nif</NIF>
+			<KFM>Art/Units/Panther/Panther.kfm</KFM>
+			<SHADERNIF>Art/Units/Animals/Ibex/Ibex.nif</SHADERNIF>
+			<fBattleDistance>1.1</fBattleDistance>
+			<fRangedDeathTime>0.35</fRangedDeathTime>
+			<TrainSound>AS2D_UNIT_BUILD_UNIT</TrainSound>
+		</UnitArtInfo>
+		<UnitArtInfo>
 			<Type>ART_DEF_UNIT_TAMED_DONKEY</Type>
 			<Button>Art/Interface/Buttons/units/sparth/tamed_donkey.dds</Button>
 			<fScale>0.3</fScale>
