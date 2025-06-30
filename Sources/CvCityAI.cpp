@@ -14999,6 +14999,7 @@ const {
 		//	1) City production is 1, building adds 1 (directYieldValue 8), so iBoost is 92 - value almost trebbled
 		//	2) Same building when production is already 10, iBoost is 56 - value roughly doubled
 		//	3) Same building when production >= 24 - no boost
+		// just a random svn triger commit
 		directYieldValue += (directYieldValue * iBoost) / 50;
 	}
 	return iValue + directYieldValue;
