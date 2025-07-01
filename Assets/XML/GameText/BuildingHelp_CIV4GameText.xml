@@ -932,6 +932,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDINGHELP_NEEDED_TO_BUILD</Tag>
 		<English>[ICON_BULLET]May be needed to Build[SPACE]</English>
+		<French>[ICON_BULLET]Nécessaire pour construire :[SPACE]</French>
 		<Italian>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Necessario[COLOR_REVERT] per costruire (se non ancora in possesso): </Italian> <!-- hover on building rock gatherer -->
 		<German>[ICON_BULLET]optional erforderlich zum Bau von:[SPACE]</German>
 		<Russian>[ICON_BULLET]Может потребоваться для строительства[SPACE]</Russian>
@@ -939,6 +940,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDINGHELP_NEEDED_TO_BUILD_ANYWHERE</Tag>
 		<English>[ICON_BULLET]Needed to Build anywhere in empire:[SPACE]</English>
+		<French>[ICON_BULLET]Nécessaire pour construire n’importe où dans l’empire :[SPACE]</French>
 		<Italian>[ICON_BULLET]Necessario per costruire in qualsiasi città:[NEWLINE][ICON_BULLET]</Italian>
 		<German>[ICON_BULLET]ermöglicht im gesamten Reich den Bau von:[SPACE]</German>
 		<Russian>[ICON_BULLET]Необходимо для строительства в любой месте вашей цивилизации:[SPACE]</Russian>
@@ -946,6 +948,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDINGHELP_NEEDED_TO_TRAIN</Tag>
 		<English>[ICON_BULLET]May be needed to Train[SPACE]</English>
+		<French>[ICON_BULLET]Nécessaire pour entraîner :[SPACE]</French>
 		<Italian>[ICON_BULLET]Potrebbe essere indispensabile per addestrare:[NEWLINE][TAB]</Italian>
 		<German>[ICON_BULLET]optional erforderlich für die Ausbildung von:[SPACE]</German>
 		<Russian>[ICON_BULLET]Может потребоваться для обучения[SPACE]</Russian>

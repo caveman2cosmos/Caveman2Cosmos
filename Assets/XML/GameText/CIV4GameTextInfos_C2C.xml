@@ -12,12 +12,14 @@
 	<TEXT>
 		<Tag>TXT_KEY_ACTION_CHANGE_FEATURE</Tag>
 		<English>[COLOR_YELLOW]Will replace the %s1_Name with %s2_Name[COLOR_REVERT]</English>
+		<French>[COLOR_YELLOW]Remplacera le %s1_Name par %s2_Name[COLOR_REVERT]</French>
 		<Russian>[COLOR_YELLOW]Заменит %s1_Name на %s2_Name[COLOR_REVERT]</Russian>
 		<Italian>[COLOR_YELLOW]Sostituirà %s1_Name con %s2_Name[COLOR_REVERT]</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDHELP_PLOT_BLOCKED</Tag>
 		<English>[COLOR_WARNING_TEXT]Cannot be constructed on a %s1_Name![COLOR_REVERT]</English>
+		<French>Traduction : [COLOR_WARNING_TEXT]Ne peut pas être construit sur un(e) %s1_Name ![COLOR_REVERT]</French>		
 		<Russian>[COLOR_WARNING_TEXT]Невозможно построить в %s1_Name![COLOR_REVERT]</Russian>
 		<Italian>[COLOR_WARNING_TEXT]Non può essere costruito su una %s1_Name![COLOR_REVERT]</Italian>
 	</TEXT>
@@ -69,6 +71,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDINGHELP_GIVEN_FREE</Tag>
 		<English>[ICON_BULLET]Building Given for Free By[SPACE]</English>
+		<French>[ICON_BULLET]Bâtiment obtenu gratuitement par[SPACE]</French>
 		<Italian>[ICON_BULLET]Edificio costruito gratuitamente grazie a[SPACE]</Italian>
 		<German>[ICON_BULLET]kostenloses Gebäude[SPACE]</German>
 	</TEXT>
@@ -84,6 +87,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDINGHELP_NUKE_EXPLOSION_CHANCE</Tag>
 		<English>[ICON_BULLET]Chance of Nuclear Meltdown: %d1_chance in 10000 each round</English>
+		<French>[ICON_BULLET]Risque de fusion nucléaire : %d1_chance sur 10 000 à chaque tour</French>
 		<Russian>[ICON_BULLET]Вероятность ядерного взрыва: .%d1_chance%% на каждый раунд</Russian>
 		<Italian>[ICON_BULLET]Probabilità di esplosione del reattore nucleare: %d1_chance su 10000 ogni turno</Italian>
 	</TEXT>
@@ -99,6 +103,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDINGHELP_OBSOLETE_WITH_TO</Tag>
 		<English>[SPACE](Turns into [LINK=%s1]%s2[\LINK])</English>
+		<French>[SPACE](Tours en [LINK=%s1]%s2[\LINK])</French>
 		<Italian>[NEWLINE][ICON_BULLET][COLOR_WARNING_TEXT]Evoluzione[COLOR_REVERT] in: [LINK=%s1]%s2[\LINK]</Italian>
 		<German>[SPACE](wird dann zu [LINK=%s1]%s2[\LINK])</German>
 	</TEXT>
@@ -247,6 +252,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_GOODY_SCOUT</Tag>
 		<English>A scout type unit joins your civilization.</English>
+		<French>Une unité de type éclaireur rejoint votre civilisation.</French>
 		<German>Im Dorf konntet Ihr ein paar Späher rekrutieren.</German>
 		<Italian>Un'unità di tipo esploratore si unisce alla tua civiltà</Italian>
 	</TEXT>
@@ -261,24 +267,28 @@
 	<TEXT>
 		<Tag>TXT_KEY_GOODY_WARRIOR</Tag>
 		<English>A military type unit joins your civilization.</English>
+		<French>Une unité militaire rejoint votre civilisation.</French>
 		<German>Im Dorf konntet Ihr ein paar Krieger rekrutieren.</German>
 		<Italian>Un'unità di tipo militare si unisce alla tua civiltà</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GOODY_WISE_WOMAN</Tag>
 		<English>A healer type unit joins your civilization.</English>
+		<French>Une unité de type soigneur rejoint votre civilisation.</French>
 		<German>Im Dorf konntet Ihr ein paar Heiler rekrutieren.</German>
 		<Italian>Un'unità di tipo guaritore si unisce alla tua civiltà</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GOODY_GATHERER</Tag>
 		<English>A worker type unit joins your civilization.</English>
+		<French>Une unité de type ouvrier rejoint votre civilisation.</French>
 		<German>Im Dorf konntet Ihr ein paar Arbeiter rekrutieren.</German>
 		<Italian>Un'unità di tipo lavoratore si unisce alla tua civiltà</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GOODY_HUNTER</Tag>
 		<English>A hunter type unit joins your civilization.</English>
+		<French>Une unité de type chasseur rejoint votre civilisation.</French>
 		<German>Im Dorf konntet Ihr ein paar Jäger rekrutieren.</German>
 		<Italian>Un'unità di tipo cacciatore si unisce alla tua civiltà.</Italian>
 	</TEXT>
@@ -310,6 +320,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_MISC_CHANCE_OF_REVOLT</Tag>
 		<English>Revolt %%/Turn: %s1_Chance [NEWLINE](%s2_CityStrength base: x%s3_SpeedAdjustment gamespeed, x%s4_Garrison units)</English>
+		<French>Révolte %%/Tour: %s1_Chance [NEWLINE](%s2_CityStrength base: x%s3_SpeedAdjustment vitesse du jeu, x%s4_Garrison unités)</French>
 		<Italian>Probabilità di rivolta ogni turno: %s1_Chance [NEWLINE](%s2_CityStrength base: x%s3_SpeedAdjustment gamespeed, x%s4_Garrison units)</Italian>
 	</TEXT>
 	<TEXT>
@@ -342,6 +353,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_MISC_HELP_YIELD_OTHER</Tag>
 		<English>[ICON_BULLET]%D1 %F2 from other</English>
+		<French>[ICON_BULLET]%D1 %F2 des autres</French>
 		<Italian>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]%D1 %F2[COLOR_REVERT] da altre fonti</Italian> <!-- city screen research, culture panel hover upper right -->
 	</TEXT>
 	<TEXT>
@@ -701,16 +713,19 @@
 	<TEXT>
 		<Tag>TXT_KEY_STATUS_DUMP_LEADER_CIV</Tag>
 		<English>Civ leader</English>
+		<French>Dirigeant de Civ</French>
 		<Italian>Leader della civilizzazione</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_STATUS_DUMP_PLAYER_NAME</Tag>
 		<English>Player name</English>
+		<French>Nom du Joueur</French>
 		<Italian>Nome giocatore</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_STATUS_DUMP_TURN</Tag>
 		<English>Turn</English>
+		<French>Tour</French>
 		<Italian>turno</Italian>
 	</TEXT>
 	<TEXT>
@@ -861,6 +876,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_NATIONAL_SOURCES</Tag>
 		<English>Traits/Civics/Heritage.</English>
+		<French>Traits/Doctrine/Héritage.</French>
 		<Russian>Качества/Парадигмы/Культурное наследие.</Russian>
 	</TEXT>
 	<TEXT>
@@ -884,6 +900,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UPGRADES</Tag>
 		<English>[ICON_BULLET]Upgrades:[SPACE]</English>
+		<French>[ICON_BULLET]Améliorations :[SPACE]</French>
 		<German>[ICON_BULLET]mögliche Upgrades:[SPACE]</German>
 		<Italian>[ICON_BULLET]Promozioni:[SPACE]</Italian>
 		<Russian>[ICON_BULLET]Улучшения:[SPACE]</Russian>
@@ -891,6 +908,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UPGRADE_TIME</Tag>
 		<English>[ICON_BULLET]Upgrade time: %d1 [NUM1:Turn:Turns]</English>
+		<French>[ICON_BULLET]Temps d'amélior.: %d1 [NUM1:Tour:Tours]</French>		
 		<German>[ICON_BULLET]Zeit bis zum Upgrade: %d1 [NUM1:Runde:Runden]</German>
 		<Russian>[ICON_BULLET]Время улучшения: %d1 [NUM1:ход:ходов]</Russian>
 		<Italian>[ICON_BULLET]Tempo di modernizzazione: %d1 [NUM1:turno:turni]</Italian> <!-- Whaling Boats improvement in pedia -->
@@ -898,6 +916,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_YIELD_CHANGE_DESCRIP</Tag>
 		<English>Yield changes:</English>
+		<French>Modif. rendem.:</French>
 		<German>[ICON_BULLET]veränderter Ertrag:</German>
 		<Russian>Измен. дохода:</Russian>
 		<Italian>[ICON_BULLET]Cambio nel rendimento:</Italian>

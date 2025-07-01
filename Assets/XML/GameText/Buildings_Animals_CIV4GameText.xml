@@ -16,6 +16,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_PRESENCE_OF_CORAL</Tag>
 		<English>Presence of Coral</English>
+		<French>Présence de corail</French>
 		<German>
 			<Text>Präsenz von Korallen:Präsenz von Korallen:Präsenz von Korallen:Präsenz von Korallen</Text>
 			<Gender>Female</Gender>
@@ -26,6 +27,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_PRESENCE_OF_EARTH</Tag>
 		<English>Presence of Earth</English>
+		<French>Présence de terre</French>
 		<German>
 			<Text>Präsenz der Erde:Präsenz der Erde:Präsenz der Erde:Präsenz der Erde</Text>
 			<Gender>Female</Gender>
@@ -36,6 +38,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_PRESENCE_OF_CRATER</Tag>
 		<English>Presence of Crater</English>
+		<French>Présence de cratère</French>
 		<German>
 			<Text>Präsenz von Kratern:Präsenz von Kratern:Präsenz von Kratern:Präsenz von Kratern</Text>
 			<Gender>Female</Gender>
@@ -46,6 +49,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_PRESENCE_OF_FIRE</Tag>
 		<English>Presence of Fire</English>
+		<French>Présence de feu</French>
 		<German>
 			<Text>Präsenz des Feuers:Präsenz des Feuers:Präsenz des Feuers:Präsenz des Feuers</Text>
 			<Gender>Female</Gender>
@@ -56,6 +60,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_PRESENCE_OF_METAL</Tag>
 		<English>Presence of Metal</English>
+		<French>Présence de métal</French>
 		<German>
 			<Text>Präsenz von Metall:Präsenz von Metall:Präsenz von Metall:Präsenz von Metall</Text>
 			<Gender>Female</Gender>
@@ -66,6 +71,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_PRESENCE_OF_OASIS</Tag>
 		<English>Presence of Oasis</English>
+		<French>Présence d'Oasis</French>
 		<German>
 			<Text>Präsenz von Oasen:Präsenz von Oasen:Präsenz von Oasen:Präsenz von Oasen</Text>
 			<Gender>Female</Gender>
@@ -82,6 +88,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_PRESENCE_OF_LANDFORM</Tag>
 		<English>Presence of Landform</English>
+		<French>Présence de relief</French>
 		<German>
 			<Text>Präsenz von Felsformationen:Präsenz von Felsformationen:Präsenz von Felsformationen:Präsenz von Felsformationen</Text>
 			<Gender>Female</Gender>
@@ -92,6 +99,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_PRESENCE_OF_REEF</Tag>
 		<English>Presence of Reef</English>
+		<French>Présence de récifs</French>
 		<German>
 			<Text>Präsenz von Riffen:Präsenz von Riffen:Präsenz von Riffen:Präsenz von Riffen</Text>
 			<Gender>Female</Gender>
@@ -102,6 +110,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_REQUIREMENT</Tag>
 		<English>Folklore Requirement</English>
+		<French>Bases de folklore</French>
 		<German>
 			<Text>Folklore-Grundlagen:Folklore-Grundlagen:Folklore-Grundlagen:Folklore-Grundlagen</Text>
 			<Gender>Female</Gender>
@@ -112,12 +121,14 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_REQUIREMENT_PEDIA</Tag>
 		<English>[COLOR_BUILDING_TEXT]Folklore Requirements[COLOR_REVERT] autobuildings give the Language tech requirement for Folklore.[NEWLINE]This way, the tech doesn't need a list of more than 200 Folklore pseudobuildings. Try catching all Folklore buildings!</English>
+    <French>[COLOR_BUILDING_TEXT]Bases de folklore[COLOR_REVERT] : ces bâtiments automatiques correspondent à la technologie Langage, requise pour le Folklore.[NEWLINE]Ainsi, la technologie n’a pas besoin de gérer une liste de plus de 200 pseudo-bâtiments de Folklore. Essayez de construire tous les bâtiments de Folklore !</French>
 		<German>Die [COLOR_BUILDING_TEXT]Folklore-Grundlagen[COLOR_REVERT] sind ein automatischer Effekt, der die Voraussetzung für verschiedene Folkloreeffekte legt. Diese mehr als 200 Pseudogebäude können mit dem Entdecken spezieller Tiere und Landschaftseigenarten errichtet werden. Versucht doch einmal, alle Folklore-"Gebäude" zu errichten!</German>
 		<Italian>L'edificio automatico [COLOR_BUILDING_TEXT]requisito per il folklore[COLOR_REVERT] richiede la tecnologia Linguaggio come prerequisito per il Folklore.[NEWLINE]Ci sono oltre 200 edifici automatici che possono essere costruiti, scoprendo animali o luoghi. Prova a costruirli tutti!</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_PRESENCE_OF_SEA</Tag>
 		<English>Presence of Sea</English>
+		<French>Présence de la mer (construction automatique)</French>
 		<German>
 			<Text>Präsenz der See:Präsenz der See:Präsenz der See:Präsenz der See</Text>
 			<Gender>Female</Gender>
@@ -128,6 +139,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_PRESENCE_OF_VOLCANO</Tag>
 		<English>Presence of Volcano</English>
+		<French>Présence d’un volcan (construction automatique)</French>
 		<German>
 			<Text>Präsenz von Vulkanen:Präsenz von Vulkanen:Präsenz von Vulkanen:Präsenz von Vulkanen</Text>
 			<Gender>Female</Gender>

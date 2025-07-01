@@ -903,12 +903,14 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_SEED_CAMP</Tag>
 		<English>Build [LINK=IMPROVEMENT_SEED_CAMP]Seed Camp[\LINK]</English>
+		<French>Construire un [LINK=IMPROVEMENT_SEED_CAMP]Dépot de graines[\LINK]</French>
 		<German>[LINK=IMPROVEMENT_SEED_CAMP]Körner sammeln[\LINK]</German>
 		<Italian>[LINK=IMPROVEMENT_SEED_CAMP]Campo di raccolta di semi[\LINK] (costruzione)</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_SEED_CAMP_KILL</Tag>
 		<English>Build [LINK=IMPROVEMENT_SEED_CAMP]Seed Camp[\LINK] (Consumed)</English>
+		<French>Construire un [LINK=IMPROVEMENT_SEED_CAMP]Dépot de graines[\LINK] (Détruit)</French>
 		<German>[LINK=IMPROVEMENT_SEED_CAMP]Körner sammeln[\LINK] (Verschleiß)</German>
 		<Italian>[LINK=IMPROVEMENT_SEED_CAMP]Campo di raccolta di semi[\LINK] (unità consumata)</Italian>
 	</TEXT>

@@ -19,30 +19,31 @@
 	<TEXT>
 		<Tag>TXT_KEY_HUD_BUTTON_ADVISOR_DOMESTIC</Tag>
 		<English>Domestic Advisor</English>
+		<French>Conseiller Aff. Internes</French>
 		<Italian>Lista città</Italian>
-		<French>Conseiller Interne</French>
 		<German>Inland</German>
 		<Russian>Владения</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HUD_BUTTON_ADVISOR_FINANCE</Tag>
 		<English>Finance Advisor</English>
-		<Italian>Informazioni economia</Italian>
-		<French>Conseiller Financier</French>
+		<French>Conseiller financier</French>
 		<German>Finanzen</German>
+		<Italian>Informazioni economia</Italian>
 		<Russian>Финансы</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HUD_BUTTON_ADVISOR_FOREIGN</Tag>
 		<English>Foreign Advisor</English>
-		<Italian>Politica estera</Italian>
-		<French>Conseiller des Affaires Etrangères</French>
+		<French>Conseiller des Affaires Étrangères</French>
 		<German>Ausland</German>
+		<Italian>Politica estera</Italian>
 		<Russian>Дипломатия</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HUD_BUTTON_ADVISOR_HERITAGE</Tag>
 		<English>Heritage Advisor</English>
+		<French>Conseiller du patrimoine</French>
 		<German>Kulturelles Erbe</German>
 		<Russian>Культурное наследие</Russian>
 	</TEXT>
@@ -89,18 +90,21 @@
 	<TEXT>
 		<Tag>TXT_KEY_HUD_BUTTON_TOGGLE_BARE_MAP</Tag>
 		<English>[COLOR_HIGHLIGHT_TEXT]Toggle bare map [COLOR_GREEN_LIGHT]&lt;Ctrl+B&gt;[COLOR_REVERT][NEWLINE]Makes it easier to see the landscape.</English>
+		<French>[COLOR_HIGHLIGHT_TEXT]Basculer la carte nue [COLOR_GREEN_LIGHT]&lt;Ctrl+B&gt;[COLOR_REVERT][NEWLINE]Permet de mieux voir le paysage.</French>
 		<Italian>[COLOR_HIGHLIGHT_TEXT]Attiva/disattiva mappa nuda [COLOR_GREEN_LIGHT]&lt;Ctrl+B&gt;[COLOR_REVERT][NEWLINE]Rende più semplice vedere le caratteristiche del terreno.</Italian>
 		<Russian>[COLOR_HIGHLIGHT_TEXT]Переключить пустую карту [COLOR_GREEN_LIGHT]&lt;Ctrl+B&gt;[COLOR_REVERT][NEWLINE]Позволяет лучше рассмотреть ландшафт.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HUD_BUTTON_TOGGLE_SCORE</Tag>
 		<English>[COLOR_HIGHLIGHT_TEXT]Toggle score list[COLOR_REVERT][NEWLINE]Click your own list entry to minimize score list.</English>
+		<French>[COLOR_HIGHLIGHT_TEXT]Basculer la liste des scores[COLOR_REVERT][NEWLINE]Cliquez sur votre propre entrée pour réduire la liste des scores.</French>
 		<Italian>[COLOR_HIGHLIGHT_TEXT]Attiva/disattiva l'elenco dei punteggi[COLOR_REVERT][NEWLINE]Fai clic sulla tua voce nell'elenco per ridurlo a icona.</Italian>
 		<Russian>[COLOR_HIGHLIGHT_TEXT]Переключить список очков[COLOR_REVERT][NEWLINE]Щелкните по своей записи в списке, чтобы свернуть список очков.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PARALLEL_MAPS_SCREEN_HOVER</Tag>
 		<English>Maps</English>
+		<French>Cartes</French>
 		<Russian>Карты</Russian>
 	</TEXT>
 </Civ4GameText>

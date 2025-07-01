@@ -1332,9 +1332,9 @@
 		<Tag>TXT_KEY_CIVILIZATION_HOLY_ROMAN_SHORT</Tag>
 		<English>Holy Rome</English>
 		<French>
-			<Text>Romains saints</Text>
+			<Text>Saint Empire Romain</Text>
 			<Gender>Male</Gender>
-			<Plural>1</Plural>
+			<Plural>0</Plural>
 		</French>
 		<German>Heiliges Römisches Reich</German>
 		<Italian>

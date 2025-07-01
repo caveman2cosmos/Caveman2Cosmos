@@ -71,6 +71,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_HELPTEXT_UNIT_UPKEEP_MODIFIER_BASE</Tag>
 		<English>[ICON_BULLET]Base Unit Upkeep change: %d1%%</English>
+		<French>[ICON_BULLET]Modification du coût d'entretien d'unités : %d1%%</French>
 		<German>[ICON_BULLET]laufende Kosten (Grundwert): %d1%% </German>
 		<Italian>[ICON_BULLET]Costi di mantenimento base dell'unità: %d1%%</Italian>
 		<Russian>[ICON_BULLET]Изменение содержания базового подразделения: %d1%%</Russian>
@@ -78,6 +79,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_HELPTEXT_UNIT_UPKEEP_MOD_CIVILIAN</Tag>
 		<English>[ICON_BULLET]%d1%% Civilian Unit Upkeep cost</English>
+		<French>[ICON_BULLET]Modification du coût d'entretien civil : %d1%%</French>
 		<Italian>[ICON_BULLET]%d1%% dei costi di mantenimento per l'unità civile</Italian>
 		<German>[ICON_BULLET]%d1%% laufende Kosten für zivile Einheiten</German>
 		<Russian>[ICON_BULLET]%d1%% стоимость гражданского подразделения</Russian>
@@ -85,6 +87,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_HELPTEXT_UNIT_UPKEEP_MOD_MILITARY</Tag>
 		<English>[ICON_BULLET]%d1%% Military Unit Upkeep cost</English>
+		<French>[ICON_BULLET]Modification du coût d'entretien militaire : %d1%%</French>
 		<Italian>[ICON_BULLET]%d1%% dei costi di mantenimento per l'unità militare</Italian>
 		<German>[ICON_BULLET]%d1%% laufende Kosten für militärische Einheiten</German>
 		<Russian>[ICON_BULLET]%d1%% стоимость военного подразделения</Russian>
