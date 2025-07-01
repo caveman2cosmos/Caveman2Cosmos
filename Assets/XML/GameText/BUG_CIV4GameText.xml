@@ -7464,11 +7464,13 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_ROMSETTINGS__STARSIGNS_HOVER</Tag>
 		<English>Units may be created with a starsign promotion. Tech level affects how probable it is for a unit to start off with a starsign promotion and if it is possible at all.</English>
+		<French>Les unités peuvent être créées avec une promotion de signe astrologique. Le niveau technologique influence la probabilité qu’une unité débute avec une telle promotion, voire si cela est possible.</French>
 		<Polish>Jednostki mog&#185; by&#230; tworzone z promocj&#185; znaku zodiaku. Poziom technologiczny wp&#179;ywa na prawdopodobie&#241;stwo, &#191;e jednostka zacznie z awansem znak zodiaku i czy w og&#243;le jest to mo&#191;liwe.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_ROMSETTINGS__STARSIGNS_TEXT</Tag>
 		<English>Starsigns</English>
+		<French>Signes astrologiques</French>
 		<Polish>Znaki zodiaku</Polish>
 	</TEXT>
 	<TEXT>
@@ -7760,6 +7762,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_ROMSETTINGS__FLEXIBLEDIFFICULTYAITURNINCREMENTS_HOVER</Tag>
 		<English>How often the game checks AI difficulty level and adjusts it. Requires Flexible Difficulty to be enabled.</English>
+		<French>Fréquence à laquelle le jeu vérifie le niveau de difficulté de l'IA et l'ajuste. Nécessite que la difficulté flexible soit activée.</French>
 		<Italian>[BOLD]L'[COLOR_HIGHLIGHT_TEXT]intervallo in turni[COLOR_REVERT] che deve passare prima che la [COLOR_HIGHLIGHT_TEXT]difficoltà dell'IA[COLOR_REVERT] venga controllata e modificata (richiede che l'opzione [COLOR_HIGHLIGHT_TEXT]difficoltà flessibile[COLOR_REVERT] sia attivata)[\BOLD]</Italian>
 		<Polish>Jak cz&#234;sto gra sprawdza poziom trudno&#156;ci SI i dostosowuje go. Wymaga w&#179;&#185;czenia elastycznego poziomu trudno&#156;ci.</Polish>
 	</TEXT>
@@ -7776,11 +7779,13 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_ROMSETTINGS__GREATERGREATFARMER_HOVER</Tag>
 		<English>Allows great farmer to place any known resource anywhere, e.g. place papaya on ice terrain.</English>
+		<French>Permet au Fermier Illustre de placer n'importe quelle ressource connue n'importe où, par exemple poser une papaye sur un terrain glacé.</French>
 		<Polish>Pozwala Wielkiemu rolnikowi umie&#156;ci&#230; dowolny znany zas&#243;b w dowolnym miejscu, np. umie&#156;&#230; papaj&#234; na lodowym terenie.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_ROMSETTINGS__GREATERGREATFARMER_TEXT</Tag>
 		<English>Greater Great Farmer</English>
+		<French>Fermier Illustre amél.</French>
 		<Russian>Еще более великий фермер</Russian>
 		<Polish>Wi&#234;kszy Wielki Rolnik</Polish>
 	</TEXT>
@@ -7827,6 +7832,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_ROMSETTINGS__IGNOREDISABLEDBUILDINGALERTS_HOVER</Tag>
 		<English>When resources, civics, or other factors cause a building to be disabled in one of your cities, you will not receive a notification of the event.</English>
+		<French>Lorsque des ressources, des doctrines ou d'autres facteurs entraînent la désactivation d'un bâtiment dans l'une de vos villes, vous ne recevrez aucune notification de cet événement.</French>
 		<German>Wenn Gebäude aufgrund fehlender Ressourcen, durch eine gewählte Gesellschaftsform oder durch andere Faktoren abgeschaltet werden, wird keine Hinweismeldung mehr angezeigt.</German>
 		<Italian>[BOLD]Se una risorsa, una forma di governo o altri fattori [COLOR_HIGHLIGHT_TEXT]disabilitano un edificio[COLOR_REVERT] in una delle tue città [COLOR_HIGHLIGHT_TEXT]non riceverai nessuna notifica[COLOR_REVERT][\BOLD]</Italian>
 		<Spanish>Cuando recursos, principios u otros factores hagan que un edificio deje de funcionar en una de tus ciudades, no recibirás una notificación del evento.</Spanish>
@@ -7846,12 +7852,14 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_ROMSETTINGS__IMPROVEDXP_HOVER</Tag>
 		<English>Even without this option enabled, XP from combat is partially determined by victory chance. However, enabling this "Dynamic+ XP" game option will significantly magnify the effect, making it slower to train high-level units through low-risk combat (Minimum XP lowered to 0.01 from 1), but increasing further the XP gained by winning at lower odds (Maximum XP uncapped from 10). Additionally, many combat-adjacent actions such as pillaging, bombardment, etc. will give small amounts of XP.</English>
+		<French>Même sans cette option activée, l’XP gagnée lors des combats est partiellement déterminée par les chances de victoire. Cependant, activer cette option de jeu "XP Dynamique+" amplifie fortement cet effet : l'entraînement d'unités de haut niveau par des combats à faible risque devient plus lent (XP minimum réduite de 1 à 0,01), tandis que les gains d'XP lors de victoires à faibles chances sont encore augmentés (XP maximum déplafonnée au-delà de 10). De plus, de nombreuses actions liées au combat, comme le pillage, le bombardement, etc., accorderont de petites quantités d’XP.</French>
 		<Italian>[BOLD]Normalmente i punti esperienza ottenuti dal combattimento sono parzialmente determinati dalla probabilità di vittoria, l'opzione [COLOR_HIGHLIGHT_TEXT]punti esperienza dinamici[COLOR_REVERT] aumenterà significativamente l'effetto, [COLOR_HIGHLIGHT_TEXT]rendendo più lento l'addestramento di unità di alto livello[COLOR_REVERT] con battaglie a basso rischio (punti esperienza minimi ridotto da 1 a 0,01), ma aumentando ulteriormente i [COLOR_HIGHLIGHT_TEXT]punti esperienza ottenuti vincendo con probabilità inferiori[COLOR_REVERT] (punti esperienza massimi non limitati a 10), inoltre le [COLOR_HIGHLIGHT_TEXT]azioni[COLOR_REVERT] di saccheggio, bombardamento, ecc. [COLOR_HIGHLIGHT_TEXT]forniranno una piccola quantità[COLOR_REVERT] di punti esperienza[\BOLD]</Italian>
 		<Polish>Nawet bez w&#179;&#185;czonej tej opcji, PD z walki jest cz&#234;&#156;ciowo zale&#191;ne od szansy na zwyci&#234;stwo. Jednak&#191;e w&#179;&#185;czenie tej opcji gry "Dynamiczne+ PD" znacznie wzmocni efekt, spowalniaj&#185;c szkolenie jednostek wysokiego poziomu w walce o niskim ryzyku (minimalne PD obni&#191;ono do 0,01 z 1), ale jeszcze bardziej zwi&#234;kszysz PD zdobywane poprzez wygrywanie przy ni&#191;szych szansach (maksymalna liczba PD nieograniczona z 10). Dodatkowo wiele dzia&#179;a&#241; towarzysz&#185;cych walce, takich jak pl&#185;drowanie, bombardowanie itp. zapewni niewielk&#185; ilo&#156;&#230; PD.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_ROMSETTINGS__IMPROVEDXP_TEXT</Tag>
 		<English>Dynamic+ XP</English>
+		<French>EXP Dynamic+</French>
 		<Italian>Punti esperienza dinamici</Italian>
 		<Polish>Dynamiczne+ PD</Polish>
 	</TEXT>
@@ -7894,11 +7902,13 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_ROMSETTINGS__MINCITYDISTANCE_HOVER</Tag>
 		<English>The Minimum city distance between cities, cities cannot be founded within this distance of another city.</English>
+		<French>La distance minimale entre deux villes : il est impossible de fonder une ville à une distance inférieure de cette valeur par rapport à une autre ville.</French>
 		<Polish>Minimalna odleg&#179;o&#156;&#230; mi&#234;dzy miastami, miasta nie mog&#185; by&#230; zak&#179;adane w obr&#234;bie tej odleg&#179;o&#156;ci od innego miasta.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_ROMSETTINGS__MINCITYDISTANCE_TEXT</Tag>
 		<English>Minimum city distance</English>
+		<French>Distance de ville Minimum</French>
 		<Polish>Minimalna odleg&#179;o&#156;&#230; mi&#234;dzy miastami</Polish>
 	</TEXT>
 	<TEXT>

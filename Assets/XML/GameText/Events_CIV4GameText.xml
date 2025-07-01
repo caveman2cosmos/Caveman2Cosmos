@@ -52,10 +52,12 @@
     <TEXT>
         <Tag>TXT_KEY_EVENTTRIGGER_ADD_ONE_POPULATION_WORLD</Tag>
         <English>A wandering group of people has demanded to join %s2_civ_adjective.</English>
+		<French>Un groupe de nomades a demandé à rejoindre la civilisation %s2_civ_adjective.</French>
     </TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_ADD_ONE_POPULATION</Tag>
 		<English>A wandering group of people has demanded to join our city.</English>
+		<French>Un groupe de nomades a demandé à rejoindre notre ville.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_AIRLINER_CRASH</Tag>
@@ -110,90 +112,112 @@
     <TEXT>
         <Tag>TXT_KEY_EVENTTRIGGER_SQUASH</Tag>
         <English>A %s1_civ_adjective workers have found a new source of food - squashes.</English>
+		<French>Des ouvriers %s1_civ_adjective ont découvert une nouvelle source de nourriture : des courges.</French>
     </TEXT>
     <TEXT>
         <Tag>TXT_KEY_EVENTTRIGGER_MELONS</Tag>
         <English>A %s1_civ_adjective workers have found a new source of food - melons.</English>
+		<French>Des ouvriers %s1_civ_adjective ont découvert une nouvelle source de nourriture : des melons.</French>
     </TEXT>
     <TEXT>
         <Tag>TXT_KEY_EVENTTRIGGER_PUMPKIN</Tag>
         <English>A %s1_civ_adjective workers have found a new source of food - pumpkins.</English>
+		<French>Des ouvriers %s1_civ_adjective ont découvert une nouvelle source de nourriture : des citrouilles.</French>
     </TEXT>
     <TEXT>
         <Tag>TXT_KEY_EVENTTRIGGER_LEMONS</Tag>
         <English>A %s1_civ_adjective workers have found a new source of food - lemons.</English>
+		<French>Des ouvriers %s1_civ_adjective ont découvert une nouvelle source de nourriture : des citrons.</French>
     </TEXT>
     <TEXT>
         <Tag>TXT_KEY_EVENTTRIGGER_ALMONDS</Tag>
         <English>A %s1_civ_adjective workers have found a new source of food - almonds.</English>
+		<French>Des ouvriers %s1_civ_adjective ont découvert une nouvelle source de nourriture : des amandes.</French>
     </TEXT>
     <TEXT>
         <Tag>TXT_KEY_EVENTTRIGGER_PISTACHIO</Tag>
         <English>A %s1_civ_adjective workers have found a new source of food - pistachios.</English>
+		<French>Des ouvriers %s1_civ_adjective ont découvert une nouvelle source de nourriture : des pistaches.</French>
     </TEXT>
     <TEXT>
         <Tag>TXT_KEY_EVENTTRIGGER_COCONUT</Tag>
         <English>A %s1_civ_adjective workers have found a new source of food - coconuts.</English>
+		<French>Des ouvriers %s1_civ_adjective ont découvert une nouvelle source de nourriture : des noix de coco.</French>
     </TEXT>
     <TEXT>
         <Tag>TXT_KEY_EVENTTRIGGER_GUAVA</Tag>
         <English>A %s1_civ_adjective workers have found a new source of food - guavas.</English>
+		<French>Des ouvriers %s1_civ_adjective ont découvert une nouvelle source de nourriture : des goyaves.</French>
     </TEXT>
     <TEXT>
         <Tag>TXT_KEY_EVENTTRIGGER_PAPAYA</Tag>
         <English>A %s1_civ_adjective workers have found a new source of food - papayas.</English>
+		<French>Des ouvriers %s1_civ_adjective ont découvert une nouvelle source de nourriture : des papayes.</French>
     </TEXT>
     <TEXT>
         <Tag>TXT_KEY_EVENTTRIGGER_POMEGRANATE</Tag>
         <English>A %s1_civ_adjective workers have found a new source of food - pomegranates.</English>
+		<French>Des ouvriers %s1_civ_adjective ont découvert une nouvelle source de nourriture : des grenades.</French>
     </TEXT>
     <TEXT>
         <Tag>TXT_KEY_EVENTTRIGGER_MANGO</Tag>
         <English>A %s1_civ_adjective workers have found a new source of food - mangos.</English>
+		<French>Des ouvriers %s1_civ_adjective ont découvert une nouvelle source de nourriture : des mangues.</French>
     </TEXT>
     <TEXT>
         <Tag>TXT_KEY_EVENTTRIGGER_BANANA</Tag>
         <English>A %s1_civ_adjective workers have found a new source of food - bananas.</English>
+		<French>Des ouvriers %s1_civ_adjective ont découvert une nouvelle source de nourriture : des bananes.</French>
     </TEXT>
     <TEXT>
         <Tag>TXT_KEY_EVENTTRIGGER_POTATOES</Tag>
         <English>A %s1_civ_adjective workers have found a new source of food - potatoes.</English>
+		<French>Des ouvriers %s1_civ_adjective ont découvert une nouvelle source de nourriture : des pommes de terre.</French>
     </TEXT>
     <TEXT>
         <Tag>TXT_KEY_EVENTTRIGGER_BARLEY</Tag>
         <English>A %s1_civ_adjective workers have found a new source of food - barley.</English>
+		<French>Des ouvriers %s1_civ_adjective ont découvert une nouvelle source de nourriture : de l’orge.</French>
     </TEXT>
     <TEXT>
         <Tag>TXT_KEY_EVENTTRIGGER_RICE</Tag>
         <English>A %s1_civ_adjective workers have found a new source of food - rice.</English>
+		<French>Des ouvriers %s1_civ_adjective ont découvert une nouvelle source de nourriture : du riz.</French>
     </TEXT>
     <TEXT>
         <Tag>TXT_KEY_EVENTTRIGGER_WHEAT</Tag>
         <English>A %s1_civ_adjective workers have found a new source of food - wheat.</English>
+		<French>Des ouvriers %s1_civ_adjective ont découvert une nouvelle source de nourriture : du blé.</French>
     </TEXT>
     <TEXT>
         <Tag>TXT_KEY_EVENTTRIGGER_CORN</Tag>
         <English>A %s1_civ_adjective workers have found a new source of food - corn.</English>
+		<French>Des ouvriers %s1_civ_adjective ont découvert une nouvelle source de nourriture : du maïs.</French>
     </TEXT>
     <TEXT>
         <Tag>TXT_KEY_EVENTTRIGGER_OLIVES</Tag>
         <English>A %s1_civ_adjective workers have found a new source of food - olives.</English>
+		<French>Des ouvriers %s1_civ_adjective ont découvert une nouvelle source de nourriture : des olives.</French>
     </TEXT>
     <TEXT>
         <Tag>TXT_KEY_EVENTTRIGGER_FIG</Tag>
         <English>A %s1_civ_adjective workers have found a new source of food - figs.</English>
+		<French>Des ouvriers %s1_civ_adjective ont découvert une nouvelle source de nourriture : des figues.</French>
     </TEXT>
     <TEXT>
         <Tag>TXT_KEY_EVENTTRIGGER_DATES</Tag>
         <English>A %s1_civ_adjective workers have found a new source of food - dates.</English>
+		<French>Des ouvriers %s1_civ_adjective ont découvert une nouvelle source de nourriture : des dattes.</French>
     </TEXT>
     <TEXT>
         <Tag>TXT_KEY_EVENTTRIGGER_PEYOTE</Tag>
         <English>A %s1_civ_adjective workers have found a new source of food - peyote.</English>
+		<French>Des ouvriers %s1_civ_adjective ont découvert une nouvelle source de nourriture : du peyotl.</French>
     </TEXT>
     <TEXT>
         <Tag>TXT_KEY_EVENTTRIGGER_PRICLY_PEAR</Tag>
         <English>A %s1_civ_adjective workers have found a new source of food - prickly pears.</English>
+		<French>Des ouvriers %s1_civ_adjective ont découvert une nouvelle source de nourriture : des figues de barbarie.</French>
     </TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_APPLESEED</Tag>
@@ -1249,22 +1273,27 @@
     <TEXT>
         <Tag>TXT_KEY_EVENTTRIGGER_GREAT_STORY</Tag>
         <English>A %s1_civ_adjective storyteller from the city of %s2_city has told an amazing story captivating the tribe.</English>
+		<French>Un conteur %s1_civ_adjective de la ville de %s2_city a raconté une histoire incroyable captivant la tribu.</French>
     </TEXT>
     <TEXT>
         <Tag>TXT_KEY_PRIME_STUD</Tag>
         <English>A %s1_civ_adjective merchant has found prime steeds for their stables.</English>
+		<French>Un marchand %s1_civ_adjective a trouvé des étalons de premier choix pour ses écuries.</French>
     </TEXT>
     <TEXT>
         <Tag>TXT_KEY_CHILD_WISE_COUNCIL</Tag>
         <English>A %s1_civ_adjective council has welcomed a wise elder; his wisdom will lead them to greatness.</English>
+		<French>Un conseil %s1_civ_adjective a accueilli un ancien sage ; sa sagesse les mènera à la grandeur.</French>
     </TEXT>
     <TEXT>
         <Tag>TXT_KEY_CHILD_LABOUR_INCIDENT</Tag>
         <English>A terrible incident has happened at one of the %s1_civ_adjective child labour camps.</English>
+		<French>Un terrible incident est survenu dans l’un des camps de travail des enfants %s1_civ_adjective.</French>
     </TEXT>
     <TEXT>
         <Tag>TXT_KEY_EVENTTRIGGER_COMMUNITY_BOND</Tag>
         <English>A %s1_civ_adjective community discussion in the city of %s2_city has brought their people closer.</English>
+		<French>Une discussion communautaire %s1_civ_adjective dans la ville de %s2_city a rapproché leur peuple.</French>
     </TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_HARBORMASTER_DONE</Tag>
@@ -3191,14 +3220,17 @@
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_ADD_ONE_POPULATION</Tag>
 		<English>Let's hope our people will accept these new folks.</English>
+		<French>Espérons que notre peuple acceptera ces nouveaux arrivants.</French>
 	</TEXT>
     <TEXT>
         <Tag>TXT_KEY_EVENT_ADD_ONE_POPULATION1</Tag>
         <English>Chase them away we can't afford to feed more mouths.</English>
+		<French>Chassez-les, nous ne pouvons pas nous permettre de nourrir plus de bouches.</French>
     </TEXT>
     <TEXT>
         <Tag>TXT_KEY_EVENT_ADD_ONE_POPULATION2</Tag>
         <English>%s1_civ_adjective city of %s2_city is having riots as the poeple feel their culture and way of life is treathened by outsiders.</English>
+		<French>La ville %s1_civ_adjective de %s2_city connaît des émeutes, car la population sent que sa culture et son mode de vie sont menacés par des étrangers.</French>
     </TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_AIRLINER_CRASH_1</Tag>
@@ -6465,6 +6497,7 @@
     <TEXT>
         <Tag>TXT_KEY_EVENT_FRIENDLY_LOCALS_2</Tag>
         <English>Offer them a gift in sign of gratitude.</English>
+		<French>Offrez-leur un cadeau en signe de gratitude.</French>
     </TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_FUEL_ADDITIVES_1</Tag>
@@ -6916,10 +6949,11 @@
 		<Italian>La pace sarebbe un bene per entrambi. Approviamo questo mediatore e possano le sue parole dimostrarsi più acute del nostro odio.</Italian>
 		<Spanish>La paz beneficiaría a ambos bandos. Que este mediador reciba nuestra bendición, y que sus palabras resulten más afiladas que el odio del enemigo.</Spanish>
 	</TEXT>
-    <TEXT>
-        <Tag>TXT_KEY_EVENT_MEDIATOR_WORLD_2</Tag>
-        <English>A great mediator has offered to arbitrate peace between %s1_civ_adjective and %s2_civ_adjective.</English>
-    </TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_EVENT_MEDIATOR_WORLD_2</Tag>
+		<English>A great mediator has offered to arbitrate peace between %s1_civ_adjective and %s2_civ_adjective.</English>
+	<French>Un habile médiateur s'est proposé pour arbitrer la paix entre les %s1_civ_adjective et les %s2_civ_adjective.</French>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_GREAT_MEDIATOR_OTHER_3</Tag>
 		<English>A great mediator has offered to arbitrate our grievance with the %s1_civ_adjective Empire. This opens the door to a possible peace treaty. Do you wish to end the war?</English>
@@ -8315,22 +8349,27 @@
     <TEXT>
         <Tag>TXT_KEY_EVENT_BONUS_TAX_1</Tag>
         <English>Great news.</English>
+		<French>Excellente nouvelle.</French>
     </TEXT>
     <TEXT>
         <Tag>TXT_KEY_EVENT_COMMUNITY_BOND_1</Tag>
         <English>We are all one.</English>
+		<French>Nous ne faisons qu’un.</French>
     </TEXT>
     <TEXT>
         <Tag>TXT_KEY_EVENT_GREAT_STORY_1</Tag>
         <English>This story was truly amazing.</English>
+		<French>Cette histoire était vraiment incroyable.</French>
     </TEXT>
     <TEXT>
         <Tag>TXT_KEY_EVENT_GREAT_STORY_2</Tag>
         <English>Make sure this story is preserved, our people will draw inspiration from it for centuries to come.</English>
+		<French>Assurons-nous que cette histoire soit préservée, notre peuple en puisera l’inspiration pendant des siècles.</French>
     </TEXT>
     <TEXT>
         <Tag>TXT_KEY_EVENT_GREAT_STORY_3</Tag>
         <English>Let us remember this story and preserve it for generations to come. This stories will endure</English>
+		<French>Souvenons-nous de cette histoire et préservons-la pour les générations futures. Ces histoires perdureront.</French>
     </TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_KNOWLEDGE_INHERITANCE_1</Tag>
@@ -8757,6 +8796,7 @@
     <TEXT>
         <Tag>TXT_KEY_EVENT_WAR_TAXES_2</Tag>
         <English>The %s1_civ_adjective is in total war mode and are taxing their people to the bone.</English>
+		<French>Les %s1_civ_adjective est en mode guerre totale et taxe son peuple jusqu’à l’os.</French>
     </TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_MEGA_ATTACK</Tag>
@@ -11051,7 +11091,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_THE_BUCCANEERS_2</Tag>
 		<English>Ask the Buccaneers to parley. Offer them tribute if they leave our cities alone.</English>
-		<French>Demandez les boucaniers de mener des pourparlers. Offrez-leur l'hommage s'ils laissent nos villes seules.</French>
+		<French>Demandez aux boucaniers de mener des pourparlers. Offrez-leur l'hommage s'ils laissent nos villes seules.</French>
 		<German>Bitten Sie die Freischärler zu verhandeln. Bieten Sie ihnen Tribut an, wenn sie unsere Städte in Frieden verlassen.</German>
 		<Italian>Chiedi ai bucanieri. Offri loro dei tributi se lasciano stare le nostre città.</Italian>
 		<Spanish>Pedid una audiencia con los Bucaneros. Ofrecedles tributo si se alejan de nuestras ciudades.</Spanish>
@@ -12445,14 +12485,16 @@
 		<Italian>Una frode corporativa all'interno della nostra stessa [COLOR_HIGHLIGHT_TEXT]%s11_corporation[COLOR_REVERT] ha fatto crollare il prezzo delle azioni della compagnia, che a loro volta hanno trascinato con sé il mercato azionario, innescando una depressione economica globale.</Italian>
 		<Spanish>El fraude de nuestra [COLOR_HIGHLIGHT_TEXT]%s11_corporation[COLOR_REVERT] ha hecho bajar en picado la cotización de sus acciones, ha arrastrado tras de sí al resto del mercado y ha desencadenando una recesión económica mundial.</Spanish>
 	</TEXT>
-    <TEXT>
-        <Tag>TXT_KEY_EVENT_TRIGGER_WAR_TAXES_1</Tag>
-        <English>We are at war and the coffers need filling - should we levy war taxes?</English>
-    </TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_EVENT_TRIGGER_WAR_TAXES_1</Tag>
+		<English>We are at war and the coffers need filling - should we levy war taxes?</English>
+		<French>Nous sommes en guerre et les caisses doivent être remplies – devons-nous imposer des taxes de guerre ?</French>
+	</TEXT>
+
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_TRIGGER_GREAT_MEDIATOR_1</Tag>
 		<English>A great mediator has emerged, offering to arbitrate the dispute between %s1_civ_adjective leadership and our nation. This could be a chance for peace.</English>
-		<French>Un important médiateur est apparu, et il propose d'arbitrer le conflit entre le dirigeant %s1_civ_adjective et notre nation. Ce pourrait être une occasion de paix.</French>
+		<French>Un habile médiateur est apparu, et il propose d'arbitrer le conflit entre le dirigeant %s1_civ_adjective et notre nation. Ce pourrait être une occasion de paix.</French>
 		<German>Ein Vermittler bietet an, die Differenzen zwischen uns und der %s1:2_civ_adjective Führung beizulegen. Dies könnte eine Chance auf Frieden sein.</German>
 		<Italian>È comparso un grande mediatore, che si è offerto di arbitrare la disputa tra la leadership %s1_civ_adjective e la nostra nazione. Questa potrebbe essere un'opportunità di pace.</Italian>
 		<Spanish>Ha surgido un gran mediador que se ofrece como árbitro en la disputa entre el liderazgo %s1:1_civ_adjective y nuestra nación. Podría ser la ocasión de alcanzar la paz.</Spanish>
@@ -12528,74 +12570,92 @@
     <TEXT>
         <Tag>TXT_KEY_EVENT_PRIME_STUD1_1</Tag>
         <English>We have found big and healthy studs; taking them into our herds will grant us better horses.</English>
+		<French>Nous avons trouvé de grands étalons en bonne santé ; les intégrer à nos troupeaux nous permettra d’obtenir de meilleurs chevaux.</French>
     </TEXT>
     <TEXT>
         <Tag>TXT_KEY_EVENT_WISE_COUNCIL1_1</Tag>
         <English>A very wise elder has come to lead our council, should we support him. His ideas are sometimes controversial and might anger our people or the elders.</English>
+		<French>Un ancien très sage est venu diriger notre conseil, devons-nous le soutenir ? Ses idées sont parfois controversées et pourraient mécontenter notre peuple ou les anciens.</French>
     </TEXT>
     <TEXT>
         <Tag>TXT_KEY_EVENT_CHILD_LABOUR_INCIDENT1_1</Tag>
         <English>A tragic incident has happened in a labour camp near %s2_city. A few children were crushed and died working in unsafe conditions. We can't let this happen again.</English>
+		<French>Un incident tragique s’est produit dans un camp de travail près de %s2_city. Quelques enfants ont été écrasés et sont morts en travaillant dans des conditions dangereuses. Nous ne pouvons pas laisser cela se reproduire.</French>
     </TEXT>
     <TEXT>
         <Tag>TXT_KEY_EVENTTRIGGER_BONUS_TAX</Tag>
         <English>The tax office from %s2_city is reporting bigger tax income this season.</English>
+		<French>Le bureau des impôts de %s2_city rapporte des revenus fiscaux plus importants cette saison.</French>
     </TEXT>
     <TEXT>
         <Tag>TXT_KEY_EVENT_TRIGGER_BONUS_TAX_1</Tag>
         <English>The taxman from %s2_city is reporting bigger tax income this season.</English>
+		<French>Le percepteur de %s2_city rapporte des revenus fiscaux plus élevés cette saison.</French>
     </TEXT>
     <TEXT>
         <Tag>TXT_KEY_EVENT_TRIGGER_BONUS_TAX_2</Tag>
         <English>The officium in %s2_city has reported that more tax has been collected than usual.</English>
+		<French>L’office fiscal de %s2_city a signalé que plus d’impôts ont été collectés que d’habitude.</French>
     </TEXT>
     <TEXT>
         <Tag>TXT_KEY_EVENT_TRIGGER_BONUS_TAX_3</Tag>
         <English>The tax department in %s2_city was very successful in collecting taxes this year.</English>
+		<French>Le service des impôts de %s2_city a rencontré un grand succès dans la collecte des taxes cette année.</French>
     </TEXT>
     <TEXT>
         <Tag>TXT_KEY_EVENT_TRIGGER_COMMUNITY_BOND_1</Tag>
         <English>Our people sat around a small fire trying to warm up from the cold in %s2_city. Seeing everyone together and exchanging stories made the people feel more united.</English>
+		<French>Notre peuple s’est réuni autour d’un petit feu pour se réchauffer du froid à %s2_city. Voir tout le monde ensemble et échanger des histoires a renforcé le sentiment d’unité.</French>
     </TEXT>
     <TEXT>
         <Tag>TXT_KEY_EVENT_TRIGGER_COMMUNITY_BOND_2</Tag>
         <English>A community discussion in %s2_city has recently made our people feel more united.</English>
+		<French>Une discussion communautaire à %s2_city a récemment renforcé le sentiment d’unité parmi notre peuple.</French>
     </TEXT>
     <TEXT>
         <Tag>TXT_KEY_EVENT_TRIGGER_COMMUNITY_BOND_3</Tag>
         <English>People sat in the local %s2_city fields and talked about life. Such moments bring our people together.</English>
+		<French>Les habitants se sont assis dans les champs autour de %s2_city et ont parlé de la vie. Ces moments rapprochent notre peuple.</French>
     </TEXT>
     <TEXT>
         <Tag>TXT_KEY_EVENT_TRIGGER_COMMUNITY_BOND_4</Tag>
         <English>Peasants and a lord started loudly discussing life in %s2_city and many people joined in. Our people feel more united now.</English>
+		<French>Paysans et seigneur ont commencé à discuter bruyamment de la vie à %s2_city, et beaucoup les ont rejoints. Notre peuple se sent désormais plus uni.</French>
     </TEXT>
     <TEXT>
         <Tag>TXT_KEY_EVENT_TRIGGER_COMMUNITY_BOND_5</Tag>
         <English>People from %s2_city decided to organize a discussion on many topics in the town square. Our people are more united then ever.</English>
+		<French>Les habitants de %s2_city ont décidé d’organiser une discussion sur divers sujets sur la place du village. Notre peuple est plus uni que jamais.</French>
     </TEXT>
     <TEXT>
         <Tag>TXT_KEY_EVENT_TRIGGER_COMMUNITY_BOND_6</Tag>
         <English>Factory workers organized a union meeting to discuss events in %s2_city.</English>
+		<French>Les ouvriers d’usine ont organisé une réunion syndicale pour discuter des événements à %s2_city.</French>
     </TEXT>
     <TEXT>
         <Tag>TXT_KEY_EVENT_TRIGGER_COMMUNITY_BOND_7</Tag>
         <English>A local community near %s2_city decided to organize a event to discuss the wellbeing of the community.</English>
+		<French>Une communauté locale près de %s2_city a décidé d’organiser un événement pour discuter du bien-être de la communauté.</French>
     </TEXT>
     <TEXT>
         <Tag>TXT_KEY_EVENT_TRIGGER_COMMUNITY_BOND_8</Tag>
         <English>%s2_city organized a event where people can come from all walks of life and share their story.</English>
+		<French>%s2_city a organisé un événement où des personnes de tous horizons peuvent venir partager leur histoire.</French>
     </TEXT>
     <TEXT>
         <Tag>TXT_KEY_EVENT_TRIGGER_GREAT_STORY_1</Tag>
         <English>A storyteller near %s2_city has recently told a fascinating story about our ancestors.</English>
+		<French>Un conteur près de %s2_city a récemment raconté une histoire fascinante sur nos ancêtres.</French>
     </TEXT>
     <TEXT>
         <Tag>TXT_KEY_EVENT_TRIGGER_GREAT_STORY_2</Tag>
         <English>A profound epic was recited in %s2_city, captivating the audience for a long time.</English>
+		<French>Une épopée profonde a été récitée à %s2_city, captivant l’audience pendant longtemps.</French>
     </TEXT>
     <TEXT>
         <Tag>TXT_KEY_EVENT_TRIGGER_GREAT_STORY_3</Tag>
         <English>A philosophical story captured the attention of the people in %s2_city. It was spoken about for days.</English>
+		<French>Une histoire philosophique a captivé l’attention des habitants de %s2_city. On en a parlé pendant des jours.</French>
     </TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_TRIGGER_HAPPY_HUNTING_1</Tag>
@@ -13728,6 +13788,7 @@
     <TEXT>
         <Tag>TXT_KEY_EVENT_TRIGGER_SANDSTORM_2</Tag>
         <English>A sandstorm has hit us hard near %s2_city.</English>
+		<French>Une tempête de sable nous a frappés violemment près de %s2_city.</French>
     </TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_TRIGGER_SEA_TURTLES_1</Tag>
@@ -14150,11 +14211,14 @@
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_TRIGGER_VOLCANO_DORMANT</Tag>
 		<English>The earth has spewed forth lava and ash from a previously dormant volcano!</English>
-		<Italian>La terra ha emesso lava e cenere da un vulcano finora inattivo!</Italian> <!-- Message Logs -->
+		<French>La terre a craché de la lave et des cendres depuis un volcan auparavant endormi !</French>
+		<Italian>La terra ha emesso lava e cenere da un vulcano finora inattivo!</Italian>
+		<!-- Message Logs -->
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_TRIGGER_VOLCANO_EXTINCT</Tag>
 		<English>A sudden eruption has rocked the countryside and caused widespread destruction upon a new volcano's formation, though examination reveals that this site does bear some evidence of long-forgotten ancient volcanic activity. In the aftermath of this newer catastrophe the soil seems to have become tremendously fertile.</English>
+		<French>Une éruption soudaine a secoué la terre et causé de vastes destructions lors de la formation d’un nouveau volcan. Cependant, un examen révèle que ce site porte des traces d’une ancienne activité volcanique oubliée depuis longtemps. À la suite de cette nouvelle catastrophe, le sol semble être devenu extrêmement fertile.</French>
 		<Italian>Un'improvvisa eruzione ha scosso la campagna e ha causato vaste distruzioni in seguito alla formazione di un nuovo vulcano, anche se a quanto pare pare che ci siano prove di un'antica attività vulcanica a lungo dimenticata. All'indomani di questa nuova catastrofe, il terreno sembra essere diventato estremamente fertile.</Italian>
 	</TEXT>
 	<TEXT>
@@ -14743,7 +14807,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_WASHED_OUT_1</Tag>
 		<English>We will have to send workers to repair them at a later time.</English>
-		<French>Nous enverrons des travailleurs les réparer plus tard.</French>
+		<French>Nous enverrons des ouvriers les réparer plus tard.</French>
 		<German>Wir müssen Arbeiter aussenden, um sie später zu reparieren.</German>
 		<Italian>Dovremo inviare i lavoratori per ripararle in un secondo momento.</Italian>
 		<Spanish>Tendremos que enviar trabajadores a repararlas cuanto antes.</Spanish>

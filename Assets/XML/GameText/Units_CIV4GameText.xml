@@ -4367,6 +4367,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_BAND</Tag>
 		<English>Ancestral Band</English>
+		<French>Groupe primitif</French>
 		<German>
 			<Text>Urmenschenhorde:Urmenschenhorde:Urmenschenhorde:Urmenschenhorde:Urmenschenhorden:Urmenschenhorden:Urmenschenhorden:Urmenschenhorden</Text>
 			<Gender>Female</Gender>
@@ -4378,6 +4379,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_BANDEIRANTE_PEDIA</Tag>
 		<English>The Bandeirantes, "those who are of the banner") were 17th century Portuguese settlers in Brazil, fortune hunters and adventurers from the São Paulo region, the Captaincy of São Vicente (later called the Captaincy of São Paulo). They were the leaders of expeditions called bandeiras (Portuguese, "flags") that penetrated the interior of Brazil far south and west of the Tordesillas Line of 1494 that divided the Spanish (west) domain from the Portuguese (east) domain in South America.</English>
+		<French>Les Bandeirantes (littéralement « ceux qui sont de la bannière ») étaient des colons portugais du XVIIe siècle au Brésil, des chasseurs de fortune et des aventuriers originaires de la région de São Paulo, dans la capitainerie de São Vicente (plus tard appelée capitainerie de São Paulo). Ils dirigeaient des expéditions appelées bandeiras (en portugais, « bannières ») qui pénétraient l’intérieur du Brésil, bien au sud et à l’ouest de la ligne de Tordesillas de 1494, laquelle divisait l’Amérique du Sud entre les domaines espagnol (à l’ouest) et portugais (à l’est).</French>
 		<Polish>Bandeirantes cz&#179;onkowie wypraw w g&#179;&#185;b interioru w okresie portugalskiego podboju Brazylii. Pocz&#185;wszy od XVI wieku powstawa&#179;y oddzia&#179;y awanturnik&#243;w ruszaj&#185;cych w g&#179;&#185;b kontynentu. Trudnili si&#234; handlem india&#241;skimi niewolnikami, byli tak&#191;e poszukiwaczami z&#179;&#243;&#191; mineralnych (z&#179;oto, diamenty). Oddzia&#179;y mog&#179;y liczy&#230; po kilkuset ludzi, ich g&#179;&#243;wn&#185; baz&#185; wypadow&#185; by&#179;o powsta&#179;e w roku 1554 Sao Paulo, dlatego te&#191; zwano ich czasami paulistami. Eksplorowali terytoria dzisiejszych stan&#243;w Santa Catarina, Paran&#185;, Sao Paulo, Minas Gerais, Goi&#185;s, Tocantins oraz Mato Grosso (obu). Szczyt dzia&#179;alno&#156;ci bandeirantes przypad&#179; na XVII wiek. W sk&#179;ad tych grup wchodzi&#179;o stosunkowo niewielu Portugalczyk&#243;w, wi&#234;kszo&#156;&#230; stanowili Metysi, murzy&#241;scy wyzwole&#241;cy, a tak&#191;e india&#241;scy niewolnicy. Najs&#179;awniejszymi dow&#243;dcami band byli Bartolomeu Bueno da Silva, Fernao Dias Pais, Ant&#179;nio Raposo Tavares czy Domingos Jorge Velho. Bandeirantes znacz&#185;co przyczynili si&#234; do eksterminacji Indian, r&#243;wnocze&#156;nie zwi&#234;kszali zasi&#234;g panowania portugalskiej korony (kosztem Hiszpanii) i stanowili forpoczt&#234; kolonizacji. Dzi&#156; w wielu miastach Brazylii znajduj&#185; si&#234; ich pomniki.</Polish>
 	</TEXT>
 	<TEXT>
@@ -14733,6 +14735,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_MASTER_CHASER</Tag>
 		<English>Master Chaser</English>
+		<French>Maître Cavaleur</French>
 		<Russian>Çàãîíùèê</Russian>
 		<Italian>Mastro inseguitore</Italian>
 	</TEXT>

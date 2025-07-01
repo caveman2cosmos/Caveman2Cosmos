@@ -261,7 +261,10 @@
 	</TEXT>
 	<TEXT>
 		<Tag>INTERFACE_GREAT_PERSON_CITY_TURNS</Tag>
-		<English>%s1 in [COLOR_HIGHLIGHT_TEXT]%s2[COLOR_REVERT] ([COLOR_HIGHLIGHT_TEXT]%d3[COLOR_REVERT])</English> <!-- hover on city name, city screen Great person bar-->
+		<English>%s1 in [COLOR_HIGHLIGHT_TEXT]%s2[COLOR_REVERT] ([COLOR_HIGHLIGHT_TEXT]%d3[COLOR_REVERT])</English>
+		<!-- hover on city name, city screen Great person bar-->
+		<French>%s1 en [COLOR_HIGHLIGHT_TEXT]%s2[COLOR_REVERT] ([COLOR_HIGHLIGHT_TEXT]%d3[COLOR_REVERT])</French>
+		<!-- hover on city name, city screen Great person bar-->
 	</TEXT>
 	<TEXT>
 		<Tag>INTERFACE_GREAT_PERSON_NONE</Tag>
@@ -281,7 +284,7 @@
 	<TEXT>
 		<Tag>INTERFACE_PANE_AIR_STRENGTH</Tag>
 		<English>Air Strength:</English>
-		<French>Puissance en combat aérien :</French>
+		<French>Puiss. en combat aérien :</French>
 		<German>Luftkampfstärke:</German>
 		<Italian>Forza aerea:</Italian>
 		<Spanish>Fuerza de combate aéreo:</Spanish>
@@ -342,12 +345,13 @@
 	<TEXT>
 		<Tag>INTERFACE_TAB_ADMIN</Tag>
 		<English>Admin Tab</English>
+		<French>Onglet Admin.</French>
 		<Italian>Gestione città</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>INTERFACE_TAB_BUILDING</Tag>
 		<English>Building Tab</English>
-		<French>Bâtiments</French>
+		<French>Onglet Bâtiments</French>
 		<Italian>Costruzione edifici</Italian>
 		<German>Gebäude bauen</German>
 		<Russian>Панель зданий</Russian>
@@ -355,7 +359,7 @@
 	<TEXT>
 		<Tag>INTERFACE_TAB_UNIT</Tag>
 		<English>Unit Tab</English>
-		<French>Unités</French>
+		<French>Onglet Unités</French>
 		<Italian>Addestramento unità</Italian>
 		<German>Einheiten bauen</German>
 		<Russian>Панель юнитов</Russian>
@@ -363,7 +367,7 @@
 	<TEXT>
 		<Tag>INTERFACE_TAB_WONDER</Tag>
 		<English>Wonder Tab</English>
-		<French>Merveilles</French>
+		<French>Onglet Merveilles</French>
 		<Italian>Costruzione meraviglie</Italian>
 		<German>Wunder bauen</German>
 		<Russian>Панель Чудес</Russian>
@@ -713,6 +717,7 @@
 	<TEXT>
 		<Tag>TXT_INTERFACE_TREASURYHELP_CORPORATE_MAINTENANCE</Tag>
 		<English>Corporate Maintenance:</English>
+		<French>Entretien des Corporations :</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_INTERFACE_TREASURYHELP_EXPEDITIONARY</Tag>
@@ -768,15 +773,15 @@
 	<TEXT>
 		<Tag>TXT_KEY_ABANDON_CITY_HEADER2</Tag>
 		<English>Demolition value is based on the building production cost.[NEWLINE]The abandon city value is based on population size.</English>
-		<German>Der Abrisswert eines Gebäudes basiert auf den Produktionskosten.[NEWLINE]Der Geldwert einer aufgegebenen Stadt errechnet sich aus der Bevölkerungsanzahl.</German>
 		<French>La valeur de démolition est basée sur le coût de production du bâtiment.[NEWLINE]La valeur de la ville abandonnée est basée sur la taille de la population.</French>
+		<German>Der Abrisswert eines Gebäudes basiert auf den Produktionskosten.[NEWLINE]Der Geldwert einer aufgegebenen Stadt errechnet sich aus der Bevölkerungsanzahl.</German>
 		<Russian>Затраты на снос основываются на стоимости строительства.[NEWLINE]Цена покидания города зависит от численности населения.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_ABANDON_CITY_HEADER3</Tag>
 		<English>Abandoning a City where the majority nationality is not your own will give a diplomatic penalty.</English>
-		<German>Eine Stadt, in der überwiegend fremde Nationalitäten leben, aufzugeben, hat schwere diplomatische Konsequenzen.</German>
 		<French>L'abandon d'une ville dont la nationalité majoritaire n'est pas la vôtre entraînera une sanction diplomatique.</French>
+		<German>Eine Stadt, in der überwiegend fremde Nationalitäten leben, aufzugeben, hat schwere diplomatische Konsequenzen.</German>
 		<Russian>Покидание города, где у большинства жителей чужая национальность, приведет к ухудшению отношений с другими цивилизациями.</Russian>
 	</TEXT>
 	<TEXT>
@@ -2548,6 +2553,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUSHELP_AVAILABLE_PLAYER_1</Tag>
 		<English>[SPACE](Have %d1)[SPACE]</English>
+		<French>[SPACE](en possède: %d1)[SPACE]</French>
 		<Italian>[SPACE](in possesso: [COLOR_HIGHLIGHT_TEXT]%d1[COLOR_REVERT])</Italian> <!-- city screen building list building giving resource -->
 	</TEXT>
 	<TEXT>
@@ -3750,7 +3756,7 @@
 		<English>[ICON_BULLET]%D1_Mod%% Maintenance Costs from Distance to Palace</English>
 		<French>[ICON_BULLET]Coût d'entretien %D1_Mod%% dû à l'éloignement du palais</French>
 		<German>[ICON_BULLET]%D1_Mod%% Unterhaltskosten wegen Entfernung zum Palast</German>
-		<Italian>[ICON_BULLET]Costi di mantenimento per la distanza dal palazzo %D1_Mod%%</Italian><!--Aerial CT trait in the pedia-->
+		<Italian>[ICON_BULLET]Costi di mantenimento per la distanza dal palazzo %D1_Mod%%</Italian> <!--Aerial CT trait in the pedia-->
 		<Spanish>[ICON_BULLET]%D1_Mod%% a los costes de mantenimiento por lejanía con palacio</Spanish>
 	</TEXT>
 	<TEXT>
@@ -3850,7 +3856,7 @@
 		<English>[ICON_BULLET]%D1_Change%F2_Icon from[SPACE]</English>
 		<French>[ICON_BULLET]%D1_Change%F2_Icon :[SPACE]</French>
 		<German>[ICON_BULLET]%D1_Change%F2_Icon durch[SPACE]</German>
-		<Italian>[ICON_BULLET]Oro [COLOR_HIGHLIGHT_TEXT]%D1_Change[COLOR_REVERT] %F2_Icon grazie a:[SPACE]</Italian><!--Aerial CT trait in the pedia, yeld change electriv railway pedia -->
+		<Italian>[ICON_BULLET]Oro [COLOR_HIGHLIGHT_TEXT]%D1_Change[COLOR_REVERT] %F2_Icon grazie a:[SPACE]</Italian> <!--Aerial CT trait in the pedia, yeld change electriv railway pedia -->
 		<Spanish>[ICON_BULLET]%D1_Change %F2_Icon por[SPACE]</Spanish>
 	</TEXT>
 	<TEXT>
@@ -3874,7 +3880,7 @@
 		<English>[ICON_BULLET]%D1_Change%F2_HappyOrUn in %d3_NumCities Largest Cities</English>
 		<French>[ICON_BULLET]%D1_Change%F2_HappyOrUn dans les %d3_NumCities plus grandes villes</French>
 		<German>[ICON_BULLET]%D1_Change%F2_HappyOrUn in den %d3_NumCities größten Städten</German>
-		<Italian>[ICON_BULLET]Nelle %d3_NumCities città più grandi: %D1_Change %F2_HappyOrUn</Italian><!--  -->
+		<Italian>[ICON_BULLET]Nelle %d3_NumCities città più grandi: %D1_Change %F2_HappyOrUn</Italian> <!--  -->
 		<Spanish>[ICON_BULLET]%D1_Change %F2_HappyOrUn en las %d3_NumCities mayores ciudades</Spanish>
 	</TEXT>
 	<TEXT>
@@ -3970,7 +3976,7 @@
 		<English>[ICON_BULLET]%D1_Mod%% Maintenance Costs from Number of Cities</English>
 		<French>[ICON_BULLET]Coût d'entretien %D1_Mod%% dû au nombre de villes</French>
 		<German>[ICON_BULLET]%D1_Mod%% Unterhaltskosten von Anzahl der Städte</German>
-		<Italian>[ICON_BULLET]Costi di mantenimento per il numero di città %D1_Mod%%</Italian><!--Aerial CT trait in the pedia-->
+		<Italian>[ICON_BULLET]Costi di mantenimento per il numero di città %D1_Mod%%</Italian> <!--Aerial CT trait in the pedia-->
 		<Spanish>[ICON_BULLET]%D1_Mod%% a los costes de mantenimiento por cantidad de ciudades</Spanish>
 	</TEXT>
 	<TEXT>
@@ -4059,7 +4065,7 @@
 		<English>[ICON_BULLET]%D1_Change Trade Routes ([ICON_TRADE]) per City</English>
 		<French>[ICON_BULLET]%D1_Change routes commerciales par ville</French>
 		<German>[ICON_BULLET]%D1_Change Handelswege ([ICON_TRADE]) pro Stadt</German>
-		<Italian>[ICON_BULLET]Numero rotte commerciali [ICON_TRADE] per città %D1_Change</Italian><!--Aerial CT trait in the pedia-->
+		<Italian>[ICON_BULLET]Numero rotte commerciali [ICON_TRADE] per città %D1_Change</Italian> <!--Aerial CT trait in the pedia-->
 		<Spanish>[ICON_BULLET]%D1_Change rutas comerciales ([ICON_TRADE]) por ciudad</Spanish>
 	</TEXT>
 	<TEXT>
@@ -9238,7 +9244,7 @@
 		<French>+%d1_Change[ICON_HAPPY] : "Nous adorons notre belle cité !"</French>
 		<German>+%d1_Change[ICON_HAPPY]: "Wir lieben unsere großartige Stadt!"</German>
 		<Italian>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]+%d1_Change[COLOR_REVERT] [ICON_HAPPY]: Amo la nostra grande città!</Italian> <!-- city screen hover happiness panel upper right -->
-		<Spanish>+%d1_Change [ICON_HAPPY]: ¡Adoramos nuestra gran ciudad!"</Spanish>
+		<Spanish>+%d1_Change [ICON_HAPPY]: "Adoramos nuestra gran ciudad!"</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HAPPY_BONUS</Tag>
@@ -13332,7 +13338,8 @@
 	<TEXT>
 		<Tag>TXT_KEY_MISC_BORDERS_EXPANDED</Tag>
 		<English>[COLOR_MAGENTA]The culture of %s1_CityName has grown, and is now considered %s2_LevelName![COLOR_REVERT]</English>
-	</TEXT>
+	<French>[COLOR_MAGENTA]La culture de %s1_CityName s’est développée et est désormais considérée comme %s2_LevelName ![COLOR_REVERT]</French>
+</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISC_BUILDING_BOMBARD_DEFENSE_HOVER</Tag>
 		<English>Bombard Resistance: %d1%[ICON_DEFENSE]</English>
@@ -14727,7 +14734,7 @@
 		<English>from</English>
 		<French>des</French>
 		<German>von</German>
-		<Italian>grazie a</Italian><!--city screen, hover gold icon upper left  -->
+		<Italian>grazie a</Italian> <!--city screen, hover gold icon upper left  -->
 		<Spanish>por</Spanish>
 		<Polish>z</Polish>
 		<Russian>от</Russian>
@@ -19122,7 +19129,7 @@
 		<English>[ICON_BULLET]Units have a %D1%% chance to avoid Capture.</English>
 		<French>[ICON_BULLET]Les Unités ont %D1%% de chances d'éviter d'être capturées.</French>
 		<German>[ICON_BULLET]Einheiten können der Gefangennahme mit %D1%% Wahrscheinlichkeit entgehen.</German>
-		<Italian>[ICON_BULLET]Aumenta le probabilità delle unità di [COLOR_HIGHLIGHT_TEXT]evitare la cattura[COLOR_REVERT] del [COLOR_HIGHLIGHT_TEXT]%D1%%[COLOR_REVERT]</Italian><!--Aerial CT trait in the pedia, city screen building list Palace building -->
+		<Italian>[ICON_BULLET]Aumenta le probabilità delle unità di [COLOR_HIGHLIGHT_TEXT]evitare la cattura[COLOR_REVERT] del [COLOR_HIGHLIGHT_TEXT]%D1%%[COLOR_REVERT]</Italian> <!--Aerial CT trait in the pedia, city screen building list Palace building -->
 		<Polish>[ICON_BULLET]Jednostki maj&#185; %D1%% szansy na unikni&#234;cie Przej&#234;cia.</Polish>
 		<Russian>[ICON_BULLET]%D1%% шанс избежать захвата.</Russian>
 	</TEXT>
@@ -20194,7 +20201,7 @@
 		<English>/City</English>
 		<French>/Ville</French>
 		<German>pro Stadt</German>
-		<Italian> per città</Italian><!--Alfonso I leader hover description-->
+		<Italian> per città</Italian> <!--Alfonso I leader hover description-->
 		<Polish>/Miasto</Polish>
 		<Russian>/город</Russian>
 	</TEXT>
@@ -21596,6 +21603,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_PREVIOUS_OUTPUT</Tag>
 		<English>Previous Output</English>
+		<French>Production précédente</French>
 		<Italian>Produzione precedente</Italian>
 		<German>Vorherige Aufträge</German>
 	</TEXT>
@@ -27986,6 +27994,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 	<TEXT>
 		<Tag>TXT_KEY_TREASURY_UPKEEP</Tag>
 		<English>Treasury Upkeep:[SPACE]</English>
+		<French>Coûts de Maintenance de trésor :[SPACE]</French>
 		<Russian>Казначейство:[SPACE]</Russian>
 		<Italian>Costi di mantenimento della tesoreria:[SPACE]</Italian> <!-- financial infoscreen -->
 	</TEXT>
@@ -30669,7 +30678,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</German>
-		<Italian>Produzione</Italian><!--In the pedia path screen in alla caps, in the city screen production hover panel -->
+		<Italian>Produzione</Italian> <!--In the pedia path screen in alla caps, in the city screen production hover panel -->
 		<Spanish>
 			<Text>Producción</Text>
 			<Gender>Female</Gender>
