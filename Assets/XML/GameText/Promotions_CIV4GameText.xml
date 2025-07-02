@@ -433,7 +433,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONHELP_DEF_WARN</Tag>
 		<English>[COLOR_WARNING_TEXT]If the unit with this promotion cannot gain Defensive Bonuses, they will not gain inapplicable promotion benefits.[COLOR_REVERT]</English>
-		<French>[COLOR_WARNING_TEXT]Si l’unité possédant cette promotion ne peut pas bénéficier de bonus défensifs, elle ne recevra pas les avantages de promotion inapplicables.[COLOR_REVERT]</French>
+		<French>[COLOR_WARNING_TEXT]Si l'unité possédant cette promotion ne peut pas bénéficier de bonus défensifs, elle ne recevra pas les avantages de promotion inapplicables.[COLOR_REVERT]</French>
 		<German>[COLOR_WARNING_TEXT]Diese Einheit mit dieser Beförderung profitiert nur dann von den genannten Vorteilen, wenn sie über Verteidigungsboni verfügt.[COLOR_REVERT]</German>
 		<Russian>[COLOR_WARNING_TEXT]Если отряд с этой квалификацией не имеет защитных бонусов, он не получает от них несовместимые преимущества.[COLOR_REVERT]</Russian>
 	</TEXT>

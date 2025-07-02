@@ -420,6 +420,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDINGHELP_FREE_PROMO_CONDITION</Tag>
 		<English>[NEWLINE][ICON_BULLET]Free [COLOR_CYAN][LINK=%s1]%s2[\LINK][COLOR_REVERT] promotion for[SPACE]</English>
+		<French>[NEWLINE][ICON_BULLET]Promotion gratuite [COLOR_CYAN][LINK=%s1]%s2[\LINK][COLOR_REVERT] pour[SPACE]</French>
 		<Italian>[NEWLINE][ICON_BULLET]Promozione gratuita [COLOR_CYAN][LINK=%s1]%s2[\LINK][COLOR_REVERT] per ogni nuova[SPACE]</Italian> <!-- city screen hover automated building -->
 		<German>[NEWLINE][ICON_BULLET]freie Beförderung [COLOR_HIGHLIGHT_TEXT][LINK=%s1]%s2[\LINK][COLOR_REVERT]</German>
 		<Russian>[NEWLINE][ICON_BULLET]Бесплатная квалификация "[COLOR_CYAN][LINK=%s1]%s2[\LINK][COLOR_REVERT]" для[SPACE]</Russian>
@@ -427,6 +428,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDINGHELP_FREE_PROMO_CONDITION_ADDON</Tag>
 		<English>[SPACE]new units that are[SPACE]</English>
+		<French>[SPACE]les nouvelles unités qui sont[SPACE]</French>
 		<Italian>[SPACE]</Italian>
 		<Russian>[SPACE]новые подразделения, которые[SPACE]</Russian>
 	</TEXT>
@@ -940,7 +942,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDINGHELP_NEEDED_TO_BUILD_ANYWHERE</Tag>
 		<English>[ICON_BULLET]Needed to Build anywhere in empire:[SPACE]</English>
-		<French>[ICON_BULLET]Nécessaire pour construire n’importe où dans l’empire :[SPACE]</French>
+		<French>[ICON_BULLET]Nécessaire pour construire n'importe où dans l'empire :[SPACE]</French>
 		<Italian>[ICON_BULLET]Necessario per costruire in qualsiasi città:[NEWLINE][ICON_BULLET]</Italian>
 		<German>[ICON_BULLET]ermöglicht im gesamten Reich den Bau von:[SPACE]</German>
 		<Russian>[ICON_BULLET]Необходимо для строительства в любой месте вашей цивилизации:[SPACE]</Russian>

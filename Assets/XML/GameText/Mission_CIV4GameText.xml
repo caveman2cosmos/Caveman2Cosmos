@@ -636,11 +636,13 @@
 	<TEXT>
 		<Tag>TXT_KEY_MISSION_HERITAGE</Tag>
 		<English>Add Heritage</English>
+		<French>Ajouter au patrimoine</French>
 		<Russian>Добавить культурное наследние</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISSION_HERITAGE_HELP</Tag>
 		<English>[ICON_BULLET]Consumes the unit.</English>
+		<French>[ICON_BULLET]utilise et détruit l’unité.</French>
 		<Russian>[ICON_BULLET]Подразделение исчезнет в процессе.</Russian>
 	</TEXT>
 	<TEXT>

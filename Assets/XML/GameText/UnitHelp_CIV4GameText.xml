@@ -164,7 +164,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNITHELP_DAMAGE_BY_UNITCOMBAT_NOHEAL</Tag>
 		<English>[ICON_BULLET]Damage that %s1_UNITCOMBAT: %d2_Mod%%. [COLOR_WARNING_TEXT]Cannot heal here.[COLOR_REVERT]</English>
-		<French>[ICON_BULLET]Dégâts de %s1_UNITCOMBAT: %d2_Mod%%. [COLOR_WARNING_TEXT]Cannot heal here.[COLOR_REVERT]</French>
+		<French>[ICON_BULLET]Dégâts de %s1_UNITCOMBAT: %d2_Mod%%. [COLOR_WARNING_TEXT]Ne peut pas se soigner ici.[COLOR_REVERT]</French>
 		<Polish>[ICON_BULLET]Obra&#191;enia otrzymane %s1_UNITCOMBAT: %d2_Mod%%. [COLOR_WARNING_TEXT]Cannot heal here.[COLOR_REVERT]</Polish>
 		<Russian>[ICON_BULLET]Урон %s1_UNITCOMBAT: %d2_Mod%%. [COLOR_WARNING_TEXT]Cannot heal here.[COLOR_REVERT]</Russian>
 		<Italian>[ICON_BULLET]Danno di %s1_UNITCOMBAT: %d2_Mod%%. Non è possibile guarire qui.</Italian>
@@ -224,7 +224,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNITHELP_INVISIBILITY_SPOT_PLOT_RANGE_VALUE_ADJ</Tag>
 		<English>[ICON_BULLET]%D1_Change %F2_Type Spot Range on %s3_Plot (already tallied into total.)</English>
-		<French>[ICON_BULLET]%D2_Change Portée étendue de Perception (%F2_Type) lorsque sur une case %s3_Plot (inclus dans le total.)</French>
+		<French>[ICON_BULLET]%D2_Change de distance de Perception (%F2_Type) lorsque sur une case %s3_Plot (inclus dans le total.)</French>
 		<German>[ICON_BULLET]%s3_Plot: %D1_Change %F2_Type-Sichtweite (in Gesamtwert bereits eingerechnet)</German>
 		<Russian>[ICON_BULLET]%D1_Change %F2_Type к зоркости на %s3_Plot (общее значение)</Russian>
 		<Italian>[ICON_BULLET]%D1_Change di probabilità di aumentare la percezione di %F2_Type su una casella %s3_Plot (incluso nel totale)</Italian>
@@ -240,7 +240,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNITHELP_INVISIBILITY_SPOT_RANGE_VALUE</Tag>
 		<English>[ICON_BULLET]%D1_Change %F2_Type Spot Range</English>
-		<French>[ICON_BULLET]%D1_Change Portée étendue de détection %F2_Type</French>
+		<French>[ICON_BULLET]%D1_Change de distance de détection (%F2_Type)</French>
 		<German>[ICON_BULLET]%D1_Change %F2_Type-Sichtweite</German>
 		<Russian>[ICON_BULLET]%D1_Change %F2_Type к дальности обнаружения</Russian>
 		<Italian>[ICON_BULLET]%D1_Change di probabilità di rilevare %F2_Type</Italian>

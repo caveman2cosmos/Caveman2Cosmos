@@ -121,7 +121,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_REQUIREMENT_PEDIA</Tag>
 		<English>[COLOR_BUILDING_TEXT]Folklore Requirements[COLOR_REVERT] autobuildings give the Language tech requirement for Folklore.[NEWLINE]This way, the tech doesn't need a list of more than 200 Folklore pseudobuildings. Try catching all Folklore buildings!</English>
-    <French>[COLOR_BUILDING_TEXT]Bases de folklore[COLOR_REVERT] : ces bâtiments automatiques correspondent à la technologie Langage, requise pour le Folklore.[NEWLINE]Ainsi, la technologie n’a pas besoin de gérer une liste de plus de 200 pseudo-bâtiments de Folklore. Essayez de construire tous les bâtiments de Folklore !</French>
+    <French>[COLOR_BUILDING_TEXT]Bases de folklore[COLOR_REVERT] : ces bâtiments automatiques correspondent à la technologie Langage, requise pour le Folklore.[NEWLINE]Ainsi, la technologie n'a pas besoin de gérer une liste de plus de 200 pseudo-bâtiments de Folklore. Essayez de construire tous les bâtiments de Folklore !</French>
 		<German>Die [COLOR_BUILDING_TEXT]Folklore-Grundlagen[COLOR_REVERT] sind ein automatischer Effekt, der die Voraussetzung für verschiedene Folkloreeffekte legt. Diese mehr als 200 Pseudogebäude können mit dem Entdecken spezieller Tiere und Landschaftseigenarten errichtet werden. Versucht doch einmal, alle Folklore-"Gebäude" zu errichten!</German>
 		<Italian>L'edificio automatico [COLOR_BUILDING_TEXT]requisito per il folklore[COLOR_REVERT] richiede la tecnologia Linguaggio come prerequisito per il Folklore.[NEWLINE]Ci sono oltre 200 edifici automatici che possono essere costruiti, scoprendo animali o luoghi. Prova a costruirli tutti!</Italian>
 	</TEXT>
@@ -139,7 +139,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_PRESENCE_OF_VOLCANO</Tag>
 		<English>Presence of Volcano</English>
-		<French>Présence d’un volcan (construction automatique)</French>
+		<French>Présence d'un volcan (construction automatique)</French>
 		<German>
 			<Text>Präsenz von Vulkanen:Präsenz von Vulkanen:Präsenz von Vulkanen:Präsenz von Vulkanen</Text>
 			<Gender>Female</Gender>
@@ -556,12 +556,14 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FISH_PENS_PEDIA</Tag>
 		<English>Fish Pens were constructed by the rich to provide them with a ready source of some exotic or rare sea fish for their feasts.</English>
+		<French>Les bassins à poissons étaient construits par les riches pour leur fournir une source immédiate de poissons de mer rares ou exotiques pour leurs festins.</French>
 		<Italian>I vasche per pesci venivano costruiti dalle persone ricche per avere una fonte di pesce raro ed esotico per le feste.</Italian>
 		<Polish>Sieci na ryby by&#179;y konstruowane przez bogatych by dostarcza&#230; im ci&#185;gle &#156;wie&#191;ych i egzotycznych gatunk&#243;w ryb na ich wykwintne uczty.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_ANIMAL_PEDIA</Tag>
 		<English>Folklore pseudobuildings represent myths, legends, stories, fables and commoner knowledge about animals and landscape.</English>
+		<French>Les pseudo-bâtiments folkloriques représentent les mythes, légendes, histoires, fables et connaissances populaires sur les animaux et le paysage.</French>
 		<German>Die Folklore-Pseudogebäude repräsentieren Mythen, Legenden, Geschichten, Fabeln und allgemeines Wissen über Tiere und Landschaften.</German>
 	</TEXT>
 	<TEXT>
@@ -1998,7 +2000,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MARINE_INSTITUTE_PEDIA</Tag>
-		<English>The Marine Institute (Foras na Mara) is a State agency in Ireland that provides government, public agencies and the maritime industry with a range of scientific, advisory and economic development services, aiming to inform policy-making, regulation and the sustainable management and growth of the country’s marine resources. Founded in 1991 on foot of a 1974 report, the Institute undertakes, coordinates and promotes marine research and development, which is essential to achieving a sustainable ocean economy, protecting ecosystems and inspiring a shared understanding of the ocean. The agency is governed by a ministerially-appointed board and has a professional staff, a headquarters near Galway, an office in Dublin, and two research vessels.</English>
+		<English>The Marine Institute (Foras na Mara) is a State agency in Ireland that provides government, public agencies and the maritime industry with a range of scientific, advisory and economic development services, aiming to inform policy-making, regulation and the sustainable management and growth of the country's marine resources. Founded in 1991 on foot of a 1974 report, the Institute undertakes, coordinates and promotes marine research and development, which is essential to achieving a sustainable ocean economy, protecting ecosystems and inspiring a shared understanding of the ocean. The agency is governed by a ministerially-appointed board and has a professional staff, a headquarters near Galway, an office in Dublin, and two research vessels.</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ENCLOSURE_MARSUPIAL</Tag>

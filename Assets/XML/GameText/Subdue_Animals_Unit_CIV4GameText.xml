@@ -1713,6 +1713,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_ANIMALS_HELP</Tag>
 		<English>Can build Folklore, animal related buildings, fight for entertainment and spread their tales.</English>
+		<French>Peut construire du folklore, des bâtiments liés aux animaux, se battre pour divertir et répandre leurs récits.</French>
 		<Italian>[ICON_BULLET]L'animale può [COLOR_HIGHLIGHT_TEXT]costruire edifici[COLOR_REVERT] relazionati al [COLOR_HIGHLIGHT_TEXT]folklore[COLOR_REVERT] o agli [COLOR_HIGHLIGHT_TEXT]animali[COLOR_REVERT], può [COLOR_HIGHLIGHT_TEXT]combattere per intrattenimento[COLOR_REVERT] e [COLOR_HIGHLIGHT_TEXT]diffondere il proprio mito[COLOR_REVERT]</Italian> <!-- unit moose -->
 	</TEXT>
 	<TEXT>
@@ -3882,6 +3883,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_VIPER_CHAIN</Tag>
 		<English>Subdued Chain Viper</English>
+		<French>Vipère de Russell (App.)</French>
 		<German>
 			<Text>Gefangene Kettenviper:Gefangenen Kettenviper:Gefangenen Kettenviper:Gefangene Kettenviper:Gefangene Kettenvipern:Gefangenen Kettenvipern:Gefangenen Kettenvipern:Gefangenen Kettenvipern</Text>
 			<Gender>Female</Gender>

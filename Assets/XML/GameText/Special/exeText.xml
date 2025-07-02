@@ -2008,7 +2008,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_MAIN_MENU_CREATE_A_GAME</Tag>
 		<English>Create a Game!</English>
-		<French>Creer une partie</French>
+		<French>Créer une partie</French>
 		<German>Ein Spiel erstellen!</German>
 		<Italian>Crea una partita</Italian>
 		<Spanish>Crear una partida</Spanish>
@@ -2028,6 +2028,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_MAIN_MENU_CUSTOM_GAME</Tag>
 		<English>Full Game</English>
+		<French>Partie personnalisée</French>
 		<Italian>Personalizza partita</Italian>
 		<Polish>W&#163;asna gra</Polish>
 		<Russian>Настраиваемая игра</Russian>

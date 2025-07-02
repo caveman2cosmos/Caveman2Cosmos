@@ -184,6 +184,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_PEDIA_CATEGORY_BONUS_GENMOD</Tag>
 		<English>Technocultural Bonuses</English>
+		<French>Bonus technoculturels</French>
 		<Italian>Risorse tecnologiche</Italian>
 		<German>Technokulturboni</German>
 		<Russian>Бонусы технокультуры</Russian>
@@ -191,6 +192,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_PEDIA_CATEGORY_BONUS_MANDFACTURED</Tag>
 		<English>Manufactured Bonuses</English>
+		<French>Bonus des biens manufacturés</French>
 		<Italian>Risorse prodotte</Italian>
 		<German>Güter</German>
 		<Russian>Бонусы производства</Russian>
