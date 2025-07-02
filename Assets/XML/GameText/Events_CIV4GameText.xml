@@ -177,7 +177,7 @@
     <TEXT>
         <Tag>TXT_KEY_EVENTTRIGGER_BARLEY</Tag>
         <English>A %s1_civ_adjective workers have found a new source of food - barley.</English>
-		<French>Des ouvriers %s1_civ_adjective ont découvert une nouvelle source de nourriture : de l’orge.</French>
+		<French>Des ouvriers %s1_civ_adjective ont découvert une nouvelle source de nourriture : de l'orge.</French>
     </TEXT>
     <TEXT>
         <Tag>TXT_KEY_EVENTTRIGGER_RICE</Tag>
@@ -985,10 +985,12 @@
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_MASSIVE_FOREST_WILDFIRE</Tag>
 		<English>Due to recent droughts a massive wildfire has started near the %s1_civ_adjective city of %s2_city.</English>
+		<French>En raison des récentes sécheresses, un incendie de forêt massif a commencé près de la ville %s1_civ_adjective de %s2_city.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_FOREST_NEW_1</Tag>
 		<English>Forest has started growing again near the %s1_civ_adjective city of %s2_city.</English>
+		<French>La forêt a recommencé à pousser près de la ville %s1_civ_adjective de %s2_city.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_FOREST_FIRE</Tag>
@@ -1288,7 +1290,7 @@
     <TEXT>
         <Tag>TXT_KEY_CHILD_LABOUR_INCIDENT</Tag>
         <English>A terrible incident has happened at one of the %s1_civ_adjective child labour camps.</English>
-		<French>Un terrible incident est survenu dans l’un des camps de travail des enfants %s1_civ_adjective.</French>
+		<French>Un terrible incident est survenu dans l'un des camps de travail des enfants %s1_civ_adjective.</French>
     </TEXT>
     <TEXT>
         <Tag>TXT_KEY_EVENTTRIGGER_COMMUNITY_BOND</Tag>
@@ -1415,146 +1417,181 @@
 		<Italian>I minatori %s1:3_civ_adjective si sono arricchiti con la scoperta di nuovi filoni di argento.</Italian>
 		<Spanish>El imperio %s1:1_civ_adjective se ha hecho rico con el descubrimiento de nuevos filones de plata.</Spanish>
 	</TEXT>
-    <TEXT>
-        <Tag>TXT_KEY_EVENTTRIGGER_GOLD_MINE</Tag>
-        <English>%s1_civ_adjective miners have struck it rich with the discovery of new veins of Gold ore.</English>
-    </TEXT>
-    <TEXT>
-        <Tag>TXT_KEY_EVENTTRIGGER_PLATINUM</Tag>
-        <English>%s1_civ_adjective miners have struck it rich with the discovery of new veins of Platinum ore.</English>
-    </TEXT>
-    <TEXT>
-        <Tag>TXT_KEY_EVENTTRIGGER_LEAD</Tag>
-        <English>%s1_civ_adjective miners have found lead ore.</English>
-    </TEXT>
-    <TEXT>
-        <Tag>TXT_KEY_EVENTTRIGGER_TITANIUM</Tag>
-        <English>%s1_civ_adjective miners have found titanium ore.</English>
-    </TEXT>
-    <TEXT>
-        <Tag>TXT_KEY_EVENTTRIGGER_TURQUOISE</Tag>
-        <English>%s1_civ_adjective miners have found turquoise ore.</English>
-    </TEXT>
-    <TEXT>
-        <Tag>TXT_KEY_EVENTTRIGGER_SULPHUR</Tag>
-        <English>%s1_civ_adjective miners have found sulphur ore.</English>
-    </TEXT>
-    <TEXT>
-        <Tag>TXT_KEY_EVENTTRIGGER_TEA</Tag>
-        <English>%s1_civ_adjective scouts have found tea.</English>
-    </TEXT>
-    <TEXT>
-        <Tag>TXT_KEY_EVENTTRIGGER_VANILLA</Tag>
-        <English>%s1_civ_adjective workers have found vanilla.</English>
-    </TEXT>
-    <TEXT>
-        <Tag>TXT_KEY_EVENTTRIGGER_COFFEE</Tag>
-        <English>%s1_civ_adjective workers have found coffee.</English>
-    </TEXT>
-    <TEXT>
-        <Tag>TXT_KEY_EVENTTRIGGER_KAVA</Tag>
-        <English>%s1_civ_adjective workers have found kava.</English>
-    </TEXT>
-    <TEXT>
-        <Tag>TXT_KEY_EVENTTRIGGER_SUGAR</Tag>
-        <English>%s1_civ_adjective workers have found sugar.</English>
-    </TEXT>
-    <TEXT>
-        <Tag>TXT_KEY_EVENTTRIGGER_COCA</Tag>
-        <English>%s1_civ_adjective workers have found coca.</English>
-    </TEXT>
-    <TEXT>
-        <Tag>TXT_KEY_EVENTTRIGGER_TOBACCO</Tag>
-        <English>%s1_civ_adjective workers have found tobacco.</English>
-    </TEXT>
-    <TEXT>
-        <Tag>TXT_KEY_EVENTTRIGGER_COTTON</Tag>
-        <English>%s1_civ_adjective workers have found cotton.</English>
-    </TEXT>
-    <TEXT>
-        <Tag>TXT_KEY_EVENTTRIGGER_INDIGO</Tag>
-        <English>%s1_civ_adjective workers have found indigo.</English>
-    </TEXT>
-    <TEXT>
-        <Tag>TXT_KEY_EVENTTRIGGER_FLAX</Tag>
-        <English>%s1_civ_adjective workers have found flax.</English>
-    </TEXT>
-    <TEXT>
-        <Tag>TXT_KEY_EVENTTRIGGER_HEMP</Tag>
-        <English>%s1_civ_adjective workers have found hemp.</English>
-    </TEXT>
-    <TEXT>
-        <Tag>TXT_KEY_EVENTTRIGGER_RUBBER</Tag>
-        <English>%s1_civ_adjective workers have found rubber.</English>
-    </TEXT>
-    <TEXT>
-        <Tag>TXT_KEY_EVENTTRIGGER_OPIUM</Tag>
-        <English>%s1_civ_adjective workers have found opium.</English>
-    </TEXT>
-    <TEXT>
-        <Tag>TXT_KEY_EVENTTRIGGER_HENNA</Tag>
-        <English>%s1_civ_adjective workers have found henna.</English>
-    </TEXT>
-    <TEXT>
-        <Tag>TXT_KEY_EVENTTRIGGER_INCENSE</Tag>
-        <English>%s1_civ_adjective workers have found incense.</English>
-    </TEXT>
-    <TEXT>
-        <Tag>TXT_KEY_EVENTTRIGGER_PAPYRUS</Tag>
-        <English>%s1_civ_adjective workers have found papyrus.</English>
-    </TEXT>
-    <TEXT>
-        <Tag>TXT_KEY_EVENTTRIGGER_SILK</Tag>
-        <English>%s1_civ_adjective workers have silk bugs.</English>
-    </TEXT>
-    <TEXT>
-        <Tag>TXT_KEY_EVENTTRIGGER_STONE</Tag>
-        <English>%s1_civ_adjective workers have found stone.</English>
-    </TEXT>
-    <TEXT>
-        <Tag>TXT_KEY_EVENTTRIGGER_COAL</Tag>
-        <English>%s1_civ_adjective miners have found coal.</English>
-    </TEXT>
-    <TEXT>
-        <Tag>TXT_KEY_EVENTTRIGGER_AMBER</Tag>
-        <English>%s1_civ_adjective miners have found amber.</English>
-    </TEXT>
-    <TEXT>
-        <Tag>TXT_KEY_EVENTTRIGGER_BAUXITE</Tag>
-        <English>%s1_civ_adjective miners have found bauxite ore.</English>
-    </TEXT>
-    <TEXT>
-        <Tag>TXT_KEY_EVENTTRIGGER_DIAMOND</Tag>
-        <English>%s1_civ_adjective miners have found diamonds.</English>
-    </TEXT>
-    <TEXT>
-        <Tag>TXT_KEY_EVENTTRIGGER_IRON</Tag>
-        <English>%s1_civ_adjective miners have found iron ore.</English>
-    </TEXT>
-    <TEXT>
-        <Tag>TXT_KEY_EVENTTRIGGER_MANGANESE</Tag>
-        <English>%s1_civ_adjective miners have found manganese ore.</English>
-    </TEXT>
-    <TEXT>
-        <Tag>TXT_KEY_EVENTTRIGGER_RUBIES</Tag>
-        <English>%s1_civ_adjective miners have found rubies.</English>
-    </TEXT>
-    <TEXT>
-        <Tag>TXT_KEY_EVENTTRIGGER_MARBLE</Tag>
-        <English>%s1_civ_adjective miners have found marble ore.</English>
-    </TEXT>
-    <TEXT>
-        <Tag>TXT_KEY_EVENTTRIGGER_COPPER</Tag>
-        <English>%s1_civ_adjective miners have found copper ore.</English>
-    </TEXT>
-    <TEXT>
-        <Tag>TXT_KEY_EVENTTRIGGER_SAPPHIRES</Tag>
-        <English>%s1_civ_adjective miners have struck it rich with the discovery of new sapphires.</English>
-    </TEXT>
-    <TEXT>
-        <Tag>TXT_KEY_EVENTTRIGGER_URANIUM</Tag>
-        <English>%s1_civ_adjective miners have struck it rich with the discovery of uranium.</English>
-    </TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_EVENTTRIGGER_GOLD_MINE</Tag>
+		<English>%s1_civ_adjective miners have struck it rich with the discovery of new veins of Gold ore.</English>
+		<French>Les mineurs %s1_civ_adjective ont fait fortune en découvrant de nouveaux filons de minerai d'or.</French>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_EVENTTRIGGER_PLATINUM</Tag>
+		<English>%s1_civ_adjective miners have struck it rich with the discovery of new veins of Platinum ore.</English>
+		<French>Les mineurs %s1_civ_adjective ont fait fortune en découvrant de nouveaux filons de minerai de platine.</French>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_EVENTTRIGGER_LEAD</Tag>
+		<English>%s1_civ_adjective miners have found lead ore.</English>
+		<French>Les mineurs %s1_civ_adjective ont trouvé du minerai de plomb.</French>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_EVENTTRIGGER_TITANIUM</Tag>
+		<English>%s1_civ_adjective miners have found titanium ore.</English>
+		<French>Les mineurs %s1_civ_adjective ont trouvé du minerai de titane.</French>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_EVENTTRIGGER_TURQUOISE</Tag>
+		<English>%s1_civ_adjective miners have found turquoise ore.</English>
+		<French>Les mineurs %s1_civ_adjective ont trouvé du minerai de turquoise.</French>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_EVENTTRIGGER_SULPHUR</Tag>
+		<English>%s1_civ_adjective miners have found sulphur ore.</English>
+		<French>Les mineurs %s1_civ_adjective ont trouvé du minerai de soufre.</French>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_EVENTTRIGGER_TEA</Tag>
+		<English>%s1_civ_adjective scouts have found tea.</English>
+		<French>Les éclaireurs %s1_civ_adjective ont trouvé du thé.</French>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_EVENTTRIGGER_VANILLA</Tag>
+		<English>%s1_civ_adjective workers have found vanilla.</English>
+		<French>Les ouvriers %s1_civ_adjective ont trouvé de la vanille.</French>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_EVENTTRIGGER_COFFEE</Tag>
+		<English>%s1_civ_adjective workers have found coffee.</English>
+		<French>Les ouvriers %s1_civ_adjective ont trouvé du café.</French>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_EVENTTRIGGER_KAVA</Tag>
+		<English>%s1_civ_adjective workers have found kava.</English>
+		<French>Les ouvriers %s1_civ_adjective ont trouvé du kava.</French>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_EVENTTRIGGER_SUGAR</Tag>
+		<English>%s1_civ_adjective workers have found sugar.</English>
+		<French>Les ouvriers %s1_civ_adjective ont trouvé du sucre.</French>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_EVENTTRIGGER_COCA</Tag>
+		<English>%s1_civ_adjective workers have found coca.</English>
+		<French>Les ouvriers %s1_civ_adjective ont trouvé de la coca.</French>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_EVENTTRIGGER_TOBACCO</Tag>
+		<English>%s1_civ_adjective workers have found tobacco.</English>
+		<French>Les ouvriers %s1_civ_adjective ont trouvé du tabac.</French>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_EVENTTRIGGER_COTTON</Tag>
+		<English>%s1_civ_adjective workers have found cotton.</English>
+		<French>Les ouvriers %s1_civ_adjective ont trouvé du coton.</French>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_EVENTTRIGGER_INDIGO</Tag>
+		<English>%s1_civ_adjective workers have found indigo.</English>
+		<French>Les ouvriers %s1_civ_adjective ont trouvé de l'indigo.</French>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_EVENTTRIGGER_FLAX</Tag>
+		<English>%s1_civ_adjective workers have found flax.</English>
+		<French>Les ouvriers %s1_civ_adjective ont trouvé du lin.</French>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_EVENTTRIGGER_HEMP</Tag>
+		<English>%s1_civ_adjective workers have found hemp.</English>
+		<French>Les ouvriers %s1_civ_adjective ont trouvé du chanvre.</French>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_EVENTTRIGGER_RUBBER</Tag>
+		<English>%s1_civ_adjective workers have found rubber.</English>
+		<French>Les ouvriers %s1_civ_adjective ont trouvé du caoutchouc.</French>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_EVENTTRIGGER_OPIUM</Tag>
+		<English>%s1_civ_adjective workers have found opium.</English>
+		<French>Les ouvriers %s1_civ_adjective ont trouvé de l'opium.</French>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_EVENTTRIGGER_HENNA</Tag>
+		<English>%s1_civ_adjective workers have found henna.</English>
+		<French>Les ouvriers %s1_civ_adjective ont trouvé du henné.</French>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_EVENTTRIGGER_INCENSE</Tag>
+		<English>%s1_civ_adjective workers have found incense.</English>
+		<French>Les ouvriers %s1_civ_adjective ont trouvé de l'encens.</French>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_EVENTTRIGGER_PAPYRUS</Tag>
+		<English>%s1_civ_adjective workers have found papyrus.</English>
+		<French>Les ouvriers %s1_civ_adjective ont trouvé du papyrus.</French>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_EVENTTRIGGER_SILK</Tag>
+		<English>%s1_civ_adjective workers have silk bugs.</English>
+		<French>Les ouvriers %s1_civ_adjective ont des vers à soie.</French>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_EVENTTRIGGER_STONE</Tag>
+		<English>%s1_civ_adjective workers have found stone.</English>
+		<French>Les ouvriers %s1_civ_adjective ont trouvé de la pierre.</French>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_EVENTTRIGGER_COAL</Tag>
+		<English>%s1_civ_adjective miners have found coal.</English>
+		<French>Les mineurs %s1_civ_adjective ont trouvé du charbon.</French>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_EVENTTRIGGER_AMBER</Tag>
+		<English>%s1_civ_adjective miners have found amber.</English>
+		<French>Les mineurs %s1_civ_adjective ont trouvé de l'ambre.</French>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_EVENTTRIGGER_BAUXITE</Tag>
+		<English>%s1_civ_adjective miners have found bauxite ore.</English>
+		<French>Les mineurs %s1_civ_adjective ont trouvé du minerai de bauxite.</French>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_EVENTTRIGGER_DIAMOND</Tag>
+		<English>%s1_civ_adjective miners have found diamonds.</English>
+		<French>Les mineurs %s1_civ_adjective ont trouvé des diamants.</French>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_EVENTTRIGGER_IRON</Tag>
+		<English>%s1_civ_adjective miners have found iron ore.</English>
+		<French>Les mineurs %s1_civ_adjective ont trouvé du minerai de fer.</French>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_EVENTTRIGGER_MANGANESE</Tag>
+		<English>%s1_civ_adjective miners have found manganese ore.</English>
+		<French>Les mineurs %s1_civ_adjective ont trouvé du minerai de manganèse.</French>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_EVENTTRIGGER_RUBIES</Tag>
+		<English>%s1_civ_adjective miners have found rubies.</English>
+		<French>Les mineurs %s1_civ_adjective ont trouvé des rubis.</French>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_EVENTTRIGGER_MARBLE</Tag>
+		<English>%s1_civ_adjective miners have found marble ore.</English>
+		<French>Les mineurs %s1_civ_adjective ont trouvé du minerai de marbre.</French>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_EVENTTRIGGER_COPPER</Tag>
+		<English>%s1_civ_adjective miners have found copper ore.</English>
+		<French>Les mineurs %s1_civ_adjective ont trouvé du minerai de cuivre.</French>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_EVENTTRIGGER_SAPPHIRES</Tag>
+		<English>%s1_civ_adjective miners have struck it rich with the discovery of new sapphires.</English>
+		<French>Les mineurs %s1_civ_adjective ont fait fortune en découvrant de nouveaux saphirs.</French>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_EVENTTRIGGER_URANIUM</Tag>
+		<English>%s1_civ_adjective miners have struck it rich with the discovery of uranium.</English>
+		<French>Les mineurs %s1_civ_adjective ont fait fortune en découvrant de l'uranium.</French>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_HOLY_MOUNTAIN_DONE</Tag>
 		<English>The faithful %s3_religion_adjective people are inspired by the divine providence of the %s1_civ_adjective Empire for completing the Quest of the Holy Mountain!</English>
@@ -3212,7 +3249,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_ADDITIONAL_CHANCE</Tag>
 		<English>[NEWLINE][ICON_BULLET]In addition%s2_txt_key_event_delay_below, %d1%% chance for:</English>
-		<French>[NEWLINE][ICON_BULLET]Dans addition%s2_txt_key_event_delay_below, %d1%% chances pour :</French>
+		<French>[NEWLINE][ICON_BULLET]En supplément%s2_txt_key_event_delay_below, %d1%% chances pour :</French>
 		<German>[NEWLINE][ICON_BULLET]Zusätzlich %s2_txt_key_event_delay_below %d1%% Wahrscheinlichkeit für:</German>
 		<Italian>[NEWLINE][ICON_BULLET]Inoltre %s2_txt_key_event_delay_below, %d1%% di probabilità che:</Italian>
 		<Spanish>[NEWLINE][ICON_BULLET]Además%s2_txt_key_event_delay_below, %d1%% de probabilidad de:</Spanish>
@@ -5482,7 +5519,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_DELAY</Tag>
 		<English>[NEWLINE][ICON_BULLET]In addition %s1_txt_key_event_delay_below:</English>
-		<French>[NEWLINE][ICON_BULLET]Dans addition %s1_txt_key_event_delay_below :</French>
+		<French>[NEWLINE][ICON_BULLET]En supplément %s1_txt_key_event_delay_below :</French>
 		<German>[NEWLINE][ICON_BULLET]Zusätzlich %s1_txt_key_event_delay_below:</German>
 		<Italian>[NEWLINE][ICON_BULLET]Inoltre %s1_txt_key_event_delay_below:</Italian>
 		<Spanish>[NEWLINE][ICON_BULLET]Además %s1_txt_key_event_delay_below:</Spanish>
@@ -6217,6 +6254,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_WILDFIRE_1_HELP</Tag>
 		<English>Wildfire consumed some of our buildings.</English>
+		<French>Un incendie de forêt a détruit certains de nos bâtiments.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_FIRE_MINOR_1_HELP</Tag>
@@ -6299,10 +6337,12 @@
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_FOREST_MASSIVE_WILDFIRE_1</Tag>
 		<English>Do everything we can to stop the wildfire and save the forest.</English>
+		<French>Faisons tout notre possible pour arrêter l'incendie de forêt et sauver la forêt.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_FOREST_MASSIVE_WILDFIRE_2</Tag>
 		<English>Protect what is most important and let's hope the fire burns itself out.</English>
+		<French>Protégeons ce qui est le plus important et espérons que le feu s'éteigne de lui-même.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_FOREST_MASSIVE_WILDFIRE_3</Tag>
@@ -6607,7 +6647,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_GAME_MIGRATION_1</Tag>
 		<English>Excellent, our hunters will be overjoyed!</English>
-		<French>Excellent, nos chasseurs vont s'en donner à cœur joie!</French>
+		<French>Excellent, nos chasseurs vont s'en donner à coeur joie!</French>
 		<German>Ausgezeichnet, unsere Jäger werden überglücklich sein!</German>
 		<Italian>Eccellente, i nostri cacciatori ne saranno contenti!</Italian>
 		<Polish>&#140;wietnie, nasi &#179;owcy b&#234;d&#185; wniebowzi&#234;ci!</Polish>
@@ -7145,23 +7185,29 @@
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_HAPPY_HUNTING_2</Tag>
 		<English>Organise a great hunt, we must use this time of plenty to stock up on food.</English>
+		<French>Organisons une grande chasse, profitons de cette période d'abondance pour faire des réserves de nourriture.</French>
 	</TEXT>
-    <TEXT>
-        <Tag>TXT_KEY_EVENT_GREAT_HARVEST_1</Tag>
-        <English>Store the food, you can never have enough food.</English>
-    </TEXT>
-    <TEXT>
-        <Tag>TXT_KEY_EVENT_GREAT_HARVEST_2</Tag>
-        <English>Sell the excess. Gold is more needed than food.</English>
-    </TEXT>
-    <TEXT>
-        <Tag>TXT_KEY_EVENT_POOR_HARVEST_1</Tag>
-        <English>There is nothing we can do, let us pray for next year's harvest.</English>
-    </TEXT>
-    <TEXT>
-        <Tag>TXT_KEY_EVENT_POOR_HARVEST_2</Tag>
-        <English>Buy the food we need no matter the cost.</English>
-    </TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_EVENT_GREAT_HARVEST_1</Tag>
+		<English>Store the food, you can never have enough food.</English>
+		<French>Stockez la nourriture, on n'en a jamais trop.</French>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_EVENT_GREAT_HARVEST_2</Tag>
+		<English>Sell the excess. Gold is more needed than food.</English>
+		<French>Vendez le surplus. L’or est plus nécessaire que la nourriture.</French>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_EVENT_POOR_HARVEST_1</Tag>
+		<English>There is nothing we can do, let us pray for next year's harvest.</English>
+		<French>Nous ne pouvons rien faire, prions pour la récolte de l’année prochaine.</French>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_EVENT_POOR_HARVEST_2</Tag>
+		<English>Buy the food we need no matter the cost.</English>
+		<French>Achetons la nourriture qu’il nous faut, quel qu’en soit le prix.</French>
+	</TEXT>
+
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_HAPPY_TO_PLAYER</Tag>
 		<English>[ICON_BULLET]%D1[ICON_UNHAPPY] in all cities. %s3_playerName gets %D2[ICON_HAPPY]</English>
@@ -8354,7 +8400,7 @@
     <TEXT>
         <Tag>TXT_KEY_EVENT_COMMUNITY_BOND_1</Tag>
         <English>We are all one.</English>
-		<French>Nous ne faisons qu’un.</French>
+		<French>Nous ne faisons qu'un peuple.</French>
     </TEXT>
     <TEXT>
         <Tag>TXT_KEY_EVENT_GREAT_STORY_1</Tag>
@@ -8364,7 +8410,7 @@
     <TEXT>
         <Tag>TXT_KEY_EVENT_GREAT_STORY_2</Tag>
         <English>Make sure this story is preserved, our people will draw inspiration from it for centuries to come.</English>
-		<French>Assurons-nous que cette histoire soit préservée, notre peuple en puisera l’inspiration pendant des siècles.</French>
+		<French>Assurons-nous que cette histoire soit préservée, notre peuple en puisera l'inspiration pendant des siècles.</French>
     </TEXT>
     <TEXT>
         <Tag>TXT_KEY_EVENT_GREAT_STORY_3</Tag>
@@ -8796,7 +8842,7 @@
     <TEXT>
         <Tag>TXT_KEY_EVENT_WAR_TAXES_2</Tag>
         <English>The %s1_civ_adjective is in total war mode and are taxing their people to the bone.</English>
-		<French>Les %s1_civ_adjective est en mode guerre totale et taxe son peuple jusqu’à l’os.</French>
+		<French>Les %s1_civ_adjective est en mode guerre totale et taxe son peuple jusqu'à l'os.</French>
     </TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_MEGA_ATTACK</Tag>
@@ -12350,6 +12396,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_TRIGGER_FOREST_MASSIVE_WILDFIRE</Tag>
 		<English>Long term drought has enabled for massive wildfires to start near our city of %s2_city.</English>
+		<French>Une sécheresse prolongée a permis à d'immenses incendies de forêt de se déclarer près de notre ville de %s2_city.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_TRIGGER_FOREST_FIRE_1</Tag>
@@ -12570,7 +12617,7 @@
     <TEXT>
         <Tag>TXT_KEY_EVENT_PRIME_STUD1_1</Tag>
         <English>We have found big and healthy studs; taking them into our herds will grant us better horses.</English>
-		<French>Nous avons trouvé de grands étalons en bonne santé ; les intégrer à nos troupeaux nous permettra d’obtenir de meilleurs chevaux.</French>
+		<French>Nous avons trouvé de grands étalons en bonne santé ; les intégrer à nos troupeaux nous permettra d'obtenir de meilleurs chevaux.</French>
     </TEXT>
     <TEXT>
         <Tag>TXT_KEY_EVENT_WISE_COUNCIL1_1</Tag>
@@ -12580,7 +12627,7 @@
     <TEXT>
         <Tag>TXT_KEY_EVENT_CHILD_LABOUR_INCIDENT1_1</Tag>
         <English>A tragic incident has happened in a labour camp near %s2_city. A few children were crushed and died working in unsafe conditions. We can't let this happen again.</English>
-		<French>Un incident tragique s’est produit dans un camp de travail près de %s2_city. Quelques enfants ont été écrasés et sont morts en travaillant dans des conditions dangereuses. Nous ne pouvons pas laisser cela se reproduire.</French>
+		<French>Un incident tragique s'est produit dans un camp de travail près de %s2_city. Quelques enfants ont été écrasés et sont morts en travaillant dans des conditions dangereuses. Nous ne pouvons pas laisser cela se reproduire.</French>
     </TEXT>
     <TEXT>
         <Tag>TXT_KEY_EVENTTRIGGER_BONUS_TAX</Tag>
@@ -12595,7 +12642,7 @@
     <TEXT>
         <Tag>TXT_KEY_EVENT_TRIGGER_BONUS_TAX_2</Tag>
         <English>The officium in %s2_city has reported that more tax has been collected than usual.</English>
-		<French>L’office fiscal de %s2_city a signalé que plus d’impôts ont été collectés que d’habitude.</French>
+		<French>l'office fiscal de %s2_city a signalé que plus d'impôts ont été collectés que d'habitude.</French>
     </TEXT>
     <TEXT>
         <Tag>TXT_KEY_EVENT_TRIGGER_BONUS_TAX_3</Tag>
@@ -12605,12 +12652,12 @@
     <TEXT>
         <Tag>TXT_KEY_EVENT_TRIGGER_COMMUNITY_BOND_1</Tag>
         <English>Our people sat around a small fire trying to warm up from the cold in %s2_city. Seeing everyone together and exchanging stories made the people feel more united.</English>
-		<French>Notre peuple s’est réuni autour d’un petit feu pour se réchauffer du froid à %s2_city. Voir tout le monde ensemble et échanger des histoires a renforcé le sentiment d’unité.</French>
+		<French>Notre peuple s'est réuni autour d'un petit feu pour se réchauffer du froid à %s2_city. Voir tout le monde ensemble et échanger des histoires a renforcé le sentiment d'unité.</French>
     </TEXT>
     <TEXT>
         <Tag>TXT_KEY_EVENT_TRIGGER_COMMUNITY_BOND_2</Tag>
         <English>A community discussion in %s2_city has recently made our people feel more united.</English>
-		<French>Une discussion communautaire à %s2_city a récemment renforcé le sentiment d’unité parmi notre peuple.</French>
+		<French>Une discussion communautaire à %s2_city a récemment renforcé le sentiment d'unité parmi notre peuple.</French>
     </TEXT>
     <TEXT>
         <Tag>TXT_KEY_EVENT_TRIGGER_COMMUNITY_BOND_3</Tag>
@@ -12625,17 +12672,17 @@
     <TEXT>
         <Tag>TXT_KEY_EVENT_TRIGGER_COMMUNITY_BOND_5</Tag>
         <English>People from %s2_city decided to organize a discussion on many topics in the town square. Our people are more united then ever.</English>
-		<French>Les habitants de %s2_city ont décidé d’organiser une discussion sur divers sujets sur la place du village. Notre peuple est plus uni que jamais.</French>
+		<French>Les habitants de %s2_city ont décidé d'organiser une discussion sur divers sujets sur la place du village. Notre peuple est plus uni que jamais.</French>
     </TEXT>
     <TEXT>
         <Tag>TXT_KEY_EVENT_TRIGGER_COMMUNITY_BOND_6</Tag>
         <English>Factory workers organized a union meeting to discuss events in %s2_city.</English>
-		<French>Les ouvriers d’usine ont organisé une réunion syndicale pour discuter des événements à %s2_city.</French>
+		<French>Les ouvriers d'usine ont organisé une réunion syndicale pour discuter des événements à %s2_city.</French>
     </TEXT>
     <TEXT>
         <Tag>TXT_KEY_EVENT_TRIGGER_COMMUNITY_BOND_7</Tag>
         <English>A local community near %s2_city decided to organize a event to discuss the wellbeing of the community.</English>
-		<French>Une communauté locale près de %s2_city a décidé d’organiser un événement pour discuter du bien-être de la communauté.</French>
+		<French>Une communauté locale près de %s2_city a décidé d'organiser un événement pour discuter du bien-être de la communauté.</French>
     </TEXT>
     <TEXT>
         <Tag>TXT_KEY_EVENT_TRIGGER_COMMUNITY_BOND_8</Tag>
@@ -12650,12 +12697,12 @@
     <TEXT>
         <Tag>TXT_KEY_EVENT_TRIGGER_GREAT_STORY_2</Tag>
         <English>A profound epic was recited in %s2_city, captivating the audience for a long time.</English>
-		<French>Une épopée profonde a été récitée à %s2_city, captivant l’audience pendant longtemps.</French>
+		<French>Une épopée profonde a été récitée à %s2_city, captivant l'audience pendant longtemps.</French>
     </TEXT>
     <TEXT>
         <Tag>TXT_KEY_EVENT_TRIGGER_GREAT_STORY_3</Tag>
         <English>A philosophical story captured the attention of the people in %s2_city. It was spoken about for days.</English>
-		<French>Une histoire philosophique a captivé l’attention des habitants de %s2_city. On en a parlé pendant des jours.</French>
+		<French>Une histoire philosophique a captivé l'attention des habitants de %s2_city. On en a parlé pendant des jours.</French>
     </TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_TRIGGER_HAPPY_HUNTING_1</Tag>
@@ -14218,7 +14265,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_TRIGGER_VOLCANO_EXTINCT</Tag>
 		<English>A sudden eruption has rocked the countryside and caused widespread destruction upon a new volcano's formation, though examination reveals that this site does bear some evidence of long-forgotten ancient volcanic activity. In the aftermath of this newer catastrophe the soil seems to have become tremendously fertile.</English>
-		<French>Une éruption soudaine a secoué la terre et causé de vastes destructions lors de la formation d’un nouveau volcan. Cependant, un examen révèle que ce site porte des traces d’une ancienne activité volcanique oubliée depuis longtemps. À la suite de cette nouvelle catastrophe, le sol semble être devenu extrêmement fertile.</French>
+		<French>Une éruption soudaine a secoué la terre et causé de vastes destructions lors de la formation d'un nouveau volcan. Cependant, un examen révèle que ce site porte des traces d'une ancienne activité volcanique oubliée depuis longtemps. À la suite de cette nouvelle catastrophe, le sol semble être devenu extrêmement fertile.</French>
 		<Italian>Un'improvvisa eruzione ha scosso la campagna e ha causato vaste distruzioni in seguito alla formazione di un nuovo vulcano, anche se a quanto pare pare che ci siano prove di un'antica attività vulcanica a lungo dimenticata. All'indomani di questa nuova catastrofe, il terreno sembra essere diventato estremamente fertile.</Italian>
 	</TEXT>
 	<TEXT>

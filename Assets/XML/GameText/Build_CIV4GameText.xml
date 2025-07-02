@@ -234,7 +234,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_DESERT_CAMP</Tag>
 		<English>Build [LINK=IMPROVEMENT_DESERT_CAMP]Desert Camp[\LINK]</English>
-		<French>Construire un [LINK=IMPROVEMENT_DESERT_CAMP]Camp de Desert[\LINK]</French>
+		<French>Construire un [LINK=IMPROVEMENT_DESERT_CAMP]Camp de désert[\LINK]</French>
 		<German>Errichte [LINK=IMPROVEMENT_DESERT_CAMP]Wuste feldlager[\LINK]</German>
 		<Italian>[LINK=IMPROVEMENT_DESERT_CAMP]Campo del deserto[\LINK] (costruzione)</Italian>
 		<Spanish>Construir un [LINK=IMPROVEMENT_DESERT_CAMP]Campamento de desierto[\LINK]</Spanish>
@@ -244,7 +244,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_DESERT_CAMP_KILL</Tag>
 		<English>Build [LINK=IMPROVEMENT_DESERT_CAMP]Desert Camp[\LINK] (Consumed)</English>
-		<French>Construire un [LINK=IMPROVEMENT_DESERT_CAMP]Camp de Desert[\LINK] (Consommé)</French>
+		<French>Construire un [LINK=IMPROVEMENT_DESERT_CAMP]Camp de Desert[\LINK] (détruit)</French>
 		<German>Errichte [LINK=IMPROVEMENT_DESERT_CAMP]Wuste feldlager[\LINK] (Consumed)</German>
 		<Italian>[LINK=IMPROVEMENT_DESERT_CAMP]Campo del deserto[\LINK] (unità consumata)</Italian>
 		<Spanish>Construir un [LINK=IMPROVEMENT_DESERT_CAMP]Campamento de desierto[\LINK] (Consumed)</Spanish>
@@ -855,21 +855,25 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_SALT_GATHERER</Tag>
 		<English>Build [LINK=IMPROVEMENT_SALT_GATHERER]Salt Gatherer[\LINK]</English>
+		<French>Construire [LINK=IMPROVEMENT_SALT_GATHERER]Champ de collecte de sel[\LINK]</French>
 		<Italian>[LINK=IMPROVEMENT_SALT_GATHERER]Campo di raccolta di sale[\LINK] (costruzione)</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_SALT_GATHERER_KILL</Tag>
 		<English>Build [LINK=IMPROVEMENT_SALT_GATHERER]Salt Gatherer[\LINK] (Consumed)</English>
+		<French>Construire [LINK=IMPROVEMENT_SALT_GATHERER]Champ de collecte de sel[\LINK] (détruit)</French>
 		<Italian>[LINK=IMPROVEMENT_SALT_GATHERER]Campo di raccolta di sale[\LINK] (unità consumata)</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_SANITIZE</Tag>
 		<English>Remove [LINK=FEATURE_INFECTIOUS_SMOG]Biological Contamination[\LINK]</English>
+		<French>Éliminer la [LINK=FEATURE_INFECTIOUS_SMOG]contamination biologique[\LINK]</French>
 		<Italian>[LINK=FEATURE_INFECTIOUS_SMOG]Smog infettivo[\LINK] (rimozione)</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_SANITIZE_WATER</Tag>
 		<English>Remove [LINK=TERRAIN_INFECTED_WATER]Biological Contamination[\LINK] (Water)</English>
+		<French>Éliminer la [LINK=TERRAIN_INFECTED_WATER]contamination biologique[\LINK] (eau)</French>
 		<Italian>[LINK=TERRAIN_INFECTED_WATER]Acqua contaminata[\LINK] (rimozione)</Italian>
 	</TEXT>
 	<TEXT>
@@ -1025,58 +1029,70 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_TERRAFORM_DESERT</Tag>
 		<English>Terraform into [LINK=TERRAIN_DESERT]Desert[\LINK]</English>
+		<French>Terraformer en [LINK=TERRAIN_DESERT]désert[\LINK]</French>
 		<Italian>[LINK=TERRAIN_DESERT]Deserto[\LINK] (terraformazione)</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_TERRAFORM_DUNES</Tag>
 		<English>Terraform into [LINK=TERRAIN_DUNES]Dunes[\LINK]</English>
+		<French>Terraformer en [LINK=TERRAIN_DUNES]dunes[\LINK]</French>
 		<Italian>[LINK=TERRAIN_DUNES]Dune[\LINK] (terraformazione)</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_TERRAFORM_GRASS</Tag>
 		<English>Terraform into [LINK=TERRAIN_GRASSLAND]Grassland[\LINK]</English>
+		<French>Terraformer en [LINK=TERRAIN_GRASSLAND]prairie[\LINK]</French>
 		<Italian>[LINK=TERRAIN_GRASSLAND]Prateria[\LINK] (terraformazione)</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_TERRAFORM_LUSH</Tag>
 		<English>Terraform into [LINK=TERRAIN_LUSH]Lush[\LINK]</English>
+		<French>Terraformer en [LINK=TERRAIN_LUSH]forêt luxuriante[\LINK]</French>
 		<Italian>[LINK=TERRAIN_LUSH]Foresta tropicale[\LINK] (terraformazione)</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_TERRAFORM_MUDDY</Tag>
 		<English>Terraform into [LINK=TERRAIN_MUDDY]Muddy[\LINK]</English>
+		<French>Terraformer en [LINK=TERRAIN_MUDDY]terrain boueux[\LINK]</French>
 		<Italian>[LINK=TERRAIN_MUDDY]Terreno fangoso[\LINK] (terraformazione)</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_TERRAFORM_PERMAFROST</Tag>
 		<English>Terraform into [LINK=TERRAIN_PERMAFROST]Permafrost[\LINK]</English>
+		<French>Terraformer en [LINK=TERRAIN_PERMAFROST]pergélisol[\LINK]</French>
 		<Italian>[LINK=TERRAIN_PERMAFROST]Permafrost[\LINK] (terraformazione)</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_TERRAFORM_PLAINS</Tag>
 		<English>Terraform into [LINK=TERRAIN_PLAINS]Plains[\LINK]</English>
+		<French>Terraformer en [LINK=TERRAIN_PLAINS]plaine[\LINK]</French>
 		<Italian>[LINK=TERRAIN_PLAINS]Pianura[\LINK] (terraformazione)</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_TERRAFORM_ROCKY</Tag>
 		<English>Terraform into [LINK=TERRAIN_ROCKY]Rocky[\LINK]</English>
+		<French>Terraformer en [LINK=TERRAIN_ROCKY]terrain rocheux[\LINK]</French>
 		<Italian>[LINK=TERRAIN_ROCKY]Terreno roccioso[\LINK] (terraformazione)</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_TERRAFORM_SCRUB</Tag>
 		<English>Terraform into [LINK=TERRAIN_SCRUB]Scrub[\LINK]</English>
+		<French>Terraformer en [LINK=TERRAIN_SCRUB]broussailles[\LINK]</French>
 		<Italian>[LINK=TERRAIN_SCRUB]Macchia[\LINK] (terraformazione)</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_TERRAFORM_TAIGA</Tag>
 		<English>Terraform into [LINK=TERRAIN_TAIGA]Taiga[\LINK]</English>
+		<French>Terraformer en [LINK=TERRAIN_TAIGA]taïga[\LINK]</French>
 		<Italian>[LINK=TERRAIN_TAIGA]Taiga[\LINK] (terraformazione)</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_TERRAFORM_TUNDRA</Tag>
 		<English>Terraform into [LINK=TERRAIN_TUNDRA]Tundra[\LINK]</English>
+		<French>Terraformer en [LINK=TERRAIN_TUNDRA]toundra[\LINK]</French>
 		<Italian>[LINK=TERRAIN_TUNDRA]Tundra[\LINK] (terraformazione)</Italian>
 	</TEXT>
+
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_THATCH_CUTTER</Tag>
 		<English>Build [LINK=IMPROVEMENT_THATCH_CUTTER]Thatch Cutter[\LINK]</English>
@@ -1201,6 +1217,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_WHALING_SHIPS</Tag>
 		<English>Build [LINK=IMPROVEMENT_WHALING_SHIPS]Whaling Ships[\LINK]</English>
+		<French>Construire des [LINK=IMPROVEMENT_WHALING_SHIPS]navires baleiniers[\LINK]</French>
 		<Italian>[LINK=IMPROVEMENT_WHALING_SHIPS]Baleniere (navi)[\LINK] (costruzione)</Italian>
 	</TEXT>
 	<TEXT>

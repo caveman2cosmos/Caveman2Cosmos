@@ -145,6 +145,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENTHELP_UPGRADE_BLOCKED</Tag>
 		<English>[COLOR_YELLOW] No upgrade available[COLOR_REVERT]</English>
+		<French>[COLOR_YELLOW] Aucune amélioration disponible[COLOR_REVERT]</French>
 		<Italian> ([COLOR_YELLOW]nessun miglioramento disponibile[COLOR_REVERT])</Italian>
 		<Russian>[COLOR_YELLOW] Нет доступных обновлений[COLOR_REVERT]</Russian>
 	</TEXT>
@@ -1816,7 +1817,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_SALT_GATHERER</Tag>
 		<English>Salt Gatherer</English>
-		<French>Récolteur de Sel</French>
+		<French>Champ de collecte de sel</French>
 		<Italian>Campo di raccolta di sale</Italian>
 		<Polish>Zbieracz Soli</Polish>
 		<Russian>Ñîëÿíîé êàðüåð</Russian>
@@ -1824,6 +1825,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_SALT_MINE_PEDIA</Tag>
 		<English>New ideas from the Shire book "The Salt Industry" by Andrew and Annelise Fielding.</English>
+		<French>Nouvelles idées tirées du livre du Shire "L'industrie du sel" d'Andrew et Annelise Fielding.</French>
 		<Polish>Kopalnia soli - kopalnia eksploatuj&#185;ca z&#179;o&#191;e solne typowymi wyrobiskami g&#243;rniczymi (g&#179;&#234;binowymi) w odr&#243;&#191;nieniu od kopalni solankowej.</Polish>
 		<Russian>Новые идеи из книги Шира «Соляная промышленность» Эндрю и Аннелиз Филдинг.</Russian>
 	</TEXT>
@@ -1868,6 +1870,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_SCAVENGING_CAMP_PEDIA</Tag>
 		<English>A Scavenging Camp provides extra food. If built on an animal resource (for example [COLOR_HIGHLIGHT_TEXT]cow[COLOR_REVERT]) it also provides the resource.</English>
+		<French>Un camp de récupération fournit de la nourriture supplémentaire. S'il est construit sur une ressource animale (par exemple [COLOR_HIGHLIGHT_TEXT]vache[COLOR_REVERT]), il fournit également la ressource.</French>
 		<German>Bevor entsprechende Waffen und Jagdtechniken entwickelt wurden, waren die Menschen gezwungen, sich die tierischen Bestandteile ihrer Nahrung wie Fleisch und Knochenmark zusammenzusuchen. [COLOR_BUILDING_TEXT]Fleischsammler[COLOR_REVERT] gingen auf die Suche nach kleinen Tieren wie Ameisen und Würmern. Wenn sich die Möglichkeit bot, wurden aber auch verwertbare Stücke von toten Tieren eingesammelt. Hierbei musste behutsam vorgegangen werden, denn zu Beginn des Fäulnisprozesses ist das Fleisch für Menschen zwar noch essbar, bereits stärker verwestes Fleisch wird jedoch ungenießbar und führt zu Krankheit oder gar dem Tod. Dies liegt an den enthaltenen Bakterien und den von ihnen produzierten Abbauprodukten wie z.B. Botulinumtoxin, die für den Menschen stark toxisch sind.</German>
 		<Italian>Un cercatore di carcasse fornisce cibo extra. Se costruito su una risorsa di animali (ad esempio [COLOR_HIGHLIGHT_TEXT]Bovino[COLOR_REVERT]) fornisce anche la risorsa. Diventa, se lavorato, un pascolo nomade con la tecnologia [COLOR_TECH_TEXT]Addomesticazione della megafauna[COLOR_REVERT].</Italian>
 		<Spanish>Un Campamento de recolección proporciona alimentos adicionales. Si se construye sobre un recurso animal (como las [COLOR_HIGHLIGHT_TEXT]Reses[COLOR_REVERT]) proporciona también dicho recurso. Mejora, si se trabaja la casilla, a un Pastizal nómada con la [COLOR_TECH_TEXT]Domesticación de mastodontes[COLOR_REVERT].</Spanish>
@@ -1890,7 +1893,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_SEED_CAMP</Tag>
 		<English>Seed Camp</English>
-		<French>Dépot de graines</French>
+		<French>Dépôt de graines</French>
 		<German>
 			<Text>Körnersammler</Text>
 			<Gender>Male</Gender>

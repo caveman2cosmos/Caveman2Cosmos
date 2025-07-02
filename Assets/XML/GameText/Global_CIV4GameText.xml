@@ -5084,26 +5084,31 @@
 	<TEXT>
 		<Tag>TXT_KEY_CULTURELEVEL_MINISCULE</Tag>
 		<English>Miniscule</English>
+		<French>Minuscule</French>
 		<Russian>Маленький</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CULTURELEVEL_MINOR</Tag>
 		<English>Minor</English>
+		<French>Mineure</French>
 		<Russian>Незначительный</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CULTURELEVEL_TREMENDOUS</Tag>
 		<English>Tremendous</English>
+		<French>Énorme</French>
 		<Russian>Великолепный</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CULTURELEVEL_STUPENDOUS</Tag>
 		<English>Stupendous</English>
+		<French>Stupéfiante</French>
 		<Russian>Потрясающий</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CULTURELEVEL_MAJESTIC</Tag>
 		<English>Majestic</English>
+		<French>Majestueuse</French>
 		<Russian>Величественный</Russian>
 	</TEXT>
 	<TEXT>
@@ -7182,6 +7187,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_FEATURE_AURORA_PEDIA</Tag>
 		<English>An aurora is a natural light display in the sky particularly in the high latitude (Arctic and Antarctic) regions, caused by the collision of energetic charged particles with atoms in the high altitude atmosphere. The charged particles originate in the magnetosphere and solar wind and are directed by the Earth's magnetic field into the atmosphere. In northern latitudes, the effect is known as the aurora borealis. Its southern counterpart, the aurora australis, changes simultaneously with changes in the northern auroral zone and is visible from high southern latitudes in Antarctica, South America, New Zealand, and Australia.</English>
+		<French>Une aurore est une manifestation naturelle de lumière dans le ciel, particulièrement visible dans les régions de hautes latitudes (Arctique et Antarctique), causée par la collision de particules chargées énergétiques avec les atomes de la haute atmosphère. Ces particules proviennent de la magnétosphère et du vent solaire, et sont dirigées vers l'atmosphère par le champ magnétique terrestre. Dans les latitudes nord, ce phénomène est appelé aurore boréale. Son pendant austral, l'aurore australe, évolue en même temps que la zone aurorale du nord et est visible depuis les hautes latitudes sud en Antarctique, en Amérique du Sud, en Nouvelle-Zélande et en Australie.</French>
 		<German>[COLOR_HIGHLIGHT_TEXT]Polarlichter[COLOR_REVERT] sind Leuchterscheinungen, die in der Nähe der Magnetpole auftreten. Sie entstehen durch elektrisch geladene Teilchen des Sonnenwinds, die auf Sauerstoff- oder Stickstoffatome der Erdatmosphäre treffen und diese ionisieren. Das passiert häufig auf der Nord- und gelegentlich auch auf der Südhalbkugel. Auch in Mitteleuropa kann dieses Phänomen auftreten, jedoch nur bei starken Sonneneruptionen. Die Farben der Polarlichter variieren von Grün bis Rot. Es gibt verschiedene Arten, die von den Sonnenwinden abhängig sind: Corona, Vorhänge, ruhige Bögen und Bänder. Durch die magnetische Störung während eines Polarlichts treten mitunter Geräusche auf, die dem Radiorauschen ähneln.</German>
 		<Polish>Zorza polarna (Aurora borealis, aurora australis) - zjawisko &#156;wietlne obserwowane w g&#243;rnej atmosferze w pobli&#191;u biegun&#243;w magnetycznych planety, kt&#243;ra posiada silne pole magnetyczne o charakterze dipolowym (dwubiegunowym). Na Ziemi zorze wyst&#234;puj&#185; na wysokich szeroko&#156;ciach geograficznych, g&#179;&#243;wnie za ko&#179;ami podbiegunowymi, chocia&#191; w sprzyjaj&#185;cych warunkach bywaj&#185; widoczne nawet w okolicach 50. r&#243;wnole&#191;nika. Zdarza si&#234;, &#191;e zorze polarne na p&#243;&#179;kuli p&#243;&#179;nocnej obserwowane s&#185; nawet w krajach &#156;r&#243;dziemnomorskich. Na p&#243;&#179;kuli p&#243;&#179;nocnej zorza jest okre&#156;lana &#179;aci&#241;sk&#185; nazw&#185; Aurora borealis, a po&#179;udniowa zorza polarna nosi nazw&#234; Aurora australis.</Polish>
 		<Russian>Ïîëÿðíîå ñèÿíèå - ïîðàçèòåëüíîå ÿâëåíèå ñâå÷åíèÿ, íàáëþäàåìîå íà íåáå, ÷àùå âñåãî â ïîëÿðíûõ îáëàñòÿõ. Â Ñåâåðíîì ïîëóøàðèè åãî íàçûâàþò òàêæå ñåâåðíûì ñèÿíèåì, à â âûñîêèõ øèðîòàõ Þæíîãî ïîëóøàðèÿ - þæíûì.[PARAGRAPH:2]Ïðèðîäà è ïðîèñõîæäåíèå ïîëÿðíûõ ñèÿíèé - ïðåäìåò èíòåíñèâíûõ èññëåäîâàíèé, è â ýòîé ñâÿçè áûëè ðàçðàáîòàíû ìíîãî÷èñëåííûå òåîðèè. ßâëåíèå ñâå÷åíèÿ, äî íåêîòîðîé ñòåïåíè áëèçêîå ïîëÿðíûì ñèÿíèÿì, íàçûâàåìîå «ñâå÷åíèåì íî÷íîãî íåáà», ìîæíî íàáëþäàòü ïðè ïîìîùè ñïåöèàëüíûõ ïðèáîðîâ íà ëþáîé øèðîòå.[PARAGRAPH:1]Ïðåäïîëàãàåòñÿ, ÷òî ýòîò ôåíîìåí ñóùåñòâóåò òàêæå è â àòìîñôåðàõ äðóãèõ ïëàíåò, íàïðèìåð Âåíåðû.</Russian>
@@ -8383,16 +8389,19 @@
 	<TEXT>
 		<Tag>TXT_KEY_FOREST_FIRE_CITY_VICINITY</Tag>
 		<English>There's been a forest fire close to %s1.</English>
+		<French>Un incendie de forêt s'est déclaré près de %s1.</French>
 		<Russian>Рядом с городом %s1 произошел лесной пожар.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_FOREST_FIRE_REMOTE</Tag>
 		<English>There's been reports about a forest fire in the remote countryside.</English>
+		<French>Des rapports font état d'un incendie de forêt dans une région rurale isolée.</French>
 		<Russian>Поступали сообщения о лесном пожаре в глухой деревне.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_FOREST_FIRE_UNIT_LOST</Tag>
 		<English>%s1 perished in the fire!</English>
+		<French>%s1 [NUM1:a:a:ont:ont] péri dans l'incendie !</French>
 		<Russian>%s1 погиб в огне!</Russian>
 	</TEXT>
 	<TEXT>
@@ -13338,8 +13347,8 @@
 	<TEXT>
 		<Tag>TXT_KEY_MISC_BORDERS_EXPANDED</Tag>
 		<English>[COLOR_MAGENTA]The culture of %s1_CityName has grown, and is now considered %s2_LevelName![COLOR_REVERT]</English>
-	<French>[COLOR_MAGENTA]La culture de %s1_CityName s’est développée et est désormais considérée comme %s2_LevelName ![COLOR_REVERT]</French>
-</TEXT>
+		<French>[COLOR_MAGENTA]La culture de %s1_CityName s'est développée et est désormais considérée comme %s2_LevelName ![COLOR_REVERT]</French>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISC_BUILDING_BOMBARD_DEFENSE_HOVER</Tag>
 		<English>Bombard Resistance: %d1%[ICON_DEFENSE]</English>
@@ -14527,6 +14536,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_MISC_ENEMY_TROOPS_SPOTTED</Tag>
 		<English>The enemy has been spotted near %s1_CityName!</English>
+		<French>Un ennemi a été repéré près de %s1_CityName!</French>
 		<German>Feinde wurden nahe %s1_CityName gesichtet!</German>
 		<Russian>Враг был замечен рядом с %s1_CityName!</Russian>
 		<Italian>Il nemico è stato avvistato vicino alla città di %s1_CityName!</Italian> <!-- Message Log Screen -->
@@ -18800,6 +18810,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_MORECIV4LERTS_CITY_TO_EXPAND_RCS</Tag>
 		<English>[COLOR_MAGENTA]The culture of %s1 is about to reach a new threshold.[COLOR_REVERT]</English>
+		<French>[COLOR_MAGENTA]La culture de %s1 est sur le point d’atteindre un nouveau seuil.[COLOR_REVERT]</French>
 		<Italian>[COLOR_MAGENTA]La cultura della città di %s1 sta per raggiungere un nuovo livello.[COLOR_REVERT]</Italian> <!-- Message in the Event Log -->
 	</TEXT>
 	<TEXT>

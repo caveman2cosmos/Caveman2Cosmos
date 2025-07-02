@@ -178,12 +178,13 @@
 	<TEXT>
 		<Tag>TXT_KEY_TECHHELP_LANGUAGE</Tag>
 		<English>[ICON_BULLET]Enables folklore heritage.</English>
+		<French>[ICON_BULLET]Permet le patrimoine folklorique.</French>
 		<German>[ICON_BULLET]ermöglicht Folklore und kulturelles Erbe</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECHHELP_ERA_ADVANCE</Tag>
 		<English>[ICON_BULLET]Advances to the [COLOR_HIGHLIGHT_TEXT]%s1_era[COLOR_REVERT] Era</English>
-		<French>[ICON_BULLET]Avance à l'époque : [COLOR_HIGHLIGHT_TEXT]%s1_era[COLOR_REVERT]</French>
+		<French>[ICON_BULLET]Fait avancer à l'époque : [COLOR_HIGHLIGHT_TEXT]%s1_era[COLOR_REVERT]</French>
 		<German>[ICON_BULLET]Fortschritt zum Zeitalter [COLOR_HIGHLIGHT_TEXT]%s1_era[COLOR_REVERT]</German>
 		<Italian>[ICON_BULLET]Avanza all'era [COLOR_HIGHLIGHT_TEXT]%s1_era[COLOR_REVERT]</Italian>
 		<Spanish>[ICON_BULLET]Avanza a la era [NUM1:del:de la:de los:de las] [COLOR_HIGHLIGHT_TEXT]%s1_era[COLOR_REVERT]</Spanish>
@@ -191,7 +192,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_TECHHELP_FIRST_FREE_PROPHET</Tag>
 		<English>[ICON_BULLET]First to Discover Receives a [COLOR_TECH_TEXT]Free Great Prophet[COLOR_REVERT]</English>
-		<French>[ICON_BULLET]Le Premier à découvrir reçoit un [COLOR_TECH_TEXT]Prophète Illustre[COLOR_REVERT] Gratuit</French>
+		<French>[ICON_BULLET]Le Premier à le découvrir reçoit un [COLOR_TECH_TEXT]Prophète Illustre[COLOR_REVERT] Gratuit</French>
 		<Polish>[ICON_BULLET]Nagroda za pierwsze odkrycie: [COLOR_TECH_TEXT]Darnowy Wielki Prorok[COLOR_REVERT]</Polish>
 		<Russian>[ICON_BULLET]Первооткрыватель получит бесплатного [COLOR_TECH_TEXT]Великого пророка[COLOR_REVERT]</Russian>
 		<Italian>[ICON_BULLET]La [COLOR_HIGHLIGHT_TEXT]prima civiltà[COLOR_REVERT] che scopre questa tecnologia riceverà un [COLOR_HIGHLIGHT_TEXT]gran profeta gratuito[COLOR_REVERT]</Italian> <!-- any religion tech with prophets mod -->
@@ -199,7 +200,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_TECHHELP_FIRST_FREE_TECH</Tag>
 		<English>[ICON_BULLET]First to Discover Receives a [COLOR_TECH_TEXT]Free Technology[COLOR_REVERT]</English>
-		<French>[ICON_BULLET]Faire une découverte avant les autres octroie une [COLOR_TECH_TEXT]technologie[COLOR_REVERT] gratuite</French>
+		<French>[ICON_BULLET]Faire cette découverte avant les autres octroie une [COLOR_TECH_TEXT]technologie[COLOR_REVERT] gratuite</French>
 		<German>[ICON_BULLET]Der erste Entdecker erhält eine [COLOR_TECH_TEXT]freie Technologie[COLOR_REVERT]</German>
 		<Italian>[ICON_BULLET]La [COLOR_HIGHLIGHT_TEXT]prima civiltà[COLOR_REVERT] che ricerca questa tecnologia riceverà [COLOR_HIGHLIGHT_TEXT]una tecnologia gratuita[COLOR_REVERT]</Italian> <!--tech Sedentary Lifestyle-->
 		<Spanish>[ICON_BULLET]Quien haga primero su descubrimiento recibirá [COLOR_TECH_TEXT]una tecnología gratis[COLOR_REVERT]</Spanish>
