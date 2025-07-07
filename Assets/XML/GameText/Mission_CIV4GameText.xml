@@ -1177,7 +1177,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISSION_START_GOLDENAGE_HELP</Tag>
-		<English>This order will consume one or more Great People (of different types) and initiate a Golden Age (extra [ICON_PRODUCTION], [ICON_COMMERCE], [ICON_GREATPEOPLE], no Anarchy).</English>
+		<English>This order consumes one or more Great People to start a Golden Age. If multiple are needed, they must be of different types (e.g., not two Great Prophets). Great Generals and Admirals do not count. Bonus to: [ICON_PRODUCTION], [ICON_COMMERCE], [ICON_GREATPEOPLE], no Anarchy.</English>
 		<French>Cette ordre consommera plusieurs personnages illustres (de types différents) et déclenchera un âge d'or ([ICON_PRODUCTION], [ICON_COMMERCE], [ICON_GREATPEOPLE] supplémentaires, pas d'anarchie).</French>
 		<German>Opfern Sie eine oder mehrere Große Persönlichkeiten (unterschiedlicher Klassen), um ein Goldenes Zeitalter (zusätzliche [ICON_PRODUCTION], [ICON_COMMERCE], [ICON_GREATPEOPLE], keine Anarchie) zu begründen.</German>
 		<Italian>[NEWLINE]Consumando nel processo uno o più gran personaggi (di tipi differenti), si avvia un'età dell'oro (extra [ICON_PRODUCTION], [ICON_COMMERCE], [ICON_GREATPEOPLE], nessuna anarchia per i cambi di forma di governo).</Italian>
