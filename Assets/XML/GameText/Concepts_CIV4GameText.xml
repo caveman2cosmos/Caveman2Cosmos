@@ -125,6 +125,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_CONCEPT_ACTIVE_DEFENSE_PEDIA</Tag>
 		<English>[BOLD]The settings for Advanced Combat Odds can be found in the "RevDCM" tab of the [LINK=CONCEPT_C2C_BUGOPTIONS]BUG options page[\LINK].[\BOLD][PARAGRAPH:2]Active Defense allows patrolling fighters to engage enemy troops approaching them. This includes fighters on patrol in any location, whether a city, carrier, or elsewhere. They will automatically launch an airstrike when an enemy comes within 2 plots of the aircraft.</English>
+		<French>[BOLD]Les réglages des chances de combat avancées se trouvent dans l'onglet ::RevDCM:: de la page des options [LINK=CONCEPT_C2C_BUGOPTIONS]BUG[\LINK].[\BOLD][PARAGRAPH:2]La défense active permet aux chasseurs en patrouille d'attaquer les troupes ennemies qui s'approchent. Cela inclut les chasseurs en patrouille en ville, sur porte-avions ou ailleurs. Ils lanceront automatiquement une frappe aérienne lorsqu'un ennemi se trouve à moins de 2 cases de l'avion.</French>
 		<German>Aktive Verteidigung erlaubt es patrouillierenden Jägern feindliche Truppen anzugreifen, die sich ihnen nähern. Dies betrifft Jäger auf Patrouille in beliebigen Geländefeldern (Stadt, Flugzeugträger, etc.). Sie werden automatisch den Luftkampf starten, wenn sich der Feind auf 2 Felder Entfernung nähert.</German>
 		<Italian>Difesa Attiva consente ai caccia in pattugliamento di attaccare unità nemiche in avvicinamento. Questo include tutti i caccia in pattuglia su ogni obbiettivo (città, portaerei, ecc.). I caccia attaccheranno automaticamente il nemico quando questo si avvicinerà nel raggio di 2 caselle.</Italian>
 		<Russian>[H1]Àêòèâíàÿ îáîðîíà[\H1][PARAGRAPH:2]Â ýòîì ðåæèìå èñòðåáèòåëè, îõðàíÿþùèå òåððèòîðèþ, áóäóò àòàêîâàòü ïðèáëèæàþùèåñÿ âðàæåñêèå þíèòû. Ìåñòî áàçèðîâàíèÿ àâèàöèè ìîæåò áûòü ëþáûì (ãîðîä, àâèàíîñåö è ò.ä.). Èñòðåáèòåëè àâòîìàòè÷åñêè âñòóïÿò â áîé, åñëè ïðîòèâíèê ïîäîéäåò áëèæå, ÷åì íà 2 êëåòêè.[PARAGRAPH:2]</Russian>
@@ -397,8 +398,9 @@
 	<TEXT>
 		<Tag>TXT_KEY_CONCEPT_BUG_CITY_CYCLE_ARROWS</Tag>
 		<English>1. City Cycle Arrows</English>
-		<Spanish>1. Flechas para recorrer ciudades</Spanish>
+		<French>1. Flèches de cycle de ville</French>
 		<Russian>1. Áûñòðûé ïðîñìîòð ãîðîäîâ</Russian>
+		<Spanish>1. Flechas para recorrer ciudades</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CONCEPT_BUG_CITY_CYCLE_ARROWS_PEDIA</Tag>
@@ -407,18 +409,21 @@
 	<TEXT>
 		<Tag>TXT_KEY_CONCEPT_BUG_CULTURAL_AND_GREAT_PERSON_TURNS</Tag>
 		<English>3. Culture and GP Turns</English>
-		<Spanish>3. Turnos para expansión y Gran personaje</Spanish>
+		<French>3. Nombre de tours pour culture et grande personnalité</French>
 		<Russian>3. Ïàíåëü êóëüòóðû è Â×</Russian>
+		<Spanish>3. Turnos para expansión y Gran personaje</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CONCEPT_BUG_CULTURAL_AND_GREAT_PERSON_TURNS_PEDIA</Tag>
 		<English>[BOLD]The settings for Culture and Great Person Turn bars can be found in the "General" and "City Screen" tabs of the [LINK=CONCEPT_C2C_BUGOPTIONS]BUG options page[\LINK].[\BOLD][PARAGRAPH:2]by Chinese American[PARAGRAPH:2]This will add a bar to the City View that will show many turns are left until Culture will expand in the current city screen, as well as turns to a Great Person in the city screen.</English>
+		<French>[BOLD]Les réglages pour les barres de tours de Culture et de Grande Personnalité se trouvent dans les onglets ::General:: et ::City Screen:: de la page des options [LINK=CONCEPT_C2C_BUGOPTIONS]BUG[\LINK].[\BOLD][PARAGRAPH:2]par Chinese American[PARAGRAPH:2]Cela ajoute une barre à l'affichage de la ville indiquant le nombre de tours avant l'expansion de la culture ainsi que le nombre de tours avant l'arrivée d'une Grande Personnalité.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CONCEPT_BUG_GREAT_PERSON_PROGRESS_BAR</Tag>
 		<English>3. Great General Progress Bar</English>
-		<Spanish>3. Barra de progreso hacia Gran general</Spanish>
+		<French>3. Barre de progression du Grand Général</French>
 		<Russian>3. Îòñ÷åò âåëèêèõ ãåíåðàëîâ</Russian>
+		<Spanish>3. Barra de progreso hacia Gran general</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CONCEPT_BUG_GREAT_PERSON_PROGRESS_BAR_PEDIA</Tag>
@@ -427,8 +432,9 @@
 	<TEXT>
 		<Tag>TXT_KEY_CONCEPT_BUG_IMPROVED_GLANCE_TAB</Tag>
 		<English>1. Improved Glance Tab</English>
-		<Spanish>1. Pestaña "Mirar" mejorada</Spanish>
+		<French>1. Onglet Regard amélioré</French>
 		<Russian>1. Óëó÷øåííûé îáçîð</Russian>
+		<Spanish>1. Pestaña "Mirar" mejorada</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CONCEPT_BUG_IMPROVED_GLANCE_TAB_PEDIA</Tag>
@@ -437,8 +443,9 @@
 	<TEXT>
 		<Tag>TXT_KEY_CONCEPT_BUG_MILITARY_ADVISOR</Tag>
 		<English>1. BUG Military Advisor</English>
-		<Spanish>1. Consejero militar de BUG</Spanish>
+		<French>1. Conseiller militaire BUG</French>
 		<Russian>1. Íîâûé âîåííûé ñîâåòíèê</Russian>
+		<Spanish>1. Consejero militar de BUG</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CONCEPT_BUG_MILITARY_ADVISOR_PEDIA</Tag>
@@ -448,17 +455,20 @@
 	<TEXT>
 		<Tag>TXT_KEY_CONCEPT_BUG_NOT_JUST_ANOTHER_GAME_CLOCK</Tag>
 		<English>3. Not Just Another Game Clock</English>
+		<French>3. Pas juste une autre horloge de jeu</French>
 		<Russian>3. Ïàíåëü èíôîðìàöèè</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CONCEPT_BUG_NOT_JUST_ANOTHER_GAME_CLOCK_PEDIA</Tag>
 		<English>by TheLopez[PARAGRAPH:2]Just as the mod title says, this is not just another game clock mod. It is much, much more. This mod provides you the flexibility to most if not all of its different features. There are 12 main variables and one additional variable per era that can be used to configure the Not Just Another Game Clock Mod display information. Those variables are configurable within the BUG Options Screen.</English>
+		<French>par TheLopez[PARAGRAPH:2]Comme le titre du mod l'indique, ce n'est pas juste une autre horloge de jeu. C'est bien plus que ça. Ce mod offre la flexibilité de configurer la plupart, voire toutes, ses fonctionnalités. Il y a 12 variables principales et une variable supplémentaire par ère pour configurer l'affichage. Ces variables sont modifiables dans les options BUG.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CONCEPT_BUG_OVERLAY</Tag>
 		<English>1. Strategy Overlay</English>
-		<Spanish>1. Capa estratégica</Spanish>
+		<French>1. Superposition de stratégie</French>
 		<Russian>1. Ñòðàòåãè÷åñêîå ïëàíèðîâàíèå</Russian>
+		<Spanish>1. Capa estratégica</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CONCEPT_BUG_OVERLAY_PEDIA</Tag>
@@ -467,8 +477,9 @@
 	<TEXT>
 		<Tag>TXT_KEY_CONCEPT_BUG_RAW_YIELDS</Tag>
 		<English>3. Raw Yields</English>
-		<Spanish>3. Rendimientos en bruto</Spanish>
+		<French>3. Rendements bruts</French>
 		<Russian>3. Ïàíåëü ðåñóðñîâ</Russian>
+		<Spanish>3. Rendimientos en bruto</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CONCEPT_BUG_RAW_YIELDS_PEDIA</Tag>
@@ -477,8 +488,9 @@
 	<TEXT>
 		<Tag>TXT_KEY_CONCEPT_BUG_REMINDERS</Tag>
 		<English>3. Reminders</English>
-		<Spanish>3. Notificaciones</Spanish>
+		<French>3. Rappels</French>
 		<Russian>3. Íàïîìèíàíèÿ</Russian>
+		<Spanish>3. Notificaciones</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CONCEPT_BUG_REMINDERS_PEDIA</Tag>
@@ -487,8 +499,9 @@
 	<TEXT>
 		<Tag>TXT_KEY_CONCEPT_BUG_WHIP_ASSISTANT</Tag>
 		<English>3. Whip Assistant</English>
-		<Spanish>3. Asistente para sacrificio</Spanish>
+		<French>3. Assistant fouet</French>
 		<Russian>3. Ïîìîøíèê ðàáîâëàäåëüöà</Russian>
+		<Spanish>3. Asistente para sacrificio</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CONCEPT_BUG_WHIP_ASSISTANT_PEDIA</Tag>
@@ -506,6 +519,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_CONCEPT_C2C_TERRAINS</Tag>
 		<English>1. Terrain in C2C</English>
+		<French>1. Terrains dans C2C</French>
 		<German>1. Gelände in C2C</German>
 		<Russian>1. Ландшафт в C2C</Russian>
 	</TEXT>
@@ -918,6 +932,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_CONCEPT_FENGAGE_PEDIA</Tag>
 		<English>[BOLD]The settings for "Fighter Engagement" can be found in the "RevDCM" tab of the [LINK=CONCEPT_C2C_BUGOPTIONS]BUG options page[\LINK].[\BOLD][PARAGRAPH:2]Fighter Engagement allows fighters to attack enemy fighters in the air or on the ground, and "Active Fighter Defense" allows fighters on patrol duty to do the same.</English>
+		<French>[BOLD]Les réglages pour ::Engagement des chasseurs:: se trouvent dans l'onglet ::RevDCM:: de la page d'options [LINK=CONCEPT_C2C_BUGOPTIONS]BUG[\LINK].[\BOLD][PARAGRAPH:2]L'engagement des chasseurs permet d'attaquer les chasseurs ennemis dans les airs ou au sol, et ::la défense active des chasseurs:: permet aux chasseurs en patrouille de faire de même.</French>
 		<German>Jägereinsatz ermöglicht es Jägern, feindliche Jäger in der Luft oder am Boden anzugreifen.</German>
 		<Italian>"Ingaggio" consente alle unità aeree da caccia di attaccare i caccia nemici a terra o in volo.</Italian>
 		<Russian>[H1]Áîé èñòðåáèòåëåé[\H1][PARAGRAPH:2]Èñòðåáèòåëè îäíîé äåðæàâû ìîãóò àòàêîâàòü èñòðåáèòåëè äðóãîé äåðæàâû êàê â âîçäóõå, òàê è íà çåìëå.[PARAGRAPH:2]</Russian>
@@ -1043,6 +1058,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_CONCEPT_GREAT_DETECTIVE_PEDIA</Tag>
 		<English>Great Detectives boost investigation rate in cities</English>
+		<French>Les Grands Détectives augmentent le taux d'enquête dans les villes</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CONCEPT_GREAT_DOCTOR_PEDIA</Tag>
@@ -1065,10 +1081,10 @@
 		<Italian>[H1]Grandi Generali[\H1][PARAGRAPH:2]I Grandi Generali sono condottieri militari che emergono dalle fila del tuo esercito man mano che vinci degli scontri e superi certe soglie di esperienza: a quel punto nella capitale verrà generato un [LINK=UNIT_GREAT_GENERAL]Grande Generale[\LINK]. I punti esperienza necessari per generare il Grande Generale successivo si raddoppiano di volta in volta.[PARAGRAPH:2]Una volta che hai a disposizione un Grande Generale, puoi trasformarlo in un Guerriero unendolo a un'altra unità sul campo. Così agendo distribuirai un bonus una tantum di esperienza alle unità presenti nella stessa casella. L'unità che riceve il Guerriero può essere aggiornata gratuitamente e mantenendo al contempo la propria esperienza. L'unità dà inoltre accesso a una serie di promozioni normalmente non disponibili, quali [LINK=PROMOTION_COMBAT6]Combattimento VI[\LINK],  [LINK=PROMOTION_TACTICS]Tattica[\LINK], [LINK=PROMOTION_LEADERSHIP]Comando[\LINK] e [LINK=PROMOTION_MORALE]Morale[\LINK].[PARAGRAPH:2]In alternativa, puoi sfruttare il Grande Generale per costruire una [LINK=BUILDING_MILITARY_ACADEMY]accademia militare[\LINK] in una città, che riceverà così un bonus di produzione relativamente alle unità militari.[PARAGRAPH:2]Infine, i Grandi Generali possono diventare[LINK=SPECIALIST_GREAT_MILITARY_INSTRUCTOR]grandi istruttori militari[\LINK] in una città. Le nuove unità costruite in quella città riceveranno sin da subito un bonus di punti esperienza.</Italian>
 		<Spanish>[H1]Los grandes generales[\H1][PARAGRAPH:2]Los grandes generales son líderes militares que aparecen a medida que la civilización gana experiencia en combate. Cuando hayas ganado experiencia suficiente para superar un umbral determinado, aparecerá en tu capital un [LINK=UNIT_GREAT_GENERAL]Gran general[\LINK]. Cada gran general requiere el doble de la experiencia que sería necesaria para generar al anterior.[PARAGRAPH:2]Un vez generado, puedes convertir al gran general en un caudillo si lo unes a otra unidad en el campo. Esta acción también otorga una bonificación única en puntos de experiencia a las unidades que estén en la misma casilla. La unidad que reciba al caudillo no podrá modernizarse a ningún coste y conservará toda su experiencia. La unidad también ganará acceso a algunos ascensos especiales que no están disponibles normalmente, como [LINK=PROMOTION_COMBAT6]Combate VI[\LINK], [LINK=PROMOTION_TACTICS]Tácticas[\LINK], [LINK=PROMOTION_LEADERSHIP]Liderazgo[\LINK] y [LINK=PROMOTION_MORALE]Moral[\LINK].[PARAGRAPH:2]Como alternativa, puedes emplear al gran general para construir una [LINK=BUILDING_MILITARY_ACADEMY]Academia militar[\LINK] en una ciudad. Dicha ciudad obtendrá una bonificación a la producción cuando construya unidades militares.[PARAGRAPH:2]Por último, un gran general puede unirse a una ciudad como [LINK=SPECIALIST_GREAT_MILITARY_INSTRUCTOR]Gran instructor militar[\LINK]. Las nuevas unidades que se construyan en esa ciudad recibirán de inmediato una bonificación a los puntos de experiencia.</Spanish>
 	</TEXT>
-    <TEXT>
-        <Tag>TXT_KEY_CONCEPT_GREAT_ADMIRALS_PEDIA</Tag>
-        <English>[H1]Great Admirals[\H1][PARAGRAPH:2]Great Admirals are elite naval leaders that emerge as your civilization gains combat experience. Once you've won enough battles to reach a specific experience threshold, a [LINK=UNIT_GREAT_ADMIRAL]Great Admiral[\LINK] will appear in one of your cities. Each new Admiral requires double the experience of the previous one.[PARAGRAPH:2]A Great Admiral can be deployed in several impactful ways. You can convert him into a powerful flagship vessel or assign him as a commodore to command your fleets. Flagships are powerful ships to dominatethe seas, while commodores gain access to unique promotions and abilities.[PARAGRAPH:2]Alternatively, you can settle your Admiral in a city as a [LINK=SPECIALIST_GREAT_ADMIRAL]Great Admiral[\LINK] specialist, granting bonus experience to all newly built ships there.</English>
-    </TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CONCEPT_GREAT_ADMIRALS_PEDIA</Tag>
+		<English>[H1]Great Admirals[\H1][PARAGRAPH:2]Great Admirals are elite naval leaders that emerge as your civilization gains combat experience. Once you've won enough battles to reach a specific experience threshold, a [LINK=UNIT_GREAT_ADMIRAL]Great Admiral[\LINK] will appear in one of your cities. Each new Admiral requires double the experience of the previous one.[PARAGRAPH:2]A Great Admiral can be deployed in several impactful ways. You can convert him into a powerful flagship vessel or assign him as a commodore to command your fleets. Flagships are powerful ships to dominatethe seas, while commodores gain access to unique promotions and abilities.[PARAGRAPH:2]Alternatively, you can settle your Admiral in a city as a [LINK=SPECIALIST_GREAT_ADMIRAL]Great Admiral[\LINK] specialist, granting bonus experience to all newly built ships there.</English>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CONCEPT_GREAT_PEOPLE</Tag>
 		<English>Great People</English>
@@ -1131,6 +1147,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_CONCEPT_GREAT_STATESMAN_PEDIA</Tag>
 		<English>The [COLOR_UNIT_TEXT]Great Statesman[COLOR_REVERT] can improve international relations, prevent international disasters, start a golden age, and attach himself to a city.</English>
+		<French>Le [COLOR_UNIT_TEXT]Grand Homme d'État[COLOR_REVERT] peut améliorer les relations internationales, prévenir les désastres mondiaux, déclencher un âge d'or et s'attacher à une ville.</French>
 		<Italian>Un [COLOR_UNIT_TEXT]Grande uomo di stato[COLOR_REVERT] può migliorare le relazioni internazionali, prevenire i disastri internazionali, iniziare un'età dell'oro o unirsi ad una città.</Italian>
 		<Polish>[COLOR_UNIT_TEXT]Wielki Ustawodawca[COLOR_REVERT] mo&#191;e poprawia&#230; relacje mi&#234;dzynarodowe, zapobiega&#230; konfliktom, rozpoczyna&#230; Z&#179;oty Wiek i do&#179;&#185;cza&#230; do miasta.</Polish>
 	</TEXT>
@@ -1150,7 +1167,7 @@
 		<German>Auch der rücksichtsloseste Diktator muss die Zufriedenheit seines Volkes im Auge behalten, wenn er in Civilization IV Erfolg haben will. Zufriedene Bürger sind produktiv. Unzufriedene Bürger schaden einer [LINK=CONCEPT_CITIES]Stadt[\LINK] eher, da sie nichts produzieren, aber trotzdem versorgt werden müssen.[PARAGRAPH:2][H2]Folgen der Unzufriedenheit[\H2][PARAGRAPH:1]Jeder Bewohner einer Stadt hat eine Aufgabe. Einige bestellen das Land, andere sind möglicherweise [LINK=CONCEPT_SPECIALISTS]Spezialisten[\LINK] mit entsprechend speziellen Aufgaben. Ist ein Bürger unzufrieden, verweigert er die Arbeit, verbraucht aber weiterhin 2 Nahrungseinheiten pro Runde. Leben in einer Stadt zu viele unzufriedene Bürger, sinken die Produktivität und die Wirtschaftserträge einer Stadt und die Entwicklung Großer Persönlichkeiten gerät ins Stocken. Im Extremfall droht sogar eine [LINK=CONCEPT_FOOD]Hungersnot[\LINK].[PARAGRAPH:2]Lassen Sie eine Stadt also nicht wachsen, bis ihre Bewohner unzufrieden sind, sondern bremsen Sie das Wachstum einer Stadt mit Spezialisten oder die "Wachstum vermeiden"-Schaltfläche. Ist die Bevölkerung wieder zufriedener, können Sie das Wachstum der Stadt wieder beschleunigen.[PARAGRAPH:2][H2]Analyse der Zufriedenheit[\H2][PARAGRAPH:1]Jeder Bürger hat eine Zufriedenheitsstufe, die von verschiedenen Faktoren wie Überbevölkerung und Krieg beeinflusst wird. (Eine vollständige Liste finden Sie weiter unten). Unzufriedenheitsfaktoren werden durch "unglückliche Gesichter" angezeigt (siehe [LINK=CONCEPT_CITIES]Städte[\LINK]). Natürlich gibt auch Faktoren, wie Religionen und bestimmte Ressourcen, die die Zufriedenheit der Menschen erhöhen. Diese erkennen Sie an den angezeigten "glücklichen Gesichtern".[PARAGRAPH:2]Wollen Sie die Zufriedenheit einer Stadt analysieren, müssen Sie die Zahl der unglücklichen und glücklichen Gesichter vergleichen. Ist die Zahl der glücklichen Gesichter gleich oder höher, sind alle Bürger der Stadt zufrieden. Gibt es mehr unglückliche Gesichter, sind entsprechend viele Bewohner unzufrieden. Beispiel: In einer Stadt mit fünf glückliche und sieben unglückliche Gesichtern sind zwei Bürger unzufrieden und verweigern die Arbeit.[PARAGRAPH:2]Ist mindestens ein Bewohner einer Stadt unzufrieden, erscheint neben dem Namen der Stadt auf der Karte ein unglückliches Gesicht.[PARAGRAPH:2][H2]Ursachen der Unzufriedenheit[\H2][PARAGRAPH:1][BOLD]Überbevölkerung[\BOLD]: Jeder Bürger einer Stadt wird durch ein glückliches oder unglückliches Gesicht dargestellt. Je größer die Bevölkerung ist, desto unzufriedener sind die Bewohner einer Stadt.[PARAGRAPH:2][BOLD]Kriegsmüdigkeit[\BOLD]: Im Laufe eines Krieges steigt die Unzufriedenheit der Menschen. Dies gilt vor allem für erst kürzlich eroberte Städte.[PARAGRAPH:2][BOLD]Kulturelle Unterlegenheit:[\BOLD] Die Bewohner einer Stadt sind unzufrieden, wenn sie von einer anderen Stadt kulturell dominiert werden. Weitere Informationen dazu finden Sie in den Abschnitten [LINK=CONCEPT_CULTURE]Kultur[\LINK] und [LINK=CONCEPT_BORDERS]Grenzen[\LINK]). [BOLD]Fehlender Schutz:[\BOLD] Die Bewohner einer Stadt sind unzufrieden, wenn Sie in ihrer Stadt keine Soldaten zum Schutz stationiert haben.[PARAGRAPH:2][BOLD]Sklaverei und Rekrutierung[\BOLD]: Die Bewohner einer Stadt sind unzufrieden, wenn sie schuften müssen. Wenn Sie die Bewohner einer Stadt zwangsrekrutieren, steigt ihre Unzufriedenheit ebenfalls.[PARAGRAPH:2][BOLD]Gleichberechtigung:[\BOLD] Die Bewohner einer Stadt sind unzufrieden, wenn andere Zivilisationen die Gesellschaftsform Gleichberechtigung vor Ihnen annehmen. Je mehr Zivilisationen diese Gesellschaftsform umsetzen, desto größer ist die Unzufriedenheit der Bewohner aller anderen Zivilisationen.[PARAGRAPH:2][H2]Erhöhung der Zufriedenheit[\H2][PARAGRAPH:1]Im Folgenden finden Sie einige Möglichkeiten, die Zufriedenheit Ihrer Bevölkerung zu erhöhen:[PARAGRAPH:2][BOLD]Ressourcen:[\BOLD] Viele [LINK=CONCEPT_RESOURCES]Ressourcen[\LINK], wie [LINK=BONUS_BEAVERS]Felle[\LINK] und [LINK=BONUS_GOLD_ORE]Gold[\LINK] fördern die Zufriedenheit.[PARAGRAPH:2][BOLD]Gebäude:[\BOLD] Tempel, [LINK=BUILDING_COLOSSEUM]Arenen[\LINK] und [LINK=BUILDING_THEATRE]Theater[\LINK] fördern die Zufriedenheit ebenfalls. [LINK=BUILDING_JAIL]Gefängnisse[\LINK] verringern die durch Kriegsmüdigkeit ausgelöste Unzufriedenheit.[PARAGRAPH:2][BOLD]Wunder:[\BOLD] Das [LINK=BUILDING_GLOBE_THEATRE]Globe Theatre[\LINK] beseitigt in der Stadt, in der es gebaut wird, jegliche Unzufriedenheit. Der [LINK=BUILDING_ROCK_N_ROLL]Rock 'n Roll[\LINK] fördert die Zufriedenheit der Menschen ebenfalls.[PARAGRAPH:2][BOLD]Kultur-Schaltfläche:[\BOLD] Nach der Erforschung der Technologie [LINK=TECH_DRAMA]Schauspielkunst[\LINK] können Sie einen Teil Ihrer Wirtschaftserträge der [LINK=CONCEPT_CULTURE]Kultur-Schaltfläche[\LINK] zuweisen. Dieser fördert die Kultur und die Zufriedenheit. Gebäude, wie [LINK=BUILDING_THEATRE]Theater[\LINK] und [LINK=BUILDING_COLOSSEUM]Arenen[\LINK], steigern die Wirkung der Kultur-Schaltfläche zusätzlich.[PARAGRAPH:2][BOLD]Hinweis:[\BOLD] Im Laufe des Spiels lernen Sie viele weitere Möglichkeiten kennen, die Zufriedenheit einer Stadt positiv oder negativ zu beeinflussen.</German>
 		<Italian>Se ambisce ad avere successo in Civilization IV, anche il più crudele dei dittatori deve dedicare un po' del suo tempo alla felicità della sua popolazione. Un cittadino felice è un cittadino produttivo; un cittadino scontento è un peso morto per la sua [LINK=CONCEPT_CITIES]città[\LINK], che non produce niente ma che mangia come tutti gli altri.[PARAGRAPH:2][H2]Effetti dell'infelicità[\H2][PARAGRAPH:2]Ogni cittadino di una città ha un lavoro da svolgere. Molti sono impiegati a lavorare nelle terre che circondano la città, qualcun altro può essere uno [LINK=CONCEPT_SPECIALISTS]specialista[\LINK], che svolge mansioni più critiche. Quando un cittadino è "scontento", lui o lei si rifiuta di lavorare, riducendo di un punto la forza lavoro. Questo fannullone consuma sempre due razioni di cibo a ogni turno, e una città con troppi cittadini scontenti deve fronteggiare perdita di produttività, carenza di commercio, rallentamenti nella produzione di Grandi Personaggi, e forse anche la [LINK=CONCEPT_FOOD]Fame[\LINK].[PARAGRAPH:2]Piuttosto che lasciare che una città cresca fino a diventare scontenta, spesso può essere una buona idea utilizzare "specialisti" o un governatore che ne arresti la crescita per lasciare la città alle dimensioni in cui si trova prima che diventi scontenta. Quando in seguito aumenterà il livello di felicità, la città potrà continuare a crescere di nuovo.[PARAGRAPH:2][H2]Stabilire la felicità[\H2][PARAGRAPH:2]Ogni città ha il proprio livello di contentezza. Molti sono i fattori che possono portare a scontentezza: i due principali sono la sovrappopolazione e la guerra (più sotto trovi una lista completa). Ogni fonte di scontentezza genera una o più "facce scontente" (vedi [LINK=CONCEPT_CITIES]città[\LINK]). Ci sono molti fattori che invece producono contentezza, i due più importanti sono la religione e l'accesso a determinate risorse. Ognuno di questi fattori contribuisce a generare una o più "facce contente".[PARAGRAPH:2]Per stabilire la felicità di una città, confronta il numero di facce contente con quello delle facce scontente. Se il numero di cittadini contenti è uguale o superiore a quelli scontenti, allora tutti i cittadini di quella città sono contenti (ossia, lavorano tutti). Se la città ha più facce scontente che contente, la differenza tra questi due valori determina il numero di cittadini scontenti (se una città ha cinque facce contente e sette scontente, due cittadini si rifiuteranno di lavorare).[PARAGRAPH:2]Se una città ha almeno un cittadino scontento, comparirà una faccia scontenta accanto al nome della città nella mappa principale.[PARAGRAPH:2][H2]Fattori di infelicità[\H2][PARAGRAPH:2][BOLD]Sovrappopolazione:[\BOLD] ogni cittadino di una città ha una faccia scontenta. Maggiore è la popolazione, più scontenti sono tutti quanti.[PARAGRAPH:2][BOLD]Stanchezza della guerra:[\BOLD] con il perdurare della guerra, più e più cittadini si dimostreranno scontenti. Questo vale in special modo nelle città che hai conquistato di recente dalla civiltà contro cui stai combattendo.[PARAGRAPH:2][BOLD]Inferiorità Culturale:[\BOLD] una città diventa scontenta se è "dominata culturalmente" da una vicina città straniera (vedi [LINK=CONCEPT_CULTURE]cultura[\LINK] e [LINK=CONCEPT_BORDERS]confini[\LINK]).[PARAGRAPH:2][BOLD]Indifesa:[\BOLD] una città diventa scontenta se non ha unità militari che la difendano. Non conta il tipo di unità, quindi premunisciti di averne almeno una in ogni città.[PARAGRAPH:2][BOLD]Schiavismo e reclutamento:[\BOLD] i cittadini sono scontenti se li fai lavorare fino alla morte. Non amano neppure essere costretti a entrare nell'esercito tramite il servizio di leva (o reclutamento).[PARAGRAPH:2][BOLD]Emancipazione:[\BOLD] i cittadini diventano scontenti se altre civiltà hanno adottato la forma di governo Emancipazione e tu no. Più sono le civiltà che hanno adottato l'Emancipazione, più scontenti diventano tutti gli altri.[PARAGRAPH:2][H2]Fattori di felicità[\H2][PARAGRAPH:2]Ce ne sono in abbondanza, eccone alcuni:[PARAGRAPH:2][BOLD]Risorse:[\BOLD] molte [LINK=CONCEPT_RESOURCES]Risorse[\LINK] producono contentezza: [LINK=BONUS_BEAVERS]Pellicce[\LINK] e [LINK=BONUS_GOLD_ORE]Oro[\LINK], per citarne un paio.[PARAGRAPH:2][BOLD]Edifici:[\BOLD] templi, [LINK=BUILDING_COLOSSEUM]colossei[\LINK] e [LINK=BUILDING_THEATRE]teatri[\LINK] sono alcuni dei primi edifici che contribuiscono a creare contentezza. La [LINK=BUILDING_JAIL]prigione[\LINK] diminuisce parte della scontentezza causata dalla stanchezza della guerra.[PARAGRAPH:2][BOLD]Meraviglie:[\BOLD] Il [LINK=BUILDING_GLOBE_THEATRE]Teatro di Shakespeare[\LINK] elimina tutta l'infelicità dalla città in cui è costruito. Il [LINK=BUILDING_ROCK_N_ROLL]Rock'n'Roll[\LINK] produce la risorsa Canzone di successo, che a sua volta produce un punto di felicità.[PARAGRAPH:2][BOLD]Pulsante cultura:[\BOLD] Dopo aver scoperto la [LINK=TECH_DRAMA]Drammaturgia[\LINK], puoi assegnare una percentuale del commercio della tua popolazione al [LINK=CONCEPT_CULTURE]pulsante cultura[\LINK], che aumenta sia la cultura che la felicità. Alcuni edifici come i [LINK=BUILDING_THEATRE]teatri[\LINK] e i [LINK=BUILDING_COLOSSEUM]colossei[\LINK] aumentano ulteriormente gli effetti sulla contentezza derivanti dal pulsante della cultura.[PARAGRAPH:2][BOLD]E ancora:[\BOLD] man mano che giochi, scoprirai molti altri fattori che contribuiscono ad aumentare o diminuire la contentezza di una città.</Italian>
 		<Spanish>Si hasta el dictador más despiadado quiere ganar en Civilization IV, deberá velar por la felicidad de su pueblo. Un ciudadano feliz es un ciudadano productivo. Uno infeliz es una carga inútil para su [LINK=CONCEPT_CITIES]ciudad[\LINK], pues no produce nada pero come igual que los demás.[PARAGRAPH:2][H2]Efectos de la infelicidad[\H2][PARAGRAPH:2]Cada ciudadano tiene una función que desempeñar en la ciudad. Muchos se destinan a trabajar la tierra que la rodea y algunos pueden llegar a ser los [LINK=CONCEPT_SPECIALISTS]especialistas[\LINK] que llevan a cabo las tareas de más responsabilidad. Cuando un ciudadano es "infeliz", se niega a trabajar, reduciendo así en uno la cantidad de trabajadores o de especialistas de la ciudad. Sin embargo, ese holgazán seguirá consumiendo 2 de alimentos cada turno. Así, una ciudad con muchas caras infelices se enfrentará a una pérdida de productividad, un freno de la generación de grandes personajes y puede que a la [LINK=CONCEPT_FOOD]hambruna[\LINK].[PARAGRAPH:2]En vez de dejar que una ciudad crezca hasta ser infeliz, suele ser buena idea utilizar a los especialistas o darle al gobernante la orden "Evitar crecimiento" antes de que adquiera un tamaño que dé problemas. Cuando la ciudad obtenga felicidad posteriormente, podrá volver a crecer.[PARAGRAPH:2][H2]Determinar la felicidad[\H2][PARAGRAPH:2]Cada ciudad tiene su propio nivel de felicidad. Hay muchos factores que pueden causar la infelicidad en una ciudad, siendo dos de los más comunes la superpoblación y la guerra (ver más abajo la lista completa). Cada fuente de infelicidad genera una o más "caras infelices" (ver [LINK=CONCEPT_CITIES]Ciudades[\LINK]). También hay muchos factores que producen felicidad en una ciudad, siendo la religión y el acceso a ciertos recursos dos de los más importantes. Cada uno de ellos genera una o más "caras felices".[PARAGRAPH:2]Para conocer la felicidad de una ciudad, compara el número de caras felices con el de infelices. Si tiene más caras felices que infelices, es que todos los ciudadanos están contentos. Si tiene más caras infelices que felices significa que una cantidad de ciudadanos igual a la diferencia estará descontenta (así, si una ciudad tiene cinco caras felices y siete infelices, habrá dos ciudadanos que se nieguen a trabajar).[PARAGRAPH:2]Si una ciudad tiene al menos a un ciudadano infeliz, aparecerá una cara infeliz al lado del nombre de la misma, en el mapa principal.[PARAGRAPH:2][H2]Causas de la infelicidad[\H2][PARAGRAPH:2][BOLD]Superpoblación:[\BOLD] Todo ciudadano generará una cara infeliz. Cuanto mayor sea la población, más infelices serán todos.[PARAGRAPH:2][BOLD]Hastío bélico:[\BOLD] Mientras la guerra prosiga, más y más ciudadanos estarán descontentos por ella. Esto es especialmente cierto en las ciudades recién capturadas a la civilización contra la que se combate.[PARAGRAPH:2][BOLD]Inferioridad cultural:[\BOLD] Una ciudad será infeliz si está siendo "dominada culturalmente" por otra ciudad extranjera cercana (ver [LINK=CONCEPT_CULTURE]Cultura[\LINK] y [LINK=CONCEPT_BORDERS]Fronteras[\LINK]).[PARAGRAPH:2][BOLD]Indefensa:[\BOLD] Una ciudad será infeliz si no tienes unidades militares en ella. El tipo concreto de unidad no importa, así que asegúrate de tener al menos una en cada ciudad.[PARAGRAPH:2][BOLD]Esclavitud y reclutamiento:[\BOLD] Los ciudadanos serán infelices si los matas a trabajar. Tampoco te apreciarán mucho si los reclutas forzosamente.[PARAGRAPH:2][BOLD]Emancipación:[\BOLD] Los ciudadanos estarán infelices si otras civilizaciones han adoptado el principio de emancipación y tú no. Cuantas más ciudades adopten la emancipación, más infelices serán los ciudadanos de las ciudades restantes.[PARAGRAPH:2][H2]Causas de la felicidad[\H2][PARAGRAPH:2]Existen muchísimas, y aquí se mencionan solo algunas:[PARAGRAPH:2][BOLD]Recursos:[\BOLD] Muchos [LINK=CONCEPT_RESOURCES]recursos[\LINK] producen felicidad: [LINK=BONUS_BEAVERS]pieles[\LINK] y [LINK=BONUS_GOLD_ORE]oro[\LINK], por nombrar dos.[PARAGRAPH:2][BOLD]Edificios:[\BOLD] Templos, [LINK=BUILDING_COLOSSEUM]coliseos[\LINK] y [LINK=BUILDING_THEATRE]teatros[\LINK] son algunos de los primeros edificios que proporcionan felicidad. La [LINK=BUILDING_JAIL]cárcel[\LINK] quita parte de la infelicidad causada por el hastío bélico.[PARAGRAPH:2][BOLD]Maravillas:[\BOLD] El [LINK=BUILDING_GLOBE_THEATRE]Globe Theatre[\LINK] quita toda la infelicidad de la ciudad en que se construya. El [LINK=BUILDING_ROCK_N_ROLL]Rock &amp; Roll[\LINK] produce el recurso de las canciones de éxito, que generan uno de felicidad.[PARAGRAPH:2][BOLD]Botón "Cultura":[\BOLD] Cuando hayas descubierto la tecnología del [LINK=TECH_DRAMA]Drama[\LINK], podrás dedicar un porcentaje determinado del comercio de la civilización al [LINK=CONCEPT_CULTURE]botón "Cultura"[\LINK], lo que aumentará tanto la cultura como la felicidad. Ciertos edificios, como los [LINK=BUILDING_THEATRE]Teatros[\LINK] y [LINK=BUILDING_COLOSSEUM]Coliseos[\LINK] aumentan más todavía el efecto del botón "Cultura".[PARAGRAPH:2][BOLD]Y aún hay más:[\BOLD] A medida que juegues descubrirás muchos otros factores que pueden aumentar o disminuir la felicidad de una ciudad.</Spanish>
-		<Russian>[H1]Íàñòðîåíèå[\H1][PARAGRAPH:2]Äàæå ñàìûì áåçæàëîñòíûì äèêòàòîðàì â èãðå Civilization IV ïðèõîäèòñÿ áåñïîêîèòüñÿ î íàñòðîåíèè ïîääàííûõ. Äîâîëüíûé ïîääàííûé, êàê èçâåñòíî, ðàáîòàåò ëó÷øå çà òå æå äåíüãè. Íåäîâîëüíûé ïîääàííûé áóäåò òîëüêî áåñïîëåçíîé íàãðóçêîé äëÿ [LINK=CONCEPT_CITIES]ãîðîäà[\LINK]: îí íè÷åãî íå ïðîèçâîäèò, à åñò íå ìåíüøå ïðî÷èõ.[PARAGRAPH:2][H2]Êòî íå ðàáîòàåò, òîò... âñå ðàâíî åñò![\H2][PARAGRAPH:2]Ó êàæäîãî ãîðîæàíèíà åñòü ðàáîòà. Áîëüøèíñòâî îáðàáàòûâàåò òåððèòîðèþ âîêðóã ãîðîäà, íåêîòîðûå ÿâëÿþòñÿ [LINK=CONCEPT_SPECIALISTS]ñïåöèàëèñòàìè[\LINK], âûïîëíÿþùèìè äðóãóþ âàæíóþ ðàáîòó. Íåäîâîëüíûé ãîðîæàíèí ðàáîòàòü îòêàçûâàåòñÿ, ñîêðàùàÿ òàêèì îáðàçîì ÷èñëî ðàáîòíèêîâ èëè ñïåöèàëèñòîâ â ãîðîäå. Â òîæå âðåìÿ ýòîò ëîäûðü èñïðàâíî ïîòðåáëÿåò ñâîè 2 åäèíèöû ïèùè â õîä, à ïîòîìó ãîðîäó ñ áîëüøèì êîëè÷åñòâîì íåäîâîëüíûõ ãðîçèò ñíèæåíèå ïðîèçâîäèòåëüíîñòè, èñòîùåíèå êàçíû, íèçêàÿ ðîæäàåìîñòü çíàìåíèòîñòåé, à âîçìîæíî, è [LINK=CONCEPT_FOOD]ãîëîä[\LINK]. [PARAGRAPH:2]×òîáû íå äàòü ãîðîäó ðàçðàñòèñü äî ïîÿâëåíèÿ íåäîâîëüíûõ, èìååò ñìûñë èñïîëüçîâàòü ñïåöèàëèñòîâ èëè êîìàíäó "Íóëåâàÿ ðîæäàåìîñòü" íà ïàíåëè ãðàäîïðàâëåíèÿ. Â ïîñëåäíåì ñëó÷àå ïðàâèòåëü ãîðîäà ïðèîñòàíîâèò ðîñò ãîðîäà, êîãäà ïîÿâëÿåòñÿ ðèñê âîçíèêíîâåíèÿ íåäîâîëüíûõ. Âïîñëåäñòâèè, êîãäà îáùèé óðîâåíü íàñòðîåíèÿ â ãîðîäå ïîâûñèòñÿ, íàñåëåíèå ñíîâà íà÷íåò ðàñòè.[PARAGRAPH:2][H2]Êàê îïðåäåëèòü íàñòðîåíèå â ãîðîäå[\H2][PARAGRAPH:2]Â êàæäîì ãîðîäå èìååòñÿ ñîáñòâåííûé óðîâåíü íàñòðîåíèÿ æèòåëåé. Íåäîâîëüñòâî ñðåäè ãîðîäñêîãî íàñåëåíèÿ ìîãóò âûçûâàòü ðàçíûå ïðè÷èíû, îñíîâíûìè ñðåäè êîòîðûõ ÿâëÿþòñÿ ïåðåíàñåëåíèå è âîéíû (ñì. íèæå ïîëíûé ñïèñîê). Êàæäàÿ èç ýòèõ ïðè÷èí ïðèâîäèò ê ïîÿâëåíèþ íà ïàíåëè ãîðîäà îäíîãî èëè íåñêîëüêèõ íåäîâîëüíûõ ñìàéëèêîâ (ïîäðîáíåå ñì. [LINK=CONCEPT_CITIES]Ãîðîäà[\LINK]). Ñóùåñòâóåò òàêæå ðÿä ôàêòîðîâ, ïîâûøàþùèõ íàñòðîåíèå ãîðîæàí. Íå íà ïîñëåäíåì ìåñòå ñðåäè íèõ ñòîÿò ðåëèãèÿ è äîñòóï ê îïðåäåëåííûì ðåñóðñàì. Êàæäûé èç ýòèõ ôàêòîðîâ ïðèâîäèò ê ïîÿâëåíèþ äîâîëüíûõ ñìàéëèêîâ.[PARAGRAPH:2]×òîáû îïðåäåëèòü óðîâåíü íàñòðîåíèÿ â ãîðîäå, ñðàâíèòå êîëè÷åñòâî íåäîâîëüíûõ ñìàéëèêîâ ñ êîëè÷åñòâîì äîâîëüíûõ. Åñëè ïîñëåäíèõ áîëüøå, íàñåëåíèå ãîðîäà äîâîëüíî æèçíüþ. Åñëè áîëüøå íåäîâîëüíûõ, òî êîëè÷åñòâî íåäîâîëüíûõ æèòåëåé â ãîðîäå ðàâíî ðàçíèöå ìåæäó ÷èñëîì äîâîëüíûõ ñìàéëèêîâ è ÷èñëîì íåäîâîëüíûõ. (Òàê, åñëè â ãîðîäå 5 äîâîëüíûõ ñìàéëèêîâ è 7 íåäîâîëüíûõ, òî ðàáîòàòü îòêàæóòñÿ 2 æèòåëÿ.)[PARAGRAPH:2]Åñëè â ãîðîäå åñòü õîòÿ áû îäèí íåäîâîëüíûé æèòåëü, íà ÿðëûêå ãîðîäà ðÿäîì ñ åãî íàçâàíèåì ïîÿâèòñÿ íåäîâîëüíûé ñìàéëèê.[PARAGRAPH:2][H2]Ôàêòîðû, ñíèæàþùèå íàñòðîåíèå [\H2][PARAGRAPH:2][BOLD]Ïåðåíàñåëåíèå[\BOLD]. Ñ êàæäûì íîâûì óðîâíåì â ãîðîäå ïîÿâëÿåòñÿ íîâûé íåäîâîëüíûé ñìàéëèê. ×åì áîëüøå ãîðîä, òåì ñèëüíåå íåäîâîëüñòâî.[PARAGRAPH:2][BOLD]Íåäîâîëüñòâî âîéíîé[\BOLD]. ×åì äîëüøå äëèòñÿ âîéíà, òåì áîëüøå ëþäåé íà÷èíàþò âîçìóùàòüñÿ. Ýòî â ïåðâóþ î÷åðåäü êàñàåòñÿ çàõâà÷åííûõ ãîðîäîâ ïðîòèâíèêà.[PARAGRAPH:2][BOLD]Îòñòàâàíèå â êóëüòóðå[\BOLD]. Íåäîâîëüñòâî â ãîðîäå ðàñòåò, åñëè îí ïîïàäàåò â çîíó êóëüòóðíîãî âëèÿíèÿ ÷óæåçåìíîãî ãîðîäà (ñì. [LINK=CONCEPT_CULTURE]Êóëüòóðà[\LINK] è [LINK=CONCEPT_BORDERS]Ãðàíèöû[\LINK]).[PARAGRAPH:2][BOLD]Íåçàùèùåííîñòü[\BOLD]. Íàñòðîåíèå ñíèæàåòñÿ, åñëè â ãîðîäå íåò íè îäíîãî âîåííîãî þíèòà. Òèï þíèòà íåâàæåí, òàê ÷òî äîñòàòî÷íî ïðîñòî ïðîñëåäèòü, ÷òîáû â êàæäîì ãîðîäå êâàðòèðîâàë õîòü îäèí âîåííûé.[PARAGRAPH:2][BOLD]Ðàáñòâî è âîèíñêàÿ ïîâèííîñòü[\BOLD]. Íàðîä íà÷èíàåò âîçìóùàòüñÿ, åñëè çàñòàâëÿòü åãî ðàáîòàòü äî ïîëóñìåðòè. Íå îäîáðÿþò ìèðíûå æèòåëè è ïðèíóäèòåëüíîãî ïðèçûâà â àðìèþ (ïîäðîáíåå ñì. [LINK=CIVIC_NATIONALIST]Íàöèîíàëüíàÿ èäåÿ[\LINK]).[PARAGRAPH:2][BOLD]Ðàâíîïðàâèå[\BOLD]. Åñëè ïðî÷èå äåðæàâû ïðèíÿëè, âàøè ïîääàííûå áóäóò âîçìóùàòüñÿ, ïîêà âû íå ïîñëåäóåòå ïðèìåðó ñîñåäåé. ×åì áîëüøå äåðæàâ ïðèíÿëè ýòó ïàðàäèãìó, òåì ñèëüíåå íåäîâîëüñòâî æèòåëåé îñòàâøèõñÿ äåðæàâ[PARAGRAPH:2][H2]Ôàêòîðû, ïîâûøàþùèå íàñòðîåíèå[\H2][PARAGRAPH:2]Òàêèõ ôàêòîðîâ ìíîãî. Ïðèâåäåì íåñêîëüêî.[PARAGRAPH:2][BOLD]Ðåñóðñû[\BOLD]. Ìíîãèå [LINK=CONCEPT_RESOURCES]ðåñóðñû[\LINK], â ÷àñòíîñòè [LINK=BONUS_FUR]ïóøíèíà[\LINK] è [LINK=BONUS_GOLD_ORE]çîëîòî[\LINK], ïîâûøàþò íàñòðîåíèå.[PARAGRAPH:2][BOLD]Çäàíèÿ[\BOLD]. Õðàìû, [LINK=BUILDING_COLOSSEUM]ñòàäèîíû[\LINK], è [LINK=BUILDING_THEATRE]òåàòðû[\LINK] ïîâûøàþò íàñòðîåíèå íà ðàííèõ ñòàäèÿõ èãðû. Íàëè÷èå [LINK=BUILDING_JAIL]òþðüìû[\LINK] ñíèæàåò íåãàòèâíûé ýôôåêò, âûçûâàåìûé âîéíîé.[PARAGRAPH:2][BOLD]×óäåñà[\BOLD]. [LINK=BUILDING_GLOBE_THEATRE]Òåàòð "Ãëîáóñ[\LINK] ñíèìàåò âñå íåãàòèâíûå ýôôåêòû ñ ãîðîäà, ãäå åãî ïîñòðîèëè. [LINK=BUILDING_ROCK_N_ROLL]Ðîê-í-ðîëë[\LINK] ïðèâîäèò ê ïîÿâëåíèþ ïîïóëÿðíûõ ïåñåí (êàæäàÿ åäèíèöà ðåñóðñà äàåò óëûáàþùèéñÿ ñìàéëèê).[PARAGRAPH:2][BOLD]Ïàðàäèãìû[\BOLD]. Íàëè÷èå Ïîëèöåéñêîãî ãîñóäàðñòâà ñíèìàåò âñå íåãàòèâíûå ýôôåêòû îò íåäîâîëüñòâà âîéíîé. Ñâîáîäà ñëîâà ïîâûøàåò íàñòðîåíèå (ïðè íàëè÷èè [LINK=BUILDING_BROADCAST_TOWER]ðàäèîâûøåê[\LINK]).[PARAGRAPH:2][BOLD]Êíîïêè ôèíàíñèðîâàíèÿ êóëüòóðû[\BOLD]. Ïîñëå ðàçðàáîòêè òåõíîëîãèè [LINK=TECH_DRAMA]Äðàìàòóðãèÿ[\LINK] ó âàñ ïîÿâëÿåòñÿ âîçìîæíîñòü âûäåëÿòü ÷àñòü ãîñóäàðñòâåííîé êàçíû íà êóëüòóðó ïðè ïîìîùè [LINK=CONCEPT_CULTURE]êíîïîê ôèíàíñèðîâàíèÿ êóëüòóðû[\LINK], ÷òî ïîâûøàåò êàê êóëüòóðíûé óðîâåíü ãîðîäà, òàê è íàñòðîåíèå æèòåëåé. Íåêîòîðûå çäàíèÿ - â ÷àñòíîñòè [LINK=BUILDING_THEATRE]òåàòðû[\LINK] è [LINK=BUILDING_COLOSSEUM]ñòàäèîíû[\LINK] - ïîâûøàþò ïîçèòèâíûé ýôôåêò îò ïðèìåíåíèÿ êíîïîê ôèíàíñèðîâàíèÿ êóëüòóðû.[PARAGRAPH:2][BOLD]È ýòî åùå íå âñå![\BOLD] Â ïðîöåññå èãðû âû îáíàðóæèòå ìíîãî äðóãèõ ôàêòîðîâ, âëèÿþùèõ íà íàñòðîåíèå ãîðîäñêèõ æèòåëåé.[PARAGRAPH:2]</Russian>
+		<Russian>[H1]Íàñòðîåíèå[\H1][PARAGRAPH:2]Äàæå ñàìûì áåçæàëîñòíûì äèêòàòîðàì â èãðå Civilization IV ïðèõîäèòñÿ áåñïîêîèòüñÿ î íàñòðîåíèè ïîääàííûõ. Äîâîëüíûé ïîääàííûé, êàê èçâåñòíî, ðàáîòàåò ëó÷øå çà òå æå äåíüãè. Íåäîâîëüíûé ïîääàííûé áóäåò òîëüêî áåñïîëåçíîé íàãðóçêîé äëÿ [LINK=CONCEPT_CITIES]ãîðîäà[\LINK]: îí íè÷åãî íå ïðîèçâîäèò, à åñò íå ìåíüøå ïðî÷èõ.[PARAGRAPH:2][H2]Êòî íå ðàáîòàåò, òîò... âñå ðàâíî åñò![\H2][PARAGRAPH:2]Ó êàæäîãî ãîðîæàíèíà åñòü ðàáîòà. Áîëüøèíñòâî îáðàáàòûâàåò òåððèòîðèþ âîêðóã ãîðîäà, íåêîòîðûå ÿâëÿþòñÿ [LINK=CONCEPT_SPECIALISTS]ñïåöèàëèñòàìè[\LINK], âûïîëíÿþùèìè äðóãóþ âàæíóþ ðàáîòó. Íåäîâîëüíûé ãîðîæàíèí ðàáîòàòü îòêàçûâàåòñÿ, ñîêðàùàÿ òàêèì îáðàçîì ÷èñëî ðàáîòíèêîâ èëè ñïåöèàëèñòîâ â ãîðîäå. Â òîæå âðåìÿ ýòîò ëîäûðü èñïðàâíî ïîòðåáëÿåò ñâîè 2 åäèíèöû ïèùè â õîä, à ïîòîìó ãîðîäó ñ áîëüøèì êîëè÷åñòâîì íåäîâîëüíûõ ãðîçèò ñíèæåíèå ïðîèçâîäèòåëüíîñòè, èñòîùåíèå êàçíû, íèçêàÿ ðîæäàåìîñòü çíàìåíèòîñòåé, à âîçìîæíî, è [LINK=CONCEPT_FOOD]ãîëîä[\LINK]. [PARAGRAPH:2]×òîáû íå äàòü ãîðîäó ðàçðàñòèñü äî ïîÿâëåíèÿ íåäîâîëüíûõ, èìååò ñìûñë èñïîëüçîâàòü ñïåöèàëèñòîâ èëè êîìàíäó "Íóëåâàÿ ðîæäàåìîñòü" íà ïàíåëè ãðàäîïðàâëåíèÿ. Â ïîñëåäíåì ñëó÷àå ïðàâèòåëü ãîðîäà ïðèîñòàíîâèò ðîñò ãîðîäà, êîãäà ïîÿâëÿåòñÿ ðèñê âîçíèêíîâåíèÿ íåäîâîëüíûõ. Âïîñëåäñòâèè, êîãäà îáùèé óðîâåíü íàñòðîåíèÿ â ãîðîäå ïîâûñèòñÿ, íàñåëåíèå ñíîâà íà÷íåò ðàñòè.[PARAGRAPH:2][H2]Êàê îïðåäåëèòü íàñòðîåíèå â ãîðîäå[\H2][PARAGRAPH:2]Â êàæäîì ãîðîäå èìååòñÿ ñîáñòâåííûé óðîâåíü íàñòðîåíèÿ æèòåëåé. Íåäîâîëüñòâî ñðåäè ãîðîäñêîãî íàñåëåíèÿ ìîãóò âûçûâàòü ðàçíûå ïðè÷èíû, îñíîâíûìè ñðåäè êîòîðûõ ÿâëÿþòñÿ ïåðåíàñåëåíèå è âîéíû (ñì. íèæå ïîëíûé ñïèñîê). Êàæäàÿ èç ýòèõ ïðè÷èí ïðèâîäèò ê ïîÿâëåíèþ íà ïàíåëè ãîðîäà îäíîãî èëè íåñêîëüêèõ íåäîâîëüíûõ ñìàéëèêîâ (ïîäðîáíåå ñì. [LINK=CONCEPT_CITIES]Ãîðîäà[\LINK]). Ñóùåñòâóåò òàêæå ðÿä ôàêòîðîâ, ïîâûøàþùèõ íàñòðîåíèå ãîðîæàí. Íå íà ïîñëåäíåì ìåñòå ñðåäè íèõ ñòîÿò ðåëèãèÿ è äîñòóï ê îïðåäåëåííûì ðåñóðñàì. Êàæäûé èç ýòèõ ôàêòîðîâ ïðèâîäèò ê ïîÿâëåíèþ äîâîëüíûõ ñìàéëèêîâ.[PARAGRAPH:2]×òîáû îïðåäåëèòü óðîâåíü íàñòðîåíèÿ â ãîðîäå, ñðàâíèòå êîëè÷åñòâî íåäîâîëüíûõ ñìàéëèêîâ ñ êîëè÷åñòâîì äîâîëüíûõ. Åñëè ïîñëåäíèõ áîëüøå, íàñåëåíèå ãîðîäà äîâîëüíî æèçíüþ. Åñëè áîëüøå íåäîâîëüíûõ, òî êîëè÷åñòâî íåäîâîëüíûõ æèòåëåé â ãîðîäå ðàâíî ðàçíèöå ìåæäó ÷èñëîì äîâîëüíûõ ñìàéëèêîâ è ÷èñëîì íåäîâîëüíûõ. (Òàê, åñëè â ãîðîäå 5 äîâîëüíûõ ñìàéëèêîâ è 7 íåäîâîëüíûõ, òî ðàáîòàòü îòêàæóòñÿ 2 æèòåëÿ.)[PARAGRAPH:2]Åñëè â ãîðîäå åñòü õîòÿ áû îäèí íåäîâîëüíûé æèòåëü, íà ÿðëûêå ãîðîäà ðÿäîì ñ åãî íàçâàíèåì ïîÿâèòñÿ íåäîâîëüíûé ñìàéëèê.[PARAGRAPH:2][H2]Ôàêòîðû, ñíèæàþùèå íàñòðîåíèå [\H2][PARAGRAPH:2][BOLD]Ïåðåíàñåëåíèå[\BOLD]. Ñ êàæäûì íîâûì óðîâíåì â ãîðîäå ïîÿâëÿåòñÿ íîâûé íåäîâîëüíûé ñìàéëèê. ×åì áîëüøå ãîðîä, òåì ñèëüíåå íåäîâîëüñòâî.[PARAGRAPH:2][BOLD]Íåäîâîëüñòâî âîéíîé[\BOLD]. ×åì äîëüøå äëèòñÿ âîéíà, òåì áîëüøå ëþäåé íà÷èíàþò âîçìóùàòüñÿ. Ýòî â ïåðâóþ î÷åðåäü êàñàåòñÿ çàõâà÷åííûõ ãîðîäîâ ïðîòèâíèêà.[PARAGRAPH:2][BOLD]Îòñòàâàíèå â êóëüòóðå[\BOLD]. Íåäîâîëüñòâî â ãîðîäå ðàñòåò, åñëè îí ïîïàäàåò â çîíó êóëüòóðíîãî âëèÿíèÿ ÷óæåçåìíîãî ãîðîäà (ñì. [LINK=CONCEPT_CULTURE]Êóëüòóðà[\LINK] è [LINK=CONCEPT_BORDERS]Ãðàíèöû[\LINK]).[PARAGRAPH:2][BOLD]Íåçàùèùåííîñòü[\BOLD]. Íàñòðîåíèå ñíèæàåòñÿ, åñëè â ãîðîäå íåò íè îäíîãî âîåííîãî þíèòà. Òèï þíèòà íåâàæåí, òàê ÷òî äîñòàòî÷íî ïðîñòî ïðîñëåäèòü, ÷òîáû â êàæäîì ãîðîäå êâàðòèðîâàë õîòü îäèí âîåííûé.[PARAGRAPH:2][BOLD]Ðàáñòâî è âîèíñêàÿ ïîâèííîñòü[\BOLD]. Íàðîä íà÷èíàåò âîçìóùàòüñÿ, åñëè çàñòàâëÿòü åãî ðàáîòàòü äî ïîëóñìåðòè. Íå îäîáðÿþò ìèðíûå æèòåëè è ïðèíóäèòåëüíîãî ïðèçûâà â àðìèþ (ïîäðîáíåå ñì. [LINK=CIVIC_NATIONALIST]Íàöèîíàëüíàÿ èäåÿ[\LINK]).[PARAGRAPH:2][BOLD]Ðàâíîïðàâèå[\BOLD]. Åñëè ïðî÷èå äåðæàâû ïðèíÿëè, âàøè ïîääàííûå áóäóò âîçìóùàòüñÿ, ïîêà âû íå ïîñëåäóåòå ïðèìåðó ñîñåäåé. ×åì áîëüøå äåðæàâ ïðèíÿëè ýòó ïàðàäèãìó, òåì ñèëüíåå íåäîâîëüñòâî æèòåëåé îñòàâøèõñÿ äåðæàâ[PARAGRAPH:2][H2]Ôàêòîðû, ïîâûøàþùèå íàñòðîåíèå[\H2][PARAGRAPH:2]Òàêèõ ôàêòîðîâ ìíîãî. Ïðèâåäåì íåñêîëüêî.[PARAGRAPH:2][BOLD]Ðåñóðñû[\BOLD]. Ìíîãèå [LINK=CONCEPT_RESOURCES]ðåñóðñû[\LINK], â ÷àñòíîñòè [LINK=BONUS_FUR]ïóøíèíà[\LINK] è [LINK=BONUS_GOLD_ORE]çîëîòî[\LINK], ïîâûøàþò íàñòðîåíèå.[PARAGRAPH:2][BOLD]Çäàíèÿ[\BOLD]. Õðàìû, [LINK=BUILDING_COLOSSEUM]ñòàäèîíû[\LINK], è [LINK=BUILDING_THEATRE]òåàòðû[\LINK] ïîâûøàþò íàñòðîåíèå íà ðàííèõ ñòàäèÿõ èãðû. Íàëè÷èå [LINK=BUILDING_JAIL]òþðüìû[\LINK] ñíèæàåò íåãàòèâíûé ýôôåêò, âûçûâàåìûé âîéíîé.[PARAGRAPH:2][BOLD]×óäåñà[\BOLD]. [LINK=BUILDING_GLOBE_THEATRE]Òåàòð Ãëîáóñ[\LINK] ñíèìàåò âñå íåãàòèâíûå ýôôåêòû ñ ãîðîäà, ãäå åãî ïîñòðîèëè. [LINK=BUILDING_ROCK_N_ROLL]Ðîê-í-ðîëë[\LINK] ïðèâîäèò ê ïîÿâëåíèþ ïîïóëÿðíûõ ïåñåí (êàæäàÿ åäèíèöà ðåñóðñà äàåò óëûáàþùèéñÿ ñìàéëèê).[PARAGRAPH:2][BOLD]Ïàðàäèãìû[\BOLD]. Íàëè÷èå Ïîëèöåéñêîãî ãîñóäàðñòâà ñíèìàåò âñå íåãàòèâíûå ýôôåêòû îò íåäîâîëüñòâà âîéíîé. Ñâîáîäà ñëîâà ïîâûøàåò íàñòðîåíèå (ïðè íàëè÷èè [LINK=BUILDING_BROADCAST_TOWER]ðàäèîâûøåê[\LINK]).[PARAGRAPH:2][BOLD]Êíîïêè ôèíàíñèðîâàíèÿ êóëüòóðû[\BOLD]. Ïîñëå ðàçðàáîòêè òåõíîëîãèè [LINK=TECH_DRAMA]Äðàìàòóðãèÿ[\LINK] ó âàñ ïîÿâëÿåòñÿ âîçìîæíîñòü âûäåëÿòü ÷àñòü ãîñóäàðñòâåííîé êàçíû íà êóëüòóðó ïðè ïîìîùè [LINK=CONCEPT_CULTURE]êíîïîê ôèíàíñèðîâàíèÿ êóëüòóðû[\LINK], ÷òî ïîâûøàåò êàê êóëüòóðíûé óðîâåíü ãîðîäà, òàê è íàñòðîåíèå æèòåëåé. Íåêîòîðûå çäàíèÿ - â ÷àñòíîñòè [LINK=BUILDING_THEATRE]òåàòðû[\LINK] è [LINK=BUILDING_COLOSSEUM]ñòàäèîíû[\LINK] - ïîâûøàþò ïîçèòèâíûé ýôôåêò îò ïðèìåíåíèÿ êíîïîê ôèíàíñèðîâàíèÿ êóëüòóðû.[PARAGRAPH:2][BOLD]È ýòî åùå íå âñå![\BOLD] Â ïðîöåññå èãðû âû îáíàðóæèòå ìíîãî äðóãèõ ôàêòîðîâ, âëèÿþùèõ íà íàñòðîåíèå ãîðîäñêèõ æèòåëåé.[PARAGRAPH:2]</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CONCEPT_HEALTH</Tag>
@@ -1227,46 +1244,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CONCEPT_INFLUENCE_DRIVEN_WAR_PEDIA</Tag>
-		<English>by Moctezuma[PARAGRAPH:2][BOLD]Combat influence[\BOLD][PARAGRAPH:2]Military units affect surroundings via combat influence.[PARAGRAPH:2]After each combat between two units: some amount of culture accumulated in each square of combat area is transferred from loser player/AI to winner player/AI. Combat area (i.e. influence radius) is: attacker plot, defended plot and near surrounding plots (see definition of influence radius bellow). Note: This way I try to simulate effect of battle victory: some peoples have tendency to give up and flip to victorious side.[PARAGRAPH:2]Rules:
-[ICON_BULLET] It works for both field battle and city assault.
-[ICON_BULLET] It works for both attacking and defending.
-[ICON_BULLET] If last defending unit in city dies: combat influence is increased greatly (an emergency militia may be "auto-drafted" if the BUG option for this is enabled).
-[ICON_BULLET] If victorious unit has warlord: combat influence is increased.
-[ICON_BULLET] If attacking unit withdraws: no culture transfer happens.
-[ICON_BULLET] Calculated culture exchange cannot be higher than loser's remaining culture in plot. This means that no culture transfer happens in empty neutral territory: nobody is living there to be influenced. In third-party territory a culture transfer occurs only if some loser's culture is accumulated there.
-[ICON_BULLET] It works also for attacking/defending barbarians in player or barbarian territory (this can be disabled via XML file).
-[ICON_BULLET] Also water squares are affected by combat influence.
-[ICON_BULLET] Naval combats use same influence rules as land combats. Note: if naval battle occurs near land, also land squares are affected (naval influence can be disabled via XML file).
-[ICON_BULLET] No culture is exchanged during city bombardment (via catapults, ships, bombers, ICBM); during fighter interception; or if worker/settler is captured out of city.
-[PARAGRAPH:2][BOLD]Active city resistance[\BOLD][PARAGRAPH:2]If emergency draft option is enabled and the last defending unit in the city dies and city resistance is sufficient then one militia unit emerges in city, otherwise it is captured just like in vanilla. Resistance is sufficient if the city has sufficient population and the defender's culture in central plot is same or higher than attacker's culture in central plot (culture ratios in central city plot you can check also in the city screen). Note: This new rule tries to simulate active people resistance in highly cultured cities. Militia unit is "auto-drafted":
-[ICON_BULLET] Best available regular unit type is selected using same rules as for standard drafting: i.e. warrior, axeman, maceman, musketman, rifleman...
-[ICON_BULLET] Auto-drafted unit begins with 25% health (configurable in XML). This represents very low training level of quickly gathered militia.
-[ICON_BULLET] Draft anger is 50% of standard draft anger: high danger means low anger. (configurable in XML)
-[ICON_BULLET] City population is reduced by 1 (it doesn't depend on unit type).
-[ICON_BULLET] Auto-draft is not limited like standard draft: new militia unit is "auto-drafted" when previous one dies and resistance is still sufficient.
-[ICON_BULLET] When city population is reduced to 3, the city is captured even if resistance is still sufficient.
-[ICON_BULLET] There is no technology requirement for auto-draft: this is not real conscription: imagine peoples that are just trying in defend their homes.
-[ICON_BULLET] It takes some time to accumulate sufficient culture: if city is attacked early no militia emerges.
-[PARAGRAPH:2][BOLD]Pillage influence[\BOLD][PARAGRAPH:2]When enemy unit pillages tile improvement, some amount of accumulated culture is transferred from improvement owner to unit owner. Only single square is affected.[PARAGRAPH:2]Note: This rule was added to provide incentive for defender to defend own territory and not only stay inside cities. It reflects situation where farmers, miners or villagers escape due to farm, mine or village is burned down by invader.[PARAGRAPH:2]This rule is optional and can be disabled via XML. Rules:
-[ICON_BULLET] It works only in enemy territory (no influence in friendly or neutral territory)
-[ICON_BULLET] No influence form route pillage (roads, railroads).
-[ICON_BULLET] Works also for sea improvements (e.g. fishing boats).
-[ICON_BULLET] For improvements like towns, each downgrade influences given square.
-[PARAGRAPH:2][H1]Gameplay[\H1][PARAGRAPH:2][BOLD]Player is informed about effects of IDW this way:[\BOLD][PARAGRAPH:2]After each battle a number with influence % (i.e. exchanged culture ratio) is shown in the game log. It is calculated in defended plot only, but whole combat area is influenced. Reason that I'm using defended plot here is because it is in most cases the most important one (e.g. central city square).
-[ICON_BULLET] Green color means culture increase for you
-[ICON_BULLET] Red color means culture decrease for you.
-[PARAGRAPH:2]When last city defender dies and militia unit is "auto-drafted", a remaining resistance % is shown in the game log.[PARAGRAPH:2][BOLD]Result of changes on gameplay:[\BOLD]
-[PARAGRAPH:2][BOLD]1. More dynamic borders during wars:[\BOLD][PARAGRAPH:2]In vanilla game a culture plays significant role only in the beginning. In later stages the borders are almost fixed: big changes happen only if cities are captured.[PARAGRAPH:2]With new rules you can fight for territory between cities and not only for cities itself. I think that this "frontline" effect really improves gameplay. You can "win" quite large area with several resources even without conquering single enemy city! Possible tactics if you don't have sufficient power to conquer cities could be stay/pillage/heal near your borders and influence squares by killing approaching enemies.
-[PARAGRAPH:2][BOLD]2. Surprise or backstabbing attacks are less effective:[\BOLD][PARAGRAPH:2]Attacked city can for short time defend itself even if last defender dies if resistance is sufficient: this increases reaction time for defending player if he has many units in the opposite side of empire.[PARAGRAPH:2]However you cannot count on auto-drafted units. These are meant only to slow-down attack in case when everything else fails. In most cases a militia units can defend high cultured city only 1-2 turns until real defender units arrive because:
-[ICON_BULLET] Militia unit begins with very low health, so if it is attacked in same turn, it almost certainly dies.
-[ICON_BULLET] City resistance decreases very quickly because victory influence is much higher when last city defender dies (see NoCityDefenderMultiplier).
-[ICON_BULLET] Each auto-drafted unit increases unhappiness in the city.[PARAGRAPH:2]Note: I cannot make militia units more effective, because then player can abuse it: e.g. move out all defenders from city and later counterattack damaged attackers.
-[PARAGRAPH:2][BOLD]3. High cultured cities are harder to conquer (more militia formed) but easier to hold after capture[\BOLD]because city's central square has quite good amount of conqueror's culture immediately after capture.[PARAGRAPH:2]This means:[PARAGRAPH:2]No problem with cultural flipping of captured city back to original owner: In vanilla is this problem is fixed by disabling startup option: "City flipping after conquest". This is no longer needed in this mod.[PARAGRAPH:2]Much smaller problem with cultural flipping of captured city to neighbor civ, which can be in peace with conqueror. Naturally, if just conquered city has been in big cultural pressure prior to capture it will be in pressure also after it, because culture is transferred only from city's previous owner.[PARAGRAPH:2]Note: culture buildings in newly captured city are still very important because city still begins with zero culture (only plots are influenced by combat).
-[PARAGRAPH:2][BOLD]4. No problems with stealing of conquered city:[\BOLD][PARAGRAPH:2]This happens often in multiplayer with simultaneous turns but sometimes it occurs also in single-player: Two players are doing joint attack on same enemy city; first player destroys all defenders; second one just waits until last defender remains there and then attacks.[PARAGRAPH:2]With new rules the city capture is fairer: culture in central city square is increased after each victory for each attacking player separately. If no defender unit is left then attacker, whose culture in central square is higher than owners culture, captures the city.
-[PARAGRAPH:2][BOLD]5. In battles quality counts more than quantity:[\BOLD][PARAGRAPH:2]With new rules the conquest is easier with smaller stack of high strength units than with bigger stack of low strength units: Veteran unit makes more influence (see UnitExperienceMultiplier) and better victory/loss ratio means more culture transferred to attacker. Some examples:
-[ICON_BULLET] Suicide catapults are little less effective: due to losses, defender's culture increases more often.
-[ICON_BULLET] Blitz units like tanks are very effective: due to multiple culture exchanges per turn. This really speeds up the conquest of very highly cultured cities in later stages of game, which can be really slow otherwise.
-[ICON_BULLET] Warlord units are more effective than normal units (see WarlordMultiplier).</English>
+		<English>by Moctezuma[PARAGRAPH:2][BOLD]Combat influence[\BOLD][PARAGRAPH:2]Military units affect surroundings via combat influence.[PARAGRAPH:2]After each combat between two units: some amount of culture accumulated in each square of combat area is transferred from loser player/AI to winner player/AI. Combat area (i.e. influence radius) is: attacker plot, defended plot and near surrounding plots (see definition of influence radius bellow). Note: This way I try to simulate effect of battle victory: some peoples have tendency to give up and flip to victorious side.[PARAGRAPH:2]Rules:[ICON_BULLET] It works for both field battle and city assault.[ICON_BULLET] It works for both attacking and defending.[ICON_BULLET] If last defending unit in city dies: combat influence is increased greatly (an emergency militia may be "auto-drafted" if the BUG option for this is enabled).[ICON_BULLET] If victorious unit has warlord: combat influence is increased.[ICON_BULLET] If attacking unit withdraws: no culture transfer happens.[ICON_BULLET] Calculated culture exchange cannot be higher than loser's remaining culture in plot. This means that no culture transfer happens in empty neutral territory: nobody is living there to be influenced. In third-party territory a culture transfer occurs only if some loser's culture is accumulated there.[ICON_BULLET] It works also for attacking/defending barbarians in player or barbarian territory (this can be disabled via XML file).[ICON_BULLET] Also water squares are affected by combat influence.[ICON_BULLET] Naval combats use same influence rules as land combats. Note: if naval battle occurs near land, also land squares are affected (naval influence can be disabled via XML file).[ICON_BULLET] No culture is exchanged during city bombardment (via catapults, ships, bombers, ICBM); during fighter interception; or if worker/settler is captured out of city.[PARAGRAPH:2][BOLD]Active city resistance[\BOLD][PARAGRAPH:2]If emergency draft option is enabled and the last defending unit in the city dies and city resistance is sufficient then one militia unit emerges in city, otherwise it is captured just like in vanilla. Resistance is sufficient if the city has sufficient population and the defender's culture in central plot is same or higher than attacker's culture in central plot (culture ratios in central city plot you can check also in the city screen). Note: This new rule tries to simulate active people resistance in highly cultured cities. Militia unit is "auto-drafted":[ICON_BULLET] Best available regular unit type is selected using same rules as for standard drafting: i.e. warrior, axeman, maceman, musketman, rifleman...[ICON_BULLET] Auto-drafted unit begins with 25% health (configurable in XML). This represents very low training level of quickly gathered militia.[ICON_BULLET] Draft anger is 50% of standard draft anger: high danger means low anger. (configurable in XML)[ICON_BULLET] City population is reduced by 1 (it doesn't depend on unit type).[ICON_BULLET] Auto-draft is not limited like standard draft: new militia unit is "auto-drafted" when previous one dies and resistance is still sufficient.[ICON_BULLET] When city population is reduced to 3, the city is captured even if resistance is still sufficient.[ICON_BULLET] There is no technology requirement for auto-draft: this is not real conscription: imagine peoples that are just trying in defend their homes.[ICON_BULLET] It takes some time to accumulate sufficient culture: if city is attacked early no militia emerges.[PARAGRAPH:2][BOLD]Pillage influence[\BOLD][PARAGRAPH:2]When enemy unit pillages tile improvement, some amount of accumulated culture is transferred from improvement owner to unit owner. Only single square is affected.[PARAGRAPH:2]Note: This rule was added to provide incentive for defender to defend own territory and not only stay inside cities. It reflects situation where farmers, miners or villagers escape due to farm, mine or village is burned down by invader.[PARAGRAPH:2]This rule is optional and can be disabled via XML. Rules:[ICON_BULLET] It works only in enemy territory (no influence in friendly or neutral territory)[ICON_BULLET] No influence form route pillage (roads, railroads).[ICON_BULLET] Works also for sea improvements (e.g. fishing boats).[ICON_BULLET] For improvements like towns, each downgrade influences given square.[PARAGRAPH:2][H1]Gameplay[\H1][PARAGRAPH:2][BOLD]Player is informed about effects of IDW this way:[\BOLD][PARAGRAPH:2]After each battle a number with influence % (i.e. exchanged culture ratio) is shown in the game log. It is calculated in defended plot only, but whole combat area is influenced. Reason that I'm using defended plot here is because it is in most cases the most important one (e.g. central city square).[ICON_BULLET] Green color means culture increase for you[ICON_BULLET] Red color means culture decrease for you.[PARAGRAPH:2]When last city defender dies and militia unit is "auto-drafted", a remaining resistance % is shown in the game log.[PARAGRAPH:2][BOLD]Result of changes on gameplay:[\BOLD][PARAGRAPH:2][BOLD]1. More dynamic borders during wars:[\BOLD][PARAGRAPH:2]In vanilla game a culture plays significant role only in the beginning. In later stages the borders are almost fixed: big changes happen only if cities are captured.[PARAGRAPH:2]With new rules you can fight for territory between cities and not only for cities itself. I think that this "frontline" effect really improves gameplay. You can "win" quite large area with several resources even without conquering single enemy city! Possible tactics if you don't have sufficient power to conquer cities could be stay/pillage/heal near your borders and influence squares by killing approaching enemies.[PARAGRAPH:2][BOLD]2. Surprise or backstabbing attacks are less effective:[\BOLD][PARAGRAPH:2]Attacked city can for short time defend itself even if last defender dies if resistance is sufficient: this increases reaction time for defending player if he has many units in the opposite side of empire.[PARAGRAPH:2]However you cannot count on auto-drafted units. These are meant only to slow-down attack in case when everything else fails. In most cases a militia units can defend high cultured city only 1-2 turns until real defender units arrive because:[ICON_BULLET] Militia unit begins with very low health, so if it is attacked in same turn, it almost certainly dies.[ICON_BULLET] City resistance decreases very quickly because victory influence is much higher when last city defender dies (see NoCityDefenderMultiplier).[ICON_BULLET] Each auto-drafted unit increases unhappiness in the city.[PARAGRAPH:2]Note: I cannot make militia units more effective, because then player can abuse it: e.g. move out all defenders from city and later counterattack damaged attackers.[PARAGRAPH:2][BOLD]3. High cultured cities are harder to conquer (more militia formed) but easier to hold after capture[\BOLD]because city's central square has quite good amount of conqueror's culture immediately after capture.[PARAGRAPH:2]This means:[PARAGRAPH:2]No problem with cultural flipping of captured city back to original owner: In vanilla is this problem is fixed by disabling startup option: "City flipping after conquest". This is no longer needed in this mod.[PARAGRAPH:2]Much smaller problem with cultural flipping of captured city to neighbor civ, which can be in peace with conqueror. Naturally, if just conquered city has been in big cultural pressure prior to capture it will be in pressure also after it, because culture is transferred only from city's previous owner.[PARAGRAPH:2]Note: culture buildings in newly captured city are still very important because city still begins with zero culture (only plots are influenced by combat).[PARAGRAPH:2][BOLD]4. No problems with stealing of conquered city:[\BOLD][PARAGRAPH:2]This happens often in multiplayer with simultaneous turns but sometimes it occurs also in single-player: Two players are doing joint attack on same enemy city; first player destroys all defenders; second one just waits until last defender remains there and then attacks.[PARAGRAPH:2]With new rules the city capture is fairer: culture in central city square is increased after each victory for each attacking player separately. If no defender unit is left then attacker, whose culture in central square is higher than owners culture, captures the city.[PARAGRAPH:2][BOLD]5. In battles quality counts more than quantity:[\BOLD][PARAGRAPH:2]With new rules the conquest is easier with smaller stack of high strength units than with bigger stack of low strength units: Veteran unit makes more influence (see UnitExperienceMultiplier) and better victory/loss ratio means more culture transferred to attacker. Some examples:[ICON_BULLET] Suicide catapults are little less effective: due to losses, defender's culture increases more often.[ICON_BULLET] Blitz units like tanks are very effective: due to multiple culture exchanges per turn. This really speeds up the conquest of very highly cultured cities in later stages of game, which can be really slow otherwise.[ICON_BULLET] Warlord units are more effective than normal units (see WarlordMultiplier).</English>
 		<French>par Moctezuma[PARAGRAPH:2][BOLD]Combat influence[\BOLD][PARAGRAPH:2]Les Combats affectent la culture des cases sur lesquelles ils se déroulent: un certain pourcentage de culture du Vainqueur est transféré sur la case, aux dépends de la culture du vaincu.</French>
 	</TEXT>
 	<TEXT>
@@ -1605,6 +1583,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_CONCEPT_OPP_FIRE_PEDIA</Tag>
 		<English>Opportunity Fire allows fortified bombard capable units (such as artillery) to automatically barrage enemy units which close on the fortified unit's location. This process is undertaken at the start of that unit's turn.</English>
+		<French>Le tir d'opportunité permet aux unités capables de bombardement fortifié (comme l'artillerie) de bombarder automatiquement les unités ennemies qui s'approchent de leur position au début de leur tour.</French>
 		<German>Gelegenheitstreffer erlaubt es Einheiten, die bombardieren können (z.B. Artillerie) automatisch Feindeinheiten zu beschießen, die sich ihner befestigten Position nähern. Dies geschieht zu Beginn des Durchgangs dieser Einheit.</German>
 		<Italian>"Fuoco di opportunità" consente ad unità da bombardamento (es. Artiglieria) fortificate di effettuare colpi di sbarramento verso le unità nemiche in avvicinamento. Questo processo viene effettuato all'inizio del turno di tale unità.</Italian>
 		<Russian>[H1]Âûãîäíàÿ öåëü[\H1][PARAGRAPH:2]Óêðåïëåííûå àðòèëëåðèéñêèå þíèòû (ïóøêè è ò.ä.) àâòîìàòè÷åñêè îáíàðóæèâàþò âûãîäíûå öåëè, àòàêóÿ ïðîòèâíèêà, êîòîðûé ïðèáëèæàåòñÿ ê èõ ïîçèöèÿì. Îáñòðåë îñóùåñòâëÿåòñÿ â íà÷àëå õîäà àðòèëëåðèéñêîãî þíèòà.[PARAGRAPH:2]</Russian>
@@ -1885,7 +1864,8 @@
 		<Russian>2. Èìïåðèÿ âàðâàðîâ</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CONCEPT_REV_BARBARIANCIV_PEDIA</Tag> <!-- Needs updating! -->
+		<Tag>TXT_KEY_CONCEPT_REV_BARBARIANCIV_PEDIA</Tag>
+		<!-- Needs updating! -->
 		<English>In this mod option, barbarian cities, if left to their own devices, will eventually settle down into full blown civs![PARAGRAPH:2][BOLD]How it works:[\BOLD][PARAGRAPH:2]Barbarian cities will settle down probabilistically, with several factor determining the odds. Starting with version 2.0, barb cities first become single city minor civs. These city states can't conduct diplomacy, so they're at war with everyone. When the new civ accomplishes something notable, a leader emerges and the civ settles down into a full civ. These accomplishments can include conquest, reaching a high population, reaching a high level of culture, building wonders, etc.[PARAGRAPH:2][BOLD]More details:[\BOLD][PARAGRAPH:2]The decision to have a barbarian city form a minor civ is based on the population and culture of the city, whether there are nearby civs, and whether the city was captured. When a minor civ forms, they take control of this single city and are given some units and techs to get started. Since they are a minor civ they're at war with everyone else and cannot conduct diplomacy, so you won't see them on the scoreboard.[PARAGRAPH:2]Each turn the minor civs are checked to see if they deserve to be upgraded to full civ status. When settling down into a full civ, these minor civs will take on one of two types: militaristic and builder. If they have conquered a city, they will immediately settle into a full, militaristic civ and continue the war against whomever they took a city from. If they have reached a high level of culture or built a wonder, they will settle as builders. If they settle due to high population or founding a religion, they have a probabilistic chance of being one or the other.[PARAGRAPH:2]The civs get several bonuses depending on whether they're militaristic or builder. Both types get a base set of defensive units and workers, plus some free techs known to a majority of the world. The new civ also gets a great person (to symbolize the leader who organized the horde), with the GP type depending on the type of consolidation. Their capital is given walls and a granary. If the cities have some culture, the new civ gets half of the total. These general effects for both types of rise of the barbs are intended to partly catch them up with the rest of the world.[PARAGRAPH:2]Militaristic consolidation is the most exciting in my view. It's intended to mimic the effect of Ghengis Khan or the Vikings. There are four different flavors of militaristic settling, Viking, Chariot, Horse, and balanced. Vikings get boats and mostly melee units, Chariot style is for earlier barb settling and they get chariots and some axes, Horse style is mostly Horse archers or Knights if late enough, while balanced gets an assortment of units. The strength of the military is fairly random, and increases as the eras go by. Odds of a militaristic build up increase if the new leader is Aggressive or Expansionist. Militaristic new civs will be behind in economic or social technology. They also get free barracks. Militaristic barbs have a good chance of getting a Great General when spawned.[PARAGRAPH:2]Builder consolidation is intended to mimic the rise of a new civ that isn't particularly militaristic. This type of civ gets additional techs, one or two of which they may be the first to research. They are given a Great Person and may build a wonder or discover a new tech. It's not uncommon for them to found a new religion. They are also given a bunch of extra infrastructure: extra worker, free settler, and some buildings like libraries, lighthouses, and forges (if they have the tech).[PARAGRAPH:2][BOLD]Notes on use:[\BOLD][PARAGRAPH:2]To make this component more exciting, the amount of Barbarian activity has generally been increased. Particularly, barbarian cities will form both earlier and more often to help this component fill in empty space in the game map with new players. With this change, a full standard map game will probably see a handful of barb civs emerge.[PARAGRAPH:2]One fun one to play is start a large world with only a handful of civs, then let the barbarians fill in the gaps. Be prepared for a potential invasion from a rising power! BarbarianCiv also works quite well with the Revolution component that can spawn barbarian rebels.[PARAGRAPH:2]On Terra maps, the new world will probably not be as empty as before. A new config variable, NewWorldPolicy, can be used to define how barb cities on their own continent behave so that you can customize how the new world will appear when the first explorers land. Options range from having it mostly full of civs to keeping barb cities as barbarian until someone starts colonizing.[PARAGRAPH:2]There are many other settings in the Revolution.ini config file, including MilitaryStrength which can be used to create massive military invasions and modifiers for controlling the odds of civ formation.</English>
 		<French>Dans ce mod, les Villes barbares, lorsqu'elles sont laissées à leur sort, vont s'établir et devenir des civilisations, tout d'abord mineures (en guerre automatiquement et ne pouvant conduire de diplomatie), puis en vraies civilisations, en nouveau challenger[PARAGRAPH:2]Pour palier au retard de son apparition, la civilisation recevra des bonus, des technologies gratuires, et un nombre important d'unités militaires afin de pouvoir se défendre, voire capturer quelques villes voisines si le trait de charactère correspond.</French>
 		<Russian>[H1]Âàðâàðñêèå öèâèëèçàöèè[\H1][PARAGRAPH:2][BOLD]Ñîäåðæàíèå:[\BOLD][PARAGRAPH:2]Â äàííîì ñàáìîäå, âêëþ÷åííîì â Ñ2Ñ, âàðâàðñêèå ãîðîäà, ïðåäîñòàâëåííûå ñàìè ñåáå, ñî âðåìåíåì ìîãóò ïðåâðàòèòüñÿ â ïîëíîöåííûå öèâèëèçàöèè![PARAGRAPH:2][BOLD]Ïðèíöèïû ðàáîòû ñàáìîäà:[\BOLD][PARAGRAPH:2]Â èãðîâîé ìåõàíèêå èìååòñÿ íåñêîëüêî îïðåäåëåííûõ íþàíñîâ äëÿ ïðåîáðàçîâàíèÿ âàðâàðñêèõ ïîñåëåíèé è èõ âîçíèêíîâåíèÿ. Íà÷èíàÿ ñ âåðñèè ñàáìîäà 2.0, âàðâàðñêèå ïîñåëåíèÿ âïåðâûå ñïîñîáíû âûðàñòàòü äî ''ìàëûõ íàöèé''. Ýòè ãîðîäà-ãîñóäàðñòâà ïåðâîå âðåìÿ íå ìîãóò âåñòè íîðìàëüíóþ äèïëîìàòèþ, ïîñêîëüêó îíè âîþþò ñî âñåìè. Åñëè ýòîò âàðâàðñêèé ïîëèñ ñîâåðøàåò íå÷òî âûäàþùååñÿ, òî ó íåãî ïîÿâëÿåòñÿ ñâîé ëèäåð, à ãîðîä ñòàíîâèòñÿ ïîëíîöåííîé öèâèëèçàöèåé. Â ÷èñëî òðåáóåìûõ äîñòèæåíèé ìîãóò âõîäèòü îáøèðíûå çàâîåâàíèÿ, ðåçêèé äåìîãðàôè÷åñêèé ðîñò, äîñòèæåíèå î÷åíü âûñîêîãî óðîâíÿ êóëüòóðû, ñòðîèòåëüñòâî ×óäåñ Ñâåòà, è ò.ä.[PARAGRAPH:2][BOLD]Ïîäðîáíîñòè:[\BOLD][PARAGRAPH:2]Êàê ïðàâèëî ïðåâðàùåíèå âàðâàðñêîãî ãîðîäà â ìàëóþ íàöèþ èñõîäèò èç òåìïîâ ïðèðîñòà íàñåëåíèÿ è êóëüòóðû â íåì, à òàêæå êàêèå öèâèëèçàöèè ñ íèì ñîñåäñòâóþò, è ðàíåå çàõâà÷åííûìè âàðâàðàìè ãîðîäàìè. Êîãäà âîçíèêàåò ''ìàëàÿ íàöèÿ'', îíà áóäåò èçíà÷àëüíî êîíòðîëèðîâàòü ëèøü îäèí ãîðîä è íåêèé íàáîð þíèòîâ è óæå èçó÷åííûõ òåõíîëîãèé äëÿ äàëüíåéøåãî ðàçâèòèÿ. Òàê êàê îíè âñå åùå ÿâëÿþòñÿ ''ìàëûìè íàöèÿìè'', òî áóäóò ïðîäîëæàòü ïðåáûâàòü ñî âñåìè öèâèëèçàöèÿìè â ñîñòîÿíèè âîéíû, ïîýòîìó âû íå óâèäèòå èõ â ñïèñêå ñî ñ÷åòîì êîíêóðåíòîâ.[PARAGRAPH:2]Êàæäûé õîä èãðà áóäåò ïðîâåðÿòü ''ìàëûå íàöèè'' íà îïðåäåëåííûå ïàðàìåòðû è íàáðàííûå áàëëû, äîñòîéíû ëè îíè ñòàòü ïîëíîïðàâíîé öèâèëèçàöèåé. Â ñëó÷àå, åñëè ''ìàëàÿ íàöèÿ'' ïðîøëà ïðîâåðêó è ïîëó÷èëà ñòàòóñ ''íîðìàëüíîé'' öèâèëèçàöèè, òî îíà îáû÷íî âûáèðàåò îäíó èç äâóõ ÷åðò è òàêòèê: âîéíà èëè ñòðîèòåëüñòâî. Íàïðèìåð, åñëè â÷åðàøíèå ''ìàëûå íàöèè'' çàõâàòèëè íåêèé ãîðîä ó ñîñåäíåé öèâèëèçàöèè, òî îíè íåìåäëåííî ðàññåëÿþòñÿ â íåì è ïðîäîëæàþò áîðüáó ñ íåé â êà÷åñòâå ìèëèòàðèñòñêîé öèâèëèçàöèè. À åñëè ''ìàëàÿ íàöèÿ'' äîñòèãëà âûñîêîãî óðîâíÿ êóëüòóðû èëè çàâåðøèëà ñòðîèòåëüñòâà ×óäà Ñâåòà, òî îíà ñòàíîâèòñÿ ìèðíîé öèâèëèçàöèåé-ñòðîèòåëåì. Íàêîíåö, âîçìîæû îáà âàðèàíòà â ñëó÷àå, åñëè ''ìàëàÿ íàöèÿ'' çàõâàòèò êðóïíûé ãîðîä ñ îäíîé èëè íåñêîëüêèìè èñïîâåäóåìûìè òàì ðåëèãèÿìè.[PARAGRAPH:2]Â çàâèñèìîñòè îò âûáîðà ïóòè ìèëèòàðèñòà èëè ñòðîèòåëÿ, íîâîðîæäåííûå öèâèëèçàöèè ìîãóò ïîëó÷àòü ðàçëè÷íûå áîíóñû. Â ëþáîì ñëó÷àå, îíè ïîëó÷àþò ïîñëå ïðåîáðàçîâàíèÿ íåñêîëüêî çàùèòíûõ îòðÿäîâ è ðàáî÷èõ, à òàêæå íåñêîëüêî ëåêàðåé â çàâèñèìîñòè îò èãðîâîé ýïîõè ó áîëüøèíñòâà öèâèëèçàöèé. Êðîìå òîãî, îíè ïîëó÷àþò ïî îäíîìó [COLOR_UNIT_TEXT]Âåëèêîìó ÷åëîâåêó[COLOR_REVERT] (ñèìâîëèçèðóþùåãî îòöà-îñíîâàòåëÿ íàöèè èëè îðäû), â çàâèñèìîñòè îò òèïà åå îáüåäèíåíèÿ. Â èõ ñòîëèöå áóäóò íåïðåìåííî àìáàð è ãîðîäñêèå ñòåíû. Åñëè â îñíîâàííûõ/çàõâà÷åííûõ ãîðîäàõ áóäåò èìåòüñÿ èíîñòðàííàÿ êóëüòóðà, òî íîâàÿ öèâèëèçàöèÿ ïîëó÷èò ïîëîâèíó î÷êîâ îò èõ îáùåãî ñ÷åòà. Âñå âûøåïåðå÷èñëåííîå íåîáõîäèìî, ÷òîáû íîâè÷êè ìîãëè óñïåøíî êîíêóðèðîâàòü â äàëüíåéøåì ñ öèâèëèçàöèÿìè-ñòàðîæèëàìè.[PARAGRAPH:2]Íàèáîëåå èíòåðåñíîé ñ òî÷êè çðåíèÿ ðàçðàáîò÷èêîâ ñàáìîäà ÿâëÿåòñÿ ìèëèòàðèñòñêàÿ êîíñîëèäàöèÿ ''ìàëîé íàöèè''. Îíà ïðèçâàíà èìèòèðîâàòü â èãðå ñöåíàðèè èç ðåàëüíîé èñòîðèè ÷åëîâå÷åñòâà, âðîäå îñíîâàíèÿ èìïåðèè ×èíãèñõàíà èëè âàðâàðñêèõ êîðîëåâñòâ Âèêèíãîâ íà îáëîìêàõ Çàï. Ðèìñêîé èìïåðèè. Âñåãî ñóåñòâóþò ÷åòûðå óíèêàëüíûõ òèïà âàðâàðñêîãî ñåòòèíãà þíèòîâ: íîðìàíí, êîëåñíèöà, âñàäíèê, è ñáàëàíñèðîâàííûé òèïàæ. Âèêèíãè ñòðîèò òàêòèêó íà èñïîëüçîâàíèè ãðåáíûõ ñóäîâ è òÿæåëóþ ïåõîòó áëèæíåãî áîÿ, ñòèëü ''Êîëåñíèöû'' ïðåäïîëàãàåò ðàííþþ ýêñïàíñèþ ñ ïðèìåíåíèåì êîëåñíèö è ñåêèðîíîñöåâ, ''êàâàëåðèñòû'' áóäóò èñïîëüçîâàòü îðäû êîííûõ ëó÷íèêîâ (ëèáî ðûöàðåé - åñëè íà äâîðå äîñòàòî÷íî ïîçäíÿÿ ýïîõà), à ïîñëåäíèé òèïàæ ïîëó÷àåò ñòåêè þíèòîâ ñ óñðåäíåííûìè õàðàêòåðèñòèêàìè è íàâûêàìè. Âîåííàÿ ìîùü âíîâü âîçíèêøèõ öèâèëèçàöèé ìîæåò îêàçàòüñÿ âåñüìà ñëó÷àéíîé, è ëèøü âîçðàñòàåò, ÷åì ïîçäíåå áóäåò èãðîâàÿ ýïîõà. Øàíñû íà ìèëèòàðèñòñêèé ïóòü ðàçâèòèÿ ïîâûøàþòñÿ, åñëè íîâûé ëèäåð öèâèëèçàöèè áóäåò èìåòü ÷åðòû [COLOR_HIGHLIGHT_TEXT]Ìèëèòàðèñòà[COLOR_REVERT] èëè [COLOR_HIGHLIGHT_TEXT]Ýêñïàíñèîíèñòà[COLOR_REVERT].Íîâûå ìèëèòàðèñòñêèå öèâèëèçàöèè ïðè ýòîì áóäóò çàìåòíî îòñòàâàòü îò êîíêóðåíòîâ â ýêîíîìè÷åñêèõ è ñîöèàëüíûõ òåõíîëîãèÿõ. Òàêæå îíè ïîëó÷àò áåñïëàòíûå êàçàðìû â êàæäîì ãîðîäå. Ó ìèëèòàðèñòñêèõ öèâèëèçàöèé çàìåòíî ïîâûøàåòñÿ øàíñ ïî ñðàâíåíèþ ñ êîíêóðåíòàìè íà ïîÿâëåíèå [COLOR_UNIT_TEXT]Âåëèêîãî ãåíåðàëà[COLOR_REVERT].[PARAGRAPH:2]Åñëè æå ôîðìèðîâàíèå íîâîé öèâèëèçàöèè èäåò ïî ïóòè ''ñòðîèòåëÿ'', òî çäåñü ðàáîòàþò íåñêîëüêî èíûå ïðèíöèïû. Öèâèëèçàöèè ýòîãî òèïà ïîëó÷àò äâå áåñïëàòíûå òåõíîëîãèè, îäíó èç êîòîðûõ îíè ìîãóò èññëåäîâàòü ñàìûìè ïåðâûìè. Âäîáàâîê îíè ïîëó÷àþò [COLOR_UNIT_TEXT]Âåëèêîãî ÷åëîâåêà[COLOR_REVERT], êîòîðûé ìîæåò îòêðûòü áåñïëàòíî òåõíîëîãèþ èëè çàâåðøèòü ñòðîèòåëüñòâî ×óäà Ñâåòà. ×àñòåíüêî îíè ìîãóò ñòàòü îñíîâàòåëÿìè íîâîé [COLOR_HIGHLIGHT_TEXT]ìèðîâîé ðåëèãèè[COLOR_REVERT]. Ìèðíûå öèâèëèçàöèè òàêæå ïîëó÷àþò êó÷ó ìåëêèõ, íî ïðèÿòíûõ áîíóñîâ: äîï. ðàáî÷èé, áåñïëàòíûé ïîñåëåíåö, íåêîòîðûå çäàíèÿ, âðîäå áèáëèîòåêè, ìàÿêà, êóçíèöû (åñëè èìåþòñÿ íåîáõîäèìûå äëÿ ýòîãî òåõíîëîãèè).[PARAGRAPH:2][BOLD]Ïðèìå÷àíèÿ:[\BOLD][PARAGRAPH:2]Äëÿ òîãî, ÷òîáû ïîëó÷èòü ìàêñèìóì óäîâîëüñòâèÿ îò ýòîãî ñàáìîäà, íåîáõîäèìî óâåëè÷èòü ïëàíêó àãðåññèâíîñòè è àêòèâíîñòè âàðâàðîâ. Â ÷àñòíîñòè, íà ðàííåì ýòàïå äî ôîðìèðîâàíèÿ ïåðâûõ ''ìàëûõ íàöèé'', âàðâàðñêèå ãîðîäà ïîìîãóò çàïîëíèòü ïóñòóþùèå ïðîñòðàíñòâà íà ìèðîâîé êàðòå, ïîêà îñòàëüíûå èãðîêè íå óñïåëè íà÷àòü ýêñïàíñèþ. Ñ ýòîé îïöèåé, ïî âñåé âåðîÿòíîñòè, êàòû ñðåäíèõ ðàçìåðîâ óæå íà ðàííåì ýòàïå ìîãóò áûòü ïëîòíî çàñåëåíû.[PARAGRAPH:2]Äîâîëüíî çàáàâíî áóäåò íà÷àòü íîâóþ èãðó ñ ýòèì âêëþ÷åííûì ðåæèìîì ñ ãîðñòêîé öèâèëèçàöèé è íåñêîëüêèìè äåñÿòêàìè ïëåìåí âàðâàðîâ, çàïîëíÿþùèõ âñå ïóñòûå ïðîñòðàíñòâà íà êàðòå. Áóäüòå ãîòîâû ê òîìó, ÷òî âàì ïðåäñòîèò ðàç çà ðàçîì îòðàæàòü íåñëàáûå âàðâàðñêèå íàáåãè äèêèõ êî÷åâûõ îðä! Êðîìå òîãî, îïöèÿ [COLOR_HIGHLIGHT_TEXT]BarbarianCiv[COLOR_REVERT] óñïåøíî àäàïòèðîâàíà äëÿ ðàáîòû âìåñòå ñ ñàáìîäîì íà [COLOR_HIGHLIGHT_TEXT]Ðåâîëþöèè[COLOR_REVERT], ãåíåðèðóÿ ðàçëè÷íûõ âàðâàðñêèõ ìÿòåæíèêîâ è ïîâñòàíöåâ.[PARAGRAPH:2]Ñ ýòèì ðåæèìîì èãðû, ãåéìïëåé íà êàðòå Òåððû óæå íå áóäåò òàêèì óíûëûì êàê ðàíüøå, à êàðòà Çåìëè áóäåò ïëîòíî çàñåëåíà. Âìåñòå ñ îïöèåé, [COLOR_HIGHLIGHT_TEXT]NewWorldPolicy[COLOR_REVERT], ýòîò èãðîâîé ðåæèì ìîæåò èñïîëüçîâàòüñÿ â êà÷åñòâå óïðàâëÿþùåãî ìîäèôèêàòîðà ïîðÿäêà âîçíèêíîâåíèÿ è ïîâåäåíèÿ ''ìàëûõ íàöèé'' íà îïðåäåëåííîì êîíòèíåíòå, êîãäà òóäà ïðîíèêíóò ïåðâûå èññëåäîâàòåëè èëè êîëîíèçàòîðû. Ýòè íàñòðîéêè òàêæå ïîçâîëÿþò îïðåäåëèòü âçàèìîîòíîøåíèÿ è óðîâåíü ðàçâèòèÿ êîðåííûõ öèâèëèçàöèé ñ âàðâàðàìè è ''ìàëûìè íàöèÿìè'' äî òîãî, êàê íà íîâûé ìàòåðèê ñòóïèò íîãà êîëîíèçàòîðà/êîíêèñòàäîðà.[PARAGRAPH:2]Ìíîæåñòâî äðóãèõ ïàðàìåòðîâ ìîæíî íàñòðîèòü â ôàéëå Revolution.ini, âêëþ÷àÿ [COLOR_HIGHLIGHT_TEXT]MilitaryStrength[COLOR_REVERT] (âîåííóþ ìîùü), êîòîðàÿ îòâå÷àåò çà ÷àñòîòó âîçíèêíîâåíèé âàðâàðñêèõ íàøåñòâèé è èõ ìîùíîñòü, à òàêæå çàäàåò óñëîâèÿ äëÿ ïðåîáðàçîâàíèÿ âàðâàðîâ â ''ìàëûå íàöèè'' è äàëåå - â ïîëíîïðàâíûå öèâèëèçàöèè.</Russian>
@@ -1925,8 +1905,9 @@
 	<TEXT>
 		<Tag>TXT_KEY_CONCEPT_REV_TECH_DIFFUSION</Tag>
 		<English>2. Tech - Diffusion</English>
-		<Spanish>2. Difusión tecnológica</Spanish>
+		<French>2. Technologie - Diffusion</French>
 		<Russian>2. Ðàñïðîñòðàíåíèå òåõíîëîãèé</Russian>
+		<Spanish>2. Difusión tecnológica</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CONCEPT_REV_TECH_DIFFUSION_PEDIA</Tag>
@@ -1949,8 +1930,9 @@
 	<TEXT>
 		<Tag>TXT_KEY_CONCEPT_ROM_BETTER_BTS_AI</Tag>
 		<English>1. Better BTS AI</English>
-		<Spanish>1. IA de BtS mejorada</Spanish>
+		<French>1. Meilleure IA BTS</French>
 		<Russian>1. Óëó÷øåííûé èíòåëëåêò</Russian>
+		<Spanish>1. IA de BtS mejorada</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CONCEPT_ROM_BETTER_BTS_AI_PEDIA</Tag>
@@ -2182,6 +2164,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_CONCEPT_ROM_BETTER_ESPIONAGE_SCREEN_PEDIA</Tag>
 		<English>Better Espionage Screen allows for more civilizations to be shown within the Espionage Screen, as well as vital information being color coded.</English>
+		<French>L'écran d'espionnage amélioré permet d'afficher plus de civilisations et de mettre en couleur les informations importantes.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CONCEPT_ROM_BUILDING_UPGRADE_LINES</Tag>
@@ -2549,8 +2532,9 @@ Remember: If you're having trouble with which civic to choose, just think of his
 	<TEXT>
 		<Tag>TXT_KEY_CONCEPT_ROM_IMPROVEMENTS</Tag>
 		<English>1. Improvements</English>
-		<Spanish>1. Mejoras</Spanish>
+		<French>1. Améliorations</French>
 		<Russian>1. Îáúåêòû</Russian>
+		<Spanish>1. Mejoras</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CONCEPT_ROM_IMPROVEMENTS_PEDIA</Tag>
@@ -2559,32 +2543,38 @@ Remember: If you're having trouble with which civic to choose, just think of his
 	<TEXT>
 		<Tag>TXT_KEY_CONCEPT_ROM_LIMITED_RELIGION</Tag>
 		<English>2. Religion - Limited</English>
-		<Spanish>2. Religiones limitadas</Spanish>
+		<French>2. Religion - Limitée</French>
 		<Russian>2. Ëèìèò ðåëèãèé</Russian>
+		<Spanish>2. Religiones limitadas</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CONCEPT_ROM_LIMITED_RELIGION_PEDIA</Tag>
 		<English>Limited Religions is a game option which allows each player to only found a religion if they don't possess a holy city already.</English>
+		<French>La religion limitée est une option de jeu qui permet à chaque joueur de fonder une religion seulement s'il ne possède pas déjà une ville sainte.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CONCEPT_ROM_MAPS</Tag>
 		<English>1. Maps and Scenarios</English>
-		<Spanish>1. Mapas y escenarios</Spanish>
+		<French>1. Cartes et scénarios</French>
 		<Russian>1. Êàðòû è ñöåíàðèè</Russian>
+		<Spanish>1. Mapas y escenarios</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CONCEPT_ROM_MAPSCRIPTS</Tag>
 		<English>1. Mapscripts</English>
-		<Spanish>1. Generadores de mapas</Spanish>
+		<French>1. Scripts de carte</French>
 		<Russian>1. Ãåíåðàòîð êàðò</Russian>
+		<Spanish>1. Generadores de mapas</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CONCEPT_ROM_MAPSCRIPTS_PEDIA</Tag>
 		<English>Rise of Mankind mod (a parent mod of C2C) adds new terrain type [LINK=TERRAIN_MARSH]Marsh[\LINK] and new terrain feature [LINK=FEATURE_SWAMP]Peat Bog[\LINK].[PARAGRAPH:2]Rise of Mankind adds 2 new map sizes: Giant and Gigantic. These maps are extra large and should be tried only on high end computers.[PARAGRAPH:2]Basic mapscripts are shown in list when you click Single Player and then Play Now. Advanced mapscripts can be used in Custom Game.</English>
+		<French>Le mod Rise of Mankind (parent de C2C) ajoute un nouveau type de terrain [LINK=TERRAIN_MARSH]Marais[\LINK] et une nouvelle caractéristique [LINK=FEATURE_SWAMP]Tourbière[\LINK].[PARAGRAPH:2]Rise of Mankind ajoute 2 nouvelles tailles de carte : Géant et Gigantesque. Ces cartes sont très larges et à essayer uniquement sur des ordinateurs performants.[PARAGRAPH:2]Les scripts de carte basiques apparaissent dans la liste après avoir cliqué sur Partie Solo puis Jouer. Les scripts avancés sont disponibles en jeu personnalisé.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CONCEPT_ROM_MAPS_PEDIA</Tag>
 		<English>There are few Earth maps, and bunch of space scenarios. Space scenarios are a way to enjoy space content without multimaps, as we don't have mapscripts generating space zones</English>
+		<French>Il y a peu de cartes terrestres, et plusieurs scénarios spatiaux. Ces scénarios permettent de profiter du contenu spatial sans cartes multiples, car nous n'avons pas de scripts générant des zones spatiales.</French>
 	</TEXT>
 	<!-- <TEXT>
 		<Tag>TXT_KEY_CONCEPT_ROM_MODULES_CIV_SPECIFIC_UNITARTSTYLES</Tag>
@@ -2678,8 +2668,9 @@ Remember: If you're having trouble with which civic to choose, just think of his
 	<TEXT>
 		<Tag>TXT_KEY_CONCEPT_ROM_RELIGIOUS_VICTORY</Tag>
 		<English>2. Victory - Religious</English>
-		<Spanish>2. Victoria religiosa</Spanish>
+		<French>2. Victoire - Religieuse</French>
 		<Russian>2. Религиозная победа</Russian>
+		<Spanish>2. Victoria religiosa</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CONCEPT_ROM_RELIGIOUS_VICTORY_PEDIA</Tag>
@@ -2694,12 +2685,14 @@ Remember: If you're having trouble with which civic to choose, just think of his
 	<TEXT>
 		<Tag>TXT_KEY_CONCEPT_ROM_SCIENTIFIC_VICTORY</Tag>
 		<English>2. Victory - Scientific</English>
-		<Spanish>2. Victoria científica</Spanish>
+		<French>2. Victoire - Scientifique</French>
 		<Russian>2. Научная победа</Russian>
+		<Spanish>2. Victoria científica</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CONCEPT_ROM_SCIENTIFIC_VICTORY_PEDIA</Tag>
 		<English>The mod has a new victory condition called the Scientific Victory. To win with a scientific victory, player must reach the last techs in the techtree and then build enough Paradise Gardens to get access to Ascension Gate Great Wonder. Once player has built this wonder, he wins Scientific Victory.</English>
+		<French>Le mod propose une nouvelle condition de victoire appelée Victoire Scientifique. Pour gagner ainsi, le joueur doit atteindre les dernières technologies de l'arbre technologique, puis construire suffisamment de Jardins du Paradis pour accéder à la Merveille Ascension Gate. Une fois cette merveille construite, il remporte la Victoire Scientifique.</French>
 		<Russian>[H1]Íàó÷íàÿ ïîáåäà[\H1][PARAGRAPH:2]Ìîä Caveman2Cosmos èìååò íîâûå óñëîâèÿ äëÿ ò.í. íàçûâàåìîé Íàó÷íîé Ïîáåäû. Äëÿ åå äîñòèæåíèÿ èãðîê äîëæåí èçó÷èòü ïîñëåäíèå èçîáðåòåíèÿ â äåðåâå òåõíîëîãèé, à çàòåì ïîñòðîèòü äîñòàòî÷íîå êîëè÷åñòâî Ðàéñêèõ ñàäîâ äëÿ ïîëó÷åíèÿ äîñòóïà ê âîçìîæíîñòè ñòðîèòü Âåëèêîå ×óäî ''Âðàòà Âîçíåñåíèÿ''. Êàê òîëüêî èãðîê çàâåðøèò ñòðîèòåëüñòâî ýòîãî ×óäà, îí îäåðæèâàåò Íàó÷íóþ Ïîáåäó â èãðå.</Russian>
 	</TEXT>
 	<TEXT>
@@ -2717,8 +2710,9 @@ Remember: If you're having trouble with which civic to choose, just think of his
 	<TEXT>
 		<Tag>TXT_KEY_CONCEPT_ROM_SUPER_SPIES</Tag>
 		<English>3. Super Spies</English>
-		<Spanish>3. Superespías</Spanish>
+		<French>3. Super espions</French>
 		<Russian>3. Ñóïåðøïèîíû</Russian>
+		<Spanish>3. Superespías</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CONCEPT_ROM_SUPER_SPIES_PEDIA</Tag>
@@ -2728,8 +2722,9 @@ Remember: If you're having trouble with which civic to choose, just think of his
 	<TEXT>
 		<Tag>TXT_KEY_CONCEPT_ROM_UNIT_NAMING</Tag>
 		<English>3. Unit Naming</English>
-		<Spanish>3. Nomenclatura de unidades</Spanish>
+		<French>3. Nommage des unités</French>
 		<Russian>3. Èìåíà þíèòîâ</Russian>
+		<Spanish>3. Nomenclatura de unidades</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CONCEPT_ROM_UNIT_NAMING_PEDIA</Tag>
@@ -2738,12 +2733,14 @@ Remember: If you're having trouble with which civic to choose, just think of his
 	<TEXT>
 		<Tag>TXT_KEY_CONCEPT_ROM_WIDER_CITY_BAR</Tag>
 		<English>3. Wide City Bars</English>
-		<Spanish>3. Barras de ciudad más anchas</Spanish>
+		<French>3. Barres de ville larges</French>
 		<Russian>3. Ðàñø. ãîðîäñêàÿ ïàíåëü</Russian>
+		<Spanish>3. Barras de ciudad más anchas</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CONCEPT_ROM_WIDER_CITY_BAR_PEDIA</Tag>
 		<English>by asioasioasio[PARAGRAPH:2]This modification will extend the City Bar by around 25% it's normal size. This will allow for longer names many users experience when using translations of Civilization 4.</English>
+		<French>par asioasioasio[PARAGRAPH:2]Cette modification étend la barre de ville d'environ 25 % de sa taille normale. Cela permet d'accueillir les noms plus longs rencontrés par de nombreux utilisateurs utilisant des traductions de Civilization 4.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CONCEPT_RUTHLESS_AI</Tag>
@@ -2782,10 +2779,11 @@ Remember: If you're having trouble with which civic to choose, just think of his
 	<TEXT>
 		<Tag>TXT_KEY_CONCEPT_SALTWATER_CROC_PEDIA</Tag>
 		<English>Salt water crocodiles inhabit coastal waters.</English>
+		<French>Les crocodiles marins habitent les eaux côtières.</French>
 		<German>Salzwasserkrokodile leben in Küstengewässern.</German>
 		<Italian>I coccodrilli marini abitano le caselle di costa.</Italian>
-		<Spanish>Los cocodrilos marinos habitan las aguas costeras.</Spanish>
 		<Russian>Ñîëåíûå âîäíûå êðîêîäèëû íàñåëÿþò ïðèáðåæíûå âîäû.</Russian>
+		<Spanish>Los cocodrilos marinos habitan las aguas costeras.</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CONCEPT_SEA_TRADE</Tag>
@@ -2933,7 +2931,7 @@ Remember: If you're having trouble with which civic to choose, just think of his
 		<French>Après la recherche du[LINK=TECH_WEATHER_CONTROL]Contrôle météorologique, [\LINK], les joueurs peuvent terraformer des terrains jusqu'alors inhospitaliers en prairies verdoyantes. Les Ouvriers obtiennent la possibilité de terraformer, pouvant transformer les terrains en plaines ou prairies, permettant également à vos Viles de croître encore plus, alors que votre civilisation atteint sont "Age d'Or".</French>
 		<German>Nach der Erforschung der [LINK=TECH_WEATHER_CONTROL]Wetterbeeinflussung[\LINK] haben die Spieler die Möglichkeit, vorher unfruchtbares Land in üppige Weidegründe umzuwandeln. Bautrupps erhalten den neuen Terraforming-Befehl und können damit neue Ebenen oder unter Umständen sogar Grasland erschaffen. Dadurch ermöglichen sie es den Städten, noch größer zu werden, während die Zivilisation ihr eigenes "Goldenes Zeitalter" erreicht.</German>
 		<Italian>Dopo la ricerca di [LINK=TECH_WEATHER_CONTROL]Controllo metereologico[\LINK], i giocatori possono terraformare zone inospitali in lussureggianti pianure. I lavoratori hanno l'abilità di terraformare, e possono trasformare la terra in pianure e praterie. Questo permetterà alle tue città di diventare più grandi, e alla tua civiltà di raggiungere la sua "Età dell'oro".</Italian>
-		<Russian>[H1]Òåððàôîðìèðîâàíèå[\H1][PARAGRAPH:2]Ïîñëå èñëåäîâàíèÿ [LINK=TECH_WEATHER_CONTROL]Ïîãîäíîãî êîíòðîëÿ[\LINK], èãðîêè ìîãóò òåððàôîðìèðîâàòü ïëîõèå çåìëè â ïëîäîðîäíûå ïîëÿ. Ðàáî÷èå ïîëó÷àþò ñïîñîáíîñòü ê òåððàôîðìèðîâàíèþ è ìîãóò ïðåâðàòèòü õîëìû â ðàâíèíû, è â êîíå÷íîì ñ÷åòå, â ïîëÿ. Ýòî ïîçâîëèò Âàøèì ãîðîäàì ðàñòè, ïîñêîëüêó âàøà öèâèëèçàöèÿ äîñòèãàåò ñâîåãî ñîáñòâåííîãî ''Çîëîòîãî Âåêà."[PARAGRAPH:2]</Russian>
+		<Russian>[H1]Òåððàôîðìèðîâàíèå[\H1][PARAGRAPH:2]Ïîñëå èñëåäîâàíèÿ [LINK=TECH_WEATHER_CONTROL]Ïîãîäíîãî êîíòðîëÿ[\LINK], èãðîêè ìîãóò òåððàôîðìèðîâàòü ïëîõèå çåìëè â ïëîäîðîäíûå ïîëÿ. Ðàáî÷èå ïîëó÷àþò ñïîñîáíîñòü ê òåððàôîðìèðîâàíèþ è ìîãóò ïðåâðàòèòü õîëìû â ðàâíèíû, è â êîíå÷íîì ñ÷åòå, â ïîëÿ. Ýòî ïîçâîëèò Âàøèì ãîðîäàì ðàñòè, ïîñêîëüêó âàøà öèâèëèçàöèÿ äîñòèãàåò ñâîåãî ñîáñòâåííîãî "Çîëîòîãî Âåêà."[PARAGRAPH:2]</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CONCEPT_TERRAIN</Tag>
@@ -3101,6 +3099,7 @@ Remember: If you're having trouble with which civic to choose, just think of his
 	<TEXT>
 		<Tag>TXT_KEY_CONCEPT_VICINITY</Tag>
 		<English>1. Vicinity</English>
+		<French>1. Environs</French>
 		<Russian>1. Ãîðîäñêîé ðàäèóñ</Russian>
 	</TEXT>
 	<TEXT>
@@ -3142,6 +3141,7 @@ Remember: If you're having trouble with which civic to choose, just think of his
 	<TEXT>
 		<Tag>TXT_KEY_CONCEPT_VOLCANO</Tag>
 		<English>1. Volcano</English>
+		<French>1. Volcan</French>
 		<German>1. Vulkane</German>
 		<Russian>1. Вулкан</Russian>
 	</TEXT>
@@ -3190,6 +3190,7 @@ Remember: If you're having trouble with which civic to choose, just think of his
 	<TEXT>
 		<Tag>TXT_KEY_CONCEPT_WATER_TERRAINS</Tag>
 		<English>1. Water Terrain</English>
+		<French>1. Terrain aquatique</French>
 		<German>1. Gelände (Wasser)</German>
 		<Russian>1. Водные участки</Russian>
 	</TEXT>
@@ -3280,54 +3281,67 @@ Remember: If you're having trouble with which civic to choose, just think of his
 	<TEXT>
 		<Tag>TXT_KEY_CONCEPT_PROPERTIES</Tag>
 		<English>1. Properties</English>
+		<French>1. Propriétés</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CONCEPT_PROPERTIES_PEDIA</Tag>
 		<English>Properties are things like Crime, Education, Tourism, and Flammability. Find them on the right side of the City Screen, watch them. They will create autobuilds in cities based on their values, as well as spread over map (to somewhat limited effect), so take care you don't let them enter a negative spiral. Note that Flammability is unique in that it is a static value only dependent on buildings, rather than a gain/loss per turn.</English>
+		<French>Les propriétés sont des éléments comme la criminalité, l'éducation, le tourisme ou l'inflammabilité. Vous pouvez les consulter à droite de l'écran de la ville. Surveillez-les bien. Elles génèrent des constructions automatiques dans les villes selon leur valeur, et peuvent également se propager sur la carte (de manière limitée). Il faut donc veiller à ne pas les laisser entrer dans une spirale négative. À noter que l'inflammabilité est une propriété unique, car elle est une valeur statique uniquement déterminée par les bâtiments, et non par un gain ou une perte par tour.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CONCEPT_C2C_CULTURE</Tag>
 		<English>1. Culture in C2C</English>
+		<French>1. La culture dans C2C</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CONCEPT_C2C_CULTURE_PEDIA</Tag>
 		<English>[BOLD]General Culture[\BOLD][NEWLINE]In C2C, there are several different types of Culture and ways Culture is used. Typically, "culture" will refer to the same [LINK=CONCEPT_CULTURE]Culture[\LINK] as in the base game, often indicated with the [ICON_CULTURE] icon. Note: In C2C, there are more ways to acquire tiles that city culture influence, but [BOLD]you may only build improvements on tiles that are both owned and in the cultural range of one of your team's cities![\BOLD] This culture has also gained a use for the [LINK=CONCEPT_DEVELOPING_LEADERS]Developing Leaders[\LINK] game option. There are several other gameoptions introduced in C2C that interact with this system such as [LINK=CONCEPT_REALISTIC_CULTURE_SPREAD]Realistic Culture Spread[\LINK], [LINK=CONCEPT_1_CITY_TILE_FOUNDING]1 Tile Founding[\LINK], [LINK=CONCEPT_FIXED_BORDERS]Fixed Borders[\LINK], and [LINK=CONCEPT_EQUILIBRIUM_CULTURE]Equilibrium Culture[\LINK].[NEWLINE][NEWLINE][BOLD]Continental Culture[\BOLD][NEWLINE]Alternatively, "culture" can refer to a continental culture. Each civ starts with a native culture and local culture of one continental region in their first city (e.g. Canute the Great of Denmark will start with [LINK=BUILDING_CULTURE_NATIVE_EUROPEAN]Native European Culture[\LINK] and [LINK=BUILDING_CULTURE_LOCAL_EUROPEAN]Local European Culture[\LINK]). Every local culture present will cause settlers trained in that city to spread that local culture in the corresponding founded city, and a native culture will enable you to construct ("spread") your local culture to captured cities that do not start with it. Note that cities may retain individual local cultures upon conquest; as such, it may be beneficial to train settlers from cities you've conquered from other continental regions. If a civilization has a sufficient number of local cultures for a continental culture that differs from their own, they may [LINK=BUILDING_CULTURE_ADOPTED_NEANDERTHAL]adopt[\LINK] that culture and thus gain the benefits in all their cities! Note that the more local cultures are prevalent across your civilization, the harder it becomes to adopt newer ones.[NEWLINE][NEWLINE][BOLD]Regional Culture[\BOLD][NEWLINE]Finally, the last type of culture is a benefit of continental culture, specifically their ability to unlock regional cultures. These are wonders that typically require one or more continental cultures and specific bonuses or criteria to the city (example: [LINK=BUILDING_MUGHAL_EMBASSY]Mughals[\LINK]). Regional cultures can unlock powerful unique units and heroes.</English>
+		<French>[BOLD]Culture générale[\BOLD][NEWLINE]Dans C2C, il existe plusieurs types de culture et plusieurs façons de les utiliser. En général, le terme « culture » désigne la même [LINK=CONCEPT_CULTURE]Culture[\LINK] que dans le jeu de base, souvent représentée par l'icône [ICON_CULTURE]. Remarque : dans C2C, il existe davantage de moyens d'acquérir des cases que l'influence culturelle d'une ville, mais [BOLD]vous ne pouvez construire des aménagements que sur des cases à la fois possédées et situées dans la portée culturelle d'une de vos villes ![\BOLD] Ce type de culture est aussi utilisé dans l'option de jeu [LINK=CONCEPT_DEVELOPING_LEADERS]Dirigeants en développement[\LINK]. d'autres options de jeu interagissent avec ce système, comme [LINK=CONCEPT_REALISTIC_CULTURE_SPREAD]Diffusion culturelle réaliste[\LINK], [LINK=CONCEPT_1_CITY_TILE_FOUNDING]Fondation sur une case[\LINK], [LINK=CONCEPT_FIXED_BORDERS]Frontières fixes[\LINK], et [LINK=CONCEPT_EQUILIBRIUM_CULTURE]Culture – Équilibre[\LINK].[NEWLINE][NEWLINE][BOLD]Culture continentale[\BOLD][NEWLINE]La « culture » peut aussi désigner une culture continentale. Chaque civilisation commence dans sa première ville avec une culture locale et une culture native d'une région continentale (ex. : Knut le Grand du Danemark commence avec [LINK=BUILDING_CULTURE_NATIVE_EUROPEAN]Culture européenne native[\LINK] et [LINK=BUILDING_CULTURE_LOCAL_EUROPEAN]Culture européenne locale[\LINK]). Chaque culture locale présente permet aux colons formés dans cette ville de propager cette culture locale à la ville qu'ils fondent. Une culture native permet aussi de « propager » sa culture locale dans les villes capturées qui n'en possèdent pas. Les villes peuvent conserver leurs cultures locales après une conquête, ce qui peut rendre utile la formation de colons à partir de ces villes d'origine étrangère. Si une civilisation possède suffisamment de cultures locales correspondant à une culture continentale différente de la sienne, elle peut [LINK=BUILDING_CULTURE_ADOPTED_NEANDERTHAL]adopter[\LINK] cette culture et ainsi en tirer profit dans toutes ses villes ! Plus votre civilisation possède de cultures locales, plus il devient difficile d'en adopter de nouvelles.[NEWLINE][NEWLINE][BOLD]Culture régionale[\BOLD][NEWLINE]Enfin, la culture régionale est une déclinaison de la culture continentale, rendue possible grâce au déverrouillage de cultures régionales. Il s'agit de merveilles nécessitant une ou plusieurs cultures continentales et certains bonus ou conditions dans la ville (ex. : [LINK=BUILDING_MUGHAL_EMBASSY]Moghols[\LINK]). Ces cultures régionales permettent d'obtenir des unités uniques puissantes et des héros.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CONCEPT_DEVELOPING_LEADERS</Tag>
 		<English>2. Leader - Developing</English>
+		<French>2. Dirigeant - En développement</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CONCEPT_DEVELOPING_LEADERS_PEDIA</Tag>
 		<English>WIP Placeholder pedia text. Culture gained over time makes your traits stronger, can pick new ones, etc.</English>
+		<French>Texte temporaire en cours de rédaction. La culture acquise au fil du temps renforce vos traits et permet d'en choisir de nouveaux, etc.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CONCEPT_C2C_GAMEPLAY</Tag>
 		<English>1 - Core C2C Concepts</English>
+		<French>1 - Concepts fondamentaux de C2C</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CONCEPT_C2C_GAMEPLAY_PEDIA</Tag>
 		<English>Overview of many gameplay concepts introduced or changed in C2C. For vanilla concepts (which generally apply), see [BOLD]Game Concepts[\BOLD] on the left from this subcategory.</English>
+		<French>Vue d'ensemble de nombreux concepts de gameplay introduits ou modifiés dans C2C. Pour les concepts du jeu de base (généralement toujours valables), consultez [BOLD]Concepts de jeu[\BOLD] à gauche dans cette sous-catégorie.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CONCEPT_C2C_GAMEOPTIONS</Tag>
 		<English>2 - C2C Game Options</English>
+		<French>2 - Options de jeu C2C</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CONCEPT_C2C_GAMEOPTIONS_PEDIA</Tag>
 		<English>Overview of C2C game options found through the Custom Game start mode (which is recommended). Note that some of these can be safely changed after game start through Worldbuilder, but others cannot be changed! Not all options have an entry here, but several of the more impactful ones do. For others, it is recommended you search the CivFanaticsForum or ask on the Discord channel if you need additional help figuring something out.</English>
+		<French>Vue d'ensemble des options de jeu C2C accessibles via le mode de démarrage Partie personnalisée (recommandé). Certaines de ces options peuvent être modifiées en toute sécurité après le début de la partie via l'Éditeur de monde, mais d'autres non ! Toutes les options ne sont pas décrites ici, mais plusieurs des plus importantes le sont. Pour les autres, il est recommandé de chercher sur le forum CivFanatics ou de poser des questions sur le canal Discord si vous avez besoin d'aide.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CONCEPT_C2C_BUGOPTIONS</Tag>
 		<English>3 - C2C BUG Options</English>
+		<French>3 - Options BUG de C2C</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CONCEPT_C2C_BUGOPTIONS_PEDIA</Tag>
 		<English>The BUG menu is accessed through the [LINK=CONCEPT_SHORTCUTS_BUG]Ctrl-Alt-O keyboard shortcut[\LINK], and contains these options and more. The concepts listed in this section are either: A) features introduced and typically tweakable through this menu, or B) game options that can be freely changed during singleplayer gameplay. However, for multiplayer, these settings must be adjusted manually via the corresponding XML file and sent to all involved players. When in-game, be sure to read the mouseover text on options you toggle to know more about them![NEWLINE][NEWLINE]Be aware it is difficult to update the pedia to perfectly describe everything; if there is a conflict between what the pedia says and what is present in the BUG menu or in the tooltips of any option, consider the tooltip to be accurate. We welcome any contributions or notifications of errors!</English>
+		<French>Le menu BUG est accessible via le raccourci clavier [LINK=CONCEPT_SHORTCUTS_BUG]Ctrl-Alt-O[\LINK], et contient ces options ainsi que bien d'autres. Les concepts listés ici sont soit : A) des fonctionnalités introduites et généralement modifiables via ce menu, soit B) des options de jeu pouvant être librement modifiées en solo. Cependant, en multijoueur, ces paramètres doivent être ajustés manuellement dans le fichier XML correspondant et envoyés à tous les joueurs concernés. En jeu, pensez à lire les infobulles des options que vous modifiez pour en savoir plus ![NEWLINE][NEWLINE]Notez qu'il est difficile de mettre à jour la pedia pour qu'elle reflète tout parfaitement ; en cas de contradiction entre la pedia, le menu BUG ou une infobulle, considérez l'infobulle comme exacte. Toute contribution ou signalement d'erreurs est le bienvenu !</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CONCEPT_EQUILIBRIUM_CULTURE</Tag>
 		<English>2. Culture - Equilibrium</English>
+		<French>2. Culture – Équilibre</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CONCEPT_EQUILIBRIUM_CULTURE_PEDIA</Tag>
@@ -3336,6 +3350,7 @@ Remember: If you're having trouble with which civic to choose, just think of his
 	<TEXT>
 		<Tag>TXT_KEY_CONCEPT_1_CITY_TILE_FOUNDING</Tag>
 		<English>2. Culture - City Starts With 1 Tile</English>
+		<French>2. Culture - Ville démarre avec 1 case</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CONCEPT_1_CITY_TILE_FOUNDING_PEDIA</Tag>

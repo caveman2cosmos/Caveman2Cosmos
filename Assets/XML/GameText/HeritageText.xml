@@ -73,6 +73,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_HERITAGE_FOLKLORE_BOAR_WILD</Tag>
 		<English>Tale, Wild Boar</English>
+		<French>Mythe du Sanglier</French>
 		<German>Mythos des Wildschweins</German>
 		<Italian>Mito del cinghiale selvatico</Italian>
 		<Russian>Мифы о дикой свинье</Russian>
@@ -113,6 +114,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_HERITAGE_FOLKLORE_CROCODILE_MUGGER</Tag>
 		<English>Tale, Mugger Crocodile</English>
+		<French>Mythe du Crocodile Mugger</French>
 		<Russian>Мифы о болотном крокодиле</Russian>
 	</TEXT>
 	<TEXT>
@@ -257,6 +259,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_HERITAGE_FOLKLORE_JAGUAR_BLACK</Tag>
 		<English>Tale, Black Jaguar</English>
+		<French>Mythe du Jaguar Noir</French>
 		<Russian>Мифы о черном ягуаре</Russian>
 	</TEXT>
 	<TEXT>
@@ -467,6 +470,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_HERITAGE_FOLKLORE_POSSUM_DIDELPHIS</Tag>
 		<English>Tale, Didelphis Possum</English>
+		<French>Mythe de l'Opossum Didelphis</French>
 		<Russian>Мифы о виргинском опоссуме</Russian>
 	</TEXT>
 	<TEXT>
@@ -529,6 +533,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_HERITAGE_FOLKLORE_SWINE</Tag>
 		<English>Tale, Swine</English>
+		<French>Mythe du Porc</French>
 		<Italian>Mito del maiale</Italian>
 		<Russian>Мифы о свинье</Russian>
 	</TEXT>
@@ -587,6 +592,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_HERITAGE_FOLKLORE_TASMANIAN_DEVIL</Tag>
 		<English>Tale, Tasmanian Devil</English>
+		<French>Mythe du Diable de Tasmanie</French>
 		<German>Mythos des Tasmanischen Teufels</German>
 		<Italian>Mito del diavolo della Tasmania</Italian>
 		<Russian>Мифы о тасманийском дьяволе</Russian>
@@ -677,6 +683,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_HERITAGE_FOLKLORE_WALLABY</Tag>
 		<English>Tale, Wallaby</English>
+		<French>Mythe du Wallaby</French>
 		<German>Mythos des Wallabys</German>
 		<Italian>Mito del wallaby</Italian>
 		<Russian>Мифы о валлаби</Russian>
@@ -749,6 +756,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_HERITAGE_TAXON_AMPHIBIA</Tag>
 		<English>Taxon Amphibia</English>
+		<French>Taxon Amphibiens</French>
 		<Russian>Таксон «Земноводные»</Russian>
 	</TEXT>
 	<TEXT>
@@ -758,6 +766,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_HERITAGE_TAXON_ARACHNIDA</Tag>
 		<English>Taxon Arachnida</English>
+		<French>Taxon Arachnides</French>
 		<Russian>Таксон «Арахниды»</Russian>
 	</TEXT>
 	<TEXT>
@@ -767,6 +776,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_HERITAGE_TAXON_CANIDAE</Tag>
 		<English>Taxon Canidae</English>
+		<French>Taxon Canidés</French>
 		<Russian>Таксон «Волчьи»</Russian>
 	</TEXT>
 	<TEXT>
@@ -776,6 +786,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_HERITAGE_TAXON_CROCODILIA</Tag>
 		<English>Taxon Crocodilia</English>
+		<French>Taxon Crocodiliens</French>
 		<Russian>Таксон «Крокодилы»</Russian>
 	</TEXT>
 	<TEXT>
@@ -785,6 +796,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_HERITAGE_TAXON_ELEPHANTIDAE</Tag>
 		<English>Taxon Elephantidae</English>
+		<French>Taxon Éléphantidés</French>
 		<Russian>Таксон «Слоновые»</Russian>
 	</TEXT>
 	<TEXT>
@@ -794,6 +806,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_HERITAGE_TAXON_FELINAE</Tag>
 		<English>Taxon Felinae</English>
+		<French>Taxon Félidés</French>
 		<Russian>Таксон «Малые кошки»</Russian>
 	</TEXT>
 	<TEXT>
@@ -803,15 +816,18 @@
 	<TEXT>
 		<Tag>TXT_KEY_HERITAGE_TAXON_HIPPOPOTAMIDAE</Tag>
 		<English>Taxon Hippopotamidae</English>
+		<French>Taxon Hippopotamidés</French>
 		<Russian>Таксон «Бегемотовые»</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HERITAGE_TAXON_HIPPOPOTAMIDAE_PEDIA</Tag>
 		<English>Hippopotamidae is a family of stout, naked-skinned, and semiaquatic artiodactyl mammals, possessing three-chambered stomachs and walking on four toes on each foot. While they resemble pigs physiologically, their closest living relatives are the cetaceans. There are two living species of hippopotamid in two genera; the pygmy hippo (Choeropsis liberiensis) of the forests of west Africa, and the common hippo (Hippopotamus amphibius). </English>
+		<French>Les Hippopotamidés sont une famille de mammifères artiodactyles trapus, à peau nue et semi-aquatiques, possédant un estomac à trois chambres et marchant sur quatre doigts à chaque pied. Bien qu'ils ressemblent physiologiquement aux cochons, leurs plus proches parents vivants sont les cétacés. Il existe deux espèces d'hippopotamidés vivantes dans deux genres : l'hippopotame nain (Choeropsis liberiensis) des forêts d'Afrique de l'Ouest et l'hippopotame commun (Hippopotamus amphibius).</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HERITAGE_TAXON_HYAENIDAE</Tag>
 		<English>Taxon Hyaenidae</English>
+		<French>Taxon Hyénidés</French>
 		<Russian>Таксон «Гиеновые»</Russian>
 	</TEXT>
 	<TEXT>
@@ -821,6 +837,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_HERITAGE_TAXON_MARSUPIALIA</Tag>
 		<English>Taxon Marsupialia</English>
+		<French>Taxon Marsupiaux</French>
 		<Russian>Таксон «Сумчатые»</Russian>
 	</TEXT>
 	<TEXT>
@@ -830,6 +847,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_HERITAGE_TAXON_MONOTREMATA</Tag>
 		<English>Taxon Monotremata</English>
+		<French>Taxon Monotrèmes</French>
 		<Russian>Таксон «Однопроходные»</Russian>
 	</TEXT>
 	<TEXT>
@@ -839,6 +857,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_HERITAGE_TAXON_MUSTELOIDEA</Tag>
 		<English>Taxon Musteloidea</English>
+		<French>Taxon Mustéloïdes</French>
 		<Russian>Таксон «Куницеобразные»</Russian>
 	</TEXT>
 	<TEXT>
@@ -848,6 +867,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_HERITAGE_TAXON_PANTHERINAE</Tag>
 		<English>Taxon Pantherinae</English>
+		<French>Taxon Panthérinés</French>
 		<Russian>Таксон «Большие кошки»</Russian>
 	</TEXT>
 	<TEXT>
@@ -857,6 +877,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_HERITAGE_TAXON_REPTILIA</Tag>
 		<English>Taxon Reptilia</English>
+		<French>Taxon Reptiles</French>
 		<Russian>Таксон «Пресмыкающиеся»</Russian>
 	</TEXT>
 	<TEXT>
@@ -866,6 +887,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_HERITAGE_TAXON_RODENTIA</Tag>
 		<English>Taxon Rodentia</English>
+		<French>Taxon Rongeurs</French>
 		<Russian>Таксон «Грызуны»</Russian>
 	</TEXT>
 	<TEXT>
@@ -875,15 +897,18 @@
 	<TEXT>
 		<Tag>TXT_KEY_HERITAGE_TAXON_SERPENTES</Tag>
 		<English>Taxon Serpentes</English>
+		<French>Taxon Serpents</French>
 		<Russian>Таксон «Змеи»</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HERITAGE_TAXON_SERPENTES_PEDIA</Tag>
 		<English>Serpentes is a suborder of the Squamata order commonly known as snakes. They are elongated, limbless, carnivorous reptiles. Like all other squamates, snakes are ectothermic, amniote vertebrates covered in overlapping scales. Many species of snakes have skulls with several more joints than their lizard ancestors, enabling them to swallow prey much larger than their heads.</English>
+		<French>Les Serpentes sont un sous-ordre de l'ordre des Squamates, communément appelés serpents. Ce sont des reptiles carnivores, allongés et sans membres. Comme tous les squamates, les serpents sont des vertébrés amniotes ectothermes recouverts d'écailles superposées. De nombreuses espèces ont un crâne avec plusieurs articulations supplémentaires par rapport à leurs ancêtres lézards, ce qui leur permet d'avaler des proies bien plus grandes que leur tête.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HERITAGE_TAXON_SPHENISCIDAE</Tag>
 		<English>Taxon Spheniscidae</English>
+		<French>Taxon Sphéniscidés</French>
 		<Russian>Таксон «Пингвиновые»</Russian>
 	</TEXT>
 	<TEXT>
@@ -893,6 +918,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_HERITAGE_TAXON_SQUAMATA</Tag>
 		<English>Taxon Squamata</English>
+		<French>Taxon Squamates</French>
 		<Russian>Таксон «Чешуйчатые»</Russian>
 	</TEXT>
 	<TEXT>
@@ -902,6 +928,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_HERITAGE_TAXON_STRIGIFORMES</Tag>
 		<English>Taxon Strigiformes</English>
+		<French>Taxon Strigidés</French>
 		<Russian>Таксон «Совообразные»</Russian>
 	</TEXT>
 	<TEXT>
@@ -911,6 +938,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_HERITAGE_TAXON_SUIDAE</Tag>
 		<English>Taxon Suidae</English>
+		<French>Taxon Suidés</French>
 		<Russian>Таксон «Свиные»</Russian>
 	</TEXT>
 	<TEXT>
@@ -920,6 +948,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_HERITAGE_TAXON_TAPIRIDAE</Tag>
 		<English>Taxon Tapiridae</English>
+		<French>Taxon Tapiridés</French>
 		<Russian>Таксон «Тапировые»</Russian>
 	</TEXT>
 	<TEXT>

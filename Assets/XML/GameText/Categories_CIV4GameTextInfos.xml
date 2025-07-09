@@ -3,296 +3,355 @@
 	<TEXT>
 		<Tag>TXT_KEY_CATEGORY_SPECIALIST_GROUPS</Tag>
 		<English>General Specialist Groups</English>
+		<French>Groupes généraux de spécialistes</French>
 		<Italian>Gruppi generali di specialisti</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CATEGORY_ASSIGNABLE_SPECIALISTS</Tag>
 		<English>Assignable Specialists</English>
+		<French>Spécialistes assignables</French>
 		<Italian>Specialisti assegnabili</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CATEGORY_SPECIALIST_GROUP_CIVILIAN</Tag>
 		<English>Civilian Specialists</English>
+		<French>Spécialistes civils</French>
 		<Italian>Specialisti civili</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CATEGORY_SPECIALIST_GROUP_CAPTIVE</Tag>
 		<English>Captive Specialists</English>
+		<French>Spécialistes captifs</French>
 		<Italian>Specialisti prigionieri</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CATEGORY_SPECIALIST_GROUP_RELIGIOUS</Tag>
 		<English>Religious Specialists</English>
+		<French>Spécialistes religieux</French>
 		<Italian>Specialisti religiosi</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CATEGORY_SPECIALIST_GROUP_CULTURAL</Tag>
 		<English>Cultural Specialists</English>
+		<French>Spécialistes culturels</French>
 		<Italian>Specialisti culturali</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CATEGORY_SPECIALIST_GROUP_RESEARCH</Tag>
 		<English>Research Specialists</English>
+		<French>Spécialistes de la recherche</French>
 		<Italian>Specialisti ricercatori</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CATEGORY_SPECIALIST_GROUP_ECONOMIC</Tag>
 		<English>Economic Specialists</English>
+		<French>Spécialistes économiques</French>
 		<Italian>Specialisti economisti</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CATEGORY_SPECIALIST_GROUP_ARCHITECTURAL</Tag>
 		<English>Architectural Specialists</English>
+		<French>Spécialistes architecturaux</French>
 		<Italian>Specialisti di architettura</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CATEGORY_SPECIALIST_GROUP_POLITICAL</Tag>
 		<English>Political Specialists</English>
+		<French>Spécialistes politiques</French>
 		<Italian>Specialisti politici</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CATEGORY_SPECIALIST_GROUP_MEDICAL</Tag>
 		<English>Medical Specialists</English>
+		<French>Spécialistes médicaux</French>
 		<Italian>Specialisti medici</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CATEGORY_SPECIALIST_GROUP_ESPIONAGE</Tag>
 		<English>Espionage Specialists</English>
+		<French>Spécialistes de l'espionnage</French>
 		<Italian>Specialisti di spionaggio</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CATEGORY_SPECIALIST_GROUP_LEGAL</Tag>
 		<English>Legal Specialists</English>
+		<French>Spécialistes juridiques</French>
 		<Italian>Specialisti legali</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CATEGORY_SPECIALIST_GROUP_MILITARY</Tag>
 		<English>Military Specialists</English>
+		<French>Spécialistes militaires</French>
 		<Italian>Specialisti militari</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CATEGORY_UNITCOMBAT_GROUPS</Tag>
 		<English>Unit Types</English>
+		<French>Types d'unités</French>
 		<Italian>Tipo di unità</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CATEGORY_UNITCOMBAT_SIZE_MATTERS_RANK_GROUPS</Tag>
 		<English>Size Matters Rank Categories</English>
+		<French>Catégories de rang selon la taille</French>
 		<Italian>Categorie per dimensione</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CATEGORY_UNITCOMBAT_EQUIPMENT_GROUPS</Tag>
 		<English>Equipment Option Activated Unit Capabilities</English>
+		<French>Capacités d'unité activées par l'option équipement</French>
 		<Italian>Capacità unità con opzione equipaggiamento attiva</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CATEGORY_UNITCOMBAT_ANIMAL_GROUPS</Tag>
 		<English>Animal Designations</English>
+		<French>Désignations animales</French>
 		<Italian>Denominazioni animali</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CATEGORY_UNITCOMBAT_GROUP_SIZE</Tag>
 		<English>Size of Individuals in Unit</English>
+		<French>Taille des individus dans l'unité</French>
 		<Italian>Dimensione delle singole unità</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CATEGORY_UNITCOMBAT_GROUP_VOLUME</Tag>
 		<English>Volume of Beings in Unit</English>
+		<French>Volume des êtres dans l'unité</French>
 		<Italian>Volume dei componenti dell'unità</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CATEGORY_UNITCOMBAT_GROUP_QUALITY</Tag>
 		<English>Combat Quality of Unit</English>
+		<French>Qualité de combat de l'unité</French>
 		<Italian>Qualità di combattimento dell'unità</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CATEGORY_UNITCOMBAT_GROUP_SPEED</Tag>
 		<English>Unit Speed Category</English>
+		<French>Catégorie de vitesse de l'unité</French>
 		<Italian>Categoria di velocità dell'unità</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CATEGORY_UNITCOMBAT_GROUP_ATTACK_FORM</Tag>
 		<English>Attack Form</English>
+		<French>Forme d'attaque</French>
 		<Italian>Forma d'attacco</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CATEGORY_UNITCOMBAT_GROUP_WEAPON_METHOD</Tag>
 		<English>Weapon Method</English>
+		<French>Méthode d'armement</French>
 		<Italian>Metodo dell'arma</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CATEGORY_UNITCOMBAT_GROUP_WEAPON_STYLE</Tag>
 		<English>Armament Style</English>
+		<French>Style d'armement</French>
 		<Italian>Stile di armamento</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CATEGORY_UNITCOMBAT_GROUP_WEAPONS_H2H</Tag>
 		<English>Primary Hand to Hand Weapon</English>
+		<French>Arme principale de corps à corps</French>
 		<Italian>Arma primaria da corpo a corpo</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CATEGORY_UNITCOMBAT_GROUP_WEAPONS_SIDEARMS</Tag>
 		<English>Sidearm Close Combat Weapon</English>
+		<French>Arme de poing en combat rapproché</French>
 		<Italian>Arma da combattimento ravvicinato</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CATEGORY_UNITCOMBAT_GROUP_WEAPONS_DISTANCE</Tag>
 		<English>Primary Distance Weapon</English>
+		<French>Arme principale à distance</French>
 		<Italian>Arma a distanza primaria</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CATEGORY_UNITCOMBAT_GROUP_WEAPONS_BACKUP</Tag>
 		<English>Backup Ranged Weapon</English>
+		<French>Arme secondaire à distance</French>
 		<Italian>Arma a distanza di riserva</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CATEGORY_UNITCOMBAT_GROUP_WEAPONS_DETONATE</Tag>
 		<English>Detonation Weapon</English>
+		<French>Arme de détonation</French>
 		<Italian>Arma di detonazione</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CATEGORY_UNITCOMBAT_GROUP_WEAPONS_AIR2GROUND</Tag>
 		<English>Air to Ground Weapon</English>
+		<French>Arme air-sol</French>
 		<Italian>Arma aria-terra</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CATEGORY_UNITCOMBAT_GROUP_ARMORS</Tag>
 		<English>Armor Category</English>
+		<French>Catégorie d'armure</French>
 		<Italian>Categoria armatura</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CATEGORY_UNITCOMBAT_GROUP_SHIELDS</Tag>
 		<English>Shield Category</English>
+		<French>Catégorie de bouclier</French>
 		<Italian>Categoria scudo</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CATEGORY_UNITCOMBAT_GROUP_NATURAL</Tag>
 		<English>Natural Ability</English>
+		<French>Capacité naturelle</French>
 		<Italian>Abilità naturale</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CATEGORY_UNITCOMBAT_GROUP_TAXONOMY</Tag>
 		<English>Taxonomical Category</English>
+		<French>Catégorie taxonomique</French>
 		<Italian>Categoria tassonomica</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CATEGORY_UNITCOMBAT_GROUP_INVERTEBRATE</Tag>
 		<English>Invertebrate Sub-Category</English>
+		<French>Sous-catégorie invertébrés</French>
 		<Italian>Sottocategoria invertebrati</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CATEGORY_UNITCOMBAT_GROUP_FISH</Tag>
 		<English>Fish Sub-Category</English>
+		<French>Sous-catégorie poissons</French>
 		<Italian>Sottocategoria pesce</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CATEGORY_UNITCOMBAT_GROUP_AMPHIBIAN</Tag>
 		<English>Amphibian Sub-Category</English>
+		<French>Sous-catégorie amphibiens</French>
 		<Italian>Sottocategoria anfibio</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CATEGORY_UNITCOMBAT_GROUP_REPTILE</Tag>
 		<English>Reptile Sub-Category</English>
+		<French>Sous-catégorie reptiles</French>
 		<Italian>Sottocategoria rettile</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CATEGORY_UNITCOMBAT_GROUP_BIRD</Tag>
 		<English>Bird Sub-Category</English>
+		<French>Sous-catégorie oiseaux</French>
 		<Italian>Sottocategoria uccello</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CATEGORY_UNITCOMBAT_GROUP_MAMMAL</Tag>
 		<English>Mammal Sub-Category</English>
+		<French>Sous-catégorie mammifères</French>
 		<Italian>Sottocategoria mammifero</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CATEGORY_UNITCOMBAT_GROUP_PRIMARY_ROLE</Tag>
 		<English>Primary Role</English>
+		<French>Rôle principal</French>
 		<Italian>Ruolo principale</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CATEGORY_UNITCOMBAT_GROUP_COMBAT</Tag>
 		<English>Combat Class</English>
+		<French>Classe de combat</French>
 		<Italian>Classe di combattimento</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CATEGORY_UNITCOMBAT_GROUP_MOBILITY</Tag>
 		<English>Mobility Method</English>
+		<French>Méthode de mobilité</French>
 		<Italian>Metodo di movimento</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CATEGORY_UNITCOMBAT_GROUP_SIEGE_TYPES</Tag>
 		<English>Siege Type</English>
+		<French>Type de siège</French>
 		<Italian>Tipo di assedio</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CATEGORY_UNITCOMBAT_GROUP_SPECIES</Tag>
 		<English>Species Type</English>
+		<French>Type d'espèce</French>
 		<Italian>Tipo di specie</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CATEGORY_UNITCOMBAT_GROUP_ERA</Tag>
 		<English>Era of Unit Access</English>
+		<French>Ère d'accès à l'unité</French>
 		<Italian>Era della comparsa dell'unità</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CATEGORY_UNITCOMBAT_GROUP_MOUNT</Tag>
 		<English>Mount Animal</English>
+		<French>Animal de monte</French>
 		<Italian>Animale da cavalcatura</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CATEGORY_UNITCOMBAT_GROUP_ANIMAL_ASSISTED</Tag>
 		<English>Assistance Animal</English>
+		<French>Animal d'assistance</French>
 		<Italian>Animale da assistenza</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CATEGORY_UNITCOMBAT_GROUP_RELIGION</Tag>
 		<English>Dominant Religion</English>
+		<French>Religion dominante</French>
 		<Italian>Religione dominante</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CATEGORY_UNITCOMBAT_GROUP_CULTURE</Tag>
 		<English>Dominant Culture</English>
+		<French>Culture dominante</French>
 		<Italian>Cultura dominante</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CATEGORY_UNITCOMBAT_ARMOR_TYPES</Tag>
 		<English>Armor Type</English>
+		<French>Type d'armure</French>
 		<Italian>Tipo di armatura</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CATEGORY_UNITCOMBAT_ARMOR_MATERIAL</Tag>
 		<English>Armor Material</English>
+		<French>Matériau d'armure</French>
 		<Italian>Materiale dell'armatura</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CATEGORY_UNITCOMBAT_SHIELD_MATERIAL</Tag>
 		<English>Shield Material</English>
+		<French>Matériau de bouclier</French>
 		<Italian>Materiale dello scudo</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CATEGORY_UNITCOMBAT_GROUP_ABILITIES</Tag>
 		<English>Special Abilities</English>
+		<French>Capacités spéciales</French>
 		<Italian>Caratteristiche</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CATEGORY_UNITCOMBAT_HEALING_GROUPS</Tag>
 		<English>Healing Categories</English>
+		<French>Catégories de soins</French>
 		<Italian>Categoria guaritore</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CATEGORY_UNITCOMBAT_GROUP_HEALS_AS</Tag>
 		<English>Heals As Type</English>
+		<French>Soigne en tant que type</French>
 		<Italian>Guaritura per tipo</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CATEGORY_UNITCOMBAT_GROUP_HEALER_TYPES</Tag>
 		<English>Assists in Healing</English>
+		<French>Aide aux soins</French>
 		<Italian>Assistenza di guaritura</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CATEGORY_UNITCOMBAT_GROUP_PROMOTED</Tag>
 		<English>As Promoted</English>
+		<French>Comme promu</French>
 		<Italian>Come promozione</Italian>
 	</TEXT>
 </Civ4GameText>
