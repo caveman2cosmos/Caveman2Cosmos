@@ -11,6 +11,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HQ_CEREAL_MILLS</Tag>
 		<English>HQ - Cereal Mills</English>
+		<French>Siège - Minoteries</French>
 		<Italian>Quartier generale di Cereali del mulino</Italian>
 		<Russian>Продукты из злаков</Russian>
 	</TEXT>
@@ -32,6 +33,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HQ_SIDS_SUSHI_CO</Tag>
 		<English>HQ - Sid's Sushi Co</English>
+		<French>Siège - Sid's Sushi Co</French>
 		<Italian>Quartier generale di Sid Sushi Company</Italian>
 		<Russian>Суши от Сида</Russian>
 	</TEXT>
@@ -55,6 +57,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HQ_STANDARD_ETHANOL</Tag>
 		<English>HQ - Standard Ethanol</English>
+		<French>Siège - Standard Ethanol</French>
 		<Italian>Quartier generale di Etanolo Energy Spa</Italian>
 		<Russian>Этанол-стандарт</Russian>
 	</TEXT>
@@ -78,6 +81,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HQ_CREATIVE_CONSTRUCTIONS</Tag>
 		<English>HQ - Creative Constructions</English>
+		<French>Siège - Constructions Créatives</French>
 		<Italian>Quartier generale di Costruzioni creative</Italian>
 		<Russian>Креативстрой</Russian>
 	</TEXT>
@@ -100,6 +104,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HQ_MINING_INC</Tag>
 		<English>HQ - Mining Inc</English>
+		<French>Siège - Mining Inc</French>
 		<Italian>Quartier generale di Mineraria Srl</Italian>
 		<Russian>Горные ресурсы</Russian>
 	</TEXT>
@@ -123,6 +128,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HQ_ALUMINUM_CO</Tag>
 		<English>HQ - Aluminum Co</English>
+		<French>Siège - Aluminum Co</French>
 		<Italian>Quartier generale di Allumination</Italian>
 		<Russian>Промалюминий</Russian>
 	</TEXT>
@@ -146,6 +152,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HQ_CIVILIZED_JEWELERS_INC</Tag>
 		<English>HQ - Civilized Jewelers Inc</English>
+		<French>Siège - Civilized Jewelers Inc</French>
 		<Italian>Quartier generale di Gioiellieri uniti</Italian>
 		<Russian>Мировые ювелиры</Russian>
 	</TEXT>
@@ -161,6 +168,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CORPORATION_ADVENTURE</Tag>
 		<English>Adventure Tours</English>
+		<French>Aventures Tours</French>
 		<Italian>Viaggi avventura</Italian>
 		<Russian>Àäâåí÷åð-òóð</Russian>
 	</TEXT>
@@ -176,10 +184,11 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ADVENTURE_TOURS_FRANCHISE_PEDIA</Tag>
 		<English>Your local adventure franchise to get your adrenaline pumping!</English>
+		<French>Votre franchise locale d'aventures pour faire monter l'adrénaline !</French>
 		<German>Dein örtlicher Reiseanbieter für Abenteuerreisen, die dein Adrenalin in die Höhe schnellen lassen!</German>
 		<Italian>La tua agenzia locale di Viaggi avventura, per darti una scarica di adrenalina!</Italian>
-		<Spanish>¡Tu franquicia local de aventuras, para darte tu dosis de adrenalina!</Spanish>
 		<Russian>Откройте свою особую местную приключенческую франшизу, чтобы подарить вашим клиентам заряд адреналина!</Russian>
+		<Spanish>¡Tu franquicia local de aventuras, para darte tu dosis de adrenalina!</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HQ_ADVENTURE_TOURS</Tag>
@@ -192,6 +201,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CORPORATION_ADVENTURE_PEDIA</Tag>
 		<English>Bored of your monotonous life? Ready for adventures? Adventure Tours bring to you the excitement of scuba diving, horseback riding, exploration of ancient ruins, or witnessing the largest animals in their natural habitats. Spice up your life with us!</English>
+		<French>Marre de la monotonie ? Prêt pour l'aventure ? Adventure Tours vous fait vivre la plongée sous-marine, l'équitation, l'exploration de ruines anciennes, ou l'observation des plus grands animaux dans leur habitat naturel. Pimentez votre vie avec nous !</French>
 		<German>Langweilt dich dein eintöniges Leben? Bist du bereit für Abenteuer? Adventure Tours lässt dich den Nervenkitzel beim Tauchen, Reiten, der Erforschung alter Ruinen oder dem Beobachten der größten Tiere unserer Erde in freier Wildbahn spüren. Pepp dein Leben mit unserer Hilfe auf!</German>
 		<Italian>Stanco della tua vita monotona? Pronto per l'avventura? Adventure Tours ti porta l'eccitazione di immersioni subacquee, escursioni a cavallo, esplorazione di antiche rovine e osservazione dei più grandi animali della terra nel loro stesso habitat. Vivacizza la tua vita con noi!</Italian>
 		<Russian>Устали от монотонной жизни? Готовы к приключениям? Наши зажигательные туры доставят вам удовольствие от подводного плавания, спортивной верховой езды, исследования древних руин или наблюдения за крупными животными непосредственно в их собственной среде обитания. Сделайте свою жизнь ярче вместе с нами!</Russian>
@@ -266,9 +276,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_BURGERWORLD_RESTAURANT_PEDIA</Tag>
 		<English>Your local fast food place to get your hunger on!</English>
+		<French>Votre fast-food local pour calmer la faim !</French>
 		<Italian>Il tuo fast food locale per soddisfare la tua fame!</Italian>
-		<Spanish>¡Tu local de comida rápida para saciar tu apetito!</Spanish>
 		<Russian>Посетите наш местный ресторан быстрого питания, дабы насытиться!</Russian>
+		<Spanish>¡Tu local de comida rápida para saciar tu apetito!</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CORPORATION_EMPCLOTH</Tag>
@@ -294,9 +305,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CORPORATION_EMPCLOTH_PEDIA</Tag>
 		<English>See Fashion House for details. Emperors Clothing is a rival of Fashion House, and thus requires many of the same resources.</English>
+		<French>Voir la Maison de la Mode pour les détails. Emperors Clothing est un concurrent de Fashion House, nécessitant donc beaucoup des mêmes ressources.</French>
 		<Italian>Per i dettagli, vedi Fashion House. Abiti Imperiali è un rivale di Fashion House e perciò le due corporazioni hanno molte risorse in comune.</Italian>
-		<Spanish>Véase Fashion House para más detalles. Emperors Clothing es un rival directo de Fashion House, por ello ambas corporaciones consumen los mismos recursos.</Spanish>
 		<Russian>См. подробности в статье про «Дом Мод». «Одежда императора» - конкурент «Дома Мод», и поэтому требует тот же перечень ресурсов.</Russian>
+		<Spanish>Véase Fashion House para más detalles. Emperors Clothing es un rival directo de Fashion House, por ello ambas corporaciones consumen los mismos recursos.</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_EMPERORS_CLOTHING_STORE</Tag>
@@ -310,9 +322,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_EMPERORS_CLOTHING_STORE_PEDIA</Tag>
 		<English>Your local store to get your clothes.</English>
+		<French>Votre boutique locale pour vos vêtements.</French>
 		<Italian>Il tuo negozio locale dove comprare gli abiti.</Italian>
-		<Spanish>Tu tienda local donde renovar tu vestimenta.</Spanish>
 		<Russian>Посетите один из наших местный магазин, где можно приобрести модную одежду.</Russian>
+		<Spanish>Tu tienda local donde renovar tu vestimenta.</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CORPORATION_EWTRADE</Tag>
@@ -326,7 +339,7 @@
 		<French>Le Siège de 'East West Traders'</French>
 		<German>East-West-Traders-Zentrale</German>
 		<Italian>Quartier generale di Commercio Est-Ovest</Italian>
-		<Russian>Âîñòîê-Çàïàä</Russian>  
+		<Russian>Âîñòîê-Çàïàä</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CORPORATION_EWTRADE_PEDIA</Tag>
@@ -346,6 +359,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_EAST_WEST_TRADERS_STORE_PEDIA</Tag>
 		<English>Various commodities delivered from all over the world directly to your local store.</English>
+		<French>Diverses marchandises livrées du monde entier directement dans votre boutique locale.</French>
 		<Italian>Vari beni da tutto il mondo che vengono consegnati direttamente nel tuo negozio locale.</Italian>
 		<Russian>Всевозможные товары доставляются со всего мира прямо в ваш местный магазин.</Russian>
 	</TEXT>
@@ -388,9 +402,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FASHION_HOUSE_STORE_PEDIA</Tag>
 		<English>Your local store to get your clothes.</English>
+		<French>Votre boutique locale pour vos vêtements.</French>
 		<Italian>Il negozio locale in cui poter comprare i tuoi vestiti.</Italian>
-		<Spanish>Tu tienda local donde renovar tu vestimenta.</Spanish>
 		<Russian>Посетите один из наших местный магазин, где можно приобрести модную одежду.</Russian>
+		<Spanish>Tu tienda local donde renovar tu vestimenta.</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CORPORATION_MALLWART</Tag>
@@ -427,9 +442,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MALLWART_STORE_PEDIA</Tag>
 		<English>Fresh groceries and fruits delivered from all over the world directly to your local store.</English>
+		<French>Des produits frais et des fruits venant du monde entier livrés directement dans votre boutique locale.</French>
 		<Italian>Verdure e frutta fresca consegnati da tutto il mondo direttamente nella tua città.</Italian>
-		<Spanish>Frutas y verduras frescas enviadas directamente desde todo el mundo a tus ciudades.</Spanish>
 		<Russian>Свежие продукты и фрукты доставляются со всего мира прямо в ваши города.</Russian>
+		<Spanish>Frutas y verduras frescas enviadas directamente desde todo el mundo a tus ciudades.</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CORPORATION_MAPSTER</Tag>
@@ -488,9 +504,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_BIG_MCDOWELLS_RESTAURANT_PEDIA</Tag>
 		<English>A multinational fast food chain providing quick and affordable meals to city residents. Popular for serving food quickly and cheaply, it reflects the rise of globalized consumer culture.</English>
+		<French>Une chaîne de fast-food multinationale offrant des repas rapides et abordables aux habitants de la ville. Célèbre pour son service rapide et économique, elle reflète la montée de la culture de consommation mondialisée.</French>
 		<Italian>Il tuo fast food locale, per farti venire l'acquolina in bocca!</Italian>
-		<Spanish>¡Tu local de comida rápida para saciar tu apetito!</Spanish>
 		<Russian>Посетите наш местный ресторан быстрого питания, дабы насытиться!</Russian>
+		<Spanish>¡Tu local de comida rápida para saciar tu apetito!</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CORPORATION_MILEHIGH</Tag>
@@ -524,8 +541,9 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CORPORATION_MILEHIGH_PEDIA</Tag>
 		<English>Your local choice for planning exotic vacations.</English>
-		<Russian>Выберите и спланируйте с нами свой экзотический отдых. </Russian>
+		<French>Votre choix local pour organiser des vacances exotiques.</French>
 		<Italian>La tua scelta locale per pianificare vacanze esotiche.</Italian>
+		<Russian>Выберите и спланируйте с нами свой экзотический отдых. </Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CORPORATION_MOBBY</Tag>
@@ -559,9 +577,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MOBBY_MEATS_STORE_PEDIA</Tag>
 		<English>Your local meat market of the world's meats, from common cuts to exotic selections.</English>
+		<French>Votre boucherie locale offrant des viandes du monde entier, des coupes courantes aux sélections exotiques.</French>
 		<Italian>La tua bottega locale delle carni, dalla più comune alla più esotica.</Italian>
-		<Spanish>Tu mercado cárnico local con carnes de todo tipo, tanto comunes como exóticas.</Spanish>
 		<Russian>Посетите наш местный рынок мясных продуктов со всего мира, от обычных до экзотических.</Russian>
+		<Spanish>Tu mercado cárnico local con carnes de todo tipo, tanto comunes como exóticas.</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CORPORATION_MOONBEAN</Tag>
@@ -580,7 +599,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HQ_MOONBEAN_COFFEE_PEDIA</Tag>
-    <English>Coffee and other hot caffeinated beverages have always been a vital part of society, as people enjoy tea time with others. However, the rise of coffee chains transformed “coffee culture” to align with the consumerist standards of the United States. With the founding of Starbucks, the landscape of coffee culture changed forever. In 1971, Jerry Baldwin, Zev Siegl, and Gordon Bowker opened one of the earliest major coffee chains in Seattle, aiming to elevate coffee and tea into sophisticated beverages. They invested in high-quality coffee equipment and premium beans. This laid the foundation for what would become one of the world's largest coffee giants, spreading rapidly not only in the U.S. but also across other developed nations. Starbucks, impact was not just in its coffee, but in the new cultural model it created—offering specialty coffee and tea drinks tailored to a wide variety of tastes, fostering a creative and artistic atmosphere, and promoting "Fair Trade" policies. These initiatives aimed to help developing nations compete with large corporations that, in the era of neo-imperialism, have often marginalized subsistence farmers through exploitative trade practices known colloquially as "Banana Republic" policies.</English>
+		<English>Coffee and other hot caffeinated beverages have always been a vital part of society, as people enjoy tea time with others. However, the rise of coffee chains transformed “coffee culture” to align with the consumerist standards of the United States. With the founding of Starbucks, the landscape of coffee culture changed forever. In 1971, Jerry Baldwin, Zev Siegl, and Gordon Bowker opened one of the earliest major coffee chains in Seattle, aiming to elevate coffee and tea into sophisticated beverages. They invested in high-quality coffee equipment and premium beans. This laid the foundation for what would become one of the world's largest coffee giants, spreading rapidly not only in the U.S. but also across other developed nations. Starbucks, impact was not just in its coffee, but in the new cultural model it created—offering specialty coffee and tea drinks tailored to a wide variety of tastes, fostering a creative and artistic atmosphere, and promoting "Fair Trade" policies. These initiatives aimed to help developing nations compete with large corporations that, in the era of neo-imperialism, have often marginalized subsistence farmers through exploitative trade practices known colloquially as "Banana Republic" policies.</English>
 		<Italian>Il caffè e le altre bevande a base di caffeina sono sempre stati una parte importante della società, dato che gli uomini amano rilassarsi con i propri amici. Comunque, l'idea di un'industria del caffè cambiò la cultura del caffè per adattarsi agli standard consumistici dell'America. Con la fondazione di Starbucks la cultura del caffè cambio per sempre. Nel 1971, Jerry Baldwin, Zev Siegel e Gordon Bowker fondarono a Seattle una delle più grandi industrie del caffè, dato che volevano trasformare il tè e il caffè in bevande sofisticate, comprando chicchi di caffè di alta qualità. Il risultato fu uno dei più grandi giganti del caffè di tutto il mondo, dato che furono in grado di espandersi non solo in America, ma anche in altre nazioni sviluppate del mondo. La forza di Starbucks non era il caffè, ma la nuova cultura che aveva creato con speciali miscele di tè e caffè che venivano create per venire incontro ai gusti di tutti coloro con la cultura che Starbucks supporta, allo stesso tempo di tentativi di influenzare politiche di Equo commercio dove le nazioni in via di sviluppo potevano vendere caffè e tè competitivamente rispetto a compagnie più grandi, che durante l'era del neo-imperialismo avevano impoverito i piccoli agricoltori con le loro politiche da Repubblica delle banane.</Italian>
 		<Russian>Кофе и другие горячие напитки с кофеином всегда были жизненно важной частью общества, поскольку люди наслаждаются чаем со своими собратьями. Однако идея кофейного отделения изменила образ «кофейной культуры», чтобы соответствовать американским стандартам потребления. Однако с основанием «Старбакс» лицо кофейной культуры навсегда изменилось. В 1971 году Джерри Болдуин, Зев Сигел и Гордон Боукер основали одну из крупнейших кофейных веток в Сиэтле, поскольку они хотели превратить кофе и чай в изысканный напиток, купив высококачественное кофейное оборудование и кофейные зерна для подражания. Следующий результат - это то, что станет одним из крупнейших кофейных гигантов во всем мире, поскольку они смогли быстро распространиться не только в Америке, но и в других развитых странах мира. Эффект от «Старбакс» связан не с их кофе, а с культурой нового века, которую он создал с особыми смесями кофейных напитков и чая, которые были созданы, чтобы удовлетворить вкусы и прихоти всех, кто принадлежит к художественной культуре, которую «Старбакс» поддерживает, а также пытается повлиять. Политика «справедливой торговли», при которой развивающиеся страны могут продавать кофе и чай на условиях конкуренции с более крупными компаниями, которые в эпоху неоимпериализма разорили ряд фермеров, ведущих натуральное хозяйство, из-за проводимой компрадорской экономической политики т.н. «банановых республик».</Russian>
 	</TEXT>

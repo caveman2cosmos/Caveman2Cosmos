@@ -326,8 +326,9 @@
 	<TEXT>
 		<Tag>TXT_KEY_MISSION_CONDUCT_TRADE_MISSION_HELP</Tag>
 		<English>Conduct a Trade Mission in this city. The amount of Gold created is relative to the size of the city and the distance to the city the unit was trained in, as well as if the city is foreign. It consumes a Great Person, but sends regular merchants and criminals back to the capital. Criminals, attempting to trade their contraband, may fail an investigation check for this mission and thus fail to derive the Gold, and they may lose their movement for the turn and become 'Wanted'.</English>
-		<Russian>Проведите торговую миссию в этом городе. Количество полученного золота зависит от размера города, в котором отряд был обучен, а также размера и расстояния до города в пункте назначения, и от того, является ли город иностранным. При этом тратится Великий человек, но отправляет в столицу обычных торговцев и преступников. Преступники, пытающиеся продать свою контрабанду, могут не пройти проверку правоохранителей в этой миссии и, таким образом, не получить золото, потерять очки движения на ход и оказаться в розыске.</Russian>
+		<French>Effectuez une mission commerciale dans cette ville. La quantité d'or générée dépend de la taille de la ville, de la distance à la ville où l'unité a été formée, ainsi que du fait que la ville soit étrangère. Cela consomme une Grande Personne, mais renvoie les marchands ordinaires et criminels à la capitale. Les criminels tentant de commercer leur contrebande peuvent échouer le contrôle d'enquête de cette mission, échouant ainsi à générer de l'or, et peuvent perdre leur mouvement pour le tour et devenir « recherchés ».</French>
 		<Italian>[NEWLINE]Inizia una missione commerciale in questa città. La quantità di oro creata dipende dalle dimensioni e dalla distanza dalla città in cui l'unità è stata addestrata o in cui è nata, e dipende anche dal fatto che la città sia straniera. Consuma un gran personaggio, ma rimanda alla capitale mercanti e criminali regolari.</Italian>
+		<Russian>Проведите торговую миссию в этом городе. Количество полученного золота зависит от размера города, в котором отряд был обучен, а также размера и расстояния до города в пункте назначения, и от того, является ли город иностранным. При этом тратится Великий человек, но отправляет в столицу обычных торговцев и преступников. Преступники, пытающиеся продать свою контрабанду, могут не пройти проверку правоохранителей в этой миссии и, таким образом, не получить золото, потерять очки движения на ход и оказаться в розыске.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISSION_CONSTRUCT</Tag>
@@ -489,86 +490,103 @@
 	<TEXT>
 		<Tag>TXT_KEY_MISSION_GO_TO_MAP_CISLUNAR</Tag>
 		<English>Travel to Cislunar Space</English>
+		<French>Voyager vers l'espace cislunaire</French>
 		<Italian>Vai alla mappa dello spazio cislunare</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISSION_GO_TO_MAP_DISTANT_COSMOS</Tag>
 		<English>Travel to Distant Cosmos</English>
+		<French>Voyager vers le cosmos lointain</French>
 		<Italian>Vai alla mappa dello spazio distante</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISSION_GO_TO_MAP_EARTH</Tag>
 		<English>Travel to Earth</English>
+		<French>Voyager vers la Terre</French>
 		<Italian>Vai alla mappa della Terra</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISSION_GO_TO_MAP_INNER_SOLAR_SYSTEM</Tag>
 		<English>Travel to Inner Solar System</English>
+		<French>Voyager vers le système solaire intérieur</French>
 		<Italian>Vai alla mappa del sistema solare interno</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISSION_GO_TO_MAP_LOCAL_GROUP</Tag>
 		<English>Travel to Local Group</English>
+		<French>Voyager vers le Groupe local</French>
 		<Italian>Vai alla mappa del gruppo locale di galassie</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISSION_GO_TO_MAP_MARS</Tag>
 		<English>Travel to Mars</English>
+		<French>Voyager vers Mars</French>
 		<Italian>Vai alla mappa di Marte</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISSION_GO_TO_MAP_MILKY_WAY</Tag>
 		<English>Travel to Milky Way</English>
+		<French>Voyager vers la Voie lactée</French>
 		<Italian>Vai alla mappa della via lattea</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISSION_GO_TO_MAP_MOON</Tag>
 		<English>Travel to Moon</English>
+		<French>Voyager vers la Lune</French>
 		<Italian>Vai alla mappa della luna</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISSION_GO_TO_MAP_NEARBY_STARS</Tag>
 		<English>Travel to Nearby Stars</English>
+		<French>Voyager vers des étoiles proches</French>
 		<Italian>Vai alla mappa delle stelle vicine</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISSION_GO_TO_MAP_ORION_ARM</Tag>
 		<English>Travel to Orion Arm</English>
+		<French>Voyager vers le Bras d'Orion</French>
 		<Italian>Vai alla mappa del braccio di Orione</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISSION_GO_TO_MAP_OUTER_SOLAR_SYSTEM</Tag>
 		<English>Travel to Outer Solar System</English>
+		<French>Voyager vers le système solaire extérieur</French>
 		<Italian>Vai alla mappa del sistema solare esterno</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISSION_GO_TO_MAP_SUBTERRAIN</Tag>
 		<English>Travel to Earth Underground</English>
+		<French>Voyager sous la surface de la Terre</French>
 		<Italian>Vai alla mappa del sottosuolo terrestre</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISSION_GO_TO_MAP_TITAN</Tag>
 		<English>Travel to Titan</English>
+		<French>Voyager vers Titan</French>
 		<Italian>Vai alla mappa di Titano</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISSION_GO_TO_MAP_TRANSNEPTUNIAN</Tag>
 		<English>Travel to Kuiper Belt</English>
+		<French>Voyager vers la ceinture de Kuiper</French>
 		<Italian>Vai alla mappa della fascia di Kuiper</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISSION_GO_TO_MAP_UNIVERSE</Tag>
 		<English>Travel to Universe</English>
+		<French>Voyager vers l'Univers</French>
 		<Italian>Vai alla mappa dell'universo</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISSION_GO_TO_MAP_VENUS</Tag>
 		<English>Travel to Venus</English>
+		<French>Voyager vers Vénus</French>
 		<Italian>Vai alla mappa di Venere</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISSION_GO_TO_MAP_VIRGO_SUPERCLUSTER</Tag>
 		<English>Travel to Virgo Superscluster</English>
+		<French>Voyager vers le superamas de la Vierge</French>
 		<Italian>Vai alla mappa del superammasso della Vergine</Italian>
 	</TEXT>
 	<TEXT>
@@ -584,10 +602,12 @@
 	<TEXT>
 		<Tag>TXT_KEY_MISSION_GREAT_COMMODORE</Tag>
 		<English>Sea commodore</English>
+		<French>Grand commodore</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISSION_GREAT_COMMODORE_HELP</Tag>
 		<English>Sea Commodore, will lose its ability to join cities make Wonders, but will get the ability to earn Experience, gain Promotions and lead naval units into battle.</English>
+		<French>Le grand commodore perdra sa capacité à rejoindre les villes et construire des Merveilles, mais gagnera la capacité d'accumuler de l'expérience, d'obtenir des promotions et de diriger les unités navales au combat.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISSION_GREAT_COMMANDER_HELP</Tag>
@@ -642,7 +662,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_MISSION_HERITAGE_HELP</Tag>
 		<English>[ICON_BULLET]Consumes the unit.</English>
-		<French>[ICON_BULLET]utilise et détruit l’unité.</French>
+		<French>[ICON_BULLET]utilise et détruit l'unité.</French>
 		<Russian>[ICON_BULLET]Подразделение исчезнет в процессе.</Russian>
 	</TEXT>
 	<TEXT>
@@ -695,8 +715,9 @@
 	<TEXT>
 		<Tag>TXT_KEY_MISSION_INFILTRATE_HELP</Tag>
 		<English>This order will have the Spy or Criminal infiltrate a foreign city to bring home useful information (Espionage Points) about the rival. Spies use Espionage Points and are consumed. Criminals must pass an investigation check to be successful. If they are, they are sent back to the capital. Otherwise, they become wanted and lose the rest of their movement for that turn.</English>
-		<Russian>Прикажет шпиону или преступнику проникнуть в чужой город, чтобы раздобыть в нем ценную информацию (очки шпионажа) о сопернике. Шпионы используют и тратят очки шпионажа. Преступники должны пройти проверку от местных правоохранителей, чтобы добиться успеха. В случае успеха миссии, их возвращают обратно в столицу. В противном случае их объявляют в розыск и они потеряют оставшиеся очки движения за этот ход..</Russian>
+		<French>Cet ordre demande à l'espion ou au criminel d'infiltrer une ville étrangère pour rapporter des informations utiles (points d'espionnage) sur le rival. Les espions utilisent des points d'espionnage et sont consommés. Les criminels doivent réussir un contrôle d'enquête pour réussir. S'ils réussissent, ils sont renvoyés à la capitale. Sinon, ils deviennent recherchés et perdent le reste de leur mouvement pour ce tour.</French>
 		<Italian>[NEWLINE]La spia o il criminale si infiltra in una città straniera per portare a casa informazioni utili (punti spionaggio) riguardo il rivale. Le spie usano i punti spionaggio e sono consumate nel processo. I criminali devono superare un controllo investigativo per avere successo. In caso positivo, vengono rispediti alla capitale. Altrimenti, diventano ricercati e perdono il resto del loro movimento per quel turno.</Italian>
+		<Russian>Прикажет шпиону или преступнику проникнуть в чужой город, чтобы раздобыть в нем ценную информацию (очки шпионажа) о сопернике. Шпионы используют и тратят очки шпионажа. Преступники должны пройти проверку от местных правоохранителей, чтобы добиться успеха. В случае успеха миссии, их возвращают обратно в столицу. В противном случае их объявляют в розыск и они потеряют оставшиеся очки движения за этот ход..</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISSION_INQUISITION</Tag>
@@ -1204,86 +1225,103 @@
 	<TEXT>
 		<Tag>TXT_KEY_OUTCOME_GO_TO_MAP_CISLUNAR</Tag>
 		<English>Transfer unit to Cislunar Space</English>
+		<French>Transférer l'unité vers l'espace cislunaire</French>
 		<Italian>Trasferimento unità alla mappa dello spazio cislunare</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_OUTCOME_GO_TO_MAP_DISTANT_COSMOS</Tag>
 		<English>Transfer unit to Distant Cosmos</English>
+		<French>Transférer l'unité vers le cosmos lointain</French>
 		<Italian>Trasferimento unità alla mappa dello spazio distante</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_OUTCOME_GO_TO_MAP_EARTH</Tag>
 		<English>Transfer unit to Earth</English>
+		<French>Transférer l'unité vers la Terre</French>
 		<Italian>Trasferimento unità alla mappa della Terra</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_OUTCOME_GO_TO_MAP_INNER_SOLAR_SYSTEM</Tag>
 		<English>Transfer unit to Inner Solar System</English>
+		<French>Transférer l'unité vers le système solaire intérieur</French>
 		<Italian>Trasferimento unità alla mappa dello sistema solare interno</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_OUTCOME_GO_TO_MAP_LOCAL_GROUP</Tag>
 		<English>Transfer unit to Local Group</English>
+		<French>Transférer l'unité vers le Groupe local</French>
 		<Italian>Trasferimento unità alla mappa del gruppo locale di galassie</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_OUTCOME_GO_TO_MAP_MARS</Tag>
 		<English>Transfer unit to Mars</English>
+		<French>Transférer l'unité vers Mars</French>
 		<Italian>Trasferimento unità alla mappa di Marte</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_OUTCOME_GO_TO_MAP_MILKY_WAY</Tag>
 		<English>Transfer unit to Milky Way</English>
+		<French>Transférer l'unité vers la Voie lactée</French>
 		<Italian>Trasferimento unità alla mappa della via lattea</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_OUTCOME_GO_TO_MAP_MOON</Tag>
 		<English>Transfer unit to Moon</English>
+		<French>Transférer l'unité vers la Lune</French>
 		<Italian>Trasferimento unità alla mappa della luna</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_OUTCOME_GO_TO_MAP_NEARBY_STARS</Tag>
 		<English>Transfer unit to Nearby Stars</English>
+		<French>Transférer l'unité vers des étoiles proches</French>
 		<Italian>Trasferimento unità alla mappa delle stelle vicine</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_OUTCOME_GO_TO_MAP_ORION_ARM</Tag>
 		<English>Transfer unit to Orion Arm</English>
+		<French>Transférer l'unité vers le Bras d'Orion</French>
 		<Italian>Trasferimento unità alla mappa del braccio di Orione</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_OUTCOME_GO_TO_MAP_OUTER_SOLAR_SYSTEM</Tag>
 		<English>Transfer unit to Outer Solar System</English>
+		<French>Transférer l'unité vers le système solaire extérieur</French>
 		<Italian>Trasferimento unità alla mappa del sistema solare esterno</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_OUTCOME_GO_TO_MAP_SUBTERRAIN</Tag>
 		<English>Transfer unit to Earth Underground</English>
+		<French>Transférer l'unité sous la surface de la Terre</French>
 		<Italian>Trasferimento unità alla mappa del sottosuolo terrestre</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_OUTCOME_GO_TO_MAP_TITAN</Tag>
 		<English>Transfer unit to Titan</English>
+		<French>Transférer l'unité vers Titan</French>
 		<Italian>Trasferimento unità alla mappa di Titano</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_OUTCOME_GO_TO_MAP_TRANSNEPTUNIAN</Tag>
 		<English>Transfer unit to Kuiper Belt</English>
+		<French>Transférer l'unité vers la ceinture de Kuiper</French>
 		<Italian>Trasferimento unità alla mappa della fascia di Kuiper</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_OUTCOME_GO_TO_MAP_UNIVERSE</Tag>
 		<English>Transfer unit to Universe</English>
+		<French>Transférer l'unité vers l'Univers</French>
 		<Italian>Trasferimento unità alla mappa dell'universo</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_OUTCOME_GO_TO_MAP_VENUS</Tag>
 		<English>Transfer unit to Venus</English>
+		<French>Transférer l'unité vers Vénus</French>
 		<Italian>Trasferimento unità alla mappa di Venere</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_OUTCOME_GO_TO_MAP_VIRGO_SUPERCLUSTER</Tag>
 		<English>Transfer unit to Virgo Superscluster</English>
+		<French>Transférer l'unité vers le superamas de la Vierge</French>
 		<Italian>Trasferimento unità alla mappa del superammasso della Vergine</Italian>
 	</TEXT>
 </Civ4GameText>

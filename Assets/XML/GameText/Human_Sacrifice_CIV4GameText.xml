@@ -71,11 +71,13 @@
 	<TEXT>
 		<Tag>TXT_KEY_MISSION_SACRIFICE_CAPTIVE</Tag>
 		<English>Sacrifice a captive for Culture, Happiness.</English>
+		<French>Sacrifiez un captif pour la Culture et le Bonheur.</French>
 		<Italian>Sacrifica prigioniero per cultura e felicità.</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISSION_SACRIFICE_CAPTIVE_HELP</Tag>
 		<English>Increases the culture and happiness of the city. Unit is consumed.</English>
+		<French>Augmente la culture et le bonheur de la ville. L'unité est consommée.</French>
 		<Italian>[NEWLINE]Aumenta la cultura e la felicità della città. L'unità è consumata nel processo.</Italian>
 	</TEXT>
 	<TEXT>

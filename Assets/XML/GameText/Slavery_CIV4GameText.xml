@@ -27,6 +27,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SLAVERY_ZORO_PEDIA</Tag>
 		<English>Zoroastrianism prohibits the owning of slaves. If Zoroastrianism is present in the city, or it is your State Religion then your people will be angry if you also run Slavery. Zoroastrian missionaries (Magi) can also end Slavery in your nation like a Great Person can.</English>
+		<French>Le zoroastrisme interdit la possession d'esclaves. Si le zoroastrisme est présent dans la ville, ou s'il est votre religion d'État, alors votre peuple sera en colère si vous pratiquez également l'esclavage. Les missionnaires zoroastriens (Mages) peuvent aussi mettre fin à l'esclavage dans votre nation comme peut le faire un Grand Personnage.</French>
 		<Italian>Lo zoroastrismo proibisce la schiavitù; se lo zoroastrismo è presente in città o è la tua religione ufficiale, i cittadini si arrabbieranno se permetti la schiavitù. I magi, missionari di Zoroastro, possono eliminare la schiavitù dalla tua nazione proprio come farebbe un Grande Personaggio.</Italian>
 		<Polish>Zaratusztrianizm pot&#234;pia&#179; niewolnictwo w ka&#191;dej postaci.</Polish>
 		<Russian>Ó÷åíèå Çàðàòóñòðû çàïðåùàåò èíñòèòóò ðàáîâëàäåíèÿ. Åñëè â âàøåì ãîðîäå Çîðîàñòðèçì áóäåò ïðåäñòàâëåí â êà÷åñòâå ðàçðåøåííîé èëè ãîñóäàðñòâåííîé ðåëèãèè, òîãäà âàøè ëþäè áóäóò ïðîÿâëÿòü íåäîâîëüñòâî, ðàâíî êàê è â ñëó÷àå ââåäåíèÿ Ðàáîâëàäåíèÿ. Ìèññèîíåðû çîðîàñòðèçìà (âîëõâû) íàðàâíå ñ Âåëèêèìè ëþäüìè òàêæå ñïîñîáíû ëèêâèäèðîâàòü ðàáîâëàäåíèå â ñâîåé ñòðàíå.</Russian>
@@ -50,8 +51,9 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SLAVE_COMPOUND_CRIME_PREVENTION</Tag>
 		<English>Slave Compound - Crime Prevention</English>
-		<Russian>Раб. труд (правопорядок)</Russian>
+		<French>Quartier d'esclaves - Prévention du crime</French>
 		<Italian>Baracca degli schiavi per la prevenzione del crimine</Italian>
+		<Russian>Раб. труд (правопорядок)</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SLAVE_COMPOUND_ENTERTAINMENT</Tag>
@@ -436,6 +438,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_SPECIALIST_SETTLED_CITIZEN_PEDIA</Tag>
 		<English>Settled Citizen WIP - When whipping, they are used after any Settled Slaves and before the general population.</English>
+		<French>Citoyen établi (En développement) - Lors de la flagellation, ils sont utilisés après les esclaves établis et avant la population générale.</French>
 		<Italian>CONCETTO NON ANCORA REALIZZATO: quando viene sacrificata la popolazione cittadina, i cittadini residenti vengono usati dopo gli schiavi residenti ma prima della popolazione normale.</Italian>
 		<Polish>Osiad&#179;y Obywatel - Kiedy przyspieszasz budow&#234; mo&#191;esz ich u&#191;y&#230; ich zamiast populacji miasta.</Polish>
 		<Russian>Подселенные горожане - в случае принудительного труда они используются после городских рабов и перед остальным населением.</Russian>
@@ -461,8 +464,9 @@
 	<TEXT>
 		<Tag>TXT_KEY_SPECIALIST_SETTLED_SLAVE_CRIME_PREVENTION</Tag>
 		<English>Settled Slave (Crime Prevention)</English>
-		<Russian>Раб (Сторож)</Russian>
+		<French>Esclave établi (Prévention du crime)</French>
 		<Italian>Schiavo residente per la prevenzione del crimine</Italian>
+		<Russian>Раб (Сторож)</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_SPECIALIST_SETTLED_SLAVE_ENTERTAINMENT</Tag>
@@ -524,8 +528,9 @@
 	<TEXT>
 		<Tag>TXT_KEY_SPECIALIST_SETTLED_SLAVE_SANITATION</Tag>
 		<English>Settled Slave (Sanitation)</English>
-		<Russian>Раб (Золотарь)</Russian>
+		<French>Esclave établi (Assainissement)</French>
 		<Italian>Schiavo residente per l'igiene</Italian>
+		<Russian>Раб (Золотарь)</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_SPECIALIST_SETTLED_SLAVE_TUTOR</Tag>

@@ -33,6 +33,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_STRATEGY_CITY_GROWTH</Tag>
 		<English>(M) - City Growth Explained</English>
+		<French>(M) - Explication de la croissance urbaine</French>
 		<Russian>(M) - Рост городов</Russian>
 	</TEXT>
 	<TEXT>
@@ -43,6 +44,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_STRATEGY_CITY_SPECIALIZATION</Tag>
 		<English>(E) - Specialization of Cities</English>
+		<French>(E) - Spécialisation des villes</French>
 		<Russian>(E) - Специализация городов</Russian>
 	</TEXT>
 	<TEXT>
@@ -52,6 +54,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_STRATEGY_CITY_UPKEEP</Tag>
 		<English>(M) - City Upkeep Explained</English>
+		<French>(M) - Coût d'entretien des villes expliqué</French>
 		<Russian>(M) - Содержание городов</Russian>
 	</TEXT>
 	<TEXT>
@@ -61,6 +64,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_STRATEGY_CIVIC_UPKEEP</Tag>
 		<English>(M) - Civic Upkeep Explained</English>
+		<French>(M) - Coût d'entretien civique expliqué</French>
 		<Russian>(M) - Обслуживание парадигм</Russian>
 	</TEXT>
 	<TEXT>
@@ -70,6 +74,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_STRATEGY_CONQUEST_DIPLO</Tag>
 		<English>(W) - Conquest Diplomacy</English>
+		<French>(W) - Diplomatie de la conquête</French>
 		<Russian>(W) - Дипломатия завоевания</Russian>
 	</TEXT>
 	<TEXT>
@@ -79,6 +84,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_STRATEGY_CORP_MAINT</Tag>
 		<English>(M) - Corporation Maintenance</English>
+		<French>(M) - Coût d'entretien des corporations</French>
 		<Russian>(M) - Содержание корпораций</Russian>
 	</TEXT>
 	<TEXT>
@@ -88,6 +94,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_STRATEGY_CULTURAL_MECHS</Tag>
 		<English>(M) - Cultural Mechanics</English>
+		<French>(M) - Mécanismes culturels</French>
 		<Russian>(M) - Распространение культуры</Russian>
 	</TEXT>
 	<TEXT>
@@ -97,6 +104,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_STRATEGY_CULTURAL_VICTORY</Tag>
 		<English>(V) - Cultural Victory</English>
+		<French>(V) - Victoire culturelle</French>
 		<Russian>(V) - Культурная победа</Russian>
 	</TEXT>
 	<TEXT>
@@ -106,6 +114,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_STRATEGY_DEFICIT_RESEARCH</Tag>
 		<English>(E) - Deficit Research</English>
+		<French>(E) - Recherche en déficit</French>
 		<Russian>(E) - Дефицит исследований</Russian>
 	</TEXT>
 	<TEXT>
@@ -115,6 +124,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_STRATEGY_DEMOGRAPHICS_MECHS</Tag>
 		<English>(M) - Demographics Mechanics</English>
+		<French>(M) - Mécanismes démographiques</French>
 		<Russian>(M) - Демография</Russian>
 	</TEXT>
 	<TEXT>
@@ -242,6 +252,7 @@ Each figure on its own does tell you much at all as to how you empire is going c
 	<TEXT>
 		<Tag>TXT_KEY_STRATEGY_GP_FARMS</Tag>
 		<English>(M) - Great Person Farms</English>
+		<French>(M) - Fermes pour Perso. illustres</French>
 		<Russian>(M) - Выращивание Великих людей</Russian>
 	</TEXT>
 	<TEXT>
@@ -251,6 +262,7 @@ Each figure on its own does tell you much at all as to how you empire is going c
 	<TEXT>
 		<Tag>TXT_KEY_STRATEGY_GP_POINTS</Tag>
 		<English>(M) - Great Person Points Explained</English>
+		<French>(M) - Points pour Perso. illustres expliqués</French>
 		<Russian>(M) - Великие люди</Russian>
 	</TEXT>
 	<TEXT>
@@ -270,6 +282,7 @@ Each figure on its own does tell you much at all as to how you empire is going c
 	<TEXT>
 		<Tag>TXT_KEY_STRATEGY_HEALING</Tag>
 		<English>(W) - Unit Healing</English>
+		<French>(W) - Soin des unités</French>
 		<Russian>(W) - Лечение отрядов</Russian>
 	</TEXT>
 	<TEXT>
@@ -295,11 +308,13 @@ Each figure on its own does tell you much at all as to how you empire is going c
 	<TEXT>
 		<Tag>TXT_KEY_STRATEGY_INTRO_PEDIA</Tag>
 		<English>[H1]Introduction to the Guides[\H1][PARAGRAPH:2]The Guides contained in this section are all collected from the Civilization Fanatics War Academy (www.civfanatics.com). All credit goes to the authors of these great articles! Not all of the strategies here may suit your play style, but the information can be tailored to your style, and will help with your game. If you find an article that you find helpful, please go to the web site and let the author know![ICON_HAPPY][PARAGRAPH:2]The articles are broken up into a few categories to make it easier to find what you are looking for. The title will have a letter in front of it, telling you what category it is. Here they are:[PARAGRAPH:2][ICON_BULLET](B) = Beginner Guides[PARAGRAPH:1][ICON_BULLET](C) = Civilization Specific Guides[PARAGRAPH:1][ICON_BULLET](D) = Guides based on Difficulty Level[PARAGRAPH:1][ICON_BULLET](E) = Empire Management[PARAGRAPH:1][ICON_BULLET](M) = Mechanics of the Game[PARAGRAPH:1][ICON_BULLET](V) = Guides to different Victory Conditions[PARAGRAPH:1][ICON_BULLET](W) = Warfare guides[PARAGRAPH:2]One final note: The formatting of these guides are not perfect, and it is still a work in progress. If you find something that we missed, then let us know on our forum on Civilization Fanatics. Enjoy and happy hunting![PARAGRAPH:2]-The BUG Team</English>
+		<French>[H1]Introduction aux guides[\H1][PARAGRAPH:2]Les guides contenus dans cette section ont tous été collectés à partir de la Civilisation Fanatics War Academy (www.civfanatics.com). Crédit à tous les auteurs de ces excellents articles ! Toutes les stratégies présentes ici peuvent ne pas convenir à votre style de jeu, mais l'information peut être adaptée à votre style, et vous aidera dans votre partie. Si vous trouvez un article utile, n'hésitez pas à le signaler sur le site ![ICON_HAPPY][PARAGRAPH:2]Les articles sont classés en catégories pour faciliter la recherche. Chaque titre commence par une lettre indiquant la catégorie :[PARAGRAPH:2][ICON_BULLET](B) = Guides pour débutants[PARAGRAPH:1][ICON_BULLET](C) = Guides spécifiques à une civilisation[PARAGRAPH:1][ICON_BULLET](D) = Guides selon le niveau de difficulté[PARAGRAPH:1][ICON_BULLET](E) = Gestion d'empire[PARAGRAPH:1][ICON_BULLET](M) = Mécanismes du jeu[PARAGRAPH:1][ICON_BULLET](V) = Guides pour différentes conditions de victoire[PARAGRAPH:1][ICON_BULLET](W) = Guides de guerre[PARAGRAPH:2]Une dernière remarque : ce formatage n'est pas parfait, il est en cours. Signalez toute erreur sur notre forum. Bonne exploration et bonne chasse ![PARAGRAPH:2]-L'équipe BUG</French>
 		<German>[H1]Einleitung zu den Strategien[\H1][PARAGRAPH:2]Die Strategien in diesem Abschnitts sind alle der "Civilization Fanatics War Academy" entnommen (zu finden unter: www.civfanatics.com). Der Dank fur diese grouartigen Artikel gebuhrt den jeweiligen Autoren! Wahrscheinlich eignen sich nicht alle Strategien fur jeden Spielstil, aber die Informationen kunnen trotzdem tiefere Einblicke liefern, um das eigene Spiel zu verbessern. Falls Sie einen Artikel finden, der besonders hilfreich war, kunnen Sie die Website besuchen und es den Autor wissen lassen![ICON_HAPPY][PARAGRAPH:2]Die Artikel sind in mehrere Kategorien unterteilt, um das Auffinden bestimmter Artikel zu erleichtern. Vor jedem Namen eines Artikel befindet sich ein Buchstabe, der die Kategorie angibt, zu der er gehurt. Folgende Buchstaben werden verwendet:[PARAGRAPH:2][ICON_BULLET](A) - Strategien fur Anfunger[PARAGRAPH:1][ICON_BULLET](K) - Strategien zur Kriegsfuhrung[PARAGRAPH:1][ICON_BULLET](M) - Strategien, die sich auf bestimmte Mechaniken des Spiels beziehen[PARAGRAPH:1][ICON_BULLET](R) - Strategien zur Reichsverwaltung[PARAGRAPH:1][ICON_BULLET](S) - Strategien fur bestimmte Siegbedingungen[PARAGRAPH:1][ICON_BULLET](SG) - Strategien fur bestimmte Schwierigkeitsgrade[PARAGRAPH:1][ICON_BULLET](Z) - Strategien, die sich auf bestimmte Zivilisationen beziehen[PARAGRAPH:2]Noch eine kleine Anmerkung: Die Formatierung der Artikel ist nicht perfekt, da an diesem Abschnitt immer noch gearbeitet wird. Falls Sie einen Fehler finden oder etwas, das wir vergessen haben, dann teilen Sie es uns in unserem Forum bei "Civilization Fanatics" mit. Viel Spau und Weidmannsheil![PARAGRAPH:2]-Das Team der BUG Mod</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_STRATEGY_MODERN_WAR</Tag>
 		<English>(W) - Modern-Era Warfare</English>
+		<French>(W) - Guerre à l'époque moderne</French>
 		<Russian>(W) - Современная война</Russian>
 	</TEXT>
 	<TEXT>
@@ -329,6 +344,7 @@ Each figure on its own does tell you much at all as to how you empire is going c
 	<TEXT>
 		<Tag>TXT_KEY_STRATEGY_NAVAL</Tag>
 		<English>(W) - Modern Naval Strategy</English>
+		<French>(W) - Stratégie navale moderne</French>
 		<Russian>(W) - Совр. война на море</Russian>
 	</TEXT>
 	<TEXT>
@@ -338,6 +354,7 @@ Each figure on its own does tell you much at all as to how you empire is going c
 	<TEXT>
 		<Tag>TXT_KEY_STRATEGY_OCC</Tag>
 		<English>(V) - OCC Guide</English>
+		<French>(V) - Guide OCC</French>
 		<Russian>(V) - Путеводитель по OCC</Russian>
 	</TEXT>
 	<TEXT>
@@ -357,6 +374,7 @@ Each figure on its own does tell you much at all as to how you empire is going c
 	<TEXT>
 		<Tag>TXT_KEY_STRATEGY_RESEARCH_MECHS</Tag>
 		<English>(M) - Research Mechanics</English>
+		<French>(M) - Mécanismes de recherche</French>
 		<Russian>(M) - Исследования</Russian>
 	</TEXT>
 	<TEXT>
@@ -386,6 +404,7 @@ Each figure on its own does tell you much at all as to how you empire is going c
 	<TEXT>
 		<Tag>TXT_KEY_STRATEGY_SPACE_EXPLORATION</Tag>
 		<English>(B) - Space Exploration Guide</English>
+		<French>(B) - Guide de l'exploration spatiale</French>
 		<Russian>(B) - Освоение космоса</Russian>
 	</TEXT>
 	<TEXT>
@@ -396,6 +415,7 @@ Each figure on its own does tell you much at all as to how you empire is going c
 	<TEXT>
 		<Tag>TXT_KEY_STRATEGY_SYNERGY</Tag>
 		<English>(B) - Synergy</English>
+		<French>(B) - Synergie</French>
 		<German>(A) - Synergie</German>
 		<Russian>(B) - Синергия</Russian>
 	</TEXT>
@@ -406,6 +426,7 @@ Each figure on its own does tell you much at all as to how you empire is going c
 	<TEXT>
 		<Tag>TXT_KEY_STRATEGY_TANK</Tag>
 		<English>(W) - Tank Warfare</English>
+		<French>(W) - Guerre des chars</French>
 		<Russian>(W) - Танковая война</Russian>
 	</TEXT>
 	<TEXT>
@@ -415,15 +436,18 @@ Each figure on its own does tell you much at all as to how you empire is going c
 	<TEXT>
 		<Tag>TXT_KEY_STRATEGY_TRADE_ROUTES</Tag>
 		<English>(M) - Trade Routes Explained</English>
+		<French>(M) - Explication des routes commerciales</French>
 		<Russian>(M) - Торговые пути</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_STRATEGY_TRADE_ROUTES_PEDIA</Tag>
 		<English>[H1]Trade Routes[\H1][PARAGRAPH:1]- by [BOLD]krikkitone[\BOLD][NEWLINE][NEWLINE]The basic Formula for the value of a Trade route seems to be[NEWLINE][NEWLINE](1 + F)*(5 * (Pop - 10)) + 100 + Cap) * (Minimum ((T * 50%), (D * 70%))) * 20% / 100)[NEWLINE][NEWLINE]F is 150% (1.5) if it is a Foreign Trade Route, 0 if domestic[NEWLINE]Pop is the Pop of the city Getting the trade route[NEWLINE]T is the Pop of the City the Trade Route is With[NEWLINE]D is the Distance to the City[NEWLINE]Cap is 25 if one of the cities is a Capital, 0 if not[NEWLINE]() indicates rounding down[NEWLINE][NEWLINE]This is for Overland routes, no Harbors, Tiny map[NEWLINE][NEWLINE]The 69% for distance is Probably specific to Tiny maps[NEWLINE][NEWLINE]All the numbers (150% for Foreign, 5* population, -10 population adjustment, 25 for Capital, 50% for partner pop, etc. except the 1 and the 100 are in the XML files)[NEWLINE][NEWLINE]What this indicates is that on a normal map, once your empire is big enough, and the populations are about 20, then Domestic trade routes can make about 3 commerce, 2 quite easily. Foreign Trade Routes can get to 7 or 8 and don't require your empire to be big just to have sufficiently Distant and large-citied trade Partners.[NEWLINE][NEWLINE]edited from further analysis results[NEWLINE][NEWLINE]Checked World info for the other sizes too,[NEWLINE][NEWLINE]so for[NEWLINE]Duel is 80%[NEWLINE]Tiny 70% (I discovered I made a distance measuring mistake in my 69% calc, Credit to Roland: I would have missed that)[NEWLINE]Small 60%[NEWLINE]Standard 50%[NEWLINE]Large 40%[NEWLINE]Huge 30%</English>
+		<French>[H1]Routes commerciales[\H1][PARAGRAPH:1]- par [BOLD]krikkitone[\BOLD][NEWLINE][NEWLINE]La formule de base pour la valeur d'une route commerciale semble être[NEWLINE][NEWLINE](1 + F)*(5 * (Pop - 10)) + 100 + Cap) * (Minimum ((T * 50%), (D * 70%))) * 20% / 100)[NEWLINE][NEWLINE]F vaut 150% (1.5) si c'est une route commerciale étrangère, 0 si domestique[NEWLINE]Pop est la population de la ville qui obtient la route[NEWLINE]T est la population de la ville avec laquelle la route est échangée[NEWLINE]D est la distance à la ville[NEWLINE]Cap vaut 25 si une des villes est une capitale, 0 sinon[NEWLINE]() indique un arrondi inférieur[NEWLINE][NEWLINE]Ceci concerne les routes terrestres, sans ports, sur une petite carte[NEWLINE][NEWLINE]Le pourcentage de 69% pour la distance est probablement spécifique aux petites cartes[NEWLINE][NEWLINE]Tous les chiffres (150% pour l'étranger, 5* population, -10 ajustement, 25 pour la capitale, 50% pour la ville partenaire, etc., sauf le 1 et le 100 qui sont dans les fichiers XML)[NEWLINE][NEWLINE]Ce que cela indique, c'est qu'en général, une fois que votre empire est suffisamment grand et que les populations approchent de 20, les routes intérieures produisent environ 3 de commerce, et facilement 2. Les routes étrangères peuvent atteindre 7 ou 8, sans que votre empire soit énorme pour avoir des partenaires commerciaux suffisamment éloignés et nombreux.[NEWLINE][NEWLINE]Analyse approfondie des résultats[NEWLINE][NEWLINE]Vérification des autres tailles[NEWLINE][NEWLINE]Donc pour[NEWLINE]Duel, 80%[NEWLINE]Petite, 70% (j'ai trouvé une erreur dans le calcul du 69%, credit à Roland : j'ai manqué cela)[NEWLINE]Petite, 60%[NEWLINE]Standard, 50%[NEWLINE]Grande, 40%[NEWLINE]Géante, 30%</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_STRATEGY_TRADING</Tag>
 		<English>(M) - Aggressive Trading</English>
+		<French>(M) - Commerce agressif</French>
 		<Russian>(M) - Торговые войны</Russian>
 	</TEXT>
 	<TEXT>
@@ -444,6 +468,7 @@ Each figure on its own does tell you much at all as to how you empire is going c
 	<TEXT>
 		<Tag>TXT_KEY_STRATEGY_TRIANGLE</Tag>
 		<English>(E) - Triangle Diplomacy</English>
+		<French>(E) - Diplomatie triangulaire</French>
 		<Russian>(E) - Трехсторонняя дипломатия</Russian>
 	</TEXT>
 	<TEXT>
@@ -464,6 +489,7 @@ Each figure on its own does tell you much at all as to how you empire is going c
 	<TEXT>
 		<Tag>TXT_KEY_STRATEGY_UNIT_MAINT</Tag>
 		<English>(M) - Unit Maintance Explained</English>
+		<French>(M) - Maintenance des unités expliquée</French>
 		<Russian>(M) - Содержание юнитов</Russian>
 	</TEXT>
 	<TEXT>
@@ -473,6 +499,7 @@ Each figure on its own does tell you much at all as to how you empire is going c
 	<TEXT>
 		<Tag>TXT_KEY_STRATEGY_UU</Tag>
 		<English>(W) - Unique Unit Guide</English>
+		<French>(W) - Guide des unités uniques</French>
 		<Russian>(W) - Уникальные юниты</Russian>
 	</TEXT>
 	<TEXT>
@@ -482,6 +509,7 @@ Each figure on its own does tell you much at all as to how you empire is going c
 	<TEXT>
 		<Tag>TXT_KEY_STRATEGY_VASSALAGE_MECHS</Tag>
 		<English>(M) - Vassalge Mechanics</English>
+		<French>(M) - Mécanismes de la vassalisation</French>
 		<Russian>(M) - Вассальная система</Russian>
 	</TEXT>
 	<TEXT>
@@ -491,6 +519,7 @@ Each figure on its own does tell you much at all as to how you empire is going c
 	<TEXT>
 		<Tag>TXT_KEY_STRATEGY_WAR_WEARINESS</Tag>
 		<English>(M) - War Weariness</English>
+		<French>(M) - Lassitude de guerre</French>
 		<Russian>(M) - Усталость от войны</Russian>
 	</TEXT>
 	<TEXT>
@@ -500,6 +529,7 @@ Each figure on its own does tell you much at all as to how you empire is going c
 	<TEXT>
 		<Tag>TXT_KEY_STRATEGY_WAYS_HEALTHY</Tag>
 		<English>(E) - Ways into Health</English>
+		<French>(E) - Chemins vers la Santé</French>
 		<Russian>(E) - Пути к Здоровью</Russian>
 	</TEXT>
 	<TEXT>
@@ -509,6 +539,7 @@ Each figure on its own does tell you much at all as to how you empire is going c
 	<TEXT>
 		<Tag>TXT_KEY_STRATEGY_WAYS_PRODUCTION</Tag>
 		<English>(E) - Ways into Production</English>
+		<French>(E) - Chemins vers la Production</French>
 		<Russian>(E) - Пути к Производительности</Russian>
 	</TEXT>
 	<TEXT>
@@ -529,6 +560,7 @@ Each figure on its own does tell you much at all as to how you empire is going c
 	<TEXT>
 		<Tag>TXT_KEY_STRATEGY_WORLD_WAR</Tag>
 		<English>(W) - Let's have a World War</English>
+		<French>(W) - Lançons une Guerre Mondiale</French>
 		<Russian>(W) - Мировые войны</Russian>
 	</TEXT>
 	<TEXT>

@@ -3,6 +3,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_HELPTEXT_BUILDING_DISABLED</Tag>
 		<English>[COLOR_WARNING_TEXT]Disabled[COLOR_REVERT]</English>
+		<French>[COLOR_WARNING_TEXT]Désactivé[COLOR_REVERT]</French>
 		<German>[COLOR_WARNING_TEXT]inaktiv[COLOR_REVERT]</German>
 		<Italian>[COLOR_WARNING_TEXT]Edificio disabilitato[COLOR_REVERT]</Italian>
 		<Russian>[COLOR_WARNING_TEXT]Неактивно[COLOR_REVERT]</Russian>
@@ -10,12 +11,14 @@
 	<TEXT>
 		<Tag>TXT_KEY_HELPTEXT_BUILDING_DISABLED_RELIGIOUSLY</Tag>
 		<English>[COLOR_WARNING_TEXT]Religiously disabled[COLOR_REVERT][NEWLINE]</English>
+		<French>[COLOR_WARNING_TEXT]Désactivé pour raisons religieuses[COLOR_REVERT][NEWLINE]</French>
 		<Italian>[COLOR_WARNING_TEXT]Religione disabilitata[COLOR_REVERT]</Italian>
 		<Russian>[COLOR_WARNING_TEXT]Неактивно из-за религии[COLOR_REVERT][NEWLINE]</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HELPTEXT_REQUIRES_NUM_BUILDINGS_0</Tag>
 		<English>[COLOR_YELLOW]Requires [LINK=%s1]%s2[\LINK] (%d3 Total) in any city[COLOR_REVERT]</English>
+		<French>[COLOR_YELLOW]Nécessite [LINK=%s1]%s2[\LINK] (%d3 au total) dans n'importe quelle ville[COLOR_REVERT]</French>
 		<German>[ICON_BULLET][COLOR_YELLOW]erfordert [LINK=%s1]%s2[\LINK] (%d3 insgesamt) in eigenen Städten[COLOR_REVERT]</German>
 		<Italian>[ICON_BULLET]Richiede l'edifico [LINK=%s1]%s2[\LINK] in qualsiasi città: [COLOR_YELLOW]%d3[COLOR_REVERT]</Italian>
 		<Russian>[COLOR_YELLOW]Необходимо [LINK=%s1]%s2[\LINK] (%d3 Total) в любом городе[COLOR_REVERT]</Russian>
@@ -23,6 +26,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_HELPTEXT_REQUIRES_NUM_BUILDINGS_1</Tag>
 		<English>[COLOR_YELLOW]Requires [LINK=%s1]%s2[\LINK] (%d3/%d4 Total) in any city[COLOR_REVERT]</English>
+		<French>[COLOR_YELLOW]Nécessite [LINK=%s1]%s2[\LINK] (%d3/%d4 au total) dans n'importe quelle ville[COLOR_REVERT]</French>
 		<German>[ICON_BULLET][COLOR_YELLOW]erfordert [LINK=%s1]%s2[\LINK] (%d3/%d4 insgesamt) in eigenen Städten[COLOR_REVERT]</German>
 		<Italian>[ICON_BULLET]Richiede l'edifico [LINK=%s1]%s2[\LINK] in qualsiasi città: [COLOR_YELLOW]%d3/%d4[COLOR_REVERT]</Italian>
 		<Russian>[ICON_BULLET]Необходимо [LINK=%s1]%s2[\LINK] (%d3/%d4 Total) в любом городе[COLOR_REVERT]</Russian>
@@ -30,36 +34,42 @@
 	<TEXT>
 		<Tag>TXT_KEY_HELPTEXT_UNIT_UPKEEP_EXTRA</Tag>
 		<English>[ICON_BULLET]Extra Unit Upkeep: %s1 [ICON_GOLD]</English>
-		<Italian>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Costi extra di mantenimento[COLOR_REVERT] per l'unità: [COLOR_HIGHLIGHT_TEXT]%s1[COLOR_REVERT] [ICON_GOLD]</Italian> <!-- Subcombat type Sea Animals (Tales) -->
+		<French>[ICON_BULLET]Entretien supplémentaire des unités : %s1 [ICON_GOLD]</French>
 		<German>[ICON_BULLET]Zusätzliche laufende Kosten: %s1 [ICON_GOLD]</German>
+		<Italian>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Costi extra di mantenimento[COLOR_REVERT] per l'unità: [COLOR_HIGHLIGHT_TEXT]%s1[COLOR_REVERT] [ICON_GOLD]</Italian>
 		<Russian>[ICON_BULLET]Содержание дополнительных подразделений: %s1 [ICON_GOLD]</Russian>
+		<!-- Subcombat type Sea Animals (Tales) -->
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HELPTEXT_UNIT_UPKEEP_FREE_CIVILIAN</Tag>
 		<English>[ICON_BULLET]Free Civilian Unit Upkeep: %d1 [ICON_GOLD]</English>
-		<Italian>[ICON_BULLET]Costi di mantenimento gratuiti dell'unità civile: %d1 [ICON_GOLD]</Italian>
+		<French>[ICON_BULLET]Entretien gratuit pour %d1 unités civiles [ICON_GOLD]</French>
 		<German>[ICON_BULLET]Kostenübernahme für zivile Einheiten: %d1 [ICON_GOLD]</German>
+		<Italian>[ICON_BULLET]Costi di mantenimento gratuiti dell'unità civile: %d1 [ICON_GOLD]</Italian>
 		<Russian>[ICON_BULLET]Поддержка бесплатных гражданских подразделений: %d1 [ICON_GOLD]</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HELPTEXT_UNIT_UPKEEP_FREE_CIVILIAN_PER_POP</Tag>
 		<English>[ICON_BULLET]%d1%% Free Civilian Unit Upkeep per Population.</English>
-		<Italian>[ICON_BULLET]%d1%% di costi di mantenimento gratuiti per le unità civili per popolazione.</Italian>
+		<French>[ICON_BULLET]%d1%% d'entretien gratuit pour unités civiles par habitant.</French>
 		<German>[ICON_BULLET]freie zivile Einheiten ohne laufende Kosten: %d1%%</German>
+		<Italian>[ICON_BULLET]%d1%% di costi di mantenimento gratuiti per le unità civili per popolazione.</Italian>
 		<Russian>[ICON_BULLET]%d1%% бесплатных гражданских подразделений на население.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HELPTEXT_UNIT_UPKEEP_FREE_MILITARY</Tag>
 		<English>[ICON_BULLET]Free Military Unit Upkeep: %d1 [ICON_GOLD]</English>
-		<Italian>[ICON_BULLET]Costi di mantenimento gratuiti per l'unità militare: %d1 [ICON_GOLD]</Italian>
+		<French>[ICON_BULLET]Entretien gratuit pour %d1 unités militaires [ICON_GOLD]</French>
 		<German>[ICON_BULLET]Kostenübernahme für militärische Einheiten: %d1 [ICON_GOLD]</German>
+		<Italian>[ICON_BULLET]Costi di mantenimento gratuiti per l'unità militare: %d1 [ICON_GOLD]</Italian>
 		<Russian>[ICON_BULLET]Поддержка бесплатных военных подразделений: %d1 [ICON_GOLD]</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HELPTEXT_UNIT_UPKEEP_FREE_MILITARY_PER_POP</Tag>
 		<English>[ICON_BULLET]%d1%% Free Military Unit Upkeep per Population.</English>
-		<Italian>[ICON_BULLET]%d1%% di costi di mantenimento gratuiti per le unità militari per popolazione.</Italian>
+		<French>[ICON_BULLET]%d1%% d'entretien gratuit pour unités militaires par habitant.</French>
 		<German>[ICON_BULLET]freie Militäreinheiten ohne laufende Kosten: %d1%%</German>
+		<Italian>[ICON_BULLET]%d1%% di costi di mantenimento gratuiti per le unità militari per popolazione.</Italian>
 		<Russian>[ICON_BULLET]%d1%% бесплатных военных подразделений на население.</Russian>
 	</TEXT>
 	<TEXT>

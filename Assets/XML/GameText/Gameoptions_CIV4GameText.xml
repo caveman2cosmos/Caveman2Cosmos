@@ -11,6 +11,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_CULTURE_1_CITY_TILE_FOUNDING_HELP</Tag>
 		<English>All city founding starts with the main city tile only. A small amount of generated Culture is required to acquire the adjacent tiles, after which Culture progresses normally. Scaled for Game Speeds.[NEWLINE]This option will partially override "Minimum City Borders"; if MCB is also enabled, founded cities will not immediately have all adjacent 8 tiles, but nor will they be lost when acquired.</English>
+		<French>Toute fondation de ville commence uniquement avec la case principale de la ville. Une petite quantité de Culture générée est nécessaire pour acquérir les cases adjacentes, après quoi la Culture progresse normalement. Adapté aux vitesses de jeu.[NEWLINE]Cette option remplace partiellement ::Minimum City Borders:: ; si MCB est activé, les villes fondées n'auront pas immédiatement les 8 cases adjacentes, mais elles ne seront pas perdues une fois acquises.</French>
 		<Italian>Tutte le nuove città iniziano solo con la casella della città principale, è necessario generare una piccola quantità di cultura per acquisire le caselle adiacenti, dopodiché la cultura progredisce normalmente (scalato rispetto alla velocità di gioco)[NEWLINE][NEWLINE]Sostituirà parzialmente l'opzione confini minimi della città se anche è abilitata (le città fondate non avranno immediatamente tutte le 8 caselle adiacenti, ma non andranno perse una volta acquisite)</Italian>
 		<Russian>При основании каждого города, ему будет доступна только его главная клетка. Для приобретения соседних требуется небольшое количество сгенерированной культуры (зависит от длительности игры), после чего культура будет развиваться как обычно.[NEWLINE]Эта опция частично отменяет «Минимальные границы городов» - если включить их одновременно, то основанные города не будут обладать сразу всеми соседними восемью клетками, но и не потеряют их после приобретения.</Russian>
 	</TEXT>
@@ -77,12 +78,14 @@
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_ADVANCED_ROUTES</Tag>
 		<English>Advanced - Routes</English>
+		<French>Avancé - Routes</French>
 		<Italian>Percorsi avanzati</Italian>
 		<Russian>Сложная постройка дорог</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_ADVANCED_ROUTES_HELP</Tag>
 		<English>Requires more advanced Technology than the minimum normal route-qualifying techs to construct routes on more difficult terrain or feature plots. Intended to provide a more realistic progression when developing Improvements on challenging terrain throughout the game.</English>
+		<French>Nécessite des technologies plus avancées que celles minimales pour qualifier une route afin de construire des routes sur des terrains ou caractéristiques plus difficiles. Vise à offrir une progression plus réaliste lors du développement d'améliorations sur des terrains difficiles tout au long du jeu.</French>
 		<Italian>Richiede più tecnologia rispetto alle normali tecnologie minime per i percorsi da costruire su terreni o caratteristiche più difficili (pensato per dare una sensazione più realistica ai terreni più difficili in gioco)</Italian>
 		<Russian>Потребуется больше технологий для прокладки маршрутов по более сложным участкам. Предназначено для того, чтобы дать более реалистичное ощущение перемещения по труднопроходимой местности на протяжении игры.</Russian>
 	</TEXT>
@@ -496,6 +499,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_UNIT_GREAT_COMMODORES</Tag>
 		<English>Unit - Great Commodores</English>
+		<French>Unité - Grands Commissaires</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_UNIT_GREAT_COMMANDERS_HELP</Tag>
@@ -510,6 +514,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_UNIT_GREAT_COMMODORES_HELP</Tag>
 		<English>Great Commodores lead their fleets into open combat on the open seas.</English>
+		<French>Les grands commissaires conduisent leurs flottes au combat ouvert en haute mer.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_COMBAT_HEART_OF_WAR</Tag>
@@ -669,6 +674,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_NO_WORLDBUILDER_HELP</Tag>
 		<English>Sets a random admin password so that debug tools cannot be used, and the game assets cannot be modified. Only for single-player games.</English>
+		<French>Attribue un mot de passe administrateur aléatoire afin que les outils de débogage ne puissent pas être utilisés et que les éléments du jeu ne puissent pas être modifiés. Valable uniquement pour les parties solo.</French>
 		<Italian>Impostazione di una password amministratore casuale in modo che il debug non possa essere utilizzato e gli assets del gioco non possano essere modificate (solo per giocatore singolo)</Italian>
 		<Russian>Устанавить случайный пароль администратора, чтобы запретить использование инструментов отладки и изменение ассетов игры. Только для одиночной игры.</Russian>
 	</TEXT>
@@ -1632,7 +1638,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_UNSUPPORTED_ZONE_OF_CONTROL_HELP</Tag>
-		<English>Zone of Control (ZoC) hinders enemy units from walking around manned forts or cities with moats, the effect has a one tile range. A unit that is inside an enemy ZoC cannot move to another plot within the ZoC, but must exit the ZoC before being able to reach other ZoC plots.	Not recommended at the moment as there is a known bug it creates for pathing and some players may find it terribly frustrating with the current forts. The author of this option also believes that it does not represent a fair combat scenario in many cases where you'd prefer to take the hit they threaten and would like to eventually make a form of ZoC that instead generates a free Ranged Assault on the offending unit rather than keeping it from moving at all (as that's the concept behind the effect anyhow.)</English>
+		<English>Zone of Control (ZoC) hinders enemy units from walking around manned forts or cities with moats, the effect has a one tile range. A unit that is inside an enemy ZoC cannot move to another plot within the ZoC, but must exit the ZoC before being able to reach other ZoC plots.Not recommended at the moment as there is a known bug it creates for pathing and some players may find it terribly frustrating with the current forts. The author of this option also believes that it does not represent a fair combat scenario in many cases where you'd prefer to take the hit they threaten and would like to eventually make a form of ZoC that instead generates a free Ranged Assault on the offending unit rather than keeping it from moving at all (as that's the concept behind the effect anyhow.)</English>
 		<French>La zone de contrôle (ZoC) empêche les unités ennemies de marcher autour des forts habités ou des villes avec des douves, l'effet a une portée d'une case. Une unité qui se trouve à l'intérieur d'un ZoC ennemi ne peut pas se déplacer vers une autre parcelle dans le ZoC, mais doit quitter le ZoC avant de pouvoir atteindre d'autres parcelles ZoC. Non recommandé pour le moment car il existe un bug connu qu'il crée pour calcul des chemins et certains joueurs peuvent le trouver terriblement frustrant avec les forts actuels. L'auteur de cette option estime également que cela ne représente pas un scénario de combat équitable dans de nombreux cas où vous préféreriez prendre le coup qu'ils menacent et souhaitez éventuellement créer une forme de ZoC qui génère à la place un assaut à distance gratuit contre le délinquant. l'unité plutôt que de l'empêcher de bouger (comme c'est le concept derrière l'effet de toute façon.)</French>
 		<Russian>Зона контроля (ЗоК) будет мешать вражеским единицам ходить около фортов с гарнизоном или городов со рвами. Данный эффект действует в радиусе одной клетки. Подразделение, оказавшееся внутри вражеской ЗоК, не сможет перейти на другую клетку в пределах ЗоК, но будет обязано выйти из нее, прежде чем сможет попасть на другие клетки ЗоК. Пока что данную опцию включать не рекомендуется, так как она создает ошибку в прокладывании путей, ужасно раздражающую некоторых игроков при текущих фортах. Автор этой опции также считает, что она не располагает к честному бою во многих случаях, когда предпочтительнее принять удар и создать некую зону контроля, открывающую свободную дальнюю атаку по атакующей единице, вместо того, чтобы удерживать ее от движения вообще (поскольку именно такая концепция лежит в основе данного эффекта).</Russian>
 		<Italian>Le zone di controllo impediscono alle unità nemiche di aggirare forti presidiati o città con fossati, l'effetto ha un raggio di una casella[NEWLINE][NEWLINE]Un'unità che si trova all'interno di una zona di controllo nemica non può spostarsi su un'altra casella all'interno della zona di controllo, ma deve uscire dalla zona di controllo prima di poter raggiungere altre caselle della zona di controllo[NEWLINE][NEWLINE]Non raccomandato al momento in quanto c'è un bug e alcuni giocatori potrebbero trovarlo terribilmente frustrante con i forti attuali, l'autore di questa opzione ritiene inoltre che non rappresenti uno scenario di combattimento equo in molti casi in cui preferiresti subire il colpo e vorresti eventualmente creare una forma di zona di controllo che invece genera un assalto a distanza gratuito sull'offensore unità nemica piuttosto che impedirle di muoversi (poiché questo è comunque il concetto alla base dell'effetto)</Italian>
@@ -1640,52 +1646,61 @@
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_EXP_ALWAYS_RAZE_CITIES</Tag>
 		<English>Expansion - Always Raze Cities</English>
+		<French>Expansion - Toujours raser les villes</French>
 		<Italian>Radi sempre al suolo le città</Italian>
 		<Russian>Города всегда уничтожаются</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_EXP_ALWAYS_RAZE_CITIES_HELP</Tag>
 		<English>Cities will be auto-razed when they would normally change owner.[NEWLINE]Exceptions are made for the Barbarian Civ option and Revolution option, city ownership change can occur from these options. Cities won't be auto-razed when Barbs conquer a city because of this option since there's an option called "Barbarian Always Raze".</English>
+		<French>Les villes seront automatiquement rasées lorsqu'elles changent normalement de propriétaire.[NEWLINE]Des exceptions existent pour l'option Civilisation Barbare et Révolution, où le changement de propriété peut se produire. Les villes ne seront pas automatiquement rasées si des barbares les conquièrent, car il existe une option appelée ::Barbarian Always Raze::.</French>
 		<Italian>Le città verranno rase al suolo automaticamente quando normalmente cambierebbero proprietario (esistono eccezioni se le opzioni civiltà barbare e rivoluzioni sono attivate può verificarsi un cambio di proprietà della città)[NEWLINE][NEWLINE]Le città non verranno rase al suolo automaticamente quando i barbari conquistano una città a causa di questa opzione poiché esiste un'opzione chiamata i barbari radono sempre al suolo</Italian>
 		<Russian>Города будут автоматически разрушаться тогда, когда в обычной ситуации, могли бы поменять владельца.[NEWLINE]Однако, смена владельца может происходить при включенных опциях «Цивилизации варваров» и/или «Революции», а также города не будут автоматически уничтожены при захвате варварами без активации «Варвары-разрушители».</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_CULTURE_EQUILIBRIUM</Tag>
 		<English>Culture - Equilibrium</English>
+		<French>Culture - Équilibre</French>
 		<Italian>Equilibrio culturale</Italian>
 		<Russian>Культурное равновесие</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_CULTURE_EQUILIBRIUM_HELP</Tag>
 		<English>Culture decays on all tiles, not just unowned. This means Culture wars are dependent on the last ~100 turns of Culture output (adjusted for game speed) rather than all Culture ever produced by a city. Tiles that lose Cultural input lose control via decay instead of immediately.</English>
+		<French>La Culture décroît sur toutes les cases, pas seulement celles non possédées. Cela signifie que les guerres culturelles dépendent des ~100 derniers tours de production culturelle (ajustés selon la vitesse du jeu) plutôt que de toute la Culture produite par la ville. Les cases qui perdent l'influence culturelle la perdent progressivement par décroissance, et non immédiatement.</French>
 		<Italian>La cultura decade su tutte le caselle, non solo su quelle senza possesso (ciò significa che le guerre culturali dipendono dagli ultimi circa 100 turni di produzione culturale adattati alla velocità di gioco piuttosto che da tutta la cultura mai prodotta da una città e che le caselle che perdono l'input culturale perdono il controllo tramite il decadimento invece che immediatamente)</Italian>
 		<Russian>Культура будет исчезать со всех клеток, а не только бесхозных. Это означает, что культурные войны зависят от примерно сотни последних ходов (с поправкой на длительность игры) создания культуры, а не от всей культуры, когда-либо произведенной городом. Клетки, лишившиеся вливания культуры, будут уходить из под контроля постепенно, а не моментально.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_EXP_STRICT_VICINITY</Tag>
 		<English>Expansion - Strict Vicinity</English>
+		<French>Expansion - Proximité stricte</French>
 		<Italian>Stretta vicinanza</Italian>
 		<Russian>Затрудненное получение</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_EXP_STRICT_VICINITY_HELP</Tag>
 		<English>Buildings and Wonders that require a terrain type, feature, or improvement in city vicinity also require that tile to be Culturally owned instead of being in neutral terrain. Works best when combined with the Culture options of 1 Tile Start and/or Realistic Spread.</English>
+		<French>Les bâtiments et merveilles nécessitant un type de terrain, caractéristique ou amélioration dans la proximité de la ville requièrent également que cette case soit culturellement possédée, et non simplement neutre. Fonctionne mieux combiné avec les options Culture 1 case de départ et/ou Propagation réaliste.</French>
 		<Italian>Gli edifici e le meraviglie che richiedono un tipo di terreno, una caratteristica o un miglioramento nelle vicinanze della città richiedono anche che quella casella sia di proprietà culturale invece che su un terreno neutrale (funziona meglio se combinato con le opzioni le città iniziano con una sola casella e/o diffusione culturale realistica)</Italian>
 		<Russian>Зданиям и чудесам, которым необходимы определенные типы местности, особенности ландшафта и/или надстройки в окрестностях города, также потребуется чтобы нужные клетки были под контролем вашей культуры, а не находились на нейтральной территории. Лучше всего работает в сочетании с опциями «Города появляются с одной клеткой» и/или «Правдободобное распространение культуры».</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_UNSUPPORTED_MULTIMAPS_HELP</Tag>
 		<English>Enables multiple maps for testing.</English>
+		<French>Active plusieurs cartes pour les tests.</French>
 		<Russian>Включить несколько карт для тестирования.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_REALISTIC_BUILDING_COST</Tag>
 		<English>Advanced - Realistic building cost</English>
+		<French>Avancé - Coût réaliste des bâtiments</French>
 		<Russian>Правдоподобные затраты на строительство</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_REALISTIC_BUILDING_COST_HELP</Tag>
 		<English>Changes building cost values to more closely represent their size complexity and material cost.</English>
+		<French>Modifie les coûts des bâtiments pour mieux refléter leur taille, complexité et coût en matériaux.</French>
 		<Russian>Изменить расходы на постройку зданий, чтобы более точно отразить комплексность их конструкции и стоимость материалов.</Russian>
 	</TEXT>
 </Civ4GameText>
