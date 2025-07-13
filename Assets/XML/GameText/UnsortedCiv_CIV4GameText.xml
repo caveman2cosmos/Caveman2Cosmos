@@ -1807,7 +1807,11 @@
 	<TEXT>
 		<Tag>TXT_KEY_CIVILIZATION_ABORIGINES_ADJECTIVE</Tag>
 		<English>Aboriginal</English>
-		<French>Aborigène</French>
+		<French>
+			<Text>aborigène:aborigène:aborigènes:aborigènes</Text>
+			<Gender>Male:Female:Male:Female</Gender>
+			<Plural>0:0:1:1</Plural>
+		</French>
 		<German>aboriginisch</German>
 		<Italian>
 			<Text>Aborigeno:Aborigena:Aborigeni:Aborigene</Text>
@@ -1844,7 +1848,11 @@
 	<TEXT>
 		<Tag>TXT_KEY_CIVILIZATION_BRAZIL_ADJECTIVE</Tag>
 		<English>Brazilian</English>
-		<French>Brésilien</French>
+		<French>
+			<Text>brésilien:brésilienne:brésiliens:brésiliennes</Text>
+			<Gender>Male:Female:Male:Female</Gender>
+			<Plural>0:0:1:1</Plural>
+		</French>
 		<Italian>
 			<Text>Brasiliano:Brasiliana:Brasiliani:Brasiliane</Text>
 			<Gender>Male:Female:Male:Female</Gender>
@@ -1878,7 +1886,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_CIVILIZATION_ISRAEL_ADJECTIVE</Tag>
 		<English>Israeli</English>
-		<French>Israelite</French>
+		<French>Israélite</French>
 		<German>Israelischer</German>
 		<Italian>
 			<Text>Israeliano:Israeliana:Israeliani:Israeliane</Text>
@@ -1962,7 +1970,11 @@
 	<TEXT>
 		<Tag>TXT_KEY_CIVILIZATION_NEANDERTHAL_ADJECTIVE</Tag>
 		<English>Neanderthal</English>
-		<French>Néanderthal</French>
+		<French>
+			<Text>néanderthal:néanderthale:néanderthals:néanderthales</Text>
+			<Gender>Male:Female:Male:Female</Gender>
+			<Plural>0:0:1:1</Plural>
+		</French>
 		<Spanish>Neandertal</Spanish>
 		<Polish>Neandertalski</Polish>
 		<Russian>Неандертальск.</Russian>

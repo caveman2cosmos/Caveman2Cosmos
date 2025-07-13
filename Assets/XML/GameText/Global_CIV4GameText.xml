@@ -15467,7 +15467,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_MISC_HIRED_WAR_ALLY</Tag>
 		<English>The evil %s1_CivAdj have convinced the treacherous %s2_CivAdj to declare war on us!</English>
-		<French>Les sournois %s1_CivAdj ont convaincu les traîtres %s2_CivAdj de nous déclarer la Guerre!</French>
+		<French>Les sournois %s1:3_CivAdj ont convaincu les traîtres %s2_CivAdj de nous déclarer la Guerre!</French>
 		<German>Die bösartigen %s1_CivAdj haben die hinterhältigen %s2_CivAdj davon überzeugt, uns den Krieg zu erklären!</German>
 		<Italian>I malvagi %s1_CivAdj hanno convinto i traditori %s2_CivAdj a dichiararci guerra!</Italian>
 		<Spanish>¡Los malvados %s1:3_CivAdj han convencido a los traicioneros %s2:3_CivAdj para declararnos la guerra!</Spanish>
@@ -16483,7 +16483,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_MISC_REVOLT_IN_CITY</Tag>
 		<English>A %s1_CivAdj revolt has taken place in %s2_CityName!</English>
-		<French>Les %s1_CivAdj se révoltent à %s2_CityName !</French>
+		<French>Les %s1:3_CivAdj se révoltent à %s2_CityName !</French>
 		<German>In %s2_CityName hat eine %s1:3_CivAdj Revolte stattgefunden!</German>
 		<Italian>Una rivolta %s1_CivAdj è scoppiata a %s2_CityName!</Italian>
 		<Spanish>Ha tenido lugar una rebelión %s1:2_CivAdj en %s2_CityName.</Spanish>
@@ -16644,7 +16644,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_MISC_SPY_CAUGHT_AND_KILLED</Tag>
 		<English>The %s1_CivAdj %s2_UnitName responsible was caught and "liquidated"!</English>
-		<French>[NUM2:L':L':Les:Les] %s2_UnitName des %s1_CivAdj a été démasqué et exécuté !</French>
+		<French>[NUM2:L':L':Les:Les] %s2_UnitName des %s1:3_CivAdj a été démasqué et exécuté !</French>
 		<German>Euer Sicherheitspersonal hat [NUM2:einen:eine:ein:einige:einige:einige] %[s1_CivAdj][NUM2:en:e:es:e:e:e] %s2:4_UnitName unschädlich gemacht!</German>
 		<Italian>L'unità %s2_UnitName %s1_CivAdj responsabile è stata catturata e "liquidata"!</Italian>
 		<Spanish>¡Han atrapado y liquidado [NUM2:al:a la:a los:a las] %s2_UnitName [NUM2:responsable:responsable:responsables:responsables] de la civilización %s1:2_CivAdj!</Spanish>
@@ -16684,7 +16684,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_MISC_STEALTH_ATTACK</Tag>
 		<English>A %s1_PlyrName %s2_UnitName has taken your %s3_UnitName by surprise!</English>
-		<French>[NUM2:un:une:des:des] %s2_UnitName de %s1_PlyrName [NUM2:a:a:ont:ont] pris [NUM3:votre:votre:vos:vos] %s3_UnitName par surprise !</French>
+		<French>[NUM2:un:une:des:des] %s2_UnitName [NUM1:de:de:des:des] %s1_PlyrName [NUM2:a:a:ont:ont] pris [NUM3:votre:votre:vos:vos] %s3_UnitName par surprise !</French>
 		<German>[NUM2:Ein:Eine:Ein:Mehrere:Mehrere:Mehrere] %s2_UnitName (%s1_PlyrName) [NUM2:hat:haben] [NUM3:Euren:Eure:Euer:Eure:Eure:Eure] %s3_UnitName überrascht!</German>
 		<Russian>%s2_UnitName игрока %s1_PlyrName подло атаковал в спину вашего %s3_UnitName!</Russian>
 	</TEXT>
@@ -16709,13 +16709,13 @@
 	<TEXT>
 		<Tag>TXT_KEY_MISC_STEALTH_LIE_IN_WAIT</Tag>
 		<English>The %s1_PlyrName %s2_UnitName has come to realize that your %s3_UnitName saw the attack coming and was much more prepared than anticipated!</English>
-		<French>[NUM2:Le:La:Les:Les] %s2_UnitName de %s1_PlyrName s'est rendu compte que [NUM3:votre:votre:vos:vos] %s3_UnitName a vu leur attaque venir, et était mieux préparés que prévu !</French>
+		<French>[NUM2:Le:La:Les:Les] %s2_UnitName de %s1_PlyrName [NUM2:s'est:s'est:se sont:se sont] rendu compte que [NUM3:le:la:les:les] %s3_UnitName [NUM3:a:a:ont:ont] vu [NUM2:son:son:leur:leur] attaque venir, et étai[NUM3:t:t:ent:ent] mieux prépar[NUM3:é:ée:és:ées] que prévu !</French>
 		<Russian>%s2_UnitName игрока %s1_PlyrName осознал, что ваш %s3_UnitName разгадал его коварный замысел и подготовился к бою гораздо лучше, чем ожидал!</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISC_STEALTH_LIE_IN_WAIT_OWNER</Tag>
 		<English>Your clever %s1_UnitName was prepared for the attack by a %s2_PlyrName %s3_UnitName with some tricks up his own sleeve!</English>
-		<French>[NUM1:Votre:Votre:Vos:Vos] %s1_UnitName s'est préparé à l'attaque lancée par [NUM3:le:la:les:les] %s3_UnitName de %s2_PlyrName !</French>
+		<French>[NUM1:Votre:Votre:Vos:Vos] %s1_UnitName [NUM1:s'est:s'est:se sont:se sont] prépar[NUM1:é:ée:és:ées] à l'attaque lancée par [NUM3:le:la:les:les] %s3_UnitName de %s2_PlyrName !</French>
 		<Russian>Ваш находчивый %s1_UnitName встетил во всеоружии %s3_UnitName игрока %s2_PlyrName с несколькими козырями в рукаве!</Russian>
 	</TEXT>
 	<TEXT>
@@ -16746,7 +16746,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_MISC_STUN_SUFFERED</Tag>
 		<English>In battle with %s1_EnemyUnit, your %s2_YourUnit was stunned for %d3_StunVolume round(s).</English>
-		<French>En combattant l'unité %s1_EnemyUnit, votre %s2_YourUnit a été étourdie durant %d3_StunVolume tour(s).</French>
+		<French>En combattant l'unité %s1_EnemyUnit, [NUM2:votre:votre:vos:vos] %s2_YourUnit a été étourd[NUM2:i:ie:is:ies] durant %d3_StunVolume tour(s).</French>
 		<Italian>Durante la battaglia contro l'unità %s1_EnemyUnit, la tua unità %s2_YourUnit è stata messa fuori combattimento per %d3_StunVolume turni.</Italian>
 		<Polish>W bitwie przeciwko jednostce: %s1_EnemyUnit, Twoja jednostka: %s2_YourUnit jest oszo&#179;omiona na: %d3_StunVolume rund(y).</Polish>
 	</TEXT>

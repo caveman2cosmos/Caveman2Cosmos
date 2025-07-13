@@ -287,7 +287,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_MISSION_CLAIM_TERRITORY_CIV_SUCCESS</Tag>
 		<English>%s1_civ_adjective units occupied a part of your territory!</English>
-		<French>Des unités %s1_civ_adjective occupent une partie de votre Territoire!</French>
+		<French>Des unités %s1:3_civ_adjective occupent une partie de votre Territoire!</French>
 		<German>%s1_civ_adjective Einheiten besetzten einen Teil Deines Territoriums!</German>
 		<Italian>Delle unità %s1_civ_adjective hanno occupato una parte del tuo territorio!</Italian>
 		<Spanish>Unidades %s1:4_civ_adjective han ocupado parte de tu territorio.</Spanish>
@@ -297,7 +297,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_MISSION_CLAIM_TERRITORY_CIV_SUCCESS_NEAR</Tag>
 		<English>%s1_civ_adjective units occupied a part of your territory near %s2_city</English>
-		<French>Des Unités %s1_civ_adjective occupent une partie de votre territoire près de %s2_city</French>
+		<French>Des Unités %s1:3_civ_adjective occupent une partie de votre territoire près de %s2_city</French>
 		<German>%s1_civ_adjective Einheiten besetzten einen Teil Deines Territoriums in der Nähe von %s2_city</German>
 		<Italian>Delle unità %s1_civ_adjective hanno occupato una parte del tuo territorio vicino alla città di %s2_city</Italian>
 		<Spanish>Unidades %s1:4_civ_adjective han ocupado parte de tu territorio cercano a %s2_city.</Spanish>

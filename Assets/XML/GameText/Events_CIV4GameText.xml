@@ -52,7 +52,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_ADD_ONE_POPULATION_WORLD</Tag>
 		<English>A wandering group of people has demanded to join %s2_civ_adjective.</English>
-		<French>Un groupe de nomades a demandé à rejoindre la civilisation %s2_civ_adjective.</French>
+		<French>Un groupe de nomades a demandé à rejoindre la ville de %s2_civ_adjective.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_ADD_ONE_POPULATION</Tag>
@@ -112,112 +112,112 @@
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_SQUASH</Tag>
 		<English>A %s1_civ_adjective workers have found a new source of food - squashes.</English>
-		<French>Des ouvriers %s1_civ_adjective ont découvert une nouvelle source de nourriture : des courges.</French>
+		<French>Des ouvriers %s1:3_civ_adjective ont découvert une nouvelle source de nourriture : des courges.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_MELONS</Tag>
 		<English>A %s1_civ_adjective workers have found a new source of food - melons.</English>
-		<French>Des ouvriers %s1_civ_adjective ont découvert une nouvelle source de nourriture : des melons.</French>
+		<French>Des ouvriers %s1:3_civ_adjective ont découvert une nouvelle source de nourriture : des melons.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_PUMPKIN</Tag>
 		<English>A %s1_civ_adjective workers have found a new source of food - pumpkins.</English>
-		<French>Des ouvriers %s1_civ_adjective ont découvert une nouvelle source de nourriture : des citrouilles.</French>
+		<French>Des ouvriers %s1:3_civ_adjective ont découvert une nouvelle source de nourriture : des citrouilles.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_LEMONS</Tag>
 		<English>A %s1_civ_adjective workers have found a new source of food - lemons.</English>
-		<French>Des ouvriers %s1_civ_adjective ont découvert une nouvelle source de nourriture : des citrons.</French>
+		<French>Des ouvriers %s1:3_civ_adjective ont découvert une nouvelle source de nourriture : des citrons.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_ALMONDS</Tag>
 		<English>A %s1_civ_adjective workers have found a new source of food - almonds.</English>
-		<French>Des ouvriers %s1_civ_adjective ont découvert une nouvelle source de nourriture : des amandes.</French>
+		<French>Des ouvriers %s1:3_civ_adjective ont découvert une nouvelle source de nourriture : des amandes.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_PISTACHIO</Tag>
 		<English>A %s1_civ_adjective workers have found a new source of food - pistachios.</English>
-		<French>Des ouvriers %s1_civ_adjective ont découvert une nouvelle source de nourriture : des pistaches.</French>
+		<French>Des ouvriers %s1:3_civ_adjective ont découvert une nouvelle source de nourriture : des pistaches.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_COCONUT</Tag>
 		<English>A %s1_civ_adjective workers have found a new source of food - coconuts.</English>
-		<French>Des ouvriers %s1_civ_adjective ont découvert une nouvelle source de nourriture : des noix de coco.</French>
+		<French>Des ouvriers %s1:3_civ_adjective ont découvert une nouvelle source de nourriture : des noix de coco.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_GUAVA</Tag>
 		<English>A %s1_civ_adjective workers have found a new source of food - guavas.</English>
-		<French>Des ouvriers %s1_civ_adjective ont découvert une nouvelle source de nourriture : des goyaves.</French>
+		<French>Des ouvriers %s1:3_civ_adjective ont découvert une nouvelle source de nourriture : des goyaves.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_PAPAYA</Tag>
 		<English>A %s1_civ_adjective workers have found a new source of food - papayas.</English>
-		<French>Des ouvriers %s1_civ_adjective ont découvert une nouvelle source de nourriture : des papayes.</French>
+		<French>Des ouvriers %s1:3_civ_adjective ont découvert une nouvelle source de nourriture : des papayes.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_POMEGRANATE</Tag>
 		<English>A %s1_civ_adjective workers have found a new source of food - pomegranates.</English>
-		<French>Des ouvriers %s1_civ_adjective ont découvert une nouvelle source de nourriture : des grenades.</French>
+		<French>Des ouvriers %s1:3_civ_adjective ont découvert une nouvelle source de nourriture : des grenades.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_MANGO</Tag>
 		<English>A %s1_civ_adjective workers have found a new source of food - mangos.</English>
-		<French>Des ouvriers %s1_civ_adjective ont découvert une nouvelle source de nourriture : des mangues.</French>
+		<French>Des ouvriers %s1:3_civ_adjective ont découvert une nouvelle source de nourriture : des mangues.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_BANANA</Tag>
 		<English>A %s1_civ_adjective workers have found a new source of food - bananas.</English>
-		<French>Des ouvriers %s1_civ_adjective ont découvert une nouvelle source de nourriture : des bananes.</French>
+		<French>Des ouvriers %s1:3_civ_adjective ont découvert une nouvelle source de nourriture : des bananes.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_POTATOES</Tag>
 		<English>A %s1_civ_adjective workers have found a new source of food - potatoes.</English>
-		<French>Des ouvriers %s1_civ_adjective ont découvert une nouvelle source de nourriture : des pommes de terre.</French>
+		<French>Des ouvriers %s1:3_civ_adjective ont découvert une nouvelle source de nourriture : des pommes de terre.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_BARLEY</Tag>
 		<English>A %s1_civ_adjective workers have found a new source of food - barley.</English>
-		<French>Des ouvriers %s1_civ_adjective ont découvert une nouvelle source de nourriture : de l'orge.</French>
+		<French>Des ouvriers %s1:3_civ_adjective ont découvert une nouvelle source de nourriture : de l'orge.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_RICE</Tag>
 		<English>A %s1_civ_adjective workers have found a new source of food - rice.</English>
-		<French>Des ouvriers %s1_civ_adjective ont découvert une nouvelle source de nourriture : du riz.</French>
+		<French>Des ouvriers %s1:3_civ_adjective ont découvert une nouvelle source de nourriture : du riz.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_WHEAT</Tag>
 		<English>A %s1_civ_adjective workers have found a new source of food - wheat.</English>
-		<French>Des ouvriers %s1_civ_adjective ont découvert une nouvelle source de nourriture : du blé.</French>
+		<French>Des ouvriers %s1:3_civ_adjective ont découvert une nouvelle source de nourriture : du blé.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_CORN</Tag>
 		<English>A %s1_civ_adjective workers have found a new source of food - corn.</English>
-		<French>Des ouvriers %s1_civ_adjective ont découvert une nouvelle source de nourriture : du maïs.</French>
+		<French>Des ouvriers %s1:3_civ_adjective ont découvert une nouvelle source de nourriture : du maïs.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_OLIVES</Tag>
 		<English>A %s1_civ_adjective workers have found a new source of food - olives.</English>
-		<French>Des ouvriers %s1_civ_adjective ont découvert une nouvelle source de nourriture : des olives.</French>
+		<French>Des ouvriers %s1:3_civ_adjective ont découvert une nouvelle source de nourriture : des olives.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_FIG</Tag>
 		<English>A %s1_civ_adjective workers have found a new source of food - figs.</English>
-		<French>Des ouvriers %s1_civ_adjective ont découvert une nouvelle source de nourriture : des figues.</French>
+		<French>Des ouvriers %s1:3_civ_adjective ont découvert une nouvelle source de nourriture : des figues.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_DATES</Tag>
 		<English>A %s1_civ_adjective workers have found a new source of food - dates.</English>
-		<French>Des ouvriers %s1_civ_adjective ont découvert une nouvelle source de nourriture : des dattes.</French>
+		<French>Des ouvriers %s1:3_civ_adjective ont découvert une nouvelle source de nourriture : des dattes.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_PEYOTE</Tag>
 		<English>A %s1_civ_adjective workers have found a new source of food - peyote.</English>
-		<French>Des ouvriers %s1_civ_adjective ont découvert une nouvelle source de nourriture : du peyotl.</French>
+		<French>Des ouvriers %s1:3_civ_adjective ont découvert une nouvelle source de nourriture : du peyotl.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_PRICLY_PEAR</Tag>
 		<English>A %s1_civ_adjective workers have found a new source of food - prickly pears.</English>
-		<French>Des ouvriers %s1_civ_adjective ont découvert une nouvelle source de nourriture : des figues de barbarie.</French>
+		<French>Des ouvriers %s1:3_civ_adjective ont découvert une nouvelle source de nourriture : des figues de barbarie.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_APPLESEED</Tag>
@@ -230,7 +230,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_ARTIFICIAL_ELEMENT_1</Tag>
 		<English>%s1_civ_adjective scientists in %s2_city have discovered the first artificial element with their accelerator!</English>
-		<French>Les scientifique %s1:3_civ_adjective de %s2_city ont découvert le premier élément artificiel avec leur accélérateur!</French>
+		<French>Les scientifiques %s1:3_civ_adjective de %s2_city ont découvert le premier élément artificiel avec leur accélérateur!</French>
 		<German>Die %s1_civ_adjective Wissenschaftler in %s2_city haben mit ihrem Teilchenbeschleuniger das erste künstliche Element erschaffen!</German>
 		<Italian>Gli scienziati %s1:3_civ_adjective di %s2_city hanno scoperto il primo elemento artificiale all'interno del loro acceleratore!</Italian>
 		<Polish>Naukowcy %s1_civ_adjective w mie&#156;cie %s2_city odkryli pierwszy sztuczny pierwiastek w ich akceleratorze!</Polish>
@@ -612,7 +612,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_PURE_COAL</Tag>
 		<English>%s1_civ_adjective merchants are increasing prices on tons of their pure coal, which is the cleanest coal in the market.</English>
-		<French>Les marchands %s1_civ_adjective augmentent les prix des tonnes de leur charbon pur, qui est le charbon le plus propre du marché.</French>
+		<French>Les marchands %s1:3_civ_adjective augmentent les prix des tonnes de leur charbon pur, qui est le charbon le plus propre du marché.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_COASTAL_REEF</Tag>
@@ -987,12 +987,12 @@
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_MASSIVE_FOREST_WILDFIRE</Tag>
 		<English>Due to recent droughts a massive wildfire has started near the %s1_civ_adjective city of %s2_city.</English>
-		<French>En raison des récentes sécheresses, un incendie de forêt massif a commencé près de la ville %s1_civ_adjective de %s2_city.</French>
+		<French>En raison des récentes sécheresses, un incendie de forêt massif a commencé près de la ville %s1:2_civ_adjective de %s2_city.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_FOREST_NEW_1</Tag>
 		<English>Forest has started growing again near the %s1_civ_adjective city of %s2_city.</English>
-		<French>La forêt a recommencé à pousser près de la ville %s1_civ_adjective de %s2_city.</French>
+		<French>La forêt a recommencé à pousser près de la ville %s1:2_civ_adjective de %s2_city.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_FOREST_FIRE</Tag>
@@ -1301,7 +1301,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_COMMUNITY_BOND</Tag>
 		<English>A %s1_civ_adjective community discussion in the city of %s2_city has brought their people closer.</English>
-		<French>Une discussion communautaire %s1_civ_adjective dans la ville de %s2_city a rapproché leur peuple.</French>
+		<French>Une discussion communautaire %s1:2_civ_adjective dans la ville de %s2_city a rapproché son peuple.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_HARBORMASTER_DONE</Tag>
@@ -1336,7 +1336,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_HARRY_POTTER</Tag>
 		<English>Religious leaders in the %s1_civ_adjective empire have lobbied against the newest bestselling 'Harry Potter' novel.</English>
-		<French>Les chefs religieux de %s1_civ_adjective empire font pression contre le dernier BestSeller 'Harry Potter'.</French>
+		<French>Les chefs religieux de l'empire %s1_civ_adjective font pression contre le dernier BestSeller 'Harry Potter'.</French>
 		<Italian>I leader religiosi dell'Impero %s1_civ_adjective hanno fatto pressioni contro il recente romanzo bestseller "Harry Potter".</Italian>
 		<Polish>Przyw&#243;dcy religijni w imperium %s1_civ_adjective lobbuj&#185; rz&#185;d do sabotowania wydania serii ksi&#185;&#191;ek 'Harry Potter'.</Polish>
 		<Russian>Религиозные лидеры в державе %s1_civ_adjective пролоббировали новейший бестселлерный роман «Гарри Поттер».</Russian>
@@ -1402,7 +1402,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_HIGH_WARLORD</Tag>
 		<English>A warlord from %s2_city has made a generous contribution to his community.</English>
-		<French>Un seigneur de guerre de la ville : %s2_city a fait une généreuse contribution à sa communauté.</French>
+		<French>Un seigneur de guerre de la ville de '%s2_city' a fait une généreuse contribution à sa communauté.</French>
 		<German>Ein Kriegsherr aus %s2_city hat eine großzügige Spende an seine Gemeinde geleistet.</German>
 		<Italian>Un signore della guerra di %s2_city ha versato un generoso contributo alla propria comunità.</Italian>
 		<Spanish>Un caudillo de %s2_city ha realizado una generosa contribución a su comunidad.</Spanish>
@@ -1426,177 +1426,177 @@
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_GOLD_MINE</Tag>
 		<English>%s1_civ_adjective miners have struck it rich with the discovery of new veins of Gold ore.</English>
-		<French>Les mineurs %s1_civ_adjective ont fait fortune en découvrant de nouveaux filons de minerai d'or.</French>
+		<French>Les mineurs %s1:3_civ_adjective ont fait fortune en découvrant de nouveaux filons de minerai d'or.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_PLATINUM</Tag>
 		<English>%s1_civ_adjective miners have struck it rich with the discovery of new veins of Platinum ore.</English>
-		<French>Les mineurs %s1_civ_adjective ont fait fortune en découvrant de nouveaux filons de minerai de platine.</French>
+		<French>Les mineurs %s1:3_civ_adjective ont fait fortune en découvrant de nouveaux filons de minerai de platine.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_LEAD</Tag>
 		<English>%s1_civ_adjective miners have found lead ore.</English>
-		<French>Les mineurs %s1_civ_adjective ont trouvé du minerai de plomb.</French>
+		<French>Les mineurs %s1:3_civ_adjective ont trouvé du minerai de plomb.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_TITANIUM</Tag>
 		<English>%s1_civ_adjective miners have found titanium ore.</English>
-		<French>Les mineurs %s1_civ_adjective ont trouvé du minerai de titane.</French>
+		<French>Les mineurs %s1:3_civ_adjective ont trouvé du minerai de titane.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_TURQUOISE</Tag>
 		<English>%s1_civ_adjective miners have found turquoise ore.</English>
-		<French>Les mineurs %s1_civ_adjective ont trouvé du minerai de turquoise.</French>
+		<French>Les mineurs %s1:3_civ_adjective ont trouvé du minerai de turquoise.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_SULPHUR</Tag>
 		<English>%s1_civ_adjective miners have found sulphur ore.</English>
-		<French>Les mineurs %s1_civ_adjective ont trouvé du minerai de soufre.</French>
+		<French>Les mineurs %s1:3_civ_adjective ont trouvé du minerai de soufre.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_TEA</Tag>
 		<English>%s1_civ_adjective scouts have found tea.</English>
-		<French>Les éclaireurs %s1_civ_adjective ont trouvé du thé.</French>
+		<French>Les éclaireurs %s1:3_civ_adjective ont trouvé du thé.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_VANILLA</Tag>
 		<English>%s1_civ_adjective workers have found vanilla.</English>
-		<French>Les ouvriers %s1_civ_adjective ont trouvé de la vanille.</French>
+		<French>Les ouvriers %s1:3_civ_adjective ont trouvé de la vanille.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_COFFEE</Tag>
 		<English>%s1_civ_adjective workers have found coffee.</English>
-		<French>Les ouvriers %s1_civ_adjective ont trouvé du café.</French>
+		<French>Les ouvriers %s1:3_civ_adjective ont trouvé du café.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_KAVA</Tag>
 		<English>%s1_civ_adjective workers have found kava.</English>
-		<French>Les ouvriers %s1_civ_adjective ont trouvé du kava.</French>
+		<French>Les ouvriers %s1:3_civ_adjective ont trouvé du kava.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_SUGAR</Tag>
 		<English>%s1_civ_adjective workers have found sugar.</English>
-		<French>Les ouvriers %s1_civ_adjective ont trouvé du sucre.</French>
+		<French>Les ouvriers %s1:3_civ_adjective ont trouvé du sucre.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_COCA</Tag>
 		<English>%s1_civ_adjective workers have found coca.</English>
-		<French>Les ouvriers %s1_civ_adjective ont trouvé de la coca.</French>
+		<French>Les ouvriers %s1:3_civ_adjective ont trouvé de la coca.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_TOBACCO</Tag>
 		<English>%s1_civ_adjective workers have found tobacco.</English>
-		<French>Les ouvriers %s1_civ_adjective ont trouvé du tabac.</French>
+		<French>Les ouvriers %s1:3_civ_adjective ont trouvé du tabac.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_COTTON</Tag>
 		<English>%s1_civ_adjective workers have found cotton.</English>
-		<French>Les ouvriers %s1_civ_adjective ont trouvé du coton.</French>
+		<French>Les ouvriers %s1:3_civ_adjective ont trouvé du coton.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_INDIGO</Tag>
 		<English>%s1_civ_adjective workers have found indigo.</English>
-		<French>Les ouvriers %s1_civ_adjective ont trouvé de l'indigo.</French>
+		<French>Les ouvriers %s1:3_civ_adjective ont trouvé de l'indigo.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_FLAX</Tag>
 		<English>%s1_civ_adjective workers have found flax.</English>
-		<French>Les ouvriers %s1_civ_adjective ont trouvé du lin.</French>
+		<French>Les ouvriers %s1:3_civ_adjective ont trouvé du lin.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_HEMP</Tag>
 		<English>%s1_civ_adjective workers have found hemp.</English>
-		<French>Les ouvriers %s1_civ_adjective ont trouvé du chanvre.</French>
+		<French>Les ouvriers %s1:3_civ_adjective ont trouvé du chanvre.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_RUBBER</Tag>
 		<English>%s1_civ_adjective workers have found rubber.</English>
-		<French>Les ouvriers %s1_civ_adjective ont trouvé du caoutchouc.</French>
+		<French>Les ouvriers %s1:3_civ_adjective ont trouvé du caoutchouc.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_OPIUM</Tag>
 		<English>%s1_civ_adjective workers have found opium.</English>
-		<French>Les ouvriers %s1_civ_adjective ont trouvé de l'opium.</French>
+		<French>Les ouvriers %s1:3_civ_adjective ont trouvé de l'opium.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_HENNA</Tag>
 		<English>%s1_civ_adjective workers have found henna.</English>
-		<French>Les ouvriers %s1_civ_adjective ont trouvé du henné.</French>
+		<French>Les ouvriers %s1:3_civ_adjective ont trouvé du henné.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_INCENSE</Tag>
 		<English>%s1_civ_adjective workers have found incense.</English>
-		<French>Les ouvriers %s1_civ_adjective ont trouvé de l'encens.</French>
+		<French>Les ouvriers %s1:3_civ_adjective ont trouvé de l'encens.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_PAPYRUS</Tag>
 		<English>%s1_civ_adjective workers have found papyrus.</English>
-		<French>Les ouvriers %s1_civ_adjective ont trouvé du papyrus.</French>
+		<French>Les ouvriers %s1:3_civ_adjective ont trouvé du papyrus.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_SILK</Tag>
 		<English>%s1_civ_adjective workers have silk bugs.</English>
-		<French>Les ouvriers %s1_civ_adjective ont des vers à soie.</French>
+		<French>Les ouvriers %s1:3_civ_adjective ont des vers à soie.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_STONE</Tag>
 		<English>%s1_civ_adjective workers have found stone.</English>
-		<French>Les ouvriers %s1_civ_adjective ont trouvé de la pierre.</French>
+		<French>Les ouvriers %s1:3_civ_adjective ont trouvé de la pierre.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_COAL</Tag>
 		<English>%s1_civ_adjective miners have found coal.</English>
-		<French>Les mineurs %s1_civ_adjective ont trouvé du charbon.</French>
+		<French>Les mineurs %s1:3_civ_adjective ont trouvé du charbon.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_AMBER</Tag>
 		<English>%s1_civ_adjective miners have found amber.</English>
-		<French>Les mineurs %s1_civ_adjective ont trouvé de l'ambre.</French>
+		<French>Les mineurs %s1:3_civ_adjective ont trouvé de l'ambre.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_BAUXITE</Tag>
 		<English>%s1_civ_adjective miners have found bauxite ore.</English>
-		<French>Les mineurs %s1_civ_adjective ont trouvé du minerai de bauxite.</French>
+		<French>Les mineurs %s1:3_civ_adjective ont trouvé du minerai de bauxite.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_DIAMOND</Tag>
 		<English>%s1_civ_adjective miners have found diamonds.</English>
-		<French>Les mineurs %s1_civ_adjective ont trouvé des diamants.</French>
+		<French>Les mineurs %s1:3_civ_adjective ont trouvé des diamants.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_IRON</Tag>
 		<English>%s1_civ_adjective miners have found iron ore.</English>
-		<French>Les mineurs %s1_civ_adjective ont trouvé du minerai de fer.</French>
+		<French>Les mineurs %s1:3_civ_adjective ont trouvé du minerai de fer.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_MANGANESE</Tag>
 		<English>%s1_civ_adjective miners have found manganese ore.</English>
-		<French>Les mineurs %s1_civ_adjective ont trouvé du minerai de manganèse.</French>
+		<French>Les mineurs %s1:3_civ_adjective ont trouvé du minerai de manganèse.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_RUBIES</Tag>
 		<English>%s1_civ_adjective miners have found rubies.</English>
-		<French>Les mineurs %s1_civ_adjective ont trouvé des rubis.</French>
+		<French>Les mineurs %s1:3_civ_adjective ont trouvé des rubis.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_MARBLE</Tag>
 		<English>%s1_civ_adjective miners have found marble ore.</English>
-		<French>Les mineurs %s1_civ_adjective ont trouvé du minerai de marbre.</French>
+		<French>Les mineurs %s1:3_civ_adjective ont trouvé du minerai de marbre.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_COPPER</Tag>
 		<English>%s1_civ_adjective miners have found copper ore.</English>
-		<French>Les mineurs %s1_civ_adjective ont trouvé du minerai de cuivre.</French>
+		<French>Les mineurs %s1:3_civ_adjective ont trouvé du minerai de cuivre.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_SAPPHIRES</Tag>
 		<English>%s1_civ_adjective miners have struck it rich with the discovery of new sapphires.</English>
-		<French>Les mineurs %s1_civ_adjective ont fait fortune en découvrant de nouveaux saphirs.</French>
+		<French>Les mineurs %s1:3_civ_adjective ont fait fortune en découvrant de nouveaux saphirs.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_URANIUM</Tag>
 		<English>%s1_civ_adjective miners have struck it rich with the discovery of uranium.</English>
-		<French>Les mineurs %s1_civ_adjective ont fait fortune en découvrant de l'uranium.</French>
+		<French>Les mineurs %s1:3_civ_adjective ont fait fortune en découvrant de l'uranium.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_HOLY_MOUNTAIN_DONE</Tag>
@@ -1609,7 +1609,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_HOLY_RITUAL</Tag>
 		<English>%s1_civ_adjective sales of incense are booming.</English>
-		<French>Les ventes d'encens %s1_civ_adjective explosent.</French>
+		<French>Les ventes d'encens %s1:3_civ_adjective explosent.</French>
 		<German>Die %s1:2_civ_adjective Weihrauchverkäufe florieren.</German>
 		<Italian>Le vendite di incenso %s1_civ_adjective stanno aumentando.</Italian>
 		<Spanish>Las ventas %s1:4_civ_adjective de incienso se están disparando.</Spanish>
@@ -1751,7 +1751,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_JADE</Tag>
 		<English>%s1_civ_adjective merchants are now selling jade carvings in small quantities.</English>
-		<French>Des marchands %s1_civ_adjective vendent des petites quantité d'objets en jade.</French>
+		<French>Des marchands %s1:3_civ_adjective vendent des petites quantité d'objets en jade.</French>
 		<German>Von %[s1_civ_adjective]en Händlern werden neuerdings Jadeskulpturen in kleinen Mengen verkauft.</German>
 		<Polish>Kupcy z Imperium %s1_civ_adjective sprzedaj&#185; od niedawna pos&#185;&#191;ki z jadeitu w ma&#179;ych ilo&#156;ciach.</Polish>
 		<Italian>I mercanti %s1:3_civ_adjective stanno vendendo piccole quantità di gioielli di giada.</Italian>
@@ -1778,7 +1778,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_KNOWLEDGE_INHERITANCE_1</Tag>
 		<English>An old shaman from the %s1_civ_adjective tribe has reached an understanding of the changing reality. His new ideas will help their tribe to develop faster.</English>
-		<French>Un vieux shaman de la tribu %s1_civ_adjective a réussi à comprendre la réalité de certains changements. Ses nouvelles idées aident la tribu à se développer plus vite.</French>
+		<French>Un vieux shaman de la tribu %s1:2_civ_adjective a réussi à comprendre la réalité de certains changements. Ses nouvelles idées aident la tribu à se développer plus vite.</French>
 		<Italian>Un vecchio sciamano della tribù %s1:2_civ_adjective ha raggiunto una maggiore comprensione della realtà in cambiamento. Le sue nuove idee aiuteranno la tribù a svilupparsi più velocemente.</Italian>
 		<Polish>Stary szaman z plemienia %s1_civ_adjective zrozumial zmieniajaca sie rzeczywistosc. Jego nowa wiedza przyda sie plemieniu w rozwoju.</Polish>
 		<Russian>Ñòàðûé øàìàí èç ïëåìåíè %s1_civ_adjective äîñòèã ïîíèìàíèÿ ìåíÿþùåéñÿ ðåàëüíîñòè. Åãî íîâûå èäåè è ïîìîæåò åãî ïëåìåíè äëÿ óñêîðåííîãî ðàçâèòèÿ.</Russian>
@@ -1823,7 +1823,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_LESS_DICTATOR</Tag>
 		<English>Concerned citizens in the %s1_civ_adjective empire are requesting for a more representation in their government.</English>
-		<French>Des citoyens concernés de %s1_civ_adjective empire demandent plus de représentativité dans leur gouvernement.</French>
+		<French>Des citoyens concernés de l'Empire %s1_civ_adjective demandent plus de représentativité dans leur gouvernement.</French>
 		<Italian>I consapevoli cittadini dell'Impero %s1_civ_adjective chiedono una maggiore rappresentanza nel loro governo.</Italian>
 		<Polish>Zaniepokojeni obywatele w imperium %s1_civ_adjective domagaj&#185; si&#234; wi&#234;kszej reprezentacji ich w rz&#185;dzie.</Polish>
 		<Russian>Неравнодушные граждане в державе %s1_civ_adjective требуют большего народного представительства в своем правительстве.</Russian>
@@ -1832,7 +1832,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_LEVITTOWN</Tag>
 		<English>Workers are buying up cheap suburban housing recently built near the %s1_civ_adjective city of %s2_city.</English>
-		<French>De nombreux citoyens ont été séduits par un projet de lotissement urbain en banlieue près de la ville %s1_civ_adjective de %s2_city.</French>
+		<French>De nombreux citoyens ont été séduits par un projet de lotissement urbain en banlieue près de la ville %s1:2_civ_adjective de %s2_city.</French>
 		<German>Arbeiter kaufen günstige Vorstadthäuser, die kürzlich in der Nähe der %s1_civ_adjective city Stadt %s2_city errichtet wurden.</German>
 		<Italian>I lavoratori stanno acquistando abitazioni a basso costo costruite di recente nella periferia della città %s1:2_civ_adjective di %s2_city.</Italian>
 		<Polish>W Imperium %s1_civ_adjective w mie&#156;cie %s2_city rozpocz&#185;&#179; si&#234; boom w budownictwie po tym jak robotnicy zaczeli masowo kupowa&#230; domki na przedmie&#156;ciach.</Polish>
@@ -1842,7 +1842,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_LITERACY</Tag>
 		<English>The learned %s1_civ_adjective people enjoy a virtually universal literacy rate.</English>
-		<French>Les citoyens %s1:2_civ_adjective sont cultivés et profitent d'un taux d'alphabétisation quasiment universel.</French>
+		<French>Les citoyens %s1:3_civ_adjective sont cultivés et profitent d'un taux d'alphabétisation quasiment universel.</French>
 		<German>Unter dem gelehrten %s1:2_civ_adjective Volk gibt es quasi keine Analphabeten.</German>
 		<Italian>La colta popolazione %s1:2_civ_adjective gode di un altissimo grado di istruzione.</Italian>
 		<Spanish>El culto pueblo %s1_civ_adjective disfruta de una tasa de alfabetización prácticamente universal.</Spanish>
@@ -1992,7 +1992,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_MERCHANTFLEET</Tag>
 		<English>A new merchant fleet has formed in the %s1_civ_adjective city of %s2_city.</English>
-		<French>Un nouvelle flotte marchande s'est formée dans la ville %s1_civ_adjective de %s2_city.</French>
+		<French>Un nouvelle flotte marchande s'est formée dans la ville %s1:2_civ_adjective de %s2_city.</French>
 		<Italian>Una nuova flotta mercantile è stata costruita nella città %s1:2_civ_adjective di %s2_city.</Italian>
 		<Polish>Nowa flota handlowa zosta&#179;a uformowana w Imperium %s1_civ_adjective w mie&#156;cie %s2_city.</Polish>
 		<Russian>В городе %s2_city державы %s1_civ_adjective был сформирован новый торговый флот.</Russian>
@@ -2291,7 +2291,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_PEAT</Tag>
 		<English>%s1_civ_adjective locals are now using peat as fuel.</English>
-		<French>Des ouvriers %s1_civ_adjective utilisent à présent la tourbe comme combustible.</French>
+		<French>Des ouvriers %s1:3_civ_adjective utilisent à présent la tourbe comme combustible.</French>
 		<Italian>Gli abitanti %s1:3_civ_adjective adesso utilizzano la torba come combustibile.</Italian>
 		<Polish>Tubylcy z %s1_civ_adjective uzywaja od teraz torfu jako opalu.</Polish>
 		<Russian>%s1_civ_adjective ìåñòíûå æèòåëè ñåé÷àñ èñïîëüçóþò òîðô â êà÷åñòâå òîïëèâà..</Russian>
@@ -2714,7 +2714,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_PURE_CRUDE</Tag>
 		<English>%s1_civ_adjective merchants are increasing prices on barrels of their pure crude oil, which is as pure as it gets.</English>
-		<French>Les marchands %s1_civ_adjective augmentent les prix des barils de leur pétrole brut pur, qui est aussi pur que possible.</French>
+		<French>Les marchands %s1:3_civ_adjective augmentent les prix des barils de leur pétrole brut pur, qui est aussi pur que possible.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_SPICY_1</Tag>
@@ -2727,7 +2727,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_SPICY_2</Tag>
 		<English>%s1_civ_adjective farmers have discovered a new herb that makes food more delicious.</English>
-		<French>Les fermiers %s1_civ_adjective ont découvert une nouvelle herbe qui rend la nourriture plus délicieuse.</French>
+		<French>Les fermiers %s1:3_civ_adjective ont découvert une nouvelle herbe qui rend la nourriture plus délicieuse.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_SPOILED_GRAIN</Tag>
@@ -3007,7 +3007,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_TUSK</Tag>
 		<English>%s1_civ_adjective whalers are now hunting narwhals.</English>
-		<French>Les baleiniers %s1_civ_adjective chassent des narvals.</French>
+		<French>Les baleiniers %s1:3_civ_adjective chassent des narvals.</French>
 		<Italian>Le baleniere %s1:2_civ_adjective adesso stanno dando la caccia ai narvali.</Italian>
 		<Polish>Wielorybnicy z %s1_civ_adjective poluja od teraz na narwale.</Polish>
 		<Russian>Ó %s1_civ_adjective êèòîáîåâ îòêðûëñÿ ñåçîí ïðîìûñëà íàðâàëîâ.</Russian>
@@ -3143,7 +3143,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_WININGMONKS</Tag>
 		<English>%s1_civ_adjective monks who have grown their vineyards over the years are now producing Wines in significant quantities.</English>
-		<French>Les moines %s1_civ_adjective qui ont fait pousser leurs vignes pendant des années produisent à présent du vin en quantité importante.</French>
+		<French>Les moines %s1:3_civ_adjective qui ont fait pousser leurs vignes pendant des années produisent à présent du vin en quantité importante.</French>
 		<German>Die Mönche des %s1:2_civ_adjective Reichs, die schon seit Jahren Wein anbauen, produzieren erstaunliche Mengen.</German>
 		<Italian>I monaci %s1:3_civ_adjective hanno coltivato per anni i propri vigneti e ora producono vino in quantità significative.</Italian>
 		<Spanish>Monjes %s1:3_civ_adjective que llevan años cultivando viñas producen ahora vinos en cantidades significativas.</Spanish>
@@ -3294,7 +3294,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_ADD_ONE_POPULATION2</Tag>
 		<English>%s1_civ_adjective city of %s2_city is having riots as the poeple feel their culture and way of life is treathened by outsiders.</English>
-		<French>La ville %s1_civ_adjective de %s2_city connaît des émeutes, car la population sent que sa culture et son mode de vie sont menacés par des étrangers.</French>
+		<French>la ville %s1:2_civ_adjective de %s2_city connaît des émeutes, car la population sent que sa culture et son mode de vie sont menacés par des étrangers.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_AIRLINER_CRASH_1</Tag>
@@ -7098,7 +7098,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_MEDIATOR_WORLD_2</Tag>
 		<English>A great mediator has offered to arbitrate peace between %s1_civ_adjective and %s2_civ_adjective.</English>
-		<French>Un habile médiateur s'est proposé pour arbitrer la paix entre les %s1_civ_adjective et les %s2_civ_adjective.</French>
+		<French>Un habile médiateur s'est proposé pour arbitrer la paix entre les %s1:3_civ_adjective et les %s2:3_civ_adjective.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_GREAT_MEDIATOR_OTHER_3</Tag>
@@ -8979,7 +8979,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_WAR_TAXES_2</Tag>
 		<English>The %s1_civ_adjective is in total war mode and are taxing their people to the bone.</English>
-		<French>Les %s1_civ_adjective est en mode guerre totale et taxe son peuple jusqu'à l'os.</French>
+		<French>Les %s1:3_civ_adjective sont en mode guerre totale et taxe son peuple jusqu'à l'os.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_MEGA_ATTACK</Tag>
@@ -13570,7 +13570,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_TRIGGER_MAN_NAMED_JED</Tag>
 		<English>%s1_civ_adjective scouts have discovered some flaming sticky black substance.</English>
-		<French>Les éclaireurs %s1_civ_adjective ont découvert une substance noire collante flamboyante.</French>
+		<French>Les éclaireurs %s1:3_civ_adjective ont découvert une substance noire collante flamboyante.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_TRIGGER_MAN_NAMED_JED_1</Tag>
