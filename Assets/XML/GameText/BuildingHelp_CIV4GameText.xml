@@ -579,6 +579,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDINGHELP_GIVEN_FREE_AREA</Tag>
 		<English>[ICON_BULLET]Building Given for Free in same continent By[SPACE]</English>
+		<French>[ICON_BULLET]Bâtiment offert gratuitement sur le même continent par[SPACE]</French>
 		<German>[ICON_BULLET]kostenloses Gebäude auf dem gleichen Kontinent[SPACE]</German>
 		<Russian>[ICON_BULLET]На том же континенте постройка дается бесплатно благодаря[SPACE]</Russian>
 	</TEXT>
@@ -595,9 +596,11 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDINGHELP_GLOBAL_BUILDINGCOST_MOD</Tag>
 		<English>[NEWLINE][ICON_BULLET]National %d1%% cost modifier:[SPACE]</English>
+		<French>[NEWLINE][ICON_BULLET]Modificateur national de coût %d1%% :[SPACE]</French>
 		<German>[NEWLINE][ICON_BULLET]global %d1%% Kosten für:[SPACE]</German>
-		<Italian>[NEWLINE][ICON_BULLET]Modificatore costo nazionale [COLOR_HIGHLIGHT_TEXT]%d1%%[COLOR_REVERT] per gli edifici:[SPACE]</Italian> <!-- city screen hover on building unique culture -->
+		<Italian>[NEWLINE][ICON_BULLET]Modificatore costo nazionale [COLOR_HIGHLIGHT_TEXT]%d1%%[COLOR_REVERT] per gli edifici:[SPACE]</Italian>
 		<Russian>[NEWLINE][ICON_BULLET]Общегосударственное изменение цены на %d1%%:[SPACE]</Russian>
+		<!-- city screen hover on building unique culture -->
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDINGHELP_GLOBAL_MAINT</Tag>
@@ -911,6 +914,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDINGHELP_NATIONAL_WONDERS_PER_CITY</Tag>
 		<English>[COLOR_WARNING_TEXT]This city's current culture level can only support %d1_Num National Wonders.[COLOR_REVERT]</English>
+		<French>[COLOR_WARNING_TEXT]Le niveau actuel de culture de cette ville ne peut supporter que %d1_Num merveilles nationales.[COLOR_REVERT]</French>
 		<Russian>[COLOR_WARNING_TEXT]Уровень культуры этого города может поддерживать национальные чудеса только в количестве: %d1_Num.[COLOR_REVERT]</Russian>
 	</TEXT>
 	<TEXT>
@@ -1419,6 +1423,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDINGHELP_SPREADS_RELIGION</Tag>
 		<English>[ICON_BULLET]%F1 spread change: %D2</English>
+		<French>[ICON_BULLET]%F1 modification de la propagation : %D2</French>
 		<Russian>[ICON_BULLET]%F1 изменение распространения: %D2</Russian>
 	</TEXT>
 	<TEXT>
@@ -1442,6 +1447,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDINGHELP_TEAM_WONDERS_PER_CITY</Tag>
 		<English>[COLOR_WARNING_TEXT]This city's current culture level can only support %d1_Num Team Wonders.[COLOR_REVERT]</English>
+		<French>[COLOR_WARNING_TEXT]Le niveau actuel de culture de cette ville ne peut supporter que %d1_Num merveilles d'équipe.[COLOR_REVERT]</French>
 		<Russian>[COLOR_WARNING_TEXT]Уровень культуры этого города может поддерживать командные чудеса только в количестве: %d1_Num.[COLOR_REVERT]</Russian>
 	</TEXT>
 	<TEXT>
@@ -1641,6 +1647,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDINGHELP_WORLD_WONDERS_PER_CITY</Tag>
 		<English>[COLOR_WARNING_TEXT]This city's current culture level can only support %d1_Num World Wonders.[COLOR_REVERT]</English>
+		<French>[COLOR_WARNING_TEXT]Le niveau actuel de culture de cette ville ne peut supporter que %d1_Num merveilles du monde.[COLOR_REVERT]</French>
 		<Russian>[COLOR_WARNING_TEXT]Уровень культуры этого города может поддерживать великие чудеса только в количестве: %d1_Num.[COLOR_REVERT]</Russian>
 	</TEXT>
 	<TEXT>

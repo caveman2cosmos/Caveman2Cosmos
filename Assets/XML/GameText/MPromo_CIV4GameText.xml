@@ -101,6 +101,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_AFFLICTION_DISEASE_COMMON_COLD</Tag>
 		<English>Disease - Common Cold</English>
+		<French>Maladie - Rhume commun</French>
 		<Italian>Malattia - Raffreddore comune</Italian>
 		<Russian>Болезнь (простуда)</Russian>
 	</TEXT>
@@ -135,12 +136,14 @@
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_EQUIPMENT_EARLY_MELEE_ARMOR</Tag>
 		<English>Early melee armor</English>
+		<French>Armure de mêlée primitive</French>
 		<Italian>Armature antica da corpo a corpo</Italian>
 		<Russian>Ранняя броня для ближнего боя</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_EQUIPMENT_EARLY_RANGED_ARMOR</Tag>
 		<English>Early ranged armor</English>
+		<French>Armure pour combat à distance primitive</French>
 		<Italian>Armature antica da distanza</Italian>
 		<Russian>Ранняя броня для дальнего боя</Russian>
 	</TEXT>

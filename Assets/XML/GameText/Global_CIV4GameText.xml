@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<Civ4GameText xmlns="http://www.firaxis.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.firaxis.com ../Schema/Civ4Gametext.xsd">
+<Civ4GameText  xmlns="http://www.firaxis.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.firaxis.com ../Schema/Civ4Gametext.xsd">
 	<!-- Code placeholders
 	<TEXT>
 		<Tag>TXT_KEY_COMBAT_ROUND_STUN_DEFENDER_MINUS_ATTACKER_ENDURANCE</Tag>
@@ -83,8 +83,10 @@
 	<TEXT>
 		<Tag>INTERFACE_CITY_COMMERCE_RATE_FLOAT</Tag>
 		<English>%F1: %s2</English>
+		<French>%F1 : %s2</French>
+		<Italian>Livello culturale %F1 : %s2</Italian>
 		<Russian>%F1: %s2 (%s3/ход)</Russian>
-		<Italian>Livello culturale %F1 : %s2</Italian> <!-- city screen UI on culture bar lower right -->
+		<!-- city screen UI on culture bar lower right -->
 	</TEXT>
 	<TEXT>
 		<Tag>INTERFACE_CITY_FOOD_GROW</Tag>
@@ -94,6 +96,7 @@
 	<TEXT>
 		<Tag>INTERFACE_CITY_FOOD_SHRINK</Tag>
 		<English>%d1[ICON_FOOD] - %d2[ICON_EATENFOOD] = [COLOR_WARNING_TEXT]%d3[COLOR_REVERT][ICON_BAD_FOOD]</English>
+		<French>%d1[ICON_FOOD] - %d2[ICON_EATENFOOD] = [COLOR_WARNING_TEXT]%d3[COLOR_REVERT][ICON_MAUVAISE_NOURRITURE]</French>
 		<Italian>[COLOR_HIGHLIGHT_TEXT]%d1[COLOR_REVERT] [ICON_FOOD] - [COLOR_HIGHLIGHT_TEXT]%d2[COLOR_REVERT] [ICON_EATENFOOD] = [COLOR_WARNING_TEXT]%d3[COLOR_REVERT] [ICON_BAD_FOOD]</Italian> <!-- city screen left of the food bar -->
 	</TEXT>
 	<TEXT>
@@ -115,7 +118,7 @@
 		<English>Growing (%d1 [NUM1:Turn:Turns])</English>
 		<French>Croissance (%d1 [NUM1:tour:tours])</French>
 		<German>Wachstum (%d1 [NUM1:Runde:Runden])</German>
-		<Italian>Crescita della città in [COLOR_HIGHLIGHT_TEXT]%d1[COLOR_REVERT] [NUM1:turno:turni]</Italian>  <!-- city screen food bar UI -->
+		<Italian>Crescita della città in [COLOR_HIGHLIGHT_TEXT]%d1[COLOR_REVERT] [NUM1:turno:turni]</Italian> <!-- city screen food bar UI -->
 		<Spanish>Creciendo (%d1 [NUM1:turno:turnos])</Spanish>
 		<Russian>Рост (%d1 [NUM1:ход:ходов])</Russian>
 	</TEXT>
@@ -124,7 +127,7 @@
 		<English>Growth!</English>
 		<French>Croissance!</French>
 		<German>Wachstum!</German>
-		<Italian>La città è cresciuta!</Italian>  <!-- city screen food bar UI -->
+		<Italian>La città è cresciuta!</Italian> <!-- city screen food bar UI -->
 		<Spanish>¡Crecerá!</Spanish>
 		<Polish>Wzrost!</Polish>
 		<Russian>Прирост!</Russian>
@@ -256,7 +259,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>INTERFACE_GREAT_PERSON_CITY</Tag>
-		<English>%s1: %s2</English> 
+		<English>%s1: %s2</English>
+		<French>%s1 : %s2</French>
 		<Italian>s1 in [COLOR_HIGHLIGHT_TEXT]%s2[COLOR_REVERT]</Italian> <!-- hover on city name, city screen Great person bar-->
 	</TEXT>
 	<TEXT>
@@ -279,6 +283,7 @@
 	<TEXT>
 		<Tag>INTERFACE_GREAT_PERSON_TURNS</Tag>
 		<English>%s1: (%d2)</English>
+		<French>%s1 : (%d2)</French>
 		<Italian>%s1: ([COLOR_HIGHLIGHT_TEXT]%d2[COLOR_REVERT])</Italian> <!-- city screen great people bar -->
 	</TEXT>
 	<TEXT>
@@ -672,6 +677,7 @@
 	<TEXT>
 		<Tag>TXT_BULLET_S1_COLON_SPACE</Tag>
 		<English>[ICON_BULLET]%s1:[SPACE]</English>
+		<French>[ICON_BULLET]%s1 :[SPACE]</French>
 		<Italian>[ICON_BULLET]%s1:[SPACE]</Italian>
 	</TEXT>
 	<TEXT>
@@ -694,7 +700,7 @@
 		<English>Researching:</English>
 		<French>Recherche en cours :</French>
 		<Russian>Исследуется:</Russian>
-		<Italian>[ICON_BULLET]Ricerca in corso:</Italian>  <!-- main map UI research hover -->
+		<Italian>[ICON_BULLET]Ricerca in corso:</Italian> <!-- main map UI research hover -->
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_INTERFACE_TREASURYHELP_CITY_MAINTENANCE</Tag>
@@ -1220,7 +1226,7 @@
 		<Italian>Centra sulla selezione</Italian>
 		<Spanish>Centrar en selección</Spanish>
 	</TEXT>
-		<TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_ACTION_CHANCE_DISCOVER</Tag>
 		<English>[ICON_BULLET]Small chance of discovering[SPACE]</English>
 		<French>[ICON_BULLET]Faibles chances de découvrir :[SPACE]</French>
@@ -1537,6 +1543,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_ACTION_NEEDS_CULTURE_BORDER</Tag>
 		<English>[COLOR_WARNING_TEXT]Must be within Cultural Borders owned by of one of our cities.[COLOR_REVERT]</English>
+		<French>[COLOR_WARNING_TEXT]Doit être à l'intérieur des frontières culturelles détenues par l'une de nos villes.[COLOR_REVERT]</French>
 		<German>[ICON_BULLET][COLOR_WARNING_TEXT]kann nur innerhalb der Kulturgrenzen der eigenen Städte ausgeführt werden[COLOR_REVERT]</German>
 		<Italian>[COLOR_WARNING_TEXT][ICON_BULLET]Il miglioramento deve essere costruito all'interno dei confini culturali[COLOR_REVERT]</Italian> <!-- icon for build improvement out of cultural border -->
 	</TEXT>
@@ -1852,7 +1859,7 @@
 		<English>Actual</English>
 		<French>Actuel</French>
 		<German>effektiv</German>
-		<Italian>[COLOR_HIGHLIGHT_TEXT]Rendimento[COLOR_REVERT] attuale</Italian>  <!-- building krakatoa building list hover -->
+		<Italian>[COLOR_HIGHLIGHT_TEXT]Rendimento[COLOR_REVERT] attuale</Italian> <!-- building krakatoa building list hover -->
 		<Spanish>Real</Spanish>
 		<Polish>Bie&#191;&#185;ce</Polish>
 		<Russian>Îáùèé ýôôåêò</Russian>
@@ -2145,7 +2152,7 @@
 		<English>"Our Civilization is in Anarchy!"</English>
 		<French>"Notre civilisation sombre dans l'anarchie !"</French>
 		<German>"In unserer Zivilisation herrscht Anarchie!"</German>
-		<Italian>[ICON_BULLET]La nostra civiltà è nell'anarchia!</Italian>  <!-- city screen hover happiness panel upper right -->
+		<Italian>[ICON_BULLET]La nostra civiltà è nell'anarchia!</Italian> <!-- city screen hover happiness panel upper right -->
 		<Spanish>"¡Nuestra civilización es la anarquía!"</Spanish>
 	</TEXT>
 	<TEXT>
@@ -2153,7 +2160,7 @@
 		<English>+%d1_Change[ICON_UNHAPPY]: "AAAARRRGHHHH!"</English>
 		<French>+%d1_Change[ICON_UNHAPPY] : "AAAARRRGHHHH !"</French>
 		<German>+%d1_Change[ICON_UNHAPPY]: "AAAARRRGHHHH!"</German>
-		<Italian>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]+%d1_Change[COLOR_REVERT] [ICON_UNHAPPY]: Che disastro!</Italian>  <!-- city screen hover happiness panel upper right -->
+		<Italian>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]+%d1_Change[COLOR_REVERT] [ICON_UNHAPPY]: Che disastro!</Italian> <!-- city screen hover happiness panel upper right -->
 		<Spanish>+%d1_Change [ICON_UNHAPPY]: "¡AAAARRRGHHHH!"</Spanish>
 	</TEXT>
 	<TEXT>
@@ -2161,7 +2168,7 @@
 		<English>+%d1_Change[ICON_UNHAPPY]: "We do not appreciate this type of entertainment!"</English>
 		<French>+%d1_Change[ICON_UNHAPPY] : "Nous n'apprécions pas ce genre de divertissement !"</French>
 		<German>+%d1_Change[ICON_UNHAPPY]: "Diese Art der Unterhaltung schätzen wir gar nicht!"</German>
-		<Italian>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]+%d1_Change[COLOR_REVERT] [ICON_UNHAPPY]: Non apprezzo questo tipo di intrattenimento!</Italian>  <!-- city screen hover happiness panel upper right -->
+		<Italian>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]+%d1_Change[COLOR_REVERT] [ICON_UNHAPPY]: Non apprezzo questo tipo di intrattenimento!</Italian> <!-- city screen hover happiness panel upper right -->
 		<Spanish>+%d1_Change [ICON_UNHAPPY]: "No nos gusta este tipo de espectáculos!"</Spanish>
 	</TEXT>
 	<TEXT>
@@ -2169,7 +2176,7 @@
 		<English>+%d1_Change[ICON_UNHAPPY]: "Large Cities Are Oppressive!"</English>
 		<French>+%d1_Change[ICON_UNHAPPY]: "Les grands espaces nous manquent!"</French>
 		<German>+%d1_Change[ICON_UNHAPPY]: "Diese Stadt ist einfach zu monströs!"</German>
-		<Italian>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]+%d1_Change[COLOR_REVERT] [ICON_UNHAPPY]: Le grandi città sono oppressive!</Italian>  <!-- city screen hover happiness panel upper right -->
+		<Italian>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]+%d1_Change[COLOR_REVERT] [ICON_UNHAPPY]: Le grandi città sono oppressive!</Italian> <!-- city screen hover happiness panel upper right -->
 		<Spanish>+%d1_Change [ICON_UNHAPPY]: "¡Echamos de menos el campo!"</Spanish>
 		<Russian>+%d1_Change[ICON_UNHAPPY]: "Ìû ñêó÷àåì ïî çåëåíûì ëóãàì!"</Russian>
 	</TEXT>
@@ -2178,27 +2185,31 @@
 		<English>+%d1_Change[ICON_UNHAPPY]: "Some goods are making us unhappy!"</English>
 		<French>+%d1_Change[ICON_UNHAPPY] : "Nous n'apprécions pas certaines marchandises !"</French>
 		<German>+%d1_Change[ICON_UNHAPPY]: "Manche Güter schlagen uns mächtig aufs Gemüt!"</German>
-		<Italian>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]+%d1_Change[COLOR_REVERT] [ICON_UNHAPPY]: Alcune risorse mi rendono infelice!</Italian>  <!-- city screen hover happiness panel upper right -->
+		<Italian>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]+%d1_Change[COLOR_REVERT] [ICON_UNHAPPY]: Alcune risorse mi rendono infelice!</Italian> <!-- city screen hover happiness panel upper right -->
 		<Spanish>+%d1_Change [ICON_UNHAPPY]: "Algunos productos nos hacen infelices!"</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_ANGER_CIVIC_PERCENT_BAD</Tag>
 		<English>+%d1_Change[ICON_UNHAPPY]: %s2_Name</English>
+		<French>+%d1_Changement[ICON_UNHAPPY] : %s2_Nom</French>
+		<Italian>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]+%d1_Change[COLOR_REVERT] [ICON_UNHAPPY]: Non mi piace la forma di governo %s2_Name</Italian>
 		<Russian>+%d1_Change[ICON_UNHAPPY]: %s2_Name</Russian>
-		<Italian>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]+%d1_Change[COLOR_REVERT] [ICON_UNHAPPY]: Non mi piace la forma di governo %s2_Name</Italian>  <!-- city screen hover happiness panel upper right -->
+		<!-- city screen hover happiness panel upper right -->
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_ANGER_CIVIC_PERCENT_GOOD</Tag>
 		<English>%d1_Change[ICON_UNHAPPY]: %s2_Name</English>
+		<French>%d1_Changement[ICON_UNHAPPY] : %s2_Nom</French>
+		<Italian>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]%d1_Change[COLOR_REVERT] [ICON_UNHAPPY]: Non mi piace la forma di governo %s2_Name</Italian>
 		<Russian>%d1_Change[ICON_UNHAPPY]: %s2_Name</Russian>
-		<Italian>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]%d1_Change[COLOR_REVERT] [ICON_UNHAPPY]: Non mi piace la forma di governo %s2_Name</Italian>  <!-- city screen hover happiness panel upper right -->
+		<!-- city screen hover happiness panel upper right -->
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_ANGER_DEFY_RESOLUTION</Tag>
 		<English>+%d1_Change[ICON_UNHAPPY]: "The world considers you a villain!"</English>
 		<French>+%d1_Change[ICON_UNHAPPY] : " Le monde vous considère comme une crapule ! "</French>
 		<German>+%d1_Change[ICON_UNHAPPY]: "Die Welt hält Euch für einen Verbrecher!"</German>
-		<Italian>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]%d1_Change[COLOR_REVERT] [ICON_UNHAPPY]: Il mondo considera il nostro leader un malvagio!</Italian>  <!-- city screen hover happiness panel upper right -->
+		<Italian>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]%d1_Change[COLOR_REVERT] [ICON_UNHAPPY]: Il mondo considera il nostro leader un malvagio!</Italian> <!-- city screen hover happiness panel upper right -->
 		<Spanish>+%d1_Change [ICON_UNHAPPY]: "¡El mundo os considera un ser vil!"</Spanish>
 	</TEXT>
 	<TEXT>
@@ -2206,7 +2217,7 @@
 		<English>+%d1_Change[ICON_UNHAPPY]: "Hell NO, we won't GO!"</English>
 		<French>+%d1_Change[ICON_UNHAPPY] : "Pas question, nous n'irons PAS !"</French>
 		<German>+%d1_Change[ICON_UNHAPPY]: "Zur Hölle, NEIN, wir werden NICHT gehen!"</German>
-		<Italian>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]%d1_Change[COLOR_REVERT] [ICON_UNHAPPY]: NO! Basta con la leva obbligatoria, non partiremo per la guerra!</Italian>  <!-- city screen hover happiness panel upper right -->
+		<Italian>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]%d1_Change[COLOR_REVERT] [ICON_UNHAPPY]: NO! Basta con la leva obbligatoria, non partiremo per la guerra!</Italian> <!-- city screen hover happiness panel upper right -->
 		<Spanish>+%d1_Change [ICON_UNHAPPY]: "¡No pensamos ir, puñetas!"</Spanish>
 	</TEXT>
 	<TEXT>
@@ -2214,7 +2225,7 @@
 		<English>+%d1_Change[ICON_UNHAPPY]: "People are telling us of your villainy!"</English>
 		<French>&gt;+%d1_Change[ICON_UNHAPPY]: "Votre infamie est devenue notoire !"</French>
 		<German>+%d1_Change[ICON_UNHAPPY]: "Die Leute erzählen von Eurer Grausamkeit!"</German>
-		<Italian>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]%d1_Change[COLOR_REVERT] [ICON_UNHAPPY]: La gente racconta la tua infamia!</Italian>  <!-- city screen hover happiness panel upper right -->
+		<Italian>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]%d1_Change[COLOR_REVERT] [ICON_UNHAPPY]: La gente racconta la tua infamia!</Italian> <!-- city screen hover happiness panel upper right -->
 		<Spanish>+%d1_Change [ICON_UNHAPPY]: "¡La gente no para de hablarnos de vuestra villanía!"</Spanish>
 	</TEXT>
 	<TEXT>
@@ -2222,7 +2233,7 @@
 		<English>+%d1_Change[ICON_UNHAPPY]: "Some improvements are making us unhappy!"</English>
 		<French>+%d1_Change[ICON_UNHAPPY]: "Des infrastructures nous rendent mécontents!"</French>
 		<German>+%d1_Change[ICON_UNHAPPY]: "Wir sind mit der Entwicklung der Umgebung unzufrieden!"</German>
-		<Italian>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]%d1_Change[COLOR_REVERT] [ICON_UNHAPPY]: Alcuni miglioramenti mi rendono infelice!</Italian>  <!-- city screen hover happiness panel upper right -->
+		<Italian>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]%d1_Change[COLOR_REVERT] [ICON_UNHAPPY]: Alcuni miglioramenti mi rendono infelice!</Italian> <!-- city screen hover happiness panel upper right -->
 		<Spanish>+%d1_Change [ICON_UNHAPPY]: "¡Algunas mejoras nos tienen descontentos!"</Spanish>
 		<Polish>+%d1_Change[ICON_UNHAPPY]: "Niekt&#243;re ulepszenia doprowadzaj&#185; nas do w&#156;ciek&#179;o&#156;ci!"</Polish>
 		<Russian>+%d1_Change[ICON_UNHAPPY]: "Âåñü ýòîò ãðèíïèñ ñâîäèò ìåíÿ ñ óìà!"</Russian>
@@ -2232,7 +2243,7 @@
 		<English>+%d1_Change[ICON_UNHAPPY]: "We're just being difficult!"</English>
 		<French>+%d1_Change[ICON_UNHAPPY] : "Nous voulons simplement vous embêter !"</French>
 		<German>+%d1_Change[ICON_UNHAPPY]: "Wir sind halt einfach schwierig!"</German>
-		<Italian>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]+%d1_Change[COLOR_REVERT] [ICON_UNHAPPY]: Voglio solo fare un po' il difficile!</Italian>  <!-- city screen hover happiness panel upper right -->
+		<Italian>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]+%d1_Change[COLOR_REVERT] [ICON_UNHAPPY]: Voglio solo fare un po' il difficile!</Italian> <!-- city screen hover happiness panel upper right -->
 		<Spanish>+%d1_Change [ICON_UNHAPPY]: "¡Es solo para ponéoslo difícil"</Spanish>
 	</TEXT>
 	<TEXT>
@@ -2240,7 +2251,7 @@
 		<English>+%d1_Change[ICON_UNHAPPY]: "The military presence makes us nervous!"</English>
 		<French>+%d1_Change[ICON_UNHAPPY] : "La présence des militaires nous rend nerveux !"</French>
 		<German>+%d1_Change[ICON_UNHAPPY]: "Die Militärpräsenz macht uns nervös!"</German>
-		<Italian>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]+%d1_Change[COLOR_REVERT] [ICON_UNHAPPY]: L'occupazione militare mi rende nervoso!</Italian>  <!-- city screen hover happiness panel upper right -->
+		<Italian>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]+%d1_Change[COLOR_REVERT] [ICON_UNHAPPY]: L'occupazione militare mi rende nervoso!</Italian> <!-- city screen hover happiness panel upper right -->
 		<Spanish>+%d1_Change [ICON_UNHAPPY]: "¡La presencia militar nos pone nerviosos!"</Spanish>
 	</TEXT>
 	<TEXT>
@@ -2248,21 +2259,23 @@
 		<English>+%d1_Change[ICON_UNHAPPY]: "We fear for our safety. We demand military protection!"</English>
 		<French>+%d1_Change[ICON_UNHAPPY] : "Nous craignons pour notre sécurité. Nous exigeons une protection militaire !"</French>
 		<German>+%d1_Change[ICON_UNHAPPY]: "Wir fühlen uns hier nicht sicher. Wir verlangen Schutz durch das Militär!"</German>
-		<Italian>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]+%d1_Change[COLOR_REVERT] [ICON_UNHAPPY]: Temo per la nostra incolumità, ci vuole più protezione militare!</Italian>  <!-- city screen hover happiness panel upper right -->
+		<Italian>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]+%d1_Change[COLOR_REVERT] [ICON_UNHAPPY]: Temo per la nostra incolumità, ci vuole più protezione militare!</Italian> <!-- city screen hover happiness panel upper right -->
 		<Spanish>+%d1_Change [ICON_UNHAPPY]: "Tememos por nuestra seguridad. ¡Solicitamos protección militar!"</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_ANGER_MISC</Tag>
 		<English>+%d1_Change[ICON_UNHAPPY]: "Misc."</English>
+		<French>+%d1_Changement[ICON_UNHAPPY] : "Divers".</French>
+		<Italian>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]+%d1_Change[COLOR_REVERT] [ICON_UNHAPPY]: Motivi vari</Italian>
 		<Russian>+%d1_Change[ICON_UNHAPPY]: "Ïðî÷åå."</Russian>
-		<Italian>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]+%d1_Change[COLOR_REVERT] [ICON_UNHAPPY]: Motivi vari</Italian>  <!-- city screen hover happiness panel upper right -->
+		<!-- city screen hover happiness panel upper right -->
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_ANGER_OCCUPIED</Tag>
 		<English>+%d1_Change[ICON_UNHAPPY]: "We yearn to join our Motherland!"</English>
 		<French>+%d1_Change[ICON_UNHAPPY] : "Nous avons hâte de rejoindre notre patrie !"</French>
 		<German>+%d1_Change[ICON_UNHAPPY]: "Wir sehnen uns nach unserer Heimat!"</German>
-		<Italian>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]+%d1_Change[COLOR_REVERT] [ICON_UNHAPPY]: Desidero tornare con la nostra patria!</Italian>  <!-- city screen hover happiness panel upper right -->
+		<Italian>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]+%d1_Change[COLOR_REVERT] [ICON_UNHAPPY]: Desidero tornare con la nostra patria!</Italian> <!-- city screen hover happiness panel upper right -->
 		<Spanish>+%d1_Change [ICON_UNHAPPY]: "¡Anhelamos volver a nuestra patria!"</Spanish>
 	</TEXT>
 	<TEXT>
@@ -2270,7 +2283,7 @@
 		<English>+%d1_Change[ICON_UNHAPPY]: "We cannot forget your cruel oppression!"</English>
 		<French>+%d1_Change[ICON_UNHAPPY] : "Nous n'oublierons jamais votre oppression cruelle !"</French>
 		<German>+%d1_Change[ICON_UNHAPPY]: "Wir können Eure grausame Tyrannei nicht ertragen!"</German>
-		<Italian>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]+%d1_Change[COLOR_REVERT] [ICON_UNHAPPY]: Non posso dimenticare la crudele oppressione del nostro leader!</Italian>  <!-- city screen hover happiness panel upper right -->
+		<Italian>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]+%d1_Change[COLOR_REVERT] [ICON_UNHAPPY]: Non posso dimenticare la crudele oppressione del nostro leader!</Italian> <!-- city screen hover happiness panel upper right -->
 		<Spanish>+%d1_Change [ICON_UNHAPPY]: "¡No olvidaremos vuestra cruel opresión!"</Spanish>
 	</TEXT>
 	<TEXT>
@@ -2278,7 +2291,7 @@
 		<English>+%d1_Change[ICON_UNHAPPY]: "It's too crowded!"</English>
 		<French>+%d1_Change[ICON_UNHAPPY] : "Il y a trop de monde !"</French>
 		<German>+%d1_Change[ICON_UNHAPPY]: "Es ist hier einfach zu übervölkert!"</German>
-		<Italian>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]+%d1_Change[COLOR_REVERT] [ICON_UNHAPPY]: La città è troppo affollata!</Italian>  <!-- city screen hover happiness panel upper right -->
+		<Italian>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]+%d1_Change[COLOR_REVERT] [ICON_UNHAPPY]: La città è troppo affollata!</Italian> <!-- city screen hover happiness panel upper right -->
 		<Spanish>+%d1_Change [ICON_UNHAPPY]: "¡Esto está abarrotado!"</Spanish>
 	</TEXT>
 	<TEXT>
@@ -2286,7 +2299,7 @@
 		<English>+%d1_Change[ICON_UNHAPPY]: "We will not fight with our brothers and sisters in the Faith!"</English>
 		<French>+%d1_Change[ICON_UNHAPPY] : "Nous ne nous battrons pas contre les frères et soeurs qui partagent notre foi !"</French>
 		<German>+%d1_Change[ICON_UNHAPPY]: "Wir werden nicht gegen unsere Glaubensbrüder und -schwestern kämpfen!"</German>
-		<Italian>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]+%d1_Change[COLOR_REVERT] [ICON_UNHAPPY]: Non combatterò contro i nostri fratelli e le nostre sorelle di fede!</Italian>  <!-- city screen hover happiness panel upper right -->
+		<Italian>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]+%d1_Change[COLOR_REVERT] [ICON_UNHAPPY]: Non combatterò contro i nostri fratelli e le nostre sorelle di fede!</Italian> <!-- city screen hover happiness panel upper right -->
 		<Spanish>+%d1_Change [ICON_UNHAPPY]: "¡No lucharemos contra nuestros hermanos y hermanas de fe!"</Spanish>
 	</TEXT>
 	<TEXT>
@@ -2294,7 +2307,7 @@
 		<English>+%d1_Change[ICON_UNHAPPY]: "We desire religious freedom!"</English>
 		<French>+%d1_Change[ICON_UNHAPPY] : "Nous demandons la liberté de culte !"</French>
 		<German>+%d1_Change[ICON_UNHAPPY]: "Wir fordern Religionsfreiheit!"</German>
-		<Italian>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]+%d1_Change[COLOR_REVERT] [ICON_UNHAPPY]: Voglio la libertà religiosa!</Italian>  <!-- city screen hover happiness panel upper right -->
+		<Italian>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]+%d1_Change[COLOR_REVERT] [ICON_UNHAPPY]: Voglio la libertà religiosa!</Italian> <!-- city screen hover happiness panel upper right -->
 		<Spanish>+%d1_Change [ICON_UNHAPPY]: "¡Queremos la libertad de culto!"</Spanish>
 	</TEXT>
 	<TEXT>
@@ -2302,7 +2315,7 @@
 		<English>"Viva la Resistance!"</English>
 		<French>"Vive la Résistance !"</French>
 		<German>"Es lebe der Widerstand!"</German>
-		<Italian>[ICON_BULLET]Viva la resistenza!</Italian>  <!-- city screen hover happiness panel upper right -->
+		<Italian>[ICON_BULLET]Viva la resistenza!</Italian> <!-- city screen hover happiness panel upper right -->
 		<Spanish>"Vive la Résistance!"</Spanish>
 	</TEXT>
 	<TEXT>
@@ -2310,14 +2323,14 @@
 		<English>+%d1_Change[ICON_UNHAPPY]: "We demand a new State Religion!"</English>
 		<French>+%d1_Change[ICON_UNHAPPY] : "Nous voulons une nouvelle religion d'état !"</French>
 		<German>+%d1_Change[ICON_UNHAPPY]: "Wir verlangen eine neue Staatsreligion!"</German>
-		<Italian>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]+%d1_Change[COLOR_REVERT] [ICON_UNHAPPY]: Voglio una nuova religione ufficiale!</Italian>  <!-- city screen hover happiness panel upper right -->
+		<Italian>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]+%d1_Change[COLOR_REVERT] [ICON_UNHAPPY]: Voglio una nuova religione ufficiale!</Italian> <!-- city screen hover happiness panel upper right -->
 		<Spanish>+%d1_Change [ICON_UNHAPPY]: "¡Exigimos una nueva religión oficial!"</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_ANGER_TOO_MANY_CITIES</Tag>
 		<English>+%d1_Change[ICON_UNHAPPY]: Our inept government's attempts to over-expand are making us unhappy</English>
 		<French>+%d1_Change[ICON_UNHAPPY]: Les tentatives d'extension à outrance de notre gourvernement nous rend mécontent</French>
-		<Italian>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]+%d1_Change[COLOR_REVERT] [ICON_UNHAPPY]: La volontà del nostro inetto leader di espandersi troppo mi rende infelice</Italian>  <!-- city screen hover happiness panel upper right -->
+		<Italian>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]+%d1_Change[COLOR_REVERT] [ICON_UNHAPPY]: La volontà del nostro inetto leader di espandersi troppo mi rende infelice</Italian> <!-- city screen hover happiness panel upper right -->
 		<Spanish>+%d1_Change[ICON_UNHAPPY]: ¡Nos molestan los continuos intentos de expansión de nuestros ineptos gobernantes!</Spanish>
 		<Polish>+%d1_Change[ICON_UNHAPPY]: Nieudolne dzia&#179;ania naszego rz&#185;du na froncie niepotrzebnej ekspansji doprowadza nas do wrzenia</Polish>
 		<Russian>+%d1_Change[ICON_UNHAPPY]: мы устали от этой мегаломании наших правителей и бездарной экспансии</Russian>
@@ -2335,7 +2348,7 @@
 		<English>+%d1_Change[ICON_UNHAPPY]: "War... What is it good for? Absolutely nothing... Unh!"</English>
 		<French>+%d1_Change[ICON_UNHAPPY] : "La guerre... ça sert à quoi ? Absolument à rien... Pfff !"</French>
 		<German>+%d1_Change[ICON_UNHAPPY]: "Keiner will sterben, das ist doch klar. Wozu sind Kriege da?"</German>
-		<Italian>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]+%d1_Change[COLOR_REVERT] [ICON_UNHAPPY]: Guerra... a cosa serve? Assolutamente a niente!</Italian>  <!-- city screen hover happiness panel upper right -->
+		<Italian>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]+%d1_Change[COLOR_REVERT] [ICON_UNHAPPY]: Guerra... a cosa serve? Assolutamente a niente!</Italian> <!-- city screen hover happiness panel upper right -->
 		<Spanish>+%d1_Change [ICON_UNHAPPY]: "¿Guerra...? ¿Y eso para qué sirve? ¡Para nada!"</Spanish>
 	</TEXT>
 	<TEXT>
@@ -2354,7 +2367,7 @@
 		<Italian>Residente Palazzo Apostolico</Italian>
 		<Spanish>Ocupante del Palacio Apostólico</Spanish>
 	</TEXT>
-		<TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_AS_UNREMOVABLE</Tag>
 		<English>[NEWLINE][COLOR_WARNING_TEXT]Not removable[COLOR_REVERT]</English>
 		<French>[NEWLINE][COLOR_WARNING_TEXT]Inamovible[COLOR_REVERT]</French>
@@ -2453,7 +2466,7 @@
 		<German>Automatisierte Bautrupps in der Nähe von %s1 können %s2</German>
 		<Spanish>Los trabajadores automatizados en el radio de %s1 pueden %s2</Spanish>
 		<Polish>Automatyczni Robotnicy w pobli&#191;u %s1 mog&#185; %s2</Polish>
-	    <Italian>[BOLD]I lavoratori automatizzati nelle [COLOR_HIGHLIGHT_TEXT]vicinanze di %s1 possono effettuare[COLOR_REVERT] l'azione [COLOR_HIGHLIGHT_TEXT]%s2[COLOR_REVERT][\BOLD]</Italian>
+		<Italian>[BOLD]I lavoratori automatizzati nelle [COLOR_HIGHLIGHT_TEXT]vicinanze di %s1 possono effettuare[COLOR_REVERT] l'azione [COLOR_HIGHLIGHT_TEXT]%s2[COLOR_REVERT][\BOLD]</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_AUTOMATED_WORKERS_CAN_BUILD_CITY</Tag>
@@ -2647,6 +2660,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDUP_DISBAND</Tag>
 		<English>Disband current build-up!</English>
+		<French>Interrompt l'aménagement en cours !</French>
 		<Italian>[COLOR_BLACK]Interrompi allenamento attuale[COLOR_REVERT]</Italian>
 	</TEXT>
 	<TEXT>
@@ -2701,6 +2715,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_CANCLAIM</Tag>
 		<English>Can claim</English>
+		<French>Peut revendiquer</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CANT_NUKE_FRIENDS</Tag>
@@ -3108,11 +3123,13 @@
 	<TEXT>
 		<Tag>TXT_KEY_CITY_BAR_CULTURE</Tag>
 		<English>[NEWLINE][ICON_CULTURE]: %d1/%d2 (%s3: Lvl %d4)</English>
+		<French>[NEWLINE][ICON_CULTURE] : %d1/%d2 (%s3 : Niv %d4)</French>
 		<Italian>[NEWLINE][ICON_CULTURE]: %d1 / %d2[NEWLINE]Livello culturale [COLOR_HIGHLIGHT_TEXT]%d4[COLOR_REVERT]: %s3</Italian> <!-- hoover city -->
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_BAR_CULTURE_MAX</Tag>
 		<English>[NEWLINE][ICON_CULTURE]: %d1 (%s2: Lvl %d3)</English>
+		<French>[NEWLINE][ICON_CULTURE] : %d1 (%s2 : Niv %d3)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_BAR_FOOD_GROW</Tag>
@@ -3183,6 +3200,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_CITY_BAR_GREAT_PEOPLE</Tag>
 		<English>[NEWLINE][ICON_GREATPEOPLE]: %d1/%d2</English>
+		<French>[NEWLINE][ICON_GREATPEOPLE] : %d1/%d2</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_BAR_GROWTH</Tag>
@@ -3213,6 +3231,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_CITY_BAR_PRODUCTION</Tag>
 		<English>[NEWLINE]%s1: %d2/%d3 [ICON_PRODUCTION]</English>
+		<French>[NEWLINE]%s1 : %d2/%d3 [ICON_PRODUCTION]</French>
 		<Italian>[NEWLINE]%s1: [COLOR_HIGHLIGHT_TEXT]%d2[COLOR_REVERT]  / [COLOR_HIGHLIGHT_TEXT]%d3[COLOR_REVERT]  [ICON_PRODUCTION]</Italian>
 	</TEXT>
 	<TEXT>
@@ -3414,6 +3433,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_CITY_REMOVED_MAX_POPULATION</Tag>
 		<English>The %s1 in the city of %s2 has shut down due to the population level being too high.</English>
+		<French>Le %s1 dans la ville de %s2 a été fermé en raison d'un niveau de population trop élevé.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_REPEL</Tag>
@@ -3850,6 +3870,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_CIVICHELP_IMPROVEMENT_UPGRADE</Tag>
 		<English>[ICON_BULLET]%D1_Mod%% Growth Speed for Improvements</English>
+		<French>[ICON_BULLET]%D1_Mod%% Vitesse de croissance pour les améliorations</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVICHELP_IMPROVEMENT_YIELD_CHANGE</Tag>
@@ -4103,6 +4124,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_CIV_UNKNOWN</Tag>
 		<English>UNKNOWN CIV</English>
+		<French>CIV INCONNUE</French>
 		<Russian>Неизвестная цивилизация</Russian>
 	</TEXT>
 	<TEXT>
@@ -4580,6 +4602,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_COMMAND_HOTKEY</Tag>
 		<English>Command Hotkey</English>
+		<French>Raccourci de commande</French>
 		<Italian>Scelta rapida</Italian>
 	</TEXT>
 	<TEXT>
@@ -4792,7 +4815,8 @@
 			<Plural>0</Plural>
 		</German>
 		<Italian>
-			<Text>Ricerca</Text> <!-- city screen research, research panel hover upper right -->
+			<Text>Ricerca</Text>
+			<!-- city screen research, research panel hover upper right -->
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</Italian>
@@ -4836,6 +4860,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_CONCEPT_NATURAL_WONDERS_PEDIA</Tag>
 		<English>[H1]Natural Wonders[\H1][PARAGRAPH:1]Natural Wonders include marvels that truly display the grand beauty of the natural world. Natural Wonders permanently increase happiness when seen by a civilization and grants Gold for the first civilization. Cities get a free specialist for each Natural Wonder nearby.</English>
+		<French>[H1]Merveilles Naturelles[\H1][PARAGRAPH:1]Les merveilles naturelles incluent des splendeurs qui révèlent la grande beauté du monde naturel. Les merveilles naturelles augmentent durablement le bonheur quand une civilisation les découvre et accordent de l'or à la première civilisation. Les villes bénéficient d'un spécialiste gratuit pour chaque merveille naturelle à proximité.</French>
 		<German>[H1]Naturwunder[\H1][NEWLINE][NEWLINE]Hierbei handelt es sich um natürlich entstandene Wunder, die eindrucksvoll die Schönheit der uns umgebenden Natur zeigen. Städte profitieren auf vielfältige Weise von Naturwundern in ihrem Umfeld. Sie erhöhen nicht nur die Zufriedenheit der Bevölkerung, sondern sorgen auch dafür, dass sich ein zusätzlicher freier Spezialist ansiedelt. Die Zivilisation, die ein Naturwunder als erstes entdeckt, erhält außerdem einen Bonus in Form von [ICON_GOLD].</German>
 		<Polish>[H1]Nowe siedem cud&#243;w natury - projekt wyboru siedmiu nowych cud&#243;w &#156;wiata zaproponowany przez szwajcarska fundacje New7Wonders. Konkurs nawiazuje do wyboru Nowych siedmiu cud&#243;w &#156;wiata w lipcu 2007 roku. Wyboru dokonali internauci. Internauci z calego &#156;wiata w plebiscycie na nowe cuda &#156;wiata natury mogli glosowac na 261 kandydat&#243;w (podzielonych na 7 kategorii) w 222 panstwach do 7 lipca 2009 roku. Po zakonczeniu tego etapu glosowania zostalo wylonionych 77 kandydat&#243;w do nowej listy cud&#243;w &#156;wiata natury. Z tego grona eksperci pod przewodnictwem prof. Federico Mayora, bylego dyrektora generalnego UNESCO, wybrali 21 kandydat&#243;w, z kt&#243;rych internauci wylonili finalowa si&#243;demke. Ostateczne werdykty podano 11 listopada 2011 roku.</Polish>
 		<Russian>[H1]×óäî ïðèðîäû[\H1][PARAGRAPH:1]×óäåñà ïðèðîäû äåìîíñòðèðóþò ïîèñòèíå âåëè÷åñòâåííóþ êðàñîòó îêðóæàþùåãî ìèðà. Óðîâåíü ñ÷àñòüÿ ó, íàáëþäàþùåé ÷óäî ïðèðîäû, öèâèëèçàöèè ñòàáèëüíî ðàñòåò, à åãî ïåðâîîòêðûâàòåëü ïîëó÷àåò äåíåæíóþ ïðåìèþ. Êàæäîå ðàñïîëîæåííîå ïîáëèçîñòè ÷óäî ïðèðîäû ïðåäîñòàâëÿåò ãîðîäó áåñïëàòíîãî ñïåöèàëèñòà.</Russian>
@@ -5288,7 +5313,7 @@
 		<English>Mfg. Goods (Prod.)</English>
 		<French>March. (Prod.)</French>
 		<German>Ind. (Prod.)</German>
-		<Italian>Beni prodotti (produzione)</Italian>  <!-- info screen demo table -->
+		<Italian>Beni prodotti (produzione)</Italian> <!-- info screen demo table -->
 		<Spanish>Merc.fabric.(Prod)</Spanish>
 	</TEXT>
 	<TEXT>
@@ -6107,7 +6132,7 @@
 		<English>Increase of Expenses due to Inflation</English>
 		<French>Augmentation des dépenses due à l'inflation</French>
 		<German>Ausgabenanstieg durch Inflation</German>
-		<Italian>Aumento delle spese a causa dell'[COLOR_HIGHLIGHT_TEXT]inflazione dovuta all'accelerazione della produzione[COLOR_REVERT]</Italian>  <!-- financial advisor screen hover on inflation costs -->
+		<Italian>Aumento delle spese a causa dell'[COLOR_HIGHLIGHT_TEXT]inflazione dovuta all'accelerazione della produzione[COLOR_REVERT]</Italian> <!-- financial advisor screen hover on inflation costs -->
 		<Spanish>Aumento de los gastos debido a la inflación</Spanish>
 	</TEXT>
 	<TEXT>
@@ -6123,7 +6148,7 @@
 		<English>The Amount of Money Spent on Civics</English>
 		<French>Somme dépensée pour l'entretien doctrinal</French>
 		<German>Ausgaben für Staatsformen</German>
-		<Italian>La quantità d'oro spesa per i costi di mantenimento delle [COLOR_HIGHLIGHT_TEXT]forme di governo[COLOR_REVERT]</Italian>  <!-- financial advisor screen hover on civics maintenance costs -->
+		<Italian>La quantità d'oro spesa per i costi di mantenimento delle [COLOR_HIGHLIGHT_TEXT]forme di governo[COLOR_REVERT]</Italian> <!-- financial advisor screen hover on civics maintenance costs -->
 		<Spanish>Dinero gastado en principios</Spanish>
 	</TEXT>
 	<TEXT>
@@ -6131,7 +6156,7 @@
 		<English>Income collected from other civilizations</English>
 		<French>Recettes provenant des autres civilisations</French>
 		<German>Einnahmen von anderen Zivilisationen</German>
-		<Italian>La quantità d'oro raccolta dalle [COLOR_HIGHLIGHT_TEXT]altre civiltà[COLOR_REVERT]</Italian>  <!-- financial advisor screen hover on civics maintenance costs -->
+		<Italian>La quantità d'oro raccolta dalle [COLOR_HIGHLIGHT_TEXT]altre civiltà[COLOR_REVERT]</Italian> <!-- financial advisor screen hover on civics maintenance costs -->
 		<Spanish>Ingresos obtenidos de otras civilizaciones</Spanish>
 	</TEXT>
 	<TEXT>
@@ -6139,7 +6164,7 @@
 		<English>The Amount of Money Spent on Units in Enemy Territory</English>
 		<French>Somme dépensée pour les unités en territoire ennemi</French>
 		<German>Ausgaben für Einheiten auf feindlichem Territorium</German>
-		<Italian>La quantità d'oro spesa per i costi di mantenimento delle [COLOR_HIGHLIGHT_TEXT]unità in territorio nemico[COLOR_REVERT]</Italian>  <!-- financial advisor screen hover on civics maintenance costs -->
+		<Italian>La quantità d'oro spesa per i costi di mantenimento delle [COLOR_HIGHLIGHT_TEXT]unità in territorio nemico[COLOR_REVERT]</Italian> <!-- financial advisor screen hover on civics maintenance costs -->
 		<Spanish>Dinero gastado en unidades en territorio enemigo</Spanish>
 	</TEXT>
 	<TEXT>
@@ -6479,6 +6504,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_ERA_NANOTECH</Tag>
 		<English>Nanotech</English>
+		<French>Nanotechnologie</French>
 		<German>
 			<Text>Nanozeitalter:Nanozeitalters:Nanozeitalter:Nanozeitalter</Text>
 			<Gender>Neuter</Gender>
@@ -7874,14 +7900,18 @@
 	<TEXT>
 		<Tag>TXT_KEY_FINANCE_ADVISOR_INFLATION_0</Tag>
 		<English>[NEWLINE]Total costs before inflation = %d1[ICON_GOLD][NEWLINE]</English>
+		<French>[NEWLINE]Coûts totaux avant inflation = %d1[ICON_GOLD][NEWLINE]</French>
+		<Italian>[NEWLINE][COLOR_HIGHLIGHT_TEXT]%d1[COLOR_REVERT] [ICON_GOLD] costi di mantenimento totali senza inflazione[NEWLINE]</Italian>
 		<Russian>[NEWLINE]Общие затраты до инфляции = %d1[ICON_GOLD][NEWLINE]</Russian>
-		<Italian>[NEWLINE][COLOR_HIGHLIGHT_TEXT]%d1[COLOR_REVERT] [ICON_GOLD] costi di mantenimento totali senza inflazione[NEWLINE]</Italian> <!-- financial advisor screen-->
+		<!-- financial advisor screen-->
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_FINANCE_ADVISOR_INFLATION_1</Tag>
 		<English>[NEWLINE]Inflation rate = %d1.%d2%%[NEWLINE][NEWLINE]Cost due to Inflation = %d3[ICON_GOLD]</English>
+		<French>[NEWLINE]Taux d'inflation = %d1.%d2%%[NEWLINE][NEWLINE]Coût dû à l'inflation = %d3[ICON_GOLD]</French>
+		<Italian>[NEWLINE]Tasso di inflazione: [COLOR_HIGHLIGHT_TEXT]%d1.%d2%%[COLOR_REVERT][NEWLINE][NEWLINE]Costi d'inflazione: [COLOR_HIGHLIGHT_TEXT]%d3[COLOR_REVERT] [ICON_GOLD]</Italian>
 		<Russian>[NEWLINE]Уровень инфляции = %d1.%d2%%[NEWLINE][NEWLINE]Стоимость из-за инфляции = %d3[ICON_GOLD]</Russian>
-		<Italian>[NEWLINE]Tasso di inflazione: [COLOR_HIGHLIGHT_TEXT]%d1.%d2%%[COLOR_REVERT][NEWLINE][NEWLINE]Costi d'inflazione: [COLOR_HIGHLIGHT_TEXT]%d3[COLOR_REVERT] [ICON_GOLD]</Italian> <!-- financial advisor screen-->
+		<!-- financial advisor screen-->
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_FINANCE_ADVISOR_SOURCES_OF_INFLATION</Tag>
@@ -7940,50 +7970,66 @@
 	<TEXT>
 		<Tag>TXT_KEY_FINANCE_ADVISOR_UNIT_UPKEEP_CIVILIAN</Tag>
 		<English>[SPACE]Civilian Unit upkeep:[NEWLINE][SPACE][SPACE] * Upkeep: %s1 [ICON_GOLD]</English>
+		<French>[SPACE]Entretien des unités civiles:[NEWLINE][SPACE][SPACE] * Entretien : %s1 [ICON_GOLD]</French>
+		<Italian>[SPACE]Unità civili:[NEWLINE][NEWLINE][SPACE][SPACE][ICON_BULLET]Costi di mantenimento: [COLOR_HIGHLIGHT_TEXT]%s1[COLOR_REVERT] [ICON_GOLD]</Italian>
 		<Russian>[SPACE]Содержание гражд. юнитов:[NEWLINE][SPACE][SPACE] * Содержание: %s1 [ICON_GOLD]</Russian>
-		<Italian>[SPACE]Unità civili:[NEWLINE][NEWLINE][SPACE][SPACE][ICON_BULLET]Costi di mantenimento: [COLOR_HIGHLIGHT_TEXT]%s1[COLOR_REVERT] [ICON_GOLD]</Italian> <!-- financial advisor screen hover on unit maintenance costs -->
+		<!-- financial advisor screen hover on unit maintenance costs -->
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_FINANCE_ADVISOR_UNIT_UPKEEP_FREE</Tag>
 		<English>[NEWLINE][SPACE][SPACE] * Free: %d1 [ICON_GOLD]</English>
+		<French>[NEWLINE][SPACE][SPACE] * Gratuit : %d1 [ICON_GOLD]</French>
+		<Italian>[NEWLINE][SPACE][SPACE][ICON_BULLET]Gratuite: [COLOR_HIGHLIGHT_TEXT]%d1[COLOR_REVERT] [ICON_GOLD]</Italian>
 		<Russian>[NEWLINE][SPACE][SPACE] * Бесплатно: %d1 [ICON_GOLD]</Russian>
-		<Italian>[NEWLINE][SPACE][SPACE][ICON_BULLET]Gratuite: [COLOR_HIGHLIGHT_TEXT]%d1[COLOR_REVERT] [ICON_GOLD]</Italian> <!-- financial advisor screen hover on unit maintenance costs -->
+		<!-- financial advisor screen hover on unit maintenance costs -->
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_FINANCE_ADVISOR_UNIT_UPKEEP_HANDICAP_ADJUSTMENT</Tag>
 		<English>[NEWLINE][ICON_BULLET]Handicap adjustment: %d1 [ICON_GOLD][NEWLINE]</English>
+		<French>[NEWLINE][ICON_BULLET]Ajustement du handicap : %d1 [ICON_GOLD][NEWLINE]</French>
+		<Italian>[NEWLINE][ICON_BULLET]Livello di difficoltà: [COLOR_HIGHLIGHT_TEXT]%d1[COLOR_REVERT] [ICON_GOLD][NEWLINE]</Italian>
 		<Russian>[NEWLINE][ICON_BULLET]Отладка убытков: %d1 [ICON_GOLD][NEWLINE]</Russian>
-		<Italian>[NEWLINE][ICON_BULLET]Livello di difficoltà: [COLOR_HIGHLIGHT_TEXT]%d1[COLOR_REVERT] [ICON_GOLD][NEWLINE]</Italian> <!-- financial advisor screen hover on unit maintenance costs -->
+		<!-- financial advisor screen hover on unit maintenance costs -->
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_FINANCE_ADVISOR_UNIT_UPKEEP_MILITARY</Tag>
 		<English>[SPACE]Military Unit upkeep:[NEWLINE][SPACE][SPACE] * Upkeep: %s1 [ICON_GOLD]</English>
+		<French>[SPACE]Entretien des unités militaires:[NEWLINE][SPACE][SPACE] * Entretien : %s1 [ICON_GOLD]</French>
+		<Italian>[SPACE]Unità militari:[NEWLINE][NEWLINE][SPACE][SPACE][ICON_BULLET]Costi di mantenimento: [COLOR_HIGHLIGHT_TEXT]%s1[COLOR_REVERT] [ICON_GOLD]</Italian>
 		<Russian>[SPACE]Содержание отрядов:[NEWLINE][SPACE][SPACE] * Содержание: %s1 [ICON_GOLD]</Russian>
-		<Italian>[SPACE]Unità militari:[NEWLINE][NEWLINE][SPACE][SPACE][ICON_BULLET]Costi di mantenimento: [COLOR_HIGHLIGHT_TEXT]%s1[COLOR_REVERT] [ICON_GOLD]</Italian> <!-- financial advisor screen hover on unit maintenance costs -->
+		<!-- financial advisor screen hover on unit maintenance costs -->
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_FINANCE_ADVISOR_UNIT_UPKEEP_MOD_CIVIC</Tag>
 		<English>[NEWLINE][SPACE][SPACE] * Civic change: %s1 [ICON_GOLD]</English>
+		<French>[NEWLINE][SPACE][SPACE] * Changement civique : %s1 [ICON_GOLD]</French>
+		<Italian>[NEWLINE]SPACE][SPACE][ICON_BULLET]Cambio di forma di governo: [COLOR_HIGHLIGHT_TEXT]%s1[COLOR_REVERT] [ICON_GOLD]</Italian>
 		<Russian>[NEWLINE][SPACE][SPACE] * Смена парадигм: %s1 [ICON_GOLD]</Russian>
-		<Italian>[NEWLINE]SPACE][SPACE][ICON_BULLET]Cambio di forma di governo: [COLOR_HIGHLIGHT_TEXT]%s1[COLOR_REVERT] [ICON_GOLD]</Italian> <!-- financial advisor screen hover on unit maintenance costs -->
+		<!-- financial advisor screen hover on unit maintenance costs -->
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_FINANCE_ADVISOR_UNIT_UPKEEP_MOD_TRAIT</Tag>
 		<English>[NEWLINE][SPACE][SPACE] * Trait change: %s1 [ICON_GOLD]</English>
+		<French>[NEWLINE][SPACE][SPACE] * Changement de trait : %s1 [ICON_GOLD]</French>
+		<Italian>[NEWLINE]SPACE][SPACE][ICON_BULLET]Cambio di tratto del leader: [COLOR_HIGHLIGHT_TEXT]%s1[COLOR_REVERT] [ICON_GOLD]</Italian>
 		<Russian>[NEWLINE][SPACE][SPACE] * Смена качеств лидера: %s1 [ICON_GOLD]</Russian>
-		<Italian>[NEWLINE]SPACE][SPACE][ICON_BULLET]Cambio di tratto del leader: [COLOR_HIGHLIGHT_TEXT]%s1[COLOR_REVERT] [ICON_GOLD]</Italian> <!-- financial advisor screen hover on unit maintenance costs -->
+		<!-- financial advisor screen hover on unit maintenance costs -->
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_FINANCE_ADVISOR_UNIT_UPKEEP_TOTAL_1</Tag>
 		<English>[NEWLINE][SPACE][SPACE] * Total: %d1 [ICON_GOLD][NEWLINE]</English>
+		<French>[NEWLINE][SPACE][SPACE] * Total : %d1 [ICON_GOLD][NEWLINE]</French>
+		<Italian>[NEWLINE][SPACE][SPACE][ICON_BULLET]Totale: [COLOR_HIGHLIGHT_TEXT]%d1[COLOR_REVERT] [ICON_GOLD][NEWLINE]</Italian>
 		<Russian>[NEWLINE][SPACE][SPACE] * Итого: %d1 [ICON_GOLD][NEWLINE]</Russian>
-		<Italian>[NEWLINE][SPACE][SPACE][ICON_BULLET]Totale: [COLOR_HIGHLIGHT_TEXT]%d1[COLOR_REVERT] [ICON_GOLD][NEWLINE]</Italian> <!-- financial advisor screen hover on unit maintenance costs -->
+		<!-- financial advisor screen hover on unit maintenance costs -->
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_FINANCE_ADVISOR_UNIT_UPKEEP_TOTAL_2</Tag>
 		<English>[NEWLINE]--------------------------------[NEWLINE] Total unit upkeep: %d1 [ICON_GOLD]</English>
-		<Italian>[NEWLINE]--------------------------------[NEWLINE] Costi di mantenimento totali unità: [COLOR_HIGHLIGHT_TEXT]%d1[COLOR_REVERT] [ICON_GOLD]</Italian> <!-- financial advisor screen hover on unit maintenance costs -->
+		<French>[NEWLINE]--------------------------------[NEWLINE] Entretien total des unités : %d1 [ICON_GOLD]</French>
+		<Italian>[NEWLINE]--------------------------------[NEWLINE] Costi di mantenimento totali unità: [COLOR_HIGHLIGHT_TEXT]%d1[COLOR_REVERT] [ICON_GOLD]</Italian>
 		<Russian>[NEWLINE]--------------------------------[NEWLINE] Общие затраты на содержание: %d1 [ICON_GOLD]</Russian>
+		<!-- financial advisor screen hover on unit maintenance costs -->
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_FINANCIAL_ADVISOR_COST_PER_TURN</Tag>
@@ -8487,11 +8533,12 @@
 	<TEXT>
 		<Tag>TXT_KEY_GAMESPEED_EONS</Tag>
 		<English>Eons</English>
-		<Italian>Eoni</Italian>
+		<French>Ères</French>
 		<German>Äonen</German>
-		<Spanish>Eones</Spanish>
+		<Italian>Eoni</Italian>
 		<Polish>Wieki</Polish>
 		<Russian>Вечная</Russian>
+		<Spanish>Eones</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMESPEED_EONS_HELP</Tag>
@@ -8943,6 +8990,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_GRAPHICOPTION_LOWRES_TEXTURES_HELP</Tag>
 		<English>Lower resolution textures will be used.[NEWLINE]Causes graphical glitches when selected.</English>
+		<French>Des textures de résolution inférieure seront utilisées.[NEWLINE]Peut causer des anomalies graphiques lorsqu'elles sont sélectionnées.</French>
 		<Italian>[BOLD]Le texture usate saranno in [COLOR_HIGHLIGHT_TEXT]bassa risoluzione[COLOR_REVERT]  (può causare difetti grafici)[\BOLD]</Italian>
 		<Russian>Будут использоваться текстуры более низкого разрешения.[NEWLINE]Вызывает графические ошибки при активации.</Russian>
 	</TEXT>
@@ -8985,6 +9033,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_GRAPHIC_OPTION_FROZEN_ANIMATIONS_HELP</Tag>
 		<English>No unit or improvement animations.[NEWLINE]Causes graphical glitches when selected.</English>
+		<French>Pas d'animations d'unités ou d'améliorations.[NEWLINE]Peut causer des anomalies graphiques lorsqu'elles sont sélectionnées.</French>
 		<Italian>[BOLD]Le animazioni delle unità e dei miglioramenti [COLOR_HIGHLIGHT_TEXT]vengono disattivate[COLOR_REVERT] (può causare difetti grafici)[\BOLD]</Italian>
 		<Russian>У подразделений и улучшений не будет анимаций.[NEWLINE]Вызывает графические ошибки при активации.</Russian>
 	</TEXT>
@@ -9611,6 +9660,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENTHELP_LESS_GROWTH</Tag>
 		<English>[ICON_BULLET]Gives terrain a lower chance to spread</English>
+		<French>[ICON_BULLET]Donne au terrain une chance réduite de se propager</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENTHELP_MORE_GROWTH</Tag>
@@ -9639,6 +9689,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENTHELP_REQUIRES_IRRIGATION</Tag>
 		<English>[ICON_BULLET]Requires Irrigation</English>
+		<French>[ICON_BULLET]Nécessite une irrigation</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENTHELP_REQUIRES_RIVER</Tag>
@@ -9778,7 +9829,7 @@
 		<English>Cities Built</English>
 		<French>Villes fondées</French>
 		<German>Gegründete Städte</German>
-		<Italian>Città fondate::</Italian> <!-- info screen unit and building tab -->
+		<Italian>Città fondate</Italian> <!-- info screen unit and building tab -->
 		<Spanish>Ciudades construidas</Spanish>
 		<Russian>Построено городов</Russian>
 	</TEXT>
@@ -10002,11 +10053,13 @@
 	<TEXT>
 		<Tag>TXT_KEY_INTERFACEMODE_DOTMAP</Tag>
 		<English>Dot map mode</English>
+		<French>Mode carte par points</French>
 		<Italian>Modalità Dotmap</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_INTERFACEMODE_DOTMAP_HELP</Tag>
 		<English>[ICON_BULLET]Resize: Shift+X</English>
+		<French>[ICON_BULLET]Redimensionner : Maj+X</French>
 		<Italian>[ICON_BULLET]Cambia dimensione: Shift+X</Italian>
 	</TEXT>
 	<TEXT>
@@ -10834,7 +10887,7 @@
 		<English>Hide world wonders</English>
 		<French>Masquer les Merveilles mondiales</French>
 		<German>Verberge Weltwunder</German>
-		<Italian>Escludi [COLOR_HIGHLIGHT_TEXT]grandi meraviglie[COLOR_REVERT]</Italian>  <!-- city screen building filter option -->
+		<Italian>Escludi [COLOR_HIGHLIGHT_TEXT]grandi meraviglie[COLOR_REVERT]</Italian> <!-- city screen building filter option -->
 		<Spanish>Ocultar Maravillas del mundo</Spanish>
 		<Polish>Ukryj cuda &#156;wiata</Polish>
 		<Russian>Скрыть великие чудеса</Russian>
@@ -10844,7 +10897,7 @@
 		<English>Hide national wonders</English>
 		<French>Masquer les Merveilles nationales</French>
 		<German>Verberge nationale Wunder</German>
-		<Italian>Escludi [COLOR_HIGHLIGHT_TEXT]meraviglie nazionali[COLOR_REVERT]</Italian>  <!-- city screen building filter option -->
+		<Italian>Escludi [COLOR_HIGHLIGHT_TEXT]meraviglie nazionali[COLOR_REVERT]</Italian> <!-- city screen building filter option -->
 		<Spanish>Ocultar Maravillas nacionales</Spanish>
 		<Polish>Ukryj cuda narodowe</Polish>
 		<Russian>Скрыть национальные чудеса</Russian>
@@ -11094,7 +11147,7 @@
 		<English>Show only air units</English>
 		<French>Voir uniquement les unités aériennes</French>
 		<German>Zeige nur Lufteinheiten</German>
-		<Italian>Solo unità [COLOR_HIGHLIGHT_TEXT]aeree[COLOR_REVERT]</Italian>  <!-- city screen unit filter option -->
+		<Italian>Solo unità [COLOR_HIGHLIGHT_TEXT]aeree[COLOR_REVERT]</Italian> <!-- city screen unit filter option -->
 		<Spanish>Mostrar solo unidades aéreas</Spanish>
 		<Polish>Poka&#191; tylko jednostki powietrzne</Polish>
 		<Russian>Îòáðàæàòü òîëüêî âîçä. åäèíèöû</Russian>
@@ -11104,7 +11157,7 @@
 		<English>Show trainable units only</English>
 		<French>Voir uniquement les unités recrutables</French>
 		<German>Zeige nur Einheiten, die ausgebildet werden können</German>
-		<Italian>Solo unità [COLOR_HIGHLIGHT_TEXT]addestrabili[COLOR_REVERT]</Italian>  <!-- city screen unit filter option -->
+		<Italian>Solo unità [COLOR_HIGHLIGHT_TEXT]addestrabili[COLOR_REVERT]</Italian> <!-- city screen unit filter option -->
 		<Spanish>Mostrar solo unidades entrenables</Spanish>
 		<Polish>Poka&#191; jednostki kt&#243;re mog&#185; zosta&#230; wyszkolone</Polish>
 		<Russian>Îòáðàæàòü òîëüêî îáó÷àåìûå îòðÿäû</Russian>
@@ -11114,7 +11167,7 @@
 		<English>Show only civilian units</English>
 		<French>Voir uniquement les unités civiles</French>
 		<German>Zeige nur zivile Einheiten</German>
-		<Italian>Solo unità [COLOR_HIGHLIGHT_TEXT]civili[COLOR_REVERT]</Italian>  <!-- city screen unit filter option -->
+		<Italian>Solo unità [COLOR_HIGHLIGHT_TEXT]civili[COLOR_REVERT]</Italian> <!-- city screen unit filter option -->
 		<Spanish>Mostrar solo unidades civiles</Spanish>
 		<Polish>Poka&#191; tylko jednostki cywilne</Polish>
 		<Russian>Îòáðàæàòü òîëüêî ãðàæäàíñêèõ</Russian>
@@ -11124,7 +11177,7 @@
 		<English>Show only defense units</English>
 		<French>Voir uniquement les unités défensives</French>
 		<German>Zeige nur Verteidigungseinheiten</German>
-		<Italian>Solo unità [COLOR_HIGHLIGHT_TEXT]difensive[COLOR_REVERT]</Italian>  <!-- city screen unit filter option -->
+		<Italian>Solo unità [COLOR_HIGHLIGHT_TEXT]difensive[COLOR_REVERT]</Italian> <!-- city screen unit filter option -->
 		<Spanish>Mostrar solo unidades defensivas</Spanish>
 		<Polish>Poka&#191; tylko jednostki obronne</Polish>
 		<Russian>Îòáðàæàòü òîëüêî çàùèòíèêîâ</Russian>
@@ -11134,7 +11187,7 @@
 		<English>Show only hero units</English>
 		<French>Voir uniquement les unités héroïques</French>
 		<German>Zeige nur Helden</German>
-		<Italian>Solo unità [COLOR_HIGHLIGHT_TEXT]eroe[COLOR_REVERT]</Italian>  <!-- city screen unit filter option -->
+		<Italian>Solo unità [COLOR_HIGHLIGHT_TEXT]eroe[COLOR_REVERT]</Italian> <!-- city screen unit filter option -->
 		<Spanish>Mostrar solo héroes</Spanish>
 		<Polish>Poka&#191; tylko jednostki bohater&#243;w</Polish>
 		<Russian>Îòîáðàæàòü òîëüêî ãåðîåâ</Russian>
@@ -11144,7 +11197,7 @@
 		<English>Show only land units</English>
 		<French>Voir uniquement les unités terrestres</French>
 		<German>Zeige nur Landeinheiten</German>
-		<Italian>Solo unità [COLOR_HIGHLIGHT_TEXT]terrestri[COLOR_REVERT]</Italian>  <!-- city screen unit filter option -->
+		<Italian>Solo unità [COLOR_HIGHLIGHT_TEXT]terrestri[COLOR_REVERT]</Italian> <!-- city screen unit filter option -->
 		<Spanish>Mostrar solo unidades terrestres</Spanish>
 		<Polish>Poka&#191; tylko jednostki l&#185;dowe</Polish>
 		<Russian>Îòîáðàæàòü òîëüêî íàçåìíûå îòðÿäû</Russian>
@@ -11154,7 +11207,7 @@
 		<English>Show only military units</English>
 		<French>Voir uniquement les unités militaires</French>
 		<German>Zeige nur militärische Einheiten</German>
-		<Italian>Solo unità [COLOR_HIGHLIGHT_TEXT]militari[COLOR_REVERT]</Italian>  <!-- city screen unit filter option -->
+		<Italian>Solo unità [COLOR_HIGHLIGHT_TEXT]militari[COLOR_REVERT]</Italian> <!-- city screen unit filter option -->
 		<Spanish>Mostrar solo unidades militares</Spanish>
 		<Polish>Poka&#191; tylko jednostki militarne</Polish>
 		<Russian>Îòîáðàæàòü òîëüêî âîåííûå îòðÿäû</Russian>
@@ -11164,7 +11217,7 @@
 		<English>Show only missionary units</English>
 		<French>Voir uniquement les unités missionnaires</French>
 		<German>Zeige nur Missionare</German>
-		<Italian>Solo unità [COLOR_HIGHLIGHT_TEXT]missionario[COLOR_REVERT]</Italian>  <!-- city screen unit filter option -->
+		<Italian>Solo unità [COLOR_HIGHLIGHT_TEXT]missionario[COLOR_REVERT]</Italian> <!-- city screen unit filter option -->
 		<Spanish>Mostrar solo misioneros</Spanish>
 		<Polish>Poka&#191; tylko jednostki misjonarzy</Polish>
 		<Russian>Îòîáðàæàòü òîëüêî ìèññèîíåðîâ</Russian>
@@ -11174,7 +11227,7 @@
 		<English>Show only mounted units</English>
 		<French>Voir uniquement les unités montées</French>
 		<German>Zeige nur berittene Einheiten</German>
-		<Italian>Solo unità [COLOR_HIGHLIGHT_TEXT]su cavalcatura[COLOR_REVERT]</Italian>  <!-- city screen unit filter option -->
+		<Italian>Solo unità [COLOR_HIGHLIGHT_TEXT]su cavalcatura[COLOR_REVERT]</Italian> <!-- city screen unit filter option -->
 		<Spanish>Mostrar solo unidades montadas</Spanish>
 		<Polish>Poka&#191; tylko jednostki konne</Polish>
 		<Russian>Îòîáðàæàòü òîëüêî âåðõîâûå îòðÿäû</Russian>
@@ -11184,7 +11237,7 @@
 		<English>Show only siege units</English>
 		<French>Voir uniquement les unités de sièsge</French>
 		<German>Zeige nur Belagerungseinheiten</German>
-		<Italian>Solo unità [COLOR_HIGHLIGHT_TEXT]d'assedio[COLOR_REVERT]</Italian>  <!-- city screen unit filter option -->
+		<Italian>Solo unità [COLOR_HIGHLIGHT_TEXT]d'assedio[COLOR_REVERT]</Italian> <!-- city screen unit filter option -->
 		<Spanish>Mostrar solo armas de asedio</Spanish>
 		<Polish>Poka&#191; tylko jednostki obl&#234;&#191;nicze</Polish>
 		<Russian>Îòîáðàæàòü òîëüêî îñàäíûå îòðÿäû</Russian>
@@ -11194,7 +11247,7 @@
 		<English>Show only water units</English>
 		<French>Voir uniquement les unités maritimes</French>
 		<German>Zeige nur Marineeinheiten</German>
-		<Italian>Solo unità [COLOR_HIGHLIGHT_TEXT]navali[COLOR_REVERT]</Italian>  <!-- city screen unit filter option -->
+		<Italian>Solo unità [COLOR_HIGHLIGHT_TEXT]navali[COLOR_REVERT]</Italian> <!-- city screen unit filter option -->
 		<Spanish>Mostrar solo unidades acuáticas</Spanish>
 		<Polish>Poka&#191; tylko jednostki morskie</Polish>
 		<Russian>Îòîáðàæàòü òîëüêî âîäíûå îòðÿäû</Russian>
@@ -11204,7 +11257,7 @@
 		<English>Show only worker units</English>
 		<French>Voir uniquement les unités ouvrièsres</French>
 		<German>Zeige nur Arbeitseinheiten</German>
-		<Italian>Solo unità [COLOR_HIGHLIGHT_TEXT]lavoratore[COLOR_REVERT]</Italian>  <!-- city screen unit filter option -->
+		<Italian>Solo unità [COLOR_HIGHLIGHT_TEXT]lavoratore[COLOR_REVERT]</Italian> <!-- city screen unit filter option -->
 		<Spanish>Mostrar solo trabajadores</Spanish>
 		<Polish>Poka&#191; tylko robotnik&#243;w</Polish>
 		<Russian>Îòîáðàæàòü òîëüêî ðàáîòíèêîâ</Russian>
@@ -11331,7 +11384,7 @@
 		<Tag>TXT_KEY_MAIN_CITY_NATIONAL_WONDERS</Tag>
 		<English>N. W</English>
 		<French>Merv.N</French>
-		<Italian>Meraviglie nazionali:</Italian>  <!-- city screen on the city name bar in azure upper left -->
+		<Italian>Meraviglie nazionali:</Italian> <!-- city screen on the city name bar in azure upper left -->
 		<Spanish>M. N</Spanish>
 		<Polish>C.N</Polish>
 		<Russian>Нац. Ч.</Russian>
@@ -11381,23 +11434,28 @@
 	<TEXT>
 		<Tag>TXT_KEY_MAP_CISLUNAR</Tag>
 		<English>Cislunar Space</English>
+		<French>Espace cislunaire</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MAP_DISTANT_COSMOS</Tag>
 		<English>Distant Cosmos</English>
+		<French>Cosmos lointain</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MAP_EARTH</Tag>
 		<English>Earth</English>
+		<French>Terre</French>
 		<Russian>Планета Земля</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MAP_INNER_SOLAR_SYSTEM</Tag>
 		<English>Inner Solar System</English>
+		<French>Système solaire interne</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MAP_LOCAL_GROUP</Tag>
 		<English>Local Group</English>
+		<French>Groupe local</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MAP_MARS</Tag>
@@ -11406,22 +11464,27 @@
 	<TEXT>
 		<Tag>TXT_KEY_MAP_MILKY_WAY</Tag>
 		<English>Milky Way</English>
+		<French>Voie lactée</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MAP_MOON</Tag>
 		<English>Moon</English>
+		<French>Lune</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MAP_NEARBY_STARS</Tag>
 		<English>Nearby Stars</English>
+		<French>Étoiles proches</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MAP_ORION_ARM</Tag>
 		<English>Orion Arm</English>
+		<French>Bras d'Orion</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MAP_OUTER_SOLAR_SYSTEM</Tag>
 		<English>Outer Solar System</English>
+		<French>Système solaire externe</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MAP_SCRIPT_1_PER_PLAYER</Tag>
@@ -11637,7 +11700,7 @@
 		<Italian>Inversione</Italian>
 		<Spanish>Inversión</Spanish>
 	</TEXT>
-		<TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_MAP_SCRIPT_ISLANDS</Tag>
 		<English>Islands</English>
 		<French>Iles</French>
@@ -12188,10 +12251,12 @@
 	<TEXT>
 		<Tag>TXT_KEY_MAP_SUBTERRAIN</Tag>
 		<English>Underground</English>
+		<French>Souterrain</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MAP_SUBTERRANEAN</Tag>
 		<English>Underground</English>
+		<French>Souterrain</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MAP_TITAN</Tag>
@@ -12201,21 +12266,25 @@
 	<TEXT>
 		<Tag>TXT_KEY_MAP_TRANSNEPTUNIAN</Tag>
 		<English>Kuiper Belt</English>
+		<French>Ceinture de Kuiper</French>
 		<Russian>Пояс Койпера</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MAP_UNIVERSE</Tag>
 		<English>Universe</English>
+		<French>Univers</French>
 		<Russian>Вселенная</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MAP_VENUS</Tag>
 		<English>Venus</English>
+		<French>Vénus</French>
 		<Russian>Венера</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MAP_VIRGO_SUPERCLUSTER</Tag>
 		<English>Virgo Supercluster</English>
+		<French>Superamas de la Vierge</French>
 		<Russian>Сверхскопление Девы</Russian>
 	</TEXT>
 	<TEXT>
@@ -12614,6 +12683,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_MEMORY_USED_NUKE</Tag>
 		<English>"You used nukes!"</English>
+		<French>"Vous avez utilisé des armes nucléaires !"</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MEMORY_VOTED_AGAINST_US</Tag>
@@ -12756,6 +12826,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_MISC_ADJ_DMG_HOVER</Tag>
 		<English>Adjacent Damage to Attacking Units: %D1%%</English>
+		<French>Dégâts adjacents aux unités attaquantes : %D1%%</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISC_ADVANCED_START_PEACE_REMAINING</Tag>
@@ -13372,7 +13443,7 @@
 		<English>%d1%[ICON_DEFENSE] from Buildings</English>
 		<French>%d1%[ICON_DEFENSE] des Bâtiments</French>
 		<German>%d1%[ICON_DEFENSE] von Geb#228;uden</German>
-		<Italian>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]%d1%[COLOR_REVERT] [ICON_DEFENSE] dagli edifici</Italian>  <!-- city screen hover defense perc upper right --> 
+		<Italian>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]%d1%[COLOR_REVERT] [ICON_DEFENSE] dagli edifici</Italian> <!-- city screen hover defense perc upper right -->
 		<Spanish>%d1%[ICON_DEFENSE] por edificios</Spanish>
 		<Polish>%d1%[ICON_DEFENSE] z budynk&#243;w</Polish>
 		<Russian>%d1%[ICON_DEFENSE] îò çäàíèé</Russian>
@@ -13579,6 +13650,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_MISC_CITY_MILITIA_EMERGED</Tag>
 		<English>%s1_CivAdj influence in the city (%d2.%d3%% of %d4%% needed) is insufficient to stop organization of local militia!</English>
+		<French>L'influence %s1_CivAdj dans la ville (%d2.%d3%% sur %d4%% nécessaire) est insuffisante pour empêcher l'organisation de la milice locale !</French>
 		<Italian>L'influenza della %s1_CivAdj nella città (necessario il %d2.%d3%% di %d4%%) non è sufficiente per fermare il proliferare di una milizia locale!</Italian> <!-- Message in the Event Log -->
 	</TEXT>
 	<TEXT>
@@ -13884,7 +13956,7 @@
 		<English>Culture: %d1_Curr/%d2_Need [ICON_CULTURE]</English>
 		<French>Culture : %d1_Curr/%d2_Need [ICON_CULTURE]</French>
 		<German>Kultur: %d1_Curr/%d2_Need [ICON_CULTURE]</German>
-		<Italian>Cultura: [COLOR_HIGHLIGHT_TEXT]%d1_Curr[COLOR_REVERT] / [COLOR_HIGHLIGHT_TEXT]%d2_Need[COLOR_REVERT] [ICON_CULTURE]</Italian> <!-- city screen hover culture bar lower right --> 
+		<Italian>Cultura: [COLOR_HIGHLIGHT_TEXT]%d1_Curr[COLOR_REVERT] / [COLOR_HIGHLIGHT_TEXT]%d2_Need[COLOR_REVERT] [ICON_CULTURE]</Italian> <!-- city screen hover culture bar lower right -->
 		<Spanish>Cultura: %d1_Curr/%d2_Need [ICON_CULTURE]</Spanish>
 	</TEXT>
 	<TEXT>
@@ -13892,7 +13964,7 @@
 		<English>%d1%[ICON_DEFENSE] from Culture</English>
 		<French>%d1%[ICON_DEFENSE] de la culture</French>
 		<German>%d1%[ICON_DEFENSE] von Kultur</German>
-		<Italian>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]%d1%[COLOR_REVERT] [ICON_DEFENSE] dal tasso di cultura</Italian> <!-- city screen hover defense perc upper right --> 
+		<Italian>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]%d1%[COLOR_REVERT] [ICON_DEFENSE] dal tasso di cultura</Italian> <!-- city screen hover defense perc upper right -->
 		<Spanish>%d1%[ICON_DEFENSE] por cultura</Spanish>
 		<Polish>%d1%[ICON_DEFENSE] z kultury</Polish>
 		<Russian>%d1%[ICON_DEFENSE] îò óðîâ. êóëüòóðû</Russian>
@@ -13902,7 +13974,7 @@
 		<English>Culture: %s1_Curr/%d2_Need [ICON_CULTURE]</English>
 		<French>Culture : %s1_Curr/%d2_Need [ICON_CULTURE]</French>
 		<German>Kultur: %s1_Curr/%d2_Need [ICON_CULTURE]</German>
-		<Italian>Cultura: [COLOR_HIGHLIGHT_TEXT]%s1_Curr[COLOR_REVERT] / [COLOR_HIGHLIGHT_TEXT]%d2_Need[COLOR_REVERT] [ICON_CULTURE]</Italian> <!-- city screen hover culture bar lower right --> 
+		<Italian>Cultura: [COLOR_HIGHLIGHT_TEXT]%s1_Curr[COLOR_REVERT] / [COLOR_HIGHLIGHT_TEXT]%d2_Need[COLOR_REVERT] [ICON_CULTURE]</Italian> <!-- city screen hover culture bar lower right -->
 		<Spanish>Cultura: %s1_Curr/%d2_Need [ICON_CULTURE]</Spanish>
 	</TEXT>
 	<TEXT>
@@ -14253,16 +14325,19 @@
 	<TEXT>
 		<Tag>TXT_KEY_MISC_DISCOVERED_NEW_RESOURCE_IMPROVEMENT</Tag>
 		<English>Industrious workers outside of %s1_CityName have discovered a source of [COLOR_HIGHLIGHT_TEXT]%s2_BonusName[COLOR_REVERT]!</English>
+		<French>Des travailleurs industrieux aux alentours de %s1_CityName ont découvert une source de [COLOR_HIGHLIGHT_TEXT]%s2_BonusName[COLOR_REVERT] !</French>
 		<Italian>Dei lavoratori vicino alla città di %s1_CityName hanno scoperto una fonte della risorsa [COLOR_HIGHLIGHT_TEXT]%s2_BonusName[COLOR_REVERT].</Italian> <!-- Message in the Event Log -->
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISC_DISCOVERED_NEW_RESOURCE_CITY</Tag>
 		<English>Citizens of %s1_CityName have stumbled upon a nearby source of [COLOR_HIGHLIGHT_TEXT]%s2_BonusName[COLOR_REVERT]!</English>
+		<French>Les citoyens de %s1_CityName ont découvert une source proche de [COLOR_HIGHLIGHT_TEXT]%s2_BonusName[COLOR_REVERT] !</French>
 		<Italian>I cittadini di %s1_CityName si sono imbattuti in una fonte della risorsa [COLOR_HIGHLIGHT_TEXT]%s2_BonusName[COLOR_REVERT].</Italian> <!-- Message in the Event Log -->
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISC_DISCOVERED_NEW_RESOURCE_VOLCANO</Tag>
 		<English>Beneath the remnants of the old volcano a source of [COLOR_HIGHLIGHT_TEXT]obsidian[COLOR_REVERT] has been discovered!</English>
+		<French>Sous les restes de l'ancien volcan, une source d'[COLOR_HIGHLIGHT_TEXT]obsidienne[COLOR_REVERT] a été découverte !</French>
 		<Italian>Sotto i resti di un antico vulcano è stata scoperta una fonte della risorsa [COLOR_HIGHLIGHT_TEXT]Ossidiana[COLOR_REVERT].</Italian> <!-- Message in the Event Log -->
 	</TEXT>
 	<TEXT>
@@ -14700,7 +14775,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_MISC_FOOD_THRESHOLD</Tag>
 		<English>Food: %d1/%d2 [ICON_FOOD][NEWLINE]* %d3 [ICON_FOOD] stored for the next growth cycle.</English>
-		<French>Nourriture : %d1_Num/%d2_Threshold [ICON_FOOD][NEWLINE]* %d3 [ICON_FOOD] stored for the next growth cycle.</French>
+		<French>Nourriture : %d1_Num/%d2_Threshold [ICON_FOOD][NEWLINE]* %d3 [ICON_FOOD] stocké pour le prochain cycle de croissance.</French>
 		<German>Nahrung: %d1_Num/%d2_Threshold [ICON_FOOD][NEWLINE]* %d3 [ICON_FOOD] stored for the next growth cycle.</German>
 		<Italian>Cibo: [COLOR_HIGHLIGHT_TEXT]%d1_Num[COLOR_REVERT] / [COLOR_HIGHLIGHT_TEXT]%d2_Threshold[COLOR_REVERT]  [ICON_FOOD]</Italian>
 		<Spanish>Alimentos: %d1_Num/%d2_Threshold [ICON_FOOD][NEWLINE]* %d3 [ICON_FOOD] stored for the next growth cycle.</Spanish>
@@ -14937,6 +15012,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_MISC_GREAT_MILITARY_PERSON_BREAKDOWN</Tag>
 		<English>%s1_GMP: %d2_Curr</English>
+		<French>%s1_GMP : %d2_Actuel</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISC_GREAT_PERSON</Tag>
@@ -15019,7 +15095,7 @@
 		<English>%D1_Change[ICON_UNHEALTHY] from Poisoned Water</English>
 		<French>%D1_Change[ICON_UNHEALTHY] en raison de l'eau toxique</French>
 		<German>%D1_Change[ICON_UNHEALTHY] durch vergiftetes Wasser</German>
-		<Italian>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]%D1_Change[COLOR_REVERT] [ICON_UNHEALTHY] dall'acqua avvelenata</Italian> <!-- city screen health panel hover --> 
+		<Italian>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]%D1_Change[COLOR_REVERT] [ICON_UNHEALTHY] dall'acqua avvelenata</Italian> <!-- city screen health panel hover -->
 		<Spanish>%D1_Change [ICON_UNHEALTHY] por agua envenenada</Spanish>
 	</TEXT>
 	<TEXT>
@@ -15052,7 +15128,7 @@
 		<English>%D1_Change[ICON_UNHEALTHY] From National Projects</English>
 		<French>%D1_Change[ICON_UNHEALTHY] des Projets Nationaux</French>
 		<German>%D1_Change[ICON_UNHEALTHY] von Teamprojekten</German>
-		<Italian>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]%D1_Change[COLOR_REVERT] [ICON_UNHEALTHY] dai progetti nazionali</Italian> <!-- city screen health panel hover --> 
+		<Italian>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]%D1_Change[COLOR_REVERT] [ICON_UNHEALTHY] dai progetti nazionali</Italian> <!-- city screen health panel hover -->
 		<Spanish>%D1_Change[ICON_UNHEALTHY] por proyectos nacionales</Spanish>
 		<Polish>%D1_Change[ICON_UNHEALTHY] z Cudu Narodowego</Polish>
 		<Russian>%D1_Change[ICON_UNHEALTHY] îò íàöèîíàëüíûõ ïðîåêòîâ</Russian>
@@ -15062,7 +15138,7 @@
 		<English>%D1_Change[ICON_UNHEALTHY] From World Projects</English>
 		<French>%D1_Change[ICON_UNHEALTHY] des Projets Mondiaux</French>
 		<German>%D1_Change[ICON_UNHEALTHY] von Weltprojekten</German>
-		<Italian>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]%D1_Change[COLOR_REVERT] [ICON_UNHEALTHY] dai progetti mondiali</Italian> <!-- city screen health panel hover --> 
+		<Italian>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]%D1_Change[COLOR_REVERT] [ICON_UNHEALTHY] dai progetti mondiali</Italian> <!-- city screen health panel hover -->
 		<Spanish>%D1_Change[ICON_UNHEALTHY] por proyectos del mundo</Spanish>
 		<Polish>%D1_Change[ICON_UNHEALTHY] z Projektu &#140;wiatowego</Polish>
 		<Russian>%D1_Change[ICON_UNHEALTHY] îò ìèðîâûõ ïðîåêòîâ</Russian>
@@ -15088,11 +15164,13 @@
 	<TEXT>
 		<Tag>TXT_KEY_MISC_HELP_COMMERCE_FINAL_YIELD_FLOAT</Tag>
 		<English>[NEWLINE]Total %s1_commerce_type: %s2%F3</English>
+		<French>[NEWLINE]Total %s1_type_de_commerce : %s2%F3</French>
 		<German>[NEWLINE]Summe %s1_commerce_type: %s2 %F3</German>
-		<Italian>[NEWLINE][NEWLINE]%s1_commerce_type [COLOR_HIGHLIGHT_TEXT]totale[COLOR_REVERT]: [COLOR_HIGHLIGHT_TEXT]%s2[COLOR_REVERT] %F3</Italian> <!-- city screen research, culture panel hover upper right -->
-		<Spanish>[NEWLINE]Total de %s1_commerce_type: %s2%F3</Spanish>
+		<Italian>[NEWLINE][NEWLINE]%s1_commerce_type [COLOR_HIGHLIGHT_TEXT]totale[COLOR_REVERT]: [COLOR_HIGHLIGHT_TEXT]%s2[COLOR_REVERT] %F3</Italian>
 		<Polish>[NEWLINE]Razem %s1_commerce_type: %s2%F3</Polish>
 		<Russian>[NEWLINE]Âñåãî %s1_commerce_type: %s2%F3</Russian>
+		<Spanish>[NEWLINE]Total de %s1_commerce_type: %s2%F3</Spanish>
+		<!-- city screen research, culture panel hover upper right -->
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISC_HELP_COMMERCE_TRAIT</Tag>
@@ -15123,6 +15201,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_MISC_HELP_GOLDEN_AGE_PLAYER_COMMERCE</Tag>
 		<English>[ICON_BULLET]%D1%F2 from golden age</English>
+		<French>[ICON_BULLET]%D1%F2 de l'âge d'or</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISC_HELP_GREATPEOPLE_BASE_RATE</Tag>
@@ -15218,7 +15297,7 @@
 		<English>Net Food: +0[ICON_FOOD]</English>
 		<French>Nourriture nette: +0[ICON_FOOD]</French>
 		<German>Nettoertrag Nahrung: +0[ICON_FOOD]</German>
-		<Italian>[NEWLINE]Cibo netto: [COLOR_HIGHLIGHT_TEXT]+0[COLOR_REVERT][ICON_FOOD]</Italian>  <!-- city screen research, food panel hover -->
+		<Italian>[NEWLINE]Cibo netto: [COLOR_HIGHLIGHT_TEXT]+0[COLOR_REVERT][ICON_FOOD]</Italian> <!-- city screen research, food panel hover -->
 		<Spanish>Alimento neto: 0[ICON_FOOD]</Spanish>
 		<Polish>&#175;ywno&#156;&#230; netto: +0[ICON_FOOD]</Polish>
 		<Russian>Îáùàÿ ïèùà: +0[ICON_FOOD]</Russian>
@@ -15356,6 +15435,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_MISC_HELP_YIELD_EVENTS</Tag>
 		<English>[ICON_BULLET]%d1%% %F2 from Events</English>
+		<French>[ICON_BULLET]%d1%% %F2 des événements</French>
 		<Italian>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]%d1%%%F2[COLOR_REVERT] dal risultato degli eventi</Italian> <!-- city screen research, culture panel hover upper right -->
 	</TEXT>
 	<TEXT>
@@ -15387,7 +15467,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_MISC_HIRED_WAR_ALLY</Tag>
 		<English>The evil %s1_CivAdj have convinced the treacherous %s2_CivAdj to declare war on us!</English>
-		<French>Les sournois %s1_CivAdj ont convaincu les traîtres %s2_CivAdj de nous déclarer la Guerre!</French>
+		<French>Les sournois %s1:3_CivAdj ont convaincu les traîtres %s2_CivAdj de nous déclarer la Guerre!</French>
 		<German>Die bösartigen %s1_CivAdj haben die hinterhältigen %s2_CivAdj davon überzeugt, uns den Krieg zu erklären!</German>
 		<Italian>I malvagi %s1_CivAdj hanno convinto i traditori %s2_CivAdj a dichiararci guerra!</Italian>
 		<Spanish>¡Los malvados %s1:3_CivAdj han convencido a los traicioneros %s2:3_CivAdj para declararnos la guerra!</Spanish>
@@ -15937,7 +16017,7 @@
 		<English>Turn Off Production Automation</English>
 		<French>Désactiver l'automatisation de la production</French>
 		<German>Produktionsautomatisierung</German>
-		<Italian>Disattiva la [COLOR_HIGHLIGHT_TEXT]produzione automatica[COLOR_REVERT]</Italian>  <!-- city screen automation panel -->
+		<Italian>Disattiva la [COLOR_HIGHLIGHT_TEXT]produzione automatica[COLOR_REVERT]</Italian> <!-- city screen automation panel -->
 		<Spanish>Desactivar la automatización de la producción</Spanish>
 		<Russian>Отключить автоматизацию производства</Russian>
 	</TEXT>
@@ -16017,6 +16097,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_MISC_NO_CITY_INFLUENCE</Tag>
 		<English>Not in %s1_CivAdj city influence.</English>
+		<French>En dehors de l'influence de la ville %s1_CivAdj.</French>
 		<Italian>La casella non è nell'influenza di una città %s1_CivAdj.</Italian> <!-- hoover plot the very first turn -->
 	</TEXT>
 	<TEXT>
@@ -16402,7 +16483,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_MISC_REVOLT_IN_CITY</Tag>
 		<English>A %s1_CivAdj revolt has taken place in %s2_CityName!</English>
-		<French>Les %s1_CivAdj se révoltent à %s2_CityName !</French>
+		<French>Les %s1:3_CivAdj se révoltent à %s2_CityName !</French>
 		<German>In %s2_CityName hat eine %s1:3_CivAdj Revolte stattgefunden!</German>
 		<Italian>Una rivolta %s1_CivAdj è scoppiata a %s2_CityName!</Italian>
 		<Spanish>Ha tenido lugar una rebelión %s1:2_CivAdj en %s2_CityName.</Spanish>
@@ -16410,10 +16491,12 @@
 	<TEXT>
 		<Tag>TXT_KEY_MISC_DISCONTENT_IN_CITY</Tag>
 		<English>%s1_CivAdj influence is causing cultural discontent in %s2_CityName...</English>
+		<French>L'influence %s1_CivAdj provoque un mécontentement culturel à %s2_CityName...</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISC_FAILED_REVOLT_IN_CITY</Tag>
 		<English>Local authorities struggled to put down a large %s1_CivAdj demonstration in %s2_CityName.</English>
+		<French>Les autorités locales ont eu du mal à réprimer une grande manifestation %s1_CivAdj à %s2_CityName.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISC_REVOLUTION_HAS_BEGUN</Tag>
@@ -16475,7 +16558,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_MISC_SHIFT_ALT_PREPARE_WAR</Tag>
 		<English>(&lt;SHIFT+ALT&gt; to Prepare for War)</English>
-		<French>(&lt;SHIFT+ALT&gt; pour Préparer la Guerre)</French>
+		<French>(&lt;MAJ+ALT&gt; pour Préparer la Guerre)</French>
 		<German>(&lt;UMSCHALT+ALT&gt; zur Kriegsvorbereitung)</German>
 		<Italian>(&lt;SHIFT+ALT&gt; per prepararti alla guerra)</Italian>
 		<Spanish>(&lt;SHIFT+ALT&gt; para preparar la guerra)</Spanish>
@@ -16561,7 +16644,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_MISC_SPY_CAUGHT_AND_KILLED</Tag>
 		<English>The %s1_CivAdj %s2_UnitName responsible was caught and "liquidated"!</English>
-		<French>[NUM2:L':L':Les:Les] %s2_UnitName des %s1_CivAdj a été démasqué et exécuté !</French>
+		<French>[NUM2:L':L':Les:Les] %s2_UnitName des %s1:3_CivAdj a été démasqué et exécuté !</French>
 		<German>Euer Sicherheitspersonal hat [NUM2:einen:eine:ein:einige:einige:einige] %[s1_CivAdj][NUM2:en:e:es:e:e:e] %s2:4_UnitName unschädlich gemacht!</German>
 		<Italian>L'unità %s2_UnitName %s1_CivAdj responsabile è stata catturata e "liquidata"!</Italian>
 		<Spanish>¡Han atrapado y liquidado [NUM2:al:a la:a los:a las] %s2_UnitName [NUM2:responsable:responsable:responsables:responsables] de la civilización %s1:2_CivAdj!</Spanish>
@@ -16601,7 +16684,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_MISC_STEALTH_ATTACK</Tag>
 		<English>A %s1_PlyrName %s2_UnitName has taken your %s3_UnitName by surprise!</English>
-		<French>[NUM2:un:une:des:des] %s2_UnitName de %s1_PlyrName [NUM2:a:a:ont:ont] pris [NUM3:votre:votre:vos:vos] %s3_UnitName par surprise !</French>
+		<French>[NUM2:un:une:des:des] %s2_UnitName [NUM1:de:de:des:des] %s1_PlyrName [NUM2:a:a:ont:ont] pris [NUM3:votre:votre:vos:vos] %s3_UnitName par surprise !</French>
 		<German>[NUM2:Ein:Eine:Ein:Mehrere:Mehrere:Mehrere] %s2_UnitName (%s1_PlyrName) [NUM2:hat:haben] [NUM3:Euren:Eure:Euer:Eure:Eure:Eure] %s3_UnitName überrascht!</German>
 		<Russian>%s2_UnitName игрока %s1_PlyrName подло атаковал в спину вашего %s3_UnitName!</Russian>
 	</TEXT>
@@ -16626,13 +16709,13 @@
 	<TEXT>
 		<Tag>TXT_KEY_MISC_STEALTH_LIE_IN_WAIT</Tag>
 		<English>The %s1_PlyrName %s2_UnitName has come to realize that your %s3_UnitName saw the attack coming and was much more prepared than anticipated!</English>
-		<French>[NUM2:Le:La:Les:Les] %s2_UnitName de %s1_PlyrName s'est rendu compte que [NUM3:votre:votre:vos:vos] %s3_UnitName a vu leur attaque venir, et était mieux préparés que prévu !</French>
+		<French>[NUM2:Le:La:Les:Les] %s2_UnitName de %s1_PlyrName [NUM2:s'est:s'est:se sont:se sont] rendu compte que [NUM3:le:la:les:les] %s3_UnitName [NUM3:a:a:ont:ont] vu [NUM2:son:son:leur:leur] attaque venir, et étai[NUM3:t:t:ent:ent] mieux prépar[NUM3:é:ée:és:ées] que prévu !</French>
 		<Russian>%s2_UnitName игрока %s1_PlyrName осознал, что ваш %s3_UnitName разгадал его коварный замысел и подготовился к бою гораздо лучше, чем ожидал!</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISC_STEALTH_LIE_IN_WAIT_OWNER</Tag>
 		<English>Your clever %s1_UnitName was prepared for the attack by a %s2_PlyrName %s3_UnitName with some tricks up his own sleeve!</English>
-		<French>[NUM1:Votre:Votre:Vos:Vos] %s1_UnitName s'est préparé à l'attaque lancée par [NUM3:le:la:les:les] %s3_UnitName de %s2_PlyrName !</French>
+		<French>[NUM1:Votre:Votre:Vos:Vos] %s1_UnitName [NUM1:s'est:s'est:se sont:se sont] prépar[NUM1:é:ée:és:ées] à l'attaque lancée par [NUM3:le:la:les:les] %s3_UnitName de %s2_PlyrName !</French>
 		<Russian>Ваш находчивый %s1_UnitName встетил во всеоружии %s3_UnitName игрока %s2_PlyrName с несколькими козырями в рукаве!</Russian>
 	</TEXT>
 	<TEXT>
@@ -16663,7 +16746,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_MISC_STUN_SUFFERED</Tag>
 		<English>In battle with %s1_EnemyUnit, your %s2_YourUnit was stunned for %d3_StunVolume round(s).</English>
-		<French>En combattant l'unité %s1_EnemyUnit, votre %s2_YourUnit a été étourdie durant %d3_StunVolume tour(s).</French>
+		<French>En combattant l'unité %s1_EnemyUnit, [NUM2:votre:votre:vos:vos] %s2_YourUnit a été étourd[NUM2:i:ie:is:ies] durant %d3_StunVolume tour(s).</French>
 		<Italian>Durante la battaglia contro l'unità %s1_EnemyUnit, la tua unità %s2_YourUnit è stata messa fuori combattimento per %d3_StunVolume turni.</Italian>
 		<Polish>W bitwie przeciwko jednostce: %s1_EnemyUnit, Twoja jednostka: %s2_YourUnit jest oszo&#179;omiona na: %d3_StunVolume rund(y).</Polish>
 	</TEXT>
@@ -16688,7 +16771,7 @@
 		<English>%d1%[ICON_DEFENSE] from Terrain</English>
 		<French>%d1%[ICON_DEFENSE] du Terrain</French>
 		<German>%d1%[ICON_DEFENSE] Geländebonus</German>
-		<Italian>[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]%d1%[COLOR_REVERT] [ICON_DEFENSE] dalle caratteristiche del terreno</Italian> <!-- city screen hover defense perc upper right --> 
+		<Italian>[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]%d1%[COLOR_REVERT] [ICON_DEFENSE] dalle caratteristiche del terreno</Italian> <!-- city screen hover defense perc upper right -->
 		<Spanish>%d1%[ICON_DEFENSE] por terreno</Spanish>
 		<Polish>%d1%[ICON_DEFENSE] z terenu</Polish>
 		<Russian>%d1%[ICON_DEFENSE] îò Ìåñòíîñòè</Russian>
@@ -16707,7 +16790,7 @@
 		<English>Base Defense: %d1%[ICON_DEFENSE]</English>
 		<French>Défense de base: %d1%[ICON_DEFENSE]</French>
 		<German>Basis-Verteidigungswert: %d1%[ICON_DEFENSE]</German>
-		<Italian>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]%d1%[COLOR_REVERT] [ICON_DEFENSE]  totale difesa base</Italian> <!-- city screen hover defense perc upper right --> 
+		<Italian>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]%d1%[COLOR_REVERT] [ICON_DEFENSE]  totale difesa base</Italian> <!-- city screen hover defense perc upper right -->
 		<Spanish>Defensa base: %d1%[ICON_DEFENSE]</Spanish>
 		<Polish>Bazowa obrona: %d1%[ICON_DEFENSE]</Polish>
 		<Russian>Базовая защита: %d1%[ICON_DEFENSE]</Russian>
@@ -16864,7 +16947,7 @@
 		<Spanish>%d1%[ICON_DEFENSE] por rasgos</Spanish>
 		<Polish>%d1%[ICON_DEFENSE] z cech</Polish>
 		<Russian>%d1%[ICON_DEFENSE] îò ÷åðò Ëèäåðà</Russian>
-		<Italian>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]%d1%[COLOR_REVERT] [ICON_DEFENSE] dai tratti del leader</Italian> <!-- city screen hover defense perc upper right -->  
+		<Italian>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]%d1%[COLOR_REVERT] [ICON_DEFENSE] dai tratti del leader</Italian> <!-- city screen hover defense perc upper right -->
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISC_TRAIT_ESPIONAGE_DEFENSE</Tag>
@@ -16973,7 +17056,7 @@
 		<English>%D1_Change[ICON_UNHEALTHY] penalty</English>
 		<French>%D1_Change[ICON_UNHEALTHY] : pénalité</French>
 		<German>%D1_Change[ICON_UNHEALTHY]-Malus</German>
-		<Italian>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]%D1_Change[COLOR_REVERT] [ICON_UNHEALTHY] dalla penalità</Italian> <!-- city screen health panel hover --> 
+		<Italian>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]%D1_Change[COLOR_REVERT] [ICON_UNHEALTHY] dalla penalità</Italian> <!-- city screen health panel hover -->
 		<Spanish>%D1_Change [ICON_UNHEALTHY] de penalización</Spanish>
 	</TEXT>
 	<TEXT>
@@ -17239,7 +17322,7 @@
 		<English>%d1%[ICON_DEFENSE] from Wonders</English>
 		<French>%d1%[ICON_DEFENSE] des Merveilles</French>
 		<German>%d1%[ICON_DEFENSE] von Wundern</German>
-		<Italian>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]%d1%[COLOR_REVERT] [ICON_DEFENSE] dalle meraviglie possedute</Italian> <!-- city screen hover defense perc upper right --> 
+		<Italian>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]%d1%[COLOR_REVERT] [ICON_DEFENSE] dalle meraviglie possedute</Italian> <!-- city screen hover defense perc upper right -->
 		<Spanish>%d1%[ICON_DEFENSE] por Maravillas</Spanish>
 		<Polish>%d1%[ICON_DEFENSE] z cud&#243;w</Polish>
 		<Russian>%d1%[ICON_DEFENSE] îò ×óäåñ</Russian>
@@ -17262,7 +17345,7 @@
 		<Italian>Mappa</Italian>
 		<Spanish>Mapamundi</Spanish>
 	</TEXT>
-		<TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_MISC_YOUR_AIR_UNIT_ABORTED</Tag>
 		<English>Your %s1_UnitName was forced to abort its mission by an enemy %s2_EnUName</English>
 		<French>[NUM2:Un:Une:] %s2_EnUName [NUM2:ennemi:ennemie] a contraint votre %s1_UnitName à abandonner sa mission</French>
@@ -18315,10 +18398,11 @@
 	<TEXT>
 		<Tag>TXT_KEY_MOD_DCN_SOVIET</Tag>
 		<English>Soviet</English>
+		<French>Soviétique</French>
 		<Italian>Sovietica</Italian>
-		<Spanish>Soviética</Spanish>
 		<Polish>Sowiecki</Polish>
 		<Russian>Ñîâåòñê.</Russian>
+		<Spanish>Soviética</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MOD_DCN_SULTANATE</Tag>
@@ -18810,7 +18894,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_MORECIV4LERTS_CITY_TO_EXPAND_RCS</Tag>
 		<English>[COLOR_MAGENTA]The culture of %s1 is about to reach a new threshold.[COLOR_REVERT]</English>
-		<French>[COLOR_MAGENTA]La culture de %s1 est sur le point d’atteindre un nouveau seuil.[COLOR_REVERT]</French>
+		<French>[COLOR_MAGENTA]La culture de %s1 est sur le point d'atteindre un nouveau seuil.[COLOR_REVERT]</French>
 		<Italian>[COLOR_MAGENTA]La cultura della città di %s1 sta per raggiungere un nuovo livello.[COLOR_REVERT]</Italian> <!-- Message in the Event Log -->
 	</TEXT>
 	<TEXT>
@@ -19574,6 +19658,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_OPTIONS_PLAYBACKVOLUME</Tag>
 		<English>Playback Volume</English>
+		<French>Volume de lecture</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_OPTIONS_PLAYBACK_DEVICE</Tag>
@@ -20756,14 +20841,17 @@
 	<TEXT>
 		<Tag>TXT_KEY_PLOTS_FLATLAND</Tag>
 		<English>Flatland Plots</English>
+		<French>Parcelles en plaine</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PLOTS_HILL</Tag>
 		<English>Hill Plots</English>
+		<French>Parcelles sur colline</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PLOTS_PEAK</Tag>
 		<English>Peak Plots</English>
+		<French>Parcelles sur sommet</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PLOTS_WATER</Tag>
@@ -22108,7 +22196,7 @@
 		<English>[ICON_BULLET]Gains %D1_percent%% Experience from Combat</English>
 		<French>[ICON_BULLET]Octroie %D1_percent%% expérience au combat</French>
 		<German>[ICON_BULLET]%D1_percent%% mehr Erfahrungspunkte durch Kampf</German>
-		<Italian>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Esperienza[COLOR_REVERT] guadagnata in combattimento: [COLOR_HIGHLIGHT_TEXT]%D1_percent%%[COLOR_REVERT]</Italian>   <!-- Subcombat type Group (Trillions (1tril+) -->
+		<Italian>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Esperienza[COLOR_REVERT] guadagnata in combattimento: [COLOR_HIGHLIGHT_TEXT]%D1_percent%%[COLOR_REVERT]</Italian> <!-- Subcombat type Group (Trillions (1tril+) -->
 		<Spanish>[ICON_BULLET]Gana un %D1_percent%% de experiencia por combate</Spanish>
 	</TEXT>
 	<TEXT>
@@ -22132,7 +22220,7 @@
 		<English>[ICON_BULLET]%D1_Bonus%% Hills Defense</English>
 		<French>[ICON_BULLET]Défense de collines %D1_Bonus%%</French>
 		<German>[ICON_BULLET]%D1_Bonus%% Hügel-Verteidigung</German>
-		<Italian>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Difesa[COLOR_REVERT] sulle caselle con [COLOR_HIGHLIGHT_TEXT]collina[COLOR_REVERT]: [COLOR_HIGHLIGHT_TEXT]%D1_Bonus%%[COLOR_REVERT]</Italian>  <!-- Subcombat type Ruffian -->
+		<Italian>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Difesa[COLOR_REVERT] sulle caselle con [COLOR_HIGHLIGHT_TEXT]collina[COLOR_REVERT]: [COLOR_HIGHLIGHT_TEXT]%D1_Bonus%%[COLOR_REVERT]</Italian> <!-- Subcombat type Ruffian -->
 		<Spanish>[ICON_BULLET]%D1_Bonus%% a defender colinas</Spanish>
 	</TEXT>
 	<TEXT>
@@ -22226,6 +22314,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_BUSHIDO</Tag>
 		<English>Honour</English>
+		<French>Honneur</French>
 		<German>Ehre</German>
 		<Russian>×åñòü</Russian>
 	</TEXT>
@@ -22245,7 +22334,7 @@
 		<Russian>Áóñèäî III</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_ENKI</Tag> 
+		<Tag>TXT_KEY_PROMOTION_ENKI</Tag>
 		<English>Assistance of Enki</English>
 		<French>Assistance de Enki</French>
 		<German>Enkis göttlicher Beistand</German>
@@ -22263,11 +22352,12 @@
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_GUARDIAN</Tag>
 		<English>Guardian spirit</English>
+		<French>Esprit gardien</French>
 		<German>Schutzgeist</German>
 		<Russian>Äóõ õðàíèòåëÿ</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_INANNA</Tag> 
+		<Tag>TXT_KEY_PROMOTION_INANNA</Tag>
 		<English>Assistance of Inanna</English>
 		<French>Assistance de Inanna</French>
 		<German>Inannas göttlicher Beistand</German>
@@ -22275,7 +22365,7 @@
 		<Russian>Ïîìîùü Èíàííû</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_KI</Tag> 
+		<Tag>TXT_KEY_PROMOTION_KI</Tag>
 		<English>Assistance of Ki</English>
 		<French>Assistance de Ki</French>
 		<German>Kis göttlicher Beistand</German>
@@ -22684,7 +22774,7 @@
 		<Spanish>Puntuación</Spanish>
 		<Russian>Счет</Russian>
 	</TEXT>
-		<TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_REPLAY_SCREEN_SPEED</Tag>
 		<English>Speed</English>
 		<French>Vitesse</French>
@@ -22773,7 +22863,7 @@
 		<English>Requires[SPACE]</English>
 		<French>Requiert [SPACE]</French>
 		<German>[ICON_BULLET]erforderlich:[SPACE]</German>
-		<Italian>[ICON_BULLET]Richiede la [COLOR_HIGHLIGHT_TEXT]forma di governo[COLOR_REVERT][SPACE]</Italian>  <!-- unit alpha female building list hover -->
+		<Italian>[ICON_BULLET]Richiede la [COLOR_HIGHLIGHT_TEXT]forma di governo[COLOR_REVERT][SPACE]</Italian> <!-- unit alpha female building list hover -->
 		<Spanish>Requiere[SPACE]</Spanish>
 		<Polish>Wymaga:[SPACE]</Polish>
 		<Russian>Òðåáóåòñÿ[SPACE]</Russian>
@@ -23018,11 +23108,12 @@
 		<English>Vactrain</English>
 		<French>Ligne de Train sous vide</French>
 		<Russian>Вакуумн. тоннель</Russian>
-		<Italian>Ferrovia vactrain</Italian> 
+		<Italian>Ferrovia vactrain</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_S1_COLON_SPACE</Tag>
 		<English>%s1:[SPACE]</English>
+		<French>%s1 :[SPACE]</French>
 		<Italian>%s1:[SPACE]</Italian> <!-- plot hover with advanced invisibility, call the id TXT_WORD_SPOT -->
 	</TEXT>
 	<TEXT>
@@ -23092,6 +23183,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_SEALEVEL_VERY_LOW</Tag>
 		<English>Very Low</English>
+		<French>Très bas</French>
 		<Russian>Очень низкий</Russian>
 	</TEXT>
 	<TEXT>
@@ -23444,6 +23536,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_SHORTCUTS_BUG</Tag>
 		<English>BUG Mod</English>
+		<French>Mod BUG</French>
 		<Russian>Ìîä BUG</Russian>
 	</TEXT>
 	<TEXT>
@@ -24470,7 +24563,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<English>Welcome to your spaceship</English>
 		<French>Bienvenue dans votre vaisseau spatial</French>
 		<German>Willkommen an Bord Eures Raumschiffs</German>
-		<Italian>Dettagli astronave</Italian>  <!-- Victory screen, spaceship detail screen -->
+		<Italian>Dettagli astronave</Italian> <!-- Victory screen, spaceship detail screen -->
 		<Spanish>Ésta es vuestra nave espacial</Spanish>
 	</TEXT>
 	<TEXT>
@@ -24551,13 +24644,13 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 	<TEXT>
 		<Tag>TXT_KEY_SPECIALISTHELP_PERCENT</Tag>
 		<English>[ICON_BULLET]+%s1_Change %F2[SPACE]</English>
-		<Italian>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]+%s1_Change[COLOR_REVERT] %F2[SPACE]</Italian>  <!-- city screen investigator specialist hover panel -->
+		<Italian>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]+%s1_Change[COLOR_REVERT] %F2[SPACE]</Italian> <!-- city screen investigator specialist hover panel -->
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_SPECIALISTHELP_TECH_HAPPINESS_TYPE</Tag>
 		<English>[ICON_BULLET]%D1_Change%F2_HappOrUnhapp if the %s3_Tech Tech is known.</English>
 		<French>[ICON_BULLET]%D1_Change%F2_HappOrUnhapp lorsque la Tech: %s3_Tech a été découverte.</French>
-		<Italian>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]%D1_Change[COLOR_REVERT] %F2_HappOrUnhapp se la tecnologia %s3_Tech è stata scoperta</Italian>  <!-- city screen investigator specialist hover panel -->
+		<Italian>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]%D1_Change[COLOR_REVERT] %F2_HappOrUnhapp se la tecnologia %s3_Tech è stata scoperta</Italian> <!-- city screen investigator specialist hover panel -->
 		<Polish>[ICON_BULLET]%D1_Change%F2_HappOrUnhapp je&#156;li technologia: %s3_Tech jest znana.</Polish>
 		<Russian>[ICON_BULLET]%D1_Change%F2_HappOrUnhapp если изучена технология %s3_Tech.</Russian>
 	</TEXT>
@@ -24565,7 +24658,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Tag>TXT_KEY_SPECIALISTHELP_TECH_HAPPINESS_TYPE_KNOWN</Tag>
 		<English>[ICON_BULLET]%D1_Change%F2_HealthOrUnhealth from knowledge of %s3_Tech Tech.</English>
 		<French>[ICON_BULLET]%D1_Change%F2_HealthOrUnhealth de la connaissance de %s3_Tech Tech.</French>
-		<Italian>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]%D1_Change%[COLOR_REVERT] %F2_HappOrUnhapp dalla tecnologia %s3_Tech</Italian>  <!-- city screen investigator specialist hover panel -->
+		<Italian>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]%D1_Change%[COLOR_REVERT] %F2_HappOrUnhapp dalla tecnologia %s3_Tech</Italian> <!-- city screen investigator specialist hover panel -->
 		<Polish>[ICON_BULLET]%D1_Change%F2_HealthOrUnhealth z technologii: %s3_Tech.</Polish>
 		<Russian>[ICON_BULLET]%D1_Change%F2_HappOrUnhapp от технологии %s3_Tech.</Russian>
 	</TEXT>
@@ -24573,7 +24666,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Tag>TXT_KEY_SPECIALISTHELP_TECH_HEALTH_TYPE</Tag>
 		<English>[ICON_BULLET]%D1_Change%F2_HealthOrUnhealth if the %s3_Tech Tech is known.</English>
 		<French>[ICON_BULLET]%D1_Change%F2_HealthOrUnhealth lorsque la Tech: %s3_Tech a été découverte.</French>
-		<Italian>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]%D1_Change[COLOR_REVERT] %F2_HealthOrUnhealth se la tecnologia %s3_Tech è stata scoperta</Italian>  <!-- city screen investigator specialist hover panel -->
+		<Italian>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]%D1_Change[COLOR_REVERT] %F2_HealthOrUnhealth se la tecnologia %s3_Tech è stata scoperta</Italian> <!-- city screen investigator specialist hover panel -->
 		<Polish>[ICON_BULLET]%D1_Change%F2_HealthOrUnhealth je&#156;li technologia: %s3_Tech jest znana.</Polish>
 		<Russian>[ICON_BULLET]%D1_Change%F2_HealthOrUnhealth если изучена технология %s3_Tech.</Russian>
 	</TEXT>
@@ -24581,7 +24674,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Tag>TXT_KEY_SPECIALISTHELP_TECH_HEALTH_TYPE_KNOWN</Tag>
 		<English>[ICON_BULLET]%D1_Change%F2_HealthOrUnhealth from knowledge of %s3_Tech Tech.</English>
 		<French>[ICON_BULLET]%D1_Change%F2_HealthOrUnhealth de la connaissance de %s3_Tech Tech.</French>
-		<Italian>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]%D1_Change%[COLOR_REVERT] F2_HealthOrUnhealth dalla tecnologia %s3_Tech</Italian>  <!-- city screen investigator specialist hover panel -->
+		<Italian>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]%D1_Change%[COLOR_REVERT] F2_HealthOrUnhealth dalla tecnologia %s3_Tech</Italian> <!-- city screen investigator specialist hover panel -->
 		<Polish>[ICON_BULLET]%D1_Change%F2_HealthOrUnhealth z technologii: %s3_Tech.</Polish>
 		<Russian>[ICON_BULLET]%D1_Change%F2_HealthOrUnhealth от технологии %s3_Tech.</Russian>
 	</TEXT>
@@ -24598,7 +24691,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Tag>TXT_KEY_SPECIALISTHELP_UNIT_COMBAT_EXPERIENCE_SHORT</Tag>
 		<English>[ICON_BULLET]%D1_Change XP to %s2_UnitCombat units</English>
 		<French>[ICON_BULLET]%D1_Change XP pour les %s2_UnitCombat</French>
-		<Italian>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]%D1_Change[COLOR_REVERT] PE alle unità %s2_UnitCombat</Italian>  <!-- city screen hover over specialist citizen -->
+		<Italian>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]%D1_Change[COLOR_REVERT] PE alle unità %s2_UnitCombat</Italian> <!-- city screen hover over specialist citizen -->
 		<Polish>[ICON_BULLET]%D1_Change Do&#156;wiadczenia do: %s2_UnitCombat</Polish>
 		<Russian>[ICON_BULLET]%D1_Change опыта отрядам %s2_UnitCombat</Russian>
 	</TEXT>
@@ -25610,6 +25703,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 	<TEXT>
 		<Tag>TXT_KEY_TECH_CANAANISM_PEDIA</Tag>
 		<English>Canaanite religion is the name for the group of Ancient Semitic religions practiced by the Canaanites living in the ancient Levant from at least the early Bronze Age through the first centuries of the Common Era.[PARAGRAPH:2]Canaanite religion was polytheistic, and in some cases monolatristic.</English>
+		<French>La religion cananéenne désigne le groupe des religions sémitiques anciennes pratiquées par les Cananéens vivant dans l'ancien Levant depuis au moins le début de l'âge du bronze jusqu'aux premiers siècles de l'ère commune.[PARAGRAPH:2]La religion cananéenne était polythéiste et, dans certains cas, monolâtriste.</French>
 		<Italian>Religione cananea è il nome delle antiche religioni semitiche praticate dai Cananei che abitavano in Medioriente dall'inizio dell'età del bronzo fino ai primi secoli dell'era comune.[PARAGRAPH:2]La religione cananea era politeista, e in qualche casi monoteista.</Italian>
 		<Polish>Religia kananejska - system wierze&#241; lud&#243;w zamieszka&#179;ych w drugim i pierwszym tysi&#185;cleciu p.n.e. na terenie Kanaanu. Jej zniekszta&#179;cony obraz z helle&#241;skimi nalecia&#179;o&#156;ciami przedstawi&#179; w II wieku p.n.e. Filon. Wed&#179;ug mit&#243;w syro-palesty&#241;skich wszech&#156;wiat narodzi&#179; si&#234; z wiatru, kt&#243;ry wia&#179; nad wodami. Pierwszym bogiem by&#179; Mot. Gwiazdy, niebo i ziemia wyklu&#179;y si&#234; z kosmicznego jaja. Pierwsze pokolenie b&#243;stw narodzi&#179;o si&#234; z bogini morza Aszratum i Nieba. W miar&#234;, jak rozwija&#179;a si&#234; religia, Aszratum &#179;&#185;czy&#179;a si&#234; kolejno z Elem i Baalem, co obja&#156;nia ich prawo do w&#179;adzy. Od oko&#179;o XIII wieku p.n.e. w religii ugaryckiej utrwali&#179;y si&#234; triady b&#243;stw wed&#179;ug schematu: b&#243;g obro&#241;ca - bogini - m&#179;ody odradzaj&#185;cy si&#234; b&#243;g. W Byblos czczono wi&#234;c Ela, Pani&#185; i Adonisa. W Sydonie - Baala, Asztarte i Eszmuna, w Tyrze - Melkarta, Asztarte i Eszmuna, Filistyni za&#156; czcili Dagana, Asztarte i Baala.</Polish>
 		<Russian>Ханаанской религией принято называть совокупность западно-семитских языческих культов, имевших распространение на территории Древнего Леванта, как минимум, от эпохи ранней бронзы до первых веков нашей эры.[PARAGRAPH:2]Большинство ханаанских культов были политеистическими локальными религиями (т.е. поклонялись множеству богов - «элохим»), однако в некоторых случаях встречались и монотеистические культы, вроде Ваала и Яхве. Как правило, культ у ханаанеев отправлялся профессиональной кастой жрецов, которые занимали привилегированное положение в обществе. Архитектура Храмов большинства западносемитских богов явилась прообразом храма Соломона, который был построен при активной помощи тирских инженеров. Однако отличия религиозные среди народов Ханаана могли быть кардинальными: иудеи поклонялись Единому Богу, а финикийцы - Пантеону богов. Особо финикийцы почитали Священные Горы. Одним из последних адептов финикийской религии был Гелиогабал, который особое внимание уделял солярному культу и экстатическому поклонению. Верховный бог именовался Ваал. В годину несчастий грозный бог требовал жертвоприношений младенцев (тофет). Эта ипостась Ваала была известна как Мелькарт или Молох. Часто Верховный бог приобретал черты солярного божества. Наряду с небесным мужским божеством среди ханаанеев почиталась и богиня-мать Астарта (божество сидонское - 3 Цар. 11:5), одной из форм поклонения которой была храмовая проституция - однократная продажа своего тела за деньги, отдаваемые в храм Богини.[PARAGRAPH:2]Ханаанская религия в целом представляла собой синтез различных западносемитских традиций. Кочевой семитский культ небесных светил (солярного быкоголового Солнца и женской богини Луны) наслаивался на матриархальный неолитический культ Великой Матери (родственной Кибеле) и египетской паре Исиды и Осириса (Адонис).</Russian>
@@ -25635,6 +25729,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 	<TEXT>
 		<Tag>TXT_KEY_TECH_CAO_DAI_QUOTE</Tag>
 		<English>The ultimate goal of CaoDaists is to be reunified with the All That Is, to return home.[PARAGRAPH:2]- Hum Dac Bui,[PARAGRAPH:1][SPACE][SPACE]"Cao Dai: Faith of Unity"</English>
+		<French>Le but ultime des CaoDaïstes est de se réunifier avec le Tout Ce Qui Est, de retourner à la maison.[PARAGRAPH:2]- Hum Dac Bui,[PARAGRAPH:1][SPACE][SPACE]"Cao Dai : Foi de l'Unité"</French>
 		<Russian>Цель последователя Каодай - прекращение цепи перерождений (сансары) и слияние с Единым Богом - Каодай/[PARAGRAPH:2]- Нго Ван Тьеу,[PARAGRAPH:1][SPACE][SPACE]"Каодай: Вера Единства"</Russian>
 	</TEXT>
 	<TEXT>
@@ -26006,9 +26101,10 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 	<TEXT>
 		<Tag>TXT_KEY_TECH_JAINISM_QUOTE</Tag>
 		<English>"This is the quintessence of wisdom; not to kill anything. This is the pure unchangeable Law. Therefore, cease to injure living things." - Yogashastra (Jain Scripture), c. 500 BC</English>
-		<Spanish>"Esto es la quintaesencia del saber; no hay que matar a todo. Esta es una ley pura e inmutable. Por tanto, deja de hacer daño a los seres vivos." - Yogashastra (escritura jainista), Aprox. 500 a.C.</Spanish>
+		<French>"Ceci est la quintessence de la sagesse : ne rien tuer. C'est la loi pure et immuable. Par conséquent, cessez de blesser les êtres vivants." - Yogashastra (Écriture jaïne), vers 500 av. J.-C.</French>
 		<Polish>"D&#159;inizm - nonteistyczny system filozoficzny i religijny kt&#243;ry powsta&#179; w Indiach oko&#179;o VI wieku p.n.e. w reakcji na silnie zrytualizowany braminizm. Za tw&#243;rc&#234; tej religii uwa&#191;any jest Par&#156;wa &#191;yj&#185;cy w VIII w. p.n.e., znacz&#185;co zreformowa&#179; j&#185; jednak Wardhamana Mahawira, kt&#243;ry stworzy&#179; zbi&#243;r zasad reguluj&#185;cych &#191;ycie wyznawc&#243;w d&#159;inizmu. Liczb&#234; wyznawc&#243;w d&#159;inizmu ocenia si&#234; na ok. 4,5-5 mln (z czego 97-98% w Indiach)."</Polish>
 		<Russian>«Это квинтэссенция мудрости: не убей жизнь. Это чистый неизменный Закон. Посему перестаньте причинять вред живым существам». - Йогашастра (джайнское писание), c. 500 г. до н.э.</Russian>
+		<Spanish>"Esto es la quintaesencia del saber; no hay que matar a todo. Esta es una ley pura e inmutable. Por tanto, deja de hacer daño a los seres vivos." - Yogashastra (escritura jainista), Aprox. 500 a.C.</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_JUDAISM</Tag>
@@ -26415,6 +26511,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 	<TEXT>
 		<Tag>TXT_KEY_TECH_SHINTO_QUOTE</Tag>
 		<English>[W]hat is most important is to live to the fullest here and now. Shinto does not look for eternal value and reward in the afterlife.[PARAGRAPH:2]-Atsuta Shrine official brochure</English>
+		<French>[L]e plus important est de vivre pleinement ici et maintenant. Le shinto ne cherche pas de valeur éternelle ou de récompense dans l'au-delà.[PARAGRAPH:2]-Brochure officielle du sanctuaire Atsuta</French>
 		<Russian>Что самое важное - это жить полноценной жизнью здесь и сейчас. Синтоизм не ищет вечных истин и награды в загробной жизни.[PARAGRAPH:2]- Официальная энциклика в храме Ацута</Russian>
 	</TEXT>
 	<TEXT>
@@ -26435,9 +26532,10 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 	<TEXT>
 		<Tag>TXT_KEY_TECH_SIKHISM_QUOTE</Tag>
 		<English>"Meditation of the Lord is the highest of the deeds, through which myriads obtain release, through which one becomes all knowing, through which the dirt of the mind is cleansed and the Nectar of the Name of God is absorbed in the mind." - Guru Nanak, Gauri Sukhmani</English>
-		<Spanish>"La meditación del Señor es la mayor de las hazañas, a través de ella miles obtienen la liberación, a través de ella uno adquiere todo el conocimiento, a través de ella se limpia la suciedad de la mente y se absorbe en ella el Néctar del Nombre de Dios." - Gurú Nanak, Gauri Sukhmani</Spanish>
+		<French>"La méditation du Seigneur est le plus haut des actes, par laquelle des myriades obtiennent la libération, par laquelle on devient omniscient, par laquelle la saleté de l'esprit est purifiée et le Nectar du Nom de Dieu est absorbé dans l'esprit." - Guru Nanak, Gauri Sukhmani</French>
 		<Polish>"Medytacja to najwy&#191;sza z cn&#243;t Pana, przez kt&#243;r&#185; myriady doznaj&#185; ukojenia, przez kt&#243;r&#185; jest wszewiedz&#185;cy, przez kt&#243;r&#185; nieczysto&#156;&#230; umys&#179;u zostaje usuni&#234;ta i tylko nektar Imienia Boga jest przyj&#234;ty w duszy." - Guru Nanak, Gauri Sukhmani</Polish>
 		<Russian>«Медитация для Господа - это высшее из деяний, благодаря которой мириады обретают освобождение, человек становится всезнающим, очищаются помыслы и божественная благодать питает разум». - Гуру Нанак, Гаури Сухмани</Russian>
+		<Spanish>"La meditación del Señor es la mayor de las hazañas, a través de ella miles obtienen la liberación, a través de ella uno adquiere todo el conocimiento, a través de ella se limpia la suciedad de la mente y se absorbe en ella el Néctar del Nombre de Dios." - Gurú Nanak, Gauri Sukhmani</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_TAOISM</Tag>
@@ -26585,9 +26683,10 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 	<TEXT>
 		<Tag>TXT_KEY_TECH_VOODOO_QUOTE</Tag>
 		<English>"Asaka, build me a garden[NEWLINE]Please Agwe, don't flood my garden.[NEWLINE]Erzulie, who will my love be.[NEWLINE]Papa Ge, don't come around me."[NEWLINE]- from the musical, "Once on This Island", lyrics by Lynn Ahrens</English>
-		<Spanish>"Asaka, constrúyeme un jardín[NEWLINE]Por favor Agwe, no inundes mi jardín.[NEWLINE]Erzulie, quién será mi amor.[NEWLINE]Papa Ge, no vengas a mi alrededor."[NEWLINE]- del musical "Once on This Island", letra por Lynn Ahrens</Spanish>
+		<French>"Asaka, construis-moi un jardin[NEWLINE]S'il te plaît Agwe, ne noie pas mon jardin.[NEWLINE]Erzulie, qui sera mon amour.[NEWLINE]Papa Ge, ne viens pas près de moi."[NEWLINE]- extrait de la comédie musicale, "Once on This Island", paroles de Lynn Ahrens</French>
 		<Polish>"Asaka, zbuduj mi ogr&#243;d, Agwe prosz&#234;, nie sprowadzaj powodzi na m&#243;j ogr&#243;d, Erzulie, kto b&#234;dzie moj&#185; mi&#179;o&#156;ci&#185;, Papa Ge, nie zbli&#191;aj si&#234; do mnie." - Lynn Ahrens, z musicalu "Once on This Island"</Polish>
 		<Russian>«Асака, устрой мне сад[NEWLINE]Молю тебя, Агве, не затопляй мой сад.[NEWLINE]Эрзули, моя грядущая любовь.[NEWLINE]Папаша Ге, не подходи ко мне».[NEWLINE] - от мюзикл "Однажды на этом острове", слова Линн Аренс</Russian>
+		<Spanish>"Asaka, constrúyeme un jardín[NEWLINE]Por favor Agwe, no inundes mi jardín.[NEWLINE]Erzulie, quién será mi amor.[NEWLINE]Papa Ge, no vengas a mi alrededor."[NEWLINE]- del musical "Once on This Island", letra por Lynn Ahrens</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_YORUBA</Tag>
@@ -26739,7 +26838,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<German>[ICON_BULLET]%d1_Change Schutz gegen kulturbedingte Revolten</German>
 		<Polish>[ICON_BULLET]%d1_Change obrona przed rewolt&#185;</Polish>
 		<Russian>[ICON_BULLET]%d1_Change ñòàáèëüíîñòè</Russian>
-		<Italian>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Protezione[COLOR_REVERT] dalle [COLOR_HIGHLIGHT_TEXT]rivoluzioni culturali[COLOR_REVERT]: [COLOR_HIGHLIGHT_TEXT]%d1_Change[COLOR_REVERT]</Italian>  <!-- Subcombat type Administrator -->
+		<Italian>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Protezione[COLOR_REVERT] dalle [COLOR_HIGHLIGHT_TEXT]rivoluzioni culturali[COLOR_REVERT]: [COLOR_HIGHLIGHT_TEXT]%d1_Change[COLOR_REVERT]</Italian> <!-- Subcombat type Administrator -->
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TEMP_WORK_RATE</Tag>
@@ -28142,6 +28241,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 	<TEXT>
 		<Tag>TXT_KEY_UNCLAIMED</Tag>
 		<English>Unclaimed</English>
+		<French>Non revendiqué</French>
 		<Italian>Non reclamato</Italian>
 	</TEXT>
 	<TEXT>
@@ -28415,7 +28515,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<English>[ICON_BULLET]Can [LINK=CONCEPT_NUKES]Nuke[\LINK] Enemy Lands</English>
 		<French>[ICON_BULLET]Peut [LINK=CONCEPT_NUKES]atomiser[\LINK] le territoire ennemi</French>
 		<German>[ICON_BULLET]kann feindliches Territorium mit [LINK=CONCEPT_NUKES]Atomraketen angreifen[\LINK]</German>
-		<Italian>[ICON_BULLET]L'unità può [COLOR_HIGHLIGHT_TEXT]sganciare[COLOR_REVERT] [LINK=CONCEPT_NUKES]bombe atomiche[\LINK] sui territori nemici</Italian> <!-- unit Hydrogen Bomb --> 
+		<Italian>[ICON_BULLET]L'unità può [COLOR_HIGHLIGHT_TEXT]sganciare[COLOR_REVERT] [LINK=CONCEPT_NUKES]bombe atomiche[\LINK] sui territori nemici</Italian> <!-- unit Hydrogen Bomb -->
 		<Spanish>[ICON_BULLET]Puede bombardear tierra enemiga con [LINK=CONCEPT_NUKES]armas nucleares[\LINK]</Spanish>
 	</TEXT>
 	<TEXT>
@@ -28479,7 +28579,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<English>[ICON_BULLET]%D1_Change%% %s2_TerrOrFeat Defense</English>
 		<French>[ICON_BULLET]%D1_Change%% en défense sur des cases de %s2_TerrOrFeat</French>
 		<German>[ICON_BULLET]%D1_Change%% Verteidigung für %s2_TerrOrFeat</German>
-		<Italian>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Difesa[COLOR_REVERT] sulle caselle con [COLOR_HIGHLIGHT_TEXT]%s2_TerrOrFeat[COLOR_REVERT]: [COLOR_HIGHLIGHT_TEXT]%D1_Change%%[COLOR_REVERT]</Italian>  <!-- Subcombat type Traders -->
+		<Italian>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Difesa[COLOR_REVERT] sulle caselle con [COLOR_HIGHLIGHT_TEXT]%s2_TerrOrFeat[COLOR_REVERT]: [COLOR_HIGHLIGHT_TEXT]%D1_Change%%[COLOR_REVERT]</Italian> <!-- Subcombat type Traders -->
 		<Spanish>[ICON_BULLET]%D1_Change%% a defender %s2:2_TerrOrFeat</Spanish>
 	</TEXT>
 	<TEXT>
@@ -28609,7 +28709,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<English>[ICON_BULLET]Invisible to All Units</English>
 		<French>[ICON_BULLET]Invisible pour toutes les unités</French>
 		<German>[ICON_BULLET]Für alle Einheiten unsichtbar</German>
-		<Italian>[ICON_BULLET]Unità [COLOR_HIGHLIGHT_TEXT]invisibile[COLOR_REVERT] a tutti</Italian>  <!-- Subcombat type Idea -->
+		<Italian>[ICON_BULLET]Unità [COLOR_HIGHLIGHT_TEXT]invisibile[COLOR_REVERT] a tutti</Italian> <!-- Subcombat type Idea -->
 		<Spanish>[ICON_BULLET]Invisible para todas las unidades</Spanish>
 	</TEXT>
 	<TEXT>
@@ -28816,6 +28916,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_ANDEAN_MISSIONARY_PEDIA</Tag>
 		<English>In the heterogeneous Inca Empire, polytheistic religions were practiced by its different people. Most religions had common traits such as the existence of a Pachamama and Viracocha. The Incas had conquered peoples add their traditional deities to the Inca pantheon.</English>
+		<French>Dans l'empire inca hétérogène, des religions polythéistes étaient pratiquées par ses différents peuples. La plupart des religions partageaient des traits communs comme l'existence de Pachamama et Viracocha. Les Incas avaient intégré les divinités traditionnelles des peuples conquis dans le panthéon inca.</French>
 		<Polish>Swi&#185;tynia - miejsce kultu religijnego. W sensie szerszym, jest to ka&#191;da budowla wzniesiona w celu sprawowania w niej wszelkiego rodzaju obrz&#234;d&#243;w religijnych. W sensie w&#234;&#191;szym, &#156;wi&#185;tyni&#185; mo&#191;e by&#230; tylko taka budowla, kt&#243;ra spe&#179;nia przynajmniej niekt&#243;re wy&#191;sze funkcje kultowe (np. sk&#179;adanie ofiar), sprawowane jedynie przez kap&#179;an&#243;w.</Polish>
 		<Russian>Â ìíîãîíàöèîíàëüíîé Èìïåðèè èíêîâ, ðàçíûå íàðîäû èñïîâåäîâàëè ìíîæåñòâî ñàìûõ ðàçëè÷íûõ ïîëèòåèñòè÷åñêèõ êóëüòîâ. Áîëüøèíñòâî ðåëèãèé èìåëî îáùèå ÷åðòû, òàêèå êàê ïîêëîíåíèå Ïà÷àìàìå è Âèðàêî÷å. Êîãäà Èíêè ïîêîðÿëè î÷åðåäíîé íàðîä èëè ïëåìÿ, îíè äîáàâëÿëè èõ òðàäèöèîííûõ áîæåñòâ â ñîáñòâåííûé ïàíòåîí.</Russian>
 	</TEXT>
@@ -28855,14 +28956,16 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_CANAANITE_MISSIONARY_PEDIA</Tag>
 		<English>Canaanite religion is the name for the group of Ancient Semitic religions practiced by the Canaanites living in the ancient Levant from at least the early Bronze Age through the first centuries of the Common Era. Canaanite religion was polytheistic, and in some cases monolatristic.</English>
+		<French>La religion cananéenne désigne le groupe des religions sémitiques anciennes pratiquées par les Cananéens vivant dans l'ancien Levant depuis au moins le début de l'âge du bronze jusqu'aux premiers siècles de l'ère commune. La religion cananéenne était polythéiste et, dans certains cas, monolâtriste.</French>
 		<Polish>Religia kananejska - system wierze&#241; lud&#243;w zamieszka&#179;ych w drugim i pierwszym tysi&#185;cleciu p.n.e. na terenie Kanaanu. Jej zniekszta&#179;cony obraz z helle&#241;skimi nalecia&#179;o&#156;ciami przedstawi&#179; w II wieku p.n.e. Filon. Wed&#179;ug mit&#243;w syro-palesty&#241;skich wszech&#156;wiat narodzi&#179; si&#234; z wiatru, kt&#243;ry wia&#179; nad wodami. Pierwszym bogiem by&#179; Mot. Gwiazdy, niebo i ziemia wyklu&#179;y si&#234; z kosmicznego jaja. Pierwsze pokolenie b&#243;stw narodzi&#179;o si&#234; z bogini morza Aszratum i Nieba. W miar&#234;, jak rozwija&#179;a si&#234; religia, Aszratum &#179;&#185;czy&#179;a si&#234; kolejno z Elem i Baalem, co obja&#156;nia ich prawo do w&#179;adzy. Od oko&#179;o XIII wieku p.n.e. w religii ugaryckiej utrwali&#179;y si&#234; triady b&#243;stw wed&#179;ug schematu: b&#243;g obro&#241;ca - bogini - m&#179;ody odradzaj&#185;cy si&#234; b&#243;g. W Byblos czczono wi&#234;c Ela, Pani&#185; i Adonisa. W Sydonie - Baala, Asztarte i Eszmuna, w Tyrze - Melkarta, Asztarte i Eszmuna, Filistyni za&#156; czcili Dagana, Asztarte i Baala.</Polish>
 		<Russian>Õàíààíñêîé ðåëèãèåé ïðèíÿòî íàçûâàòü ãðóïïó èç äðåâíåñåìèòñêèõ êóëüòîâ, ïðàêòèêîâàâøèõñÿ â Äðåâíåì Ëåâàíòå, êàê ìèíèìóì, îò ýïîõè ðàííåé áðîíçû äî ïåðâûõ âåêîâ íàøåé ýðû. Áîëüøèíñòâî çàïàäíîñåìèòñêèõ êóëüòîâ ÿâëÿëèñü ïîëèòåèñòè÷åñêèìè, íî âñòðå÷àëèñü è êóëüòû, ïîñòðîåííûå íà åäèíîáîæèè.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_CAODAI_MISSIONARY</Tag>
 		<English>Cao Dai Missionary</English>
-		<Russian>Ìèññèîíåð Êàîäàé</Russian>
+		<French>Missionnaire Cao Dai</French>
 		<Italian>Missionario caodaista</Italian>
+		<Russian>Ìèññèîíåð Êàîäàé</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_DRUID_MISSIONARY</Tag>
@@ -28876,6 +28979,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_DRUID_MISSIONARY_PEDIA</Tag>
 		<English>A druid was a member of the educated, professional class among the Celtic peoples of Gaul, Britain, Ireland, and possibly elsewhere during the Iron Age. The druid class included law-speakers, poets and doctors, among other learned professions, although the best known among the druids were the religious leaders.</English>
+		<French>Un druide était un membre de la classe éduquée et professionnelle parmi les peuples celtes de Gaule, de Grande-Bretagne, d'Irlande, et peut-être ailleurs durant l'âge du fer. La classe druidique comprenait des orateurs de la loi, des poètes et des médecins, parmi d'autres professions érudites, bien que les druides les plus connus étaient les chefs religieux.</French>
 		<Polish>Druidzi sprawowali wa&#191;ne funkcje spo&#179;eczne, byli odpowiedzialni za sprawy wiedzy i nauczania. M&#179;odzie&#191; nauczano o nie&#156;miertelno&#156;ci duszy, reinkarnacji, co przekazywano w formie poetyckiej do nauczenia si&#234; na pami&#234;&#230; - studia trwa&#179;y nawet (jak twierdzi Cezar) do 20 lat, gdy&#191; wiedza by&#179;a przekazywana tylko drog&#185; ustn&#185;. Mieli du&#191;&#185; wiedz&#234; o gwiazdach i ich ruchach, o przyrodzie, mocach i nie&#156;miertelnych bogach. Innym wa&#191;nym zadaniem druid&#243;w by&#179;o strze&#191;enie tradycji i wpajanie cn&#243;t moralnych.</Polish>
 		<Russian>Äðóèäû (ãàëëüñêîå druidae, äðåâíåèðëàíäñêîå drui, ìí.÷. druid) - æðåöû ó äðåâíèõ êåëüòñêèõ íàðîäîâ, îðãàíèçîâàííûå â âèäå çàìêíóòîãî, íî íå íàñëåäñòâåííîãî ñîñëîâèÿ, òàêæå âûïîëíÿëè ôóíêöèè ñóäåé, çàíèìàëèñü âðà÷åâàíèåì è àñòðîíîìèåé.</Russian>
 	</TEXT>
@@ -28933,6 +29037,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_HELLSMOUTH_DOG_PEDIA</Tag>
 		<English>Mad dogs coming directly from the hell's mouth. At least, according to skeptics, that is what their owners would have you believe.</English>
+		<French>Des Chiens enragés venant directement de la gueule de l'enfer. Du moins, selon les sceptiques, c'est ce que leurs propriétaires voudraient vous faire croire.</French>
 		<Italian>Un cane impazzito che proviene direttamente dalla bocca dell'inferno; o secondo gli scettici, questo è ciò che i loro possessori vogliono far credere.</Italian>
 		<Polish>W&#156;ciek&#179;e psy hodowane przez &#156;wi&#185;tynie Voodoo.</Polish>
 		<Russian>ßðîñòíûå áåñòèè, ïðèõîäÿùèå íåïîñðåäñòâåííî èç ãëóáèí àäà. Ïî êðàéíåé ìåðå, ïî ñëîâàì ñêåïòèêîâ, èõ õîçÿåâà õîòåëè áû çàñòàâèòü âàñ ïîâåðèòü â ðåàëüíîñòü ïîäîáíûõ ìîíñòðîâ.</Russian>
@@ -29052,6 +29157,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_NGAI_MISSIONARY_PEDIA</Tag>
 		<English>The Bantu mythology is the system of myths and legends of the Bantu peoples of Africa. Although Bantu peoples account for several hundred different ethnic groups, there is a high degree of homogeneity in Bantu cultures and mythologies, just as in Bantu languages. The phrase "Bantu mythology" usually refers to the common, recurring themes that are found in all or most Bantu cultures.</English>
+		<French>La mythologie bantoue est l'ensemble des mythes et légendes des peuples bantous d'Afrique. Bien que les peuples bantous regroupent plusieurs centaines de groupes ethniques différents, il existe une forte homogénéité dans les cultures et mythologies bantoues, tout comme dans les langues bantoues. L'expression "Mythologie bantoue" se réfère généralement aux thèmes communs et récurrents présents dans toutes ou la plupart des cultures bantoues.</French>
 		<Polish>Ngai (Enkai, En-kai, Engai, Eng-ai, Mweai, Mwiai) - jedyny b&#243;g w monoteistycznych religiach kenijskich plemion Kamba, Kikuju i Masaj&#243;w. Wed&#179;ug tradycji Kikuju, mieszka on na &#156;wi&#234;tej g&#243;rze Kirinyadze (Mount Kenya). Wed&#179;ug Kamba, mieszka gdzie&#156; w ukryciu i nikt nie wie gdzie. Wed&#179;ug Masaj&#243;w, Enkai jest nie bogiem, a bogini&#185;.</Polish>
 		<Russian>Ìèôîëîãèÿ áàíòó - ñèñòåìà ìèôîâ è ëåãåíäû î íàðîäàõ áàíòó Àôðèêè. Õîòÿ íàðîäû áàíòó îáúÿñíÿþò íåñêîëüêî ñîòåí ðàçëè÷íûõ ýòíè÷åñêèõ ãðóïï, åñòü âûñîêàÿ ñòåïåíü îäíîðîäíîñòè â êóëüòóðàõ áàíòó è ìèôîëîãèè, òàê æå, êàê íà ÿçûêàõ áàíòó. Ôðàçà ''ìèôîëîãèÿ áàíòó'' îáû÷íî îòíîñèòñÿ ê îáùèì, ïîâòîðÿþùèìñÿ òåìàì, êîòîðûå íàéäåíû â âåñü èëè áîëüøèíñòâî êóëüòóð áàíòó.</Russian>
 	</TEXT>
@@ -29108,6 +29214,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SIKH_MISSIONARY_PEDIA</Tag>
 		<English>The Sikh Gurus established Sikhism over the centuries, beginning in the year 1469. Sikhism was founded by the first guru, Guru Nanak, and subsequently, each guru, in succession, was referred to as "Nanak", and as "Light", making their teachings, in the holy scriptures, equivalent. There are a total of 11 gurus: ten human gurus and the eleventh, or current and everlasting Sikh Guru, is the integrated Sikh scriptures known as the Adi Granth or Guru Granth Sahib.</English>
+		<French>Les gourous sikhs ont établi le sikhisme au fil des siècles, à partir de l'an 1469. Le sikhisme a été fondé par le premier gourou, Guru Nanak, et par la suite, chaque gourou, successivement, était appelé "Nanak" et "Lumière", rendant leurs enseignements dans les écritures sacrées équivalents. Il y a en tout 11 gourous : dix gourous humains et le onzième, ou gourou sikh actuel et éternel, est l'intégration des écritures sikhes connues sous le nom Adi Granth ou Guru Granth Sahib.</French>
 		<Polish>Poj&#234;cie oryginalnie wywodz&#185;ce si&#234; z sanskrytu, dos&#179;ownie "ci&#234;&#191;ki", "wa&#191;ny", "czcigodny", "przewodnik", "ten kt&#243;ry prowadzi z ciemno&#156;ci do &#156;wiat&#179;a". Traktat Gurugita opisuje cechy, rol&#234; oraz w&#179;a&#156;ciw&#185; relacj&#234; pomi&#234;dzy uczniami a guru. Konieczno&#156;&#230; rozwijania zwi&#185;zku z guru trwaj&#185;cego nawet po jego &#156;mierci jako przewodnikiem duchowym podkre&#156;la zar&#243;wno joga jak i tantra oraz wszystkie pozosta&#179;e nurty hinduistyczne. Rozwijanie w&#179;a&#156;ciwego zwi&#185;zku z &#191;yj&#185;cym mistrzem-przewodnikiem nazywane jest praktyk&#185; gurujogi. Gurugita jak i inne traktaty wymieniaj&#185; osiem rodzaj&#243;w guru o coraz wy&#191;szych umiej&#234;tno&#156;ciach i coraz bardziej boskiej randze. Stopnie Guruttwa pokrywaj&#185; si&#234; z opisywanymi o&#156;mioma stopniami duchowej realizacji, o&#156;wiecenia czy wyzwolenia.</Polish>
 		<Russian>Ñèêõñêîå ó÷åíèå è ñâÿùåííîå ïèñàíèå ñôîðìóëèðîâàë ãóðó Íàíàê (ðîä. 1469) è ïîñëåäóþùèå äåâÿòü ñèêõñêèõ Ó÷èòåëåé. Ãóðó Ãîáèíä Ñèíãõ ñòàë ïîñëåäíèì ãóðó â ÷åëîâå÷åñêîé ôîðìå. Ïåðåä ñìåðòüþ, Ãóðó Ãîáèíä Ñèíãõ îáúÿâèë, ÷òî Ãóðó Ãðàíòõ Ñàõèá áóäåò îêîí÷àòåëüíûì è âå÷íûì ãóðó ñèêõîâ. Ñâÿùåííîå Ïèñàíèå áûëî íàïèñàíî ïåðâûìè ïÿòüþ Ó÷èòåëÿìè. Ïèñàíèå ïîëüçóåòñÿ íàèâûñøèì äóõîâíûì àâòîðèòåòîì è îïðåäåëÿåò ïóòè è çàêîíû âñåãî Ó÷åíèÿ. Ñèêõñêèé êàòåõèçèñ Khalsa Panth äîïîëíÿåò Ñâÿùåííîå Ïèñàíèå.</Russian>
 	</TEXT>
@@ -29223,12 +29330,14 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 	<TEXT>
 		<Tag>TXT_KEY_VALID_FOR</Tag>
 		<English>Valid for:</English>
-    <Italian>Usata da:</Italian>
+		<French>Valide pour :</French>
+		<Italian>Usata da:</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_VALID_FOR_NOT</Tag>
 		<English>Invalid for:</English>
-    <Italian>Non usata da:</Italian>
+		<French>Invalide pour :</French>
+		<Italian>Non usata da:</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_VASSAL_DEMAND_TRIBUTE</Tag>
@@ -29443,7 +29552,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<English>Build %s1 %s2</English>
 		<French>Construire: %s1 %s2</French>
 		<German>%s1 %s2</German>
-		<Italian>Costruisci %s1 %s2</Italian>  <!-- victory info screen -->
+		<Italian>Costruisci %s1 %s2</Italian> <!-- victory info screen -->
 		<Spanish>Construir %s1 %s2</Spanish>
 		<Polish>Buduje: %s1 %s2</Polish>
 		<Russian>Произвести (%s2): %s1 ив.</Russian>
@@ -29454,14 +29563,16 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<English>Built by %s1</English>
 		<French>Construction par %s1</French>
 		<German>Von %s1 errichtet</German>
-		<Italian>Costruito da %s1</Italian>  <!-- victory info screen -->
+		<Italian>Costruito da %s1</Italian> <!-- victory info screen -->
 		<Spanish>Construcción terminada por %s1</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_VICTORY_SCREEN_CITIES</Tag>
 		<English>Monumental Cities</English>
-		<Italian>Città monumentali</Italian> <!-- victory info screen -->
+		<French>Villes monumentales</French>
+		<Italian>Città monumentali</Italian>
 		<Russian>Монументальных культурой городов</Russian>
+		<!-- victory info screen -->
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_VICTORY_SCREEN_CITY_CULTURE</Tag>
@@ -29469,7 +29580,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<English>%d1 cities with %s2 Culture</English>
 		<French>%d1 villes avec un niveau de culture %s2</French>
 		<German>%d1 Städte mit Kulturstufe %s2</German>
-		<Italian>%d1 città con la cultura %s2</Italian>  <!-- victory info screen -->
+		<Italian>%d1 città con la cultura %s2</Italian> <!-- victory info screen -->
 		<Spanish>%d1 ciudades con cultura %s2</Spanish>
 		<Russian>Городов с уровнем культуры «%s2»: %d1</Russian>
 	</TEXT>
@@ -29489,7 +29600,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<English>Election triggered by %s1</English>
 		<French>Election déclenchée par l'%s1</French>
 		<German>Wahl durch %s1 initiiert</German>
-		<Italian>Elezioni richieste da %s1</Italian>  <!-- victory info screen -->
+		<Italian>Elezioni richieste da %s1</Italian> <!-- victory info screen -->
 		<Spanish>Votación iniciada por %s1</Spanish>
 		<Russian>%s1 инициировал выборы</Russian>
 	</TEXT>
@@ -29498,7 +29609,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<English>Eliminate all rivals</English>
 		<French>Elimination de tous les rivaux</French>
 		<German>Alle Gegner auslöschen</German>
-		<Italian>Eliminazione di tutti i rivali</Italian>  <!-- victory info screen -->
+		<Italian>Eliminazione di tutti i rivali</Italian> <!-- victory info screen -->
 		<Spanish>Eliminar a todos los rivales</Spanish>
 	</TEXT>
 	<TEXT>
@@ -29506,7 +29617,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<English>Highest score at %s1</English>
 		<French>Meilleur score : %s1</French>
 		<German>Höchste Punktzahl: %s1</German>
-		<Italian>Maggior punteggio nel %s1</Italian>  <!-- victory info screen -->
+		<Italian>Maggior punteggio nel %s1</Italian> <!-- victory info screen -->
 		<Spanish>Mayor puntuación en %s1</Spanish>
 	</TEXT>
 	<TEXT>
@@ -29516,7 +29627,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<German>gestartet</German>
 		<Spanish>Lanzada</Spanish>
 		<Polish>Wystartowa&#179;</Polish>
-		<Italian>Lanciata</Italian>  <!-- victory info screen -->
+		<Italian>Lanciata</Italian> <!-- victory info screen -->
 		<Russian>Запущен</Russian>
 	</TEXT>
 	<TEXT>
@@ -29534,7 +29645,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<English>Not yet built</English>
 		<French>Pas encore construit(e)</French>
 		<German>Noch nicht errichtet</German>
-		<Italian>Congresso non istituito</Italian>  <!-- victory info screen -->
+		<Italian>Congresso non istituito</Italian> <!-- victory info screen -->
 		<Spanish>Sin construir aún</Spanish>
 		<Russian>Не построено</Russian>
 	</TEXT>
@@ -29569,7 +29680,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<English>%d1%% of Culture</English>
 		<French>%d1%% de culture</French>
 		<German>%d1%% der Kultur</German>
-		<Italian>%d1%% di cultura</Italian>  <!-- victory info screen -->
+		<Italian>%d1%% di cultura</Italian> <!-- victory info screen -->
 		<Spanish>%d1%% de cultura</Spanish>
 		<Russian>%d1%% культуры</Russian>
 	</TEXT>
@@ -29578,7 +29689,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<English>%d1%% of Land Area</English>
 		<French>%d1%% de la surface des terres</French>
 		<German>%d1%% des Landgebiets</German>
-		<Italian>%d1%% della superficie</Italian>  <!-- victory info screen -->
+		<Italian>%d1%% della superficie</Italian> <!-- victory info screen -->
 		<Spanish>%d1%% del área terrestre</Spanish>
 		<Russian>%d1%% суши</Russian>
 	</TEXT>
@@ -29587,7 +29698,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<English>%d1%% of World Population</English>
 		<French>%d1%% de la population mondiale</French>
 		<German>%d1%% der Weltbevölkerung</German>
-		<Italian>%d1%% della popolazione mondiale</Italian>  <!-- victory info screen -->
+		<Italian>%d1%% della popolazione mondiale</Italian> <!-- victory info screen -->
 		<Spanish>%d1%% de la población mundial</Spanish>
 		<Russian>%d1%% мирового населения</Russian>
 	</TEXT>
@@ -29596,7 +29707,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<English>%d1%% of Religion Influence</English>
 		<French>%d1%% d'influence religieuse</French>
 		<German>%d1%% des religiösen Einflusses</German>
-		<Italian>%d1%% di influenza religiosa</Italian>  <!-- victory info screen -->
+		<Italian>%d1%% di influenza religiosa</Italian> <!-- victory info screen -->
 		<Spanish>%d1%% de influencia religiosa</Spanish>
 		<Russian>%d1%% религиозного влияния</Russian>
 	</TEXT>
@@ -29605,7 +29716,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<English>[SPACE](%d1 [NUM1:Vote:Votes])</English>
 		<French>[SPACE](%d1 [NUM1:Vote:Votes])</French>
 		<German>[SPACE](%d1 [NUM1:Stimme:Stimmen])</German>
-		<Italian>[SPACE]([COLOR_HIGHLIGHT_TEXT]%d1[COLOR_REVERT] [NUM1:voto:voti])</Italian>  <!-- victory info screen -->
+		<Italian>[SPACE]([COLOR_HIGHLIGHT_TEXT]%d1[COLOR_REVERT] [NUM1:voto:voti])</Italian> <!-- victory info screen -->
 		<Spanish>[SPACE](%d1 [NUM1:voto:votos])</Spanish>
 	</TEXT>
 	<TEXT>
@@ -29842,14 +29953,18 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 	<TEXT>
 		<Tag>TXT_KEY_VOTE_DEMOCRACY</Tag>
 		<English>U.N. Resolution #3312 (Global Civic - Democracy)</English>
+		<French>Résolution ONU n°3312 (Civique globale – Démocratie)</French>
+		<Italian>Risoluzione delle Nazioni Unite #3312 (forma di governo mondiale - democrazia)</Italian>
 		<Russian>Ðåçîëþöèÿ ÎÎÍ 16 (âñåîáùåå èçáèðàòåëüíîå ïðàâî)</Russian>
-		<Italian>Risoluzione delle Nazioni Unite #3312 (forma di governo mondiale - democrazia)</Italian> <!-- victory conditions infoscreen, tab resolutions -->
+		<!-- victory conditions infoscreen, tab resolutions -->
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_VOTE_EGALITARIAN</Tag>
 		<English>U.N. Resolution #743 (Global Civic - Egalitarian)</English>
+		<French>Résolution ONU n°743 (Civique globale – Égalitaire)</French>
+		<Italian>Risoluzione delle Nazioni Unite #743 (forma di governo mondiale - egalitarismo)</Italian>
 		<Russian>Резолюция ООН 743 (либерализм)</Russian>
-		<Italian>Risoluzione delle Nazioni Unite #743 (forma di governo mondiale - egalitarismo)</Italian> <!-- victory conditions infoscreen, tab resolutions -->
+		<!-- victory conditions infoscreen, tab resolutions -->
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_VOTE_FORCE_NO_TRADE</Tag>
@@ -29886,14 +30001,18 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 	<TEXT>
 		<Tag>TXT_KEY_VOTE_GREEN</Tag>
 		<English>U.N. Resolution #1190 (Global Civic - Green)</English>
+		<French>Résolution ONU n°1190 (Civique globale – Écologiste)</French>
+		<Italian>Risoluzione delle Nazioni Unite #1190 (forma di governo mondiale - verde)</Italian>
 		<Russian>Ðåçîëþöèÿ ÎÎÍ 24 (çàêîí îá îõðàíå îêðóæàþùåé ñðåäû)</Russian>
-		<Italian>Risoluzione delle Nazioni Unite #1190 (forma di governo mondiale - verde)</Italian> <!-- victory conditions infoscreen, tab resolutions -->
+		<!-- victory conditions infoscreen, tab resolutions -->
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_VOTE_LEGISLATURE</Tag>
 		<English>U.N. Resolution #3445 (Global Civic - Legislature)</English>
+		<French>Résolution ONU n°3445 (Civique globale – Législatif)</French>
+		<Italian>Risoluzione delle Nazioni Unite #3345 (forma di governo mondiale - legislatura)</Italian>
 		<Russian>Резолюция ООН 3445 (сенат)</Russian>
-		<Italian>Risoluzione delle Nazioni Unite #3345 (forma di governo mondiale - legislatura)</Italian> <!-- victory conditions infoscreen, tab resolutions -->
+		<!-- victory conditions infoscreen, tab resolutions -->
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_VOTE_NO_NUKES</Tag>
@@ -29946,8 +30065,10 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 	<TEXT>
 		<Tag>TXT_KEY_VOTE_SECULARISM</Tag>
 		<English>U.N. Resolution #427 (Global Civic - Secularism)</English>
+		<French>Résolution ONU n°427 (Civique globale – Laïcité)</French>
+		<Italian>Risoluzione delle Nazioni Unite #427 (forma di governo globale - secolarismo)</Italian>
 		<Russian>Резолюция ООН 427 (светское общество)</Russian>
-		<Italian>Risoluzione delle Nazioni Unite #427 (forma di governo globale - secolarismo)</Italian> <!-- victory conditions infoscreen, tab resolutions -->
+		<!-- victory conditions infoscreen, tab resolutions -->
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_VOTE_SINGLE_CURRENCY</Tag>
@@ -29960,8 +30081,10 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 	<TEXT>
 		<Tag>TXT_KEY_VOTE_SOCIALIZED</Tag>
 		<English>U.N. Resolution #4172 (Global Civic - Socialized)</English>
+		<French>Résolution ONU n°4172 (Civique globale – Socialisé)</French>
+		<Italian>Risoluzione delle Nazioni Unite #4172 (forma di governo globale - socializzazione)</Italian>
 		<Russian>Ðåçîëþöèÿ ÎÎÍ #4172 (Ìèðîâîé îáùåñòâåííûé èíñòèòóò - Ñîöèàëüíîå îáåñïå÷åíèå)</Russian>
-		<Italian>Risoluzione delle Nazioni Unite #4172 (forma di governo globale - socializzazione)</Italian> <!-- victory conditions infoscreen, tab resolutions -->
+		<!-- victory conditions infoscreen, tab resolutions -->
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_VOTE_SOURCE_RELIGION</Tag>
@@ -30276,13 +30399,11 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Italian>Inserisci il nome del tuo script</Italian>
 		<Spanish>Escribe el nombre de la secuencia de comandos</Spanish>
 	</TEXT>
-		<TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_WHALING_BOATS_PEDIA</Tag>
 		<English>Whaling is the hunting of whales mainly for meat and oil. Its earliest forms date to at least 3000 BC. Various coastal communities have long histories of sustenance whaling and harvesting beached whales. Industrial whaling emerged with organized fleets in the 17th century; competitive national whaling industries in the 18th and 19th centuries; and the introduction of factory ships along with the concept of whale harvesting in the first half of the 20th century.</English>
 		<French>La chasse à la baleine est la chasse aux baleines principalement pour la viande et l'huile. Ses premières formes datent d'au moins 3000 ans avant JC. Diverses communautés côtières ont une longue histoire de chasse à la baleine de subsistance et de chasse aux baleines échouées. La chasse industrielle a émergé avec des flottes organisées au 17ème siècle; des industries baleinières nationales compétitives aux XVIIIe et XIXe siècles; et l'introduction de navires-usines ainsi que le concept de la récolte des baleines dans la première moitié du 20e siècle.</French>
-		<Russian>* Êèòîáîéíûå ëîäêè: âñå öèâèëèçàöèè
-* Êèòîáîéíîå ñóäíî: Âèêèíãè
-Êèòîáîéíîå ñóäíî èëè âåëüáîò - ñïåöèàëèçèðîâàííîå ñóäíî, ïðåäíàçíà÷åííîå äëÿ îõîòû íà êèòîâ, ëîâëè è/èëè îáðàáîòêè êèòîâ. Òèïè÷íûé îáðàçåö ýòî êèòîëîâ - ïàðîâîå èëè äèçåëüíîå ñóäíî ñ ãàðïóííîé ïóøêîé, óñòàíîâëåííîé íà åãî íîñó - ñåé÷àñ îí íåïðàâèëüíî íàçûâàåòñÿ íîâè÷êàìè êàê ãàðïóííîå ñóäíî.</Russian>
+		<Russian>* Êèòîáîéíûå ëîäêè: âñå öèâèëèçàöèè* Êèòîáîéíîå ñóäíî: ÂèêèíãèÊèòîáîéíîå ñóäíî èëè âåëüáîò - ñïåöèàëèçèðîâàííîå ñóäíî, ïðåäíàçíà÷åííîå äëÿ îõîòû íà êèòîâ, ëîâëè è/èëè îáðàáîòêè êèòîâ. Òèïè÷íûé îáðàçåö ýòî êèòîëîâ - ïàðîâîå èëè äèçåëüíîå ñóäíî ñ ãàðïóííîé ïóøêîé, óñòàíîâëåííîé íà åãî íîñó - ñåé÷àñ îí íåïðàâèëüíî íàçûâàåòñÿ íîâè÷êàìè êàê ãàðïóííîå ñóäíî.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_WIDGET_CREATE_GROUP</Tag>
@@ -30762,7 +30883,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Tag>TXT_TB_UNIT_VIEW_3</Tag>
 		<English>Press SHIFT to view Combat Classes</English>
 		<Italian>[ICON_BULLET]Premi SHIFT per vedere i sottotipi di combattimento</Italian>
-		<French>Utiliser SHIFT pour voir les Classes de combat</French>
+		<French>Utiliser MAJ pour voir les Classes de combat</French>
 		<German>[COLOR_HIGHLIGHT_TEXT]&lt;UMSCHALT&gt;[COLOR_REVERT] für Anzeige der Kategorien</German>
 		<Polish>Naci&#156;nij SHIFT aby zobaczy&#230; Klasy Bojowe</Polish>
 		<Russian>Нажмите SHIFT для просмотра атрибутов</Russian>

@@ -124,6 +124,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUG_DOUBLE_COMMERCE_COMPLETE</Tag>
 		<English>[ICON_BULLET]%d1 years of history have doubled the %s2_commerce_type</English>
+		<French>[ICON_BULLET]%d1 années d'histoire ont doublé le %s2_commerce_type</French>
 		<Italian>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]%s2_commerce_type raddoppiata[COLOR_REVERT] dopo [COLOR_HIGHLIGHT_TEXT]%d1[COLOR_REVERT] anni di storia</Italian>
 		<Polish>[ICON_BULLET]%d1 lat historii podwoi&#179;o %s2_commerce_type</Polish>
 	</TEXT>
@@ -177,6 +178,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUG_FINANCIAL_ADVISOR_SPECIALIST_GOLD</Tag>
 		<English>[NEWLINE]%s1[ICON_GOLD]: %s3 (%d2)</English>
+		<French>[NEWLINE]%s1[ICON_GOLD] : %s3 (%d2)</French>
 		<Italian>[NEWLINE]%s1 [ICON_GOLD]: %s3 (%d2)</Italian>
 		<Russian>[NEWLINE]%s1[ICON_GOLD]: %s3 (%d2)</Russian>
 		<Polish>[NEWLINE]%s1[ICON_GOLD]: %s3 (%d2)</Polish>
@@ -843,7 +845,7 @@
 		<German>Kennzeichnet, falls vorhanden, die jeweilige Gruppe der kampfrelevanten Modifikatoren der Einheiten mit "Angreifer" und "Verteidiger"</German>
 		<Italian>[BOLD]Nel pannello delle probabilità di combattimento verrà mostrato [COLOR_HIGHLIGHT_TEXT]a chi vengono applicati i modificatori[COLOR_REVERT] indicando [COLOR_HIGHLIGHT_TEXT]attaccante[COLOR_REVERT] o [COLOR_HIGHLIGHT_TEXT]difensore[COLOR_REVERT] prima di ogni set non vuoto[\BOLD]</Italian>
 		<Spanish>Cuando se activa, muestra las etiquetas "atacante" y "defensor" antes de cada conjunto de modificadores no vacío.</Spanish>
-		<Russian>Êîãäà óñòàíîâëåí, ïîêàçûâàåò ìåòêè "àòàêóþùèé" è çàùèòíèê" äî êàæäîãî íåïóñòîãî íàáîðà ìîäèôèêàòîðîâ.</Russian>
+		<Russian>Êîãäà óñòàíîâëåí, ïîêàçûâàåò ìåòêè "àòàêóþùèé" è "çàùèòíèê" äî êàæäîãî íåïóñòîãî íàáîðà ìîäèôèêàòîðîâ.</Russian>
 		<Polish>Po zaznaczeniu wy&#156;wietla etykiety "atakuj&#185;cy" i "obro&#241;ca" przed ka&#191;dym niepustym zestawem modyfikator&#243;w.</Polish>
 	</TEXT>
 	<TEXT>
@@ -859,7 +861,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_ACO__SHOWSHIFTINSTRUCTIONS_HOVER</Tag>
 		<English>Select when to show the instructions for pressing [SHIFT] to see the alternate view.</English>
-		<French>Sélectionner dans quelle condition afficher le conseil concernant la touche [SHIFT] qui permet d'afficher la vue alternative.</French>
+		<French>Sélectionner dans quelle condition afficher le conseil concernant la touche [MAJ] qui permet d'afficher la vue alternative.</French>
 		<German>Bestimmt, wann der Hinweis zum Drücken der [SHIFT]-Taste für den Wechsel zur alternativen Ansicht angezeigt wird</German>
 		<Italian>[BOLD]Imposta se e quando visualizzare le [COLOR_HIGHLIGHT_TEXT]istruzioni per premere [SHIFT][COLOR_REVERT] per usare l'altra visuale (visuale normale o alternativa)[\BOLD]</Italian>
 		<Spanish>Indica cuándo mostrar las instrucciones para presionar [SHIFT] para ver la vista alternativa.</Spanish>
@@ -869,7 +871,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_ACO__SHOWSHIFTINSTRUCTIONS_TEXT</Tag>
 		<English>[SHIFT] Instructions</English>
-		<French>Conseil [SHIFT]</French>
+		<French>Conseil [MAJ]</French>
 		<German>[SHIFT]-Hinweis</German>
 		<Italian>Istruzioni tasto [SHIFT]</Italian>
 		<Spanish>[SHIFT] Instrucciones</Spanish>
@@ -909,6 +911,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_ACO__SHOWTOTALDEFENSEMODIFIER_TEXT</Tag>
 		<English>Total Defense Modifier</English>
+		<French>Modificateur total de défense</French>
 		<German>Absoluter Verteidigungsmodifikator</German>
 		<Italian>Modificatori difensivi totali</Italian>
 		<Spanish>Modificador defensivo total</Spanish>
@@ -1457,64 +1460,74 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_AUTOLOG__LOGLEVELCITYBBAI_HOVER</Tag>
 		<English>Set the level of BBAI logging - 0 = off, 1 = important events, 2 = many decisions, 3 = most detailed</English>
-		<Spanish>Cambie el nivel de registrado de BBAI: 0 = desactivado, 1 = eventos importantes, 2 = decisiones, 3 = más detallado.</Spanish>
+		<French>Définir le niveau de journalisation BBAI - 0 = désactivé, 1 = événements importants, 2 = nombreuses décisions, 3 = le plus détaillé</French>
 		<Italian>[BOLD]Imposta il [COLOR_HIGHLIGHT_TEXT]livello di messaggi[COLOR_REVERT] del registro automatico: [COLOR_HIGHLIGHT_TEXT]0[COLOR_REVERT] = [COLOR_HIGHLIGHT_TEXT]registro disattivato[COLOR_REVERT], [COLOR_HIGHLIGHT_TEXT]1[COLOR_REVERT] = [COLOR_HIGHLIGHT_TEXT]eventi importanti[COLOR_REVERT], [COLOR_HIGHLIGHT_TEXT]2[COLOR_REVERT] = [COLOR_HIGHLIGHT_TEXT]molte decisioni[COLOR_REVERT], [COLOR_HIGHLIGHT_TEXT]3[COLOR_REVERT] = [COLOR_HIGHLIGHT_TEXT]dettagliato[COLOR_REVERT][\BOLD]</Italian>
 		<Polish>Ustaw poziom rejestrowania BBAI - 0 = wy&#179;&#185;czone, 1 = wa&#191;ne zdarzenia, 2 = wiele decyzji, 3 = najbardziej szczeg&#243;&#179;owe</Polish>
+		<Spanish>Cambie el nivel de registrado de BBAI: 0 = desactivado, 1 = eventos importantes, 2 = decisiones, 3 = más detallado.</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_AUTOLOG__LOGLEVELCITYBBAI_TEXT</Tag>
 		<English>City log</English>
+		<French>Journal de la ville</French>
 		<Italian>Registro città</Italian>
 		<Polish>Dziennik miejski</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_AUTOLOG__LOGLEVELPLAYERBBAI_HOVER</Tag>
 		<English>Set the level of BBAI logging - 0 = off, 1 = important events, 2 = many decisions, 3 = most detailed</English>
-		<Spanish>Cambie el nivel de registrado de BBAI: 0 = desactivado, 1 = eventos importantes, 2 = decisiones, 3 = más detallado.</Spanish>
+		<French>Définir le niveau de journalisation BBAI - 0 = désactivé, 1 = événements importants, 2 = nombreuses décisions, 3 = le plus détaillé</French>
 		<Italian>[BOLD]Imposta il [COLOR_HIGHLIGHT_TEXT]livello di messaggi[COLOR_REVERT] del registro automatico: [COLOR_HIGHLIGHT_TEXT]0[COLOR_REVERT] = [COLOR_HIGHLIGHT_TEXT]registro disattivato[COLOR_REVERT], [COLOR_HIGHLIGHT_TEXT]1[COLOR_REVERT] = [COLOR_HIGHLIGHT_TEXT]eventi importanti[COLOR_REVERT], [COLOR_HIGHLIGHT_TEXT]2[COLOR_REVERT] = [COLOR_HIGHLIGHT_TEXT]molte decisioni[COLOR_REVERT], [COLOR_HIGHLIGHT_TEXT]3[COLOR_REVERT] = [COLOR_HIGHLIGHT_TEXT]dettagliato[COLOR_REVERT][\BOLD]</Italian>
 		<Polish>Ustaw poziom rejestrowania BBAI - 0 = wy&#179;&#185;czone, 1 = wa&#191;ne zdarzenia, 2 = wiele decyzji, 3 = najbardziej szczeg&#243;&#179;owe</Polish>
+		<Spanish>Cambie el nivel de registrado de BBAI: 0 = desactivado, 1 = eventos importantes, 2 = decisiones, 3 = más detallado.</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_AUTOLOG__LOGLEVELPLAYERBBAI_TEXT</Tag>
 		<English>Player log</English>
+		<French>Journal du joueur</French>
 		<Italian>Registro giocatore</Italian>
 		<Polish>Dziennik gracza</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_AUTOLOG__LOGLEVELTEAMBBAI_HOVER</Tag>
 		<English>Set the level of BBAI logging - 0 = off, 1 = important events, 2 = many decisions, 3 = most detailed</English>
-		<Spanish>Cambie el nivel de registrado de BBAI: 0 = desactivado, 1 = eventos importantes, 2 = decisiones, 3 = más detallado.</Spanish>
+		<French>Définir le niveau de journalisation BBAI - 0 = désactivé, 1 = événements importants, 2 = nombreuses décisions, 3 = le plus détaillé</French>
 		<Italian>[BOLD]Imposta il [COLOR_HIGHLIGHT_TEXT]livello di messaggi[COLOR_REVERT] del registro automatico: [COLOR_HIGHLIGHT_TEXT]0[COLOR_REVERT] = [COLOR_HIGHLIGHT_TEXT]registro disattivato[COLOR_REVERT], [COLOR_HIGHLIGHT_TEXT]1[COLOR_REVERT] = [COLOR_HIGHLIGHT_TEXT]eventi importanti[COLOR_REVERT], [COLOR_HIGHLIGHT_TEXT]2[COLOR_REVERT] = [COLOR_HIGHLIGHT_TEXT]molte decisioni[COLOR_REVERT], [COLOR_HIGHLIGHT_TEXT]3[COLOR_REVERT] = [COLOR_HIGHLIGHT_TEXT]dettagliato[COLOR_REVERT][\BOLD]</Italian>
 		<Polish>Ustaw poziom rejestrowania BBAI - 0 = wy&#179;&#185;czone, 1 = wa&#191;ne zdarzenia, 2 = wiele decyzji, 3 = najbardziej szczeg&#243;&#179;owe</Polish>
+		<Spanish>Cambie el nivel de registrado de BBAI: 0 = desactivado, 1 = eventos importantes, 2 = decisiones, 3 = más detallado.</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_AUTOLOG__LOGLEVELTEAMBBAI_TEXT</Tag>
 		<English>Team log</English>
+		<French>Journal de l'équipe</French>
 		<Italian>Registro squadra</Italian>
 		<Polish>Dziennik zespo&#179;u</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_AUTOLOG__LOGLEVELUNITBBAI_HOVER</Tag>
 		<English>Set the level of BBAI logging - 0 = off, 1 = important events, 2 = many decisions, 3 = most detailed</English>
-		<Spanish>Cambie el nivel de registrado de BBAI: 0 = desactivado, 1 = eventos importantes, 2 = decisiones, 3 = más detallado.</Spanish>
+		<French>Définir le niveau de journalisation BBAI - 0 = désactivé, 1 = événements importants, 2 = nombreuses décisions, 3 = le plus détaillé</French>
 		<Italian>[BOLD]Imposta il [COLOR_HIGHLIGHT_TEXT]livello di messaggi[COLOR_REVERT] del registro automatico: [COLOR_HIGHLIGHT_TEXT]0[COLOR_REVERT] = [COLOR_HIGHLIGHT_TEXT]registro disattivato[COLOR_REVERT], [COLOR_HIGHLIGHT_TEXT]1[COLOR_REVERT] = [COLOR_HIGHLIGHT_TEXT]eventi importanti[COLOR_REVERT], [COLOR_HIGHLIGHT_TEXT]2[COLOR_REVERT] = [COLOR_HIGHLIGHT_TEXT]molte decisioni[COLOR_REVERT], [COLOR_HIGHLIGHT_TEXT]3[COLOR_REVERT] = [COLOR_HIGHLIGHT_TEXT]dettagliato[COLOR_REVERT][\BOLD]</Italian>
 		<Polish>Ustaw poziom rejestrowania BBAI - 0 = wy&#179;&#185;czone, 1 = wa&#191;ne zdarzenia, 2 = wiele decyzji, 3 = najbardziej szczeg&#243;&#179;owe</Polish>
+		<Spanish>Cambie el nivel de registrado de BBAI: 0 = desactivado, 1 = eventos importantes, 2 = decisiones, 3 = más detallado.</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_AUTOLOG__LOGLEVELUNITBBAI_TEXT</Tag>
 		<English>Unit log</English>
+		<French>Journal de l'unité</French>
 		<Italian>Registro unità</Italian>
 		<Polish>Dziennik jednostek</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_AUTOLOG__MISCLOGGING_TEXT</Tag>
 		<English>Misc Logging</English>
+		<French>Journalisation diverse</French>
 		<Italian>Registri avanzati</Italian>
 		<Polish>R&#243;&#191;ne rejestrowanie</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_AUTOLOG__MISCLOGGING_HOVER</Tag>
 		<English>Enables a wide variation of specialized logs.</English>
+		<French>Active une grande variété de journaux spécialisés.</French>
 		<Italian>[BOLD]Attiva un'ampia [COLOR_HIGHLIGHT_TEXT]variazione dei registri specializzati[COLOR_REVERT][\BOLD]</Italian>
 		<Polish>Umo&#191;liwia szerok&#185; gam&#234; specjalistycznych dziennik&#243;w.</Polish>
 	</TEXT>
@@ -2844,9 +2857,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_AUTOSAVE__CREATEENDSAVE_TEXT</Tag>
 		<English>Game Over</English>
-		<Russian>Êîíå÷íàÿ çàïèñü</Russian>
+		<French>Fin de partie</French>
 		<Italian>Fine partita</Italian>
 		<Polish>Koniec gry</Polish>
+		<Russian>Êîíå÷íàÿ çàïèñü</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_AUTOSAVE__CREATEEXITSAVE_HOVER</Tag>
@@ -2861,23 +2875,26 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_AUTOSAVE__CREATEEXITSAVE_TEXT</Tag>
 		<English>Exit Game</English>
-		<Russian>Çàïèñü ïðè âûõîäå</Russian>
+		<French>Quitter le jeu</French>
 		<Italian>Uscita dal gioco</Italian>
 		<Polish>Wyjd&#159; z gry</Polish>
+		<Russian>Çàïèñü ïðè âûõîäå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_AUTOSAVE__CREATELATESAVE_HOVER</Tag>
 		<English>When checked, a save is made after all units have moved.</English>
-		<Russian>При включении данной опции, сохранение выполняется только после завершения ходов всех отрядов.</Russian>
+		<French>Lorsque coché, une sauvegarde est effectuée après le déplacement de toutes les unités.</French>
 		<Italian>[BOLD]Viene effettuato un salvataggio dopo che tutte le [COLOR_HIGHLIGHT_TEXT]unità sono state mosse[COLOR_REVERT][\BOLD]</Italian>
 		<Polish>Je&#156;li zaznaczone, zapis zostanie wykonany po poruszeniu wszystkich jednostek.</Polish>
+		<Russian>При включении данной опции, сохранение выполняется только после завершения ходов всех отрядов.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_AUTOSAVE__CREATELATESAVE_TEXT</Tag>
 		<English>Late Turn</English>
-		<Russian>Конец хода</Russian>
+		<French>Fin de tour</French>
 		<Italian>Fine turno</Italian>
 		<Polish>PKoniec tury</Polish>
+		<Russian>Конец хода</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_AUTOSAVE__CREATESTARTSAVE_HOVER</Tag>
@@ -2892,30 +2909,34 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_AUTOSAVE__CREATESTARTSAVE_TEXT</Tag>
 		<English>Game Start</English>
-		<Russian>Íà÷àëüíàÿ çàïèñü</Russian>
+		<French>Début de partie</French>
 		<Italian>Inizio della partita</Italian>
 		<Polish>Rozpocz&#234;cie gry</Polish>
+		<Russian>Íà÷àëüíàÿ çàïèñü</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_AUTOSAVE__INTERVAL_HOVER</Tag>
 		<English>Turns between autosaves, used by late turn autosaving.</English>
-		<Russian>Количество ходов между автосохранениями, используемые при позднем включении автосейвов.</Russian>
+		<French>Tours entre les sauvegardes automatiques, utilisé pour les sauvegardes en fin de tour.</French>
 		<Italian>[BOLD][COLOR_HIGHLIGHT_TEXT]Numero di turni tra i salvataggi[COLOR_REVERT] automatici per il salvataggio di fine turno[\BOLD]</Italian>
 		<Polish>Tury pomi&#234;dzy automatycznymi zapisami, u&#191;ywane przy automatycznym zapisywaniu przy ko&#241;cu tury.</Polish>
+		<Russian>Количество ходов между автосохранениями, используемые при позднем включении автосейвов.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_AUTOSAVE__INTERVAL_TEXT</Tag>
 		<English>Interval</English>
-		<Russian>Интервал</Russian>
+		<French>Intervalle</French>
 		<Italian>Intervallo</Italian>
 		<Polish>Interwa&#179;</Polish>
+		<Russian>Интервал</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_AUTOSAVE__USEPLAYERNAME_HOVER</Tag>
 		<English>When checked, your player name is used in the save file name instead of the name of your leader.</English>
-		<Russian>Êîãäà óñòàíîâëåí, èìÿ âàøåãî èãðîêà èñïîëüçóåòñÿ äëÿ íàçâàíèÿ çàïèñè èãðû âìåñòå ñ ãîäîì õîäà. Èíà÷å èìÿ ýòî îáúåäèíåíèå 3-áóêâåííîé âåðñèè èìåíè ëèäåðà, ñëîæíîñòè, ðàçìåðà êàðòû, òèïà êàðòû, ñêîðîñòè, ýðû, ãîäà, êëèìàòà è óðîâíÿ ìîðÿ. Ýòè íàñòðîéêè íå âîçäåéñòâóþò íà çàïèñè MapFinder.</Russian>
+		<French>Lorsque coché, votre nom de joueur est utilisé dans le nom du fichier de sauvegarde au lieu de celui de votre leader.</French>
 		<Italian>[BOLD]Invece del nome del leader, viene utilizzato il [COLOR_HIGHLIGHT_TEXT]nome del giocatore[COLOR_REVERT] per il nome del file di salvataggio[\BOLD]</Italian>
 		<Polish>Je&#156;li ta opcja jest zaznaczona, nazwa twojego gracza b&#234;dzie u&#191;ywana w nazwie pliku zapisu zamiast imienia twojego lidera.</Polish>
+		<Russian>Êîãäà óñòàíîâëåí, èìÿ âàøåãî èãðîêà èñïîëüçóåòñÿ äëÿ íàçâàíèÿ çàïèñè èãðû âìåñòå ñ ãîäîì õîäà. Èíà÷å èìÿ ýòî îáúåäèíåíèå 3-áóêâåííîé âåðñèè èìåíè ëèäåðà, ñëîæíîñòè, ðàçìåðà êàðòû, òèïà êàðòû, ñêîðîñòè, ýðû, ãîäà, êëèìàòà è óðîâíÿ ìîðÿ. Ýòè íàñòðîéêè íå âîçäåéñòâóþò íà çàïèñè MapFinder.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_AUTOSAVE__USEPLAYERNAME_TEXT</Tag>
@@ -2990,9 +3011,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_CITYBAR__BUILDINGACTUALEFFECTS_HOVER</Tag>
 		<English>When checked, displays actual effects of buildings.</English>
-		<Russian>При включении данной опции, отображаются реальные эффекты зданий.</Russian>
+		<French>Lorsque coché, affiche les effets réels des bâtiments.</French>
 		<Italian>[BOLD]Attiva la [COLOR_HIGHLIGHT_TEXT]visualizzazione degli effetti attuali[COLOR_REVERT] degli edifici[\BOLD]</Italian>
 		<Polish>Po zaznaczeniu wy&#156;wietla rzeczywiste efekty budynk&#243;w.</Polish>
+		<Russian>При включении данной опции, отображаются реальные эффекты зданий.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_CITYBAR__BUILDINGACTUALEFFECTS_TEXT</Tag>
@@ -3505,30 +3527,35 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_CITYSCREEN__BASEWEIGHTFOOD_HOVER</Tag>
 		<English>AI yield value weight defines the relative value ratio between the yield types.[NEWLINE]Don't mess with this unless you know what you're doing!</English>
+		<French>Le poids de la valeur du rendement de l'IA définit le ratio de valeur relative entre les types de rendement.[NEWLINE]Ne modifiez pas cela sauf si vous savez ce que vous faites !</French>
 		<Italian>[BOLD]Il valore della [COLOR_HIGHLIGHT_TEXT]resa dell'IA[COLOR_REVERT] definisce il [COLOR_HIGHLIGHT_TEXT]rapporto tra i diversi tipi di resa[COLOR_REVERT] (da non modificare a meno che non si sappia cosa si sta facendo!)[\BOLD]</Italian>
 		<Polish>Waga warto&#156;ci SI definiuje wzgl&#234;dny stosunek warto&#156;ci pomi&#234;dzy typami zysk&#243;w.[NEWLINE] Nie zajmuj si&#234; tym, chyba &#191;e wiesz, co robisz!</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_CITYSCREEN__BASEWEIGHTFOOD_TEXT</Tag>
 		<English>Food</English>
+		<French>Nourriture</French>
 		<Italian>Cibo</Italian>
 		<Polish>&#175;ywno&#156;&#230;</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_CITYSCREEN__BASEWEIGHTHAMMER_HOVER</Tag>
 		<English>AI yield value weight defines the relative value ratio between the yield types.[NEWLINE]Don't mess with this unless you know what you're doing!</English>
+		<French>Le poids de la valeur du rendement de l'IA définit le ratio de valeur relative entre les types de rendement.[NEWLINE]Ne modifiez pas cela sauf si vous savez ce que vous faites !</French>
 		<Italian>[BOLD]Il valore della [COLOR_HIGHLIGHT_TEXT]resa dell'IA[COLOR_REVERT] definisce il [COLOR_HIGHLIGHT_TEXT]rapporto tra i diversi tipi di resa[COLOR_REVERT] (da non modificare a meno che non si sappia cosa si sta facendo!)[\BOLD]</Italian>
 		<Polish>Waga warto&#156;ci SI definiuje wzgl&#234;dny stosunek warto&#156;ci pomi&#234;dzy typami zysk&#243;w.[NEWLINE] Nie zajmuj si&#234; tym, chyba &#191;e wiesz, co robisz!</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_CITYSCREEN__BASEWEIGHTHAMMER_TEXT</Tag>
 		<English>Hammer</English>
+		<French>Marteau</French>
 		<Italian>Produzione</Italian>
 		<Polish>Produkcja</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_CITYSCREEN__BASEWEIGHTCOMMERCE_HOVER</Tag>
 		<English>AI yield value weight defines the relative value ratio between the yield types.[NEWLINE]Don't mess with this unless you know what you're doing!</English>
+		<French>Le poids de la valeur du rendement de l'IA définit le ratio de valeur relative entre les types de rendement.[NEWLINE]Ne modifiez pas cela sauf si vous savez ce que vous faites !</French>
 		<Italian>[BOLD]Il valore della [COLOR_HIGHLIGHT_TEXT]resa dell'IA[COLOR_REVERT] definisce il [COLOR_HIGHLIGHT_TEXT]rapporto tra i diversi tipi di resa[COLOR_REVERT] (da non modificare a meno che non si sappia cosa si sta facendo!)[\BOLD]</Italian>
 		<Polish>Waga warto&#156;ci SI definiuje wzgl&#234;dny stosunek warto&#156;ci pomi&#234;dzy typami zysk&#243;w.[NEWLINE] Nie zajmuj si&#234; tym, chyba &#191;e wiesz, co robisz!</Polish>
 	</TEXT>
@@ -3960,60 +3987,70 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_CIV4LERTS__COMPLETEUNIT_HOVER</Tag>
 		<English>When checked, displays an alert when a city trains a unit.</English>
+		<French>Lorsque coché, affiche une alerte lorsqu'une ville forme une unité.</French>
 		<Italian>[BOLD]Attiva la [COLOR_HIGHLIGHT_TEXT]visualizzazione di un messaggio[COLOR_REVERT] quando una [COLOR_HIGHLIGHT_TEXT]città finisce l'addestramento di un'unità[COLOR_REVERT][\BOLD]</Italian>
 		<Polish>Po zaznaczeniu wy&#156;wietla alert, gdy miasto wyszkoli jednostk&#234;.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_CIV4LERTS__COMPLETEUNIT_TEXT</Tag>
 		<English>Unit</English>
+		<French>Unité</French>
 		<Italian>Addestramento unità</Italian>
 		<Polish>Jednostka</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_CIV4LERTS__COMPLETEBUILDING_HOVER</Tag>
 		<English>When checked, displays an alert when a city constructs a building.</English>
+		<French>Lorsque coché, affiche une alerte lorsqu'une ville construit un bâtiment.</French>
 		<Italian>[BOLD]Attiva la [COLOR_HIGHLIGHT_TEXT]visualizzazione di un messaggio[COLOR_REVERT] quando una [COLOR_HIGHLIGHT_TEXT]città finisce la costruzione di un edificio[COLOR_REVERT][\BOLD]</Italian>
 		<Polish>Po zaznaczeniu wy&#156;wietla alert, gdy miasto zbuduje budynek.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_CIV4LERTS__COMPLETEBUILDING_TEXT</Tag>
 		<English>Building</English>
+		<French>Bâtiment</French>
 		<Italian>Costruzione edificio</Italian>
 		<Polish>Budynek</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_CIV4LERTS__COMPLETEPROJECT_HOVER</Tag>
 		<English>When checked, displays an alert when a city finish a project.</English>
+		<French>Lorsque coché, affiche une alerte lorsqu'une ville termine un projet.</French>
 		<Italian>[BOLD]Attiva la [COLOR_HIGHLIGHT_TEXT]visualizzazione di un messaggio[COLOR_REVERT] quando una [COLOR_HIGHLIGHT_TEXT]città finisce un progetto[COLOR_REVERT][\BOLD]</Italian>
 		<Polish>Po zaznaczeniu wy&#156;wietla alert, gdy miasto zako&#241;czy projekt.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_CIV4LERTS__COMPLETEPROJECT_TEXT</Tag>
 		<English>Project</English>
+		<French>Projet</French>
 		<Italian>Fine progetto</Italian>
 		<Polish>Projekt</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_CIV4LERTS__COMPLETESPECIAL_HOVER</Tag>
 		<English>When checked, displays an alert when a city finish anything that is limited.</English>
+		<French>Lorsque coché, affiche une alerte lorsqu'une ville termine quelque chose de limité.</French>
 		<Italian>[BOLD]Attiva la [COLOR_HIGHLIGHT_TEXT]visualizzazione di un messaggio[COLOR_REVERT] quando una [COLOR_HIGHLIGHT_TEXT]città finisce la produzione qualsiasi oggetto speciale[COLOR_REVERT][\BOLD]</Italian>
 		<Polish>Po zaznaczeniu wy&#156;wietla alert, gdy miasto zako&#241;czy cokolwiek, co jest ograniczone ilo&#156;ciowo.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_CIV4LERTS__COMPLETESPECIAL_TEXT</Tag>
 		<English>Special</English>
+		<French>Spécial</French>
 		<Italian>Oggetti speciali</Italian>
 		<Polish>Specjalne</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_CIV4LERTS__COMPLETEBEGUNON_HOVER</Tag>
 		<English>When checked, add info about what is next in queue to the completion alert.</English>
+		<French>Lorsque coché, ajoute des informations sur ce qui est ensuite dans la file d'attente à l'alerte de fin.</French>
 		<Italian>[BOLD]Attiva la [COLOR_HIGHLIGHT_TEXT]visualizzazione della prossima entità [COLOR_REVERT] nella coda di produzione nelle precedenti opzioni[\BOLD]</Italian>
 		<Polish>Gdy zaznaczone, dodaj informacj&#234; o tym, co jest nast&#234;pne w kolejce do alertu uko&#241;czenia.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_CIV4LERTS__COMPLETEBEGUNON_TEXT</Tag>
 		<English>Begun on add-on</English>
+		<French>Commencé sur extension</French>
 		<Italian>Prossimo nella coda</Italian>
 		<Polish>Dodaj rozpocz&#234;te</Polish>
 	</TEXT>
@@ -4758,12 +4795,14 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_MAININTERFACE__AUTOENDTURNDELAY_HOVER</Tag>
 		<English>Delay before turn is automatically ended when using the above option or not using the vanilla game option to wait at end of turn.</English>
+		<French>Délai avant que le tour ne se termine automatiquement lors de l'utilisation de l'option ci-dessus ou en ne utilisant pas l'option vanilla pour attendre à la fin du tour.</French>
 		<Italian>[BOLD]Specifica [COLOR_HIGHLIGHT_TEXT]il ritardo in parti[COLOR_REVERT] (una parte = 0,25 sec) prima che il turno termini automaticamente quando si utilizza [COLOR_HIGHLIGHT_TEXT]termina turni senza decisioni[COLOR_REVERT][\BOLD]</Italian>
 		<Polish>Op&#243;&#159;nienie przed automatycznie ko&#241;cz&#185;c&#185; si&#234; tur&#185;, je&#156;li u&#191;yjesz powy&#191;szej opcji lub nie skorzystasz z podstawowej opcji gry, aby poczeka&#230; na koniec tury.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_MAININTERFACE__AUTOENDTURNDELAY_TEXT</Tag>
 		<English>Auto-end turn delay</English>
+		<French>Délai fin de tour automatique</French>
 		<Italian>Ritardo fine turno</Italian>
 		<Russian>Задержка автозавершения хода</Russian>
 		<Polish>Op&#243;&#159;nienie automatycznego zako&#241;czenia tury</Polish>
@@ -4771,24 +4810,28 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_MAININTERFACE__CYCLEDELAYMIN_HOVER</Tag>
 		<English>Minimum slice delay before unit cycle will occur after unit does any action that should end its turn.[NEWLINE]Each slice is about 0.25 seconds long.</English>
+		<French>Délai minimum avant que le cycle des unités ne se produise après que l'unité ait réalisé une action terminant son tour.[NEWLINE]Chaque tranche dure environ 0,25 seconde.</French>
 		<Italian>[BOLD]Specifica il [COLOR_HIGHLIGHT_TEXT]ritardo minimo in parti[COLOR_REVERT] (una parte = 0,25 sec) prima che si cicli alla prossima unità (avviene dopo che un'unità ha eseguito un'azione che dovrebbe terminare il suo turno)[\BOLD]</Italian>
 		<Polish>Minimalna ilo&#156;&#230; op&#243;&#159;nie&#241; jaka nast&#185;pi, zanim nast&#185;pi cykl jednostki po wykonaniu przez jednostk&#234; jakiejkolwiek akcji, kt&#243;ra powinna zako&#241;czy&#230; jej tur&#234;. [NEWLINE] Ka&#191;de op&#243;&#159;nienie ma d&#179;ugo&#156;&#230; oko&#179;o 0,25 sekundy.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_MAININTERFACE__CYCLEDELAYMIN_TEXT</Tag>
 		<English>Min cycle delay</English>
+		<French>Délai min cycle</French>
 		<Italian>Ritardo minimo ciclo unità</Italian>
 		<Polish>Minimalne op&#243;&#159;nienie cyklu</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_MAININTERFACE__CYCLEDELAYMOVE_HOVER</Tag>
 		<English>The slice delay before unit cycle will occur after unit finish its turn by moving.[NEWLINE]Each slice is about 0.25 seconds long.</English>
+		<French>Délai avant que le cycle des unités ne se produise après que l'unité ait terminé son tour en se déplaçant.[NEWLINE]Chaque tranche dure environ 0,25 seconde.</French>
 		<Italian>[BOLD]Specifica il [COLOR_HIGHLIGHT_TEXT]ritardo in parti[COLOR_REVERT] (una parte = 0,25 sec) prima che si cicli alla prossima unità (avviene dopo che un'unità ha terminato il suo turno muovendosi)[\BOLD]</Italian>
 		<Polish>Ilo&#156;&#230; op&#243;&#159;nie&#241; jaka nast&#185;pi przed cyklem jednostki nast&#185;pi po tym, jak jednostka zako&#241;czy swoj&#185; tur&#234; poprzez ruch. Ka&#191;de op&#243;&#159;nienie ma d&#179;ugo&#156;&#230; oko&#179;o 0,25 sekundy.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_MAININTERFACE__CYCLEDELAYMOVE_TEXT</Tag>
 		<English>Move cycle delay</English>
+		<French>Délai cycle déplacement</French>
 		<Italian>Ritardo ciclo unità</Italian>
 		<Polish>Op&#243;&#159;nienie cuklu po ruchu</Polish>
 	</TEXT>
@@ -5748,6 +5791,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_MORECIV4LERTS__DOMPOP_TEXT</Tag>
 		<English>Domination: Population</English>
+		<French>Domination : Population</French>
 		<German>Bevölkerung</German>
 		<Italian>Limite popolazione</Italian>
 		<Spanish>Dominación: población</Spanish>
@@ -5974,9 +6018,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_NJAGC__SHOWALTDATE_HOVER</Tag>
 		<English>When checked, the game date is displayed.</English>
-		<Russian>Êîãäà óñòàíîâëåí, îòîáðàæàþòñÿ âíóòðèèãðîâàÿ äàòà è îñòàâøèåñÿ õîäû çîëîòîãî âåêà.</Russian>
+		<French>Lorsque coché, la date du jeu est affichée.</French>
 		<Italian>[BOLD]Nella zona dell'orologio alternativo verrà mostrata la [COLOR_HIGHLIGHT_TEXT]data attuale[COLOR_REVERT] nel tempo del gioco[\BOLD]</Italian>
 		<Polish>Po zaznaczeniu wy&#156;wietlana jest data gry.</Polish>
+		<Russian>Êîãäà óñòàíîâëåí, îòîáðàæàþòñÿ âíóòðèèãðîâàÿ äàòà è îñòàâøèåñÿ õîäû çîëîòîãî âåêà.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_NJAGC__SHOWALTDATE_TEXT</Tag>
@@ -6051,9 +6096,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_NJAGC__SHOWDATE_HOVER</Tag>
 		<English>When checked, the game date is displayed.</English>
-		<Russian>Êîãäà óñòàíîâëåí, îòîáðàæàþòñÿ âíóòðèèãðîâàÿ äàòà è îñòàâøèåñÿ õîäû çîëîòîãî âåêà.</Russian>
+		<French>Lorsque coché, la date du jeu est affichée.</French>
 		<Italian>[BOLD]Nella zona dell'orologio verrà mostrata la [COLOR_HIGHLIGHT_TEXT]data attuale[COLOR_REVERT] nel tempo del gioco[\BOLD]</Italian>
 		<Polish>Po zaznaczeniu wy&#156;wietlana jest data gry.</Polish>
+		<Russian>Êîãäà óñòàíîâëåí, îòîáðàæàþòñÿ âíóòðèèãðîâàÿ äàòà è îñòàâøèåñÿ õîäû çîëîòîãî âåêà.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_NJAGC__SHOWDATE_TEXT</Tag>
@@ -6258,12 +6304,14 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_REVDCM__DYNAMIC_CIV_NAMES_HOVER</Tag>
 		<English>Civ names will have various names depending on civic choices and other factors</English>
+		<French>Les noms des civilisations auront différentes appellations selon les choix civiques et autres facteurs.</French>
 		<Italian>[BOLD]I nomi delle civiltà saranno [COLOR_HIGHLIGHT_TEXT]diversi in base alle forme di governo[COLOR_REVERT] usate e a altri fattori[\BOLD]</Italian>
 		<Polish>Cywilizacje b&#234;d&#185; mia&#179;y r&#243;&#191;ne nazwy w zale&#191;no&#156;ci od wybrqanych doktryn i innych czynnik&#243;w</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_REVDCM__DYNAMIC_CIV_NAMES_TEXT</Tag>
 		<English>Dynamic Civ Names</English>
+		<French>Noms dynamiques de civilisations</French>
 		<Italian>Nomi civiltà dinamici</Italian>
 		<Polish>Dynamiczne nazwy cywilizacji</Polish>
 	</TEXT>
@@ -6300,6 +6348,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_REVDCM__IDW_ENABLED_TEXT</Tag>
 		<English>Influence Driven War (IDW)</English>
+		<French>Guerre pilotée par l'influence (IDW)</French>
 		<Italian>Influenza culturale dalla guerra</Italian>
 		<Polish>Wojna oparta na wp&#179;ywach (IDW)</Polish>
 	</TEXT>
@@ -6366,20 +6415,24 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_REVDCM__LIMITED_RELIGIONS_EXCEPTIONS_HOVER</Tag>
 		<English>When selected, Limited Religions will still allow multiple religion founding for single city civs and rebels</English>
+		<French>Lorsque sélectionné, Religions limitées permettront toujours la fondation de plusieurs religions pour les civilisations à une seule ville et les rebelles</French>
 		<German>Auch bei Auswahl von Begrenzten Religionen können von Zivilisationen mit nur einer Stadt und Rebellen mehrere Religionen gegründet werden.</German>
-		<Spanish>Cuando se activa, 'Religiones limitadas' permitirá la fundación de múltiples religiones para civilizaciones de una sola ciudad y rebeldes.</Spanish>
-		<Russian>Ïðè ïîäêëþ÷åíèè îïöèè îãðàíè÷åííûõ ðåëèãèé äàåò âîçìîæíîñòü íåìíîãî óâåëè÷èòü ëèìèò ìàêñèìóìà îñíîâàíèÿ ðåëèãèé, íî òîëüêî äëÿ öèâèëèçàöèé ñ åäèíñòâåííûì ãîðîäîì èëè äëÿ ïîâñòàíöåâ.</Russian>
-		<Italian>[BOLD]L'opzione religioni limitate [COLOR_HIGHLIGHT_TEXT]consentirà comunque la fondazione di più religioni[COLOR_REVERT] per civiltà e ribelli[\BOLD]</Italian> <!-- not present in the BUG mod option screen currently -->
+		<Italian>[BOLD]L'opzione religioni limitate [COLOR_HIGHLIGHT_TEXT]consentirà comunque la fondazione di più religioni[COLOR_REVERT] per civiltà e ribelli[\BOLD]</Italian>
 		<Polish>Ograniczone Religie nadal b&#234;d&#185; umo&#191;liwia&#230; zak&#179;adanie wielu religii pa&#241;stwom-miastom oraz rebeliantom</Polish>
+		<Russian>Ïðè ïîäêëþ÷åíèè îïöèè îãðàíè÷åííûõ ðåëèãèé äàåò âîçìîæíîñòü íåìíîãî óâåëè÷èòü ëèìèò ìàêñèìóìà îñíîâàíèÿ ðåëèãèé, íî òîëüêî äëÿ öèâèëèçàöèé ñ åäèíñòâåííûì ãîðîäîì èëè äëÿ ïîâñòàíöåâ.</Russian>
+		<Spanish>Cuando se activa, 'Religiones limitadas' permitirá la fundación de múltiples religiones para civilizaciones de una sola ciudad y rebeldes.</Spanish>
+		<!-- not present in the BUG mod option screen currently -->
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_REVDCM__LIMITED_RELIGIONS_EXCEPTIONS_TEXT</Tag>
 		<English>Limited Religions Exceptions</English>
+		<French>Exceptions aux Religions limitées</French>
 		<German>Begrenzte Religionen mit Ausnahmen</German>
-		<Spanish>Excepciones a Religiones limitadas</Spanish>
-		<Russian>Ðàñøèðåííûé ëèìèò ðåëèãèé</Russian>
-		<Italian>Eccezioni opzione religioni limitate</Italian> <!-- not present in the BUG mod option screen currently -->
+		<Italian>Eccezioni opzione religioni limitate</Italian>
 		<Polish>Ograniczone wyj&#185;tki dotycz&#185;ce religii</Polish>
+		<Russian>Ðàñøèðåííûé ëèìèò ðåëèãèé</Russian>
+		<Spanish>Excepciones a Religiones limitadas</Spanish>
+		<!-- not present in the BUG mod option screen currently -->
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_REVDCM__OC_RESPAWN_HOLY_CITIES_HOVER</Tag>
@@ -6504,171 +6557,194 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_REVOLUTION__ACCEPTEDTURNS_HOVER</Tag>
 		<English>Minimum number of turns that must pass before a revolution can be spawned after accepting rebel demands</English>
-		<Spanish>Número mínimo de turnos que deben pasar antes de que pueda surgir una revolución tras aceptar las demandas de los rebeldes.</Spanish>
-		<Russian>Óñòàíàâëèâàåò ìèíèìóì êîëè÷åñòâà õîäîâ, êîòîðûå äîëæíû ïðîéòè äëÿ âîçíèêíîâåíèÿ î÷åðåäíîé ðåâîëþöèè, ïîñëå ïðèíÿòèÿ òðåáîâàíèé ïîâñòàíöåâ.</Russian>
+		<French>Nombre minimum de tours avant qu'une révolution puisse éclater après l'acceptation des exigences des rebelles</French>
 		<Polish>Minimalna liczba tur, kt&#243;re musz&#185; up&#179;yn&#185;&#230;, zanim b&#234;dzie mo&#191;na wywo&#179;a&#230; rewolucj&#234; po zaakceptowaniu &#191;&#185;da&#241; rebeliant&#243;w</Polish>
+		<Russian>Óñòàíàâëèâàåò ìèíèìóì êîëè÷åñòâà õîäîâ, êîòîðûå äîëæíû ïðîéòè äëÿ âîçíèêíîâåíèÿ î÷åðåäíîé ðåâîëþöèè, ïîñëå ïðèíÿòèÿ òðåáîâàíèé ïîâñòàíöåâ.</Russian>
+		<Spanish>Número mínimo de turnos que deben pasar antes de que pueda surgir una revolución tras aceptar las demandas de los rebeldes.</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_REVOLUTION__ACCEPTEDTURNS_TEXT</Tag>
 		<English>Accepted Turns</English>
-		<Spanish>Turnos tras aceptar</Spanish>
-		<Russian>Ëèìèò ðåâîëþöèé</Russian>
+		<French>Tours acceptés</French>
 		<Polish>Tury akceptacji</Polish>
+		<Russian>Ëèìèò ðåâîëþöèé</Russian>
+		<Spanish>Turnos tras aceptar</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_REVOLUTION__ACQUIREDTURNS_HOVER</Tag>
 		<English>Minimum number of turns that must pass before a recently conquered city may spawn a revolution</English>
-		<Spanish>Número mínimo de turnos que deben pasar antes de que pueda surgir una revolución en una ciudad recientemente conquistada.</Spanish>
-		<Russian>Óñòàíàâëèâàåò ìèíèìóì êîëè÷åñòâà õîäîâ, êîòîðûé äîëæåí ïðîéòè, ïðåæäå ÷åì â íåäàâíî çàâîåâàííîì ãîðîäå ìîæåò íà÷àòüñÿ ðåâîëþöèÿ.</Russian>
+		<French>Nombre minimum de tours avant qu'une ville récemment conquise puisse provoquer une révolution</French>
 		<Polish>Minimalna liczba tur, kt&#243;re musz&#185; up&#179;yn&#185;&#230;, zanim niedawno podbite miasto b&#234;dzie mog&#179;o wywo&#179;a&#230; rewolucj&#234;</Polish>
+		<Russian>Óñòàíàâëèâàåò ìèíèìóì êîëè÷åñòâà õîäîâ, êîòîðûé äîëæåí ïðîéòè, ïðåæäå ÷åì â íåäàâíî çàâîåâàííîì ãîðîäå ìîæåò íà÷àòüñÿ ðåâîëþöèÿ.</Russian>
+		<Spanish>Número mínimo de turnos que deben pasar antes de que pueda surgir una revolución en una ciudad recientemente conquistada.</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_REVOLUTION__ACQUIREDTURNS_TEXT</Tag>
 		<English>Acquired Turns</English>
-		<Spanish>Turnos tras conquistar</Spanish>
-		<Russian>Îãðàíè÷åíèå âîññòàíèé</Russian>
+		<French>Tours acquis</French>
 		<Polish>Tury podboju</Polish>
+		<Russian>Îãðàíè÷åíèå âîññòàíèé</Russian>
+		<Spanish>Turnos tras conquistar</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_REVOLUTION__ACTIVEPOPUP_HOVER</Tag>
 		<English>Display popup on initialization indicating what components are active</English>
+		<French>Afficher une fenêtre contextuelle à l'initialisation indiquant quels composants sont actifs</French>
 		<German>Bei der Initialisierung öffnet sich ein Fenster, das anzeigt, welche Komponenten aktiv sind</German>
-		<Spanish>Muestra un aviso emergente en la inicialización indicando qué componentes están activados.</Spanish>
-		<Russian>Îòîáðàçèòü âñïëûâàþùåå îêíî ïðè èíèöèàëèçàöèè ñ óêàçàíèåì òîãî, êàêèå êîìïîíåíòû ÿâëÿþòñÿ àêòèâíûìè.</Russian>
 		<Polish>Wy&#156;wietl wyskakuj&#185;ce okienko podczas inicjalizacji, wskazuj&#185;ce, kt&#243;re komponenty s&#185; aktywne</Polish>
+		<Russian>Îòîáðàçèòü âñïëûâàþùåå îêíî ïðè èíèöèàëèçàöèè ñ óêàçàíèåì òîãî, êàêèå êîìïîíåíòû ÿâëÿþòñÿ àêòèâíûìè.</Russian>
+		<Spanish>Muestra un aviso emergente en la inicialización indicando qué componentes están activados.</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_REVOLUTION__ACTIVEPOPUP_TEXT</Tag>
 		<English>RevInit Popup</English>
+		<French>Fenêtre RevInit</French>
 		<German>RevInit-Fenster</German>
-		<Spanish>Aviso RevInit</Spanish>
-		<Russian>Äîï. ýêðàí RevInit</Russian>
 		<Polish>Wyskakuj&#185;ce okienko RevInit</Polish>
+		<Russian>Äîï. ýêðàí RevInit</Russian>
+		<Spanish>Aviso RevInit</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_REVOLUTION__AIAUTOPLAYENABLE_HOVER</Tag>
 		<English>Enables AIAutoplay</English>
-		<Spanish>Activa el control automático de la IA.</Spanish>
-		<Russian>Âêëþ÷èòü àâòî-èãðó ÈÈ</Russian>
+		<French>Active le déroulement automatique par l'IA</French>
 		<Polish>W&#179;&#185;cza automatyczn&#185; gr&#234; SI</Polish>
+		<Russian>Âêëþ÷èòü àâòî-èãðó ÈÈ</Russian>
+		<Spanish>Activa el control automático de la IA.</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_REVOLUTION__AIAUTOPLAYENABLE_TEXT</Tag>
 		<English>Enable</English>
-		<Spanish>Activar</Spanish>
-		<Russian>Âêëþ÷èòü</Russian>
+		<French>Activer</French>
 		<Polish>W&#179;&#185;cz</Polish>
+		<Russian>Âêëþ÷èòü</Russian>
+		<Spanish>Activar</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_REVOLUTION__ALLOWASSIMILATION_HOVER</Tag>
 		<English>Allow assimilations of vassal civs.</English>
-		<Spanish>Permite la asimilación de los estados vasallos.</Spanish>
-		<Russian>Ðàçðåøèòü àññèìèëÿöèþ âàññàëüíûõ ãîñóäàðñòâ.</Russian>
+		<French>Permet l'assimilation des civilisations vassales.</French>
 		<Polish>Zezwalaj na asymilacj&#234; cywilizacji wasali.</Polish>
+		<Russian>Ðàçðåøèòü àññèìèëÿöèþ âàññàëüíûõ ãîñóäàðñòâ.</Russian>
+		<Spanish>Permite la asimilación de los estados vasallos.</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_REVOLUTION__ALLOWASSIMILATION_TEXT</Tag>
 		<English>Allow Assimilations</English>
-		<Spanish>Permitir asimilación</Spanish>
-		<Russian>Àññèìèëÿöèÿ âàññàëîâ</Russian>
+		<French>Permettre les assimilations</French>
 		<Polish>Zezwalaj na asymilacje</Polish>
+		<Russian>Àññèìèëÿöèÿ âàññàëîâ</Russian>
+		<Spanish>Permitir asimilación</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_REVOLUTION__ALLOWBREAKVASSAL_HOVER</Tag>
 		<English>Allow Revolutions to break Vassal states</English>
-		<Spanish>Permite que las revoluciones rompan los acuerdos de Estado vasallo.</Spanish>
-		<Russian>Ðàçðåøèòü ðåâîëþöèè ïðè ðàçðûâå âàññàëüíîé çàâèñèìîñòè îò ñþçåðåíà.</Russian>
+		<French>Permet aux révolutions de briser les États vassaux</French>
 		<Polish>Pozw&#243;l rewolucjom rozbi&#230; pa&#241;stwa wasalne</Polish>
+		<Russian>Ðàçðåøèòü ðåâîëþöèè ïðè ðàçðûâå âàññàëüíîé çàâèñèìîñòè îò ñþçåðåíà.</Russian>
+		<Spanish>Permite que las revoluciones rompan los acuerdos de Estado vasallo.</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_REVOLUTION__ALLOWBREAKVASSAL_TEXT</Tag>
 		<English>Allow Vassal Breaking</English>
-		<Spanish>Ruptura de vasallos</Spanish>
-		<Russian>Âêë. Ìÿòåæ âàññàëîâ</Russian>
+		<French>Permettre la rupture des vassaux</French>
 		<Polish>Pozw&#243;l na z&#179;amanie wasala</Polish>
+		<Russian>Âêë. Ìÿòåæ âàññàëîâ</Russian>
+		<Spanish>Ruptura de vasallos</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_REVOLUTION__ALLOWSMALLBARBREVS_HOVER</Tag>
 		<English>Small revolutions spawn as disorganized rebels (barbarians)</English>
-		<Spanish>Las pequeñas revoluciones surgen como un grupo de rebeldes desorganizados (bárbaros).</Spanish>
-		<Russian>Ñòèõèéíûå áóíòû âîçíèêàþò â ôîðìå ïëîõî îðãàíèçîâàííîãî âûñòóïëåíèÿ ïîâñòàíöåâ-âàðâàðîâ.</Russian>
+		<French>Les petites révolutions apparaissent comme des rebelles désorganisés (barbares)</French>
 		<Polish>Ma&#179;e rewolucje pojawiaj&#185; si&#234; jako zdezorganizowani rebelianci (barbarzy&#241;cy)</Polish>
+		<Russian>Ñòèõèéíûå áóíòû âîçíèêàþò â ôîðìå ïëîõî îðãàíèçîâàííîãî âûñòóïëåíèÿ ïîâñòàíöåâ-âàðâàðîâ.</Russian>
+		<Spanish>Las pequeñas revoluciones surgen como un grupo de rebeldes desorganizados (bárbaros).</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_REVOLUTION__ALLOWSMALLBARBREVS_TEXT</Tag>
 		<English>Unorganized Revolutions</English>
-		<Spanish>Revoluciones desorganizadas</Spanish>
-		<Russian>Ñòèõèéíûå áóíòû</Russian>
+		<French>Révolutions désorganisées</French>
 		<Polish>Niezorganizowane rewolucje</Polish>
+		<Russian>Ñòèõèéíûå áóíòû</Russian>
+		<Spanish>Revoluciones desorganizadas</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_REVOLUTION__ALLOWSTATERELIGIONTOJOIN_HOVER</Tag>
 		<English>Allows cities with state religion to join Religious Rebellions.</English>
-		<Spanish>Permite a las ciudades con la religión oficial unirse a las rebeliones religiosas.</Spanish>
-		<Russian>Ïîçâîëÿåò ãîðîäàì ñ ãîñóäàðñòâåííîé ðåëèãèåé ïðèñîåäèíèòüñÿ ê ðåëèãèîçíûì âîññòàíèÿì.</Russian>
+		<French>Permet aux villes ayant une religion d'État de rejoindre les rébellions religieuses.</French>
 		<Polish>Umo&#191;liwia miastom wyznaj&#185;cym religi&#234; pa&#241;stwow&#185; przy&#179;&#185;czanie si&#234; do bunt&#243;w religijnych.</Polish>
+		<Russian>Ïîçâîëÿåò ãîðîäàì ñ ãîñóäàðñòâåííîé ðåëèãèåé ïðèñîåäèíèòüñÿ ê ðåëèãèîçíûì âîññòàíèÿì.</Russian>
+		<Spanish>Permite a las ciudades con la religión oficial unirse a las rebeliones religiosas.</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_REVOLUTION__ALLOWSTATERELIGIONTOJOIN_TEXT</Tag>
 		<English>Allow state religion to join</English>
-		<Spanish>Permitir unión de religión oficial</Spanish>
-		<Russian>Âêë. ìÿòåæè îðòîäîêñîâ</Russian>
+		<French>Permettre la religion d'État à rejoindre</French>
 		<Polish>Zezw&#243;l na przy&#179;&#185;czenie si&#234; religii pa&#241;stwowej</Polish>
+		<Russian>Âêë. ìÿòåæè îðòîäîêñîâ</Russian>
+		<Spanish>Permitir unión de religión oficial</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_REVOLUTION__ALWAYSVIOLENTTHRESHOLD_HOVER</Tag>
 		<English>RevIdx value at which a city that causes a rebellion will always be a violent and spawn rebel units</English>
-		<Spanish>Valor del RevIndex en el que la rebelión causada será siempre violenta, surgiendo unidades rebeldes.</Spanish>
-		<Russian>Çíà÷åíèå RevIdx, ïðè êîòîðîì â ãîðîäå âîçíèêàåò áóíò, âñåãäà áóäåò æåñòêèì è ïðèâåäåò ê ïîÿâëåíèþ ïîâñòàí÷åñêèõ îòðÿäîâ.</Russian>
+		<French>Valeur RevIdx à partir de laquelle une ville provoquant une rébellion sera toujours violente et fera apparaître des unités rebelles</French>
 		<Polish>Warto&#156;&#230; RevIdx, przy kt&#243;rej miasto wywo&#179;uj&#185;ce bunt zawsze b&#234;dzie brutalne i spowoduje pojawienie si&#234; jednostek rebeliant&#243;w</Polish>
+		<Russian>Çíà÷åíèå RevIdx, ïðè êîòîðîì â ãîðîäå âîçíèêàåò áóíò, âñåãäà áóäåò æåñòêèì è ïðèâåäåò ê ïîÿâëåíèþ ïîâñòàí÷åñêèõ îòðÿäîâ.</Russian>
+		<Spanish>Valor del RevIndex en el que la rebelión causada será siempre violenta, surgiendo unidades rebeldes.</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_REVOLUTION__ALWAYSVIOLENTTHRESHOLD_TEXT</Tag>
 		<English>Violent Threshold</English>
-		<Spanish>Umbral de violencia</Spanish>
-		<Russian>Ïîðîã íàñèëèÿ</Russian>
+		<French>Seuil de violence</French>
 		<Polish>Pr&#243;g przemocy</Polish>
+		<Russian>Ïîðîã íàñèëèÿ</Russian>
+		<Spanish>Umbral de violencia</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_REVOLUTION__ARTSTYLETYPES_HOVER</Tag>
 		<English>Spawn Rebels with a preference for the artstyle type of the parent nation</English>
-		<Spanish>Genera rebeldes con un estilo artístico preferentemente del mismo tipo que el de su patria.</Spanish>
-		<Russian>Ôðàêöèè ïîâñòàíöåâ ôîðìèðóþòñÿ ñ ïðèîðèòåòîì â ãðàô÷åñêîì ñòèëå êàê ó ìàòåðèíñêîé öèâèëèçàöèè.</Russian>
+		<French>Faire apparaître des rebelles avec une préférence pour le style artistique de la nation mère</French>
 		<Polish>Stw&#243;rz Rebeliant&#243;w preferuj&#185;cych styl graficzny narodu macierzystego</Polish>
+		<Russian>Ôðàêöèè ïîâñòàíöåâ ôîðìèðóþòñÿ ñ ïðèîðèòåòîì â ãðàô÷åñêîì ñòèëå êàê ó ìàòåðèíñêîé öèâèëèçàöèè.</Russian>
+		<Spanish>Genera rebeldes con un estilo artístico preferentemente del mismo tipo que el de su patria.</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_REVOLUTION__ARTSTYLETYPES_TEXT</Tag>
 		<English>ArtStyle Types</English>
-		<Spanish>Tipos de estilo artístico</Spanish>
-		<Russian>Òèïû õóä. ñòèëåé </Russian>
+		<French>Types de style artistique</French>
 		<Polish>Typy stylu graficznego</Polish>
+		<Russian>Òèïû õóä. ñòèëåé </Russian>
+		<Spanish>Tipos de estilo artístico</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_REVOLUTION__BARBCIVMAXCIVS_HOVER</Tag>
 		<English>Barbcivs will not spawn if there are already this many civs in the game (-1 for DLL limit)</English>
+		<French>Les civilisations barbares ne seront pas générées s'il y a déjà ce nombre de civilisations dans le jeu (-1 pour la limite DLL)</French>
 		<German>Barbaren-Zivilisationen entstehen nicht, wenn es bereits so viele Zivilisationen im Spiel gibt (-1 wegen der DLL-Begrenzung)</German>
-		<Spanish>No surgirán más civilizaciones bárbaras si ya hay este número de civilizaciones en el juego (-1 para límite de la DLL)</Spanish>
-		<Russian>Âàðâàðñêèå öèâèëèçàöèè íå áóäóò ïîÿâëÿòüñÿ, åñëè äîñòèãíóò ëèìèò íà îäíîâðåìåííîå êîëè÷åñòâî èãðîêîâ (-1 îò ëèìèòà â DLL)</Russian>
 		<Italian>[BOLD]Le civiltà barbare [COLOR_HIGHLIGHT_TEXT]non verranno generate[COLOR_REVERT] se è già presente il numero scelto di civiltà (-1 per il limite DLL)[\BOLD]</Italian>
 		<Polish>Cywilizacje barba&#191;y&#241;c&#243;w nie pojawi&#185; si&#234;, je&#156;li w grze jest ju&#191; tyle cywilizacji (-1 od limitu DLL)</Polish>
+		<Russian>Âàðâàðñêèå öèâèëèçàöèè íå áóäóò ïîÿâëÿòüñÿ, åñëè äîñòèãíóò ëèìèò íà îäíîâðåìåííîå êîëè÷åñòâî èãðîêîâ (-1 îò ëèìèòà â DLL)</Russian>
+		<Spanish>No surgirán más civilizaciones bárbaras si ya hay este número de civilizaciones en el juego (-1 para límite de la DLL)</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_REVOLUTION__BARBCIVMAXCIVS_TEXT</Tag>
 		<English>Max BarbCivs</English>
+		<French>Nombre max de civ.barbares</French>
 		<German>Maximale BarbCivs</German>
-		<Spanish>Máximo de civilizaciones bárbaras</Spanish>
-		<Russian>Ìàêñèìóì BarbCivs</Russian>
 		<Italian>Numero max civiltà barbare</Italian>
 		<Polish>Maks cywilizacji barba&#191;y&#241;c&#243;w</Polish>
+		<Russian>Ìàêñèìóì BarbCivs</Russian>
+		<Spanish>Máximo de civilizaciones bárbaras</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_REVOLUTION__BARBTECHPERCENT_HOVER</Tag>
 		<English>Former barbarians get all techs known by this fraction of players</English>
+		<French>Les anciens barbares obtiennent toutes les technologies connues par cette fraction de joueurs</French>
 		<German>Ehemalige Barbaren erhalten alle Technologien, die dieser Anteil der Spieler kennt</German>
-		<Spanish>Las nuevas civilizaciones bárbaras obtienen todas las tecnologías conocidas por este número de jugadores.</Spanish>
-		<Russian>Ïðè ñîçäàíèè âàðâàðñêîé ôðàêöèè, îíà ïîëó÷àåò âñå òåõíîëîãèè, êîòîðûìè ðàñïîëàãàåò äàííûé êîíêðåòíûé èãðîê.</Russian>
 		<Italian>[BOLD]Le civiltà ex barbare ottengono [COLOR_HIGHLIGHT_TEXT]tutte le tecnologie conosciute[COLOR_REVERT] dalla [COLOR_HIGHLIGHT_TEXT]percentuale di giocatori scelta[COLOR_REVERT][\BOLD]</Italian>
 		<Polish>Byli barbarzy&#241;cy otrzymuj&#185; wszystkie technologie znane tej cz&#234;&#156;ci graczy</Polish>
+		<Russian>Ïðè ñîçäàíèè âàðâàðñêîé ôðàêöèè, îíà ïîëó÷àåò âñå òåõíîëîãèè, êîòîðûìè ðàñïîëàãàåò äàííûé êîíêðåòíûé èãðîê.</Russian>
+		<Spanish>Las nuevas civilizaciones bárbaras obtienen todas las tecnologías conocidas por este número de jugadores.</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_REVOLUTION__BARBTECHPERCENT_TEXT</Tag>
@@ -6683,464 +6759,536 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_REVOLUTION__BASEREINFORCEMENTTURNS_HOVER</Tag>
 		<English>Average number of turns that pass before rebellions receive reinforcements</English>
-		<Spanish>Número medio de turnos que pasarán antes de que las rebeliones reciban refuerzos.</Spanish>
-		<Russian>Ñðåäíåå ÷èñëî õîäîâ, ìåæäó êîòîðûìè ïîâòàíöû ìîãóò ïîëó÷àòü ïîäêðåïëåíèÿ.</Russian>
+		<French>Nombre moyen de tours avant que les rébellions reçoivent des renforts</French>
 		<Polish>&#140;rednia liczba tur, kt&#243;re up&#179;ywaj&#185;, zanim buntownicy otrzymaj&#185; posi&#179;ki</Polish>
+		<Russian>Ñðåäíåå ÷èñëî õîäîâ, ìåæäó êîòîðûìè ïîâòàíöû ìîãóò ïîëó÷àòü ïîäêðåïëåíèÿ.</Russian>
+		<Spanish>Número medio de turnos que pasarán antes de que las rebeliones reciban refuerzos.</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_REVOLUTION__BASEREINFORCEMENTTURNS_TEXT</Tag>
 		<English>Base Reinforcement Turns</English>
-		<Spanish>Turnos para refuerzo</Spanish>
-		<Russian>Èíòåðâàë äëÿ ïîäêðåïëåíèé</Russian>
+		<French>Tours de renfort de base</French>
 		<Polish>Tury do posi&#179;k&#243;w</Polish>
+		<Russian>Èíòåðâàë äëÿ ïîäêðåïëåíèé</Russian>
+		<Spanish>Turnos para refuerzo</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_REVOLUTION__BLOCKPOPUPS_HOVER</Tag>
 		<English>Blocks pop ups while in AIAutoplay</English>
-		<Spanish>Bloquea los elementos emergentes mientras la partida esté controlada automáticamente por la IA.</Spanish>
-		<Russian>Áëîêèðîâàòü ïðèðîñò íàñåëåíèÿ ïðè âêëþ÷åííîì AIAutoplay</Russian>
+		<French>Bloque les fenêtres pop-up pendant la lecture automatique IA</French>
 		<Polish>Blokuje wyskakuj&#185;ce okienka w AIAutoplay</Polish>
+		<Russian>Áëîêèðîâàòü ïðèðîñò íàñåëåíèÿ ïðè âêëþ÷åííîì AIAutoplay</Russian>
+		<Spanish>Bloquea los elementos emergentes mientras la partida esté controlada automáticamente por la IA.</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_REVOLUTION__BLOCKPOPUPS_TEXT</Tag>
 		<English>Block Pop Ups</English>
-		<Spanish>Bloquear elementos emergentes</Spanish>
-		<Russian>Ïðåðâàòü ðîñò íàñåëåíèÿ</Russian>
+		<French>Bloquer les pop-ups</French>
 		<Polish>Blokuj wyskakuj&#185;ce okienka</Polish>
+		<Russian>Ïðåðâàòü ðîñò íàñåëåíèÿ</Russian>
+		<Spanish>Bloquear elementos emergentes</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_REVOLUTION__BUYOFFTURNS_HOVER</Tag>
 		<English>Minimum number of turns that must pass before a revolution can occur after rebels have been bought off</English>
-		<Spanish>Número mínimo de turnos que deben pasar antes de que pueda ocurrir una revolución tras haber sobornado a los rebeldes.</Spanish>
+		<French>Nombre minimum de tours devant s'écouler avant qu'une révolution puisse se produire après que les rebelles aient été achetés</French>
 		<Polish>Minimalna liczba tur, kt&#243;re musz&#185; up&#179;yn&#185;&#230;, zanim nast&#185;pi rewolucja po przekupieniu rebeliant&#243;w</Polish>
+		<Spanish>Número mínimo de turnos que deben pasar antes de que pueda ocurrir una revolución tras haber sobornado a los rebeldes.</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_REVOLUTION__BUYOFFTURNS_TEXT</Tag>
 		<English>Acquired Turns</English>
-		<Spanish>Turnos tras sobornar</Spanish>
+		<French>Tours acquis</French>
 		<Polish>Tury przekupienia</Polish>
+		<Spanish>Turnos tras sobornar</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_REVOLUTION__CENTERPOPUPS_HOVER</Tag>
 		<English>Revolution Message Pop Ups are centered.</English>
-		<Spanish>Se centran los mensajes emergentes de revolución.</Spanish>
+		<French>Les fenêtres pop-up des messages de révolution sont centrées.</French>
 		<Polish>Wyskakuj&#185;ce okienka z wiadomo&#156;ciami o rewolucji s&#185; wy&#156;rodkowane.</Polish>
+		<Spanish>Se centran los mensajes emergentes de revolución.</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_REVOLUTION__CENTERPOPUPS_TEXT</Tag>
 		<English>Center Pop Ups</English>
-		<Spanish>Centrar mensajes emergentes</Spanish>
+		<French>Centrer les pop-ups</French>
 		<Polish>Wy&#156;rodkuj wyskakuj&#185;ce okienka</Polish>
+		<Spanish>Centrar mensajes emergentes</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_REVOLUTION__CHANCEMODIFIER_HOVER</Tag>
 		<English>Multiplier used to alter chance of spawning a revolution</English>
-		<Spanish>Multiplicador aplicado a la probabilidad de surgimiento de una revolución.</Spanish>
+		<French>Multiplicateur utilisé pour modifier la chance de déclencher une révolution</French>
 		<Polish>Mno&#191;nik u&#191;ywany do zmiany szansy na wywo&#179;anie rewolucji</Polish>
+		<Spanish>Multiplicador aplicado a la probabilidad de surgimiento de una revolución.</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_REVOLUTION__CHANCEMODIFIER_TEXT</Tag>
 		<English>Chance Modifier</English>
-		<Spanish>Modificador de probabilidad</Spanish>
+		<French>Modificateur de chance</French>
 		<Polish>Modyfikator szansy</Polish>
+		<Spanish>Modificador de probabilidad</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_REVOLUTION__CHANGEPLAYERENABLE_HOVER</Tag>
 		<English>Enables Change Player function</English>
-		<Spanish>Activa la función 'Cambiar de jugador'.</Spanish>
+		<French>Active la fonction de changement de joueur</French>
 		<Polish>W&#179;&#185;cza funkcj&#234; zmiany gracza</Polish>
+		<Spanish>Activa la función 'Cambiar de jugador'.</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_REVOLUTION__CHANGEPLAYERENABLE_TEXT</Tag>
 		<English>Enable</English>
-		<Spanish>Activar</Spanish>
+		<French>Activer</French>
 		<Polish>W&#179;&#185;cz</Polish>
+		<Spanish>Activar</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_REVOLUTION__CITYACQUIREDMODIFIER_HOVER</Tag>
 		<English>Multiplier used to alter RevIdx bonus from conquering a city</English>
-		<Spanish>Multiplicador aplicado a la bonificación en el RevIndex por conquistar una ciudad.</Spanish>
+		<French>Multiplicateur utilisé pour modifier le bonus de RevIdx suite à la conquête d'une ville</French>
 		<Polish>Mno&#191;nik u&#191;ywany do zmiany premii RevIdx wynikaj&#185;cej z podboju miasta</Polish>
+		<Spanish>Multiplicador aplicado a la bonificación en el RevIndex por conquistar una ciudad.</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_REVOLUTION__CITYACQUIREDMODIFIER_TEXT</Tag>
 		<English>City Acquired Modifier</English>
-		<Spanish>Modificador a Ciudad conquistada</Spanish>
+		<French>Modificateur de conquête de ville</French>
 		<Polish>Modyfikator zdobycia miasta</Polish>
+		<Spanish>Modificador a Ciudad conquistada</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_REVOLUTION__CITYLOSTMODIFIER_HOVER</Tag>
 		<English>Multiplier used to alter RevIdx penalty from loosing a city</English>
-		<Spanish>Multiplicador aplicado a la penalización en el RevIndex por perder una ciudad.</Spanish>
+		<French>Multiplicateur utilisé pour modifier la pénalité de RevIdx suite à la perte d'une ville</French>
 		<Polish>Mno&#191;nik u&#191;ywany do zmiany kary RevIdx wynikaj&#185;cej z utraty miasta</Polish>
+		<Spanish>Multiplicador aplicado a la penalización en el RevIndex por perder una ciudad.</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_REVOLUTION__CITYLOSTMODIFIER_TEXT</Tag>
 		<English>City Lost Modifier</English>
-		<Spanish>Modificador a Ciudad perdida</Spanish>
+		<French>Modificateur de perte de ville</French>
 		<Polish>Modyfikator utraconego miasta</Polish>
+		<Spanish>Modificador a Ciudad perdida</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_REVOLUTION__CIVICREVOLUTION_HOVER</Tag>
 		<English>Allow Civics based Revolutions</English>
-		<Spanish>Permite revoluciones basadas en principios.</Spanish>
+		<French>Permet les révolutions basées sur les institutions civiques</French>
 		<Polish>Zezw&#243;l na rewolucje oparte na doktrynach</Polish>
+		<Spanish>Permite revoluciones basadas en principios.</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_REVOLUTION__CIVICREVOLUTION_TEXT</Tag>
 		<English>Civics Revolutions</English>
-		<Spanish>Revoluciones por principios</Spanish>
+		<French>Révolutions civiques</French>
 		<Polish>Rewolucje doktryn</Polish>
+		<Spanish>Revoluciones por principios</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_REVOLUTION__CIVICSODDS_HOVER</Tag>
 		<English>Odds used to determine Revolution type when a rebellion occurs, adjusts chance of Civics type rebellion</English>
-		<Spanish>Probabilidades utilizadas para determinar el tipo de revolución en caso de rebelión, ajusta la probabilidad de rebelión por principios.</Spanish>
+		<French>Probabilités utilisées pour déterminer le type de révolution lors d'une rébellion, ajuste la chance de révolution de type civique</French>
 		<Polish>Kursy u&#191;ywane do okre&#156;lenia typu rewolucji, gdy nast&#185;pi bunt, koryguj&#185; szans&#234; na bunt oparty na doktrynach</Polish>
+		<Spanish>Probabilidades utilizadas para determinar el tipo de revolución en caso de rebelión, ajusta la probabilidad de rebelión por principios.</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_REVOLUTION__CIVICSODDS_TEXT</Tag>
 		<English>Civics Odds</English>
-		<Spanish>Probabilidad de revolución por principios</Spanish>
+		<French>Probabilité Civique</French>
 		<Polish>Szanse doktryn</Polish>
+		<Spanish>Probabilidad de revolución por principios</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_REVOLUTION__CIVSIZEMODIFIER_HOVER</Tag>
 		<English>Multiplier used to alter Civ Size based RevIdx changes</English>
-		<Spanish>Multiplicador aplicado a los cambios en el RevIndex por tamaño de civilización.</Spanish>
+		<French>Multiplicateur utilisé pour modifier les changements de RevIdx basés sur la taille de la civilisation</French>
 		<Polish>Mno&#191;nik u&#191;ywany do zmiany zmian RevIdx w oparciu o rozmiar Cywilizacji</Polish>
+		<Spanish>Multiplicador aplicado a los cambios en el RevIndex por tamaño de civilización.</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_REVOLUTION__CIVSIZEMODIFIER_TEXT</Tag>
 		<English>Civ Size Modifier</English>
-		<Spanish>Modificador a Tamaño de civilización</Spanish>
+		<French>Modificateur de taille de civilisation</French>
 		<Polish>Modyfikator rozmiaru cywilizacji</Polish>
+		<Spanish>Modificador a Tamaño de civilización</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_REVOLUTION__CLOSEDIST_HOVER</Tag>
 		<English>Plot distance between capitals that qualifies another civ as a local neighbour to the emerging civ. The other civ must have a city on the same landmass as the emerging civ for it to be considered a neighbour. Civs emerging from barbarians adapt to their local neighbours in many different ways, e.g. tech level. A low value will make each such civ generation more generic. A high value can impact performance slightly, especially on large maps. The value set here is the value used for a 'Duel' world size. The value is multiplied by 15 on a 'Gigantic' world sized map.</English>
 		<Italian>[BOLD]Stabilisce la [COLOR_HIGHLIGHT_TEXT]distanza tra le capitali[COLOR_REVERT] che qualifica un'altra civiltà come [COLOR_HIGHLIGHT_TEXT]vicina locale[COLOR_REVERT] della civiltà emergente[NEWLINE][NEWLINE]1 - L'altra civiltà deve [COLOR_HIGHLIGHT_TEXT]avere una città sullo stesso continente[COLOR_REVERT] della civiltà emergente per essere considerata vicina[NEWLINE][NEWLINE]2 - Le civiltà che emergono dai [COLOR_HIGHLIGHT_TEXT]barbari si adattano ai loro vicini locali in molti modi[COLOR_REVERT] diversi, ad esempio a livello tecnologico[NEWLINE][NEWLINE]3 - Un [COLOR_HIGHLIGHT_TEXT]valore basso[COLOR_REVERT] renderà ciascuna [COLOR_HIGHLIGHT_TEXT]generazione di civiltà più generica[COLOR_REVERT], ma uno [COLOR_HIGHLIGHT_TEXT]elevato[COLOR_REVERT] può influire leggermente sulle [COLOR_HIGHLIGHT_TEXT]prestazioni[COLOR_REVERT], soprattutto su mappe di grandi dimensioni[NEWLINE][NEWLINE]4 - Il valore impostato qui è [COLOR_HIGHLIGHT_TEXT]adatto alla dimensione del mondo duello[COLOR_REVERT] (il valore viene moltiplicato per 15 su una mappa gigantesca)[\BOLD]</Italian>
-		<Polish>Narysuj odleg&#179;o&#156;&#230; pomi&#234;dzy stolicami, kt&#243;ra kwalifikuje inn&#185; cywilizacj&#234; jako lokalnego s&#185;siada powstaj&#185;cej cywilizacji. Aby druga cywilizacja mog&#179;a zosta&#230; uznana za s&#185;siadk&#234;, musi mie&#230; miasto na tym samym obszarze co powstaj&#185;ca cywilizacja. Cywilizacje wywodz&#185;ce si&#234; z barbarzy&#241;c&#243;w dostosowuj&#185; si&#234; do swoich lokalnych s&#185;siad&#243;w na wiele r&#243;&#191;nych sposob&#243;w, np. poziom techniczny. Niska warto&#156;&#230; sprawi, &#191;e ka&#191;da taka generacja cywilizacji b&#234;dzie bardziej og&#243;lna. Wysoka warto&#156;&#230; mo&#191;e nieznacznie wp&#179;yn&#185;&#230; na wydajno&#156;&#230;, szczeg&#243;lnie na du&#191;ych mapach. Ustawiona tutaj warto&#156;&#230; jest warto&#156;ci&#185; u&#191;ywan&#185; dla rozmiaru &#156;wiata "Pojedynek". Warto&#156;&#230; jest mno&#191;ona przez 15 na "gigantycznej mapie &#156;wiata.</Polish>
+		<Polish>Narysuj odleg&#179;o&#156;&#230; pomi&#234;dzy stolicami, kt&#243;ra kwalifikuje inn&#185; cywilizacj&#234; jako lokalnego s&#185;siada powstaj&#185;cej cywilizacji. Aby druga cywilizacja mog&#179;a zosta&#230; uznana za s&#185;siadk&#234;, musi mie&#230; miasto na tym samym obszarze co powstaj&#185;ca cywilizacja. Cywilizacje wywodz&#185;ce si&#234; z barbarzy&#241;c&#243;w dostosowuj&#185; si&#234; do swoich lokalnych s&#185;siad&#243;w na wiele r&#243;&#191;nych sposob&#243;w, np. poziom techniczny. Niska warto&#156;&#230; sprawi, &#191;e ka&#191;da taka generacja cywilizacji b&#234;dzie bardziej og&#243;lna. Wysoka warto&#156;&#230; mo&#191;e nieznacznie wp&#179;yn&#185;&#230; na wydajno&#156;&#230;, szczeg&#243;lnie na du&#191;ych mapach. Ustawiona tutaj warto&#156;&#230; jest warto&#156;ci&#185; u&#191;ywan&#185; dla rozmiaru &#156;wiata "Pojedynek". Warto&#156;&#230; jest mno&#191;ona przez 15 na "gigantycznej mapie" &#156;wiata.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_REVOLUTION__CLOSEDIST_TEXT</Tag>
 		<English>Neighbour distance</English>
-		<Russian>Расстояние до соседа</Russian>
+		<French>Distance entre voisins</French>
 		<Italian>Distanza tra civiltà</Italian>
 		<Polish>Odleg&#179;o&#156;&#230; s&#185;siada</Polish>
+		<Russian>Расстояние до соседа</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_REVOLUTION__CLOSERADIUS_HOVER</Tag>
 		<English>Limiting distance for colony negative revolutionary effects, and distance rebelling cities can effect and draw in other cities.</English>
-		<Spanish>Distancia límite para efectos revolucionarios negativos en colonias, y distancia a la que las ciudades rebeladas pueden impresionar y atraer a otras ciudades.</Spanish>
-		<Russian>Ограничение расстояния для колонии негативными революционными эффектами, а расстояния повстанческих городов могут влиять и привлекать другие города.</Russian>
+		<French>Distance limite pour les effets révolutionnaires négatifs des colonies, et distance à laquelle les villes rebelles peuvent influencer et attirer d'autres villes.</French>
 		<Polish>Ograniczenie dystansu dla negatywnych skutk&#243;w rewolucyjnych kolonii oraz dystans zbuntowanych miast mo&#191;e oddzia&#179;ywa&#230; i przyci&#185;ga&#230; inne miasta.</Polish>
+		<Russian>Ограничение расстояния для колонии негативными революционными эффектами, а расстояния повстанческих городов могут влиять и привлекать другие города.</Russian>
+		<Spanish>Distancia límite para efectos revolucionarios negativos en colonias, y distancia a la que las ciudades rebeladas pueden impresionar y atraer a otras ciudades.</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_REVOLUTION__CLOSERADIUS_TEXT</Tag>
 		<English>Close Radius</English>
-		<Spanish>Radio de cercanía</Spanish>
-		<Russian>Радиус</Russian>
+		<French>Rayon d'influence</French>
 		<Polish>Bliski promie&#241;</Polish>
+		<Russian>Радиус</Russian>
+		<Spanish>Radio de cercanía</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_REVOLUTION__COLONYMODIFIER_HOVER</Tag>
 		<English>Multiplier used to alter Colony based RevIdx changes</English>
-		<Spanish>Multiplicador aplicado a los cambios en el RevIndex por estado colonial.</Spanish>
-		<Russian>Множитель, используемый для изменения изменений RevIdx в колонии</Russian>
+		<French>Multiplicateur utilisé pour modifier les changements de RevIdx basés sur les colonies</French>
 		<Polish>Mno&#191;nik u&#191;ywany do zmiany zmian RevIdx opartych na koloniach</Polish>
+		<Russian>Множитель, используемый для изменения изменений RevIdx в колонии</Russian>
+		<Spanish>Multiplicador aplicado a los cambios en el RevIndex por estado colonial.</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_REVOLUTION__COLONYMODIFIER_TEXT</Tag>
 		<English>Colony Modifier</English>
-		<Spanish>Modificador a Colonia</Spanish>
-		<Russian>Модиф. колонии</Russian>
+		<French>Modificateur de colonie</French>
 		<Polish>Modyfikator kolonii</Polish>
+		<Russian>Модиф. колонии</Russian>
+		<Spanish>Modificador a Colonia</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_REVOLUTION__CRUSADEODDS_HOVER</Tag>
 		<English>Odds used to determine Revolution type when a rebellion occurs, adjusts chance of Crusade type rebellion</English>
-		<Spanish>Probabilidades utilizadas para determinar el tipo de revolución en caso de rebelión, ajusta la probabilidad de rebelión por cruzada.</Spanish>
+		<French>Probabilités utilisées pour déterminer le type de révolution lors d'une rébellion, ajuste la chance de révolution de type croisade</French>
 		<Polish>Kursy u&#191;ywane do okre&#156;lenia typu rewolucji w momencie wyst&#185;pienia buntu, koryguj&#185; szans&#234; na bunt typu krucjaty</Polish>
+		<Spanish>Probabilidades utilizadas para determinar el tipo de revolución en caso de rebelión, ajusta la probabilidad de rebelión por cruzada.</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_REVOLUTION__CRUSADEODDS_TEXT</Tag>
 		<English>Crusade Odds</English>
-		<Spanish>Probabilidad de revolución por cruzada</Spanish>
+		<French>Probabilité de croisade</French>
 		<Polish>Szanse na krucjat&#234;</Polish>
+		<Spanish>Probabilidad de revolución por cruzada</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_REVOLUTION__CULTURALREVOLUTION_HOVER</Tag>
 		<English>Allow cultural revolutions</English>
-		<Spanish>Permite las revoluciones culturales.</Spanish>
+		<French>Permet les révolutions culturelles</French>
 		<Polish>Zezw&#243;l na rewolucje kulturalne</Polish>
+		<Spanish>Permite las revoluciones culturales.</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_REVOLUTION__CULTURALREVOLUTION_TEXT</Tag>
 		<English>Cultural Revolutions</English>
-		<Spanish>Revoluciones culturales</Spanish>
+		<French>Révolutions culturelles</French>
 		<Polish>Rewolucje Kulturalne</Polish>
+		<Spanish>Revoluciones culturales</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_REVOLUTION__CULTURERATEMODIFIER_HOVER</Tag>
 		<English>Multiplier used to alter Culture Rate RevIdx bonus</English>
-		<Spanish>Multiplicador aplicado a la bonificación en el RevIndex por ratio cultural.</Spanish>
+		<French>Multiplicateur utilisé pour modifier le bonus de RevIdx lié au taux de culture</French>
 		<Polish>Mno&#191;nik u&#191;ywany do zmiany premii RevIdx za wsp&#243;&#179;czynnik kultury</Polish>
+		<Spanish>Multiplicador aplicado a la bonificación en el RevIndex por ratio cultural.</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_REVOLUTION__CULTURERATEMODIFIER_TEXT</Tag>
 		<English>Culture rate Modifier</English>
-		<Spanish>Modificador a Ratio cultural</Spanish>
+		<French>Modificateur du taux de culture</French>
 		<Polish>Modyfikator tempa kultury</Polish>
+		<Spanish>Modificador a Ratio cultural</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_REVOLUTION__DENIEDTURNS_HOVER</Tag>
 		<English>Turns delay before a new rebellion can spawn, or rebels can make new demands, after rebel terms are rejected</English>
-		<Spanish>Espera en turnos antes de que pueda surgir una nueva rebelión, o los rebeldes puedan efectuar nuevas demandas, tras rechazar los términos anteriores.</Spanish>
+		<French>Délai en tours avant qu'une nouvelle rébellion puisse éclater, ou que les rebelles puissent formuler de nouvelles exigences, après refus des conditions rebelles</French>
 		<Polish>W&#179;&#185;cza op&#243;&#159;nienie, zanim b&#234;dzie m&#243;g&#179; wybuchn&#185;&#230; nowy bunt lub rebelianci b&#234;d&#185; mogli postawi&#230; nowe &#191;&#185;dania po odrzuceniu warunk&#243;w rebeliant&#243;w</Polish>
+		<Spanish>Espera en turnos antes de que pueda surgir una nueva rebelión, o los rebeldes puedan efectuar nuevas demandas, tras rechazar los términos anteriores.</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_REVOLUTION__DENIEDTURNS_TEXT</Tag>
 		<English>Denied Turns</English>
-		<Spanish>Turnos tras rechazar</Spanish>
+		<French>Tours refusés</French>
 		<Polish>Tury odrzucenia</Polish>
+		<Spanish>Turnos tras rechazar</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_REVOLUTION__DISTANCETOCAPITALMODIFIER_HOVER</Tag>
 		<English>Multiplier used to alter Distance to Capital RevIdx penalty</English>
-		<Spanish>Multiplicador aplicado a la penalización en el RevIndex por distancia con la capital.</Spanish>
+		<French>Multiplicateur utilisé pour modifier la pénalité de RevIdx liée à la distance de la capitale</French>
 		<Polish>Mno&#191;nik u&#191;ywany do zmiany kary RevIdx za odleg&#179;o&#156;&#230; do stolicy</Polish>
+		<Spanish>Multiplicador aplicado a la penalización en el RevIndex por distancia con la capital.</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_REVOLUTION__DISTANCETOCAPITALMODIFIER_TEXT</Tag>
 		<English>Distance to Modifier</English>
-		<Spanish>Modificador a Distancia a la capital</Spanish>
+		<French>Modificateur de distance</French>
 		<Polish>Odleg&#179;o&#156;&#230; do modyfikatora</Polish>
+		<Spanish>Modificador a Distancia a la capital</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_REVOLUTION__ENDWARSONDEATH_HOVER</Tag>
 		<English>When a rebel civ dies, current wars are cancelled (in case of respawn)</English>
-		<Spanish>Cuando una civilización rebelde muere, se cancelan sus guerras actuales (en caso de resurgimiento).</Spanish>
+		<French>Lorsqu'une civilisation rebelle meurt, les guerres en cours sont annulées (en cas de réapparition)</French>
 		<Polish>Kiedy cywilizacja rebeliant&#243;w umiera, obecne wojny zostaj&#185; anulowane (w przypadku odrodzenia)</Polish>
+		<Spanish>Cuando una civilización rebelde muere, se cancelan sus guerras actuales (en caso de resurgimiento).</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_REVOLUTION__ENDWARSONDEATH_TEXT</Tag>
 		<English>End Wars on Death</English>
-		<Spanish>Finalizar guerras en caso de eliminación</Spanish>
+		<French>Fin des guerres à la mort</French>
 		<Polish>Zako&#241;cz wojny wraz ze &#156;mierci&#185;</Polish>
+		<Spanish>Finalizar guerras en caso de eliminación</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_REVOLUTION__FORMMINORMODIFIER_HOVER</Tag>
 		<English>Change odds of barb city turning into a minor civ</English>
+		<French>Modifie les chances qu'une ville barbare devienne une civilisation mineure</French>
 		<German>Verändert die Wahrscheinlichkeit, mit der Barbarenstädte sich in kleine Zivilisationen umwandeln</German>
-		<Spanish>Cambia las probabilidades de que una ciudad bárbara se convierta en civilización menor.</Spanish>
-		<Russian>Изменить шансы на превращение варварского города в малую цивилизацию)</Russian>
 		<Italian>[BOLD]Influenza le probabilità che una [COLOR_HIGHLIGHT_TEXT]città barbara diventi in una civiltà minore[COLOR_REVERT][\BOLD]</Italian>
 		<Polish>Zmie&#241; szanse, &#191;e miasto Barba&#191;y&#241;c&#243;w zamieni si&#234; w pomniejsz&#185; cywilizacj&#234;</Polish>
+		<Russian>Изменить шансы на превращение варварского города в малую цивилизацию)</Russian>
+		<Spanish>Cambia las probabilidades de que una ciudad bárbara se convierta en civilización menor.</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_REVOLUTION__FORMMINORMODIFIER_TEXT</Tag>
 		<English>Form Minor Modifier</English>
+		<French>Modificateur de formation mineure</French>
 		<German>Modifikator zur Enstehung kleiner Civs</German>
-		<Spanish>Modificador de formación de civilización menor</Spanish>
-		<Russian>Модиф. малых наций</Russian>
 		<Italian>Modificatore civiltà minore</Italian>
 		<Polish>Modyfikator formowania pomniejszej cywilizacji</Polish>
+		<Russian>Модиф. малых наций</Russian>
+		<Spanish>Modificador de formación de civilización menor</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_REVOLUTION__GARRISONMODIFIER_HOVER</Tag>
 		<English>Multiplier used to alter RevIdx bonus from city garrison</English>
-		<Spanish>Multiplicador aplicado a la bonificación en el RevIndex por guarnición en la ciudad.</Spanish>
+		<French>Multiplicateur utilisé pour modifier le bonus de RevIdx dû à la garnison de la ville</French>
 		<Polish>Mno&#191;nik u&#191;ywany do zmiany premii RevIdx z garnizonu miejskiego</Polish>
+		<Spanish>Multiplicador aplicado a la bonificación en el RevIndex por guarnición en la ciudad.</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_REVOLUTION__GARRISONMODIFIER_TEXT</Tag>
 		<English>Garrison Modifier</English>
-		<Spanish>Modificador a Guarnición</Spanish>
+		<French>Modificateur de garnison</French>
 		<Polish>Modyfikator Garnizonu</Polish>
+		<Spanish>Modificador a Guarnición</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_REVOLUTION__HAPPINESSMODIFIER_HOVER</Tag>
 		<English>Multiplier used to alter Happiness based RevIdx changes</English>
-		<Spanish>Multiplicador aplicado a los cambios en el RevIndex por felicidad.</Spanish>
+		<French>Multiplicateur utilisé pour modifier les changements de RevIdx basés sur le bonheur</French>
 		<Polish>Mno&#191;nik u&#191;ywany do zmiany szcz&#234;&#156;cia w oparciu na zmian&#234; RevIdx</Polish>
+		<Spanish>Multiplicador aplicado a los cambios en el RevIndex por felicidad.</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_REVOLUTION__HAPPINESSMODIFIER_TEXT</Tag>
 		<English>Happiness Modifier</English>
-		<Spanish>Modificador a Felicidad</Spanish>
+		<French>Modificateur de bonheur</French>
 		<Polish>Modyfikator szcz&#234;&#156;cia</Polish>
+		<Spanish>Modificador a Felicidad</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_REVOLUTION__HUMANINDEXMODIFIER_HOVER</Tag>
 		<English>Multiplier used to alter RevIdx changes for Human Players</English>
-		<Spanish>Multiplicador aplicado a los cambios en el RevIndex de jugadores humanos.</Spanish>
+		<French>Multiplicateur utilisé pour modifier les changements de RevIdx pour les joueurs humains</French>
 		<Polish>Mno&#191;nik u&#191;ywany do zmiany RevIdx dla graczy-ludzi</Polish>
+		<Spanish>Multiplicador aplicado a los cambios en el RevIndex de jugadores humanos.</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_REVOLUTION__HUMANINDEXMODIFIER_TEXT</Tag>
 		<English>Human Index Modifier</English>
-		<Spanish>Modificador de índice humano</Spanish>
+		<French>Modificateur d'index humain</French>
 		<Polish>Modyfikator indeksu ludzkiego</Polish>
+		<Spanish>Modificador de índice humano</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_REVOLUTION__HUMANINDEXOFFSET_HOVER</Tag>
 		<English>Offset used to alter RevIdx changes for Human Players</English>
-		<Spanish>Valor sumado al RevIndex de jugadores humanos.</Spanish>
+		<French>Décalage utilisé pour modifier les changements de RevIdx pour les joueurs humains</French>
 		<Polish>Przesuni&#234;cie u&#191;ywane do zmiany RevIdx dla graczy-ludzi</Polish>
+		<Spanish>Valor sumado al RevIndex de jugadores humanos.</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_REVOLUTION__HUMANINDEXOFFSET_TEXT</Tag>
 		<English>Human Index Offset</English>
-		<Spanish>Valor mínimo de índice humano</Spanish>
+		<French>Décalage d'index humain</French>
 		<Polish>Przesuni&#234;cie indeksu ludzkiego</Polish>
+		<Spanish>Valor mínimo de índice humano</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_REVOLUTION__HUMANLEADERREVOLUTION_HOVER</Tag>
 		<English>Allow Human Player to have Leader changing Revolutions</English>
-		<Spanish>Permite que el jugador humano pueda sufrir revoluciones para cambio de líder.</Spanish>
+		<French>Permet au joueur humain d'avoir des révolutions changeant de dirigeant</French>
 		<Polish>Zezwalaj graczowi-cz&#179;owiekowi na zmian&#234; lidera w rewolucjach</Polish>
+		<Spanish>Permite que el jugador humano pueda sufrir revoluciones para cambio de líder.</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_REVOLUTION__HUMANLEADERREVOLUTION_TEXT</Tag>
 		<English>Human Leader Revolutions</English>
-		<Spanish>Revoluciones por líder humano</Spanish>
+		<French>Révolutions du dirigeant humain</French>
 		<Polish>Rewolucje Ludzkich Lider&#243;w</Polish>
+		<Spanish>Revoluciones por líder humano</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_REVOLUTION__HUMANWARNFRAC_HOVER</Tag>
 		<English>Fraction of RevIdx used to warn a Human Player of an impending Revolutionary issue in a city (1.0 equates to a RevIdx of 1000)</English>
-		<Spanish>Fracción del RevIndex para avisar al jugador humano de un problema de revolución independentista en una ciudad (1.0 equivale a un RevIndex de 1000).</Spanish>
+		<French>Fraction de RevIdx utilisée pour avertir un joueur humain d'un problème révolutionnaire imminent dans une ville (1,0 équivaut à un RevIdx de 1000)</French>
 		<Polish>Cz&#234;&#156;&#230; RevIdx u&#191;ywana do ostrze&#191;enia gracza-cz&#179;owieka o zbli&#191;aj&#185;cym si&#234; problemie rewolucyjnym w mie&#156;cie (1,0 r&#243;wna si&#234; RevIdx r&#243;wnemu 1000)</Polish>
+		<Spanish>Fracción del RevIndex para avisar al jugador humano de un problema de revolución independentista en una ciudad (1.0 equivale a un RevIndex de 1000).</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_REVOLUTION__HUMANWARNFRAC_TEXT</Tag>
 		<English>Warn Fraction</English>
-		<Spanish>Fracción para alerta</Spanish>
+		<French>Fraction d'alerte</French>
 		<Polish>Ostrzegaj frakcj&#234;</Polish>
+		<Spanish>Fracción para alerta</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_REVOLUTION__INDEPENDENCEODDS_HOVER</Tag>
 		<English>Odds used to determine Revolution type when a rebellion occurs, adjusts chance of Independence type rebellion</English>
-		<Spanish>Probabilidades utilizadas para determinar el tipo de revolución en caso de rebelión, ajusta la probabilidad de rebelión por independencia.</Spanish>
+		<French>Probabilités utilisées pour déterminer le type de révolution lors d'une rébellion, ajuste la chance de révolution de type indépendance</French>
 		<Polish>Kursy u&#191;ywane do okre&#156;lenia typu rewolucji w momencie wyst&#185;pienia buntu, koryguj&#185; szans&#234; na bunt typu Niepodleg&#179;o&#156;&#230;</Polish>
+		<Spanish>Probabilidades utilizadas para determinar el tipo de revolución en caso de rebelión, ajusta la probabilidad de rebelión por independencia.</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_REVOLUTION__INDEPENDENCEODDS_TEXT</Tag>
 		<English>Independence Odds</English>
-		<Spanish>Probabilidad de revolución por independencia</Spanish>
+		<French>Probabilité d'indépendance</French>
 		<Polish>Szanse na niepodleg&#179;o&#156;&#230;</Polish>
+		<Spanish>Probabilidad de revolución por independencia</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_REVOLUTION__INDEXMODIFIER_HOVER</Tag>
 		<English>Multiplier used to alter RevIdx changes</English>
-		<Spanish>Multiplicador aplicado a los cambios en el RevIndex.</Spanish>
+		<French>Multiplicateur utilisé pour modifier les changements de RevIdx</French>
 		<Polish>Mno&#191;nik u&#191;ywany do zmiany RevIdx</Polish>
+		<Spanish>Multiplicador aplicado a los cambios en el RevIndex.</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_REVOLUTION__INDEXMODIFIER_TEXT</Tag>
 		<English>Index Modifier</English>
-		<Spanish>Modificador de índice</Spanish>
+		<French>Modificateur d'index</French>
 		<Polish>Modyfikator indeksu</Polish>
+		<Spanish>Modificador de índice</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_REVOLUTION__INDEXOFFSET_HOVER</Tag>
 		<English>Offset used to alter RevIdx changes</English>
-		<Spanish>Valor sumado al RevIndex.</Spanish>
+		<French>Décalage utilisé pour modifier les changements de RevIdx</French>
 		<Polish>Przesuni&#234;cie u&#191;ywane do zmiany RevIdx</Polish>
+		<Spanish>Valor sumado al RevIndex.</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_REVOLUTION__INDEXOFFSET_TEXT</Tag>
 		<English>Index Offset</English>
-		<Spanish>Valor mínimo del índice</Spanish>
+		<French>Décalage d'index</French>
 		<Polish>Przesuni&#234;cie indeksu</Polish>
+		<Spanish>Valor mínimo del índice</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_REVOLUTION__INSTIGATEREVOLUTIONTHRESHOLD_HOVER</Tag>
 		<English>RevIdx value at which a city can instigate rebellions</English>
-		<Spanish>Valor del RevIndex en el que una ciudad puede instigar rebeliones.</Spanish>
+		<French>Valeur de RevIdx à partir de laquelle une ville peut déclencher des rébellions</French>
 		<Polish>Warto&#156;&#230; RevIdx, przy kt&#243;rej miasto mo&#191;e wszcz&#185;&#230; bunt</Polish>
+		<Spanish>Valor del RevIndex en el que una ciudad puede instigar rebeliones.</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_REVOLUTION__INSTIGATEREVOLUTIONTHRESHOLD_TEXT</Tag>
 		<English>Instigate Threshold</English>
-		<Spanish>Umbral para instigar</Spanish>
+		<French>Seuil d'instigation</French>
 		<Polish>Pr&#243;g buntu</Polish>
+		<Spanish>Umbral para instigar</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_REVOLUTION__LEADERODDS_HOVER</Tag>
 		<English>Odds used to determine Revolution type when a rebellion occurs, adjusts chance of Leader type rebellion</English>
-		<Spanish>Probabilidades utilizadas para determinar el tipo de revolución en caso de rebelión, ajusta la probabilidad de rebelión por líder.</Spanish>
+		<French>Probabilités utilisées pour déterminer le type de révolution lors d'une rébellion, ajuste la chance de révolution de type dirigeant</French>
 		<Polish>Kursy u&#191;ywane do okre&#156;lenia rodzaju rewolucji w przypadku wyst&#185;pienia buntu, koryguj&#185; szans&#234; na bunt typu Przyw&#243;dcy</Polish>
+		<Spanish>Probabilidades utilizadas para determinar el tipo de revolución en caso de rebelión, ajusta la probabilidad de rebelión por líder.</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_REVOLUTION__LEADERODDS_TEXT</Tag>
 		<English>Leader Odds</English>
-		<Spanish>Probabilidad de revolución por líder</Spanish>
+		<French>Probabilité de leader</French>
 		<Polish>Szanse przyw&#243;dcy</Polish>
+		<Spanish>Probabilidad de revolución por líder</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_REVOLUTION__LEADERREVOLUTION_HOVER</Tag>
 		<English>Allow Leader changing Revolutions</English>
-		<Spanish>Permite revoluciones para cambio de líder.</Spanish>
+		<French>Permet les révolutions changeant de dirigeant</French>
 		<Polish>Pozw&#243;l Rewolucjom zmienia&#230; Przyw&#243;dc&#234;</Polish>
+		<Spanish>Permite revoluciones para cambio de líder.</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_REVOLUTION__LEADERREVOLUTION_TEXT</Tag>
 		<English>Leader Revolutions</English>
-		<Spanish>Revoluciones por líder</Spanish>
+		<French>Révolutions de dirigeant</French>
 		<Polish>Rewolucje Lider&#243;w</Polish>
+		<Spanish>Revoluciones por líder</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_REVOLUTION__MAXNATIONALITY_HOVER</Tag>
 		<English>Nationality percentage cap in a city above which a city will cease to be effected by nationality based revolutions.</English>
-		<Spanish>Porcentaje de nacionalidad en una ciudad a partir del que la ciudad dejará de estar afectada por las revoluciones basadas en la nacionalidad.</Spanish>
+		<French>Plafond du pourcentage de nationalité dans une ville au-delà duquel une ville ne sera plus affectée par des révolutions basées sur la nationalité.</French>
 		<Polish>Limit procentowy narodowo&#156;ci w mie&#156;cie, powy&#191;ej kt&#243;rego rewolucje oparte na narodowo&#156;ci przestaj&#185; oddzia&#179;ywa&#230; na miasto.</Polish>
+		<Spanish>Porcentaje de nacionalidad en una ciudad a partir del que la ciudad dejará de estar afectada por las revoluciones basadas en la nacionalidad.</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_REVOLUTION__MAXNATIONALITY_TEXT</Tag>
 		<English>Max Nationality</English>
-		<Spanish>Nacionalidad máxima</Spanish>
+		<French>Nationalité max</French>
 		<Polish>Maksymalna narodowo&#156;&#230;</Polish>
+		<Spanish>Nacionalidad máxima</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_REVOLUTION__MAXSCORELINES_HOVER</Tag>
 		<English>Max Score Lines displayed on Scoreboard (-1 for Maximum)</English>
-		<Spanish>Máximo de puntuaciones mostradas en la clasificación (-1 para el máximo posible).</Spanish>
+		<French>Nombre maximum de lignes affichées sur le tableau des scores (-1 pour le maximum)</French>
 		<Polish>Maksymalna ilo&#156;&#230; linii wynik&#243;w wy&#156;wietlana na tablicy wynik&#243;w (-1 dla maksimum)</Polish>
+		<Spanish>Máximo de puntuaciones mostradas en la clasificación (-1 para el máximo posible).</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_REVOLUTION__MAXSCORELINES_TEXT</Tag>
 		<English>Max Score Lines</English>
-		<Spanish>Máximo de puntuaciones</Spanish>
+		<French>Lignes max au score</French>
 		<Polish>Maksymalna ilo&#156;&#230; lini wynik&#243;w</Polish>
+		<Spanish>Máximo de puntuaciones</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_REVOLUTION__MILITARYSTRENGTH_HOVER</Tag>
 		<English>Affects number of (non-defense) military units given to barbs</English>
+		<French>Affecte le nombre d'unités militaires (non défensives) données aux barbares</French>
 		<German>Beeinflusst die Zahl von Einheiten (außer Verteidigungseinheiten), die die Barbaren erhalten</German>
-		<Spanish>Afecta al número de unidades militares no defensivas otorgadas a los bárbaros.</Spanish>
-		<Russian>Влияет на количество (не обороняющихся) отрядов, выделенных варварам</Russian>
 		<Italian>[BOLD]Influenza il numero di [COLOR_HIGHLIGHT_TEXT]unità militari (non difensive) assegnate[COLOR_REVERT] ai barbari[\BOLD]</Italian>
 		<Polish>Wp&#179;ywa na liczb&#234; (nieobronnych) jednostek wojskowych przydzielanych barba&#191;y&#241;com</Polish>
+		<Russian>Влияет на количество (не обороняющихся) отрядов, выделенных варварам</Russian>
+		<Spanish>Afecta al número de unidades militares no defensivas otorgadas a los bárbaros.</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_REVOLUTION__MILITARYSTRENGTH_TEXT</Tag>
 		<English>Bonus Units Multiplier</English>
+		<French>Multiplicateur d'unités bonus</French>
 		<German>Faktor für Bonuseinheiten</German>
-		<Spanish>Multiplicador de unidades de bonificación</Spanish>
-		<Russian>Множитель бонусных отрядов</Russian>
 		<Italian>Moltiplicatore unità barbare</Italian>
 		<Polish>Mno&#191;nik jednostek bonusowych</Polish>
+		<Russian>Множитель бонусных отрядов</Russian>
+		<Spanish>Multiplicador de unidades de bonificación</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_REVOLUTION__MINPOPULATION_HOVER</Tag>
 		<English>Minimum population needed for a barb city to settle</English>
+		<French>Population minimum requise pour qu'une ville barbare s'installe</French>
 		<German>Minimale Bevölkerung, damit sich eine Barbarenstadt weiterentwickelt</German>
-		<Spanish>Mínimo de población necesario en una ciudad bárbara para asentarse.</Spanish>
-		<Russian>Минимальное население, необходимое для варварского города</Russian>
 		<Italian>[BOLD][COLOR_HIGHLIGHT_TEXT]Popolazione minima necessaria[COLOR_REVERT] perché una città barbara possa stabilirsi[\BOLD]</Italian>
 		<Polish>Minimalna populacja potrzebna do osiedlenia si&#234; miasta Barba&#191;y&#241;c&#243;w</Polish>
+		<Russian>Минимальное население, необходимое для варварского города</Russian>
+		<Spanish>Mínimo de población necesario en una ciudad bárbara para asentarse.</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_REVOLUTION__MINPOPULATION_TEXT</Tag>
@@ -7155,58 +7303,57 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_REVOLUTION__MINREINFORCEMENTTURNS_HOVER</Tag>
 		<English>Minimum number of turns that must pass between reinforcements</English>
-		<Spanish>Número mínimo de turnos que deben pasar entre refuerzos a rebeldes.</Spanish>
+		<French>Nombre minimum de tours devant s'écouler entre les renforts</French>
 		<Polish>Minimalna liczba tur, kt&#243;re musz&#185; min&#185;&#230; pomi&#234;dzy wzmocnieniami</Polish>
+		<Spanish>Número mínimo de turnos que deben pasar entre refuerzos a rebeldes.</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_REVOLUTION__MINREINFORCEMENTTURNS_TEXT</Tag>
 		<English>Min Reinforcement Turns</English>
-		<Spanish>Mínimo de turnos para refuerzo</Spanish>
+		<French>Tours min pour renforts</French>
 		<Polish>Minimalne tury posi&#179;k&#243;w</Polish>
+		<Spanish>Mínimo de turnos para refuerzo</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_REVOLUTION__NATIONALITYMODIFIER_HOVER</Tag>
 		<English>Multiplier used to alter Nationality based RevIdx changes</English>
-		<Spanish>Multiplicador aplicado a los cambios en el RevIndex por nacionalidad.</Spanish>
+		<French>Multiplicateur utilisé pour modifier les changements de RevIdx basés sur la nationalité</French>
 		<Polish>Mno&#191;nik u&#191;ywany do zmiany narodowo&#156;ci na podstawie zmian RevIdx</Polish>
+		<Spanish>Multiplicador aplicado a los cambios en el RevIndex por nacionalidad.</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_REVOLUTION__NATIONALITYMODIFIER_TEXT</Tag>
 		<English>Nationality Modifier</English>
-		<Spanish>Modificador a Nacionalidad</Spanish>
+		<French>Modificateur de nationalité</French>
 		<Polish>Modyfikator narodowo&#156;ci</Polish>
+		<Spanish>Modificador a Nacionalidad</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_REVOLUTION__NEWWORLDERASBEHIND_HOVER</Tag>
 		<English>Eras behind New World BarbCivs will be before allowed to spawn</English>
-		<Spanish>Se permitirá el atraso de era en el Nuevo Mundo antes de que se pueda asentar una civilización.</Spanish>
-		<Russian>BarbCivs в поздних эрах будут нацелены на достижение технологического превосходства</Russian>
+		<French>Nombre d'ères de retard des barbares du Nouveau Monde avant leur apparition</French>
 		<Italian>[BOLD][COLOR_HIGHLIGHT_TEXT]Numero di ere necessarie[COLOR_REVERT] prima che le civiltà barbare appaiano[\BOLD]</Italian>
 		<Polish>Ile epok Barba&#191;y&#241;cy z nowego &#156;wiata musz&#185; by&#230; za starym &#156;wiatem, aby mogli si&#234; pojawi&#230;</Polish>
+		<Russian>BarbCivs в поздних эрах будут нацелены на достижение технологического превосходства</Russian>
+		<Spanish>Se permitirá el atraso de era en el Nuevo Mundo antes de que se pueda asentar una civilización.</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_REVOLUTION__NEWWORLDERASBEHIND_TEXT</Tag>
 		<English>NewWorld Eras Behind</English>
+		<French>Retard en ères pour Nouveau Monde</French>
 		<German>Zurückliegende Zeitalter in Neuer Welt</German>
-		<Spanish>Atraso de era en Nuevo Mundo</Spanish>
-		<Russian>После эры NewWorld</Russian>
 		<Italian>Ere necessarie</Italian>
 		<Polish>Epoki Nowego &#156;wiata</Polish>
+		<Russian>После эры NewWorld</Russian>
+		<Spanish>Atraso de era en Nuevo Mundo</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_REVOLUTION__NEWWORLDPOLICY_HOVER</Tag>
-		<English>New World policy for the emergence of civs from barbarian cities.
-	1: A minor civ in the New World needs contact with a major civ to become a major civ, each contact increase the odds for it.
-	2: Like 1, but a major civ must have units on the landmass for major civs to emerge there.
-	3: Barbarian cities can form civs in the New World when a major civ have units on the landmass.
-	4: Like 3, but the requirement is cities instead of units.</English>
-		<Russian>Новая мировая механика появления цивилизаций из варварских городов.
-	1: Малым цивилизациям в New World нужен контакт с ведущей цивилизацией, чтобы выбиться в ведущие. Каждый контакт увеличивает шансы на это.
-	2: Как и (1), но у ведущей цивилизации должны быть отряды на суше, чтобы там могли образоваться основные цивилизации .
-	3: Варварские города могут образовывать цивилизации в New World, когда основные цивилизации имеют отряды на суше.
-	4: Как и (3), но требуются города, а не отряды.</Russian>
-	<Italian>[BOLD][COLOR_HIGHLIGHT_TEXT]Scegli opzione[COLOR_REVERT] che regola l'emergere di civiltà dalle città barbare[NEWLINE][NEWLINE]1 - Una civiltà minore ha bisogno di un [COLOR_HIGHLIGHT_TEXT]contatto con una civiltà maggiore[COLOR_REVERT] per diventare una civiltà maggiore a sua volta, ogni contatto aumenta le probabilità che ciò accada[NEWLINE][NEWLINE]2 - Come l'opzione 1, ma una civiltà maggiore deve [COLOR_HIGHLIGHT_TEXT]avere unità su uno specifico territorio[COLOR_REVERT] affinché altre civiltà maggiori emergano lì[NEWLINE][NEWLINE]3 - Le città barbare possono formare [COLOR_HIGHLIGHT_TEXT]nuove civiltà[COLOR_REVERT] quando una [COLOR_HIGHLIGHT_TEXT]civiltà principale ha unità sul territorio[COLOR_REVERT][NEWLINE][NEWLINE]4 - Come l'opzione 3, ma sono richieste [COLOR_HIGHLIGHT_TEXT]città invece che unità[COLOR_REVERT][\BOLD]</Italian>
-	<Polish>Ustawienia nowego &#156;wiata dotycz&#185;ce powstawania Cywilizacji z miast Barba&#191;y&#241;c&#243;w.[NEWLINE]1: Pomniejsza cywlizacja znajduj&#185;ca si&#234; w Nowym &#156;wiecie musi mie&#230; kontakt ze zwyk&#179;&#185; Cywilizacj&#185;, aby r&#243;wnie&#191; si&#234; ni&#185; sta&#230;. Ka&#191;dy kontakt zwi&#234;ksza szanse na to.[NEWLINE]2: Tak jak w punkcie 1, ale dodatkowo zwyk&#179;a Cywilizacja musi posiada&#230; jednostki na kontynencie, aby mog&#179;a tam powstac cywilizacja.[NEWLINE]3: Barba&#191;y&#241;skie miasta mog&#185; utworzy&#230; now&#185; Cywilizacj&#234; w Nowym &#156;wiecie, kiedy inna Cywilizacja b&#234;dzie mia&#179;a swoje jednostki na tym kontynencie.[NEWLINE]4: Tak samo jak w punkcie 3, ale zamiast jednostek musz&#185; to by&#230; miasta.</Polish>
+		<English>New World policy for the emergence of civs from barbarian cities.1: A minor civ in the New World needs contact with a major civ to become a major civ, each contact increase the odds for it.2: Like 1, but a major civ must have units on the landmass for major civs to emerge there.3: Barbarian cities can form civs in the New World when a major civ have units on the landmass.4: Like 3, but the requirement is cities instead of units.</English>
+		<French>Politique du Nouveau Monde pour l'émergence des civilisations à partir des villes barbares.1 : Une civilisation mineure doit établir un contact avec une civilisation majeure pour devenir majeure, chaque contact augmente ses chances.2 : Comme 1, mais une civ majeure doit avoir des unités sur la masse continentale.3 : Les villes barbares peuvent former des civilisations quand une civ majeure a des unités sur la masse continentale.4 : Comme 3, mais la condition concerne les villes, pas les unités.</French>
+		<Italian>[BOLD][COLOR_HIGHLIGHT_TEXT]Scegli opzione[COLOR_REVERT] che regola l'emergere di civiltà dalle città barbare[NEWLINE][NEWLINE]1 - Una civiltà minore ha bisogno di un [COLOR_HIGHLIGHT_TEXT]contatto con una civiltà maggiore[COLOR_REVERT] per diventare una civiltà maggiore a sua volta, ogni contatto aumenta le probabilità che ciò accada[NEWLINE][NEWLINE]2 - Come l'opzione 1, ma una civiltà maggiore deve [COLOR_HIGHLIGHT_TEXT]avere unità su uno specifico territorio[COLOR_REVERT] affinché altre civiltà maggiori emergano lì[NEWLINE][NEWLINE]3 - Le città barbare possono formare [COLOR_HIGHLIGHT_TEXT]nuove civiltà[COLOR_REVERT] quando una [COLOR_HIGHLIGHT_TEXT]civiltà principale ha unità sul territorio[COLOR_REVERT][NEWLINE][NEWLINE]4 - Come l'opzione 3, ma sono richieste [COLOR_HIGHLIGHT_TEXT]città invece che unità[COLOR_REVERT][\BOLD]</Italian>
+		<Polish>Ustawienia nowego &#156;wiata dotycz&#185;ce powstawania Cywilizacji z miast Barba&#191;y&#241;c&#243;w.[NEWLINE]1: Pomniejsza cywlizacja znajduj&#185;ca si&#234; w Nowym &#156;wiecie musi mie&#230; kontakt ze zwyk&#179;&#185; Cywilizacj&#185;, aby r&#243;wnie&#191; si&#234; ni&#185; sta&#230;. Ka&#191;dy kontakt zwi&#234;ksza szanse na to.[NEWLINE]2: Tak jak w punkcie 1, ale dodatkowo zwyk&#179;a Cywilizacja musi posiada&#230; jednostki na kontynencie, aby mog&#179;a tam powstac cywilizacja.[NEWLINE]3: Barba&#191;y&#241;skie miasta mog&#185; utworzy&#230; now&#185; Cywilizacj&#234; w Nowym &#156;wiecie, kiedy inna Cywilizacja b&#234;dzie mia&#179;a swoje jednostki na tym kontynencie.[NEWLINE]4: Tak samo jak w punkcie 3, ale zamiast jednostek musz&#185; to by&#230; miasta.</Polish>
+		<Russian>Новая мировая механика появления цивилизаций из варварских городов.1: Малым цивилизациям в New World нужен контакт с ведущей цивилизацией, чтобы выбиться в ведущие. Каждый контакт увеличивает шансы на это.2: Как и (1), но у ведущей цивилизации должны быть отряды на суше, чтобы там могли образоваться основные цивилизации .3: Варварские города могут образовывать цивилизации в New World, когда основные цивилизации имеют отряды на суше.4: Как и (3), но требуются города, а не отряды.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_REVOLUTION__NEWWORLDPOLICY_TEXT</Tag>
@@ -7221,206 +7368,240 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_REVOLUTION__OFFERDEFECTTOREVS_HOVER</Tag>
 		<English>Offer human players with a rebellion the choice to defect and lead the rebels.</English>
-		<Spanish>Ofrece a los jugadores humanos afectados por una rebelión la posibilidad de desertar y liderar a los rebeldes.</Spanish>
+		<French>Offrir aux joueurs humains d'une rébellion la possibilité de faire défection et de diriger les rebelles.</French>
 		<Polish>Daj graczom bior&#185;cym udzia&#179; w rebelii mo&#191;liwo&#156;&#230; dezercji i poprowadzenia rebeliant&#243;w.</Polish>
+		<Spanish>Ofrece a los jugadores humanos afectados por una rebelión la posibilidad de desertar y liderar a los rebeldes.</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_REVOLUTION__OFFERDEFECTTOREVS_TEXT</Tag>
 		<English>Offer Defections</English>
-		<Spanish>Ofrecer deserción</Spanish>
+		<French>Permettre les défections</French>
 		<Polish>Oferuj dezercje</Polish>
+		<Spanish>Ofrecer deserción</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_REVOLUTION__REBELTYPES_HOVER</Tag>
 		<English>Use RebelTypes file when setting up rebellions</English>
-		<Spanish>Usa el archivo de RebelTypes al generar rebeliones.</Spanish>
+		<French>Utiliser le fichier RebelTypes pour configurer les rébellions</French>
 		<Polish>U&#191;yj pliku RebelTypes podczas konfigurowania bunt&#243;w</Polish>
+		<Spanish>Usa el archivo de RebelTypes al generar rebeliones.</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_REVOLUTION__REBELTYPES_TEXT</Tag>
 		<English>Rebel Types</English>
-		<Spanish>Tipos de rebeldes</Spanish>
+		<French>Types de rebelles</French>
 		<Polish>Typy rebeliant&#243;w</Polish>
+		<Spanish>Tipos de rebeldes</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_REVOLUTION__REFORTIFY_HOVER</Tag>
 		<English>Refortifies units when human takes control from AIAutoplay</English>
-		<Spanish>Refortifica las unidades cuando el humano vuelve a tomar el control.</Spanish>
+		<French>Renforce les unités quand un humain reprend le contrôle de la lecture automatique IA</French>
 		<Polish>Fortyfikuje jednostki, gdy cz&#179;owiek przejmuje kontrol&#234; z AIAutoplay</Polish>
+		<Spanish>Refortifica las unidades cuando el humano vuelve a tomar el control.</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_REVOLUTION__REFORTIFY_TEXT</Tag>
 		<English>Refortify</English>
-		<Spanish>Refortificar</Spanish>
+		<French>Renforcer</French>
 		<Polish>Ponownie fortyfikuj</Polish>
+		<Spanish>Refortificar</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_REVOLUTION__REINFORCEMENTMODIFIER_HOVER</Tag>
 		<English>Multiplier used to alter revolutionary reinforcement strength</English>
-		<Spanish>Multiplicador aplicado a la capacidad de refuerzo revolucionaria.</Spanish>
+		<French>Multiplicateur utilisé pour modifier la puissance des renforts révolutionnaires</French>
 		<Polish>Mno&#191;nik u&#191;ywany do zmiany si&#179;y rewolucyjnych posi&#179;k&#243;w</Polish>
+		<Spanish>Multiplicador aplicado a la capacidad de refuerzo revolucionaria.</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_REVOLUTION__REINFORCEMENTMODIFIER_TEXT</Tag>
 		<English>Reinforcement Modifier</English>
-		<Spanish>Modificador de refuerzo</Spanish>
+		<French>Modificateur de renfort</French>
 		<Polish>Modyfikator posi&#179;k&#243;w</Polish>
+		<Spanish>Modificador de refuerzo</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_REVOLUTION__RELIGIONMODIFIER_HOVER</Tag>
 		<English>Multiplier used to alter Religion based RevIdx changes</English>
-		<Spanish>Multiplicador aplicado a los cambios en el RevIndex por religión.</Spanish>
+		<French>Multiplicateur utilisé pour modifier les changements de RevIdx basés sur la religion</French>
 		<Polish>Mno&#191;nik u&#191;ywany do zmiany religii w oparciu o zmiany RevIdx</Polish>
+		<Spanish>Multiplicador aplicado a los cambios en el RevIndex por religión.</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_REVOLUTION__RELIGIONMODIFIER_TEXT</Tag>
 		<English>Religion Modifier</English>
-		<Spanish>Modificador a Religión</Spanish>
+		<French>Modificateur religieux</French>
 		<Polish>Modyfikator religii</Polish>
+		<Spanish>Modificador a Religión</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_REVOLUTION__RELIGIONODDS_HOVER</Tag>
 		<English>Odds used to determine Revolution type when a rebellion occurs, adjusts chance of Religious type rebellion</English>
-		<Spanish>Probabilidades utilizadas para determinar el tipo de revolución en caso de rebelión, ajusta la probabilidad de rebelión religiosa.</Spanish>
+		<French>Probabilités utilisées pour déterminer le type de révolution lors d'une rébellion, ajuste la chance de rébellion de type religieux</French>
 		<Polish>Kursy u&#191;ywane do okre&#156;lenia typu rewolucji w przypadku wyst&#185;pienia buntu, koryguj&#185; szans&#234; na bunt typu religijnego</Polish>
+		<Spanish>Probabilidades utilizadas para determinar el tipo de revolución en caso de rebelión, ajusta la probabilidad de rebelión religiosa.</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_REVOLUTION__RELIGIONODDS_TEXT</Tag>
 		<English>Religion Odds</English>
-		<Spanish>Probabilidad de revolución religiosa</Spanish>
+		<French>Probabilités Religieuses</French>
 		<Polish>Szanse na religi&#234;</Polish>
+		<Spanish>Probabilidad de revolución religiosa</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_REVOLUTION__RELIGIOUSREVOLUTION_HOVER</Tag>
 		<English>Allow Religious Revolutions</English>
-		<Spanish>Permite las revoluciones religiosas.</Spanish>
+		<French>Autoriser les révolutions religieuses</French>
 		<Polish>Zezw&#243;l na rewolucje religijne</Polish>
+		<Spanish>Permite las revoluciones religiosas.</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_REVOLUTION__RELIGIOUSREVOLUTION_TEXT</Tag>
 		<English>Religious Revolutions</English>
-		<Spanish>Revoluciones religiosas</Spanish>
+		<French>Révolutions religieuses</French>
 		<Polish>Rewolucje religijne</Polish>
+		<Spanish>Revoluciones religiosas</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_REVOLUTION__REVCULTUREMODIFIER_HOVER</Tag>
 		<English>Multiplier used to alter RevIdx bonus from Culture in a city</English>
-		<Spanish>Multiplicador aplicado a la bonificación en el RevIndex por la cultura de una ciudad.</Spanish>
+		<French>Multiplicateur utilisé pour modifier le bonus RevIdx provenant de la culture dans une ville</French>
 		<Polish>Mno&#191;nik u&#191;ywany do zmiany premii RevIdx z Kultury w mie&#156;cie</Polish>
+		<Spanish>Multiplicador aplicado a la bonificación en el RevIndex por la cultura de una ciudad.</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_REVOLUTION__REVCULTUREMODIFIER_TEXT</Tag>
 		<English>Culture Modifier</English>
-		<Spanish>Modificador a Cultura</Spanish>
+		<French>Modificateur de culture</French>
 		<Polish>Modyfikator kultury</Polish>
+		<Spanish>Modificador a Cultura</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_REVOLUTION__REVDEBUGMODE_HOVER</Tag>
 		<English>Revolution Debug information displayed and debug information logging.</English>
-		<Spanish>Muestra y registra la información de depuración de Revolución ('Revolution').</Spanish>
+		<French>Informations de débogage de la révolution affichées et journal de débogage activé.</French>
 		<Polish>Rewolucja: Wy&#156;wietlanie informacji o debugowaniu i rejestrowanie informacji o debugowaniu.</Polish>
+		<Spanish>Muestra y registra la información de depuración de Revolución ('Revolution').</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_REVOLUTION__REVDEBUGMODE_TEXT</Tag>
 		<English>Revolution Debug</English>
-		<Spanish>Depuración de revolución</Spanish>
+		<French>Débogage de la révolution</French>
 		<Polish>Debugowanie rewolucji</Polish>
+		<Spanish>Depuración de revolución</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_REVOLUTION__REVMAXCIVS_HOVER</Tag>
 		<English>Maximum number for Players allowed in a game before Revolutions cease to occur (-1 for Maximum Players allowed by Engine)</English>
-		<Spanish>Número máximo de jugadores permitido en una partida antes de que cesen las revoluciones (-1 para el máximo permitido por el sistema).</Spanish>
+		<French>Nombre maximal de joueurs autorisés dans une partie avant que les révolutions cessent (-1 pour le maximum autorisé par le moteur)</French>
 		<Polish>Maksymalna liczba graczy dozwolona w grze, zanim rewolucje ustan&#185; (-1 dla maksymalnej liczby graczy dozwolonej przez silnik)</Polish>
+		<Spanish>Número máximo de jugadores permitido en una partida antes de que cesen las revoluciones (-1 para el máximo permitido por el sistema).</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_REVOLUTION__REVMAXCIVS_TEXT</Tag>
 		<English>Rev Max Civs</English>
-		<Spanish>Máximo de civilizaciones para revolución</Spanish>
+		<French>Max de civs pour Révolutions</French>
 		<Polish>Maksymalna liczba cywilizacji rewolucyjnych</Polish>
+		<Spanish>Máximo de civilizaciones para revolución</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_REVOLUTION__SAVEALLDEATHS_HOVER</Tag>
 		<English>Not sure what this does</English>
-		<Spanish>No se sabe qué hace esto con seguridad.</Spanish>
+		<French>Fonction inconnue</French>
 		<Polish>Nie jestem pewien, co to robi</Polish>
+		<Spanish>No se sabe qué hace esto con seguridad.</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_REVOLUTION__SAVEALLDEATHS_TEXT</Tag>
 		<English>Save Deaths</English>
+		<French>Sauvegarder les morts</French>
 		<Polish>Ratuj &#156;mier&#230;</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_REVOLUTION__SHOWDEBUGMESSAGES_HOVER</Tag>
 		<English>Show Revolution Debug Messages</English>
-		<Spanish>Muestra los mensajes de depuración de revolución ('Revolution').</Spanish>
+		<French>Afficher les messages de débogage des révolutions</French>
 		<Polish>Poka&#191; komunikaty debugowania Rewolucji</Polish>
+		<Spanish>Muestra los mensajes de depuración de revolución ('Revolution').</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_REVOLUTION__SHOWDEBUGMESSAGES_TEXT</Tag>
 		<English>Revolution Debug Messages</English>
-		<Spanish>Mensajes de depuración de revolución</Spanish>
+		<French>Messages de débogage des révolutions</French>
 		<Polish>Komunikaty debugowania Rewolucji</Polish>
+		<Spanish>Mensajes de depuración de revolución</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_REVOLUTION__SHOWREVINDEXINPOPUP_HOVER</Tag>
 		<English>Enables special RevIndex pop up (debugging info)</English>
-		<Spanish>Activa un elemento emergente especial sobre RevIndex (información de depuración).</Spanish>
+		<French>Active une fenêtre pop-up spéciale RevIndex (infos de débogage)</French>
 		<Polish>W&#179;&#185;cza specjalne wyskakuj&#185;ce okienko RevIndex (informacje o debugowaniu)</Polish>
+		<Spanish>Activa un elemento emergente especial sobre RevIndex (información de depuración).</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_REVOLUTION__SHOWREVINDEXINPOPUP_TEXT</Tag>
 		<English>RevIndex pop up</English>
-		<Spanish>Aviso emergente de RevIndex</Spanish>
+		<French>Fenêtre pop-up RevIndex</French>
 		<Polish>Wyskakuj&#185;ce okienko RevIndex</Polish>
+		<Spanish>Aviso emergente de RevIndex</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_REVOLUTION__STRENGTHMODIFIER_HOVER</Tag>
 		<English>Multiplier used to alter initial Rebellion Strength</English>
-		<Spanish>Multiplicador aplicado a la fuerza inicial de la rebelión.</Spanish>
+		<French>Multiplicateur utilisé pour modifier la force initiale de la rébellion</French>
 		<Polish>Mno&#191;nik u&#191;ywany do zmiany pocz&#185;tkowej si&#179;y buntu</Polish>
+		<Spanish>Multiplicador aplicado a la fuerza inicial de la rebelión.</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_REVOLUTION__STRENGTHMODIFIER_TEXT</Tag>
 		<English>Strength Modifier</English>
-		<Spanish>Modificador de fortaleza</Spanish>
+		<French>Modificateur de force</French>
 		<Polish>Modyfikator si&#179;y</Polish>
+		<Spanish>Modificador de fortaleza</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_REVOLUTION__TURNSBETWEENREVS_HOVER</Tag>
 		<English>Minimum number of turns that must pass before a city that has already rebelled can spawn new revolution</English>
-		<Spanish>Número mínimo de turnos que deben pasar antes de que pueda surgir una nueva revolución en una ciudad que ya se ha rebelado.</Spanish>
+		<French>Nombre minimum de tours devant s'écouler avant qu'une ville ayant déjà connu une rébellion puisse en déclencher une nouvelle</French>
 		<Polish>Minimalna liczba tur, kt&#243;re musz&#185; up&#179;yn&#185;&#230;, zanim miasto, kt&#243;re ju&#191; si&#234; zbuntowa&#179;o, b&#234;dzie mog&#179;o wywo&#179;a&#230; now&#185; rewolucj&#234;</Polish>
+		<Spanish>Número mínimo de turnos que deben pasar antes de que pueda surgir una nueva revolución en una ciudad que ya se ha rebelado.</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_REVOLUTION__TURNSBETWEENREVS_TEXT</Tag>
 		<English>Turns Between Revs</English>
-		<Spanish>Turnos entre revoluciones</Spanish>
-		<Russian>Õîäû ìåæäó ðåâîë.</Russian>
+		<French>Tours entre Révolutions</French>
 		<Polish>Tury pomi&#234;dzy rewolucjami</Polish>
+		<Russian>Õîäû ìåæäó ðåâîë.</Russian>
+		<Spanish>Turnos entre revoluciones</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_REVOLUTION__WARNTURNS_HOVER</Tag>
 		<English>Minimum number of turns waited before repeating an impending revolution warning</English>
-		<Spanish>Número mínimo de turnos de espera antes de repetir una alerta de revolución independentista.</Spanish>
+		<French>Nombre minimum de tours d'attente avant de répéter un avertissement de révolution imminente</French>
 		<Polish>Minimalna liczba tur oczekiwanych przed powt&#243;rzeniem ostrze&#191;enia o zbli&#191;aj&#185;cej si&#234; rewolucji</Polish>
+		<Spanish>Número mínimo de turnos de espera antes de repetir una alerta de revolución independentista.</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_REVOLUTION__WARNTURNS_TEXT</Tag>
 		<English>Warn turns</English>
-		<Spanish>Turnos para alertar</Spanish>
+		<French>Tours d'avertissement</French>
 		<Polish>Tury ostrzegawcze</Polish>
+		<Spanish>Turnos para alertar</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_REVOLUTION__WARWEARINESSMOD_HOVER</Tag>
 		<English>Multiplier used to alter RevIdx penalty caused by War Weariness</English>
-		<Spanish>Multiplicador aplicado a la penalización en el RevIndex por hastío bélico.</Spanish>
+		<French>Multiplicateur utilisé pour modifier la pénalité RevIdx due à la fatigue de guerre</French>
 		<Polish>Mno&#191;nik u&#191;ywany do zmiany kary RevIdx spowodowanej przez zm&#234;czenie wojn&#185;</Polish>
+		<Spanish>Multiplicador aplicado a la penalización en el RevIndex por hastío bélico.</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_REVOLUTION__WARWEARINESSMOD_TEXT</Tag>
 		<English>WW Modifier</English>
-		<Spanish>Modificador a Hastío bélico</Spanish>
+		<French>Modificateur FF (fatigue de guerre)</French>
 		<Polish>Modyfikator ZW</Polish>
+		<Spanish>Modificador a Hastío bélico</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_ROMSETTINGS__ALLOWTERRAFORMING_HOVER</Tag>
@@ -7606,26 +7787,30 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_ROMSETTINGS__HISTORICALACCURATECALENDAR_HOVER</Tag>
 		<English>This feature will change the date calculation algorithm, making them more historically accurate depending on the global technological level for greater game immersion. Changes will take effect after loading a save.[NEWLINE][NEWLINE]WARNING! This feature is experimental. Please report any issues with it to us on Discord.</English>
+		<French>Cette fonctionnalité modifie l'algorithme de calcul des dates, les rendant plus historiquement exactes en fonction du niveau technologique global pour une immersion accrue. Les changements prennent effet après chargement d'une sauvegarde.[NEWLINE][NEWLINE]ATTENTION ! Cette fonctionnalité est expérimentale. Merci de nous signaler tout problème sur Discord.</French>
 		<Polish>Ta funkcja zmieni algorytm obliczania dat, czyni&#185;c je bardziej dok&#179;adnymi pod wzgl&#234;dem historycznym w zale&#191;no&#156;ci od globalnego poziomu technologicznego, co zapewni wi&#234;ksze zanurzenie w grze. Zmiany zaczn&#185; obowi&#185;zywa&#230; po wczytaniu zapisu. [NEWLINE][NEWLINE] OSTRZE&#175;ENIE! Ta funkcja ma charakter eksperymentalny. Wszelkie problemy z tym zwi&#185;zane prosimy zg&#179;asza&#230; nam na Discordzie.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_ROMSETTINGS__HISTORICALACCURATECALENDAR_TEXT</Tag>
 		<English>[BETA] Historical Accurate Calendar</English>
+		<French>[BETA] Calendrier historiquement exact</French>
 		<Polish>[BETA]Historyczny kalendarz</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_ROMSETTINGS__FLEXIBLEDIFFICULTYAI_HOVER</Tag>
 		<English>All AI players will also use Flexible Difficulty, and human players will be alerted when AI difficulty changes.</English>
-		<Russian>Âñå èãðîêè ÈÈ áóäóò èñïîëüçîâàòü ãèáêóþ ñëîæíîñòü, à ÷åëîâå÷åñêèå èãðîêè áóäóò îïîâåùåíû, êîãäà èçìåíèòñÿ óðîâåíü ñëîæíîñòè äëÿ ÈÈ.</Russian>
+		<French>Tous les joueurs IA utilisent également la difficulté flexible, et les joueurs humains seront alertés des changements de difficulté IA.</French>
 		<Italian>[BOLD]Tutti i [COLOR_HIGHLIGHT_TEXT]giocatori IA utilizzeranno la difficoltà flessibile[COLOR_REVERT] e i giocatori umani [COLOR_HIGHLIGHT_TEXT]verranno avvisati[COLOR_REVERT] quando il livello di difficoltà dell'IA cambia[\BOLD]</Italian>
 		<Polish>Wszyscy gracze SI b&#234;d&#185; r&#243;wnie&#191; korzysta&#230; z elastycznego poziomu trudno&#156;ci, a gracze b&#234;d&#185;cy lud&#159;mi zostan&#185; powiadomieni, gdy zmieni si&#234; poziom trudno&#156;ci SI.</Polish>
+		<Russian>Âñå èãðîêè ÈÈ áóäóò èñïîëüçîâàòü ãèáêóþ ñëîæíîñòü, à ÷åëîâå÷åñêèå èãðîêè áóäóò îïîâåùåíû, êîãäà èçìåíèòñÿ óðîâåíü ñëîæíîñòè äëÿ ÈÈ.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_ROMSETTINGS__FLEXIBLEDIFFICULTYAI_TEXT</Tag>
 		<English>AI Use Flexible Difficulty</English>
-		<Russian>Ãèáêèé óðîâ. ñëîæíîñòè äëÿ ÈÈ</Russian>
+		<French>IA utilise la difficulté flexible</French>
 		<Italian>Difficoltà flessibile per l'IA</Italian>
 		<Polish>SI u&#191;ywa elastycznego poziomu trudno&#156;ci</Polish>
+		<Russian>Ãèáêèé óðîâ. ñëîæíîñòè äëÿ ÈÈ</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_ROMSETTINGS__FLEXIBLEDIFFICULTYMAXIMUMDIFF_HOVER</Tag>
@@ -7690,6 +7875,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_ROMSETTINGS__FLEXIBLEDIFFICULTYAIMAXIMUMDIFF_HOVER</Tag>
 		<English>The maximum difficulty that AI can be raised to when playing with Flexible Difficulty</English>
+		<French>Difficulté maximale à laquelle l'IA peut être portée en jouant avec la difficulté flexible</French>
 		<Italian>[BOLD]La [COLOR_HIGHLIGHT_TEXT]difficoltà massima[COLOR_REVERT] a cui l'IA può salire quando l'opzione [COLOR_HIGHLIGHT_TEXT]difficoltà flessibile[COLOR_REVERT] è attivata[\BOLD]</Italian>
 		<Polish>Maksymalny poziom trudno&#156;ci, do jakiego mo&#191;na podnie&#156;&#230; sztuczn&#185; inteligencj&#234; podczas gry na elastycznym poziomie trudno&#156;ci</Polish>
 	</TEXT>
@@ -7716,6 +7902,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_ROMSETTINGS__FLEXIBLEDIFFICULTYAIMINIMUMDIFF_HOVER</Tag>
 		<English>The minimum difficulty that AI can fall to when playing with Flexible Difficulty</English>
+		<French>Difficulté minimale à laquelle l'IA peut descendre en jouant avec la difficulté flexible</French>
 		<Italian>[BOLD]La [COLOR_HIGHLIGHT_TEXT]difficoltà minima[COLOR_REVERT] a cui l'IA può scendere quando l'opzione [COLOR_HIGHLIGHT_TEXT]difficoltà flessibile[COLOR_REVERT] è attivata[\BOLD]</Italian>
 		<Polish>Minimalny poziom trudno&#156;ci, na jaki mo&#191;e spa&#156;&#230; sztuczna inteligencja podczas gry na elastycznym poziomie trudno&#156;ci</Polish>
 	</TEXT>
@@ -8239,16 +8426,18 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_ROMSETTINGS__TELEPATHICRELIGION_HOVER</Tag>
 		<English>When a religion is founded: Every leader who has it as their favourite religion will get it in their capital cities immediatly, regardless of where it was founded.</English>
-		<Russian>В случае основания новой религии любой лидер, считающий ее своей любимой, немедленно получит ее в своей текущей столице, независимо от того, кем и где она была основана.</Russian>
+		<French>Lorsqu'une religion est fondée : Chaque dirigeant qui la considère comme sa religion favorite l'aura immédiatement dans ses capitales, peu importe où elle a été fondée.</French>
 		<Italian>[BOLD]Quando viene fondata una [COLOR_HIGHLIGHT_TEXT]religione che è la preferita[COLOR_REVERT] di un leader, quest'ultimo la [COLOR_HIGHLIGHT_TEXT]otterrà immediatamente nella sua capitale[COLOR_REVERT] indipendentemente da dove è stata fondata[\BOLD]</Italian>
 		<Polish>Kiedy religia zostanie za&#179;o&#191;ona: Ka&#191;dy przyw&#243;dca, dla kt&#243;rego jest to ulubiona religia, otrzyma j&#185; natychmiast w swoich stolicach, niezale&#191;nie od tego, gdzie zosta&#179;a za&#179;o&#191;ona.</Polish>
+		<Russian>В случае основания новой религии любой лидер, считающий ее своей любимой, немедленно получит ее в своей текущей столице, независимо от того, кем и где она была основана.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_ROMSETTINGS__TELEPATHICRELIGION_TEXT</Tag>
 		<English>Telepathic Religion</English>
-		<Russian>Заочное обращение</Russian>
+		<French>Religion Télépathique</French>
 		<Italian>Religioni telepatiche</Italian>
 		<Polish>Religia telepatyczna</Polish>
+		<Russian>Заочное обращение</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_ROMSETTINGS__TERRAINDAMAGE_HOVER</Tag>
@@ -8423,11 +8612,12 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_SCORES__DISPLAYNAME_LIST</Tag>
 		<English>Leader|Civilization|Civ Description|Leader / Civ|Leader / Civ Desc</English>
+		<French>Dirigeant|Civilisation|Description de la Civ|Dirigeant / Civ|Description Dirigeant / Civ</French>
 		<German>Oberhaupt|Zivilisation|Ziv-Beschreibung|Oberhaupt / Zivilisation|Oberhaupt / Ziv-Beschreibung</German>
 		<Italian>Nome leader|Nome civiltà|Descrizione|Nome leader e nome civiltà|Nome leader e descrizione</Italian>
-		<Spanish>Líder|Civilización|Descripción|Líder / Civ.|Líder / Desc.</Spanish>
-		<Russian>Ëèäåð|Öèâèëèçàöèÿ|Îïèñàíèå öèâ.|Ëèäåð / Öèâ.|Ëèäåð / Îïèñ. öèâ.</Russian>
 		<Polish>Przyw&#243;dca|Cywilizacja|Opis cywilizacji|Przyw&#243;dca / Cywilizacja|Przyw&#243;dca / Opis cywilizacji</Polish>
+		<Russian>Ëèäåð|Öèâèëèçàöèÿ|Îïèñàíèå öèâ.|Ëèäåð / Öèâ.|Ëèäåð / Îïèñ. öèâ.</Russian>
+		<Spanish>Líder|Civilización|Descripción|Líder / Civ.|Líder / Desc.</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_SCORES__DISPLAYNAME_TEXT</Tag>
@@ -8952,9 +9142,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_TECHWINDOW__VIEWTYPE_HOVER</Tag>
 		<English>When checked, an alternate splash screen will be used.[NEWLINE]It is called 'wide', but that is an obsolete name, consider it an alternate version.</English>
-		<Russian>Îïðåäåëÿåò âèä, îòîáðàæàåìûé êîãäà dû îòêðûâàåòå òåõíîëîãèþ.[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Îðèãèíàëüíûé[COLOR_REVERT] - Ìèíèìàëüíûé âèä Civ4 ïî óìîë÷àíèþ.[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Äåòàëèçîâàííûé[COLOR_REVERT] - Äîáàâèòü áîëåå äåòàëèçîâàííóþ èíôîðìàöèþ.[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Øèðîêèé[COLOR_REVERT] - Øèðîêàÿ âåðñèÿ äåòàëèçèðîâàííîãî âèäà.</Russian>
+		<French>Lorsque coché, un écran d'accueil alternatif sera utilisé.[NEWLINE]Il s'appelle 'large', mais c'est un nom obsolète, considérez-le comme une version alternative.</French>
 		<Italian>[BOLD]Verrà utilizzata una [COLOR_HIGHLIGHT_TEXT]schermata alternativa[COLOR_REVERT] per le tecnologie scoperte[\BOLD]</Italian>
 		<Polish>Po zaznaczeniu zostanie u&#191;yty alternatywny ekran powitalny. [NEWLINE]Nazywa si&#234; "szeroki", ale jest to przestarza&#179;a nazwa, rozwa&#191; j&#185; jako wersj&#234; alternatywn&#185;.</Polish>
+		<Russian>Îïðåäåëÿåò âèä, îòîáðàæàåìûé êîãäà dû îòêðûâàåòå òåõíîëîãèþ.[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Îðèãèíàëüíûé[COLOR_REVERT] - Ìèíèìàëüíûé âèä Civ4 ïî óìîë÷àíèþ.[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Äåòàëèçîâàííûé[COLOR_REVERT] - Äîáàâèòü áîëåå äåòàëèçîâàííóþ èíôîðìàöèþ.[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Øèðîêèé[COLOR_REVERT] - Øèðîêàÿ âåðñèÿ äåòàëèçèðîâàííîãî âèäà.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_TECHWINDOW__VIEWTYPE_TEXT</Tag>
@@ -8978,97 +9169,11 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_UNITNAMING__DEFAULT_HOVER</Tag>
-		<English>Enter the user defined naming convention (see help file for further information). Names can
-be built from plain text and format codes that appear between matching carets (^).[NEWLINE][ICON_BULLET]e.g.
-"^cv^ ^ut^ from ^ct^" --&gt; "American Archer from Boston"[NEWLINE][BOLD]General Codes[\BOLD][NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]civ4[COLOR_REVERT]
-- Use built-in Civ4 names[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]rd[COLOR_REVERT] - Random name[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]rc[COLOR_REVERT]
-- Random civ-related name[NEWLINE][BOLD]Unit Info Codes[\BOLD][NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]ct[COLOR_REVERT]
-- City where unit was built (e.g. Boston)[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]cv[COLOR_REVERT]
-- Civilization that built the unit in adjective form (e.g. American)[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]ut[COLOR_REVERT]
-- Unit type (e.g. Archer)[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]cb[COLOR_REVERT] - Combat type
-(e.g.
-Melee)[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]dm[COLOR_REVERT] - Domain type (e.g. Water)[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]ld[COLOR_REVERT]
-- Leader that built the unit (e.g. Roosevelt)[NEWLINE][BOLD]Counting Codes[\BOLD][NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]cnt[f][COLOR_REVERT]
-- Count across all units[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]cntu[f][COLOR_REVERT] - Count per
-unit type[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]cntct[f][COLOR_REVERT] - Count per city[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]cntuct[f][COLOR_REVERT]
-- Count per unit/city combination[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]cntc[f][COLOR_REVERT] -
-Count per combat type[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]cntd[f][COLOR_REVERT] - Count per domain[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]tt1[f][x:y][COLOR_REVERT]
-- Count up to a number chosen between x and y[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]tt1[f][x][COLOR_REVERT]
-- Count from x, incrementing each time tt1 code is reset[NEWLINE][NEWLINE]* f in [f] is one of s, A,
-a, p, g, n, o, r (see help file)</English>
-		<French>Entrez la convention des noms (voir le fichier d'aide pour plus d'information).[NEWLINE]Les
-noms sont construits avec du texte et des codets de format entre carets (^).[NEWLINE][ICON_BULLET]p.ex.
-"^ut^ ^cv^ de ^ct^" --&gt; "Archer Américain de Boston"[NEWLINE][BOLD]Codes Généraux[\BOLD][NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]civ4[COLOR_REVERT]
-- Utilise les noms inclus dans Civ4[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]rd[COLOR_REVERT] - Nom
-aléatoire[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]rc[COLOR_REVERT] - Nom aléatoire spécifique à votre
-civilisation[NEWLINE][BOLD]Codes d'Information[\BOLD][NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]ct[COLOR_REVERT]
-- Ville ou l'unité a étée construite (p.ex. Boston)[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]cv[COLOR_REVERT]
-- Civilisation de l'unité (p.ex. Américain)[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]ut[COLOR_REVERT]
-- Type d'Unité (p.ex. Archer)[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]cb[COLOR_REVERT] - Type de
-Combat
-(p.ex. Melee)[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]dm[COLOR_REVERT] - Type de Domaine (p.ex.
-Eau)[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]ld[COLOR_REVERT]
-- Dirigeant qui a construit l'unité
-(p.ex. Roosevelt)[NEWLINE][BOLD]Codes Numériques[\BOLD][NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]cnt[f][COLOR_REVERT]
-- Compte toutes les unités[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]cntu[f][COLOR_REVERT] - Compte
-toutes les unités d'un même type[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]cntct[f][COLOR_REVERT] -
-Compte les unités par ville[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]cntuct[f][COLOR_REVERT] - Compte
-par combination d'unité/ville[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]cntc[f][COLOR_REVERT] - Compte
-par type de combat[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]cntd[f][COLOR_REVERT] - Compte par domaine[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]tt1[f][x:y][COLOR_REVERT]
-- Compte entre x et y[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]tt1[f][x][COLOR_REVERT] - Compte à
-partir
-de x[NEWLINE][NEWLINE]* f dans [f] est égal à s, A, a, p, g, n, o ou r (voir fichier d'aide)</French>
-		<German>Eingabe der benutzerdefinierten Benennungsregel (siehe Hilfe-Datei für weitere Information).
-Die Benennung kann aus Klartext und Formatierungscodes zwischen zwei Zirkumflexen (^) bestehen:[NEWLINE][ICON_BULLET]z.B.
-"^cv^ ^ut^ aus ^ct^" --&gt; "Amerikanischer Bogenschütze aus Boston"[NEWLINE][BOLD]Allgemeine Codes[\BOLD][NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]civ4[COLOR_REVERT]
-- Standard Civ4-Namen verwenden[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]rd[COLOR_REVERT] - Zufälliger
-Name[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]rc[COLOR_REVERT] - Zufälliger zivilisationsbezogener
-Name[NEWLINE][BOLD]Codes für Einheiteninfos[\BOLD][NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]ct[COLOR_REVERT]
-- Name der Stadt, die eine Einheit aufgestellt hat (z.B. Boston)[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]cv[COLOR_REVERT]
-- Adjektiv der Zivilisation, die eine Einheit aufgestellt hat (z.B. amerikanisch)[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]ut[COLOR_REVERT]
-- Einheitentyp (z.B. Bogenschütze)[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]cb[COLOR_REVERT] -
-Einheitenklasse
-(z.B. Nahkampf)[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]dm[COLOR_REVERT] - Einsatzgebiet
-einer Einheit
-(z.B. Wasser)[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]ld[COLOR_REVERT] - Name des Oberhaupts,
-das
-eine Einheit aufgestellt hat (z.B. Roosevelt)[NEWLINE][BOLD]Nummerierungscodes[\BOLD][NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]cnt[f][COLOR_REVERT]
-- Nummerierung über alle Einheiten[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]cntu[f][COLOR_REVERT]
-- Nummerierung über alle Einheiten gleichen Typs[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]cntct[f][COLOR_REVERT]
-- Nummerierung pro Stadt[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]cntuct[f][COLOR_REVERT] - Nummerierung
-pro Einheitentyp/Stadt in Kombination[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]cntc[f][COLOR_REVERT]
-- Nummerierung pro Einheitenklasse[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]cntd[f][COLOR_REVERT]
--
-Nummerierung pro Einsatzgebiet einer Einheit[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]tt1[f][x:y][COLOR_REVERT]
-- Nummerierung mit einer festgelegten Zahl zwischen x und y[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]tt2[f][x][COLOR_REVERT]
-- Nummerierung beginnt mit x und wächst jedes Mal an, wenn der Code tt auf 1 zurückgesetzt
-wird[NEWLINE][NEWLINE]*
-f in [f] kann auch s, A, a, p, g, n, o, r sein (siehe Hilfe-Datei)</German>
-		<Italian>[BOLD]Inserisci le tue [COLOR_HIGHLIGHT_TEXT]regole di denominazione personalizzate[COLOR_REVERT] (consultare la [COLOR_HIGHLIGHT_TEXT]guida BUG mod[COLOR_REVERT] per ulteriori informazioni)[NEWLINE][NEWLINE]I nomi possono essere costruiti tramite testo e codici di formato inseriti tra accenti circonflessi [COLOR_HIGHLIGHT_TEXT]^[COLOR_REVERT] (esempio "^cv^ ^ut^ da ^ct^" --&gt; arciere americano di Boston)
-[NEWLINE]Codici generici:[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]civ4[COLOR_REVERT] - Nomi standard di Civ4:BtS[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]rd[COLOR_REVERT] - Nome casuale[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]rc[COLOR_REVERT] - Nome casuale relativo alla civiltà
-[NEWLINE]Codici informazione unità:[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]ct[COLOR_REVERT] - Città dove l'unità è stata costruita[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]cv[COLOR_REVERT] - Aggettivo della civiltà che ha costruito l'unità[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]ut[COLOR_REVERT] - Tipo di unità[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]cb[COLOR_REVERT] - Tipo di combattimento principale dell'unità [NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]dm[COLOR_REVERT] - Dominio dell'unità (ad esempio acqua)[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]ld[COLOR_REVERT] - Leader che ha costruito l'unità[NEWLINE]
-[NEWLINE]Codici di conteggio:[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]cnt[f][COLOR_REVERT] - Conteggio per tutte le unità[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]cntu[f][COLOR_REVERT] - Conteggio per tipo di unità[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]cntct[f][COLOR_REVERT] - Conteggio per città[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]cntuct[f][COLOR_REVERT] - Conteggio per combinazione unità-città[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]cntc[f][COLOR_REVERT] - Conteggio per tipo di combattimento[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]cntd[f][COLOR_REVERT] - Conteggio per dominio[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]tt1[f][x:y][COLOR_REVERT] - Conteggio fino ad un numero scelto fra x ed y[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]tt1[f][x][COLOR_REVERT] - Conteggio a partire da x che si incrementa ogni volta che il codice tt1 viene resettato
-[NEWLINE]*f in [f] è una lettera tra [COLOR_HIGHLIGHT_TEXT]s[COLOR_REVERT] ([COLOR_HIGHLIGHT_TEXT]assente[COLOR_REVERT]), [COLOR_HIGHLIGHT_TEXT]A[COLOR_REVERT] ([COLOR_HIGHLIGHT_TEXT]lettera maiuscola[COLOR_REVERT]), [COLOR_HIGHLIGHT_TEXT]a[COLOR_REVERT] ([COLOR_HIGHLIGHT_TEXT]lettera minuscola[COLOR_REVERT]), [COLOR_HIGHLIGHT_TEXT]p[COLOR_REVERT] ([COLOR_HIGHLIGHT_TEXT]lettera fonetica[COLOR_REVERT]), [COLOR_HIGHLIGHT_TEXT]g[COLOR_REVERT] ([COLOR_HIGHLIGHT_TEXT]lettera greca[COLOR_REVERT]), [COLOR_HIGHLIGHT_TEXT]n[COLOR_REVERT] ([COLOR_HIGHLIGHT_TEXT]numero cardinale[COLOR_REVERT]), [COLOR_HIGHLIGHT_TEXT]o[COLOR_REVERT] ([COLOR_HIGHLIGHT_TEXT]numero ordinale[COLOR_REVERT]), [COLOR_HIGHLIGHT_TEXT]r[COLOR_REVERT] ([COLOR_HIGHLIGHT_TEXT]numero romano[COLOR_REVERT]).[NEWLINE]Consultare la [COLOR_HIGHLIGHT_TEXT]guida[COLOR_REVERT] per maggiori dettagli[\BOLD]</Italian>
-		<Spanish>Introduce la nomenclatura que desees para nombrar a las unidades por defecto (véase el fichero
-de ayuda para más información). Los nombres se pueden construir a partir de texto plano y códigos de
-formato (entre '^').[NEWLINE][ICON_BULLET]por ejemplo "^ut^ ^cv^ de ^ct^" --&gt; "Arquero estadounidense
-de Boston"[NEWLINE][BOLD]Códigos de formato generales[\BOLD][NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Civ4[COLOR_REVERT]
-- Utilizar los nombres generados en Civilization IV[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]red[COLOR_REVERT]
-- Nombre aleatorio[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]rc[COLOR_REVERT] - Ciudad donde se entrenó
-(p. ej. Boston)[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]cv[COLOR_REVERT] - Adjetivo de la civilización
-que la construyó (p. ej. estadounidense)[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]ut[COLOR_REVERT]
-- Tipo de unidad (p. ej. Arquero)[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]cb[COLOR_REVERT] - Clasificación
-de unidad (p. ej. Cuerpo a cuerpo)[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]dm[COLOR_REVERT] - Tipo
-de dominio del ejército (p.e. Mar)[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]lid[COLOR_REVERT] - Líder
-que la construyó (p. ej. Roosevelt)[NEWLINE][BOLD]Códigos para contadores[\BOLD][NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]cnt[f][COLOR_REVERT]
-- Contador de número de unidad global[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]cntu[f][COLOR_REVERT]
-- Contador por tipo de unidad[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]cntct[f][COLOR_REVERT] - Contador
-por ciudad[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]cntuct[f][COLOR_REVERT] - Contador por combinación
-unidad/ciudad[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]cntc[f][COLOR_REVERT] - Contador por clasificación
-de unidad[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]cntd[f][COLOR_REVERT] - Contador por dominio[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]tt1[f][x:y][COLOR_REVERT]
-- Contador de un número elegido entre x e y[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]tt1[f][x][COLOR_REVERT]
-- Contador desde x, aumenta cada vez que se reconfigura el código tt1[NEWLINE][NEWLINE]* f en [f] es
-uno de s, A, a, p, g, n, o, r (véase archivo de ayuda)</Spanish>
+		<English>Enter the user defined naming convention (see help file for further information). Names canbe built from plain text and format codes that appear between matching carets (^).[NEWLINE][ICON_BULLET]e.g."^cv^ ^ut^ from ^ct^" --&gt; "American Archer from Boston"[NEWLINE][BOLD]General Codes[\BOLD][NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]civ4[COLOR_REVERT]- Use built-in Civ4 names[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]rd[COLOR_REVERT] - Random name[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]rc[COLOR_REVERT]- Random civ-related name[NEWLINE][BOLD]Unit Info Codes[\BOLD][NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]ct[COLOR_REVERT]- City where unit was built (e.g. Boston)[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]cv[COLOR_REVERT]- Civilization that built the unit in adjective form (e.g. American)[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]ut[COLOR_REVERT]- Unit type (e.g. Archer)[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]cb[COLOR_REVERT] - Combat type(e.g.Melee)[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]dm[COLOR_REVERT] - Domain type (e.g. Water)[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]ld[COLOR_REVERT]- Leader that built the unit (e.g. Roosevelt)[NEWLINE][BOLD]Counting Codes[\BOLD][NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]cnt[f][COLOR_REVERT]- Count across all units[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]cntu[f][COLOR_REVERT] - Count perunit type[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]cntct[f][COLOR_REVERT] - Count per city[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]cntuct[f][COLOR_REVERT]- Count per unit/city combination[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]cntc[f][COLOR_REVERT] -Count per combat type[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]cntd[f][COLOR_REVERT] - Count per domain[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]tt1[f][x:y][COLOR_REVERT]- Count up to a number chosen between x and y[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]tt1[f][x][COLOR_REVERT]- Count from x, incrementing each time tt1 code is reset[NEWLINE][NEWLINE]* f in [f] is one of s, A,a, p, g, n, o, r (see help file)</English>
+		<French>Entrez la convention des noms (voir le fichier d'aide pour plus d'information).[NEWLINE]Lesnoms sont construits avec du texte et des codets de format entre carets (^).[NEWLINE][ICON_BULLET]p.ex."^ut^ ^cv^ de ^ct^" --&gt; "Archer Américain de Boston"[NEWLINE][BOLD]Codes Généraux[\BOLD][NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]civ4[COLOR_REVERT]- Utilise les noms inclus dans Civ4[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]rd[COLOR_REVERT] - Nomaléatoire[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]rc[COLOR_REVERT] - Nom aléatoire spécifique à votrecivilisation[NEWLINE][BOLD]Codes d'Information[\BOLD][NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]ct[COLOR_REVERT]- Ville ou l'unité a étée construite (p.ex. Boston)[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]cv[COLOR_REVERT]- Civilisation de l'unité (p.ex. Américain)[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]ut[COLOR_REVERT]- Type d'Unité (p.ex. Archer)[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]cb[COLOR_REVERT] - Type deCombat(p.ex. Melee)[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]dm[COLOR_REVERT] - Type de Domaine (p.ex.Eau)[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]ld[COLOR_REVERT]- Dirigeant qui a construit l'unité(p.ex. Roosevelt)[NEWLINE][BOLD]Codes Numériques[\BOLD][NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]cnt[f][COLOR_REVERT]- Compte toutes les unités[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]cntu[f][COLOR_REVERT] - Comptetoutes les unités d'un même type[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]cntct[f][COLOR_REVERT] -Compte les unités par ville[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]cntuct[f][COLOR_REVERT] - Comptepar combination d'unité/ville[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]cntc[f][COLOR_REVERT] - Comptepar type de combat[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]cntd[f][COLOR_REVERT] - Compte par domaine[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]tt1[f][x:y][COLOR_REVERT]- Compte entre x et y[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]tt1[f][x][COLOR_REVERT] - Compte àpartirde x[NEWLINE][NEWLINE]* f dans [f] est égal à s, A, a, p, g, n, o ou r (voir fichier d'aide)</French>
+		<German>Eingabe der benutzerdefinierten Benennungsregel (siehe Hilfe-Datei für weitere Information).Die Benennung kann aus Klartext und Formatierungscodes zwischen zwei Zirkumflexen (^) bestehen:[NEWLINE][ICON_BULLET]z.B."^cv^ ^ut^ aus ^ct^" --&gt; "Amerikanischer Bogenschütze aus Boston"[NEWLINE][BOLD]Allgemeine Codes[\BOLD][NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]civ4[COLOR_REVERT]- Standard Civ4-Namen verwenden[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]rd[COLOR_REVERT] - ZufälligerName[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]rc[COLOR_REVERT] - Zufälliger zivilisationsbezogenerName[NEWLINE][BOLD]Codes für Einheiteninfos[\BOLD][NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]ct[COLOR_REVERT]- Name der Stadt, die eine Einheit aufgestellt hat (z.B. Boston)[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]cv[COLOR_REVERT]- Adjektiv der Zivilisation, die eine Einheit aufgestellt hat (z.B. amerikanisch)[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]ut[COLOR_REVERT]- Einheitentyp (z.B. Bogenschütze)[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]cb[COLOR_REVERT] -Einheitenklasse(z.B. Nahkampf)[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]dm[COLOR_REVERT] - Einsatzgebieteiner Einheit(z.B. Wasser)[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]ld[COLOR_REVERT] - Name des Oberhaupts,daseine Einheit aufgestellt hat (z.B. Roosevelt)[NEWLINE][BOLD]Nummerierungscodes[\BOLD][NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]cnt[f][COLOR_REVERT]- Nummerierung über alle Einheiten[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]cntu[f][COLOR_REVERT]- Nummerierung über alle Einheiten gleichen Typs[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]cntct[f][COLOR_REVERT]- Nummerierung pro Stadt[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]cntuct[f][COLOR_REVERT] - Nummerierungpro Einheitentyp/Stadt in Kombination[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]cntc[f][COLOR_REVERT]- Nummerierung pro Einheitenklasse[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]cntd[f][COLOR_REVERT]-Nummerierung pro Einsatzgebiet einer Einheit[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]tt1[f][x:y][COLOR_REVERT]- Nummerierung mit einer festgelegten Zahl zwischen x und y[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]tt2[f][x][COLOR_REVERT]- Nummerierung beginnt mit x und wächst jedes Mal an, wenn der Code tt auf 1 zurückgesetztwird[NEWLINE][NEWLINE]*f in [f] kann auch s, A, a, p, g, n, o, r sein (siehe Hilfe-Datei)</German>
+		<Italian>[BOLD]Inserisci le tue [COLOR_HIGHLIGHT_TEXT]regole di denominazione personalizzate[COLOR_REVERT] (consultare la [COLOR_HIGHLIGHT_TEXT]guida BUG mod[COLOR_REVERT] per ulteriori informazioni)[NEWLINE][NEWLINE]I nomi possono essere costruiti tramite testo e codici di formato inseriti tra accenti circonflessi [COLOR_HIGHLIGHT_TEXT]^[COLOR_REVERT] (esempio "^cv^ ^ut^ da ^ct^" --&gt; arciere americano di Boston)[NEWLINE]Codici generici:[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]civ4[COLOR_REVERT] - Nomi standard di Civ4:BtS[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]rd[COLOR_REVERT] - Nome casuale[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]rc[COLOR_REVERT] - Nome casuale relativo alla civiltà[NEWLINE]Codici informazione unità:[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]ct[COLOR_REVERT] - Città dove l'unità è stata costruita[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]cv[COLOR_REVERT] - Aggettivo della civiltà che ha costruito l'unità[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]ut[COLOR_REVERT] - Tipo di unità[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]cb[COLOR_REVERT] - Tipo di combattimento principale dell'unità [NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]dm[COLOR_REVERT] - Dominio dell'unità (ad esempio acqua)[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]ld[COLOR_REVERT] - Leader che ha costruito l'unità[NEWLINE][NEWLINE]Codici di conteggio:[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]cnt[f][COLOR_REVERT] - Conteggio per tutte le unità[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]cntu[f][COLOR_REVERT] - Conteggio per tipo di unità[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]cntct[f][COLOR_REVERT] - Conteggio per città[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]cntuct[f][COLOR_REVERT] - Conteggio per combinazione unità-città[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]cntc[f][COLOR_REVERT] - Conteggio per tipo di combattimento[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]cntd[f][COLOR_REVERT] - Conteggio per dominio[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]tt1[f][x:y][COLOR_REVERT] - Conteggio fino ad un numero scelto fra x ed y[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]tt1[f][x][COLOR_REVERT] - Conteggio a partire da x che si incrementa ogni volta che il codice tt1 viene resettato[NEWLINE]*f in [f] è una lettera tra [COLOR_HIGHLIGHT_TEXT]s[COLOR_REVERT] ([COLOR_HIGHLIGHT_TEXT]assente[COLOR_REVERT]), [COLOR_HIGHLIGHT_TEXT]A[COLOR_REVERT] ([COLOR_HIGHLIGHT_TEXT]lettera maiuscola[COLOR_REVERT]), [COLOR_HIGHLIGHT_TEXT]a[COLOR_REVERT] ([COLOR_HIGHLIGHT_TEXT]lettera minuscola[COLOR_REVERT]), [COLOR_HIGHLIGHT_TEXT]p[COLOR_REVERT] ([COLOR_HIGHLIGHT_TEXT]lettera fonetica[COLOR_REVERT]), [COLOR_HIGHLIGHT_TEXT]g[COLOR_REVERT] ([COLOR_HIGHLIGHT_TEXT]lettera greca[COLOR_REVERT]), [COLOR_HIGHLIGHT_TEXT]n[COLOR_REVERT] ([COLOR_HIGHLIGHT_TEXT]numero cardinale[COLOR_REVERT]), [COLOR_HIGHLIGHT_TEXT]o[COLOR_REVERT] ([COLOR_HIGHLIGHT_TEXT]numero ordinale[COLOR_REVERT]), [COLOR_HIGHLIGHT_TEXT]r[COLOR_REVERT] ([COLOR_HIGHLIGHT_TEXT]numero romano[COLOR_REVERT]).[NEWLINE]Consultare la [COLOR_HIGHLIGHT_TEXT]guida[COLOR_REVERT] per maggiori dettagli[\BOLD]</Italian>
+		<Spanish>Introduce la nomenclatura que desees para nombrar a las unidades por defecto (véase el ficherode ayuda para más información). Los nombres se pueden construir a partir de texto plano y códigos deformato (entre '^').[NEWLINE][ICON_BULLET]por ejemplo "^ut^ ^cv^ de ^ct^" --&gt; "Arquero estadounidensede Boston"[NEWLINE][BOLD]Códigos de formato generales[\BOLD][NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Civ4[COLOR_REVERT]- Utilizar los nombres generados en Civilization IV[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]red[COLOR_REVERT]- Nombre aleatorio[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]rc[COLOR_REVERT] - Ciudad donde se entrenó(p. ej. Boston)[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]cv[COLOR_REVERT] - Adjetivo de la civilizaciónque la construyó (p. ej. estadounidense)[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]ut[COLOR_REVERT]- Tipo de unidad (p. ej. Arquero)[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]cb[COLOR_REVERT] - Clasificaciónde unidad (p. ej. Cuerpo a cuerpo)[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]dm[COLOR_REVERT] - Tipode dominio del ejército (p.e. Mar)[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]lid[COLOR_REVERT] - Líderque la construyó (p. ej. Roosevelt)[NEWLINE][BOLD]Códigos para contadores[\BOLD][NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]cnt[f][COLOR_REVERT]- Contador de número de unidad global[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]cntu[f][COLOR_REVERT]- Contador por tipo de unidad[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]cntct[f][COLOR_REVERT] - Contadorpor ciudad[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]cntuct[f][COLOR_REVERT] - Contador por combinaciónunidad/ciudad[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]cntc[f][COLOR_REVERT] - Contador por clasificaciónde unidad[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]cntd[f][COLOR_REVERT] - Contador por dominio[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]tt1[f][x:y][COLOR_REVERT]- Contador de un número elegido entre x e y[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]tt1[f][x][COLOR_REVERT]- Contador desde x, aumenta cada vez que se reconfigura el código tt1[NEWLINE][NEWLINE]* f en [f] esuno de s, A, a, p, g, n, o, r (véase archivo de ayuda)</Spanish>
 		<Russian>Ââåäèòå îïðåäåëåííûå ïîëüçîâàòåëåì ñîãëàøåíèÿ íàèìåíîâàíèÿ (ñì. help ôàéë äëÿ äàëüíåéøåé èíôîðìàöèè). Èìåíà ìîãóò áûòü ïîñòðîåíû èç ïðîñòîãî òåêñòà è êîäîâ ôîðìàòèðîâàíèÿ êîòîðûå íàõîäÿòñÿ ìåæäó ïàðîé êàðåòîâ (^).[NEWLINE][ICON_BULLET]íàïðèìåð "^cv^ ^ut^ èç ^ct^" --&gt; "Àìåðèêàíñêèé ñòðåëîê èç Áîñòîíà"[NEWLINE][BOLD]Îñíîâíûå êîäû[\BOLD][NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]civ4[COLOR_REVERT] - Èñïîëüçîâàòü âñòðîåííûå èìåíà Civ4[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]rd[COLOR_REVERT] - Ñëó÷àéíîå èìÿ[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]rc[COLOR_REVERT] - Ñëó÷àéíîå ñâÿçàííîå ñ ãîðîäîì èìÿ[NEWLINE][BOLD]Êîäû èíôîðìàöèè þíèòà[\BOLD][NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]ct[COLOR_REVERT] - Ãîðîä ãäå þíèò áûë ïîñòðîåí (íàïðèìåð Áîñòîí)[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]cv[COLOR_REVERT] - Öèâèëèçàöèÿ, êîòîðàÿ ïîñòðîèëà þíèòà â ôîðìå ïðèëàãàòåëüíîãî (íàïðèìåð Àìåðèêàíñêèé)[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]ut[COLOR_REVERT] - Òèï þíèòà (íàïðèìåð Ñòðåëîê)[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]cb[COLOR_REVERT] - Òèï áîÿ (íàïðèìåð Ðóêîïàøíèê)[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]dm[COLOR_REVERT] - Òèï òåððèòîðèè (íàïðèìåð Âîäà)[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]ld[COLOR_REVERT] - Ëèäåð, ïîñòðîèâøèé þíèòà (íàïðèìåð Ðóçâåëüò)[NEWLINE][BOLD]Êîäû ïîäñ÷åòà[\BOLD][NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]cnt[f][a][COLOR_REVERT] - Ñ÷åò âñåõ þíèòîâ[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]cnt[f][u][COLOR_REVERT] - Ñ÷åò ïî òèïàì þíèòîâ[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]cnt[f][c][COLOR_REVERT] - Ñ÷åò ïî ãîðîäàì[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]cnt[f][t][COLOR_REVERT] - Ñ÷åò ïî êîìáèíàöèè þíèò/ãîðîä[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]cnt[f][b][COLOR_REVERT] - Ñ÷åò ïî òèïó áîÿ[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]cnt[f][d][COLOR_REVERT] - Ñ÷åò ïî òåððèòîðèÿì[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]tt1[f][x:y][COLOR_REVERT] - Ñ÷åò ïî ÷èñëó, âûáðàííîìó ìåæäó x è y[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]tt1[f][x][COLOR_REVERT] - Ñ÷åò îò x, óâåëè÷èâàÿñü êàæäûé ðàç, êîãäà êîä ñáðàñûâàåòñÿ tt1[NEWLINE][NEWLINE]* f â [f] îäíî èç s, A, a, p, g, n, o, r (ñì. help ôàéë)</Russian>
 		<Polish>Podaj zdefioniowan&#185; przez gracza konwencj&#234; nazewnictwa (zobacz plik z pomoc&#185;, aby uzyska&#230; wi&#234;cej informacji). Nazwy mog&#185; by&#230; zbudowane przy u&#191;yciu tekstu, oraz kod&#243;w formatowania, kt&#243;re pojawiaj&#185; si&#234; pomi&#234;dzy znakami (^).[NEWLINE][ICON_BULLET] na przyk&#179;ad "^cv^ ^ut^ z ^ct^" --&gt; "Ameryka&#241;ski &#163;ucznik z Bostonu"[NEWLINE][BOLD]Og&#243;lne kody [\BOLD][NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]civ4[COLOR_REVERT] - U&#191;yj wbudowanych nazw Civ4[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]rd[COLOR_REVERT] - Losowe nazwy[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]rc[COLOR_REVERT] - Losowe nazwy zwi&#185;zane z Cywilizacj&#185;[NEWLINE][BOLD]Kody informacji o jednostkach[\BOLD][NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]ct[COLOR_REVERT] - Miassto w kt&#243;rym wytrenowano jednostk&#234; (np. Boston)[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]cv[COLOR_REVERT] - Cywilizacja (w formie przymiotnika), kt&#243;ra wytrenowa&#179;a jednostk&#234; (np. Ameryka&#241;ska)[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]ut[COLOR_REVERT] - Typ jednostki (np. &#163;ucznik)[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]cb[COLOR_REVERT] - Spos&#243;b walki (np. Wr&#234;cz)[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]dm[COLOR_REVERT] - Typ domeny (np. Morska)[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]ld[COLOR_REVERT] - Przyw&#243;dca, kt&#243;ry wytrenowa&#179; jednostk&#234; (np. Roosevelt)[NEWLINE][BOLD]Kody liczbowe[\BOLD][NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]cnt[f][COLOR_REVERT] - Policz wszytkie jednostki[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]cntu[f][COLOR_REVERT] - Policz wszystkie jednostki danego typu[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]cntct[f][COLOR_REVERT] - Policz wszystkie jednostki z danego miasta[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]cntuct[f][COLOR_REVERT] - Policz jednostki tego typu z danego miasta[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]cntc[f][COLOR_REVERT] - Policz ze wzgl&#234;du na spos&#243;b walki[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]cntd[f][COLOR_REVERT] - Policz ze wzgl&#234;du na domen&#234;[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]tt1[f][x:y][COLOR_REVERT] - Policz pomi&#234;dzy liczbami x oraz y[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]tt1[f][x][COLOR_REVERT] - Policz od x, zwi&#234;kszaj&#185;c za ka&#191;dym razem gdy kod tt1 jest resetowany[NEWLINE][NEWLINE]* f w [f] to: s, A, a, p, g, n, o, r (zobacz plik z pomoc&#185;).</Polish>
 	</TEXT>
@@ -9165,11 +9270,13 @@ uno de s, A, a, p, g, n, o, r (véase archivo de ayuda)</Spanish>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_RELIGIOUS_TEMPLE</Tag>
 		<English>Temples:</English>
+		<French>Temples :</French>
 		<German>Tempel:</German>
-		<Italian>Templi</Italian> <!-- infoscreen Religion -->
-		<Spanish>Templos:</Spanish>
-		<Russian>Çàìêè:</Russian>
+		<Italian>Templi</Italian>
 		<Polish>&#140;wi&#185;tynie:</Polish>
+		<Russian>Çàìêè:</Russian>
+		<Spanish>Templos:</Spanish>
+		<!-- infoscreen Religion -->
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_TOTAL_TRADE_ROUTES</Tag>

@@ -336,6 +336,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_PROJECT_MISSILE_DEFENCE_PEDIA</Tag>
 		<English>Missile defense is an air defense system, weapon, or technology involved in the detection, tracking, interception and destruction of attacking missiles. Originally conceived as a defense against nuclear-armed ICBMs, its application has broadened to include shorter-ranged non-nuclear tactical and theater missiles.</English>
+		<French>La défense antimissile est un système de défense aérienne, une arme ou une technologie impliquée dans la détection, le suivi, l'interception et la destruction de missiles attaquants. Initialement conçue comme une défense contre les ICBM (missiles balistiques intercontinentaux) à charge nucléaire, son application s'est élargie pour inclure également des missiles tactiques et de théâtre non nucléaires de plus courte portée.</French>
 		<German>Die National Missile Defense (kurz NMD), auch einfach Raketenschild genannt, ist ein amerikanisches Rüstungsprojekt, das als Nachfolger der Strategic Defense Initiative (SDI) unter US-Präsident George W. Bush ins Leben gerufen wurde. Wie auch schon beim Vorgänger ist das Ziel dieses Projektes ein nationsweiter Schutzschild gegen Raketenangriffe. Anfliegende Interkontinentalraketen sollen mit satellitengestützter Überwachung erkannt und mittels Luft-Luft-Raketen oder Lasern während des Fluges zerstört werden.[PARAGRAPH:1]Das NMD ist hauptsächlich als Verteidigung gegen Terroristen und sogenannte Schurkenstaaten gedacht. Wie aber bereits beim SDI gesagt, ist die Wirksamkeit eines Raketenschutzschilds umstritten, da nur wenige Raketen gleichzeitig abgefangen werden können und ein terroristischer nuklearer Angriff eher über eingeschmuggelte Kofferbomben erfolgen würde.</German>
 		<Italian>Un sistema antimissile è un sistema, arma o tecnologia di difesa aerea coinvolti nell'individuazione, tracciamento e distruzione di missili in attacco. Originalmente ideati come difesa contro gli ICBM nucleari, le loro applicazioni sono state estese a missili non-nucleari a corto raggio.</Italian>
 		<Russian>Противоракетная оборона - это система противовоздушной обороны, оружие или технология, участвующие в обнаружении, отслеживании, перехвате и уничтожении атакующих ракет. Первоначально задуманная как защита от ядерных межконтинентальных баллистических ракет, ее применение расширилось и теперь включает неядерные тактические ракеты и оперативно-тактические ракеты малой или средней дальности.</Russian>
@@ -343,7 +344,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_PROJECT_ANTI_MISSILE_RAILGUN</Tag>
 		<English>Anti-Missile Railgun</English>
-		<French>Défense Contre Les Missiles II</French>
+		<French>Canon électromagnétique antimissile</French>
 		<German>
 			<Text>Anti-Raketen-Schienenkanone:Anti-Raketen-Schienenkanone:Anti-Raketen-Schienenkanone:Anti-Raketen-Schienenkanone</Text>
 			<Gender>Female:Female:Female:Female</Gender>
