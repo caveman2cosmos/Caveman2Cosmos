@@ -43,7 +43,7 @@ jobs:
 #                      "./Test/Python3/setup.sh && pytest -c Test/Python3/pytest.ini ."
     validate-xmls:
         name: Validate XMLs
-        runs-on: windows-2019
+        runs-on: windows-2022
         steps:
             - name: Check out code
               uses: actions/checkout@v2
