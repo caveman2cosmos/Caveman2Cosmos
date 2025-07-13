@@ -11,7 +11,11 @@
 	<TEXT>
 		<Tag>TXT_KEY_CIVILIZATION_NPC_BEAST_ADJECTIVE</Tag>
 		<English>Beastly</English>
-		<French>Bêtes</French>
+		<French>
+			<Text>animal:animale:animaux:animales</Text>
+			<Gender>Male:Female:Male:Female</Gender>
+			<Plural>0:0:1:1</Plural>
+		</French>
 		<German>animalisch</German>
 		<Russian>Зверин.</Russian>
 	</TEXT>

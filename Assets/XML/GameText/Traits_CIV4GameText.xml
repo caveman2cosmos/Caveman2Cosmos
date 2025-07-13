@@ -1146,9 +1146,9 @@
 		<Tag>TXT_KEY_TRAIT_BARBARIAN</Tag>
 		<English>Barbarian</English>
 		<French>
-			<Text>Barbare</Text>
+			<Text>Barbares</Text>
 			<Gender>Male</Gender>
-			<Plural>0</Plural>
+			<Plural>1</Plural>
 		</French>
 		<German>
 			<Text>Barbarisch</Text>
