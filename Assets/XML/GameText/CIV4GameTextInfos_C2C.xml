@@ -19,7 +19,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDHELP_PLOT_BLOCKED</Tag>
 		<English>[COLOR_WARNING_TEXT]Cannot be constructed on a %s1_Name![COLOR_REVERT]</English>
-		<French>Traduction : [COLOR_WARNING_TEXT]Ne peut pas être construit sur un(e) %s1_Name ![COLOR_REVERT]</French>
+		<French>[COLOR_WARNING_TEXT]Ne peut pas être construit sur un(e) %s1_Name ![COLOR_REVERT]</French>
 		<Russian>[COLOR_WARNING_TEXT]Невозможно построить в %s1_Name![COLOR_REVERT]</Russian>
 		<Italian>[COLOR_WARNING_TEXT]Non può essere costruito su una %s1_Name![COLOR_REVERT]</Italian>
 	</TEXT>

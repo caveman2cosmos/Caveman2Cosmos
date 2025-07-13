@@ -7098,7 +7098,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_MEDIATOR_WORLD_2</Tag>
 		<English>A great mediator has offered to arbitrate peace between %s1_civ_adjective and %s2_civ_adjective.</English>
-		<French>Un habile médiateur s'est proposé pour arbitrer la paix entre les %s1:3_civ_adjective et les %s2:3_civ_adjective.</French>
+		<French>Un habile médiateur s'est proposé pour arbitrer la paix entre les %s1:3_civ_adjective et les %s2_civ_adjective.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_GREAT_MEDIATOR_OTHER_3</Tag>
@@ -12469,7 +12469,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_TRIGGER_FAMINE</Tag>
 		<English>A dreadful harvest has happened to %s1_civ_adjective in their city of %s6_city.</English>
-		<French>Une récolte épouvantable a eu lieu pour les %s1:3_civ_adjective dans leur ville de %s6_city.</French>
+		<French>Une récolte épouvantable a eu lieu pour les %s1:3_civ_adjective dans leur ville de %s2_city.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_TRIGGER_FAMINE_1</Tag>
