@@ -1,4 +1,4 @@
-version: 44.BETA.{build}
+version: "44"
 image: Visual Studio 2019
 # skip_tags is important or you will get an infinite build loop when we apply release tags
 skip_tags: true
@@ -24,7 +24,7 @@ environment:
   svn_pass:
     secure: 8MBckNYRp5EVPgbGcmZ6bQ==
   git_user: billw2012
-  git_email: 
+  git_email:
     secure: AoLWYD1det69EeuLNvABlrTx2aIRf9IA6AF7s08MhZY=
   git_access_token:
     secure: doZmFPN5YobqYMv18KzewNLmDUlCs+gDN2CoKfHBiQ4kN6z8gtPZMztCaigRaGGJ
@@ -33,16 +33,16 @@ environment:
   release_branch: release
 
 build_script:
-- cmd: >-
-    call Powershell.exe -NoProfile -ExecutionPolicy Bypass -File "%APPVEYOR_BUILD_FOLDER%\Tools\CI\fix_sources_timestamps.ps1"
+  - cmd: >-
+      call Powershell.exe -NoProfile -ExecutionPolicy Bypass -File "%APPVEYOR_BUILD_FOLDER%\Tools\CI\fix_sources_timestamps.ps1"
 
-    call "%APPVEYOR_BUILD_FOLDER%\Tools\_AppveyorTestBuild.bat"
+      call "%APPVEYOR_BUILD_FOLDER%\Tools\_AppveyorTestBuild.bat"
 
 test_script:
-- cmd: >-
-    cd Tools
+  - cmd: >-
+      cd Tools
 
-    XmlValidator.exe -a
+      XmlValidator.exe -a
 
 # DISABLED: before_deploy can't access secure variables it seems, we just do everything in the deploy_script
 # before_deploy:
@@ -52,10 +52,10 @@ test_script:
 #     echo %secure_test%
 
 deploy_script:
-- cmd: >-
-    call "%APPVEYOR_BUILD_FOLDER%\Tools\CI\DeployBuild.bat"
+  - cmd: >-
+      call "%APPVEYOR_BUILD_FOLDER%\Tools\CI\DeployBuild.bat"
 
-    call "%APPVEYOR_BUILD_FOLDER%\Tools\_TrimFBuildCache.bat"
+      call "%APPVEYOR_BUILD_FOLDER%\Tools\_TrimFBuildCache.bat"
 
 # DISABLED: this doesn't work, unauthorized
 # deploy:
@@ -68,10 +68,10 @@ deploy_script:
 #     branch: test-deployment
 
 notifications:
-- provider: Slack
-  incoming_webhook:
-    secure: /rZsiy2rHhDaEh9f3Hzv6RtkcI/grO+svFlzo0AErpTBOfM0e2IDGzUVemKjvU2uQhUIL+t9TgYCItXIAcTIlAuZUgbXxJJGTQn4eJ+tkgM0Ze6dt+JSvb3H5nndmk9epWUr89PASEMdwTgw3nuJJe4f7TveskQwWbS1XNEX0lF5i/B8wj+TS5uIqZQPD/wP
-  channel: github
-  on_build_success: true
-  on_build_failure: true
-  on_build_status_changed: false
+  - provider: Slack
+    incoming_webhook:
+      secure: /rZsiy2rHhDaEh9f3Hzv6RtkcI/grO+svFlzo0AErpTBOfM0e2IDGzUVemKjvU2uQhUIL+t9TgYCItXIAcTIlAuZUgbXxJJGTQn4eJ+tkgM0Ze6dt+JSvb3H5nndmk9epWUr89PASEMdwTgw3nuJJe4f7TveskQwWbS1XNEX0lF5i/B8wj+TS5uIqZQPD/wP
+    channel: github
+    on_build_success: true
+    on_build_failure: true
+    on_build_status_changed: false
