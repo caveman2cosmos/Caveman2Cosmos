@@ -14188,21 +14188,21 @@
 	<TEXT>
 		<Tag>TXT_KEY_MISC_DEFENDER_PURSUED_SUSTAIN</Tag>
 		<English>Your %s1_UnitName attempted retreat but a %s2_Enemy %s3_EnUName gave chase and forced it to fight for its life.</English>
-		<French>[NUM1:Votre:Votre:Vos:Vos] %s1_UnitName [NUM1:a:a:ont:ont] tenté de se retirer mais [NUM3:Un:Une:Des:Des] %s3_EnUName %s2_Enemy [NUM1:l'a:l'a:les a:les a] poursuivi et forcé à combattre.</French>
+		<French>[NUM1:Votre:Votre:Vos:Vos] %s1_UnitName [NUM1:a:a:ont:ont] tenté de s'enfuir mais [NUM3:un:une:des:des] %s3_EnUName %s2_Enemy [NUM1:l':l':les :les ][NUM3:a:a:ont:ont] poursuivi et forcé à combattre.</French>
 		<Italian>La nostra unità %s1_UnitName ha cercato di ritirarsi, ma l'unità %s2_Enemy %s3_EnUName l'ha inseguita costringendola a combattere per la propria vita.</Italian>
 		<Polish>Nasza jednostka: %s1_UnitName pr&#243;bowa&#179;a uciec przed: %s3_EnUName %s2_Enemy ale zosta&#179;a z&#179;apana i teraz musi walczy&#230; o swoje &#191;ycie.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISC_DEFENDER_PURSUED_SUSTAIN_HIDDEN</Tag>
 		<English>Your %s1_UnitName attempted retreat but a %s2_EnUName gave chase and forced it to fight for its life.</English>
-		<French>[NUM1:Votre:Votre:Vos:Vos] %s1_UnitName [NUM1:a:a:ont:ont] tenté de se retirer mais [NUM2:un:une:des:des] %s2_EnUName [NUM1:l'a:l'a:les a:les a] poursuivi et forcé à combattre.</French>
+		<French>[NUM1:Votre:Votre:Vos:Vos] %s1_UnitName [NUM1:a:a:ont:ont] tenté de s'enfuir mais [NUM2:un:une:des:des] %s2_EnUName [NUM1:l':l':les :les ][NUM2:a:a:ont:ont] poursuivi et forcé à combattre.</French>
 		<Italian>La nostra unità %s1_UnitName ha cercato di ritirarsi, ma l'unità %s2_EnUName l'ha inseguita costringendola a combattere per la propria vita.</Italian>
 		<Polish>Nasza jednostka: %s1_UnitName pr&#243;bowa&#179;a uciec przed: %s3_EnUName %s2_Enemy ale zosta&#179;a z&#179;apana i teraz musi walczy&#230; o swoje &#191;ycie.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISC_DEFENDER_PURSUED_SUSTAIN_HUMAN</Tag>
 		<English>Our %s1_UnitName entrapped an escaping %s2_EnCivName %s3_EnUName and forced it to fight for its life.</English>
-		<French>[COLOR_YELLOW][NUM1:Votre:Votre:Vos:Vos] %s1_UnitName [NUM1:a:a:ont:ont] rattrapé [NUM3:un:une:des:des] %s3_EnUName (%s2_EnCivName) et [NUM3:l':l':les:les][NUM1:a:a:ont:ont] forcé à combattre.[COLOR_REVERT]</French>
+		<French>[COLOR_YELLOW][NUM1:Votre:Votre:Vos:Vos] %s1_UnitName [NUM1:a:a:ont:ont] rattrapé [NUM3:un:une:des:des] %s3_EnUName (%s2_EnCivName) et [NUM3:l':l':les :les ][NUM1:a:a:ont:ont] forcé à combattre.[COLOR_REVERT]</French>
 		<Italian>[NUM1:Il nostro:La nostra:I nostri:Le nostre] %s1_UnitName ha intrappolato l'unità %s3_EnUName %s2_EnCivName in fuga, costringendola a combattere per la propria vita.</Italian>
 		<Polish>Nasza jednostka: %s1_UnitName dogoni&#179;a uciekaj&#185;c&#185; jednostk&#234; %s3_EnUName %s2_EnCivName i teraz musi walczy&#230; o swoje &#191;ycie.</Polish>
 		<Russian>Наш %s1_UnitName напал на след скрывающегося %s2_EnCivName игрока %s3_EnUName и вынудил его бороться за свою жизнь.</Russian>
@@ -14210,7 +14210,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_MISC_DEFENDER_PURSUED_SUSTAIN_HUMAN_HIDDEN</Tag>
 		<English>Our %s1_UnitName entrapped an escaping %s2_EnUName and forced it to fight for its life.</English>
-		<French>[COLOR_YELLOW][NUM1:Votre:Votre:Vos:Vos] %s1_UnitName [NUM1:a:a:ont:ont] rattrapé [NUM2:un:une:des:des] %s2_EnUName et [NUM2:l':l':les:les][NUM1:a:a:ont:ont] forcé à combattre.[COLOR_REVERT]</French>
+		<French>[COLOR_YELLOW][NUM1:Votre:Votre:Vos:Vos] %s1_UnitName [NUM1:a:a:ont:ont] rattrapé [NUM2:un:une:des:des] %s2_EnUName et [NUM2:l':l':les :les ][NUM1:a:a:ont:ont] forcé à combattre.[COLOR_REVERT]</French>
 		<Italian>[NUM1:Il nostro:La nostra:I nostri:Le nostre] %s1_UnitName ha intrappolato l'unità %s2_EnUName in fuga, costringendola a combattere per la propria vita.</Italian>
 		<Polish>Nasza jednostka: %s1_UnitName dogoni&#179;a uciekaj&#185;c&#185; jednostk&#234; %s3_EnUName %s2_EnCivName i teraz musi walczy&#230; o swoje &#191;ycie.</Polish>
 		<Russian>Наш %s1_UnitName напал на след скрывающегося %s2_EnUName и вынудил его бороться за свою жизнь.</Russian>
@@ -16684,7 +16684,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_MISC_STEALTH_ATTACK</Tag>
 		<English>A %s1_PlyrName %s2_UnitName has taken your %s3_UnitName by surprise!</English>
-		<French>[NUM2:un:une:des:des] %s2_UnitName [NUM1:de:de:des:des] %s1_PlyrName [NUM2:a:a:ont:ont] pris [NUM3:votre:votre:vos:vos] %s3_UnitName par surprise !</French>
+		<French>[NUM2:Un:Une:Des:Des] %s2_UnitName [NUM1:de:de:des:des] %s1_PlyrName [NUM2:a:a:ont:ont] pris [NUM3:votre:votre:vos:vos] %s3_UnitName par surprise !</French>
 		<German>[NUM2:Ein:Eine:Ein:Mehrere:Mehrere:Mehrere] %s2_UnitName (%s1_PlyrName) [NUM2:hat:haben] [NUM3:Euren:Eure:Euer:Eure:Eure:Eure] %s3_UnitName überrascht!</German>
 		<Russian>%s2_UnitName игрока %s1_PlyrName подло атаковал в спину вашего %s3_UnitName!</Russian>
 	</TEXT>

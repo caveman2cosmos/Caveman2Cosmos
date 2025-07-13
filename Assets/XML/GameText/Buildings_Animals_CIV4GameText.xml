@@ -16,7 +16,11 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_PRESENCE_OF_CORAL</Tag>
 		<English>Presence of Coral</English>
-		<French>Présence de corail</French>
+		<French>
+			<Text>Présence de corail</Text>
+			<Gender>Female</Gender>
+			<Plural>1</Plural>
+		</French>
 		<German>
 			<Text>Präsenz von Korallen:Präsenz von Korallen:Präsenz von Korallen:Präsenz von Korallen</Text>
 			<Gender>Female</Gender>
@@ -27,7 +31,11 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_PRESENCE_OF_EARTH</Tag>
 		<English>Presence of Earth</English>
-		<French>Présence de terre</French>
+		<French>
+			<Text>Présence de terre</Text>
+			<Gender>Female</Gender>
+			<Plural>1</Plural>
+		</French>
 		<German>
 			<Text>Präsenz der Erde:Präsenz der Erde:Präsenz der Erde:Präsenz der Erde</Text>
 			<Gender>Female</Gender>
@@ -38,7 +46,11 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_PRESENCE_OF_CRATER</Tag>
 		<English>Presence of Crater</English>
-		<French>Présence de cratère</French>
+		<French>
+			<Text>Présence de cratère</Text>
+			<Gender>Female</Gender>
+			<Plural>1</Plural>
+		</French>
 		<German>
 			<Text>Präsenz von Kratern:Präsenz von Kratern:Präsenz von Kratern:Präsenz von Kratern</Text>
 			<Gender>Female</Gender>
@@ -49,7 +61,11 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_PRESENCE_OF_FIRE</Tag>
 		<English>Presence of Fire</English>
-		<French>Présence de feu</French>
+		<French>
+			<Text>Présence de feu</Text>
+			<Gender>Female</Gender>
+			<Plural>1</Plural>
+		</French>
 		<German>
 			<Text>Präsenz des Feuers:Präsenz des Feuers:Präsenz des Feuers:Präsenz des Feuers</Text>
 			<Gender>Female</Gender>
@@ -60,7 +76,11 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_PRESENCE_OF_METAL</Tag>
 		<English>Presence of Metal</English>
-		<French>Présence de métal</French>
+		<French>
+			<Text>Présence de métal</Text>
+			<Gender>Female</Gender>
+			<Plural>1</Plural>
+		</French>
 		<German>
 			<Text>Präsenz von Metall:Präsenz von Metall:Präsenz von Metall:Präsenz von Metall</Text>
 			<Gender>Female</Gender>
@@ -71,7 +91,11 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_PRESENCE_OF_OASIS</Tag>
 		<English>Presence of Oasis</English>
-		<French>Présence d'Oasis</French>
+		<French>
+			<Text>Présence d'Oasis</Text>
+			<Gender>Female</Gender>
+			<Plural>1</Plural>
+		</French>
 		<German>
 			<Text>Präsenz von Oasen:Präsenz von Oasen:Präsenz von Oasen:Präsenz von Oasen</Text>
 			<Gender>Female</Gender>
@@ -89,7 +113,11 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_PRESENCE_OF_LANDFORM</Tag>
 		<English>Presence of Landform</English>
-		<French>Présence de relief</French>
+		<French>
+			<Text>Présence de relief</Text>
+			<Gender>Female</Gender>
+			<Plural>1</Plural>
+		</French>
 		<German>
 			<Text>Präsenz von Felsformationen:Präsenz von Felsformationen:Präsenz von Felsformationen:Präsenz von Felsformationen</Text>
 			<Gender>Female</Gender>
@@ -100,7 +128,11 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_PRESENCE_OF_REEF</Tag>
 		<English>Presence of Reef</English>
-		<French>Présence de récifs</French>
+		<French>
+			<Text>Présence de récifs</Text>
+			<Gender>Female</Gender>
+			<Plural>1</Plural>
+		</French>
 		<German>
 			<Text>Präsenz von Riffen:Präsenz von Riffen:Präsenz von Riffen:Präsenz von Riffen</Text>
 			<Gender>Female</Gender>
@@ -129,7 +161,11 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_PRESENCE_OF_SEA</Tag>
 		<English>Presence of Sea</English>
-		<French>Présence de la mer (construction automatique)</French>
+		<French>
+			<Text>Présence de la mer</Text>
+			<Gender>Female</Gender>
+			<Plural>1</Plural>
+		</French>
 		<German>
 			<Text>Präsenz der See:Präsenz der See:Präsenz der See:Präsenz der See</Text>
 			<Gender>Female</Gender>
@@ -140,7 +176,11 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_PRESENCE_OF_VOLCANO</Tag>
 		<English>Presence of Volcano</English>
-		<French>Présence d'un volcan (construction automatique)</French>
+		<French>
+			<Text>Présence d'un volcan</Text>
+			<Gender>Female</Gender>
+			<Plural>1</Plural>
+		</French>
 		<German>
 			<Text>Präsenz von Vulkanen:Präsenz von Vulkanen:Präsenz von Vulkanen:Präsenz von Vulkanen</Text>
 			<Gender>Female</Gender>
