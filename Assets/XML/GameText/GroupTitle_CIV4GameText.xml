@@ -65,10 +65,11 @@
 	<TEXT>
 		<Tag>TXT_KEY_GROUPTITLE_BAND</Tag>
 		<English>Band of %s1</English>
-		<French><Text>bande de %s1</Text>
-<Gender>Female</Gender>
-<Plural>0</Plural>
-</French>
+		<French>
+			<Text>bande de %s1</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</French>
 		<German>Verband %s1:5 (Gruppe)</German>
 		<Italian>Banda di %s1</Italian>
 	</TEXT>
@@ -104,9 +105,9 @@
 		<Tag>TXT_KEY_GROUPTITLE_CARAVAN</Tag>
 		<English>Caravan of %s1</English>
 		<French><Text>caravane de %s1</Text>
-<Gender>Female</Gender>
-<Plural>0</Plural>
-</French>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</French>
 		<German>Verband %s1:5 (Gruppe)</German>
 		<Italian>Carovana di %s1</Italian>
 	</TEXT>
@@ -114,9 +115,9 @@
 		<Tag>TXT_KEY_GROUPTITLE_CETE</Tag>
 		<English>Cete of %s1</English>
 		<French><Text>lignée de %s1</Text>
-<Gender>Female</Gender>
-<Plural>0</Plural>
-</French>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</French>
 		<German>Verband %s1:5 (Sippe)</German>
 		<Italian>Gruppo di %s1</Italian>
 	</TEXT>
@@ -130,40 +131,44 @@
 	<TEXT>
 		<Tag>TXT_KEY_GROUPTITLE_CLUTCH</Tag>
 		<English>Clutch of %s1</English>
-		<French><Text>portée de %s1</Text>
-<Gender>Female</Gender>
-<Plural>0</Plural>
-</French>
+		<French>
+			<Text>portée de %s1</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</French>
 		<German>Verband %s1:5 (Grüppchen)</German>
 		<Italian>Covata di %s1</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GROUPTITLE_COALITION</Tag>
 		<English>Coalition of %s1</English>
-		<French><Text>coalition de %s1</Text>
-<Gender>Female</Gender>
-<Plural>0</Plural>
-</French>
+		<French>
+			<Text>coalition de %s1</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</French>
 		<German>Verband %s1:5 (Koalition)</German>
 		<Italian>Coalizione di %s1</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GROUPTITLE_COLLECTION</Tag>
 		<English>Collection of %s1</English>
-		<French><Text>collection de %s1</Text>
-<Gender>Female</Gender>
-<Plural>0</Plural>
-</French>
+		<French>
+			<Text>collection de %s1</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</French>
 		<German>Verband %s1:5 (Ansammlung)</German>
 		<Italian>Collezione di %s1</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GROUPTITLE_COLONY</Tag>
 		<English>Colony of %s1</English>
-		<French><Text>colonie de %s1</Text>
-<Gender>Female</Gender>
-<Plural>0</Plural>
-</French>
+		<French>
+			<Text>colonie de %s1</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</French>
 		<German>Verband %s1:5 (Kolonie)</German>
 		<Italian>Colonia di %s1</Italian>
 	</TEXT>
@@ -178,9 +183,9 @@
 		<Tag>TXT_KEY_GROUPTITLE_COMMUNITY</Tag>
 		<English>Community of %s1</English>
 		<French><Text>communauté de %s1</Text>
-<Gender>Female</Gender>
-<Plural>0</Plural>
-</French>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</French>
 		<German>Verband %s1:5 (Gemeinschaft)</German>
 		<Italian>Comunità di %s1</Italian>
 	</TEXT>
@@ -188,9 +193,9 @@
 		<Tag>TXT_KEY_GROUPTITLE_COMMUNITY_LARGE</Tag>
 		<English>Large Community of %s1</English>
 		<French><Text>grande communauté de %s1</Text>
-<Gender>Female</Gender>
-<Plural>0</Plural>
-</French>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</French>
 		<German>Verband %s1:5 (Gemeinschaft)</German>
 		<Italian>Grande comunità di %s1</Italian>
 	</TEXT>
@@ -198,9 +203,9 @@
 		<Tag>TXT_KEY_GROUPTITLE_COMMUNITY_SMALL</Tag>
 		<English>Small Community of %s1</English>
 		<French><Text>petite communauté de %s1</Text>
-<Gender>Female</Gender>
-<Plural>0</Plural>
-</French>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</French>
 		<German>Verband %s1:5 (Gemeinschaft)</German>
 		<Italian>Piccola comunità di %s1</Italian>
 	</TEXT>
@@ -208,9 +213,9 @@
 		<Tag>TXT_KEY_GROUPTITLE_COMPANY</Tag>
 		<English>Company of %s1</English>
 		<French><Text>compagnie de %s1</Text>
-<Gender>Female</Gender>
-<Plural>0</Plural>
-</French>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</French>
 		<German>Verband %s1:5 (Schwarm)</German>
 		<Italian>Impresa di %s1</Italian>
 	</TEXT>
@@ -218,9 +223,9 @@
 		<Tag>TXT_KEY_GROUPTITLE_CONGREGATION</Tag>
 		<English>Congregation of %s1</English>
 		<French><Text>congrégation de %s1</Text>
-<Gender>Female</Gender>
-<Plural>0</Plural>
-</French>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</French>
 		<German>Verband %s1:5 (Ansammlung)</German>
 		<Italian>Congregazione di %s1</Italian>
 	</TEXT>
@@ -228,9 +233,9 @@
 		<Tag>TXT_KEY_GROUPTITLE_CONSPIRACY</Tag>
 		<English>Conspiracy of %s1</English>
 		<French><Text>conspiration de %s1</Text>
-<Gender>Female</Gender>
-<Plural>0</Plural>
-</French>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</French>
 		<German>Verband %s1:5 (Gruppe)</German>
 		<Italian>Cospirazione di %s1</Italian>
 	</TEXT>
@@ -273,9 +278,9 @@
 		<Tag>TXT_KEY_GROUPTITLE_FAMILY</Tag>
 		<English>Family of %s1</English>
 		<French><Text>famille de %s1</Text>
-<Gender>Female</Gender>
-<Plural>0</Plural>
-</French>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</French>
 		<German>Verband %s1:5 (Familie)</German>
 		<Italian>Famiglia di %s1</Italian>
 	</TEXT>
@@ -322,9 +327,9 @@
 		<Tag>TXT_KEY_GROUPTITLE_FLOCK_LARGE</Tag>
 		<English>Large Flock of %s1</English>
 		<French><Text>large foule de %s1</Text>
-<Gender>Female</Gender>
-<Plural>0</Plural>
-</French>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</French>
 		<German>Verband %s1:5 (Schar)</German>
 		<Italian>Grosso stormo di %s1</Italian>
 	</TEXT>
@@ -353,9 +358,9 @@
 		<Tag>TXT_KEY_GROUPTITLE_GATHERING</Tag>
 		<English>Gathering of %s1</English>
 		<French><Text>récolte de %s1</Text>
-<Gender>Female</Gender>
-<Plural>0</Plural>
-</French>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</French>
 		<German>Verband %s1:5 (Ansammlung)</German>
 		<Italian>Raduno di %s1</Italian>
 	</TEXT>
@@ -498,9 +503,9 @@
 		<Tag>TXT_KEY_GROUPTITLE_MOB</Tag>
 		<English>Mob of %s1</English>
 		<French><Text>bande de %s1</Text>
-<Gender>Female</Gender>
-<Plural>0</Plural>
-</French>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</French>
 		<German>Verband %s1:5 (Schar)</German>
 		<Italian>Massa di %s1</Italian>
 	</TEXT>
@@ -568,9 +573,9 @@
 		<Tag>TXT_KEY_GROUPTITLE_PAIR</Tag>
 		<English>Pair of %s1</English>
 		<French><Text>paire de %s1</Text>
-<Gender>Female</Gender>
-<Plural>0</Plural>
-</French>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</French>
 		<German>Paar %s1:5</German>
 		<Italian>Paio di %s1</Italian>
 	</TEXT>
@@ -669,9 +674,9 @@
 		<Tag>TXT_KEY_GROUPTITLE_ROGUE</Tag>
 		<English>Rogue Bull %s1</English>
 		<French><Text>horde de %s1</Text>
-<Gender>Female</Gender>
-<Plural>0</Plural>
-</French>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</French>
 		<German>Einzelexemplar %s1</German>
 		<Italian>Toro aggressivo %s1</Italian>
 	</TEXT>
@@ -679,9 +684,9 @@
 		<Tag>TXT_KEY_GROUPTITLE_ROOKERY</Tag>
 		<English>Rookery of %s1</English>
 		<French><Text>colonie de %s1</Text>
-<Gender>Female</Gender>
-<Plural>0</Plural>
-</French>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</French>
 		<German>Verband %s1:5 (Kolonie)</German>
 		<Italian>Colonia di volatili di %s1</Italian>
 	</TEXT>
@@ -689,9 +694,9 @@
 		<Tag>TXT_KEY_GROUPTITLE_ROOKERY_LARGE</Tag>
 		<English>Large Rookery of %s1</English>
 		<French><Text>grande Colonie de %s1</Text>
-<Gender>Female</Gender>
-<Plural>0</Plural>
-</French>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</French>
 		<German>Verband %s1:5 (Kolonie)</German>
 		<Italian>Grossa colonia di volatili di %s1</Italian>
 	</TEXT>
@@ -712,50 +717,50 @@
 	<TEXT>
 		<Tag>TXT_KEY_GROUPTITLE_SCHOOL</Tag>
 		<English>School of %s1</English>
-		<French><Text>École de %s1</Text>
-<Gender>Female</Gender>
-<Plural>0</Plural>
-</French>
+		<French><Text>banc de %s1</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</French>
 		<German>Verband %s1:5 (Schule)</German>
 		<Italian>Scuola di %s1</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GROUPTITLE_SCHOOL_HUGE</Tag>
 		<English>Huge School of %s1</English>
-		<French><Text>École immense de %s1</Text>
-<Gender>Female</Gender>
-<Plural>0</Plural>
-</French>
+		<French><Text>banc immense de %s1</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
 		<German>Verband %s1:5 (Schule)</German>
 		<Italian>Enorme scuola di %s1</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GROUPTITLE_SCHOOL_LARGE</Tag>
 		<English>Large School of %s1</English>
-		<French><Text>grande École de %s1</Text>
-<Gender>Female</Gender>
-<Plural>0</Plural>
-</French>
+		<French><Text>grand banc de %s1</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
 		<German>Verband %s1:5 (Schule)</German>
 		<Italian>Grande scuola di %s1</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GROUPTITLE_SCHOOL_SMALL</Tag>
 		<English>Small School of %s1</English>
-		<French><Text>petite école de %s1</Text>
-<Gender>Female</Gender>
-<Plural>0</Plural>
-</French>
+		<French><Text>petit banc de %s1</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
 		<German>Verband %s1:5 (Schule)</German>
 		<Italian>Piccola scuola di %s1</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GROUPTITLE_SCHOOL_TINY</Tag>
 		<English>Tiny School of %s1</English>
-		<French><Text>minuscule école de %s1</Text>
-<Gender>Female</Gender>
-<Plural>0</Plural>
-</French>
+		<French><Text>minuscule banc de %s1</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
 		<German>Verband %s1:5 (Schule)</German>
 		<Italian>Minuscola scuola di %s1</Italian>
 	</TEXT>
@@ -776,7 +781,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_GROUPTITLE_SINGULAR</Tag>
 		<English>Singular %s1</English>
-		<French>%s1 (singulier)</French>
+		<French>%s1 (remarquable)</French>
 		<German>Einzelexemplar %s1</German>
 		<Italian>Singolare %s1</Italian>
 	</TEXT>
@@ -819,9 +824,9 @@
 		<Tag>TXT_KEY_GROUPTITLE_SOME</Tag>
 		<English>Some %s1</English>
 		<French><Text>quelques %s1</Text>
-<Gender>Male</Gender>
-<Plural>1</Plural>
-</French>
+			<Gender>Male</Gender>
+			<Plural>1</Plural>
+		</French>
 		<German>Grüppchen %s1:5</German>
 		<Italian>Alcuni %s1</Italian>
 	</TEXT>

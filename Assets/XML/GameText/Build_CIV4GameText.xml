@@ -96,7 +96,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_BREAK_ICE_KILL</Tag>
 		<English>Remove [LINK=FEATURE_ICE]Ice[\LINK] (Consumed)</English>
-		<French>Enlever la [LINK=FEATURE_ICE]Glace[\LINK] (Détruit)</French>
+		<French>Enlever la [LINK=FEATURE_ICE]Glace[\LINK] (Ouvrier Détruit)</French>
 		<Italian>[LINK=FEATURE_ICE]Ghiaccio[\LINK] (rimozione con unità consumata)</Italian>
 	</TEXT>
 	<TEXT>
@@ -234,7 +234,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_COTTAGE_KILL</Tag>
 		<English>Build [LINK=IMPROVEMENT_COTTAGE]Cottage[\LINK] (Consumed)</English>
-		<French>Construire un [LINK=IMPROVEMENT_COTTAGE]Cottage[\LINK] (Détruit)</French>
+		<French>Construire un [LINK=IMPROVEMENT_COTTAGE]Cottage[\LINK] (Ouvrier Détruit)</French>
 		<Italian>[LINK=IMPROVEMENT_COTTAGE]Cottage[\LINK] (unità consumata)</Italian>
 	</TEXT>
 	<TEXT>
@@ -250,7 +250,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_DESERT_CAMP_KILL</Tag>
 		<English>Build [LINK=IMPROVEMENT_DESERT_CAMP]Desert Camp[\LINK] (Consumed)</English>
-		<French>Construire un [LINK=IMPROVEMENT_DESERT_CAMP]Camp de Desert[\LINK] (détruit)</French>
+		<French>Construire un [LINK=IMPROVEMENT_DESERT_CAMP]Camp de Désert[\LINK] (Ouvrier Détruit)</French>
 		<German>Errichte [LINK=IMPROVEMENT_DESERT_CAMP]Wuste feldlager[\LINK] (Consumed)</German>
 		<Italian>[LINK=IMPROVEMENT_DESERT_CAMP]Campo del deserto[\LINK] (unità consumata)</Italian>
 		<Spanish>Construir un [LINK=IMPROVEMENT_DESERT_CAMP]Campamento de desierto[\LINK] (Consumed)</Spanish>
@@ -473,7 +473,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_HARVEST_KELP_KILL</Tag>
 		<English>Build [LINK=IMPROVEMENT_HARVEST_KELP]Kelp Harvester[\LINK] (Consumed)</English>
-		<French>Construire un [LINK=IMPROVEMENT_HARVEST_KELP]Récolteur d'Algues[\LINK] (Utilisé)</French>
+		<French>Construire un [LINK=IMPROVEMENT_HARVEST_KELP]Récolteur d'Algues[\LINK] (Ouvrier Détruit)</French>
 		<Italian>[LINK=IMPROVEMENT_HARVEST_KELP]Campo di raccolta di alghe[\LINK] (unità consumata)</Italian>
 	</TEXT>
 	<TEXT>
@@ -569,7 +569,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_JUNGLE_CAMP_KILL</Tag>
 		<English>Build [LINK=IMPROVEMENT_JUNGLE_CAMP]Jungle Camp[\LINK] (Consumed)</English>
-		<French>Construire un [LINK=IMPROVEMENT_JUNGLE_CAMP]Camp de Jungle[\LINK] (Détruit)</French>
+		<French>Construire un [LINK=IMPROVEMENT_JUNGLE_CAMP]Camp de Jungle[\LINK] (Ouvrier Détruit)</French>
 		<German>Errichte [LINK=IMPROVEMENT_JUNGLE_CAMP]dschungel feldlager[\LINK] (Consumed)</German>
 		<Italian>[LINK=IMPROVEMENT_JUNGLE_CAMP]Campo della giungla[\LINK] (unità consumata)</Italian>
 		<Spanish>Construir un [LINK=IMPROVEMENT_JUNGLE_CAMP]Campamento selvático[\LINK] (Consumed)</Spanish>
@@ -692,7 +692,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_MUSHROOM_GATHERER_KILL</Tag>
 		<English>Build [LINK=IMPROVEMENT_MUSHROOM_GATHERER]Mushroom Gatherer[\LINK] (Consumed)</English>
-		<French>Construire une [LINK=IMPROVEMENT_MUSHROOM_GATHERER]Champignonnière[\LINK] (Détruit)</French>
+		<French>Construire une [LINK=IMPROVEMENT_MUSHROOM_GATHERER]Champignonnière[\LINK] (Ouvrier Détruit)</French>
 		<German>[LINK=IMPROVEMENT_MUSHROOM_GATHERER]Pilze sammeln[\LINK] (Verschleiß)</German>
 		<Italian>[LINK=IMPROVEMENT_MUSHROOM_GATHERER]Campo di raccolta di funghi[\LINK] (unità consumata)</Italian>
 		<Spanish>Construir un [LINK=IMPROVEMENT_MUSHROOM_GATHERER]Recolector de setas[\LINK] (Consumed)</Spanish>
@@ -880,7 +880,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_SALT_GATHERER_KILL</Tag>
 		<English>Build [LINK=IMPROVEMENT_SALT_GATHERER]Salt Gatherer[\LINK] (Consumed)</English>
-		<French>Construire [LINK=IMPROVEMENT_SALT_GATHERER]Champ de collecte de sel[\LINK] (détruit)</French>
+		<French>Construire [LINK=IMPROVEMENT_SALT_GATHERER]Champ de collecte de sel[\LINK] (Ouvrier Détruit)</French>
 		<Italian>[LINK=IMPROVEMENT_SALT_GATHERER]Campo di raccolta di sale[\LINK] (unità consumata)</Italian>
 	</TEXT>
 	<TEXT>
@@ -933,7 +933,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_SEED_CAMP_KILL</Tag>
 		<English>Build [LINK=IMPROVEMENT_SEED_CAMP]Seed Camp[\LINK] (Consumed)</English>
-		<French>Construire un [LINK=IMPROVEMENT_SEED_CAMP]Dépot de graines[\LINK] (Détruit)</French>
+		<French>Construire un [LINK=IMPROVEMENT_SEED_CAMP]Dépot de graines[\LINK] (Ouvrier Détruit)</French>
 		<German>[LINK=IMPROVEMENT_SEED_CAMP]Körner sammeln[\LINK] (Verschleiß)</German>
 		<Italian>[LINK=IMPROVEMENT_SEED_CAMP]Campo di raccolta di semi[\LINK] (unità consumata)</Italian>
 	</TEXT>
@@ -989,7 +989,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_STONE_TOOLS_WORKSHOP_KILL</Tag>
 		<English>Build [LINK=IMPROVEMENT_STONE_TOOLS_WORKSHOP]Stone Tools Workshop[\LINK] (Consumed)</English>
-		<French>Construire un [LINK=IMPROVEMENT_STONE_TOOLS_WORKSHOP]Atelier d'Outils en pierre [\LINK] (Détruit)</French>
+		<French>Construire un [LINK=IMPROVEMENT_STONE_TOOLS_WORKSHOP]Atelier d'Outils en pierre [\LINK] (Ouvrier Détruit)</French>
 		<German>[LINK=IMPROVEMENT_STONE_TOOLS_WORKSHOP]Steine sammeln[\LINK]</German>
 		<Italian>[LINK=IMPROVEMENT_STONE_TOOLS_WORKSHOP]Officina di strumenti in pietra[\LINK] (unità consumata)</Italian>
 		<Spanish>Construir un [LINK=IMPROVEMENT_STONE_TOOLS_WORKSHOP]Taller de herramientas de piedra[\LINK] (Consumed)</Spanish>
@@ -1038,7 +1038,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_TAR_GATHERER_KILL</Tag>
 		<English>Build [LINK=IMPROVEMENT_TAR_GATHERER]Tar Gatherer[\LINK] (Consumed)</English>
-		<French>Construire un [LINK=IMPROVEMENT_TAR_GATHERER]Récolteur de goudron[\LINK] (Détruit)</French>
+		<French>Construire un [LINK=IMPROVEMENT_TAR_GATHERER]Récolteur de goudron[\LINK] (Ouvrier Détruit)</French>
 		<German>Bauen a [LINK=IMPROVEMENT_TAR_GATHERER]Tar Gatherer[\LINK] (Consumed)</German>
 		<Italian>[LINK=IMPROVEMENT_TAR_GATHERER]Campo di raccolta di pece[\LINK] (unità consumata)</Italian>
 		<Spanish>Construir un [LINK=IMPROVEMENT_TAR_GATHERER]Recolector de alquitrán[\LINK] (Consumed)</Spanish>
@@ -1217,7 +1217,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_WETLANDS_CAMP_KILL</Tag>
 		<English>Build [LINK=IMPROVEMENT_WETLANDS_CAMP]Wetlands Camp[\LINK] (Consumed)</English>
-		<French>Construire un [LINK=IMPROVEMENT_WETLANDS_CAMP]Camp de zones humides[\LINK] (Détruit)</French>
+		<French>Construire un [LINK=IMPROVEMENT_WETLANDS_CAMP]Camp de zones humides[\LINK] (Ouvrier Détruit)</French>
 		<German>Errichte [LINK=IMPROVEMENT_WETLANDS_CAMP]feuchtgebiete feldlager[\LINK] (Consumed)</German>
 		<Italian>[LINK=IMPROVEMENT_WETLANDS_CAMP]Campo della palude[\LINK] (unità consumata)</Italian>
 		<Spanish>Construir un [LINK=IMPROVEMENT_WETLANDS_CAMP]Campamento de humedal[\LINK] (Consumed)</Spanish>
@@ -1274,7 +1274,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_WOODEN_PALISADE_KILL</Tag>
 		<English>Build [LINK=IMPROVEMENT_WOODEN_PALISADE]Wooden Palisade[\LINK] (Consumed)</English>
-		<French>Construire une [LINK=IMPROVEMENT_WOODEN_PALISADE]Palissade en bois (Cueilleuse)[\LINK]</French>
+		<French>Construire une [LINK=IMPROVEMENT_WOODEN_PALISADE]Palissade en bois (Ouvrier Détruit)[\LINK]</French>
 		<Italian>[LINK=IMPROVEMENT_WOODEN_PALISADE]Palizzata in legno[\LINK] (unità consumata)</Italian>
 		<Spanish>Construir una [LINK=IMPROVEMENT_WOODEN_PALISADE]Empalizada de madera[\LINK]</Spanish>
 		<Polish>Zbuduj [LINK=IMPROVEMENT_WOODEN_PALISADE]Drewnian&#185; Palisad&#234;[\LINK]</Polish>
@@ -1292,7 +1292,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_WOODEN_WATCHTOWER_KILL</Tag>
 		<English>Build [LINK=IMPROVEMENT_WOODEN_WATCHTOWER]Wooden Watchtower[\LINK] (Consumed)</English>
-		<French>Construire une [LINK=IMPROVEMENT_WOODEN_WATCHTOWER]Tour d'observation en bois[\LINK] (Cueilleuse)</French>
+		<French>Construire une [LINK=IMPROVEMENT_WOODEN_WATCHTOWER]Tour d'observation en bois[\LINK] (Ouvrier Détruit)</French>
 		<Italian>[LINK=IMPROVEMENT_WOODEN_WATCHTOWER]Torre d'osservazione in legno[\LINK] (unità consumata)</Italian>
 		<Spanish>Construir un [LINK=IMPROVEMENT_WOODEN_WATCHTOWER]Puesto de avanzada de madera[\LINK]</Spanish>
 		<Polish>Zbuduj [LINK=IMPROVEMENT_WOODEN_WATCHTOWER]Drewnian&#185; Wie&#191;&#234; Obserwacyjn&#185;[\LINK]</Polish>
@@ -1301,7 +1301,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_WOOD_GATHERER_KILL</Tag>
 		<English>Build [LINK=IMPROVEMENT_WOOD_GATHERER]Wood Gatherer[\LINK] (Consumed)</English>
-		<French>Construire un [LINK=IMPROVEMENT_WOOD_GATHERER]récolteur de bois[\LINK] (Utilisé)</French>
+		<French>Construire un [LINK=IMPROVEMENT_WOOD_GATHERER]récolteur de bois[\LINK] (Ouvrier Détruit)</French>
 		<Italian>[LINK=IMPROVEMENT_WOOD_GATHERER]Campo di raccolta di legno[\LINK] (unità consumata)</Italian>
 	</TEXT>
 	<TEXT>

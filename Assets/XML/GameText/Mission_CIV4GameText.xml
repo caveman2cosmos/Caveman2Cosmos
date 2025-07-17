@@ -326,7 +326,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_MISSION_CONDUCT_TRADE_MISSION_HELP</Tag>
 		<English>Conduct a Trade Mission in this city. The amount of Gold created is relative to the size of the city and the distance to the city the unit was trained in, as well as if the city is foreign. It consumes a Great Person, but sends regular merchants and criminals back to the capital. Criminals, attempting to trade their contraband, may fail an investigation check for this mission and thus fail to derive the Gold, and they may lose their movement for the turn and become 'Wanted'.</English>
-		<French>Effectuez une mission commerciale dans cette ville. La quantité d'or générée dépend de la taille de la ville, de la distance à la ville où l'unité a été formée, ainsi que du fait que la ville soit étrangère. Cela consomme une Grande Personne, mais renvoie les marchands ordinaires et criminels à la capitale. Les criminels tentant de commercer leur contrebande peuvent échouer le contrôle d'enquête de cette mission, échouant ainsi à générer de l'or, et peuvent perdre leur mouvement pour le tour et devenir « recherchés ».</French>
+		<French>Effectuez une mission commerciale dans cette ville. La quantité d'or générée dépend de la taille de la ville, de la distance à la ville où l'unité a été formée, ainsi que du fait que la ville soit étrangère. Cela "consomme" un Personnage Illustre, mais renvoie les marchands ordinaires et les criminels à la capitale. Les criminels tentant de commercer leur contrebande peuvent échouer le contrôle d'enquête de cette mission, échouant ainsi à générer de l'or, et peuvent perdre leur mouvement pour le tour et devenir «recherchés».</French>
 		<Italian>[NEWLINE]Inizia una missione commerciale in questa città. La quantità di oro creata dipende dalle dimensioni e dalla distanza dalla città in cui l'unità è stata addestrata o in cui è nata, e dipende anche dal fatto che la città sia straniera. Consuma un gran personaggio, ma rimanda alla capitale mercanti e criminali regolari.</Italian>
 		<Russian>Проведите торговую миссию в этом городе. Количество полученного золота зависит от размера города, в котором отряд был обучен, а также размера и расстояния до города в пункте назначения, и от того, является ли город иностранным. При этом тратится Великий человек, но отправляет в столицу обычных торговцев и преступников. Преступники, пытающиеся продать свою контрабанду, могут не пройти проверку правоохранителей в этой миссии и, таким образом, не получить золото, потерять очки движения на ход и оказаться в розыске.</Russian>
 	</TEXT>
@@ -602,12 +602,12 @@
 	<TEXT>
 		<Tag>TXT_KEY_MISSION_GREAT_COMMODORE</Tag>
 		<English>Sea commodore</English>
-		<French>Grand commodore</French>
+		<French>Amiral de terrain</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISSION_GREAT_COMMODORE_HELP</Tag>
 		<English>Sea Commodore, will lose its ability to join cities make Wonders, but will get the ability to earn Experience, gain Promotions and lead naval units into battle.</English>
-		<French>Le grand commodore perdra sa capacité à rejoindre les villes et construire des Merveilles, mais gagnera la capacité d'accumuler de l'expérience, d'obtenir des promotions et de diriger les unités navales au combat.</French>
+		<French>L'Amiral de terrain perdra sa capacité à rejoindre les villes et construire des Merveilles, mais gagnera la capacité d'accumuler de l'expérience, d'obtenir des promotions et de diriger les unités navales au combat.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISSION_GREAT_COMMANDER_HELP</Tag>
@@ -1201,7 +1201,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_MISSION_START_GOLDENAGE_HELP</Tag>
 		<English>This order consumes one or more Great People to start a Golden Age. If multiple are needed, they must be of different types (e.g., not two Great Prophets). Great Generals and Admirals do not count. Bonus to: [ICON_PRODUCTION], [ICON_COMMERCE], [ICON_GREATPEOPLE], no Anarchy.</English>
-		<French>Cette ordre consommera plusieurs personnages illustres (de types différents) et déclenchera un âge d'or ([ICON_PRODUCTION], [ICON_COMMERCE], [ICON_GREATPEOPLE] supplémentaires, pas d'anarchie).</French>
+		<French>Cet ordre consomme une ou plusieurs Personnages illustres pour déclencher un Âge d'Or. Si plusieurs sont nécessaires, elles doivent être de types différents (par exemple, pas deux Grands Prophètes). Les Grands Généraux et Amiral ne comptent pas. Bonus à : [ICON_PRODUCTION], [ICON_COMMERCE], [ICON_GREATPEOPLE], pas d'Anarchie.</French>
 		<German>Opfern Sie eine oder mehrere Große Persönlichkeiten (unterschiedlicher Klassen), um ein Goldenes Zeitalter (zusätzliche [ICON_PRODUCTION], [ICON_COMMERCE], [ICON_GREATPEOPLE], keine Anarchie) zu begründen.</German>
 		<Italian>[NEWLINE]Consumando nel processo uno o più gran personaggi (di tipi differenti), si avvia un'età dell'oro (extra [ICON_PRODUCTION], [ICON_COMMERCE], [ICON_GREATPEOPLE], nessuna anarchia per i cambi di forma di governo).</Italian>
 		<Spanish>Esta orden consume uno o más grandes personajes (de diferentes tipos) e inicia una edad de oro (extra [ICON_PRODUCTION], [ICON_COMMERCE], [ICON_GREATPEOPLE], sin Anarquía).</Spanish>
