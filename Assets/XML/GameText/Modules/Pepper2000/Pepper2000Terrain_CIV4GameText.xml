@@ -266,7 +266,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_FEATURE_SUPERMASSIVE_BLACK_HOLE_PEDIA</Tag>
 		<English>A supermassive black hole, such as at the core of the Milky Way.</English>
-		<French>Un trou noir supermassif, comme au cœur de la Voie Lactée.</French>
+		<French>Un trou noir supermassif, comme au coeur de la Voie Lactée.</French>
 		<Russian>Ñâåðõìàññèâíàÿ ÷åðíàÿ äûðà, òàêàÿ êàê ÿäðî Ìëå÷íîãî Ïóòè.</Russian>
 		<Polish>Supermasywna czarna dziura, taka jak w centrum Drogi Mlecznej.</Polish>
 	</TEXT>
@@ -445,7 +445,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_TERRAIN_GALACTIC_CORE_PEDIA</Tag>
 		<English>The core of the Milky Way galaxy.</English>
-		<French>Le cœur de la galaxie Voie Lactée.</French>
+		<French>Le coeur de la galaxie Voie Lactée.</French>
 		<Russian>ßäðî ãàëàêòèêè Ìëå÷íûé ïóòü.</Russian>
 		<Polish>Centrum Drogi Mlecznej.</Polish>
 	</TEXT>

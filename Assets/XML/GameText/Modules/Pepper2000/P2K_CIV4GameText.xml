@@ -95,7 +95,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_COSMIC_EXPANSION_NODE</Tag>
 		<English>Build [LINK=IMPROVEMENT_COSMIC_EXPANSION_NODE]Cosmic Expansion Node[\LINK]</English>
-		<French>Construire un [LINK=IMPROVEMENT_COSMIC_EXPANSION_NODE]Nœud d'expansion cosmique[\LINK]</French>
+		<French>Construire un [LINK=IMPROVEMENT_COSMIC_EXPANSION_NODE]Noeud d'expansion cosmique[\LINK]</French>
 		<Russian>Ñòðîèòü ÓÏÐ</Russian>
 		<Italian>[LINK=IMPROVEMENT_COSMIC_EXPANSION_NODE]Nodo di espansione cosmica[\LINK] (costruzione)</Italian>
 		<Polish>Zbuduj[LINK=IMPROVEMENT_COSMIC_EXPANSION_NODE] w&#234;ze&#179; ekspansji kosmosu[\LINK]</Polish>
@@ -1615,7 +1615,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_MISSION_EXPLORE_GALACTIC_CORE</Tag>
 		<English>Explore the Galactic Core</English>
-		<French>Explorer le cœur de la galaxie</French>
+		<French>Explorer le coeur de la galaxie</French>
 		<Russian>Èññëåä. ãàëàêò. ÿäðî</Russian>
 		<Italian>Esplora centro della galassia</Italian>
 		<Polish>Eksploruj centrum Galaktyki</Polish>
@@ -1623,7 +1623,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_MISSION_EXPLORE_GALACTIC_CORE_HELP</Tag>
 		<English>Explore the galactic core.</English>
-		<French>Explorer le cœur de la galaxie</French>
+		<French>Explorer le coeur de la galaxie</French>
 		<Russian>Èññëåäîâàíèå ãàëàêò. ÿäðà</Russian>
 		<Italian>[NEWLINE]Esplora il centro della galassia.</Italian>
 		<Polish>Eksploruj j&#185;dro galaktyki.</Polish>

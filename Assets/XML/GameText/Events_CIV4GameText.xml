@@ -3449,7 +3449,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_ANCIENT_TEXTS_2</Tag>
 		<English>Fund an effort to preserve these artifacts in museums, accessible only to the most careful scholars.</English>
-		<French>Mettre tout en œuvre pour préserver ces artefacts dans des musées, accessibles uniquement à des spécialistes triés sur le volet.</French>
+		<French>Mettre tout en oeuvre pour préserver ces artefacts dans des musées, accessibles uniquement à des spécialistes triés sur le volet.</French>
 		<German>Gründet eine Initiative, um diese Artefakte in Museen zu lagern, wo sie nur den sorgfältigsten Gelehrten zugänglich sind.</German>
 		<Italian>Finanzia il tentativo di preservare questi manufatti nei musei, rendendoli accessibili solo agli studiosi più attenti.</Italian>
 		<Spanish>Que se financie un plan para conservar estos objetos en museos a los que solo puedan acceder los eruditos más cuidadosos.</Spanish>
@@ -3797,7 +3797,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_ASSASSIN_DISCOVERED_3_STONE_HELP</Tag>
 		<English>[ICON_BULLET]Receive %d1 [COLOR_UNIT_TEXT][NUM1:Stone Axemen:Stone Axemen][COLOR_REVERT].</English>
-		<French>[ICON_BULLET]Recevez %d1 [COLOR_UNIT_TEXT][NUM1:Haches en pierre:Haches en pierre][COLOR_REVERT].</French>
+		<French>[ICON_BULLET]Recevoir %d1 [COLOR_UNIT_TEXT][NUM1:Guerrier:Guerriers] avec Hache en pierre[COLOR_REVERT].</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_ATTITUDE_BAD</Tag>
@@ -3818,7 +3818,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_AT_THE_SWORD_1</Tag>
 		<English>Decorate our glorious heroes of the sword!</English>
-		<French>Décorer nos glorieux héros !</French>
+		<French>Décorons nos glorieux héros !</French>
 		<German>Verleiht unseren glorreichen Helden des Schwertes eine Auszeichnung!</German>
 		<Italian>Decorate i nostri gloriosi eroi della spada!</Italian>
 		<Spanish>¡Que se condecore a los gloriosos héroes de la espada!</Spanish>
@@ -6680,7 +6680,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_FUTBOL_WAR</Tag>
 		<English>Our national football team recently lost a championship game to the %s1_civ_adjective team. Several were killed in post-game rioting, including some players from the other team. Their government is holding us responsible for the violence and threatens military action if their "national honor" is not satisfied. Emotions are running HIGH on both sides.</English>
-		<French>Notre équipe nationale du football a récemment perdu un match de championnat contre l'équipe des %s1:3_civ_adjective. Plusieurs joueurs ont été tués dans une émeute qui a suivi le match, y compris quelques joueurs de l'autre équipe. Leur gouvernement nous juge responsables de la violence et menace de représailles militaires si leur "honneur national" n'est pas satisfait. Ces incidents sont pris très à cœur des deux côtés.</French>
+		<French>Notre équipe nationale du football a récemment perdu un match de championnat contre l'équipe des %s1:3_civ_adjective. Plusieurs joueurs ont été tués dans une émeute qui a suivi le match, y compris quelques joueurs de l'autre équipe. Leur gouvernement nous juge responsables de la violence et menace de représailles militaires si leur "honneur national" n'est pas satisfait. Ces incidents sont pris très à coeur des deux côtés.</French>
 		<German>Unsere nationale Fußballmannschaft verlor vor kurzem ein Meisterschaftspiel gegen die %s1_civ_adjective Mannschaft. In Krawallen nach dem Spiel gab es mehrere Tote, inklusive Spielern der gegnerischen Mannschaft. Ihre Regierung hält uns verantwortlich für die Gewalttätigkeit und bedroht uns mit Militäraktionen, wenn ihre "nationale Ehre" nicht wiederhergestellt wird. Die Emotionen sind erhitzt auf beiden Seiten.</German>
 		<Italian>La nostra nazionale di calcio ha perso la finale mondiale contro la nazionale %s1:2_civ_adjective. Durante i disordini nel dopo partita ci sono stati dei morti, tra cui alcuni giocatori dell'altra squadra. Il loro governo ci ritiene responsabili della violenza e minaccia una azione militare se il loro "onore nazionale" non sarà soddisfatto. La rabbia sta montando da entrambe le parti.</Italian>
 		<Polish>Nasza narodowa dru&#191;yna przegra&#179;a mecz z dru&#191;yn&#185; %s1_civ_adjective w walce o mistrzostwo. Kilkana&#156;cie os&#243;b zosta&#179;o zabitych w zamieszkach po meczu, wliczaj&#185;c w to graczy z przeciwnej dru&#191;yny. Ich rz&#185;d odpowiedzialno&#156;ci&#185; za to obarczy&#179; nas i zagrozi&#179; akcj&#185; militarn&#185;, je&#191;eli nic z tym nie zrobimy. Emocje bior&#185; g&#243;r&#234; po obu stronach.</Polish>
@@ -8173,7 +8173,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_IMMIGRANTS_2</Tag>
 		<English>We need the extra work force, the locals might not like it but who cares. Let's attract as many as we can.</English>
-		<French>Nous avons besoin de main-d'œuvre supplémentaire, les locaux n'aimeront peut-être pas, mais peu importe. Attirons-en autant que possible.</French>
+		<French>Nous avons besoin de main-d'oeuvre supplémentaire, les locaux n'aimeront peut-être pas, mais peu importe. Attirons-en autant que possible.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_IMMOBILE_UNIT</Tag>
@@ -8667,7 +8667,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_LESS_DICTATOR_2</Tag>
 		<English>"Perhaps the people could be given some more political freedoms," muses your Chief of Staff, who is your sister. "Is there really such harm in allowing public discussion of ideas? We could even have a real Opposition Party. One that isn't just full of your puppets, I mean."</English>
-		<French>"Vous pourriez peut-être donner un peu plus de liberté politique à votre peuple," suggère votre chef de cabinet, votre sœur en l'occurrence. "est-ce vraiment dangereux de permettre à tous de discuter des idées? Nous devrions même avoir un vrai parti d'opposition. Un qui ne soit pas composé de vos marionnettes, je veux dire."</French>
+		<French>"Vous pourriez peut-être donner un peu plus de liberté politique à votre peuple," suggère votre chef de cabinet, votre soeur en l'occurrence. "est-ce vraiment dangereux de permettre à tous de discuter des idées? Nous devrions même avoir un vrai parti d'opposition. Un qui ne soit pas composé de vos marionnettes, je veux dire."</French>
 		<Spanish>"Quizás se deba otorgar al pueblo mayores libertades políticas," reflexiona tu consejera de Presidencia, que es tu hermana. "¿Realmente es tan perjudicial permitir el debate público de las ideas? Podríamos llegar a tener un auténtico partido opositor. Uno que no esté lleno de títeres tuyos, quiero decir."</Spanish>
 		<Polish>By&#230; mo&#191;e ludzie powinni otrzyma&#230; wi&#234;cej swobody politycznej, sugeruje Szef Sztabu, kt&#243;ry jest Twoj&#185; siostr&#185;. "Czy to sprawi problem umo&#191;liwienie publicznej dyskusji o pomys&#179;ach? Mo&#191;na nawet mie&#230; realn&#185; opozycj&#234;, kt&#243;ra nie b&#234;dzie Twoj&#185; laleczk&#185;, mam na my&#156;li."</Polish>
 		<Russian>«Возможно, людям могут быть даны некоторые политические свободы», - размышляет глава Центризбиркома, являющаяся вашей сестрой. «Действительно ли гласность может причинить такой вред? У нас может быть даже настоящая оппозиционная партия. Я имею в виду не ту, что состоит из послушных болванчиков на зарплате».</Russian>

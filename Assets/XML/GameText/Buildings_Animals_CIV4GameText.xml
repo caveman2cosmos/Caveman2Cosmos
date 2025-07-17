@@ -19,7 +19,7 @@
 		<French>
 			<Text>Présence de corail</Text>
 			<Gender>Female</Gender>
-			<Plural>1</Plural>
+			<Plural>0</Plural>
 		</French>
 		<German>
 			<Text>Präsenz von Korallen:Präsenz von Korallen:Präsenz von Korallen:Präsenz von Korallen</Text>
@@ -34,7 +34,7 @@
 		<French>
 			<Text>Présence de terre</Text>
 			<Gender>Female</Gender>
-			<Plural>1</Plural>
+			<Plural>0</Plural>
 		</French>
 		<German>
 			<Text>Präsenz der Erde:Präsenz der Erde:Präsenz der Erde:Präsenz der Erde</Text>
@@ -49,7 +49,7 @@
 		<French>
 			<Text>Présence de cratère</Text>
 			<Gender>Female</Gender>
-			<Plural>1</Plural>
+			<Plural>0</Plural>
 		</French>
 		<German>
 			<Text>Präsenz von Kratern:Präsenz von Kratern:Präsenz von Kratern:Präsenz von Kratern</Text>
@@ -64,7 +64,7 @@
 		<French>
 			<Text>Présence de feu</Text>
 			<Gender>Female</Gender>
-			<Plural>1</Plural>
+			<Plural>0</Plural>
 		</French>
 		<German>
 			<Text>Präsenz des Feuers:Präsenz des Feuers:Präsenz des Feuers:Präsenz des Feuers</Text>
@@ -79,7 +79,7 @@
 		<French>
 			<Text>Présence de métal</Text>
 			<Gender>Female</Gender>
-			<Plural>1</Plural>
+			<Plural>0</Plural>
 		</French>
 		<German>
 			<Text>Präsenz von Metall:Präsenz von Metall:Präsenz von Metall:Präsenz von Metall</Text>
@@ -94,7 +94,7 @@
 		<French>
 			<Text>Présence d'Oasis</Text>
 			<Gender>Female</Gender>
-			<Plural>1</Plural>
+			<Plural>0</Plural>
 		</French>
 		<German>
 			<Text>Präsenz von Oasen:Präsenz von Oasen:Präsenz von Oasen:Präsenz von Oasen</Text>
@@ -116,7 +116,7 @@
 		<French>
 			<Text>Présence de relief</Text>
 			<Gender>Female</Gender>
-			<Plural>1</Plural>
+			<Plural>0</Plural>
 		</French>
 		<German>
 			<Text>Präsenz von Felsformationen:Präsenz von Felsformationen:Präsenz von Felsformationen:Präsenz von Felsformationen</Text>
@@ -131,7 +131,7 @@
 		<French>
 			<Text>Présence de récifs</Text>
 			<Gender>Female</Gender>
-			<Plural>1</Plural>
+			<Plural>0</Plural>
 		</French>
 		<German>
 			<Text>Präsenz von Riffen:Präsenz von Riffen:Präsenz von Riffen:Präsenz von Riffen</Text>
@@ -143,7 +143,11 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_REQUIREMENT</Tag>
 		<English>Folklore Requirement</English>
-		<French>Bases de folklore</French>
+		<French>
+			<Text>Bases de folklore</Text>
+			<Gender>Female</Gender>
+			<Plural>1</Plural>
+		</French>
 		<German>
 			<Text>Folklore-Grundlagen:Folklore-Grundlagen:Folklore-Grundlagen:Folklore-Grundlagen</Text>
 			<Gender>Female</Gender>
@@ -164,7 +168,7 @@
 		<French>
 			<Text>Présence de la mer</Text>
 			<Gender>Female</Gender>
-			<Plural>1</Plural>
+			<Plural>0</Plural>
 		</French>
 		<German>
 			<Text>Präsenz der See:Präsenz der See:Präsenz der See:Präsenz der See</Text>
@@ -179,7 +183,7 @@
 		<French>
 			<Text>Présence d'un volcan</Text>
 			<Gender>Female</Gender>
-			<Plural>1</Plural>
+			<Plural>0</Plural>
 		</French>
 		<German>
 			<Text>Präsenz von Vulkanen:Präsenz von Vulkanen:Präsenz von Vulkanen:Präsenz von Vulkanen</Text>
@@ -205,7 +209,11 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MILITARY_STANDARD_ANIMAL_MASCOT</Tag>
 		<English>Military Standard (Animal mascot)</English>
-		<French>Mascotte de L'Armée de Terre</French>
+		<French>
+			<Text>Mascotte de L'Armée de Terre</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</French>
 		<Italian>Stendardo militare con mascotte animale</Italian>
 		<Polish>Sztandar Wojskowy (Zwierz&#234;ca Maskotka)</Polish>
 		<Russian>Çâåðèíûé òîòåì</Russian>
@@ -213,7 +221,11 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MILITARY_STANDARD_CANINES</Tag>
 		<English>Military Standard (Canines)</English>
-		<French>Standards Militaires (Canins)</French>
+		<French>
+			<Text>Standards Militaires (Canins)</Text>
+			<Gender>Male</Gender>
+			<Plural>1</Plural>
+		</French>
 		<Italian>Stendardo militare con mascotte canina</Italian>
 		<Polish>Sztandar Wojskowy (Wilki)</Polish>
 		<Russian>Òîòåì «Ñîáàêà»</Russian>
@@ -236,7 +248,11 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MILITARY_STANDARD_WORKERS</Tag>
 		<English>Military Standard (Workers)</English>
-		<French>Standards Militaires (Ouvriers)</French>
+		<French>
+			<Text>Standards Militaires (Ouvriers)</Text>
+			<Gender>Male</Gender>
+			<Plural>1</Plural>
+		</French>
 		<Italian>Stendardo militare dei lavoratori</Italian>
 		<Polish>Sztandar Wojskowy (Robotnicy)</Polish>
 		<Russian>Òîòåì «Ðàáîòíèê»</Russian>
@@ -283,7 +299,11 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_DANCE_BIRD</Tag>
 		<English>Unit Reward - Dance (Bird)</English>
-		<French>Danse des Oiseaux</French>
+		<French>
+			<Text>Danse des Oiseaux</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</French>
 		<Italian>Danza degli uccelli (unità consumata)</Italian>
 		<Russian>Òàíåö ïòèöû</Russian>
 	</TEXT>
@@ -383,7 +403,11 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_REMAINS_CAVE_LION</Tag>
 		<English>Remains - Cave Lion</English>
-		<French>Restes de Lion des cavernes</French>
+		<French>
+			<Text>Restes de Lion des cavernes</Text>
+			<Gender>Male</Gender>
+			<Plural>1</Plural>
+		</French>
 		<German>
 			<Text>Überreste eines Höhlenlöwen:Überreste eines Höhlenlöwen:Überresten eines Höhlenlöwen:Überreste eines Höhlenlöwen</Text>
 			<Gender>Male</Gender>
@@ -423,7 +447,11 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_COASTAL_FISH_FARM</Tag>
 		<English>Unit Reward - Coastal Fish Farm</English>
-		<French>Ferme à Poissons du Littoral</French>
+		<French>
+		<Text>Ferme à Poissons du Littoral</Text>
+		<Gender>Female</Gender>
+		<Plural>0</Plural>
+	</French>
 		<Italian>Allevamento costiero di pesci (unità consumata)</Italian>
 		<Polish>Farma Ryb Przybrze&#191;nych</Polish>
 		<Russian>Ðûáíàÿ ôåðìà</Russian>
@@ -451,7 +479,11 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CRAB_NETS</Tag>
 		<English>Unit Reward - Crab Nets</English>
-		<French>Pièges à Crabes</French>
+		<French>
+		<Text>Pièges à Crabes</Text>
+		<Gender>Male</Gender>
+		<Plural>1</Plural>
+	</French>
 		<Italian>Trappole per granchi (unità consumata)</Italian>
 		<Polish>Sieci na kraby</Polish>
 		<Russian>Ñåòè íà êðàáîâ</Russian>
@@ -498,7 +530,11 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_DOG_KENNELS</Tag>
 		<English>Dog Kennels</English>
-		<French>Chenils pour Chiens</French>
+		<French>
+		<Text>Chenils pour Chiens</Text>
+		<Gender>Male</Gender>
+		<Plural>1</Plural>
+	</French>
 		<Italian>Canile</Italian>
 		<Polish>Psie budy</Polish>
 		<Russian>Ñîáà÷èé âîëüåð</Russian>
@@ -526,14 +562,18 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HERD_DONKEY_PEDIA</Tag>
 		<English>Asses were first domesticated around 3000 BC, or 4000 BC, probably in Egypt or Mesopotamia, and have spread around the world. They continue to fill important roles in many places today. While domesticated species are increasing in numbers, the African wild ass and another relative, the Onager, are endangered. As "beasts of burden" and companions, asses and donkeys have worked together with humans for millennia.</English>
-		<French>Les ânes ont été domestiqués pour la première fois vers 3000 av. J.-C., ou 4000 av. J.-C., probablement en Égypte ou en Mésopotamie, et se sont répandus dans le monde entier. Ils continuent à remplir des rôles importants dans de nombreux endroits aujourd'hui. Alors que les espèces domestiquées augmentent en nombre, l'âne sauvage africain et un autre parent, l'onagre, sont en voie de disparition. En tant que ::bêtes de somme:: et compagnons, les ânes ont travaillé avec les humains pendant des millénaires.</French>
+		<French>Les ânes ont été domestiqués pour la première fois vers 3000 av. J.-C., ou 4000 av. J.-C., probablement en Égypte ou en Mésopotamie, et se sont répandus dans le monde entier. Ils continuent à remplir des rôles importants dans de nombreux endroits aujourd'hui. Alors que les espèces domestiquées augmentent en nombre, l'âne sauvage africain et un autre parent, l'onagre, sont en voie de disparition. En tant que "bêtes de somme" et compagnons, les ânes ont travaillé avec les humains pendant des millénaires.</French>
 		<Italian>Gli asini vennero addomesticati intorno al 3000 a.C. o al 4000 a.C., probabilmente in Egitto o Mesopotamia, e vennero diffusi in tutto il mondo; al giorno d'oggi, continuano a ricoprire importanti ruoli in molti posti. Mentre le specie addomesticate sono in aumento in termini numerici, l'asino selvatico africano e un altro parente, l'onagro, sono in pericolo di estinzione. Come "bestie da soma" e compagni, gli asini hanno lavorato insieme con gli esseri umani per millenni.</Italian>
 		<Polish>Osio&#179; zosta&#179; udomowiony przez cz&#179;owieka wcze&#156;niej ni&#191; ko&#241;. Pierwsze informacje dotycz&#185;ce udomowienia pochodz&#185; z Doliny Nilu z ok. 4000 p.n.e. czyli 6 tys. lat temu. Na tych terenach wyst&#234;powa&#179;y obydwa &#191;yj&#185;ce do dzisiaj podgatunki os&#179;a afryka&#241;skiego. Przypuszcza si&#234;, &#191;e z ich krzy&#191;&#243;wek powsta&#179; osio&#179; domowy (Equus africanus f.asinus).</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FLOCKS_OF_DUCK</Tag>
 		<English>Flocks of Duck</English>
-		<French>Volées de Canards</French>
+		<French>
+		<Text>Volées de Canards</Text>
+		<Gender>Female</Gender>
+		<Plural>1</Plural>
+	</French>
 		<Italian>Stormo di anatre</Italian>
 		<Russian>Ñòàÿ óòîê</Russian>
 	</TEXT>
@@ -546,7 +586,11 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_REMAINS_GIANT_RHINOCEROS</Tag>
 		<English>Remains - Giant Rhinoceros</English>
-		<French>Restes d'Elasmotherium</French>
+		<French>
+		<Text>Restes d'Elasmotherium</Text>
+		<Gender>Male</Gender>
+		<Plural>1</Plural>
+	</French>
 		<German>
 			<Text>Überreste eines Elasmotheriums:Überreste eines Elasmotheriums:Überresten eines Elasmotheriums:Überreste eines Elasmotheriums</Text>
 			<Gender>Male</Gender>
@@ -1567,7 +1611,7 @@
 		<Russian>Ìèô î ôàçàíå</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_FOLKLORE_E_PHOENIX</Tag>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_E_PHoeNIX</Tag>
 		<English>Folklore (E) - Phoenix</English>
 		<French>Mythe du Phoenix (E)</French>
 		<German>
@@ -1794,7 +1838,7 @@
 		<Russian>Ìèô î òóêàíå</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_FOLKLORE_THREE_TOED_SLOTH</Tag>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_THREE_ToeD_SLOTH</Tag>
 		<English>Folklore - Three-toed Sloth</English>
 		<French>Mythe du paresseux</French>
 		<German>
@@ -1908,7 +1952,11 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_DANCE_FOX</Tag>
 		<English>Unit Reward - Dance (Fox)</English>
-		<French>Danse du Renard</French>
+		<French>
+		<Text>Danse du Renard</Text>
+		<Gender>Female</Gender>
+		<Plural>0</Plural>
+	</French>
 		<Italian>Danza della volpe (unità consumata)</Italian>
 		<Russian>Òàíåö ëèñû</Russian>
 	</TEXT>
@@ -1921,7 +1969,11 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FUR_FARM</Tag>
 		<English>Unit Reward - Fur Farm</English>
-		<French>Ferme de Fourrures</French>
+		<French>
+		<Text>Ferme de Fourrures</Text>
+		<Gender>Female</Gender>
+		<Plural>0</Plural>
+	</French>
 		<Italian>Allevamento di animali da pelliccia (unità consumata)</Italian>
 		<Polish>Ferma Futer</Polish>
 		<Russian>Ìåõîâàÿ ôåðìà</Russian>
@@ -2131,7 +2183,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HERD_MUSKOX_PEDIA</Tag>
 		<English>A herd of Muskoxes.</English>
-		<French>Un troupeau de bœufs musqués.</French>
+		<French>Un troupeau de boeufs musqués.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_NAVAL_STANDARD_ANIMAL_MASCOT</Tag>

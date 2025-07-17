@@ -686,7 +686,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_C2C_HINT_51</Tag>
 		<English>C2C: For performance reasons, the city production popup now displays only a limited selection of buildings and units. Click on Examine City to see a full list of available options. Alternatively, you can disable this popup entirely in the BUG settings - Caveman2Cosmos tab, and select "No Production Popup."</English>
-		<French>C2C : Pour des raisons de performance, la fenêtre contextuelle de production de la ville affiche désormais une sélection limitée de bâtiments et d'unités. Cliquez sur Examiner la ville pour voir la liste complète des options disponibles. Vous pouvez également désactiver entièrement cette fenêtre contextuelle dans les paramètres BUG - onglet Caveman2Cosmos, en sélectionnant ::Pas de fenêtre de production::.</French>
+		<French>C2C : Pour des raisons de performance, la fenêtre contextuelle de production de la ville affiche désormais une sélection limitée de bâtiments et d'unités. Cliquez sur Examiner la ville pour voir la liste complète des options disponibles. Vous pouvez également désactiver entièrement cette fenêtre contextuelle dans les paramètres BUG - onglet Caveman2Cosmos, en sélectionnant "Pas de fenêtre de production".</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_C2C_HINT_6</Tag>

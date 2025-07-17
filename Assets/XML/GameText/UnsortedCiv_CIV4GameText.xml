@@ -45,7 +45,7 @@
 	<TEXT>
 		<Tag>AI_DIPLO_DEMAND_TRIBUTE_POWER_EQUAL_HITLER_1</Tag>
 		<English>I totally came in "assistance", can I have help removing weaklings?</English>
-		<French>Je suis totalement venu en ::assistance::, puis-je avoir de l'aide pour éliminer les faibles ?</French>
+		<French>Je suis totalement venu en "assistance", puis-je avoir de l'aide pour éliminer les faibles ?</French>
 	</TEXT>
 	<TEXT>
 		<Tag>AI_DIPLO_DEMAND_TRIBUTE_POWER_EQUAL_IVAN_1</Tag>
@@ -410,7 +410,7 @@
 	<TEXT>
 		<Tag>AI_DIPLO_FIRST_CONTACT_LEADER_DAVID_1</Tag>
 		<English>Greetings. I am [OUR_NAME], and I welcome you, with a hand on the heart, to the the land of [OUR_CIV_SHORT].</English>
-		<French>Salutations. Je suis [OUR_NAME], et je te souhaite la bienvenue, avec une main sur le cœur, l'à la terre de [OUR_CIV_SHORT].</French>
+		<French>Salutations. Je suis [OUR_NAME], et je te souhaite la bienvenue, avec une main sur le coeur, l'à la terre de [OUR_CIV_SHORT].</French>
 		<German>Grüße. Ich bin [OUR_NAME], und ich begrüße dich, mit einer Hand auf dem Herzen, zum Land von [OUR_CIV_SHORT].</German>
 		<Italian>Saluti. Sono [OUR_NAME] e ti accolgo favorevolmente, con una mano sul cuore, alla terra di [OUR_CIV_SHORT].</Italian>
 		<Spanish>Saludos. Soy [OUR_NAME], y te doy la bienvenida, con una mano en el corazón, el tierra de [OUR_CIV_SHORT].</Spanish>
@@ -773,14 +773,14 @@
 	<TEXT>
 		<Tag>AI_DIPLO_GREETINGS_ATT_FR_LEADER_HIAWATHA_1</Tag>
 		<English>My heart beats for you like the shining Big-Sea-Water, [CT_NAME]!</English>
-		<French>Mon cœur bat pour toi comme l'éclat de l'écume, [CT_NAME]!</French>
+		<French>Mon coeur bat pour toi comme l'éclat de l'écume, [CT_NAME]!</French>
 		<Polish>Moje serce bije dla Ciebie jak b&#179;yszcz&#185;ce Wielko-Morze, [CT_NAME]!</Polish>
 		<Russian>Мое сердце бьется за тебя, как сияющая вода Большого моря, [CT_NAME]!</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>AI_DIPLO_GREETINGS_ATT_FR_LEADER_HITLER_1</Tag>
 		<English>It is nice to hear from our vassal - I mean "friend", [CT_EMPIRE]. What weaklings we should eat?</English>
-		<French>C'est agréable d'avoir des nouvelles de notre vassal - je veux dire ::ami::, [CT_EMPIRE]. Quels faibles devrions-nous dévorer ?</French>
+		<French>C'est agréable d'avoir des nouvelles de notre vassal - je veux dire "ami", [CT_EMPIRE]. Quels faibles devrions-nous dévorer ?</French>
 	</TEXT>
 	<TEXT>
 		<Tag>AI_DIPLO_GREETINGS_ATT_FR_LEADER_IVAN_1</Tag>
@@ -822,7 +822,7 @@
 	<TEXT>
 		<Tag>AI_DIPLO_GREETINGS_ATT_FR_LEADER_SOLOMON_1</Tag>
 		<English>My heart gives me joy when you present yourself.</English>
-		<French>Mon cœur me donne la joie quand vous vous présentez.</French>
+		<French>Mon coeur me donne la joie quand vous vous présentez.</French>
 		<German>Mein Herz gibt mir Freude, wenn du dich darstellst.</German>
 		<Italian>Il mio cuore si riempie di gioia quando ti fai vedere.</Italian>
 		<Spanish>Mi corazón me da alegría cuando te presentas.</Spanish>
