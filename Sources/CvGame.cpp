@@ -9740,7 +9740,7 @@ void CvGame::changeHighToLowCounter(int iChange)
 void CvGame::doFinalFive()
 {
 	PROFILE_EXTRA_FUNC();
-	if (!isGameMultiPlayer() && isOption(GAMEOPTION_CHALLENGE_CUT_LOSERS) && countCivPlayersAlive() > 5)
+	if (!isGameMultiPlayer() && isOption(GAMEOPTION_CHALLENGE_CUT_LOSERS) && countCivPlayersAlive() > 12)
 	{
 		changeCutLosersCounter(1);
 		if (getCutLosersCounter() >= GC.getDefineINT("CUT_LOSERS_TURN_INCREMENT") * GC.getGameSpeedInfo(getGameSpeedType()).getSpeedPercent() / 100)
@@ -9886,12 +9886,17 @@ void CvGame::doFlexibleDifficulty()
 		if (playerX.isAlive() && GET_TEAM(playerX.getTeam()).getLeaderID() == ePlayer)
 		{
 			int iTurns = playerX.getModderOption(MODDEROPTION_FLEXIBLE_DIFFICULTY_TURN_INCREMENTS);
+
 			int iTimer = getFlexibleDifficultyTimer(ePlayer);
 			const bool bHuman = playerX.isHumanPlayer(true);
 
 			if (bFlexDiffForAI && !bHuman)
 			{
 				iTurns = getModderGameOption(MODDERGAMEOPTION_FLEXIBLE_DIFFICULTY_AI_TURN_INCREMENTS);
+				if (iTurns == 0)
+				{
+					iTurns = 50;
+				}				
 			}
 
 			logging::logMsg("C2C.log", "[Flexible Difficulty] (%d / %d) turns until next flexible difficulty check for Player: %S\n", iTimer, iTurns, playerX.getName());

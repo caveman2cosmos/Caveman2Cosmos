@@ -63,7 +63,7 @@
 	<Define>
 		<!-- Afforess: The number of turns that the Cut Loser's Game Option Checks -->
 		<DefineName>CUT_LOSERS_TURN_INCREMENT</DefineName>
-		<iDefineIntVal>50</iDefineIntVal>
+		<iDefineIntVal>100</iDefineIntVal>
 	</Define>
 	<Define>
 		<!-- Afforess: Every X turns the game checks the High to Low Option -->

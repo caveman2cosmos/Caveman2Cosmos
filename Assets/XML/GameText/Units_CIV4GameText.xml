@@ -8255,7 +8255,11 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_ENFORCERS</Tag>
 		<English>Enforcers</English>
-		<French>Forces de l'Ordre</French>
+		<French>
+		<Text>Forces de l'Ordre</Text>
+		<Gender>Female</Gender>
+		<Plural>1</Plural>
+	</French>
 		<Russian>Çàùèòíèê</Russian>
 		<Italian>Vigilante</Italian>
 	</TEXT>

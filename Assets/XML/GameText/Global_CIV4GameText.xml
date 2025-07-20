@@ -96,7 +96,7 @@
 	<TEXT>
 		<Tag>INTERFACE_CITY_FOOD_SHRINK</Tag>
 		<English>%d1[ICON_FOOD] - %d2[ICON_EATENFOOD] = [COLOR_WARNING_TEXT]%d3[COLOR_REVERT][ICON_BAD_FOOD]</English>
-		<French>%d1[ICON_FOOD] - %d2[ICON_EATENFOOD] = [COLOR_WARNING_TEXT]%d3[COLOR_REVERT][ICON_MAUVAISE_NOURRITURE]</French>
+		<French>%d1[ICON_FOOD] - %d2[ICON_EATENFOOD] = [COLOR_WARNING_TEXT]%d3[COLOR_REVERT][ICON_BAD_FOOD]</French>
 		<Italian>[COLOR_HIGHLIGHT_TEXT]%d1[COLOR_REVERT] [ICON_FOOD] - [COLOR_HIGHLIGHT_TEXT]%d2[COLOR_REVERT] [ICON_EATENFOOD] = [COLOR_WARNING_TEXT]%d3[COLOR_REVERT] [ICON_BAD_FOOD]</Italian> <!-- city screen left of the food bar -->
 	</TEXT>
 	<TEXT>
@@ -8533,7 +8533,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_GAMESPEED_EONS</Tag>
 		<English>Eons</English>
-		<French>Ères</French>
+		<French>Éons</French>
 		<German>Äonen</German>
 		<Italian>Eoni</Italian>
 		<Polish>Wieki</Polish>
@@ -25464,7 +25464,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 	<TEXT>
 		<Tag>TXT_KEY_SYSTEM_WAITING</Tag>
 		<English>Waiting for player %s...</English>
-		<French>En attente d'autres civilisations...</French>
+		<French>En attente d'autres civilisations (%s)...</French>
 		<German>Warten auf andere Zivilisationen ...</German>
 		<Italian>In attesa delle altre civiltà...</Italian>
 		<Spanish>Esperando a más civilizaciones...</Spanish>
