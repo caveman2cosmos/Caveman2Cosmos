@@ -747,7 +747,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_PATH</Tag>
 		<English>Make [LINK=ROUTE_PATH]Path[\LINK]</English>
-		<French>Dégager un [LINK=ROUTE_PATH]passage[\LINK]</French>
+		<French>Construire un [LINK=ROUTE_PATH]chemin carrossable[\LINK]</French>
 		<German>Karrenweg anlegen</German>
 		<Italian>[LINK=ROUTE_PATH]Sentiero[\LINK] (costruzione)</Italian>
 		<Spanish>Crear un Camino de tierra</Spanish>

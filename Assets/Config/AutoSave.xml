@@ -14,8 +14,8 @@
 			<option id="CreateEndSave" key="Create End Save" type="boolean" default="False"/>
 			<option id="CreateExitSave" key="Create Exit Save" type="boolean" default="False"/>
 			<option id="CreateLateSave" key="Create Late Save" type="boolean" default="False"/>
-			<option id="Interval" key="Interval" type="int" default="5" get="getInterval"/>
+			<option id="Interval" key="Interval" type="int" default="2" get="getInterval"/>
 		</section>
 	</options>
-	<init/>
+	<init></init>
 </mod>
