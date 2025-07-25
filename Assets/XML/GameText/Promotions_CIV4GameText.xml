@@ -3774,7 +3774,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_SURPRISE</Tag>
 		<English>Status (Surprise) Promotion Line</English>
-		<French>Spécialisation Statut (Surprise)</French>
+		<French>Spécialisation Statut (Embuscade)</French>
 		<German>Überraschungsstatus</German>
 	</TEXT>
 	<TEXT>
@@ -13006,7 +13006,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_REMOVE_SURPRISE</Tag>
 		<English>Status (Remove Surprise)</English>
-		<French>Statut (Enlever Surprise)</French>
+		<French>Statut (Enlever Embuscade)</French>
 		<German>Nicht überraschen</German>
 	</TEXT>
 	<TEXT>
@@ -15103,7 +15103,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_SURPRISE</Tag>
 		<English>Status (Surprise)</English>
-		<French>Statut (Surprise)</French>
+		<French>Statut (Embuscade)</French>
 		<German>Überraschen</German>
 		<Russian>Статус (Сюрприз)</Russian>
 	</TEXT>

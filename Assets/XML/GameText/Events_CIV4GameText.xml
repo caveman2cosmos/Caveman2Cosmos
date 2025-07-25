@@ -1048,7 +1048,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_FRIENDLY_LOCALS_2</Tag>
 		<English>A wounded %s1_civ_adjective unit has received assistance from a small faction who resists the rule of their enemy.</English>
-		<French>Une unité %s1:3_civ_adjective blessée a reçu de l'assistance de la part d'une petite faction qui résiste à l'ennemi.</French>
+		<French>Une unité %s1:3_civ_adjective blessée a reçu de l'assistance de la part d'une petite faction qui résiste contre notre ennemi.</French>
 		<German>Eine verwundete %s1:3_civ_adjective Einheit hat Hilfe von einer kleinen Gruppe erhalten, die sich der Herrschaft ihrer Gegner widersetzt.</German>
 		<Italian>Un'unità %s1:2_civ_adjective ferita ha ricevuto aiuto dai membri di una piccola fazione che resiste al governo del nemico.</Italian>
 		<Spanish>Una unidad %s1:2_civ_adjective herida ha recibido ayuda de una pequeña facción que se resiste al mandato del enemigo.</Spanish>
@@ -1291,7 +1291,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_CHILD_WISE_COUNCIL</Tag>
 		<English>A %s1_civ_adjective council has welcomed a wise elder; his wisdom will lead them to greatness.</English>
-		<French>Un conseil %s1_civ_adjective a accueilli un ancien sage ; sa sagesse les mènera à la grandeur.</French>
+		<French>Un conseil %s1_civ_adjective a accueilli un vieux sage ; sa sagesse les mènera à la grandeur.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CHILD_LABOUR_INCIDENT</Tag>

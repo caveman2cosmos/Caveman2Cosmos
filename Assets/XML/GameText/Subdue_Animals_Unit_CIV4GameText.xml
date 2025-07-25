@@ -1582,8 +1582,8 @@
 		<Tag>TXT_KEY_UNIT_SEAEAGLE</Tag>
 		<English>Steller's Sea Eagle</English>
 		<French>
-			<Text>Pigargue empereur</Text>
-			<Gender>Female</Gender>
+			<Text>Pygargue empereur</Text>
+			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
 		<German>
@@ -3635,7 +3635,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_SEAEAGLE</Tag>
 		<English>Subdued Steller's Sea Eagle</English>
-		<French>Pigargue empereur (App.)</French>
+		<French>Pygargue empereur (App.)</French>
 		<Polish>Poskromiony Bielik Olbrzymi</Polish>
 		<Russian>Îðëàí (ðó÷í.)</Russian>
 		<Italian>Aquila di mare di Steller domata</Italian>
@@ -4977,7 +4977,11 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_VIPER_CHAIN</Tag>
 		<English>Chain Viper</English>
-		<French>Vipère de Russell</French>
+		<French>
+			<Text>Vipère de Russell</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</French>
 		<German>
 			<Text>Kettenviper:Kettenviper:Kettenviper:Kettenviper:Kettenvipern:Kettenvipern:Kettenvipern:Kettenvipern</Text>
 			<Gender>Female</Gender>

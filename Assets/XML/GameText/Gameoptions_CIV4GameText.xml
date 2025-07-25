@@ -3,7 +3,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_CULTURE_1_CITY_TILE_FOUNDING</Tag>
 		<English>Culture - City starts with 1 tile</English>
-		<French>Ville avec 1 seule Case</French>
+		<French>Culture - Ville avec 1 seule Case</French>
 		<German>Städte beginnen nur mit dem Startfeld</German>
 		<Russian>Города появляются с одной клеткой</Russian>
 		<Italian>Le città iniziano con una sola casella</Italian>
@@ -18,7 +18,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_ADVANCED_DIPLOMACY</Tag>
 		<English>Advanced - Diplomacy</English>
-		<French>Diplomatie avancée</French>
+		<French>Avancé - Diplomatie</French>
 		<German>Verbesserte Diplomatie</German>
 		<Italian>Diplomazia avanzata</Italian>
 		<Spanish>Diplomacia avanzada</Spanish>
@@ -38,7 +38,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_ADVANCED_ESPIONAGE</Tag>
 		<English>Advanced - Espionage</English>
-		<French>Espionnage Avancé</French>
+		<French>Avancé - Espionnage</French>
 		<German>Verbesserte Spionage</German>
 		<Italian>Spionaggio avanzato</Italian>
 		<Spanish>Espionaje avanzado</Spanish>
@@ -58,7 +58,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_ADVANCED_NUKES</Tag>
 		<English>Advanced - Nukes</English>
-		<French>Armes Nucléaires Avancées</French>
+		<French>Avancé - Armes Nucléaires</French>
 		<German>Verbesserte Atomwaffen</German>
 		<Italian>Armi atomiche avanzate</Italian>
 		<Spanish>Armas nucleares avanzadas</Spanish>
@@ -92,7 +92,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_CORE_CUSTOM_START</Tag>
 		<English>Core - Custom Start</English>
-		<French>Démarrage avancé</French>
+		<French>Base - Démarrage personnalisé</French>
 		<German>Fortgeschrittener Start</German>
 		<Italian>Avvio avanzato</Italian>
 		<Spanish>Inicio avanzado</Spanish>
@@ -110,7 +110,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_AI_AGGRESSIVE</Tag>
 		<English>AI - Aggressive</English>
-		<French>IA agressive</French>
+		<French>I.A - Agressive</French>
 		<German>Aggressive KI</German>
 		<Italian>IA aggressiva</Italian>
 		<Spanish>IA agresiva</Spanish>
@@ -128,7 +128,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_COMBAT_AMNESTY</Tag>
 		<English>Combat - Amnesty for units using Right of Passage</English>
-		<French>Amnistie pour les unités avec droits de passage</French>
+		<French>Combat - Amnistie pour les unités avec droits de passage</French>
 		<German>Amnestie für Einheiten mit Durchreiseerlaubnis</German>
 		<Russian>Амнистия для подразделений, использующих право прохода</Russian>
 		<Italian>Amnistia per le unità che utilizzano il diritto di passaggio</Italian>
@@ -144,7 +144,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_ANIMAL_STAY_OUT</Tag>
 		<English>Animal - Stay Out!</English>
-		<French>Les animaux restent dehors!</French>
+		<French>Animaux - Les animaux restent dehors!</French>
 		<German>Tiere müssen draußen bleiben!</German>
 		<Russian>Прочь, животные!</Russian>
 		<Italian>Gli animali restano fuori</Italian>
@@ -160,7 +160,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_BARBARIAN_ALWAYS_RAZE</Tag>
 		<English>Barbarian - Always Raze</English>
-		<French>Les Barbares Rasent les Villes</French>
+		<French>Barbares - Villes rasées</French>
 		<German>Barbaren zerstören Städte immer</German>
 		<Italian>I barbari radono sempre al suolo</Italian>
 		<Spanish>Los bárbaros siempre arrasan</Spanish>
@@ -180,7 +180,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_BARBARIAN_CIV</Tag>
 		<English>Barbarian - Civ Development</English>
-		<French>Civs Barbares</French>
+		<French>Barbares - Développement de Civs</French>
 		<German>Barbarenzivilisationen</German>
 		<Italian>Civiltà barbare</Italian>
 		<Spanish>Civilizaciones bárbaras</Spanish>
@@ -197,7 +197,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_BARBARIAN_WORLD</Tag>
 		<English>Barbarian - Barbaric World</English>
-		<French>Monde plein de Barbares</French>
+		<French>Barbares - Monde plein de Barbares</French>
 		<German>Barbarenwelt</German>
 		<Italian>Mondo barbaro</Italian>
 		<Spanish>Mundo bárbaro</Spanish>
@@ -217,7 +217,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_COMBAT_BATTLEWORN</Tag>
 		<English>Combat - Battleworn</English>
-		<French>Mode de Combat C2C - Epuisement</French>
+		<French>Combat - Épuisement</French>
 		<German>C2C-Kampfmod - Schlachtauswirkungen</German>
 		<Polish>C2C Modyfikacja Bojowa - Zm&#234;czenie</Polish>
 		<Russian>Боевая усталость</Russian>
@@ -236,7 +236,7 @@
 		<Tag>TXT_KEY_GAMEOPTION_TECH_BEELINE_STINGS</Tag>
 		<English>Tech - Beeline Stings</English>
 		<German>Durchmarschstrafen</German>
-		<French>Pénalités des Eres</French>
+		<French>Tech - Pénalités des Ères</French>
 		<Russian>Спешка наказуема</Russian>
 		<Italian>Penalità tecnologie non scoperte</Italian>
 	</TEXT>
@@ -251,7 +251,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_CHALLENGE_CUT_LOSERS</Tag>
 		<English>Challenge - Final Five</English>
-		<French>15 Finalistes</French>
+		<French>Challenge - 15 Finalistes</French>
 		<German>Die Letzten Fünf</German>
 		<Italian>5 finalisti</Italian>
 		<Spanish>Cinco finalistas</Spanish>
@@ -271,7 +271,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_CHALLENGE_HIGH_TO_LOW</Tag>
 		<English>Challenge - High to Low</English>
-		<French>Premier au Dernier</French>
+		<French>Challenge - Du Premier au Dernier</French>
 		<German>Höhen und Tiefen</German>
 		<Italian>Dalle stelle alle stalle</Italian>
 		<Spanish>De arriba a abajo</Spanish>
@@ -291,7 +291,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_CHALLENGE_INCREASING_DIFFICULTY</Tag>
 		<English>Challenge - Increasing Difficulty</English>
-		<French>Difficulté progressive</French>
+		<French>Challenge - Difficulté progressive</French>
 		<German>Steigende Schwierigkeit</German>
 		<Italian>Difficoltà progressiva</Italian>
 		<Spanish>Dificultad ascendente</Spanish>
@@ -301,7 +301,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_CHALLENGE_INCREASING_DIFFICULTY_HELP</Tag>
 		<English>Every 100 turns (on Normal Speed) the games difficulty is increased by 1 until it reaches Nightmare.</English>
-		<French>Chaque 100 tours (vitesse normale) la difficulté du jeu est augmentées d'un niveau jusqu'à atteindre 'Nightmare'.</French>
+		<French>Chaque 100 tours (vitesse normale) la difficulté du jeu est augmentées d'un niveau jusqu'à atteindre le niveau 'Cauchemar'.</French>
 		<German>Alle 100 Runden (bei normaler Spielgeschwindigkeit) wird der Schwierigkeitsgrad um eine Stufe erhöht, bis "Gottheit" erreicht ist. Es gibt eine BUG-Option, die hierfür eine feinere Einstellung ermöglicht Nightmare.</German>
 		<Italian>Ogni 100 turni (a velocità normale) la difficoltà del gioco aumenta di 1 livello finché non raggiunge il livello incubo</Italian>
 		<Spanish>Cada 100 turnos (a velocidad Normal) la dificultad de la partida subirá un nivel hasta alcanzar "Nightmare".</Spanish>
@@ -311,7 +311,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_EXP_COMPLETE_KILLS</Tag>
 		<English>Expansion - Require Complete Kills</English>
-		<French>Annihilation totale requise</French>
+		<French>Expansion - Annihilation totale requise</French>
 		<German>Vollständige Vernichtung</German>
 		<Italian>Annientamento totale</Italian>
 		<Spanish>Requerir la destrucción total</Spanish>
@@ -329,7 +329,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_LEADER_COMPLEX_TRAITS</Tag>
 		<English>Leader - Complex Traits</English>
-		<French>Traits Complexes</French>
+		<French>Leader - Traits Complexes</French>
 		<German>Komplexe Charakterzüge</German>
 		<Italian>Tratti complessi</Italian>
 		<Polish>Z&#179;o&#191;one Cechy</Polish>
@@ -347,7 +347,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_MAP_CULTURALLY_LINKED_STARTS</Tag>
 		<English>Map - Culturally Linked Starts</English>
-		<French>Emplacements en fonction des Liens Culturels</French>
+		<French>Carte - Emplacements en fonction des Liens Culturels</French>
 		<German>Kulturorientierter Spielbeginn</German>
 		<Italian>Avvio legato alla cultura</Italian>
 		<Spanish>Inicio según vínculos culturales</Spanish>
@@ -367,7 +367,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_ANIMAL_DANGEROUS</Tag>
 		<English>Animal - Dangerous Wildlife</English>
-		<French>Faune dangereuse</French>
+		<French>Animaux - Faune dangereuse</French>
 		<Russian>Опасная фауна</Russian>
 		<Italian>Fauna selvatica pericolosa</Italian>
 	</TEXT>
@@ -381,7 +381,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_RELIGION_DIVINE_PROPHETS</Tag>
 		<English>Religion - Divine Prophets</English>
-		<French>Prophètes Divins</French>
+		<French>Religion - Prophètes Divins</French>
 		<German>Göttliche Propheten</German>
 		<Italian>Profeti divini</Italian>
 		<Spanish>Profetas divinos</Spanish>
@@ -401,7 +401,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_UNIT_DOWNSIZING_IS_PROFITABLE</Tag>
 		<English>Unit - Downsizing is Profitable</English>
-		<French>Réduction des effectifs rentable</French>
+		<French>Unités - Réduction des effectifs rentable</French>
 		<Russian>Прибыльное сокращение</Russian>
 		<Italian>Ridimensionamento redditizio</Italian>
 	</TEXT>
@@ -415,7 +415,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_COMBAT_EQUIPMENT</Tag>
 		<English>Combat - Arms and Equipment</English>
-		<French>Mode de Combat C2C - Armes and Équipement</French>
+		<French>Combat - Armes et Équipement</French>
 		<German>C2C-Kampfmod - Waffen und Ausrüstung</German>
 		<Polish>C2C Modyfikacja Bojowa - Wyposa&#191;enie i uzbrojenie.</Polish>
 		<Russian>Оружие и снаряжение</Russian>
@@ -433,7 +433,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_COMBAT_FIGHT_OR_FLIGHT</Tag>
 		<English>Combat - Fight or Flight</English>
-		<French>Mode de Combat C2C - Bataille ou Fuite</French>
+		<French>Combat - Bataille ou Fuite</French>
 		<German>C2C-Kampfmod - Kampf oder Flucht</German>
 		<Italian>Combatti o fuggi (mod di combattimento per C2C)</Italian>
 		<Polish>C2C Modyfikacja Bojowa - Walcz lub Uciekaj</Polish>
@@ -451,7 +451,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_CULTURE_FIXED_BORDERS</Tag>
 		<English>Culture - Fixed Borders</English>
-		<French>Frontières fixes</French>
+		<French>Culture - Frontières fixes</French>
 		<German>Feste Grenzen</German>
 		<Italian>Confini fissi</Italian>
 		<Spanish>Fronteras fijables</Spanish>
@@ -471,7 +471,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_CULTURE_FLIPPING_AFTER_CONQUEST</Tag>
 		<English>Culture - City Flipping after Conquest</English>
-		<French>Conversion possible après conquête</French>
+		<French>Culture - Conversion possible après conquête</French>
 		<German>Stadtbefreiung durch Eroberung</German>
 		<Italian>Conversione città dopo conquista</Italian>
 		<Spanish>Las ciudades pueden cambiar de bando tras la conquista</Spanish>
@@ -489,7 +489,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_UNIT_GREAT_COMMANDERS</Tag>
 		<English>Unit - Great Commanders</English>
-		<French>Commandants Illustres</French>
+		<French>Unités - Commandants de terrain</French>
 		<German>Große Anführer</German>
 		<Italian>Gran comandanti</Italian>
 		<Spanish>Grandes comandantes</Spanish>
@@ -499,7 +499,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_UNIT_GREAT_COMMODORES</Tag>
 		<English>Unit - Great Commodores</English>
-		<French>Unité - Grands Commissaires</French>
+		<French>Unités - Amiraux de terrain</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_UNIT_GREAT_COMMANDERS_HELP</Tag>
@@ -514,12 +514,12 @@
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_UNIT_GREAT_COMMODORES_HELP</Tag>
 		<English>Great Commodores lead their fleets into open combat on the open seas.</English>
-		<French>Les grands commissaires conduisent leurs flottes au combat ouvert en haute mer.</French>
+		<French>Les Amiraux de terrain (Commodores) conduisent leurs flottes au combat ouvert en haute mer.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_COMBAT_HEART_OF_WAR</Tag>
 		<English>Combat - Heart of War</English>
-		<French>Mode de Combat C2C - Le Coeur de la Guerre</French>
+		<French>Combat - Coeur de Guerre</French>
 		<German>C2C-Kampfmod - Herz des Krieges</German>
 		<Polish>C2C Modyfikacja Bojowa - Serce Wojny</Polish>
 		<Russian>Сердце войны</Russian>
@@ -537,7 +537,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_COMBAT_HIDE_SEEK</Tag>
 		<English>Combat - Hide and Seek</English>
-		<French>Mode de Combat C2C - Cache-cache</French>
+		<French>Combat - Cache-cache</French>
 		<German>C2C-Kampfmod - Versteckspiel</German>
 		<Russian>Игра в прятки</Russian>
 		<Italian>Sistema di invisibilità migliorato (mod di combattimento per C2C)</Italian>
@@ -553,7 +553,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_UNIT_INFINITE_XP</Tag>
 		<English>Unit - Infinite XP</English>
-		<French>EXP Infinie</French>
+		<French>Unités - EXP Infinie</French>
 		<German>Unendlich Erfahrungspunkte</German>
 		<Italian>Punti esperienza infiniti</Italian>
 		<Polish>Niesko&#241;czone XP</Polish>
@@ -571,7 +571,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_RELIGION_INQUISITIONS</Tag>
 		<English>Religion - Inquisitions</English>
-		<French>Inquisitions</French>
+		<French>Religion - Inquisitions</French>
 		<German>Inquisitionen</German>
 		<Italian>Inquisizione</Italian>
 		<Spanish>Inquisiciones</Spanish>
@@ -588,7 +588,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_EXP_LARGER_CITIES</Tag>
 		<English>Expansion - Larger Cities without Metropolitan Administration</English>
-		<French>Villes plus Larges sans Metropolitan Administration</French>
+		<French>Expansion - Villes plus Larges sans l'Administration de Métropole</French>
 		<German>Größere Städte ohne Stadtverwaltung</German>
 		<Italian>Città più grandi senza amministrazione metropolitana</Italian>
 		<Spanish>Ciudades mayores sin Administración metropolitana</Spanish>
@@ -608,7 +608,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_LEADER_DEVELOPING</Tag>
 		<English>Leader - Developing</English>
-		<French>Développement des Leaders</French>
+		<French>Leader - Développement</French>
 		<German>Führungskräfteentwicklung</German>
 		<Italian>Sviluppo dei leader</Italian>
 		<Polish>Ulepszanie Przyw&#243;dc&#243;w</Polish>
@@ -626,7 +626,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_LEADER_UNRESTRICTED</Tag>
 		<English>Leader - Unrestricted</English>
-		<French>Pas de restriction de dirigeants</French>
+		<French>Leader - Pas de restriction</French>
 		<German>Beliebige Staatsoberhäupter</German>
 		<Italian>Leader senza restrizioni</Italian>
 		<Spanish>Líderes sin restricciones</Spanish>
@@ -644,7 +644,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_RELIGION_LIMITED</Tag>
 		<English>Religion - Limited Founding</English>
-		<French>Religions Limitées</French>
+		<French>Religion - Fondation Limitée</French>
 		<German>Limitierte Religionen</German>
 		<Italian>Religioni limitate</Italian>
 		<Spanish>Religiones limitadas</Spanish>
@@ -664,7 +664,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_NO_WORLDBUILDER</Tag>
 		<English>Disable - Worldbuilder</English>
-		<French>Verrouiller les 'Assets' modifiés</French>
+		<French>Désactivation - Éditeur de Monde</French>
 		<German>Modifizierte Assets sperren</German>
 		<Italian>Blocca la modifica degli assets</Italian>
 		<Spanish>Bloquear parámetros modificados</Spanish>
@@ -681,7 +681,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_EXP_MAXIMUM_POPULATION</Tag>
 		<English>Expansion - Maximum Population</English>
-		<French>Maximum de Population</French>
+		<French>Expansion - Maximum de Population</French>
 		<German>Bevölkerungsmaximum</German>
 		<Polish>Maksymalna Populacja</Polish>
 		<Russian>Максимальное население</Russian>
@@ -699,7 +699,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_CULTURE_MIN_CITY_BORDER</Tag>
 		<English>Culture - Minimum City Border</English>
-		<French>Territoire Minimum des Villes</French>
+		<French>Culture - Territoire Minimum des Villes</French>
 		<German>Minimale Stadtgrenze</German>
 		<Spanish>Fronteras mínimas de ciudad</Spanish>
 		<Polish>Minimalne Granice Miast</Polish>
@@ -719,7 +719,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_MAP_MORE_RESOURCES</Tag>
 		<English>Map - More Resources</English>
-		<French>Ressources supplémentaires</French>
+		<French>Carte - Ressources supplémentaires</French>
 		<German>Zusätzliche Ressourcen</German>
 		<Polish>Wi&#234;cej Zasob&#243;w.</Polish>
 		<Russian>Больше ресурсов</Russian>
@@ -737,7 +737,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_MAP_MORE_RIVERS</Tag>
 		<English>Map - More Rivers</English>
-		<French>Fleuves supplémentaires</French>
+		<French>Carte - Fleuves supplémentaires</French>
 		<German>Zusätzliche Flüsse</German>
 		<Polish>Wi&#234;cej Rzek</Polish>
 		<Russian>Больше рек</Russian>
@@ -755,7 +755,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_UNIT_MORE_XP_TO_LEVEL</Tag>
 		<English>Unit - More XP to Level</English>
-		<French>XP requis x2</French>
+		<French>Unités - Plus d'EXP requis</French>
 		<German>Langsamere Einheitenentwicklung</German>
 		<Polish>Wi&#234;cej XP na poziom.</Polish>
 		<Russian>Больше опыта для уровня</Russian>
@@ -773,7 +773,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_BARBARIAN_NEANDERTHAL_CITIES</Tag>
 		<English>Barbarian - Neanderthal Cities</English>
-		<French>Villes Néanderthal</French>
+		<French>Barbares - Villes Néanderthal</French>
 		<German>Neandertalerstädte</German>
 		<Italian>Città neanderthal</Italian>
 		<Russian>Города неандертальцев</Russian>
@@ -789,7 +789,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_COMBAT_NEW_RANDOM_SEED</Tag>
 		<English>Combat - New Random Seed on Reload</English>
-		<French>Nouveau classement aléatoire au rechargement</French>
+		<French>Combat - Nouv. valeurs aléatoires au rechargement</French>
 		<German>Neustart des Zufallszahlengenerators bei erneutem Laden</German>
 		<Italian>Nuovo seme casuale a ogni ricarica del gioco</Italian>
 		<Spanish>Nueva "seed" aleatoria al volver a cargar</Spanish>
@@ -807,7 +807,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_BARBARIAN_NONE</Tag>
 		<English>Barbarian - No Barbarians</English>
-		<French>Pas de Barbares</French>
+		<French>Barbares - Pas de Barbares</French>
 		<German>Keine Barbaren</German>
 		<Russian>Без варваров</Russian>
 		<Italian>Nessun barbaro</Italian>
@@ -825,7 +825,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_CULTURE_NO_CITY_FLIPPING</Tag>
 		<English>Culture - No City Flipping From Culture</English>
-		<French>Pas de conversion culturelle</French>
+		<French>Culture - Pas de conversion culturelle</French>
 		<German>Keine kulturbedingten Stadtübernahmen</German>
 		<Italian>Nessuna conversione culturale</Italian>
 		<Spanish>Sin cambio de cultura de las ciudades</Spanish>
@@ -843,7 +843,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_NO_CITY_RAZING</Tag>
 		<English>Disable - City Razing</English>
-		<French>Impossible de raser les villes</French>
+		<French>Désactivation - Raser les villes</French>
 		<German>Keine Stadtvernichtung</German>
 		<Italian>Nessuna città rasa al suolo</Italian>
 		<Spanish>Sin arrasar ciudades</Spanish>
@@ -861,7 +861,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_NO_EVENTS</Tag>
 		<English>Disable - Random Events</English>
-		<French>Pas d'événements aléatoires</French>
+		<French>Désactivation - Événements aléatoires</French>
 		<German>Keine Zufallsereignisse</German>
 		<Italian>Nessun evento casuale</Italian>
 		<Spanish>Sin sucesos al azar</Spanish>
@@ -879,7 +879,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_NO_FUTURE</Tag>
 		<English>Disable - Future Era</English>
-		<French>Pas d'Ere Futuriste</French>
+		<French>Désactivation - Ère Futuriste</French>
 		<German>Keine zukünftigen Zeitalter</German>
 		<Italian>Era transumana e futura disattivate</Italian>
 		<Spanish>Sin eras futuristas</Spanish>
@@ -899,7 +899,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_MAP_NO_GOODY_HUTS</Tag>
 		<English>Map - No Tribal Villages</English>
-		<French>Pas de village tribal</French>
+		<French>Carte - Pas de village tribal</French>
 		<German>Keine Stammesdörfer</German>
 		<Italian>Nessun villaggio tribale</Italian>
 		<Spanish>Sin aldeas tribales</Spanish>
@@ -917,7 +917,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_LEADER_NO_NEGATIVE_TRAITS</Tag>
 		<English>Leader - No Negative Traits</English>
-		<French>Pas de Traits Négatifs</French>
+		<French>Leader - Pas de Traits Négatifs</French>
 		<German>Keine negativen Charakterzüge</German>
 		<Italian>Nessun tratto negativo</Italian>
 		<Polish>Brak Negatywnych Cech</Polish>
@@ -935,7 +935,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_NO_NUKES</Tag>
 		<English>Disable - Nukes</English>
-		<French>Pas de nucléaire</French>
+		<French>Désactivation - Armes nucléaires</French>
 		<German>Keine Nuklearwaffen</German>
 		<Italian>Nessuna bomba atomica</Italian>
 		<Polish>Brak Broni Nuklearnej</Polish>
@@ -953,7 +953,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_NO_TECH_BROKERING</Tag>
 		<English>Disable - Technology Brokering</English>
-		<French>Pas de Commerce de Technologies</French>
+		<French>Désactivation - Commerce de Technologies</French>
 		<German>Kein Technologieaustausch</German>
 		<Italian>Nessun commercio di tecnologie scoperte autonomamente</Italian>
 		<Spanish>Sin intermediación con tecnología</Spanish>
@@ -972,7 +972,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_TECH_NO_HANDICAPS_FOR_HUMANS</Tag>
 		<English>Tech - No Technology Handicaps for Humans</English>
-		<French>Pas de Diff. Tech pour les Joueurs</French>
+		<French>Tech - Pas de Diff. Tech pour les Joueurs</French>
 		<Italian>Nessun handicap tecnologico per i giocatori umani</Italian>
 		<Russian>Без снисхождений в научной гонке для живых игроков</Russian>
 	</TEXT>
@@ -986,7 +986,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_NO_TECH_TRADING</Tag>
 		<English>Disable - Technology Trading</English>
-		<French>Aucun échange de Technologies</French>
+		<French>Désactivation - Échange de Technologies</French>
 		<German>Kein Technologiehandel</German>
 		<Italian>Commercio di tecnologie disattivato</Italian>
 		<Spanish>Sin intercambio de tecnología</Spanish>
@@ -1004,7 +1004,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_NO_VASSAL_STATES</Tag>
 		<English>Disable - Vassal States</English>
-		<French>Pas d'état vassal</French>
+		<French>Désactivation - Pas d'état vassal</French>
 		<German>Keine Vasallenstaaten</German>
 		<Italian>Nessun stato vassallo</Italian>
 		<Spanish>Sin estados vasallos</Spanish>
@@ -1022,7 +1022,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_CHALLENGE_ONE_CITY</Tag>
 		<English>Challenge - One-City Challenge</English>
-		<French>Défier une ville</French>
+		<French>Challenge - Défi "une seule ville"</French>
 		<German>Einzelstadt-Wettkampf</German>
 		<Italian>Sfida città singola</Italian>
 		<Spanish>Reto de una sola ciudad</Spanish>
@@ -1040,7 +1040,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_COMBAT_OUTBREAKS_AND_AFFLICTIONS</Tag>
 		<English>Combat - Outbreaks and Afflictions</English>
-		<French>Mod de Combat C2C - Éclosions et afflictions</French>
+		<French>Combat - Éclosions et afflictions</French>
 		<German>C2C-Kampfmod - Zivile Notstände</German>
 		<Russian>Эпидемии и криминал</Russian>
 		<Italian>Focolai e afflizioni (mod di combattimento per C2C)</Italian>
@@ -1056,7 +1056,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_EXP_OVEREXPANSION_PENALTIES</Tag>
 		<English>Expansion - Happiness Penalties</English>
-		<French>Pénalités de Bonheur en cas de sur-expansion</French>
+		<French>Expansion - Pénalités de Bonheur</French>
 		<Russian>Не в размерах счастье</Russian>
 		<Italian>Penalità di felicità per l'espansione eccessiva</Italian>
 	</TEXT>
@@ -1071,7 +1071,7 @@
 		<Tag>TXT_KEY_GAMEOPTION_ANIMAL_PEACE_AMONG_NPCS</Tag>
 		<English>Animal - Peace Among NPCs</English>
 		<German>Frieden zwischen Computergegnern</German>
-		<French>Paix entre les PNJs</French>
+		<French>Animaux - Paix entre les PNJs</French>
 		<Russian>Компьютерное перемирие</Russian>
 		<Italian>Pace tra i giocatori AI</Italian>
 	</TEXT>
@@ -1086,7 +1086,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_ENABLE_PERMANENT_ALLIANCES</Tag>
 		<English>Enable - Permanent Alliances</English>
-		<French>Alliances permanentes</French>
+		<French>Activation - Alliances permanentes</French>
 		<German>Permanente Allianzen</German>
 		<Italian>Alleanze permanenti</Italian>
 		<Spanish>Alianzas permanentes</Spanish>
@@ -1104,7 +1104,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_MAP_PERSONALIZED</Tag>
 		<English>Map - Personalized</English>
-		<French>Carte Personnalisée</French>
+		<French>Carte - Personnalisée</French>
 		<German>Personalisierte Karte</German>
 		<Italian>Mappa personalizzata</Italian>
 		<Spanish>Mapa personalizado</Spanish>
@@ -1124,7 +1124,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_RELIGION_PICK</Tag>
 		<English>Religion - Choose Upon Founding</English>
-		<French>Choisir religions</French>
+		<French>Religion - Choix lors de la Fondation</French>
 		<German>Religionen wählen</German>
 		<Italian>Scegli religioni</Italian>
 		<Spanish>Elegir religión</Spanish>
@@ -1142,7 +1142,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_LEADER_PURE_TRAITS</Tag>
 		<English>Leader - Pure Traits</English>
-		<French>Traits Purs</French>
+		<French>Leader - Traits Purs</French>
 		<German>Reine Charakterzüge</German>
 		<Italian>Tratti puri</Italian>
 		<Polish>Czyste Cechy</Polish>
@@ -1160,7 +1160,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_BARBARIAN_RAGING</Tag>
 		<English>Barbarian - Raging</English>
-		<French>Barbares déchaînés</French>
+		<French>Barbares - Déchaînés</French>
 		<German>Wütende Barbaren</German>
 		<Italian>Barbari scatenati</Italian>
 		<Spanish>Bárbaros coléricos</Spanish>
@@ -1178,7 +1178,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_AI_RANDOM_PERSONALITIES</Tag>
 		<English>AI - Random Personalities</English>
-		<French>Personnalités aléatoires</French>
+		<French>I.A. - Personnalités aléatoires</French>
 		<German>Zufällige Persönlichkeiten</German>
 		<Italian>Personalità casuali</Italian>
 		<Spanish>Personalidades al azar</Spanish>
@@ -1196,7 +1196,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_ADVANCED_REALISTIC_CORPORATIONS</Tag>
 		<English>Advanced - Realistic Corporations</English>
-		<French>Corporations Réalistes</French>
+		<French>Avancé - Corporations Réalistes</French>
 		<German>Realistische Kapitalgesellschaften</German>
 		<Italian>Corporazioni realistiche</Italian>
 		<Spanish>Corporaciones realistas</Spanish>
@@ -1216,7 +1216,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_CULTURE_REALISTIC_SPREAD</Tag>
 		<English>Culture - Realistic Culture Spread</English>
-		<French>Expansion Culturelle Réaliste</French>
+		<French>Culture - Expansion Culturelle Réaliste</French>
 		<German>Realistische Kulturausbreitung</German>
 		<Italian>Diffusione realistica della cultura</Italian>
 		<Spanish>Difusión cultural realista</Spanish>
@@ -1237,7 +1237,7 @@
 		<Tag>TXT_KEY_GAMEOPTION_COMBAT_REALISTIC_SIEGE</Tag>
 		<English>Combat - Realistic Siege</English>
 		<German>Realistische Belagerungen</German>
-		<French>Sièges Réalistes</French>
+		<French>Combat - Sièges Réalistes</French>
 		<Italian>Assedi realistici</Italian>
 		<Russian>Правдободобные осады</Russian>
 	</TEXT>
@@ -1253,7 +1253,7 @@
 		<Tag>TXT_KEY_GAMEOPTION_ANIMAL_RECKLESS</Tag>
 		<English>Animal - Reckless</English>
 		<German>Draufgängerische Tiere</German>
-		<French>Animaux téméraires</French>
+		<French>Animaux - Animaux téméraires</French>
 		<Russian>Безрассудные животные</Russian>
 		<Italian>Animali incauti</Italian>
 	</TEXT>
@@ -1268,7 +1268,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_RELIGION_DISABLING</Tag>
 		<English>Religion - Religious Disabling</English>
-		<French>Désactivation des bâtiments Religieux</French>
+		<French>Religion - Désactivation des bâtiments Religieux</French>
 		<German>Deaktivierung von religiösen Gebäuden</German>
 		<Italian>Disabilitazione edifici religiosi non di stato</Italian>
 		<Polish>Wy&#179;&#185;czenia Religijne</Polish>
@@ -1286,7 +1286,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_UNSUPPORTED_REVOLUTION</Tag>
 		<English>Unsupported - Revolutions</English>
-		<French>Révolutions</French>
+		<French>Non supporté - Révolutions</French>
 		<German>Revolutionen</German>
 		<Italian>Rivoluzioni</Italian>
 		<Spanish>Revoluciones</Spanish>
@@ -1306,7 +1306,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_AI_RUTHLESS</Tag>
 		<English>AI - Ruthless</English>
-		<French>IA Sans merci</French>
+		<French>I.A. - Sans merci</French>
 		<German>Skrupellose KI</German>
 		<Italian>IA spietata</Italian>
 		<Spanish>IA despiadada</Spanish>
@@ -1326,7 +1326,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_COMBAT_SURROUND_DESTROY</Tag>
 		<English>Combat - Surround and Destroy</English>
-		<French>Encercler et Détruire</French>
+		<French>Combat - Encercler et Détruire</French>
 		<German>Einkesselung</German>
 		<Italian>Circonda e distruggi (mod di combattimento per C2C)</Italian>
 		<Spanish>Rodea y destruye</Spanish>
@@ -1346,7 +1346,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_COMBAT_SIZE_MATTERS</Tag>
 		<English>Combat - Size Matters</English>
-		<French>Mode de Combat C2C - La Taille Compte!</French>
+		<French>Combat - La Taille Compte!</French>
 		<German>C2C-Kampfmod - Größe ist wichtig</German>
 		<Italian>Le dimensioni contano (mod di combattimento per C2C)</Italian>
 		<Polish>C2C Modyfikacja Bojowa - Rozmiar ma znaczenie.</Polish>
@@ -1364,7 +1364,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_UNSUPPORTED_START_AS_MINORS</Tag>
 		<English>Unsupported - Start as minor civs</English>
-		<French>Civs mineures au départ</French>
+		<French>Non supporté - Civs mineures au départ</French>
 		<German>Start als unbedeutende Zivilisation</German>
 		<Italian>Inizio come civiltà minore</Italian>
 		<Spanish>Empezar como civilizaciones menores</Spanish>
@@ -1384,7 +1384,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_LEADER_START_NO_POSITIVE_TRAITS</Tag>
 		<English>Leader - Start Without Positive Traits</English>
-		<French>Démarrer sans Traits positifs</French>
+		<French>Leader - Démarrer sans Traits positifs</French>
 		<German>Start ohne positive Charakterzüge</German>
 		<Italian>Inizio senza tratti positivi</Italian>
 		<Polish>Rozpocznij Bez Pozytywnych Cech</Polish>
@@ -1402,7 +1402,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_COMBAT_STRENGTH_IN_NUMBERS</Tag>
 		<English>Combat - Strength in Numbers</English>
-		<French>Mode de Combat C2C - La Force du nombre</French>
+		<French>Combat - La Force du nombre</French>
 		<German>C2C-Kampfmod - Gemeinsam sind wir stark</German>
 		<Italian>Forza nel numero (mod di combattimento per C2C)</Italian>
 		<Polish>Si&#179;a w Liczbach</Polish>
@@ -1420,7 +1420,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_TECH_DIFFUSION</Tag>
 		<English>Tech - Diffusion</English>
-		<French>Diffusion des Technologies</French>
+		<French>Tech - Diffusion</French>
 		<German>Technologieverbreitung</German>
 		<Italian>Diffusione tecnologica</Italian>
 		<Spanish>Difusión tecnológica</Spanish>
@@ -1440,7 +1440,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_ANIMAL_TELEPORT_AWARDS</Tag>
 		<English>Animal - Teleport Hunting Awards</English>
-		<French>Téléporter les Trophées de chasse</French>
+		<French>Animaux - Téléporter les Trophées de chasse</French>
 		<German>Teleportation der Jagdbeute</German>
 		<Russian>Телепортация добычи</Russian>
 		<Italian>Teletrasporto delle prede di caccia</Italian>
@@ -1456,7 +1456,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_ENABLE_UNITED_NATIONS</Tag>
 		<English>Enable - United Nations</English>
-		<French>Nations Unies</French>
+		<French>Activation - Nations Unies</French>
 		<German>Vereinte Nationen</German>
 		<Italian>Nazioni unite</Italian>
 		<Spanish>Naciones Unidas</Spanish>
@@ -1476,7 +1476,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_NO_NATIONAL_UNIT_LIMIT</Tag>
 		<English>Disable - National Unit Limits</English>
-		<French>Unités Nationales Illimitées</French>
+		<French>Désactivation - Limite des Unités Nationales</French>
 		<German>Unbegrenzte Anzahl an Nationaleinheiten</German>
 		<Italian>Unità nazionali illimitate</Italian>
 		<Polish>Nielimitowane Jednostki Narodowe</Polish>
@@ -1494,7 +1494,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_NO_WONDER_LIMIT</Tag>
 		<English>Disable - Wonder Limits</English>
-		<French>Merveilles Illimitées</French>
+		<French>Désactivation - Limites de Merveilles</French>
 		<German>Unbegrenzte Wunderanzahl</German>
 		<Italian>Meraviglie illimitate</Italian>
 		<Spanish>Maravillas ilimitadas</Spanish>
@@ -1514,7 +1514,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_COMBAT_UPRANGE</Tag>
 		<English>Combat - Uprange and Personal</English>
-		<French>Mode de Combat C2C - Portée et proximité</French>
+		<French>Combat - Portée et proximité</French>
 		<German>C2C-Kampfmod - Nah und fern</German>
 		<Polish>C2C Modyfikacja Bojowa - Walka wr&#234;cz i dystansowa</Polish>
 		<Russian>Лично, и в лицо</Russian>
@@ -1532,7 +1532,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_EXP_UPSCALED_BUILDING_AND_UNIT_COSTS</Tag>
 		<English>Expansion - Upscaled Production Time</English>
-		<French>Coûts des Unités et Bâtiments Augmentés</French>
+		<French>Expansion - Coûts des Unités et Bâtiments Augmentés</French>
 		<German>Erhöhte Kosten für Gebäude und Einheiten</German>
 		<Italian>Costi di produzione aumentati</Italian>
 		<Polish>Zwi&#234;kszone koszty jednostek i budynk&#243;w</Polish>
@@ -1550,7 +1550,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_TECH_UPSCALED_COSTS</Tag>
 		<English>Tech - Upscaled Research Time</English>
-		<French>Temps de recherche accru</French>
+		<French>Tech - Temps de recherche augmenté</French>
 		<Russian>Твердый гранит науки</Russian>
 		<Italian>Costi di ricerca aumentati</Italian>
 	</TEXT>
@@ -1564,7 +1564,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_COMBAT_VANILLA_ENGINE</Tag>
 		<English>Combat - Vanilla BTS Combat Engine</English>
-		<French>Moteur de Combat du Jeu d'origine</French>
+		<French>Combat - Moteur de Combat d'origine</French>
 		<German>Unmodifiziertes BTS-Kampfsystem</German>
 		<Italian>Motore di combattimento del gioco originale</Italian>
 		<Russian>Боевая система из «Эпохи огня»</Russian>
@@ -1581,7 +1581,7 @@
 		<Tag>TXT_KEY_GAMEOPTION_TECH_WIN_FOR_LOSING</Tag>
 		<English>Tech - Win for Losing</English>
 		<German>Gewinne für Verlierer</German>
-		<French>Bonus de Technologies pour les perdants</French>
+		<French>Tech - Bonus pour les perdants</French>
 		<Russian>Поощрение отстающих</Russian>
 		<Italian>Ricerca aggiuntiva alle civiltà in svantaggio</Italian>
 	</TEXT>
@@ -1597,7 +1597,7 @@
 		<Tag>TXT_KEY_GAMEOPTION_COMBAT_WITHOUT_WARNING</Tag>
 		<English>Combat - Without Warning</English>
 		<German>C2C-Kampfmod - Ohne Vorwarnung</German>
-		<French>Mod de Combat C2C - Sans Avert.</French>
+		<French>Combat - Sans Avertissement</French>
 		<Russian>Без предупреждения</Russian>
 		<Italian>Combattimento stealth (mod di combattimento per C2C)</Italian>
 	</TEXT>
@@ -1612,7 +1612,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_UNIT_XP_FROM_SPECIALISTS</Tag>
 		<English>Unit - Assigned Specialists XP</English>
-		<French>XP des spécialistes</French>
+		<French>Unités - EXP des spécialistes</French>
 		<German>Erfahrungsgewinn durch anwesende Spezialisten</German>
 		<Polish>XP dla przypisanych specjalist&#243;w.</Polish>
 		<Russian>Опыт от специалистов</Russian>
@@ -1630,7 +1630,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_UNSUPPORTED_ZONE_OF_CONTROL</Tag>
 		<English>Unsupported - Zone of Control</English>
-		<French>Zones de Contrôle</French>
+		<French>Non supporté - Zones de Contrôle</French>
 		<German>Kontrollzonen</German>
 		<Polish>Strefy Kontroli</Polish>
 		<Russian>Зоны контроля</Russian>
