@@ -1611,7 +1611,7 @@
 		<Russian>Ìèô î ôàçàíå</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_FOLKLORE_E_PHoeNIX</Tag>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_E_PHOENIX</Tag>
 		<English>Folklore (E) - Phoenix</English>
 		<French>Mythe du Phoenix (E)</French>
 		<German>
@@ -1838,7 +1838,7 @@
 		<Russian>Ìèô î òóêàíå</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_FOLKLORE_THREE_ToeD_SLOTH</Tag>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_THREE_TOED_SLOTH</Tag>
 		<English>Folklore - Three-toed Sloth</English>
 		<French>Mythe du paresseux</French>
 		<German>
@@ -2435,6 +2435,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SHELL_WORKERS_HUT_PEDIA</Tag>
 		<English>Tortoiseshell or tortoise shell is a material produced mainly from the shell of the hawksbill turtle, an endangered species. It was widely used in the 1960s and 1970s in the manufacture of items such as combs, sunglasses, guitar picks and knitting needles. In 1973, the trade of tortoiseshell worldwide was banned under CITES (the Convention on International Trade in Endangered Species).[PARAGRAPH:2]Tortoiseshell was attractive to manufacturers and consumers because of its beautiful appearance and its durability, and its organic warmth against the skin. It was used in guitar picks because it can be easily shaped, has excellent bending properties, and is very durable. Tortoiseshell picks could sometimes be used for years. Piqué-work, jewelry made from tortoiseshell inlaid with precious metals in patterns or pictures, was made during the Victorian Era and was highly prized.[PARAGRAPH:2]There have been a number of faux tortoiseshell materials developed since the 1970s, most of which mimic the appearance of tortoiseshell. Tortex is a material that was created to replace tortoiseshell guitar picks and has been widely accepted as a suitable substitute.</English>
+		<French>La carapace de tortue ou écaille de tortue est un matériau principalement produit à partir de la carapace de la tortue imbriquée, une espèce en danger. Il a été largement utilisé dans les années 1960 et 1970 pour la fabrication d’objets tels que des peignes, des lunettes de soleil, des médiators de guitare et des aiguilles à tricoter. En 1973, le commerce de l’écaille de tortue dans le monde entier a été interdit en vertu de la CITES (Convention sur le commerce international des espèces de faune et de flore sauvages menacées). [PARAGRAPH:2] L’écaille de tortue était attrayante pour les fabricants et les consommateurs en raison de son aspect magnifique, de sa durabilité et de sa chaleur organique contre la peau. Elle était utilisée pour les médiators de guitare car elle peut être facilement façonnée, possède d'excellentes propriétés de flexion et est très résistante. Les médiators en écaille de tortue pouvaient parfois être utilisés pendant des années. Le piqué, un travail en relief, ou la joaillerie réalisée à partir d’écaille de tortue incrustée de métaux précieux selon des motifs ou des images, a été fabriqué durant l’époque victorienne et était très prisée. [PARAGRAPH:2] Depuis les années 1970, plusieurs matériaux simulant l’écaille de tortue ont été développés, la plupart imitant l’aspect de l’écaille de tortue. Tortex est un matériau créé pour remplacer l’écaille de tortue dans la fabrication de médiators de guitare et a été largement accepté comme un substitut approprié.</French>
 		<Italian>Un guscio di testuggine è un materiale prodotto principalmente dal guscio della tartaruga embricata, una specie in via di estinzione. È stato ampiamente utilizzato negli anni 60 e 70 per la fabbricazione di articoli come pettini, occhiali da sole, plettri e aghi per lavoro a maglia. Nel 1973, il commercio di tartaruga in tutto il mondo è stato vietato dalla CITES (Convenzione sul commercio internazionale delle specie minacciate di estinzione).[PARAGRAPH:2]Il guscio di testuggine era attraente per i produttori ed i consumatori a causa della sua bella apparenza e la sua durata, e il suo calore organica contro la pelle. Veniva utilizzata nei plettri perché poteva essere facilmente modellata, ha eccellenti proprietà di curvatura, ed è molto resistente. I gusci di tartaruga potrebbero talvolta essere utilizzati per anni. Durante l'era vittoriana venivano realizzati gioielli di tartaruga intarsiati con metalli preziosi nei modelli, ed erano molto apprezzati.[PARAGRAPH:2]Ci sono stati un certo numero di materiali eco-tartaruga sviluppato dal 1970, la maggior parte dei quali imitavano l'aspetto della tartaruga. Il Tortex è un materiale creato per sostituire i plettri di tartaruga ed è stato ampiamente accettato come un sostituto adatto.</Italian>
 		<Polish>Skorupy &#191;&#243;&#179;wi od dawien dawna by&#179;y wykorzystywane do produkcji ozd&#243;b i prostych narz&#234;dzi na ca&#179;ym &#156;wiecie.</Polish>
 	</TEXT>
@@ -2449,7 +2450,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_TRADITION_NAVAL_MASCOT</Tag>
 		<English>Tradition - Naval Mascot</English>
-		<French>Tradition - Mascotte Navale</French>
+		<French>Tradition - Mascotte navale</French>
 		<Italian>Tradizione della mascotte navale</Italian>
 		<Polish>Tradycja - Bandera (Maskotka)</Polish>
 		<Russian>Òðàäèöèè øòàíäàðòîâ</Russian>
@@ -2486,7 +2487,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FLOCKS_OF_TURKEY</Tag>
 		<English>Flocks of Turkey</English>
-		<French>Troupeaux de Dindons</French>
+		<French>Troupeaux de dindons</French>
 		<Italian>Trave di tacchini</Italian>
 		<Russian>Ñòàÿ èíäååê</Russian>
 	</TEXT>

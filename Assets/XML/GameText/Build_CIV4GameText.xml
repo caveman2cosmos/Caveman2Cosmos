@@ -370,13 +370,13 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_FOSSIL_DIG_SITE</Tag>
 		<English>Build [LINK=IMPROVEMENT_FOSSIL_DIG_SITE]Fossil Dig Site[\LINK]</English>
-		<French>Construire un [LINK=IMPROVEMENT_FOSSIL_DIG_SITE]Site de Fouilles Fossiles[\LINK]</French>
+		<French>Construire un [LINK=IMPROVEMENT_FOSSIL_DIG_SITE]Site de fouilles fossiles[\LINK]</French>
 		<Italian>[LINK=IMPROVEMENT_FOSSIL_DIG_SITE]Scavo archeologico di fossili[\LINK] (costruzione)</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_FRUIT_GATHERING_CAMP_KILL</Tag>
 		<English>Build [LINK=IMPROVEMENT_FRUIT_GATHERING_CAMP]Fruit Gathering Camp[\LINK] (Consumed)</English>
-		<French>Installer un [LINK=IMPROVEMENT_FRUIT_GATHERING_CAMP]Camp de Récolte de Fruits[\LINK]</French>
+		<French>Installer un [LINK=IMPROVEMENT_FRUIT_GATHERING_CAMP]Camp de récolte de fruits[\LINK]</French>
 		<German>[LINK=IMPROVEMENT_FRUIT_GATHERING_CAMP]Früchte sammeln[\LINK]</German>
 		<Italian>[LINK=IMPROVEMENT_FRUIT_GATHERING_CAMP]Campo di raccolta di frutti[\LINK] (costruzione)</Italian>
 		<Spanish>Construir un [LINK=IMPROVEMENT_FRUIT_GATHERING_CAMP]Campo de cultivo de frutas[\LINK]</Spanish>
@@ -386,7 +386,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_FRUIT_PICKING_CAMP</Tag>
 		<English>Build [LINK=IMPROVEMENT_FRUIT_PICKING_CAMP]Fruit Picking Camp[\LINK]</English>
-		<French>Mettre en place une [LINK=IMPROVEMENT_FRUIT_PICKING_CAMP]pépinière d'Arbres[\LINK]</French>
+		<French>Mettre en place une [LINK=IMPROVEMENT_FRUIT_PICKING_CAMP]Pépinière d'arbres[\LINK]</French>
 		<German>[LINK=IMPROVEMENT_FRUIT_PICKING_CAMP]Früchte pflücken[\LINK]</German>
 		<Italian>[LINK=IMPROVEMENT_FRUIT_PICKING_CAMP]Campo di raccolta avanzata di frutti[\LINK] (costruzione)</Italian>
 		<Spanish>Crear una [LINK=IMPROVEMENT_FRUIT_PICKING_CAMP]Zona de reforestación[\LINK]</Spanish>
@@ -396,13 +396,13 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_GEOGLYPH</Tag>
 		<English>Build [LINK=IMPROVEMENT_GEOGLYPH]Geoglyph Inscriptions[\LINK]</English>
-		<French>Construire des [LINK=IMPROVEMENT_GEOGLYPH]Inscriptions Géoglyphes[\LINK]</French>
+		<French>Construire des [LINK=IMPROVEMENT_GEOGLYPH]Inscriptions géoglyphes[\LINK]</French>
 		<Italian>[LINK=IMPROVEMENT_GEOGLYPH]Geoglifo[\LINK] (costruzione)</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_GEOTHERMAL_FACTORY</Tag>
 		<English>Build [LINK=IMPROVEMENT_GEOTHERMAL_FACTORY]Geothermal Factory[\LINK]</English>
-		<French>Construire une [LINK=IMPROVEMENT_GEOTHERMAL_FACTORY]Centrale Géothermique[\LINK]</French>
+		<French>Construire une [LINK=IMPROVEMENT_GEOTHERMAL_FACTORY]Centrale géothermique[\LINK]</French>
 		<German>Errichte eine [LINK=IMPROVEMENT_GEOTHERMAL_FACTORY]Geothermalfabrik[\LINK]</German>
 		<Italian>[LINK=IMPROVEMENT_GEOTHERMAL_FACTORY]Centrale geotermica[\LINK] (costruzione)</Italian>
 		<Spanish>Construir una [LINK=IMPROVEMENT_GEOTHERMAL_FACTORY]Planta geotérmica[\LINK]</Spanish>
@@ -412,7 +412,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_GRAPE_GATHERING_CAMP_KILL</Tag>
 		<English>Build [LINK=IMPROVEMENT_GRAPE_GATHERING_CAMP]Grape Gathering Camp[\LINK] (Consumed)</English>
-		<French>Installer un [LINK=IMPROVEMENT_GRAPE_GATHERING_CAMP]Camp de récolte de Raisins[\LINK]</French>
+		<French>Installer un [LINK=IMPROVEMENT_GRAPE_GATHERING_CAMP]Camp de récolte de raisins[\LINK]</French>
 		<German>[LINK=IMPROVEMENT_GRAPE_GATHERING_CAMP]Trauben sammeln[\LINK]</German>
 		<Italian>[LINK=IMPROVEMENT_GRAPE_GATHERING_CAMP]Campo di raccolta di uva[\LINK] (costruzione)</Italian>
 		<Spanish>Construir un [LINK=IMPROVEMENT_GRAPE_GATHERING_CAMP]Campo de cultivo de uvas[\LINK]</Spanish>
@@ -979,7 +979,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_STONE_TOOLS_WORKSHOP</Tag>
 		<English>Build [LINK=IMPROVEMENT_STONE_TOOLS_WORKSHOP]Stone Tools Workshop[\LINK]</English>
-		<French>Construire un [LINK=IMPROVEMENT_STONE_TOOLS_WORKSHOP]Atelier d'Outils en pierre.[\LINK]</French>
+		<French>Construire un [LINK=IMPROVEMENT_STONE_TOOLS_WORKSHOP]Atelier d'outils en pierre.[\LINK]</French>
 		<German>[LINK=IMPROVEMENT_STONE_TOOLS_WORKSHOPP]Steine sammeln[\LINK]</German>
 		<Italian>[LINK=IMPROVEMENT_STONE_TOOLS_WORKSHOP]Officina di strumenti in pietra[\LINK] (costruzione)</Italian>
 		<Spanish>Construir un [LINK=IMPROVEMENT_STONE_TOOLS_WORKSHOP]Taller de herramientas de piedra[\LINK]</Spanish>
@@ -989,7 +989,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_STONE_TOOLS_WORKSHOP_KILL</Tag>
 		<English>Build [LINK=IMPROVEMENT_STONE_TOOLS_WORKSHOP]Stone Tools Workshop[\LINK] (Consumed)</English>
-		<French>Construire un [LINK=IMPROVEMENT_STONE_TOOLS_WORKSHOP]Atelier d'Outils en pierre [\LINK] (Ouvrier Détruit)</French>
+		<French>Construire un [LINK=IMPROVEMENT_STONE_TOOLS_WORKSHOP]Atelier d'outils en pierre [\LINK] (Ouvrier Détruit)</French>
 		<German>[LINK=IMPROVEMENT_STONE_TOOLS_WORKSHOP]Steine sammeln[\LINK]</German>
 		<Italian>[LINK=IMPROVEMENT_STONE_TOOLS_WORKSHOP]Officina di strumenti in pietra[\LINK] (unità consumata)</Italian>
 		<Spanish>Construir un [LINK=IMPROVEMENT_STONE_TOOLS_WORKSHOP]Taller de herramientas de piedra[\LINK] (Consumed)</Spanish>

@@ -280,8 +280,8 @@ with GFC_Control
 			// there must be an ALPHA channel in all fonts
 			with SF_CtrlTheme_Civ4_Control_Font
 			{
-				GFont .Size0_Normal	= GFont("Sylfaen","Regular", 23, GFlags(GFontFeature, GFC_FONT_ALPHA),				  0, GRectMargin(2));
-				GFont .Size0_Bold	= GFont("Sylfaen","Bold",	 23, GFlags(GFontFeature, GFC_FONT_ALPHA, GFC_FONT_BOLD), 0, GRectMargin(2));
+				GFont .Size0_Normal	= GFont("Sylfaen","Regular", 21, GFlags(GFontFeature, GFC_FONT_ALPHA),				  0, GRectMargin(2));
+				GFont .Size0_Bold	= GFont("Sylfaen","Bold",	 21, GFlags(GFontFeature, GFC_FONT_ALPHA, GFC_FONT_BOLD), 0, GRectMargin(2));
 
 				GFont .Size1_Normal	= GFont("Sylfaen","Regular", 23, GFlags(GFontFeature, GFC_FONT_ALPHA),				  0, GRectMargin(2));
 				GFont .Size1_Bold	= GFont("Sylfaen","Bold",	 23, GFlags(GFontFeature, GFC_FONT_ALPHA, GFC_FONT_BOLD), 0, GRectMargin(2));
@@ -292,8 +292,8 @@ with GFC_Control
 				GFont .Size3_Normal	= GFont("Sylfaen","Regular", 23, GFlags(GFontFeature, GFC_FONT_ALPHA),				  0, GRectMargin(2));
 				GFont .Size3_Bold	= GFont("Sylfaen","Bold",	 23, GFlags(GFontFeature, GFC_FONT_ALPHA, GFC_FONT_BOLD), 0, GRectMargin(2));
 
-				GFont .Size4_Normal	= GFont("Sylfaen","Regular", 23, GFlags(GFontFeature, GFC_FONT_ALPHA),				  0, GRectMargin(2));
-				GFont .Size4_Bold	= GFont("Sylfaen","Bold",	 23, GFlags(GFontFeature, GFC_FONT_ALPHA, GFC_FONT_BOLD), 0, GRectMargin(2));
+				GFont .Size4_Normal	= GFont("Sylfaen","Regular", 25, GFlags(GFontFeature, GFC_FONT_ALPHA),				  0, GRectMargin(2));
+				GFont .Size4_Bold	= GFont("Sylfaen","Bold",	 25, GFlags(GFontFeature, GFC_FONT_ALPHA, GFC_FONT_BOLD), 0, GRectMargin(2));
 			}
 			.Normal		= SF_CtrlTheme_Civ4_Control_Font_Size2_Normal;
 			.Bold		= SF_CtrlTheme_Civ4_Control_Font_Size2_Bold;
