@@ -3,6 +3,8 @@ from CvPythonExtensions import CyGlobalContext
 GC = CyGlobalContext()
 GAME = GC.getGame()
 MAP = GC.getMap()
+import TextUtil
+
 
 
 def remove_diacritics(in_text):
@@ -83,11 +85,37 @@ def save(type, prefix, iTurn):
 	dir += '-' + GC.getHandicapInfo(CyPlayer.getHandicapType()).getText()[:5]
 	dir += ".CivBeyondSwordSave"
 
-	#print "before AutoSave.savename : %s" % dir
+	print "before AutoSave.savename : %s" % dir
 
 	dir = remove_diacritics(dir)
 
-	#print "after AutoSave.savename : %s" % dir
+	print "after AutoSave.savename : %s" % dir
+	
+
+	
+	npcclean = False
+	if npcclean:
+		print "Cleaning NPC - for player 41 and 42..."
+		iPlayer = 41
+		pPlayer = GC.getPlayer(iPlayer)
+		pUnit, loop = pPlayer.firstUnit(False)
+		while pUnit:
+			pUnit
+			print "Player %d, Unit ID: %d, %s\n" % (iPlayer, pUnit.getID(), TextUtil.convertToStr(pUnit.getName()))
+			pUnit.kill(False, -1)
+			pUnit, loop = pPlayer.nextUnit(loop, False)
+		print "Unités du joueur 41 supprimées."
+		
+		iPlayer = 42
+		pPlayer = GC.getPlayer(iPlayer)
+		pUnit, loop = pPlayer.firstUnit(False)
+		while pUnit:
+			pUnit
+			print "Player %d, Unit ID: %d, %s\n" % (iPlayer, pUnit.getID(), TextUtil.convertToStr(pUnit.getName()))
+			pUnit.kill(False, -1)
+			pUnit, loop = pPlayer.nextUnit(loop, False)
+		print "Unités du joueur 42 supprimées."
+	
 	GAME.saveGame(str(dir))
 	print "AutoSave.save\n\t%s" % dir
 
