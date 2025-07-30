@@ -25123,22 +25123,44 @@ bool CvPlayer::getItemTradeString(PlayerTypes eOtherPlayer, bool bOffer, bool bS
 		szIcon = GC.getTechInfo((TechTypes)zTradeData.m_iData).getButton();
 		break;
 	case TRADE_RESOURCES:
-		if (bOffer)
-		{
-			int iNumResources = GET_PLAYER(eOtherPlayer).getNumTradeableBonuses((BonusTypes)zTradeData.m_iData);
-			if (bShowingCurrent)
-			{
-				++iNumResources;
-			}
-			szString = gDLL->getText("TXT_KEY_TRADE_RESOURCE", GC.getBonusInfo((BonusTypes)zTradeData.m_iData).getDescription(), iNumResources);
+        {
+            BonusTypes eBonus = (BonusTypes)zTradeData.m_iData;
+            szIcon = GC.getBonusInfo(eBonus).getButton();
 
-		}
-		else
-		{
-			szString.Format( L"%s (%d)", GC.getBonusInfo((BonusTypes)zTradeData.m_iData).getDescription(), getNumTradeableBonuses((BonusTypes)zTradeData.m_iData));
-		}
-		szIcon = GC.getBonusInfo((BonusTypes)zTradeData.m_iData).getButton();
-		break;
+            if (bOffer)
+            {
+                int iNumResources = GET_PLAYER(eOtherPlayer).getNumTradeableBonuses((BonusTypes)zTradeData.m_iData);
+                if (bShowingCurrent)
+                {
+                    ++iNumResources;
+                }
+                szString = gDLL->getText("TXT_KEY_TRADE_RESOURCE", GC.getBonusInfo((BonusTypes)zTradeData.m_iData).getDescription(), iNumResources);
+            }
+            else
+            {
+
+                int iHisResources = GET_PLAYER(eOtherPlayer).getNumAvailableBonuses(eBonus);
+                int iMyResources = getNumAvailableBonuses(eBonus);
+                if (bShowingCurrent)
+                {
+                    ++iHisResources;
+                }
+
+                if (iMyResources == 0 && iHisResources > 0)
+                {
+                    szString = gDLL->getText("TXT_KEY_TRADE_RESOURCE_COLORED_GREEN", GC.getBonusInfo(eBonus).getDescription(), iMyResources);
+                }
+                else if (iMyResources > 0 && iHisResources == 0)
+                {
+                    szString = gDLL->getText("TXT_KEY_TRADE_RESOURCE_COLORED_GREEN", GC.getBonusInfo(eBonus).getDescription(), iMyResources);
+                }
+                else
+                {
+                    szString = gDLL->getText("TXT_KEY_TRADE_RESOURCE_GRAY", GC.getBonusInfo(eBonus).getDescription(), iMyResources);
+                }
+            }
+            break;
+        }
 	case TRADE_CITIES:
 		{
 			CvCity* pCity = NULL;
