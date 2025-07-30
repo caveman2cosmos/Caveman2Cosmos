@@ -2072,6 +2072,14 @@
 		<French>Toutes Ressources</French>
 		<Russian>Все ресурсы</Russian>
 	</TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_TRADE_RESOURCE_COLORED_GREEN</Tag>
+        <English>[COLOR_GREEN]%s1_Bonus[COLOR_REVERT] (%d2)</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_TRADE_RESOURCE_GRAY</Tag>
+        <English>%s1_Bonus (%d2)</English>
+    </TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_ALL_VICTORIES</Tag>
 		<English>All Victories</English>
