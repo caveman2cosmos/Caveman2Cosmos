@@ -1250,7 +1250,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_ACTION_CONSUME_GREAT_PEOPLE</Tag>
-		<English>[COLOR_WARNING_TEXT]Will consume %d1_Num[ICON_GREATPEOPLE][COLOR_REVERT]</English>
+		<English>[COLOR_WARNING_TEXT]Will consume %d1_Num [ICON_GREATPEOPLE][COLOR_REVERT]</English>
 		<French>[COLOR_WARNING_TEXT]Consommera %d1_Num[ICON_GREATPEOPLE][COLOR_REVERT]</French>
 		<German>[COLOR_WARNING_TEXT]Wird %d1_Num[ICON_GREATPEOPLE] verbrauchen[COLOR_REVERT]</German>
 		<Italian>[COLOR__WARNING_TEXT] %d1_Num[ICON_GREATPEOPLE][NUM1:verrà:verranno] sacrificati[COLOR_REVERT]</Italian>
@@ -1507,7 +1507,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_ACTION_MORE_GREAT_PEOPLE</Tag>
-		<English>[COLOR_WARNING_TEXT]Requires %d1_Num More [ICON_GREATPEOPLE][COLOR_REVERT]</English>
+		<English>[COLOR_WARNING_TEXT]Requires %d1_Num More [ICON_GREATPEOPLE] Type(s)[COLOR_REVERT]</English>
 		<French>[COLOR_WARNING_TEXT]Il faut %d1_Num [ICON_GREATPEOPLE] de plus[COLOR_REVERT]</French>
 		<German>[COLOR_WARNING_TEXT]Erfordert %d1_Num weitere [ICON_GREATPEOPLE][COLOR_REVERT]</German>
 		<Italian>[ICON_BULLET][COLOR_WARNING_TEXT]Richiede altri %d1_Num [ICON_GREATPEOPLE][COLOR_REVERT]</Italian>
@@ -2072,6 +2072,14 @@
 		<French>Toutes Ressources</French>
 		<Russian>Все ресурсы</Russian>
 	</TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_TRADE_RESOURCE_COLORED_GREEN</Tag>
+        <English>[COLOR_GREEN]%s1_Bonus[COLOR_REVERT] (%d2)</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_TRADE_RESOURCE_GRAY</Tag>
+        <English>%s1_Bonus (%d2)</English>
+    </TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_ALL_VICTORIES</Tag>
 		<English>All Victories</English>
