@@ -5727,7 +5727,7 @@ int CvPlayerAI::AI_techBuildingValue(TechTypes eTech, int iPathLength, bool& bEn
 
 				if (gPlayerLogLevel > 2)
 				{
-					logBBAI("\tBuilding %S new mechanism value: %d", kLoopBuilding.getDescription(), iBuildingValue);
+					logAiEvaluations(2, "\tPlayer %d evaluate TechBuilding %S new mechanism value: %d", getID(), kLoopBuilding.getDescription(), iBuildingValue);
 				}
 
 				iValue += iBuildingValue;
@@ -10772,7 +10772,7 @@ int CvPlayerAI::AI_unitValue(UnitTypes eUnit, UnitAITypes eUnitAI, const CvArea*
 			case UNITAI_WORKER:
 			{
 				iValue += kUnitInfo.getNumBuilds();
-				iValue += kUnitInfo.getMoves() * iValue / 2;
+				iValue += (kUnitInfo.getMoves()-1) * iValue / 2;
 				//	Scale by how fast a worker works - the extra '4' is a fudge factor
 				//	to make worker values (somewhat) comparable to military unit values
 				//	now that we have workers that can upgrade to military and we need to
@@ -11060,7 +11060,7 @@ int CvPlayerAI::AI_unitValue(UnitTypes eUnit, UnitAITypes eUnitAI, const CvArea*
 			{
 				iValue += iCombatValue;
 				iValue += ((iCombatValue * kUnitInfo.getCollateralDamage()) / 50);
-				iValue += ((iCombatValue * kUnitInfo.getMoves()) / 4);
+				iValue += ((iCombatValue * (kUnitInfo.getMoves()-1)) / 4);
 				iValue += ((iCombatValue * kUnitInfo.getWithdrawalProbability()) / 25);
 				//TB Combat Mods Begin
 				iValue += ((iCombatValue * kUnitInfo.getWithdrawalProbability() * kUnitInfo.getEarlyWithdraw()) / 25);
@@ -11074,7 +11074,7 @@ int CvPlayerAI::AI_unitValue(UnitTypes eUnit, UnitAITypes eUnitAI, const CvArea*
 			{
 				iValue -= AI_unitPropertyValue(eUnit) / 30;	//	Bad properties are good for pillagers
 				iValue += iCombatValue;
-				iValue += (iCombatValue * kUnitInfo.getMoves());
+				iValue += ((iCombatValue * (kUnitInfo.getMoves() - 1)) /4); //Calvitix Try to limit impact of moves
 				iValue += ((iCombatValue * kUnitInfo.getRepel()) / 100);
 				break;
 			}
@@ -11095,7 +11095,7 @@ int CvPlayerAI::AI_unitValue(UnitTypes eUnit, UnitAITypes eUnitAI, const CvArea*
 					//			iValue += ((iCombatValue * iCombatModifier) / 100);
 					iValue += ((iCombatValue * kUnitInfo.getUnitCombatModifier(iI) * AI_getUnitCombatWeight((UnitCombatTypes)iI)) / 12000);
 				}
-				iValue += ((iCombatValue * kUnitInfo.getMoves()) / 2);
+				iValue += ((iCombatValue * (kUnitInfo.getMoves() - 1) ) / 4);  //Calvitix  old value /2
 				break;
 			}
 			case UNITAI_PILLAGE_COUNTER:
@@ -11110,7 +11110,7 @@ int CvPlayerAI::AI_unitValue(UnitTypes eUnit, UnitAITypes eUnitAI, const CvArea*
 				iValue += iCombatValue;
 				iValue += ((iCombatValue * kUnitInfo.getUnyielding()) / 100);
 				iValue += ((iCombatValue * kUnitInfo.getPursuit()) / 100);
-				iValue += ((iCombatValue * kUnitInfo.getMoves()) / 2);
+				iValue += ((iCombatValue * (kUnitInfo.getMoves() - 1)) / 4);  // Calvitix 2
 				break;
 				//TB Combat Mods End
 			}
@@ -11150,7 +11150,7 @@ int CvPlayerAI::AI_unitValue(UnitTypes eUnit, UnitAITypes eUnitAI, const CvArea*
 					}
 				}
 
-				iValue += ((iCombatValue * kUnitInfo.getMoves()) / 2);
+				iValue += ((iCombatValue * (kUnitInfo.getMoves() - 1)) / 4);  //Calvitix /2
 				iValue += ((iCombatValue * kUnitInfo.getWithdrawalProbability()) / 100);
 				//TB Combat Mods Begin
 				iValue += ((iCombatValue * kUnitInfo.getPursuit()) / 150);
@@ -11177,7 +11177,7 @@ int CvPlayerAI::AI_unitValue(UnitTypes eUnit, UnitAITypes eUnitAI, const CvArea*
 					iValue = 0;
 					break;
 				}
-				iValue += ((iCombatValue * 2) / 3);
+				iValue += ((iCombatValue * 3) / 2);
 				iValue += ((iCombatValue * kUnitInfo.getCityDefenseModifier()) / 25);
 				//	The '30' scaling is empirical based on what seems reasonable for crime fighting units
 				// this is causing the AI to select prop control for defense.
@@ -11224,7 +11224,7 @@ int CvPlayerAI::AI_unitValue(UnitTypes eUnit, UnitAITypes eUnitAI, const CvArea*
 					iValue = 0;
 					break;
 				}
-				iValue += ((iCombatValue * 2) / 3);
+				iValue += ((iCombatValue * 3) / 2);
 				iValue += ((iCombatValue * kUnitInfo.getCityDefenseModifier()) / 75);
 				//	The '30' scaling is empirical based on what seems reasonable for crime fighting units
 				// this is causing the AI to select prop control for defense.
@@ -11323,7 +11323,10 @@ int CvPlayerAI::AI_unitValue(UnitTypes eUnit, UnitAITypes eUnitAI, const CvArea*
 			}
 			case UNITAI_HUNTER:
 			{
-				iValue += iCombatValue * kUnitInfo.getMoves();
+				//Calvitix try to limit impact of moves
+				iValue += iCombatValue;
+				iValue += iCombatValue * (kUnitInfo.getMoves() - 1) * 0.50;
+				//iValue += iCombatValue * kUnitInfo.getMoves();
 				iValue = (
 					getModifiedIntValue(
 						iValue,
@@ -11342,7 +11345,9 @@ int CvPlayerAI::AI_unitValue(UnitTypes eUnit, UnitAITypes eUnitAI, const CvArea*
 			}
 			case UNITAI_HUNTER_ESCORT:
 			{
-				iValue += iCombatValue * kUnitInfo.getMoves();
+				//Calvitix try to limit impact of moves
+				iValue += iCombatValue;
+				iValue += iCombatValue * (kUnitInfo.getMoves() - 1) * 0.5; //Only extra moves gives +50% bonus
 				break;
 			}
 			case UNITAI_MISSIONARY:
@@ -11416,20 +11421,20 @@ int CvPlayerAI::AI_unitValue(UnitTypes eUnit, UnitAITypes eUnitAI, const CvArea*
 			case UNITAI_ATTACK_SEA:
 			{
 				iValue += iCombatValue;
-				iValue += iCombatValue * kUnitInfo.getMoves() / 2;
+				iValue += iCombatValue * (kUnitInfo.getMoves() - 1) * 0.5 ; //Calvitix 50% bonus per extra moves
 				iValue += kUnitInfo.getBombardRate() * 4;
 				break;
 			}
 			case UNITAI_RESERVE_SEA:
 			{
 				iValue += iCombatValue;
-				iValue += iCombatValue * kUnitInfo.getMoves();
+				iValue += iCombatValue * (kUnitInfo.getMoves() - 1) * 0.50;
 				break;
 			}
 			case UNITAI_ESCORT_SEA:
 			{
 				iValue += iCombatValue;
-				iValue += iCombatValue * kUnitInfo.getMoves();
+				iValue += iCombatValue * (kUnitInfo.getMoves() - 1) * 0.25;
 				iValue += kUnitInfo.getInterceptionProbability() * 3;
 				if (kUnitInfo.getNumSeeInvisibleTypes() > 0)
 				{
@@ -11484,14 +11489,15 @@ int CvPlayerAI::AI_unitValue(UnitTypes eUnit, UnitAITypes eUnitAI, const CvArea*
 			}
 			case UNITAI_MISSILE_CARRIER_SEA:
 			{
-				iValue += iCombatValue * kUnitInfo.getMoves();
+				iValue += iCombatValue;
+				iValue += iCombatValue * (kUnitInfo.getMoves() - 1) * 0.25;
 				iValue += (25 + iCombatValue) * (3 + (kUnitInfo.getCargoSpace()));
 				break;
 			}
 			case UNITAI_PIRATE_SEA:
 			{
 				iValue += iCombatValue;
-				iValue += (iCombatValue * kUnitInfo.getMoves());
+				iValue += (iCombatValue * (kUnitInfo.getMoves() - 1) * 0.5);
 				break;
 			}
 			case UNITAI_ATTACK_AIR:
@@ -11559,7 +11565,7 @@ int CvPlayerAI::AI_unitValue(UnitTypes eUnit, UnitAITypes eUnitAI, const CvArea*
 			{
 				const InvisibleTypes eVisibilityRequested = criteria ? criteria->m_eVisibility : NO_INVISIBLE;
 				iValue += iCombatValue;
-				iValue += kUnitInfo.getMoves() * 3;
+				iValue += (kUnitInfo.getMoves() - 1) * 300;
 				if (eVisibilityRequested != NO_INVISIBLE)
 				{
 					if (GC.getGame().isOption(GAMEOPTION_COMBAT_HIDE_SEEK))
@@ -11598,8 +11604,9 @@ int CvPlayerAI::AI_unitValue(UnitTypes eUnit, UnitAITypes eUnitAI, const CvArea*
 			case UNITAI_ESCORT:
 			{
 				iValue += iCombatValue;
-				//for every 10 pts of combat value, make each move pt count for 1 more than a base 1 each.
-				iValue += kUnitInfo.getMoves() * (1 + iCombatValue / 10);
+				//obsolete - for every 10 pts of combat value, make each move pt count for 1 more than a base 1 each.
+				//Try 
+				iValue += (kUnitInfo.getMoves()-1) * iCombatValue * 0.20;
 				//Combat weaknesses are very bad
 				for (int iI = 0; iI < GC.getNumTerrainInfos(); iI++)
 				{
@@ -11675,6 +11682,15 @@ int CvPlayerAI::AI_unitValue(UnitTypes eUnit, UnitAITypes eUnitAI, const CvArea*
 			}
 		}
 	}
+
+	if (gPlayerLogLevel > 2)
+	{
+		const CvWString strUnitType = GC.getUnitInfo(eUnit).getType();
+		const CvWString strUnitAIType = GC.getUnitAIInfo(eUnitAI).getType();
+		logAiEvaluations(2, "AI Player %d evaluate Value for unit %S as type %S, combat value %d, moves %d, Calculated value %d", getID(), strUnitType.c_str(), strUnitAIType.c_str(), iCombatValue*100, kUnitInfo.getMoves(), iValue*100);
+	}
+
+
 	return std::max(0, iValue);
 }
 
@@ -24868,10 +24884,7 @@ int CvPlayerAI::AI_getCitySitePriorityFactor(const CvPlot* pPlot) const
 void CvPlayerAI::AI_updateCitySites(int iMinFoundValueThreshold, int iMaxSites) const
 {
 	PROFILE_EXTRA_FUNC();
-	if (gPlayerLogLevel > 1)
-	{
-		logBBAI("Player %d (%S) begin Update City Sites (min. value: %d)...", getID(), getCivilizationDescription(0), iMinFoundValueThreshold);
-	}
+	logAiEvaluations(1, "Player %d (%S) begin Update City Sites (min. value: %d)...", getID(), getCivilizationDescription(0), iMinFoundValueThreshold);
 	for (int iI = 0; iI < iMaxSites; iI++)
 	{
 		//Add a city to the list.
@@ -24894,10 +24907,7 @@ void CvPlayerAI::AI_updateCitySites(int iMinFoundValueThreshold, int iMaxSites) 
 					{
 						iBestFoundValue = iValue;
 						pBestFoundPlot = plotX;
-						if (gPlayerLogLevel > 1)
-						{
-							logBBAI("  Potential best city site (%d, %d) found value is %d (player modified value to %d)", plotX->getX(), plotX->getY(), iFoundValue, iValue);
-						}
+						logAiEvaluations(1, "  Potential best city site (%d, %d) found value is %d (player modified value to %d)", plotX->getX(), plotX->getY(), iFoundValue, iValue);
 					}
 				}
 			}
@@ -24906,17 +24916,11 @@ void CvPlayerAI::AI_updateCitySites(int iMinFoundValueThreshold, int iMaxSites) 
 		{
 			break;
 		}
-		if (gPlayerLogLevel > 1)
-		{
-			logBBAI("	Found City Site at (%d, %d)", pBestFoundPlot->getX(), pBestFoundPlot->getY());
-		}
+		logAiEvaluations(1, "	Found City Site at (%d, %d)", pBestFoundPlot->getX(), pBestFoundPlot->getY());
 		m_aiAICitySites.push_back(GC.getMap().plotNum(pBestFoundPlot->getX(), pBestFoundPlot->getY()));
 		AI_recalculateFoundValues(pBestFoundPlot->getX(), pBestFoundPlot->getY(), CITY_PLOTS_RADIUS, 2 * CITY_PLOTS_RADIUS);
 	}
-	if (gPlayerLogLevel > 1)
-	{
-		logBBAI("Player %d (%S) end Update City Sites", getID(), getCivilizationDescription(0));
-	}
+	logAiEvaluations(1, "Player %d (%S) end Update City Sites", getID(), getCivilizationDescription(0));
 }
 
 void CvPlayerAI::calculateCitySites() const

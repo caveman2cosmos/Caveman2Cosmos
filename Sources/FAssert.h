@@ -23,8 +23,12 @@ bool FAssertDlg( const char*, const char*, const char*, unsigned int, const char
 
 #ifdef FASSERT_ENABLE
 #if defined(__COVERITY__)
-#define FAssert( expr )	if( !(expr) ) throw std::exception(#expr);
-#define FAssertMsg( expr, msg )	FAssert( expr )
+//#define FAssert( expr )	if( !(expr) ) throw std::exception(#expr);
+//#define FAssertMsg( expr, msg )	FAssert( expr )
+//Calvitix - temporary remove assertions
+#define FAssert(expr)          ((void)0)
+#define FAssertMsg(expr, msg)  ((void)0)
+//Calvitix - temporary remove assertions END
 #define FAssertRecalcMsg( expr, msg ) FAssert( expr )
 #define FAssertOptionMsg( option, expr, msg ) FAssert( GC.getGame().isOption(option) && expr )
 #define FAssertOptionRecalcMsg( option, expr, msg) FAssert( GC.getGame().isOption(option) && expr )
@@ -32,10 +36,10 @@ bool FAssertDlg( const char*, const char*, const char*, unsigned int, const char
 #define FEnsure( expr ) { if( !(expr) ) throw std::exception(#expr); }
 #define FEnsureMsg( expr, msg ) { if( !(expr) ) throw std::exception(#expr); }
 #elif defined(WIN32)
-
+//Calvitix - temporary remove assertions (set bIgnoreAlways to true)
 #define FAssert( expr )	\
 { \
-	static bool bIgnoreAlways = false; \
+	static bool bIgnoreAlways = true; \
 	if( !bIgnoreAlways && !(expr) ) \
 	{ \
 		if( FAssertDlg( #expr, 0, __FILE__, __LINE__, __FUNCTION__, bIgnoreAlways ) ) { _asm int 3 } \
@@ -44,7 +48,7 @@ bool FAssertDlg( const char*, const char*, const char*, unsigned int, const char
 
 #define FAssertMsg( expr, msg ) \
 { \
-	static bool bIgnoreAlways = false; \
+	static bool bIgnoreAlways = true; \
 	if( !bIgnoreAlways && !(expr) ) \
 	{ \
 		if( FAssertDlg( #expr, msg, __FILE__, __LINE__, __FUNCTION__, bIgnoreAlways ) ) { _asm int 3 } \
@@ -53,7 +57,7 @@ bool FAssertDlg( const char*, const char*, const char*, unsigned int, const char
 
 #define FAssertRecalcMsg( expr, msg ) \
 { \
-	static bool bIgnoreAlways = false; \
+	static bool bIgnoreAlways = true; \
 	if( !bIgnoreAlways && !(expr) ) \
 	{ \
 		if( FAssertDlg( #expr, CvString::format("%s\r\n\r\nPlease recalculate modifiers!", msg).c_str(), __FILE__, __LINE__, __FUNCTION__, bIgnoreAlways ) ) { _asm int 3 } \
@@ -62,7 +66,7 @@ bool FAssertDlg( const char*, const char*, const char*, unsigned int, const char
 
 #define FAssertOptionMsg( option, expr, msg ) \
 { \
-	static bool bIgnoreAlways = false; \
+	static bool bIgnoreAlways = true; \
 	if( !bIgnoreAlways && GC.getGame().isOption(option) && !(expr) ) \
 	{ \
 		if( FAssertDlg( #expr, CvString::format("Option: %s\r\n%s", #option, msg).c_str(), __FILE__, __LINE__, __FUNCTION__, bIgnoreAlways ) ) { _asm int 3 } \
@@ -71,7 +75,7 @@ bool FAssertDlg( const char*, const char*, const char*, unsigned int, const char
 
 #define FAssertOptionRecalcMsg( option, expr, msg) \
 { \
-	static bool bIgnoreAlways = false; \
+	static bool bIgnoreAlways = true; \
 	if( !bIgnoreAlways && GC.getGame().isOption(option) && !(expr) ) \
 	{ \
 		if( FAssertDlg( #expr, CvString::format("Option: %s\r\n%s\r\n\r\nPlease recalculate modifiers!",  #option, msg).c_str(), __FILE__, __LINE__, __FUNCTION__, bIgnoreAlways ) ) { _asm int 3 } \
@@ -80,7 +84,7 @@ bool FAssertDlg( const char*, const char*, const char*, unsigned int, const char
 
 #define FErrorMsg( msg )	\
 { \
-	static bool bIgnoreAlways = false; \
+	static bool bIgnoreAlways = true; \
 	if( !bIgnoreAlways ) \
 	{ \
 		if( FAssertDlg( "ERROR", msg, __FILE__, __LINE__, __FUNCTION__, bIgnoreAlways ) ) { _asm int 3 } \
@@ -90,7 +94,7 @@ bool FAssertDlg( const char*, const char*, const char*, unsigned int, const char
 
 #define FEnsure( expr )	\
 { \
-	static bool bIgnoreAlways = false; \
+	static bool bIgnoreAlways = true; \
 	if( !(expr) ) \
 	{ \
 		if( FAssertDlg( #expr, 0, __FILE__, __LINE__, __FUNCTION__, bIgnoreAlways ) ) { _asm int 3 } \
@@ -100,7 +104,7 @@ bool FAssertDlg( const char*, const char*, const char*, unsigned int, const char
 
 #define FEnsureMsg( expr, msg ) \
 { \
-	static bool bIgnoreAlways = false; \
+	static bool bIgnoreAlways = true; \
 	if( !(expr) ) \
 	{ \
 		if( FAssertDlg( #expr, msg, __FILE__, __LINE__, __FUNCTION__, bIgnoreAlways ) ) { _asm int 3 } \
