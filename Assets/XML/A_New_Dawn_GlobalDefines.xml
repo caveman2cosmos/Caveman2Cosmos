@@ -63,7 +63,7 @@
 	<Define>
 		<!-- Afforess: The number of turns that the Cut Loser's Game Option Checks -->
 		<DefineName>CUT_LOSERS_TURN_INCREMENT</DefineName>
-		<iDefineIntVal>100</iDefineIntVal>
+		<iDefineIntVal>50</iDefineIntVal>
 	</Define>
 	<Define>
 		<!-- Afforess: Every X turns the game checks the High to Low Option -->
@@ -307,6 +307,6 @@ The Great Wall is always dynamic if viewports are enabled regardless of this set
 	</Define>
 	<Define>
 		<DefineName>C2C_VERSION</DefineName>
-		<DefineTextVal>v44.BETA</DefineTextVal>
+		<DefineTextVal>v45FR.BETA</DefineTextVal>
 	</Define>
 </Civ4Defines>

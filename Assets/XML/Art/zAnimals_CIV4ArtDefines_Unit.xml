@@ -979,7 +979,7 @@
 		<UnitArtInfo>
 			<Type>ART_DEF_UNIT_KANGAROO_RED</Type>
 			<Button>Art/Interface/Buttons/Units/Kangaroo.dds</Button>
-			<fScale>30.0</fScale>
+			<fScale>25.0</fScale>
 			<fInterfaceScale>1</fInterfaceScale>
 			<NIF>Art/Units/Animals/Kangaroo/Kangaroo.nif</NIF>
 			<KFM>Art/Units/Panther/Panther.kfm</KFM>
@@ -2290,7 +2290,7 @@
 		<UnitArtInfo>
 			<Type>ART_DEF_UNIT_DINGO</Type>
 			<Button>Art/Interface/Buttons/Units/Dingo.dds</Button>
-			<fScale>35.0</fScale>
+			<fScale>28.0</fScale>
 			<fInterfaceScale>1</fInterfaceScale>
 			<NIF>Art/Units/animals/Dingo/Dingo.nif</NIF>
 			<KFM>Art/Units/Panther/Panther.kfm</KFM>

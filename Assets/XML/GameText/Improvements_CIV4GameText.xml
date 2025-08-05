@@ -1723,7 +1723,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_PLANT_GATHERING_CAMP</Tag>
 		<English>Plant Gathering Camp</English>
-		<French>Installer un camp de récolte</French>
+		<French>Camp de récolteurs de végétaux</French>
 		<German>
 			<Text>Pflanzensucher</Text>
 			<Gender>Male</Gender>
@@ -1744,7 +1744,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_PLANT_PICKING_CAMP</Tag>
 		<English>Plant Picking Camp</English>
-		<French>Installer un Camp de Cueillette</French>
+		<French>Camp de cueillette de végétaux</French>
 		<German>
 			<Text>Pflanzenpflücker</Text>
 			<Gender>Male</Gender>
