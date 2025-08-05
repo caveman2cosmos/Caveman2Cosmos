@@ -2984,7 +2984,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_ELECTRUM_WARES</Tag>
 		<English>Electrum Wares</English>
-		<French>Objets en electrum</French>
+		<French>Objets en électrum</French>
 		<Italian>Prodotto d'elettro</Italian>
 		<Polish>Przedmioty z elektrum</Polish>
 		<Russian>Ýëåêòðóìíûå èçäåëèÿ</Russian>
@@ -4024,7 +4024,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_HAEMATITE_ORE</Tag>
 		<English>Haematite Ore</English>
-		<French>Minerai d'hematite</French>
+		<French>Minerai d'hématite</French>
 		<Italian>Ematite</Italian>
 		<Polish>Ruda hematytu</Polish>
 		<Russian>Ãåìàòèò</Russian>
@@ -4032,6 +4032,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_HAEMATITE_ORE_PEDIA</Tag>
 		<English>[COLOR_HIGHLIGHT_TEXT]Hematite[COLOR_REVERT], also spelled as haematite, is a common iron oxide that is widespread in rocks and soils. It is colored black to steel or silver-gray, brown to reddish-brown, or red. It is mined as the main ore of iron and is present in the waste tailings of iron mines. Hematite's popularity in jewelry rose in England during the Victorian era, due to its use in mourning jewelry. Certain types of hematite- or iron-oxide-rich clay have been used in gilding. Hematite is also used in the creation of intaglio engraved gems.</English>
+		<French>[COLOR_HIGHLIGHT_TEXT]Hématite[COLOR_REVERT], également orthographiée hématite, est un oxyde de fer courant que l'on trouve largement dans les roches et les sols. Elle est de couleur noire à gris acier ou gris argenté, brune à brun rougeâtre, ou rouge. Elle est extraite comme principal minerai de fer et est présente dans les résidus miniers des mines de fer. La popularité de l'hématite dans la bijouterie a augmenté en Angleterre pendant l'époque victorienne, en raison de son utilisation dans les bijoux de deuil. Certains types d'argile riche en hématite ou en oxyde de fer ont été utilisés pour la dorure. L'hématite est également utilisée dans la création de gemmes gravées en intaille.</French>
 		<Italian>L'[COLOR_HIGHLIGHT_TEXT]ematite[COLOR_REVERT] è un ossido di ferro comune diffuso nelle rocce e nel suolo. Può essere di colore nero, acciaio o grigio-argento, marrone, rossastro-marrone o rosso. È uno dei principali minerali ferrosi estratti ed è presente negli scarti delle miniere di ferro. La popolarità dell'ematite crebbe in Inghilterra durante l'era vittoriana perché veniva utilizzato per realizzare gioielli da usare per funerali e occasioni di lutto. Alcuni tipi di argilla ricca di ematite o ossido di ferro sono stati anche usati nella doratura. L'ematite è anche usata per la creazione di gemme incise a intaglio.</Italian>
 		<Polish>[COLOR_HIGHLIGHT_TEXT]Hematyt[COLOR_REVERT], to pospolity minera&#179;, tlenek &#191;elaza(III). Jest rozpowszechniony we wszystkich g&#179;&#243;wnych typach ska&#179;, w kt&#243;rych tworzy wi&#234;ksze nagromadzenia lub jako minera&#179; poboczny barwi je na r&#243;&#191;owo lub czerwono. Nie jest najbardziej bogat&#185;, ale bardzo powszechn&#185; rud&#185; &#191;elaza. Bywa u&#191;ywany jako naturalny pigment do wyrobu czerwonej farby (czerwona ochra). Ma du&#191;e znaczenie kolekcjonerskie. Wykorzystywany jako kamie&#241; ozdobny i jubilerski. U&#191;ywany do wyrobu drobnej galanterii artystycznej i &#191;a&#179;obnej. </Polish>
 		<Russian>Гематит является минеральной формой железа(III) с формулой (Fe2O3), один из нескольких оксидов железа. Название гематита происходит от греческого слова кровь потому, что гематит может быть красной, как помада в измельченном виде гематита. Цвет гематита активно используется как пигмент для красителей.</Russian>
