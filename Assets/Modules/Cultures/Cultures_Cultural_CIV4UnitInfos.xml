@@ -63,7 +63,7 @@
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iCombat>5</iCombat>
-			<iXPValueAttack>6</iXPValueAttack>
+			<iXPValueAttack>7</iXPValueAttack>
 			<iXPValueDefense>3</iXPValueDefense>
 			<iCityDefense>25</iCityDefense>
 			<UnitCombatMods>
