@@ -4,6 +4,7 @@
 		<UnitInfo>
 			<Type>UNIT_INCAN_QUECHUA</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_MELEE</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
@@ -114,6 +115,7 @@
 		<UnitInfo>
 			<Type>UNIT_AZTEC_JAGUAR</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_MELEE</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
@@ -256,6 +258,7 @@
 		<UnitInfo>
 			<Type>UNIT_CELTIC_GALLIC_WARRIOR</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_MELEE</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
@@ -344,6 +347,7 @@
 		<UnitInfo>
 			<Type>UNIT_ROME_PRAETORIAN</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_MELEE</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
@@ -439,6 +443,7 @@
 		<UnitInfo>
 			<Type>UNIT_GREEK_PHALANX</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_MELEE</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
@@ -560,6 +565,7 @@
 		<UnitInfo>
 			<Type>UNIT_SUMERIAN_VULTURE</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_MELEE</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
@@ -671,6 +677,7 @@
 		<UnitInfo>
 			<Type>UNIT_NATIVE_AMERICA_DOG_SOLDIER</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_MELEE</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
@@ -776,6 +783,7 @@
 		<UnitInfo>
 			<Type>UNIT_JAPAN_SAMURAI</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_MELEE</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_ARCHER</SubCombatType>
@@ -875,6 +883,7 @@
 		<UnitInfo>
 			<Type>UNIT_VIKING_BESERKER</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_MELEE</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
@@ -992,6 +1001,7 @@
 		<UnitInfo>
 			<Type>UNIT_ZULU_IMPI</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_MELEE</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
@@ -1114,6 +1124,7 @@
 		<UnitInfo>
 			<Type>UNIT_MAYA_HOLKAN</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_THROWING</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
@@ -1236,6 +1247,7 @@
 		<UnitInfo>
 			<Type>UNIT_HOLY_ROMAN_LANDSKNECHT</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_MELEE</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
@@ -1326,6 +1338,7 @@
 		<UnitInfo>
 			<Type>UNIT_FRENCH_MUSKETEER</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_GUN</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
@@ -1433,6 +1446,7 @@
 		<UnitInfo>
 			<Type>UNIT_OTTOMAN_JANISSARY</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_GUN</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
@@ -1543,6 +1557,7 @@
 		<UnitInfo>
 			<Type>UNIT_ETHIOPIAN_OROMO_WARRIOR</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_GUN</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
@@ -1659,6 +1674,7 @@
 		<UnitInfo>
 			<Type>UNIT_ENGLISH_REDCOAT</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_GUN</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
@@ -1762,6 +1778,7 @@
 		<UnitInfo>
 			<Type>UNIT_AMERICAN_NAVY_SEAL</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Special>SPECIALUNIT_TROOP</Special>
 			<Combat>UNITCOMBAT_GUN</Combat>
 			<SubCombatTypes>
@@ -1881,6 +1898,7 @@
 		<UnitInfo>
 			<Type>UNIT_MALI_SKIRMISHER</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_THROWING</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
@@ -1998,6 +2016,7 @@
 		<UnitInfo>
 			<Type>UNIT_BABYLON_BOWMAN</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_ARCHER</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
@@ -2078,6 +2097,7 @@
 		<UnitInfo>
 			<Type>UNIT_CHINA_CHOKONU</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_ARCHER</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
@@ -2167,6 +2187,7 @@
 		<UnitInfo>
 			<Type>UNIT_HITTITES_HITTITE_CHARIOT</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_MOUNTED</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_WHEELED</SubCombatType>
@@ -2297,6 +2318,7 @@
 		<UnitInfo>
 			<Type>UNIT_EGYPT_WARCHARIOT</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_MOUNTED</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_WHEELED</SubCombatType>
@@ -2409,6 +2431,7 @@
 		<UnitInfo>
 			<Type>UNIT_PERSIA_IMMORTAL</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_MOUNTED</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_ARCHER</SubCombatType>
@@ -2549,6 +2572,7 @@
 		<UnitInfo>
 			<Type>UNIT_CARTHAGE_NUMIDIAN_CAVALRY</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_MOUNTED</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_THROWING</SubCombatType>
@@ -2704,6 +2728,7 @@
 		<UnitInfo>
 			<Type>UNIT_MONGOL_KESHIK</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_MOUNTED</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_ARCHER</SubCombatType>
@@ -2846,6 +2871,7 @@
 		<UnitInfo>
 			<Type>UNIT_ARABIA_CAMELARCHER</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_MOUNTED</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_ARCHER</SubCombatType>
@@ -2980,6 +3006,7 @@
 		<UnitInfo>
 			<Type>UNIT_BYZANTINE_CATAPHRACT</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_MOUNTED</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
@@ -3116,6 +3143,7 @@
 		<UnitInfo>
 			<Type>UNIT_SPANISH_CONQUISTADOR</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_MOUNTED</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_GUN</SubCombatType>
@@ -3318,6 +3346,7 @@
 		<UnitInfo>
 			<Type>UNIT_RUSSIA_COSSACK</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_MOUNTED</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_GUN</SubCombatType>
@@ -3516,6 +3545,7 @@
 		<UnitInfo>
 			<Type>UNIT_SIAM_ELEPHANT</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_MOUNTED</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
@@ -3637,6 +3667,7 @@
 		<UnitInfo>
 			<Type>UNIT_GERMAN_PANZER</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_TRACKED</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
@@ -3761,6 +3792,7 @@
 		<UnitInfo>
 			<Type>UNIT_KOREAN_HWACHA</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Capture>UNIT_KOREAN_HWACHA</Capture>
 			<Combat>UNITCOMBAT_SIEGE</Combat>
 			<SubCombatTypes>
@@ -3875,6 +3907,7 @@
 		<UnitInfo>
 			<Type>UNIT_PORTUGAL_CARRACK</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_WOODEN_SHIPS</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_RECON</SubCombatType>
@@ -3981,6 +4014,7 @@
 		<UnitInfo>
 			<Type>UNIT_NETHERLANDS_OOSTINDIEVAARDER</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_WOODEN_SHIPS</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_NAVAL_COMBATANT</SubCombatType>
@@ -4089,6 +4123,7 @@
 		<UnitInfo>
 			<Type>UNIT_TOMAHAWK_THROWER</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_THROWING</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
@@ -4212,6 +4247,7 @@
 		<UnitInfo>
 			<Type>UNIT_SKI_PATROL</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Special>SPECIALUNIT_TROOP</Special>
 			<Combat>UNITCOMBAT_GUN</Combat>
 			<SubCombatTypes>
@@ -4340,6 +4376,7 @@
 		<UnitInfo>
 			<Type>UNIT_ASSYRIAN_REDU</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_MELEE</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
@@ -4458,6 +4495,7 @@
 		<UnitInfo>
 			<Type>UNIT_DIGGER</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_GUN</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
@@ -4575,6 +4613,7 @@
 		<UnitInfo>
 			<Type>UNIT_POLYNESIAN_KOA</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_MELEE</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
@@ -4658,6 +4697,7 @@
 		<UnitInfo>
 			<Type>UNIT_APACHE_CAVALRY</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_MOUNTED</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_GUN</SubCombatType>
@@ -4849,6 +4889,7 @@
 		<UnitInfo>
 			<Type>UNIT_CHEROKEE_RIFLEMAN</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_GUN</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
@@ -4970,6 +5011,7 @@
 		<UnitInfo>
 			<Type>UNIT_MEXICO_RURALES</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_MOUNTED</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_GUN</SubCombatType>
@@ -5136,6 +5178,7 @@
 		<UnitInfo>
 			<Type>UNIT_OLMEC_EAGLE_WARRIOR</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_MELEE</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
@@ -5238,6 +5281,7 @@
 		<UnitInfo>
 			<Type>UNIT_CANADIAN_MOUNTIE</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_MOUNTED</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_LAW_ENFORCEMENT</SubCombatType>
@@ -5437,6 +5481,7 @@
 		<UnitInfo>
 			<Type>UNIT_INDONESIAN_SILAT</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_MELEE</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
@@ -5533,6 +5578,7 @@
 		<UnitInfo>
 			<Type>UNIT_BRAZILIAN_BANDEIRANTE</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_GUN</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
@@ -5642,6 +5688,7 @@
 		<UnitInfo>
 			<Type>UNIT_ISRAELI_MACCABEE</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_MELEE</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
@@ -5733,6 +5780,7 @@
 		<UnitInfo>
 			<Type>UNIT_SWISS_PIKEMAN</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_MELEE</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
@@ -5837,6 +5885,7 @@
 		<UnitInfo>
 			<Type>UNIT_KHMER_PHAKAK</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_MELEE</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
@@ -5982,6 +6031,7 @@
 		<UnitInfo>
 			<Type>UNIT_TIBETIAN_DOB_DOB</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_MELEE</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
@@ -6079,6 +6129,7 @@
 		<UnitInfo>
 			<Type>UNIT_LIGHTNING_WARRIOR</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_MELEE</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
@@ -6189,6 +6240,7 @@
 		<UnitInfo>
 			<Type>UNIT_COYOTE_RUNNER</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_MELEE</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
@@ -6297,6 +6349,7 @@
 		<UnitInfo>
 			<Type>UNIT_NAVAJO_RIFLEMAN</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Special>SPECIALUNIT_TROOP</Special>
 			<Combat>UNITCOMBAT_RUFFIAN</Combat>
 			<SubCombatTypes>
@@ -6484,6 +6537,7 @@
 		<UnitInfo>
 			<Type>UNIT_CHEYENNE_RIDER</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_MOUNTED</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
@@ -6632,6 +6686,7 @@
 		<UnitInfo>
 			<Type>UNIT_COMANCHE_HORSE_ARCHER</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_MOUNTED</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_ARCHER</SubCombatType>
@@ -6779,6 +6834,7 @@
 		<UnitInfo>
 			<Type>UNIT_IRONWOOD_CLUBMAN</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_MELEE</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
@@ -6881,6 +6937,7 @@
 		<UnitInfo>
 			<Type>UNIT_INUIT_HARPOONER</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_THROWING</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_HUNTER</SubCombatType>
@@ -7006,6 +7063,7 @@
 		<UnitInfo>
 			<Type>UNIT_BLACKWOOD_ARCHER</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_ARCHER</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
@@ -7094,6 +7152,7 @@
 		<UnitInfo>
 			<Type>UNIT_SHARKTOOTH_ARCHER</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_ARCHER</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
@@ -7174,6 +7233,7 @@
 		<UnitInfo>
 			<Type>UNIT_CARIB_BLOWGUNNER</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_STRIKE_TEAM</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_THROWING</SubCombatType>
@@ -7296,6 +7356,7 @@
 		<UnitInfo>
 			<Type>UNIT_CREE_TRACKER</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Special>SPECIALUNIT_PEOPLE</Special>
 			<Combat>UNITCOMBAT_HUNTER</Combat>
 			<SubCombatTypes>
@@ -7416,6 +7477,7 @@
 		<UnitInfo>
 			<Type>UNIT_HURON_MANLET</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_THROWING</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
@@ -7529,6 +7591,7 @@
 		<UnitInfo>
 			<Type>UNIT_KLAMATH_RIFLEMAN</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_GUN</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
@@ -7643,6 +7706,7 @@
 		<UnitInfo>
 			<Type>UNIT_NOOTKA_CLUBMAN</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_MELEE</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
@@ -7744,6 +7808,7 @@
 		<UnitInfo>
 			<Type>UNIT_KATARA</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_MELEE</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
@@ -7843,6 +7908,7 @@
 		<UnitInfo>
 			<Type>UNIT_BOOMERANG_THROWER</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_THROWING</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_HUNTER</SubCombatType>
@@ -7955,6 +8021,7 @@
 		<UnitInfo>
 			<Type>UNIT_POMBOS</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_MELEE</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
@@ -8068,6 +8135,7 @@
 		<UnitInfo>
 			<Type>UNIT_SACRED_BAND</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_MELEE</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
@@ -8186,6 +8254,7 @@
 		<UnitInfo>
 			<Type>UNIT_NAKHARAR</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_MOUNTED</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
@@ -8332,6 +8401,7 @@
 		<UnitInfo>
 			<Type>UNIT_SAVANNA_CAVALRY</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_MOUNTED</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
@@ -8520,6 +8590,7 @@
 		<UnitInfo>
 			<Type>UNIT_BENIN_WAR_BOW</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_ARCHER</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
@@ -8598,6 +8669,7 @@
 		<UnitInfo>
 			<Type>UNIT_WINGED_CAVALRY</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_MOUNTED</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_GUN</SubCombatType>
@@ -8742,6 +8814,7 @@
 		<UnitInfo>
 			<Type>UNIT_YEOMAN</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_ARCHER</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
@@ -8840,6 +8913,7 @@
 		<UnitInfo>
 			<Type>UNIT_TARKAN</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_MOUNTED</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
@@ -8986,6 +9060,7 @@
 		<UnitInfo>
 			<Type>UNIT_DOLPHIN_MECH</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_ASSAULT_MECH</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
@@ -9126,6 +9201,7 @@
 		<UnitInfo>
 			<Type>UNIT_HERERO_REBEL</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_RUFFIAN</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_GUN</SubCombatType>
@@ -9306,6 +9382,7 @@
 		<UnitInfo>
 			<Type>UNIT_MANCHU_HORSEARCHER</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_MOUNTED</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_ARCHER</SubCombatType>
@@ -9456,6 +9533,7 @@
 		<UnitInfo>
 			<Type>UNIT_HUSSAR</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_MOUNTED</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_GUN</SubCombatType>
@@ -9650,6 +9728,7 @@
 		<UnitInfo>
 			<Type>UNIT_LLANERO</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_MOUNTED</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_GUN</SubCombatType>
@@ -9852,6 +9931,7 @@
 		<UnitInfo>
 			<Type>UNIT_SWAZI_TRACKER</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Special>SPECIALUNIT_PEOPLE</Special>
 			<Combat>UNITCOMBAT_HUNTER</Combat>
 			<SubCombatTypes>
@@ -9969,6 +10049,7 @@
 		<UnitInfo>
 			<Type>UNIT_UIGHUR_KNIGHT</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_MOUNTED</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
@@ -10113,6 +10194,7 @@
 		<UnitInfo>
 			<Type>UNIT_MENALAMBA</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_THROWING</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
@@ -10219,6 +10301,7 @@
 		<UnitInfo>
 			<Type>UNIT_VIETCONG</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_SIEGE</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
@@ -10347,6 +10430,7 @@
 		<UnitInfo>
 			<Type>UNIT_KALLARANI</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_MELEE</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
@@ -10448,6 +10532,7 @@
 		<UnitInfo>
 			<Type>UNIT_URUMI_SWORDSMAN</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_MELEE</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
@@ -10553,6 +10638,7 @@
 		<UnitInfo>
 			<Type>UNIT_XIFOS</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_MELEE</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
@@ -10649,6 +10735,7 @@
 		<UnitInfo>
 			<Type>UNIT_RAJPUT</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_MELEE</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
@@ -10735,6 +10822,7 @@
 		<UnitInfo>
 			<Type>UNIT_ADZE_WARRIOR</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_MELEE</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
@@ -10845,6 +10933,7 @@
 		<UnitInfo>
 			<Type>UNIT_PYGMY_WARRIOR</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_MELEE</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
@@ -10955,6 +11044,7 @@
 		<UnitInfo>
 			<Type>UNIT_AXE_THROWER</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_THROWING</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
@@ -11074,6 +11164,7 @@
 		<UnitInfo>
 			<Type>UNIT_TEWHATEWHA</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_MELEE</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
@@ -11178,6 +11269,7 @@
 		<UnitInfo>
 			<Type>UNIT_PAPUAN_CANNIBAL</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_STRIKE_TEAM</Combat>
 			<SubCombatTypes><!--Consider making a strike team -->
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
@@ -11269,6 +11361,7 @@
 		<UnitInfo>
 			<Type>UNIT_HIGHLANDER</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_GUN</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
@@ -11374,6 +11467,7 @@
 		<UnitInfo>
 			<Type>UNIT_TUAREG_CAMEL</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_MOUNTED</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
@@ -11515,6 +11609,7 @@
 		<UnitInfo>
 			<Type>UNIT_FULANI_CAVALRY</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_MOUNTED</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
@@ -11695,6 +11790,7 @@
 		<UnitInfo>
 			<Type>UNIT_HUAMINCA</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_MELEE</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
@@ -11806,6 +11902,7 @@
 		<UnitInfo>
 			<Type>UNIT_TIGERCLAW</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_MELEE</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
@@ -11910,6 +12007,7 @@
 		<UnitInfo>
 			<Type>UNIT_SOMALI_PIRATE</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_DIESEL_SHIPS</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_NAVAL_COMBATANT</SubCombatType>
@@ -12049,6 +12147,7 @@
 		<UnitInfo>
 			<Type>UNIT_ELMETI</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_MOUNTED</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
@@ -12194,6 +12293,7 @@
 		<UnitInfo>
 			<Type>UNIT_GURKHA</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_GUN</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
@@ -12303,6 +12403,7 @@
 		<UnitInfo>
 			<Type>UNIT_HUSKARL</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_MELEE</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
@@ -12396,6 +12497,7 @@
 		<UnitInfo>
 			<Type>UNIT_JAEGER</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_GUN</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
@@ -12488,6 +12590,7 @@
 		<UnitInfo>
 			<Type>UNIT_BLACK_GUARD</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_GUN</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MELEE</SubCombatType>
@@ -12590,6 +12693,7 @@
 		<UnitInfo>
 			<Type>UNIT_KUSH_ARCHER</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_ARCHER</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
@@ -12671,6 +12775,7 @@
 		<UnitInfo>
 			<Type>UNIT_MANDEKALU</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_MOUNTED</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_THROWING</SubCombatType>
@@ -12859,6 +12964,7 @@
 		<UnitInfo>
 			<Type>UNIT_MORAN</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_THROWING</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
@@ -12982,6 +13088,7 @@
 		<UnitInfo>
 			<Type>UNIT_PHOENICAN_BIREME</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_WOODEN_SHIPS</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_NAVAL_COMBATANT</SubCombatType>
@@ -13127,6 +13234,7 @@
 		<UnitInfo>
 			<Type>UNIT_SEPOY</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_GUN</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
@@ -13230,6 +13338,7 @@
 		<UnitInfo>
 			<Type>UNIT_TURKOMAN</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_MOUNTED</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
@@ -13368,6 +13477,7 @@
 		<UnitInfo>
 			<Type>UNIT_SIYU_WARRIOR</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_GUN</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
@@ -13478,6 +13588,7 @@
 		<UnitInfo>
 			<Type>UNIT_ROZVI</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_MELEE</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
@@ -13573,6 +13684,7 @@
 		<UnitInfo>
 			<Type>UNIT_SURKU</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_ARCHER</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
@@ -13672,6 +13784,7 @@
 		<UnitInfo>
 			<Type>UNIT_TOMOL</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_WOODEN_SHIPS</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_NAVAL_COMBATANT</SubCombatType>
@@ -13782,6 +13895,7 @@
 		<UnitInfo>
 			<Type>UNIT_GRIVPANVAR</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_MOUNTED</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
@@ -13923,6 +14037,7 @@
 		<UnitInfo>
 			<Type>UNIT_SHAN_WARRIOR</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_GUN</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
@@ -14037,6 +14152,7 @@
 		<UnitInfo>
 			<Type>UNIT_FLAIL_ELEPHANT</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_MOUNTED</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
@@ -14168,6 +14284,7 @@
 		<UnitInfo>
 			<Type>UNIT_MAHOUT_LANCER</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_MOUNTED</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
@@ -14295,6 +14412,7 @@
 		<UnitInfo>
 			<Type>UNIT_HOWDAH</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_MOUNTED</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
@@ -14422,6 +14540,7 @@
 		<UnitInfo>
 			<Type>UNIT_GUDARI</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Special>SPECIALUNIT_TROOP</Special>
 			<Combat>UNITCOMBAT_GUN</Combat>
 			<SubCombatTypes>
@@ -14525,6 +14644,7 @@
 		<UnitInfo>
 			<Type>UNIT_MAMBISE</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_MOUNTED</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
@@ -14725,6 +14845,7 @@
 		<UnitInfo>
 			<Type>UNIT_BOER_CAVALRY</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_MOUNTED</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
@@ -14923,6 +15044,7 @@
 		<UnitInfo>
 			<Type>UNIT_RAPANUIWORKER</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Capture>UNIT_RAPANUIWORKER</Capture>
 			<Combat>UNITCOMBAT_WORKER</Combat>
 			<SubCombatTypes>
@@ -15077,6 +15199,7 @@
 		<UnitInfo>
 			<Type>UNIT_HAITIAN_REBEL</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_GUN</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_RUFFIAN</SubCombatType>
@@ -15183,6 +15306,7 @@
 		<UnitInfo>
 			<Type>UNIT_SAXON_RAIDER</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_MELEE</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
@@ -15274,6 +15398,7 @@
 		<UnitInfo>
 			<Type>UNIT_DAI_CHUI</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_MOUNTED</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
@@ -15417,6 +15542,7 @@
 		<UnitInfo>
 			<Type>UNIT_SPARTAN_WARRIOR</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_MELEE</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_THROWING</SubCombatType>
@@ -15507,6 +15633,7 @@
 		<UnitInfo>
 			<Type>UNIT_STONEWALL_BRIGADE</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_GUN</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
@@ -15615,6 +15742,7 @@
 		<UnitInfo>
 			<Type>UNIT_TURTLE_SHIP</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_WOODEN_SHIPS</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_NAVAL_COMBATANT</SubCombatType>
@@ -15730,6 +15858,7 @@
 		<UnitInfo>
 			<Type>UNIT_UHLAN</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_MOUNTED</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_GUN</SubCombatType>
@@ -15931,6 +16060,7 @@
 		<UnitInfo>
 			<Type>UNIT_YUMI_ARCHER</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_ARCHER</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
@@ -16013,6 +16143,7 @@
 		<UnitInfo>
 			<Type>UNIT_SHANG_CHARIOT</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_MOUNTED</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_WHEELED</SubCombatType>
@@ -16133,6 +16264,7 @@
 		<UnitInfo>
 			<Type>UNIT_CATAMARAN</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_WOODEN_SHIPS</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_EXPLORER</SubCombatType>
@@ -16240,6 +16372,7 @@
 		<UnitInfo>
 			<Type>UNIT_NEW_ZEALAND_INFANTRY</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Special>SPECIALUNIT_TROOP</Special>
 			<Combat>UNITCOMBAT_GUN</Combat>
 			<SubCombatTypes>
@@ -16347,6 +16480,7 @@
 		<UnitInfo>
 			<Type>UNIT_INNISKILLING</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_STRIKE_TEAM</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_GUN</SubCombatType>
@@ -16520,6 +16654,7 @@
 		<UnitInfo>
 			<Type>UNIT_MATNU</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_ARCHER</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
@@ -16605,6 +16740,7 @@
 		<UnitInfo>
 			<Type>UNIT_SPIRIT_WALKER</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_MELEE</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
@@ -16718,6 +16854,7 @@
 		<UnitInfo>
 			<Type>UNIT_YURUPARI</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_MELEE</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
@@ -16826,6 +16963,7 @@
 		<UnitInfo>
 			<Type>UNIT_THORAX_HOPLITE</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_MELEE</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
@@ -16951,6 +17089,7 @@
 		<UnitInfo>
 			<Type>UNIT_BRIGADE_PIRON</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_GUN</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
@@ -17052,6 +17191,7 @@
 		<UnitInfo>
 			<Type>UNIT_BLOOD_WARRIOR</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_MELEE</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
@@ -17170,6 +17310,7 @@
 		<UnitInfo>
 			<Type>UNIT_FORTY_NINER</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Capture>UNIT_FORTY_NINER</Capture>
 			<Combat>UNITCOMBAT_WORKER</Combat>
 			<SubCombatTypes>
@@ -17336,6 +17477,7 @@
 		<UnitInfo>
 			<Type>UNIT_DAHOMEY_MINO</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_GUN</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
@@ -17449,6 +17591,7 @@
 		<UnitInfo>
 			<Type>UNIT_DENE_SLED_DOGS</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_ANIMAL</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
@@ -17570,6 +17713,7 @@
 		<UnitInfo>
 			<Type>UNIT_AGRIANIAN_AXEMAN</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_MELEE</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
@@ -17688,6 +17832,7 @@
 		<UnitInfo>
 			<Type>UNIT_HAIDA_WAR_CANOE</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_WOODEN_SHIPS</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_NAVAL_COMBATANT</SubCombatType>
@@ -17806,6 +17951,7 @@
 		<UnitInfo>
 			<Type>UNIT_PLUMED_ARCHER</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_ARCHER</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
@@ -17884,6 +18030,7 @@
 		<UnitInfo>
 			<Type>UNIT_LEIDANG</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_MELEE</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
@@ -17979,6 +18126,7 @@
 		<UnitInfo>
 			<Type>UNIT_MAROON</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_GUN</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
@@ -18087,6 +18235,7 @@
 		<UnitInfo>
 			<Type>UNIT_HEADHUNTER</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_HUNTER</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_EXPLORER</SubCombatType>
@@ -18210,6 +18359,7 @@
 		<UnitInfo>
 			<Type>UNIT_JADE_AXEMAN</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_MELEE</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
@@ -18320,6 +18470,7 @@
 		<UnitInfo>
 			<Type>UNIT_HYPASPISTAI</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_MELEE</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
@@ -18437,6 +18588,7 @@
 		<UnitInfo>
 			<Type>UNIT_SAKA_CATAPHRACT</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_MOUNTED</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
@@ -18582,6 +18734,7 @@
 		<UnitInfo>
 			<Type>UNIT_CUACHIC</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_MELEE</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
@@ -18683,6 +18836,7 @@
 		<UnitInfo>
 			<Type>UNIT_SI_WARRIOR</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_MELEE</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
@@ -18795,6 +18949,7 @@
 		<UnitInfo>
 			<Type>UNIT_PICTISH_WARRIOR</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_MELEE</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
@@ -18887,6 +19042,7 @@
 		<UnitInfo>
 			<Type>UNIT_QIANG_PIKEMAN</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_MELEE</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
@@ -18979,6 +19135,7 @@
 		<UnitInfo>
 			<Type>UNIT_AXEMAN_ROXOLANI</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_MELEE</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
@@ -19098,6 +19255,7 @@
 		<UnitInfo>
 			<Type>UNIT_SAVARAN</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_MOUNTED</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
@@ -19243,6 +19401,7 @@
 		<UnitInfo>
 			<Type>UNIT_SCYTHIAN_HORSE_ARCHER</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_MOUNTED</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_ARCHER</SubCombatType>
@@ -19391,6 +19550,7 @@
 		<UnitInfo>
 			<Type>UNIT_SIBERIAN_TRACKER</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_HUNTER</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_EXPLORER</SubCombatType>
@@ -19512,6 +19672,7 @@
 		<UnitInfo>
 			<Type>UNIT_MIG_29</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Special>SPECIALUNIT_FIGHTER</Special>
 			<Combat>UNITCOMBAT_JET_FIGHTERS</Combat>
 			<SubCombatTypes>
@@ -19636,6 +19797,7 @@
 		<UnitInfo>
 			<Type>UNIT_KUOMINTANG</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Special>SPECIALUNIT_TROOP</Special>
 			<Combat>UNITCOMBAT_GUN</Combat>
 			<SubCombatTypes>
@@ -19746,6 +19908,7 @@
 		<UnitInfo>
 			<Type>UNIT_TLATILCO_WAR_PRIEST</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_MELEE</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
@@ -19864,6 +20027,7 @@
 		<UnitInfo>
 			<Type>UNIT_TLAXCALTEC_WARRIOR</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_MELEE</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
@@ -19965,6 +20129,7 @@
 		<UnitInfo>
 			<Type>UNIT_APOLLONIAN_GUARD</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_MELEE</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_LAW_ENFORCEMENT</SubCombatType>
@@ -20080,6 +20245,7 @@
 		<UnitInfo>
 			<Type>UNIT_BARUD_WARRIOR</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_ROCKET_LAUNCHER</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
@@ -20212,6 +20378,7 @@
 		<UnitInfo>
 			<Type>UNIT_ANDAMAN_PYGMIES</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_ARCHER</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
@@ -20286,6 +20453,7 @@
 		<UnitInfo>
 			<Type>UNIT_WIRUTI</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_THROWING</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
@@ -20403,6 +20571,7 @@
 		<UnitInfo>
 			<Type>UNIT_CHWEZI_ELITES</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_MELEE</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
@@ -20498,6 +20667,7 @@
 		<UnitInfo>
 			<Type>UNIT_ALUNA_SHAMAN</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Special>SPECIALUNIT_PEOPLE</Special>
 			<Capture>UNIT_ENTERTAINER</Capture>
 			<Combat>UNITCOMBAT_ENTERTAINER</Combat>
@@ -20615,6 +20785,7 @@
 		<UnitInfo>
 			<Type>UNIT_RWENZURURU_SOLDIER</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Special>SPECIALUNIT_TROOP</Special>
 			<Combat>UNITCOMBAT_ROCKET_LAUNCHER</Combat>
 			<SubCombatTypes>
@@ -20753,6 +20924,7 @@
 		<UnitInfo>
 			<Type>UNIT_PESHMERGA</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Special>SPECIALUNIT_TROOP</Special>
 			<Combat>UNITCOMBAT_GUN</Combat>
 			<SubCombatTypes>
@@ -20863,6 +21035,7 @@
 		<UnitInfo>
 			<Type>UNIT_KANDAKE_VETERANS</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_MELEE</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
@@ -20980,6 +21153,7 @@
 		<UnitInfo>
 			<Type>UNIT_KUSHAN_RIDER</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_MOUNTED</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MELEE</SubCombatType>
@@ -21146,7 +21320,7 @@
 		<UnitInfo>
 			<Type>UNIT_OIL_TANKER</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
-			<iMaxPlayerInstances>3</iMaxPlayerInstances>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_TRADE</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_DIESEL_SHIPS</SubCombatType>
@@ -21244,6 +21418,7 @@
 		<UnitInfo>
 			<Type>UNIT_LA_PLATA_MOSQUETERO</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_GUN</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
@@ -21353,6 +21528,7 @@
 		<UnitInfo>
 			<Type>UNIT_COURLAND_JAEGER</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_GUN</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
@@ -21462,6 +21638,7 @@
 		<UnitInfo>
 			<Type>UNIT_UNITA_FORCES</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Special>SPECIALUNIT_TROOP</Special>
 			<Combat>UNITCOMBAT_GUN</Combat>
 			<SubCombatTypes>
@@ -21580,6 +21757,7 @@
 		<UnitInfo>
 			<Type>UNIT_HEZBOLLAH</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Special>SPECIALUNIT_TROOP</Special>
 			<Combat>UNITCOMBAT_CRIMINAL</Combat>
 			<SubCombatTypes>
@@ -21777,6 +21955,7 @@
 		<UnitInfo>
 			<Type>UNIT_GARAMANTES</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Special>SPECIALUNIT_TROOP</Special>
 			<Combat>UNITCOMBAT_RUFFIAN</Combat>
 			<SubCombatTypes>
@@ -21957,6 +22136,7 @@
 		<UnitInfo>
 			<Type>UNIT_PETYHORCY</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_MOUNTED</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
@@ -22107,6 +22287,7 @@
 		<UnitInfo>
 			<Type>UNIT_DUGUNDIZ</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_MELEE</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
@@ -22224,6 +22405,7 @@
 		<UnitInfo>
 			<Type>UNIT_LULE_NOMADS</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Capture>UNIT_WORKANIMAL</Capture>
 			<Combat>UNITCOMBAT_WORKER</Combat>
 			<SubCombatTypes>
@@ -22392,6 +22574,7 @@
 		<UnitInfo>
 			<Type>UNIT_MWAANTA_GAAND</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_THROWING</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
@@ -22509,6 +22692,7 @@
 		<UnitInfo>
 			<Type>UNIT_SCORTAMAREVA</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_MELEE</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
@@ -22626,6 +22810,7 @@
 		<UnitInfo>
 			<Type>UNIT_MEIONE_CARAVAN</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Capture>UNIT_TRADE_CARAVAN</Capture>
 			<Combat>UNITCOMBAT_TRADE</Combat>
 			<SubCombatTypes>
@@ -22738,6 +22923,7 @@
 		<UnitInfo>
 			<Type>UNIT_FADY_SHAMAN</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Special>SPECIALUNIT_PEOPLE</Special>
 			<Combat>UNITCOMBAT_HEALTH_CARE</Combat>
 			<SubCombatTypes>
@@ -22868,6 +23054,7 @@
 		<UnitInfo>
 			<Type>UNIT_MALACCAN_PIRATE</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_DIESEL_SHIPS</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_PIRATE</SubCombatType>
@@ -23002,6 +23189,7 @@
 		<UnitInfo>
 			<Type>UNIT_TERCIO_PIKEMAN</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_MELEE</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
@@ -23100,6 +23288,7 @@
 		<UnitInfo>
 			<Type>UNIT_MAMELUK</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_MOUNTED</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_GUN</SubCombatType>
@@ -23258,6 +23447,7 @@
 		<UnitInfo>
 			<Type>UNIT_BISON_WARDENS</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_HUNTER</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_EXPLORER</SubCombatType>
@@ -23382,6 +23572,7 @@
 		<UnitInfo>
 			<Type>UNIT_MANIQ_SPEAKER</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Special>SPECIALUNIT_PEOPLE</Special>
 			<Combat>UNITCOMBAT_HEALTH_CARE</Combat>
 			<SubCombatTypes>
@@ -23492,6 +23683,7 @@
 		<UnitInfo>
 			<Type>UNIT_STEPPE_RIDER</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Special>SPECIALUNIT_TROOP</Special>
 			<Combat>UNITCOMBAT_RUFFIAN</Combat>
 			<SubCombatTypes>
@@ -23672,6 +23864,7 @@
 		<UnitInfo>
 			<Type>UNIT_MEDE_RETINUES</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_MELEE</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
@@ -23789,6 +23982,7 @@
 		<UnitInfo>
 			<Type>UNIT_MOTU_ARCHERS</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_ARCHER</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
@@ -23876,6 +24070,7 @@
 		<UnitInfo>
 			<Type>UNIT_ISOKELEKEL</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_GUN</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
@@ -23981,6 +24176,7 @@
 		<UnitInfo>
 			<Type>UNIT_TREASURE_SHIP</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_WOODEN_SHIPS</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_TRANSPORT</SubCombatType>
@@ -24087,6 +24283,7 @@
 		<UnitInfo>
 			<Type>UNIT_RIVER_WORKER</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Capture>UNIT_WORKANIMAL</Capture>
 			<Combat>UNITCOMBAT_WORKER</Combat>
 			<SubCombatTypes>
@@ -24267,6 +24464,7 @@
 		<UnitInfo>
 			<Type>UNIT_KIKKULI_CHARIOT</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_MOUNTED</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_WHEELED</SubCombatType>
@@ -24411,6 +24609,7 @@
 		<UnitInfo>
 			<Type>UNIT_MOUNTED_GRENADIERS</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_MOUNTED</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_GUN</SubCombatType>
@@ -24612,6 +24811,7 @@
 		<UnitInfo>
 			<Type>UNIT_HUACA_GUARDIANS</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Special>SPECIALUNIT_TROOP</Special>
 			<Combat>UNITCOMBAT_LAW_ENFORCEMENT</Combat>
 			<SubCombatTypes>
@@ -24763,6 +24963,7 @@
 		<UnitInfo>
 			<Type>UNIT_MOCOVI_TRACKER</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Special>SPECIALUNIT_TROOP</Special>
 			<Combat>UNITCOMBAT_STRIKE_TEAM</Combat>
 			<SubCombatTypes>
@@ -24948,6 +25149,7 @@
 		<UnitInfo>
 			<Type>UNIT_MOHAWK_TRACKER</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Special>SPECIALUNIT_TROOP</Special>
 			<Combat>UNITCOMBAT_STRIKE_TEAM</Combat>
 			<SubCombatTypes>
@@ -25133,6 +25335,7 @@
 		<UnitInfo>
 			<Type>UNIT_KALLAWAYA</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Special>SPECIALUNIT_PEOPLE</Special>
 			<Combat>UNITCOMBAT_HEALTH_CARE</Combat>
 			<SubCombatTypes>
@@ -25254,6 +25457,7 @@
 		<UnitInfo>
 			<Type>UNIT_SIEGE_ELEPHANT</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_MOUNTED</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_SIEGE</SubCombatType>
@@ -25405,6 +25609,7 @@
 		<UnitInfo>
 			<Type>UNIT_CZIBCZA_WARRIOR</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_THROWING</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
@@ -25522,6 +25727,7 @@
 		<UnitInfo>
 			<Type>UNIT_MURRI_WARRIOR</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_MELEE</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
@@ -25602,6 +25808,7 @@
 		<UnitInfo>
 			<Type>UNIT_PETRA_GUARD</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Special>SPECIALUNIT_TROOP</Special>
 			<Combat>UNITCOMBAT_LAW_ENFORCEMENT</Combat>
 			<SubCombatTypes>
@@ -25753,6 +25960,7 @@
 		<UnitInfo>
 			<Type>UNIT_TLATOANI_BOWMANS</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_ARCHER</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
@@ -25836,6 +26044,7 @@
 		<UnitInfo>
 			<Type>UNIT_KHOISAN_RUNNER</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_THROWING</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
@@ -25965,6 +26174,7 @@
 		<UnitInfo>
 			<Type>UNIT_PERSIAN_POET</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Special>SPECIALUNIT_PEOPLE</Special>
 			<Capture>UNIT_BARD</Capture>
 			<Combat>UNITCOMBAT_ENTERTAINER</Combat>
@@ -26089,6 +26299,7 @@
 		<UnitInfo>
 			<Type>UNIT_NAZCA_HEADHUNTERS</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_MELEE</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
@@ -26203,6 +26414,7 @@
 		<UnitInfo>
 			<Type>UNIT_GOBIR_LANCER</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_MOUNTED</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
@@ -26405,6 +26617,7 @@
 		<UnitInfo>
 			<Type>UNIT_NOK_MERCHANTS</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Capture>UNIT_TRADE_CARAVAN</Capture>
 			<Combat>UNITCOMBAT_TRADE</Combat>
 			<SubCombatTypes>
@@ -26555,6 +26768,7 @@
 		<UnitInfo>
 			<Type>UNIT_BUSH_TRACKERS</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_HUNTER</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_EXPLORER</SubCombatType>
@@ -26676,6 +26890,7 @@
 		<UnitInfo>
 			<Type>UNIT_NORMAN_KNIGHT</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_MOUNTED</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
@@ -26847,6 +27062,7 @@
 		<UnitInfo>
 			<Type>UNIT_ODAWA_TRADERS</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Capture>UNIT_SUPPLY_TRAIN</Capture>
 			<Combat>UNITCOMBAT_TRADE</Combat>
 			<SubCombatTypes>
@@ -26946,7 +27162,7 @@
 		<UnitInfo>
 			<Type>UNIT_ARABIAN_GALLIOT</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
-			<iMaxPlayerInstances>3</iMaxPlayerInstances>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_TRADE</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_WOODEN_SHIPS</SubCombatType>
@@ -27080,6 +27296,7 @@
 		<UnitInfo>
 			<Type>UNIT_TREASURE_GUARD</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Special>SPECIALUNIT_TROOP</Special>
 			<Combat>UNITCOMBAT_LAW_ENFORCEMENT</Combat>
 			<SubCombatTypes>
@@ -27227,6 +27444,7 @@
 		<UnitInfo>
 			<Type>UNIT_ORANG_BOWMAN</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_ARCHER</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
@@ -27314,6 +27532,7 @@
 		<UnitInfo>
 			<Type>UNIT_TWAFO</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_THROWING</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_GUN</SubCombatType>
@@ -27445,6 +27664,7 @@
 		<UnitInfo>
 			<Type>UNIT_PAIUTE_CAVALRY</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_MOUNTED</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_GUN</SubCombatType>
@@ -27658,6 +27878,7 @@
 		<UnitInfo>
 			<Type>UNIT_SSG</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Special>SPECIALUNIT_TROOP</Special>
 			<Combat>UNITCOMBAT_STRIKE_TEAM</Combat>
 			<SubCombatTypes>
@@ -27868,6 +28089,7 @@
 		<UnitInfo>
 			<Type>UNIT_PLO_FIGHTER</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Special>SPECIALUNIT_TROOP</Special>
 			<Combat>UNITCOMBAT_ROCKET_LAUNCHER</Combat>
 			<SubCombatTypes>
@@ -28006,6 +28228,7 @@
 		<UnitInfo>
 			<Type>UNIT_PUBLIC_FORCES</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Special>SPECIALUNIT_TROOP</Special>
 			<Combat>UNITCOMBAT_LAW_ENFORCEMENT</Combat>
 			<SubCombatTypes>
@@ -28189,6 +28412,7 @@
 		<UnitInfo>
 			<Type>UNIT_LOS_MARINOS</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Special>SPECIALUNIT_TROOP</Special>
 			<Combat>UNITCOMBAT_GUN</Combat>
 			<SubCombatTypes>
@@ -28307,6 +28531,7 @@
 		<UnitInfo>
 			<Type>UNIT_MAHSUD_ATTAN</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_MOUNTED</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
@@ -28475,6 +28700,7 @@
 		<UnitInfo>
 			<Type>UNIT_PERUVIAN_CONQUISTADOR</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_MOUNTED</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_GUN</SubCombatType>
@@ -28689,6 +28915,7 @@
 		<UnitInfo>
 			<Type>UNIT_KRISS_WARRIOR</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_MELEE</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
@@ -28783,6 +29010,7 @@
 		<UnitInfo>
 			<Type>UNIT_LIGHT_HOPLITE</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_MELEE</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
@@ -28886,6 +29114,7 @@
 		<UnitInfo>
 			<Type>UNIT_WAPITI</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Special>SPECIALUNIT_PEOPLE</Special>
 			<Combat>UNITCOMBAT_RECON</Combat>
 			<SubCombatTypes>
@@ -28992,6 +29221,7 @@
 		<UnitInfo>
 			<Type>UNIT_ARJOS</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Capture>UNIT_TRADE_CARAVAN</Capture>
 			<Combat>UNITCOMBAT_TRADE</Combat>
 			<SubCombatTypes>
@@ -29104,6 +29334,7 @@
 		<UnitInfo>
 			<Type>UNIT_AKIMEL_BRIGADE</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Special>SPECIALUNIT_TROOP</Special>
 			<Combat>UNITCOMBAT_GUN</Combat>
 			<SubCombatTypes>
@@ -29214,6 +29445,7 @@
 		<UnitInfo>
 			<Type>UNIT_RED_FOX_ARCHER</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_ARCHER</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
@@ -29301,6 +29533,7 @@
 		<UnitInfo>
 			<Type>UNIT_POYA_LONGSPEARS</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_MELEE</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
@@ -29398,6 +29631,7 @@
 		<UnitInfo>
 			<Type>UNIT_WANQARA</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Special>SPECIALUNIT_PEOPLE</Special>
 			<Capture>UNIT_ENTERTAINER</Capture>
 			<Combat>UNITCOMBAT_ENTERTAINER</Combat>
@@ -29502,6 +29736,7 @@
 		<UnitInfo>
 			<Type>UNIT_RESIN_CARAVAN</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Capture>UNIT_TRADE_CARAVAN</Capture>
 			<Combat>UNITCOMBAT_TRADE</Combat>
 			<SubCombatTypes>
@@ -29614,6 +29849,7 @@
 		<UnitInfo>
 			<Type>UNIT_CHUO_QIANG</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_THROWING</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
@@ -29731,6 +29967,7 @@
 		<UnitInfo>
 			<Type>UNIT_ZHUGE_NO</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_ARCHER</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
@@ -29831,6 +30068,7 @@
 		<UnitInfo>
 			<Type>UNIT_UJEN_CHOOHA</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Capture>UNIT_CULVERIN</Capture>
 			<Combat>UNITCOMBAT_SIEGE</Combat>
 			<SubCombatTypes>
@@ -29961,6 +30199,7 @@
 		<UnitInfo>
 			<Type>UNIT_QUEBEC_DEFENDERS</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_GUN</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
@@ -30073,6 +30312,7 @@
 		<UnitInfo>
 			<Type>UNIT_BOLA_HUNTER</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_HUNTER</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_EXPLORER</SubCombatType>
@@ -30186,6 +30426,7 @@
 		<UnitInfo>
 			<Type>UNIT_KHAGAN_CAVALRY</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_MOUNTED</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
@@ -30371,6 +30612,7 @@
 		<UnitInfo>
 			<Type>UNIT_CHULLPAS</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_GUN</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
@@ -30480,6 +30722,7 @@
 		<UnitInfo>
 			<Type>UNIT_ILLINIWEK_WARRIOR</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_MELEE</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
@@ -30603,6 +30846,7 @@
 		<UnitInfo>
 			<Type>UNIT_RHODESIA_NATIVE_REGIMENT</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_GUN</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
@@ -30708,6 +30952,7 @@
 		<UnitInfo>
 			<Type>UNIT_BEGGAR</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Special>SPECIALUNIT_PEOPLE</Special>
 			<Combat>UNITCOMBAT_CRIMINAL</Combat>
 			<SubCombatTypes>
@@ -30892,6 +31137,7 @@
 		<UnitInfo>
 			<Type>UNIT_MAGOS</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Special>SPECIALUNIT_PEOPLE</Special>
 			<Capture>UNIT_BARD</Capture>
 			<Combat>UNITCOMBAT_ENTERTAINER</Combat>
@@ -31016,6 +31262,7 @@
 		<UnitInfo>
 			<Type>UNIT_TOFANGCHI</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_GUN</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
@@ -31125,6 +31372,7 @@
 		<UnitInfo>
 			<Type>UNIT_REINDEER_RIDER</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_MOUNTED</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
@@ -31293,6 +31541,7 @@
 		<UnitInfo>
 			<Type>UNIT_MATAAFA_BRIGADE</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_GUN</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
@@ -31398,6 +31647,7 @@
 		<UnitInfo>
 			<Type>UNIT_AMAZON_RIDER</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_MOUNTED</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
@@ -31579,6 +31829,7 @@
 		<UnitInfo>
 			<Type>UNIT_KATARI_INSURGENTS</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_GUN</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
@@ -31691,6 +31942,7 @@
 		<UnitInfo>
 			<Type>UNIT_SIPAHI</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_MOUNTED</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
@@ -31866,6 +32118,7 @@
 		<UnitInfo>
 			<Type>UNIT_KHANUNGESE</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_THROWING</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
@@ -32003,6 +32256,7 @@
 		<UnitInfo>
 			<Type>UNIT_SABAR_DRUMMER</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Special>SPECIALUNIT_PEOPLE</Special>
 			<Capture>UNIT_ENTERTAINER</Capture>
 			<Combat>UNITCOMBAT_ENTERTAINER</Combat>
@@ -32107,6 +32361,7 @@
 		<UnitInfo>
 			<Type>UNIT_FUNJ_CAVALRY</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_MOUNTED</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
@@ -32282,6 +32537,7 @@
 		<UnitInfo>
 			<Type>UNIT_HAJDUK</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Special>SPECIALUNIT_PEOPLE</Special>
 			<Combat>UNITCOMBAT_CRIMINAL</Combat>
 			<SubCombatTypes>
@@ -32511,6 +32767,7 @@
 		<UnitInfo>
 			<Type>UNIT_TUCUME</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_MELEE</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
@@ -32620,6 +32877,7 @@
 		<UnitInfo>
 			<Type>UNIT_GASTRAPHETES</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_ARCHER</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
@@ -32721,6 +32979,7 @@
 		<UnitInfo>
 			<Type>UNIT_SINTASHTA_CHARIOT</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_MOUNTED</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_WHEELED</SubCombatType>
@@ -32839,6 +33098,7 @@
 		<UnitInfo>
 			<Type>UNIT_ZBOJNIK</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Special>SPECIALUNIT_TROOP</Special>
 			<Combat>UNITCOMBAT_RUFFIAN</Combat>
 			<SubCombatTypes>
@@ -33049,6 +33309,7 @@
 		<UnitInfo>
 			<Type>UNIT_CARANTANIAN_MERCENARY</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_MELEE</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
@@ -33146,6 +33407,7 @@
 		<UnitInfo>
 			<Type>UNIT_NIAM_NIAM</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Special>SPECIALUNIT_TROOP</Special>
 			<Combat>UNITCOMBAT_STRIKE_TEAM</Combat>
 			<SubCombatTypes>
@@ -33335,6 +33597,7 @@
 		<UnitInfo>
 			<Type>UNIT_AZAWAD_CAVALRY</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_MOUNTED</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
@@ -33489,6 +33752,7 @@
 		<UnitInfo>
 			<Type>UNIT_DARFUR_MILITIA</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Special>SPECIALUNIT_TROOP</Special>
 			<Combat>UNITCOMBAT_GUN</Combat>
 			<SubCombatTypes>
@@ -33599,6 +33863,7 @@
 		<UnitInfo>
 			<Type>UNIT_JAIPONGAN_DANCER</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Special>SPECIALUNIT_PEOPLE</Special>
 			<Capture>UNIT_ENTERTAINER</Capture>
 			<Combat>UNITCOMBAT_ENTERTAINER</Combat>
@@ -33717,6 +33982,7 @@
 		<UnitInfo>
 			<Type>UNIT_BOSNEGERS</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Special>SPECIALUNIT_PEOPLE</Special>
 			<Combat>UNITCOMBAT_CRIMINAL</Combat>
 			<SubCombatTypes>
@@ -33942,6 +34208,7 @@
 		<UnitInfo>
 			<Type>UNIT_KAROLINER</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_GUN</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
@@ -34051,6 +34318,7 @@
 		<UnitInfo>
 			<Type>UNIT_OMUCHTAN</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Special>SPECIALUNIT_PEOPLE</Special>
 			<Combat>UNITCOMBAT_RECON</Combat>
 			<SubCombatTypes>
@@ -34167,6 +34435,7 @@
 		<UnitInfo>
 			<Type>UNIT_KATIPUNAN_CAVALRY</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_MOUNTED</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_GUN</SubCombatType>
@@ -34380,6 +34649,7 @@
 		<UnitInfo>
 			<Type>UNIT_TAHITIAN_RIDERS</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_WOODEN_SHIPS</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_PIRATE</SubCombatType>
@@ -34604,6 +34874,7 @@
 		<UnitInfo>
 			<Type>UNIT_TAIRONA_REBELS</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_ARCHER</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
@@ -34704,6 +34975,7 @@
 		<UnitInfo>
 			<Type>UNIT_PEN_HUO_QI</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_SIEGE</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
@@ -34830,6 +35102,7 @@
 		<UnitInfo>
 			<Type>UNIT_MOUND_GUARDIAN</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_MELEE</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
@@ -34953,7 +35226,7 @@
 		<UnitInfo>
 			<Type>UNIT_BANYAN_XEBEC</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
-			<iMaxPlayerInstances>3</iMaxPlayerInstances>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_TRADE</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_STEAM_SHIPS</SubCombatType>
@@ -35045,6 +35318,7 @@
 		<UnitInfo>
 			<Type>UNIT_SERENGETI_RANGER</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Special>SPECIALUNIT_PEOPLE</Special>
 			<Combat>UNITCOMBAT_WORKER</Combat>
 			<SubCombatTypes>
@@ -35188,6 +35462,7 @@
 		<UnitInfo>
 			<Type>UNIT_UACUSECHA</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_MELEE</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
@@ -35282,6 +35557,7 @@
 		<UnitInfo>
 			<Type>UNIT_TASMANIAN_DEVILS</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_MELEE</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
@@ -35376,6 +35652,7 @@
 		<UnitInfo>
 			<Type>UNIT_ZAGON</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_MOUNTED</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_GUN</SubCombatType>
@@ -35570,6 +35847,7 @@
 		<UnitInfo>
 			<Type>UNIT_TEXAS_RANGER</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Special>SPECIALUNIT_TROOP</Special>
 			<Combat>UNITCOMBAT_LAW_ENFORCEMENT</Combat>
 			<SubCombatTypes>
@@ -35724,6 +36002,7 @@
 		<UnitInfo>
 			<Type>UNIT_THRACIAN_PELTAST</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_THROWING</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
@@ -35841,6 +36120,7 @@
 		<UnitInfo>
 			<Type>UNIT_DOUJIAN</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_WOODEN_SHIPS</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_NAVAL_COMBATANT</SubCombatType>
@@ -35962,6 +36242,7 @@
 		<UnitInfo>
 			<Type>UNIT_HEAVY_TARKHAN</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_MOUNTED</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
@@ -36133,6 +36414,7 @@
 		<UnitInfo>
 			<Type>UNIT_WALLABY_HUNTERS</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_HUNTER</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_EXPLORER</SubCombatType>
@@ -36255,6 +36537,7 @@
 		<UnitInfo>
 			<Type>UNIT_YAOTLALLI_WARRIOR</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_MELEE</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
@@ -36362,6 +36645,7 @@
 		<UnitInfo>
 			<Type>UNIT_BACTRIAN_CATAPHRACT</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_MOUNTED</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
@@ -36511,6 +36795,7 @@
 		<UnitInfo>
 			<Type>UNIT_GUAYKURU</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_MOUNTED</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
@@ -36705,6 +36990,7 @@
 		<UnitInfo>
 			<Type>UNIT_NUKULEKA_WARRIORS</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_THROWING</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
@@ -36842,6 +37128,7 @@
 		<UnitInfo>
 			<Type>UNIT_KHINGILA_WARRIORS</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_MELEE</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
@@ -36936,6 +37223,7 @@
 		<UnitInfo>
 			<Type>UNIT_TUCANO_MERCHANT</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Capture>UNIT_EARLY_MERCHANT_C2C</Capture>
 			<Combat>UNITCOMBAT_TRADE</Combat>
 			<SubCombatTypes>
@@ -37114,6 +37402,7 @@
 		<UnitInfo>
 			<Type>UNIT_SABLE_TRAPPER</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_HUNTER</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_EXPLORER</SubCombatType>
@@ -37235,6 +37524,7 @@
 		<UnitInfo>
 			<Type>UNIT_WHEELED_TANK</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_TRACKED</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
@@ -37365,6 +37655,7 @@
 		<UnitInfo>
 			<Type>UNIT_57TH_INFANTRY_REGIMENT</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_SIEGE</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
@@ -37491,6 +37782,7 @@
 		<UnitInfo>
 			<Type>UNIT_ZAPOROZKI_KOZAK</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_MOUNTED</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_GUN</SubCombatType>
@@ -37696,6 +37988,7 @@
 		<UnitInfo>
 			<Type>UNIT_HERNANDARIAS_REGIMENTO</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_MOUNTED</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
@@ -37864,7 +38157,7 @@
 		<UnitInfo>
 			<Type>UNIT_BOROBUDUR</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
-			<iMaxPlayerInstances>3</iMaxPlayerInstances>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_TRADE</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_WOODEN_SHIPS</SubCombatType>
@@ -37998,6 +38291,7 @@
 		<UnitInfo>
 			<Type>UNIT_JADID_GRENADIERS</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_THROWING</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_GUN</SubCombatType>
@@ -38129,6 +38423,7 @@
 		<UnitInfo>
 			<Type>UNIT_FIGURINE_POTTER</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Capture>UNIT_EARLY_MERCHANT_C2C</Capture>
 			<Combat>UNITCOMBAT_TRADE</Combat>
 			<SubCombatTypes>
@@ -38308,6 +38603,7 @@
 		<UnitInfo>
 			<Type>UNIT_VANAU_WARRIOR</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_MELEE</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
@@ -38425,7 +38721,7 @@
 		<UnitInfo>
 			<Type>UNIT_GALLIOT</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
-			<iMaxPlayerInstances>3</iMaxPlayerInstances>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_TRADE</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_WOODEN_SHIPS</SubCombatType>
@@ -38559,6 +38855,7 @@
 		<UnitInfo>
 			<Type>UNIT_SAUD_CAVALRY</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_MOUNTED</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_GUN</SubCombatType>
@@ -38772,6 +39069,7 @@
 		<UnitInfo>
 			<Type>UNIT_ORDER_OF_THE_DRAGON</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_MELEE</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
@@ -38871,6 +39169,7 @@
 		<UnitInfo>
 			<Type>UNIT_VANDAL_PILLAGER</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_MOUNTED</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MELEE</SubCombatType>
@@ -39037,6 +39336,7 @@
 		<UnitInfo>
 			<Type>UNIT_WARAY_RIDERS</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_MOUNTED</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
@@ -39222,6 +39522,7 @@
 		<UnitInfo>
 			<Type>UNIT_ORONAO_WATCHER</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Special>SPECIALUNIT_TROOP</Special>
 			<Combat>UNITCOMBAT_LAW_ENFORCEMENT</Combat>
 			<SubCombatTypes>
@@ -39369,6 +39670,7 @@
 		<UnitInfo>
 			<Type>UNIT_AKAVAI</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_THROWING</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
@@ -39470,6 +39772,7 @@
 		<UnitInfo>
 			<Type>UNIT_PATAMAR</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_WOODEN_SHIPS</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_TRANSPORT</SubCombatType>
@@ -39576,6 +39879,7 @@
 		<UnitInfo>
 			<Type>UNIT_WAYUU_CAVALRY</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_MOUNTED</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_GUN</SubCombatType>
@@ -39780,6 +40084,7 @@
 		<UnitInfo>
 			<Type>UNIT_YU_SPEARMAN</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_MELEE</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
@@ -39897,6 +40202,7 @@
 		<UnitInfo>
 			<Type>UNIT_DAREN</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_MOUNTED</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
@@ -40077,6 +40383,7 @@
 		<UnitInfo>
 			<Type>UNIT_ZHUGE_KESHIK</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_MOUNTED</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_ARCHER</SubCombatType>
@@ -40242,6 +40549,7 @@
 		<UnitInfo>
 			<Type>UNIT_YAGHAN_HUNTERS</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_THROWING</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
@@ -40379,6 +40687,7 @@
 		<UnitInfo>
 			<Type>UNIT_RIMYURA_WARRIORS</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_MELEE</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
@@ -40494,6 +40803,7 @@
 		<UnitInfo>
 			<Type>UNIT_KARAWETARI</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_ARCHER</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
@@ -40581,6 +40891,7 @@
 		<UnitInfo>
 			<Type>UNIT_MBARZ_BALSYF</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_MELEE</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
@@ -40675,6 +40986,7 @@
 		<UnitInfo>
 			<Type>UNIT_YOLNGU_MESSENGER</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Capture>UNIT_EARLY_MERCHANT_C2C</Capture>
 			<Combat>UNITCOMBAT_TRADE</Combat>
 			<SubCombatTypes>
@@ -40833,6 +41145,7 @@
 		<UnitInfo>
 			<Type>UNIT_SAMBUK</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_WOODEN_SHIPS</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_PIRATE</SubCombatType>
@@ -40981,6 +41294,7 @@
 		<UnitInfo>
 			<Type>UNIT_BASHKIR_SHAMAN</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Special>SPECIALUNIT_PEOPLE</Special>
 			<Capture>UNIT_BARD</Capture>
 			<Combat>UNITCOMBAT_ENTERTAINER</Combat>
@@ -41091,6 +41405,7 @@
 		<UnitInfo>
 			<Type>UNIT_ZENU_GOLDSMITHS</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Capture>UNIT_SUPPLY_TRAIN</Capture>
 			<Combat>UNITCOMBAT_TRADE</Combat>
 			<SubCombatTypes>
@@ -41196,6 +41511,7 @@
 		<UnitInfo>
 			<Type>UNIT_SHEBA_ELITES</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_MELEE</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
@@ -41290,6 +41606,7 @@
 		<UnitInfo>
 			<Type>UNIT_CIBOLA_PEASANT</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Capture>UNIT_WORKANIMAL</Capture>
 			<Combat>UNITCOMBAT_WORKER</Combat>
 			<SubCombatTypes>
@@ -41474,6 +41791,7 @@
 		<UnitInfo>
 			<Type>UNIT_CORNUTI</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_MELEE</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
@@ -41568,6 +41886,7 @@
 		<UnitInfo>
 			<Type>UNIT_FOREST_GUARDIANS</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Special>SPECIALUNIT_PEOPLE</Special>
 			<Combat>UNITCOMBAT_WORKER</Combat>
 			<SubCombatTypes>
@@ -41697,6 +42016,7 @@
 		<UnitInfo>
 			<Type>UNIT_MARHATHEGNOZ</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_MOUNTED</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
@@ -41878,6 +42198,7 @@
 		<UnitInfo>
 			<Type>UNIT_MEHARISTS</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_MOUNTED</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_GUN</SubCombatType>
@@ -42036,6 +42357,7 @@
 		<UnitInfo>
 			<Type>UNIT_MAHOGANY_WOODCUTTER</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Capture>UNIT_WORKANIMAL</Capture>
 			<Combat>UNITCOMBAT_WORKER</Combat>
 			<SubCombatTypes>
@@ -42220,6 +42542,7 @@
 		<UnitInfo>
 			<Type>UNIT_MUJAHIDEEN</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Special>SPECIALUNIT_TROOP</Special>
 			<Combat>UNITCOMBAT_ROCKET_LAUNCHER</Combat>
 			<SubCombatTypes>
@@ -42342,6 +42665,7 @@
 		<UnitInfo>
 			<Type>UNIT_DE_SUCRE_DRAGOONS</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_MOUNTED</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
@@ -42506,6 +42830,7 @@
 		<UnitInfo>
 			<Type>UNIT_PALADIN</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_MOUNTED</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
@@ -42652,6 +42977,7 @@
 		<UnitInfo>
 			<Type>UNIT_GAEROAS</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_THROWING</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
@@ -42769,6 +43095,7 @@
 		<UnitInfo>
 			<Type>UNIT_BOYARS</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_MOUNTED</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
@@ -42950,6 +43277,7 @@
 		<UnitInfo>
 			<Type>UNIT_GENOAN_MERCENARY</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_ARCHER</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
@@ -43050,6 +43378,7 @@
 		<UnitInfo>
 			<Type>UNIT_CABANAGEM_REBEL</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_THROWING</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_GUN</SubCombatType>
@@ -43181,6 +43510,7 @@
 		<UnitInfo>
 			<Type>UNIT_CANARI_BOWMANS</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_ARCHER</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
@@ -43268,6 +43598,7 @@
 		<UnitInfo>
 			<Type>UNIT_CAPAYAN_AXEMANS</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_MELEE</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
@@ -43391,6 +43722,7 @@
 		<UnitInfo>
 			<Type>UNIT_KON_TIKI</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_WOODEN_SHIPS</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_TRANSPORT</SubCombatType>
@@ -43529,6 +43861,7 @@
 		<UnitInfo>
 			<Type>UNIT_BALLESTER</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_ARCHER</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
@@ -43615,6 +43948,7 @@
 		<UnitInfo>
 			<Type>UNIT_AKSUM_MERCHANTS</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Capture>UNIT_AKSUM_MERCHANTS</Capture>
 			<Combat>UNITCOMBAT_TRADE</Combat>
 			<SubCombatTypes>
@@ -43720,6 +44054,7 @@
 		<UnitInfo>
 			<Type>UNIT_BALEARIC_SLINGERS</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_ARCHER</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
@@ -43821,6 +44156,7 @@
 		<UnitInfo>
 			<Type>UNIT_WARRIORS_OF_THE_CLOUDS</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_MELEE</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
@@ -43936,6 +44272,7 @@
 		<UnitInfo>
 			<Type>UNIT_QHATUQ</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_RECON</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_EXPLORER</SubCombatType>
@@ -44039,6 +44376,7 @@
 		<UnitInfo>
 			<Type>UNIT_GAZAVAT_WARRIORS</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_GUN</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
@@ -44151,6 +44489,7 @@
 		<UnitInfo>
 			<Type>UNIT_CHILEAN_CORVETTE</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_WOODEN_SHIPS</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_NAVAL_COMBATANT</SubCombatType>
@@ -44303,6 +44642,7 @@
 		<UnitInfo>
 			<Type>UNIT_YUPANQUI_BOWMAN</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_ARCHER</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
@@ -44390,6 +44730,7 @@
 		<UnitInfo>
 			<Type>UNIT_MIDEWIWIN</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Special>SPECIALUNIT_PEOPLE</Special>
 			<Combat>UNITCOMBAT_HEALTH_CARE</Combat>
 			<SubCombatTypes>
@@ -44511,6 +44852,7 @@
 		<UnitInfo>
 			<Type>UNIT_ASVARAN_SARDAR</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_MOUNTED</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
@@ -44686,6 +45028,7 @@
 		<UnitInfo>
 			<Type>UNIT_BEAD_HUCKSTER</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Capture>UNIT_TRADE_CARAVAN</Capture>
 			<Combat>UNITCOMBAT_TRADE</Combat>
 			<SubCombatTypes>
@@ -44798,6 +45141,7 @@
 		<UnitInfo>
 			<Type>UNIT_SEARCH_BLOC</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Special>SPECIALUNIT_TROOP</Special>
 			<Combat>UNITCOMBAT_LAW_ENFORCEMENT</Combat>
 			<SubCombatTypes>
@@ -44966,6 +45310,7 @@
 		<UnitInfo>
 			<Type>UNIT_PATAGONIAN_ARCHER</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_ARCHER</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
@@ -45053,6 +45398,7 @@
 		<UnitInfo>
 			<Type>UNIT_SAMOSTRELAC</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_ARCHER</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
@@ -45153,6 +45499,7 @@
 		<UnitInfo>
 			<Type>UNIT_VOZOVA_HRADBA</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_MOUNTED</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_WHEELED</SubCombatType>
@@ -45285,6 +45632,7 @@
 		<UnitInfo>
 			<Type>UNIT_FALXMEN</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_MELEE</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
@@ -45382,6 +45730,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_HUNTER</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_EXPLORER</SubCombatType>
@@ -45501,6 +45850,7 @@
 		<UnitInfo>
 			<Type>UNIT_KALARIPAYATT</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_MELEE</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
@@ -45595,6 +45945,7 @@
 		<UnitInfo>
 			<Type>UNIT_OILAT_KESHIK</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_MOUNTED</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
@@ -45763,6 +46114,7 @@
 		<UnitInfo>
 			<Type>UNIT_IWIA_BATTALION</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_GUN</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
@@ -45868,6 +46220,7 @@
 		<UnitInfo>
 			<Type>UNIT_HOPLOMACHUS</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Special>SPECIALUNIT_TROOP</Special>
 			<Combat>UNITCOMBAT_LAW_ENFORCEMENT</Combat>
 			<SubCombatTypes>
@@ -46019,6 +46372,7 @@
 		<UnitInfo>
 			<Type>UNIT_KUTAMA_INFANTRY</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_MELEE</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
@@ -46116,6 +46470,7 @@
 		<UnitInfo>
 			<Type>UNIT_FYRDMAN</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_THROWING</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
@@ -46233,6 +46588,7 @@
 		<UnitInfo>
 			<Type>UNIT_GONE_DAU</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Capture>UNIT_WORKBOAT_MIDDLE</Capture>
 			<Combat>UNITCOMBAT_SEA_WORKER</Combat>
 			<SubCombatTypes>
@@ -46367,6 +46723,7 @@
 		<UnitInfo>
 			<Type>UNIT_TARKKA_AMPUJA</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Special>SPECIALUNIT_TROOP</Special>
 			<Combat>UNITCOMBAT_STRIKE_TEAM</Combat>
 			<SubCombatTypes>
@@ -46556,6 +46913,7 @@
 		<UnitInfo>
 			<Type>UNIT_BRABANT_MERCENARIES</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_MELEE</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
@@ -46636,6 +46994,7 @@
 		<UnitInfo>
 			<Type>UNIT_SEAL_HUNTER</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_HUNTER</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_EXPLORER</SubCombatType>
@@ -46772,6 +47131,7 @@
 		<UnitInfo>
 			<Type>UNIT_FURAWI_TECHNICAL</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_WHEELED</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
@@ -46911,6 +47271,7 @@
 		<UnitInfo>
 			<Type>UNIT_SOTAROAS</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_ARCHER</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
@@ -46998,6 +47359,7 @@
 		<UnitInfo>
 			<Type>UNIT_GAUCHO_CAVALRY</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_MOUNTED</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_GUN</SubCombatType>
@@ -47202,6 +47564,7 @@
 		<UnitInfo>
 			<Type>UNIT_MONASPA_GUARD</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_MOUNTED</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
@@ -47356,6 +47719,7 @@
 		<UnitInfo>
 			<Type>UNIT_SONINKE_SWORDSMAN</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_MELEE</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
@@ -47450,6 +47814,7 @@
 		<UnitInfo>
 			<Type>UNIT_KETABDAR</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Special>SPECIALUNIT_PEOPLE</Special>
 			<Capture>UNIT_ENTERTAINER</Capture>
 			<Combat>UNITCOMBAT_ENTERTAINER</Combat>
@@ -47554,6 +47919,7 @@
 		<UnitInfo>
 			<Type>UNIT_ALBANIAN_JANISSARY</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_GUN</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
@@ -47664,6 +48030,7 @@
 		<UnitInfo>
 			<Type>UNIT_CHAPUL</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_MOUNTED</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
@@ -47810,6 +48177,7 @@
 		<UnitInfo>
 			<Type>UNIT_ASHINA_ELITE</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_MELEE</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
@@ -47904,6 +48272,7 @@
 		<UnitInfo>
 			<Type>UNIT_KALANG_MATAI</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_MELEE</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
@@ -48019,6 +48388,7 @@
 		<UnitInfo>
 			<Type>UNIT_MADEIRA_AXEMAN</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_MELEE</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
@@ -48142,6 +48512,7 @@
 		<UnitInfo>
 			<Type>UNIT_KARAI_PYHARE</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Special>SPECIALUNIT_TROOP</Special>
 			<Combat>UNITCOMBAT_CRIMINAL</Combat>
 			<SubCombatTypes>
@@ -48364,6 +48735,7 @@
 		<UnitInfo>
 			<Type>UNIT_ALVARADO_CAVALRY</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_MOUNTED</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_GUN</SubCombatType>
@@ -48566,7 +48938,7 @@
 		<UnitInfo>
 			<Type>UNIT_SUGAR_CLIPPER</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
-			<iMaxPlayerInstances>3</iMaxPlayerInstances>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_TRADE</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_STEAM_SHIPS</SubCombatType>
@@ -48658,6 +49030,7 @@
 		<UnitInfo>
 			<Type>UNIT_TIGURINI_SCOUTS</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Special>SPECIALUNIT_PEOPLE</Special>
 			<Combat>UNITCOMBAT_RECON</Combat>
 			<SubCombatTypes>
@@ -48768,6 +49141,7 @@
 		<UnitInfo>
 			<Type>UNIT_HEMUDU_HUNTERS</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_ARCHER</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
@@ -48856,6 +49230,7 @@
 		<UnitInfo>
 			<Type>UNIT_MYRH_CARAVAN</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Capture>UNIT_TRADE_CARAVAN</Capture>
 			<Combat>UNITCOMBAT_TRADE</Combat>
 			<SubCombatTypes>
@@ -48984,6 +49359,7 @@
 		<UnitInfo>
 			<Type>UNIT_RAZZIA_PIRATES</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_WOODEN_SHIPS</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_PIRATE</SubCombatType>
@@ -49147,7 +49523,7 @@
 		<UnitInfo>
 			<Type>UNIT_TRADE_JUNK</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
-			<iMaxPlayerInstances>3</iMaxPlayerInstances>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_TRADE</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_STEAM_SHIPS</SubCombatType>
@@ -49239,6 +49615,7 @@
 		<UnitInfo>
 			<Type>UNIT_COPENA_MERCHANT</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Capture>UNIT_TRADE_CARAVAN</Capture>
 			<Combat>UNITCOMBAT_TRADE</Combat>
 			<SubCombatTypes>
@@ -49352,6 +49729,7 @@
 		<UnitInfo>
 			<Type>UNIT_PUEBLO_REBEL</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Special>SPECIALUNIT_TROOP</Special>
 			<Combat>UNITCOMBAT_STRIKE_TEAM</Combat>
 			<SubCombatTypes>
@@ -49537,6 +49915,7 @@
 		<UnitInfo>
 			<Type>UNIT_BALAMOB_SLINGER</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_ARCHER</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
@@ -49624,6 +50003,7 @@
 		<UnitInfo>
 			<Type>UNIT_TESHUB_PRIEST</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Special>SPECIALUNIT_PEOPLE</Special>
 			<Capture>UNIT_BARD</Capture>
 			<Combat>UNITCOMBAT_ENTERTAINER</Combat>
@@ -49748,6 +50128,7 @@
 		<UnitInfo>
 			<Type>UNIT_HYKSOSI_CHARIOT</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_MOUNTED</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_WHEELED</SubCombatType>
@@ -49866,6 +50247,7 @@
 		<UnitInfo>
 			<Type>UNIT_LIBURNA</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_WOODEN_SHIPS</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_PIRATE</SubCombatType>
@@ -50086,6 +50468,7 @@
 		<UnitInfo>
 			<Type>UNIT_BILOG</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_WOODEN_SHIPS</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_RECON</SubCombatType>
@@ -50188,6 +50571,7 @@
 		<UnitInfo>
 			<Type>UNIT_HARAPPA_WATCHER</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Special>SPECIALUNIT_TROOP</Special>
 			<Combat>UNITCOMBAT_LAW_ENFORCEMENT</Combat>
 			<SubCombatTypes>
@@ -50339,6 +50723,7 @@
 		<UnitInfo>
 			<Type>UNIT_PASDARAN</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Special>SPECIALUNIT_TROOP</Special>
 			<Combat>UNITCOMBAT_GUN</Combat>
 			<SubCombatTypes>
@@ -50450,6 +50835,7 @@
 		<UnitInfo>
 			<Type>UNIT_PANGCAH_IMPANTERYA</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_GUN</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
@@ -50562,6 +50948,7 @@
 		<UnitInfo>
 			<Type>UNIT_REPUBLICAN_GUARD</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Special>SPECIALUNIT_TROOP</Special>
 			<Combat>UNITCOMBAT_GUN</Combat>
 			<SubCombatTypes>
@@ -50673,6 +51060,7 @@
 		<UnitInfo>
 			<Type>UNIT_TARUMA_WARRIOR</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_MELEE</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
@@ -50790,6 +51178,7 @@
 		<UnitInfo>
 			<Type>UNIT_JOMON_HUNTING_DOGS</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_ANIMAL</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
@@ -50888,6 +51277,7 @@
 		<UnitInfo>
 			<Type>UNIT_KNARR</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_WOODEN_SHIPS</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_TRANSPORT</SubCombatType>
@@ -51018,6 +51408,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_HUNTER</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_EXPLORER</SubCombatType>
@@ -51119,6 +51510,7 @@
 		<UnitInfo>
 			<Type>UNIT_BATYRS</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_MOUNTED</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
@@ -51321,6 +51713,7 @@
 		<UnitInfo>
 			<Type>UNIT_MOBILE_TREBUCHET</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Capture>UNIT_TREBUCHET</Capture>
 			<Combat>UNITCOMBAT_SIEGE</Combat>
 			<SubCombatTypes>
@@ -51428,6 +51821,7 @@
 		<UnitInfo>
 			<Type>UNIT_KHITAN_INFANTRY</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_MELEE</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
@@ -51522,6 +51916,7 @@
 		<UnitInfo>
 			<Type>UNIT_MAIZE_CARAVAN</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Capture>UNIT_FOOD_CARAVAN</Capture>
 			<Combat>UNITCOMBAT_TRADE</Combat>
 			<SubCombatTypes>
@@ -51620,6 +52015,7 @@
 		<UnitInfo>
 			<Type>UNIT_ERNA</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Special>SPECIALUNIT_TROOP</Special>
 			<Combat>UNITCOMBAT_GUN</Combat>
 			<SubCombatTypes>
@@ -51738,6 +52134,7 @@
 		<UnitInfo>
 			<Type>UNIT_ROYAL_SPECIAL_FORCES</Type>
 			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Special>SPECIALUNIT_TROOP</Special>
 			<Combat>UNITCOMBAT_GUN</Combat>
 			<SubCombatTypes>
