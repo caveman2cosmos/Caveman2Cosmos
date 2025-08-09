@@ -56,6 +56,10 @@
 					<CivilizationType>CIVILIZATION_NPC_NEANDERTHAL</CivilizationType>
 				</EnabledCivilizationType>
 			</EnabledCivilizationTypes>
+            <CommerceModifiers>
+                <iCommerce>0</iCommerce>
+                <iCommerce>-5</iCommerce>
+            </CommerceModifiers>
 			<Description>TXT_KEY_BUILDING_C_AC_NEANDERTHAL</Description>
 			<Civilopedia>TXT_KEY_BUILDING_C_AC_PEDIA</Civilopedia>
 			<Help>TXT_KEY_BUILDING_C_AC_HELP</Help>
@@ -226,6 +230,10 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
+            <CommerceModifiers>
+                <iCommerce>0</iCommerce>
+                <iCommerce>-5</iCommerce>
+            </CommerceModifiers>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_PALACE</BuildingType>
 			</PrereqInCityBuildings>
@@ -640,6 +648,10 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
+            <CommerceModifiers>
+                <iCommerce>0</iCommerce>
+                <iCommerce>-5</iCommerce>
+            </CommerceModifiers>
 			<GlobalBuildingCostModifiers>
 				<BuildingCostModifier>
 					<BuildingType>BUILDING_C_L_AFRICAN</BuildingType>
@@ -973,6 +985,10 @@
 			<Civilopedia>TXT_KEY_BUILDING_C_N_PEDIA</Civilopedia>
 			<Help>TXT_KEY_BUILDING_C_N_HELP</Help>
 			<ArtDefineTag>ART_DEF_BUILDING_CULTURE_NEANDERTHAL</ArtDefineTag>
+            <CommerceModifiers>
+                <iCommerce>0</iCommerce>
+                <iCommerce>-5</iCommerce>
+            </CommerceModifiers>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
