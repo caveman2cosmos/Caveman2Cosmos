@@ -20113,6 +20113,12 @@
 			<PromotionLine>PROMOTIONLINE_MASTER_HUNTER</PromotionLine>
 			<iLinePriority>1</iLinePriority>
 			<bBlitz>1</bBlitz>
+            <VisibilityIntensityChangeTypes>
+                <VisibilityIntensityChangeType>
+                    <InvisibleType>INVISIBLE_CAMOUFLAGE</InvisibleType>
+                    <iIntensity>1</iIntensity>
+                </VisibilityIntensityChangeType>
+            </VisibilityIntensityChangeTypes>
 			<Button>Art/Interface/Buttons/Promotions/Master_hunter1.dds</Button>
 		</PromotionInfo>
 		<PromotionInfo>
@@ -20124,6 +20130,12 @@
 			<iLinePriority>2</iLinePriority>
 			<iLevelPrereq>5</iLevelPrereq>
 			<bRiver>1</bRiver>
+            <VisibilityIntensityChangeTypes>
+                <VisibilityIntensityChangeType>
+                    <InvisibleType>INVISIBLE_CAMOUFLAGE</InvisibleType>
+                    <iIntensity>1</iIntensity>
+                </VisibilityIntensityChangeType>
+            </VisibilityIntensityChangeTypes>
 			<Button>Art/Interface/Buttons/Promotions/Master_hunter2.dds</Button>
 			<UnitCombats>
 				<UnitCombat>
@@ -20142,6 +20154,12 @@
 			<iLinePriority>3</iLinePriority>
 			<iLevelPrereq>10</iLevelPrereq>
 			<bEnemyRoute>1</bEnemyRoute>
+            <VisibilityIntensityChangeTypes>
+                <VisibilityIntensityChangeType>
+                    <InvisibleType>INVISIBLE_CAMOUFLAGE</InvisibleType>
+                    <iIntensity>1</iIntensity>
+                </VisibilityIntensityChangeType>
+            </VisibilityIntensityChangeTypes>
 			<Button>Art/Interface/Buttons/Promotions/Master_hunter3.dds</Button>
 			<UnitCombats>
 				<UnitCombat>
