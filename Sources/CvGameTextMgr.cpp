@@ -20063,23 +20063,32 @@ void CvGameTextMgr::setUnitHelp(CvWStringBuffer &szBuffer, UnitTypes eUnit, bool
 		}
 
 		if (isNationalUnit(eUnit)
-		&& (!GC.getGame().isOption(GAMEOPTION_NO_NATIONAL_UNIT_LIMIT) || unitInfo.isUnlimitedException()))
-		{
-			if (!pCity)
-			{
-				szBuffer.append(NEWLINE);
-				szBuffer.append(gDLL->getText("TXT_KEY_UNITHELP_NATIONAL_UNIT_ALLOWED", unitInfo.getMaxPlayerInstances()));
-			}
-			else
-			{
-				szBuffer.append(
-					gDLL->getText(
-						"TXT_KEY_UNITHELP_NATIONAL_UNIT_LEFT",
-						unitInfo.getMaxPlayerInstances() - (ePlayer != NO_PLAYER ? GET_PLAYER(ePlayer).getUnitCountPlusMaking(eUnit) : 0)
-					)
-				);
-			}
-		}
+        	&& (!GC.getGame().isOption(GAMEOPTION_NO_NATIONAL_UNIT_LIMIT) || unitInfo.isUnlimitedException()))
+        {
+            //this scale will be used for national units only... the idea is to start them 5 at prehistoric and scale by 5 per age...
+            // as an alternative to the 10% per unit cost increase but unlimited
+            // might have to use separate indicator but this will do for now for testing purposes
+        	int iMaxUnits = unitInfo.getMaxPlayerInstances();
+        	if (iMaxUnits == 5)
+        	{
+        		EraTypes eEra = (ePlayer != NO_PLAYER) ? GET_PLAYER(ePlayer).getCurrentEra() : NO_ERA;
+        		if (eEra > 0)
+        		{
+        			iMaxUnits += eEra * 5;
+        		}
+        	}
+
+        	if (!pCity)
+        	{
+        		szBuffer.append(NEWLINE);
+        		szBuffer.append(gDLL->getText("TXT_KEY_UNITHELP_NATIONAL_UNIT_ALLOWED", iMaxUnits));
+        	}
+        	else
+        	{
+        		int iUsed = (ePlayer != NO_PLAYER ? GET_PLAYER(ePlayer).getUnitCountPlusMaking(eUnit) : 0);
+        		szBuffer.append(gDLL->getText("TXT_KEY_UNITHELP_NATIONAL_UNIT_LEFT", iMaxUnits - iUsed));
+        	}
+        }
 
 		if (0 != unitInfo.getInstanceCostModifier())
 		{
