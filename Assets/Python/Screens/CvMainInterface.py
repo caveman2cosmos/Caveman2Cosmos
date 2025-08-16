@@ -1320,7 +1320,8 @@ class CvMainInterface:
 			screen.hideEndTurn("EndTurnButton")
 
 	def updateWaitingForPlayer(self, iPlayer):
-		CyGInterfaceScreen("MainInterface", CvScreenEnums.MAIN_INTERFACE).setLabel("WaitingForPlayer", "", self.aFontList[0] + self.szSystemWaiting % str(iPlayer), 1<<2, self.xRes/2, self.yRes - 296, 0, FontTypes.GAME_FONT, WidgetTypes.WIDGET_GENERAL, 0, 0)
+		text = self.szSystemWaiting % (str(iPlayer),)
+		CyGInterfaceScreen("MainInterface", CvScreenEnums.MAIN_INTERFACE).setLabel("WaitingForPlayer", "", self.aFontList[0] + text, 1<<2, self.xRes/2, self.yRes - 296, 0, FontTypes.GAME_FONT, WidgetTypes.WIDGET_GENERAL, 0, 0)
 
 
 	# Will redraw the interface

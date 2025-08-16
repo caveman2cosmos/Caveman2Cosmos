@@ -866,7 +866,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_FRUIT_GATHERING_CAMP</Tag>
 		<English>Fruit Gathering Camp</English>
-		<French>Camp de Récolte de Fruits</French>
+		<French>Camp de récolte de fruits</French>
 		<German>
 			<Text>Obstsammler</Text>
 			<Gender>Male</Gender>
@@ -1003,7 +1003,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_GRAPE_GATHERING_CAMP</Tag>
 		<English>Grape Gathering Camp</English>
-		<French>Camp de Récolte de Raisin</French>
+		<French>Camp de récolte de raisin</French>
 		<German>
 			<Text>Traubensammler</Text>
 			<Gender>Male</Gender>
@@ -1021,7 +1021,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_GRAPE_PICKING_CAMP</Tag>
 		<English>Grape Picking Camp</English>
-		<French>Camp de Cueillette de Raisins</French>
+		<French>Camp de cueillette de raisins</French>
 		<German>
 			<Text>Traubenleser</Text>
 			<Gender>Male</Gender>
@@ -1039,7 +1039,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_GROUNDWATER_WELL</Tag>
 		<English>Groundwater Well</English>
-		<French>Puits Souterrain</French>
+		<French>Puits souterrain</French>
 		<German>Grundwasserbrunnen</German>
 		<Italian>Pozzo sotterraneo</Italian>
 		<Spanish>
@@ -1096,7 +1096,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_HARVEST_KELP</Tag>
 		<English>Harvest Kelp</English>
-		<French>Récolter les Algues</French>
+		<French>Récolter les algues</French>
 		<German>Ernte Seetang</German>
 		<Italian>Raccoglitore di alghe</Italian>
 		<Spanish>
@@ -1723,7 +1723,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_PLANT_GATHERING_CAMP</Tag>
 		<English>Plant Gathering Camp</English>
-		<French>Installer un camp de récolte</French>
+		<French>Camp de récolteurs de végétaux</French>
 		<German>
 			<Text>Pflanzensucher</Text>
 			<Gender>Male</Gender>
@@ -1744,7 +1744,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_PLANT_PICKING_CAMP</Tag>
 		<English>Plant Picking Camp</English>
-		<French>Installer un Camp de Cueillette</French>
+		<French>Camp de cueillette de végétaux</French>
 		<German>
 			<Text>Pflanzenpflücker</Text>
 			<Gender>Male</Gender>
@@ -2036,7 +2036,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_STONE_TOOLS_WORKSHOP</Tag>
 		<English>Stone Tools Workshop</English>
-		<French>Atelier d'Outils de pierre</French>
+		<French>Atelier d'outils de pierre</French>
 		<German>
 			<Text>Steinsammler</Text>
 			<Gender>Male</Gender>

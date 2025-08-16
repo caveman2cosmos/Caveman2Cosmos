@@ -15415,7 +15415,7 @@ void CvCity::pushOrder(OrderTypes eOrder, int iData1, int iData2, bool bSave, bo
 				{
 					CvWString szString;
 					getUnitAIString(szString, order.getUnitAIType());
-					logBBAI("    City %S pushes production of unit %S with UNITAI %S", getName().GetCString(), GC.getUnitInfo(unitType).getDescription(getCivilizationType()), szString.GetCString());
+					logBBAI("    City %S pushes production of unit %S for type UNITAI_%S", getName().GetCString(), GC.getUnitInfo(unitType).getDescription(getCivilizationType()), szString.GetCString());
 				}
 				bValid = true;
 			}

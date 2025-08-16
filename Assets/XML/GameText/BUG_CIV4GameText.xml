@@ -7707,7 +7707,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_ROMSETTINGS__CURRENTDIFFICULTY_LIST</Tag>
 		<English>Current Difficulty|Settler|Chieftain|Warlord|Noble|Prince|Monarch|Emperor|Immortal|Deity|Nightmare</English>
-		<French>Difficulté actuelle|Colon|Chef|Seigneur|Régent|Prince|Monarque|Empereur|Immortel|Divinité|Nightmare</French>
+		<French>Difficulté actuelle|Colon|Chef|Seigneur|Régent|Prince|Monarque|Empereur|Immortel|Divinité|Cauchemar</French>
 		<German>Aktueller Schwierigkeitsgrad|Siedler|Häuptling|Kriegsherr|Adliger|Prinz|König|Kaiser|Unsterblicher|Gottheit|Nightmare</German>
 		<Italian>Attuale|Colono|Capitano|Guerriero|Nobile|Principe|Monarca|Imperatore|Immortale|Divinità|Incubo</Italian>
 		<Spanish>Dificultad actual|Colono|Jefe|Caudillo|Noble|Príncipe|Monarca|Emperador|Immortal|Deidad|Nightmare</Spanish>
@@ -7825,7 +7825,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_ROMSETTINGS__FLEXIBLEDIFFICULTYMAXIMUMDIFF_LIST</Tag>
 		<English>No Maximum|Settler|Chieftain|Warlord|Noble|Prince|Monarch|Emperor|Immortal|Deity|Nightmare</English>
-		<French>Pas de Maximum|Colon|Chef|Seigneur|Régent|Prince|Monarque|Empereur|Immortel|Divinité|Nightmare</French>
+		<French>Pas de Maximum|Colon|Chef|Seigneur|Régent|Prince|Monarque|Empereur|Immortel|Divinité|Cauchemar</French>
 		<German>Kein Maximum|Siedler|Häuptling|Kriegsherr|Adliger|Prinz|König|Kaiser|Unsterblicher|Gottheit|Nightmare</German>
 		<Italian>Nessun massimo|Colono|Capitano|Guerriero|Nobile|Principe|Monarca|Imperatore|Immortale|Divinità|Incubo</Italian>
 		<Spanish>Sin mínimo|Colono|Jefe|Caudillo|Noble|Príncipe|Monarca|Emperador|Immortal|Deidad|Nightmare</Spanish>
@@ -7855,7 +7855,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_ROMSETTINGS__FLEXIBLEDIFFICULTYMINIMUMDIFF_LIST</Tag>
 		<English>No Minimum|Settler|Chieftain|Warlord|Noble|Prince|Monarch|Emperor|Immortal|Deity|Nightmare</English>
-		<French>Pas de Minimum|Colon|Chef|Seigneur|Régent|Prince|Monarque|Empereur|Immortel|Divinité|Nightmare</French>
+		<French>Pas de Minimum|Colon|Chef|Seigneur|Régent|Prince|Monarque|Empereur|Immortel|Divinité|Cauchemar</French>
 		<German>Kein Minimum|Siedler|Häuptling|Kriegsherr|Adliger|Prinz|König|Kaiser|Unsterblicher|Gottheit|Nightmare</German>
 		<Italian>Nessun minimo|Colono|Capitano|Guerriero|Nobile|Principe|Monarca|Imperatore|Immortale|Divinità|Incubo</Italian>
 		<Spanish>Sin mínimo|Colono|Jefe|Caudillo|Noble|Príncipe|Monarca|Emperador|Immortal|Deidad|Nightmare</Spanish>
@@ -7882,7 +7882,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_ROMSETTINGS__FLEXIBLEDIFFICULTYAIMAXIMUMDIFF_LIST</Tag>
 		<English>No Maximum|Settler|Chieftain|Warlord|Noble|Prince|Monarch|Emperor|Immortal|Deity|Nightmare</English>
-		<French>Pas de Maximum|Colon|Chef|Seigneur|Régent|Prince|Monarque|Empereur|Immortel|Divinité|Nightmare</French>
+		<French>Pas de Maximum|Colon|Chef|Seigneur|Régent|Prince|Monarque|Empereur|Immortel|Divinité|Cauchemar</French>
 		<German>Kein Maximum|Siedler|Häuptling|Kriegsherr|Adliger|Prinz|König|Kaiser|Unsterblicher|Gottheit|Nightmare</German>
 		<Italian>Nessun massimo|Colono|Capitano|Guerriero|Nobile|Principe|Monarca|Imperatore|Immortale|Divinità|Incubo</Italian>
 		<Spanish>Sin mínimo|Colono|Jefe|Caudillo|Noble|Príncipe|Monarca|Emperador|Immortal|Deidad|Nightmare</Spanish>
@@ -7909,7 +7909,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_ROMSETTINGS__FLEXIBLEDIFFICULTYAIMINIMUMDIFF_LIST</Tag>
 		<English>No Minimum|Settler|Chieftain|Warlord|Noble|Prince|Monarch|Emperor|Immortal|Deity|Nightmare</English>
-		<French>Pas de Minimum|Colon|Chef|Seigneur|Régent|Prince|Monarque|Empereur|Immortel|Divinité|Nightmare</French>
+		<French>Pas de Minimum|Colon|Chef|Seigneur|Régent|Prince|Monarque|Empereur|Immortel|Divinité|Cauchemar</French>
 		<German>Kein Minimum|Siedler|Häuptling|Kriegsherr|Adliger|Prinz|König|Kaiser|Unsterblicher|Gottheit|Nightmare</German>
 		<Italian>Nessun minimo|Colono|Capitano|Guerriero|Nobile|Principe|Monarca|Imperatore|Immortale|Divinità|Incubo</Italian>
 		<Spanish>Sin mínimo|Colono|Jefe|Caudillo|Noble|Príncipe|Monarca|Emperador|Immortal|Deidad|Nightmare</Spanish>

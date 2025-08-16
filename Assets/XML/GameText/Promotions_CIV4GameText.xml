@@ -1686,7 +1686,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONHELP_VICTORY_HEAL</Tag>
 		<English>[ICON_BULLET]+%d1%% Chance to Heal on Combat Victory</English>
-		<French>[ICON_BULLET]+%d1%% Chance pour guarir en cas de Victoire</French>
+		<French>[ICON_BULLET]+%d1%% Chances de guérir en cas de Victoire</French>
 		<German>[ICON_BULLET]+%d1%% Chance sich nach erfolgreichem Kampf zu heilen</German>
 		<Spanish>[ICON_BULLET]Probabilidad del %d1%% de curarse en cada victoria</Spanish>
 		<Polish>[ICON_BULLET]+%d1%% szansy na uleczenie po wygranej walce</Polish>
@@ -3774,7 +3774,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_SURPRISE</Tag>
 		<English>Status (Surprise) Promotion Line</English>
-		<French>Spécialisation Statut (Surprise)</French>
+		<French>Spécialisation Statut (Embuscade)</French>
 		<German>Überraschungsstatus</German>
 	</TEXT>
 	<TEXT>
@@ -3891,7 +3891,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_UNQUESTIONING_OBEDIENCE</Tag>
 		<English>Unquestioning Obedience Promotion Line</English>
-		<French>Spécialisation Obeisance</French>
+		<French>Spécialisation Obéissance aveugle</French>
 		<Polish>Linia Promocji: Bezwarunkowe Pos&#179;usze&#241;stwo</Polish>
 		<Russian>Ïîðàáîòèòåëü</Russian>
 	</TEXT>
@@ -13006,7 +13006,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_REMOVE_SURPRISE</Tag>
 		<English>Status (Remove Surprise)</English>
-		<French>Statut (Enlever Surprise)</French>
+		<French>Statut (Enlever Embuscade)</French>
 		<German>Nicht überraschen</German>
 	</TEXT>
 	<TEXT>
@@ -15103,7 +15103,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_SURPRISE</Tag>
 		<English>Status (Surprise)</English>
-		<French>Statut (Surprise)</French>
+		<French>Statut (Embuscade)</French>
 		<German>Überraschen</German>
 		<Russian>Статус (Сюрприз)</Russian>
 	</TEXT>

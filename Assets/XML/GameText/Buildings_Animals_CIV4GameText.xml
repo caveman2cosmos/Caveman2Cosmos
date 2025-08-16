@@ -16,7 +16,11 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_PRESENCE_OF_CORAL</Tag>
 		<English>Presence of Coral</English>
-		<French>Présence de corail</French>
+		<French>
+			<Text>Présence de corail</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</French>
 		<German>
 			<Text>Präsenz von Korallen:Präsenz von Korallen:Präsenz von Korallen:Präsenz von Korallen</Text>
 			<Gender>Female</Gender>
@@ -27,7 +31,11 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_PRESENCE_OF_EARTH</Tag>
 		<English>Presence of Earth</English>
-		<French>Présence de terre</French>
+		<French>
+			<Text>Présence de terre</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</French>
 		<German>
 			<Text>Präsenz der Erde:Präsenz der Erde:Präsenz der Erde:Präsenz der Erde</Text>
 			<Gender>Female</Gender>
@@ -38,7 +46,11 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_PRESENCE_OF_CRATER</Tag>
 		<English>Presence of Crater</English>
-		<French>Présence de cratère</French>
+		<French>
+			<Text>Présence de cratère</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</French>
 		<German>
 			<Text>Präsenz von Kratern:Präsenz von Kratern:Präsenz von Kratern:Präsenz von Kratern</Text>
 			<Gender>Female</Gender>
@@ -49,7 +61,11 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_PRESENCE_OF_FIRE</Tag>
 		<English>Presence of Fire</English>
-		<French>Présence de feu</French>
+		<French>
+			<Text>Présence de feu</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</French>
 		<German>
 			<Text>Präsenz des Feuers:Präsenz des Feuers:Präsenz des Feuers:Präsenz des Feuers</Text>
 			<Gender>Female</Gender>
@@ -60,7 +76,11 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_PRESENCE_OF_METAL</Tag>
 		<English>Presence of Metal</English>
-		<French>Présence de métal</French>
+		<French>
+			<Text>Présence de métal</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</French>
 		<German>
 			<Text>Präsenz von Metall:Präsenz von Metall:Präsenz von Metall:Präsenz von Metall</Text>
 			<Gender>Female</Gender>
@@ -71,7 +91,11 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_PRESENCE_OF_OASIS</Tag>
 		<English>Presence of Oasis</English>
-		<French>Présence d'Oasis</French>
+		<French>
+			<Text>Présence d'Oasis</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</French>
 		<German>
 			<Text>Präsenz von Oasen:Präsenz von Oasen:Präsenz von Oasen:Präsenz von Oasen</Text>
 			<Gender>Female</Gender>
@@ -89,7 +113,11 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_PRESENCE_OF_LANDFORM</Tag>
 		<English>Presence of Landform</English>
-		<French>Présence de relief</French>
+		<French>
+			<Text>Présence de relief</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</French>
 		<German>
 			<Text>Präsenz von Felsformationen:Präsenz von Felsformationen:Präsenz von Felsformationen:Präsenz von Felsformationen</Text>
 			<Gender>Female</Gender>
@@ -100,7 +128,11 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_PRESENCE_OF_REEF</Tag>
 		<English>Presence of Reef</English>
-		<French>Présence de récifs</French>
+		<French>
+			<Text>Présence de récifs</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</French>
 		<German>
 			<Text>Präsenz von Riffen:Präsenz von Riffen:Präsenz von Riffen:Präsenz von Riffen</Text>
 			<Gender>Female</Gender>
@@ -111,7 +143,11 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_REQUIREMENT</Tag>
 		<English>Folklore Requirement</English>
-		<French>Bases de folklore</French>
+		<French>
+			<Text>Bases de folklore</Text>
+			<Gender>Female</Gender>
+			<Plural>1</Plural>
+		</French>
 		<German>
 			<Text>Folklore-Grundlagen:Folklore-Grundlagen:Folklore-Grundlagen:Folklore-Grundlagen</Text>
 			<Gender>Female</Gender>
@@ -129,7 +165,11 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_PRESENCE_OF_SEA</Tag>
 		<English>Presence of Sea</English>
-		<French>Présence de la mer (construction automatique)</French>
+		<French>
+			<Text>Présence de la mer</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</French>
 		<German>
 			<Text>Präsenz der See:Präsenz der See:Präsenz der See:Präsenz der See</Text>
 			<Gender>Female</Gender>
@@ -140,7 +180,11 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_PRESENCE_OF_VOLCANO</Tag>
 		<English>Presence of Volcano</English>
-		<French>Présence d'un volcan (construction automatique)</French>
+		<French>
+			<Text>Présence d'un volcan</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</French>
 		<German>
 			<Text>Präsenz von Vulkanen:Präsenz von Vulkanen:Präsenz von Vulkanen:Präsenz von Vulkanen</Text>
 			<Gender>Female</Gender>
@@ -165,7 +209,11 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MILITARY_STANDARD_ANIMAL_MASCOT</Tag>
 		<English>Military Standard (Animal mascot)</English>
-		<French>Mascotte de L'Armée de Terre</French>
+		<French>
+			<Text>Mascotte de L'Armée de Terre</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</French>
 		<Italian>Stendardo militare con mascotte animale</Italian>
 		<Polish>Sztandar Wojskowy (Zwierz&#234;ca Maskotka)</Polish>
 		<Russian>Çâåðèíûé òîòåì</Russian>
@@ -173,7 +221,11 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MILITARY_STANDARD_CANINES</Tag>
 		<English>Military Standard (Canines)</English>
-		<French>Standards Militaires (Canins)</French>
+		<French>
+			<Text>Standards Militaires (Canins)</Text>
+			<Gender>Male</Gender>
+			<Plural>1</Plural>
+		</French>
 		<Italian>Stendardo militare con mascotte canina</Italian>
 		<Polish>Sztandar Wojskowy (Wilki)</Polish>
 		<Russian>Òîòåì «Ñîáàêà»</Russian>
@@ -196,7 +248,11 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MILITARY_STANDARD_WORKERS</Tag>
 		<English>Military Standard (Workers)</English>
-		<French>Standards Militaires (Ouvriers)</French>
+		<French>
+			<Text>Standards Militaires (Ouvriers)</Text>
+			<Gender>Male</Gender>
+			<Plural>1</Plural>
+		</French>
 		<Italian>Stendardo militare dei lavoratori</Italian>
 		<Polish>Sztandar Wojskowy (Robotnicy)</Polish>
 		<Russian>Òîòåì «Ðàáîòíèê»</Russian>
@@ -243,7 +299,11 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_DANCE_BIRD</Tag>
 		<English>Unit Reward - Dance (Bird)</English>
-		<French>Danse des Oiseaux</French>
+		<French>
+			<Text>Danse des Oiseaux</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</French>
 		<Italian>Danza degli uccelli (unità consumata)</Italian>
 		<Russian>Òàíåö ïòèöû</Russian>
 	</TEXT>
@@ -343,7 +403,11 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_REMAINS_CAVE_LION</Tag>
 		<English>Remains - Cave Lion</English>
-		<French>Restes de Lion des cavernes</French>
+		<French>
+			<Text>Restes de Lion des cavernes</Text>
+			<Gender>Male</Gender>
+			<Plural>1</Plural>
+		</French>
 		<German>
 			<Text>Überreste eines Höhlenlöwen:Überreste eines Höhlenlöwen:Überresten eines Höhlenlöwen:Überreste eines Höhlenlöwen</Text>
 			<Gender>Male</Gender>
@@ -383,7 +447,11 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_COASTAL_FISH_FARM</Tag>
 		<English>Unit Reward - Coastal Fish Farm</English>
-		<French>Ferme à Poissons du Littoral</French>
+		<French>
+		<Text>Ferme à Poissons du Littoral</Text>
+		<Gender>Female</Gender>
+		<Plural>0</Plural>
+	</French>
 		<Italian>Allevamento costiero di pesci (unità consumata)</Italian>
 		<Polish>Farma Ryb Przybrze&#191;nych</Polish>
 		<Russian>Ðûáíàÿ ôåðìà</Russian>
@@ -411,7 +479,11 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CRAB_NETS</Tag>
 		<English>Unit Reward - Crab Nets</English>
-		<French>Pièges à Crabes</French>
+		<French>
+		<Text>Pièges à Crabes</Text>
+		<Gender>Male</Gender>
+		<Plural>1</Plural>
+	</French>
 		<Italian>Trappole per granchi (unità consumata)</Italian>
 		<Polish>Sieci na kraby</Polish>
 		<Russian>Ñåòè íà êðàáîâ</Russian>
@@ -458,7 +530,11 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_DOG_KENNELS</Tag>
 		<English>Dog Kennels</English>
-		<French>Chenils pour Chiens</French>
+		<French>
+		<Text>Chenils pour Chiens</Text>
+		<Gender>Male</Gender>
+		<Plural>1</Plural>
+	</French>
 		<Italian>Canile</Italian>
 		<Polish>Psie budy</Polish>
 		<Russian>Ñîáà÷èé âîëüåð</Russian>
@@ -486,14 +562,18 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HERD_DONKEY_PEDIA</Tag>
 		<English>Asses were first domesticated around 3000 BC, or 4000 BC, probably in Egypt or Mesopotamia, and have spread around the world. They continue to fill important roles in many places today. While domesticated species are increasing in numbers, the African wild ass and another relative, the Onager, are endangered. As "beasts of burden" and companions, asses and donkeys have worked together with humans for millennia.</English>
-		<French>Les ânes ont été domestiqués pour la première fois vers 3000 av. J.-C., ou 4000 av. J.-C., probablement en Égypte ou en Mésopotamie, et se sont répandus dans le monde entier. Ils continuent à remplir des rôles importants dans de nombreux endroits aujourd'hui. Alors que les espèces domestiquées augmentent en nombre, l'âne sauvage africain et un autre parent, l'onagre, sont en voie de disparition. En tant que ::bêtes de somme:: et compagnons, les ânes ont travaillé avec les humains pendant des millénaires.</French>
+		<French>Les ânes ont été domestiqués pour la première fois vers 3000 av. J.-C., ou 4000 av. J.-C., probablement en Égypte ou en Mésopotamie, et se sont répandus dans le monde entier. Ils continuent à remplir des rôles importants dans de nombreux endroits aujourd'hui. Alors que les espèces domestiquées augmentent en nombre, l'âne sauvage africain et un autre parent, l'onagre, sont en voie de disparition. En tant que "bêtes de somme" et compagnons, les ânes ont travaillé avec les humains pendant des millénaires.</French>
 		<Italian>Gli asini vennero addomesticati intorno al 3000 a.C. o al 4000 a.C., probabilmente in Egitto o Mesopotamia, e vennero diffusi in tutto il mondo; al giorno d'oggi, continuano a ricoprire importanti ruoli in molti posti. Mentre le specie addomesticate sono in aumento in termini numerici, l'asino selvatico africano e un altro parente, l'onagro, sono in pericolo di estinzione. Come "bestie da soma" e compagni, gli asini hanno lavorato insieme con gli esseri umani per millenni.</Italian>
 		<Polish>Osio&#179; zosta&#179; udomowiony przez cz&#179;owieka wcze&#156;niej ni&#191; ko&#241;. Pierwsze informacje dotycz&#185;ce udomowienia pochodz&#185; z Doliny Nilu z ok. 4000 p.n.e. czyli 6 tys. lat temu. Na tych terenach wyst&#234;powa&#179;y obydwa &#191;yj&#185;ce do dzisiaj podgatunki os&#179;a afryka&#241;skiego. Przypuszcza si&#234;, &#191;e z ich krzy&#191;&#243;wek powsta&#179; osio&#179; domowy (Equus africanus f.asinus).</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FLOCKS_OF_DUCK</Tag>
 		<English>Flocks of Duck</English>
-		<French>Volées de Canards</French>
+		<French>
+		<Text>Volées de Canards</Text>
+		<Gender>Female</Gender>
+		<Plural>1</Plural>
+	</French>
 		<Italian>Stormo di anatre</Italian>
 		<Russian>Ñòàÿ óòîê</Russian>
 	</TEXT>
@@ -506,7 +586,11 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_REMAINS_GIANT_RHINOCEROS</Tag>
 		<English>Remains - Giant Rhinoceros</English>
-		<French>Restes d'Elasmotherium</French>
+		<French>
+		<Text>Restes d'Elasmotherium</Text>
+		<Gender>Male</Gender>
+		<Plural>1</Plural>
+	</French>
 		<German>
 			<Text>Überreste eines Elasmotheriums:Überreste eines Elasmotheriums:Überresten eines Elasmotheriums:Überreste eines Elasmotheriums</Text>
 			<Gender>Male</Gender>
@@ -1868,7 +1952,11 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_DANCE_FOX</Tag>
 		<English>Unit Reward - Dance (Fox)</English>
-		<French>Danse du Renard</French>
+		<French>
+		<Text>Danse du Renard</Text>
+		<Gender>Female</Gender>
+		<Plural>0</Plural>
+	</French>
 		<Italian>Danza della volpe (unità consumata)</Italian>
 		<Russian>Òàíåö ëèñû</Russian>
 	</TEXT>
@@ -1881,7 +1969,11 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FUR_FARM</Tag>
 		<English>Unit Reward - Fur Farm</English>
-		<French>Ferme de Fourrures</French>
+		<French>
+		<Text>Ferme de Fourrures</Text>
+		<Gender>Female</Gender>
+		<Plural>0</Plural>
+	</French>
 		<Italian>Allevamento di animali da pelliccia (unità consumata)</Italian>
 		<Polish>Ferma Futer</Polish>
 		<Russian>Ìåõîâàÿ ôåðìà</Russian>
@@ -2091,7 +2183,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HERD_MUSKOX_PEDIA</Tag>
 		<English>A herd of Muskoxes.</English>
-		<French>Un troupeau de bœufs musqués.</French>
+		<French>Un troupeau de boeufs musqués.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_NAVAL_STANDARD_ANIMAL_MASCOT</Tag>
@@ -2343,6 +2435,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SHELL_WORKERS_HUT_PEDIA</Tag>
 		<English>Tortoiseshell or tortoise shell is a material produced mainly from the shell of the hawksbill turtle, an endangered species. It was widely used in the 1960s and 1970s in the manufacture of items such as combs, sunglasses, guitar picks and knitting needles. In 1973, the trade of tortoiseshell worldwide was banned under CITES (the Convention on International Trade in Endangered Species).[PARAGRAPH:2]Tortoiseshell was attractive to manufacturers and consumers because of its beautiful appearance and its durability, and its organic warmth against the skin. It was used in guitar picks because it can be easily shaped, has excellent bending properties, and is very durable. Tortoiseshell picks could sometimes be used for years. Piqué-work, jewelry made from tortoiseshell inlaid with precious metals in patterns or pictures, was made during the Victorian Era and was highly prized.[PARAGRAPH:2]There have been a number of faux tortoiseshell materials developed since the 1970s, most of which mimic the appearance of tortoiseshell. Tortex is a material that was created to replace tortoiseshell guitar picks and has been widely accepted as a suitable substitute.</English>
+		<French>La carapace de tortue ou écaille de tortue est un matériau principalement produit à partir de la carapace de la tortue imbriquée, une espèce en danger. Il a été largement utilisé dans les années 1960 et 1970 pour la fabrication d'objets tels que des peignes, des lunettes de soleil, des médiators de guitare et des aiguilles à tricoter. En 1973, le commerce de l'écaille de tortue dans le monde entier a été interdit en vertu de la CITES (Convention sur le commerce international des espèces de faune et de flore sauvages menacées). [PARAGRAPH:2] L'écaille de tortue était attrayante pour les fabricants et les consommateurs en raison de son aspect magnifique, de sa durabilité et de sa chaleur organique contre la peau. Elle était utilisée pour les médiators de guitare car elle peut être facilement façonnée, possède d'excellentes propriétés de flexion et est très résistante. Les médiators en écaille de tortue pouvaient parfois être utilisés pendant des années. Le piqué, un travail en relief, ou la joaillerie réalisée à partir d'écaille de tortue incrustée de métaux précieux selon des motifs ou des images, a été fabriqué durant l'époque victorienne et était très prisée. [PARAGRAPH:2] Depuis les années 1970, plusieurs matériaux simulant l'écaille de tortue ont été développés, la plupart imitant l'aspect de l'écaille de tortue. Tortex est un matériau créé pour remplacer l'écaille de tortue dans la fabrication de médiators de guitare et a été largement accepté comme un substitut approprié.</French>
 		<Italian>Un guscio di testuggine è un materiale prodotto principalmente dal guscio della tartaruga embricata, una specie in via di estinzione. È stato ampiamente utilizzato negli anni 60 e 70 per la fabbricazione di articoli come pettini, occhiali da sole, plettri e aghi per lavoro a maglia. Nel 1973, il commercio di tartaruga in tutto il mondo è stato vietato dalla CITES (Convenzione sul commercio internazionale delle specie minacciate di estinzione).[PARAGRAPH:2]Il guscio di testuggine era attraente per i produttori ed i consumatori a causa della sua bella apparenza e la sua durata, e il suo calore organica contro la pelle. Veniva utilizzata nei plettri perché poteva essere facilmente modellata, ha eccellenti proprietà di curvatura, ed è molto resistente. I gusci di tartaruga potrebbero talvolta essere utilizzati per anni. Durante l'era vittoriana venivano realizzati gioielli di tartaruga intarsiati con metalli preziosi nei modelli, ed erano molto apprezzati.[PARAGRAPH:2]Ci sono stati un certo numero di materiali eco-tartaruga sviluppato dal 1970, la maggior parte dei quali imitavano l'aspetto della tartaruga. Il Tortex è un materiale creato per sostituire i plettri di tartaruga ed è stato ampiamente accettato come un sostituto adatto.</Italian>
 		<Polish>Skorupy &#191;&#243;&#179;wi od dawien dawna by&#179;y wykorzystywane do produkcji ozd&#243;b i prostych narz&#234;dzi na ca&#179;ym &#156;wiecie.</Polish>
 	</TEXT>
@@ -2357,7 +2450,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_TRADITION_NAVAL_MASCOT</Tag>
 		<English>Tradition - Naval Mascot</English>
-		<French>Tradition - Mascotte Navale</French>
+		<French>Tradition - Mascotte navale</French>
 		<Italian>Tradizione della mascotte navale</Italian>
 		<Polish>Tradycja - Bandera (Maskotka)</Polish>
 		<Russian>Òðàäèöèè øòàíäàðòîâ</Russian>
@@ -2394,7 +2487,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FLOCKS_OF_TURKEY</Tag>
 		<English>Flocks of Turkey</English>
-		<French>Troupeaux de Dindons</French>
+		<French>Troupeaux de dindons</French>
 		<Italian>Trave di tacchini</Italian>
 		<Russian>Ñòàÿ èíäååê</Russian>
 	</TEXT>

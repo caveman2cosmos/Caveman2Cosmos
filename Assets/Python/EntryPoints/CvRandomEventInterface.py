@@ -5129,7 +5129,7 @@ def getHelpAssassinDiscovered3(argsList):
 	if hasBronze:
 		return TRNSLTR.getText("TXT_KEY_EVENT_ASSASSIN_DISCOVERED_3_HELP", (iCount,))
 	else:
-		return TRNSLTR.getText("TXT_KEY_EVENT_ASSASSIN_DISCOVERED_3_HELP_STONE", (iCount,))
+		return TRNSLTR.getText("TXT_KEY_EVENT_ASSASSIN_DISCOVERED_3_STONE_HELP", (iCount,))
 
 ######## BLACK DEATH PLAGUE ###########
 
