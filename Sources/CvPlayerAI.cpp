@@ -5727,7 +5727,7 @@ int CvPlayerAI::AI_techBuildingValue(TechTypes eTech, int iPathLength, bool& bEn
 
 				if (gPlayerLogLevel > 2)
 				{
-					logBBAI("\tBuilding %S new mechanism value: %d", kLoopBuilding.getDescription(), iBuildingValue);
+					logAiEvaluations(2, "\tPlayer %d evaluate TechBuilding %S new mechanism value: %d", getID(), kLoopBuilding.getDescription(), iBuildingValue);
 				}
 
 				iValue += iBuildingValue;
@@ -11680,6 +11680,15 @@ int CvPlayerAI::AI_unitValue(UnitTypes eUnit, UnitAITypes eUnitAI, const CvArea*
 			}
 		}
 	}
+
+	if (gPlayerLogLevel > 2)
+	{
+		const CvWString strUnitType = GC.getUnitInfo(eUnit).getType();
+		const CvWString strUnitAIType = GC.getUnitAIInfo(eUnitAI).getType();
+		logAiEvaluations(2, "AI Player %d evaluate Value for unit %S as type %S, combat value %d, moves %d, Calculated value %d", getID(), strUnitType.c_str(), strUnitAIType.c_str(), iCombatValue*100, kUnitInfo.getMoves(), iValue*100);
+	}
+
+
 	return std::max(0, iValue);
 }
 
@@ -24873,10 +24882,7 @@ int CvPlayerAI::AI_getCitySitePriorityFactor(const CvPlot* pPlot) const
 void CvPlayerAI::AI_updateCitySites(int iMinFoundValueThreshold, int iMaxSites) const
 {
 	PROFILE_EXTRA_FUNC();
-	if (gPlayerLogLevel > 1)
-	{
-		logBBAI("Player %d (%S) begin Update City Sites (min. value: %d)...", getID(), getCivilizationDescription(0), iMinFoundValueThreshold);
-	}
+	logAiEvaluations(1, "Player %d (%S) begin Update City Sites (min. value: %d)...", getID(), getCivilizationDescription(0), iMinFoundValueThreshold);
 	for (int iI = 0; iI < iMaxSites; iI++)
 	{
 		//Add a city to the list.
@@ -24899,10 +24905,7 @@ void CvPlayerAI::AI_updateCitySites(int iMinFoundValueThreshold, int iMaxSites) 
 					{
 						iBestFoundValue = iValue;
 						pBestFoundPlot = plotX;
-						if (gPlayerLogLevel > 1)
-						{
-							logBBAI("  Potential best city site (%d, %d) found value is %d (player modified value to %d)", plotX->getX(), plotX->getY(), iFoundValue, iValue);
-						}
+						logAiEvaluations(1, "  Potential best city site (%d, %d) found value is %d (player modified value to %d)", plotX->getX(), plotX->getY(), iFoundValue, iValue);
 					}
 				}
 			}
@@ -24911,17 +24914,11 @@ void CvPlayerAI::AI_updateCitySites(int iMinFoundValueThreshold, int iMaxSites) 
 		{
 			break;
 		}
-		if (gPlayerLogLevel > 1)
-		{
-			logBBAI("	Found City Site at (%d, %d)", pBestFoundPlot->getX(), pBestFoundPlot->getY());
-		}
+		logAiEvaluations(1, "	Found City Site at (%d, %d)", pBestFoundPlot->getX(), pBestFoundPlot->getY());
 		m_aiAICitySites.push_back(GC.getMap().plotNum(pBestFoundPlot->getX(), pBestFoundPlot->getY()));
 		AI_recalculateFoundValues(pBestFoundPlot->getX(), pBestFoundPlot->getY(), CITY_PLOTS_RADIUS, 2 * CITY_PLOTS_RADIUS);
 	}
-	if (gPlayerLogLevel > 1)
-	{
-		logBBAI("Player %d (%S) end Update City Sites", getID(), getCivilizationDescription(0));
-	}
+	logAiEvaluations(1, "Player %d (%S) end Update City Sites", getID(), getCivilizationDescription(0));
 }
 
 void CvPlayerAI::calculateCitySites() const
