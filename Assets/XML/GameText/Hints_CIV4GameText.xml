@@ -274,7 +274,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUG_HINT_INTERFACE_7</Tag>
 		<English>*BUG Hint*: To create rally points, select the city or cities you are building units in, hold down the [SHIFT] key, and right-click on the tile you want your rally point to be at. You will see a yellow circle showing the rally point.[NEWLINE]To cancel orders select the same city or cities, [SHIFT] and right-click on any city square, and it will cancel the rally orders.</English>
-		<French>*Conseils du BUG*: Pour créer des points de rassemblement, sélectionnez la ville ou les villes où vous construisez vos unités, gardez [MAJ] enfoncé et cliquez avec le bouton de droite sur la case où vous voulez que vos unités aillent. Un cercle jaune indiquera le point de rassemblement.[NEWLINE]Pour annuler cet ordre, sélectionnez la même ville, gardez [MAJ] enfoncé et cliquez avec le bouton de droite et cliquez sur une case de ville.</French>
+		<French>*Conseils du BUG*: Pour créer des points de rassemblement, sélectionnez la ville ou les villes où vous construisez vos unités, gardez [SHIFT] enfoncé et cliquez avec le bouton de droite sur la case où vous voulez que vos unités aillent. Un cercle jaune indiquera le point de rassemblement.[NEWLINE]Pour annuler cet ordre, sélectionnez la même ville, gardez [SHIFT] enfoncé et cliquez avec le bouton de droite et cliquez sur une case de ville.</French>
 		<German>[BUG] Tipp... Bei gedrückter [SHIFT]-Taste in Verbindung mit einem Rechtsklick lässt sich für eine oder mehrere Städte ein Sammelpunkt für Einheiten setzen. Der Sammelpunkt wird durch einen gelben Kreis markiert. Wird bei gedrückter [SHIFT]-Taste in Verbindung mit einem Rechtsklick ein Stadtgeländefeld ausgewählt, lässt sich der Sammelpunkt wieder aufheben.</German>
 		<Italian>*Suggerimento del BUG Team*: Per creare punti di raduno, seleziona la città (o le città) in cui stai costruendo le unità, tieni premuto il tasto Maiusc e clicca col destro sulla casella dove vuoi collocare il punto di raduno. Vedrai un cerchio giallo indicare il punto di raduno.[NEWLINE]Per cancellare il punto di raduno, seleziona la stessa (o le stesse) città, tieni premuto il tasto Maiusc e clicca col destro su una qualunque casella cittadina.</Italian>
 		<Spanish>*Consejo de BUG*: Para crear puntos de reunión, selecciona la ciudad, o ciudades, en las que estás construyendo unidades, mantén presionada la tecla [SHIFT] y pulsa con el botón derecho en la casilla donde quieras establecer el punto de reunión. Verás un circulo amarillo indicando el punto de reunión.[NEWLINE]Para cancelarlo, selecciona de nuevo la ciudad o ciudades, mantén pulsada la tecla [SHIFT] y pulsa el botón derecho en cualquier casilla de la ciudad.</Spanish>
@@ -686,7 +686,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_C2C_HINT_51</Tag>
 		<English>C2C: For performance reasons, the city production popup now displays only a limited selection of buildings and units. Click on Examine City to see a full list of available options. Alternatively, you can disable this popup entirely in the BUG settings - Caveman2Cosmos tab, and select "No Production Popup."</English>
-		<French>C2C : Pour des raisons de performance, la fenêtre contextuelle de production de la ville affiche désormais une sélection limitée de bâtiments et d'unités. Cliquez sur Examiner la ville pour voir la liste complète des options disponibles. Vous pouvez également désactiver entièrement cette fenêtre contextuelle dans les paramètres BUG - onglet Caveman2Cosmos, en sélectionnant "Pas de fenêtre de production".</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_C2C_HINT_6</Tag>
@@ -892,7 +891,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_HINT_28</Tag>
 		<English>Remember that you can build only two National Wonders per city. Plan ahead: don't build both the Heroic and National Epics where you will one day want an Ironworks!</English>
-		<French>N'oubliez pas que le nombre de merveilles nationales est limité par ville. Planifiez votre production : ne construisez pas l'Epopée héroïque et l'Epopée nationale dans une ville où vous aurez un jour besoin d'une usine sidérurgique !</French>
+		<French>N'oubliez pas que le nombre de merveilles nationales est limité à 2 par ville. Planifiez votre production : ne construisez pas l'Epopée héroïque et l'Epopée nationale dans une ville où vous aurez un jour besoin d'une usine sidérurgique !</French>
 		<German>Denken Sie daran, dass Sie in jeder Stadt nur zwei Nationale Wunder bauen können. Planen Sie also voraus! Bauen Sie kein Helden- und Nationalepos, wenn Sie eines Tages die Eisenverarbeitung in einer Stadt etablieren möchten!</German>
 		<Italian>Ricorda che puoi costruire solamente due Meraviglie Nazionali per città: pianifica, non realizzare un Poema Epico o Poema Patriottico nel luogo in cui un giorno vorrai costruire una Ferriera!</Italian>
 		<Spanish>Recordad que solo podéis construir dos maravillas nacionales por ciudad. Planead con antelación, no construyáis la epopeya nacional y la heroica en un lugar que en el futuro vaya a necesitar la metalurgia.</Spanish>
@@ -2490,7 +2489,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_REVDCM_HINT_76</Tag>
 		<English>*Revolutions Mod Hint*: If you are sick of constant rebellious uprisings against you, don't forget [CTRL-SHIFT-L] and you can switch over to the rebels side!</English>
-		<French>*Conseil Mod Revolution*: Si vous êtes malade de la rebellion qui gagne constament du terrain contre vous, n'oubliez pas [CTRL-MAJ-L] qui vous permet de passer du côté des forces rebelles!</French>
+		<French>*Conseil Mod Revolution*: Si vous êtes malade de la rebellion qui gagne constament du terrain contre vous, n'oubliez pas [CTRL-SHIFT-L] qui vous permet de passer du côté des forces rebelles!</French>
 		<Italian>*Suggerimento del MOD 'Revolutions'*: Se sei stufo di continue rivolte contro di te, non dimenticare che [CTRL-SHIFT-L] ti consente di passare dalla parte dei ribelli!</Italian>
 		<Spanish>*Consejo de Revolution*: Si estás harto de las constantes rebeliones en tus dominios, no olvides que con [CTRL-SHIFT-L] ¡puedes cambiarte al lado rebelde!</Spanish>
 		<Polish>*Podpowied&#159; do moda Rewolucje*: Je&#191;eli masz do&#156;&#230; sta&#179;ych buntowniczych powsta&#241; przeciw tobie, pami&#234;taj - [CTRL+SHIFT+L] i mo&#191;esz prze&#179;&#185;czy&#230; si&#234; na stron&#234; buntownik&#243;w!</Polish>

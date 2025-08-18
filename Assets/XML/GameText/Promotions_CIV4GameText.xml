@@ -433,7 +433,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONHELP_DEF_WARN</Tag>
 		<English>[COLOR_WARNING_TEXT]If the unit with this promotion cannot gain Defensive Bonuses, they will not gain inapplicable promotion benefits.[COLOR_REVERT]</English>
-		<French>[COLOR_WARNING_TEXT]Si l'unité possédant cette promotion ne peut pas bénéficier de bonus défensifs, elle ne recevra pas les avantages de promotion inapplicables.[COLOR_REVERT]</French>
 		<German>[COLOR_WARNING_TEXT]Diese Einheit mit dieser Beförderung profitiert nur dann von den genannten Vorteilen, wenn sie über Verteidigungsboni verfügt.[COLOR_REVERT]</German>
 		<Russian>[COLOR_WARNING_TEXT]Если отряд с этой квалификацией не имеет защитных бонусов, он не получает от них несовместимые преимущества.[COLOR_REVERT]</Russian>
 	</TEXT>
@@ -825,11 +824,9 @@
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONHELP_INVESTIGATION</Tag>
 		<English>[ICON_BULLET]%s1_Change%% Investigation</English>
-		<French>[ICON_BULLET]%s1_Change%% Enquête</French>
 		<German>[ICON_BULLET]%s1_Change%% Ermittlungen</German>
-		<Italian>[ICON_BULLET]Modificatore di [COLOR_HIGHLIGHT_TEXT]investigazione[COLOR_REVERT]: [COLOR_HIGHLIGHT_TEXT]%s1_Change%%[COLOR_REVERT]</Italian>
 		<Russian>[ICON_BULLET]%s1_Change%% к Расследованию</Russian>
-		<!-- Subcombat type Law Enforcement -->
+		<Italian>[ICON_BULLET]Modificatore di [COLOR_HIGHLIGHT_TEXT]investigazione[COLOR_REVERT]: [COLOR_HIGHLIGHT_TEXT]%s1_Change%%[COLOR_REVERT]</Italian>  <!-- Subcombat type Law Enforcement -->
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONHELP_KNOCKBACK</Tag>
@@ -1686,7 +1683,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONHELP_VICTORY_HEAL</Tag>
 		<English>[ICON_BULLET]+%d1%% Chance to Heal on Combat Victory</English>
-		<French>[ICON_BULLET]+%d1%% Chances de guérir en cas de Victoire</French>
+		<French>[ICON_BULLET]+%d1%% Chance pour guarir en cas de Victoire</French>
 		<German>[ICON_BULLET]+%d1%% Chance sich nach erfolgreichem Kampf zu heilen</German>
 		<Spanish>[ICON_BULLET]Probabilidad del %d1%% de curarse en cada victoria</Spanish>
 		<Polish>[ICON_BULLET]+%d1%% szansy na uleczenie po wygranej walce</Polish>
@@ -1702,7 +1699,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONHELP_VICTORY_STACK</Tag>
 		<English>[ICON_BULLET]+%d1%% Chance to Heal Friendly Units sharing the tile on Combat Victory</English>
-		<French>[ICON_BULLET]+%d1%% de Chances de soigner les unités alliées partageant la case en cas de victoire au combat</French>
+		<French>[ICON_BULLET]+%d1%% Chance pour Traite notre Troupes qui sont sur le meme Endroit du Combat Victoire</French>
 		<German>[ICON_BULLET]+%d1%% Chance befreundete Einheiten auf dem eigenen Feld nach erfolgreichem Kampf zu heilen</German>
 		<Spanish>[ICON_BULLET]Probabilidad del %d1%% de curar a unidades propias en la misma casilla en cada victoria</Spanish>
 		<Polish>[ICON_BULLET]+%d1%% szansy na wyleczenie przyjaznej jednostki na tym samym polu po wygranej walce</Polish>
@@ -1990,7 +1987,7 @@
 		<French>A chaque tour la Spécialisation Défense Anti-Aérienne augmente [COLOR_HIGHLIGHT_TEXT]la capacité d'interception[COLOR_REVERT] de l'unité, avec un bonus maximum au bout de 5 tours.</French>
 		<Russian>Каждый раунд, потраченный на фокус ПВО, усиляет вероятность [COLOR_HIGHLIGHT_TEXT]перехвата[COLOR_REVERT] вплоть до 5 раундов для максимального бонуса, при условии, что каждый уровень квалификации соответствует требованиям отряда.</Russian>
 		<Italian>[NEWLINE]Migliora l'abilità [COLOR_HIGHLIGHT_TEXT]intercettazione[COLOR_REVERT]. Max 5 turni (necessita delle rispettive promozioni).</Italian>
-	</TEXT>
+ </TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_BUILD_UP_BLEND_INTO_CROWD</Tag>
 		<English>Build Up (Blend Into Crowd) Promotion Line</English>
@@ -2544,7 +2541,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_SHIP_COMMAND</Tag>
 		<English>Ship Command Promotion Line</English>
-		<French>Ligne de promotion Commandement naval</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_CONNIVING</Tag>
@@ -2875,7 +2871,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_ADMIRAL_STAFF</Tag>
 		<English>Admiral Staff Promotion Line</English>
-		<French>Ligne de promotion État-major d'amiral</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_GOAD</Tag>
@@ -3048,7 +3043,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_SHIP_INITIATIVE</Tag>
 		<English>Ship Initiative Promotion Line</English>
-		<French>Ligne de promotion Initiative navale</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_INNOCENT_MERCHANTS</Tag>
@@ -3203,7 +3197,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_MORALE_SHIPS</Tag>
 		<English>Ship Morale Promotion Line</English>
-		<French>Ligne de promotion Moral naval</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_NAVIGATION</Tag>
@@ -3247,7 +3240,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_SHIP_OPERATIONS</Tag>
 		<English>Ship Operations Promotion Line</English>
-		<French>Ligne de promotion Opérations navales</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_ORGANIZED</Tag>
@@ -3586,7 +3578,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_STRIKEFORCE</Tag>
 		<English>Ship Strike Force Promotion Line</English>
-		<French>Ligne de promotion Force de frappe navale</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_SELF_HEAL</Tag>
@@ -3774,7 +3765,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_SURPRISE</Tag>
 		<English>Status (Surprise) Promotion Line</English>
-		<French>Spécialisation Statut (Embuscade)</French>
+		<French>Spécialisation Statut (Surprise)</French>
 		<German>Überraschungsstatus</German>
 	</TEXT>
 	<TEXT>
@@ -3795,7 +3786,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_SHIP_TACTICS</Tag>
 		<English>Ship Tactics Promotion Line</English>
-		<French>Ligne de promotion Tactiques navales</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_TAKE_PRISONERS</Tag>
@@ -3891,14 +3881,13 @@
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_UNQUESTIONING_OBEDIENCE</Tag>
 		<English>Unquestioning Obedience Promotion Line</English>
-		<French>Spécialisation Obéissance aveugle</French>
+		<French>Spécialisation Obeisance</French>
 		<Polish>Linia Promocji: Bezwarunkowe Pos&#179;usze&#241;stwo</Polish>
 		<Russian>Ïîðàáîòèòåëü</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_UNQUESTIONING_SHIP_OBEDIENCE</Tag>
 		<English>Ship Unquestioning Obedience Promotion Line</English>
-		<French>Ligne de promotion Obéissance aveugle navale</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_URBAN_TACTICS</Tag>
@@ -4069,7 +4058,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_ACE</Tag>
 		<English>Veteran Pilot II</English>
-		<French>Pilote vétéran II</French>
 		<Russian>Пилот-ветеран II</Russian>
 	</TEXT>
 	<TEXT>
@@ -7710,7 +7698,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_CULTURE_NEANDERTHAL</Tag>
 		<English>Neanderthal</English>
-		<French>Néandertalien</French>
 		<Russian>Íåàíäåðòàëåö</Russian>
 	</TEXT>
 	<TEXT>
@@ -9281,52 +9268,42 @@
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_ADMIRAL_STAFF1</Tag>
 		<English>Admiral Staff I</English>
-		<French>État-major d'amiral I</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_ADMIRAL_STAFF10</Tag>
 		<English>Admiral Staff X</English>
-		<French>État-major d'amiral X</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_ADMIRAL_STAFF2</Tag>
 		<English>Admiral Staff II</English>
-		<French>État-major d'amiral II</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_ADMIRAL_STAFF3</Tag>
 		<English>Admiral Staff III</English>
-		<French>État-major d'amiral III</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_ADMIRAL_STAFF4</Tag>
 		<English>Admiral Staff IV</English>
-		<French>État-major d'amiral IV</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_ADMIRAL_STAFF5</Tag>
 		<English>Admiral Staff V</English>
-		<French>État-major d'amiral V</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_ADMIRAL_STAFF6</Tag>
 		<English>Admiral Staff VI</English>
-		<French>État-major d'amiral VI</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_ADMIRAL_STAFF7</Tag>
 		<English>Admiral Staff VII</English>
-		<French>État-major d'amiral VII</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_ADMIRAL_STAFF8</Tag>
 		<English>Admiral Staff VIII</English>
-		<French>État-major d'amiral VIII</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_ADMIRAL_STAFF9</Tag>
 		<English>Admiral Staff IX</English>
-		<French>État-major d'amiral IX</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_GENTLEMEN</Tag>
@@ -10236,37 +10213,30 @@
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_INFLUENCE_OF_JUPITER</Tag>
 		<English>Influence of Jupiter</English>
-		<French>Influence de Jupiter</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_INFLUENCE_OF_MARS</Tag>
 		<English>Influence of Mars</English>
-		<French>Influence de Mars</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_INFLUENCE_OF_MERCURY</Tag>
 		<English>Influence of Mercury</English>
-		<French>Influence de Mercure</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_INFLUENCE_OF_SATURN</Tag>
 		<English>Influence of Saturn</English>
-		<French>Influence de Saturne</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_INFLUENCE_OF_THE_MOON</Tag>
 		<English>Influence of the Moon</English>
-		<French>Influence de la Lune</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_INFLUENCE_OF_THE_SUN</Tag>
 		<English>Influence of the Sun</English>
-		<French>Influence du Soleil</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_INFLUENCE_OF_VENUS</Tag>
 		<English>Influence of Venus</English>
-		<French>Influence de Vénus</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_INITIATIVE1</Tag>
@@ -11086,7 +11056,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_MARAUDER_HELP</Tag>
 		<English>[ICON_BULLET]Plunders Enemy [ICON_GOLD] Reserves on Combat Victory. Amount plundered is based on how much [ICON_GOLD] per unit the victim have. The difficulty level of both you and the victim affects the result.</English>
-		<French>[ICON_BULLET]Pille les réserves [ICON_GOLD] ennemies lors d'une victoire au combat. Le montant pillé est basé sur la quantité d'[ICON_GOLD] par unité que possède la victime. Le niveau de difficulté de vous et de la victime affecte le résultat.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_MARCH</Tag>
@@ -11419,27 +11388,22 @@
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_SHIP_MORALE1</Tag>
 		<English>Ship Morale I</English>
-		<French>Moral naval I</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_SHIP_MORALE2</Tag>
 		<English>Ship Morale I</English>
-		<French>Moral naval I</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_SHIP_MORALE3</Tag>
 		<English>Ship Morale I</English>
-		<French>Moral naval I</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_SHIP_MORALE4</Tag>
 		<English>Ship Morale I</English>
-		<French>Moral naval I</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_SHIP_MORALE5</Tag>
 		<English>Ship Morale I</English>
-		<French>Moral naval I</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_MORALE1</Tag>
@@ -13006,7 +12970,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_REMOVE_SURPRISE</Tag>
 		<English>Status (Remove Surprise)</English>
-		<French>Statut (Enlever Embuscade)</French>
+		<French>Statut (Enlever Surprise)</French>
 		<German>Nicht überraschen</German>
 	</TEXT>
 	<TEXT>
@@ -14413,11 +14377,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_SNIPER</Tag>
 		<English>Sniper</English>
-		<French>Tireur d'élite</French>
 		<Italian>Cecchino</Italian>
+		<Spanish>Tirador escondido</Spanish>
 		<Polish>Skradanie si&#234;</Polish>
 		<Russian>Ñíàéïåð</Russian>
-		<Spanish>Tirador escondido</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_SNIPER_BEAM1</Tag>
@@ -15103,7 +15066,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_SURPRISE</Tag>
 		<English>Status (Surprise)</English>
-		<French>Statut (Embuscade)</French>
+		<French>Statut (Surprise)</French>
 		<German>Überraschen</German>
 		<Russian>Статус (Сюрприз)</Russian>
 	</TEXT>
@@ -15403,7 +15366,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_TOPGUN</Tag>
 		<English>Veteran Pilot III</English>
-		<French>Pilote vétéran III</French>
 		<Russian>Пилот-ветеран III</Russian>
 	</TEXT>
 	<TEXT>
@@ -15908,7 +15870,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_VETERAN</Tag>
 		<English>Veteran Pilot I</English>
-		<French>Pilote vétéran I</French>
 		<Russian>Пилот-ветеран I</Russian>
 	</TEXT>
 	<TEXT>
@@ -16363,16 +16324,13 @@
 	<TEXT>
 		<Tag>TXT_KEY_STATUS_TRESPASS</Tag>
 		<English>Trespass Status</English>
-		<French>État d'Entrée illégale</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_STATUS_TRESPASS_OFF</Tag>
 		<English>Remove Trespass</English>
-		<French>Annuler Entrée illégale</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_STATUS_TRESPASS_ON</Tag>
 		<English>Trespass</English>
-		<French>Entrée illégale</French>
 	</TEXT>
 </Civ4GameText>

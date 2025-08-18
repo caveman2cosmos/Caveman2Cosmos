@@ -4,7 +4,6 @@
 	<TEXT>
 		<Tag>TXT_WORD_CARGO</Tag>
 		<English>Cargo</English>
-		<French>Cargaison</French>
 		<German>Fracht</German>
 		<Spanish>Carga</Spanish>
 		<Italian>Carico</Italian> <!--infoscreen building list-->
@@ -145,7 +144,6 @@
 	<TEXT>
 		<Tag>TXT_WORD_SPOT</Tag>
 		<English>Spot</English>
-		<French>Vision</French>
 		<German>Sicht</German>
 		<Italian>Tipo e forza d'[COLOR_HIGHLIGHT_TEXT]individuazione[COLOR_REVERT]:</Italian> <!-- unit Ambusher with Hide and Seek active -->
 		<Russian>Тип и мощность обнаружения</Russian>
@@ -153,7 +151,7 @@
 	<TEXT>
 		<Tag>TXT_WORD_TEAM</Tag>
 		<English>Team</English>
-		<French>Équipe</French>
+		<French>Equipe</French>
 		<Italian>squadra</Italian>
 		<Spanish>Equipo</Spanish>
 		<Polish>Dru&#191;yna</Polish>
