@@ -2833,9 +2833,5 @@ class CvEventManager:
 			if iPlayer >= self.MAX_PC_PLAYERS:
 				CyEngine().addLandmark(pPlot, TextUtil.convertToStr(sScript))
 			else:
-				if pPlot and not pPlot.isNone():
-					EventSigns.addSign(iPlayer, pPlot, "Objectif ici")
-				else:
-					print "Plot invalide : x = %d, y = %d" % (x, y)				
 				CyEngine().addSign(pPlot, iPlayer, TextUtil.convertToStr(sScript))
 		WBPlotScreen.iCounter = 10

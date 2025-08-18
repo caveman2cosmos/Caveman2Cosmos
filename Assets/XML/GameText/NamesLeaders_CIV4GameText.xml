@@ -116,9 +116,9 @@
 		<Tag>TXT_KEY_LEADER_BARBARIAN</Tag>
 		<English>Barbarian</English>
 		<French>
-			<Text>Barbares</Text>
+			<Text>Barbare</Text>
 			<Gender>Male</Gender>
-			<Plural>1</Plural>
+			<Plural>0</Plural>
 		</French>
 		<German>Barbar</German>
 		<Italian>
@@ -1005,7 +1005,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_LEADER_LEVEL_PROGRESS_2</Tag>
 		<English>[ICON_BULLET]%s1[ICON_CULTURE] (Level %d2)</English>
-		<French>[ICON_BULLET]%s1[ICON_CULTURE] (Niveau %d2)</French>
 		<Russian>[ICON_BULLET]%s1[ICON_CULTURE] (Уровень %d2)</Russian>
 	</TEXT>
 	<TEXT>

@@ -13759,7 +13759,23 @@ bool CvPlayer::isUnitMaxedOut(const UnitTypes eIndex, const int iExtra) const
 		CvString::format("getUnitCount=%d is expected not to be greater than MaxPlayerInstances=%d for %s",
 		getUnitCount(eIndex), GC.getUnitInfo(eIndex).getMaxPlayerInstances(), GC.getUnitInfo(eIndex).getType()).c_str());
 
-	return (getUnitCount(eIndex) + iExtra) >= GC.getUnitInfo(eIndex).getMaxPlayerInstances();
+
+//    this scale will be used for national units only... the idea is to start them 5 at prehistoric and scale by 5 per age...
+//     as an alternative to the 10% per unit cost increase but unlimited
+//     might have to use separate indicator but this will do for now for testing purposes
+   int iMaxUnits = GC.getUnitInfo(eIndex).getMaxPlayerInstances();
+
+   if (iMaxUnits == 5)
+   {
+   	int iEra = getCurrentEra(); // 0 = Prehistoric, 1 = Ancient, etc.
+
+   	if (iEra > 0)
+   	{
+   		iMaxUnits += iEra * 5;
+   	}
+   }
+
+   return (getUnitCount(eIndex) + iExtra) >= iMaxUnits;
 }
 
 

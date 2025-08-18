@@ -777,7 +777,7 @@
 		<UnitArtInfo>
 			<Type>ART_DEF_UNIT_HAAST_EAGLE</Type>
 			<Button>Art/Interface/Buttons/Units/Haastseagle.dds</Button>
-			<fScale>30.0</fScale>
+			<fScale>60.0</fScale>
 			<fInterfaceScale>0.70</fInterfaceScale>
 			<NIF>Art/Units/Animals/Haastseagle/Haastseagle.nif</NIF>
 			<KFM>Art/Units/Panther/Panther.kfm</KFM>
@@ -2804,7 +2804,7 @@
 		<UnitArtInfo>
 			<Type>ART_DEF_UNIT_SEAEAGLE</Type>
 			<Button>Art/Interface/Buttons/Units/Seaeagle.dds</Button>
-			<fScale>9.0</fScale>
+			<fScale>11.0</fScale>
 			<fInterfaceScale>1</fInterfaceScale>
 			<NIF>Art/Units/animals/Seaeagle/Seaeagle.nif</NIF>
 			<KFM>Art/Units/Panther/Panther.kfm</KFM>
