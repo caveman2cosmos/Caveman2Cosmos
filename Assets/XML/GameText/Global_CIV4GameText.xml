@@ -5385,7 +5385,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_DIFFICULTY_DECREASED_FOR_PLAYER</Tag>
 		<English>The difficulty level has decreased for %s1</English>
-		<French>Le niveau de difficulté a diminué en %s1</French>
+		<French>Le niveau de difficulté a diminué pour '%s1'</French>
 		<Italian>Il livello di difficoltà è diminuito per %1</Italian>
 		<Polish>Poziom trudno&#156;ci zosta&#179; obni&#191;ony do %s1</Polish>
 	</TEXT>
@@ -5402,7 +5402,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_DIFFICULTY_INCREASED_FOR_PLAYER</Tag>
 		<English>The difficulty level has increased for %s1</English>
-		<French>Le niveau de difficulté a augmenté en %s1</French>
+		<French>Le niveau de difficulté a augmenté pour '%s1'</French>
 		<Italian>Il livello di difficoltà è aumentato per %1</Italian>
 		<Polish>Poziom trudno&#156;ci zosta&#179; podniesiony do %s1</Polish>
 	</TEXT>
@@ -30755,5 +30755,10 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Polish>Naci&#156;nij SHIFT aby zobaczy&#230; Klasy Bojowe</Polish>
 		<Russian>Нажмите SHIFT для просмотра атрибутов</Russian>
 	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MOD_KILL_ANIMALS_DESC</Tag>
+		<English>All Green man's animals will be regenerated in a few turns</English>
+		<French>Tous les animaux de Dame Nature vont être régénérés dans quelques tours.</French>
+	</TEXT>	
 </Civ4GameText>
 
