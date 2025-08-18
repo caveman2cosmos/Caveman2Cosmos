@@ -3,6 +3,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_FEATUREHELP_NO_BONUS</Tag>
 		<English>[NEWLINE][ICON_BULLET]No bonus on plots with this feature.</English>
+		<French>[NEWLINE][ICON_BULLET]Aucun bonus sur les cases avec cette caractéristique.</French>
 		<Italian>[NEWLINE][ICON_BULLET]Nessun bonus su caselle con questo miglioramento.</Italian>
 	</TEXT>
 	<TEXT>
@@ -405,7 +406,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_FEATURE_ICE_PEDIA</Tag>
-		<English>Ice is water frozen into a solid state. The most common form on Earth’s surface is ice Ih, which can appear transparent or opaque with a bluish-white color depending on impurities or trapped air bubbles. The presence of other materials, such as soil, can further change its appearance.</English>
+		<English>Ice is water frozen into a solid state. The most common form on Earth's surface is ice Ih, which can appear transparent or opaque with a bluish-white color depending on impurities or trapped air bubbles. The presence of other materials, such as soil, can further change its appearance.</English>
 		<French>La glace est de l'eau gelée à l'état solide. Habituellement, la glace est la phase connue sous le nom de glace Ih, qui est la plus abondante des différentes phases solides à la surface de la Terre. Il peut apparaître de couleur blanc bleuâtre transparent ou opaque, selon la présence d'impuretés ou d'inclusions d'air. L'ajout d'autres matériaux tels que le sol peut encore altérer l'apparence.</French>
 		<Polish>L&#243;d brzegowy (ang. - stranded ice) - oblodzenie wyst&#234;puj&#185;ce przy brzegach rzek, &#179;ach i urz&#185;dze&#241; wodnych. Rozwija si&#234; od brzeg&#243;w koryta ku jego &#156;rodkowi. Powstaje przez &#179;&#185;czenie si&#234; &#156;ry&#191;u i kr&#185;&#191;k&#243;w lodowych na spokojniejszej wodzie przy brzegu.</Polish>
 		<Russian>Лед - это вода, застывшая в твердом состоянии. Обычно лед - это фаза, известная как лед Ih, которая является наиболее распространенной из различных твердых фаз на поверхности Земли. Он может выглядеть прозрачным или непрозрачным голубовато-белым цветом, в зависимости от наличия примесей или воздушных включений. Добавление других материалов, таких как почва, может дополнительно изменить внешний вид.</Russian>

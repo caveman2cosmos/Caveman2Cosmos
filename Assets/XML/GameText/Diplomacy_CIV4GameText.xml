@@ -3176,7 +3176,7 @@
 	<TEXT>
 		<Tag>AI_DIPLO_FIRST_CONTACT_LEADER_ASHUR_1</Tag>
 		<English>He who in his heart utters improprieties against the king - his foundation is but wind, the hem of his garment is but litter. Gather, all the gods of heaven and earth, bless king Ashurbanipal, the circumspect man! I am [OUR_NAME] of the [OUR_EMPIRE].</English>
-		<French>Celui qui dans son cœur est inconvenant avec le roi - son fondement n'est que du vent, l'ourlet de son vêtement n'est que déchets. Oyez, tous les dieux du ciel et la terre, bénissez le Roi Assurbanipal, l'homme avisé! Je suis [OUR_NAME] de [OUR_EMPIRE].</French>
+		<French>Celui qui dans son coeur est inconvenant avec le roi - son fondement n'est que du vent, l'ourlet de son vêtement n'est que déchets. Oyez, tous les dieux du ciel et la terre, bénissez le Roi Assurbanipal, l'homme avisé! Je suis [OUR_NAME] de [OUR_EMPIRE].</French>
 		<German>Derjenige, der in seinem Herzen Ungebührliches gegenüber dem König hegt - seine Grundfeste ist nur Wind, der Saum seines Gewandes ist nur Schmutz. Versammelt Euch, all Ihr Götter von Himmel und Erde, segnet König Assurbanipal, den umsichtigen Mann. Ich bin [OUR_NAME] vom [OUR_EMPIRE].</German>
 		<Italian>Colui che getta improprietà contro il re - ha come fondamento il vento. Tutti gli dei del cielo e della terra onorano Assurbanipal, l'uomo giusto! Io sono [OUR_NAME] dell'[OUR_EMPIRE].</Italian>
 		<Polish>Ten kt&#243;ry w swoim sercu wyst&#185;pi przeciw kr&#243;lowi - jego fundamentem jest wiatr, a ubranie jest &#156;ci&#243;&#179;k&#185; le&#156;n&#185;. Wszyscy, bogowie nieba i ziemi, b&#179;ogos&#179;awcie kr&#243;la Ashurbanipala Rozwa&#191;nego! Ja jestem [OUR_NAME] z rodu [OUR_EMPIRE].</Polish>
@@ -3266,6 +3266,7 @@
 	<TEXT>
 		<Tag>AI_DIPLO_FIRST_CONTACT_LEADER_JIVARO_LEADER_1</Tag>
 		<English>Ha!, [CT_NAME]. Your head will be a good trophy. Don't worry it wont hurt a bit.</English>
+		<French>Ha !, [CT_NAME]. Ta tête fera un bon trophée. Ne t'inquiète pas, ça ne fera pas mal.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>AI_DIPLO_FIRST_CONTACT_LEADER_CHRISTIAN_IV_1</Tag>
@@ -3501,10 +3502,11 @@
 	<TEXT>
 		<Tag>AI_DIPLO_FIRST_CONTACT_LEADER_MARGRETE_1</Tag>
 		<English>Greetings, [CT_NAME] of the [CT_EMPIRE]. I am [OUR_NAME] of [OUR_CIV_SHORT], though you may call me "Margrete, by the grace of God, Valdemar Daneking's daughter, and Denmark's rightful heir". What is it you wish to speak of?</English>
+		<French>Salutations, [CT_NAME] de l'[CT_EMPIRE]. Je suis [OUR_NAME] de [OUR_CIV_SHORT], mais vous pouvez m'appeler "Margrete, par la grâce de Dieu, fille de Valdemar Roi du Danemark et héritière légitime du Danemark". De quoi souhaitez-vous parler ?</French>
 		<German>Grüße, [CT_NAME] vom [CT_EMPIRE]. Ich bin [OUR_NAME] von [OUR_CIV_SHORT], aber Du darfts mich auch "Margarete, von Gottes Gnaden, Tochter Waldemars, König der Dänen, und Dänemarks rechtmäßiger Erbe". Weshalb wünschst Du mich zu sprechen?</German>
 		<Polish>Pozdrowienia, [CT_NAME] z [CT_EMPIRE]. Jestem [OUR_NAME] z [OUR_CIV_SHORT], chocia&#191; mo&#191;esz zadzwoni&#230; do mnie "Margrete, przez wdzi&#234;k Boga, c&#243;rki Waldemara Daneking's i legalnego spadkobiercy Danii". Co to ty zechcie&#230; m&#243;wi&#230;?</Polish>
-		<Spanish>Saludos, [CT_NAME] del [CT_EMPIRE]. Soy [OUR_NAME] del [OUR_CIV_SHORT], aunque me puedes llamar "Margarita, por la gracia de Dios, esposa de Valdemar Daneking, y legítima heredera de Dinamarca". ¿Sobre qué asunto deseas hablar?</Spanish>
 		<Russian>Ïðèâåòñòâèÿ, [CT_NAME] èç [CT_EMPIRE]. ß [OUR_NAME] èç [OUR_CIV_SHORT], õîòÿ âû ìîæåòå çâàòü ìåíÿ "Ìàðãàðåò, áîæåñòâåííàÿ ãðàöèÿ, äî÷ü Âàëüäåìàðà Äàòñêîãî êîðîëÿ, è çàêîííîé íàñëåäíèöåé Äàíèè". Î ÷åì âû æåëàëè ïîãîâîðèòü ñî ìíîé? </Russian>
+		<Spanish>Saludos, [CT_NAME] del [CT_EMPIRE]. Soy [OUR_NAME] del [OUR_CIV_SHORT], aunque me puedes llamar "Margarita, por la gracia de Dios, esposa de Valdemar Daneking, y legítima heredera de Dinamarca". ¿Sobre qué asunto deseas hablar?</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>AI_DIPLO_FIRST_CONTACT_LEADER_MEHMED_1</Tag>
@@ -8564,7 +8566,7 @@
 	<TEXT>
 		<Tag>AI_DIPLO_THANKS_49</Tag>
 		<English>The [OUR_CIV_ADJ] people graciously thank the people of - whatever your culture's name is.</English>
-		<French>Les [OUR_CIV_ADJ] remercie de tout cœur le peuple... j'ai oublié votre nom, mais peu importe.</French>
+		<French>Les [OUR_CIV_ADJ] remercie de tout coeur le peuple... j'ai oublié votre nom, mais peu importe.</French>
 		<German>Mein Volk dankt den... wie auch immer sich Eure Zivilisation schimpfen mag.</German>
 		<Italian>Il popolo [OUR_CIV_ADJ:1] ringrazia sentitamente la tua gente... anche se non sappiamo il nome della tua civiltà.</Italian>
 		<Polish>Lud [OUR_CIV_ADJ] dzi&#234;kuje pi&#234;knie ludowi... - jakakolwiek jest nazwa tego Twojego plemienia.</Polish>
@@ -9453,6 +9455,7 @@
 	<TEXT>
 		<Tag>USER_DIPLO_LETS_TALK</Tag>
 		<English>Let's talk again!</English>
+		<French>Parlons à nouveau !</French>
 		<Italian>Sentiamoci presto!</Italian>
 		<Russian>Äàâàéòå åùå ÷òî-íèáóäü îáñóäèì!</Russian>
 	</TEXT>

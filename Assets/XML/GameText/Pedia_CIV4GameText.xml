@@ -184,6 +184,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_PEDIA_CATEGORY_BONUS_GENMOD</Tag>
 		<English>Technocultural Bonuses</English>
+		<French>Bonus technoculturels</French>
 		<Italian>Risorse tecnologiche</Italian>
 		<German>Technokulturboni</German>
 		<Russian>Бонусы технокультуры</Russian>
@@ -191,6 +192,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_PEDIA_CATEGORY_BONUS_MANDFACTURED</Tag>
 		<English>Manufactured Bonuses</English>
+		<French>Bonus des biens manufacturés</French>
 		<Italian>Risorse prodotte</Italian>
 		<German>Güter</German>
 		<Russian>Бонусы производства</Russian>
@@ -208,8 +210,9 @@
 	<TEXT>
 		<Tag>TXT_KEY_PEDIA_CATEGORY_BONUS_WONDER</Tag>
 		<English>Unique Bonuses</English>
-		<Italian>Risorse uniche</Italian>
+		<French>Bonus Uniques</French>
 		<German>Spezialboni</German>
+		<Italian>Risorse uniche</Italian>
 		<Russian>Уникальные бонусы</Russian>
 	</TEXT>
 	<TEXT>
@@ -588,6 +591,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_PEDIA_CATEGORY_SPACE_BUILDINGS</Tag>
 		<English>Space</English>
+		<French>Espace</French>
 		<German>Weltall</German>
 		<Italian>Edifici spaziali</Italian>
 		<Russian>Космические</Russian>
@@ -637,6 +641,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_PEDIA_CATEGORY_SPREAD_UNITS</Tag>
 		<English>Spreading Units</English>
+		<French>Unités de diffusion</French>
 		<German>Verbreitung</German>
 		<Italian>Unità di diffusione</Italian>
 		<Russian>Распределяющие подразделения</Russian>
@@ -708,8 +713,9 @@
 	<TEXT>
 		<Tag>TXT_KEY_PEDIA_CATEGORY_UNIT_COMBAT</Tag>
 		<English>Combat Types</English>
-		<Italian>Sottotipi di combattimento</Italian>
+		<French>Types de Combat</French>
 		<German>Kategorien</German>
+		<Italian>Sottotipi di combattimento</Italian>
 		<Russian>Атрибуты</Russian>
 	</TEXT>
 	<TEXT>
@@ -866,6 +872,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_PEDIA_OWN</Tag>
 		<English>Own</English>
+		<French>Possessions</French>
 		<German>im Besitz:</German>
 		<Italian>proprio</Italian>
 		<Russian>Во владении</Russian>
@@ -873,6 +880,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_PEDIA_PERSONALITY</Tag>
 		<English>Personailty</English>
+		<French>Personnalité</French>
 		<German>Personailty</German>
 		<Russian>Характеристика</Russian>
 	</TEXT>
@@ -1054,7 +1062,7 @@
 		<Spanish>Construcción de maravillas: probabilidad del [BOLD]%d1%%[\BOLD][NEWLINE]</Spanish>
 		<Polish>Uko&#241;czenie Cudu: [BOLD]%d1%%[\BOLD] Szans[NEWLINE]</Polish>
 		<Russian>Строительство чуда: [BOLD]%d1%%[\BOLD] шанс[NEWLINE]</Russian>
-		<Italian>Costruzione delle meraviglie: [BOLD]%d1%%[\BOLD] di probabilità[NEWLINE]</Italian><!--Leaders in the pedia-->
+		<Italian>Costruzione delle meraviglie: [BOLD]%d1%%[\BOLD] di probabilità[NEWLINE]</Italian> <!--Leaders in the pedia-->
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PEDIA_WORKRATE</Tag>

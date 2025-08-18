@@ -11,6 +11,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HQ_CEREAL_MILLS</Tag>
 		<English>HQ - Cereal Mills</English>
+		<French>Siège - Minoteries</French>
 		<Italian>Quartier generale di Cereali del mulino</Italian>
 		<Russian>Продукты из злаков</Russian>
 	</TEXT>
@@ -32,6 +33,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HQ_SIDS_SUSHI_CO</Tag>
 		<English>HQ - Sid's Sushi Co</English>
+		<French>Siège - Sid's Sushi Co</French>
 		<Italian>Quartier generale di Sid Sushi Company</Italian>
 		<Russian>Суши от Сида</Russian>
 	</TEXT>
@@ -55,6 +57,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HQ_STANDARD_ETHANOL</Tag>
 		<English>HQ - Standard Ethanol</English>
+		<French>Siège - Standard Ethanol</French>
 		<Italian>Quartier generale di Etanolo Energy Spa</Italian>
 		<Russian>Этанол-стандарт</Russian>
 	</TEXT>
@@ -78,6 +81,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HQ_CREATIVE_CONSTRUCTIONS</Tag>
 		<English>HQ - Creative Constructions</English>
+		<French>Siège - Constructions Créatives</French>
 		<Italian>Quartier generale di Costruzioni creative</Italian>
 		<Russian>Креативстрой</Russian>
 	</TEXT>
@@ -100,6 +104,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HQ_MINING_INC</Tag>
 		<English>HQ - Mining Inc</English>
+		<French>Siège - Mining Inc</French>
 		<Italian>Quartier generale di Mineraria Srl</Italian>
 		<Russian>Горные ресурсы</Russian>
 	</TEXT>
@@ -123,6 +128,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HQ_ALUMINUM_CO</Tag>
 		<English>HQ - Aluminum Co</English>
+		<French>Siège - Aluminum Co</French>
 		<Italian>Quartier generale di Allumination</Italian>
 		<Russian>Промалюминий</Russian>
 	</TEXT>
@@ -146,6 +152,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HQ_CIVILIZED_JEWELERS_INC</Tag>
 		<English>HQ - Civilized Jewelers Inc</English>
+		<French>Siège - Civilized Jewelers Inc</French>
 		<Italian>Quartier generale di Gioiellieri uniti</Italian>
 		<Russian>Мировые ювелиры</Russian>
 	</TEXT>
@@ -161,6 +168,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CORPORATION_ADVENTURE</Tag>
 		<English>Adventure Tours</English>
+		<French>Aventures Tours</French>
 		<Italian>Viaggi avventura</Italian>
 		<Russian>Àäâåí÷åð-òóð</Russian>
 	</TEXT>
@@ -176,10 +184,11 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ADVENTURE_TOURS_FRANCHISE_PEDIA</Tag>
 		<English>Your local adventure franchise to get your adrenaline pumping!</English>
+		<French>Votre franchise locale d'aventures pour faire monter l'adrénaline !</French>
 		<German>Dein örtlicher Reiseanbieter für Abenteuerreisen, die dein Adrenalin in die Höhe schnellen lassen!</German>
 		<Italian>La tua agenzia locale di Viaggi avventura, per darti una scarica di adrenalina!</Italian>
-		<Spanish>¡Tu franquicia local de aventuras, para darte tu dosis de adrenalina!</Spanish>
 		<Russian>Откройте свою особую местную приключенческую франшизу, чтобы подарить вашим клиентам заряд адреналина!</Russian>
+		<Spanish>¡Tu franquicia local de aventuras, para darte tu dosis de adrenalina!</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HQ_ADVENTURE_TOURS</Tag>
@@ -192,6 +201,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CORPORATION_ADVENTURE_PEDIA</Tag>
 		<English>Bored of your monotonous life? Ready for adventures? Adventure Tours bring to you the excitement of scuba diving, horseback riding, exploration of ancient ruins, or witnessing the largest animals in their natural habitats. Spice up your life with us!</English>
+		<French>Marre de la monotonie ? Prêt pour l'aventure ? Adventure Tours vous fait vivre la plongée sous-marine, l'équitation, l'exploration de ruines anciennes, ou l'observation des plus grands animaux dans leur habitat naturel. Pimentez votre vie avec nous !</French>
 		<German>Langweilt dich dein eintöniges Leben? Bist du bereit für Abenteuer? Adventure Tours lässt dich den Nervenkitzel beim Tauchen, Reiten, der Erforschung alter Ruinen oder dem Beobachten der größten Tiere unserer Erde in freier Wildbahn spüren. Pepp dein Leben mit unserer Hilfe auf!</German>
 		<Italian>Stanco della tua vita monotona? Pronto per l'avventura? Adventure Tours ti porta l'eccitazione di immersioni subacquee, escursioni a cavallo, esplorazione di antiche rovine e osservazione dei più grandi animali della terra nel loro stesso habitat. Vivacizza la tua vita con noi!</Italian>
 		<Russian>Устали от монотонной жизни? Готовы к приключениям? Наши зажигательные туры доставят вам удовольствие от подводного плавания, спортивной верховой езды, исследования древних руин или наблюдения за крупными животными непосредственно в их собственной среде обитания. Сделайте свою жизнь ярче вместе с нами!</Russian>
@@ -213,7 +223,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CORPORATION_BULLSEYE_PEDIA</Tag>
-		<English>Fruits and vegetables were often the only other source of nutrition available to the less well-off members of society and to religious orders that abstained from consuming animal proteins. In earlier times, most vegetables were supplied by farmers’ markets and the farms themselves. The Babylonians are the first known civilization to have brought a piece of nature into the city, using innovations such as the Archimedes screw to support early forms of hydroponic agriculture. This enabled fresh vegetables to be grown in urban environments where they would otherwise be scarce. Over time, however, thanks to refrigeration and advancements in transportation, produce has become fresher, more widely available, and more organically cultivated than ever before.</English>
+		<English>Fruits and vegetables were often the only other source of nutrition available to the less well-off members of society and to religious orders that abstained from consuming animal proteins. In earlier times, most vegetables were supplied by farmers' markets and the farms themselves. The Babylonians are the first known civilization to have brought a piece of nature into the city, using innovations such as the Archimedes screw to support early forms of hydroponic agriculture. This enabled fresh vegetables to be grown in urban environments where they would otherwise be scarce. Over time, however, thanks to refrigeration and advancements in transportation, produce has become fresher, more widely available, and more organically cultivated than ever before.</English>
 		<Italian>Frutta e verdure erano spesso l'unica fonte di cibo negli strati più bassi della società e negli ordini religiosi che si astenevano dal consumo di proteine di origine animale. La maggior parte delle verdure erano procurate dai venditori di verdure e dalle stesse fattorie. I Babilonesi furono la prima civiltà nota in grado di portare un pezzo di natura all'interno della città di Babilonia, con invenzioni come la vite di Archimede, e perciò erano in grado di sostenere un'agricoltura idroponica in città dove le verdure erano meno propense a crescere. Con il passare del tempo, grazie alla refrigerazione e altri metodi di trasporto i prodotti sono diventati più freschi e più organici di sempre.</Italian>
 		<Russian>Фрукты и овощи часто были единственным источником питания для менее обеспеченных членов общества и религиозных орденов, которые воздерживаются от потребления белков животных. Однако в то время большая часть овощей поставлялась с фермерских рынков и самими овощными фермами. Вавилон - первая известная цивилизация, которая смогла принести частичку природы в свои города с помощью таких изобретений, как винт Архимеда, и, таким образом, способна поддерживать гидропонное сельское хозяйство в городах, где меньше вероятность появления свежих овощей. Однако со временем, благодаря холодильным установкам и другим транспортным технологиям, продукты становятся более свежими и органическими, чем когда-либо прежде.</Russian>
 	</TEXT>
@@ -266,9 +276,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_BURGERWORLD_RESTAURANT_PEDIA</Tag>
 		<English>Your local fast food place to get your hunger on!</English>
+		<French>Votre fast-food local pour calmer la faim !</French>
 		<Italian>Il tuo fast food locale per soddisfare la tua fame!</Italian>
-		<Spanish>¡Tu local de comida rápida para saciar tu apetito!</Spanish>
 		<Russian>Посетите наш местный ресторан быстрого питания, дабы насытиться!</Russian>
+		<Spanish>¡Tu local de comida rápida para saciar tu apetito!</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CORPORATION_EMPCLOTH</Tag>
@@ -287,16 +298,17 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HQ_EMPERORS_CLOTHING_PEDIA</Tag>
-		<English>Corporate headquarters is the part of a corporate structure responsible for key functions such as strategic planning, corporate communications, taxation, legal affairs, marketing, finance, human resources, and information technology. It oversees the overall success of the corporation and ensures proper corporate governance. Sometimes referred to as the head office, it is the location where company executives work and where major business decisions are made. In most cases, the corporate headquarters serves as the central hub for a company’s operations.</English>
+		<English>Corporate headquarters is the part of a corporate structure responsible for key functions such as strategic planning, corporate communications, taxation, legal affairs, marketing, finance, human resources, and information technology. It oversees the overall success of the corporation and ensures proper corporate governance. Sometimes referred to as the head office, it is the location where company executives work and where major business decisions are made. In most cases, the corporate headquarters serves as the central hub for a company's operations.</English>
 		<Russian>Штаб-квартира корпорации является частью корпоративной структуры, которая занимается такими важными задачами, как стратегическое планирование, корпоративные коммуникации, налоги, право, маркетинг, финансы, кадровая политика и информационные технологии. Штаб-квартира корпорации берет на себя ответственность за общий успех корпорации, обеспечивает корпоративное управление. Иногда его называют головным офисом, где работают руководители компании и где принимаются многие ключевые бизнес-решения. Как правило, штаб-квартира компании выступает в качестве ядра при организации бизнеса.</Russian>
 		<Italian>La sede aziendale è la parte di una struttura aziendale che si occupa di compiti importanti come la pianificazione strategica, le comunicazioni aziendali, le tasse, la legge, il marketing, la finanza, le risorse umane e la tecnologia dell'informazione. La sede centrale si assume la responsabilità del successo complessivo della società e garantisce la Corporate Governance. A volte si riferisce alla sede centrale, che è il luogo in cui lavorano i dirigenti di un'azienda e dove vengono prese molte delle decisioni aziendali chiave. Generalmente, la sede centrale dell'azienda funge da nucleo quando l'attività è operativa.</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CORPORATION_EMPCLOTH_PEDIA</Tag>
 		<English>See Fashion House for details. Emperors Clothing is a rival of Fashion House, and thus requires many of the same resources.</English>
+		<French>Voir la Maison de la Mode pour les détails. Emperors Clothing est un concurrent de Fashion House, nécessitant donc beaucoup des mêmes ressources.</French>
 		<Italian>Per i dettagli, vedi Fashion House. Abiti Imperiali è un rivale di Fashion House e perciò le due corporazioni hanno molte risorse in comune.</Italian>
-		<Spanish>Véase Fashion House para más detalles. Emperors Clothing es un rival directo de Fashion House, por ello ambas corporaciones consumen los mismos recursos.</Spanish>
 		<Russian>См. подробности в статье про «Дом Мод». «Одежда императора» - конкурент «Дома Мод», и поэтому требует тот же перечень ресурсов.</Russian>
+		<Spanish>Véase Fashion House para más detalles. Emperors Clothing es un rival directo de Fashion House, por ello ambas corporaciones consumen los mismos recursos.</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_EMPERORS_CLOTHING_STORE</Tag>
@@ -310,9 +322,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_EMPERORS_CLOTHING_STORE_PEDIA</Tag>
 		<English>Your local store to get your clothes.</English>
+		<French>Votre boutique locale pour vos vêtements.</French>
 		<Italian>Il tuo negozio locale dove comprare gli abiti.</Italian>
-		<Spanish>Tu tienda local donde renovar tu vestimenta.</Spanish>
 		<Russian>Посетите один из наших местный магазин, где можно приобрести модную одежду.</Russian>
+		<Spanish>Tu tienda local donde renovar tu vestimenta.</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CORPORATION_EWTRADE</Tag>
@@ -346,6 +359,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_EAST_WEST_TRADERS_STORE_PEDIA</Tag>
 		<English>Various commodities delivered from all over the world directly to your local store.</English>
+		<French>Diverses marchandises livrées du monde entier directement dans votre boutique locale.</French>
 		<Italian>Vari beni da tutto il mondo che vengono consegnati direttamente nel tuo negozio locale.</Italian>
 		<Russian>Всевозможные товары доставляются со всего мира прямо в ваш местный магазин.</Russian>
 	</TEXT>
@@ -366,7 +380,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HQ_FASHION_HOUSE_PEDIA</Tag>
-		<English>Corporate headquarters is the part of a corporate structure responsible for key functions such as strategic planning, corporate communications, taxation, legal affairs, marketing, finance, human resources, and information technology. It oversees the overall success of the corporation and ensures proper corporate governance. Sometimes referred to as the head office, it is the location where company executives work and where major business decisions are made. In most cases, the corporate headquarters serves as the central hub for a company’s operations.</English>
+		<English>Corporate headquarters is the part of a corporate structure responsible for key functions such as strategic planning, corporate communications, taxation, legal affairs, marketing, finance, human resources, and information technology. It oversees the overall success of the corporation and ensures proper corporate governance. Sometimes referred to as the head office, it is the location where company executives work and where major business decisions are made. In most cases, the corporate headquarters serves as the central hub for a company's operations.</English>
 		<Russian>Штаб-квартира корпорации является частью корпоративной структуры, которая занимается такими важными задачами, как стратегическое планирование, корпоративные коммуникации, налоги, право, маркетинг, финансы, кадровая политика и информационные технологии. Штаб-квартира корпорации берет на себя ответственность за общий успех корпорации, обеспечивает корпоративное управление. Иногда его называют головным офисом, где работают руководители компании и где принимаются многие ключевые бизнес-решения. Как правило, штаб-квартира компании выступает в качестве ядра при организации бизнеса.</Russian>
 		<Italian>La sede aziendale è la parte di una struttura aziendale che si occupa di compiti importanti come la pianificazione strategica, le comunicazioni aziendali, le tasse, la legge, il marketing, la finanza, le risorse umane e la tecnologia dell'informazione. La sede centrale si assume la responsabilità del successo complessivo della società e garantisce la Corporate Governance. A volte si riferisce alla sede centrale, che è il luogo in cui lavorano i dirigenti di un'azienda e dove vengono prese molte delle decisioni aziendali chiave. Generalmente, la sede centrale dell'azienda funge da nucleo quando l'attività è operativa.</Italian>
 	</TEXT>
@@ -388,9 +402,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FASHION_HOUSE_STORE_PEDIA</Tag>
 		<English>Your local store to get your clothes.</English>
+		<French>Votre boutique locale pour vos vêtements.</French>
 		<Italian>Il negozio locale in cui poter comprare i tuoi vestiti.</Italian>
-		<Spanish>Tu tienda local donde renovar tu vestimenta.</Spanish>
 		<Russian>Посетите один из наших местный магазин, где можно приобрести модную одежду.</Russian>
+		<Spanish>Tu tienda local donde renovar tu vestimenta.</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CORPORATION_MALLWART</Tag>
@@ -427,9 +442,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MALLWART_STORE_PEDIA</Tag>
 		<English>Fresh groceries and fruits delivered from all over the world directly to your local store.</English>
+		<French>Des produits frais et des fruits venant du monde entier livrés directement dans votre boutique locale.</French>
 		<Italian>Verdure e frutta fresca consegnati da tutto il mondo direttamente nella tua città.</Italian>
-		<Spanish>Frutas y verduras frescas enviadas directamente desde todo el mundo a tus ciudades.</Spanish>
 		<Russian>Свежие продукты и фрукты доставляются со всего мира прямо в ваши города.</Russian>
+		<Spanish>Frutas y verduras frescas enviadas directamente desde todo el mundo a tus ciudades.</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CORPORATION_MAPSTER</Tag>
@@ -446,7 +462,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HQ_MAPSTER_PEDIA</Tag>
-		<English>Corporate headquarters is the part of a corporate structure responsible for key functions such as strategic planning, corporate communications, taxation, legal affairs, marketing, finance, human resources, and information technology. It oversees the overall success of the corporation and ensures proper corporate governance. Sometimes referred to as the head office, it is the location where company executives work and where major business decisions are made. In most cases, the corporate headquarters serves as the central hub for a company’s operations.</English>
+		<English>Corporate headquarters is the part of a corporate structure responsible for key functions such as strategic planning, corporate communications, taxation, legal affairs, marketing, finance, human resources, and information technology. It oversees the overall success of the corporation and ensures proper corporate governance. Sometimes referred to as the head office, it is the location where company executives work and where major business decisions are made. In most cases, the corporate headquarters serves as the central hub for a company's operations.</English>
 		<Russian>Штаб-квартира корпорации является частью корпоративной структуры, которая занимается такими важными задачами, как стратегическое планирование, корпоративные коммуникации, налоги, право, маркетинг, финансы, кадровая политика и информационные технологии. Штаб-квартира корпорации берет на себя ответственность за общий успех корпорации, обеспечивает корпоративное управление. Иногда его называют головным офисом, где работают руководители компании и где принимаются многие ключевые бизнес-решения. Как правило, штаб-квартира компании выступает в качестве ядра при организации бизнеса.</Russian>
 		<Italian>La sede aziendale è la parte di una struttura aziendale che si occupa di compiti importanti come la pianificazione strategica, le comunicazioni aziendali, le tasse, la legge, il marketing, la finanza, le risorse umane e la tecnologia dell'informazione. La sede centrale si assume la responsabilità del successo complessivo della società e garantisce la Corporate Governance. A volte si riferisce alla sede centrale, che è il luogo in cui lavorano i dirigenti di un'azienda e dove vengono prese molte delle decisioni aziendali chiave. Generalmente, la sede centrale dell'azienda funge da nucleo quando l'attività è operativa.</Italian>
 	</TEXT>
@@ -488,9 +504,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_BIG_MCDOWELLS_RESTAURANT_PEDIA</Tag>
 		<English>A multinational fast food chain providing quick and affordable meals to city residents. Popular for serving food quickly and cheaply, it reflects the rise of globalized consumer culture.</English>
+		<French>Une chaîne de fast-food multinationale offrant des repas rapides et abordables aux habitants de la ville. Célèbre pour son service rapide et économique, elle reflète la montée de la culture de consommation mondialisée.</French>
 		<Italian>Il tuo fast food locale, per farti venire l'acquolina in bocca!</Italian>
-		<Spanish>¡Tu local de comida rápida para saciar tu apetito!</Spanish>
 		<Russian>Посетите наш местный ресторан быстрого питания, дабы насытиться!</Russian>
+		<Spanish>¡Tu local de comida rápida para saciar tu apetito!</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CORPORATION_MILEHIGH</Tag>
@@ -524,8 +541,9 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CORPORATION_MILEHIGH_PEDIA</Tag>
 		<English>Your local choice for planning exotic vacations.</English>
-		<Russian>Выберите и спланируйте с нами свой экзотический отдых. </Russian>
+		<French>Votre choix local pour organiser des vacances exotiques.</French>
 		<Italian>La tua scelta locale per pianificare vacanze esotiche.</Italian>
+		<Russian>Выберите и спланируйте с нами свой экзотический отдых. </Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CORPORATION_MOBBY</Tag>
@@ -559,9 +577,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MOBBY_MEATS_STORE_PEDIA</Tag>
 		<English>Your local meat market of the world's meats, from common cuts to exotic selections.</English>
+		<French>Votre boucherie locale offrant des viandes du monde entier, des coupes courantes aux sélections exotiques.</French>
 		<Italian>La tua bottega locale delle carni, dalla più comune alla più esotica.</Italian>
-		<Spanish>Tu mercado cárnico local con carnes de todo tipo, tanto comunes como exóticas.</Spanish>
 		<Russian>Посетите наш местный рынок мясных продуктов со всего мира, от обычных до экзотических.</Russian>
+		<Spanish>Tu mercado cárnico local con carnes de todo tipo, tanto comunes como exóticas.</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CORPORATION_MOONBEAN</Tag>
@@ -580,7 +599,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HQ_MOONBEAN_COFFEE_PEDIA</Tag>
-    <English>Coffee and other hot caffeinated beverages have always been a vital part of society, as people enjoy tea time with others. However, the rise of coffee chains transformed “coffee culture” to align with the consumerist standards of the United States. With the founding of Starbucks, the landscape of coffee culture changed forever. In 1971, Jerry Baldwin, Zev Siegl, and Gordon Bowker opened one of the earliest major coffee chains in Seattle, aiming to elevate coffee and tea into sophisticated beverages. They invested in high-quality coffee equipment and premium beans. This laid the foundation for what would become one of the world’s largest coffee giants, spreading rapidly not only in the U.S. but also across other developed nations. Starbucks, impact was not just in its coffee, but in the new cultural model it created—offering specialty coffee and tea drinks tailored to a wide variety of tastes, fostering a creative and artistic atmosphere, and promoting "Fair Trade" policies. These initiatives aimed to help developing nations compete with large corporations that, in the era of neo-imperialism, have often marginalized subsistence farmers through exploitative trade practices known colloquially as "Banana Republic" policies.</English>
+		<English>Coffee and other hot caffeinated beverages have always been a vital part of society, as people enjoy tea time with others. However, the rise of coffee chains transformed “coffee culture” to align with the consumerist standards of the United States. With the founding of Starbucks, the landscape of coffee culture changed forever. In 1971, Jerry Baldwin, Zev Siegl, and Gordon Bowker opened one of the earliest major coffee chains in Seattle, aiming to elevate coffee and tea into sophisticated beverages. They invested in high-quality coffee equipment and premium beans. This laid the foundation for what would become one of the world's largest coffee giants, spreading rapidly not only in the U.S. but also across other developed nations. Starbucks, impact was not just in its coffee, but in the new cultural model it created—offering specialty coffee and tea drinks tailored to a wide variety of tastes, fostering a creative and artistic atmosphere, and promoting "Fair Trade" policies. These initiatives aimed to help developing nations compete with large corporations that, in the era of neo-imperialism, have often marginalized subsistence farmers through exploitative trade practices known colloquially as "Banana Republic" policies.</English>
 		<Italian>Il caffè e le altre bevande a base di caffeina sono sempre stati una parte importante della società, dato che gli uomini amano rilassarsi con i propri amici. Comunque, l'idea di un'industria del caffè cambiò la cultura del caffè per adattarsi agli standard consumistici dell'America. Con la fondazione di Starbucks la cultura del caffè cambio per sempre. Nel 1971, Jerry Baldwin, Zev Siegel e Gordon Bowker fondarono a Seattle una delle più grandi industrie del caffè, dato che volevano trasformare il tè e il caffè in bevande sofisticate, comprando chicchi di caffè di alta qualità. Il risultato fu uno dei più grandi giganti del caffè di tutto il mondo, dato che furono in grado di espandersi non solo in America, ma anche in altre nazioni sviluppate del mondo. La forza di Starbucks non era il caffè, ma la nuova cultura che aveva creato con speciali miscele di tè e caffè che venivano create per venire incontro ai gusti di tutti coloro con la cultura che Starbucks supporta, allo stesso tempo di tentativi di influenzare politiche di Equo commercio dove le nazioni in via di sviluppo potevano vendere caffè e tè competitivamente rispetto a compagnie più grandi, che durante l'era del neo-imperialismo avevano impoverito i piccoli agricoltori con le loro politiche da Repubblica delle banane.</Italian>
 		<Russian>Кофе и другие горячие напитки с кофеином всегда были жизненно важной частью общества, поскольку люди наслаждаются чаем со своими собратьями. Однако идея кофейного отделения изменила образ «кофейной культуры», чтобы соответствовать американским стандартам потребления. Однако с основанием «Старбакс» лицо кофейной культуры навсегда изменилось. В 1971 году Джерри Болдуин, Зев Сигел и Гордон Боукер основали одну из крупнейших кофейных веток в Сиэтле, поскольку они хотели превратить кофе и чай в изысканный напиток, купив высококачественное кофейное оборудование и кофейные зерна для подражания. Следующий результат - это то, что станет одним из крупнейших кофейных гигантов во всем мире, поскольку они смогли быстро распространиться не только в Америке, но и в других развитых странах мира. Эффект от «Старбакс» связан не с их кофе, а с культурой нового века, которую он создал с особыми смесями кофейных напитков и чая, которые были созданы, чтобы удовлетворить вкусы и прихоти всех, кто принадлежит к художественной культуре, которую «Старбакс» поддерживает, а также пытается повлиять. Политика «справедливой торговли», при которой развивающиеся страны могут продавать кофе и чай на условиях конкуренции с более крупными компаниями, которые в эпоху неоимпериализма разорили ряд фермеров, ведущих натуральное хозяйство, из-за проводимой компрадорской экономической политики т.н. «банановых республик».</Russian>
 	</TEXT>
@@ -594,7 +613,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MOONBEAN_COFFEESHOP_PEDIA</Tag>
-		<English>Coffee and other hot caffeinated beverages have always been a vital part of society, as people enjoy tea time with others. However, the rise of coffee chains transformed “coffee culture” to align with the consumerist standards of the United States. With the founding of Starbucks, the landscape of coffee culture changed forever. In 1971, Jerry Baldwin, Zev Siegl, and Gordon Bowker opened one of the earliest major coffee chains in Seattle, aiming to elevate coffee and tea into sophisticated beverages. They invested in high-quality coffee equipment and premium beans. This laid the foundation for what would become one of the world’s largest coffee giants, spreading rapidly not only in the U.S. but also across other developed nations. Starbucks, impact was not just in its coffee, but in the new cultural model it created—offering specialty coffee and tea drinks tailored to a wide variety of tastes, fostering a creative and artistic atmosphere, and promoting "Fair Trade" policies. These initiatives aimed to help developing nations compete with large corporations that, in the era of neo-imperialism, have often marginalized subsistence farmers through exploitative trade practices known colloquially as "Banana Republic" policies.</English>
+		<English>Coffee and other hot caffeinated beverages have always been a vital part of society, as people enjoy tea time with others. However, the rise of coffee chains transformed “coffee culture” to align with the consumerist standards of the United States. With the founding of Starbucks, the landscape of coffee culture changed forever. In 1971, Jerry Baldwin, Zev Siegl, and Gordon Bowker opened one of the earliest major coffee chains in Seattle, aiming to elevate coffee and tea into sophisticated beverages. They invested in high-quality coffee equipment and premium beans. This laid the foundation for what would become one of the world's largest coffee giants, spreading rapidly not only in the U.S. but also across other developed nations. Starbucks, impact was not just in its coffee, but in the new cultural model it created—offering specialty coffee and tea drinks tailored to a wide variety of tastes, fostering a creative and artistic atmosphere, and promoting "Fair Trade" policies. These initiatives aimed to help developing nations compete with large corporations that, in the era of neo-imperialism, have often marginalized subsistence farmers through exploitative trade practices known colloquially as "Banana Republic" policies.</English>
 		<Italian>Il caffè e le altre bevande a base di caffeina sono sempre stati una parte importante della società, dato che gli uomini amano rilassarsi con i propri amici. Comunque, l'idea di un'industria del caffè cambiò la cultura del caffè per adattarsi agli standard consumistici dell'America. Con la fondazione di Starbucks la cultura del caffè cambio per sempre. Nel 1971, Jerry Baldwin, Zev Siegel e Gordon Bowker fondarono a Seattle una delle più grandi industrie del caffè, dato che volevano trasformare il tè e il caffè in bevande sofisticate, comprando chicchi di caffè di alta qualità. Il risultato fu uno dei più grandi giganti del caffè di tutto il mondo, dato che furono in grado di espandersi non solo in America, ma anche in altre nazioni sviluppate del mondo. La forza di Starbucks non era il caffè, ma la nuova cultura che aveva creato con speciali miscele di tè e caffè che venivano create per venire incontro ai gusti di tutti coloro con la cultura che Starbucks supporta, allo stesso tempo di tentativi di influenzare politiche di Equo commercio dove le nazioni in via di sviluppo potevano vendere caffè e tè competitivamente rispetto a compagnie più grandi, che durante l'era del neo-imperialismo avevano impoverito i piccoli agricoltori con le loro politiche da Repubblica delle banane.</Italian>
 		<Russian>Кофе и другие горячие напитки с кофеином всегда были жизненно важной частью общества, поскольку люди наслаждаются чаем со своими собратьями. Однако идея кофейного отделения изменила образ «кофейной культуры», чтобы соответствовать американским стандартам потребления. Однако с основанием «Старбакс» лицо кофейной культуры навсегда изменилось. В 1971 году Джерри Болдуин, Зев Сигел и Гордон Боукер основали одну из крупнейших кофейных веток в Сиэтле, поскольку они хотели превратить кофе и чай в изысканный напиток, купив высококачественное кофейное оборудование и кофейные зерна для подражания. Следующий результат - это то, что станет одним из крупнейших кофейных гигантов во всем мире, поскольку они смогли быстро распространиться не только в Америке, но и в других развитых странах мира. Эффект от «Старбакс» связан не с их кофе, а с культурой нового века, которую он создал с особыми смесями кофейных напитков и чая, которые были созданы, чтобы удовлетворить вкусы и прихоти всех, кто принадлежит к художественной культуре, которую «Старбакс» поддерживает, а также пытается повлиять. Политика «справедливой торговли», при которой развивающиеся страны могут продавать кофе и чай на условиях конкуренции с более крупными компаниями, которые в эпоху неоимпериализма разорили ряд фермеров, ведущих натуральное хозяйство, из-за проводимой компрадорской экономической политики т.н. «банановых республик».</Russian>
 	</TEXT>
@@ -614,7 +633,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CORPORATION_RED_PEDIA</Tag>
-		<English>Entertainment has always held a prominent place in society, despite modern skepticism over the fact that a doctor may earn far less than a famous celebrity for a similar investment of time. In ancient Rome, gladiators were wildly popular among housewives of both plebeian and noble backgrounds. Actors in Renaissance Europe often enjoyed fame and at times even immunity from certain crimes. Today’s entertainment industry is no exception. In exchange for their pride, personal space, and careers with little long term security, entertainers may live lavishly in cultural hubs like Hollywood and New York, revered by fans as icons. Entertainment moguls often capitalize on this by drafting restrictive contracts and hiring agents whose income is tied to their client’s success. While the perks of stardom today can be immense, so too are the drawbacks. Paparazzi look for any opportunity to run smear campaigns, critics can be relentless, at times disliking certain stars on principle, and demanding agents often impose grueling schedules that leave celebrities with little control and unstable personal lives. Still, with wealth seen as a source of happiness and entertainment as an ever-flowing well of profit, it is no surprise that the entertainment industry remains so powerful in our time.</English>
+		<English>Entertainment has always held a prominent place in society, despite modern skepticism over the fact that a doctor may earn far less than a famous celebrity for a similar investment of time. In ancient Rome, gladiators were wildly popular among housewives of both plebeian and noble backgrounds. Actors in Renaissance Europe often enjoyed fame and at times even immunity from certain crimes. Today's entertainment industry is no exception. In exchange for their pride, personal space, and careers with little long term security, entertainers may live lavishly in cultural hubs like Hollywood and New York, revered by fans as icons. Entertainment moguls often capitalize on this by drafting restrictive contracts and hiring agents whose income is tied to their client's success. While the perks of stardom today can be immense, so too are the drawbacks. Paparazzi look for any opportunity to run smear campaigns, critics can be relentless, at times disliking certain stars on principle, and demanding agents often impose grueling schedules that leave celebrities with little control and unstable personal lives. Still, with wealth seen as a source of happiness and entertainment as an ever-flowing well of profit, it is no surprise that the entertainment industry remains so powerful in our time.</English>
 		<Italian>L'intrattenimento ha sempre avuto un aspetto importante nella società, nonostante la percezione attuale scettica che un dottore guadagni molto meno di una celebrità famosa, in rapporto al tempo investito. A Roma i gladiatori erano molto popolari fra le donne sia delle famiglie povere, che di quelle ricche. Gli attori nell'Europa rinascimentale godevano di fama e, a volte, anche dell'immunità da alcuni crimini; la società attuale non fa eccezione alla regola. In cambio del loro orgoglio, del loro spazio personale e di una sicurezza molto bassa riguardo alla loro carriera, possono vivere spensieratamente nelle capitali culturali come Hollywood e New York, essendo ritenute dalle persone normali icone dell'intrattenimento. Entertainment Moguls traggono vantaggio da questo firmando contratti e assumendo agenti che vengono pagati in base al successo dei loro assistiti. Anche se essere una celebrità ha molti benefici, ci sono anche molti inconvenienti: i paparazzi cerano ogni opportunità per poter spiare il loro bersaglio, i critici sono spesso persone insaziabili che criticano le star per principio, e gli agenti troppo esigenti li costringono ad un'agenda stressante con una piccola scelta su cosa fare, e una vita domestica instabile. Dato che i soldi sono una fonte di felicità e l'intrattenimento è una fonte inesauribile di soldi, non è una novità che l'industria dell'intrattenimento sia così importante, specialmente in questo periodo.</Italian>
 		<Russian>Развлечения всегда занимали видное место в обществе, несмотря на сегодняшнее мнение ряда скептиков о том, что врач зарабатывает в несколько раз меньше, чем известная знаменитость с эстрады за свое рабочее время. Еще в Древнем Риме гладиаторы были весьма популярны у обывателей как среди плебеев, так и среди знати. Актеры в Европе эпохи Возрождения пользовались славой и временами иммунитетом от преследования за некоторые преступления, и нынешнее потребительское общество не является исключением из правила. В обмен на славу, личное пространство и очень низкую карьерную безопасность они потенциально могли бы щедро жить в культурных столицах, таких как Голливуд и Нью-Йорк, которым люди поклонялись как иконы развлечений. Капитаны индустрии развлечений часто пользуются этим, заключая контракты и нанимая агентов, которым платят в зависимости от успеха их звезды. В то время как преимущества стать знаменитостью в наши дни могут быть огромными, есть и недостатки. Папарацци ищут любую возможность очернить свою цель, рецензенты часто являются ненасытными критиками, которые иногда принципиально ненавидят определенных звезд, а постоянно требовательные агенты проводят их через напряженный график с небольшим выбором того, что они делают, и меньшим, чем стабильная семейная жизнь. Несмотря на то, что деньги являются источником счастья, а развлечения - неисчерпаемым источником денег, неудивительно, почему индустрия развлечений так сильна, особенно в наше время.</Russian>
 	</TEXT>
@@ -629,7 +648,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_RED_CURTAINS_THEATRE_PEDIA</Tag>
-		<English>Entertainment has always held a prominent place in society, despite modern skepticism over the fact that a doctor may earn far less than a famous celebrity for a similar investment of time. In ancient Rome, gladiators were wildly popular among housewives of both plebeian and noble backgrounds. Actors in Renaissance Europe often enjoyed fame and at times even immunity from certain crimes. Today’s entertainment industry is no exception. In exchange for their pride, personal space, and careers with little long term security, entertainers may live lavishly in cultural hubs like Hollywood and New York, revered by fans as icons. Entertainment moguls often capitalize on this by drafting restrictive contracts and hiring agents whose income is tied to their client’s success. While the perks of stardom today can be immense, so too are the drawbacks. Paparazzi look for any opportunity to run smear campaigns, critics can be relentless, at times disliking certain stars on principle, and demanding agents often impose grueling schedules that leave celebrities with little control and unstable personal lives. Still, with wealth seen as a source of happiness and entertainment as an ever-flowing well of profit, it is no surprise that the entertainment industry remains so powerful in our time.</English>
+		<English>Entertainment has always held a prominent place in society, despite modern skepticism over the fact that a doctor may earn far less than a famous celebrity for a similar investment of time. In ancient Rome, gladiators were wildly popular among housewives of both plebeian and noble backgrounds. Actors in Renaissance Europe often enjoyed fame and at times even immunity from certain crimes. Today's entertainment industry is no exception. In exchange for their pride, personal space, and careers with little long term security, entertainers may live lavishly in cultural hubs like Hollywood and New York, revered by fans as icons. Entertainment moguls often capitalize on this by drafting restrictive contracts and hiring agents whose income is tied to their client's success. While the perks of stardom today can be immense, so too are the drawbacks. Paparazzi look for any opportunity to run smear campaigns, critics can be relentless, at times disliking certain stars on principle, and demanding agents often impose grueling schedules that leave celebrities with little control and unstable personal lives. Still, with wealth seen as a source of happiness and entertainment as an ever-flowing well of profit, it is no surprise that the entertainment industry remains so powerful in our time.</English>
 		<Italian>L'intrattenimento ha sempre avuto un aspetto importante nella società, nonostante la percezione attuale scettica che un dottore guadagni molto meno di una celebrità famosa, in rapporto al tempo investito. A Roma i gladiatori erano molto popolari fra le donne sia delle famiglie povere, che di quelle ricche. Gli attori nell'Europe rinascimentale godevano di fama e, a volte, anche dell'immunità da alcuni crimini; la società attuale non fa eccezione alla regola. In cambio del loro orgoglio, del loro spazio personale e di una sicurezza molto bassa riguardo alla loro carriera, possono vivere spensieratamente nelle capitali culturali come Hollywood e New York, essendo ritenute dalle persone normali icone dell'intrattenimento. Entertainment Moguls traggono vantaggio da questo firmando contratti e assumendo agenti che vengono pagati in base al successo dei loro assistiti. Anche se essere una celebrità ha molti benefici, ci sono anche molti inconvenienti: i paparazzi cerano ogni opportunità per poter spiare il loro bersaglio, i critici sono spesso persone insaziabili che criticano le star per principio, e gli agenti troppo esigenti li costringono ad un'agenda stressante con una piccola scelta su cosa fare, e una vita domestica instabile. Dato che i soldi sono una fonte di felicità e l'intrattenimento è una fonte inesauribile di soldi, non è una novità che l'industria dell'intrattenimento sia così importante, specialmente in questo periodo.</Italian>
 		<Russian>Развлечения всегда занимали видное место в обществе, несмотря на сегодняшнее мнение ряда скептиков о том, что врач зарабатывает в несколько раз меньше, чем известная знаменитость с эстрады за свое рабочее время. Еще в Древнем Риме гладиаторы были весьма популярны у обывателей как среди плебеев, так и среди знати. Актеры в Европе эпохи Возрождения пользовались славой и временами иммунитетом от преследования за некоторые преступления, и нынешнее потребительское общество не является исключением из правила. В обмен на славу, личное пространство и очень низкую карьерную безопасность они потенциально могли бы щедро жить в культурных столицах, таких как Голливуд и Нью-Йорк, которым люди поклонялись как иконы развлечений. Капитаны индустрии развлечений часто пользуются этим, заключая контракты и нанимая агентов, которым платят в зависимости от успеха их звезды. В то время как преимущества стать знаменитостью в наши дни могут быть огромными, есть и недостатки. Папарацци ищут любую возможность очернить свою цель, рецензенты часто являются ненасытными критиками, которые иногда принципиально ненавидят определенных звезд, а постоянно требовательные агенты проводят их через напряженный график с небольшим выбором того, что они делают, и меньшим, чем стабильная семейная жизнь. Несмотря на то, что деньги являются источником счастья, а развлечения - неисчерпаемым источником денег, неудивительно, почему индустрия развлечений так сильна, особенно в наше время.</Russian>
 	</TEXT>
@@ -686,7 +705,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CORPORATION_ULTSOLDIER_PEDIA</Tag>
-		<English>Arms production was historically a responsibility of the state, with most weapons manufactured in government owned armories. However, with the rise of private firms such as Smith and Wesson, Krupp Steelworks, and Boeing, weapons manufacturing gradually shifted from a public duty to a privatized industry. Today, billions of dollars are spent annually to develop new and innovative technologies not only to defend national interests but also to project power abroad. In addition to manufacturing weapons, this industry also encompasses Private Military Contractors (PMCs). PMCs typically employ professional soldiers, about 80 percent of their personnel are former military or law enforcement members with 5 to 10 years of experience. Many of these individuals have been "retired" from active service due to age or reassigned to non-combat roles such as administrative duties. Approved PMCs provide security services to clients or operate in areas where regular military forces are constrained by the chain of command. Some PMC personnel also serve as soldiers of fortune or ideological operatives. Contrary to how they are portrayed in fiction, PMCs generally avoid hiring inexperienced recruits fresh out of school. Sending undertrained personnel into combat not only increases operational risk but also severely damages the company’s reputation as a provider of professional elite forces.</English>
+		<English>Arms production was historically a responsibility of the state, with most weapons manufactured in government owned armories. However, with the rise of private firms such as Smith and Wesson, Krupp Steelworks, and Boeing, weapons manufacturing gradually shifted from a public duty to a privatized industry. Today, billions of dollars are spent annually to develop new and innovative technologies not only to defend national interests but also to project power abroad. In addition to manufacturing weapons, this industry also encompasses Private Military Contractors (PMCs). PMCs typically employ professional soldiers, about 80 percent of their personnel are former military or law enforcement members with 5 to 10 years of experience. Many of these individuals have been "retired" from active service due to age or reassigned to non-combat roles such as administrative duties. Approved PMCs provide security services to clients or operate in areas where regular military forces are constrained by the chain of command. Some PMC personnel also serve as soldiers of fortune or ideological operatives. Contrary to how they are portrayed in fiction, PMCs generally avoid hiring inexperienced recruits fresh out of school. Sending undertrained personnel into combat not only increases operational risk but also severely damages the company's reputation as a provider of professional elite forces.</English>
 		<German>Die Produktion von Waffen war früher hauptsächlich Aufgabe der Regierungen. Die meisten Waffen wurden durch nationale Waffenerzeuger hergestellt. Durch den zunehmenden Einfluss privater Investoren wie Smith and Wesson, Krupp Stahlwerke und Boeing hat sich die Waffenerzeugung in den privaten Sektor verlagert. Viele Milliarden Dollar werden jährlich in die Rüstungsindustrie gesteckt - nicht nur um die Nationen vor Bedrohungen von Außen zu schützen, sondern auch um den weltweiten Einfluss auf andere Gruppierungen zu stärken, die eventuell gegen die Interessen der Regierungen handeln könnten. Dieses Unternehmen stellt Waffen her und beliefert aber ebenso private militärische Vertragspartner, die professionell ausgebildete und erfahrene Soldaten für Spezialeinsätze engagieren. Durch die private Organisation haben sie oftmals Möglichkeiten, die normalen Soldaten beispielsweise aufgrund der Befehlsketten nicht zur Verfügung stehen. Entgegen landläufiger Meinungen möchte keiner dieser Vertragspartner Frischlinge einstellen - sie in Leichensäcken zurückzuschicken könnte dem professionellen Image schaden.</German>
 		<Italian>La produzione di armi è sempre stata per lo più un dovere del governo all'inizio, con la maggior parte delle armi costruite dalle armerie statali, ma con gli investitori privati, come Smith, Wesson, Acciaierie Krupp e Boeing, la produzione di armi si è spostata da dovere del governo al settore privato. Miliardi di dollari vengono spesi ogni anno per escogitare modi nuovi e fantasiosi per non solo proteggere la nazione dalle minacce, ma anche per estendere la sua influenza in tutto il mondo contro altri gruppi che possono rientrare negli interessi del governo. Oltre alla produzione di armi, questa azienda si estende anche alle PMC, che assumono per lo più i militari di carriera (80% dei soldati delle PMC è composto di ex militari) che hanno almeno 5-10 anni di esperienza nei rami militari, ma sono "in pensione" a causa della loro età e vengono impiegati in ruoli non militari, come il lavoro d'ufficio. Un PMC approvato offre in genere servizi di protezione a una varietà di persone o di talune regioni che i soldati normali non possono raggiungere a causa della catena di comando, altri lavorano come soldati di ventura o per convinzioni personali. Contrariamente alla credenza popolare nella finzione, nessuna PMC è disposta a reclutare soldati freschi di scuola in quanto riportarli indietro in un sacco di plastica può essere molto negativo per la loro fama di soldati professionisti.</Italian>
 		<Russian>Îðóæåéíîå ïðîèçâîäñòâî âñåãäà áûëî ãëàâíûì îáðàçîì ïðàâèòåëüñòâåííîé îáÿçàííîñòüþ âî âðåìÿ ðàíåå ñ áîëüøåé ÷àñòüþ îðóæèÿ, ïîñòðîåííîãî ñêëàäàìè îðóæèÿ íàõîäèâøèìèñÿ â ñîáñòâåííîñòè ñòðàíû, íî ñ ÷àñòíûìè èíâåñòîðàìè, òàêèìè êàê Ñìèò è Ñòàëåëèòåéíûé çàâîä Âåññîíà è Krupp è Áîèíã, ïðîèçâîäñòâî îðóæèÿ, ïåðåìåùåííîå îò îáÿçàííîñòè ïðàâèòåëüñòâà ÷àñòíîìó ñåêòîðó. Ìèëëèàðäû äîëëàðîâ ïîòðà÷åíû åæåãîäíî, ÷òîáû ñîçäàòü íîâûå è èçîáðåòàòåëüíûå ïóòè ê íå, òîëüêî çàùèùàþò ñòðàíó îò óãðîç, íî òàêæå è ðàñøèðÿþò èõ âëèÿíèå âî âñåì ìèðå ïðîòèâ äðóãèõ ãðóïï, êîòîðûå ìîãóò ñòîëêíóòüñÿ ñ èíòåðåñàìè ïðàâèòåëüñòâà. Òàê æå êàê ïðîèçâîäñòâî îðóæèÿ, ýòà êîìïàíèÿ òàêæå ïîêðûâàåò ×àñòíûõ Âîåííûõ Ïîäðÿä÷èêîâ, êîòîðûå íàíèìàþò ãëàâíûì îáðàçîì êàäðîâûõ âîåííûõ (80% ñîëäàò PMCs ñîñòîÿò èç ýêñ-âîîðóæåííûõ ñèë èëè ïðîâåäåíèÿ çàêîíîâ â æèçíü), ó êîãî åñòü ïî êðàéíåé ìåðå 5-10 ëåò îïûòà â âîåííûõ îòäåëåíèÿõ, íî ''Óäàëèëñÿ'' ïðàâèòåëüñòâîì èç-çà èõ âîçðàñòà è ðàçìåùåíèÿ èõ â íåâîåííûõ ðîëÿõ, òàêèõ êàê îôèñíàÿ ðàáîòà. Îäîáðåííûé PMC îáû÷íî ïðåäëàãàåò ñëóæáû áåçîïàñíîñòè ìíîæåñòâó ëþäåé èëè îïðåäåëåííûõ îáëàñòåé, êîòîðûõ íîðìàëüíûå ñîëäàòû íå ìîãóò äîñòèãíóòü èç-çà öåïè èíñòàíöèé, äðóãèå ðàáîòàþò íàåìíèêàìè èëè âåðîé. Ïðîòèâîðå÷àùèé øèðîêî ðàñïðîñòðàíåííîìó ìíåíèþ â áåëëåòðèñòèêå, íèêàêîé PMC íå ãîòîâ ïðèíÿòü íà ðàáîòó íîâûé èç øêîëüíûõ ñîëäàò íà÷èíàÿ ñ îòñûëàíèÿ íàçàä èõ â ïîõîðîííîì ìåøêå, ìîæåò áûòü î÷åíü áåäíûì äëÿ èõ ðåïóòàöèè êàäðîâûõ âîåííûõ.</Russian>

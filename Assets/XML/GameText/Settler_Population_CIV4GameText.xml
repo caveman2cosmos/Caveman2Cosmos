@@ -3,15 +3,19 @@
 	<TEXT>
 		<Tag>TXT_KEY_COLONAILISM_EXTRA_POP</Tag>
 		<English>[NEWLINE][ICON_BULLET] New cities get +1 population and some free buildings.</English>
+		<French>[NEWLINE][ICON_BULLET] Les nouvelles villes obtiennent +1 de population et quelques bâtiments gratuits.</French>
 		<German>[NEWLINE][ICON_BULLET] Neue Städte starten mit einer Bevölkerungseinheit mehr und einigen Gebäuden kostenlos.</German>
-		<Italian>[NEWLINE][ICON_BULLET]Le nuove città ottengono [COLOR_HIGHLIGHT_TEXT]edifici gratuiti[COLOR_REVERT] e [COLOR_HIGHLIGHT_TEXT]popolazione iniziale[COLOR_REVERT]: [COLOR_HIGHLIGHT_TEXT]+1[COLOR_REVERT]</Italian> <!--tech Colonialism-->
+		<Italian>[NEWLINE][ICON_BULLET]Le nuove città ottengono [COLOR_HIGHLIGHT_TEXT]edifici gratuiti[COLOR_REVERT] e [COLOR_HIGHLIGHT_TEXT]popolazione iniziale[COLOR_REVERT]: [COLOR_HIGHLIGHT_TEXT]+1[COLOR_REVERT]</Italian>
 		<Russian>[NEWLINE][ICON_BULLET] Новые города получают +1 к населению и несколько бесплатных построек.</Russian>
+		<!--tech Colonialism-->
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_STEAM_POWER_EXTRA_POP</Tag>
 		<English>[NEWLINE][ICON_BULLET] New cities get +2 population and some free buildings.</English>
+		<French>[NEWLINE][ICON_BULLET] Les nouvelles villes obtiennent +2 de population et quelques bâtiments gratuits.</French>
 		<German>[NEWLINE][ICON_BULLET] Neue Städte starten mit 2 Bevölkerungseinheiten mehr und einigen Gebäuden kostenlos.</German>
-		<Italian>[NEWLINE][ICON_BULLET]Le nuove città ottengono [COLOR_HIGHLIGHT_TEXT]edifici gratuiti[COLOR_REVERT] e [COLOR_HIGHLIGHT_TEXT]popolazione iniziale[COLOR_REVERT]: [COLOR_HIGHLIGHT_TEXT]+2[COLOR_REVERT]</Italian> <!--tech Steam Power-->
+		<Italian>[NEWLINE][ICON_BULLET]Le nuove città ottengono [COLOR_HIGHLIGHT_TEXT]edifici gratuiti[COLOR_REVERT] e [COLOR_HIGHLIGHT_TEXT]popolazione iniziale[COLOR_REVERT]: [COLOR_HIGHLIGHT_TEXT]+2[COLOR_REVERT]</Italian>
 		<Russian>[NEWLINE][ICON_BULLET] Новые города получают +2 к населению и несколько бесплатных построек.</Russian>
+		<!--tech Steam Power-->
 	</TEXT>
 </Civ4GameText>

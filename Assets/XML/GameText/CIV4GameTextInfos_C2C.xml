@@ -12,12 +12,14 @@
 	<TEXT>
 		<Tag>TXT_KEY_ACTION_CHANGE_FEATURE</Tag>
 		<English>[COLOR_YELLOW]Will replace the %s1_Name with %s2_Name[COLOR_REVERT]</English>
+		<French>[COLOR_YELLOW]Remplacera le %s1_Name par %s2_Name[COLOR_REVERT]</French>
 		<Russian>[COLOR_YELLOW]Заменит %s1_Name на %s2_Name[COLOR_REVERT]</Russian>
 		<Italian>[COLOR_YELLOW]Sostituirà %s1_Name con %s2_Name[COLOR_REVERT]</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDHELP_PLOT_BLOCKED</Tag>
 		<English>[COLOR_WARNING_TEXT]Cannot be constructed on a %s1_Name![COLOR_REVERT]</English>
+		<French>[COLOR_WARNING_TEXT]Ne peut pas être construit sur un(e) %s1_Name ![COLOR_REVERT]</French>
 		<Russian>[COLOR_WARNING_TEXT]Невозможно построить в %s1_Name![COLOR_REVERT]</Russian>
 		<Italian>[COLOR_WARNING_TEXT]Non può essere costruito su una %s1_Name![COLOR_REVERT]</Italian>
 	</TEXT>
@@ -62,13 +64,14 @@
 		<English>[SPACE]from [COLOR_UNIT_TEXT][LINK=%s1_SpclstType]%s2_SpclstName[\LINK][COLOR_REVERT] in All Cities</English>
 		<French>[SPACE]de tous les [COLOR_UNIT_TEXT][LINK=%s1_SpclstType]%s2_SpclstName[\LINK][COLOR_REVERT] dans toutes les villes</French>
 		<German>[SPACE]durch [LINK=%s1_SpclstType]%s2:8_SpclstName[\LINK] in allen Städten</German>
-		<Italian>[SPACE]dagli specialisti di tipo [COLOR_UNIT_TEXT][LINK=%s1_SpclstType]%s2:2_SpclstName[\LINK][COLOR_REVERT] in tutte le città</Italian><!--Aerial CT trait in the pedia-->
+		<Italian>[SPACE]dagli specialisti di tipo [COLOR_UNIT_TEXT][LINK=%s1_SpclstType]%s2:2_SpclstName[\LINK][COLOR_REVERT] in tutte le città</Italian> <!--Aerial CT trait in the pedia-->
 		<Spanish>[SPACE]por [COLOR_UNIT_TEXT][LINK=%s1_SpclstType]%s2_SpclstName[\LINK][COLOR_REVERT] en todas las ciudades</Spanish>
 		<Russian>[SPACE]от [COLOR_UNIT_TEXT][LINK=%s1_SpclstType]%s2_SpclstName[\LINK][COLOR_REVERT] во всех городах</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDINGHELP_GIVEN_FREE</Tag>
 		<English>[ICON_BULLET]Building Given for Free By[SPACE]</English>
+		<French>[ICON_BULLET]Bâtiment obtenu gratuitement par[SPACE]</French>
 		<Italian>[ICON_BULLET]Edificio costruito gratuitamente grazie a[SPACE]</Italian>
 		<German>[ICON_BULLET]kostenloses Gebäude[SPACE]</German>
 	</TEXT>
@@ -84,6 +87,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDINGHELP_NUKE_EXPLOSION_CHANCE</Tag>
 		<English>[ICON_BULLET]Chance of Nuclear Meltdown: %d1_chance in 10000 each round</English>
+		<French>[ICON_BULLET]Risque de fusion nucléaire : %d1_chance sur 10 000 à chaque tour</French>
 		<Russian>[ICON_BULLET]Вероятность ядерного взрыва: .%d1_chance%% на каждый раунд</Russian>
 		<Italian>[ICON_BULLET]Probabilità di esplosione del reattore nucleare: %d1_chance su 10000 ogni turno</Italian>
 	</TEXT>
@@ -99,6 +103,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDINGHELP_OBSOLETE_WITH_TO</Tag>
 		<English>[SPACE](Turns into [LINK=%s1]%s2[\LINK])</English>
+		<French>[SPACE](Tours en [LINK=%s1]%s2[\LINK])</French>
 		<Italian>[NEWLINE][ICON_BULLET][COLOR_WARNING_TEXT]Evoluzione[COLOR_REVERT] in: [LINK=%s1]%s2[\LINK]</Italian>
 		<German>[SPACE](wird dann zu [LINK=%s1]%s2[\LINK])</German>
 	</TEXT>
@@ -247,6 +252,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_GOODY_SCOUT</Tag>
 		<English>A scout type unit joins your civilization.</English>
+		<French>Une unité de type éclaireur rejoint votre civilisation.</French>
 		<German>Im Dorf konntet Ihr ein paar Späher rekrutieren.</German>
 		<Italian>Un'unità di tipo esploratore si unisce alla tua civiltà</Italian>
 	</TEXT>
@@ -261,24 +267,28 @@
 	<TEXT>
 		<Tag>TXT_KEY_GOODY_WARRIOR</Tag>
 		<English>A military type unit joins your civilization.</English>
+		<French>Une unité militaire rejoint votre civilisation.</French>
 		<German>Im Dorf konntet Ihr ein paar Krieger rekrutieren.</German>
 		<Italian>Un'unità di tipo militare si unisce alla tua civiltà</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GOODY_WISE_WOMAN</Tag>
 		<English>A healer type unit joins your civilization.</English>
+		<French>Une unité de type soigneur rejoint votre civilisation.</French>
 		<German>Im Dorf konntet Ihr ein paar Heiler rekrutieren.</German>
 		<Italian>Un'unità di tipo guaritore si unisce alla tua civiltà</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GOODY_GATHERER</Tag>
 		<English>A worker type unit joins your civilization.</English>
+		<French>Une unité de type ouvrier rejoint votre civilisation.</French>
 		<German>Im Dorf konntet Ihr ein paar Arbeiter rekrutieren.</German>
 		<Italian>Un'unità di tipo lavoratore si unisce alla tua civiltà</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GOODY_HUNTER</Tag>
 		<English>A hunter type unit joins your civilization.</English>
+		<French>Une unité de type chasseur rejoint votre civilisation.</French>
 		<German>Im Dorf konntet Ihr ein paar Jäger rekrutieren.</German>
 		<Italian>Un'unità di tipo cacciatore si unisce alla tua civiltà.</Italian>
 	</TEXT>
@@ -310,6 +320,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_MISC_CHANCE_OF_REVOLT</Tag>
 		<English>Revolt %%/Turn: %s1_Chance [NEWLINE](%s2_CityStrength base: x%s3_SpeedAdjustment gamespeed, x%s4_Garrison units)</English>
+		<French>Révolte %%/Tour: %s1_Chance [NEWLINE](%s2_CityStrength base: x%s3_SpeedAdjustment vitesse du jeu, x%s4_Garrison unités)</French>
 		<Italian>Probabilità di rivolta ogni turno: %s1_Chance [NEWLINE](%s2_CityStrength base: x%s3_SpeedAdjustment gamespeed, x%s4_Garrison units)</Italian>
 	</TEXT>
 	<TEXT>
@@ -330,18 +341,23 @@
 	<TEXT>
 		<Tag>TXT_KEY_MISC_HELP_FINAL_YIELD</Tag>
 		<English>Total: %d1 %F2</English>
-		<Italian>[NEWLINE][COLOR_HIGHLIGHT_TEXT]Totale:[COLOR_REVERT] [COLOR_HIGHLIGHT_TEXT]%d1[COLOR_REVERT] %F2[NEWLINE]</Italian> <!-- city screen research, culture panel hover upper right -->
+		<French>Total : %d1 %F2</French>
+		<Italian>[NEWLINE][COLOR_HIGHLIGHT_TEXT]Totale:[COLOR_REVERT] [COLOR_HIGHLIGHT_TEXT]%d1[COLOR_REVERT] %F2[NEWLINE]</Italian>
 		<Russian>Всего: %d1 %F2</Russian>
+		<!-- city screen research, culture panel hover upper right -->
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISC_HELP_TOTAL_YIELD_MOD</Tag>
 		<English>Sum: %d1%% = %s2%F3</English>
-		<Italian>[NEWLINE][COLOR_HIGHLIGHT_TEXT]Totale[COLOR_REVERT] % = [COLOR_HIGHLIGHT_TEXT]%d1%%[COLOR_REVERT]  =  [COLOR_HIGHLIGHT_TEXT]%s2[COLOR_REVERT] %F3 (da arrotondare)</Italian> <!-- city screen, hover gold in upper left> -->
+		<French>Somme : %d1%% = %s2%F3</French>
+		<Italian>[NEWLINE][COLOR_HIGHLIGHT_TEXT]Totale[COLOR_REVERT] % = [COLOR_HIGHLIGHT_TEXT]%d1%%[COLOR_REVERT]  =  [COLOR_HIGHLIGHT_TEXT]%s2[COLOR_REVERT] %F3 (da arrotondare)</Italian>
 		<Russian>Итого: %d1%% = %s2%F3</Russian>
+		<!-- city screen, hover gold in upper left> -->
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISC_HELP_YIELD_OTHER</Tag>
 		<English>[ICON_BULLET]%D1 %F2 from other</English>
+		<French>[ICON_BULLET]%D1 %F2 des autres</French>
 		<Italian>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]%D1 %F2[COLOR_REVERT] da altre fonti</Italian> <!-- city screen research, culture panel hover upper right -->
 	</TEXT>
 	<TEXT>
@@ -445,7 +461,7 @@
 		<English>BUG Options:</English>
 		<French>Options 'BUG':</French>
 		<German>BUG-Optionen:</German>
-		<Italian>[NEWLINE]Opzioni BUG attive[NEWLINE](modificabili in opzioni BUG mod -> tab Caveman2Cosmos -> sezione impostazioni di gioco)[NEWLINE]</Italian>  <!-- Bug mod recap screen Ctrl+Shift+Q -->
+		<Italian>[NEWLINE]Opzioni BUG attive[NEWLINE](modificabili in opzioni BUG mod -&gt; tab Caveman2Cosmos -&gt; sezione impostazioni di gioco)[NEWLINE]</Italian> <!-- Bug mod recap screen Ctrl+Shift+Q -->
 		<Spanish>Opciones de BUG:</Spanish>
 		<Polish>Opcje 'BUG':</Polish>
 		<Russian>Опции BUG:</Russian>
@@ -455,7 +471,7 @@
 		<English>DCM Options:</English>
 		<French>Options DCM:</French>
 		<German>DCM-Optionen:</German>
-		<Italian>[NEWLINE]Opzioni DCM attive[NEWLINE](modificabili in opzioni BUG mod -> tab RevDCM -> opzioni assedio e aeronautica)[NEWLINE]</Italian>  <!-- Bug mod recap screen Ctrl+Shift+Q -->
+		<Italian>[NEWLINE]Opzioni DCM attive[NEWLINE](modificabili in opzioni BUG mod -&gt; tab RevDCM -&gt; opzioni assedio e aeronautica)[NEWLINE]</Italian> <!-- Bug mod recap screen Ctrl+Shift+Q -->
 		<Spanish>Opciones de DCM:</Spanish>
 		<Polish>Opcje DCM:</Polish>
 		<Russian>Опции DCM:</Russian>
@@ -474,7 +490,7 @@
 		<English>IDW Options:</English>
 		<French>Options IDW:</French>
 		<German>IDW-Optionen:</German>
-		<Italian>[NEWLINE]Opzioni IDW attive[NEWLINE](modificabili in opzioni BUG mod -> tab RevDCM -> opzioni IDW e influenza culturale)[NEWLINE]</Italian> <!-- Bug mod recap screen Ctrl+Shift+Q -->
+		<Italian>[NEWLINE]Opzioni IDW attive[NEWLINE](modificabili in opzioni BUG mod -&gt; tab RevDCM -&gt; opzioni IDW e influenza culturale)[NEWLINE]</Italian> <!-- Bug mod recap screen Ctrl+Shift+Q -->
 		<Spanish>Opciones de IDW:</Spanish>
 		<Polish>Opcje IDW:</Polish>
 		<Russian>Опции IDW:</Russian>
@@ -484,7 +500,7 @@
 		<English>Super Spies Options:</English>
 		<French>Options 'Super Spies':</French>
 		<German>Superspion-Optionen:</German>
-		<Italian>[NEWLINE]Opzioni spie attive[NEWLINE](modificabili in opzioni BUG mod -> tab RevDCM -> opzioni spie)[NEWLINE]</Italian>
+		<Italian>[NEWLINE]Opzioni spie attive[NEWLINE](modificabili in opzioni BUG mod -&gt; tab RevDCM -&gt; opzioni spie)[NEWLINE]</Italian>
 		<Spanish>Opciones de Super Spies:</Spanish>
 		<Polish>Opcje Super Szpieg&#243;w:</Polish>
 		<Russian>Опции «Супершпионов»:</Russian>
@@ -701,16 +717,19 @@
 	<TEXT>
 		<Tag>TXT_KEY_STATUS_DUMP_LEADER_CIV</Tag>
 		<English>Civ leader</English>
+		<French>Dirigeant de Civ</French>
 		<Italian>Leader della civilizzazione</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_STATUS_DUMP_PLAYER_NAME</Tag>
 		<English>Player name</English>
+		<French>Nom du Joueur</French>
 		<Italian>Nome giocatore</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_STATUS_DUMP_TURN</Tag>
 		<English>Turn</English>
+		<French>Tour</French>
 		<Italian>turno</Italian>
 	</TEXT>
 	<TEXT>
@@ -861,6 +880,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_NATIONAL_SOURCES</Tag>
 		<English>Traits/Civics/Heritage.</English>
+		<French>Traits/Doctrine/Héritage.</French>
 		<Russian>Качества/Парадигмы/Культурное наследие.</Russian>
 	</TEXT>
 	<TEXT>
@@ -884,6 +904,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UPGRADES</Tag>
 		<English>[ICON_BULLET]Upgrades:[SPACE]</English>
+		<French>[ICON_BULLET]Améliorations :[SPACE]</French>
 		<German>[ICON_BULLET]mögliche Upgrades:[SPACE]</German>
 		<Italian>[ICON_BULLET]Promozioni:[SPACE]</Italian>
 		<Russian>[ICON_BULLET]Улучшения:[SPACE]</Russian>
@@ -891,6 +912,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UPGRADE_TIME</Tag>
 		<English>[ICON_BULLET]Upgrade time: %d1 [NUM1:Turn:Turns]</English>
+		<French>[ICON_BULLET]Temps d'amélior.: %d1 [NUM1:Tour:Tours]</French>
 		<German>[ICON_BULLET]Zeit bis zum Upgrade: %d1 [NUM1:Runde:Runden]</German>
 		<Russian>[ICON_BULLET]Время улучшения: %d1 [NUM1:ход:ходов]</Russian>
 		<Italian>[ICON_BULLET]Tempo di modernizzazione: %d1 [NUM1:turno:turni]</Italian> <!-- Whaling Boats improvement in pedia -->
@@ -898,6 +920,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_YIELD_CHANGE_DESCRIP</Tag>
 		<English>Yield changes:</English>
+		<French>Modif. rendem.:</French>
 		<German>[ICON_BULLET]veränderter Ertrag:</German>
 		<Russian>Измен. дохода:</Russian>
 		<Italian>[ICON_BULLET]Cambio nel rendimento:</Italian>

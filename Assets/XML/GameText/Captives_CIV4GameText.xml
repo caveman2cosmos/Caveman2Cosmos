@@ -19,8 +19,8 @@
 	<TEXT>
 		<Tag>TXT_KEY_MISSION_CAPTIVE_UPGRADE_TO_GATHERER</Tag>
 		<English>Upgrade a Captive to an Gatherer.</English>
+		<French>Convertir la prisonnière en Cueilleuse</French>
 		<German>Bilde einen Gefangenen zum Sammler aus</German>
-		<French>Convertir en Cueilleuse</French>
 		<Italian>Converti prigioniero in un raccoglitore.</Italian>
 		<Polish>Ulepsz do Zbieracza.</Polish>
 		<Russian>Улучшить до собирателя.</Russian>
@@ -28,7 +28,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_MISSION_CAPTIVE_UPGRADE_TO_IMMIGRANT</Tag>
 		<English>Upgrade a Captive to an Immigrant.</English>
-		<French>Convertir en Immigrant</French>
+		<French>Convertir le prisonnier en Immigrant</French>
 		<Italian>Converti prigioniero in un emigrante.</Italian>
 		<Polish>Ulepsz do Immigranta.</Polish>
 		<Russian>Улучшить до иммигранта.</Russian>
@@ -36,18 +36,19 @@
 	<TEXT>
 		<Tag>TXT_KEY_MISSION_CAPTIVE_UPGRADE_TO_NEANDERTHAL_GATHERER</Tag>
 		<English>Upgrade a Captive to a Neanderthal Gatherer.</English>
-		<French>Convertit une Prisonnière en une Cueilleuse Néanderthal.</French>
+		<French>Convertit la Prisonnière en une Cueilleuse Néanderthal.</French>
 		<Italian>Converti prigioniero in un raccoglitore neanderthal.</Italian>
 		<Russian>Улучшить пленника до неандертальского собирателя.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISSION_CAPTIVE_UPGRADE_TO_NEANDERTHAL_TRACKER</Tag>
 		<English>Upgrade a Captive to a Neanderthal Chaser.</English>
+		<French>Convertir le Prisonnier en Cavaleur de Néanderthal.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISSION_CAPTIVE_UPGRADE_TO_NEANDERTHAL_WARRIOR</Tag>
 		<English>Upgrade a Captive to a Neanderthal Warrior.</English>
-		<French>Convertir le Prisonnier en Guerrier Néanderthal.</French>
+		<French>Convertir le Prisonnier en Guerrier de Néanderthal.</French>
 		<Italian>Converti prigioniero in un guerriero neanderthal.</Italian>
 		<Polish>Ulepsz Je&#241;ca do Wojownika Neandertalczyk&#243;w.</Polish>
 		<Russian>Улучшить пленника до неандертальского воина.</Russian>
@@ -55,7 +56,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_MISSION_CAPTIVE_UPGRADE_TO_SETTLER</Tag>
 		<English>Upgrade a Captive to a Settler.</English>
-		<French>Convertir en Colon</French>
+		<French>Convertir le Prisonnier en Colon</French>
 		<Italian>Converti prigioniero in un colonizzatore.</Italian>
 		<Polish>Ulepsz do Osadnika.</Polish>
 		<Russian>Улучшить до поселенца.</Russian>
@@ -80,7 +81,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_MISSION_CAPTIVE_UPGRADE_TO_WORKER</Tag>
 		<English>Upgrade a Captive to a Worker.</English>
-		<French>Convertir en Ouvrier</French>
+		<French>Convertir le Prisonnier en Ouvrier</French>
 		<German>Bilde einen Gefangenen zu einem beliebigen Arbeitstrupp aus</German>
 		<Italian>Converti prigioniero in un lavoratore.</Italian>
 		<Polish>Ulepsz Je&#241;ca do Robotnika.</Polish>
@@ -89,7 +90,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_MISSION_FREE_CAPTIVE</Tag>
 		<English>Set a Captive free.</English>
-		<French>Libérer un Prisonnier.</French>
+		<French>Libérer l'esclave Prisonnier.</French>
 		<Italian>Libera prigioniero.</Italian>
 		<Polish>Uwolnij je&#241;ca.</Polish>
 		<Russian>Освободить пленника.</Russian>
@@ -161,6 +162,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_MSG_CITY_HAD_MERCHANTS</Tag>
 		<English>The city had %d1 Merchants. You killed %d1 and %d1 were captured. (Captive - Merchant)</English>
+		<French>La ville comptait %d1 marchands. Vous en avez tué %d1 et %d1 ont été capturés. (Captif - Marchand)</French>
 		<Italian>La città aveva %d1 mercanti: ne hai uccisi %d1 e catturati %d1.</Italian>
 		<Russian>В городе находились торговцы в количестве: %d1. Вы убили: %d1, а захватили: %d1. (пленник-торговец)</Russian>
 	</TEXT>
@@ -342,10 +344,12 @@
 	<TEXT>
 		<Tag>TXT_KEY_OUTCOME_UPGRADE_TO_NEANDERTHAL_TRACKER</Tag>
 		<English>Upgrade a Captive to a Neanderthal Chaser.</English>
+		<French>Améliorer un captif en pisteur Néandertalien.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_OUTCOME_UPGRADE_TO_NEANDERTHAL_TRACKER_MESSAGE</Tag>
 		<English>Your Captive has been upgraded to a Neanderthal Chaser.</English>
+		<French>Votre captif a été amélioré en pisteur Néandertalien.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_OUTCOME_UPGRADE_TO_NEANDERTHAL_WARRIOR</Tag>
