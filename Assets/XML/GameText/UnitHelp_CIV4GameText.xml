@@ -38,12 +38,14 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNITHELP_ALWAYS_VISIBLE</Tag>
 		<English>[ICON_BULLET]Always Visible</English>
+		<French>[ICON_BULLET]Toujours Visible</French>
 		<German>[ICON_BULLET]immer sichtbar</German>
 		<Italian>[ICON_BULLET]Unità [COLOR_HIGHLIGHT_TEXT]sempre visibile[COLOR_REVERT]</Italian> <!-- unit stonethrower hover on the icon on the map -->
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITHELP_BRANCH_CIVILIAN</Tag>
 		<English>[ICON_BULLET]Civilian Branch</English>
+		<French>[ICON_BULLET]Branche Civile</French>
 		<German>[ICON_BULLET]ziviler Zweig</German>
 		<Russian>[ICON_BULLET]Гражданские</Russian>
 		<Italian>[ICON_BULLET]Branca civile</Italian>
@@ -51,6 +53,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNITHELP_BRANCH_MILITARY</Tag>
 		<English>[ICON_BULLET]Military Branch</English>
+		<French>[ICON_BULLET]Branche Militaire</French>
 		<Italian>[ICON_BULLET]Branca militare</Italian> <!-- any military unit Ambusher -->
 		<German>[ICON_BULLET]militärischer Zweig</German>
 		<Russian>[ICON_BULLET]Комбатанты</Russian>
@@ -90,7 +93,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNITHELP_CARGO_SIZE_MATTERS</Tag>
 		<English>[ICON_BULLET]Cargo Size: %d1</English>
-		<French>[ICON_BULLET]Volume en unité cargo: %d1</French>
+		<French>[ICON_BULLET]Capacité d'emport en taille : %d1</French>
 		<German>[ICON_BULLET]Frachteinheiten: %d1</German>
 		<Polish>[ICON_BULLET]Obj&#234;to&#156;&#230; Jedn. Transportu: %d1</Polish>
 		<Russian>[ICON_BULLET]Тоннаж: %d1</Russian>
@@ -161,7 +164,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNITHELP_DAMAGE_BY_UNITCOMBAT_NOHEAL</Tag>
 		<English>[ICON_BULLET]Damage that %s1_UNITCOMBAT: %d2_Mod%%. [COLOR_WARNING_TEXT]Cannot heal here.[COLOR_REVERT]</English>
-		<French>[ICON_BULLET]Dégâts de %s1_UNITCOMBAT: %d2_Mod%%. [COLOR_WARNING_TEXT]Cannot heal here.[COLOR_REVERT]</French>
+		<French>[ICON_BULLET]Dégâts de %s1_UNITCOMBAT: %d2_Mod%%. [COLOR_WARNING_TEXT]Ne peut pas se soigner ici.[COLOR_REVERT]</French>
 		<Polish>[ICON_BULLET]Obra&#191;enia otrzymane %s1_UNITCOMBAT: %d2_Mod%%. [COLOR_WARNING_TEXT]Cannot heal here.[COLOR_REVERT]</Polish>
 		<Russian>[ICON_BULLET]Урон %s1_UNITCOMBAT: %d2_Mod%%. [COLOR_WARNING_TEXT]Cannot heal here.[COLOR_REVERT]</Russian>
 		<Italian>[ICON_BULLET]Danno di %s1_UNITCOMBAT: %d2_Mod%%. Non è possibile guarire qui.</Italian>
@@ -221,7 +224,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNITHELP_INVISIBILITY_SPOT_PLOT_RANGE_VALUE_ADJ</Tag>
 		<English>[ICON_BULLET]%D1_Change %F2_Type Spot Range on %s3_Plot (already tallied into total.)</English>
-		<French>[ICON_BULLET]%D2_Change Portée étendue de Perception (%F2_Type) lorsque sur une case %s3_Plot (inclus dans le total.)</French>
+		<French>[ICON_BULLET]%D2_Change de distance de Perception (%F2_Type) lorsque sur une case %s3_Plot (inclus dans le total.)</French>
 		<German>[ICON_BULLET]%s3_Plot: %D1_Change %F2_Type-Sichtweite (in Gesamtwert bereits eingerechnet)</German>
 		<Russian>[ICON_BULLET]%D1_Change %F2_Type к зоркости на %s3_Plot (общее значение)</Russian>
 		<Italian>[ICON_BULLET]%D1_Change di probabilità di aumentare la percezione di %F2_Type su una casella %s3_Plot (incluso nel totale)</Italian>
@@ -237,7 +240,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNITHELP_INVISIBILITY_SPOT_RANGE_VALUE</Tag>
 		<English>[ICON_BULLET]%D1_Change %F2_Type Spot Range</English>
-		<French>[ICON_BULLET]%D1_Change Portée étendue de détection %F2_Type</French>
+		<French>[ICON_BULLET]%D1_Change de distance de détection (%F2_Type)</French>
 		<German>[ICON_BULLET]%D1_Change %F2_Type-Sichtweite</German>
 		<Russian>[ICON_BULLET]%D1_Change %F2_Type к дальности обнаружения</Russian>
 		<Italian>[ICON_BULLET]%D1_Change di probabilità di rilevare %F2_Type</Italian>
@@ -245,7 +248,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNITHELP_INVISIBILITY_SPOT_SAME_TILE_VALUE</Tag>
 		<English>[ICON_BULLET]%D1_Change %F2_Type Spot on Same Tile</English>
-		<French>[ICON_BULLET]Perception %D1_Change %F2_Type sur la même case</French>
+		<French>[ICON_BULLET]Perception : %D1_Change %F2_Type sur la même case</French>
 		<German>[ICON_BULLET]%D1_Change %F2_Type-Sicht in gleichem Gelände</German>
 		<Russian>[ICON_BULLET]%D1_Change %F2_Type к зоркости на этой клетке</Russian>
 		<Italian>[ICON_BULLET]Probabilità di [COLOR_HIGHLIGHT_TEXT]rilevare[COLOR_REVERT] %F2_Type sulla [COLOR_HIGHLIGHT_TEXT]stessa casella[COLOR_REVERT]: [COLOR_HIGHLIGHT_TEXT]%D1_Change[COLOR_REVERT]</Italian> <!-- unit stonethrower hover on the icon on the map hide and seek active-->
@@ -253,7 +256,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNITHELP_INVISIBILITY_SPOT_VALUE</Tag>
 		<English>[ICON_BULLET]%d1_Change %F2_Type Spot</English>
-		<French>[ICON_BULLET]%d1_Change %F2_Type Perception</French>
+		<French>[ICON_BULLET]Perception : %d1_Change %F2_Type</French>
 		<German>[ICON_BULLET]%d1_Change %F2_Type-Sicht</German>
 		<Russian>[ICON_BULLET]%d1_Change %F2_Type зоркости</Russian>
 		<Italian>[ICON_BULLET]%d1_Change probabilità di rilevare %F2_Type</Italian>
@@ -345,6 +348,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNITHELP_UPKEEP</Tag>
 		<English>[ICON_BULLET]Upkeep: %s1 [ICON_GOLD]</English>
+		<French>[ICON_BULLET]Coût d'entretien : %s1 [ICON_GOLD]</French>
 		<Italian>[ICON_BULLET]Costi di mantenimento: [COLOR_HIGHLIGHT_TEXT]%s1[COLOR_REVERT] [ICON_GOLD]</Italian> <!-- unit Ambusher -->
 		<German>[ICON_BULLET]laufende Kosten: %s1 [ICON_GOLD]</German>
 		<Russian>[ICON_BULLET]Ñîäåðæàíèå: %s1 [ICON_GOLD]</Russian>
@@ -352,6 +356,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNITHELP_UPKEEP_CHANGE</Tag>
 		<English>[ICON_BULLET]Upkeep change: %d1 [ICON_GOLD]</English>
+		<French>[ICON_BULLET]Modif. d'entretien : %d1 [ICON_GOLD]</French>
 		<Italian>[ICON_BULLET]Variazione costi di mantenimento: %d1 [ICON_GOLD]</Italian>
 		<German>[ICON_BULLET]Anpassung laufende Kosten: %d1 [ICON_GOLD]</German>
 		<Russian>[ICON_BULLET]Изменение содержания: %d1 [ICON_GOLD]</Russian>
@@ -359,6 +364,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNITHELP_XP</Tag>
 		<English>, XP: (%s1/%d2)</English>
+		<French>, Pts. d'EXP: (%s1/%d2)</French>
 		<German>, Erfahrungspunkte: (%s1/%d2)</German>
 		<Spanish>, PX: (%s1/%d2)</Spanish>
 		<Italian>, punti esperienza: %s1 / %d2 </Italian> <!-- hover on a unit on the main map -->
@@ -380,23 +386,23 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNITHELP_XP_MOD_HOLY_CITY_STATE_RELIGION</Tag>
 		<English>[ICON_BULLET][COLOR_POSITIVE_TEXT]%D1%% for being trained in your State Religion's Holy City[COLOR_REVERT]</English>
+		<French>[ICON_BULLET][COLOR_POSITIVE_TEXT]%D1%% pour avoir été entraîné dans une Ville Sainte de votre Religion d'état[COLOR_REVERT]</French>
 		<Italian>[ICON_BULLET][COLOR_POSITIVE_TEXT]%D1%% per essere stato addestrato nella città santa della tua religione di stato[COLOR_REVERT]</Italian>
-		<French>[ICON_BULLET][COLOR_POSITIVE_TEXT]%D1%% pour avoir été entraîné dans la Ville Sainte de la Religion d'Etat[COLOR_REVERT]</French>
 		<Polish>[ICON_BULLET][COLOR_POSITIVE_TEXT]%D1%% za bycie zwerbowanym w &#140;w. Mie&#156;cie religii pa&#241;stwowej[COLOR_REVERT]</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITHELP_XP_MOD_TOTAL</Tag>
 		<English>[ICON_BULLET][COLOR_POSITIVE_TEXT]%D1%% Total XP modifier[COLOR_REVERT]</English>
-		<Italian>[TAB][COLOR_POSITIVE_TEXT]%D1%% di aumento totale di punti esperienza guadagnati[COLOR_REVERT]</Italian>
 		<French>[ICON_BULLET][COLOR_POSITIVE_TEXT]%D1%% EXP Modif. Total[COLOR_REVERT]</French>
+		<Italian>[TAB][COLOR_POSITIVE_TEXT]%D1%% di aumento totale di punti esperienza guadagnati[COLOR_REVERT]</Italian>
 		<Polish>[ICON_BULLET][COLOR_POSITIVE_TEXT]%D1%% Modyfikator ca&#179;kowitej ilo&#156;ci XP[COLOR_REVERT]</Polish>
 		<Russian>[ICON_BULLET][COLOR_POSITIVE_TEXT]%D1%% к модификатору общего ХР[COLOR_REVERT]</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITHELP_XP_TOTAL</Tag>
 		<English>[ICON_BULLET][COLOR_POSITIVE_TEXT]%d1 Total XP.[COLOR_REVERT]</English>
-		<Italian>[TAB][COLOR_POSITIVE_TEXT]%d1 [NUM1:punto esperienza iniziale:punti esperienza iniziali] in totale[COLOR_REVERT]</Italian> <!-- unit in construction hover -->
 		<French>[ICON_BULLET][COLOR_POSITIVE_TEXT]Total d'EXP : %d1[COLOR_REVERT]</French>
+		<Italian>[TAB][COLOR_POSITIVE_TEXT]%d1 [NUM1:punto esperienza iniziale:punti esperienza iniziali] in totale[COLOR_REVERT]</Italian> <!-- unit in construction hover -->
 		<German>[ICON_BULLET][COLOR_POSITIVE_TEXT]%d1 [NUM1:Erfahrungspunkt:Erfahrungspunkte][COLOR_REVERT]</German>
 		<Polish>[ICON_BULLET][COLOR_POSITIVE_TEXT]%d1 Ca&#179;kowita ilo&#156;&#230; XP.[COLOR_REVERT]</Polish>
 		<Russian>[ICON_BULLET][COLOR_POSITIVE_TEXT]%d1 к общему XP.[COLOR_REVERT]</Russian>

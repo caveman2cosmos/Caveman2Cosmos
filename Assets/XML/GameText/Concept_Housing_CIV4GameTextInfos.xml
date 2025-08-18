@@ -3,6 +3,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_CONCEPT_AUTO_BUILDINGS</Tag>
 		<English>1. Automatic Builds</English>
+		<French>1. Constructions Automatiques</French>
 		<German>1. Automatische Stadteffekte</German>
 		<Italian>Edifici automatici</Italian>
 		<Russian>1. Автоматически построенные здания</Russian>
@@ -10,6 +11,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_CONCEPT_AUTO_BUILDINGS_PEDIA</Tag>
 		<English>In Caveman2Cosmos, some buildings are automatically built and removed as conditions in your city change. This simulates mechanisms and control effects that can't be done any other way. In particular, Housing, Crime, Disease, and Pollution are implemented in this way. These auto buildings can be seen under the "Conceptual" buildings tab on the left side of the main city screen, along with other "conceptual" buildings such as those built by animals.</English>
+		<French>Dans Caveman2Cosmos, certains bâtiments sont automatiquement construits et retirés selon l'évolution des conditions dans votre ville. Cela simule des mécanismes et effets de contrôle impossibles autrement. En particulier, le logement, le crime, la maladie et la pollution sont gérés ainsi. Ces bâtiments automatiques se trouvent sous l'onglet des bâtiments "Conceptuels" à gauche de l'écran principal de la ville, avec d'autres bâtiments "conceptuels" comme ceux construits par des animaux.</French>
 		<German>In Caveman2Cosmos, gibt es eine Reihe von Mechanismen und Effekten mit positiven oder negativen Auswirkungen, die als gebäudeähnliche Einrichtungen in Städten erscheinen. Sie werden automatisch entsprechend den vorherrschenden Bedingungen errichtet und auch wieder entfernt. Diese Erweiterungen sind im Tab "Sonstiges" zu finden zusammen mit Spezialeinrichtungen, die von Tiereinheiten errichtet werden. Folgende Stadterweiterungen sind auf diese Art und Weise integriert: Wohnraum; Kriminalität; Krankheiten; Verschmutzung.</German>
 		<Italian>[COLOR_HIGHLIGHT_TEXT]In Caveman2Cosmos, alcuni edifici vengono automaticamente costruiti e rimossi quando cambiano le condizioni della tua città.
 
@@ -23,6 +25,7 @@ Questi edifici automatici possono essere visualizzati nella scheda edifici speci
 	<TEXT>
 		<Tag>TXT_KEY_CONCEPT_HOUSING</Tag>
 		<English>1. Housing</English>
+		<French>1. Logement</French>
 		<German>1. Wohnraum</German>
 		<Italian>Abitazioni</Italian>
 		<Russian>1. Жилье</Russian>
@@ -30,6 +33,7 @@ Questi edifici automatici possono essere visualizzati nella scheda edifici speci
 	<TEXT>
 		<Tag>TXT_KEY_CONCEPT_HOUSING_PEDIA</Tag>
 		<English>Housing represents buildings that are automatically built when conditions are met. See also [LINK=CONCEPT_AUTO_BUILDINGS]Automatic Builds[\LINK].</English>
+		<French>Le logement représente les bâtiments construits automatiquement lorsque les conditions sont remplies. Voir aussi [LINK=CONCEPT_AUTO_BUILDINGS]Constructions Automatiques[\LINK].</French>
 		<Italian>Gli alloggi rappresentano gli edifici che vengono costruiti automaticamente quando le condizioni sono soddisfatte. Vedi anche [LINK=CONCEPT_AUTO_BUILDINGS]Edifici costruiti automaticamente[\LINK].</Italian>
 		<Russian>Жилье представляет собой постройки, которые автоматически возводятся при соблюдении определенных условий. Смотрите также [LINK=CONCEPT_AUTO_BUILDINGS]Автоматически построенные здания[\LINK].[PARAGRAPH:2][COLOR_HIGHLIGHT_TEXT]Примечание:[COLOR_REVERT] планомерное улучшение состояния жилого фонда ваших граждан - хороший способ улучшить производительность вашей экономики.</Russian>
 	</TEXT>

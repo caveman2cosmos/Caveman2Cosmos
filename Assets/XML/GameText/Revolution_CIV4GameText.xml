@@ -1700,7 +1700,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_REV_MOD_INITIALIZING_AI_AUTOPLAY</Tag>
 		<English>[NEWLINE]CTRL-SHIFT-X = AI Autoplay</English>
-		<French>[NEWLINE]CTRL-SHIFT-X = Jeu automatique par l'IA pour x Tours</French>
+		<French>[NEWLINE]CTRL-MAJ-X = Jeu automatique par l'IA pour x Tours</French>
 		<German>[NEWLINE]STRG-UMSCHALT-X = KI Autoplay</German>
 		<Italian>[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]CTRL-SHIFT-X[COLOR_REVERT] = Gioco automatico IA</Italian> <!-- Bug mod recap screen Ctrl+Shift+Q -->
 		<Spanish>[NEWLINE]CTRL-SHIFT-X = Juego automático de la IA</Spanish>
@@ -1845,7 +1845,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_REV_MOD_INITIALIZING_CTRL_SHIFT_L_SHORTCUT</Tag>
 		<English>[NEWLINE]CTRL-SHIFT-L = New leader!</English>
-		<French>[NEWLINE]CTRL-SHIFT-L = Nouveau leader!</French>
+		<French>[NEWLINE]CTRL-MAJ-L = Nouveau leader!</French>
 		<Spanish>[NEWLINE]CTRL-SHIFT-L = Nuevo líder</Spanish>
 		<Polish>[NEWLINE]CTRL-SHIFT-L = Nowy Przyw&#243;dca!</Polish>
 		<Italian>[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]CTRL-SHIFT-L[COLOR_REVERT] = Nuovo leader</Italian> <!-- Bug mod recap screen Ctrl+Shift+Q -->
@@ -1854,7 +1854,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_REV_MOD_INITIALIZING_CTRL_SHIFT_M_SHORTCUT</Tag>
 		<English>[NEWLINE]CTRL-SHIFT-M = Turn played by AI!</English>
-		<French>[NEWLINE]CTRL-SHIFT-M = Ce Tour joué par l'IA!</French>
+		<French>[NEWLINE]CTRL-MAJ-M = Ce Tour joué par l'IA!</French>
 		<Spanish>[NEWLINE]CTRL-SHIFT-M = Turno jugado por la IA</Spanish>
 		<Polish>[NEWLINE]CTRL-SHIFT-M = Tura rozgrywana przez AI!</Polish>
 		<Italian>[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]CTRL-SHIFT-M[COLOR_REVERT] = Fai giocare il turno all'IA</Italian> <!-- Bug mod recap screen Ctrl+Shift+Q -->
@@ -1863,7 +1863,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_REV_MOD_INITIALIZING_CTRL_SHIFT_P_SHORTCUT</Tag>
 		<English>[NEWLINE]CTRL-SHIFT-P = New Civ!</English>
-		<French>[NEWLINE]CTRL-SHIFT-P = Nouvelle Civ!</French>
+		<French>[NEWLINE]CTRL-MAJ-P = Nouvelle Civ!</French>
 		<Spanish>[NEWLINE]CTRL-SHIFT-P = Nueva civilización</Spanish>
 		<Polish>[NEWLINE]CTRL-SHIFT-P = Nowa Cywilizacja!</Polish>
 		<Italian>[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]CTRL-SHIFT-P[COLOR_REVERT] = Nuova civiltà</Italian> <!-- Bug mod recap screen Ctrl+Shift+Q -->
@@ -1929,7 +1929,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_REV_MOD_INITIALIZING_SHIFT_F5_SHORTCUT</Tag>
 		<English>[NEWLINE]SHIFT-F5 = Quick Save!</English>
-		<French>[NEWLINE]SHIFT-F5 = Sauvegarde Rapide!</French>
+		<French>[NEWLINE]MAJ-F5 = Sauvegarde Rapide!</French>
 		<Spanish>[NEWLINE]SHIFT-F5 = Guardado rápido</Spanish>
 		<Polish>[NEWLINE]SHIFT-F5 = Szybki Zapis!</Polish>
 		<Italian>[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]SHIFT-F5[COLOR_REVERT] = Salvataggio rapido</Italian> <!-- Bug mod recap screen Ctrl+Shift+Q -->
@@ -1938,7 +1938,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_REV_MOD_INITIALIZING_SHIFT_F8_SHORTCUT</Tag>
 		<English>[NEWLINE]SHIFT-F8 = Quick Load!</English>
-		<French>[NEWLINE]SHIFT-F8 = Chargement Rapide!</French>
+		<French>[NEWLINE]MAJ-F8 = Chargement Rapide!</French>
 		<Spanish>[NEWLINE]SHIFT-F8 = Carga rápida</Spanish>
 		<Polish>[NEWLINE]SHIFT-F8 = Szybkie Wczytywanie!</Polish>
 		<Italian>[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]SHIFT-F8[COLOR_REVERT] = Caricamento rapido</Italian> <!-- Bug mod recap screen Ctrl+Shift+Q -->
