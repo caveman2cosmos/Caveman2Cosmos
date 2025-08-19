@@ -10263,7 +10263,7 @@ int CvPlayerAI::AI_unitValue(UnitTypes eUnit, UnitAITypes eUnitAI, const CvArea*
 	bool bisPositivePropertyUnit = (iGeneralPropertyValue > 0);
 	bool bUndefinedValid = false, bValid = false;
 
-	if (eUnitAI != UNITAI_PROPERTY_CONTROL && bisPositivePropertyUnit)
+	if (eUnitAI != UNITAI_PROPERTY_CONTROL && eUnitAI != UNITAI_SEE_INVISIBLE && bisPositivePropertyUnit)
 	{
 		return 0;
 	}
