@@ -3,7 +3,7 @@ from CvPythonExtensions import CyGlobalContext
 GC = CyGlobalContext()
 GAME = GC.getGame()
 MAP = GC.getMap()
-
+        
 def init():
 	import SystemPaths as SP
 	global _saveDir, options
