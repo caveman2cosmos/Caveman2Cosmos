@@ -8604,7 +8604,7 @@
 		<English>Early Spaceship</English>
 		<French>
 			<Text>Premiers vaisseaux spatiaux</Text>
-			<Gender>Female</Gender>
+			<Gender>Male</Gender>
 			<Plural>1</Plural>
 		</French>
 		<Italian>Unità nave spaziale base</Italian>
@@ -8621,7 +8621,7 @@
 		<English>Entertainer</English>
 		<French>
 			<Text>Comédiens</Text>
-			<Gender>Female</Gender>
+			<Gender>Male</Gender>
 			<Plural>1</Plural>
 		</French>
 		<Italian>Unità da intrattenimento</Italian>
@@ -8639,7 +8639,7 @@
 		<French>
 			<Text>(Ère) Antiquité</Text>
 			<Gender>Female</Gender>
-			<Plural>1</Plural>
+			<Plural>0</Plural>
 		</French>
 		<German>(Epoche) Antike</German>
 		<Spanish>
@@ -8654,6 +8654,11 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_ERA_ATOMIC</Tag>
 		<English>Era (Atomic)</English>
+		<French>
+			<Text>(Ère) Atomique</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</French>		
 		<Italian>Era atomica</Italian>
 	</TEXT>
 	<TEXT>
@@ -9198,6 +9203,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_GUNSHIP</Tag>
 		<English>Gunship</English>
+		<French>Navire de guerre</French>		
 		<Italian>Unità elicottero d'assalto</Italian>
 	</TEXT>
 	<TEXT>
@@ -10516,6 +10522,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_PACIFIST</Tag>
 		<English>Pacifist</English>
+		<French>Pacifiste</French>
 		<German>Nichtkombattanten</German>
 		<Italian>Unità pacifista</Italian>
 	</TEXT>
@@ -12409,7 +12416,7 @@
 		<Tag>TXT_KEY_UNITCOMBAT_STRIKE_TEAM</Tag>
 		<English>Strike Team</English>
 		<French>
-			<Text>Equipe d'Assaut</Text>
+			<Text>Escouade d'Assaut</Text>
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>

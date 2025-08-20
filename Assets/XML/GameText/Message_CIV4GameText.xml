@@ -12,8 +12,9 @@
 	<TEXT>
 		<Tag>TXT_KEY_MSG_FREED_SLAVES_AS</Tag>
 		<English>Slaves freed in %s1 - %s2: %d3 unit(s)</English>
-		<Russian>Рабы освобождены в %s1 - %s2: %d3 юнита(ов)</Russian>
+		<French>Esclaves affranchis dans %s1 - %s2 : %d3 unité(s)</French>
 		<Italian>Schiavi liberati nelle unità %s1 - %s2: %d3</Italian>
+		<Russian>Рабы освобождены в %s1 - %s2: %d3 юнита(ов)</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MSG_FREED_SLAVES_AS_IMMIGRANTS</Tag>
@@ -71,11 +72,13 @@
 	<TEXT>
 		<Tag>TXT_KEY_MSG_LITIGATION</Tag>
 		<English>Corporation was removed from city.</English>
+		<French>La corporation a été retirée de la ville.</French>
 		<Italian>La corporazione è stata rimossa dalla città</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MSG_LITIGATION_FAIL</Tag>
 		<English>Corporation won and stays in city.</English>
+		<French>La corporation a gagné et reste dans la ville.</French>
 		<Italian>La corporazione ha vinto e rimarrà nella città</Italian>
 	</TEXT>
 	<TEXT>
