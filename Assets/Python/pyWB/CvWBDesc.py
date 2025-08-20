@@ -1795,7 +1795,7 @@ class CvSignDesc:
 			CyEngine().addSign(pPlot, self.playerType, self.szCaption)
 		print "sign added at %dx%dy for player %d with caption: '%s'" %(self.iX, self.iY, self.playerType, self.szCaption)
 		else:
-			print "?? Plot invalide : x = %d, y = %d" % (x, y)		
+			print "Plot invalide : x = %d, y = %d" % (x, y)		
 
 # handles saving/loading a worldbuilder description file
 class CvWBDesc:

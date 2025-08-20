@@ -36535,8 +36535,29 @@ void CvUnit::setBuildUpType(PromotionLineTypes ePromotionLine, MissionTypes eSle
 
 					if (iValue > iBestValue)
 					{
+						if (gUnitLogLevel > 3) //TO DO
+						{
+								const CvWString strUnitAIType = GC.getUnitAIInfo(AI_getUnitAIType()).getType();
+								CvWString szDesc = GC.getPromotionInfo(ePromotion).getDescription();
+								//const CvWString strCriteria = criteria.GetDescription();
+
+								logAiEvaluations(2,"    %S find better Eval (%d > %d) to promote %S with %S, unit AI %S", GET_PLAYER(getOwner()).getCivilizationDescription(0), iValue, iBestValue, getName(0).GetCString(), szDesc.GetCString(), strUnitAIType.GetCString());
+						}
 						iBestValue = iValue;
 						eAssignPromotionLine = ePotentialPromotionLine;
+
+
+					}
+					else
+					{
+						if (gUnitLogLevel > 3) //TO DO
+						{
+							const CvWString strUnitAIType = GC.getUnitAIInfo(AI_getUnitAIType()).getType();
+							CvWString szDesc = GC.getPromotionInfo(ePromotion).getDescription();
+							//const CvWString strCriteria = criteria.GetDescription();
+
+							logAiEvaluations(2, "    %S will not choose that prom (%d <= %d) to promote %S with %S, unit AI %S", GET_PLAYER(getOwner()).getCivilizationDescription(0), iValue, iBestValue, getName(0).GetCString(), szDesc.GetCString(), strUnitAIType.GetCString());
+						}
 					}
 				}
 			}

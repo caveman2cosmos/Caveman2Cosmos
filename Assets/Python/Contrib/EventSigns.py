@@ -67,8 +67,11 @@ def addSign(pPlot, ePlayer, szCaption):
 
 	Fix by God-Emperor
 	"""
-	if not pPlot or pPlot.getX() == -1 or pPlot.getY() == -1:
-		BugUtil.warn("EventSigns.addSign() was passed an invalid plot")
+	if not pPlot :
+		BugUtil.warn("EventSigns.addSign() was passed an invalid plot for caption : %s" % szCaption)
+		return False
+	if pPlot.getX() == -1 or pPlot.getY() == -1:
+		BugUtil.warn("EventSigns.addSign() was passed an plot with -1 coords for caption : %s" % szCaption)
 		return False
 	if gSavedSigns == None:
 		BugUtil.warn("EventSigns.addSign() gSavedSigns is not initialized!")

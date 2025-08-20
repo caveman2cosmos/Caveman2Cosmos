@@ -29493,7 +29493,7 @@ bool CvUnitAI::AI_establishStackSeeInvisibleCoverage()
 
 						if (gUnitLogLevel > 2)
 						{
-							logBBAI("	%S (%d) at (%d,%d) [stack size %d] requests See Invisible Unit at priority %d", GET_PLAYER(getOwner()).getCivilizationDescription(0), getID(), getX(), getY(), getGroup()->getNumUnits(), HIGH_PRIORITY_ESCORT_PRIORITY);
+							logBBAI("	%S (%d) at (%d,%d) [stack size %d] requests UNITAI_SEE_INVISIBLE Unit at priority %d", GET_PLAYER(getOwner()).getCivilizationDescription(0), getID(), getX(), getY(), getGroup()->getNumUnits(), HIGH_PRIORITY_ESCORT_PRIORITY);
 						}
 
 						getGroup()->pushMission(MISSION_SKIP, -1, -1, 0, false, false, MISSIONAI_WAIT_FOR_SEE_INVISIBLE);
@@ -29523,7 +29523,7 @@ bool CvUnitAI::AI_establishStackSeeInvisibleCoverage()
 
 						if (gUnitLogLevel > 2)
 						{
-							logBBAI("	%S (%d) at (%d,%d) [stack size %d] requests See Invisible Sea Unit at priority %d", GET_PLAYER(getOwner()).getCivilizationDescription(0), getID(), getX(), getY(), getGroup()->getNumUnits(), HIGH_PRIORITY_ESCORT_PRIORITY);
+							logBBAI("	%S (%d) at (%d,%d) [stack size %d] requests UNITAI_SEE_INVISIBLE Sea Unit at priority %d", GET_PLAYER(getOwner()).getCivilizationDescription(0), getID(), getX(), getY(), getGroup()->getNumUnits(), HIGH_PRIORITY_ESCORT_PRIORITY);
 						}
 
 						getGroup()->pushMission(MISSION_SKIP, -1, -1, 0, false, false, MISSIONAI_WAIT_FOR_SEE_INVISIBLE);

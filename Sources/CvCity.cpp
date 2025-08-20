@@ -16368,7 +16368,7 @@ void CvCity::doProduction(bool bAllowNoProduction)
 				}
 				else AI_chooseProduction();
 
-				FAssertMsg(isProduction(), "AI set city to pruduce nothing at all!")
+				FAssertMsg(isProduction(), "AI set city to produce nothing at all!")
 			}
 
 			/* Toffer - Don't think the wonder limit can be breached here just like that.

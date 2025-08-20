@@ -9740,7 +9740,7 @@ void CvGame::changeHighToLowCounter(int iChange)
 void CvGame::doFinalFive()
 {
 	PROFILE_EXTRA_FUNC();
-	if (!isGameMultiPlayer() && isOption(GAMEOPTION_CHALLENGE_CUT_LOSERS) && countCivPlayersAlive() > 5)
+	if (!isGameMultiPlayer() && isOption(GAMEOPTION_CHALLENGE_CUT_LOSERS) && countCivPlayersAlive() > 12)
 	{
 		changeCutLosersCounter(1);
 		if (getCutLosersCounter() >= GC.getDefineINT("CUT_LOSERS_TURN_INCREMENT") * GC.getGameSpeedInfo(getGameSpeedType()).getSpeedPercent() / 100)
