@@ -15380,6 +15380,12 @@ void CvPlayer::addMessage(const CvTalkingHeadMessage& message)
 {
 
 	m_listGameMessages.push_back(message);
+	
+	if (gPlayerLogLevel >= 1)
+	{
+		logBBAI("  Player %d (%S) get message : %S", getID(), getCivilizationDescription(0), message.getDescription());
+	}
+	
 }
 
 

@@ -98,6 +98,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_OUTCOME_ANIMAL_COMBAT4</Tag>
 		<English>Various animal performances, slightly more civilized. This will consume the unit providing a temporary boost to Happiness.</English>
+		<French>Divers spectacles animaliers, légèrement plus civilisés. Cela consommera l'unité en fournissant un boost temporaire de Bonheur.</French>
 		<Italian>Varie esibizioni di animali, leggermente più civilizzate. Consumerà l'unità fornendo un aumento temporaneo di felicità.</Italian>
 	</TEXT>
 	<TEXT>
@@ -111,7 +112,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_OUTCOME_ANIMAL_RECORD_TALE_CAVE</Tag>
 		<English>This will consume the unit providing a Culture and Science boost. Better results can be received in a city with Cave Paintings, School of Scribes, Library or University.</English>
-		<French>L'unité est utilisée pour procurer un bonus de culture et de science, dépendant des bâtiments présents dans la ville (Ecole des scribes, Bibliothèque ou université).</French>
+		<French>L'unité est utilisée pour procurer un bonus de culture et de science, dépendant des bâtiments présents dans la ville (Peintures rupestres, École des scribes, Bibliothèque ou université).</French>
 		<Italian>Consumerà l'unità fornendo un aumento di cultura e ricerca. Si ottengono risultati migliori in una città con: scuola di scribi, biblioteca o università.</Italian>
 		<Polish>Ta akcja usunie jednostk&#234; dostarczaj&#185;c ma&#179;ej ilo&#156;ci kultury i nauki. Lepsze rezultaty mog&#185; by&#230; osi&#185;gni&#234;te je&#156;li w mie&#156;cie znajduj&#185; si&#234; odpowiednie budynki: Szko&#179;a Skryb&#243;w, Biblioteka, Uniwersytet.</Polish>
 		<Russian>Это действие удалит отряд, обеспечивая взамен прирост культуры и науки. Лучшие результаты могут быть достигнуты в городе со Школой писцов, Библиотекой или Университетом.</Russian>
@@ -119,7 +120,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_OUTCOME_ANIMAL_RECORD_TALE_FRESCO</Tag>
 		<English>This will consume the unit providing a Culture and Science boost. Better results can be received in a city with Cave Paintings, School of Scribes, Library or University.</English>
-		<French>L'unité est utilisée pour procurer un bonus de culture et de science, dépendant des bâtiments présents dans la ville (Ecole des scribes, Bibliothèque ou université).</French>
+		<French>L'unité est utilisée pour procurer un bonus de culture et de science, dépendant des bâtiments présents dans la ville (Peintures rupestres, École des scribes, Bibliothèque ou université).</French>
 		<Italian>Consumerà l'unità fornendo un aumento di cultura e ricerca. Si ottengono risultati migliori in una città con: scuola di scribi, biblioteca o università.</Italian>
 		<Polish>Ta akcja usunie jednostk&#234; dostarczaj&#185;c ma&#179;ej ilo&#156;ci kultury i nauki. Lepsze rezultaty mog&#185; by&#230; osi&#185;gni&#234;te je&#156;li w mie&#156;cie znajduj&#185; si&#234; odpowiednie budynki: Szko&#179;a Skryb&#243;w, Biblioteka, Uniwersytet.</Polish>
 		<Russian>Это действие удалит отряд, обеспечивая взамен прирост культуры и науки. Лучшие результаты могут быть достигнуты в городе со Школой писцов, Библиотекой или Университетом.</Russian>
@@ -127,7 +128,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_OUTCOME_ANIMAL_RECORD_TALE_LIBRARY</Tag>
 		<English>This will consume the unit providing a Culture and Science boost. Better results can be received in a city with Cave Paintings, School of Scribes, Library or University.</English>
-		<French>L'unité est utilisée pour procurer un bonus de culture et de science, dépendant des bâtiments présents dans la ville (Université).</French>
+		<French>L'unité est utilisée pour procurer un bonus de culture et de science, dépendant des bâtiments présents dans la ville (Peintures rupestres, École des scribes, Bibliothèque ou université).</French>
 		<Italian>Consumerà l'unità fornendo un aumento di cultura e ricerca. Si ottengono risultati migliori in una città con un università.</Italian>
 		<Polish>Ta akcja usunie jednostk&#234; dostarczaj&#185;c ma&#179;ej ilo&#156;ci kultury i nauki. Lepsze rezultaty mog&#185; by&#230; osi&#185;gni&#234;te je&#156;li w mie&#156;cie znajduje si&#234; Uniwersytet.</Polish>
 		<Russian>Это действие удалит отряд, обеспечивая взамен прирост культуры и науки. Лучшие результаты могут быть достигнуты в городе с Университетом.</Russian>
@@ -143,7 +144,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_OUTCOME_ANIMAL_RECORD_TALE_ORAL</Tag>
 		<English>This will consume the unit providing a Culture and Science boost. Better results can be received in a city with Cave Paintings, School of Scribes, Library or University.</English>
-		<French>L'unité est utilisée pour procurer un bonus de culture et de science, dépendant des bâtiments présents dans la ville (Peintures des cavernes, Hutte du Conteur d'histoire, Ecole des scribes, Bibliothèque ou Université).</French>
+		<French>L'unité est utilisée pour procurer un bonus de culture et de science, dépendant des bâtiments présents dans la ville (Peintures des cavernes, Hutte du Conteur d'histoire, École des scribes, Bibliothèque ou Université).</French>
 		<Italian>Consumerà l'unità fornendo un aumento di cultura e ricerca. Si ottengono risultati migliori in una città con: capanna del cantastorie, pitture rupestri, scuola di scribi, biblioteca o università.</Italian>
 		<Polish>Ta akcja usunie jednostk&#234; dostarczaj&#185;c ma&#179;ej ilo&#156;ci kultury i nauki. Lepsze rezultaty mog&#185; by&#230; osi&#185;gni&#234;te je&#156;li w mie&#156;cie znajduj&#185; si&#234; odpowiednie budynki: Malunki Naskalne, Chata Opowiadacza, Szko&#179;a Skryb&#243;w, Biblioteka, Uniwersytet.</Polish>
 		<Russian>Это будет потреблять отряд, обеспечивающую культуру и научное повышение, основанное, на котором здание доступно в городе (Наскальные рисунки или Хижина Расказчика Истории).</Russian>
@@ -151,7 +152,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_OUTCOME_ANIMAL_RECORD_TALE_SCRIBE</Tag>
 		<English>This will consume the unit providing a Culture and Science boost. Better results can be received in a city with Cave Paintings, School of Scribes, Library or University.</English>
-		<French>L'unité est utilisée pour procurer un bonus de culture et de science, dépendant des bâtiments présents dans la ville (Bibliothèque ou université).</French>
+		<French>L'unité est utilisée pour procurer un bonus de culture et de science, dépendant des bâtiments présents dans la ville (Peintures rupestres, École des scribes, Bibliothèque ou université).</French>
 		<Italian>Consumerà l'unità fornendo un aumento di cultura e ricerca. Si ottengono risultati migliori in una città con: biblioteca o università.</Italian>
 		<Polish>Ta akcja usunie jednostk&#234; dostarczaj&#185;c ma&#179;ej ilo&#156;ci kultury i nauki. Lepsze rezultaty mog&#185; by&#230; osi&#185;gni&#234;te je&#156;li w mie&#156;cie znajduj&#185; si&#234; odpowiednie budynki: Biblioteka, Uniwersytet.</Polish>
 		<Russian>Это действие удалит отряд, обеспечивая взамен прирост культуры и науки. Лучшие результаты могут быть достигнуты в городе с Библиотекой или Университетом.</Russian>
@@ -159,7 +160,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_OUTCOME_ANIMAL_RECORD_TALE_STORY</Tag>
 		<English>This will consume the unit providing a Culture and Science boost. Better results can be received in a city with Cave Paintings, School of Scribes, Library or University.</English>
-		<French>L'unité est utilisée pour procurer un bonus de culture et de science, dépendant des bâtiments présents dans la ville (Cave Paintings, School of Scribes, Library or University.</French>
+		<French>L'unité est utilisée pour procurer un bonus de culture et de science, dépendant des bâtiments présents dans la ville (Peintures rupestres, École des scribes, Bibliothèque ou université).</French>
 		<Italian>Consumerà l'unità fornendo un aumento di cultura e ricerca. Si ottengono risultati migliori in una città con: pitture rupestri, scuola di scribi, biblioteca o università.</Italian>
 		<Polish>Ta akcja usunie jednostk&#234; dostarczaj&#185;c ma&#179;ej ilo&#156;ci kultury i nauki. Lepsze rezultaty mog&#185; by&#230; osi&#185;gni&#234;te je&#156;li w mie&#156;cie znajduj&#185; si&#234; odpowiednie budynki: Malunki Naskalne, Szko&#179;a Skryb&#243;w, Biblioteka, Uniwersytet.</Polish>
 		<Russian>Это действие удалит отряд, обеспечивая взамен прирост культуры и науки. Лучшие результаты могут быть достигнуты в городе с Пещерной живописью, Школой писцов, Библиотекой или Университетом.</Russian>

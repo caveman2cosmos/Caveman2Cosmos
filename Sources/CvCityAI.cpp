@@ -3812,6 +3812,13 @@ UnitTypes CvCityAI::AI_bestUnitAI(UnitAITypes eUnitAI, int& iBestValue, bool bAs
 
 	FAssert(eUnitAI != NO_UNITAI);
 
+	if (gCityLogLevel > 2)
+	{
+		const CvWString strUnitType = GC.getUnitAIInfo(eUnitAI).getType();
+		logAiEvaluations(2, "City % S, AI_bestUnitAI searching for % S ... - test % d", getName().GetCString(), strUnitType.c_str() , 0);
+	}
+
+
 	iBestValue = 0;
 	UnitTypes eBestUnit = NO_UNIT;
 	CvUnitSelectionCriteria tempCriteria;
@@ -3819,6 +3826,13 @@ UnitTypes CvCityAI::AI_bestUnitAI(UnitAITypes eUnitAI, int& iBestValue, bool bAs
 	if (criteria != NULL)
 	{
 		tempCriteria = *criteria;
+
+		if (gCityLogLevel > 2 && tempCriteria.m_eUnitAI != NO_UNITAI)
+		{
+			const CvWString strUnitType = GC.getUnitAIInfo(tempCriteria.m_eUnitAI).getType();
+			logBBAI(" criteria as param :  %S ...- test %d", strUnitType.c_str(), 0);
+		}
+
 	}
 
 	if (tempCriteria.m_eUnitAI == NO_UNITAI)
@@ -3853,6 +3867,13 @@ UnitTypes CvCityAI::AI_bestUnitAI(UnitAITypes eUnitAI, int& iBestValue, bool bAs
 			iBestValue = itr->second.iValue;
 			eBestUnit = itr->second.eUnit;
 
+			if (gCityLogLevel > 2)
+			{
+				const CvWString strUnitType = GC.getUnitInfo(eBestUnit).getType();
+				const CvWString strUnitAIType = GC.getUnitAIInfo(eUnitAI).getType();
+				logAiEvaluations(2, "Taking Better AI Unit for %S from cache, type %S, %S, base value %d, final value %d", strUnitAIType.c_str(), strUnitType.c_str(), GC.getUnitInfo(eBestUnit).getDescription(), -9999, iBestValue);
+			}
+
 			if (UNITAI_CITY_DEFENSE == eUnitAI && eBestUnit == NO_UNIT && (criteria == NULL || criteria->m_eProperty == NO_PROPERTY))
 			{
 				OutputDebugString("No buildable defender!!\n");
@@ -3878,6 +3899,7 @@ UnitTypes CvCityAI::AI_bestUnitAI(UnitAITypes eUnitAI, int& iBestValue, bool bAs
 			continue;
 		}
 		int iValue = player.AI_unitValue(eUnitX, eUnitAI, area(), &tempCriteria);
+		int iBaseValue = iValue;
 
 		if (iValue > 0)
 		{
@@ -3965,6 +3987,23 @@ UnitTypes CvCityAI::AI_bestUnitAI(UnitAITypes eUnitAI, int& iBestValue, bool bAs
 			{
 				iBestValue = iValue;
 				eBestUnit = eUnitX;
+
+				if (gCityLogLevel > 2)
+				{
+					const CvWString strUnitType = GC.getUnitInfo(eUnitX).getType();
+					const CvWString strUnitAIType = GC.getUnitAIInfo(eUnitAI).getType();
+					logAiEvaluations(2, "Better AI Unit found for %S, type %S, %S, base value %d, final value %d", strUnitAIType.c_str(), strUnitType.c_str(), GC.getUnitInfo(eUnitX).getDescription(), iBaseValue*100, iValue);
+				}
+
+
+			}
+			else
+			{
+				if (gCityLogLevel > 2)
+				{
+					const CvWString strUnitType = GC.getUnitInfo(eUnitX).getType();
+					logAiEvaluations(2, "AI Unit not chosen (not better), type %S, %S, base value %d, final value %d", strUnitType.c_str(), GC.getUnitInfo(eUnitX).getDescription(), iBaseValue*100, iValue);
+				}
 			}
 		}
 	}
@@ -4115,8 +4154,9 @@ bool CvCityAI::AI_scoreBuildingsFromListThreshold(std::vector<ScoredBuilding>& s
 					iValue += (AI_buildingValue(eFreeBuilding, iFocusFlags) * (player.getNumCities() - player.getBuildingCountPlusMaking(eBuilding)));
 				}
 
-				if (gCityLogLevel > 2)
+				if (gCityLogLevel > 2 && iValue > 0)
 				{
+					//Calvitix, log only Values > 0
 					logBBAI("City %S base value for %S (flags %08lx)=%I64d", getName().GetCString(), buildingInfo.getDescription(), iFocusFlags, iValue);
 				}
 
@@ -4207,9 +4247,9 @@ bool CvCityAI::AI_scoreBuildingsFromListThreshold(std::vector<ScoredBuilding>& s
 				iValue += (AI_buildingValue(eFreeAreaBuilding, iFocusFlags) * weighting) / 100;
 			}
 
-			if (gCityLogLevel > 2)
+			if (gCityLogLevel > 2 && iValue > 0)
 			{
-				logBBAI("    final value %I64d", iValue);
+				logBBAI("City %S final value for %S (flags %08lx)=%I64d", getName().GetCString(), buildingInfo.getDescription(), iFocusFlags, iValue);
 			}
 
 			// If we got here, and the building value is above zero, then it certainly

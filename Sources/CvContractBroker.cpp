@@ -59,6 +59,7 @@ void CvContractBroker::cleanup()
 	logContractBroker(1, "Cleaning Up <%S> ContractBroker Contracted Units: %d Advertising Tenders: %d Advertising Units: %d",
 		GET_PLAYER(m_eOwner).getName(),
 		m_contractedUnits.size(),
+		m_advertisingTenders.size(),
 		m_advertisingUnits.size());
 
 	logContractBroker(1, "     <%S>Current Work requests: %d", m_ownerName, m_workRequests.size());

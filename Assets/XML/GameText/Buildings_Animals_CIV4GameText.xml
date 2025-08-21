@@ -16,6 +16,11 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_PRESENCE_OF_CORAL</Tag>
 		<English>Presence of Coral</English>
+		<French>
+			<Text>Présence de corail</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</French>
 		<German>
 			<Text>Präsenz von Korallen:Präsenz von Korallen:Präsenz von Korallen:Präsenz von Korallen</Text>
 			<Gender>Female</Gender>
@@ -26,6 +31,11 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_PRESENCE_OF_EARTH</Tag>
 		<English>Presence of Earth</English>
+		<French>
+			<Text>Présence de terre</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</French>
 		<German>
 			<Text>Präsenz der Erde:Präsenz der Erde:Präsenz der Erde:Präsenz der Erde</Text>
 			<Gender>Female</Gender>
@@ -36,6 +46,11 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_PRESENCE_OF_CRATER</Tag>
 		<English>Presence of Crater</English>
+		<French>
+			<Text>Présence de cratère</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</French>
 		<German>
 			<Text>Präsenz von Kratern:Präsenz von Kratern:Präsenz von Kratern:Präsenz von Kratern</Text>
 			<Gender>Female</Gender>
@@ -46,6 +61,11 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_PRESENCE_OF_FIRE</Tag>
 		<English>Presence of Fire</English>
+		<French>
+			<Text>Présence de feu</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</French>
 		<German>
 			<Text>Präsenz des Feuers:Präsenz des Feuers:Präsenz des Feuers:Präsenz des Feuers</Text>
 			<Gender>Female</Gender>
@@ -56,6 +76,11 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_PRESENCE_OF_METAL</Tag>
 		<English>Presence of Metal</English>
+		<French>
+			<Text>Présence de métal</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</French>
 		<German>
 			<Text>Präsenz von Metall:Präsenz von Metall:Präsenz von Metall:Präsenz von Metall</Text>
 			<Gender>Female</Gender>
@@ -66,6 +91,11 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_PRESENCE_OF_OASIS</Tag>
 		<English>Presence of Oasis</English>
+		<French>
+			<Text>Présence d'Oasis</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</French>
 		<German>
 			<Text>Präsenz von Oasen:Präsenz von Oasen:Präsenz von Oasen:Präsenz von Oasen</Text>
 			<Gender>Female</Gender>
@@ -76,12 +106,18 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_PRESENCE_OF_ORIGIN_PEDIA</Tag>
 		<English>[COLOR_BUILDING_TEXT]Folklore Presence[COLOR_REVERT] autobuildings require some points of interest on map. Its purpose is having folklore related to features to be able to spread to all cities.</English>
+		<French>Les autobâtiments [COLOR_BUILDING_TEXT]Présence Folklorique[COLOR_REVERT] nécessitent quelques points d'intérêt sur la carte. Leur but est d'avoir un folklore lié aux caractéristiques qui puisse se propager à toutes les villes.</French>
 		<German>Es gibt verschiedene Präsenz-Effekte, die durch spezielle Geländemerkmale in der Umgebung deiner Städte automatisch aktiviert werden. Sie sind der Ursprung einer Reihe von Mythen, Sagen und Legenden, die im Spiel durch Folkloreeffekte repräsentiert werden.</German>
 		<Italian>Gli [COLOR_BUILDING_TEXT]edifici automatici presenza del folklore[COLOR_REVERT] si attivano automaticamente in base alle caratteristiche del terreno intorno alle tue città. Sono l'origine di una serie di miti, saghe e leggende, che poi si diffondono in tutte le città.</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_PRESENCE_OF_LANDFORM</Tag>
 		<English>Presence of Landform</English>
+		<French>
+			<Text>Présence de relief</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</French>
 		<German>
 			<Text>Präsenz von Felsformationen:Präsenz von Felsformationen:Präsenz von Felsformationen:Präsenz von Felsformationen</Text>
 			<Gender>Female</Gender>
@@ -92,6 +128,11 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_PRESENCE_OF_REEF</Tag>
 		<English>Presence of Reef</English>
+		<French>
+			<Text>Présence de récifs</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</French>
 		<German>
 			<Text>Präsenz von Riffen:Präsenz von Riffen:Präsenz von Riffen:Präsenz von Riffen</Text>
 			<Gender>Female</Gender>
@@ -102,6 +143,11 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_REQUIREMENT</Tag>
 		<English>Folklore Requirement</English>
+		<French>
+			<Text>Bases de folklore</Text>
+			<Gender>Female</Gender>
+			<Plural>1</Plural>
+		</French>
 		<German>
 			<Text>Folklore-Grundlagen:Folklore-Grundlagen:Folklore-Grundlagen:Folklore-Grundlagen</Text>
 			<Gender>Female</Gender>
@@ -112,12 +158,18 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_REQUIREMENT_PEDIA</Tag>
 		<English>[COLOR_BUILDING_TEXT]Folklore Requirements[COLOR_REVERT] autobuildings give the Language tech requirement for Folklore.[NEWLINE]This way, the tech doesn't need a list of more than 200 Folklore pseudobuildings. Try catching all Folklore buildings!</English>
+		<French>[COLOR_BUILDING_TEXT]Bases de folklore[COLOR_REVERT] : ces bâtiments automatiques correspondent à la technologie Langage, requise pour le Folklore.[NEWLINE]Ainsi, la technologie n'a pas besoin de gérer une liste de plus de 200 pseudo-bâtiments de Folklore. Essayez de construire tous les bâtiments de Folklore !</French>
 		<German>Die [COLOR_BUILDING_TEXT]Folklore-Grundlagen[COLOR_REVERT] sind ein automatischer Effekt, der die Voraussetzung für verschiedene Folkloreeffekte legt. Diese mehr als 200 Pseudogebäude können mit dem Entdecken spezieller Tiere und Landschaftseigenarten errichtet werden. Versucht doch einmal, alle Folklore-"Gebäude" zu errichten!</German>
 		<Italian>L'edificio automatico [COLOR_BUILDING_TEXT]requisito per il folklore[COLOR_REVERT] richiede la tecnologia Linguaggio come prerequisito per il Folklore.[NEWLINE]Ci sono oltre 200 edifici automatici che possono essere costruiti, scoprendo animali o luoghi. Prova a costruirli tutti!</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_PRESENCE_OF_SEA</Tag>
 		<English>Presence of Sea</English>
+		<French>
+			<Text>Présence de la mer</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</French>
 		<German>
 			<Text>Präsenz der See:Präsenz der See:Präsenz der See:Präsenz der See</Text>
 			<Gender>Female</Gender>
@@ -128,6 +180,11 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_PRESENCE_OF_VOLCANO</Tag>
 		<English>Presence of Volcano</English>
+		<French>
+			<Text>Présence d'un volcan</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</French>
 		<German>
 			<Text>Präsenz von Vulkanen:Präsenz von Vulkanen:Präsenz von Vulkanen:Präsenz von Vulkanen</Text>
 			<Gender>Female</Gender>
@@ -146,12 +203,17 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ANIMAL_TAMER_PEDIA</Tag>
 		<English>Animal taming is not domestication. Tamed animals can be further trained.</English>
+		<French>L'apprivoisement des animaux n'est pas la domestication. Les animaux apprivoisés peuvent être davantage dressés.</French>
 		<Polish>Oswajanie zwierz&#185;t to nie udamawianie. Oswojone zwierz&#234;ta mog&#185; by&#230; p&#243;&#159;niej tresowane.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MILITARY_STANDARD_ANIMAL_MASCOT</Tag>
 		<English>Military Standard (Animal mascot)</English>
-		<French>Mascotte de L'Armée de Terre</French>
+		<French>
+			<Text>Mascotte de L'Armée de Terre</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</French>
 		<Italian>Stendardo militare con mascotte animale</Italian>
 		<Polish>Sztandar Wojskowy (Zwierz&#234;ca Maskotka)</Polish>
 		<Russian>Çâåðèíûé òîòåì</Russian>
@@ -159,7 +221,11 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MILITARY_STANDARD_CANINES</Tag>
 		<English>Military Standard (Canines)</English>
-		<French>Standards Militaires (Canins)</French>
+		<French>
+			<Text>Standards Militaires (Canins)</Text>
+			<Gender>Male</Gender>
+			<Plural>1</Plural>
+		</French>
 		<Italian>Stendardo militare con mascotte canina</Italian>
 		<Polish>Sztandar Wojskowy (Wilki)</Polish>
 		<Russian>Òîòåì «Ñîáàêà»</Russian>
@@ -175,13 +241,18 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MILITARY_STANDARD_ANIMAL_MASCOT_PEDIA</Tag>
 		<English>The tradition of having a mascot or flag/standard that identifies the people in a military unit.</English>
+		<French>La tradition d'avoir une mascotte ou un drapeau/étendard qui identifie les personnes d'une unité militaire.</French>
 		<Italian>La tradizione di avere una mascotte o una bandiera che identifica le persone che fanno parte di un'unità militare.</Italian>
 		<Polish>Tradycja posiadania maskotki lub sztandaru, kt&#243;ry identyfikuje ludzi w jednostce wojskowej.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MILITARY_STANDARD_WORKERS</Tag>
 		<English>Military Standard (Workers)</English>
-		<French>Standards Militaires (Ouvriers)</French>
+		<French>
+			<Text>Standards Militaires (Ouvriers)</Text>
+			<Gender>Male</Gender>
+			<Plural>1</Plural>
+		</French>
 		<Italian>Stendardo militare dei lavoratori</Italian>
 		<Polish>Sztandar Wojskowy (Robotnicy)</Polish>
 		<Russian>Òîòåì «Ðàáîòíèê»</Russian>
@@ -228,7 +299,11 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_DANCE_BIRD</Tag>
 		<English>Unit Reward - Dance (Bird)</English>
-		<French>Danse des Oiseaux</French>
+		<French>
+			<Text>Danse des Oiseaux</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</French>
 		<Italian>Danza degli uccelli (unità consumata)</Italian>
 		<Russian>Òàíåö ïòèöû</Russian>
 	</TEXT>
@@ -249,6 +324,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HERD_BISON_PEDIA</Tag>
 		<English>Represent the Bison of North America, Water Buffalo of South East Asia and all herbivore herds of Africa.</English>
+		<French>Représente le bison d'Amérique du Nord, le buffle d'eau d'Asie du Sud-Est et tous les troupeaux d'herbivores d'Afrique.</French>
 		<Italian>Comprende il bisonte del Nordamerica, il bufalo d'acqua e tutti i branchi di erbivori dell'Africa.</Italian>
 		<Polish>&#175;ubry zamieszkuj&#185; &#156;rodowiska le&#156;ne, te nie s&#185; jednak optymalne, poniewa&#191; zim&#185; nie dostarczaj&#185; wystarczaj&#185;cej ilo&#156;ci po&#191;ywienia dla tak du&#191;ego ro&#156;lino&#191;ercy, wi&#234;kszo&#156;&#230; populacji jest w czasie ci&#234;&#191;szych zim dokarmianych przez cz&#179;owieka, poniewa&#191; brak lub niedostateczne dokarmianie powoduje, &#191;e zwierz&#234;ta te migruj&#185; na tereny otwarte, powoduj&#185;c szkody w uprawach rolniczych. W ramach polsko-niemieckich bada&#241; sk&#179;adu izotopowego ko&#156;ci (zawarto&#156;ci stabilnych izotop&#243;w w&#234;gla i azotu) najstarszych w Europie zachowanych ko&#156;ci &#191;ubra Bison bonasus potwierdzono, &#191;e w czasach prehistorycznych &#191;ubry preferowa&#179;y tereny otwarte, a ich dieta mia&#179;a mieszany charakter i zawiera&#179;a porosty, trawy i p&#234;dy drzew oraz krzew&#243;w.</Polish>
 	</TEXT>
@@ -275,6 +351,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HERD_BUFFALO_PEDIA</Tag>
 		<English>Only domesticated buffalos can build the Herd - Buffalo; provides a resource of buffalos.</English>
+		<French>Seuls les buffles domestiqués peuvent construire le Troupeau - Buffle ; fournit une ressource de buffles.</French>
 		<Italian>Solo i bufali domati possono costruire una Mandria di bufali; fornisce una risorsa di bufali.</Italian>
 	</TEXT>
 	<TEXT>
@@ -288,6 +365,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ANIMAL_TRAINER_BUFFALO_PEDIA</Tag>
 		<English>The Buffalo Trainer is required to build Buffalo Worker.</English>
+		<French>Le Dresseur de Buffles est nécessaire pour construire l'Ouvrier Buffle.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HERD_CAMEL</Tag>
@@ -300,6 +378,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HERD_CAMEL_PEDIA</Tag>
 		<English>Only domesticated camels can build the Herd - Camels; provides a resource of camels.</English>
+		<French>Seuls les chameaux domestiqués peuvent construire le Troupeau - Chameaux ; fournit une ressource de chameaux.</French>
 		<Italian>Solo i cammelli domati possono costruire una mandria di cammelli; fornisce una risorsa di cammelli.</Italian>
 		<Polish>Wielb&#179;&#185;d (Camelus) rodzaj du&#191;ych ssak&#243;w z rodziny wielb&#179;&#185;dowatych. Fizjologicznie przystosowane do &#191;ycia w warunkach suchego i gor&#185;cego klimatu, s&#185; w wielu krajach wykorzystywane jako zwierz&#234;ta u&#191;ytkowe.</Polish>
 	</TEXT>
@@ -324,7 +403,11 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_REMAINS_CAVE_LION</Tag>
 		<English>Remains - Cave Lion</English>
-		<French>Restes de Lion des cavernes</French>
+		<French>
+			<Text>Restes de Lion des cavernes</Text>
+			<Gender>Male</Gender>
+			<Plural>1</Plural>
+		</French>
 		<German>
 			<Text>Überreste eines Höhlenlöwen:Überreste eines Höhlenlöwen:Überresten eines Höhlenlöwen:Überreste eines Höhlenlöwen</Text>
 			<Gender>Male</Gender>
@@ -364,7 +447,11 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_COASTAL_FISH_FARM</Tag>
 		<English>Unit Reward - Coastal Fish Farm</English>
-		<French>Ferme à Poissons du Littoral</French>
+		<French>
+		<Text>Ferme à Poissons du Littoral</Text>
+		<Gender>Female</Gender>
+		<Plural>0</Plural>
+	</French>
 		<Italian>Allevamento costiero di pesci (unità consumata)</Italian>
 		<Polish>Farma Ryb Przybrze&#191;nych</Polish>
 		<Russian>Ðûáíàÿ ôåðìà</Russian>
@@ -372,6 +459,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_COASTAL_FISH_FARM_PEDIA</Tag>
 		<English>Sustainable fishery. In reality only certain smaller species of fish work well in such conditions, such as salmon, trout, bass, cod, and so forth; larger fish such as Marlin are not feasible to farm in this manner.</English>
+		<French>Pêcherie durable. En réalité, seules certaines espèces de poissons plus petites fonctionnent bien dans ces conditions, comme le saumon, la truite, le bar, la morue, etc. ; les plus gros poissons comme le marlin ne sont pas adaptés à ce type d'élevage.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HERD_COW</Tag>
@@ -384,13 +472,18 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HERD_COW_PEDIA</Tag>
 		<English>Only domesticated cattle can build the Herd - Bovines; provides a resource of cattle.</English>
+		<French>Seul le bétail domestiqué peut construire le Troupeau - Bovins ; fournit une ressource de bétail.</French>
 		<Italian>Solo i bovini domati possono costruire una Mandria di bovini; fornisce una risorsa di bovini.</Italian>
 		<Polish>Byd&#179;o domowe (Bos taurus) gatunek zwierz&#185;t z rodziny wo&#179;owatych, rz&#234;du parzystokopytnych. Gatunek ten pochodzi od tura wielkiego i tura kr&#243;tkorogiego.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CRAB_NETS</Tag>
 		<English>Unit Reward - Crab Nets</English>
-		<French>Pièges à Crabes</French>
+		<French>
+		<Text>Pièges à Crabes</Text>
+		<Gender>Male</Gender>
+		<Plural>1</Plural>
+	</French>
 		<Italian>Trappole per granchi (unità consumata)</Italian>
 		<Polish>Sieci na kraby</Polish>
 		<Russian>Ñåòè íà êðàáîâ</Russian>
@@ -398,6 +491,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CRAB_NETS_PEDIA</Tag>
 		<English>Crabs (Brachyura, from the Greek short abdomen / tail) a group [a] of short-legged crustaceans from the order Decapoda. Crabs are the most numerous (10,500 species have been described) group of tenths, in which the first pair of crotch legs developed into claws. The size of the body is very varied, with a leg span from a few millimeters (Pinnotheres pisum) to almost 4 m (Japanese Pacific crab).</English>
+		<French>Les crabes (Brachyura, du grec abdomen court / queue) sont un groupe de crustacés à pattes courtes de l'ordre des Décapodes. Les crabes sont le groupe le plus nombreux (10 500 espèces ont été décrites) de décapodes, dont la première paire de pattes s'est développée en pinces. La taille du corps est très variée, avec une envergure allant de quelques millimètres (Pinnotheres pisum) à près de 4 m (crabe du Pacifique japonais).</French>
 		<Polish>Kraby (Brachyura, z j&#234;zyka greckiego kr&#243;tki odw&#179;ok/ogon) grupa[a] kr&#243;tkoodw&#179;okowych skorupiak&#243;w z rz&#234;du dziesi&#234;cionog&#243;w (Decapoda). Kraby s&#185; najliczniejsz&#185; (opisano 10 500 gatunk&#243;w) grup&#185; dziesi&#234;cionog&#243;w, u kt&#243;rej pierwsza para odn&#243;&#191;y krocznych przekszta&#179;ci&#179;a si&#234; w szczypce. Wielko&#156;&#230; cia&#179;a bardzo zr&#243;&#191;nicowana, o rozpi&#234;to&#156;ci odn&#243;&#191;y od kilku milimetr&#243;w (Pinnotheres pisum) do prawie 4 m (japo&#241;ski krab pacyficzny).</Polish>
 	</TEXT>
 	<TEXT>
@@ -436,7 +530,11 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_DOG_KENNELS</Tag>
 		<English>Dog Kennels</English>
-		<French>Chenils pour Chiens</French>
+		<French>
+		<Text>Chenils pour Chiens</Text>
+		<Gender>Male</Gender>
+		<Plural>1</Plural>
+	</French>
 		<Italian>Canile</Italian>
 		<Polish>Psie budy</Polish>
 		<Russian>Ñîáà÷èé âîëüåð</Russian>
@@ -444,6 +542,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_DOG_KENNELS_PEDIA</Tag>
 		<English>Kennels is a building or a collection of building in which dogs are housed, maintained, and bred. Historically, these structures were primarily used for breeding and improving the strength, velocity and other quality of a breed. Starting with the 20th century, they were turned into formal, heavily regulated establishments for the propagation of animals.</English>
+		<French>Les chenils sont un bâtiment ou un ensemble de bâtiments dans lesquels les chiens sont logés, entretenus et élevés. Historiquement, ces structures étaient principalement utilisées pour l'élevage et l'amélioration de la force, de la vitesse et d'autres qualités d'une race. À partir du 20e siècle, ils sont devenus des établissements formels et fortement réglementés pour la propagation des animaux.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_DONKEY_BREEDER</Tag>
@@ -463,24 +562,35 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HERD_DONKEY_PEDIA</Tag>
 		<English>Asses were first domesticated around 3000 BC, or 4000 BC, probably in Egypt or Mesopotamia, and have spread around the world. They continue to fill important roles in many places today. While domesticated species are increasing in numbers, the African wild ass and another relative, the Onager, are endangered. As "beasts of burden" and companions, asses and donkeys have worked together with humans for millennia.</English>
+		<French>Les ânes ont été domestiqués pour la première fois vers 3000 av. J.-C., ou 4000 av. J.-C., probablement en Égypte ou en Mésopotamie, et se sont répandus dans le monde entier. Ils continuent à remplir des rôles importants dans de nombreux endroits aujourd'hui. Alors que les espèces domestiquées augmentent en nombre, l'âne sauvage africain et un autre parent, l'onagre, sont en voie de disparition. En tant que "bêtes de somme" et compagnons, les ânes ont travaillé avec les humains pendant des millénaires.</French>
 		<Italian>Gli asini vennero addomesticati intorno al 3000 a.C. o al 4000 a.C., probabilmente in Egitto o Mesopotamia, e vennero diffusi in tutto il mondo; al giorno d'oggi, continuano a ricoprire importanti ruoli in molti posti. Mentre le specie addomesticate sono in aumento in termini numerici, l'asino selvatico africano e un altro parente, l'onagro, sono in pericolo di estinzione. Come "bestie da soma" e compagni, gli asini hanno lavorato insieme con gli esseri umani per millenni.</Italian>
 		<Polish>Osio&#179; zosta&#179; udomowiony przez cz&#179;owieka wcze&#156;niej ni&#191; ko&#241;. Pierwsze informacje dotycz&#185;ce udomowienia pochodz&#185; z Doliny Nilu z ok. 4000 p.n.e. czyli 6 tys. lat temu. Na tych terenach wyst&#234;powa&#179;y obydwa &#191;yj&#185;ce do dzisiaj podgatunki os&#179;a afryka&#241;skiego. Przypuszcza si&#234;, &#191;e z ich krzy&#191;&#243;wek powsta&#179; osio&#179; domowy (Equus africanus f.asinus).</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FLOCKS_OF_DUCK</Tag>
 		<English>Flocks of Duck</English>
+		<French>
+		<Text>Volées de Canards</Text>
+		<Gender>Female</Gender>
+		<Plural>1</Plural>
+	</French>
 		<Italian>Stormo di anatre</Italian>
 		<Russian>Ñòàÿ óòîê</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FLOCKS_OF_DUCK_PEDIA</Tag>
 		<English>Your nation has flocks of Duck.</English>
+		<French>Votre nation possède des volées de canards.</French>
 		<Russian>Ó âàøåé öèâèëèçàöèè åñòü ñòàÿ óòîê.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_REMAINS_GIANT_RHINOCEROS</Tag>
 		<English>Remains - Giant Rhinoceros</English>
-		<French>Restes d'Elasmotherium</French>
+		<French>
+		<Text>Restes d'Elasmotherium</Text>
+		<Gender>Male</Gender>
+		<Plural>1</Plural>
+	</French>
 		<German>
 			<Text>Überreste eines Elasmotheriums:Überreste eines Elasmotheriums:Überresten eines Elasmotheriums:Überreste eines Elasmotheriums</Text>
 			<Gender>Male</Gender>
@@ -515,6 +625,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ENCLOSURE_EXOTIC_HERBIVORE_PEDIA</Tag>
 		<English>A cage used for wild subdued animals.</English>
+		<French>Une cage utilisée pour les animaux sauvages domptés.</French>
 		<Italian>Una gabbia in cui vengono rinchiusi gli erbivori esotici domati.</Italian>
 		<Polish>Klatka u&#191;ywana do przetrzymywania dzikich, poskromionych zwierz&#185;t.</Polish>
 		<Russian>Êëåòêà äëÿ óêðîùåííûõ äèêèõ æèâîòíûõ.</Russian>
@@ -544,12 +655,14 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FISH_PENS_PEDIA</Tag>
 		<English>Fish Pens were constructed by the rich to provide them with a ready source of some exotic or rare sea fish for their feasts.</English>
+		<French>Les bassins à poissons étaient construits par les riches pour leur fournir une source immédiate de poissons de mer rares ou exotiques pour leurs festins.</French>
 		<Italian>I vasche per pesci venivano costruiti dalle persone ricche per avere una fonte di pesce raro ed esotico per le feste.</Italian>
 		<Polish>Sieci na ryby by&#179;y konstruowane przez bogatych by dostarcza&#230; im ci&#185;gle &#156;wie&#191;ych i egzotycznych gatunk&#243;w ryb na ich wykwintne uczty.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_ANIMAL_PEDIA</Tag>
 		<English>Folklore pseudobuildings represent myths, legends, stories, fables and commoner knowledge about animals and landscape.</English>
+		<French>Les pseudo-bâtiments folkloriques représentent les mythes, légendes, histoires, fables et connaissances populaires sur les animaux et le paysage.</French>
 		<German>Die Folklore-Pseudogebäude repräsentieren Mythen, Legenden, Geschichten, Fabeln und allgemeines Wissen über Tiere und Landschaften.</German>
 	</TEXT>
 	<TEXT>
@@ -1178,6 +1291,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_RING_TAILED_LEMUR</Tag>
 		<English>Folklore - Ring-tailed Lemur</English>
+		<French>Folklore - Lémur à queue annelée</French>
 		<German>
 			<Text>Mythos des Kattas:Mythos des Kattas:Mythos des Kattas:Mythos des Kattas</Text>
 			<Gender>Male</Gender>
@@ -1326,7 +1440,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_MUSKOX</Tag>
 		<English>Folklore - Muskox</English>
-		<French>Mythe du Bœuf musqué</French>
+		<French>Mythe du Boeuf musqué</French>
 		<German>
 			<Text>Mythos des Moschusochsen:Mythos des Moschusochsen:Mythos des Moschusochsen:Mythos des Moschusochsen</Text>
 			<Gender>Male</Gender>
@@ -1351,6 +1465,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_T_NEW_WORLD_MONKEYS</Tag>
 		<English>Folklore (T) - New World Monkeys</English>
+		<French>Folklore (T) - Singes du Nouveau Monde</French>
 		<German>
 			<Text>Mythos der Neuweltaffen:Mythos der Neuweltaffen:Mythos der Neuweltaffen:Mythos der Neuweltaffen</Text>
 			<Gender>Male</Gender>
@@ -1387,6 +1502,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_T_OLD_WORLD_MONKEYS</Tag>
 		<English>Folklore (T) - Old World Monkeys</English>
+		<French>Folklore (T) - Singes de l'Ancien Monde</French>
 		<German>
 			<Text>Mythos der Altweltaffen:Mythos der Altweltaffen:Mythos der Altweltaffen:Mythos der Altweltaffen</Text>
 			<Gender>Male</Gender>
@@ -1423,7 +1539,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_OXPECKER</Tag>
 		<English>Folklore - Oxpecker</English>
-		<French>Mythe du Pique-bœufs</French>
+		<French>Mythe du Pique-boeufs</French>
 		<German>
 			<Text>Mythos des Madenhackers:Mythos des Madenhackers:Mythos des Madenhackers:Mythos des Madenhackers</Text>
 			<Gender>Male</Gender>
@@ -1836,7 +1952,11 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_DANCE_FOX</Tag>
 		<English>Unit Reward - Dance (Fox)</English>
-		<French>Danse du Renard</French>
+		<French>
+		<Text>Danse du Renard</Text>
+		<Gender>Female</Gender>
+		<Plural>0</Plural>
+	</French>
 		<Italian>Danza della volpe (unità consumata)</Italian>
 		<Russian>Òàíåö ëèñû</Russian>
 	</TEXT>
@@ -1849,7 +1969,11 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FUR_FARM</Tag>
 		<English>Unit Reward - Fur Farm</English>
-		<French>Ferme de Fourrures</French>
+		<French>
+		<Text>Ferme de Fourrures</Text>
+		<Gender>Female</Gender>
+		<Plural>0</Plural>
+	</French>
 		<Italian>Allevamento di animali da pelliccia (unità consumata)</Italian>
 		<Polish>Ferma Futer</Polish>
 		<Russian>Ìåõîâàÿ ôåðìà</Russian>
@@ -1857,6 +1981,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FUR_FARM_PEDIA</Tag>
 		<English>Fur farming is the practice of breeding or raising certain types of animals for their fur. This became possible in the 1860's.</English>
+		<French>L'élevage pour la fourrure est la pratique d'élever certains types d'animaux pour leur fourrure. Cela est devenu possible dans les années 1860.</French>
 		<Italian>L'allevamento di animali da pelliccia è la pratica di incrociare e allevare certi tipi di animali principalmente per ottenere la loro pelliccia. Quest'attività divenne possibile negli anni sessanta del XIX secolo.</Italian>
 		<Polish>Mo&#191;na spotka&#230; si&#234; z pogl&#185;dem, &#191;e hodowla norek i innych stworze&#241; na futro wi&#185;&#191;e si&#234; z niehumanitarnym traktowaniem zwierz&#185;t. Szczeg&#243;lnie dobrze jest to udokumentowane w krajach Trzeciego Zwiata. Jednak raport dotycz&#185;cy sytuacji wielkopolskich ferm futrzarskich autorstwa Najwy&#191;szej Izby Kontroli z 2011 roku, wskazuje &#191;e "w 87% tych ferm nie przestrzegano wymaga&#241; ochrony &#156;rodowiska, w 48% dzia&#179;alno&#156;&#230; hodowlana prowadzona by&#179;a w obiektach nielegalnie wybudowanych lub u&#191;ytkowanych, a w 35% niezgodnie z przepisami weterynaryjnymi." Aktywi&#156;ci pro-zwierz&#234;cy twierdz&#185; i&#191; fermy hodowlane s&#185; przyczyn&#185; ska&#191;enia &#156;rodowiska licznymi zwi&#185;zkami takimi jak siarkowod&#243;r, amoniak, mocznik, fosfor czy azot, kt&#243;re nie s&#185; odpowiednio utylizowane.</Polish>
 	</TEXT>
@@ -1897,6 +2022,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_GOVERNORS_MENAGERIE_PEDIA</Tag>
 		<English>If one wild animal is a status symbol, what's better than having many to boost your standing among your fellows and foreigners alike?</English>
+		<French>Si un animal sauvage est un symbole de statut, quoi de mieux que d'en avoir plusieurs pour renforcer votre position parmi vos semblables et les étrangers ?</French>
 		<Italian>Se un animale selvatico è uno status symbol, cosa c'è di meglio di averne molti per aumentare il tuo stato sociale tra i tuoi sudditi e gli stranieri?</Italian>
 		<Polish>Je&#156;li jedno zwierz&#234; to za ma&#179;o to dlaczego nie stworzy&#230; ca&#179;ej mena&#191;erii?</Polish>
 		<Russian>Åñëè îäíî äèêîå æèâîòíîå ÿâëÿåòñÿ ñèìâîëîì ñòàòóñà, ÷òî ëó÷øå, ÷åì ìíîãèå, ïîâûñèòü âàøó ðåïóòàöèþ ñðåäè âàøèõ ñîïëåìåííèêîâ è èíîñòðàíöåâ.</Russian>
@@ -1912,6 +2038,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_GOVERNORS_PETS_PEDIA</Tag>
 		<English>As a status symbol a live wild, dangerous, large or exotic animal is a boon for any leader.</English>
+		<French>En tant que symbole de statut, un animal sauvage vivant, dangereux, grand ou exotique est un atout pour tout dirigeant.</French>
 		<Italian>Come status symbol, un animale selvatico pericoloso, grande o esotico è una manna per qualsiasi leader.</Italian>
 		<Polish>Jako symbol statusu, dziko &#191;yj&#185;ce zwierz&#234;ta, wielkie lub egzotyczne zwierz&#234;ta s&#185; ozdob&#185; ka&#191;dej kolekcji nowoczesnego przyw&#243;dcy.</Polish>
 		<Russian>Â êà÷åñòâå ñèìâîëà èëè ñòàòóñà äèêîå, îïàñíîå, êðóïíîå èëè ýêçîòè÷åñêîå æèâîòíîå ÿâëÿåòñÿ áëàãîì äëÿ ëþáîãî ëèäåðà.</Russian>
@@ -1980,13 +2107,14 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MARINE_INSTITUTE</Tag>
 		<English>Unit Reward - Marine Institute</English>
+		<French>Récompense d'unité - Institut Marin</French>
 		<Italian>Istituto marino (unità consumata)</Italian>
 		<Polish>Instytut Morski</Polish>
 		<Russian>Ìîðñêîé èíñòèòóò</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MARINE_INSTITUTE_PEDIA</Tag>
-		<English>The Marine Institute (Foras na Mara) is a State agency in Ireland that provides government, public agencies and the maritime industry with a range of scientific, advisory and economic development services, aiming to inform policy-making, regulation and the sustainable management and growth of the country’s marine resources. Founded in 1991 on foot of a 1974 report, the Institute undertakes, coordinates and promotes marine research and development, which is essential to achieving a sustainable ocean economy, protecting ecosystems and inspiring a shared understanding of the ocean. The agency is governed by a ministerially-appointed board and has a professional staff, a headquarters near Galway, an office in Dublin, and two research vessels.</English>
+		<English>The Marine Institute (Foras na Mara) is a State agency in Ireland that provides government, public agencies and the maritime industry with a range of scientific, advisory and economic development services, aiming to inform policy-making, regulation and the sustainable management and growth of the country's marine resources. Founded in 1991 on foot of a 1974 report, the Institute undertakes, coordinates and promotes marine research and development, which is essential to achieving a sustainable ocean economy, protecting ecosystems and inspiring a shared understanding of the ocean. The agency is governed by a ministerially-appointed board and has a professional staff, a headquarters near Galway, an office in Dublin, and two research vessels.</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ENCLOSURE_MARSUPIAL</Tag>
@@ -2007,7 +2135,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MASTER_HUNTER_PEDIA</Tag>
 		<English>«I fletch arrows, as hunters feast on game. I sharpen blades as the rangers trades the secrets of the wilds, of topography and the enemies movements. I brew poison as the assassins discuss their cleanest kills with grim smiles. Why do I toil away, you ask, serving the brave brothers and deadly sisters of the lodge, not to mention their pets? Because one day, one day soon, I will be one of them.» --Locke Thorne, Scout</English>
-		<French>«Je tire des flèches, alors que les chasseurs se régalent de gibier. J'affûte les lames pendant que les rangers troquent les secrets de la nature, de la topographie et des mouvements des ennemis. Je prépare du poison pendant que les assassins discutent de leurs meurtres les plus purs avec des sourires sinistres. Pourquoi est-ce que je travaille dur, demandez-vous, au service des braves frères et sœurs mortelles de la loge, sans parler de leurs animaux de compagnie? Parce qu'un jour, un jour bientôt, je serai l'un d'entre eux.» -- Locke Thorne, Scout</French>
+		<French>«Je tire des flèches, alors que les chasseurs se régalent de gibier. J'affûte les lames pendant que les rangers troquent les secrets de la nature, de la topographie et des mouvements des ennemis. Je prépare du poison pendant que les assassins discutent de leurs meurtres les plus purs avec des sourires sinistres. Pourquoi est-ce que je travaille dur, demandez-vous, au service des braves frères et soeurs mortelles de la loge, sans parler de leurs animaux de compagnie? Parce qu'un jour, un jour bientôt, je serai l'un d'entre eux.» -- Locke Thorne, Scout</French>
 		<German>«Ich bewege Pfeile, während Jäger sich am Wild erfreuen. Ich schärfe die Klingen, während die Waldläufer die Geheimnisse der Wildnis, der Topographie und der Bewegungen des Feindes tauschen. Ich braue Gift, während die Attentäter ihre grimmigsten Tötungen mit grimmigem Lächeln besprechen. Warum arbeite ich mich ab, fragst du und diene den tapferen Brüdern und tödlichen Schwestern der Lodge, ganz zu schweigen von ihren Haustieren? Denn eines Tages, eines Tages werde ich einer von ihnen sein.» -- Locke Thorne, Pfadfinder</German>
 		<Italian>«Io costruisco le frecce, mentre i cacciatori banchettano con la selvaggina. Io affilo le spade, mentre i ranger commerciano i segreti della natura, della topografia e dei movimenti dei nemici. Io fermento il veleno mentre gli assassini discutono le loro uccisioni più pulite con sorrisi torvi. Perché lavoro duramente, chiedete, servendo i fratelli coraggiosi e le sorelle mortali, per non accennare ai loro animali domestici? Poiché un giorno, presto, io sarò uno di loro.» -- Locke Thorne, esploratore</Italian>
 		<Spanish>«Hago flechas, mientras los cazadores se deleitan con la caza. Afilo las espadas, mientras los guardabosques intercambian los secretos de la naturaleza, la topografía y los movimientos de los enemigos. Revuelvo el veneno mientras los asesinos discuten sus asesinatos más limpios con sonrisas sombrías. ¿Por qué trabajo duro, preguntas, sirviendo a hermanos valientes y hermanas mortales, sin mencionar a sus mascotas? Porque algún día pronto seré uno de ellos.» -- Locke Thorne, explorador</Spanish>
@@ -2025,6 +2153,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MASTER_SEA_HUNTER_PEDIA</Tag>
 		<English>Hunting is the practice of killing or trapping any animal, or pursuing it with the intent of doing so. Hunting wildlife or feral animals is most commonly done by humans for food, recreation, or trade. In present-day use, lawful hunting is distinguished from poaching, which is the illegal killing, trapping or capture of the hunted species. The species that are hunted are referred to as game and are usually mammals and birds.</English>
+		<French>La chasse est la pratique de tuer ou de piéger un animal, ou de le poursuivre dans cette intention. La chasse aux animaux sauvages ou féraux est le plus souvent pratiquée par les humains pour la nourriture, les loisirs ou le commerce. Dans l'usage actuel, la chasse légale se distingue du braconnage, qui est l'abattage, le piégeage ou la capture illégaux des espèces chassées. Les espèces chassées sont appelées gibier et sont généralement des mammifères et des oiseaux.</French>
 		<Italian>Un mastro pescatore rappresenta le conoscenze che la tua gente ha riguardo ai pesci.</Italian>
 		<Polish>Rybak osoba trudni&#185;ca si&#234; rybo&#179;&#243;wstwem, utrzymuj&#185;ca si&#234; z po&#179;owu ryb i innych owoc&#243;w morza (frutti di mare) krewetek, ma&#179;&#191;y itp. S&#179;owem tym wsp&#243;&#179;cze&#156;nie okre&#156;la si&#234; zar&#243;wno osoby wykonuj&#185;ce ten zaw&#243;d w pojedynk&#234; (na morzu rzadko) lub w niewielkich, kilkuosobowych zespo&#179;ach, p&#179;ywaj&#185;cych na kilkutonowych kutrach (rybactwo), jak r&#243;wnie&#191; marynarzy wielkich jednostek oceanicznych (rybo&#179;&#243;wstwo przemys&#179;owe). Na potrzeby rybactwa &#156;r&#243;dl&#185;dowego, na rzekach i jeziorach rybacy na og&#243;&#179; pos&#179;uguj&#185; si&#234; niewielkimi &#179;odziami, kutry morskie s&#185; zazwyczaj wi&#234;ksze i dysponuj&#185; mocniejszymi silnikami.</Polish>
 	</TEXT>
@@ -2039,13 +2168,14 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ANIMAL_TRAINER_DONKEY_PEDIA</Tag>
 		<English>The Mule Trainer is required to build Mule units.</English>
+		<French>Le Dresseur de Mules est nécessaire pour construire des unités de Mules.</French>
 		<Italian>L'addestramento muli è necessario per addestrare le unità di muli.</Italian>
 		<Polish>Mu&#179; mieszaniec mi&#234;dzygatunkowy klaczy konia domowego z ogierem os&#179;a, najbardziej znana hybryda. Najcz&#234;&#156;ciej bezp&#179;odny, tylko ok. 5% mulic jest p&#179;odnych. Zewn&#234;trznie jest bardziej podobny do konia. Charakteryzuje si&#234; du&#191;&#185; g&#179;ow&#185;, d&#179;ugimi uszami oraz kr&#243;tk&#185; szyj&#185; ze stoj&#185;c&#185; grzyw&#185; i typowo ko&#241;skim ogonem z d&#179;ugimi w&#179;osami. W k&#179;&#234;bie osi&#185;ga wysoko&#156;&#230; do 180 cm.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HERD_MUSKOX</Tag>
 		<English>Herd (Muskox)</English>
-		<French>Troupeau de Bœufs musqués</French>
+		<French>Troupeau de Boeufs musqués</French>
 		<Italian>Mandria di buoi muschiati</Italian>
 		<Polish>Stado - Wo&#179;y Pi&#191;mowe</Polish>
 		<Russian>Ñòàäî îâöåáûêîâ</Russian>
@@ -2053,6 +2183,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HERD_MUSKOX_PEDIA</Tag>
 		<English>A herd of Muskoxes.</English>
+		<French>Un troupeau de boeufs musqués.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_NAVAL_STANDARD_ANIMAL_MASCOT</Tag>
@@ -2065,6 +2196,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_NAVAL_STANDARD_ANIMAL_MASCOT_PEDIA</Tag>
 		<English>The mascot of a ship.</English>
+		<French>La mascotte d'un navire.</French>
 		<Italian>La mascotte di una nave.</Italian>
 		<Polish>Maskotka statku.</Polish>
 	</TEXT>
@@ -2110,12 +2242,14 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FLOCKS_OF_PEACOCK</Tag>
 		<English>Flocks of Peacock</English>
+		<French>Troupeaux de Paons</French>
 		<Italian>Stormo di fagiani</Italian>
 		<Russian>Ñòàÿ ïàâëèíîâ</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FLOCKS_OF_PEACOCK_PEDIA</Tag>
 		<English>Your nation has flocks of Peacocks.</English>
+		<French>Votre nation possède des troupeaux de paons.</French>
 		<Russian>Ó âàøåé öèâèëèçàöèè åñòü ñòàÿ ïàâëèíîâ.</Russian>
 	</TEXT>
 	<TEXT>
@@ -2129,6 +2263,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HERD_PIG_PEDIA</Tag>
 		<English>Pigs were originally wild boars in Europe and Asia that were first tamed to be domestic animals about 10000 years ago. There are many different kinds of pig. Some pigs have a pink skin but there are brown, white and black skinned pigs too. Some pigs have patterns or spots. Something in skin called pigment makes the colour and it's different for different pig breeds. There are about 73 different breeds of pig.</English>
+		<French>Les porcs étaient à l'origine des sangliers sauvages en Europe et en Asie qui ont été domestiqués il y a environ 10 000 ans. Il existe de nombreuses sortes de porcs. Certains porcs ont une peau rose mais il y a aussi des porcs à peau brune, blanche et noire. Certains porcs ont des motifs ou des taches. Quelque chose dans la peau appelé pigment crée la couleur et c'est différent selon les races de porcs. Il existe environ 73 races différentes de porcs.</French>
 		<Italian>I maiali erano originariamente cinghiali selvatici in Europa e in Asia, addomesticati circa 10000 anni fa. Ci sono molti tipi diversi di maiali: alcuni maiali hanno una pelle di colore rosa, ma ci sono anche maiali con pelle marrone, bianca e nera. Alcuni maiali hanno strisce o macchie. Qualcosa nella pelle chiamato pigmento è responsabile del colore, ed è diverso nelle diverse razze suine. Ci sono circa 73 diverse razze di maiali.</Italian>
 	</TEXT>
 	<TEXT>
@@ -2142,6 +2277,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HERD_POULTRY_PEDIA</Tag>
 		<English>A poultry herd.</English>
+		<French>Un troupeau de volailles.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ENCLOSURE_PRIMATE</Tag>
@@ -2199,6 +2335,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HERD_KANGAROO_PEDIA</Tag>
 		<English>A kangoroo herd.</English>
+		<French>Un troupeau de kangourous.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_REMAINS_SABRETOOTH</Tag>
@@ -2245,6 +2382,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HERD_SHEEP_PEDIA</Tag>
 		<English>A sheep herd.</English>
+		<French>Un troupeau de moutons.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SNAKE_CHARMER</Tag>
@@ -2297,6 +2435,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SHELL_WORKERS_HUT_PEDIA</Tag>
 		<English>Tortoiseshell or tortoise shell is a material produced mainly from the shell of the hawksbill turtle, an endangered species. It was widely used in the 1960s and 1970s in the manufacture of items such as combs, sunglasses, guitar picks and knitting needles. In 1973, the trade of tortoiseshell worldwide was banned under CITES (the Convention on International Trade in Endangered Species).[PARAGRAPH:2]Tortoiseshell was attractive to manufacturers and consumers because of its beautiful appearance and its durability, and its organic warmth against the skin. It was used in guitar picks because it can be easily shaped, has excellent bending properties, and is very durable. Tortoiseshell picks could sometimes be used for years. Piqué-work, jewelry made from tortoiseshell inlaid with precious metals in patterns or pictures, was made during the Victorian Era and was highly prized.[PARAGRAPH:2]There have been a number of faux tortoiseshell materials developed since the 1970s, most of which mimic the appearance of tortoiseshell. Tortex is a material that was created to replace tortoiseshell guitar picks and has been widely accepted as a suitable substitute.</English>
+		<French>La carapace de tortue ou écaille de tortue est un matériau principalement produit à partir de la carapace de la tortue imbriquée, une espèce en danger. Il a été largement utilisé dans les années 1960 et 1970 pour la fabrication d'objets tels que des peignes, des lunettes de soleil, des médiators de guitare et des aiguilles à tricoter. En 1973, le commerce de l'écaille de tortue dans le monde entier a été interdit en vertu de la CITES (Convention sur le commerce international des espèces de faune et de flore sauvages menacées). [PARAGRAPH:2] L'écaille de tortue était attrayante pour les fabricants et les consommateurs en raison de son aspect magnifique, de sa durabilité et de sa chaleur organique contre la peau. Elle était utilisée pour les médiators de guitare car elle peut être facilement façonnée, possède d'excellentes propriétés de flexion et est très résistante. Les médiators en écaille de tortue pouvaient parfois être utilisés pendant des années. Le piqué, un travail en relief, ou la joaillerie réalisée à partir d'écaille de tortue incrustée de métaux précieux selon des motifs ou des images, a été fabriqué durant l'époque victorienne et était très prisée. [PARAGRAPH:2] Depuis les années 1970, plusieurs matériaux simulant l'écaille de tortue ont été développés, la plupart imitant l'aspect de l'écaille de tortue. Tortex est un matériau créé pour remplacer l'écaille de tortue dans la fabrication de médiators de guitare et a été largement accepté comme un substitut approprié.</French>
 		<Italian>Un guscio di testuggine è un materiale prodotto principalmente dal guscio della tartaruga embricata, una specie in via di estinzione. È stato ampiamente utilizzato negli anni 60 e 70 per la fabbricazione di articoli come pettini, occhiali da sole, plettri e aghi per lavoro a maglia. Nel 1973, il commercio di tartaruga in tutto il mondo è stato vietato dalla CITES (Convenzione sul commercio internazionale delle specie minacciate di estinzione).[PARAGRAPH:2]Il guscio di testuggine era attraente per i produttori ed i consumatori a causa della sua bella apparenza e la sua durata, e il suo calore organica contro la pelle. Veniva utilizzata nei plettri perché poteva essere facilmente modellata, ha eccellenti proprietà di curvatura, ed è molto resistente. I gusci di tartaruga potrebbero talvolta essere utilizzati per anni. Durante l'era vittoriana venivano realizzati gioielli di tartaruga intarsiati con metalli preziosi nei modelli, ed erano molto apprezzati.[PARAGRAPH:2]Ci sono stati un certo numero di materiali eco-tartaruga sviluppato dal 1970, la maggior parte dei quali imitavano l'aspetto della tartaruga. Il Tortex è un materiale creato per sostituire i plettri di tartaruga ed è stato ampiamente accettato come un sostituto adatto.</Italian>
 		<Polish>Skorupy &#191;&#243;&#179;wi od dawien dawna by&#179;y wykorzystywane do produkcji ozd&#243;b i prostych narz&#234;dzi na ca&#179;ym &#156;wiecie.</Polish>
 	</TEXT>
@@ -2311,7 +2450,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_TRADITION_NAVAL_MASCOT</Tag>
 		<English>Tradition - Naval Mascot</English>
-		<French>Tradition - Mascotte Navale</French>
+		<French>Tradition - Mascotte navale</French>
 		<Italian>Tradizione della mascotte navale</Italian>
 		<Polish>Tradycja - Bandera (Maskotka)</Polish>
 		<Russian>Òðàäèöèè øòàíäàðòîâ</Russian>
@@ -2343,16 +2482,19 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CARNIVAL_TRAINED_SEAL_PEDIA</Tag>
 		<English>A carnival of seals trained for entertainment.</English>
+		<French>Un spectacle de phoques dressés pour le divertissement.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FLOCKS_OF_TURKEY</Tag>
 		<English>Flocks of Turkey</English>
+		<French>Troupeaux de dindons</French>
 		<Italian>Trave di tacchini</Italian>
 		<Russian>Ñòàÿ èíäååê</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FLOCKS_OF_TURKEY_PEDIA</Tag>
 		<English>Your nation has flocks of Turkey.</English>
+		<French>Votre nation possède des troupeaux de dindons.</French>
 		<Russian>Ó âàøåé öèâèëèçàöèè åñòü ñòàÿ èíäååê.</Russian>
 	</TEXT>
 	<TEXT>
@@ -2366,6 +2508,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_WILD_ANIMAL_CAGE_PEDIA</Tag>
 		<English>A cage used for wild subdued animals.</English>
+		<French>Une cage utilisée pour les animaux sauvages domptés.</French>
 		<Italian>Una gabbia in cui vengono rinchiusi gli animali selvaggi domati.</Italian>
 		<Polish>Klatka u&#191;ywana do przetrzymywania dzikich, poskromionych zwierz&#185;t.</Polish>
 	</TEXT>
@@ -2388,6 +2531,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_WONDERS_OF_THE_DEEP_PEDIA</Tag>
 		<English>Wonders of the deep represent the knowledge of your people about sea animals.</English>
+		<French>Les merveilles des profondeurs représentent la connaissance de votre peuple sur les animaux marins.</French>
 		<Italian>Le meraviglie degli abissi rappresentano la conoscenza che la tua gente ha degli animali marini.</Italian>
 		<Polish>Cuda G&#179;&#234;bin reprezentuj&#185; wiedz&#234; jak&#185; Twoi ludzi posiadaj&#185; o zwierz&#234;tach morskich.</Polish>
 		<Russian>×óäåñà Ãëóáèí ïðåäñòàâëÿþò çíàíèÿ âàøåìó íàðîäó î ìîðñêèõ îáèòàòåëÿõ.</Russian>
@@ -2395,5 +2539,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HERD_ZEBRA_PEDIA</Tag>
 		<English>A zebra herd.</English>
+		<French>Un troupeau de zèbres.</French>
 	</TEXT>
 </Civ4GameText>
