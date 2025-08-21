@@ -3024,6 +3024,15 @@ void cvInternalGlobals::refreshOptionsBUG()
 	gUnitLogLevel = getBugOptionINT("Autolog__LogLevelUnitBBAI", 0);
 	gMiscLogging = getBugOptionBOOL("Autolog__MiscLogging", false);
 
+#ifdef _DEBUG
+	gPlayerLogLevel = 4;
+	gTeamLogLevel = 4;
+	gCityLogLevel = 4;
+	gUnitLogLevel = 4;
+#endif // DEBUG
+
+
+
 	OutputRatios::setBaseOutputWeights(
 		getBugOptionINT("CityScreen__BaseWeightFood", 10),
 		getBugOptionINT("CityScreen__BaseWeightHammer", 8),

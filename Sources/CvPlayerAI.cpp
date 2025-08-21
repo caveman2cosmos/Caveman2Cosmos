@@ -11698,7 +11698,7 @@ int CvPlayerAI::AI_unitValue(UnitTypes eUnit, UnitAITypes eUnitAI, const CvArea*
 		{
 			strCriteria = criteria->getDescription();
 		}
-		logAiEvaluations(2, "AI Player %d evaluate Value for unit %S as type %S and criteria (%S), combat value %d, moves %d, Calculated value %d", getID(), strUnitType.c_str(), strUnitAIType.c_str(), strCriteria.c_str(), iCombatValue*100, kUnitInfo.getMoves(), iValue*100);
+		logAiEvaluations(3, "AI Player %d evaluate Value for unit %S as type %S and criteria (%S), combat value %d, moves %d, Calculated value %d", getID(), strUnitType.c_str(), strUnitAIType.c_str(), strCriteria.c_str(), iCombatValue*100, kUnitInfo.getMoves(), iValue*100);
 	}
 
 
@@ -28677,7 +28677,7 @@ int CvPlayerAI::AI_promotionValue(PromotionTypes ePromotion, UnitTypes eUnit, co
 		if ((eUnitAI == UNITAI_SEE_INVISIBLE) ||
 			(eUnitAI == UNITAI_SEE_INVISIBLE_SEA))
 		{
-			iValue += (iTemp * 50);
+			iValue += (iTemp * 100); //50
 		}
 		else if ((eUnitAI == UNITAI_EXPLORE_SEA) ||
 			(eUnitAI == UNITAI_EXPLORE))
@@ -31726,12 +31726,28 @@ int CvPlayerAI::AI_promotionValue(PromotionTypes ePromotion, UnitTypes eUnit, co
 	{
 		iValue = std::max(1, iValue);
 	}
-
+	int iRandom = 0;
 	if (pUnit != NULL && iValue > 0 && !bForBuildUp)
 	{
 		//GC.getGame().logOOSSpecial(2,iValue, pUnit->getID());
-		iValue += GC.getGame().getSorenRandNum(25, "AI Unit Promote");
+		iRandom = int(50) + (iValue / 10); //Calvitix introduce more Random for High Values
+		iRandom = GC.getGame().getSorenRandNum(iRandom, "AI Unit Promote");
 	}
+
+	if (pUnit != NULL && !bForBuildUp && gUnitLogLevel > 3)
+	{
+		CvWString StrunitAIType = GC.getUnitAIInfo(pUnit->AI_getUnitAIType()).getType();
+		logAiEvaluations(2, "	Player %S, PromotionEval for Unit %S of type %S - %S : Value : %d, Random %d", this->getPlayer, pUnit->getName(0).GetCString(), StrunitAIType.GetCString(), GC.getPromotionInfo(ePromotion).getDescription(), iValue, iRandom);
+	}
+	else if ((pUnit != NULL && bForBuildUp && gUnitLogLevel > 3))
+	{
+		CvWString StrunitAIType = GC.getUnitAIInfo(pUnit->AI_getUnitAIType()).getType();
+		logAiEvaluations(2, "	Player %S, BuildUpEval for Unit %S of type %S - %S : Value : %d, Random %d", this->getPlayer, pUnit->getName(0).GetCString(), StrunitAIType.GetCString(), GC.getPromotionInfo(ePromotion).getDescription(), iValue, iRandom);
+	}
+
+	iValue += iRandom;
+
+
 
 	return iValue;
 }

@@ -3743,6 +3743,9 @@ UnitTypes CvCityAI::AI_bestUnit(int& iBestUnitValue, int iNumSelectableTypes, Un
 
 	int iBestValue = 0;
 	UnitTypes eBestUnit = NO_UNIT;
+	CvWString strUnitAIType;
+	CvWString strUnitAITypeWeight;
+	CvWString strUnitType;
 
 	for (int iI = 0; iI < NUM_UNITAI_TYPES; iI++)
 	{
@@ -3779,6 +3782,21 @@ UnitTypes CvCityAI::AI_bestUnit(int& iBestUnitValue, int iNumSelectableTypes, Un
 				if (aiUnitAIVal[iI] < iBestValue)
 				{
 					bValid = false;
+					//TODOLogLevel
+					if (gCityLogLevel > 3)
+					{
+						strUnitAITypeWeight = GC.getUnitAIInfo((UnitAITypes)iI).getType();
+						logAiEvaluations(2, "City %S, lower prio for UnitAI %S, skipping, UnitAI value %d, best UnitAI value %d", getName().GetCString(), strUnitAIType.c_str(), strUnitType.c_str(), aiUnitAIVal[iI], iBestValue);
+					}
+				}
+				else
+				{
+					//TODOLogLevel
+					if (gCityLogLevel > 3)
+					{
+						strUnitAITypeWeight = GC.getUnitAIInfo((UnitAITypes)iI).getType();
+						logAiEvaluations(2, "City %S, AiWeight for UnitAI %S is valid, UnitAI value %d, best last UnitAI value %d", getName().GetCString(), strUnitAIType.c_str(), strUnitType.c_str(), aiUnitAIVal[iI], iBestValue);
+					}
 				}
 			}
 
@@ -3796,18 +3814,36 @@ UnitTypes CvCityAI::AI_bestUnit(int& iBestUnitValue, int iNumSelectableTypes, Un
 					if (peBestUnitAI != NULL)
 					{
 						*peBestUnitAI = ((UnitAITypes)iI);
-						//TODOLogLevel
-						if (gCityLogLevel > 2)
-						{
-							const CvWString strUnitType = GC.getUnitInfo(eUnit).getType();
-							const CvWString strUnitAIType = GC.getUnitAIInfo((UnitAITypes)iI).getType();
-							logAiEvaluations(2, "City %S, Better AI Unit chosen for %S, type %S, %S, unit final value %d, best value %d", getName().GetCString(), strUnitAIType.c_str(), strUnitType.c_str(), GC.getUnitInfo(eUnit).getDescription(), iUnitValue, iBestValue);
-						}
-
 					}
+					//TODOLogLevel
+					if (gCityLogLevel > 2)
+					{
+						strUnitType = GC.getUnitInfo(eUnit).getType();
+						strUnitAIType = GC.getUnitAIInfo((UnitAITypes)iI).getType();
+						logAiEvaluations(2, "City %S, Better AI Unit chosen for %S, type %S, %S, unit final value %d, best value %d", getName().GetCString(), strUnitAIType.c_str(), strUnitType.c_str(), GC.getUnitInfo(eUnit).getDescription(), iUnitValue, iBestValue);
+					}
+					
 					iBestUnitValue = iUnitValue;
 				}
 			}
+		}
+	}
+	//TODOLogLevel
+	if (gCityLogLevel > 2)
+	{
+		CvWString strCriteria = "None";
+		if (criteria != NULL)
+		{
+			strCriteria = criteria->getDescription();
+		}
+		if (eBestUnit == NO_UNIT)
+		{
+
+			logAiEvaluations(2, "City %S, At the End, No Unit found that meet criteria (%S) in All UNITAI List.", getName().GetCString(), strCriteria.GetCString());
+		}
+		else
+		{
+			logAiEvaluations(2, "City %S, At the End, Unit chosen for %S and criteria (%S), type %S, %S, with value %d", getName().GetCString(), strUnitAIType.c_str(), strCriteria.GetCString(), strUnitType.c_str(), GC.getUnitInfo(eBestUnit).getDescription(), iBestValue);
 		}
 	}
 
@@ -3825,12 +3861,20 @@ UnitTypes CvCityAI::AI_bestUnitAI(UnitAITypes eUnitAI, int& iBestValue, bool bAs
 	{
 		const CvWString strUnitType = GC.getUnitAIInfo(eUnitAI).getType();
 		CvWString strCriteria = "None";
+		bool display = true;
 		if (criteria != NULL)
 		{
 			strCriteria = criteria->getDescription();
+			if (criteria->m_bIgnoreGrowth)
+			{
+				display = false;
+				logAiEvaluations(4, "City %S, AI_bestUnitAI searching for %S ... - criteria %S - to evaluate Danger", getName().GetCString(), strUnitType.c_str(), strCriteria.GetCString());
+			}
 		}
-		
-		logAiEvaluations(2, "City %S, AI_bestUnitAI searching for %S ... - criteria %S", getName().GetCString(), strUnitType.c_str() , strCriteria.GetCString());
+		if (display)
+		{
+			logAiEvaluations(2, "City %S, AI_bestUnitAI searching for %S ... - criteria %S", getName().GetCString(), strUnitType.c_str(), strCriteria.GetCString());
+		}
 	}
 
 
@@ -3882,7 +3926,7 @@ UnitTypes CvCityAI::AI_bestUnitAI(UnitAITypes eUnitAI, int& iBestValue, bool bAs
 			iBestValue = itr->second.iValue;
 			eBestUnit = itr->second.eUnit;
 
-			if (gCityLogLevel > 3) //deactivate
+			if (gCityLogLevel > 3) //add a Level4 Trace Logs
 			{
 				const CvWString strUnitType = GC.getUnitInfo(eBestUnit).getType();
 				const CvWString strUnitAIType = GC.getUnitAIInfo(eUnitAI).getType();
@@ -4003,11 +4047,24 @@ UnitTypes CvCityAI::AI_bestUnitAI(UnitAITypes eUnitAI, int& iBestValue, bool bAs
 				iBestValue = iValue;
 				eBestUnit = eUnitX;
 
-				if (gCityLogLevel > 2)
+				if (gCityLogLevel > 3)
 				{
 					const CvWString strUnitType = GC.getUnitInfo(eUnitX).getType();
 					const CvWString strUnitAIType = GC.getUnitAIInfo(eUnitAI).getType();
-					logAiEvaluations(2, "City %S, Better AI Unit found for %S, type %S, %S, base value %d, final value %d", getName().GetCString(), strUnitAIType.c_str(), strUnitType.c_str(), GC.getUnitInfo(eUnitX).getDescription(), iBaseValue*100, iValue);
+					CvWString strCriteria = "None";
+					bool display = true;
+					if (criteria != NULL)
+					{
+						strCriteria = criteria->getDescription();
+						if (criteria->m_bIgnoreGrowth)
+						{
+							display = false;
+						}
+					}
+					if (display)
+					{
+						logAiEvaluations(2, "City %S, Better AI Unit found for %S and criteria %S, type %S, %S, base value %d, final value %d", getName().GetCString(), strUnitAIType.c_str(), strCriteria.GetCString(), strUnitType.c_str(), GC.getUnitInfo(eUnitX).getDescription(), iBaseValue * 100, iValue);
+					}
 				}
 
 
@@ -14823,7 +14880,11 @@ bool CvCityAI::AI_establishSeeInvisibleCoverage()
 					logAiEvaluations(2, "City %S, Not enough 'UNITAI_SEE_INVISIBLE' (for visibility : %S) here : responders %d, active %d", getName().GetCString(), szDesc.GetCString(), iResponders, iActiveResponders);
 				}
 				//end result
-				if (AI_chooseUnit("See Invisible needed", UNITAI_SEE_INVISIBLE, -1, -1, -1, &criteria))
+
+				//Calvitix Test. demand an See Invisible only in 20% of cases
+				int irandomaction = GC.getGame().getSorenRandNum(10, "AI See Invisible Invoqued");
+
+				if (irandomaction > 7 && AI_chooseUnit("See Invisible needed", UNITAI_SEE_INVISIBLE, -1, -1, -1, &criteria))
 				{
 					if (gCityLogLevel > 2)
 					{
@@ -14833,6 +14894,17 @@ bool CvCityAI::AI_establishSeeInvisibleCoverage()
 					}
 					return true;
 				}
+				else if (irandomaction <= 7)
+				{
+					if (gCityLogLevel > 2)
+					{
+						CvWString szDesc = GC.getInvisibleInfo(eVisible).getDescription();
+						CvWString szDesccriteria = criteria.getDescription();
+						logAiEvaluations(2, "City %S, Unit for 'UNITAI_SEE_INVISIBLE' (for visibility : %S) , criteria : %S, needed, but random fail.", getName().GetCString(), szDesc.GetCString(), szDesccriteria.GetCString());
+					}
+
+				}
+
 			}
 			else
 			{

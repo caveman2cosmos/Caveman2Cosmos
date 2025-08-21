@@ -859,9 +859,14 @@ bool CvUnitAI::AI_promote()
 	{
 		if (gUnitLogLevel > 2)
 		{
-			CvWString szString;
-			getUnitAIString(szString, AI_getUnitAIType());
+			CvWString StrunitAIType = GC.getUnitAIInfo(AI_getUnitAIType()).getType();
+			CvWString StrUnitName = m_szName;
+			if (StrUnitName.length() == 0)
+			{
+				StrUnitName = getName(0).GetCString();
+			}
 			logBBAI("	%S's %S chooses promotion %S", GET_PLAYER(getOwner()).getCivilizationDescription(0), getName(0).GetCString(), GC.getPromotionInfo(eBestPromotion).getDescription());
+			logAiEvaluations(2,"	Player %S Unit %S of type %S - chooses promotion %S", GET_PLAYER(getOwner()).getCivilizationDescription(0), StrUnitName.GetCString(), StrunitAIType.GetCString(), GC.getPromotionInfo(eBestPromotion).getDescription());
 		}
 
 		if (promote(eBestPromotion, -1))
