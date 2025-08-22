@@ -1,14 +1,15 @@
 ## Sid Meier's Civilization 4
 ## Copyright Firaxis Games 2005
+from collections.abc import Sequence
 
 # Class to decipher and make screen input easy to read...
 class ScreenInput:
 
 	# Init call...
 	def __init__ (self, argsList):
-		# Bounds checking - ensure we have enough arguments
-		if not isinstance(argsList, (list, tuple)):
-			raise TypeError("argsList must be a list or tuple")
+		# Bounds checking - ensure we have a non-string sequence with enough elements
+		if not isinstance(argsList, Sequence) or isinstance(argsList, (str, bytes)):
+			raise TypeError("argsList must be a non-string Sequence")
 		
 		if len(argsList) < 15:
 			raise ValueError(f"argsList must contain at least 15 elements, got {len(argsList)}")
@@ -48,12 +49,13 @@ class ScreenInput:
 
 	# Helper method for integer validation  
 	def _validate_integer(self, value, field_name):
+		from numbers import Integral, Real
 		"""Validate that a value is an integer, explicitly rejecting booleans"""
 		if isinstance(value, bool):
 			raise ValueError(f"{field_name} must be an integer, not a boolean. Got {value}")
-		elif isinstance(value, int):
-			return value
-		elif isinstance(value, float) and value.is_integer():
+		elif isinstance(value, Integral):
+			return int(value)
+		elif isinstance(value, Real) and isinstance(value, float) and value.is_integer():
 			return int(value)
 		else:
 			raise TypeError(f"{field_name} must be an integer, got {type(value).__name__}: {value}")
