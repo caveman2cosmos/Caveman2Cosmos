@@ -1,5 +1,6 @@
 ## Sid Meier's Civilization 4
 ## Copyright Firaxis Games 2005
+## C2C
 try:
 	from collections.abc import Sequence
 except ImportError:
