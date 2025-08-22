@@ -1,6 +1,15 @@
 ## Sid Meier's Civilization 4
 ## Copyright Firaxis Games 2005
-from collections.abc import Sequence
+try:
+	from collections.abc import Sequence
+except ImportError:
+	Sequence = None
+
+# Optional numpy integer support
+try:
+	from numbers import Integral
+except ImportError:
+	Integral = int
 
 # Class to decipher and make screen input easy to read...
 class ScreenInput:
@@ -8,8 +17,15 @@ class ScreenInput:
 	# Init call...
 	def __init__ (self, argsList):
 		# Bounds checking - ensure we have a non-string sequence with enough elements
-		if not isinstance(argsList, Sequence) or isinstance(argsList, (str, bytes)):
-			raise TypeError("argsList must be a non-string Sequence")
+		# Prefer ABC when available; otherwise duck-type (__len__ and __getitem__).
+		if isinstance(argsList, (str, bytes)):
+			raise TypeError("argsList must be a non-string sequence (str/bytes are not allowed)")
+		if Sequence is not None:
+			if not isinstance(argsList, Sequence):
+				raise TypeError(f"argsList must be a non-string sequence, got {type(argsList).__name__}")
+		else:
+			if not (hasattr(argsList, "__len__") and hasattr(argsList, "__getitem__")):
+				raise TypeError(f"argsList must be a non-string sequence, got {type(argsList).__name__}")
 		
 		if len(argsList) < 15:
 			raise ValueError(f"argsList must contain at least 15 elements, got {len(argsList)}")
@@ -49,13 +65,12 @@ class ScreenInput:
 
 	# Helper method for integer validation  
 	def _validate_integer(self, value, field_name):
-		from numbers import Integral, Real
 		"""Validate that a value is an int or an integer-like float (e.g., 3.0), explicitly rejecting booleans."""
 		if isinstance(value, bool):
 			raise ValueError(f"{field_name} must be an integer, not a boolean. Got {value}")
 		elif isinstance(value, Integral):
 			return int(value)
-		elif isinstance(value, Real) and isinstance(value, float):
+		elif isinstance(value, float):
 			if value.is_integer():
 				return int(value)
 			# float is an acceptable type here, but the value is not an integer
