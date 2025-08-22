@@ -1,6 +1,5 @@
 ## Sid Meier's Civilization 4
 ## Copyright Firaxis Games 2005
-## C2C
 try:
 	from collections.abc import Sequence
 except ImportError:
@@ -23,13 +22,13 @@ class ScreenInput:
 			raise TypeError("argsList must be a non-string sequence (str/bytes are not allowed)")
 		if Sequence is not None:
 			if not isinstance(argsList, Sequence):
-				raise TypeError(f"argsList must be a non-string sequence, got {type(argsList).__name__}")
+				raise TypeError("argsList must be a non-string sequence, got %s" % type(argsList).__name__)
 		else:
 			if not (hasattr(argsList, "__len__") and hasattr(argsList, "__getitem__")):
-				raise TypeError(f"argsList must be a non-string sequence, got {type(argsList).__name__}")
+				raise TypeError("argsList must be a non-string sequence, got %s" % type(argsList).__name__)
 		
 		if len(argsList) < 15:
-			raise ValueError(f"argsList must contain at least 15 elements, got {len(argsList)}")
+			raise ValueError("argsList must contain at least 15 elements, got %d" % len(argsList))
 		
 		# Basic assignments with bounds safety
 		self.eNotifyCode = argsList[0]
@@ -62,22 +61,22 @@ class ScreenInput:
 		elif isinstance(value, int) and value in (0, 1):
 			return bool(value)
 		else:
-			raise TypeError(f"{field_name} must be a boolean or integer 0/1, got {type(value).__name__}: {value}")
+			raise TypeError("%s must be a boolean or integer 0/1, got %s: %s" % (field_name, type(value).__name__, value))
 
 	# Helper method for integer validation  
 	def _validate_integer(self, value, field_name):
 		"""Validate that a value is an int or an integer-like float (e.g., 3.0), explicitly rejecting booleans."""
 		if isinstance(value, bool):
-			raise ValueError(f"{field_name} must be an integer, not a boolean. Got {value}")
+			raise ValueError("%s must be an integer, not a boolean. Got %s" % (field_name, value))
 		elif isinstance(value, Integral):
 			return int(value)
 		elif isinstance(value, float):
 			if value.is_integer():
 				return int(value)
 			# float is an acceptable type here, but the value is not an integer
-			raise ValueError(f"{field_name} must be an integer; got non-integer float: {value}")
+			raise ValueError("%s must be an integer; got non-integer float: %s" % (field_name, value))
 		else:
-			raise TypeError(f"{field_name} must be an integer or integer-like float, got {type(value).__name__}: {value}")
+			raise TypeError("%s must be an integer or integer-like float, got %s: %s" % (field_name, type(value).__name__, value))
 
 	# NotifyCode
 	def getNotifyCode (self):
