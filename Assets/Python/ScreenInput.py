@@ -1,139 +1,142 @@
 ## Sid Meier's Civilization 4
 ## Copyright Firaxis Games 2005
 try:
-	from collections.abc import Sequence
+    from collections.abc import Sequence
 except ImportError:
-	Sequence = None
+    Sequence = None
 
 # Optional numpy integer support
 try:
-	from numbers import Integral
+    from numbers import Integral
 except ImportError:
-	Integral = int
+    Integral = int
+
 
 # Class to decipher and make screen input easy to read...
 class ScreenInput:
 
-	# Init call...
-	def __init__ (self, argsList):
-		# Bounds checking - ensure we have a non-string sequence with enough elements
-		# Prefer ABC when available; otherwise duck-type (__len__ and __getitem__).
-		if isinstance(argsList, (str, bytes)):
-			raise TypeError("argsList must be a non-string sequence (str/bytes are not allowed)")
-		if Sequence is not None:
-			if not isinstance(argsList, Sequence):
-				raise TypeError("argsList must be a non-string sequence, got %s" % type(argsList).__name__)
-		else:
-			if not (hasattr(argsList, "__len__") and hasattr(argsList, "__getitem__")):
-				raise TypeError("argsList must be a non-string sequence, got %s" % type(argsList).__name__)
-		
-		if len(argsList) < 15:
-			raise ValueError("argsList must contain at least 15 elements, got %d" % len(argsList))
-		
-		# Basic assignments with bounds safety
-		self.eNotifyCode = argsList[0]
-		self.iData = argsList[1]
-		self.uiFlags = argsList[2]
-		self.iItemID = argsList[3]
-		self.ePythonFileEnum = argsList[4]
-		self.szFunctionName = argsList[5]
-		
-		# Type validation for critical boolean fields
-		self.bShift = self._validate_boolean(argsList[6], "bShift")
-		self.bCtrl = self._validate_boolean(argsList[7], "bCtrl")
-		self.bAlt = self._validate_boolean(argsList[8], "bAlt")
-		
-		# Type validation for critical integer fields
-		self.iMouseX = self._validate_integer(argsList[9], "iMouseX")
-		self.iMouseY = self._validate_integer(argsList[10], "iMouseY")
-		self.iButtonType = self._validate_integer(argsList[11], "iButtonType")
-		self.iData1 = self._validate_integer(argsList[12], "iData1")
-		self.iData2 = self._validate_integer(argsList[13], "iData2")
-		
-		# Final boolean field
-		self.bOption = self._validate_boolean(argsList[14], "bOption")
+    # Init call...
+    def __init__(self, argsList):
+        # Bounds checking - ensure we have a non-string sequence with enough elements
+        # Prefer ABC when available; otherwise duck-type (__len__ and __getitem__).
+        if isinstance(argsList, (str, bytes)):
+            raise TypeError("argsList must be a non-string sequence (str/bytes are not allowed)")
+        if Sequence is not None:
+            if not isinstance(argsList, Sequence):
+                raise TypeError("argsList must be a non-string sequence, got %s" % type(argsList).__name__)
+        else:
+            if not (hasattr(argsList, "__len__") and hasattr(argsList, "__getitem__")):
+                raise TypeError("argsList must be a non-string sequence, got %s" % type(argsList).__name__)
 
-	# Helper method for boolean validation
-	def _validate_boolean(self, value, field_name):
-		"""Validate that a value is boolean, with fallback for integer 0/1"""
-		if isinstance(value, bool):
-			return value
-		elif isinstance(value, int) and value in (0, 1):
-			return bool(value)
-		else:
-			raise TypeError("%s must be a boolean or integer 0/1, got %s: %s" % (field_name, type(value).__name__, value))
+        if len(argsList) < 15:
+            raise ValueError("argsList must contain at least 15 elements, got %d" % len(argsList))
 
-	# Helper method for integer validation  
-	def _validate_integer(self, value, field_name):
-		"""Validate that a value is an int or an integer-like float (e.g., 3.0), explicitly rejecting booleans."""
-		if isinstance(value, bool):
-			raise ValueError("%s must be an integer, not a boolean. Got %s" % (field_name, value))
-		elif isinstance(value, Integral):
-			return int(value)
-		elif isinstance(value, float):
-			if value.is_integer():
-				return int(value)
-			# float is an acceptable type here, but the value is not an integer
-			raise ValueError("%s must be an integer; got non-integer float: %s" % (field_name, value))
-		else:
-			raise TypeError("%s must be an integer or integer-like float, got %s: %s" % (field_name, type(value).__name__, value))
+        # Basic assignments with bounds safety
+        self.eNotifyCode = argsList[0]
+        self.iData = argsList[1]
+        self.uiFlags = argsList[2]
+        self.iItemID = argsList[3]
+        self.ePythonFileEnum = argsList[4]
+        self.szFunctionName = argsList[5]
 
-	# NotifyCode
-	def getNotifyCode (self):
-		return self.eNotifyCode
+        # Type validation for critical boolean fields
+        self.bShift = self._validate_boolean(argsList[6], "bShift")
+        self.bCtrl = self._validate_boolean(argsList[7], "bCtrl")
+        self.bAlt = self._validate_boolean(argsList[8], "bAlt")
 
-	# Data
-	def getData (self):
-		return self.iData
+        # Type validation for critical integer fields
+        self.iMouseX = self._validate_integer(argsList[9], "iMouseX")
+        self.iMouseY = self._validate_integer(argsList[10], "iMouseY")
+        self.iButtonType = self._validate_integer(argsList[11], "iButtonType")
+        self.iData1 = self._validate_integer(argsList[12], "iData1")
+        self.iData2 = self._validate_integer(argsList[13], "iData2")
 
-	# Flags
-	def getFlags (self):
-		return self.uiFlags
+        # Final boolean field
+        self.bOption = self._validate_boolean(argsList[14], "bOption")
 
-	# Item ID
-	def getID (self):
-		return self.iItemID
+    # Helper method for boolean validation
+    def _validate_boolean(self, value, field_name):
+        """Validate that a value is boolean, with fallback for integer 0/1"""
+        if isinstance(value, bool):
+            return value
+        elif isinstance(value, int) and value in (0, 1):
+            return bool(value)
+        else:
+            raise TypeError(
+                "%s must be a boolean or integer 0/1, got %s: %s" % (field_name, type(value).__name__, value))
 
-	# Python File
-	def getPythonFile (self):
-		return self.ePythonFileEnum
+    # Helper method for integer validation
+    def _validate_integer(self, value, field_name):
+        """Validate that a value is an int or an integer-like float (e.g., 3.0), explicitly rejecting booleans."""
+        if isinstance(value, bool):
+            raise ValueError("%s must be an integer, not a boolean. Got %s" % (field_name, value))
+        elif isinstance(value, Integral):
+            return int(value)
+        elif isinstance(value, float):
+            if value.is_integer():
+                return int(value)
+            # float is an acceptable type here, but the value is not an integer
+            raise ValueError("%s must be an integer; got non-integer float: %s" % (field_name, value))
+        else:
+            raise TypeError(
+                "%s must be an integer or integer-like float, got %s: %s" % (field_name, type(value).__name__, value))
 
-	# Function Name...
-	def getFunctionName (self):
-		return self.szFunctionName
+    # NotifyCode
+    def getNotifyCode(self):
+        return self.eNotifyCode
 
-	# Shift Key Down
-	def isShiftKeyDown (self):
-		return self.bShift
+    # Data
+    def getData(self):
+        return self.iData
 
-	# Ctrl Key Down
-	def isCtrlKeyDown (self):
-		return self.bCtrl
+    # Flags
+    def getFlags(self):
+        return self.uiFlags
 
-	# Alt Key Down
-	def isAltKeyDown (self):
-		return self.bAlt
+    # Item ID
+    def getID(self):
+        return self.iItemID
 
-	# X location of the mouse cursor
-	def getMouseX (self):
-		return self.iMouseX
+    # Python File
+    def getPythonFile(self):
+        return self.ePythonFileEnum
 
-	# Y location of the mouse cursor
-	def getMouseY (self):
-		return self.iMouseY
+    # Function Name...
+    def getFunctionName(self):
+        return self.szFunctionName
 
-	# WidgetType
-	def getButtonType (self):
-		return self.iButtonType
+    # Shift Key Down
+    def isShiftKeyDown(self):
+        return self.bShift
 
-	# Widget Data 1
-	def getData1 (self):
-		return self.iData1
+    # Ctrl Key Down
+    def isCtrlKeyDown(self):
+        return self.bCtrl
 
-	# Widget Data 2
-	def getData2 (self):
-		return self.iData2
+    # Alt Key Down
+    def isAltKeyDown(self):
+        return self.bAlt
 
-	# Widget Option
-	def getOption (self):
-		return self.bOption
+    # X location of the mouse cursor
+    def getMouseX(self):
+        return self.iMouseX
+
+    # Y location of the mouse cursor
+    def getMouseY(self):
+        return self.iMouseY
+
+    # WidgetType
+    def getButtonType(self):
+        return self.iButtonType
+
+    # Widget Data 1
+    def getData1(self):
+        return self.iData1
+
+    # Widget Data 2
+    def getData2(self):
+        return self.iData2
+
+    # Widget Option
+    def getOption(self):
+        return self.bOption
