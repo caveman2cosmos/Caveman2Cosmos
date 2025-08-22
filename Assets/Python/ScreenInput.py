@@ -48,8 +48,10 @@ class ScreenInput:
 
 	# Helper method for integer validation  
 	def _validate_integer(self, value, field_name):
-		"""Validate that a value is an integer"""
-		if isinstance(value, int):
+		"""Validate that a value is an integer, explicitly rejecting booleans"""
+		if isinstance(value, bool):
+			raise ValueError(f"{field_name} must be an integer, not a boolean. Got {value}")
+		elif isinstance(value, int):
 			return value
 		elif isinstance(value, float) and value.is_integer():
 			return int(value)
