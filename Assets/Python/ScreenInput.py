@@ -50,15 +50,18 @@ class ScreenInput:
 	# Helper method for integer validation  
 	def _validate_integer(self, value, field_name):
 		from numbers import Integral, Real
-		"""Validate that a value is an integer, explicitly rejecting booleans"""
+		"""Validate that a value is an int or an integer-like float (e.g., 3.0), explicitly rejecting booleans."""
 		if isinstance(value, bool):
 			raise ValueError(f"{field_name} must be an integer, not a boolean. Got {value}")
 		elif isinstance(value, Integral):
 			return int(value)
-		elif isinstance(value, Real) and isinstance(value, float) and value.is_integer():
-			return int(value)
+		elif isinstance(value, Real) and isinstance(value, float):
+			if value.is_integer():
+				return int(value)
+			# float is an acceptable type here, but the value is not an integer
+			raise ValueError(f"{field_name} must be an integer; got non-integer float: {value}")
 		else:
-			raise TypeError(f"{field_name} must be an integer, got {type(value).__name__}: {value}")
+			raise TypeError(f"{field_name} must be an integer or integer-like float, got {type(value).__name__}: {value}")
 
 	# NotifyCode
 	def getNotifyCode (self):
