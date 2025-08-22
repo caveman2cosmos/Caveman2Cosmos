@@ -1274,6 +1274,9 @@
 			<PrereqOrHeritage>
 				<Type>HERITAGE_TAXON_SUIDAE</Type>
 				<Type>HERITAGE_TAXON_ELEPHANTIDAE</Type>
+				<Type>HERITAGE_TAXON_TAPIRIDAE</Type>	
+				<Type>HERITAGE_TAXON_HIPPOPOTAMIDAE</Type>	
+				<Type>HERITAGE_TAXON_MONOTREMATA</Type>	
 			</PrereqOrHeritage>
 			<ConstructCondition>
 				<Or>
@@ -1288,6 +1291,10 @@
 					<Has>
 						<GOMType>GOM_BUILDING</GOMType>
 						<ID>BUILDING_FOLKLORE_T_RHINOCEROSES</ID>
+					</Has>
+					<Has>
+						<GOMType>GOM_BUILDING</GOMType>
+						<ID>BUILDING_FOLKLORE_T_BULL</ID>
 					</Has>
 				</Or>
 			</ConstructCondition>
@@ -2625,6 +2632,8 @@
 			</PrereqOrBuildings>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_FOLKLORE_T_OLD_MAN_OF_THE_FOREST</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_T_OLD_WORLD_MONKEYS</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_T_NEW_WORLD_MONKEYS</BuildingType>
 			</PrereqInCityBuildings>
 			<iCost>306</iCost>
 			<iCostSizeModifier>1</iCostSizeModifier>
