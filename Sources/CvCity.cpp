@@ -15413,9 +15413,9 @@ void CvCity::pushOrder(OrderTypes eOrder, int iData1, int iData2, bool bSave, bo
 				setUnitListInvalid();
 				if (gCityLogLevel >= 1)
 				{
-					CvWString szString;
-					getUnitAIString(szString, order.getUnitAIType());
-					logBBAI("    City %S pushes production of unit %S for type UNITAI_%S", getName().GetCString(), GC.getUnitInfo(unitType).getDescription(getCivilizationType()), szString.GetCString());
+					
+					const CvWString szStringUnitAi = GC.getUnitAIInfo(order.getUnitAIType()).getType();
+					logBBAI("    City %S pushes production of unit %S for type %S", getName().GetCString(), GC.getUnitInfo(unitType).getDescription(getCivilizationType()), szStringUnitAi.GetCString());
 				}
 				bValid = true;
 			}
@@ -15716,9 +15716,8 @@ void CvCity::popOrder(int orderIndex, bool bFinish, bool bChoose, bool bResolveL
 				{
 					if (gCityLogLevel >= 1)
 					{
-						CvWString szString;
-						getUnitAIString(szString, pUnit->AI_getUnitAIType());
-						logBBAI("    City %S finishes production of unit %S with UNITAI %S", getName().GetCString(), pUnit->getName(0).GetCString(), szString.GetCString());
+						const CvWString szStringUnitAi = GC.getUnitAIInfo(pUnit->AI_getUnitAIType()).getType();
+						logBBAI("    City %S finishes production of unit %S for Type %S", getName().GetCString(), pUnit->getName(0).GetCString(), szStringUnitAi.GetCString());
 					}
 
 					if (GC.getUnitInfo(eTrainUnit).getDomainType() == DOMAIN_AIR)

@@ -11575,7 +11575,7 @@ int CvPlayerAI::AI_unitValue(UnitTypes eUnit, UnitAITypes eUnitAI, const CvArea*
 				{
 					if (GC.getGame().isOption(GAMEOPTION_COMBAT_HIDE_SEEK))
 					{
-						iValue += kUnitInfo.getVisibilityIntensityType(eVisibilityRequested);
+						iValue *= kUnitInfo.getVisibilityIntensityType(eVisibilityRequested);
 					}
 					else
 					{
@@ -21592,10 +21592,8 @@ bool CvPlayerAI::AI_disbandUnit(int iExpThreshold)
 	{
 		if (gPlayerLogLevel >= 2)
 		{
-			CvWString szString;
-			getUnitAIString(szString, pBestUnit->AI_getUnitAIType());
-
-			logBBAI("	Player %d (%S) disbanding %S with UNITAI %S to save cash", getID(), getCivilizationDescription(0), pBestUnit->getName().GetCString(), szString.GetCString());
+			const CvWString szStringUnitAi = GC.getUnitAIInfo(pBestUnit->AI_getUnitAIType()).getType();
+			logBBAI("	Player %d (%S) disbanding %S with UNITAI %S to save cash", getID(), getCivilizationDescription(0), pBestUnit->getName().GetCString(), szStringUnitAi.GetCString());
 		}
 		pBestUnit->kill(false);
 		return true;
@@ -31730,8 +31728,12 @@ int CvPlayerAI::AI_promotionValue(PromotionTypes ePromotion, UnitTypes eUnit, co
 	if (pUnit != NULL && iValue > 0 && !bForBuildUp)
 	{
 		//GC.getGame().logOOSSpecial(2,iValue, pUnit->getID());
-		iRandom = int(50) + (iValue / 10); //Calvitix introduce more Random for High Values
-		iRandom = GC.getGame().getSorenRandNum(iRandom, "AI Unit Promote");
+		int iRandomRange = (int(50) + (iValue / 10)); //Calvitix introduce more Random for High Values
+		iRandom = GC.getGame().getSorenRandNum(iRandomRange, "AI Unit Promote");
+		if (iValue > 75)
+		{ //to permit the lower of value with random
+			iRandom -= iRandomRange / 2;
+		}
 	}
 
 	if (pUnit != NULL && !bForBuildUp && gUnitLogLevel > 3)

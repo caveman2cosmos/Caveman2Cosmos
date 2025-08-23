@@ -26,6 +26,57 @@ public:
 	void AI_reset(bool bConstructor);
 
 	void AI_doTurnPre();
+
+	/**
+	 * \brief Perform post-turn AI actions for the team.
+	 *
+	 * This function is called at the end of the team's turn to update
+	 * strategic evaluations and possibly execute war actions.
+	 *
+	 * The sequence of operations is as follows:
+	 * 1. Update the team's worst enemy based on current game state.
+	 * 2. Update area strategies, without forcing updates on all areas.
+	 * 3. If the team is human-controlled, NPC, or a minor civilization, exit early.
+	 * 4. Execute war-related AI decisions if applicable.
+	 *
+	 * \note
+	 * - Calls `AI_updateWorstEnemy()` to refresh the enemy evaluation.
+	 * - Calls `AI_updateAreaStragies(false)` to update area-specific strategies.
+	 * - Calls `AI_doWar()` to carry out attacks or military moves for the team.
+	 *
+	 * \see CvTeamAI::AI_updateWorstEnemy()
+	 * \see CvTeamAI::AI_updateAreaStragies()
+	 * \see CvTeamAI::AI_doWar()
+	 *
+	 * \dot
+		digraph AI_doTurnPost {
+			rankdir=TB;  // vertical layout
+			bgcolor="#ffffff";  // white background
+
+			// Default node style
+			node [shape=box, style=filled, fontname="Arial", fontsize=10, color="#555555", fillcolor="#f9f9f9", penwidth=1.5];
+
+			// Default edge style
+			edge [color="#5555aa", penwidth=1.5, arrowsize=1];
+
+			// Nodes
+			Start [label="Start AI_doTurnPost", fillcolor="#cde8ff"];
+			UpdateWorstEnemy [label="AI_updateWorstEnemy()"];
+			UpdateAreaStrategies [label="AI_updateAreaStragies(false)"];
+			CheckHumanNPCMinor [label="isHuman() || isNPC() || isMinorCiv?", shape=diamond, fillcolor="#ffd7d7"];
+			ReturnIfHuman [label="Return (skip AI war)", fillcolor="#eeeeee"];
+			DoWar [label="AI_doWar()", fillcolor="#d7ffd7"];
+			End [label="End AI_doTurnPost", fillcolor="#cde8ff"];
+
+			// Flow
+			Start -> UpdateWorstEnemy -> UpdateAreaStrategies -> CheckHumanNPCMinor;
+			CheckHumanNPCMinor -> ReturnIfHuman [label="Yes"];
+			CheckHumanNPCMinor -> DoWar [label="No"];
+			ReturnIfHuman -> End;
+			DoWar -> End;
+		}
+	 * \enddot
+	 */
 	void AI_doTurnPost();
 
 	void AI_makeAssignWorkDirty();

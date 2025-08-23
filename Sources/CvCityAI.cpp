@@ -3861,10 +3861,11 @@ UnitTypes CvCityAI::AI_bestUnitAI(UnitAITypes eUnitAI, int& iBestValue, bool bAs
 	{
 		const CvWString strUnitType = GC.getUnitAIInfo(eUnitAI).getType();
 		CvWString strCriteria = "None";
-		bool display = true;
+		bool display = false;
 		if (criteria != NULL)
 		{
 			strCriteria = criteria->getDescription();
+			display = true;
 			if (criteria->m_bIgnoreGrowth)
 			{
 				display = false;
@@ -14426,12 +14427,12 @@ bool CvCityAI::AI_choosePropertyControlUnit(int iTriggerPercentOfPropertyOpRange
 			if (GC.getPropertyInfo(eProperty).getAIWeight() != 0 && GC.getPropertyInfo(eProperty).isSourceDrain())
 			{
 				int iCurrentValue = getPropertiesConst()->getValueByProperty(eProperty);
+				int iCurrentChange = getPropertiesConst()->getChangeByProperty(eProperty);
 				int iOperationRangeMin = GC.getPropertyInfo(eProperty).getOperationalRangeMin();
 				int iOperationRangeMax = GC.getPropertyInfo(eProperty).getOperationalRangeMax();
 				int iCurrentPercent = ((iCurrentValue - iOperationRangeMin) * 100) / (iOperationRangeMax - iOperationRangeMin);
 
 				int iEval = getPropertyNeed(eProperty);
-				//
 				int iTrainReluctance = GC.getPropertyInfo(eProperty).getTrainReluctance();
 				int iCheck = iTriggerPercentOfPropertyOpRange;
 				iEval /= iCheck;
@@ -14440,11 +14441,44 @@ bool CvCityAI::AI_choosePropertyControlUnit(int iTriggerPercentOfPropertyOpRange
 				//	Don't bother trying to build units for hopelessly out-of-control properties
 				//	or else we'll spam units endlessly in cases we cannot really control
 				int iLimit = 500 * (1 + (int)GET_PLAYER(getOwner()).getCurrentEra());
+				int iAcceptanceLimit = 100 * (1 + (int)GET_PLAYER(getOwner()).getCurrentEra());
+				int iAcceptanceRate = 20;
 				if (iTrainReluctance > 0)
 				{
 					iLimit /= iTrainReluctance;
 				}
-				if (iEval > iCheck && iCurrentPercent < iLimit)
+
+				//Calvitix : Evaluate the future evolution of the property, with actuel change, and estimate the number of turn to achieve goal 
+				bool isGettingBetter = false;
+				bool isGoodEnough = false;
+				//iCurrentChange /= iTrainReluctance;
+				CvWString szProperty = GC.getPropertyInfo(eProperty).getType();
+				CvWString szPropertyEduRef = "PROPERTY_EDUCATION";
+				CvWString szPropertyTourismRef = "PROPERTY_TOURISM";
+
+				if ((iCurrentChange < 0 && szProperty != szPropertyEduRef && szProperty != szPropertyTourismRef)
+					|| (iCurrentChange > 0 && (szProperty == szPropertyEduRef || szProperty == szPropertyTourismRef)))
+				{	//First Test : If getting better (Change < 0).
+					//For Education, its the opposite
+					isGettingBetter = true;
+
+					if ((iCurrentValue > 0 && szProperty != szPropertyEduRef && szProperty != szPropertyTourismRef) || (iCurrentValue < 0 && (szProperty == szPropertyEduRef || szProperty == szPropertyTourismRef)))
+					{
+						logAiEvaluations(3, "City %S, step %d %%, worried about property %S. But things are going better value(%d) change(%d)", getName().GetCString(), iTriggerPercentOfPropertyOpRange, szProperty.GetCString(), iCurrentValue, iCurrentChange);
+					}
+
+				}
+
+				// if its lowering, but on a sufficient level (will be deal later)
+				if ((iCurrentChange > 0 && iCurrentChange < iAcceptanceRate && iCurrentValue < (iAcceptanceLimit * -1) && szProperty != szPropertyEduRef && szProperty != szPropertyTourismRef)
+					|| ((iCurrentChange < 0 && iCurrentChange > (iAcceptanceRate * -1) && iCurrentValue > iAcceptanceLimit) && (szProperty == szPropertyEduRef || szProperty == szPropertyTourismRef)))
+				{
+
+					logAiEvaluations(3, "City %S, step %d %%, property %S can be a problem in future, but not now. value(%d) change(%d)", getName().GetCString(), iTriggerPercentOfPropertyOpRange, szProperty.GetCString(), iCurrentValue, iCurrentChange);
+
+				}
+
+				if (iEval > iCheck && iCurrentPercent < iLimit && !isGettingBetter && !isGoodEnough)
 				{
 					//	Order a suitable unit if possible
 					CvUnitSelectionCriteria criteria;
@@ -14452,6 +14486,10 @@ bool CvCityAI::AI_choosePropertyControlUnit(int iTriggerPercentOfPropertyOpRange
 
 					criteria.m_eProperty = eProperty;
 					criteria.m_bPropertyBeneficial = true;
+
+					CvWString szProperty = GC.getPropertyInfo(eProperty).getType();
+					logAiEvaluations(3, "City %S, step %d %%, worried about property %S : value(%d) change(%d). Trying to Order something", getName().GetCString(), iTriggerPercentOfPropertyOpRange, szProperty.GetCString(), iCurrentValue, iCurrentChange);
+
 
 					//eventually let's get coastal cities ordering some coast guard contracts.
 					if (AI_isNavalMilitaryProductionCity())

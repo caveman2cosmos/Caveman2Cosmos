@@ -458,6 +458,55 @@ public:
 
 	int AI_getUnitWeight(UnitTypes eUnit) const;
 	int AI_getUnitCombatWeight(UnitCombatTypes eUnitCombat) const;
+
+
+	/**
+	 * \brief Calculate the relative viability of a unit type for a given AI role.
+	 *
+	 * This function evaluates all units of the specified domain and determines
+	 * how strong the best unit of the requested AI type is compared to other
+	 * available units in the same domain.
+	 *
+	 * \param eUnitAI The Unit AI role to evaluate (e.g., UNITAI_ATTACK, UNITAI_CITY_DEFENSE).
+	 * \param eDomain The domain of units to consider (DOMAIN_LAND, DOMAIN_SEA, DOMAIN_AIR).
+	 *
+	 * \return An integer representing the relative strength of the best unit
+	 *         for the requested AI type compared to the strongest other unit
+	 *         in the same domain. The value is scaled by 100.
+	 *
+	 * \note
+	 * - Units are considered only if they are available to the player's team
+	 *   (weight > 0 or prerequisite tech known).
+	 * - Compares combat strength (`getCombat()`) of units.
+	 *
+	 * \see CvUnitInfo::getUnitAIType()
+	 * \see GET_TEAM()
+	 * \see CvPlayerAI::m_aiUnitWeights
+	 *
+	 * \dot
+	 * digraph AI_calculateUnitAIViability {
+	 *   rankdir=LR;
+	 *   node [shape=box, style=filled, color=lightblue];
+	 *   Start [label="Start"];
+	 *   ForEachUnit [label="For each unit in domain"];
+	 *   CheckAvailability [label="Check if player can use unit"];
+	 *   CheckUnitAI [label="Does unit match eUnitAI?"];
+	 *   UpdateBestAI [label="Update iBestUnitAIStrength"];
+	 *   UpdateBestOther [label="Update iBestOtherStrength"];
+	 *   ReturnValue [label="Return (100 * iBestUnitAIStrength) / iBestOtherStrength"];
+	 *
+	 *   Start -> ForEachUnit;
+	 *   ForEachUnit -> CheckAvailability;
+	 *   CheckAvailability -> CheckUnitAI [label="Yes"];
+	 *   CheckAvailability -> UpdateBestOther [label="No"];
+	 *   CheckUnitAI -> UpdateBestAI [label="Yes"];
+	 *   CheckUnitAI -> UpdateBestOther [label="No"];
+	 *   UpdateBestAI -> ForEachUnit;
+	 *   UpdateBestOther -> ForEachUnit;
+	 *   ForEachUnit -> ReturnValue [label="End loop"];
+	 * }
+	 * \enddot
+	 */
 	int AI_calculateUnitAIViability(UnitAITypes eUnitAI, DomainTypes eDomain) const;
 
 	void AI_updateBonusValue();

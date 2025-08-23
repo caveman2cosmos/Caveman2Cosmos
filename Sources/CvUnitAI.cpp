@@ -11723,7 +11723,7 @@ bool CvUnitAI::AI_guardCity(bool bLeave, bool bSearch, int iMaxPath)
 			{
 				//	Check property control attributes first - they may cause us to defend in the city
 				//	regardless of other conditions
-				if (getGroup()->AI_hasBeneficialPropertyEffectForCity(pCity))
+				if (getGroup()->AI_hasBeneficialPropertyEffectForCity(pCity, NO_PROPERTY))
 				{
 					//	We have at least one unit that can help the ciy's property control (aka crime usually)
 					//	Split ou he best such unit and have it defend in the city
@@ -13884,8 +13884,7 @@ bool CvUnitAI::AI_lead(std::vector<UnitAITypes>& aeUnitAITypes)
 		{
 			if (gUnitLogLevel > 2)
 			{
-				CvWString szString;
-				getUnitAIString(szString, pBestUnit->AI_getUnitAIType());
+				const CvWString szStringUnitAi = GC.getUnitAIInfo(pBestUnit->AI_getUnitAIType()).getType();
 
 				if (bBestUnitLegend)
 				{
@@ -13893,7 +13892,7 @@ bool CvUnitAI::AI_lead(std::vector<UnitAITypes>& aeUnitAITypes)
 				}
 				else
 				{
-					logBBAI("	  Great general %d for %S chooses to lead %S with UNITAI %S", getID(), GET_PLAYER(getOwner()).getCivilizationDescription(0), pBestUnit->getName(0).GetCString(), szString.GetCString());
+					logBBAI("	  Great general %d for %S chooses to lead %S with UNITAI %S", getID(), GET_PLAYER(getOwner()).getCivilizationDescription(0), pBestUnit->getName(0).GetCString(), szStringUnitAi.GetCString());
 				}
 			}
 			getGroup()->pushMission(MISSION_LEAD, pBestUnit->getID());
@@ -28748,7 +28747,7 @@ namespace {
 
 			if (iResponders > 0)
 			{
-				iValue /= iResponders;
+				iValue /= (iResponders+iExisting);
 			}
 
 			// generate path seems horribly bugged if an enemy exists inside the city. Cannot assume a false to that means they can't move in!
@@ -28775,12 +28774,13 @@ bool CvUnitAI::AI_fulfillPropertyControlNeed()
 	// If it doesn't change properties then it can't fulfill control needs
 	if (propertyManipulators == nullptr)
 	{
+		AI_setUnitAIType(UNITAI_RESERVE);
 		return false;
 	}
 
 	std::vector<PropertyAmount> propertyScores;
 	propertyScores.reserve(GC.getNumPropertyInfos());
-
+	bool bfindProperty = false;
 	// loop through property types and get the difference between the target the AI wants the city to be at vs where it currently is
 	for (int propIdx = 0; propIdx < GC.getNumPropertyInfos(); propIdx++)
 	{
@@ -28799,8 +28799,18 @@ bool CvUnitAI::AI_fulfillPropertyControlNeed()
 		score *= GC.getPropertyInfo(eProperty).getAIWeight() / 50;
 		if (score >= 1)
 		{
+			bfindProperty = true;
 			propertyScores.push_back(PropertyAmount(eProperty, score));
 		}
+	}
+
+	//No property has been found 	
+	// If it doesn't change properties then it can't fulfill control needs
+	// Calvitix test : assign to another task
+	if (!bfindProperty)
+	{
+		AI_setUnitAIType(UNITAI_RESERVE);
+		return false;
 	}
 
 	const CvPlayer& player = GET_PLAYER(getOwner());
