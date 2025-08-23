@@ -12240,6 +12240,7 @@
 			</OnGameOptions>
 			<NotOnUnitCombatTypes>
 				<NotOnUnitCombatType>UNITCOMBAT_PACIFIST</NotOnUnitCombatType>
+				<NotOnUnitCombatType>UNITCOMBAT_ANIMAL</NotOnUnitCombatType>
 			</NotOnUnitCombatTypes>
 			<ReplacesUnitCombat>UNITCOMBAT_QUALITY_INCAPABLE</ReplacesUnitCombat>
 			<bZeroesXP>1</bZeroesXP>
@@ -12261,6 +12262,7 @@
 			</OnGameOptions>
 			<NotOnUnitCombatTypes>
 				<NotOnUnitCombatType>UNITCOMBAT_PACIFIST</NotOnUnitCombatType>
+				<NotOnUnitCombatType>UNITCOMBAT_ANIMAL</NotOnUnitCombatType>
 			</NotOnUnitCombatTypes>
 			<iLevelPrereq>1</iLevelPrereq>
 			<ReplacesUnitCombat>UNITCOMBAT_QUALITY_PATHETIC</ReplacesUnitCombat>
@@ -12283,6 +12285,7 @@
 			</OnGameOptions>
 			<NotOnUnitCombatTypes>
 				<NotOnUnitCombatType>UNITCOMBAT_PACIFIST</NotOnUnitCombatType>
+				<NotOnUnitCombatType>UNITCOMBAT_ANIMAL</NotOnUnitCombatType>
 			</NotOnUnitCombatTypes>
 			<iLevelPrereq>2</iLevelPrereq>
 			<ReplacesUnitCombat>UNITCOMBAT_QUALITY_INFERIOR</ReplacesUnitCombat>
@@ -12305,6 +12308,7 @@
 			</OnGameOptions>
 			<NotOnUnitCombatTypes>
 				<NotOnUnitCombatType>UNITCOMBAT_PACIFIST</NotOnUnitCombatType>
+				<NotOnUnitCombatType>UNITCOMBAT_ANIMAL</NotOnUnitCombatType>
 			</NotOnUnitCombatTypes>
 			<iLevelPrereq>3</iLevelPrereq>
 			<ReplacesUnitCombat>UNITCOMBAT_QUALITY_POOR</ReplacesUnitCombat>
@@ -12349,6 +12353,7 @@
 			</OnGameOptions>
 			<NotOnUnitCombatTypes>
 				<NotOnUnitCombatType>UNITCOMBAT_PACIFIST</NotOnUnitCombatType>
+				<NotOnUnitCombatType>UNITCOMBAT_ANIMAL</NotOnUnitCombatType>
 			</NotOnUnitCombatTypes>
 			<iLevelPrereq>6</iLevelPrereq>
 			<ReplacesUnitCombat>UNITCOMBAT_QUALITY_STANDARD</ReplacesUnitCombat>
@@ -12371,6 +12376,7 @@
 			</OnGameOptions>
 			<NotOnUnitCombatTypes>
 				<NotOnUnitCombatType>UNITCOMBAT_PACIFIST</NotOnUnitCombatType>
+				<NotOnUnitCombatType>UNITCOMBAT_ANIMAL</NotOnUnitCombatType>
 			</NotOnUnitCombatTypes>
 			<iLevelPrereq>8</iLevelPrereq>
 			<ReplacesUnitCombat>UNITCOMBAT_QUALITY_SUPERIOR</ReplacesUnitCombat>
@@ -12393,6 +12399,7 @@
 			</OnGameOptions>
 			<NotOnUnitCombatTypes>
 				<NotOnUnitCombatType>UNITCOMBAT_PACIFIST</NotOnUnitCombatType>
+				<NotOnUnitCombatType>UNITCOMBAT_ANIMAL</NotOnUnitCombatType>
 			</NotOnUnitCombatTypes>
 			<iLevelPrereq>11</iLevelPrereq>
 			<ReplacesUnitCombat>UNITCOMBAT_QUALITY_EXCEPTIONAL</ReplacesUnitCombat>
@@ -12415,6 +12422,7 @@
 			</OnGameOptions>
 			<NotOnUnitCombatTypes>
 				<NotOnUnitCombatType>UNITCOMBAT_PACIFIST</NotOnUnitCombatType>
+				<NotOnUnitCombatType>UNITCOMBAT_ANIMAL</NotOnUnitCombatType>
 			</NotOnUnitCombatTypes>
 			<iLevelPrereq>15</iLevelPrereq>
 			<ReplacesUnitCombat>UNITCOMBAT_QUALITY_ELITE</ReplacesUnitCombat>
@@ -12437,6 +12445,7 @@
 			</OnGameOptions>
 			<NotOnUnitCombatTypes>
 				<NotOnUnitCombatType>UNITCOMBAT_PACIFIST</NotOnUnitCombatType>
+				<NotOnUnitCombatType>UNITCOMBAT_ANIMAL</NotOnUnitCombatType>
 			</NotOnUnitCombatTypes>
 			<iLevelPrereq>20</iLevelPrereq>
 			<ReplacesUnitCombat>UNITCOMBAT_QUALITY_EPIC</ReplacesUnitCombat>
@@ -12459,6 +12468,7 @@
 			</OnGameOptions>
 			<NotOnUnitCombatTypes>
 				<NotOnUnitCombatType>UNITCOMBAT_PACIFIST</NotOnUnitCombatType>
+				<NotOnUnitCombatType>UNITCOMBAT_ANIMAL</NotOnUnitCombatType>
 			</NotOnUnitCombatTypes>
 			<ReplacesUnitCombat>UNITCOMBAT_QUALITY_DIVINE</ReplacesUnitCombat>
 			<bForOffset>1</bForOffset>
@@ -12480,6 +12490,7 @@
 			</OnGameOptions>
 			<NotOnUnitCombatTypes>
 				<NotOnUnitCombatType>UNITCOMBAT_PACIFIST</NotOnUnitCombatType>
+				<NotOnUnitCombatType>UNITCOMBAT_ANIMAL</NotOnUnitCombatType>
 			</NotOnUnitCombatTypes>
 			<ReplacesUnitCombat>UNITCOMBAT_QUALITY_EPIC</ReplacesUnitCombat>
 			<bForOffset>1</bForOffset>
@@ -12501,6 +12512,7 @@
 			</OnGameOptions>
 			<NotOnUnitCombatTypes>
 				<NotOnUnitCombatType>UNITCOMBAT_PACIFIST</NotOnUnitCombatType>
+				<NotOnUnitCombatType>UNITCOMBAT_ANIMAL</NotOnUnitCombatType>
 			</NotOnUnitCombatTypes>
 			<ReplacesUnitCombat>UNITCOMBAT_QUALITY_ELITE</ReplacesUnitCombat>
 			<bForOffset>1</bForOffset>
@@ -12522,6 +12534,7 @@
 			</OnGameOptions>
 			<NotOnUnitCombatTypes>
 				<NotOnUnitCombatType>UNITCOMBAT_PACIFIST</NotOnUnitCombatType>
+				<NotOnUnitCombatType>UNITCOMBAT_ANIMAL</NotOnUnitCombatType>
 			</NotOnUnitCombatTypes>
 			<ReplacesUnitCombat>UNITCOMBAT_QUALITY_EXCEPTIONAL</ReplacesUnitCombat>
 			<bForOffset>1</bForOffset>
@@ -12543,6 +12556,7 @@
 			</OnGameOptions>
 			<NotOnUnitCombatTypes>
 				<NotOnUnitCombatType>UNITCOMBAT_PACIFIST</NotOnUnitCombatType>
+				<NotOnUnitCombatType>UNITCOMBAT_ANIMAL</NotOnUnitCombatType>
 			</NotOnUnitCombatTypes>
 			<ReplacesUnitCombat>UNITCOMBAT_QUALITY_SUPERIOR</ReplacesUnitCombat>
 			<bForOffset>1</bForOffset>
@@ -12564,6 +12578,7 @@
 			</OnGameOptions>
 			<NotOnUnitCombatTypes>
 				<NotOnUnitCombatType>UNITCOMBAT_PACIFIST</NotOnUnitCombatType>
+				<NotOnUnitCombatType>UNITCOMBAT_ANIMAL</NotOnUnitCombatType>
 			</NotOnUnitCombatTypes>
 			<ReplacesUnitCombat>UNITCOMBAT_QUALITY_STANDARD</ReplacesUnitCombat>
 			<bForOffset>1</bForOffset>
@@ -12585,6 +12600,7 @@
 			</OnGameOptions>
 			<NotOnUnitCombatTypes>
 				<NotOnUnitCombatType>UNITCOMBAT_PACIFIST</NotOnUnitCombatType>
+				<NotOnUnitCombatType>UNITCOMBAT_ANIMAL</NotOnUnitCombatType>
 			</NotOnUnitCombatTypes>
 			<ReplacesUnitCombat>UNITCOMBAT_QUALITY_MEDIOCRE</ReplacesUnitCombat>
 			<bForOffset>1</bForOffset>
@@ -12606,6 +12622,7 @@
 			</OnGameOptions>
 			<NotOnUnitCombatTypes>
 				<NotOnUnitCombatType>UNITCOMBAT_PACIFIST</NotOnUnitCombatType>
+				<NotOnUnitCombatType>UNITCOMBAT_ANIMAL</NotOnUnitCombatType>
 			</NotOnUnitCombatTypes>
 			<ReplacesUnitCombat>UNITCOMBAT_QUALITY_POOR</ReplacesUnitCombat>
 			<bForOffset>1</bForOffset>
@@ -12627,6 +12644,7 @@
 			</OnGameOptions>
 			<NotOnUnitCombatTypes>
 				<NotOnUnitCombatType>UNITCOMBAT_PACIFIST</NotOnUnitCombatType>
+				<NotOnUnitCombatType>UNITCOMBAT_ANIMAL</NotOnUnitCombatType>
 			</NotOnUnitCombatTypes>
 			<ReplacesUnitCombat>UNITCOMBAT_QUALITY_INFERIOR</ReplacesUnitCombat>
 			<bForOffset>1</bForOffset>
@@ -12648,6 +12666,7 @@
 			</OnGameOptions>
 			<NotOnUnitCombatTypes>
 				<NotOnUnitCombatType>UNITCOMBAT_PACIFIST</NotOnUnitCombatType>
+				<NotOnUnitCombatType>UNITCOMBAT_ANIMAL</NotOnUnitCombatType>
 			</NotOnUnitCombatTypes>
 			<ReplacesUnitCombat>UNITCOMBAT_QUALITY_PATHETIC</ReplacesUnitCombat>
 			<bForOffset>1</bForOffset>
@@ -15384,6 +15403,9 @@
 			<iLinePriority>1</iLinePriority>
 			<iUpkeepModifier>5</iUpkeepModifier>
 			<iStrengthChange>1</iStrengthChange>
+			<NotOnUnitCombatTypes>
+				<NotOnUnitCombatType>UNITCOMBAT_ANIMAL</NotOnUnitCombatType>
+			</NotOnUnitCombatTypes>
 			<UnitCombats>
 				<UnitCombat>
 					<UnitCombatType>UNITCOMBAT_QUALITY_INFERIOR</UnitCombatType>
@@ -15434,6 +15456,9 @@
 			<iLevelPrereq>5</iLevelPrereq>
 			<iUpkeepModifier>5</iUpkeepModifier>
 			<iStrengthChange>1</iStrengthChange>
+			<NotOnUnitCombatTypes>
+				<NotOnUnitCombatType>UNITCOMBAT_ANIMAL</NotOnUnitCombatType>
+			</NotOnUnitCombatTypes>
 			<UnitCombats>
 				<UnitCombat>
 					<UnitCombatType>UNITCOMBAT_QUALITY_POOR</UnitCombatType>
@@ -15480,6 +15505,9 @@
 			<iLevelPrereq>7</iLevelPrereq>
 			<iUpkeepModifier>5</iUpkeepModifier>
 			<iStrengthChange>2</iStrengthChange>
+			<NotOnUnitCombatTypes>
+				<NotOnUnitCombatType>UNITCOMBAT_ANIMAL</NotOnUnitCombatType>
+			</NotOnUnitCombatTypes>
 			<UnitCombats>
 				<UnitCombat>
 					<UnitCombatType>UNITCOMBAT_QUALITY_MEDIOCRE</UnitCombatType>
@@ -15522,6 +15550,9 @@
 			<iLevelPrereq>9</iLevelPrereq>
 			<iUpkeepModifier>5</iUpkeepModifier>
 			<iStrengthChange>2</iStrengthChange>
+			<NotOnUnitCombatTypes>
+				<NotOnUnitCombatType>UNITCOMBAT_ANIMAL</NotOnUnitCombatType>
+			</NotOnUnitCombatTypes>
 			<UnitCombats>
 				<UnitCombat>
 					<UnitCombatType>UNITCOMBAT_QUALITY_STANDARD</UnitCombatType>
@@ -15560,6 +15591,9 @@
 			<iLevelPrereq>11</iLevelPrereq>
 			<iUpkeepModifier>10</iUpkeepModifier>
 			<iStrengthChange>3</iStrengthChange>
+			<NotOnUnitCombatTypes>
+				<NotOnUnitCombatType>UNITCOMBAT_ANIMAL</NotOnUnitCombatType>
+			</NotOnUnitCombatTypes>
 			<UnitCombats>
 				<UnitCombat>
 					<UnitCombatType>UNITCOMBAT_QUALITY_SUPERIOR</UnitCombatType>
@@ -15594,6 +15628,9 @@
 			<iLevelPrereq>13</iLevelPrereq>
 			<iUpkeepModifier>10</iUpkeepModifier>
 			<iStrengthChange>4</iStrengthChange>
+			<NotOnUnitCombatTypes>
+				<NotOnUnitCombatType>UNITCOMBAT_ANIMAL</NotOnUnitCombatType>
+			</NotOnUnitCombatTypes>
 			<UnitCombats>
 				<UnitCombat>
 					<UnitCombatType>UNITCOMBAT_QUALITY_SUPERIOR</UnitCombatType>
@@ -15628,6 +15665,9 @@
 			<iLevelPrereq>15</iLevelPrereq>
 			<iUpkeepModifier>10</iUpkeepModifier>
 			<iStrengthChange>5</iStrengthChange>
+			<NotOnUnitCombatTypes>
+				<NotOnUnitCombatType>UNITCOMBAT_ANIMAL</NotOnUnitCombatType>
+			</NotOnUnitCombatTypes>
 			<UnitCombats>
 				<UnitCombat>
 					<UnitCombatType>UNITCOMBAT_QUALITY_EXCEPTIONAL</UnitCombatType>
@@ -15658,6 +15698,9 @@
 			<iLevelPrereq>17</iLevelPrereq>
 			<iUpkeepModifier>10</iUpkeepModifier>
 			<iStrengthChange>7</iStrengthChange>
+			<NotOnUnitCombatTypes>
+				<NotOnUnitCombatType>UNITCOMBAT_ANIMAL</NotOnUnitCombatType>
+			</NotOnUnitCombatTypes>
 			<UnitCombats>
 				<UnitCombat>
 					<UnitCombatType>UNITCOMBAT_QUALITY_EXCEPTIONAL</UnitCombatType>
@@ -15688,6 +15731,9 @@
 			<iLevelPrereq>19</iLevelPrereq>
 			<iUpkeepModifier>10</iUpkeepModifier>
 			<iStrengthChange>10</iStrengthChange>
+			<NotOnUnitCombatTypes>
+				<NotOnUnitCombatType>UNITCOMBAT_ANIMAL</NotOnUnitCombatType>
+			</NotOnUnitCombatTypes>
 			<UnitCombats>
 				<UnitCombat>
 					<UnitCombatType>UNITCOMBAT_QUALITY_ELITE</UnitCombatType>
@@ -15714,6 +15760,9 @@
 			<iLevelPrereq>21</iLevelPrereq>
 			<iUpkeepModifier>10</iUpkeepModifier>
 			<iStrengthChange>15</iStrengthChange>
+			<NotOnUnitCombatTypes>
+				<NotOnUnitCombatType>UNITCOMBAT_ANIMAL</NotOnUnitCombatType>
+			</NotOnUnitCombatTypes>
 			<UnitCombats>
 				<UnitCombat>
 					<UnitCombatType>UNITCOMBAT_QUALITY_ELITE</UnitCombatType>
@@ -15740,6 +15789,9 @@
 			<iLevelPrereq>23</iLevelPrereq>
 			<iUpkeepModifier>10</iUpkeepModifier>
 			<iStrengthChange>20</iStrengthChange>
+			<NotOnUnitCombatTypes>
+				<NotOnUnitCombatType>UNITCOMBAT_ANIMAL</NotOnUnitCombatType>
+			</NotOnUnitCombatTypes>
 			<UnitCombats>
 				<UnitCombat>
 					<UnitCombatType>UNITCOMBAT_QUALITY_EPIC</UnitCombatType>
@@ -15762,6 +15814,9 @@
 			<iLevelPrereq>25</iLevelPrereq>
 			<iUpkeepModifier>10</iUpkeepModifier>
 			<iStrengthChange>25</iStrengthChange>
+			<NotOnUnitCombatTypes>
+				<NotOnUnitCombatType>UNITCOMBAT_ANIMAL</NotOnUnitCombatType>
+			</NotOnUnitCombatTypes>
 			<UnitCombats>
 				<UnitCombat>
 					<UnitCombatType>UNITCOMBAT_QUALITY_EPIC</UnitCombatType>
@@ -15784,6 +15839,9 @@
 			<iLevelPrereq>27</iLevelPrereq>
 			<iUpkeepModifier>10</iUpkeepModifier>
 			<iStrengthChange>30</iStrengthChange>
+			<NotOnUnitCombatTypes>
+				<NotOnUnitCombatType>UNITCOMBAT_ANIMAL</NotOnUnitCombatType>
+			</NotOnUnitCombatTypes>
 			<UnitCombats>
 				<UnitCombat>
 					<UnitCombatType>UNITCOMBAT_QUALITY_DIVINE</UnitCombatType>

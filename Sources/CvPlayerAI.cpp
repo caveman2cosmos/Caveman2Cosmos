@@ -11836,7 +11836,7 @@ int CvPlayerAI::AI_neededWorkers(const CvArea* pArea) const
 	{
 		return 0;
 	}
-	iNeeded = std::max(iNeeded, 1 + iCities + intSqrt(iCities)); // max 1 + 1 workers per city in area + 1 worker per city squared in area.
+	iNeeded = std::min(iNeeded, 1 + iCities + intSqrt(iCities)); // max 1 + 1 workers per city in area + 1 worker per city squared in area.
 
 	if (gPlayerLogLevel > 2)
 	{
