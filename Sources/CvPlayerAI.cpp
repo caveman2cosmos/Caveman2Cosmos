@@ -10263,7 +10263,7 @@ int CvPlayerAI::AI_unitValue(UnitTypes eUnit, UnitAITypes eUnitAI, const CvArea*
 	bool bisPositivePropertyUnit = (iGeneralPropertyValue > 0);
 	bool bUndefinedValid = false, bValid = false;
 
-	if (eUnitAI != UNITAI_PROPERTY_CONTROL && bisPositivePropertyUnit)
+	if (eUnitAI != UNITAI_PROPERTY_CONTROL && eUnitAI != UNITAI_INVESTIGATOR && eUnitAI != UNITAI_HEALER && eUnitAI != UNITAI_SEE_INVISIBLE && bisPositivePropertyUnit)
 	{
 		return 0;
 	}
@@ -11830,7 +11830,7 @@ int CvPlayerAI::AI_neededWorkers(const CvArea* pArea) const
 	{
 		return 0;
 	}
-	iNeeded = std::max(iNeeded, 1 + iCities + intSqrt(iCities)); // max 1 + 1 workers per city in area + 1 worker per city squared in area.
+	iNeeded = std::min(iNeeded, 1 + iCities + intSqrt(iCities)); // max 1 + 1 workers per city in area + 1 worker per city squared in area.
 
 	if (gPlayerLogLevel > 2)
 	{
