@@ -10,10 +10,10 @@
 			<option id="Enabled" key="Enabled" type="boolean" default="True" get="isEnabled"/>
 			<option id="Silent" key="Silent" type="boolean" default="False" get="isSilent"/>
 
-			<list id="LogLevelPlayerBBAI" key="LogLevelPlayerBBAI" type="int" default="0" listType="int" values="0,1,2,3" get="getLogLevelPlayerBBAI"/>
-			<list id="LogLevelTeamBBAI" key="LogLevelTeamBBAI" type="int" default="0" listType="int" values="0,1,2,3" get="getLogLevelTeamBBAI"/>
-			<list id="LogLevelCityBBAI" key="LogLevelCityBBAI" type="int" default="0" listType="int" values="0,1,2,3" get="getLogLevelCityBBAI"/>
-			<list id="LogLevelUnitBBAI" key="LogLevelUnitBBAI" type="int" default="0" listType="int" values="0,1,2,3" get="getLogLevelUnitBBAI"/>
+			<list id="LogLevelPlayerBBAI" key="LogLevelPlayerBBAI" type="int" default="0" listType="int" values="0,1,2,3,4" get="getLogLevelPlayerBBAI"/>
+			<list id="LogLevelTeamBBAI" key="LogLevelTeamBBAI" type="int" default="0" listType="int" values="0,1,2,3,4" get="getLogLevelTeamBBAI"/>
+			<list id="LogLevelCityBBAI" key="LogLevelCityBBAI" type="int" default="0" listType="int" values="0,1,2,3,4" get="getLogLevelCityBBAI"/>
+			<list id="LogLevelUnitBBAI" key="LogLevelUnitBBAI" type="int" default="0" listType="int" values="0,1,2,3,4" get="getLogLevelUnitBBAI"/>
 
 			<option id="MiscLogging" key="MiscLogging" type="boolean" default="True"/>
 
