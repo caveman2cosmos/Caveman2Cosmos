@@ -14440,7 +14440,7 @@ bool CvCityAI::AI_choosePropertyControlUnit(int iTriggerPercentOfPropertyOpRange
 				//TBNote: May still need to take a count of units ordered... there's only so many units the AI should be willing to train at once for some tasks.  I'm thinking of polution control here.
 				//	Don't bother trying to build units for hopelessly out-of-control properties
 				//	or else we'll spam units endlessly in cases we cannot really control
-				int iLimit = 500 * (1 + (int)GET_PLAYER(getOwner()).getCurrentEra());
+				int iLimit = 250 * (1 + (int)GET_PLAYER(getOwner()).getCurrentEra());
 				int iAcceptanceLimit = 100 * (1 + (int)GET_PLAYER(getOwner()).getCurrentEra());
 				int iAcceptanceRate = 20;
 				if (iTrainReluctance > 0)
