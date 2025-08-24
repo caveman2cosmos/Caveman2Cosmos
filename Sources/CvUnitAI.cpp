@@ -28745,7 +28745,7 @@ namespace {
 			int iResponders = player.AI_plotTargetMissionAIs(city->plot(), MISSIONAI_PROPERTY_CONTROL_RESPONSE, NULL, 0);
 			int iExisting = player.AI_plotTargetMissionAIs(city->plot(), MISSIONAI_PROPERTY_CONTROL_MAINTAIN, NULL, 0);
 
-			if (iResponders > 0)
+			if (iResponders > 0 || iExisting > 0)
 			{
 				iValue /= (iResponders+iExisting);
 			}
