@@ -859,9 +859,14 @@ bool CvUnitAI::AI_promote()
 	{
 		if (gUnitLogLevel > 2)
 		{
-			CvWString szString;
-			getUnitAIString(szString, AI_getUnitAIType());
+			CvWString StrunitAIType = GC.getUnitAIInfo(AI_getUnitAIType()).getType();
+			CvWString StrUnitName = m_szName;
+			if (StrUnitName.length() == 0)
+			{
+				StrUnitName = getName(0).GetCString();
+			}
 			logBBAI("	%S's %S chooses promotion %S", GET_PLAYER(getOwner()).getCivilizationDescription(0), getName(0).GetCString(), GC.getPromotionInfo(eBestPromotion).getDescription());
+			logAiEvaluations(2,"	Player %S Unit %S of type %S - chooses promotion %S", GET_PLAYER(getOwner()).getCivilizationDescription(0), StrUnitName.GetCString(), StrunitAIType.GetCString(), GC.getPromotionInfo(eBestPromotion).getDescription());
 		}
 
 		if (promote(eBestPromotion, -1))
@@ -11718,7 +11723,7 @@ bool CvUnitAI::AI_guardCity(bool bLeave, bool bSearch, int iMaxPath)
 			{
 				//	Check property control attributes first - they may cause us to defend in the city
 				//	regardless of other conditions
-				if (getGroup()->AI_hasBeneficialPropertyEffectForCity(pCity))
+				if (getGroup()->AI_hasBeneficialPropertyEffectForCity(pCity, NO_PROPERTY))
 				{
 					//	We have at least one unit that can help the ciy's property control (aka crime usually)
 					//	Split ou he best such unit and have it defend in the city
@@ -13879,8 +13884,7 @@ bool CvUnitAI::AI_lead(std::vector<UnitAITypes>& aeUnitAITypes)
 		{
 			if (gUnitLogLevel > 2)
 			{
-				CvWString szString;
-				getUnitAIString(szString, pBestUnit->AI_getUnitAIType());
+				const CvWString szStringUnitAi = GC.getUnitAIInfo(pBestUnit->AI_getUnitAIType()).getType();
 
 				if (bBestUnitLegend)
 				{
@@ -13888,7 +13892,7 @@ bool CvUnitAI::AI_lead(std::vector<UnitAITypes>& aeUnitAITypes)
 				}
 				else
 				{
-					logBBAI("	  Great general %d for %S chooses to lead %S with UNITAI %S", getID(), GET_PLAYER(getOwner()).getCivilizationDescription(0), pBestUnit->getName(0).GetCString(), szString.GetCString());
+					logBBAI("	  Great general %d for %S chooses to lead %S with UNITAI %S", getID(), GET_PLAYER(getOwner()).getCivilizationDescription(0), pBestUnit->getName(0).GetCString(), szStringUnitAi.GetCString());
 				}
 			}
 			getGroup()->pushMission(MISSION_LEAD, pBestUnit->getID());
@@ -28741,9 +28745,9 @@ namespace {
 			int iResponders = player.AI_plotTargetMissionAIs(city->plot(), MISSIONAI_PROPERTY_CONTROL_RESPONSE, NULL, 0);
 			int iExisting = player.AI_plotTargetMissionAIs(city->plot(), MISSIONAI_PROPERTY_CONTROL_MAINTAIN, NULL, 0);
 
-			if (iResponders > 0)
+			if (iResponders > 0 || iExisting > 0)
 			{
-				iValue /= iResponders;
+				iValue /= (iResponders+iExisting);
 			}
 
 			// generate path seems horribly bugged if an enemy exists inside the city. Cannot assume a false to that means they can't move in!
@@ -28770,12 +28774,13 @@ bool CvUnitAI::AI_fulfillPropertyControlNeed()
 	// If it doesn't change properties then it can't fulfill control needs
 	if (propertyManipulators == nullptr)
 	{
+		AI_setUnitAIType(UNITAI_RESERVE);
 		return false;
 	}
 
 	std::vector<PropertyAmount> propertyScores;
 	propertyScores.reserve(GC.getNumPropertyInfos());
-
+	bool bfindProperty = false;
 	// loop through property types and get the difference between the target the AI wants the city to be at vs where it currently is
 	for (int propIdx = 0; propIdx < GC.getNumPropertyInfos(); propIdx++)
 	{
@@ -28794,8 +28799,18 @@ bool CvUnitAI::AI_fulfillPropertyControlNeed()
 		score *= GC.getPropertyInfo(eProperty).getAIWeight() / 50;
 		if (score >= 1)
 		{
+			bfindProperty = true;
 			propertyScores.push_back(PropertyAmount(eProperty, score));
 		}
+	}
+
+	//No property has been found 	
+	// If it doesn't change properties then it can't fulfill control needs
+	// Calvitix test : assign to another task
+	if (!bfindProperty)
+	{
+		AI_setUnitAIType(UNITAI_RESERVE);
+		return false;
 	}
 
 	const CvPlayer& player = GET_PLAYER(getOwner());
@@ -29493,7 +29508,7 @@ bool CvUnitAI::AI_establishStackSeeInvisibleCoverage()
 
 						if (gUnitLogLevel > 2)
 						{
-							logBBAI("	%S (%d) at (%d,%d) [stack size %d] requests See Invisible Unit at priority %d", GET_PLAYER(getOwner()).getCivilizationDescription(0), getID(), getX(), getY(), getGroup()->getNumUnits(), HIGH_PRIORITY_ESCORT_PRIORITY);
+							logBBAI("	%S (%d) at (%d,%d) [stack size %d] requests UNITAI_SEE_INVISIBLE Unit at priority %d", GET_PLAYER(getOwner()).getCivilizationDescription(0), getID(), getX(), getY(), getGroup()->getNumUnits(), HIGH_PRIORITY_ESCORT_PRIORITY);
 						}
 
 						getGroup()->pushMission(MISSION_SKIP, -1, -1, 0, false, false, MISSIONAI_WAIT_FOR_SEE_INVISIBLE);
@@ -29523,7 +29538,7 @@ bool CvUnitAI::AI_establishStackSeeInvisibleCoverage()
 
 						if (gUnitLogLevel > 2)
 						{
-							logBBAI("	%S (%d) at (%d,%d) [stack size %d] requests See Invisible Sea Unit at priority %d", GET_PLAYER(getOwner()).getCivilizationDescription(0), getID(), getX(), getY(), getGroup()->getNumUnits(), HIGH_PRIORITY_ESCORT_PRIORITY);
+							logBBAI("	%S (%d) at (%d,%d) [stack size %d] requests UNITAI_SEE_INVISIBLE Sea Unit at priority %d", GET_PLAYER(getOwner()).getCivilizationDescription(0), getID(), getX(), getY(), getGroup()->getNumUnits(), HIGH_PRIORITY_ESCORT_PRIORITY);
 						}
 
 						getGroup()->pushMission(MISSION_SKIP, -1, -1, 0, false, false, MISSIONAI_WAIT_FOR_SEE_INVISIBLE);
