@@ -23776,15 +23776,17 @@ int CvCity::getPropertyNeed(PropertyTypes eProperty) const
 				m_cachedPropertyNeeds[iI] = 0;
 			}
 		}
+
 		for (int iI = 0; iI < GC.getNumPropertyInfos(); iI++)
 		{
 			const PropertyTypes pProperty = (PropertyTypes)iI;
 			if (GC.getPropertyInfo(pProperty).getAIWeight() != 0)
 			{
 				int iCurrentValue = getPropertiesConst()->getValueByProperty(pProperty);
+				int iCurrentChange = getPropertiesConst()->getChangeByProperty(pProperty);
 				//TB attempt to allow some modification to need based on existing drift value
-				int iCurrentSourceSize = getTotalBuildingSourcedProperty(eProperty) + getTotalUnitSourcedProperty(eProperty);
-				iCurrentSourceSize *= 4;
+				int iCurrentSourceSize = iCurrentChange;//Calvitix remove getTotalBuildingSourcedProperty(eProperty) + getTotalUnitSourcedProperty(eProperty);
+				iCurrentSourceSize *= 10; //Evolution for the next 10 turns
 				iCurrentValue += iCurrentSourceSize;
 				//
 				int iTarget = 0;
@@ -23796,9 +23798,40 @@ int CvCity::getPropertyNeed(PropertyTypes eProperty) const
 				{
 					iTarget = GC.getPropertyInfo(pProperty).getTargetLevel();
 				}
+				int iNeedori = iTarget - iCurrentValue; 
 				int iNeed = iTarget - iCurrentValue;
-				//value always positive if need is real
-				m_cachedPropertyNeeds[iI] = (iNeed * (GC.getPropertyInfo(pProperty).getAIWeight() / 50));
+				CvWString szProperty = GC.getPropertyInfo(pProperty).getType();
+				int iAIPropertyWeight = GC.getPropertyInfo(pProperty).getAIWeight() / 50;
+				if (iAIPropertyWeight > 0) //Properties that are positive (EDU,TOURISM)
+				{ 
+					if (iTarget > iCurrentValue) //Still need to be better
+					{
+						iNeed = (iTarget - iCurrentValue) * iAIPropertyWeight;
+					}
+					else
+					{
+						iNeed = -1;
+					}		
+				}
+				else
+				{
+					if (iTarget < iCurrentValue) //Still need to be better
+					{
+						iNeed = (iTarget - iCurrentValue) * iAIPropertyWeight;
+					}
+					else
+					{
+						iNeed = -1;
+					}
+				}
+				m_cachedPropertyNeeds[iI] = iNeed;//(iNeed * (GC.getPropertyInfo(pProperty).getAIWeight() / 50));
+				if (gCityLogLevel > 3)
+				{
+					logAiEvaluations(3, "	City %S need for Property %S : (Base value : %d, Final with AIWeight : %d)", getName().GetCString(), szProperty.GetCString(), iNeedori, m_cachedPropertyNeeds[iI]);
+				}
+
+
+
 			}
 		}
 		m_icachedPropertyNeedsTurn = GC.getGame().getGameTurn();
