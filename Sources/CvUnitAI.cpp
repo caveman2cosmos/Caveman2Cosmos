@@ -183,7 +183,7 @@ bool CvUnitAI::AI_update()
 {
 	PROFILE_FUNC();
 
-	if (gUnitLogLevel > 0)
+	if (gUnitLogLevel > 3)
 	{
 		logBBAI("AI_Update for unit %d of owner %d\n", m_iID, m_eOwner);
 	}

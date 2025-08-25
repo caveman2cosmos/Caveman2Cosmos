@@ -17964,7 +17964,10 @@ void CvPlayerAI::AI_doDiplo()
 			{
 				continue;
 			}
-			logBBAI("Player %d trade calc to/from player %d", getID(), iI);
+			if (gPlayerLogLevel > 3)
+			{
+				logBBAI("Player %d trade calc to/from player %d", getID(), iI);
+			}
 
 			if (GET_PLAYER((PlayerTypes)iI).getTeam() != getTeam())
 			{
@@ -24916,7 +24919,7 @@ void CvPlayerAI::AI_updateCitySites(int iMinFoundValueThreshold, int iMaxSites) 
 					{
 						iBestFoundValue = iValue;
 						pBestFoundPlot = plotX;
-						logAiEvaluations(1, "  Potential best city site (%d, %d) found value is %d (player modified value to %d)", plotX->getX(), plotX->getY(), iFoundValue, iValue);
+						logAiEvaluations(4, "  Potential best city site (%d, %d) found value is %d (player modified value to %d)", plotX->getX(), plotX->getY(), iFoundValue, iValue);
 					}
 				}
 			}

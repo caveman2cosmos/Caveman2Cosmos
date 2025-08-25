@@ -12508,7 +12508,7 @@ void CvCityAI::CalculateAllBuildingValues(int iFocusFlags)
 
 			const CvBuildingInfo& kBuilding = GC.getBuildingInfo(eBuilding);
 
-			if (gCityLogLevel > 2)
+			if (gCityLogLevel > 3)
 			{
 				logBBAI("          Calc value for %S", kBuilding.getDescription());
 			}
