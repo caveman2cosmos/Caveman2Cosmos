@@ -10263,10 +10263,10 @@ int CvPlayerAI::AI_unitValue(UnitTypes eUnit, UnitAITypes eUnitAI, const CvArea*
 	bool bisPositivePropertyUnit = (iGeneralPropertyValue > 0);
 	bool bUndefinedValid = false, bValid = false;
 
-	if (eUnitAI != UNITAI_PROPERTY_CONTROL && eUnitAI != UNITAI_INVESTIGATOR && eUnitAI != UNITAI_HEALER && eUnitAI != UNITAI_SEE_INVISIBLE && bisPositivePropertyUnit)
-	{
-		return 0;
-	}
+	//if (eUnitAI != UNITAI_PROPERTY_CONTROL && eUnitAI != UNITAI_SEE_INVISIBLE && bisPositivePropertyUnit)
+	//{
+	//	return 0;
+	//}
 
 	switch (eUnitAI)
 	{
@@ -11330,7 +11330,7 @@ int CvPlayerAI::AI_unitValue(UnitTypes eUnit, UnitAITypes eUnitAI, const CvArea*
 			{
 				//Calvitix try to limit impact of moves
 				iValue += iCombatValue;
-				iValue += iCombatValue * (kUnitInfo.getMoves() - 1) * 0.50;
+				iValue += iCombatValue * (kUnitInfo.getMoves() - 1) / 2;
 				//iValue += iCombatValue * kUnitInfo.getMoves();
 				iValue = (
 					getModifiedIntValue(
@@ -11352,7 +11352,7 @@ int CvPlayerAI::AI_unitValue(UnitTypes eUnit, UnitAITypes eUnitAI, const CvArea*
 			{
 				//Calvitix try to limit impact of moves
 				iValue += iCombatValue;
-				iValue += iCombatValue * (kUnitInfo.getMoves() - 1) * 0.5; //Only extra moves gives +50% bonus
+				iValue += iCombatValue * (kUnitInfo.getMoves() - 1) / 2; //Only extra moves gives +50% bonus
 				break;
 			}
 			case UNITAI_MISSIONARY:
@@ -11426,20 +11426,20 @@ int CvPlayerAI::AI_unitValue(UnitTypes eUnit, UnitAITypes eUnitAI, const CvArea*
 			case UNITAI_ATTACK_SEA:
 			{
 				iValue += iCombatValue;
-				iValue += iCombatValue * (kUnitInfo.getMoves() - 1) * 0.5 ; //Calvitix 50% bonus per extra moves
+				iValue += iCombatValue * (kUnitInfo.getMoves() - 1) / 2; //Calvitix 50% bonus per extra moves
 				iValue += kUnitInfo.getBombardRate() * 4;
 				break;
 			}
 			case UNITAI_RESERVE_SEA:
 			{
 				iValue += iCombatValue;
-				iValue += iCombatValue * (kUnitInfo.getMoves() - 1) * 0.50;
+				iValue += iCombatValue * (kUnitInfo.getMoves() - 1) / 2;
 				break;
 			}
 			case UNITAI_ESCORT_SEA:
 			{
 				iValue += iCombatValue;
-				iValue += iCombatValue * (kUnitInfo.getMoves() - 1) * 0.25;
+				iValue += iCombatValue * (kUnitInfo.getMoves() - 1) / 4;
 				iValue += kUnitInfo.getInterceptionProbability() * 3;
 				if (kUnitInfo.getNumSeeInvisibleTypes() > 0)
 				{
@@ -11495,14 +11495,14 @@ int CvPlayerAI::AI_unitValue(UnitTypes eUnit, UnitAITypes eUnitAI, const CvArea*
 			case UNITAI_MISSILE_CARRIER_SEA:
 			{
 				iValue += iCombatValue;
-				iValue += iCombatValue * (kUnitInfo.getMoves() - 1) * 0.25;
+				iValue += iCombatValue * (kUnitInfo.getMoves() - 1) /4 ;
 				iValue += (25 + iCombatValue) * (3 + (kUnitInfo.getCargoSpace()));
 				break;
 			}
 			case UNITAI_PIRATE_SEA:
 			{
 				iValue += iCombatValue;
-				iValue += (iCombatValue * (kUnitInfo.getMoves() - 1) * 0.5);
+				iValue += (iCombatValue * (kUnitInfo.getMoves() - 1) /2);
 				break;
 			}
 			case UNITAI_ATTACK_AIR:
@@ -11570,7 +11570,7 @@ int CvPlayerAI::AI_unitValue(UnitTypes eUnit, UnitAITypes eUnitAI, const CvArea*
 			{
 				const InvisibleTypes eVisibilityRequested = criteria ? criteria->m_eVisibility : NO_INVISIBLE;
 				iValue += iCombatValue;
-				iValue += (kUnitInfo.getMoves() - 1) * 300;
+				iValue += (kUnitInfo.getMoves() - 1) * 30 / 100;
 				if (eVisibilityRequested != NO_INVISIBLE)
 				{
 					if (GC.getGame().isOption(GAMEOPTION_COMBAT_HIDE_SEEK))
@@ -11596,7 +11596,7 @@ int CvPlayerAI::AI_unitValue(UnitTypes eUnit, UnitAITypes eUnitAI, const CvArea*
 						const InvisibilityArray& array = kUnitInfo.getVisibilityIntensityTypes();
 						for (InvisibilityArray::const_iterator it = array.begin(); it != array.end(); ++it)
 						{
-							iValue = getModifiedIntValue(iValue, 10 * (*it).second);
+							iValue = getModifiedIntValue(iValue, 100 * (*it).second);
 						}
 					}
 					else
@@ -11611,7 +11611,7 @@ int CvPlayerAI::AI_unitValue(UnitTypes eUnit, UnitAITypes eUnitAI, const CvArea*
 				iValue += iCombatValue;
 				//obsolete - for every 10 pts of combat value, make each move pt count for 1 more than a base 1 each.
 				//Try 
-				iValue += (kUnitInfo.getMoves()-1) * iCombatValue * 0.20;
+				iValue += (kUnitInfo.getMoves()-1) * iCombatValue / 5;
 				//Combat weaknesses are very bad
 				for (int iI = 0; iI < GC.getNumTerrainInfos(); iI++)
 				{
@@ -11688,11 +11688,17 @@ int CvPlayerAI::AI_unitValue(UnitTypes eUnit, UnitAITypes eUnitAI, const CvArea*
 		}
 	}
 
-	if (gPlayerLogLevel > 2)
+	if (gPlayerLogLevel > 3) //Calvitix, added a level 4 for very consuming logs
 	{
 		const CvWString strUnitType = GC.getUnitInfo(eUnit).getType();
 		const CvWString strUnitAIType = GC.getUnitAIInfo(eUnitAI).getType();
-		logAiEvaluations(2, "AI Player %d evaluate Value for unit %S as type %S, combat value %d, moves %d, Calculated value %d", getID(), strUnitType.c_str(), strUnitAIType.c_str(), iCombatValue*100, kUnitInfo.getMoves(), iValue*100);
+
+		CvWString strCriteria = "None";
+		if (criteria != NULL)
+		{
+			strCriteria = criteria->getDescription();
+		}
+		logAiEvaluations(3, "AI Player %d evaluate Value for unit %S as type %S and criteria (%S), combat value %d, moves %d, Calculated value %d", getID(), strUnitType.c_str(), strUnitAIType.c_str(), strCriteria.c_str(), iCombatValue*100, kUnitInfo.getMoves(), iValue*100);
 	}
 
 
@@ -17958,7 +17964,10 @@ void CvPlayerAI::AI_doDiplo()
 			{
 				continue;
 			}
-			logBBAI("Player %d trade calc to/from player %d", getID(), iI);
+			if (gPlayerLogLevel > 3)
+			{
+				logBBAI("Player %d trade calc to/from player %d", getID(), iI);
+			}
 
 			if (GET_PLAYER((PlayerTypes)iI).getTeam() != getTeam())
 			{
@@ -21586,10 +21595,8 @@ bool CvPlayerAI::AI_disbandUnit(int iExpThreshold)
 	{
 		if (gPlayerLogLevel >= 2)
 		{
-			CvWString szString;
-			getUnitAIString(szString, pBestUnit->AI_getUnitAIType());
-
-			logBBAI("	Player %d (%S) disbanding %S with UNITAI %S to save cash", getID(), getCivilizationDescription(0), pBestUnit->getName().GetCString(), szString.GetCString());
+			const CvWString szStringUnitAi = GC.getUnitAIInfo(pBestUnit->AI_getUnitAIType()).getType();
+			logBBAI("	Player %d (%S) disbanding %S with UNITAI %S to save cash", getID(), getCivilizationDescription(0), pBestUnit->getName().GetCString(), szStringUnitAi.GetCString());
 		}
 		pBestUnit->kill(false);
 		return true;
@@ -24889,7 +24896,7 @@ int CvPlayerAI::AI_getCitySitePriorityFactor(const CvPlot* pPlot) const
 void CvPlayerAI::AI_updateCitySites(int iMinFoundValueThreshold, int iMaxSites) const
 {
 	PROFILE_EXTRA_FUNC();
-	logAiEvaluations(2, "Player %d (%S) begin Update City Sites (min. value: %d)...", getID(), getCivilizationDescription(0), iMinFoundValueThreshold);
+	logAiEvaluations(1, "Player %d (%S) begin Update City Sites (min. value: %d)...", getID(), getCivilizationDescription(0), iMinFoundValueThreshold);
 	for (int iI = 0; iI < iMaxSites; iI++)
 	{
 		//Add a city to the list.
@@ -24912,7 +24919,7 @@ void CvPlayerAI::AI_updateCitySites(int iMinFoundValueThreshold, int iMaxSites) 
 					{
 						iBestFoundValue = iValue;
 						pBestFoundPlot = plotX;
-						logAiEvaluations(2, "  Potential best city site (%d, %d) found value is %d (player modified value to %d)", plotX->getX(), plotX->getY(), iFoundValue, iValue);
+						logAiEvaluations(4, "  Potential best city site (%d, %d) found value is %d (player modified value to %d)", plotX->getX(), plotX->getY(), iFoundValue, iValue);
 					}
 				}
 			}
@@ -24921,11 +24928,11 @@ void CvPlayerAI::AI_updateCitySites(int iMinFoundValueThreshold, int iMaxSites) 
 		{
 			break;
 		}
-		logAiEvaluations(2, "	Found City Site at (%d, %d)", pBestFoundPlot->getX(), pBestFoundPlot->getY());
+		logAiEvaluations(1, "	Found City Site at (%d, %d)", pBestFoundPlot->getX(), pBestFoundPlot->getY());
 		m_aiAICitySites.push_back(GC.getMap().plotNum(pBestFoundPlot->getX(), pBestFoundPlot->getY()));
 		AI_recalculateFoundValues(pBestFoundPlot->getX(), pBestFoundPlot->getY(), CITY_PLOTS_RADIUS, 2 * CITY_PLOTS_RADIUS);
 	}
-	logAiEvaluations(2, "Player %d (%S) end Update City Sites", getID(), getCivilizationDescription(0));
+	logAiEvaluations(1, "Player %d (%S) end Update City Sites", getID(), getCivilizationDescription(0));
 }
 
 void CvPlayerAI::calculateCitySites() const
@@ -28671,7 +28678,7 @@ int CvPlayerAI::AI_promotionValue(PromotionTypes ePromotion, UnitTypes eUnit, co
 		if ((eUnitAI == UNITAI_SEE_INVISIBLE) ||
 			(eUnitAI == UNITAI_SEE_INVISIBLE_SEA))
 		{
-			iValue += (iTemp * 50);
+			iValue += (iTemp * 100); //50
 		}
 		else if ((eUnitAI == UNITAI_EXPLORE_SEA) ||
 			(eUnitAI == UNITAI_EXPLORE))
@@ -31240,7 +31247,7 @@ int CvPlayerAI::AI_promotionValue(PromotionTypes ePromotion, UnitTypes eUnit, co
 					eUnitAI == UNITAI_SEE_INVISIBLE_SEA ||
 					eUnitAI == UNITAI_PILLAGE_COUNTER)
 				{
-					iValue += (iTemp * 35);
+					iValue += (iTemp * 350);
 				}
 				else if (eUnitAI == UNITAI_COUNTER ||
 					eUnitAI == UNITAI_ANIMAL ||
@@ -31295,7 +31302,7 @@ int CvPlayerAI::AI_promotionValue(PromotionTypes ePromotion, UnitTypes eUnit, co
 					eUnitAI == UNITAI_SEE_INVISIBLE_SEA ||
 					eUnitAI == UNITAI_PILLAGE_COUNTER)
 				{
-					iValue += (iTemp * 35);
+					iValue += (iTemp * 350); //Calvitix Test
 				}
 				else if (eUnitAI == UNITAI_COUNTER ||
 					eUnitAI == UNITAI_ANIMAL ||
@@ -31413,7 +31420,7 @@ int CvPlayerAI::AI_promotionValue(PromotionTypes ePromotion, UnitTypes eUnit, co
 					eUnitAI == UNITAI_SEE_INVISIBLE_SEA ||
 					eUnitAI == UNITAI_PILLAGE_COUNTER)
 				{
-					iValue += (iTemp * 15);
+					iValue += (iTemp * 150);
 				}
 				else if (eUnitAI == UNITAI_COUNTER ||
 					eUnitAI == UNITAI_ANIMAL ||
@@ -31444,7 +31451,7 @@ int CvPlayerAI::AI_promotionValue(PromotionTypes ePromotion, UnitTypes eUnit, co
 					eUnitAI == UNITAI_SEE_INVISIBLE_SEA ||
 					eUnitAI == UNITAI_PILLAGE_COUNTER)
 				{
-					iValue += (iTemp * 15);
+					iValue += (iTemp * 150);
 				}
 				else if (eUnitAI == UNITAI_COUNTER ||
 					eUnitAI == UNITAI_ANIMAL ||
@@ -31475,7 +31482,7 @@ int CvPlayerAI::AI_promotionValue(PromotionTypes ePromotion, UnitTypes eUnit, co
 					eUnitAI == UNITAI_SEE_INVISIBLE_SEA ||
 					eUnitAI == UNITAI_PILLAGE_COUNTER)
 				{
-					iValue += (iTemp * 15);
+					iValue += (iTemp * 150);
 				}
 				else if (eUnitAI == UNITAI_COUNTER ||
 					eUnitAI == UNITAI_ANIMAL ||
@@ -31506,7 +31513,7 @@ int CvPlayerAI::AI_promotionValue(PromotionTypes ePromotion, UnitTypes eUnit, co
 					eUnitAI == UNITAI_SEE_INVISIBLE_SEA ||
 					eUnitAI == UNITAI_PILLAGE_COUNTER)
 				{
-					iValue += (iTemp * 8);
+					iValue += (iTemp * 80);
 				}
 				else if (eUnitAI == UNITAI_COUNTER ||
 					eUnitAI == UNITAI_ANIMAL ||
@@ -31537,7 +31544,7 @@ int CvPlayerAI::AI_promotionValue(PromotionTypes ePromotion, UnitTypes eUnit, co
 					eUnitAI == UNITAI_SEE_INVISIBLE_SEA ||
 					eUnitAI == UNITAI_PILLAGE_COUNTER)
 				{
-					iValue += (iTemp * 8);
+					iValue += (iTemp * 80);
 				}
 				else if (eUnitAI == UNITAI_COUNTER ||
 					eUnitAI == UNITAI_ANIMAL ||
@@ -31568,7 +31575,7 @@ int CvPlayerAI::AI_promotionValue(PromotionTypes ePromotion, UnitTypes eUnit, co
 					eUnitAI == UNITAI_SEE_INVISIBLE_SEA ||
 					eUnitAI == UNITAI_PILLAGE_COUNTER)
 				{
-					iValue += (iTemp * 8);
+					iValue += (iTemp * 80);
 				}
 				else if (eUnitAI == UNITAI_COUNTER ||
 					eUnitAI == UNITAI_ANIMAL ||
@@ -31720,12 +31727,32 @@ int CvPlayerAI::AI_promotionValue(PromotionTypes ePromotion, UnitTypes eUnit, co
 	{
 		iValue = std::max(1, iValue);
 	}
-
+	int iRandom = 0;
 	if (pUnit != NULL && iValue > 0 && !bForBuildUp)
 	{
 		//GC.getGame().logOOSSpecial(2,iValue, pUnit->getID());
-		iValue += GC.getGame().getSorenRandNum(25, "AI Unit Promote");
+		int iRandomRange = (int(50) + (iValue / 10)); //Calvitix introduce more Random for High Values
+		iRandom = GC.getGame().getSorenRandNum(iRandomRange, "AI Unit Promote");
+		if (iValue > 75)
+		{ //to permit the lower of value with random
+			iRandom -= iRandomRange / 2;
+		}
 	}
+
+	if (pUnit != NULL && !bForBuildUp && gUnitLogLevel > 3)
+	{
+		CvWString StrunitAIType = GC.getUnitAIInfo(pUnit->AI_getUnitAIType()).getType();
+		logAiEvaluations(2, "	Player %S, PromotionEval for Unit %S of type %S - %S : Value : %d, Random %d", this->getPlayer, pUnit->getName(0).GetCString(), StrunitAIType.GetCString(), GC.getPromotionInfo(ePromotion).getDescription(), iValue, iRandom);
+	}
+	else if ((pUnit != NULL && bForBuildUp && gUnitLogLevel > 3))
+	{
+		CvWString StrunitAIType = GC.getUnitAIInfo(pUnit->AI_getUnitAIType()).getType();
+		logAiEvaluations(2, "	Player %S, BuildUpEval for Unit %S of type %S - %S : Value : %d, Random %d", this->getPlayer, pUnit->getName(0).GetCString(), StrunitAIType.GetCString(), GC.getPromotionInfo(ePromotion).getDescription(), iValue, iRandom);
+	}
+
+	iValue += iRandom;
+
+
 
 	return iValue;
 }
@@ -32855,16 +32882,16 @@ int CvPlayerAI::AI_unitCombatValue(UnitCombatTypes eUnitCombat, UnitTypes eUnit,
 		if ((eUnitAI == UNITAI_SEE_INVISIBLE) ||
 			(eUnitAI == UNITAI_SEE_INVISIBLE_SEA))
 		{
-			iValue += (iTemp * 50);
+			iValue += (iTemp * 5);  //Calvitix origin 50
 		}
 		else if ((eUnitAI == UNITAI_EXPLORE_SEA) ||
 			(eUnitAI == UNITAI_EXPLORE))
 		{
-			iValue += (iTemp * 40);
+			iValue += (iTemp * 4);  //Calvitix origin 40
 		}
 		else if (eUnitAI == UNITAI_PIRATE_SEA)
 		{
-			iValue += (iTemp * 20);
+			iValue += (iTemp * 2); //Calvitix origin 20
 		}
 	}
 
@@ -32887,11 +32914,11 @@ int CvPlayerAI::AI_unitCombatValue(UnitCombatTypes eUnitCombat, UnitTypes eUnit,
 				(eUnitAI == UNITAI_ESCORT) ||
 				(eUnitAI == UNITAI_INFILTRATOR))
 		{
-			iValue += (iTemp * 40);
+			iValue += (iTemp * 20);  //40
 		}
 		else
 		{
-			iValue += (iTemp * 25);
+			iValue += (iTemp * 8);  //25
 		}
 	}
 

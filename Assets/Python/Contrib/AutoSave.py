@@ -1,14 +1,20 @@
 ## AutoSave
-from CvPythonExtensions import CyGlobalContext
+#from CvPythonExtensions import CyGlobalContext
+#from CvPythonExtensions import CyInterface
+from CvPythonExtensions import *
+import TextUtil
+
 GC = CyGlobalContext()
+CyIF = CyInterface()
 GAME = GC.getGame()
 MAP = GC.getMap()
+TRNSLTR = CyTranslator()
 import TextUtil
-        
+
 
 
 def remove_diacritics(in_text):
-    # Table des remplacements (caractËres + codes explicites)
+    # Table des remplacements (caract√®res + codes explicites)
     #print "Start remove_diacritics for %s" % in_text
     #print "%s" % str(type(in_text))
     text = u''
@@ -17,49 +23,70 @@ def remove_diacritics(in_text):
     except :
 		text = in_text.encode("ascii", "ignore")
     #print "%s" % text
-    text = text.replace('‡', 'a').replace('‚', 'a').replace('‰', 'a').replace('·', 'a').replace('„', 'a').replace('Â', 'a')
+    text = text.replace('√†', 'a').replace('√¢', 'a').replace('√§', 'a').replace('√°', 'a').replace('√£', 'a').replace('√•', 'a')
     #print "%s" % text
-    text = text.replace('Á', 'c')
-    text = text.replace('È', 'e').replace('Ë', 'e').replace('Í', 'e').replace('Î', 'e')
-    text = text.replace('Ó', 'i').replace('Ô', 'i').replace('Ì', 'i')
-    text = text.replace('Ù', 'o').replace('ˆ', 'o').replace('Ú', 'o').replace('Û', 'o').replace('ı', 'o')
-    text = text.replace('˘', 'u').replace('˚', 'u').replace('¸', 'u').replace('˙', 'u')
-    text = text.replace('ˇ', 'y')
-    text = text.replace('Ò', 'n')
+    text = text.replace('√ß', 'c')
+    text = text.replace('√©', 'e').replace('√®', 'e').replace('√™', 'e').replace('√´', 'e')
+    text = text.replace('√Æ', 'i').replace('√Ø', 'i').replace('√≠', 'i')
+    text = text.replace('√¥', 'o').replace('√∂', 'o').replace('√≤', 'o').replace('√≥', 'o').replace('√µ', 'o')
+    text = text.replace('√π', 'u').replace('√ª', 'u').replace('√º', 'u').replace('√∫', 'u')
+    text = text.replace('√ø', 'y')
+    text = text.replace('√±', 'n')
 
-    text = text.replace('¿', 'A').replace('¬', 'A').replace('ƒ', 'A').replace('¡', 'A').replace('√', 'A').replace('≈', 'A')
-    text = text.replace('«', 'C')
-    text = text.replace('…', 'E').replace('»', 'E').replace(' ', 'E').replace('À', 'E')
-    text = text.replace('Œ', 'I').replace('œ', 'I').replace('Õ', 'I')
-    text = text.replace('‘', 'O').replace('÷', 'O').replace('“', 'O').replace('”', 'O').replace('’', 'O')
-    text = text.replace('Ÿ', 'U').replace('€', 'U').replace('‹', 'U').replace('⁄', 'U')
-    text = text.replace('ü', 'Y')
-    text = text.replace('—', 'N')
+    text = text.replace('√Ä', 'A').replace('√Ç', 'A').replace('√Ñ', 'A').replace('√Å', 'A').replace('√É', 'A').replace('√Ö', 'A')
+    text = text.replace('√á', 'C')
+    text = text.replace('√â', 'E').replace('√à', 'E').replace('√ä', 'E').replace('√ã', 'E')
+    text = text.replace('√é', 'I').replace('√è', 'I').replace('√ç', 'I')
+    text = text.replace('√î', 'O').replace('√ñ', 'O').replace('√í', 'O').replace('√ì', 'O').replace('√ï', 'O')
+    text = text.replace('√ô', 'U').replace('√õ', 'U').replace('√ú', 'U').replace('√ö', 'U')
+    text = text.replace('≈∏', 'Y')
+    text = text.replace('√ë', 'N')
 
     #print "%s" % text
     return text
         
 def cleanNpc():
-	print "Cleaning NPC - for player 41 and 42..."
-	iPlayer = 41
-	pPlayer = GC.getPlayer(iPlayer)
-	pUnit, loop = pPlayer.firstUnit(False)
-	while pUnit:
-		pUnit
-		print "Player %d, Unit ID: %d, %s\n" % (iPlayer, pUnit.getID(), TextUtil.convertToStr(pUnit.getName()))
-		pUnit.kill(False, -1)
-		pUnit, loop = pPlayer.nextUnit(loop, False)
-	print "UnitÈs du joueur 41 supprimÈes."
-	
-	iPlayer = 42
-	pPlayer = GC.getPlayer(iPlayer)
-	pUnit, loop = pPlayer.firstUnit(False)
-	while pUnit:
-		pUnit
-		print "Player %d, Unit ID: %d, %s\n" % (iPlayer, pUnit.getID(), TextUtil.convertToStr(pUnit.getName()))
-		pUnit.kill(False, -1)
-		pUnit, loop = pPlayer.nextUnit(loop, False)
-	print "UnitÈs du joueur 42 supprimÈes."
+	iTurn = GAME.getGameTurn()
+	modturn = iTurn % 30
+	print "ModTurn for cleaning : %d" % modturn
+	if npcclean and modturn == 0:
+		print "Cleaning NPC - for player 40,41 and 42..."
+
+		iPlayer = 40
+		pPlayer = GC.getPlayer(iPlayer)
+		pUnit, loop = pPlayer.firstUnit(False)
+		while pUnit:
+			pUnit
+			print "Player %d, Unit ID: %d, %s\n" % (iPlayer, pUnit.getID(), TextUtil.convertToStr(pUnit.getName()))
+			pUnit.kill(False, -1)
+			pUnit, loop = pPlayer.nextUnit(loop, False)
+		print "Unit√©s du joueur 40 supprim√©es."
+
+		iPlayer = 41
+		pPlayer = GC.getPlayer(iPlayer)
+		pUnit, loop = pPlayer.firstUnit(False)
+		while pUnit:
+			pUnit
+			print "Player %d, Unit ID: %d, %s\n" % (iPlayer, pUnit.getID(), TextUtil.convertToStr(pUnit.getName()))
+			pUnit.kill(False, -1)
+			pUnit, loop = pPlayer.nextUnit(loop, False)
+		print "Unit√©s du joueur 41 supprim√©es."
+		
+		iPlayer = 42
+		pPlayer = GC.getPlayer(iPlayer)
+		pUnit, loop = pPlayer.firstUnit(False)
+		while pUnit:
+			pUnit
+			print "Player %d, Unit ID: %d, %s\n" % (iPlayer, pUnit.getID(), TextUtil.convertToStr(pUnit.getName()))
+			pUnit.kill(False, -1)
+			pUnit, loop = pPlayer.nextUnit(loop, False)
+		print "Unit√©s du joueur 42 supprim√©es."
+		szMessage = TRNSLTR.getText("TXT_KEY_MOD_KILL_ANIMALS_DESC", ())
+		for iPlayer in range(GC.getMAX_PLAYERS()):
+			if GC.getPlayer(iPlayer).isHuman():
+				CyIF.addMessage(iPlayer, False, GC.getEVENT_MESSAGE_TIME(), szMessage, None, InterfaceMessageTypes.MESSAGE_TYPE_INFO, None, GC.getInfoTypeForString("COLOR_HIGHLIGHT_TEXT"), -1, -1, False, False)
+
+
 def init():
 	import SystemPaths as SP
 	global _saveDir, options

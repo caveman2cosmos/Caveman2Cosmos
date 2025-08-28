@@ -13469,8 +13469,13 @@ int CvPlot::countSeeInvisibleActive(PlayerTypes ePlayer, InvisibleTypes eVisible
 	{
 		const UnitAITypes eAIType = pLoopUnit->AI_getUnitAIType();
 		//MissionAITypes eMissionAI = pLoopUnit->getGroup()->AI_getMissionAIType();
-
-		if (eAIType == UNITAI_SEE_INVISIBLE || eAIType == UNITAI_SEE_INVISIBLE_SEA)
+		
+		if (eAIType == UNITAI_SEE_INVISIBLE || eAIType == UNITAI_SEE_INVISIBLE_SEA 
+			|| eAIType == UNITAI_PROPERTY_CONTROL || eAIType == UNITAI_CITY_DEFENSE
+			|| eAIType == UNITAI_HUNTER_ESCORT || eAIType == UNITAI_HUNTER
+			|| eAIType == UNITAI_PILLAGE_COUNTER || eAIType == UNITAI_INVESTIGATOR
+			|| eAIType == UNITAI_RESERVE || eAIType == UNITAI_COUNTER
+			|| eAIType == UNITAI_SPY || eAIType == UNITAI_CITY_COUNTER)
 		{
 			if (pLoopUnit->getOwner() == ePlayer)
 			{

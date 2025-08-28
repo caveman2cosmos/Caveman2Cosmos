@@ -6,6 +6,7 @@
 // 1 - Important decisions only
 // 2 - Many decisions
 // 3 - All logging
+// 4 - All logging with very often trace (unit/promotion eval)
 int gPlayerLogLevel = 0;
 int gTeamLogLevel = 0;
 int gCityLogLevel = 0;

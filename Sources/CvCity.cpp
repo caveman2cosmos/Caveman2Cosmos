@@ -15413,9 +15413,9 @@ void CvCity::pushOrder(OrderTypes eOrder, int iData1, int iData2, bool bSave, bo
 				setUnitListInvalid();
 				if (gCityLogLevel >= 1)
 				{
-					CvWString szString;
-					getUnitAIString(szString, order.getUnitAIType());
-					logBBAI("    City %S pushes production of unit %S for type UNITAI_%S", getName().GetCString(), GC.getUnitInfo(unitType).getDescription(getCivilizationType()), szString.GetCString());
+					
+					const CvWString szStringUnitAi = GC.getUnitAIInfo(order.getUnitAIType()).getType();
+					logBBAI("    City %S pushes production of unit %S for type %S", getName().GetCString(), GC.getUnitInfo(unitType).getDescription(getCivilizationType()), szStringUnitAi.GetCString());
 				}
 				bValid = true;
 			}
@@ -15716,9 +15716,8 @@ void CvCity::popOrder(int orderIndex, bool bFinish, bool bChoose, bool bResolveL
 				{
 					if (gCityLogLevel >= 1)
 					{
-						CvWString szString;
-						getUnitAIString(szString, pUnit->AI_getUnitAIType());
-						logBBAI("    City %S finishes production of unit %S with UNITAI %S", getName().GetCString(), pUnit->getName(0).GetCString(), szString.GetCString());
+						const CvWString szStringUnitAi = GC.getUnitAIInfo(pUnit->AI_getUnitAIType()).getType();
+						logBBAI("    City %S finishes production of unit %S for Type %S", getName().GetCString(), pUnit->getName(0).GetCString(), szStringUnitAi.GetCString());
 					}
 
 					if (GC.getUnitInfo(eTrainUnit).getDomainType() == DOMAIN_AIR)
@@ -16368,7 +16367,7 @@ void CvCity::doProduction(bool bAllowNoProduction)
 				}
 				else AI_chooseProduction();
 
-				FAssertMsg(isProduction(), "AI set city to pruduce nothing at all!")
+				FAssertMsg(isProduction(), "AI set city to produce nothing at all!")
 			}
 
 			/* Toffer - Don't think the wonder limit can be breached here just like that.
@@ -23777,15 +23776,17 @@ int CvCity::getPropertyNeed(PropertyTypes eProperty) const
 				m_cachedPropertyNeeds[iI] = 0;
 			}
 		}
+
 		for (int iI = 0; iI < GC.getNumPropertyInfos(); iI++)
 		{
 			const PropertyTypes pProperty = (PropertyTypes)iI;
 			if (GC.getPropertyInfo(pProperty).getAIWeight() != 0)
 			{
 				int iCurrentValue = getPropertiesConst()->getValueByProperty(pProperty);
+				int iCurrentChange = getPropertiesConst()->getChangeByProperty(pProperty);
 				//TB attempt to allow some modification to need based on existing drift value
-				int iCurrentSourceSize = getTotalBuildingSourcedProperty(eProperty) + getTotalUnitSourcedProperty(eProperty);
-				iCurrentSourceSize *= 4;
+				int iCurrentSourceSize = iCurrentChange;//Calvitix remove getTotalBuildingSourcedProperty(eProperty) + getTotalUnitSourcedProperty(eProperty);
+				iCurrentSourceSize *= 10; //Evolution for the next 10 turns
 				iCurrentValue += iCurrentSourceSize;
 				//
 				int iTarget = 0;
@@ -23797,9 +23798,40 @@ int CvCity::getPropertyNeed(PropertyTypes eProperty) const
 				{
 					iTarget = GC.getPropertyInfo(pProperty).getTargetLevel();
 				}
+				int iNeedori = iTarget - iCurrentValue; 
 				int iNeed = iTarget - iCurrentValue;
-				//value always positive if need is real
-				m_cachedPropertyNeeds[iI] = (iNeed * (GC.getPropertyInfo(pProperty).getAIWeight() / 50));
+				CvWString szProperty = GC.getPropertyInfo(pProperty).getType();
+				int iAIPropertyWeight = GC.getPropertyInfo(pProperty).getAIWeight() / 50;
+				if (iAIPropertyWeight > 0) //Properties that are positive (EDU,TOURISM)
+				{ 
+					if (iTarget > iCurrentValue) //Still need to be better
+					{
+						iNeed = (iTarget - iCurrentValue) * iAIPropertyWeight;
+					}
+					else
+					{
+						iNeed = -1;
+					}		
+				}
+				else
+				{
+					if (iTarget < iCurrentValue) //Still need to be better
+					{
+						iNeed = (iTarget - iCurrentValue) * iAIPropertyWeight;
+					}
+					else
+					{
+						iNeed = -1;
+					}
+				}
+				m_cachedPropertyNeeds[iI] = iNeed;//(iNeed * (GC.getPropertyInfo(pProperty).getAIWeight() / 50));
+				if (gCityLogLevel > 3)
+				{
+					logAiEvaluations(3, "	City %S need for Property %S : (Base value : %d, Final with AIWeight : %d)", getName().GetCString(), szProperty.GetCString(), iNeedori, m_cachedPropertyNeeds[iI]);
+				}
+
+
+
 			}
 		}
 		m_icachedPropertyNeedsTurn = GC.getGame().getGameTurn();

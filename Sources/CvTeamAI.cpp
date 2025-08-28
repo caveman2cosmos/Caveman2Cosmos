@@ -1329,7 +1329,7 @@ int CvTeamAI::AI_techTradeVal(TechTypes eTech, TeamTypes eTeam)
 	{
 		PROFILE("CvTeamAI::AI_techTradeVal.CacheMiss");
 
-		if (gPlayerLogLevel > 2)
+		if (gPlayerLogLevel > 3)
 		{
 			logBBAI(
 				"Calculate trade value for tech %S by team %d for team %d",

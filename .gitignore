@@ -15,6 +15,7 @@
 XmlValidator.log
 desktop.ini
 Assets/Python/.idea/
+docs/
 
 # Ignore python venv
 env/
