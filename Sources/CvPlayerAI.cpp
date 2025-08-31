@@ -10854,6 +10854,10 @@ int CvPlayerAI::AI_unitValue(UnitTypes eUnit, UnitAITypes eUnitAI, const CvArea*
 					iValue += ((iCombatValue * kUnitInfo.getUnitCombatModifier(iI) * AI_getUnitCombatWeight((UnitCombatTypes)iI)) / 10000);
 				}
 
+				if (kUnitInfo.canMergeSplit() && GC.getGame().isOption(GAMEOPTION_COMBAT_SIZE_MATTERS)){
+					iValue *= 2;
+				}
+
 				break;
 			}
 			case UNITAI_ATTACK_CITY:
@@ -11060,6 +11064,11 @@ int CvPlayerAI::AI_unitValue(UnitTypes eUnit, UnitAITypes eUnitAI, const CvArea*
 					}
 #endif // BATTLEWORN
 				}
+
+				if (kUnitInfo.canMergeSplit() && GC.getGame().isOption(GAMEOPTION_COMBAT_SIZE_MATTERS)){
+					iValue *= 2;
+				}
+
 				break;
 			}
 			case UNITAI_COLLATERAL:
@@ -11173,6 +11182,11 @@ int CvPlayerAI::AI_unitValue(UnitTypes eUnit, UnitAITypes eUnitAI, const CvArea*
 
 					iValue += iTempValue;
 				}
+
+				if (kUnitInfo.canMergeSplit() && GC.getGame().isOption(GAMEOPTION_COMBAT_SIZE_MATTERS)){
+					iValue *= 2;
+				}
+
 				break;
 			}
 			case UNITAI_CITY_DEFENSE:
@@ -11221,6 +11235,11 @@ int CvPlayerAI::AI_unitValue(UnitTypes eUnit, UnitAITypes eUnitAI, const CvArea*
 #endif // BATTLEWORN
 				//TB Combat Mods End
 				break;
+
+				if (kUnitInfo.canMergeSplit() && GC.getGame().isOption(GAMEOPTION_COMBAT_SIZE_MATTERS)){
+					iValue *= 2;
+				}
+
 			}
 			case UNITAI_CITY_COUNTER:
 			{
@@ -11354,6 +11373,11 @@ int CvPlayerAI::AI_unitValue(UnitTypes eUnit, UnitAITypes eUnitAI, const CvArea*
 				//Calvitix try to limit impact of moves
 				iValue += iCombatValue;
 				iValue += iCombatValue * (kUnitInfo.getMoves() - 1) / 2; //Only extra moves gives +50% bonus
+
+				if (kUnitInfo.canMergeSplit() && GC.getGame().isOption(GAMEOPTION_COMBAT_SIZE_MATTERS)){
+					iValue *= 2;
+				}
+
 				break;
 			}
 			case UNITAI_MISSIONARY:
@@ -11667,6 +11691,11 @@ int CvPlayerAI::AI_unitValue(UnitTypes eUnit, UnitAITypes eUnitAI, const CvArea*
 					//better because it enables the unit to move through opponent territory with a RoP
 				}
 				break;
+
+			if (kUnitInfo.canMergeSplit() && GC.getGame().isOption(GAMEOPTION_COMBAT_SIZE_MATTERS)){
+				iValue *= 2;
+			}
+
 			}
 			default: FErrorMsg("error");
 		}
