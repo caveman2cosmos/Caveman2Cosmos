@@ -1639,10 +1639,10 @@ void CvCityAI::AI_chooseProduction()
 		}
 	}
 
-	//#8 Workers Prio1 - when no workers at all
+	//#8 Workers Prio1 - when no workers at all or no danger
 	if (!bInhibitUnits && !(bDefenseWar && iWarSuccessRatio < -50))
 	{
-		if (iWorkersInArea == 0 || iDangerValue < 3) // Not a single worker on my landmass or low danger.
+		if (iWorkersInArea == 0 || (iWorkersInArea <= 3 && iDangerValue < 3)) // Not a single worker on my landmass or low danger.
 		{
 			if (iNeededWorkersInArea > iWorkersInArea && iProductionRank <= iLowlimitProductionRank)
 			{

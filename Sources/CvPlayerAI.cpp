@@ -11821,7 +11821,7 @@ int CvPlayerAI::AI_neededHunters(const CvArea* pArea) const
 		logAiEvaluations(2, "	Player %S Estimated number of hunters needed %d (num Cities : %d, num unowned Tiles : %d, value1 : %d, value2 : %d)",
 				this->getPlayer,
 				iHuntersneeded,
-				getNumCities,
+				getNumCities(),
 				iNumUnowned,
 				getNumCities() / 2 + pArea->getNumUnownedTiles() / 16 + 1,
 				getNumCities() + pArea->getNumUnownedTiles() / 64
