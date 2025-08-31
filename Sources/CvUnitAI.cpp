@@ -783,9 +783,9 @@ bool CvUnitAI::AI_upgrade()
 	const CvUnitInfo& unitInfo = GC.getUnitInfo(getUnitType());
 
 	std::vector<int> upgradeChain = unitInfo.getUnitUpgradeChain();
-	if (gUnitLogLevel >= 2)
+	if (gUnitLogLevel >= 4)
 	{
-		logBBAI("	%S at (%d,%d) have %d upgrades", getName(0).GetCString(), getX(), getY(), (int)upgradeChain.size());
+		logBBAI("	%S at (%d,%d) have %d upgrades choices", getName(0).GetCString(), getX(), getY(), (int)upgradeChain.size());
 	}
 
 	if (!upgradeChain.empty())
@@ -5429,6 +5429,15 @@ void CvUnitAI::AI_hunterEscortMove()
 			return;
 		}
 	}
+
+	//not needed anymore => RESERVE
+	//#define MAX_HUNTER_ESCORT_PERCENT_NEEDS 5 //Calvitix Add a limit to the Join to PropControl Team (when already too much units)
+	//const PlayerTypes eOwner = getOwner();
+	//CvPlayerAI& player = GET_PLAYER(eOwner);
+	//const CvArea* pArea = area();
+	//int iHuntersInArea = player.AI_totalAreaUnitAIs(pArea, UNITAI_HUNTER_ESCORT);
+	//int iUnitsInArea = player.getNumUnits();
+
 
 	if (AI_safety())
 	{
@@ -11723,34 +11732,55 @@ bool CvUnitAI::AI_guardCity(bool bLeave, bool bSearch, int iMaxPath)
 			{
 				//	Check property control attributes first - they may cause us to defend in the city
 				//	regardless of other conditions
-				if (getGroup()->AI_hasBeneficialPropertyEffectForCity(pCity, NO_PROPERTY))
+				#define MAX_PROPCONTROL_PERCENT_TO_JOIN 20 //Calvitix Add a limit to the Join to PropControl Team (when already too much units)
+				const PlayerTypes eOwner = getOwner();
+				CvPlayerAI& player = GET_PLAYER(eOwner);
+				const CvArea* pArea = area();
+				int iPropControlInArea = player.AI_totalAreaUnitAIs(pArea, UNITAI_PROPERTY_CONTROL);
+				int iUnitsInArea = player.getNumUnits();
+				if ((iPropControlInArea * 100 / iUnitsInArea) < MAX_PROPCONTROL_PERCENT_TO_JOIN)
 				{
-					//	We have at least one unit that can help the ciy's property control (aka crime usually)
-					//	Split ou he best such unit and have it defend in the city
-					CvSelectionGroup* pOldGroup = getGroup();
-					CvUnit* pEjectedUnit = getGroup()->AI_ejectBestPropertyManipulator(pCity);
 
-					FAssert(pEjectedUnit != NULL);
-					pEjectedUnit->AI_setUnitAIType(UNITAI_PROPERTY_CONTROL);
+					if (getGroup()->AI_hasBeneficialPropertyEffectForCity(pCity, NO_PROPERTY))
+					{
+						//	We have at least one unit that can help the ciy's property control (aka crime usually)
+						//	Split ou he best such unit and have it defend in the city
+						CvSelectionGroup* pOldGroup = getGroup();
+						CvUnit* pEjectedUnit = getGroup()->AI_ejectBestPropertyManipulator(pCity);
 
-					if (atPlot(pCity->plot()))
-					{
-						//	Mark the ejected unit as part of the city garrison
-						pEjectedUnit->getGroup()->AI_setAsGarrison(pCity);
-						pEjectedUnit->getGroup()->pushMission(MISSION_SKIP, -1, -1, 0, false, false, MISSIONAI_GUARD_CITY, NULL);
-						return (pEjectedUnit->getGroup() == pOldGroup || pEjectedUnit == this);
-					}
-					else if (pEjectedUnit->generatePath(pCity->plot(), 0, true))
-					{
-						//	Mark the ejected unit as part of the city garrison
-						pEjectedUnit->getGroup()->AI_setAsGarrison(pCity);
-						pEjectedUnit->getGroup()->pushMission(MISSION_MOVE_TO, pCity->getX(), pCity->getY(), 0, false, false, MISSIONAI_GUARD_CITY, NULL);
-						return (pEjectedUnit->getGroup() == pOldGroup || pEjectedUnit == this);
-					}
-					else
-					{
-						//	If we can't move after all regroup and continue regular defensive processing
-						pEjectedUnit->joinGroup(pOldGroup);
+						FAssert(pEjectedUnit != NULL);
+						pEjectedUnit->AI_setUnitAIType(UNITAI_PROPERTY_CONTROL);
+
+						if (gUnitLogLevel > 2)
+						{
+							const CvWString StrunitAIType = GC.getUnitAIInfo(AI_getUnitAIType()).getType();
+							CvWString StrUnitName = m_szName;
+							if (StrUnitName.length() == 0)
+							{
+								StrUnitName = getName(0).GetCString();
+							}
+							logAiEvaluations(3, "	Player %S Unit %S of type %S - is ejected from group To Maintain Prop Control in %S", GET_PLAYER(getOwner()).getCivilizationDescription(0), StrUnitName.GetCString(), StrunitAIType.GetCString(), pCity->getName().GetCString());
+						}
+
+						if (atPlot(pCity->plot()))
+						{
+							//	Mark the ejected unit as part of the city garrison
+							pEjectedUnit->getGroup()->AI_setAsGarrison(pCity);
+							pEjectedUnit->getGroup()->pushMission(MISSION_SKIP, -1, -1, 0, false, false, MISSIONAI_GUARD_CITY, NULL);
+							return (pEjectedUnit->getGroup() == pOldGroup || pEjectedUnit == this);
+						}
+						else if (pEjectedUnit->generatePath(pCity->plot(), 0, true))
+						{
+							//	Mark the ejected unit as part of the city garrison
+							pEjectedUnit->getGroup()->AI_setAsGarrison(pCity);
+							pEjectedUnit->getGroup()->pushMission(MISSION_MOVE_TO, pCity->getX(), pCity->getY(), 0, false, false, MISSIONAI_GUARD_CITY, NULL);
+							return (pEjectedUnit->getGroup() == pOldGroup || pEjectedUnit == this);
+						}
+						else
+						{
+							//	If we can't move after all regroup and continue regular defensive processing
+							pEjectedUnit->joinGroup(pOldGroup);
+						}
 					}
 				}
 
@@ -20606,9 +20636,12 @@ bool CvUnitAI::AI_nextCityToImprove(CvCity* pCity)
 
 	int iBasePathFlags = MOVE_SAFE_TERRITORY | MOVE_AVOID_ENEMY_UNITS | (isHuman() ? MOVE_OUR_TERRITORY : MOVE_IGNORE_DANGER | MOVE_RECONSIDER_ON_LEAVING_OWNED);
 
-	int iBestValue = 0;
+	int iBestPlotValue = 0;
+	int iBestCityValue = 0;
 	BuildTypes eBestBuild = NO_BUILD;
 	const CvPlot* pBestPlot = NULL;
+	const CvCity* pBestCity = NULL;
+
 
 	foreach_(const CvCity * pLoopCity, GET_PLAYER(getOwner()).cities())
 	{
@@ -20640,7 +20673,7 @@ bool CvUnitAI::AI_nextCityToImprove(CvCity* pCity)
 							iValue *= 2;
 						}
 
-						if (iValue > iBestValue)
+						if (iValue > iBestPlotValue)
 						{
 							PROFILE("CvUnitAI::AI_nextCityToImprove.Pathing");
 							int iPathTurns;
@@ -20649,13 +20682,46 @@ bool CvUnitAI::AI_nextCityToImprove(CvCity* pCity)
 								PROFILE("CvUnitAI::AI_nextCityToImprove.Pathed");
 								iValue /= (iPathTurns + 1);
 
-								if (iValue > iBestValue)
+								if (iValue > iBestPlotValue)
 								{
-									iBestValue = iValue;
+									iBestPlotValue = iValue;
 									eBestBuild = eBuild;
 									pBestPlot = pPlot;
+									pBestCity = pLoopCity;
 									//CvPlot* pEndTurnPlot = getPathEndTurnPlot();
 									FAssert(!atPlot(pBestPlot) || NULL == pCity || pCity->AI_getWorkersNeeded() == 0 || pCity->getNumWorkers() > pCity->AI_getWorkersNeeded() + 1);
+								}
+							}
+						}
+					}
+				}
+				else
+				{ //no Plot, but City
+					if (AI_plotValid(pLoopCity->plot()))
+					{
+						iValue *= 1000;
+
+						if (pLoopCity->isCapital())
+						{
+							iValue *= 2;
+						}
+
+						if (iValue > iBestCityValue)
+						{
+							PROFILE("CvUnitAI::AI_nextCityToImprove.Pathing");
+							int iPathTurns;
+							if (generatePath(pLoopCity->plot(), iBasePathFlags, true, &iPathTurns))
+							{
+								PROFILE("CvUnitAI::AI_nextCityToImprove.Pathed");
+								iValue /= (iPathTurns + 1);
+
+								if (iValue > iBestCityValue)
+								{
+									iBestCityValue = iValue;
+									//pBestPlot = pPlot;
+									pBestCity = pLoopCity;
+									//CvPlot* pEndTurnPlot = getPathEndTurnPlot();
+									FAssert(!(NULL == pCity || pCity->AI_getWorkersNeeded() == 0 || pCity->getNumWorkers() > pCity->AI_getWorkersNeeded() + 1));
 								}
 							}
 						}
@@ -20665,7 +20731,7 @@ bool CvUnitAI::AI_nextCityToImprove(CvCity* pCity)
 		}
 	}
 
-	if (pBestPlot != NULL)
+	if (pBestPlot != NULL && pBestCity != NULL)
 	{
 		FASSERT_BOUNDS(0, GC.getNumBuildInfos(), eBestBuild);
 
@@ -20674,9 +20740,127 @@ bool CvUnitAI::AI_nextCityToImprove(CvCity* pCity)
 		if (getGroup()->pushMissionInternal(MISSION_ROUTE_TO, pBestPlot->getX(), pBestPlot->getY(), ((isHuman() ? 0 : MOVE_WITH_CAUTION) | MOVE_SAFE_TERRITORY), false, false, MISSIONAI_BUILD, pBestPlot))
 		{
 			getGroup()->pushMission(MISSION_BUILD, eBestBuild, -1, 0, (getGroup()->getLengthMissionQueue() > 0), false, MISSIONAI_BUILD, pBestPlot);
+
+			CvWString StrUnitName;
+			if (gUnitLogLevel > 2)
+			{
+				const CvWString StrunitAIType = GC.getUnitAIInfo(AI_getUnitAIType()).getType();
+				const CvWString StrBuildAIType = GC.getBuildInfo(eBestBuild).getType();
+				StrUnitName = m_szName;
+				if (StrUnitName.length() == 0)
+				{
+					StrUnitName = getName(0).GetCString();
+				}
+				logAiEvaluations(3, "	Player %S Unit %S of type %S - Moving to Plot near %S to perform Build there %S", GET_PLAYER(getOwner()).getCivilizationDescription(0), StrUnitName.GetCString(), StrunitAIType.GetCString(), pBestCity->getName().GetCString(), StrBuildAIType.GetCString());
+			}
+
+
 			return true;
 		}
+		else
+		{		
+			CvWString StrUnitName;
+			if (gUnitLogLevel > 2)
+			{
+				const CvWString StrunitAIType = GC.getUnitAIInfo(AI_getUnitAIType()).getType();
+				const CvWString StrBuildAIType = GC.getBuildInfo(eBestBuild).getType();
+				StrUnitName = m_szName;
+				if (StrUnitName.length() == 0)
+				{
+					StrUnitName = getName(0).GetCString();
+				}
+				logAiEvaluations(3, "	Player %S Unit %S of type %S - Want to Move to Plot near %S to perform Build there %S, but Pathing error", GET_PLAYER(getOwner()).getCivilizationDescription(0), StrUnitName.GetCString(), StrunitAIType.GetCString(), pBestCity->getName().GetCString(), StrBuildAIType.GetCString());
+			}
+
+
+
+		}
 	}
+
+	if (pBestCity != NULL) //Calvitix no Plot found, but as Workers are needed for the City, move to it
+	{
+		if (atPlot(pBestCity->plot())) //already in the city that need workers
+		{
+
+			CvWString StrunitAIType;
+			CvWString StrUnitName;
+			if (gUnitLogLevel > 2)
+			{
+				StrunitAIType = GC.getUnitAIInfo(AI_getUnitAIType()).getType();
+				StrUnitName = m_szName;
+				if (StrUnitName.length() == 0)
+				{
+					StrUnitName = getName(0).GetCString();
+				}
+				logAiEvaluations(3, "	Player %S Unit %S of type %S - Staying in %S to perform as Worker there when needed", GET_PLAYER(getOwner()).getCivilizationDescription(0), StrUnitName.GetCString(), StrunitAIType.GetCString(), pBestCity->getName().GetCString());
+			}
+			return true;
+
+		}
+
+
+		if (generateSafePathforVulnerable(pBestCity->plot()))
+		{
+			CvWString StrunitAIType;
+			CvWString StrUnitName;
+			if (gUnitLogLevel > 2)
+			{
+				StrunitAIType = GC.getUnitAIInfo(AI_getUnitAIType()).getType();
+				StrUnitName = m_szName;
+				if (StrUnitName.length() == 0)
+				{
+					StrUnitName = getName(0).GetCString();
+				}
+				logAiEvaluations(3, "	Player %S Unit %S of type %S - Moving to %S to perform as Worker there", GET_PLAYER(getOwner()).getCivilizationDescription(0), StrUnitName.GetCString(), StrunitAIType.GetCString(), pBestCity->getName().GetCString());
+			}
+			const CvPlot* endTurnPlot = getPathEndTurnPlot();
+			return getGroup()->pushMissionInternal(MISSION_MOVE_TO, endTurnPlot->getX(), endTurnPlot->getY(), MOVE_IGNORE_DANGER, false, false, MISSIONAI_REGROUP, pBestCity->plot());
+		}
+		else
+		{
+			int iPathTurns;
+			//Calvitix. To reduce the amount of PropControl units moving, RNG 50% only will move
+			const int iMotivValue = GC.getGame().getSorenRandNum(10, "Should Move unsafe to Dest");
+
+			if (iMotivValue <= 5) //50%
+			{
+
+				if (generatePath(pBestCity->plot(), iBasePathFlags, true, &iPathTurns))
+				{
+					CvWString StrUnitName;
+					if (gUnitLogLevel > 2)
+					{
+						const CvWString StrunitAIType = GC.getUnitAIInfo(AI_getUnitAIType()).getType();
+						StrUnitName = m_szName;
+						if (StrUnitName.length() == 0)
+						{
+							StrUnitName = getName(0).GetCString();
+						}
+						logAiEvaluations(3, "	Player %S Unit %S of type %S - Moving (unsafe) to %S to perform as Worker", GET_PLAYER(getOwner()).getCivilizationDescription(0), StrUnitName.GetCString(), StrunitAIType.GetCString(), pBestCity->getName().GetCString());
+					}
+
+
+
+
+					const CvPlot* endTurnPlot = getPathEndTurnPlot();
+					return getGroup()->pushMissionInternal(MISSION_MOVE_TO, endTurnPlot->getX(), endTurnPlot->getY(), MOVE_IGNORE_DANGER, false, false, MISSIONAI_REGROUP, pBestCity->plot());
+				}
+			}
+			CvWString StrunitAIType;
+			CvWString StrUnitName;
+			if (gUnitLogLevel > 2)
+			{
+				StrunitAIType = GC.getUnitAIInfo(AI_getUnitAIType()).getType();
+				StrUnitName = m_szName;
+				if (StrUnitName.length() == 0)
+				{
+					StrUnitName = getName(0).GetCString();
+				}
+				logAiEvaluations(3, "	Player %S Unit %S of type %S - Want to Move to %S to perform as Worker there, but pathing error", GET_PLAYER(getOwner()).getCivilizationDescription(0), StrUnitName.GetCString(), StrunitAIType.GetCString(), pBestCity->getName().GetCString());
+			}
+		}
+	}
+
 
 	return false;
 }
@@ -21383,9 +21567,11 @@ bool CvUnitAI::processContracts(int iMinPriority)
 		m_contractualState = CONTRACTUAL_STATE_AWAITING_WORK;
 		if (gUnitLogLevel >= 3)
 		{
-			logContractBroker(1, "	Unit %S (%d) for player %d (%S) at (%d,%d) advertising for work",
+			const CvWString szStringUnitAi = GC.getUnitAIInfo(m_eUnitAIType).getType();
+			logContractBroker(1, "	Unit %S (%d) of Type %S for player %d (%S) at (%d,%d) advertising for work",
 					getUnitInfo().getDescription(),
 					getID(),
+					szStringUnitAi.GetCString(),
 					getOwner(),
 					GET_PLAYER(getOwner()).getCivilizationDescription(0),
 					getX(),
@@ -21513,18 +21699,19 @@ bool CvUnitAI::processContracts(int iMinPriority)
 	if (bContractAlreadyEstablished)
 	{
 		m_contractualState = CONTRACTUAL_STATE_NO_WORK_FOUND;
-
+		
 		//	No work available
-		if (gUnitLogLevel >= 3)
-		{
-			logBBAI("	Unit %S (%d) for player %d (%S) at (%d,%d) - no work available",
+		LOG_UNIT_BLOCK(3, {
+			const CvWString szStringUnitAi = GC.getUnitAIInfo(m_eUnitAIType).getType();
+			logBBAI("	Unit %S (%d) of Type (%S) for player %d (%S) at (%d,%d) - no work available",
 					getUnitInfo().getDescription(),
 					getID(),
+					szStringUnitAi.GetCString(),
 					getOwner(),
 					GET_PLAYER(getOwner()).getCivilizationDescription(0),
 					getX(),
 					getY());
-		}
+		});
 		return false;
 	}
 	return true;
@@ -28728,6 +28915,23 @@ namespace {
 		int score;
 	};
 
+	/**
+	 * Scores the property control need for a city for a given property type.
+	 * Brief:
+	 *   - Evaluates how much a city needs property control for a specific property, considering current responders and existing control units.
+	 *   - Used to prioritize which city a property control unit should move to.
+	 * Steps:
+	 *   1. Loop through all property scores for the unit.
+	 *   2. For the target property, get the city's property need.
+	 *   3. If the need is negative and the unit is not at the city, skip.
+	 *   4. Adjust minimum required responders for crime property.
+	 *   5. Count current responders and existing property control units in the city.
+	 *   6. Divide the need by the number of responders and existing units.
+	 *   7. If the unit is at the city, boost the score if more units are needed.
+	 *   8. Ensure a minimum score for staying put.
+	 *   9. Add a distance scoring factor to prioritize closer cities.
+	 *   10. Return the final score.
+	 */	
 	int scorePropertyControlNeed(const std::vector<PropertyAmount>& propertyScores, const CvUnit* unit, const CvCity* city, const PropertyTypes pProperty)
 	{
 		const CvPlayer& player = GET_PLAYER(unit->getOwner());
@@ -28779,7 +28983,7 @@ namespace {
 				maxScore = std::max(maxScore, iValue);
 			}
 		}
-		int maxFinalScore = maxScore + (scoring::applyDistanceScoringFactor(maxScore, unit->plot(), city->plot(), 1) / 10);  //Calvitix Test Remove the currentSpotBoost
+		int maxFinalScore = maxScore + (scoring::applyDistanceScoringFactor(maxScore, unit->plot(), city->plot(), 1) / 10);  //Calvitix Test Remove x2 the currentSpotBoost
 		return maxFinalScore;
 	}
 };
@@ -28792,6 +28996,7 @@ bool CvUnitAI::AI_fulfillPropertyControlNeed()
 	if (propertyManipulators == nullptr)
 	{
 		AI_setUnitAIType(UNITAI_RESERVE);
+		getGroup()->pushMission(MISSION_SKIP, -1, -1, 0, false, false, NO_MISSIONAI);
 		return false;
 	}
 
@@ -28832,6 +29037,19 @@ bool CvUnitAI::AI_fulfillPropertyControlNeed()
 	if (BestProperty == NO_PROPERTY)
 	{
 		AI_setUnitAIType(UNITAI_RESERVE);
+		getGroup()->pushMission(MISSION_SKIP, -1, -1, 0, false, false, NO_MISSIONAI);
+		CvWString StrunitAIType;
+		CvWString StrUnitName;
+		if (gUnitLogLevel > 2)
+		{
+			StrunitAIType = GC.getUnitAIInfo(AI_getUnitAIType()).getType();
+			StrUnitName = m_szName;
+			if (StrUnitName.length() == 0)
+			{
+				StrUnitName = getName(0).GetCString();
+			}
+			logAiEvaluations(3, "	Player %S Unit %S of type %S - No property Improv. found - Set to UNITAI_RESERVE", GET_PLAYER(getOwner()).getCivilizationDescription(0), StrUnitName.GetCString(), StrunitAIType.GetCString());
+		}
 		return false;
 	}
 
@@ -28849,6 +29067,35 @@ bool CvUnitAI::AI_fulfillPropertyControlNeed()
 		CvCity* bestCity = bestCityScore.result.item;
 		CvWString StrunitAIType;
 		CvWString StrUnitName;
+
+		//Calvitix test
+		#define MAX_TARGET_CONTROL_MAINTAIN 10
+		if (bestCityScore.result.score <= 110)
+		{  // No need. Set to Reserve
+
+			int iNbControlForces = player.AI_plotTargetMissionAIs(bestCity->plot(), MISSIONAI_PROPERTY_CONTROL_MAINTAIN, NULL, 0);
+				
+			if (iNbControlForces > MAX_TARGET_CONTROL_MAINTAIN)
+			{
+				AI_setUnitAIType(UNITAI_RESERVE);
+				getGroup()->pushMission(MISSION_SKIP, -1, -1, 0, false, false, NO_MISSIONAI);
+				if (gUnitLogLevel > 2)
+				{
+					const CvWString StrunitAIType = GC.getUnitAIInfo(AI_getUnitAIType()).getType();
+					CvWString StrUnitName = m_szName;
+					if (StrUnitName.length() == 0)
+					{
+						StrUnitName = getName(0).GetCString();
+					}
+					logAiEvaluations(3, "	Player %S Unit %S of type %S - City that need the most Prop Control Help : %S has a low Value and already > 10 PropControl Units- Set to UNITAI_RESERVE   (Value %d)", GET_PLAYER(getOwner()).getCivilizationDescription(0), StrUnitName.GetCString(), StrunitAIType.GetCString(), bestCity->getName().GetCString(), bestCityScore.result.score);
+				}
+				return false;
+			}
+
+
+		}
+
+
 		if (gUnitLogLevel > 2)
 		{
 			StrunitAIType = GC.getUnitAIInfo(AI_getUnitAIType()).getType();
@@ -28867,22 +29114,50 @@ bool CvUnitAI::AI_fulfillPropertyControlNeed()
 			return getGroup()->pushMissionInternal(MISSION_SKIP, bestCity->getX(), bestCity->getY(), 0, false, false, MISSIONAI_PROPERTY_CONTROL_MAINTAIN, bestCity->plot());
 		}
 
-		if (generateSafePathforVulnerable(bestCity->plot()))
+		//Calvitix. To reduce the amount of PropControl units moving, RNG 50% only will move
+		const int iValue = GC.getGame().getSorenRandNum(10, "Should Move for PropControl");
+
+		if (iValue <= 5) //50%
 		{
+			logAiEvaluations(3, "	Player %S Unit %S of type %S - Could move, but Staying in City %S due to RNG", GET_PLAYER(getOwner()).getCivilizationDescription(0), StrUnitName.GetCString(), StrunitAIType.GetCString(), bestCity->getName().GetCString());
+			return getGroup()->pushMissionInternal(MISSION_SKIP, getX(), getY(), 0, false, false, MISSIONAI_PROPERTY_CONTROL_MAINTAIN, plot());
+		}
+		else
+		{
+
+			if (generateSafePathforVulnerable(bestCity->plot()))
+			{
+				if (gUnitLogLevel > 2)
+				{
+					logAiEvaluations(3, "	Player %S Unit %S of type %S - Is moving, and vulnerable. Safe Move path generated to City %S", GET_PLAYER(getOwner()).getCivilizationDescription(0), StrUnitName.GetCString(), StrunitAIType.GetCString(), bestCity->getName().GetCString());
+				}
+				const CvPlot* endTurnPlot = getPathEndTurnPlot();
+				return getGroup()->pushMissionInternal(MISSION_MOVE_TO, endTurnPlot->getX(), endTurnPlot->getY(), MOVE_IGNORE_DANGER, false, false, MISSIONAI_PROPERTY_CONTROL_RESPONSE, bestCity->plot());
+			}
 			if (gUnitLogLevel > 2)
 			{
-				logAiEvaluations(3, "	Player %S Unit %S of type %S - Is vulnerable. Generate Safe Move path to City %S", GET_PLAYER(getOwner()).getCivilizationDescription(0), StrUnitName.GetCString(), StrunitAIType.GetCString(), bestCity->getName().GetCString());
+				logAiEvaluations(3, "	Player %S Unit %S of type %S - Generate Escort request for move to City %S  (Value %d)", GET_PLAYER(getOwner()).getCivilizationDescription(0), StrUnitName.GetCString(), StrunitAIType.GetCString(), bestCity->getName().GetCString(), bestCityScore.result.score);
 			}
-			const CvPlot* endTurnPlot = getPathEndTurnPlot();
-			return getGroup()->pushMissionInternal(MISSION_MOVE_TO, endTurnPlot->getX(), endTurnPlot->getY(), MOVE_IGNORE_DANGER, false, false, MISSIONAI_PROPERTY_CONTROL_RESPONSE, bestCity->plot());
+
+			getGroup()->pushMission(MISSION_SKIP, -1, -1, 0, false, false, MISSIONAI_WAIT_FOR_ESCORT);
+			return true;
 		}
+	}
+	else
+	{   //No city found
+		AI_setUnitAIType(UNITAI_RESERVE);
+		getGroup()->pushMission(MISSION_SKIP, -1, -1, 0, false, false, NO_MISSIONAI);
 		if (gUnitLogLevel > 2)
 		{
-			logAiEvaluations(3, "	Player %S Unit %S of type %S - Generate Escort request for move to City %S  (Value %d)", GET_PLAYER(getOwner()).getCivilizationDescription(0), StrUnitName.GetCString(), StrunitAIType.GetCString(), bestCity->getName().GetCString(), bestCityScore.result.score);
+			const CvWString StrunitAIType = GC.getUnitAIInfo(AI_getUnitAIType()).getType();
+			CvWString StrUnitName = m_szName;
+			if (StrUnitName.length() == 0)
+			{
+				StrUnitName = getName(0).GetCString();
+			}
+			logAiEvaluations(3, "	Player %S Unit %S of type %S - No city found to assign - Set to UNITAI_RESERVE", GET_PLAYER(getOwner()).getCivilizationDescription(0), StrUnitName.GetCString(), StrunitAIType.GetCString());
 		}
 
-		getGroup()->pushMission(MISSION_SKIP, -1, -1, 0, false, false, MISSIONAI_WAIT_FOR_ESCORT);
-		return true;
 	}
 	return false;
 }

@@ -16,6 +16,10 @@ class CvEventTriggerInfo;
 class CvSelectionGroup;
 class CvUnitSelectionCriteria;
 
+/**
+ * Stores information about a mission target for AI planning.
+ * - Tracks number of units targeting, closest distance, and total volume.
+ */
 struct MissionTargetInfo
 {
 	MissionTargetInfo() : iCount(0), iClosest(0), iVolume(0) {}
@@ -28,6 +32,10 @@ struct MissionTargetInfo
 //	Koshling - add caching to plot danger calculations
 #define PLOT_DANGER_CACHING
 #ifdef PLOT_DANGER_CACHING
+/**
+ * Caches plot danger calculations for performance.
+ * - Stores coordinates, range, move test flag, result, and last use count.
+ */
 struct plotDangerCacheEntry
 {
 	plotDangerCacheEntry()
@@ -49,6 +57,10 @@ struct plotDangerCacheEntry
 
 #define PLOT_DANGER_CACHE_SIZE 24
 
+/**
+ * Manages a fixed-size cache of plot danger entries.
+ * - Provides clear method and tracks usage counter.
+ */
 class plotDangerCache
 {
 public:
@@ -73,6 +85,12 @@ public:
 };
 #endif
 
+/**
+ * AI player logic for managing all aspects of a civilization.
+ * - Handles turn-based decisions, unit and city management, diplomacy, research, and victory strategies.
+ * - Contains routines for evaluating yields, commerce, military, city sites, attitudes, and more.
+ * - Integrates with city and unit AI, caching, and global game state.
+ */
 class CvPlayerAI : public CvPlayer
 {
 
@@ -114,6 +132,17 @@ public:
 	void AI_unitUpdate();
 
 	void AI_makeAssignWorkDirty();
+	
+/**
+ * Assigns working plots and specialists for the city.
+ * - Updates special yield multipliers.
+ * - Removes invalid plots and excess specialists.
+ * - Ensures home plot is always worked.
+ * - Removes worst citizens if over population limit.
+ * - Assigns unassigned population to plots or specialists.
+ * - If automated, optimizes assignments for best yields.
+ * - Updates UI if city is selected.
+ */	
 	void AI_assignWorkingPlots();
 	void AI_updateAssignWork();
 

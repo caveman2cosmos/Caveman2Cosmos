@@ -184,7 +184,8 @@ void CvPlayerAI::AI_init()
 		AI_setEspionageWeight(GC.getLeaderHeadInfo(getPersonalityType()).getEspionageWeight());
 		//AI_setCivicTimer(((getMaxAnarchyTurns() == 0) ? (GC.getDefineINT("MIN_REVOLUTION_TURNS") * 2) : CIVIC_CHANGE_DELAY) / 2);
 		AI_setReligionTimer(1);
-		AI_setCivicTimer(1);
+		AI_setCivicTimer((getMaxAnarchyTurns() == 0) ? 1 : 2);  //from RI
+		//AI_initStrategyRand(); // K-Mod
 	}
 }
 
@@ -555,7 +556,7 @@ void CvPlayerAI::AI_doTurnUnitsPre()
 	}
 
 	//k-mod uncommented
-	if (AI_isDoStrategy(AI_STRATEGY_CRUSH))
+	if (AI_isDoStrategy(AI_STRATEGY_CRUSH) && GET_TEAM(getTeam()).getAnyWarPlanCount(true) > 0)
 	{
 		AI_convertUnitAITypesForCrush();
 	}
@@ -10857,7 +10858,7 @@ int CvPlayerAI::AI_unitValue(UnitTypes eUnit, UnitAITypes eUnitAI, const CvArea*
 			}
 			case UNITAI_ATTACK_CITY:
 			{
-				//	For now the AI cannot cope with bad prroperty values on anything but hunter or pillage units
+				//	For now the AI cannot cope with bad property values on anything but hunter or pillage units
 				if (iPropertyValue < 0)
 				{
 					iValue = 0;
@@ -11811,11 +11812,22 @@ int CvPlayerAI::AI_neededHunters(const CvArea* pArea) const
 	{
 		return 1; // A hunter unit might come in handy at some point
 	}
-	return (
-		std::min(
-			getNumCities() / 2 + pArea->getNumUnownedTiles() / 16 + 1,
-			getNumCities() + pArea->getNumUnownedTiles() / 64)
-	);
+	int iHuntersneeded = std::min(
+			intSqrt(getNumCities()) + pArea->getNumUnownedTiles() / 16 + 1,
+			getNumCities() / 2 + pArea->getNumUnownedTiles() / 64);
+	if (gPlayerLogLevel > 2)
+	{
+		int iNumUnowned = pArea->getNumUnownedTiles();
+		logAiEvaluations(2, "	Player %S Estimated number of hunters needed %d (num Cities : %d, num unowned Tiles : %d, value1 : %d, value2 : %d)",
+				this->getPlayer,
+				iHuntersneeded,
+				getNumCities,
+				iNumUnowned,
+				getNumCities() / 2 + pArea->getNumUnownedTiles() / 16 + 1,
+				getNumCities() + pArea->getNumUnownedTiles() / 64
+			);
+	}
+	return (iHuntersneeded);
 }
 
 
@@ -11836,11 +11848,11 @@ int CvPlayerAI::AI_neededWorkers(const CvArea* pArea) const
 	{
 		return 0;
 	}
-	iNeeded = std::min(iNeeded, 1 + iCities + intSqrt(iCities)); // max 1 + 1 workers per city in area + 1 worker per city squared in area.
+	iNeeded = std::min(iNeeded, 1 + intSqrt(iCities) * 2); // max 1 + 1 worker per city squared in area.  Calvitix Reduce to 1 workers per city suqared in area
 
 	if (gPlayerLogLevel > 2)
 	{
-		logBBAI("Player %d needs %d Workers in Area %d.\n", getID(), iNeeded, pArea->getID());
+		logBBAI("Player %d needs %d Workers in Area %d for %d cities.\n", getID(), iNeeded, pArea->getID(), iCities);
 	}
 	return iNeeded;
 
@@ -21680,6 +21692,12 @@ int CvPlayerAI::AI_getCultureVictoryStage() const
 		return 0;
 	}
 
+	//If AIWeight for cultural is 0, no stage
+	if (GC.getLeaderHeadInfo(getPersonalityType()).getCultureVictoryWeight() == 0)
+	{
+		return 0;
+	}
+
 	// Necessary as capital city pointer is used later
 	if (getCapitalCity() == NULL)
 	{
@@ -21809,6 +21827,12 @@ int CvPlayerAI::AI_getSpaceVictoryStage() const
 	int iValue;
 
 	if (GC.getDefineINT("BBAI_VICTORY_STRATEGY_SPACE") <= 0)
+	{
+		return 0;
+	}
+
+	//If AIWeight for Space Vict. is 0, no stage
+	if (GC.getLeaderHeadInfo(getPersonalityType()).getSpaceVictoryWeight() == 0)
 	{
 		return 0;
 	}
@@ -21962,6 +21986,12 @@ int CvPlayerAI::AI_getConquestVictoryStage() const
 		return 0;
 	}
 
+	//If AIWeight for Conquest Vict. is 0, no stage
+	if (GC.getLeaderHeadInfo(getPersonalityType()).getConquestVictoryWeight() == 0)
+	{
+		return 0;
+	}
+
 	VictoryTypes eConquest = NO_VICTORY;
 	for (int iI = 0; iI < GC.getNumVictoryInfos(); iI++)
 	{
@@ -22093,6 +22123,13 @@ int CvPlayerAI::AI_getDominationVictoryStage() const
 		return 0;
 	}
 
+	//If AIWeight for Conquest Vict. is 0, no stage
+	if (GC.getLeaderHeadInfo(getPersonalityType()).getDominationVictoryWeight() == 0)
+	{
+		return 0;
+	}
+
+
 	VictoryTypes eDomination = NO_VICTORY;
 	for (int iI = 0; iI < GC.getNumVictoryInfos(); iI++)
 	{
@@ -22163,6 +22200,12 @@ int CvPlayerAI::AI_getDiplomacyVictoryStage() const
 	int iValue = 0;
 
 	if (GC.getDefineINT("BBAI_VICTORY_STRATEGY_DIPLOMACY") <= 0)
+	{
+		return 0;
+	}
+
+	//If AIWeight for Conquest Vict. is 0, no stage
+	if (GC.getLeaderHeadInfo(getPersonalityType()).getDiplomacyVictoryWeight() == 0)
 	{
 		return 0;
 	}
