@@ -11680,7 +11680,7 @@ bool CvGame::isAutoRaze(const CvCity* city, const PlayerTypes eNewOwner, bool bC
 
 	if (isOption(GAMEOPTION_CHALLENGE_ONE_CITY)
 	|| getMaxCityElimination() > 0
-	|| bConquest && city->getPopulation() == 1)
+	|| (bConquest && city->getPopulation() == 1 && city->getNumWorldWonders() == 0))
 	{
 		return true;
 	}
