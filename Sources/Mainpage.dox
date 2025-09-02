@@ -12,10 +12,12 @@
  * - \ref CvTeamAI   : Coordinates strategy between team members.
  *
  * # Important AI Methods
- * - \ref CvPlayerAI::AI_doTurn "CvPlayerAI::AI_doTurn()" → evaluates player actions each turn.
+ * - \ref CvPlayerAI::AI_doTurnPre "CvPlayerAI::AI_doTurnPre()" → evaluates player actions each turn (1st phase).
+ * - \ref CvPlayerAI::AI_doTurnPost "CvPlayerAI::AI_doTurnPost()" → evaluates player actions each turn (2nd Phase).
  * - \ref CvCityAI::AI_doTurn "CvCityAI::AI_doTurn()" → city production, growth, and specialists.
  * - \ref CvUnitAI::AI_update "CvUnitAI::AI_update()" → unit missions and combat decisions.
- * - \ref CvTeamAI::AI_doTurn "CvTeamAI::AI_doTurn()" → diplomacy and team-wide strategy.
+ * - \ref CvTeamAI::AI_doTurnPre "CvTeamAI::AI_doTurnPre()" → diplomacy and team-wide strategy.
+ * - \ref CvTeamAI::AI_doTurnPost "CvTeamAI::AI_doTurnPost()" → diplomacy and team-wide strategy.
  *
  * # Related Systems
  * - \ref CvGameAI : Global AI logic, victory strategies.

@@ -27695,7 +27695,7 @@ int CvPlayer::getCorporationInfluence(CorporationTypes eIndex) const
 	}
 	iInfluence = getModifiedIntValue(iInfluence, (-5) * getEnvironmentalProtection() - 2 * getLaborFreedom());
 
-	logBBAI("  Player %d (%S) Has a Corporation Infleunce of %d for Corporation %s", getID(), getCivilizationDescription(0), iInfluence, GC.getCorporationInfo(eIndex).getDescription());
+	logBBAI("  Player %d (%S) Has a Corporation Influence of %d for Corporation %s", getID(), getCivilizationDescription(0), iInfluence, GC.getCorporationInfo(eIndex).getDescription());
 
 	return iInfluence;
 }

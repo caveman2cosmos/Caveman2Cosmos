@@ -1,4 +1,4 @@
-#include "CvGameCoreDLL.h"
+﻿#include "CvGameCoreDLL.h"
 #include "CvGlobals.h"
 
 // Log levels:

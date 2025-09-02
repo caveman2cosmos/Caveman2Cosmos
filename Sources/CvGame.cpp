@@ -7259,6 +7259,12 @@ bool CvGame::testVictory(VictoryTypes eVictory, TeamTypes eTeam, bool* pbEndScor
 		return false;
 	}
 
+	//Calvitix : in duel, the initial score can be at the beginning very buggy
+	if (getGameTurn() < 100)
+	{
+		return false;
+	}
+
 	bool bValid = true;
 	// Time Victory
 	if (bValid && GC.getVictoryInfo(eVictory).isEndScore())
