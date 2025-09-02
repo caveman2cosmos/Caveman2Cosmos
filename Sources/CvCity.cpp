@@ -15595,10 +15595,11 @@ void CvCity::popOrder(int orderIndex, bool bFinish, bool bChoose, bool bResolveL
 			{
 				AI_trained(eTrainUnit, eTrainAIUnit);
 
-				if (gCityLogLevel >= 2)
-				{
-					logBBAI("      City %S builds unit %S", getName().GetCString(), GC.getUnitInfo(eTrainUnit).getDescription());
-				}
+				
+				LOG_CITY_BLOCK(2, {
+					const CvWString szStringUnitAi = GC.getUnitAIInfo(eTrainAIUnit).getType();
+					logBBAI("      City %S builds unit %S for Type %S", getName().GetCString(), GC.getUnitInfo(eTrainUnit).getDescription(), szStringUnitAi.GetCString());
+				});
 				const int iProgress = getProgressOnUnit(eTrainUnit);
 				const int iRawOverflow = iProgress - getProductionNeeded(eTrainUnit);
 				const int iMaxOverflow = getMaxProductionOverflow();

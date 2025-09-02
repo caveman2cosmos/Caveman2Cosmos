@@ -4366,6 +4366,10 @@ bool CvGame::isValidVoteSelection(VoteSourceTypes eVoteSource, const VoteSelecti
 
 /*DllExport*/ bool CvGame::isDebugMode() const
 {
+#ifdef _DEBUG
+	return true;
+#endif // _DEBUG
+
 	return m_bDebugMode;
 }
 

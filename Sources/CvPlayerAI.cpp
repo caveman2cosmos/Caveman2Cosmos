@@ -1462,7 +1462,7 @@ void CvPlayerAI::AI_unitUpdate()
 		else
 		{
 			std::vector< std::pair<int, int> > groupList;
-
+			//Define a Priority Sorting (see AI_movementPriority)
 			for (CLLNode<int>* pCurrUnitNode = headGroupCycleNode(); pCurrUnitNode != NULL; pCurrUnitNode = nextGroupCycleNode(pCurrUnitNode))
 			{
 				CvSelectionGroup* pLoopSelectionGroup = getSelectionGroup(pCurrUnitNode->m_data);
@@ -3106,7 +3106,9 @@ int CvPlayerAI::AI_targetCityValue(const CvCity* pCity, bool bRandomize, bool bI
 
 	int iValue = 1;
 
-	iValue += ((pCity->getPopulation() * (50 + pCity->calculateCulturePercent(getID()))) / 100);
+	int iPopulation = ((pCity->getPopulation() * 5 * (50 + pCity->calculateCulturePercent(getID()))) / 100);
+
+	iValue += iPopulation; 
 
 	/************************************************************************************************/
 	/* BETTER_BTS_AI_MOD					  06/30/10					 Mongoose & jdog5000	  */
@@ -3114,42 +3116,44 @@ int CvPlayerAI::AI_targetCityValue(const CvCity* pCity, bool bRandomize, bool bI
 	/* War strategy AI																			  */
 	/************************************************************************************************/
 		// Prefer lower defense
-	iValue += std::max(0, (100 - pCity->getDefenseModifier(false)) / 30);
-
-	if (pCity->getDefenseDamage() > 0)
+	const int iDefenseMod = std::max(0, (500 - pCity->getDefenseModifier(false)) / 2);
+	int iDefenseDmg = 0;
+	if (pCity->getDefenseDamage() > 0)  //Defense Damage is not Positif, it hurts
 	{
-		iValue += ((pCity->getDefenseDamage() / 30) + 1);
+		iDefenseDmg = ((pCity->getDefenseDamage() / 10) + 1);
 	}
-
+	iValue += iDefenseMod - iDefenseDmg;
 	// Significant amounting of borrowing/adapting from Mongoose AITargetCityValueFix
 	if (pCity->isCoastal(GC.getWorldInfo(GC.getMap().getWorldSize()).getOceanMinAreaSize()))
 	{
-		iValue += 2;
+		iValue += 5;
 	}
 
-	iValue += 4 * pCity->getNumActiveWorldWonders();
+	int iWonderPts = 4 * pCity->getNumActiveWorldWonders();
 
+	int iReligionPts = 0;
 	for (iI = 0; iI < GC.getNumReligionInfos(); iI++)
 	{
 		if (pCity->isHolyCity((ReligionTypes)iI))
 		{
-			iValue += std::max(2, ((GC.getGame().calculateReligionPercent((ReligionTypes)iI)) / 5));
-			iValue += ((AI_getFlavorValue(/* AI_FLAVOR_RELIGION */ (FlavorTypes)1) + 2) / 6);
+			iReligionPts += std::max(2, ((GC.getGame().calculateReligionPercent((ReligionTypes)iI)) / 5));
+			iReligionPts += ((AI_getFlavorValue(/* AI_FLAVOR_RELIGION */ (FlavorTypes)1) + 2) / 6);
 
 			if (GET_PLAYER(pCity->getOwner()).getStateReligion() == iI)
 			{
-				iValue += 2;
+				iReligionPts += 2;
 			}
 			if (getStateReligion() == iI)
 			{
-				iValue += 8;
+				iReligionPts += 8;
 			}
 			if (GC.getLeaderHeadInfo(getLeaderType()).getFavoriteReligion() == iI)
 			{
-				iValue += 1;
+				iReligionPts += 1;
 			}
 		}
 	}
+	iValue += iWonderPts + iReligionPts;
 
 	if (pCity->isEverOwned(getID()))
 	{
@@ -3165,6 +3169,7 @@ int CvPlayerAI::AI_targetCityValue(const CvCity* pCity, bool bRandomize, bool bI
 		iValue += std::min(8, (AI_adjacentPotentialAttackers(pCity->plot()) + 2) / 3);
 	}
 
+	int iPlots = 0;
 	for (iI = 0; iI < NUM_CITY_PLOTS; iI++)
 	{
 		pLoopPlot = plotCity(pCity->getX(), pCity->getY(), iI);
@@ -3173,34 +3178,35 @@ int CvPlayerAI::AI_targetCityValue(const CvCity* pCity, bool bRandomize, bool bI
 		{
 			if (pLoopPlot->getBonusType(getTeam()) != NO_BONUS)
 			{
-				iValue += std::min(8, std::max(1, AI_bonusVal(pLoopPlot->getBonusType(getTeam())) / 10));
+				iPlots += std::min(8, std::max(1, AI_bonusVal(pLoopPlot->getBonusType(getTeam())) / 10));
 			}
 
 			if (pLoopPlot->getOwner() == getID())
 			{
-				iValue++;
+				iPlots++;
 			}
 
 			if (pLoopPlot->isAdjacentPlayer(getID(), true))
 			{
-				iValue++;
+				iPlots++;
 			}
 		}
 	}
 
+	int iSpecial = 0;
 	if (GC.getGame().culturalVictoryValid()
 	&& GET_PLAYER(pCity->getOwner()).AI_isDoVictoryStrategy(AI_VICTORY_CULTURE3)
 	&& pCity->getCultureLevel() >= GC.getGame().culturalVictoryCultureLevel() - 1)
 	{
-		iValue += 15;
+		iSpecial += 15;
 
 		if (GET_PLAYER(pCity->getOwner()).AI_isDoVictoryStrategy(AI_VICTORY_CULTURE4))
 		{
-			iValue += 25;
+			iSpecial += 25;
 
 			if (pCity->getCultureLevel() >= (GC.getGame().culturalVictoryCultureLevel()))
 			{
-				iValue += 10;
+				iSpecial += 10;
 			}
 		}
 	}
@@ -3209,15 +3215,15 @@ int CvPlayerAI::AI_targetCityValue(const CvCity* pCity, bool bRandomize, bool bI
 	{
 		if (pCity->isCapital())
 		{
-			iValue += 10;
+			iSpecial += 10;
 
 			if (GET_PLAYER(pCity->getOwner()).AI_isDoVictoryStrategy(AI_VICTORY_SPACE4))
 			{
-				iValue += 20;
+				iSpecial += 20;
 
 				if (GET_TEAM(pCity->getTeam()).getVictoryCountdown(GC.getGame().getSpaceVictory()) >= 0)
 				{
-					iValue += 30;
+					iSpecial += 30;
 				}
 			}
 		}
@@ -3232,13 +3238,17 @@ int CvPlayerAI::AI_targetCityValue(const CvCity* pCity, bool bRandomize, bool bI
 		iTempValue *= std::max(1, ((GC.getMap().maxStepDistance() * 2) - GC.getMap().calculatePathDistance(pNearestCity->plot(), pCity->plot())));
 		iTempValue /= std::max(1, (GC.getMap().maxStepDistance() * 2));
 
-		iValue += iTempValue;
+		iSpecial += iTempValue;
 	}
 
+	iValue += iPlots + iSpecial;
+
+	int iRandom = 0;
 	if (bRandomize)
 	{
-		iValue += GC.getGame().getSorenRandNum(((pCity->getPopulation() / 2) + 1), "AI Target City Value");
+		iRandom = GC.getGame().getSorenRandNum(((pCity->getPopulation() * 2) + 1), "AI Target City Value");
 	}
+	iValue += iRandom;
 	/************************************************************************************************/
 	/* BETTER_BTS_AI_MOD					   END												  */
 	/************************************************************************************************/
@@ -3246,7 +3256,12 @@ int CvPlayerAI::AI_targetCityValue(const CvCity* pCity, bool bRandomize, bool bI
 		//	Prefer less defended
 	int iDefense = 5 + (static_cast<const CvCityAI*>(pCity))->getGarrisonStrength();
 	iDefense = std::max(1, iDefense);
-	iValue = ((iValue * 100) / iDefense);
+	iValue = ((iValue * 100) / intSqrt(iDefense));
+
+	LOG_PLAYER_BLOCK(3, {
+		logBBAI("Player %d Estimation of Target City %S, Final Value %d, Population %d, Defense Unit : %d, Fortifications : %d, Defense Dmg : %d, Wonders : %d, Religion : %d, Plots : %d, Special : %d, Random : %d,...", getID(), pCity->getName().GetCString(), iValue, iPopulation, iDefense, iDefenseMod, iDefenseDmg, iWonderPts, iReligionPts, iPlots, iSpecial, iRandom);
+	});
+
 
 	return iValue;
 }
@@ -5726,7 +5741,7 @@ int CvPlayerAI::AI_techBuildingValue(TechTypes eTech, int iPathLength, bool& bEn
 				//	Average value per city
 				iBuildingValue /= std::max(1, getNumCities());
 
-				if (gPlayerLogLevel > 2)
+				if (gPlayerLogLevel > 3)
 				{
 					logAiEvaluations(2, "\tPlayer %d evaluate TechBuilding %S new mechanism value: %d", getID(), kLoopBuilding.getDescription(), iBuildingValue);
 				}
@@ -12918,6 +12933,7 @@ int CvPlayerAI::AI_unitTargetMissionAIs(const CvUnit* pUnit, MissionAITypes* aeM
 			{
 				iPathTurns++;
 			}
+			iCount = iPathTurns;
 		}
 
 		// If the mission parameters state any amount of movement is ok or the amount of movement allowed is valid
@@ -23814,6 +23830,16 @@ int CvPlayerAI::AI_playerCloseness(PlayerTypes eIndex, int iMaxDistance) const
 	return iValue;
 }
 
+
+int CvPlayerAI::AI_getTotalProperty(PropertyTypes eProperty) const
+{
+	int iValue = 0;
+	foreach_(CvCity * pLoopCity, cities())
+	{
+		iValue += pLoopCity->getPropertiesConst()->getValueByProperty(eProperty);
+	}
+	return iValue;
+}
 
 int CvPlayerAI::AI_getTotalAreaCityThreat(const CvArea* pArea, int* piLargestThreat) const
 {

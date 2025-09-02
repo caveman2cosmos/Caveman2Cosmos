@@ -2906,6 +2906,20 @@ void CvGameTextMgr::setUnitHelp(CvWStringBuffer &szString, const CvUnit* pUnit, 
 		//Setup Miscellaneous Pertinent displays
 		if (bNormalView)
 		{
+
+#ifdef ENABLE_ROLES_HOVER
+			const CvPlayer& kPlayer = GET_PLAYER(pUnit->getOwner());
+			UnitAITypes eUnitAI = pUnit->AI_getUnitAIType();
+			if (eUnitAI != NO_UNITAI)
+			{
+				szString.append(NEWLINE);
+				CvWString szStringUnitAi = "";
+				getUnitAIString(szStringUnitAi, eUnitAI);
+				MissionAITypes eMissionAI = pUnit->getGroup()->AI_getMissionAIType();
+				CvWString MissionInfos = MissionAITypeToDescription(eMissionAI);
+				szString.append(gDLL->getText("TXT_KEY_UNITHELP_ROLE", szStringUnitAi.GetCString(), MissionInfos.GetCString()));
+			}
+#endif
 			//Max HP
 			if (pUnit->canFight())
 			{

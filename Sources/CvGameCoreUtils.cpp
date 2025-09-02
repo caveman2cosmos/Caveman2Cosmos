@@ -4234,65 +4234,65 @@ void getUnitAIString(CvWString& szString, UnitAITypes eUnitAI)
 
 	switch (eUnitAI)
 	{
-	case NO_UNITAI: szString = L"no unitAI"; break;
+	case NO_UNITAI: szString = L""; break;
 
-	case UNITAI_UNKNOWN: szString = L"unknown"; break;
-	case UNITAI_ANIMAL: szString = L"animal"; break;
-	case UNITAI_SETTLE: szString = L"settle"; break;
-	case UNITAI_WORKER: szString = L"worker"; break;
-	case UNITAI_ATTACK: szString = L"attack"; break;
-	case UNITAI_ATTACK_CITY: szString = L"attack city"; break;
-	case UNITAI_COLLATERAL: szString = L"collateral"; break;
-	case UNITAI_PILLAGE: szString = L"pillage"; break;
-	case UNITAI_RESERVE: szString = L"reserve"; break;
-	case UNITAI_COUNTER: szString = L"counter"; break;
-	case UNITAI_CITY_DEFENSE: szString = L"city defense"; break;
-	case UNITAI_CITY_COUNTER: szString = L"city counter"; break;
-	case UNITAI_CITY_SPECIAL: szString = L"city special"; break;
-	case UNITAI_EXPLORE: szString = L"explore"; break;
-	case UNITAI_MISSIONARY: szString = L"missionary"; break;
-	case UNITAI_PROPHET: szString = L"prophet"; break;
-	case UNITAI_ARTIST: szString = L"artist"; break;
-	case UNITAI_SCIENTIST: szString = L"scientist"; break;
-	case UNITAI_GENERAL: szString = L"general"; break;
-	case UNITAI_HUNTER: szString = L"hunter"; break;
-	case UNITAI_GREAT_HUNTER: szString = L"great hunter"; break;
-	case UNITAI_GREAT_ADMIRAL: szString = L"great admiral"; break;
-	case UNITAI_MERCHANT: szString = L"merchant"; break;
-	case UNITAI_ENGINEER: szString = L"engineer"; break;
-	case UNITAI_SPY: szString = L"spy"; break;
-	case UNITAI_ICBM: szString = L"icbm"; break;
-	case UNITAI_WORKER_SEA: szString = L"worker sea"; break;
-	case UNITAI_ATTACK_SEA: szString = L"attack sea"; break;
-	case UNITAI_RESERVE_SEA: szString = L"reserve sea"; break;
-	case UNITAI_ESCORT_SEA: szString = L"escort sea"; break;
-	case UNITAI_EXPLORE_SEA: szString = L"explore sea"; break;
-	case UNITAI_ASSAULT_SEA: szString = L"assault sea"; break;
-	case UNITAI_SETTLER_SEA: szString = L"settler sea"; break;
-	case UNITAI_MISSIONARY_SEA: szString = L"missionary sea"; break;
-	case UNITAI_SPY_SEA: szString = L"spy sea"; break;
-	case UNITAI_CARRIER_SEA: szString = L"carrier sea"; break;
-	case UNITAI_MISSILE_CARRIER_SEA: szString = L"missile carrier"; break;
-	case UNITAI_PIRATE_SEA: szString = L"pirate sea"; break;
-	case UNITAI_ATTACK_AIR: szString = L"attack air"; break;
-	case UNITAI_DEFENSE_AIR: szString = L"defense air"; break;
-	case UNITAI_CARRIER_AIR: szString = L"carrier air"; break;
-	case UNITAI_PARADROP: szString = L"paradrop"; break;
-	case UNITAI_ATTACK_CITY_LEMMING: szString = L"attack city lemming"; break;
-	case UNITAI_PROPERTY_CONTROL: szString = L"property control"; break;
-	case UNITAI_HEALER: szString = L"healer"; break;
-	case UNITAI_PROPERTY_CONTROL_SEA: szString = L"property control sea"; break;
-	case UNITAI_HEALER_SEA: szString = L"healer sea"; break;
-	case UNITAI_HUNTER_ESCORT: szString = L"hunter escort"; break;
-	case UNITAI_BARB_CRIMINAL: szString = L"barb criminal"; break;
-	case UNITAI_INVESTIGATOR: szString = L"investigator"; break;
-	case UNITAI_INFILTRATOR: szString = L"infiltrator"; break;
-	case UNITAI_SEE_INVISIBLE: szString = L"see invisible"; break;
-	case UNITAI_SEE_INVISIBLE_SEA: szString = L"see invisible sea"; break;
-	case UNITAI_ESCORT: szString = L"escort"; break;
-	case UNITAI_MISSILE_AIR: szString = L"missile air"; break;
-	case UNITAI_PILLAGE_COUNTER: szString = L"pillage counter"; break;
-	case UNITAI_SUBDUED_ANIMAL: szString = L"subdued animal"; break;
+	case UNITAI_UNKNOWN: szString = L"Unknown"; break;
+	case UNITAI_ANIMAL: szString = L"Animal"; break;
+	case UNITAI_SETTLE: szString = L"Settle"; break;
+	case UNITAI_WORKER: szString = L"Worker"; break;
+	case UNITAI_ATTACK: szString = L"Attack"; break;
+	case UNITAI_ATTACK_CITY: szString = L"Attack city"; break;
+	case UNITAI_COLLATERAL: szString = L"Collateral"; break;
+	case UNITAI_PILLAGE: szString = L"Pillage"; break;
+	case UNITAI_RESERVE: szString = L"Reserve"; break;
+	case UNITAI_COUNTER: szString = L"Counter"; break;
+	case UNITAI_CITY_DEFENSE: szString = L"City defense"; break;
+	case UNITAI_CITY_COUNTER: szString = L"City counter"; break;
+	case UNITAI_CITY_SPECIAL: szString = L"City special"; break;
+	case UNITAI_EXPLORE: szString = L"Explore"; break;
+	case UNITAI_MISSIONARY: szString = L"Missionary"; break;
+	case UNITAI_PROPHET: szString = L"Prophet"; break;
+	case UNITAI_ARTIST: szString = L"Artist"; break;
+	case UNITAI_SCIENTIST: szString = L"Scientist"; break;
+	case UNITAI_GENERAL: szString = L"General"; break;
+	case UNITAI_HUNTER: szString = L"Hunter"; break;
+	case UNITAI_GREAT_HUNTER: szString = L"Great hunter"; break;
+	case UNITAI_GREAT_ADMIRAL: szString = L"Great admiral"; break;
+	case UNITAI_MERCHANT: szString = L"Merchant"; break;
+	case UNITAI_ENGINEER: szString = L"Engineer"; break;
+	case UNITAI_SPY: szString = L"Spy"; break;
+	case UNITAI_ICBM: szString = L"Icbm"; break;
+	case UNITAI_WORKER_SEA: szString = L"Worker sea"; break;
+	case UNITAI_ATTACK_SEA: szString = L"Attack sea"; break;
+	case UNITAI_RESERVE_SEA: szString = L"Reserve sea"; break;
+	case UNITAI_ESCORT_SEA: szString = L"Escort sea"; break;
+	case UNITAI_EXPLORE_SEA: szString = L"Explore sea"; break;
+	case UNITAI_ASSAULT_SEA: szString = L"Assault sea"; break;
+	case UNITAI_SETTLER_SEA: szString = L"Settler sea"; break;
+	case UNITAI_MISSIONARY_SEA: szString = L"Missionary sea"; break;
+	case UNITAI_SPY_SEA: szString = L"Spy sea"; break;
+	case UNITAI_CARRIER_SEA: szString = L"Carrier sea"; break;
+	case UNITAI_MISSILE_CARRIER_SEA: szString = L"Missile carrier"; break;
+	case UNITAI_PIRATE_SEA: szString = L"Pirate sea"; break;
+	case UNITAI_ATTACK_AIR: szString = L"Attack air"; break;
+	case UNITAI_DEFENSE_AIR: szString = L"Defense air"; break;
+	case UNITAI_CARRIER_AIR: szString = L"Carrier air"; break;
+	case UNITAI_PARADROP: szString = L"Paradrop"; break;
+	case UNITAI_ATTACK_CITY_LEMMING: szString = L"Attack city lemming"; break;
+	case UNITAI_PROPERTY_CONTROL: szString = L"Property control"; break;
+	case UNITAI_HEALER: szString = L"Healer"; break;
+	case UNITAI_PROPERTY_CONTROL_SEA: szString = L"Property control sea"; break;
+	case UNITAI_HEALER_SEA: szString = L"Healer sea"; break;
+	case UNITAI_HUNTER_ESCORT: szString = L"Hunter escort"; break;
+	case UNITAI_BARB_CRIMINAL: szString = L"Barb criminal"; break;
+	case UNITAI_INVESTIGATOR: szString = L"Investigator"; break;
+	case UNITAI_INFILTRATOR: szString = L"Infiltrator"; break;
+	case UNITAI_SEE_INVISIBLE: szString = L"See invisible"; break;
+	case UNITAI_SEE_INVISIBLE_SEA: szString = L"See invisible sea"; break;
+	case UNITAI_ESCORT: szString = L"Escort"; break;
+	case UNITAI_MISSILE_AIR: szString = L"Missile air"; break;
+	case UNITAI_PILLAGE_COUNTER: szString = L"Pillage counter"; break;
+	case UNITAI_SUBDUED_ANIMAL: szString = L"Subdued animal"; break;
 
 	default: szString = CvWString::format(L"unknown(%d)", eUnitAI); break;
 	}
@@ -4479,3 +4479,153 @@ void makeValueString(CvWString& szValue, const int iValue, const bool bWholeNumb
 	}
 }
 // ! Toffer
+
+	// Scoring helper function to attenuate score by distance, with optional boost for current plot
+int applyDistanceScoringFactor(int score, const CvPlot* sourcePlot, const CvPlot* targetPlot, const int currentPlotBoost)
+{
+	FAssert(sourcePlot != NULL);
+	FAssert(targetPlot != NULL);
+
+	if (score > 0)
+	{
+		if (sourcePlot != targetPlot)
+		{
+			// Has to be > 0 because we aren't on the same plot...
+			PlayerTypes Refplayer = sourcePlot->getOwner();
+			int dist_break = 8;
+
+			//if plot isn't owned, grab the first player (to get current era)
+			if (Refplayer == NO_PLAYER)
+			{
+				for (int iPlayer = 0; iPlayer < MAX_PLAYERS; ++iPlayer)
+				{
+					if (GET_PLAYER((PlayerTypes)iPlayer).isAlive())
+					{
+						Refplayer = (PlayerTypes)iPlayer;
+						break;
+					}
+				}
+			}
+			dist_break += (int)GET_PLAYER(Refplayer).getCurrentEra();  //Calvitix TODO : dynamic, depending on map size ?
+
+			const int dist = stepDistance(sourcePlot->getX(), sourcePlot->getY(), targetPlot->getX(), targetPlot->getY());
+			float d0 = 5.0f;
+			float p = 0.4f;
+			float expfact = 1.5f;
+			if (dist <= dist_break)
+			{
+				score = static_cast<int>(score * pow(d0 / (d0 + dist), p));
+			}
+			else
+			{
+				float extra_dist = static_cast<float>(dist - dist_break);
+				score = static_cast<int>(score * pow(d0 / (d0 + dist), p) * std::exp(-0.1 * pow(extra_dist, expfact)));
+			}
+		}
+		else
+		{
+			score *= currentPlotBoost;
+		}
+	}
+	return score;
+}
+
+
+
+CvString MissionAITypeToString(MissionAITypes eMissionAI)
+{
+	switch (eMissionAI)
+	{
+	case NO_MISSIONAI:                         return "NO_MISSIONAI";
+	case MISSIONAI_SHADOW:                     return "MISSIONAI_SHADOW";
+	case MISSIONAI_GROUP:                      return "MISSIONAI_GROUP";
+	case MISSIONAI_LOAD_ASSAULT:               return "MISSIONAI_LOAD_ASSAULT";
+	case MISSIONAI_LOAD_SETTLER:               return "MISSIONAI_LOAD_SETTLER";
+	case MISSIONAI_LOAD_SPECIAL:               return "MISSIONAI_LOAD_SPECIAL";
+	case MISSIONAI_GUARD_CITY:                 return "MISSIONAI_GUARD_CITY";
+	case MISSIONAI_GUARD_BONUS:                return "MISSIONAI_GUARD_BONUS";
+	case MISSIONAI_GUARD_TRADE_NET:            return "MISSIONAI_GUARD_TRADE_NET";
+	case MISSIONAI_GUARD_SPY:                  return "MISSIONAI_GUARD_SPY";
+	case MISSIONAI_ATTACK_SPY:                 return "MISSIONAI_ATTACK_SPY";
+	case MISSIONAI_SPREAD:                     return "MISSIONAI_SPREAD";
+	case MISSIONAI_SPREAD_CORPORATION:         return "MISSIONAI_SPREAD_CORPORATION";
+	case MISSIONAI_CONSTRUCT:                  return "MISSIONAI_CONSTRUCT";
+	case MISSIONAI_HURRY:                      return "MISSIONAI_HURRY";
+	case MISSIONAI_GREAT_WORK:                 return "MISSIONAI_GREAT_WORK";
+	case MISSIONAI_EXPLORE:                    return "MISSIONAI_EXPLORE";
+	case MISSIONAI_BLOCKADE:                   return "MISSIONAI_BLOCKADE";
+	case MISSIONAI_PILLAGE:                    return "MISSIONAI_PILLAGE";
+	case MISSIONAI_FOUND:                      return "MISSIONAI_FOUND";
+	case MISSIONAI_BUILD:                      return "MISSIONAI_BUILD";
+	case MISSIONAI_ASSAULT:                    return "MISSIONAI_ASSAULT";
+	case MISSIONAI_CARRIER:                    return "MISSIONAI_CARRIER";
+	case MISSIONAI_PICKUP:                     return "MISSIONAI_PICKUP";
+	case MISSIONAI_INQUISITION:                return "MISSIONAI_INQUISITION";
+	case MISSIONAI_CLAIM_TERRITORY:            return "MISSIONAI_CLAIM_TERRITORY";
+	case MISSIONAI_HURRY_FOOD:                 return "MISSIONAI_HURRY_FOOD";
+	case MISSIONAI_CONTRACT:                   return "MISSIONAI_CONTRACT";
+	case MISSIONAI_CONTRACT_UNIT:              return "MISSIONAI_CONTRACT_UNIT";
+	case MISSIONAI_DELIBERATE_KILL:            return "MISSIONAI_DELIBERATE_KILL";
+	case MISSIONAI_REGROUP:                    return "MISSIONAI_REGROUP";
+	case MISSIONAI_HEAL_SUPPORT:               return "MISSIONAI_HEAL_SUPPORT";
+	case MISSIONAI_PROPERTY_CONTROL_RESPONSE:  return "MISSIONAI_PROPERTY_CONTROL_RESPONSE";
+	case MISSIONAI_PROPERTY_CONTROL_MAINTAIN:  return "MISSIONAI_PROPERTY_CONTROL_MAINTAIN";
+	case MISSIONAI_INVESTIGATOR_RESPONSE:      return "MISSIONAI_INVESTIGATOR_RESPONSE";
+	case MISSIONAI_INVESTIGATOR_MAINTAIN:      return "MISSIONAI_INVESTIGATOR_MAINTAIN";
+	case MISSIONAI_INFILTRATOR_MAINTAIN:       return "MISSIONAI_INFILTRATOR_MAINTAIN";
+	case MISSIONAI_SEE_INVISIBLE_MAINTAIN:     return "MISSIONAI_SEE_INVISIBLE_MAINTAIN";
+	case MISSIONAI_SEE_INVISIBLE_SEA_MAINTAIN: return "MISSIONAI_SEE_INVISIBLE_SEA_MAINTAIN";
+	case MISSIONAI_WAIT_FOR_ESCORT:            return "MISSIONAI_WAIT_FOR_ESCORT";
+	case MISSIONAI_WAIT_FOR_SEE_INVISIBLE:     return "MISSIONAI_WAIT_FOR_SEE_INVISIBLE";
+	default:                                   return "UNKNOWN_MISSIONAI";
+	}
+}
+
+CvString MissionAITypeToDescription(MissionAITypes eMissionAI)
+{
+	switch (eMissionAI)
+	{
+	case NO_MISSIONAI:                         return " --- ";
+	case MISSIONAI_SHADOW:                     return "Shadow another unit";
+	case MISSIONAI_GROUP:                      return "Join or regroup with a unit group";
+	case MISSIONAI_LOAD_ASSAULT:               return "Load onto assault transport";
+	case MISSIONAI_LOAD_SETTLER:               return "Load settler onto transport";
+	case MISSIONAI_LOAD_SPECIAL:               return "Load special unit";
+	case MISSIONAI_GUARD_CITY:                 return "Guard a city";
+	case MISSIONAI_GUARD_BONUS:                return "Guard a resource";
+	case MISSIONAI_GUARD_TRADE_NET:            return "Guard trade network";
+	case MISSIONAI_GUARD_SPY:                  return "Guard against spies";
+	case MISSIONAI_ATTACK_SPY:                 return "Hunt down enemy spies";
+	case MISSIONAI_SPREAD:                     return "Spread religion";
+	case MISSIONAI_SPREAD_CORPORATION:         return "Spread corporation";
+	case MISSIONAI_CONSTRUCT:                  return "Construct building or wonder";
+	case MISSIONAI_HURRY:                      return "Hurry production";
+	case MISSIONAI_GREAT_WORK:                 return "Perform a great work";
+	case MISSIONAI_EXPLORE:                    return "Explore territory";
+	case MISSIONAI_BLOCKADE:                   return "Blockade coast or city";
+	case MISSIONAI_PILLAGE:                    return "Pillage enemy improvements";
+	case MISSIONAI_FOUND:                      return "Found a city";
+	case MISSIONAI_BUILD:                      return "Build improvement";
+	case MISSIONAI_ASSAULT:                    return "Lead an assault";
+	case MISSIONAI_CARRIER:                    return "Operate as carrier";
+	case MISSIONAI_PICKUP:                     return "Pick up unit(s)";
+	case MISSIONAI_INQUISITION:                return "Conduct inquisition";
+	case MISSIONAI_CLAIM_TERRITORY:            return "Claim new territory";
+	case MISSIONAI_HURRY_FOOD:                 return "Hurry food supply";
+	case MISSIONAI_CONTRACT:                   return "Fulfill contract";
+	case MISSIONAI_CONTRACT_UNIT:              return "Provide contracted unit";
+	case MISSIONAI_DELIBERATE_KILL:            return "Targeted assassination";
+	case MISSIONAI_REGROUP:                    return "Regroup with allies";
+	case MISSIONAI_HEAL_SUPPORT:               return "Heal and support units";
+	case MISSIONAI_PROPERTY_CONTROL_RESPONSE:  return "Move to Respond to property issues";
+	case MISSIONAI_PROPERTY_CONTROL_MAINTAIN:  return "Maintain property control";
+	case MISSIONAI_INVESTIGATOR_RESPONSE:      return "Respond to investigation";
+	case MISSIONAI_INVESTIGATOR_MAINTAIN:      return "Maintain investigation role";
+	case MISSIONAI_INFILTRATOR_MAINTAIN:       return "Maintain infiltration role";
+	case MISSIONAI_SEE_INVISIBLE_MAINTAIN:     return "Maintain invisible detection";
+	case MISSIONAI_SEE_INVISIBLE_SEA_MAINTAIN: return "Maintain sea invisible detection";
+	case MISSIONAI_WAIT_FOR_ESCORT:            return "Wait for escort";
+	case MISSIONAI_WAIT_FOR_SEE_INVISIBLE:     return "Wait for see-invisible escort";
+	default:                                   return "Unknown mission AI";
+	}
+}
