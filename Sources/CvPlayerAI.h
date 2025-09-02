@@ -447,6 +447,7 @@ public:
 
 	int AI_getTotalCityThreat() const;
 	int AI_getTotalFloatingDefenseNeeded() const;
+	int AI_getTotalProperty(PropertyTypes eProperty) const;
 
 
 	int AI_getTotalAreaCityThreat(const CvArea* pArea, int* piLargestThreat = NULL) const;

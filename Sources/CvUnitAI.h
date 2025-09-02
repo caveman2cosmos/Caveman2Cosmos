@@ -2777,6 +2777,8 @@ public:
      */
 	bool AI_establishStackSeeInvisibleCoverage();
 
+    //bool AI_defensiveCollateral(int iThreshold, int iSearchRange);
+
     /**
      * Generates a safe path for vulnerable units to a target plot.
      * @brief Calculates a path that avoids danger for vulnerable units.

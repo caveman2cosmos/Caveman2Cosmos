@@ -117,6 +117,20 @@ bool CvSelectionGroupAI::AI_update()
 
 	if (isForceUpdate())
 	{
+		
+		LOG_UNIT_BLOCK(3, {
+			UnitAITypes eUnitAi = this->getHeadUnit()->AI_getUnitAIType();
+			MissionAITypes eMissionAI = AI_getMissionAIType();
+			CvWString StrunitAIType = GC.getUnitAIInfo(eUnitAi).getType();
+			CvWString MissionInfos = MissionAITypeToString(eMissionAI);
+			CvWString StrUnitName = this->getHeadUnit()->getNameNoDesc();
+			if (StrUnitName.length() == 0)
+			{
+				StrUnitName = this->getHeadUnit()->getName(0).GetCString();
+			}
+
+			logBBAI("Player %d Group ID %d, mené par %S of Type %S, at (%d, %d), Mission %S [stack size %d], Something wrong, Force Update...", getOwner(), m_iID, StrUnitName.GetCString(), StrunitAIType.GetCString(), getX(), getY(), MissionInfos.GetCString(), getNumUnits());
+		});
 		clearMissionQueue(); // XXX ???
 		setActivityType(ACTIVITY_AWAKE);
 		setForceUpdate(false);

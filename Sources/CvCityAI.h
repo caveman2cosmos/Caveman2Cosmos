@@ -679,7 +679,7 @@ protected:
 	bool AI_chooseLeastRepresentedUnit(const char* reason, UnitTypeWeightArray &allowedTypes, int iOdds = -1);
 	bool AI_chooseBuilding(int iFocusFlags = 0, int iMaxTurns = MAX_INT, int iMinThreshold = 0, int iOdds = -1, bool bMaximizePerTurnValue = false, PropertyTypes eProperty = NO_PROPERTY);
 	bool AI_chooseExperienceBuilding(const UnitAITypes eUnitAI, const int iUnitProductionLossesFactor);
-	bool AI_choosePropertyControlBuildingAndUnit(int iTriggerPercentOfPropertyOpRange, PropertyTypes pProperty = NO_PROPERTY);
+	bool AI_choosePropertyControlBuildingAndUnit(int iTriggerPercentOfPropertyOpRange, PropertyTypes pProperty = NO_PROPERTY, int eMaxPropertyUnitsPercent = 20);
 	bool AI_chooseHealerUnit(int iMinNeeded = 3);
 	bool AI_chooseProject();
 	bool AI_chooseProcess(CommerceTypes eCommerceType = NO_COMMERCE, int64_t* commerceWeights = NULL);
