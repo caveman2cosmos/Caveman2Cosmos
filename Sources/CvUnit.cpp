@@ -3731,6 +3731,18 @@ void CvUnit::updateCombat(CvUnit* pSelectedDefender, bool bSamePlot, bool bSteal
 					MESSAGE_TYPE_INFO, NULL, GC.getCOLOR_RED(), pPlot->getX(), pPlot->getY()
 				);
 			}
+			LOG_UNIT_BLOCK(3, {
+				CvWString StrunitAIType = GC.getUnitAIInfo(AI_getUnitAIType()).getType();
+				CvWString StrUnitName = m_szName;
+				if (StrUnitName.length() == 0)
+				{
+					StrUnitName = getName(0).GetCString();
+				}
+				logBBAI("	Player %d Unit ID %d, %S of Type %S at (%d,%d) [stack size %d] died.", getOwner(), getID(), StrUnitName.GetCString(), StrunitAIType.GetCString(), getX(), getY(), getGroup()->getNumUnits());
+			});
+
+
+
 			if (bHumanDefender)
 			{
 				CvWString szBuffer;
@@ -6271,6 +6283,25 @@ void CvUnit::move(CvPlot* pPlot, bool bShow)
 
 	//GC.getGame().logOOSSpecial(16, getID(), pPlot->getX(), pPlot->getY());
 	OutputDebugString(CvString::format("%S (%d) CvUnit::move (%d,%d)-->(%d,%d)\n", getDescription().c_str(), m_iID, m_iX, m_iY, pPlot->getX(), pPlot->getY()).c_str());
+	LOG_UNIT_BLOCK(4, {
+		UnitAITypes eUnitAi = AI_getUnitAIType();
+		MissionAITypes eMissionAI = getGroup()->AI_getMissionAIType();
+		CvWString StrunitAIType = GC.getUnitAIInfo(eUnitAi).getType();
+		CvWString MissionInfos = MissionAITypeToString(eMissionAI);
+		CvWString StrUnitName = m_szName;
+		CvPlot* pMissionPlot = getGroup()->AI_getMissionAIPlot();
+		CvWString MissionTarget = "";
+		if (pMissionPlot != NULL)
+		{
+			MissionTarget = CvWString::format(L"--> (%d, %d)", pMissionPlot->getX(), pMissionPlot->getY());
+		}
+		if (StrUnitName.length() == 0)
+		{
+			StrUnitName = getName(0).GetCString();
+		}
+
+		logBBAI("Player %d Unit ID %d, %S of Type %S, move (%d, %d)-->(%d,%d), in Mission %S [stack size %d]%S", getOwner(), m_iID, StrUnitName.GetCString(), StrunitAIType.GetCString(), m_iX, m_iY, pPlot->getX(), pPlot->getY(), MissionInfos.GetCString(), getGroup()->getNumUnits(), MissionTarget.GetCString());
+	});
 
 	setXY(pPlot->getX(), pPlot->getY(), true, true, bShow && pPlot->isVisibleToWatchingHuman(), bShow);
 
@@ -19089,6 +19120,8 @@ void CvUnit::setCombatUnit(CvUnit* pCombatUnit, bool bAttacking, bool bQuick, bo
 					getOwner(), getID(), GET_PLAYER(getOwner()).getName(), getName().GetCString(), currCombatStr(NULL, NULL),
 					pCombatUnit->getOwner(), pCombatUnit->getID(), GET_PLAYER(pCombatUnit->getOwner()).getName(), pCombatUnit->getName().GetCString(), pCombatUnit->currCombatStr(pCombatUnit->plot(), this));
 				gDLL->messageControlLog(szOut);
+				CvString CombatInfos = szOut;
+				LOG_BBAI_UNIT(3, ("%S", CombatInfos.GetCString()));
 			}
 
 			if (showSeigeTower(pCombatUnit) && !isUsingDummyEntities()  && isInViewport())
@@ -35146,6 +35179,12 @@ void CvUnit::doMerge()
 		pkMergedUnit->setAutoPromoting(pUnit1->isAutoPromoting());
 		pkMergedUnit->testPromotionReady();
 		pkMergedUnit->setName(pUnit1->getNameNoDesc());
+		
+		pkMergedUnit->AI_setUnitAIType(pUnit1->AI_getUnitAIType());
+		if (pUnit2->AI_getUnitAIType() == pUnit3->AI_getUnitAIType() && pkMergedUnit->AI_getUnitAIType() != pUnit2->AI_getUnitAIType())
+		{
+			pkMergedUnit->AI_setUnitAIType(pUnit2->AI_getUnitAIType());
+		}
 
 		if (pUnit1->getLeaderUnitType() != NO_UNIT)
 		{

@@ -9628,7 +9628,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_NUM_BUILDINGS_DESTROYED</Tag>
 		<English>%d1 %s2_civ_adjective [NUM1:building has:buildings have] been destroyed in %s3_city</English>
-		<French>%d1 [NUM1:bâtiment %s2:1_civ_adjective a été détruit:bâtiments %s2:3_civ_adjective ont été détruits] à %s3_city</French>
+		<French>%d1 [NUM1:bâtiment %s2:3_civ_adjective a été détruit:bâtiments %s2:3_civ_adjective ont été détruits] à %s3_city</French>
 		<German>In %s3_city [NUM1:wurde:wurden] %d1 %s2:3_civ_adjective Gebäude zerstört</German>
 		<Italian>%d1 %s2_civ_adjective [NUM1:edificio è stato distrutto:edifici sono stati distrutti] a %s3_city</Italian>
 		<Spanish>[NUM1:Se ha destruido:Se han destruido] %d1 [NUM1:edificio:edificios] de la civilización %s2:2_civ_adjective en %s3_city.</Spanish>

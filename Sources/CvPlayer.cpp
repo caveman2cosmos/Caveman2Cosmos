@@ -4003,26 +4003,26 @@ void CvPlayer::dumpStats() const
 		else logBBAI("		%S: %S", GC.getCivicOptionInfo((CivicOptionTypes)iI).getDescription(), GC.getCivicInfo(eCivic).getDescription());
 	}
 
-	logBBAI("	Civic switch history:");
-	{
-		int iTurn = -1;
-		for (int iI = 0; iI < (int)m_civicSwitchHistory.size(); iI++)
-		{
-			if (m_civicSwitchHistory[iI].iTurn != iTurn)
-			{
-				iTurn = m_civicSwitchHistory[iI].iTurn;
-				logBBAI("		Turn %d:", iTurn);
-			}
-			logBBAI("			%S -> %S%s",
-					m_civicSwitchHistory[iI].eFromCivic == NO_CIVIC ? L"Unknown" : GC.getCivicInfo((CivicTypes)m_civicSwitchHistory[iI].eFromCivic).getDescription(),
-					m_civicSwitchHistory[iI].eToCivic == NO_CIVIC ? L"Unknown" : GC.getCivicInfo((CivicTypes)m_civicSwitchHistory[iI].eToCivic).getDescription(),
-					m_civicSwitchHistory[iI].bNoAnarchy ? " (no anarchy switch)" : "");
-		}
-		if (iTurn == -1)
-		{
-			logBBAI("		No switches made");
-		}
-	}
+	//logBBAI("	Civic switch history:");
+	//{
+	//	int iTurn = -1;
+	//	for (int iI = 0; iI < (int)m_civicSwitchHistory.size(); iI++)
+	//	{
+	//		if (m_civicSwitchHistory[iI].iTurn != iTurn)
+	//		{
+	//			iTurn = m_civicSwitchHistory[iI].iTurn;
+	//			logBBAI("		Turn %d:", iTurn);
+	//		}
+	//		logBBAI("			%S -> %S%s",
+	//				m_civicSwitchHistory[iI].eFromCivic == NO_CIVIC ? L"Unknown" : GC.getCivicInfo((CivicTypes)m_civicSwitchHistory[iI].eFromCivic).getDescription(),
+	//				m_civicSwitchHistory[iI].eToCivic == NO_CIVIC ? L"Unknown" : GC.getCivicInfo((CivicTypes)m_civicSwitchHistory[iI].eToCivic).getDescription(),
+	//				m_civicSwitchHistory[iI].bNoAnarchy ? " (no anarchy switch)" : "");
+	//	}
+	//	if (iTurn == -1)
+	//	{
+	//		logBBAI("		No switches made");
+	//	}
+	//}
 
 	//	City stats
 	foreach_(const CvCity* pLoopCity, cities())
@@ -4056,19 +4056,19 @@ void CvPlayer::dumpStats() const
 
 		logBBAI("			PropertyBuildings:");
 
-		for (int iJ = 0; iJ < pProperties->getNumProperties(); iJ++)
-		{
-			const CvPropertyInfo& kInfo = GC.getPropertyInfo((PropertyTypes)pProperties->getProperty(iJ));
+		//for (int iJ = 0; iJ < pProperties->getNumProperties(); iJ++)
+		//{
+		//	const CvPropertyInfo& kInfo = GC.getPropertyInfo((PropertyTypes)pProperties->getProperty(iJ));
 
-			for (int i = kInfo.getNumPropertyBuildings() - 1; i > -1; i--)
-			{
-				const PropertyBuilding& kBuilding = kInfo.getPropertyBuilding(i);
-				if (pLoopCity->hasBuilding(kBuilding.eBuilding))
-				{
-					logBBAI("				%S: %S", kInfo.getDescription(), GC.getBuildingInfo(kBuilding.eBuilding).getDescription());
-				}
-			}
-		}
+		//	for (int i = kInfo.getNumPropertyBuildings() - 1; i > -1; i--)
+		//	{
+		//		const PropertyBuilding& kBuilding = kInfo.getPropertyBuilding(i);
+		//		if (pLoopCity->hasBuilding(kBuilding.eBuilding))
+		//		{
+		//			logBBAI("				%S: %S", kInfo.getDescription(), GC.getBuildingInfo(kBuilding.eBuilding).getDescription());
+		//		}
+		//	}
+		//}
 	}
 
 	//	Unit stats
@@ -27695,7 +27695,7 @@ int CvPlayer::getCorporationInfluence(CorporationTypes eIndex) const
 	}
 	iInfluence = getModifiedIntValue(iInfluence, (-5) * getEnvironmentalProtection() - 2 * getLaborFreedom());
 
-	logBBAI("  Player %d (%S) Has a Corporation Infleunce of %d for Corporation %s", getID(), getCivilizationDescription(0), iInfluence, GC.getCorporationInfo(eIndex).getDescription());
+	logBBAI("  Player %d (%S) Has a Corporation Influence of %d for Corporation %s", getID(), getCivilizationDescription(0), iInfluence, GC.getCorporationInfo(eIndex).getDescription());
 
 	return iInfluence;
 }

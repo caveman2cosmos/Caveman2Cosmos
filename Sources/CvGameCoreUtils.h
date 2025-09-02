@@ -423,4 +423,13 @@ protected:
 // Toffer
 void makeValueString(CvWString& szValue, const int iValue, const bool bWholeNumberCutDecimals = false, int iNumDecimals = 2);
 // ! Toffer
+
+int applyDistanceScoringFactor(int score, const CvPlot* sourcePlot, const CvPlot* targetPlot, const int currentPlotBoost = 1);
+
+// Conversion enum -> brut string (MISSION_XXXXX
+CvString MissionAITypeToString(MissionAITypes eMissionAI);
+
+// Conversion enum -> brut string found a city..., Move to...
+CvString MissionAITypeToDescription(MissionAITypes eMissionAI);
+
 #endif

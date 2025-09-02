@@ -1,0 +1,62 @@
+/**
+ * \mainpage Caveman2Cosmos DLL Documentation
+ *
+ * # Overview
+ * This documentation describes the structure of the **C2C GameCoreDLL**,  
+ * focusing on the **Artificial Intelligence (AI) system** of Civilization IV: Beyond the Sword.
+ *
+ * # Key AI Classes
+ * - \ref CvPlayerAI : Handles per-player decision-making (research, diplomacy, production).
+ * - \ref CvCityAI   : Controls city management (production, specialists, buildings).
+ * - \ref CvUnitAI   : Decides how individual units act (movement, attacks, missions).
+ * - \ref CvTeamAI   : Coordinates strategy between team members.
+ *
+ * # Important AI Methods
+ * - \ref CvPlayerAI::AI_doTurnPre "CvPlayerAI::AI_doTurnPre()" → evaluates player actions each turn (1st phase).
+ * - \ref CvPlayerAI::AI_doTurnPost "CvPlayerAI::AI_doTurnPost()" → evaluates player actions each turn (2nd Phase).
+ * - \ref CvCityAI::AI_doTurn "CvCityAI::AI_doTurn()" → city production, growth, and specialists.
+ * - \ref CvUnitAI::AI_update "CvUnitAI::AI_update()" → unit missions and combat decisions.
+ * - \ref CvTeamAI::AI_doTurnPre "CvTeamAI::AI_doTurnPre()" → diplomacy and team-wide strategy.
+ * - \ref CvTeamAI::AI_doTurnPost "CvTeamAI::AI_doTurnPost()" → diplomacy and team-wide strategy.
+ *
+ * # Related Systems
+ * - \ref CvGameAI : Global AI logic, victory strategies.
+ * - \ref CvSelectionGroupAI : Grouping and coordination of units.
+ * - \ref CvMap and \ref CvPlot : Provide terrain and map information to AI evaluation functions.
+ *
+ * # AI Flow (simplified)
+ * - Each turn:
+ *   1. \ref CvPlayerAI::AI_doTurn → evaluates player actions.
+ *   2. \ref CvCityAI::AI_doTurn → decides production, specialists, growth.
+ *   3. \ref CvUnitAI::AI_update → executes unit missions.
+ *   4. \ref CvTeamAI::AI_doTurn → manages diplomacy & team strategy.
+ *
+ * # Navigation
+ * - Use the **Classes tab** to explore AI-related classes.
+ * - Each class page provides **inheritance diagrams** and **collaboration graphs**.
+ * - Methods are cross-linked for easy navigation between modules.
+ *
+ * # Notes
+ * This documentation is auto-generated with **Doxygen + Graphviz**.  
+ * It is meant as a **developer reference** for modders working on AI improvements.
+ */
+ diplomacy and victory strategy.
+ * - **CvSelectionGroupAI** : Grouping and coordination of units.
+ * - **CvMap / CvPlot** : Provide map data to AI evaluation functions.
+ *
+ * # How to Navigate
+ * - Use the **Classes tab** to browse AI classes.
+ * - Each class includes **inheritance diagrams** and **collaboration graphs**.
+ * - Key methods are linked across classes for easier exploration.
+ *
+ * # AI Flow (simplified)
+ * - Each turn:
+ *   1. **CvPlayerAI::AI_doTurn** → evaluates player actions.
+ *   2. **CvCityAI::AI_doTurn**   → decides production, specialists, growth.
+ *   3. **CvUnitAI::AI_update**   → executes unit missions.
+ *   4. **CvTeamAI::AI_doTurn**   → manages diplomacy & team strategy.
+ *
+ * # Notes
+ * This documentation is auto-generated with **Doxygen + Graphviz**.  
+ * It is meant as a **developer reference** for modders working on AI improvements.
+ */
