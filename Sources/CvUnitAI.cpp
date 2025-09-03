@@ -3153,6 +3153,7 @@ void CvUnitAI::AI_attackCityMove()
 	}
 	else if (!bTurtle)
 	{
+		//Ready to Attack if the stack size is > to a Standard Value (Doom Extra)
 		bReadyToAttack = getGroup()->getNumUnits() >= (bHuntBarbs ? 3 : AI_stackOfDoomExtra());
 	}
 
@@ -3205,6 +3206,7 @@ void CvUnitAI::AI_attackCityMove()
 		}
 	}
 
+	//If it can Merge with Other Stack on the same plot
 	if (AI_groupMergeRange(UNITAI_ATTACK_CITY, 0, true, true, bIgnoreFaster))
 	{
 		return;
@@ -4993,7 +4995,7 @@ void CvUnitAI::AI_cityDefenseMove()
 	//join any city attacks in progress
 	if (plot()->getOwner() != getOwner())
 	{
-		if (AI_groupMergeRange(UNITAI_ATTACK_CITY, 1, true, true))
+		if (AI_groupMergeRange(UNITAI_ATTACK_CITY, 4, true, true))
 		{
 			return;
 		}
@@ -5068,6 +5070,19 @@ void CvUnitAI::AI_cityDefenseMove()
 		{
 			if (canSplit())
 			{
+				LOG_UNIT_BLOCK(3, {
+					UnitAITypes eUnitAi = AI_getUnitAIType();
+					MissionAITypes eMissionAI = getGroup()->AI_getMissionAIType();
+					CvWString StrunitAIType = GC.getUnitAIInfo(eUnitAi).getType();
+					CvWString MissionInfos = MissionAITypeToString(eMissionAI);
+					CvWString StrUnitName = m_szName;
+					if (StrUnitName.length() == 0)
+					{
+						StrUnitName = getName(0).GetCString();
+					}
+
+					logBBAI("Player %d Unit ID %d, %S of Type %S, at (%d, %d), Mission %S [stack size %d], evade from City, Attacker too strong...", getOwner(), m_iID, StrUnitName.GetCString(), StrunitAIType.GetCString(), getX(), getY(), MissionInfos.GetCString(), getGroup()->getNumUnits());
+				});
 				doSplit();
 			}
 		}
@@ -5076,6 +5091,29 @@ void CvUnitAI::AI_cityDefenseMove()
 			setInhibitMerge(false);
 		}
 	}
+
+	if (getGroup()->getNumUnits() > 20)
+	{
+		if (canSplit())
+		{
+			LOG_UNIT_BLOCK(3, {
+				UnitAITypes eUnitAi = AI_getUnitAIType();
+				MissionAITypes eMissionAI = getGroup()->AI_getMissionAIType();
+				CvWString StrunitAIType = GC.getUnitAIInfo(eUnitAi).getType();
+				CvWString MissionInfos = MissionAITypeToString(eMissionAI);
+				CvWString StrUnitName = m_szName;
+				if (StrUnitName.length() == 0)
+				{
+					StrUnitName = getName(0).GetCString();
+				}
+
+				logBBAI("Player %d Unit ID %d, %S of Type %S, at (%d, %d), Mission %S [stack size %d], Stack too Big, Splitting...", getOwner(), m_iID, StrUnitName.GetCString(), StrunitAIType.GetCString(), getX(), getY(), MissionInfos.GetCString(), getGroup()->getNumUnits());
+			});
+			doSplit();
+		}
+
+	}
+
 
 	getGroup()->pushMission(MISSION_SKIP);
 	return;
@@ -11450,6 +11488,7 @@ bool CvUnitAI::AI_groupMergeRange(UnitAITypes eUnitAI, int iMaxRange, bool bBigg
 	// best match
 	const CvUnit* pBestUnit = NULL;
 	int iBestValue = MAX_INT;
+	int iBestPathTurns = MAX_INT;
 	// iterate over plots at each range
 	foreach_(const CvPlot * pLoopPlot, pPlot->rect(iMaxRange, iMaxRange))
 	{
@@ -11477,6 +11516,7 @@ bool CvUnitAI::AI_groupMergeRange(UnitAITypes eUnitAI, int iMaxRange, bool bBigg
 									{
 										iBestValue = iValue;
 										pBestUnit = pLoopUnit;
+										iBestPathTurns = iPathTurns;
 									}
 								}
 							}
@@ -11491,6 +11531,8 @@ bool CvUnitAI::AI_groupMergeRange(UnitAITypes eUnitAI, int iMaxRange, bool bBigg
 	{
 		if (atPlot(pBestUnit->plot()))
 		{
+			pBestUnit->getGroup()->pushMission(MISSION_SKIP, -1, -1, 0, false, false, NO_MISSIONAI);
+			pGroup->pushMission(MISSION_SKIP, -1, -1, 0, false, false, NO_MISSIONAI);
 			pGroup->mergeIntoGroup(pBestUnit->getGroup());
 			return true;
 		}
@@ -11507,7 +11549,16 @@ bool CvUnitAI::AI_groupMergeRange(UnitAITypes eUnitAI, int iMaxRange, bool bBigg
 
 			logBBAI("Player %d Unit ID %d, %S of Type %S, at (%d, %d), Mission %S [stack size %d], search to join another group at (%d, %d)...", getOwner(), m_iID, StrUnitName.GetCString(), StrunitAIType.GetCString(), getX(), getY(), MissionInfos.GetCString(), getGroup()->getNumUnits(), pBestUnit->plot()->getX(), pBestUnit->plot()->getY());
 		});
-		return pGroup->pushMissionInternal(MISSION_MOVE_TO_UNIT, pBestUnit->getOwner(), pBestUnit->getID(), 0, false, false, MISSIONAI_GROUP, NULL, pBestUnit);
+		bool bSuccess = pGroup->pushMissionInternal(MISSION_MOVE_TO_UNIT, pBestUnit->getOwner(), pBestUnit->getID(), 0, false, false, MISSIONAI_GROUP, NULL, pBestUnit);
+		if (bSuccess)
+		{
+			MissionAITypes eMissionAI = pBestUnit->getGroup()->AI_getMissionAIType();
+			if (eMissionAI == NO_MISSIONAI || iBestPathTurns <= 2)
+			{
+				pBestUnit->getGroup()->pushMission(MISSION_SKIP, -1, -1, 0, false, false, MISSIONAI_WAIT_FOR_ESCORT);
+			}
+			return true;
+		}
 	}
 	return false;
 }
@@ -17116,14 +17167,15 @@ CvCity* CvUnitAI::AI_pickTargetCity(int iFlags, int iMaxPathTurns, bool bHuntBar
 	for (std::map<CvPlot*, bool>::const_iterator itr = cachedTargets->begin(); itr != cachedTargets->end(); ++itr)
 	{
 		CvCity* possibleTargetCity = itr->first->getPlotCity();
-
-		if (possibleTargetCity != NULL
-		&& itr->first->area() == area()
-		&& stepDistance(getX(), getY(), itr->first->getX(), itr->first->getY()) < AI_searchRange(iMaxPathTurns)
-		&& generatePath(itr->first, iFlags, true, NULL, MAX_CLOSE_TARGET_DISTANCE))
+		int idist = stepDistance(getX(), getY(), itr->first->getX(), itr->first->getY());
+		if (possibleTargetCity != NULL)
 		{
-			pBestCity = possibleTargetCity;
-			break;
+				if(idist <= 2 || itr->first->area() == area() && idist < AI_searchRange(iMaxPathTurns)
+				&& generatePath(itr->first, iFlags, true, NULL, MAX_CLOSE_TARGET_DISTANCE))
+				{
+					pBestCity = possibleTargetCity;
+					break;
+				}
 		}
 	}
 
@@ -17138,16 +17190,18 @@ CvCity* CvUnitAI::AI_pickTargetCity(int iFlags, int iMaxPathTurns, bool bHuntBar
 
 	if (pBestCity == NULL)
 	{
+		int idist = MAX_INT;
 		for (int iI = 0; iI < (bHuntBarbs ? MAX_PLAYERS : MAX_PC_PLAYERS); iI++)
 		{
 			if (GET_PLAYER((PlayerTypes)iI).isAlive() && ::isPotentialEnemy(getTeam(), GET_PLAYER((PlayerTypes)iI).getTeam()))
 			{
 				foreach_(CvCity * pLoopCity, GET_PLAYER((PlayerTypes)iI).cities())
 				{
+					int idist = stepDistance(getX(), getY(), pLoopCity->getX(), pLoopCity->getY());
 					if
 						(
 							(
-								iMaxPathTurns == MAX_INT && stepDistance(getX(), getY(), pLoopCity->getX(), pLoopCity->getY()) < AI_searchRange(iMaxPathTurns)
+								iMaxPathTurns == MAX_INT && idist < AI_searchRange(iMaxPathTurns)
 								||
 								iMaxPathTurns != MAX_INT && plotSet.find(pLoopCity->plot()) != plotSet.end()
 								)
@@ -17175,6 +17229,13 @@ CvCity* CvUnitAI::AI_pickTargetCity(int iFlags, int iMaxPathTurns, bool bHuntBar
 							iValue *= 50 + pLoopCity->calculateCulturePercent(getOwner());
 							iValue /= 50;
 						}
+
+						if (idist <= 2) //If very Close, Boost the value
+						{
+							iValue *= 3;
+							iValue /= 2;
+						}
+
 						iValue *= 1000;
 
 						// If city is minor civ, less interesting
@@ -17234,8 +17295,10 @@ CvCity* CvUnitAI::AI_pickTargetCity(int iFlags, int iMaxPathTurns, bool bHuntBar
 			{
 				PROFILE("AI_pickTargetCity.PrePathing");
 				int iPathTurns = 0;
-				if (generatePath(pLoopCity->plot(), iFlags, true, &iPathTurns, iMaxPath)
-				|| stepDistance(pLoopCity->getX(), pLoopCity->getY(), getX(), getY()) == 1 && getGroup()->canBombard(plot(), true))
+				int idist = stepDistance(pLoopCity->getX(), pLoopCity->getY(), getX(), getY());
+				bool bpath = generatePath(pLoopCity->plot(), iFlags, true, &iPathTurns, iMaxPath);
+				if (idist <= 2) iPathTurns = 1;
+				if (bpath || (idist == 1 && getGroup()->canBombard(plot(), true)))
 				{
 					PROFILE("AI_pickTargetCity.PostPathing");
 
@@ -27309,7 +27372,7 @@ void CvUnitAI::AI_SearchAndDestroyMove(bool bWithCommander)
 			}
 			else
 			{
-				if (AI_huntRange(3, iMinimumOdds, false))
+				if (AI_huntRange(1, iMinimumOdds, false))
 				{
 					return;
 				}
@@ -27339,7 +27402,7 @@ void CvUnitAI::AI_SearchAndDestroyMove(bool bWithCommander)
 		}
 	}
 
-	if (AI_huntRange(3, iMinimumOdds, false))
+	if (AI_huntRange(1, iMinimumOdds, false))
 	{
 		return;
 	}
@@ -29487,13 +29550,16 @@ bool CvUnitAI::AI_fulfillPropertyControlNeed()
 			{
 				StrUnitName = getName(0).GetCString();
 			}
-			logAiEvaluations(3, "	Player %S Unit %S of type %S - City that need the most Prop Control Help : %S  (Value %d)", GET_PLAYER(getOwner()).getCivilizationDescription(0), StrUnitName.GetCString(), StrunitAIType.GetCString(), bestCity->getName().GetCString(), bestCityScore.result.score);
+			logBBAI("	Player %S Unit %S of type %S - City that need the most Prop Control Help : %S  (Value %d)", GET_PLAYER(getOwner()).getCivilizationDescription(0), StrUnitName.GetCString(), StrunitAIType.GetCString(), bestCity->getName().GetCString(), bestCityScore.result.score);
 		}
 
 
 		if (atPlot(bestCity->plot()))
 		{
-			logAiEvaluations(3, "	Player %S Unit %S of type %S - Staying in City %S", GET_PLAYER(getOwner()).getCivilizationDescription(0), StrUnitName.GetCString(), StrunitAIType.GetCString(), bestCity->getName().GetCString());
+			if (gUnitLogLevel > 2)
+			{
+				logBBAI("	Player %S Unit %S of type %S - Staying in City %S", GET_PLAYER(getOwner()).getCivilizationDescription(0), StrUnitName.GetCString(), StrunitAIType.GetCString(), bestCity->getName().GetCString());
+			}
 			return getGroup()->pushMissionInternal(MISSION_SKIP, bestCity->getX(), bestCity->getY(), 0, false, false, MISSIONAI_PROPERTY_CONTROL_MAINTAIN, bestCity->plot());
 		}
 
@@ -29502,7 +29568,10 @@ bool CvUnitAI::AI_fulfillPropertyControlNeed()
 
 		if (iValue <= 5) //50%
 		{
-			logAiEvaluations(3, "	Player %S Unit %S of type %S - Could move, but Staying in City %S due to RNG", GET_PLAYER(getOwner()).getCivilizationDescription(0), StrUnitName.GetCString(), StrunitAIType.GetCString(), bestCity->getName().GetCString());
+			if (gUnitLogLevel > 2)
+			{
+				logBBAI("	Player %S Unit %S of type %S - Could move, but Staying in City %S due to RNG", GET_PLAYER(getOwner()).getCivilizationDescription(0), StrUnitName.GetCString(), StrunitAIType.GetCString(), bestCity->getName().GetCString());
+			}
 			return getGroup()->pushMissionInternal(MISSION_SKIP, getX(), getY(), 0, false, false, MISSIONAI_PROPERTY_CONTROL_MAINTAIN, plot());
 		}
 		else
@@ -29512,14 +29581,14 @@ bool CvUnitAI::AI_fulfillPropertyControlNeed()
 			{
 				if (gUnitLogLevel > 2)
 				{
-					logAiEvaluations(3, "	Player %S Unit %S of type %S - Is moving, and vulnerable. Safe Move path generated to City %S", GET_PLAYER(getOwner()).getCivilizationDescription(0), StrUnitName.GetCString(), StrunitAIType.GetCString(), bestCity->getName().GetCString());
+					logBBAI("	Player %S Unit %S of type %S - Is moving, and vulnerable. Safe Move path generated to City %S", GET_PLAYER(getOwner()).getCivilizationDescription(0), StrUnitName.GetCString(), StrunitAIType.GetCString(), bestCity->getName().GetCString());
 				}
 				const CvPlot* endTurnPlot = getPathEndTurnPlot();
 				return getGroup()->pushMissionInternal(MISSION_MOVE_TO, endTurnPlot->getX(), endTurnPlot->getY(), MOVE_IGNORE_DANGER, false, false, MISSIONAI_PROPERTY_CONTROL_RESPONSE, bestCity->plot());
 			}
 			if (gUnitLogLevel > 2)
 			{
-				logAiEvaluations(3, "	Player %S Unit %S of type %S - Generate Escort request for move to City %S  (Value %d)", GET_PLAYER(getOwner()).getCivilizationDescription(0), StrUnitName.GetCString(), StrunitAIType.GetCString(), bestCity->getName().GetCString(), bestCityScore.result.score);
+				logBBAI("	Player %S Unit %S of type %S - Generate Escort request for move to City %S  (Value %d)", GET_PLAYER(getOwner()).getCivilizationDescription(0), StrUnitName.GetCString(), StrunitAIType.GetCString(), bestCity->getName().GetCString(), bestCityScore.result.score);
 			}
 
 			getGroup()->pushMission(MISSION_SKIP, -1, -1, 0, false, false, MISSIONAI_WAIT_FOR_ESCORT);
@@ -29538,7 +29607,7 @@ bool CvUnitAI::AI_fulfillPropertyControlNeed()
 			{
 				StrUnitName = getName(0).GetCString();
 			}
-			logAiEvaluations(3, "	Player %S Unit %S of type %S - No city found to assign - Set to UNITAI_RESERVE", GET_PLAYER(getOwner()).getCivilizationDescription(0), StrUnitName.GetCString(), StrunitAIType.GetCString());
+			logBBAI("	Player %S Unit %S of type %S - No city found to assign - Set to UNITAI_RESERVE", GET_PLAYER(getOwner()).getCivilizationDescription(0), StrUnitName.GetCString(), StrunitAIType.GetCString());
 		}
 
 	}

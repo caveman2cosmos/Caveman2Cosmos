@@ -2312,7 +2312,7 @@ void CvCityAI::AI_chooseProduction()
 	m_iTempBuildPriority--;
 
 	//#32 Main Attack Force Stack
-	if (!bInhibitUnits && !bGetBetterUnits && (bIsCapitalArea) && (iAreaBestFoundValue < (iMinFoundValue * 2)))
+	if (!bInhibitUnits && !bGetBetterUnits && (bIsCapitalArea) && (iAreaBestFoundValue < (iMinFoundValue * 2)) && !bStrategyTurtle)
 	{
 		// BBAI TODO: Check that this works to produce early rushes on tight maps
 		//Building city hunting stack.

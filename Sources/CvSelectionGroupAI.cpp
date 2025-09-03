@@ -129,7 +129,7 @@ bool CvSelectionGroupAI::AI_update()
 				StrUnitName = this->getHeadUnit()->getName(0).GetCString();
 			}
 
-			logBBAI("Player %d Group ID %d, mené par %S of Type %S, at (%d, %d), Mission %S [stack size %d], Something wrong, Force Update...", getOwner(), m_iID, StrUnitName.GetCString(), StrunitAIType.GetCString(), getX(), getY(), MissionInfos.GetCString(), getNumUnits());
+			logBBAI("Player %d Group ID %d, mené par %d %S of Type %S, at (%d, %d), Mission %S [stack size %d], Was fortified/BuildUp, Force to Awake...", getOwner(), m_iID, this->getHeadUnit()->getID(), StrUnitName.GetCString(), StrunitAIType.GetCString(), getX(), getY(), MissionInfos.GetCString(), getNumUnits());
 		});
 		clearMissionQueue(); // XXX ???
 		setActivityType(ACTIVITY_AWAKE);
@@ -159,6 +159,11 @@ bool CvSelectionGroupAI::AI_update()
 				char szOut[1024];
 				CvWString szTempString;
 				getUnitAIString(szTempString, pHeadUnit->AI_getUnitAIType());
+				LOG_PLAYER_BLOCK(1, {
+					logAiEvaluations(1, "Unit stuck in loop( Warning before short circuit (pass: %d) ): %S(%S)[%d, %d] (%S)\n",
+					iPass, pHeadUnit->getName().GetCString(), GET_PLAYER(pHeadUnit->getOwner()).getName(),
+					pHeadUnit->getX(), pHeadUnit->getY(), szTempString.GetCString());
+				});
 				sprintf
 				(
 					szOut, "Unit stuck in loop( Warning before short circuit (pass: %d) ): %S(%S)[%d, %d] (%S)\n",
@@ -179,6 +184,11 @@ bool CvSelectionGroupAI::AI_update()
 				char szOut[1024];
 				CvWString szTempString;
 				getUnitAIString(szTempString, pHeadUnit->AI_getUnitAIType());
+				LOG_PLAYER_BLOCK(1, {
+					logAiEvaluations(1, "Unit stuck in loop: %S(%S)[%d, %d] (%S)\n",
+					pHeadUnit->getName().GetCString(), GET_PLAYER(pHeadUnit->getOwner()).getName(),
+					pHeadUnit->getX(), pHeadUnit->getY(), szTempString.GetCString());
+				});
 				sprintf
 				(
 					szOut, "Unit stuck in loop: %S(%S)[%d, %d] (%S)\n",
@@ -191,13 +201,30 @@ bool CvSelectionGroupAI::AI_update()
 
 				pHeadUnit->finishMoves();
 			}
+			
 			else if (readyToMove())
 			{
 				FErrorMsg("splitting group");
+				LOG_PLAYER_BLOCK(1, {
+					CvPlot * pPlot = this->plot();
+					int XCoord = -99;
+					int YCoord = -99;
+					if (pPlot != NULL)
+					{
+						XCoord = pPlot->getX();
+						YCoord = pPlot->getY();
+					}
+					logAiEvaluations(1, "pHeadUnit NULL, Splitting Group %d [%d, %d]",
+					this->m_iID,
+					XCoord, YCoord);
+				});
 				splitGroup(1);
 				break;
 			}
-			else FErrorMsg("error");
+			else
+			{
+				FErrorMsg("error in CvSelectionGroupAI::AI_update()");
+			}
 
 			break;
 		}
@@ -784,7 +811,8 @@ int CvSelectionGroupAI::AI_compareStacks(const CvPlot* pPlot, StackCompare::flag
 	}
 
 	bool bDivideFirst = false;
-	int compareRatio = AI_sumStrength(pPlot, eDomainType, flags);
+	int iAttackStrength = AI_sumStrength(pPlot, eDomainType, flags);
+	int compareRatio = iAttackStrength;
 	if (compareRatio >= (MAX_INT/100))
 	{
 		compareRatio /= 100;
@@ -815,12 +843,26 @@ int CvSelectionGroupAI::AI_compareStacks(const CvPlot* pPlot, StackCompare::flag
 		strengthFlags |= StrengthFlags::TestPotentialEnemy;
 	}
 	int defenderSum = pPlot->AI_sumStrength(NO_PLAYER, eOwner, eDomainType, strengthFlags, iRange);
-
 	if (bDivideFirst)
 	{
 		defenderSum /= 100;
 	}
 	compareRatio /= std::max(1, defenderSum);
+	LOG_UNIT_BLOCK(4, {
+		CvUnit* pUnit = this->getHeadUnit();
+		FAssert(pUnit != NULL);
+		UnitAITypes eUnitAi = pUnit->AI_getUnitAIType();
+		MissionAITypes eMissionAI = this->AI_getMissionAIType();
+		CvWString StrunitAIType = GC.getUnitAIInfo(eUnitAi).getType();
+		CvWString MissionInfos = MissionAITypeToString(eMissionAI);
+		CvWString StrUnitName = pUnit->getName();
+		if (StrUnitName.length() == 0)
+		{
+			StrUnitName = pUnit->getName(0).GetCString();
+		}
+		logAiEvaluations(4,"Player %d Group ID %d Head ID %d, %S of Type %S, at (%d, %d), Evaluation of Combat Odds [stack size %d], Attack %d Defense %d, Ratio %d", 
+			getOwner(), m_iID, pUnit->getID(), StrUnitName.GetCString(), StrunitAIType.GetCString(), pPlot->getX(), pPlot->getY(), getNumUnits(), iAttackStrength, defenderSum, compareRatio);
+	});
 
 	return compareRatio;
 }
