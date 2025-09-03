@@ -118,7 +118,7 @@ bool CvSelectionGroupAI::AI_update()
 	if (isForceUpdate())
 	{
 		
-		LOG_UNIT_BLOCK(3, {
+		LOG_UNIT_BLOCK(4, {
 			UnitAITypes eUnitAi = this->getHeadUnit()->AI_getUnitAIType();
 			MissionAITypes eMissionAI = AI_getMissionAIType();
 			CvWString StrunitAIType = GC.getUnitAIInfo(eUnitAi).getType();

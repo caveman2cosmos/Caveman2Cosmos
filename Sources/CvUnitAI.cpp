@@ -184,7 +184,7 @@ bool CvUnitAI::AI_update()
 {
 	PROFILE_FUNC();
 
-	LOG_UNIT_BLOCK(3, {
+	LOG_UNIT_BLOCK(4, {
 		UnitAITypes eUnitAi = AI_getUnitAIType();
 		MissionAITypes eMissionAI = getGroup()->AI_getMissionAIType();
 		CvWString StrunitAIType = GC.getUnitAIInfo(eUnitAi).getType();
@@ -455,7 +455,7 @@ bool CvUnitAI::AI_update()
 
 void CvUnitAI::doUnitAIMove()
 {
-	LOG_UNIT_BLOCK(3, {
+	LOG_UNIT_BLOCK(4, {
 		UnitAITypes eUnitAi = AI_getUnitAIType();
 		MissionAITypes eMissionAI = getGroup()->AI_getMissionAIType();
 		CvWString StrunitAIType = GC.getUnitAIInfo(eUnitAi).getType();
@@ -2494,7 +2494,8 @@ void CvUnitAI::AI_barbAttackMove()
 	if (eAreaAI == AREAAI_OFFENSIVE)
 	{
 		if (AI_groupMergeRange(UNITAI_ATTACK, 2, true, true, true)
-		|| AI_groupMergeRange(UNITAI_ATTACK_CITY, 4, true, true, true))
+		|| AI_groupMergeRange(UNITAI_ATTACK_CITY, 4, true, true, true) 
+		|| AI_groupMergeRange(UNITAI_COLLATERAL, 4, true, true, true))
 		{
 			return;
 		}
@@ -2557,10 +2558,19 @@ void CvUnitAI::AI_attackMove()
 		{
 			return;
 		}
-		if (AI_groupMergeRange(UNITAI_ATTACK_CITY, 1, false, true))
+		if (AI_groupMergeRange(UNITAI_ATTACK_CITY, 5, false, true))
 		{
 			return;
 		}
+		if (AI_groupMergeRange(UNITAI_ATTACK, 5, false, true))
+		{
+			return;
+		}
+		if (AI_groupMergeRange(UNITAI_COLLATERAL, 5, false, true))
+		{
+			return;
+		}
+
 	}
 	bool bDanger = (GET_PLAYER(getOwner()).AI_getAnyPlotDanger(plot(), 3));
 
@@ -2580,7 +2590,7 @@ void CvUnitAI::AI_attackMove()
 			{
 				return;
 			}
-			if (AI_groupMergeRange(UNITAI_ATTACK, 1, true, true, false))
+			if (AI_groupMergeRange(UNITAI_ATTACK, 2, true, true, false))
 			{
 				return;
 			}
@@ -2668,10 +2678,11 @@ void CvUnitAI::AI_attackMove()
 		//	Koshling - changed this to happen unconditionally (used to only happen inside
 		//	enemy territory) otherwise stacks massing on the borders didn't merge and reach
 		//	a sufficient stack power threshold to actually start the city attack run
-		if (AI_groupMergeRange(UNITAI_ATTACK_CITY, 1, false, true))
+		if (AI_groupMergeRange(UNITAI_ATTACK_CITY, 5, false, true))
 		{
 			return;
 		}
+
 
 		AreaAITypes eAreaAIType = area()->getAreaAIType(getTeam());
 		if (plot()->isCity() && plot()->getOwner() == getOwner()
@@ -2757,7 +2768,7 @@ void CvUnitAI::AI_attackMove()
 		}
 
 		// Allow larger groups if inside enemy territory
-		if (getGroup()->getNumUnits() < 3 && plot()->isOwned() && GET_TEAM(getTeam()).isAtWar(plot()->getTeam())
+		if (getGroup()->getNumUnits() < 4 && plot()->isOwned() && GET_TEAM(getTeam()).isAtWar(plot()->getTeam())
 		&& AI_groupMergeRange(UNITAI_ATTACK, 1, true, true, true))
 		{
 			return;
@@ -3444,6 +3455,15 @@ void CvUnitAI::AI_attackCityMove()
 			{
 				// If next to target city and we would attack after bombarding down defenses,
 				// or if defenses have crept up past half
+				int iAttackOdds = getGroup()->AI_attackOdds(pTargetCity->plot(), /*bPotentialEnemy*/ true);
+				if (iAttackOdds > 75)
+				{
+					logBBAI("    good odds (%d) to attack at (%d,%d)...", iAttackOdds, pTargetCity->plot()->getX(), pTargetCity->plot()->getY());
+					if (AI_cityAttack(1, 80))
+					{
+						return;
+					}
+				}
 				if ((iComparePostBombard >= iAttackRatio) || (pTargetCity->getDefenseDamage() < ((GC.getMAX_CITY_DEFENSE_DAMAGE() * 1) / 2)) || (iOurOffense / iEnemyOffense) > 2 || pTargetCity->plot()->getNumDefenders(pTargetCity->getOwner()) <= 2)
 				{
 					if (iComparePostBombard < std::max(150, GC.getBBAI_SKIP_BOMBARD_MIN_STACK_RATIO()) && (pTargetCity->isDirectAttackable() || canIgnoreNoEntryLevel()))
@@ -3476,6 +3496,10 @@ void CvUnitAI::AI_attackCityMove()
 					{
 						return;
 					}
+					if (AI_groupMergeRange(UNITAI_COLLATERAL, 5, true, true, bIgnoreFaster))
+					{
+						return;
+					}					
 					if (AI_groupMergeRange(UNITAI_ATTACK, 5, true, true, bIgnoreFaster))
 					{
 						return;
@@ -3518,7 +3542,27 @@ void CvUnitAI::AI_attackCityMove()
 				});
 
 
-				// If not strong enough, pillage around target city without exposing ourselves
+				// If not strong enough, ether pillage around target city without exposing ourselves, or go back to own city
+				if (GC.getGame().getSorenRandNum(3, "AI go Back") == 0)
+				{
+					if (AI_retreatToCity())
+					{
+						return;
+					}
+				}
+				else if (GC.getGame().getSorenRandNum(3, "AI go Back") == 0)
+				{
+					if (AI_cityAttack(1, 70))
+					{
+						return;
+					}
+					// Move to good tile to attack from unless we're way more powerful
+					if (AI_goToTargetCity(0, 1, pTargetCity))
+					{
+						return;
+					}
+				}
+
 				if (AI_pillageRange(3))
 				{
 					return;
@@ -3570,7 +3614,7 @@ void CvUnitAI::AI_attackCityMove()
 				if (pHead == NULL || pHead == this) continue;
 
 				// Filter only stacks with ATTACK_CITY or ATTACK
-				if (pHead->AI_getUnitAIType() == UNITAI_ATTACK_CITY)
+				if (pHead->AI_getUnitAIType() == UNITAI_ATTACK_CITY || pHead->AI_getUnitAIType() == UNITAI_ATTACK)
 				{
 					int dummy;
 					CvUnit * pOurAttacker = getGroup()->AI_getBestGroupAttacker(pOurPlot, true, dummy);
@@ -3586,7 +3630,7 @@ void CvUnitAI::AI_attackCityMove()
 						// Calculer la distance jusqu�� la ville cible
 						int iDistance = plotDistance(pHead->getX(), pHead->getY(), pOurPlot->getX(), pOurPlot->getY());
 
-						if (iDistance <= iStepDistToTarget)
+						if (iDistance <= iStepDistToTarget || getGroup()->getNumUnits() <= 6)
 						{
 							LOG_UNIT_BLOCK(3, {
 								UnitAITypes eUnitAi = AI_getUnitAIType();
@@ -3617,6 +3661,10 @@ void CvUnitAI::AI_attackCityMove()
 	}
 
 	if (AI_groupMergeRange(UNITAI_ATTACK_CITY, 5, true, true, bIgnoreFaster))
+	{
+		return;
+	}
+	if (AI_groupMergeRange(UNITAI_COLLATERAL, 5, true, true, bIgnoreFaster))
 	{
 		return;
 	}
@@ -4040,6 +4088,10 @@ void CvUnitAI::AI_collateralMove()
 	//if (AI_defensiveCollateral(51, 3))
 	//	return;
 	// K-Mod end
+	if (AI_groupMergeRange(UNITAI_ATTACK_CITY, 10, false, true))
+	{
+		return;
+	}
 
 	if (AI_leaveAttack(1, 30, 100))
 	{
@@ -11442,6 +11494,19 @@ bool CvUnitAI::AI_groupMergeRange(UnitAITypes eUnitAI, int iMaxRange, bool bBigg
 			pGroup->mergeIntoGroup(pBestUnit->getGroup());
 			return true;
 		}
+		LOG_UNIT_BLOCK(3, {
+			UnitAITypes eUnitAi = AI_getUnitAIType();
+			MissionAITypes eMissionAI = getGroup()->AI_getMissionAIType();
+			CvWString StrunitAIType = GC.getUnitAIInfo(eUnitAi).getType();
+			CvWString MissionInfos = MissionAITypeToString(eMissionAI);
+			CvWString StrUnitName = m_szName;
+			if (StrUnitName.length() == 0)
+			{
+				StrUnitName = getName(0).GetCString();
+			}
+
+			logBBAI("Player %d Unit ID %d, %S of Type %S, at (%d, %d), Mission %S [stack size %d], search to join another group at (%d, %d)...", getOwner(), m_iID, StrUnitName.GetCString(), StrunitAIType.GetCString(), getX(), getY(), MissionInfos.GetCString(), getGroup()->getNumUnits(), pBestUnit->plot()->getX(), pBestUnit->plot()->getY());
+		});
 		return pGroup->pushMissionInternal(MISSION_MOVE_TO_UNIT, pBestUnit->getOwner(), pBestUnit->getID(), 0, false, false, MISSIONAI_GROUP, NULL, pBestUnit);
 	}
 	return false;
@@ -17622,6 +17687,19 @@ bool CvUnitAI::AI_bombardCity()
 			}
 			else
 			{
+				LOG_UNIT_BLOCK(3, {
+					UnitAITypes eUnitAi = AI_getUnitAIType();
+					MissionAITypes eMissionAI = getGroup()->AI_getMissionAIType();
+					CvWString StrunitAIType = GC.getUnitAIInfo(eUnitAi).getType();
+					CvWString MissionInfos = MissionAITypeToString(eMissionAI);
+					CvWString StrUnitName = m_szName;
+					if (StrUnitName.length() == 0)
+					{
+						StrUnitName = getName(0).GetCString();
+					}
+
+					logBBAI("Player %d Unit ID %d, %S of Type %S, at (%d, %d), Mission %S [stack size %d], will perform bombard at (%d, %d)...", getOwner(), m_iID, StrUnitName.GetCString(), StrunitAIType.GetCString(), getX(), getY(), MissionInfos.GetCString(), getGroup()->getNumUnits(), pBombardCity->plot()->getX(), pBombardCity->plot()->getY());
+				});
 				return getGroup()->pushMissionInternal(MISSION_BOMBARD);
 			}
 		}
@@ -17778,8 +17856,22 @@ bool CvUnitAI::AI_cityAttack(int iRange, int iOddsThreshold, bool bFollow)
 			}
 		}
 	}
+
 	if (pBestPlot)
 	{
+		LOG_UNIT_BLOCK(3, {
+			UnitAITypes eUnitAi = AI_getUnitAIType();
+			MissionAITypes eMissionAI = getGroup()->AI_getMissionAIType();
+			CvWString StrunitAIType = GC.getUnitAIInfo(eUnitAi).getType();
+			CvWString MissionInfos = MissionAITypeToString(eMissionAI);
+			CvWString StrUnitName = m_szName;
+			if (StrUnitName.length() == 0)
+			{
+				StrUnitName = getName(0).GetCString();
+			}
+
+			logBBAI("Player %d Unit ID %d, %S of Type %S, at (%d, %d), Mission %S [stack size %d], Consider Attacking City from plot (%d,%d), with Odds %d...", getOwner(), m_iID, StrUnitName.GetCString(), StrunitAIType.GetCString(), getX(), getY(), MissionInfos.GetCString(), getGroup()->getNumUnits(), pBestPlot->getX(), pBestPlot->getY(), iOddsThreshold);
+		});
 		FAssert(!atPlot(pBestPlot));
 		return getGroup()->pushMissionInternal(MISSION_MOVE_TO, pBestPlot->getX(), pBestPlot->getY(), ((bFollow) ? MOVE_DIRECT_ATTACK : 0));
 	}
@@ -18067,6 +18159,19 @@ bool CvUnitAI::AI_leaveAttack(int iRange, int iOddsThreshold, int iStrengthThres
 	}
 	if (pBestPlot)
 	{
+		LOG_UNIT_BLOCK(3, {
+			UnitAITypes eUnitAi = AI_getUnitAIType();
+			MissionAITypes eMissionAI = getGroup()->AI_getMissionAIType();
+			CvWString StrunitAIType = GC.getUnitAIInfo(eUnitAi).getType();
+			CvWString MissionInfos = MissionAITypeToString(eMissionAI);
+			CvWString StrUnitName = m_szName;
+			if (StrUnitName.length() == 0)
+			{
+				StrUnitName = getName(0).GetCString();
+			}
+
+			logBBAI("Player %d Unit ID %d, %S of Type %S, at (%d, %d), Mission %S [stack size %d], leaveAttack to (%d, %d)...", getOwner(), m_iID, StrUnitName.GetCString(), StrunitAIType.GetCString(), getX(), getY(), MissionInfos.GetCString(), getGroup()->getNumUnits(), pBestPlot->getX(), pBestPlot->getY());
+		});
 		FAssert(!atPlot(pBestPlot));
 		return getGroup()->pushMissionInternal(MISSION_MOVE_TO, pBestPlot->getX(), pBestPlot->getY(), 0);
 	}
