@@ -1073,7 +1073,7 @@ void CvCityAI::AI_chooseProduction()
 
 	int iNbMinimalAttackers = 3;
 	if (bIsPeacefull) iNbMinimalAttackers -= 2;
-	if (bIsWarMonger) iNbMinimalAttackers += 2;
+	if (bIsWarMonger) iNbMinimalAttackers += 5;
 
 	//TB Note: min 1 hunter goes under the priority level of settling initiation because this is exploitable with ambushers (or just plain bad luck for the hunters which is not unlikely).  Destroy all hunters and you cripple growth.
 	//Koshling - made having at least 1 hunter a much higher priority
@@ -2342,37 +2342,36 @@ void CvCityAI::AI_chooseProduction()
 		//Calvitix Boost if Warmonger (Conquest Victory > 35)
 		if (bIsWarMonger)
 		{
-			iStartAttackStackRand += 100;
+			iStartAttackStackRand += 200;
 		}
 		else
 		{
 			iStartAttackStackRand -= (iAttackCityCount + iAttackCount);
-		}
+			//Calvitix Nerf if Peacefull Leader (Conquest Victory < 20)
+			if (bIsPeacefull)
+			{
+				iStartAttackStackRand -= 100;
 
-		//Calvitix Nerf if Peacefull Leader (Conquest Victory < 20)
-		if (bIsPeacefull)
-		{
-			iStartAttackStackRand -= 20;
-		}
+			}
+			if (!bLandWar && !bDanger)
+			{
+				iStartAttackStackRand -= 50;
+			}
 
-		//Calvitix Boost if Warmonger (Conquest Victory < 20)
-		if (bIsPeacefull)
-		{
-			iStartAttackStackRand -= 20;
 		}
 
 
 		if (iStartAttackStackRand > 0)///CHECK THIS OUT
 		{
 			if (bIsWarMonger) {
-				iAttackCityTarget = iAttackCityTarget * 150 / 100;
-				iAttackTarget = iAttackTarget * 150 / 100;
+				iAttackCityTarget = iAttackCityTarget * 450 / 100;
+				iAttackTarget = iAttackTarget * 450 / 100;
 			}
 			if (bIsPeacefull) {
 				iAttackCityTarget = iAttackCityTarget * 75 / 100;
 				iAttackTarget = iAttackTarget * 75 / 100;
 			}
-			LOG_BBAI_CITY(2, ("#32 City %S, Will Start to build an Attack Stack (%d). For the moment : Attack : %d / %d and Attack_City : %d / %d", getName().GetCString(), iStartAttackStackRand, iAttackCount, iAttackTarget, iAttackCityCount, iAttackCityTarget));
+			LOG_BBAI_CITY(2, ("#32 City %S, Will Start to build an Attack Stack, StackRand = %d. For the moment : Attack : %d / %d and Attack_City : %d / %d", getName().GetCString(), iStartAttackStackRand, iAttackCount, iAttackTarget, iAttackCityCount, iAttackCityTarget));
 			if (iAttackCount == 0)
 			{
 				if (!bFinancialTrouble
@@ -2395,6 +2394,13 @@ void CvCityAI::AI_chooseProduction()
 					if (iAttackCount / iAttackTarget <= iAttackCityCount / iAttackCityTarget)
 					{
 						LOG_BBAI_CITY(3, ("#32 City %S, Attack Stack add Attack Unit Order. For the moment : Attack : %d and Attack_City : %d", getName().GetCString(), iAttackCount, iAttackCityCount));
+						if (GC.getGame().getSorenRandNum(4, "AI prefer collateral") == 0)
+						{
+							if (AI_chooseUnit("add Collateral unit to stack", UNITAI_COLLATERAL))
+							{
+								return;
+							}
+						}
 						if (AI_chooseUnit("add to attack stack", UNITAI_ATTACK))
 						{
 							return;
@@ -2402,6 +2408,13 @@ void CvCityAI::AI_chooseProduction()
 					}
 				}
 				LOG_BBAI_CITY(3, ("#32 City %S, Attack Stack add Attack_City Unit Order. For the moment : Attack : %d and Attack_City : %d", getName().GetCString(), iAttackCount, iAttackCityCount));
+				if (GC.getGame().getSorenRandNum(5, "AI prefer collateral") == 0)
+				{
+					if (AI_chooseUnit("add Collateral unit to stack", UNITAI_COLLATERAL))
+					{
+						return;
+					}
+				}
 				if (AI_chooseUnit("add to city attack stack", UNITAI_ATTACK_CITY))
 				{
 					return;
@@ -2410,7 +2423,7 @@ void CvCityAI::AI_chooseProduction()
 		}
 		else
 		{
-			LOG_BBAI_CITY(2, ("#32 City %S, Attack Stack too low : iStartAttackStackRand = %d. For the moment : Attack : %d / %d and Attack_City : %d / %d", getName().GetCString(), iStartAttackStackRand, iAttackCount, iAttackTarget, iAttackCityCount, iAttackCityTarget));
+			LOG_BBAI_CITY(2, ("#32 City %S, Attack Stack too low : StackRand = %d. For the moment : Attack : %d / %d and Attack_City : %d / %d", getName().GetCString(), iStartAttackStackRand, iAttackCount, iAttackTarget, iAttackCityCount, iAttackCityTarget));
 		}
 	}
 
