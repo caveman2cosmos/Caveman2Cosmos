@@ -2346,7 +2346,7 @@ void CvCityAI::AI_chooseProduction()
 		}
 		else
 		{
-			iStartAttackStackRand -= (iAttackCityCount + iAttackCount);
+			iStartAttackStackRand -= (iAttackCityCount + iAttackCount)*2;
 			//Calvitix Nerf if Peacefull Leader (Conquest Victory < 20)
 			if (bIsPeacefull)
 			{
@@ -2368,8 +2368,8 @@ void CvCityAI::AI_chooseProduction()
 				iAttackTarget = iAttackTarget * 450 / 100;
 			}
 			if (bIsPeacefull) {
-				iAttackCityTarget = iAttackCityTarget * 75 / 100;
-				iAttackTarget = iAttackTarget * 75 / 100;
+				iAttackCityTarget = iAttackCityTarget * 25 / 100;
+				iAttackTarget = iAttackTarget * 25 / 100;
 			}
 			LOG_BBAI_CITY(2, ("#32 City %S, Will Start to build an Attack Stack, StackRand = %d. For the moment : Attack : %d / %d and Attack_City : %d / %d", getName().GetCString(), iStartAttackStackRand, iAttackCount, iAttackTarget, iAttackCityCount, iAttackCityTarget));
 			if (iAttackCount == 0)
@@ -2391,7 +2391,7 @@ void CvCityAI::AI_chooseProduction()
 			{
 				if (iAttackCount < iAttackTarget)
 				{
-					if (iAttackCount / iAttackTarget <= iAttackCityCount / iAttackCityTarget)
+					if ((iAttackCount*100 / iAttackTarget) <= (iAttackCityCount*100 / iAttackCityTarget))
 					{
 						LOG_BBAI_CITY(3, ("#32 City %S, Attack Stack add Attack Unit Order. For the moment : Attack : %d and Attack_City : %d", getName().GetCString(), iAttackCount, iAttackCityCount));
 						if (GC.getGame().getSorenRandNum(4, "AI prefer collateral") == 0)
@@ -4360,7 +4360,7 @@ bool CvCityAI::AI_scoreBuildingsFromListThreshold(std::vector<ScoredBuilding>& s
 					if (iValue > 0)
 				{
 					//Calvitix, log only Values > 0
-					logBBAI("City %S base value for %S (flags %08lx)=%I64d", getName().GetCString(), buildingInfo.getDescription(), iFocusFlags, iValue);
+						logAiEvaluations(3, "City %S base value for %S (flags %08lx)=%I64d", getName().GetCString(), buildingInfo.getDescription(), iFocusFlags, iValue);
 				}
 				});
 
@@ -4423,7 +4423,7 @@ bool CvCityAI::AI_scoreBuildingsFromListThreshold(std::vector<ScoredBuilding>& s
 						// We only value the unlocked building at 1/2 rate
 						iValue += AI_buildingValueThreshold((BuildingTypes)iI, iFocusFlags, 0, false, true) / 2;
 
-						LOG_BBAI_CITY(3, ("    enables %S - increase value to %I64d", GC.getBuildingInfo((BuildingTypes)iI).getDescription(), iValue));
+						LOG_EVALAI_CITY(3, (3, "    enables %S - increase value to %I64d", GC.getBuildingInfo((BuildingTypes)iI).getDescription(), iValue));
 					}
 				}
 			}
@@ -4448,7 +4448,7 @@ bool CvCityAI::AI_scoreBuildingsFromListThreshold(std::vector<ScoredBuilding>& s
 			LOG_CITY_BLOCK(3, {
 				if (iValue > 0)
 			{
-				logBBAI("City %S final value for %S (flags %08lx)=%I64d", getName().GetCString(), buildingInfo.getDescription(), iFocusFlags, iValue);
+				logAiEvaluations(3,"City %S final value for %S (flags %08lx)=%I64d", getName().GetCString(), buildingInfo.getDescription(), iFocusFlags, iValue);
 			}
 			});
 
@@ -12536,7 +12536,7 @@ void CvCityAI::CalculateAllBuildingValues(int iFocusFlags)
 	const bool bLandWar = bDefense || pArea->getAreaAIType(eTeam) == AREAAI_OFFENSIVE || pArea->getAreaAIType(eTeam) == AREAAI_MASSING;
 	const bool bDanger = AI_isDanger();
 
-	LOG_BBAI_CITY(1, (
+	LOG_EVALAI_CITY(3, (1, 
 			"      City %S CalculateAllBuildingValues for flags %08lx (already has %08lx)",
 			getName().GetCString(), iFocusFlags, cachedBuildingValues->m_iCachedFlags
 		));
