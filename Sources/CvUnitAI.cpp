@@ -3629,10 +3629,10 @@ void CvUnitAI::AI_attackCityMove()
 					if (iLoopBestAttackValue >= iOurBestAttackValue || pGroup->getNumUnits() >= getGroup()->getNumUnits())
 					{   //Interesting to group with
 
-						// Calculer la distance jusqu�� la ville cible
+						// Calculate dist to the Target Stack
 						int iDistance = plotDistance(pHead->getX(), pHead->getY(), pOurPlot->getX(), pOurPlot->getY());
 
-						if (iDistance <= iStepDistToTarget || getGroup()->getNumUnits() <= 6)
+						if (iDistance > 0 && (iDistance <= iStepDistToTarget || getGroup()->getNumUnits() <= 6))
 						{
 							LOG_UNIT_BLOCK(3, {
 								UnitAITypes eUnitAi = AI_getUnitAIType();
@@ -4036,6 +4036,19 @@ void CvUnitAI::AI_attackCityMove()
 	{
 		return;
 	}
+
+	LOG_UNIT_BLOCK(2, {
+		UnitAITypes eUnitAi = AI_getUnitAIType();
+		MissionAITypes eMissionAI = getGroup()->AI_getMissionAIType();
+		CvWString StrunitAIType = GC.getUnitAIInfo(eUnitAi).getType();
+		CvWString MissionInfos = MissionAITypeToString(eMissionAI);
+		CvWString StrUnitName = m_szName;
+		if (StrUnitName.length() == 0)
+		{
+			StrUnitName = getName(0).GetCString();
+		}
+		logBBAI("Player %d Unit ID %d, %S of Type %S, at (%d, %d), Mission %S [stack size %d], nothing to do, skip...", getOwner(), m_iID, StrUnitName.GetCString(), StrunitAIType.GetCString(), getX(), getY(), MissionInfos.GetCString(), getGroup()->getNumUnits());
+	});
 
 	getGroup()->pushMission(MISSION_SKIP);
 	return;
@@ -11017,6 +11030,19 @@ void CvUnitAI::AI_InfiltratorMove()
 	}
 	//if all this has failed, go more complicated and work like a pillage AI.
 	AI_pillageMove();
+
+	LOG_UNIT_BLOCK(3, {
+		const CvWString szStringUnitAi = GC.getUnitAIInfo(m_eUnitAIType).getType();
+		logBBAI("	Unit %S (%d) of Type (%S) for player %d (%S) at (%d,%d) - no job for Infiltrator left, end of AI_Infiltrator",
+				getUnitInfo().getDescription(),
+				getID(),
+				szStringUnitAi.GetCString(),
+				getOwner(),
+				GET_PLAYER(getOwner()).getCivilizationDescription(0),
+				getX(),
+				getY());
+	});
+	return;
 }
 
 
@@ -11549,7 +11575,13 @@ bool CvUnitAI::AI_groupMergeRange(UnitAITypes eUnitAI, int iMaxRange, bool bBigg
 
 			logBBAI("Player %d Unit ID %d, %S of Type %S, at (%d, %d), Mission %S [stack size %d], search to join another group at (%d, %d)...", getOwner(), m_iID, StrUnitName.GetCString(), StrunitAIType.GetCString(), getX(), getY(), MissionInfos.GetCString(), getGroup()->getNumUnits(), pBestUnit->plot()->getX(), pBestUnit->plot()->getY());
 		});
+
+		int idist = plotDistance(plot()->getX(), plot()->getY(), pBestUnit->plot()->getX(), pBestUnit->plot()->getY());
 		bool bSuccess = pGroup->pushMissionInternal(MISSION_MOVE_TO_UNIT, pBestUnit->getOwner(), pBestUnit->getID(), 0, false, false, MISSIONAI_GROUP, NULL, pBestUnit);
+		if (bSuccess && idist == 1) //near it
+		{
+			pBestUnit->getGroup()->pushMission(MISSION_SKIP, -1, -1, 0, false, false, MISSIONAI_WAIT_FOR_ESCORT);
+		}
 		if (bSuccess)
 		{
 			MissionAITypes eMissionAI = pBestUnit->getGroup()->AI_getMissionAIType();
@@ -22101,7 +22133,7 @@ bool CvUnitAI::processContracts(int iMinPriority)
 		m_contractualState = CONTRACTUAL_STATE_NO_WORK_FOUND;
 		
 		//	No work available
-		LOG_UNIT_BLOCK(3, {
+		LOG_UNIT_BLOCK(4, {
 			const CvWString szStringUnitAi = GC.getUnitAIInfo(m_eUnitAIType).getType();
 			logBBAI("	Unit %S (%d) of Type (%S) for player %d (%S) at (%d,%d) - no work available",
 					getUnitInfo().getDescription(),
