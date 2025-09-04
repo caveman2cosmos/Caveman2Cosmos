@@ -15201,6 +15201,16 @@ void CvUnit::joinGroup(CvSelectionGroup* pSelectionGroup, bool bRemoveSelected, 
 				{
 					m_iGroupID = FFreeList::INVALID_INDEX;
 				}
+
+				LOG_UNIT_BLOCK(4, {
+					CvWString StrunitAIType = GC.getUnitAIInfo(AI_getUnitAIType()).getType();
+					CvWString StrUnitName = m_szName;
+					if (StrUnitName.length() == 0)
+					{
+						StrUnitName = getName(0).GetCString();
+					}
+					logBBAI("	Player %d Unit ID %d, %S of Type %S at (%d,%d) [stack size %d] groups have joigned here, new GroupID %d.", getOwner(), getID(), StrUnitName.GetCString(), StrunitAIType.GetCString(), getX(), getY(), getGroup()->getNumUnits(), m_iGroupID);
+				});
 			}
 			else
 			{

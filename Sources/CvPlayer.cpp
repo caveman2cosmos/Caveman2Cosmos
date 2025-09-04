@@ -4091,6 +4091,8 @@ void CvPlayer::dumpStats() const
 	{
 		logBBAI("		%S (%s): %d", GC.getUnitInfo((UnitTypes)(itr->first >> 16)).getDescription(), GC.getUnitAIInfo((UnitAITypes)(itr->first & 0xFFFF)).getType(), itr->second);
 	}
+	logBBAI("	EndUnits");
+
 }
 
 
