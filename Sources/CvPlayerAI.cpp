@@ -30,6 +30,7 @@
 #include "CvDLLFAStarIFaceBase.h"
 #include "CvDLLInterfaceIFaceBase.h"
 #include "CvDLLUtilityIFaceBase.h"
+#include "BetterBTSAI.h"
 #include "FAStarNode.h"
 
 // Plot danger cache
@@ -1463,6 +1464,10 @@ void CvPlayerAI::AI_unitUpdate()
 		{
 			std::vector< std::pair<int, int> > groupList;
 			//Define a Priority Sorting (see AI_movementPriority)
+			LOG_PLAYER_BLOCK(4, {
+				logAiEvaluations(4,"AI_unitUpdate : Setting the GroupList for Player %d", getID());
+			});
+
 			for (CLLNode<int>* pCurrUnitNode = headGroupCycleNode(); pCurrUnitNode != NULL; pCurrUnitNode = nextGroupCycleNode(pCurrUnitNode))
 			{
 				CvSelectionGroup* pLoopSelectionGroup = getSelectionGroup(pCurrUnitNode->m_data);
@@ -1470,9 +1475,17 @@ void CvPlayerAI::AI_unitUpdate()
 
 				int iPriority = AI_movementPriority(pLoopSelectionGroup);
 				groupList.push_back(std::make_pair(iPriority, pCurrUnitNode->m_data));
+				LOG_PLAYER_BLOCK(4, {
+					logAiEvaluations(4,"item : %d; %d", iPriority, pCurrUnitNode->m_data);
+				});
 			}
 
 			algo::sort(groupList);
+
+			LOG_PLAYER_BLOCK(4, {
+				logAiEvaluations(4,"AI_unitUpdate : List sorted, Applying AI_update for each item for Player %d", getID());
+			});
+
 			for (size_t i = 0; i < groupList.size(); i++)
 			{
 				CvSelectionGroup* pLoopSelectionGroup = getSelectionGroup(groupList[i].second);
@@ -1484,6 +1497,12 @@ void CvPlayerAI::AI_unitUpdate()
 				}
 			}
 		}
+	}
+	else
+	{
+		LOG_PLAYER_BLOCK(4, {
+			logAiEvaluations(4,"AI_unitUpdate : Has Busy Unit for Player %d", getID());
+		});
 	}
 }
 
@@ -3259,7 +3278,7 @@ int CvPlayerAI::AI_targetCityValue(const CvCity* pCity, bool bRandomize, bool bI
 	iValue = ((iValue * 100) / intSqrt(iDefense));
 
 	LOG_PLAYER_BLOCK(3, {
-		logBBAI("Player %d Estimation of Target City %S, Final Value %d, Population %d, Defense Unit : %d, Fortifications : %d, Defense Dmg : %d, Wonders : %d, Religion : %d, Plots : %d, Special : %d, Random : %d,...", getID(), pCity->getName().GetCString(), iValue, iPopulation, iDefense, iDefenseMod, iDefenseDmg, iWonderPts, iReligionPts, iPlots, iSpecial, iRandom);
+		logAiEvaluations(3,"Player %d Estimation of Target City %S, Final Value %d, Population %d, Defense Unit : %d, Fortifications : %d, Defense Dmg : %d, Wonders : %d, Religion : %d, Plots : %d, Special : %d, Random : %d,...", getID(), pCity->getName().GetCString(), iValue, iPopulation, iDefense, iDefenseMod, iDefenseDmg, iWonderPts, iReligionPts, iPlots, iSpecial, iRandom);
 	});
 
 
