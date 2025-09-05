@@ -432,7 +432,6 @@ bool CvUnitAI::AI_update()
 	else
 	{
 		PROFILE("CvUnitAI::AI_Update.civ");
-
 		doUnitAIMove();
 	}
 
@@ -466,7 +465,7 @@ void CvUnitAI::doUnitAIMove()
 			StrUnitName = getName(0).GetCString();
 		}
 
-		logBBAI("Player %d Unit ID %d, %S of Type %S, at (%d, %d), Mission %S [stack size %d], will perform its move...", getOwner(), m_iID, StrUnitName.GetCString(), StrunitAIType.GetCString(), getX(), getY(), MissionInfos.GetCString(), getGroup()->getNumUnits());
+		logBBAI("Player %d Unit ID %d, %S of Type %S, at (%d, %d), Mission %S [stack size %d], will perform its move. moves left : %d ...", getOwner(), m_iID, StrUnitName.GetCString(), StrunitAIType.GetCString(), getX(), getY(), MissionInfos.GetCString(), getGroup()->getNumUnits(), movesLeft());
 	});
 
 	//	If a unit has a contract mission for a unit that has just finished
@@ -1720,6 +1719,19 @@ void CvUnitAI::AI_animalMove()
 	{
 		return;
 	}
+	LOG_UNIT_BLOCK(4, {
+		UnitAITypes eUnitAi = AI_getUnitAIType();
+		MissionAITypes eMissionAI = getGroup()->AI_getMissionAIType();
+		CvWString StrunitAIType = GC.getUnitAIInfo(eUnitAi).getType();
+		CvWString MissionInfos = MissionAITypeToString(eMissionAI);
+		CvWString StrUnitName = m_szName;
+		if (StrUnitName.length() == 0)
+		{
+			StrUnitName = getName(0).GetCString();
+		}
+
+		logBBAI("Player %d Unit ID %d, %S of Type %S, at (%d, %d), Mission %S [stack size %d], Skip reached for animalMove...", getOwner(), m_iID, StrUnitName.GetCString(), StrunitAIType.GetCString(), getX(), getY(), MissionInfos.GetCString(), getGroup()->getNumUnits());
+	});
 	getGroup()->pushMission(MISSION_SKIP);
 }
 
@@ -2054,6 +2066,19 @@ void CvUnitAI::AI_settleMove()
 	{
 		return;
 	}
+	LOG_UNIT_BLOCK(4, {
+		UnitAITypes eUnitAi = AI_getUnitAIType();
+		MissionAITypes eMissionAI = getGroup()->AI_getMissionAIType();
+		CvWString StrunitAIType = GC.getUnitAIInfo(eUnitAi).getType();
+		CvWString MissionInfos = MissionAITypeToString(eMissionAI);
+		CvWString StrUnitName = m_szName;
+		if (StrUnitName.length() == 0)
+		{
+			StrUnitName = getName(0).GetCString();
+		}
+
+		logBBAI("Player %d Unit ID %d, %S of Type %S, at (%d, %d), Mission %S [stack size %d], Skip reached for settleMove...", getOwner(), m_iID, StrUnitName.GetCString(), StrunitAIType.GetCString(), getX(), getY(), MissionInfos.GetCString(), getGroup()->getNumUnits());
+	});
 	getGroup()->pushMission(MISSION_SKIP);
 	return;
 }
@@ -2428,6 +2453,19 @@ void CvUnitAI::AI_workerMove()
 	{
 		return;
 	}
+	LOG_UNIT_BLOCK(4, {
+		UnitAITypes eUnitAi = AI_getUnitAIType();
+		MissionAITypes eMissionAI = getGroup()->AI_getMissionAIType();
+		CvWString StrunitAIType = GC.getUnitAIInfo(eUnitAi).getType();
+		CvWString MissionInfos = MissionAITypeToString(eMissionAI);
+		CvWString StrUnitName = m_szName;
+		if (StrUnitName.length() == 0)
+		{
+			StrUnitName = getName(0).GetCString();
+		}
+
+		logBBAI("Player %d Unit ID %d, %S of Type %S, at (%d, %d), Mission %S [stack size %d], Skip reached for workerMove...", getOwner(), m_iID, StrUnitName.GetCString(), StrunitAIType.GetCString(), getX(), getY(), MissionInfos.GetCString(), getGroup()->getNumUnits());
+	});
 	getGroup()->pushMission(MISSION_SKIP);
 }
 
@@ -2537,7 +2575,19 @@ void CvUnitAI::AI_barbAttackMove()
 	{
 		return;
 	}
+	LOG_UNIT_BLOCK(4, {
+		UnitAITypes eUnitAi = AI_getUnitAIType();
+		MissionAITypes eMissionAI = getGroup()->AI_getMissionAIType();
+		CvWString StrunitAIType = GC.getUnitAIInfo(eUnitAi).getType();
+		CvWString MissionInfos = MissionAITypeToString(eMissionAI);
+		CvWString StrUnitName = m_szName;
+		if (StrUnitName.length() == 0)
+		{
+			StrUnitName = getName(0).GetCString();
+		}
 
+		logBBAI("Player %d Unit ID %d, %S of Type %S, at (%d, %d), Mission %S [stack size %d], Skip reached for barAttacklMove...", getOwner(), m_iID, StrUnitName.GetCString(), StrunitAIType.GetCString(), getX(), getY(), MissionInfos.GetCString(), getGroup()->getNumUnits());
+	});
 	getGroup()->pushMission(MISSION_SKIP);
 	return;
 }
@@ -2924,6 +2974,19 @@ void CvUnitAI::AI_attackMove()
 			return;
 		}
 	}
+	LOG_UNIT_BLOCK(4, {
+		UnitAITypes eUnitAi = AI_getUnitAIType();
+		MissionAITypes eMissionAI = getGroup()->AI_getMissionAIType();
+		CvWString StrunitAIType = GC.getUnitAIInfo(eUnitAi).getType();
+		CvWString MissionInfos = MissionAITypeToString(eMissionAI);
+		CvWString StrUnitName = m_szName;
+		if (StrUnitName.length() == 0)
+		{
+			StrUnitName = getName(0).GetCString();
+		}
+
+		logBBAI("Player %d Unit ID %d, %S of Type %S, at (%d, %d), Mission %S [stack size %d], Skip reached for attackMove...", getOwner(), m_iID, StrUnitName.GetCString(), StrunitAIType.GetCString(), getX(), getY(), MissionInfos.GetCString(), getGroup()->getNumUnits());
+	});
 	getGroup()->pushMission(MISSION_SKIP);
 	return;
 }
@@ -3602,7 +3665,7 @@ void CvUnitAI::AI_attackCityMove()
 			}
 		}
 
-		if (iStepDistToTarget >= 10)
+		if (!bHuntBarbs && iStepDistToTarget >= 10)
 		{ //too far, try to reach another more powerful stack that is nearer
 
 			CvPlot* pOurPlot = plot();
@@ -3613,7 +3676,8 @@ void CvUnitAI::AI_attackCityMove()
 					pGroup = GET_PLAYER(getOwner()).nextSelectionGroup(&iLoop))
 			{
 				CvUnit* pHead = pGroup->getHeadUnit();
-				if (pHead == NULL || pHead == this) continue;
+				CvUnit* OurHead = getGroup()->getHeadUnit();
+				if (pHead == NULL || pHead == OurHead) continue;
 
 				// Filter only stacks with ATTACK_CITY or ATTACK
 				if (pHead->AI_getUnitAIType() == UNITAI_ATTACK_CITY || pHead->AI_getUnitAIType() == UNITAI_ATTACK)
@@ -3631,8 +3695,22 @@ void CvUnitAI::AI_attackCityMove()
 
 						// Calculate dist to the Target Stack
 						int iDistance = plotDistance(pHead->getX(), pHead->getY(), pOurPlot->getX(), pOurPlot->getY());
+						int iValue = 10000 + std::min(0,(AI_stackOfDoomExtra() - getGroup()->getNumUnits()) * 500) + pGroup->getNumUnits() * 200;
 
-						if (iDistance > 0 && (iDistance <= iStepDistToTarget || getGroup()->getNumUnits() <= 6))
+						iValue = applyDistanceScoringFactor(iValue, plot(), pHead->plot(), 1);
+						LOG_UNIT_BLOCK(3, {
+							UnitAITypes eUnitAi = AI_getUnitAIType();
+							MissionAITypes eMissionAI = getGroup()->AI_getMissionAIType();
+							CvWString StrunitAIType = GC.getUnitAIInfo(eUnitAi).getType();
+							CvWString MissionInfos = MissionAITypeToString(eMissionAI);
+							CvWString StrUnitName = m_szName;
+							if (StrUnitName.length() == 0)
+							{
+								StrUnitName = getName(0).GetCString();
+							}
+							logBBAI("Player %d Unit ID %d, %S of Type %S, at (%d, %d), Mission %S [stack size %d], group Value %d, distance %d...", getOwner(), m_iID, StrUnitName.GetCString(), StrunitAIType.GetCString(), getX(), getY(), MissionInfos.GetCString(), getGroup()->getNumUnits(), iValue, iDistance);
+						});
+						if (iDistance > 1 && (iDistance <= iStepDistToTarget || iValue > 500))
 						{
 							LOG_UNIT_BLOCK(3, {
 								UnitAITypes eUnitAi = AI_getUnitAIType();
@@ -3644,14 +3722,38 @@ void CvUnitAI::AI_attackCityMove()
 								{
 									StrUnitName = getName(0).GetCString();
 								}
-								logBBAI("Player %d Unit ID %d, %S of Type %S, at (%d, %d), Mission %S [stack size %d], try to join another Stack at (%d,%d)...", getOwner(), m_iID, StrUnitName.GetCString(), StrunitAIType.GetCString(), getX(), getY(), MissionInfos.GetCString(), getGroup()->getNumUnits(), pHead->getX(), pHead->getY());
+								logBBAI("Player %d Unit ID %d, %S of Type %S, at (%d, %d), Mission %S [stack size %d], try to join another Stack at (%d,%d), distance %d...", getOwner(), m_iID, StrUnitName.GetCString(), StrunitAIType.GetCString(), getX(), getY(), MissionInfos.GetCString(), getGroup()->getNumUnits(), pHead->getX(), pHead->getY(), iDistance);
 							});
-							if (pGroup->pushMissionInternal(MISSION_MOVE_TO_UNIT, pHead->getOwner(), pHead->getID(), 0, false, false, MISSIONAI_GROUP, NULL, pHead))
+							if (getGroup()->pushMissionInternal(MISSION_MOVE_TO_UNIT, pHead->getOwner(), pHead->getID(), 0, false, false, MISSIONAI_GROUP, NULL, pHead))
 							{							
+								LOG_UNIT_BLOCK(3, {
+									UnitAITypes eUnitAi = AI_getUnitAIType();
+									MissionAITypes eMissionAI = getGroup()->AI_getMissionAIType();
+									CvWString StrunitAIType = GC.getUnitAIInfo(eUnitAi).getType();
+									CvWString MissionInfos = MissionAITypeToString(eMissionAI);
+									CvWString StrUnitName = m_szName;
+									if (StrUnitName.length() == 0)
+									{
+										StrUnitName = getName(0).GetCString();
+									}
+									logBBAI("Player %d Unit ID %d, %S of Type %S, at (%d, %d), Mission %S [stack size %d], join Unit Order done at (%d,%d)...", getOwner(), m_iID, StrUnitName.GetCString(), StrunitAIType.GetCString(), getX(), getY(), MissionInfos.GetCString(), getGroup()->getNumUnits(), pHead->getX(), pHead->getY());
+								});								
 								return;
 							}
 							else if (getGroup()->pushMissionInternal(MISSION_MOVE_TO, pHead->getX(), pHead->getY(), 0, false, false, MISSIONAI_GROUP, pHead->plot()))
 							{
+								LOG_UNIT_BLOCK(3, {
+									UnitAITypes eUnitAi = AI_getUnitAIType();
+									MissionAITypes eMissionAI = getGroup()->AI_getMissionAIType();
+									CvWString StrunitAIType = GC.getUnitAIInfo(eUnitAi).getType();
+									CvWString MissionInfos = MissionAITypeToString(eMissionAI);
+									CvWString StrUnitName = m_szName;
+									if (StrUnitName.length() == 0)
+									{
+										StrUnitName = getName(0).GetCString();
+									}
+									logBBAI("Player %d Unit ID %d, %S of Type %S, at (%d, %d), Mission %S [stack size %d], join Plot at (%d,%d)...", getOwner(), m_iID, StrUnitName.GetCString(), StrunitAIType.GetCString(), getX(), getY(), MissionInfos.GetCString(), getGroup()->getNumUnits(), pHead->getX(), pHead->getY());
+								});								
 								return;
 							}
 						}
@@ -4047,7 +4149,7 @@ void CvUnitAI::AI_attackCityMove()
 		{
 			StrUnitName = getName(0).GetCString();
 		}
-		logBBAI("Player %d Unit ID %d, %S of Type %S, at (%d, %d), Mission %S [stack size %d], nothing to do, skip...", getOwner(), m_iID, StrUnitName.GetCString(), StrunitAIType.GetCString(), getX(), getY(), MissionInfos.GetCString(), getGroup()->getNumUnits());
+		logBBAI("Player %d Unit ID %d, %S of Type %S, at (%d, %d), Mission %S [stack size %d], nothing to do in attackCityMove, skip...", getOwner(), m_iID, StrUnitName.GetCString(), StrunitAIType.GetCString(), getX(), getY(), MissionInfos.GetCString(), getGroup()->getNumUnits());
 	});
 
 	getGroup()->pushMission(MISSION_SKIP);
@@ -4233,6 +4335,19 @@ void CvUnitAI::AI_collateralMove()
 	{
 		return;
 	}
+	LOG_UNIT_BLOCK(4, {
+		UnitAITypes eUnitAi = AI_getUnitAIType();
+		MissionAITypes eMissionAI = getGroup()->AI_getMissionAIType();
+		CvWString StrunitAIType = GC.getUnitAIInfo(eUnitAi).getType();
+		CvWString MissionInfos = MissionAITypeToString(eMissionAI);
+		CvWString StrUnitName = m_szName;
+		if (StrUnitName.length() == 0)
+		{
+			StrUnitName = getName(0).GetCString();
+		}
+
+		logBBAI("Player %d Unit ID %d, %S of Type %S, at (%d, %d), Mission %S [stack size %d], Skip reached for collateralMove...", getOwner(), m_iID, StrUnitName.GetCString(), StrunitAIType.GetCString(), getX(), getY(), MissionInfos.GetCString(), getGroup()->getNumUnits());
+	});
 	getGroup()->pushMission(MISSION_SKIP);
 	return;
 }
@@ -4399,6 +4514,19 @@ void CvUnitAI::AI_pillageMove()
 	{
 		return;
 	}
+	LOG_UNIT_BLOCK(4, {
+		UnitAITypes eUnitAi = AI_getUnitAIType();
+		MissionAITypes eMissionAI = getGroup()->AI_getMissionAIType();
+		CvWString StrunitAIType = GC.getUnitAIInfo(eUnitAi).getType();
+		CvWString MissionInfos = MissionAITypeToString(eMissionAI);
+		CvWString StrUnitName = m_szName;
+		if (StrUnitName.length() == 0)
+		{
+			StrUnitName = getName(0).GetCString();
+		}
+
+		logBBAI("Player %d Unit ID %d, %S of Type %S, at (%d, %d), Mission %S [stack size %d], Skip reached for pillageMove...", getOwner(), m_iID, StrUnitName.GetCString(), StrunitAIType.GetCString(), getX(), getY(), MissionInfos.GetCString(), getGroup()->getNumUnits());
+	});
 
 	getGroup()->pushMission(MISSION_SKIP);
 	return;
@@ -4595,6 +4723,19 @@ void CvUnitAI::AI_reserveMove()
 	{
 		return;
 	}
+	LOG_UNIT_BLOCK(4, {
+		UnitAITypes eUnitAi = AI_getUnitAIType();
+		MissionAITypes eMissionAI = getGroup()->AI_getMissionAIType();
+		CvWString StrunitAIType = GC.getUnitAIInfo(eUnitAi).getType();
+		CvWString MissionInfos = MissionAITypeToString(eMissionAI);
+		CvWString StrUnitName = m_szName;
+		if (StrUnitName.length() == 0)
+		{
+			StrUnitName = getName(0).GetCString();
+		}
+
+		logBBAI("Player %d Unit ID %d, %S of Type %S, at (%d, %d), Mission %S [stack size %d], Skip reached for reserveMove...", getOwner(), m_iID, StrUnitName.GetCString(), StrunitAIType.GetCString(), getX(), getY(), MissionInfos.GetCString(), getGroup()->getNumUnits());
+	});
 
 	getGroup()->pushMission(MISSION_SKIP);
 	return;
@@ -4811,6 +4952,19 @@ void CvUnitAI::AI_counterMove()
 	{
 		return;
 	}
+	LOG_UNIT_BLOCK(4, {
+		UnitAITypes eUnitAi = AI_getUnitAIType();
+		MissionAITypes eMissionAI = getGroup()->AI_getMissionAIType();
+		CvWString StrunitAIType = GC.getUnitAIInfo(eUnitAi).getType();
+		CvWString MissionInfos = MissionAITypeToString(eMissionAI);
+		CvWString StrUnitName = m_szName;
+		if (StrUnitName.length() == 0)
+		{
+			StrUnitName = getName(0).GetCString();
+		}
+
+		logBBAI("Player %d Unit ID %d, %S of Type %S, at (%d, %d), Mission %S [stack size %d], Skip reached for counterMove...", getOwner(), m_iID, StrUnitName.GetCString(), StrunitAIType.GetCString(), getX(), getY(), MissionInfos.GetCString(), getGroup()->getNumUnits());
+	});
 
 	getGroup()->pushMission(MISSION_SKIP);
 	return;
@@ -5124,9 +5278,22 @@ void CvUnitAI::AI_cityDefenseMove()
 			});
 			doSplit();
 		}
-
+		return;
 	}
 
+	LOG_UNIT_BLOCK(4, {
+		UnitAITypes eUnitAi = AI_getUnitAIType();
+		MissionAITypes eMissionAI = getGroup()->AI_getMissionAIType();
+		CvWString StrunitAIType = GC.getUnitAIInfo(eUnitAi).getType();
+		CvWString MissionInfos = MissionAITypeToString(eMissionAI);
+		CvWString StrUnitName = m_szName;
+		if (StrUnitName.length() == 0)
+		{
+			StrUnitName = getName(0).GetCString();
+		}
+
+		logBBAI("Player %d Unit ID %d, %S of Type %S, at (%d, %d), Mission %S [stack size %d], Skip reached for cityDefenseMove...", getOwner(), m_iID, StrUnitName.GetCString(), StrunitAIType.GetCString(), getX(), getY(), MissionInfos.GetCString(), getGroup()->getNumUnits());
+	});
 
 	getGroup()->pushMission(MISSION_SKIP);
 	return;
@@ -5481,6 +5648,19 @@ void CvUnitAI::AI_exploreMove()
 	{
 		return;
 	}
+	LOG_UNIT_BLOCK(4, {
+		UnitAITypes eUnitAi = AI_getUnitAIType();
+		MissionAITypes eMissionAI = getGroup()->AI_getMissionAIType();
+		CvWString StrunitAIType = GC.getUnitAIInfo(eUnitAi).getType();
+		CvWString MissionInfos = MissionAITypeToString(eMissionAI);
+		CvWString StrUnitName = m_szName;
+		if (StrUnitName.length() == 0)
+		{
+			StrUnitName = getName(0).GetCString();
+		}
+
+		logBBAI("Player %d Unit ID %d, %S of Type %S, at (%d, %d), Mission %S [stack size %d], Skip reached for explorerMove...", getOwner(), m_iID, StrUnitName.GetCString(), StrunitAIType.GetCString(), getX(), getY(), MissionInfos.GetCString(), getGroup()->getNumUnits());
+	});
 
 	getGroup()->pushMission(MISSION_SKIP);
 	return;
@@ -5556,6 +5736,19 @@ void CvUnitAI::AI_missionaryMove()
 	{
 		return;
 	}
+	LOG_UNIT_BLOCK(4, {
+		UnitAITypes eUnitAi = AI_getUnitAIType();
+		MissionAITypes eMissionAI = getGroup()->AI_getMissionAIType();
+		CvWString StrunitAIType = GC.getUnitAIInfo(eUnitAi).getType();
+		CvWString MissionInfos = MissionAITypeToString(eMissionAI);
+		CvWString StrUnitName = m_szName;
+		if (StrUnitName.length() == 0)
+		{
+			StrUnitName = getName(0).GetCString();
+		}
+
+		logBBAI("Player %d Unit ID %d, %S of Type %S, at (%d, %d), Mission %S [stack size %d], Skip reached for missionaryMove...", getOwner(), m_iID, StrUnitName.GetCString(), StrunitAIType.GetCString(), getX(), getY(), MissionInfos.GetCString(), getGroup()->getNumUnits());
+	});
 	getGroup()->pushMission(MISSION_SKIP);
 }
 
@@ -5696,6 +5889,19 @@ void CvUnitAI::AI_hunterEscortMove()
 	{
 		return;
 	}
+	LOG_UNIT_BLOCK(4, {
+		UnitAITypes eUnitAi = AI_getUnitAIType();
+		MissionAITypes eMissionAI = getGroup()->AI_getMissionAIType();
+		CvWString StrunitAIType = GC.getUnitAIInfo(eUnitAi).getType();
+		CvWString MissionInfos = MissionAITypeToString(eMissionAI);
+		CvWString StrUnitName = m_szName;
+		if (StrUnitName.length() == 0)
+		{
+			StrUnitName = getName(0).GetCString();
+		}
+
+		logBBAI("Player %d Unit ID %d, %S of Type %S, at (%d, %d), Mission %S [stack size %d], Skip reached for hunterEscortMove...", getOwner(), m_iID, StrUnitName.GetCString(), StrunitAIType.GetCString(), getX(), getY(), MissionInfos.GetCString(), getGroup()->getNumUnits());
+	});
 	getGroup()->pushMission(MISSION_SKIP);
 	return;
 }
@@ -6635,6 +6841,19 @@ void CvUnitAI::AI_subduedAnimalMove()
 	{
 		return;
 	}
+	LOG_UNIT_BLOCK(4, {
+		UnitAITypes eUnitAi = AI_getUnitAIType();
+		MissionAITypes eMissionAI = getGroup()->AI_getMissionAIType();
+		CvWString StrunitAIType = GC.getUnitAIInfo(eUnitAi).getType();
+		CvWString MissionInfos = MissionAITypeToString(eMissionAI);
+		CvWString StrUnitName = m_szName;
+		if (StrUnitName.length() == 0)
+		{
+			StrUnitName = getName(0).GetCString();
+		}
+
+		logBBAI("Player %d Unit ID %d, %S of Type %S, at (%d, %d), Mission %S [stack size %d], Skip reached for subduedAnimalMove...", getOwner(), m_iID, StrUnitName.GetCString(), StrunitAIType.GetCString(), getX(), getY(), MissionInfos.GetCString(), getGroup()->getNumUnits());
+	});
 
 	getGroup()->pushMission(MISSION_SKIP);
 	return;
@@ -11562,6 +11781,7 @@ bool CvUnitAI::AI_groupMergeRange(UnitAITypes eUnitAI, int iMaxRange, bool bBigg
 			pGroup->mergeIntoGroup(pBestUnit->getGroup());
 			return true;
 		}
+		int idist = plotDistance(plot()->getX(), plot()->getY(), pBestUnit->plot()->getX(), pBestUnit->plot()->getY());
 		LOG_UNIT_BLOCK(3, {
 			UnitAITypes eUnitAi = AI_getUnitAIType();
 			MissionAITypes eMissionAI = getGroup()->AI_getMissionAIType();
@@ -11573,10 +11793,9 @@ bool CvUnitAI::AI_groupMergeRange(UnitAITypes eUnitAI, int iMaxRange, bool bBigg
 				StrUnitName = getName(0).GetCString();
 			}
 
-			logBBAI("Player %d Unit ID %d, %S of Type %S, at (%d, %d), Mission %S [stack size %d], search to join another group at (%d, %d)...", getOwner(), m_iID, StrUnitName.GetCString(), StrunitAIType.GetCString(), getX(), getY(), MissionInfos.GetCString(), getGroup()->getNumUnits(), pBestUnit->plot()->getX(), pBestUnit->plot()->getY());
+			logBBAI("Player %d Unit ID %d, %S of Type %S, at (%d, %d), Mission %S [stack size %d], search to merge at Range with another group at (%d, %d), distance %d...", getOwner(), m_iID, StrUnitName.GetCString(), StrunitAIType.GetCString(), getX(), getY(), MissionInfos.GetCString(), getGroup()->getNumUnits(), pBestUnit->plot()->getX(), pBestUnit->plot()->getY(), idist);
 		});
 
-		int idist = plotDistance(plot()->getX(), plot()->getY(), pBestUnit->plot()->getX(), pBestUnit->plot()->getY());
 		bool bSuccess = pGroup->pushMissionInternal(MISSION_MOVE_TO_UNIT, pBestUnit->getOwner(), pBestUnit->getID(), 0, false, false, MISSIONAI_GROUP, NULL, pBestUnit);
 		if (bSuccess && idist == 1) //near it
 		{
@@ -18254,6 +18473,7 @@ bool CvUnitAI::AI_leaveAttack(int iRange, int iOddsThreshold, int iStrengthThres
 	}
 	if (pBestPlot)
 	{
+		int idist = plotDistance(plot()->getX(), plot()->getY(), pBestPlot->getX(), pBestPlot->getY());
 		LOG_UNIT_BLOCK(3, {
 			UnitAITypes eUnitAi = AI_getUnitAIType();
 			MissionAITypes eMissionAI = getGroup()->AI_getMissionAIType();
@@ -18265,10 +18485,13 @@ bool CvUnitAI::AI_leaveAttack(int iRange, int iOddsThreshold, int iStrengthThres
 				StrUnitName = getName(0).GetCString();
 			}
 
-			logBBAI("Player %d Unit ID %d, %S of Type %S, at (%d, %d), Mission %S [stack size %d], leaveAttack to (%d, %d)...", getOwner(), m_iID, StrUnitName.GetCString(), StrunitAIType.GetCString(), getX(), getY(), MissionInfos.GetCString(), getGroup()->getNumUnits(), pBestPlot->getX(), pBestPlot->getY());
+			logBBAI("Player %d Unit ID %d, %S of Type %S, at (%d, %d), Mission %S [stack size %d], leaveAttack to (%d, %d), distance %d ...", getOwner(), m_iID, StrUnitName.GetCString(), StrunitAIType.GetCString(), getX(), getY(), MissionInfos.GetCString(), getGroup()->getNumUnits(), pBestPlot->getX(), pBestPlot->getY(), idist);
 		});
 		FAssert(!atPlot(pBestPlot));
-		return getGroup()->pushMissionInternal(MISSION_MOVE_TO, pBestPlot->getX(), pBestPlot->getY(), 0);
+		if (!atPlot(pBestPlot))
+		{
+			return getGroup()->pushMissionInternal(MISSION_MOVE_TO, pBestPlot->getX(), pBestPlot->getY(), 0);
+		}
 	}
 	return false;
 }
