@@ -1497,6 +1497,15 @@
 		<Russian>[ICON_BULLET]Макс. HP: %d1 (обычно 100.)</Russian>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_UNITHELP_ROLE</Tag>
+		<English>[ICON_BULLET]Role: %s1 , Mission: %s2</English>
+		<French>[ICON_BULLET]Rôle: %s1 , Mission: %s2</French>
+		<German>[ICON_BULLET]Role: %s1 , Mission: %s2</German>
+		<Italian>[ICON_BULLET]Role: %s1 , Mission: %s2</Italian>
+		<Polish>[ICON_BULLET]Role: %s1 , Mission: %s2)</Polish>
+		<Russian>[ICON_BULLET]Role: %s1 , Mission: %s2</Russian>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_UNITHELP_MAX_START_ERA</Tag>
 		<English>[NEWLINE][ICON_BULLET]Can only be Built on %s1_Name and Earlier Starts</English>
 		<French>[NEWLINE][ICON_BULLET]Peut uniquement être constuit par %s1_Name et dans les premières Eres</French>

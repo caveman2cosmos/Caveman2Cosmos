@@ -120,6 +120,7 @@ Base XP gained when defending
 			<iXPValueDefense>6</iXPValueDefense>
 			<iAsset>5</iAsset>
 			<iPower>1000</iPower>
+			<bSuicide>1</bSuicide>
 			<UnitMeshGroups>
 				<iGroupSize>1</iGroupSize>
 				<fMaxSpeed>0.75</fMaxSpeed>
