@@ -14967,7 +14967,7 @@
 				<PrereqTech>TECH_ELEPHANT_DOMESTICATION</PrereqTech>
 			</TechTypes>
 			<BonusType>BONUS_ELEPHANTS</BonusType>
-			<iCost>95</iCost>
+			<iCost>300</iCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>1</iMoves>
 			<iCombat>8</iCombat>
