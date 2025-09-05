@@ -3361,7 +3361,7 @@ void CvUnitAI::AI_attackCityMove()
 					StrUnitName = getName(0).GetCString();
 				}
 
-				logBBAI("Player %d Unit ID %d, %S of Type %S, at (%d, %d), Mission %S [stack size %d], Check Bombard effect at (%d,%d)...", getOwner(), m_iID, StrUnitName.GetCString(), StrunitAIType.GetCString(), getX(), getY(), MissionInfos.GetCString(), getGroup()->getNumUnits(), pTargetCity->getX(), pTargetCity->getY());
+				logBBAI("Player %d Unit ID %d, %S of Type %S, at (%d, %d), Mission %S [stack size %d], Check Attack Ratio and Bombard possibility at (%d,%d)...", getOwner(), m_iID, StrUnitName.GetCString(), StrunitAIType.GetCString(), getX(), getY(), MissionInfos.GetCString(), getGroup()->getNumUnits(), pTargetCity->getX(), pTargetCity->getY());
 				logBBAI("       Attack (estim after Bomb.) : %d, AttackRatio : %d", iComparePostBombard, iAttackRatio);
 			});
 			if (iComparePostBombard < iAttackRatio && !bAtWar)
@@ -21343,7 +21343,7 @@ bool CvUnitAI::AI_nextCityToImprove(CvCity* pCity)
 									//pBestPlot = pPlot;
 									pBestCity = pLoopCity;
 									//CvPlot* pEndTurnPlot = getPathEndTurnPlot();
-									FAssert(!(NULL == pCity || pCity->AI_getWorkersNeeded() == 0 || pCity->getNumWorkers() > pCity->AI_getWorkersNeeded() + 1));
+									FAssert(!(NULL == pBestCity || pBestCity->AI_getWorkersNeeded() == 0 || pBestCity->getNumWorkers() > pBestCity->AI_getWorkersNeeded() + 1));
 								}
 							}
 						}
