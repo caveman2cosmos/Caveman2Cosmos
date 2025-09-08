@@ -25,10 +25,7 @@ bool FAssertDlg( const char*, const char*, const char*, unsigned int, const char
 #if defined(__COVERITY__)
 //#define FAssert( expr )	if( !(expr) ) throw std::exception(#expr);
 //#define FAssertMsg( expr, msg )	FAssert( expr )
-//Calvitix - temporary remove assertions
-#define FAssert(expr)          ((void)0)
-#define FAssertMsg(expr, msg)  ((void)0)
-//Calvitix - temporary remove assertions END
+
 #define FAssertRecalcMsg( expr, msg ) FAssert( expr )
 #define FAssertOptionMsg( option, expr, msg ) FAssert( GC.getGame().isOption(option) && expr )
 #define FAssertOptionRecalcMsg( option, expr, msg) FAssert( GC.getGame().isOption(option) && expr )
@@ -39,7 +36,7 @@ bool FAssertDlg( const char*, const char*, const char*, unsigned int, const char
 //Calvitix - temporary remove assertions (set bIgnoreAlways to true)
 #define FAssert( expr )	\
 { \
-	static bool bIgnoreAlways = true; \
+	static bool bIgnoreAlways = false; \
 	if( !bIgnoreAlways && !(expr) ) \
 	{ \
 		if( FAssertDlg( #expr, 0, __FILE__, __LINE__, __FUNCTION__, bIgnoreAlways ) ) { _asm int 3 } \
