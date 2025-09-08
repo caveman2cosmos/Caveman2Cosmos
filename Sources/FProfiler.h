@@ -192,8 +192,8 @@ private:
 #define PROFILE_THREAD(name)
 #define PROFILE(name)
 #define PROFILE_BEGIN(name, id)
-#define PROFILE_BEGIN_CONDITIONAL(name1,name2)
-#define PROFILE_END_CONDITIONAL(result)
+#define PROFILE_BEGIN_CONDITIONAL(name1,name2,id)
+#define PROFILE_END_CONDITIONAL(result,id)
 #define PROFILE_SET_COUNT(name,value)	;
 #define PROFILE_END(id)
 #define PROFILE_FUNC()

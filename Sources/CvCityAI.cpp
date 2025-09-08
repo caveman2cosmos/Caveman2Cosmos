@@ -4738,31 +4738,43 @@ public:
 };
 
 
+
 int CvCityAI::AI_buildingValue(BuildingTypes eBuilding, int iFocusFlags, bool bForTech, bool bDebug)
 {
 	if (bDebug)
 	{
 		return AI_buildingValueThresholdOriginalUncached(eBuilding, 0, -123, false, true);
 	}
-	int iValue;
+
 	if (bForTech)
 	{
 		PROFILE("AI_buildingValue.ForTech");
-
-		iValue = AI_buildingValueThresholdOriginal(eBuilding, iFocusFlags, 0, false, false, bForTech);
+		int iValue = AI_buildingValueThresholdOriginal(eBuilding, iFocusFlags, 0, false, false, bForTech);
+		if (iValue > 0 && !isHuman())
+		{
+			const CvPlayerAI& kOwner = GET_PLAYER(getOwner());
+			const CvBuildingInfo& kBuilding = GC.getBuildingInfo(eBuilding);
+			const int numFlavors = GC.getNumFlavorTypes();
+			for (int i = 0; i < numFlavors; ++i)
+			{
+				iValue += kOwner.AI_getFlavorValue(static_cast<FlavorTypes>(i)) * kBuilding.getFlavorValue(i);
+			}
+			return std::max(1, iValue);
+		}
+		return iValue;
 	}
-	else iValue = AI_buildingValueThreshold(eBuilding, iFocusFlags, 0);
 
 	// Toffer - Unsure why we don't cache this as well.
 	// Post process value with leader flavour.
-	if (iValue > 0 && !isHuman()) // Human assigned governors won't use leader flavour.
+	int iValue = AI_buildingValueThreshold(eBuilding, iFocusFlags, 0);
+	if (iValue > 0 && !isHuman())
 	{
 		const CvPlayerAI& kOwner = GET_PLAYER(getOwner());
 		const CvBuildingInfo& kBuilding = GC.getBuildingInfo(eBuilding);
-
-		for (int iI = 0; iI < GC.getNumFlavorTypes(); iI++)
+		const int numFlavors = GC.getNumFlavorTypes();
+		for (int i = 0; i < numFlavors; ++i)
 		{
-			iValue += kOwner.AI_getFlavorValue((FlavorTypes)iI) * kBuilding.getFlavorValue(iI);
+			iValue += kOwner.AI_getFlavorValue(static_cast<FlavorTypes>(i)) * kBuilding.getFlavorValue(i);
 		}
 		return std::max(1, iValue); // flavour can't make building worthless.
 	}
@@ -15436,3 +15448,4 @@ int CvCityAI::AI_evaluateMaxUnitSpending() const
 	}
 	return iMaxUnitSpending;
 }
+

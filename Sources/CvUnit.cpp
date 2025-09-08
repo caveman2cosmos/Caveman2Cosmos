@@ -28485,61 +28485,64 @@ void CvUnit::setCommander(bool bNewVal)
 	GET_PLAYER(getOwner()).listCommander(bNewVal, this);
 }
 
+
 CvUnit* CvUnit::getCommander() const
 {
 	PROFILE_FUNC();
 
-	FAssertMsg(plot() != NULL, "TEST");
-	// This routine gets called a lot, so short-circuit when no commander is around.
-	if (plot() == NULL || !plot()->inCommandField(getOwner()) || getDomainType() == DOMAIN_SEA)
+	const CvPlot* pPlot = plot();
+	if (pPlot == NULL || !pPlot->inCommandField(getOwner()) || getDomainType() == DOMAIN_SEA)
 	{
 		return NULL;
 	}
-	CvUnit* pBestCommander = getLastCommander();
 
-	if (pBestCommander) //return already used one if it is not dead.
+	CvUnit* pBestCommander = getLastCommander();
+	if (pBestCommander)
 	{
-		if (plotDistance(pBestCommander->getX(), pBestCommander->getY(), getX(), getY()) <= pBestCommander->getCommanderComp()->getCommandRange())
+		const int cachedDistance = plotDistance(pBestCommander->getX(), pBestCommander->getY(), getX(), getY());
+		if (cachedDistance <= pBestCommander->getCommanderComp()->getCommandRange())
 		{
 			return pBestCommander;
 		}
-		// The one we used would have been the cached one so will have to search again
 		pBestCommander = NULL;
 	}
 
-	int iBestCommanderDistance = 9999999;
+	int iBestCommanderDistance = std::numeric_limits<int>::max();
+	int iBestCommanderXP = -1;
 
 	const CvPlayer& player = GET_PLAYER(getOwner());
-	const std::vector<CvUnit*> commanders = player.getCommanders();
+	const std::vector<CvUnit*>& commanders = player.getCommanders();
 
-	for (int i = commanders.size() - 1; i > -1; i--) //loop through player's commanders
+	for (std::vector<CvUnit*>::const_iterator it = commanders.begin(); it != commanders.end(); ++it)
 	{
-		CvUnit* com = commanders[i];
-
-		if (com->getCommanderComp()->getControlPointsLeft() <= 0)
-		{
+		CvUnit* com = *it;
+		UnitCompCommander* comComp = com->getCommanderComp();
+		if (comComp == NULL)
+			continue;  // sécurité si jamais ça renvoie NULL
+		if (comComp->getControlPointsLeft() <= 0)
 			continue;
-		}
-		const CvPlot* comPlot = com->plot();
 
+		const CvPlot* comPlot = com->plot();
 		FAssertMsg(comPlot != NULL, "Unexpected... CTD incoming");
 
 		const int iDistance = plotDistance(comPlot->getX(), comPlot->getY(), getX(), getY());
-
-		if (iDistance > com->getCommanderComp()->getCommandRange())
-		{
+		if (iDistance > comComp->getCommandRange())
 			continue;
-		}
-		if (pBestCommander == NULL
-		// Best commander is at shorter distance, or at same distance but has more XP:
-		|| (iBestCommanderDistance < iDistance || iBestCommanderDistance == iDistance && com->getExperience() > pBestCommander->getExperience()))
+
+		const int iXP = com->getExperience();
+		if (
+			pBestCommander == NULL ||
+			iDistance < iBestCommanderDistance ||
+			(iDistance == iBestCommanderDistance && iXP > iBestCommanderXP)
+		)
 		{
 			pBestCommander = com;
 			iBestCommanderDistance = iDistance;
+			iBestCommanderXP = iXP;
+			if (iDistance == 0) break; // Early exit: best possible
 		}
 	}
 	m_iCommanderID = pBestCommander ? pBestCommander->getID() : -1;
-
 	return pBestCommander;
 }
 
@@ -28629,17 +28632,17 @@ CvUnit* CvUnit::getCommodore() const
 {
 	PROFILE_FUNC();
 
-	FAssertMsg(plot() != NULL, "TEST");
-	// This routine gets called a lot, so short-circuit when no commodore is around.
-	if (plot() == NULL || !plot()->inCommandCommodoreField(getOwner()) || getDomainType() == DOMAIN_LAND)
+	const CvPlot* pPlot = plot();
+	if (pPlot == NULL || !pPlot->inCommandCommodoreField(getOwner()) || getDomainType() == DOMAIN_LAND)
 	{
 		return NULL;
 	}
-	CvUnit* pBestCommodore = getLastCommodore();
 
-	if (pBestCommodore) //return already used one if it is not dead.
+	CvUnit* pBestCommodore = getLastCommodore();
+	if (pBestCommodore)
 	{
-		if (plotDistance(pBestCommodore->getX(), pBestCommodore->getY(), getX(), getY()) <= pBestCommodore->getCommodoreComp()->getCommandRange())
+		const int cachedDistance = plotDistance(pBestCommodore->getX(), pBestCommodore->getY(), getX(), getY());
+		if (cachedDistance <= pBestCommodore->getCommodoreComp()->getCommandRange())
 		{
 			return pBestCommodore;
 		}
@@ -28647,40 +28650,44 @@ CvUnit* CvUnit::getCommodore() const
 		pBestCommodore = NULL;
 	}
 
-	int iBestCommodoreDistance = 9999999;
+	int iBestCommodoreDistance = std::numeric_limits<int>::max();
+	int iBestCommodoreXP = -1;
 
 	const CvPlayer& player = GET_PLAYER(getOwner());
-	const std::vector<CvUnit*> commodores = player.getCommodores();
+	const std::vector<CvUnit*>& commodores = player.getCommodores();
 
-	for (int i = commodores.size() - 1; i > -1; i--) //loop through player's commodores
+	for (std::vector<CvUnit*>::const_iterator it = commodores.begin(); it != commodores.end(); ++it)
 	{
-		CvUnit* com = commodores[i];
-
-		if (com->getCommodoreComp()->getControlPointsLeft() <= 0)
-		{
+		CvUnit* com = *it;
+		UnitCompCommodore* comComp = com->getCommodoreComp();
+		if (comComp == NULL)
+			continue;  // sécurité si jamais ça renvoie NULL
+		if (comComp->getControlPointsLeft() <= 0)
 			continue;
-		}
-		const CvPlot* comPlot = com->plot();
 
+		const CvPlot* comPlot = com->plot();
 		FAssertMsg(comPlot != NULL, "Unexpected... CTD incoming");
 
 		const int iDistance = plotDistance(comPlot->getX(), comPlot->getY(), getX(), getY());
-
-		if (iDistance > com->getCommodoreComp()->getCommandRange())
-		{
+		if (iDistance > comComp->getCommandRange())
 			continue;
-		}
-		if (pBestCommodore == NULL
-		// Best commodore is at shorter distance, or at same distance but has more XP:
-		|| (iBestCommodoreDistance < iDistance || iBestCommodoreDistance == iDistance && com->getExperience() > pBestCommodore->getExperience()))
+
+		const int iXP = com->getExperience();
+		if (
+			pBestCommodore == NULL ||
+			iDistance < iBestCommodoreDistance ||
+			(iDistance == iBestCommodoreDistance && iXP > iBestCommodoreXP)
+		)
 		{
 			pBestCommodore = com;
 			iBestCommodoreDistance = iDistance;
+			iBestCommodoreXP = iXP;
+			if (iDistance == 0) break; // Early exit: best possible
 		}
 	}
 	m_iCommodoreID = pBestCommodore ? pBestCommodore->getID() : -1;
-
 	return pBestCommodore;
+
 }
 
 void CvUnit::tryUseCommodore()
@@ -39073,3 +39080,5 @@ void CvUnit::doStarsign()
 		);
 	}
 }
+
+

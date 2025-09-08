@@ -29632,6 +29632,8 @@ namespace {
 	{
 		const CvPlayer& player = GET_PLAYER(unit->getOwner());
 		const int C2C_MIN_PROP_CONTROL = GC.getC2C_MIN_PROP_CONTROL();
+		FAssert(city != nullptr);
+		FAssert(city->plot() != nullptr);
 
 		int maxScore = 0;
 
@@ -29680,6 +29682,7 @@ namespace {
 			}
 		}
 		int maxFinalScore = maxScore + (scoring::applyDistanceScoringFactor(maxScore, unit->plot(), city->plot(), 1) / 10);  //Calvitix Test Remove x2 the currentSpotBoost
+		maxFinalScore = std::min(std::max(maxFinalScore, -1000000), 1000000);
 		return maxFinalScore;
 	}
 };
@@ -29718,6 +29721,8 @@ bool CvUnitAI::AI_fulfillPropertyControlNeed()
 		score *= GC.getPropertyInfo(eProperty).getAIWeight() / 50;
 		if (score >= 1)
 		{		
+			FAssert(eProperty >= 0 && eProperty < GC.getNumPropertyInfos());
+			score = std::min(score,1000000); // limite arbitraire pour éviter overflow
 			propertyScores.push_back(PropertyAmount(eProperty, score));
 			if (score > iBestPropertyScore)
 			{
@@ -29751,10 +29756,19 @@ bool CvUnitAI::AI_fulfillPropertyControlNeed()
 
 	const CvPlayer& player = GET_PLAYER(getOwner());
 
+	//Copy, to avoid modif during scoring
+	std::vector<CvCity*> citySnapshot;
+	for (CvPlayer::city_iterator it = player.beginCities(); it != player.endCities(); ++it)
+	{
+		CvCity* city = *it;  // city_iterator supporte l'opérateur *
+		FAssert(city != nullptr); // sécurité
+		citySnapshot.push_back(city);
+	}
+
 	using namespace scoring;
 	ScoreResult<CvCity> bestCityScore = findBestScore<CvCity, GreatestScore>(
 		player.beginCities(), player.endCities(),
-		bind(scorePropertyControlNeed, propertyScores, this, _1, BestProperty),
+		bind(scorePropertyControlNeed, boost::ref(propertyScores), this, _1, BestProperty),
 		bind(canSafePathToCity, this, _1)
 	);
 

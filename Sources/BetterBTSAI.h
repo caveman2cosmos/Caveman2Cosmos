@@ -71,10 +71,10 @@ extern int gTeamLogLevel;
 extern int gCityLogLevel;
 extern int gUnitLogLevel;
 
-void logBBAI(char* format, ...);
+void logBBAI(const char* format, ...);
 void logAIJson(CvWString type, CvWString identifier, CvWString squirrel, CvWString message);
 void logCB(CvString message);
-void logToFile(CvString message, char* filename);
-void logContractBroker(int level, char* format, ...);
-void logAiEvaluations(int level, char* format, ...);
+void logToFile(CvString message, const char* filename);
+void logContractBroker(int level, const char* format, ...);
+void logAiEvaluations(int level, const char* format, ...);
 #endif

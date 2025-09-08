@@ -38,6 +38,7 @@
 #include "CvDLLInterfaceIFaceBase.h"
 #include "CvDLLUtilityIFaceBase.h"
 #include "CvTraitInfo.h"
+#include <boost/scoped_ptr.hpp>
 
 //	Koshling - save flag indicating this player has no data in the save as they have never been alive
 #define	PLAYER_UI_FLAG_OMITTED 2
@@ -4888,37 +4889,28 @@ int CvPlayer::countPotentialForeignTradeCitiesConnected() const
 bool CvPlayer::canContact(PlayerTypes ePlayer) const
 {
 	if (ePlayer == getID())
-	{
 		return false;
-	}
 
-	if (!isAlive() || !GET_PLAYER(ePlayer).isAlive())
-	{
+	const CvPlayer& otherPlayer = GET_PLAYER(ePlayer);
+	if (!isAlive() || !otherPlayer.isAlive())
 		return false;
-	}
 
-	if (isNPC() || GET_PLAYER(ePlayer).isNPC())
-	{
+	if (isNPC() || otherPlayer.isNPC())
 		return false;
-	}
 
-	if (isMinorCiv() || GET_PLAYER(ePlayer).isMinorCiv())
-	{
+	if (isMinorCiv() || otherPlayer.isMinorCiv())
 		return false;
-	}
 
-	if (getTeam() != GET_PLAYER(ePlayer).getTeam())
+	const TeamTypes ourTeam = getTeam();
+	const TeamTypes theirTeam = otherPlayer.getTeam();
+
+	if (ourTeam != theirTeam)
 	{
-		if (!GET_TEAM(getTeam()).isHasMet(GET_PLAYER(ePlayer).getTeam()))
-		{
+		if (!GET_TEAM(ourTeam).isHasMet(theirTeam))
 			return false;
-		}
 
-		if (::atWar(getTeam(), GET_PLAYER(ePlayer).getTeam())
-		&& !GET_TEAM(getTeam()).canChangeWarPeace(GET_PLAYER(ePlayer).getTeam()))
-		{
+		if (::atWar(ourTeam, theirTeam) && !GET_TEAM(ourTeam).canChangeWarPeace(theirTeam))
 			return false;
-		}
 	}
 
 	return true;
@@ -14849,47 +14841,52 @@ int CvPlayer::findPathLength(TechTypes eTech, bool bCost) const
 		return 0; // Base case return 0, we know it...
 	}
 
-	if ((bCost ? m_aiCostPathLengthCache[eTech] : m_aiPathLengthCache[eTech]) == -1)
+	int& cache = bCost ? m_aiCostPathLengthCache[eTech] : m_aiPathLengthCache[eTech];
+	if (cache == -1)
 	{
+		// Utilisation de pointeurs bruts car constructTechPathSet attend un vector<techPath*>
 		std::vector<techPath*> possiblePaths;
-		techPath* initialSeed = new techPath();
+		possiblePaths.push_back(new techPath());
 
-		possiblePaths.push_back(initialSeed);
+		constructTechPathSet(eTech, possiblePaths, *possiblePaths[0]);
 
-		constructTechPathSet(eTech, possiblePaths, *initialSeed);
-
-		// Find the lowest cost of the possible paths
-		int iValue;
 		int iBestValue = MAX_INT;
-
-		foreach_(const techPath* path, possiblePaths)
+		for (size_t i = 0; i < possiblePaths.size(); ++i)
 		{
+			techPath* pathPtr = possiblePaths[i];
+			const techPath& path = *pathPtr;
+
+			int iValue = 0;
 			if (bCost)
 			{
-				iValue = 0;
-
-				foreach_(const TechTypes& tech, *path)
+				for (size_t j = 0; j < path.size(); ++j)
 				{
-					iValue += GET_TEAM(getTeam()).getResearchCost(eTech);
+					TechTypes tech = path[j];
+					iValue += GET_TEAM(getTeam()).getResearchCost(tech);
 				}
 			}
-			else iValue = path->size();
-
+			else
+			{
+				iValue = static_cast<int>(path.size());
+			}
 
 			if (iValue < iBestValue)
 			{
 				iBestValue = iValue;
+				if (iBestValue == 1) break; // Early exit
 			}
-			delete path;
 		}
 
-		if (bCost)
+		// Nettoyage mémoire obligatoire (sinon fuite)
+		for (size_t i = 0; i < possiblePaths.size(); ++i)
 		{
-			m_aiCostPathLengthCache[eTech] = iBestValue;
+			delete possiblePaths[i];
 		}
-		else m_aiPathLengthCache[eTech] = iBestValue;
+		possiblePaths.clear();
+
+		cache = iBestValue;
 	}
-	return bCost ? m_aiCostPathLengthCache[eTech] : m_aiPathLengthCache[eTech];
+	return cache;
 }
 
 
