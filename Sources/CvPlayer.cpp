@@ -8356,10 +8356,14 @@ int CvPlayer::calculateTotalCommerce() const
 bool CvPlayer::canEverResearch(TechTypes eTech) const
 {
 	PROFILE_EXTRA_FUNC();
-	if (GC.getTechInfo(eTech).isDisable()
+	if (eTech < 0 || eTech >= GC.getNumTechInfos()) {
+		return false; // ID de tech invalide
+	}
+	CvTechInfo& kTechInfo = GC.getTechInfo(eTech);
+	if (kTechInfo.isDisable()
 	|| GC.getCivilizationInfo(getCivilizationType()).isCivilizationDisableTechs(eTech)
 	|| !GC.getGame().canEverResearch(eTech)
-	|| GC.getTechInfo(eTech).isGlobal() && (isNPC() || GC.getGame().countKnownTechNumTeams(eTech) > 0))
+	|| kTechInfo.isGlobal() && (isNPC() || GC.getGame().countKnownTechNumTeams(eTech) > 0))
 	{
 		return false;
 	}

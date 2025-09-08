@@ -1699,7 +1699,7 @@ void CvCityAI::AI_chooseProduction()
 		{
 			if (iNeededWorkersInArea > iWorkersInArea && iProductionRank <= iLowlimitProductionRank)
 			{
-				LOG_BBAI_CITY(2, ("City %S, Will Start to build workers. For the moment : InArea : %d, Needed : %d", getName().GetCString(), iWorkersInArea, iNeededWorkersInArea));
+				LOG_BBAI_CITY(2, ("#8 City %S, Will Start to build workers. For the moment : InArea : %d, Needed : %d", getName().GetCString(), iWorkersInArea, iNeededWorkersInArea));
 				if (AI_chooseUnit("no workers", UNITAI_WORKER, -1, -1, CITY_NO_WORKERS_WORKER_PRIORITY))
 				{
 					return;
@@ -14596,7 +14596,7 @@ bool CvCityAI::AI_choosePropertyControlBuildingAndUnit(int iTriggerPercentOfProp
 				//Count the percent of Prop Control units in the total army. Maximal allowed : 20% (TODO set param depend on leader)
 				int iPropControlInArea = player.AI_totalAreaUnitAIs(pArea, UNITAI_PROPERTY_CONTROL);
 				int iUnitsInArea = player.getNumUnits();
-				if ((iPropControlInArea * 100 / iUnitsInArea) > eMaxPropertyUnitsPercent)
+				if ((iPropControlInArea * 100 / (iUnitsInArea+1)) > eMaxPropertyUnitsPercent)
 				{
 					ismaxPropUnitsReached = true;
 					logAiEvaluations(3, "City %S, step %d %%, worried about property %S. But Maximal Prop Control reached :  value(%d) / total units (%d)", getName().GetCString(), iTriggerPercentOfPropertyOpRange, szProperty.GetCString(), iPropControlInArea, iUnitsInArea);

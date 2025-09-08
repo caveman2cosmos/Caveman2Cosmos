@@ -11878,6 +11878,12 @@ int CvPlayerAI::AI_neededHunters(const CvArea* pArea) const
 	int iHuntersneeded = std::min(
 			intSqrt(getNumCities()) + pArea->getNumUnownedTiles() / 16 + 1,
 			getNumCities() / 2 + pArea->getNumUnownedTiles() / 64);
+	//Calvitix, limit the amount of hunters
+	#define NB_MAX_HUNTERS  10
+	WorldSizeTypes eWorldSize = GC.getMap().getWorldSize();
+	int iWorldSize = (int)eWorldSize;
+	int iMaxhunters = 4 + int(NB_MAX_HUNTERS * pow((iWorldSize + 1) / 6.0, 0.8));
+	return std::min(iHuntersneeded, iMaxhunters);
 	if (gPlayerLogLevel > 2)
 	{
 		int iNumUnowned = pArea->getNumUnownedTiles();
