@@ -46,15 +46,21 @@
 
 #else
 // Si les logs sont désactivés → macros vides, coût CPU nul
-#define LOG_CITY_CITY(level, fmt, ...)   do {} while(0)
-#define LOG_BBAI_UNIT(level, fmt, ...)   do {} while(0)
-#define LOG_BBAI_TEAM(level, fmt, ...)   do {} while(0)
-#define LOG_BBAI_PLAYER(level, fmt, ...)   do {} while(0)
+#define LOG_BBAI_CITY(level, msg)   do {} while(0)
+#define LOG_BBAI_UNIT(level, msg)   do {} while(0)
+#define LOG_BBAI_TEAM(level, msg)   do {} while(0)
+#define LOG_BBAI_PLAYER(level, msg)   do {} while(0)
+
+#define LOG_EVALAI_CITY(level, msg)   do {} while(0)
+#define LOG_EVALAI_UNIT(level, msg)   do {} while(0)
+#define LOG_EVALAI_TEAM(level, msg)   do {} while(0)
+#define LOG_EVALAI_PLAYER(level, msg)   do {} while(0)
+
 
 #define LOG_PLAYER_BLOCK(level, CODE) do {} while(0)
 #define LOG_UNIT_BLOCK(level, CODE) do {} while(0)
 #define LOG_TEAM_BLOCK(level, CODE) do {} while(0)
-#define LOG_PLAYER_BLOCK(level, CODE) do {} while(0)
+#define LOG_CITY_BLOCK(level, CODE) do {} while(0)
 
 #endif
 
@@ -65,10 +71,10 @@ extern int gTeamLogLevel;
 extern int gCityLogLevel;
 extern int gUnitLogLevel;
 
-void logBBAI(char* format, ...);
+void logBBAI(const char* format, ...);
 void logAIJson(CvWString type, CvWString identifier, CvWString squirrel, CvWString message);
 void logCB(CvString message);
-void logToFile(CvString message, char* filename);
-void logContractBroker(int level, char* format, ...);
-void logAiEvaluations(int level, char* format, ...);
+void logToFile(CvString message, const char* filename);
+void logContractBroker(int level, const char* format, ...);
+void logAiEvaluations(int level, const char* format, ...);
 #endif

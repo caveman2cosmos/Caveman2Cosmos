@@ -1699,7 +1699,7 @@ void CvCityAI::AI_chooseProduction()
 		{
 			if (iNeededWorkersInArea > iWorkersInArea && iProductionRank <= iLowlimitProductionRank)
 			{
-				LOG_BBAI_CITY(2, ("City %S, Will Start to build workers. For the moment : InArea : %d, Needed : %d", getName().GetCString(), iWorkersInArea, iNeededWorkersInArea));
+				LOG_BBAI_CITY(2, ("#8 City %S, Will Start to build workers. For the moment : InArea : %d, Needed : %d", getName().GetCString(), iWorkersInArea, iNeededWorkersInArea));
 				if (AI_chooseUnit("no workers", UNITAI_WORKER, -1, -1, CITY_NO_WORKERS_WORKER_PRIORITY))
 				{
 					return;
@@ -4738,31 +4738,43 @@ public:
 };
 
 
+
 int CvCityAI::AI_buildingValue(BuildingTypes eBuilding, int iFocusFlags, bool bForTech, bool bDebug)
 {
 	if (bDebug)
 	{
 		return AI_buildingValueThresholdOriginalUncached(eBuilding, 0, -123, false, true);
 	}
-	int iValue;
+
 	if (bForTech)
 	{
 		PROFILE("AI_buildingValue.ForTech");
-
-		iValue = AI_buildingValueThresholdOriginal(eBuilding, iFocusFlags, 0, false, false, bForTech);
+		int iValue = AI_buildingValueThresholdOriginal(eBuilding, iFocusFlags, 0, false, false, bForTech);
+		if (iValue > 0 && !isHuman())
+		{
+			const CvPlayerAI& kOwner = GET_PLAYER(getOwner());
+			const CvBuildingInfo& kBuilding = GC.getBuildingInfo(eBuilding);
+			const int numFlavors = GC.getNumFlavorTypes();
+			for (int i = 0; i < numFlavors; ++i)
+			{
+				iValue += kOwner.AI_getFlavorValue(static_cast<FlavorTypes>(i)) * kBuilding.getFlavorValue(i);
+			}
+			return std::max(1, iValue);
+		}
+		return iValue;
 	}
-	else iValue = AI_buildingValueThreshold(eBuilding, iFocusFlags, 0);
 
 	// Toffer - Unsure why we don't cache this as well.
 	// Post process value with leader flavour.
-	if (iValue > 0 && !isHuman()) // Human assigned governors won't use leader flavour.
+	int iValue = AI_buildingValueThreshold(eBuilding, iFocusFlags, 0);
+	if (iValue > 0 && !isHuman())
 	{
 		const CvPlayerAI& kOwner = GET_PLAYER(getOwner());
 		const CvBuildingInfo& kBuilding = GC.getBuildingInfo(eBuilding);
-
-		for (int iI = 0; iI < GC.getNumFlavorTypes(); iI++)
+		const int numFlavors = GC.getNumFlavorTypes();
+		for (int i = 0; i < numFlavors; ++i)
 		{
-			iValue += kOwner.AI_getFlavorValue((FlavorTypes)iI) * kBuilding.getFlavorValue(iI);
+			iValue += kOwner.AI_getFlavorValue(static_cast<FlavorTypes>(i)) * kBuilding.getFlavorValue(i);
 		}
 		return std::max(1, iValue); // flavour can't make building worthless.
 	}
@@ -14596,7 +14608,7 @@ bool CvCityAI::AI_choosePropertyControlBuildingAndUnit(int iTriggerPercentOfProp
 				//Count the percent of Prop Control units in the total army. Maximal allowed : 20% (TODO set param depend on leader)
 				int iPropControlInArea = player.AI_totalAreaUnitAIs(pArea, UNITAI_PROPERTY_CONTROL);
 				int iUnitsInArea = player.getNumUnits();
-				if ((iPropControlInArea * 100 / iUnitsInArea) > eMaxPropertyUnitsPercent)
+				if ((iPropControlInArea * 100 / (iUnitsInArea+1)) > eMaxPropertyUnitsPercent)
 				{
 					ismaxPropUnitsReached = true;
 					logAiEvaluations(3, "City %S, step %d %%, worried about property %S. But Maximal Prop Control reached :  value(%d) / total units (%d)", getName().GetCString(), iTriggerPercentOfPropertyOpRange, szProperty.GetCString(), iPropControlInArea, iUnitsInArea);
@@ -15436,3 +15448,4 @@ int CvCityAI::AI_evaluateMaxUnitSpending() const
 	}
 	return iMaxUnitSpending;
 }
+

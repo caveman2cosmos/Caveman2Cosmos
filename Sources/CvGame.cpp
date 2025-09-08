@@ -2209,7 +2209,7 @@ void CvGame::update()
 	startProfilingDLL(false);
 
 	//OutputDebugString(CvString::format("Start profiling(false) for CvGame::update()\n").c_str());
-	PROFILE_BEGIN("CvGame::update");
+	PROFILE_BEGIN("CvGame::update",UPD1);
 	{
 		PROFILE("CvGame::update.ViewportInit");
 
@@ -2321,7 +2321,7 @@ again:
 		}
 	}
 	//OutputDebugString(CvString::format("Stop profiling(false) after CvGame::update()\n").c_str());
-	PROFILE_END();
+	PROFILE_END(UPD1);
 	stopProfilingDLL(false);
 }
 
@@ -5709,7 +5709,7 @@ void CvGame::addGreatPersonBornName(const CvWString& szName)
 
 void CvGame::doTurn()
 {
-	PROFILE_BEGIN("CvGame::doTurn()");
+	PROFILE_BEGIN("CvGame::doTurn()",DOTURN1);
 
 	// END OF TURN
 	CvEventReporter::getInstance().beginGameTurn( getGameTurn() );
@@ -5877,7 +5877,7 @@ void CvGame::doTurn()
 	gDLL->getEngineIFace()->SetDirty(GlobePartialTexture_DIRTY_BIT, true);
 	gDLL->getEngineIFace()->DoTurn();
 
-	PROFILE_END();
+	PROFILE_END(DOTURN1);
 
 	foreach_(CvMap* map, GC.getMaps())
 	{

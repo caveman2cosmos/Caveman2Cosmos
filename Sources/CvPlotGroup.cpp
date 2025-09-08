@@ -280,7 +280,7 @@ void CvPlotGroup::recalculatePlots()
 	//	nodes that have been removed
 	if (checkInfo.hashInfo.resourceNodesHash == m_zobristHashes.resourceNodesHash)
 	{
-		PROFILE_BEGIN("CvPlotGroup::recalculatePlots (unchanged bonuses)");
+		PROFILE_BEGIN("CvPlotGroup::recalculatePlots (unchanged bonuses)",IDPLOT);
 
 		buildRemovedPlotListParams removedPlotParams;
 
@@ -289,7 +289,7 @@ void CvPlotGroup::recalculatePlots()
 
 		plotEnumerator(buildRemovedPlotList, &removedPlotParams);
 
-		PROFILE_END();
+		PROFILE_END(IDPLOT);
 
 		//	Just update the plot group for the removed plots
 		for (CLLNode<XYCoords>* pPlotNode = removedPlotParams.removedPlots.head();
