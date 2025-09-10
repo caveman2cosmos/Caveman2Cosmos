@@ -7101,77 +7101,78 @@ void CvGame::updateMoves()
 
 	if (!isMPOption(MPOPTION_SIMULTANEOUS_TURNS))
 	{
-		for (int iI = 0; iI < MAX_PLAYERS; iI++)
-		{
-			aiShuffle[iI] = iI;
-		}
+		for (int i = 0; i < MAX_PLAYERS; ++i)
+			aiShuffle[i] = i;
 	}
-	else shuffleArray(aiShuffle, MAX_PLAYERS, getSorenRand());
-
-	for (int iI = 0; iI < MAX_PLAYERS; iI++)
+	else
 	{
-		CvPlayer& player = GET_PLAYER((PlayerTypes)(aiShuffle[iI]));
+		shuffleArray(aiShuffle, MAX_PLAYERS, getSorenRand());
+	}
 
-		if (player.isAlive() && player.isTurnActive())
+	for (int idx = 0; idx < MAX_PLAYERS; ++idx)
+	{
+		const int iPlayer = aiShuffle[idx];
+		CvPlayer& player = GET_PLAYER((PlayerTypes)iPlayer);
+
+		if (!player.isAlive() || !player.isTurnActive())
+			continue;
+
+		const bool isHuman = player.isHumanPlayer();
+		const bool isAutoMoves = player.isAutoMoves();
+
+		// For the human we want auto-moves last so the player can change
+		// orders on their automated units before hitting enter, but for the AI
+		// it is desirable to start with automated units in case the automation is broken
+		// be events, so that we know this before all other units process
+		if (isHuman)
 		{
-			// For the human we want auto-moves last so the player can change
-			// orders on their automated units before hitting enter, but for the AI
-			// it is desirable to start with automated units in case the automation is broken
-			// be events, so that we know this before all other units process
-			if (player.isHumanPlayer())
+			PROFILE("CvGame::updateMoves.Human");
+
+			if (isAutoMoves)
 			{
-				PROFILE("CvGame::updateMoves.Human");
-
-				if (player.isAutoMoves())
+				if (player.hasReadyUnautomatedUnit(false))
 				{
-					if (player.hasReadyUnautomatedUnit(false))
-					{
-						// Pre-emptorary turn end so make sure we run the unit AIs now
-						player.AI_unitUpdate();
-					}
-					algo::for_each(player.groups(), CvSelectionGroup::fn::autoMission());
-
-					if (!player.hasBusyUnit())
-					{
-						player.setAutoMoves(false);
-					}
+					player.AI_unitUpdate();
 				}
-				else
+				algo::for_each(player.groups(), CvSelectionGroup::fn::autoMission());
+
+				if (!player.hasBusyUnit())
 				{
-					if (!player.hasReadyUnautomatedUnit(false))
-					{
-						player.AI_unitUpdate();
-					}
-					/*
-					// A unit ready to move at this point is one the player needs to interact with
-					if (player.hasReadyUnautomatedUnit(true))
-					{
-						player.setTurnHadUIInteraction(true);
-					}
-					*/
+					player.setAutoMoves(false);
 				}
 			}
 			else
 			{
-				PROFILE("CvGame::updateMoves.AI");
-
-				// Always try to do automations first for the AI
-				algo::for_each(player.groups(), CvSelectionGroup::fn::autoMission());
-
-				if (!player.isAutoMoves())
+				if (!player.hasReadyUnautomatedUnit(false))
 				{
 					player.AI_unitUpdate();
-					player.getContractBroker().postProcessUnitsLookingForWork();
+				}
+				// Uncomment if UI interaction tracking is needed
+				// if (player.hasReadyUnautomatedUnit(true))
+				// {
+				//     player.setTurnHadUIInteraction(true);
+				// }
+			}
+		}
+		else
+		{
+			PROFILE("CvGame::updateMoves.AI");
 
-					if (!player.hasBusyUnit() && !player.hasReadyUnit(true))
-					{
-						player.setAutoMoves(true);
-					}
-				}
-				else if (!player.hasBusyUnit())
+			algo::for_each(player.groups(), CvSelectionGroup::fn::autoMission());
+
+			if (!isAutoMoves)
+			{
+				player.AI_unitUpdate();
+				player.getContractBroker().postProcessUnitsLookingForWork();
+
+				if (!player.hasBusyUnit() && !player.hasReadyUnit(true))
 				{
-					player.setAutoMoves(false);
+					player.setAutoMoves(true);
 				}
+			}
+			else if (!player.hasBusyUnit())
+			{
+				player.setAutoMoves(false);
 			}
 		}
 	}

@@ -3529,7 +3529,7 @@ void CvUnitAI::AI_attackCityMove()
 						return;
 					}
 				}
-				if ((iComparePostBombard >= iAttackRatio) || (pTargetCity->getDefenseDamage() < ((GC.getMAX_CITY_DEFENSE_DAMAGE() * 1) / 2)) || (iOurOffense / iEnemyOffense) > 2 || pTargetCity->plot()->getNumDefenders(pTargetCity->getOwner()) <= 2)
+				if ((iComparePostBombard >= iAttackRatio) || (pTargetCity->getDefenseDamage() < ((GC.getMAX_CITY_DEFENSE_DAMAGE() * 1) / 2)) || (iOurOffense / (iEnemyOffense+1)) > 39/20 || pTargetCity->plot()->getNumDefenders(pTargetCity->getOwner()) <= 2)
 				{
 					if (iComparePostBombard < std::max(150, GC.getBBAI_SKIP_BOMBARD_MIN_STACK_RATIO()) && (pTargetCity->isDirectAttackable() || canIgnoreNoEntryLevel()))
 					{
@@ -22211,10 +22211,14 @@ bool CvUnitAI::processContracts(int iMinPriority)
 		{
 			CvString JoinInfos = "";
 			CvString MissionInfos = "";
-			if (pJoinUnit != NULL)
+			if (pJoinUnit)
 			{
-				JoinInfos = "[to join ]" + pJoinUnit->getID();
-				MissionInfos = MissionAITypeToString(pJoinUnit->getGroup()->AI_getMissionAIType());
+				const CvSelectionGroup* pGroup = pJoinUnit->getGroup();
+				JoinInfos = CvString::format("[to join ] %d",pJoinUnit->getID());
+				if (pGroup)
+				{
+					MissionInfos = MissionAITypeToString(pGroup->AI_getMissionAIType());
+				}
 				//GC.getUnitAIInfo(AI_getUnitAIType())->getType();
 				
 			}
@@ -29756,14 +29760,6 @@ bool CvUnitAI::AI_fulfillPropertyControlNeed()
 
 	const CvPlayer& player = GET_PLAYER(getOwner());
 
-	//Copy, to avoid modif during scoring
-	std::vector<CvCity*> citySnapshot;
-	for (CvPlayer::city_iterator it = player.beginCities(); it != player.endCities(); ++it)
-	{
-		CvCity* city = *it;  // city_iterator supporte l'opérateur *
-		FAssert(city != nullptr); // sécurité
-		citySnapshot.push_back(city);
-	}
 
 	using namespace scoring;
 	ScoreResult<CvCity> bestCityScore = findBestScore<CvCity, GreatestScore>(

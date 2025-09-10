@@ -272,20 +272,28 @@ public:
 	{
 		PROFILE_FUNC();
 
-		if (pPlot->m_pathGenerationSeq != m_seq)
+		// Fast path: cache hit
+		if (pPlot->m_pathGenerationSeq == m_seq)
 		{
-			if (!bCreateIfNotFound)
-			{
-				return NULL;
-			}
-			pPlot->m_currentPathInfo = m_allocationPool.allocateNode();
-			pPlot->m_pathGenerationSeq = m_seq;
-
-			pPlot->m_currentPathInfo->pNode = NULL;
-			pPlot->m_currentPathInfo->bKnownInvalidNode = false;
-			pPlot->m_currentPathInfo->m_iEdgesValidated = 0;
+			return pPlot->m_currentPathInfo;
 		}
-		return pPlot->m_currentPathInfo;
+
+		// Cache miss: allocate and initialize if allowed
+		if (!bCreateIfNotFound)
+		{
+			return NULL;
+		}
+
+		// Value-initialize for safety
+		CvPathGeneratorPlotInfo* pInfo = m_allocationPool.allocateNode();
+		pInfo->pNode = NULL;
+		pInfo->bKnownInvalidNode = false;
+		pInfo->m_iEdgesValidated = 0;
+
+		pPlot->m_currentPathInfo = pInfo;
+		pPlot->m_pathGenerationSeq = m_seq;
+
+		return pInfo;
 	}
 
 	static void clearPlotInfo(const CvPlot* pPlot)

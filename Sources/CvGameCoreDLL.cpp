@@ -307,9 +307,13 @@ void IFPBeginSample(ProfileLinkageInfo* linkageInfo, bool bAsConditional)
 
 void IFPEndSample(ProfileLinkageInfo* linkageInfo, bool bAsConditional)
 {
+	if (!linkageInfo || !linkageInfo->sample)
+	{
+		return;
+	}
 	if ( iThreadSlot != -1 )
 	{
-		if ( !bAsConditional && _currentSample != linkageInfo && linkageInfo->sample->Parent != -1 )
+		if ( !bAsConditional && _currentSample != linkageInfo &&  linkageInfo->sample->Parent != -1 )
 		{
 			char	buffer[200];
 
