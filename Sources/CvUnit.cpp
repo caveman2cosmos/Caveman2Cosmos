@@ -28518,7 +28518,7 @@ CvUnit* CvUnit::getCommander() const
 		CvUnit* com = *it;
 		UnitCompCommander* comComp = com->getCommanderComp();
 		if (comComp == NULL)
-			continue;  // sécurité si jamais ça renvoie NULL
+			continue;  // sï¿½curitï¿½ si jamais ï¿½a renvoie NULL
 		if (comComp->getControlPointsLeft() <= 0)
 			continue;
 
@@ -28661,7 +28661,7 @@ CvUnit* CvUnit::getCommodore() const
 		CvUnit* com = *it;
 		UnitCompCommodore* comComp = com->getCommodoreComp();
 		if (comComp == NULL)
-			continue;  // sécurité si jamais ça renvoie NULL
+			continue;  // sï¿½curitï¿½ si jamais ï¿½a renvoie NULL
 		if (comComp->getControlPointsLeft() <= 0)
 			continue;
 

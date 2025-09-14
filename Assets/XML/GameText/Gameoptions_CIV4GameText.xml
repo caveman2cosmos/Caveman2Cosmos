@@ -269,6 +269,26 @@
 		<Russian>Каждые пятьдесят ходов (при нормальной скорости) игрок с наименьшим количеством очков исчезнет из игры до тех пор, пока число оставшихся не достигнет пяти. Не предназначено для использования с цивилизациями варваров и революциями.</Russian>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_GAMEOPTION_AI_BOOST</Tag>
+		<English>AI start boost</English>
+		<French>AI start boost</French>
+		<German>AI start boost</German>
+		<Italian>AI start boost</Italian>
+		<Spanish>AI start boost</Spanish>
+		<Polish>AI start boost</Polish>
+		<Russian>AI start boost</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_GAMEOPTION_AI_BOOST_HELP</Tag>
+		<English>The AI start with an additional tribe, hunter and builds more atackers when at war</English>
+		<French>The AI start with an additional tribe, hunter and builds more atackers when at war</French>
+		<German>The AI start with an additional tribe, hunter and builds more atackers when at war</German>
+		<Italian>The AI start with an additional tribe, hunter and builds more atackers when at war</Italian>
+		<Spanish>The AI start with an additional tribe, hunter and builds more atackers when at war</Spanish>
+		<Polish>The AI start with an additional tribe, hunter and builds more atackers when at war</Polish>
+		<Russian>The AI start with an additional tribe, hunter and builds more atackers when at war</Russian>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_CHALLENGE_HIGH_TO_LOW</Tag>
 		<English>Challenge - High to Low</English>
 		<French>Challenge - Du Premier au Dernier</French>
