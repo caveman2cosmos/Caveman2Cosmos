@@ -869,7 +869,7 @@ public:
      * Returns an number that will be the base for the plot decay. The higher the number is, the lastest the plot will disappear.
      * The number is by default 1, and will be set to 3,6,9,12... depending on which Tech the player already has
      */
-    int getVisibilityDecay();
+    int getVisibilityDecay(bool pSeaPlot = false);
 #endif
 
 protected:
@@ -907,7 +907,8 @@ protected:
 	int m_iDogpileWarRand;
 	int m_iMakePeaceRand;
 #ifdef ENABLE_FOGWAR_DECAY
-    bool m_bPermanentMap;
+    bool m_bPermanentMapLand;
+    bool m_bPermanentMapSea;
 #endif
 
 

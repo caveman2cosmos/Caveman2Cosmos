@@ -191,7 +191,7 @@ public:
 	void updateVisibility();
 #ifdef ENABLE_FOGWAR_DECAY
 	void InitFogDecay();
-	short getVisibilityDecayBonus();
+	short getVisibilityDecayBonus(bool pSeaPlot = false);
 #endif
 
 	void updateSymbolDisplay();
@@ -821,7 +821,7 @@ public:
 	void updateRiverCrossing();
 
 	DllExport bool isRevealed(TeamTypes eTeam, bool bDebug) const;
-	void setRevealed(const TeamTypes eTeam, const bool bNewValue, const bool bTerrainOnly, const TeamTypes eFromTeam, const bool bUpdatePlotGroup);
+	void setRevealed(const TeamTypes eTeam, const bool bNewValue, const bool bTerrainOnly, const TeamTypes eFromTeam, const bool bUpdatePlotGroup, const bool bUpdateFog = true);
 	bool isAdjacentRevealed(TeamTypes eTeam, bool bDebug = false) const;
 	bool isAdjacentNonrevealed(TeamTypes eTeam) const;
 

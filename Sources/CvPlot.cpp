@@ -1180,8 +1180,9 @@ void CvPlot::updateFog(const bool bApplyDecay)
 #ifdef ENABLE_FOGWAR_DECAY
 			if (bIsHuman && bApplyDecay)
 			{
-				m_iVisibilityDecay = GET_TEAM(team).getVisibilityDecay();
-				m_iVisibilityDecay += getVisibilityDecayBonus();
+				bool bSeaPlot = isWater() && !isCoastal();
+				m_iVisibilityDecay = GET_TEAM(team).getVisibilityDecay(bSeaPlot);
+				m_iVisibilityDecay += getVisibilityDecayBonus(bSeaPlot);
 			}
 #endif
 			gDLL->getEngineIFace()->LightenVisibility(getFOWIndex());
@@ -1209,6 +1210,7 @@ void CvPlot::updateFog(const bool bApplyDecay)
 				else
 				{
 					gDLL->getEngineIFace()->BlackenVisibility(getFOWIndex());
+					setRevealed(team, false, false, NO_TEAM, false,false);
 				}
 			}
 #endif
@@ -1257,7 +1259,7 @@ void CvPlot::InitFogDecay()
 
 }
 
-short CvPlot::getVisibilityDecayBonus()
+short CvPlot::getVisibilityDecayBonus(bool pSeaPlot)
 {
 	const FeatureTypes eFeature = getFeatureType();
 	const BonusTypes eBonusType = getBonusType();
@@ -1271,6 +1273,10 @@ short CvPlot::getVisibilityDecayBonus()
 		|| featureString.find("FEATURE_PLATY_") != std::string::npos)
 		{
 			iVisibilityDecay += 3;
+		}
+		if (featureString == "FEATURE_REEF_LIGHTHOUSE")
+		{
+			iVisibilityDecay += 9;
 		}
 	}
 	if (eBonusType != NO_BONUS)
@@ -9487,7 +9493,7 @@ bool CvPlot::isRevealed(TeamTypes eTeam, bool bDebug) const
 }
 
 
-void CvPlot::setRevealed(const TeamTypes eTeam, const bool bNewValue, const bool bTerrainOnly, const TeamTypes eFromTeam, const bool bUpdatePlotGroup)
+void CvPlot::setRevealed(const TeamTypes eTeam, const bool bNewValue, const bool bTerrainOnly, const TeamTypes eFromTeam, const bool bUpdatePlotGroup, const bool bUpdateFog)
 {
 	PROFILE_EXTRA_FUNC();
 	FASSERT_BOUNDS(0, MAX_TEAMS, eTeam);
@@ -9558,7 +9564,10 @@ void CvPlot::setRevealed(const TeamTypes eTeam, const bool bNewValue, const bool
 			{
 				updateGraphics();
 			}
-			updateFog();
+			if (bUpdateFog)
+			{
+				updateFog();
+			}
 			updateVisibility();
 
 			gDLL->getInterfaceIFace()->setDirty(MinimapSection_DIRTY_BIT, true);
