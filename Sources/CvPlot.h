@@ -191,6 +191,7 @@ public:
 	void updateVisibility();
 #ifdef ENABLE_FOGWAR_DECAY
 	void InitFogDecay();
+	short getVisibilityDecayBonus();
 #endif
 
 	void updateSymbolDisplay();

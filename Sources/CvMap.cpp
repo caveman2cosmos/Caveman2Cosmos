@@ -1340,6 +1340,11 @@ void CvMap::read(FDataStreamBase* pStream)
 	WRAPPER_READ_OBJECT_END(wrapper);
 
 	OutputDebugString("Reading Map: End\n");
+
+#ifdef ENABLE_FOGWAR_DECAY
+	InitFogDecay();
+#endif
+
 }
 
 // save object to a stream

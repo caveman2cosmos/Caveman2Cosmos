@@ -1178,7 +1178,11 @@ void CvPlot::updateFog(const bool bApplyDecay)
 		)
 		{
 #ifdef ENABLE_FOGWAR_DECAY
-			if (bIsHuman && bApplyDecay) m_iVisibilityDecay = GET_TEAM(team).getVisibilityDecay();
+			if (bIsHuman && bApplyDecay)
+			{
+				m_iVisibilityDecay = GET_TEAM(team).getVisibilityDecay();
+				m_iVisibilityDecay += getVisibilityDecayBonus();
+			}
 #endif
 			gDLL->getEngineIFace()->LightenVisibility(getFOWIndex());
 		}
@@ -1240,7 +1244,56 @@ void CvPlot::updateVisibility()
 void CvPlot::InitFogDecay()
 {
 	const TeamTypes& team = GC.getGame().getActiveTeam();
-	m_iVisibilityDecay = GET_TEAM(team).getVisibilityDecay();
+	if (team != NO_TEAM)
+	{
+		m_iVisibilityDecay = GET_TEAM(team).getVisibilityDecay();
+	}
+	if (m_iVisibilityDecay <= 0)
+	{
+		m_iVisibilityDecay = 2;
+	}
+	m_iVisibilityDecay = GC.getGame().getSorenRandNum(m_iVisibilityDecay, "InitFog Decay");
+	m_iVisibilityDecay += getVisibilityDecayBonus();
+
+}
+
+short CvPlot::getVisibilityDecayBonus()
+{
+	const FeatureTypes eFeature = getFeatureType();
+	const BonusTypes eBonusType = getBonusType();
+	int iVisibilityDecay = 0;
+	if (eFeature != NO_FEATURE)
+	{
+		const CvFeatureInfo& kFeatureInfo = GC.getFeatureInfo(eFeature);
+		const CvString featureString = kFeatureInfo.getType();
+		const CvBonusInfo& kBonusInfo = GC.getBonusInfo(eBonusType);
+		if (featureString == "FEATURE_OASIS" || featureString == "FEATURE_CAVES" || featureString == "FEATURE_CITY_RUINS"
+		|| featureString.find("FEATURE_PLATY_") != std::string::npos)
+		{
+			iVisibilityDecay += 3;
+		}
+	}
+	if (eBonusType != NO_BONUS)
+	{
+		iVisibilityDecay += 3;
+	}
+	if (getOwner() != NO_PLAYER)
+	{
+		iVisibilityDecay += 1;
+	}
+	if (isCityRadius())
+	{
+		iVisibilityDecay += 2;
+	}
+	if (isCity())
+	{
+		iVisibilityDecay += 6;
+	}
+	if (isFreshWater())
+	{
+		iVisibilityDecay += 3;
+	}
+	return iVisibilityDecay;
 }
 #endif
 

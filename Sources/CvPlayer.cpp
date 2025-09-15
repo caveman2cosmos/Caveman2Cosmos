@@ -3844,7 +3844,8 @@ void CvPlayer::doTurn()
 		//Calvitix, Modmod FOGWAR PlotDecay
 		if (isHumanPlayer())
 		{
-			GC.getMap().updateFog(true); //Calvitix, to applyPlotDecay
+			if (GET_TEAM(getTeam()).getVisibilityDecay() != NO_DECAY)
+				GC.getMap().updateFog(true); //Calvitix, to applyPlotDecay
 		}
 #endif
 	}
