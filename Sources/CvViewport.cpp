@@ -484,9 +484,9 @@ void CvViewport::updateFlagSymbols()
 	m_pMap->updateFlagSymbols();
 }
 
-void CvViewport::updateFog()
+void CvViewport::updateFog(const bool bApplyDecay)
 {
-	m_pMap->updateFog();
+	m_pMap->updateFog(bApplyDecay);
 }
 
 void CvViewport::updateSymbolVisibility()

@@ -143,6 +143,9 @@ void CvTeamAI::AI_reset(bool bConstructor)
 	m_iLimitedWarPowerRatio = 0;
 	m_iDogpileWarRand = 0;
 	m_iMakePeaceRand = 0;
+#ifdef	ENABLE_FOGWAR_DECAY
+	m_bPermanentMap = false;
+#endif
 }
 
 
@@ -5028,3 +5031,56 @@ bool CvTeamAI::AI_hasAdjacentLandPlots(TeamTypes eTeam) const
 	}
 	return false;
 }
+
+#ifdef ENABLE_FOGWAR_DECAY
+int CvTeamAI::getVisibilityDecay()
+{
+	if (m_bPermanentMap || !isHuman()) return NO_DECAY;
+
+
+	int iWriting = GC.getInfoTypeForString("TECH_WRITING");
+	if (isHasTech((TechTypes)iWriting))
+	{
+		m_bPermanentMap = true;
+		return NO_DECAY;
+	}
+	int iPathfinding = GC.getInfoTypeForString("TECH_EXPLORATION");
+	//	int iPathfinding = GC.getInfoTypeForString("TECH_SCIENTIFIC_METHOD");
+	if (isHasTech((TechTypes)iPathfinding))
+	{
+		return 18;
+	}
+	iPathfinding = GC.getInfoTypeForString("TECH_IDEOGRAMS");
+//	int iPathfinding = GC.getInfoTypeForString("TECH_SCIENTIFIC_METHOD");
+	if (isHasTech((TechTypes)iPathfinding))
+	{
+		return 15;
+	}
+	iPathfinding = GC.getInfoTypeForString("TECH_PICTOGRAPHS");
+	//	int iPathfinding = GC.getInfoTypeForString("TECH_SCIENTIFIC_METHOD");
+	if (isHasTech((TechTypes)iPathfinding))
+	{
+		return 12;
+	}
+	iPathfinding = GC.getInfoTypeForString("TECH_HUNTING");
+	//	int iPathfinding = GC.getInfoTypeForString("TECH_SCIENTIFIC_METHOD");
+	if (isHasTech((TechTypes)iPathfinding))
+	{
+		return 9;
+	}
+	
+	iPathfinding = GC.getInfoTypeForString("TECH_TRACKING");
+	//	int iPathfinding = GC.getInfoTypeForString("TECH_SCIENTIFIC_METHOD");
+	if (isHasTech((TechTypes)iPathfinding))
+	{
+		return 6;
+	}
+	iPathfinding = GC.getInfoTypeForString("TXT_KEY_TECH_TRAILS");
+	//	int iPathfinding = GC.getInfoTypeForString("TECH_SCIENTIFIC_METHOD");
+	if (isHasTech((TechTypes)iPathfinding))
+	{
+		return 3;
+	}
+	return 1;
+}
+#endif

@@ -509,15 +509,25 @@ void CvMap::updateFlagSymbolsInternal(bool bForce)
 }
 
 
-void CvMap::updateFog()
+void CvMap::updateFog(const bool bApplyDecay)
 {
 	PROFILE_FUNC();
 
 	for (int iI = 0; iI < numPlots(); iI++)
 	{
-		plotByIndex(iI)->updateFog();
+		plotByIndex(iI)->updateFog(bApplyDecay);
 	}
 }
+
+#ifdef ENABLE_FOGWAR_DECAY
+void CvMap::InitFogDecay()
+{
+	for (int iI = 0; iI < numPlots(); iI++)
+	{
+		plotByIndex(iI)->InitFogDecay();
+	}
+}
+#endif
 
 
 void CvMap::updateVisibility()
@@ -1510,7 +1520,7 @@ void CvMap::afterSwitch()
 	Cy::call(PYScreensModule, "initMinimap");
 
 	setupGraphical();
-	updateFog();
+	updateFog(true);
 	updateSymbols();
 	updateFlagSymbols();
 	updateMinimapColor();

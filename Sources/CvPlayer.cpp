@@ -3839,6 +3839,14 @@ void CvPlayer::doTurn()
 	if (!isNPC())
 	{
 		doEvents();
+
+#ifdef ENABLE_FOGWAR_DECAY
+		//Calvitix, Modmod FOGWAR PlotDecay
+		if (isHumanPlayer())
+		{
+			GC.getMap().updateFog(true); //Calvitix, to applyPlotDecay
+		}
+#endif
 	}
 
 	recordHistory();
@@ -4905,13 +4913,13 @@ bool CvPlayer::canContact(PlayerTypes ePlayer) const
 	const TeamTypes theirTeam = otherPlayer.getTeam();
 
 	if (ourTeam != theirTeam)
-	{
+		{
 		if (!GET_TEAM(ourTeam).isHasMet(theirTeam))
 			return false;
 
 		if (::atWar(ourTeam, theirTeam) && !GET_TEAM(ourTeam).canChangeWarPeace(theirTeam))
 			return false;
-	}
+		}
 
 	return true;
 }
@@ -14870,6 +14878,7 @@ int CvPlayer::findPathLength(TechTypes eTech, bool bCost) const
 				iValue = static_cast<int>(path.size());
 			}
 
+
 			if (iValue < iBestValue)
 			{
 				iBestValue = iValue;
@@ -14877,13 +14886,12 @@ int CvPlayer::findPathLength(TechTypes eTech, bool bCost) const
 			}
 		}
 
-		// Nettoyage mï¿½moire obligatoire (sinon fuite)
+		// Nettoyage mémoire obligatoire (sinon fuite)
 		for (size_t i = 0; i < possiblePaths.size(); ++i)
 		{
 			delete possiblePaths[i];
 		}
 		possiblePaths.clear();
-
 		cache = iBestValue;
 	}
 	return cache;
@@ -27134,6 +27142,42 @@ int CvPlayer::getResourceConsumption(BonusTypes eBonus) const
 	return m_paiResourceConsumption[eBonus];
 }
 
+
+//void CvPlayer::recalculateResourceConsumption(BonusTypes eBonus)
+//{
+//	PROFILE_FUNC();
+//
+//	if (eBonus == NO_BONUS || m_paiResourceConsumption == NULL)
+//		return;
+//
+//	int iTotalConsumption = 0;
+//
+//	// 1. City resource consumption
+//	for (int i = 0; i < numCities(); ++i)
+//	{
+//		CvCity* pCity = getCity(i);
+//		if (pCity)
+//		{
+//			iTotalConsumption += pCity->getResourceConsumption(eBonus);
+//		}
+//	}
+//
+//	// 2. Unit resource consumption
+//	for (int i = 0; i < getNumUnits(); ++i)
+//	{
+//		CvUnit* pUnit = getUnit(i);
+//		if (pUnit)
+//		{
+//			iTotalConsumption += pUnit->getResourceConsumption(eBonus);
+//		}
+//	}
+//
+//	// If buildings contribute, add a similar loop here.
+//
+//	// 3. Set the total consumption
+//	m_paiResourceConsumption[eBonus] = iTotalConsumption;
+//}
+
 //recalculate resource consumption only measures how much we are using
 //the resource at this very moment, not the past. It ignores existing buildings
 //units, etc... UNLESS they are generating income from the resource.
@@ -27146,12 +27190,10 @@ void CvPlayer::recalculateResourceConsumption(BonusTypes eBonus)
 		m_paiResourceConsumption[eBonus] = 0;
 		return;
 	}
-
 	int iConsumption = 0;
 
 	for (city_iterator cityIt = beginCities(); cityIt != endCities(); ++cityIt)
 	{
-		//See if we are constructing something that uses the resource
 		const CvCity* cityX = *cityIt;
 		// --- Construction Consumption ---
 		YieldTypes prodYield = YIELD_PRODUCTION;
@@ -27167,9 +27209,9 @@ void CvPlayer::recalculateResourceConsumption(BonusTypes eBonus)
 			const CvBuildingInfo& kBuilding = GC.getBuildingInfo(prodBuilding);
 
 			if (kBuilding.getPrereqAndBonus() == eBonus
-				|| kBuilding.getPrereqVicinityBonus() == eBonus
-				|| algo::any_of_equal(kBuilding.getPrereqOrBonuses(), eBonus)
-				|| algo::any_of_equal(kBuilding.getPrereqOrVicinityBonuses(), eBonus))
+			|| kBuilding.getPrereqVicinityBonus() == eBonus
+			|| algo::any_of_equal(kBuilding.getPrereqOrBonuses(), eBonus)
+			|| algo::any_of_equal(kBuilding.getPrereqOrVicinityBonuses(), eBonus))
 			{
 				iConsumption += prodYieldRate;
 			}
@@ -27185,9 +27227,9 @@ void CvPlayer::recalculateResourceConsumption(BonusTypes eBonus)
 			const CvUnitInfo& kUnit = GC.getUnitInfo(prodUnit);
 
 			if (kUnit.getPrereqAndBonus() == eBonus
-				|| kUnit.getPrereqVicinityBonus() == eBonus
-				|| algo::any_of_equal(kUnit.getPrereqOrBonuses(), eBonus)
-				|| algo::any_of_equal(kUnit.getPrereqOrVicinityBonuses(), eBonus))
+			|| kUnit.getPrereqVicinityBonus() == eBonus
+			|| algo::any_of_equal(kUnit.getPrereqOrBonuses(), eBonus)
+			|| algo::any_of_equal(kUnit.getPrereqOrVicinityBonuses(), eBonus))
 			{
 				iConsumption += prodYieldRate;
 			}
@@ -27215,7 +27257,6 @@ void CvPlayer::recalculateResourceConsumption(BonusTypes eBonus)
 		}
 
 		// --- Building Effects ---
-		//loop through all possible buildings and check if they generating us income or defense because of this bonus
 		const std::vector<BuildingTypes>& hasBuildings = cityX->getHasBuildings();
 		for (std::vector<BuildingTypes>::const_iterator bldIt = hasBuildings.begin(); bldIt != hasBuildings.end(); ++bldIt)
 		{
@@ -27224,18 +27265,17 @@ void CvPlayer::recalculateResourceConsumption(BonusTypes eBonus)
 				continue;
 
 			const CvBuildingInfo& buildingX = GC.getBuildingInfo(eTypeX);
-
 			iConsumption += (
-				buildingX.getBonusHappinessChanges().getValue(eBonus) * 12
-				+ buildingX.getBonusHealthChanges().getValue(eBonus) * 8
-				+ buildingX.getBonusDefenseChanges(eBonus)
+					buildingX.getBonusHappinessChanges().getValue(eBonus) * 12
+				+	buildingX.getBonusHealthChanges().getValue(eBonus) * 8
+				+	buildingX.getBonusDefenseChanges(eBonus)
 			);
 
 			for (int iJ = 0; iJ < NUM_YIELD_TYPES; ++iJ)
 			{
 				int baseYield = cityX->getBaseYieldRate((YieldTypes)iJ);
 				iConsumption += (
-					buildingX.getBonusYieldChanges(eBonus, iJ) * 3
+						buildingX.getBonusYieldChanges(eBonus, iJ) * 3
 					+ buildingX.getBonusYieldModifier(eBonus, iJ) * baseYield / 33
 				);
 			}
@@ -27247,38 +27287,31 @@ void CvPlayer::recalculateResourceConsumption(BonusTypes eBonus)
 	}
 
 	// --- Resource Export: Trading Partners ---
-		//if we are selling this resource, count the other players use too
-		//Note: There is no way to tell who we are selling the resource to.
-		//Just counting who we have met and is importing the resource seems to be
-		//the best approx. Then, we divide by total trading partners to get an average.
 	int iBonusExport = getBonusExport(eBonus);
 	if (iBonusExport > 0)
-	{
-		// Toffer - This would be greatly simplified with volumetric resources in place.
-		// We could simply count the number of self produced resources traded away or othervise consumed and given them a value of 1000 each or something.
-		int iTempValue = 0;
-		int iTradingPartnerCount = 0;
-		for (int iI = 0; iI < MAX_PC_PLAYERS; ++iI)
 		{
+			int iTempValue = 0;
+			int iTradingPartnerCount = 0;
+		for (int iI = 0; iI < MAX_PC_PLAYERS; ++iI)
+			{
 			const CvPlayer& kOther = GET_PLAYER((PlayerTypes)iI);
 			if (kOther.isAlive()
 				&& GET_TEAM(getTeam()).isHasMet(kOther.getTeam())
 				&& kOther.getBonusImport(eBonus) > 0)
-			{
+				{
 				iTempValue += kOther.getResourceConsumption(eBonus);
 				++iTradingPartnerCount;
+				}
+			}
+			if (iTradingPartnerCount > 0)
+			{
+			iTempValue = (iTempValue / iTradingPartnerCount) * iBonusExport;
+				iConsumption += iTempValue;
 			}
 		}
-		if (iTradingPartnerCount > 0)
-		{
-			iTempValue = (iTempValue / iTradingPartnerCount) * iBonusExport;
-			iConsumption += iTempValue;
-		}
-	}
 
 	m_paiResourceConsumption[eBonus] = iConsumption;
 }
-
 
 void CvPlayer::recalculateAllResourceConsumption()
 {
@@ -31029,4 +31062,3 @@ int CvPlayer::getHeritageCommerceEraChange(const CommerceTypes eType, const EraT
 	}
 	return iCommerce100;
 }
-

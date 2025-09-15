@@ -4568,7 +4568,12 @@ void CvGame::setActivePlayer(PlayerTypes eNewValue, bool bForceHotSeat)
 
 		if (GC.IsGraphicsInitialized())
 		{
+#ifdef ENABLE_FOGWAR_DECAY
+			GC.getMap().InitFogDecay();
+			GC.getMap().updateFog(true);
+#else
 			GC.getMap().updateFog();
+#endif
 			GC.getMap().updateVisibility();
 			GC.getMap().updateSymbols();
 			GC.getMap().updateMinimapColor();
@@ -11443,8 +11448,12 @@ void CvGame::recalculateModifiers()
 
 	GC.getMap().setupGraphical();
 	GC.getMap().updateVisibility();
+#ifdef ENABLE_FOGWAR_DECAY
+	GC.getMap().InitFogDecay();
+	GC.getMap().updateFog(true);
+#else
 	GC.getMap().updateFog();
-
+#endif
 	Cy::call_optional(PYCivModule, "recalculateModifiers");
 
 	m_bRecalculatingModifiers = false;

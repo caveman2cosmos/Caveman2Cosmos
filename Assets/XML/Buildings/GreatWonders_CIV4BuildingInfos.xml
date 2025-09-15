@@ -5348,7 +5348,7 @@
 			<PrereqTech>TECH_IMPERIALISM</PrereqTech>
 			<Bonus>BONUS_GLASSWARE</Bonus>
 			<PrereqBonuses>
-				<BonusType>BONUS_STEEL_WARES</BonusType>
+				<Bonus>BONUS_STEEL_WARES</Bonus>
 			</PrereqBonuses>
 			<GreatPeopleUnitType>UNIT_GREAT_ENGINEER</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>

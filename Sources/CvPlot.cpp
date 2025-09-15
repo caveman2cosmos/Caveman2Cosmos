@@ -113,7 +113,9 @@ CvPlot::CvPlot()
 	m_iImprovementUpgradeHash = 0;
 	m_iCurrentRoundofUpgradeCache = -1;
 	// ! Toffer
-
+#ifdef ENABLE_FOGWAR_DECAY
+	m_iVisibilityDecay = MAX_DECAY;
+#endif
 	m_iImprovementCurrentValue = 0;
 
 	m_szScriptData = NULL;
@@ -164,7 +166,9 @@ void CvPlot::init(int iX, int iY)
 	m_aPlotTeamVisibilityIntensity.clear();
 	//--------------------------------
 	// Init non-saved data
-
+#ifdef ENABLE_FOGWAR_DECAY
+	m_iVisibilityDecay = MAX_DECAY;
+#endif
 	//--------------------------------
 	// Init other game data
 }
@@ -1144,7 +1148,7 @@ void CvPlot::checkFortRevolt()
 }
 
 
-void CvPlot::updateFog()
+void CvPlot::updateFog(const bool bApplyDecay)
 {
 	PROFILE_FUNC();
 
@@ -1152,9 +1156,11 @@ void CvPlot::updateFog()
 	{
 		return;
 	}
-	FAssert(GC.getGame().getActiveTeam() != NO_TEAM);
+	const TeamTypes &team = GC.getGame().getActiveTeam();
+	const bool bIsHuman = GET_TEAM(team).isHuman();
+	FAssert(team != NO_TEAM);
 
-	if (isRevealed(GC.getGame().getActiveTeam(), false))
+	if (isRevealed(team, false))
 	{
 		if (
 			gDLL->getInterfaceIFace()->isBareMapMode()
@@ -1167,10 +1173,43 @@ void CvPlot::updateFog()
 					||
 					// City screen - only lighten plots belonging to the city's current workable area.
 					gDLL->getInterfaceIFace()->getHeadSelectedCity() == getWorkingCity()
+					)
 				)
-			)
-		) gDLL->getEngineIFace()->LightenVisibility(getFOWIndex());
-		else gDLL->getEngineIFace()->DarkenVisibility(getFOWIndex());
+		)
+		{
+#ifdef ENABLE_FOGWAR_DECAY
+			if (bIsHuman && bApplyDecay) m_iVisibilityDecay = GET_TEAM(team).getVisibilityDecay();
+#endif
+			gDLL->getEngineIFace()->LightenVisibility(getFOWIndex());
+		}
+		else
+		{
+#ifdef ENABLE_FOGWAR_DECAY
+			if (!GET_TEAM(team).isHuman() || m_iVisibilityDecay == NO_DECAY)
+			{
+#endif
+				gDLL->getEngineIFace()->DarkenVisibility(getFOWIndex());
+#ifdef ENABLE_FOGWAR_DECAY
+			}
+			else
+			{
+				if (m_iVisibilityDecay > 0)
+				{
+					gDLL->getEngineIFace()->DarkenVisibility(getFOWIndex());
+
+
+
+					if (bApplyDecay && GC.getGame().getSorenRandNum(12, "Map decay") > 8)
+						m_iVisibilityDecay--;
+				}
+				else
+				{
+					gDLL->getEngineIFace()->BlackenVisibility(getFOWIndex());
+				}
+			}
+#endif
+		}
+
 	} else gDLL->getEngineIFace()->BlackenVisibility(getFOWIndex());
 }
 
@@ -1196,6 +1235,14 @@ void CvPlot::updateVisibility()
 		pCity->updateVisibility();
 	}
 }
+
+#ifdef ENABLE_FOGWAR_DECAY
+void CvPlot::InitFogDecay()
+{
+	const TeamTypes& team = GC.getGame().getActiveTeam();
+	m_iVisibilityDecay = GET_TEAM(team).getVisibilityDecay();
+}
+#endif
 
 
 void CvPlot::updateSymbolDisplay()
