@@ -7,7 +7,6 @@
 
 #include "CvDefines.h"
 
-
 enum GameStateTypes
 {
 	GAMESTATE_ON,

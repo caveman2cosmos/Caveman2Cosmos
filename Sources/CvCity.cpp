@@ -11978,7 +11978,6 @@ int CvCity::getBuildingCommerce100(CommerceTypes eIndex) const
 	);
 }
 
-
 int CvCity::getBuildingCommerceByBuilding(CommerceTypes eIndex, BuildingTypes eBuilding, const bool bFull, const bool bTestVisible) const
 {
 	PROFILE_FUNC();
@@ -11987,85 +11986,73 @@ int CvCity::getBuildingCommerceByBuilding(CommerceTypes eIndex, BuildingTypes eB
 	FASSERT_BOUNDS(0, GC.getNumBuildingInfos(), eBuilding);
 
 	if (!isActiveBuilding(eBuilding) && !bTestVisible)
-	{
 		return 0;
-	}
+
+	const CvBuildingInfo& kBuilding = GC.getBuildingInfo(eBuilding);
+	const CvPlayer& kOwner = GET_PLAYER(getOwner());
+	const CvTeam& kTeam = GET_TEAM(getTeam());
+
 	int iCommerce = 0;
-	int iOtherCommerce = 0;
 
 	if (!isReligiouslyLimitedBuilding(eBuilding))
 	{
-		const CvBuildingInfo& kBuilding = GC.getBuildingInfo(eBuilding);
 		int iBaseCommerceChange = kBuilding.getCommerceChange(eIndex);
 
-		if (iBaseCommerceChange < 0 && eIndex == COMMERCE_GOLD && GC.getTREAT_NEGATIVE_GOLD_AS_MAINTENANCE())
-		{
+		if (eIndex == COMMERCE_GOLD && iBaseCommerceChange < 0 && GC.getTREAT_NEGATIVE_GOLD_AS_MAINTENANCE())
 			iBaseCommerceChange = 0;
-		}
-		else if (iBaseCommerceChange != 0)
+
+		if (iBaseCommerceChange != 0)
 		{
 			if (kBuilding.isOrbital())
 			{
-				if (hasOrbitalInfrastructure())
-				{
-					iCommerce += std::min(iBaseCommerceChange * GET_PLAYER(getOwner()).countNumCitiesWithOrbitalInfrastructure(), getPopulation());
-				}
-				else
-				{
-					iCommerce += std::min(iBaseCommerceChange * GET_PLAYER(getOwner()).countNumCitiesWithOrbitalInfrastructure(), getPopulation());
-					iCommerce /= 2;
-				}
+				const int iOrbitalCities = kOwner.countNumCitiesWithOrbitalInfrastructure();
+				const int iVal = std::min(iBaseCommerceChange * iOrbitalCities, getPopulation());
+				iCommerce += hasOrbitalInfrastructure() ? iVal : (iVal / 2);
 			}
-			else iCommerce += iBaseCommerceChange;
+			else
+			{
+				iCommerce += iBaseCommerceChange;
+			}
 		}
+
 		iCommerce += getBuildingCommerceChange(eBuilding, eIndex);
 
 		if (bFull)
 		{
-			// Toffer - These are cached separately, so should not be counted when caching m_aiBuildingCommerce through this function.
-			iOtherCommerce = (
-				(
-					kBuilding.getCommercePerPopChange(eIndex)
-					+ getBonusCommercePercentChanges(eIndex, eBuilding)
-					+ GET_TEAM(getTeam()).getBuildingCommerceTechChange(eIndex, eBuilding)
-				)
-				/ 100
-			);
+			// Toffer - These are cached separately, so should not be counted when caching m_aiBuildingCommerce through this function.			
+			iCommerce += (kBuilding.getCommercePerPopChange(eIndex)
+				+ getBonusCommercePercentChanges(eIndex, eBuilding)
+				+ kTeam.getBuildingCommerceTechChange(eIndex, eBuilding)) / 100;
 		}
-		if (GC.getBuildingInfo(eBuilding).getReligionType() != NO_RELIGION
-		&& GC.getBuildingInfo(eBuilding).getReligionType() == GET_PLAYER(getOwner()).getStateReligion())
+
+		const ReligionTypes eRel = (ReligionTypes)kBuilding.getReligionType();
+		if (eRel != NO_RELIGION && eRel == kOwner.getStateReligion())
+			iCommerce += kOwner.getStateReligionBuildingCommerce(eIndex);
+
+		const ReligionTypes eGlobalRel = (ReligionTypes)kBuilding.getGlobalReligionCommerce();
+		if (eGlobalRel != NO_RELIGION)
 		{
-			iCommerce += GET_PLAYER(getOwner()).getStateReligionBuildingCommerce(eIndex);
-		}
-
-		if (GC.getBuildingInfo(eBuilding).getGlobalReligionCommerce() != NO_RELIGION)
-		{
-			iCommerce +=
-			(
-				GC.getReligionInfo((ReligionTypes)GC.getBuildingInfo(eBuilding).getGlobalReligionCommerce()).getGlobalReligionCommerce(eIndex)
-				*
-				GC.getGame().countReligionLevels((ReligionTypes)GC.getBuildingInfo(eBuilding).getGlobalReligionCommerce())
-			);
+			iCommerce += GC.getReligionInfo(eGlobalRel).getGlobalReligionCommerce(eIndex)
+				* GC.getGame().countReligionLevels(eGlobalRel);
 		}
 	}
 
-	if (GC.getBuildingInfo(eBuilding).getGlobalCorporationCommerce() != NO_CORPORATION)
+	const CorporationTypes eGlobalCorp = (CorporationTypes)kBuilding.getGlobalCorporationCommerce();
+	if (eGlobalCorp != NO_CORPORATION)
 	{
-		iCommerce +=
-		(
-			GC.getCorporationInfo((CorporationTypes)GC.getBuildingInfo(eBuilding).getGlobalCorporationCommerce()).getHeadquarterCommerce(eIndex)
-			*
-			GC.getGame().countCorporationLevels((CorporationTypes)GC.getBuildingInfo(eBuilding).getGlobalCorporationCommerce())
-		);
+		iCommerce += GC.getCorporationInfo(eGlobalCorp).getHeadquarterCommerce(eIndex)
+			* GC.getGame().countCorporationLevels(eGlobalCorp);
 	}
 
-	if (GC.getBuildingInfo(eBuilding).getCommerceChangeDoubleTime(eIndex) != 0
-	&& getBuildingData(eBuilding).iTimeBuilt != MIN_INT
-	&& GC.getGame().getGameTurnYear() - getBuildingData(eBuilding).iTimeBuilt >= GC.getBuildingInfo(eBuilding).getCommerceChangeDoubleTime(eIndex))
+	const int iDoubleTime = kBuilding.getCommerceChangeDoubleTime(eIndex);
+	if (iDoubleTime != 0)
 	{
-		iCommerce *= 2;
+		const int iTimeBuilt = getBuildingData(eBuilding).iTimeBuilt;
+		if (iTimeBuilt != MIN_INT && GC.getGame().getGameTurnYear() - iTimeBuilt >= iDoubleTime)
+			iCommerce *= 2;
 	}
-	return iCommerce + iOtherCommerce;
+
+	return iCommerce;
 }
 
 
@@ -15413,9 +15400,9 @@ void CvCity::pushOrder(OrderTypes eOrder, int iData1, int iData2, bool bSave, bo
 				setUnitListInvalid();
 				if (gCityLogLevel >= 1)
 				{
-					CvWString szString;
-					getUnitAIString(szString, order.getUnitAIType());
-					logBBAI("    City %S pushes production of unit %S with UNITAI %S", getName().GetCString(), GC.getUnitInfo(unitType).getDescription(getCivilizationType()), szString.GetCString());
+					
+					const CvWString szStringUnitAi = GC.getUnitAIInfo(order.getUnitAIType()).getType();
+					logBBAI("    City %S pushes production of unit %S for type %S", getName().GetCString(), GC.getUnitInfo(unitType).getDescription(getCivilizationType()), szStringUnitAi.GetCString());
 				}
 				bValid = true;
 			}
@@ -15595,10 +15582,11 @@ void CvCity::popOrder(int orderIndex, bool bFinish, bool bChoose, bool bResolveL
 			{
 				AI_trained(eTrainUnit, eTrainAIUnit);
 
-				if (gCityLogLevel >= 2)
-				{
-					logBBAI("      City %S builds unit %S", getName().GetCString(), GC.getUnitInfo(eTrainUnit).getDescription());
-				}
+				
+				LOG_CITY_BLOCK(2, {
+					const CvWString szStringUnitAi = GC.getUnitAIInfo(eTrainAIUnit).getType();
+					logBBAI("      City %S builds unit %S for Type %S", getName().GetCString(), GC.getUnitInfo(eTrainUnit).getDescription(), szStringUnitAi.GetCString());
+				});
 				const int iProgress = getProgressOnUnit(eTrainUnit);
 				const int iRawOverflow = iProgress - getProductionNeeded(eTrainUnit);
 				const int iMaxOverflow = getMaxProductionOverflow();
@@ -15716,9 +15704,8 @@ void CvCity::popOrder(int orderIndex, bool bFinish, bool bChoose, bool bResolveL
 				{
 					if (gCityLogLevel >= 1)
 					{
-						CvWString szString;
-						getUnitAIString(szString, pUnit->AI_getUnitAIType());
-						logBBAI("    City %S finishes production of unit %S with UNITAI %S", getName().GetCString(), pUnit->getName(0).GetCString(), szString.GetCString());
+						const CvWString szStringUnitAi = GC.getUnitAIInfo(pUnit->AI_getUnitAIType()).getType();
+						logBBAI("    City %S finishes production of unit %S for Type %S", getName().GetCString(), pUnit->getName(0).GetCString(), szStringUnitAi.GetCString());
 					}
 
 					if (GC.getUnitInfo(eTrainUnit).getDomainType() == DOMAIN_AIR)
@@ -16368,7 +16355,7 @@ void CvCity::doProduction(bool bAllowNoProduction)
 				}
 				else AI_chooseProduction();
 
-				FAssertMsg(isProduction(), "AI set city to pruduce nothing at all!")
+				FAssertMsg(isProduction(), "AI set city to produce nothing at all!")
 			}
 
 			/* Toffer - Don't think the wonder limit can be breached here just like that.
@@ -23777,15 +23764,17 @@ int CvCity::getPropertyNeed(PropertyTypes eProperty) const
 				m_cachedPropertyNeeds[iI] = 0;
 			}
 		}
+
 		for (int iI = 0; iI < GC.getNumPropertyInfos(); iI++)
 		{
 			const PropertyTypes pProperty = (PropertyTypes)iI;
 			if (GC.getPropertyInfo(pProperty).getAIWeight() != 0)
 			{
 				int iCurrentValue = getPropertiesConst()->getValueByProperty(pProperty);
+				int iCurrentChange = getPropertiesConst()->getChangeByProperty(pProperty);
 				//TB attempt to allow some modification to need based on existing drift value
-				int iCurrentSourceSize = getTotalBuildingSourcedProperty(eProperty) + getTotalUnitSourcedProperty(eProperty);
-				iCurrentSourceSize *= 4;
+				int iCurrentSourceSize = iCurrentChange;//Calvitix remove getTotalBuildingSourcedProperty(eProperty) + getTotalUnitSourcedProperty(eProperty);
+				iCurrentSourceSize *= 10; //Evolution for the next 10 turns
 				iCurrentValue += iCurrentSourceSize;
 				//
 				int iTarget = 0;
@@ -23797,9 +23786,40 @@ int CvCity::getPropertyNeed(PropertyTypes eProperty) const
 				{
 					iTarget = GC.getPropertyInfo(pProperty).getTargetLevel();
 				}
+				int iNeedori = iTarget - iCurrentValue; 
 				int iNeed = iTarget - iCurrentValue;
-				//value always positive if need is real
-				m_cachedPropertyNeeds[iI] = (iNeed * (GC.getPropertyInfo(pProperty).getAIWeight() / 50));
+				CvWString szProperty = GC.getPropertyInfo(pProperty).getType();
+				int iAIPropertyWeight = GC.getPropertyInfo(pProperty).getAIWeight() / 50;
+				if (iAIPropertyWeight > 0) //Properties that are positive (EDU,TOURISM)
+				{ 
+					if (iTarget > iCurrentValue) //Still need to be better
+					{
+						iNeed = (iTarget - iCurrentValue) * iAIPropertyWeight;
+					}
+					else
+					{
+						iNeed = -1;
+					}		
+				}
+				else
+				{
+					if (iTarget < iCurrentValue) //Still need to be better
+					{
+						iNeed = (iTarget - iCurrentValue) * iAIPropertyWeight;
+					}
+					else
+					{
+						iNeed = -1;
+					}
+				}
+				m_cachedPropertyNeeds[iI] = iNeed;//(iNeed * (GC.getPropertyInfo(pProperty).getAIWeight() / 50));
+				if (gCityLogLevel > 3)
+				{
+					logAiEvaluations(3, "	City %S need for Property %S : (Base value : %d, Final with AIWeight : %d)", getName().GetCString(), szProperty.GetCString(), iNeedori, m_cachedPropertyNeeds[iI]);
+				}
+
+
+
 			}
 		}
 		m_icachedPropertyNeedsTurn = GC.getGame().getGameTurn();
@@ -24146,3 +24166,4 @@ BuiltBuildingData CvCity::getBuildingData(const BuildingTypes eType) const
 	data.iTimeBuilt = MIN_INT;
 	return data;
 }
+

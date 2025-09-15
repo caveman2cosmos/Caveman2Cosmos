@@ -157,7 +157,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TERRAIN_COAST_PEDIA</Tag>
-		<English>The coastline is the area where land meets the sea or ocean. Because of the constantly changing tides and sea levels, a precise and fixed line cannot be defined. Instead, the term "coastal zone" is often used to describe the area where land and sea processes interact. The words coast and coastal are also commonly used to refer to specific geographic regions, for example, New Zealand’s West Coast or the East and West Coasts of the United States.</English>
+		<English>The coastline is the area where land meets the sea or ocean. Because of the constantly changing tides and sea levels, a precise and fixed line cannot be defined. Instead, the term "coastal zone" is often used to describe the area where land and sea processes interact. The words coast and coastal are also commonly used to refer to specific geographic regions, for example, New Zealand's West Coast or the East and West Coasts of the United States.</English>
 		<French>Le littoral est l'endroit où la terre rencontre la mer ou l'océan. Une ligne précise qui peut être appelée un littoral ne peut pas être déterminée en raison de la nature dynamique des marées. Le terme "zone côtière" peut être utilisé à la place, qui est une zone spatiale où se produisent des interactions entre les processus maritimes et terrestres. Les termes côte et côte sont souvent utilisés pour décrire un emplacement géographique ou une région; par exemple, la côte ouest de la Nouvelle-Zélande ou les côtes est et ouest des États-Unis.</French>
 		<German>Mit [COLOR_HIGHLIGHT_TEXT]Küste[COLOR_REVERT] bezeichnet man das Gebiet, in dem sich Landmasse und Ozean treffen. Eine genaue Küstenlinie ist meist durch den dynamischen Gezeitenwechsel schlecht festzulegen, man richtet sich hier nach dem Stand des mittleren Hochwassers. Küsten sind durch Gezeiten-, Brandungs- und Windeinwirkungen einem ständigen Wandel unterworfen.</German>
 		<Russian>Береговая линия - это место, где земля встречается с морем или океаном. Точная линия, которую можно назвать береговой линией, не может быть определена из-за динамического характера приливов. Вместо этого можно использовать термин «прибрежная зона», который является пространственной зоной, в которой происходит взаимодействие морских и сухопутных процессов. Термины «берег» и «побережье» часто используются для описания географического положения или региона; например, восточное побережье Балтики или Карамандельский берег Индостана.</Russian>
@@ -252,16 +252,18 @@
 	<TEXT>
 		<Tag>TXT_KEY_TERRAIN_FRESHWATER_COAST</Tag>
 		<English>Freshwater Coast</English>
+		<French>Côte d'eau douce</French>
 		<German>Süßwasserküste</German>
-		<Russian>Пресноводный берег</Russian>
 		<Italian>Costa con acqua dolce</Italian>
+		<Russian>Пресноводный берег</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TERRAIN_FRESHWATER_SEA</Tag>
 		<English>Freshwater Sea</English>
+		<French>Mer d'eau douce</French>
 		<German>Süßwassermeer</German>
-		<Russian>Пресноводое море</Russian>
 		<Italian>Mare d'acqua dolce</Italian>
+		<Russian>Пресноводое море</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TERRAIN_GRASSLAND</Tag>
@@ -557,6 +559,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_TERRAIN_MARTIAN_BARREN_PEDIA</Tag>
 		<English>The Martian barren terrain is a landscape of rocky, dust-covered ground, with no ability to grow plants or support animal life. This terrain is bombarded with radiation, extreme temperature variations, and dust devils, which contribute to the persistent dust. However, the Martian barren remains important for scientific study, particularly in the search for signs of past life and for supporting potential future colonization.</English>
+		<French>Le terrain stérile martien est un paysage de sol rocailleux couvert de poussière, sans capacité à faire pousser des plantes ou à soutenir la vie animale. Ce terrain est bombardé de radiations, subit des variations extrêmes de température et des tourbillons de poussière, qui contribuent à la persistance de la poussière. Cependant, le terrain stérile martien reste important pour l'étude scientifique, particulièrement dans la recherche de signes de vie passée et pour soutenir une potentielle colonisation future.</French>
 		<Russian>Вообще бесплодный ландшафт Марса был последним гвоздем в гробу идеи о том, что Марс может быть заселен высшими формами жизни.</Russian>
 	</TEXT>
 	<TEXT>
@@ -579,6 +582,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_TERRAIN_MARTIAN_DESERT_PEDIA</Tag>
 		<English>Just like Earth, Mars has deserts. However, unlike Earth, the thin atmosphere here leads to more extreme temperature variations than the most inhospitable deserts on Earth. While Earth's deserts contain water in select areas, Martian deserts completely lack any moisture that could host plants or animal life.</English>
+		<French>Tout comme la Terre, Mars a des déserts. Cependant, contrairement à la Terre, l'atmosphère ténue ici conduit à des variations de température plus extrêmes que dans les déserts les plus inhospitaliers de la Terre. Alors que les déserts terrestres contiennent de l'eau dans certaines zones, les déserts martiens manquent complètement d'humidité qui pourrait accueillir des plantes ou de la vie animale.</French>
 		<Russian>До сих пор мы видели, что Марс менее гостеприимен, чем самые холодные и сухие пустыни на Земле.</Russian>
 	</TEXT>
 	<TEXT>
@@ -601,6 +605,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_TERRAIN_MARTIAN_DUNES_PEDIA</Tag>
 		<English>Sand dunes are among the most widespread aeolian features present on Mars, serving as unique indicators of the interaction between the thin atmosphere and the surface. These dunes are composed of basaltic sand, which appears in various shades of gray, brown, or black. This means that when they are not covered in Martian dust, which is composed of red iron oxide, these dunes are easily spotted from space.</English>
+		<French>Les dunes de sable sont parmi les caractéristiques éoliennes les plus répandues sur Mars, servant d'indicateurs uniques de l'interaction entre l'atmosphère ténue et la surface. Ces dunes sont composées de sable basaltique, qui apparaît dans diverses nuances de gris, brun ou noir. Cela signifie que lorsqu'elles ne sont pas couvertes de poussière martienne, qui est composée d'oxyde de fer rouge, ces dunes sont facilement repérables depuis l'espace.</French>
 		<Russian>Песчаные дюны - одни из самых распространенных эоловых объектов на Марсе, служащие уникальными индикаторами взаимодействия между атмосферой и поверхностью.</Russian>
 	</TEXT>
 	<TEXT>
@@ -645,6 +650,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_TERRAIN_MARTIAN_PERMAFROST_PEDIA</Tag>
 		<English>When NASA's Phoenix spacecraft landed on the Arctic plains of northern Mars on May 25, 2008, one of its first observations revealed a landscape familiar to polar scientists on Earth: interlocking polygon patterns that form in permafrost that freezes and thaws seasonally.</English>
+		<French>Lorsque le vaisseau spatial Phoenix de la NASA a atterri sur les plaines arctiques du nord de Mars le 25 mai 2008, l'une de ses premières observations a révélé un paysage familier aux scientifiques polaires sur Terre : des motifs polygonaux imbriqués qui se forment dans le pergélisol qui gèle et dégèle de façon saisonnière.</French>
 		<Russian>Когда 25 мая 2008 года космический корабль НАСА Phoenix приземлился на арктических равнинах северного Марса, в ходе его первых взглядов на поверхность планеты был обнаружен ландшафт, знакомый полярникам на Земле: узор из взаимосвязанных многоугольников, образующихся в вечной мерзлоте, которая замерзает и тает посезонно.</Russian>
 	</TEXT>
 	<TEXT>
@@ -667,6 +673,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_TERRAIN_MARTIAN_PLAINS_PEDIA</Tag>
 		<English>Planitia, the Latin word for plain, is used in the naming of plains on extraterrestrial objects (planets and moons), such as Hellas Planitia on Mars.</English>
+		<French>Planitia, le mot latin pour plaine, est utilisé dans la dénomination des plaines sur les objets extraterrestres (planètes et lunes), comme Hellas Planitia sur Mars.</French>
 		<Russian>Planitia, латинское слово, обозначающее равнину, используется для обозначения равнин на внеземных объектах (планетах и лунах), таких как Hellas Planitia на Марсе.</Russian>
 	</TEXT>
 	<TEXT>
@@ -689,6 +696,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_TERRAIN_MARTIAN_ROCKY_PEDIA</Tag>
 		<English>Mars has the greatest diversity of impact crater types of any planet in the Solar System. This is partly because the presence of both rocky and volatile-rich layers in the subsurface produces a range of morphologies even among craters within the same size classes.</English>
+		<French>Mars possède la plus grande diversité de types de cratères d'impact de toutes les planètes du Système solaire. Cela est dû en partie au fait que la présence de couches rocheuses et riches en composés volatils dans le sous-sol produit une gamme de morphologies, même parmi les cratères de mêmes classes de taille.</French>
 		<Russian>Марс имеет наибольшее разнообразие типов ударных кратеров среди всех планет Солнечной системы. Отчасти это связано с тем, что наличие в недрах как скалистых, так и богатых летучими веществами слоев приводит к различной морфологии даже среди кратеров одного и того же класса размеров.</Russian>
 	</TEXT>
 	<TEXT>
@@ -708,8 +716,9 @@
 	<TEXT>
 		<Tag>TXT_KEY_TERRAIN_MUDDY_PEDIA</Tag>
 		<English>Mud is a liquid or semi-liquid mixture of water and some combination of soil, silt, and clay. Ancient mud deposits harden over geological time to form sedimentary rock such as shale or mudstone (generally called lutites). When geological deposits of mud are formed in estuaries the resultant layers are termed bay muds. Mud is closely related to slurry and sediment.</English>
-		<Italian>Il fango è una mistura liquida o semi-liquida di acqua e una combinazione di suolo, silt e sabbia. I depositi antichi di fango si induriscono nel tempo per formare roccia sedimentaria, come scisti e fango indurito (generalmente detto lutite). Quando i depositi geologici di fango si formano negli estuari, gli strati risultanti vengono chiamati fanghi marini. Il fango è strettamente legato all'erosione e ai sedimenti.</Italian>
+		<French>La boue est un mélange liquide ou semi-liquide d'eau et d'une combinaison de sol, de limon et d'argile. Les anciens dépôts de boue durcissent au fil du temps géologique pour former des roches sédimentaires comme le schiste ou la mudstone (généralement appelées lutites). Lorsque des dépôts géologiques de boue se forment dans les estuaires, les couches résultantes sont appelées boues de baie. La boue est étroitement liée à la suspension et au sédiment.</French>
 		<German>Unter [COLOR_HIGHLIGHT_TEXT]Schlamm[COLOR_REVERT] versteht man eine Mischung aus Erde und Wasser, wobei Letzteres nur in einem geringen Anteil enthalten ist. Schlamm entsteht meist durch Ablagerung von Sedimenten.</German>
+		<Italian>Il fango è una mistura liquida o semi-liquida di acqua e una combinazione di suolo, silt e sabbia. I depositi antichi di fango si induriscono nel tempo per formare roccia sedimentaria, come scisti e fango indurito (generalmente detto lutite). Quando i depositi geologici di fango si formano negli estuari, gli strati risultanti vengono chiamati fanghi marini. Il fango è strettamente legato all'erosione e ai sedimenti.</Italian>
 		<Russian>Грязь - это жидкая или полужидкая смесь воды и некоторой комбинации почвы, ила и глины. Древние отложения грязи с течением геологического времени затвердевают, образуя осадочные породы, такие как сланцы или аргиллиты (обычно называемые лютитами). Когда геологические отложения ила образуются в устьях рек, образующиеся слои называют заливными илами. Грязь тесно связана с жидким навозом и осадочными породами.</Russian>
 	</TEXT>
 	<TEXT>
@@ -753,6 +762,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_TERRAIN_OCEAN_PEDIA</Tag>
 		<English>An ocean is a major body of saline water, and a principal component of the hydrosphere. Approximately 71% of the Earth's surface (~3.6 x 10 8 km 2) is covered by ocean, a continuous body of water that is customarily divided into several principal oceans and smaller seas.</English>
+		<French>Un océan est une importante masse d'eau salée et un composant principal de l'hydrosphère. Environ 71% de la surface de la Terre (~3,6 x 10^8 km^2) est couverte par l'océan, une masse d'eau continue qui est habituellement divisée en plusieurs océans principaux et mers plus petites.</French>
 		<German>Die [COLOR_HIGHLIGHT_TEXT]Ozeane[COLOR_REVERT] sind große zusammenhängende Wasserflächen, die zwischen den Kontinenten liegen und einen Großteil (ca. 71%) der Erdoberfläche bedecken. Sie unterscheiden sich untereinander u.a. in Volumen, Salzgehalt, Seegang und Meeresströmungen.</German>
 		<Russian>Океан - это основная масса соленой воды и главный компонент гидросферы. Приблизительно 71% поверхности Земли (~ 3,6x10 8 км^2) покрыто океаном - сплошным водным пространством, которое обычно делится на несколько основных океанов и более мелких морей.</Russian>
 	</TEXT>
@@ -831,7 +841,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TERRAIN_PEAK_PEDIA</Tag>
-		<English>A peak refers to the highest point of a mountain or ridge. In topography, a summit is a point that is higher in elevation than all immediately adjacent areas—this is known as a local maximum. The height of a peak can be measured in two main ways: elevation and prominence. Elevation uses sea level as a baseline (0 meters) to determine how high a mountain rises above the ocean's surface. Prominence, on the other hand, measures how much a mountain stands out relative to the surrounding terrain, typically by comparing the height of the peak to the lowest contour line that encircles it and no higher summit. This provides a clearer idea of a mountain’s topographic significance. The terms acme, apex, peak, and zenith are often used as synonyms to describe such high points in the landscape.</English>
+		<English>A peak refers to the highest point of a mountain or ridge. In topography, a summit is a point that is higher in elevation than all immediately adjacent areas—this is known as a local maximum. The height of a peak can be measured in two main ways: elevation and prominence. Elevation uses sea level as a baseline (0 meters) to determine how high a mountain rises above the ocean's surface. Prominence, on the other hand, measures how much a mountain stands out relative to the surrounding terrain, typically by comparing the height of the peak to the lowest contour line that encircles it and no higher summit. This provides a clearer idea of a mountain's topographic significance. The terms acme, apex, peak, and zenith are often used as synonyms to describe such high points in the landscape.</English>
 		<French>Le pic peut se référer à: Un sommet de montagne, En topographie, un sommet est un point sur une surface qui est plus élevé en élévation que tous les points immédiatement adjacents. Mathématiquement, un sommet est un maximum local en élévation. Les termes topographiques "acme", "apex", "peak" et "zenith" sont synonymes.</French>
 		<German>Berge sind Erhebungen in der Landschaft, die höher und steiler als Hügel sind und in der Regel über einen oder mehrere Gipfel verfügen. Sie entstehen größtenteils durch Plattentektonik und Vulkanismus. Viele zusammengehörige Berge bilden ein [COLOR_HIGHLIGHT_TEXT]Gebirge[COLOR_REVERT] oder einen Gebirgszug. Hierbei unterscheidet man zwischen Mittelgebirgen und Hochgebirgen.</German>
 		<Russian>Пик может относиться к: горной вершине. В топографии вершина - это точка на поверхности, высота которой выше, чем все точки, непосредственно прилегающие к ней. Математически вершина - это локальный максимум высоты. Топографические термины «высшая точка», «вершина», «пик» и «зенит» являются синонимами.</Russian>
@@ -919,6 +929,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_TERRAIN_ROCKY_PEDIA</Tag>
 		<English>Scree, also called talus, is a term given to an accumulation of broken rock fragments at the base of crags, mountain cliffs, or valley shoulders. Landforms associated with these materials are sometimes called scree slopes or talus piles. These deposits typically have a concave upwards form, while the maximum inclination of such deposits corresponds to the angle of repose of the mean debris size.</English>
+		<French>Les éboulis, également appelés talus, sont un terme donné à une accumulation de fragments de roches brisées à la base des escarpements, des falaises de montagne ou des épaulements de vallée. Les reliefs associés à ces matériaux sont parfois appelés pentes d'éboulis ou amas de talus. Ces dépôts ont généralement une forme concave vers le haut, tandis que l'inclinaison maximale de ces dépôts correspond à l'angle de repos de la taille moyenne des débris.</French>
 		<German>Als [COLOR_HIGHLIGHT_TEXT]Gestein[COLOR_REVERT] bezeichnet man die feste Verbindung einer Vielzahl verschiedener Mineralien. Je nach Zusammensetzung entstehen dabei unterschiedliche Gesteinsarten wie Granit, Sandstein oder Quarz. Gesteine sind das Baumaterial, aus dem Erdmantel und -kruste bestehen. In Gebieten, in denen das nackte Felsgestein nicht von einer Schicht Humus bedeckt ist, wachsen meist nur wenige robuste Pflanzen. Besonders karg sind [COLOR_HIGHLIGHT_TEXT]Steinwüsten[COLOR_REVERT] in trockenen Klimaten oder gar sogenannte Badlands, die vollkommen vegetationslos sind. In kalten Regionen existieren analog vegetationsarme, vereiste [COLOR_HIGHLIGHT_TEXT]Gletscher[COLOR_REVERT].</German>
 		<Italian>Ghiaione è il termine dato ad un accumulo di frammenti di rocce alla base di falesie, pendici delle montagne o argini delle valli. Le formazioni naturali con questi materiali sono spesso definiti ammassi sedimentari. Questi depositi hanno solitamente una forma concava verso l'alto, mentre l'inclinazione massima di questi depositi dipende dalla dimensione dei sedimenti.</Italian>
 		<Russian>Осыпь - это термин, обозначающий скопление обломков породы в основании скал, горных скал или плеч долины. Ландшафты, связанные с этими материалами, иногда называют осыпями или осыпями. Эти отложения обычно имеют вогнутую вверх форму, в то время как максимальный наклон таких отложений соответствует углу естественного откоса среднего размера мусора.</Russian>
@@ -944,6 +955,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_TERRAIN_SALT_FLATS_PEDIA</Tag>
 		<English>Dry lakes are ephemeral lakebeds, or a remnant of an endorheic lake. Such flats consist of fine-grained sediments infused with alkali salts. Dry lakes are also referred to as alkali flats, sabkhas, playas or mud flats. If the surface is primarily salt then they are called salt pans, pans, hardpan or salt flats (remnants of salt lakes).</English>
+		<French>Les lacs asséchés sont des lits de lac éphémères, ou un vestige d'un lac endoréique. Ces plaines consistent en sédiments à grains fins imprégnés de sels alcalins. Les lacs asséchés sont également appelés plaines alcalines, sabkhas, playas ou vasières. Si la surface est principalement composée de sel, on les appelle marais salants, bassins, croûte dure ou salines (vestiges de lacs salés).</French>
 		<German>Salztonebenen oder auch [COLOR_HIGHLIGHT_TEXT]Salzwüsten[COLOR_REVERT] nennt man die Ablagerungsgebiete ausgetrockneter Salzseen, also Salzwasser führender Binnengewässer. Salzseen befinden sich meistens in Trockengebieten oder Wüsten, wo die andauernde Verdunstung den Salzgehalt ständig erhöht. Wenn mehr Wasser verdunstet als zufließt, bleibt nur eine Salzwüste zurück.</German>
 		<Italian>I laghi asciutti sono antichi letti di laghi, o il resto di un lago endorico. Tali distese consistono di sedimenti a grana fine, mischiati con sali alcalini. I laghi di sale sono spesso chiamati distese alcaline e playas. Se le distese sono composte principalmente da sale essi vengono detti distese saline (resti di laghi salati).</Italian>
 		<Russian>Сухие озера - это эфемерные ложа озер или остатки бессточного озера. Такие участки состоят из мелкозернистых отложений, насыщенных солями щелочных металлов. Сухие озера также называют щелочными отмелями, сабхами, плайями или грязевыми отмелями. Если поверхность в основном состоит из соли, то их называют солончаками, старицами, такырами или солоняными пустынями (остатками соленых озер).</Russian>
@@ -1045,6 +1057,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_TERRAIN_TAIGA_PEDIA</Tag>
 		<English>Taiga is a subarctic biome adjacent to the treeless tundra biome, characterized by coniferous forests consisting mostly of pines, spruces, and larches. The taiga is the world's largest terrestrial biome. The terrain represents the typical soil types found in the taiga biome, which are fertile and not too wet.</English>
+		<French>La taïga est un biome subarctique adjacent au biome de la toundra sans arbres, caractérisé par des forêts de conifères composées principalement de pins, d'épicéas et de mélèzes. La taïga est le plus grand biome terrestre du monde. Le terrain représente les types de sols typiques trouvés dans le biome de la taïga, qui sont fertiles et pas trop humides.</French>
 		<German>Boreale (nördliche Nadelwälder) werden auch verallgemeinernd als [COLOR_HIGHLIGHT_TEXT]Taiga[COLOR_REVERT] bezeichnet. Die Taiga ist charakterisiert durch relativ gleichförmige Nadelwaldgebiete, die nur von baumlosen Moorgebieten und Flussauen unterbrochen werden. Sie existiert nur auf der Nordhalbkugel, da auf der Südhalbkugel die entsprechenden zusammenhängenden großen Landmassen fehlen.</German>
 		<Russian>Тайга - это субарктический биом, прилегающий к биому безлесной тундры, для нее характерны хвойные леса, состоящие в основном из сосен, елей и лиственниц. Тайга - крупнейший в мире биом суши.[NEWLINE][TAB]Эта местность представляет собой характерные типы почв, встречающихся в таежном биоме, являющихся плодородными и не слишком влажными.</Russian>
 	</TEXT>

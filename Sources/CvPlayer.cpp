@@ -38,6 +38,7 @@
 #include "CvDLLInterfaceIFaceBase.h"
 #include "CvDLLUtilityIFaceBase.h"
 #include "CvTraitInfo.h"
+#include <boost/scoped_ptr.hpp>
 
 //	Koshling - save flag indicating this player has no data in the save as they have never been alive
 #define	PLAYER_UI_FLAG_OMITTED 2
@@ -3135,10 +3136,8 @@ void CvPlayer::disbandUnit()
 
 		if( gPlayerLogLevel >= 2 )
 		{
-			CvWString szString;
-			getUnitAIString(szString, pBestUnit->AI_getUnitAIType());
-
-			logBBAI("	Player %d (%S) disbanding %S with UNITAI %S (forced)", getID(), getCivilizationDescription(0), pBestUnit->getName().GetCString(), szString.GetCString());
+			const CvWString szStringUnitAi = GC.getUnitAIInfo(pBestUnit->AI_getUnitAIType()).getType();
+			logBBAI("	Player %d (%S) disbanding %S with UNITAI %S (forced)", getID(), getCivilizationDescription(0), pBestUnit->getName().GetCString(), szStringUnitAi.GetCString());
 		}
 
 		pBestUnit->kill(false);
@@ -4005,26 +4004,26 @@ void CvPlayer::dumpStats() const
 		else logBBAI("		%S: %S", GC.getCivicOptionInfo((CivicOptionTypes)iI).getDescription(), GC.getCivicInfo(eCivic).getDescription());
 	}
 
-	logBBAI("	Civic switch history:");
-	{
-		int iTurn = -1;
-		for (int iI = 0; iI < (int)m_civicSwitchHistory.size(); iI++)
-		{
-			if (m_civicSwitchHistory[iI].iTurn != iTurn)
-			{
-				iTurn = m_civicSwitchHistory[iI].iTurn;
-				logBBAI("		Turn %d:", iTurn);
-			}
-			logBBAI("			%S -> %S%s",
-					m_civicSwitchHistory[iI].eFromCivic == NO_CIVIC ? L"Unknown" : GC.getCivicInfo((CivicTypes)m_civicSwitchHistory[iI].eFromCivic).getDescription(),
-					m_civicSwitchHistory[iI].eToCivic == NO_CIVIC ? L"Unknown" : GC.getCivicInfo((CivicTypes)m_civicSwitchHistory[iI].eToCivic).getDescription(),
-					m_civicSwitchHistory[iI].bNoAnarchy ? " (no anarchy switch)" : "");
-		}
-		if (iTurn == -1)
-		{
-			logBBAI("		No switches made");
-		}
-	}
+	//logBBAI("	Civic switch history:");
+	//{
+	//	int iTurn = -1;
+	//	for (int iI = 0; iI < (int)m_civicSwitchHistory.size(); iI++)
+	//	{
+	//		if (m_civicSwitchHistory[iI].iTurn != iTurn)
+	//		{
+	//			iTurn = m_civicSwitchHistory[iI].iTurn;
+	//			logBBAI("		Turn %d:", iTurn);
+	//		}
+	//		logBBAI("			%S -> %S%s",
+	//				m_civicSwitchHistory[iI].eFromCivic == NO_CIVIC ? L"Unknown" : GC.getCivicInfo((CivicTypes)m_civicSwitchHistory[iI].eFromCivic).getDescription(),
+	//				m_civicSwitchHistory[iI].eToCivic == NO_CIVIC ? L"Unknown" : GC.getCivicInfo((CivicTypes)m_civicSwitchHistory[iI].eToCivic).getDescription(),
+	//				m_civicSwitchHistory[iI].bNoAnarchy ? " (no anarchy switch)" : "");
+	//	}
+	//	if (iTurn == -1)
+	//	{
+	//		logBBAI("		No switches made");
+	//	}
+	//}
 
 	//	City stats
 	foreach_(const CvCity* pLoopCity, cities())
@@ -4058,19 +4057,19 @@ void CvPlayer::dumpStats() const
 
 		logBBAI("			PropertyBuildings:");
 
-		for (int iJ = 0; iJ < pProperties->getNumProperties(); iJ++)
-		{
-			const CvPropertyInfo& kInfo = GC.getPropertyInfo((PropertyTypes)pProperties->getProperty(iJ));
+		//for (int iJ = 0; iJ < pProperties->getNumProperties(); iJ++)
+		//{
+		//	const CvPropertyInfo& kInfo = GC.getPropertyInfo((PropertyTypes)pProperties->getProperty(iJ));
 
-			for (int i = kInfo.getNumPropertyBuildings() - 1; i > -1; i--)
-			{
-				const PropertyBuilding& kBuilding = kInfo.getPropertyBuilding(i);
-				if (pLoopCity->hasBuilding(kBuilding.eBuilding))
-				{
-					logBBAI("				%S: %S", kInfo.getDescription(), GC.getBuildingInfo(kBuilding.eBuilding).getDescription());
-				}
-			}
-		}
+		//	for (int i = kInfo.getNumPropertyBuildings() - 1; i > -1; i--)
+		//	{
+		//		const PropertyBuilding& kBuilding = kInfo.getPropertyBuilding(i);
+		//		if (pLoopCity->hasBuilding(kBuilding.eBuilding))
+		//		{
+		//			logBBAI("				%S: %S", kInfo.getDescription(), GC.getBuildingInfo(kBuilding.eBuilding).getDescription());
+		//		}
+		//	}
+		//}
 	}
 
 	//	Unit stats
@@ -4093,6 +4092,8 @@ void CvPlayer::dumpStats() const
 	{
 		logBBAI("		%S (%s): %d", GC.getUnitInfo((UnitTypes)(itr->first >> 16)).getDescription(), GC.getUnitAIInfo((UnitAITypes)(itr->first & 0xFFFF)).getType(), itr->second);
 	}
+	logBBAI("	EndUnits");
+
 }
 
 
@@ -4888,37 +4889,28 @@ int CvPlayer::countPotentialForeignTradeCitiesConnected() const
 bool CvPlayer::canContact(PlayerTypes ePlayer) const
 {
 	if (ePlayer == getID())
-	{
 		return false;
-	}
 
-	if (!isAlive() || !GET_PLAYER(ePlayer).isAlive())
-	{
+	const CvPlayer& otherPlayer = GET_PLAYER(ePlayer);
+	if (!isAlive() || !otherPlayer.isAlive())
 		return false;
-	}
 
-	if (isNPC() || GET_PLAYER(ePlayer).isNPC())
-	{
+	if (isNPC() || otherPlayer.isNPC())
 		return false;
-	}
 
-	if (isMinorCiv() || GET_PLAYER(ePlayer).isMinorCiv())
-	{
+	if (isMinorCiv() || otherPlayer.isMinorCiv())
 		return false;
-	}
 
-	if (getTeam() != GET_PLAYER(ePlayer).getTeam())
+	const TeamTypes ourTeam = getTeam();
+	const TeamTypes theirTeam = otherPlayer.getTeam();
+
+	if (ourTeam != theirTeam)
 	{
-		if (!GET_TEAM(getTeam()).isHasMet(GET_PLAYER(ePlayer).getTeam()))
-		{
+		if (!GET_TEAM(ourTeam).isHasMet(theirTeam))
 			return false;
-		}
 
-		if (::atWar(getTeam(), GET_PLAYER(ePlayer).getTeam())
-		&& !GET_TEAM(getTeam()).canChangeWarPeace(GET_PLAYER(ePlayer).getTeam()))
-		{
+		if (::atWar(ourTeam, theirTeam) && !GET_TEAM(ourTeam).canChangeWarPeace(theirTeam))
 			return false;
-		}
 	}
 
 	return true;
@@ -8356,10 +8348,14 @@ int CvPlayer::calculateTotalCommerce() const
 bool CvPlayer::canEverResearch(TechTypes eTech) const
 {
 	PROFILE_EXTRA_FUNC();
-	if (GC.getTechInfo(eTech).isDisable()
+	if (eTech < 0 || eTech >= GC.getNumTechInfos()) {
+		return false; // ID de tech invalide
+	}
+	CvTechInfo& kTechInfo = GC.getTechInfo(eTech);
+	if (kTechInfo.isDisable()
 	|| GC.getCivilizationInfo(getCivilizationType()).isCivilizationDisableTechs(eTech)
 	|| !GC.getGame().canEverResearch(eTech)
-	|| GC.getTechInfo(eTech).isGlobal() && (isNPC() || GC.getGame().countKnownTechNumTeams(eTech) > 0))
+	|| kTechInfo.isGlobal() && (isNPC() || GC.getGame().countKnownTechNumTeams(eTech) > 0))
 	{
 		return false;
 	}
@@ -14845,47 +14841,52 @@ int CvPlayer::findPathLength(TechTypes eTech, bool bCost) const
 		return 0; // Base case return 0, we know it...
 	}
 
-	if ((bCost ? m_aiCostPathLengthCache[eTech] : m_aiPathLengthCache[eTech]) == -1)
+	int& cache = bCost ? m_aiCostPathLengthCache[eTech] : m_aiPathLengthCache[eTech];
+	if (cache == -1)
 	{
+		// Utilisation de pointeurs bruts car constructTechPathSet attend un vector<techPath*>
 		std::vector<techPath*> possiblePaths;
-		techPath* initialSeed = new techPath();
+		possiblePaths.push_back(new techPath());
 
-		possiblePaths.push_back(initialSeed);
+		constructTechPathSet(eTech, possiblePaths, *possiblePaths[0]);
 
-		constructTechPathSet(eTech, possiblePaths, *initialSeed);
-
-		// Find the lowest cost of the possible paths
-		int iValue;
 		int iBestValue = MAX_INT;
-
-		foreach_(const techPath* path, possiblePaths)
+		for (size_t i = 0; i < possiblePaths.size(); ++i)
 		{
+			techPath* pathPtr = possiblePaths[i];
+			const techPath& path = *pathPtr;
+
+			int iValue = 0;
 			if (bCost)
 			{
-				iValue = 0;
-
-				foreach_(const TechTypes& tech, *path)
+				for (size_t j = 0; j < path.size(); ++j)
 				{
-					iValue += GET_TEAM(getTeam()).getResearchCost(eTech);
+					TechTypes tech = path[j];
+					iValue += GET_TEAM(getTeam()).getResearchCost(tech);
 				}
 			}
-			else iValue = path->size();
-
+			else
+			{
+				iValue = static_cast<int>(path.size());
+			}
 
 			if (iValue < iBestValue)
 			{
 				iBestValue = iValue;
+				if (iBestValue == 1) break; // Early exit
 			}
-			delete path;
 		}
 
-		if (bCost)
+		// Nettoyage mémoire obligatoire (sinon fuite)
+		for (size_t i = 0; i < possiblePaths.size(); ++i)
 		{
-			m_aiCostPathLengthCache[eTech] = iBestValue;
+			delete possiblePaths[i];
 		}
-		else m_aiPathLengthCache[eTech] = iBestValue;
+		possiblePaths.clear();
+
+		cache = iBestValue;
 	}
-	return bCost ? m_aiCostPathLengthCache[eTech] : m_aiPathLengthCache[eTech];
+	return cache;
 }
 
 
@@ -15380,6 +15381,12 @@ void CvPlayer::addMessage(const CvTalkingHeadMessage& message)
 {
 
 	m_listGameMessages.push_back(message);
+	
+	if (gPlayerLogLevel >= 1)
+	{
+		logBBAI("  Player %d (%S) get message : %S", getID(), getCivilizationDescription(0), message.getDescription());
+	}
+	
 }
 
 
@@ -27691,7 +27698,7 @@ int CvPlayer::getCorporationInfluence(CorporationTypes eIndex) const
 	}
 	iInfluence = getModifiedIntValue(iInfluence, (-5) * getEnvironmentalProtection() - 2 * getLaborFreedom());
 
-	logBBAI("  Player %d (%S) Has a Corporation Infleunce of %d for Corporation %s", getID(), getCivilizationDescription(0), iInfluence, GC.getCorporationInfo(eIndex).getDescription());
+	logBBAI("  Player %d (%S) Has a Corporation Influence of %d for Corporation %s", getID(), getCivilizationDescription(0), iInfluence, GC.getCorporationInfo(eIndex).getDescription());
 
 	return iInfluence;
 }

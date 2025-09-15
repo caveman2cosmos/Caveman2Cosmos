@@ -1274,6 +1274,9 @@
 			<PrereqOrHeritage>
 				<Type>HERITAGE_TAXON_SUIDAE</Type>
 				<Type>HERITAGE_TAXON_ELEPHANTIDAE</Type>
+				<Type>HERITAGE_TAXON_TAPIRIDAE</Type>	
+				<Type>HERITAGE_TAXON_HIPPOPOTAMIDAE</Type>	
+				<Type>HERITAGE_TAXON_MONOTREMATA</Type>	
 			</PrereqOrHeritage>
 			<ConstructCondition>
 				<Or>
@@ -1288,6 +1291,10 @@
 					<Has>
 						<GOMType>GOM_BUILDING</GOMType>
 						<ID>BUILDING_FOLKLORE_T_RHINOCEROSES</ID>
+					</Has>
+					<Has>
+						<GOMType>GOM_BUILDING</GOMType>
+						<ID>BUILDING_FOLKLORE_T_BULL</ID>
 					</Has>
 				</Or>
 			</ConstructCondition>
@@ -2619,13 +2626,34 @@
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_ENCLOSURE_PRIMATE</ArtDefineTag>
 			<PrereqTech>TECH_TRADE</PrereqTech>
-			<PrereqOrBuildings>
-				<BuildingType>BUILDING_CARNIVAL</BuildingType>
-				<BuildingType>BUILDING_ZOO</BuildingType>
-			</PrereqOrBuildings>
-			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_FOLKLORE_T_OLD_MAN_OF_THE_FOREST</BuildingType>
-			</PrereqInCityBuildings>
+			<ConstructCondition>
+				<And>
+					<Or>
+						<Has>
+							<GOMType>GOM_BUILDING</GOMType>
+							<ID>BUILDING_CARNIVAL</ID>
+						</Has>
+						<Has>
+							<GOMType>GOM_BUILDING</GOMType>
+							<ID>BUILDING_ZOO</ID>
+						</Has>
+					</Or>
+					<Or>
+						<Has>
+							<GOMType>GOM_BUILDING</GOMType>
+							<ID>BUILDING_FOLKLORE_T_OLD_MAN_OF_THE_FOREST</ID>
+						</Has>
+						<Has>
+							<GOMType>GOM_BUILDING</GOMType>
+							<ID>BUILDING_FOLKLORE_T_OLD_WORLD_MONKEYS</ID>
+						</Has>
+						<Has>
+							<GOMType>GOM_BUILDING</GOMType>
+							<ID>BUILDING_FOLKLORE_T_NEW_WORLD_MONKEYS</ID>
+						</Has>
+					</Or>
+				</And>
+			</ConstructCondition>
 			<iCost>306</iCost>
 			<iCostSizeModifier>1</iCostSizeModifier>
 			<iCostCountModifier>0</iCostCountModifier>

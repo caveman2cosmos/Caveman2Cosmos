@@ -1,4 +1,4 @@
-#pragma once
+﻿#pragma once
 
 #ifndef CIV4_UNIT_SELECTION_CRITERIA_H
 #define CIV4_UNIT_SELECTION_CRITERIA_H
@@ -66,20 +66,7 @@ public:
 	CvUnitSelectionCriteria& IsCommander(bool IsCommander) { m_bIsCommander = IsCommander; return *this; }
 	CvUnitSelectionCriteria& IsCommodore(bool IsCommodore) { m_bIsCommodore = IsCommodore; return *this; }
 
-	CvString getDescription() const
-	{
-		if (m_eProperty != NO_PROPERTY)
-		{
-			return (
-				CvString::format(
-					"Property %s for %S",
-					m_bPropertyBeneficial ? "improver" : "worsener",
-					GC.getPropertyInfo(m_eProperty).getDescription()
-				)
-			);
-		}
-		return CvString("");
-	}
+	CvString getDescription() const;
 
 	int getHash() const
 	{

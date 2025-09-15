@@ -50,6 +50,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_BARD_PEDIA</Tag>
 		<English>Celtic bards, poets and singers met from the 11th to the 17th century at the courts of Ireland, Scotland, Wales, and Brittany. Nowadays, the "bard" is defined as an outstanding artist who performs his own literary and musically refined works, with the accompaniment of an instrument, usually a guitar.</English>
+		<French>Les bardes celtiques, poètes et chanteurs, se réunissaient du XIe au XVIIe siècle dans les cours d'Irlande, d'Écosse, du Pays de Galles et de Bretagne. Aujourd'hui, le "barde" est défini comme un artiste remarquable qui interprète ses propres oeuvres littéraires et musicales raffinées, accompagné d'un instrument, généralement une guitare.</French>
 		<Polish>Bard celtycki poeta i pie&#156;niarz, spotykany od XI do XVII wieku na dworach Irlandii, Szkocji, Walii i Bretanii. Wsp&#243;&#179;cze&#156;nie mianem "bard" okre&#156;la si wybitnego artyst, wykonuj&#185;cego w&#179;asne, literacko i muzycznie dopracowane utwory z towarzyszeniem instrumentu zwykle gitary.</Polish>
 		<Russian>Кельтские барды, поэты и певцы встречались с XI по XVII век при дворах Ирландии, Шотландии, Уэльса и Бретани (исторической области Франции). Сегодня под "бардом" понимается выдающийся артист, исполняющий собственные литературные и музыкально изысканные произведения под аккомпанемент какого-либо инструмента, обычно гитары.</Russian>
 	</TEXT>
@@ -63,7 +64,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_CELEBRITY_PEDIA</Tag>
-		<English>Is there any corner of the world where a Jordan slam dunk or a Beckham free kick isn’t known? Since mass media delivers any kind of thing to any place in the world, anyone who's good enough at something is able to influence global culture... even Paris Hilton has a piece of this.</English>
+		<English>Is there any corner of the world where a Jordan slam dunk or a Beckham free kick isn't known? Since mass media delivers any kind of thing to any place in the world, anyone who's good enough at something is able to influence global culture... even Paris Hilton has a piece of this.</English>
+		<French>Existe-t-il un coin du monde où un dunk de Jordan ou un coup franc de Beckham ne soit pas connu ? Les médias de masse diffusant tout partout dans le monde, toute personne douée dans un domaine peut influencer la culture globale… même Paris Hilton y trouve sa place.</French>
 		<Italian>In quale angolo del mondo la gente non conosce una schiacciata di Michael Jordan o un calcio di punizione di Beckham? Da quando i mass media erogano qualsiasi tipo di cosa in qualsiasi luogo del mondo, tutti coloro che sono abbastanza bravi in qualcosa sono in grado di influenzare la cultura mondiale... anche Paris Hilton.</Italian>
 		<Polish>Celebryta (dawniej spotykana r&#243;wnie&#191; forma celebryt obecnie nienotowana przez s&#179;owniki), rodz. &#191;e&#241;ski celebrytka, l.mn. celebryci (ang. celebrity, z &#179;ac. celebrare) termin odnosz&#185;cy si do osoby czsto wystpuj&#185;cej w &#156;rodkach masowego przekazu i wzbudzaj&#185;cej ich zainteresowanie, bez wzgldu na pe&#179;niony przez ni&#185; zaw&#243;d (cho&#230; najcz&#156;ciej s&#185; to aktorzy, piosenkarze, uczestnicy reality show, sportowcy czy dziennikarze). Zgodnie z definicj&#185; sformu&#179;owan&#185; przez Daniela Boorstina w 1961 roku celebryt to osoba, kt&#243;ra jest znana z tego, &#191;e jest znana. S&#179;owo celebryt nie jest dok&#179;adnym synonimem gwiazdy, s&#179;awy, idola, autorytetu. Ze wzgldu na mo&#191;liwo&#156;&#230; szerokiego oddzia&#179;ywania spo&#179;ecznego celebryci wykorzystywani s&#185; w dzia&#179;aniach reklamowych.</Polish>
 		<Russian>В каком уголке мира не известен бросок Джордана или штрафной удар Бекхэма? Поскольку средства массовой информации вещают для всего человечества, каждый, кто достаточно хорош в чем-то, способен влиять на мировую культуру... даже Пэрис Хилтон.</Russian>
@@ -79,6 +81,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_STORY_TELLER_PEDIA</Tag>
 		<English>Since the beginning of time, storytelling has been an art capable of influencing a country's culture forever, and has the power to make the storyteller an important person in society.</English>
+		<French>Depuis la nuit des temps, le conte est un art capable d'influencer durablement la culture d'un pays, donnant au conteur le pouvoir de devenir une personne importante dans la société.</French>
 		<Italian>Sin dall'alba dei tempi, l'arte dei cantastorie è stata in grado di influenzare la cultura di una nazione per sempre e di rendere il cantastorie una persona di rilievo per la società.</Italian>
 		<Polish>Klechdarz (bajda&#179;a) osoba zajmuj&#185;ca si opowiadaniem lub wymy&#156;laniem bajek, przypowie&#156;ci lub klechd. Czsto opowiada o legendarnej przesz&#179;o&#156;ci regionu, niezwyk&#179;ych wydarzeniach i postaciach czy osobliwo&#156;ciach krajobrazu. W Polsce klechdarze stanowi&#185; do&#156;&#230; liczn&#185; grup w&#156;r&#243;d mieszka&#241;c&#243;w Podhala i Tatr.</Polish>
 		<Russian>С незапамятных времен рассказывание историй было искусством, способным навсегда изменить культуру страны и сделать сказителя важной личностью в обществе.</Russian>

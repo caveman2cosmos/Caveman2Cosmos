@@ -17,5 +17,5 @@
 			<option id="Interval" key="Interval" type="int" default="5" get="getInterval"/>
 		</section>
 	</options>
-	<init/>
+	<init></init>
 </mod>

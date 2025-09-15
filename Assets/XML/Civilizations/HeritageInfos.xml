@@ -5427,6 +5427,7 @@
 				<Type>HERITAGE_FOLKLORE_LION_CAVE</Type>
 				<Type>HERITAGE_FOLKLORE_TIGER_BENGAL</Type>
 				<Type>HERITAGE_FOLKLORE_TIGER_SIBERIAN</Type>
+				<Type>HERITAGE_FOLKLORE_LYNX</Type>
 			</PrereqOrHeritage>
 			<EraCommerceChanges>
 				<EraCommerceChange>

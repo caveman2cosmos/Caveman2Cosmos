@@ -59,6 +59,7 @@ void CvContractBroker::cleanup()
 	logContractBroker(1, "Cleaning Up <%S> ContractBroker Contracted Units: %d Advertising Tenders: %d Advertising Units: %d",
 		GET_PLAYER(m_eOwner).getName(),
 		m_contractedUnits.size(),
+		m_advertisingTenders.size(),
 		m_advertisingUnits.size());
 
 	logContractBroker(1, "     <%S>Current Work requests: %d", m_ownerName, m_workRequests.size());
@@ -730,6 +731,7 @@ bool CvContractBroker::makeContract(CvUnit* pUnit, int& iAtX, int& iAtY, CvUnit*
 				iAtY = contractedRequest->iAtY;
 
 				pJoinUnit = findUnit(contractedRequest->iUnitId);
+				FAssert(NULL != pJoinUnit);
 				return true;
 			}
 			return false;
@@ -835,6 +837,8 @@ advertisingUnit* CvContractBroker::findBestUnit(const workRequest& request, bool
 					int iPathTurns = 0;
 					int iMaxPathTurns = std::min((request.iPriority > LOW_PRIORITY_ESCORT_PRIORITY ? MAX_INT : 10), (iBestValue < 1 ? MAX_INT : 5 * iValue / iBestValue));
 
+					iValue = applyDistanceScoringFactor(iValue, unitX->plot(), pTargetPlot, 1);
+
 					if (request.iMaxPath < iMaxPathTurns)
 					{
 						iMaxPathTurns = request.iMaxPath;
@@ -845,7 +849,7 @@ advertisingUnit* CvContractBroker::findBestUnit(const workRequest& request, bool
 					|| !bThisPlotOnly
 					&& unitX->generatePath(pTargetPlot, MOVE_SAFE_TERRITORY | MOVE_AVOID_ENEMY_UNITS, true, &iPathTurns, iMaxPathTurns))
 					{
-						iValue /= (iPathTurns + 1);
+						//iValue /= (iPathTurns + 1);
 
 						if (iValue > iBestValue)
 						{

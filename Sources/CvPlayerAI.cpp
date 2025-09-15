@@ -30,6 +30,7 @@
 #include "CvDLLFAStarIFaceBase.h"
 #include "CvDLLInterfaceIFaceBase.h"
 #include "CvDLLUtilityIFaceBase.h"
+#include "BetterBTSAI.h"
 #include "FAStarNode.h"
 
 // Plot danger cache
@@ -184,7 +185,8 @@ void CvPlayerAI::AI_init()
 		AI_setEspionageWeight(GC.getLeaderHeadInfo(getPersonalityType()).getEspionageWeight());
 		//AI_setCivicTimer(((getMaxAnarchyTurns() == 0) ? (GC.getDefineINT("MIN_REVOLUTION_TURNS") * 2) : CIVIC_CHANGE_DELAY) / 2);
 		AI_setReligionTimer(1);
-		AI_setCivicTimer(1);
+		AI_setCivicTimer((getMaxAnarchyTurns() == 0) ? 1 : 2);  //from RI
+		//AI_initStrategyRand(); // K-Mod
 	}
 }
 
@@ -555,7 +557,7 @@ void CvPlayerAI::AI_doTurnUnitsPre()
 	}
 
 	//k-mod uncommented
-	if (AI_isDoStrategy(AI_STRATEGY_CRUSH))
+	if (AI_isDoStrategy(AI_STRATEGY_CRUSH) && GET_TEAM(getTeam()).getAnyWarPlanCount(true) > 0)
 	{
 		AI_convertUnitAITypesForCrush();
 	}
@@ -1461,6 +1463,10 @@ void CvPlayerAI::AI_unitUpdate()
 		else
 		{
 			std::vector< std::pair<int, int> > groupList;
+			//Define a Priority Sorting (see AI_movementPriority)
+			LOG_PLAYER_BLOCK(4, {
+				logAiEvaluations(4,"AI_unitUpdate : Setting the GroupList for Player %d", getID());
+			});
 
 			for (CLLNode<int>* pCurrUnitNode = headGroupCycleNode(); pCurrUnitNode != NULL; pCurrUnitNode = nextGroupCycleNode(pCurrUnitNode))
 			{
@@ -1469,9 +1475,17 @@ void CvPlayerAI::AI_unitUpdate()
 
 				int iPriority = AI_movementPriority(pLoopSelectionGroup);
 				groupList.push_back(std::make_pair(iPriority, pCurrUnitNode->m_data));
+				LOG_PLAYER_BLOCK(4, {
+					logAiEvaluations(4,"item : %d; %d", iPriority, pCurrUnitNode->m_data);
+				});
 			}
 
 			algo::sort(groupList);
+
+			LOG_PLAYER_BLOCK(4, {
+				logAiEvaluations(4,"AI_unitUpdate : List sorted, Applying AI_update for each item for Player %d", getID());
+			});
+
 			for (size_t i = 0; i < groupList.size(); i++)
 			{
 				CvSelectionGroup* pLoopSelectionGroup = getSelectionGroup(groupList[i].second);
@@ -1483,6 +1497,12 @@ void CvPlayerAI::AI_unitUpdate()
 				}
 			}
 		}
+	}
+	else
+	{
+		LOG_PLAYER_BLOCK(4, {
+			logAiEvaluations(4,"AI_unitUpdate : Has Busy Unit for Player %d", getID());
+		});
 	}
 }
 
@@ -3105,7 +3125,9 @@ int CvPlayerAI::AI_targetCityValue(const CvCity* pCity, bool bRandomize, bool bI
 
 	int iValue = 1;
 
-	iValue += ((pCity->getPopulation() * (50 + pCity->calculateCulturePercent(getID()))) / 100);
+	int iPopulation = ((pCity->getPopulation() * 5 * (50 + pCity->calculateCulturePercent(getID()))) / 100);
+
+	iValue += iPopulation; 
 
 	/************************************************************************************************/
 	/* BETTER_BTS_AI_MOD					  06/30/10					 Mongoose & jdog5000	  */
@@ -3113,42 +3135,44 @@ int CvPlayerAI::AI_targetCityValue(const CvCity* pCity, bool bRandomize, bool bI
 	/* War strategy AI																			  */
 	/************************************************************************************************/
 		// Prefer lower defense
-	iValue += std::max(0, (100 - pCity->getDefenseModifier(false)) / 30);
-
-	if (pCity->getDefenseDamage() > 0)
+	const int iDefenseMod = std::max(0, (500 - pCity->getDefenseModifier(false)) / 2);
+	int iDefenseDmg = 0;
+	if (pCity->getDefenseDamage() > 0)  //Defense Damage is not Positif, it hurts
 	{
-		iValue += ((pCity->getDefenseDamage() / 30) + 1);
+		iDefenseDmg = ((pCity->getDefenseDamage() / 10) + 1);
 	}
-
+	iValue += iDefenseMod - iDefenseDmg;
 	// Significant amounting of borrowing/adapting from Mongoose AITargetCityValueFix
 	if (pCity->isCoastal(GC.getWorldInfo(GC.getMap().getWorldSize()).getOceanMinAreaSize()))
 	{
-		iValue += 2;
+		iValue += 5;
 	}
 
-	iValue += 4 * pCity->getNumActiveWorldWonders();
+	int iWonderPts = 4 * pCity->getNumActiveWorldWonders();
 
+	int iReligionPts = 0;
 	for (iI = 0; iI < GC.getNumReligionInfos(); iI++)
 	{
 		if (pCity->isHolyCity((ReligionTypes)iI))
 		{
-			iValue += std::max(2, ((GC.getGame().calculateReligionPercent((ReligionTypes)iI)) / 5));
-			iValue += ((AI_getFlavorValue(/* AI_FLAVOR_RELIGION */ (FlavorTypes)1) + 2) / 6);
+			iReligionPts += std::max(2, ((GC.getGame().calculateReligionPercent((ReligionTypes)iI)) / 5));
+			iReligionPts += ((AI_getFlavorValue(/* AI_FLAVOR_RELIGION */ (FlavorTypes)1) + 2) / 6);
 
 			if (GET_PLAYER(pCity->getOwner()).getStateReligion() == iI)
 			{
-				iValue += 2;
+				iReligionPts += 2;
 			}
 			if (getStateReligion() == iI)
 			{
-				iValue += 8;
+				iReligionPts += 8;
 			}
 			if (GC.getLeaderHeadInfo(getLeaderType()).getFavoriteReligion() == iI)
 			{
-				iValue += 1;
+				iReligionPts += 1;
 			}
 		}
 	}
+	iValue += iWonderPts + iReligionPts;
 
 	if (pCity->isEverOwned(getID()))
 	{
@@ -3164,6 +3188,7 @@ int CvPlayerAI::AI_targetCityValue(const CvCity* pCity, bool bRandomize, bool bI
 		iValue += std::min(8, (AI_adjacentPotentialAttackers(pCity->plot()) + 2) / 3);
 	}
 
+	int iPlots = 0;
 	for (iI = 0; iI < NUM_CITY_PLOTS; iI++)
 	{
 		pLoopPlot = plotCity(pCity->getX(), pCity->getY(), iI);
@@ -3172,34 +3197,35 @@ int CvPlayerAI::AI_targetCityValue(const CvCity* pCity, bool bRandomize, bool bI
 		{
 			if (pLoopPlot->getBonusType(getTeam()) != NO_BONUS)
 			{
-				iValue += std::min(8, std::max(1, AI_bonusVal(pLoopPlot->getBonusType(getTeam())) / 10));
+				iPlots += std::min(8, std::max(1, AI_bonusVal(pLoopPlot->getBonusType(getTeam())) / 10));
 			}
 
 			if (pLoopPlot->getOwner() == getID())
 			{
-				iValue++;
+				iPlots++;
 			}
 
 			if (pLoopPlot->isAdjacentPlayer(getID(), true))
 			{
-				iValue++;
+				iPlots++;
 			}
 		}
 	}
 
+	int iSpecial = 0;
 	if (GC.getGame().culturalVictoryValid()
 	&& GET_PLAYER(pCity->getOwner()).AI_isDoVictoryStrategy(AI_VICTORY_CULTURE3)
 	&& pCity->getCultureLevel() >= GC.getGame().culturalVictoryCultureLevel() - 1)
 	{
-		iValue += 15;
+		iSpecial += 15;
 
 		if (GET_PLAYER(pCity->getOwner()).AI_isDoVictoryStrategy(AI_VICTORY_CULTURE4))
 		{
-			iValue += 25;
+			iSpecial += 25;
 
 			if (pCity->getCultureLevel() >= (GC.getGame().culturalVictoryCultureLevel()))
 			{
-				iValue += 10;
+				iSpecial += 10;
 			}
 		}
 	}
@@ -3208,15 +3234,15 @@ int CvPlayerAI::AI_targetCityValue(const CvCity* pCity, bool bRandomize, bool bI
 	{
 		if (pCity->isCapital())
 		{
-			iValue += 10;
+			iSpecial += 10;
 
 			if (GET_PLAYER(pCity->getOwner()).AI_isDoVictoryStrategy(AI_VICTORY_SPACE4))
 			{
-				iValue += 20;
+				iSpecial += 20;
 
 				if (GET_TEAM(pCity->getTeam()).getVictoryCountdown(GC.getGame().getSpaceVictory()) >= 0)
 				{
-					iValue += 30;
+					iSpecial += 30;
 				}
 			}
 		}
@@ -3231,13 +3257,17 @@ int CvPlayerAI::AI_targetCityValue(const CvCity* pCity, bool bRandomize, bool bI
 		iTempValue *= std::max(1, ((GC.getMap().maxStepDistance() * 2) - GC.getMap().calculatePathDistance(pNearestCity->plot(), pCity->plot())));
 		iTempValue /= std::max(1, (GC.getMap().maxStepDistance() * 2));
 
-		iValue += iTempValue;
+		iSpecial += iTempValue;
 	}
 
+	iValue += iPlots + iSpecial;
+
+	int iRandom = 0;
 	if (bRandomize)
 	{
-		iValue += GC.getGame().getSorenRandNum(((pCity->getPopulation() / 2) + 1), "AI Target City Value");
+		iRandom = GC.getGame().getSorenRandNum(((pCity->getPopulation() * 2) + 1), "AI Target City Value");
 	}
+	iValue += iRandom;
 	/************************************************************************************************/
 	/* BETTER_BTS_AI_MOD					   END												  */
 	/************************************************************************************************/
@@ -3245,7 +3275,12 @@ int CvPlayerAI::AI_targetCityValue(const CvCity* pCity, bool bRandomize, bool bI
 		//	Prefer less defended
 	int iDefense = 5 + (static_cast<const CvCityAI*>(pCity))->getGarrisonStrength();
 	iDefense = std::max(1, iDefense);
-	iValue = ((iValue * 100) / iDefense);
+	iValue = ((iValue * 100) / intSqrt(iDefense));
+
+	LOG_PLAYER_BLOCK(3, {
+		logAiEvaluations(3,"Player %d Estimation of Target City %S, Final Value %d, Population %d, Defense Unit : %d, Fortifications : %d, Defense Dmg : %d, Wonders : %d, Religion : %d, Plots : %d, Special : %d, Random : %d,...", getID(), pCity->getName().GetCString(), iValue, iPopulation, iDefense, iDefenseMod, iDefenseDmg, iWonderPts, iReligionPts, iPlots, iSpecial, iRandom);
+	});
+
 
 	return iValue;
 }
@@ -5725,9 +5760,9 @@ int CvPlayerAI::AI_techBuildingValue(TechTypes eTech, int iPathLength, bool& bEn
 				//	Average value per city
 				iBuildingValue /= std::max(1, getNumCities());
 
-				if (gPlayerLogLevel > 2)
+				if (gPlayerLogLevel > 3)
 				{
-					logBBAI("\tBuilding %S new mechanism value: %d", kLoopBuilding.getDescription(), iBuildingValue);
+					logAiEvaluations(2, "\tPlayer %d evaluate TechBuilding %S new mechanism value: %d", getID(), kLoopBuilding.getDescription(), iBuildingValue);
 				}
 
 				iValue += iBuildingValue;
@@ -10263,10 +10298,10 @@ int CvPlayerAI::AI_unitValue(UnitTypes eUnit, UnitAITypes eUnitAI, const CvArea*
 	bool bisPositivePropertyUnit = (iGeneralPropertyValue > 0);
 	bool bUndefinedValid = false, bValid = false;
 
-	if (eUnitAI != UNITAI_PROPERTY_CONTROL && bisPositivePropertyUnit)
-	{
-		return 0;
-	}
+	//if (eUnitAI != UNITAI_PROPERTY_CONTROL && eUnitAI != UNITAI_SEE_INVISIBLE && bisPositivePropertyUnit)
+	//{
+	//	return 0;
+	//}
 
 	switch (eUnitAI)
 	{
@@ -10777,7 +10812,7 @@ int CvPlayerAI::AI_unitValue(UnitTypes eUnit, UnitAITypes eUnitAI, const CvArea*
 			case UNITAI_WORKER:
 			{
 				iValue += kUnitInfo.getNumBuilds();
-				iValue += kUnitInfo.getMoves() * iValue / 2;
+				iValue += (kUnitInfo.getMoves()-1) * iValue / 2;
 				//	Scale by how fast a worker works - the extra '4' is a fudge factor
 				//	to make worker values (somewhat) comparable to military unit values
 				//	now that we have workers that can upgrade to military and we need to
@@ -10853,11 +10888,15 @@ int CvPlayerAI::AI_unitValue(UnitTypes eUnit, UnitAITypes eUnitAI, const CvArea*
 					iValue += ((iCombatValue * kUnitInfo.getUnitCombatModifier(iI) * AI_getUnitCombatWeight((UnitCombatTypes)iI)) / 10000);
 				}
 
+				if (kUnitInfo.canMergeSplit() && GC.getGame().isOption(GAMEOPTION_COMBAT_SIZE_MATTERS)){
+					iValue *= 2;
+				}
+
 				break;
 			}
 			case UNITAI_ATTACK_CITY:
 			{
-				//	For now the AI cannot cope with bad prroperty values on anything but hunter or pillage units
+				//	For now the AI cannot cope with bad property values on anything but hunter or pillage units
 				if (iPropertyValue < 0)
 				{
 					iValue = 0;
@@ -11059,13 +11098,18 @@ int CvPlayerAI::AI_unitValue(UnitTypes eUnit, UnitAITypes eUnitAI, const CvArea*
 					}
 #endif // BATTLEWORN
 				}
+
+				if (kUnitInfo.canMergeSplit() && GC.getGame().isOption(GAMEOPTION_COMBAT_SIZE_MATTERS)){
+					iValue *= 2;
+				}
+
 				break;
 			}
 			case UNITAI_COLLATERAL:
 			{
 				iValue += iCombatValue;
 				iValue += ((iCombatValue * kUnitInfo.getCollateralDamage()) / 50);
-				iValue += ((iCombatValue * kUnitInfo.getMoves()) / 4);
+				iValue += ((iCombatValue * (kUnitInfo.getMoves()-1)) / 4);
 				iValue += ((iCombatValue * kUnitInfo.getWithdrawalProbability()) / 25);
 				//TB Combat Mods Begin
 				iValue += ((iCombatValue * kUnitInfo.getWithdrawalProbability() * kUnitInfo.getEarlyWithdraw()) / 25);
@@ -11079,7 +11123,7 @@ int CvPlayerAI::AI_unitValue(UnitTypes eUnit, UnitAITypes eUnitAI, const CvArea*
 			{
 				iValue -= AI_unitPropertyValue(eUnit) / 30;	//	Bad properties are good for pillagers
 				iValue += iCombatValue;
-				iValue += (iCombatValue * kUnitInfo.getMoves());
+				iValue += ((iCombatValue * (kUnitInfo.getMoves() - 1)) /4); //Calvitix Try to limit impact of moves
 				iValue += ((iCombatValue * kUnitInfo.getRepel()) / 100);
 				break;
 			}
@@ -11100,7 +11144,7 @@ int CvPlayerAI::AI_unitValue(UnitTypes eUnit, UnitAITypes eUnitAI, const CvArea*
 					//			iValue += ((iCombatValue * iCombatModifier) / 100);
 					iValue += ((iCombatValue * kUnitInfo.getUnitCombatModifier(iI) * AI_getUnitCombatWeight((UnitCombatTypes)iI)) / 12000);
 				}
-				iValue += ((iCombatValue * kUnitInfo.getMoves()) / 2);
+				iValue += ((iCombatValue * (kUnitInfo.getMoves() - 1) ) / 4);  //Calvitix  old value /2
 				break;
 			}
 			case UNITAI_PILLAGE_COUNTER:
@@ -11115,7 +11159,7 @@ int CvPlayerAI::AI_unitValue(UnitTypes eUnit, UnitAITypes eUnitAI, const CvArea*
 				iValue += iCombatValue;
 				iValue += ((iCombatValue * kUnitInfo.getUnyielding()) / 100);
 				iValue += ((iCombatValue * kUnitInfo.getPursuit()) / 100);
-				iValue += ((iCombatValue * kUnitInfo.getMoves()) / 2);
+				iValue += ((iCombatValue * (kUnitInfo.getMoves() - 1)) / 4);  // Calvitix 2
 				break;
 				//TB Combat Mods End
 			}
@@ -11155,7 +11199,7 @@ int CvPlayerAI::AI_unitValue(UnitTypes eUnit, UnitAITypes eUnitAI, const CvArea*
 					}
 				}
 
-				iValue += ((iCombatValue * kUnitInfo.getMoves()) / 2);
+				iValue += ((iCombatValue * (kUnitInfo.getMoves() - 1)) / 4);  //Calvitix /2
 				iValue += ((iCombatValue * kUnitInfo.getWithdrawalProbability()) / 100);
 				//TB Combat Mods Begin
 				iValue += ((iCombatValue * kUnitInfo.getPursuit()) / 150);
@@ -11172,6 +11216,11 @@ int CvPlayerAI::AI_unitValue(UnitTypes eUnit, UnitAITypes eUnitAI, const CvArea*
 
 					iValue += iTempValue;
 				}
+
+				if (kUnitInfo.canMergeSplit() && GC.getGame().isOption(GAMEOPTION_COMBAT_SIZE_MATTERS)){
+					iValue *= 2;
+				}
+
 				break;
 			}
 			case UNITAI_CITY_DEFENSE:
@@ -11182,7 +11231,7 @@ int CvPlayerAI::AI_unitValue(UnitTypes eUnit, UnitAITypes eUnitAI, const CvArea*
 					iValue = 0;
 					break;
 				}
-				iValue += ((iCombatValue * 2) / 3);
+				iValue += ((iCombatValue * 3) / 2);
 				iValue += ((iCombatValue * kUnitInfo.getCityDefenseModifier()) / 25);
 				//	The '30' scaling is empirical based on what seems reasonable for crime fighting units
 				// this is causing the AI to select prop control for defense.
@@ -11220,6 +11269,11 @@ int CvPlayerAI::AI_unitValue(UnitTypes eUnit, UnitAITypes eUnitAI, const CvArea*
 #endif // BATTLEWORN
 				//TB Combat Mods End
 				break;
+
+				if (kUnitInfo.canMergeSplit() && GC.getGame().isOption(GAMEOPTION_COMBAT_SIZE_MATTERS)){
+					iValue *= 2;
+				}
+
 			}
 			case UNITAI_CITY_COUNTER:
 			{
@@ -11229,7 +11283,7 @@ int CvPlayerAI::AI_unitValue(UnitTypes eUnit, UnitAITypes eUnitAI, const CvArea*
 					iValue = 0;
 					break;
 				}
-				iValue += ((iCombatValue * 2) / 3);
+				iValue += ((iCombatValue * 3) / 2);
 				iValue += ((iCombatValue * kUnitInfo.getCityDefenseModifier()) / 75);
 				//	The '30' scaling is empirical based on what seems reasonable for crime fighting units
 				// this is causing the AI to select prop control for defense.
@@ -11328,7 +11382,10 @@ int CvPlayerAI::AI_unitValue(UnitTypes eUnit, UnitAITypes eUnitAI, const CvArea*
 			}
 			case UNITAI_HUNTER:
 			{
-				iValue += iCombatValue * kUnitInfo.getMoves();
+				//Calvitix try to limit impact of moves
+				iValue += iCombatValue;
+				iValue += iCombatValue * (kUnitInfo.getMoves() - 1) / 2;
+				//iValue += iCombatValue * kUnitInfo.getMoves();
 				iValue = (
 					getModifiedIntValue(
 						iValue,
@@ -11347,7 +11404,14 @@ int CvPlayerAI::AI_unitValue(UnitTypes eUnit, UnitAITypes eUnitAI, const CvArea*
 			}
 			case UNITAI_HUNTER_ESCORT:
 			{
-				iValue += iCombatValue * kUnitInfo.getMoves();
+				//Calvitix try to limit impact of moves
+				iValue += iCombatValue;
+				iValue += iCombatValue * (kUnitInfo.getMoves() - 1) / 2; //Only extra moves gives +50% bonus
+
+				if (kUnitInfo.canMergeSplit() && GC.getGame().isOption(GAMEOPTION_COMBAT_SIZE_MATTERS)){
+					iValue *= 2;
+				}
+
 				break;
 			}
 			case UNITAI_MISSIONARY:
@@ -11421,20 +11485,20 @@ int CvPlayerAI::AI_unitValue(UnitTypes eUnit, UnitAITypes eUnitAI, const CvArea*
 			case UNITAI_ATTACK_SEA:
 			{
 				iValue += iCombatValue;
-				iValue += iCombatValue * kUnitInfo.getMoves() / 2;
+				iValue += iCombatValue * (kUnitInfo.getMoves() - 1) / 2; //Calvitix 50% bonus per extra moves
 				iValue += kUnitInfo.getBombardRate() * 4;
 				break;
 			}
 			case UNITAI_RESERVE_SEA:
 			{
 				iValue += iCombatValue;
-				iValue += iCombatValue * kUnitInfo.getMoves();
+				iValue += iCombatValue * (kUnitInfo.getMoves() - 1) / 2;
 				break;
 			}
 			case UNITAI_ESCORT_SEA:
 			{
 				iValue += iCombatValue;
-				iValue += iCombatValue * kUnitInfo.getMoves();
+				iValue += iCombatValue * (kUnitInfo.getMoves() - 1) / 4;
 				iValue += kUnitInfo.getInterceptionProbability() * 3;
 				if (kUnitInfo.getNumSeeInvisibleTypes() > 0)
 				{
@@ -11489,14 +11553,15 @@ int CvPlayerAI::AI_unitValue(UnitTypes eUnit, UnitAITypes eUnitAI, const CvArea*
 			}
 			case UNITAI_MISSILE_CARRIER_SEA:
 			{
-				iValue += iCombatValue * kUnitInfo.getMoves();
+				iValue += iCombatValue;
+				iValue += iCombatValue * (kUnitInfo.getMoves() - 1) /4 ;
 				iValue += (25 + iCombatValue) * (3 + (kUnitInfo.getCargoSpace()));
 				break;
 			}
 			case UNITAI_PIRATE_SEA:
 			{
 				iValue += iCombatValue;
-				iValue += (iCombatValue * kUnitInfo.getMoves());
+				iValue += (iCombatValue * (kUnitInfo.getMoves() - 1) /2);
 				break;
 			}
 			case UNITAI_ATTACK_AIR:
@@ -11564,7 +11629,7 @@ int CvPlayerAI::AI_unitValue(UnitTypes eUnit, UnitAITypes eUnitAI, const CvArea*
 			{
 				const InvisibleTypes eVisibilityRequested = criteria ? criteria->m_eVisibility : NO_INVISIBLE;
 				iValue += iCombatValue;
-				iValue += kUnitInfo.getMoves() * 3;
+				iValue += (kUnitInfo.getMoves() - 1) * 30 / 100;
 				if (eVisibilityRequested != NO_INVISIBLE)
 				{
 					if (GC.getGame().isOption(GAMEOPTION_COMBAT_HIDE_SEEK))
@@ -11590,7 +11655,7 @@ int CvPlayerAI::AI_unitValue(UnitTypes eUnit, UnitAITypes eUnitAI, const CvArea*
 						const InvisibilityArray& array = kUnitInfo.getVisibilityIntensityTypes();
 						for (InvisibilityArray::const_iterator it = array.begin(); it != array.end(); ++it)
 						{
-							iValue = getModifiedIntValue(iValue, 10 * (*it).second);
+							iValue = getModifiedIntValue(iValue, 100 * (*it).second);
 						}
 					}
 					else
@@ -11603,8 +11668,9 @@ int CvPlayerAI::AI_unitValue(UnitTypes eUnit, UnitAITypes eUnitAI, const CvArea*
 			case UNITAI_ESCORT:
 			{
 				iValue += iCombatValue;
-				//for every 10 pts of combat value, make each move pt count for 1 more than a base 1 each.
-				iValue += kUnitInfo.getMoves() * (1 + iCombatValue / 10);
+				//obsolete - for every 10 pts of combat value, make each move pt count for 1 more than a base 1 each.
+				//Try 
+				iValue += (kUnitInfo.getMoves()-1) * iCombatValue / 5;
 				//Combat weaknesses are very bad
 				for (int iI = 0; iI < GC.getNumTerrainInfos(); iI++)
 				{
@@ -11659,6 +11725,11 @@ int CvPlayerAI::AI_unitValue(UnitTypes eUnit, UnitAITypes eUnitAI, const CvArea*
 					//better because it enables the unit to move through opponent territory with a RoP
 				}
 				break;
+
+			if (kUnitInfo.canMergeSplit() && GC.getGame().isOption(GAMEOPTION_COMBAT_SIZE_MATTERS)){
+				iValue *= 2;
+			}
+
 			}
 			default: FErrorMsg("error");
 		}
@@ -11680,6 +11751,21 @@ int CvPlayerAI::AI_unitValue(UnitTypes eUnit, UnitAITypes eUnitAI, const CvArea*
 			}
 		}
 	}
+
+	if (gPlayerLogLevel > 3) //Calvitix, added a level 4 for very consuming logs
+	{
+		const CvWString strUnitType = GC.getUnitInfo(eUnit).getType();
+		const CvWString strUnitAIType = GC.getUnitAIInfo(eUnitAI).getType();
+
+		CvWString strCriteria = "None";
+		if (criteria != NULL)
+		{
+			strCriteria = criteria->getDescription();
+		}
+		logAiEvaluations(3, "AI Player %d evaluate Value for unit %S as type %S and criteria (%S), combat value %d, moves %d, Calculated value %d", getID(), strUnitType.c_str(), strUnitAIType.c_str(), strCriteria.c_str(), iCombatValue*100, kUnitInfo.getMoves(), iValue*100);
+	}
+
+
 	return std::max(0, iValue);
 }
 
@@ -11789,11 +11875,28 @@ int CvPlayerAI::AI_neededHunters(const CvArea* pArea) const
 	{
 		return 1; // A hunter unit might come in handy at some point
 	}
-	return (
-		std::min(
-			getNumCities() / 2 + pArea->getNumUnownedTiles() / 16 + 1,
-			getNumCities() + pArea->getNumUnownedTiles() / 64)
-	);
+	int iHuntersneeded = std::min(
+			intSqrt(getNumCities()) + pArea->getNumUnownedTiles() / 16 + 1,
+			getNumCities() / 2 + pArea->getNumUnownedTiles() / 64);
+	//Calvitix, limit the amount of hunters
+	#define NB_MAX_HUNTERS  10
+	WorldSizeTypes eWorldSize = GC.getMap().getWorldSize();
+	int iWorldSize = (int)eWorldSize;
+	int iMaxhunters = 4 + int(NB_MAX_HUNTERS * pow((iWorldSize + 1) / 6.0, 0.8));
+	return std::min(iHuntersneeded, iMaxhunters);
+	if (gPlayerLogLevel > 2)
+	{
+		int iNumUnowned = pArea->getNumUnownedTiles();
+		logAiEvaluations(2, "	Player %S Estimated number of hunters needed %d (num Cities : %d, num unowned Tiles : %d, value1 : %d, value2 : %d)",
+				this->getPlayer,
+				iHuntersneeded,
+				getNumCities(),
+				iNumUnowned,
+				getNumCities() / 2 + pArea->getNumUnownedTiles() / 16 + 1,
+				getNumCities() + pArea->getNumUnownedTiles() / 64
+			);
+	}
+	return (iHuntersneeded);
 }
 
 
@@ -11814,11 +11917,11 @@ int CvPlayerAI::AI_neededWorkers(const CvArea* pArea) const
 	{
 		return 0;
 	}
-	iNeeded = std::max(iNeeded, 1 + iCities + intSqrt(iCities)); // max 1 + 1 workers per city in area + 1 worker per city squared in area.
+	iNeeded = std::min(iNeeded, 1 + intSqrt(iCities) * 2); // max 1 + 1 worker per city squared in area.  Calvitix Reduce to 1 workers per city suqared in area
 
 	if (gPlayerLogLevel > 2)
 	{
-		logBBAI("Player %d needs %d Workers in Area %d.\n", getID(), iNeeded, pArea->getID());
+		logBBAI("Player %d needs %d Workers in Area %d for %d cities.\n", getID(), iNeeded, pArea->getID(), iCities);
 	}
 	return iNeeded;
 
@@ -12884,6 +12987,7 @@ int CvPlayerAI::AI_unitTargetMissionAIs(const CvUnit* pUnit, MissionAITypes* aeM
 			{
 				iPathTurns++;
 			}
+			iCount = iPathTurns;
 		}
 
 		// If the mission parameters state any amount of movement is ok or the amount of movement allowed is valid
@@ -17942,7 +18046,10 @@ void CvPlayerAI::AI_doDiplo()
 			{
 				continue;
 			}
-			logBBAI("Player %d trade calc to/from player %d", getID(), iI);
+			if (gPlayerLogLevel > 3)
+			{
+				logBBAI("Player %d trade calc to/from player %d", getID(), iI);
+			}
 
 			if (GET_PLAYER((PlayerTypes)iI).getTeam() != getTeam())
 			{
@@ -21570,10 +21677,8 @@ bool CvPlayerAI::AI_disbandUnit(int iExpThreshold)
 	{
 		if (gPlayerLogLevel >= 2)
 		{
-			CvWString szString;
-			getUnitAIString(szString, pBestUnit->AI_getUnitAIType());
-
-			logBBAI("	Player %d (%S) disbanding %S with UNITAI %S to save cash", getID(), getCivilizationDescription(0), pBestUnit->getName().GetCString(), szString.GetCString());
+			const CvWString szStringUnitAi = GC.getUnitAIInfo(pBestUnit->AI_getUnitAIType()).getType();
+			logBBAI("	Player %d (%S) disbanding %S with UNITAI %S to save cash", getID(), getCivilizationDescription(0), pBestUnit->getName().GetCString(), szStringUnitAi.GetCString());
 		}
 		pBestUnit->kill(false);
 		return true;
@@ -21653,6 +21758,12 @@ int CvPlayerAI::AI_getCultureVictoryStage() const
 
 	PROFILE_EXTRA_FUNC();
 	if (GC.getDefineINT("BBAI_VICTORY_STRATEGY_CULTURE") <= 0 || !GC.getGame().culturalVictoryValid())
+	{
+		return 0;
+	}
+
+	//If AIWeight for cultural is 0, no stage
+	if (GC.getLeaderHeadInfo(getPersonalityType()).getCultureVictoryWeight() == 0)
 	{
 		return 0;
 	}
@@ -21786,6 +21897,12 @@ int CvPlayerAI::AI_getSpaceVictoryStage() const
 	int iValue;
 
 	if (GC.getDefineINT("BBAI_VICTORY_STRATEGY_SPACE") <= 0)
+	{
+		return 0;
+	}
+
+	//If AIWeight for Space Vict. is 0, no stage
+	if (GC.getLeaderHeadInfo(getPersonalityType()).getSpaceVictoryWeight() == 0)
 	{
 		return 0;
 	}
@@ -21939,6 +22056,12 @@ int CvPlayerAI::AI_getConquestVictoryStage() const
 		return 0;
 	}
 
+	//If AIWeight for Conquest Vict. is 0, no stage
+	if (GC.getLeaderHeadInfo(getPersonalityType()).getConquestVictoryWeight() == 0)
+	{
+		return 0;
+	}
+
 	VictoryTypes eConquest = NO_VICTORY;
 	for (int iI = 0; iI < GC.getNumVictoryInfos(); iI++)
 	{
@@ -22070,6 +22193,13 @@ int CvPlayerAI::AI_getDominationVictoryStage() const
 		return 0;
 	}
 
+	//If AIWeight for Conquest Vict. is 0, no stage
+	if (GC.getLeaderHeadInfo(getPersonalityType()).getDominationVictoryWeight() == 0)
+	{
+		return 0;
+	}
+
+
 	VictoryTypes eDomination = NO_VICTORY;
 	for (int iI = 0; iI < GC.getNumVictoryInfos(); iI++)
 	{
@@ -22140,6 +22270,12 @@ int CvPlayerAI::AI_getDiplomacyVictoryStage() const
 	int iValue = 0;
 
 	if (GC.getDefineINT("BBAI_VICTORY_STRATEGY_DIPLOMACY") <= 0)
+	{
+		return 0;
+	}
+
+	//If AIWeight for Conquest Vict. is 0, no stage
+	if (GC.getLeaderHeadInfo(getPersonalityType()).getDiplomacyVictoryWeight() == 0)
 	{
 		return 0;
 	}
@@ -23749,6 +23885,16 @@ int CvPlayerAI::AI_playerCloseness(PlayerTypes eIndex, int iMaxDistance) const
 }
 
 
+int CvPlayerAI::AI_getTotalProperty(PropertyTypes eProperty) const
+{
+	int iValue = 0;
+	foreach_(CvCity * pLoopCity, cities())
+	{
+		iValue += pLoopCity->getPropertiesConst()->getValueByProperty(eProperty);
+	}
+	return iValue;
+}
+
 int CvPlayerAI::AI_getTotalAreaCityThreat(const CvArea* pArea, int* piLargestThreat) const
 {
 	PROFILE_FUNC();
@@ -24873,10 +25019,7 @@ int CvPlayerAI::AI_getCitySitePriorityFactor(const CvPlot* pPlot) const
 void CvPlayerAI::AI_updateCitySites(int iMinFoundValueThreshold, int iMaxSites) const
 {
 	PROFILE_EXTRA_FUNC();
-	if (gPlayerLogLevel > 1)
-	{
-		logBBAI("Player %d (%S) begin Update City Sites (min. value: %d)...", getID(), getCivilizationDescription(0), iMinFoundValueThreshold);
-	}
+	logAiEvaluations(1, "Player %d (%S) begin Update City Sites (min. value: %d)...", getID(), getCivilizationDescription(0), iMinFoundValueThreshold);
 	for (int iI = 0; iI < iMaxSites; iI++)
 	{
 		//Add a city to the list.
@@ -24899,10 +25042,7 @@ void CvPlayerAI::AI_updateCitySites(int iMinFoundValueThreshold, int iMaxSites) 
 					{
 						iBestFoundValue = iValue;
 						pBestFoundPlot = plotX;
-						if (gPlayerLogLevel > 1)
-						{
-							logBBAI("  Potential best city site (%d, %d) found value is %d (player modified value to %d)", plotX->getX(), plotX->getY(), iFoundValue, iValue);
-						}
+						logAiEvaluations(4, "  Potential best city site (%d, %d) found value is %d (player modified value to %d)", plotX->getX(), plotX->getY(), iFoundValue, iValue);
 					}
 				}
 			}
@@ -24911,17 +25051,11 @@ void CvPlayerAI::AI_updateCitySites(int iMinFoundValueThreshold, int iMaxSites) 
 		{
 			break;
 		}
-		if (gPlayerLogLevel > 1)
-		{
-			logBBAI("	Found City Site at (%d, %d)", pBestFoundPlot->getX(), pBestFoundPlot->getY());
-		}
+		logAiEvaluations(1, "	Found City Site at (%d, %d)", pBestFoundPlot->getX(), pBestFoundPlot->getY());
 		m_aiAICitySites.push_back(GC.getMap().plotNum(pBestFoundPlot->getX(), pBestFoundPlot->getY()));
 		AI_recalculateFoundValues(pBestFoundPlot->getX(), pBestFoundPlot->getY(), CITY_PLOTS_RADIUS, 2 * CITY_PLOTS_RADIUS);
 	}
-	if (gPlayerLogLevel > 1)
-	{
-		logBBAI("Player %d (%S) end Update City Sites", getID(), getCivilizationDescription(0));
-	}
+	logAiEvaluations(1, "Player %d (%S) end Update City Sites", getID(), getCivilizationDescription(0));
 }
 
 void CvPlayerAI::calculateCitySites() const
@@ -28667,7 +28801,7 @@ int CvPlayerAI::AI_promotionValue(PromotionTypes ePromotion, UnitTypes eUnit, co
 		if ((eUnitAI == UNITAI_SEE_INVISIBLE) ||
 			(eUnitAI == UNITAI_SEE_INVISIBLE_SEA))
 		{
-			iValue += (iTemp * 50);
+			iValue += (iTemp * 100); //50
 		}
 		else if ((eUnitAI == UNITAI_EXPLORE_SEA) ||
 			(eUnitAI == UNITAI_EXPLORE))
@@ -31236,7 +31370,7 @@ int CvPlayerAI::AI_promotionValue(PromotionTypes ePromotion, UnitTypes eUnit, co
 					eUnitAI == UNITAI_SEE_INVISIBLE_SEA ||
 					eUnitAI == UNITAI_PILLAGE_COUNTER)
 				{
-					iValue += (iTemp * 35);
+					iValue += (iTemp * 350);
 				}
 				else if (eUnitAI == UNITAI_COUNTER ||
 					eUnitAI == UNITAI_ANIMAL ||
@@ -31291,7 +31425,7 @@ int CvPlayerAI::AI_promotionValue(PromotionTypes ePromotion, UnitTypes eUnit, co
 					eUnitAI == UNITAI_SEE_INVISIBLE_SEA ||
 					eUnitAI == UNITAI_PILLAGE_COUNTER)
 				{
-					iValue += (iTemp * 35);
+					iValue += (iTemp * 350); //Calvitix Test
 				}
 				else if (eUnitAI == UNITAI_COUNTER ||
 					eUnitAI == UNITAI_ANIMAL ||
@@ -31409,7 +31543,7 @@ int CvPlayerAI::AI_promotionValue(PromotionTypes ePromotion, UnitTypes eUnit, co
 					eUnitAI == UNITAI_SEE_INVISIBLE_SEA ||
 					eUnitAI == UNITAI_PILLAGE_COUNTER)
 				{
-					iValue += (iTemp * 15);
+					iValue += (iTemp * 150);
 				}
 				else if (eUnitAI == UNITAI_COUNTER ||
 					eUnitAI == UNITAI_ANIMAL ||
@@ -31440,7 +31574,7 @@ int CvPlayerAI::AI_promotionValue(PromotionTypes ePromotion, UnitTypes eUnit, co
 					eUnitAI == UNITAI_SEE_INVISIBLE_SEA ||
 					eUnitAI == UNITAI_PILLAGE_COUNTER)
 				{
-					iValue += (iTemp * 15);
+					iValue += (iTemp * 150);
 				}
 				else if (eUnitAI == UNITAI_COUNTER ||
 					eUnitAI == UNITAI_ANIMAL ||
@@ -31471,7 +31605,7 @@ int CvPlayerAI::AI_promotionValue(PromotionTypes ePromotion, UnitTypes eUnit, co
 					eUnitAI == UNITAI_SEE_INVISIBLE_SEA ||
 					eUnitAI == UNITAI_PILLAGE_COUNTER)
 				{
-					iValue += (iTemp * 15);
+					iValue += (iTemp * 150);
 				}
 				else if (eUnitAI == UNITAI_COUNTER ||
 					eUnitAI == UNITAI_ANIMAL ||
@@ -31502,7 +31636,7 @@ int CvPlayerAI::AI_promotionValue(PromotionTypes ePromotion, UnitTypes eUnit, co
 					eUnitAI == UNITAI_SEE_INVISIBLE_SEA ||
 					eUnitAI == UNITAI_PILLAGE_COUNTER)
 				{
-					iValue += (iTemp * 8);
+					iValue += (iTemp * 80);
 				}
 				else if (eUnitAI == UNITAI_COUNTER ||
 					eUnitAI == UNITAI_ANIMAL ||
@@ -31533,7 +31667,7 @@ int CvPlayerAI::AI_promotionValue(PromotionTypes ePromotion, UnitTypes eUnit, co
 					eUnitAI == UNITAI_SEE_INVISIBLE_SEA ||
 					eUnitAI == UNITAI_PILLAGE_COUNTER)
 				{
-					iValue += (iTemp * 8);
+					iValue += (iTemp * 80);
 				}
 				else if (eUnitAI == UNITAI_COUNTER ||
 					eUnitAI == UNITAI_ANIMAL ||
@@ -31564,7 +31698,7 @@ int CvPlayerAI::AI_promotionValue(PromotionTypes ePromotion, UnitTypes eUnit, co
 					eUnitAI == UNITAI_SEE_INVISIBLE_SEA ||
 					eUnitAI == UNITAI_PILLAGE_COUNTER)
 				{
-					iValue += (iTemp * 8);
+					iValue += (iTemp * 80);
 				}
 				else if (eUnitAI == UNITAI_COUNTER ||
 					eUnitAI == UNITAI_ANIMAL ||
@@ -31716,12 +31850,32 @@ int CvPlayerAI::AI_promotionValue(PromotionTypes ePromotion, UnitTypes eUnit, co
 	{
 		iValue = std::max(1, iValue);
 	}
-
+	int iRandom = 0;
 	if (pUnit != NULL && iValue > 0 && !bForBuildUp)
 	{
 		//GC.getGame().logOOSSpecial(2,iValue, pUnit->getID());
-		iValue += GC.getGame().getSorenRandNum(25, "AI Unit Promote");
+		int iRandomRange = (int(50) + (iValue / 10)); //Calvitix introduce more Random for High Values
+		iRandom = GC.getGame().getSorenRandNum(iRandomRange, "AI Unit Promote");
+		if (iValue > 75)
+		{ //to permit the lower of value with random
+			iRandom -= iRandomRange / 2;
+		}
 	}
+
+	if (pUnit != NULL && !bForBuildUp && gUnitLogLevel > 3)
+	{
+		CvWString StrunitAIType = GC.getUnitAIInfo(pUnit->AI_getUnitAIType()).getType();
+		logAiEvaluations(2, "	Player %S, PromotionEval for Unit %S of type %S - %S : Value : %d, Random %d", this->getPlayer, pUnit->getName(0).GetCString(), StrunitAIType.GetCString(), GC.getPromotionInfo(ePromotion).getDescription(), iValue, iRandom);
+	}
+	else if ((pUnit != NULL && bForBuildUp && gUnitLogLevel > 3))
+	{
+		CvWString StrunitAIType = GC.getUnitAIInfo(pUnit->AI_getUnitAIType()).getType();
+		logAiEvaluations(2, "	Player %S, BuildUpEval for Unit %S of type %S - %S : Value : %d, Random %d", this->getPlayer, pUnit->getName(0).GetCString(), StrunitAIType.GetCString(), GC.getPromotionInfo(ePromotion).getDescription(), iValue, iRandom);
+	}
+
+	iValue += iRandom;
+
+
 
 	return iValue;
 }
@@ -32851,16 +33005,16 @@ int CvPlayerAI::AI_unitCombatValue(UnitCombatTypes eUnitCombat, UnitTypes eUnit,
 		if ((eUnitAI == UNITAI_SEE_INVISIBLE) ||
 			(eUnitAI == UNITAI_SEE_INVISIBLE_SEA))
 		{
-			iValue += (iTemp * 50);
+			iValue += (iTemp * 5);  //Calvitix origin 50
 		}
 		else if ((eUnitAI == UNITAI_EXPLORE_SEA) ||
 			(eUnitAI == UNITAI_EXPLORE))
 		{
-			iValue += (iTemp * 40);
+			iValue += (iTemp * 4);  //Calvitix origin 40
 		}
 		else if (eUnitAI == UNITAI_PIRATE_SEA)
 		{
-			iValue += (iTemp * 20);
+			iValue += (iTemp * 2); //Calvitix origin 20
 		}
 	}
 
@@ -32883,11 +33037,11 @@ int CvPlayerAI::AI_unitCombatValue(UnitCombatTypes eUnitCombat, UnitTypes eUnit,
 				(eUnitAI == UNITAI_ESCORT) ||
 				(eUnitAI == UNITAI_INFILTRATOR))
 		{
-			iValue += (iTemp * 40);
+			iValue += (iTemp * 20);  //40
 		}
 		else
 		{
-			iValue += (iTemp * 25);
+			iValue += (iTemp * 8);  //25
 		}
 	}
 

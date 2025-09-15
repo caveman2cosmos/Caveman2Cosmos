@@ -2209,7 +2209,7 @@ void CvGame::update()
 	startProfilingDLL(false);
 
 	//OutputDebugString(CvString::format("Start profiling(false) for CvGame::update()\n").c_str());
-	PROFILE_BEGIN("CvGame::update");
+	PROFILE_BEGIN("CvGame::update",UPD1);
 	{
 		PROFILE("CvGame::update.ViewportInit");
 
@@ -2321,7 +2321,7 @@ again:
 		}
 	}
 	//OutputDebugString(CvString::format("Stop profiling(false) after CvGame::update()\n").c_str());
-	PROFILE_END();
+	PROFILE_END(UPD1);
 	stopProfilingDLL(false);
 }
 
@@ -4366,6 +4366,10 @@ bool CvGame::isValidVoteSelection(VoteSourceTypes eVoteSource, const VoteSelecti
 
 /*DllExport*/ bool CvGame::isDebugMode() const
 {
+#ifdef _DEBUG
+	return true;
+#endif // _DEBUG
+
 	return m_bDebugMode;
 }
 
@@ -5705,7 +5709,7 @@ void CvGame::addGreatPersonBornName(const CvWString& szName)
 
 void CvGame::doTurn()
 {
-	PROFILE_BEGIN("CvGame::doTurn()");
+	PROFILE_BEGIN("CvGame::doTurn()",DOTURN1);
 
 	// END OF TURN
 	CvEventReporter::getInstance().beginGameTurn( getGameTurn() );
@@ -5873,7 +5877,7 @@ void CvGame::doTurn()
 	gDLL->getEngineIFace()->SetDirty(GlobePartialTexture_DIRTY_BIT, true);
 	gDLL->getEngineIFace()->DoTurn();
 
-	PROFILE_END();
+	PROFILE_END(DOTURN1);
 
 	foreach_(CvMap* map, GC.getMaps())
 	{
@@ -7255,6 +7259,12 @@ bool CvGame::testVictory(VictoryTypes eVictory, TeamTypes eTeam, bool* pbEndScor
 		*pbEndScore = false;
 	}
 	if (!isVictoryValid(eVictory))
+	{
+		return false;
+	}
+
+	//Calvitix : in duel, the initial score can be at the beginning very buggy
+	if (getGameTurn() < 100)
 	{
 		return false;
 	}
@@ -9886,12 +9896,17 @@ void CvGame::doFlexibleDifficulty()
 		if (playerX.isAlive() && GET_TEAM(playerX.getTeam()).getLeaderID() == ePlayer)
 		{
 			int iTurns = playerX.getModderOption(MODDEROPTION_FLEXIBLE_DIFFICULTY_TURN_INCREMENTS);
+
 			int iTimer = getFlexibleDifficultyTimer(ePlayer);
 			const bool bHuman = playerX.isHumanPlayer(true);
 
 			if (bFlexDiffForAI && !bHuman)
 			{
 				iTurns = getModderGameOption(MODDERGAMEOPTION_FLEXIBLE_DIFFICULTY_AI_TURN_INCREMENTS);
+				if (iTurns == 0)
+				{
+					iTurns = 50;
+				}				
 			}
 
 			logging::logMsg("C2C.log", "[Flexible Difficulty] (%d / %d) turns until next flexible difficulty check for Player: %S\n", iTimer, iTurns, playerX.getName());
@@ -11675,7 +11690,7 @@ bool CvGame::isAutoRaze(const CvCity* city, const PlayerTypes eNewOwner, bool bC
 
 	if (isOption(GAMEOPTION_CHALLENGE_ONE_CITY)
 	|| getMaxCityElimination() > 0
-	|| bConquest && city->getPopulation() == 1)
+	|| (bConquest && city->getPopulation() == 1 && city->getNumWorldWonders() == 0))
 	{
 		return true;
 	}
