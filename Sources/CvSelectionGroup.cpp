@@ -5453,6 +5453,7 @@ TeamTypes CvSelectionGroup::getHeadTeam() const
 
 void CvSelectionGroup::clearMissionQueue()
 {
+	PROFILE_FUNC();
 	FAssert(getOwner() != NO_PLAYER);
 	FAssert(getHeadUnit());
 

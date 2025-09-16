@@ -54,7 +54,7 @@ public:
 	virtual void erasePlots() = 0;
 
 	virtual void updateFlagSymbols() = 0;
-	virtual void updateFog() = 0;
+	virtual void updateFog(const bool bApplyDecay = false) = 0;
 	virtual void updateSymbolVisibility() = 0;
 	virtual void updateMinimapColor() = 0;
 	virtual void updateCenterUnit() = 0;

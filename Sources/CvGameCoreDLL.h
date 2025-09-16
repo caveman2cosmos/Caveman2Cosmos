@@ -3,6 +3,9 @@
 #ifndef CvGameCoreDLL_h__
 #define CvGameCoreDLL_h__
 
+
+#define ENABLE_FOGWAR_DECAY
+
 //
 // includes (pch) for gamecore dll files
 // Author - Mustafa Thamer

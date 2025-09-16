@@ -9012,56 +9012,55 @@ bool CvCityAI::AI_addBestCitizen(bool bWorkers, bool bSpecialists, int* piBestPl
 {
 	PROFILE_FUNC();
 
-	bool bAvoidGrowth = AI_avoidGrowth();
-	bool bIgnoreGrowth = AI_ignoreGrowth();
-	bool bIsSpecialistForced = false;
+	const bool bAvoidGrowth = AI_avoidGrowth();
+	const bool bIgnoreGrowth = AI_ignoreGrowth();
 
 	int iBestSpecialistValue = 0;
 	SpecialistTypes eBestSpecialist = NO_SPECIALIST;
 
+	// --- Specialist selection ---
 	if (bSpecialists)
 	{
-		// count the total forced specialists
-		for (int iI = 0; iI < GC.getNumSpecialistInfos(); iI++)
+		for (int iI = 0; iI < GC.getNumSpecialistInfos(); ++iI)
 		{
-			if (getForceSpecialistCount((SpecialistTypes)iI) > 0)
+			const SpecialistTypes eSpec = static_cast<SpecialistTypes>(iI);
+			const int iForced = getForceSpecialistCount(eSpec);
+			if (iForced > 0 && isSpecialistValid(eSpec, 1))
 			{
-				bIsSpecialistForced = true;
-			}
-		}
-
-		// if we do not have a best specialist yet, then just find the one with the best value
-		if (eBestSpecialist == NO_SPECIALIST)
-		{
-			for (int iI = 0; iI < GC.getNumSpecialistInfos(); iI++)
-			{
-				if (isSpecialistValid((SpecialistTypes)iI, 1))
+				// Forced specialist: assign immediately
+				changeSpecialistCount(eSpec, 1);
+				if (piBestPlot && peBestSpecialist)
 				{
-					int iValue = AI_specialistValue(((SpecialistTypes)iI), bAvoidGrowth, false);
-					if (iValue >= iBestSpecialistValue)
-					{
-						iBestSpecialistValue = iValue;
-						eBestSpecialist = ((SpecialistTypes)iI);
-					}
+					*peBestSpecialist = eSpec;
+					*piBestPlot = -1;
+				}
+				return true;
+			}
+			if (isSpecialistValid(eSpec, 1))
+			{
+				const int iValue = AI_specialistValue(eSpec, bAvoidGrowth, false);
+				if (iValue > iBestSpecialistValue)
+				{
+					iBestSpecialistValue = iValue;
+					eBestSpecialist = eSpec;
 				}
 			}
 		}
 	}
 
+	// --- Worker plot selection ---
 	int iBestPlotValue = 0;
 	int iBestPlot = -1;
 	if (bWorkers)
 	{
-		for (int iI = SKIP_CITY_HOME_PLOT; iI < NUM_CITY_PLOTS; iI++)
+		for (int iI = SKIP_CITY_HOME_PLOT; iI < NUM_CITY_PLOTS; ++iI)
 		{
 			if (!isWorkingPlot(iI))
 			{
 				const CvPlot* pLoopPlot = getCityIndexPlot(iI);
-
-				if (pLoopPlot != NULL && canWork(pLoopPlot))
+				if (pLoopPlot && canWork(pLoopPlot))
 				{
 					const int iValue = AI_plotValue(pLoopPlot, bAvoidGrowth, /*bRemove*/ false, /*bIgnoreFood*/ false, bIgnoreGrowth);
-
 					if (iValue > iBestPlotValue)
 					{
 						iBestPlotValue = iValue;
@@ -9072,19 +9071,17 @@ bool CvCityAI::AI_addBestCitizen(bool bWorkers, bool bSpecialists, int* piBestPl
 		}
 	}
 
-	// if we found a plot to work and it's better than the best specialist.
+	// --- Decision: assign best option ---
 	if (iBestPlot != -1 && iBestPlotValue > iBestSpecialistValue)
 	{
-		// do not work the specialist
 		eBestSpecialist = NO_SPECIALIST;
 	}
 
 	if (eBestSpecialist != NO_SPECIALIST)
 	{
 		changeSpecialistCount(eBestSpecialist, 1);
-		if (piBestPlot != NULL)
+		if (piBestPlot && peBestSpecialist)
 		{
-			FAssert(peBestSpecialist != NULL);
 			*peBestSpecialist = eBestSpecialist;
 			*piBestPlot = -1;
 		}
@@ -9093,12 +9090,10 @@ bool CvCityAI::AI_addBestCitizen(bool bWorkers, bool bSpecialists, int* piBestPl
 	if (iBestPlot != -1)
 	{
 		setWorkingPlot(iBestPlot, true);
-		if (piBestPlot != NULL)
+		if (piBestPlot && peBestSpecialist)
 		{
-			FAssert(peBestSpecialist != NULL);
 			*peBestSpecialist = NO_SPECIALIST;
 			*piBestPlot = iBestPlot;
-
 		}
 		return true;
 	}

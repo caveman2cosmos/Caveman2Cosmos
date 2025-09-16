@@ -187,8 +187,12 @@ public:
 	void checkCityRevolt();
 	void checkFortRevolt();
 
-	void updateFog();
+	void updateFog(const bool bApplyDecay = false);
 	void updateVisibility();
+#ifdef ENABLE_FOGWAR_DECAY
+	void InitFogDecay();
+	short getVisibilityDecayBonus(bool pSeaPlot = false);
+#endif
 
 	void updateSymbolDisplay();
 	void updateSymbolVisibility();
@@ -817,7 +821,7 @@ public:
 	void updateRiverCrossing();
 
 	DllExport bool isRevealed(TeamTypes eTeam, bool bDebug) const;
-	void setRevealed(const TeamTypes eTeam, const bool bNewValue, const bool bTerrainOnly, const TeamTypes eFromTeam, const bool bUpdatePlotGroup);
+	void setRevealed(const TeamTypes eTeam, const bool bNewValue, const bool bTerrainOnly, const TeamTypes eFromTeam, const bool bUpdatePlotGroup, const bool bUpdateFog = true);
 	bool isAdjacentRevealed(TeamTypes eTeam, bool bDebug = false) const;
 	bool isAdjacentNonrevealed(TeamTypes eTeam) const;
 
@@ -1037,6 +1041,10 @@ protected:
 	int* m_paiBuildProgress;
 
 	short* m_aiLastSeenTurn;
+
+#ifdef ENABLE_FOGWAR_DECAY
+	short m_iVisibilityDecay;
+#endif
 
 	//	This array will be sparsely populated on most plots so not worth
 	//	an indirection, but look to find a way to use the sparseness to reduce memory usage
