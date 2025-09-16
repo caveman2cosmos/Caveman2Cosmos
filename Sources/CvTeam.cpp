@@ -5064,7 +5064,9 @@ bool CvTeam::isHasTech(TechTypes eIndex) const
 	}
 	FASSERT_BOUNDS(0, GC.getNumTechInfos(), eIndex);
 	FAssertMsg(m_pabHasTech, "m_pabHasTech is not expected to be equal with NULL");
-	return m_pabHasTech[eIndex];
+	if (m_pabHasTech)
+		return m_pabHasTech[eIndex];
+	return false;
 }
 
 

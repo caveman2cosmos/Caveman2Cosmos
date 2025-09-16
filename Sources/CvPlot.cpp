@@ -113,7 +113,9 @@ CvPlot::CvPlot()
 	m_iImprovementUpgradeHash = 0;
 	m_iCurrentRoundofUpgradeCache = -1;
 	// ! Toffer
-
+#ifdef ENABLE_FOGWAR_DECAY
+	m_iVisibilityDecay = MAX_DECAY;
+#endif
 	m_iImprovementCurrentValue = 0;
 
 	m_szScriptData = NULL;
@@ -164,7 +166,9 @@ void CvPlot::init(int iX, int iY)
 	m_aPlotTeamVisibilityIntensity.clear();
 	//--------------------------------
 	// Init non-saved data
-
+#ifdef ENABLE_FOGWAR_DECAY
+	m_iVisibilityDecay = MAX_DECAY;
+#endif
 	//--------------------------------
 	// Init other game data
 }
@@ -1144,7 +1148,7 @@ void CvPlot::checkFortRevolt()
 }
 
 
-void CvPlot::updateFog()
+void CvPlot::updateFog(const bool bApplyDecay)
 {
 	PROFILE_FUNC();
 
@@ -1152,9 +1156,11 @@ void CvPlot::updateFog()
 	{
 		return;
 	}
-	FAssert(GC.getGame().getActiveTeam() != NO_TEAM);
+	const TeamTypes &team = GC.getGame().getActiveTeam();
+	const bool bIsHuman = GET_TEAM(team).isHuman();
+	FAssert(team != NO_TEAM);
 
-	if (isRevealed(GC.getGame().getActiveTeam(), false))
+	if (isRevealed(team, false))
 	{
 		if (
 			gDLL->getInterfaceIFace()->isBareMapMode()
@@ -1167,10 +1173,49 @@ void CvPlot::updateFog()
 					||
 					// City screen - only lighten plots belonging to the city's current workable area.
 					gDLL->getInterfaceIFace()->getHeadSelectedCity() == getWorkingCity()
+					)
 				)
-			)
-		) gDLL->getEngineIFace()->LightenVisibility(getFOWIndex());
-		else gDLL->getEngineIFace()->DarkenVisibility(getFOWIndex());
+		)
+		{
+#ifdef ENABLE_FOGWAR_DECAY
+			if (bIsHuman && bApplyDecay)
+			{
+				bool bSeaPlot = isWater() && !isCoastal();
+				m_iVisibilityDecay = GET_TEAM(team).getVisibilityDecay(bSeaPlot);
+				m_iVisibilityDecay += getVisibilityDecayBonus(bSeaPlot);
+			}
+#endif
+			gDLL->getEngineIFace()->LightenVisibility(getFOWIndex());
+		}
+		else
+		{
+#ifdef ENABLE_FOGWAR_DECAY
+			if (!GET_TEAM(team).isHuman() || m_iVisibilityDecay == NO_DECAY)
+			{
+#endif
+				gDLL->getEngineIFace()->DarkenVisibility(getFOWIndex());
+#ifdef ENABLE_FOGWAR_DECAY
+			}
+			else
+			{
+				if (m_iVisibilityDecay > 0)
+				{
+					gDLL->getEngineIFace()->DarkenVisibility(getFOWIndex());
+
+
+
+					if (bApplyDecay && GC.getGame().getSorenRandNum(12, "Map decay") > 8)
+						m_iVisibilityDecay--;
+				}
+				else
+				{
+					gDLL->getEngineIFace()->BlackenVisibility(getFOWIndex());
+					setRevealed(team, false, false, NO_TEAM, false,false);
+				}
+			}
+#endif
+		}
+
 	} else gDLL->getEngineIFace()->BlackenVisibility(getFOWIndex());
 }
 
@@ -1196,6 +1241,67 @@ void CvPlot::updateVisibility()
 		pCity->updateVisibility();
 	}
 }
+
+#ifdef ENABLE_FOGWAR_DECAY
+void CvPlot::InitFogDecay()
+{
+	const TeamTypes& team = GC.getGame().getActiveTeam();
+	if (team != NO_TEAM)
+	{
+		m_iVisibilityDecay = GET_TEAM(team).getVisibilityDecay();
+	}
+	if (m_iVisibilityDecay <= 0)
+	{
+		m_iVisibilityDecay = 2;
+	}
+	m_iVisibilityDecay = GC.getGame().getSorenRandNum(m_iVisibilityDecay, "InitFog Decay");
+	m_iVisibilityDecay += getVisibilityDecayBonus();
+
+}
+
+short CvPlot::getVisibilityDecayBonus(bool pSeaPlot)
+{
+	const FeatureTypes eFeature = getFeatureType();
+	const BonusTypes eBonusType = getBonusType();
+	int iVisibilityDecay = 0;
+	if (eFeature != NO_FEATURE)
+	{
+		const CvFeatureInfo& kFeatureInfo = GC.getFeatureInfo(eFeature);
+		const CvString featureString = kFeatureInfo.getType();
+		const CvBonusInfo& kBonusInfo = GC.getBonusInfo(eBonusType);
+		if (featureString == "FEATURE_OASIS" || featureString == "FEATURE_CAVES" || featureString == "FEATURE_CITY_RUINS"
+		|| featureString.find("FEATURE_PLATY_") != std::string::npos)
+		{
+			iVisibilityDecay += 3;
+		}
+		if (featureString == "FEATURE_REEF_LIGHTHOUSE")
+		{
+			iVisibilityDecay += 9;
+		}
+	}
+	if (eBonusType != NO_BONUS)
+	{
+		iVisibilityDecay += 3;
+	}
+	if (getOwner() != NO_PLAYER)
+	{
+		iVisibilityDecay += 1;
+	}
+	if (isCityRadius())
+	{
+		iVisibilityDecay += 2;
+	}
+	if (isCity())
+	{
+		iVisibilityDecay += 6;
+	}
+	if (isFreshWater())
+	{
+		iVisibilityDecay += 3;
+	}
+	return iVisibilityDecay;
+}
+#endif
 
 
 void CvPlot::updateSymbolDisplay()
@@ -9387,7 +9493,7 @@ bool CvPlot::isRevealed(TeamTypes eTeam, bool bDebug) const
 }
 
 
-void CvPlot::setRevealed(const TeamTypes eTeam, const bool bNewValue, const bool bTerrainOnly, const TeamTypes eFromTeam, const bool bUpdatePlotGroup)
+void CvPlot::setRevealed(const TeamTypes eTeam, const bool bNewValue, const bool bTerrainOnly, const TeamTypes eFromTeam, const bool bUpdatePlotGroup, const bool bUpdateFog)
 {
 	PROFILE_EXTRA_FUNC();
 	FASSERT_BOUNDS(0, MAX_TEAMS, eTeam);
@@ -9458,7 +9564,10 @@ void CvPlot::setRevealed(const TeamTypes eTeam, const bool bNewValue, const bool
 			{
 				updateGraphics();
 			}
-			updateFog();
+			if (bUpdateFog)
+			{
+				updateFog();
+			}
 			updateVisibility();
 
 			gDLL->getInterfaceIFace()->setDirty(MinimapSection_DIRTY_BIT, true);

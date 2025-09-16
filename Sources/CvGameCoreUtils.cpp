@@ -4629,3 +4629,32 @@ CvString MissionAITypeToDescription(MissionAITypes eMissionAI)
 	default:                                   return "Unknown mission AI";
 	}
 }
+
+CvString AutomateTypeToDescription(AutomateTypes eAutomateAI)
+{
+	switch (eAutomateAI)
+	{
+	case NO_AUTOMATE:              return "---";
+	case AUTOMATE_BUILD:           return "Construct improvements";
+	case AUTOMATE_NETWORK:         return "Build and maintain networks";
+	case AUTOMATE_CITY:            return "Manage city automation";
+	case AUTOMATE_EXPLORE:         return "Explore the map";
+	case AUTOMATE_RELIGION:        return "Spread religion";
+	case AUTOMATE_PILLAGE:         return "Pillage enemy lands";
+	case AUTOMATE_HUNT:            return "Hunt down enemies";
+	case AUTOMATE_CITY_DEFENSE:    return "Defend the city";
+	case AUTOMATE_BORDER_PATROL:   return "Patrol borders";
+	case AUTOMATE_HURRY:           return "Hurry production";
+	case AUTOMATE_PIRATE:          return "Raid and plunder at sea";
+	case AUTOMATE_AIRSTRIKE:       return "Conduct air strikes";
+	case AUTOMATE_AIRBOMB:         return "Bomb enemy targets";
+	case AUTOMATE_AIR_RECON:       return "Perform air reconnaissance";
+	case AUTOMATE_UPGRADING:       return "Upgrade unit";
+	case AUTOMATE_CANCEL_UPGRADING:return "Cancel unit upgrade";
+	case AUTOMATE_PROMOTIONS:      return "Apply promotions";
+	case AUTOMATE_CANCEL_PROMOTIONS:return "Cancel promotions";
+	case AUTOMATE_SHADOW:          return "Shadow enemy units";
+	default:                       return "---";
+	}
+}
+

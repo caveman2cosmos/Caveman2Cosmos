@@ -473,7 +473,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONHELP_DOMAIN_CARGO_CHANGE</Tag>
 		<English>[ICON_BULLET]Outfits unit to transport %s1_Change Units [COLOR_WARNING_TEXT](And then allows NO OTHER domains!)[COLOR_REVERT]</English>
-		<French>[ICON_BULLET]Equipe l'unité pour transporter %s1_Change Unités</French>
+		<French>[ICON_BULLET]Équipe l'unité pour transporter des %s1_Change</French>
 		<German>[ICON_BULLET]ermöglicht den Transport von %s1_Change</German>
 		<Polish>[ICON_BULLET]Przystosowuje jednostk&#234; do transportu %s1_Change innych jednostek</Polish>
 		<Russian>[ICON_BULLET]Переоснащен для перевозки %s1_Change Units [COLOR_WARNING_TEXT](блокирует все ПРОЧИЕ улучшения!)[COLOR_REVERT]</Russian>
@@ -1363,7 +1363,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONHELP_SPECIAL_CARGO_CHANGE</Tag>
 		<English>[ICON_BULLET]Outfits unit to transport %s1_Change Units [COLOR_WARNING_TEXT](And then allows NO OTHER type!)[COLOR_REVERT]</English>
-		<French>[ICON_BULLET]Equipe l'unité pour transporter %s1_Change Unités</French>
+		<French>[ICON_BULLET]Équipe l'unité pour transporter des %s1_Change</French>
 		<German>[ICON_BULLET]ermöglicht den Transport von %s1:4_Change</German>
 		<Polish>[ICON_BULLET]Przygotowuje jednostk&#234; do transportu innych jednostek %s1_Change</Polish>
 		<Russian>[ICON_BULLET]Переоснащен для перевозки %s1_Change Units [COLOR_WARNING_TEXT](исключая любые ДРУГИЕ отряды!)[COLOR_REVERT]</Russian>

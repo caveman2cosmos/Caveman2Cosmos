@@ -2916,7 +2916,16 @@ void CvGameTextMgr::setUnitHelp(CvWStringBuffer &szString, const CvUnit* pUnit, 
 				CvWString szStringUnitAi = "";
 				getUnitAIString(szStringUnitAi, eUnitAI);
 				MissionAITypes eMissionAI = pUnit->getGroup()->AI_getMissionAIType();
-				CvWString MissionInfos = MissionAITypeToDescription(eMissionAI);
+				CvWString MissionInfos = "";
+				if (eMissionAI != NO_MISSIONAI)
+				{
+					MissionInfos = MissionAITypeToDescription(eMissionAI);
+				}
+				else if (pUnit->isAutomated())
+				{
+					AutomateTypes eAutomateAI = pUnit->getGroup()->getAutomateType();
+					MissionInfos = AutomateTypeToDescription(eAutomateAI);
+				}
 				szString.append(gDLL->getText("TXT_KEY_UNITHELP_ROLE", szStringUnitAi.GetCString(), MissionInfos.GetCString()));
 			}
 #endif

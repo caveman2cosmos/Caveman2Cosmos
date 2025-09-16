@@ -13020,7 +13020,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_MISC_ATTACKER_PURSUED_SUSTAIN_HUMAN</Tag>
 		<English>Your %s1_UnitName attempted to hit and run but has been entrapped into combat with a %s2_Enemy %s3_EnUName and forced to fight for its life</English>
-		<French>[COLOR_YELLOW][NUM1:Votre:Votre:Vos:Vos] %s1_UnitName [NUM1:a:a:ont:ont] tenté une attaque éclair, mais [NUM1:a:a:ont:ont] été rattrap[NUM1:é:ée:és:ées] par [NUM3:un:une:des:des] %s3_EnUName (%s2_Enemy) et [NUM1:a:a:ont:ont] été forcé à combattre[COLOR_REVERT]</French>
+		<French>[COLOR_YELLOW][NUM1:Votre:Votre:Vos:Vos] %s1_UnitName [NUM1:a:a:ont:ont] tenté une attaque éclair, mais [NUM1:a:a:ont:ont] été détect[NUM1:é:ée:és:ées] par [NUM3:le:la:les:les] %s3_EnUName (%s2_Enemy) et [NUM1:a:a:ont:ont] été forcé à combattre[COLOR_REVERT]</French>
 		<Italian>[NUM1:Il tuo:La tua:I tuoi:Le tue] %s1_UnitName [NUM1:è riuscito:è riuscita:sono riusciti:sono riuscite] a causare dei danni, prima di essere circondata da un'unità %s3_EnUName %s2_Enemy e costretta a combattere per la propria vita.</Italian>
 		<Polish>Twoja jednostka: %s1_UnitName pr&#243;bowa&#179;a uciec przed %s3_EnUName (%s2_Enemy) ale zosta&#179;a dopadni&#234;ta i musi teraz walczy&#230; o &#191;ycie</Polish>
 		<Russian>Ваш %s1_UnitName был перехвачен %s2_Enemy игрока %s3_EnUName после неудачного нападения со спины и теперь вынужден сражаться за свою жизнь.</Russian>
@@ -14674,7 +14674,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_MISC_EXPERIENCE_DRAFT</Tag>
 		<English>%d1 XP (Drafted Units get half normal XP)</English>
-		<French>%d1 EXP (Drafted Units get half normal XP)</French>
+		<French>%d1 EXP (Les unités conscrites reçoivent la moitié de l'EXP)</French>
 		<German>%d1 EP (Drafted Units get half normal XP)</German>
 		<Spanish>%d1 PE (Drafted Units get half normal XP)</Spanish>
 		<Polish>%d1 EXP (Drafted Units get half normal XP)</Polish>

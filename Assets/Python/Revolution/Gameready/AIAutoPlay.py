@@ -103,7 +103,7 @@ class AIAutoPlay :
 		self.checkPlayer()
 		for i in range(GC.getMAX_PC_PLAYERS()):
 			if GC.getPlayer(i).isHumanDisabled():
-				GAME.setForcedAIAutoPlay(i, 0)
+				GAME.setForcedAIAutoPlay(i, 0, False)
 
 
 	def onBeginPlayerTurn(self, argsList):
