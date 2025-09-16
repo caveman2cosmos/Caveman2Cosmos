@@ -3616,12 +3616,34 @@ void CvCityAI::AI_chooseProduction()
 			return;
 		}
 	}
-	//#84 Attackers if at war
-	if (!bFinancialTrouble && bLandWar && GC.getGame().isOption(GAMEOPTION_AI_BOOST))
+	//#84 extra Attackers
+	if (!bFinancialTrouble)
 	{
-		if (AI_chooseUnit("Wartime at the end of priority", UNITAI_ATTACK))
+		//
+		int amountWanted = iNumCitiesInArea * 5;
+		if (bLandWar)
 		{
-			return;
+			amountWanted * 4;
+		}
+		if(bIsWarMonger)
+		{
+			amountWanted * 2;
+		}
+		if(bAggressiveAI)
+		{
+			amountWanted * 3;
+		}
+		if(bIsPeacefull)
+		{
+			amountWanted / 20;
+		}		
+		
+		if (player.AI_totalAreaUnitAIs(pArea, UNITAI_ATTACK) <= amountWanted)
+		{
+			if (AI_chooseUnit("attackers at priority #84", UNITAI_ATTACK))
+			{
+				return;
+			}
 		}
 	}
 	// Koshling - AI shouldn't choose gold as often as it does. If we have plenty of gold prefer research most of the time.
