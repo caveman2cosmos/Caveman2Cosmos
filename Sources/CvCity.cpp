@@ -6362,100 +6362,110 @@ int CvCity::calculateCultureDistance(const CvPlot* mainPlot, int iMaxDistance) c
 
 	// if the plot distance is greater than the maximum desired plot distance
 	// or if the plot does not exist, then the plot distance is maximal
-	if (plotDistance(getX(), getY(), mainPlot->getX(), mainPlot->getY()) > iMaxDistance) return MAX_INT;
+	if (!mainPlot || plotDistance(getX(), getY(), mainPlot->getX(), mainPlot->getY()) > iMaxDistance)
+		return MAX_INT;
 
 	// Potentially don't need to calculate anything if plot has no already calculated neighbors
-	bool bHasCalculatedNeighbors = false;
-	foreach_(const CvPlot* adjacentPlot, mainPlot->cardinalDirectionAdjacent())
+	const CvTeam& kTeam = GET_TEAM(getTeam());
+	const bool bIsWater = mainPlot->isWater();
+	const bool bIsCity = mainPlot->isCity();
+	const bool bIsBonus = mainPlot->getBonusType(getTeam()) != NO_BONUS;
+	const int terrainType = mainPlot->getTerrainType();
+	const int featureType = mainPlot->getFeatureType();
+	const int improvementType = mainPlot->getImprovementType();
+	const int routeType = mainPlot->getRouteType();
+	const int owner = mainPlot->getOwner();
+
+// C++03 compatible iteration
+bool bHasCalculatedNeighbors = false;
+std::vector<std::pair<const CvPlot*, int> > validNeighbors; // Note the space between > >
+
+CvPlot::adjacent_range adjacentPlots = mainPlot->cardinalDirectionAdjacent();
+for (CvPlot::adjacent_range::const_iterator it = adjacentPlots.begin(); it != adjacentPlots.end(); ++it)
+{
+	const CvPlot* adjacentPlot = *it;
+	int neighborDist = m_aCultureDistances[adjacentPlot];
+	if (neighborDist != MAX_INT && (neighborDist != 0 || adjacentPlot == plot()))
 	{
-		int neighborDist = m_aCultureDistances[adjacentPlot];
-		// An uncalculated tile will either have MAX_INT (no neighbors on prev calc) or 0 (1st iteration).
-		// 0 may be used if it's the city tile itself, though.
-		if (neighborDist != MAX_INT &&
-			(neighborDist != 0 || adjacentPlot == plot()))
-		{
-			bHasCalculatedNeighbors = true;
-			break;
-		}
+		bHasCalculatedNeighbors = true;
+		validNeighbors.push_back(std::make_pair(adjacentPlot, neighborDist));
 	}
-	if (!bHasCalculatedNeighbors) return MAX_INT;
+}
 
-	// Calculate base terrain distance. May be modified later based on neighbor chosen (river, city, etc)
+if (!bHasCalculatedNeighbors) return MAX_INT;
+
+	// Terrain/feature/route calculations
 	int terrainDistance = 0;
-
 	// Distance from ground tile type (peak or specific terrain)
 	if (mainPlot->isAsPeak())
 	{
 		terrainDistance += GC.getTerrainInfo(GC.getTERRAIN_PEAK()).getCultureDistance();
-		terrainDistance += !GET_TEAM(getTeam()).isMoveFastPeaks()
-			+ !GET_TEAM(getTeam()).isCanPassPeaks()
-			+ !GET_TEAM(getTeam()).isCanFoundOnPeaks();
+		terrainDistance += !kTeam.isMoveFastPeaks()
+			+ !kTeam.isCanPassPeaks()
+			+ !kTeam.isCanFoundOnPeaks();
 	}
 	else
 	{
-		terrainDistance += GC.getTerrainInfo(mainPlot->getTerrainType()).getCultureDistance();
+		terrainDistance += GC.getTerrainInfo((TerrainTypes)terrainType).getCultureDistance();
 		// Terrain distance increased if can't trade on water terrain, can't see far (optics)
-		if (mainPlot->isWater())
+		if (bIsWater)
 		{
-			if (!GET_TEAM(getTeam()).isTerrainTrade(mainPlot->getTerrainType())) terrainDistance += 2;
-			if (!mainPlot->isAdjacentToLand() && !GET_TEAM(getTeam()).isExtraWaterSeeFrom()) terrainDistance += 1;
+			if (!kTeam.isTerrainTrade((TerrainTypes)terrainType)) terrainDistance += 2;
+			if (!mainPlot->isAdjacentToLand() && !kTeam.isExtraWaterSeeFrom()) terrainDistance += 1;
 		}
 		else
 		{
 			// Freshwater penalty acts as an inhibitor; effectively reduced as farms spread irrigation,
 			// removed at bAllowsDesertFarming (refrigeration)
-			if (!mainPlot->isFreshWater() && !GET_TEAM(getTeam()).isCanFarmDesert()) terrainDistance += 1;
-
+			if (!mainPlot->isFreshWater() && !kTeam.isCanFarmDesert()) terrainDistance += 1;
 			if (mainPlot->isHills())
 			{
 				terrainDistance += GC.getTerrainInfo(GC.getTERRAIN_HILL()).getCultureDistance()
-					+ !GET_TEAM(getTeam()).isCanFoundOnPeaks()
-					+ !GET_TEAM(getTeam()).isBridgeBuilding();
+					+ !kTeam.isCanFoundOnPeaks()
+					+ !kTeam.isBridgeBuilding();
 			}
 		}
 	}
 
 	// Distance from features
-	if (mainPlot->getFeatureType() != NO_FEATURE)
+	if (featureType != NO_FEATURE)
 	{
 		// some features cause underlaying terrain cost to be ignored; oasis, floodplain, nat'l wonders
-		if (GC.getFeatureInfo(mainPlot->getFeatureType()).isIgnoreTerrainCulture())
+		const CvFeatureInfo& featureInfo = GC.getFeatureInfo((FeatureTypes)featureType);
+		if (featureInfo.isIgnoreTerrainCulture())
 		{
 			terrainDistance = 0;
 		}
 		// penalty for unimproved features
-		else if (mainPlot->getImprovementType() == NO_IMPROVEMENT)
+		else if (improvementType == NO_IMPROVEMENT)
 		{
 			terrainDistance += 1;
 		}
 		// penalty for improved features if outside city affected territory
-		else if (!mainPlot->isInCultureRangeOfCityByPlayer(mainPlot->getOwner())
-			  || !mainPlot->isInCultureRangeOfCityByPlayer(getOwner()))
+		else if (!mainPlot->isInCultureRangeOfCityByPlayer((PlayerTypes)owner)
+	 || !mainPlot->isInCultureRangeOfCityByPlayer(getOwner()))
 		{
 			terrainDistance += 1;
 		}
 		// Always add base feature cost
-		terrainDistance += GC.getFeatureInfo(mainPlot->getFeatureType()).getCultureDistance();
+		terrainDistance += featureInfo.getCultureDistance();
 	}
 
-	bool bIsBonus = mainPlot->getBonusType(getTeam()) != NO_BONUS;
-
+	// Route tier modifier
 	// Using route value/tier as softer land tile inhibitor by era
 	// Base distance (x): 0, 1, 2, 3, 4 ... translates to:
 	// Tier 0 (noroute):  0, 1, 3, 5, 7 ... // 2x-1: Always applies to tiles not yet influenced
 	// Tier 1 (trail):	  0, 1, 3, 4, 6 ... // 3x/2
 	// Tier 2 (path):	  0, 1, 2, 4, 5 ... // 4x/3
 	// Tier 3 (road):	  0, 1, 2, 3, 5 ... // 5x/4
-	if (!mainPlot->isWater() && !bIsBonus)
+	if (!bIsWater && !bIsBonus)
 	{
 		int routeTierMod = 0;
-
-		// If the plot has an existing route, and already inside the influence area of a city, maybe bump tier up (less penalties)
-		if (mainPlot->getRouteType() != NO_ROUTE && 
-			(mainPlot->isInCultureRangeOfCityByPlayer(mainPlot->getOwner()) ||
-			 mainPlot->isInCultureRangeOfCityByPlayer(getOwner())))
+		if (routeType != NO_ROUTE &&
+			(mainPlot->isInCultureRangeOfCityByPlayer((PlayerTypes)owner) ||
+				mainPlot->isInCultureRangeOfCityByPlayer(getOwner())))
 		{
-			routeTierMod = std::max(routeTierMod, GC.getRouteInfo(mainPlot->getRouteType()).getValue());
+			routeTierMod = std::max(routeTierMod, GC.getRouteInfo((RouteTypes)routeType).getValue());
 		}
 		// Penalties applied for low tier routes (pre-paved road)
 		if (routeTierMod == 0)
@@ -6471,6 +6481,7 @@ int CvCity::calculateCultureDistance(const CvPlot* mainPlot, int iMaxDistance) c
 	// Halve terrain distance if bonus is present
 	if (bIsBonus) terrainDistance /= 2;
 
+	// Final neighbor loop
 	/* Determine the final cultural distance of given plot:
 		1: All directions from given plot are checked (could come from weird direction)
 		2: Neighbors with distance of MAX_INT are ignored because they
@@ -6478,40 +6489,37 @@ int CvCity::calculateCultureDistance(const CvPlot* mainPlot, int iMaxDistance) c
 		3: Smallest total possible distance is used from all neighbors
 		4: Greater river penalty for lacking river trade, bridge building
 		5: City tiles are easier to influence, even across river */
-
 	int distance = MAX_INT;
-	const int extraRiverPenalty = !GET_TEAM(getTeam()).isBridgeBuilding() + !GET_TEAM(getTeam()).isRiverTrade();
-	const bool isCity = mainPlot->isCity();
+	const int extraRiverPenalty = !kTeam.isBridgeBuilding() + !kTeam.isRiverTrade();
 
-	foreach_(const CvPlot* adjacentPlot, mainPlot->cardinalDirectionAdjacent())
+	for (std::vector<std::pair<const CvPlot*, int> >::const_iterator it = validNeighbors.begin(); it != validNeighbors.end(); ++it)
 	{
-		int neighborDist = m_aCultureDistances[adjacentPlot];
 		// An uncalculated tile will either have MAX_INT (no neighbors on prev calc) or 0 (1st iteration).
 		// 0 may be used if it's the city tile itself, though.
-		if (neighborDist != MAX_INT &&
-			(neighborDist != 0 || adjacentPlot == plot()))
+		const CvPlot* adjacentPlot = it->first;
+		int neighborDist = it->second;
+		int netDistanceModifier = terrainDistance;
+		// If we are adjacent to our own city center, different rules. Cheaper, but not straight 0 cost.
+
+		if (neighborDist == 0)
 		{
-			int netDistanceModifier = terrainDistance;
-			// If we are adjacent to our own city center, different rules. Cheaper, but not straight 0 cost.
-			if (neighborDist == 0)
-			{
-				netDistanceModifier += mainPlot->isRiverCrossing(directionXY(mainPlot, adjacentPlot)) * (extraRiverPenalty);
-				netDistanceModifier /= 3;
-			}
-			else
-			{
-				netDistanceModifier += mainPlot->isRiverCrossing(directionXY(mainPlot, adjacentPlot)) * (1 + extraRiverPenalty) * 2;
-			}
-
-			// Other city tiles are easier to influence even if across river (city itself crosses river)
-			netDistanceModifier /= (1 + isCity);
-
-			neighborDist += 1 + std::max(0, netDistanceModifier);
-			if (neighborDist < distance) distance = neighborDist;
+			netDistanceModifier += mainPlot->isRiverCrossing(directionXY(mainPlot, adjacentPlot)) * (extraRiverPenalty);
+			netDistanceModifier /= 3;
 		}
+		else
+		{
+			netDistanceModifier += mainPlot->isRiverCrossing(directionXY(mainPlot, adjacentPlot)) * (1 + extraRiverPenalty) * 2;
+		}
+
+		// Other city tiles are easier to influence even if across river (city itself crosses river)
+		netDistanceModifier /= (1 + bIsCity);
+
+		int totalDist = neighborDist + 1 + std::max(0, netDistanceModifier);
+		if (totalDist < distance) distance = totalDist;
 	}
 	return distance;
 }
+
 
 
 void CvCity::clearCultureDistanceCache()
@@ -20886,18 +20894,18 @@ void CvCity::clearRawVicinityBonusCache(BonusTypes eBonus)
 bool CvCity::hasRawVicinityBonus(BonusTypes eBonus) const
 {
 	PROFILE_FUNC();
+
+	const int numBonusInfos = GC.getNumBonusInfos();
+	const int numBuildingInfos = GC.getNumBuildingInfos();
+
+	// --- Cache check (single-threaded only) ---
 	if (!GC.getGame().isMPOption(MPOPTION_SIMULTANEOUS_TURNS))
 	{
 		if (m_pabHasRawVicinityBonusCached == NULL)
 		{
-			m_pabHasRawVicinityBonusCached = new bool[GC.getNumBonusInfos()];
+			m_pabHasRawVicinityBonusCached = new bool[numBonusInfos]();
 			SAFE_DELETE_ARRAY(m_pabHasRawVicinityBonus);
-			m_pabHasRawVicinityBonus = new bool[GC.getNumBonusInfos()];
-
-			for (int iI = 0; iI < GC.getNumBonusInfos(); iI++)
-			{
-				m_pabHasRawVicinityBonusCached[iI] = false;
-			}
+			m_pabHasRawVicinityBonus = new bool[numBonusInfos]();
 		}
 
 		if (m_pabHasRawVicinityBonusCached[eBonus])
@@ -20906,48 +20914,60 @@ bool CvCity::hasRawVicinityBonus(BonusTypes eBonus) const
 		}
 	}
 
-	bool bResult = false;
-
-	//No sense in checking...
+	// --- Direct city plot check ---
 	if (plot()->getBonusType() == eBonus)
 	{
-		bResult = true;
+		if (!GC.getGame().isMPOption(MPOPTION_SIMULTANEOUS_TURNS))
+		{
+			m_pabHasRawVicinityBonus[eBonus] = true;
+			m_pabHasRawVicinityBonusCached[eBonus] = true;
+		}
+		return true;
 	}
 
-	if (!bResult)
+	// --- City plots check ---
+	for (int iI = 0, n = getNumCityPlots(); iI < n; ++iI)
 	{
-		for (int iI = 0; iI < getNumCityPlots(); iI++)
-		{
-			CvPlot* pLoopPlot = plotCity(getX(), getY(), iI);
-			if (pLoopPlot != NULL
+		CvPlot* pLoopPlot = plotCity(getX(), getY(), iI);
+		if (pLoopPlot != NULL
 			&& pLoopPlot->getBonusType() == eBonus
 			&& pLoopPlot->getOwner() == getOwner())
-			{
-				bResult = true;
-				break;
-			}
-		}
-	}
-
-	if (!bResult && bonusAvailableFromBuildings(eBonus))
-	{
-		for (int iI = 0; iI < GC.getNumBuildingInfos(); iI++)
 		{
-			if (GC.getBuildingInfo((BuildingTypes)iI).getFreeBonuses().hasValue(eBonus) && isActiveBuilding((BuildingTypes)iI))
+			if (!GC.getGame().isMPOption(MPOPTION_SIMULTANEOUS_TURNS))
 			{
-				bResult = true;
-				break;
+				m_pabHasRawVicinityBonus[eBonus] = true;
+				m_pabHasRawVicinityBonusCached[eBonus] = true;
+			}
+			return true;
+		}
+	}
+
+	// --- Building-provided bonus check ---
+	if (bonusAvailableFromBuildings(eBonus))
+	{
+		for (int iI = 0; iI < numBuildingInfos; ++iI)
+		{
+			const CvBuildingInfo& kBuilding = GC.getBuildingInfo((BuildingTypes)iI);
+			if (kBuilding.getFreeBonuses().hasValue(eBonus) && isActiveBuilding((BuildingTypes)iI))
+			{
+				if (!GC.getGame().isMPOption(MPOPTION_SIMULTANEOUS_TURNS))
+				{
+					m_pabHasRawVicinityBonus[eBonus] = true;
+					m_pabHasRawVicinityBonusCached[eBonus] = true;
+				}
+				return true;
 			}
 		}
 	}
 
+	// --- Cache result if applicable ---
 	if (!GC.getGame().isMPOption(MPOPTION_SIMULTANEOUS_TURNS))
 	{
-		m_pabHasRawVicinityBonus[eBonus] = bResult;
+		m_pabHasRawVicinityBonus[eBonus] = false;
 		m_pabHasRawVicinityBonusCached[eBonus] = true;
 	}
 
-	return bResult;
+	return false;
 }
 
 bool CvCity::isDevelopingCity() const

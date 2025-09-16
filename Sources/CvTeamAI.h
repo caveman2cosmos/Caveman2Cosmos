@@ -6,6 +6,7 @@
 #define CIV4_TEAM_AI_H
 
 #include "CvTeam.h"
+#include "CvGameCoreDLL.h"
 
 class CvArea;
 class CvCity;
@@ -863,6 +864,13 @@ public:
      */
 	bool AI_hasAdjacentLandPlots(TeamTypes eTeam) const;
 
+#ifdef ENABLE_FOGWAR_DECAY
+    /**
+     * Returns an number that will be the base for the plot decay. The higher the number is, the lastest the plot will disappear.
+     * The number is by default 1, and will be set to 3,6,9,12... depending on which Tech the player already has
+     */
+    int getVisibilityDecay(bool pSeaPlot = false);
+#endif
 
 protected:
 
@@ -898,6 +906,11 @@ protected:
 	int m_iLimitedWarPowerRatio;
 	int m_iDogpileWarRand;
 	int m_iMakePeaceRand;
+#ifdef ENABLE_FOGWAR_DECAY
+    bool m_bPermanentMapLand;
+    bool m_bPermanentMapSea;
+#endif
+
 
 	int AI_noTechTradeThreshold(bool bRecalculate = false) const;
 	int AI_techTradeKnownPercent(bool bRecalculate = false) const;
@@ -922,5 +935,8 @@ protected:
 
 // helper for accessing static functions
 #define GET_TEAM CvTeamAI::getTeam
+
+#define NO_DECAY -1
+#define MAX_DECAY 6
 
 #endif

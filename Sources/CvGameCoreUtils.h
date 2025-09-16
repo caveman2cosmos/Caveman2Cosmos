@@ -432,4 +432,5 @@ CvString MissionAITypeToString(MissionAITypes eMissionAI);
 // Conversion enum -> brut string found a city..., Move to...
 CvString MissionAITypeToDescription(MissionAITypes eMissionAI);
 
+CvString AutomateTypeToDescription(AutomateTypes eAutomateAI);
 #endif

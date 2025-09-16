@@ -143,6 +143,10 @@ void CvTeamAI::AI_reset(bool bConstructor)
 	m_iLimitedWarPowerRatio = 0;
 	m_iDogpileWarRand = 0;
 	m_iMakePeaceRand = 0;
+#ifdef	ENABLE_FOGWAR_DECAY
+	m_bPermanentMapLand = false;
+	m_bPermanentMapSea = false;
+#endif
 }
 
 
@@ -5028,3 +5032,114 @@ bool CvTeamAI::AI_hasAdjacentLandPlots(TeamTypes eTeam) const
 	}
 	return false;
 }
+
+#ifdef ENABLE_FOGWAR_DECAY
+int CvTeamAI::getVisibilityDecay(bool pSeaPlot)
+{
+	if ((pSeaPlot && m_bPermanentMapSea) || !isHuman()) return NO_DECAY;
+	if ((!pSeaPlot && m_bPermanentMapLand) || !isHuman()) return NO_DECAY;
+
+	if (pSeaPlot)
+	{
+		int iPathfinding = GC.getInfoTypeForString("TECH_NAVIGATION"); 
+		if (isHasTech((TechTypes)iPathfinding))
+		{
+			m_bPermanentMapSea = true;
+			return NO_DECAY;
+		}
+		iPathfinding = GC.getInfoTypeForString("TECH_COMPASS");
+		if (isHasTech((TechTypes)iPathfinding))
+		{
+			return 40;
+		}
+		iPathfinding = GC.getInfoTypeForString("TECH_CARTOGRAPHY");
+		if (isHasTech((TechTypes)iPathfinding))
+		{
+			return 30;
+		}
+		iPathfinding = GC.getInfoTypeForString("TECH_PAPER");
+		if (isHasTech((TechTypes)iPathfinding))
+		{
+			return 20;
+		}		
+		iPathfinding = GC.getInfoTypeForString("TECH_RUDDER");
+		if (isHasTech((TechTypes)iPathfinding))
+		{
+			return 15;
+		}
+		iPathfinding = GC.getInfoTypeForString("TECH_SEAFARING");
+		if (isHasTech((TechTypes)iPathfinding))
+		{
+			return 12;
+		}
+		
+		iPathfinding = GC.getInfoTypeForString("TECH_WRITING");
+		if (isHasTech((TechTypes)iPathfinding))
+		{
+			return 9;
+		}
+		iPathfinding = GC.getInfoTypeForString("TECH_STARGAZING");
+		if (isHasTech((TechTypes)iPathfinding))
+		{
+			return 6;
+		}
+		iPathfinding = GC.getInfoTypeForString("TECH_SAILING");
+		if (isHasTech((TechTypes)iPathfinding))
+		{
+			return 3;
+		}
+		return 1;
+	}
+	else
+	{
+		int iPathfinding = GC.getInfoTypeForString("TECH_CARTOGRAPHY");
+		if (isHasTech((TechTypes)iPathfinding))
+		{
+			m_bPermanentMapLand = true;
+			return NO_DECAY;
+		}		
+		iPathfinding = GC.getInfoTypeForString("TECH_SURVEYING");
+		if (isHasTech((TechTypes)iPathfinding))
+		{
+			return 40;
+		}
+		iPathfinding = GC.getInfoTypeForString("TECH_WRITING");
+		if (isHasTech((TechTypes)iPathfinding))
+		{
+			return 25;
+		}
+		iPathfinding = GC.getInfoTypeForString("TECH_EXPLORATION");
+		if (isHasTech((TechTypes)iPathfinding))
+		{
+			return 18;
+		}
+		iPathfinding = GC.getInfoTypeForString("TECH_IDEOGRAMS");
+		if (isHasTech((TechTypes)iPathfinding))
+		{
+			return 15;
+		}
+		iPathfinding = GC.getInfoTypeForString("TECH_PICTOGRAPHS");
+		if (isHasTech((TechTypes)iPathfinding))
+		{
+			return 12;
+		}
+		iPathfinding = GC.getInfoTypeForString("TECH_HUNTING");
+		if (isHasTech((TechTypes)iPathfinding))
+		{
+			return 9;
+		}
+
+		iPathfinding = GC.getInfoTypeForString("TECH_TRACKING");
+		if (isHasTech((TechTypes)iPathfinding))
+		{
+			return 6;
+		}
+		iPathfinding = GC.getInfoTypeForString("TECH_TRAILS");
+		if (isHasTech((TechTypes)iPathfinding))
+		{
+			return 3;
+		}
+	}
+	return 1;
+}
+#endif

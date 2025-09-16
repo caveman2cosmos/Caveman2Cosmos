@@ -2918,6 +2918,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_PLASTEEL</ArtDefineTag>
 			<TechReveal>TECH_HYPERMAGNETICS</TechReveal>
 			<TechCityTrade>TECH_HYPERMAGNETICS</TechCityTrade>
+			<iAIObjective>10</iAIObjective>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_MARTIAN_FRUIT</Type>

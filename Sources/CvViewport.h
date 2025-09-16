@@ -94,7 +94,7 @@ public:
 	virtual void erasePlots();
 
 	virtual void updateFlagSymbols();
-	virtual void updateFog();
+	virtual void updateFog(const bool bApplyDecay);
 	virtual void updateSymbolVisibility();
 	virtual void updateMinimapColor();
 	virtual void updateCenterUnit();
