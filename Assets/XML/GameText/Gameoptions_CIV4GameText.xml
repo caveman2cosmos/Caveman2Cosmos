@@ -280,13 +280,13 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_AI_BOOST_HELP</Tag>
-		<English>The AI start with an additional tribe, hunter and builds more atackers when at war</English>
-		<French>The AI start with an additional tribe, hunter and builds more atackers when at war</French>
-		<German>The AI start with an additional tribe, hunter and builds more atackers when at war</German>
-		<Italian>The AI start with an additional tribe, hunter and builds more atackers when at war</Italian>
-		<Spanish>The AI start with an additional tribe, hunter and builds more atackers when at war</Spanish>
-		<Polish>The AI start with an additional tribe, hunter and builds more atackers when at war</Polish>
-		<Russian>The AI start with an additional tribe, hunter and builds more atackers when at war</Russian>
+		<English>The AI start with an additional tribe</English>
+		<French>The AI start with an additional tribe</French>
+		<German>The AI start with an additional tribe</German>
+		<Italian>The AI start with an additional tribe</Italian>
+		<Spanish>The AI start with an additional tribe</Spanish>
+		<Polish>The AI start with an additional tribe</Polish>
+		<Russian>The AI start with an additional tribe</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_CHALLENGE_HIGH_TO_LOW</Tag>
