@@ -6331,7 +6331,7 @@ void CvUnit::move(CvPlot* pPlot, bool bShow)
 			gDLL->getInterfaceIFace()->playGeneralSound("AS3D_UN_BIRDS_SCATTER", pPlot->getPoint());
 		}
 	}
-	if(!(pPlot->getOwner() == getOwner()) && getOwner() != isNPC())
+	if((pPlot->getOwner() != getOwner() || !pPlot->isOwned() ) && pPlot->getOwner() != isNPC())
 	{
 		changeExperience100(10, 5);
 		changeExperience100(1, 20);
