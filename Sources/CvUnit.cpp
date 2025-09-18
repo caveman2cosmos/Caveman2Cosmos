@@ -6331,6 +6331,15 @@ void CvUnit::move(CvPlot* pPlot, bool bShow)
 			gDLL->getInterfaceIFace()->playGeneralSound("AS3D_UN_BIRDS_SCATTER", pPlot->getPoint());
 		}
 	}
+	if((pPlot->getOwner() != getOwner() || !pPlot->isOwned() ) && pPlot->getOwner() != isNPC())
+	{
+		changeExperience100(10, 5);
+		changeExperience100(1, 20);
+		if(isHasUnitCombat(GC.getUNITCOMBAT_RECON()))
+		{
+			changeExperience100(4, 100);
+		}
+	}
 }
 
 // false if unit is killed
@@ -28518,7 +28527,7 @@ CvUnit* CvUnit::getCommander() const
 		CvUnit* com = *it;
 		UnitCompCommander* comComp = com->getCommanderComp();
 		if (comComp == NULL)
-			continue;  // sécurité si jamais ça renvoie NULL
+			continue;  // sï¿½curitï¿½ si jamais ï¿½a renvoie NULL
 		if (comComp->getControlPointsLeft() <= 0)
 			continue;
 
@@ -28661,7 +28670,7 @@ CvUnit* CvUnit::getCommodore() const
 		CvUnit* com = *it;
 		UnitCompCommodore* comComp = com->getCommodoreComp();
 		if (comComp == NULL)
-			continue;  // sécurité si jamais ça renvoie NULL
+			continue;  // sï¿½curitï¿½ si jamais ï¿½a renvoie NULL
 		if (comComp->getControlPointsLeft() <= 0)
 			continue;
 

@@ -1896,6 +1896,10 @@ void CvPlayer::initFreeUnits()
 
 		// Settler units, can't start a game without one.
 		addStartUnitAI(UNITAI_SETTLE, iMult);
+		if(!isHumanPlayer() && GC.getGame().isOption(GAMEOPTION_AI_BOOST)){
+			addStartUnitAI(UNITAI_SETTLE, iMult);
+			addStartUnitAI(UNITAI_GREAT_HUNTER, iMult);
+		}
 
 		// Defensive units
 		int iCount = GC.getEraInfo(startEra).getStartingDefenseUnits();
@@ -14890,7 +14894,7 @@ int CvPlayer::findPathLength(TechTypes eTech, bool bCost) const
 			}
 		}
 
-		// Nettoyage mémoire obligatoire (sinon fuite)
+		// Nettoyage mï¿½moire obligatoire (sinon fuite)
 		for (size_t i = 0; i < possiblePaths.size(); ++i)
 		{
 			delete possiblePaths[i];

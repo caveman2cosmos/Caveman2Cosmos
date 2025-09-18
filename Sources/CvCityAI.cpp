@@ -1193,7 +1193,7 @@ void CvCityAI::AI_chooseProduction()
 		iNumAreaCitySites, iNumWaterAreaCitySites, iNumSettlers, iMaxSettlers
 		));
 
-	// --- Économie / Culture / Spécial ---
+	// --- ï¿½conomie / Culture / Spï¿½cial ---
 	LOG_BBAI_CITY(3, (
 		"City %s econ/culture: EconFlags=%08lx (bits=%d, threshold=%d), "
 		"ImportantCity=%d, CultureRank=%d/%d, CulturePerTurn=%d, TargetCulture=%d, "
@@ -3723,7 +3723,6 @@ void CvCityAI::AI_chooseProduction()
 
 
 	// Koshling - AI shouldn't choose gold as often as it does. If we have plenty of gold prefer research most of the time.
-
 	const int iCulturePressure = AI_calculateCulturePressure();
 	//	Set up weights 0-100 for each commerce type to weight the choice (gold weigth can actuially go higher than
 	//	100, but only if we already have less gold than our target in which case we should already have unconditonally

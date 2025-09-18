@@ -9207,6 +9207,20 @@
 		<Russian>Докажите, что вы превыше любого бога!</Russian>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_HANDICAP_NIGHTMARE_PLUS</Tag>
+		<English>Deeper Nightmare</English>
+		<French>Cauchemar</French>
+		<Italian>Incubo</Italian>
+		<Russian>Всемогущий</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HANDICAP_NIGHTMARE_HELP_PLUS</Tag>
+		<English>Nightmare extra production boost for AI</English>
+		<French>Nightmare extra production boost for AI</French>
+		<Italian>Nightmare extra production boost for AI</Italian>
+		<Russian>Nightmare extra production boost for AI</Russian>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_HANDICAP_NOBLE</Tag>
 		<English>Noble</English>
 		<French>Régent</French>
