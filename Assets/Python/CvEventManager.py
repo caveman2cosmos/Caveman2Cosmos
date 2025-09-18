@@ -2148,9 +2148,8 @@ class CvEventManager:
 		# Start as minor civ, become major.
 		if self.GO_START_AS_MINORS:
 			CyTeam = GC.getTeam(iTeam)
-
-			if CyTeam.isMinorCiv() and CyTeam.isOpenBordersTrading():
-
+			bhasTech = CyTeam.isHasTech(GC.getInfoTypeForString("TECH_CONDUCT"))
+			if CyTeam.isMinorCiv() and (CyTeam.isOpenBordersTrading() or bhasTech):				
 				CyTeam.setIsMinorCiv(False)
 				GC.getMap().verifyUnitValidPlot()
 				# Message

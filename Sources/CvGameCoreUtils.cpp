@@ -4614,7 +4614,7 @@ CvString MissionAITypeToDescription(MissionAITypes eMissionAI)
 	case MISSIONAI_HURRY_FOOD:                 return "Hurry food supply";
 	case MISSIONAI_CONTRACT:                   return "Fulfill contract";
 	case MISSIONAI_CONTRACT_UNIT:              return "Provide contracted unit";
-	case MISSIONAI_DELIBERATE_KILL:            return "Targeted assassination";
+	case MISSIONAI_DELIBERATE_KILL:            return "Targeted killing";
 	case MISSIONAI_REGROUP:                    return "Regroup with allies";
 	case MISSIONAI_HEAL_SUPPORT:               return "Heal and support units";
 	case MISSIONAI_PROPERTY_CONTROL_RESPONSE:  return "Move to Respond to property issues";

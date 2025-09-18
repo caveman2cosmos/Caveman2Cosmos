@@ -1157,7 +1157,8 @@ void CvPlot::updateFog(const bool bApplyDecay)
 		return;
 	}
 	const TeamTypes &team = GC.getGame().getActiveTeam();
-	const bool bIsHuman = GET_TEAM(team).isHuman();
+	const PlayerTypes myID = GC.getGame().getActivePlayer();
+	const bool bIsHuman = GET_TEAM(team).isHuman() || GC.getGame().getAIAutoPlay(myID) > 0 || gDLL->GetAutorun();
 	FAssert(team != NO_TEAM);
 
 	if (isRevealed(team, false))
@@ -1182,7 +1183,10 @@ void CvPlot::updateFog(const bool bApplyDecay)
 			{
 				bool bSeaPlot = isWater() && !isCoastal();
 				m_iVisibilityDecay = GET_TEAM(team).getVisibilityDecay(bSeaPlot);
-				m_iVisibilityDecay += getVisibilityDecayBonus(bSeaPlot);
+				if (m_iVisibilityDecay != NO_DECAY)
+				{
+					m_iVisibilityDecay += getVisibilityDecayBonus(bSeaPlot);
+				}
 			}
 #endif
 			gDLL->getEngineIFace()->LightenVisibility(getFOWIndex());
@@ -1190,7 +1194,7 @@ void CvPlot::updateFog(const bool bApplyDecay)
 		else
 		{
 #ifdef ENABLE_FOGWAR_DECAY
-			if (!GET_TEAM(team).isHuman() || m_iVisibilityDecay == NO_DECAY)
+			if (!bIsHuman || m_iVisibilityDecay == NO_DECAY)
 			{
 #endif
 				gDLL->getEngineIFace()->DarkenVisibility(getFOWIndex());
@@ -1206,6 +1210,11 @@ void CvPlot::updateFog(const bool bApplyDecay)
 
 					if (bApplyDecay && GC.getGame().getSorenRandNum(12, "Map decay") > 8)
 						m_iVisibilityDecay--;
+				}
+				else if (m_iVisibilityDecay > REMOVE_PLOT_DECAY)
+				{
+					gDLL->getEngineIFace()->BlackenVisibility(getFOWIndex());
+					m_iVisibilityDecay--;
 				}
 				else
 				{
@@ -1243,7 +1252,7 @@ void CvPlot::updateVisibility()
 }
 
 #ifdef ENABLE_FOGWAR_DECAY
-void CvPlot::InitFogDecay()
+void CvPlot::InitFogDecay(const bool pWithRandom)
 {
 	const TeamTypes& team = GC.getGame().getActiveTeam();
 	if (team != NO_TEAM)
@@ -1252,14 +1261,16 @@ void CvPlot::InitFogDecay()
 	}
 	if (m_iVisibilityDecay <= 0)
 	{
-		m_iVisibilityDecay = 2;
+		m_iVisibilityDecay = 6;
 	}
-	m_iVisibilityDecay = GC.getGame().getSorenRandNum(m_iVisibilityDecay, "InitFog Decay");
 	m_iVisibilityDecay += getVisibilityDecayBonus();
-
+	if (pWithRandom)
+	{
+		m_iVisibilityDecay = GC.getGame().getSorenRandNum((std::max(m_iVisibilityDecay * 2 / 3, 2)), "InitFog Decay") + m_iVisibilityDecay / 3;
+	}
 }
 
-short CvPlot::getVisibilityDecayBonus(bool pSeaPlot)
+short CvPlot::getVisibilityDecayBonus(const bool pSeaPlot)
 {
 	const FeatureTypes eFeature = getFeatureType();
 	const BonusTypes eBonusType = getBonusType();
@@ -4650,7 +4661,7 @@ bool CvPlot::isHasPathToEnemyCity( TeamTypes eAttackerTeam, bool bIgnoreBarb ) c
 	{
 		if (GET_PLAYER((PlayerTypes)iI).isAlive()
 		&& GET_TEAM(eAttackerTeam).AI_getWarPlan(GET_PLAYER((PlayerTypes)iI).getTeam()) != NO_WARPLAN
-		&& (!bIgnoreBarb || !GET_PLAYER((PlayerTypes)iI).isNPC() && !GET_PLAYER((PlayerTypes)iI).isMinorCiv()))
+		&& (!bIgnoreBarb || !GET_PLAYER((PlayerTypes)iI).isNPC() )) //&& !GET_PLAYER((PlayerTypes)iI).isMinorCiv()
 		{
 			const CvCity* pLoopCity = GET_PLAYER((PlayerTypes)iI).getCapitalCity();
 
@@ -4671,7 +4682,7 @@ bool CvPlot::isHasPathToEnemyCity( TeamTypes eAttackerTeam, bool bIgnoreBarb ) c
 	{
 		if (GET_PLAYER((PlayerTypes)iI).isAlive()
 		&& GET_TEAM(eAttackerTeam).AI_getWarPlan(GET_PLAYER((PlayerTypes)iI).getTeam()) != NO_WARPLAN
-		&& (!bIgnoreBarb || !GET_PLAYER((PlayerTypes)iI).isNPC() && !GET_PLAYER((PlayerTypes)iI).isMinorCiv()))
+		&& (!bIgnoreBarb || !GET_PLAYER((PlayerTypes)iI).isNPC() )) //&& !GET_PLAYER((PlayerTypes)iI).isMinorCiv()
 		{
 			foreach_(const CvCity* pLoopCity, GET_PLAYER((PlayerTypes)iI).cities())
 			{

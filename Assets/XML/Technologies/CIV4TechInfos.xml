@@ -4922,6 +4922,7 @@
 			<bTrade>1</bTrade>
 			<iGridX>24</iGridX>
 			<iGridY>5</iGridY>
+			<bOpenBordersTrading>1</bOpenBordersTrading>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_MILITARY</FlavorType>
@@ -6213,7 +6214,6 @@
 			<bTrade>1</bTrade>
 			<bGoodyTech>1</bGoodyTech>
 			<bTechTrading>1</bTechTrading>
-			<bOpenBordersTrading>1</bOpenBordersTrading>
 			<iGridX>28</iGridX>
 			<iGridY>11</iGridY>
 			<Flavors>

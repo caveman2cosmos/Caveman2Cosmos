@@ -659,8 +659,10 @@ protected:
 
 	int	m_iBuildPriority;
 	int	m_iTempBuildPriority;
-	bool m_bRequestedUnit;
-	bool m_bRequestedBuilding;
+	int m_iRequestedUnit;
+	int m_iRequestedBuilding;
+	#define MAX_REQUESTEDUNIT_PER_CITY 2
+	#define MAX_REQUESTEDBUILDING_PER_CITY 2
 
 	void AI_doDraft();
 	void AI_doHurry(bool bForce = false);
