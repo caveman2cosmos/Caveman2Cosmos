@@ -3842,7 +3842,7 @@ void CvPlayer::doTurn()
 
 #ifdef ENABLE_FOGWAR_DECAY
 		//Calvitix, Modmod FOGWAR PlotDecay
-		if (isHumanPlayer())
+		if (isHumanPlayer() || GC.getGame().getAIAutoPlay(getID()) > 0 || gDLL->GetAutorun())
 		{
 			if (GET_TEAM(getTeam()).getVisibilityDecay() != NO_DECAY)
 				GC.getMap().updateFog(true); //Calvitix, to applyPlotDecay
@@ -6196,6 +6196,9 @@ void CvPlayer::receiveGoody(CvPlot* pPlot, GoodyTypes eGoody, CvUnit* pUnit)
 				if (GC.getGame().getSorenRandNum(100, "Goody Map") < GC.getGoodyInfo(eGoody).getMapProb())
 				{
 					pLoopPlot->setRevealed(getTeam(), true, false, NO_TEAM, true);
+#ifdef ENABLE_FOGWAR_DECAY
+					pLoopPlot->InitFogDecay(false);
+#endif
 				}
 			}
 		}
@@ -23689,6 +23692,9 @@ bool CvPlayer::assimilatePlayer(PlayerTypes ePlayer)
 		if (pLoopPlot->isRevealed(kTeam.getID(), false))
 		{
 			pLoopPlot->setRevealed(getTeam(), true, false, kTeam.getID(), false);
+#ifdef ENABLE_FOGWAR_DECAY
+			pLoopPlot->InitFogDecay(false);
+#endif
 		}
 	}
 
