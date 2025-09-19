@@ -21,6 +21,9 @@ class CvPlotGroup;
 class CvUnit;
 class CvUnitSelectionCriteria;
 
+#define CITY_MAX_YIELD_RATE    9900000
+#define CITY_MAX_YIELD_RATE100 990000000
+
 // BUG - start
 void addGoodOrBad(int iValue, int& iGood, int& iBad);
 void subtractGoodOrBad(int iValue, int& iGood, int& iBad);

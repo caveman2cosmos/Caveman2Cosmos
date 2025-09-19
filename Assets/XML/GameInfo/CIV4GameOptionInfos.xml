@@ -723,5 +723,12 @@
 			<bDefault>0</bDefault>
 			<bVisible>1</bVisible>
 		</GameOptionInfo>
+		<GameOptionInfo>
+			<Type>GAMEOPTION_AI_BOOST</Type>
+			<Description>TXT_KEY_GAMEOPTION_AI_BOOST</Description>
+			<Help>TXT_KEY_GAMEOPTION_AI_BOOST_HELP</Help>
+			<bDefault>0</bDefault>
+			<bVisible>1</bVisible>
+		</GameOptionInfo>
 	</GameOptionInfos>
 </Civ4GameOptionInfos>

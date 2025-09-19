@@ -11124,7 +11124,7 @@ int CvCity::getYieldRate(const YieldTypes eYield) const
 int CvCity::getYieldRate100(const YieldTypes eYield) const
 {
 	PROFILE_FUNC();
-	return std::max(100, getBaseYieldRate(eYield) * getBaseYieldRateModifier(eYield) + 100 * getExtraYield(eYield));
+	return std::min(CITY_MAX_YIELD_RATE,std::max(100, getBaseYieldRate(eYield) * getBaseYieldRateModifier(eYield) + 100 * getExtraYield(eYield)));
 }
 
 int CvCity::getPlotYield(YieldTypes eIndex)	const
@@ -11818,26 +11818,34 @@ int CvCity::getCommerceRateAtSliderPercent(CommerceTypes eIndex, int iSliderPerc
 	{
 		updateCommerce(eIndex);
 	}
-	int iRate = getYieldRate100(YIELD_COMMERCE) * iSliderPercent / 100 + getBaseCommerceRateExtra(eIndex);
+	int iRate = std::min<int>(CITY_MAX_YIELD_RATE100, getYieldRate100(YIELD_COMMERCE));
+	int iExtraRate = std::min<int>(CITY_MAX_YIELD_RATE100, getBaseCommerceRateExtra(eIndex));
+
+	iRate = iRate * iSliderPercent / 100 + iExtraRate;
 
 	// Don't apply rate modifiers to negative commerce or you get counter-intuitive results
 	//	like intelligence agencies making your negative espionage worse!
-	if (iRate > 0)
+	if (iRate < CITY_MAX_YIELD_RATE)
 	{
-		iRate = iRate * getTotalCommerceRateModifier(eIndex) / 100;
+		if (iRate > 0)
+		{
+			iRate = iRate * getTotalCommerceRateModifier(eIndex) / 100;
+		}
+		else
+		{
+			iRate = iRate * 100 / getTotalCommerceRateModifier(eIndex);
+		}
+		iRate += getYieldRate(YIELD_PRODUCTION) * getProductionToCommerceModifier(eIndex);
 	}
-	else
-	{
-		iRate = iRate * 100 / getTotalCommerceRateModifier(eIndex);
-	}
-	iRate += getYieldRate(YIELD_PRODUCTION) * getProductionToCommerceModifier(eIndex);
 
 	// Culture and science cannot be negative
 	if (iRate < 0 && (eIndex == COMMERCE_CULTURE || eIndex == COMMERCE_RESEARCH))
 	{
 		return 0;
 	}
-	return iRate;
+	if (iRate < MIN_TOL_FALSE_ACCUMULATE)
+		return CITY_MAX_YIELD_RATE;
+	return  std::min(CITY_MAX_YIELD_RATE,iRate);
 }
 
 int CvCity::getTotalCommerceRateModifier(CommerceTypes eIndex) const
