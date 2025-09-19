@@ -520,11 +520,11 @@ void CvMap::updateFog(const bool bApplyDecay)
 }
 
 #ifdef ENABLE_FOGWAR_DECAY
-void CvMap::InitFogDecay()
+void CvMap::InitFogDecay(const bool pWithRandom)
 {
 	for (int iI = 0; iI < numPlots(); iI++)
 	{
-		plotByIndex(iI)->InitFogDecay();
+		plotByIndex(iI)->InitFogDecay(pWithRandom);
 	}
 }
 #endif
@@ -1342,7 +1342,7 @@ void CvMap::read(FDataStreamBase* pStream)
 	OutputDebugString("Reading Map: End\n");
 
 #ifdef ENABLE_FOGWAR_DECAY
-	InitFogDecay();
+	InitFogDecay(true);
 #endif
 
 }
@@ -1525,7 +1525,7 @@ void CvMap::afterSwitch()
 	Cy::call(PYScreensModule, "initMinimap");
 
 	setupGraphical();
-	updateFog(true);
+	updateFog();
 	updateSymbols();
 	updateFlagSymbols();
 	updateMinimapColor();

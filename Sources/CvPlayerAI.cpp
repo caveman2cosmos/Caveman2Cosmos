@@ -47,6 +47,11 @@
 //	(so that it doesn't change it's value as a component relative to other factors) a multiplier is needed
 #define	BUILDING_VALUE_TO_TECH_BUILDING_VALUE_MULTIPLIER	30
 
+#ifdef NO_CAN_MERGE_BONUS
+	#define EVAL_MERGE_FACTOR  1.5
+#else
+	#define EVAL_MERGE_FACTOR  2
+#endif
 // statics
 
 CvPlayerAI* CvPlayerAI::m_aPlayers = NULL;
@@ -513,12 +518,14 @@ void CvPlayerAI::AI_doTurnPost()
 {
 	PROFILE_FUNC();
 
-	if (isHumanPlayer() || isNPC() || isMinorCiv())
+	if (isHumanPlayer() || isNPC())
 	{
 		return;
 	}
-
-	AI_doDiplo();
+	if (!isMinorCiv())
+	{
+		AI_doDiplo();
+	}
 
 	for (int i = 0; i < GC.getNumVictoryInfos(); ++i)
 	{
@@ -10889,7 +10896,7 @@ int CvPlayerAI::AI_unitValue(UnitTypes eUnit, UnitAITypes eUnitAI, const CvArea*
 				}
 
 				if (kUnitInfo.canMergeSplit() && GC.getGame().isOption(GAMEOPTION_COMBAT_SIZE_MATTERS)){
-					iValue *= 2;
+					iValue = int(iValue * EVAL_MERGE_FACTOR);
 				}
 
 				break;
@@ -11100,7 +11107,7 @@ int CvPlayerAI::AI_unitValue(UnitTypes eUnit, UnitAITypes eUnitAI, const CvArea*
 				}
 
 				if (kUnitInfo.canMergeSplit() && GC.getGame().isOption(GAMEOPTION_COMBAT_SIZE_MATTERS)){
-					iValue *= 2;
+					iValue = int(iValue * EVAL_MERGE_FACTOR);
 				}
 
 				break;
@@ -11218,7 +11225,7 @@ int CvPlayerAI::AI_unitValue(UnitTypes eUnit, UnitAITypes eUnitAI, const CvArea*
 				}
 
 				if (kUnitInfo.canMergeSplit() && GC.getGame().isOption(GAMEOPTION_COMBAT_SIZE_MATTERS)){
-					iValue *= 2;
+					iValue = int(iValue * EVAL_MERGE_FACTOR);
 				}
 
 				break;
@@ -11271,7 +11278,7 @@ int CvPlayerAI::AI_unitValue(UnitTypes eUnit, UnitAITypes eUnitAI, const CvArea*
 				break;
 
 				if (kUnitInfo.canMergeSplit() && GC.getGame().isOption(GAMEOPTION_COMBAT_SIZE_MATTERS)){
-					iValue *= 2;
+					iValue = int(iValue * EVAL_MERGE_FACTOR);
 				}
 
 			}
@@ -11408,9 +11415,9 @@ int CvPlayerAI::AI_unitValue(UnitTypes eUnit, UnitAITypes eUnitAI, const CvArea*
 				iValue += iCombatValue;
 				iValue += iCombatValue * (kUnitInfo.getMoves() - 1) / 2; //Only extra moves gives +50% bonus
 
-				if (kUnitInfo.canMergeSplit() && GC.getGame().isOption(GAMEOPTION_COMBAT_SIZE_MATTERS)){
-					iValue *= 2;
-				}
+				//if (kUnitInfo.canMergeSplit() && GC.getGame().isOption(GAMEOPTION_COMBAT_SIZE_MATTERS)){
+				//	iValue *= EVAL_MERGE_FACTOR;
+				//}
 
 				break;
 			}
@@ -11727,7 +11734,7 @@ int CvPlayerAI::AI_unitValue(UnitTypes eUnit, UnitAITypes eUnitAI, const CvArea*
 				break;
 
 			if (kUnitInfo.canMergeSplit() && GC.getGame().isOption(GAMEOPTION_COMBAT_SIZE_MATTERS)){
-				iValue *= 2;
+				iValue = int(iValue * EVAL_MERGE_FACTOR);
 			}
 
 			}
@@ -22358,7 +22365,7 @@ int CvPlayerAI::AI_getDiplomacyVictoryStage() const
 /// determine what other players (including the human player) are doing.
 bool CvPlayerAI::AI_isDoVictoryStrategy(int iVictoryStrategy) const
 {
-	if (isNPC() || isMinorCiv() || !isAlive())
+	if (isNPC() || !isAlive()) //isMinorCiv() ||
 	{
 		return false;
 	}
@@ -22436,7 +22443,7 @@ int CvPlayerAI::AI_getVictoryStrategyHash() const
 {
 	PROFILE_FUNC();
 
-	if (isNPC() || isMinorCiv() || !isAlive())
+	if (isNPC() || !isAlive()) //isMinorCiv() ||
 	{
 		return 0;
 	}
@@ -22613,7 +22620,7 @@ int CvPlayerAI::AI_getStrategyRand(int iShift) const
 
 bool CvPlayerAI::AI_isDoStrategy(int iStrategy) const
 {
-	if (isHumanPlayer() || isNPC() || isMinorCiv() || !isAlive())
+	if (isHumanPlayer() || isNPC() || !isAlive()) //isMinorCiv() |
 	{
 		return false;
 	}
