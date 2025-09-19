@@ -1336,8 +1336,10 @@ void CvUnit::convert(CvUnit* pUnit, const bool bKillOriginal)
 		for (int iI = GC.getNumPromotionInfos() - 1; iI > -1; iI--)
 		{
 			const PromotionTypes ePromoX = static_cast<PromotionTypes>(iI);
-
-			if (pUnit->isHasPromotion(ePromoX))
+			const CvPromotionInfo& kPromo = GC.getPromotionInfo(ePromoX);
+			PromotionLineTypes eLine = kPromo.getPromotionLine();
+			const CvPromotionLineInfo& kLine = GC.getPromotionLineInfo(eLine);
+			if (pUnit->isHasPromotion(ePromoX) && !kLine.isBuildUp())
 			{
 				if (GC.getPromotionInfo(ePromoX).getGroupChange() != 0)
 				{
@@ -1833,6 +1835,11 @@ void CvUnit::doTurn()
 		if (plot()->getFeatureTurnDamage() != 0)
 		{
 			changeDamagePercent(plot()->getFeatureTurnDamage(), NO_PLAYER);
+			//Calvitix, Terrain Damage gives XP
+			if (isHurt() && plot()->getTerrainType() != NO_TERRAIN)
+			{
+				changeExperience100(4, 20);
+			}
 		}
 
 		if (plot()->getTerrainTurnDamage(this) != 0)
@@ -1844,6 +1851,11 @@ void CvUnit::doTurn()
 				changeColdDamage(plot()->getTerrainTurnDamage(this));
 			}
 			//TB Combat Mod
+			//Calvitix, Terrain Damage gives XP
+			if (isHurt() && plot()->getTerrainType() != NO_TERRAIN)
+			{
+				changeExperience100(2,25);
+			}
 		}
 	}
 
@@ -5119,7 +5131,7 @@ int CvUnit::defenderValue(const CvUnit* pAttacker) const
 				return 0;
 			}
 		}
-		else if (canCoexistWithAttacker(*pAttacker) || !pAttacker->canAttack(*this))
+		else if ((!isAnimal() && canCoexistWithAttacker(*pAttacker)) || !pAttacker->canAttack(*this))
 		{
 			return 0;
 		}
@@ -6331,7 +6343,7 @@ void CvUnit::move(CvPlot* pPlot, bool bShow)
 			gDLL->getInterfaceIFace()->playGeneralSound("AS3D_UN_BIRDS_SCATTER", pPlot->getPoint());
 		}
 	}
-	if((pPlot->getOwner() != getOwner() || !pPlot->isOwned() ) && pPlot->getOwner() != isNPC())
+	if((pPlot->getOwner() != getOwner() || !pPlot->isOwned() ) && !(GET_PLAYER(pPlot->getOwner()).isNPC()))
 	{
 		changeExperience100(10, 5);
 		changeExperience100(1, 20);
@@ -12413,7 +12425,7 @@ bool CvUnit::canCoexistWithAttacker(const CvUnit& attacker, bool bStealthDefend,
 		// Always invisible
 		|| alwaysInvisible() || attacker.alwaysInvisible()
 		// Coexists due to blending into a city (nullified by assassination)
-		|| !bAssassinate && plot()->isCity(true) && (isBlendIntoCity() || attacker.isBlendIntoCity())
+		|| !bAssassinate && plot()->isCity(false) && (isBlendIntoCity() || attacker.isBlendIntoCity())
 		// Invisibility to the attacking team (nullified by stealthDefend)
 		|| !bStealthDefend && isInvisible(attackerTeam, false)
 		// War enemy, or just always hostile
@@ -12501,7 +12513,7 @@ bool CvUnit::canUnitCoexistWithArrivingUnit(const CvUnit& enemyUnit) const
 			}
 		}
 
-		if (plot()->isCity(true) && (isBlendIntoCity() || enemyUnit.isBlendIntoCity()))
+		if (plot()->isCity(false) && (isBlendIntoCity() || enemyUnit.isBlendIntoCity()))
 		{
 			return true;
 		}
@@ -37998,6 +38010,8 @@ void CvUnit::doArrest()
 	if (pBestUnit)
 	{
 		attackSamePlotSpecifiedUnit(pBestUnit);
+		setMadeAttack(true);
+		changeMoves(GC.getMOVE_DENOMINATOR());
 	}
 }
 
@@ -38033,7 +38047,7 @@ bool CvUnit::canAmbush(const CvPlot* pPlot, bool bAssassinate) const
 		return false;
 	}
 
-	if (!bAssassinate && pPlot->isCity(true))
+	if (!bAssassinate && pPlot->isCity(false)) //true->false Calvitix (to be able to attack animals in fort)
 	{
 		return false;
 	}
@@ -38099,6 +38113,8 @@ bool CvUnit::doAmbush(bool bAssassinate)
 				if (pDefender != NULL)
 				{
 					attackSamePlotSpecifiedUnit(pDefender);
+					setMadeAttack(true); //Calvitix (if ambush succes, cannot attack anymore)
+					changeMoves(GC.getMOVE_DENOMINATOR());
 				}
 			}
 			GET_PLAYER(getOwner()).setAmbushingUnit(FFreeList::INVALID_INDEX);
@@ -38114,6 +38130,8 @@ void CvUnit::enactAmbush(bool bAssassinate)
 	if (pDefender != NULL)
 	{
 		attackSamePlotSpecifiedUnit(pDefender);
+		setMadeAttack(true); //Calvitix (if ambush succes, cannot attack anymore)
+		changeMoves(GC.getMOVE_DENOMINATOR());
 	}
 }
 

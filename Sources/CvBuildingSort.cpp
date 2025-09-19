@@ -149,10 +149,26 @@ int BuildingSortCost::getBuildingValue(const CvPlayer* pPlayer, CvCity* pCity, B
 	}
 }
 
-// dummy
 int BuildingSortName::getBuildingValue(const CvPlayer* pPlayer, CvCity* pCity, BuildingTypes eBuilding) const
 {
-	return 0;
+	const CvBuildingInfo& kBuilding = GC.getBuildingInfo(eBuilding);
+	// Get the localized name/description of the building
+	CvWString szName = kBuilding.getDescription();
+
+	if (szName.empty())
+		return 0;
+
+	// Encode the first few characters of the name into an integer
+	// This way we can return an int value that represents the alphabetical order
+	int value = 0;
+	for (int i = 0; i < std::min((int)szName.length(), 3); i++)
+	{
+		// Convert character to uppercase so sorting is case-insensitive
+		wchar_t c = towupper(szName[i]);
+		// Shift previous value and add current character code
+		value = value * 256 + (int)c;
+	}
+	return -value;
 }
 
 // name sorting defaults to A first

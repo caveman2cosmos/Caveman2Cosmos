@@ -27306,6 +27306,7 @@ int CvPlayerAI::AI_promotionValue(PromotionTypes ePromotion, UnitTypes eUnit, co
 		eUnitAI = kUnit.getDefaultUnitAIType();
 	}
 
+	//#1 Analyze basic promotion effects
 	if (pUnit)
 	{
 		for (int iI = 0; iI < kPromotion.getNumAIWeightbyUnitCombatTypes(); iI++)
@@ -27320,6 +27321,7 @@ int CvPlayerAI::AI_promotionValue(PromotionTypes ePromotion, UnitTypes eUnit, co
 		}
 	}
 
+	//#2 Effects that depend on unitAI role Spy
 	if (kUnit.isSpy())
 	{
 		//Readjust promotion choices favoring security, deception, logistics, escape, improvise,
@@ -27422,22 +27424,25 @@ int CvPlayerAI::AI_promotionValue(PromotionTypes ePromotion, UnitTypes eUnit, co
 		return iValue;
 	}
 
+	//#3 Effects that depend on unitAI role Leader
+	// Leaders don't take promotions like regular units, so we don't want to value them here
 	if (kPromotion.isLeader())
 	{
 		// Don't consume the leader as a regular promotion
 		return 0;
 	}
 
-	//	Koshling - this is a horrible kludge really to get the AI to realize that promotions
-	//	with a subdue animal bonus are VERY good on hunters.  However, it's VERY hard to figure
-	//	this out from first principals because its very indirect (outcome has per-promotion value,
-	//	but the outcome itself just defines a unit, which then has a build, which than has value!)
-	//	As a result I am just giving a bonus to outcome modifiers for hunters generically, which
-	//	CURRENTLY works ok since the available outcomes are basically the animal subdues
+	//#4 Effects that depend on unitAI role Hunter
 	if (eUnitAI == UNITAI_HUNTER ||
 		(eUnitAI == UNITAI_HUNTER_ESCORT) ||
 		(eUnitAI == UNITAI_GREAT_HUNTER))
 	{
+		//	Koshling - this is a horrible kludge really to get the AI to realize that promotions
+		//	with a subdue animal bonus are VERY good on hunters.  However, it's VERY hard to figure
+		//	this out from first principals because its very indirect (outcome has per-promotion value,
+		//	but the outcome itself just defines a unit, which then has a build, which than has value!)
+		//	As a result I am just giving a bonus to outcome modifiers for hunters generically, which
+		//	CURRENTLY works ok since the available outcomes are basically the animal subdues
 		for (int iI = 0; iI < GC.getNumOutcomeInfos(); iI++)
 		{
 			for (int iJ = 0; iJ < GC.getOutcomeInfo((OutcomeTypes)iI).getNumExtraChancePromotions(); iJ++)
@@ -27451,6 +27456,7 @@ int CvPlayerAI::AI_promotionValue(PromotionTypes ePromotion, UnitTypes eUnit, co
 		}
 	}
 
+	//#5 Effects for Promotions that have Blitz
 	if (kPromotion.isBlitz() && !bForBuildUp)
 	{
 		//ls612: AI to know that Blitz is only useful on units with more than one move now that the filter is gone
@@ -27474,6 +27480,7 @@ int CvPlayerAI::AI_promotionValue(PromotionTypes ePromotion, UnitTypes eUnit, co
 		}
 	}
 
+	//#6 Effects for Promotions that have Amphibious ??
 	if (kPromotion.isOneUp())
 	{
 		if (eUnitAI == UNITAI_RESERVE
@@ -27489,7 +27496,7 @@ int CvPlayerAI::AI_promotionValue(PromotionTypes ePromotion, UnitTypes eUnit, co
 		else iValue += 5;
 	}
 
-
+	//#7 Effects for Promotions that have Defensive Victory Move
 	if (kPromotion.isDefensiveVictoryMove())
 	{
 		if (eUnitAI == UNITAI_RESERVE
@@ -27507,7 +27514,7 @@ int CvPlayerAI::AI_promotionValue(PromotionTypes ePromotion, UnitTypes eUnit, co
 		}
 	}
 
-
+	//#8 Effects for Promotions that have Free Drop
 	if (kPromotion.isFreeDrop())
 	{
 		if (eUnitAI == UNITAI_PILLAGE || eUnitAI == UNITAI_ATTACK)
@@ -27517,7 +27524,7 @@ int CvPlayerAI::AI_promotionValue(PromotionTypes ePromotion, UnitTypes eUnit, co
 		else iValue += 8;
 	}
 
-
+	//#9 Effects for Promotions that have Offensive Victory Move
 	if (kPromotion.isOffensiveVictoryMove())
 	{
 		if ((eUnitAI == UNITAI_PILLAGE) ||
@@ -27542,6 +27549,7 @@ int CvPlayerAI::AI_promotionValue(PromotionTypes ePromotion, UnitTypes eUnit, co
 	}
 	iValue += iTemp;
 
+	//#10 Effects for Promotions that have Retreat
 	iTemp = kPromotion.getExcileChange();
 	if (iTemp < 0)
 	{
@@ -27564,6 +27572,7 @@ int CvPlayerAI::AI_promotionValue(PromotionTypes ePromotion, UnitTypes eUnit, co
 		}
 	}
 
+	//#11 Effects for Promotions that have Passage
 	iTemp = kPromotion.getPassageChange();
 	if (iTemp > 0)
 	{
@@ -27600,11 +27609,12 @@ int CvPlayerAI::AI_promotionValue(PromotionTypes ePromotion, UnitTypes eUnit, co
 		}
 	}
 
-	//iTemp = kPromotion.getNoNonOwnedCityEntryChange();
-	//iTemp = kPromotion.getBlendIntoCityChange();
+	//#12 iTemp = kPromotion.getNoNonOwnedCityEntryChange();
+	//#13 iTemp = kPromotion.getBlendIntoCityChange();
 	//Perhaps these will be interesting for differing AI types so it's here as a reminder
 	//No automatic value to be assigned at the moment.
 
+	//#14 Effects for Promotions that have BarbCoExist
 	iTemp = kPromotion.getBarbCoExistChange();
 	if (iTemp > 0)
 	{
@@ -27635,6 +27645,7 @@ int CvPlayerAI::AI_promotionValue(PromotionTypes ePromotion, UnitTypes eUnit, co
 		}
 	}
 
+	//#15 Effects for Promotions with isPillages...
 	{
 		iTemp = 0;
 		if (kPromotion.isPillageEspionage())
@@ -27805,6 +27816,7 @@ int CvPlayerAI::AI_promotionValue(PromotionTypes ePromotion, UnitTypes eUnit, co
 		iValue += iTemp;
 	}
 
+	//#16 Effects for AirCombat Units that have extra attacks...
 	iTemp = kPromotion.getAirCombatLimitChange();
 	if (iTemp != 0)
 	{
@@ -27816,6 +27828,7 @@ int CvPlayerAI::AI_promotionValue(PromotionTypes ePromotion, UnitTypes eUnit, co
 		}
 	}
 
+	//#17 Effects for Promotions that have Happyness Bonus...
 	iTemp = kPromotion.getCelebrityHappy();
 	if (iTemp != 0)
 	{
@@ -27839,6 +27852,7 @@ int CvPlayerAI::AI_promotionValue(PromotionTypes ePromotion, UnitTypes eUnit, co
 		}
 	}
 
+	//#18 Effects for Promotions that have extra collateral damage...
 	iTemp = kPromotion.getCollateralDamageLimitChange();
 	if (iTemp != 0)
 	{
@@ -27865,6 +27879,7 @@ int CvPlayerAI::AI_promotionValue(PromotionTypes ePromotion, UnitTypes eUnit, co
 		}
 	}
 
+	//#19 Effects 
 	iTemp = kPromotion.getCombatLimitChange();
 	if (iTemp != 0)
 	{
@@ -27896,6 +27911,7 @@ int CvPlayerAI::AI_promotionValue(PromotionTypes ePromotion, UnitTypes eUnit, co
 		}
 	}
 
+	//#20 Effects
 	iTemp = kPromotion.getExtraDropRange();
 	if (iTemp > 0)
 	{
@@ -27907,6 +27923,7 @@ int CvPlayerAI::AI_promotionValue(PromotionTypes ePromotion, UnitTypes eUnit, co
 	}
 
 
+	//#21 Effects for Promotions that have a chance to survive...
 	iTemp = kPromotion.getSurvivorChance();
 	if (iTemp > 0)
 	{
@@ -27928,6 +27945,7 @@ int CvPlayerAI::AI_promotionValue(PromotionTypes ePromotion, UnitTypes eUnit, co
 	int iWeight = 0;
 	const CvPropertyManipulators* promotionPropertyManipulators = GC.getPromotionInfo(ePromotion).getPropertyManipulators();
 
+	//#22 Effects for Promotions that have Property Manipulators...
 	if (promotionPropertyManipulators)
 	{
 		foreach_(const CvPropertySource * pSource, promotionPropertyManipulators->getSources())
@@ -27988,6 +28006,7 @@ int CvPlayerAI::AI_promotionValue(PromotionTypes ePromotion, UnitTypes eUnit, co
 		}
 	}
 
+	//#23 Effects for Promotions that get Hidden Nationality...
 	iTemp = kPromotion.getHiddenNationalityChange();
 	if (iTemp != 0)
 	{
@@ -28019,6 +28038,7 @@ int CvPlayerAI::AI_promotionValue(PromotionTypes ePromotion, UnitTypes eUnit, co
 
 	//TBHEAL review
 	//isNoSelfHeal()
+	//#24 Effects for Promotions that don't heal...
 	if (kPromotion.isNoSelfHeal())
 	{
 		if (pUnit)
@@ -28034,6 +28054,7 @@ int CvPlayerAI::AI_promotionValue(PromotionTypes ePromotion, UnitTypes eUnit, co
 		}
 	}
 
+	//#25 Effects for Promotions with ExtraMax HP()...
 	iTemp = kPromotion.getMaxHPChange();
 	if (iTemp > 0)
 	{
@@ -28083,6 +28104,7 @@ int CvPlayerAI::AI_promotionValue(PromotionTypes ePromotion, UnitTypes eUnit, co
 		iValue += iTemp;
 	}
 
+	//#26 Effects for Promotions with Self Heal...
 	iTemp = kPromotion.getSelfHealModifier();
 	if (iTemp > 0)
 	{
@@ -28146,6 +28168,7 @@ int CvPlayerAI::AI_promotionValue(PromotionTypes ePromotion, UnitTypes eUnit, co
 		}
 	}
 
+	//#27 Effects for Promotions on ennemy Heal...
 	iTemp = kPromotion.getEnemyHealChange();
 	if (iTemp > 0)
 	{
@@ -28194,6 +28217,7 @@ int CvPlayerAI::AI_promotionValue(PromotionTypes ePromotion, UnitTypes eUnit, co
 		iValue += iTemp;
 	}
 
+	//#28 Effects for Promotions on neutral Heal...
 	iTemp = kPromotion.getNeutralHealChange();
 	if (iTemp > 0)
 	{
@@ -28247,6 +28271,7 @@ int CvPlayerAI::AI_promotionValue(PromotionTypes ePromotion, UnitTypes eUnit, co
 		iValue += iTemp;
 	}
 
+	//#29 Effects for Promotions on Friendly Heal...
 	iTemp = kPromotion.getFriendlyHealChange();
 	if (iTemp > 0)
 	{
@@ -28300,6 +28325,7 @@ int CvPlayerAI::AI_promotionValue(PromotionTypes ePromotion, UnitTypes eUnit, co
 		iValue += iTemp;
 	}
 
+	//#30 Effects for Promotions on Victory Heal...
 	iTemp = kPromotion.getVictoryHeal();
 	if (iTemp > 0)
 	{
@@ -28349,6 +28375,7 @@ int CvPlayerAI::AI_promotionValue(PromotionTypes ePromotion, UnitTypes eUnit, co
 		iValue += iTemp;
 	}
 
+	//#31 Effects for Promotions on num of Heal supported...
 	iTemp = kPromotion.getNumHealSupport();
 	if (iTemp > 0)
 	{
@@ -28386,6 +28413,7 @@ int CvPlayerAI::AI_promotionValue(PromotionTypes ePromotion, UnitTypes eUnit, co
 		}
 	}
 
+	//#32 Effects for Promotions on num of Same tile Heal...
 	iTemp = kPromotion.getSameTileHealChange();
 	if (iTemp > 0)
 	{
@@ -28428,6 +28456,7 @@ int CvPlayerAI::AI_promotionValue(PromotionTypes ePromotion, UnitTypes eUnit, co
 		}
 	}
 
+	//#33 Effects for Promotions on num of Adj tile Heal...
 	iTemp = kPromotion.getAdjacentTileHealChange();
 	if (iTemp > 0)
 	{
@@ -28457,6 +28486,7 @@ int CvPlayerAI::AI_promotionValue(PromotionTypes ePromotion, UnitTypes eUnit, co
 		iValue += iTemp;
 	}
 
+	//#34 Effects for Promotions on num Combat unit Heal...
 	if (kPromotion.getNumHealUnitCombatChangeTypes() > 0)
 	{
 		for (int iK = 0; iK < kPromotion.getNumHealUnitCombatChangeTypes(); iK++)
@@ -28510,6 +28540,7 @@ int CvPlayerAI::AI_promotionValue(PromotionTypes ePromotion, UnitTypes eUnit, co
 	}
 
 
+	//#35 Effects for Promotions on Victory Stack Heal...
 	iTemp = kPromotion.getVictoryStackHeal();
 	if (iTemp > 0)
 	{
@@ -28548,6 +28579,7 @@ int CvPlayerAI::AI_promotionValue(PromotionTypes ePromotion, UnitTypes eUnit, co
 		iValue += iTemp;
 	}
 
+	//#36 Effects for Promotions on Victory Adj. Heal...
 	iTemp = kPromotion.getVictoryAdjacentHeal();
 	if (iTemp > 0)
 	{
@@ -28586,6 +28618,7 @@ int CvPlayerAI::AI_promotionValue(PromotionTypes ePromotion, UnitTypes eUnit, co
 		iValue += iTemp;
 	}
 
+	//#37 Effects for Promotions on Always Heal...
 	if (kPromotion.isAlwaysHeal())
 	{
 		if ((eUnitAI == UNITAI_EXPLORE) ||
@@ -28612,8 +28645,8 @@ int CvPlayerAI::AI_promotionValue(PromotionTypes ePromotion, UnitTypes eUnit, co
 			iValue += 8;
 		}
 	}
-	//
-
+	
+	//#38 Effects for Promotions that give Amphib.
 	if (kPromotion.isAmphib())
 	{
 		if ((eUnitAI == UNITAI_ATTACK) ||
@@ -28627,6 +28660,7 @@ int CvPlayerAI::AI_promotionValue(PromotionTypes ePromotion, UnitTypes eUnit, co
 		}
 	}
 
+	//#39 Effects for Promotions that give Xtra Moves on river...
 	if (kPromotion.isRiver())
 	{
 		if ((eUnitAI == UNITAI_ATTACK) ||
@@ -28640,6 +28674,7 @@ int CvPlayerAI::AI_promotionValue(PromotionTypes ePromotion, UnitTypes eUnit, co
 		}
 	}
 
+	//#40 Effects for Promotions that give Xtra Moves on ennemy routes...
 	if (kPromotion.isEnemyRoute())
 	{
 		if (eUnitAI == UNITAI_PILLAGE)
@@ -28662,6 +28697,7 @@ int CvPlayerAI::AI_promotionValue(PromotionTypes ePromotion, UnitTypes eUnit, co
 		}
 	}
 
+	//#41 Effects for Promotions that give Xtra Moves on Hills...
 	if (kPromotion.isHillsDoubleMove())
 	{
 		if (eUnitAI == UNITAI_EXPLORE ||
@@ -28678,6 +28714,7 @@ int CvPlayerAI::AI_promotionValue(PromotionTypes ePromotion, UnitTypes eUnit, co
 		}
 	}
 
+	//#42 Effects for Promotions that give Moves on Peaks...
 	if (kPromotion.isCanMovePeaks() && !(GET_TEAM(getTeam()).isCanPassPeaks()))
 	{
 		iValue += 50;
@@ -28687,7 +28724,7 @@ int CvPlayerAI::AI_promotionValue(PromotionTypes ePromotion, UnitTypes eUnit, co
 		iValue += 75;
 	}
 
-
+	//#43 Effects for Promotions that immunise to 1st Strikes...
 	if (kPromotion.isImmuneToFirstStrikes()
 		&& (pUnit == NULL || !pUnit->immuneToFirstStrikes()))
 	{
@@ -28706,6 +28743,7 @@ int CvPlayerAI::AI_promotionValue(PromotionTypes ePromotion, UnitTypes eUnit, co
 		}
 	}
 
+	//#44 Effects for Promotions that give Insidiousness...
 	iTemp = kPromotion.getInsidiousnessChange();
 	if (iTemp != 0)
 	{
@@ -28737,6 +28775,7 @@ int CvPlayerAI::AI_promotionValue(PromotionTypes ePromotion, UnitTypes eUnit, co
 		iValue += iTemp;
 	}
 
+	//#45 Effects for Promotions that give investigation...
 	iTemp = kPromotion.getInvestigationChange();
 	if (iTemp != 0)
 	{
@@ -28767,6 +28806,7 @@ int CvPlayerAI::AI_promotionValue(PromotionTypes ePromotion, UnitTypes eUnit, co
 		}
 	}
 
+	//#46 Effects for Promotions for assassins...
 	iTemp = kPromotion.getAssassinChange();
 	if (iTemp != 0)
 	{
@@ -28802,6 +28842,7 @@ int CvPlayerAI::AI_promotionValue(PromotionTypes ePromotion, UnitTypes eUnit, co
 		iValue += iTemp2;
 	}
 
+	//#47 Effects for Promotions that affects Visibility...
 	iTemp = kPromotion.getVisibilityChange();
 	if (iTemp != 0)
 	{
@@ -28821,6 +28862,7 @@ int CvPlayerAI::AI_promotionValue(PromotionTypes ePromotion, UnitTypes eUnit, co
 		}
 	}
 
+	//#48 Effects for Promotions that affects Moves in general...
 	iTemp = kPromotion.getMovesChange();
 	if (iTemp != 0)
 	{
@@ -28848,6 +28890,7 @@ int CvPlayerAI::AI_promotionValue(PromotionTypes ePromotion, UnitTypes eUnit, co
 		}
 	}
 
+	//#49 Effects for Promotions that Give Moves discount...
 	iTemp = kPromotion.getMoveDiscountChange();
 	if (iTemp != 0)
 	{
@@ -28874,6 +28917,7 @@ int CvPlayerAI::AI_promotionValue(PromotionTypes ePromotion, UnitTypes eUnit, co
 		}
 	}
 
+	//#50 Effects for Promotions that Give extra Air Range...
 	iTemp = kPromotion.getAirRangeChange();
 	if (iTemp != 0)
 	{
@@ -28888,6 +28932,7 @@ int CvPlayerAI::AI_promotionValue(PromotionTypes ePromotion, UnitTypes eUnit, co
 		}
 	}
 
+	//#51 Effects for Promotions that Give Air interceptions...
 	iTemp = kPromotion.getInterceptChange();
 	if (iTemp != 0)
 	{
@@ -28907,6 +28952,7 @@ int CvPlayerAI::AI_promotionValue(PromotionTypes ePromotion, UnitTypes eUnit, co
 		}
 	}
 
+	//#52 Effects for Promotions that Give Air Evasion...
 	iTemp = kPromotion.getEvasionChange();
 	if (iTemp != 0)
 	{
@@ -28920,6 +28966,7 @@ int CvPlayerAI::AI_promotionValue(PromotionTypes ePromotion, UnitTypes eUnit, co
 		}
 	}
 
+	//#53 Effects for Promotions that Give 1st strikes...
 	iTemp = kPromotion.getFirstStrikesChange() * 2;
 	iTemp += kPromotion.getChanceFirstStrikesChange();
 	if (iTemp != 0)
@@ -28946,6 +28993,7 @@ int CvPlayerAI::AI_promotionValue(PromotionTypes ePromotion, UnitTypes eUnit, co
 	}
 
 
+	//#54 Effects for Promotions that Give Stealth strikes...
 	iTemp = kPromotion.getStealthStrikesChange() * 2;
 	int iInvisFactor = 0;
 	if (iTemp != 0)
@@ -28996,6 +29044,7 @@ int CvPlayerAI::AI_promotionValue(PromotionTypes ePromotion, UnitTypes eUnit, co
 		}
 	}
 
+	//#55 Effects for Promotions that Give Withdrawal...
 	iTemp = kPromotion.getWithdrawalChange();
 	if (iTemp != 0)
 	{
@@ -29023,6 +29072,7 @@ int CvPlayerAI::AI_promotionValue(PromotionTypes ePromotion, UnitTypes eUnit, co
 	}
 
 	//TB Combat Mods Begin
+	//#56 Effects for Promotions that Give Pursuit...
 	iTemp = kPromotion.getPursuitChange();
 	if (iTemp != 0)
 	{
@@ -29057,6 +29107,7 @@ int CvPlayerAI::AI_promotionValue(PromotionTypes ePromotion, UnitTypes eUnit, co
 		}
 	}
 
+	//#57 Effects for Promotions that Give early Withdraw...
 	iTemp = kPromotion.getEarlyWithdrawChange();
 	int itempwithdraw = 0;
 	if ((kUnit.getWithdrawalProbability() + (pUnit == NULL ? 0 : pUnit->getExtraWithdrawal() * 4)) > 0)
@@ -29090,6 +29141,7 @@ int CvPlayerAI::AI_promotionValue(PromotionTypes ePromotion, UnitTypes eUnit, co
 		}
 	}
 
+	//#58 Effects for Promotions that Change Upkeep...
 	iTemp = kPromotion.getUpkeepModifier();
 	if (iTemp != 0)
 	{

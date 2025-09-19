@@ -7907,7 +7907,10 @@ int CvPlayer::getImprovementUpgradeProgressRate(const ImprovementTypes eImprovem
 
 int CvPlayer::calculateTotalYield(YieldTypes eYield) const
 {
-	return (algo::accumulate(cities() | transformed(CvCity::fn::getYieldRate100(eYield)), 0)) / 100;
+	int TotalYield = ((algo::accumulate(cities() | transformed(CvCity::fn::getYieldRate100(eYield)), 0)) / 100);
+	if (TotalYield < MIN_TOL_FALSE_ACCUMULATE)
+		return MAX_COMMERCE_RATE_VALUE;
+	return TotalYield;
 }
 
 
@@ -8315,7 +8318,7 @@ int CvPlayer::calculateBaseNetResearch(TechTypes eTech) const
 			return GC.getDefineINT("BASE_RESEARCH_RATE") + getCommerceRate(COMMERCE_RESEARCH);
 		}
 	}
-	return (
+	int iCalcResearch =  (
 		GC.getDefineINT("BASE_RESEARCH_RATE")
 		+
 		getModifiedIntValue(
@@ -8323,6 +8326,9 @@ int CvPlayer::calculateBaseNetResearch(TechTypes eTech) const
 			getNationalTechResearchModifier(eTech) + calculateResearchModifier(eTech)
 		)
 	);
+	if (iCalcResearch < MIN_TOL_FALSE_RESEARCH)
+		return MAX_RESEARCH_RATE_VALUE;
+	return std::min(MAX_RESEARCH_RATE_VALUE,iCalcResearch);
 }
 
 
@@ -8358,7 +8364,7 @@ int CvPlayer::calculateTotalCommerce() const
 			iTotalCommerce += getCommerceRate((CommerceTypes)i);
 		}
 	}
-	return static_cast<int>(iTotalCommerce);
+	return static_cast<int>(std::min<int64_t>(MAX_COMMERCE_VALUE,iTotalCommerce));
 }
 
 bool CvPlayer::canEverResearch(TechTypes eTech) const
@@ -9454,7 +9460,7 @@ void CvPlayer::setGold(int64_t iNewValue)
 
 void CvPlayer::changeGold(int64_t iChange)
 {
-	setGold(getGold() + iChange);
+	setGold(std::min(getGold() + iChange,MAX_GOLD_VALUE));
 }
 
 int CvPlayer::getGoldPerTurn() const
@@ -13221,6 +13227,8 @@ int CvPlayer::getTotalCityBaseCommerceRate(CommerceTypes eIndex) const
 	if (m_cachedTotalCityBaseCommerceRate[eIndex] == MAX_INT)
 	{
 		m_cachedTotalCityBaseCommerceRate[eIndex] = algo::accumulate(cities() | transformed(CvCity::fn::getBaseCommerceRateTimes100(eIndex)), 0) / 100;
+		if (m_cachedTotalCityBaseCommerceRate[eIndex] < MIN_TOL_FALSE_ACCUMULATE)
+			m_cachedTotalCityBaseCommerceRate[eIndex] = MAX_COMMERCE_RATE_VALUE;
 	}
 	return m_cachedTotalCityBaseCommerceRate[eIndex];
 }
@@ -13231,8 +13239,7 @@ void CvPlayer::changeCommerceRate(CommerceTypes eIndex, int iChange)
 
 	if (iChange != 0)
 	{
-		m_aiCommerceRate[eIndex] += iChange;
-
+		m_aiCommerceRate[eIndex] = std::min(m_aiCommerceRate[eIndex]+iChange,MAX_COMMERCE_RATE_VALUE);
 		if (getID() == GC.getGame().getActivePlayer())
 		{
 			gDLL->getInterfaceIFace()->setDirty(GameData_DIRTY_BIT, true);
@@ -13253,7 +13260,7 @@ void CvPlayer::changeCommerceRateModifier(CommerceTypes eIndex, int iChange)
 
 	if (iChange != 0)
 	{
-		m_aiCommerceRateModifier[eIndex] += iChange;
+		m_aiCommerceRateModifier[eIndex] = std::min(m_aiCommerceRateModifier[eIndex] + iChange, MAX_COMMERCE_RATE_MODIFIER_VALUE);
 
 		setCityCommerceModifierDirty(eIndex);
 		setCommerceDirty(eIndex);
@@ -13275,9 +13282,9 @@ void CvPlayer::changeCommerceRateModifierfromEvents(CommerceTypes eIndex, int iC
 	if (iChange != 0)
 	{
 		//Totals into Events to split for display
-		m_aiCommerceRateModifierfromEvents[eIndex] += iChange;
+		m_aiCommerceRateModifierfromEvents[eIndex] = std::min(m_aiCommerceRateModifierfromEvents[eIndex] + iChange, MAX_COMMERCE_RATE_MODIFIER_VALUE);
 		//Also totals into generic Rate Modifier total
-		m_aiCommerceRateModifier[eIndex] += iChange;
+		m_aiCommerceRateModifier[eIndex] = std::min(m_aiCommerceRateModifier[eIndex] + iChange, MAX_COMMERCE_RATE_MODIFIER_VALUE);
 
 		setCityCommerceModifierDirty(eIndex);
 		setCommerceDirty(eIndex);
@@ -13299,9 +13306,9 @@ void CvPlayer::changeCommerceRateModifierfromBuildings(CommerceTypes eIndex, int
 	if (iChange != 0)
 	{
 		//Totals into Buildings to split for display
-		m_aiCommerceRateModifierfromBuildings[eIndex] += iChange;
+		m_aiCommerceRateModifierfromBuildings[eIndex] = std::min(m_aiCommerceRateModifierfromBuildings[eIndex] + iChange, MAX_COMMERCE_RATE_MODIFIER_VALUE);
 		//Also totals into generic Rate Modifier total
-		m_aiCommerceRateModifier[eIndex] += iChange;
+		m_aiCommerceRateModifier[eIndex] = std::min(m_aiCommerceRateModifier[eIndex] + iChange, MAX_COMMERCE_RATE_MODIFIER_VALUE);
 
 		setCityCommerceModifierDirty(eIndex);
 		setCommerceDirty(eIndex);
@@ -13435,8 +13442,8 @@ void CvPlayer::changeGoldPerTurnByPlayer(PlayerTypes eIndex, int iChange)
 
 	if (iChange != 0)
 	{
-		m_iGoldPerTurn += iChange;
-		m_aiGoldPerTurnByPlayer[eIndex] += iChange;
+		m_iGoldPerTurn = std::min(m_iGoldPerTurn + iChange, MAX_GOLD_PER_TURN_VALUE);
+		m_aiGoldPerTurnByPlayer[eIndex] = std::min(m_aiGoldPerTurnByPlayer[eIndex] + iChange, MAX_GOLD_PER_TURN_VALUE);
 
 		if (getID() == GC.getGame().getActivePlayer())
 		{

@@ -3680,7 +3680,8 @@ void CvUnitAI::AI_attackCityMove()
 				if (pHead == NULL || pHead == OurHead) continue;
 
 				// Filter only stacks with ATTACK_CITY or ATTACK
-				if (pHead->AI_getUnitAIType() == UNITAI_ATTACK_CITY || pHead->AI_getUnitAIType() == UNITAI_ATTACK)
+				if (pHead->AI_getUnitAIType() == UNITAI_ATTACK_CITY || pHead->AI_getUnitAIType() == UNITAI_ATTACK || pHead->AI_getUnitAIType() == UNITAI_COUNTER
+					|| pHead->AI_getUnitAIType() == UNITAI_RESERVE)
 				{
 					int dummy;
 					CvUnit * pOurAttacker = getGroup()->AI_getBestGroupAttacker(pOurPlot, true, dummy);
@@ -3777,6 +3778,10 @@ void CvUnitAI::AI_attackCityMove()
 		return;
 	}
 	if (AI_groupMergeRange(UNITAI_COUNTER, 5, true, true, bIgnoreFaster))
+	{
+		return;
+	}
+	if (AI_groupMergeRange(UNITAI_RESERVE, 5, true, true, bIgnoreFaster))
 	{
 		return;
 	}
