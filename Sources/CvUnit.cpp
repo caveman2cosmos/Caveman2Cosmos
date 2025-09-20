@@ -1338,8 +1338,13 @@ void CvUnit::convert(CvUnit* pUnit, const bool bKillOriginal)
 			const PromotionTypes ePromoX = static_cast<PromotionTypes>(iI);
 			const CvPromotionInfo& kPromo = GC.getPromotionInfo(ePromoX);
 			PromotionLineTypes eLine = kPromo.getPromotionLine();
-			const CvPromotionLineInfo& kLine = GC.getPromotionLineInfo(eLine);
-			if (pUnit->isHasPromotion(ePromoX) && !kLine.isBuildUp())
+			bool bIsBuildup = false;
+			if (eLine != NO_PROMOTIONLINE)
+			{
+				const CvPromotionLineInfo& kLine = GC.getPromotionLineInfo(eLine);
+				bIsBuildup = kLine.isBuildUp();
+			}
+			if (pUnit->isHasPromotion(ePromoX) && !bIsBuildup)
 			{
 				if (GC.getPromotionInfo(ePromoX).getGroupChange() != 0)
 				{
