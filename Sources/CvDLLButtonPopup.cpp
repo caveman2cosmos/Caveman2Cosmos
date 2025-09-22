@@ -841,16 +841,35 @@ void CvDLLButtonPopup::OnOkClicked(CvPopup* pPopup, PopupReturn *pPopupReturn, C
 			if (pPopupReturn->getButtonClicked() != 0)
 			{
 				int DefID = pPopupReturn->getButtonClicked();
-				int iAttackerID = info.getData1();
-				const CvPlot* pPlot = GC.getMap().plot(info.getData2(), info.getData3());
-				foreach_(const CvUnit* unitX, pPlot->units())
+				GET_PLAYER(GC.getGame().getActivePlayer()).setAmbushingTargetUnit(FFreeList::INVALID_INDEX);
+				if (DefID == 1) //Ambush, or no choice)
 				{
-					if (unitX->getID() == DefID)
+					CvMessageControl::getInstance().sendAmbushConfirmation(true);
+				}
+				else
+				{
+					int iAttackerID = info.getData1();
+					bool bfoundDef = false;
+					const CvPlot* pPlot = GC.getMap().plot(info.getData2(), info.getData3());
+					foreach_(const CvUnit * unitX, pPlot->units())
+					{
+						if (unitX->getID() == DefID)
+						{
+							bfoundDef = true;
+							break;
+						}
+					}
+					if (bfoundDef)
 					{
 						GET_PLAYER(GC.getGame().getActivePlayer()).setAmbushingTargetUnit(DefID);
 						CvMessageControl::getInstance().sendAmbushConfirmation(true);
-						break;
 					}
+					else
+					{
+						CvMessageControl::getInstance().sendAmbushConfirmation(false);
+						GET_PLAYER(GC.getGame().getActivePlayer()).setAmbushingUnit(FFreeList::INVALID_INDEX);
+					}
+
 				}
 			}
 			else
@@ -1028,10 +1047,6 @@ bool CvDLLButtonPopup::launchButtonPopup(CvPopup* pPopup, CvPopupInfo &info)
 		}
 		case BUTTONPOPUP_PYTHON:
 		{
-			if (info.getFlags() == AMBUSH_FLAG)
-			{
-				return true; //return launchConfirmAmbushPopup(pPopup, info);
-			}
 			return launchPythonPopup(pPopup, info);
 		}
 		case BUTTONPOPUP_DETAILS:

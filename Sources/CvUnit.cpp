@@ -38138,7 +38138,7 @@ void CvUnit::enactAmbush(bool bAssassinate, CvUnit * pSelectedDefender)
 	CvUnit* pDefender = NULL;
 	if (!pSelectedDefender)
 	{
-		pPlot->getBestDefender(NO_PLAYER, getOwner(), this, !gDLL->altKey(), NO_TEAM == getDeclareWarMove(pPlot), false, bAssassinate);
+		pDefender = pPlot->getBestDefender(NO_PLAYER, getOwner(), this, !gDLL->altKey(), NO_TEAM == getDeclareWarMove(pPlot), false, bAssassinate);
 	}
 	else
 	{

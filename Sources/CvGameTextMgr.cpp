@@ -8101,88 +8101,17 @@ bool CvGameTextMgr::setMinimalCombatPlotHelp(CvWStringBuffer& szString, CvPlot* 
 
 					iWithdrawal += std::min(100, EvaluatedAttWithdrawOdds) * (1000 - iCombatOdds);
 
-					if (iWithdrawal > 0 || pAttacker->combatLimit(pDefender) < pDefender->getMaxHP())
-					{
-						if (iWithdrawal > 99900)
-						{
-							szTempBuffer = L"&gt; 99.9";
-						}
-						else if (iWithdrawal < 100)
-						{
-							szTempBuffer = L"&lt; 0.1";
-						}
-						else
-						{
-							szTempBuffer.Format(L"%.1f", iWithdrawal / 1000.0f);
-						}
-						szString.append(NEWLINE);
-						szString.append(gDLL->getText("TXT_KEY_COMBAT_PLOT_ODDS_RETREAT", szTempBuffer.GetCString()));
-					}
 
 					int iDefWithdrawal = 0;
 					iDefWithdrawal += std::min(100, EvaluatedDefWithdrawalOdds) * (1000 - iCombatOdds);
 
-					if (iDefWithdrawal > 0 && GC.getGame().isModderGameOption(MODDERGAMEOPTION_DEFENDER_WITHDRAW))
-					{
-						if (iDefWithdrawal > 99900)
-						{
-							szTempBuffer = L"&gt; 99.9";
-						}
-						else if (iDefWithdrawal < 100)
-						{
-							szTempBuffer = L"&lt; 0.1";
-						}
-						else
-						{
-							szTempBuffer.Format(L"%.1f", iDefWithdrawal / 1000.0f);
-						}
-						szString.append(NEWLINE);
-						szString.append(gDLL->getText("TXT_KEY_COMBAT_PLOT_ODDS_DEFENDER_RETREAT", szTempBuffer.GetCString()));
-					}
-
 					int iRepelOdds = 0;
 					iRepelOdds += std::min(100, EvaluatedRepelOdds) * (1000 - iCombatOdds);
 
-					if (iRepelOdds > 0)
-					{
-						if (iRepelOdds > 99900)
-						{
-							szTempBuffer = L"&gt; 99.9";
-						}
-						else if (iRepelOdds < 100)
-						{
-							szTempBuffer = L"&lt; 0.1";
-						}
-						else
-						{
-							szTempBuffer.Format(L"%.1f", iRepelOdds / 1000.0f);
-						}
-						//szString.append(NEWLINE);
-						//szString.append(gDLL->getText("TXT_KEY_COMBAT_PLOT_ODDS_REPEL", szTempBuffer.GetCString()));
-					}
 
 					int iKnockbackOdds = 0;
 					iKnockbackOdds += std::min(100, EvaluatedKnockbackOdds) * (1000 - iCombatOdds);
 
-					if (iKnockbackOdds > 0)
-					{
-						if (iKnockbackOdds > 99900)
-						{
-							szTempBuffer = L"&gt; 99.9";
-						}
-						else if (iKnockbackOdds < 100)
-						{
-							szTempBuffer = L"&lt; 0.1";
-						}
-						else
-						{
-							szTempBuffer.Format(L"%.1f", iKnockbackOdds / 1000.0f);
-						}
-						//szString.append(NEWLINE);
-						//szString.append(gDLL->getText("TXT_KEY_COMBAT_PLOT_ODDS_KNOCKBACK", szTempBuffer.GetCString()));
-
-					}
-					//szString.append(NEWLINE);
 
 					//TB Display Mod Begin
 					if (!bTBView && getBugOptionBOOL("ACO__Enabled", true, "ACO_ENABLED")) // PieceOfMind - ADVANCED COMBAT ODDS - 3/11/09 - v2.0
@@ -8476,17 +8405,21 @@ bool CvGameTextMgr::setMinimalCombatPlotHelp(CvWStringBuffer& szString, CvPlot* 
 
 						{
 							szString.append("Attacker:");
+							szString.append(NEWLINE);
 							setUnitHelp(szString, pAttacker, true, true);
+							szString.append(NEWLINE);
 						}
 
 						{
+							//szString.append(NEWLINE);
+							CvWStringBuffer unitStr;
+							szString.append(gDLL->getText("TXT_ACO_CIBLE", unitStr.getCString()));
 							szString.append(NEWLINE);
-							szString.append("Target:");
 							setUnitHelp(szString, pDefender, true, true);
 						}
 
 
-						if (iView & getBugOptionINT("ACO__ShowSurvivalOdds", 3, "ACO_SHOW_SURVIVAL_ODDS"))
+						if (iView & getBugOptionINT("ACO__ShowSurvivalOdds", 3, "ACO_SHOW_SURVIVAL_ODDS") && false) //disabled
 						{
 							szString.append(NEWLINE);
 							szTempBuffer.Format(L"%.2f%%", 100.0f * (AttackerKillOdds + RetreatOdds + PullOutOdds));
@@ -8494,7 +8427,7 @@ bool CvGameTextMgr::setMinimalCombatPlotHelp(CvWStringBuffer& szString, CvPlot* 
 							szString.append(gDLL->getText("TXT_ACO_SURVIVALODDS"));
 							szString.append(NEWLINE);
 							szString.append(gDLL->getText("TXT_ACO_VS", szTempBuffer.GetCString(), szTempBuffer2.GetCString()));
-							szString.append(NEWLINE);
+							//szString.append(NEWLINE);
 						}
 						//TB Combat Mods - next line adjusted for pursuit
 
@@ -8514,6 +8447,7 @@ bool CvGameTextMgr::setMinimalCombatPlotHelp(CvWStringBuffer& szString, CvPlot* 
 						fullBlocks = pixels / 10;
 						lastBlock = pixels % 10;
 
+						szString.append(NEWLINE);
 						szString.append(L"<img=Art/ACO/green_bar_left_end.dds>");
 						for (int i = 0; i < fullBlocks; ++i)
 						{
@@ -8559,7 +8493,7 @@ bool CvGameTextMgr::setMinimalCombatPlotHelp(CvWStringBuffer& szString, CvPlot* 
 
 
 						szString.append(NEWLINE);
-						if (pAttacker->combatLimit(pDefender) >= pDefender->getMaxHP())
+						if (pAttacker->combatLimit(pDefender) >= pDefender->getMaxHP() && false) //disabled
 						{
 							szTempBuffer.Format(L": " SETCOLR L"%.2f%% " L"%d" ENDCOLR,
 								TEXT_COLOR("COLOR_POSITIVE_TEXT"), 100.0f * AttackerKillOdds, iExperience);
@@ -8582,7 +8516,7 @@ bool CvGameTextMgr::setMinimalCombatPlotHelp(CvWStringBuffer& szString, CvPlot* 
 							szString.append(gDLL->getText("TXT_ACO_HP"));
 							szString.append(gDLL->getText("TXT_KEY_COLOR_REVERT"));
 						}
-						else
+						else if (false) //disabled
 						{
 							const int iWithdr = pAttacker->withdrawVSOpponentProbTotal(pDefender, pPlot) - pDefender->pursuitVSOpponentProbTotal(pAttacker);
 							szTempBuffer.Format(
@@ -8615,7 +8549,7 @@ bool CvGameTextMgr::setMinimalCombatPlotHelp(CvWStringBuffer& szString, CvPlot* 
 							szString.append(gDLL->getText("TXT_ACO_HP"));
 							szString.append(gDLL->getText("TXT_KEY_COLOR_REVERT"));
 						}
-						szString.append(")");
+						//szString.append(")");
 
 						if (iDefenderOdds == 0)
 						{
@@ -8637,7 +8571,7 @@ bool CvGameTextMgr::setMinimalCombatPlotHelp(CvWStringBuffer& szString, CvPlot* 
 					}
 					/** What follows in the "else" block, is the original code **/
 					szString.append(gDLL->getText("TXT_KEY_COLOR_REVERT"));
-					szString.append(NEWLINE);
+					//szString.append(NEWLINE);
 				}
 			}
 			return true;
@@ -8952,65 +8886,14 @@ bool CvGameTextMgr::setAssassinatePlotHelp(CvWStringBuffer& szString, CvPlot* pP
 
 					iWithdrawal += std::min(100, EvaluatedAttWithdrawOdds) * (1000 - iCombatOdds);
 
-					if (iWithdrawal > 0 || pAttacker->combatLimit(pDefender) < pDefender->getMaxHP())
-					{
-						if (iWithdrawal > 99900)
-						{
-							szTempBuffer = L"&gt; 99.9";
-						}
-						else if (iWithdrawal < 100)
-						{
-							szTempBuffer = L"&lt; 0.1";
-						}
-						else
-						{
-							szTempBuffer.Format(L"%.1f", iWithdrawal / 1000.0f);
-						}
-						szString.append(NEWLINE);
-						szString.append(gDLL->getText("TXT_KEY_COMBAT_PLOT_ODDS_RETREAT", szTempBuffer.GetCString()));
-					}
-
 					int iDefWithdrawal = 0;
 					iDefWithdrawal += std::min(100, EvaluatedDefWithdrawalOdds) * (1000 - iCombatOdds);
 
-					if (iDefWithdrawal > 0 && GC.getGame().isModderGameOption(MODDERGAMEOPTION_DEFENDER_WITHDRAW))
-					{
-						if (iDefWithdrawal > 99900)
-						{
-							szTempBuffer = L"&gt; 99.9";
-						}
-						else if (iDefWithdrawal < 100)
-						{
-							szTempBuffer = L"&lt; 0.1";
-						}
-						else
-						{
-							szTempBuffer.Format(L"%.1f", iDefWithdrawal / 1000.0f);
-						}
-						szString.append(NEWLINE);
-						szString.append(gDLL->getText("TXT_KEY_COMBAT_PLOT_ODDS_DEFENDER_RETREAT", szTempBuffer.GetCString()));
-					}
+
 
 					int iRepelOdds = 0;
 					iRepelOdds += std::min(100, EvaluatedRepelOdds) * (1000 - iCombatOdds);
 
-					if (iRepelOdds > 0)
-					{
-						if (iRepelOdds > 99900)
-						{
-							szTempBuffer = L"&gt; 99.9";
-						}
-						else if (iRepelOdds < 100)
-						{
-							szTempBuffer = L"&lt; 0.1";
-						}
-						else
-						{
-							szTempBuffer.Format(L"%.1f", iRepelOdds / 1000.0f);
-						}
-						//szString.append(NEWLINE);
-						//szString.append(gDLL->getText("TXT_KEY_COMBAT_PLOT_ODDS_REPEL", szTempBuffer.GetCString()));
-					}
 
 					int iKnockbackOdds = 0;
 					iKnockbackOdds += std::min(100, EvaluatedKnockbackOdds) * (1000 - iCombatOdds);
@@ -9231,49 +9114,8 @@ bool CvGameTextMgr::setAssassinatePlotHelp(CvWStringBuffer& szString, CvPlot* pP
 						E_HP_Att_Victory = E_HP_Att;//NOT YET NORMALISED
 						E_HP_Att_Withdraw = E_HP_Att;//NOT YET NORMALIZED
 						prob_bottom_Att_HP = getCombatOddsSpecific(pAttacker, pDefender, iNeededRoundsDefender - 1, iNeededRoundsAttacker);
-						if ((pAttacker->withdrawVSOpponentProbTotal(pDefender, pPlot) - pDefender->pursuitVSOpponentProbTotal(pAttacker)) > 0)
-						{
-							// if withdraw odds involved
-							if (ACO_debug)
-							{
-								szTempBuffer.Format(L"Attacker retreat odds");
-								szString.append(NEWLINE);
-								szString.append(szTempBuffer.GetCString());
-							}
-							for (int n_D = 0; n_D < iNeededRoundsAttacker; n_D++)
-							{
-								E_HP_Att += ((pAttacker->getHP()) - (iNeededRoundsDefender - 1) * iDamageToAttacker) * getCombatOddsSpecific(pAttacker, pDefender, iNeededRoundsDefender - 1, n_D);
-								prob_bottom_Att_HP += getCombatOddsSpecific(pAttacker, pDefender, iNeededRoundsDefender - 1, n_D);
-								if (ACO_debug)
-								{
-									szTempBuffer.Format(L"+%d * %.2f%%  (Def %d) (%d:%d)",
-										((pAttacker->getHP()) - (iNeededRoundsDefender - 1) * iDamageToAttacker), 100.0f * getCombatOddsSpecific(pAttacker, pDefender, iNeededRoundsDefender - 1, n_D), (pDefender->getHP()) - n_D * iDamageToDefender, iNeededRoundsDefender - 1, n_D);
-									szString.append(NEWLINE);
-									szString.append(szTempBuffer.GetCString());
-								}
-							}
-						}
 						// finished with the attacker HP I think.
 
-						if (ACO_debug)
-						{
-							szTempBuffer.Format(L"E[HP DEFENDER]\nOdds that attacker dies or retreats");
-							szString.append(NEWLINE);
-							szString.append(szTempBuffer.GetCString());
-						}
-						for (int n_D = 0; n_D < iNeededRoundsAttacker; n_D++)
-						{
-							//prob_defend[n_D] = getCombatOddsSpecific(pAttacker,pDefender,iNeededRoundsDefender,n_D);//attacker dies
-							//prob_defend[n_D] += getCombatOddsSpecific(pAttacker,pDefender,iNeededRoundsDefender-1,n_D);//attacker retreats
-							E_HP_Def += ((pDefender->getHP()) - n_D * iDamageToDefender) * (getCombatOddsSpecific(pAttacker, pDefender, iNeededRoundsDefender, n_D) + getCombatOddsSpecific(pAttacker, pDefender, iNeededRoundsDefender - 1, n_D));
-							if (ACO_debug)
-							{
-								szTempBuffer.Format(L"+%d * %.2f%%  (Att 0 or %d) (%d:%d)",
-									((pDefender->getHP()) - n_D * iDamageToDefender), 100.0f * (getCombatOddsSpecific(pAttacker, pDefender, iNeededRoundsDefender, n_D) + getCombatOddsSpecific(pAttacker, pDefender, iNeededRoundsDefender - 1, n_D)), (pAttacker->getHP()) - (iNeededRoundsDefender - 1) * iDamageToAttacker, iNeededRoundsDefender, n_D);
-								szString.append(NEWLINE);
-								szString.append(szTempBuffer.GetCString());
-							}
-						}
 						prob_bottom_Def_HP = getCombatOddsSpecific(pAttacker, pDefender, iNeededRoundsDefender, iNeededRoundsAttacker - 1);
 						//prob_bottom_Def_HP += getCombatOddsSpecific(pAttacker,pDefender,iNeededRoundsDefender-1,iNeededRoundsAttacker-1);
 						E_HP_Def_Defeat = E_HP_Def;
@@ -9332,8 +9174,11 @@ bool CvGameTextMgr::setAssassinatePlotHelp(CvWStringBuffer& szString, CvPlot* pP
 
 						{
 							//szString.append(NEWLINE);
-							szString.append("Target:");
+							CvWStringBuffer unitStr;
+							szString.append(gDLL->getText("TXT_ACO_CIBLE", unitStr.getCString()));
+							szString.append(NEWLINE);
 							setUnitHelp(szString, pDefender, true, true);
+
 						}
 
 
@@ -9345,7 +9190,7 @@ bool CvGameTextMgr::setAssassinatePlotHelp(CvWStringBuffer& szString, CvPlot* pP
 							szString.append(gDLL->getText("TXT_ACO_SURVIVALODDS"));
 							szString.append(NEWLINE);
 							szString.append(gDLL->getText("TXT_ACO_VS", szTempBuffer.GetCString(), szTempBuffer2.GetCString()));
-							szString.append(NEWLINE);
+							//szString.append(NEWLINE);
 						}
 						//TB Combat Mods - next line adjusted for pursuit
 
@@ -9365,6 +9210,7 @@ bool CvGameTextMgr::setAssassinatePlotHelp(CvWStringBuffer& szString, CvPlot* pP
 						fullBlocks = pixels / 10;
 						lastBlock = pixels % 10;
 
+						szString.append(NEWLINE);
 						szString.append(L"<img=Art/ACO/green_bar_left_end.dds>");
 						for (int i = 0; i < fullBlocks; ++i)
 						{
@@ -9410,7 +9256,7 @@ bool CvGameTextMgr::setAssassinatePlotHelp(CvWStringBuffer& szString, CvPlot* pP
 
 
 						szString.append(NEWLINE);
-						if (pAttacker->combatLimit(pDefender) >= pDefender->getMaxHP())
+						if (pAttacker->combatLimit(pDefender) >= pDefender->getMaxHP() && false) //disabled
 						{
 							szTempBuffer.Format(L": " SETCOLR L"%.2f%% " L"%d" ENDCOLR,
 								TEXT_COLOR("COLOR_POSITIVE_TEXT"), 100.0f * AttackerKillOdds, iExperience);
@@ -9433,7 +9279,7 @@ bool CvGameTextMgr::setAssassinatePlotHelp(CvWStringBuffer& szString, CvPlot* pP
 							szString.append(gDLL->getText("TXT_ACO_HP"));
 							szString.append(gDLL->getText("TXT_KEY_COLOR_REVERT"));
 						}
-						else
+						else if (false)  //disabled
 						{
 							const int iWithdr = pAttacker->withdrawVSOpponentProbTotal(pDefender, pPlot) - pDefender->pursuitVSOpponentProbTotal(pAttacker);
 							szTempBuffer.Format(
@@ -9466,7 +9312,7 @@ bool CvGameTextMgr::setAssassinatePlotHelp(CvWStringBuffer& szString, CvPlot* pP
 							szString.append(gDLL->getText("TXT_ACO_HP"));
 							szString.append(gDLL->getText("TXT_KEY_COLOR_REVERT"));
 						}
-						szString.append(")");
+						//szString.append(")");
 
 						if (iDefenderOdds == 0)
 						{
@@ -9488,7 +9334,7 @@ bool CvGameTextMgr::setAssassinatePlotHelp(CvWStringBuffer& szString, CvPlot* pP
 					}
 					/** What follows in the "else" block, is the original code **/
 					szString.append(gDLL->getText("TXT_KEY_COLOR_REVERT"));
-					szString.append(NEWLINE);
+					//szString.append(NEWLINE);
 				}
 			}
 			return true;

@@ -30561,7 +30561,7 @@ void CvPlayer::setAmbushingUnit(int iNewValue, bool bAssassinate)
 void CvPlayer::setAmbushingTargetUnit(int iNewValue, bool bAssassinate)
 {
 	m_iAmbushingTargetUnit = iNewValue;
-	m_bAssassinate = bAssassinate;
+	//m_bAssassinate = bAssassinate;
 }
 
 void CvPlayer::setGreatGeneralPointsForType(const UnitTypes eUnit, const int iValue)
