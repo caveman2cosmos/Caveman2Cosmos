@@ -1281,14 +1281,17 @@ short CvPlot::getVisibilityDecayBonus(const bool pSeaPlot)
 		const CvFeatureInfo& kFeatureInfo = GC.getFeatureInfo(eFeature);
 		const CvString featureString = kFeatureInfo.getType();
 		const CvBonusInfo& kBonusInfo = GC.getBonusInfo(eBonusType);
-		if (featureString == "FEATURE_OASIS" || featureString == "FEATURE_CAVES" || featureString == "FEATURE_CITY_RUINS"
-		|| featureString.find("FEATURE_PLATY_") != std::string::npos)
+		if (featureString == "FEATURE_OASIS" || featureString == "FEATURE_CAVES" || featureString == "FEATURE_CITY_RUINS")
 		{
 			iVisibilityDecay += 3;
 		}
 		if (featureString == "FEATURE_REEF_LIGHTHOUSE")
 		{
 			iVisibilityDecay += 9;
+		}
+		if (featureString.find("FEATURE_PLATY_") != std::string::npos)
+		{
+			iVisibilityDecay += 40;
 		}
 	}
 	if (eBonusType != NO_BONUS)

@@ -567,9 +567,9 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_ACO_CIBLE</Tag>
-		<English>target: [COLOR_NEGATIVE_TEXT]%s2[COLOR_REVERT]</English>
-		<French> cible : [COLOR_NEGATIVE_TEXT]%s2[COLOR_REVERT]</French>
-		<German>target: [COLOR_NEGATIVE_TEXT]%s2[COLOR_REVERT]</German>
+		<English>Target: [COLOR_NEGATIVE_TEXT]%s2[COLOR_REVERT]</English>
+		<French>Cible : [COLOR_NEGATIVE_TEXT]%s2[COLOR_REVERT]</French>
+		<German>Target: [COLOR_NEGATIVE_TEXT]%s2[COLOR_REVERT]</German>
 		<Italian>target: [COLOR_NEGATIVE_TEXT]%s2[COLOR_REVERT]</Italian>
 		<Polish>target: [COLOR_NEGATIVE_TEXT]%s2[COLOR_REVERT]</Polish>
 		<Spanish>target: [COLOR_NEGATIVE_TEXT]%s2[COLOR_REVERT]</Spanish>
@@ -578,7 +578,7 @@
 	<TEXT>
 		<Tag>TXT_ACO_WITHDRAW</Tag>
 		<English>[COLOR_POSITIVE_TEXT]Withdraw[COLOR_REVERT]</English>
-		<French>[COLOR_POSITIVE_TEXT]Se retirer[COLOR_REVERT]</French>
+		<French>[COLOR_POSITIVE_TEXT]Fuite[COLOR_REVERT]</French>
 		<German>[COLOR_POSITIVE_TEXT]Flucht[COLOR_REVERT]</German>
 		<Italian>[COLOR_POSITIVE_TEXT]Fuga[COLOR_REVERT]</Italian>
 		<Polish>[COLOR_POSITIVE_TEXT]Wycofanie[COLOR_REVERT]</Polish>
@@ -16356,7 +16356,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_MISC_PURSUIT_ONATTACK_VICTIM</Tag>
 		<English>Our %s1_UnitName attempted an escape to safety after being assaulted but could not evade their merciless %s2_EnUName!</English>
-		<French>[NUM1:Votre:Votre:Vos:Vos] %s1_UnitName [NUM1:a:a:ont:ont] tenté de se retirer après avoir été pris d'assaut, mais [NUM1:il n'a:elle n'a:ils n'ont:elles n'ont] pas pu échapper [NUM2:à l'impitoyable:à l'impitoyable:aux impitoyables:aux impitoyables] %s2_EnUName!</French>
+		<French>[NUM1:Votre:Votre:Vos:Vos] %s1_UnitName [NUM1:a:a:ont:ont] tenté de s'enfuir après avoir été pris d'assaut, mais [NUM1:il n'a:elle n'a:ils n'ont:elles n'ont] pas pu échapper [NUM2:à l'impitoyable:à l'impitoyable:aux impitoyables:aux impitoyables] %s2_EnUName!</French>
 		<Italian>La nostra unità %s1_UnitName ha cercato di scappare dopo essere stata attaccata, ma non è riuscita ad evitare l'unità nemica %s2_EnUName!</Italian>
 		<Polish>Nasza jednostka: %s1_UnitName pr&#243;bowa&#179;a uciec przed bezlitosn&#185; jednostk&#185; wroga: %s2_EnUName lecz zosta&#179;a z&#179;apana!</Polish>
 	</TEXT>
@@ -16370,7 +16370,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_MISC_PURSUIT_VICTIM</Tag>
 		<English>Our %s1_UnitName attempted to make it to safety after a skirmish but could not escape their bloodthirsty %s2_EnUName!</English>
-		<French>[NUM1:Votre:Votre:Vos:Vos] %s1_UnitName [NUM1:a:a:ont:ont] tenté de se retirer après [NUM1:son:son:leur:leur] attaque, mais n'[NUM1:a:a:ont:ont] pas pu échapper [NUM2:à l'impitoyable:à l'impitoyable:aux impitoyables:aux impitoyables] %s2_EnUName ennem[NUM2:i:ie:is:ies]!</French>
+		<French>[NUM1:Votre:Votre:Vos:Vos] %s1_UnitName [NUM1:a:a:ont:ont] tenté de s'enfuir après [NUM1:son:son:leur:leur] attaque, mais n'[NUM1:a:a:ont:ont] pas pu échapper [NUM2:à l'impitoyable:à l'impitoyable:aux impitoyables:aux impitoyables] %s2_EnUName ennem[NUM2:i:ie:is:ies] qui [NUM1:l'a:l'a:les ont:les ont] poursuiv[NUM1:i:ie:is:ies]!</French>
 		<Italian>La nostra unità %s1_UnitName ha cercato di ritirarsi dopo una schermaglia, ma non sono riusciti a sfuggire all'unità nemica %s2_EnUName!</Italian>
 		<Polish>Nasza jednostka: %s1_UnitName nie zdo&#179;a&#179;a uciec przed po&#156;cigiem jednostki wroga: s2_EnUName!</Polish>
 	</TEXT>

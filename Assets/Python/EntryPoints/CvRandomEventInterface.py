@@ -6276,7 +6276,7 @@ def doVolcanoReport(argsList):
   iMaxPlayer = GC.getMAX_PC_PLAYERS()
   for i in xrange(iMaxPlayer):
     loopPlayer = GC.getPlayer(i)
-    if loopPlayer.isHuman() and loopPlayer.isAlive() and pPlot.isVisible(loopPlayer.getTeam(), False):
+    if loopPlayer.isHuman() and loopPlayer.isAlive() and pPlot.isRevealed(loopPlayer.getTeam(), False):
       CyInterface().addMessage(loopPlayer.getID(), False, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_BOMBARDED", InterfaceMessageTypes.MESSAGE_TYPE_INFO, GC.getFeatureInfo(ft_volcano_active).getButton(), GC.getCOLOR_RED(), pPlot.getX(), pPlot.getY(), True, True)
 
       if pPlot.isInViewport():
@@ -6344,7 +6344,7 @@ def doVolcanoExtinction(argsList):
     pPlot.setBonusType(iBonus)
     itechresource = GC.getInfoTypeForString("TECH_ANCIENT_BALLISTICS")
 
-  if techteam.isHasTech(itechresource) and (pPlot.isVisible(team, False)):
+  if techteam.isHasTech(itechresource) and (pPlot.isRevealed(team, False)):
       doVolcanoReport((pPlot, BugUtil.getPlainText("TXT_KEY_MISC_DISCOVERED_NEW_RESOURCE_VOLCANO")))
 
 def doVolcanoSleep(argsList):

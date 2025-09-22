@@ -6236,6 +6236,11 @@ void CvGame::doSpawns(PlayerTypes ePlayer)
 			if (getSorenRandNum(std::max(1, iLocalSpawnRate), "Unit spawn") == 0)
 			{
 				const int iArea = pPlot->getArea();
+
+				if (!pPlot->isMapCategoryType(GC.getMAPCATEGORY_EARTH()))
+				{
+					continue;
+				}
 				// Check area unit type density not exceeded if specified
 				if (iMinAreaPlotsPerUnitType > 0
 				&& areaPopulationMap[iArea].find(eUnit) != areaPopulationMap[iArea].end()

@@ -64,19 +64,19 @@ class CvTopCivs:
 
 		# Create panels
 		# Main
-		self.screen.addPanel("TopCivsMainPanel", "", "", True, True, 250, 70, 550, 500, PanelStyles.PANEL_STYLE_MAIN)
+		self.screen.addPanel("TopCivsMainPanel", "", "", True, True, 200, 70, 650, 500, PanelStyles.PANEL_STYLE_MAIN)
 		# Top
-		self.screen.addPanel("TopCivsHeaderPanel", "", "", True, True, 265, 85, 520, 470, PanelStyles.PANEL_STYLE_DAWNBOTTOM)
+		self.screen.addPanel("TopCivsHeaderPanel", "", "", True, True, 215, 85, 620, 470, PanelStyles.PANEL_STYLE_DAWNBOTTOM)
 		# Bottom
-		self.screen.addPanel("TopCivsTextPanel", "", "", True, True, 280, 217, 490, 265, PanelStyles.PANEL_STYLE_DAWNTOP)
+		self.screen.addPanel("TopCivsTextPanel", "", "", True, True, 230, 217, 590, 265, PanelStyles.PANEL_STYLE_DAWNTOP)
 		szTxt = TRNSLTR.getText("TXT_WORD_EXIT", ())
-		self.screen.setButtonGFC("Exit", szTxt, "", 460, 510, 120, 30, WidgetTypes.WIDGET_CLOSE_SCREEN, -1, -1, ButtonStyles.BUTTON_STYLE_STANDARD)
+		self.screen.setButtonGFC("Exit", szTxt, "", 410, 510, 220, 30, WidgetTypes.WIDGET_CLOSE_SCREEN, -1, -1, ButtonStyles.BUTTON_STYLE_STANDARD)
 		# Title Text
 		szTxt = "<font=3>" + TRNSLTR.getText("TXT_KEY_TOPCIVS_TITLE", ())
 		self.screen.setLabel("", "", szTxt, 1<<2, 525, 100, -2.0, FontTypes.GAME_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1)
 
 		szTxt = TRNSLTR.getText("TXT_KEY_TOPCIVS_TEXT1", (szHistorianRand, )) + "\n" + TRNSLTR.getText("TXT_KEY_TOPCIVS_TEXT2", (szTypeRand, ))
-		self.screen.addMultilineText( "InfoText1", szTxt, 265, 150, 520, 70, WidgetTypes.WIDGET_GENERAL, -1, -1, 1<<2)
+		self.screen.addMultilineText( "InfoText1", szTxt, 215, 150, 620, 70, WidgetTypes.WIDGET_GENERAL, -1, -1, 1<<2)
 
 		self.makeList(szTypeRand)
 
@@ -147,7 +147,7 @@ class CvTopCivs:
 
 			szTxt = "%d) %s" % (i + 1, szTxt)
 			#self.screen.setText(szWidgetName, "", szTxt, 1<<0, 430, y, TEXT_Z, FontTypes.GAME_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1)
-			self.screen.addMultilineText("", szTxt, 430, y, 300, 30, WidgetTypes.WIDGET_GENERAL, -1, -1, 1<<0)
+			self.screen.addMultilineText("", szTxt, 380, y, 400, 30, WidgetTypes.WIDGET_GENERAL, -1, -1, 1<<0)
 			y += 30
 
 	#####################################################################################################################################
