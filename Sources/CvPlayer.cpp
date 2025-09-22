@@ -2571,9 +2571,10 @@ void CvPlayer::acquireCity(CvCity* pOldCity, bool bConquest, bool bTrade, bool b
 
 		FAssertMsg(pNewCity, "NewCity is not assigned a valid value");
 
+		bool bHistoricalCalendar = GC.getGame().isModderGameOption(MODDERGAMEOPTION_USE_HISTORICAL_ACCURATE_CALENDAR);
 		pNewCity->setPreviousOwner(eOldOwner);
 		pNewCity->setOriginalOwner(eOriginalOwner);
-		pNewCity->setGameTurnFounded(iGameTurnFounded);
+		pNewCity->setGameTurnFounded(iGameTurnFounded, bHistoricalCalendar);
 		pNewCity->setPopulation((bConquest && !bRecapture) ? std::max(1, (iPopulation - 1)) : iPopulation, false);
 		pNewCity->setHighestPopulation(iHighestPopulation);
 		pNewCity->setName(cityName);
@@ -3848,7 +3849,8 @@ void CvPlayer::doTurn()
 		//Calvitix, Modmod FOGWAR PlotDecay
 		if (isHumanPlayer() || GC.getGame().getAIAutoPlay(getID()) > 0 || gDLL->GetAutorun())
 		{
-			if (GET_TEAM(getTeam()).getVisibilityDecay() != NO_DECAY)
+			CvGame& GAME = GC.getGame();
+			if (GAME.isModderGameOption(MODDERGAMEOPTION_FOGWAR_DECAY) && GET_TEAM(getTeam()).getVisibilityDecay() != NO_DECAY)
 				GC.getMap().updateFog(true); //Calvitix, to applyPlotDecay
 		}
 #endif
@@ -30540,6 +30542,11 @@ int CvPlayer::getAmbushingUnit() const
 	return m_iAmbushingUnit;
 }
 
+int CvPlayer::getAmbushingTargetUnit() const
+{
+	return m_iAmbushingTargetUnit;
+}
+
 bool CvPlayer::isAssassinate() const
 {
 	return m_bAssassinate;
@@ -30551,6 +30558,11 @@ void CvPlayer::setAmbushingUnit(int iNewValue, bool bAssassinate)
 	m_bAssassinate = bAssassinate;
 }
 
+void CvPlayer::setAmbushingTargetUnit(int iNewValue, bool bAssassinate)
+{
+	m_iAmbushingTargetUnit = iNewValue;
+	m_bAssassinate = bAssassinate;
+}
 
 void CvPlayer::setGreatGeneralPointsForType(const UnitTypes eUnit, const int iValue)
 {

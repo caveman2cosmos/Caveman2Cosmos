@@ -2801,7 +2801,7 @@ public:
 
 	bool canAmbush(const CvPlot* pPlot, bool bAssassinate = false) const;
 	bool doAmbush(bool bAssassinate = false);
-	void enactAmbush(bool bAssassinate = false);
+	void enactAmbush(bool bAssassinate = false, CvUnit* pSelectedDefender = NULL);
 
 	void changeDebugCount(int iChange);
 	void setDebugCount(int iValue);

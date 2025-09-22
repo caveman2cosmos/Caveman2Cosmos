@@ -152,6 +152,7 @@ public:
 	CyArea* waterArea() const;
 
 	int getGameTurnFounded() const;
+	int getGameDateFounded() const;
 	int getGameTurnAcquired() const;
 	int getPopulation() const;
 	void setPopulation(int iNewValue);

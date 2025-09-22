@@ -838,9 +838,20 @@ void CvDLLButtonPopup::OnOkClicked(CvPopup* pPopup, PopupReturn *pPopupReturn, C
 		}
 		case BUTTONPOPUP_CONFIRM_AMBUSH:
 		{
-			if (pPopupReturn->getButtonClicked() == 1)
+			if (pPopupReturn->getButtonClicked() != 0)
 			{
-				CvMessageControl::getInstance().sendAmbushConfirmation(true);
+				int DefID = pPopupReturn->getButtonClicked();
+				int iAttackerID = info.getData1();
+				const CvPlot* pPlot = GC.getMap().plot(info.getData2(), info.getData3());
+				foreach_(const CvUnit* unitX, pPlot->units())
+				{
+					if (unitX->getID() == DefID)
+					{
+						GET_PLAYER(GC.getGame().getActivePlayer()).setAmbushingTargetUnit(DefID);
+						CvMessageControl::getInstance().sendAmbushConfirmation(true);
+						break;
+					}
+				}
 			}
 			else
 			{
@@ -1017,6 +1028,10 @@ bool CvDLLButtonPopup::launchButtonPopup(CvPopup* pPopup, CvPopupInfo &info)
 		}
 		case BUTTONPOPUP_PYTHON:
 		{
+			if (info.getFlags() == AMBUSH_FLAG)
+			{
+				return true; //return launchConfirmAmbushPopup(pPopup, info);
+			}
 			return launchPythonPopup(pPopup, info);
 		}
 		case BUTTONPOPUP_DETAILS:
@@ -3051,6 +3066,7 @@ bool CvDLLButtonPopup::launchConfirmAmbushPopup(CvPopup* pPopup, CvPopupInfo &in
 	int iY = info.getData3();
 	PlayerTypes ePlayer = GC.getGame().getActivePlayer();
 	CvWStringBuffer szBuffer;
+	CvWStringBuffer szBufferMini;
 	if (ePlayer == NO_PLAYER)
 	{
 		return false;
@@ -3069,7 +3085,13 @@ bool CvDLLButtonPopup::launchConfirmAmbushPopup(CvPopup* pPopup, CvPopupInfo &in
 		return false;
 	}
 
-	GAMETEXT.setCombatPlotHelp(szBuffer, pPlot, bAssassinate);
+	if (GC.getGame().isModderGameOption(MODDERGAMEOPTION_ASSASSINATE_MINIMAL))
+		GAMETEXT.setMinimalCombatPlotHelp(szBuffer, pPlot, bAssassinate);
+	else
+		GAMETEXT.setCombatPlotHelp(szBuffer, pPlot, bAssassinate);
+
+	//CvPopupInfo* pInfo = new CvPopupInfo(BUTTONPOPUP_TEXT);
+
 	if (bAssassinate)
 	{
 		gDLL->getInterfaceIFace()->popupSetBodyString(pPopup, gDLL->getText("TXT_KEY_CONFIRM_ASSASSINATE"));
@@ -3079,8 +3101,53 @@ bool CvDLLButtonPopup::launchConfirmAmbushPopup(CvPopup* pPopup, CvPopupInfo &in
 		gDLL->getInterfaceIFace()->popupSetBodyString(pPopup, gDLL->getText("TXT_KEY_CONFIRM_AMBUSH"));
 	}
 
+	if (bAssassinate && GC.getGame().isModderGameOption(MODDERGAMEOPTION_ASSASSINATE_CHOICE))
+	{
+		//Calvitix, give the possibility to choose which Unit will be assassinated : 
+		std::vector<CvUnit*> defenders;
+		CvPlayer & player = GET_PLAYER(GC.getGame().getActivePlayer());
+		CvUnit * pAttacker = pAttacker = player.getUnit(iUnitID);
+		for (int i = 0; i < pPlot->getNumUnits(); ++i)
+		{
+			CvUnit* pUnit = pPlot->getUnitByIndex(i);
+			if (!pUnit)
+				continue;
 
-	gDLL->getInterfaceIFace()->popupAddGenericButton(pPopup, CvWString(szBuffer.getCString()), NULL, 1, WIDGET_GENERAL);
+			// Filtrer par propriétaire si nécessaire
+			if (pUnit->getOwner() == NO_PLAYER || pUnit->getOwner() == GC.getGame().getActivePlayer())
+				continue;
+
+			// Vérifie si l’unité peut défendre contre l’attaquant
+			if (pUnit->canDefend(pPlot))
+			{
+				if (!pUnit->isInvisible(pAttacker->getTeam(), false))
+				{
+					if (!pUnit->isWaiting() && pUnit->canFight())
+					{
+						defenders.push_back(pUnit);
+					}
+				}
+			}
+		}
+
+		int BtnId = 0;
+		//for each defender, create a button : 
+		for (size_t i = 0; i < defenders.size(); ++i)
+		{
+			CvUnit* pDefender = defenders[i];
+			if (pDefender)
+			{
+				BtnId++;
+				szBuffer.clear();
+				GAMETEXT.setAssassinatePlotHelp(szBuffer, pPlot, pAttacker, pDefender);
+				gDLL->getInterfaceIFace()->popupAddGenericButton(pPopup, CvWString(szBuffer.getCString()), NULL, pDefender->getID(), WIDGET_GENERAL,pAttacker->getID(), pDefender->getID());
+			}
+		}
+	}
+	else
+	{
+		gDLL->getInterfaceIFace()->popupAddGenericButton(pPopup, CvWString(szBuffer.getCString()), NULL, 1, WIDGET_GENERAL);
+	}
 	gDLL->getInterfaceIFace()->popupAddGenericButton(pPopup, gDLL->getText("TXT_KEY_POPUP_NO"), NULL, 0, WIDGET_GENERAL);
 
 	gDLL->getInterfaceIFace()->popupLaunch(pPopup, false, POPUPSTATE_IMMEDIATE);

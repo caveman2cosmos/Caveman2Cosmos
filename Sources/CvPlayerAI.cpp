@@ -21835,7 +21835,8 @@ int CvPlayerAI::AI_getCultureVictoryStage() const
 		return 0;
 	}
 
-	if (getCapitalCity()->getGameTurnFounded() > (10 + GC.getGame().getStartTurn()))
+	bool bHistoricalCalendar = GC.getGame().isModderGameOption(MODDERGAMEOPTION_USE_HISTORICAL_ACCURATE_CALENDAR);
+	if (getCapitalCity()->getGameTurnFounded(bHistoricalCalendar) > (10 + GC.getGame().getStartTurn()))
 	{
 		if (iHighCultureCount < GC.getGame().culturalVictoryNumCultureCities())
 		{

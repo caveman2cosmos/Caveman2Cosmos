@@ -33,6 +33,7 @@
 #include "CvDLLUtilityIFaceBase.h"
 #include "CyPlot.h"
 #include "CyUnit.h"
+#include "CvDLLButtonPopup.h"
 #ifdef USE_OLD_PATH_GENERATOR
 #include "FAStarNode.h"
 #endif
@@ -38092,7 +38093,7 @@ bool CvUnit::doAmbush(bool bAssassinate)
 	{
 		return false;
 	}
-	if (bAssassinate && plot()->isCity(true))
+	if (bAssassinate && plot()->isCity(false))
 	{
 		doInsidiousnessVSInvestigationCheck();
 	}
@@ -38102,10 +38103,13 @@ bool CvUnit::doAmbush(bool bAssassinate)
 		if (isHuman())
 		{
 			GET_PLAYER(getOwner()).setAmbushingUnit(getID(), bAssassinate);
-			CvPopupInfo* pInfo = new CvPopupInfo(BUTTONPOPUP_CONFIRM_AMBUSH);
+			CvPopupInfo* pInfo = new CvPopupInfo(BUTTONPOPUP_CONFIRM_AMBUSH); // BUTTONPOPUP_CONFIRM_AMBUSH);
 			pInfo->setData1(getID());
 			pInfo->setData2(getX());
 			pInfo->setData3(getY());
+			pInfo->setFlags(AMBUSH_FLAG);
+			//pInfo->setPythonModule("AmbushPopup");
+			//pInfo->setOnClickedPythonCallback("onAmbushPopup");
 			gDLL->getInterfaceIFace()->addPopup(pInfo, getOwner(), true);
 		}
 		else
@@ -38128,10 +38132,18 @@ bool CvUnit::doAmbush(bool bAssassinate)
 	return true;
 }
 
-void CvUnit::enactAmbush(bool bAssassinate)
+void CvUnit::enactAmbush(bool bAssassinate, CvUnit * pSelectedDefender)
 {
 	CvPlot* pPlot = plot();
-	CvUnit* pDefender = pPlot->getBestDefender(NO_PLAYER, getOwner(), this, !gDLL->altKey(), NO_TEAM == getDeclareWarMove(pPlot), false, bAssassinate);
+	CvUnit* pDefender = NULL;
+	if (!pSelectedDefender)
+	{
+		pPlot->getBestDefender(NO_PLAYER, getOwner(), this, !gDLL->altKey(), NO_TEAM == getDeclareWarMove(pPlot), false, bAssassinate);
+	}
+	else
+	{
+		pDefender = pSelectedDefender;
+	}
 	if (pDefender != NULL)
 	{
 		attackSamePlotSpecifiedUnit(pDefender);

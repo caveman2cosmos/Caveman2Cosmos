@@ -1159,6 +1159,7 @@ void CvPlot::updateFog(const bool bApplyDecay)
 	const TeamTypes &team = GC.getGame().getActiveTeam();
 	const PlayerTypes myID = GC.getGame().getActivePlayer();
 	const bool bIsHuman = GET_TEAM(team).isHuman() || GC.getGame().getAIAutoPlay(myID) > 0 || gDLL->GetAutorun();
+	const bool bOptionDecay = GC.getGame().isModderGameOption(MODDERGAMEOPTION_FOGWAR_DECAY);
 	FAssert(team != NO_TEAM);
 
 	if (isRevealed(team, false))
@@ -1179,7 +1180,7 @@ void CvPlot::updateFog(const bool bApplyDecay)
 		)
 		{
 #ifdef ENABLE_FOGWAR_DECAY
-			if (bIsHuman && bApplyDecay)
+			if (bIsHuman && (bApplyDecay || !bOptionDecay))
 			{
 				bool bSeaPlot = isWater() && !isCoastal();
 				m_iVisibilityDecay = GET_TEAM(team).getVisibilityDecay(bSeaPlot);
@@ -1194,7 +1195,7 @@ void CvPlot::updateFog(const bool bApplyDecay)
 		else
 		{
 #ifdef ENABLE_FOGWAR_DECAY
-			if (!bIsHuman || m_iVisibilityDecay == NO_DECAY)
+			if (!bIsHuman || m_iVisibilityDecay == NO_DECAY || !bOptionDecay)
 			{
 #endif
 				gDLL->getEngineIFace()->DarkenVisibility(getFOWIndex());

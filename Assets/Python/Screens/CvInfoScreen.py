@@ -925,8 +925,11 @@ class CvInfoScreen:
 				break
 
 			pPlayer = GC.getPlayer(cityX.getOwner())
-
-			iTurnYear = GAME.getTurnYear(cityX.getGameTurnFounded())
+			bACalendar = GAME.getModderGameOption(ModderGameOptionTypes.MODDERGAMEOPTION_USE_HISTORICAL_ACCURATE_CALENDAR)
+			if bACalendar :
+				iTurnYear = cityX.getGameDateFounded()
+			else :
+				iTurnYear = GAME.getTurnYear(cityX.getGameturnFounded())
 
 			if iTurnYear < 0:
 				szTurnFounded = TRNSLTR.getText("TXT_KEY_TIME_BC", (-iTurnYear,))

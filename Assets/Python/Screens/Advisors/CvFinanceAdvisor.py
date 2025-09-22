@@ -3,6 +3,7 @@ from CvPythonExtensions import *
 # globals
 GC = CyGlobalContext()
 TRNSLTR = CyTranslator()
+MAX_COMMERCE_RATE_MODIFIER_VALUE = 10000000
 
 class CvFinanceAdvisor:
 
@@ -348,6 +349,13 @@ class CvFinanceAdvisor:
 		# Content
 		x = xRes / 3 - xRes / 24 - 24
 		y = self.yCommerceSlider
+		Btnsize = 20
+		xBtnOffset = 0
+		yBtnOffset = 0
+		if (xRes > 2500) :
+			Btnsize = 30
+			xBtnOffset = 60
+			yBtnOffset = -2
 		Pnl = "FinAdv_Scroll_1"
 		# Slider percentages
 		iInc = GC.getDefineINT("COMMERCE_PERCENT_CHANGE_INCREMENTS")
@@ -361,14 +369,14 @@ class CvFinanceAdvisor:
 				screen.setLabelAt(aName(), Pnl, szText, 1<<0, 8, y + 2, 0, eGameFont, eWidGen, 1, 1)
 
 				Btn = aName()
-				screen.setImageButtonAt(Btn, Pnl, "", 26, y, 20, 20, WidgetTypes.WIDGET_CHANGE_PERCENT, iType, iInc)
+				screen.setImageButtonAt(Btn, Pnl, "", 26, y+yBtnOffset, Btnsize, Btnsize, WidgetTypes.WIDGET_CHANGE_PERCENT, iType, iInc)
 				screen.setStyle(Btn, "Button_Plus_Style")
 				Btn = aName()
-				screen.setImageButtonAt(Btn, Pnl, "", 48, y, 20, 20, WidgetTypes.WIDGET_CHANGE_PERCENT, iType, -iInc)
+				screen.setImageButtonAt(Btn, Pnl, "", 28+Btnsize, y+yBtnOffset, Btnsize, Btnsize, WidgetTypes.WIDGET_CHANGE_PERCENT, iType, -iInc)
 				screen.setStyle(Btn, "Button_Minus_Style")
 
 				szText = uFont2b + str(CyPlayer.getCommercePercent(iType)) + "%"
-				screen.setLabelAt(aName(), Pnl, szText, 1<<1, 112, y, 0, eGameFont, eWidGen, 1, 1)
+				screen.setLabelAt(aName(), Pnl, szText, 1<<1, 112+xBtnOffset, y+yBtnOffset, 0, eGameFont, eWidGen, 1, 1)
 
 				if CommerceTypes(iType) == CommerceTypes.COMMERCE_RESEARCH:
 					# Research is subject to modifiers.
@@ -377,20 +385,20 @@ class CvFinanceAdvisor:
 					iRate = CyPlayer.getCommerceRate(CommerceTypes(iType))
 				szRate = uFont2b + str(iRate) + iconCommerceList[iType]
 				screen.setLabelAt(aName(), Pnl, szRate, 1<<1, x, y, 0, eGameFont, eWidGen, 1, 1)
-				y += 20
+				y += Btnsize
 			elif iType == eComGold:
-				y += 8
+				y += Btnsize - 12
 				szText = uFont2b + iconCommerceList[iType]
 				screen.setLabelAt(aName(), Pnl, szText, 1<<0, 8, y + 2, 0, eGameFont, eWidGen, 1, 1)
 
 				szText = uFont2b + GC.getCommerceInfo(iType).getDescription()
-				screen.setLabelAt(aName(), Pnl, szText, 1<<0, 26, y, 0, eGameFont, eWidGen, 1, 1)
+				screen.setLabelAt(aName(), Pnl, szText, 1<<0, 26, y+yBtnOffset, 0, eGameFont, eWidGen, 1, 1)
 
 				szText = uFont2b + str(CyPlayer.getCommercePercent(iType)) + "%"
-				screen.setLabelAt(aName(), Pnl, szText, 1<<1, 108, y, 0, eGameFont, eWidGen, 1, 1)
+				screen.setLabelAt(aName(), Pnl, szText, 1<<1, 108+xBtnOffset, y+yBtnOffset, 0, eGameFont, eWidGen, 1, 1)
 
 				szCommerce = uFont2b + str(iIncome) + iconCommerceList[iType]
-				screen.setLabelAt(aName(), Pnl, szCommerce, 1<<1, x, y, 0, eGameFont, eWidGen, 1, 1)
+				screen.setLabelAt(aName(), Pnl, szCommerce, 1<<1, x, y+yBtnOffset, 0, eGameFont, eWidGen, 1, 1)
 
 		if CyPlayer.isAnarchy():
 			return
@@ -479,7 +487,7 @@ class CvFinanceAdvisor:
 						entry[3] += 1
 						entry[4] += fCityTotal * entry[1] / 100.0
 
-		iTotalMinusTaxes = int(fBuildings) + int(fHeadquarters) + int(fShrines) + iCorporations + int(fSpecialists) + int(fWealth) + int(fPlayerGoldModifierEffect) + int(fBonusGoldModifierEffect)
+		iTotalMinusTaxes = min(MAX_COMMERCE_RATE_MODIFIER_VALUE,int(fBuildings) + int(fHeadquarters) + int(fShrines) + iCorporations + int(fSpecialists) + int(fWealth) + int(fPlayerGoldModifierEffect) + int(fBonusGoldModifierEffect))
 		for entry in multipliers:
 			if entry[3]:
 				iTotalMinusTaxes += int(entry[4])

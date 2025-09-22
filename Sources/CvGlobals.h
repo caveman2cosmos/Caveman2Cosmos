@@ -2224,11 +2224,6 @@ extern CvGlobals gGlobalsProxy;	// for debugging
 //
 inline cvInternalGlobals& cvInternalGlobals::getInstance()
 {
-	// AIAndy: This function is called so often, it is not worth it to do this safety check on something that will not happen with the code changes we do nowadays
-	//if ( gGlobals == NULL )
-	//{
-	//	::MessageBoxA(NULL, "cvInternalGlobals::getInstance() called prior to instantiation\n","CvGameCore",MB_OK);
-	//}
 	return *gGlobals;
 }
 

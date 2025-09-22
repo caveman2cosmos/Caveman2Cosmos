@@ -5040,8 +5040,10 @@ short CvTeamAI::getVisibilityDecay(bool pSeaPlot)
 	const TeamTypes& team = GC.getGame().getActiveTeam();
 	const PlayerTypes myID = GC.getGame().getActivePlayer();
 	const bool bIsHuman = GET_TEAM(team).isHuman() || GC.getGame().getAIAutoPlay(myID) > 0 || gDLL->GetAutorun();
-	if ((pSeaPlot && m_bPermanentMapSea) || !bIsHuman) return NO_DECAY;
-	if ((!pSeaPlot && m_bPermanentMapLand) || !bIsHuman) return NO_DECAY;
+	m_iDefaultDecay = GC.getGame().getModderGameOption(MODDERGAMEOPTION_FOGWAR_NBTURNS);
+
+	if ((pSeaPlot && m_bPermanentMapSea) || !bIsHuman || !GC.getGame().getModderGameOption(MODDERGAMEOPTION_FOGWAR_DECAY)) return NO_DECAY;
+	if ((!pSeaPlot && m_bPermanentMapLand) || !bIsHuman || !GC.getGame().getModderGameOption(MODDERGAMEOPTION_FOGWAR_DECAY)) return NO_DECAY;
 
 	if (pSeaPlot)
 	{

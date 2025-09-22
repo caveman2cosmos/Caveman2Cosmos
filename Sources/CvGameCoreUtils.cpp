@@ -1,4 +1,4 @@
-#include "CvGameCoreDLL.h"
+﻿#include "CvGameCoreDLL.h"
 #include "CvBuildingInfo.h"
 #include "CvCity.h"
 #include "CvGameAI.h"
@@ -18,6 +18,7 @@
 #include "CvDLLFAStarIFaceBase.h"
 #include "CheckSum.h"
 #include "FAStarNode.h"
+
 
 #define PATH_MOVEMENT_WEIGHT									(1000)
 #define PATH_RIVER_WEIGHT										(100)
@@ -4530,6 +4531,91 @@ int applyDistanceScoringFactor(int score, const CvPlot* sourcePlot, const CvPlot
 	return score;
 }
 
+
+//
+// === Partie 1 : encodage bitwise (a ∈ [1,100000], b ∈ [0,9999]) ===
+//
+int encodeACDateturn(int decodeda, int b) {
+	
+	if (decodeda < -400000 || decodeda > 7000) throw std::out_of_range("a hors limites [-400000,6000]");
+	int a = inverseMapValue(decodeda * -1);
+	if (a < 1 || a > 100000) throw std::out_of_range("a hors limites [1,100000]");
+	if (b < 0 || b > 9999)   throw std::out_of_range("b hors limites [0,9999]");
+	return (a << 14) | b;  // 14 bits réservés pour b
+}
+
+int decodeACDate(int n) {
+	int codedDate = n >> 14;
+	
+	int decodedDate = mapValue(codedDate) * -1 ;
+	
+	return decodedDate;
+}
+
+int decodeACTurn(int n) {
+	int codedTurn = n & ((1 << 14) - 1);
+	return codedTurn;
+
+}
+
+//
+// === Partie 2 : mapping non-linéaire pour b ===
+//
+
+// Paramètres globaux
+const int N = 9999;
+const double ymin = -7000.0;
+const double ymax = 400000.0;
+const double A = ymax - ymin;
+
+// Portion linéaire pour obtenir un pas ≈ 15 sur [-6000,6000]
+const double t0 = 800.0 / 9999.0;
+const double f = (5000.0 - ymin) / A;
+
+// Constante k calculée numériquement (assure continuité de la dérivée)
+const double k = 1.8314001073353914;
+const double expk = std::exp(k);
+
+// fonction auxiliaire S(t)
+static double S_of_t(double t) {
+	if (t <= t0) {
+		return (f / t0) * t;
+	}
+	else {
+		double u = (t - t0) / (1.0 - t0);
+		double frac = (std::exp(k * u) - 1.0) / (expk - 1.0);
+		return f + (1.0 - f) * frac;
+	}
+}
+
+// conversion avant : x ∈ [0,9999] → y ∈ [-6000,400000]
+int mapValue(int x) {
+	if (x < 0) x = 0;
+	if (x > N) x = N;
+	double t = static_cast<double>(x) / static_cast<double>(N);
+	double y = ymin + A * S_of_t(t);
+	return static_cast<int>(y >= 0 ? y + 0.5 : y - 0.5);
+}
+
+// conversion inverse : y ∈ [-6000,400000] → x ∈ [0,9999]
+int inverseMapValue(int y) {
+	if (y < ymin) return 0;
+	if (y > ymax) return N;
+
+	// recherche dichotomique sur x
+	int low = 0, high = N;
+	while (low < high) {
+		int mid = (low + high) / 2;
+		int val = mapValue(mid);
+		if (val < y) {
+			low = mid + 1;
+		}
+		else {
+			high = mid;
+		}
+	}
+	return low; // plus petit x tel que mapValue(x) >= y
+}
 
 
 CvString MissionAITypeToString(MissionAITypes eMissionAI)

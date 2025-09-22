@@ -368,8 +368,10 @@ void CvCity::init(int iID, PlayerTypes eOwner, int iX, int iY, bool bBumpUnits, 
 
 	GC.getGame().changeNumCities(1);
 
-	setGameTurnFounded(GC.getGame().getGameTurn());
-	setGameTurnAcquired(GC.getGame().getGameTurn());
+	bool bHistoricalCalendar = GC.getGame().isModderGameOption(MODDERGAMEOPTION_USE_HISTORICAL_ACCURATE_CALENDAR);
+
+	setGameTurnFounded(GC.getGame().getGameTurn(), bHistoricalCalendar);
+	setGameTurnAcquired(GC.getGame().getGameTurn(), bHistoricalCalendar);
 
 	setPopulation(GC.getINITIAL_CITY_POPULATION() + GC.getEraInfo(GC.getGame().getStartEra()).getFreePopulation(), false);
 
@@ -6866,34 +6868,105 @@ void CvCity::setRallyPlot(const CvPlot* pPlot)
 }
 
 
-int CvCity::getGameTurnFounded() const
+int CvCity::getGameTurnFounded(const bool bACalendar) const
 {
+	if (bACalendar) // Accurate Calendar
+	{
+		return decodeACTurn(m_iGameTurnFounded);
+	}
 	return m_iGameTurnFounded;
 }
 
 
-void CvCity::setGameTurnFounded(int iNewValue)
+void CvCity::setGameTurnFounded(const int iNewValue, const bool bHistoricalCalendar)
 {
-	if (getGameTurnFounded() != iNewValue)
+	if (bHistoricalCalendar)
 	{
-		m_iGameTurnFounded = iNewValue;
-		FASSERT_NOT_NEGATIVE(getGameTurnFounded());
+		CvDate& turnDate = GC.getGame().getCurrentDate();
+		int encodeddate = encodeACDateturn(turnDate.getYear(), iNewValue);
+		m_iGameTurnFounded = encodeddate;
+		//Calvitix (store the year directly, as the turn=>Date is dynamic with Accurate Calendar)
 
 		GC.getMap().updateWorkingCity();
 	}
+	else
+	{
+		if (getGameTurnFounded() != iNewValue)
+		{
+			m_iGameTurnFounded = iNewValue;
+			FASSERT_NOT_NEGATIVE(getGameTurnFounded());
+
+			GC.getMap().updateWorkingCity();
+		}
+	}
+}
+
+int CvCity::getGameDateFounded(const bool bACalendar) const
+{
+	if (bACalendar) // Accurate Calendar
+	{
+		return decodeACDate(m_iGameTurnFounded);
+	}
+	return m_iGameTurnFounded;
 }
 
 
-int CvCity::getGameTurnAcquired() const
+void CvCity::setGameDateFounded(const int iNewValue, const bool bHistoricalCalendar)
 {
+	if (bHistoricalCalendar)
+	{
+		CvDate& turnDate = GC.getGame().getCurrentDate();
+		//Calvitix (store the year directly, as the turn=>Date is dynamic with Accurate Calendar)
+		m_iGameTurnFounded = encodeACDateturn(turnDate.getYear(), iNewValue);
+
+		GC.getMap().updateWorkingCity();
+	}
+	else
+	{
+		if (getGameTurnFounded() != iNewValue)
+		{
+			m_iGameTurnFounded = iNewValue;
+			FASSERT_NOT_NEGATIVE(getGameTurnFounded());
+
+			GC.getMap().updateWorkingCity();
+		}
+	}
+}
+
+int CvCity::getGameTurnAcquired(const bool bHistoricalCalendar) const
+{
+	if (bHistoricalCalendar) // Accurate Calendar
+	{
+		return decodeACTurn(m_iGameTurnAcquired);
+	}
+	return m_iGameTurnAcquired;
+}
+
+int CvCity::getGameDateAcquired(const bool bHistoricalCalendar) const
+{
+	if (bHistoricalCalendar) // Accurate Calendar
+	{
+		return decodeACDate(m_iGameTurnAcquired);
+	}
 	return m_iGameTurnAcquired;
 }
 
 
-void CvCity::setGameTurnAcquired(int iNewValue)
+void CvCity::setGameTurnAcquired(const int iNewValue, const bool bHistoricalCalendar)
 {
-	m_iGameTurnAcquired = iNewValue;
-	FASSERT_NOT_NEGATIVE(getGameTurnAcquired());
+	if (bHistoricalCalendar)
+	{
+		CvDate& turnDate = GC.getGame().getCurrentDate();
+		m_iGameTurnAcquired = iNewValue;
+		//Calvitix (store the year directly, and encode the Date wit hwiseBit)
+		m_iGameTurnAcquired = encodeACDateturn(turnDate.getYear(), iNewValue);
+
+	}
+	else
+	{
+		m_iGameTurnAcquired = iNewValue;
+		FASSERT_NOT_NEGATIVE(getGameTurnAcquired());
+	}
 }
 
 

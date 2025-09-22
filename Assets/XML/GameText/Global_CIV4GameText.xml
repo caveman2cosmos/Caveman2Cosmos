@@ -566,6 +566,16 @@
 		<Russian>[COLOR_POSITIVE_TEXT]%s1[COLOR_REVERT] ïðîòèâ [COLOR_NEGATIVE_TEXT]%s2[COLOR_REVERT]</Russian>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_ACO_CIBLE</Tag>
+		<English>target: [COLOR_NEGATIVE_TEXT]%s2[COLOR_REVERT]</English>
+		<French> cible : [COLOR_NEGATIVE_TEXT]%s2[COLOR_REVERT]</French>
+		<German>target: [COLOR_NEGATIVE_TEXT]%s2[COLOR_REVERT]</German>
+		<Italian>target: [COLOR_NEGATIVE_TEXT]%s2[COLOR_REVERT]</Italian>
+		<Polish>target: [COLOR_NEGATIVE_TEXT]%s2[COLOR_REVERT]</Polish>
+		<Spanish>target: [COLOR_NEGATIVE_TEXT]%s2[COLOR_REVERT]</Spanish>
+		<Russian>target: [COLOR_NEGATIVE_TEXT]%s2[COLOR_REVERT]</Russian>
+	</TEXT>	
+	<TEXT>
 		<Tag>TXT_ACO_WITHDRAW</Tag>
 		<English>[COLOR_POSITIVE_TEXT]Withdraw[COLOR_REVERT]</English>
 		<French>[COLOR_POSITIVE_TEXT]Se retirer[COLOR_REVERT]</French>
@@ -3302,7 +3312,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_CITY_FOUNDED</Tag>
 		<English>Founded: %s1</English>
-		<French>Fondation de : %s1</French>
+		<French>Fondée vers : %s1</French>
 		<German>Gegründet: %s1</German>
 		<Italian>Fondata nel [COLOR_HIGHLIGHT_TEXT]%s1[COLOR_REVERT]</Italian> <!-- city screen hover city name -->
 		<Russian>Основан в %s1</Russian>
@@ -4876,17 +4886,17 @@
 	<TEXT>
 		<Tag>TXT_KEY_CONFIRM_AMBUSH</Tag>
 		<English>Are you sure you wish to ambush the enemy?</English>
-		<French>Etez-vous sûr de vouloir tendre une embuscade à l'ennemi?</French>
+		<French>Êtes-vous sûr de vouloir tendre une embuscade à l'ennemi?</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CONFIRM_ASSASSINATE</Tag>
 		<English>Are you sure you wish to assassinate the enemy?</English>
-		<French>Etez-vous sûr de vouloir assassiner l'ennemi?</French>
+		<French>Êtes-vous sûr de vouloir assassiner l'ennemi?</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CONFIRM_UNIT_SPLIT</Tag>
 		<English>Are you sure you wish to split this unit?</English>
-		<French>Etes-vous sûr de vouloir diviser cette unité?</French>
+		<French>Êtes-vous sûr de vouloir diviser cette unité?</French>
 		<German>Soll diese Einheit wirklich aufgeteilt werden?</German>
 		<Polish>Jeste&#156; pewny, &#191;e chcesz podzieli&#230; t&#185; jednostk&#234;?</Polish>
 	</TEXT>
@@ -9209,14 +9219,14 @@
 	<TEXT>
 		<Tag>TXT_KEY_HANDICAP_NIGHTMARE_PLUS</Tag>
 		<English>Deeper Nightmare</English>
-		<French>Cauchemar</French>
+		<French>Cauchemar extrême</French>
 		<Italian>Incubo</Italian>
 		<Russian>Всемогущий</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HANDICAP_NIGHTMARE_HELP_PLUS</Tag>
 		<English>Nightmare extra production boost for AI</English>
-		<French>Nightmare extra production boost for AI</French>
+		<French>Ce mode Cauchemar extrême donne des bonus des production aux IA</French>
 		<Italian>Nightmare extra production boost for AI</Italian>
 		<Russian>Nightmare extra production boost for AI</Russian>
 	</TEXT>
@@ -13629,7 +13639,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_MISC_CITY_HAS_BEEN_FOUNDED</Tag>
 		<English>%s1_CityName has been founded.</English>
-		<French>Fondation de %s1_CityName.</French>
+		<French>La ville de %s1_CityName a été fondée.</French>
 		<German>Die Stadt %s1_CityName wurde gegründet.</German>
 		<Italian>La città di %s1_CityName è stata fondata.</Italian> <!-- Message in the Event Log -->
 		<Spanish>Se ha fundado %s1_CityName.</Spanish>
@@ -26933,7 +26943,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 	<TEXT>
 		<Tag>TXT_KEY_TIME_AD</Tag>
 		<English>%d1_Date AD</English>
-		<French>%d1_Date ap.JC.</French>
+		<French>%d1_Date ap. JC.</French>
 		<German>%d1_Date n.Chr.</German>
 		<Italian>%d1_Date d.C.</Italian>
 		<Spanish>%d1_Date d.C.</Spanish>
@@ -26943,7 +26953,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 	<TEXT>
 		<Tag>TXT_KEY_TIME_AD_SAVE</Tag>
 		<English>AD-%s1_Date</English>
-		<French>%s1_Date ap. J.C</French>
+		<French>%s1_Date ap.JC.</French>
 		<German>n.Chr.-%s1_Date</German>
 		<Italian>d.C. - %s1_Date</Italian>
 		<Spanish>%s1_Date d. C.</Spanish>
@@ -26951,7 +26961,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 	<TEXT>
 		<Tag>TXT_KEY_TIME_BC</Tag>
 		<English>%d1_Date BC</English>
-		<French>%d1_Date av.JC.</French>
+		<French>%d1_Date av. JC.</French>
 		<German>%d1_Date v.Chr.</German>
 		<Italian>%d1_Date a.C.</Italian>
 		<Spanish>%d1_Date a.C.</Spanish>
@@ -26961,7 +26971,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 	<TEXT>
 		<Tag>TXT_KEY_TIME_BC_SAVE</Tag>
 		<English>BC-%s1_Date</English>
-		<French>%s1_Date av. J-C.</French>
+		<French>%s1_Date av.JC.</French>
 		<German>v.Chr.-%s1_Date</German>
 		<Italian>a. C. - %s1_Date</Italian>
 		<Spanish>%s1_Date a. C.</Spanish>

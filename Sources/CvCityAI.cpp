@@ -1951,6 +1951,14 @@ void CvCityAI::AI_chooseProduction()
 	{
 		return;
 	}
+	//#14b, Check for at least one explorer
+	if (player.AI_totalAreaUnitAIs(pArea, UNITAI_EXPLORE) == 0)
+	{
+		if (AI_chooseUnit("need explorers", UNITAI_EXPLORE))
+		{
+			return;
+		}
+	}
 
 	m_iTempBuildPriority--;
 
@@ -2580,51 +2588,53 @@ void CvCityAI::AI_chooseProduction()
 		{
 			return;
 		}
+	}
 
-		if ((bMassing || !bLandWar) && iDangerValue < 4 && !bFinancialTrouble)
+	//#42b Explorers
+	if ((bMassing || !bLandWar) && iDangerValue < 4 && !bFinancialTrouble)
+	{
+		const int iNeededExplorers = player.AI_neededExplorers(pArea);
+		const int iExplorerDeficitPercent = (iNeededExplorers == 0) ? 0 : (iNeededExplorers - player.AI_totalAreaUnitAIs(pArea, UNITAI_EXPLORE)) * 100 / iNeededExplorers;
+		if (iExplorerDeficitPercent >= iHunterDeficitPercent && iExplorerDeficitPercent > 0)
 		{
-			const int iNeededExplorers = player.AI_neededExplorers(pArea);
-			const int iExplorerDeficitPercent = (iNeededExplorers == 0) ? 0 : (iNeededExplorers - player.AI_totalAreaUnitAIs(pArea, UNITAI_EXPLORE)) * 100 / iNeededExplorers;
-			if (iExplorerDeficitPercent >= iHunterDeficitPercent && iExplorerDeficitPercent > 0)
-			{
-				// If we are just pumping out explorer units and having them die fast go for EXP giving buildings first
-				if (AI_chooseExperienceBuilding(UNITAI_EXPLORE, 8))
-				{
-					return;
-				}
-				if (AI_chooseUnit("need explorers", UNITAI_EXPLORE))
-				{
-					return;
-				}
-			}
-
-			if (iHunterDeficitPercent > 0)
-			{
-				// If we are just pumping out hunting units and having them die fast go for EXP giving buildings first
-				if (AI_chooseExperienceBuilding(UNITAI_HUNTER, 8))
-				{
-					return;
-				}
-
-				if (AI_chooseUnit("need hunters", UNITAI_HUNTER))
-				{
-					return;
-				}
-			}
-		}
-
-		if (bDefenseWar || bLandWar && iWarSuccessRatio < -30)
-		{
-			UnitTypeWeightArray panicDefenderTypes;
-			panicDefenderTypes.push_back(std::make_pair(UNITAI_RESERVE, 100));
-			panicDefenderTypes.push_back(std::make_pair(UNITAI_COUNTER, 100));
-			panicDefenderTypes.push_back(std::make_pair(UNITAI_COLLATERAL, 100));
-			panicDefenderTypes.push_back(std::make_pair(UNITAI_ATTACK, 100));
-
-			if (AI_chooseLeastRepresentedUnit("panic defender", panicDefenderTypes, (bGetBetterUnits ? 40 : 60) - iWarSuccessRatio / 3))
+			// If we are just pumping out explorer units and having them die fast go for EXP giving buildings first
+			if (AI_chooseExperienceBuilding(UNITAI_EXPLORE, 8))
 			{
 				return;
 			}
+			if (AI_chooseUnit("need explorers", UNITAI_EXPLORE))
+			{
+				return;
+			}
+		}
+
+		if (iHunterDeficitPercent > 0)
+		{
+			// If we are just pumping out hunting units and having them die fast go for EXP giving buildings first
+			if (AI_chooseExperienceBuilding(UNITAI_HUNTER, 8))
+			{
+				return;
+			}
+
+			if (AI_chooseUnit("need hunters", UNITAI_HUNTER))
+			{
+				return;
+			}
+		}
+	}
+
+	//#42C Emergency Attackers as Defenders
+	if (bDefenseWar || bLandWar && iWarSuccessRatio < -30)
+	{
+		UnitTypeWeightArray panicDefenderTypes;
+		panicDefenderTypes.push_back(std::make_pair(UNITAI_RESERVE, 100));
+		panicDefenderTypes.push_back(std::make_pair(UNITAI_COUNTER, 100));
+		panicDefenderTypes.push_back(std::make_pair(UNITAI_COLLATERAL, 100));
+		panicDefenderTypes.push_back(std::make_pair(UNITAI_ATTACK, 100));
+
+		if (AI_chooseLeastRepresentedUnit("panic defender", panicDefenderTypes, (bGetBetterUnits ? 40 : 60) - iWarSuccessRatio / 3))
+		{
+			return;
 		}
 	}
 

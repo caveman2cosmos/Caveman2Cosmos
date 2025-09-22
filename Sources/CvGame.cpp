@@ -4570,7 +4570,8 @@ void CvGame::setActivePlayer(PlayerTypes eNewValue, bool bForceHotSeat)
 		{
 #ifdef ENABLE_FOGWAR_DECAY
 			GC.getMap().InitFogDecay(true);
-			GC.getMap().updateFog(true);
+			if (GC.getGame().isModderGameOption(MODDERGAMEOPTION_FOGWAR_DECAY))
+				GC.getMap().updateFog(true);
 #else
 			GC.getMap().updateFog();
 #endif
@@ -11450,7 +11451,8 @@ void CvGame::recalculateModifiers()
 	GC.getMap().updateVisibility();
 #ifdef ENABLE_FOGWAR_DECAY
 	GC.getMap().InitFogDecay(true);
-	GC.getMap().updateFog(true);
+	if (GC.getGame().isModderGameOption(MODDERGAMEOPTION_FOGWAR_DECAY))
+		GC.getMap().updateFog(true);
 #else
 	GC.getMap().updateFog();
 #endif

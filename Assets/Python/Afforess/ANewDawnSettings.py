@@ -72,6 +72,16 @@ class ANewDawnSettings:
 				ANewDawnOpt.setMultipleReligionSpread(data3)
 			elif data2 == int(ModderGameOptionTypes.MODDERGAMEOPTION_TERRAIN_DAMAGE):
 				ANewDawnOpt.setTerrainDamage(data3)
+			elif data2 == int(ModderGameOptionTypes.MODDERGAMEOPTION_FOGWAR_DECAY):
+				ANewDawnOpt.setFogWarDecay(data3)
+			elif data2 == int(ModderGameOptionTypes.MODDERGAMEOPTION_FOGWAR_NBTURNS):
+				ANewDawnOpt.setFogWarNbTurns(data3)
+			elif data2 == int(ModderGameOptionTypes.MODDERGAMEOPTION_MINORCIV_TECH):
+				ANewDawnOpt.setMinorCivTech(data3)
+			elif data2 == int(ModderGameOptionTypes.MODDERGAMEOPTION_ASSASSINATE_MINIMAL):
+				ANewDawnOpt.setAssassinateMinimal(data3)
+			elif data2 == int(ModderGameOptionTypes.MODDERGAMEOPTION_ASSASSINATE_CHOICE):
+				ANewDawnOpt.setAssassinateChoice(data3)
 			elif data2 == int(ModderGameOptionTypes.MODDERGAMEOPTION_NO_AUTO_CORPORATION_FOUNDING):
 				ANewDawnOpt.setNoAutoCorporationFounding(data3)
 			elif data2 == int(ModderGameOptionTypes.MODDERGAMEOPTION_AI_USE_FLEXIBLE_DIFFICULTY):
@@ -280,6 +290,27 @@ def changedInfrastructureIgnoresImprovements(option, value):
 	GC.getActivePlayer().setModderOption(ModderOptionTypes.MODDEROPTION_INFRASTRUCTURE_IGNORES_IMPROVEMENTS, value)
 	CyMessageControl().sendModNetMessage(MODDEROPTION_EVENT_ID, GC.getGame().getActivePlayer(), int(ModderOptionTypes.MODDEROPTION_INFRASTRUCTURE_IGNORES_IMPROVEMENTS), int(value), 0)
 
+def changedFogWarDecay(option, value):
+	GC.getGame().setModderGameOption(ModderGameOptionTypes.MODDERGAMEOPTION_FOGWAR_DECAY, value)
+	CyMessageControl().sendModNetMessage(MODDERGAMEOPTION_EVENT_ID, GC.getGame().getActivePlayer(), int(ModderGameOptionTypes.MODDERGAMEOPTION_FOGWAR_DECAY), int(value), 0)
+
+def changedFogWarNbTurns(option, value):
+	GC.getGame().setModderGameOption(ModderGameOptionTypes.MODDERGAMEOPTION_FOGWAR_NBTURNS, value)
+	CyMessageControl().sendModNetMessage(MODDERGAMEOPTION_EVENT_ID, GC.getGame().getActivePlayer(), int(ModderGameOptionTypes.MODDERGAMEOPTION_FOGWAR_NBTURNS), int(value), 0)
+
+def changedMinorCivTech(option, value):
+	GC.getGame().setModderGameOption(ModderGameOptionTypes.MODDERGAMEOPTION_MINORCIV_TECH, value)
+	CyMessageControl().sendModNetMessage(MODDERGAMEOPTION_EVENT_ID, GC.getGame().getActivePlayer(), int(ModderGameOptionTypes.MODDERGAMEOPTION_MINORCIV_TECH), int(value), 0)
+
+def changedAssassinateMinimal(option, value):
+	GC.getGame().setModderGameOption(ModderGameOptionTypes.MODDERGAMEOPTION_ASSASSINATE_MINIMAL, value)
+	CyMessageControl().sendModNetMessage(MODDERGAMEOPTION_EVENT_ID, GC.getGame().getActivePlayer(), int(ModderGameOptionTypes.MODDERGAMEOPTION_ASSASSINATE_MINIMAL), int(value), 0)
+
+def changedAssassinateChoice(option, value):
+	GC.getGame().setModderGameOption(ModderGameOptionTypes.MODDERGAMEOPTION_ASSASSINATE_CHOICE, value)
+	CyMessageControl().sendModNetMessage(MODDERGAMEOPTION_EVENT_ID, GC.getGame().getActivePlayer(), int(ModderGameOptionTypes.MODDERGAMEOPTION_ASSASSINATE_CHOICE), int(value), 0)
+
+
 
 def setXMLOptionsfromIniFile():
 	print "Initializing A New Dawn Settings"
@@ -321,7 +352,12 @@ def setXMLOptionsfromIniFile():
 	changedFlexibleDifficultyAI(ANewDawnOpt, ANewDawnOpt.isFlexibleDifficultyAI())
 	changedHistoricalAccurateCalendar(ANewDawnOpt, ANewDawnOpt.isHistoricalAccurateCalendar())
 	changedInfrastructureIgnoresImprovements(ANewDawnOpt, ANewDawnOpt.isInfrastructureIgnoresImprovements())
-
+	changedFogWarDecay(ANewDawnOpt, ANewDawnOpt.isFogWarDecay())
+	changedFogWarNbTurns(ANewDawnOpt, ANewDawnOpt.getFogWarNbTurns())
+	changedMinorCivTech(ANewDawnOpt, ANewDawnOpt.getMinorCivTech())
+	changedAssassinateMinimal(ANewDawnOpt, ANewDawnOpt.isAssassinateMinimal())
+	changedAssassinateChoice(ANewDawnOpt, ANewDawnOpt.isAssassinateChoice())
+		
 	ANewDawnOpt.setPlayerColor(0)
 	ANewDawnOpt.setCurrentDifficulty(0)
 

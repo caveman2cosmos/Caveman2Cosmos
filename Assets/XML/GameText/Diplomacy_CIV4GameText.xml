@@ -3308,7 +3308,7 @@
 	<TEXT>
 		<Tag>AI_DIPLO_FIRST_CONTACT_LEADER_DEGANAWIDA_1</Tag>
 		<English>Greetings. I am [OUR_NAME], chief of the [OUR_EMPIRE]. A good chief does not take, he gives. Are you a good chief, [CT_NAME]?</English>
-		<French>Salutations. Je suis [OUR_NAME], cheef de [OUR_EMPIRE]. Un bon chef ne prend pas, il donne. Etes-vous un bon chef, [CT_NAME]?</French>
+		<French>Salutations. Je suis [OUR_NAME], chef de [OUR_EMPIRE]. Un bon chef ne prend pas, il donne. Êtes-vous un bon chef, [CT_NAME]?</French>
 		<German>Grüße. Ich bin [OUR_NAME], Anführer vom [OUR_EMPIRE]. Ein guter Anführer nimmt nicht, er gibt. Bist Du ein guter Anführer, [CT_NAME]?</German>
 		<Italian>Saluti. Io sono [OUR_NAME], capo dell'[OUR_EMPIRE]. Un buon capo non prende, da. Sei un buon capo, [CT_NAME]?</Italian>
 		<Polish>Pozdrowienia. Jestem [OUR_NAME], w&#243;dz [OUR_EMPIRE]. Dobry w&#243;dz nigdy nie otrzymuje, tylko ofiaruje. Czy jeste&#156; dobrym wodzem, [CT_NAME]?</Polish>
@@ -5156,7 +5156,7 @@
 	<TEXT>
 		<Tag>AI_DIPLO_GREETINGS_ATT_FR_LEADER_DE_GAULLE_1</Tag>
 		<English>Welcome, [CT_NAME]. Have you come yet again to admire my heroic profile?</English>
-		<French>Bienvenue, [CT_NAME]. Etes-vous revenu admirer mon allure héroïque ?</French>
+		<French>Bienvenue, [CT_NAME]. Êtes-vous revenu admirer mon allure héroïque ?</French>
 		<German>Willkommen, [CT_NAME]. Seid Ihr gekommen, um ein weiteres Mal mein heldenhaftes Profil zu würdigen?</German>
 		<Italian>Benvenuto, [CT_NAME]. Sei di nuovo qui per ammirare il mio eroico profilo?</Italian>
 		<Spanish>Saludos, [CT_NAME]. ¿Habéis vuelto a admirar mi heroico perfil?</Spanish>

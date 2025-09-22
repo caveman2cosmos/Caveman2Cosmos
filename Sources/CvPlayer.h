@@ -30,14 +30,14 @@ class CvUpgradeCache;
 
 #define	UNIT_BIRTHMARK_TEMP_UNIT	20000
 
-#define MAX_RESEARCH_RATE_VALUE 9000000
-#define MAX_COMMERCE_RATE_VALUE 90000000
+#define MAX_RESEARCH_RATE_VALUE 1999999999
+#define MAX_COMMERCE_RATE_VALUE 1999999999
 #define MAX_COMMERCE_VALUE 900000000
-#define MAX_RESEARCH_RATE_VALUE100 900000000
-#define MAX_COMMERCE_RATE_VALUE100 900000000
-#define MAX_COMMERCE_RATE_MODIFIER_VALUE 90000000
+#define MAX_RESEARCH_RATE_VALUE100 1999999999
+#define MAX_COMMERCE_RATE_VALUE100 1999999999
+#define MAX_COMMERCE_RATE_MODIFIER_VALUE 1999999999
 #define MAX_GOLD_VALUE 9999999999999999
-#define MAX_GOLD_PER_TURN_VALUE 99999999
+#define MAX_GOLD_PER_TURN_VALUE 1999999999
 #define MIN_TOL_FALSE_ACCUMULATE -9999
 #define MIN_TOL_FALSE_RESEARCH -9999
 
@@ -1639,6 +1639,7 @@ protected:
 	int m_iSecondMergeSelection;
 	int m_iSplittingUnit;
 	int m_iAmbushingUnit;
+	int m_iAmbushingTargetUnit;
 	bool m_bAssassinate;
 
 	int m_iBuildingInflation;
@@ -1660,6 +1661,7 @@ protected:
 	int	m_zobristValue;
 
 	bool m_turnHadUIInteraction;
+
 
 public:
 	void verifyUnitStacksValid();
@@ -2291,8 +2293,10 @@ public:
 	void setSplittingUnit(int iNewValue);
 
 	int getAmbushingUnit() const;
+	int getAmbushingTargetUnit() const;
 	bool isAssassinate() const;
 	void setAmbushingUnit(int iNewValue, bool bAssassinate = false);
+	void setAmbushingTargetUnit(int iNewValue, bool bAssassinate = true);
 
 	int getGreatGeneralPointsForType(const UnitTypes eUnit) const;
 	void setGreatGeneralPointsForType(const UnitTypes eUnit, const int iValue);
