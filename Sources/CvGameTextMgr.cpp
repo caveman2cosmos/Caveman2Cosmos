@@ -4070,7 +4070,7 @@ bool CvGameTextMgr::setCombatPlotHelp(CvWStringBuffer& szString, CvPlot* pPlot, 
 
 		CvUnit* pDefender = pPlot->getBestDefender(NO_PLAYER, pAttacker->getOwner(), pAttacker, !gDLL->altKey(), NO_TEAM == pAttacker->getDeclareWarMove(pPlot), false, bAssassinate);
 
-		if (pDefender && pDefender != pAttacker && pDefender->canDefend(pPlot) && pAttacker->canAttack(*pDefender))
+		if (pDefender && pDefender != pAttacker && pDefender->canDefend(pPlot) && ((pAttacker->canAttack(*pDefender) || pAttacker->canAmbush(*pDefender, bAssassinate))))
 		{
 			bool bAttackerInvisible = pAttacker->isInvisible(GET_PLAYER(pDefender->getOwner()).getTeam(), false, false);
 			if (GC.getGame().isOption(GAMEOPTION_COMBAT_WITHOUT_WARNING))
@@ -7874,7 +7874,7 @@ bool CvGameTextMgr::setMinimalCombatPlotHelp(CvWStringBuffer& szString, CvPlot* 
 
 		CvUnit* pDefender = pPlot->getBestDefender(NO_PLAYER, pAttacker->getOwner(), pAttacker, !gDLL->altKey(), NO_TEAM == pAttacker->getDeclareWarMove(pPlot), false, bAssassinate);
 
-		if (pDefender && pDefender != pAttacker && pDefender->canDefend(pPlot) && pAttacker->canAttack(*pDefender))
+		if (pDefender && pDefender != pAttacker && pDefender->canDefend(pPlot) && (pAttacker->canAttack(*pDefender) || pAttacker->canAmbush(*pDefender, bAssassinate)))
 		{
 			bool bAttackerInvisible = pAttacker->isInvisible(GET_PLAYER(pDefender->getOwner()).getTeam(), false, false);
 			if (GC.getGame().isOption(GAMEOPTION_COMBAT_WITHOUT_WARNING))
@@ -8659,7 +8659,7 @@ bool CvGameTextMgr::setAssassinatePlotHelp(CvWStringBuffer& szString, CvPlot* pP
 
 		//CvUnit* pDefender = pPlot->getBestDefender(NO_PLAYER, pAttacker->getOwner(), pAttacker, !gDLL->altKey(), NO_TEAM == pAttacker->getDeclareWarMove(pPlot), false, bAssassinate);
 
-		if (pDefender && pDefender != pAttacker && pDefender->canDefend(pPlot) && pAttacker->canAttack(*pDefender))
+		if (pDefender && pDefender != pAttacker && pDefender->canDefend(pPlot) && (pAttacker->canAttack(*pDefender) || pAttacker->canAmbush(*pDefender,true)))
 		{
 			bool bAttackerInvisible = pAttacker->isInvisible(GET_PLAYER(pDefender->getOwner()).getTeam(), false, false);
 			if (GC.getGame().isOption(GAMEOPTION_COMBAT_WITHOUT_WARNING))

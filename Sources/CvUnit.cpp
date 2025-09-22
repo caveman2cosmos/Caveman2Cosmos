@@ -13628,6 +13628,48 @@ bool CvUnit::canAttack(const CvUnit& defender) const
 	return true;
 }
 
+bool CvUnit::canAmbush(const CvUnit& defender, const bool bAssassinate) const
+{
+	if (!canAttack() || getOwner() == defender.getOwner())
+	{
+		return false;
+	}
+	// Combat limit reached; breakdown combat can proceed even at combat limit.
+	if (defender.getDamage() >= combatLimit() * defender.getMaxHP() / 100 && breakdownChanceTotal() <= 0)
+	{
+		return false;
+	}
+
+	if (canAttackOnlyCities() && !defender.plot()->isCity())
+	{
+		return false;
+	}
+
+	if (defender.plot()->isCity(true) && isBlendIntoCity())
+	{
+		if (!isAssassin())
+		{
+			return false;
+		}
+		if (defender.plot() != plot())
+		{
+			return false;
+		}
+	}
+
+	if (GC.getGame().isOption(GAMEOPTION_COMBAT_AMNESTY)
+	&& defender.plot()->getOwner() == getOwner()
+	&& isHiddenNationality()
+	&& (GET_TEAM(getTeam()).isOpenBorders(defender.getTeam()) || GET_TEAM(getTeam()).isLimitedBorders(defender.getTeam()))
+	&& (!defender.canAttack() || defender.isPassage()))
+	{
+		return false;
+	}
+
+	return true;
+}
+
+
 bool CvUnit::canDefend(const CvPlot* pPlot) const
 {
 	if (!canFight() || isTrap() || isCargo())
@@ -37960,7 +38002,7 @@ bool CvUnit::canArrest() const
 			return false;
 		}
 		const CvPlot* pPlot = plot();
-		if (canMove() && canAttack() && !isDead() && !isInBattle() && !isCargo() && getGroup()->getNumUnits() == 1)
+		if (canMove() && canAttack() && !isDead() && !isInBattle() && !isCargo()) // && getGroup()->getNumUnits() == 1)
 		{
 			if (pPlot != NULL)
 			{
@@ -38065,26 +38107,27 @@ bool CvUnit::canAmbush(const CvPlot* pPlot, bool bAssassinate) const
 		{
 			return true;
 		}
-		//if (pPlot->isVisiblePotentialEnemyDefender(this) || pPlot->isVisiblePotentialEnemyDefenderless(this))
-		//{
-		//	foreach_(CvUnit* pLoopUnit, pPlot->units())
-		//	{
-		//		if (bAssassinate && !pLoopUnit->isTargetOf(*this))
-		//		{
-		//			continue;
-		//		}
-		//		if (canAttack(*pLoopUnit))
-		//		{
-		//			return true;
-		//		}
-		//	}
-		//}
+		if (pPlot->isVisiblePotentialEnemyDefender(this) || pPlot->isVisiblePotentialEnemyDefenderless(this))
+		{
+			foreach_(CvUnit* pLoopUnit, pPlot->units())
+			{
+				if (bAssassinate && !pLoopUnit->isTargetOf(*this))
+				{
+					continue;
+				}
+				if (canAttack(*pLoopUnit))
+				{
+					return true;
+				}
+			}
+		}
 	}
 	return false;
 }
 
 bool CvUnit::doAmbush(bool bAssassinate)
 {
+
 	if (!canAmbush(plot(), bAssassinate))
 	{
 		return false;

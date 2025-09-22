@@ -3784,7 +3784,7 @@ namespace {
 				||	pAttacker && pAttacker->isPotentialEnemy(GET_PLAYER(unitX->getOwner()).getTeam(), plotX, unitX)
 			)
 			// If we are testing movement, can the unit move?
-			&& (!bTestCanMove || unitX->canMove() && !unitX->isCargo())
+			&& (!bTestCanMove || unitX->canMove() && !unitX->isCargo() || bAssassinate)
 		)
 		{
 			iValue = unitX->defenderValue(pAttacker);
@@ -3832,6 +3832,7 @@ CvUnit* CvPlot::getBestDefender(PlayerTypes eOwner, PlayerTypes eAttackingPlayer
 	}
 
 	int iBestValue = 0;
+	if (bAssassinate) iBestValue = -1;
 	CvUnit* pBestUnit = nullptr;
 
 	// Can't use this as it requires more than 9 args, and bind only supports 9
@@ -3845,7 +3846,7 @@ CvUnit* CvPlot::getBestDefender(PlayerTypes eOwner, PlayerTypes eAttackingPlayer
 	{
 		int iValue = getDefenderScore(unitX, eOwner, eAttackingPlayer, pAttacker, bTestAtWar, bTestPotentialEnemy, bTestCanMove, bAssassinate, bClearCache ? ECacheAccess::Write : ECacheAccess::ReadWrite);
 
-		if (iValue > iBestValue)
+		if (iValue > iBestValue && unitX->getOwner() != eAttackingPlayer)
 		{
 			pBestUnit = unitX;
 			iBestValue = iValue;

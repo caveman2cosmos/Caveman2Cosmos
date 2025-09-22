@@ -909,7 +909,16 @@ void CvCityAI::AI_chooseProduction()
 	bool bIsPeacefull = GC.getLeaderHeadInfo(player.getPersonalityType()).getConquestVictoryWeight() <= 20;
 
 	int iMaxPropertyUnitsPercent = 20;
-	if (bIsPeacefull) iMaxPropertyUnitsPercent += 15;
+	if (bIsPeacefull)
+	{
+		iMaxPropertyUnitsPercent += 15;
+		if (player.isMinorCiv()) //If minor Civ, At war automatically, but not on purpose, so some changes are needed)
+		{
+			bLandWar = false;
+			bAssault = false;
+
+		}
+	}
 	int iUnitCostPercentage = static_cast<int>(player.getFinalUnitUpkeep() * 100 / std::max<int64_t>(1, player.calculatePreInflatedCosts()));
 	int iWaterPercent = AI_calculateWaterWorldPercent();
 

@@ -3137,10 +3137,7 @@ bool CvDLLButtonPopup::launchConfirmAmbushPopup(CvPopup* pPopup, CvPopupInfo &in
 			{
 				if (!pUnit->isInvisible(pAttacker->getTeam(), false))
 				{
-					if (!pUnit->isWaiting() && pUnit->canFight())
-					{
-						defenders.push_back(pUnit);
-					}
+					defenders.push_back(pUnit);
 				}
 			}
 		}

@@ -922,6 +922,7 @@ public:
 	bool canAttackNow() const;
 	bool canAttack() const;
 	bool canAttack(const CvUnit& defender) const;
+	bool canAmbush(const CvUnit& defender, const bool bAssassinate) const;
 	bool canDefend(const CvPlot* pPlot = NULL) const;
 	bool canStealthDefend(const CvUnit* victim) const;
 	bool canSiege(TeamTypes eTeam) const;
