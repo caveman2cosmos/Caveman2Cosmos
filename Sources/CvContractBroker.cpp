@@ -516,7 +516,7 @@ void CvContractBroker::finalizeTenderContracts()
 								if (CvSelectionGroup::getPathGenerator()->generatePathForHypotheticalUnit(pCity->plot(), pDestPlot, m_eOwner, eUnit, MOVE_NO_ENEMY_TERRITORY, m_workRequests[iI].iMaxPath))
 								{
 									const int iDistance = CvSelectionGroup::getPathGenerator()->getLastPath().length();
-									iValue /= (1 + iDistance);
+									iValue /= (1 + intSqrt(iDistance));
 
 									if (gCityLogLevel >= 3)
 									{
