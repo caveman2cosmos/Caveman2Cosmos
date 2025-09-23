@@ -3706,6 +3706,10 @@ int CvCity::getTotalProductionQueueTurnsLeft() const
 	foreach_ (const OrderData & order, m_orderQueue)
 	{
 		int productionNeeded = getProductionNeeded(order);
+		if (productionNeeded > 999)
+		{
+			return 999;
+		}
 
 		while (productionNeeded > 0)
 		{
@@ -3720,7 +3724,7 @@ int CvCity::getTotalProductionQueueTurnsLeft() const
 				// Next turn
 				productionNeeded -= currProd;
 				currProd = getProductionDifference(order, ProductionCalc::FoodProduction);
-				if (currProd == 0)
+				if (currProd <= 0)
 				{
 					return MAX_INT;
 				}
@@ -15431,7 +15435,7 @@ bool CvCity::pushFirstValidBuildListOrder(int iListID)
 
 		if (canContinueProduction(*pOrder))
 		{
-			pushOrder(pOrder->eOrderType, pOrder->iData1, pOrder->iData2, pOrder->bSave, false, false);
+			pushOrder(pOrder->eOrderType, pOrder->iData1, pOrder->iData2, pOrder->bSave, false, true); //Calvitix, append buildings, not insert
 			return true;
 		}
 	}
@@ -15478,7 +15482,26 @@ void CvCity::pushOrder(OrderTypes eOrder, int iData1, int iData2, bool bSave, bo
 					:
 					order.unit.plotIndex = 0xFFFF;
 
+
+
 				order = OrderData::createUnitOrder(unitType, AIType, plotIndex, contractFlags, contractedAIType, bSave);
+
+				int alreadyQueued = 0;
+				for (std::vector<OrderData>::const_iterator it = m_orderQueue.begin(); it != m_orderQueue.end(); ++it) {
+					if (it->eOrderType == ORDER_TRAIN && it->getUnitType() == order.getUnitType()) {
+						alreadyQueued+= 1;
+					}
+				}
+
+				//don't add the same unit if already 2 of them (if prod take more than 2 turns), and the first item in queue is not already finished, and the cost of the order is more than 3 turns
+				if ((bAppend && !bForce) && ((alreadyQueued > 1 && getProductionTurnsLeft(unitType, 2) > 2) || alreadyQueued > 4)) {
+					if (gCityLogLevel >= 3)
+					{
+						const CvWString szStringUnitAi = GC.getUnitAIInfo(order.getUnitAIType()).getType();
+						logBBAI("    City %S unit %S for type %S is already in queue", getName().GetCString(), GC.getUnitInfo(unitType).getDescription(getCivilizationType()), szStringUnitAi.GetCString());
+					}
+					return;
+				}
 
 				owner.changeUnitMaking(unitType, 1);
 
@@ -15489,9 +15512,10 @@ void CvCity::pushOrder(OrderTypes eOrder, int iData1, int iData2, bool bSave, bo
 				setUnitListInvalid();
 				if (gCityLogLevel >= 1)
 				{
-					
+					CvWString verb = "pushes";
+					if (!bAppend) verb = "inserts";
 					const CvWString szStringUnitAi = GC.getUnitAIInfo(order.getUnitAIType()).getType();
-					logBBAI("    City %S pushes production of unit %S for type %S", getName().GetCString(), GC.getUnitInfo(unitType).getDescription(getCivilizationType()), szStringUnitAi.GetCString());
+					logBBAI("    City %S %S production of unit %S for type %S", getName().GetCString(), verb.GetCString(), GC.getUnitInfo(unitType).getDescription(getCivilizationType()), szStringUnitAi.GetCString());
 				}
 				bValid = true;
 			}
@@ -15503,6 +15527,23 @@ void CvCity::pushOrder(OrderTypes eOrder, int iData1, int iData2, bool bSave, bo
 			if (canConstruct(buildingType) || bForce)
 			{
 				order = OrderData::createBuildingOrder(buildingType, bSave);
+
+				int alreadyQueued = 0;
+				for (std::vector<OrderData>::const_iterator it = m_orderQueue.begin(); it != m_orderQueue.end(); ++it) {
+					if (it->eOrderType == ORDER_CONSTRUCT && it->getBuildingType() == order.getBuildingType()) {
+						alreadyQueued += 1;
+					}
+				}
+
+				//don't add the same building after
+				if ((bAppend && !bForce) && alreadyQueued > 0) {
+					if (gCityLogLevel >= 3)
+					{
+						logBBAI("    City %S building %S already in queue", getName().GetCString(), GC.getBuildingInfo(buildingType).getDescription());
+					}
+					return;
+				}
+
 				NoteBuildingNoLongerConstructable(buildingType);
 
 				owner.changeBuildingMaking(buildingType, 1);
@@ -15517,7 +15558,9 @@ void CvCity::pushOrder(OrderTypes eOrder, int iData1, int iData2, bool bSave, bo
 				setBuildingListInvalid();
 				if (gCityLogLevel >= 1)
 				{
-					logBBAI("    City %S pushes production of building %S", getName().GetCString(), GC.getBuildingInfo(buildingType).getDescription());
+					CvWString verb = "pushes";
+					if (!bAppend) verb = "inserts";
+					logBBAI("    City %S %S production of building %S", getName().GetCString(), verb.GetCString(), GC.getBuildingInfo(buildingType).getDescription());
 				}
 				bValid = true;
 			}
@@ -15551,6 +15594,7 @@ void CvCity::pushOrder(OrderTypes eOrder, int iData1, int iData2, bool bSave, bo
 					logBBAI("    City %S pushes production of process %S", getName().GetCString(), GC.getProcessInfo(processType).getDescription());
 				}
 				bValid = true;
+				if (!bForce) bAppend = true;
 			}
 			break;
 		}
@@ -15567,12 +15611,17 @@ void CvCity::pushOrder(OrderTypes eOrder, int iData1, int iData2, bool bSave, bo
 		return;
 	}
 
+
+
+
+
+
 	if (m_orderQueue.empty() && owner.isHumanPlayer(true))
 	{
 		owner.setIdleCity(getID(), false);
 	}
 
-	if (bAppend)
+	if (bAppend && !m_orderQueue.empty() && !(m_orderQueue.begin()->eOrderType == ORDER_MAINTAIN))
 	{
 		m_orderQueue.push_back(order);
 	}

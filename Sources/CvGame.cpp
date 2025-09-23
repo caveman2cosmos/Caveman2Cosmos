@@ -7905,7 +7905,12 @@ int CvGame::getSorenRandNum(int iNum, const char* pszLog)
 		iScale++;
 	}
 
+#ifdef NO_RANDOM
+	int Result = iNum / 2;
+#else
 	int Result = m_sorenRand.get(iNum, pszLog);
+#endif
+
 
 	while(iScale-- > 0)
 	{

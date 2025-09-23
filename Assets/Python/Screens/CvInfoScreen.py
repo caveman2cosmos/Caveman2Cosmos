@@ -933,7 +933,8 @@ class CvInfoScreen:
 
 			if iTurnYear < 0:
 				szTurnFounded = TRNSLTR.getText("TXT_KEY_TIME_BC", (-iTurnYear,))
-			else: szTurnFounded = TRNSLTR.getText("TXT_KEY_TIME_AD", (iTurnYear,))
+			else: 
+				szTurnFounded = TRNSLTR.getText("TXT_KEY_TIME_AD", (iTurnYear,))
 
 			if cityX.isRevealed(self.iTeam, False):
 				szCityNames[iNumCities] = cityX.getName()

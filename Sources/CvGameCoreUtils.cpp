@@ -4539,8 +4539,10 @@ int encodeACDateturn(int decodeda, int b) {
 	
 	if (decodeda < -400000 || decodeda > 7000) throw std::out_of_range("a hors limites [-400000,6000]");
 	int a = inverseMapValue(decodeda * -1);
-	if (a < 1 || a > 100000) throw std::out_of_range("a hors limites [1,100000]");
-	if (b < 0 || b > 9999)   throw std::out_of_range("b hors limites [0,9999]");
+	if (a < 1) a = 1;
+	if (a > 100000) a = 100000;// throw std::out_of_range("a hors limites [1,100000]");
+	if (b < 0) b = 0;
+	if (b > 9999) b = 9999;
 	return (a << 14) | b;  // 14 bits réservés pour b
 }
 
@@ -4549,6 +4551,10 @@ int decodeACDate(int n) {
 	
 	int decodedDate = mapValue(codedDate) * -1 ;
 	
+	if (abs(decodedDate) > 10000)
+		return (decodedDate / 100) * 100;
+	if (abs(decodedDate) > 1000)
+		return (decodedDate / 10) * 10;
 	return decodedDate;
 }
 

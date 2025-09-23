@@ -1844,7 +1844,7 @@ void CvUnit::doTurn()
 			//Calvitix, Terrain Damage gives XP
 			if (isHurt() && plot()->getTerrainType() != NO_TERRAIN)
 			{
-				changeExperience100(4, 20);
+				changeExperience100(4, 2000);
 			}
 		}
 
@@ -1860,7 +1860,7 @@ void CvUnit::doTurn()
 			//Calvitix, Terrain Damage gives XP
 			if (isHurt() && plot()->getTerrainType() != NO_TERRAIN)
 			{
-				changeExperience100(2,25);
+				changeExperience100(2,2500);
 			}
 		}
 	}
@@ -6349,13 +6349,13 @@ void CvUnit::move(CvPlot* pPlot, bool bShow)
 			gDLL->getInterfaceIFace()->playGeneralSound("AS3D_UN_BIRDS_SCATTER", pPlot->getPoint());
 		}
 	}
-	if((pPlot->getOwner() != getOwner() || !pPlot->isOwned() ) && !(GET_PLAYER(pPlot->getOwner()).isNPC()))
+	if((pPlot->getOwner() != getOwner() || !pPlot->isOwned() ) && !(GET_PLAYER(getOwner()).isNPC()))
 	{
-		changeExperience100(10, 5);
-		changeExperience100(1, 20);
+		changeExperience100(10, 500);
+		changeExperience100(1, 2000);
 		if(isHasUnitCombat(GC.getUNITCOMBAT_RECON()))
 		{
-			changeExperience100(4, 100);
+			changeExperience100(4, 10000);
 		}
 	}
 }
