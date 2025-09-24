@@ -15649,6 +15649,17 @@ void CvCity::pushOrder(OrderTypes eOrder, int iData1, int iData2, bool bSave, bo
 		}
 	}
 
+	//Check the Queue, and remove process if there's something else to do
+	if (getOrderQueueLength() > 1 && m_orderQueue[0].eOrderType == ORDER_MAINTAIN)
+	{
+		CvString str = GC.getProcessInfo(m_orderQueue[0].getProcessType()).getType();
+		popOrder(0);
+		LOG_BBAI_CITY(3, ("    City %S has process on head, and queue added. Removing  %S", getName().GetCString(), str.GetCString()));
+	}
+
+
+
+
 	// Why does this cause a crash???
 
 /*	if (bBuildingUnit)
