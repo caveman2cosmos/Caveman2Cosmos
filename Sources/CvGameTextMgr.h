@@ -44,6 +44,7 @@ public:
 	int getCurrentLanguage() const;
 
 	DllExport void setTimeStr(CvWString& szString, int iGameTurn, bool bSave);
+	void setYearStrAC(CvWString& szString, int iyear, bool bSave);
 	void setYearStr(CvWString& szString, int iGameTurn, bool bSave, CalendarTypes eCalendar, int iStartYear, GameSpeedTypes eSpeed);
 	void setDateStr(CvWString& szString, int iGameTurn, bool bSave, CalendarTypes eCalendar, int iStartYear, GameSpeedTypes eSpeed);
 	void setInterfaceTime(CvWString& szString, PlayerTypes ePlayer);
@@ -54,6 +55,8 @@ public:
 	void setUnitHelp(CvWStringBuffer &szString, const CvUnit* pUnit, bool bOneLine = false, bool bShort = false);
 	void setPlotListHelp(CvWStringBuffer &szString, CvPlot* pPlot, bool bOneLine, bool bShort);
 	bool setCombatPlotHelp(CvWStringBuffer &szString, CvPlot* pPlot, bool bAssassinate = false);
+	bool setMinimalCombatPlotHelp(CvWStringBuffer& szString, CvPlot* pPlot, bool bAssassinate = false);
+	bool setAssassinatePlotHelp(CvWStringBuffer& szString, CvPlot* pPlot, CvUnit* pAttacker, CvUnit* pDefender);
 	void setPlotHelp(CvWStringBuffer &szString, CvPlot* pPlot);
 	void setCityBarHelp(CvWStringBuffer &szString, CvCity* pCity);
 	void setScoreHelp(CvWStringBuffer &szString, PlayerTypes ePlayer);

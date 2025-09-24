@@ -485,7 +485,7 @@ class CvDomesticAdvisor:
 		self.drawContents(screen)
 
 	def calculateFounded(self, CyCity, szKey, arg):
-		iTurn = CyCity.getGameTurnFounded()
+		iTurn = CyCity.getGameDateFounded()
 		if iTurn < 10000:
 			return TRNSLTR.getText("TXT_KEY_TIME_TURN", (iTurn,))
 

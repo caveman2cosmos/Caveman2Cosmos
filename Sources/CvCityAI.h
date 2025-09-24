@@ -35,6 +35,11 @@
 
 #define BUILDINGFOCUS_CONSIDER_ANY			(1 << 20)
 
+#define MAX_REQUESTEDUNIT_PER_CITY 1
+#define MAX_REQUESTEDBUILDING_PER_CITY 2
+#define NB_MAX_BUILDINGS 2
+
+
 class BuildingValueCache; // KOSHLING Mod - pre-calculate and cache building values for all focuses
 class CvArea;
 class CvUnitSelectionCriteria;
@@ -661,8 +666,6 @@ protected:
 	int	m_iTempBuildPriority;
 	int m_iRequestedUnit;
 	int m_iRequestedBuilding;
-	#define MAX_REQUESTEDUNIT_PER_CITY 2
-	#define MAX_REQUESTEDBUILDING_PER_CITY 2
 
 	void AI_doDraft();
 	void AI_doHurry(bool bForce = false);

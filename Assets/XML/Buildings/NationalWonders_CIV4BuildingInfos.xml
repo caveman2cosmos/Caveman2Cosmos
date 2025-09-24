@@ -646,7 +646,7 @@
 			<Description>TXT_KEY_BUILDING_CAPITAL_ADMINISTRATION</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CAPITAL_ADMINISTRATION_PEDIA</Civilopedia>
 			<PrereqTech>TECH_SOCIAL_CONTRACT</PrereqTech>
-			<iPrereqPopulation>20</iPrereqPopulation>
+			<iPrereqPopulation>30</iPrereqPopulation>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_PALACE</BuildingType>
 				<BuildingType>BUILDING_METROPOLITAN_ADMINISTRATION</BuildingType>

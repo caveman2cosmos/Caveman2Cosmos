@@ -171,6 +171,13 @@
 		<Russian>Атакует лучшего защитника среди вражеской цели(ей) (из числа однородных с ним отрядов в стеке) на той же клетке. Работает внутри города. ВНИМАНИЕ: для этого действия у вас должен быть выбран лишь один отряд.</Russian>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_MISSION_ASSASSINATE_CHOICE_HELP</Tag>
+		<English>Choices and Attacks one defender on the same plot. Works inside a city. WARNING: You should only have one unit selected for this action.</English>
+		<French>Attaque au choix un des défenseurs présents sur la même case. Utilisable dans une ville. ATTENTION: ne sélectionner qu'une seule unité pour cette action.</French>
+		<Italian>[NEWLINE]Attacca l'unità nemica con la migliore difesa sulla stessa casella, tra i tipi di unità che questa unità può attaccare per primi. Funziona all'interno di una città. ATTENZIONE: seleziona solo un'unità alla volta per questa azione.</Italian>
+		<Russian>Атакует лучшего защитника среди вражеской цели(ей) (из числа однородных с ним отрядов в стеке) на той же клетке. Работает внутри города. ВНИМАНИЕ: для этого действия у вас должен быть выбран лишь один отряд.</Russian>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_MISSION_AUTO_BUILDUP</Tag>
 		<English>Automate Build Ups</English>
 		<French>Automatise les retranchements</French>

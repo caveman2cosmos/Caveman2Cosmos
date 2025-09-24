@@ -7786,15 +7786,15 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_ROMSETTINGS__HISTORICALACCURATECALENDAR_HOVER</Tag>
-		<English>This feature will change the date calculation algorithm, making them more historically accurate depending on the global technological level for greater game immersion. Changes will take effect after loading a save.[NEWLINE][NEWLINE]WARNING! This feature is experimental. Please report any issues with it to us on Discord.</English>
-		<French>Cette fonctionnalité modifie l'algorithme de calcul des dates, les rendant plus historiquement exactes en fonction du niveau technologique global pour une immersion accrue. Les changements prennent effet après chargement d'une sauvegarde.[NEWLINE][NEWLINE]ATTENTION ! Cette fonctionnalité est expérimentale. Merci de nous signaler tout problème sur Discord.</French>
-		<Polish>Ta funkcja zmieni algorytm obliczania dat, czyni&#185;c je bardziej dok&#179;adnymi pod wzgl&#234;dem historycznym w zale&#191;no&#156;ci od globalnego poziomu technologicznego, co zapewni wi&#234;ksze zanurzenie w grze. Zmiany zaczn&#185; obowi&#185;zywa&#230; po wczytaniu zapisu. [NEWLINE][NEWLINE] OSTRZE&#175;ENIE! Ta funkcja ma charakter eksperymentalny. Wszelkie problemy z tym zwi&#185;zane prosimy zg&#179;asza&#230; nam na Discordzie.</Polish>
+		<English>This feature will change the date calculation algorithm, making them more historically accurate depending on the global technological level for greater game immersion. Changes will take effect after loading a save.</English>
+		<French>Cette fonctionnalité modifie l'algorithme de calcul des dates, les rendant plus historiquement exactes en fonction du niveau technologique global pour une immersion accrue. Les changements prennent effet après chargement d'une sauvegarde.</French>
+		<Polish>Ta funkcja zmieni algorytm obliczania dat, czyni&#185;c je bardziej dok&#179;adnymi pod wzgl&#234;dem historycznym w zale&#191;no&#156;ci od globalnego poziomu technologicznego, co zapewni wi&#234;ksze zanurzenie w grze. Zmiany zaczn&#185; obowi&#185;zywa&#230; po wczytaniu zapisu.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_ROMSETTINGS__HISTORICALACCURATECALENDAR_TEXT</Tag>
-		<English>[BETA] Historical Accurate Calendar</English>
-		<French>[BETA] Calendrier historiquement exact</French>
-		<Polish>[BETA]Historyczny kalendarz</Polish>
+		<English>Historical Accurate Calendar</English>
+		<French>Calendrier historique</French>
+		<Polish>Historyczny kalendarz</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_ROMSETTINGS__FLEXIBLEDIFFICULTYAI_HOVER</Tag>
@@ -8442,7 +8442,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_ROMSETTINGS__TERRAINDAMAGE_HOVER</Tag>
 		<English>Certain terrain, like deserts, will cause damage to units as they cross them.</English>
-		<French>Certains terrains, comme les déserts, vont endommager les unités qui les traversent.</French>
+		<French>Certains terrains, comme les déserts, les tundras,... vont endommager les unités qui les traversent.</French>
 		<German>Unwirtliches Gelände, z.B. Wüste, wird wirklich zur Gefahr für Einheiten, denn es verursacht nun Schaden bei Durchquerung.</German>
 		<Italian>[BOLD]Alcuni tipi di terreno come il deserto o altri [COLOR_HIGHLIGHT_TEXT]causeranno danno alle unità che li attraversano[COLOR_REVERT][\BOLD]</Italian>
 		<Spanish>Ciertos terrenos, como los desiertos, causarán daño a las unidades que los crucen.</Spanish>
@@ -8459,6 +8459,115 @@
 		<Russian>Опасные территории</Russian>
 		<Polish>Obra&#191;enia terenowe</Polish>
 	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUG_OPT_ROMSETTINGS__FOGWARDECAY_TEXT</Tag>
+		<English>Fog Darkening</English>
+		<French>Obscurcissement du brouillard</French>
+		<German>Fog Darkening</German>
+		<Italian>Fog Darkening</Italian>
+		<Spanish>Fog Darkening</Spanish>
+		<Russian>Fog Darkening</Russian>
+		<Polish>Fog Darkening</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUG_OPT_ROMSETTINGS__FOGWARDECAY_HOVER</Tag>
+		<English>After a few turns, depending on your technological progress, unvisited tiles become black again and are no longer revealed.</English>
+		<French>Après quelques tours, en fonction de votre avancée technologique, les cases non visitée redeviennend noires et non révélées.</French>
+		<German>After a few turns, depending on your technological progress, unvisited tiles become black again and are no longer revealed.</German>
+		<Italian>After a few turns, depending on your technological progress, unvisited tiles become black again and are no longer revealed.</Italian>
+		<Spanish>After a few turns, depending on your technological progress, unvisited tiles become black again and are no longer revealed.</Spanish>
+		<Russian>After a few turns, depending on your technological progress, unvisited tiles become black again and are no longer revealed.</Russian>
+		<Polish>After a few turns, depending on your technological progress, unvisited tiles become black again and are no longer revealed.</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUG_OPT_ROMSETTINGS__FOGWARNBTURNS_TEXT</Tag>
+		<English>Default number of turns</English>
+		<French>Nb. de tours par défaut</French>
+		<German>Default number of turns</German>
+		<Italian>Default number of turns</Italian>
+		<Spanish>Default number of turns</Spanish>
+		<Russian>Default number of turns</Russian>
+		<Polish>Default number of turns</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUG_OPT_ROMSETTINGS__FOGWARNBTURNS_HOVER</Tag>
+		<English>Default number of turns after which tiles become hidden again (default is 0, use -1 to disable).</English>
+		<French>Nombre de tours par défaut, après lesquels les cases redeviennent non révéles (Par défaut 0, -1 pour désactiver la fonctionnalité).</French>
+		<German>Default number of turns after which tiles become hidden again (default is 0, use -1 to disable).</German>
+		<Italian>Default number of turns after which tiles become hidden again (default is 0, use -1 to disable).</Italian>
+		<Spanish>Default number of turns after which tiles become hidden again (default is 0, use -1 to disable).</Spanish>
+		<Russian>Default number of turns after which tiles become hidden again (default is 0, use -1 to disable).</Russian>
+		<Polish>Default number of turns after which tiles become hidden again (default is 0, use -1 to disable).</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUG_OPT_ROMSETTINGS__FOGWARNBTURNS_LIST</Tag>
+		<English>0|1|2|3|4|5|10|-1</English>
+	</TEXT>
+	
+	<TEXT>
+		<Tag>TXT_KEY_BUG_OPT_ROMSETTINGS__MINORCIVTECH_TEXT</Tag>
+		<English>Emancipation Tech</English>
+		<French>Tech d'émancipation</French>
+		<German>Default number of turns</German>
+		<Italian>Default number of turns</Italian>
+		<Spanish>Default number of turns</Spanish>
+		<Russian>Default number of turns</Russian>
+		<Polish>Default number of turns</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUG_OPT_ROMSETTINGS__MINORCIVTECH_HOVER</Tag>
+		<English>The Emancipation Technology triggers a minor civilization’s upgrade to a major civilization. Default: ‘Code of Conduct’.</English>
+		<French>La Tech d'émancipation est la technologie qui déclenchera le passage d'une civilization mineure à Majeure. Par défaut, "Code de conduite".</French>
+		<German>The Emancipation Technology triggers a minor civilization’s upgrade to a major civilization. Default: ‘Code of Conduct’.</German>
+		<Italian>The Emancipation Technology triggers a minor civilization’s upgrade to a major civilization. Default: ‘Code of Conduct’.</Italian>
+		<Spanish>The Emancipation Technology triggers a minor civilization’s upgrade to a major civilization. Default: ‘Code of Conduct’.</Spanish>
+		<Russian>The Emancipation Technology triggers a minor civilization’s upgrade to a major civilization. Default: ‘Code of Conduct’.</Russian>
+		<Polish>The Emancipation Technology triggers a minor civilization’s upgrade to a major civilization. Default: ‘Code of Conduct’.</Polish>
+	</TEXT>	
+	<TEXT>
+		<Tag>TXT_KEY_BUG_OPT_ROMSETTINGS__MINORCIVTECH_LIST</Tag>
+		<English>TECH_CONDUCT|TECH_NEGOTIATION|TECH_WRITING</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUG_OPT_ROMSETTINGS__ASSASSINATEMINIMAL_TEXT</Tag>
+		<English>Minimal Infos for Assassinat</English>
+		<French>HUD Mini pour Assassinat</French>
+		<German>Minimal Infos for Assassinat</German>
+		<Italian>Minimal Infos for Assassinat</Italian>
+		<Spanish>Minimal Infos for Assassinat</Spanish>
+		<Russian>Minimal Infos for Assassinat</Russian>
+		<Polish>Minimal Infos for Assassinat</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUG_OPT_ROMSETTINGS__ASSASSINATEMINIMAL_HOVER</Tag>
+		<English>Reduce the information shown on the Assassinate and Ambush selection buttons.</English>
+		<French>Réduit les informations du bouton de sélection de l'assassinate et des embuscades.</French>
+		<German>Reduce the information shown on the Assassinate and Ambush selection buttons.</German>
+		<Italian>Reduce the information shown on the Assassinate and Ambush selection buttons.</Italian>
+		<Spanish>Reduce the information shown on the Assassinate and Ambush selection buttons.</Spanish>
+		<Russian>Reduce the information shown on the Assassinate and Ambush selection buttons.</Russian>
+		<Polish>Reduce the information shown on the Assassinate and Ambush selection buttons.</Polish>
+	</TEXT>	
+	<TEXT>
+		<Tag>TXT_KEY_BUG_OPT_ROMSETTINGS__ASSASSINATECHOICE_TEXT</Tag>
+		<English>Assassinat : Target choice</English>
+		<French>Assassinat : Choix de cible</French>
+		<German>Assassinat : Target choice</German>
+		<Italian>Assassinat : Target choice</Italian>
+		<Spanish>Assassinat : Target choice</Spanish>
+		<Russian>Assassinat : Target choice</Russian>
+		<Polish>Assassinat : Target choice</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUG_OPT_ROMSETTINGS__ASSASSINATECHOICE_HOVER</Tag>
+		<English>Lets assassins pick one target to focus on from several available.</English>
+		<French>Permet aux assassins de choisir parmi plusieurs cibles, de laquelle ils vont s'occuper.</French>
+		<German>Lets assassins pick one target to focus on from several available.</German>
+		<Italian>Lets assassins pick one target to focus on from several available.</Italian>
+		<Spanish>Lets assassins pick one target to focus on from several available.</Spanish>
+		<Russian>Lets assassins pick one target to focus on from several available.</Russian>
+		<Polish>Lets assassins pick one target to focus on from several available.</Polish>
+	</TEXT>		
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_ROMSETTINGS__USELANDMARKNAMES_HOVER</Tag>
 		<English>Cities will be named after nearby landmarks, instead of using the standard list of names. If no landmark is nearby, a standard name is used.</English>

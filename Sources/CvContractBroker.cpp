@@ -516,7 +516,7 @@ void CvContractBroker::finalizeTenderContracts()
 								if (CvSelectionGroup::getPathGenerator()->generatePathForHypotheticalUnit(pCity->plot(), pDestPlot, m_eOwner, eUnit, MOVE_NO_ENEMY_TERRITORY, m_workRequests[iI].iMaxPath))
 								{
 									const int iDistance = CvSelectionGroup::getPathGenerator()->getLastPath().length();
-									iValue /= (1 + iDistance);
+									iValue /= (1 + intSqrt(iDistance));
 
 									if (gCityLogLevel >= 3)
 									{
@@ -590,7 +590,12 @@ void CvContractBroker::finalizeTenderContracts()
 
 				// Queue up the build. Add to queue head if the current build is not a unit,
 				//	implies a local build below the priority of work the city tendered for.
-				const bool bAppend = pBestCity->isProduction() && pBestCity->getOrderData(0).eOrderType == ORDER_TRAIN;
+				const bool bDanger = pBestCity->AI_isDanger();
+				const int iHammerCostPercent = GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getHammerCostPercent();
+				//if a production is nearly finished, don't insert a unit, add it to the queue.
+				const int iMaxTurntoLeave = (bDanger && pBestCity->getProductionUnit() == NO_UNIT ? 1 + GC.getGame().getGameSpeedType() / 4 : 1 + iHammerCostPercent / 50);
+				const bool bNearlyFinished = (pBestCity->getProductionTurnsLeft() <= iMaxTurntoLeave || (pBestCity->getProductionTurnsLeft()+3) <= pBestCity->getProductionTurnsLeft(eBestUnit, 1));
+				bool bAppend = (pBestCity->isProduction() && pBestCity->getOrderData(0).eOrderType == ORDER_TRAIN) || bNearlyFinished;
 
 				pBestCity->pushOrder(
 					ORDER_TRAIN,

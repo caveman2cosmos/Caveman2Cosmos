@@ -1159,6 +1159,7 @@ void CvPlot::updateFog(const bool bApplyDecay)
 	const TeamTypes &team = GC.getGame().getActiveTeam();
 	const PlayerTypes myID = GC.getGame().getActivePlayer();
 	const bool bIsHuman = GET_TEAM(team).isHuman() || GC.getGame().getAIAutoPlay(myID) > 0 || gDLL->GetAutorun();
+	const bool bOptionDecay = GC.getGame().isModderGameOption(MODDERGAMEOPTION_FOGWAR_DECAY);
 	FAssert(team != NO_TEAM);
 
 	if (isRevealed(team, false))
@@ -1179,7 +1180,7 @@ void CvPlot::updateFog(const bool bApplyDecay)
 		)
 		{
 #ifdef ENABLE_FOGWAR_DECAY
-			if (bIsHuman && bApplyDecay)
+			if (bIsHuman && (bApplyDecay || !bOptionDecay))
 			{
 				bool bSeaPlot = isWater() && !isCoastal();
 				m_iVisibilityDecay = GET_TEAM(team).getVisibilityDecay(bSeaPlot);
@@ -1194,7 +1195,7 @@ void CvPlot::updateFog(const bool bApplyDecay)
 		else
 		{
 #ifdef ENABLE_FOGWAR_DECAY
-			if (!bIsHuman || m_iVisibilityDecay == NO_DECAY)
+			if (!bIsHuman || m_iVisibilityDecay == NO_DECAY || !bOptionDecay)
 			{
 #endif
 				gDLL->getEngineIFace()->DarkenVisibility(getFOWIndex());
@@ -1280,14 +1281,17 @@ short CvPlot::getVisibilityDecayBonus(const bool pSeaPlot)
 		const CvFeatureInfo& kFeatureInfo = GC.getFeatureInfo(eFeature);
 		const CvString featureString = kFeatureInfo.getType();
 		const CvBonusInfo& kBonusInfo = GC.getBonusInfo(eBonusType);
-		if (featureString == "FEATURE_OASIS" || featureString == "FEATURE_CAVES" || featureString == "FEATURE_CITY_RUINS"
-		|| featureString.find("FEATURE_PLATY_") != std::string::npos)
+		if (featureString == "FEATURE_OASIS" || featureString == "FEATURE_CAVES" || featureString == "FEATURE_CITY_RUINS")
 		{
 			iVisibilityDecay += 3;
 		}
 		if (featureString == "FEATURE_REEF_LIGHTHOUSE")
 		{
 			iVisibilityDecay += 9;
+		}
+		if (featureString.find("FEATURE_PLATY_") != std::string::npos)
+		{
+			iVisibilityDecay += 40;
 		}
 	}
 	if (eBonusType != NO_BONUS)
@@ -3783,7 +3787,7 @@ namespace {
 				||	pAttacker && pAttacker->isPotentialEnemy(GET_PLAYER(unitX->getOwner()).getTeam(), plotX, unitX)
 			)
 			// If we are testing movement, can the unit move?
-			&& (!bTestCanMove || unitX->canMove() && !unitX->isCargo())
+			&& (!bTestCanMove || unitX->canMove() && !unitX->isCargo() || bAssassinate)
 		)
 		{
 			iValue = unitX->defenderValue(pAttacker);
@@ -3831,6 +3835,7 @@ CvUnit* CvPlot::getBestDefender(PlayerTypes eOwner, PlayerTypes eAttackingPlayer
 	}
 
 	int iBestValue = 0;
+	if (bAssassinate) iBestValue = -1;
 	CvUnit* pBestUnit = nullptr;
 
 	// Can't use this as it requires more than 9 args, and bind only supports 9
@@ -3844,7 +3849,7 @@ CvUnit* CvPlot::getBestDefender(PlayerTypes eOwner, PlayerTypes eAttackingPlayer
 	{
 		int iValue = getDefenderScore(unitX, eOwner, eAttackingPlayer, pAttacker, bTestAtWar, bTestPotentialEnemy, bTestCanMove, bAssassinate, bClearCache ? ECacheAccess::Write : ECacheAccess::ReadWrite);
 
-		if (iValue > iBestValue)
+		if (iValue > iBestValue && unitX->getOwner() != eAttackingPlayer)
 		{
 			pBestUnit = unitX;
 			iBestValue = iValue;

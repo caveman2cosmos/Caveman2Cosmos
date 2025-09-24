@@ -251,7 +251,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_CHALLENGE_CUT_LOSERS</Tag>
 		<English>Challenge - Final Five</English>
-		<French>Challenge - 15 Finalistes</French>
+		<French>Challenge - Les Finalistes</French>
 		<German>Die Letzten Fünf</German>
 		<Italian>5 finalisti</Italian>
 		<Spanish>Cinco finalistas</Spanish>
@@ -261,7 +261,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_CHALLENGE_CUT_LOSERS_HELP</Tag>
 		<English>Every 50 turns (on Normal Speed) the player with the lowest score is removed from the game until only 5 players remain. Not meant for use with BarbarianCiv or Revolutions!</English>
-		<French>Tous les 50 tours (vitesse Normale) Le Joueur avec le plus petit score est retiré du jeu, jusqu'à ce qu'il ne reste que 5 Joueurs. Ne pas utiliser avec les Mods 'BarbarianCiv' ou 'Revolutions'!</French>
+		<French>Tous les 50 tours (vitesse Normale) Le Joueur avec le plus petit score est retiré du jeu, jusqu'à ce qu'il ne reste qu'un nombre de Joueurs limité (voir options). Ne pas utiliser avec les Mods 'BarbarianCiv' ou 'Revolutions'!</French>
 		<German>Alle 50 Runden (bei normaler Spielgeschwindigkeit) wird der Spieler mit dem niedrigsten Punktestand entfernt bis nur noch 5 Spieler übrigbleiben. Sollte nicht in Kombination mit den Optionen "Barbarische Zivilisationen" oder "Revolutionen" verwendet werden!</German>
 		<Italian>Ogni 50 turni (a velocità normale) il giocatore con il punteggio più basso viene rimosso dal gioco finché rimangono solo 5 giocatori (non pensato per l'uso con le opzioni civiltà barbare e rivoluzioni)</Italian>
 		<Spanish>Cada 50 turnos (a velocidad Normal) el jugador con la puntuación más baja será eliminado de la partida hasta que solo queden 5 jugadores. ¡No está pensado para su uso con las opciones BarbarianCiv y Revolution activadas!</Spanish>
@@ -271,7 +271,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_AI_BOOST</Tag>
 		<English>AI start boost</English>
-		<French>AI start boost</French>
+		<French>Bonus de départ aux IA</French>
 		<German>AI start boost</German>
 		<Italian>AI start boost</Italian>
 		<Spanish>AI start boost</Spanish>
@@ -281,7 +281,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_AI_BOOST_HELP</Tag>
 		<English>The AI start with an additional tribe</English>
-		<French>The AI start with an additional tribe</French>
+		<French>Les IA commencent avec une tribu supplémentaire</French>
 		<German>The AI start with an additional tribe</German>
 		<Italian>The AI start with an additional tribe</Italian>
 		<Spanish>The AI start with an additional tribe</Spanish>

@@ -4570,7 +4570,8 @@ void CvGame::setActivePlayer(PlayerTypes eNewValue, bool bForceHotSeat)
 		{
 #ifdef ENABLE_FOGWAR_DECAY
 			GC.getMap().InitFogDecay(true);
-			GC.getMap().updateFog(true);
+			if (GC.getGame().isModderGameOption(MODDERGAMEOPTION_FOGWAR_DECAY))
+				GC.getMap().updateFog(true);
 #else
 			GC.getMap().updateFog();
 #endif
@@ -6235,6 +6236,11 @@ void CvGame::doSpawns(PlayerTypes ePlayer)
 			if (getSorenRandNum(std::max(1, iLocalSpawnRate), "Unit spawn") == 0)
 			{
 				const int iArea = pPlot->getArea();
+
+				if (!pPlot->isMapCategoryType(GC.getMAPCATEGORY_EARTH()))
+				{
+					continue;
+				}
 				// Check area unit type density not exceeded if specified
 				if (iMinAreaPlotsPerUnitType > 0
 				&& areaPopulationMap[iArea].find(eUnit) != areaPopulationMap[iArea].end()
@@ -7899,7 +7905,12 @@ int CvGame::getSorenRandNum(int iNum, const char* pszLog)
 		iScale++;
 	}
 
+#ifdef NO_RANDOM
+	int Result = iNum / 2;
+#else
 	int Result = m_sorenRand.get(iNum, pszLog);
+#endif
+
 
 	while(iScale-- > 0)
 	{
@@ -11450,7 +11461,8 @@ void CvGame::recalculateModifiers()
 	GC.getMap().updateVisibility();
 #ifdef ENABLE_FOGWAR_DECAY
 	GC.getMap().InitFogDecay(true);
-	GC.getMap().updateFog(true);
+	if (GC.getGame().isModderGameOption(MODDERGAMEOPTION_FOGWAR_DECAY))
+		GC.getMap().updateFog(true);
 #else
 	GC.getMap().updateFog();
 #endif

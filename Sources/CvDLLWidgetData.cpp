@@ -1816,7 +1816,17 @@ void CvDLLWidgetData::parseCityNameHelp(CvWidgetDataStruct &widgetDataStruct, Cv
 		szBuffer.append(NEWLINE);
 		szBuffer.append(gDLL->getText("TXT_KEY_CITY_POPULATION", pHeadSelectedCity->getRealPopulation()));
 
-		GAMETEXT.setTimeStr(szTempBuffer, pHeadSelectedCity->getGameTurnFounded(), false);
+		bool bHistoricalCalendar = GC.getGame().isModderGameOption(MODDERGAMEOPTION_USE_HISTORICAL_ACCURATE_CALENDAR);
+		if (bHistoricalCalendar)
+		{
+			int yearfounded = pHeadSelectedCity->getGameDateFounded(bHistoricalCalendar);
+			GAMETEXT.setYearStrAC(szTempBuffer, yearfounded, false);
+		}
+		else
+		{
+			int turnfounded = pHeadSelectedCity->getGameTurnFounded();
+			GAMETEXT.setTimeStr(szTempBuffer, turnfounded, false);
+		}
 		szBuffer.append(NEWLINE);
 		szBuffer.append(gDLL->getText("TXT_KEY_CITY_FOUNDED", szTempBuffer.GetCString()));
 

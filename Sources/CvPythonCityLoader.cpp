@@ -108,6 +108,7 @@ void CvPythonCityLoader::CyCityPythonInterface1(boost::python::class_<CyCity>& i
 		.def("area", &CyCity::area, boost::python::return_value_policy<boost::python::manage_new_object>(), "CyArea() () - returns CyArea instance for location of city")
 		.def("waterArea", &CyCity::waterArea, boost::python::return_value_policy<boost::python::manage_new_object>(), "CyArea* ()")
 		.def("getGameTurnFounded", &CyCity::getGameTurnFounded, "int () - GameTurn the city was founded")
+		.def("getGameDateFounded", &CyCity::getGameDateFounded, "int (bool aCalendar) - GameDate the city was founded")
 
 		.def("getGameTurnAcquired", &CyCity::getGameTurnAcquired, "int ()")
 		.def("getPopulation", &CyCity::getPopulation, "int () - total city population")

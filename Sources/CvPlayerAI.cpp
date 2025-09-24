@@ -717,10 +717,7 @@ void CvPlayerAI::AI_doTurnUnitsPost()
 		iUpgradeBudget /= 3;
 	}
 
-	if (gPlayerLogLevel > 2)
-	{
-		logBBAI("	%S calculates upgrade budget of %I64d from %I64d current gold, %I64d target", getCivilizationDescription(0), iUpgradeBudget, iStartingGold, iTargetGold);
-	}
+	LOG_BBAI_PLAYER(2, ("	%S calculates upgrade budget of %I64d from %I64d current gold, %I64d target", getCivilizationDescription(0), iUpgradeBudget, iStartingGold, iTargetGold));	
 
 	// Always willing to upgrade 1 unit if we have the money
 	iUpgradeBudget = std::max<int64_t>(iUpgradeBudget, 1);
@@ -861,10 +858,10 @@ void CvPlayerAI::AI_doTurnUnitsPost()
 	}
 	if (gPlayerLogLevel > 2 && iStartingGold - getGold() > 0)
 	{
-		logBBAI(
+		LOG_BBAI_PLAYER(3, (
 			"	%S spends %I64d on unit upgrades out of budget of %I64d, %I64d effective gold remaining",
 			getCivilizationDescription(0), iStartingGold - getGold(), iUpgradeBudget, getGold()
-		);
+		));
 	}
 	AI_doSplit();
 }
@@ -1701,18 +1698,12 @@ void CvPlayerAI::AI_conquerCity(PlayerTypes eOldOwner, CvCity* pCity, bool bConq
 			// Reasons to not raze
 			if (getNumCities() <= 1 || getNumCities() < 5 && iCloseness > 0)
 			{
-				if (gPlayerLogLevel > 0)
-				{
-					logBBAI("	Player %d (%S) decides not to raze %S because they have few cities", getID(), getCivilizationDescription(0), pCity->getName().GetCString());
-				}
+				LOG_BBAI_PLAYER(1, ("	Player %d (%S) decides not to raze %S because they have few cities", getID(), getCivilizationDescription(0), pCity->getName().GetCString()));
 			}
 			else if (AI_isDoVictoryStrategy(AI_VICTORY_DOMINATION3) && GET_TEAM(getTeam()).AI_isPrimaryArea(pCity->area()))
 			{
 				// Do not raze, going for domination
-				if (gPlayerLogLevel > 0)
-				{
-					logBBAI("	Player %d (%S) decides not to raze %S because they're going for domination", getID(), getCivilizationDescription(0), pCity->getName().GetCString());
-				}
+				LOG_BBAI_PLAYER(1, ("	Player %d (%S) decides not to raze %S because they're going for domination", getID(), getCivilizationDescription(0), pCity->getName().GetCString()));
 			}
 			else if (isHominid())
 			{
@@ -1805,9 +1796,9 @@ void CvPlayerAI::AI_conquerCity(PlayerTypes eOldOwner, CvCity* pCity, bool bConq
 								iRazeValue *= (100 - (GC.getTraitInfo((TraitTypes)iI).getUpkeepModifier()));
 								iRazeValue /= 100;
 
-								if (gPlayerLogLevel > 0 && GC.getTraitInfo((TraitTypes)iI).getUpkeepModifier() > 0)
+								if (GC.getTraitInfo((TraitTypes)iI).getUpkeepModifier() > 0)
 								{
-									logBBAI("	  Reduction for upkeep modifier %d", GC.getTraitInfo((TraitTypes)iI).getUpkeepModifier());
+									LOG_BBAI_PLAYER(3, ("	  Reduction for upkeep modifier %d", GC.getTraitInfo((TraitTypes)iI).getUpkeepModifier()));
 								}
 							}
 						}
@@ -1828,19 +1819,13 @@ void CvPlayerAI::AI_conquerCity(PlayerTypes eOldOwner, CvCity* pCity, bool bConq
 						{
 							iRazeValue -= 50;
 
-							if (gPlayerLogLevel > 0)
-							{
-								logBBAI("	  Reduction for state religion with shrine");
-							}
+							LOG_BBAI_PLAYER(1, ("	  Reduction for state religion with shrine"));
 						}
 						else
 						{
 							iRazeValue -= 10;
 
-							if (gPlayerLogLevel > 0)
-							{
-								logBBAI("	  Reduction for state religion");
-							}
+							LOG_BBAI_PLAYER(1, ("	  Reduction for state religion"));
 						}
 					}
 				}
@@ -1884,22 +1869,20 @@ void CvPlayerAI::AI_conquerCity(PlayerTypes eOldOwner, CvCity* pCity, bool bConq
 						(GET_TEAM(GET_PLAYER(eOldOwner).getTeam()).getPower(true) - GET_TEAM(getTeam()).getPower(false))
 						* 20 / std::max(100, GET_TEAM(getTeam()).getPower(false))
 					);
-					logBBAI("	  Low power, so boost raze odds by %d", iTempValue);
+					LOG_BBAI_PLAYER(2, ("	  Low power, so boost raze odds by %d", iTempValue));
 					iRazeValue += iTempValue;
 				}
 
 				if (gPlayerLogLevel >= 1)
 				{
-					if (bBarbCity) logBBAI("	  %S is a barb city", pCity->getName().GetCString());
-					if (bPrevOwnerBarb) logBBAI("	  %S was last owned by barbs", pCity->getName().GetCString());
-					logBBAI("	  %S has area cities %d, closeness %d, bFinTrouble %d", pCity->getName().GetCString(), GET_TEAM(getTeam()).countNumCitiesByArea(pCity->area()), iCloseness, bFinancialTrouble);
+					if (bBarbCity) LOG_BBAI_PLAYER(2, ("	  %S is a barb city", pCity->getName().GetCString()));
+					if (bPrevOwnerBarb) LOG_BBAI_PLAYER(2, ("	  %S was last owned by barbs", pCity->getName().GetCString()));
+					LOG_BBAI_PLAYER(2, ("	  %S has area cities %d, closeness %d, bFinTrouble %d", pCity->getName().GetCString(), GET_TEAM(getTeam()).countNumCitiesByArea(pCity->area()), iCloseness, bFinancialTrouble));
 				}
 			}
 
-			if (gPlayerLogLevel >= 1)
-			{
-				logBBAI("	Player %d (%S) has odds %d to raze city %S", getID(), getCivilizationDescription(0), iRazeValue, pCity->getName().GetCString());
-			}
+			LOG_BBAI_PLAYER(2, ("	Player %d (%S) has odds %d to raze city %S", getID(), getCivilizationDescription(0), iRazeValue, pCity->getName().GetCString()));
+			
 
 			if (iRazeValue > 0 && GC.getGame().getSorenRandNum(100, "AI Raze City") < iRazeValue)
 			{
@@ -1910,7 +1893,7 @@ void CvPlayerAI::AI_conquerCity(PlayerTypes eOldOwner, CvCity* pCity, bool bConq
 
 	if (bRaze)
 	{
-		logBBAI("	Player %d (%S) decides to to raze city %S!!!", getID(), getCivilizationDescription(0), pCity->getName().GetCString());
+		LOG_BBAI_PLAYER(2, ("	Player %d (%S) decides to to raze city %S!!!", getID(), getCivilizationDescription(0), pCity->getName().GetCString()));
 		pCity->doTask(TASK_RAZE);
 	}
 	else
@@ -4006,7 +3989,7 @@ int64_t CvPlayerAI::AI_goldTarget() const
 TechTypes CvPlayerAI::AI_bestTech(int iMaxPathLength, bool bIgnoreCost, bool bAsync, TechTypes eIgnoreTech, AdvisorTypes eIgnoreAdvisor)
 {
 	PROFILE("CvPlayerAI::AI_bestTech");
-	logBBAI("Begin best tech evaluation...");
+	LOG_BBAI_PLAYER(2, ("Begin best tech evaluation..."));
 
 	int iValue;
 	int iBestValue = 0;
@@ -4073,11 +4056,11 @@ TechTypes CvPlayerAI::AI_bestTech(int iMaxPathLength, bool bIgnoreCost, bool bAs
 			{
 				if (eFirstTech != NO_TECH)
 				{
-					logBBAI("  Player %d (%S) continues toward tech %S, start tech %S", getID(), getCivilizationDescription(0), GC.getTechInfo(m_eBestResearchTarget).getDescription(), GC.getTechInfo(eFirstTech).getDescription());
+					LOG_BBAI_PLAYER(2, ("  Player %d (%S) continues toward tech %S, start tech %S", getID(), getCivilizationDescription(0), GC.getTechInfo(m_eBestResearchTarget).getDescription(), GC.getTechInfo(eFirstTech).getDescription()));
 				}
 				else
 				{
-					logBBAI("  Player %d (%S) continues toward tech %S, start tech NONE", getID(), getCivilizationDescription(0), GC.getTechInfo(m_eBestResearchTarget).getDescription());
+					LOG_BBAI_PLAYER(2, ("  Player %d (%S) continues toward tech %S, start tech NONE", getID(), getCivilizationDescription(0), GC.getTechInfo(m_eBestResearchTarget).getDescription()));
 				}
 			}
 			return eFirstTech;
@@ -4119,8 +4102,13 @@ TechTypes CvPlayerAI::AI_bestTech(int iMaxPathLength, bool bIgnoreCost, bool bAs
 						bValid = iTempValue * 100 / GC.getTechInfo(eTechX).getResearchCost() > iBestValue;
 
 						if (bValid)
-							logBBAI("  Beelining worth examining tech %S (val %d)", GC.getTechInfo(eTechX).getDescription(), (iTempValue * 100) / GC.getTechInfo(eTechX).getResearchCost());
-						else logBBAI("  Beelining rejects examination of tech %S (val %d)", GC.getTechInfo(eTechX).getDescription(), (iTempValue * 100) / GC.getTechInfo(eTechX).getResearchCost());
+						{
+							LOG_BBAI_PLAYER(3, ("  Beelining worth examining tech %S (val %d)", GC.getTechInfo(eTechX).getDescription(), (iTempValue * 100) / GC.getTechInfo(eTechX).getResearchCost()));
+						}
+						else
+						{
+							LOG_BBAI_PLAYER(3, ("  Beelining rejects examination of tech %S (val %d)", GC.getTechInfo(eTechX).getDescription(), (iTempValue * 100) / GC.getTechInfo(eTechX).getResearchCost()));
+						}
 					}
 
 					if (bValid)
@@ -4153,7 +4141,7 @@ TechTypes CvPlayerAI::AI_bestTech(int iMaxPathLength, bool bIgnoreCost, bool bAs
 
 		if (!beeLine && eBestTech != NO_TECH) //Afforess check against NO_TECH (or else CTD...)
 		{
-			logBBAI("  Non-beeline tech choice is %S with value/cost %d - checking beeline possibilities...", GC.getTechInfo(eBestTech).getDescription(), iBestValue);
+			LOG_BBAI_PLAYER(3, ("Non - beeline tech choice is % S with value / cost % d - checking beeline possibilities...", GC.getTechInfo(eBestTech).getDescription(), iBestValue));
 		}
 		beeLineThreshold = iBestValue;
 		beeLine = !beeLine;
@@ -4161,7 +4149,7 @@ TechTypes CvPlayerAI::AI_bestTech(int iMaxPathLength, bool bIgnoreCost, bool bAs
 
 	if (gPlayerLogLevel >= 1 && eBestTech != NO_TECH && eFirstTech != NO_TECH)
 	{
-		logBBAI("  Player %d (%S) selects tech %S with value/cost %d, start tech %S", getID(), getCivilizationDescription(0), GC.getTechInfo(eBestTech).getDescription(), iBestValue, GC.getTechInfo(eFirstTech).getDescription());
+		LOG_BBAI_PLAYER(3, ("Player % d(% S) selects tech % S with value / cost % d, start tech% S", getID(), getCivilizationDescription(0), GC.getTechInfo(eBestTech).getDescription(), iBestValue, GC.getTechInfo(eFirstTech).getDescription()));
 	}
 
 	if (iMaxPathLength > 1)
@@ -4247,10 +4235,10 @@ int CvPlayerAI::AI_TechValueCached(TechTypes eTech, bool bAsync, bool considerFo
 
 		if (gPlayerLogLevel > 2)
 		{
-			logBBAI("Player %d (%S) calculate value for tech %S (cache miss)",
+			LOG_BBAI_PLAYER(2, ("Player %d (%S) calculate value for tech %S (cache miss)",
 					getID(),
 					getCivilizationDescription(0),
-					GC.getTechInfo(eTech).getDescription());
+					GC.getTechInfo(eTech).getDescription()));
 		}
 
 		iValue = AI_techValue(eTech, findPathLength(eTech, false), true, bAsync);
@@ -4339,7 +4327,7 @@ int CvPlayerAI::techPathValuePerUnitCost(techPath* path, TechTypes eTech, bool b
 
 	if (gPlayerLogLevel > 1)
 	{
-		logBBAI("  Evaluate tech path value:");
+		LOG_BBAI_PLAYER(2, ("  Evaluate tech path value:"));
 	}
 	foreach_(const TechTypes & loopTech, *path)
 	{
@@ -4348,7 +4336,7 @@ int CvPlayerAI::techPathValuePerUnitCost(techPath* path, TechTypes eTech, bool b
 
 		if (gPlayerLogLevel > 2)
 		{
-			logBBAI("	tech %S: cost %d, value %d", GC.getTechInfo(loopTech).getDescription(), iTempCost, iTempValue);
+			LOG_BBAI_PLAYER(2, ("	tech %S: cost %d, value %d", GC.getTechInfo(loopTech).getDescription(), iTempCost, iTempValue));
 		}
 		iCost += iTempCost;
 		iValue += iTempValue / iScaleFactor;
@@ -4399,7 +4387,7 @@ techPath* CvPlayerAI::findBestPath(TechTypes eTech, int& valuePerUnitCost, bool 
 		const int iValue = techPathValuePerUnitCost(path, eTech, bIgnoreCost, bAsync);
 		if (gPlayerLogLevel > 2)
 		{
-			logBBAI("  Evaluated tech path value leading to %S as %d", GC.getTechInfo(eTech).getDescription(), iValue);
+			LOG_BBAI_PLAYER(2, ("  Evaluated tech path value leading to %S as %d", GC.getTechInfo(eTech).getDescription(), iValue));
 		}
 		if (iValue >= iBestValue)
 		{
@@ -4484,7 +4472,7 @@ int CvPlayerAI::AI_techValue(TechTypes eTech, int iPathLength, bool bIgnoreCost,
 
 	if (gPlayerLogLevel > 2)
 	{
-		logBBAI("Player %d (%S) calculate value for tech %S", getID(), getCivilizationDescription(0), kTech.getDescription());
+		LOG_BBAI_PLAYER(2, ("Player %d (%S) calculate value for tech %S", getID(), getCivilizationDescription(0), kTech.getDescription()));
 	}
 	CvCity* pCapitalCity = getCapitalCity();
 
@@ -4633,7 +4621,7 @@ int CvPlayerAI::AI_techValue(TechTypes eTech, int iPathLength, bool bIgnoreCost,
 
 	if (gPlayerLogLevel > 2)
 	{
-		logBBAI("\tMisc value: %d", iValue);
+		LOG_BBAI_PLAYER(2, ("\tMisc value: %d", iValue));
 	}
 
 	int iTempValue = 0;
@@ -4655,7 +4643,7 @@ int CvPlayerAI::AI_techValue(TechTypes eTech, int iPathLength, bool bIgnoreCost,
 
 	if (gPlayerLogLevel > 2)
 	{
-		logBBAI("\tCorporation value: %d", iTempValue / 1000);
+		LOG_BBAI_PLAYER(2, ("\tCorporation value: %d", iTempValue / 1000));
 	}
 
 	iTempValue = 0;
@@ -4675,7 +4663,7 @@ int CvPlayerAI::AI_techValue(TechTypes eTech, int iPathLength, bool bIgnoreCost,
 	}
 	iValue += iTempValue / 100;
 
-	if (gPlayerLogLevel > 2) logBBAI("\tPromotion value: %d", iTempValue / 100);
+	if (gPlayerLogLevel > 2) LOG_BBAI_PLAYER(2, ("\tPromotion value: %d", iTempValue / 100));
 
 	iTempValue = 0;
 
@@ -4780,7 +4768,7 @@ int CvPlayerAI::AI_techValue(TechTypes eTech, int iPathLength, bool bIgnoreCost,
 
 	if (gPlayerLogLevel > 2)
 	{
-		logBBAI("\tTile improvement value: %d", iTileImprovementValue);
+		LOG_BBAI_PLAYER(2, ("\tTile improvement value: %d", iTileImprovementValue));
 	}
 
 	//ls612: Tech Commerce Modifiers
@@ -5024,7 +5012,7 @@ int CvPlayerAI::AI_techValue(TechTypes eTech, int iPathLength, bool bIgnoreCost,
 
 	if (gPlayerLogLevel > 2)
 	{
-		logBBAI("\tBuild value: %d", iBuildValue);
+		LOG_BBAI_PLAYER(2, ("\tBuild value: %d", iBuildValue));
 	}
 
 	// does tech reveal bonus resources
@@ -5089,7 +5077,7 @@ int CvPlayerAI::AI_techValue(TechTypes eTech, int iPathLength, bool bIgnoreCost,
 
 	if (gPlayerLogLevel > 2)
 	{
-		logBBAI("\tBonus reveal value: %d", iBonusRevealValue);
+		LOG_BBAI_PLAYER(2, ("\tBonus reveal value: %d", iBonusRevealValue));
 	}
 
 	iValue += iBonusRevealValue;
@@ -5100,7 +5088,7 @@ int CvPlayerAI::AI_techValue(TechTypes eTech, int iPathLength, bool bIgnoreCost,
 
 	if (gPlayerLogLevel > 2)
 	{
-		logBBAI("\tUnit value: %d", iUnitValue);
+		LOG_BBAI_PLAYER(2, ("\tUnit value: %d", iUnitValue));
 	}
 
 	iValue += iUnitValue;
@@ -5120,8 +5108,8 @@ int CvPlayerAI::AI_techValue(TechTypes eTech, int iPathLength, bool bIgnoreCost,
 
 	if (gPlayerLogLevel > 2)
 	{
-		logBBAI("\tBuilding value: %d",
-				iBuildingValue);
+		LOG_BBAI_PLAYER(2, ("\tBuilding value: %d",
+				iBuildingValue));
 	}
 
 	iValue += iBuildingValue;
@@ -5257,13 +5245,13 @@ int CvPlayerAI::AI_techValue(TechTypes eTech, int iPathLength, bool bIgnoreCost,
 
 				if (gPlayerLogLevel > 2)
 				{
-					logBBAI("Player %d - tech %S enabled civic %S with value %d vs current %d - additional tech value %d",
+					LOG_BBAI_PLAYER(2, ("Player %d - tech %S enabled civic %S with value %d vs current %d - additional tech value %d",
 							getID(),
 							kTech.getDescription(),
 							GC.getCivicInfo((CivicTypes)iJ).getDescription(),
 							iNewCivicValue,
 							iCurrentCivicValue,
-							iTechCivicValue);
+							iTechCivicValue));
 				}
 			}
 		}
@@ -5346,8 +5334,8 @@ int CvPlayerAI::AI_techValue(TechTypes eTech, int iPathLength, bool bIgnoreCost,
 
 				if (gPlayerLogLevel > 2)
 				{
-					logBBAI("\tReligion value: %d",
-							iReligionValue);
+					LOG_BBAI_PLAYER(2, ("\tReligion value: %d",
+							iReligionValue));
 				}
 
 				iValue += iReligionValue;
@@ -5371,8 +5359,8 @@ int CvPlayerAI::AI_techValue(TechTypes eTech, int iPathLength, bool bIgnoreCost,
 
 				if (gPlayerLogLevel > 2)
 				{
-					logBBAI("\tCorporation found value: %d",
-							iCorporationValue);
+					LOG_BBAI_PLAYER(2, ("\tCorporation found value: %d",
+							iCorporationValue));
 				}
 
 				iValue += iCorporationValue;
@@ -5411,8 +5399,8 @@ int CvPlayerAI::AI_techValue(TechTypes eTech, int iPathLength, bool bIgnoreCost,
 
 				if (gPlayerLogLevel > 2)
 				{
-					logBBAI("\tFree on first discovery value: %d",
-							iFreeStuffValue);
+					LOG_BBAI_PLAYER(2, ("\tFree on first discovery value: %d",
+							iFreeStuffValue));
 				}
 
 				iValue += iFreeStuffValue;
@@ -5437,11 +5425,11 @@ int CvPlayerAI::AI_techValue(TechTypes eTech, int iPathLength, bool bIgnoreCost,
 
 	if (gPlayerLogLevel > 2)
 	{
-		logBBAI("Player %d (%S) raw value for tech %S is %d",
+		LOG_BBAI_PLAYER(2, ("Player %d (%S) raw value for tech %S is %d",
 				getID(),
 				getCivilizationDescription(0),
 				kTech.getDescription(),
-				iValue);
+				iValue));
 	}
 
 	if (!bIgnoreCost)
@@ -5682,7 +5670,7 @@ int CvPlayerAI::AI_techBuildingValue(TechTypes eTech, int iPathLength, bool& bEn
 
 				if (gPlayerLogLevel > 2)
 				{
-					logBBAI("\tBuilding %S old mechanism value: %d",
+					LOG_BBAI_PLAYER(2, ("\tBuilding %S old mechanism value: %d",
 							kLoopBuilding.getDescription(),
 							iBuildingValue);
 				}
@@ -11928,7 +11916,7 @@ int CvPlayerAI::AI_neededWorkers(const CvArea* pArea) const
 
 	if (gPlayerLogLevel > 2)
 	{
-		logBBAI("Player %d needs %d Workers in Area %d for %d cities.\n", getID(), iNeeded, pArea->getID(), iCities);
+		LOG_BBAI_PLAYER(2, ("Player %d needs %d Workers in Area %d for %d cities.\n", getID(), iNeeded, pArea->getID(), iCities));
 	}
 	return iNeeded;
 
@@ -13267,7 +13255,7 @@ int CvPlayerAI::AI_civicValue(CivicTypes eCivic, bool bCivicOptionVacuum, CivicT
 
 	if (gPlayerLogLevel > 2)
 	{
-		logBBAI("Civic %S base value %d", kCivic.getDescription(), iValue);
+		LOG_BBAI_PLAYER(2, ("Civic %S base value %d", kCivic.getDescription(), iValue));
 	}
 	// Koshling - Anarchy length is not part of the civic's value - it's part of the cost of an overall switch and is now evaluated in that process
 	//iValue += -(kCivic.getAnarchyLength() * getNumCities());
@@ -13275,7 +13263,7 @@ int CvPlayerAI::AI_civicValue(CivicTypes eCivic, bool bCivicOptionVacuum, CivicT
 	int iTempValue = -getSingleCivicUpkeep(eCivic, true) * 80 / 100;
 	if (gPlayerLogLevel > 2 && iTempValue != 0)
 	{
-		logBBAI("Civic %S upkeep value %d", kCivic.getDescription(), iTempValue);
+		LOG_BBAI_PLAYER(2, ("Civic %S upkeep value %d", kCivic.getDescription(), iTempValue));
 	}
 	iValue += iTempValue;
 
@@ -13289,21 +13277,21 @@ int CvPlayerAI::AI_civicValue(CivicTypes eCivic, bool bCivicOptionVacuum, CivicT
 	//Fuyu: Only if wars ongoing, as suggested by Munch - modified by Koshling to just be an increase then
 	if (gPlayerLogLevel > 2 && iTempValue != 0)
 	{
-		logBBAI("Civic %S GG modifier value %d", kCivic.getDescription(), iTempValue);
+		LOG_BBAI_PLAYER(2, ("Civic %S GG modifier value %d", kCivic.getDescription(), iTempValue));
 	}
 	iValue += iTempValue / (bWarPlan || isMinorCiv() ? 3 : 1);
 	iTempValue = -(kCivic.getDistanceMaintenanceModifier() * std::max(0, getNumCities() - 3) / 8);
 
 	if (gPlayerLogLevel > 2 && iTempValue != 0)
 	{
-		logBBAI("Civic %S distance maintenance modifier value %d", kCivic.getDescription(), iTempValue);
+		LOG_BBAI_PLAYER(2, ("Civic %S distance maintenance modifier value %d", kCivic.getDescription(), iTempValue));
 	}
 	iValue += iTempValue;
 	iTempValue = -(kCivic.getNumCitiesMaintenanceModifier() * std::max(0, getNumCities() - 3) / 8);
 
 	if (gPlayerLogLevel > 2 && iTempValue != 0)
 	{
-		logBBAI("Civic %S #cities maintenance modifier value %d", kCivic.getDescription(), iTempValue);
+		LOG_BBAI_PLAYER(2, ("Civic %S #cities maintenance modifier value %d", kCivic.getDescription(), iTempValue));
 	}
 	iValue += iTempValue;
 
@@ -13319,7 +13307,7 @@ int CvPlayerAI::AI_civicValue(CivicTypes eCivic, bool bCivicOptionVacuum, CivicT
 		iTempValue /= 100;
 		if (gPlayerLogLevel > 2 && iTempValue != 0)
 		{
-			logBBAI("Civic %S free experience value %d", kCivic.getDescription(), iTempValue);
+			LOG_BBAI_PLAYER(2, ("Civic %S free experience value %d", kCivic.getDescription(), iTempValue));
 		}
 		iValue += iTempValue;
 	}
@@ -13327,59 +13315,59 @@ int CvPlayerAI::AI_civicValue(CivicTypes eCivic, bool bCivicOptionVacuum, CivicT
 	iTempValue = ((kCivic.getWorkerSpeedModifier() * AI_getNumAIUnits(UNITAI_WORKER)) / 15);
 	if (gPlayerLogLevel > 2 && iTempValue != 0)
 	{
-		logBBAI("Civic %S worker speed value %d", kCivic.getDescription(), iTempValue);
+		LOG_BBAI_PLAYER(2, ("Civic %S worker speed value %d", kCivic.getDescription(), iTempValue));
 	}
 	iValue += iTempValue;
 	iTempValue = ((kCivic.getImprovementUpgradeRateModifier() * getNumCities()) / 50);
 	if (gPlayerLogLevel > 2 && iTempValue != 0)
 	{
-		logBBAI("Civic %S improvement upgrade modifier value %d",
+		LOG_BBAI_PLAYER(2, ("Civic %S improvement upgrade modifier value %d",
 				 kCivic.getDescription(),
-				 iTempValue);
+				 iTempValue));
 	}
 	iValue += iTempValue;
 	iTempValue = (kCivic.getMilitaryProductionModifier() * getNumCities() * iWarmongerPercent) / (bWarPlan ? 300 : 500);
 	if (gPlayerLogLevel > 2 && iTempValue != 0)
 	{
-		logBBAI("Civic %S military production modifier value %d",
+		LOG_BBAI_PLAYER(2, ("Civic %S military production modifier value %d",
 				 kCivic.getDescription(),
-				 iTempValue);
+				 iTempValue));
 	}
 	iValue += iTempValue;
 	iTempValue = kCivic.getFreeUnitUpkeepCivilian() / 2;
 	if (gPlayerLogLevel > 2 && iTempValue != 0)
 	{
-		logBBAI("Civic %S free units value %d",
+		LOG_BBAI_PLAYER(2, ("Civic %S free units value %d",
 				 kCivic.getDescription(),
-				 iTempValue);
+				 iTempValue));
 	}
 	iValue += iTempValue;
 	iTempValue = kCivic.getFreeUnitUpkeepMilitary() / 2;
 	if (gPlayerLogLevel > 2 && iTempValue != 0)
 	{
-		logBBAI("Civic %S free military units value %d",
+		LOG_BBAI_PLAYER(2, ("Civic %S free military units value %d",
 				 kCivic.getDescription(),
-				 iTempValue);
+				 iTempValue));
 	}
 	iValue += iTempValue;
 	iTempValue = kCivic.getFreeUnitUpkeepCivilianPopPercent() * getTotalPopulation() / 200;
 	if (gPlayerLogLevel > 2 && iTempValue != 0)
 	{
-		logBBAI("Civic %S 'free civilian unit upkeep per pop' value: %d", kCivic.getDescription(), iTempValue);
+		LOG_BBAI_PLAYER(2, ("Civic %S 'free civilian unit upkeep per pop' value: %d", kCivic.getDescription(), iTempValue));
 	}
 	iValue += iTempValue;
 	iTempValue = kCivic.getFreeUnitUpkeepMilitaryPopPercent() * getTotalPopulation() / 300;
 	if (gPlayerLogLevel > 2 && iTempValue != 0)
 	{
-		logBBAI("Civic %S 'free military unit upkeep per pop' value: %d", kCivic.getDescription(), iTempValue);
+		LOG_BBAI_PLAYER(2, ("Civic %S 'free military unit upkeep per pop' value: %d", kCivic.getDescription(), iTempValue));
 	}
 	iValue += iTempValue;
 	iTempValue = -(kCivic.getCivilianUnitUpkeepMod() * getNumUnits() - getNumMilitaryUnits());
 	if (gPlayerLogLevel > 2 && iTempValue != 0)
 	{
-		logBBAI("Civic %S civilian unit upkeep modifier %d%%",
+		LOG_BBAI_PLAYER(2, ("Civic %S civilian unit upkeep modifier %d%%",
 				 kCivic.getDescription(),
-				 iTempValue);
+				 iTempValue));
 	}
 	iValue += iTempValue;
 
@@ -13387,9 +13375,9 @@ int CvPlayerAI::AI_civicValue(CivicTypes eCivic, bool bCivicOptionVacuum, CivicT
 
 	if (gPlayerLogLevel > 2 && iTempValue != 0)
 	{
-		logBBAI("Civic %S military unit upkeep modifier %d%%",
+		LOG_BBAI_PLAYER(2, ("Civic %S military unit upkeep modifier %d%%",
 				 kCivic.getDescription(),
-				 iTempValue);
+				 iTempValue));
 	}
 	iValue += iTempValue;
 
@@ -13399,9 +13387,9 @@ int CvPlayerAI::AI_civicValue(CivicTypes eCivic, bool bCivicOptionVacuum, CivicT
 		iTempValue = static_cast<int>(-getInflationMod10000() * calculatePreInflatedCosts() * kCivic.getInflationModifier() / 10000);
 		if (gPlayerLogLevel > 2 && iTempValue != 0)
 		{
-			logBBAI("Civic %S inflation modifier value %d",
+			LOG_BBAI_PLAYER(2, ("Civic %S inflation modifier value %d",
 					 kCivic.getDescription(),
-					 iTempValue);
+					 iTempValue));
 		}
 		iValue += iTempValue;
 	}
@@ -13425,9 +13413,9 @@ int CvPlayerAI::AI_civicValue(CivicTypes eCivic, bool bCivicOptionVacuum, CivicT
 		}
 		if (gPlayerLogLevel > 2 && iTempValue != 0)
 		{
-			logBBAI("Civic %S military food production value %d",
+			LOG_BBAI_PLAYER(2, ("Civic %S military food production value %d",
 					 kCivic.getDescription(),
-					 iTempValue);
+					 iTempValue));
 		}
 		iValue += iTempValue;
 	}
@@ -13469,7 +13457,7 @@ int CvPlayerAI::AI_civicValue(CivicTypes eCivic, bool bCivicOptionVacuum, CivicT
 			iTempValue = -(kCivic.getRevIdxLocal() * localRevScaling * getNumCities()) / 4;
 			if (gPlayerLogLevel > 2 && iTempValue != 0)
 			{
-				logBBAI("Civic %S local stability value %d", kCivic.getDescription(), iTempValue);
+				LOG_BBAI_PLAYER(2, ("Civic %S local stability value %d", kCivic.getDescription(), iTempValue));
 			}
 			iValue += iTempValue;
 		}
@@ -13485,7 +13473,7 @@ int CvPlayerAI::AI_civicValue(CivicTypes eCivic, bool bCivicOptionVacuum, CivicT
 			}
 			if (gPlayerLogLevel > 2 && iTempValue != 0)
 			{
-				logBBAI("Civic %S national stability value %d", kCivic.getDescription(), iTempValue);
+				LOG_BBAI_PLAYER(2, ("Civic %S national stability value %d", kCivic.getDescription(), iTempValue));
 			}
 			iValue += iTempValue;
 		}
@@ -13500,9 +13488,9 @@ int CvPlayerAI::AI_civicValue(CivicTypes eCivic, bool bCivicOptionVacuum, CivicT
 			iTempValue = (getNumCities() * (iOldCapitalDistance - iCapitalDistance) * (10 + std::max(0, AI_calculateAverageLocalInstability())));
 			if (gPlayerLogLevel > 2 && iTempValue != 0)
 			{
-				logBBAI("Civic %S REV distance modifier value %d",
+				LOG_BBAI_PLAYER(2, ("Civic %S REV distance modifier value %d",
 						 kCivic.getDescription(),
-						 iTempValue);
+						 iTempValue));
 			}
 			iValue += iTempValue;
 		}
@@ -13559,9 +13547,9 @@ int CvPlayerAI::AI_civicValue(CivicTypes eCivic, bool bCivicOptionVacuum, CivicT
 
 					if (gPlayerLogLevel > 2)
 					{
-						logBBAI("Civic %S city limit bad value %d",
+						LOG_BBAI_PLAYER(2, ("Civic %S city limit bad value %d",
 								 kCivic.getDescription(),
-								 iTempValue);
+								 iTempValue));
 					}
 				}
 			}
@@ -13590,9 +13578,9 @@ int CvPlayerAI::AI_civicValue(CivicTypes eCivic, bool bCivicOptionVacuum, CivicT
 		}
 		if (gPlayerLogLevel > 2 && iTempValue != 0)
 		{
-			logBBAI("Civic %S upgrade anywhere value %d",
+			LOG_BBAI_PLAYER(2, ("Civic %S upgrade anywhere value %d",
 					 kCivic.getDescription(),
-					 iTempValue);
+					 iTempValue));
 		}
 		iValue += iTempValue;
 	}
@@ -13638,9 +13626,9 @@ int CvPlayerAI::AI_civicValue(CivicTypes eCivic, bool bCivicOptionVacuum, CivicT
 		iTempValue += countCityReligionRevolts() * 5;
 		if (gPlayerLogLevel > 2 && iTempValue != 0)
 		{
-			logBBAI("Civic %S inquisitions value %d",
+			LOG_BBAI_PLAYER(2, ("Civic %S inquisitions value %d",
 					 kCivic.getDescription(),
-					 iTempValue);
+					 iTempValue));
 		}
 		iValue += iTempValue;
 	}
@@ -13652,9 +13640,9 @@ int CvPlayerAI::AI_civicValue(CivicTypes eCivic, bool bCivicOptionVacuum, CivicT
 	}
 	if (gPlayerLogLevel > 2 && iTempValue != 0)
 	{
-		logBBAI("Civic %S unitcombat production modifier value %d",
+		LOG_BBAI_PLAYER(2, ("Civic %S unitcombat production modifier value %d",
 				 kCivic.getDescription(),
-				 iTempValue);
+				 iTempValue));
 	}
 	iValue += iTempValue;
 
@@ -13665,7 +13653,7 @@ int CvPlayerAI::AI_civicValue(CivicTypes eCivic, bool bCivicOptionVacuum, CivicT
 	}
 	if (gPlayerLogLevel > 2 && iTempValue != 0)
 	{
-		logBBAI("Civic %S building production modifier value %d", kCivic.getDescription(), iTempValue);
+		LOG_BBAI_PLAYER(2, ("Civic %S building production modifier value %d", kCivic.getDescription(), iTempValue));
 	}
 	iValue += iTempValue;
 
@@ -13676,9 +13664,9 @@ int CvPlayerAI::AI_civicValue(CivicTypes eCivic, bool bCivicOptionVacuum, CivicT
 	}
 	if (gPlayerLogLevel > 2 && iTempValue != 0)
 	{
-		logBBAI("Civic %S bonus minting value %d",
+		LOG_BBAI_PLAYER(2, ("Civic %S bonus minting value %d",
 				 kCivic.getDescription(),
-				 iTempValue);
+				 iTempValue));
 	}
 	iValue += iTempValue;
 
@@ -13689,9 +13677,9 @@ int CvPlayerAI::AI_civicValue(CivicTypes eCivic, bool bCivicOptionVacuum, CivicT
 	}
 	if (gPlayerLogLevel > 2 && iTempValue != 0)
 	{
-		logBBAI("Civic %S unit class production modifier value %d",
+		LOG_BBAI_PLAYER(2, ("Civic %S unit class production modifier value %d",
 				 kCivic.getDescription(),
-				 iTempValue);
+				 iTempValue));
 	}
 	iValue += iTempValue;
 
@@ -13736,9 +13724,9 @@ int CvPlayerAI::AI_civicValue(CivicTypes eCivic, bool bCivicOptionVacuum, CivicT
 
 			if (gPlayerLogLevel > 2 && iTempValue != 0)
 			{
-				logBBAI("Civic %S growth rate modifier value %d",
+				LOG_BBAI_PLAYER(2, ("Civic %S growth rate modifier value %d",
 						 kCivic.getDescription(),
-						 iTempValue);
+						 iTempValue));
 			}
 			iValue += iTempValue;
 		}
@@ -13759,9 +13747,9 @@ int CvPlayerAI::AI_civicValue(CivicTypes eCivic, bool bCivicOptionVacuum, CivicT
 		}
 		if (gPlayerLogLevel > 2 && iTempValue != 0)
 		{
-			logBBAI("Civic %S attitude share value %d",
+			LOG_BBAI_PLAYER(2, ("Civic %S attitude share value %d",
 					 kCivic.getDescription(),
-					 iTempValue);
+					 iTempValue));
 		}
 		iValue += iTempValue;
 	}
@@ -13800,9 +13788,9 @@ int CvPlayerAI::AI_civicValue(CivicTypes eCivic, bool bCivicOptionVacuum, CivicT
 		}
 		if (gPlayerLogLevel > 2 && iTempValue != 0)
 		{
-			logBBAI("Civic %S war-time modifier value %d",
+			LOG_BBAI_PLAYER(2, ("Civic %S war-time modifier value %d",
 					 kCivic.getDescription(),
-					 iTempValue);
+					 iTempValue));
 		}
 		iValue += iTempValue;
 	}
@@ -13820,9 +13808,9 @@ int CvPlayerAI::AI_civicValue(CivicTypes eCivic, bool bCivicOptionVacuum, CivicT
 		}
 		if (gPlayerLogLevel > 2 && iTempValue != 0)
 		{
-			logBBAI("Civic %S non-war-time modifier value %d",
+			LOG_BBAI_PLAYER(2, ("Civic %S non-war-time modifier value %d",
 					 kCivic.getDescription(),
-					 iTempValue);
+					 iTempValue));
 		}
 		iValue += iTempValue;
 	}
@@ -13834,9 +13822,9 @@ int CvPlayerAI::AI_civicValue(CivicTypes eCivic, bool bCivicOptionVacuum, CivicT
 		iTempValue = (12 * getNumCities() * AI_getHappinessWeight(-iNewAnger, 0)) / 100;
 		if (gPlayerLogLevel > 2 && iTempValue != 0)
 		{
-			logBBAI("Civic %S tax rate unhappiness value %d",
+			LOG_BBAI_PLAYER(2, ("Civic %S tax rate unhappiness value %d",
 					 kCivic.getDescription(),
-					 iTempValue);
+					 iTempValue));
 		}
 		iValue += iTempValue;
 	}
@@ -13851,7 +13839,7 @@ int CvPlayerAI::AI_civicValue(CivicTypes eCivic, bool bCivicOptionVacuum, CivicT
 	}
 	if (gPlayerLogLevel > 2 && iTempValue != 0)
 	{
-		logBBAI("Civic %S free speciailist value %d", kCivic.getDescription(), iTempValue);
+		LOG_BBAI_PLAYER(2, ("Civic %S free speciailist value %d", kCivic.getDescription(), iTempValue));
 	}
 	iValue += iTempValue;
 
@@ -13985,10 +13973,10 @@ int CvPlayerAI::AI_civicValue(CivicTypes eCivic, bool bCivicOptionVacuum, CivicT
 							iTempValue = (pCapital->AI_buildingValue(eLoopBuilding, 0) * iNumInstancesToScore) / (12 * iValueDivisor);
 							if (gPlayerLogLevel > 2)
 							{
-								logBBAI("Civic %S jointly enables building %S with value %d",
+								LOG_BBAI_PLAYER(2, ("Civic %S jointly enables building %S with value %d",
 									kCivic.getDescription(),
 									GC.getBuildingInfo(eLoopBuilding).getDescription(),
-									iTempValue);
+									iTempValue));
 							}
 						}
 						else if (bValidCivicsWith && !bValidCivicsWithout)
@@ -13997,10 +13985,10 @@ int CvPlayerAI::AI_civicValue(CivicTypes eCivic, bool bCivicOptionVacuum, CivicT
 							iTempValue = (pCapital->AI_buildingValue(eLoopBuilding, 0) * iNumInstancesToScore) / (6 * iValueDivisor);
 							if (gPlayerLogLevel > 2)
 							{
-								logBBAI("Civic %S enables building %S with value %d",
+								LOG_BBAI_PLAYER(2, ("Civic %S enables building %S with value %d",
 									kCivic.getDescription(),
 									GC.getBuildingInfo(eLoopBuilding).getDescription(),
-									iTempValue);
+									iTempValue));
 							}
 						}
 						else if (!bValidCivicsWith && bValidCivicsWithout)
@@ -14009,10 +13997,10 @@ int CvPlayerAI::AI_civicValue(CivicTypes eCivic, bool bCivicOptionVacuum, CivicT
 							iTempValue = -(pCapital->AI_buildingValue(eLoopBuilding, 0) * iNumInstancesToScore) / (6 * iValueDivisor);
 							if (gPlayerLogLevel > 2)
 							{
-								logBBAI("Civic %S disables building %S with value %d",
+								LOG_BBAI_PLAYER(2, ("Civic %S disables building %S with value %d",
 									kCivic.getDescription(),
 									GC.getBuildingInfo(eLoopBuilding).getDescription(),
-									iTempValue);
+									iTempValue));
 							}
 						}
 						iValue += iTempValue;
@@ -14063,10 +14051,10 @@ int CvPlayerAI::AI_civicValue(CivicTypes eCivic, bool bCivicOptionVacuum, CivicT
 									iTempValue = pCapital->AI_buildingValue(eLoopBuilding, 0) * iNumInstancesToScore / (12 * iValueDivisor);
 									if (gPlayerLogLevel > 2)
 									{
-										logBBAI("Civic %S jointly religiously enables building %S with value %d",
+										LOG_BBAI_PLAYER(2, ("Civic %S jointly religiously enables building %S with value %d",
 											kCivic.getDescription(),
 											GC.getBuildingInfo(eLoopBuilding).getDescription(),
-											iTempValue);
+											iTempValue));
 									}
 								}
 								else
@@ -14075,10 +14063,10 @@ int CvPlayerAI::AI_civicValue(CivicTypes eCivic, bool bCivicOptionVacuum, CivicT
 									iTempValue = pCapital->AI_buildingValue(eLoopBuilding, 0) * iNumInstancesToScore / (6 * iValueDivisor);
 									if (gPlayerLogLevel > 2)
 									{
-										logBBAI("Civic %S religiously enables building %S with value %d",
+										LOG_BBAI_PLAYER(2, ("Civic %S religiously enables building %S with value %d",
 											kCivic.getDescription(),
 											GC.getBuildingInfo(eLoopBuilding).getDescription(),
-											iTempValue);
+											iTempValue));
 									}
 								}
 							}
@@ -14123,10 +14111,10 @@ int CvPlayerAI::AI_civicValue(CivicTypes eCivic, bool bCivicOptionVacuum, CivicT
 
 							if (gPlayerLogLevel > 2)
 							{
-								logBBAI("Civic %S religiously disables building %S with value %d",
+								LOG_BBAI_PLAYER(2, ("Civic %S religiously disables building %S with value %d",
 									kCivic.getDescription(),
 									GC.getBuildingInfo(eLoopBuilding).getDescription(),
-									iTempValue);
+									iTempValue));
 							}
 							iValue -= iTempValue;
 						}
@@ -14158,9 +14146,9 @@ int CvPlayerAI::AI_civicValue(CivicTypes eCivic, bool bCivicOptionVacuum, CivicT
 	}
 	if (gPlayerLogLevel > 2 && iTempValue != 0)
 	{
-		logBBAI("Civic %S building commerce value %d",
+		LOG_BBAI_PLAYER(2, ("Civic %S building commerce value %d",
 				 kCivic.getDescription(),
-				 iTempValue);
+				 iTempValue));
 	}
 	iValue += iTempValue;
 
@@ -14172,9 +14160,9 @@ int CvPlayerAI::AI_civicValue(CivicTypes eCivic, bool bCivicOptionVacuum, CivicT
 	}
 	if (gPlayerLogLevel > 2 && iTempValue != 0)
 	{
-		logBBAI("Civic %S improvement change value %d",
+		LOG_BBAI_PLAYER(2, ("Civic %S improvement change value %d",
 				 kCivic.getDescription(),
-				 iTempValue);
+				 iTempValue));
 	}
 	iValue += iTempValue;
 
@@ -14192,9 +14180,9 @@ int CvPlayerAI::AI_civicValue(CivicTypes eCivic, bool bCivicOptionVacuum, CivicT
 	}
 	if (gPlayerLogLevel > 2 && iTempValue != 0)
 	{
-		logBBAI("Civic %S specialist change value %d",
+		LOG_BBAI_PLAYER(2, ("Civic %S specialist change value %d",
 				 kCivic.getDescription(),
-				 iTempValue);
+				 iTempValue));
 	}
 	iValue += iTempValue;
 
@@ -14208,9 +14196,9 @@ int CvPlayerAI::AI_civicValue(CivicTypes eCivic, bool bCivicOptionVacuum, CivicT
 	}
 	if (gPlayerLogLevel > 2 && iTempValue != 0)
 	{
-		logBBAI("Civic %S yield change value %d",
+		LOG_BBAI_PLAYER(2, ("Civic %S yield change value %d",
 				 kCivic.getDescription(),
-				 iTempValue);
+				 iTempValue));
 	}
 	iValue += iTempValue;
 
@@ -14221,9 +14209,9 @@ int CvPlayerAI::AI_civicValue(CivicTypes eCivic, bool bCivicOptionVacuum, CivicT
 	}
 	if (gPlayerLogLevel > 2 && iTempValue != 0)
 	{
-		logBBAI("Civic %S flavor value %d",
+		LOG_BBAI_PLAYER(2, ("Civic %S flavor value %d",
 				 kCivic.getDescription(),
-				 iTempValue);
+				 iTempValue));
 	}
 	iValue += iTempValue;
 
@@ -14278,18 +14266,18 @@ int CvPlayerAI::AI_civicValue(CivicTypes eCivic, bool bCivicOptionVacuum, CivicT
 	}
 	if (gPlayerLogLevel > 2 && iTempValue != 0)
 	{
-		logBBAI("Civic %S attitude value %d",
+		LOG_BBAI_PLAYER(2, ("Civic %S attitude value %d",
 				 kCivic.getDescription(),
-				 iTempValue);
+				 iTempValue));
 	}
 	iValue += iTempValue;
 
 	iTempValue = (AI_RevCalcCivicRelEffect(eCivic));
 	if (gPlayerLogLevel > 2 && iTempValue != 0)
 	{
-		logBBAI("Civic %S REV effect value %d",
+		LOG_BBAI_PLAYER(2, ("Civic %S REV effect value %d",
 				 kCivic.getDescription(),
-				 iTempValue);
+				 iTempValue));
 	}
 	iValue += iTempValue;
 
@@ -14319,9 +14307,9 @@ int CvPlayerAI::AI_civicValue(CivicTypes eCivic, bool bCivicOptionVacuum, CivicT
 
 				if (gPlayerLogLevel > 2 && iTempValue != 0)
 				{
-					logBBAI("Civic %S conscription value %d",
+					LOG_BBAI_PLAYER(2, ("Civic %S conscription value %d",
 							 kCivic.getDescription(),
-							 iTempValue);
+							 iTempValue));
 				}
 				iValue += iTempValue;
 			}
@@ -14332,26 +14320,26 @@ int CvPlayerAI::AI_civicValue(CivicTypes eCivic, bool bCivicOptionVacuum, CivicT
 		iTempValue = ((kCivic.getExpInBorderModifier() * getNumMilitaryUnits()) / 200);
 		if (gPlayerLogLevel > 2 && iTempValue != 0)
 		{
-			logBBAI("Civic %S exp in borders value %d",
+			LOG_BBAI_PLAYER(2, ("Civic %S exp in borders value %d",
 					 kCivic.getDescription(),
-					 iTempValue);
+					 iTempValue));
 		}
 		iValue += iTempValue;
 	}
 	iTempValue = -((kCivic.getWarWearinessModifier() * getNumCities()) / ((bWarPlan) ? 10 : 50));
 	if (gPlayerLogLevel > 2 && iTempValue != 0)
 	{
-		logBBAI("Civic %S war weariness value %d",
+		LOG_BBAI_PLAYER(2, ("Civic %S war weariness value %d",
 				 kCivic.getDescription(),
-				 iTempValue);
+				 iTempValue));
 	}
 	iValue += iTempValue;
 	iTempValue = (kCivic.getFreeSpecialist() * getNumCities() * 12);
 	if (gPlayerLogLevel > 2 && iTempValue != 0)
 	{
-		logBBAI("Civic %S free specialist value %d",
+		LOG_BBAI_PLAYER(2, ("Civic %S free specialist value %d",
 				 kCivic.getDescription(),
-				 iTempValue);
+				 iTempValue));
 	}
 	iValue += iTempValue;
 
@@ -14399,9 +14387,9 @@ int CvPlayerAI::AI_civicValue(CivicTypes eCivic, bool bCivicOptionVacuum, CivicT
 	}
 	if (gPlayerLogLevel > 2 && iYieldValue != 0)
 	{
-		logBBAI("Civic %S yield value %d",
+		LOG_BBAI_PLAYER(2, ("Civic %S yield value %d",
 				 kCivic.getDescription(),
-				 iYieldValue);
+				 iYieldValue));
 	}
 	iValue += iYieldValue;
 
@@ -14441,9 +14429,9 @@ int CvPlayerAI::AI_civicValue(CivicTypes eCivic, bool bCivicOptionVacuum, CivicT
 	}
 	if (gPlayerLogLevel > 2 && iCommerceValue != 0)
 	{
-		logBBAI("Civic %S commerce value %d",
+		LOG_BBAI_PLAYER(2, ("Civic %S commerce value %d",
 				 kCivic.getDescription(),
-				 iCommerceValue);
+				 iCommerceValue));
 	}
 	iValue += iCommerceValue;
 
@@ -14544,9 +14532,9 @@ int CvPlayerAI::AI_civicValue(CivicTypes eCivic, bool bCivicOptionVacuum, CivicT
 			iTempValue = getNumCities() * ((3 * iHappyValue) / (25 * iCount));
 			if (gPlayerLogLevel > 2 && iTempValue != 0)
 			{
-				logBBAI("Civic %S anger modifier value %d",
+				LOG_BBAI_PLAYER(2, ("Civic %S anger modifier value %d",
 						 kCivic.getDescription(),
-						 iTempValue);
+						 iTempValue));
 			}
 			iValue += iTempValue;
 		}
@@ -14606,7 +14594,7 @@ int CvPlayerAI::AI_civicValue(CivicTypes eCivic, bool bCivicOptionVacuum, CivicT
 					iTempValue = iTempValue * (getNumCities() - getBuildingCount((BuildingTypes)iI)) / 2;
 					if (gPlayerLogLevel > 2 && iTempValue != 0)
 					{
-						logBBAI("Civic %S nat wonder happiness change value %d", kCivic.getDescription(), iTempValue);
+						LOG_BBAI_PLAYER(2, ("Civic %S nat wonder happiness change value %d", kCivic.getDescription(), iTempValue));
 					}
 					iValue += iTempValue;
 				}
@@ -14871,9 +14859,9 @@ int CvPlayerAI::AI_civicValue(CivicTypes eCivic, bool bCivicOptionVacuum, CivicT
 			iTempValue = (getNumCities() * 3 * iHealthValue) / (50 * iCount);
 			if (gPlayerLogLevel > 2 && iTempValue != 0)
 			{
-				logBBAI("Civic %S health value %d",
+				LOG_BBAI_PLAYER(2, ("Civic %S health value %d",
 						 kCivic.getDescription(),
-						 iTempValue);
+						 iTempValue));
 			}
 			iValue += iTempValue;
 		}
@@ -14907,7 +14895,7 @@ int CvPlayerAI::AI_civicValue(CivicTypes eCivic, bool bCivicOptionVacuum, CivicT
 	}
 	if (gPlayerLogLevel > 2 && iTempValue != 0)
 	{
-		logBBAI("Civic %S building health value %d", kCivic.getDescription(), iTempValue);
+		LOG_BBAI_PLAYER(2, ("Civic %S building health value %d", kCivic.getDescription(), iTempValue));
 	}
 	iValue += iTempValue;
 	//#2: Health - end
@@ -14948,7 +14936,7 @@ int CvPlayerAI::AI_civicValue(CivicTypes eCivic, bool bCivicOptionVacuum, CivicT
 		}
 		if (gPlayerLogLevel > 2 && iTempValue != 0)
 		{
-			logBBAI("Civic %S foreign trade value %d", kCivic.getDescription(), iTempValue);
+			LOG_BBAI_PLAYER(2, ("Civic %S foreign trade value %d", kCivic.getDescription(), iTempValue));
 		}
 		iValue += iTempValue;
 	}
@@ -15060,9 +15048,9 @@ int CvPlayerAI::AI_civicValue(CivicTypes eCivic, bool bCivicOptionVacuum, CivicT
 	}
 	if (gPlayerLogLevel > 2 && iTempValue != 0)
 	{
-		logBBAI("Civic %S corporation value %d",
+		LOG_BBAI_PLAYER(2, ("Civic %S corporation value %d",
 				 kCivic.getDescription(),
-				 iTempValue);
+				 iTempValue));
 	}
 	iValue += iTempValue;
 
@@ -15196,9 +15184,9 @@ int CvPlayerAI::AI_civicValue(CivicTypes eCivic, bool bCivicOptionVacuum, CivicT
 	}
 	if (gPlayerLogLevel > 2 && iStateReligionValue != 0)
 	{
-		logBBAI("Civic %S state religion value %d",
+		LOG_BBAI_PLAYER(2, ("Civic %S state religion value %d",
 				 kCivic.getDescription(),
-				 iStateReligionValue);
+				 iStateReligionValue));
 	}
 	iValue += iStateReligionValue;
 	//#5: state religion - end
@@ -15232,9 +15220,9 @@ int CvPlayerAI::AI_civicValue(CivicTypes eCivic, bool bCivicOptionVacuum, CivicT
 		}
 		if (gPlayerLogLevel > 2 && iTempValue != 0)
 		{
-			logBBAI("Civic %S military food production value %d",
+			LOG_BBAI_PLAYER(2, ("Civic %S military food production value %d",
 					 kCivic.getDescription(),
-					 iTempValue);
+					 iTempValue));
 		}
 		iValue += iTempValue;
 	}
@@ -15266,9 +15254,9 @@ int CvPlayerAI::AI_civicValue(CivicTypes eCivic, bool bCivicOptionVacuum, CivicT
 			iTempValue = iTempValue / (1 + iTempHurryCount);
 			if (gPlayerLogLevel > 2 && iTempValue != 0)
 			{
-				logBBAI("Civic %S hurry value %d",
+				LOG_BBAI_PLAYER(2, ("Civic %S hurry value %d",
 						 kCivic.getDescription(),
-						 iTempValue);
+						 iTempValue));
 			}
 			iValue += iTempValue;
 		}
@@ -15295,9 +15283,9 @@ int CvPlayerAI::AI_civicValue(CivicTypes eCivic, bool bCivicOptionVacuum, CivicT
 	}
 	if (gPlayerLogLevel > 2 && iTempValue != 0)
 	{
-		logBBAI("Civic %S special buildings value %d",
+		LOG_BBAI_PLAYER(2, ("Civic %S special buildings value %d",
 				 kCivic.getDescription(),
-				 iTempValue);
+				 iTempValue));
 	}
 	iValue += iTempValue;
 
@@ -15324,9 +15312,9 @@ int CvPlayerAI::AI_civicValue(CivicTypes eCivic, bool bCivicOptionVacuum, CivicT
 	}
 	if (gPlayerLogLevel > 2 && iTempSpecialistValue != 0)
 	{
-		logBBAI("Civic %S specialist value %d",
+		LOG_BBAI_PLAYER(2, ("Civic %S specialist value %d",
 				 kCivic.getDescription(),
-				 iTempSpecialistValue);
+				 iTempSpecialistValue));
 	}
 	iValue += iTempSpecialistValue;
 
@@ -15345,9 +15333,9 @@ int CvPlayerAI::AI_civicValue(CivicTypes eCivic, bool bCivicOptionVacuum, CivicT
 		iTempValue -= iValue;
 		if (gPlayerLogLevel > 2 && iTempValue != 0)
 		{
-			logBBAI("Civic %S favourite civic value %d",
+			LOG_BBAI_PLAYER(2, ("Civic %S favourite civic value %d",
 					 kCivic.getDescription(),
-					 iTempValue);
+					 iTempValue));
 		}
 		iValue += iTempValue;
 	}
@@ -17375,13 +17363,13 @@ void CvPlayerAI::AI_doCivics()
 
 		if (gPlayerLogLevel > 1)
 		{
-			logBBAI("Player %d (%S) city %S has food/turn %d (%d from trade), happy %d",
+			LOG_BBAI_PLAYER(2, ("Player %d (%S) city %S has food/turn %d (%d from trade), happy %d",
 					getID(),
 					getCivilizationDescription(0),
 					pLoopCity->getName().c_str(),
 					iFoodPerTurn,
 					pLoopCity->getTradeYield(YIELD_FOOD),
-					iCityHappy);
+					iCityHappy));
 		}
 
 		iCityValue = iCurrentFoodToGrow;
@@ -17403,7 +17391,7 @@ void CvPlayerAI::AI_doCivics()
 //				iCityValue = (std::min(3, iCityHappy + 1) * iCurrentFoodToGrow) / std::max(3, iFoodPerTurn - pLoopCity->getTradeYield(YIELD_FOOD));
 //				if (gPlayerLogLevel > 1)
 //				{
-//					logBBAI("Player %d (%S) city %S growth value %d",
+//					LOG_BBAI_PLAYER(2, ("Player %d (%S) city %S growth value %d",
 //							getID(),
 //							getCivilizationDescription(0),
 //							pLoopCity->getName().c_str(),
@@ -17415,11 +17403,11 @@ void CvPlayerAI::AI_doCivics()
 		iCityValue = (iCityValue * 10) / (iFoodDiffDivisor + iHappyDivisor);
 		if (gPlayerLogLevel > 1)
 		{
-			logBBAI("Player %d (%S) city %S growth value %d",
+			LOG_BBAI_PLAYER(2, ("Player %d (%S) city %S growth value %d",
 					getID(),
 					getCivilizationDescription(0),
 					pLoopCity->getName().c_str(),
-					iCityValue);
+					iCityValue));
 		}
 //#endif
 
@@ -17524,13 +17512,13 @@ void CvPlayerAI::AI_doCivics()
 
 			if (paeBestCivic[iI] != NO_CIVIC && paeBestCivic[iI] != getCivics((CivicOptionTypes)iI))
 			{
-				logBBAI("Player %d (%S) suggests civic switch from %S->%S on initial pass (values %d and %d)",
+				LOG_BBAI_PLAYER(2, ("Player %d (%S) suggests civic switch from %S->%S on initial pass (values %d and %d)",
 						getID(),
 						getCivilizationDescription(0),
 						GC.getCivicInfo(getCivics((CivicOptionTypes)iI)).getDescription(),
 						GC.getCivicInfo(paeBestCivic[iI]).getDescription(),
 						paeCurCivicValue[iI],
-						paeBestCivicValue[iI]);
+						paeBestCivicValue[iI]));
 				bDoRevolution = true;
 			}
 
@@ -17584,13 +17572,13 @@ void CvPlayerAI::AI_doCivics()
 							iBestValue = iCurValue;
 						}
 
-						logBBAI("Player %d (%S) prefers original civic %S on pass %d (values %d and %d)",
+						LOG_BBAI_PLAYER(2, ("Player %d (%S) prefers original civic %S on pass %d (values %d and %d)",
 								getID(),
 								getCivilizationDescription(0),
 								GC.getCivicInfo(paeBestCivic[iI]).getDescription(),
 								iPass,
 								paeCurCivicValue[iI],
-								paeBestCivicValue[iI]);
+								paeBestCivicValue[iI]));
 					}
 				}
 				else
@@ -17601,14 +17589,14 @@ void CvPlayerAI::AI_doCivics()
 						paeBestCivic[iI] = eNewBestCivic;
 						paeBestCivicValue[iI] = iBestValue;
 
-						logBBAI("Player %d (%S) prefers civic switch from %S->%S on pass %d (values %d and %d)",
+						LOG_BBAI_PLAYER(2, ("Player %d (%S) prefers civic switch from %S->%S on pass %d (values %d and %d)",
 								getID(),
 								getCivilizationDescription(0),
 								GC.getCivicInfo(getCivics((CivicOptionTypes)iI)).getDescription(),
 								GC.getCivicInfo(paeBestCivic[iI]).getDescription(),
 								iPass,
 								paeCurCivicValue[iI],
-								paeBestCivicValue[iI]);
+								paeBestCivicValue[iI]));
 					}
 				}
 				iBestCivicsValue += iBestValue;
@@ -17635,13 +17623,13 @@ void CvPlayerAI::AI_doCivics()
 
 					if (gPlayerLogLevel > 1)
 					{
-						logBBAI("Player %d (%S) considering civic switch from %S->%S (values %d and %d)",
+						LOG_BBAI_PLAYER(2, ("Player %d (%S) considering civic switch from %S->%S (values %d and %d)",
 								getID(),
 								getCivilizationDescription(0),
 								GC.getCivicInfo(getCivics((CivicOptionTypes)iI)).getDescription(),
 								GC.getCivicInfo(paeBestCivic[iI]).getDescription(),
 								paeCurCivicValue[iI],
-								paeBestCivicValue[iI]);
+								paeBestCivicValue[iI]));
 					}
 				}
 
@@ -17664,9 +17652,9 @@ void CvPlayerAI::AI_doCivics()
 			{
 				if (gPlayerLogLevel > 1)
 				{
-					logBBAI("Civic switch deferred since minimum value threshold not reached (%d vs %d)",
+					LOG_BBAI_PLAYER(2, ("Civic switch deferred since minimum value threshold not reached (%d vs %d)",
 							iBestCivicsValue - iCurCivicsValue,
-							m_iCivicSwitchMinDeltaThreshold);
+							m_iCivicSwitchMinDeltaThreshold));
 				}
 				bDoRevolution = false;
 			}
@@ -17717,10 +17705,10 @@ void CvPlayerAI::AI_doCivics()
 
 							if (gPlayerLogLevel > 1)
 							{
-								logBBAI("Near future civic %S has value %d, vs current %d for that civic option",
+								LOG_BBAI_PLAYER(2, ("Near future civic %S has value %d, vs current %d for that civic option",
 										GC.getCivicInfo(eCivic).getDescription(),
 										iNearFutureValue,
-										paeBestCivicValue[iOptionType]);
+										paeBestCivicValue[iOptionType]));
 							}
 
 							if (iNearFutureValue > paeBestCivicValue[iOptionType])
@@ -17729,7 +17717,7 @@ void CvPlayerAI::AI_doCivics()
 
 								if (gPlayerLogLevel > 1)
 								{
-									logBBAI("Tech path len is %d vs horizon %d", iTurns, iMaxHorizon);
+									LOG_BBAI_PLAYER(2, ("Tech path len is %d vs horizon %d", iTurns, iMaxHorizon));
 								}
 
 								if (iTurns <= iMaxHorizon)
@@ -17738,7 +17726,7 @@ void CvPlayerAI::AI_doCivics()
 
 									if (gPlayerLogLevel > 1)
 									{
-										logBBAI("weightedDelta is %d vs best %d", weightedDelta, paeBestNearFutureCivicValue[iOptionType]);
+										LOG_BBAI_PLAYER(2, ("weightedDelta is %d vs best %d", weightedDelta, paeBestNearFutureCivicValue[iOptionType]));
 									}
 
 									if (weightedDelta > paeBestNearFutureCivicValue[iOptionType])
@@ -17750,10 +17738,9 @@ void CvPlayerAI::AI_doCivics()
 
 										if (gPlayerLogLevel > 0)
 										{
-											logBBAI(
-												"Found near-future civic %S with value %d",
+											LOG_BBAI_PLAYER(2, ("Found near-future civic %S with value %d",
 												GC.getCivicInfo(eCivic).getDescription(), iNearFutureValue
-											);
+											));
 										}
 									}
 								}
@@ -17774,9 +17761,9 @@ void CvPlayerAI::AI_doCivics()
 
 					if (gPlayerLogLevel > 1)
 					{
-						logBBAI("Gain from immediate switch is %d, additional gain from near-future switch %d",
+						LOG_BBAI_PLAYER(2, ("Gain from immediate switch is %d, additional gain from near-future switch %d",
 								iBestCivicsValue - iCurCivicsValue,
-								iNearFutureCivicsBestValue - iBestCivicsValue);
+								iNearFutureCivicsBestValue - iBestCivicsValue));
 					}
 
 					if (bDoRevolution)
@@ -17794,10 +17781,10 @@ void CvPlayerAI::AI_doCivics()
 
 						if (gPlayerLogLevel > 0)
 						{
-							logBBAI("Estimated number of turns to justify %d (threshold for switch, with %d turns since last revolution, at this game speed: %d)",
+							LOG_BBAI_PLAYER(2, ("Estimated number of turns to justify %d (threshold for switch, with %d turns since last revolution, at this game speed: %d)",
 									iAnarchyCost / iPerTurnEstimatedIncrease,
 									m_turnsSinceLastRevolution,
-									iBenfitInTurns);
+									iBenfitInTurns));
 						}
 
 						//	If we won't make it up in (arbitrary number) 50 turns (at standard speed) don't bother
@@ -17808,7 +17795,7 @@ void CvPlayerAI::AI_doCivics()
 					}
 					else if (gPlayerLogLevel > 0)
 					{
-						logBBAI("Waiting for near future civics before switching");
+						LOG_BBAI_PLAYER(2, ("Waiting for near future civics before switching"));
 					}
 
 					if (!bDoRevolution)
@@ -17855,7 +17842,7 @@ void CvPlayerAI::AI_doCivics()
 		}
 		else if (gPlayerLogLevel > 0)
 		{
-			logBBAI("No anarchy so switching");
+			LOG_BBAI_PLAYER(2, ("No anarchy so switching"));
 		}
 	}
 
@@ -18037,7 +18024,7 @@ void CvPlayerAI::AI_doDiplo()
 
 		for (stdext::hash_map<int, int>::const_iterator itr = receivableTechs.begin(); itr != receivableTechs.end(); ++itr)
 		{
-			logBBAI("Receivable tech %S has %d sources", GC.getTechInfo((TechTypes)itr->first).getDescription(), itr->second);
+			LOG_BBAI_PLAYER(2, ("Receivable tech %S has %d sources", GC.getTechInfo((TechTypes)itr->first).getDescription(), itr->second));
 		}
 	}
 
@@ -18055,7 +18042,7 @@ void CvPlayerAI::AI_doDiplo()
 			}
 			if (gPlayerLogLevel > 3)
 			{
-				logBBAI("Player %d trade calc to/from player %d", getID(), iI);
+				LOG_BBAI_PLAYER(2, ("Player %d trade calc to/from player %d", getID(), iI));
 			}
 
 			if (GET_PLAYER((PlayerTypes)iI).getTeam() != getTeam())
@@ -21685,7 +21672,7 @@ bool CvPlayerAI::AI_disbandUnit(int iExpThreshold)
 		if (gPlayerLogLevel >= 2)
 		{
 			const CvWString szStringUnitAi = GC.getUnitAIInfo(pBestUnit->AI_getUnitAIType()).getType();
-			logBBAI("	Player %d (%S) disbanding %S with UNITAI %S to save cash", getID(), getCivilizationDescription(0), pBestUnit->getName().GetCString(), szStringUnitAi.GetCString());
+			LOG_BBAI_PLAYER(2, ("	Player %d (%S) disbanding %S with UNITAI %S to save cash", getID(), getCivilizationDescription(0), pBestUnit->getName().GetCString(), szStringUnitAi.GetCString()));
 		}
 		pBestUnit->kill(false);
 		return true;
@@ -21835,7 +21822,8 @@ int CvPlayerAI::AI_getCultureVictoryStage() const
 		return 0;
 	}
 
-	if (getCapitalCity()->getGameTurnFounded() > (10 + GC.getGame().getStartTurn()))
+	bool bHistoricalCalendar = GC.getGame().isModderGameOption(MODDERGAMEOPTION_USE_HISTORICAL_ACCURATE_CALENDAR);
+	if (getCapitalCity()->getGameTurnFounded(bHistoricalCalendar) > (10 + GC.getGame().getStartTurn()))
 	{
 		if (iHighCultureCount < GC.getGame().culturalVictoryNumCultureCities())
 		{
@@ -22804,12 +22792,12 @@ int CvPlayerAI::AI_getStrategyHash() const
 	{
 		if ((m_iStrategyHash & AI_STRATEGY_LAND_BLITZ) && !(iLastStrategyHash & AI_STRATEGY_LAND_BLITZ))
 		{
-			logBBAI("	Player %d (%S) starts strategy AI_STRATEGY_LAND_BLITZ on turn %d", getID(), getCivilizationDescription(0), GC.getGame().getGameTurn());
+			LOG_BBAI_PLAYER(2, ("	Player %d (%S) starts strategy AI_STRATEGY_LAND_BLITZ on turn %d", getID(), getCivilizationDescription(0), GC.getGame().getGameTurn()));
 		}
 
 		if ((m_iStrategyHash & AI_STRATEGY_AIR_BLITZ) && !(iLastStrategyHash & AI_STRATEGY_AIR_BLITZ))
 		{
-			logBBAI("	Player %d (%S) starts strategy AI_STRATEGY_AIR_BLITZ on turn %d", getID(), getCivilizationDescription(0), GC.getGame().getGameTurn());
+			LOG_BBAI_PLAYER(2, ("	Player %d (%S) starts strategy AI_STRATEGY_AIR_BLITZ on turn %d", getID(), getCivilizationDescription(0), GC.getGame().getGameTurn()));
 		}
 	}
 
@@ -22933,12 +22921,12 @@ int CvPlayerAI::AI_getStrategyHash() const
 	{
 		if ((m_iStrategyHash & AI_STRATEGY_TURTLE) && !(iLastStrategyHash & AI_STRATEGY_TURTLE))
 		{
-			logBBAI("	Player %d (%S) starts strategy AI_STRATEGY_TURTLE on turn %d", getID(), getCivilizationDescription(0), GC.getGame().getGameTurn());
+			LOG_BBAI_PLAYER(2, ("	Player %d (%S) starts strategy AI_STRATEGY_TURTLE on turn %d", getID(), getCivilizationDescription(0), GC.getGame().getGameTurn()));
 		}
 
 		if (!(m_iStrategyHash & AI_STRATEGY_TURTLE) && (iLastStrategyHash & AI_STRATEGY_TURTLE))
 		{
-			logBBAI("	Player %d (%S) stops strategy AI_STRATEGY_TURTLE on turn %d", getID(), getCivilizationDescription(0), GC.getGame().getGameTurn());
+			LOG_BBAI_PLAYER(2, ("	Player %d (%S) stops strategy AI_STRATEGY_TURTLE on turn %d", getID(), getCivilizationDescription(0), GC.getGame().getGameTurn()));
 		}
 	}
 
@@ -22982,7 +22970,7 @@ int CvPlayerAI::AI_getStrategyHash() const
 
 									if (gPlayerLogLevel >= 2)
 									{
-										logBBAI("	Player %d (%S) wary of %S because of war memory %d", getID(), getCivilizationDescription(0), GET_PLAYER((PlayerTypes)iI).getCivilizationDescription(0), iWarMemory);
+										LOG_BBAI_PLAYER(2, ("	Player %d (%S) wary of %S because of war memory %d", getID(), getCivilizationDescription(0), GET_PLAYER((PlayerTypes)iI).getCivilizationDescription(0), iWarMemory));
 									}
 								}
 							}
@@ -23086,22 +23074,22 @@ int CvPlayerAI::AI_getStrategyHash() const
 	{
 		if ((m_iStrategyHash & AI_STRATEGY_ALERT1) && !(iLastStrategyHash & AI_STRATEGY_ALERT1))
 		{
-			logBBAI("	Player %d (%S) starts strategy AI_STRATEGY_ALERT1 on turn %d with iParanoia %d", getID(), getCivilizationDescription(0), GC.getGame().getGameTurn(), iParanoia);
+			LOG_BBAI_PLAYER(2, ("	Player %d (%S) starts strategy AI_STRATEGY_ALERT1 on turn %d with iParanoia %d", getID(), getCivilizationDescription(0), GC.getGame().getGameTurn(), iParanoia));
 		}
 
 		if (!(m_iStrategyHash & AI_STRATEGY_ALERT1) && (iLastStrategyHash & AI_STRATEGY_ALERT1))
 		{
-			logBBAI("	Player %d (%S) stops strategy AI_STRATEGY_ALERT1 on turn %d with iParanoia %d", getID(), getCivilizationDescription(0), GC.getGame().getGameTurn(), iParanoia);
+			LOG_BBAI_PLAYER(2, ("	Player %d (%S) stops strategy AI_STRATEGY_ALERT1 on turn %d with iParanoia %d", getID(), getCivilizationDescription(0), GC.getGame().getGameTurn(), iParanoia));
 		}
 
 		if ((m_iStrategyHash & AI_STRATEGY_ALERT2) && !(iLastStrategyHash & AI_STRATEGY_ALERT2))
 		{
-			logBBAI("	Player %d (%S) starts strategy AI_STRATEGY_ALERT2 on turn %d with iParanoia %d", getID(), getCivilizationDescription(0), GC.getGame().getGameTurn(), iParanoia);
+			LOG_BBAI_PLAYER(2, ("	Player %d (%S) starts strategy AI_STRATEGY_ALERT2 on turn %d with iParanoia %d", getID(), getCivilizationDescription(0), GC.getGame().getGameTurn(), iParanoia));
 		}
 
 		if (!(m_iStrategyHash & AI_STRATEGY_ALERT2) && (iLastStrategyHash & AI_STRATEGY_ALERT2))
 		{
-			logBBAI("	Player %d (%S) stops strategy AI_STRATEGY_ALERT2 on turn %d with iParanoia %d", getID(), getCivilizationDescription(0), GC.getGame().getGameTurn(), iParanoia);
+			LOG_BBAI_PLAYER(2, ("	Player %d (%S) stops strategy AI_STRATEGY_ALERT2 on turn %d with iParanoia %d", getID(), getCivilizationDescription(0), GC.getGame().getGameTurn(), iParanoia));
 		}
 	}
 
@@ -23149,12 +23137,12 @@ int CvPlayerAI::AI_getStrategyHash() const
 		{
 			if ((m_iStrategyHash & AI_STRATEGY_DAGGER) && !(iLastStrategyHash & AI_STRATEGY_DAGGER))
 			{
-				logBBAI("	Player %d (%S) starts strategy AI_STRATEGY_DAGGER on turn %d with iDagger %d", getID(), getCivilizationDescription(0), GC.getGame().getGameTurn(), iDagger);
+				LOG_BBAI_PLAYER(2, ("	Player %d (%S) starts strategy AI_STRATEGY_DAGGER on turn %d with iDagger %d", getID(), getCivilizationDescription(0), GC.getGame().getGameTurn(), iDagger));
 			}
 
 			if (!(m_iStrategyHash & AI_STRATEGY_DAGGER) && (iLastStrategyHash & AI_STRATEGY_DAGGER))
 			{
-				logBBAI("	Player %d (%S) stops strategy AI_STRATEGY_DAGGER on turn %d with iDagger %d", getID(), getCivilizationDescription(0), GC.getGame().getGameTurn(), iDagger);
+				LOG_BBAI_PLAYER(2, ("	Player %d (%S) stops strategy AI_STRATEGY_DAGGER on turn %d with iDagger %d", getID(), getCivilizationDescription(0), GC.getGame().getGameTurn(), iDagger));
 			}
 		}
 	}
@@ -23233,12 +23221,12 @@ int CvPlayerAI::AI_getStrategyHash() const
 		{
 			if ((m_iStrategyHash & AI_STRATEGY_CRUSH) && !(iLastStrategyHash & AI_STRATEGY_CRUSH))
 			{
-				logBBAI("	Player %d (%S) starts strategy AI_STRATEGY_CRUSH on turn %d with iCrushValue %d", getID(), getCivilizationDescription(0), GC.getGame().getGameTurn(), iCrushValue);
+				LOG_BBAI_PLAYER(2, ("	Player %d (%S) starts strategy AI_STRATEGY_CRUSH on turn %d with iCrushValue %d", getID(), getCivilizationDescription(0), GC.getGame().getGameTurn(), iCrushValue));
 			}
 
 			if (!(m_iStrategyHash & AI_STRATEGY_CRUSH) && (iLastStrategyHash & AI_STRATEGY_CRUSH))
 			{
-				logBBAI("	Player %d (%S) stops strategy AI_STRATEGY_CRUSH on turn %d with iCrushValue %d", getID(), getCivilizationDescription(0), GC.getGame().getGameTurn(), iCrushValue);
+				LOG_BBAI_PLAYER(2, ("	Player %d (%S) stops strategy AI_STRATEGY_CRUSH on turn %d with iCrushValue %d", getID(), getCivilizationDescription(0), GC.getGame().getGameTurn(), iCrushValue));
 			}
 		}
 	}
@@ -25127,7 +25115,7 @@ int CvPlayerAI::AI_getNumAreaCitySites(int iAreaID, int& iBestValue) const
 
 			if (gPlayerLogLevel > 2)
 			{
-				logBBAI("Player %d (%S) - City Site %d (%d, %d) has a value of %d", getID(), getCivilizationDescription(0), iCount, pCitySitePlot->getX(), pCitySitePlot->getY(), iValue);
+				LOG_BBAI_PLAYER(2, ("Player %d (%S) - City Site %d (%d, %d) has a value of %d", getID(), getCivilizationDescription(0), iCount, pCitySitePlot->getX(), pCitySitePlot->getY(), iValue));
 			}
 
 			if (iValue > iBestValue)
@@ -25138,7 +25126,7 @@ int CvPlayerAI::AI_getNumAreaCitySites(int iAreaID, int& iBestValue) const
 	}
 	if (gPlayerLogLevel > 1)
 	{
-		logBBAI("Player %d (%S) have %d City Sites, best value is %d", getID(), getCivilizationDescription(0), iCount, iBestValue);
+		LOG_BBAI_PLAYER(2, ("Player %d (%S) have %d City Sites, best value is %d", getID(), getCivilizationDescription(0), iCount, iBestValue));
 	}
 	return iCount;
 }

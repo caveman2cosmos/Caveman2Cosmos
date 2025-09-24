@@ -922,6 +922,7 @@ public:
 	bool canAttackNow() const;
 	bool canAttack() const;
 	bool canAttack(const CvUnit& defender) const;
+	bool canAmbush(const CvUnit& defender, const bool bAssassinate) const;
 	bool canDefend(const CvPlot* pPlot = NULL) const;
 	bool canStealthDefend(const CvUnit* victim) const;
 	bool canSiege(TeamTypes eTeam) const;
@@ -2801,7 +2802,7 @@ public:
 
 	bool canAmbush(const CvPlot* pPlot, bool bAssassinate = false) const;
 	bool doAmbush(bool bAssassinate = false);
-	void enactAmbush(bool bAssassinate = false);
+	void enactAmbush(bool bAssassinate = false, CvUnit* pSelectedDefender = NULL);
 
 	void changeDebugCount(int iChange);
 	void setDebugCount(int iValue);
