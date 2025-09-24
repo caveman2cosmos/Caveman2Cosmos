@@ -1131,6 +1131,15 @@
 			<bHostileTerritory>0</bHostileTerritory>
 			<bCity>1</bCity>
 		</OutcomeInfo>
+        <OutcomeInfo>
+            <Type>OUTCOME_SLAY_ANIMAL</Type>
+            <Description>TXT_KEY_OUTCOME_SLAY_ANIMAL</Description>
+            <Message>TXT_KEY_OUTCOME_SLAY_ANIMAL_MESSAGE</Message>
+            <PrereqTech>NONE</PrereqTech>
+            <bNeutralTerritory>0</bNeutralTerritory>
+            <bHostileTerritory>0</bHostileTerritory>
+            <bCity>1</bCity>
+        </OutcomeInfo>
 		<OutcomeInfo>
 			<Type>OUTCOME_SLAVE_SALE_NOT_SLAVERY</Type>
 			<Description>TXT_KEY_OUTCOME_SELL_CAPTIVE_NOT_SLAVERY</Description>

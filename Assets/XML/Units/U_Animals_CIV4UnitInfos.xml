@@ -99,26 +99,6 @@
 							<ID>TECH_SEDENTARY_LIFESTYLE</ID>
 						</Has>
 					</bUnitToCity>
-					<Yields>
-						<iYield>
-							<Plus>
-								<Constant>20</Constant>
-								<Random>10</Random>
-							</Plus>
-						</iYield>
-						<iYield>
-							<Plus>
-								<Constant>2</Constant>
-								<Random>1</Random>
-							</Plus>
-						</iYield>
-						<iYield>
-							<Plus>
-								<Constant>2</Constant>
-								<Random>3</Random>
-							</Plus>
-						</iYield>
-					</Yields>
 				</Outcome>
 				<Outcome>
 					<OutcomeType>OUTCOME_HUNTING_KILL</OutcomeType>
@@ -259,11 +239,6 @@
 							<ID>TECH_SEDENTARY_LIFESTYLE</ID>
 						</Has>
 					</bUnitToCity>
-					<Yields>
-						<iYield>1</iYield>
-						<iYield>0</iYield>
-						<iYield>3</iYield>
-					</Yields>
 				</Outcome>
 				<Outcome>
 					<OutcomeType>OUTCOME_HUNTING_KILL</OutcomeType>
@@ -389,11 +364,6 @@
 							<ID>TECH_SEDENTARY_LIFESTYLE</ID>
 						</Has>
 					</bUnitToCity>
-					<Yields>
-						<iYield>2</iYield>
-						<iYield>0</iYield>
-						<iYield>3</iYield>
-					</Yields>
 				</Outcome>
 				<Outcome>
 					<OutcomeType>OUTCOME_HUNTING_KILL</OutcomeType>
@@ -537,26 +507,6 @@
 							<ID>TECH_SEDENTARY_LIFESTYLE</ID>
 						</Has>
 					</bUnitToCity>
-					<Yields>
-						<iYield>
-							<Plus>
-								<Constant>25</Constant>
-								<Random>25</Random>
-							</Plus>
-						</iYield>
-						<iYield>
-							<Plus>
-								<Constant>1</Constant>
-								<Random>2</Random>
-							</Plus>
-						</iYield>
-						<iYield>
-							<Plus>
-								<Constant>60</Constant>
-								<Random>70</Random>
-							</Plus>
-						</iYield>
-					</Yields>
 				</Outcome>
 				<Outcome>
 					<OutcomeType>OUTCOME_HUNTING_KILL</OutcomeType>
@@ -696,26 +646,6 @@
 							<ID>TECH_SEDENTARY_LIFESTYLE</ID>
 						</Has>
 					</bUnitToCity>
-					<Yields>
-						<iYield>
-							<Plus>
-								<Constant>10</Constant>
-								<Random>10</Random>
-							</Plus>
-						</iYield>
-						<iYield>
-							<Plus>
-								<Constant>1</Constant>
-								<Random>2</Random>
-							</Plus>
-						</iYield>
-						<iYield>
-							<Plus>
-								<Constant>2</Constant>
-								<Random>5</Random>
-							</Plus>
-						</iYield>
-					</Yields>
 				</Outcome>
 				<Outcome>
 					<OutcomeType>OUTCOME_HUNTING_KILL</OutcomeType>
@@ -887,21 +817,6 @@
 							<ID>TECH_SEDENTARY_LIFESTYLE</ID>
 						</Has>
 					</bUnitToCity>
-					<Yields>
-						<iYield>
-							<Plus>
-								<Constant>1</Constant>
-								<Random>2</Random>
-							</Plus>
-						</iYield>
-						<iYield>1</iYield>
-						<iYield>
-							<Plus>
-								<Constant>10</Constant>
-								<Random>2</Random>
-							</Plus>
-						</iYield>
-					</Yields>
 				</Outcome>
 				<Outcome>
 					<OutcomeType>OUTCOME_HUNTING_KILL</OutcomeType>
@@ -1035,26 +950,6 @@
 							<ID>TECH_SEDENTARY_LIFESTYLE</ID>
 						</Has>
 					</bUnitToCity>
-					<Yields>
-						<iYield>
-							<Plus>
-								<Constant>1</Constant>
-								<Random>14</Random>
-							</Plus>
-						</iYield>
-						<iYield>
-							<Plus>
-								<Constant>1</Constant>
-								<Random>4</Random>
-							</Plus>
-						</iYield>
-						<iYield>
-							<Plus>
-								<Constant>2</Constant>
-								<Random>2</Random>
-							</Plus>
-						</iYield>
-					</Yields>
 				</Outcome>
 				<Outcome>
 					<OutcomeType>OUTCOME_HUNTING_KILL</OutcomeType>
@@ -1199,26 +1094,6 @@
 							<ID>TECH_SEDENTARY_LIFESTYLE</ID>
 						</Has>
 					</bUnitToCity>
-					<Yields>
-						<iYield>
-							<Plus>
-								<Constant>30</Constant>
-								<Random>70</Random>
-							</Plus>
-						</iYield>
-						<iYield>
-							<Plus>
-								<Constant>3</Constant>
-								<Random>14</Random>
-							</Plus>
-						</iYield>
-						<iYield>
-							<Plus>
-								<Constant>20</Constant>
-								<Random>21</Random>
-							</Plus>
-						</iYield>
-					</Yields>
 				</Outcome>
 				<Outcome>
 					<OutcomeType>OUTCOME_HUNTING_KILL</OutcomeType>
@@ -1426,26 +1301,6 @@
 							<ID>TECH_SEDENTARY_LIFESTYLE</ID>
 						</Has>
 					</bUnitToCity>
-					<Yields>
-						<iYield>
-							<Plus>
-								<Constant>30</Constant>
-								<Random>30</Random>
-							</Plus>
-						</iYield>
-						<iYield>
-							<Plus>
-								<Constant>3</Constant>
-								<Random>4</Random>
-							</Plus>
-						</iYield>
-						<iYield>
-							<Plus>
-								<Constant>3</Constant>
-								<Random>3</Random>
-							</Plus>
-						</iYield>
-					</Yields>
 				</Outcome>
 				<Outcome>
 					<OutcomeType>OUTCOME_HUNTING_KILL</OutcomeType>
@@ -1564,26 +1419,6 @@
 							<ID>TECH_SEDENTARY_LIFESTYLE</ID>
 						</Has>
 					</bUnitToCity>
-					<Yields>
-						<iYield>
-							<Plus>
-								<Constant>3</Constant>
-								<Random>3</Random>
-							</Plus>
-						</iYield>
-						<iYield>
-							<Plus>
-								<Constant>0</Constant>
-								<Random>1</Random>
-							</Plus>
-						</iYield>
-						<iYield>
-							<Plus>
-								<Constant>2</Constant>
-								<Random>1</Random>
-							</Plus>
-						</iYield>
-					</Yields>
 				</Outcome>
 				<Outcome>
 					<OutcomeType>OUTCOME_HUNTING_KILL</OutcomeType>
@@ -1707,16 +1542,6 @@
 							<ID>TECH_SEDENTARY_LIFESTYLE</ID>
 						</Has>
 					</bUnitToCity>
-					<Yields>
-						<iYield>1</iYield>
-						<iYield>1</iYield>
-						<iYield>
-							<Plus>
-								<Constant>5</Constant>
-								<Random>3</Random>
-							</Plus>
-						</iYield>
-					</Yields>
 				</Outcome>
 				<Outcome>
 					<OutcomeType>OUTCOME_HUNTING_KILL</OutcomeType>
@@ -1849,21 +1674,6 @@
 							<ID>TECH_SEDENTARY_LIFESTYLE</ID>
 						</Has>
 					</bUnitToCity>
-					<Yields>
-						<iYield>
-							<Plus>
-								<Constant>4</Constant>
-								<Random>4</Random>
-							</Plus>
-						</iYield>
-						<iYield>1</iYield>
-						<iYield>
-							<Plus>
-								<Constant>3</Constant>
-								<Random>1</Random>
-							</Plus>
-						</iYield>
-					</Yields>
 				</Outcome>
 				<Outcome>
 					<OutcomeType>OUTCOME_HUNTING_KILL</OutcomeType>
@@ -1970,11 +1780,6 @@
 							<ID>TECH_SEDENTARY_LIFESTYLE</ID>
 						</Has>
 					</bUnitToCity>
-					<Yields>
-						<iYield>1</iYield>
-						<iYield>1</iYield>
-						<iYield>4</iYield>
-					</Yields>
 				</Outcome>
 				<Outcome>
 					<OutcomeType>OUTCOME_HUNTING_KILL</OutcomeType>
@@ -2101,11 +1906,6 @@
 							<ID>TECH_SEDENTARY_LIFESTYLE</ID>
 						</Has>
 					</bUnitToCity>
-					<Yields>
-						<iYield>1</iYield>
-						<iYield>1</iYield>
-						<iYield>4</iYield>
-					</Yields>
 				</Outcome>
 				<Outcome>
 					<OutcomeType>OUTCOME_HUNTING_KILL</OutcomeType>
@@ -2234,26 +2034,6 @@
 							<ID>TECH_SEDENTARY_LIFESTYLE</ID>
 						</Has>
 					</bUnitToCity>
-					<Yields>
-						<iYield>
-							<Plus>
-								<Constant>45</Constant>
-								<Random>135</Random>
-							</Plus>
-						</iYield>
-						<iYield>
-							<Plus>
-								<Constant>4</Constant>
-								<Random>18</Random>
-							</Plus>
-						</iYield>
-						<iYield>
-							<Plus>
-								<Constant>26</Constant>
-								<Random>30</Random>
-							</Plus>
-						</iYield>
-					</Yields>
 				</Outcome>
 				<Outcome>
 					<OutcomeType>OUTCOME_HUNTING_KILL</OutcomeType>
@@ -2405,26 +2185,6 @@
 							<ID>TECH_SEDENTARY_LIFESTYLE</ID>
 						</Has>
 					</bUnitToCity>
-					<Yields>
-						<iYield>
-							<Plus>
-								<Constant>2</Constant>
-								<Random>2</Random>
-							</Plus>
-						</iYield>
-						<iYield>
-							<Plus>
-								<Constant>1</Constant>
-								<Random>2</Random>
-							</Plus>
-						</iYield>
-						<iYield>
-							<Plus>
-								<Constant>12</Constant>
-								<Random>4</Random>
-							</Plus>
-						</iYield>
-					</Yields>
 				</Outcome>
 				<Outcome>
 					<OutcomeType>OUTCOME_HUNTING_KILL</OutcomeType>
@@ -2598,30 +2358,10 @@
 					<bUnitToCity>
 						<Constant>DONT_ESCORT_SUBDUED_SEA_ANIMAL</Constant>
 					</bUnitToCity>
-					<Yields>
-						<iYield>
-							<Plus>
-								<Constant>400</Constant>
-								<Random>200</Random>
-							</Plus>
-						</iYield>
-						<iYield>
-							<Plus>
-								<Constant>40</Constant>
-								<Random>80</Random>
-							</Plus>
-						</iYield>
-						<iYield>
-							<Plus>
-								<Constant>40</Constant>
-								<Random>35</Random>
-							</Plus>
-						</iYield>
-					</Yields>
 				</Outcome>
 				<Outcome>
 					<OutcomeType>OUTCOME_HUNTING_KILL</OutcomeType>
-					<iChance>80</iChance>
+					<iChance>90</iChance>
 					<Yields>
 						<iYield>
 							<Plus>
@@ -2761,26 +2501,6 @@
 							<ID>TECH_SEDENTARY_LIFESTYLE</ID>
 						</Has>
 					</bUnitToCity>
-					<Yields>
-						<iYield>
-							<Plus>
-								<Constant>45</Constant>
-								<Random>85</Random>
-							</Plus>
-						</iYield>
-						<iYield>
-							<Plus>
-								<Constant>4</Constant>
-								<Random>9</Random>
-							</Plus>
-						</iYield>
-						<iYield>
-							<Plus>
-								<Constant>82</Constant>
-								<Random>125</Random>
-							</Plus>
-						</iYield>
-					</Yields>
 				</Outcome>
 				<Outcome>
 					<OutcomeType>OUTCOME_HUNTING_KILL</OutcomeType>
@@ -2951,26 +2671,6 @@
 							<ID>TECH_SEDENTARY_LIFESTYLE</ID>
 						</Has>
 					</bUnitToCity>
-					<Yields>
-						<iYield>
-							<Plus>
-								<Constant>180</Constant>
-								<Random>270</Random>
-							</Plus>
-						</iYield>
-						<iYield>
-							<Plus>
-								<Constant>22</Constant>
-								<Random>33</Random>
-							</Plus>
-						</iYield>
-						<iYield>
-							<Plus>
-								<Constant>16</Constant>
-								<Random>12</Random>
-							</Plus>
-						</iYield>
-					</Yields>
 				</Outcome>
 				<Outcome>
 					<OutcomeType>OUTCOME_HUNTING_KILL</OutcomeType>
@@ -3109,26 +2809,6 @@
 							<ID>TECH_SEDENTARY_LIFESTYLE</ID>
 						</Has>
 					</bUnitToCity>
-					<Yields>
-						<iYield>
-							<Plus>
-								<Constant>20</Constant>
-								<Random>105</Random>
-							</Plus>
-						</iYield>
-						<iYield>
-							<Plus>
-								<Constant>2</Constant>
-								<Random>10</Random>
-							</Plus>
-						</iYield>
-						<iYield>
-							<Plus>
-								<Constant>16</Constant>
-								<Random>13</Random>
-							</Plus>
-						</iYield>
-					</Yields>
 				</Outcome>
 				<Outcome>
 					<OutcomeType>OUTCOME_HUNTING_KILL</OutcomeType>
@@ -3317,26 +2997,6 @@
 							<ID>TECH_SEDENTARY_LIFESTYLE</ID>
 						</Has>
 					</bUnitToCity>
-					<Yields>
-						<iYield>
-							<Plus>
-								<Constant>25</Constant>
-								<Random>75</Random>
-							</Plus>
-						</iYield>
-						<iYield>
-							<Plus>
-								<Constant>2</Constant>
-								<Random>8</Random>
-							</Plus>
-						</iYield>
-						<iYield>
-							<Plus>
-								<Constant>4</Constant>
-								<Random>8</Random>
-							</Plus>
-						</iYield>
-					</Yields>
 				</Outcome>
 				<Outcome>
 					<OutcomeType>OUTCOME_HUNTING_KILL</OutcomeType>
@@ -3486,26 +3146,6 @@
 							<ID>TECH_SEDENTARY_LIFESTYLE</ID>
 						</Has>
 					</bUnitToCity>
-					<Yields>
-						<iYield>
-							<Plus>
-								<Constant>75</Constant>
-								<Random>50</Random>
-							</Plus>
-						</iYield>
-						<iYield>
-							<Plus>
-								<Constant>7</Constant>
-								<Random>5</Random>
-							</Plus>
-						</iYield>
-						<iYield>
-							<Plus>
-								<Constant>7</Constant>
-								<Random>6</Random>
-							</Plus>
-						</iYield>
-					</Yields>
 				</Outcome>
 				<Outcome>
 					<OutcomeType>OUTCOME_HUNTING_KILL</OutcomeType>
@@ -3641,11 +3281,6 @@
 							<ID>TECH_SEDENTARY_LIFESTYLE</ID>
 						</Has>
 					</bUnitToCity>
-					<Yields>
-						<iYield>1</iYield>
-						<iYield>0</iYield>
-						<iYield>2</iYield>
-					</Yields>
 				</Outcome>
 				<Outcome>
 					<OutcomeType>OUTCOME_HUNTING_KILL</OutcomeType>
@@ -3790,26 +3425,6 @@
 							<ID>TECH_SEDENTARY_LIFESTYLE</ID>
 						</Has>
 					</bUnitToCity>
-					<Yields>
-						<iYield>
-							<Plus>
-								<Constant>250</Constant>
-								<Random>200</Random>
-							</Plus>
-						</iYield>
-						<iYield>
-							<Plus>
-								<Constant>25</Constant>
-								<Random>20</Random>
-							</Plus>
-						</iYield>
-						<iYield>
-							<Plus>
-								<Constant>10</Constant>
-								<Random>8</Random>
-							</Plus>
-						</iYield>
-					</Yields>
 				</Outcome>
 				<Outcome>
 					<OutcomeType>OUTCOME_HUNTING_KILL</OutcomeType>
@@ -3967,26 +3582,6 @@
 							<ID>TECH_SEDENTARY_LIFESTYLE</ID>
 						</Has>
 					</bUnitToCity>
-					<Yields>
-						<iYield>
-							<Plus>
-								<Constant>110</Constant>
-								<Random>110</Random>
-							</Plus>
-						</iYield>
-						<iYield>
-							<Plus>
-								<Constant>12</Constant>
-								<Random>11</Random>
-							</Plus>
-						</iYield>
-						<iYield>
-							<Plus>
-								<Constant>8</Constant>
-								<Random>8</Random>
-							</Plus>
-						</iYield>
-					</Yields>
 				</Outcome>
 				<Outcome>
 					<OutcomeType>OUTCOME_HUNTING_KILL</OutcomeType>
@@ -4148,26 +3743,6 @@
 							<ID>TECH_SEDENTARY_LIFESTYLE</ID>
 						</Has>
 					</bUnitToCity>
-					<Yields>
-						<iYield>
-							<Plus>
-								<Constant>180</Constant>
-								<Random>90</Random>
-							</Plus>
-						</iYield>
-						<iYield>
-							<Plus>
-								<Constant>22</Constant>
-								<Random>11</Random>
-							</Plus>
-						</iYield>
-						<iYield>
-							<Plus>
-								<Constant>12</Constant>
-								<Random>8</Random>
-							</Plus>
-						</iYield>
-					</Yields>
 				</Outcome>
 				<Outcome>
 					<OutcomeType>OUTCOME_HUNTING_KILL</OutcomeType>
@@ -4298,11 +3873,6 @@
 							<ID>TECH_SEDENTARY_LIFESTYLE</ID>
 						</Has>
 					</bUnitToCity>
-					<Yields>
-						<iYield>1</iYield>
-						<iYield>0</iYield>
-						<iYield>1</iYield>
-					</Yields>
 				</Outcome>
 				<Outcome>
 					<OutcomeType>OUTCOME_HUNTING_KILL</OutcomeType>
@@ -4439,26 +4009,6 @@
 							<ID>TECH_SEDENTARY_LIFESTYLE</ID>
 						</Has>
 					</bUnitToCity>
-					<Yields>
-						<iYield>
-							<Plus>
-								<Constant>15</Constant>
-								<Random>15</Random>
-							</Plus>
-						</iYield>
-						<iYield>
-							<Plus>
-								<Constant>2</Constant>
-								<Random>3</Random>
-							</Plus>
-						</iYield>
-						<iYield>
-							<Plus>
-								<Constant>2</Constant>
-								<Random>2</Random>
-							</Plus>
-						</iYield>
-					</Yields>
 				</Outcome>
 				<Outcome>
 					<OutcomeType>OUTCOME_HUNTING_KILL</OutcomeType>
@@ -4635,26 +4185,6 @@
 							<ID>TECH_SEDENTARY_LIFESTYLE</ID>
 						</Has>
 					</bUnitToCity>
-					<Yields>
-						<iYield>
-							<Plus>
-								<Constant>30</Constant>
-								<Random>120</Random>
-							</Plus>
-						</iYield>
-						<iYield>
-							<Plus>
-								<Constant>3</Constant>
-								<Random>13</Random>
-							</Plus>
-						</iYield>
-						<iYield>
-							<Plus>
-								<Constant>10</Constant>
-								<Random>7</Random>
-							</Plus>
-						</iYield>
-					</Yields>
 				</Outcome>
 				<Outcome>
 					<OutcomeType>OUTCOME_HUNTING_KILL</OutcomeType>
@@ -4793,26 +4323,6 @@
 							<ID>TECH_SEDENTARY_LIFESTYLE</ID>
 						</Has>
 					</bUnitToCity>
-					<Yields>
-						<iYield>
-							<Plus>
-								<Constant>10</Constant>
-								<Random>10</Random>
-							</Plus>
-						</iYield>
-						<iYield>
-							<Plus>
-								<Constant>1</Constant>
-								<Random>3</Random>
-							</Plus>
-						</iYield>
-						<iYield>
-							<Plus>
-								<Constant>5</Constant>
-								<Random>5</Random>
-							</Plus>
-						</iYield>
-					</Yields>
 				</Outcome>
 				<Outcome>
 					<OutcomeType>OUTCOME_HUNTING_KILL</OutcomeType>
@@ -4935,26 +4445,6 @@
 							<ID>TECH_SEDENTARY_LIFESTYLE</ID>
 						</Has>
 					</bUnitToCity>
-					<Yields>
-						<iYield>
-							<Plus>
-								<Constant>200</Constant>
-								<Random>300</Random>
-							</Plus>
-						</iYield>
-						<iYield>
-							<Plus>
-								<Constant>20</Constant>
-								<Random>30</Random>
-							</Plus>
-						</iYield>
-						<iYield>
-							<Plus>
-								<Constant>20</Constant>
-								<Random>12</Random>
-							</Plus>
-						</iYield>
-					</Yields>
 				</Outcome>
 				<Outcome>
 					<OutcomeType>OUTCOME_HUNTING_KILL</OutcomeType>
@@ -5112,26 +4602,6 @@
 							<ID>TECH_SEDENTARY_LIFESTYLE</ID>
 						</Has>
 					</bUnitToCity>
-					<Yields>
-						<iYield>
-							<Plus>
-								<Constant>125</Constant>
-								<Random>75</Random>
-							</Plus>
-						</iYield>
-						<iYield>
-							<Plus>
-								<Constant>12</Constant>
-								<Random>7</Random>
-							</Plus>
-						</iYield>
-						<iYield>
-							<Plus>
-								<Constant>50</Constant>
-								<Random>56</Random>
-							</Plus>
-						</iYield>
-					</Yields>
 				</Outcome>
 				<Outcome>
 					<OutcomeType>OUTCOME_HUNTING_KILL</OutcomeType>
@@ -5273,26 +4743,6 @@
 							<ID>TECH_SEDENTARY_LIFESTYLE</ID>
 						</Has>
 					</bUnitToCity>
-					<Yields>
-						<iYield>
-							<Plus>
-								<Constant>10</Constant>
-								<Random>26</Random>
-							</Plus>
-						</iYield>
-						<iYield>
-							<Plus>
-								<Constant>1</Constant>
-								<Random>2</Random>
-							</Plus>
-						</iYield>
-						<iYield>
-							<Plus>
-								<Constant>25</Constant>
-								<Random>64</Random>
-							</Plus>
-						</iYield>
-					</Yields>
 				</Outcome>
 				<Outcome>
 					<OutcomeType>OUTCOME_HUNTING_KILL</OutcomeType>
@@ -5449,21 +4899,6 @@
 							<ID>TECH_SEDENTARY_LIFESTYLE</ID>
 						</Has>
 					</bUnitToCity>
-					<Yields>
-						<iYield>10</iYield>
-						<iYield>
-							<Plus>
-								<Constant>1</Constant>
-								<Random>5</Random>
-							</Plus>
-						</iYield>
-						<iYield>
-							<Plus>
-								<Constant>2</Constant>
-								<Random>2</Random>
-							</Plus>
-						</iYield>
-					</Yields>
 				</Outcome>
 				<Outcome>
 					<OutcomeType>OUTCOME_HUNTING_KILL</OutcomeType>
@@ -5570,16 +5005,6 @@
 							<ID>TECH_SEDENTARY_LIFESTYLE</ID>
 						</Has>
 					</bUnitToCity>
-					<Yields>
-						<iYield>1</iYield>
-						<iYield>1</iYield>
-						<iYield>
-							<Plus>
-								<Constant>5</Constant>
-								<Random>7</Random>
-							</Plus>
-						</iYield>
-					</Yields>
 				</Outcome>
 				<Outcome>
 					<OutcomeType>OUTCOME_HUNTING_KILL</OutcomeType>
@@ -5721,15 +5146,10 @@
 					<bUnitToCity>
 						<Constant>DONT_ESCORT_SUBDUED_SEA_ANIMAL</Constant>
 					</bUnitToCity>
-					<Yields>
-						<iYield>5</iYield>
-						<iYield>0</iYield>
-						<iYield>2</iYield>
-					</Yields>
 				</Outcome>
 				<Outcome>
 					<OutcomeType>OUTCOME_HUNTING_KILL</OutcomeType>
-					<iChance>80</iChance>
+					<iChance>90</iChance>
 					<Yields>
 						<iYield>5</iYield>
 						<iYield>0</iYield>
@@ -5873,26 +5293,6 @@
 							<ID>TECH_SEDENTARY_LIFESTYLE</ID>
 						</Has>
 					</bUnitToCity>
-					<Yields>
-						<iYield>
-							<Plus>
-								<Constant>180</Constant>
-								<Random>180</Random>
-							</Plus>
-						</iYield>
-						<iYield>
-							<Plus>
-								<Constant>27</Constant>
-								<Random>27</Random>
-							</Plus>
-						</iYield>
-						<iYield>
-							<Plus>
-								<Constant>13</Constant>
-								<Random>5</Random>
-							</Plus>
-						</iYield>
-					</Yields>
 				</Outcome>
 				<Outcome>
 					<OutcomeType>OUTCOME_HUNTING_KILL</OutcomeType>
@@ -6033,20 +5433,15 @@
 				</Outcome>
 				<Outcome>
 					<OutcomeType>OUTCOME_SUBDUE_SEA_SMALL</OutcomeType>
-					<iChance>8</iChance>
+					<iChance>5</iChance>
 					<UnitType>UNIT_SUBDUED_CRAB</UnitType>
 					<bUnitToCity>
 						<Constant>DONT_ESCORT_SUBDUED_SEA_ANIMAL</Constant>
 					</bUnitToCity>
-					<Yields>
-						<iYield>2</iYield>
-						<iYield>0</iYield>
-						<iYield>1</iYield>
-					</Yields>
 				</Outcome>
 				<Outcome>
 					<OutcomeType>OUTCOME_HUNTING_KILL</OutcomeType>
-					<iChance>82</iChance>
+					<iChance>85</iChance>
 					<Yields>
 						<iYield>2</iYield>
 						<iYield>0</iYield>
@@ -6154,11 +5549,6 @@
 							<ID>TECH_SEDENTARY_LIFESTYLE</ID>
 						</Has>
 					</bUnitToCity>
-					<Yields>
-						<iYield>1</iYield>
-						<iYield>0</iYield>
-						<iYield>3</iYield>
-					</Yields>
 				</Outcome>
 				<Outcome>
 					<OutcomeType>OUTCOME_HUNTING_KILL</OutcomeType>
@@ -6261,21 +5651,6 @@
 							<ID>TECH_SEDENTARY_LIFESTYLE</ID>
 						</Has>
 					</bUnitToCity>
-					<Yields>
-						<iYield>
-							<Plus>
-								<Constant>1</Constant>
-								<Random>1</Random>
-							</Plus>
-						</iYield>
-						<iYield>0</iYield>
-						<iYield>
-							<Plus>
-								<Constant>1</Constant>
-								<Random>1</Random>
-							</Plus>
-						</iYield>
-					</Yields>
 				</Outcome>
 				<Outcome>
 					<OutcomeType>OUTCOME_HUNTING_KILL</OutcomeType>
@@ -6412,11 +5787,6 @@
 							<ID>TECH_SEDENTARY_LIFESTYLE</ID>
 						</Has>
 					</bUnitToCity>
-					<Yields>
-						<iYield>0</iYield>
-						<iYield>1</iYield>
-						<iYield>5</iYield>
-					</Yields>
 				</Outcome>
 				<Outcome>
 					<OutcomeType>OUTCOME_HUNTING_KILL</OutcomeType>
@@ -6507,21 +5877,6 @@
 							<ID>TECH_SEDENTARY_LIFESTYLE</ID>
 						</Has>
 					</bUnitToCity>
-					<Yields>
-						<iYield>
-							<Plus>
-								<Constant>1</Constant>
-								<Random>2</Random>
-							</Plus>
-						</iYield>
-						<iYield>1</iYield>
-						<iYield>
-							<Plus>
-								<Constant>3</Constant>
-								<Random>3</Random>
-							</Plus>
-						</iYield>
-					</Yields>
 				</Outcome>
 				<Outcome>
 					<OutcomeType>OUTCOME_HUNTING_KILL</OutcomeType>
@@ -6675,21 +6030,6 @@
 							<ID>TECH_SEDENTARY_LIFESTYLE</ID>
 						</Has>
 					</bUnitToCity>
-					<Yields>
-						<iYield>
-							<Plus>
-								<Constant>5</Constant>
-								<Random>7</Random>
-							</Plus>
-						</iYield>
-						<iYield>1</iYield>
-						<iYield>
-							<Plus>
-								<Constant>3</Constant>
-								<Random>3</Random>
-							</Plus>
-						</iYield>
-					</Yields>
 				</Outcome>
 				<Outcome>
 					<OutcomeType>OUTCOME_HUNTING_KILL</OutcomeType>
@@ -6814,21 +6154,6 @@
 							<ID>TECH_SEDENTARY_LIFESTYLE</ID>
 						</Has>
 					</bUnitToCity>
-					<Yields>
-						<iYield>
-							<Plus>
-								<Constant>6</Constant>
-								<Random>4</Random>
-							</Plus>
-						</iYield>
-						<iYield>1</iYield>
-						<iYield>
-							<Plus>
-								<Constant>3</Constant>
-								<Random>4</Random>
-							</Plus>
-						</iYield>
-					</Yields>
 				</Outcome>
 				<Outcome>
 					<OutcomeType>OUTCOME_HUNTING_KILL</OutcomeType>
@@ -6966,26 +6291,6 @@
 							<ID>TECH_SEDENTARY_LIFESTYLE</ID>
 						</Has>
 					</bUnitToCity>
-					<Yields>
-						<iYield>
-							<Plus>
-								<Constant>25</Constant>
-								<Random>15</Random>
-							</Plus>
-						</iYield>
-						<iYield>
-							<Plus>
-								<Constant>2</Constant>
-								<Random>1</Random>
-							</Plus>
-						</iYield>
-						<iYield>
-							<Plus>
-								<Constant>7</Constant>
-								<Random>7</Random>
-							</Plus>
-						</iYield>
-					</Yields>
 				</Outcome>
 				<Outcome>
 					<OutcomeType>OUTCOME_HUNTING_KILL</OutcomeType>
@@ -7141,30 +6446,10 @@
 					<bUnitToCity>
 						<Constant>DONT_ESCORT_SUBDUED_SEA_ANIMAL</Constant>
 					</bUnitToCity>
-					<Yields>
-						<iYield>
-							<Plus>
-								<Constant>50</Constant>
-								<Random>200</Random>
-							</Plus>
-						</iYield>
-						<iYield>
-							<Plus>
-								<Constant>5</Constant>
-								<Random>20</Random>
-							</Plus>
-						</iYield>
-						<iYield>
-							<Plus>
-								<Constant>8</Constant>
-								<Random>6</Random>
-							</Plus>
-						</iYield>
-					</Yields>
 				</Outcome>
 				<Outcome>
 					<OutcomeType>OUTCOME_HUNTING_KILL</OutcomeType>
-					<iChance>80</iChance>
+					<iChance>90</iChance>
 					<Yields>
 						<iYield>
 							<Plus>
@@ -7311,26 +6596,6 @@
 							<ID>TECH_SEDENTARY_LIFESTYLE</ID>
 						</Has>
 					</bUnitToCity>
-					<Yields>
-						<iYield>
-							<Plus>
-								<Constant>45</Constant>
-								<Random>195</Random>
-							</Plus>
-						</iYield>
-						<iYield>
-							<Plus>
-								<Constant>4</Constant>
-								<Random>24</Random>
-							</Plus>
-						</iYield>
-						<iYield>
-							<Plus>
-								<Constant>10</Constant>
-								<Random>2</Random>
-							</Plus>
-						</iYield>
-					</Yields>
 				</Outcome>
 				<Outcome>
 					<OutcomeType>OUTCOME_HUNTING_KILL</OutcomeType>
@@ -7470,16 +6735,6 @@
 							<ID>TECH_SEDENTARY_LIFESTYLE</ID>
 						</Has>
 					</bUnitToCity>
-					<Yields>
-						<iYield>
-							<Plus>
-								<Constant>1</Constant>
-								<Random>1</Random>
-							</Plus>
-						</iYield>
-						<iYield>1</iYield>
-						<iYield>4</iYield>
-					</Yields>
 				</Outcome>
 				<Outcome>
 					<OutcomeType>OUTCOME_HUNTING_KILL</OutcomeType>
@@ -7619,30 +6874,10 @@
 					<bUnitToCity>
 						<Constant>DONT_ESCORT_SUBDUED_SEA_ANIMAL</Constant>
 					</bUnitToCity>
-					<Yields>
-						<iYield>
-							<Plus>
-								<Constant>50</Constant>
-								<Random>50</Random>
-							</Plus>
-						</iYield>
-						<iYield>
-							<Plus>
-								<Constant>15</Constant>
-								<Random>15</Random>
-							</Plus>
-						</iYield>
-						<iYield>
-							<Plus>
-								<Constant>4</Constant>
-								<Random>4</Random>
-							</Plus>
-						</iYield>
-					</Yields>
 				</Outcome>
 				<Outcome>
 					<OutcomeType>OUTCOME_HUNTING_KILL</OutcomeType>
-					<iChance>80</iChance>
+					<iChance>90</iChance>
 					<Yields>
 						<iYield>
 							<Plus>
@@ -7766,11 +7001,6 @@
 							<ID>TECH_SEDENTARY_LIFESTYLE</ID>
 						</Has>
 					</bUnitToCity>
-					<Yields>
-						<iYield>1</iYield>
-						<iYield>1</iYield>
-						<iYield>4</iYield>
-					</Yields>
 				</Outcome>
 				<Outcome>
 					<OutcomeType>OUTCOME_HUNTING_KILL</OutcomeType>
@@ -7881,11 +7111,6 @@
 							<ID>TECH_SEDENTARY_LIFESTYLE</ID>
 						</Has>
 					</bUnitToCity>
-					<Yields>
-						<iYield>1</iYield>
-						<iYield>1</iYield>
-						<iYield>4</iYield>
-					</Yields>
 				</Outcome>
 				<Outcome>
 					<OutcomeType>OUTCOME_HUNTING_KILL</OutcomeType>
@@ -8038,26 +7263,6 @@
 							<ID>TECH_SEDENTARY_LIFESTYLE</ID>
 						</Has>
 					</bUnitToCity>
-					<Yields>
-						<iYield>
-							<Plus>
-								<Constant>1000</Constant>
-								<Random>1000</Random>
-							</Plus>
-						</iYield>
-						<iYield>
-							<Plus>
-								<Constant>300</Constant>
-								<Random>350</Random>
-							</Plus>
-						</iYield>
-						<iYield>
-							<Plus>
-								<Constant>82</Constant>
-								<Random>55</Random>
-							</Plus>
-						</iYield>
-					</Yields>
 				</Outcome>
 				<Outcome>
 					<OutcomeType>OUTCOME_HUNTING_KILL</OutcomeType>
@@ -8210,26 +7415,6 @@
 							<ID>TECH_SEDENTARY_LIFESTYLE</ID>
 						</Has>
 					</bUnitToCity>
-					<Yields>
-						<iYield>
-							<Plus>
-								<Constant>500</Constant>
-								<Random>1000</Random>
-							</Plus>
-						</iYield>
-						<iYield>
-							<Plus>
-								<Constant>150</Constant>
-								<Random>350</Random>
-							</Plus>
-						</iYield>
-						<iYield>
-							<Plus>
-								<Constant>82</Constant>
-								<Random>55</Random>
-							</Plus>
-						</iYield>
-					</Yields>
 				</Outcome>
 				<Outcome>
 					<OutcomeType>OUTCOME_HUNTING_KILL</OutcomeType>
@@ -8362,26 +7547,6 @@
 							<ID>TECH_SEDENTARY_LIFESTYLE</ID>
 						</Has>
 					</bUnitToCity>
-					<Yields>
-						<iYield>
-							<Plus>
-								<Constant>10</Constant>
-								<Random>5</Random>
-							</Plus>
-						</iYield>
-						<iYield>
-							<Plus>
-								<Constant>1</Constant>
-								<Random>2</Random>
-							</Plus>
-						</iYield>
-						<iYield>
-							<Plus>
-								<Constant>9</Constant>
-								<Random>2</Random>
-							</Plus>
-						</iYield>
-					</Yields>
 				</Outcome>
 				<Outcome>
 					<OutcomeType>OUTCOME_HUNTING_KILL</OutcomeType>
@@ -8516,16 +7681,6 @@
 							<ID>TECH_SEDENTARY_LIFESTYLE</ID>
 						</Has>
 					</bUnitToCity>
-					<Yields>
-						<iYield>5</iYield>
-						<iYield>1</iYield>
-						<iYield>
-							<Plus>
-								<Constant>8</Constant>
-								<Random>4</Random>
-							</Plus>
-						</iYield>
-					</Yields>
 				</Outcome>
 				<Outcome>
 					<OutcomeType>OUTCOME_HUNTING_KILL</OutcomeType>
@@ -8641,16 +7796,6 @@
 							<ID>TECH_SEDENTARY_LIFESTYLE</ID>
 						</Has>
 					</bUnitToCity>
-					<Yields>
-						<iYield>1</iYield>
-						<iYield>1</iYield>
-						<iYield>
-							<Plus>
-								<Constant>1</Constant>
-								<Random>2</Random>
-							</Plus>
-						</iYield>
-					</Yields>
 				</Outcome>
 				<Outcome>
 					<OutcomeType>OUTCOME_HUNTING_KILL</OutcomeType>
@@ -8785,16 +7930,6 @@
 							<ID>TECH_SEDENTARY_LIFESTYLE</ID>
 						</Has>
 					</bUnitToCity>
-					<Yields>
-						<iYield>
-							<Plus>
-								<Constant>1</Constant>
-								<Random>1</Random>
-							</Plus>
-						</iYield>
-						<iYield>1</iYield>
-						<iYield>4</iYield>
-					</Yields>
 				</Outcome>
 				<Outcome>
 					<OutcomeType>OUTCOME_HUNTING_KILL</OutcomeType>
@@ -8923,14 +8058,13 @@
 							<ID>TECH_SEDENTARY_LIFESTYLE</ID>
 						</Has>
 					</bUnitToCity>
-					<Yields>
-						<iYield>1</iYield>
-					</Yields>
 				</Outcome>
 				<Outcome>
 					<OutcomeType>OUTCOME_HUNTING_KILL</OutcomeType>
 					<iChance>95</iChance>
 					<Yields>
+						<iYield>1</iYield>
+						<iYield>0</iYield>
 						<iYield>1</iYield>
 					</Yields>
 				</Outcome>
@@ -9009,26 +8143,6 @@
 							<ID>TECH_SEDENTARY_LIFESTYLE</ID>
 						</Has>
 					</bUnitToCity>
-					<Yields>
-						<iYield>
-							<Plus>
-								<Constant>50</Constant>
-								<Random>150</Random>
-							</Plus>
-						</iYield>
-						<iYield>
-							<Plus>
-								<Constant>5</Constant>
-								<Random>15</Random>
-							</Plus>
-						</iYield>
-						<iYield>
-							<Plus>
-								<Constant>7</Constant>
-								<Random>3</Random>
-							</Plus>
-						</iYield>
-					</Yields>
 				</Outcome>
 				<Outcome>
 					<OutcomeType>OUTCOME_HUNTING_KILL</OutcomeType>
@@ -9169,26 +8283,6 @@
 							<ID>TECH_SEDENTARY_LIFESTYLE</ID>
 						</Has>
 					</bUnitToCity>
-					<Yields>
-						<iYield>
-							<Plus>
-								<Constant>20</Constant>
-								<Random>100</Random>
-							</Plus>
-						</iYield>
-						<iYield>
-							<Plus>
-								<Constant>8</Constant>
-								<Random>32</Random>
-							</Plus>
-						</iYield>
-						<iYield>
-							<Plus>
-								<Constant>16</Constant>
-								<Random>12</Random>
-							</Plus>
-						</iYield>
-					</Yields>
 				</Outcome>
 				<Outcome>
 					<OutcomeType>OUTCOME_HUNTING_KILL</OutcomeType>
@@ -9312,26 +8406,6 @@
 							<ID>TECH_SEDENTARY_LIFESTYLE</ID>
 						</Has>
 					</bUnitToCity>
-					<Yields>
-						<iYield>
-							<Plus>
-								<Constant>5</Constant>
-								<Random>10</Random>
-							</Plus>
-						</iYield>
-						<iYield>
-							<Plus>
-								<Constant>1</Constant>
-								<Random>2</Random>
-							</Plus>
-						</iYield>
-						<iYield>
-							<Plus>
-								<Constant>12</Constant>
-								<Random>8</Random>
-							</Plus>
-						</iYield>
-					</Yields>
 				</Outcome>
 				<Outcome>
 					<OutcomeType>OUTCOME_HUNTING_KILL</OutcomeType>
@@ -9463,26 +8537,6 @@
 							<ID>TECH_SEDENTARY_LIFESTYLE</ID>
 						</Has>
 					</bUnitToCity>
-					<Yields>
-						<iYield>
-							<Plus>
-								<Constant>10</Constant>
-								<Random>20</Random>
-							</Plus>
-						</iYield>
-						<iYield>
-							<Plus>
-								<Constant>1</Constant>
-								<Random>1</Random>
-							</Plus>
-						</iYield>
-						<iYield>
-							<Plus>
-								<Constant>3</Constant>
-								<Random>3</Random>
-							</Plus>
-						</iYield>
-					</Yields>
 				</Outcome>
 				<Outcome>
 					<OutcomeType>OUTCOME_HUNTING_KILL</OutcomeType>
@@ -9616,26 +8670,6 @@
 							<ID>TECH_SEDENTARY_LIFESTYLE</ID>
 						</Has>
 					</bUnitToCity>
-					<Yields>
-						<iYield>
-							<Plus>
-								<Constant>1</Constant>
-								<Random>2</Random>
-							</Plus>
-						</iYield>
-						<iYield>
-							<Plus>
-								<Constant>1</Constant>
-								<Random>1</Random>
-							</Plus>
-						</iYield>
-						<iYield>
-							<Plus>
-								<Constant>1</Constant>
-								<Random>1</Random>
-							</Plus>
-						</iYield>
-					</Yields>
 				</Outcome>
 				<Outcome>
 					<OutcomeType>OUTCOME_HUNTING_KILL</OutcomeType>
@@ -9770,26 +8804,6 @@
 							<ID>TECH_SEDENTARY_LIFESTYLE</ID>
 						</Has>
 					</bUnitToCity>
-					<Yields>
-						<iYield>
-							<Plus>
-								<Constant>40</Constant>
-								<Random>60</Random>
-							</Plus>
-						</iYield>
-						<iYield>
-							<Plus>
-								<Constant>6</Constant>
-								<Random>8</Random>
-							</Plus>
-						</iYield>
-						<iYield>
-							<Plus>
-								<Constant>6</Constant>
-								<Random>6</Random>
-							</Plus>
-						</iYield>
-					</Yields>
 				</Outcome>
 				<Outcome>
 					<OutcomeType>OUTCOME_HUNTING_KILL</OutcomeType>
@@ -9922,26 +8936,6 @@
 							<ID>TECH_SEDENTARY_LIFESTYLE</ID>
 						</Has>
 					</bUnitToCity>
-					<Yields>
-						<iYield>
-							<Plus>
-								<Constant>10</Constant>
-								<Random>10</Random>
-							</Plus>
-						</iYield>
-						<iYield>
-							<Plus>
-								<Constant>1</Constant>
-								<Random>2</Random>
-							</Plus>
-						</iYield>
-						<iYield>
-							<Plus>
-								<Constant>5</Constant>
-								<Random>3</Random>
-							</Plus>
-						</iYield>
-					</Yields>
 				</Outcome>
 				<Outcome>
 					<OutcomeType>OUTCOME_HUNTING_KILL</OutcomeType>
@@ -10088,26 +9082,6 @@
 							<ID>TECH_SEDENTARY_LIFESTYLE</ID>
 						</Has>
 					</bUnitToCity>
-					<Yields>
-						<iYield>
-							<Plus>
-								<Constant>10</Constant>
-								<Random>10</Random>
-							</Plus>
-						</iYield>
-						<iYield>
-							<Plus>
-								<Constant>14</Constant>
-								<Random>10</Random>
-							</Plus>
-						</iYield>
-						<iYield>
-							<Plus>
-								<Constant>8</Constant>
-								<Random>8</Random>
-							</Plus>
-						</iYield>
-					</Yields>
 				</Outcome>
 				<Outcome>
 					<OutcomeType>OUTCOME_HUNTING_KILL</OutcomeType>
@@ -10240,30 +9214,10 @@
 					<bUnitToCity>
 						<Constant>DONT_ESCORT_SUBDUED_SEA_ANIMAL</Constant>
 					</bUnitToCity>
-					<Yields>
-						<iYield>
-							<Plus>
-								<Constant>50</Constant>
-								<Random>50</Random>
-							</Plus>
-						</iYield>
-						<iYield>
-							<Plus>
-								<Constant>1</Constant>
-								<Random>1</Random>
-							</Plus>
-						</iYield>
-						<iYield>
-							<Plus>
-								<Constant>5</Constant>
-								<Random>2</Random>
-							</Plus>
-						</iYield>
-					</Yields>
 				</Outcome>
 				<Outcome>
 					<OutcomeType>OUTCOME_HUNTING_KILL</OutcomeType>
-					<iChance>80</iChance>
+					<iChance>90</iChance>
 					<Yields>
 						<iYield>
 							<Plus>
@@ -10387,26 +9341,6 @@
 							<ID>TECH_SEDENTARY_LIFESTYLE</ID>
 						</Has>
 					</bUnitToCity>
-					<Yields>
-						<iYield>
-							<Plus>
-								<Constant>100</Constant>
-								<Random>100</Random>
-							</Plus>
-						</iYield>
-						<iYield>
-							<Plus>
-								<Constant>70</Constant>
-								<Random>50</Random>
-							</Plus>
-						</iYield>
-						<iYield>
-							<Plus>
-								<Constant>20</Constant>
-								<Random>11</Random>
-							</Plus>
-						</iYield>
-					</Yields>
 				</Outcome>
 				<Outcome>
 					<OutcomeType>OUTCOME_HUNTING_KILL</OutcomeType>
@@ -10530,26 +9464,6 @@
 							<ID>TECH_SEDENTARY_LIFESTYLE</ID>
 						</Has>
 					</bUnitToCity>
-					<Yields>
-						<iYield>
-							<Plus>
-								<Constant>250</Constant>
-								<Random>250</Random>
-							</Plus>
-						</iYield>
-						<iYield>
-							<Plus>
-								<Constant>15</Constant>
-								<Random>15</Random>
-							</Plus>
-						</iYield>
-						<iYield>
-							<Plus>
-								<Constant>22</Constant>
-								<Random>12</Random>
-							</Plus>
-						</iYield>
-					</Yields>
 				</Outcome>
 				<Outcome>
 					<OutcomeType>OUTCOME_HUNTING_KILL</OutcomeType>
@@ -10691,26 +9605,6 @@
 							<ID>TECH_SEDENTARY_LIFESTYLE</ID>
 						</Has>
 					</bUnitToCity>
-					<Yields>
-						<iYield>
-							<Plus>
-								<Constant>30</Constant>
-								<Random>20</Random>
-							</Plus>
-						</iYield>
-						<iYield>
-							<Plus>
-								<Constant>11</Constant>
-								<Random>6</Random>
-							</Plus>
-						</iYield>
-						<iYield>
-							<Plus>
-								<Constant>10</Constant>
-								<Random>6</Random>
-							</Plus>
-						</iYield>
-					</Yields>
 				</Outcome>
 				<Outcome>
 					<OutcomeType>OUTCOME_HUNTING_KILL</OutcomeType>
@@ -10869,7 +9763,7 @@
 				</Outcome>
 				<Outcome>
 					<OutcomeType>OUTCOME_HUNTING_KILL</OutcomeType>
-					<iChance>80</iChance>
+					<iChance>90</iChance>
 					<Yields>
 						<iYield>
 							<Plus>
@@ -10971,26 +9865,6 @@
 							<ID>TECH_SEDENTARY_LIFESTYLE</ID>
 						</Has>
 					</bUnitToCity>
-					<Yields>
-						<iYield>
-							<Plus>
-								<Constant>90</Constant>
-								<Random>90</Random>
-							</Plus>
-						</iYield>
-						<iYield>
-							<Plus>
-								<Constant>9</Constant>
-								<Random>9</Random>
-							</Plus>
-						</iYield>
-						<iYield>
-							<Plus>
-								<Constant>14</Constant>
-								<Random>10</Random>
-							</Plus>
-						</iYield>
-					</Yields>
 				</Outcome>
 				<Outcome>
 					<OutcomeType>OUTCOME_HUNTING_KILL</OutcomeType>
@@ -11123,26 +9997,6 @@
 							<ID>TECH_SEDENTARY_LIFESTYLE</ID>
 						</Has>
 					</bUnitToCity>
-					<Yields>
-						<iYield>
-							<Plus>
-								<Constant>300</Constant>
-								<Random>300</Random>
-							</Plus>
-						</iYield>
-						<iYield>
-							<Plus>
-								<Constant>70</Constant>
-								<Random>120</Random>
-							</Plus>
-						</iYield>
-						<iYield>
-							<Plus>
-								<Constant>18</Constant>
-								<Random>8</Random>
-							</Plus>
-						</iYield>
-					</Yields>
 				</Outcome>
 				<Outcome>
 					<OutcomeType>OUTCOME_HUNTING_KILL</OutcomeType>
@@ -11310,26 +10164,6 @@
 							<ID>TECH_SEDENTARY_LIFESTYLE</ID>
 						</Has>
 					</bUnitToCity>
-					<Yields>
-						<iYield>
-							<Plus>
-								<Constant>40</Constant>
-								<Random>30</Random>
-							</Plus>
-						</iYield>
-						<iYield>
-							<Plus>
-								<Constant>5</Constant>
-								<Random>2</Random>
-							</Plus>
-						</iYield>
-						<iYield>
-							<Plus>
-								<Constant>4</Constant>
-								<Random>5</Random>
-							</Plus>
-						</iYield>
-					</Yields>
 				</Outcome>
 				<Outcome>
 					<OutcomeType>OUTCOME_HUNTING_KILL</OutcomeType>
@@ -11452,16 +10286,6 @@
 							<ID>TECH_SEDENTARY_LIFESTYLE</ID>
 						</Has>
 					</bUnitToCity>
-					<Yields>
-						<iYield>1</iYield>
-						<iYield>1</iYield>
-						<iYield>
-							<Plus>
-								<Constant>3</Constant>
-								<Random>1</Random>
-							</Plus>
-						</iYield>
-					</Yields>
 				</Outcome>
 				<Outcome>
 					<OutcomeType>OUTCOME_HUNTING_KILL</OutcomeType>
@@ -11577,21 +10401,6 @@
 							<ID>TECH_SEDENTARY_LIFESTYLE</ID>
 						</Has>
 					</bUnitToCity>
-					<Yields>
-						<iYield>
-							<Plus>
-								<Constant>4</Constant>
-								<Random>3</Random>
-							</Plus>
-						</iYield>
-						<iYield>1</iYield>
-						<iYield>
-							<Plus>
-								<Constant>4</Constant>
-								<Random>5</Random>
-							</Plus>
-						</iYield>
-					</Yields>
 				</Outcome>
 				<Outcome>
 					<OutcomeType>OUTCOME_HUNTING_KILL</OutcomeType>
@@ -11731,30 +10540,10 @@
 					<bUnitToCity>
 						<Constant>DONT_ESCORT_SUBDUED_SEA_ANIMAL</Constant>
 					</bUnitToCity>
-					<Yields>
-						<iYield>
-							<Plus>
-								<Constant>80</Constant>
-								<Random>70</Random>
-							</Plus>
-						</iYield>
-						<iYield>
-							<Plus>
-								<Constant>15</Constant>
-								<Random>15</Random>
-							</Plus>
-						</iYield>
-						<iYield>
-							<Plus>
-								<Constant>4</Constant>
-								<Random>12</Random>
-							</Plus>
-						</iYield>
-					</Yields>
 				</Outcome>
 				<Outcome>
 					<OutcomeType>OUTCOME_HUNTING_KILL</OutcomeType>
-					<iChance>80</iChance>
+					<iChance>90</iChance>
 					<Yields>
 						<iYield>
 							<Plus>
@@ -11892,21 +10681,6 @@
 							<ID>TECH_SEDENTARY_LIFESTYLE</ID>
 						</Has>
 					</bUnitToCity>
-					<Yields>
-						<iYield>
-							<Plus>
-								<Constant>2</Constant>
-								<Random>2</Random>
-							</Plus>
-						</iYield>
-						<iYield>1</iYield>
-						<iYield>
-							<Plus>
-								<Constant>4</Constant>
-								<Random>4</Random>
-							</Plus>
-						</iYield>
-					</Yields>
 				</Outcome>
 				<Outcome>
 					<OutcomeType>OUTCOME_HUNTING_KILL</OutcomeType>
@@ -12026,16 +10800,6 @@
 							<ID>TECH_SEDENTARY_LIFESTYLE</ID>
 						</Has>
 					</bUnitToCity>
-					<Yields>
-						<iYield>1</iYield>
-						<iYield>1</iYield>
-						<iYield>
-							<Plus>
-								<Constant>4</Constant>
-								<Random>3</Random>
-							</Plus>
-						</iYield>
-					</Yields>
 				</Outcome>
 				<Outcome>
 					<OutcomeType>OUTCOME_HUNTING_KILL</OutcomeType>
@@ -12179,26 +10943,6 @@
 							<ID>TECH_SEDENTARY_LIFESTYLE</ID>
 						</Has>
 					</bUnitToCity>
-					<Yields>
-						<iYield>
-							<Plus>
-								<Constant>500</Constant>
-								<Random>1300</Random>
-							</Plus>
-						</iYield>
-						<iYield>
-							<Plus>
-								<Constant>90</Constant>
-								<Random>160</Random>
-							</Plus>
-						</iYield>
-						<iYield>
-							<Plus>
-								<Constant>8</Constant>
-								<Random>10</Random>
-							</Plus>
-						</iYield>
-					</Yields>
 				</Outcome>
 				<Outcome>
 					<OutcomeType>OUTCOME_HUNTING_KILL</OutcomeType>
@@ -12334,26 +11078,6 @@
 							<ID>TECH_SEDENTARY_LIFESTYLE</ID>
 						</Has>
 					</bUnitToCity>
-					<Yields>
-						<iYield>
-							<Plus>
-								<Constant>60</Constant>
-								<Random>40</Random>
-							</Plus>
-						</iYield>
-						<iYield>
-							<Plus>
-								<Constant>12</Constant>
-								<Random>5</Random>
-							</Plus>
-						</iYield>
-						<iYield>
-							<Plus>
-								<Constant>5</Constant>
-								<Random>4</Random>
-							</Plus>
-						</iYield>
-					</Yields>
 				</Outcome>
 				<Outcome>
 					<OutcomeType>OUTCOME_HUNTING_KILL</OutcomeType>
@@ -12500,11 +11224,6 @@
 							<ID>TECH_SEDENTARY_LIFESTYLE</ID>
 						</Has>
 					</bUnitToCity>
-					<Yields>
-						<iYield>1</iYield>
-						<iYield>1</iYield>
-						<iYield>4</iYield>
-					</Yields>
 				</Outcome>
 				<Outcome>
 					<OutcomeType>OUTCOME_HUNTING_KILL</OutcomeType>
@@ -12655,26 +11374,6 @@
 							<ID>TECH_SEDENTARY_LIFESTYLE</ID>
 						</Has>
 					</bUnitToCity>
-					<Yields>
-						<iYield>
-							<Plus>
-								<Constant>180</Constant>
-								<Random>120</Random>
-							</Plus>
-						</iYield>
-						<iYield>
-							<Plus>
-								<Constant>20</Constant>
-								<Random>50</Random>
-							</Plus>
-						</iYield>
-						<iYield>
-							<Plus>
-								<Constant>10</Constant>
-								<Random>6</Random>
-							</Plus>
-						</iYield>
-					</Yields>
 				</Outcome>
 				<Outcome>
 					<OutcomeType>OUTCOME_HUNTING_KILL</OutcomeType>
@@ -12829,30 +11528,10 @@
 					<bUnitToCity>
 						<Constant>DONT_ESCORT_SUBDUED_SEA_ANIMAL</Constant>
 					</bUnitToCity>
-					<Yields>
-						<iYield>
-							<Plus>
-								<Constant>10000</Constant>
-								<Random>5000</Random>
-							</Plus>
-						</iYield>
-						<iYield>
-							<Plus>
-								<Constant>1000</Constant>
-								<Random>500</Random>
-							</Plus>
-						</iYield>
-						<iYield>
-							<Plus>
-								<Constant>80</Constant>
-								<Random>220</Random>
-							</Plus>
-						</iYield>
-					</Yields>
 				</Outcome>
 				<Outcome>
 					<OutcomeType>OUTCOME_HUNTING_KILL</OutcomeType>
-					<iChance>80</iChance>
+					<iChance>85</iChance>
 					<Yields>
 						<iYield>
 							<Plus>
@@ -12973,26 +11652,6 @@
 							<ID>TECH_SEDENTARY_LIFESTYLE</ID>
 						</Has>
 					</bUnitToCity>
-					<Yields>
-						<iYield>
-							<Plus>
-								<Constant>10</Constant>
-								<Random>10</Random>
-							</Plus>
-						</iYield>
-						<iYield>
-							<Plus>
-								<Constant>3</Constant>
-								<Random>3</Random>
-							</Plus>
-						</iYield>
-						<iYield>
-							<Plus>
-								<Constant>2</Constant>
-								<Random>3</Random>
-							</Plus>
-						</iYield>
-					</Yields>
 				</Outcome>
 				<Outcome>
 					<OutcomeType>OUTCOME_HUNTING_KILL</OutcomeType>
@@ -13119,26 +11778,6 @@
 							<ID>TECH_SEDENTARY_LIFESTYLE</ID>
 						</Has>
 					</bUnitToCity>
-					<Yields>
-						<iYield>
-							<Plus>
-								<Constant>20</Constant>
-								<Random>20</Random>
-							</Plus>
-						</iYield>
-						<iYield>
-							<Plus>
-								<Constant>3</Constant>
-								<Random>3</Random>
-							</Plus>
-						</iYield>
-						<iYield>
-							<Plus>
-								<Constant>3</Constant>
-								<Random>4</Random>
-							</Plus>
-						</iYield>
-					</Yields>
 				</Outcome>
 				<Outcome>
 					<OutcomeType>OUTCOME_HUNTING_KILL</OutcomeType>
@@ -13242,21 +11881,6 @@
 							<ID>TECH_SEDENTARY_LIFESTYLE</ID>
 						</Has>
 					</bUnitToCity>
-					<Yields>
-						<iYield>
-							<Plus>
-								<Constant>1</Constant>
-								<Random>1</Random>
-							</Plus>
-						</iYield>
-						<iYield>0</iYield>
-						<iYield>
-							<Plus>
-								<Constant>1</Constant>
-								<Random>1</Random>
-							</Plus>
-						</iYield>
-					</Yields>
 				</Outcome>
 				<Outcome>
 					<OutcomeType>OUTCOME_HUNTING_KILL</OutcomeType>
@@ -13380,26 +12004,6 @@
 							<ID>TECH_SEDENTARY_LIFESTYLE</ID>
 						</Has>
 					</bUnitToCity>
-					<Yields>
-						<iYield>
-							<Plus>
-								<Constant>20</Constant>
-								<Random>20</Random>
-							</Plus>
-						</iYield>
-						<iYield>
-							<Plus>
-								<Constant>2</Constant>
-								<Random>1</Random>
-							</Plus>
-						</iYield>
-						<iYield>
-							<Plus>
-								<Constant>4</Constant>
-								<Random>4</Random>
-							</Plus>
-						</iYield>
-					</Yields>
 				</Outcome>
 				<Outcome>
 					<OutcomeType>OUTCOME_HUNTING_KILL</OutcomeType>
@@ -13550,26 +12154,6 @@
 							<ID>TECH_SEDENTARY_LIFESTYLE</ID>
 						</Has>
 					</bUnitToCity>
-					<Yields>
-						<iYield>
-							<Plus>
-								<Constant>15</Constant>
-								<Random>15</Random>
-							</Plus>
-						</iYield>
-						<iYield>
-							<Plus>
-								<Constant>2</Constant>
-								<Random>3</Random>
-							</Plus>
-						</iYield>
-						<iYield>
-							<Plus>
-								<Constant>5</Constant>
-								<Random>3</Random>
-							</Plus>
-						</iYield>
-					</Yields>
 				</Outcome>
 				<Outcome>
 					<OutcomeType>OUTCOME_HUNTING_KILL</OutcomeType>
@@ -13720,26 +12304,6 @@
 							<ID>TECH_SEDENTARY_LIFESTYLE</ID>
 						</Has>
 					</bUnitToCity>
-					<Yields>
-						<iYield>
-							<Plus>
-								<Constant>25</Constant>
-								<Random>20</Random>
-							</Plus>
-						</iYield>
-						<iYield>
-							<Plus>
-								<Constant>3</Constant>
-								<Random>3</Random>
-							</Plus>
-						</iYield>
-						<iYield>
-							<Plus>
-								<Constant>5</Constant>
-								<Random>4</Random>
-							</Plus>
-						</iYield>
-					</Yields>
 				</Outcome>
 				<Outcome>
 					<OutcomeType>OUTCOME_HUNTING_KILL</OutcomeType>
@@ -13847,26 +12411,6 @@
 							<ID>TECH_SEDENTARY_LIFESTYLE</ID>
 						</Has>
 					</bUnitToCity>
-					<Yields>
-						<iYield>
-							<Plus>
-								<Constant>1</Constant>
-								<Random>1</Random>
-							</Plus>
-						</iYield>
-						<iYield>
-							<Plus>
-								<Constant>0</Constant>
-								<Random>1</Random>
-							</Plus>
-						</iYield>
-						<iYield>
-							<Plus>
-								<Constant>4</Constant>
-								<Random>1</Random>
-							</Plus>
-						</iYield>
-					</Yields>
 				</Outcome>
 				<Outcome>
 					<OutcomeType>OUTCOME_HUNTING_KILL</OutcomeType>
@@ -14028,26 +12572,6 @@
 							<ID>TECH_SEDENTARY_LIFESTYLE</ID>
 						</Has>
 					</bUnitToCity>
-					<Yields>
-						<iYield>
-							<Plus>
-								<Constant>20</Constant>
-								<Random>20</Random>
-							</Plus>
-						</iYield>
-						<iYield>
-							<Plus>
-								<Constant>5</Constant>
-								<Random>6</Random>
-							</Plus>
-						</iYield>
-						<iYield>
-							<Plus>
-								<Constant>6</Constant>
-								<Random>3</Random>
-							</Plus>
-						</iYield>
-					</Yields>
 				</Outcome>
 				<Outcome>
 					<OutcomeType>OUTCOME_HUNTING_KILL</OutcomeType>
@@ -14190,11 +12714,6 @@
 							<ID>TECH_SEDENTARY_LIFESTYLE</ID>
 						</Has>
 					</bUnitToCity>
-					<Yields>
-						<iYield>1</iYield>
-						<iYield>1</iYield>
-						<iYield>4</iYield>
-					</Yields>
 				</Outcome>
 				<Outcome>
 					<OutcomeType>OUTCOME_HUNTING_KILL</OutcomeType>
@@ -14306,11 +12825,6 @@
 							<ID>TECH_SEDENTARY_LIFESTYLE</ID>
 						</Has>
 					</bUnitToCity>
-					<Yields>
-						<iYield>1</iYield>
-						<iYield>0</iYield>
-						<iYield>3</iYield>
-					</Yields>
 				</Outcome>
 				<Outcome>
 					<OutcomeType>OUTCOME_HUNTING_KILL</OutcomeType>
@@ -14451,26 +12965,6 @@
 							<ID>TECH_SEDENTARY_LIFESTYLE</ID>
 						</Has>
 					</bUnitToCity>
-					<Yields>
-						<iYield>
-							<Plus>
-								<Constant>20</Constant>
-								<Random>20</Random>
-							</Plus>
-						</iYield>
-						<iYield>
-							<Plus>
-								<Constant>5</Constant>
-								<Random>6</Random>
-							</Plus>
-						</iYield>
-						<iYield>
-							<Plus>
-								<Constant>50</Constant>
-								<Random>56</Random>
-							</Plus>
-						</iYield>
-					</Yields>
 				</Outcome>
 				<Outcome>
 					<OutcomeType>OUTCOME_HUNTING_KILL</OutcomeType>
@@ -14570,26 +13064,6 @@
 							<ID>TECH_SEDENTARY_LIFESTYLE</ID>
 						</Has>
 					</bUnitToCity>
-					<Yields>
-						<iYield>
-							<Plus>
-								<Constant>20</Constant>
-								<Random>20</Random>
-							</Plus>
-						</iYield>
-						<iYield>
-							<Plus>
-								<Constant>5</Constant>
-								<Random>6</Random>
-							</Plus>
-						</iYield>
-						<iYield>
-							<Plus>
-								<Constant>0</Constant>
-								<Random>2</Random>
-							</Plus>
-						</iYield>
-					</Yields>
 				</Outcome>
 				<Outcome>
 					<OutcomeType>OUTCOME_HUNTING_KILL</OutcomeType>
@@ -15002,11 +13476,6 @@
 							<ID>TECH_SEDENTARY_LIFESTYLE</ID>
 						</Has>
 					</bUnitToCity>
-					<Yields>
-						<iYield>1</iYield>
-						<iYield>1</iYield>
-						<iYield>4</iYield>
-					</Yields>
 				</Outcome>
 				<Outcome>
 					<OutcomeType>OUTCOME_HUNTING_KILL</OutcomeType>
@@ -15131,26 +13600,6 @@
 							<ID>TECH_SEDENTARY_LIFESTYLE</ID>
 						</Has>
 					</bUnitToCity>
-					<Yields>
-						<iYield>
-							<Plus>
-								<Constant>3</Constant>
-								<Random>2</Random>
-							</Plus>
-						</iYield>
-						<iYield>
-							<Plus>
-								<Constant>0</Constant>
-								<Random>1</Random>
-							</Plus>
-						</iYield>
-						<iYield>
-							<Plus>
-								<Constant>15</Constant>
-								<Random>22</Random>
-							</Plus>
-						</iYield>
-					</Yields>
 				</Outcome>
 				<Outcome>
 					<OutcomeType>OUTCOME_HUNTING_KILL</OutcomeType>
@@ -15164,7 +13613,7 @@
 						</iYield>
 						<iYield>
 							<Plus>
-								<Constant>0</Constant>
+								<Constant>1</Constant>
 								<Random>1</Random>
 							</Plus>
 						</iYield>
@@ -15271,11 +13720,6 @@
 							<ID>TECH_SEDENTARY_LIFESTYLE</ID>
 						</Has>
 					</bUnitToCity>
-					<Yields>
-						<iYield>1</iYield>
-						<iYield>1</iYield>
-						<iYield>6</iYield>
-					</Yields>
 				</Outcome>
 				<Outcome>
 					<OutcomeType>OUTCOME_HUNTING_KILL</OutcomeType>
@@ -15402,13 +13846,10 @@
 					<bUnitToCity>
 						<Constant>DONT_ESCORT_SUBDUED_SEA_ANIMAL</Constant>
 					</bUnitToCity>
-					<Yields>
-						<iYield>1</iYield>
-					</Yields>
 				</Outcome>
 				<Outcome>
 					<OutcomeType>OUTCOME_HUNTING_KILL</OutcomeType>
-					<iChance>80</iChance>
+					<iChance>85</iChance>
 					<Yields>
 						<iYield>1</iYield>
 					</Yields>
@@ -15525,26 +13966,6 @@
 							<ID>TECH_SEDENTARY_LIFESTYLE</ID>
 						</Has>
 					</bUnitToCity>
-					<Yields>
-						<iYield>
-							<Plus>
-								<Constant>1000</Constant>
-								<Random>1000</Random>
-							</Plus>
-						</iYield>
-						<iYield>
-							<Plus>
-								<Constant>500</Constant>
-								<Random>200</Random>
-							</Plus>
-						</iYield>
-						<iYield>
-							<Plus>
-								<Constant>118</Constant>
-								<Random>24</Random>
-							</Plus>
-						</iYield>
-					</Yields>
 				</Outcome>
 				<Outcome>
 					<OutcomeType>OUTCOME_HUNTING_KILL</OutcomeType>
@@ -15663,26 +14084,6 @@
 							<ID>TECH_SEDENTARY_LIFESTYLE</ID>
 						</Has>
 					</bUnitToCity>
-					<Yields>
-						<iYield>
-							<Plus>
-								<Constant>5</Constant>
-								<Random>5</Random>
-							</Plus>
-						</iYield>
-						<iYield>
-							<Plus>
-								<Constant>1</Constant>
-								<Random>1</Random>
-							</Plus>
-						</iYield>
-						<iYield>
-							<Plus>
-								<Constant>3</Constant>
-								<Random>1</Random>
-							</Plus>
-						</iYield>
-					</Yields>
 				</Outcome>
 				<Outcome>
 					<OutcomeType>OUTCOME_HUNTING_KILL</OutcomeType>
@@ -15850,26 +14251,6 @@
 							<ID>TECH_SEDENTARY_LIFESTYLE</ID>
 						</Has>
 					</bUnitToCity>
-					<Yields>
-						<iYield>
-							<Plus>
-								<Constant>10</Constant>
-								<Random>10</Random>
-							</Plus>
-						</iYield>
-						<iYield>
-							<Plus>
-								<Constant>2</Constant>
-								<Random>2</Random>
-							</Plus>
-						</iYield>
-						<iYield>
-							<Plus>
-								<Constant>3</Constant>
-								<Random>1</Random>
-							</Plus>
-						</iYield>
-					</Yields>
 				</Outcome>
 				<Outcome>
 					<OutcomeType>OUTCOME_HUNTING_KILL</OutcomeType>
@@ -15989,30 +14370,10 @@
 					<bUnitToCity>
 						<Constant>DONT_ESCORT_SUBDUED_SEA_ANIMAL</Constant>
 					</bUnitToCity>
-					<Yields>
-						<iYield>
-							<Plus>
-								<Constant>200</Constant>
-								<Random>400</Random>
-							</Plus>
-						</iYield>
-						<iYield>
-							<Plus>
-								<Constant>8</Constant>
-								<Random>16</Random>
-							</Plus>
-						</iYield>
-						<iYield>
-							<Plus>
-								<Constant>4</Constant>
-								<Random>4</Random>
-							</Plus>
-						</iYield>
-					</Yields>
 				</Outcome>
 				<Outcome>
 					<OutcomeType>OUTCOME_HUNTING_KILL</OutcomeType>
-					<iChance>80</iChance>
+					<iChance>90</iChance>
 					<Yields>
 						<iYield>
 							<Plus>
@@ -16194,7 +14555,7 @@
 				</Outcome>
 				<Outcome>
 					<OutcomeType>OUTCOME_HUNTING_KILL</OutcomeType>
-					<iChance>80</iChance>
+					<iChance>85</iChance>
 					<Yields>
 						<iYield>
 							<Plus>
@@ -16326,30 +14687,10 @@
 					<bUnitToCity>
 						<Constant>DONT_ESCORT_SUBDUED_SEA_ANIMAL</Constant>
 					</bUnitToCity>
-					<Yields>
-						<iYield>
-							<Plus>
-								<Constant>2000</Constant>
-								<Random>2000</Random>
-							</Plus>
-						</iYield>
-						<iYield>
-							<Plus>
-								<Constant>300</Constant>
-								<Random>300</Random>
-							</Plus>
-						</iYield>
-						<iYield>
-							<Plus>
-								<Constant>100</Constant>
-								<Random>100</Random>
-							</Plus>
-						</iYield>
-					</Yields>
 				</Outcome>
 				<Outcome>
 					<OutcomeType>OUTCOME_HUNTING_KILL</OutcomeType>
-					<iChance>95</iChance>
+					<iChance>85</iChance>
 					<Yields>
 						<iYield>
 							<Plus>
@@ -16476,26 +14817,6 @@
 							<ID>TECH_SEDENTARY_LIFESTYLE</ID>
 						</Has>
 					</bUnitToCity>
-					<Yields>
-						<iYield>
-							<Plus>
-								<Constant>200</Constant>
-								<Random>200</Random>
-							</Plus>
-						</iYield>
-						<iYield>
-							<Plus>
-								<Constant>2</Constant>
-								<Random>24</Random>
-							</Plus>
-						</iYield>
-						<iYield>
-							<Plus>
-								<Constant>5</Constant>
-								<Random>5</Random>
-							</Plus>
-						</iYield>
-					</Yields>
 				</Outcome>
 				<Outcome>
 					<OutcomeType>OUTCOME_HUNTING_KILL</OutcomeType>
@@ -16638,26 +14959,6 @@
 							<ID>TECH_SEDENTARY_LIFESTYLE</ID>
 						</Has>
 					</bUnitToCity>
-					<Yields>
-						<iYield>
-							<Plus>
-								<Constant>1</Constant>
-								<Random>9</Random>
-							</Plus>
-						</iYield>
-						<iYield>
-							<Plus>
-								<Constant>0</Constant>
-								<Random>4</Random>
-							</Plus>
-						</iYield>
-						<iYield>
-							<Plus>
-								<Constant>1</Constant>
-								<Random>2</Random>
-							</Plus>
-						</iYield>
-					</Yields>
 				</Outcome>
 				<Outcome>
 					<OutcomeType>OUTCOME_HUNTING_KILL</OutcomeType>
@@ -16773,26 +15074,6 @@
 							<ID>TECH_SEDENTARY_LIFESTYLE</ID>
 						</Has>
 					</bUnitToCity>
-					<Yields>
-						<iYield>
-							<Plus>
-								<Constant>180</Constant>
-								<Random>160</Random>
-							</Plus>
-						</iYield>
-						<iYield>
-							<Plus>
-								<Constant>20</Constant>
-								<Random>16</Random>
-							</Plus>
-						</iYield>
-						<iYield>
-							<Plus>
-								<Constant>10</Constant>
-								<Random>8</Random>
-							</Plus>
-						</iYield>
-					</Yields>
 				</Outcome>
 				<Outcome>
 					<OutcomeType>OUTCOME_HUNTING_KILL</OutcomeType>
@@ -16932,26 +15213,6 @@
 							<ID>TECH_SEDENTARY_LIFESTYLE</ID>
 						</Has>
 					</bUnitToCity>
-					<Yields>
-						<iYield>
-							<Plus>
-								<Constant>10</Constant>
-								<Random>10</Random>
-							</Plus>
-						</iYield>
-						<iYield>
-							<Plus>
-								<Constant>1</Constant>
-								<Random>2</Random>
-							</Plus>
-						</iYield>
-						<iYield>
-							<Plus>
-								<Constant>6</Constant>
-								<Random>3</Random>
-							</Plus>
-						</iYield>
-					</Yields>
 				</Outcome>
 				<Outcome>
 					<OutcomeType>OUTCOME_HUNTING_KILL</OutcomeType>
@@ -17075,26 +15336,6 @@
 							<ID>TECH_SEDENTARY_LIFESTYLE</ID>
 						</Has>
 					</bUnitToCity>
-					<Yields>
-						<iYield>
-							<Plus>
-								<Constant>90</Constant>
-								<Random>110</Random>
-							</Plus>
-						</iYield>
-						<iYield>
-							<Plus>
-								<Constant>9</Constant>
-								<Random>11</Random>
-							</Plus>
-						</iYield>
-						<iYield>
-							<Plus>
-								<Constant>9</Constant>
-								<Random>10</Random>
-							</Plus>
-						</iYield>
-					</Yields>
 				</Outcome>
 				<Outcome>
 					<OutcomeType>OUTCOME_HUNTING_KILL</OutcomeType>
@@ -17251,30 +15492,10 @@
 					<bUnitToCity>
 						<Constant>DONT_ESCORT_SUBDUED_SEA_ANIMAL</Constant>
 					</bUnitToCity>
-					<Yields>
-						<iYield>
-							<Plus>
-								<Constant>400</Constant>
-								<Random>400</Random>
-							</Plus>
-						</iYield>
-						<iYield>
-							<Plus>
-								<Constant>40</Constant>
-								<Random>40</Random>
-							</Plus>
-						</iYield>
-						<iYield>
-							<Plus>
-								<Constant>25</Constant>
-								<Random>25</Random>
-							</Plus>
-						</iYield>
-					</Yields>
 				</Outcome>
 				<Outcome>
 					<OutcomeType>OUTCOME_HUNTING_KILL</OutcomeType>
-					<iChance>80</iChance>
+					<iChance>90</iChance>
 					<Yields>
 						<iYield>
 							<Plus>
@@ -17431,26 +15652,6 @@
 							<ID>TECH_SEDENTARY_LIFESTYLE</ID>
 						</Has>
 					</bUnitToCity>
-					<Yields>
-						<iYield>
-							<Plus>
-								<Constant>50</Constant>
-								<Random>150</Random>
-							</Plus>
-						</iYield>
-						<iYield>
-							<Plus>
-								<Constant>17</Constant>
-								<Random>18</Random>
-							</Plus>
-						</iYield>
-						<iYield>
-							<Plus>
-								<Constant>11</Constant>
-								<Random>13</Random>
-							</Plus>
-						</iYield>
-					</Yields>
 				</Outcome>
 				<Outcome>
 					<OutcomeType>OUTCOME_HUNTING_KILL</OutcomeType>
@@ -17562,9 +15763,6 @@
 							<ID>TECH_SEDENTARY_LIFESTYLE</ID>
 						</Has>
 					</bUnitToCity>
-					<Yields>
-						<iYield>1</iYield>
-					</Yields>
 				</Outcome>
 				<Outcome>
 					<OutcomeType>OUTCOME_HUNTING_KILL</OutcomeType>
@@ -17654,26 +15852,6 @@
 							<ID>TECH_SEDENTARY_LIFESTYLE</ID>
 						</Has>
 					</bUnitToCity>
-					<Yields>
-						<iYield>
-							<Plus>
-								<Constant>100</Constant>
-								<Random>75</Random>
-							</Plus>
-						</iYield>
-						<iYield>
-							<Plus>
-								<Constant>10</Constant>
-								<Random>7</Random>
-							</Plus>
-						</iYield>
-						<iYield>
-							<Plus>
-								<Constant>6</Constant>
-								<Random>2</Random>
-							</Plus>
-						</iYield>
-					</Yields>
 				</Outcome>
 				<Outcome>
 					<OutcomeType>OUTCOME_HUNTING_KILL</OutcomeType>
@@ -17777,11 +15955,6 @@
 							<ID>TECH_SEDENTARY_LIFESTYLE</ID>
 						</Has>
 					</bUnitToCity>
-					<Yields>
-						<iYield>1</iYield>
-						<iYield>0</iYield>
-						<iYield>3</iYield>
-					</Yields>
 				</Outcome>
 				<Outcome>
 					<OutcomeType>OUTCOME_HUNTING_KILL</OutcomeType>
@@ -17870,26 +16043,6 @@
 							<ID>TECH_SEDENTARY_LIFESTYLE</ID>
 						</Has>
 					</bUnitToCity>
-					<Yields>
-						<iYield>
-							<Plus>
-								<Constant>10</Constant>
-								<Random>10</Random>
-							</Plus>
-						</iYield>
-						<iYield>
-							<Plus>
-								<Constant>1</Constant>
-								<Random>5</Random>
-							</Plus>
-						</iYield>
-						<iYield>
-							<Plus>
-								<Constant>2</Constant>
-								<Random>4</Random>
-							</Plus>
-						</iYield>
-					</Yields>
 				</Outcome>
 				<Outcome>
 					<OutcomeType>OUTCOME_HUNTING_KILL</OutcomeType>
@@ -18032,30 +16185,10 @@
 					<bUnitToCity>
 						<Constant>DONT_ESCORT_SUBDUED_SEA_ANIMAL</Constant>
 					</bUnitToCity>
-					<Yields>
-						<iYield>
-							<Plus>
-								<Constant>2000</Constant>
-								<Random>2000</Random>
-							</Plus>
-						</iYield>
-						<iYield>
-							<Plus>
-								<Constant>300</Constant>
-								<Random>300</Random>
-							</Plus>
-						</iYield>
-						<iYield>
-							<Plus>
-								<Constant>100</Constant>
-								<Random>30</Random>
-							</Plus>
-						</iYield>
-					</Yields>
 				</Outcome>
 				<Outcome>
 					<OutcomeType>OUTCOME_HUNTING_KILL</OutcomeType>
-					<iChance>80</iChance>
+					<iChance>90</iChance>
 					<Yields>
 						<iYield>
 							<Plus>
@@ -18184,26 +16317,6 @@
 							<ID>TECH_SEDENTARY_LIFESTYLE</ID>
 						</Has>
 					</bUnitToCity>
-					<Yields>
-						<iYield>
-							<Plus>
-								<Constant>40</Constant>
-								<Random>60</Random>
-							</Plus>
-						</iYield>
-						<iYield>
-							<Plus>
-								<Constant>6</Constant>
-								<Random>3</Random>
-							</Plus>
-						</iYield>
-						<iYield>
-							<Plus>
-								<Constant>7</Constant>
-								<Random>6</Random>
-							</Plus>
-						</iYield>
-					</Yields>
 				</Outcome>
 				<Outcome>
 					<OutcomeType>OUTCOME_HUNTING_KILL</OutcomeType>
@@ -18334,11 +16447,6 @@
 							<ID>TECH_SEDENTARY_LIFESTYLE</ID>
 						</Has>
 					</bUnitToCity>
-					<Yields>
-						<iYield>1</iYield>
-						<iYield>0</iYield>
-						<iYield>3</iYield>
-					</Yields>
 				</Outcome>
 				<Outcome>
 					<OutcomeType>OUTCOME_HUNTING_KILL</OutcomeType>
@@ -18441,26 +16549,6 @@
 							<ID>TECH_SEDENTARY_LIFESTYLE</ID>
 						</Has>
 					</bUnitToCity>
-					<Yields>
-						<iYield>
-							<Plus>
-								<Constant>30</Constant>
-								<Random>20</Random>
-							</Plus>
-						</iYield>
-						<iYield>
-							<Plus>
-								<Constant>3</Constant>
-								<Random>2</Random>
-							</Plus>
-						</iYield>
-						<iYield>
-							<Plus>
-								<Constant>8</Constant>
-								<Random>1</Random>
-							</Plus>
-						</iYield>
-					</Yields>
 				</Outcome>
 				<Outcome>
 					<OutcomeType>OUTCOME_HUNTING_KILL</OutcomeType>
@@ -18478,6 +16566,12 @@
 								<Random>1</Random>
 							</Plus>
 						</iYield>
+                        <iYield>
+                            <Plus>
+                                <Constant>4</Constant>
+                                <Random>4</Random>
+                            </Plus>
+                        </iYield>
 					</Yields>
 				</Outcome>
 			</KillOutcomes>
@@ -18567,26 +16661,6 @@
 							<ID>TECH_SEDENTARY_LIFESTYLE</ID>
 						</Has>
 					</bUnitToCity>
-					<Yields>
-						<iYield>
-							<Plus>
-								<Constant>10</Constant>
-								<Random>15</Random>
-							</Plus>
-						</iYield>
-						<iYield>
-							<Plus>
-								<Constant>2</Constant>
-								<Random>6</Random>
-							</Plus>
-						</iYield>
-						<iYield>
-							<Plus>
-								<Constant>46</Constant>
-								<Random>64</Random>
-							</Plus>
-						</iYield>
-					</Yields>
 				</Outcome>
 				<Outcome>
 					<OutcomeType>OUTCOME_HUNTING_KILL</OutcomeType>
@@ -18709,16 +16783,6 @@
 							<ID>TECH_SEDENTARY_LIFESTYLE</ID>
 						</Has>
 					</bUnitToCity>
-					<Yields>
-						<iYield>1</iYield>
-						<iYield>1</iYield>
-						<iYield>
-							<Plus>
-								<Constant>5</Constant>
-								<Random>3</Random>
-							</Plus>
-						</iYield>
-					</Yields>
 				</Outcome>
 				<Outcome>
 					<OutcomeType>OUTCOME_HUNTING_KILL</OutcomeType>
@@ -18843,16 +16907,6 @@
 							<ID>TECH_SEDENTARY_LIFESTYLE</ID>
 						</Has>
 					</bUnitToCity>
-					<Yields>
-						<iYield>
-							<Plus>
-								<Constant>1</Constant>
-								<Random>1</Random>
-							</Plus>
-						</iYield>
-						<iYield>1</iYield>
-						<iYield>6</iYield>
-					</Yields>
 				</Outcome>
 				<Outcome>
 					<OutcomeType>OUTCOME_HUNTING_KILL</OutcomeType>
@@ -18990,26 +17044,6 @@
 							<ID>TECH_SEDENTARY_LIFESTYLE</ID>
 						</Has>
 					</bUnitToCity>
-					<Yields>
-						<iYield>
-							<Plus>
-								<Constant>1</Constant>
-								<Random>9</Random>
-							</Plus>
-						</iYield>
-						<iYield>
-							<Plus>
-								<Constant>0</Constant>
-								<Random>3</Random>
-							</Plus>
-						</iYield>
-						<iYield>
-							<Plus>
-								<Constant>3</Constant>
-								<Random>1</Random>
-							</Plus>
-						</iYield>
-					</Yields>
 				</Outcome>
 				<Outcome>
 					<OutcomeType>OUTCOME_HUNTING_KILL</OutcomeType>
@@ -19130,11 +17164,6 @@
 							<ID>TECH_SEDENTARY_LIFESTYLE</ID>
 						</Has>
 					</bUnitToCity>
-					<Yields>
-						<iYield>1</iYield>
-						<iYield>1</iYield>
-						<iYield>6</iYield>
-					</Yields>
 				</Outcome>
 				<Outcome>
 					<OutcomeType>OUTCOME_HUNTING_KILL</OutcomeType>
@@ -19254,11 +17283,6 @@
 							<ID>TECH_SEDENTARY_LIFESTYLE</ID>
 						</Has>
 					</bUnitToCity>
-					<Yields>
-						<iYield>1</iYield>
-						<iYield>0</iYield>
-						<iYield>4</iYield>
-					</Yields>
 				</Outcome>
 				<Outcome>
 					<OutcomeType>OUTCOME_HUNTING_KILL</OutcomeType>
@@ -19391,26 +17415,6 @@
 							<ID>TECH_SEDENTARY_LIFESTYLE</ID>
 						</Has>
 					</bUnitToCity>
-					<Yields>
-						<iYield>
-							<Plus>
-								<Constant>20</Constant>
-								<Random>230</Random>
-							</Plus>
-						</iYield>
-						<iYield>
-							<Plus>
-								<Constant>3</Constant>
-								<Random>12</Random>
-							</Plus>
-						</iYield>
-						<iYield>
-							<Plus>
-								<Constant>2</Constant>
-								<Random>3</Random>
-							</Plus>
-						</iYield>
-					</Yields>
 				</Outcome>
 				<Outcome>
 					<OutcomeType>OUTCOME_HUNTING_KILL</OutcomeType>
@@ -19537,21 +17541,6 @@
 							<ID>TECH_SEDENTARY_LIFESTYLE</ID>
 						</Has>
 					</bUnitToCity>
-					<Yields>
-						<iYield>
-							<Plus>
-								<Constant>1</Constant>
-								<Random>1</Random>
-							</Plus>
-						</iYield>
-						<iYield>0</iYield>
-						<iYield>
-							<Plus>
-								<Constant>2</Constant>
-								<Random>3</Random>
-							</Plus>
-						</iYield>
-					</Yields>
 				</Outcome>
 				<Outcome>
 					<OutcomeType>OUTCOME_HUNTING_KILL</OutcomeType>
@@ -19727,26 +17716,6 @@
 							<ID>TECH_SEDENTARY_LIFESTYLE</ID>
 						</Has>
 					</bUnitToCity>
-					<Yields>
-						<iYield>
-							<Plus>
-								<Constant>100</Constant>
-								<Random>100</Random>
-							</Plus>
-						</iYield>
-						<iYield>
-							<Plus>
-								<Constant>25</Constant>
-								<Random>35</Random>
-							</Plus>
-						</iYield>
-						<iYield>
-							<Plus>
-								<Constant>16</Constant>
-								<Random>8</Random>
-							</Plus>
-						</iYield>
-					</Yields>
 				</Outcome>
 				<Outcome>
 					<OutcomeType>OUTCOME_HUNTING_KILL</OutcomeType>
@@ -19848,16 +17817,6 @@
 							<ID>TECH_SEDENTARY_LIFESTYLE</ID>
 						</Has>
 					</bUnitToCity>
-					<Yields>
-						<iYield>
-							<Plus>
-								<Constant>1</Constant>
-								<Random>1</Random>
-							</Plus>
-						</iYield>
-						<iYield>0</iYield>
-						<iYield>3</iYield>
-					</Yields>
 				</Outcome>
 				<Outcome>
 					<OutcomeType>OUTCOME_HUNTING_KILL</OutcomeType>
@@ -19983,26 +17942,6 @@
 							<ID>TECH_SEDENTARY_LIFESTYLE</ID>
 						</Has>
 					</bUnitToCity>
-					<Yields>
-						<iYield>
-							<Plus>
-								<Constant>20</Constant>
-								<Random>20</Random>
-							</Plus>
-						</iYield>
-						<iYield>
-							<Plus>
-								<Constant>10</Constant>
-								<Random>10</Random>
-							</Plus>
-						</iYield>
-						<iYield>
-							<Plus>
-								<Constant>4</Constant>
-								<Random>4</Random>
-							</Plus>
-						</iYield>
-					</Yields>
 				</Outcome>
 				<Outcome>
 					<OutcomeType>OUTCOME_HUNTING_KILL</OutcomeType>
@@ -20148,11 +18087,6 @@
 							<ID>TECH_SEDENTARY_LIFESTYLE</ID>
 						</Has>
 					</bUnitToCity>
-					<Yields>
-						<iYield>1</iYield>
-						<iYield>1</iYield>
-						<iYield>5</iYield>
-					</Yields>
 				</Outcome>
 				<Outcome>
 					<OutcomeType>OUTCOME_HUNTING_KILL</OutcomeType>
@@ -20244,11 +18178,6 @@
 							<ID>TECH_SEDENTARY_LIFESTYLE</ID>
 						</Has>
 					</bUnitToCity>
-					<Yields>
-						<iYield>1</iYield>
-						<iYield>0</iYield>
-						<iYield>3</iYield>
-					</Yields>
 				</Outcome>
 				<Outcome>
 					<OutcomeType>OUTCOME_HUNTING_KILL</OutcomeType>
@@ -20354,21 +18283,6 @@
 							<ID>TECH_SEDENTARY_LIFESTYLE</ID>
 						</Has>
 					</bUnitToCity>
-					<Yields>
-						<iYield>
-							<Plus>
-								<Constant>1</Constant>
-								<Random>2</Random>
-							</Plus>
-						</iYield>
-						<iYield>1</iYield>
-						<iYield>
-							<Plus>
-								<Constant>5</Constant>
-								<Random>2</Random>
-							</Plus>
-						</iYield>
-					</Yields>
 				</Outcome>
 				<Outcome>
 					<OutcomeType>OUTCOME_HUNTING_KILL</OutcomeType>
@@ -20492,16 +18406,6 @@
 							<ID>TECH_SEDENTARY_LIFESTYLE</ID>
 						</Has>
 					</bUnitToCity>
-					<Yields>
-						<iYield>
-							<Plus>
-								<Constant>2</Constant>
-								<Random>3</Random>
-							</Plus>
-						</iYield>
-						<iYield>1</iYield>
-						<iYield>3</iYield>
-					</Yields>
 				</Outcome>
 				<Outcome>
 					<OutcomeType>OUTCOME_HUNTING_KILL</OutcomeType>
@@ -20618,11 +18522,6 @@
 							<ID>TECH_SEDENTARY_LIFESTYLE</ID>
 						</Has>
 					</bUnitToCity>
-					<Yields>
-						<iYield>1</iYield>
-						<iYield>1</iYield>
-						<iYield>4</iYield>
-					</Yields>
 				</Outcome>
 				<Outcome>
 					<OutcomeType>OUTCOME_HUNTING_KILL</OutcomeType>
@@ -20729,30 +18628,10 @@
 					<bUnitToCity>
 						<Constant>DONT_ESCORT_SUBDUED_SEA_ANIMAL</Constant>
 					</bUnitToCity>
-					<Yields>
-						<iYield>
-							<Plus>
-								<Constant>10</Constant>
-								<Random>15</Random>
-							</Plus>
-						</iYield>
-						<iYield>
-							<Plus>
-								<Constant>2</Constant>
-								<Random>2</Random>
-							</Plus>
-						</iYield>
-						<iYield>
-							<Plus>
-								<Constant>4</Constant>
-								<Random>1</Random>
-							</Plus>
-						</iYield>
-					</Yields>
 				</Outcome>
 				<Outcome>
 					<OutcomeType>OUTCOME_HUNTING_KILL</OutcomeType>
-					<iChance>80</iChance>
+					<iChance>90</iChance>
 					<Yields>
 						<iYield>
 							<Plus>
@@ -20884,11 +18763,6 @@
 							<ID>TECH_SEDENTARY_LIFESTYLE</ID>
 						</Has>
 					</bUnitToCity>
-					<Yields>
-						<iYield>1</iYield>
-						<iYield>1</iYield>
-						<iYield>4</iYield>
-					</Yields>
 				</Outcome>
 				<Outcome>
 					<OutcomeType>OUTCOME_HUNTING_KILL</OutcomeType>
@@ -21017,21 +18891,6 @@
 							<ID>TECH_SEDENTARY_LIFESTYLE</ID>
 						</Has>
 					</bUnitToCity>
-					<Yields>
-						<iYield>
-							<Plus>
-								<Constant>1</Constant>
-								<Random>2</Random>
-							</Plus>
-						</iYield>
-						<iYield>1</iYield>
-						<iYield>
-							<Plus>
-								<Constant>7</Constant>
-								<Random>3</Random>
-							</Plus>
-						</iYield>
-					</Yields>
 				</Outcome>
 				<Outcome>
 					<OutcomeType>OUTCOME_HUNTING_KILL</OutcomeType>
@@ -21144,21 +19003,6 @@
 							<ID>TECH_SEDENTARY_LIFESTYLE</ID>
 						</Has>
 					</bUnitToCity>
-					<Yields>
-						<iYield>
-							<Plus>
-								<Constant>1</Constant>
-								<Random>1</Random>
-							</Plus>
-						</iYield>
-						<iYield>1</iYield>
-						<iYield>
-							<Plus>
-								<Constant>7</Constant>
-								<Random>1</Random>
-							</Plus>
-						</iYield>
-					</Yields>
 				</Outcome>
 				<Outcome>
 					<OutcomeType>OUTCOME_HUNTING_KILL</OutcomeType>
@@ -21283,26 +19127,6 @@
 							<ID>TECH_SEDENTARY_LIFESTYLE</ID>
 						</Has>
 					</bUnitToCity>
-					<Yields>
-						<iYield>
-							<Plus>
-								<Constant>10</Constant>
-								<Random>10</Random>
-							</Plus>
-						</iYield>
-						<iYield>
-							<Plus>
-								<Constant>1</Constant>
-								<Random>2</Random>
-							</Plus>
-						</iYield>
-						<iYield>
-							<Plus>
-								<Constant>5</Constant>
-								<Random>1</Random>
-							</Plus>
-						</iYield>
-					</Yields>
 				</Outcome>
 				<Outcome>
 					<OutcomeType>OUTCOME_HUNTING_KILL</OutcomeType>
@@ -21422,26 +19246,6 @@
 							<ID>TECH_SEDENTARY_LIFESTYLE</ID>
 						</Has>
 					</bUnitToCity>
-					<Yields>
-						<iYield>
-							<Plus>
-								<Constant>500</Constant>
-								<Random>500</Random>
-							</Plus>
-						</iYield>
-						<iYield>
-							<Plus>
-								<Constant>200</Constant>
-								<Random>150</Random>
-							</Plus>
-						</iYield>
-						<iYield>
-							<Plus>
-								<Constant>32</Constant>
-								<Random>16</Random>
-							</Plus>
-						</iYield>
-					</Yields>
 				</Outcome>
 				<Outcome>
 					<OutcomeType>OUTCOME_HUNTING_KILL</OutcomeType>
@@ -21559,26 +19363,6 @@
 							<ID>TECH_SEDENTARY_LIFESTYLE</ID>
 						</Has>
 					</bUnitToCity>
-					<Yields>
-						<iYield>
-							<Plus>
-								<Constant>200</Constant>
-								<Random>200</Random>
-							</Plus>
-						</iYield>
-						<iYield>
-							<Plus>
-								<Constant>60</Constant>
-								<Random>40</Random>
-							</Plus>
-						</iYield>
-						<iYield>
-							<Plus>
-								<Constant>10</Constant>
-								<Random>9</Random>
-							</Plus>
-						</iYield>
-					</Yields>
 				</Outcome>
 				<Outcome>
 					<OutcomeType>OUTCOME_HUNTING_KILL</OutcomeType>
@@ -21697,26 +19481,6 @@
 							<ID>TECH_SEDENTARY_LIFESTYLE</ID>
 						</Has>
 					</bUnitToCity>
-					<Yields>
-						<iYield>
-							<Plus>
-								<Constant>400</Constant>
-								<Random>200</Random>
-							</Plus>
-						</iYield>
-						<iYield>
-							<Plus>
-								<Constant>120</Constant>
-								<Random>90</Random>
-							</Plus>
-						</iYield>
-						<iYield>
-							<Plus>
-								<Constant>12</Constant>
-								<Random>12</Random>
-							</Plus>
-						</iYield>
-					</Yields>
 				</Outcome>
 				<Outcome>
 					<OutcomeType>OUTCOME_HUNTING_KILL</OutcomeType>
@@ -21833,26 +19597,6 @@
 							<ID>TECH_SEDENTARY_LIFESTYLE</ID>
 						</Has>
 					</bUnitToCity>
-					<Yields>
-						<iYield>
-							<Plus>
-								<Constant>200</Constant>
-								<Random>300</Random>
-							</Plus>
-						</iYield>
-						<iYield>
-							<Plus>
-								<Constant>70</Constant>
-								<Random>110</Random>
-							</Plus>
-						</iYield>
-						<iYield>
-							<Plus>
-								<Constant>10</Constant>
-								<Random>14</Random>
-							</Plus>
-						</iYield>
-					</Yields>
 				</Outcome>
 				<Outcome>
 					<OutcomeType>OUTCOME_HUNTING_KILL</OutcomeType>
@@ -21979,26 +19723,6 @@
 							<ID>TECH_SEDENTARY_LIFESTYLE</ID>
 						</Has>
 					</bUnitToCity>
-					<Yields>
-						<iYield>
-							<Plus>
-								<Constant>400</Constant>
-								<Random>200</Random>
-							</Plus>
-						</iYield>
-						<iYield>
-							<Plus>
-								<Constant>140</Constant>
-								<Random>70</Random>
-							</Plus>
-						</iYield>
-						<iYield>
-							<Plus>
-								<Constant>16</Constant>
-								<Random>16</Random>
-							</Plus>
-						</iYield>
-					</Yields>
 				</Outcome>
 				<Outcome>
 					<OutcomeType>OUTCOME_HUNTING_KILL</OutcomeType>
@@ -22159,26 +19883,6 @@
 							<ID>TECH_SEDENTARY_LIFESTYLE</ID>
 						</Has>
 					</bUnitToCity>
-					<Yields>
-						<iYield>
-							<Plus>
-								<Constant>100</Constant>
-								<Random>100</Random>
-							</Plus>
-						</iYield>
-						<iYield>
-							<Plus>
-								<Constant>40</Constant>
-								<Random>40</Random>
-							</Plus>
-						</iYield>
-						<iYield>
-							<Plus>
-								<Constant>14</Constant>
-								<Random>28</Random>
-							</Plus>
-						</iYield>
-					</Yields>
 				</Outcome>
 				<Outcome>
 					<OutcomeType>OUTCOME_HUNTING_KILL</OutcomeType>
@@ -22341,26 +20045,6 @@
 							<ID>TECH_SEDENTARY_LIFESTYLE</ID>
 						</Has>
 					</bUnitToCity>
-					<Yields>
-						<iYield>
-							<Plus>
-								<Constant>10</Constant>
-								<Random>40</Random>
-							</Plus>
-						</iYield>
-						<iYield>
-							<Plus>
-								<Constant>4</Constant>
-								<Random>16</Random>
-							</Plus>
-						</iYield>
-						<iYield>
-							<Plus>
-								<Constant>8</Constant>
-								<Random>18</Random>
-							</Plus>
-						</iYield>
-					</Yields>
 				</Outcome>
 				<Outcome>
 					<OutcomeType>OUTCOME_HUNTING_KILL</OutcomeType>
@@ -22507,21 +20191,6 @@
 							<ID>TECH_SEDENTARY_LIFESTYLE</ID>
 						</Has>
 					</bUnitToCity>
-					<Yields>
-						<iYield>
-							<Plus>
-								<Constant>1</Constant>
-								<Random>1</Random>
-							</Plus>
-						</iYield>
-						<iYield>0</iYield>
-						<iYield>
-							<Plus>
-								<Constant>0</Constant>
-								<Random>2</Random>
-							</Plus>
-						</iYield>
-					</Yields>
 				</Outcome>
 				<Outcome>
 					<OutcomeType>OUTCOME_HUNTING_KILL</OutcomeType>
@@ -22639,26 +20308,6 @@
 							<ID>TECH_SEDENTARY_LIFESTYLE</ID>
 						</Has>
 					</bUnitToCity>
-					<Yields>
-						<iYield>
-							<Plus>
-								<Constant>60</Constant>
-								<Random>40</Random>
-							</Plus>
-						</iYield>
-						<iYield>
-							<Plus>
-								<Constant>10</Constant>
-								<Random>8</Random>
-							</Plus>
-						</iYield>
-						<iYield>
-							<Plus>
-								<Constant>64</Constant>
-								<Random>128</Random>
-							</Plus>
-						</iYield>
-					</Yields>
 				</Outcome>
 				<Outcome>
 					<OutcomeType>OUTCOME_HUNTING_KILL</OutcomeType>
@@ -22803,26 +20452,6 @@
 							<ID>TECH_SEDENTARY_LIFESTYLE</ID>
 						</Has>
 					</bUnitToCity>
-					<Yields>
-						<iYield>
-							<Plus>
-								<Constant>10</Constant>
-								<Random>20</Random>
-							</Plus>
-						</iYield>
-						<iYield>
-							<Plus>
-								<Constant>1</Constant>
-								<Random>3</Random>
-							</Plus>
-						</iYield>
-						<iYield>
-							<Plus>
-								<Constant>5</Constant>
-								<Random>4</Random>
-							</Plus>
-						</iYield>
-					</Yields>
 				</Outcome>
 				<Outcome>
 					<OutcomeType>OUTCOME_HUNTING_KILL</OutcomeType>
@@ -22953,30 +20582,10 @@
 					<bUnitToCity>
 						<Constant>DONT_ESCORT_SUBDUED_SEA_ANIMAL</Constant>
 					</bUnitToCity>
-					<Yields>
-						<iYield>
-							<Plus>
-								<Constant>100</Constant>
-								<Random>100</Random>
-							</Plus>
-						</iYield>
-						<iYield>
-							<Plus>
-								<Constant>40</Constant>
-								<Random>40</Random>
-							</Plus>
-						</iYield>
-						<iYield>
-							<Plus>
-								<Constant>12</Constant>
-								<Random>26</Random>
-							</Plus>
-						</iYield>
-					</Yields>
 				</Outcome>
 				<Outcome>
 					<OutcomeType>OUTCOME_HUNTING_KILL</OutcomeType>
-					<iChance>95</iChance>
+					<iChance>85</iChance>
 					<Yields>
 						<iYield>
 							<Plus>
@@ -23111,30 +20720,10 @@
 					<bUnitToCity>
 						<Constant>DONT_ESCORT_SUBDUED_SEA_ANIMAL</Constant>
 					</bUnitToCity>
-					<Yields>
-						<iYield>
-							<Plus>
-								<Constant>50</Constant>
-								<Random>150</Random>
-							</Plus>
-						</iYield>
-						<iYield>
-							<Plus>
-								<Constant>4</Constant>
-								<Random>12</Random>
-							</Plus>
-						</iYield>
-						<iYield>
-							<Plus>
-								<Constant>15</Constant>
-								<Random>30</Random>
-							</Plus>
-						</iYield>
-					</Yields>
 				</Outcome>
 				<Outcome>
 					<OutcomeType>OUTCOME_HUNTING_KILL</OutcomeType>
-					<iChance>85</iChance>
+					<iChance>90</iChance>
 					<Yields>
 						<iYield>
 							<Plus>
@@ -23260,21 +20849,6 @@
 							<ID>TECH_SEDENTARY_LIFESTYLE</ID>
 						</Has>
 					</bUnitToCity>
-					<Yields>
-						<iYield>
-							<Plus>
-								<Constant>1</Constant>
-								<Random>1</Random>
-							</Plus>
-						</iYield>
-						<iYield>1</iYield>
-						<iYield>
-							<Plus>
-								<Constant>5</Constant>
-								<Random>1</Random>
-							</Plus>
-						</iYield>
-					</Yields>
 				</Outcome>
 				<Outcome>
 					<OutcomeType>OUTCOME_HUNTING_KILL</OutcomeType>
@@ -23435,26 +21009,6 @@
 							<ID>TECH_SEDENTARY_LIFESTYLE</ID>
 						</Has>
 					</bUnitToCity>
-					<Yields>
-						<iYield>
-							<Plus>
-								<Constant>20</Constant>
-								<Random>80</Random>
-							</Plus>
-						</iYield>
-						<iYield>
-							<Plus>
-								<Constant>5</Constant>
-								<Random>20</Random>
-							</Plus>
-						</iYield>
-						<iYield>
-							<Plus>
-								<Constant>8</Constant>
-								<Random>10</Random>
-							</Plus>
-						</iYield>
-					</Yields>
 				</Outcome>
 				<Outcome>
 					<OutcomeType>OUTCOME_HUNTING_KILL</OutcomeType>
@@ -23607,30 +21161,10 @@
 					<bUnitToCity>
 						<Constant>DONT_ESCORT_SUBDUED_SEA_ANIMAL</Constant>
 					</bUnitToCity>
-					<Yields>
-						<iYield>
-							<Plus>
-								<Constant>20</Constant>
-								<Random>80</Random>
-							</Plus>
-						</iYield>
-						<iYield>
-							<Plus>
-								<Constant>5</Constant>
-								<Random>20</Random>
-							</Plus>
-						</iYield>
-						<iYield>
-							<Plus>
-								<Constant>8</Constant>
-								<Random>10</Random>
-							</Plus>
-						</iYield>
-					</Yields>
 				</Outcome>
 				<Outcome>
 					<OutcomeType>OUTCOME_HUNTING_KILL</OutcomeType>
-					<iChance>80</iChance>
+					<iChance>90</iChance>
 					<Yields>
 						<iYield>
 							<Plus>
@@ -23758,26 +21292,6 @@
 					<bUnitToCity>
 						<Constant>DONT_ESCORT_SUBDUED_SEA_ANIMAL</Constant>
 					</bUnitToCity>
-					<Yields>
-						<iYield>
-							<Plus>
-								<Constant>4</Constant>
-								<Random>11</Random>
-							</Plus>
-						</iYield>
-						<iYield>
-							<Plus>
-								<Constant>1</Constant>
-								<Random>2</Random>
-							</Plus>
-						</iYield>
-						<iYield>
-							<Plus>
-								<Constant>9</Constant>
-								<Random>1</Random>
-							</Plus>
-						</iYield>
-					</Yields>
 				</Outcome>
 				<Outcome>
 					<OutcomeType>OUTCOME_HUNTING_KILL</OutcomeType>
@@ -23928,30 +21442,10 @@
 					<bUnitToCity>
 						<Constant>DONT_ESCORT_SUBDUED_SEA_ANIMAL</Constant>
 					</bUnitToCity>
-					<Yields>
-						<iYield>
-							<Plus>
-								<Constant>15</Constant>
-								<Random>185</Random>
-							</Plus>
-						</iYield>
-						<iYield>
-							<Plus>
-								<Constant>2</Constant>
-								<Random>70</Random>
-							</Plus>
-						</iYield>
-						<iYield>
-							<Plus>
-								<Constant>5</Constant>
-								<Random>18</Random>
-							</Plus>
-						</iYield>
-					</Yields>
 				</Outcome>
 				<Outcome>
 					<OutcomeType>OUTCOME_HUNTING_KILL</OutcomeType>
-					<iChance>80</iChance>
+					<iChance>90</iChance>
 					<Yields>
 						<iYield>
 							<Plus>
@@ -24089,11 +21583,6 @@
 							<ID>TECH_SEDENTARY_LIFESTYLE</ID>
 						</Has>
 					</bUnitToCity>
-					<Yields>
-						<iYield>1</iYield>
-						<iYield>1</iYield>
-						<iYield>5</iYield>
-					</Yields>
 				</Outcome>
 				<Outcome>
 					<OutcomeType>OUTCOME_HUNTING_KILL</OutcomeType>
@@ -24240,30 +21729,10 @@
 					<bUnitToCity>
 						<Constant>DONT_ESCORT_SUBDUED_SEA_ANIMAL</Constant>
 					</bUnitToCity>
-					<Yields>
-						<iYield>
-							<Plus>
-								<Constant>5</Constant>
-								<Random>25</Random>
-							</Plus>
-						</iYield>
-						<iYield>
-							<Plus>
-								<Constant>1</Constant>
-								<Random>6</Random>
-							</Plus>
-						</iYield>
-						<iYield>
-							<Plus>
-								<Constant>2</Constant>
-								<Random>12</Random>
-							</Plus>
-						</iYield>
-					</Yields>
 				</Outcome>
 				<Outcome>
 					<OutcomeType>OUTCOME_HUNTING_KILL</OutcomeType>
-					<iChance>80</iChance>
+					<iChance>90</iChance>
 					<Yields>
 						<iYield>
 							<Plus>
@@ -24388,26 +21857,6 @@
 							<ID>TECH_SEDENTARY_LIFESTYLE</ID>
 						</Has>
 					</bUnitToCity>
-					<Yields>
-						<iYield>
-							<Plus>
-								<Constant>70</Constant>
-								<Random>50</Random>
-							</Plus>
-						</iYield>
-						<iYield>
-							<Plus>
-								<Constant>11</Constant>
-								<Random>12</Random>
-							</Plus>
-						</iYield>
-						<iYield>
-							<Plus>
-								<Constant>74</Constant>
-								<Random>70</Random>
-							</Plus>
-						</iYield>
-					</Yields>
 				</Outcome>
 				<Outcome>
 					<OutcomeType>OUTCOME_HUNTING_KILL</OutcomeType>
@@ -24524,21 +21973,6 @@
 							<ID>TECH_SEDENTARY_LIFESTYLE</ID>
 						</Has>
 					</bUnitToCity>
-					<Yields>
-						<iYield>
-							<Plus>
-								<Constant>1</Constant>
-								<Random>1</Random>
-							</Plus>
-						</iYield>
-						<iYield>1</iYield>
-						<iYield>
-							<Plus>
-								<Constant>4</Constant>
-								<Random>1</Random>
-							</Plus>
-						</iYield>
-					</Yields>
 				</Outcome>
 				<Outcome>
 					<OutcomeType>OUTCOME_HUNTING_KILL</OutcomeType>
@@ -24644,26 +22078,6 @@
 							<ID>TECH_SEDENTARY_LIFESTYLE</ID>
 						</Has>
 					</bUnitToCity>
-					<Yields>
-						<iYield>
-							<Plus>
-								<Constant>20</Constant>
-								<Random>20</Random>
-							</Plus>
-						</iYield>
-						<iYield>
-							<Plus>
-								<Constant>6</Constant>
-								<Random>6</Random>
-							</Plus>
-						</iYield>
-						<iYield>
-							<Plus>
-								<Constant>8</Constant>
-								<Random>16</Random>
-							</Plus>
-						</iYield>
-					</Yields>
 				</Outcome>
 				<Outcome>
 					<OutcomeType>OUTCOME_HUNTING_KILL</OutcomeType>
@@ -24845,26 +22259,6 @@
 							<ID>TECH_SEDENTARY_LIFESTYLE</ID>
 						</Has>
 					</bUnitToCity>
-					<Yields>
-						<iYield>
-							<Plus>
-								<Constant>10</Constant>
-								<Random>10</Random>
-							</Plus>
-						</iYield>
-						<iYield>
-							<Plus>
-								<Constant>1</Constant>
-								<Random>2</Random>
-							</Plus>
-						</iYield>
-						<iYield>
-							<Plus>
-								<Constant>24</Constant>
-								<Random>30</Random>
-							</Plus>
-						</iYield>
-					</Yields>
 				</Outcome>
 				<Outcome>
 					<OutcomeType>OUTCOME_HUNTING_KILL</OutcomeType>
@@ -25001,26 +22395,6 @@
 							<ID>TECH_SEDENTARY_LIFESTYLE</ID>
 						</Has>
 					</bUnitToCity>
-					<Yields>
-						<iYield>
-							<Plus>
-								<Constant>20</Constant>
-								<Random>20</Random>
-							</Plus>
-						</iYield>
-						<iYield>
-							<Plus>
-								<Constant>4</Constant>
-								<Random>8</Random>
-							</Plus>
-						</iYield>
-						<iYield>
-							<Plus>
-								<Constant>4</Constant>
-								<Random>12</Random>
-							</Plus>
-						</iYield>
-					</Yields>
 				</Outcome>
 				<Outcome>
 					<OutcomeType>OUTCOME_HUNTING_KILL</OutcomeType>
@@ -25168,26 +22542,6 @@
 							<ID>TECH_SEDENTARY_LIFESTYLE</ID>
 						</Has>
 					</bUnitToCity>
-					<Yields>
-						<iYield>
-							<Plus>
-								<Constant>80</Constant>
-								<Random>40</Random>
-							</Plus>
-						</iYield>
-						<iYield>
-							<Plus>
-								<Constant>8</Constant>
-								<Random>8</Random>
-							</Plus>
-						</iYield>
-						<iYield>
-							<Plus>
-								<Constant>8</Constant>
-								<Random>15</Random>
-							</Plus>
-						</iYield>
-					</Yields>
 				</Outcome>
 				<Outcome>
 					<OutcomeType>OUTCOME_HUNTING_KILL</OutcomeType>
@@ -25306,26 +22660,6 @@
 							<ID>TECH_SEDENTARY_LIFESTYLE</ID>
 						</Has>
 					</bUnitToCity>
-					<Yields>
-						<iYield>
-							<Plus>
-								<Constant>10</Constant>
-								<Random>15</Random>
-							</Plus>
-						</iYield>
-						<iYield>
-							<Plus>
-								<Constant>1</Constant>
-								<Random>4</Random>
-							</Plus>
-						</iYield>
-						<iYield>
-							<Plus>
-								<Constant>6</Constant>
-								<Random>12</Random>
-							</Plus>
-						</iYield>
-					</Yields>
 				</Outcome>
 				<Outcome>
 					<OutcomeType>OUTCOME_HUNTING_KILL</OutcomeType>
@@ -25465,26 +22799,6 @@
 							<ID>TECH_SEDENTARY_LIFESTYLE</ID>
 						</Has>
 					</bUnitToCity>
-					<Yields>
-						<iYield>
-							<Plus>
-								<Constant>40</Constant>
-								<Random>60</Random>
-							</Plus>
-						</iYield>
-						<iYield>
-							<Plus>
-								<Constant>11</Constant>
-								<Random>25</Random>
-							</Plus>
-						</iYield>
-						<iYield>
-							<Plus>
-								<Constant>3</Constant>
-								<Random>2</Random>
-							</Plus>
-						</iYield>
-					</Yields>
 				</Outcome>
 				<Outcome>
 					<OutcomeType>OUTCOME_HUNTING_KILL</OutcomeType>
@@ -25611,26 +22925,6 @@
 							<ID>TECH_SEDENTARY_LIFESTYLE</ID>
 						</Has>
 					</bUnitToCity>
-					<Yields>
-						<iYield>
-							<Plus>
-								<Constant>40</Constant>
-								<Random>40</Random>
-							</Plus>
-						</iYield>
-						<iYield>
-							<Plus>
-								<Constant>11</Constant>
-								<Random>17</Random>
-							</Plus>
-						</iYield>
-						<iYield>
-							<Plus>
-								<Constant>3</Constant>
-								<Random>2</Random>
-							</Plus>
-						</iYield>
-					</Yields>
 				</Outcome>
 				<Outcome>
 					<OutcomeType>OUTCOME_HUNTING_KILL</OutcomeType>
@@ -25758,26 +23052,6 @@
 							<ID>TECH_SEDENTARY_LIFESTYLE</ID>
 						</Has>
 					</bUnitToCity>
-					<Yields>
-						<iYield>
-							<Plus>
-								<Constant>60</Constant>
-								<Random>60</Random>
-							</Plus>
-						</iYield>
-						<iYield>
-							<Plus>
-								<Constant>19</Constant>
-								<Random>23</Random>
-							</Plus>
-						</iYield>
-						<iYield>
-							<Plus>
-								<Constant>3</Constant>
-								<Random>1</Random>
-							</Plus>
-						</iYield>
-					</Yields>
 				</Outcome>
 				<Outcome>
 					<OutcomeType>OUTCOME_HUNTING_KILL</OutcomeType>
@@ -25902,26 +23176,6 @@
 							<ID>TECH_SEDENTARY_LIFESTYLE</ID>
 						</Has>
 					</bUnitToCity>
-					<Yields>
-						<iYield>
-							<Plus>
-								<Constant>40</Constant>
-								<Random>30</Random>
-							</Plus>
-						</iYield>
-						<iYield>
-							<Plus>
-								<Constant>11</Constant>
-								<Random>7</Random>
-							</Plus>
-						</iYield>
-						<iYield>
-							<Plus>
-								<Constant>4</Constant>
-								<Random>1</Random>
-							</Plus>
-						</iYield>
-					</Yields>
 				</Outcome>
 				<Outcome>
 					<OutcomeType>OUTCOME_HUNTING_KILL</OutcomeType>
@@ -26033,9 +23287,6 @@
 							<ID>TECH_SEDENTARY_LIFESTYLE</ID>
 						</Has>
 					</bUnitToCity>
-					<Yields>
-						<iYield>1</iYield>
-					</Yields>
 				</Outcome>
 				<Outcome>
 					<OutcomeType>OUTCOME_HUNTING_KILL</OutcomeType>
@@ -26127,9 +23378,6 @@
 							<ID>TECH_SEDENTARY_LIFESTYLE</ID>
 						</Has>
 					</bUnitToCity>
-					<Yields>
-						<iYield>1</iYield>
-					</Yields>
 				</Outcome>
 				<Outcome>
 					<OutcomeType>OUTCOME_HUNTING_KILL</OutcomeType>
@@ -26258,20 +23506,6 @@
 							<ID>TECH_SEDENTARY_LIFESTYLE</ID>
 						</Has>
 					</bUnitToCity>
-					<Yields>
-						<iYield>
-							<Plus>
-								<Constant>2</Constant>
-								<Random>2</Random>
-							</Plus>
-						</iYield>
-						<iYield>1</iYield>
-						<iYield>
-							<Plus>
-								<Constant>3</Constant>
-							</Plus>
-						</iYield>
-					</Yields>
 				</Outcome>
 				<Outcome>
 					<OutcomeType>OUTCOME_HUNTING_KILL</OutcomeType>
@@ -26287,6 +23521,7 @@
 						<iYield>
 							<Plus>
 								<Constant>3</Constant>
+                                <Random>1</Random>
 							</Plus>
 						</iYield>
 					</Yields>
@@ -26396,11 +23631,6 @@
 							<ID>TECH_SEDENTARY_LIFESTYLE</ID>
 						</Has>
 					</bUnitToCity>
-					<Yields>
-						<iYield>1</iYield>
-						<iYield>1</iYield>
-						<iYield>3</iYield>
-					</Yields>
 				</Outcome>
 				<Outcome>
 					<OutcomeType>OUTCOME_HUNTING_KILL</OutcomeType>
@@ -26531,26 +23761,6 @@
 							<ID>TECH_SEDENTARY_LIFESTYLE</ID>
 						</Has>
 					</bUnitToCity>
-					<Yields>
-						<iYield>
-							<Plus>
-								<Constant>5</Constant>
-								<Random>5</Random>
-							</Plus>
-						</iYield>
-						<iYield>
-							<Plus>
-								<Constant>1</Constant>
-								<Random>1</Random>
-							</Plus>
-						</iYield>
-						<iYield>
-							<Plus>
-								<Constant>6</Constant>
-								<Random>1</Random>
-							</Plus>
-						</iYield>
-					</Yields>
 				</Outcome>
 				<Outcome>
 					<OutcomeType>OUTCOME_HUNTING_KILL</OutcomeType>
@@ -26675,11 +23885,6 @@
 							<ID>TECH_SEDENTARY_LIFESTYLE</ID>
 						</Has>
 					</bUnitToCity>
-					<Yields>
-						<iYield>1</iYield>
-						<iYield>1</iYield>
-						<iYield>4</iYield>
-					</Yields>
 				</Outcome>
 				<Outcome>
 					<OutcomeType>OUTCOME_HUNTING_KILL</OutcomeType>
@@ -26769,11 +23974,6 @@
 							<ID>TECH_SEDENTARY_LIFESTYLE</ID>
 						</Has>
 					</bUnitToCity>
-					<Yields>
-						<iYield>4</iYield>
-						<iYield>1</iYield>
-						<iYield>3</iYield>
-					</Yields>
 				</Outcome>
 				<Outcome>
 					<OutcomeType>OUTCOME_HUNTING_KILL</OutcomeType>
@@ -26904,18 +24104,10 @@
 					<bUnitToCity>
 						<Constant>DONT_ESCORT_SUBDUED_SEA_ANIMAL</Constant>
 					</bUnitToCity>
-					<Yields>
-						<iYield>
-							<Plus>
-								<Constant>5</Constant>
-								<Random>235</Random>
-							</Plus>
-						</iYield>
-					</Yields>
 				</Outcome>
 				<Outcome>
 					<OutcomeType>OUTCOME_HUNTING_KILL</OutcomeType>
-					<iChance>80</iChance>
+					<iChance>85</iChance>
 					<Yields>
 						<iYield>
 							<Plus>
@@ -27039,16 +24231,6 @@
 							<ID>TECH_SEDENTARY_LIFESTYLE</ID>
 						</Has>
 					</bUnitToCity>
-					<Yields>
-						<iYield>
-							<Plus>
-								<Constant>3</Constant>
-								<Random>5</Random>
-							</Plus>
-						</iYield>
-						<iYield>1</iYield>
-						<iYield>4</iYield>
-					</Yields>
 				</Outcome>
 				<Outcome>
 					<OutcomeType>OUTCOME_HUNTING_KILL</OutcomeType>
@@ -27150,11 +24332,6 @@
 							<ID>TECH_SEDENTARY_LIFESTYLE</ID>
 						</Has>
 					</bUnitToCity>
-					<Yields>
-						<iYield>1</iYield>
-						<iYield>1</iYield>
-						<iYield>5</iYield>
-					</Yields>
 				</Outcome>
 				<Outcome>
 					<OutcomeType>OUTCOME_HUNTING_KILL</OutcomeType>
@@ -27259,11 +24436,6 @@
 							<ID>TECH_SEDENTARY_LIFESTYLE</ID>
 						</Has>
 					</bUnitToCity>
-					<Yields>
-						<iYield>1</iYield>
-						<iYield>1</iYield>
-						<iYield>5</iYield>
-					</Yields>
 				</Outcome>
 				<Outcome>
 					<OutcomeType>OUTCOME_HUNTING_KILL</OutcomeType>
@@ -27384,11 +24556,6 @@
 							<ID>TECH_SEDENTARY_LIFESTYLE</ID>
 						</Has>
 					</bUnitToCity>
-					<Yields>
-						<iYield>1</iYield>
-						<iYield>1</iYield>
-						<iYield>4</iYield>
-					</Yields>
 				</Outcome>
 				<Outcome>
 					<OutcomeType>OUTCOME_HUNTING_KILL</OutcomeType>
@@ -27556,26 +24723,6 @@
 							<ID>TECH_SEDENTARY_LIFESTYLE</ID>
 						</Has>
 					</bUnitToCity>
-					<Yields>
-						<iYield>
-							<Plus>
-								<Constant>1</Constant>
-								<Random>1</Random>
-							</Plus>
-						</iYield>
-						<iYield>
-							<Plus>
-								<Constant>1</Constant>
-								<Random>1</Random>
-							</Plus>
-						</iYield>
-						<iYield>
-							<Plus>
-								<Constant>1</Constant>
-								<Random>2</Random>
-							</Plus>
-						</iYield>
-					</Yields>
 				</Outcome>
 				<Outcome>
 					<OutcomeType>OUTCOME_HUNTING_KILL</OutcomeType>
@@ -27679,26 +24826,6 @@
 							<ID>TECH_SEDENTARY_LIFESTYLE</ID>
 						</Has>
 					</bUnitToCity>
-					<Yields>
-						<iYield>
-							<Plus>
-								<Constant>5</Constant>
-								<Random>15</Random>
-							</Plus>
-						</iYield>
-						<iYield>
-							<Plus>
-								<Constant>1</Constant>
-								<Random>2</Random>
-							</Plus>
-						</iYield>
-						<iYield>
-							<Plus>
-								<Constant>2</Constant>
-								<Random>3</Random>
-							</Plus>
-						</iYield>
-					</Yields>
 				</Outcome>
 				<Outcome>
 					<OutcomeType>OUTCOME_HUNTING_KILL</OutcomeType>
@@ -27859,26 +24986,6 @@
 							<ID>TECH_SEDENTARY_LIFESTYLE</ID>
 						</Has>
 					</bUnitToCity>
-					<Yields>
-						<iYield>
-							<Plus>
-								<Constant>200</Constant>
-								<Random>625</Random>
-							</Plus>
-						</iYield>
-						<iYield>
-							<Plus>
-								<Constant>40</Constant>
-								<Random>10</Random>
-							</Plus>
-						</iYield>
-						<iYield>
-							<Plus>
-								<Constant>8</Constant>
-								<Random>12</Random>
-							</Plus>
-						</iYield>
-					</Yields>
 				</Outcome>
 				<Outcome>
 					<OutcomeType>OUTCOME_HUNTING_KILL</OutcomeType>
@@ -28045,26 +25152,6 @@
 							<ID>TECH_SEDENTARY_LIFESTYLE</ID>
 						</Has>
 					</bUnitToCity>
-					<Yields>
-						<iYield>
-							<Plus>
-								<Constant>25</Constant>
-								<Random>80</Random>
-							</Plus>
-						</iYield>
-						<iYield>
-							<Plus>
-								<Constant>2</Constant>
-								<Random>5</Random>
-							</Plus>
-						</iYield>
-						<iYield>
-							<Plus>
-								<Constant>3</Constant>
-								<Random>5</Random>
-							</Plus>
-						</iYield>
-					</Yields>
 				</Outcome>
 				<Outcome>
 					<OutcomeType>OUTCOME_HUNTING_KILL</OutcomeType>
@@ -28186,26 +25273,6 @@
 					<bUnitToCity>
 						<Constant>DONT_ESCORT_SUBDUED_SEA_ANIMAL</Constant>
 					</bUnitToCity>
-					<Yields>
-						<iYield>
-							<Plus>
-								<Constant>10000</Constant>
-								<Random>7000</Random>
-							</Plus>
-						</iYield>
-						<iYield>
-							<Plus>
-								<Constant>100</Constant>
-								<Random>70</Random>
-							</Plus>
-						</iYield>
-						<iYield>
-							<Plus>
-								<Constant>30</Constant>
-								<Random>10</Random>
-							</Plus>
-						</iYield>
-					</Yields>
 				</Outcome>
 				<Outcome>
 					<OutcomeType>OUTCOME_HUNTING_KILL</OutcomeType>
@@ -28344,26 +25411,6 @@
 							<ID>TECH_SEDENTARY_LIFESTYLE</ID>
 						</Has>
 					</bUnitToCity>
-					<Yields>
-						<iYield>
-							<Plus>
-								<Constant>60</Constant>
-								<Random>100</Random>
-							</Plus>
-						</iYield>
-						<iYield>
-							<Plus>
-								<Constant>6</Constant>
-								<Random>11</Random>
-							</Plus>
-						</iYield>
-						<iYield>
-							<Plus>
-								<Constant>8</Constant>
-								<Random>8</Random>
-							</Plus>
-						</iYield>
-					</Yields>
 				</Outcome>
 				<Outcome>
 					<OutcomeType>OUTCOME_HUNTING_KILL</OutcomeType>
@@ -28487,26 +25534,6 @@
 							<ID>TECH_SEDENTARY_LIFESTYLE</ID>
 						</Has>
 					</bUnitToCity>
-					<Yields>
-						<iYield>
-							<Plus>
-								<Constant>12</Constant>
-								<Random>28</Random>
-							</Plus>
-						</iYield>
-						<iYield>
-							<Plus>
-								<Constant>1</Constant>
-								<Random>6</Random>
-							</Plus>
-						</iYield>
-						<iYield>
-							<Plus>
-								<Constant>8</Constant>
-								<Random>5</Random>
-							</Plus>
-						</iYield>
-					</Yields>
 				</Outcome>
 				<Outcome>
 					<OutcomeType>OUTCOME_HUNTING_KILL</OutcomeType>
@@ -28661,21 +25688,6 @@
 							<ID>TECH_SEDENTARY_LIFESTYLE</ID>
 						</Has>
 					</bUnitToCity>
-					<Yields>
-						<iYield>
-							<Plus>
-								<Constant>3</Constant>
-								<Random>5</Random>
-							</Plus>
-						</iYield>
-						<iYield>1</iYield>
-						<iYield>
-							<Plus>
-								<Constant>4</Constant>
-								<Random>1</Random>
-							</Plus>
-						</iYield>
-					</Yields>
 				</Outcome>
 				<Outcome>
 					<OutcomeType>OUTCOME_HUNTING_KILL</OutcomeType>
@@ -28780,21 +25792,6 @@
 							<ID>TECH_SEDENTARY_LIFESTYLE</ID>
 						</Has>
 					</bUnitToCity>
-					<Yields>
-						<iYield>
-							<Plus>
-								<Constant>6</Constant>
-								<Random>5</Random>
-							</Plus>
-						</iYield>
-						<iYield>
-							<Plus>
-								<Constant>1</Constant>
-								<Random>1</Random>
-							</Plus>
-						</iYield>
-						<iYield>5</iYield>
-					</Yields>
 				</Outcome>
 				<Outcome>
 					<OutcomeType>OUTCOME_HUNTING_KILL</OutcomeType>
@@ -28916,26 +25913,6 @@
 							<ID>TECH_SEDENTARY_LIFESTYLE</ID>
 						</Has>
 					</bUnitToCity>
-					<Yields>
-						<iYield>
-							<Plus>
-								<Constant>90</Constant>
-								<Random>110</Random>
-							</Plus>
-						</iYield>
-						<iYield>
-							<Plus>
-								<Constant>11</Constant>
-								<Random>14</Random>
-							</Plus>
-						</iYield>
-						<iYield>
-							<Plus>
-								<Constant>7</Constant>
-								<Random>5</Random>
-							</Plus>
-						</iYield>
-					</Yields>
 				</Outcome>
 				<Outcome>
 					<OutcomeType>OUTCOME_HUNTING_KILL</OutcomeType>
