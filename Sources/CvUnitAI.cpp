@@ -3680,7 +3680,8 @@ void CvUnitAI::AI_attackCityMove()
 				if (pHead == NULL || pHead == OurHead) continue;
 
 				// Filter only stacks with ATTACK_CITY or ATTACK
-				if (pHead->AI_getUnitAIType() == UNITAI_ATTACK_CITY || pHead->AI_getUnitAIType() == UNITAI_ATTACK)
+				if (pHead->AI_getUnitAIType() == UNITAI_ATTACK_CITY || pHead->AI_getUnitAIType() == UNITAI_ATTACK || pHead->AI_getUnitAIType() == UNITAI_COUNTER
+					|| pHead->AI_getUnitAIType() == UNITAI_RESERVE)
 				{
 					int dummy;
 					CvUnit * pOurAttacker = getGroup()->AI_getBestGroupAttacker(pOurPlot, true, dummy);
@@ -3777,6 +3778,10 @@ void CvUnitAI::AI_attackCityMove()
 		return;
 	}
 	if (AI_groupMergeRange(UNITAI_COUNTER, 5, true, true, bIgnoreFaster))
+	{
+		return;
+	}
+	if (AI_groupMergeRange(UNITAI_RESERVE, 5, true, true, bIgnoreFaster))
 	{
 		return;
 	}
@@ -17146,9 +17151,12 @@ bool CvUnitAI::AI_refreshExploreRange(int iRange, bool bIncludeVisibilityRefresh
 		PROFILE("AI_exploreRange 4");
 
 		FAssert(!atPlot(pBestPlot));
-		return getGroup()->pushMissionInternal(MISSION_MOVE_TO, pBestPlot->getX(), pBestPlot->getY(), MOVE_NO_ENEMY_TERRITORY | MOVE_HEAL_AS_NEEDED25, false, false, MISSIONAI_EXPLORE, pPreviouslySelectedPlot != NULL ? pPreviouslySelectedPlot : pBestExplorePlot);
+		if (!atPlot(pBestPlot))
+			return getGroup()->pushMissionInternal(MISSION_MOVE_TO, pBestPlot->getX(), pBestPlot->getY(), MOVE_NO_ENEMY_TERRITORY | MOVE_HEAL_AS_NEEDED25, false, false, MISSIONAI_EXPLORE, pPreviouslySelectedPlot != NULL ? pPreviouslySelectedPlot : pBestExplorePlot);
+		else if (!atPlot(pBestExplorePlot))
+			return getGroup()->pushMissionInternal(MISSION_MOVE_TO, pBestExplorePlot->getX(), pBestExplorePlot->getY(), MOVE_NO_ENEMY_TERRITORY | MOVE_HEAL_AS_NEEDED25, false, false, MISSIONAI_EXPLORE, pPreviouslySelectedPlot != NULL ? pPreviouslySelectedPlot : pBestExplorePlot);
 	}
-	else if (candidatesRejectedForMoveSafety)
+	if (candidatesRejectedForMoveSafety)
 	{
 		return AI_safety(); // Just stay safe for a while
 	}

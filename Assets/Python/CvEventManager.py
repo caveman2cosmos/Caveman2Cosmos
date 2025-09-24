@@ -2148,9 +2148,8 @@ class CvEventManager:
 		# Start as minor civ, become major.
 		if self.GO_START_AS_MINORS:
 			CyTeam = GC.getTeam(iTeam)
-
-			if CyTeam.isMinorCiv() and CyTeam.isOpenBordersTrading():
-
+			bhasTech = CyTeam.isHasTech(GC.getInfoTypeForString("TECH_CONDUCT"))
+			if CyTeam.isMinorCiv() and (CyTeam.isOpenBordersTrading() or bhasTech):				
 				CyTeam.setIsMinorCiv(False)
 				GC.getMap().verifyUnitValidPlot()
 				# Message
@@ -2750,8 +2749,8 @@ class CvEventManager:
 		if xRes > 2500:
 			header = "<font=4b>"
 			body = "\n<font=3>"
-			w = 560
-			h = 184
+			w = 660
+			h = 284
 		elif xRes > 1700:
 			header = "<font=3b>"
 			body = "\n<font=2>"

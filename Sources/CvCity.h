@@ -21,6 +21,9 @@ class CvPlotGroup;
 class CvUnit;
 class CvUnitSelectionCriteria;
 
+#define CITY_MAX_YIELD_RATE    99000000
+#define CITY_MAX_YIELD_RATE100 1900000000
+
 // BUG - start
 void addGoodOrBad(int iValue, int& iGood, int& iBad);
 void subtractGoodOrBad(int iValue, int& iGood, int& iBad);
@@ -496,11 +499,15 @@ public:
 	CvPlot* getRallyPlot() const;
 	void setRallyPlot(const CvPlot* pPlot);
 
-	int getGameTurnFounded() const;
-	void setGameTurnFounded(int iNewValue);
+	int getGameTurnFounded(const bool bACalendar = false) const;
+	void setGameTurnFounded(const int iNewValue, const bool bACalendar = false);
 
-	int getGameTurnAcquired() const;
-	void setGameTurnAcquired(int iNewValue);
+	int getGameDateFounded(const bool bACalendar = false) const;
+	void setGameDateFounded(const int iNewValue, const bool bACalendar = false);
+
+	int getGameTurnAcquired(const bool bHistoricalCalendar = false) const;
+	int getGameDateAcquired(const bool bHistoricalCalendar = false) const;
+	void setGameTurnAcquired(const int iNewValue, const bool bHistoricalCalendar = false);
 
 	int getPopulation() const;
 	void setPopulation(int iNewValue, bool bNormal = true);

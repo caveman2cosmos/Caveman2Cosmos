@@ -1,4 +1,5 @@
 // game.cpp
+//#define NO_RANDOM
 
 
 #include "FProfiler.h"
@@ -34,6 +35,10 @@
 #include "CvDLLUtilityIFaceBase.h"
 #include "CvBuildingFilters.h"
 #include "CvUnitFilters.h"
+
+#ifdef NO_RANDOM
+	int iNumAlea;
+#endif
 
 
 //	Koshling - save game compatibility between (most) builds
@@ -4569,8 +4574,9 @@ void CvGame::setActivePlayer(PlayerTypes eNewValue, bool bForceHotSeat)
 		if (GC.IsGraphicsInitialized())
 		{
 #ifdef ENABLE_FOGWAR_DECAY
-			GC.getMap().InitFogDecay();
-			GC.getMap().updateFog(true);
+			GC.getMap().InitFogDecay(true);
+			if (GC.getGame().isModderGameOption(MODDERGAMEOPTION_FOGWAR_DECAY))
+				GC.getMap().updateFog(true);
 #else
 			GC.getMap().updateFog();
 #endif
@@ -6235,6 +6241,11 @@ void CvGame::doSpawns(PlayerTypes ePlayer)
 			if (getSorenRandNum(std::max(1, iLocalSpawnRate), "Unit spawn") == 0)
 			{
 				const int iArea = pPlot->getArea();
+
+				if (!pPlot->isMapCategoryType(GC.getMAPCATEGORY_EARTH()))
+				{
+					continue;
+				}
 				// Check area unit type density not exceeded if specified
 				if (iMinAreaPlotsPerUnitType > 0
 				&& areaPopulationMap[iArea].find(eUnit) != areaPopulationMap[iArea].end()
@@ -7893,13 +7904,23 @@ int CvGame::getSorenRandNum(int iNum, const char* pszLog)
 {
 	PROFILE_EXTRA_FUNC();
 	int iScale = 0;
-	while(iNum > MAX_UNSIGNED_SHORT)
+	while (iNum > MAX_UNSIGNED_SHORT)
 	{
 		iNum /= 2;
 		iScale++;
 	}
 
+#ifdef NO_RANDOM
+	iNumAlea += 1;
+	if (iNumAlea < 1 || iNumAlea >= 10)
+	{
+		iNumAlea = 1;
+	}
+	int Result = iNum * iNumAlea / 10;
+#else
 	int Result = m_sorenRand.get(iNum, pszLog);
+#endif
+
 
 	while(iScale-- > 0)
 	{
@@ -9756,12 +9777,15 @@ void CvGame::changeHighToLowCounter(int iChange)
 void CvGame::doFinalFive()
 {
 	PROFILE_EXTRA_FUNC();
-	if (!isGameMultiPlayer() && isOption(GAMEOPTION_CHALLENGE_CUT_LOSERS) && countCivPlayersAlive() > 5)
+	if (!isGameMultiPlayer() && isOption(GAMEOPTION_CHALLENGE_CUT_LOSERS) && countCivPlayersAlive() > 15) //CALVITIX REMINDER - TO RESTORE
 	{
 		changeCutLosersCounter(1);
 		if (getCutLosersCounter() >= GC.getDefineINT("CUT_LOSERS_TURN_INCREMENT") * GC.getGameSpeedInfo(getGameSpeedType()).getSpeedPercent() / 100)
 		{
-			GET_PLAYER(getRankPlayer(countCivPlayersAlive() -1)).setAlive(false);
+			CvPlayer& pPlayer = GET_PLAYER(getRankPlayer(countCivPlayersAlive() - 1));
+			if (!pPlayer.isHumanPlayer())
+			{
+				pPlayer.setAlive(false);
 			changeCutLosersCounter(getCutLosersCounter() * -1);
 
 			for (int iI = 0; iI < MAX_PC_PLAYERS; iI++)
@@ -9776,6 +9800,7 @@ void CvGame::doFinalFive()
 				}
 			}
 		}
+	}
 	}
 }
 
@@ -11449,8 +11474,9 @@ void CvGame::recalculateModifiers()
 	GC.getMap().setupGraphical();
 	GC.getMap().updateVisibility();
 #ifdef ENABLE_FOGWAR_DECAY
-	GC.getMap().InitFogDecay();
-	GC.getMap().updateFog(true);
+	GC.getMap().InitFogDecay(true);
+	if (GC.getGame().isModderGameOption(MODDERGAMEOPTION_FOGWAR_DECAY))
+		GC.getMap().updateFog(true);
 #else
 	GC.getMap().updateFog();
 #endif

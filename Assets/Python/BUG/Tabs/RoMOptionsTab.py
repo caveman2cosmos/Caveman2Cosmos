@@ -96,6 +96,11 @@ class RoMOptionsTab(BugOptionsTab.BugOptionsTab):
 		screen.setEnabled(self.addCheckbox(screen, right, "RoMSettings__AllowTerraforming"), bCanAdjustSettings)
 		screen.setEnabled(self.addCheckbox(screen, right, "RoMSettings__Reforestation"), bCanAdjustSettings)
 		screen.setEnabled(self.addCheckbox(screen, right, "RoMSettings__SeaTunnels"), bCanAdjustSettings)
+		screen.setEnabled(self.addCheckbox(screen, right, "RoMSettings__FogWarDecay"), bCanAdjustSettings)
+		screen.setEnabled(self.addIntDropdown(screen, right, right, "RoMSettings__FogWarNbTurns"), bCanAdjustSettings)
+		screen.setEnabled(self.addTextDropdown(screen, left, left, "RoMSettings__MinorCivTech", False, "LAYOUT_LEFT"), bCanAdjustSettings)
+		screen.setEnabled(self.addCheckbox(screen, right, "RoMSettings__AssassinateMinimal"), bCanAdjustSettings)
+		screen.setEnabled(self.addCheckbox(screen, right, "RoMSettings__AssassinateChoice"), bCanAdjustSettings)
 
 		if GAME.isOption(GameOptionTypes.GAMEOPTION_ADVANCED_REALISTIC_CORPORATIONS):
 			screen.setEnabled(self.addCheckbox(screen, right, "RoMSettings__NoAutoCorporationFounding"), bCanAdjustSettings)

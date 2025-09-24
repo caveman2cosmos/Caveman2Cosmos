@@ -1,11 +1,14 @@
 #include "CvGameCoreDLL.h"
+#include "CvDefines.h"
 #include "CityOutputHistory.h"
 #include "CvArea.h"
 #include "CvCity.h"
 #include "CyArea.h"
 #include "CyCity.h"
 #include "CyPlot.h"
+#include "CvGameAI.h"
 #include "CyUnit.h"
+#include "CvGame.h"
 #include "CvUnitSelectionCriteria.h"
 
 //
@@ -571,7 +574,16 @@ CyArea* CyCity::waterArea() const
 
 int CyCity::getGameTurnFounded() const
 {
-	return m_pCity->getGameTurnFounded();
+	CvGame& GAME = GC.getGame();
+	bool bHistoricalCalendar = GAME.isModderGameOption(MODDERGAMEOPTION_USE_HISTORICAL_ACCURATE_CALENDAR);
+	return m_pCity->getGameTurnFounded(bHistoricalCalendar);
+}
+
+int CyCity::getGameDateFounded() const
+{
+	CvGame& GAME = GC.getGame();
+	bool bHistoricalCalendar = GAME.isModderGameOption(MODDERGAMEOPTION_USE_HISTORICAL_ACCURATE_CALENDAR);
+	return m_pCity->getGameDateFounded(bHistoricalCalendar);
 }
 
 int CyCity::getGameTurnAcquired() const

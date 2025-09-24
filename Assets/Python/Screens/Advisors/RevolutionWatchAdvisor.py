@@ -90,6 +90,8 @@ import time
 gc = CyGlobalContext()
 ArtFileMgr = CyArtFileMgr()
 localText = CyTranslator()
+GAME = gc.getGame()
+
 
 class RevolutionWatchAdvisor:
 	"""Special Revolution Watch Advisor Screen"""
@@ -1126,7 +1128,10 @@ class RevolutionWatchAdvisor:
 	def calculateFounded(self, city, szKey, arg):
 
 		# City founded date...
-		iTurnTime = city.getGameTurnFounded()
+		iTurnTime = city.getGameDateFounded()
+		bACalendar = GAME.getModderGameOption(ModderGameOptionTypes.MODDERGAMEOPTION_USE_HISTORICAL_ACCURATE_CALENDAR)
+		if bACalendar:
+			return iTurnTime
 		return unicode(CyGameTextMgr().getTimeStr(iTurnTime, False))
 
 	def calculateFeatures(self, city, szKey, arg):

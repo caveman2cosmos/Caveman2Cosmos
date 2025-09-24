@@ -869,7 +869,7 @@ public:
      * Returns an number that will be the base for the plot decay. The higher the number is, the lastest the plot will disappear.
      * The number is by default 1, and will be set to 3,6,9,12... depending on which Tech the player already has
      */
-    int getVisibilityDecay(bool pSeaPlot = false);
+    short getVisibilityDecay(bool pSeaPlot = false);
 #endif
 
 protected:
@@ -909,6 +909,7 @@ protected:
 #ifdef ENABLE_FOGWAR_DECAY
     bool m_bPermanentMapLand;
     bool m_bPermanentMapSea;
+    short m_iDefaultDecay;
 #endif
 
 
@@ -936,7 +937,9 @@ protected:
 // helper for accessing static functions
 #define GET_TEAM CvTeamAI::getTeam
 
-#define NO_DECAY -1
-#define MAX_DECAY 6
+#define NO_DECAY -99
+#define DEFAULT_DECAY 0
+#define REMOVE_PLOT_DECAY -10
+#define MAX_DECAY 99
 
 #endif

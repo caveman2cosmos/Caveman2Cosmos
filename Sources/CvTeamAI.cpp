@@ -146,6 +146,7 @@ void CvTeamAI::AI_reset(bool bConstructor)
 #ifdef	ENABLE_FOGWAR_DECAY
 	m_bPermanentMapLand = false;
 	m_bPermanentMapSea = false;
+	m_iDefaultDecay = DEFAULT_DECAY;
 #endif
 }
 
@@ -5034,10 +5035,15 @@ bool CvTeamAI::AI_hasAdjacentLandPlots(TeamTypes eTeam) const
 }
 
 #ifdef ENABLE_FOGWAR_DECAY
-int CvTeamAI::getVisibilityDecay(bool pSeaPlot)
+short CvTeamAI::getVisibilityDecay(bool pSeaPlot)
 {
-	if ((pSeaPlot && m_bPermanentMapSea) || !isHuman()) return NO_DECAY;
-	if ((!pSeaPlot && m_bPermanentMapLand) || !isHuman()) return NO_DECAY;
+	const TeamTypes& team = GC.getGame().getActiveTeam();
+	const PlayerTypes myID = GC.getGame().getActivePlayer();
+	const bool bIsHuman = GET_TEAM(team).isHuman() || GC.getGame().getAIAutoPlay(myID) > 0 || gDLL->GetAutorun();
+	m_iDefaultDecay = GC.getGame().getModderGameOption(MODDERGAMEOPTION_FOGWAR_NBTURNS);
+
+	if ((pSeaPlot && m_bPermanentMapSea) || !bIsHuman || !GC.getGame().getModderGameOption(MODDERGAMEOPTION_FOGWAR_DECAY)) return NO_DECAY;
+	if ((!pSeaPlot && m_bPermanentMapLand) || !bIsHuman || !GC.getGame().getModderGameOption(MODDERGAMEOPTION_FOGWAR_DECAY)) return NO_DECAY;
 
 	if (pSeaPlot)
 	{
@@ -5050,45 +5056,45 @@ int CvTeamAI::getVisibilityDecay(bool pSeaPlot)
 		iPathfinding = GC.getInfoTypeForString("TECH_COMPASS");
 		if (isHasTech((TechTypes)iPathfinding))
 		{
-			return 40;
+			return (m_iDefaultDecay + 40);
 		}
 		iPathfinding = GC.getInfoTypeForString("TECH_CARTOGRAPHY");
 		if (isHasTech((TechTypes)iPathfinding))
 		{
-			return 30;
+			return (m_iDefaultDecay + 30);
 		}
 		iPathfinding = GC.getInfoTypeForString("TECH_PAPER");
 		if (isHasTech((TechTypes)iPathfinding))
 		{
-			return 20;
+			return (m_iDefaultDecay + 20);
 		}		
 		iPathfinding = GC.getInfoTypeForString("TECH_RUDDER");
 		if (isHasTech((TechTypes)iPathfinding))
 		{
-			return 15;
+			return (m_iDefaultDecay + 15);
 		}
 		iPathfinding = GC.getInfoTypeForString("TECH_SEAFARING");
 		if (isHasTech((TechTypes)iPathfinding))
 		{
-			return 12;
+			return (m_iDefaultDecay + 12);
 		}
 		
 		iPathfinding = GC.getInfoTypeForString("TECH_WRITING");
 		if (isHasTech((TechTypes)iPathfinding))
 		{
-			return 9;
+			return (m_iDefaultDecay + 9);
 		}
 		iPathfinding = GC.getInfoTypeForString("TECH_STARGAZING");
 		if (isHasTech((TechTypes)iPathfinding))
 		{
-			return 6;
+			return (m_iDefaultDecay + 6);
 		}
 		iPathfinding = GC.getInfoTypeForString("TECH_SAILING");
 		if (isHasTech((TechTypes)iPathfinding))
 		{
-			return 3;
+			return (m_iDefaultDecay + 3);
 		}
-		return 1;
+		return (m_iDefaultDecay + 1);
 	}
 	else
 	{
@@ -5101,45 +5107,45 @@ int CvTeamAI::getVisibilityDecay(bool pSeaPlot)
 		iPathfinding = GC.getInfoTypeForString("TECH_SURVEYING");
 		if (isHasTech((TechTypes)iPathfinding))
 		{
-			return 40;
+			return (m_iDefaultDecay + 40);
 		}
 		iPathfinding = GC.getInfoTypeForString("TECH_WRITING");
 		if (isHasTech((TechTypes)iPathfinding))
 		{
-			return 25;
+			return (m_iDefaultDecay + 25);
 		}
 		iPathfinding = GC.getInfoTypeForString("TECH_EXPLORATION");
 		if (isHasTech((TechTypes)iPathfinding))
 		{
-			return 18;
+			return (m_iDefaultDecay + 18);
 		}
 		iPathfinding = GC.getInfoTypeForString("TECH_IDEOGRAMS");
 		if (isHasTech((TechTypes)iPathfinding))
 		{
-			return 15;
+			return (m_iDefaultDecay + 15);
 		}
 		iPathfinding = GC.getInfoTypeForString("TECH_PICTOGRAPHS");
 		if (isHasTech((TechTypes)iPathfinding))
 		{
-			return 12;
+			return (m_iDefaultDecay + 12);
 		}
 		iPathfinding = GC.getInfoTypeForString("TECH_HUNTING");
 		if (isHasTech((TechTypes)iPathfinding))
 		{
-			return 9;
+			return (m_iDefaultDecay + 9);
 		}
 
 		iPathfinding = GC.getInfoTypeForString("TECH_TRACKING");
 		if (isHasTech((TechTypes)iPathfinding))
 		{
-			return 6;
+			return (m_iDefaultDecay + 6);
 		}
 		iPathfinding = GC.getInfoTypeForString("TECH_TRAILS");
 		if (isHasTech((TechTypes)iPathfinding))
 		{
-			return 3;
+			return (m_iDefaultDecay + 3);
 		}
 	}
-	return 1;
+	return (m_iDefaultDecay + 1);
 }
 #endif

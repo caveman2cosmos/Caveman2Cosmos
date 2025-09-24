@@ -5,6 +5,10 @@
 #ifndef CIV4_DLL_BUTTON_POPUP_H
 #define CIV4_DLL_BUTTON_POPUP_H
 
+
+#define AMBUSH_FLAG 1
+
+
 class CvPopup;
 class CvPopupInfo;
 class PopupReturn;

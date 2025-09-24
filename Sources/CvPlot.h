@@ -190,8 +190,8 @@ public:
 	void updateFog(const bool bApplyDecay = false);
 	void updateVisibility();
 #ifdef ENABLE_FOGWAR_DECAY
-	void InitFogDecay();
-	short getVisibilityDecayBonus(bool pSeaPlot = false);
+	void InitFogDecay(const bool pWithRandom = false);
+	short getVisibilityDecayBonus(const bool pSeaPlot = false);
 #endif
 
 	void updateSymbolDisplay();

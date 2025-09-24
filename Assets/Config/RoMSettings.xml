@@ -172,6 +172,24 @@ values="Current Color|Black|Blue|Brown|Cyan|Dark Blue|Dark Cyan|Dark Green|Dark 
 				<change module="ANewDawnSettings" function="changedTerrainDamage"/>
 			</option>
 
+			<option id="FogWarDecay" key="FogWarDecay" type="boolean" default="False" get="isFogWarDecay" set="setFogWarDecay">
+				<change module="ANewDawnSettings" function="changedFogWarDecay"/>
+			</option>
+			<list id="FogWarNbTurns" key="FogWarNbTurns" type="int" default="0" listType="string"
+				values="0|1|2|3|4|5|10|20|-1" get="getFogWarNbTurns" set="setFogWarNbTurns">
+				<change module="ANewDawnSettings" function="changedFogWarNbTurns"/>
+			</list>
+			<list id="MinorCivTech" key="MinorCivTech" type="int" default="0" listType="string"
+				values="TECH_CONDUCT|TECH_NEGOTIATION|TECH_WRITING" get="getMinorCivTech" set="setMinorCivTech">
+				<change module="ANewDawnSettings" function="changedMinorCivTech"/>
+			</list>
+			<option id="AssassinateMinimal" key="AssassinateMinimal" type="boolean" default="False" get="isAssassinateMinimal" set="setAssassinateMinimal">
+				<change module="ANewDawnSettings" function="changedAssassinateMinimal"/>
+			</option>
+			<option id="AssassinateChoice" key="AssassinateChoice" type="boolean" default="False" get="isAssassinateChoice" set="setAssassinateChoice">
+				<change module="ANewDawnSettings" function="changedAssassinateChoice"/>
+			</option>
+
 			<option id="AllowTerraforming" key="AllowTerraforming" type="boolean" default="True" get="isAllowTerraforming" set="setAllowTerraforming">
 				<change module="ANewDawnSettings" function="changedAllowTerraforming"/>
 			</option>

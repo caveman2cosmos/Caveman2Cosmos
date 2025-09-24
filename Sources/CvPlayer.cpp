@@ -1896,6 +1896,10 @@ void CvPlayer::initFreeUnits()
 
 		// Settler units, can't start a game without one.
 		addStartUnitAI(UNITAI_SETTLE, iMult);
+		if(!isHumanPlayer() && GC.getGame().isOption(GAMEOPTION_AI_BOOST)){
+			addStartUnitAI(UNITAI_SETTLE, iMult);
+			addStartUnitAI(UNITAI_GREAT_HUNTER, iMult);
+		}
 
 		// Defensive units
 		int iCount = GC.getEraInfo(startEra).getStartingDefenseUnits();
@@ -2567,9 +2571,10 @@ void CvPlayer::acquireCity(CvCity* pOldCity, bool bConquest, bool bTrade, bool b
 
 		FAssertMsg(pNewCity, "NewCity is not assigned a valid value");
 
+		bool bHistoricalCalendar = GC.getGame().isModderGameOption(MODDERGAMEOPTION_USE_HISTORICAL_ACCURATE_CALENDAR);
 		pNewCity->setPreviousOwner(eOldOwner);
 		pNewCity->setOriginalOwner(eOriginalOwner);
-		pNewCity->setGameTurnFounded(iGameTurnFounded);
+		pNewCity->setGameTurnFounded(iGameTurnFounded, bHistoricalCalendar);
 		pNewCity->setPopulation((bConquest && !bRecapture) ? std::max(1, (iPopulation - 1)) : iPopulation, false);
 		pNewCity->setHighestPopulation(iHighestPopulation);
 		pNewCity->setName(cityName);
@@ -3842,9 +3847,10 @@ void CvPlayer::doTurn()
 
 #ifdef ENABLE_FOGWAR_DECAY
 		//Calvitix, Modmod FOGWAR PlotDecay
-		if (isHumanPlayer())
+		if (isHumanPlayer() || GC.getGame().getAIAutoPlay(getID()) > 0 || gDLL->GetAutorun())
 		{
-			if (GET_TEAM(getTeam()).getVisibilityDecay() != NO_DECAY)
+			CvGame& GAME = GC.getGame();
+			if (GAME.isModderGameOption(MODDERGAMEOPTION_FOGWAR_DECAY) && GET_TEAM(getTeam()).getVisibilityDecay() != NO_DECAY)
 				GC.getMap().updateFog(true); //Calvitix, to applyPlotDecay
 		}
 #endif
@@ -6196,6 +6202,9 @@ void CvPlayer::receiveGoody(CvPlot* pPlot, GoodyTypes eGoody, CvUnit* pUnit)
 				if (GC.getGame().getSorenRandNum(100, "Goody Map") < GC.getGoodyInfo(eGoody).getMapProb())
 				{
 					pLoopPlot->setRevealed(getTeam(), true, false, NO_TEAM, true);
+#ifdef ENABLE_FOGWAR_DECAY
+					pLoopPlot->InitFogDecay(false);
+#endif
 				}
 			}
 		}
@@ -7900,7 +7909,10 @@ int CvPlayer::getImprovementUpgradeProgressRate(const ImprovementTypes eImprovem
 
 int CvPlayer::calculateTotalYield(YieldTypes eYield) const
 {
-	return (algo::accumulate(cities() | transformed(CvCity::fn::getYieldRate100(eYield)), 0)) / 100;
+	int TotalYield = ((algo::accumulate(cities() | transformed(CvCity::fn::getYieldRate100(eYield)), 0)) / 100);
+	if (TotalYield < MIN_TOL_FALSE_ACCUMULATE)
+		return MAX_COMMERCE_RATE_VALUE;
+	return TotalYield;
 }
 
 
@@ -8308,7 +8320,7 @@ int CvPlayer::calculateBaseNetResearch(TechTypes eTech) const
 			return GC.getDefineINT("BASE_RESEARCH_RATE") + getCommerceRate(COMMERCE_RESEARCH);
 		}
 	}
-	return (
+	int iCalcResearch =  (
 		GC.getDefineINT("BASE_RESEARCH_RATE")
 		+
 		getModifiedIntValue(
@@ -8316,6 +8328,9 @@ int CvPlayer::calculateBaseNetResearch(TechTypes eTech) const
 			getNationalTechResearchModifier(eTech) + calculateResearchModifier(eTech)
 		)
 	);
+	if (iCalcResearch < MIN_TOL_FALSE_RESEARCH)
+		return MAX_RESEARCH_RATE_VALUE;
+	return std::min(MAX_RESEARCH_RATE_VALUE,iCalcResearch);
 }
 
 
@@ -8351,7 +8366,7 @@ int CvPlayer::calculateTotalCommerce() const
 			iTotalCommerce += getCommerceRate((CommerceTypes)i);
 		}
 	}
-	return static_cast<int>(iTotalCommerce);
+	return static_cast<int>(std::min<int64_t>(MAX_COMMERCE_VALUE,iTotalCommerce));
 }
 
 bool CvPlayer::canEverResearch(TechTypes eTech) const
@@ -9447,7 +9462,7 @@ void CvPlayer::setGold(int64_t iNewValue)
 
 void CvPlayer::changeGold(int64_t iChange)
 {
-	setGold(getGold() + iChange);
+	setGold(std::min(getGold() + iChange,MAX_GOLD_VALUE));
 }
 
 int CvPlayer::getGoldPerTurn() const
@@ -13214,6 +13229,8 @@ int CvPlayer::getTotalCityBaseCommerceRate(CommerceTypes eIndex) const
 	if (m_cachedTotalCityBaseCommerceRate[eIndex] == MAX_INT)
 	{
 		m_cachedTotalCityBaseCommerceRate[eIndex] = algo::accumulate(cities() | transformed(CvCity::fn::getBaseCommerceRateTimes100(eIndex)), 0) / 100;
+		if (m_cachedTotalCityBaseCommerceRate[eIndex] < MIN_TOL_FALSE_ACCUMULATE)
+			m_cachedTotalCityBaseCommerceRate[eIndex] = MAX_COMMERCE_RATE_VALUE;
 	}
 	return m_cachedTotalCityBaseCommerceRate[eIndex];
 }
@@ -13224,8 +13241,7 @@ void CvPlayer::changeCommerceRate(CommerceTypes eIndex, int iChange)
 
 	if (iChange != 0)
 	{
-		m_aiCommerceRate[eIndex] += iChange;
-
+		m_aiCommerceRate[eIndex] = std::min(m_aiCommerceRate[eIndex]+iChange,MAX_COMMERCE_RATE_VALUE);
 		if (getID() == GC.getGame().getActivePlayer())
 		{
 			gDLL->getInterfaceIFace()->setDirty(GameData_DIRTY_BIT, true);
@@ -13246,7 +13262,7 @@ void CvPlayer::changeCommerceRateModifier(CommerceTypes eIndex, int iChange)
 
 	if (iChange != 0)
 	{
-		m_aiCommerceRateModifier[eIndex] += iChange;
+		m_aiCommerceRateModifier[eIndex] = std::min(m_aiCommerceRateModifier[eIndex] + iChange, MAX_COMMERCE_RATE_MODIFIER_VALUE);
 
 		setCityCommerceModifierDirty(eIndex);
 		setCommerceDirty(eIndex);
@@ -13268,9 +13284,9 @@ void CvPlayer::changeCommerceRateModifierfromEvents(CommerceTypes eIndex, int iC
 	if (iChange != 0)
 	{
 		//Totals into Events to split for display
-		m_aiCommerceRateModifierfromEvents[eIndex] += iChange;
+		m_aiCommerceRateModifierfromEvents[eIndex] = std::min(m_aiCommerceRateModifierfromEvents[eIndex] + iChange, MAX_COMMERCE_RATE_MODIFIER_VALUE);
 		//Also totals into generic Rate Modifier total
-		m_aiCommerceRateModifier[eIndex] += iChange;
+		m_aiCommerceRateModifier[eIndex] = std::min(m_aiCommerceRateModifier[eIndex] + iChange, MAX_COMMERCE_RATE_MODIFIER_VALUE);
 
 		setCityCommerceModifierDirty(eIndex);
 		setCommerceDirty(eIndex);
@@ -13292,9 +13308,9 @@ void CvPlayer::changeCommerceRateModifierfromBuildings(CommerceTypes eIndex, int
 	if (iChange != 0)
 	{
 		//Totals into Buildings to split for display
-		m_aiCommerceRateModifierfromBuildings[eIndex] += iChange;
+		m_aiCommerceRateModifierfromBuildings[eIndex] = std::min(m_aiCommerceRateModifierfromBuildings[eIndex] + iChange, MAX_COMMERCE_RATE_MODIFIER_VALUE);
 		//Also totals into generic Rate Modifier total
-		m_aiCommerceRateModifier[eIndex] += iChange;
+		m_aiCommerceRateModifier[eIndex] = std::min(m_aiCommerceRateModifier[eIndex] + iChange, MAX_COMMERCE_RATE_MODIFIER_VALUE);
 
 		setCityCommerceModifierDirty(eIndex);
 		setCommerceDirty(eIndex);
@@ -13428,8 +13444,8 @@ void CvPlayer::changeGoldPerTurnByPlayer(PlayerTypes eIndex, int iChange)
 
 	if (iChange != 0)
 	{
-		m_iGoldPerTurn += iChange;
-		m_aiGoldPerTurnByPlayer[eIndex] += iChange;
+		m_iGoldPerTurn = std::min(m_iGoldPerTurn + iChange, MAX_GOLD_PER_TURN_VALUE);
+		m_aiGoldPerTurnByPlayer[eIndex] = std::min(m_aiGoldPerTurnByPlayer[eIndex] + iChange, MAX_GOLD_PER_TURN_VALUE);
 
 		if (getID() == GC.getGame().getActivePlayer())
 		{
@@ -14887,7 +14903,7 @@ int CvPlayer::findPathLength(TechTypes eTech, bool bCost) const
 			}
 		}
 
-		// Nettoyage mémoire obligatoire (sinon fuite)
+		// Nettoyage mï¿½moire obligatoire (sinon fuite)
 		for (size_t i = 0; i < possiblePaths.size(); ++i)
 		{
 			delete possiblePaths[i];
@@ -23689,6 +23705,9 @@ bool CvPlayer::assimilatePlayer(PlayerTypes ePlayer)
 		if (pLoopPlot->isRevealed(kTeam.getID(), false))
 		{
 			pLoopPlot->setRevealed(getTeam(), true, false, kTeam.getID(), false);
+#ifdef ENABLE_FOGWAR_DECAY
+			pLoopPlot->InitFogDecay(false);
+#endif
 		}
 	}
 
@@ -30523,6 +30542,11 @@ int CvPlayer::getAmbushingUnit() const
 	return m_iAmbushingUnit;
 }
 
+int CvPlayer::getAmbushingTargetUnit() const
+{
+	return m_iAmbushingTargetUnit;
+}
+
 bool CvPlayer::isAssassinate() const
 {
 	return m_bAssassinate;
@@ -30534,6 +30558,11 @@ void CvPlayer::setAmbushingUnit(int iNewValue, bool bAssassinate)
 	m_bAssassinate = bAssassinate;
 }
 
+void CvPlayer::setAmbushingTargetUnit(int iNewValue, bool bAssassinate)
+{
+	m_iAmbushingTargetUnit = iNewValue;
+	//m_bAssassinate = bAssassinate;
+}
 
 void CvPlayer::setGreatGeneralPointsForType(const UnitTypes eUnit, const int iValue)
 {

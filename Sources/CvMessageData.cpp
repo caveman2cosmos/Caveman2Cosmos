@@ -2089,12 +2089,23 @@ void CvNetConfirmAmbush::Execute()
 		if (GET_PLAYER(m_ePlayer).getAmbushingUnit() != FFreeList::INVALID_INDEX && m_bConfirm)
 		{
 			CvUnit* pAttacker = GET_PLAYER(m_ePlayer).getUnit(GET_PLAYER(m_ePlayer).getAmbushingUnit());
-			bool bAssassinate = GET_PLAYER(m_ePlayer).isAssassinate();
-			if (pAttacker->plot() == NULL)
+			int DefID = GET_PLAYER(m_ePlayer).getAmbushingTargetUnit();
+			if (!pAttacker) return;
+			if (pAttacker->plot() == NULL)	return;
+			CvPlot* pPlot = pAttacker->plot();
+			CvUnit* pDefender = NULL;
+			if (DefID != FFreeList::INVALID_INDEX)
 			{
-				return;
+				foreach_(CvUnit* unitX, pPlot->units())
+				{
+					if (unitX->getID() == DefID)
+					{
+						pDefender = unitX;
+					}
+				}
 			}
-			pAttacker->enactAmbush(bAssassinate);
+			bool bAssassinate = GET_PLAYER(m_ePlayer).isAssassinate();
+			pAttacker->enactAmbush(bAssassinate, pDefender);
 			GET_PLAYER(m_ePlayer).setAmbushingUnit(FFreeList::INVALID_INDEX);
 		}
 	}

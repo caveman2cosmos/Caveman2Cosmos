@@ -318,14 +318,30 @@ void CvContractBroker::advertiseTender(const CvCity* pCity, int iMinPriority)
 {
 	PROFILE_FUNC();
 
-	if (gCityLogLevel >= 3) logContractBroker(1, "      City %S tenders for unit builds at priority %d", pCity->getName().GetCString(), iMinPriority);
+	int iNumTenders = 1; // par défaut
 
-	cityTender newTender;
+	iNumTenders = 1 + (pCity->getPopulation() / 10) + (pCity->getYieldRate(YIELD_PRODUCTION) / 100);
+	if (pCity->isCapital())
+	{
+		iNumTenders+=2;
+	}
 
-	newTender.iMinPriority = iMinPriority;
-	newTender.iCityId = pCity->getID();
+	
+	iNumTenders = std::min(iNumTenders, 4); // max 6
 
-	m_advertisingTenders.push_back(newTender);
+
+	for (int i = 0; i < iNumTenders; i++)
+	{
+		cityTender newTender;
+		newTender.iMinPriority = iMinPriority;
+		newTender.iCityId = pCity->getID();
+		m_advertisingTenders.push_back(newTender);
+
+		if (gCityLogLevel >= 3)
+			logContractBroker(1, "      City %S tenders (slot %d/%d) for unit builds at priority %d",
+				pCity->getName().GetCString(), i + 1, iNumTenders, iMinPriority);
+	}
+
 }
 
 //	Find out how many requests have already been made for units of a specified AI type
@@ -516,7 +532,7 @@ void CvContractBroker::finalizeTenderContracts()
 								if (CvSelectionGroup::getPathGenerator()->generatePathForHypotheticalUnit(pCity->plot(), pDestPlot, m_eOwner, eUnit, MOVE_NO_ENEMY_TERRITORY, m_workRequests[iI].iMaxPath))
 								{
 									const int iDistance = CvSelectionGroup::getPathGenerator()->getLastPath().length();
-									iValue /= (1 + iDistance);
+									iValue /= (1 + intSqrt(iDistance));
 
 									if (gCityLogLevel >= 3)
 									{
@@ -590,7 +606,12 @@ void CvContractBroker::finalizeTenderContracts()
 
 				// Queue up the build. Add to queue head if the current build is not a unit,
 				//	implies a local build below the priority of work the city tendered for.
-				const bool bAppend = pBestCity->isProduction() && pBestCity->getOrderData(0).eOrderType == ORDER_TRAIN;
+				const bool bDanger = pBestCity->AI_isDanger();
+				const int iHammerCostPercent = GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getHammerCostPercent();
+				//if a production is nearly finished, don't insert a unit, add it to the queue.
+				const int iMaxTurntoLeave = (bDanger && pBestCity->getProductionUnit() == NO_UNIT ? 1 + GC.getGame().getGameSpeedType() / 4 : 1 + iHammerCostPercent / 50);
+				const bool bNearlyFinished = (pBestCity->getProductionTurnsLeft() <= iMaxTurntoLeave || (pBestCity->getProductionTurnsLeft()+3) <= pBestCity->getProductionTurnsLeft(eBestUnit, 1));
+				bool bAppend = (pBestCity->isProduction() && pBestCity->getOrderData(0).eOrderType == ORDER_TRAIN) || bNearlyFinished;
 
 				pBestCity->pushOrder(
 					ORDER_TRAIN,
