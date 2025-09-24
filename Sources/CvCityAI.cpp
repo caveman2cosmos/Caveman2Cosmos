@@ -1648,8 +1648,12 @@ void CvCityAI::AI_chooseProduction()
 
 	m_iTempBuildPriority--;
 
-	//#4 Really easy production trumps everything (Less than 2 turns)
-	if (AI_chooseBuilding(BUILDINGFOCUS_PRODUCTION, 2))
+	//#4 Really easy production trumps everything (Less than 5 turns (instead of only 2)
+	int iMaxTurnsUsefull = 2;
+	iMaxTurnsUsefull *= GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getHammerCostPercent();
+	iMaxTurnsUsefull /= 100;
+
+	if (AI_chooseBuilding(BUILDINGFOCUS_PRODUCTION, iMaxTurnsUsefull))
 	{
 		LOG_BBAI_CITY(2, ("#4 City %S, Finishing Building...", getName().GetCString()));
 		m_iRequestedUnit = 10; //Prevent Unit buildings

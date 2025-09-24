@@ -318,14 +318,30 @@ void CvContractBroker::advertiseTender(const CvCity* pCity, int iMinPriority)
 {
 	PROFILE_FUNC();
 
-	if (gCityLogLevel >= 3) logContractBroker(1, "      City %S tenders for unit builds at priority %d", pCity->getName().GetCString(), iMinPriority);
+	int iNumTenders = 1; // par défaut
 
-	cityTender newTender;
+	iNumTenders = 1 + (pCity->getPopulation() / 10) + (pCity->getYieldRate(YIELD_PRODUCTION) / 100);
+	if (pCity->isCapital())
+	{
+		iNumTenders+=2;
+	}
 
-	newTender.iMinPriority = iMinPriority;
-	newTender.iCityId = pCity->getID();
+	
+	iNumTenders = std::min(iNumTenders, 4); // max 6
 
-	m_advertisingTenders.push_back(newTender);
+
+	for (int i = 0; i < iNumTenders; i++)
+	{
+		cityTender newTender;
+		newTender.iMinPriority = iMinPriority;
+		newTender.iCityId = pCity->getID();
+		m_advertisingTenders.push_back(newTender);
+
+		if (gCityLogLevel >= 3)
+			logContractBroker(1, "      City %S tenders (slot %d/%d) for unit builds at priority %d",
+				pCity->getName().GetCString(), i + 1, iNumTenders, iMinPriority);
+	}
+
 }
 
 //	Find out how many requests have already been made for units of a specified AI type
