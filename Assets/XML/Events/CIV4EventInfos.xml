@@ -267,7 +267,7 @@
 		<EventInfo>
 			<Type>EVENT_FOREST_FIRE_1</Type>
 			<Description>TXT_KEY_EVENT_FOREST_FIRE_1</Description>
-			<iGold>-50</iGold>
+			<iGold>-45</iGold>
 			<bGameSpeedScale>1</bGameSpeedScale>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<iAIValue>2</iAIValue>
@@ -317,10 +317,8 @@
 		<EventInfo>
 			<Type>EVENT_FOREST_MASSIVE_WILDFIRE_1</Type>
 			<Description>TXT_KEY_EVENT_FOREST_MASSIVE_WILDFIRE_1</Description>
-			<iGold>-50</iGold>
+			<iGold>-45</iGold>
 			<bGameSpeedScale>1</bGameSpeedScale>
-			<FeatureType>FEATURE_FOREST</FeatureType>
-			<iFeatureChange>-1</iFeatureChange>
 			<AdditionalEvents>
 				<EventChance>
 					<Event>EVENT_FOREST_WILDFIRE_SAVED</Event>
@@ -380,13 +378,13 @@
 		<EventInfo>
 			<Type>EVENT_FOREST_WILDFIRE_SAVED</Type>
 			<Description>TXT_KEY_EVENT_WILDFIRE_2</Description>
-			<FeatureType>FEATURE_FOREST</FeatureType>
-			<iFeatureChange>1</iFeatureChange>
 		</EventInfo>
 
 		<EventInfo>
 			<Type>EVENT_FOREST_BURNED</Type>
 			<Description>TXT_KEY_EVENT_WILDFIRE_3</Description>
+            <FeatureType>FEATURE_FOREST</FeatureType>
+            <iFeatureChange>-1</iFeatureChange>
 			<FeatureType>FEATURE_FOREST_BURNT</FeatureType>
 			<iFeatureChange>1</iFeatureChange>
 		</EventInfo>

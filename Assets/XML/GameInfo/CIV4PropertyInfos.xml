@@ -908,7 +908,7 @@
 				</PropertyBuilding>
 				<PropertyBuilding>
 					<BuildingType>BUILDING_DISEASE_COMMON_COLD</BuildingType>
-					<iMinValue>20</iMinValue>
+					<iMinValue>30</iMinValue>
 					<iMaxValue>100000</iMaxValue>
 				</PropertyBuilding>
 				<PropertyBuilding>
