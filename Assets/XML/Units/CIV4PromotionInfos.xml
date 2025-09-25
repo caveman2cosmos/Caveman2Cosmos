@@ -17062,7 +17062,7 @@
 			<VisibilityIntensityRangeChangeTypes>
 				<VisibilityIntensityRangeChangeType>
 					<InvisibleType>INVISIBLE_CAMOUFLAGE</InvisibleType>
-					<iIntensity>1</iIntensity>
+					<iIntensity>2</iIntensity>
 				</VisibilityIntensityRangeChangeType>
 			</VisibilityIntensityRangeChangeTypes>
 			<Button>Art/Buttons/Promotions/HawkEyes3Promotion.dds</Button>
