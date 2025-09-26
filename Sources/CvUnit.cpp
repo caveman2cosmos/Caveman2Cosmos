@@ -38161,7 +38161,16 @@ bool CvUnit::doAmbush(bool bAssassinate)
 			CvPlot* pPlot = plot();
 			if (pPlot != NULL)
 			{
-				CvUnit* pDefender = pPlot->getBestDefender(NO_PLAYER, getOwner(), this, true, true, false, bAssassinate);
+				CvUnit* pDefender;
+				if (bAssassinate && GC.getGame().isModderGameOption(MODDERGAMEOPTION_ASSASSINATE_CHOICE))
+				{
+					pDefender = pPlot->getWorstDefender(NO_PLAYER, getOwner(), this, true, true, false, bAssassinate);
+				}
+				else
+				{
+					pDefender = pPlot->getBestDefender(NO_PLAYER, getOwner(), this, true, true, false, bAssassinate);
+				}
+				
 				if (pDefender != NULL)
 				{
 					attackSamePlotSpecifiedUnit(pDefender);

@@ -687,7 +687,7 @@ protected:
 	bool AI_choosePropertyControlBuildingAndUnit(int iTriggerPercentOfPropertyOpRange, PropertyTypes pProperty = NO_PROPERTY, int eMaxPropertyUnitsPercent = 20);
 	bool AI_chooseHealerUnit(int iMinNeeded = 3);
 	bool AI_chooseProject();
-	bool AI_chooseProcess(CommerceTypes eCommerceType = NO_COMMERCE, int64_t* commerceWeights = NULL);
+	bool AI_chooseProcess(CommerceTypes eCommerceType = NO_COMMERCE, int64_t* commerceWeights = NULL, bool bforce = false);
 
 	int	getPlayerDangerPercentage(PlayerTypes ePlayer, int& iModifier) const;
 

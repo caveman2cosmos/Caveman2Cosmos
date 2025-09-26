@@ -391,7 +391,7 @@ public:
 	int getTerrainTurnDamage(const CvUnit* pUnit = NULL) const;
 	int getFeatureTurnDamage() const;
 	int getTotalTurnDamage(const CvUnit* pUnit = NULL) const;
-	CvUnit* getWorstDefender(PlayerTypes eOwner, PlayerTypes eAttackingPlayer = NO_PLAYER, const CvUnit* pAttacker = NULL, bool bTestAtWar = false, bool bTestPotentialEnemy = false, bool bTestCanMove = false) const;
+	CvUnit* getWorstDefender(PlayerTypes eOwner, PlayerTypes eAttackingPlayer = NO_PLAYER, const CvUnit* pAttacker = NULL, bool bTestAtWar = false, bool bTestPotentialEnemy = false, bool bTestCanMove = false, bool bAssassinate = false) const;
 	bool isBorder(bool bIgnoreWater = false) const;
 
 	int getNumVisibleAdjacentEnemyDefenders(const CvUnit* pUnit) const;

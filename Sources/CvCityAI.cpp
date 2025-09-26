@@ -796,6 +796,7 @@ void CvCityAI::AI_chooseProduction()
 	const int iDangerValue = GET_PLAYER(getOwner()).AI_getPlotDanger(plot(), 2, false);
 	const bool bWasFoodProduction = isFoodProduction();
 	const bool bFinancialTrouble = player.AI_isFinancialTrouble();
+	const bool bCriticalGold = player.AI_hasCriticalGold();
 	const int iHammerCostPercent = GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getHammerCostPercent();
 
 	//# 0 : If their is a alredy a production in City, Conditions to keep them (
@@ -1202,7 +1203,7 @@ void CvCityAI::AI_chooseProduction()
 		iNumAreaCitySites, iNumWaterAreaCitySites, iNumSettlers, iMaxSettlers
 		));
 
-	// --- �conomie / Culture / Sp�cial ---
+	// --- Economie / Culture / Special ---
 	LOG_BBAI_CITY(3, (
 		"City %s econ/culture: EconFlags=%08lx (bits=%d, threshold=%d), "
 		"ImportantCity=%d, CultureRank=%d/%d, CulturePerTurn=%d, TargetCulture=%d, "
@@ -1600,7 +1601,25 @@ void CvCityAI::AI_chooseProduction()
 		}
 	}
 
-	//#2 - If Strike, Appropriate Building
+	//#2a Very Critical Income situation
+	if (bCriticalGold)
+	{
+		//Apply Process Income as soon as it's possible
+		int iPathfinding = GC.getInfoTypeForString("TECH_COOPERATION");
+		if ((GET_TEAM(getTeam()).isHasTech((TechTypes)iPathfinding)))
+		{
+			bInhibitUnits = true;
+			m_iRequestedBuilding = 0;
+			if (AI_chooseProcess(COMMERCE_GOLD, NULL, true))
+			{
+				m_iRequestedBuilding = 10;
+				return;
+			}
+			m_iRequestedUnit = 10;
+		}
+	}
+
+	//#2b - If Strike, Appropriate Building
 	if (player.isStrike())
 	{
 		// pick granary or lighthouse, any duration
@@ -1645,6 +1664,8 @@ void CvCityAI::AI_chooseProduction()
 			}
 		}
 	}
+
+
 
 	m_iTempBuildPriority--;
 
@@ -1744,7 +1765,7 @@ void CvCityAI::AI_chooseProduction()
 	m_iTempBuildPriority--;
 
 	//#9 Non-emergency, but still urgent happyness
-	if (iHappyness < 0)
+	if (!bCriticalGold && iHappyness < 0)
 	{
 		if (AI_chooseBuilding(BUILDINGFOCUS_HAPPY, 8, 0, -1, true))
 		{
@@ -1820,6 +1841,7 @@ void CvCityAI::AI_chooseProduction()
 		m_iRequestedUnit = 10; //Prevent Unit buildings
 		return;
 	}
+
 
 	m_iTempBuildPriority--;
 
@@ -3698,7 +3720,7 @@ void CvCityAI::AI_chooseProduction()
 			}
 			else if (iAttackCount > 1 && iAttackCityCount == 0)
 			{
-				if (AI_chooseUnit("start city attack stack", UNITAI_ATTACK_CITY))
+				if (!bFinancialTrouble && AI_chooseUnit("start city attack stack", UNITAI_ATTACK_CITY))
 				{
 					LOG_BBAI_CITY(4, ("#84 City %S, Unit UNITAI_ATTACK_CITY ordered", getName().GetCString()));
 					return;
@@ -3746,6 +3768,12 @@ void CvCityAI::AI_chooseProduction()
 		{
 			LOG_BBAI_CITY(2, ("#84 City %S, Attack Stack big enough : StackRand = %d. For the moment : Attack : %d / %d and Attack_City : %d / %d", getName().GetCString(), amountWanted, iAttackCount, iAttackTarget, iAttackCityCount, iAttackCityTarget));
 		}
+	}
+
+
+	if (bFinancialTrouble)
+	{
+		AI_chooseProcess(COMMERCE_GOLD);
 	}
 
 
@@ -8727,7 +8755,7 @@ bool CvCityAI::AI_chooseUnit(const char* reason, UnitAITypes eUnitAI, int iOdds,
 	if (m_iRequestedUnit > MAX_REQUESTEDUNIT_PER_CITY)
 	{
 
-		LOG_CITY_BLOCK(3, {
+		LOG_CITY_BLOCK(4, {
 			CvString unitAIType;
 			CvString reasonStr = reason;
 			if (eUnitAI != NO_UNITAI)
@@ -9133,7 +9161,7 @@ bool CvCityAI::AI_chooseProject()
 	if (eBestProject != NO_PROJECT)
 	{
 		pushOrder(ORDER_CREATE, eBestProject, -1, false, false, true);
-
+		
 		return true;
 	}
 
@@ -9141,10 +9169,10 @@ bool CvCityAI::AI_chooseProject()
 }
 
 
-bool CvCityAI::AI_chooseProcess(CommerceTypes eCommerceType, int64_t* commerceWeights)
+bool CvCityAI::AI_chooseProcess(CommerceTypes eCommerceType, int64_t* commerceWeights,bool bforce)
 {
 #ifdef USE_UNIT_TENDERING
-	if (eCommerceType != NO_COMMERCE && (m_iRequestedBuilding > MAX_REQUESTEDBUILDING_PER_CITY || m_iRequestedUnit > MAX_REQUESTEDUNIT_PER_CITY))
+	if (eCommerceType != NO_COMMERCE && (m_iRequestedBuilding > MAX_REQUESTEDBUILDING_PER_CITY && m_iRequestedUnit > MAX_REQUESTEDUNIT_PER_CITY))
 	{
 		return false;
 	}
@@ -9155,7 +9183,7 @@ bool CvCityAI::AI_chooseProcess(CommerceTypes eCommerceType, int64_t* commerceWe
 
 	if (eBestProcess != NO_PROCESS)
 	{
-		pushOrder(ORDER_MAINTAIN, eBestProcess, -1, false, false, true);
+		pushOrder(ORDER_MAINTAIN, eBestProcess, -1, false, false, !bforce);
 
 		return true;
 	}
