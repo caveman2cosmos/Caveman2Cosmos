@@ -1375,6 +1375,19 @@
 			<bVisible>1</bVisible>
 			<Button>Art/Interface/Buttons/Missions/Free Slave.dds</Button>
 		</MissionInfo>
+        <MissionInfo>
+            <Type>MISSION_SLAY_ANIMAL</Type>
+            <Description>TXT_KEY_MISSION_SLAY_ANIMAL</Description>
+            <Help>TXT_KEY_MISSION_SLAY_ANIMAL_HELP</Help>
+            <Waypoint>NONE</Waypoint>
+            <EntityEventType>NONE</EntityEventType>
+            <iTime>0</iTime>
+            <bTarget>0</bTarget>
+            <bBuild>0</bBuild>
+            <bSound>0</bSound>
+            <bVisible>1</bVisible>
+            <Button>Art/Interface/Buttons/Actions/butcher.dds</Button>
+        </MissionInfo>
 		<MissionInfo>
 			<Type>MISSION_JOIN_CITY_FREED_SLAVE</Type>
 			<Description>TXT_KEY_MISSION_JOIN_CITY_FREED_SLAVE</Description>
