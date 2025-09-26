@@ -2620,6 +2620,10 @@ void CvUnitAI::AI_attackMove()
 		{
 			return;
 		}
+		if (AI_groupMergeRange(UNITAI_RESERVE, 5, false, true))
+		{
+			return;
+		}
 
 	}
 	bool bDanger = (GET_PLAYER(getOwner()).AI_getAnyPlotDanger(plot(), 3));
@@ -4598,6 +4602,42 @@ void CvUnitAI::AI_reserveMove()
 	if (processContracts())
 	{
 		return;
+	}
+
+	//Check for Properties :
+	int iMaxPropertyUnitsPercent = 20;
+	const PlayerTypes eOwner = getOwner();
+	CvPlayerAI& player = GET_PLAYER(eOwner);
+	const CvArea* pArea = area();
+	int iPropControlInArea = player.AI_totalAreaUnitAIs(pArea, UNITAI_PROPERTY_CONTROL);
+	int iUnitsInArea = player.getNumUnits();
+	if ((iPropControlInArea * 100 / (iUnitsInArea + 1)) < iMaxPropertyUnitsPercent)
+	{
+		for (int iI = 0; iI < GC.getNumPropertyInfos(); iI++)
+		{
+			const PropertyTypes pProperty = (PropertyTypes)iI;
+			if (GC.getPropertyInfo(pProperty).getAIWeight() != 0)
+			{
+				int iCurrentValue = getPropertiesConst()->getValueByProperty(pProperty);
+				if (iCurrentValue > 0)
+				{   //it has properties control 
+					AI_setUnitAIType(UNITAI_PROPERTY_CONTROL);
+					getGroup()->pushMission(MISSION_SKIP, -1, -1, 0, false, false, NO_MISSIONAI);
+					CvWString StrunitAIType;
+					CvWString StrUnitName;
+					if (gUnitLogLevel > 2)
+					{
+						StrunitAIType = GC.getUnitAIInfo(AI_getUnitAIType()).getType();
+						StrUnitName = m_szName;
+						if (StrUnitName.length() == 0)
+						{
+							StrUnitName = getName(0).GetCString();
+						}
+						logAiEvaluations(3, "	Player %S Unit %S of type %S - Set form Reserve to property Contr., it has prop. found", GET_PLAYER(getOwner()).getCivilizationDescription(0), StrUnitName.GetCString(), StrunitAIType.GetCString());
+					}
+				}
+			}
+		}
 	}
 
 	if (!plot()->isOwned())
@@ -21271,87 +21311,93 @@ bool CvUnitAI::AI_nextCityToImprove(CvCity* pCity)
 	BuildTypes eBestBuild = NO_BUILD;
 	const CvPlot* pBestPlot = NULL;
 	const CvCity* pBestCity = NULL;
+	const int iWorkerArea = getArea();
 
 
 	foreach_(const CvCity * pLoopCity, GET_PLAYER(getOwner()).cities())
 	{
 		if (pLoopCity != pCity)
 		{
-			int iWorkersNeeded = pLoopCity->AI_getWorkersNeeded();
-			int iWorkersHave = pLoopCity->getNumWorkers();
-
-			int iValue = 100 * std::max(0, iWorkersNeeded - iWorkersHave) + 10 * iWorkersNeeded;
-
-			iValue *= (iWorkersNeeded + 1);
-			iValue /= (iWorkersHave + 1);
-
-			if (iValue > 0)
+			//limit to cities in Area (otherwise, cause slowdown, in space maps in particular
+			if (pLoopCity->getArea() == iWorkerArea)
 			{
-				CvPlot* pPlot;
-				BuildTypes eBuild;
-				if (AI_bestCityBuild(pLoopCity, &pPlot, &eBuild, NULL, this))
+
+				int iWorkersNeeded = pLoopCity->AI_getWorkersNeeded();
+				int iWorkersHave = pLoopCity->getNumWorkers();
+
+				int iValue = 100 * std::max(0, iWorkersNeeded - iWorkersHave) + 10 * iWorkersNeeded;
+
+				iValue *= (iWorkersNeeded + 1);
+				iValue /= (iWorkersHave + 1);
+
+				if (iValue > 0)
 				{
-					FAssert(pPlot != NULL);
-					FAssert(eBuild != NO_BUILD);
-
-					if (AI_plotValid(pPlot))
+					CvPlot* pPlot;
+					BuildTypes eBuild;
+					if (AI_bestCityBuild(pLoopCity, &pPlot, &eBuild, NULL, this))
 					{
-						iValue *= 1000;
+						FAssert(pPlot != NULL);
+						FAssert(eBuild != NO_BUILD);
 
-						if (pLoopCity->isCapital())
+						if (AI_plotValid(pPlot))
 						{
-							iValue *= 2;
-						}
+							iValue *= 1000;
 
-						if (iValue > iBestPlotValue)
-						{
-							PROFILE("CvUnitAI::AI_nextCityToImprove.Pathing");
-							int iPathTurns;
-							if (generatePath(pPlot, iBasePathFlags, true, &iPathTurns))
+							if (pLoopCity->isCapital())
 							{
-								PROFILE("CvUnitAI::AI_nextCityToImprove.Pathed");
-								iValue /= (iPathTurns + 1);
+								iValue *= 2;
+							}
 
-								if (iValue > iBestPlotValue)
+							if (iValue > iBestPlotValue)
+							{
+								PROFILE("CvUnitAI::AI_nextCityToImprove.Pathing");
+								int iPathTurns;
+								if (generatePath(pPlot, iBasePathFlags, true, &iPathTurns))
 								{
-									iBestPlotValue = iValue;
-									eBestBuild = eBuild;
-									pBestPlot = pPlot;
-									pBestCity = pLoopCity;
-									//CvPlot* pEndTurnPlot = getPathEndTurnPlot();
-									FAssert(!atPlot(pBestPlot) || NULL == pCity || pCity->AI_getWorkersNeeded() == 0 || pCity->getNumWorkers() > pCity->AI_getWorkersNeeded() + 1);
+									PROFILE("CvUnitAI::AI_nextCityToImprove.Pathed");
+									iValue /= (iPathTurns + 1);
+
+									if (iValue > iBestPlotValue)
+									{
+										iBestPlotValue = iValue;
+										eBestBuild = eBuild;
+										pBestPlot = pPlot;
+										pBestCity = pLoopCity;
+										//CvPlot* pEndTurnPlot = getPathEndTurnPlot();
+										FAssert(!atPlot(pBestPlot) || NULL == pCity || pCity->AI_getWorkersNeeded() == 0 || pCity->getNumWorkers() > pCity->AI_getWorkersNeeded() + 1);
+									}
 								}
 							}
 						}
 					}
-				}
-				else
-				{ //no Plot, but City
-					if (AI_plotValid(pLoopCity->plot()))
-					{
-						iValue *= 1000;
-
-						if (pLoopCity->isCapital())
+					else
+					{ //no Plot, but City
+						if (AI_plotValid(pLoopCity->plot()))
 						{
-							iValue *= 2;
-						}
+							iValue *= 1000;
 
-						if (iValue > iBestCityValue)
-						{
-							PROFILE("CvUnitAI::AI_nextCityToImprove.Pathing");
-							int iPathTurns;
-							if (generatePath(pLoopCity->plot(), iBasePathFlags, true, &iPathTurns))
+							if (pLoopCity->isCapital())
 							{
-								PROFILE("CvUnitAI::AI_nextCityToImprove.Pathed");
-								iValue /= (iPathTurns + 1);
+								iValue *= 2;
+							}
 
-								if (iValue > iBestCityValue)
+							if (iValue > iBestCityValue)
+							{
+								PROFILE("CvUnitAI::AI_nextCityToImprove.Pathing");
+								int iPathTurns;
+								if (generatePath(pLoopCity->plot(), iBasePathFlags, true, &iPathTurns))
 								{
-									iBestCityValue = iValue;
-									//pBestPlot = pPlot;
-									pBestCity = pLoopCity;
-									//CvPlot* pEndTurnPlot = getPathEndTurnPlot();
-									FAssert(!(NULL == pBestCity || pBestCity->AI_getWorkersNeeded() == 0 || pBestCity->getNumWorkers() > pBestCity->AI_getWorkersNeeded() + 1));
+									PROFILE("CvUnitAI::AI_nextCityToImprove.Pathed");
+									iValue /= (iPathTurns + 1);
+
+									if (iValue > iBestCityValue)
+									{
+										iBestCityValue = iValue;
+										//pBestPlot = pPlot;
+										pBestCity = pLoopCity;
+										//CvPlot* pEndTurnPlot = getPathEndTurnPlot();
+										FAssert(!(NULL == pBestCity || pBestCity->AI_getWorkersNeeded() == 0 || pBestCity->getNumWorkers() > pBestCity->AI_getWorkersNeeded() + 1));
+									}
 								}
 							}
 						}

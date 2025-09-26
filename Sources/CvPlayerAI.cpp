@@ -3922,10 +3922,39 @@ int CvPlayerAI::AI_goldValueAssessmentModifier() const
 }
 
 
+bool CvPlayerAI::AI_hasCriticalGold() const
+{
+
+	int64_t iGoldLimit1 = 100;
+	int64_t iGoldLimit2 = 50;
+	int64_t iGoldLimit3 = 20;
+	int64_t iGoldperturnLimit1 = -5;
+	int64_t iGoldperturnLimit2 = 5;
+	int iGoldPerTurn = calculateGoldRate();
+	const bool isGoldcritical = (m_iGold < iGoldLimit1 && iGoldPerTurn < iGoldperturnLimit1) || (m_iGold < iGoldLimit2 && iGoldPerTurn < iGoldperturnLimit2) || m_iGold < iGoldLimit3;
+	if (isGoldcritical)
+	{
+		const int iEarlyGameTimeLimit = 50 * GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getSpeedPercent() / 100;
+		if (GC.getGame().getGameTurn() < iEarlyGameTimeLimit) return false;
+
+		LOG_BBAI_PLAYER(4, ("Gold critical : %I64d %d", m_iGold, iGoldPerTurn));
+	}
+	return isGoldcritical;
+}
+
 bool CvPlayerAI::AI_isFinancialTrouble() const
 {
 	PROFILE_FUNC();
-	return !isNPC() && AI_fundingHealth() < AI_safeFunding();
+	if (isNPC()) return false;
+	{
+		const bool isftrouble = AI_fundingHealth() < AI_safeFunding();
+		const bool isGoldcritical = AI_hasCriticalGold();
+		if (isftrouble)
+		{
+			LOG_BBAI_PLAYER(3, ("Financial Troubles  : AI_fundingHealth() < AI_safeFunding()"));
+		}
+		return isftrouble || isGoldcritical;
+	}
 }
 
 int64_t CvPlayerAI::AI_goldTarget() const

@@ -443,4 +443,9 @@ CvString MissionAITypeToString(MissionAITypes eMissionAI);
 CvString MissionAITypeToDescription(MissionAITypes eMissionAI);
 
 CvString AutomateTypeToDescription(AutomateTypes eAutomateAI);
+
+char remove_diacritic_char(unsigned char c);
+
+CvString remove_diacritics(const CvString& input);
+
 #endif

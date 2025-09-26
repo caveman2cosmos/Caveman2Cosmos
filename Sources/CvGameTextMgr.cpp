@@ -12,7 +12,7 @@
 
 
 #include "FProfiler.h"
-
+#include "CvGameCoreUtils.h"
 #include "CvGameCoreDLL.h"
 #include "CvArea.h"
 #include "CvArtFileMgr.h"
@@ -49,34 +49,6 @@ int shortenID(int iId)
 
 // For displaying Asserts and error messages
 static char* szErrorMsg;
-
-namespace {
-	bool isValidDomain(CvSelectionGroup* group, CvPlot* pPlot) {
-		switch (group->getDomainType()) {
-		case DOMAIN_SEA:
-			return pPlot->isWater() || group->canMoveAllTerrain();
-		case DOMAIN_AIR:
-			return true;
-		case DOMAIN_LAND:
-			return !pPlot->isWater() || pPlot->isSeaTunnel() || group->canMoveAllTerrain();
-		case DOMAIN_IMMOBILE:
-			return false;
-		default:
-			FErrorMsg("error");
-			return false;
-		}
-	}
-
-	void appendBarImages(CvWStringBuffer& szString, const wchar_t* img, int fullBlocks, int lastBlock) {
-		for (int i = 0; i < fullBlocks; ++i)
-			szString.append(img);
-		if (lastBlock > 0) {
-			CvWString szTempBuffer;
-			szTempBuffer.Format(L"<img=Art/ACO/%s_bar_%d.dds>", img, lastBlock);
-			szString.append(szTempBuffer);
-		}
-	}
-}
 
 
 //	Structure to hold aggregate info about an instances of a unit type and owener
@@ -365,9 +337,13 @@ void CvGameTextMgr::setDateStr(CvWString& szString, int iGameTurn, bool bSave, C
 	}
 
 	//FR remove diacritics
-	//szString = szString.replace('é', 'e');
-	//szString = szString.replace('è', 'e');
-	//szString = szString.replace('û', 'e');
+	if (bSave)
+	{
+		szString = remove_diacritics(szString);
+		CvString szTemp = "";
+		szTemp.Format("%d - ", iGameTurn);
+		szString = szTemp + szString;
+	}
 
 }
 
@@ -469,7 +445,7 @@ void CvGameTextMgr::setEspionageMissionHelp(CvWStringBuffer &szBuffer, const CvU
 }
 
 
-void CvGameTextMgr::setUnitHelp(CvWStringBuffer &szString, const CvUnit* pUnit, bool bOneLine, bool bShort)
+void CvGameTextMgr::setUnitHelp(CvWStringBuffer &szString, const CvUnit* pUnit, bool bOneLine, bool bShort, bool bdarkColor)
 {
 	PROFILE_FUNC();
 	const bool bDebugMode = GC.getGame().isDebugMode();
@@ -489,8 +465,10 @@ void CvGameTextMgr::setUnitHelp(CvWStringBuffer &szString, const CvUnit* pUnit, 
 	// bAlt = On unit base help: Long List Infos - Civil Info - should be changed from long list to civil info on the base too)
 	// bNormalView = default to show but replaced by any of the above - includes unit limit counts
 	bool bNormalView = (!bCtrl && !bAlt && !bShift);
+	std::string colorString = "COLOR_UNIT_TEXT";
+	if (bdarkColor) colorString = "COLOR_BROWN_TEXT";
 
-	szTempBuffer.Format(SETCOLR L"%s" ENDCOLR, TEXT_COLOR("COLOR_UNIT_TEXT"), pUnit->getName().GetCString());
+	szTempBuffer.Format(SETCOLR L"%s" ENDCOLR, TEXT_COLOR(colorString.c_str()), pUnit->getName().GetCString());
 	szString.append(szTempBuffer);
 
 	szString.append(L", ");
@@ -7844,66 +7822,214 @@ bool CvGameTextMgr::setMinimalCombatPlotHelp(CvWStringBuffer& szString, CvPlot* 
 
 	// Show attacker and defender info
 	CvWString unitStr;
-	szString.append(gDLL->getText("TXT_ACO_ATTACKER", unitStr.GetCString()));
+	szString.append(gDLL->getText("TXT_ACO_ATTACKER"));
 							szString.append(NEWLINE);
-							setUnitHelp(szString, pAttacker, true, true);
+							setUnitHelp(szString, pAttacker, true, true, true);
 							szString.append(NEWLINE);
-	szString.append(gDLL->getText("TXT_ACO_CIBLE", unitStr.GetCString()));
+	szString.append(gDLL->getText("TXT_ACO_CIBLE"));
 							szString.append(NEWLINE);
-							setUnitHelp(szString, pDefender, true, true);
-							szString.append(NEWLINE);
+							setUnitHelp(szString, pDefender, true, true, true);
+							//szString.append(NEWLINE);
 	// Calculate combat odds
 	const int iCombatOdds = getCombatOdds(pAttacker, pDefender);
 
 	szString.append(NEWLINE);
+	//TB Combat Mods Begin
+	int iDefenderDodge = pDefender->dodgeVSOpponentProbTotal(pAttacker);
+	int iDefenderPrecision = pDefender->precisionVSOpponentProbTotal(pAttacker);
+	int iAttackerDodge = pAttacker->dodgeVSOpponentProbTotal(pDefender);
+	int iAttackerPrecision = pAttacker->precisionVSOpponentProbTotal(pDefender);
+	int iAttackerHitModifier = iAttackerPrecision - iDefenderDodge;
+	int iDefenderHitModifier = iDefenderPrecision - iAttackerDodge;
 
-	// Calculate bar segments
-	int prob = iCombatOdds;
-	int prob2 = prob; // You may want to adjust prob2 for defender odds if needed
+	int iAttackArmorTotal = pAttacker->armorVSOpponentProbTotal(pDefender);
+	int iDefendPunctureTotal = pDefender->punctureVSOpponentProbTotal(pAttacker);
+	int iAttackPunctureTotal = pAttacker->punctureVSOpponentProbTotal(pDefender);
+	int iDefendArmorTotal = pDefender->armorVSOpponentProbTotal(pAttacker);
 
-	const int BAR_WIDTH = 200; // total width in pixels
-	int pixels = (int)((prob2 * BAR_WIDTH) / 1000.0 + 0.5); // scale odds to bar width
-	int pixels_left = BAR_WIDTH;
-	int fullBlocks = pixels / 10;
-	int lastBlock = pixels % 10;
+	int iUnmodifiedDefenderArmor = (iDefendArmorTotal - iAttackPunctureTotal);
+	int iUnmodifiedAttackerArmor = (iAttackArmorTotal - iDefendPunctureTotal);
+	int iModifiedDefenderArmorZero = (iUnmodifiedDefenderArmor < 0 ? 0 : iUnmodifiedDefenderArmor);
+	int iModifiedAttackerArmorZero = (iUnmodifiedAttackerArmor < 0 ? 0 : iUnmodifiedAttackerArmor);
+	int iModifiedDefenderArmor = (iModifiedDefenderArmorZero > 95 ? 95 : iModifiedDefenderArmorZero);
+	int iModifiedAttackerArmor = (iModifiedAttackerArmorZero > 95 ? 95 : iModifiedAttackerArmorZero);
 
-	// Green bar
-						szString.append(L"<img=Art/ACO/green_bar_left_end.dds>");
-	appendBarImages(szString, L"<img=Art/ACO/green_bar_10.dds>", fullBlocks, lastBlock);
-	pixels_left -= fullBlocks * 10 + lastBlock;
+	int iDefenderArmor = (100 - iModifiedDefenderArmor);
+	int iAttackerArmor = (100 - iModifiedAttackerArmor);
+	const int iAttackerStrength = pAttacker->currCombatStr(NULL, NULL);
+	const int iAttackerFirepower = pAttacker->currFirepower(NULL, NULL);
+	const int iDefenderStrength = std::max(1, pDefender->currCombatStr(pPlot, pAttacker));
+	const int iDefenderFirepower = std::max(1, pDefender->currFirepower(pPlot, pAttacker));
 
-	// Yellow bar
-	int yellow_pixels = 2 * ((int)(prob2 + 0.5)) - (pixels + 1);
-	fullBlocks = yellow_pixels / 10;
-	lastBlock = yellow_pixels % 10;
-	appendBarImages(szString, L"<img=Art/ACO/yellow_bar_10.dds>", fullBlocks, lastBlock);
-	pixels_left -= fullBlocks * 10 + lastBlock;
+	FAssert(iAttackerStrength + iDefenderStrength > 0);
+	FAssert(iAttackerFirepower + iDefenderFirepower > 0);
 
-	// Red bar
-						fullBlocks = pixels_left / 10;
-						lastBlock = pixels_left % 10;
-	appendBarImages(szString, L"<img=Art/ACO/red_bar_10.dds>", fullBlocks, lastBlock);
+	int iStrengthFactor = (iAttackerFirepower + iDefenderFirepower + 1) / 2;
 
-						szString.append(L"<img=Art/ACO/red_bar_right_end.dds> ");
+	int iDefendDamageModifierTotal = pDefender->damageModifierTotal();
+	int iAttackDamageModifierTotal = pAttacker->damageModifierTotal();
+
+	int iDamageToAttackerBase = ((GC.getCOMBAT_DAMAGE() * (iDefenderFirepower + iStrengthFactor)) / std::max(1, (iAttackerFirepower + iStrengthFactor)));
+	int iDamageToDefenderBase = ((GC.getCOMBAT_DAMAGE() * (iAttackerFirepower + iStrengthFactor)) / std::max(1, (iDefenderFirepower + iStrengthFactor)));
+	int iDamageToAttackerModified = iDamageToAttackerBase + ((iDamageToAttackerBase * iDefendDamageModifierTotal) / 100);
+	int iDamageToDefenderModified = iDamageToDefenderBase + ((iDamageToDefenderBase * iAttackDamageModifierTotal) / 100);
+	int iDamageToAttackerArmor = (iDamageToAttackerModified * iAttackerArmor) / 100;
+	int iDamageToDefenderArmor = (iDamageToDefenderModified * iDefenderArmor) / 100;
+	int iDamageToAttacker = std::max(1, iDamageToAttackerArmor);
+	int iDamageToDefender = std::max(1, iDamageToDefenderArmor);
+	int iNeededRoundsAttacker = (pDefender->getHP() - pDefender->getMaxHP() + pAttacker->combatLimit(pDefender) - (((pAttacker->combatLimit(pDefender)) >= pDefender->getMaxHP()) ? 1 : 0)) / iDamageToDefender + 1;
+
+	int iAttackerBaseCriticalChance = pAttacker->criticalVSOpponentProbTotal(pDefender);
+	int iDefenderBaseCriticalChance = pDefender->criticalVSOpponentProbTotal(pAttacker);
+	int iAttackerCriticalChance = (((iDamageToDefender * 100) * iAttackerBaseCriticalChance) / 100);
+	int iDefenderCriticalChance = (((iDamageToDefender * 100) * iAttackerBaseCriticalChance) / 100);
+	int iAttackerEndurance = pAttacker->enduranceTotal();
+	int iDefenderEndurance = pDefender->enduranceTotal();
+
+	int iNeededRoundsDefender = (pAttacker->getHP() + iDamageToAttacker - 1) / iDamageToAttacker;
+
+	//  Determine Attack Withdraw odds
+	int iAttackerWithdraw = pAttacker->withdrawVSOpponentProbTotal(pDefender, pPlot);
+	int iDefenderPursuit = pDefender->pursuitVSOpponentProbTotal(pAttacker);
+	int iAttackerEarly = pAttacker->earlyWithdrawTotal();
+	int AdjustedAttWithdrawalstep1 = iAttackerWithdraw - iDefenderPursuit;
+	int AdjustedAttWithdrawalstep2 = ((AdjustedAttWithdrawalstep1 > 100) ? 100 : AdjustedAttWithdrawalstep1);
+	int AdjustedAttWithdrawal = ((AdjustedAttWithdrawalstep2 < 0) ? 0 : AdjustedAttWithdrawalstep2);
+
+	int expectedrndcnt = iNeededRoundsDefender;
+	int expectedrnds = ((expectedrndcnt * iAttackerEarly) / 100);
+
+	float Scaling_Factor = 1.6f;//how many pixels per 1% of odds
+
+	float AttackerKillOdds = 0.0f;
+	float PullOutOdds = 0.0f;//Withdraw odds
+	float RetreatOdds = 0.0f;
+	float DefenderKillOdds = 0.0f;
+
+	float CombatRatio = ((float)(pAttacker->currCombatStr(NULL, NULL))) / ((float)(pDefender->currCombatStr(pPlot, pAttacker)));
+	// THE ALL-IMPORTANT COMBATRATIO
+
+	float AttXP = (pAttacker->attackXPValue()) / CombatRatio;
+	float DefXP = (pDefender->defenseXPValue()) * CombatRatio;// These two values are simply for the Unrounded XP display
+
+	// General odds
+	if (pAttacker->combatLimit(pDefender) >= pDefender->getMaxHP()) //ie. we can kill the defender... I hope this is the most general form
+	{
+		//float AttackerKillOdds = 0.0f;
+		for (int n_A = 0; n_A < iNeededRoundsDefender; n_A++)
+		{
+			AttackerKillOdds += getCombatOddsSpecific(pAttacker, pDefender, n_A, iNeededRoundsAttacker);
+		}//for
+	}
+	else
+	{
+		// else we cannot kill the defender (eg. catapults attacking)
+		for (int n_A = 0; n_A < iNeededRoundsDefender; n_A++)
+		{
+			PullOutOdds += getCombatOddsSpecific(pAttacker, pDefender, n_A, iNeededRoundsAttacker);
+		}//for
+	}
+	//TB Combat Mods - next line adjusted for pursuit
+	if ((pAttacker->withdrawVSOpponentProbTotal(pDefender, pPlot) - pDefender->pursuitVSOpponentProbTotal(pAttacker)) > 0)
+	{
+		for (int n_D = 0; n_D < iNeededRoundsAttacker; n_D++)
+		{
+			RetreatOdds += getCombatOddsSpecific(pAttacker, pDefender, iNeededRoundsDefender - 1, n_D);
+		}//for
+	}
+	for (int n_D = 0; n_D < iNeededRoundsAttacker; n_D++)
+	{
+		DefenderKillOdds += getCombatOddsSpecific(pAttacker, pDefender, iNeededRoundsDefender, n_D);
+	}//for
+	//DefenderKillOdds = 1.0f - (AttackerKillOdds + RetreatOdds + PullOutOdds);//this gives slight negative numbers sometimes, I think
 
 
-						szString.append(NEWLINE);
+	float prob_victory = 100.0f * getCombatOddsSpecific(pAttacker, pDefender, iNeededRoundsDefender - 1, iNeededRoundsAttacker);
+	float prob_retreat = 100.0f * RetreatOdds;
+
+
+
+	CvWString szTempBuffer2;
+	float prob1 = 100.0f * (AttackerKillOdds + PullOutOdds);//up to win odds
+	float prob2 = prob1 + 100.0f * RetreatOdds;//up to retreat odds
+
+	int pixels_left = 199;// 1 less than 200 to account for right end bar
+	int pixels;
+	int fullBlocks;
+	int lastBlock;
+
+	pixels = (2 * ((int)(prob1 + 0.5))) - 1;  // 1% per pixel // subtracting one to account for left end bar
+	fullBlocks = pixels / 10;
+	lastBlock = pixels % 10;
+
+	szString.append(L"<img=Art/ACO/green_bar_left_end.dds>");
+	for (int i = 0; i < fullBlocks; ++i)
+	{
+		szString.append(L"<img=Art/ACO/green_bar_10.dds>");
+		pixels_left -= 10;
+	}
+	if (lastBlock > 0)
+	{
+		szTempBuffer2.Format(L"<img=Art/ACO/green_bar_%d.dds>", lastBlock);
+		szString.append(szTempBuffer2);
+		pixels_left -= lastBlock;
+	}
+
+
+	pixels = 2 * ((int)(prob2 + 0.5)) - (pixels + 1);//the number up to the next one...
+	fullBlocks = pixels / 10;
+	lastBlock = pixels % 10;
+	for (int i = 0; i < fullBlocks; ++i)
+	{
+		szString.append(L"<img=Art/ACO/yellow_bar_10.dds>");
+		pixels_left -= 10;
+	}
+	if (lastBlock > 0)
+	{
+		szTempBuffer2.Format(L"<img=Art/ACO/yellow_bar_%d.dds>", lastBlock);
+		szString.append(szTempBuffer2);
+		pixels_left -= lastBlock;
+	}
+
+	fullBlocks = pixels_left / 10;
+	lastBlock = pixels_left % 10;
+	for (int i = 0; i < fullBlocks; ++i)
+	{
+		szString.append(L"<img=Art/ACO/red_bar_10.dds>");
+	}
+	if (lastBlock > 0)
+	{
+		szTempBuffer2.Format(L"<img=Art/ACO/red_bar_%d.dds>", lastBlock);
+		szString.append(szTempBuffer2);
+	}
+
+	szString.append(L"<img=Art/ACO/red_bar_right_end.dds> ");
+
+
+
 
 
 	CvWString szTempBuffer;
+	//TB Combat Mod end
+	szString.append(NEWLINE);
 	if (pAttacker->combatLimit(pDefender) >= pDefender->getMaxHP())
-						{
+	{
 		if (iCombatOdds > 999)
+		{
 			szTempBuffer = L"&gt; 99.9";
+		}
 		else if (iCombatOdds < 1)
+		{
 			szTempBuffer = L"&lt; 0.1";
+		}
 		else
+		{
 			szTempBuffer.Format(L"%.1f", iCombatOdds / 10.0f);
-
+		}
 		szString.append(gDLL->getText("TXT_KEY_COMBAT_PLOT_ODDS", szTempBuffer.GetCString()));
-						}
+	}
 
-			return true;
+	return true;
 }
 
 
@@ -7911,72 +8037,255 @@ bool CvGameTextMgr::setMinimalCombatPlotHelp(CvWStringBuffer& szString, CvPlot* 
 bool CvGameTextMgr::setAssassinatePlotHelp(CvWStringBuffer& szString, CvPlot* pPlot, CvUnit* pAttacker, CvUnit* pDefender)
 {
 	PROFILE_FUNC();
-
+	bool bAssassinate = true;
 	if (gDLL->getInterfaceIFace()->getLengthSelectionList() == 0)
 		return false;
 
 	CvSelectionGroup* group = gDLL->getInterfaceIFace()->getSelectionList();
-	if (!isValidDomain(group, pPlot))
+
+	switch (group->getDomainType())
+	{
+	case DOMAIN_SEA:
+		if (!pPlot->isWater() && !group->canMoveAllTerrain())
+			return false;
+		break;
+	case DOMAIN_LAND:
+		if (pPlot->isWater() && !pPlot->isSeaTunnel() && !group->canMoveAllTerrain())
+			return false;
+		break;
+	case DOMAIN_IMMOBILE:
+		return false;
+	default:
+		FErrorMsg("error");
+		return false;
+	}
+
+	if (GC.getGame().getActivePlayer() != NO_PLAYER)
+	{
+		pAttacker = GET_PLAYER(GC.getGame().getActivePlayer()).getUnit(GET_PLAYER(GC.getGame().getActivePlayer()).getAmbushingUnit());
+	}
+	if (!pAttacker)
+	{
+		int iOdds;
+		const bool bIgnoreMadeAttack = !group->canAttackNow();
+		pAttacker = group->AI_getBestGroupAttacker(pPlot, false, iOdds, false, NULL, bAssassinate, false, bIgnoreMadeAttack);
+
+		if (!pAttacker)
+			pAttacker = group->AI_getBestGroupAttacker(pPlot, false, iOdds, true, NULL, bAssassinate, false, bIgnoreMadeAttack);
+	}
+
+	if (!pAttacker)
 		return false;
 
-	if (!pAttacker || !pDefender || pDefender == pAttacker || !pDefender->canDefend(pPlot) ||
-		!(pAttacker->canAttack(*pDefender) || pAttacker->canAmbush(*pDefender, true)))
+	if (!pDefender || pDefender == pAttacker || !pDefender->canDefend(pPlot) || !(pAttacker->canAttack(*pDefender) || pAttacker->canAmbush(*pDefender, bAssassinate)))
 		return false;
 
-	const bool bTBView = gDLL->ctrlKey();
-	const bool bSINView = gDLL->altKey();
-		int iView = gDLL->shiftKey() ? 2 : 1;
+	// Show attacker and defender info
+	CvWString unitStr;
+	//szString.append(gDLL->getText("TXT_ACO_ATTACKER"));
+	//szString.append(NEWLINE);
+	//setUnitHelp(szString, pAttacker, true, true);
+	//szString.append(NEWLINE);
+	szString.append(gDLL->getText("TXT_ACO_CIBLE"));
+	szString.append(NEWLINE);
+	setUnitHelp(szString, pDefender, true, true, true);
+	// Calculate combat odds
+	const int iCombatOdds = getCombatOdds(pAttacker, pDefender);
 
-		if (getBugOptionBOOL("ACO__SwapViews", false, "ACO_SWAP_VIEWS"))
-		iView = 3 - iView;
+	szString.append(NEWLINE);
+	//TB Combat Mods Begin
+	int iDefenderDodge = pDefender->dodgeVSOpponentProbTotal(pAttacker);
+	int iDefenderPrecision = pDefender->precisionVSOpponentProbTotal(pAttacker);
+	int iAttackerDodge = pAttacker->dodgeVSOpponentProbTotal(pDefender);
+	int iAttackerPrecision = pAttacker->precisionVSOpponentProbTotal(pDefender);
+	int iAttackerHitModifier = iAttackerPrecision - iDefenderDodge;
+	int iDefenderHitModifier = iDefenderPrecision - iAttackerDodge;
 
-	bool bStealthAttack = false, bStealthDefense = false, bIsSamePlot = false;
-	if (GC.getGame().isOption(GAMEOPTION_COMBAT_WITHOUT_WARNING)) {
-			bool bAttackerInvisible = pAttacker->isInvisible(GET_PLAYER(pDefender->getOwner()).getTeam(), false, false);
-				if (bAttackerInvisible || bIsSamePlot)
-					bStealthAttack = true;
-				if (bStealthAttack && bIsSamePlot && !bAttackerInvisible)
-					bStealthDefense = true;
-				}
+	int iAttackArmorTotal = pAttacker->armorVSOpponentProbTotal(pDefender);
+	int iDefendPunctureTotal = pDefender->punctureVSOpponentProbTotal(pAttacker);
+	int iAttackPunctureTotal = pAttacker->punctureVSOpponentProbTotal(pDefender);
+	int iDefendArmorTotal = pDefender->armorVSOpponentProbTotal(pAttacker);
 
-	if (pAttacker->getDomainType() == DOMAIN_AIR)
-		return true;
+	int iUnmodifiedDefenderArmor = (iDefendArmorTotal - iAttackPunctureTotal);
+	int iUnmodifiedAttackerArmor = (iAttackArmorTotal - iDefendPunctureTotal);
+	int iModifiedDefenderArmorZero = (iUnmodifiedDefenderArmor < 0 ? 0 : iUnmodifiedDefenderArmor);
+	int iModifiedAttackerArmorZero = (iUnmodifiedAttackerArmor < 0 ? 0 : iUnmodifiedAttackerArmor);
+	int iModifiedDefenderArmor = (iModifiedDefenderArmorZero > 95 ? 95 : iModifiedDefenderArmorZero);
+	int iModifiedAttackerArmor = (iModifiedAttackerArmorZero > 95 ? 95 : iModifiedAttackerArmorZero);
 
-	if (!bSINView && pAttacker->isBreakdownCombat(pPlot)) {
-						CvCity* tCity = pPlot->getPlotCity();
-						int iDefenderRepel = pDefender->repelVSOpponentProbTotal(pAttacker);
-						int iAttackerUnyielding = pAttacker->unyieldingTotal();
-		int AdjustedRepel = std::max(0, std::min(100, iDefenderRepel - iAttackerUnyielding));
-		int iTrueChance = std::max(5, pAttacker->breakdownChanceTotal() - AdjustedRepel);
-		int iBombardDefMod = std::max(0, 100 - tCity->getBuildingBombardDefense());
-		int iTrueDamage = (pAttacker->breakdownDamageTotal() * iBombardDefMod) / 100;
-		CvWString szTempBuffer;
-		szTempBuffer.Format(SETCOLR L"%s %d%%" ENDCOLR, TEXT_COLOR("COLOR_RED"), gDLL->getText("TXT_KEY_COMBAT_BREAKDOWN_EFFECTS").c_str(), iTrueChance, iTrueDamage);
-						szString.append(szTempBuffer.GetCString());
-						szString.append(NEWLINE);
-					}
+	int iDefenderArmor = (100 - iModifiedDefenderArmor);
+	int iAttackerArmor = (100 - iModifiedAttackerArmor);
+	const int iAttackerStrength = pAttacker->currCombatStr(NULL, NULL);
+	const int iAttackerFirepower = pAttacker->currFirepower(NULL, NULL);
+	const int iDefenderStrength = std::max(1, pDefender->currCombatStr(pPlot, pAttacker));
+	const int iDefenderFirepower = std::max(1, pDefender->currFirepower(pPlot, pAttacker));
 
-	if (!bSINView || !GC.getGame().isOption(GAMEOPTION_COMBAT_STRENGTH_IN_NUMBERS)) {
-					const int iCombatOdds = getCombatOdds(pAttacker, pDefender);
-		CvWString szTempBuffer;
-		if (pAttacker->combatLimit(pDefender) >= pDefender->getMaxHP()) {
-						if (iCombatOdds > 999)
-							szTempBuffer = L"&gt; 99.9";
-						else if (iCombatOdds < 1)
-							szTempBuffer = L"&lt; 0.1";
-						else
-							szTempBuffer.Format(L"%.1f", iCombatOdds / 10.0f);
-						if (!getBugOptionBOOL("ACO__Enabled", true, "ACO_ENABLED") || getBugOptionBOOL("ACO__ForceOriginalOdds", false, "ACO_FORCE_ORIGINAL_ODDS"))
-							szString.append(gDLL->getText("TXT_KEY_COMBAT_PLOT_ODDS", szTempBuffer.GetCString()));
-						}
+	FAssert(iAttackerStrength + iDefenderStrength > 0);
+	FAssert(iAttackerFirepower + iDefenderFirepower > 0);
 
-		// ... (combat calculations and bar rendering, unchanged for brevity)
-		// You can further extract the combat calculations and bar rendering into helper functions as needed.
+	int iStrengthFactor = (iAttackerFirepower + iDefenderFirepower + 1) / 2;
 
-							szString.append(gDLL->getText("TXT_KEY_COLOR_REVERT"));
-						}
+	int iDefendDamageModifierTotal = pDefender->damageModifierTotal();
+	int iAttackDamageModifierTotal = pAttacker->damageModifierTotal();
 
-			return true;
+	int iDamageToAttackerBase = ((GC.getCOMBAT_DAMAGE() * (iDefenderFirepower + iStrengthFactor)) / std::max(1, (iAttackerFirepower + iStrengthFactor)));
+	int iDamageToDefenderBase = ((GC.getCOMBAT_DAMAGE() * (iAttackerFirepower + iStrengthFactor)) / std::max(1, (iDefenderFirepower + iStrengthFactor)));
+	int iDamageToAttackerModified = iDamageToAttackerBase + ((iDamageToAttackerBase * iDefendDamageModifierTotal) / 100);
+	int iDamageToDefenderModified = iDamageToDefenderBase + ((iDamageToDefenderBase * iAttackDamageModifierTotal) / 100);
+	int iDamageToAttackerArmor = (iDamageToAttackerModified * iAttackerArmor) / 100;
+	int iDamageToDefenderArmor = (iDamageToDefenderModified * iDefenderArmor) / 100;
+	int iDamageToAttacker = std::max(1, iDamageToAttackerArmor);
+	int iDamageToDefender = std::max(1, iDamageToDefenderArmor);
+	int iNeededRoundsAttacker = (pDefender->getHP() - pDefender->getMaxHP() + pAttacker->combatLimit(pDefender) - (((pAttacker->combatLimit(pDefender)) >= pDefender->getMaxHP()) ? 1 : 0)) / iDamageToDefender + 1;
+
+	int iAttackerBaseCriticalChance = pAttacker->criticalVSOpponentProbTotal(pDefender);
+	int iDefenderBaseCriticalChance = pDefender->criticalVSOpponentProbTotal(pAttacker);
+	int iAttackerCriticalChance = (((iDamageToDefender * 100) * iAttackerBaseCriticalChance) / 100);
+	int iDefenderCriticalChance = (((iDamageToDefender * 100) * iAttackerBaseCriticalChance) / 100);
+	int iAttackerEndurance = pAttacker->enduranceTotal();
+	int iDefenderEndurance = pDefender->enduranceTotal();
+
+	int iNeededRoundsDefender = (pAttacker->getHP() + iDamageToAttacker - 1) / iDamageToAttacker;
+
+	//  Determine Attack Withdraw odds
+	int iAttackerWithdraw = pAttacker->withdrawVSOpponentProbTotal(pDefender, pPlot);
+	int iDefenderPursuit = pDefender->pursuitVSOpponentProbTotal(pAttacker);
+	int iAttackerEarly = pAttacker->earlyWithdrawTotal();
+	int AdjustedAttWithdrawalstep1 = iAttackerWithdraw - iDefenderPursuit;
+	int AdjustedAttWithdrawalstep2 = ((AdjustedAttWithdrawalstep1 > 100) ? 100 : AdjustedAttWithdrawalstep1);
+	int AdjustedAttWithdrawal = ((AdjustedAttWithdrawalstep2 < 0) ? 0 : AdjustedAttWithdrawalstep2);
+
+	int expectedrndcnt = iNeededRoundsDefender;
+	int expectedrnds = ((expectedrndcnt * iAttackerEarly) / 100);
+
+	float Scaling_Factor = 1.6f;//how many pixels per 1% of odds
+
+	float AttackerKillOdds = 0.0f;
+	float PullOutOdds = 0.0f;//Withdraw odds
+	float RetreatOdds = 0.0f;
+	float DefenderKillOdds = 0.0f;
+
+	float CombatRatio = ((float)(pAttacker->currCombatStr(NULL, NULL))) / ((float)(pDefender->currCombatStr(pPlot, pAttacker)));
+	// THE ALL-IMPORTANT COMBATRATIO
+
+	float AttXP = (pAttacker->attackXPValue()) / CombatRatio;
+	float DefXP = (pDefender->defenseXPValue()) * CombatRatio;// These two values are simply for the Unrounded XP display
+
+	// General odds
+	if (pAttacker->combatLimit(pDefender) >= pDefender->getMaxHP()) //ie. we can kill the defender... I hope this is the most general form
+	{
+		//float AttackerKillOdds = 0.0f;
+		for (int n_A = 0; n_A < iNeededRoundsDefender; n_A++)
+		{
+			AttackerKillOdds += getCombatOddsSpecific(pAttacker, pDefender, n_A, iNeededRoundsAttacker);
+		}//for
+	}
+	else
+	{
+		// else we cannot kill the defender (eg. catapults attacking)
+		for (int n_A = 0; n_A < iNeededRoundsDefender; n_A++)
+		{
+			PullOutOdds += getCombatOddsSpecific(pAttacker, pDefender, n_A, iNeededRoundsAttacker);
+		}//for
+	}
+	//TB Combat Mods - next line adjusted for pursuit
+	if ((pAttacker->withdrawVSOpponentProbTotal(pDefender, pPlot) - pDefender->pursuitVSOpponentProbTotal(pAttacker)) > 0)
+	{
+		for (int n_D = 0; n_D < iNeededRoundsAttacker; n_D++)
+		{
+			RetreatOdds += getCombatOddsSpecific(pAttacker, pDefender, iNeededRoundsDefender - 1, n_D);
+		}//for
+	}
+	for (int n_D = 0; n_D < iNeededRoundsAttacker; n_D++)
+	{
+		DefenderKillOdds += getCombatOddsSpecific(pAttacker, pDefender, iNeededRoundsDefender, n_D);
+	}//for
+	//DefenderKillOdds = 1.0f - (AttackerKillOdds + RetreatOdds + PullOutOdds);//this gives slight negative numbers sometimes, I think
+
+
+	float prob_victory = 100.0f * getCombatOddsSpecific(pAttacker, pDefender, iNeededRoundsDefender - 1, iNeededRoundsAttacker);
+	float prob_retreat = 100.0f * RetreatOdds;
+	CvWString szTempBuffer2;
+
+	float prob1 = 100.0f * (AttackerKillOdds + PullOutOdds);//up to win odds
+	float prob2 = prob1 + 100.0f * RetreatOdds;//up to retreat odds
+
+	int pixels_left = 199;// 1 less than 200 to account for right end bar
+	int pixels;
+	int fullBlocks;
+	int lastBlock;
+
+	pixels = (2 * ((int)(prob1 + 0.5))) - 1;  // 1% per pixel // subtracting one to account for left end bar
+	fullBlocks = pixels / 10;
+	lastBlock = pixels % 10;
+
+	szString.append(L"<img=Art/ACO/green_bar_left_end.dds>");
+	for (int i = 0; i < fullBlocks; ++i)
+	{
+		szString.append(L"<img=Art/ACO/green_bar_10.dds>");
+		pixels_left -= 10;
+	}
+	if (lastBlock > 0)
+	{
+		szTempBuffer2.Format(L"<img=Art/ACO/green_bar_%d.dds>", lastBlock);
+		szString.append(szTempBuffer2);
+		pixels_left -= lastBlock;
+	}
+
+
+	pixels = 2 * ((int)(prob2 + 0.5)) - (pixels + 1);//the number up to the next one...
+	fullBlocks = pixels / 10;
+	lastBlock = pixels % 10;
+	for (int i = 0; i < fullBlocks; ++i)
+	{
+		szString.append(L"<img=Art/ACO/yellow_bar_10.dds>");
+		pixels_left -= 10;
+	}
+	if (lastBlock > 0)
+	{
+		szTempBuffer2.Format(L"<img=Art/ACO/yellow_bar_%d.dds>", lastBlock);
+		szString.append(szTempBuffer2);
+		pixels_left -= lastBlock;
+	}
+
+	fullBlocks = pixels_left / 10;
+	lastBlock = pixels_left % 10;
+	for (int i = 0; i < fullBlocks; ++i)
+	{
+		szString.append(L"<img=Art/ACO/red_bar_10.dds>");
+	}
+	if (lastBlock > 0)
+	{
+		szTempBuffer2.Format(L"<img=Art/ACO/red_bar_%d.dds>", lastBlock);
+		szString.append(szTempBuffer2);
+	}
+
+	szString.append(L"<img=Art/ACO/red_bar_right_end.dds> ");
+
+
+
+
+	CvWString szTempBuffer;
+	//TB Combat Mod end
+	szString.append(NEWLINE);
+	if (pAttacker->combatLimit(pDefender) >= pDefender->getMaxHP())
+	{
+		if (iCombatOdds > 999)
+		{
+			szTempBuffer = L"&gt; 99.9";
+		}
+		else if (iCombatOdds < 1)
+		{
+			szTempBuffer = L"&lt; 0.1";
+		}
+		else
+		{
+			szTempBuffer.Format(L"%.1f", iCombatOdds / 10.0f);
+		}
+		szString.append(gDLL->getText("TXT_KEY_COMBAT_PLOT_ODDS", szTempBuffer.GetCString()));
+	}
+
+	return true;
 }
 
 

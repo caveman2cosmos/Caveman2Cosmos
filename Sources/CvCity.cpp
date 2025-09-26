@@ -15453,6 +15453,7 @@ void CvCity::pushOrder(OrderTypes eOrder, int iData1, int iData2, bool bSave, bo
 	}
 
 	bool bValid = false;
+	bool bJustAddedProcess = false;
 	CvPlayerAI& owner = GET_PLAYER(getOwner());
 
 	OrderData order;
@@ -15591,10 +15592,13 @@ void CvCity::pushOrder(OrderTypes eOrder, int iData1, int iData2, bool bSave, bo
 				CvEventReporter::getInstance().cityBuildingProcess(this, processType);
 				if (gCityLogLevel >= 1)
 				{
-					logBBAI("    City %S pushes production of process %S", getName().GetCString(), GC.getProcessInfo(processType).getDescription());
+					CvWString verb = "pushes";
+					if (!bAppend) verb = "inserts";
+					logBBAI("    City %S %S production of process %S", getName().GetCString(), verb.GetCString(), GC.getProcessInfo(processType).getDescription());
 				}
 				bValid = true;
-				if (!bForce) bAppend = true;
+				//if (!bForce) bAppend = true;
+				bJustAddedProcess = true;
 			}
 			break;
 		}
@@ -15615,11 +15619,6 @@ void CvCity::pushOrder(OrderTypes eOrder, int iData1, int iData2, bool bSave, bo
 
 
 
-
-	if (m_orderQueue.empty() && owner.isHumanPlayer(true))
-	{
-		owner.setIdleCity(getID(), false);
-	}
 
 	if (bAppend && !m_orderQueue.empty() && !(m_orderQueue.begin()->eOrderType == ORDER_MAINTAIN))
 	{
@@ -15650,14 +15649,24 @@ void CvCity::pushOrder(OrderTypes eOrder, int iData1, int iData2, bool bSave, bo
 	}
 
 	//Check the Queue, and remove process if there's something else to do
-	if (getOrderQueueLength() > 1 && m_orderQueue[0].eOrderType == ORDER_MAINTAIN)
+	if (!bJustAddedProcess && getOrderQueueLength() > 1 && m_orderQueue[0].eOrderType == ORDER_MAINTAIN)
 	{
 		CvString str = GC.getProcessInfo(m_orderQueue[0].getProcessType()).getType();
-		popOrder(0);
+		const PlayerTypes eOwner = getOwner();
+		CvPlayerAI& player = GET_PLAYER(eOwner);
+		const bool bFinancialTrouble = player.AI_isFinancialTrouble();
+		if (!bFinancialTrouble)
+		{ // IF financial Trouble, keep the process if needed
+			popOrder(0);
+		}
 		LOG_BBAI_CITY(3, ("    City %S has process on head, and queue added. Removing  %S", getName().GetCString(), str.GetCString()));
 	}
 
 
+	if (m_orderQueue.empty() && owner.isHumanPlayer(true))
+	{
+		owner.setIdleCity(getID(), false);
+	}
 
 
 	// Why does this cause a crash???

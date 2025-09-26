@@ -12074,6 +12074,7 @@ void CvPlayer::setTurnActive(bool bNewValue, bool bDoTurn)
 {
 	PROFILE_FUNC();
 
+	const bool bFinancialTrouble = AI_isFinancialTrouble();
 	if (m_bTurnActive != bNewValue)
 	{
 		m_bTurnActive = bNewValue;
@@ -12138,7 +12139,7 @@ void CvPlayer::setTurnActive(bool bNewValue, bool bDoTurn)
 
 					logBBAI("	Player %d (%S) has %d cities, %d pop, %d power, %d tech percent", getID(), getCivilizationDescription(0), getNumCities(), getTotalPopulation(), getPower(), GET_TEAM(getTeam()).getBestKnownTechScorePercent());
 
-					if( GET_PLAYER(getID()).AI_isFinancialTrouble() )
+					if(bFinancialTrouble)
 					{
 						logBBAI("	Financial trouble!");
 					}
@@ -12341,7 +12342,9 @@ void CvPlayer::setTurnActive(bool bNewValue, bool bDoTurn)
 				PROFILE("CvPlayer::setTurnActive.SetInactive.doTurn");
 
 #ifdef USE_UNIT_TENDERING
-				if (isAlive() && !isHumanPlayer())
+				//const PlayerTypes eOwner = getOwner();
+				//CvPlayerAI& player = GET_PLAYER(eOwner);
+				if (isAlive() && !isHumanPlayer() &&!bFinancialTrouble)
 				{
 					getContractBroker().finalizeTenderContracts();
 				}

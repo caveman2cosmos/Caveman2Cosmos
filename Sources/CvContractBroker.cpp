@@ -529,6 +529,24 @@ void CvContractBroker::finalizeTenderContracts()
 								iValue *= GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getHammerCostPercent();
 								iValue /= iTurns;
 
+								//if the nb of turns is too high for a small city, don't consider the unit, unless there are no other options
+								if (iTurns > 20 && pCity->getPopulation() < 5 && m_advertisingTenders.size() > 3)
+								{
+									if (gCityLogLevel >= 3)
+									{
+										logContractBroker(1,
+											"      City %S give up for production of unit %S with base value %d, depreciated value (%d turn production) to %d",
+											pCity->getName().GetCString(),
+											GC.getUnitInfo(eUnit).getDescription(),
+											iBaseValue,
+											iTurns,
+											iValue
+										);
+									}
+									continue;
+								}
+
+								// generate the path to the destination, if it is too long the value of the unit drops. If no path, then can't supply the unit
 								if (CvSelectionGroup::getPathGenerator()->generatePathForHypotheticalUnit(pCity->plot(), pDestPlot, m_eOwner, eUnit, MOVE_NO_ENEMY_TERRITORY, m_workRequests[iI].iMaxPath))
 								{
 									const int iDistance = CvSelectionGroup::getPathGenerator()->getLastPath().length();

@@ -13177,7 +13177,7 @@ int CvPlot::getTotalTurnDamage(const CvUnit* pUnit) const
 	return getTerrainTurnDamage(pUnit) + getFeatureTurnDamage();
 }
 
-CvUnit* CvPlot::getWorstDefender(PlayerTypes eOwner, PlayerTypes eAttackingPlayer, const CvUnit* pAttacker, bool bTestAtWar, bool bTestPotentialEnemy, bool bTestCanMove) const
+CvUnit* CvPlot::getWorstDefender(PlayerTypes eOwner, PlayerTypes eAttackingPlayer, const CvUnit* pAttacker, bool bTestAtWar, bool bTestPotentialEnemy, bool bTestCanMove, bool bAssassinate) const
 {
 	PROFILE_EXTRA_FUNC();
 	CvUnit* pBestUnit = NULL;

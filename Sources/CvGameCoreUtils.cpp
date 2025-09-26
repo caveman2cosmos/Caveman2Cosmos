@@ -4750,3 +4750,37 @@ CvString AutomateTypeToDescription(AutomateTypes eAutomateAI)
 	}
 }
 
+char remove_diacritic_char(unsigned char c) {
+	switch (c) {
+	case 'à': case 'á': case 'â': case 'ã': case 'ä': case 'å':
+	case 'À': case 'Á': case 'Â': case 'Ã': case 'Ä': case 'Å':
+		return 'a';
+	case 'è': case 'é': case 'ê': case 'ë':
+	case 'È': case 'É': case 'Ê': case 'Ë':
+		return 'e';
+	case 'ì': case 'í': case 'î': case 'ï':
+	case 'Ì': case 'Í': case 'Î': case 'Ï':
+		return 'i';
+	case 'ò': case 'ó': case 'ô': case 'õ': case 'ö':
+	case 'Ò': case 'Ó': case 'Ô': case 'Õ': case 'Ö':
+		return 'o';
+	case 'ù': case 'ú': case 'û': case 'ü':
+	case 'Ù': case 'Ú': case 'Û': case 'Ü':
+		return 'u';
+	case 'ç': case 'Ç':
+		return 'c';
+	case 'ñ': case 'Ñ':
+		return 'n';
+	default:
+		return c;
+	}
+}
+
+CvString remove_diacritics(const CvString& input) {
+	CvString output;
+	for (CvString::const_iterator it = input.begin(); it != input.end(); ++it) {
+		unsigned char c = *it;
+		output += remove_diacritic_char(c);
+	}
+	return output;
+}
