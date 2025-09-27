@@ -15617,7 +15617,10 @@ void CvCity::pushOrder(OrderTypes eOrder, int iData1, int iData2, bool bSave, bo
 
 
 
-
+	if (m_orderQueue.empty() && owner.isHumanPlayer(true))
+	{
+		owner.setIdleCity(getID(), false);
+	}
 
 
 	if (bAppend && !m_orderQueue.empty() && !(m_orderQueue.begin()->eOrderType == ORDER_MAINTAIN))
@@ -15660,12 +15663,6 @@ void CvCity::pushOrder(OrderTypes eOrder, int iData1, int iData2, bool bSave, bo
 			popOrder(0);
 		}
 		LOG_BBAI_CITY(3, ("    City %S has process on head, and queue added. Removing  %S", getName().GetCString(), str.GetCString()));
-	}
-
-
-	if (m_orderQueue.empty() && owner.isHumanPlayer(true))
-	{
-		owner.setIdleCity(getID(), false);
 	}
 
 
