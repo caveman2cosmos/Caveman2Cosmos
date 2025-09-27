@@ -15455,6 +15455,7 @@ void CvCity::pushOrder(OrderTypes eOrder, int iData1, int iData2, bool bSave, bo
 	bool bValid = false;
 	bool bJustAddedProcess = false;
 	CvPlayerAI& owner = GET_PLAYER(getOwner());
+	bool bIsHuman = owner.isHumanPlayer(true);
 
 	OrderData order;
 
@@ -15495,7 +15496,7 @@ void CvCity::pushOrder(OrderTypes eOrder, int iData1, int iData2, bool bSave, bo
 				}
 
 				//don't add the same unit if already 2 of them (if prod take more than 2 turns), and the first item in queue is not already finished, and the cost of the order is more than 3 turns
-				if ((bAppend && !bForce) && ((alreadyQueued > 1 && getProductionTurnsLeft(unitType, 2) > 2) || alreadyQueued > 4)) {
+				if (!bIsHuman && (bAppend && !bForce) && ((alreadyQueued > 1 && getProductionTurnsLeft(unitType, 2) > 2) || alreadyQueued > 4)) {
 					if (gCityLogLevel >= 3)
 					{
 						const CvWString szStringUnitAi = GC.getUnitAIInfo(order.getUnitAIType()).getType();
@@ -15537,7 +15538,7 @@ void CvCity::pushOrder(OrderTypes eOrder, int iData1, int iData2, bool bSave, bo
 				}
 
 				//don't add the same building after
-				if ((bAppend && !bForce) && alreadyQueued > 0) {
+				if (!bIsHuman && (bAppend && !bForce) && alreadyQueued > 0) {
 					if (gCityLogLevel >= 3)
 					{
 						logBBAI("    City %S building %S already in queue", getName().GetCString(), GC.getBuildingInfo(buildingType).getDescription());
@@ -15617,7 +15618,10 @@ void CvCity::pushOrder(OrderTypes eOrder, int iData1, int iData2, bool bSave, bo
 
 
 
-
+	if (m_orderQueue.empty() && bIsHuman)
+	{
+		owner.setIdleCity(getID(), false);
+	}
 
 
 	if (bAppend && !m_orderQueue.empty() && !(m_orderQueue.begin()->eOrderType == ORDER_MAINTAIN))
@@ -15660,12 +15664,6 @@ void CvCity::pushOrder(OrderTypes eOrder, int iData1, int iData2, bool bSave, bo
 			popOrder(0);
 		}
 		LOG_BBAI_CITY(3, ("    City %S has process on head, and queue added. Removing  %S", getName().GetCString(), str.GetCString()));
-	}
-
-
-	if (m_orderQueue.empty() && owner.isHumanPlayer(true))
-	{
-		owner.setIdleCity(getID(), false);
 	}
 
 

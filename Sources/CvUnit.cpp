@@ -38105,7 +38105,10 @@ bool CvUnit::canAmbush(const CvPlot* pPlot, bool bAssassinate) const
 		const CvUnit* pDefender = pPlot->getBestDefender(NO_PLAYER, getOwner(), this, true, true, false, bAssassinate);
 		if (pDefender != NULL)
 		{
-			return true;
+			if (!pDefender->isInvisible(getTeam(), false))
+			{
+				return true;
+			}
 		}
 		if (pPlot->isVisiblePotentialEnemyDefender(this) || pPlot->isVisiblePotentialEnemyDefenderless(this))
 		{
