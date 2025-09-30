@@ -567,13 +567,23 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_ACO_CIBLE</Tag>
-		<English>Target: [COLOR_NEGATIVE_TEXT]%s2[COLOR_REVERT]</English>
-		<French>Cible : [COLOR_NEGATIVE_TEXT]%s2[COLOR_REVERT]</French>
-		<German>Target: [COLOR_NEGATIVE_TEXT]%s2[COLOR_REVERT]</German>
-		<Italian>target: [COLOR_NEGATIVE_TEXT]%s2[COLOR_REVERT]</Italian>
-		<Polish>target: [COLOR_NEGATIVE_TEXT]%s2[COLOR_REVERT]</Polish>
-		<Spanish>target: [COLOR_NEGATIVE_TEXT]%s2[COLOR_REVERT]</Spanish>
-		<Russian>target: [COLOR_NEGATIVE_TEXT]%s2[COLOR_REVERT]</Russian>
+		<English>Target: </English>
+		<French>Cible : </French>
+		<German>Target: </German>
+		<Italian>target: </Italian>
+		<Polish>target: </Polish>
+		<Spanish>target: </Spanish>
+		<Russian>target: </Russian>
+	</TEXT>	
+	<TEXT>
+		<Tag>TXT_ACO_ATTACKER</Tag>
+		<English>Attacker: </English>
+		<French>Attaquant : </French>
+		<German>Attacker: </German>
+		<Italian>Attacker: </Italian>
+		<Polish>Attacker: </Polish>
+		<Spanish>Attacker: </Spanish>
+		<Russian>Attacker: </Russian>
 	</TEXT>	
 	<TEXT>
 		<Tag>TXT_ACO_WITHDRAW</Tag>

@@ -19,6 +19,9 @@
 #include "CvUnitAI.h"
 #include "index_iterator_base.h"
 #include "LinkedList.h"
+#ifdef CVARMY_BREAKSAVE
+	#include "CvArmy.h"
+#endif
 
 class CvArea;
 class CvDiploParameters;
@@ -27,6 +30,7 @@ class CvPlot;
 class CvPopupInfo;
 class CvUnitSelectionCriteria;
 class CvUpgradeCache;
+class CvPlayerAI;
 
 #define	UNIT_BIRTHMARK_TEMP_UNIT	20000
 
@@ -1143,6 +1147,13 @@ public:
 	CvUnit* addUnit();
 	void deleteUnit(int iID);
 
+#ifdef CVARMY_BREAKSAVE
+	CvArmy* getArmy(int iArmyID) const;
+
+	void deleteArmy(int iArmyID);
+
+#endif
+
 	// selection groups iteration
 	DECLARE_INDEX_ITERATOR(const CvPlayer, CvSelectionGroup, group_iterator, firstSelectionGroup, nextSelectionGroup);
 	group_iterator beginGroups() const { return group_iterator(this); }
@@ -2006,6 +2017,10 @@ protected:
 	std::vector<FFreeListTrashArray<CvCityAI>*>			  m_cities;
 	std::vector<FFreeListTrashArray<CvUnitAI>*>			  m_units;
 	std::vector<FFreeListTrashArray<CvSelectionGroupAI>*> m_selectionGroups;
+
+#ifdef CVARMY_BREAKSAVE
+	FFreeListTrashArray<CvArmy>							  m_armies;
+#endif 
 
 	FFreeListTrashArray<EventTriggeredData> m_eventsTriggered;
 	CvEventMap m_mapEventsOccured;
