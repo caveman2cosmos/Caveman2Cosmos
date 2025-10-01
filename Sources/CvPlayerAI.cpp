@@ -1,4 +1,4 @@
-// playerAI.cpp
+﻿// playerAI.cpp
 
 #include "CvGameCoreDLL.h"
 #include "CvArea.h"
@@ -32,6 +32,7 @@
 #include "CvDLLUtilityIFaceBase.h"
 #include "BetterBTSAI.h"
 #include "FAStarNode.h"
+#include "CvArmy.h"
 
 // Plot danger cache
 //#define DANGER_RANGE						(4)
@@ -562,6 +563,22 @@ void CvPlayerAI::AI_doTurnUnitsPre()
 	{
 		return;
 	}
+
+#ifdef CVARMY_BREAKSAVE
+
+	AI_formArmies();   // Nouvelle fonction de création des armées
+
+
+
+	//Execute the army 
+	FFreeListTrashArray<CvArmy>::iterator it;
+	for (it = m_armies.begin(); it != m_armies.end(); ++it)
+	{
+		CvArmy& pArmy = *it;
+		pArmy.doTurn();
+		// Do something with pArmy
+	}
+#endif
 
 	//k-mod uncommented
 	if (AI_isDoStrategy(AI_STRATEGY_CRUSH) && GET_TEAM(getTeam()).getAnyWarPlanCount(true) > 0)
@@ -35674,3 +35691,186 @@ int CvPlayerAI::AI_heritageValue(const HeritageTypes eType) const
 
 	return std::max(0, iValue);
 }
+
+#ifdef CVARMY_BREAKSAVE
+void CvPlayerAI::AI_formArmies()
+{
+	const int NB_MAX_ARMIES = 3; // Maximum number of armies to form
+	const int NB_GROUP_MINI_FOR_ARMY = 4;
+	const int NB_GROUP_MINI_FOR_BIG_ARMY = 7;
+	const int NB_GROUP_MINI_FOR_LEADER = 8;
+
+	bool bArmyGrouped = false;
+	//Check and kill empty groups
+	for (CvPlayer::group_iterator it = groups().begin(); it != groups().end(); ++it)
+	{
+		CvSelectionGroup* pGroup = *it;
+
+		if (pGroup != NULL && (pGroup->getHeadUnit() == NULL || pGroup->getNumUnits() == 0))
+		{
+			pGroup->kill(); // supprime proprement le groupe
+		}
+	}
+
+	if (GET_TEAM(getTeam()).isAtWar() && !isNPC())
+	{
+		// Keep forming armies until the maximum is reached
+		int icount = 0;
+		while (m_armies.getCount() < NB_MAX_ARMIES && icount <50)
+		{
+			// Find the best possible leader
+			CvSelectionGroup* pBestLeader = NULL;
+				int iBestValue = 0;
+
+
+			CvPlayer::group_range allGroups = groups();
+			for (CvPlayer::group_iterator it = allGroups.begin(); it != allGroups.end(); ++it)
+			{
+				CvSelectionGroup* pGroup = *it;
+				if (pGroup == NULL)
+					continue;
+
+				if (pGroup != NULL && pGroup->getHeadUnit() == NULL)
+				{
+					pGroup->kill(); // supprime proprement le groupe
+					continue;
+				}
+
+
+				if (pGroup->getDomainType() != DOMAIN_LAND || pGroup->getArmyID() != -1) // already part of an army
+					continue;
+
+
+				// Select only city attack groups
+				if (pGroup->AI_getMissionAIType() == MISSIONAI_ASSAULT ||
+					pGroup->getHeadUnit()->AI_getUnitAIType() == UNITAI_ATTACK_CITY)
+				{
+					int iValue = pGroup->getNumUnits();
+					if (iValue > iBestValue)
+					{
+						iBestValue = iValue;
+						pBestLeader = pGroup;
+					}
+				}
+			}
+
+			// Stop if no valid leader is found
+			if (pBestLeader == NULL || iBestValue < NB_GROUP_MINI_FOR_LEADER)
+				break;
+
+			CvArmy* pArmy = NULL;
+			if (m_armies.getCount() == 0 || bArmyGrouped)
+			{
+				if (m_armies.getCurrentID() == 8192) //Cavltix - if not init
+				{
+					m_armies.init();
+					m_armies.setCurrentID(1);
+				}
+				// Create the army
+				bArmyGrouped = false;
+				pArmy = m_armies.add();
+				pArmy->init(pArmy->getID(), getID(), ARMY_MISSION_ATTACK_CITY); // init with ID, owner, and mission
+				pArmy->setLeader(pBestLeader);                            // assign leader
+				//pArmy->addGroup(pBestLeader);                             // add leader group to army
+				LOG_UNIT_BLOCK(3, {
+					const CvUnit * pLeaderUnit = pBestLeader->getHeadUnit();
+					UnitAITypes eUnitAi = pBestLeader->getHeadUnit()->AI_getUnitAIType();
+					MissionAITypes eMissionAI = pBestLeader->AI_getMissionAIType();
+					CvWString StrunitAIType = GC.getUnitAIInfo(eUnitAi).getType();
+					CvWString MissionInfos = MissionAITypeToString(eMissionAI);
+					CvWString StrUnitName = pLeaderUnit->getNameNoDesc();
+					if (StrUnitName.length() == 0)
+					{
+						StrUnitName = pLeaderUnit->getName(0).GetCString();
+					}
+
+					logBBAI("Player %d Unit ID %d, %S of Type %S, at (%d, %d), Mission %S [stack size %d], Create Army %d...", pLeaderUnit->getOwner(), pLeaderUnit->getID(), StrUnitName.GetCString(), StrunitAIType.GetCString(), pLeaderUnit->getX(), pLeaderUnit->getY(), MissionInfos.GetCString(), pBestLeader->getNumUnits(), pArmy->getID());
+					//logBBAI("       Attack (estim after Bomb.) : %d, AttackRatio : %d", iComparePostBombard, iAttackRatio);
+				});
+			}
+			else
+			{
+				for (FFreeListTrashArray<CvArmy>::iterator it = m_armies.begin(); it != m_armies.end(); ++it)
+				{
+					pArmy = &(*it);
+					if (pArmy != NULL)
+					{
+						pBestLeader = pArmy->getLeader();
+						if (pBestLeader == NULL)
+						{
+							pBestLeader = pArmy->findNewLeader();
+							if (pBestLeader == NULL)
+							{
+								pArmy->disband();
+								m_armies.remove(pArmy);
+								return;
+							}
+						}
+
+					}
+				}
+			}
+			// Assign the target city
+			CvPlot* pLeaderPlot = pBestLeader->getHeadUnit()->plot();
+			CvArea* pArea = pLeaderPlot->area();
+			CvCity* pTargetCity = AI_findTargetCity(pArea);
+			if (pTargetCity != NULL)
+			{
+				pArmy->setTargetPlot(pTargetCity->plot());          // set the army's target plot
+			}
+
+			// Add other compatible stacks
+			CvPlayer::group_range allGroups2 = groups();
+			for (CvPlayer::group_iterator it = allGroups2.begin(); it != allGroups2.end(); ++it)
+			{
+				CvSelectionGroup* pGroup = *it;
+				if (pGroup == NULL || pGroup == pBestLeader || pGroup->getHeadUnit() == NULL)
+					continue;
+
+				if (pGroup->getDomainType() != DOMAIN_LAND || pGroup->getArmyID() != -1) // already part of an army
+					continue;
+
+				if (((pGroup->AI_getMissionAIType() == MISSIONAI_ASSAULT || pGroup->getHeadUnit()->AI_getUnitAIType() == UNITAI_ATTACK_CITY) &&
+					pGroup->getNumUnits() >= NB_GROUP_MINI_FOR_ARMY) || pGroup->getNumUnits() >= NB_GROUP_MINI_FOR_BIG_ARMY)
+				{
+					int iDist = plotDistance(pGroup->getHeadUnit()->plot()->getX(), pGroup->getHeadUnit()->plot()->getY(),
+											 pLeaderPlot->getX(), pLeaderPlot->getY());
+					pArmy->addGroup(pGroup);
+					LOG_UNIT_BLOCK(3, {
+						const CvUnit * pLeaderUnit = pGroup->getHeadUnit();
+						UnitAITypes eUnitAi = pGroup->getHeadUnit()->AI_getUnitAIType();
+						MissionAITypes eMissionAI = pGroup->AI_getMissionAIType();
+						CvWString StrunitAIType = GC.getUnitAIInfo(eUnitAi).getType();
+						CvWString MissionInfos = MissionAITypeToString(eMissionAI);
+						CvWString StrUnitName = pLeaderUnit->getNameNoDesc();
+						if (StrUnitName.length() == 0)
+						{
+							StrUnitName = pLeaderUnit->getName(0).GetCString();
+						}
+
+						logBBAI("Player %d Unit ID %d, %S of Type %S, at (%d, %d), Mission %S [stack size %d], is joining Army %d, its leader is at (%d,%d), distance %d...", pLeaderUnit->getOwner(), pLeaderUnit->getID(), StrUnitName.GetCString(), StrunitAIType.GetCString(), pLeaderUnit->getX(), pLeaderUnit->getY(), MissionInfos.GetCString(), pGroup->getNumUnits(), pArmy->getID(), pLeaderPlot->getX(), pLeaderPlot->getY(), iDist);
+						//logBBAI("       Attack (estim after Bomb.) : %d, AttackRatio : %d", iComparePostBombard, iAttackRatio);
+					});
+					pGroup->pushMission(MISSION_SKIP);
+					pGroup->pushMissionInternal(MISSION_MOVE_TO_UNIT, pBestLeader->getOwner(), pBestLeader->getHeadUnit()->getID(), 0, false, false, MISSIONAI_GROUP, NULL, pBestLeader->getHeadUnit());
+					bArmyGrouped = true;
+				}
+			}
+			icount++;
+		}
+	}
+	else
+	{
+		for (FFreeListTrashArray<CvArmy>::iterator it = m_armies.begin(); it != m_armies.end(); ++it)
+		{
+			CvArmy * pArmy = &(*it);
+			if (pArmy != NULL)
+			{
+				int iArmyID = pArmy->getID();
+				GET_PLAYER(pArmy->getOwner()).deleteArmy(iArmyID);
+			}
+		}
+	}
+}
+
+#endif

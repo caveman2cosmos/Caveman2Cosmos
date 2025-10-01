@@ -15,6 +15,7 @@ class CvCity;
 class CvEventTriggerInfo;
 class CvSelectionGroup;
 class CvUnitSelectionCriteria;
+class CvArmy;
 
 /**
  * Stores information about a mission target for AI planning.
@@ -490,6 +491,9 @@ public:
 	int AI_getUnitWeight(UnitTypes eUnit) const;
 	int AI_getUnitCombatWeight(UnitCombatTypes eUnitCombat) const;
 
+#ifdef CVARMY_BREAKSAVE
+	void AI_formArmies();   // Nouvelle fonction de création des armées
+#endif
 
 	/**
 	 * \brief Calculate the relative viability of a unit type for a given AI role.
@@ -703,6 +707,7 @@ protected:
 
 	bool m_bWasFinancialTrouble;
 	int m_iTurnLastProductionDirty;
+
 
 	void AI_doCounter();
 	void AI_doMilitary();

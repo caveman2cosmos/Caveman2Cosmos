@@ -109,6 +109,9 @@ public:
 	bool hasCargo() const;
 	int getCargo(bool bVolume = false) const;
 
+	int getArmyID() const { return m_iArmyID; }
+	void setArmyID(int iArmyID) { m_iArmyID = iArmyID; }
+
 	bool canAllSelectedMove() const;
 	DllExport bool canAllMove() const;
 	DllExport bool canMoveInto(CvPlot* pPlot, bool bAttack = false);
@@ -440,6 +443,7 @@ private:
 	static const CvSelectionGroup* m_pCachedMovementGroup;
 	static bst::scoped_ptr<CachedPathGenerator> m_cachedPathGenerator;
 	static CachedPathGenerator& getCachedPathGenerator();
+	int m_iArmyID;
 
 public:
 	static void setGroupToCacheFor(CvSelectionGroup* group);

@@ -328,6 +328,7 @@ CvPlayer::~CvPlayer()
 		SAFE_DELETE(m_units[i]);
 		SAFE_DELETE(m_selectionGroups[i]);
 	}
+	//SAFE_DELETE(m_armies);
 }
 
 
@@ -345,7 +346,13 @@ void CvPlayer::baseInit(PlayerTypes eID)
 		m_cities[i]->init();
 		m_units[i]->init();
 		m_selectionGroups[i]->init();
+
 	}
+#ifdef CVARMY_BREAKSAVE
+	m_armies.init(1);
+	m_armies.setCurrentID(0);
+#endif // CVARMY_BREAKSAVE
+
 	m_eventsTriggered.init();
 	//--------------------------------
 	// Init non-saved data
@@ -709,6 +716,9 @@ void CvPlayer::uninit()
 		m_selectionGroups[i]->uninit();
 	}
 	m_eventsTriggered.uninit();
+
+	m_armies.uninit();
+
 
 	clearMessages();
 
@@ -31095,3 +31105,26 @@ int CvPlayer::getHeritageCommerceEraChange(const CommerceTypes eType, const EraT
 	}
 	return iCommerce100;
 }
+
+#ifdef CVARMY_BREAKSAVE
+
+CvArmy* CvPlayer::getArmy(int iArmyID) const
+{
+	if (iArmyID < 0)
+		return NULL;
+
+	// FFreeListTrashArray fournit getAt(id) qui retourne NULL si l'objet n'existe pas
+	return m_armies.getAt(iArmyID);
+}
+
+void CvPlayer::deleteArmy(int iArmyID)
+{
+	CvArmy* pArmy = m_armies.getAt(iArmyID);
+	if (pArmy != NULL)
+	{
+		pArmy->disband();       // nettoyer les groupes
+		m_armies.removeAt(iArmyID); // supprime l’objet de la liste
+	}
+}
+
+#endif

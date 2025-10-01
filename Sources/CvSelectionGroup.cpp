@@ -104,6 +104,8 @@ void CvSelectionGroup::reset(int iID, PlayerTypes eOwner, bool bConstructorCall)
 	m_bLastPlotVisible = false;
 	m_bLastPlotRevealed = false;
 
+	m_iArmyID = -1;
+
 	if (!bConstructorCall)
 	{
 		AI_reset();
@@ -513,6 +515,9 @@ bool CvSelectionGroup::pushMissionInternal(MissionTypes eMission, int iData1, in
 		}
 		clearMissionQueue();
 	}
+
+	if (getHeadUnit() == NULL)
+		return false;
 
 	if (bManual)
 	{

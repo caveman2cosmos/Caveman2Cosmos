@@ -5,6 +5,8 @@
 
 // enums.h
 
+
+
 #include "CvDefines.h"
 
 enum GameStateTypes
@@ -1789,6 +1791,18 @@ enum MissionAITypes
 	MISSIONAI_WAIT_FOR_ESCORT,
 	MISSIONAI_WAIT_FOR_SEE_INVISIBLE
 };
+
+
+enum ArmyMissionType
+{
+	ARMY_MISSION_NONE,
+	ARMY_MISSION_ATTACK_CITY,
+	ARMY_MISSION_DEFEND_BORDER,
+	ARMY_MISSION_ESCORT,
+	ARMY_MISSION_PATROL,
+	// etc.
+};
+
 
 // any additions need to be reflected in GlobalTypes.xml
 enum CommandTypes

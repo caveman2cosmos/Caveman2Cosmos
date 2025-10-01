@@ -6995,7 +6995,7 @@ void CvGame::createBarbarianUnits()
 		{
 			const CvPlot* pPlot = GC.getMap().syncRandPlot((RANDPLOT_NOT_VISIBLE_TO_CIV | RANDPLOT_ADJACENT_LAND | RANDPLOT_PASSIBLE), pLoopArea->getID(), GC.getMIN_BARBARIAN_STARTING_DISTANCE());
 
-			if (pPlot == NULL)
+			if (pPlot == NULL || !pPlot->isMapCategoryType(GC.getMAPCATEGORY_EARTH()))
 				continue;
 
 			UnitTypes eBestUnit = NO_UNIT;
