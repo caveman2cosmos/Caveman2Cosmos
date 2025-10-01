@@ -196,7 +196,7 @@ CvSelectionGroup* CvArmy::findNewLeader()
         if (pLeaderUnit != NULL)
         {
             UnitAITypes eUnitAi = pLeaderUnit->AI_getUnitAIType();
-            FAssert(pGroup);
+            FAssert(pLeader);
             MissionAITypes eMissionAI = pLeader->AI_getMissionAIType();
             CvWString StrunitAIType = GC.getUnitAIInfo(eUnitAi).getType();
             CvWString MissionInfos = MissionAITypeToString(eMissionAI);
