@@ -357,7 +357,7 @@ void CvArmy::doTurn()
                         continue;
 
                     if (pGroup->getDomainType() != DOMAIN_LAND || pGroup->AI_getMissionAIType() == MISSIONAI_GUARD_CITY
-                        || pGroup->AI_isCityGarrison(pGroup->plot()->getPlotCity()))
+                        || pGroup->AI_isCityGarrison(pGroup->plot()->getPlotCity()))                        
                         continue;
 
                     int dist = plotDistance(pRefPlot->getX(), pRefPlot->getY(),
@@ -369,10 +369,15 @@ void CvArmy::doTurn()
                         {
                             removeGroup(pGroup);
                         }
+                        UnitAITypes eUnitAi = pLeaderUnit->AI_getUnitAIType();
+
+                        if (eUnitAi == UNITAI_PROPERTY_CONTROL || eUnitAi == UNITAI_INFILTRATOR)
+                            continue;
+
                         pLeaderUnit->AI_setUnitAIType(UNITAI_ATTACK_CITY);
                         addGroup(pGroup);
 
-                        UnitAITypes eUnitAi = pLeaderUnit->AI_getUnitAIType();
+                        //UnitAITypes eUnitAi = pLeaderUnit->AI_getUnitAIType();
                         MissionAITypes eMissionAI = pGroup->AI_getMissionAIType();
                         CvWString StrunitAIType = GC.getUnitAIInfo(eUnitAi).getType();
                         CvWString MissionInfos = MissionAITypeToString(eMissionAI);
@@ -389,7 +394,7 @@ void CvArmy::doTurn()
                                 StrUnitName = pLeaderUnit->getName(0).GetCString();
                             }
 
-                            logBBAI("Player %d Unit ID %d, %S of Type %S, at (%d, %d), Mission %S [stack size %d], Army %d is Ready forced incorporation to Attack at (%d,%d) distance %d...", getOwner(), pLeaderUnit->getID(), StrUnitName.GetCString(), StrunitAIType.GetCString(), pLeaderUnit->getX(), pLeaderUnit->getY(), MissionInfos.GetCString(), pGroup->getNumUnits(), m_iID, m_pTargetPlot->getX(), m_pTargetPlot->getY(), dist);
+                            logBBAI("Player %d Unit ID %d, %S of Type %S, at (%d, %d), Mission %S [stack size %d], Army %d is forced incorporation to Attack at (%d,%d) distance %d...", getOwner(), pLeaderUnit->getID(), StrUnitName.GetCString(), StrunitAIType.GetCString(), pLeaderUnit->getX(), pLeaderUnit->getY(), MissionInfos.GetCString(), pGroup->getNumUnits(), m_iID, m_pTargetPlot->getX(), m_pTargetPlot->getY(), dist);
                             //logBBAI("       Attack (estim after Bomb.) : %d, AttackRatio : %d", iComparePostBombard, iAttackRatio);
                         });
                         pGroup->pushMission(MISSION_SKIP);
