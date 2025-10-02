@@ -134,7 +134,7 @@ void CvOutcomeMission::buildDisplayString(CvWStringBuffer& szBuffer, const CvUni
 	if (!m_PropertyCost.isEmpty())
 	{
 		szBuffer.append(NEWLINE);
-		szBuffer.append(L"Cost: ");
+		szBuffer.append(gDLL->getText("TXT_KEY_COST"));
 		m_PropertyCost.buildCompactChangesString(szBuffer);
 	}
 
@@ -145,7 +145,7 @@ void CvOutcomeMission::buildDisplayString(CvWStringBuffer& szBuffer, const CvUni
 			CvWString szTempBuffer;
 
 			szBuffer.append(NEWLINE);
-			szBuffer.append(L"Cost: ");
+			szBuffer.append(gDLL->getText("TXT_KEY_COST"));
 			m_iCost->buildDisplayString(szBuffer);
 		}
 	}

@@ -95,10 +95,11 @@
 		<Polish>Uwolnij je&#241;ca.</Polish>
 		<Russian>Освободить пленника.</Russian>
 	</TEXT>
-    <TEXT>
-        <Tag>TXT_KEY_MISSION_SLAY_ANIMAL</Tag>
-        <English>Slaughter animal.</English>
-    </TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISSION_SLAY_ANIMAL</Tag>
+		<English>Slaughter animal.</English>
+		<French>Abattre l'animal.</French>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISSION_FREE_CAPTIVE_HELP</Tag>
 		<English>Setting a Captive free adds Food to the city store, as in Civ IV Food represents population growth.</English>
@@ -107,10 +108,11 @@
 		<Polish>Uwolnienie je&#241;ca dodaje dostarcza miastu odrobin&#234; &#191;ywno&#156;ci, kt&#243;ra w CIV4 reprezentuje wzrost populacj&#234;.</Polish>
 		<Russian>Освобождение пленника увеличивает городские запасы еды, которая в Цивилизации IV отвечает за рост населения.</Russian>
 	</TEXT>
-    <TEXT>
-        <Tag>TXT_KEY_MISSION_SLAY_ANIMAL_HELP</Tag>
-        <English>Slaying a Animal adds Food Hammers and Commerce to the city store.</English>
-    </TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISSION_SLAY_ANIMAL_HELP</Tag>
+		<English>Slaying a Animal adds Food Hammers and Commerce to the city store.</English>
+		<French>Tuer un animal ajoute de la nourriture, de la production et du commerce à la réserve de la ville.</French>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISSION_JOIN_CITY_FREED_SLAVE</Tag>
 		<English>Join City. (Part population point increase)</English>
@@ -269,14 +271,16 @@
 		<Polish>Jeniec do&#179;&#185;czyl do Twojego miasta. Miasta uzysk&#179;o odrobin&#234; &#191;ywno&#156;ci z wzrostu populacji.</Polish>
 		<Russian>Пленник поселился в вашем городе. Это увеличило прирост пищи.</Russian>
 	</TEXT>
-    <TEXT>
-        <Tag>TXT_KEY_OUTCOME_SLAY_ANIMAL</Tag>
-        <English>Slay animal.</English>
-    </TEXT>
-    <TEXT>
-        <Tag>TXT_KEY_OUTCOME_SLAY_ANIMAL_MESSAGE</Tag>
-        <English>You have slaughtered the animal.</English>
-    </TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_OUTCOME_SLAY_ANIMAL</Tag>
+		<English>Slay animal.</English>
+		<French>Abattre l'animal.</French>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_OUTCOME_SLAY_ANIMAL_MESSAGE</Tag>
+		<English>You have slaughtered the animal.</English>
+		<French>Vous avez abattu l'animal.</French>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_OUTCOME_UPGRADE_TO_ARCHER</Tag>
 		<English>Upgrade a Captive to a Archer.</English>

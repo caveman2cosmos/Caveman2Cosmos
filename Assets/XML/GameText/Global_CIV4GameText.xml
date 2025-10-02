@@ -22841,6 +22841,14 @@
 		<Spanish>Repetición</Spanish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_COST</Tag>
+		<English>Cost: </English>
+		<French>Coût : </French>
+		<German>Cost: </German>
+		<Italian>Cost: </Italian>
+		<Spanish>Cost: </Spanish>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_REQUIRES</Tag>
 		<English>[NEWLINE][COLOR_WARNING_TEXT]Requires[SPACE][COLOR_REVERT]</English>
 		<French>[NEWLINE][COLOR_WARNING_TEXT]Requiert:[SPACE][COLOR_REVERT]</French>
