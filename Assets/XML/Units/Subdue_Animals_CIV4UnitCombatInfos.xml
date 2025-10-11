@@ -28,7 +28,7 @@
 								<iCommerce>
 									<Adapt>
 										<ID>ADAPT_UNIT_YIELD</ID>
-										<Constant>1</Constant>
+										<Constant>2</Constant>
 									</Adapt>
 								</iCommerce>
 								<iCommerce>0</iCommerce>
@@ -48,7 +48,7 @@
 								<iCommerce>
 									<Adapt>
 										<ID>ADAPT_UNIT_YIELD</ID>
-										<Constant>2</Constant>
+										<Constant>3</Constant>
 									</Adapt>
 								</iCommerce>
 								<iCommerce>0</iCommerce>
@@ -68,7 +68,7 @@
 								<iCommerce>
 									<Adapt>
 										<ID>ADAPT_UNIT_YIELD</ID>
-										<Constant>3</Constant>
+										<Constant>4</Constant>
 									</Adapt>
 								</iCommerce>
 								<iCommerce>0</iCommerce>
@@ -88,7 +88,7 @@
 								<iCommerce>
 									<Adapt>
 										<ID>ADAPT_UNIT_YIELD</ID>
-										<Constant>4</Constant>
+										<Constant>5</Constant>
 									</Adapt>
 								</iCommerce>
 								<iCommerce>0</iCommerce>
@@ -108,7 +108,7 @@
 								<iCommerce>
 									<Adapt>
 										<ID>ADAPT_UNIT_YIELD</ID>
-										<Constant>5</Constant>
+										<Constant>6</Constant>
 									</Adapt>
 								</iCommerce>
 								<iCommerce>0</iCommerce>
@@ -128,7 +128,7 @@
 								<iCommerce>
 									<Adapt>
 										<ID>ADAPT_UNIT_YIELD</ID>
-										<Constant>6</Constant>
+										<Constant>7</Constant>
 									</Adapt>
 								</iCommerce>
 								<iCommerce>0</iCommerce>
@@ -148,7 +148,7 @@
 								<iCommerce>
 									<Adapt>
 										<ID>ADAPT_UNIT_YIELD</ID>
-										<Constant>3</Constant>
+										<Constant>4</Constant>
 									</Adapt>
 								</iCommerce>
 								<iCommerce>0</iCommerce>
@@ -168,7 +168,7 @@
 								<iCommerce>
 									<Adapt>
 										<ID>ADAPT_UNIT_YIELD</ID>
-										<Constant>2</Constant>
+										<Constant>3</Constant>
 									</Adapt>
 								</iCommerce>
 								<iCommerce>0</iCommerce>

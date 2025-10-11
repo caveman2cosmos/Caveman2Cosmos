@@ -155,7 +155,7 @@
 				<BonusType>BONUS_DIESELPUNK</BonusType>
 			</PrereqBonuses>
 			<iCost>1080</iCost>
-			<iBaseUpkeep>2</iBaseUpkeep>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>4</iMoves>
 			<TerrainImpassableTypes>
 				<TerrainType>TERRAIN_OCEAN</TerrainType>
@@ -484,7 +484,7 @@
 				<BonusType>BONUS_STEEL_WARES</BonusType>
 			</PrereqBonuses>
 			<iCost>1080</iCost>
-			<iBaseUpkeep>3</iBaseUpkeep>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>1</iMoves>
 			<iCombat>35</iCombat>
 			<iXPValueAttack>6</iXPValueAttack>
@@ -688,7 +688,7 @@
 				</And>
 			</TrainCondition>
 			<iCost>1080</iCost>
-			<iBaseUpkeep>3</iBaseUpkeep>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>1</iMoves>
 			<iCombat>55</iCombat>
 			<iXPValueAttack>6</iXPValueAttack>

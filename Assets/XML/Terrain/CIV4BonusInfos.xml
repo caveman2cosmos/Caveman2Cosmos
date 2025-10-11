@@ -4270,7 +4270,7 @@
 			<YieldChanges>
 				<iYieldChange>0</iYieldChange>
 				<iYieldChange>0</iYieldChange>
-				<iYieldChange>2</iYieldChange>
+				<iYieldChange>3</iYieldChange>
 			</YieldChanges>
 			<iHappiness>1</iHappiness>
 			<iPlacementOrder>8</iPlacementOrder>
@@ -4598,7 +4598,7 @@
 			<YieldChanges>
 				<iYieldChange>0</iYieldChange>
 				<iYieldChange>0</iYieldChange>
-				<iYieldChange>2</iYieldChange>
+				<iYieldChange>3</iYieldChange>
 			</YieldChanges>
 			<iHappiness>1</iHappiness>
 			<iPlacementOrder>7</iPlacementOrder>
@@ -5072,7 +5072,7 @@
 			<YieldChanges>
 				<iYieldChange>0</iYieldChange>
 				<iYieldChange>0</iYieldChange>
-				<iYieldChange>2</iYieldChange>
+				<iYieldChange>3</iYieldChange>
 			</YieldChanges>
 			<iHappiness>1</iHappiness>
 			<iPlacementOrder>7</iPlacementOrder>
@@ -6217,7 +6217,7 @@
 			<YieldChanges>
 				<iYieldChange>0</iYieldChange>
 				<iYieldChange>1</iYieldChange>
-				<iYieldChange>1</iYieldChange>
+				<iYieldChange>2</iYieldChange>
 			</YieldChanges>
 			<iAITradeModifier>30</iAITradeModifier>
 			<iPlacementOrder>2</iPlacementOrder>
@@ -6569,7 +6569,7 @@
 			<YieldChanges>
 				<iYieldChange>0</iYieldChange>
 				<iYieldChange>0</iYieldChange>
-				<iYieldChange>2</iYieldChange>
+				<iYieldChange>3</iYieldChange>
 			</YieldChanges>
 			<iAITradeModifier>5</iAITradeModifier>
 			<iHealth>1</iHealth>
@@ -6678,7 +6678,7 @@
 			<YieldChanges>
 				<iYieldChange>0</iYieldChange>
 				<iYieldChange>0</iYieldChange>
-				<iYieldChange>2</iYieldChange>
+				<iYieldChange>3</iYieldChange>
 			</YieldChanges>
 			<iAITradeModifier>5</iAITradeModifier>
 			<iHealth>1</iHealth>

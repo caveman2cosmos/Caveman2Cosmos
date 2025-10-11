@@ -102,7 +102,7 @@
 			<iCost>415</iCost>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMoves>2</iMoves>
-			<iWorkRate>500</iWorkRate>
+			<iWorkRate>250</iWorkRate>
 			<iAsset>1</iAsset>
 			<UnitMeshGroups>
 				<iGroupSize>1</iGroupSize>

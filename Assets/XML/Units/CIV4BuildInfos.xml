@@ -26,7 +26,7 @@
 			<Description>TXT_KEY_BUILD_JUMPLANE</Description>
 			<PrereqTech>TECH_TELEPORTATION</PrereqTech>
 			<iTime>1200</iTime>
-			<iCost>150</iCost>
+			<iCost>600</iCost>
 			<bKill>0</bKill>
 			<RouteType>ROUTE_JUMPLANE</RouteType>
 			<EntityEvent>ENTITY_EVENT_RAILROAD</EntityEvent>
@@ -42,7 +42,7 @@
 			<PrereqTech>TECH_FRICTIONLESS_FLIGHT</PrereqTech>
 			<!-- <ObsoleteTech>TECH_TELEPORTATION</ObsoleteTech> -->
 			<iTime>1000</iTime>
-			<iCost>50</iCost>
+			<iCost>200</iCost>
 			<bKill>0</bKill>
 			<RouteType>ROUTE_GRAVITY_TRAIN</RouteType>
 			<EntityEvent>ENTITY_EVENT_SHOVEL</EntityEvent>
@@ -57,7 +57,7 @@
 			<PrereqTech>TECH_SUPERSONIC_RAILS</PrereqTech>
 			<!-- <ObsoleteTech>TECH_TELEPORTATION</ObsoleteTech> -->
 			<iTime>800</iTime>
-			<iCost>50</iCost>
+			<iCost>200</iCost>
 			<bKill>0</bKill>
 			<RouteType>ROUTE_VACTRAIN</RouteType>
 			<EntityEvent>ENTITY_EVENT_SHOVEL</EntityEvent>
@@ -106,7 +106,7 @@
 			<PrereqTech>TECH_MAGNETIC_LEVITATION</PrereqTech>
 			<ObsoleteTech>TECH_TELEPORTATION</ObsoleteTech>
 			<iTime>600</iTime>
-			<iCost>30</iCost>
+			<iCost>120</iCost>
 			<bKill>0</bKill>
 			<RouteType>ROUTE_MAGLEV</RouteType>
 			<EntityEvent>ENTITY_EVENT_SHOVEL</EntityEvent>
@@ -142,7 +142,7 @@
 			<PrereqTech>TECH_HIGHWAY_SYSTEMS</PrereqTech>
 			<ObsoleteTech>TECH_SUPERSONIC_RAILS</ObsoleteTech>
 			<iTime>300</iTime>
-			<iCost>3</iCost>
+			<iCost>12</iCost>
 			<bKill>0</bKill>
 			<RouteType>ROUTE_HIGHWAY</RouteType>
 			<EntityEvent>ENTITY_EVENT_SHOVEL</EntityEvent>
@@ -167,7 +167,7 @@
 			<PrereqTech>TECH_ELECTRONICS</PrereqTech>
 			<ObsoleteTech>TECH_FRICTIONLESS_FLIGHT</ObsoleteTech>
 			<iTime>500</iTime>
-			<iCost>10</iCost>
+			<iCost>40</iCost>
 			<bKill>0</bKill>
 			<RouteType>ROUTE_ELECTRIC_RAILROAD</RouteType>
 			<EntityEvent>ENTITY_EVENT_RAILROAD</EntityEvent>
@@ -191,7 +191,7 @@
 			<PrereqTech>TECH_RAILROAD</PrereqTech>
 			<ObsoleteTech>TECH_MAGNETIC_LEVITATION</ObsoleteTech>
 			<iTime>400</iTime>
-			<iCost>5</iCost>
+			<iCost>20</iCost>
 			<bKill>0</bKill>
 			<RouteType>ROUTE_RAILROAD</RouteType>
 			<EntityEvent>ENTITY_EVENT_RAILROAD</EntityEvent>
@@ -256,7 +256,7 @@
 			<PrereqTech>TECH_PAVED_ROADS</PrereqTech>
 			<ObsoleteTech>TECH_ELECTRONICS</ObsoleteTech>
 			<iTime>250</iTime>
-			<iCost>2</iCost>
+			<iCost>8</iCost>
 			<bKill>0</bKill>
 			<RouteType>ROUTE_PAVED_ROAD</RouteType>
 			<EntityEvent>ENTITY_EVENT_SHOVEL</EntityEvent>
@@ -358,7 +358,7 @@
 			<PrereqTech>TECH_ROAD_BUILDING</PrereqTech>
 			<!-- <ObsoleteTech>TECH_HIGHWAY_SYSTEMS</ObsoleteTech> -->
 			<iTime>200</iTime>
-			<iCost>1</iCost>
+			<iCost>4</iCost>
 			<bKill>0</bKill>
 			<RouteType>ROUTE_ROAD</RouteType>
 			<EntityEvent>ENTITY_EVENT_SHOVEL</EntityEvent>
@@ -481,7 +481,7 @@
 			<PrereqTech>TECH_THE_WHEEL</PrereqTech>
 			<ObsoleteTech>TECH_RAILROAD</ObsoleteTech>
 			<iTime>150</iTime>
-			<iCost>1</iCost>
+			<iCost>4</iCost>
 			<bKill>0</bKill>
 			<RouteType>ROUTE_PATH</RouteType>
 			<EntityEvent>ENTITY_EVENT_SHOVEL</EntityEvent>
@@ -626,7 +626,7 @@
 			<Description>TXT_KEY_BUILD_SANITIZE</Description>
 			<PrereqTech>TECH_GENE_MANIPULATION</PrereqTech>
 			<iTime>600</iTime>
-			<iCost>150</iCost>
+			<iCost>600</iCost>
 			<bKill>0</bKill>
 			<EntityEvent>ENTITY_EVENT_IRRIGATE</EntityEvent>
 			<FeatureStructs>
@@ -655,7 +655,7 @@
 			<Description>TXT_KEY_BUILD_SANITIZE_WATER</Description>
 			<PrereqTech>TECH_AQUACULTURE</PrereqTech>
 			<iTime>600</iTime>
-			<iCost>200</iCost>
+			<iCost>800</iCost>
 			<bKill>0</bKill>
 			<ImprovementType>IMPROVEMENT_SANITIZE_WATER</ImprovementType>
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
@@ -685,7 +685,7 @@
 			<Description>TXT_KEY_BUILD_CLEAR_FALLOUT_FAST</Description>
 			<PrereqTech>TECH_ECOLOGICAL_ENGINEERING</PrereqTech>
 			<iTime>200</iTime>
-			<iCost>50</iCost>
+			<iCost>200</iCost>
 			<bKill>0</bKill>
 			<EntityEvent>ENTITY_EVENT_IRRIGATE</EntityEvent>
 			<FeatureStructs>
@@ -708,7 +708,7 @@
 			<PrereqTech>TECH_ECOLOGY</PrereqTech>
 			<ObsoleteTech>TECH_ECOLOGICAL_ENGINEERING</ObsoleteTech>
 			<iTime>1000</iTime>
-			<iCost>50</iCost>
+			<iCost>200</iCost>
 			<bKill>0</bKill>
 			<EntityEvent>ENTITY_EVENT_IRRIGATE</EntityEvent>
 			<FeatureStructs>
@@ -731,7 +731,7 @@
 			<Description>TXT_KEY_BUILD_WILDLIFE_SANCTUARY</Description>
 			<PrereqTech>TECH_TOURISM</PrereqTech>
 			<iTime>500</iTime>
-			<iCost>20</iCost>
+			<iCost>80</iCost>
 			<bKill>0</bKill>
 			<ImprovementType>IMPROVEMENT_WILDLIFE_SANCTUARY</ImprovementType>
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
@@ -746,7 +746,7 @@
 			<PrereqTech>TECH_MONARCHY</PrereqTech>
 			<ObsoleteTech>TECH_INFORMATION_LIFESTYLE</ObsoleteTech>
 			<iTime>400</iTime>
-			<iCost>10</iCost>
+			<iCost>40</iCost>
 			<bKill>0</bKill>
 			<ImprovementType>IMPROVEMENT_HUNTING_PRESERVE</ImprovementType>
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
@@ -761,7 +761,7 @@
 			<PrereqTech>TECH_SEDENTARY_LIFESTYLE</PrereqTech>
 			<ObsoleteTech>TECH_CLASSICAL_LIFESTYLE</ObsoleteTech>
 			<iTime>300</iTime>
-			<iCost>3</iCost>
+			<iCost>12</iCost>
 			<bKill>0</bKill>
 			<ImprovementType>IMPROVEMENT_HUNTING_CAMP</ImprovementType>
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
@@ -776,7 +776,7 @@
 			<PrereqTech>TECH_SEDENTARY_LIFESTYLE</PrereqTech>
 			<ObsoleteTech>TECH_VERTICAL_FARMING</ObsoleteTech>
 			<iTime>400</iTime>
-			<iCost>5</iCost>
+			<iCost>20</iCost>
 			<bKill>0</bKill>
 			<ImprovementType>IMPROVEMENT_PASTURE</ImprovementType>
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
@@ -863,7 +863,7 @@
 			<Description>TXT_KEY_BUILD_NOMADIC_HERD_KILL</Description>
 			<PrereqTech>TECH_CANINE_DOMESTICATION</PrereqTech>
 			<iTime>300</iTime>
-			<iCost>1</iCost>
+			<iCost>4</iCost>
 			<bKill>1</bKill>
 			<ImprovementType>IMPROVEMENT_NOMADIC_HERD</ImprovementType>
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
@@ -902,7 +902,7 @@
 			<PrereqTech>TECH_SCAVENGING</PrereqTech>
 			<ObsoleteTech>TECH_CLASSICAL_LIFESTYLE</ObsoleteTech>
 			<iTime>200</iTime>
-			<iCost>1</iCost>
+			<iCost>4</iCost>
 			<bKill>1</bKill>
 			<ImprovementType>IMPROVEMENT_SCAVENGING_CAMP</ImprovementType>
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
@@ -918,7 +918,7 @@
 			<PrereqTech>TECH_FERMENTATION</PrereqTech>
 			<ObsoleteTech>TECH_VERTICAL_FARMING</ObsoleteTech>
 			<iTime>500</iTime>
-			<iCost>20</iCost>
+			<iCost>80</iCost>
 			<bKill>0</bKill>
 			<ImprovementType>IMPROVEMENT_WINERY</ImprovementType>
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
@@ -1160,7 +1160,7 @@
 			<PrereqTech>TECH_SEDENTARY_LIFESTYLE</PrereqTech>
 			<ObsoleteTech>TECH_FERMENTATION</ObsoleteTech>
 			<iTime>200</iTime>
-			<iCost>3</iCost>
+			<iCost>12</iCost>
 			<bKill>0</bKill>
 			<ImprovementType>IMPROVEMENT_GRAPE_PICKING_CAMP</ImprovementType>
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
@@ -1175,7 +1175,7 @@
 			<PrereqTech>TECH_GATHERING</PrereqTech>
 			<ObsoleteTech>TECH_CLASSICAL_LIFESTYLE</ObsoleteTech>
 			<iTime>200</iTime>
-			<iCost>1</iCost>
+			<iCost>4</iCost>
 			<bKill>1</bKill>
 			<ImprovementType>IMPROVEMENT_GRAPE_GATHERING_CAMP</ImprovementType>
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
@@ -1190,7 +1190,7 @@
 			<PrereqTech>TECH_ORCHARDS</PrereqTech>
 			<ObsoleteTech>TECH_VERTICAL_FARMING</ObsoleteTech>
 			<iTime>500</iTime>
-			<iCost>15</iCost>
+			<iCost>60</iCost>
 			<bKill>0</bKill>
 			<ImprovementType>IMPROVEMENT_ORCHARD</ImprovementType>
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
@@ -1205,7 +1205,7 @@
 			<PrereqTech>TECH_SEDENTARY_LIFESTYLE</PrereqTech>
 			<ObsoleteTech>TECH_ORCHARDS</ObsoleteTech>
 			<iTime>200</iTime>
-			<iCost>3</iCost>
+			<iCost>12</iCost>
 			<bKill>0</bKill>
 			<ImprovementType>IMPROVEMENT_FRUIT_PICKING_CAMP</ImprovementType>
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
@@ -1221,7 +1221,7 @@
 			<PrereqTech>TECH_GATHERING</PrereqTech>
 			<ObsoleteTech>TECH_CLASSICAL_LIFESTYLE</ObsoleteTech>
 			<iTime>200</iTime>
-			<iCost>1</iCost>
+			<iCost>4</iCost>
 			<bKill>1</bKill>
 			<ImprovementType>IMPROVEMENT_FRUIT_GATHERING_CAMP</ImprovementType>
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
@@ -1236,7 +1236,7 @@
 			<PrereqTech>TECH_CALENDAR</PrereqTech>
 			<ObsoleteTech>TECH_VERTICAL_FARMING</ObsoleteTech>
 			<iTime>500</iTime>
-			<iCost>15</iCost>
+			<iCost>60</iCost>
 			<bKill>0</bKill>
 			<ImprovementType>IMPROVEMENT_PLANTATION</ImprovementType>
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
@@ -1352,7 +1352,7 @@
 			<PrereqTech>TECH_SEDENTARY_LIFESTYLE</PrereqTech>
 			<ObsoleteTech>TECH_CALENDAR</ObsoleteTech>
 			<iTime>200</iTime>
-			<iCost>3</iCost>
+			<iCost>12</iCost>
 			<bKill>0</bKill>
 			<ImprovementType>IMPROVEMENT_PLANT_PICKING_CAMP</ImprovementType>
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
@@ -1367,7 +1367,7 @@
 			<PrereqTech>TECH_GATHERING</PrereqTech>
 			<ObsoleteTech>TECH_CLASSICAL_LIFESTYLE</ObsoleteTech>
 			<iTime>200</iTime>
-			<iCost>1</iCost>
+			<iCost>4</iCost>
 			<bKill>1</bKill>
 			<ImprovementType>IMPROVEMENT_PLANT_GATHERING_CAMP</ImprovementType>
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
@@ -1382,7 +1382,7 @@
 			<PrereqTech>TECH_SEDENTARY_LIFESTYLE</PrereqTech>
 			<ObsoleteTech>TECH_VERTICAL_FARMING</ObsoleteTech>
 			<iTime>200</iTime>
-			<iCost>3</iCost>
+			<iCost>12</iCost>
 			<bKill>0</bKill>
 			<ImprovementType>IMPROVEMENT_MUSHROOM_GATHERER</ImprovementType>
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
@@ -1397,7 +1397,7 @@
 			<PrereqTech>TECH_GATHERING</PrereqTech>
 			<ObsoleteTech>TECH_SEDENTARY_LIFESTYLE</ObsoleteTech>
 			<iTime>200</iTime>
-			<iCost>1</iCost>
+			<iCost>4</iCost>
 			<bKill>1</bKill>
 			<ImprovementType>IMPROVEMENT_MUSHROOM_GATHERER</ImprovementType>
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
@@ -1412,7 +1412,7 @@
 			<PrereqTech>TECH_SERICULTURE</PrereqTech>
 			<ObsoleteTech>TECH_VERTICAL_FARMING</ObsoleteTech>
 			<iTime>500</iTime>
-			<iCost>15</iCost>
+			<iCost>60</iCost>
 			<bKill>0</bKill>
 			<ImprovementType>IMPROVEMENT_SILK_FARM</ImprovementType>
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
@@ -1520,7 +1520,7 @@
 			<Description>TXT_KEY_BUILD_GEOTHERMAL_FACTORY</Description>
 			<PrereqTech>TECH_VOLCANOLOGY</PrereqTech>
 			<iTime>2000</iTime>
-			<iCost>150</iCost>
+			<iCost>600</iCost>
 			<bKill>0</bKill>
 			<ImprovementType>IMPROVEMENT_GEOTHERMAL_FACTORY</ImprovementType>
 			<EntityEvent>ENTITY_EVENT_MINE</EntityEvent>
@@ -1534,7 +1534,7 @@
 			<Description>TXT_KEY_BUILD_ARCHEOLOGICAL_SITE</Description>
 			<PrereqTech>TECH_SCIENTIFIC_METHOD</PrereqTech>
 			<iTime>500</iTime>
-			<iCost>30</iCost>
+			<iCost>120</iCost>
 			<bKill>0</bKill>
 			<ImprovementType>IMPROVEMENT_ARCHEOLOGICAL_SITE</ImprovementType>
 			<EntityEvent>ENTITY_EVENT_SHOVEL</EntityEvent>
@@ -1549,7 +1549,7 @@
 			<Description>TXT_KEY_BUILD_HYDROCARBON_WELL</Description>
 			<PrereqTech>TECH_REFINING</PrereqTech>
 			<iTime>1000</iTime>
-			<iCost>50</iCost>
+			<iCost>200</iCost>
 			<bKill>0</bKill>
 			<ImprovementType>IMPROVEMENT_HYDROCARBON_WELL</ImprovementType>
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
@@ -1784,7 +1784,7 @@
 			<PrereqTech>TECH_SEDENTARY_LIFESTYLE</PrereqTech>
 			<ObsoleteTech>TECH_REFINING</ObsoleteTech>
 			<iTime>200</iTime>
-			<iCost>3</iCost>
+			<iCost>12</iCost>
 			<bKill>0</bKill>
 			<ImprovementType>IMPROVEMENT_TAR_GATHERER</ImprovementType>
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
@@ -1800,7 +1800,7 @@
 			<PrereqTech>TECH_ADHESIVES</PrereqTech>
 			<ObsoleteTech>TECH_SEDENTARY_LIFESTYLE</ObsoleteTech>
 			<iTime>200</iTime>
-			<iCost>1</iCost>
+			<iCost>4</iCost>
 			<bKill>1</bKill>
 			<ImprovementType>IMPROVEMENT_TAR_GATHERER</ImprovementType>
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
@@ -1815,7 +1815,7 @@
 			<Description>TXT_KEY_BUILD_NATURE_PRESERVE</Description>
 			<PrereqTech>TECH_TOURISM</PrereqTech>
 			<iTime>800</iTime>
-			<iCost>30</iCost>
+			<iCost>120</iCost>
 			<bKill>0</bKill>
 			<ImprovementType>IMPROVEMENT_NATURE_PRESERVE</ImprovementType>
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
@@ -1829,7 +1829,7 @@
 			<Description>TXT_KEY_BUILD_FOSSIL_DIG_SITE</Description>
 			<PrereqTech>TECH_PALEONTOLOGY</PrereqTech>
 			<iTime>800</iTime>
-			<iCost>30</iCost>
+			<iCost>120</iCost>
 			<bKill>0</bKill>
 			<ImprovementType>IMPROVEMENT_FOSSIL_DIG_SITE</ImprovementType>
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
@@ -1845,7 +1845,7 @@
 			<!-- In atomic era, modern windmill and solar panels work on plain Salt Flats terrain, both better than this -->
 			<ObsoleteTech>TECH_INFORMATION_LIFESTYLE</ObsoleteTech>
 			<iTime>200</iTime>
-			<iCost>3</iCost>
+			<iCost>12</iCost>
 			<bKill>0</bKill>
 			<ImprovementType>IMPROVEMENT_SALT_GATHERER</ImprovementType>
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
@@ -1861,7 +1861,7 @@
 			<PrereqTech>TECH_HARD_HAMMER_PERCUSSION</PrereqTech>
 			<ObsoleteTech>TECH_SEDENTARY_LIFESTYLE</ObsoleteTech>
 			<iTime>200</iTime>
-			<iCost>1</iCost>
+			<iCost>4</iCost>
 			<bKill>1</bKill>
 			<ImprovementType>IMPROVEMENT_SALT_GATHERER</ImprovementType>
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
@@ -1877,7 +1877,7 @@
 			<Description>TXT_KEY_BUILD_VERTICAL_FARM</Description>
 			<PrereqTech>TECH_VERTICAL_FARMING</PrereqTech>
 			<iTime>1000</iTime>
-			<iCost>50</iCost>
+			<iCost>200</iCost>
 			<bKill>0</bKill>
 			<ImprovementType>IMPROVEMENT_VERTICAL_FARM</ImprovementType>
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
@@ -2133,7 +2133,7 @@
 			<PrereqTech>TECH_AGRICULTURE</PrereqTech>
 			<ObsoleteTech>TECH_TRANSHUMAN_LIFESTYLE</ObsoleteTech>
 			<iTime>500</iTime>
-			<iCost>5</iCost>
+			<iCost>20</iCost>
 			<bKill>0</bKill>
 			<ImprovementType>IMPROVEMENT_FARM</ImprovementType>
 			<EntityEvent>ENTITY_EVENT_IRRIGATE</EntityEvent>
@@ -2388,7 +2388,7 @@
 			<PrereqTech>TECH_SEDENTARY_LIFESTYLE</PrereqTech>
 			<ObsoleteTech>TECH_CLASSICAL_LIFESTYLE</ObsoleteTech>
 			<iTime>200</iTime>
-			<iCost>3</iCost>
+			<iCost>12</iCost>
 			<bKill>0</bKill>
 			<ImprovementType>IMPROVEMENT_SEED_CAMP</ImprovementType>
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
@@ -2403,7 +2403,7 @@
 			<PrereqTech>TECH_GATHERING</PrereqTech>
 			<ObsoleteTech>TECH_SEDENTARY_LIFESTYLE</ObsoleteTech>
 			<iTime>202</iTime>
-			<iCost>1</iCost>
+			<iCost>4</iCost>
 			<bKill>1</bKill>
 			<ImprovementType>IMPROVEMENT_SEED_CAMP</ImprovementType>
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
@@ -2417,7 +2417,7 @@
 			<Description>TXT_KEY_BUILD_MOUNTAIN_MINE</Description>
 			<PrereqTech>TECH_MOUNTAINEERING</PrereqTech>
 			<iTime>1000</iTime>
-			<iCost>30</iCost>
+			<iCost>120</iCost>
 			<bKill>0</bKill>
 			<ImprovementType>IMPROVEMENT_MOUNTAIN_MINE</ImprovementType>
 			<EntityEvent>ENTITY_EVENT_MINE</EntityEvent>
@@ -2433,7 +2433,7 @@
 			<PrereqTech>TECH_MINING</PrereqTech>
 			<ObsoleteTech>TECH_MOUNTAINEERING</ObsoleteTech>
 			<iTime>300</iTime>
-			<iCost>15</iCost>
+			<iCost>60</iCost>
 			<bKill>0</bKill>
 			<ImprovementType>IMPROVEMENT_EARLY_MOUNTAIN_MINE</ImprovementType>
 			<EntityEvent>ENTITY_EVENT_MINE</EntityEvent>
@@ -2448,7 +2448,7 @@
 			<Description>TXT_KEY_BUILD_CORE_MINE</Description>
 			<PrereqTech>TECH_NANOMINING</PrereqTech>
 			<iTime>1600</iTime>
-			<iCost>300</iCost>
+			<iCost>1200</iCost>
 			<bKill>0</bKill>
 			<ImprovementType>IMPROVEMENT_CORE_MINE</ImprovementType>
 			<EntityEvent>ENTITY_EVENT_MINE</EntityEvent>
@@ -2689,7 +2689,7 @@
 			<PrereqTech>TECH_MODERN_SEISMOLOGY</PrereqTech>
 			<ObsoleteTech>TECH_GALACTIC_LIFESTYLE</ObsoleteTech>
 			<iTime>1200</iTime>
-			<iCost>40</iCost>
+			<iCost>160</iCost>
 			<bKill>0</bKill>
 			<ImprovementType>IMPROVEMENT_MODERN_MINE</ImprovementType>
 			<EntityEvent>ENTITY_EVENT_MINE</EntityEvent>
@@ -2931,7 +2931,7 @@
 			<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 			<ObsoleteTech>TECH_INFORMATION_LIFESTYLE</ObsoleteTech>
 			<iTime>800</iTime>
-			<iCost>20</iCost>
+			<iCost>80</iCost>
 			<bKill>0</bKill>
 			<ImprovementType>IMPROVEMENT_SHAFT_MINE</ImprovementType>
 			<EntityEvent>ENTITY_EVENT_MINE</EntityEvent>
@@ -2963,7 +2963,7 @@
 			<PrereqTech>TECH_MINING</PrereqTech>
 			<ObsoleteTech>TECH_INDUSTRIAL_LIFESTYLE</ObsoleteTech>
 			<iTime>400</iTime>
-			<iCost>5</iCost>
+			<iCost>20</iCost>
 			<bKill>0</bKill>
 			<ImprovementType>IMPROVEMENT_MINE</ImprovementType>
 			<EntityEvent>ENTITY_EVENT_MINE</EntityEvent>
@@ -2994,7 +2994,7 @@
 			<PrereqTech>TECH_MASONRY</PrereqTech>
 			<ObsoleteTech>TECH_GALACTIC_LIFESTYLE</ObsoleteTech>
 			<iTime>600</iTime>
-			<iCost>15</iCost>
+			<iCost>60</iCost>
 			<bKill>0</bKill>
 			<ImprovementType>IMPROVEMENT_QUARRY</ImprovementType>
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
@@ -3109,7 +3109,7 @@
 			<PrereqTech>TECH_MINING</PrereqTech>
 			<ObsoleteTech>TECH_MASONRY</ObsoleteTech>
 			<iTime>200</iTime>
-			<iCost>5</iCost>
+			<iCost>20</iCost>
 			<bKill>0</bKill>
 			<ImprovementType>IMPROVEMENT_EARLY_QUARRY</ImprovementType>
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
@@ -3141,7 +3141,7 @@
 			<PrereqTech>TECH_SEDENTARY_LIFESTYLE</PrereqTech>
 			<ObsoleteTech>TECH_CLASSICAL_LIFESTYLE</ObsoleteTech>
 			<iTime>200</iTime>
-			<iCost>5</iCost>
+			<iCost>20</iCost>
 			<bKill>0</bKill>
 			<ImprovementType>IMPROVEMENT_STONE_TOOLS_WORKSHOP</ImprovementType>
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
@@ -3173,7 +3173,7 @@
 			<PrereqTech>TECH_TOOL_MAKING</PrereqTech>
 			<ObsoleteTech>TECH_SEDENTARY_LIFESTYLE</ObsoleteTech>
 			<iTime>200</iTime>
-			<iCost>1</iCost>
+			<iCost>4</iCost>
 			<bKill>1</bKill>
 			<ImprovementType>IMPROVEMENT_STONE_TOOLS_WORKSHOP</ImprovementType>
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
@@ -3204,7 +3204,7 @@
 			<Description>TXT_KEY_BUILD_HYBRID_FOREST</Description>
 			<PrereqTech>TECH_PLANETARY_ECONOMICS</PrereqTech>
 			<iTime>3000</iTime>
-			<iCost>50</iCost>
+			<iCost>200</iCost>
 			<bKill>0</bKill>
 			<ImprovementType>IMPROVEMENT_HYBRID_FOREST</ImprovementType>
 			<EntityEvent>ENTITY_EVENT_IRRIGATE</EntityEvent>
@@ -3220,7 +3220,7 @@
 			<PrereqTech>TECH_ECOLOGY</PrereqTech>
 			<ObsoleteTech>TECH_TRANSHUMAN_LIFESTYLE</ObsoleteTech>
 			<iTime>2000</iTime>
-			<iCost>30</iCost>
+			<iCost>120</iCost>
 			<bKill>0</bKill>
 			<ImprovementType>IMPROVEMENT_TREEFARM</ImprovementType>
 			<EntityEvent>ENTITY_EVENT_IRRIGATE</EntityEvent>
@@ -3236,7 +3236,7 @@
 			<PrereqTech>TECH_MACHINERY</PrereqTech>
 			<ObsoleteTech>TECH_INFORMATION_LIFESTYLE</ObsoleteTech>
 			<iTime>600</iTime>
-			<iCost>5</iCost>
+			<iCost>20</iCost>
 			<bKill>0</bKill>
 			<ImprovementType>IMPROVEMENT_LUMBERMILL</ImprovementType>
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
@@ -3251,7 +3251,7 @@
 			<PrereqTech>TECH_SEDENTARY_LIFESTYLE</PrereqTech>
 			<ObsoleteTech>TECH_MACHINERY</ObsoleteTech>
 			<iTime>200</iTime>
-			<iCost>1</iCost>
+			<iCost>4</iCost>
 			<bKill>0</bKill>
 			<ImprovementType>IMPROVEMENT_LUMBERJACK</ImprovementType>
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
@@ -3266,7 +3266,7 @@
 			<PrereqTech>TECH_SIMPLE_WOOD_WORKING</PrereqTech>
 			<ObsoleteTech>TECH_CLASSICAL_LIFESTYLE</ObsoleteTech>
 			<iTime>200</iTime>
-			<iCost>1</iCost>
+			<iCost>4</iCost>
 			<bKill>1</bKill>
 			<ImprovementType>IMPROVEMENT_WOOD_GATHERER</ImprovementType>
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
@@ -3281,7 +3281,7 @@
 			<Description>TXT_KEY_BUILD_SUBURBS</Description>
 			<PrereqTech>TECH_GAS_LIGHTING</PrereqTech>
 			<iTime>1200</iTime>
-			<iCost>250</iCost>
+			<iCost>1000</iCost>
 			<bKill>0</bKill>
 			<ImprovementType>IMPROVEMENT_SUBURBS</ImprovementType>
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
@@ -3536,7 +3536,7 @@
 			<PrereqTech>TECH_GUILDS</PrereqTech>
 			<ObsoleteTech>TECH_ATOMIC_LIFESTYLE</ObsoleteTech>
 			<iTime>1000</iTime>
-			<iCost>150</iCost>
+			<iCost>600</iCost>
 			<bKill>0</bKill>
 			<ImprovementType>IMPROVEMENT_TOWN</ImprovementType>
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
@@ -3791,7 +3791,7 @@
 			<PrereqTech>TECH_CITY_PLANNING</PrereqTech>
 			<ObsoleteTech>TECH_INDUSTRIAL_LIFESTYLE</ObsoleteTech>
 			<iTime>800</iTime>
-			<iCost>50</iCost>
+			<iCost>200</iCost>
 			<bKill>0</bKill>
 			<ImprovementType>IMPROVEMENT_VILLAGE</ImprovementType>
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
@@ -4039,7 +4039,7 @@
 			<PrereqTech>TECH_MASONRY</PrereqTech>
 			<ObsoleteTech>TECH_RENAISSANCE_LIFESTYLE</ObsoleteTech>
 			<iTime>600</iTime>
-			<iCost>30</iCost>
+			<iCost>120</iCost>
 			<bKill>0</bKill>
 			<ImprovementType>IMPROVEMENT_HAMLET</ImprovementType>
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
@@ -4112,7 +4112,7 @@
 			<PrereqTech>TECH_CARPENTRY</PrereqTech>
 			<ObsoleteTech>TECH_SEDENTARY_LIFESTYLE</ObsoleteTech>
 			<iTime>401</iTime>
-			<iCost>20</iCost>
+			<iCost>80</iCost>
 			<bKill>1</bKill>
 			<ImprovementType>IMPROVEMENT_COTTAGE</ImprovementType>
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
@@ -4164,7 +4164,7 @@
 			<PrereqTech>TECH_SEDENTARY_LIFESTYLE</PrereqTech>
 			<ObsoleteTech>TECH_MEDIEVAL_LIFESTYLE</ObsoleteTech>
 			<iTime>400</iTime>
-			<iCost>20</iCost>
+			<iCost>80</iCost>
 			<bKill>0</bKill>
 			<ImprovementType>IMPROVEMENT_COTTAGE</ImprovementType>
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
@@ -4215,7 +4215,7 @@
 			<Description>TXT_KEY_BUILD_INDUSTRIAL_COMPLEX</Description>
 			<PrereqTech>TECH_MANUFACTURING</PrereqTech>
 			<iTime>1800</iTime>
-			<iCost>100</iCost>
+			<iCost>400</iCost>
 			<bKill>0</bKill>
 			<ImprovementType>IMPROVEMENT_MANUFACTURING_COMPLEX</ImprovementType>
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
@@ -4468,7 +4468,7 @@
 			<PrereqTech>TECH_ASSEMBLY_LINE</PrereqTech>
 			<ObsoleteTech>TECH_INFORMATION_LIFESTYLE</ObsoleteTech>
 			<iTime>1000</iTime>
-			<iCost>30</iCost>
+			<iCost>120</iCost>
 			<bKill>0</bKill>
 			<ImprovementType>IMPROVEMENT_FACTORY</ImprovementType>
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
@@ -4743,7 +4743,7 @@
 			<PrereqTech>TECH_MACHINERY</PrereqTech>
 			<ObsoleteTech>TECH_ATOMIC_LIFESTYLE</ObsoleteTech>
 			<iTime>600</iTime>
-			<iCost>20</iCost>
+			<iCost>80</iCost>
 			<bKill>0</bKill>
 			<ImprovementType>IMPROVEMENT_WORKSHOP</ImprovementType>
 			<EntityEvent>ENTITY_EVENT_MINE</EntityEvent>
@@ -4850,7 +4850,7 @@
 			<Description>TXT_KEY_BUILD_IMPROVEMENT_HYDRO_DAM</Description>
 			<PrereqTech>TECH_HYDROELECTRICITY</PrereqTech>
 			<iTime>1200</iTime>
-			<iCost>50</iCost>
+			<iCost>200</iCost>
 			<bKill>0</bKill>
 			<ImprovementType>IMPROVEMENT_HYDRO_DAM</ImprovementType>
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
@@ -4866,7 +4866,7 @@
 			<PrereqTech>TECH_WATERWHEELS</PrereqTech>
 			<ObsoleteTech>TECH_ATOMIC_LIFESTYLE</ObsoleteTech>
 			<iTime>800</iTime>
-			<iCost>30</iCost>
+			<iCost>120</iCost>
 			<bKill>0</bKill>
 			<ImprovementType>IMPROVEMENT_WATERMILL</ImprovementType>
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
@@ -4881,7 +4881,7 @@
 			<Description>TXT_KEY_BUILD_MODERN_WINDMILL</Description>
 			<PrereqTech>TECH_ECOLOGY</PrereqTech>
 			<iTime>1000</iTime>
-			<iCost>30</iCost>
+			<iCost>120</iCost>
 			<bKill>0</bKill>
 			<ImprovementType>IMPROVEMENT_MODERN_WINDMILL</ImprovementType>
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
@@ -4976,7 +4976,7 @@
 			<PrereqTech>TECH_WINDMILLS</PrereqTech>
 			<ObsoleteTech>TECH_INFORMATION_LIFESTYLE</ObsoleteTech>
 			<iTime>500</iTime>
-			<iCost>20</iCost>
+			<iCost>120</iCost>
 			<bKill>0</bKill>
 			<ImprovementType>IMPROVEMENT_WINDMILL</ImprovementType>
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
@@ -5071,7 +5071,7 @@
 			<Description>TXT_KEY_BUILD_RADIO_TOWER</Description>
 			<PrereqTech>TECH_RADIO</PrereqTech>
 			<iTime>600</iTime>
-			<iCost>50</iCost>
+			<iCost>200</iCost>
 			<bKill>0</bKill>
 			<ImprovementType>IMPROVEMENT_RADIO_TOWER</ImprovementType>
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
@@ -5085,7 +5085,7 @@
 			<Description>TXT_KEY_BUILD_SOLAR_PANELS</Description>
 			<PrereqTech>TECH_SOLAR_POWER</PrereqTech>
 			<iTime>800</iTime>
-			<iCost>30</iCost>
+			<iCost>120</iCost>
 			<bKill>0</bKill>
 			<ImprovementType>IMPROVEMENT_SOLAR_PANELS</ImprovementType>
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
@@ -5346,7 +5346,7 @@
 			<Description>TXT_KEY_BUILD_FOREST_PRESERVE</Description>
 			<PrereqTech>TECH_WILDLIFE_CONSERVATION</PrereqTech>
 			<iTime>800</iTime>
-			<iCost>30</iCost>
+			<iCost>120</iCost>
 			<bKill>0</bKill>
 			<ImprovementType>IMPROVEMENT_FOREST_PRESERVE</ImprovementType>
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
@@ -5360,7 +5360,7 @@
 			<Description>TXT_KEY_BUILD_GROUNDWATER_WELL</Description>
 			<PrereqTech>TECH_MODERN_SEISMOLOGY</PrereqTech>
 			<iTime>1000</iTime>
-			<iCost>15</iCost>
+			<iCost>60</iCost>
 			<bKill>0</bKill>
 			<ImprovementType>IMPROVEMENT_GROUNDWATER_WELL</ImprovementType>
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
@@ -5385,7 +5385,7 @@
 			<PrereqTech>TECH_IRON_WORKING</PrereqTech>
 			<ObsoleteTech>TECH_INFORMATION_LIFESTYLE</ObsoleteTech>
 			<iTime>200</iTime>
-			<iCost>3</iCost>
+			<iCost>12</iCost>
 			<bKill>0</bKill>
 			<ImprovementType>IMPROVEMENT_PEAT_CUTTER</ImprovementType>
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
@@ -5400,7 +5400,7 @@
 			<PrereqTech>TECH_SEDENTARY_LIFESTYLE</PrereqTech>
 			<ObsoleteTech>TECH_INFORMATION_LIFESTYLE</ObsoleteTech>
 			<iTime>200</iTime>
-			<iCost>3</iCost>
+			<iCost>12</iCost>
 			<bKill>0</bKill>
 			<ImprovementType>IMPROVEMENT_THATCH_CUTTER</ImprovementType>
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
@@ -5414,7 +5414,7 @@
 			<Description>TXT_KEY_BUILD_GEOGLYPH</Description>
 			<PrereqTech>TECH_STARGAZING</PrereqTech>
 			<iTime>400</iTime>
-			<iCost>5</iCost>
+			<iCost>20</iCost>
 			<bKill>0</bKill>
 			<ImprovementType>IMPROVEMENT_GEOGLYPH</ImprovementType>
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
@@ -5532,7 +5532,7 @@
 			<Description>TXT_KEY_BUILD_MACHU_PICCHU</Description>
 			<PrereqTech>TECH_MOUNTAINEERING</PrereqTech>
 			<iTime>400</iTime>
-			<iCost>0</iCost>
+			<iCost>1</iCost>
 			<bKill>0</bKill>
 			<ImprovementType>IMPROVEMENT_MACHU_PICCHU</ImprovementType>
 			<RouteType>NONE</RouteType>
@@ -5556,7 +5556,7 @@
 			<PrereqTech>TECH_SEDENTARY_LIFESTYLE</PrereqTech>
 			<ObsoleteTech>TECH_INFORMATION_LIFESTYLE</ObsoleteTech>
 			<iTime>400</iTime>
-			<iCost>5</iCost>
+			<iCost>20</iCost>
 			<bKill>0</bKill>
 			<ImprovementType>IMPROVEMENT_JUNGLE_CAMP</ImprovementType>
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
@@ -5569,7 +5569,7 @@
 			<PrereqTech>TECH_NATUROPATHY</PrereqTech>
 			<ObsoleteTech>TECH_SEDENTARY_LIFESTYLE</ObsoleteTech>
 			<iTime>405</iTime>
-			<iCost>1</iCost>
+			<iCost>4</iCost>
 			<bKill>1</bKill>
 			<ImprovementType>IMPROVEMENT_JUNGLE_CAMP</ImprovementType>
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
@@ -5582,7 +5582,7 @@
 			<PrereqTech>TECH_SEDENTARY_LIFESTYLE</PrereqTech>
 			<ObsoleteTech>TECH_INFORMATION_LIFESTYLE</ObsoleteTech>
 			<iTime>400</iTime>
-			<iCost>5</iCost>
+			<iCost>20</iCost>
 			<bKill>0</bKill>
 			<ImprovementType>IMPROVEMENT_DESERT_CAMP</ImprovementType>
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
@@ -5595,7 +5595,7 @@
 			<PrereqTech>TECH_NATUROPATHY</PrereqTech>
 			<ObsoleteTech>TECH_SEDENTARY_LIFESTYLE</ObsoleteTech>
 			<iTime>405</iTime>
-			<iCost>1</iCost>
+			<iCost>4</iCost>
 			<bKill>1</bKill>
 			<ImprovementType>IMPROVEMENT_DESERT_CAMP</ImprovementType>
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
@@ -5608,7 +5608,7 @@
 			<PrereqTech>TECH_SEDENTARY_LIFESTYLE</PrereqTech>
 			<ObsoleteTech>TECH_INFORMATION_LIFESTYLE</ObsoleteTech>
 			<iTime>400</iTime>
-			<iCost>5</iCost>
+			<iCost>20</iCost>
 			<bKill>0</bKill>
 			<ImprovementType>IMPROVEMENT_WETLANDS_CAMP</ImprovementType>
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
@@ -5621,7 +5621,7 @@
 			<PrereqTech>TECH_NATUROPATHY</PrereqTech>
 			<ObsoleteTech>TECH_SEDENTARY_LIFESTYLE</ObsoleteTech>
 			<iTime>405</iTime>
-			<iCost>1</iCost>
+			<iCost>4</iCost>
 			<bKill>1</bKill>
 			<ImprovementType>IMPROVEMENT_WETLANDS_CAMP</ImprovementType>
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
@@ -5634,7 +5634,7 @@
 			<Description>TXT_KEY_BUILD_RECLAIM_LAND</Description>
 			<PrereqTech>TECH_INDUSTRIAL_ECOLOGY</PrereqTech>
 			<iTime>0</iTime>
-			<iCost>5</iCost>
+			<iCost>20</iCost>
 			<bKill>0</bKill>
 			<FeatureStructs>
 				<FeatureStruct>
@@ -5888,7 +5888,7 @@
 			<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 			<ObsoleteTech>TECH_INDUSTRIAL_ECOLOGY</ObsoleteTech>
 			<iTime>100</iTime>
-			<iCost>30</iCost>
+			<iCost>120</iCost>
 			<bKill>0</bKill>
 			<FeatureStructs>
 				<FeatureStruct>
@@ -6030,7 +6030,7 @@
 			<PrereqTech>TECH_CANAL_SYSTEMS</PrereqTech>
 			<ObsoleteTech>TECH_INDUSTRIAL_ECOLOGY</ObsoleteTech>
 			<iTime>0</iTime>
-			<iCost>15</iCost>
+			<iCost>60</iCost>
 			<bKill>0</bKill>
 			<EntityEvent>ENTITY_EVENT_IRRIGATE</EntityEvent>
 			<FeatureStructs>
@@ -6061,7 +6061,7 @@
 			<PrereqTech>TECH_BRONZE_WORKING</PrereqTech>
 			<ObsoleteTech>TECH_INDUSTRIAL_ECOLOGY</ObsoleteTech>
 			<iTime>0</iTime>
-			<iCost>5</iCost>
+			<iCost>20</iCost>
 			<bKill>0</bKill>
 			<EntityEvent>ENTITY_EVENT_CHOP</EntityEvent>
 			<FeatureStructs>
@@ -6148,7 +6148,7 @@
 			<PrereqTech>TECH_SLASH_AND_BURN</PrereqTech>
 			<ObsoleteTech>TECH_INDUSTRIAL_ECOLOGY</ObsoleteTech>
 			<iTime>0</iTime>
-			<iCost>0</iCost>
+			<iCost>1</iCost>
 			<bKill>0</bKill>
 			<EntityEvent>ENTITY_EVENT_CHOP</EntityEvent>
 			<FeatureStructs>
@@ -6235,7 +6235,7 @@
 			<Description>TXT_KEY_BUILD_RADAR_TOWER</Description>
 			<PrereqTech>TECH_RADAR</PrereqTech>
 			<iTime>800</iTime>
-			<iCost>50</iCost>
+			<iCost>200</iCost>
 			<bKill>0</bKill>
 			<ImprovementType>IMPROVEMENT_RADAR_TOWER</ImprovementType>
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
@@ -6252,7 +6252,7 @@
 			<PrereqTech>TECH_STEEL</PrereqTech>
 			<ObsoleteTech>TECH_RADAR</ObsoleteTech>
 			<iTime>600</iTime>
-			<iCost>30</iCost>
+			<iCost>120</iCost>
 			<bKill>0</bKill>
 			<ImprovementType>IMPROVEMENT_STEEL_WATCHTOWER</ImprovementType>
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
@@ -6269,7 +6269,7 @@
 			<PrereqTech>TECH_MASONRY</PrereqTech>
 			<ObsoleteTech>TECH_STEEL</ObsoleteTech>
 			<iTime>400</iTime>
-			<iCost>5</iCost>
+			<iCost>20</iCost>
 			<bKill>0</bKill>
 			<ImprovementType>IMPROVEMENT_STONE_WATCHTOWER</ImprovementType>
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
@@ -6286,7 +6286,7 @@
 			<PrereqTech>TECH_SEDENTARY_LIFESTYLE</PrereqTech>
 			<ObsoleteTech>TECH_MASONRY</ObsoleteTech>
 			<iTime>200</iTime>
-			<iCost>1</iCost>
+			<iCost>4</iCost>
 			<bKill>0</bKill>
 			<ImprovementType>IMPROVEMENT_WOODEN_WATCHTOWER</ImprovementType>
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
@@ -6303,7 +6303,7 @@
 			<PrereqTech>TECH_CARPENTRY</PrereqTech>
 			<ObsoleteTech>TECH_SEDENTARY_LIFESTYLE</ObsoleteTech>
 			<iTime>205</iTime>
-			<iCost>5</iCost>
+			<iCost>20</iCost>
 			<bKill>1</bKill>
 			<ImprovementType>IMPROVEMENT_WOODEN_WATCHTOWER</ImprovementType>
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
@@ -6319,7 +6319,7 @@
 			<Description>TXT_KEY_BUILD_COMMAND_CENTER</Description>
 			<PrereqTech>TECH_METAMATERIALS</PrereqTech>
 			<iTime>2000</iTime>
-			<iCost>700</iCost>
+			<iCost>2800</iCost>
 			<bKill>0</bKill>
 			<ImprovementType>IMPROVEMENT_COMMAND_CENTER</ImprovementType>
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
@@ -6335,7 +6335,7 @@
 			<PrereqTech>TECH_ELECTRICITY</PrereqTech>
 			<ObsoleteTech>TECH_METAMATERIALS</ObsoleteTech>
 			<iTime>1200</iTime>
-			<iCost>300</iCost>
+			<iCost>1200</iCost>
 			<bKill>0</bKill>
 			<ImprovementType>IMPROVEMENT_COMMAND_BUNKER</ImprovementType>
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
@@ -6351,7 +6351,7 @@
 			<PrereqTech>TECH_MATHEMATICS</PrereqTech>
 			<ObsoleteTech>TECH_ELECTRICITY</ObsoleteTech>
 			<iTime>1000</iTime>
-			<iCost>50</iCost>
+			<iCost>200</iCost>
 			<bKill>0</bKill>
 			<ImprovementType>IMPROVEMENT_FORT</ImprovementType>
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
@@ -6367,7 +6367,7 @@
 			<PrereqTech>TECH_POTTERY</PrereqTech>
 			<ObsoleteTech>TECH_MATHEMATICS</ObsoleteTech>
 			<iTime>300</iTime>
-			<iCost>20</iCost>
+			<iCost>80</iCost>
 			<bKill>0</bKill>
 			<ImprovementType>IMPROVEMENT_FORTIFIED_CAVE_WITH_CACHE</ImprovementType>
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
@@ -6383,7 +6383,7 @@
 			<PrereqTech>TECH_SEDENTARY_LIFESTYLE</PrereqTech>
 			<ObsoleteTech>TECH_POTTERY</ObsoleteTech>
 			<iTime>200</iTime>
-			<iCost>15</iCost>
+			<iCost>60</iCost>
 			<bKill>0</bKill>
 			<ImprovementType>IMPROVEMENT_FORTIFIED_CAVE</ImprovementType>
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
@@ -6399,7 +6399,7 @@
 			<PrereqTech>TECH_SHELTER_BUILDING</PrereqTech>
 			<ObsoleteTech>TECH_SEDENTARY_LIFESTYLE</ObsoleteTech>
 			<iTime>200</iTime>
-			<iCost>5</iCost>
+			<iCost>20</iCost>
 			<bKill>1</bKill>
 			<ImprovementType>IMPROVEMENT_FORTIFIED_CAVE</ImprovementType>
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
@@ -6415,7 +6415,7 @@
 			<PrereqTech>TECH_SEDENTARY_LIFESTYLE</PrereqTech>
 			<ObsoleteTech>TECH_MATHEMATICS</ObsoleteTech>
 			<iTime>400</iTime>
-			<iCost>15</iCost>
+			<iCost>60</iCost>
 			<bKill>0</bKill>
 			<ImprovementType>IMPROVEMENT_WOODEN_PALISADE</ImprovementType>
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
@@ -6431,7 +6431,7 @@
 			<PrereqTech>TECH_CARPENTRY</PrereqTech>
 			<ObsoleteTech>TECH_SEDENTARY_LIFESTYLE</ObsoleteTech>
 			<iTime>400</iTime>
-			<iCost>10</iCost>
+			<iCost>40</iCost>
 			<bKill>1</bKill>
 			<ImprovementType>IMPROVEMENT_WOODEN_PALISADE</ImprovementType>
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
@@ -6447,7 +6447,7 @@
 			<PrereqTech>TECH_SHELTER_BUILDING</PrereqTech>
 			<ObsoleteTech>TECH_CARPENTRY</ObsoleteTech>
 			<iTime>200</iTime>
-			<iCost>5</iCost>
+			<iCost>20</iCost>
 			<bKill>1</bKill>
 			<ImprovementType>IMPROVEMENT_ABATIS_THORN_HEDGE</ImprovementType>
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
@@ -6463,7 +6463,7 @@
 			<Description>TXT_KEY_BUILD_YOUNG_FOREST</Description>
 			<PrereqTech>TECH_GUILDS</PrereqTech>
 			<iTime>1000</iTime>
-			<iCost>30</iCost>
+			<iCost>120</iCost>
 			<bKill>0</bKill>
 			<ImprovementType>IMPROVEMENT_YOUNG_FOREST</ImprovementType>
 			<FeatureChange>FEATURE_FOREST_YOUNG</FeatureChange>
@@ -6696,7 +6696,7 @@
 			<Description>TXT_KEY_BUILD_GROW_FOREST</Description>
 			<PrereqTech>TECH_ECOLOGY</PrereqTech>
 			<iTime>1000</iTime>
-			<iCost>20</iCost>
+			<iCost>80</iCost>
 			<bKill>0</bKill>
 			<ImprovementType>IMPROVEMENT_GROW_FOREST</ImprovementType>
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
@@ -6711,7 +6711,7 @@
 			<Description>TXT_KEY_BUILD_PLANT_BAMBOO</Description>
 			<PrereqTech>TECH_ECOLOGY</PrereqTech>
 			<iTime>2000</iTime>
-			<iCost>30</iCost>
+			<iCost>120</iCost>
 			<bKill>0</bKill>
 			<ImprovementType>IMPROVEMENT_PLANT_BAMBOO</ImprovementType>
 			<FeatureChange>FEATURE_BAMBOO</FeatureChange>
@@ -6947,7 +6947,7 @@
 			<Description>TXT_KEY_BUILD_PLANT_SAVANNA</Description>
 			<PrereqTech>TECH_ECOLOGY</PrereqTech>
 			<iTime>2000</iTime>
-			<iCost>30</iCost>
+			<iCost>120</iCost>
 			<bKill>0</bKill>
 			<ImprovementType>IMPROVEMENT_PLANT_SAVANNA</ImprovementType>
 			<FeatureChange>FEATURE_SAVANNA</FeatureChange>
@@ -7183,7 +7183,7 @@
 			<Description>TXT_KEY_BUILD_PLANT_JUNGLE</Description>
 			<PrereqTech>TECH_ECOLOGY</PrereqTech>
 			<iTime>3000</iTime>
-			<iCost>30</iCost>
+			<iCost>120</iCost>
 			<bKill>0</bKill>
 			<ImprovementType>IMPROVEMENT_PLANT_JUNGLE</ImprovementType>
 			<FeatureChange>FEATURE_JUNGLE</FeatureChange>
@@ -7419,7 +7419,7 @@
 			<Description>TXT_KEY_BUILD_TERRAFORM_LUSH</Description>
 			<PrereqTech>TECH_WEATHER_CONTROL</PrereqTech>
 			<iTime>2500</iTime>
-			<iCost>700</iCost>
+			<iCost>2800</iCost>
 			<bKill>0</bKill>
 			<ImprovementType>IMPROVEMENT_TERRAFORM_LUSH</ImprovementType>
 			<TerrainChange>TERRAIN_LUSH</TerrainChange>
@@ -7661,7 +7661,7 @@
 			<Description>TXT_KEY_BUILD_TERRAFORM_GRASS</Description>
 			<PrereqTech>TECH_WEATHER_CONTROL</PrereqTech>
 			<iTime>2500</iTime>
-			<iCost>700</iCost>
+			<iCost>2800</iCost>
 			<bKill>0</bKill>
 			<ImprovementType>IMPROVEMENT_TERRAFORM_GRASS</ImprovementType>
 			<TerrainChange>TERRAIN_GRASSLAND</TerrainChange>
@@ -7903,7 +7903,7 @@
 			<Description>TXT_KEY_BUILD_TERRAFORM_PLAINS</Description>
 			<PrereqTech>TECH_WEATHER_CONTROL</PrereqTech>
 			<iTime>2500</iTime>
-			<iCost>700</iCost>
+			<iCost>2800</iCost>
 			<bKill>0</bKill>
 			<ImprovementType>IMPROVEMENT_TERRAFORM_PLAINS</ImprovementType>
 			<TerrainChange>TERRAIN_PLAINS</TerrainChange>
@@ -8145,7 +8145,7 @@
 			<Description>TXT_KEY_BUILD_TERRAFORM_ROCKY</Description>
 			<PrereqTech>TECH_WEATHER_CONTROL</PrereqTech>
 			<iTime>3000</iTime>
-			<iCost>700</iCost>
+			<iCost>2800</iCost>
 			<bKill>0</bKill>
 			<ImprovementType>IMPROVEMENT_TERRAFORM_ROCKY</ImprovementType>
 			<TerrainChange>TERRAIN_ROCKY</TerrainChange>
@@ -8387,7 +8387,7 @@
 			<Description>TXT_KEY_BUILD_TERRAFORM_MUDDY</Description>
 			<PrereqTech>TECH_WEATHER_CONTROL</PrereqTech>
 			<iTime>2500</iTime>
-			<iCost>700</iCost>
+			<iCost>2800</iCost>
 			<bKill>0</bKill>
 			<ImprovementType>IMPROVEMENT_TERRAFORM_MUDDY</ImprovementType>
 			<TerrainChange>TERRAIN_MUDDY</TerrainChange>
@@ -8629,7 +8629,7 @@
 			<Description>TXT_KEY_BUILD_TERRAFORM_TAIGA</Description>
 			<PrereqTech>TECH_WEATHER_CONTROL</PrereqTech>
 			<iTime>3000</iTime>
-			<iCost>700</iCost>
+			<iCost>2800</iCost>
 			<bKill>0</bKill>
 			<ImprovementType>IMPROVEMENT_TERRAFORM_TAIGA</ImprovementType>
 			<TerrainChange>TERRAIN_TAIGA</TerrainChange>
@@ -8871,7 +8871,7 @@
 			<Description>TXT_KEY_BUILD_TERRAFORM_TUNDRA</Description>
 			<PrereqTech>TECH_WEATHER_CONTROL</PrereqTech>
 			<iTime>3000</iTime>
-			<iCost>700</iCost>
+			<iCost>2800</iCost>
 			<bKill>0</bKill>
 			<ImprovementType>IMPROVEMENT_TERRAFORM_TUNDRA</ImprovementType>
 			<TerrainChange>TERRAIN_TUNDRA</TerrainChange>
@@ -9113,7 +9113,7 @@
 			<Description>TXT_KEY_BUILD_TERRAFORM_PERMAFROST</Description>
 			<PrereqTech>TECH_WEATHER_CONTROL</PrereqTech>
 			<iTime>3000</iTime>
-			<iCost>700</iCost>
+			<iCost>2800</iCost>
 			<bKill>0</bKill>
 			<ImprovementType>IMPROVEMENT_TERRAFORM_PERMAFROST</ImprovementType>
 			<TerrainChange>TERRAIN_PERMAFROST</TerrainChange>
@@ -9355,7 +9355,7 @@
 			<Description>TXT_KEY_BUILD_TERRAFORM_SCRUB</Description>
 			<PrereqTech>TECH_WEATHER_CONTROL</PrereqTech>
 			<iTime>3000</iTime>
-			<iCost>700</iCost>
+			<iCost>2800</iCost>
 			<bKill>0</bKill>
 			<ImprovementType>IMPROVEMENT_TERRAFORM_SCRUB</ImprovementType>
 			<TerrainChange>TERRAIN_SCRUB</TerrainChange>
@@ -9597,7 +9597,7 @@
 			<Description>TXT_KEY_BUILD_TERRAFORM_DESERT</Description>
 			<PrereqTech>TECH_WEATHER_CONTROL</PrereqTech>
 			<iTime>3000</iTime>
-			<iCost>700</iCost>
+			<iCost>2800</iCost>
 			<bKill>0</bKill>
 			<ImprovementType>IMPROVEMENT_TERRAFORM_DESERT</ImprovementType>
 			<TerrainChange>TERRAIN_DESERT</TerrainChange>
@@ -9839,7 +9839,7 @@
 			<Description>TXT_KEY_BUILD_TERRAFORM_DUNES</Description>
 			<PrereqTech>TECH_WEATHER_CONTROL</PrereqTech>
 			<iTime>3000</iTime>
-			<iCost>700</iCost>
+			<iCost>2800</iCost>
 			<bKill>0</bKill>
 			<ImprovementType>IMPROVEMENT_TERRAFORM_DUNES</ImprovementType>
 			<TerrainChange>TERRAIN_DUNES</TerrainChange>
@@ -10082,7 +10082,7 @@
 			<Description>TXT_KEY_BUILD_TUNNEL</Description>
 			<PrereqTech>TECH_CIVIL_ENGINEERING</PrereqTech>
 			<iTime>1000</iTime>
-			<iCost>250</iCost>
+			<iCost>1000</iCost>
 			<bKill>0</bKill>
 			<RouteType>ROUTE_TUNNEL</RouteType>
 			<EntityEvent>ENTITY_EVENT_RAILROAD</EntityEvent>
@@ -10173,7 +10173,7 @@
 			<Description>TXT_KEY_BUILD_BREAK_ICE</Description>
 			<PrereqTech>TECH_MACHINE_LEARNING</PrereqTech>
 			<iTime>200</iTime>
-			<iCost>20</iCost>
+			<iCost>80</iCost>
 			<bKill>0</bKill>
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
 			<FeatureStructs>
@@ -10195,7 +10195,7 @@
 			<Description>TXT_KEY_BUILD_BREAK_ICE_KILL</Description>
 			<PrereqTech>TECH_COMBUSTION</PrereqTech>
 			<iTime>200</iTime>
-			<iCost>20</iCost>
+			<iCost>80</iCost>
 			<bKill>1</bKill>
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
 			<FeatureStructs>
@@ -10217,7 +10217,7 @@
 			<Description>TXT_KEY_BUILD_WHALING_SHIPS</Description>
 			<PrereqTech>TECH_COMMERCIAL_WHALING</PrereqTech>
 			<iTime>100</iTime>
-			<iCost>20</iCost>
+			<iCost>80</iCost>
 			<bKill>1</bKill>
 			<ImprovementType>IMPROVEMENT_WHALING_SHIPS</ImprovementType>
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
@@ -10243,7 +10243,7 @@
 			<PrereqTech>TECH_HARPOON_MAKING</PrereqTech>
 			<ObsoleteTech>TECH_COMMERCIAL_WHALING</ObsoleteTech>
 			<iTime>100</iTime>
-			<iCost>10</iCost>
+			<iCost>40</iCost>
 			<bKill>1</bKill>
 			<ImprovementType>IMPROVEMENT_WHALING_BOATS</ImprovementType>
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
@@ -10258,7 +10258,7 @@
 			<Description>TXT_KEY_BUILD_FISHING_BOATS</Description>
 			<PrereqTech>TECH_FISHING</PrereqTech>
 			<iTime>100</iTime>
-			<iCost>5</iCost>
+			<iCost>20</iCost>
 			<bKill>1</bKill>
 			<ImprovementType>IMPROVEMENT_FISHING_BOATS</ImprovementType>
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
@@ -10282,7 +10282,7 @@
 			<Description>TXT_KEY_BUILD_HARVEST_KELP</Description>
 			<PrereqTech>TECH_SAILING</PrereqTech>
 			<iTime>200</iTime>
-			<iCost>3</iCost>
+			<iCost>12</iCost>
 			<bKill>0</bKill>
 			<ImprovementType>IMPROVEMENT_HARVEST_KELP</ImprovementType>
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
@@ -10307,7 +10307,7 @@
 			<PrereqTech>TECH_FISHING</PrereqTech>
 			<ObsoleteTech>TECH_SAILING</ObsoleteTech>
 			<iTime>250</iTime>
-			<iCost>3</iCost>
+			<iCost>12</iCost>
 			<bKill>1</bKill>
 			<ImprovementType>IMPROVEMENT_HARVEST_KELP</ImprovementType>
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
@@ -10321,7 +10321,7 @@
 			<Description>TXT_KEY_BUILD_LIGHTHOUSE_CORAL</Description>
 			<PrereqTech>TECH_ENGINEERING</PrereqTech>
 			<iTime>200</iTime>
-			<iCost>20</iCost>
+			<iCost>80</iCost>
 			<bKill>0</bKill>
 			<ImprovementType>IMPROVEMENT_LIGHTHOUSE_CORAL</ImprovementType>
 			<FeatureChange>FEATURE_CORAL_REEF_LIGHTHOUSE</FeatureChange>
@@ -10360,7 +10360,7 @@
 			<Description>TXT_KEY_BUILD_LIGHTHOUSE_REEF</Description>
 			<PrereqTech>TECH_ENGINEERING</PrereqTech>
 			<iTime>200</iTime>
-			<iCost>20</iCost>
+			<iCost>80</iCost>
 			<bKill>0</bKill>
 			<ImprovementType>IMPROVEMENT_LIGHTHOUSE_REEF</ImprovementType>
 			<FeatureChange>FEATURE_REEF_LIGHTHOUSE</FeatureChange>
@@ -10400,7 +10400,7 @@
 			<Help/>
 			<PrereqTech>TECH_ENGINEERING</PrereqTech>
 			<iTime>200</iTime>
-			<iCost>25</iCost>
+			<iCost>100</iCost>
 			<bKill>0</bKill>
 			<ImprovementType>IMPROVEMENT_LIGHTHOUSE_GREAT_BARRIER_REEF</ImprovementType>
 			<FeatureChange>FEATURE_GREAT_BARRIER_REEF_LIGHTHOUSE</FeatureChange>
@@ -10432,7 +10432,7 @@
 			<PrereqTech>TECH_SAILING</PrereqTech>
 			<ObsoleteTech>TECH_ENGINEERING</ObsoleteTech>
 			<iTime>600</iTime>
-			<iCost>10</iCost>
+			<iCost>40</iCost>
 			<bKill>0</bKill>
 			<ImprovementType>IMPROVEMENT_BEACON_CORAL</ImprovementType>
 			<FeatureChange>FEATURE_CORAL_REEF_BEACON</FeatureChange>
@@ -10457,7 +10457,7 @@
 			<PrereqTech>TECH_SAILING</PrereqTech>
 			<ObsoleteTech>TECH_ENGINEERING</ObsoleteTech>
 			<iTime>600</iTime>
-			<iCost>10</iCost>
+			<iCost>40</iCost>
 			<bKill>0</bKill>
 			<ImprovementType>IMPROVEMENT_BEACON_REEF</ImprovementType>
 			<FeatureChange>FEATURE_REEF_BEACON</FeatureChange>
@@ -10482,7 +10482,7 @@
 			<Help/>
 			<PrereqTech>TECH_SAILING</PrereqTech>
 			<iTime>600</iTime>
-			<iCost>15</iCost>
+			<iCost>60</iCost>
 			<bKill>0</bKill>
 			<ImprovementType>IMPROVEMENT_BEACON_GREAT_BARRIER_REEF</ImprovementType>
 			<FeatureChange>FEATURE_GREAT_BARRIER_REEF_BEACON</FeatureChange>
@@ -10506,7 +10506,7 @@
 			<Description>TXT_KEY_BUILD_MARINE_PRESERVE</Description>
 			<PrereqTech>TECH_TOURISM</PrereqTech>
 			<iTime>800</iTime>
-			<iCost>50</iCost>
+			<iCost>200</iCost>
 			<bKill>0</bKill>
 			<ImprovementType>IMPROVEMENT_MARINE_PRESERVE</ImprovementType>
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
@@ -10520,7 +10520,7 @@
 			<Description>TXT_KEY_BUILD_TIDAL_HARNESS</Description>
 			<PrereqTech>TECH_ECOLOGY</PrereqTech>
 			<iTime>1000</iTime>
-			<iCost>30</iCost>
+			<iCost>120</iCost>
 			<bKill>0</bKill>
 			<ImprovementType>IMPROVEMENT_TIDAL_HARNESS</ImprovementType>
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
@@ -10621,7 +10621,7 @@
 			<Description>TXT_KEY_BUILD_SEA_MILL</Description>
 			<PrereqTech>TECH_ECOLOGY</PrereqTech>
 			<iTime>1000</iTime>
-			<iCost>30</iCost>
+			<iCost>120</iCost>
 			<bKill>0</bKill>
 			<ImprovementType>IMPROVEMENT_SEA_MILL</ImprovementType>
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
@@ -10709,7 +10709,7 @@
 			<Description>TXT_KEY_BUILD_EXTRACTION_FACILITY</Description>
 			<PrereqTech>TECH_SUPERSTRONG_ALLOYS</PrereqTech>
 			<iTime>300</iTime>
-			<iCost>30</iCost>
+			<iCost>120</iCost>
 			<bKill>1</bKill>
 			<ImprovementType>IMPROVEMENT_EXTRACTION_FACILITY</ImprovementType>
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
@@ -10732,7 +10732,7 @@
 			<Description>TXT_KEY_BUILD_OFFSHORE_PLATFORM</Description>
 			<PrereqTech>TECH_PLASTICS</PrereqTech>
 			<iTime>300</iTime>
-			<iCost>15</iCost>
+			<iCost>60</iCost>
 			<bKill>1</bKill>
 			<ImprovementType>IMPROVEMENT_OFFSHORE_PLATFORM</ImprovementType>
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
@@ -10755,7 +10755,7 @@
 			<Description>TXT_KEY_BUILD_SUBMERGED_TOWN</Description>
 			<PrereqTech>TECH_MARINE_ARCHITECTURE</PrereqTech>
 			<iTime>300</iTime>
-			<iCost>50</iCost>
+			<iCost>200</iCost>
 			<bKill>1</bKill>
 			<ImprovementType>IMPROVEMENT_SUBMERGED_TOWN</ImprovementType>
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
@@ -10872,7 +10872,7 @@
 			<Help>TXT_KEY_BUILD_AQUATIC_ANTI_AIR_DEFENSE_HELP</Help>
 			<PrereqTech>TECH_ORBITAL_FLIGHT</PrereqTech>
 			<iTime>2000</iTime>
-			<iCost>300</iCost>
+			<iCost>1200</iCost>
 			<bKill>0</bKill>
 			<ImprovementType>IMPROVEMENT_AQUATIC_ANTI_AIR_DEFENSE</ImprovementType>
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
@@ -10887,7 +10887,7 @@
 			<Description>TXT_KEY_BUILD_AQUATIC_FORCEFIELD</Description>
 			<PrereqTech>TECH_SHIELDING</PrereqTech>
 			<iTime>2000</iTime>
-			<iCost>500</iCost>
+			<iCost>2000</iCost>
 			<bKill>0</bKill>
 			<ImprovementType>IMPROVEMENT_AQUATIC_FORCEFIELD</ImprovementType>
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
