@@ -32,7 +32,7 @@
                 <BonusYieldChange>
                     <BonusType>BONUS_BARLEY</BonusType>
                     <YieldChanges>
-                        <iYield>2</iYield>
+                        <iYield>1</iYield>
                         <iYield>0</iYield>
                         <iYield>1</iYield>
                     </YieldChanges>
@@ -40,13 +40,13 @@
                 <BonusYieldChange>
                     <BonusType>BONUS_CORN</BonusType>
                     <YieldChanges>
-                        <iYield>3</iYield>
+                        <iYield>2</iYield>
                     </YieldChanges>
                 </BonusYieldChange>
                 <BonusYieldChange>
                     <BonusType>BONUS_MELONS</BonusType>
                     <YieldChanges>
-                        <iYield>2</iYield>
+                        <iYield>1</iYield>
                         <iYield>0</iYield>
                         <iYield>1</iYield>
                     </YieldChanges>
@@ -54,13 +54,13 @@
                 <BonusYieldChange>
                     <BonusType>BONUS_POTATOES</BonusType>
                     <YieldChanges>
-                        <iYield>3</iYield>
+                        <iYield>2</iYield>
                     </YieldChanges>
                 </BonusYieldChange>
                 <BonusYieldChange>
                     <BonusType>BONUS_PUMPKIN</BonusType>
                     <YieldChanges>
-                        <iYield>2</iYield>
+                        <iYield>1</iYield>
                         <iYield>0</iYield>
                         <iYield>1</iYield>
                     </YieldChanges>
@@ -68,13 +68,13 @@
                 <BonusYieldChange>
                     <BonusType>BONUS_RICE</BonusType>
                     <YieldChanges>
-                        <iYield>3</iYield>
+                        <iYield>2</iYield>
                     </YieldChanges>
                 </BonusYieldChange>
                 <BonusYieldChange>
                     <BonusType>BONUS_SQUASH</BonusType>
                     <YieldChanges>
-                        <iYield>2</iYield>
+                        <iYield>1</iYield>
                         <iYield>0</iYield>
                         <iYield>1</iYield>
                     </YieldChanges>
@@ -82,13 +82,13 @@
                 <BonusYieldChange>
                     <BonusType>BONUS_WHEAT</BonusType>
                     <YieldChanges>
-                        <iYield>3</iYield>
+                        <iYield>2</iYield>
                     </YieldChanges>
                 </BonusYieldChange>
                 <BonusYieldChange>
                     <BonusType>BONUS_ALMONDS</BonusType>
                     <YieldChanges>
-                        <iYield>2</iYield>
+                        <iYield>1</iYield>
                         <iYield>0</iYield>
                         <iYield>1</iYield>
                     </YieldChanges>
@@ -96,21 +96,14 @@
                 <BonusYieldChange>
                     <BonusType>BONUS_APPLE</BonusType>
                     <YieldChanges>
-                        <iYield>2</iYield>
                         <iYield>1</iYield>
-                    </YieldChanges>
-                </BonusYieldChange>
-                <BonusYieldChange>
-                    <BonusType>BONUS_APPLE</BonusType>
-                    <YieldChanges>
-                        <iYield>2</iYield>
                         <iYield>1</iYield>
                     </YieldChanges>
                 </BonusYieldChange>
                 <BonusYieldChange>
                     <BonusType>BONUS_BANANA</BonusType>
                     <YieldChanges>
-                        <iYield>2</iYield>
+                        <iYield>1</iYield>
                         <iYield>0</iYield>
                         <iYield>1</iYield>
                     </YieldChanges>
@@ -118,14 +111,14 @@
                 <BonusYieldChange>
                     <BonusType>BONUS_COCONUT</BonusType>
                     <YieldChanges>
-                        <iYield>2</iYield>
+                        <iYield>1</iYield>
                         <iYield>1</iYield>
                     </YieldChanges>
                 </BonusYieldChange>
                 <BonusYieldChange>
                     <BonusType>BONUS_DATES</BonusType>
                     <YieldChanges>
-                        <iYield>2</iYield>
+                        <iYield>1</iYield>
                         <iYield>0</iYield>
                         <iYield>1</iYield>
                     </YieldChanges>
@@ -133,7 +126,7 @@
                 <BonusYieldChange>
                     <BonusType>BONUS_FIG</BonusType>
                     <YieldChanges>
-                        <iYield>1</iYield>
+                        <iYield>0</iYield>
                         <iYield>1</iYield>
                         <iYield>1</iYield>
                     </YieldChanges>
@@ -141,7 +134,7 @@
                 <BonusYieldChange>
                     <BonusType>BONUS_GUAVAS</BonusType>
                     <YieldChanges>
-                        <iYield>2</iYield>
+                        <iYield>1</iYield>
                         <iYield>0</iYield>
                         <iYield>1</iYield>
                     </YieldChanges>
@@ -151,13 +144,13 @@
                     <YieldChanges>
                         <iYield>1</iYield>
                         <iYield>0</iYield>
-                        <iYield>2</iYield>
+                        <iYield>1</iYield>
                     </YieldChanges>
                 </BonusYieldChange>
                 <BonusYieldChange>
                     <BonusType>BONUS_MANGO</BonusType>
                     <YieldChanges>
-                        <iYield>2</iYield>
+                        <iYield>1</iYield>
                         <iYield>0</iYield>
                         <iYield>1</iYield>
                     </YieldChanges>
@@ -165,7 +158,7 @@
                 <BonusYieldChange>
                     <BonusType>BONUS_PAPAYA</BonusType>
                     <YieldChanges>
-                        <iYield>2</iYield>
+                        <iYield>1</iYield>
                         <iYield>0</iYield>
                         <iYield>1</iYield>
                     </YieldChanges>
@@ -173,7 +166,7 @@
                 <BonusYieldChange>
                     <BonusType>BONUS_PISTACHIO</BonusType>
                     <YieldChanges>
-                        <iYield>2</iYield>
+                        <iYield>1</iYield>
                         <iYield>0</iYield>
                         <iYield>1</iYield>
                     </YieldChanges>
@@ -181,7 +174,7 @@
                 <BonusYieldChange>
                     <BonusType>BONUS_POMEGRANATE</BonusType>
                     <YieldChanges>
-                        <iYield>2</iYield>
+                        <iYield>1</iYield>
                         <iYield>0</iYield>
                         <iYield>1</iYield>
                     </YieldChanges>
@@ -191,14 +184,14 @@
                     <YieldChanges>
                         <iYield>1</iYield>
                         <iYield>0</iYield>
-                        <iYield>2</iYield>
+                        <iYield>1</iYield>
                     </YieldChanges>
                 </BonusYieldChange>
                 <BonusYieldChange>
                     <BonusType>BONUS_RESIN</BonusType>
                     <YieldChanges>
                         <iYield>0</iYield>
-                        <iYield>2</iYield>
+                        <iYield>1</iYield>
                         <iYield>1</iYield>
                     </YieldChanges>
                 </BonusYieldChange>
@@ -206,7 +199,7 @@
                     <BonusType>BONUS_RUBBER</BonusType>
                     <YieldChanges>
                         <iYield>0</iYield>
-                        <iYield>2</iYield>
+                        <iYield>1</iYield>
                         <iYield>1</iYield>
                     </YieldChanges>
                 </BonusYieldChange>
@@ -215,14 +208,14 @@
                     <YieldChanges>
                         <iYield>0</iYield>
                         <iYield>0</iYield>
-                        <iYield>3</iYield>
+                        <iYield>2</iYield>
                     </YieldChanges>
                 </BonusYieldChange>
                 <BonusYieldChange>
                     <BonusType>BONUS_HEMP</BonusType>
                     <YieldChanges>
                         <iYield>0</iYield>
-                        <iYield>2</iYield>
+                        <iYield>1</iYield>
                         <iYield>1</iYield>
                     </YieldChanges>
                 </BonusYieldChange>
@@ -231,7 +224,7 @@
                     <YieldChanges>
                         <iYield>0</iYield>
                         <iYield>0</iYield>
-                        <iYield>3</iYield>
+                        <iYield>2</iYield>
                     </YieldChanges>
                 </BonusYieldChange>
                 <BonusYieldChange>
@@ -239,7 +232,7 @@
                     <YieldChanges>
                         <iYield>1</iYield>
                         <iYield>0</iYield>
-                        <iYield>2</iYield>
+                        <iYield>1</iYield>
                     </YieldChanges>
                 </BonusYieldChange>
                 <BonusYieldChange>
@@ -247,7 +240,7 @@
                     <YieldChanges>
                         <iYield>0</iYield>
                         <iYield>0</iYield>
-                        <iYield>3</iYield>
+                        <iYield>2</iYield>
                     </YieldChanges>
                 </BonusYieldChange>
                 <BonusYieldChange>
@@ -255,7 +248,7 @@
                     <YieldChanges>
                         <iYield>0</iYield>
                         <iYield>1</iYield>
-                        <iYield>2</iYield>
+                        <iYield>1</iYield>
                     </YieldChanges>
                 </BonusYieldChange>
                 <BonusYieldChange>
@@ -263,7 +256,7 @@
                     <YieldChanges>
                         <iYield>1</iYield>
                         <iYield>1</iYield>
-                        <iYield>1</iYield>
+                        <iYield>0</iYield>
                     </YieldChanges>
                 </BonusYieldChange>
                 <BonusYieldChange>
@@ -271,7 +264,7 @@
                     <YieldChanges>
                         <iYield>0</iYield>
                         <iYield>0</iYield>
-                        <iYield>3</iYield>
+                        <iYield>2</iYield>
                     </YieldChanges>
                 </BonusYieldChange>
                 <BonusYieldChange>
@@ -279,7 +272,7 @@
                     <YieldChanges>
                         <iYield>0</iYield>
                         <iYield>0</iYield>
-                        <iYield>3</iYield>
+                        <iYield>2</iYield>
                     </YieldChanges>
                 </BonusYieldChange>
                 <BonusYieldChange>
@@ -287,7 +280,7 @@
                     <YieldChanges>
                         <iYield>0</iYield>
                         <iYield>0</iYield>
-                        <iYield>3</iYield>
+                        <iYield>2</iYield>
                     </YieldChanges>
                 </BonusYieldChange>
                 <BonusYieldChange>
@@ -295,7 +288,7 @@
                     <YieldChanges>
                         <iYield>1</iYield>
                         <iYield>0</iYield>
-                        <iYield>2</iYield>
+                        <iYield>1</iYield>
                     </YieldChanges>
                 </BonusYieldChange>
                 <BonusYieldChange>
@@ -303,7 +296,7 @@
                     <YieldChanges>
                         <iYield>0</iYield>
                         <iYield>1</iYield>
-                        <iYield>2</iYield>
+                        <iYield>1</iYield>
                     </YieldChanges>
                 </BonusYieldChange>
                 <BonusYieldChange>
@@ -311,13 +304,13 @@
                     <YieldChanges>
                         <iYield>0</iYield>
                         <iYield>0</iYield>
-                        <iYield>3</iYield>
+                        <iYield>2</iYield>
                     </YieldChanges>
                 </BonusYieldChange>
                 <BonusYieldChange>
                     <BonusType>BONUS_PRICKLY_PEAR</BonusType>
                     <YieldChanges>
-                        <iYield>2</iYield>
+                        <iYield>1</iYield>
                         <iYield>0</iYield>
                         <iYield>1</iYield>
                     </YieldChanges>
@@ -327,7 +320,7 @@
                     <YieldChanges>
                         <iYield>0</iYield>
                         <iYield>0</iYield>
-                        <iYield>3</iYield>
+                        <iYield>2</iYield>
                     </YieldChanges>
                 </BonusYieldChange>
                 <BonusYieldChange>
@@ -335,7 +328,7 @@
                     <YieldChanges>
                         <iYield>1</iYield>
                         <iYield>0</iYield>
-                        <iYield>2</iYield>
+                        <iYield>1</iYield>
                     </YieldChanges>
                 </BonusYieldChange>
                 <BonusYieldChange>
@@ -343,7 +336,7 @@
                     <YieldChanges>
                         <iYield>1</iYield>
                         <iYield>0</iYield>
-                        <iYield>2</iYield>
+                        <iYield>1</iYield>
                     </YieldChanges>
                 </BonusYieldChange>
                 <BonusYieldChange>
@@ -351,7 +344,7 @@
                     <YieldChanges>
                         <iYield>0</iYield>
                         <iYield>0</iYield>
-                        <iYield>3</iYield>
+                        <iYield>2</iYield>
                     </YieldChanges>
                 </BonusYieldChange>
                 <BonusYieldChange>
@@ -359,13 +352,13 @@
                     <YieldChanges>
                         <iYield>1</iYield>
                         <iYield>0</iYield>
-                        <iYield>2</iYield>
+                        <iYield>1</iYield>
                     </YieldChanges>
                 </BonusYieldChange>
                 <BonusYieldChange>
                     <BonusType>BONUS_GRAPES</BonusType>
                     <YieldChanges>
-                        <iYield>2</iYield>
+                        <iYield>1</iYield>
                         <iYield>0</iYield>
                         <iYield>1</iYield>
                     </YieldChanges>
@@ -373,7 +366,7 @@
                 <BonusYieldChange>
                     <BonusType>BONUS_MUSHROOMS</BonusType>
                     <YieldChanges>
-                        <iYield>2</iYield>
+                        <iYield>1</iYield>
                         <iYield>0</iYield>
                         <iYield>1</iYield>
                     </YieldChanges>
@@ -382,20 +375,20 @@
                     <BonusType>BONUS_PRIME_TIMBER</BonusType>
                     <YieldChanges>
                         <iYield>0</iYield>
-                        <iYield>3</iYield>
+                        <iYield>2</iYield>
                     </YieldChanges>
                 </BonusYieldChange>
                 <BonusYieldChange>
                     <BonusType>BONUS_CAMEL</BonusType>
                     <YieldChanges>
                         <iYield>1</iYield>
-                        <iYield>2</iYield>
+                        <iYield>1</iYield>
                     </YieldChanges>
                 </BonusYieldChange>
                 <BonusYieldChange>
                     <BonusType>BONUS_COW</BonusType>
                     <YieldChanges>
-                        <iYield>2</iYield>
+                        <iYield>1</iYield>
                         <iYield>1</iYield>
                     </YieldChanges>
                 </BonusYieldChange>
@@ -403,28 +396,28 @@
                     <BonusType>BONUS_DONKEY</BonusType>
                     <YieldChanges>
                         <iYield>1</iYield>
-                        <iYield>2</iYield>
+                        <iYield>1</iYield>
                     </YieldChanges>
                 </BonusYieldChange>
                 <BonusYieldChange>
                     <BonusType>BONUS_HORSE</BonusType>
                     <YieldChanges>
                         <iYield>0</iYield>
-                        <iYield>3</iYield>
+                        <iYield>2</iYield>
                     </YieldChanges>
                 </BonusYieldChange>
                 <BonusYieldChange>
                     <BonusType>BONUS_LLAMA</BonusType>
                     <YieldChanges>
                         <iYield>0</iYield>
-                        <iYield>2</iYield>
+                        <iYield>1</iYield>
                         <iYield>1</iYield>
                     </YieldChanges>
                 </BonusYieldChange>
                 <BonusYieldChange>
                     <BonusType>BONUS_PIG</BonusType>
                     <YieldChanges>
-                        <iYield>3</iYield>
+                        <iYield>2</iYield>
                     </YieldChanges>
                 </BonusYieldChange>
                 <BonusYieldChange>
@@ -432,7 +425,7 @@
                     <YieldChanges>
                         <iYield>1</iYield>
                         <iYield>1</iYield>
-                        <iYield>1</iYield>
+                        <iYield>0</iYield>
                     </YieldChanges>
                 </BonusYieldChange>
                 <BonusYieldChange>
@@ -440,19 +433,19 @@
                     <YieldChanges>
                         <iYield>1</iYield>
                         <iYield>0</iYield>
-                        <iYield>2</iYield>
+                        <iYield>1</iYield>
                     </YieldChanges>
                 </BonusYieldChange>
                 <BonusYieldChange>
                     <BonusType>BONUS_BISON</BonusType>
                     <YieldChanges>
-                        <iYield>3</iYield>
+                        <iYield>2</iYield>
                     </YieldChanges>
                 </BonusYieldChange>
                 <BonusYieldChange>
                     <BonusType>BONUS_DEER</BonusType>
                     <YieldChanges>
-                        <iYield>2</iYield>
+                        <iYield>1</iYield>
                         <iYield>1</iYield>
                     </YieldChanges>
                 </BonusYieldChange>
@@ -460,7 +453,7 @@
                     <BonusType>BONUS_ELEPHANTS</BonusType>
                     <YieldChanges>
                         <iYield>1</iYield>
-                        <iYield>1</iYield>
+                        <iYield>0</iYield>
                         <iYield>1</iYield>
                     </YieldChanges>
                 </BonusYieldChange>
@@ -469,13 +462,13 @@
                     <YieldChanges>
                         <iYield>1</iYield>
                         <iYield>0</iYield>
-                        <iYield>2</iYield>
+                        <iYield>1</iYield>
                     </YieldChanges>
                 </BonusYieldChange>
                 <BonusYieldChange>
                     <BonusType>BONUS_KANGAROO</BonusType>
                     <YieldChanges>
-                        <iYield>2</iYield>
+                        <iYield>1</iYield>
                         <iYield>1</iYield>
                     </YieldChanges>
                 </BonusYieldChange>
@@ -483,7 +476,7 @@
                     <BonusType>BONUS_MAMMOTH</BonusType>
                     <YieldChanges>
                         <iYield>1</iYield>
-                        <iYield>1</iYield>
+                        <iYield>0</iYield>
                         <iYield>1</iYield>
                     </YieldChanges>
                 </BonusYieldChange>
@@ -492,19 +485,19 @@
                     <YieldChanges>
                         <iYield>0</iYield>
                         <iYield>0</iYield>
-                        <iYield>3</iYield>
+                        <iYield>2</iYield>
                     </YieldChanges>
                 </BonusYieldChange>
                 <BonusYieldChange>
                     <BonusType>BONUS_POULTRY</BonusType>
                     <YieldChanges>
-                        <iYield>3</iYield>
+                        <iYield>2</iYield>
                     </YieldChanges>
                 </BonusYieldChange>
                 <BonusYieldChange>
                     <BonusType>BONUS_RABBIT</BonusType>
                     <YieldChanges>
-                        <iYield>2</iYield>
+                        <iYield>1</iYield>
                         <iYield>0</iYield>
                         <iYield>1</iYield>
                     </YieldChanges>
@@ -514,20 +507,20 @@
                     <YieldChanges>
                         <iYield>1</iYield>
                         <iYield>1</iYield>
-                        <iYield>1</iYield>
+                        <iYield>0</iYield>
                     </YieldChanges>
                 </BonusYieldChange>
                 <BonusYieldChange>
                     <BonusType>BONUS_WALRUS</BonusType>
                     <YieldChanges>
                         <iYield>1</iYield>
-                        <iYield>2</iYield>
+                        <iYield>1</iYield>
                     </YieldChanges>
                 </BonusYieldChange>
                 <BonusYieldChange>
                     <BonusType>BONUS_CLAM</BonusType>
                     <YieldChanges>
-                        <iYield>2</iYield>
+                        <iYield>1</iYield>
                         <iYield>0</iYield>
                         <iYield>1</iYield>
                     </YieldChanges>
@@ -535,13 +528,13 @@
                 <BonusYieldChange>
                     <BonusType>BONUS_CRAB</BonusType>
                     <YieldChanges>
-                        <iYield>3</iYield>
+                        <iYield>2</iYield>
                     </YieldChanges>
                 </BonusYieldChange>
                 <BonusYieldChange>
                     <BonusType>BONUS_FISH</BonusType>
                     <YieldChanges>
-                        <iYield>3</iYield>
+                        <iYield>2</iYield>
                     </YieldChanges>
                 </BonusYieldChange>
                 <BonusYieldChange>
@@ -549,7 +542,7 @@
                     <YieldChanges>
                         <iYield>1</iYield>
                         <iYield>0</iYield>
-                        <iYield>2</iYield>
+                        <iYield>1</iYield>
                     </YieldChanges>
                 </BonusYieldChange>
                 <BonusYieldChange>
@@ -557,7 +550,7 @@
                     <YieldChanges>
                         <iYield>0</iYield>
                         <iYield>0</iYield>
-                        <iYield>3</iYield>
+                        <iYield>2</iYield>
                     </YieldChanges>
                 </BonusYieldChange>
                 <BonusYieldChange>
@@ -565,20 +558,20 @@
                     <YieldChanges>
                         <iYield>0</iYield>
                         <iYield>0</iYield>
-                        <iYield>3</iYield>
+                        <iYield>2</iYield>
                     </YieldChanges>
                 </BonusYieldChange>
                 <BonusYieldChange>
                     <BonusType>BONUS_SHRIMP</BonusType>
                     <YieldChanges>
-                        <iYield>3</iYield>
+                        <iYield>2</iYield>
                     </YieldChanges>
                 </BonusYieldChange>
                 <BonusYieldChange>
                     <BonusType>BONUS_WHALE</BonusType>
                     <YieldChanges>
                         <iYield>1</iYield>
-                        <iYield>2</iYield>
+                        <iYield>1</iYield>
                     </YieldChanges>
                 </BonusYieldChange>
                 <BonusYieldChange>
@@ -586,20 +579,22 @@
                     <YieldChanges>
                         <iYield>0</iYield>
                         <iYield>0</iYield>
-                        <iYield>3</iYield>
+                        <iYield>2</iYield>
                     </YieldChanges>
                 </BonusYieldChange>
                 <BonusYieldChange>
                     <BonusType>BONUS_AMBER</BonusType>
                     <YieldChanges>
-                        <iYield>3</iYield>
+                        <iYield>0</iYield>
+                        <iYield>0</iYield>
+                        <iYield>2</iYield>
                     </YieldChanges>
                 </BonusYieldChange>
                 <BonusYieldChange>
                     <BonusType>BONUS_BAUXITE_ORE</BonusType>
                     <YieldChanges>
                         <iYield>0</iYield>
-                        <iYield>2</iYield>
+                        <iYield>1</iYield>
                         <iYield>1</iYield>
                     </YieldChanges>
                 </BonusYieldChange>
@@ -607,14 +602,14 @@
                     <BonusType>BONUS_COAL</BonusType>
                     <YieldChanges>
                         <iYield>0</iYield>
-                        <iYield>3</iYield>
+                        <iYield>2</iYield>
                     </YieldChanges>
                 </BonusYieldChange>
                 <BonusYieldChange>
                     <BonusType>BONUS_COPPER_ORE</BonusType>
                     <YieldChanges>
                         <iYield>0</iYield>
-                        <iYield>2</iYield>
+                        <iYield>1</iYield>
                         <iYield>1</iYield>
                     </YieldChanges>
                 </BonusYieldChange>
@@ -623,7 +618,7 @@
                     <YieldChanges>
                         <iYield>0</iYield>
                         <iYield>0</iYield>
-                        <iYield>3</iYield>
+                        <iYield>2</iYield>
                     </YieldChanges>
                 </BonusYieldChange>
                 <BonusYieldChange>
@@ -631,7 +626,7 @@
                     <YieldChanges>
                         <iYield>0</iYield>
                         <iYield>0</iYield>
-                        <iYield>3</iYield>
+                        <iYield>2</iYield>
                     </YieldChanges>
                 </BonusYieldChange>
                 <BonusYieldChange>
@@ -639,21 +634,21 @@
                     <YieldChanges>
                         <iYield>0</iYield>
                         <iYield>0</iYield>
-                        <iYield>3</iYield>
+                        <iYield>2</iYield>
                     </YieldChanges>
                 </BonusYieldChange>
                 <BonusYieldChange>
                     <BonusType>BONUS_IRON_ORE</BonusType>
                     <YieldChanges>
                         <iYield>0</iYield>
-                        <iYield>3</iYield>
+                        <iYield>2</iYield>
                     </YieldChanges>
                 </BonusYieldChange>
                 <BonusYieldChange>
                     <BonusType>BONUS_LEAD_ORE</BonusType>
                     <YieldChanges>
                         <iYield>0</iYield>
-                        <iYield>2</iYield>
+                        <iYield>1</iYield>
                         <iYield>1</iYield>
                     </YieldChanges>
                 </BonusYieldChange>
@@ -662,7 +657,7 @@
                     <YieldChanges>
                         <iYield>0</iYield>
                         <iYield>1</iYield>
-                        <iYield>2</iYield>
+                        <iYield>1</iYield>
                     </YieldChanges>
                 </BonusYieldChange>
                 <BonusYieldChange>
@@ -670,7 +665,7 @@
                     <YieldChanges>
                         <iYield>0</iYield>
                         <iYield>0</iYield>
-                        <iYield>3</iYield>
+                        <iYield>2</iYield>
                     </YieldChanges>
                 </BonusYieldChange>
                 <BonusYieldChange>
@@ -678,7 +673,7 @@
                     <YieldChanges>
                         <iYield>0</iYield>
                         <iYield>0</iYield>
-                        <iYield>3</iYield>
+                        <iYield>2</iYield>
                     </YieldChanges>
                 </BonusYieldChange>
                 <BonusYieldChange>
@@ -686,7 +681,7 @@
                     <YieldChanges>
                         <iYield>0</iYield>
                         <iYield>0</iYield>
-                        <iYield>3</iYield>
+                        <iYield>2</iYield>
                     </YieldChanges>
                 </BonusYieldChange>
                 <BonusYieldChange>
@@ -694,14 +689,14 @@
                     <YieldChanges>
                         <iYield>0</iYield>
                         <iYield>0</iYield>
-                        <iYield>3</iYield>
+                        <iYield>2</iYield>
                     </YieldChanges>
                 </BonusYieldChange>
                 <BonusYieldChange>
                     <BonusType>BONUS_SULPHUR</BonusType>
                     <YieldChanges>
                         <iYield>0</iYield>
-                        <iYield>2</iYield>
+                        <iYield>1</iYield>
                         <iYield>1</iYield>
                     </YieldChanges>
                 </BonusYieldChange>
@@ -710,14 +705,14 @@
                     <YieldChanges>
                         <iYield>0</iYield>
                         <iYield>1</iYield>
-                        <iYield>2</iYield>
+                        <iYield>1</iYield>
                     </YieldChanges>
                 </BonusYieldChange>
                 <BonusYieldChange>
                     <BonusType>BONUS_TITANIUM_ORE</BonusType>
                     <YieldChanges>
                         <iYield>0</iYield>
-                        <iYield>2</iYield>
+                        <iYield>1</iYield>
                         <iYield>1</iYield>
                     </YieldChanges>
                 </BonusYieldChange>
@@ -726,14 +721,14 @@
                     <YieldChanges>
                         <iYield>0</iYield>
                         <iYield>1</iYield>
-                        <iYield>2</iYield>
+                        <iYield>1</iYield>
                     </YieldChanges>
                 </BonusYieldChange>
                 <BonusYieldChange>
                     <BonusType>BONUS_FINE_CLAY</BonusType>
                     <YieldChanges>
                         <iYield>0</iYield>
-                        <iYield>3</iYield>
+                        <iYield>2</iYield>
                     </YieldChanges>
                 </BonusYieldChange>
                 <BonusYieldChange>
@@ -741,14 +736,14 @@
                     <YieldChanges>
                         <iYield>0</iYield>
                         <iYield>1</iYield>
-                        <iYield>2</iYield>
+                        <iYield>1</iYield>
                     </YieldChanges>
                 </BonusYieldChange>
                 <BonusYieldChange>
                     <BonusType>BONUS_MARBLE</BonusType>
                     <YieldChanges>
                         <iYield>0</iYield>
-                        <iYield>2</iYield>
+                        <iYield>1</iYield>
                         <iYield>1</iYield>
                     </YieldChanges>
                 </BonusYieldChange>
@@ -757,14 +752,14 @@
                     <YieldChanges>
                         <iYield>0</iYield>
                         <iYield>0</iYield>
-                        <iYield>3</iYield>
+                        <iYield>1</iYield>
                     </YieldChanges>
                 </BonusYieldChange>
                 <BonusYieldChange>
                     <BonusType>BONUS_OBSIDIAN</BonusType>
                     <YieldChanges>
                         <iYield>0</iYield>
-                        <iYield>2</iYield>
+                        <iYield>1</iYield>
                         <iYield>1</iYield>
                     </YieldChanges>
                 </BonusYieldChange>
@@ -773,14 +768,14 @@
                     <YieldChanges>
                         <iYield>0</iYield>
                         <iYield>0</iYield>
-                        <iYield>3</iYield>
+                        <iYield>2</iYield>
                     </YieldChanges>
                 </BonusYieldChange>
                 <BonusYieldChange>
                     <BonusType>BONUS_STONE</BonusType>
                     <YieldChanges>
                         <iYield>0</iYield>
-                        <iYield>3</iYield>
+                        <iYield>2</iYield>
                     </YieldChanges>
                 </BonusYieldChange>
                 <BonusYieldChange>
@@ -788,7 +783,7 @@
                     <YieldChanges>
                         <iYield>0</iYield>
                         <iYield>1</iYield>
-                        <iYield>2</iYield>
+                        <iYield>1</iYield>
                     </YieldChanges>
                 </BonusYieldChange>
                 <BonusYieldChange>
@@ -796,14 +791,14 @@
                     <YieldChanges>
                         <iYield>0</iYield>
                         <iYield>1</iYield>
-                        <iYield>2</iYield>
+                        <iYield>1</iYield>
                     </YieldChanges>
                 </BonusYieldChange>
                 <BonusYieldChange>
                     <BonusType>BONUS_HYDROTHERMAL_VENT</BonusType>
                     <YieldChanges>
                         <iYield>0</iYield>
-                        <iYield>2</iYield>
+                        <iYield>1</iYield>
                         <iYield>1</iYield>
                     </YieldChanges>
                 </BonusYieldChange>
@@ -811,7 +806,7 @@
                     <BonusType>BONUS_METHANE_ICE</BonusType>
                     <YieldChanges>
                         <iYield>0</iYield>
-                        <iYield>2</iYield>
+                        <iYield>1</iYield>
                         <iYield>1</iYield>
                     </YieldChanges>
                 </BonusYieldChange>
@@ -819,7 +814,7 @@
                     <BonusType>BONUS_NATURAL_GAS</BonusType>
                     <YieldChanges>
                         <iYield>0</iYield>
-                        <iYield>2</iYield>
+                        <iYield>1</iYield>
                         <iYield>1</iYield>
                     </YieldChanges>
                 </BonusYieldChange>
@@ -827,14 +822,14 @@
                     <BonusType>BONUS_OIL</BonusType>
                     <YieldChanges>
                         <iYield>0</iYield>
-                        <iYield>3</iYield>
+                        <iYield>2</iYield>
                     </YieldChanges>
                 </BonusYieldChange>
                 <BonusYieldChange>
                     <BonusType>BONUS_GEOTHERMAL_ENERGY</BonusType>
                     <YieldChanges>
                         <iYield>1</iYield>
-                        <iYield>2</iYield>
+                        <iYield>1</iYield>
                     </YieldChanges>
                 </BonusYieldChange>
             </VicinityBonusYieldChanges>
@@ -842,182 +837,175 @@
                 <BonusYieldChange>
                     <BonusType>BONUS_BARLEY</BonusType>
                     <YieldChanges>
-                        <iYield>2</iYield>
-                        <iYield>0</iYield>
                         <iYield>1</iYield>
+                        <iYield>0</iYield>
+                        <iYield>0</iYield>
                     </YieldChanges>
                 </BonusYieldChange>
                 <BonusYieldChange>
                     <BonusType>BONUS_CORN</BonusType>
                     <YieldChanges>
-                        <iYield>3</iYield>
+                        <iYield>1</iYield>
                     </YieldChanges>
                 </BonusYieldChange>
                 <BonusYieldChange>
                     <BonusType>BONUS_MELONS</BonusType>
                     <YieldChanges>
-                        <iYield>2</iYield>
-                        <iYield>0</iYield>
                         <iYield>1</iYield>
+                        <iYield>0</iYield>
+                        <iYield>0</iYield>
                     </YieldChanges>
                 </BonusYieldChange>
                 <BonusYieldChange>
                     <BonusType>BONUS_POTATOES</BonusType>
                     <YieldChanges>
-                        <iYield>3</iYield>
+                        <iYield>1</iYield>
                     </YieldChanges>
                 </BonusYieldChange>
                 <BonusYieldChange>
                     <BonusType>BONUS_PUMPKIN</BonusType>
                     <YieldChanges>
-                        <iYield>2</iYield>
-                        <iYield>0</iYield>
                         <iYield>1</iYield>
+                        <iYield>0</iYield>
+                        <iYield>0</iYield>
                     </YieldChanges>
                 </BonusYieldChange>
                 <BonusYieldChange>
                     <BonusType>BONUS_RICE</BonusType>
                     <YieldChanges>
-                        <iYield>3</iYield>
+                        <iYield>1</iYield>
                     </YieldChanges>
                 </BonusYieldChange>
                 <BonusYieldChange>
                     <BonusType>BONUS_SQUASH</BonusType>
                     <YieldChanges>
-                        <iYield>2</iYield>
-                        <iYield>0</iYield>
                         <iYield>1</iYield>
+                        <iYield>0</iYield>
+                        <iYield>0</iYield>
                     </YieldChanges>
                 </BonusYieldChange>
                 <BonusYieldChange>
                     <BonusType>BONUS_WHEAT</BonusType>
                     <YieldChanges>
-                        <iYield>3</iYield>
+                        <iYield>1</iYield>
                     </YieldChanges>
                 </BonusYieldChange>
                 <BonusYieldChange>
                     <BonusType>BONUS_ALMONDS</BonusType>
                     <YieldChanges>
-                        <iYield>2</iYield>
+                        <iYield>1</iYield>
                         <iYield>0</iYield>
-                        <iYield>1</iYield>
+                        <iYield>0</iYield>
                     </YieldChanges>
                 </BonusYieldChange>
                 <BonusYieldChange>
                     <BonusType>BONUS_APPLE</BonusType>
                     <YieldChanges>
-                        <iYield>2</iYield>
                         <iYield>1</iYield>
-                    </YieldChanges>
-                </BonusYieldChange>
-                <BonusYieldChange>
-                    <BonusType>BONUS_APPLE</BonusType>
-                    <YieldChanges>
-                        <iYield>2</iYield>
-                        <iYield>1</iYield>
+                        <iYield>0</iYield>
                     </YieldChanges>
                 </BonusYieldChange>
                 <BonusYieldChange>
                     <BonusType>BONUS_BANANA</BonusType>
                     <YieldChanges>
-                        <iYield>2</iYield>
-                        <iYield>0</iYield>
                         <iYield>1</iYield>
+                        <iYield>0</iYield>
+                        <iYield>0</iYield>
                     </YieldChanges>
                 </BonusYieldChange>
                 <BonusYieldChange>
                     <BonusType>BONUS_COCONUT</BonusType>
                     <YieldChanges>
-                        <iYield>2</iYield>
                         <iYield>1</iYield>
+                        <iYield>0</iYield>
                     </YieldChanges>
                 </BonusYieldChange>
                 <BonusYieldChange>
                     <BonusType>BONUS_DATES</BonusType>
                     <YieldChanges>
-                        <iYield>2</iYield>
-                        <iYield>0</iYield>
                         <iYield>1</iYield>
+                        <iYield>0</iYield>
+                        <iYield>0</iYield>
                     </YieldChanges>
                 </BonusYieldChange>
                 <BonusYieldChange>
                     <BonusType>BONUS_FIG</BonusType>
                     <YieldChanges>
                         <iYield>1</iYield>
-                        <iYield>1</iYield>
-                        <iYield>1</iYield>
+                        <iYield>0</iYield>
+                        <iYield>0</iYield>
                     </YieldChanges>
                 </BonusYieldChange>
                 <BonusYieldChange>
                     <BonusType>BONUS_GUAVAS</BonusType>
                     <YieldChanges>
-                        <iYield>2</iYield>
-                        <iYield>0</iYield>
                         <iYield>1</iYield>
+                        <iYield>0</iYield>
+                        <iYield>0</iYield>
                     </YieldChanges>
                 </BonusYieldChange>
                 <BonusYieldChange>
                     <BonusType>BONUS_LEMONS</BonusType>
                     <YieldChanges>
-                        <iYield>1</iYield>
                         <iYield>0</iYield>
-                        <iYield>2</iYield>
+                        <iYield>0</iYield>
+                        <iYield>1</iYield>
                     </YieldChanges>
                 </BonusYieldChange>
                 <BonusYieldChange>
                     <BonusType>BONUS_MANGO</BonusType>
                     <YieldChanges>
-                        <iYield>2</iYield>
-                        <iYield>0</iYield>
                         <iYield>1</iYield>
+                        <iYield>0</iYield>
+                        <iYield>0</iYield>
                     </YieldChanges>
                 </BonusYieldChange>
                 <BonusYieldChange>
                     <BonusType>BONUS_PAPAYA</BonusType>
                     <YieldChanges>
-                        <iYield>2</iYield>
-                        <iYield>0</iYield>
                         <iYield>1</iYield>
+                        <iYield>0</iYield>
+                        <iYield>0</iYield>
                     </YieldChanges>
                 </BonusYieldChange>
                 <BonusYieldChange>
                     <BonusType>BONUS_PISTACHIO</BonusType>
                     <YieldChanges>
-                        <iYield>2</iYield>
-                        <iYield>0</iYield>
                         <iYield>1</iYield>
+                        <iYield>0</iYield>
+                        <iYield>0</iYield>
                     </YieldChanges>
                 </BonusYieldChange>
                 <BonusYieldChange>
                     <BonusType>BONUS_POMEGRANATE</BonusType>
                     <YieldChanges>
-                        <iYield>2</iYield>
-                        <iYield>0</iYield>
                         <iYield>1</iYield>
+                        <iYield>0</iYield>
+                        <iYield>0</iYield>
                     </YieldChanges>
                 </BonusYieldChange>
                 <BonusYieldChange>
                     <BonusType>BONUS_OLIVES</BonusType>
                     <YieldChanges>
-                        <iYield>1</iYield>
                         <iYield>0</iYield>
-                        <iYield>2</iYield>
+                        <iYield>0</iYield>
+                        <iYield>1</iYield>
                     </YieldChanges>
                 </BonusYieldChange>
                 <BonusYieldChange>
                     <BonusType>BONUS_RESIN</BonusType>
                     <YieldChanges>
                         <iYield>0</iYield>
-                        <iYield>2</iYield>
                         <iYield>1</iYield>
+                        <iYield>0</iYield>
                     </YieldChanges>
                 </BonusYieldChange>
                 <BonusYieldChange>
                     <BonusType>BONUS_RUBBER</BonusType>
                     <YieldChanges>
                         <iYield>0</iYield>
-                        <iYield>2</iYield>
                         <iYield>1</iYield>
+                        <iYield>0</iYield>
                     </YieldChanges>
                 </BonusYieldChange>
                 <BonusYieldChange>
@@ -1025,15 +1013,15 @@
                     <YieldChanges>
                         <iYield>0</iYield>
                         <iYield>0</iYield>
-                        <iYield>3</iYield>
+                        <iYield>1</iYield>
                     </YieldChanges>
                 </BonusYieldChange>
                 <BonusYieldChange>
                     <BonusType>BONUS_HEMP</BonusType>
                     <YieldChanges>
                         <iYield>0</iYield>
-                        <iYield>2</iYield>
                         <iYield>1</iYield>
+                        <iYield>0</iYield>
                     </YieldChanges>
                 </BonusYieldChange>
                 <BonusYieldChange>
@@ -1041,15 +1029,15 @@
                     <YieldChanges>
                         <iYield>0</iYield>
                         <iYield>0</iYield>
-                        <iYield>3</iYield>
+                        <iYield>1</iYield>
                     </YieldChanges>
                 </BonusYieldChange>
                 <BonusYieldChange>
                     <BonusType>BONUS_COCOA</BonusType>
                     <YieldChanges>
-                        <iYield>1</iYield>
                         <iYield>0</iYield>
-                        <iYield>2</iYield>
+                        <iYield>0</iYield>
+                        <iYield>1</iYield>
                     </YieldChanges>
                 </BonusYieldChange>
                 <BonusYieldChange>
@@ -1057,22 +1045,22 @@
                     <YieldChanges>
                         <iYield>0</iYield>
                         <iYield>0</iYield>
-                        <iYield>3</iYield>
+                        <iYield>1</iYield>
                     </YieldChanges>
                 </BonusYieldChange>
                 <BonusYieldChange>
                     <BonusType>BONUS_COTTON</BonusType>
                     <YieldChanges>
                         <iYield>0</iYield>
+                        <iYield>0</iYield>
                         <iYield>1</iYield>
-                        <iYield>2</iYield>
                     </YieldChanges>
                 </BonusYieldChange>
                 <BonusYieldChange>
                     <BonusType>BONUS_FLAX</BonusType>
                     <YieldChanges>
-                        <iYield>1</iYield>
-                        <iYield>1</iYield>
+                        <iYield>0</iYield>
+                        <iYield>0</iYield>
                         <iYield>1</iYield>
                     </YieldChanges>
                 </BonusYieldChange>
@@ -1081,7 +1069,7 @@
                     <YieldChanges>
                         <iYield>0</iYield>
                         <iYield>0</iYield>
-                        <iYield>3</iYield>
+                        <iYield>1</iYield>
                     </YieldChanges>
                 </BonusYieldChange>
                 <BonusYieldChange>
@@ -1089,7 +1077,7 @@
                     <YieldChanges>
                         <iYield>0</iYield>
                         <iYield>0</iYield>
-                        <iYield>3</iYield>
+                        <iYield>1</iYield>
                     </YieldChanges>
                 </BonusYieldChange>
                 <BonusYieldChange>
@@ -1097,23 +1085,23 @@
                     <YieldChanges>
                         <iYield>0</iYield>
                         <iYield>0</iYield>
-                        <iYield>3</iYield>
+                        <iYield>1</iYield>
                     </YieldChanges>
                 </BonusYieldChange>
                 <BonusYieldChange>
                     <BonusType>BONUS_KAVA</BonusType>
                     <YieldChanges>
-                        <iYield>1</iYield>
                         <iYield>0</iYield>
-                        <iYield>2</iYield>
+                        <iYield>0</iYield>
+                        <iYield>1</iYield>
                     </YieldChanges>
                 </BonusYieldChange>
                 <BonusYieldChange>
                     <BonusType>BONUS_PAPYRUS</BonusType>
                     <YieldChanges>
                         <iYield>0</iYield>
+                        <iYield>0</iYield>
                         <iYield>1</iYield>
-                        <iYield>2</iYield>
                     </YieldChanges>
                 </BonusYieldChange>
                 <BonusYieldChange>
@@ -1121,15 +1109,15 @@
                     <YieldChanges>
                         <iYield>0</iYield>
                         <iYield>0</iYield>
-                        <iYield>3</iYield>
+                        <iYield>1</iYield>
                     </YieldChanges>
                 </BonusYieldChange>
                 <BonusYieldChange>
                     <BonusType>BONUS_PRICKLY_PEAR</BonusType>
                     <YieldChanges>
-                        <iYield>2</iYield>
-                        <iYield>0</iYield>
                         <iYield>1</iYield>
+                        <iYield>0</iYield>
+                        <iYield>0</iYield>
                     </YieldChanges>
                 </BonusYieldChange>
                 <BonusYieldChange>
@@ -1137,23 +1125,23 @@
                     <YieldChanges>
                         <iYield>0</iYield>
                         <iYield>0</iYield>
-                        <iYield>3</iYield>
+                        <iYield>1</iYield>
                     </YieldChanges>
                 </BonusYieldChange>
                 <BonusYieldChange>
                     <BonusType>BONUS_SUGAR</BonusType>
                     <YieldChanges>
-                        <iYield>1</iYield>
                         <iYield>0</iYield>
-                        <iYield>2</iYield>
+                        <iYield>0</iYield>
+                        <iYield>1</iYield>
                     </YieldChanges>
                 </BonusYieldChange>
                 <BonusYieldChange>
                     <BonusType>BONUS_TEA</BonusType>
                     <YieldChanges>
-                        <iYield>1</iYield>
                         <iYield>0</iYield>
-                        <iYield>2</iYield>
+                        <iYield>0</iYield>
+                        <iYield>1</iYield>
                     </YieldChanges>
                 </BonusYieldChange>
                 <BonusYieldChange>
@@ -1161,140 +1149,140 @@
                     <YieldChanges>
                         <iYield>0</iYield>
                         <iYield>0</iYield>
-                        <iYield>3</iYield>
+                        <iYield>1</iYield>
                     </YieldChanges>
                 </BonusYieldChange>
                 <BonusYieldChange>
                     <BonusType>BONUS_VANILLA</BonusType>
                     <YieldChanges>
-                        <iYield>1</iYield>
                         <iYield>0</iYield>
-                        <iYield>2</iYield>
+                        <iYield>0</iYield>
+                        <iYield>1</iYield>
                     </YieldChanges>
                 </BonusYieldChange>
                 <BonusYieldChange>
                     <BonusType>BONUS_GRAPES</BonusType>
                     <YieldChanges>
-                        <iYield>2</iYield>
-                        <iYield>0</iYield>
                         <iYield>1</iYield>
+                        <iYield>0</iYield>
+                        <iYield>0</iYield>
                     </YieldChanges>
                 </BonusYieldChange>
                 <BonusYieldChange>
                     <BonusType>BONUS_MUSHROOMS</BonusType>
                     <YieldChanges>
-                        <iYield>2</iYield>
-                        <iYield>0</iYield>
                         <iYield>1</iYield>
+                        <iYield>0</iYield>
+                        <iYield>0</iYield>
                     </YieldChanges>
                 </BonusYieldChange>
                 <BonusYieldChange>
                     <BonusType>BONUS_PRIME_TIMBER</BonusType>
                     <YieldChanges>
                         <iYield>0</iYield>
-                        <iYield>3</iYield>
+                        <iYield>1</iYield>
                     </YieldChanges>
                 </BonusYieldChange>
                 <BonusYieldChange>
                     <BonusType>BONUS_CAMEL</BonusType>
                     <YieldChanges>
+                        <iYield>0</iYield>
                         <iYield>1</iYield>
-                        <iYield>2</iYield>
                     </YieldChanges>
                 </BonusYieldChange>
                 <BonusYieldChange>
                     <BonusType>BONUS_COW</BonusType>
                     <YieldChanges>
-                        <iYield>2</iYield>
                         <iYield>1</iYield>
+                        <iYield>0</iYield>
                     </YieldChanges>
                 </BonusYieldChange>
                 <BonusYieldChange>
                     <BonusType>BONUS_DONKEY</BonusType>
                     <YieldChanges>
+                        <iYield>0</iYield>
                         <iYield>1</iYield>
-                        <iYield>2</iYield>
                     </YieldChanges>
                 </BonusYieldChange>
                 <BonusYieldChange>
                     <BonusType>BONUS_HORSE</BonusType>
                     <YieldChanges>
                         <iYield>0</iYield>
-                        <iYield>3</iYield>
+                        <iYield>1</iYield>
                     </YieldChanges>
                 </BonusYieldChange>
                 <BonusYieldChange>
                     <BonusType>BONUS_LLAMA</BonusType>
                     <YieldChanges>
                         <iYield>0</iYield>
-                        <iYield>2</iYield>
                         <iYield>1</iYield>
+                        <iYield>0</iYield>
                     </YieldChanges>
                 </BonusYieldChange>
                 <BonusYieldChange>
                     <BonusType>BONUS_PIG</BonusType>
                     <YieldChanges>
-                        <iYield>3</iYield>
+                        <iYield>1</iYield>
                     </YieldChanges>
                 </BonusYieldChange>
                 <BonusYieldChange>
                     <BonusType>BONUS_SHEEP</BonusType>
                     <YieldChanges>
-                        <iYield>1</iYield>
-                        <iYield>1</iYield>
+                        <iYield>0</iYield>
+                        <iYield>0</iYield>
                         <iYield>1</iYield>
                     </YieldChanges>
                 </BonusYieldChange>
                 <BonusYieldChange>
                     <BonusType>BONUS_BEAVERS</BonusType>
                     <YieldChanges>
-                        <iYield>1</iYield>
                         <iYield>0</iYield>
-                        <iYield>2</iYield>
+                        <iYield>0</iYield>
+                        <iYield>1</iYield>
                     </YieldChanges>
                 </BonusYieldChange>
                 <BonusYieldChange>
                     <BonusType>BONUS_BISON</BonusType>
                     <YieldChanges>
-                        <iYield>3</iYield>
+                        <iYield>1</iYield>
                     </YieldChanges>
                 </BonusYieldChange>
                 <BonusYieldChange>
                     <BonusType>BONUS_DEER</BonusType>
                     <YieldChanges>
-                        <iYield>2</iYield>
                         <iYield>1</iYield>
+                        <iYield>0</iYield>
                     </YieldChanges>
                 </BonusYieldChange>
                 <BonusYieldChange>
                     <BonusType>BONUS_ELEPHANTS</BonusType>
                     <YieldChanges>
+                        <iYield>0</iYield>
                         <iYield>1</iYield>
-                        <iYield>1</iYield>
-                        <iYield>1</iYield>
+                        <iYield>0</iYield>
                     </YieldChanges>
                 </BonusYieldChange>
                 <BonusYieldChange>
                     <BonusType>BONUS_GUINEA_PIGS</BonusType>
                     <YieldChanges>
-                        <iYield>1</iYield>
                         <iYield>0</iYield>
-                        <iYield>2</iYield>
+                        <iYield>0</iYield>
+                        <iYield>1</iYield>
                     </YieldChanges>
                 </BonusYieldChange>
                 <BonusYieldChange>
                     <BonusType>BONUS_KANGAROO</BonusType>
                     <YieldChanges>
-                        <iYield>2</iYield>
                         <iYield>1</iYield>
+                        <iYield>0</iYield>
                     </YieldChanges>
                 </BonusYieldChange>
                 <BonusYieldChange>
                     <BonusType>BONUS_MAMMOTH</BonusType>
                     <YieldChanges>
+                        <iYield>0</iYield>
                         <iYield>1</iYield>
-                        <iYield>1</iYield>
-                        <iYield>1</iYield>
+                        <iYield>0</iYield>
                     </YieldChanges>
                 </BonusYieldChange>
                 <BonusYieldChange>
@@ -1302,64 +1290,64 @@
                     <YieldChanges>
                         <iYield>0</iYield>
                         <iYield>0</iYield>
-                        <iYield>3</iYield>
+                        <iYield>1</iYield>
                     </YieldChanges>
                 </BonusYieldChange>
                 <BonusYieldChange>
                     <BonusType>BONUS_POULTRY</BonusType>
                     <YieldChanges>
-                        <iYield>3</iYield>
+                        <iYield>1</iYield>
                     </YieldChanges>
                 </BonusYieldChange>
                 <BonusYieldChange>
                     <BonusType>BONUS_RABBIT</BonusType>
                     <YieldChanges>
-                        <iYield>2</iYield>
-                        <iYield>0</iYield>
                         <iYield>1</iYield>
+                        <iYield>0</iYield>
+                        <iYield>0</iYield>
                     </YieldChanges>
                 </BonusYieldChange>
                 <BonusYieldChange>
                     <BonusType>BONUS_SEA_LION_AND_SEAL</BonusType>
                     <YieldChanges>
-                        <iYield>1</iYield>
-                        <iYield>1</iYield>
+                        <iYield>0</iYield>
+                        <iYield>0</iYield>
                         <iYield>1</iYield>
                     </YieldChanges>
                 </BonusYieldChange>
                 <BonusYieldChange>
                     <BonusType>BONUS_WALRUS</BonusType>
                     <YieldChanges>
+                        <iYield>0</iYield>
                         <iYield>1</iYield>
-                        <iYield>2</iYield>
                     </YieldChanges>
                 </BonusYieldChange>
                 <BonusYieldChange>
                     <BonusType>BONUS_CLAM</BonusType>
                     <YieldChanges>
-                        <iYield>2</iYield>
-                        <iYield>0</iYield>
                         <iYield>1</iYield>
+                        <iYield>0</iYield>
+                        <iYield>0</iYield>
                     </YieldChanges>
                 </BonusYieldChange>
                 <BonusYieldChange>
                     <BonusType>BONUS_CRAB</BonusType>
                     <YieldChanges>
-                        <iYield>3</iYield>
+                        <iYield>1</iYield>
                     </YieldChanges>
                 </BonusYieldChange>
                 <BonusYieldChange>
                     <BonusType>BONUS_FISH</BonusType>
                     <YieldChanges>
-                        <iYield>3</iYield>
+                        <iYield>1</iYield>
                     </YieldChanges>
                 </BonusYieldChange>
                 <BonusYieldChange>
                     <BonusType>BONUS_LOBSTER</BonusType>
                     <YieldChanges>
-                        <iYield>1</iYield>
                         <iYield>0</iYield>
-                        <iYield>2</iYield>
+                        <iYield>0</iYield>
+                        <iYield>1</iYield>
                     </YieldChanges>
                 </BonusYieldChange>
                 <BonusYieldChange>
@@ -1367,7 +1355,7 @@
                     <YieldChanges>
                         <iYield>0</iYield>
                         <iYield>0</iYield>
-                        <iYield>3</iYield>
+                        <iYield>1</iYield>
                     </YieldChanges>
                 </BonusYieldChange>
                 <BonusYieldChange>
@@ -1375,20 +1363,20 @@
                     <YieldChanges>
                         <iYield>0</iYield>
                         <iYield>0</iYield>
-                        <iYield>3</iYield>
+                        <iYield>1</iYield>
                     </YieldChanges>
                 </BonusYieldChange>
                 <BonusYieldChange>
                     <BonusType>BONUS_SHRIMP</BonusType>
                     <YieldChanges>
-                        <iYield>3</iYield>
+                        <iYield>1</iYield>
                     </YieldChanges>
                 </BonusYieldChange>
                 <BonusYieldChange>
                     <BonusType>BONUS_WHALE</BonusType>
                     <YieldChanges>
+                        <iYield>0</iYield>
                         <iYield>1</iYield>
-                        <iYield>2</iYield>
                     </YieldChanges>
                 </BonusYieldChange>
                 <BonusYieldChange>
@@ -1396,36 +1384,38 @@
                     <YieldChanges>
                         <iYield>0</iYield>
                         <iYield>0</iYield>
-                        <iYield>3</iYield>
+                        <iYield>1</iYield>
                     </YieldChanges>
                 </BonusYieldChange>
                 <BonusYieldChange>
                     <BonusType>BONUS_AMBER</BonusType>
                     <YieldChanges>
-                        <iYield>3</iYield>
+                        <iYield>0</iYield>
+                        <iYield>0</iYield>
+                        <iYield>1</iYield>
                     </YieldChanges>
                 </BonusYieldChange>
                 <BonusYieldChange>
                     <BonusType>BONUS_BAUXITE_ORE</BonusType>
                     <YieldChanges>
                         <iYield>0</iYield>
-                        <iYield>2</iYield>
                         <iYield>1</iYield>
+                        <iYield>0</iYield>
                     </YieldChanges>
                 </BonusYieldChange>
                 <BonusYieldChange>
                     <BonusType>BONUS_COAL</BonusType>
                     <YieldChanges>
                         <iYield>0</iYield>
-                        <iYield>3</iYield>
+                        <iYield>1</iYield>
                     </YieldChanges>
                 </BonusYieldChange>
                 <BonusYieldChange>
                     <BonusType>BONUS_COPPER_ORE</BonusType>
                     <YieldChanges>
                         <iYield>0</iYield>
-                        <iYield>2</iYield>
                         <iYield>1</iYield>
+                        <iYield>0</iYield>
                     </YieldChanges>
                 </BonusYieldChange>
                 <BonusYieldChange>
@@ -1433,7 +1423,7 @@
                     <YieldChanges>
                         <iYield>0</iYield>
                         <iYield>0</iYield>
-                        <iYield>3</iYield>
+                        <iYield>1</iYield>
                     </YieldChanges>
                 </BonusYieldChange>
                 <BonusYieldChange>
@@ -1441,7 +1431,7 @@
                     <YieldChanges>
                         <iYield>0</iYield>
                         <iYield>0</iYield>
-                        <iYield>3</iYield>
+                        <iYield>1</iYield>
                     </YieldChanges>
                 </BonusYieldChange>
                 <BonusYieldChange>
@@ -1449,30 +1439,30 @@
                     <YieldChanges>
                         <iYield>0</iYield>
                         <iYield>0</iYield>
-                        <iYield>3</iYield>
+                        <iYield>1</iYield>
                     </YieldChanges>
                 </BonusYieldChange>
                 <BonusYieldChange>
                     <BonusType>BONUS_IRON_ORE</BonusType>
                     <YieldChanges>
                         <iYield>0</iYield>
-                        <iYield>3</iYield>
+                        <iYield>1</iYield>
                     </YieldChanges>
                 </BonusYieldChange>
                 <BonusYieldChange>
                     <BonusType>BONUS_LEAD_ORE</BonusType>
                     <YieldChanges>
                         <iYield>0</iYield>
-                        <iYield>2</iYield>
                         <iYield>1</iYield>
+                        <iYield>0</iYield>
                     </YieldChanges>
                 </BonusYieldChange>
                 <BonusYieldChange>
                     <BonusType>BONUS_MANGANESE</BonusType>
                     <YieldChanges>
                         <iYield>0</iYield>
+                        <iYield>0</iYield>
                         <iYield>1</iYield>
-                        <iYield>2</iYield>
                     </YieldChanges>
                 </BonusYieldChange>
                 <BonusYieldChange>
@@ -1480,7 +1470,7 @@
                     <YieldChanges>
                         <iYield>0</iYield>
                         <iYield>0</iYield>
-                        <iYield>3</iYield>
+                        <iYield>1</iYield>
                     </YieldChanges>
                 </BonusYieldChange>
                 <BonusYieldChange>
@@ -1488,7 +1478,7 @@
                     <YieldChanges>
                         <iYield>0</iYield>
                         <iYield>0</iYield>
-                        <iYield>3</iYield>
+                        <iYield>1</iYield>
                     </YieldChanges>
                 </BonusYieldChange>
                 <BonusYieldChange>
@@ -1496,7 +1486,7 @@
                     <YieldChanges>
                         <iYield>0</iYield>
                         <iYield>0</iYield>
-                        <iYield>3</iYield>
+                        <iYield>1</iYield>
                     </YieldChanges>
                 </BonusYieldChange>
                 <BonusYieldChange>
@@ -1504,62 +1494,62 @@
                     <YieldChanges>
                         <iYield>0</iYield>
                         <iYield>0</iYield>
-                        <iYield>3</iYield>
+                        <iYield>1</iYield>
                     </YieldChanges>
                 </BonusYieldChange>
                 <BonusYieldChange>
                     <BonusType>BONUS_SULPHUR</BonusType>
                     <YieldChanges>
                         <iYield>0</iYield>
-                        <iYield>2</iYield>
                         <iYield>1</iYield>
+                        <iYield>0</iYield>
                     </YieldChanges>
                 </BonusYieldChange>
                 <BonusYieldChange>
                     <BonusType>BONUS_TIN_ORE</BonusType>
                     <YieldChanges>
                         <iYield>0</iYield>
+                        <iYield>0</iYield>
                         <iYield>1</iYield>
-                        <iYield>2</iYield>
                     </YieldChanges>
                 </BonusYieldChange>
                 <BonusYieldChange>
                     <BonusType>BONUS_TITANIUM_ORE</BonusType>
                     <YieldChanges>
                         <iYield>0</iYield>
-                        <iYield>2</iYield>
                         <iYield>1</iYield>
+                        <iYield>0</iYield>
                     </YieldChanges>
                 </BonusYieldChange>
                 <BonusYieldChange>
                     <BonusType>BONUS_URANIUM</BonusType>
                     <YieldChanges>
                         <iYield>0</iYield>
+                        <iYield>0</iYield>
                         <iYield>1</iYield>
-                        <iYield>2</iYield>
                     </YieldChanges>
                 </BonusYieldChange>
                 <BonusYieldChange>
                     <BonusType>BONUS_FINE_CLAY</BonusType>
                     <YieldChanges>
                         <iYield>0</iYield>
-                        <iYield>3</iYield>
+                        <iYield>1</iYield>
                     </YieldChanges>
                 </BonusYieldChange>
                 <BonusYieldChange>
                     <BonusType>BONUS_JADE</BonusType>
                     <YieldChanges>
                         <iYield>0</iYield>
+                        <iYield>0</iYield>
                         <iYield>1</iYield>
-                        <iYield>2</iYield>
                     </YieldChanges>
                 </BonusYieldChange>
                 <BonusYieldChange>
                     <BonusType>BONUS_MARBLE</BonusType>
                     <YieldChanges>
                         <iYield>0</iYield>
-                        <iYield>2</iYield>
                         <iYield>1</iYield>
+                        <iYield>0</iYield>
                     </YieldChanges>
                 </BonusYieldChange>
                 <BonusYieldChange>
@@ -1567,15 +1557,15 @@
                     <YieldChanges>
                         <iYield>0</iYield>
                         <iYield>0</iYield>
-                        <iYield>3</iYield>
+                        <iYield>1</iYield>
                     </YieldChanges>
                 </BonusYieldChange>
                 <BonusYieldChange>
                     <BonusType>BONUS_OBSIDIAN</BonusType>
                     <YieldChanges>
                         <iYield>0</iYield>
-                        <iYield>2</iYield>
                         <iYield>1</iYield>
+                        <iYield>0</iYield>
                     </YieldChanges>
                 </BonusYieldChange>
                 <BonusYieldChange>
@@ -1583,68 +1573,68 @@
                     <YieldChanges>
                         <iYield>0</iYield>
                         <iYield>0</iYield>
-                        <iYield>3</iYield>
+                        <iYield>1</iYield>
                     </YieldChanges>
                 </BonusYieldChange>
                 <BonusYieldChange>
                     <BonusType>BONUS_STONE</BonusType>
                     <YieldChanges>
                         <iYield>0</iYield>
-                        <iYield>3</iYield>
+                        <iYield>1</iYield>
                     </YieldChanges>
                 </BonusYieldChange>
                 <BonusYieldChange>
                     <BonusType>BONUS_TURQUOISE</BonusType>
                     <YieldChanges>
                         <iYield>0</iYield>
+                        <iYield>0</iYield>
                         <iYield>1</iYield>
-                        <iYield>2</iYield>
                     </YieldChanges>
                 </BonusYieldChange>
                 <BonusYieldChange>
                     <BonusType>BONUS_FOSSIL_BEDS</BonusType>
                     <YieldChanges>
                         <iYield>0</iYield>
+                        <iYield>0</iYield>
                         <iYield>1</iYield>
-                        <iYield>2</iYield>
                     </YieldChanges>
                 </BonusYieldChange>
                 <BonusYieldChange>
                     <BonusType>BONUS_HYDROTHERMAL_VENT</BonusType>
                     <YieldChanges>
                         <iYield>0</iYield>
-                        <iYield>2</iYield>
                         <iYield>1</iYield>
+                        <iYield>0</iYield>
                     </YieldChanges>
                 </BonusYieldChange>
                 <BonusYieldChange>
                     <BonusType>BONUS_METHANE_ICE</BonusType>
                     <YieldChanges>
                         <iYield>0</iYield>
-                        <iYield>2</iYield>
                         <iYield>1</iYield>
+                        <iYield>0</iYield>
                     </YieldChanges>
                 </BonusYieldChange>
                 <BonusYieldChange>
                     <BonusType>BONUS_NATURAL_GAS</BonusType>
                     <YieldChanges>
                         <iYield>0</iYield>
-                        <iYield>2</iYield>
                         <iYield>1</iYield>
+                        <iYield>0</iYield>
                     </YieldChanges>
                 </BonusYieldChange>
                 <BonusYieldChange>
                     <BonusType>BONUS_OIL</BonusType>
                     <YieldChanges>
                         <iYield>0</iYield>
-                        <iYield>3</iYield>
+                        <iYield>1</iYield>
                     </YieldChanges>
                 </BonusYieldChange>
                 <BonusYieldChange>
                     <BonusType>BONUS_GEOTHERMAL_ENERGY</BonusType>
                     <YieldChanges>
+                        <iYield>0</iYield>
                         <iYield>1</iYield>
-                        <iYield>2</iYield>
                     </YieldChanges>
                 </BonusYieldChange>
             </BonusYieldChanges>
