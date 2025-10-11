@@ -968,6 +968,7 @@
 				<SubCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
+            <bMilitaryTrade>1</bMilitaryTrade>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -1051,6 +1052,7 @@
 				<SubCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
+            <bMilitaryTrade>1</bMilitaryTrade>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -1239,6 +1241,7 @@
 			<bBarbCoExist>1</bBarbCoExist>
 			<bNoBadGoodies>1</bNoBadGoodies>
 			<bPassage>1</bPassage>
+            <bMilitaryTrade>1</bMilitaryTrade>
 			<bUpgradeAnywhere>1</bUpgradeAnywhere>
 			<UnitUpgrades>
 				<UnitType>UNIT_ADVENTURER</UnitType>
@@ -1312,6 +1315,7 @@
 				<SubCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_HEALS_AS_ANIMALS</SubCombatType>
 			</SubCombatTypes>
+            <bMilitaryTrade>1</bMilitaryTrade>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -1594,6 +1598,7 @@
 			<Civilopedia>TXT_KEY_UNIT_CHASER_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_GROWTH</Advisor>
 			<DefaultUnitAI>UNITAI_HUNTER</DefaultUnitAI>
+            <bMilitaryTrade>1</bMilitaryTrade>
 			<UnitAIs>
 				<UnitAI>
 					<UnitAIType>UNITAI_HUNTER</UnitAIType>
@@ -1690,6 +1695,7 @@
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_TRACKER</Type>
+            <bMilitaryTrade>1</bMilitaryTrade>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -34590,7 +34596,7 @@
 			<iHurryCostModifier>25</iHurryCostModifier>
 			<iBaseUpkeep>3</iBaseUpkeep>
 			<iMoves>1</iMoves>
-			<iWorkRate>300</iWorkRate>
+			<iWorkRate>150</iWorkRate>
 			<iCombat>10</iCombat>
 			<iFirstStrikes>1</iFirstStrikes>
 			<iAsset>6</iAsset>
@@ -34713,7 +34719,7 @@
 			<iHurryCostModifier>25</iHurryCostModifier>
 			<iBaseUpkeep>5</iBaseUpkeep>
 			<iMoves>1</iMoves>
-			<iWorkRate>350</iWorkRate>
+			<iWorkRate>175</iWorkRate>
 			<iCombat>15</iCombat>
 			<iAsset>12</iAsset>
 			<iPower>12</iPower>
@@ -35539,7 +35545,7 @@
 			<iCost>215</iCost>
 			<iBaseUpkeep>2</iBaseUpkeep>
 			<iMoves>1</iMoves>
-			<iWorkRate>100</iWorkRate>
+			<iWorkRate>50</iWorkRate>
 			<iCombat>10</iCombat>
 			<iXPValueAttack>1</iXPValueAttack>
 			<iXPValueDefense>1</iXPValueDefense>
@@ -35662,7 +35668,7 @@
 			<iCost>335</iCost>
 			<iBaseUpkeep>4</iBaseUpkeep>
 			<iMoves>1</iMoves>
-			<iWorkRate>125</iWorkRate>
+			<iWorkRate>62</iWorkRate>
 			<iCombat>15</iCombat>
 			<iXPValueAttack>1</iXPValueAttack>
 			<iXPValueDefense>1</iXPValueDefense>
@@ -35789,7 +35795,7 @@
 			<iCost>425</iCost>
 			<iBaseUpkeep>7</iBaseUpkeep>
 			<iMoves>1</iMoves>
-			<iWorkRate>150</iWorkRate>
+			<iWorkRate>75</iWorkRate>
 			<iCombat>25</iCombat>
 			<iXPValueAttack>1</iXPValueAttack>
 			<iXPValueDefense>1</iXPValueDefense>
@@ -35924,7 +35930,7 @@
 			<iCost>630</iCost>
 			<iBaseUpkeep>11</iBaseUpkeep>
 			<iMoves>1</iMoves>
-			<iWorkRate>175</iWorkRate>
+			<iWorkRate>85</iWorkRate>
 			<iCombat>40</iCombat>
 			<iXPValueAttack>1</iXPValueAttack>
 			<iXPValueDefense>1</iXPValueDefense>
@@ -47595,7 +47601,7 @@
 			<iCost>-1</iCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>1</iMoves>
-			<iWorkRate>90</iWorkRate>
+			<iWorkRate>45</iWorkRate>
 			<iAsset>1</iAsset>
 			<UnitMeshGroups>
 				<iGroupSize>1</iGroupSize>

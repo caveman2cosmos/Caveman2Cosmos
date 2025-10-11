@@ -1090,7 +1090,7 @@
 			<ObsoleteTech>TECH_MAINSTREAM_CLONING</ObsoleteTech>
 			<iCost>170</iCost>
 			<iMoves>2</iMoves>
-			<iWorkRate>270</iWorkRate>
+			<iWorkRate>135</iWorkRate>
 			<iBaseUpkeep>3</iBaseUpkeep>
 			<iAsset>3</iAsset>
 			<UnitMeshGroups>

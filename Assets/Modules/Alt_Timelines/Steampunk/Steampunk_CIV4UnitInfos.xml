@@ -227,7 +227,7 @@
 			</PrereqBonuses>
 			<iCost>818</iCost>
 			<iMinAreaSize>10</iMinAreaSize>
-			<iBaseUpkeep>2</iBaseUpkeep>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>5</iMoves>
 			<iCombat>34</iCombat>
 			<iXPValueAttack>6</iXPValueAttack>
@@ -426,7 +426,7 @@
 				<BonusType>BONUS_IRON_WARES</BonusType>
 			</PrereqBonuses>
 			<iCost>720</iCost>
-			<iBaseUpkeep>2</iBaseUpkeep>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>1</iMoves>
 			<iCombat>30</iCombat>
 			<iXPValueAttack>6</iXPValueAttack>
@@ -609,7 +609,7 @@
 			<iCost>590</iCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>3</iMoves>
-			<iWorkRate>310</iWorkRate>
+			<iWorkRate>155</iWorkRate>
 			<BonusProductionModifiers>
 				<BonusProductionModifier>
 					<BonusType>BONUS_COPPER_WARES</BonusType>

@@ -20,4 +20,20 @@
 		<Tag>TXT_KEY_BUILDING_NEAR_CITY_STUFF_PEDIA</Tag>
 		<English>Game auto builds used to identify when a bonus or resource is somewhere in the nation but not in the vicinity of this city.</English>
 	</TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_BUILDING_ECONOMY_HELP</Tag>
+        <English>Storage Spreader Basis for advanced economy.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_BUILDING_ECONOMY_PEDIA</Tag>
+        <English>The basis upon what we spread storages across our empire</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_BUILDING_ECONOMY_BASE</Tag>
+        <English>Economy Option Base</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_BUILDING_ECONOMY_STORAGE_BASE</Tag>
+        <English>C.Resource storage</English>
+    </TEXT>
 </Civ4GameText>
