@@ -80,7 +80,7 @@
 				<BuildingType>BUILDING_PALACE</BuildingType>
 				<BuildingType>BUILDING_C_N_NORTH_AMERICAN</BuildingType>
 				<BuildingType>BUILDING_C_AC_NORTH_AMERICAN</BuildingType>
-				<BuildingType>BUILDING_STORAGE_EMPIRE</BuildingType>
+                <BuildingType>BUILDING_STORAGE_EMPIRE</BuildingType>
 			</FreeBuildings>
 			<InitialCivics>
 				<CivicType>CIVIC_ANARCHISM</CivicType>
@@ -186,6 +186,7 @@
 				<BuildingType>BUILDING_PALACE</BuildingType>
 				<BuildingType>BUILDING_C_N_MIDDLE_EASTERN</BuildingType>
 				<BuildingType>BUILDING_C_AC_MIDDLE_EASTERN</BuildingType>
+                <BuildingType>BUILDING_STORAGE_EMPIRE</BuildingType>
 			</FreeBuildings>
 			<InitialCivics>
 				<CivicType>CIVIC_ANARCHISM</CivicType>
@@ -288,6 +289,7 @@
 				<BuildingType>BUILDING_PALACE</BuildingType>
 				<BuildingType>BUILDING_C_N_MIDDLE_EASTERN</BuildingType>
 				<BuildingType>BUILDING_C_AC_MIDDLE_EASTERN</BuildingType>
+                <BuildingType>BUILDING_STORAGE_EMPIRE</BuildingType>
 			</FreeBuildings>
 			<InitialCivics>
 				<CivicType>CIVIC_ANARCHISM</CivicType>
@@ -383,6 +385,7 @@
 				<BuildingType>BUILDING_PALACE</BuildingType>
 				<BuildingType>BUILDING_C_N_NORTH_AMERICAN</BuildingType>
 				<BuildingType>BUILDING_C_AC_NORTH_AMERICAN</BuildingType>
+                <BuildingType>BUILDING_STORAGE_EMPIRE</BuildingType>
 			</FreeBuildings>
 			<InitialCivics>
 				<CivicType>CIVIC_ANARCHISM</CivicType>
@@ -484,6 +487,7 @@
 				<BuildingType>BUILDING_PALACE</BuildingType>
 				<BuildingType>BUILDING_C_N_MIDDLE_EASTERN</BuildingType>
 				<BuildingType>BUILDING_C_AC_MIDDLE_EASTERN</BuildingType>
+                <BuildingType>BUILDING_STORAGE_EMPIRE</BuildingType>
 			</FreeBuildings>
 			<InitialCivics>
 				<CivicType>CIVIC_ANARCHISM</CivicType>
@@ -581,6 +585,7 @@
 				<BuildingType>BUILDING_PALACE</BuildingType>
 				<BuildingType>BUILDING_C_N_MIDDLE_EASTERN</BuildingType>
 				<BuildingType>BUILDING_C_AC_MIDDLE_EASTERN</BuildingType>
+                <BuildingType>BUILDING_STORAGE_EMPIRE</BuildingType>
 			</FreeBuildings>
 			<InitialCivics>
 				<CivicType>CIVIC_ANARCHISM</CivicType>
@@ -687,6 +692,7 @@
 				<BuildingType>BUILDING_PALACE</BuildingType>
 				<BuildingType>BUILDING_C_N_AFRICAN</BuildingType>
 				<BuildingType>BUILDING_C_AC_AFRICAN</BuildingType>
+                <BuildingType>BUILDING_STORAGE_EMPIRE</BuildingType>
 			</FreeBuildings>
 			<InitialCivics>
 				<CivicType>CIVIC_ANARCHISM</CivicType>
@@ -796,6 +802,7 @@
 				<BuildingType>BUILDING_PALACE</BuildingType>
 				<BuildingType>BUILDING_C_N_EUROPEAN</BuildingType>
 				<BuildingType>BUILDING_C_AC_EUROPEAN</BuildingType>
+                <BuildingType>BUILDING_STORAGE_EMPIRE</BuildingType>
 			</FreeBuildings>
 			<InitialCivics>
 				<CivicType>CIVIC_ANARCHISM</CivicType>
@@ -891,6 +898,7 @@
 				<BuildingType>BUILDING_PALACE</BuildingType>
 				<BuildingType>BUILDING_C_N_ASIAN</BuildingType>
 				<BuildingType>BUILDING_C_AC_ASIAN</BuildingType>
+                <BuildingType>BUILDING_STORAGE_EMPIRE</BuildingType>
 			</FreeBuildings>
 			<InitialCivics>
 				<CivicType>CIVIC_ANARCHISM</CivicType>
@@ -1002,6 +1010,7 @@
 				<BuildingType>BUILDING_PALACE</BuildingType>
 				<BuildingType>BUILDING_C_N_AFRICAN</BuildingType>
 				<BuildingType>BUILDING_C_AC_AFRICAN</BuildingType>
+                <BuildingType>BUILDING_STORAGE_EMPIRE</BuildingType>
 			</FreeBuildings>
 			<InitialCivics>
 				<CivicType>CIVIC_ANARCHISM</CivicType>
@@ -1109,6 +1118,7 @@
 				<BuildingType>BUILDING_PALACE</BuildingType>
 				<BuildingType>BUILDING_C_N_EUROPEAN</BuildingType>
 				<BuildingType>BUILDING_C_AC_EUROPEAN</BuildingType>
+                <BuildingType>BUILDING_STORAGE_EMPIRE</BuildingType>
 			</FreeBuildings>
 			<InitialCivics>
 				<CivicType>CIVIC_ANARCHISM</CivicType>
@@ -1212,6 +1222,7 @@
 				<BuildingType>BUILDING_PALACE</BuildingType>
 				<BuildingType>BUILDING_C_N_AFRICAN</BuildingType>
 				<BuildingType>BUILDING_C_AC_AFRICAN</BuildingType>
+                <BuildingType>BUILDING_STORAGE_EMPIRE</BuildingType>
 			</FreeBuildings>
 			<InitialCivics>
 				<CivicType>CIVIC_ANARCHISM</CivicType>
@@ -1311,6 +1322,7 @@
 				<BuildingType>BUILDING_PALACE</BuildingType>
 				<BuildingType>BUILDING_C_N_EUROPEAN</BuildingType>
 				<BuildingType>BUILDING_C_AC_EUROPEAN</BuildingType>
+                <BuildingType>BUILDING_STORAGE_EMPIRE</BuildingType>
 			</FreeBuildings>
 			<InitialCivics>
 				<CivicType>CIVIC_ANARCHISM</CivicType>
@@ -1426,6 +1438,7 @@
 				<BuildingType>BUILDING_PALACE</BuildingType>
 				<BuildingType>BUILDING_C_N_EUROPEAN</BuildingType>
 				<BuildingType>BUILDING_C_AC_EUROPEAN</BuildingType>
+                <BuildingType>BUILDING_STORAGE_EMPIRE</BuildingType>
 			</FreeBuildings>
 			<InitialCivics>
 				<CivicType>CIVIC_ANARCHISM</CivicType>
@@ -1538,6 +1551,7 @@
 				<BuildingType>BUILDING_PALACE</BuildingType>
 				<BuildingType>BUILDING_C_N_EUROPEAN</BuildingType>
 				<BuildingType>BUILDING_C_AC_EUROPEAN</BuildingType>
+                <BuildingType>BUILDING_STORAGE_EMPIRE</BuildingType>
 			</FreeBuildings>
 			<InitialCivics>
 				<CivicType>CIVIC_ANARCHISM</CivicType>
@@ -1671,6 +1685,7 @@
 				<BuildingType>BUILDING_PALACE</BuildingType>
 				<BuildingType>BUILDING_C_N_MIDDLE_EASTERN</BuildingType>
 				<BuildingType>BUILDING_C_AC_MIDDLE_EASTERN</BuildingType>
+                <BuildingType>BUILDING_STORAGE_EMPIRE</BuildingType>
 			</FreeBuildings>
 			<InitialCivics>
 				<CivicType>CIVIC_ANARCHISM</CivicType>
@@ -1762,6 +1777,7 @@
 				<BuildingType>BUILDING_PALACE</BuildingType>
 				<BuildingType>BUILDING_C_N_EUROPEAN</BuildingType>
 				<BuildingType>BUILDING_C_AC_EUROPEAN</BuildingType>
+                <BuildingType>BUILDING_STORAGE_EMPIRE</BuildingType>
 			</FreeBuildings>
 			<InitialCivics>
 				<CivicType>CIVIC_ANARCHISM</CivicType>
@@ -1867,6 +1883,7 @@
 				<BuildingType>BUILDING_PALACE</BuildingType>
 				<BuildingType>BUILDING_C_N_SOUTH_AMERICAN</BuildingType>
 				<BuildingType>BUILDING_C_AC_SOUTH_AMERICAN</BuildingType>
+                <BuildingType>BUILDING_STORAGE_EMPIRE</BuildingType>
 			</FreeBuildings>
 			<InitialCivics>
 				<CivicType>CIVIC_ANARCHISM</CivicType>
@@ -2010,6 +2027,7 @@
 				<BuildingType>BUILDING_PALACE</BuildingType>
 				<BuildingType>BUILDING_C_N_ASIAN</BuildingType>
 				<BuildingType>BUILDING_C_AC_ASIAN</BuildingType>
+                <BuildingType>BUILDING_STORAGE_EMPIRE</BuildingType>
 			</FreeBuildings>
 			<InitialCivics>
 				<CivicType>CIVIC_ANARCHISM</CivicType>
@@ -2108,6 +2126,7 @@
 				<BuildingType>BUILDING_PALACE</BuildingType>
 				<BuildingType>BUILDING_C_N_ASIAN</BuildingType>
 				<BuildingType>BUILDING_C_AC_ASIAN</BuildingType>
+                <BuildingType>BUILDING_STORAGE_EMPIRE</BuildingType>
 			</FreeBuildings>
 			<InitialCivics>
 				<CivicType>CIVIC_ANARCHISM</CivicType>
@@ -2207,6 +2226,7 @@
 				<BuildingType>BUILDING_PALACE</BuildingType>
 				<BuildingType>BUILDING_C_N_ASIAN</BuildingType>
 				<BuildingType>BUILDING_C_AC_ASIAN</BuildingType>
+                <BuildingType>BUILDING_STORAGE_EMPIRE</BuildingType>
 			</FreeBuildings>
 			<InitialCivics>
 				<CivicType>CIVIC_ANARCHISM</CivicType>
@@ -2301,6 +2321,7 @@
 				<BuildingType>BUILDING_PALACE</BuildingType>
 				<BuildingType>BUILDING_C_N_ASIAN</BuildingType>
 				<BuildingType>BUILDING_C_AC_ASIAN</BuildingType>
+                <BuildingType>BUILDING_STORAGE_EMPIRE</BuildingType>
 			</FreeBuildings>
 			<InitialCivics>
 				<CivicType>CIVIC_ANARCHISM</CivicType>
@@ -2405,6 +2426,7 @@
 				<BuildingType>BUILDING_PALACE</BuildingType>
 				<BuildingType>BUILDING_C_N_AFRICAN</BuildingType>
 				<BuildingType>BUILDING_C_AC_AFRICAN</BuildingType>
+                <BuildingType>BUILDING_STORAGE_EMPIRE</BuildingType>
 			</FreeBuildings>
 			<InitialCivics>
 				<CivicType>CIVIC_ANARCHISM</CivicType>
@@ -2495,6 +2517,7 @@
 				<BuildingType>BUILDING_PALACE</BuildingType>
 				<BuildingType>BUILDING_C_N_NORTH_AMERICAN</BuildingType>
 				<BuildingType>BUILDING_C_AC_NORTH_AMERICAN</BuildingType>
+                <BuildingType>BUILDING_STORAGE_EMPIRE</BuildingType>
 			</FreeBuildings>
 			<InitialCivics>
 				<CivicType>CIVIC_ANARCHISM</CivicType>
@@ -2594,6 +2617,7 @@
 				<BuildingType>BUILDING_PALACE</BuildingType>
 				<BuildingType>BUILDING_C_N_ASIAN</BuildingType>
 				<BuildingType>BUILDING_C_AC_ASIAN</BuildingType>
+                <BuildingType>BUILDING_STORAGE_EMPIRE</BuildingType>
 			</FreeBuildings>
 			<InitialCivics>
 				<CivicType>CIVIC_ANARCHISM</CivicType>
@@ -2707,6 +2731,7 @@
 				<BuildingType>BUILDING_PALACE</BuildingType>
 				<BuildingType>BUILDING_C_N_NORTH_AMERICAN</BuildingType>
 				<BuildingType>BUILDING_C_AC_NORTH_AMERICAN</BuildingType>
+                <BuildingType>BUILDING_STORAGE_EMPIRE</BuildingType>
 			</FreeBuildings>
 			<InitialCivics>
 				<CivicType>CIVIC_ANARCHISM</CivicType>
@@ -2802,6 +2827,7 @@
 				<BuildingType>BUILDING_PALACE</BuildingType>
 				<BuildingType>BUILDING_C_N_EUROPEAN</BuildingType>
 				<BuildingType>BUILDING_C_AC_EUROPEAN</BuildingType>
+                <BuildingType>BUILDING_STORAGE_EMPIRE</BuildingType>
 			</FreeBuildings>
 			<InitialCivics>
 				<CivicType>CIVIC_ANARCHISM</CivicType>
@@ -2903,6 +2929,7 @@
 				<BuildingType>BUILDING_PALACE</BuildingType>
 				<BuildingType>BUILDING_C_N_MIDDLE_EASTERN</BuildingType>
 				<BuildingType>BUILDING_C_AC_MIDDLE_EASTERN</BuildingType>
+                <BuildingType>BUILDING_STORAGE_EMPIRE</BuildingType>
 			</FreeBuildings>
 			<InitialCivics>
 				<CivicType>CIVIC_ANARCHISM</CivicType>
@@ -3012,6 +3039,7 @@
 				<BuildingType>BUILDING_PALACE</BuildingType>
 				<BuildingType>BUILDING_C_N_MIDDLE_EASTERN</BuildingType>
 				<BuildingType>BUILDING_C_AC_MIDDLE_EASTERN</BuildingType>
+                <BuildingType>BUILDING_STORAGE_EMPIRE</BuildingType>
 			</FreeBuildings>
 			<InitialCivics>
 				<CivicType>CIVIC_ANARCHISM</CivicType>
@@ -3111,6 +3139,7 @@
 				<BuildingType>BUILDING_PALACE</BuildingType>
 				<BuildingType>BUILDING_C_N_EUROPEAN</BuildingType>
 				<BuildingType>BUILDING_C_AC_EUROPEAN</BuildingType>
+                <BuildingType>BUILDING_STORAGE_EMPIRE</BuildingType>
 			</FreeBuildings>
 			<InitialCivics>
 				<CivicType>CIVIC_ANARCHISM</CivicType>
@@ -3228,6 +3257,7 @@
 				<BuildingType>BUILDING_PALACE</BuildingType>
 				<BuildingType>BUILDING_C_N_EUROPEAN</BuildingType>
 				<BuildingType>BUILDING_C_AC_EUROPEAN</BuildingType>
+                <BuildingType>BUILDING_STORAGE_EMPIRE</BuildingType>
 			</FreeBuildings>
 			<InitialCivics>
 				<CivicType>CIVIC_ANARCHISM</CivicType>
@@ -3331,6 +3361,7 @@
 				<BuildingType>BUILDING_PALACE</BuildingType>
 				<BuildingType>BUILDING_C_N_EUROPEAN</BuildingType>
 				<BuildingType>BUILDING_C_AC_EUROPEAN</BuildingType>
+                <BuildingType>BUILDING_STORAGE_EMPIRE</BuildingType>
 			</FreeBuildings>
 			<InitialCivics>
 				<CivicType>CIVIC_ANARCHISM</CivicType>
@@ -3442,6 +3473,7 @@
 				<BuildingType>BUILDING_PALACE</BuildingType>
 				<BuildingType>BUILDING_C_N_ASIAN</BuildingType>
 				<BuildingType>BUILDING_C_AC_ASIAN</BuildingType>
+                <BuildingType>BUILDING_STORAGE_EMPIRE</BuildingType>
 			</FreeBuildings>
 			<InitialCivics>
 				<CivicType>CIVIC_ANARCHISM</CivicType>
@@ -3536,6 +3568,7 @@
 				<BuildingType>BUILDING_PALACE</BuildingType>
 				<BuildingType>BUILDING_C_N_EUROPEAN</BuildingType>
 				<BuildingType>BUILDING_C_AC_EUROPEAN</BuildingType>
+                <BuildingType>BUILDING_STORAGE_EMPIRE</BuildingType>
 			</FreeBuildings>
 			<InitialCivics>
 				<CivicType>CIVIC_ANARCHISM</CivicType>
@@ -3637,6 +3670,7 @@
 				<BuildingType>BUILDING_PALACE</BuildingType>
 				<BuildingType>BUILDING_C_N_MIDDLE_EASTERN</BuildingType>
 				<BuildingType>BUILDING_C_AC_MIDDLE_EASTERN</BuildingType>
+                <BuildingType>BUILDING_STORAGE_EMPIRE</BuildingType>
 			</FreeBuildings>
 			<InitialCivics>
 				<CivicType>CIVIC_ANARCHISM</CivicType>
@@ -3736,6 +3770,7 @@
 				<BuildingType>BUILDING_PALACE</BuildingType>
 				<BuildingType>BUILDING_C_N_EUROPEAN</BuildingType>
 				<BuildingType>BUILDING_C_AC_EUROPEAN</BuildingType>
+                <BuildingType>BUILDING_STORAGE_EMPIRE</BuildingType>
 			</FreeBuildings>
 			<InitialCivics>
 				<CivicType>CIVIC_ANARCHISM</CivicType>
@@ -3830,6 +3865,7 @@
 				<BuildingType>BUILDING_PALACE</BuildingType>
 				<BuildingType>BUILDING_C_N_AFRICAN</BuildingType>
 				<BuildingType>BUILDING_C_AC_AFRICAN</BuildingType>
+                <BuildingType>BUILDING_STORAGE_EMPIRE</BuildingType>
 			</FreeBuildings>
 			<InitialCivics>
 				<CivicType>CIVIC_ANARCHISM</CivicType>
@@ -3924,6 +3960,7 @@
 				<BuildingType>BUILDING_PALACE</BuildingType>
 				<BuildingType>BUILDING_C_N_OCEANIAN</BuildingType>
 				<BuildingType>BUILDING_C_AC_OCEANIAN</BuildingType>
+                <BuildingType>BUILDING_STORAGE_EMPIRE</BuildingType>
 			</FreeBuildings>
 			<InitialCivics>
 				<CivicType>CIVIC_ANARCHISM</CivicType>
@@ -4019,6 +4056,7 @@
 				<BuildingType>BUILDING_PALACE</BuildingType>
 				<BuildingType>BUILDING_C_N_EUROPEAN</BuildingType>
 				<BuildingType>BUILDING_C_AC_EUROPEAN</BuildingType>
+                <BuildingType>BUILDING_STORAGE_EMPIRE</BuildingType>
 			</FreeBuildings>
 			<InitialCivics>
 				<CivicType>CIVIC_ANARCHISM</CivicType>
@@ -4131,6 +4169,7 @@
 				<BuildingType>BUILDING_PALACE</BuildingType>
 				<BuildingType>BUILDING_C_N_NORTH_AMERICAN</BuildingType>
 				<BuildingType>BUILDING_C_AC_NORTH_AMERICAN</BuildingType>
+                <BuildingType>BUILDING_STORAGE_EMPIRE</BuildingType>
 			</FreeBuildings>
 			<InitialCivics>
 				<CivicType>CIVIC_ANARCHISM</CivicType>
@@ -4338,6 +4377,7 @@
 			<FreeBuildings>
 				<BuildingType>BUILDING_C_N_NEANDERTHAL</BuildingType>
 				<BuildingType>BUILDING_C_L_NEANDERTHAL</BuildingType>
+                <BuildingType>BUILDING_STORAGE_EMPIRE</BuildingType>
 			</FreeBuildings>
 			<FreeTechs>
 				<FreeTech>
@@ -4630,6 +4670,7 @@
 				<BuildingType>BUILDING_PALACE</BuildingType>
 				<BuildingType>BUILDING_C_N_OCEANIAN</BuildingType>
 				<BuildingType>BUILDING_C_AC_OCEANIAN</BuildingType>
+                <BuildingType>BUILDING_STORAGE_EMPIRE</BuildingType>
 			</FreeBuildings>
 			<InitialCivics>
 				<CivicType>CIVIC_ANARCHISM</CivicType>
@@ -4728,6 +4769,7 @@
 				<BuildingType>BUILDING_PALACE</BuildingType>
 				<BuildingType>BUILDING_C_N_OCEANIAN</BuildingType>
 				<BuildingType>BUILDING_C_AC_OCEANIAN</BuildingType>
+                <BuildingType>BUILDING_STORAGE_EMPIRE</BuildingType>
 			</FreeBuildings>
 			<InitialCivics>
 				<CivicType>CIVIC_ANARCHISM</CivicType>
@@ -4833,6 +4875,7 @@
 				<BuildingType>BUILDING_PALACE</BuildingType>
 				<BuildingType>BUILDING_C_N_SOUTH_AMERICAN</BuildingType>
 				<BuildingType>BUILDING_C_AC_SOUTH_AMERICAN</BuildingType>
+                <BuildingType>BUILDING_STORAGE_EMPIRE</BuildingType>
 			</FreeBuildings>
 			<InitialCivics>
 				<CivicType>CIVIC_ANARCHISM</CivicType>
@@ -4928,6 +4971,7 @@
 				<BuildingType>BUILDING_PALACE</BuildingType>
 				<BuildingType>BUILDING_C_N_MIDDLE_EASTERN</BuildingType>
 				<BuildingType>BUILDING_C_AC_MIDDLE_EASTERN</BuildingType>
+                <BuildingType>BUILDING_STORAGE_EMPIRE</BuildingType>
 			</FreeBuildings>
 			<InitialCivics>
 				<CivicType>CIVIC_ANARCHISM</CivicType>
@@ -5023,6 +5067,7 @@
 				<BuildingType>BUILDING_PALACE</BuildingType>
 				<BuildingType>BUILDING_C_N_SOUTH_AMERICAN</BuildingType>
 				<BuildingType>BUILDING_C_AC_SOUTH_AMERICAN</BuildingType>
+                <BuildingType>BUILDING_STORAGE_EMPIRE</BuildingType>
 			</FreeBuildings>
 			<InitialCivics>
 				<CivicType>CIVIC_ANARCHISM</CivicType>
@@ -5113,6 +5158,7 @@
 				<BuildingType>BUILDING_PALACE</BuildingType>
 				<BuildingType>BUILDING_C_N_OCEANIAN</BuildingType>
 				<BuildingType>BUILDING_C_AC_OCEANIAN</BuildingType>
+                <BuildingType>BUILDING_STORAGE_EMPIRE</BuildingType>
 			</FreeBuildings>
 			<InitialCivics>
 				<CivicType>CIVIC_ANARCHISM</CivicType>
@@ -5205,6 +5251,7 @@
 				<BuildingType>BUILDING_C_AC_NEANDERTHAL</BuildingType>
 				<BuildingType>BUILDING_C_N_EUROPEAN</BuildingType>
 				<BuildingType>BUILDING_C_AC_EUROPEAN</BuildingType>
+                <BuildingType>BUILDING_STORAGE_EMPIRE</BuildingType>
 			</FreeBuildings>
 			<InitialCivics>
 				<CivicType>CIVIC_ANARCHISM</CivicType>
@@ -5294,6 +5341,7 @@
 				<BuildingType>BUILDING_PALACE</BuildingType>
 				<BuildingType>BUILDING_C_N_SOUTH_AMERICAN</BuildingType>
 				<BuildingType>BUILDING_C_AC_SOUTH_AMERICAN</BuildingType>
+                <BuildingType>BUILDING_STORAGE_EMPIRE</BuildingType>
 			</FreeBuildings>
 			<InitialCivics>
 				<CivicType>CIVIC_ANARCHISM</CivicType>
