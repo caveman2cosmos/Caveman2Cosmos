@@ -8058,12 +8058,16 @@ int CvPlayer::calculateUnitSupply(int& iPaidUnits, int& iBaseSupplyCost) const
 	}
 	if (isNormalAI())
 	{
-		iMod +=
-		(
-			GC.getHandicapInfo(GC.getGame().getHandicapType()).getAIUnitSupplyPercent() - 100
-			+
-			GC.getHandicapInfo(GC.getGame().getHandicapType()).getAIPerEraModifier() * getCurrentEra()
-		);
+		CvHandicapInfo* handicap = &(GC.getHandicapInfo(GC.getGame().getHandicapType()));
+		if (handicap != NULL)
+		{
+			iMod +=
+				(
+					handicap->getAIUnitSupplyPercent() - 100
+					+
+					handicap->getAIPerEraModifier() * getCurrentEra()
+				);
+		}
 	}
 	if (iMod != 0)
 	{
@@ -8111,17 +8115,24 @@ int CvPlayer::getInflationMod10000() const
 		iInflationPerTurnTimes10000 = getModifiedIntValue(iInflationPerTurnTimes10000, iMod);
 	}
 
-	if (isNormalAI())
+	try
 	{
-		iMod = (
-			GC.getHandicapInfo(GC.getGame().getHandicapType()).getAIInflationPercent() - 100
-			+
-			GC.getHandicapInfo(GC.getGame().getHandicapType()).getAIPerEraModifier() * getCurrentEra()
-		);
-		if (iMod != 0)
+		if (isNormalAI())
 		{
-			iInflationPerTurnTimes10000 = getModifiedIntValue(iInflationPerTurnTimes10000, iMod);
+			CvHandicapInfo * handicap = &(GC.getHandicapInfo(GC.getGame().getHandicapType()));
+			if (handicap != NULL)
+			iMod = (
+				handicap->getAIInflationPercent() - 100
+				+
+				handicap->getAIPerEraModifier() * getCurrentEra()
+			);
+			if (iMod != 0)
+			{
+				iInflationPerTurnTimes10000 = getModifiedIntValue(iInflationPerTurnTimes10000, iMod);
+			}
 		}
+	}
+	catch (...) { // Exception on Load Save
 	}
 	return 10000 + iInflationPerTurnTimes10000;
 }
@@ -12084,11 +12095,11 @@ void CvPlayer::setTurnActive(bool bNewValue, bool bDoTurn)
 {
 	PROFILE_FUNC();
 
-	const bool bFinancialTrouble = AI_isFinancialTrouble();
+	bool bFinancialTrouble = false;
+	
 	if (m_bTurnActive != bNewValue)
 	{
 		m_bTurnActive = bNewValue;
-
 		if (bNewValue)
 		{
 			PROFILE("CvPlayer::setTurnActive.SetActive");
@@ -12104,7 +12115,10 @@ void CvPlayer::setTurnActive(bool bNewValue, bool bDoTurn)
 				sprintf(szOut, "Player %d Turn ON\n", getID());
 				gDLL->messageControlLog(szOut);
 			}
-
+			if (GC.getGame().getGameTurn() > 10)
+			{  // Calvitix, problem on Scenario creation
+				bFinancialTrouble = AI_isFinancialTrouble();
+			}
 			if (gPlayerLogLevel > 0)
 			{
 				PROFILE("CvPlayer::setTurnActive.SetActive.Log0");
@@ -12347,6 +12361,10 @@ void CvPlayer::setTurnActive(bool bNewValue, bool bDoTurn)
 
 			GC.getGame().changeNumGameTurnActive(-1);
 
+			if (GC.getGame().getGameTurn() > 10)
+			{  // Calvitix, problem on Scenario creation
+				bFinancialTrouble = AI_isFinancialTrouble();
+			}
 			if (bDoTurn)
 			{
 				PROFILE("CvPlayer::setTurnActive.SetInactive.doTurn");

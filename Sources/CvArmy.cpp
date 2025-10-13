@@ -328,14 +328,16 @@ void CvArmy::doTurn()
         }
 
         // 2) Une fois tous les groupes prêts, avancer ensemble (leader + suiveurs)
-        if (allReady)
+        if (allReady && m_pTargetPlot != NULL)
         {
             
             CvPlot* pRefPlot = pLeaderGroup->plot();
-
-            int distToTarget = plotDistance(pRefPlot->getX(), pRefPlot->getY(),
-                        m_pTargetPlot->getX(), m_pTargetPlot->getY());
-
+            int distToTarget = 99;
+            if (pRefPlot != NULL && m_pTargetPlot != NULL)
+            {
+                distToTarget = plotDistance(pRefPlot->getX(), pRefPlot->getY(),
+                            m_pTargetPlot->getX(), m_pTargetPlot->getY());
+            }
 
             if (distToTarget <= 20)
             {
