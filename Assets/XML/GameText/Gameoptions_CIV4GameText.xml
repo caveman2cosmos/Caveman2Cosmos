@@ -1723,12 +1723,4 @@
 		<French>Modifie les coûts des bâtiments pour mieux refléter leur taille, complexité et coût en matériaux.</French>
 		<Russian>Изменить расходы на постройку зданий, чтобы более точно отразить комплексность их конструкции и стоимость материалов.</Russian>
 	</TEXT>
-    <TEXT>
-        <Tag>TXT_KEY_GAMEOPTION_REALISTIC_ECONOMY</Tag>
-        <English>Advanced - Realistic economy</English>
-    </TEXT>
-    <TEXT>
-        <Tag>TXT_KEY_GAMEOPTION_REALISTIC_ECONOMY_HELP</Tag>
-        <English>Resources now provide local and global bonuses to your empire. Buying 1 stone will now provide 1 hammer for every city in your empire. Working 1 stone will now give 2 hammers to the local city and 1 to every city in your empire.</English>
-    </TEXT>
 </Civ4GameText>

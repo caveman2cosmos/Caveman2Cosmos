@@ -672,13 +672,6 @@
 			<bDefault>0</bDefault>
 			<bVisible>1</bVisible>
 		</GameOptionInfo>
-        <GameOptionInfo>
-            <Type>GAMEOPTION_REALISTIC_ECONOMY</Type>
-            <Description>TXT_KEY_GAMEOPTION_REALISTIC_ECONOMY</Description>
-            <Help>TXT_KEY_GAMEOPTION_REALISTIC_ECONOMY_HELP</Help>
-            <bDefault>0</bDefault>
-            <bVisible>1</bVisible>
-        </GameOptionInfo>
 		<!-- Challenge -->
 		<GameOptionInfo>
 			<Type>GAMEOPTION_CHALLENGE_CUT_LOSERS</Type>
