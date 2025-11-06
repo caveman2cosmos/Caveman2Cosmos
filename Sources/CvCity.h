@@ -875,7 +875,6 @@ public:
 	int getBaseYieldRateFromBuilding100(const YieldTypes eIndex, const BuildingTypes eType) const;
 	int getAdditionalYieldByBuilding(YieldTypes eIndex, BuildingTypes eType, bool bFilter = false) const;
 	int getAdditionalExtraYieldByBuilding(YieldTypes eIndex, BuildingTypes eType) const;
-	int getNumVicinityBonuses(BonusTypes eBonus) const;
 	int getAdditionalBaseYieldByBuilding(YieldTypes eIndex, BuildingTypes eType) const;
 	int getAdditionalBaseYieldModifierByBuilding(YieldTypes eIndex, BuildingTypes eType, bool bFilter = false) const;
 

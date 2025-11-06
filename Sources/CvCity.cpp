@@ -10994,26 +10994,6 @@ int CvCity::getAdditionalBaseYieldByBuilding(YieldTypes eIndex, BuildingTypes eB
 	return iBaseYield;
 }
 
-int CvCity::getNumVicinityBonuses(BonusTypes eBonus) const
-{
-    int iCount = 0;
-
-    for (int i = 0; i < getNumCityPlots(); ++i)
-    {
-        CvPlot* pPlot = plotCity(getX(), getY(), i);
-        if (pPlot != NULL
-            && pPlot->getBonusType() == eBonus
-            && pPlot->getOwner() == getOwner()
-            && pPlot->isHasValidBonus()
-            && pPlot->isConnectedTo(this))
-        {
-            ++iCount;
-        }
-    }
-
-    return iCount;
-}
-
 int CvCity::getAdditionalExtraYieldByBuilding(YieldTypes eIndex, BuildingTypes eBuilding) const
 {
 	PROFILE_EXTRA_FUNC();
@@ -11082,35 +11062,16 @@ int CvCity::getAdditionalExtraYieldByBuilding(YieldTypes eIndex, BuildingTypes e
 //		}
 //	}
 
-    //Murdermesa First if checks for resource duplicates (advanced_economy option), else unique resource only (old way)
 	for (int iI = 0; iI < GC.getNumBonusInfos(); ++iI)
     {
        if (eBuilding == (BuildingTypes)GC.getInfoTypeForString("BUILDING_STORAGE"))
        {
-           int iVicinityCount = getNumVicinityBonuses((BonusTypes)iI);
            int iBonusCount = GET_PLAYER(getOwner()).getNumAvailableBonuses((BonusTypes)iI);
 
            if (iBonusCount > 0)
            {
                // Add empire-wide bonus yields
                iExtraYield += iBonusCount * building.getBonusYieldChanges(iI, eIndex);
-           }
-
-           if (iVicinityCount > 0 && iBonusCount > 0)
-           {
-               int iVicinityYield = building.getVicinityBonusYieldChanges(iI, eIndex);
-
-               // If more local (vicinity) resources than connected empire ones → reduce proportionally
-               if (iVicinityCount > iBonusCount)
-               {
-                   float fRatio = (float)iBonusCount / (float)iVicinityCount;
-                   iExtraYield += (int)(iVicinityCount * iVicinityYield * fRatio + 0.5f);
-               }
-               else
-               {
-                   // Otherwise, add full vicinity yield
-                   iExtraYield += iVicinityCount * iVicinityYield;
-               }
            }
        }
         else
