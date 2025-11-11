@@ -2503,7 +2503,7 @@ def getGreedUnit(CyPlayer, CyPlot):
 	iBestUnit = -1
 	for iUnit in xrange(GC.getNumUnitInfos()):
 		CvUnitInfo = GC.getUnitInfo(iUnit)
-		if CvUnitInfo.getMaxGlobalInstances() + 1 or CvUnitInfo.getMaxPlayerInstances() + 1:
+		if CvUnitInfo.getMaxGlobalInstances() != -1 or CvUnitInfo.getMaxPlayerInstances() != -1:
 			continue
 		if CvUnitInfo.getDomainType() == DomainTypes.DOMAIN_LAND and CyPlayer.canTrain(iUnit, False, False):
 			if CvUnitInfo.getPrereqAndBonus() == iBonus or iBonus in CvUnitInfo.getPrereqOrBonuses():
@@ -5962,6 +5962,8 @@ def triggerNewWorldCities(argsList):
 		iBestStrength = 0
 		for iUnit in xrange(iNumUnits):
 			CvUnitInfo = GC.getUnitInfo(iUnit)
+			if CvUnitInfo.getMaxGlobalInstances() != -1 or CvUnitInfo.getMaxPlayerInstances() != -1:
+				continue
 			if CvUnitInfo.getDomainType() != DomainTypes.DOMAIN_LAND or CvUnitInfo.getCombat() <= iBestStrength:
 				continue
 			if CyCity.canTrain(iUnit, False, False, False, False):
