@@ -22,7 +22,7 @@ def convertToStr(txt):
 			if ordinal > 255:
 				txt = txt[:i] + '?' + txt[i+1:]
 			i += 1
-		 # Toffer - "iso8859" = "latin-1". Tried UTF-8 here, caused problem for german characters like "�".
+		 # Toffer - "iso8859" = "latin-1". Tried UTF-8 here, caused problem for german characters like "ß".
 		return txt.encode("iso8859")
 	return txt
 
@@ -31,12 +31,12 @@ def convertToAscii(txt):
 	txt = convertToStr(txt)
 	# convert to ascii equivalent where possible.
 	accent = [
-		('�', 'a'), ('�', 'a'), ('�', 'a'),
-		('�', 'e'), ('�', 'e'), ('�', 'e'),
-		('�', 'u'), ('�', 'u'), ('�', 'u'),
-		('�', 'o'), ('�', 'o'), ('�', 'o'),
-		('�', 'c'), ('�', 'i'), ('�', 'i'),
-		('�', 'ss')
+		('à', 'a'), ('ä', 'a'), ('â', 'a'),
+		('é', 'e'), ('è', 'e'), ('ê', 'e'),
+		('ù', 'u'), ('û', 'u'), ('ü', 'u'),
+		('ô', 'o'), ('õ', 'o'), ('ö', 'o'),
+		('ç', 'c'), ('î', 'i'), ('ï', 'i'),
+		('ß', 'ss')
 	]
 	while accent:
 		a, b = accent.pop()

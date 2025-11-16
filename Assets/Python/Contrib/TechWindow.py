@@ -149,14 +149,14 @@ class CvTechSplashScreen:
 		screen.setStyle(pnl, "Panel_Black25_Style")
 
 
-#---Eingef�gt ENDE -------------------------------------------------
+#---Eingefügt ENDE -------------------------------------------------
 
 		# Allows Panel
 		panelName = self.getNextWidgetName()
 		screen.addPanel(panelName, "", "", False, True, self.X_ALLOWS_PANEL+self.iMarginSpace, self.Y_ALLOWS_PANEL, self.W_ALLOWS_PANEL-(self.iMarginSpace * 2), self.H_ALLOWS_PANEL, PanelStyles.PANEL_STYLE_IN)
 		screen.setStyle(panelName, "Panel_Black25_Style")
 
-#---Eingef�gt START - kann komplett gel�scht werden-----------------
+#---Eingefügt START - kann komplett gelöscht werden-----------------
 		# Allows Panel2
 		panelName2 = "SIR2"
 		screen.addPanel(panelName2, "", "", False, True, self.X_ALLOWS_PANEL+self.iMarginSpace, self.Y_ALLOWS_PANEL2, self.W_ALLOWS_PANEL-(self.iMarginSpace * 2), self.H_ALLOWS_PANEL, PanelStyles.PANEL_STYLE_IN)
@@ -171,7 +171,7 @@ class CvTechSplashScreen:
 		panelName4 = "SIR4"
 		screen.addPanel(panelName4, "", "", False, True, self.X_ALLOWS_PANEL+self.iMarginSpace, self.Y_ALLOWS_PANEL4, self.W_ALLOWS_PANEL-(self.iMarginSpace * 2), self.H_ALLOWS_PANEL, PanelStyles.PANEL_STYLE_IN)
 		screen.setStyle(panelName4, "Panel_Black25_Style")
-#---Eingef�gt ENDE -------------------------------------------------
+#---Eingefügt ENDE -------------------------------------------------
 
 		# Add Contents
 
@@ -201,7 +201,7 @@ class CvTechSplashScreen:
 		szSpecialText = CyGameTextMgr().getTechHelp(self.iTech, True, False, False, True, -1)[1:]
 		screen.addMultilineText(listName, szSpecialText, self.X_SPECIAL_PANEL+20, self.Y_SPECIAL_PANEL+20, self.W_SPECIAL_PANEL-50, self.H_SPECIAL_PANEL-30, WidgetTypes.WIDGET_GENERAL, -1, -1, 1<<0)
 
-#---Eingef�gt START - kann komplett gel�scht werden --------------
+#---Eingefügt START - kann komplett gelöscht werden --------------
 		# Allows -> LeadsTo
 		szAllowsTitleDescSIR = "<font=3b>" + TRNSLTR.getText("TXT_KEY_PEDIA_LEADS_TO", ()) + ":"
 		screen.setText("AllowsTitleSIR", "", szAllowsTitleDescSIR, 1<<0, self.X_ALLOWS_PANEL + self.iMarginSpace, self.Y_ALLOWS_PANEL4 - 20, 0, FontTypes.TITLE_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1)
@@ -276,7 +276,7 @@ class CvTechSplashScreen:
 			if GC.getCivicInfo(j).getTechPrereq() == self.iTech:
 				screen.attachImageButton(panelName3, "", GC.getCivicInfo(j).getButton(), GenericButtonSizes.BUTTON_SIZE_CUSTOM, WidgetTypes.WIDGET_PEDIA_JUMP_TO_CIVIC, j, 1, False)
 
-#---Eingef�gt ENDE ------------------------------------------------
+#---Eingefügt ENDE ------------------------------------------------
 
 	# returns a unique ID for a widget in this screen
 	def getNextWidgetName(self):
