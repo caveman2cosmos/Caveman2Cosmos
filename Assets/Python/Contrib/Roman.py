@@ -26,7 +26,7 @@ RomanNumberMap = (
 	('IV',   4),
 	('I',    1)
 )
-# Makes the Number into RomsnNumber
+# Makes the Number into RomanNumber
 def toRoman(Number):
 	"""convert integer to Roman numeral"""
 

@@ -21,7 +21,6 @@ class BugACOOptionsTab(BugOptionsTab.BugOptionsTab):
 
 		left, right = self.addTwoColumnLayout(screen, column, "Page", True)
 
-		#self.addLabel(screen, left, "ACO", "Advanced Combat Odds:")
 		self.addCheckbox(screen, left, "ACO__Enabled")
 		self.addSpacer(screen, left, "ACO_Tab0")
 

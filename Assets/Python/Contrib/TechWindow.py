@@ -58,8 +58,6 @@ class CvTechSplashScreen:
 
 		self.W_ICON = 96 # 90
 		self.H_ICON = 96 # 90
-#		self.X_ICON = self.X_UPPER_PANEL + 134
-#		self.Y_ICON = self.Y_UPPER_PANEL + (self.H_UPPER_PANEL / 2) - (self.H_ICON / 2) + 17
 
 		self.X_ICON_PANEL = self.X_UPPER_PANEL + self.iMarginSpace + 2
 		self.Y_ICON_PANEL = self.Y_UPPER_PANEL + self.iMarginSpace + 30
@@ -70,10 +68,8 @@ class CvTechSplashScreen:
 		self.Y_ICON = self.Y_ICON_PANEL + self.H_ICON_PANEL / 2 - self.H_ICON / 2
 
 		self.X_QUOTE = 550
-#		self.Y_QUOTE = self.Y_UPPER_PANEL + self.iMarginSpace + 36
 		self.Y_QUOTE = self.Y_ICON - 25
 		self.W_QUOTE = 455
-#		self.H_QUOTE = self.H_UPPER_PANEL - (self.iMarginSpace * 2) - 38
 		self.H_QUOTE = 135
 
 #---GeÃ¤ndert START - siehe original Datei -----------------
@@ -134,9 +130,6 @@ class CvTechSplashScreen:
 
 		# Create panels
 
-		# Main Panel
-		# screen.addPanel("TechSplashMainPanel", "", "", True, True, self.X_MAIN_PANEL, self.Y_MAIN_PANEL, self.W_MAIN_PANEL, self.H_MAIN_PANEL, PanelStyles.PANEL_STYLE_MAIN)
-
 		# Icon Panel
 		pnl = "IconPanelGlow"
 		screen.addPanel(pnl, "", "", True, True, self.X_ICON_PANEL, self.Y_ICON_PANEL, self.W_ICON_PANEL, self.H_ICON_PANEL, PanelStyles.PANEL_STYLE_MAIN_TAN15)
@@ -156,14 +149,14 @@ class CvTechSplashScreen:
 		screen.setStyle(pnl, "Panel_Black25_Style")
 
 
-#---Eingefügt ENDE -------------------------------------------------
+#---Eingefï¿½gt ENDE -------------------------------------------------
 
 		# Allows Panel
 		panelName = self.getNextWidgetName()
 		screen.addPanel(panelName, "", "", False, True, self.X_ALLOWS_PANEL+self.iMarginSpace, self.Y_ALLOWS_PANEL, self.W_ALLOWS_PANEL-(self.iMarginSpace * 2), self.H_ALLOWS_PANEL, PanelStyles.PANEL_STYLE_IN)
 		screen.setStyle(panelName, "Panel_Black25_Style")
 
-#---Eingefügt START - kann komplett gelöscht werden-----------------
+#---Eingefï¿½gt START - kann komplett gelï¿½scht werden-----------------
 		# Allows Panel2
 		panelName2 = "SIR2"
 		screen.addPanel(panelName2, "", "", False, True, self.X_ALLOWS_PANEL+self.iMarginSpace, self.Y_ALLOWS_PANEL2, self.W_ALLOWS_PANEL-(self.iMarginSpace * 2), self.H_ALLOWS_PANEL, PanelStyles.PANEL_STYLE_IN)
@@ -178,7 +171,7 @@ class CvTechSplashScreen:
 		panelName4 = "SIR4"
 		screen.addPanel(panelName4, "", "", False, True, self.X_ALLOWS_PANEL+self.iMarginSpace, self.Y_ALLOWS_PANEL4, self.W_ALLOWS_PANEL-(self.iMarginSpace * 2), self.H_ALLOWS_PANEL, PanelStyles.PANEL_STYLE_IN)
 		screen.setStyle(panelName4, "Panel_Black25_Style")
-#---Eingefügt ENDE -------------------------------------------------
+#---Eingefï¿½gt ENDE -------------------------------------------------
 
 		# Add Contents
 
@@ -208,7 +201,7 @@ class CvTechSplashScreen:
 		szSpecialText = CyGameTextMgr().getTechHelp(self.iTech, True, False, False, True, -1)[1:]
 		screen.addMultilineText(listName, szSpecialText, self.X_SPECIAL_PANEL+20, self.Y_SPECIAL_PANEL+20, self.W_SPECIAL_PANEL-50, self.H_SPECIAL_PANEL-30, WidgetTypes.WIDGET_GENERAL, -1, -1, 1<<0)
 
-#---Eingefügt START - kann komplett gelöscht werden --------------
+#---Eingefï¿½gt START - kann komplett gelï¿½scht werden --------------
 		# Allows -> LeadsTo
 		szAllowsTitleDescSIR = "<font=3b>" + TRNSLTR.getText("TXT_KEY_PEDIA_LEADS_TO", ()) + ":"
 		screen.setText("AllowsTitleSIR", "", szAllowsTitleDescSIR, 1<<0, self.X_ALLOWS_PANEL + self.iMarginSpace, self.Y_ALLOWS_PANEL4 - 20, 0, FontTypes.TITLE_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1)
@@ -283,7 +276,7 @@ class CvTechSplashScreen:
 			if GC.getCivicInfo(j).getTechPrereq() == self.iTech:
 				screen.attachImageButton(panelName3, "", GC.getCivicInfo(j).getButton(), GenericButtonSizes.BUTTON_SIZE_CUSTOM, WidgetTypes.WIDGET_PEDIA_JUMP_TO_CIVIC, j, 1, False)
 
-#---Eingefügt ENDE ------------------------------------------------
+#---Eingefï¿½gt ENDE ------------------------------------------------
 
 	# returns a unique ID for a widget in this screen
 	def getNextWidgetName(self):

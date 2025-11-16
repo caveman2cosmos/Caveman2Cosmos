@@ -14,16 +14,3 @@ def onPlotRevealed(argsList):
 	iTeam = argsList[1]
 
 	NaturalWonders.NaturalWonders().checkReveal(pPlot, iTeam)
-
-'''
-def onCityBuilt(argsList):
-	city = argsList[0]
-
-	NaturalWonders.NaturalWonders().placeWonderBuilding(city)
-
-def onCityRazed(argsList):
-	city, iPlayer = argsList
-	iOwner = city.findHighestCulture()
-
-	NaturalWonders.NaturalWonders().findNewCity(city)
-'''

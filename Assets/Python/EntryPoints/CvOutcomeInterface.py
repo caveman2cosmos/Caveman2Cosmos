@@ -44,7 +44,6 @@ def doRemoveWVSlavery(argsList):
 		iUnitFreedSlave = GC.getInfoTypeForString("UNIT_FREED_SLAVE")
 		iUnitEntertain = GC.getInfoTypeForString("UNIT_STORY_TELLER")
 		iUnitMerCaravan = GC.getInfoTypeForString("UNIT_EARLY_MERCHANT_C2C")
-		#iUnitFoodMerchant = GC.getInfoTypeForString("UNIT_EARLY_FOOD_MERCHANT_C2C")
 		iUnitHealth = GC.getInfoTypeForString("UNIT_HEALER")
 
 		bMessage = iPlayer == GAME.getActivePlayer()

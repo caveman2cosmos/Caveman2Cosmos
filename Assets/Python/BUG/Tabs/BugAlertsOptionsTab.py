@@ -57,9 +57,6 @@ class BugAlertsOptionsTab(BugOptionsTab.BugOptionsTab):
 		self.addCheckbox(screen, center, "MoreCiv4lerts__PermanentAllianceTrade")
 		self.addCheckbox(screen, center, "MoreCiv4lerts__VassalTrade")
 		self.addCheckbox(screen, center, "MoreCiv4lerts__PeaceTrade")
-		#RevolutionDCM start - extra civlerts
-		#self.addCheckbox(screen, center, "MoreCiv4lerts__WarTrade")
-		#RevolutionDCM end
 		self.addCheckbox(screen, center, "MoreCiv4lerts__SurrenderTrade")
 
 		# Trades

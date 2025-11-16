@@ -122,8 +122,6 @@ def updateGraphics():
 
 	RevUtils.changeHuman(iHuman, iSwitchTo)
 
-	#GAME.setAIAutoPlay(0)
-
 # Chooser window for switching human player
 def changeHumanPopup(bDied=False):
 	popup = CyPopup(RevDefs.changeHumanPopup, EventContextTypes.EVENTCONTEXT_ALL, True)
@@ -166,27 +164,3 @@ def changeHumanHandler(playerID, netUserData, popupReturn):
 	RevUtils.changeHuman(newHumanIdx, oldHumanIdx)
 	print "	CP: Active player is now %d" % GAME.getActivePlayer()
 	CyInterface().addImmediateMessage("You now control the %s"%(newPlayer.getCivilizationDescription(0)),"")
-
-
-##def changeCiv( playerIdx, newCivType, newLeaderType, teamIdx = -1 ):
-##	# Changes specified players civ, leader and/or team
-##	# Does not change isHuman setting
-##
-##	player = GC.getPlayer(playerIdx)
-##	success = GAME.changePlayer( playerIdx, newCivType, newLeaderType, teamIdx, player.isHuman(), True )
-##
-##	#GAME.convertUnits( playerIdx )
-##
-##	return success
-##
-##def changeHuman( newHumanIdx, oldHumanIdx ):
-##
-##	newPlayer = GC.getPlayer(newHumanIdx)
-##	oldPlayer = GC.getPlayer(oldHumanIdx)
-##
-##	GAME.setActivePlayer( newHumanIdx, False )
-##	success = GAME.changePlayer( newHumanIdx, newPlayer.getCivilizationType(), newPlayer.getLeaderType(), -1, True, False )
-##	if( success ):
-##		success = GAME.changePlayer( oldHumanIdx, oldPlayer.getCivilizationType(), oldPlayer.getLeaderType(), -1, False, False )
-##
-##	return success

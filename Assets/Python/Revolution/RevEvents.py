@@ -269,7 +269,6 @@ def onSetPlayerAlive(argsList):
 	if iPlayerID == GAME.getActivePlayer() and GAME.getAIAutoPlay(iPlayerID) == 0:
 		try:
 			GAME.setAIAutoPlay(iPlayerID, 1)
-			#ChangePlayer.changeHumanPopup(True)
 		except: pass
 
 
@@ -396,7 +395,6 @@ def onCityBuilt( argsList ):
 			city.setHasReligion(relID, True, False, False)
 
 def onCityAcquired(argsList):
-	#iOwnerOld, iOwnerNew, city, bConquest, bTrade, bAutoRaze = argsList
 
 	checkRebelBonuses( argsList )
 	updateRevolutionIndices( argsList )
@@ -422,15 +420,6 @@ def checkRebelBonuses(argsList):
 	# TODO: Handle case where city is acquired by disorganized rebels
 	if iOwnerNew == GC.getBARBARIAN_PLAYER() and pCity.getRevolutionCounter() > 0:
 		print "[REV] City %s captured by barb rebels!" % pCity.getName()
-		'''
-		oldOwner = GC.getPlayer(iOwnerOld)
-
-		if iOwnerOld != orgOwnerID:
-			orgOwner = GC.getPlayer(orgOwnerID)
-
-		if pCity.countTotalCultureTimes100() > 10000 and iOwnerOld != pCity.findHighestCulture():
-			cultOwner = GC.getPlayer(pCity.findHighestCulture())
-		'''
 
 	elif newOwnerCiv == RevData.getCityVal(pCity, 'RevolutionCiv'):
 

@@ -22,7 +22,7 @@ def convertToStr(txt):
 			if ordinal > 255:
 				txt = txt[:i] + '?' + txt[i+1:]
 			i += 1
-		 # Toffer - "iso8859" = "latin-1". Tried UTF-8 here, caused problem for german characters like "ß".
+		 # Toffer - "iso8859" = "latin-1". Tried UTF-8 here, caused problem for german characters like "ï¿½".
 		return txt.encode("iso8859")
 	return txt
 
@@ -31,12 +31,12 @@ def convertToAscii(txt):
 	txt = convertToStr(txt)
 	# convert to ascii equivalent where possible.
 	accent = [
-		('à', 'a'), ('ä', 'a'), ('â', 'a'),
-		('é', 'e'), ('è', 'e'), ('ê', 'e'),
-		('ù', 'u'), ('û', 'u'), ('ü', 'u'),
-		('ô', 'o'), ('õ', 'o'), ('ö', 'o'),
-		('ç', 'c'), ('î', 'i'), ('ï', 'i'),
-		('ß', 'ss')
+		('ï¿½', 'a'), ('ï¿½', 'a'), ('ï¿½', 'a'),
+		('ï¿½', 'e'), ('ï¿½', 'e'), ('ï¿½', 'e'),
+		('ï¿½', 'u'), ('ï¿½', 'u'), ('ï¿½', 'u'),
+		('ï¿½', 'o'), ('ï¿½', 'o'), ('ï¿½', 'o'),
+		('ï¿½', 'c'), ('ï¿½', 'i'), ('ï¿½', 'i'),
+		('ï¿½', 'ss')
 	]
 	while accent:
 		a, b = accent.pop()
@@ -78,21 +78,14 @@ def floatToString(fFloat, iMaxDecimal=2):
 	return szString
 
 def evalTextWidth(iMax, uFont, szTxt):
-	#print "evalTextWidth: " + szTxt
 	iWidth = CyIF.determineWidth(uFont + szTxt)
-	#print ("iMax", iMax)
-	#print ("iWidth", iWidth)
 	if iWidth > iMax:
 		iChange = iCrop = len(szTxt)/2
 		iChange = iCrop/2
 		iMaxCrop = 0
 		bLast = False
 		while True:
-			#print ("iCrop", iCrop)
-			#print szTxt[:iCrop]
 			iWidth = CyIF.determineWidth(uFont + szTxt[:iCrop])
-			#print ("iWidth", iWidth)
-			#print ("iChange", iChange)
 			if iWidth > iMax:
 				iCrop -= iChange
 			else:
@@ -111,17 +104,3 @@ def evalTextWidth(iMax, uFont, szTxt):
 			else:
 				return uFont + szTxt[:iMaxCrop] + "."
 	return uFont + szTxt
-
-'''
-def stripLiterals(txt, literal):
-	# The literal argument can be: "font", "color", "link", etc. Caps lock does matter.
-	start = "<%s=" % literal
-	txt = txt.replace("</%s>" % literal, "")
-	i1 = txt.find(start)
-	if i1 > -1:
-		while i1 > -1:
-			i2 = txt.find(">", i1)
-			txt = txt[:i1] + txt[i2+1:]
-			i1 = txt.find(start)
-	return txt
-'''

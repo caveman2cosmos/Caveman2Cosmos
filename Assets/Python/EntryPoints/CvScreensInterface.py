@@ -39,8 +39,6 @@ def toggleSetScreenOn(argsList):
 	print "SCREEN %s TURNED ON" %(argsList[0])
 	g_iScreenActive = argsList[0]
 
-#diplomacyScreen = CvDiplomacy.CvDiplomacy()
-
 mainInterface = CvMainInterface.CvMainInterface()
 def showMainInterface():
 	print "showMainInterface"

@@ -166,7 +166,6 @@ class CvReligionScreen:
 			self.Y_RELIGION_AREA = 84 - 40
 			self.W_RELIGION_AREA = 934
 			self.H_RELIGION_AREA = 175 + 75
-#			screen.addPanel(szArea, "", "", False, True, self.X_RELIGION_AREA, self.Y_RELIGION_AREA - 40, self.W_RELIGION_AREA, self.H_RELIGION_AREA + 80, PanelStyles.PANEL_STYLE_MAIN)
 			if AdvisorOpt.isShowAllReligions():
 				self.RELIGIONS = range(self.NUM_RELIGIONS)
 			elif AdvisorOpt.isShowFoundedReligions():
@@ -217,8 +216,6 @@ class CvReligionScreen:
 				screen.setImageButtonAt(szButtonName, szArea, GC.getReligionInfo(iRel).getButtonDisabled(), self.X_SCROLLABLE_RELIGION_AREA + xLoop - 25, self.Y_SCROLLABLE_RELIGION_AREA + 5, self.BUTTON_SIZE, self.BUTTON_SIZE, WidgetTypes.WIDGET_GENERAL, -1, -1)
 			szName = self.getReligionTextName(iRel)
 			szLabel = GC.getReligionInfo(iRel).getDescription()
-#			if (self.iReligionSelected == iRel):
-#				szLabel = localText.changeTextColor(szLabel, GC.getCOLOR_YELLOW())
 			screen.setLabelAt(szName, szArea, szLabel, 1<<2, self.X_SCROLLABLE_RELIGION_AREA + xLoop, self.Y_RELIGION_NAME, self.DZ, FontTypes.GAME_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1)
 			xLoop += self.DX_RELIGION
 
@@ -227,8 +224,6 @@ class CvReligionScreen:
 
 		szName = self.getReligionTextName(self.NUM_RELIGIONS)
 		szLabel = localText.getText("TXT_KEY_RELIGION_SCREEN_NO_STATE", ())
-#		if (self.iReligionSelected == self.NUM_RELIGIONS):
-#			szLabel = localText.changeTextColor(szLabel, GC.getCOLOR_YELLOW())
 		screen.setLabelAt(szName, szArea, szLabel, 1<<2,  self.X_SCROLLABLE_RELIGION_AREA + xLoop, self.Y_RELIGION_NAME, self.DZ, FontTypes.GAME_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1)
 
 
@@ -251,8 +246,6 @@ class CvReligionScreen:
 				screen.setLabelAt("", szArea, szFounded, 1<<2, xLoop, self.Y_FOUNDED, self.DZ, FontTypes.SMALL_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1)
 			xLoop += self.DX_RELIGION
 
-#		screen.setLabelAt("", szArea, "", 1<<2, xLoop, self.Y_FOUNDED, self.DZ, FontTypes.SMALL_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1)
-
 		# Holy City...
 		screen.setLabelAt("", szArea, localText.getText("TXT_KEY_RELIGION_SCREEN_HOLY_CITY", ()), 1<<0, self.LEFT_EDGE_TEXT, self.Y_HOLY_CITY, self.DZ, FontTypes.SMALL_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1)
 
@@ -270,9 +263,6 @@ class CvReligionScreen:
 					szFounded = pHolyCity.getName()
 					screen.setLabelAt("", szArea, u"(%s)" % GC.getPlayer(pHolyCity.getOwner()).getCivilizationAdjective(0), 1<<2, xLoop, self.Y_HOLY_CITY+8, self.DZ, FontTypes.SMALL_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1)
 					screen.setLabelAt("", szArea, szFounded, 1<<2, xLoop, self.Y_HOLY_CITY-8, self.DZ, FontTypes.SMALL_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1)
-#			else:
-#				szFounded = "-"
-#				screen.setLabelAt("", szArea, szFounded, 1<<2, xLoop, self.Y_HOLY_CITY, self.DZ, FontTypes.SMALL_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1)
 			xLoop += self.DX_RELIGION
 
 		# Influence...
@@ -283,9 +273,6 @@ class CvReligionScreen:
 			if GAME.getReligionGameTurnFounded(iRel) >= 0:
 				szFounded = str(GAME.calculateReligionPercent(iRel)) + "%"
 				screen.setLabelAt("", szArea, szFounded, 1<<2, xLoop, self.Y_INFLUENCE, self.DZ, FontTypes.SMALL_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1)
-#			else:
-#				szFounded = "-"
-#				screen.setLabelAt("", szArea, szFounded, 1<<2, xLoop, self.Y_INFLUENCE, self.DZ, FontTypes.SMALL_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1)
 			xLoop += self.DX_RELIGION
 
 		if AdvisorOpt.isReligious():
@@ -412,7 +399,6 @@ class CvReligionScreen:
 		if AdvisorOpt.isReligious():
 # Zappara start - make space for horizontal slider
 			screen.addPanel(self.AREA1_ID, "", "", True, True, self.X_RELIGION_AREA, self.Y_RELIGION_AREA + self.H_RELIGION_AREA + self.H_SCROLL_OFFSET + 3, self.W_RELIGION_AREA, self.H_CITY_AREA - self.H_SCROLL_OFFSET + 20, PanelStyles.PANEL_STYLE_MAIN)
-			#screen.addPanel(self.AREA1_ID, "", "", True, True, self.X_RELIGION_AREA, self.Y_RELIGION_AREA + self.H_RELIGION_AREA + 3, self.W_RELIGION_AREA, self.H_CITY_AREA, PanelStyles.PANEL_STYLE_MAIN)
 # Zappara end
 		else:
 			screen.addPanel(self.AREA1_ID, "", "", True, True, self.X_CITY1_AREA, self.Y_CITY_AREA, self.W_CITY_AREA, self.H_CITY_AREA, PanelStyles.PANEL_STYLE_MAIN)
@@ -598,7 +584,6 @@ class CvReligionScreen:
 				screen.hideScreen()
 				pPlayer = GC.getPlayer(inputClass.getData1())
 				pCity = pPlayer.getCity(inputClass.getData2())
-#				CyCamera().JustLookAtPlot(pCity.plot())
 
 				CyInterface().selectCity(pCity, True)
 

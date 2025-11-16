@@ -90,11 +90,9 @@ class DebugUtils:
 			popup.addListBoxString(unitsList[j][0], unitsList[j][1], 0)
 
 		# EditBox0 - Customize how many units to build
-		#popup.setBodyString("How many objects?")
 		popup.createPythonEditBox("1", "This allows you to create multiple units.", 0)
 
 		# Launch Popup
-		#popup.setSize(400, 600)
 		popup.launch(True, PopupStates.POPUPSTATE_IMMEDIATE)
 
 

@@ -325,57 +325,6 @@ class CvDiplomacy:
 		self.diploScreen.setAIString(AIString, args)
 		self.diploScreen.setAIComment(eComment)
 		self.determineResponses(eComment)
-#		self.performHeadAction(eComment) # We have static leaderhaeads
-
-	'''
-	def performHeadAction(self, eComment):
-
-		if eComment in (
-		GC.getInfoTypeForString("AI_DIPLOCOMMENT_NO_PEACE"),	GC.getInfoTypeForString("AI_DIPLOCOMMENT_REJECT"),
-		GC.getInfoTypeForString("AI_DIPLOCOMMENT_NO_DEAL"),		GC.getInfoTypeForString("AI_DIPLOCOMMENT_CANCEL_DEAL"),
-		GC.getInfoTypeForString("AI_DIPLOCOMMENT_REJECT_ASK"),	GC.getInfoTypeForString("AI_DIPLOCOMMENT_REJECT_DEMAND")
-		):
-			self.diploScreen.performHeadAction(LeaderheadAction.LEADERANIM_DISAGREE)
-
-		elif eComment in (GC.getInfoTypeForString("AI_DIPLOCOMMENT_ACCEPT"), GC.getInfoTypeForString("AI_DIPLOCOMMENT_TRY_THIS_DEAL")):
-			self.diploScreen.performHeadAction(LeaderheadAction.LEADERANIM_AGREE)
-
-		elif eComment in (
-		GC.getInfoTypeForString("AI_DIPLOCOMMENT_FIRST_CONTACT"),		GC.getInfoTypeForString("AI_DIPLOCOMMENT_GREETINGS"),
-		GC.getInfoTypeForString("AI_DIPLOCOMMENT_WORST_ENEMY"),			GC.getInfoTypeForString("AI_DIPLOCOMMENT_UNIT_BRAG"),
-		GC.getInfoTypeForString("AI_DIPLOCOMMENT_NUKES"),				GC.getInfoTypeForString("AI_DIPLOCOMMENT_OFFER_PEACE"),
-		GC.getInfoTypeForString("AI_DIPLOCOMMENT_OFFER_VASSAL"),		GC.getInfoTypeForString("AI_DIPLOCOMMENT_OFFER_CITY"),
-		GC.getInfoTypeForString("AI_DIPLOCOMMENT_OFFER_DEAL"),			GC.getInfoTypeForString("AI_DIPLOCOMMENT_GIVE_HELP"),
-		GC.getInfoTypeForString("AI_DIPLOCOMMENT_RELIGION_PRESSURE"),	GC.getInfoTypeForString("AI_DIPLOCOMMENT_CIVIC_PRESSURE"),
-		GC.getInfoTypeForString("AI_DIPLOCOMMENT_JOIN_WAR"),			GC.getInfoTypeForString("AI_DIPLOCOMMENT_STOP_TRADING"),
-		GC.getInfoTypeForString("AI_DIPLOCOMMENT_MAKE_PEACE_WITH"),		GC.getInfoTypeForString("AI_DIPLOCOMMENT_ASK_FOR_HELP"),
-		GC.getInfoTypeForString("AI_DIPLOCOMMENT_DEMAND_TRIBUTE")
-		):
-			self.diploScreen.performHeadAction(LeaderheadAction.LEADERANIM_GREETING)
-
-		elif eComment in (
-		GC.getInfoTypeForString("AI_DIPLOCOMMENT_ATTITUDE_PLAYER_FURIOUS"),	GC.getInfoTypeForString("AI_DIPLOCOMMENT_WORST_ENEMY_TRADING"),
-		GC.getInfoTypeForString("AI_DIPLOCOMMENT_HELP_REFUSED"),			GC.getInfoTypeForString("AI_DIPLOCOMMENT_DEMAND_REJECTED"),
-		GC.getInfoTypeForString("AI_DIPLOCOMMENT_RELIGION_DENIED"),			GC.getInfoTypeForString("AI_DIPLOCOMMENT_CIVIC_DENIED"),
-		GC.getInfoTypeForString("AI_DIPLOCOMMENT_JOIN_DENIED"),				GC.getInfoTypeForString("AI_DIPLOCOMMENT_STOP_DENIED")
-		):
-			self.diploScreen.performHeadAction(LeaderheadAction.LEADERANIM_FURIOUS)
-
-		elif eComment == GC.getInfoTypeForString("AI_DIPLOCOMMENT_ATTITUDE_PLAYER_ANNOYED"):
-			self.diploScreen.performHeadAction(LeaderheadAction.LEADERANIM_ANNOYED)
-
-		elif eComment == GC.getInfoTypeForString("AI_DIPLOCOMMENT_ATTITUDE_PLAYER_CAUTIOUS"):
-			self.diploScreen.performHeadAction(LeaderheadAction.LEADERANIM_CAUTIOUS)
-
-		elif eComment in (GC.getInfoTypeForString("AI_DIPLOCOMMENT_ATTITUDE_PLAYER_PLEASED"), GC.getInfoTypeForString("AI_DIPLOCOMMENT_SORRY")):
-			self.diploScreen.performHeadAction(LeaderheadAction.LEADERANIM_PLEASED)
-
-		elif eComment in (
-		GC.getInfoTypeForString("AI_DIPLOCOMMENT_ATTITUDE_PLAYER_FRIENDLY"), GC.getInfoTypeForString("AI_DIPLOCOMMENT_GLAD"),
-		GC.getInfoTypeForString("AI_DIPLOCOMMENT_THANKS")
-		):
-			self.diploScreen.performHeadAction(LeaderheadAction.LEADERANIM_FRIENDLY)
-	'''
 
 	def getDiplomacyComment(self, eComment):
 		"Function to get the user String"

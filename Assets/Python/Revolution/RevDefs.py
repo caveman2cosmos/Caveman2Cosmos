@@ -98,19 +98,6 @@ class RevoltData:
 
 		# Includes special info for this revolution type (from list below, where self.___ would be specialDataDict['___'])
 		self.specialDataDict = specialDataDict
-		# self.iRevPlayer = iRevPlayer
-		# self.bIsJoinWar = bIsJoinWar
-		# self.iJoinPlayer = iJoinPlayer
-		# self.iNewLeaderType = iNewLeaderType
-		# self.newLeaderName = newLeaderName
-		# self.bIsElection = bIsElection
-		# self.iNewCivic = iNewCivic
-		# self.iNewReligion = iNewReligion
-		# self.iHappiness = iHappiness
-		# self.iBuyOffCost = iBuyOffCost
-		# self.vassalStyle = vassalStyle
-		# self.bOfferPeace = bOfferPeace
-		# self.bSwitchToRevs
 
 		self.dict = self.toDict()
 
