@@ -146,13 +146,11 @@ class CvOptionsScreen:
 		# Voice Capture Dropdown
 		self.getTabControl().setValue("CaptureDeviceDropdownBox", UserProfile.getCaptureDeviceIndex() )
 		# Voice Capture Slider
-#   		self.getTabControl().setValue("CaptureVolumeSlider", UserProfile.getMaxCaptureVolume() - UserProfile.getCaptureVolume())
    		self.getTabControl().setValue("CaptureVolumeSlider", UserProfile.getCaptureVolume())
 
 		# Voice Playback Dropdown
 		self.getTabControl().setValue("PlaybackDeviceDropdownBox", UserProfile.getPlaybackDeviceIndex() )
 		# Voice Playback Slider
-#   		self.getTabControl().setValue("PlaybackVolumeSlider", UserProfile.getMaxPlaybackVolume() - UserProfile.getPlaybackVolume())
    		self.getTabControl().setValue("PlaybackVolumeSlider", UserProfile.getPlaybackVolume())
 
 		# Voice Chatting Checkbox
@@ -268,7 +266,6 @@ class CvOptionsScreen:
 
 		tab.attachVBox("GameHBox", "GameVBox1")
 		tab.setLayoutFlag("GameVBox1", "LAYOUT_SIZE_HEXPANDING")
-		#tab.attachVSeparator("GameHBox", "GameHBoxSeparator")
 		tab.attachVBox("GameHBox", "GameVBox2")
 		tab.setLayoutFlag("GameVBox2", "LAYOUT_SIZE_HEXPANDING")
 
@@ -293,7 +290,7 @@ class CvOptionsScreen:
 				szHelp = gc.getPlayerOptionsInfo(iOptionLoop).getHelp()
 				szCallbackFunction = "handleGameOptionsClicked"
 				szWidgetName = "GameOptionCheckBox_" + str(iOptionLoop)
-				bOptionOn = UserProfile.getPlayerOption(iOptionLoop)#gc.getPlayer(gc.getGame().getActivePlayer()).isOption(iOptionLoop)
+				bOptionOn = UserProfile.getPlayerOption(iOptionLoop)
 				if ((i+1) <= (PlayerOptionTypes.NUM_PLAYEROPTION_TYPES+1)/2):
 					vbox = "GameVBox1"
 				else:
@@ -540,8 +537,6 @@ class CvOptionsScreen:
 		tab.setLayoutFlag("VolumeVBox", "LAYOUT_SIZE_HEXPANDING")
 		tab.setLayoutFlag("VolumeVBox", "LAYOUT_SIZE_VEXPANDING")
 
-		#tab.attachLabel("VolumeVBox", "VolumeLabel", "VOLUME")
-
 		tab.attachPanel("VolumeVBox", "VolumePanel")
 		tab.setStyle("VolumePanel", "Panel_Tan15_Style")
 		tab.setLayoutFlag("VolumePanel", "LAYOUT_SIZE_HEXPANDING")
@@ -653,7 +648,6 @@ class CvOptionsScreen:
 		szWidgetName = "CaptureVolumeSlider"
 		iMin = 0
 		iMax = UserProfile.getMaxCaptureVolume()
-#		iInitialVal = iMax - UserProfile.getCaptureVolume()
 		iInitialVal = UserProfile.getCaptureVolume()
 		tab.attachHSlider("VoiceVBox", szWidgetName, self.callbackIFace, szCallbackFunction, szWidgetName, iMin, iMax, iInitialVal)
 		tab.setControlFlag(szWidgetName, "CF_SLIDER_FILL_UP")
@@ -675,7 +669,6 @@ class CvOptionsScreen:
 		szWidgetName = "PlaybackVolumeSlider"
 		iMin = 0
 		iMax = UserProfile.getMaxPlaybackVolume()
-#		iInitialVal = iMax - UserProfile.getPlaybackVolume()
 		iInitialVal = UserProfile.getPlaybackVolume()
 		tab.attachHSlider("VoiceVBox", szWidgetName, self.callbackIFace, szCallbackFunction, szWidgetName, iMin, iMax, iInitialVal)
 		tab.setControlFlag(szWidgetName, "CF_SLIDER_FILL_UP")
@@ -875,8 +868,6 @@ class CvOptionsScreen:
 		# Edit Box ProfileName
 		tab.attachLabel("ProfilePanelVBox","ProfilesName",localText.getText("TXT_KEY_OPTIONS_SCREEN_PROFILE_NAME", ()))	# Label
 
-
-		#szCallbackIFace = ""
 		szEditBoxDesc = UserProfile.getProfileName()
 		szCallbackFunction = "DummyCallback"
 		szWidgetName = "ProfileNameEditBox"

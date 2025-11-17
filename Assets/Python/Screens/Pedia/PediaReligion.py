@@ -33,7 +33,6 @@ class Page:
 		self.X_COL_3 = X_COL_1 + W_HALF_PP + 4
 
 		self.W_COL_1 = W_BASE - 4
-		#self.W_COL_2 = W_PEDIA_PAGE - W_BASE - H_TOP_ROW - 4
 		self.W_COL_3 = W_HALF_PP - 4
 
 		self.S_ICON = S_ICON = H_TOP_ROW - 10

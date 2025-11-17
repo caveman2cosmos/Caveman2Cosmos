@@ -75,7 +75,6 @@ class CvInfoScreen:
 			uFontEdge = "<font=2b>"
 
 		self.aFontList = aFontList = [uFontEdge] + SR.aFontList
-		# uFontEdge, uFont4b, uFont4, uFont3b, uFont3, uFont2b, uFont2, uFont1b, uFont1 = self.aFontList
 		uFont2b = aFontList[5]
 
 		self.H_PAGE = H_PAGE = yRes - 36 - H_BOT_PANEL + 8
