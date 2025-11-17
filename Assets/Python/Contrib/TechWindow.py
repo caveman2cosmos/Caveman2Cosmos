@@ -1,6 +1,6 @@
 ## TechWindowWide
 ##
-## Originally by SirRethcir: Techanzeige hinzugefÃ¼gt
+## Originally by SirRethcir: Techanzeige hinzugefügt
 ## Enhanced by Roamty, Caesium, Guarav
 ##
 ## Copyright (c) 2008 The BUG Mod.
@@ -72,7 +72,7 @@ class CvTechSplashScreen:
 		self.W_QUOTE = 455
 		self.H_QUOTE = 135
 
-#---GeÃ¤ndert START - siehe original Datei -----------------
+#---Geändert START - siehe original Datei -----------------
 		# Lower Panel
 
 		self.X_LOWER_PANEL = self.X_MAIN_PANEL + self.iMarginSpace
@@ -99,7 +99,7 @@ class CvTechSplashScreen:
 		self.Y_ALLOWS_PANEL2 = self.Y_SPECIAL_PANEL + self.H_ALLOWS_PANEL + self.H_ALLOWS_SPACE
 		self.Y_ALLOWS_PANEL3 = self.Y_SPECIAL_PANEL + 2 * (self.H_ALLOWS_PANEL + self.H_ALLOWS_SPACE)
 		self.Y_ALLOWS_PANEL4 = self.Y_SPECIAL_PANEL + 3 * (self.H_ALLOWS_PANEL + self.H_ALLOWS_SPACE)
-#---GeÃ¤ndert ENDE ------------------------------------------
+#---Geändert ENDE ------------------------------------------
 
 		# Contents
 
@@ -149,14 +149,14 @@ class CvTechSplashScreen:
 		screen.setStyle(pnl, "Panel_Black25_Style")
 
 
-#---EingefÃ¼gt ENDE -------------------------------------------------
+#---Eingefügt ENDE -------------------------------------------------
 
 		# Allows Panel
 		panelName = self.getNextWidgetName()
 		screen.addPanel(panelName, "", "", False, True, self.X_ALLOWS_PANEL+self.iMarginSpace, self.Y_ALLOWS_PANEL, self.W_ALLOWS_PANEL-(self.iMarginSpace * 2), self.H_ALLOWS_PANEL, PanelStyles.PANEL_STYLE_IN)
 		screen.setStyle(panelName, "Panel_Black25_Style")
 
-#---EingefÃ¼gt START - kann komplett gelÃ¶scht werden-----------------
+#---Eingefügt START - kann komplett gelöscht werden-----------------
 		# Allows Panel2
 		panelName2 = "SIR2"
 		screen.addPanel(panelName2, "", "", False, True, self.X_ALLOWS_PANEL+self.iMarginSpace, self.Y_ALLOWS_PANEL2, self.W_ALLOWS_PANEL-(self.iMarginSpace * 2), self.H_ALLOWS_PANEL, PanelStyles.PANEL_STYLE_IN)
@@ -171,7 +171,7 @@ class CvTechSplashScreen:
 		panelName4 = "SIR4"
 		screen.addPanel(panelName4, "", "", False, True, self.X_ALLOWS_PANEL+self.iMarginSpace, self.Y_ALLOWS_PANEL4, self.W_ALLOWS_PANEL-(self.iMarginSpace * 2), self.H_ALLOWS_PANEL, PanelStyles.PANEL_STYLE_IN)
 		screen.setStyle(panelName4, "Panel_Black25_Style")
-#---EingefÃ¼gt ENDE -------------------------------------------------
+#---Eingefügt ENDE -------------------------------------------------
 
 		# Add Contents
 
@@ -201,7 +201,7 @@ class CvTechSplashScreen:
 		szSpecialText = CyGameTextMgr().getTechHelp(self.iTech, True, False, False, True, -1)[1:]
 		screen.addMultilineText(listName, szSpecialText, self.X_SPECIAL_PANEL+20, self.Y_SPECIAL_PANEL+20, self.W_SPECIAL_PANEL-50, self.H_SPECIAL_PANEL-30, WidgetTypes.WIDGET_GENERAL, -1, -1, 1<<0)
 
-#---EingefÃ¼gt START - kann komplett gelÃ¶scht werden --------------
+#---Eingefügt START - kann komplett gelöscht werden --------------
 		# Allows -> LeadsTo
 		szAllowsTitleDescSIR = "<font=3b>" + TRNSLTR.getText("TXT_KEY_PEDIA_LEADS_TO", ()) + ":"
 		screen.setText("AllowsTitleSIR", "", szAllowsTitleDescSIR, 1<<0, self.X_ALLOWS_PANEL + self.iMarginSpace, self.Y_ALLOWS_PANEL4 - 20, 0, FontTypes.TITLE_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1)
@@ -216,7 +216,7 @@ class CvTechSplashScreen:
 				if self.iTech == iPrereq:
 					screen.attachImageButton(panelName4, "", GC.getTechInfo(j).getButton(), GenericButtonSizes.BUTTON_SIZE_CUSTOM, WidgetTypes.WIDGET_PEDIA_JUMP_TO_DERIVED_TECH, j, self.iTech, False)
 
-#---EingefÃ¼gt ENDE ------------------------------------------------
+#---Eingefügt ENDE ------------------------------------------------
 
 		# Units Enabled
 		szUnitsTitleDesc = "<font=3b>" + TRNSLTR.getText("TXT_KEY_PEDIA_UNITS_ENABLED", ()) + ":"
@@ -248,7 +248,7 @@ class CvTechSplashScreen:
 			if GC.getPromotionInfo(j).getTechPrereq() == self.iTech:
 				screen.attachImageButton(panelName3, "", GC.getPromotionInfo(j).getButton(), GenericButtonSizes.BUTTON_SIZE_CUSTOM, WidgetTypes.WIDGET_PEDIA_JUMP_TO_PROMOTION, j, 1, False)
 
-#---EingefÃ¼gt START - kann komplett gelÃ¶scht werden --------------
+#---Eingefügt START - kann komplett gelöscht werden --------------
 
 		# Improvements
 		for j in range(GC.getNumBuildInfos()):
@@ -276,7 +276,7 @@ class CvTechSplashScreen:
 			if GC.getCivicInfo(j).getTechPrereq() == self.iTech:
 				screen.attachImageButton(panelName3, "", GC.getCivicInfo(j).getButton(), GenericButtonSizes.BUTTON_SIZE_CUSTOM, WidgetTypes.WIDGET_PEDIA_JUMP_TO_CIVIC, j, 1, False)
 
-#---EingefÃ¼gt ENDE ------------------------------------------------
+#---Eingefügt ENDE ------------------------------------------------
 
 	# returns a unique ID for a widget in this screen
 	def getNextWidgetName(self):
