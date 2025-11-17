@@ -114,7 +114,6 @@ class CvDebugInfoScreen(CvGFCScreen.CvGFCScreen):
 
 			for y in range(self.iNumTeams):
 				pTeamX = gc.getTeam(x)
-				#pTeamY = gc.getTeam(y)
 
 				# if the same team
 				if x != y:
@@ -176,7 +175,6 @@ class CvDebugInfoScreen(CvGFCScreen.CvGFCScreen):
 				pPlayerY = gc.getPlayer(y)
 
 				pTeamX = gc.getTeam(pPlayerX.getTeam())
-				#pTeamY = gc.getTeam(pPlayerY.getTeam())
 
 				# if the same Player
 				if ( not x == y ):
@@ -373,7 +371,6 @@ class CvDebugInfoScreen(CvGFCScreen.CvGFCScreen):
 			loopRowData = []
 
 		# Add last row of totals:
-		#last_row = len(areas) + 1
 		loopRowData.append("Total")
 		loopRowData.append(map.numPlots())
 		loopRowData.append("")
@@ -406,14 +403,7 @@ class CvDebugInfoScreen(CvGFCScreen.CvGFCScreen):
 
 		numColumns = len(d_TableData[0])
 
-		#print "NumColumns = %d" %numColumns
-		#print d_TableData
-
-		#scrollPanel = self.getNextWidgetName()
-		#screen.addScrollPanel(scrollPanel, u"", 0, 100, 1000,580, PanelStyles.PANEL_STYLE_DEFAULT)
-
 		szTableName = self.getNextWidgetName()
-		#screen.attachTableControlGFC(scrollPanel, szTableName, numColumns, True, True, 32,32,TableStyles.TABLE_STYLE_STANDARD)
 		screen.addTableControlGFC(szTableName, numColumns, 0, 100, 1000, 580, True, True, 32,32,TableStyles.TABLE_STYLE_STANDARD)
 
 		columnHeaders = d_TableData[0]
@@ -430,7 +420,6 @@ class CvDebugInfoScreen(CvGFCScreen.CvGFCScreen):
 		for i in range(len(d_TableData)-1):
 			rowData = d_TableData[i+1]
 			for j in range(len(rowData)):
-				#print rowData[j]
 				screen.setTableText(szTableName, j, i, u"%s" %rowData[j], "", WidgetTypes.WIDGET_GENERAL,-1,-1, 1<<0)
 
 	def buildTeamTitleData(self, strTitle):
@@ -478,11 +467,8 @@ class CvDebugInfoScreen(CvGFCScreen.CvGFCScreen):
 	def InfoType (self, inputClass):
 		screen = self.getScreen()
 		'called when the player activates the drop down box'
-		#print inputClass.getNotifyCode()
 
 		if ( inputClass.getNotifyCode() == int(NotifyCode.NOTIFY_LISTBOX_ITEM_SELECTED) ) :
-			#return
-			#szPulldownID = str(inputClass.getID())
 			# Get the ID that was selected...
 			iSelectedID = screen.getSelectedPullDownID( self.szDebugInfoPulldownID )
 			self.deleteAllWidgets()

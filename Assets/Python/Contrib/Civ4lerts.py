@@ -164,7 +164,6 @@ class AbstractCityAlertManager(AbstractStatefulAlert):
 		alert.init()
 
 	def onCityAcquiredAndKept(self, argsList):
-		#iOwnerOld, iOwnerNew, city, bConquest, bTrade = argsList
 		if argsList[1] == GAME.getActivePlayer():
 			self._resetCity(argsList[2])
 
@@ -571,22 +570,18 @@ class AbstractCanHurry(AbstractCityTestAlert):
 
 	def onCityBuildingUnit(self, argsList):
 		city = argsList[0]
-		#iUnit = argsList[1]
 		self._onItemStarted(city)
 
 	def onCityBuildingBuilding(self, argsList):
 		city = argsList[0]
-		#iBuilding = argsList[1]
 		self._onItemStarted(city)
 
 	def onCityBuildingProject(self, argsList):
 		city = argsList[0]
-		#iProject = argsList[1]
 		self._onItemStarted(city)
 
 	def onCityBuildingProcess(self, argsList):
 		city = argsList[0]
-		#iProcess = argsList[1]
 		self._onItemStarted(city)
 
 	def _onItemStarted(self, city):
@@ -842,7 +837,6 @@ class WorstEnemy(AbstractStatefulAlert):
 		self.checkIfIsAnyOrHasMetAllTeams(eTeam, eRivalTeam)
 
 	def onChangeWar(self, argsList):
-		#bIsWar = argsList[0]
 		eTeam = argsList[1]
 		eRivalTeam = argsList[2]
 		self.checkIfIsAnyOrHasMetAllTeams(eTeam, eRivalTeam)
@@ -854,7 +848,6 @@ class WorstEnemy(AbstractStatefulAlert):
 	def onVassalState(self, argsList):
 		eMaster = argsList[0]
 		eVassal = argsList[1]
-		#bVassal = argsList[2]
 		self.checkIfIsAnyOrHasMetAllTeams(eMaster, eVassal)
 
 	def checkIfIsAnyOrHasMetAllTeams(self, *eTeams):

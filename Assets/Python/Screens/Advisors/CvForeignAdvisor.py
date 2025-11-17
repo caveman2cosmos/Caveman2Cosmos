@@ -919,7 +919,7 @@ class CvForeignAdvisor:
 		dx = iSize0 + 8
 		dx1 = 3*dx/2
 		dx2 = dx1/2
-		# Anoying that this one needs to be configuered manually based on xml config.
+		# Annoying that this one needs to be configured manually based on xml config.
 		# The dll should add a python function that fetch TXT_KEY_CIVICOPTION_X_ABBR.
 		# I could then just loop through all the civicoptions and ask what their abbreviations are and add them to this list.
 		# The order and names of these keys can potentially change if an XML modder plays around with the civics.

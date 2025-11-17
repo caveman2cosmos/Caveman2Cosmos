@@ -97,7 +97,6 @@ class PediaTech:
 		screen.enableSelect(Pnl, False)
 
 		iEra = CvTheTechInfo.getEra()
-#		szTechEra = TRNSLTR.changeTextColor(GC.getEraInfo(iEra).getDescription(), iEra * 255 / GC.getNumEraInfos())
 		if CyPlayer:
 			szTechCost = TRNSLTR.getText("TXT_KEY_PEDIA_COST", (GC.getTeam(CyPlayer.getTeam()).getResearchCost(iTheTech),))
 		else:
@@ -285,7 +284,6 @@ class PediaTech:
 			x = 4
 			y = H_SCROLL / 2 - 12
 			for entry in aList1:
-				#NAME = entry[0]
 				if entry[0] == "TXT":
 					x += entry[3]
 					screen.setLabelAt(aName(), Pnl, entry[1], entry[2], x, y, 0, eFontTitle, eWidGen, 0, 0)

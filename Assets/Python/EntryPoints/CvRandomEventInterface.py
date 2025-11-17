@@ -1019,9 +1019,6 @@ def getHelpWiningMonks2(argsList):
 ######## INDEPENDENTFILMS ###########
 
 def canTriggerIndependentFilms(argsList):
-	# Toffer - Perhaps change this to:
-	#return not GC.getPlayer(argsList[0].ePlayer).hasBonus(GC.getInfoTypeForString("BONUS_HIT_MOVIES"))
-	# There would be a functionality change though, it can then only trigger once for any player.
 	data = argsList[0]
 	player = GC.getPlayer(data.ePlayer)
 
@@ -1400,21 +1397,6 @@ def getHelpAncientTexts2(argsList):
 
 
 ######## IMPACT_CRATER ###########
-
-#def canTriggerImpactCrater(argsList):
-#
-#  data = argsList[0]
-#  player = GC.getPlayer(data.ePlayer)
-#
-#  iUranium = GC.getInfoTypeForString("BONUS_URANIUM")
-#  if player.getNumAvailableBonuses(iUranium) > 0:
-#    return False
-#
-#  plot = GC.getMap().plot(data.iPlotX, data.iPlotY)
-#  if not plot.canHaveBonus(iUranium, False):
-#    return False
-#
-#  return True
 
 def doImpactCrater2(argsList):
 	data = argsList[1]
@@ -2313,7 +2295,6 @@ def getHelpCrusadeDone3(argsList):
 
 def canApplyCrusadeDone3(argsList):
 	data = argsList[1]
-	#iNumCities = GC.getWorldInfo(GC.getMap().getWorldSize()).getDefaultPlayers()
 	if GAME.getNumCities() == GAME.countReligionLevels(data.eReligion):
 		return False
 	return True
@@ -2384,7 +2365,6 @@ def canTriggerExperiencedCaptain(argsList):
 
 def canTriggerGreed(argsList):
 	data = argsList[0]
-	#trigger = GC.getEventTriggerInfo(data.eTrigger)
 	CyPlayer = GC.getPlayer(data.ePlayer)
 	CyPlayerOther = GC.getPlayer(data.eOtherPlayer)
 	iTeam = CyPlayer.getTeam()
@@ -5478,9 +5458,6 @@ def TriggerCompulsoryDem3(argsList):
 
   eCivic = player.getCivics(GC.getInfoTypeForString("CIVICOPTION_GOVERNMENT"))
 
-  # bFederal = player.canDoCivics(GC.getInfoTypeForString("CIVIC_FEDERALISM"))
-  # bDemocracy = player.canDoCivics(GC.getInfoTypeForString("CIVIC_DEMOCRACY"))
-  # bRepublic = player.canDoCivics(GC.getInfoTypeForString("CIVIC_REPUBLIC"))
   bMonarchy = player.canDoCivics(GC.getInfoTypeForString("CIVIC_MONARCHY"))
   bFacist = player.canDoCivics(GC.getInfoTypeForString("CIVIC_TOTALITARIANISM"))
   bDespotism = player.canDoCivics(GC.getInfoTypeForString("CIVIC_DESPOTISM"))
@@ -6743,39 +6720,6 @@ def doGlobalWarming(argsList):
 def getHelpGlobalWarming(argsList):
 	return TRNSLTR.getText("TXT_KEY_EVENT_GLOBAL_WARMING_1_HELP",())
 
-######## TORNADO ###########
-# def canDoTornado(argsList):
-# 	EventTriggeredData = argsList[0]
-
-# 	CyPlot = GC.getMap().plot(EventTriggeredData.iPlotX, EventTriggeredData.iPlotY)
-# 	if CyPlot.isCity():
-# 		return 0
-
-# 	iLatitude = CyPlot.getLatitude()
-# 	if iLatitude < 50 and 30 < iLatitude:
-# 		return 1
-
-# 	iRandom = GAME.getSorenRandNum(101, "Random Plot") # 0 <-> 100
-# 	if iLatitude < 60 and 20 < iLatitude:
-# 		if iRandom < 20:
-# 			return 1
-# 	elif iRandom < 5:
-# 		return 1
-# 	return 0
-
-# def doTornado(argsList):
-# 	EventTriggeredData = argsList[1]
-# 	x, y = EventTriggeredData.iPlotX, EventTriggeredData.iPlotY
-# 	CyPlot = GC.getMap().plot(x, y)
-# 	if 50 > GAME.getSorenRandNum(101, "Random Plot"):
-# 		CyPlot.setImprovementType(-1)
-
-# 	if 25 > GAME.getSorenRandNum(101, "Random Plot"):
-# 		CyPlot.setRouteType(-1)
-
-# 	for pUnit in CyPlot.units():
-# 		pUnit.setImmobileTimer(1)
-
 ######## Native Good 1 -- lost resources ###########
 def canApplyNativegood1(argsList):
 	return False
@@ -7079,7 +7023,6 @@ def applyCivilWar(argsList):
 	# Hand over cities
 	iX = pCity.getX()
 	iY = pCity.getY()
-	#CyInterface().addMessage(0,False,15,str(data.iCityId),'',0,'Art/Interface/Buttons/General/happy_person.dds',ColorTypes(44), iX, iY, True,True)
 	pNewPlayer.acquireCity(pCity, False, False)
 
 	# Hand over units

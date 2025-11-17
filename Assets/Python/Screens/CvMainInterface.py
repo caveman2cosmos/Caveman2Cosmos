@@ -171,10 +171,6 @@ class CvMainInterface:
 			self.iconOccupation			= u'%c' % GAME.getSymbolID(FontSymbols.OCCUPATION_CHAR)
 			self.iconFoodEaten			= u'%c' % GAME.getSymbolID(FontSymbols.EATEN_FOOD_CHAR)
 			self.iconAngryPop			= u'%c' % GAME.getSymbolID(FontSymbols.ANGRY_POP_CHAR)
-			#self.iconTrade				= u'%c' % GAME.getSymbolID(FontSymbols.TRADE_CHAR)
-			#self.iconOpenBorders		= u'%c' % GAME.getSymbolID(FontSymbols.OPEN_BORDERS_CHAR)
-			#self.iconMap				= u'%c' % GAME.getSymbolID(FontSymbols.MAP_CHAR)
-			#self.iconDefensivePact		= u'%c' % GAME.getSymbolID(FontSymbols.DEFENSIVE_PACT_CHAR)
 			self.iconHappy				= u'%c' % GAME.getSymbolID(FontSymbols.HAPPY_CHAR)
 			self.iconUnhappy			= u'%c' % GAME.getSymbolID(FontSymbols.UNHAPPY_CHAR)
 			self.iconHealthy			= u'%c' % GAME.getSymbolID(FontSymbols.HEALTHY_CHAR)
@@ -209,7 +205,6 @@ class CvMainInterface:
 			self.iconReligionList = list(aList2)
 			# Cache file paths.
 			afm = CyArtFileMgr()
-			#self.artPathQuMark					= afm.getInterfaceArtInfo("QUESTION_MARK").getPath()
 			self.artPathPromotion				= afm.getInterfaceArtInfo("OVERLAY_PROMOTION_FRAME").getPath()
 			self.artPathHilite					= afm.getInterfaceArtInfo("BUTTON_HILITE_SQUARE").getPath()
 			self.artPathUpgrade					= afm.getInterfaceArtInfo("OVERLAY_UPGRADE").getPath()
@@ -1092,12 +1087,10 @@ class CvMainInterface:
 
 				x -= iSize + 2
 				ID = "CitizenDisabledButton" + szInc
-				#screen.setText(ID, "", image, 1<<0, x, y, 0, eFontGame, iWidDisabledCitizen, i, 0)
 				screen.addCheckBoxGFC(ID, aSpecialistIconList[i], self.artPathHilite, x, y, iSize, iSize, iWidDisabledCitizen, i, 0, ButtonStyles.BUTTON_STYLE_IMAGE)
 				screen.enable(ID, False)
 				screen.hide(ID)
 				ID = "CitizenButton" + szInc
-				#screen.setText(ID, "", image, 1<<0, x, y, 0, eFontGame, iWidCitizen, i, 0)
 				screen.addCheckBoxGFC(ID, aSpecialistIconList[i], self.artPathHilite, x, y, iSize, iSize, iWidCitizen, i, 0, ButtonStyles.BUTTON_STYLE_IMAGE)
 				screen.enable(ID, True)
 				screen.hide(ID)

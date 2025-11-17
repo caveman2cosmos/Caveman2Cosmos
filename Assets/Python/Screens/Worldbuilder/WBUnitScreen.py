@@ -1094,7 +1094,6 @@ class WBUnitScreen:
 				iRefresh = 0
 				for self.currentUnitX in aList:
 					iRefresh = self.doAllCommands(self.currentUnitX, iIndex)
-				#screen.hideScreen()
 				if iRefresh == 1:
 					self.interfaceScreen([self.currentPlot.getUnit(0)])
 				elif iRefresh == 2:

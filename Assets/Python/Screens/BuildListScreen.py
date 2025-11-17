@@ -287,9 +287,7 @@ class BuildListScreen:
     # Projects
     i = 0
     for i in range( gc.getNumProjectInfos() ):
-      #if (pPlayer.canCreate(i, False, True)):
         screen.appendMultiListButton( "ButtonContainer", gc.getProjectInfo(i).getButton(), iRow, WidgetTypes.WIDGET_BUILD_LIST_CREATE, i, iCurrentList, False )
-        #screen.show( "BottomButtonContainer" )
 
         iCount = iCount + 1
         bFound = True
@@ -303,8 +301,6 @@ class BuildListScreen:
 
     screen.addTableControlGFC( "BuildQueueTable", 1, self.LISTS_WIDTH + 20, self.PANEL_HEIGHT + 10, self.QUEUE_WIDTH - 30, self.H_SCREEN - 20 - 2*self.PANEL_HEIGHT, False, False, 32, 32, TableStyles.TABLE_STYLE_STANDARD )
     screen.setStyle( "BuildQueueTable", "Table_EmptyScroll_Style" )
-
-    #screen.setTableColumnHeader( "BuildListTable", 0, u"", 121 )
 
     pPlayer = gc.getActivePlayer()
     iCurrentList = pPlayer.getBLIndexByID(pPlayer.getBLCurrentList())
@@ -352,11 +348,8 @@ class BuildListScreen:
 
     screen.addListBoxGFC("BuildListTable", "", 20, self.PANEL_HEIGHT + 10, self.LISTS_WIDTH - 30, self.H_SCREEN - 20 - 2*self.PANEL_HEIGHT, TableStyles.TABLE_STYLE_STANDARD)
     screen.setStyle("BuildListTable", "Table_StandardCiv_Style")
-    #screen.addTableControlGFC( "BuildListTable", 1, 20, self.PANEL_HEIGHT + 10, self.LISTS_WIDTH - 30, self.H_SCREEN - 20 - 2*self.PANEL_HEIGHT, False, False, 32, 32, TableStyles.TABLE_STYLE_STANDARD )
-    #screen.setStyle( "BuildListTable", "Table_EmptyScroll_Style" )
     screen.enableSelect("BuildListTable", True)
 
-    #screen.setTableColumnHeader( "BuildListTable", 0, u"", 121 )
 
     pPlayer = gc.getActivePlayer()
     iCurrentList = pPlayer.getBLCurrentList()
@@ -369,11 +362,7 @@ class BuildListScreen:
 
       szLeftBuffer = pPlayer.getBLListName(i)
 
-      #screen.appendTableRow( "BuildListTable" )
-      #screen.setTableText( "BuildListTable", 0, iRow, szLeftBuffer, "", WidgetTypes.WIDGET_BUILD_LIST, pPlayer.getBLID(i), -1, 1<<0 )
       screen.appendListBoxStringNoUpdate("BuildListTable", szLeftBuffer, WidgetTypes.WIDGET_BUILD_LIST, pPlayer.getBLID(i), -1, 1<<0 )
-      #if (iCurrentList == pPlayer.getBLID(i)):
-      #  screen.selectRow( "BuildListTable", iRow, True)
       iRow += 1
 
     screen.updateListBox( "BuildListTable" )
@@ -381,22 +370,6 @@ class BuildListScreen:
 
 
   def createLogoScreen(self):
-#   screen = CyGInterfaceScreen( "IntroMovieScreen", CvScreenEnums.INTRO_MOVIE_SCREEN )
-#   screen.setRenderInterfaceOnly(True)
-#   screen.showWindowBackground( False )
-
-    # Show the screen
-#   screen.showScreen(PopupStates.POPUPSTATE_IMMEDIATE, False)
-
-    # Background First
-#   screen.setImageButton( "LogoBackground", ArtFileMgr.getInterfaceArtInfo("MAINMENU_LOAD").getPath(), screen.centerX(0)-2, screen.centerY(0)-2, 1028, 776, WidgetTypes.WIDGET_GENERAL, -1, -1 )
-
-    # Logos
-#   screen.setImageButton( "Logos", ArtFileMgr.getInterfaceArtInfo("INTRO_LOGOS").getPath(), screen.centerX(0)+233, screen.centerY(0)+331, 549, 294, WidgetTypes.WIDGET_GENERAL, -1, -1 )
-
-#   screen.addMultilineText("LegalText1", "<font=1>" + localText.getText("TXT_LEGAL_LINE_1", ()) + "</font>", screen.centerX(0)+110, screen.centerY(0)+590, 804, 200, WidgetTypes.WIDGET_GENERAL, -1, -1, 1<<0)
-#   screen.setLabel( "LegalText2", "Background", "<font=2>" + localText.getText("TXT_LEGAL_LINE_2", ()) + "</font>", 1<<2, screen.centerX(0)+512, screen.centerY(0)+740, -0.1, FontTypes.SMALL_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1 )
-#   screen.setShowFor( 4000 )
     return
 
   def closeScreen(self):

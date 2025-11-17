@@ -6,7 +6,6 @@ import BugUtil
 
 # globals
 gc = CyGlobalContext()
-#~ localText = CyTranslator()
 
 gb_NoGoodyHuts = True
 giIndigenousPeopleImprovement = -1
@@ -36,7 +35,6 @@ def onNewPlayer():
 '''
 
 def onGoodyReceived(argsList):
-	#iPlayer, pPlot, pUnit, iGoodyType = argsList
 	pPlot = argsList[1]
 
 	# just in case
@@ -48,9 +46,7 @@ def onGoodyReceived(argsList):
 
 
 def onImprovementDestroyed(argsList):
-	#iImprovement, iOwner, iX, iY = argsList
 	iImprovement = argsList[0]
-	#iPlot = CyMap().plotNum(iX,iY)
 
 	if (not iImprovement == giIndigenousPeopleImprovement):
 		return

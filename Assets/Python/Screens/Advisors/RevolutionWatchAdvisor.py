@@ -789,7 +789,6 @@ class RevolutionWatchAdvisor:
 		self.createDictionaries()
 
 		screen = self.getScreen()
-#		screen.setForcedRedraw (True)
 		self.createPositions (screen)
 
 		screen.setDimensions (self.nScreenX, self.nScreenY, self.nScreenWidth, self.nScreenLength)
@@ -826,7 +825,6 @@ class RevolutionWatchAdvisor:
 
 		# Here we set the background widget and exit button, and we show the screen
 		screen.addPanel( self.BACKGROUND_ID, u"", u"", True, False, self.nPanelX, self.nPanelY, self.nPanelWidth, self.nPanelLength, PanelStyles.PANEL_STYLE_MAIN )
-		#screen.addDDSGFC( self.BACKGROUND_ID, ArtFileMgr.getInterfaceArtInfo("SCREEN_BG").getPath(), 0, 29, 1024, 592, WidgetTypes.WIDGET_GENERAL, -1, -1 )
 
 		# Text Buttons
 		screen.setText(self.EXIT_NAME, "Background", localText.getText("TXT_WORD_EXIT", ()).upper(), 1<<1, self.X_EXIT, self.Y_EXIT, self.Z_TEXT, FontTypes.TITLE_FONT, WidgetTypes.WIDGET_CLOSE_SCREEN, -1, -1 )
@@ -861,10 +859,6 @@ class RevolutionWatchAdvisor:
 		# RevolutionDCM legend content initial - start
 		self.showRevolutionLegend()
 		# RevolutionDCM legend content - end
-
-		# Header...
-		#szText = "<font=4>" + localText.getText("TXT_KEY_REVOLUTION_WATCH_ADVISOR_TITLE", ()).upper() + "</font>"
-		#screen.setLabel( "RevolutionWatchTitleHeader", "Background", szText, 1<<2, 472, 40, STANDARD_Z, FontTypes.TITLE_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1 )
 
 		# Draw the customization controls (but don't SHOW them)
 		self.drawCustomizationControls()
@@ -907,58 +901,10 @@ class RevolutionWatchAdvisor:
 	def showSpecialists (self):
 		""" Function which shows the specialists."""
 		pass
-		#screen = self.getScreen()
-		#
-		# First, hide the specialists! :D
-		#self.hideSpecialists()
-		#
-		# Get the current city
-		#city = self.getCurrentCity()
-		#if (city):
-		#
-		#	# Get values which we will need for each calculation
-		#	nPopulation = city.getPopulation()
-		#	nFreeSpecial = city.totalFreeSpecialists()
-		#
-		#	# For each specialist type
-		#	for i in range( self.getNumSpecialistInfos() ):
-		#
-		#		# Show all the specialist images
-		#		szName = self.SPECIALIST_IMAGE_NAME + str(i)
-		#		screen.show( szName )
-		#
-		#		# Show all the specialist text
-		#		szName = self.SPECIALIST_TEXT_NAME + str(i)
-		#		screen.setText (szName, "Background", str (city.getSpecialistCount(i)) + "/" + str (city.getMaxSpecialistCount(i)) + u" %c" % self.SPECIALIST_ICON_DICT[i], 1<<0, self.nFirstSpecialistX + (self.nSpecialistDistance * i) + self.nSpecTextOffsetX, self.nSpecialistY + self.nSpecTextOffsetY, self.Z_TEXT, FontTypes.GAME_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1)
-		#		screen.show (szName)
-		#
-		#		# If the specialist is valid and we can increase it
-		#		if (city.isSpecialistValid(i, 1) and (city.getForceSpecialistCount(i) < (nPopulation + nFreeSpecial))):
-		#			# Show the Plus
-		#			szName = self.SPECIALIST_PLUS_NAME + str(i)
-		#			screen.show( szName )
-		#
-		#		# if we HAVE specialists already and they're not forced.
-		#		if (city.getSpecialistCount(i) > 0 or city.getForceSpecialistCount(i) > 0 ):
-		#			# Show the Minus
-		#			szName = self.SPECIALIST_MINUS_NAME + str(i)
-		#			screen.show( szName )
 
 	def hideSpecialists (self):
 		""" Function to hide all the specialists and the accompanying data."""
 		pass
-		#screen = self.getScreen()
-		#
-		# Hide Everything related to specialists
-		#for i in range( self.getNumSpecialistInfos() ):
-		#	szName = self.SPECIALIST_IMAGE_NAME + str(i)
-		#	screen.hide (szName)
-		#	szName = self.SPECIALIST_PLUS_NAME + str(i)
-		#	screen.hide (szName)
-		#	szName = self.SPECIALIST_MINUS_NAME + str(i)
-		#	screen.hide (szName)
-		#	szName = self.SPECIALIST_TEXT_NAME + str(i)
-		#	screen.hide (szName)
 
 	# RevolutionDCM - legend control 1
 	def showRevolutionLegend (self):
@@ -1014,15 +960,9 @@ class RevolutionWatchAdvisor:
 
 	def showGPLegend(self):
 		pass
-		#screen = self.getScreen()
-		#screen.show(self.GP_TEXT_NAME)
-		#screen.show(self.GP_TEXT_NAME + self.NUMBER_TEXT)
 
 	def hideGPLegend(self):
 		pass
-		#screen = self.getScreen()
-		#screen.hide(self.GP_TEXT_NAME)
-		#screen.hide(self.GP_TEXT_NAME + self.NUMBER_TEXT)
 
 	def drawCustomizationControls(self):
 		screen = self.getScreen()
@@ -1565,8 +1505,6 @@ class RevolutionWatchAdvisor:
 			iEffect = city.getBonusYieldRateModifier(eYieldType, arg)
 			if (iEffect > 0):
 				szEffects += u"%s " % self.yieldIcons[eYieldType]
-#			elif (iEffect > 1 or iEffect < 0):
-#				szEffects += u"%d%s " % (iEffect, self.yieldIcons[eYieldType])
 
 		iNumBonuses = city.getNumBonuses(arg)
 		if (self.bonusCorpYields.has_key(arg)):
@@ -1596,36 +1534,6 @@ class RevolutionWatchAdvisor:
 						szEffects += u"%s " % self.commerceIcons[eCommerce]
 					elif (iEffect > 1 or iEffect < 0):
 						szEffects += u"%d%s " % (iEffect, self.commerceIcons[eCommerce])
-
-#		for eYieldType in range(YieldTypes.NUM_YIELD_TYPES):
-#			if (city.getCorporationYield(eYieldType) > 0):
-#				iEffect = 0
-#				for eCorporation in range(gc.getNumCorporationInfos()):
-#					if (city.isActiveCorporation(eCorporation)):
-#						info = gc.getCorporationInfo(eCorporation)
-#						for i in range(gc.getNUM_CORPORATION_PREREQ_BONUSES()):
-#							if (info.getPrereqBonus(i) == arg):
-#								iEffect += info.getYieldProduced(eYieldType) * city.getNumBonuses(arg) * self.corpMaintPercent / 100
-#				iEffect = (iEffect + 99) / 100
-#				if (iEffect == 1):
-#					szEffects += u"%s " % self.yieldIcons[eYieldType]
-#				elif (iEffect > 1 or iEffect < 0):
-#					szEffects += u"%d%s " % (iEffect, self.yieldIcons[eYieldType])
-#
-#		for eCommerceType in range(CommerceTypes.NUM_COMMERCE_TYPES):
-#			if (city.getCorporationCommerce(eCommerceType) > 0):
-#				iEffect = 0
-#				for eCorporation in range(gc.getNumCorporationInfos()):
-#					if (city.isActiveCorporation(eCorporation)):
-#						info = gc.getCorporationInfo(eCorporation)
-#						for i in range(gc.getNUM_CORPORATION_PREREQ_BONUSES()):
-#							if (info.getPrereqBonus(i) == arg):
-#								iEffect += info.getCommerceProduced(eCommerceType) * city.getNumBonuses(arg) * self.corpMaintPercent / 100
-#				iEffect = (iEffect + 99) / 100
-#				if (iEffect == 1):
-#					szEffects += u"%s " % self.commerceIcons[eCommerceType]
-#				elif (iEffect > 1 or iEffect < 0):
-#					szEffects += u"%d%s " % (iEffect, self.commerceIcons[eCommerceType])
 
 		iEffect = city.getBonusPower(arg)
 		if (iEffect == 1):
@@ -2215,7 +2123,6 @@ class RevolutionWatchAdvisor:
 	def HandleSpecialistPlus(self, inputClass):
 		""" Handles when any Specialist Plus is pushed."""
 
-		#CyInterface().setDirty(InterfaceDirtyBits.Domestic_Advisor_DIRTY_BIT, True)
 		return 0
 
 	def HandleSpecialistMinus(self, inputClass):
@@ -2302,12 +2209,6 @@ class RevolutionWatchAdvisor:
 				city = self.getCurrentCity()
 				if city:
 					RevInstances.RevolutionInst.showBribeCityPopup(city)
-					#if(self.visiblePage):
-					#	screen = self.getScreen()
-					#	screen.hide(self.visiblePage)
-					#	screen.show(self.currentPage)
-					#	self.visiblePage = self.currentPage
-					#	self.drawContents(self.currentPage)
 
 
 # BUG - Colony Split - start
@@ -2569,7 +2470,6 @@ class RevolutionWatchAdvisor:
 		page["showSpecControls"] = not page["showSpecControls"]
 		page["showRevolutionLegend"] = not page["showRevolutionLegend"]
 		page["showGPLegend"] = not page["showGPLegend"]
-#		screen.setState(self.TOGGLE_SPECS_NAME, page["showSpecControls"])
 		return 1
 
 	def toggleShowCultureLegend(self, inputClass):

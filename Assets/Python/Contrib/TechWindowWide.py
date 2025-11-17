@@ -59,8 +59,6 @@ class CvTechSplashScreen:
 
 		self.W_ICON = 96 # 90
 		self.H_ICON = 96 # 90
-#		self.X_ICON = self.X_UPPER_PANEL + 134                                                      # Spocko 56 # 23 #42
-#		self.Y_ICON = self.Y_UPPER_PANEL + (self.H_UPPER_PANEL / 2) - (self.H_ICON / 2) + 17
 
 		self.X_ICON_PANEL = self.X_UPPER_PANEL + self.iMarginSpace + 2
 		self.Y_ICON_PANEL = self.Y_UPPER_PANEL + self.iMarginSpace + 33
@@ -71,10 +69,8 @@ class CvTechSplashScreen:
 		self.Y_ICON = self.Y_ICON_PANEL + self.H_ICON_PANEL / 2 - self.H_ICON / 2
 
 		self.X_QUOTE = self.X_UPPER_PANEL + self.W_ICON_PANEL + (self.iMarginSpace * 2)
-#		self.Y_QUOTE = self.Y_UPPER_PANEL + self.iMarginSpace + 36
 		self.Y_QUOTE = self.Y_ICON
 		self.W_QUOTE = 725                                                                                               #  Spocko was 400
-#		self.H_QUOTE = self.H_UPPER_PANEL - (self.iMarginSpace * 2) - 38
 		self.H_QUOTE = self.H_UPPER_PANEL - (self.Y_QUOTE - self.Y_UPPER_PANEL) - (self.iMarginSpace * 2)
 
 #---Geändert START - siehe original Datei -----------------
@@ -129,8 +125,6 @@ class CvTechSplashScreen:
 		screen.showScreen(PopupStates.POPUPSTATE_IMMEDIATE, False)
 		screen.enableWorldSounds( False )
 
-#		screen.setHelpTextArea(self.W_HELP_AREA, FontTypes.SMALL_FONT, self.X_UNIT_PANE, self.Y_UNIT_PANE, self.Z_HELP_AREA, 1, CyArtFileMgr().getInterfaceArtInfo("POPUPS_BACKGROUND_TRANSPARENT").getPath(), True, True, 1<<0, 0 )
-#		screen.addDDSGFC( "TechSplashBackground", CyArtFileMgr().getInterfaceArtInfo("TEMP_BG").getPath(), 0, 0, self.W_SCREEN, self.H_SCREEN, WidgetTypes.WIDGET_GENERAL, -1, -1 )
 		screen.showWindowBackground( False )
 		screen.setDimensions(screen.centerX(0), screen.centerY(0), self.W_SCREEN, self.H_SCREEN)
 

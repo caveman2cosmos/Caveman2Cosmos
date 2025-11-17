@@ -404,10 +404,6 @@ class CultureLink:
 
 		def runAntColonyOptimization():
 			# constants
-			# NUM_RUNS = 50
-			# NUM_ANTS = 250
-			# NUM_BEST_ANTS = 5
-			# PHEROMON_UPDATE = 0.025
 			NUM_ANTS = iNumPlayers
 			NUM_BEST_ANTS = int(iNumPlayers / 10)
 			NUM_RUNS = iNumPlayers * 25
@@ -485,7 +481,6 @@ class CultureLink:
 				if i > j:
 					fSPDistance = StepDistance(pStartingPlotA, pStartingPlotB) / MaxPossibleStepDistance()
 					if pStartingPlotA.getArea() != pStartingPlotB.getArea():
-						#print "Area A: %s, Area B: %s" % (pStartingPlotA.getArea(), pStartingPlotB.getArea())
 						fSPDistance = fSPDistance * 2
 					fSPDistanceMatrix[i][j] = fSPDistance
 					fSPDistanceMatrix[j][i] = fSPDistance

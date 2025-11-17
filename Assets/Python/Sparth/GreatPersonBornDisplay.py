@@ -95,7 +95,6 @@ def onGreatPersonBorn(argsList):
 			artDef = CyArtFileMgr().getInterfaceArtInfo(sIcon)
 			if artDef:
 				sBack = artDef.getPath()
-		#sQuote = CyTranslator().getText("TXT_KEY_" + sGreat + "_QUOTE", ())
 		sText = "<color=136,94,43,255>" + "<font=2b>" + CyTranslator().getText("TXT_KEY_" + sGreat + "_PEDIA", ())
 
 		screen = CyGInterfaceScreen("Great People Screen", g_iScreen)

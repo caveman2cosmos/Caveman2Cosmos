@@ -140,8 +140,6 @@ class CvReplayScreen:
 		screen.setMinimapMode(MinimapModeTypes.MINIMAPMODE_REPLAY)
 
 		# add pane for text
-		#mainPanelName = self.getNextWidgetName()
-		#screen.addPanel(mainPanelName, "", "", True, True, self.X_TEXT, self.Y_TEXT, self.W_TEXT, self.H_TEXT, PanelStyles.PANEL_STYLE_IN)
 		self.szAreaId = self.getNextWidgetName()
 		screen.addListBoxGFC(self.szAreaId, "", self.X_TEXT, self.Y_TEXT, self.W_TEXT, self.H_TEXT, TableStyles.TABLE_STYLE_STANDARD)
 		screen.enableSelect(self.szAreaId, False)

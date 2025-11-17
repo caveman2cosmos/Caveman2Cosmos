@@ -182,12 +182,6 @@ class WBCityDataScreen:
 		for i in xrange(CommerceTypes.NUM_COMMERCE_TYPES):
 			screen.addPullDownString("YieldType", GC.getCommerceInfo(i).getDescription(), i + YieldTypes.NUM_YIELD_TYPES, i + YieldTypes.NUM_YIELD_TYPES, iSelectedYield == i + YieldTypes.NUM_YIELD_TYPES)
 
-	## Disabled because neither is working correctly with BTS dll ##
-	#	iTotal = YieldTypes.NUM_YIELD_TYPES + CommerceTypes.NUM_COMMERCE_TYPES
-	#	screen.addPullDownString("YieldType", CyTranslator().getText("TXT_KEY_CONCEPT_HAPPINESS", ()), iTotal, iTotal, iSelectedYield == iTotal)
-	#	screen.addPullDownString("YieldType", CyTranslator().getText("TXT_KEY_CONCEPT_HEALTH", ()), iTotal + 1, iTotal + 1, iSelectedYield == iTotal + 1)
-	## Disabled because neither is working correctly with BTS dll ##
-
 		iY += 30
 		iHeight = (screen.getYResolution()/2 - iY) / 24 * 24 + 2
 		screen.addTableControlGFC("WBModifyBuilding", 2, iX, iY, iTableWidth, iHeight, False, False, 24, 24, TableStyles.TABLE_STYLE_STANDARD)

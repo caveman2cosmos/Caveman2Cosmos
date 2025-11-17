@@ -390,7 +390,7 @@ def handleExitButtonInput(argsList):
 
 
 ################
-# AND Opptions #
+# AND Options #
 # * *  **  * * #
 def handleAutomatedBuildCheckboxClicked(argsList):
 	bValue, szName = argsList

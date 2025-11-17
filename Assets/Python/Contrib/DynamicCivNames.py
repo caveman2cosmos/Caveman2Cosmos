@@ -46,9 +46,6 @@ def init():
 		GC.getInfoTypeForString("LEADER_WU")
 	)
 
-	#bTeamNaming = REV_OPTIONS.isTeamNaming()
-	#bLeaveHumanName = REV_OPTIONS.isLeaveHumanPlayerName()
-
 	if not GAME.isFinalInitialized or GAME.getGameTurn() == GAME.getStartTurn():
 		for i in xrange(GC.getMAX_PC_PLAYERS()):
 			onSetPlayerAlive([i, GC.getPlayer(i).isAlive()])
@@ -81,7 +78,6 @@ def blankHandler(playerID, netUserData, popupReturn):
 
 
 def onBeginPlayerTurn(argsList):
-	#iGameTurn = argsList[0]
 	iPlayer = argsList[1]
 
 	# Stuff at end of previous players turn
@@ -132,7 +128,6 @@ def onBeginPlayerTurn(argsList):
 
 
 def onCityAcquiredAndKept(argsList):
-	#iOwnerOld, iOwnerNew, city, bConquest, bTrade = argsList
 	iPlayer = argsList[1]
 	owner = GC.getPlayer(iPlayer)
 	if owner.isAlive() and not owner.isNPC() and owner.getNumCities() < 5 and owner.getNumMilitaryUnits() > 0:
@@ -153,8 +148,6 @@ def onVassalState(argsList):
 
 
 def setNewNameByCivics(iPlayer):
-	#if bLeaveHumanName and (GC.getPlayer(iPlayer).isHuman() or GAME.getActivePlayer() == iPlayer):
-	#	return
 	[newCivDesc, newCivShort, newCivAdj] = newNameByCivics(iPlayer)
 
 	if not newCivDesc == GC.getPlayer(iPlayer).getCivilizationDescription(0):
@@ -169,8 +162,6 @@ def onSetPlayerAlive(argsList):
 	bNewValue = argsList[1]
 	if bNewValue and iPlayerID < GC.getMAX_PC_PLAYERS():
 		pPlayer = GC.getPlayer(iPlayerID)
-		#if bLeaveHumanName and (pPlayer.isHuman() or GAME.getActivePlayer() == iPlayerID):
-		#	return
 		[newCivDesc, newCivShort, newCivAdj] = nameForNewPlayer(iPlayerID)
 
 		# Pass to pPlayer seems to require a conversion to 'ascii'
@@ -349,8 +340,7 @@ def newNameByCivics(iPlayer):
 		return [curDesc, curShort, curAdj]	# Maintain name of BarbarianCiv created player
 
 	# Special options for teams and permanent alliances
-	#if bTeamNaming and pTeam.getNumMembers() > 1: # and pTeam.getPermanentAllianceTradingCount() > 0:
-	if pTeam.getNumMembers() > 1: # and pTeam.getPermanentAllianceTradingCount() > 0:
+	if pTeam.getNumMembers() > 1:
 
 		iLeader = pTeam.getLeaderID()
 

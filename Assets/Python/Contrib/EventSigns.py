@@ -105,26 +105,6 @@ def clearCurrentSigns ():
 	global gCurrentSigns
 	gCurrentSigns = None
 
-
-'''
-def clearSignsAndLandmarks(pPlot):
-	""" Removes any current landmarks or signs from a plot.
-
-	In order to place a new sign or landmark I'd like to remove any pre-existing sign
-	or landmark on the plot. However, there seems to be some delay or synch issue.
-	Every attempt I have thus far made would remove the old one but the new one would
-	not show up. So for now, I am not removing old signs/landmarks and thus the event
-	will only place the sign/landmark on a plot if there isn't already one there.
-	If I could resolve that issue, this function would actually be used. ;)
-	"""
-	for iPlayer in range(GC.getMAX_PLAYERS()):
-		engine.removeSign(pPlot, iPlayer)
-	engine.removeLandmark(pPlot)
-	# Don't even know what this does; it was the last of my failed attempts to force the signs to show.
-	#engine.setDirty(EngineDirtyBits.GlobeTexture_DIRTY_BIT, True)
-	return True
-'''
-
 def placeLandmark(pPlot, sEventType, iFood, iProd, iComm, bIsSign, iSignOwner):
 	""" Places a landmark on a plot identifying a yield change with a short description.
 
@@ -141,9 +121,6 @@ def placeLandmark(pPlot, sEventType, iFood, iProd, iComm, bIsSign, iSignOwner):
 
 	# Bail out if there are no yield changes
 	if iFood == 0 and iProd == 0 and iComm == 0: return False
-
-	# This next bit is unused; see the docstring at the start of that function for why.
-	#clearSignsAndLandmarks(pPlot)
 
 	sCaptionFood = ""
 	sCaptionProd = ""
@@ -475,10 +452,8 @@ class EventSignsEventHandler:
 		global g_bForceUpdate
 		g_bForceUpdate = True
 
-	def onPreSave(self, argsList):
+	def onPreSave(self, argsList): #TODO remove this method since it is empty
 		""" Called before a game is actually saved """
-#		if (gSavedSigns and (not gSavedSigns.isEmpty())):
-#			SdToolKit.sdSetGlobal(SD_MOD_ID, SD_VAR_ID, gSavedSigns)
 
 	def onPlotRevealed(self, argsList):
 		""" Called when plot is revealed to team. """

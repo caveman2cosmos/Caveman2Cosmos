@@ -49,8 +49,6 @@ def onLoad(argsList):
 #	Not called when loading a save from within an active game.
 #	Called later than the OnLoad event, but earlier than the GameStart event.
 def preGameStart():
-	#import CvEventInterface
-	#CvEventInterface.getEventManager().fireEvent("PreGameStart")
 	print "PreGameStart"
 	import CvScreensInterface
 	CvScreensInterface.showMainInterface()

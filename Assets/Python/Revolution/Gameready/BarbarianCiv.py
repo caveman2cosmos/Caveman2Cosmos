@@ -34,7 +34,6 @@ class BarbarianCiv:
 
 	# Called at the beginning of the end of each turn
 	def onBeginGameTurn(self, argsList):
-		#iGameTurn, = argsList
 		'''
 		Check if any minor civs will become major.
 		'''
@@ -297,20 +296,16 @@ class BarbarianCiv:
 		else:
 			if iSettler > -1:
 				CyPlayer.initUnit(iSettler, iX, iY, UnitAITypes.UNITAI_SETTLE, DirectionTypes.DIRECTION_SOUTH)
-				#print "Free settler: " + CyUnit.getName()
 			if iWorker > -1:
 				CyPlayer.initUnit(iWorker, iX, iY, UnitAITypes.UNITAI_WORKER, DirectionTypes.DIRECTION_SOUTH)
 				CyPlayer.initUnit(iWorker, iX, iY, UnitAITypes.UNITAI_WORKER, DirectionTypes.DIRECTION_SOUTH)
-				#print "Free Workers (2): " + CyUnit.getName()
 			if iExplorer > -1:
 				CyPlayer.initUnit(iExplorer, iX, iY, UnitAITypes.UNITAI_EXPLORE, DirectionTypes.DIRECTION_SOUTH)
 				CyPlayer.initUnit(iExplorer, iX, iY, UnitAITypes.UNITAI_EXPLORE, DirectionTypes.DIRECTION_SOUTH)
-				#print "Free Explorers (2): " + CyUnit.getName()
 			if iMerchant > -1:
 				iTemp = 2 + 2*(iEra + 1)
 				for i in xrange(iTemp):
 					CyPlayer.initUnit(iMerchant, iX, iY, UnitAITypes.UNITAI_MERCHANT, DirectionTypes.DIRECTION_SOUTH)
-				#print "Free Merchant (%d): %s" %(iTemp, CyUnit.getName())
 
 		aList = [iCounter, iAttack, iAttackCity, iMobile]
 		iTemp = int(iBaseOffensiveUnits*fMilitaryMod)
@@ -324,7 +319,6 @@ class BarbarianCiv:
 					CyUnit = CyPlayer.initUnit(iUnit, iX, iY, UnitAITypes.NO_UNITAI, DirectionTypes.DIRECTION_SOUTH)
 					CyUnit.changeExperience(iEra + GAME.getSorenRandNum(2*(iEra+1), 'Experience'), -1, False, False, False)
 					iCount += 1
-					#print "Free Combatant: " + CyUnit.getName()
 				break
 
 		szTxt = TRNSLTR.getText("TXT_KEY_BARBCIV_WORD_SPREADS", ()) + " "
