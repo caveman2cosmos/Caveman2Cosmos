@@ -511,7 +511,7 @@ Base XP gained when defending
 		<UnitInfo>
 			<Type>UNIT_POISON_NOVA</Type>
 			<iMaxPlayerInstances>5</iMaxPlayerInstances>
-			<iInstanceCostModifier>15</iInstanceCostModifier>
+			<iInstanceCostModifier>5</iInstanceCostModifier>
 			<Combat>UNITCOMBAT_DOOM</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_BALLISTIC</SubCombatType>
@@ -640,7 +640,7 @@ Base XP gained when defending
 		<UnitInfo>
 			<Type>UNIT_FUSION_NOVA</Type>
 			<iMaxPlayerInstances>5</iMaxPlayerInstances>
-			<iInstanceCostModifier>15</iInstanceCostModifier>
+			<iInstanceCostModifier>5</iInstanceCostModifier>
 			<Combat>UNITCOMBAT_DOOM</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_BALLISTIC</SubCombatType>
@@ -766,7 +766,7 @@ Base XP gained when defending
 		<UnitInfo>
 			<Type>UNIT_TURN</Type>
 			<iMaxPlayerInstances>5</iMaxPlayerInstances>
-			<iInstanceCostModifier>15</iInstanceCostModifier>
+			<iInstanceCostModifier>5</iInstanceCostModifier>
 			<Combat>UNITCOMBAT_DOOM</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_BALLISTIC</SubCombatType>

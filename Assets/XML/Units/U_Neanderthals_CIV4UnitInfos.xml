@@ -78,7 +78,7 @@
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_NEANDERTHAL_WARRIOR</Type>
-			<iInstanceCostModifier>10</iInstanceCostModifier>
+			<iInstanceCostModifier>5</iInstanceCostModifier>
 			<EnabledCivilizationTypes>
 				<EnabledCivilizationType>
 					<CivilizationType>CIVILIZATION_NPC_NEANDERTHAL</CivilizationType>
@@ -3074,7 +3074,7 @@
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_NEANDERTHAL_HUNTER</Type>
-			<iInstanceCostModifier>10</iInstanceCostModifier>
+			<iInstanceCostModifier>5</iInstanceCostModifier>
 			<EnabledCivilizationTypes>
 				<EnabledCivilizationType>
 					<CivilizationType>CIVILIZATION_NPC_NEANDERTHAL</CivilizationType>
@@ -3191,7 +3191,7 @@
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_NEANDERTHAL_TRACKER</Type>
-			<iInstanceCostModifier>10</iInstanceCostModifier>
+			<iInstanceCostModifier>5</iInstanceCostModifier>
 			<EnabledCivilizationTypes>
 				<EnabledCivilizationType>
 					<CivilizationType>CIVILIZATION_NPC_NEANDERTHAL</CivilizationType>
@@ -3310,7 +3310,7 @@
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_NEANDERTHAL_CHASER</Type>
-			<iInstanceCostModifier>10</iInstanceCostModifier>
+			<iInstanceCostModifier>5</iInstanceCostModifier>
 			<EnabledCivilizationTypes>
 				<EnabledCivilizationType>
 					<CivilizationType>CIVILIZATION_NPC_NEANDERTHAL</CivilizationType>
