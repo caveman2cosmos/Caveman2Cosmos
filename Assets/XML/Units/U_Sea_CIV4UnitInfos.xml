@@ -133,7 +133,6 @@
 				<SubCombatType>UNITCOMBAT_WEAPON_STYLE_DIST_SINGLE_HAND_ONLY</SubCombatType>
 				<SubCombatType>UNITCOMBAT_WEAPON_H2H_OAR</SubCombatType>
 				<SubCombatType>UNITCOMBAT_WEAPON_SIDEARM_AXE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_WEAPON_DIST_ROCK</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_NAVAL</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_SUPERIOR</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_PARTY</SubCombatType>
@@ -10987,7 +10986,7 @@
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_DRAGON_SHIP_PIRATE</Type>
-			<iInstanceCostModifier>15</iInstanceCostModifier>
+			<iInstanceCostModifier>5</iInstanceCostModifier>
 			<Combat>UNITCOMBAT_WOODEN_SHIPS</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_PIRATE</SubCombatType>
@@ -11196,7 +11195,7 @@
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_BARBARY_CORSAIR</Type>
-			<iInstanceCostModifier>15</iInstanceCostModifier>
+			<iInstanceCostModifier>5</iInstanceCostModifier>
 			<Combat>UNITCOMBAT_WOODEN_SHIPS</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_PIRATE</SubCombatType>
@@ -11343,7 +11342,7 @@
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_PRIVATEER</Type>
-			<iInstanceCostModifier>15</iInstanceCostModifier>
+			<iInstanceCostModifier>5</iInstanceCostModifier>
 			<Combat>UNITCOMBAT_WOODEN_SHIPS</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_PIRATE</SubCombatType>
@@ -11785,7 +11784,7 @@
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_ASSAULT_SHIP</Type>
-			<iInstanceCostModifier>15</iInstanceCostModifier>
+			<iInstanceCostModifier>5</iInstanceCostModifier>
 			<Combat>UNITCOMBAT_DIESEL_SHIPS</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_PIRATE</SubCombatType>
@@ -12184,7 +12183,6 @@
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_COG_MERCHANT</Type>
-			<iMaxPlayerInstances>3</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_TRADE</Combat>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<SubCombatTypes>
@@ -12323,7 +12321,6 @@
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_CARRACK_MERCHANT</Type>
-			<iMaxPlayerInstances>3</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_TRADE</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_WOODEN_SHIPS</SubCombatType>
@@ -12411,7 +12408,6 @@
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_CLIPPER_MERCHANT</Type>
-			<iMaxPlayerInstances>3</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_TRADE</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_STEAM_SHIPS</SubCombatType>
@@ -12501,7 +12497,6 @@
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_LIBERTY_MERCHANT</Type>
-			<iMaxPlayerInstances>3</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_TRADE</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_DIESEL_SHIPS</SubCombatType>
@@ -12588,7 +12583,6 @@
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_CARGO_SHIP</Type>
-			<iMaxPlayerInstances>3</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_TRADE</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_DIESEL_SHIPS</SubCombatType>
