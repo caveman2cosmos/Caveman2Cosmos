@@ -12,15 +12,15 @@
 			<iAttackOddsChangeRand>20</iAttackOddsChangeRand>
 			<Traits>
 				<Trait>
-					<TraitType>TRAIT_BARBARIAN</TraitType>
+					<TraitType>TRAIT_BARBARIC</TraitType>
 					<bTrait>1</bTrait>
 				</Trait>
 			</Traits>
 			<DefaultTraits>
-				<TraitType>TRAIT_BARBARIAN</TraitType>
+				<TraitType>TRAIT_BARBARIC</TraitType>
 			</DefaultTraits>
 			<DefaultComplexTraits>
-				<TraitType>TRAIT_BARBARIAN</TraitType>
+				<TraitType>TRAIT_BARBARIC</TraitType>
 			</DefaultComplexTraits>
 			<DiplomacyIntroMusicPeace>
 				<DiploMusicPeaceEra>
@@ -452,15 +452,15 @@
 			<iAttackOddsChangeRand>20</iAttackOddsChangeRand>
 			<Traits>
 				<Trait>
-					<TraitType>TRAIT_BARBARIAN</TraitType>
+					<TraitType>TRAIT_BARBARIC</TraitType>
 					<bTrait>1</bTrait>
 				</Trait>
 			</Traits>
 			<DefaultTraits>
-				<TraitType>TRAIT_BARBARIAN</TraitType>
+				<TraitType>TRAIT_BARBARIC</TraitType>
 			</DefaultTraits>
 			<DefaultComplexTraits>
-				<TraitType>TRAIT_BARBARIAN</TraitType>
+				<TraitType>TRAIT_BARBARIC</TraitType>
 			</DefaultComplexTraits>
 			<DiplomacyIntroMusicPeace>
 				<DiploMusicPeaceEra>
