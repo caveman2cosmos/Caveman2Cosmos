@@ -282,15 +282,15 @@
 	</Define>
 	<Define>
 		<DefineName>EVENT_MESSAGE_TIME</DefineName>
-		<iDefineIntVal>10</iDefineIntVal>
+		<iDefineIntVal>5</iDefineIntVal>
 	</Define>
 	<Define>
 		<DefineName>EVENT_MESSAGE_TIME_LONG</DefineName>
-		<iDefineIntVal>20</iDefineIntVal>
+		<iDefineIntVal>10</iDefineIntVal>
 	</Define>
 	<Define>
 		<DefineName>EVENT_MESSAGE_STAGGER_TIME</DefineName>
-		<iDefineIntVal>3</iDefineIntVal>
+		<iDefineIntVal>2</iDefineIntVal>
 	</Define>
 	<Define>
 		<DefineName>START_YEAR</DefineName>
