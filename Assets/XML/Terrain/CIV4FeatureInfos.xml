@@ -367,10 +367,10 @@
 			<Civilopedia>TXT_KEY_FEATURE_FLOOD_PLAINS_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_FEATURE_FLOOD_PLAINS</ArtDefineTag>
 			<YieldChanges>
-				<iYieldChange>1</iYieldChange>
+				<iYieldChange>2</iYieldChange>
 			</YieldChanges>
 			<RiverYieldChange>
-				<iYield>1</iYield>
+				<iYield>3</iYield>
 				<iYield>0</iYield>
 				<iYield>1</iYield>
 			</RiverYieldChange>
@@ -842,7 +842,7 @@
 			<ArtDefineTag>ART_DEF_FEATURE_FOREST_ANCIENT</ArtDefineTag>
 			<YieldChanges>
 				<iYieldChange>1</iYieldChange>
-				<iYieldChange>1</iYieldChange>
+				<iYieldChange>2</iYieldChange>
 			</YieldChanges>
 			<iMovement>2</iMovement>
 			<iSeeThrough>1</iSeeThrough>
@@ -1654,7 +1654,6 @@
 			<ArtDefineTag>ART_DEF_FEATURE_CACTUS</ArtDefineTag>
 			<YieldChanges>
 				<iYieldChange>1</iYieldChange>
-				<iYieldChange>-1</iYieldChange>
 			</YieldChanges>
 			<iAppearance>800</iAppearance>
 			<iGrowth>10</iGrowth>
@@ -2104,6 +2103,7 @@
 			<YieldChanges>
 				<iYieldChange>0</iYieldChange>
 				<iYieldChange>1</iYieldChange>
+				<iYieldChange>1</iYieldChange>
 			</YieldChanges>
 			<iMovement>1</iMovement>
 			<iAppearance>300</iAppearance>
@@ -2457,6 +2457,7 @@
 			<ArtDefineTag>ART_DEF_FEATURE_TAR_PIT</ArtDefineTag>
 			<YieldChanges>
 				<iYieldChange>0</iYieldChange>
+				<iYieldChange>1</iYieldChange>
 				<iYieldChange>1</iYieldChange>
 			</YieldChanges>
 			<iMovement>2</iMovement>
