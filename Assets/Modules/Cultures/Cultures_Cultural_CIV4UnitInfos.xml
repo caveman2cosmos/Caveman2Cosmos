@@ -2302,6 +2302,15 @@
 			</UnitCombatMods>
 			<iAsset>1</iAsset>
 			<iPower>7</iPower>
+            <FreePromotions>
+                <FreePromotion>
+                    <PromotionType>PROMOTION_BLITZ</PromotionType>
+                    <bFreePromotion>1</bFreePromotion>
+                </FreePromotion>
+            </FreePromotions>
+            <SpecialCargo>SPECIALUNIT_TROOP</SpecialCargo>
+            <DomainCargo>DOMAIN_LAND</DomainCargo>
+            <iCargo>1</iCargo>
 			<UnitMeshGroups>
 				<iGroupSize>2</iGroupSize>
 				<fMaxSpeed>1.75</fMaxSpeed>
@@ -2530,6 +2539,12 @@
 					<iModifier>100</iModifier>
 				</UnitAttackMod>
 			</UnitAttackMods>
+            <UnitAttackMods>
+                <UnitAttackMod>
+                    <UnitType>UNIT_LIGHT_SWORDSMAN</UnitType>
+                    <iModifier>50</iModifier>
+                </UnitAttackMod>
+            </UnitAttackMods>
 			<UnitCombatMods>
 				<UnitCombatMod>
 					<UnitCombatType>UNITCOMBAT_ARCHER</UnitCombatType>
@@ -16800,7 +16815,13 @@
 				<BonusType>BONUS_BRONZE_WARES</BonusType>
 				<BonusType>BONUS_IRON_WARES</BonusType>
 			</PrereqBonuses>
-			<iCost>115</iCost>
+			<iCost>112</iCost>
+            <FreePromotions>
+                <FreePromotion>
+                    <PromotionType>PROMOTION_MARCH</PromotionType>
+                    <bFreePromotion>1</bFreePromotion>
+                </FreePromotion>
+            </FreePromotions>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iCombat>5</iCombat>
@@ -17626,6 +17647,7 @@
 			<bNoCapture>1</bNoCapture>
 			<bMilitarySupport>1</bMilitarySupport>
 			<bMilitaryProduction>1</bMilitaryProduction>
+            <bPassage>1</bPassage>
 			<bNoDefensiveBonus>1</bNoDefensiveBonus>
 			<bIgnoreTerrainCost>1</bIgnoreTerrainCost>
 			<bMilitaryTrade>1</bMilitaryTrade>
@@ -17659,10 +17681,11 @@
 			<PrereqBonuses>
 				<BonusType>BONUS_DOG</BonusType>
 			</PrereqBonuses>
-			<iCost>70</iCost>
+			<iCost>72</iCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>
-			<iCombat>3</iCombat>
+			<iCombat>4</iCombat>
+            <iDynamicDefense>5</iDynamicDefense>
 			<iXPValueAttack>6</iXPValueAttack>
 			<iXPValueDefense>3</iXPValueDefense>
 			<iPursuit>50</iPursuit>
@@ -17683,7 +17706,7 @@
 				</UnitCombatMod>
 			</UnitCombatMods>
 			<iAsset>1</iAsset>
-			<iPower>3</iPower>
+			<iPower>4</iPower>
 			<UnitMeshGroups>
 				<iGroupSize>2</iGroupSize>
 				<fMaxSpeed>1.75</fMaxSpeed>
@@ -20704,8 +20727,7 @@
 			<iCost>250</iCost>
 			<iBaseUpkeep>4</iBaseUpkeep>
 			<iMoves>2</iMoves>
-			<!--iTradeMultiplier>1</iTradeMultiplier-->
-			<!--iGreatWorkCulture>15</iGreatWorkCulture-->
+			<iGreatWorkCulture>15</iGreatWorkCulture>
 			<iAsset>5</iAsset>
 			<UnitMeshGroups>
 				<iGroupSize>1</iGroupSize>
@@ -27390,7 +27412,7 @@
 			<iMoves>1</iMoves>
 			<iCombat>8</iCombat>
 			<iStealthStrikes>1</iStealthStrikes>
-			<!--iStealthCombatModifiers>20</iStealthCombatModifiers-->
+			<iStealthCombatModifiers>20</iStealthCombatModifiers>
 			<iPursuit>5</iPursuit>
 			<iEnclose>8</iEnclose>
 			<iDynamicDefense>8</iDynamicDefense>
@@ -29668,8 +29690,7 @@
 			<iCost>250</iCost>
 			<iBaseUpkeep>4</iBaseUpkeep>
 			<iMoves>2</iMoves>
-			<!--iTradeMultiplier>1</iTradeMultiplier-->
-			<!--iGreatWorkCulture>15</iGreatWorkCulture-->
+			<iGreatWorkCulture>15</iGreatWorkCulture>
 			<iAsset>5</iAsset>
 			<UnitMeshGroups>
 				<iGroupSize>1</iGroupSize>
@@ -33900,8 +33921,7 @@
 			<iCost>250</iCost>
 			<iBaseUpkeep>4</iBaseUpkeep>
 			<iMoves>2</iMoves>
-			<!--iTradeMultiplier>1</iTradeMultiplier-->
-			<!--iGreatWorkCulture>15</iGreatWorkCulture-->
+			<iGreatWorkCulture>15</iGreatWorkCulture>
 			<iAsset>5</iAsset>
 			<UnitMeshGroups>
 				<iGroupSize>1</iGroupSize>
@@ -36728,7 +36748,7 @@
 			<iCombat>6</iCombat>
 			<iXPValueAttack>6</iXPValueAttack>
 			<iXPValueDefense>3</iXPValueDefense>
-			<iChanceFirstStrikes>1</iChanceFirstStrikes>
+			<iChanceFirstStrikes>2</iChanceFirstStrikes>
 			<iWithdrawalProb>20</iWithdrawalProb>
 			<iPursuit>20</iPursuit>
 			<iCityAttack>-20</iCityAttack>
@@ -39617,7 +39637,7 @@
 			<iXPValueAttack>6</iXPValueAttack>
 			<iXPValueDefense>3</iXPValueDefense>
 			<iStealthStrikes>1</iStealthStrikes>
-			<!--iStealthCombatModifiers>15</iStealthCombatModifiers-->
+			<iStealthCombatModifiers>15</iStealthCombatModifiers>
 			<iEnclose>6</iEnclose>
 			<iDynamicDefense>6</iDynamicDefense>
 			<iCultureGarrison>3</iCultureGarrison>
@@ -46314,7 +46334,7 @@
 			<iMoves>1</iMoves>
 			<iCombat>8</iCombat>
 			<iStealthStrikes>1</iStealthStrikes>
-			<!--iStealthCombatModifiers>20</iStealthCombatModifiers-->
+			<iStealthCombatModifiers>20</iStealthCombatModifiers>
 			<iPursuit>5</iPursuit>
 			<iEnclose>8</iEnclose>
 			<iDynamicDefense>8</iDynamicDefense>
@@ -47851,8 +47871,7 @@
 			<iCost>250</iCost>
 			<iBaseUpkeep>4</iBaseUpkeep>
 			<iMoves>3</iMoves>
-			<!--iTradeMultiplier>1</iTradeMultiplier-->
-			<!--iGreatWorkCulture>15</iGreatWorkCulture-->
+			<iGreatWorkCulture>15</iGreatWorkCulture>
 			<iAsset>5</iAsset>
 			<UnitMeshGroups>
 				<iGroupSize>1</iGroupSize>
@@ -50666,7 +50685,7 @@
 			<iXPValueAttack>6</iXPValueAttack>
 			<iXPValueDefense>3</iXPValueDefense>
 			<iStealthStrikes>1</iStealthStrikes>
-			<!--iStealthCombatModifiers>15</iStealthCombatModifiers-->
+			<iStealthCombatModifiers>15</iStealthCombatModifiers>
 			<iEnclose>6</iEnclose>
 			<iDynamicDefense>6</iDynamicDefense>
 			<iCultureGarrison>3</iCultureGarrison>
