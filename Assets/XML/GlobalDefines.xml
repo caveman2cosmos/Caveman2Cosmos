@@ -804,7 +804,7 @@
 	</Define>
 	<Define>
 		<DefineName>PEACE_TREATY_LENGTH</DefineName>
-		<iDefineIntVal>10</iDefineIntVal>
+		<iDefineIntVal>20</iDefineIntVal>
 	</Define>
 	<Define>
 		<DefineName>MAX_ANARCHY_TURNS</DefineName>
