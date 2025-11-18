@@ -356,7 +356,7 @@
 			At 100, it will put 1 culture (minimum) at max range tiles and 100% on city center.
 			Value of 75 means a city will flip other cities at max radius if its culture is 4x the lesser. -->
 		<DefineName>CITY_CULTURE_DENSITY_FACTOR</DefineName>
-		<iDefineIntVal>75</iDefineIntVal>
+		<iDefineIntVal>50</iDefineIntVal>
 	</Define>
 	<Define>
 		<!-- Each turn, culture on each plot will decay by this percent in equilibrium game option,
@@ -1066,7 +1066,7 @@
 	</Define>
 	<Define>
 		<DefineName>UNIT_UPGRADE_COST_PER_PRODUCTION</DefineName>
-		<iDefineIntVal>100</iDefineIntVal>
+		<iDefineIntVal>25</iDefineIntVal>
 	</Define>
 	<Define>
 		<DefineName>WAR_SUCCESS_DEFENDING</DefineName>
@@ -1445,11 +1445,11 @@
 	</Define>
 	<Define>
 		<DefineName>FREE_VASSAL_LAND_PERCENT</DefineName>
-		<iDefineIntVal>50</iDefineIntVal>
+		<iDefineIntVal>80</iDefineIntVal>
 	</Define>
 	<Define>
 		<DefineName>FREE_VASSAL_POPULATION_PERCENT</DefineName>
-		<iDefineIntVal>50</iDefineIntVal>
+		<iDefineIntVal>80</iDefineIntVal>
 	</Define>
 	<Define>
 		<DefineName>WARLORD_EXTRA_EXPERIENCE_PER_UNIT_PERCENT</DefineName>
@@ -1461,7 +1461,7 @@
 	</Define>
 	<Define>
 		<DefineName>MAX_WITHDRAWAL_PROBABILITY</DefineName>
-		<iDefineIntVal>90</iDefineIntVal>
+		<iDefineIntVal>95</iDefineIntVal>
 	</Define>
 	<Define>
 		<DefineName>MAX_INTERCEPTION_PROBABILITY</DefineName>
@@ -1469,7 +1469,7 @@
 	</Define>
 	<Define>
 		<DefineName>MAX_EVASION_PROBABILITY</DefineName>
-		<iDefineIntVal>90</iDefineIntVal>
+		<iDefineIntVal>95</iDefineIntVal>
 	</Define>
 	<Define>
 		<DefineName>PLAYER_ALWAYS_RAZES_CITIES</DefineName>
@@ -1666,7 +1666,7 @@
 	</Define>
 	<Define>
 		<DefineName>CITY_AIR_UNIT_CAPACITY</DefineName>
-		<iDefineIntVal>8</iDefineIntVal>
+		<iDefineIntVal>12</iDefineIntVal>
 	</Define>
 	<Define>
 		<DefineName>COLONY_NUM_FREE_DEFENDERS</DefineName>
@@ -1771,7 +1771,7 @@
 	<!-- 100 is default, 50 would be requirement for next level growing 2x slower, meaning more traits gained in same time frame. -->
 	<Define>
 		<DefineName>NEXT_TRAIT_CULTURE_REQ_PERCENT</DefineName>
-		<iDefineIntVal>100</iDefineIntVal>
+		<iDefineIntVal>175</iDefineIntVal>
 	</Define>
 	<Define>
 		<DefineName>CITY_OUTPUT_HISTORY_SIZE</DefineName>
