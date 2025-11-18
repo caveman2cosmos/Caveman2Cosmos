@@ -1458,6 +1458,11 @@
 			<iBuildModifier>25</iBuildModifier>
 			<iCultureDistance>2</iCultureDistance>
 			<iHealthPercent>-30</iHealthPercent>
+            <Yields>
+                <iYield>0</iYield>
+                <iYield>0</iYield>
+                <iYield>2</iYield>
+            </Yields>
 			<iMovement>1</iMovement>
 			<Button>Art/Interface/Buttons/baseterrain/DuneSalt.dds</Button>
 			<FootstepSounds>
@@ -2322,7 +2327,7 @@
 			<iDefense>10</iDefense>
 			<iMovement>2</iMovement>
 			<Yields>
-				<iYield>1</iYield>
+				<iYield>2</iYield>
 				<iYield>1</iYield>
 			</Yields>
 			<Button>Art/Interface/Buttons/baseterrain/DuneAnchorGrass.dds</Button>
