@@ -1789,6 +1789,7 @@
 			<UnitCombatPrereqTypes>
 				<UnitCombatPrereqType>UNITCOMBAT_WEAPON_DIST_SHORTBOW</UnitCombatPrereqType>
 				<UnitCombatPrereqType>UNITCOMBAT_WEAPON_DIST_LONGBOW</UnitCombatPrereqType>
+				<UnitCombatPrereqType>UNITCOMBAT_WEAPON_DIST_SLING</UnitCombatPrereqType>
 			</UnitCombatPrereqTypes>
 		</PromotionLineInfo>
 		<PromotionLineInfo>
