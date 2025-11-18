@@ -3,7 +3,8 @@
 	<UnitInfos>
 		<UnitInfo>
 			<Type>UNIT_CLOUD_DESTROYER</Type>
-			<iInstanceCostModifier>15</iInstanceCostModifier>
+			<iInstanceCostModifier>5</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_BALLOON</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
@@ -128,7 +129,8 @@
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_NAUTILUS</Type>
-			<iInstanceCostModifier>15</iInstanceCostModifier>
+			<iInstanceCostModifier>5</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_SUBMARINE</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_NAVAL_COMBATANT</SubCombatType>
@@ -270,7 +272,8 @@
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_WAR_WHEEL</Type>
-			<iInstanceCostModifier>15</iInstanceCostModifier>
+			<iInstanceCostModifier>5</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_RECON</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_WHEELED</SubCombatType>
@@ -363,7 +366,8 @@
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_STEAM_TANK</Type>
-			<iInstanceCostModifier>15</iInstanceCostModifier>
+			<iInstanceCostModifier>5</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_WHEELED</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
@@ -460,7 +464,8 @@
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_STEAMPUNK_WORKER</Type>
-			<iInstanceCostModifier>15</iInstanceCostModifier>
+			<iInstanceCostModifier>5</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Capture>UNIT_STEAMPUNK_WORKER</Capture>
 			<Combat>UNITCOMBAT_WORKER</Combat>
 			<SubCombatTypes>

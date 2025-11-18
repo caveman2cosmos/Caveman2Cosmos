@@ -3,7 +3,8 @@
 	<UnitInfos>
 		<UnitInfo>
 			<Type>UNIT_BEARRIDER</Type>
-			<iInstanceCostModifier>15</iInstanceCostModifier>
+			<iInstanceCostModifier>5</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_MOUNTED</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
@@ -121,7 +122,8 @@
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_BEARKNIGHT</Type>
-			<iInstanceCostModifier>15</iInstanceCostModifier>
+			<iInstanceCostModifier>5</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_MOUNTED</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
@@ -225,7 +227,8 @@
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_TRAINED_MAMMOTH</Type>
-			<iInstanceCostModifier>15</iInstanceCostModifier>
+			<iInstanceCostModifier>5</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_MOUNTED</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
@@ -340,7 +343,8 @@
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_TAMED_MAMMOTH</Type>
-			<iInstanceCostModifier>15</iInstanceCostModifier>
+			<iInstanceCostModifier>5</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Special>SPECIALUNIT_PEOPLE</Special>
 			<Combat>UNITCOMBAT_ANIMAL</Combat>
 			<SubCombatTypes>
@@ -442,7 +446,8 @@
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_NEANDERTHAL_MAMMOTH_RIDER</Type>
-			<iInstanceCostModifier>15</iInstanceCostModifier>
+			<iInstanceCostModifier>5</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<EnabledCivilizationTypes>
 				<EnabledCivilizationType>
 					<CivilizationType>CIVILIZATION_NPC_NEANDERTHAL</CivilizationType>
@@ -574,7 +579,8 @@
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_WAR_MAMMOTH</Type>
-			<iInstanceCostModifier>15</iInstanceCostModifier>
+			<iInstanceCostModifier>5</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_MOUNTED</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
@@ -686,7 +692,8 @@
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_BALLISTA_MAMMOTH</Type>
-			<iInstanceCostModifier>15</iInstanceCostModifier>
+			<iInstanceCostModifier>5</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_MOUNTED</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_SIEGE</SubCombatType>
@@ -812,7 +819,8 @@
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_BOMBARD_MAMMOTH</Type>
-			<iInstanceCostModifier>15</iInstanceCostModifier>
+			<iInstanceCostModifier>5</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_MOUNTED</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_SIEGE</SubCombatType>
@@ -1123,7 +1131,8 @@
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_MAPINGUARI_WOODEN</Type>
-			<iInstanceCostModifier>20</iInstanceCostModifier>
+			<iInstanceCostModifier>5</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_ANIMAL</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
@@ -1209,7 +1218,8 @@
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_MAPINGUARI_STONE</Type>
-			<iInstanceCostModifier>20</iInstanceCostModifier>
+			<iInstanceCostModifier>5</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_ANIMAL</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
@@ -1294,7 +1304,8 @@
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_MAPINGUARI_OBSIDIAN</Type>
-			<iInstanceCostModifier>20</iInstanceCostModifier>
+			<iInstanceCostModifier>5</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_ANIMAL</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
@@ -1381,7 +1392,8 @@
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_MAPINGUARI</Type>
-			<iInstanceCostModifier>20</iInstanceCostModifier>
+			<iInstanceCostModifier>5</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_ANIMAL</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
@@ -1472,7 +1484,8 @@
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_MAPINGUARI_PIKE</Type>
-			<iInstanceCostModifier>20</iInstanceCostModifier>
+			<iInstanceCostModifier>5</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_ANIMAL</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
@@ -1559,7 +1572,8 @@
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_RHINO_SWORDSMAN</Type>
-			<iInstanceCostModifier>15</iInstanceCostModifier>
+			<iInstanceCostModifier>5</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_MOUNTED</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
@@ -1655,7 +1669,8 @@
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_WAR_RHINO</Type>
-			<iInstanceCostModifier>15</iInstanceCostModifier>
+			<iInstanceCostModifier>5</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_ANIMAL</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
@@ -1730,6 +1745,8 @@
 		<UnitInfo>
 			<Type>UNIT_ZEBRA_ARCHER</Type>
 			<Combat>UNITCOMBAT_MOUNTED</Combat>
+            <iInstanceCostModifier>5</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_ARCHER</SubCombatType>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
@@ -1876,6 +1893,8 @@
 		<UnitInfo>
 			<Type>UNIT_ZEBRA_CAVALRY</Type>
 			<Combat>UNITCOMBAT_MOUNTED</Combat>
+            <iInstanceCostModifier>5</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_GUN</SubCombatType>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
@@ -2066,6 +2085,8 @@
 		<UnitInfo>
 			<Type>UNIT_ZEBRA_CHARIOT</Type>
 			<Combat>UNITCOMBAT_MOUNTED</Combat>
+            <iInstanceCostModifier>5</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_WHEELED</SubCombatType>
 				<SubCombatType>UNITCOMBAT_THROWING</SubCombatType>
@@ -2181,6 +2202,8 @@
 		<UnitInfo>
 			<Type>UNIT_ZEBRA_CUIRASSIER</Type>
 			<Combat>UNITCOMBAT_MOUNTED</Combat>
+            <iInstanceCostModifier>5</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_GUN</SubCombatType>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
@@ -2366,6 +2389,8 @@
 		<UnitInfo>
 			<Type>UNIT_ZEBRA_KNIGHT</Type>
 			<Combat>UNITCOMBAT_MOUNTED</Combat>
+            <iInstanceCostModifier>5</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_HUMAN</SubCombatType>
@@ -2509,6 +2534,8 @@
 				</EnabledCivilizationType>
 			</EnabledCivilizationTypes>
 			<Combat>UNITCOMBAT_FELINE</Combat>
+            <iInstanceCostModifier>5</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_TAMED</SubCombatType>
@@ -2647,6 +2674,8 @@
 			<Description>TXT_KEY_UNIT_WARCAT</Description>
 			<Civilopedia>TXT_KEY_UNIT_WARCAT_PEDIA</Civilopedia>
 			<Combat>UNITCOMBAT_FELINE</Combat>
+            <iInstanceCostModifier>5</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_ANIMAL</SubCombatType>
@@ -2783,6 +2812,8 @@
 		<UnitInfo>
 			<Type>UNIT_GUARDCAT</Type>
 			<Combat>UNITCOMBAT_FELINE</Combat>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
+            <iInstanceCostModifier>5</iInstanceCostModifier>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_TAMED</SubCombatType>
@@ -2929,6 +2960,8 @@
 		<UnitInfo>
 			<Type>UNIT_POLICE_CAT</Type>
 			<Combat>UNITCOMBAT_FELINE</Combat>
+            <iInstanceCostModifier>5</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_LAW_ENFORCEMENT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
@@ -3103,6 +3136,8 @@
 		<UnitInfo>
 			<Type>UNIT_FELINE_SUPERIOR</Type>
 			<Combat>UNITCOMBAT_FELINE</Combat>
+            <iInstanceCostModifier>5</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_LAW_ENFORCEMENT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
@@ -3282,7 +3317,8 @@
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_BISON_RIDER</Type>
-			<iInstanceCostModifier>15</iInstanceCostModifier>
+			<iInstanceCostModifier>5</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_MOUNTED</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
@@ -3412,7 +3448,8 @@
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_DEERRIDER</Type>
-			<iInstanceCostModifier>15</iInstanceCostModifier>
+			<iInstanceCostModifier>5</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_MOUNTED</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
@@ -3559,7 +3596,8 @@
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_DEER_ARCHER</Type>
-			<iInstanceCostModifier>15</iInstanceCostModifier>
+			<iInstanceCostModifier>5</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_MOUNTED</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_ARCHER</SubCombatType>
@@ -3693,7 +3731,8 @@
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_DEER_LIGHT</Type>
-			<iInstanceCostModifier>15</iInstanceCostModifier>
+			<iInstanceCostModifier>5</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_MOUNTED</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_GUN</SubCombatType>
@@ -3834,7 +3873,8 @@
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_GIRAFFE_ARCHER</Type>
-			<iInstanceCostModifier>15</iInstanceCostModifier>
+			<iInstanceCostModifier>5</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_MOUNTED</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_ARCHER</SubCombatType>
@@ -3960,7 +4000,8 @@
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_GIRAFFE_CROSSBOW</Type>
-			<iInstanceCostModifier>15</iInstanceCostModifier>
+			<iInstanceCostModifier>5</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_MOUNTED</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_ARCHER</SubCombatType>
@@ -4118,7 +4159,8 @@
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_GIRAFFE_CUIRASSIER</Type>
-			<iInstanceCostModifier>15</iInstanceCostModifier>
+			<iInstanceCostModifier>5</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_MOUNTED</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_GUN</SubCombatType>
@@ -4302,7 +4344,8 @@
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_GIRAFFE_CARABINIER</Type>
-			<iInstanceCostModifier>15</iInstanceCostModifier>
+			<iInstanceCostModifier>5</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_MOUNTED</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_GUN</SubCombatType>
@@ -4485,7 +4528,8 @@
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_GIRAFFE_DRAGOON</Type>
-			<iInstanceCostModifier>15</iInstanceCostModifier>
+			<iInstanceCostModifier>5</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_MOUNTED</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
@@ -4639,7 +4683,8 @@
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_GIRAFFE_CAVALRY</Type>
-			<iInstanceCostModifier>15</iInstanceCostModifier>
+			<iInstanceCostModifier>5</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_MOUNTED</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_GUN</SubCombatType>
@@ -4826,7 +4871,8 @@
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_GIRAFFE_TRENCH_CAVALRY</Type>
-			<iInstanceCostModifier>15</iInstanceCostModifier>
+			<iInstanceCostModifier>5</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_MOUNTED</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_GUN</SubCombatType>
@@ -5025,7 +5071,8 @@
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_URBAN_GIRAFFEMAN</Type>
-			<iInstanceCostModifier>15</iInstanceCostModifier>
+			<iInstanceCostModifier>5</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_MOUNTED</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
@@ -5164,6 +5211,8 @@
 		<UnitInfo>
 			<Type>UNIT_LLAMA_RIDER</Type>
 			<Combat>UNITCOMBAT_MOUNTED</Combat>
+            <iInstanceCostModifier>5</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_HUMAN</SubCombatType>
@@ -5316,6 +5365,8 @@
 		<UnitInfo>
 			<Type>UNIT_LLAMA_ARCHER</Type>
 			<Combat>UNITCOMBAT_MOUNTED</Combat>
+            <iInstanceCostModifier>5</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_ARCHER</SubCombatType>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
