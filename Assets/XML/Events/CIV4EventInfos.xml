@@ -584,6 +584,44 @@
 			<iAIValue>1</iAIValue>
 		</EventInfo>
 
+        <EventInfo>
+            <Type>EVENT_FISH_FOUND_1</Type>
+            <Description>TXT_KEY_EVENT_FISH_FOUND_1</Description>
+            <bPickCity>1</bPickCity>
+            <iFood>50</iFood>
+            <Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
+            <iAIValue>1</iAIValue>
+        </EventInfo>
+
+        <EventInfo>
+            <Type>EVENT_FISH_FOUND_2</Type>
+            <Description>TXT_KEY_EVENT_FISH_FOUND_2</Description>
+            <bPickCity>1</bPickCity>
+            <iFood>20</iFood>
+            <iGold>15</iGold>
+            <Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
+            <iAIValue>1</iAIValue>
+        </EventInfo>
+
+        <EventInfo>
+            <Type>EVENT_WHALE_FOUND_1</Type>
+            <Description>TXT_KEY_EVENT_WHALE_FOUND_1</Description>
+            <bPickCity>1</bPickCity>
+            <iFood>120</iFood>
+            <Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
+            <iAIValue>1</iAIValue>
+        </EventInfo>
+
+        <EventInfo>
+            <Type>EVENT_WHALE_FOUND_2</Type>
+            <Description>TXT_KEY_EVENT_WHALE_FOUND_2</Description>
+            <bPickCity>1</bPickCity>
+            <iFood>40</iFood>
+            <iGold>40</iGold>
+            <Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
+            <iAIValue>1</iAIValue>
+        </EventInfo>
+
 		<EventInfo>
 			<Type>EVENT_MOTHER_LODE_GOLD_1</Type>
 			<Description>TXT_KEY_EVENT_MOTHER_LODE_1</Description>
