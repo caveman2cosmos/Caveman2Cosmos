@@ -4,7 +4,7 @@
 		<!-- <iCultureDistance> slows down growth over tiles with Realistic Culture option on.
 				Note this value stacks with regular distance AND terrain (see CIV4TerrainInfos.xml)
 				Alternatively, <bIgnoreTerrainCulture> will make the feature's tile
-				ignore underlaying terrain cost.
+				ignore underlying terrain cost.
 				Presence of a feature without an improvement on it increases cultural distance by 1
 				unless bIgnoreTerrainCulture is true.
 				Both can be used together; this in effect replaces the terrain distance with only
@@ -5241,7 +5241,7 @@
 			<iAppearance>500</iAppearance>
 			<bNoAdjacent>1</bNoAdjacent>
 			<iPopDestroys>-1</iPopDestroys>
-			<iCultureDistance>-1</iCultureDistance>
+			<iCultureDistance>-2</iCultureDistance>
 			<TerrainBooleans>
 				<TerrainBoolean>
 					<TerrainType>TERRAIN_BARREN</TerrainType>

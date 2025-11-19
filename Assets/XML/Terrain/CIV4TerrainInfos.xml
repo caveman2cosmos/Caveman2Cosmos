@@ -2913,7 +2913,7 @@
 			<ArtDefineTag>ART_DEF_TERRAIN_OCEAN</ArtDefineTag>
 			<iDistanceToLand>3</iDistanceToLand>
 			<ClimateZoneType>CLIMATE_ZONE_TEMPERATE</ClimateZoneType>
-			<iCultureDistance>4</iCultureDistance>
+			<iCultureDistance>3</iCultureDistance>
 			<iMovement>2</iMovement>
 			<Yields>
 				<iYield>1</iYield>
@@ -3207,7 +3207,7 @@
 			<ArtDefineTag>ART_DEF_TERRAIN_OCEAN_TROPICAL</ArtDefineTag>
 			<iDistanceToLand>3</iDistanceToLand>
 			<ClimateZoneType>CLIMATE_ZONE_TROPICAL</ClimateZoneType>
-			<iCultureDistance>4</iCultureDistance>
+			<iCultureDistance>3</iCultureDistance>
 			<iMovement>2</iMovement>
 			<Yields>
 				<iYield>1</iYield>
@@ -3354,7 +3354,7 @@
 			<ArtDefineTag>ART_DEF_TERRAIN_SEA</ArtDefineTag>
 			<iDistanceToLand>2</iDistanceToLand>
 			<ClimateZoneType>CLIMATE_ZONE_TEMPERATE</ClimateZoneType>
-			<iCultureDistance>3</iCultureDistance>
+			<iCultureDistance>2</iCultureDistance>
 			<iMovement>2</iMovement>
 			<Yields>
 				<iYield>1</iYield>
@@ -3648,7 +3648,7 @@
 			<ArtDefineTag>ART_DEF_TERRAIN_SEA_TROPICAL</ArtDefineTag>
 			<iDistanceToLand>2</iDistanceToLand>
 			<ClimateZoneType>CLIMATE_ZONE_TROPICAL</ClimateZoneType>
-			<iCultureDistance>3</iCultureDistance>
+			<iCultureDistance>2</iCultureDistance>
 			<iMovement>2</iMovement>
 			<Yields>
 				<iYield>1</iYield>
@@ -5832,7 +5832,7 @@
 			<Civilopedia>TXT_KEY_TERRAIN_HILL_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_TERRAIN_HILL</ArtDefineTag>
 			<iBuildModifier>25</iBuildModifier>
-			<iCultureDistance>1</iCultureDistance> <!-- dll increases penalty 1 for missing: bBridgeBuilding, bCanFoundOnPeaks -->
+			<iCultureDistance>0</iCultureDistance> <!-- dll increases penalty 1 for missing: bBridgeBuilding, bCanFoundOnPeaks -->
 			<iMovement>1</iMovement>
 			<Button>Art/Interface\Buttons\WorldBuilder\Terrain_Hill.dds</Button>
 			<FootstepSounds>
