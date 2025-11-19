@@ -9910,7 +9910,7 @@ void CvCity::changeFoodKeptPercent(int iChange)
 
 int CvCity::getMaxProductionOverflow() const
 {
-	return getYieldRate(YIELD_PRODUCTION) * 7/4; // 1.75
+	return getYieldRate(YIELD_PRODUCTION) * 2;
 }
 
 
