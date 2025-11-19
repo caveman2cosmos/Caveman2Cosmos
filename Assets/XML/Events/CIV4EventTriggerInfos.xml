@@ -7526,6 +7526,7 @@
 			<bOwnPlot>1</bOwnPlot>
 			<FeaturesRequired>
 				<FeatureType>FEATURE_FOREST</FeatureType>
+				<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
 			</FeaturesRequired>
 			<Events>
 				<Event>EVENT_HAPPY_HUNTING_1</Event>
