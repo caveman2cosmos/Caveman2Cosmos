@@ -15045,6 +15045,18 @@
 		<English>Masinissa was the first King of Numidia. During his younger years he fought in the Second Punic War (218-201 BC), first against the Romans as an ally of Carthage and later switching sides. With Roman support, he united the eastern and western Numidian tribes and founded the Kingdom of Numidia. He is most famous for his role as a Roman ally in the Battle of Zama and as husband of Sophonisba, a Carthaginian noblewoman whom he allowed to poison herself to avoid being paraded in a triumph in Rome.</English>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_UNIT_NEANDERTHAL_MASTER_CHASER</Tag>
+		<English>Neanderthal Master Chaser</English>
+	</TEXT>
+		<TEXT>
+		<Tag>TXT_KEY_UNIT_NEANDERTHAL_MASTER_TRACKER</Tag>
+		<English>Neanderthal Master Tracker</English>
+	</TEXT>
+		<TEXT>
+		<Tag>TXT_KEY_UNIT_NEANDERTHAL_MASTER_HUNTER</Tag>
+		<English>Neanderthal Master Hunter</English>
+	</TEXT>
+		<TEXT>
 		<Tag>TXT_KEY_UNIT_MASTER_CHASER</Tag>
 		<English>Master Chaser</English>
 		<French>Maître Cavaleur</French>

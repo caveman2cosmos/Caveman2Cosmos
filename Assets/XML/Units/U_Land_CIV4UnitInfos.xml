@@ -38974,7 +38974,11 @@
 			</Buildings>
 			<UnitUpgrades>
 				<UnitType>UNIT_MASTER_CHASER</UnitType>
+				<UnitType>UNIT_NEANDERTHAL_MASTER_CHASER</UnitType>
 			</UnitUpgrades>
+            <SupersedingUnits>
+                <UnitType>UNIT_NEANDERTHAL_MASTER_CHASER</UnitType>
+            </SupersedingUnits>
 			<iAsset>1</iAsset>
 			<UnitMeshGroups>
 				<iGroupSize>1</iGroupSize>
@@ -45971,7 +45975,11 @@
 			<PrereqTech>TECH_PERSISTENCE_HUNTING</PrereqTech>
 			<UnitUpgrades>
 				<UnitType>UNIT_MASTER_TRACKER</UnitType>
+				<UnitType>UNIT_NEANDERTHAL_MASTER_CHASER</UnitType>
 			</UnitUpgrades>
+            <SupersedingUnits>
+                <UnitType>UNIT_NEANDERTHAL_MASTER_CHASER</UnitType>
+            </SupersedingUnits>
 			<ObsoleteTech>TECH_TRACKING</ObsoleteTech>
 			<iCost>-1</iCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
@@ -46083,7 +46091,11 @@
 			<PrereqTech>TECH_TRACKING</PrereqTech>
 			<UnitUpgrades>
 				<UnitType>UNIT_MASTER_HUNTER</UnitType>
+				<UnitType>UNIT_MASTER_NEANDERTHAL_TRACKER</UnitType>
 			</UnitUpgrades>
+            <SupersedingUnits>
+                <UnitType>UNIT_MASTER_NEANDERTHAL_TRACKER</UnitType>
+            </SupersedingUnits>
 			<iCost>-1</iCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>3</iMoves>
@@ -46195,7 +46207,11 @@
 			<iMoves>3</iMoves>
 			<UnitUpgrades>
 				<UnitType>UNIT_MASTER_RANGER</UnitType>
+				<UnitType>UNIT_MASTER_NEANDERTHAL_HUNTER</UnitType>
 			</UnitUpgrades>
+            <SupersedingUnits>
+                <UnitType>UNIT_NEANDERTHAL_MASTER_HUNTER</UnitType>
+            </SupersedingUnits>
 			<iCombat>4</iCombat>
 			<iXPValueAttack>1</iXPValueAttack>
 			<iXPValueDefense>2</iXPValueDefense>
