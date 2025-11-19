@@ -317,7 +317,7 @@
 		<EventInfo>
 			<Type>EVENT_FOREST_MASSIVE_WILDFIRE_1</Type>
 			<Description>TXT_KEY_EVENT_FOREST_MASSIVE_WILDFIRE_1</Description>
-			<iGold>-45</iGold>
+			<iGold>-35</iGold>
 			<bGameSpeedScale>1</bGameSpeedScale>
 			<AdditionalEvents>
 				<EventChance>
@@ -340,12 +340,16 @@
 		<EventInfo>
 			<Type>EVENT_FOREST_MASSIVE_WILDFIRE_2</Type>
 			<Description>TXT_KEY_EVENT_FOREST_MASSIVE_WILDFIRE_2</Description>
-			<iGold>-20</iGold>
+			<iGold>-15</iGold>
 			<bGameSpeedScale>1</bGameSpeedScale>
 			<FeatureType>FEATURE_FOREST</FeatureType>
 			<iFeatureChange>-1</iFeatureChange>
-			<FeatureType>FEATURE_FOREST_BURNT</FeatureType>
-			<iFeatureChange>1</iFeatureChange>
+            <AdditionalEvents>
+                <EventChance>
+                    <Event>EVENT_FOREST_FIRE_END</Event>
+                    <iEventChance>70</iEventChance>
+                </EventChance>
+            </AdditionalEvents>
 			<AdditionalEvents>
 				<EventChance>
 					<Event>EVENT_WILDFIRE_CATCHES_CITY</Event>
@@ -394,6 +398,8 @@
 			<Description>TXT_KEY_EVENT_WILDFIRE_1</Description>
 			<bPickCity>1</bPickCity>
 			<PythonCallback>doWildFire</PythonCallback>
+            <FeatureType>FEATURE_FOREST_BURNT</FeatureType>
+            <iFeatureChange>1</iFeatureChange>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<PythonHelp>getHelpWildFire</PythonHelp>
 		</EventInfo>
