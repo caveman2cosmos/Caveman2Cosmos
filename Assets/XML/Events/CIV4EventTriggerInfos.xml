@@ -10907,7 +10907,7 @@
 			</TriggerTexts>
 			<EventArt>Art/Event_Images/InfluenzaEvent.dds</EventArt>
 			<iPercentGamesActive>100</iPercentGamesActive>
-			<iWeight>40</iWeight>
+			<iWeight>30</iWeight>
 			<iMinPopulation>4</iMinPopulation>
 			<BuildingsRequired>
 				<Building>BUILDING_DISEASE_COMMON_COLD</Building>
@@ -10922,6 +10922,64 @@
 			<bPickCity>1</bPickCity>
 			<PythonCanDo>canTriggerInfluenza</PythonCanDo>
 		</EventTriggerInfo>
+
+        <EventTriggerInfo>
+            <Type>EVENTTRIGGER_INFLUENZA1</Type>
+            <WorldNewsTexts>
+                <Text>TXT_KEY_EVENTTRIGGER_INFLUENZA</Text>
+            </WorldNewsTexts>
+            <TriggerTexts>
+                <TriggerText>
+                    <Text>TXT_KEY_EVENT_TRIGGER_INFLUENZA_1</Text>
+                    <Era>NONE</Era>
+                </TriggerText>
+            </TriggerTexts>
+            <EventArt>Art/Event_Images/InfluenzaEvent.dds</EventArt>
+            <iPercentGamesActive>100</iPercentGamesActive>
+            <iWeight>30</iWeight>
+            <iMinPopulation>6</iMinPopulation>
+            <BuildingsRequired>
+                <Building>BUILDING_DISEASE_COMMON_COLD</Building>
+            </BuildingsRequired>
+            <iNumBuildings>1</iNumBuildings>
+            <bOwnPlot>1</bOwnPlot>
+            <Events>
+                <Event>EVENT_INFLUENZA_3</Event>
+                <Event>EVENT_INFLUENZA_4</Event>
+            </Events>
+            <bRecurring>1</bRecurring>
+            <bPickCity>1</bPickCity>
+            <PythonCanDo>canTriggerInfluenza</PythonCanDo>
+        </EventTriggerInfo>
+
+        <EventTriggerInfo>
+            <Type>EVENTTRIGGER_INFLUENZA2</Type>
+            <WorldNewsTexts>
+                <Text>TXT_KEY_EVENTTRIGGER_INFLUENZA</Text>
+            </WorldNewsTexts>
+            <TriggerTexts>
+                <TriggerText>
+                    <Text>TXT_KEY_EVENT_TRIGGER_INFLUENZA_1</Text>
+                    <Era>NONE</Era>
+                </TriggerText>
+            </TriggerTexts>
+            <EventArt>Art/Event_Images/InfluenzaEvent.dds</EventArt>
+            <iPercentGamesActive>100</iPercentGamesActive>
+            <iWeight>30</iWeight>
+            <iMinPopulation>8</iMinPopulation>
+            <BuildingsRequired>
+                <Building>BUILDING_DISEASE_COMMON_COLD</Building>
+            </BuildingsRequired>
+            <iNumBuildings>1</iNumBuildings>
+            <bOwnPlot>1</bOwnPlot>
+            <Events>
+                <Event>EVENT_INFLUENZA_5</Event>
+                <Event>EVENT_INFLUENZA_6</Event>
+            </Events>
+            <bRecurring>1</bRecurring>
+            <bPickCity>1</bPickCity>
+            <PythonCanDo>canTriggerInfluenza</PythonCanDo>
+        </EventTriggerInfo>
 
 		<EventTriggerInfo>
 			<Type>EVENTTRIGGER_ANTELOPE</Type>

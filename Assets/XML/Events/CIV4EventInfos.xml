@@ -2854,10 +2854,10 @@
 			<Type>EVENT_INFLUENZA_1</Type>
 			<Description>TXT_KEY_EVENT_INFLUENZA_1</Description>
 			<bPickCity>1</bPickCity>
-			<iGold>-400</iGold>
+			<iGold>-100</iGold>
 			<PrereqTech>TECH_BIOLOGY</PrereqTech>
 			<bGameSpeedScale>1</bGameSpeedScale>
-			<iPopulationChange>-2</iPopulationChange>
+			<iPopulationChange>-1</iPopulationChange>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<iAIValue>1</iAIValue>
 		</EventInfo>
@@ -2866,12 +2866,58 @@
 			<Type>EVENT_INFLUENZA_2</Type>
 			<Description>TXT_KEY_EVENT_INFLUENZA_2</Description>
 			<bPickCity>1</bPickCity>
-			<iPopulationChange>-3</iPopulationChange>
+			<iPopulationChange>-1</iPopulationChange>
 			<PythonCallback>applyInfluenza2</PythonCallback>
 			<PythonHelp>getHelpInfluenza2</PythonHelp>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<iAIValue>1</iAIValue>
 		</EventInfo>
+
+        <EventInfo>
+            <Type>EVENT_INFLUENZA_3</Type>
+            <Description>TXT_KEY_EVENT_INFLUENZA_1</Description>
+            <bPickCity>1</bPickCity>
+            <iGold>-200</iGold>
+            <PrereqTech>TECH_BIOLOGY</PrereqTech>
+            <bGameSpeedScale>1</bGameSpeedScale>
+            <iPopulationChange>-2</iPopulationChange>
+            <Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
+            <iAIValue>1</iAIValue>
+        </EventInfo>
+
+        <EventInfo>
+            <Type>EVENT_INFLUENZA_4</Type>
+            <Description>TXT_KEY_EVENT_INFLUENZA_2</Description>
+            <bPickCity>1</bPickCity>
+            <iPopulationChange>-2</iPopulationChange>
+            <PythonCallback>applyInfluenza2</PythonCallback>
+            <PythonHelp>getHelpInfluenza2</PythonHelp>
+            <Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
+            <iAIValue>1</iAIValue>
+        </EventInfo>
+
+        <EventInfo>
+            <Type>EVENT_INFLUENZA_5</Type>
+            <Description>TXT_KEY_EVENT_INFLUENZA_1</Description>
+            <bPickCity>1</bPickCity>
+            <iGold>-300</iGold>
+            <PrereqTech>TECH_BIOLOGY</PrereqTech>
+            <bGameSpeedScale>1</bGameSpeedScale>
+            <iPopulationChange>-3</iPopulationChange>
+            <Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
+            <iAIValue>1</iAIValue>
+        </EventInfo>
+
+        <EventInfo>
+            <Type>EVENT_INFLUENZA_6</Type>
+            <Description>TXT_KEY_EVENT_INFLUENZA_2</Description>
+            <bPickCity>1</bPickCity>
+            <iPopulationChange>-3</iPopulationChange>
+            <PythonCallback>applyInfluenza2</PythonCallback>
+            <PythonHelp>getHelpInfluenza2</PythonHelp>
+            <Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
+            <iAIValue>1</iAIValue>
+        </EventInfo>
 
 		<EventInfo>
 			<Type>EVENT_SOLO_FLIGHT_1</Type>
