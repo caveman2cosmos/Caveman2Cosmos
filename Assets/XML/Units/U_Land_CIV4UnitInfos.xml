@@ -32052,6 +32052,20 @@
 			<iCaptureProbabilityModifier>5</iCaptureProbabilityModifier>
 			<SpecialCargo>SPECIALUNIT_CAPTIVE</SpecialCargo>
 			<iCargo>1</iCargo>
+            <BonusProductionModifiers>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_COPPER_WARES</BonusType>
+                    <iProductonModifier>5</iProductonModifier>
+                </BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_BRONZE_WARES</BonusType>
+                    <iProductonModifier>5</iProductonModifier>
+                </BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_IRON_WARES</BonusType>
+                    <iProductonModifier>5</iProductonModifier>
+                </BonusProductionModifier>
+            </BonusProductionModifiers>
 			<FreePromotions>
 				<FreePromotion>
 					<PromotionType>PROMOTION_COMMANDO</PromotionType>
@@ -32386,6 +32400,24 @@
 			<iCaptureProbabilityModifier>5</iCaptureProbabilityModifier>
 			<SpecialCargo>SPECIALUNIT_CAPTIVE</SpecialCargo>
 			<iCargo>2</iCargo>
+            <BonusProductionModifiers>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_COPPER_WARES</BonusType>
+                    <iProductonModifier>5</iProductonModifier>
+                </BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_PRIME_TIMBER</BonusType>
+                    <iProductonModifier>5</iProductonModifier>
+                </BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_BRONZE_WARES</BonusType>
+                    <iProductonModifier>5</iProductonModifier>
+                </BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_IRON_WARES</BonusType>
+                    <iProductonModifier>5</iProductonModifier>
+                </BonusProductionModifier>
+            </BonusProductionModifiers>
 			<FreePromotions>
 				<FreePromotion>
 					<PromotionType>PROMOTION_COMMANDO</PromotionType>
