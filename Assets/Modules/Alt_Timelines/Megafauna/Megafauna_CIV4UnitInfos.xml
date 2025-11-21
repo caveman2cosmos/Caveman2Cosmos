@@ -3460,6 +3460,7 @@
 				<SubCombatType>UNITCOMBAT_WEAPON_H2H_SHORT_POLEARM</SubCombatType>
 				<SubCombatType>UNITCOMBAT_WEAPON_SIDEARM_KNIFE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_ARMOR_LIGHT</SubCombatType>
+                <SubCombatType>UNITCOMBAT_WEAPON_DIST_SHORTBOW</SubCombatType>
 				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_SHARP_HORNED</SubCombatType>
 				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_CHARGING</SubCombatType>
 				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_FAST_REFLEXES</SubCombatType>
@@ -3510,7 +3511,10 @@
 				<BuildingType>BUILDING_ANIMAL_TRAINER_DEER</BuildingType>
 			</PrereqOrBuildings>
 			<PrereqTech>TECH_MEGAFAUNA_DOMESTICATION</PrereqTech>
-			<iCost>94</iCost>
+            <TechTypes>
+                <PrereqTech>TECH_ARCHERY</PrereqTech>
+            </TechTypes>
+			<iCost>111</iCost>
 			<iMoves>2</iMoves>
 			<iCombat>6</iCombat>
 			<iXPValueAttack>6</iXPValueAttack>
@@ -3555,24 +3559,16 @@
 					<iUnitCombatMod>25</iUnitCombatMod>
 				</UnitCombatMod>
 			</UnitCombatMods>
-			<BonusProductionModifiers>
-				<BonusProductionModifier>
-					<BonusType>BONUS_FLINT</BonusType>
-					<iProductonModifier>5</iProductonModifier>
-				</BonusProductionModifier>
-				<BonusProductionModifier>
-					<BonusType>BONUS_PRIME_TIMBER</BonusType>
-					<iProductonModifier>5</iProductonModifier>
-				</BonusProductionModifier>
-				<BonusProductionModifier>
-					<BonusType>BONUS_STONE</BonusType>
-					<iProductonModifier>5</iProductonModifier>
-				</BonusProductionModifier>
-				<BonusProductionModifier>
-					<BonusType>BONUS_OBSIDIAN</BonusType>
-					<iProductonModifier>5</iProductonModifier>
-				</BonusProductionModifier>
-			</BonusProductionModifiers>
+            <BonusProductionModifiers>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_PRIME_TIMBER</BonusType>
+                    <iProductonModifier>5</iProductonModifier>
+                </BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_FEATHERS</BonusType>
+                    <iProductonModifier>5</iProductonModifier>
+                </BonusProductionModifier>
+            </BonusProductionModifiers>
 			<iAsset>2</iAsset>
 			<iPower>8</iPower>
 			<UnitMeshGroups>

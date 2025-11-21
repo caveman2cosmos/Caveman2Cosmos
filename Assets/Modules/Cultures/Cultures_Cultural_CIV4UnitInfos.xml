@@ -6847,7 +6847,7 @@
 			</FreePromotions>
 		</UnitInfo>
 		<UnitInfo>
-			<Type>UNIT_IRONWOOD_CLUBMAN</Type>
+			<Type>UNIT_IRONWOOD_SPEARMAN</Type>
             <iInstanceCostModifier>5</iInstanceCostModifier>
             <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_MELEE</Combat>
@@ -6872,8 +6872,8 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<DefaultUnitAI>UNITAI_COUNTER</DefaultUnitAI>
-			<Description>TXT_KEY_UNIT_IRONWOOD_CLUBMAN</Description>
-			<Civilopedia>TXT_KEY_UNIT_IRONWOOD_CLUBMAN_PEDIA</Civilopedia>
+			<Description>TXT_KEY_UNIT_IRONWOOD_SPEARMAN</Description>
+			<Civilopedia>TXT_KEY_UNIT_IRONWOOD_SPEARMAN_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -31399,12 +31399,13 @@
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_HUMAN</SubCombatType>
-				<SubCombatType>UNITCOMBAT_WEAPON_METHOD_HAND_TO_HAND_ONLY</SubCombatType>
+                <SubCombatType>UNITCOMBAT_WEAPON_METHOD_DISTANCE_PRIMARY</SubCombatType>
 				<SubCombatType>UNITCOMBAT_WEAPON_STYLE_H2H_SINGLE_HAND_ONLY</SubCombatType>
-				<SubCombatType>UNITCOMBAT_WEAPON_STYLE_SIDEARM_SINGLE_HAND_ONLY</SubCombatType>
 				<SubCombatType>UNITCOMBAT_WEAPON_H2H_SHORT_POLEARM</SubCombatType>
 				<SubCombatType>UNITCOMBAT_WEAPON_SIDEARM_KNIFE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_ARMOR_LIGHT</SubCombatType>
+                <SubCombatType>UNITCOMBAT_WEAPON_STYLE_DIST_TWO_HANDED</SubCombatType>
+                <SubCombatType>UNITCOMBAT_WEAPON_DIST_SHORTBOW</SubCombatType>
 				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_CHARGING</SubCombatType>
 				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_STOMP</SubCombatType>
 				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_FLEEING</SubCombatType>
@@ -31462,9 +31463,10 @@
 			<PrereqTech>TECH_ANIMAL_RIDING</PrereqTech>
 			<TechTypes>
 				<PrereqTech>TECH_EQUINE_DOMESTICATION</PrereqTech>
+				<PrereqTech>TECH_ARCHERY</PrereqTech>
 			</TechTypes>
 			<BonusType>BONUS_SAMI</BonusType>
-			<iCost>98</iCost>
+			<iCost>118</iCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iCombat>6</iCombat>
@@ -31515,19 +31517,11 @@
 			</UnitCombatMods>
             <BonusProductionModifiers>
                 <BonusProductionModifier>
-                    <BonusType>BONUS_FLINT</BonusType>
-                    <iProductonModifier>5</iProductonModifier>
-                </BonusProductionModifier>
-                <BonusProductionModifier>
                     <BonusType>BONUS_PRIME_TIMBER</BonusType>
                     <iProductonModifier>5</iProductonModifier>
                 </BonusProductionModifier>
                 <BonusProductionModifier>
-                    <BonusType>BONUS_STONE</BonusType>
-                    <iProductonModifier>5</iProductonModifier>
-                </BonusProductionModifier>
-                <BonusProductionModifier>
-                    <BonusType>BONUS_OBSIDIAN</BonusType>
+                    <BonusType>BONUS_FEATHERS</BonusType>
                     <iProductonModifier>5</iProductonModifier>
                 </BonusProductionModifier>
             </BonusProductionModifiers>
@@ -36731,21 +36725,16 @@
 			<PrereqTech>TECH_ANIMAL_RIDING</PrereqTech>
 			<TechTypes>
 				<PrereqTech>TECH_CAMELID_DOMESTICATION</PrereqTech>
+				<PrereqTech>TECH_IRON_WORKING</PrereqTech>
 			</TechTypes>
 			<BonusType>BONUS_BACTRIC</BonusType>
 			<PrereqBonuses>
 				<BonusType>BONUS_CAMEL</BonusType>
 			</PrereqBonuses>
-            <BonusProductionModifiers>
-                <BonusProductionModifier>
-                    <BonusType>BONUS_FLINT</BonusType>
-                    <iProductonModifier>10</iProductonModifier>
-                </BonusProductionModifier>
-            </BonusProductionModifiers>
-			<iCost>100</iCost>
+			<iCost>200</iCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>
-			<iCombat>6</iCombat>
+			<iCombat>9</iCombat>
 			<iXPValueAttack>6</iXPValueAttack>
 			<iXPValueDefense>3</iXPValueDefense>
 			<iChanceFirstStrikes>2</iChanceFirstStrikes>
@@ -40292,12 +40281,13 @@
 			<PrereqTech>TECH_ANIMAL_RIDING</PrereqTech>
 			<TechTypes>
 				<PrereqTech>TECH_EQUINE_DOMESTICATION</PrereqTech>
+				<PrereqTech>TECH_ARCHERY</PrereqTech>
 			</TechTypes>
 			<BonusType>BONUS_XIANBEI</BonusType>
 			<PrereqBonuses>
 				<BonusType>BONUS_HORSE</BonusType>
 			</PrereqBonuses>
-			<iCost>98</iCost>
+			<iCost>118</iCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iCombat>6</iCombat>
@@ -40310,19 +40300,7 @@
 			<iCollateralDamageMaxUnits>4</iCollateralDamageMaxUnits>
             <BonusProductionModifiers>
                 <BonusProductionModifier>
-                    <BonusType>BONUS_FLINT</BonusType>
-                    <iProductonModifier>5</iProductonModifier>
-                </BonusProductionModifier>
-                <BonusProductionModifier>
                     <BonusType>BONUS_PRIME_TIMBER</BonusType>
-                    <iProductonModifier>5</iProductonModifier>
-                </BonusProductionModifier>
-                <BonusProductionModifier>
-                    <BonusType>BONUS_STONE</BonusType>
-                    <iProductonModifier>5</iProductonModifier>
-                </BonusProductionModifier>
-                <BonusProductionModifier>
-                    <BonusType>BONUS_OBSIDIAN</BonusType>
                     <iProductonModifier>5</iProductonModifier>
                 </BonusProductionModifier>
                 <BonusProductionModifier>
