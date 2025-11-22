@@ -5826,6 +5826,26 @@
 		<Russian>Пошлите помощь выжившим, какую мы только сможем.</Russian>
 		<Spanish>Enviad toda la ayuda posible a los supervivientes.</Spanish>
 	</TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_SMALL_EARTHQUAKE_1</Tag>
+        <English>Send what aid we can to the survivors.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_MEDIUM_EARTHQUAKE_1</Tag>
+        <English>Send what aid we can to the survivors.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_STRONG_EARTHQUAKE_1</Tag>
+        <English>Send what aid we can to the survivors.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_HUGE_EARTHQUAKE_1</Tag>
+        <English>Send what aid we can to the survivors.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_APOCALYPTIC_EARTHQUAKE_1</Tag>
+        <English>Send what aid we can to the survivors.</English>
+    </TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_EARTHQUAKE_1_HELP</Tag>
 		<English>[ICON_BULLET]Suffer loss of plot improvements near the earthquake</English>
@@ -12431,6 +12451,26 @@
 		<Polish>Miastem %s2_city wstrz&#185;sn&#234;&#179;o trz&#234;sienie ziemi, powoduj&#185;c zawalenie si&#234; wielu budynk&#243;w, obsuni&#234;cia ziemi oraz lokalne podtopienia.</Polish>
 		<Russian>Землетрясение обрушилось на город %s2_city, вызывая обвал зданий, оползни и наводнения.</Russian>
 	</TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_TRIGGER_SMALL_EARTHQUAKE_1</Tag>
+        <English>An small earthquake was felt in the city of %s2_city, we had luck the damage was minimal.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_TRIGGER_MEDIUM_EARTHQUAKE_1</Tag>
+        <English>An earthquake hit the city of %s2_city, causing some building collapses.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_TRIGGER_STRONG_EARTHQUAKE_1</Tag>
+        <English>An earthquake jolts the city of %s2_city, causing building collapses, there have been victims.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_TRIGGER_HUGE_EARTHQUAKE_1</Tag>
+        <English>An earthquake rattled the city of %s2_city, causing severe building collapses and civilian casualties.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_TRIGGER_APOCALYPTIC_EARTHQUAKE_1</Tag>
+        <English>An catastrophic earthquake shatered the city of %s2_city, the city is in ruins. The number of dead is terrifying</English>
+    </TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_TRIGGER_EARTHQUAKE_2</Tag>
 		<English>An earthquake over 7.5 in Richter scale has shaken ground near %s2_city.</English>

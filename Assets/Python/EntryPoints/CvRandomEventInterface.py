@@ -5104,6 +5104,103 @@ def applyEarthquake1(argsList):
 		else:
 			plot.setImprovementType(-1)
 
+def doEarthquakeSmall(data):
+    minDestroy = 1
+    maxDestroy = 1
+    popLossPercent = 1
+    _doEarthquakeCore(data, minDestroy , maxDestroy, popLossPercent)
+
+
+def doEarthquakeMedium(data):
+    minDestroy = 1
+    maxDestroy = 2
+    popLossPercent = 3
+    _doEarthquakeCore(data, minDestroy , maxDestroy, popLossPercent)
+
+
+def doEarthquakeStrong(data):
+    minDestroy = 2
+    maxDestroy = 4
+    popLossPercent = 5
+    _doEarthquakeCore(data, minDestroy , maxDestroy, popLossPercent)
+
+
+def doEarthquakeHuge(data):
+    minDestroy = 3
+    maxDestroy = 5
+    popLossPercent = 15
+    _doEarthquakeCore(data, minDestroy , maxDestroy, popLossPercent)
+
+
+def doEarthquakeApocalyptic(data):
+    minDestroy = 4
+    maxDestroy = 8
+    popLossPercent = 25
+    _doEarthquakeCore(data, minDestroy , maxDestroy, popLossPercent)
+
+def _doEarthquakeCore(argsList, minDestroy, maxDestroy, popLossPercent):
+    data = argsList[1]
+    CyPlayer = GC.getPlayer(data.ePlayer)
+    CyCity = CyPlayer.getCity(data.iCityId)
+
+    # --- Random number of buildings to destroy ---
+    destroyCount = minDestroy
+    if maxDestroy > minDestroy:
+        destroyCount += GAME.getSorenRandNum(
+            maxDestroy - minDestroy + 1,
+            "Random building destruction"
+        )
+
+    # --- POPULATION BONUS APPLIED TO MAX ONLY ---
+    pop = CyCity.getPopulation()
+    popBonus = pop // 10  # pop 0–9 = 0, 10–19 = 1, 20–29 = 2, etc.
+    destroyCount += popBonus
+
+    candidates = []
+    for i in range(GC.getNumBuildingInfos()):
+        if isLimitedWonder(i) or not CyCity.hasBuilding(i) or CyCity.isFreeBuilding(i):
+            continue
+        info = GC.getBuildingInfo(i)
+        if info.getProductionCost() < 1 or info.isNukeImmune() or info.isAutoBuild():
+            continue
+        candidates.append(i)
+
+    # No buildings? Nothing to destroy
+    if not candidates:
+        return
+
+    # --- Shuffle using Civ4 RNG ---
+    for i in range(len(candidates) - 1, 0, -1):
+        j = GAME.getSorenRandNum(i + 1, "Shuffle")
+        candidates[i], candidates[j] = candidates[j], candidates[i]
+
+    # --- Destroy buildings ---
+    destroyed = 0
+    for buildingID in candidates:
+        if destroyed >= destroyCount:
+            break
+
+        destroyed += 1
+        CyCity.changeHasBuilding(buildingID, False)
+
+        if isLocalHumanPlayer(data.ePlayer):
+            CyInterface().addMessage(
+                data.ePlayer, False, GC.getEVENT_MESSAGE_TIME(),
+                TRNSLTR.getText(
+                    "TXT_KEY_EVENT_CITY_IMPROVEMENT_DESTROYED",
+                    (GC.getBuildingInfo(buildingID).getTextKey(),)
+                ),
+                "AS2D_BOMBARDED",
+                InterfaceMessageTypes.MESSAGE_TYPE_INFO,
+                GC.getBuildingInfo(buildingID).getButton(),
+                GC.getCOLOR_RED(), CyCity.getX(), CyCity.getY(),
+                True, True
+            )
+
+    if popLossPercent > 0:
+        popLoss = max(1, int(CyCity.getPopulation() * popLossPercent / 100))
+        CyCity.changePopulation(-popLoss)
+
 
 ####### Assassin Discovered #######
 
