@@ -1784,11 +1784,9 @@ class MapRegions:
 			minMap += 1
 
 		print "[MST] %i dents built: %r" % ( nDent, self.dentList )
-#		print "[MST] Regions: %r" % ( self.regionList )
 
 	# make a big dent
 	def theBigDent( self, pCenterPlot, sideways=None, chAccess=66 ):
-#		print "[MST] ======== MapRegions:theBigDent()"
 		if pCenterPlot==None: return None
 
 		# deal sideways
@@ -1863,30 +1861,24 @@ class MapRegions:
 				if temp==2:																			# mountainous
 					if plot.isWater():
 						plot.setPlotType( PlotTypes.PLOT_LAND, True, True )
-#						sprint += "[MST] @ %3i,%2i: Water -> Land \n" % ( plot.getX(), plot.getY() )
 					if plot.isFlatlands():
 						iChance = (100-chFlatHill)*(100-chFlatHill)/100
 						if choose( iChance, False, True ):
 							plot.setPlotType( PlotTypes.PLOT_HILLS, True, True )
-#							sprint += "[MST] @ %3i,%2i: Flat -> Hills \n" % ( plot.getX(), plot.getY() )
 					if plot.isHills():
 						if choose( chHillPeak, True, False ):
 							plot.setPlotType( PlotTypes.PLOT_PEAK, True, True )
-#							sprint += "[MST] @ %3i,%2i: Hills -> Peak \n" % ( plot.getX(), plot.getY() )
 				if temp==1:																			# peaks and volcanos
 					if plot.isWater():
 						plot.setPlotType( PlotTypes.PLOT_LAND, True, True )
-#						sprint += "[MST] @ %3i,%2i: Water -> Land \n" % ( plot.getX(), plot.getY() )
 					if plot.isFlatlands():
 						iChance = (100-chFlatHill)*(100-chFlatHill)/100
 						if choose( iChance, False, True ):
 							plot.setPlotType( PlotTypes.PLOT_HILLS, True, True )
-#							sprint += "[MST] @ %3i,%2i: Flat -> Hills \n" % ( plot.getX(), plot.getY() )
 					if plot.isHills():
 						iChance = (100-chHillPeak)*(100-chHillPeak)/100
 						if choose( iChance, False, True ):
 							plot.setPlotType( PlotTypes.PLOT_PEAK, True, True )
-#							sprint += "[MST] @ %3i,%2i: Hills -> Peak \n" % ( plot.getX(), plot.getY() )
 
 		# pass 2 - make accessable
 		sprint += "[MST] pass 2 - make accessable \n"
@@ -2013,7 +2005,6 @@ class MapRegions:
 	# - new keys are integers starting with 0
 	# - returns new template, old template is not touched
 	def rotateTemplate( self, tempDict, steps ):
-		#print "[MST] ======== MapRegions:rotateTemplate()"
 		steps = steps % 4
 		if steps == 0: steps = 4		# to ensure that new template has continuous integers as keys
 		temp = tempDict.copy()
@@ -2291,7 +2282,6 @@ class MapRegions:
 
 	# check, if regioncenter is far enough away from other regions to be placed at plot
 	def regionCheck( self, plot ):
-#		print "[MST] ======== MapRegions:regionCheck()"
 		bValid = True
 		iMinDist = self.regionDist + 3 * MAP.getWorldSize()
 		x0 = plot.getX()
@@ -2305,7 +2295,6 @@ class MapRegions:
 
 	# check thet plot is not within dist plots from the edges
 	def wrapCheck( self, plot, dist=3 ):
-#		print "[MST] ======== MapRegions:wrapCheck()"
 		x,y = coordByPlot( plot )
 		if not MAP.isWrapX():
 			if (x < dist) or (x > (iNumPlotsX-1-dist)): return False
@@ -2376,7 +2365,6 @@ class MapRegions:
 
 	# create plots and terrain for 'Lost Isle'
 	def stampLostIsle(self, template, center):
-#		print "[MST] ======== MapRegions:stampLostIsle()"
 		x0, y0 = center
 		stampList = []
 		dx, dy = (2,2)
@@ -2405,7 +2393,6 @@ class MapRegions:
 					pType = chooseMore((20, PlotTypes.PLOT_LAND), (95, PlotTypes.PLOT_HILLS), (100, PlotTypes.PLOT_PEAK))
 				elif temp == 3:
 					pType = chooseMore((20, PlotTypes.PLOT_LAND), (50, PlotTypes.PLOT_HILLS), (100, PlotTypes.PLOT_PEAK))
-				#sprint += "[MST] xy (%r,%r), temp: %r, pType %r\n" % (fx, fy, temp, pType)
 
 				# set target plot_type, terrain, feature
 				tPlot.setPlotType(pType, False, False)
@@ -2822,7 +2809,6 @@ class BonusBalancer:
 					misBonus = boniMissing[i]
 					iBonus  = misBonus[0]
 					iDesire = misBonus[1]
-#					sprint += "[MST] Pass %i, %s need %i more \n" % (pass_num,GC.getBonusInfo(iBonus).getType(),iDesire)
 					if iDesire>0:
 						for j in range( len(freePlots) ):
 							inx = freePlots[j]
@@ -2895,7 +2881,6 @@ class BonusBalancer:
 
 	# place bonus preserving the feature variety	(in forests)
 	def placeBonus(self, plot, iBonus):
-#		print "[MST] ======== BonusBalancer:placeBonus()"
 		eFeature = plot.getFeatureType()
 		bonusInfo = GC.getBonusInfo( iBonus )
 		# temp save feature and variety
@@ -3929,7 +3914,6 @@ class TeamStart:
 		# return list of teams sorted by priority
 		tRang = []
 		for l,p in teamLength: tRang.append( p )
-#		print "[MST] teamRankedList %r" % (tRang)
 		return tRang
 
 ################################################################################

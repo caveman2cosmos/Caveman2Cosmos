@@ -48,74 +48,40 @@ class CvEventManager:
 			'kbdEvent'					: self.onKbdEvent,
 			'ModNetMessage'				: self.onModNetMessage,
 			'Init'						: self.onInit,
-#			'UnInit'					: self.onUnInit,
-#			'OnSave'					: self.onSaveGame,
-#			'OnPreSave'					: self.onPreSave,
 			'OnLoad'					: self.onLoadGame,
 			'GameStart'					: self.onGameStart,
-#			'GameEnd'					: self.onGameEnd,
 			'MapRegen'					: self.onMapRegen,
-#			'plotRevealed'				: self.onPlotRevealed,
-#			'plotFeatureRemoved'		: self.onPlotFeatureRemoved,
-#			'plotPicked'				: self.onPlotPicked,
 			'nukeExplosion'				: self.onNukeExplosion,
 			'gotoPlotSet'				: self.onGotoPlotSet,
 			'BeginGameTurn'				: self.onBeginGameTurn,
-#			'EndGameTurn'				: self.onEndGameTurn,
 			'BeginPlayerTurn'			: self.onBeginPlayerTurn,
 			'EndPlayerTurn'				: self.onEndPlayerTurn,
-#			'endTurnReady'				: self.onEndTurnReady,
 			'combatResult'				: self.onCombatResult,
 			'combatLogCalc'				: self.onCombatLogCalc,
 			'combatLogHit'				: self.onCombatLogHit,
 			'improvementBuilt'			: self.onImprovementBuilt,
-#			'improvementDestroyed'		: self.onImprovementDestroyed,
-#			'routeBuilt'				: self.onRouteBuilt,
-#			'firstContact'				: self.onFirstContact,
 			'cityBuilt'					: self.onCityBuilt,
 			'cityAcquired' 				: self.onCityAcquired,
 			'cityAcquiredAndKept'		: self.onCityAcquiredAndKept,
 			'cityRazed'					: self.onCityRazed,
 			'cityLost'					: self.onCityLost,
-#			'cultureExpansion'			: self.onCultureExpansion,
 			'cityDoTurn'				: self.onCityDoTurn,
-#			'cityBuildingUnit'			: self.onCityBuildingUnit,
-#			'cityBuildingBuilding'		: self.onCityBuildingBuilding,
-#			'cityBuildingProcess'		: self.onCityBuildingProcess,
 			'cityRename'				: self.onCityRename,
-#			'cityHurry'					: self.onCityHurry,
-#			'selectionGroupPushMission'	: self.onSelectionGroupPushMission,
 			'unitCreated'				: self.onUnitCreated,
 			'unitBuilt'					: self.onUnitBuilt,
 			'unitKilled'				: self.onUnitKilled,
 			'unitPromoted'				: self.onUnitPromoted,
 			'unitUpgraded'				: self.onUnitUpgraded,
 			'UnitRename'				: self.onUnitRename,
-#			'unitPillage'				: self.onUnitPillage,
 			'unitSpreadReligionAttempt'	: self.onUnitSpreadReligionAttempt,
-#			'unitGifted'				: self.onUnitGifted,
-#			'unitBuildImprovement'		: self.onUnitBuildImprovement,
-#			'goodyReceived'				: self.onGoodyReceived,
 			'greatPersonBorn'			: self.onGreatPersonBorn,
 			'buildingBuilt'				: self.onBuildingBuilt,
 			'projectBuilt'				: self.onProjectBuilt,
 			'techAcquired'				: self.onTechAcquired,
-#			'techSelected'				: self.onTechSelected,
 			'religionFounded'			: self.onReligionFounded,
-#			'religionSpread'			: self.onReligionSpread,
-#			'religionRemove'			: self.onReligionRemove,
-#			'corporationFounded'		: self.onCorporationFounded,
-#			'corporationSpread'			: self.onCorporationSpread,
-#			'corporationRemove'			: self.onCorporationRemove,
-#			'goldenAge'					: self.onGoldenAge,
-#			'endGoldenAge'				: self.onEndGoldenAge,
-#			'chat' 						: self.onChat,
 			'victory'					: self.onVictory,
 			'vassalState'				: self.onVassalState,
 			'changeWar'					: self.onChangeWar,
-#			'setPlayerAlive'			: self.onSetPlayerAlive,
-#			'playerChangeStateReligion'	: self.onPlayerChangeStateReligion,
-#			'playerGoldTrade'			: self.onPlayerGoldTrade,
 			'windowActivation'			: self.onWindowActivation,
 			'gameUpdate'				: self.onGameUpdate
 		}
@@ -706,24 +672,6 @@ class CvEventManager:
 				popup.setText(szText)
 				popup.addPopup(iPlayer)
 
-	'''
-	def onPreSave(self, argsList): return
-
-
-	def onSaveGame(self, argsList):
-		# return the string to be saved - Must be a string
-		return ""
-
-
-	def onGameEnd(self, argsList):
-		print 'Called at the End of the game', ("argsList", argsList)
-
-
-	def onEndGameTurn(self, argsList):
-		# Called at the end of the "end turn" cycle.
-		iGameTurn = argsList[0]
-	'''
-
 
 	def onBeginGameTurn(self, argsList):
 		# Called at the beginning of the end of each turn
@@ -820,16 +768,6 @@ class CvEventManager:
 				ExcessHappy = CyPlayer.calculateTotalCityHappiness() - CyPlayer.calculateTotalCityUnhappiness()
 				if ExcessHappy > 0:
 					CyPlayer.changeGold(ExcessHappy * 50)
-
-
-
-	'''
-	def onEndTurnReady(self, argsList):
-		iGameTurn = argsList[0]
-
-	def onFirstContact(self, argsList):
-		iTeamX, iHasMetTeamY = argsList
-	'''
 
 
 	def onCombatResult(self, argsList):
@@ -1219,31 +1157,6 @@ class CvEventManager:
 							CvUtil.sendMessage(TRNSLTR.getText("TXT_KEY_RECRUITED",()), iPlayer, 16, 'Art/Interface/Buttons/Civics/Serfdom.dds', ColorTypes(44), iX, iY, True, True, bForce=False)
 
 
-	'''
-	def onImprovementDestroyed(self, argsList):
-		iImprovement, iOwner, iX, iY = argsList
-
-
-	def onRouteBuilt(self, argsList):
-		iRoute, iX, iY = argsList
-
-
-	def onPlotRevealed(self, argsList):
-		pPlot = argsList[0]
-		iTeam = argsList[1]
-
-
-	def onPlotFeatureRemoved(self, argsList):
-		pPlot = argsList[0]
-		iFeatureType = argsList[1]
-		pCity = argsList[2] # This can be null
-
-
-	def onPlotPicked(self, argsList):
-		pPlot = argsList[0]
-	'''
-
-
 	def onNukeExplosion(self, argsList):
 		CyPlot, CyUnit = argsList
 		if not CyUnit:
@@ -1290,7 +1203,6 @@ class CvEventManager:
 
 	# Only ever called from exe.
 	def onGotoPlotSet(self, argsList):
-		#pPlot, iPlayer = argsList
 		return
 
 
@@ -2088,7 +2000,6 @@ class CvEventManager:
 
 
 	def onUnitSpreadReligionAttempt(self, argsList):
-		#unit, iReligion, bSuccess = argsList
 		if not argsList[2]:
 			unit = argsList[0]
 			aWonderTuple = self.aWonderTuple
@@ -2295,36 +2206,6 @@ class CvEventManager:
 						popup.launch(True, PopupStates.POPUPSTATE_IMMEDIATE)
 
 
-	'''
-	def onReligionSpread(self, argsList):
-		iReligion, iOwner, pSpreadCity = argsList
-
-
-	def onReligionRemove(self, argsList):
-		iReligion, iOwner, pRemoveCity = argsList
-
-
-	def onCorporationFounded(self, argsList):
-		iCorporation, iFounder = argsList
-
-
-	def onCorporationSpread(self, argsList):
-		iCorporation, iOwner, pSpreadCity = argsList
-
-
-	def onCorporationRemove(self, argsList):
-		iCorporation, iOwner, pRemoveCity = argsList
-
-
-	def onGoldenAge(self, argsList):
-		iPlayer = argsList[0]
-
-
-	def onEndGoldenAge(self, argsList):
-		iPlayer = argsList[0]
-	'''
-
-
 	def onChangeWar(self, argsList):
 		bIsWar, iAttacker, iDefender = argsList # iAttacker & iDefender are Teams not Players.
 		if bIsWar:
@@ -2338,23 +2219,6 @@ class CvEventManager:
 							CyCity.changeHappinessTimer(10)
 							CyUnit = CyPlayer.initUnit(CyCity.getConscriptUnit(), CyCity.getX(), CyCity.getY(), UnitAITypes.NO_UNITAI, DirectionTypes.NO_DIRECTION)
 							CyCity.addProductionExperience(CyUnit, True)
-
-
-	'''
-	def onChat(self, argsList):
-		chatMessage = "%s" %(argsList[0],)
-
-
-	def onSetPlayerAlive(self, argsList):
-		iPlayer, bNewValue, = argsList
-
-	def onPlayerChangeStateReligion(self, argsList):
-		iPlayer, iNewReligion, iOldReligion = argsList
-
-
-	def onPlayerGoldTrade(self, argsList):
-		iFromPlayer, iToPlayer, iGoldAmount = argsList
-	'''
 
 
 	def onCityBuilt(self, argsList):
@@ -2640,13 +2504,6 @@ class CvEventManager:
 			self.iOldCityID = None
 
 
-	'''
-	def onCultureExpansion(self, argsList):
-		pCity = argsList[0]
-		iPlayer = argsList[1]
-	'''
-
-
 	def onCityDoTurn(self, argsList):
 		CyCity, iPlayer = argsList
 
@@ -2687,21 +2544,6 @@ class CvEventManager:
 					CyCity.addProductionExperience(CyUnit, False)
 					if iPlayer == GAME.getActivePlayer():
 						CvUtil.sendMessage(TRNSLTR.getText("TXT_KEY_MSG_BIODOME",(CyUnit.getName(),)), iPlayer, 16, CyUnit.getButton(), ColorTypes(11), iX, iY, True, True)
-
-
-	'''
-	def onCityBuildingUnit(self, argsList):
-		CyCity = argsList[0]
-		iType = argsList[1]
-
-
-	def onCityBuildingBuilding(self, argsList):
-		CyCity = argsList[0]
-		iType = argsList[1]
-
-	def onCityBuildingProcess(self, argsList):
-		CyCity, iType, = argsList
-	'''
 
 
 	def onCityRename(self, argsList):

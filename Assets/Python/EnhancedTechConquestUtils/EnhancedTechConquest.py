@@ -65,7 +65,6 @@ def loadConfigurationData():
 class EnhancedTechConquest:
 
 	def onCityAcquired(self, argsList):
-		#iOwnerOld, iOwnerNew, city, bConquest, bTrade, bAutoRaze = argsList
 		# if not bConquest
 		if not argsList[3]: return
 

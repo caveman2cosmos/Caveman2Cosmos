@@ -55,8 +55,6 @@ class Revolution:
 
 		self.centerPopups = RevOpt.isCenterPopups()
 
-		# Fewer than this number of cities won't try for independence, but change leader
-		#self.minCitiesForIndependence = config.getint("Revolution","MinCitiesForIndependence",4)
 		# Cities considered close to revolution instigator inside this radius
 		self.closeRadius = RevOpt.getCloseRadius()
 
@@ -571,7 +569,6 @@ class Revolution:
 
 
 	def onCityAcquiredAndKept(self, argsList):
-		#iOwnerOld, iOwnerNew, city, bConquest, bTrade = argsList
 		self.updateLocalRevIndices(GAME.getGameTurn(), argsList[1], subCityList = [argsList[2]], bIsRevWatch = True)
 
 ##--- Player turn functions ---------------------------------------
@@ -695,7 +692,6 @@ class Revolution:
 
 				if self.LOG_DEBUG: print "[REV] Revolt: Non-rebel: Reinforcement window over, but nearby fighting continues"
 				pCity.setReinforcementCounter(2+1)
-				#pCity.changeRevolutionIndex( min([-revIdx/50,4*localRevIdx,-10]) )
 				return
 
 		if not bRecentSuccess:
@@ -842,7 +838,7 @@ class Revolution:
 			minReinfTurns = max([self.minReinforcementTurns, 4 - owner.getCurrentEra(), 9 - pCity.getPopulation()])
 
 			iReinforceTurns = max([iReinforceTurns,minReinfTurns])
-			## Dancing Hoskuld August 2012  - getCityVal may not return an intiger but None also ##
+			## Dancing Hoskuld August 2012  - getCityVal may not return an integer but None also ##
 			iCityRevData_DH = RevData.getCityVal(pCity, 'RevolutionTurn')
 			if iCityRevData_DH == None:
 				iCityRevData_DH = 0
@@ -2469,7 +2465,6 @@ class Revolution:
 		# All of these have violent and peaceful paths
 #-------- Check if instigator influence by other culture -> try to join
 		if( self.culturalRevolution and instigator.plot().calculateCulturePercent(iPlayer) <= self.maxNationalityThreshold ) :
-			#cultOwnerID = instigator.plot().calculateCulturalOwner()
 			# calculateCulturalOwner rules out dead civs ...
 			maxCulture = 30
 			cultOwnerID = -1
@@ -2775,7 +2770,6 @@ class Revolution:
 
 					bodStr = RevUtils.getCityTextList(indCities, bPreCity = True, bPostIs = True)
 
-					#iBuyOffCost = (60 + 12*pPlayer.getCurrentEra())*len(indCities) + GAME.getSorenRandNum(50+10*pPlayer.getCurrentEra(),'Rev')
 					totalRevIdx = 0
 					for pCity in indCities :
 						totalRevIdx += pCity.getRevolutionIndex()
@@ -2958,7 +2952,6 @@ class Revolution:
 
 						bodStr = RevUtils.getCityTextList(revCities, bPreCity = True, bPostIs = True)
 
-						#iBuyOffCost = (50 + 10*pPlayer.getCurrentEra())*len(revCities) + GAME.getSorenRandNum(50+10*pPlayer.getCurrentEra(),'Rev')
 						totalRevIdx = 0
 						for pCity in revCities :
 							totalRevIdx += pCity.getRevolutionIndex()
@@ -3048,7 +3041,6 @@ class Revolution:
 
 						bodStr = RevUtils.getCityTextList(revCities, bPreCity = True, bPostIs = True)
 
-						#iBuyOffCost = (50 + 10*pPlayer.getCurrentEra())*len(revCities) + GAME.getSorenRandNum(50+10*pPlayer.getCurrentEra(),'Rev')
 						totalRevIdx = 0
 						for pCity in revCities :
 							totalRevIdx += pCity.getRevolutionIndex()
@@ -3108,7 +3100,6 @@ class Revolution:
 							if self.LOG_DEBUG: print "[REV] Revolt: Asking change to representation"
 							bodStr += "  " + TRNSLTR.getText("TXT_KEY_REV_COL_GOVT_CRIES",()) + " %s!' "%(GC.getCivicInfo(newCivic).getDescription()) +TRNSLTR.getText("TXT_KEY_REV_COL_GOVT_MARCH",())
 
-						#iBuyOffCost = (75 + 12*pPlayer.getCurrentEra())*len(foreignCities) + GAME.getSorenRandNum(100+10*pPlayer.getCurrentEra(),'Rev')
 						totalRevIdx = 0
 						for pCity in foreignCities :
 							totalRevIdx += pCity.getRevolutionIndex()
@@ -3157,7 +3148,6 @@ class Revolution:
 					if( laborLevel < 0 and newLaborLevel > 5 and not newCivic == None ):
 						if self.LOG_DEBUG: print "[REV] Revolt: Asking change to %s, %d"%(GC.getCivicInfo(newCivic).getDescription(),newCivic)
 
-						#iBuyOffCost = (50 + 12*pPlayer.getCurrentEra())*len(revCities) + GAME.getSorenRandNum(50+10*pPlayer.getCurrentEra(),'Rev')
 						totalRevIdx = 0
 						for pCity in revCities :
 							totalRevIdx += pCity.getRevolutionIndex()
@@ -3224,7 +3214,6 @@ class Revolution:
 								if self.LOG_DEBUG: print "[REV] Revolt: Asking change to representation, " + str(newCivic)
 								bodStr += "  " + TRNSLTR.getText("TXT_KEY_REV_CAP_VOTE_CRIES",()) + " %s!' "%(GC.getCivicInfo(newCivic).getDescription()) +TRNSLTR.getText("TXT_KEY_REV_CAP_VOTE_MARCH",())
 
-							#iBuyOffCost = (50 + 15*pPlayer.getCurrentEra())*len(revCities) + GAME.getSorenRandNum(150+15*pPlayer.getCurrentEra(),'Rev')
 							totalRevIdx = 0
 							for pCity in revCities :
 								totalRevIdx += pCity.getRevolutionIndex()
@@ -3259,7 +3248,6 @@ class Revolution:
 
 							bodStr = RevUtils.getCityTextList(revCities, bPreCity = True, bPostIs = True)
 
-							#iBuyOffCost = (50 + 10*pPlayer.getCurrentEra())*len(revCities) + GAME.getSorenRandNum(50+10*pPlayer.getCurrentEra(),'Rev')
 							totalRevIdx = 0
 							for pCity in revCities :
 								totalRevIdx += pCity.getRevolutionIndex()
@@ -3286,7 +3274,7 @@ class Revolution:
 
 							return
 
-				if self.leaderRevolution and not bReinstatedOnRevolution: #and (len(revCities) == pPlayer.getNumCities() or len(revCities) > (pPlayer.getNumCities()+1)/3) ) :
+				if self.leaderRevolution and not bReinstatedOnRevolution:
 					# All or most cities in revolt
 					if not pPlayer.isHuman() or self.humanLeaderRevolution:
 						# Ask for change of leader
@@ -3300,7 +3288,6 @@ class Revolution:
 								[newLeaderType,newLeaderName] = self.chooseRevolutionLeader( revCities )
 
 								bIsElection = False
-								#iBuyOffCost = (50 + 15*pPlayer.getCurrentEra())*len(revCities) + GAME.getSorenRandNum(100+10*pPlayer.getCurrentEra(),'Rev')
 								totalRevIdx = 0
 								for pCity in revCities :
 									totalRevIdx += pCity.getRevolutionIndex()
@@ -3333,7 +3320,6 @@ class Revolution:
 							[newLeaderType,newLeaderName] = self.chooseRevolutionLeader( revCities )
 
 							bIsElection = True
-							#iBuyOffCost = (30 + 10*pPlayer.getCurrentEra())*len(revCities) + GAME.getSorenRandNum(100+10*pPlayer.getCurrentEra(),'Rev')
 							totalRevIdx = 0
 							for pCity in revCities :
 								totalRevIdx += pCity.getRevolutionIndex()
@@ -3365,7 +3351,7 @@ class Revolution:
 				# If violent, demand change of leader!
 				if self.LOG_DEBUG: print "[REV] Revolt: Capital or majority of cities in violent revolution!"
 
-				if self.leaderRevolution: #and (len(revCities) > 1 or len(revCities) == pPlayer.getNumCities()) ) :
+				if self.leaderRevolution:
 
 					if not pPlayer.isHuman() or self.humanLeaderRevolution:
 
@@ -3385,7 +3371,6 @@ class Revolution:
 						bIsElection = RevUtils.isCanDoElections(pPlayer)
 
 						if bIsElection:
-							#iBuyOffCost = (50 + 12*pPlayer.getCurrentEra())*len(revCities) + GAME.getSorenRandNum(100+10*pPlayer.getCurrentEra(),'Rev')
 							totalRevIdx = 0
 							for pCity in revCities:
 								totalRevIdx += pCity.getRevolutionIndex()
@@ -3463,7 +3448,6 @@ class Revolution:
 				else :
 					giveRelType = -1
 			[pRevPlayer,bIsJoinWar] = self.chooseRevolutionCiv( indCities, bJoinCultureWar = False, bReincarnate = True, bJoinRebels = True, bSpreadRebels = True, giveRelType = giveRelType, bMatchCivics = True )
-			#iBuyOffCost = (100 + 20*pPlayer.getCurrentEra())*len(indCities) + GAME.getSorenRandNum(100+20*pPlayer.getCurrentEra(),'Rev')
 			totalRevIdx = 0
 			totalPop = 0
 			for pCity in indCities :
@@ -4740,9 +4724,6 @@ class Revolution:
 
 		cityList = newCityList
 
-		#if( not len(cityList) > 0 ) :
-		#	return
-
 		if( revData.dict.get( 'bDidBuyOff', False ) ) :
 			if revType == 'leader' and revData.dict.get('bIsElection', False):
 				# TODO something special for this
@@ -4938,14 +4919,6 @@ class Revolution:
 						joinPlayer = GC.getPlayer( revData.dict['iJoinPlayer'] )
 						if self.LOG_DEBUG: print "[REV] Revolt: Error!  Join player specified for leader type revolt ..."
 
-					# if( not joinPlayer == None ) :
-						# joinPlayer.AI_changeAttitudeExtra( pPlayer.getID(), -2 )
-						# if self.LOG_DEBUG: print "[REV] Revolt: %s's Extra Attitude towards %s now %d"%(joinPlayer.getCivilizationDescription(0),pPlayer.getCivilizationDescription(0),joinPlayer.AI_getAttitudeExtra(pPlayer.getID()))
-						# pPlayer.AI_changeAttitudeExtra( joinPlayer.getID(), -2 )
-
-						# self.prepareRevolution( pPlayer, iRevoltIdx, cityList, joinPlayer, bIsJoinWar = True, switchToRevs = switchToRevs )
-
-					# else :
 					pRevPlayer = GC.getPlayer( revData.dict['iRevPlayer'] )
 					if not pRevPlayer.isNPC():
 						pRevPlayer.AI_changeAttitudeExtra( pPlayer.getID(), -5 )
@@ -5233,12 +5206,7 @@ class Revolution:
 						except :
 							print "ERROR in grant independence"
 							print "ERROR:  Failed to set owner of city, %s at plot %d, %d"%(pCity.getName(),cityPlot.getX(),cityPlot.getY())
-							#print "City culture is %d"%(pCity.getCulture(pPlayer.getID()))
 
-							#pCity = cityPlot.getPlotCity()
-							#print "Post culture in %s is %d"%(pCity.getName(),pCity.getCulture(pPlayer.getID()))
-							#pRevPlayer.acquireCity( pCity, False, False )
-							#RevData.initCity(pCity)
 							# City has become invalid, will cause game to crash if left
 							print "Destroying city so game can continue"
 							pCity.kill()
@@ -5258,8 +5226,6 @@ class Revolution:
 								if self.LOG_DEBUG:
 									print "[REV] Revolt: Building %s saved" % GC.getBuildingInfo(buildingType).getDescription()
 								pCity.changeHasBuilding(buildingType, True)
-
-						#if self.LOG_DEBUG: print "[REV] Revolt: %s at %d, %d"%(pCity.getName(),pCity.getX(),pCity.getY())
 
 						if self.LOG_DEBUG: print "[REV] Revolt: Culture in %s: %d, plot %d"%(pCity.getName(),pCity.getCulture(pPlayer.getID()),pCity.plot().getCulture(pPlayer.getID()))
 
@@ -5282,11 +5248,9 @@ class Revolution:
 
 						if( pRevPlayer.getNumCities() <= 2 ) :
 							# Extra units for first two cities
-							#pRevPlayer.initUnit( iAttack, ix, iy, UnitAITypes.NO_UNITAI, DirectionTypes.DIRECTION_SOUTH )
 							pRevPlayer.initUnit( iAttack, ix, iy, UnitAITypes.NO_UNITAI, DirectionTypes.DIRECTION_SOUTH )
 						elif( GC.getTeam(pPlayer.getTeam()).isAtWarWith(pRevPlayer.getTeam()) ) :
 							pRevPlayer.initUnit( iBestDefender, ix, iy, UnitAITypes.NO_UNITAI, DirectionTypes.DIRECTION_SOUTH )
-							#pRevPlayer.initUnit( iBestDefender, ix, iy, UnitAITypes.NO_UNITAI, DirectionTypes.DIRECTION_SOUTH )
 
 						if not bIsBarbRev and not bGaveMap:
 							pRevPlayer.receiveGoody(GC.getMap().plot(ix,iy), iGoodyMap, newUnit)
@@ -5355,7 +5319,7 @@ class Revolution:
 						bIsBarbRev = joinPlayer.isNPC()
 
 						for iPlayer in xrange(GC.getMAX_PC_PLAYERS()) :
-							# Craft revolution anouncement message for all players
+							# Craft revolution announcement message for all players
 							if( GC.getPlayer(iPlayer).canContact(pPlayer.getID()) or iPlayer == pPlayer.getID() ) :
 
 								colorNum = 7 # Red
@@ -5414,12 +5378,7 @@ class Revolution:
 							except :
 								print "ERROR in cultural acquisition"
 								print "ERROR:  Failed to set owner of city, %s at plot %d, %d "%(pCity.getName(),cityPlot.getX(),cityPlot.getY())
-								#print "City culture is %d"%(pCity.getCulture(pPlayer.getID()))
 
-								#pCity = cityPlot.getPlotCity()
-								#print "Post culture in %s is %d"%(pCity.getName(),pCity.getCulture(pPlayer.getID()))
-								#joinPlayer.acquireCity( pCity, False, False )
-								#RevData.initCity(pCity)
 								# City has become invalid, will cause game to crash if left
 								print "Destroying city so game can continue"
 								pCity.kill()
@@ -5442,7 +5401,6 @@ class Revolution:
 
 							# Give a few defenders
 							newUnit = joinPlayer.initUnit( iBestDefender, ix, iy, UnitAITypes.NO_UNITAI, DirectionTypes.DIRECTION_SOUTH )
-							#joinPlayer.initUnit( iBestDefender, ix, iy, UnitAITypes.NO_UNITAI )
 							joinPlayer.initUnit( iCounter, ix, iy, UnitAITypes.NO_UNITAI, DirectionTypes.DIRECTION_SOUTH )
 							if( joinPlayer.getNumCities() <= 2 ) :
 								# Extra units for first two cities (unlikely in this case)
@@ -5453,10 +5411,6 @@ class Revolution:
 
 							elif( GC.getTeam(pPlayer.getTeam()).isAtWarWith(joinPlayer.getTeam()) ) :
 								joinPlayer.initUnit( iBestDefender, ix, iy, UnitAITypes.NO_UNITAI, DirectionTypes.DIRECTION_SOUTH )
-								#joinPlayer.initUnit( iBestDefender, ix, iy, UnitAITypes.NO_UNITAI )
-
-							#joinPlayer.receiveGoody( GC.getMap().plot(ix,iy), iGoodyMap, newUnit )
-							#joinPlayer.receiveGoody( GC.getMap().plot(ix,iy), iGoodyMap, newUnit )
 
 							# Remove default units
 							for unit in defaultUnits :
@@ -5825,12 +5779,6 @@ class Revolution:
 					iDamage = max([iDamage,iPreDamage])
 					unit.setDamage( iDamage, pRevPlayer.getID() )
 
-		# pRevTeam = GC.getTeam( pRevPlayer.getTeam() )
-		# if( not pRevTeam.isAtWarWith(pPlayer.getTeam()) ) :
-			# pRevTeam.declareWar( pPlayer.getTeam(), True, WarPlanTypes.NO_WARPLAN )
-			# if self.LOG_DEBUG: print "[REV] Revolt: The %s revolutionaries declare war on the %s!"%(pRevPlayer.getCivilizationAdjective(0),pPlayer.getCivilizationDescription(0))
-
-
 	def launchRevolution(self, iRevPlayer):
 
 		pRevPlayer = GC.getPlayer(iRevPlayer)
@@ -6150,13 +6098,6 @@ class Revolution:
 			if spawnablePlots:
 				revSpawnLoc = spawnablePlots[GAME.getSorenRandNum(len(spawnablePlots),'Revolution: Pick rev plot')]
 
-			# if( pPlayer.getID() == GAME.getActivePlayer() or pRevPlayer.getID() == GAME.getActivePlayer() ) :
-				#Center camera on city
-				# if( not revSpawnLoc == None ) :
-					# CyCamera().LookAt( pCity.plot().getPoint(), CameraLookAtTypes.CAMERALOOKAT_CITY_ZOOM_IN, GC.getMap().plot(revSpawnLoc[0],revSpawnLoc[1]).getPoint() )
-				# else :
-					# CyCamera().LookAt( pCity.plot().getPoint(), CameraLookAtTypes.CAMERALOOKAT_CITY_ZOOM_IN, pCity.plot().getPoint() )
-
 			# New unit count method
 			localFactor = min([localRevIdx+2,1.5*self.badLocalThreshold])
 			if pRevPlayer.getCivilizationType() == RevData.getCityVal(pCity, 'RevolutionCiv'):
@@ -6198,20 +6139,6 @@ class Revolution:
 				iNumUnits = iNumUnits - cityIdx/2
 				iNumUnits = max([iNumUnits, 2])
 
-			'''
-			unitAdjust = max([3, pCity.getPopulation()/4, iNumDefenders])
-			if bIsJoinWar:
-				# Joining established player in war
-				iNumUnits = min( [iNumUnits, max([pCity.getPopulation()/3,iNumUnits/2,1]), unitAdjust] )
-				iNumUnits = max( [iNumUnits, 1 - cityIdx, 0] )
-			elif bIsBarbRev:
-				# Lower max number of barb units
-				iNumUnits = min( [iNumUnits - 1, max([pCity.getPopulation()/2,iNumUnits/2,1]), unitAdjust] )
-				iNumUnits = max( [iNumUnits, 2 - cityIdx, 0] )
-			else:
-				#iNumUnits = min( [iNumUnits, pCity.getPopulation(), 2*unitAdjust] )
-				iNumUnits = max( [iNumUnits, 2 - cityIdx, 0] )
-			'''
 			iNumUnits = max([iNumUnits, 2 - cityIdx, 0])
 
 
@@ -6324,8 +6251,6 @@ class Revolution:
 						buildingList.append(buildingType)
 
 # ***************************************************************
-				# Acquire city by cultural conversion
-				#pRevPlayer.acquireCity( pCity, False, False )
 				if self.LOG_DEBUG:
 					print "[REV] Revolt: Population of %s before is %d" % (pCity.getName(), pCity.getPopulation())
 					print "[REV] Revolt: Check city culture is %d, at %d, %d" % (pCity.getCulture(pPlayer.getID()), pCity.getX(), pCity.getY())
@@ -6341,13 +6266,6 @@ class Revolution:
 				except:
 					print "Error in violent takeover"
 					print "ERROR:  Failed to set owner of city, %s at plot %d, %d (%d,%d)"%(pCity.getName(),cityPlot.getX(),cityPlot.getY(),ix,iy)
-					#print "City culture is %d"%(pCity.getCulture(pPlayer.getID()))
-
-					#pCity = cityPlot.getPlotCity()
-					#print "Post culture in %s is %d"%(pCity.getName(),pCity.getCulture(pPlayer.getID()))
-					#pRevPlayer.acquireCity( pCity, False, False )
-					# No more revolutions for a while
-					#RevData.initCity(pCity)
 					# City has become invalid, will cause game to crash if left
 					print "Destroying city so game can continue"
 					pCity.kill()
@@ -6605,9 +6523,6 @@ class Revolution:
 
 		if not pPlayer.getNumCities():
 			pPlayer.setFoundedFirstCity(False)
-
-		# Release camera from cities
-		#CyCamera().ReleaseLockedCamera()
 
 		return
 

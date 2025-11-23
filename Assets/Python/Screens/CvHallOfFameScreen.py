@@ -183,9 +183,6 @@ class CvHallOfFameScreen:
 		yDropDown = self.DROPDOWN_SPACING_Y * (iNumDropDowns % 2) + self.DROPDOWN_Y
 		xDropDown = (self.DROPDOWN_WIDTH  + self.DROPDOWN_SPACING_X) * (iNumDropDowns / 2) + self.DROPDOWN_SPACING_X
 
-		#yDropDown = self.DROPDOWN_SPACING_Y * (iNumDropDowns % 2) + self.DROPDOWN_Y
-		#xDropDown = (self.DROPDOWN_WIDTH  + self.DROPDOWN_SPACING_X) * (iNumDropDowns / 2) + self.DROPDOWN_SPACING_X
-
 		yDropDown = self.DROPDOWN_SPACING_Y * (iNumDropDowns % 2) + self.DROPDOWN_Y
 		xDropDown = (self.DROPDOWN_WIDTH  + self.DROPDOWN_SPACING_X) * (iNumDropDowns / 2) + self.DROPDOWN_SPACING_X
 
@@ -240,7 +237,6 @@ class CvHallOfFameScreen:
 		screen.setTableColumnHeader(self.TABLE_ID, 7, localText.getText("TXT_KEY_HOF_SCREEN_SIZE", ()), 100)
 		screen.setTableColumnHeader(self.TABLE_ID, 8, localText.getText("TXT_KEY_HOF_SCREEN_STARTING_ERA", ()), 100)
 		screen.setTableColumnHeader(self.TABLE_ID, 9, localText.getText("TXT_KEY_HOF_SCREEN_GAME_SPEED", ()), 105)
-#		screen.setTableColumnHeader(self.TABLE_ID, , "", 73)
 
 		# count the filtered replays
 		iNumGames = 0
@@ -284,8 +280,6 @@ class CvHallOfFameScreen:
 						szVictory,
 						gc.getHandicapInfo(replayInfo.getDifficulty()).getDescription(),
 						gc.getWorldInfo(replayInfo.getWorldSize()).getDescription(),
-#						gc.getClimateInfo(replayInfo.getClimate()).getDescription(),
-#						gc.getSeaLevelInfo(replayInfo.getSeaLevel()).getDescription(),
 						gc.getEraInfo(replayInfo.getEra()).getDescription(),
 						gc.getGameSpeedInfo(replayInfo.getGameSpeed()).getDescription(),
 						i)

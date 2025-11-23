@@ -5,7 +5,6 @@ import PythonToolTip
 GC = CyGlobalContext()
 GAME = CyGame()
 AFM = CyArtFileMgr()
-#GTM = CyGameTextMgr()
 TRNSLTR = CyTranslator()
 
 
@@ -120,8 +119,6 @@ class ParallelMapsScreen:
 		screen = self.getScreen()
 		if not screen.isActive():
 			return
-		#HandleInputUtil.debugInput(inputClass)
-		#bAlt, bCtrl, bShift = self.InputData.getModifierKeys()
 		iCode	= inputClass.eNotifyCode
 		iData	= inputClass.iData
 		ID		= inputClass.iItemID

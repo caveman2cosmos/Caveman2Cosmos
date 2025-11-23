@@ -101,28 +101,17 @@ class CvUnVictoryScreen:
 		fLeaderTop = self.Y_LEADER_CIRCLE_TOP
 		fRadius = self.RADIUS_LEADER_ARC
 		fLeaderArcTop = fLeaderTop
-
-		#if iCount > 16:
-		#	iLeaderHeight = int((2 * self.H_LEADER) / 3)
-		#	iLeaderWidth = int((2 * self.W_LEADER) / 3)
-		#else:
 		iLeaderHeight = self.H_LEADER
 		iLeaderWidth = self.W_LEADER
 
 
 		screen = self.getScreen()
 
-		#screen.addPanel(self.getNextWidgetName(), "", "", False, False, self.X_MOVIE-self.LEADERHEAD_MARGIN, self.Y_MOVIE-self.LEADERHEAD_MARGIN, self.W_MOVIE+2*self.LEADERHEAD_MARGIN, self.H_MOVIE+2*self.LEADERHEAD_MARGIN, PanelStyles.PANEL_STYLE_MAIN)
-		#screen.playMovie(CyArtFileMgr().getMovieArtInfo("ART_DEF_MOVIE_UNITED_NATIONS").getPath(), self.X_MOVIE, self.Y_MOVIE, self.W_MOVIE, self.H_MOVIE, 0)
-
-
 		# Our leader head
 		screen.addPanel(self.getNextWidgetName(), "", "", False, False, self.X_LEADERHEAD-self.LEADERHEAD_MARGIN, self.Y_LEADERHEAD-self.LEADERHEAD_MARGIN, self.W_LEADERHEAD+2*self.LEADERHEAD_MARGIN, self.H_LEADERHEAD+2*self.LEADERHEAD_MARGIN, PanelStyles.PANEL_STYLE_MAIN)
 		szLeaderHead = self.getNextWidgetName()
 		screen.addLeaderheadGFC(szLeaderHead, playerActive.getLeaderType(), AttitudeTypes.ATTITUDE_PLEASED, self.X_LEADERHEAD, self.Y_LEADERHEAD, self.W_LEADERHEAD, self.H_LEADERHEAD, WidgetTypes.WIDGET_GENERAL, -1, -1)
 		szName = self.getNextWidgetName()
-		#szLeaderName = u"<font=3>" + playerActive.getName() + u"</font>"
-		#screen.setLabel(szName, "", szLeaderName, 1<<2, self.X_LEADER_CIRCLE_TOP, fLeaderTop + iLeaderHeight + 5, 0, FontTypes.GAME_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1)
 
 		# angle increment in radians (360 degree range)
 		if (iCount < 2):
@@ -145,15 +134,6 @@ class CvUnVictoryScreen:
 			szName = self.getNextWidgetName()
 			szText = u"<font=3>" + player.getName() + u"</font>"
 			screen.setLabel(szName, "", szText, 1<<2, fX + iLeaderWidth/2, fY + iLeaderHeight + 5, 0, FontTypes.GAME_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1 )
-
-			# Leader attitude towards active player
-			#szName = self.getNextWidgetName()
-			#if (gc.getTeam(player.getTeam()).isHasMet(playerBase.getTeam()) and self.iActiveLeader != iPlayer):
-			#	szText = " (" + gc.getAttitudeInfo(gc.getPlayer(iPlayer).AI_getAttitude(iBaseLeader)).getDescription() + ")"
-			#else:
-			#	szText = u""
-			#screen.setLabel(szName, "", szText, 1<<2, fX + iLeaderWidth/2, fY + iLeaderHeight + 25, 0, FontTypes.GAME_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1 )
-
 
 	# returns a unique ID for a widget in this screen
 	def getNextWidgetName(self):

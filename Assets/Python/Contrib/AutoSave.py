@@ -14,17 +14,12 @@ import TextUtil
 
 
 def remove_diacritics(in_text):
-    # Table des remplacements (caractères + codes explicites)
-    #print "Start remove_diacritics for %s" % in_text
-    #print "%s" % str(type(in_text))
     text = u''
     try :
 		text = in_text.encode("utf-8")
     except :
 		text = in_text.encode("ascii", "ignore")
-    #print "%s" % text
     text = text.replace('à', 'a').replace('â', 'a').replace('ä', 'a').replace('á', 'a').replace('ã', 'a').replace('å', 'a')
-    #print "%s" % text
     text = text.replace('ç', 'c')
     text = text.replace('é', 'e').replace('è', 'e').replace('ê', 'e').replace('ë', 'e')
     text = text.replace('î', 'i').replace('ï', 'i').replace('í', 'i')
@@ -42,7 +37,6 @@ def remove_diacritics(in_text):
     text = text.replace('Ÿ', 'Y')
     text = text.replace('Ñ', 'N')
 
-    #print "%s" % text
     return text
         
 def cleanNpc():

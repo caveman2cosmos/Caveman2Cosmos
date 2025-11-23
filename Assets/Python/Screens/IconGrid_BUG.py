@@ -341,7 +341,6 @@ class IconGrid_BUG:
 
 				# put info in grouped columns
 				for offset in range(colGroup.length):
-#					BugUtil.debug("Grouped Column %i %i" % (startIndex + offset, self.columns[startIndex + offset]))
 					if (self.columns[startIndex + offset] == GRID_ICON_COLUMN):
 						bDataFound = True
 						try:
@@ -380,16 +379,13 @@ class IconGrid_BUG:
 						currentX += self.textColWidth[startIndex + offset] + self.colSpace
 
 					elif (self.columns[startIndex + offset] == GRID_STACKEDBAR_COLUMN):
-#						BugUtil.debug("Stacked Bar Start A")
 
 						bDataFound = True
 						try:
-#							BugUtil.debug("Stacked Bar try")
 							stackedbarData = rowData.cells[startIndex + offset].stackedbar[0]
 						except:
 							bDataFound = False
 
-#						BugUtil.debug("Stacked Bar data found? %s" % (bDataFound))
 						if bDataFound:
 							textY = self.firstRowY + (self.totalRowHeight + self.rowSpace) * rowIndex + 20
 							if (self.showRowHeader):
@@ -402,7 +398,6 @@ class IconGrid_BUG:
 							else:
 								iSBarOffset_Y = 0
 
-#							BugUtil.debug("Stacked Bar value %i" % (stackedbarData.value))
 							szBar_ID = self.rowName + str(rowIndex) + "_" + str(startIndex + offset) + "SB"
 							if stackedbarData.value > 0:
 								self.screen.addStackedBarGFC(szBar_ID,
@@ -425,7 +420,6 @@ class IconGrid_BUG:
 								self.screen.deleteWidget(szTxt_ID)
 
 						currentX += self.StackedBarColWidth[startIndex + offset] + self.colSpace
-#						BugUtil.debug("Stacked Bar done")
 
 				startIndex += colGroup.length
 				if (colGroup.label != ""):
@@ -433,7 +427,6 @@ class IconGrid_BUG:
 
 			# put info in non grouped columns
 			for offset in range(len(self.columns) - startIndex):
-#				BugUtil.debug("Single Column %i %i" % (startIndex + offset, self.columns[startIndex + offset]))
 				if (self.columns[startIndex + offset] == GRID_ICON_COLUMN):
 					bDataFound = True
 					try:
@@ -463,7 +456,6 @@ class IconGrid_BUG:
 					currentX += self.textColWidth[startIndex + offset] + self.colSpace
 
 				elif (self.columns[startIndex + offset] == GRID_STACKEDBAR_COLUMN):
-#					BugUtil.debug("Stacked Bar Start B")
 					bDataFound = True
 					try:
 						stackedbarData = rowData.cells[startIndex + offset].stackedbar[0]
@@ -480,7 +472,6 @@ class IconGrid_BUG:
 						else:
 							iSBarOffset_Y = 0
 
-#						BugUtil.debug("Stacked Bar value %i" % (stackedbarData.value))
 						szBar_ID = self.rowName + str(rowIndex) + "_" + str(startIndex + offset) + "SB"
 						if stackedbarData.value > 0:
 							szBar_ID = self.rowName + str(rowIndex) + "_" + str(startIndex + offset) + "SB"
@@ -503,7 +494,6 @@ class IconGrid_BUG:
 							self.screen.deleteWidget(szTxt_ID)
 
 					currentX += self.StackedBarColWidth[startIndex + offset] + self.colSpace
-#					BugUtil.debug("Stacked Bar done")
 
 			if ( rowData.message == "" ):
 				self.screen.attachLabel(self.rowName + str(rowIndex), self.rowName + str(rowIndex) + "NotConnected", "")

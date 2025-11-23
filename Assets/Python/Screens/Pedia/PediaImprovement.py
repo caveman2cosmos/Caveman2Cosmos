@@ -41,13 +41,6 @@ class PediaImprovement:
 		self.Y_MAIN = Y_TOP_ROW + i
 		self.H_MAIN = H_TOP_ROW - i * 2
 
-
-		#a = H_TOP_ROW / 12
-		#self.X_STATS = X_COL_1 + S_ICON
-		#self.Y_STATS = Y_TOP_ROW + a
-		#self.H_STATS = H_TOP_ROW - a * 2 + 4
-		#self.W_STATS = W_BASE - S_ICON
-
 	def interfaceScreen(self, iTheImprove):
 		GC = CyGlobalContext()
 		TRNSLTR = CyTranslator()

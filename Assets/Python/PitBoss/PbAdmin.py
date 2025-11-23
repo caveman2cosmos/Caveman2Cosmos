@@ -438,8 +438,5 @@ class AdminIFace(wx.App):
 		self.adminFrame.chatLog.AppendText(message)
 
 	def displayMessageBox(self, title, desc):
-		#global msgBox
-		#msgBox = wx.MessageDialog( self, desc, title, wx.OK )
-		#msgBox.Show(True)
 		outMsg = title + ":\n" + desc
 		PB.consoleOut(outMsg)

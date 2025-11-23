@@ -101,50 +101,38 @@ class Pedia:
 
 		# Initialize category classes
 		G = GC.getGame()
-#		FOOD 		= u'%c' %GC.getYieldInfo(YieldTypes.YIELD_FOOD).getChar()
 		PRODUCTION	= u'%c' %GC.getYieldInfo(YieldTypes.YIELD_PRODUCTION).getChar()
 		COMMERCE	= u'%c' %GC.getYieldInfo(YieldTypes.YIELD_COMMERCE).getChar()
 		GOLD		= u'%c' %GC.getCommerceInfo(CommerceTypes.COMMERCE_GOLD).getChar()
 		BEAKER		= u'%c' %GC.getCommerceInfo(CommerceTypes.COMMERCE_RESEARCH).getChar()
-#		CULTURE		= u'%c' %GC.getCommerceInfo(CommerceTypes.COMMERCE_CULTURE).getChar()
-#		ESPIONAGE	= u'%c' %GC.getCommerceInfo(CommerceTypes.COMMERCE_ESPIONAGE).getChar()
 		STRENGHT	= u'%c' %G.getSymbolID(FontSymbols.STRENGTH_CHAR)
 		MOVES		= u'%c' %G.getSymbolID(FontSymbols.MOVES_CHAR)
-#		STAR		= u'%c' %G.getSymbolID(FontSymbols.STAR_CHAR)
 		SILVERSTAR	= u'%c' %G.getSymbolID(FontSymbols.SILVER_STAR_CHAR)
 		GREATPEOPLE	= u'%c' %G.getSymbolID(FontSymbols.GREAT_PEOPLE_CHAR)
 		MAP			= u'%c' %G.getSymbolID(FontSymbols.MAP_CHAR)
 		DEF_PACT	= u'%c' %G.getSymbolID(FontSymbols.DEFENSIVE_PACT_CHAR)
-#		RELIGION	= u'%c' %G.getSymbolID(FontSymbols.RELIGION_CHAR)
 		TRADE		= u'%c' %G.getSymbolID(FontSymbols.TRADE_CHAR)
 		GOLDENAGE	= u'%c' %G.getSymbolID(FontSymbols.GOLDEN_AGE_CHAR)
 		OCCUPATION	= u'%c' %G.getSymbolID(FontSymbols.OCCUPATION_CHAR)
 		POWER		= u'%c' %G.getSymbolID(FontSymbols.POWER_CHAR)
 		BULLET		= u'%c' %G.getSymbolID(FontSymbols.BULLET_CHAR)
-#		RANDOM		= u'%c' %G.getSymbolID(FontSymbols.RANDOM_CHAR)
 		# Map symbols.
 		self.categoryGraphics = categoryGraphics = {
-#			"FOOD"			: FOOD,
 			"PRODUCTION"	: PRODUCTION,
 			"COMMERCE"		: COMMERCE,
 			"GOLD"			: GOLD,
 			"BEAKER"		: BEAKER,
-#			"CULTURE"		: CULTURE,
-#			"ESPIONAGE"		: ESPIONAGE,
 			"STRENGHT"		: STRENGHT,
 			"MOVES"			: MOVES,
-#			"STAR"			: STAR,
 			"SILVERSTAR"	: SILVERSTAR,
 			"GREATPEOPLE"	: GREATPEOPLE,
 			"MAP"			: MAP,
 			"DEF_PACT"		: DEF_PACT,
-#			"RELIGION"		: RELIGION,
 			"TRADE"			: TRADE,
 			"GOLDENAGE"		: GOLDENAGE,
 			"OCCUPATION"	: OCCUPATION,
 			"POWER"			: POWER,
-			"BULLET"		: BULLET,
-#			"RANDOM"		: RANDOM
+			"BULLET"		: BULLET
 		}
 		szCatTechs				= TRNSLTR.getText("TXT_KEY_PEDIA_CATEGORY_TECH", ())
 		szCatUnits				= TRNSLTR.getText("TXT_KEY_PEDIA_CATEGORY_UNIT", ())
@@ -883,11 +871,6 @@ class Pedia:
 		if CvPromotionLineInfo != None:
 			if CvPromotionLineInfo.isBuildUp():
 				bBuildUp = True
-		'''
-		if CvPromotionInfo.isAffliction():
-			return 4
-		elif CvPromotionInfo.isEquipment():
-		'''
 		if CvPromotionInfo.isEquipment():
 			return 3
 		elif CvPromotionInfo.isStatus():

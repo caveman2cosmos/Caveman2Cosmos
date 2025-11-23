@@ -14,20 +14,13 @@ class statusdumpInstance:
 
 	def __init__(self):
 		self.MsgStore = []
-		self.FileName = "StatusDump.txt"  #BugAutolog.getFileName()
+		self.FileName = "StatusDump.txt"
 
 	def setFileName(self, FileName, bSaveToOptions=False):
-		#if (bSaveToOptions):
-		#	BugAutolog.setFileName(LogFileName)
-			# TODO: do we need to save this?
-		#	BugOptions.write()
 		self.FileName = "StatusDump.txt"
 
 	def getFileName(self):
 		return self.FileName
-
-#	def isLogging(self):
-#		return BugAutolog.isLoggingOn()
 
 	def writeStatusDump(self, vMsg, vColor = "Black", vBold = False, vUnderline = False, vPrefix = ""):
 
@@ -102,11 +95,3 @@ class statusdumpInstance:
 					zMsg = "[color=%s]%s[/color]" % (vColor, zMsg)
 
 		return "%s\r\n" % (zMsg)
-
-# EF: What is this unused class for?
-#class autologRetain:
-
-#	def __init__(self):
-#		bLogFileOpen = False
-#		bPlayerHuman = False
-#		Counter = 0

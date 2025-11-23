@@ -1,6 +1,6 @@
 ## TechWindowWide
 ##
-## Originally by SirRethcir: Techanzeige hinzugefÃ¼gt
+## Originally by SirRethcir: Techanzeige hinzugefügt
 ## Enhanced by Roamty, Caesium, Guarav
 ##
 ## Copyright (c) 2008 The BUG Mod.
@@ -58,8 +58,6 @@ class CvTechSplashScreen:
 
 		self.W_ICON = 96 # 90
 		self.H_ICON = 96 # 90
-#		self.X_ICON = self.X_UPPER_PANEL + 134
-#		self.Y_ICON = self.Y_UPPER_PANEL + (self.H_UPPER_PANEL / 2) - (self.H_ICON / 2) + 17
 
 		self.X_ICON_PANEL = self.X_UPPER_PANEL + self.iMarginSpace + 2
 		self.Y_ICON_PANEL = self.Y_UPPER_PANEL + self.iMarginSpace + 30
@@ -70,13 +68,11 @@ class CvTechSplashScreen:
 		self.Y_ICON = self.Y_ICON_PANEL + self.H_ICON_PANEL / 2 - self.H_ICON / 2
 
 		self.X_QUOTE = 550
-#		self.Y_QUOTE = self.Y_UPPER_PANEL + self.iMarginSpace + 36
 		self.Y_QUOTE = self.Y_ICON - 25
 		self.W_QUOTE = 455
-#		self.H_QUOTE = self.H_UPPER_PANEL - (self.iMarginSpace * 2) - 38
 		self.H_QUOTE = 135
 
-#---GeÃ¤ndert START - siehe original Datei -----------------
+#---Geändert START - siehe original Datei -----------------
 		# Lower Panel
 
 		self.X_LOWER_PANEL = self.X_MAIN_PANEL + self.iMarginSpace
@@ -103,7 +99,7 @@ class CvTechSplashScreen:
 		self.Y_ALLOWS_PANEL2 = self.Y_SPECIAL_PANEL + self.H_ALLOWS_PANEL + self.H_ALLOWS_SPACE
 		self.Y_ALLOWS_PANEL3 = self.Y_SPECIAL_PANEL + 2 * (self.H_ALLOWS_PANEL + self.H_ALLOWS_SPACE)
 		self.Y_ALLOWS_PANEL4 = self.Y_SPECIAL_PANEL + 3 * (self.H_ALLOWS_PANEL + self.H_ALLOWS_SPACE)
-#---GeÃ¤ndert ENDE ------------------------------------------
+#---Geändert ENDE ------------------------------------------
 
 		# Contents
 
@@ -133,9 +129,6 @@ class CvTechSplashScreen:
 		screen.setDimensions(screen.centerX(0), screen.centerY(0), self.W_SCREEN, self.H_SCREEN)
 
 		# Create panels
-
-		# Main Panel
-		# screen.addPanel("TechSplashMainPanel", "", "", True, True, self.X_MAIN_PANEL, self.Y_MAIN_PANEL, self.W_MAIN_PANEL, self.H_MAIN_PANEL, PanelStyles.PANEL_STYLE_MAIN)
 
 		# Icon Panel
 		pnl = "IconPanelGlow"
@@ -223,7 +216,7 @@ class CvTechSplashScreen:
 				if self.iTech == iPrereq:
 					screen.attachImageButton(panelName4, "", GC.getTechInfo(j).getButton(), GenericButtonSizes.BUTTON_SIZE_CUSTOM, WidgetTypes.WIDGET_PEDIA_JUMP_TO_DERIVED_TECH, j, self.iTech, False)
 
-#---EingefÃ¼gt ENDE ------------------------------------------------
+#---Eingefügt ENDE ------------------------------------------------
 
 		# Units Enabled
 		szUnitsTitleDesc = "<font=3b>" + TRNSLTR.getText("TXT_KEY_PEDIA_UNITS_ENABLED", ()) + ":"
@@ -255,7 +248,7 @@ class CvTechSplashScreen:
 			if GC.getPromotionInfo(j).getTechPrereq() == self.iTech:
 				screen.attachImageButton(panelName3, "", GC.getPromotionInfo(j).getButton(), GenericButtonSizes.BUTTON_SIZE_CUSTOM, WidgetTypes.WIDGET_PEDIA_JUMP_TO_PROMOTION, j, 1, False)
 
-#---EingefÃ¼gt START - kann komplett gelÃ¶scht werden --------------
+#---Eingefügt START - kann komplett gelöscht werden --------------
 
 		# Improvements
 		for j in range(GC.getNumBuildInfos()):

@@ -187,22 +187,16 @@ class AutoLogEvent(AbstractAutoLogEvent):
 		eventManager.addEventHandler("DealCanceled", self.onDealCanceled)
 		eventManager.addEventHandler("DealAccepted", self.onDealAccepted)
 		eventManager.addEventHandler("DealRejected", self.onDealRejected)
-		#eventManager.addEventHandler("HelpDemanded", self.onHelpDemanded)
 		eventManager.addEventHandler("HelpAccepted", self.onHelpAccepted)
 		eventManager.addEventHandler("HelpRejected", self.onHelpRejected)
-		#eventManager.addEventHandler("TributeDemanded", self.onTributeDemanded)
 		eventManager.addEventHandler("TributeAccepted", self.onTributeAccepted)
 		eventManager.addEventHandler("TributeRejected", self.onTributeRejected)
-		#eventManager.addEventHandler("ReligionDemanded", self.onReligionDemanded)
 		eventManager.addEventHandler("ReligionAccepted", self.onReligionAccepted)
 		eventManager.addEventHandler("ReligionRejected", self.onReligionRejected)
-		#eventManager.addEventHandler("CivicDemanded", self.onCivicDemanded)
 		eventManager.addEventHandler("CivicAccepted", self.onCivicAccepted)
 		eventManager.addEventHandler("CivicRejected", self.onCivicRejected)
-		#eventManager.addEventHandler("WarDemanded", self.onWarDemanded)
 		eventManager.addEventHandler("WarAccepted", self.onWarAccepted)
 		eventManager.addEventHandler("WarRejected", self.onWarRejected)
-		#eventManager.addEventHandler("EmbargoDemanded", self.onEmbargoDemanded)
 		eventManager.addEventHandler("EmbargoAccepted", self.onEmbargoAccepted)
 		eventManager.addEventHandler("EmbargoRejected", self.onEmbargoRejected)
 
@@ -365,10 +359,8 @@ class AutoLogEvent(AbstractAutoLogEvent):
 		self.logSliders()
 
 		if AutologOpt.isShowIBT():
-#			Logger.writeLog_pending_flush()
 			Logger.writeLog_pending("")
 			Logger.writeLog_pending(BugUtil.getPlainText("TXT_KEY_AUTOLOG_AFTER_END_TURN"), vBold=True)
-#			Logger.writeLog("After End Turn-:", vBold=True)
 
 		if AutologOpt.isLogCityWhipStatus():
 			iPlayer = GC.getActivePlayer()
@@ -376,10 +368,6 @@ class AutoLogEvent(AbstractAutoLogEvent):
 				iCity = iPlayer.getCity(i)
 				iCurrentWhipCounter = iCity.getHurryAngerTimer()
 				iCurrentConstrictCounter = iCity.getConscriptAngerTimer()
-#				if iCurrentWhipCounter != 0: iCurrentWhipCounter += 1  # onBeginPlayerTurn fires after whip counter has decreased by 1
-
-#				message = "Whip Testing: %s, current(%i), prior(%i), flat(%i)" % (iCity.getName(), iCurrentWhipCounter, self.CityWhipCounter[i], iCity.flatHurryAngerLength())
-#				Logger.writeLog(message)
 
 				if iCurrentWhipCounter > self.CityWhipCounter[i]:
 					message = TRNSLTR.getText("TXT_KEY_AUTOLOG_WHIP_APPLIED", (iCity.getName(), ))
@@ -409,10 +397,8 @@ class AutoLogEvent(AbstractAutoLogEvent):
 
 		if (self.bHumanEndTurn
 		and AutologOpt.isShowIBT()):
-#			Logger.writeLog_pending_flush()
 			Logger.writeLog_pending("")
 			Logger.writeLog_pending(BugUtil.getPlainText("TXT_KEY_AUTOLOG_OTHER_PLAYER_ACTIONS"), vBold=True)
-#			Logger.writeLog("Other Player Actions-:", vBold=True)
 
 		if iPlayer == GAME.getActivePlayer():
 			self.bHumanPlaying = False
@@ -428,7 +414,6 @@ class AutoLogEvent(AbstractAutoLogEvent):
 				sMsgArray = []
 				sLeader = GC.getTeam(iHasMetTeamY).getName()
 				message = TRNSLTR.getText("TXT_KEY_AUTOLOG_FIRST_CONTACT_TEAM", (sLeader, ))
-#				Logger.writeLog(message)
 				sMsgArray.append(message)
 
 				for iPlayer in xrange(GC.getMAX_PLAYERS()):
@@ -437,7 +422,6 @@ class AutoLogEvent(AbstractAutoLogEvent):
 						sCivName = GC.getPlayer(iPlayer).getCivilizationShortDescription(0)
 
 						message = TRNSLTR.getText("TXT_KEY_AUTOLOG_FIRST_CONTACT_PLAYER", (sLeader, sCivName))
-#						Logger.writeLog(message)
 						sMsgArray.append(message)
 
 				iLen = len(sMsgArray)

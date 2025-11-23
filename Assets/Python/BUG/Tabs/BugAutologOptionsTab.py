@@ -45,7 +45,6 @@ class BugAutologOptionsTab(BugOptionsTab.BugOptionsTab):
 
 		# What to Log
 		screen.attachHSeparator(column, column + "Sep2")
-		#col1, col1, col2, col3, col4 = self.addMultiColumnLayout(screen, column, 4, "Events")
 		left, right = self.addTwoColumnLayout(screen, column, "Events", False)
 
 		self.addLabel(screen, left, "Autolog_Builds", "Research and Builds:")

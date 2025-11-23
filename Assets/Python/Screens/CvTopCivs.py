@@ -146,7 +146,6 @@ class CvTopCivs:
 			else: szTxt = TRNSLTR.getText("TXT_KEY_TOPCIVS_UNKNOWN", ())
 
 			szTxt = "%d) %s" % (i + 1, szTxt)
-			#self.screen.setText(szWidgetName, "", szTxt, 1<<0, 430, y, TEXT_Z, FontTypes.GAME_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1)
 			self.screen.addMultilineText("", szTxt, 380, y, 400, 30, WidgetTypes.WIDGET_GENERAL, -1, -1, 1<<0)
 			y += 30
 
