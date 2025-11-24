@@ -25,6 +25,93 @@
 		One-off events that happen only once per player
 		-->
 
+        <EventTriggerInfo>
+            <Type>EVENTTRIGGER_PRIME_STUD</Type>
+            <TriggerTexts>
+                <TriggerText>
+                    <Text>TXT_KEY_EVENT_PRIME_STUD1_1</Text>
+                    <Era>NONE</Era>
+                </TriggerText>
+            </TriggerTexts>
+            <iPercentGamesActive>100</iPercentGamesActive>
+            <iWeight>8</iWeight>
+            <bProbabilityBuildingMultiply>1</bProbabilityBuildingMultiply>
+            <BuildingsRequired>
+                <Building>BUILDING_FARM_ANIMAL_HORSE</Building>
+            </BuildingsRequired>
+            <iNumBuildings>1</iNumBuildings>
+            <iNumPlotsRequired>1</iNumPlotsRequired>
+            <bOwnPlot>1</bOwnPlot>
+            <Events>
+                <Event>EVENT_PRIME_STUD_1</Event>
+                <Event>EVENT_PRIME_STUD_2</Event>
+            </Events>
+            <OrPreReqs>
+                <PrereqTech>TECH_EQUINE_DOMESTICATION</PrereqTech>
+            </OrPreReqs>
+        </EventTriggerInfo>
+
+        <EventTriggerInfo>
+            <Type>EVENTTRIGGER_WISE_COUNCIL</Type>
+            <WorldNewsTexts>
+                <Text>TXT_KEY_CHILD_WISE_COUNCIL</Text>
+            </WorldNewsTexts>
+            <TriggerTexts>
+                <TriggerText>
+                    <Text>TXT_KEY_EVENT_WISE_COUNCIL1_1</Text>
+                    <Era>NONE</Era>
+                </TriggerText>
+            </TriggerTexts>
+            <iPercentGamesActive>100</iPercentGamesActive>
+            <iWeight>5</iWeight>
+            <bProbabilityBuildingMultiply>1</bProbabilityBuildingMultiply>
+            <BuildingsRequired>
+                <Building>BUILDING_ELDER_COUNCIL</Building>
+            </BuildingsRequired>
+            <iNumBuildings>1</iNumBuildings>
+            <iNumPlotsRequired>1</iNumPlotsRequired>
+            <bOwnPlot>1</bOwnPlot>
+            <Events>
+                <Event>EVENT_WIZE_COUNCIL_1</Event>
+                <Event>EVENT_WIZE_COUNCIL_2</Event>
+            </Events>
+            <OrPreReqs>
+                <PrereqTech>TECH_CULTURAL_IDENTITY</PrereqTech>
+            </OrPreReqs>
+            <bPickCity>1</bPickCity>
+        </EventTriggerInfo>
+
+        <EventTriggerInfo>
+            <Type>EVENTTRIGGER_CHILD_LABOUR_INCIDENT</Type>
+            <WorldNewsTexts>
+                <Text>TXT_KEY_CHILD_LABOUR_INCIDENT</Text>
+            </WorldNewsTexts>
+            <TriggerTexts>
+                <TriggerText>
+                    <Text>TXT_KEY_EVENT_CHILD_LABOUR_INCIDENT1_1</Text>
+                    <Era>NONE</Era>
+                </TriggerText>
+            </TriggerTexts>
+            <iPercentGamesActive>100</iPercentGamesActive>
+            <iWeight>5</iWeight>
+            <bProbabilityBuildingMultiply>1</bProbabilityBuildingMultiply>
+            <BuildingsRequired>
+                <Building>BUILDING_CHILD_LABOR_CREW</Building>
+            </BuildingsRequired>
+            <iNumBuildings>1</iNumBuildings>
+            <iNumPlotsRequired>1</iNumPlotsRequired>
+            <bOwnPlot>1</bOwnPlot>
+            <bPickCity>1</bPickCity>
+            <Events>
+                <Event>EVENT_CHILD_LABOUR_INCIDENT_1</Event>
+                <Event>EVENT_CHILD_LABOUR_INCIDENT_2</Event>
+                <Event>EVENT_CHILD_LABOUR_INCIDENT_3</Event>
+            </Events>
+            <OrPreReqs>
+                <PrereqTech>TECH_COOPERATION</PrereqTech>
+            </OrPreReqs>
+        </EventTriggerInfo>
+
 		<EventTriggerInfo>
 			<Type>EVENTTRIGGER_HYMNS_AND_SCULPTURES</Type>
 			<WorldNewsTexts>
@@ -74,41 +161,6 @@
 				<Event>EVENT_HYMNS_AND_SCULPTURES_1</Event>
 			</Events>
 			<bPickCity>1</bPickCity>
-		</EventTriggerInfo>
-
-		<EventTriggerInfo>
-			<Type>EVENTTRIGGER_ICE_SCULPTURE</Type>
-			<WorldNewsTexts>
-				<Text>TXT_KEY_EVENTTRIGGER_ICE_SCULPTURE</Text>
-			</WorldNewsTexts>
-			<TriggerTexts>
-				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_ICE_SCULPTURE_1</Text>
-					<Era>NONE</Era>
-				</TriggerText>
-			</TriggerTexts>
-			<EventArt>Art/Event_Images/IceSculptureEvent.dds</EventArt>
-			<iPercentGamesActive>100</iPercentGamesActive>
-			<iWeight>10</iWeight>
-			<iNumPlotsRequired>1</iNumPlotsRequired>
-			<bOwnPlot>1</bOwnPlot>
-			<iPlotType>2</iPlotType>
-			<FeaturesRequired>
-				<FeatureType>NONE</FeatureType>
-			</FeaturesRequired>
-			<TerrainsRequired>
-				<TerrainType>TERRAIN_TAIGA</TerrainType>
-				<TerrainType>TERRAIN_TUNDRA</TerrainType>
-				<TerrainType>TERRAIN_ICE</TerrainType>
-			</TerrainsRequired>
-			<Events>
-				<Event>EVENT_ICE_SCULPTURE_1</Event>
-				<Event>EVENT_ICE_SCULPTURE_2</Event>
-			</Events>
-			<OrPreReqs>
-				<PrereqTech>TECH_AESTHETICS</PrereqTech>
-			</OrPreReqs>
-			<bGlobal>1</bGlobal>
 		</EventTriggerInfo>
 
 		<EventTriggerInfo>
@@ -458,34 +510,6 @@
 				<Event>EVENT_HOLY_RITUAL_1</Event>
 			</Events>
 			<bPickCity>1</bPickCity>
-		</EventTriggerInfo>
-
-		<EventTriggerInfo>
-			<Type>EVENTTRIGGER_SECURITY_TAX</Type>
-			<WorldNewsTexts>
-				<Text>TXT_KEY_EVENTTRIGGER_SECURITY_TAX</Text>
-			</WorldNewsTexts>
-			<TriggerTexts>
-				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_SECURITY_TAX_1</Text>
-					<Era>NONE</Era>
-				</TriggerText>
-			</TriggerTexts>
-			<EventArt>Art/Event_Images/SecurityTax.dds</EventArt>
-			<iPercentGamesActive>100</iPercentGamesActive>
-			<iWeight>20</iWeight>
-			<Events>
-				<Event>EVENT_SECURITY_TAX_1</Event>
-			</Events>
-			<OrPreReqs>
-				<PrereqTech>TECH_METAL_CASTING</PrereqTech>
-			</OrPreReqs>
-			<ObsoleteTechs>
-				<ObsoleteTech>TECH_NATIONALISM</ObsoleteTech>
-			</ObsoleteTechs>
-			<bGlobal>1</bGlobal>
-			<bShowPlot>0</bShowPlot>
-			<PythonCanDo>canTriggerSecurityTax</PythonCanDo>
 		</EventTriggerInfo>
 
 		<EventTriggerInfo>
@@ -2462,92 +2486,40 @@
 		Events that happen only one time in the game
 		-->
 
-		<EventTriggerInfo>
-			<Type>EVENTTRIGGER_PRIME_STUD</Type>
-			<TriggerTexts>
-				<TriggerText>
-					<Text>TXT_KEY_EVENT_PRIME_STUD1_1</Text>
-					<Era>NONE</Era>
-				</TriggerText>
-			</TriggerTexts>
-			<iPercentGamesActive>100</iPercentGamesActive>
-			<iWeight>8</iWeight>
-			<bProbabilityBuildingMultiply>1</bProbabilityBuildingMultiply>
-			<BuildingsRequired>
-				<Building>BUILDING_FARM_ANIMAL_HORSE</Building>
-			</BuildingsRequired>
-			<iNumBuildings>1</iNumBuildings>
-			<iNumPlotsRequired>1</iNumPlotsRequired>
-			<bOwnPlot>1</bOwnPlot>
-			<Events>
-				<Event>EVENT_PRIME_STUD_1</Event>
-				<Event>EVENT_PRIME_STUD_2</Event>
-			</Events>
-			<OrPreReqs>
-				<PrereqTech>TECH_EQUINE_DOMESTICATION</PrereqTech>
-			</OrPreReqs>
-		</EventTriggerInfo>
-
-		<EventTriggerInfo>
-			<Type>EVENTTRIGGER_WISE_COUNCIL</Type>
-			<WorldNewsTexts>
-				<Text>TXT_KEY_CHILD_WISE_COUNCIL</Text>
-			</WorldNewsTexts>
-			<TriggerTexts>
-				<TriggerText>
-					<Text>TXT_KEY_EVENT_WISE_COUNCIL1_1</Text>
-					<Era>NONE</Era>
-				</TriggerText>
-			</TriggerTexts>
-			<iPercentGamesActive>100</iPercentGamesActive>
-			<iWeight>5</iWeight>
-			<bProbabilityBuildingMultiply>1</bProbabilityBuildingMultiply>
-			<BuildingsRequired>
-				<Building>BUILDING_ELDER_COUNCIL</Building>
-			</BuildingsRequired>
-			<iNumBuildings>1</iNumBuildings>
-			<iNumPlotsRequired>1</iNumPlotsRequired>
-			<bOwnPlot>1</bOwnPlot>
-			<Events>
-				<Event>EVENT_WIZE_COUNCIL_1</Event>
-				<Event>EVENT_WIZE_COUNCIL_2</Event>
-			</Events>
-			<OrPreReqs>
-				<PrereqTech>TECH_CULTURAL_IDENTITY</PrereqTech>
-			</OrPreReqs>
-			<bPickCity>1</bPickCity>
-		</EventTriggerInfo>
-
-		<EventTriggerInfo>
-			<Type>EVENTTRIGGER_CHILD_LABOUR_INCIDENT</Type>
-			<WorldNewsTexts>
-				<Text>TXT_KEY_CHILD_LABOUR_INCIDENT</Text>
-			</WorldNewsTexts>
-			<TriggerTexts>
-				<TriggerText>
-					<Text>TXT_KEY_EVENT_CHILD_LABOUR_INCIDENT1_1</Text>
-					<Era>NONE</Era>
-				</TriggerText>
-			</TriggerTexts>
-			<iPercentGamesActive>100</iPercentGamesActive>
-			<iWeight>5</iWeight>
-			<bProbabilityBuildingMultiply>1</bProbabilityBuildingMultiply>
-			<BuildingsRequired>
-				<Building>BUILDING_CHILD_LABOR_CREW</Building>
-			</BuildingsRequired>
-			<iNumBuildings>1</iNumBuildings>
-			<iNumPlotsRequired>1</iNumPlotsRequired>
-			<bOwnPlot>1</bOwnPlot>
-			<bPickCity>1</bPickCity>
-			<Events>
-				<Event>EVENT_CHILD_LABOUR_INCIDENT_1</Event>
-				<Event>EVENT_CHILD_LABOUR_INCIDENT_2</Event>
-				<Event>EVENT_CHILD_LABOUR_INCIDENT_3</Event>
-			</Events>
-			<OrPreReqs>
-				<PrereqTech>TECH_COOPERATION</PrereqTech>
-			</OrPreReqs>
-		</EventTriggerInfo>
+        <EventTriggerInfo>
+            <Type>EVENTTRIGGER_ICE_SCULPTURE</Type>
+            <WorldNewsTexts>
+                <Text>TXT_KEY_EVENTTRIGGER_ICE_SCULPTURE</Text>
+            </WorldNewsTexts>
+            <TriggerTexts>
+                <TriggerText>
+                    <Text>TXT_KEY_EVENT_TRIGGER_ICE_SCULPTURE_1</Text>
+                    <Era>NONE</Era>
+                </TriggerText>
+            </TriggerTexts>
+            <EventArt>Art/Event_Images/IceSculptureEvent.dds</EventArt>
+            <iPercentGamesActive>100</iPercentGamesActive>
+            <iWeight>10</iWeight>
+            <iNumPlotsRequired>1</iNumPlotsRequired>
+            <bOwnPlot>1</bOwnPlot>
+            <iPlotType>2</iPlotType>
+            <FeaturesRequired>
+                <FeatureType>NONE</FeatureType>
+            </FeaturesRequired>
+            <TerrainsRequired>
+                <TerrainType>TERRAIN_TAIGA</TerrainType>
+                <TerrainType>TERRAIN_TUNDRA</TerrainType>
+                <TerrainType>TERRAIN_ICE</TerrainType>
+            </TerrainsRequired>
+            <Events>
+                <Event>EVENT_ICE_SCULPTURE_1</Event>
+                <Event>EVENT_ICE_SCULPTURE_2</Event>
+            </Events>
+            <OrPreReqs>
+                <PrereqTech>TECH_AESTHETICS</PrereqTech>
+            </OrPreReqs>
+            <bGlobal>1</bGlobal>
+        </EventTriggerInfo>
 
 		<EventTriggerInfo>
 			<Type>EVENTTRIGGER_MAN_NAMED_JED</Type>
@@ -2624,6 +2596,34 @@
 			<bGlobal>1</bGlobal>
 			<bPickCity>1</bPickCity>
 		</EventTriggerInfo>
+
+        <EventTriggerInfo>
+            <Type>EVENTTRIGGER_SECURITY_TAX</Type>
+            <WorldNewsTexts>
+                <Text>TXT_KEY_EVENTTRIGGER_SECURITY_TAX</Text>
+            </WorldNewsTexts>
+            <TriggerTexts>
+                <TriggerText>
+                    <Text>TXT_KEY_EVENT_TRIGGER_SECURITY_TAX_1</Text>
+                    <Era>NONE</Era>
+                </TriggerText>
+            </TriggerTexts>
+            <EventArt>Art/Event_Images/SecurityTax.dds</EventArt>
+            <iPercentGamesActive>100</iPercentGamesActive>
+            <iWeight>20</iWeight>
+            <Events>
+                <Event>EVENT_SECURITY_TAX_1</Event>
+            </Events>
+            <OrPreReqs>
+                <PrereqTech>TECH_METAL_CASTING</PrereqTech>
+            </OrPreReqs>
+            <ObsoleteTechs>
+                <ObsoleteTech>TECH_NATIONALISM</ObsoleteTech>
+            </ObsoleteTechs>
+            <bGlobal>1</bGlobal>
+            <bShowPlot>0</bShowPlot>
+            <PythonCanDo>canTriggerSecurityTax</PythonCanDo>
+        </EventTriggerInfo>
 
 		<EventTriggerInfo>
 			<Type>EVENTTRIGGER_MARATHON</Type>
@@ -7264,41 +7264,13 @@
 				<Event>EVENT_ALTERNATIVE_ENERGY_1</Event>
 			</PrereqEvents>
 			<bShowPlot>0</bShowPlot>
+            <bGlobal>1</bGlobal>
 			<PythonCanDo>canTriggerAlternativeEnergyDone</PythonCanDo>
 		</EventTriggerInfo>
 
 		<!--
         Recurring regular events
         -->
-
-<!--		<EventTriggerInfo>-->
-<!--			<Type>EVENTTRIGGER_SALTPE</Type>-->
-<!--			<WorldNewsTexts>-->
-<!--				<Text>TXT_KEY_EVENTTRIGGER_SALTPETER</Text>-->
-<!--			</WorldNewsTexts>-->
-<!--			<TriggerTexts>-->
-<!--				<TriggerText>-->
-<!--					<Text>TXT_KEY_EVENT_TRIGGER_SALTPETER_1</Text>-->
-<!--					<Era>NONE</Era>-->
-<!--				</TriggerText>-->
-<!--			</TriggerTexts>-->
-<!--			<EventArt>Art/Event_Images/SaltpeterEvent.dds</EventArt>-->
-<!--			<iPercentGamesActive>100</iPercentGamesActive>-->
-<!--			<iWeight>5</iWeight>-->
-<!--			<iNumPlotsRequired>4</iNumPlotsRequired>-->
-<!--			<bOwnPlot>1</bOwnPlot>-->
-<!--			<iPlotType>1</iPlotType>-->
-<!--			<FeaturesRequired>-->
-<!--				<FeatureType>FEATURE_FOREST</FeatureType>-->
-<!--			</FeaturesRequired>-->
-<!--			<Events>-->
-<!--				<Event>EVENT_SALTPETER_1</Event>-->
-<!--			</Events>-->
-<!--			<OrPreReqs>-->
-<!--				<PrereqTech>TECH_GUNPOWDER</PrereqTech>-->
-<!--			</OrPreReqs>-->
-<!--			<bGlobal>1</bGlobal>-->
-<!--		</EventTriggerInfo>-->
 
 		<EventTriggerInfo>
 			<Type>EVENTTRIGGER_FOREST_FIRE</Type>
