@@ -13695,7 +13695,7 @@
             </TriggerTexts>
             <EventArt>Art/Event_Images/Earthquake.dds</EventArt>
             <iPercentGamesActive>100</iPercentGamesActive>
-            <iWeight>1000</iWeight>
+            <iWeight>12</iWeight>
             <bPickCity>1</bPickCity>
             <iNumPlotsRequired>1</iNumPlotsRequired>
             <Events>
@@ -13717,7 +13717,7 @@
             </TriggerTexts>
             <EventArt>Art/Event_Images/Earthquake.dds</EventArt>
             <iPercentGamesActive>100</iPercentGamesActive>
-            <iWeight>1000</iWeight>
+            <iWeight>9</iWeight>
             <bPickCity>1</bPickCity>
             <iNumPlotsRequired>1</iNumPlotsRequired>
             <Events>
@@ -13739,11 +13739,55 @@
             </TriggerTexts>
             <EventArt>Art/Event_Images/Earthquake.dds</EventArt>
             <iPercentGamesActive>100</iPercentGamesActive>
-            <iWeight>1000</iWeight>
+            <iWeight>6</iWeight>
             <bPickCity>1</bPickCity>
             <iNumPlotsRequired>1</iNumPlotsRequired>
             <Events>
                 <Event>EVENT_STRONG_EARTHQUAKE_1</Event>
+            </Events>
+            <bRecurring>1</bRecurring>
+        </EventTriggerInfo>
+
+        <EventTriggerInfo>
+            <Type>EVENTTRIGGER_HUGE_EARTHQUAKE</Type>
+            <WorldNewsTexts>
+                <Text>TXT_KEY_EVENTTRIGGER_EARTHQUAKE_2</Text>
+            </WorldNewsTexts>
+            <TriggerTexts>
+                <TriggerText>
+                    <Text>TXT_KEY_EVENT_TRIGGER_HUGE_EARTHQUAKE_1</Text>
+                    <Era>NONE</Era>
+                </TriggerText>
+            </TriggerTexts>
+            <EventArt>Art/Event_Images/Earthquake.dds</EventArt>
+            <iPercentGamesActive>100</iPercentGamesActive>
+            <iWeight>3</iWeight>
+            <bPickCity>1</bPickCity>
+            <iNumPlotsRequired>1</iNumPlotsRequired>
+            <Events>
+                <Event>EVENT_HUGE_EARTHQUAKE_1</Event>
+            </Events>
+            <bRecurring>1</bRecurring>
+        </EventTriggerInfo>
+
+        <EventTriggerInfo>
+            <Type>EVENTTRIGGER_APOCALYPTIC_EARTHQUAKE</Type>
+            <WorldNewsTexts>
+                <Text>TXT_KEY_EVENTTRIGGER_EARTHQUAKE_2</Text>
+            </WorldNewsTexts>
+            <TriggerTexts>
+                <TriggerText>
+                    <Text>TXT_KEY_EVENT_TRIGGER_APOCALYPTIC_EARTHQUAKE_1</Text>
+                    <Era>NONE</Era>
+                </TriggerText>
+            </TriggerTexts>
+            <EventArt>Art/Event_Images/Earthquake.dds</EventArt>
+            <iPercentGamesActive>100</iPercentGamesActive>
+            <iWeight>1</iWeight>
+            <bPickCity>1</bPickCity>
+            <iNumPlotsRequired>1</iNumPlotsRequired>
+            <Events>
+                <Event>EVENT_APOCALYPTIC_EARTHQUAKE_1</Event>
             </Events>
             <bRecurring>1</bRecurring>
         </EventTriggerInfo>
@@ -13806,50 +13850,6 @@
             </ObsoleteTechs>
             <bRecurring>1</bRecurring>
             <PythonCanDo>canDoTornado</PythonCanDo>
-        </EventTriggerInfo>
-
-        <EventTriggerInfo>
-            <Type>EVENTTRIGGER_HUGE_EARTHQUAKE</Type>
-            <WorldNewsTexts>
-                <Text>TXT_KEY_EVENTTRIGGER_EARTHQUAKE_2</Text>
-            </WorldNewsTexts>
-            <TriggerTexts>
-                <TriggerText>
-                    <Text>TXT_KEY_EVENT_TRIGGER_HUGE_EARTHQUAKE_1</Text>
-                    <Era>NONE</Era>
-                </TriggerText>
-            </TriggerTexts>
-            <EventArt>Art/Event_Images/Earthquake.dds</EventArt>
-            <iPercentGamesActive>100</iPercentGamesActive>
-            <iWeight>1000</iWeight>
-            <bPickCity>1</bPickCity>
-            <iNumPlotsRequired>1</iNumPlotsRequired>
-            <Events>
-                <Event>EVENT_HUGE_EARTHQUAKE_1</Event>
-            </Events>
-            <bRecurring>1</bRecurring>
-        </EventTriggerInfo>
-
-        <EventTriggerInfo>
-            <Type>EVENTTRIGGER_APOCALYPTIC_EARTHQUAKE</Type>
-            <WorldNewsTexts>
-                <Text>TXT_KEY_EVENTTRIGGER_EARTHQUAKE_2</Text>
-            </WorldNewsTexts>
-            <TriggerTexts>
-                <TriggerText>
-                    <Text>TXT_KEY_EVENT_TRIGGER_APOCALYPTIC_EARTHQUAKE_1</Text>
-                    <Era>NONE</Era>
-                </TriggerText>
-            </TriggerTexts>
-            <EventArt>Art/Event_Images/Earthquake.dds</EventArt>
-            <iPercentGamesActive>100</iPercentGamesActive>
-            <iWeight>1000</iWeight>
-            <bPickCity>1</bPickCity>
-            <iNumPlotsRequired>1</iNumPlotsRequired>
-            <Events>
-                <Event>EVENT_APOCALYPTIC_EARTHQUAKE_1</Event>
-            </Events>
-            <bRecurring>1</bRecurring>
         </EventTriggerInfo>
 
 		<EventTriggerInfo>
