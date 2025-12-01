@@ -13,7 +13,7 @@
 					<EraType>C2C_ERA_PREHISTORIC</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>20</iCommerce>
+						<iCommerce>40</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -21,7 +21,7 @@
 					<EraType>C2C_ERA_ANCIENT</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -29,7 +29,7 @@
 					<EraType>C2C_ERA_CLASSICAL</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -37,7 +37,7 @@
 					<EraType>C2C_ERA_MEDIEVAL</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -45,7 +45,7 @@
 					<EraType>C2C_ERA_RENAISSANCE</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -62,7 +62,7 @@
 					<EraType>C2C_ERA_PREHISTORIC</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>20</iCommerce>
+						<iCommerce>40</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -70,7 +70,7 @@
 					<EraType>C2C_ERA_ANCIENT</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -78,7 +78,7 @@
 					<EraType>C2C_ERA_CLASSICAL</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -86,7 +86,7 @@
 					<EraType>C2C_ERA_MEDIEVAL</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -94,7 +94,7 @@
 					<EraType>C2C_ERA_RENAISSANCE</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -111,7 +111,7 @@
 					<EraType>C2C_ERA_PREHISTORIC</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>20</iCommerce>
+						<iCommerce>40</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -119,7 +119,7 @@
 					<EraType>C2C_ERA_ANCIENT</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -127,7 +127,7 @@
 					<EraType>C2C_ERA_CLASSICAL</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -135,7 +135,7 @@
 					<EraType>C2C_ERA_MEDIEVAL</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -143,7 +143,7 @@
 					<EraType>C2C_ERA_RENAISSANCE</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -160,7 +160,7 @@
 					<EraType>C2C_ERA_PREHISTORIC</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>20</iCommerce>
+						<iCommerce>40</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -168,7 +168,7 @@
 					<EraType>C2C_ERA_ANCIENT</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -176,7 +176,7 @@
 					<EraType>C2C_ERA_CLASSICAL</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -184,7 +184,7 @@
 					<EraType>C2C_ERA_MEDIEVAL</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -192,7 +192,7 @@
 					<EraType>C2C_ERA_RENAISSANCE</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -209,7 +209,7 @@
 					<EraType>C2C_ERA_PREHISTORIC</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>20</iCommerce>
+						<iCommerce>40</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -217,7 +217,7 @@
 					<EraType>C2C_ERA_ANCIENT</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -225,7 +225,7 @@
 					<EraType>C2C_ERA_CLASSICAL</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -233,7 +233,7 @@
 					<EraType>C2C_ERA_MEDIEVAL</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -241,7 +241,7 @@
 					<EraType>C2C_ERA_RENAISSANCE</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -258,7 +258,7 @@
 					<EraType>C2C_ERA_PREHISTORIC</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>20</iCommerce>
+						<iCommerce>40</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -266,7 +266,7 @@
 					<EraType>C2C_ERA_ANCIENT</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -274,7 +274,7 @@
 					<EraType>C2C_ERA_CLASSICAL</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -282,7 +282,7 @@
 					<EraType>C2C_ERA_MEDIEVAL</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -290,7 +290,7 @@
 					<EraType>C2C_ERA_RENAISSANCE</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -307,7 +307,7 @@
 					<EraType>C2C_ERA_PREHISTORIC</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>20</iCommerce>
+						<iCommerce>40</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -315,7 +315,7 @@
 					<EraType>C2C_ERA_ANCIENT</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -323,7 +323,7 @@
 					<EraType>C2C_ERA_CLASSICAL</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -331,7 +331,7 @@
 					<EraType>C2C_ERA_MEDIEVAL</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -339,7 +339,7 @@
 					<EraType>C2C_ERA_RENAISSANCE</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -356,7 +356,7 @@
 					<EraType>C2C_ERA_PREHISTORIC</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>20</iCommerce>
+						<iCommerce>40</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -364,7 +364,7 @@
 					<EraType>C2C_ERA_ANCIENT</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -372,7 +372,7 @@
 					<EraType>C2C_ERA_CLASSICAL</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -380,7 +380,7 @@
 					<EraType>C2C_ERA_MEDIEVAL</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -388,7 +388,7 @@
 					<EraType>C2C_ERA_RENAISSANCE</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -405,7 +405,7 @@
 					<EraType>C2C_ERA_PREHISTORIC</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>20</iCommerce>
+						<iCommerce>40</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -413,7 +413,7 @@
 					<EraType>C2C_ERA_ANCIENT</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -421,7 +421,7 @@
 					<EraType>C2C_ERA_CLASSICAL</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -429,7 +429,7 @@
 					<EraType>C2C_ERA_MEDIEVAL</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -437,7 +437,7 @@
 					<EraType>C2C_ERA_RENAISSANCE</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -454,7 +454,7 @@
 					<EraType>C2C_ERA_PREHISTORIC</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>20</iCommerce>
+						<iCommerce>40</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -462,7 +462,7 @@
 					<EraType>C2C_ERA_ANCIENT</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -470,7 +470,7 @@
 					<EraType>C2C_ERA_CLASSICAL</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -478,7 +478,7 @@
 					<EraType>C2C_ERA_MEDIEVAL</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -486,7 +486,7 @@
 					<EraType>C2C_ERA_RENAISSANCE</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -503,7 +503,7 @@
 					<EraType>C2C_ERA_PREHISTORIC</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>20</iCommerce>
+						<iCommerce>40</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -511,7 +511,7 @@
 					<EraType>C2C_ERA_ANCIENT</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -519,7 +519,7 @@
 					<EraType>C2C_ERA_CLASSICAL</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -527,7 +527,7 @@
 					<EraType>C2C_ERA_MEDIEVAL</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -535,7 +535,7 @@
 					<EraType>C2C_ERA_RENAISSANCE</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -552,7 +552,7 @@
 					<EraType>C2C_ERA_PREHISTORIC</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>20</iCommerce>
+						<iCommerce>40</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -560,7 +560,7 @@
 					<EraType>C2C_ERA_ANCIENT</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -568,7 +568,7 @@
 					<EraType>C2C_ERA_CLASSICAL</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -576,7 +576,7 @@
 					<EraType>C2C_ERA_MEDIEVAL</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -584,7 +584,7 @@
 					<EraType>C2C_ERA_RENAISSANCE</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -601,7 +601,7 @@
 					<EraType>C2C_ERA_PREHISTORIC</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>20</iCommerce>
+						<iCommerce>40</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -609,7 +609,7 @@
 					<EraType>C2C_ERA_ANCIENT</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -617,7 +617,7 @@
 					<EraType>C2C_ERA_CLASSICAL</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -625,7 +625,7 @@
 					<EraType>C2C_ERA_MEDIEVAL</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -633,7 +633,7 @@
 					<EraType>C2C_ERA_RENAISSANCE</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -650,7 +650,7 @@
 					<EraType>C2C_ERA_PREHISTORIC</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>20</iCommerce>
+						<iCommerce>40</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -658,7 +658,7 @@
 					<EraType>C2C_ERA_ANCIENT</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -666,7 +666,7 @@
 					<EraType>C2C_ERA_CLASSICAL</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -674,7 +674,7 @@
 					<EraType>C2C_ERA_MEDIEVAL</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -682,7 +682,7 @@
 					<EraType>C2C_ERA_RENAISSANCE</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -699,7 +699,7 @@
 					<EraType>C2C_ERA_PREHISTORIC</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>20</iCommerce>
+						<iCommerce>40</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -707,7 +707,7 @@
 					<EraType>C2C_ERA_ANCIENT</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -715,7 +715,7 @@
 					<EraType>C2C_ERA_CLASSICAL</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -723,7 +723,7 @@
 					<EraType>C2C_ERA_MEDIEVAL</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -731,7 +731,7 @@
 					<EraType>C2C_ERA_RENAISSANCE</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -748,7 +748,7 @@
 					<EraType>C2C_ERA_PREHISTORIC</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>20</iCommerce>
+						<iCommerce>40</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -756,7 +756,7 @@
 					<EraType>C2C_ERA_ANCIENT</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -764,7 +764,7 @@
 					<EraType>C2C_ERA_CLASSICAL</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -772,7 +772,7 @@
 					<EraType>C2C_ERA_MEDIEVAL</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -780,7 +780,7 @@
 					<EraType>C2C_ERA_RENAISSANCE</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -797,7 +797,7 @@
 					<EraType>C2C_ERA_PREHISTORIC</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>20</iCommerce>
+						<iCommerce>40</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -805,7 +805,7 @@
 					<EraType>C2C_ERA_ANCIENT</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -813,7 +813,7 @@
 					<EraType>C2C_ERA_CLASSICAL</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -821,7 +821,7 @@
 					<EraType>C2C_ERA_MEDIEVAL</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -829,7 +829,7 @@
 					<EraType>C2C_ERA_RENAISSANCE</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -846,7 +846,7 @@
 					<EraType>C2C_ERA_PREHISTORIC</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>20</iCommerce>
+						<iCommerce>40</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -854,7 +854,7 @@
 					<EraType>C2C_ERA_ANCIENT</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -862,7 +862,7 @@
 					<EraType>C2C_ERA_CLASSICAL</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -870,7 +870,7 @@
 					<EraType>C2C_ERA_MEDIEVAL</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -878,7 +878,7 @@
 					<EraType>C2C_ERA_RENAISSANCE</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -895,7 +895,7 @@
 					<EraType>C2C_ERA_PREHISTORIC</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>20</iCommerce>
+						<iCommerce>40</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -903,7 +903,7 @@
 					<EraType>C2C_ERA_ANCIENT</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -911,7 +911,7 @@
 					<EraType>C2C_ERA_CLASSICAL</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -919,7 +919,7 @@
 					<EraType>C2C_ERA_MEDIEVAL</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -927,7 +927,7 @@
 					<EraType>C2C_ERA_RENAISSANCE</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -944,7 +944,7 @@
 					<EraType>C2C_ERA_PREHISTORIC</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>20</iCommerce>
+						<iCommerce>40</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -952,7 +952,7 @@
 					<EraType>C2C_ERA_ANCIENT</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -960,7 +960,7 @@
 					<EraType>C2C_ERA_CLASSICAL</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -968,7 +968,7 @@
 					<EraType>C2C_ERA_MEDIEVAL</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -976,7 +976,7 @@
 					<EraType>C2C_ERA_RENAISSANCE</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -993,7 +993,7 @@
 					<EraType>C2C_ERA_PREHISTORIC</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>20</iCommerce>
+						<iCommerce>40</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -1001,7 +1001,7 @@
 					<EraType>C2C_ERA_ANCIENT</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -1009,7 +1009,7 @@
 					<EraType>C2C_ERA_CLASSICAL</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -1017,7 +1017,7 @@
 					<EraType>C2C_ERA_MEDIEVAL</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -1025,7 +1025,7 @@
 					<EraType>C2C_ERA_RENAISSANCE</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -1042,7 +1042,7 @@
 					<EraType>C2C_ERA_PREHISTORIC</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>20</iCommerce>
+						<iCommerce>40</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -1050,7 +1050,7 @@
 					<EraType>C2C_ERA_ANCIENT</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -1058,7 +1058,7 @@
 					<EraType>C2C_ERA_CLASSICAL</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -1066,7 +1066,7 @@
 					<EraType>C2C_ERA_MEDIEVAL</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -1074,7 +1074,7 @@
 					<EraType>C2C_ERA_RENAISSANCE</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -1091,7 +1091,7 @@
 					<EraType>C2C_ERA_PREHISTORIC</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>20</iCommerce>
+						<iCommerce>40</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -1099,7 +1099,7 @@
 					<EraType>C2C_ERA_ANCIENT</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -1107,7 +1107,7 @@
 					<EraType>C2C_ERA_CLASSICAL</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -1115,7 +1115,7 @@
 					<EraType>C2C_ERA_MEDIEVAL</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -1123,7 +1123,7 @@
 					<EraType>C2C_ERA_RENAISSANCE</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -1140,7 +1140,7 @@
 					<EraType>C2C_ERA_PREHISTORIC</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>20</iCommerce>
+						<iCommerce>40</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -1148,7 +1148,7 @@
 					<EraType>C2C_ERA_ANCIENT</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -1156,7 +1156,7 @@
 					<EraType>C2C_ERA_CLASSICAL</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -1164,7 +1164,7 @@
 					<EraType>C2C_ERA_MEDIEVAL</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -1172,7 +1172,7 @@
 					<EraType>C2C_ERA_RENAISSANCE</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -1189,7 +1189,7 @@
 					<EraType>C2C_ERA_PREHISTORIC</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>20</iCommerce>
+						<iCommerce>40</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -1197,7 +1197,7 @@
 					<EraType>C2C_ERA_ANCIENT</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -1205,7 +1205,7 @@
 					<EraType>C2C_ERA_CLASSICAL</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -1213,7 +1213,7 @@
 					<EraType>C2C_ERA_MEDIEVAL</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -1221,7 +1221,7 @@
 					<EraType>C2C_ERA_RENAISSANCE</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -1238,7 +1238,7 @@
 					<EraType>C2C_ERA_PREHISTORIC</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>20</iCommerce>
+						<iCommerce>40</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -1246,7 +1246,7 @@
 					<EraType>C2C_ERA_ANCIENT</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -1254,7 +1254,7 @@
 					<EraType>C2C_ERA_CLASSICAL</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -1262,7 +1262,7 @@
 					<EraType>C2C_ERA_MEDIEVAL</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -1270,7 +1270,7 @@
 					<EraType>C2C_ERA_RENAISSANCE</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -1287,7 +1287,7 @@
 					<EraType>C2C_ERA_PREHISTORIC</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>20</iCommerce>
+						<iCommerce>40</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -1295,7 +1295,7 @@
 					<EraType>C2C_ERA_ANCIENT</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -1303,7 +1303,7 @@
 					<EraType>C2C_ERA_CLASSICAL</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -1311,7 +1311,7 @@
 					<EraType>C2C_ERA_MEDIEVAL</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -1319,7 +1319,7 @@
 					<EraType>C2C_ERA_RENAISSANCE</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -1336,7 +1336,7 @@
 					<EraType>C2C_ERA_PREHISTORIC</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>20</iCommerce>
+						<iCommerce>40</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -1344,7 +1344,7 @@
 					<EraType>C2C_ERA_ANCIENT</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -1352,7 +1352,7 @@
 					<EraType>C2C_ERA_CLASSICAL</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -1360,7 +1360,7 @@
 					<EraType>C2C_ERA_MEDIEVAL</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -1368,7 +1368,7 @@
 					<EraType>C2C_ERA_RENAISSANCE</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -1385,7 +1385,7 @@
 					<EraType>C2C_ERA_PREHISTORIC</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>20</iCommerce>
+						<iCommerce>40</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -1393,7 +1393,7 @@
 					<EraType>C2C_ERA_ANCIENT</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -1401,7 +1401,7 @@
 					<EraType>C2C_ERA_CLASSICAL</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -1409,7 +1409,7 @@
 					<EraType>C2C_ERA_MEDIEVAL</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -1417,7 +1417,7 @@
 					<EraType>C2C_ERA_RENAISSANCE</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -1434,7 +1434,7 @@
 					<EraType>C2C_ERA_PREHISTORIC</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>20</iCommerce>
+						<iCommerce>40</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -1442,7 +1442,7 @@
 					<EraType>C2C_ERA_ANCIENT</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -1450,7 +1450,7 @@
 					<EraType>C2C_ERA_CLASSICAL</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -1458,7 +1458,7 @@
 					<EraType>C2C_ERA_MEDIEVAL</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -1466,7 +1466,7 @@
 					<EraType>C2C_ERA_RENAISSANCE</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -1483,7 +1483,7 @@
 					<EraType>C2C_ERA_PREHISTORIC</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>20</iCommerce>
+						<iCommerce>40</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -1491,7 +1491,7 @@
 					<EraType>C2C_ERA_ANCIENT</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -1499,7 +1499,7 @@
 					<EraType>C2C_ERA_CLASSICAL</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -1507,7 +1507,7 @@
 					<EraType>C2C_ERA_MEDIEVAL</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -1515,7 +1515,7 @@
 					<EraType>C2C_ERA_RENAISSANCE</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -1532,7 +1532,7 @@
 					<EraType>C2C_ERA_PREHISTORIC</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>20</iCommerce>
+						<iCommerce>40</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -1540,7 +1540,7 @@
 					<EraType>C2C_ERA_ANCIENT</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -1548,7 +1548,7 @@
 					<EraType>C2C_ERA_CLASSICAL</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -1556,7 +1556,7 @@
 					<EraType>C2C_ERA_MEDIEVAL</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -1564,7 +1564,7 @@
 					<EraType>C2C_ERA_RENAISSANCE</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -1581,7 +1581,7 @@
 					<EraType>C2C_ERA_PREHISTORIC</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>20</iCommerce>
+						<iCommerce>40</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -1589,7 +1589,7 @@
 					<EraType>C2C_ERA_ANCIENT</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -1597,7 +1597,7 @@
 					<EraType>C2C_ERA_CLASSICAL</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -1605,7 +1605,7 @@
 					<EraType>C2C_ERA_MEDIEVAL</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -1613,7 +1613,7 @@
 					<EraType>C2C_ERA_RENAISSANCE</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -1630,7 +1630,7 @@
 					<EraType>C2C_ERA_PREHISTORIC</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>20</iCommerce>
+						<iCommerce>40</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -1638,7 +1638,7 @@
 					<EraType>C2C_ERA_ANCIENT</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -1646,7 +1646,7 @@
 					<EraType>C2C_ERA_CLASSICAL</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -1654,7 +1654,7 @@
 					<EraType>C2C_ERA_MEDIEVAL</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -1662,7 +1662,7 @@
 					<EraType>C2C_ERA_RENAISSANCE</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -1679,7 +1679,7 @@
 					<EraType>C2C_ERA_PREHISTORIC</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>20</iCommerce>
+						<iCommerce>40</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -1687,7 +1687,7 @@
 					<EraType>C2C_ERA_ANCIENT</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -1695,7 +1695,7 @@
 					<EraType>C2C_ERA_CLASSICAL</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -1703,7 +1703,7 @@
 					<EraType>C2C_ERA_MEDIEVAL</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -1711,7 +1711,7 @@
 					<EraType>C2C_ERA_RENAISSANCE</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -1728,7 +1728,7 @@
 					<EraType>C2C_ERA_PREHISTORIC</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>20</iCommerce>
+						<iCommerce>40</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -1736,7 +1736,7 @@
 					<EraType>C2C_ERA_ANCIENT</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -1744,7 +1744,7 @@
 					<EraType>C2C_ERA_CLASSICAL</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -1752,7 +1752,7 @@
 					<EraType>C2C_ERA_MEDIEVAL</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -1760,7 +1760,7 @@
 					<EraType>C2C_ERA_RENAISSANCE</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -1777,7 +1777,7 @@
 					<EraType>C2C_ERA_PREHISTORIC</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>20</iCommerce>
+						<iCommerce>40</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -1785,7 +1785,7 @@
 					<EraType>C2C_ERA_ANCIENT</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -1793,7 +1793,7 @@
 					<EraType>C2C_ERA_CLASSICAL</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -1801,7 +1801,7 @@
 					<EraType>C2C_ERA_MEDIEVAL</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -1809,7 +1809,7 @@
 					<EraType>C2C_ERA_RENAISSANCE</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -1826,7 +1826,7 @@
 					<EraType>C2C_ERA_PREHISTORIC</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>20</iCommerce>
+						<iCommerce>40</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -1834,7 +1834,7 @@
 					<EraType>C2C_ERA_ANCIENT</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -1842,7 +1842,7 @@
 					<EraType>C2C_ERA_CLASSICAL</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -1850,7 +1850,7 @@
 					<EraType>C2C_ERA_MEDIEVAL</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -1858,7 +1858,7 @@
 					<EraType>C2C_ERA_RENAISSANCE</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -1875,7 +1875,7 @@
 					<EraType>C2C_ERA_PREHISTORIC</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>20</iCommerce>
+						<iCommerce>40</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -1883,7 +1883,7 @@
 					<EraType>C2C_ERA_ANCIENT</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -1891,7 +1891,7 @@
 					<EraType>C2C_ERA_CLASSICAL</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -1899,7 +1899,7 @@
 					<EraType>C2C_ERA_MEDIEVAL</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -1907,7 +1907,7 @@
 					<EraType>C2C_ERA_RENAISSANCE</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -1924,7 +1924,7 @@
 					<EraType>C2C_ERA_PREHISTORIC</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>20</iCommerce>
+						<iCommerce>40</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -1932,7 +1932,7 @@
 					<EraType>C2C_ERA_ANCIENT</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -1940,7 +1940,7 @@
 					<EraType>C2C_ERA_CLASSICAL</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -1948,7 +1948,7 @@
 					<EraType>C2C_ERA_MEDIEVAL</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -1956,7 +1956,7 @@
 					<EraType>C2C_ERA_RENAISSANCE</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -1973,7 +1973,7 @@
 					<EraType>C2C_ERA_PREHISTORIC</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>20</iCommerce>
+						<iCommerce>40</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -1981,7 +1981,7 @@
 					<EraType>C2C_ERA_ANCIENT</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -1989,7 +1989,7 @@
 					<EraType>C2C_ERA_CLASSICAL</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -1997,7 +1997,7 @@
 					<EraType>C2C_ERA_MEDIEVAL</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -2005,7 +2005,7 @@
 					<EraType>C2C_ERA_RENAISSANCE</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -2022,7 +2022,7 @@
 					<EraType>C2C_ERA_PREHISTORIC</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>20</iCommerce>
+						<iCommerce>40</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -2030,7 +2030,7 @@
 					<EraType>C2C_ERA_ANCIENT</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -2038,7 +2038,7 @@
 					<EraType>C2C_ERA_CLASSICAL</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -2046,7 +2046,7 @@
 					<EraType>C2C_ERA_MEDIEVAL</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -2054,7 +2054,7 @@
 					<EraType>C2C_ERA_RENAISSANCE</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -2071,7 +2071,7 @@
 					<EraType>C2C_ERA_PREHISTORIC</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>20</iCommerce>
+						<iCommerce>40</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -2079,7 +2079,7 @@
 					<EraType>C2C_ERA_ANCIENT</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -2087,7 +2087,7 @@
 					<EraType>C2C_ERA_CLASSICAL</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -2095,7 +2095,7 @@
 					<EraType>C2C_ERA_MEDIEVAL</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -2103,7 +2103,7 @@
 					<EraType>C2C_ERA_RENAISSANCE</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -2120,7 +2120,7 @@
 					<EraType>C2C_ERA_PREHISTORIC</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>20</iCommerce>
+						<iCommerce>40</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -2128,7 +2128,7 @@
 					<EraType>C2C_ERA_ANCIENT</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -2136,7 +2136,7 @@
 					<EraType>C2C_ERA_CLASSICAL</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -2144,7 +2144,7 @@
 					<EraType>C2C_ERA_MEDIEVAL</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -2152,7 +2152,7 @@
 					<EraType>C2C_ERA_RENAISSANCE</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -2169,7 +2169,7 @@
 					<EraType>C2C_ERA_PREHISTORIC</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>20</iCommerce>
+						<iCommerce>40</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -2177,7 +2177,7 @@
 					<EraType>C2C_ERA_ANCIENT</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -2185,7 +2185,7 @@
 					<EraType>C2C_ERA_CLASSICAL</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -2193,7 +2193,7 @@
 					<EraType>C2C_ERA_MEDIEVAL</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -2201,7 +2201,7 @@
 					<EraType>C2C_ERA_RENAISSANCE</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -2218,7 +2218,7 @@
 					<EraType>C2C_ERA_PREHISTORIC</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>20</iCommerce>
+						<iCommerce>40</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -2226,7 +2226,7 @@
 					<EraType>C2C_ERA_ANCIENT</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -2234,7 +2234,7 @@
 					<EraType>C2C_ERA_CLASSICAL</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -2242,7 +2242,7 @@
 					<EraType>C2C_ERA_MEDIEVAL</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -2250,7 +2250,7 @@
 					<EraType>C2C_ERA_RENAISSANCE</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -2267,7 +2267,7 @@
 					<EraType>C2C_ERA_PREHISTORIC</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>20</iCommerce>
+						<iCommerce>40</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -2275,7 +2275,7 @@
 					<EraType>C2C_ERA_ANCIENT</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -2283,7 +2283,7 @@
 					<EraType>C2C_ERA_CLASSICAL</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -2291,7 +2291,7 @@
 					<EraType>C2C_ERA_MEDIEVAL</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -2299,7 +2299,7 @@
 					<EraType>C2C_ERA_RENAISSANCE</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -2316,7 +2316,7 @@
 					<EraType>C2C_ERA_PREHISTORIC</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>20</iCommerce>
+						<iCommerce>40</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -2324,7 +2324,7 @@
 					<EraType>C2C_ERA_ANCIENT</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -2332,7 +2332,7 @@
 					<EraType>C2C_ERA_CLASSICAL</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -2340,7 +2340,7 @@
 					<EraType>C2C_ERA_MEDIEVAL</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -2348,7 +2348,7 @@
 					<EraType>C2C_ERA_RENAISSANCE</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -2365,7 +2365,7 @@
 					<EraType>C2C_ERA_PREHISTORIC</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>20</iCommerce>
+						<iCommerce>40</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -2373,7 +2373,7 @@
 					<EraType>C2C_ERA_ANCIENT</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -2381,7 +2381,7 @@
 					<EraType>C2C_ERA_CLASSICAL</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -2389,7 +2389,7 @@
 					<EraType>C2C_ERA_MEDIEVAL</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -2397,7 +2397,7 @@
 					<EraType>C2C_ERA_RENAISSANCE</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -2418,7 +2418,7 @@
 					<EraType>C2C_ERA_PREHISTORIC</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>20</iCommerce>
+						<iCommerce>40</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -2426,7 +2426,7 @@
 					<EraType>C2C_ERA_ANCIENT</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -2434,7 +2434,7 @@
 					<EraType>C2C_ERA_CLASSICAL</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -2442,7 +2442,7 @@
 					<EraType>C2C_ERA_MEDIEVAL</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -2450,7 +2450,7 @@
 					<EraType>C2C_ERA_RENAISSANCE</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -2467,7 +2467,7 @@
 					<EraType>C2C_ERA_PREHISTORIC</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>20</iCommerce>
+						<iCommerce>40</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -2475,7 +2475,7 @@
 					<EraType>C2C_ERA_ANCIENT</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -2483,7 +2483,7 @@
 					<EraType>C2C_ERA_CLASSICAL</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -2491,7 +2491,7 @@
 					<EraType>C2C_ERA_MEDIEVAL</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -2499,7 +2499,7 @@
 					<EraType>C2C_ERA_RENAISSANCE</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -2516,7 +2516,7 @@
 					<EraType>C2C_ERA_PREHISTORIC</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>20</iCommerce>
+						<iCommerce>40</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -2524,7 +2524,7 @@
 					<EraType>C2C_ERA_ANCIENT</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -2532,7 +2532,7 @@
 					<EraType>C2C_ERA_CLASSICAL</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -2540,7 +2540,7 @@
 					<EraType>C2C_ERA_MEDIEVAL</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -2548,7 +2548,7 @@
 					<EraType>C2C_ERA_RENAISSANCE</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -2565,7 +2565,7 @@
 					<EraType>C2C_ERA_PREHISTORIC</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>20</iCommerce>
+						<iCommerce>40</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -2573,7 +2573,7 @@
 					<EraType>C2C_ERA_ANCIENT</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -2581,7 +2581,7 @@
 					<EraType>C2C_ERA_CLASSICAL</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -2589,7 +2589,7 @@
 					<EraType>C2C_ERA_MEDIEVAL</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -2597,7 +2597,7 @@
 					<EraType>C2C_ERA_RENAISSANCE</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -2614,7 +2614,7 @@
 					<EraType>C2C_ERA_PREHISTORIC</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>20</iCommerce>
+						<iCommerce>40</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -2622,7 +2622,7 @@
 					<EraType>C2C_ERA_ANCIENT</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -2630,7 +2630,7 @@
 					<EraType>C2C_ERA_CLASSICAL</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -2638,7 +2638,7 @@
 					<EraType>C2C_ERA_MEDIEVAL</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -2646,7 +2646,7 @@
 					<EraType>C2C_ERA_RENAISSANCE</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -2663,7 +2663,7 @@
 					<EraType>C2C_ERA_PREHISTORIC</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>20</iCommerce>
+						<iCommerce>40</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -2671,7 +2671,7 @@
 					<EraType>C2C_ERA_ANCIENT</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -2679,7 +2679,7 @@
 					<EraType>C2C_ERA_CLASSICAL</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -2687,7 +2687,7 @@
 					<EraType>C2C_ERA_MEDIEVAL</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -2695,7 +2695,7 @@
 					<EraType>C2C_ERA_RENAISSANCE</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -2712,7 +2712,7 @@
 					<EraType>C2C_ERA_PREHISTORIC</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>20</iCommerce>
+						<iCommerce>40</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -2720,7 +2720,7 @@
 					<EraType>C2C_ERA_ANCIENT</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -2728,7 +2728,7 @@
 					<EraType>C2C_ERA_CLASSICAL</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -2736,7 +2736,7 @@
 					<EraType>C2C_ERA_MEDIEVAL</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -2744,7 +2744,7 @@
 					<EraType>C2C_ERA_RENAISSANCE</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -2761,7 +2761,7 @@
 					<EraType>C2C_ERA_PREHISTORIC</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>20</iCommerce>
+						<iCommerce>40</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -2769,7 +2769,7 @@
 					<EraType>C2C_ERA_ANCIENT</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -2777,7 +2777,7 @@
 					<EraType>C2C_ERA_CLASSICAL</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -2785,7 +2785,7 @@
 					<EraType>C2C_ERA_MEDIEVAL</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -2793,7 +2793,7 @@
 					<EraType>C2C_ERA_RENAISSANCE</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -2810,7 +2810,7 @@
 					<EraType>C2C_ERA_PREHISTORIC</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>20</iCommerce>
+						<iCommerce>40</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -2818,7 +2818,7 @@
 					<EraType>C2C_ERA_ANCIENT</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -2826,7 +2826,7 @@
 					<EraType>C2C_ERA_CLASSICAL</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -2834,7 +2834,7 @@
 					<EraType>C2C_ERA_MEDIEVAL</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -2842,7 +2842,7 @@
 					<EraType>C2C_ERA_RENAISSANCE</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -2859,7 +2859,7 @@
 					<EraType>C2C_ERA_PREHISTORIC</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>20</iCommerce>
+						<iCommerce>40</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -2867,7 +2867,7 @@
 					<EraType>C2C_ERA_ANCIENT</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -2875,7 +2875,7 @@
 					<EraType>C2C_ERA_CLASSICAL</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -2883,7 +2883,7 @@
 					<EraType>C2C_ERA_MEDIEVAL</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -2891,7 +2891,7 @@
 					<EraType>C2C_ERA_RENAISSANCE</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -2908,7 +2908,7 @@
 					<EraType>C2C_ERA_PREHISTORIC</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>20</iCommerce>
+						<iCommerce>40</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -2916,7 +2916,7 @@
 					<EraType>C2C_ERA_ANCIENT</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -2924,7 +2924,7 @@
 					<EraType>C2C_ERA_CLASSICAL</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -2932,7 +2932,7 @@
 					<EraType>C2C_ERA_MEDIEVAL</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -2940,7 +2940,7 @@
 					<EraType>C2C_ERA_RENAISSANCE</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -2957,7 +2957,7 @@
 					<EraType>C2C_ERA_PREHISTORIC</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>20</iCommerce>
+						<iCommerce>40</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -2965,7 +2965,7 @@
 					<EraType>C2C_ERA_ANCIENT</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -2973,7 +2973,7 @@
 					<EraType>C2C_ERA_CLASSICAL</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -2981,7 +2981,7 @@
 					<EraType>C2C_ERA_MEDIEVAL</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -2989,7 +2989,7 @@
 					<EraType>C2C_ERA_RENAISSANCE</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -3006,7 +3006,7 @@
 					<EraType>C2C_ERA_PREHISTORIC</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>20</iCommerce>
+						<iCommerce>40</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -3014,7 +3014,7 @@
 					<EraType>C2C_ERA_ANCIENT</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -3022,7 +3022,7 @@
 					<EraType>C2C_ERA_CLASSICAL</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -3030,7 +3030,7 @@
 					<EraType>C2C_ERA_MEDIEVAL</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -3038,7 +3038,7 @@
 					<EraType>C2C_ERA_RENAISSANCE</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -3055,7 +3055,7 @@
 					<EraType>C2C_ERA_PREHISTORIC</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>20</iCommerce>
+						<iCommerce>40</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -3063,7 +3063,7 @@
 					<EraType>C2C_ERA_ANCIENT</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -3071,7 +3071,7 @@
 					<EraType>C2C_ERA_CLASSICAL</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -3079,7 +3079,7 @@
 					<EraType>C2C_ERA_MEDIEVAL</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -3087,7 +3087,7 @@
 					<EraType>C2C_ERA_RENAISSANCE</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -3104,7 +3104,7 @@
 					<EraType>C2C_ERA_PREHISTORIC</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>20</iCommerce>
+						<iCommerce>40</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -3112,7 +3112,7 @@
 					<EraType>C2C_ERA_ANCIENT</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -3120,7 +3120,7 @@
 					<EraType>C2C_ERA_CLASSICAL</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -3128,7 +3128,7 @@
 					<EraType>C2C_ERA_MEDIEVAL</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -3136,7 +3136,7 @@
 					<EraType>C2C_ERA_RENAISSANCE</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -3153,7 +3153,7 @@
 					<EraType>C2C_ERA_PREHISTORIC</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>20</iCommerce>
+						<iCommerce>40</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -3161,7 +3161,7 @@
 					<EraType>C2C_ERA_ANCIENT</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -3169,7 +3169,7 @@
 					<EraType>C2C_ERA_CLASSICAL</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -3177,7 +3177,7 @@
 					<EraType>C2C_ERA_MEDIEVAL</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -3185,7 +3185,7 @@
 					<EraType>C2C_ERA_RENAISSANCE</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -3202,7 +3202,7 @@
 					<EraType>C2C_ERA_PREHISTORIC</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>20</iCommerce>
+						<iCommerce>40</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -3210,7 +3210,7 @@
 					<EraType>C2C_ERA_ANCIENT</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -3218,7 +3218,7 @@
 					<EraType>C2C_ERA_CLASSICAL</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -3226,7 +3226,7 @@
 					<EraType>C2C_ERA_MEDIEVAL</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -3234,7 +3234,7 @@
 					<EraType>C2C_ERA_RENAISSANCE</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -3251,7 +3251,7 @@
 					<EraType>C2C_ERA_PREHISTORIC</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>20</iCommerce>
+						<iCommerce>40</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -3259,7 +3259,7 @@
 					<EraType>C2C_ERA_ANCIENT</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -3267,7 +3267,7 @@
 					<EraType>C2C_ERA_CLASSICAL</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -3275,7 +3275,7 @@
 					<EraType>C2C_ERA_MEDIEVAL</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -3283,7 +3283,7 @@
 					<EraType>C2C_ERA_RENAISSANCE</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -3300,7 +3300,7 @@
 					<EraType>C2C_ERA_PREHISTORIC</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>20</iCommerce>
+						<iCommerce>40</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -3308,7 +3308,7 @@
 					<EraType>C2C_ERA_ANCIENT</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -3316,7 +3316,7 @@
 					<EraType>C2C_ERA_CLASSICAL</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -3324,7 +3324,7 @@
 					<EraType>C2C_ERA_MEDIEVAL</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -3332,7 +3332,7 @@
 					<EraType>C2C_ERA_RENAISSANCE</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -3349,7 +3349,7 @@
 					<EraType>C2C_ERA_PREHISTORIC</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>20</iCommerce>
+						<iCommerce>40</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -3357,7 +3357,7 @@
 					<EraType>C2C_ERA_ANCIENT</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -3365,7 +3365,7 @@
 					<EraType>C2C_ERA_CLASSICAL</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -3373,7 +3373,7 @@
 					<EraType>C2C_ERA_MEDIEVAL</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -3381,7 +3381,7 @@
 					<EraType>C2C_ERA_RENAISSANCE</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -3398,7 +3398,7 @@
 					<EraType>C2C_ERA_PREHISTORIC</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>20</iCommerce>
+						<iCommerce>40</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -3406,7 +3406,7 @@
 					<EraType>C2C_ERA_ANCIENT</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -3414,7 +3414,7 @@
 					<EraType>C2C_ERA_CLASSICAL</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -3422,7 +3422,7 @@
 					<EraType>C2C_ERA_MEDIEVAL</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -3430,7 +3430,7 @@
 					<EraType>C2C_ERA_RENAISSANCE</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -3447,7 +3447,7 @@
 					<EraType>C2C_ERA_PREHISTORIC</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>20</iCommerce>
+						<iCommerce>40</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -3455,7 +3455,7 @@
 					<EraType>C2C_ERA_ANCIENT</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -3463,7 +3463,7 @@
 					<EraType>C2C_ERA_CLASSICAL</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -3471,7 +3471,7 @@
 					<EraType>C2C_ERA_MEDIEVAL</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -3479,7 +3479,7 @@
 					<EraType>C2C_ERA_RENAISSANCE</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -3496,7 +3496,7 @@
 					<EraType>C2C_ERA_PREHISTORIC</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>20</iCommerce>
+						<iCommerce>40</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -3504,7 +3504,7 @@
 					<EraType>C2C_ERA_ANCIENT</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -3512,7 +3512,7 @@
 					<EraType>C2C_ERA_CLASSICAL</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -3520,7 +3520,7 @@
 					<EraType>C2C_ERA_MEDIEVAL</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -3528,7 +3528,7 @@
 					<EraType>C2C_ERA_RENAISSANCE</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -3545,7 +3545,7 @@
 					<EraType>C2C_ERA_PREHISTORIC</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>20</iCommerce>
+						<iCommerce>40</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -3553,7 +3553,7 @@
 					<EraType>C2C_ERA_ANCIENT</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -3561,7 +3561,7 @@
 					<EraType>C2C_ERA_CLASSICAL</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -3569,7 +3569,7 @@
 					<EraType>C2C_ERA_MEDIEVAL</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -3577,7 +3577,7 @@
 					<EraType>C2C_ERA_RENAISSANCE</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -3594,7 +3594,7 @@
 					<EraType>C2C_ERA_PREHISTORIC</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>20</iCommerce>
+						<iCommerce>40</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -3602,7 +3602,7 @@
 					<EraType>C2C_ERA_ANCIENT</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -3610,7 +3610,7 @@
 					<EraType>C2C_ERA_CLASSICAL</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -3618,7 +3618,7 @@
 					<EraType>C2C_ERA_MEDIEVAL</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -3626,7 +3626,7 @@
 					<EraType>C2C_ERA_RENAISSANCE</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -3643,7 +3643,7 @@
 					<EraType>C2C_ERA_PREHISTORIC</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>20</iCommerce>
+						<iCommerce>40</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -3651,7 +3651,7 @@
 					<EraType>C2C_ERA_ANCIENT</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -3659,7 +3659,7 @@
 					<EraType>C2C_ERA_CLASSICAL</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -3667,7 +3667,7 @@
 					<EraType>C2C_ERA_MEDIEVAL</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -3675,7 +3675,7 @@
 					<EraType>C2C_ERA_RENAISSANCE</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -3692,7 +3692,7 @@
 					<EraType>C2C_ERA_PREHISTORIC</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>20</iCommerce>
+						<iCommerce>40</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -3700,7 +3700,7 @@
 					<EraType>C2C_ERA_ANCIENT</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -3708,7 +3708,7 @@
 					<EraType>C2C_ERA_CLASSICAL</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -3716,7 +3716,7 @@
 					<EraType>C2C_ERA_MEDIEVAL</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -3724,7 +3724,7 @@
 					<EraType>C2C_ERA_RENAISSANCE</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -3741,7 +3741,7 @@
 					<EraType>C2C_ERA_PREHISTORIC</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>20</iCommerce>
+						<iCommerce>40</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -3749,7 +3749,7 @@
 					<EraType>C2C_ERA_ANCIENT</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -3757,7 +3757,7 @@
 					<EraType>C2C_ERA_CLASSICAL</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -3765,7 +3765,7 @@
 					<EraType>C2C_ERA_MEDIEVAL</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -3773,7 +3773,7 @@
 					<EraType>C2C_ERA_RENAISSANCE</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -3790,7 +3790,7 @@
 					<EraType>C2C_ERA_PREHISTORIC</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>20</iCommerce>
+						<iCommerce>40</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -3798,7 +3798,7 @@
 					<EraType>C2C_ERA_ANCIENT</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -3806,7 +3806,7 @@
 					<EraType>C2C_ERA_CLASSICAL</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -3814,7 +3814,7 @@
 					<EraType>C2C_ERA_MEDIEVAL</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -3822,7 +3822,7 @@
 					<EraType>C2C_ERA_RENAISSANCE</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -3839,7 +3839,7 @@
 					<EraType>C2C_ERA_PREHISTORIC</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>20</iCommerce>
+						<iCommerce>40</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -3847,7 +3847,7 @@
 					<EraType>C2C_ERA_ANCIENT</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -3855,7 +3855,7 @@
 					<EraType>C2C_ERA_CLASSICAL</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -3863,7 +3863,7 @@
 					<EraType>C2C_ERA_MEDIEVAL</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -3871,7 +3871,7 @@
 					<EraType>C2C_ERA_RENAISSANCE</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -3888,7 +3888,7 @@
 					<EraType>C2C_ERA_PREHISTORIC</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>20</iCommerce>
+						<iCommerce>40</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -3896,7 +3896,7 @@
 					<EraType>C2C_ERA_ANCIENT</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -3904,7 +3904,7 @@
 					<EraType>C2C_ERA_CLASSICAL</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -3912,7 +3912,7 @@
 					<EraType>C2C_ERA_MEDIEVAL</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -3920,7 +3920,7 @@
 					<EraType>C2C_ERA_RENAISSANCE</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -3937,7 +3937,7 @@
 					<EraType>C2C_ERA_PREHISTORIC</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>20</iCommerce>
+						<iCommerce>40</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -3945,7 +3945,7 @@
 					<EraType>C2C_ERA_ANCIENT</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -3953,7 +3953,7 @@
 					<EraType>C2C_ERA_CLASSICAL</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -3961,7 +3961,7 @@
 					<EraType>C2C_ERA_MEDIEVAL</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -3969,7 +3969,7 @@
 					<EraType>C2C_ERA_RENAISSANCE</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -3986,7 +3986,7 @@
 					<EraType>C2C_ERA_PREHISTORIC</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>20</iCommerce>
+						<iCommerce>40</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -3994,7 +3994,7 @@
 					<EraType>C2C_ERA_ANCIENT</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -4002,7 +4002,7 @@
 					<EraType>C2C_ERA_CLASSICAL</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -4010,7 +4010,7 @@
 					<EraType>C2C_ERA_MEDIEVAL</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -4018,7 +4018,7 @@
 					<EraType>C2C_ERA_RENAISSANCE</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -4035,7 +4035,7 @@
 					<EraType>C2C_ERA_PREHISTORIC</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>20</iCommerce>
+						<iCommerce>40</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -4043,7 +4043,7 @@
 					<EraType>C2C_ERA_ANCIENT</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -4051,7 +4051,7 @@
 					<EraType>C2C_ERA_CLASSICAL</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -4059,7 +4059,7 @@
 					<EraType>C2C_ERA_MEDIEVAL</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -4067,7 +4067,7 @@
 					<EraType>C2C_ERA_RENAISSANCE</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -4084,7 +4084,7 @@
 					<EraType>C2C_ERA_PREHISTORIC</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>20</iCommerce>
+						<iCommerce>40</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -4092,7 +4092,7 @@
 					<EraType>C2C_ERA_ANCIENT</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -4100,7 +4100,7 @@
 					<EraType>C2C_ERA_CLASSICAL</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -4108,7 +4108,7 @@
 					<EraType>C2C_ERA_MEDIEVAL</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -4116,7 +4116,7 @@
 					<EraType>C2C_ERA_RENAISSANCE</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -4133,7 +4133,7 @@
 					<EraType>C2C_ERA_PREHISTORIC</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>20</iCommerce>
+						<iCommerce>40</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -4141,7 +4141,7 @@
 					<EraType>C2C_ERA_ANCIENT</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -4149,7 +4149,7 @@
 					<EraType>C2C_ERA_CLASSICAL</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -4157,7 +4157,7 @@
 					<EraType>C2C_ERA_MEDIEVAL</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -4165,7 +4165,7 @@
 					<EraType>C2C_ERA_RENAISSANCE</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -4182,7 +4182,7 @@
 					<EraType>C2C_ERA_PREHISTORIC</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>20</iCommerce>
+						<iCommerce>40</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -4190,7 +4190,7 @@
 					<EraType>C2C_ERA_ANCIENT</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -4198,7 +4198,7 @@
 					<EraType>C2C_ERA_CLASSICAL</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -4206,7 +4206,7 @@
 					<EraType>C2C_ERA_MEDIEVAL</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -4214,7 +4214,7 @@
 					<EraType>C2C_ERA_RENAISSANCE</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -4231,7 +4231,7 @@
 					<EraType>C2C_ERA_PREHISTORIC</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>20</iCommerce>
+						<iCommerce>40</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -4239,7 +4239,7 @@
 					<EraType>C2C_ERA_ANCIENT</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -4247,7 +4247,7 @@
 					<EraType>C2C_ERA_CLASSICAL</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -4255,7 +4255,7 @@
 					<EraType>C2C_ERA_MEDIEVAL</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -4263,7 +4263,7 @@
 					<EraType>C2C_ERA_RENAISSANCE</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -4280,7 +4280,7 @@
 					<EraType>C2C_ERA_PREHISTORIC</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>20</iCommerce>
+						<iCommerce>40</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -4288,7 +4288,7 @@
 					<EraType>C2C_ERA_ANCIENT</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -4296,7 +4296,7 @@
 					<EraType>C2C_ERA_CLASSICAL</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -4304,7 +4304,7 @@
 					<EraType>C2C_ERA_MEDIEVAL</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -4312,7 +4312,7 @@
 					<EraType>C2C_ERA_RENAISSANCE</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -4329,7 +4329,7 @@
 					<EraType>C2C_ERA_PREHISTORIC</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>20</iCommerce>
+						<iCommerce>40</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -4337,7 +4337,7 @@
 					<EraType>C2C_ERA_ANCIENT</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -4345,7 +4345,7 @@
 					<EraType>C2C_ERA_CLASSICAL</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -4353,7 +4353,7 @@
 					<EraType>C2C_ERA_MEDIEVAL</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -4361,7 +4361,7 @@
 					<EraType>C2C_ERA_RENAISSANCE</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -4378,7 +4378,7 @@
 					<EraType>C2C_ERA_PREHISTORIC</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>20</iCommerce>
+						<iCommerce>40</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -4386,7 +4386,7 @@
 					<EraType>C2C_ERA_ANCIENT</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -4394,7 +4394,7 @@
 					<EraType>C2C_ERA_CLASSICAL</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -4402,7 +4402,7 @@
 					<EraType>C2C_ERA_MEDIEVAL</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -4410,7 +4410,7 @@
 					<EraType>C2C_ERA_RENAISSANCE</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -4427,7 +4427,7 @@
 					<EraType>C2C_ERA_PREHISTORIC</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>20</iCommerce>
+						<iCommerce>40</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -4435,7 +4435,7 @@
 					<EraType>C2C_ERA_ANCIENT</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -4443,7 +4443,7 @@
 					<EraType>C2C_ERA_CLASSICAL</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -4451,7 +4451,7 @@
 					<EraType>C2C_ERA_MEDIEVAL</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -4459,7 +4459,7 @@
 					<EraType>C2C_ERA_RENAISSANCE</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -4477,7 +4477,7 @@
 					<EraType>C2C_ERA_PREHISTORIC</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>20</iCommerce>
+						<iCommerce>40</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -4485,7 +4485,7 @@
 					<EraType>C2C_ERA_ANCIENT</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -4493,7 +4493,7 @@
 					<EraType>C2C_ERA_CLASSICAL</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -4501,7 +4501,7 @@
 					<EraType>C2C_ERA_MEDIEVAL</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -4509,7 +4509,7 @@
 					<EraType>C2C_ERA_RENAISSANCE</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -4554,7 +4554,7 @@
 					<EraType>C2C_ERA_ANCIENT</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>20</iCommerce>
+						<iCommerce>40</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -4562,7 +4562,7 @@
 					<EraType>C2C_ERA_CLASSICAL</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -4570,7 +4570,7 @@
 					<EraType>C2C_ERA_MEDIEVAL</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -4578,7 +4578,7 @@
 					<EraType>C2C_ERA_RENAISSANCE</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -4586,7 +4586,7 @@
 					<EraType>C2C_ERA_INDUSTRIAL</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -4631,7 +4631,7 @@
 					<EraType>C2C_ERA_ANCIENT</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>20</iCommerce>
+						<iCommerce>40</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -4639,7 +4639,7 @@
 					<EraType>C2C_ERA_CLASSICAL</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -4647,7 +4647,7 @@
 					<EraType>C2C_ERA_MEDIEVAL</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -4655,7 +4655,7 @@
 					<EraType>C2C_ERA_RENAISSANCE</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -4663,7 +4663,7 @@
 					<EraType>C2C_ERA_INDUSTRIAL</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -4715,7 +4715,7 @@
 					<EraType>C2C_ERA_ANCIENT</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>20</iCommerce>
+						<iCommerce>40</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -4723,7 +4723,7 @@
 					<EraType>C2C_ERA_CLASSICAL</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -4731,7 +4731,7 @@
 					<EraType>C2C_ERA_MEDIEVAL</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -4739,7 +4739,7 @@
 					<EraType>C2C_ERA_RENAISSANCE</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -4747,7 +4747,7 @@
 					<EraType>C2C_ERA_INDUSTRIAL</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -4797,7 +4797,7 @@
 					<EraType>C2C_ERA_ANCIENT</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>20</iCommerce>
+						<iCommerce>40</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -4805,7 +4805,7 @@
 					<EraType>C2C_ERA_CLASSICAL</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -4813,7 +4813,7 @@
 					<EraType>C2C_ERA_MEDIEVAL</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -4821,7 +4821,7 @@
 					<EraType>C2C_ERA_RENAISSANCE</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -4829,7 +4829,7 @@
 					<EraType>C2C_ERA_INDUSTRIAL</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -4876,7 +4876,7 @@
 					<EraType>C2C_ERA_ANCIENT</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>20</iCommerce>
+						<iCommerce>40</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -4884,7 +4884,7 @@
 					<EraType>C2C_ERA_CLASSICAL</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -4892,7 +4892,7 @@
 					<EraType>C2C_ERA_MEDIEVAL</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -4900,7 +4900,7 @@
 					<EraType>C2C_ERA_RENAISSANCE</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -4908,7 +4908,7 @@
 					<EraType>C2C_ERA_INDUSTRIAL</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -4953,7 +4953,7 @@
 					<EraType>C2C_ERA_ANCIENT</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>20</iCommerce>
+						<iCommerce>40</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -4961,7 +4961,7 @@
 					<EraType>C2C_ERA_CLASSICAL</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -4969,7 +4969,7 @@
 					<EraType>C2C_ERA_MEDIEVAL</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -4977,7 +4977,7 @@
 					<EraType>C2C_ERA_RENAISSANCE</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -4985,7 +4985,7 @@
 					<EraType>C2C_ERA_INDUSTRIAL</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -5030,7 +5030,7 @@
 					<EraType>C2C_ERA_ANCIENT</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>20</iCommerce>
+						<iCommerce>40</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -5038,7 +5038,7 @@
 					<EraType>C2C_ERA_CLASSICAL</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -5046,7 +5046,7 @@
 					<EraType>C2C_ERA_MEDIEVAL</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -5054,7 +5054,7 @@
 					<EraType>C2C_ERA_RENAISSANCE</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -5062,7 +5062,7 @@
 					<EraType>C2C_ERA_INDUSTRIAL</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -5106,7 +5106,7 @@
 					<EraType>C2C_ERA_ANCIENT</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>20</iCommerce>
+						<iCommerce>40</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -5114,7 +5114,7 @@
 					<EraType>C2C_ERA_CLASSICAL</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -5122,7 +5122,7 @@
 					<EraType>C2C_ERA_MEDIEVAL</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -5130,7 +5130,7 @@
 					<EraType>C2C_ERA_RENAISSANCE</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -5138,7 +5138,7 @@
 					<EraType>C2C_ERA_INDUSTRIAL</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -5193,7 +5193,7 @@
 					<EraType>C2C_ERA_ANCIENT</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>20</iCommerce>
+						<iCommerce>40</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -5201,7 +5201,7 @@
 					<EraType>C2C_ERA_CLASSICAL</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -5209,7 +5209,7 @@
 					<EraType>C2C_ERA_MEDIEVAL</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -5217,7 +5217,7 @@
 					<EraType>C2C_ERA_RENAISSANCE</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -5225,7 +5225,7 @@
 					<EraType>C2C_ERA_INDUSTRIAL</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -5269,7 +5269,7 @@
 					<EraType>C2C_ERA_ANCIENT</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>20</iCommerce>
+						<iCommerce>40</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -5277,7 +5277,7 @@
 					<EraType>C2C_ERA_CLASSICAL</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -5285,7 +5285,7 @@
 					<EraType>C2C_ERA_MEDIEVAL</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -5293,7 +5293,7 @@
 					<EraType>C2C_ERA_RENAISSANCE</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -5301,7 +5301,7 @@
 					<EraType>C2C_ERA_INDUSTRIAL</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -5351,7 +5351,7 @@
 					<EraType>C2C_ERA_ANCIENT</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>20</iCommerce>
+						<iCommerce>40</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -5359,7 +5359,7 @@
 					<EraType>C2C_ERA_CLASSICAL</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -5367,7 +5367,7 @@
 					<EraType>C2C_ERA_MEDIEVAL</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -5375,7 +5375,7 @@
 					<EraType>C2C_ERA_RENAISSANCE</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -5383,7 +5383,7 @@
 					<EraType>C2C_ERA_INDUSTRIAL</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -5427,14 +5427,13 @@
 				<Type>HERITAGE_FOLKLORE_LION_CAVE</Type>
 				<Type>HERITAGE_FOLKLORE_TIGER_BENGAL</Type>
 				<Type>HERITAGE_FOLKLORE_TIGER_SIBERIAN</Type>
-				<Type>HERITAGE_FOLKLORE_LYNX</Type>
 			</PrereqOrHeritage>
 			<EraCommerceChanges>
 				<EraCommerceChange>
 					<EraType>C2C_ERA_ANCIENT</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>20</iCommerce>
+						<iCommerce>40</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -5442,7 +5441,7 @@
 					<EraType>C2C_ERA_CLASSICAL</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -5450,7 +5449,7 @@
 					<EraType>C2C_ERA_MEDIEVAL</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -5458,7 +5457,7 @@
 					<EraType>C2C_ERA_RENAISSANCE</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -5466,7 +5465,7 @@
 					<EraType>C2C_ERA_INDUSTRIAL</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -5513,7 +5512,7 @@
 					<EraType>C2C_ERA_ANCIENT</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>20</iCommerce>
+						<iCommerce>40</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -5521,7 +5520,7 @@
 					<EraType>C2C_ERA_CLASSICAL</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -5529,7 +5528,7 @@
 					<EraType>C2C_ERA_MEDIEVAL</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -5537,7 +5536,7 @@
 					<EraType>C2C_ERA_RENAISSANCE</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -5545,7 +5544,7 @@
 					<EraType>C2C_ERA_INDUSTRIAL</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -5590,7 +5589,7 @@
 					<EraType>C2C_ERA_ANCIENT</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>20</iCommerce>
+						<iCommerce>40</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -5598,7 +5597,7 @@
 					<EraType>C2C_ERA_CLASSICAL</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -5606,7 +5605,7 @@
 					<EraType>C2C_ERA_MEDIEVAL</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -5614,7 +5613,7 @@
 					<EraType>C2C_ERA_RENAISSANCE</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -5622,7 +5621,7 @@
 					<EraType>C2C_ERA_INDUSTRIAL</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -5670,7 +5669,7 @@
 					<EraType>C2C_ERA_ANCIENT</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>20</iCommerce>
+						<iCommerce>40</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -5678,7 +5677,7 @@
 					<EraType>C2C_ERA_CLASSICAL</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -5686,7 +5685,7 @@
 					<EraType>C2C_ERA_MEDIEVAL</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -5694,7 +5693,7 @@
 					<EraType>C2C_ERA_RENAISSANCE</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -5702,7 +5701,7 @@
 					<EraType>C2C_ERA_INDUSTRIAL</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -5749,7 +5748,7 @@
 					<EraType>C2C_ERA_ANCIENT</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>20</iCommerce>
+						<iCommerce>40</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -5757,7 +5756,7 @@
 					<EraType>C2C_ERA_CLASSICAL</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -5765,7 +5764,7 @@
 					<EraType>C2C_ERA_MEDIEVAL</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -5773,7 +5772,7 @@
 					<EraType>C2C_ERA_RENAISSANCE</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -5781,7 +5780,7 @@
 					<EraType>C2C_ERA_INDUSTRIAL</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -5829,7 +5828,7 @@
 					<EraType>C2C_ERA_ANCIENT</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>20</iCommerce>
+						<iCommerce>40</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -5837,7 +5836,7 @@
 					<EraType>C2C_ERA_CLASSICAL</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -5845,7 +5844,7 @@
 					<EraType>C2C_ERA_MEDIEVAL</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -5853,7 +5852,7 @@
 					<EraType>C2C_ERA_RENAISSANCE</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -5861,7 +5860,7 @@
 					<EraType>C2C_ERA_INDUSTRIAL</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -5907,7 +5906,7 @@
 					<EraType>C2C_ERA_ANCIENT</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>20</iCommerce>
+						<iCommerce>40</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -5915,7 +5914,7 @@
 					<EraType>C2C_ERA_CLASSICAL</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -5923,7 +5922,7 @@
 					<EraType>C2C_ERA_MEDIEVAL</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -5931,7 +5930,7 @@
 					<EraType>C2C_ERA_RENAISSANCE</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -5939,7 +5938,7 @@
 					<EraType>C2C_ERA_INDUSTRIAL</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -5990,7 +5989,7 @@
 					<EraType>C2C_ERA_ANCIENT</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>20</iCommerce>
+						<iCommerce>40</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -5998,7 +5997,7 @@
 					<EraType>C2C_ERA_CLASSICAL</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -6006,7 +6005,7 @@
 					<EraType>C2C_ERA_MEDIEVAL</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -6014,7 +6013,7 @@
 					<EraType>C2C_ERA_RENAISSANCE</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -6022,7 +6021,7 @@
 					<EraType>C2C_ERA_INDUSTRIAL</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -6069,7 +6068,7 @@
 					<EraType>C2C_ERA_ANCIENT</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>20</iCommerce>
+						<iCommerce>40</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -6077,7 +6076,7 @@
 					<EraType>C2C_ERA_CLASSICAL</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -6085,7 +6084,7 @@
 					<EraType>C2C_ERA_MEDIEVAL</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -6093,7 +6092,7 @@
 					<EraType>C2C_ERA_RENAISSANCE</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -6101,7 +6100,7 @@
 					<EraType>C2C_ERA_INDUSTRIAL</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -6147,7 +6146,7 @@
 					<EraType>C2C_ERA_ANCIENT</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>20</iCommerce>
+						<iCommerce>40</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -6155,7 +6154,7 @@
 					<EraType>C2C_ERA_CLASSICAL</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -6163,7 +6162,7 @@
 					<EraType>C2C_ERA_MEDIEVAL</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -6171,7 +6170,7 @@
 					<EraType>C2C_ERA_RENAISSANCE</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>
@@ -6179,7 +6178,7 @@
 					<EraType>C2C_ERA_INDUSTRIAL</EraType>
 					<CentiCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
+						<iCommerce>-10</iCommerce>
 						<iCommerce>10</iCommerce>
 					</CentiCommerce>
 				</EraCommerceChange>

@@ -317,8 +317,10 @@
 		<EventInfo>
 			<Type>EVENT_FOREST_MASSIVE_WILDFIRE_1</Type>
 			<Description>TXT_KEY_EVENT_FOREST_MASSIVE_WILDFIRE_1</Description>
-			<iGold>-45</iGold>
+			<iGold>-35</iGold>
 			<bGameSpeedScale>1</bGameSpeedScale>
+            <FeatureType>FEATURE_FOREST</FeatureType>
+            <iFeatureChange>-1</iFeatureChange>
 			<AdditionalEvents>
 				<EventChance>
 					<Event>EVENT_FOREST_WILDFIRE_SAVED</Event>
@@ -340,12 +342,16 @@
 		<EventInfo>
 			<Type>EVENT_FOREST_MASSIVE_WILDFIRE_2</Type>
 			<Description>TXT_KEY_EVENT_FOREST_MASSIVE_WILDFIRE_2</Description>
-			<iGold>-20</iGold>
+			<iGold>-15</iGold>
 			<bGameSpeedScale>1</bGameSpeedScale>
 			<FeatureType>FEATURE_FOREST</FeatureType>
 			<iFeatureChange>-1</iFeatureChange>
-			<FeatureType>FEATURE_FOREST_BURNT</FeatureType>
-			<iFeatureChange>1</iFeatureChange>
+            <AdditionalEvents>
+                <EventChance>
+                    <Event>EVENT_FOREST_FIRE_END</Event>
+                    <iEventChance>70</iEventChance>
+                </EventChance>
+            </AdditionalEvents>
 			<AdditionalEvents>
 				<EventChance>
 					<Event>EVENT_WILDFIRE_CATCHES_CITY</Event>
@@ -378,13 +384,13 @@
 		<EventInfo>
 			<Type>EVENT_FOREST_WILDFIRE_SAVED</Type>
 			<Description>TXT_KEY_EVENT_WILDFIRE_2</Description>
+            <FeatureType>FEATURE_FOREST</FeatureType>
+            <iFeatureChange>1</iFeatureChange>
 		</EventInfo>
 
 		<EventInfo>
 			<Type>EVENT_FOREST_BURNED</Type>
 			<Description>TXT_KEY_EVENT_WILDFIRE_3</Description>
-            <FeatureType>FEATURE_FOREST</FeatureType>
-            <iFeatureChange>-1</iFeatureChange>
 			<FeatureType>FEATURE_FOREST_BURNT</FeatureType>
 			<iFeatureChange>1</iFeatureChange>
 		</EventInfo>
@@ -394,6 +400,8 @@
 			<Description>TXT_KEY_EVENT_WILDFIRE_1</Description>
 			<bPickCity>1</bPickCity>
 			<PythonCallback>doWildFire</PythonCallback>
+            <FeatureType>FEATURE_FOREST_BURNT</FeatureType>
+            <iFeatureChange>1</iFeatureChange>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<PythonHelp>getHelpWildFire</PythonHelp>
 		</EventInfo>
@@ -575,6 +583,44 @@
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<iAIValue>1</iAIValue>
 		</EventInfo>
+
+        <EventInfo>
+            <Type>EVENT_FISH_FOUND_1</Type>
+            <Description>TXT_KEY_EVENT_FISH_FOUND_1</Description>
+            <bPickCity>1</bPickCity>
+            <iFood>50</iFood>
+            <Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
+            <iAIValue>1</iAIValue>
+        </EventInfo>
+
+        <EventInfo>
+            <Type>EVENT_FISH_FOUND_2</Type>
+            <Description>TXT_KEY_EVENT_FISH_FOUND_2</Description>
+            <bPickCity>1</bPickCity>
+            <iFood>20</iFood>
+            <iGold>15</iGold>
+            <Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
+            <iAIValue>1</iAIValue>
+        </EventInfo>
+
+        <EventInfo>
+            <Type>EVENT_WHALE_FOUND_1</Type>
+            <Description>TXT_KEY_EVENT_WHALE_FOUND_1</Description>
+            <bPickCity>1</bPickCity>
+            <iFood>120</iFood>
+            <Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
+            <iAIValue>1</iAIValue>
+        </EventInfo>
+
+        <EventInfo>
+            <Type>EVENT_WHALE_FOUND_2</Type>
+            <Description>TXT_KEY_EVENT_WHALE_FOUND_2</Description>
+            <bPickCity>1</bPickCity>
+            <iFood>40</iFood>
+            <iGold>40</iGold>
+            <Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
+            <iAIValue>1</iAIValue>
+        </EventInfo>
 
 		<EventInfo>
 			<Type>EVENT_MOTHER_LODE_GOLD_1</Type>
@@ -2846,10 +2892,10 @@
 			<Type>EVENT_INFLUENZA_1</Type>
 			<Description>TXT_KEY_EVENT_INFLUENZA_1</Description>
 			<bPickCity>1</bPickCity>
-			<iGold>-400</iGold>
+			<iGold>-100</iGold>
 			<PrereqTech>TECH_BIOLOGY</PrereqTech>
 			<bGameSpeedScale>1</bGameSpeedScale>
-			<iPopulationChange>-2</iPopulationChange>
+			<iPopulationChange>-1</iPopulationChange>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<iAIValue>1</iAIValue>
 		</EventInfo>
@@ -2858,12 +2904,58 @@
 			<Type>EVENT_INFLUENZA_2</Type>
 			<Description>TXT_KEY_EVENT_INFLUENZA_2</Description>
 			<bPickCity>1</bPickCity>
-			<iPopulationChange>-3</iPopulationChange>
+			<iPopulationChange>-1</iPopulationChange>
 			<PythonCallback>applyInfluenza2</PythonCallback>
 			<PythonHelp>getHelpInfluenza2</PythonHelp>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<iAIValue>1</iAIValue>
 		</EventInfo>
+
+        <EventInfo>
+            <Type>EVENT_INFLUENZA_3</Type>
+            <Description>TXT_KEY_EVENT_INFLUENZA_1</Description>
+            <bPickCity>1</bPickCity>
+            <iGold>-200</iGold>
+            <PrereqTech>TECH_BIOLOGY</PrereqTech>
+            <bGameSpeedScale>1</bGameSpeedScale>
+            <iPopulationChange>-2</iPopulationChange>
+            <Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
+            <iAIValue>1</iAIValue>
+        </EventInfo>
+
+        <EventInfo>
+            <Type>EVENT_INFLUENZA_4</Type>
+            <Description>TXT_KEY_EVENT_INFLUENZA_2</Description>
+            <bPickCity>1</bPickCity>
+            <iPopulationChange>-2</iPopulationChange>
+            <PythonCallback>applyInfluenza2</PythonCallback>
+            <PythonHelp>getHelpInfluenza2</PythonHelp>
+            <Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
+            <iAIValue>1</iAIValue>
+        </EventInfo>
+
+        <EventInfo>
+            <Type>EVENT_INFLUENZA_5</Type>
+            <Description>TXT_KEY_EVENT_INFLUENZA_1</Description>
+            <bPickCity>1</bPickCity>
+            <iGold>-300</iGold>
+            <PrereqTech>TECH_BIOLOGY</PrereqTech>
+            <bGameSpeedScale>1</bGameSpeedScale>
+            <iPopulationChange>-3</iPopulationChange>
+            <Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
+            <iAIValue>1</iAIValue>
+        </EventInfo>
+
+        <EventInfo>
+            <Type>EVENT_INFLUENZA_6</Type>
+            <Description>TXT_KEY_EVENT_INFLUENZA_2</Description>
+            <bPickCity>1</bPickCity>
+            <iPopulationChange>-3</iPopulationChange>
+            <PythonCallback>applyInfluenza2</PythonCallback>
+            <PythonHelp>getHelpInfluenza2</PythonHelp>
+            <Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
+            <iAIValue>1</iAIValue>
+        </EventInfo>
 
 		<EventInfo>
 			<Type>EVENT_SOLO_FLIGHT_1</Type>
@@ -3607,6 +3699,13 @@
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<iAIValue>1</iAIValue>
 		</EventInfo>
+
+        <EventInfo>
+            <Type>EVENT_TORNADO</Type>
+            <Description>TXT_KEY_EVENT_TORNADO_1</Description>
+            <PythonCallback>doTornado</PythonCallback>
+            <Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
+        </EventInfo>
 
 		<EventInfo>
 			<Type>EVENT_THE_HUNS_1</Type>
@@ -7355,6 +7454,51 @@
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<iAIValue>1</iAIValue>
 		</EventInfo>
+
+        <EventInfo>
+            <Type>EVENT_SMALL_EARTHQUAKE_1</Type>
+            <Description>TXT_KEY_EVENT_SMALL_EARTHQUAKE_1</Description>
+            <bPickCity>1</bPickCity>
+            <PythonCallback>doEarthquakeSmall</PythonCallback>
+            <Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
+            <iAIValue>1</iAIValue>
+        </EventInfo>
+
+        <EventInfo>
+            <Type>EVENT_MEDIUM_EARTHQUAKE_1</Type>
+            <Description>TXT_KEY_EVENT_MEDIUM_EARTHQUAKE_1</Description>
+            <bPickCity>1</bPickCity>
+            <PythonCallback>doEarthquakeMedium</PythonCallback>
+            <Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
+            <iAIValue>1</iAIValue>
+        </EventInfo>
+
+        <EventInfo>
+            <Type>EVENT_STRONG_EARTHQUAKE_1</Type>
+            <Description>TXT_KEY_EVENT_STRONG_EARTHQUAKE_1</Description>
+            <bPickCity>1</bPickCity>
+            <PythonCallback>doEarthquakeStrong</PythonCallback>
+            <Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
+            <iAIValue>1</iAIValue>
+        </EventInfo>
+
+        <EventInfo>
+            <Type>EVENT_HUGE_EARTHQUAKE_1</Type>
+            <Description>TXT_KEY_EVENT_HUGE_EARTHQUAKE_1</Description>
+            <bPickCity>1</bPickCity>
+            <PythonCallback>doEarthquakeHuge</PythonCallback>
+            <Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
+            <iAIValue>1</iAIValue>
+        </EventInfo>
+
+        <EventInfo>
+            <Type>EVENT_APOCALYPTIC_EARTHQUAKE_1</Type>
+            <Description>TXT_KEY_EVENT_APOCALYPTIC_EARTHQUAKE_1</Description>
+            <bPickCity>1</bPickCity>
+            <PythonCallback>doEarthquakeApocalyptic</PythonCallback>
+            <Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
+            <iAIValue>1</iAIValue>
+        </EventInfo>
 
 		<EventInfo>
 			<Type>EVENT_TANNERY_GLUE_1</Type>

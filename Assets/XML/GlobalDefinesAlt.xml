@@ -7,7 +7,7 @@
 	<!-- DCM features -->
 	<Define>
 		<DefineName>DCM_AIR_BOMBING</DefineName>
-		<iDefineIntVal>0</iDefineIntVal>
+		<iDefineIntVal>1</iDefineIntVal>
 	</Define>
 	<Define>
 		<DefineName>DCM_RANGE_BOMBARD</DefineName>
@@ -29,11 +29,11 @@
 	</Define>
 	<Define>
 		<DefineName>DCM_ACTIVE_DEFENSE</DefineName>
-		<iDefineIntVal>0</iDefineIntVal>
+		<iDefineIntVal>1</iDefineIntVal>
 	</Define>
 	<Define>
 		<DefineName>DCM_FIGHTER_ENGAGE</DefineName>
-		<iDefineIntVal>0</iDefineIntVal>
+		<iDefineIntVal>1</iDefineIntVal>
 	</Define>
 	<!-- Influence Driven War -->
 	<Define>
@@ -91,7 +91,7 @@
 	<Define>
 		<DefineName>IDW_EMERGENCY_DRAFT_STRENGTH</DefineName>
 		<!-- Militia starting health % when drafted -->
-		<iDefineIntVal>33</iDefineIntVal>
+		<iDefineIntVal>66</iDefineIntVal>
 	</Define>
 	<Define>
 		<DefineName>IDW_EMERGENCY_DRAFT_ANGER_MULTIPLIER</DefineName>
@@ -189,7 +189,7 @@
 	</Define>
 	<Define>
 		<DefineName>BUG_CITYBAR_HURRY_ASSIST_INCLUDE_CURRENT</DefineName>
-		<iDefineIntVal>0</iDefineIntVal>
+		<iDefineIntVal>1</iDefineIntVal>
 	</Define>
 	<Define>
 		<DefineName>BUG_CITYBAR_TRADE_DETAIL</DefineName>
@@ -276,7 +276,7 @@
 	</Define>
 	<Define>
 		<DefineName>BUG_HURRY_OVERFLOW_HOVER_INCLUDE_CURRENT</DefineName>
-		<iDefineIntVal>0</iDefineIntVal>
+		<iDefineIntVal>1</iDefineIntVal>
 	</Define>
 	<Define>
 		<DefineName>BUG_CITY_SCREEN_REMOVE_SPECIALIST_HOVER</DefineName>
@@ -330,11 +330,11 @@
 	<!-- Production Popup Unit Training -->
 	<Define>
 		<DefineName>BUG_PRODUCTION_POPUP_TRAIN_CIVILIAN_UNITS_FOREVER</DefineName>
-		<iDefineIntVal>0</iDefineIntVal>
+		<iDefineIntVal>1</iDefineIntVal>
 	</Define>
 	<Define>
 		<DefineName>BUG_PRODUCTION_POPUP_TRAIN_MILITARY_UNITS_FOREVER</DefineName>
-		<iDefineIntVal>0</iDefineIntVal>
+		<iDefineIntVal>1</iDefineIntVal>
 	</Define>
 	<!-- Actions -->
 	<!-- Ask Declare War -->
@@ -503,7 +503,7 @@
 	</Define>
 	<Define>
 		<DefineName>DYNAMIC_CIV_NAMES</DefineName>
-		<iDefineIntVal>0</iDefineIntVal>
+		<iDefineIntVal>1</iDefineIntVal>
 	</Define>
 	<Define>
 		<DefineName>MIN_POP_CONSIDER_INQUISITORS</DefineName>

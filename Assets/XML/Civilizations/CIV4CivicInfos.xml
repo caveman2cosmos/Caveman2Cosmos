@@ -1291,9 +1291,9 @@
 			</YieldModifiers>
 			<CapitalYieldModifiers/>
 			<TradeYieldModifiers>
-			<iYield>3</iYield>
-			<iYield>3</iYield>
-			<iYield>3</iYield>
+				<iYield>3</iYield>
+				<iYield>3</iYield>
+				<iYield>3</iYield>
 			</TradeYieldModifiers>
 			<CommerceModifiers>
 				<iCommerce>5</iCommerce>
@@ -12622,7 +12622,8 @@
 			<iWorkerSpeedModifier>0</iWorkerSpeedModifier>
 			<iImprovementUpgradeRateModifier>0</iImprovementUpgradeRateModifier>
 			<iMilitaryProductionModifier>10</iMilitaryProductionModifier>
-			<iFreeUnitUpkeepMilitary>2</iFreeUnitUpkeepMilitary>
+			<iFreeUnitUpkeepMilitary>3</iFreeUnitUpkeepMilitary>
+            <iFreeUnitUpkeepCivilian>1</iFreeUnitUpkeepCivilian>
 			<iHappyPerMilitaryUnit>1</iHappyPerMilitaryUnit>
 			<bMilitaryFoodProduction>0</bMilitaryFoodProduction>
 			<iMaxConscript>0</iMaxConscript>

@@ -48,12 +48,12 @@
 			<Description>TXT_KEY_BUILDING_FOLKLORE_REQUIREMENT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_FOLKLORE_REQUIREMENT_PEDIA</Civilopedia>
 			<PrereqTech>TECH_LANGUAGE</PrereqTech>
-			<PrereqOrBuildings>
-				<BuildingType>BUILDING_PALACE</BuildingType>
-				<BuildingType>BUILDING_STORYTELLER</BuildingType>
-				<BuildingType>BUILDING_SCHOOL_OF_SCRIBES</BuildingType>
-				<BuildingType>BUILDING_LIBRARY</BuildingType>
-			</PrereqOrBuildings>
+            <PrereqAmountBuildings>
+                <PrereqBuilding>
+                    <BuildingType>BUILDING_PALACE</BuildingType>
+                    <iNumBuildingNeeded>1</iNumBuildingNeeded>
+                </PrereqBuilding>
+            </PrereqAmountBuildings>
 			<bAutoBuild>1</bAutoBuild>
 			<bNukeImmune>1</bNukeImmune>
 			<ArtDefineTag>ART_DEF_BUILDING_ENCLOSURE_AMPHIBIAN_POND</ArtDefineTag>
@@ -1274,9 +1274,9 @@
 			<PrereqOrHeritage>
 				<Type>HERITAGE_TAXON_SUIDAE</Type>
 				<Type>HERITAGE_TAXON_ELEPHANTIDAE</Type>
-				<Type>HERITAGE_TAXON_TAPIRIDAE</Type>	
-				<Type>HERITAGE_TAXON_HIPPOPOTAMIDAE</Type>	
-				<Type>HERITAGE_TAXON_MONOTREMATA</Type>	
+				<Type>HERITAGE_TAXON_TAPIRIDAE</Type>
+				<Type>HERITAGE_TAXON_HIPPOPOTAMIDAE</Type>
+				<Type>HERITAGE_TAXON_MONOTREMATA</Type>
 			</PrereqOrHeritage>
 			<ConstructCondition>
 				<Or>

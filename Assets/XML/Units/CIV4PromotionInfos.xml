@@ -246,7 +246,7 @@
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<PromotionPrereq>PROMOTION_LEADER</PromotionPrereq>
 			<TechPrereq>TECH_COOPERATION</TechPrereq>
-			<iExperiencePercent>75</iExperiencePercent>
+			<iExperiencePercent>100</iExperiencePercent>
 			<UnitCombats>
 				<UnitCombat>
 					<UnitCombatType>UNITCOMBAT_RECON</UnitCombatType>
@@ -338,7 +338,7 @@
 				</UnitCombat>
 			</UnitCombats>
 			<Button>,Art/Interface/Buttons/Promotions/Combat5.dds,Art/Interface/Buttons/Warlords_Atlas_1.dds,5,16</Button>
-			<iCaptureProbabilityModifierChange>5</iCaptureProbabilityModifierChange>
+			<iCaptureProbabilityModifierChange>10</iCaptureProbabilityModifierChange>
 			<iCaptureResistanceModifierChange>25</iCaptureResistanceModifierChange>
 		</PromotionInfo>
 		<PromotionInfo>
@@ -4202,6 +4202,7 @@
 			<TechPrereq>TECH_TRAILS</TechPrereq>
 			<PromotionLine>PROMOTIONLINE_WOODSMAN</PromotionLine>
 			<iLinePriority>2</iLinePriority>
+			<iFirstStrikesChange>1</iFirstStrikesChange>
 			<FeatureDefenses>
 				<FeatureDefense>
 					<FeatureType>FEATURE_JUNGLE</FeatureType>
@@ -5264,7 +5265,7 @@
 			<iChanceFirstStrikesChange>1</iChanceFirstStrikesChange>
 			<iCityAttack>20</iCityAttack>
 			<iHillsAttack>20</iHillsAttack>
-			<iKamikazePercent>30</iKamikazePercent>
+			<iKamikazePercent>50</iKamikazePercent>
 			<UnitCombats>
 				<UnitCombat>
 					<UnitCombatType>UNITCOMBAT_ANIMAL</UnitCombatType>
@@ -8665,7 +8666,6 @@
 			<iLinePriority>1</iLinePriority>
 			<OnGameOptions>
 				<GameOptionType>GAMEOPTION_COMBAT_HIDE_SEEK</GameOptionType>
-				<GameOptionType>GAMEOPTION_COMBAT_SIZE_MATTERS</GameOptionType>
 			</OnGameOptions>
 			<UnitCombats>
 				<UnitCombat>
@@ -8706,11 +8706,11 @@
 			<Description>TXT_KEY_PROMOTION_HUNTING_SIGHT2</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<PromotionPrereq>PROMOTION_HUNTING_SIGHT1</PromotionPrereq>
+            <PromotionPrereqOr1>PROMOTION_HUNTER2</PromotionPrereqOr1>
 			<PromotionLine>PROMOTIONLINE_HUNTING_SIGHT</PromotionLine>
 			<iLinePriority>2</iLinePriority>
 			<OnGameOptions>
 				<GameOptionType>GAMEOPTION_COMBAT_HIDE_SEEK</GameOptionType>
-				<GameOptionType>GAMEOPTION_COMBAT_SIZE_MATTERS</GameOptionType>
 			</OnGameOptions>
 			<UnitCombats>
 				<UnitCombat>
@@ -10073,7 +10073,8 @@
 			<NotOnUnitCombatTypes>
 				<NotOnUnitCombatType>UNITCOMBAT_PACIFIST</NotOnUnitCombatType>
 			</NotOnUnitCombatTypes>
-			<iStrengthChange>1</iStrengthChange>
+			<iStrengthChange>0</iStrengthChange>
+			<iCombatPercent>10</iCombatPercent>
 			<Button>Art/Interface/Buttons/Promotions/StarSigns/leo.dds</Button>
 		</PromotionInfo>
 		<PromotionInfo>
@@ -10273,8 +10274,7 @@
 				<NotOnUnitCombatType>UNITCOMBAT_SUBMARINE</NotOnUnitCombatType>
 			</NotOnUnitCombatTypes>
 			<bImmuneToFirstStrikes>1</bImmuneToFirstStrikes>
-			<iCombatPercent>10</iCombatPercent>
-			<iAttackCombatModifierChange>-10</iAttackCombatModifierChange>
+            <iDefenseCombatModifierChange>10</iDefenseCombatModifierChange>
 			<UnitCombats>
 				<UnitCombat>
 					<UnitCombatType>UNITCOMBAT_EXPLORER</UnitCombatType>
@@ -13117,7 +13117,7 @@
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<PromotionLine>PROMOTIONLINE_RAM_SMASH</PromotionLine>
 			<iLinePriority>1</iLinePriority>
-			<iBreakdownDamageChange>1</iBreakdownDamageChange>
+			<iBreakdownDamageChange>2</iBreakdownDamageChange>
 			<Button>art/Buttons/Promotions/RamSmash1.dds</Button>
 		</PromotionInfo>
 		<PromotionInfo>
@@ -13126,7 +13126,7 @@
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<PromotionLine>PROMOTIONLINE_RAM_SMASH</PromotionLine>
 			<iLinePriority>2</iLinePriority>
-			<iBreakdownDamageChange>1</iBreakdownDamageChange>
+			<iBreakdownDamageChange>2</iBreakdownDamageChange>
 			<Button>art/Buttons/Promotions/RamSmash2.dds</Button>
 		</PromotionInfo>
 		<PromotionInfo>
@@ -13135,7 +13135,7 @@
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<PromotionLine>PROMOTIONLINE_RAM_SMASH</PromotionLine>
 			<iLinePriority>3</iLinePriority>
-			<iBreakdownDamageChange>2</iBreakdownDamageChange>
+			<iBreakdownDamageChange>3</iBreakdownDamageChange>
 			<Button>art/Buttons/Promotions/RamSmash3.dds</Button>
 		</PromotionInfo>
 		<PromotionInfo>
@@ -13144,7 +13144,7 @@
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<PromotionLine>PROMOTIONLINE_RAM_SMASH</PromotionLine>
 			<iLinePriority>4</iLinePriority>
-			<iBreakdownDamageChange>2</iBreakdownDamageChange>
+			<iBreakdownDamageChange>3</iBreakdownDamageChange>
 			<Button>art/Buttons/Promotions/RamSmash4.dds</Button>
 		</PromotionInfo>
 		<PromotionInfo>
@@ -13163,7 +13163,7 @@
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<PromotionLine>PROMOTIONLINE_RAM_THRUST</PromotionLine>
 			<iLinePriority>1</iLinePriority>
-			<iBreakdownChanceChange>10</iBreakdownChanceChange>
+			<iBreakdownChanceChange>15</iBreakdownChanceChange>
 			<Button>art/Buttons/Promotions/RamThrust1.dds</Button>
 		</PromotionInfo>
 		<PromotionInfo>
@@ -13172,7 +13172,7 @@
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<PromotionLine>PROMOTIONLINE_RAM_THRUST</PromotionLine>
 			<iLinePriority>2</iLinePriority>
-			<iBreakdownChanceChange>10</iBreakdownChanceChange>
+			<iBreakdownChanceChange>15</iBreakdownChanceChange>
 			<Button>art/Buttons/Promotions/RamThrust2.dds</Button>
 		</PromotionInfo>
 		<PromotionInfo>
@@ -13181,7 +13181,7 @@
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<PromotionLine>PROMOTIONLINE_RAM_THRUST</PromotionLine>
 			<iLinePriority>3</iLinePriority>
-			<iBreakdownChanceChange>15</iBreakdownChanceChange>
+			<iBreakdownChanceChange>20</iBreakdownChanceChange>
 			<Button>art/Buttons/Promotions/RamThrust3.dds</Button>
 		</PromotionInfo>
 		<PromotionInfo>
@@ -13190,7 +13190,7 @@
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<PromotionLine>PROMOTIONLINE_RAM_THRUST</PromotionLine>
 			<iLinePriority>4</iLinePriority>
-			<iBreakdownChanceChange>15</iBreakdownChanceChange>
+			<iBreakdownChanceChange>20</iBreakdownChanceChange>
 			<Button>art/Buttons/Promotions/RamThrust4.dds</Button>
 		</PromotionInfo>
 		<PromotionInfo>
@@ -17065,6 +17065,12 @@
 					<iIntensity>2</iIntensity>
 				</VisibilityIntensityRangeChangeType>
 			</VisibilityIntensityRangeChangeTypes>
+            <VisibilityIntensityChangeTypes>
+                <VisibilityIntensityChangeType>
+                    <InvisibleType>INVISIBLE_CAMOUFLAGE</InvisibleType>
+                    <iIntensity>1</iIntensity>
+                </VisibilityIntensityChangeType>
+            </VisibilityIntensityChangeTypes>
 			<Button>Art/Buttons/Promotions/HawkEyes3Promotion.dds</Button>
 		</PromotionInfo>
 		<PromotionInfo>
@@ -19721,8 +19727,8 @@
 			<SubCombatChangeTypes>
 				<SubCombatChangeType>UNITCOMBAT_PROMOTED_ARMED_GUARD</SubCombatChangeType>
 			</SubCombatChangeTypes>
-			<iDefenseCombatModifierChange>10</iDefenseCombatModifierChange>
-			<iDynamicDefenseChange>10</iDynamicDefenseChange>
+			<iDefenseCombatModifierChange>5</iDefenseCombatModifierChange>
+			<iDynamicDefenseChange>15</iDynamicDefenseChange>
 			<iDefenseOnlyChange>1</iDefenseOnlyChange>
 			<iNoInvisibilityChange>1</iNoInvisibilityChange>
 			<UnitCombatMods>
@@ -24185,13 +24191,13 @@
 			<Description>TXT_KEY_PROMOTION_WAY_OF_THE_CENTAUR</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<TechPrereq>TECH_DUMMY</TechPrereq>
+			<iCombatPercent>10</iCombatPercent>
 			<UnitCombats>
 				<UnitCombat>
 					<UnitCombatType>UNITCOMBAT_MOUNTED</UnitCombatType>
 					<bUnitCombat>1</bUnitCombat>
 				</UnitCombat>
 			</UnitCombats>
-			<iStrengthChange>1</iStrengthChange>
 			<Button>Art/Buttons/Promotions/WayOfTheCentaurPromotion.dds</Button>
 		</PromotionInfo>
 		<PromotionInfo>
@@ -24229,13 +24235,13 @@
 			<Description>TXT_KEY_PROMOTION_WAY_OF_THE_FEATHER</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<TechPrereq>TECH_DUMMY</TechPrereq>
+			<iCombatPercent>10</iCombatPercent>
 			<UnitCombats>
 				<UnitCombat>
 					<UnitCombatType>UNITCOMBAT_ARCHER</UnitCombatType>
 					<bUnitCombat>1</bUnitCombat>
 				</UnitCombat>
 			</UnitCombats>
-			<iStrengthChange>1</iStrengthChange>
 			<Button>Art/Buttons/Promotions/WayOfTheFeatherPromotion.dds</Button>
 		</PromotionInfo>
 		<PromotionInfo>
@@ -24249,7 +24255,7 @@
 					<bUnitCombat>1</bUnitCombat>
 				</UnitCombat>
 			</UnitCombats>
-			<iStrengthChange>1</iStrengthChange>
+			<iCombatPercent>10</iCombatPercent>
 			<Button>Art/Buttons/Promotions/WayOfTheWavesPromotion.dds</Button>
 		</PromotionInfo>
 		<PromotionInfo>
@@ -24263,7 +24269,7 @@
 					<bUnitCombat>1</bUnitCombat>
 				</UnitCombat>
 			</UnitCombats>
-			<iStrengthChange>1</iStrengthChange>
+			<iCombatPercent>10</iCombatPercent>
 			<Button>Art/Buttons/Promotions/WayOfTheWindPromotion.dds</Button>
 		</PromotionInfo>
 		<PromotionInfo>
@@ -24277,7 +24283,7 @@
 					<bUnitCombat>1</bUnitCombat>
 				</UnitCombat>
 			</UnitCombats>
-			<iStrengthChange>1</iStrengthChange>
+			<iCombatPercent>10</iCombatPercent>
 			<Button>Art/Buttons/Promotions/WayOfTheWarriorPromotion.dds</Button>
 		</PromotionInfo>
 		<PromotionInfo>
@@ -24299,7 +24305,7 @@
 					<bUnitCombat>1</bUnitCombat>
 				</UnitCombat>
 			</UnitCombats>
-			<iStrengthChange>1</iStrengthChange>
+			<iCombatPercent>10</iCombatPercent>
 			<Button>Art/Buttons/Promotions/WayOfTheShadowsPromotion.dds</Button>
 		</PromotionInfo>
 		<PromotionInfo>
@@ -24814,7 +24820,7 @@
 					<bUnitCombat>1</bUnitCombat>
 				</UnitCombat>
 			</UnitCombats>
-			<iStrengthChange>1</iStrengthChange>
+			<iCombatPercent>10</iCombatPercent>
 			<iVisibilityChange>1</iVisibilityChange>
 			<Button>Art/Buttons/Promotions/InfluenceOfSaturnPromotion.dds</Button>
 		</PromotionInfo>
@@ -24829,7 +24835,7 @@
 					<bUnitCombat>1</bUnitCombat>
 				</UnitCombat>
 			</UnitCombats>
-			<iStrengthChange>1</iStrengthChange>
+			<iCombatPercent>10</iCombatPercent>
 			<iWithdrawalChange>10</iWithdrawalChange>
 			<Button>Art/Buttons/Promotions/InfluenceOfJupiterPromotion.dds</Button>
 		</PromotionInfo>
@@ -24844,7 +24850,7 @@
 					<bUnitCombat>1</bUnitCombat>
 				</UnitCombat>
 			</UnitCombats>
-			<iStrengthChange>1</iStrengthChange>
+			<iCombatPercent>10</iCombatPercent>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -24904,7 +24910,7 @@
 					<bUnitCombat>1</bUnitCombat>
 				</UnitCombat>
 			</UnitCombats>
-			<iStrengthChange>1</iStrengthChange>
+			<iCombatPercent>10</iCombatPercent>
 			<iExperiencePercent>20</iExperiencePercent>
 			<Button>Art/Buttons/Promotions/InfluenceOfTheSunPromotion.dds</Button>
 		</PromotionInfo>
@@ -24923,7 +24929,7 @@
 					<bUnitCombat>1</bUnitCombat>
 				</UnitCombat>
 			</UnitCombats>
-			<iStrengthChange>1</iStrengthChange>
+			<iCombatPercent>10</iCombatPercent>
 			<iCityDefense>10</iCityDefense>
 			<Button>Art/Buttons/Promotions/InfluenceOfVenusPromotion.dds</Button>
 		</PromotionInfo>
@@ -24938,11 +24944,11 @@
 					<bUnitCombat>1</bUnitCombat>
 				</UnitCombat>
 			</UnitCombats>
-			<iStrengthChange>1</iStrengthChange>
+			<iCombatPercent>10</iCombatPercent>
 			<iBombardRateChange>5</iBombardRateChange>
 			<Button>Art/Buttons/Promotions/InfluenceOfMercuryPromotion.dds</Button>
 		</PromotionInfo>
-		<!-- <PromotionInfo>
+		<PromotionInfo>
 			<Type>PROMOTION_BUILD_UP_SECURITY5</Type>
 			<Description>TXT_KEY_PROMOTION_BUILD_UP_SECURITY5</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
@@ -24953,6 +24959,6 @@
 			<iVisibilityChange>1</iVisibilityChange>
 			<iInterceptChange>5</iInterceptChange>
 			<Button>,Art/Interface/Buttons/Promotions/Security5BuildUp.dds</Button>
-		</PromotionInfo> -->
+		</PromotionInfo>
 	</PromotionInfos>
 </Civ4PromotionInfos>

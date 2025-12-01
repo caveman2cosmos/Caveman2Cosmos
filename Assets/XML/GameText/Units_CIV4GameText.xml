@@ -12232,20 +12232,11 @@
 		<Spanish>Estas naves fueron las precursoras de generaciones futuras de barcos de guerra blindados. En lugar de los cascos de madera característicos de los barcos de su tiempo, los buques blindados estaban revestidos de fuertes planchas de metal. Estas planchas los volvían prácticamente invulnerables a los proyectiles de gran calibre que podían agujerear y destruir los barcos de madera. Los buques blindados hicieron su primera aparición durante la Guerra de Secesión y no tardaron en descollar entre los demás barcos de su tiempo. Puede que la batalla naval más famosa de la Guerra de Secesión fuera la que enfrentó al buque blindado confederado "Merrimack" con el de la Unión, "Monitor" y que se prolongó varias horas hasta que el "Merrimack" se vio obligado a emprender la retirada.</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_IRONWOOD_CLUBMAN</Tag>
-		<English>Ironwood Clubman</English>
-		<French>Guerrier avec gourdin en bois de fer</French>
-		<Spanish>
-			<Text>Guerrero con lanza de hierro</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-		<Polish>Arauka&#241;ski W&#179;&#243;cznik</Polish>
-		<Russian>Âîèí ñ øåñòîì</Russian>
-		<Italian>Guerriero con mazza di legno ferro</Italian>
+		<Tag>TXT_KEY_UNIT_IRONWOOD_SPEARMAN</Tag>
+		<English>Ironwood Spearman</English>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_IRONWOOD_CLUBMAN_PEDIA</Tag>
+		<Tag>TXT_KEY_UNIT_IRONWOOD_SPEARMAN_PEDIA</Tag>
 		<English>The Mapuche Irownwood Spearman.</English>
 		<French>Le lancier en bois de fer Mapuche.</French>
 		<Polish>Araukanie nigdy nie zostali ujarzmieni przez Ink&#243;w ani hiszpa&#241;skich konkwistador&#243;w, dzi&#234;ki czemu ich pa&#241;stwo istnia&#179;o obok pot&#234;gi hiszpa&#241;skiej, a p&#243;&#159;niej niepodleg&#179;ego Chile a&#191; do roku 1871.</Polish>
@@ -15045,6 +15036,18 @@
 		<English>Masinissa was the first King of Numidia. During his younger years he fought in the Second Punic War (218-201 BC), first against the Romans as an ally of Carthage and later switching sides. With Roman support, he united the eastern and western Numidian tribes and founded the Kingdom of Numidia. He is most famous for his role as a Roman ally in the Battle of Zama and as husband of Sophonisba, a Carthaginian noblewoman whom he allowed to poison herself to avoid being paraded in a triumph in Rome.</English>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_UNIT_NEANDERTHAL_MASTER_CHASER</Tag>
+		<English>Neanderthal Master Chaser</English>
+	</TEXT>
+		<TEXT>
+		<Tag>TXT_KEY_UNIT_NEANDERTHAL_MASTER_TRACKER</Tag>
+		<English>Neanderthal Master Tracker</English>
+	</TEXT>
+		<TEXT>
+		<Tag>TXT_KEY_UNIT_NEANDERTHAL_MASTER_HUNTER</Tag>
+		<English>Neanderthal Master Hunter</English>
+	</TEXT>
+		<TEXT>
 		<Tag>TXT_KEY_UNIT_MASTER_CHASER</Tag>
 		<English>Master Chaser</English>
 		<French>Maître Cavaleur</French>

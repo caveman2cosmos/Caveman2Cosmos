@@ -4,7 +4,7 @@
 		<!-- <iCultureDistance> slows down growth over tiles with Realistic Culture option on.
 				Note this value stacks with regular distance AND terrain (see CIV4TerrainInfos.xml)
 				Alternatively, <bIgnoreTerrainCulture> will make the feature's tile
-				ignore underlaying terrain cost.
+				ignore underlying terrain cost.
 				Presence of a feature without an improvement on it increases cultural distance by 1
 				unless bIgnoreTerrainCulture is true.
 				Both can be used together; this in effect replaces the terrain distance with only
@@ -367,10 +367,10 @@
 			<Civilopedia>TXT_KEY_FEATURE_FLOOD_PLAINS_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_FEATURE_FLOOD_PLAINS</ArtDefineTag>
 			<YieldChanges>
-				<iYieldChange>1</iYieldChange>
+				<iYieldChange>2</iYieldChange>
 			</YieldChanges>
 			<RiverYieldChange>
-				<iYield>1</iYield>
+				<iYield>3</iYield>
 				<iYield>0</iYield>
 				<iYield>1</iYield>
 			</RiverYieldChange>
@@ -842,7 +842,7 @@
 			<ArtDefineTag>ART_DEF_FEATURE_FOREST_ANCIENT</ArtDefineTag>
 			<YieldChanges>
 				<iYieldChange>1</iYieldChange>
-				<iYieldChange>1</iYieldChange>
+				<iYieldChange>2</iYieldChange>
 			</YieldChanges>
 			<iMovement>2</iMovement>
 			<iSeeThrough>1</iSeeThrough>
@@ -1654,7 +1654,6 @@
 			<ArtDefineTag>ART_DEF_FEATURE_CACTUS</ArtDefineTag>
 			<YieldChanges>
 				<iYieldChange>1</iYieldChange>
-				<iYieldChange>-1</iYieldChange>
 			</YieldChanges>
 			<iAppearance>800</iAppearance>
 			<iGrowth>10</iGrowth>
@@ -2104,6 +2103,7 @@
 			<YieldChanges>
 				<iYieldChange>0</iYieldChange>
 				<iYieldChange>1</iYieldChange>
+				<iYieldChange>1</iYieldChange>
 			</YieldChanges>
 			<iMovement>1</iMovement>
 			<iAppearance>300</iAppearance>
@@ -2457,6 +2457,7 @@
 			<ArtDefineTag>ART_DEF_FEATURE_TAR_PIT</ArtDefineTag>
 			<YieldChanges>
 				<iYieldChange>0</iYieldChange>
+				<iYieldChange>1</iYieldChange>
 				<iYieldChange>1</iYieldChange>
 			</YieldChanges>
 			<iMovement>2</iMovement>
@@ -5240,7 +5241,7 @@
 			<iAppearance>500</iAppearance>
 			<bNoAdjacent>1</bNoAdjacent>
 			<iPopDestroys>-1</iPopDestroys>
-			<iCultureDistance>-1</iCultureDistance>
+			<iCultureDistance>-2</iCultureDistance>
 			<TerrainBooleans>
 				<TerrainBoolean>
 					<TerrainType>TERRAIN_BARREN</TerrainType>

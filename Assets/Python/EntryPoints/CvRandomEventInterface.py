@@ -1401,21 +1401,6 @@ def getHelpAncientTexts2(argsList):
 
 ######## IMPACT_CRATER ###########
 
-#def canTriggerImpactCrater(argsList):
-#
-#  data = argsList[0]
-#  player = GC.getPlayer(data.ePlayer)
-#
-#  iUranium = GC.getInfoTypeForString("BONUS_URANIUM")
-#  if player.getNumAvailableBonuses(iUranium) > 0:
-#    return False
-#
-#  plot = GC.getMap().plot(data.iPlotX, data.iPlotY)
-#  if not plot.canHaveBonus(iUranium, False):
-#    return False
-#
-#  return True
-
 def doImpactCrater2(argsList):
 	data = argsList[1]
 	plot = GC.getMap().plot(data.iPlotX, data.iPlotY)
@@ -5104,6 +5089,109 @@ def applyEarthquake1(argsList):
 		else:
 			plot.setImprovementType(-1)
 
+def doEarthquakeSmall(data):
+    minDestroy = 1
+    maxDestroy = 1
+    popLossPercent = 1
+    _doEarthquakeCore(data, minDestroy , maxDestroy, popLossPercent)
+
+
+def doEarthquakeMedium(data):
+    minDestroy = 1
+    maxDestroy = 2
+    popLossPercent = 3
+    _doEarthquakeCore(data, minDestroy , maxDestroy, popLossPercent)
+
+
+def doEarthquakeStrong(data):
+    minDestroy = 2
+    maxDestroy = 4
+    popLossPercent = 5
+    _doEarthquakeCore(data, minDestroy , maxDestroy, popLossPercent)
+
+
+def doEarthquakeHuge(data):
+    minDestroy = 3
+    maxDestroy = 5
+    popLossPercent = 15
+    _doEarthquakeCore(data, minDestroy , maxDestroy, popLossPercent)
+
+
+def doEarthquakeApocalyptic(data):
+    minDestroy = 4
+    maxDestroy = 8
+    popLossPercent = 25
+    _doEarthquakeCore(data, minDestroy , maxDestroy, popLossPercent)
+
+def _doEarthquakeCore(argsList, minDestroy, maxDestroy, popLossPercent):
+    data = argsList[1]
+    CyPlayer = GC.getPlayer(data.ePlayer)
+    CyCity = CyPlayer.getCity(data.iCityId)
+
+    # --- Random number of buildings to destroy ---
+    destroyCount = minDestroy
+    if maxDestroy > minDestroy:
+        destroyCount += GAME.getSorenRandNum(
+            maxDestroy - minDestroy + 1,
+            "Random building destruction"
+        )
+
+    # --- POPULATION BONUS APPLIED TO MAX ONLY ---
+    pop = CyCity.getPopulation()
+    popBonus = pop // 10  # pop 0–9 = 0, 10–19 = 1, 20–29 = 2, etc.
+    destroyCount += popBonus
+
+    candidates = []
+    for i in range(GC.getNumBuildingInfos()):
+        if isLimitedWonder(i) or not CyCity.hasBuilding(i) or CyCity.isFreeBuilding(i):
+            continue
+        info = GC.getBuildingInfo(i)
+        if info.getProductionCost() < 1 or info.isNukeImmune() or info.isAutoBuild():
+            continue
+        candidates.append(i)
+
+    # No buildings? Nothing to destroy
+    if not candidates:
+        return
+
+    # --- Shuffle using Civ4 RNG ---
+    for i in range(len(candidates) - 1, 0, -1):
+        j = GAME.getSorenRandNum(i + 1, "Shuffle")
+        candidates[i], candidates[j] = candidates[j], candidates[i]
+
+    # --- Destroy buildings ---
+    destroyed = 0
+    for buildingID in candidates:
+        if destroyed >= destroyCount:
+            break
+
+        destroyed += 1
+        CyCity.changeHasBuilding(buildingID, False)
+
+        if isLocalHumanPlayer(data.ePlayer):
+            CyInterface().addMessage(
+                data.ePlayer, False, GC.getEVENT_MESSAGE_TIME(),
+                TRNSLTR.getText(
+                    "TXT_KEY_EVENT_CITY_IMPROVEMENT_DESTROYED",
+                    (GC.getBuildingInfo(buildingID).getTextKey(),)
+                ),
+                "AS2D_BOMBARDED",
+                InterfaceMessageTypes.MESSAGE_TYPE_INFO,
+                GC.getBuildingInfo(buildingID).getButton(),
+                GC.getCOLOR_RED(), CyCity.getX(), CyCity.getY(),
+                True, True
+            )
+
+        if popLossPercent > 0:
+            currentPop = CyCity.getPopulation()
+            if currentPop > 1: # only apply if city has more than 1 pop
+                popLoss = max(1, int(currentPop * popLossPercent / 100))
+
+                # don’t kill the city—make sure at least 1 pop survives
+                popLoss = min(popLoss, currentPop - 1)
+
+                CyCity.changePopulation(-popLoss)
+
 
 ####### Assassin Discovered #######
 
@@ -6746,37 +6834,37 @@ def getHelpGlobalWarming(argsList):
 	return TRNSLTR.getText("TXT_KEY_EVENT_GLOBAL_WARMING_1_HELP",())
 
 ######## TORNADO ###########
-# def canDoTornado(argsList):
-# 	EventTriggeredData = argsList[0]
+def canDoTornado(argsList):
+	EventTriggeredData = argsList[0]
 
-# 	CyPlot = GC.getMap().plot(EventTriggeredData.iPlotX, EventTriggeredData.iPlotY)
-# 	if CyPlot.isCity():
-# 		return 0
+	CyPlot = GC.getMap().plot(EventTriggeredData.iPlotX, EventTriggeredData.iPlotY)
+	if CyPlot.isCity():
+		return 0
 
-# 	iLatitude = CyPlot.getLatitude()
-# 	if iLatitude < 50 and 30 < iLatitude:
-# 		return 1
+	iLatitude = CyPlot.getLatitude()
+	if iLatitude < 50 and 30 < iLatitude:
+		return 1
 
-# 	iRandom = GAME.getSorenRandNum(101, "Random Plot") # 0 <-> 100
-# 	if iLatitude < 60 and 20 < iLatitude:
-# 		if iRandom < 20:
-# 			return 1
-# 	elif iRandom < 5:
-# 		return 1
-# 	return 0
+	iRandom = GAME.getSorenRandNum(101, "Random Plot") # 0 <-> 100
+	if iLatitude < 60 and 20 < iLatitude:
+		if iRandom < 20:
+			return 1
+	elif iRandom < 5:
+		return 1
+	return 0
 
-# def doTornado(argsList):
-# 	EventTriggeredData = argsList[1]
-# 	x, y = EventTriggeredData.iPlotX, EventTriggeredData.iPlotY
-# 	CyPlot = GC.getMap().plot(x, y)
-# 	if 50 > GAME.getSorenRandNum(101, "Random Plot"):
-# 		CyPlot.setImprovementType(-1)
+def doTornado(argsList):
+	EventTriggeredData = argsList[1]
+	x, y = EventTriggeredData.iPlotX, EventTriggeredData.iPlotY
+	CyPlot = GC.getMap().plot(x, y)
+	if 50 > GAME.getSorenRandNum(101, "Random Plot"):
+		CyPlot.setImprovementType(-1)
 
-# 	if 25 > GAME.getSorenRandNum(101, "Random Plot"):
-# 		CyPlot.setRouteType(-1)
+	if 25 > GAME.getSorenRandNum(101, "Random Plot"):
+		CyPlot.setRouteType(-1)
 
-# 	for pUnit in CyPlot.units():
-# 		pUnit.setImmobileTimer(1)
+	for pUnit in CyPlot.units():
+		pUnit.setImmobileTimer(1)
 
 ######## Native Good 1 -- lost resources ###########
 def canApplyNativegood1(argsList):

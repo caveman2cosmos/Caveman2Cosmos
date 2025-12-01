@@ -3,7 +3,7 @@
 	<UnitInfos>
 		<UnitInfo>
 			<Type>UNIT_TAMED_PANTHER</Type>
-			<iInstanceCostModifier>10</iInstanceCostModifier>
+			<iInstanceCostModifier>5</iInstanceCostModifier>
 			<Combat>UNITCOMBAT_ANIMAL</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_TAMED</SubCombatType>
@@ -92,7 +92,7 @@
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_TAMED_LION</Type>
-			<iInstanceCostModifier>10</iInstanceCostModifier>
+			<iInstanceCostModifier>5</iInstanceCostModifier>
 			<Combat>UNITCOMBAT_ANIMAL</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_TAMED</SubCombatType>
@@ -180,7 +180,7 @@
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_TAMED_CAMEL</Type>
-			<iInstanceCostModifier>10</iInstanceCostModifier>
+            <iInstanceCostModifier>5</iInstanceCostModifier>
 			<Combat>UNITCOMBAT_ANIMAL</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_TAMED</SubCombatType>
@@ -273,7 +273,7 @@
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_TAMED_LLAMA</Type>
-			<iInstanceCostModifier>10</iInstanceCostModifier>
+            <iInstanceCostModifier>5</iInstanceCostModifier>
 			<Combat>UNITCOMBAT_ANIMAL</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_TAMED</SubCombatType>
@@ -365,7 +365,7 @@
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_TAMED_DONKEY</Type>
-			<iInstanceCostModifier>10</iInstanceCostModifier>
+            <iInstanceCostModifier>5</iInstanceCostModifier>
 			<Combat>UNITCOMBAT_ANIMAL</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_TAMED</SubCombatType>
@@ -485,7 +485,7 @@
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_TAMED_HORSE</Type>
-			<iInstanceCostModifier>10</iInstanceCostModifier>
+            <iInstanceCostModifier>5</iInstanceCostModifier>
 			<Combat>UNITCOMBAT_ANIMAL</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_TAMED</SubCombatType>
@@ -609,7 +609,7 @@
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_TAMED_SHEEP</Type>
-			<iInstanceCostModifier>10</iInstanceCostModifier>
+            <iInstanceCostModifier>5</iInstanceCostModifier>
 			<Combat>UNITCOMBAT_ANIMAL</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_TAMED</SubCombatType>
@@ -726,7 +726,7 @@
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_TAMED_BISON</Type>
-			<iInstanceCostModifier>10</iInstanceCostModifier>
+            <iInstanceCostModifier>5</iInstanceCostModifier>
 			<Combat>UNITCOMBAT_ANIMAL</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_TAMED</SubCombatType>
@@ -823,7 +823,7 @@
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_TAMED_BUFFALO</Type>
-			<iInstanceCostModifier>10</iInstanceCostModifier>
+            <iInstanceCostModifier>5</iInstanceCostModifier>
 			<Combat>UNITCOMBAT_ANIMAL</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_TAMED</SubCombatType>
@@ -916,7 +916,7 @@
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_TAMED_CATTLE</Type>
-			<iInstanceCostModifier>10</iInstanceCostModifier>
+            <iInstanceCostModifier>5</iInstanceCostModifier>
 			<Combat>UNITCOMBAT_ANIMAL</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_TAMED</SubCombatType>
@@ -1011,7 +1011,7 @@
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_TAMED_MUSKOX</Type>
-			<iInstanceCostModifier>10</iInstanceCostModifier>
+            <iInstanceCostModifier>5</iInstanceCostModifier>
 			<Combat>UNITCOMBAT_ANIMAL</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_TAMED</SubCombatType>
@@ -1103,7 +1103,7 @@
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_TAMED_AARDVARK</Type>
-			<iInstanceCostModifier>10</iInstanceCostModifier>
+            <iInstanceCostModifier>5</iInstanceCostModifier>
 			<Combat>UNITCOMBAT_ANIMAL</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_TAMED</SubCombatType>
@@ -1186,7 +1186,7 @@
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_TAMED_BOAR</Type>
-			<iInstanceCostModifier>10</iInstanceCostModifier>
+            <iInstanceCostModifier>5</iInstanceCostModifier>
 			<Combat>UNITCOMBAT_ANIMAL</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_TAMED</SubCombatType>
@@ -1281,7 +1281,7 @@
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_TAMED_AMPHIBIAN</Type>
-			<iInstanceCostModifier>10</iInstanceCostModifier>
+            <iInstanceCostModifier>5</iInstanceCostModifier>
 			<Combat>UNITCOMBAT_ANIMAL</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_TAMED</SubCombatType>
@@ -1362,7 +1362,7 @@
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_TAMED_ASIANBEAR</Type>
-			<iInstanceCostModifier>10</iInstanceCostModifier>
+            <iInstanceCostModifier>5</iInstanceCostModifier>
 			<Combat>UNITCOMBAT_ANIMAL</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_TAMED</SubCombatType>
@@ -1449,7 +1449,7 @@
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_TAMED_BROWNBEAR</Type>
-			<iInstanceCostModifier>10</iInstanceCostModifier>
+            <iInstanceCostModifier>5</iInstanceCostModifier>
 			<Combat>UNITCOMBAT_ANIMAL</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_TAMED</SubCombatType>
@@ -1537,7 +1537,7 @@
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_TAMED_BLACKBEAR</Type>
-			<iInstanceCostModifier>10</iInstanceCostModifier>
+            <iInstanceCostModifier>5</iInstanceCostModifier>
 			<Combat>UNITCOMBAT_ANIMAL</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_TAMED</SubCombatType>
@@ -1624,7 +1624,7 @@
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_TAMED_CAVEBEAR</Type>
-			<iInstanceCostModifier>10</iInstanceCostModifier>
+            <iInstanceCostModifier>5</iInstanceCostModifier>
 			<Combat>UNITCOMBAT_ANIMAL</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_TAMED</SubCombatType>
@@ -1712,7 +1712,7 @@
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_TAMED_GRIZZLY</Type>
-			<iInstanceCostModifier>10</iInstanceCostModifier>
+            <iInstanceCostModifier>5</iInstanceCostModifier>
 			<Combat>UNITCOMBAT_ANIMAL</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_TAMED</SubCombatType>
@@ -1800,7 +1800,7 @@
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_TAMED_PANDA_BEAR</Type>
-			<iInstanceCostModifier>10</iInstanceCostModifier>
+            <iInstanceCostModifier>5</iInstanceCostModifier>
 			<Combat>UNITCOMBAT_ANIMAL</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_TAMED</SubCombatType>
@@ -1882,7 +1882,7 @@
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_TAMED_POLARBEAR</Type>
-			<iInstanceCostModifier>10</iInstanceCostModifier>
+            <iInstanceCostModifier>5</iInstanceCostModifier>
 			<Combat>UNITCOMBAT_ANIMAL</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_TAMED</SubCombatType>
@@ -1971,7 +1971,7 @@
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_TAMED_REDPANDA</Type>
-			<iInstanceCostModifier>10</iInstanceCostModifier>
+            <iInstanceCostModifier>5</iInstanceCostModifier>
 			<Combat>UNITCOMBAT_ANIMAL</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_TAMED</SubCombatType>
@@ -2059,7 +2059,7 @@
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_TAMED_SLOTHBEAR</Type>
-			<iInstanceCostModifier>10</iInstanceCostModifier>
+            <iInstanceCostModifier>5</iInstanceCostModifier>
 			<Combat>UNITCOMBAT_ANIMAL</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_TAMED</SubCombatType>
@@ -2147,7 +2147,7 @@
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_TAMED_SPECTACLEDBEAR</Type>
-			<iInstanceCostModifier>10</iInstanceCostModifier>
+            <iInstanceCostModifier>5</iInstanceCostModifier>
 			<Combat>UNITCOMBAT_ANIMAL</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_TAMED</SubCombatType>
@@ -2236,7 +2236,7 @@
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_TAMED_SUNBEAR</Type>
-			<iInstanceCostModifier>10</iInstanceCostModifier>
+            <iInstanceCostModifier>5</iInstanceCostModifier>
 			<Combat>UNITCOMBAT_ANIMAL</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_TAMED</SubCombatType>
@@ -2325,7 +2325,7 @@
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_TAMED_ELEPHANT</Type>
-			<iInstanceCostModifier>10</iInstanceCostModifier>
+            <iInstanceCostModifier>5</iInstanceCostModifier>
 			<Combat>UNITCOMBAT_ANIMAL</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_TAMED</SubCombatType>
@@ -2417,7 +2417,7 @@
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_TAMED_GIRAFFE</Type>
-			<iInstanceCostModifier>10</iInstanceCostModifier>
+            <iInstanceCostModifier>5</iInstanceCostModifier>
 			<Combat>UNITCOMBAT_ANIMAL</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_TAMED</SubCombatType>
@@ -2502,7 +2502,7 @@
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_TAMED_HIPPO</Type>
-			<iInstanceCostModifier>10</iInstanceCostModifier>
+            <iInstanceCostModifier>5</iInstanceCostModifier>
 			<Combat>UNITCOMBAT_ANIMAL</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_TAMED</SubCombatType>
@@ -2590,7 +2590,7 @@
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_TAMED_WOLF</Type>
-			<iInstanceCostModifier>10</iInstanceCostModifier>
+            <iInstanceCostModifier>5</iInstanceCostModifier>
 			<Combat>UNITCOMBAT_ANIMAL</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_TAMED</SubCombatType>
@@ -2693,7 +2693,7 @@
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_TAMED_BLACK_RHINO</Type>
-			<iInstanceCostModifier>10</iInstanceCostModifier>
+            <iInstanceCostModifier>5</iInstanceCostModifier>
 			<Combat>UNITCOMBAT_ANIMAL</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_TAMED</SubCombatType>
@@ -2781,7 +2781,7 @@
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_TAMED_INDIAN_RHINO</Type>
-			<iInstanceCostModifier>10</iInstanceCostModifier>
+            <iInstanceCostModifier>5</iInstanceCostModifier>
 			<Combat>UNITCOMBAT_ANIMAL</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_TAMED</SubCombatType>
@@ -2869,7 +2869,7 @@
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_TAMED_JAVA_RHINO</Type>
-			<iInstanceCostModifier>10</iInstanceCostModifier>
+            <iInstanceCostModifier>5</iInstanceCostModifier>
 			<Combat>UNITCOMBAT_ANIMAL</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_TAMED</SubCombatType>
@@ -2957,7 +2957,7 @@
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_TAMED_WHITE_RHINO</Type>
-			<iInstanceCostModifier>10</iInstanceCostModifier>
+            <iInstanceCostModifier>5</iInstanceCostModifier>
 			<Combat>UNITCOMBAT_ANIMAL</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_TAMED</SubCombatType>
@@ -3045,7 +3045,7 @@
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_TAMED_BAIRDS_TAPIR</Type>
-			<iInstanceCostModifier>10</iInstanceCostModifier>
+            <iInstanceCostModifier>5</iInstanceCostModifier>
 			<Combat>UNITCOMBAT_ANIMAL</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_TAMED</SubCombatType>
@@ -3135,7 +3135,7 @@
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_TAMED_BRAZILIAN_TAPIR</Type>
-			<iInstanceCostModifier>10</iInstanceCostModifier>
+            <iInstanceCostModifier>5</iInstanceCostModifier>
 			<Combat>UNITCOMBAT_ANIMAL</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_TAMED</SubCombatType>
@@ -3225,7 +3225,7 @@
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_TAMED_MALAYAN_TAPIR</Type>
-			<iInstanceCostModifier>10</iInstanceCostModifier>
+            <iInstanceCostModifier>5</iInstanceCostModifier>
 			<Combat>UNITCOMBAT_ANIMAL</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_TAMED</SubCombatType>
@@ -3315,7 +3315,7 @@
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_TAMED_MOUNTAIN_TAPIR</Type>
-			<iInstanceCostModifier>10</iInstanceCostModifier>
+            <iInstanceCostModifier>5</iInstanceCostModifier>
 			<Combat>UNITCOMBAT_ANIMAL</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_TAMED</SubCombatType>
@@ -3405,7 +3405,7 @@
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_TAMED_LIZARD</Type>
-			<iInstanceCostModifier>10</iInstanceCostModifier>
+            <iInstanceCostModifier>5</iInstanceCostModifier>
 			<Combat>UNITCOMBAT_ANIMAL</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_TAMED</SubCombatType>
@@ -3489,7 +3489,7 @@
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_TAMED_SNAKE</Type>
-			<iInstanceCostModifier>10</iInstanceCostModifier>
+            <iInstanceCostModifier>5</iInstanceCostModifier>
 			<Combat>UNITCOMBAT_ANIMAL</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_TAMED</SubCombatType>
@@ -3583,7 +3583,7 @@
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_TAMED_DONKEY_PAIR</Type>
-			<iInstanceCostModifier>10</iInstanceCostModifier>
+            <iInstanceCostModifier>5</iInstanceCostModifier>
 			<Combat>UNITCOMBAT_ANIMAL</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_TAMED</SubCombatType>
@@ -3698,7 +3698,7 @@
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_TAMED_HORSE_PAIR</Type>
-			<iInstanceCostModifier>10</iInstanceCostModifier>
+            <iInstanceCostModifier>5</iInstanceCostModifier>
 			<Combat>UNITCOMBAT_ANIMAL</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_TAMED</SubCombatType>
@@ -3815,7 +3815,7 @@
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_TAMED_WOLF_PAIR</Type>
-			<iInstanceCostModifier>10</iInstanceCostModifier>
+            <iInstanceCostModifier>5</iInstanceCostModifier>
 			<Combat>UNITCOMBAT_ANIMAL</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_TAMED</SubCombatType>
@@ -3922,7 +3922,7 @@
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_TAMED_DUCK</Type>
-			<iInstanceCostModifier>10</iInstanceCostModifier>
+            <iInstanceCostModifier>5</iInstanceCostModifier>
 			<Combat>UNITCOMBAT_ANIMAL</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_TAMED</SubCombatType>
@@ -4009,7 +4009,7 @@
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_TAMED_TURKEY</Type>
-			<iInstanceCostModifier>10</iInstanceCostModifier>
+            <iInstanceCostModifier>5</iInstanceCostModifier>
 			<Combat>UNITCOMBAT_ANIMAL</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_TAMED</SubCombatType>

@@ -6436,7 +6436,7 @@ if (!bHasCalculatedNeighbors) return MAX_INT;
 	// Distance from features
 	if (featureType != NO_FEATURE)
 	{
-		// some features cause underlaying terrain cost to be ignored; oasis, floodplain, nat'l wonders
+		// some features cause underlying terrain cost to be ignored; oasis, floodplain, natural wonders
 		const CvFeatureInfo& featureInfo = GC.getFeatureInfo((FeatureTypes)featureType);
 		if (featureInfo.isIgnoreTerrainCulture())
 		{
@@ -9910,7 +9910,7 @@ void CvCity::changeFoodKeptPercent(int iChange)
 
 int CvCity::getMaxProductionOverflow() const
 {
-	return getYieldRate(YIELD_PRODUCTION) * 7/4; // 1.75
+	return getYieldRate(YIELD_PRODUCTION) * 2;
 }
 
 

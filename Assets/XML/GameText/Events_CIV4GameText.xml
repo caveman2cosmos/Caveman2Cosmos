@@ -1279,6 +1279,14 @@
         <Spanish>El excedente logrado por los cazadores cerca de la ciudad %s1:2_civ_adjective de %s2_city ha impulsado un pequeño crecimiento de la población.</Spanish>
     </TEXT>
     <TEXT>
+        <Tag>TXT_KEY_EVENTTRIGGER_FISH_FOUND</Tag>
+        <English>Dead fish has show up in drowes near the %s1_civ_adjective city of %s2_city has fueled a minor population boom.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENTTRIGGER_WHALE_FOUND</Tag>
+        <English>Dead whale has show up near the %s1_civ_adjective city of %s2_city has fueled a minor population boom.</English>
+    </TEXT>
+    <TEXT>
         <Tag>TXT_KEY_EVENTTRIGGER_GREAT_STORY</Tag>
         <English>A %s1_civ_adjective storyteller from the city of %s2_city has told an amazing story captivating the tribe.</English>
 		<French>Un conteur %s1_civ_adjective de la ville de %s2_city a raconté une histoire incroyable captivant la tribu.</French>
@@ -5818,6 +5826,26 @@
 		<Russian>Пошлите помощь выжившим, какую мы только сможем.</Russian>
 		<Spanish>Enviad toda la ayuda posible a los supervivientes.</Spanish>
 	</TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_SMALL_EARTHQUAKE_1</Tag>
+        <English>Send what aid we can to the survivors.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_MEDIUM_EARTHQUAKE_1</Tag>
+        <English>Send what aid we can to the survivors.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_STRONG_EARTHQUAKE_1</Tag>
+        <English>Send what aid we can to the survivors.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_HUGE_EARTHQUAKE_1</Tag>
+        <English>Send what aid we can to the survivors.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_APOCALYPTIC_EARTHQUAKE_1</Tag>
+        <English>Send what aid we can to the survivors.</English>
+    </TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_EARTHQUAKE_1_HELP</Tag>
 		<English>[ICON_BULLET]Suffer loss of plot improvements near the earthquake</English>
@@ -7296,6 +7324,22 @@
 		<English>Organise a great hunt, we must use this time of plenty to stock up on food.</English>
 		<French>Organisons une grande chasse, profitons de cette période d'abondance pour faire des réserves de nourriture.</French>
 	</TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_FISH_FOUND_1</Tag>
+        <English>Great gather it all up and store it.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_FISH_FOUND_2</Tag>
+        <English>We have plenty of food see if we can sell some of it.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_WHALE_FOUND_1</Tag>
+        <English>See what we can use before it spoils and store it.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_WHALE_FOUND_2</Tag>
+        <English>We should sell this we already have plenty of food.</English>
+    </TEXT>
     <TEXT>
         <Tag>TXT_KEY_EVENT_GREAT_HARVEST_1</Tag>
         <English>Store the food, you can never have enough food.</English>
@@ -12407,6 +12451,26 @@
 		<Polish>Miastem %s2_city wstrz&#185;sn&#234;&#179;o trz&#234;sienie ziemi, powoduj&#185;c zawalenie si&#234; wielu budynk&#243;w, obsuni&#234;cia ziemi oraz lokalne podtopienia.</Polish>
 		<Russian>Землетрясение обрушилось на город %s2_city, вызывая обвал зданий, оползни и наводнения.</Russian>
 	</TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_TRIGGER_SMALL_EARTHQUAKE_1</Tag>
+        <English>An small earthquake was felt in the city of %s2_city, we had luck the damage was minimal.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_TRIGGER_MEDIUM_EARTHQUAKE_1</Tag>
+        <English>An earthquake hit the city of %s2_city, causing some building collapses.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_TRIGGER_STRONG_EARTHQUAKE_1</Tag>
+        <English>An earthquake jolts the city of %s2_city, causing building collapses, there have been victims.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_TRIGGER_HUGE_EARTHQUAKE_1</Tag>
+        <English>An earthquake rattled the city of %s2_city, causing severe building collapses and civilian casualties.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_TRIGGER_APOCALYPTIC_EARTHQUAKE_1</Tag>
+        <English>An catastrophic earthquake shatered the city of %s2_city, the city is in ruins. The number of dead is terrifying</English>
+    </TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_TRIGGER_EARTHQUAKE_2</Tag>
 		<English>An earthquake over 7.5 in Richter scale has shaken ground near %s2_city.</English>
@@ -12912,6 +12976,14 @@
 		<Italian>I branchi di alci vicino a %s2_city sono diventati particolarmente numerosi. I nostri cacciatori hanno procurato una riserva extra di cibo.</Italian>
 		<Spanish>Las manadas de alces cerca de %s2_city se han hecho especialmente grandes. Los cazadores se han cobrado una reserva de comida.</Spanish>
 	</TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_TRIGGER_FISH_FOUND_1</Tag>
+        <English>Fish was found dead in drowes ashore near %s2_city.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_TRIGGER_WHALE_FOUND_1</Tag>
+        <English>Whale was found dead ashore near %s2_city.</English>
+    </TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_TRIGGER_HAPPY_HUNTING_2</Tag>
 		<English>The people of %s2_city celebrate as the latest caribou hunting season has brought a rich harvest.</English>
