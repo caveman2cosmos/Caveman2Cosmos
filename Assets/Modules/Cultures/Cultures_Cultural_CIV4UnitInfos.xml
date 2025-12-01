@@ -27412,7 +27412,7 @@
 			<iMoves>1</iMoves>
 			<iCombat>8</iCombat>
 			<iStealthStrikes>1</iStealthStrikes>
-			<iStealthCombatModifiers>20</iStealthCombatModifiers>
+<!--			<iStealthCombatModifiers>20</iStealthCombatModifiers>-->
 			<iPursuit>5</iPursuit>
 			<iEnclose>8</iEnclose>
 			<iDynamicDefense>8</iDynamicDefense>
@@ -39626,7 +39626,7 @@
 			<iXPValueAttack>6</iXPValueAttack>
 			<iXPValueDefense>3</iXPValueDefense>
 			<iStealthStrikes>1</iStealthStrikes>
-			<iStealthCombatModifiers>15</iStealthCombatModifiers>
+<!--			<iStealthCombatModifiers>15</iStealthCombatModifiers>-->
 			<iEnclose>6</iEnclose>
 			<iDynamicDefense>6</iDynamicDefense>
 			<iCultureGarrison>3</iCultureGarrison>
@@ -46312,7 +46312,7 @@
 			<iMoves>1</iMoves>
 			<iCombat>8</iCombat>
 			<iStealthStrikes>1</iStealthStrikes>
-			<iStealthCombatModifiers>20</iStealthCombatModifiers>
+<!--			<iStealthCombatModifiers>20</iStealthCombatModifiers>-->
 			<iPursuit>5</iPursuit>
 			<iEnclose>8</iEnclose>
 			<iDynamicDefense>8</iDynamicDefense>
@@ -50663,7 +50663,7 @@
 			<iXPValueAttack>6</iXPValueAttack>
 			<iXPValueDefense>3</iXPValueDefense>
 			<iStealthStrikes>1</iStealthStrikes>
-			<iStealthCombatModifiers>15</iStealthCombatModifiers>
+<!--			<iStealthCombatModifiers>15</iStealthCombatModifiers>-->
 			<iEnclose>6</iEnclose>
 			<iDynamicDefense>6</iDynamicDefense>
 			<iCultureGarrison>3</iCultureGarrison>
