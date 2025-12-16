@@ -3700,12 +3700,12 @@
 			<iAIValue>1</iAIValue>
 		</EventInfo>
 
-        <EventInfo>
-            <Type>EVENT_TORNADO</Type>
-            <Description>TXT_KEY_EVENT_TORNADO_1</Description>
-            <PythonCallback>doTornado</PythonCallback>
-            <Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
-        </EventInfo>
+<!--        <EventInfo>-->
+<!--            <Type>EVENT_TORNADO</Type>-->
+<!--            <Description>TXT_KEY_EVENT_TORNADO_1</Description>-->
+<!--            <PythonCallback>doTornado</PythonCallback>-->
+<!--            <Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>-->
+<!--        </EventInfo>-->
 
 		<EventInfo>
 			<Type>EVENT_THE_HUNS_1</Type>

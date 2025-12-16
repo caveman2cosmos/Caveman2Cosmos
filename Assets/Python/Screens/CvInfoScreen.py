@@ -929,7 +929,7 @@ class CvInfoScreen:
 			if bACalendar :
 				iTurnYear = cityX.getGameDateFounded()
 			else :
-				iTurnYear = GAME.getTurnYear(cityX.getGameturnFounded())
+				iTurnYear = GAME.getTurnYear(cityX.getGameTurnFounded())
 
 			if iTurnYear < 0:
 				szTurnFounded = TRNSLTR.getText("TXT_KEY_TIME_BC", (-iTurnYear,))
