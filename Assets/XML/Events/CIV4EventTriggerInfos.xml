@@ -16286,6 +16286,9 @@
 		<EventTriggerInfo>
 			<Type>EVENTTRIGGER_BONUS_TAX</Type>
 		</EventTriggerInfo>
+        <EventTriggerInfo>
+            <Type>EVENTTRIGGER_TORNADO</Type>
+        </EventTriggerInfo>
 		<!-- !SAVEBREAK -->
 	</EventTriggerInfos>
 </Civ4EventTriggerInfos>
