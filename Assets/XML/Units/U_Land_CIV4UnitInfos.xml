@@ -46009,9 +46009,9 @@
 				<UnitType>UNIT_MASTER_TRACKER</UnitType>
 <!--				<UnitType>UNIT_NEANDERTHAL_MASTER_CHASER</UnitType>-->
 			</UnitUpgrades>
-            <SupersedingUnits>
+<!--            <SupersedingUnits>-->
 <!--                <UnitType>UNIT_NEANDERTHAL_MASTER_CHASER</UnitType>-->
-            </SupersedingUnits>
+<!--            </SupersedingUnits>-->
 			<ObsoleteTech>TECH_TRACKING</ObsoleteTech>
 			<iCost>-1</iCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
@@ -46125,9 +46125,9 @@
 				<UnitType>UNIT_MASTER_HUNTER</UnitType>
 <!--				<UnitType>UNIT_MASTER_NEANDERTHAL_TRACKER</UnitType>-->
 			</UnitUpgrades>
-            <SupersedingUnits>
+<!--            <SupersedingUnits>-->
 <!--                <UnitType>UNIT_MASTER_NEANDERTHAL_TRACKER</UnitType>-->
-            </SupersedingUnits>
+<!--            </SupersedingUnits>-->
 			<iCost>-1</iCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>3</iMoves>
@@ -46241,9 +46241,9 @@
 				<UnitType>UNIT_MASTER_RANGER</UnitType>
 <!--				<UnitType>UNIT_MASTER_NEANDERTHAL_HUNTER</UnitType>-->
 			</UnitUpgrades>
-            <SupersedingUnits>
+<!--            <SupersedingUnits>-->
 <!--                <UnitType>UNIT_NEANDERTHAL_MASTER_HUNTER</UnitType>-->
-            </SupersedingUnits>
+<!--            </SupersedingUnits>-->
 			<iCombat>4</iCombat>
 			<iXPValueAttack>1</iXPValueAttack>
 			<iXPValueDefense>2</iXPValueDefense>
