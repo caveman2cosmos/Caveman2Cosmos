@@ -13667,9 +13667,12 @@
             </TriggerTexts>
             <EventArt>Art/Event_Images/Earthquake.dds</EventArt>
             <iPercentGamesActive>100</iPercentGamesActive>
-            <iWeight>12</iWeight>
+            <iWeight>1</iWeight>
             <bPickCity>1</bPickCity>
             <iNumPlotsRequired>1</iNumPlotsRequired>
+            <AndPreReqs>
+                <PrereqTech>TECH_SEDENTARY_LIFESTYLE</PrereqTech>
+            </AndPreReqs>
             <Events>
                 <Event>EVENT_SMALL_EARTHQUAKE_1</Event>
             </Events>
@@ -13689,9 +13692,12 @@
             </TriggerTexts>
             <EventArt>Art/Event_Images/Earthquake.dds</EventArt>
             <iPercentGamesActive>100</iPercentGamesActive>
-            <iWeight>9</iWeight>
+            <iWeight>1</iWeight>
             <bPickCity>1</bPickCity>
             <iNumPlotsRequired>1</iNumPlotsRequired>
+            <AndPreReqs>
+                <PrereqTech>TECH_SEDENTARY_LIFESTYLE</PrereqTech>
+            </AndPreReqs>
             <Events>
                 <Event>EVENT_MEDIUM_EARTHQUAKE_1</Event>
             </Events>
@@ -13711,9 +13717,12 @@
             </TriggerTexts>
             <EventArt>Art/Event_Images/Earthquake.dds</EventArt>
             <iPercentGamesActive>100</iPercentGamesActive>
-            <iWeight>6</iWeight>
+            <iWeight>1</iWeight>
             <bPickCity>1</bPickCity>
             <iNumPlotsRequired>1</iNumPlotsRequired>
+            <AndPreReqs>
+                <PrereqTech>TECH_SEDENTARY_LIFESTYLE</PrereqTech>
+            </AndPreReqs>
             <Events>
                 <Event>EVENT_STRONG_EARTHQUAKE_1</Event>
             </Events>
@@ -13733,9 +13742,12 @@
             </TriggerTexts>
             <EventArt>Art/Event_Images/Earthquake.dds</EventArt>
             <iPercentGamesActive>100</iPercentGamesActive>
-            <iWeight>3</iWeight>
+            <iWeight>1</iWeight>
             <bPickCity>1</bPickCity>
             <iNumPlotsRequired>1</iNumPlotsRequired>
+            <AndPreReqs>
+                <PrereqTech>TECH_SEDENTARY_LIFESTYLE</PrereqTech>
+            </AndPreReqs>
             <Events>
                 <Event>EVENT_HUGE_EARTHQUAKE_1</Event>
             </Events>
@@ -13758,6 +13770,9 @@
             <iWeight>1</iWeight>
             <bPickCity>1</bPickCity>
             <iNumPlotsRequired>1</iNumPlotsRequired>
+            <AndPreReqs>
+                <PrereqTech>TECH_SEDENTARY_LIFESTYLE</PrereqTech>
+            </AndPreReqs>
             <Events>
                 <Event>EVENT_APOCALYPTIC_EARTHQUAKE_1</Event>
             </Events>
