@@ -233,20 +233,12 @@
 		<Italian>Le unità soffrono di stanchezza e sfinimento e beneficiano di rabbia e determinazione</Italian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_GAMEOPTION_TECH_BEELINE_STINGS</Tag>
-		<English>Tech - Beeline Stings</English>
-		<German>Durchmarschstrafen</German>
-		<French>Tech - Pénalités des Ères</French>
-		<Russian>Спешка наказуема</Russian>
-		<Italian>Penalità tecnologie non scoperte</Italian>
+		<Tag>TXT_KEY_GAMEOPTION_TECH_CUTTING_EDGE_CUTS</Tag>
+		<English>Tech - Cutting edge cuts</English>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_GAMEOPTION_TECH_BEELINE_STINGS_HELP</Tag>
-		<English>When you advance to a new Era, the Technologies you have not yet researched from previous Eras become more expensive to research.</English>
-		<German>Beim Erreichen einer neuen Ära werden alle noch nicht erforschten Techniken der vorherigen Ära teurer in der Erforschung.</German>
-		<French>Lorsque vous entrez dans une nouvelle ère, les technologies que vous n'avez pas encore étudiées des époques précédentes deviennent plus coûteuses à rechercher.</French>
-		<Russian>Когда вы достигните нового исторического периода, неисследованные технологии предыдущих эпох станут более дорогими для изучения.</Russian>
-		<Italian>Quando si entra in una nuova era, le tecnologie che non sono state ancora ancora ricercato dalle ere precedenti diventano più costose da ricercare</Italian>
+		<Tag>TXT_KEY_GAMEOPTION_TECH_CUTTING_EDGE_CUTS_HELP</Tag>
+		<English>When you advance to a new Era, the new age brings fresh challenges for the pioneers. Tech cost is increased by 10% per age for the first 3 players. Is off after more than 3 players are in the same age as you.</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_CHALLENGE_CUT_LOSERS</Tag>

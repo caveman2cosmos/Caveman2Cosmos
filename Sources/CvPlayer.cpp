@@ -7115,16 +7115,13 @@ int64_t CvPlayer::getBaseUnitCost100(const UnitTypes eUnit) const
 		iBaseCost *= GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getHammerCostPercent();
 
 		int iMod = 100;
-		if (!GC.getGame().isOption(GAMEOPTION_TECH_BEELINE_STINGS))
-		{
-			EraTypes eEra = (EraTypes)GC.getGame().getStartEra();
-			if (GC.getUnitInfo(eUnit).getEraInfo() != NO_ERA)
-			{
-				eEra = (EraTypes)GC.getUnitInfo(eUnit).getEraInfo();
-			}
-			iMod = GC.getEraInfo(eEra).getTrainPercent();
-		}
-		else iMod = GC.getEraInfo((EraTypes)getCurrentEra()).getTrainPercent();
+
+        EraTypes eEra = (EraTypes)GC.getGame().getStartEra();
+        if (GC.getUnitInfo(eUnit).getEraInfo() != NO_ERA)
+        {
+            eEra = (EraTypes)GC.getUnitInfo(eUnit).getEraInfo();
+        }
+        iMod = GC.getEraInfo(eEra).getTrainPercent();
 
 		iBaseCost *= iMod;
 		iBaseCost /= 100;
@@ -7297,12 +7294,10 @@ int CvPlayer::getProductionNeeded(ProjectTypes eProject) const
 
 	const EraTypes eEra = getCurrentEra();
 	int iModifier = 0;
-	if (!GC.getGame().isOption(GAMEOPTION_TECH_BEELINE_STINGS) && GC.getProjectInfo(eProject).getTechPrereq() != NO_TECH)
-	{
-		iModifier = GC.getEraInfo((EraTypes)GC.getTechInfo(GC.getProjectInfo(eProject).getTechPrereq()).getEra()).getCreatePercent();
-	}
-	else iModifier = GC.getEraInfo(eEra).getCreatePercent();
-
+	if (GC.getProjectInfo(eProject).getTechPrereq() != NO_TECH)
+    {
+        iModifier = GC.getEraInfo((EraTypes)GC.getTechInfo(GC.getProjectInfo(eProject).getTechPrereq()).getEra()).getCreatePercent();
+    }
 	iProductionNeeded *= iModifier;
 	iProductionNeeded /= 100;
 

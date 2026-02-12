@@ -20702,7 +20702,7 @@ m_iAnarchyPercent(0),
 m_iEventChancePerTurn(0),
 m_iSoundtrackSpace(0),
 m_iNumSoundtracks(0),
-m_iBeelineStingsTechCostModifier(0),
+m_iCuttingEdgeCutsTechCostModifier(0),
 m_bNoGoodies(false),
 m_bNoAnimals(false),
 m_bNoBarbUnits(false),
@@ -20824,9 +20824,9 @@ int CvEraInfo::getNumSoundtracks() const
 	return m_iNumSoundtracks;
 }
 
-int CvEraInfo::getBeelineStingsTechCostModifier() const
+int CvEraInfo::getCuttingEdgeCutsTechCostModifier() const
 {
-	return m_iBeelineStingsTechCostModifier;
+	return m_iCuttingEdgeCutsTechCostModifier;
 }
 
 const char* CvEraInfo::getAudioUnitVictoryScript() const
@@ -20915,7 +20915,7 @@ bool CvEraInfo::read(CvXMLLoadUtility* pXML)
 	pXML->GetOptionalChildXmlValByName(m_szAudioUnitVictoryScript, L"AudioUnitVictoryScript");
 	pXML->GetOptionalChildXmlValByName(m_szAudioUnitDefeatScript, L"AudioUnitDefeatScript");
 	pXML->GetOptionalChildXmlValByName(&m_iInitialCityMaintenancePercent, L"iInitialCityMaintenancePercent");
-	pXML->GetOptionalChildXmlValByName(&m_iBeelineStingsTechCostModifier, L"iBeelineStingsTechCostModifier");
+	pXML->GetOptionalChildXmlValByName(&m_iCuttingEdgeCutsTechCostModifier, L"iCuttingEdgeCutsTechCostModifier");
 
 	if (m_iInitialCityMaintenancePercent < 0)
 	{
@@ -20984,7 +20984,7 @@ void CvEraInfo::copyNonDefaults(const CvEraInfo* pClassInfo)
 	if (getImprovementPercent() == iDefault) m_iImprovementPercent = pClassInfo->getImprovementPercent();
 	if (getGreatPeoplePercent() == iDefault) m_iGreatPeoplePercent = pClassInfo->getGreatPeoplePercent();
 	if (getAnarchyPercent() == iDefault) m_iAnarchyPercent = pClassInfo->getAnarchyPercent();
-	if (getBeelineStingsTechCostModifier() == iDefault) m_iBeelineStingsTechCostModifier = pClassInfo->getBeelineStingsTechCostModifier();
+	if (getCuttingEdgeCutsTechCostModifier() == iDefault) m_iCuttingEdgeCutsTechCostModifier = pClassInfo->getCuttingEdgeCutsTechCostModifier();
 	if (getEventChancePerTurn() == iDefault) m_iEventChancePerTurn = pClassInfo->getEventChancePerTurn();
 	if (getSoundtrackSpace() == iDefault) m_iSoundtrackSpace = pClassInfo->getSoundtrackSpace();
 	if (isFirstSoundtrackFirst() == bDefault) m_bFirstSoundtrackFirst = pClassInfo->isFirstSoundtrackFirst();
@@ -21054,7 +21054,7 @@ void CvEraInfo::getCheckSum(uint32_t& iSum) const
 	CheckSum(iSum, m_iGreatPeoplePercent);
 	CheckSum(iSum, m_iAnarchyPercent);
 	CheckSum(iSum, m_iEventChancePerTurn);
-	CheckSum(iSum, m_iBeelineStingsTechCostModifier);
+	CheckSum(iSum, m_iCuttingEdgeCutsTechCostModifier);
 
 	CheckSum(iSum, m_bNoGoodies);
 	CheckSum(iSum, m_bNoAnimals);

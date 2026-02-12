@@ -257,10 +257,10 @@
 			<bVisible>1</bVisible>
 		</GameOptionInfo>
 		<GameOptionInfo>
-			<Type>GAMEOPTION_TECH_BEELINE_STINGS</Type>
-			<Description>TXT_KEY_GAMEOPTION_TECH_BEELINE_STINGS</Description>
-			<Help>TXT_KEY_GAMEOPTION_TECH_BEELINE_STINGS_HELP</Help>
-			<bDefault>0</bDefault>
+			<Type>GAMEOPTION_TECH_CUTTING_EDGE_CUTS</Type>
+			<Description>TXT_KEY_GAMEOPTION_TECH_CUTTING_EDGE_CUTS</Description>
+			<Help>TXT_KEY_GAMEOPTION_TECH_CUTTING_EDGE_CUTS_HELP</Help>
+			<bDefault>1</bDefault>
 			<bVisible>1</bVisible>
 		</GameOptionInfo>
 		<!-- Culture -->
