@@ -159,6 +159,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_NATIONAL_AIRCRAFT_MUSEUM</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_AIRCRAFT_MUSEUM</MovieDefineTag>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_ANIMA_GAMING_LEAGUE</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
@@ -196,6 +197,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_ANIMA_GAMING_LEAGUE</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_ANIMA_GAMING_LEAGUE</MovieDefineTag>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_NATIONAL_ARCHIVES</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
@@ -260,6 +262,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_NATIONAL_ARCHIVES</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_ARCHIVES</MovieDefineTag>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_AERIAL_BASKET_ROPEWAYS</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
@@ -319,6 +322,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_AERIAL_BASKET_ROPEWAYS</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_BASKETROPEWAYS</MovieDefineTag>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_BUREAU_OF_FARM_MANAGEMENT</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
@@ -367,6 +371,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_BUREAU_OF_FARM_MANAGEMENT</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_BFM</MovieDefineTag>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_MONTREAL_BIODOME</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
@@ -450,6 +455,7 @@
 				</PropertySource>
 			</PropertyManipulators>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_BOTANICAL_GARDENS</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
@@ -512,6 +518,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_BOTANICAL_GARDENS</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_BOTANICAL_GARDENS</MovieDefineTag>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_BULL_LEAPING</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
@@ -574,6 +581,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_BULL_LEAPING</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_BULL_LEAPING</MovieDefineTag>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_LIFE_C4_CROPS</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
@@ -609,6 +617,7 @@
 			</PrereqAmountBuildings>
 			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_CENTRAL_BREEDER_CAMEL</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
@@ -652,6 +661,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_CENTRAL_BREEDER_CAMEL</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_CAMEL_NATIONAL</MovieDefineTag>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_CAPITAL_ADMINISTRATION</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
@@ -707,6 +717,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_CAPITAL_ADMINISTRATION</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_CAPITAL_ADMINISTRATION</MovieDefineTag>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_CAPTURED_FIRE</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
@@ -759,6 +770,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_CAPTURED_FIRE</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_CAPTURED_FIRE</MovieDefineTag>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_CENTERS_FOR_DISEASE_CONTROL</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
@@ -818,6 +830,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_CENTERS_FOR_DISEASE_CONTROL</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_CDC</MovieDefineTag>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_CENTER_FOR_AI_SAFETY</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
@@ -866,6 +879,7 @@
 				</PropertySource>
 			</PropertyManipulators>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_CENTER_FOR_BIOTECH_SAFETY</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
@@ -912,6 +926,7 @@
 				</PropertySource>
 			</PropertyManipulators>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_CENTER_FOR_NANOTECH_SAFETY</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
@@ -966,6 +981,7 @@
 				</PropertySource>
 			</PropertyManipulators>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_CENTRAL_BANK</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
@@ -1053,6 +1069,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_CENTRAL_BANK</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_CENTRAL_BANK</MovieDefineTag>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_CHIEFS_FUNERAL_PYRE</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
@@ -1114,6 +1131,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_CHIEFS_FUNERAL_PYRE</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_CHIEFS_PYRE</MovieDefineTag>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_COMPUTER_CENTER</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
@@ -1182,6 +1200,7 @@
 			<MovieDefineTag>ART_DEF_MOVIE_COMPUTER_CENTER</MovieDefineTag>
 			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_COSMONAUT_TRAINING_CENTRE</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
@@ -1215,6 +1234,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_COSMONAUT_TRAINING_CENTRE</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_COSMONAUT_TRAINING_CENTRE</MovieDefineTag>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_NATIONAL_COURIER_SYSTEM</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
@@ -1274,6 +1294,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_NATIONAL_COURIER_SYSTEM</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_COURIER_SYSTEM</MovieDefineTag>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_LIFE_CRISPR_CAS9_BACTERIA</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
@@ -1306,6 +1327,7 @@
 			</PrereqInCityBuildings>
 			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_NATIONAL_CYBERSECURITY_CENTER</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
@@ -1341,6 +1363,7 @@
 			<MovieDefineTag>ART_DEF_MOVIE_CYBERSECURITY_CENTER</MovieDefineTag>
 			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_DEEP_SPACE_RESEARCH_INSTITUTE</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
@@ -1396,6 +1419,7 @@
 			<MovieDefineTag>ART_DEF_MOVIE_DEEP_SPACE_RESEARCH</MovieDefineTag>
 			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_DEPARTMENT_OF_EDUCATION</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
@@ -1448,6 +1472,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_DEPARTMENT_OF_EDUCATION</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_DEPARTMENT_EDUCATION</MovieDefineTag>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_DEPARTMENT_OF_ENERGY</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
@@ -1484,6 +1509,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_DEPARTMENT_OF_ENERGY</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_DEPARTMENT_ENERGY</MovieDefineTag>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_DEPARTMENT_OF_FOREIGN_POLICY</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
@@ -1533,6 +1559,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_DEPARTMENT_OF_FOREIGN_POLICY_WONDER</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_DEPARTMENT_FOREIGN_WONDER</MovieDefineTag>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_DEPARTMENT_OF_MOTOR_VEHICLES</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
@@ -1594,6 +1621,7 @@
 			<MovieDefineTag>ART_DEF_MOVIE_DEPARTMENT_VEHICLES</MovieDefineTag>
 			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_DEPARTMENT_OF_WATER</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
@@ -1640,6 +1668,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_DEPARTMENT_OF_WATER</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_DEPARTMENT_WATER</MovieDefineTag>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_DIGITAL_EMBASSY</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
@@ -1670,6 +1699,7 @@
 				<BuildingType>BUILDING_INTELLIGENCE_AGENCY</BuildingType>
 			</PrereqInCityBuildings>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_DISTRICT_COURTHOUSE</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
@@ -1733,6 +1763,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_DISTRICT_COURTHOUSE</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_DISTRICT_COURTHOUSE</MovieDefineTag>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_CENTRAL_BREEDER_DONKEY</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
@@ -1775,6 +1806,7 @@
 			<bNeverCapture>1</bNeverCapture>
 			<ArtDefineTag>ART_DEF_BUILDING_CENTRAL_BREEDER_DONKEY</ArtDefineTag>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_DUTCH_DIKE</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
@@ -1826,6 +1858,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_DUTCH_DIKE</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_DUTCH_DIKE</MovieDefineTag>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_ELECTRONIC_GAMING_LEAGUE</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
@@ -1866,6 +1899,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_ELECTRONIC_GAMING_LEAGUE</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_ELECTRONIC_GAMING_LEAGUE</MovieDefineTag>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_CENTRAL_BREEDER_ELEPHANT</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
@@ -1909,6 +1943,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_CENTRAL_BREEDER_ELEPHANT</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_ELEPHANT_NATIONAL</MovieDefineTag>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_EMANCIPATION_PROCLAMATION</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
@@ -1931,6 +1966,7 @@
 			<iCostComplexityModifier>2</iCostComplexityModifier>
 			<FreeBuilding>BUILDING_EFFECT_EMANCIPATION_PROCLAMATION</FreeBuilding>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_MAXIMUM_SECURITY_PRISON</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
@@ -1997,6 +2033,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_MAXIMUM_SECURITY_PRISON</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_FEDERAL_PRISON</MovieDefineTag>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_FERTILITY_FESTIVAL</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
@@ -2029,6 +2066,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_FERTILITY_FESTIVAL</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_FERTILITYFESTIVAL</MovieDefineTag>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_FLAK_TOWER</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
@@ -2070,6 +2108,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_FLAK_TOWER</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_FLAK_TOWER</MovieDefineTag>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_LIFE_FLUORESCENT_BACTERIA</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
@@ -2104,6 +2143,7 @@
 			</PrereqAmountBuildings>
 			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_FOUNDLING_HOSPITAL</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
@@ -2162,6 +2202,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_FOUNDLING_HOSPITAL</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_FOUNDLING_HOSPITAL</MovieDefineTag>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_GARDEN_CITY</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
@@ -2201,6 +2242,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_GARDEN_CITY</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_GARDEN_CITY</MovieDefineTag>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_GARBAGE_COLLECTION_AGENCY</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
@@ -2250,6 +2292,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_GARBAGE_COLLECTION_AGENCY</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_GCA</MovieDefineTag>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_GLOBAL_POSITIONING_SYSTEM</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
@@ -2284,6 +2327,7 @@
 				<BuildingType>BUILDING_MILITARY_SPACEPORT</BuildingType>
 			</PrereqOrBuildings>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_GRAND_CENTRAL_STATION</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
@@ -2325,6 +2369,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_GRAND_CENTRAL_STATION</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_GRANDCENTRAL_STATION</MovieDefineTag>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_GREAT_BONFIRE</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
@@ -2366,6 +2411,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_GREAT_BONFIRE</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_GREAT_BONFIRE</MovieDefineTag>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_FORBIDDEN_PALACE</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
@@ -2430,6 +2476,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_FORBIDDEN_PALACE</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_FORBIDDEN_PALACE</MovieDefineTag>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_GUILD_APOTHECARIES</Type>
 			<SpecialBuildingType>SPECIALBUILDING_GUILD</SpecialBuildingType>
@@ -2493,6 +2540,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_GUILD_APOTHECARIES</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_GUILD_APOTHECARY</MovieDefineTag>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_GUILD_ARTISTS</Type>
 			<SpecialBuildingType>SPECIALBUILDING_GUILD</SpecialBuildingType>
@@ -2548,6 +2596,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_GUILD_ARTISTS</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_GUILD_ARTIST</MovieDefineTag>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_GUILD_BAKERS</Type>
 			<SpecialBuildingType>SPECIALBUILDING_GUILD</SpecialBuildingType>
@@ -2604,6 +2653,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_GUILD_BAKERS</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_GUILD_BAKER</MovieDefineTag>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_GUILD_BLACKSMITHS</Type>
 			<SpecialBuildingType>SPECIALBUILDING_GUILD</SpecialBuildingType>
@@ -2667,6 +2717,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_GUILD_BLACKSMITHS</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_GUILD_BLACKSMITH</MovieDefineTag>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_GUILD_BUTCHERS</Type>
 			<SpecialBuildingType>SPECIALBUILDING_GUILD</SpecialBuildingType>
@@ -2729,6 +2780,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_GUILD_BUTCHERS</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_GUILD_BUTCHER</MovieDefineTag>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_GUILD_CARPENTERS</Type>
 			<SpecialBuildingType>SPECIALBUILDING_GUILD</SpecialBuildingType>
@@ -2784,6 +2836,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_GUILD_CARPENTERS</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_GUILD_CARPENTER</MovieDefineTag>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_GUILD_PRINTERS</Type>
 			<SpecialBuildingType>SPECIALBUILDING_GUILD</SpecialBuildingType>
@@ -2847,6 +2900,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_GUILD_PRINTERS</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_GUILD_CLERKS</MovieDefineTag>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_GUILD_ARTISANS</Type>
 			<SpecialBuildingType>SPECIALBUILDING_GUILD</SpecialBuildingType>
@@ -2910,6 +2964,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_GUILD_ARTISANS</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_GUILD_CRAFTS</MovieDefineTag>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_GUILD_DRAPERS</Type>
 			<SpecialBuildingType>SPECIALBUILDING_GUILD</SpecialBuildingType>
@@ -2980,6 +3035,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_GUILD_DRAPERS</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_GUILD_DRAPERS</MovieDefineTag>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_GUILD_HOSTLERS</Type>
 			<SpecialBuildingType>SPECIALBUILDING_GUILD</SpecialBuildingType>
@@ -3036,6 +3092,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_GUILD_HOSTLERS</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_GUILD_EQUESTRIAN</MovieDefineTag>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_GUILD_FISHMONGERS</Type>
 			<SpecialBuildingType>SPECIALBUILDING_GUILD</SpecialBuildingType>
@@ -3093,6 +3150,7 @@
 			<MovieDefineTag>ART_DEF_MOVIE_GUILD_FISHMONGER</MovieDefineTag>
 			<bWater>1</bWater>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_GUILD_GLASSBLOWERS</Type>
 			<SpecialBuildingType>SPECIALBUILDING_GUILD</SpecialBuildingType>
@@ -3156,6 +3214,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_GUILD_GLASSBLOWERS</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_GUILD_GLASSBLOWERS</MovieDefineTag>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_GUILD_GOLDSMITHS</Type>
 			<SpecialBuildingType>SPECIALBUILDING_GUILD</SpecialBuildingType>
@@ -3212,6 +3271,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_GUILD_GOLDSMITHS</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_GUILD_GOLDSMITH</MovieDefineTag>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_GUILD_GROCERS</Type>
 			<SpecialBuildingType>SPECIALBUILDING_GUILD</SpecialBuildingType>
@@ -3275,6 +3335,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_GUILD_GROCERS</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_GUILD_GROCERS</MovieDefineTag>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_GUILD_WOODCUTTERS</Type>
 			<SpecialBuildingType>SPECIALBUILDING_GUILD</SpecialBuildingType>
@@ -3331,6 +3392,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_GUILD_WOODCUTTERS</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_GUILD_LUMBER</MovieDefineTag>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_GUILD_MASONS</Type>
 			<SpecialBuildingType>SPECIALBUILDING_GUILD</SpecialBuildingType>
@@ -3394,6 +3456,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_GUILD_MASONS</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_GUILD_MASON</MovieDefineTag>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_GUILD_MERCHANTS</Type>
 			<SpecialBuildingType>SPECIALBUILDING_GUILD</SpecialBuildingType>
@@ -3457,6 +3520,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_GUILD_MERCHANTS</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_GUILD_MERCERS</MovieDefineTag>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_GUILD_POTTERS</Type>
 			<SpecialBuildingType>SPECIALBUILDING_GUILD</SpecialBuildingType>
@@ -3520,6 +3584,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_GUILD_POTTERS</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_GUILD_POTTERS</MovieDefineTag>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_GUILD_SERVANTS</Type>
 			<SpecialBuildingType>SPECIALBUILDING_GUILD</SpecialBuildingType>
@@ -3576,6 +3641,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_GUILD_SERVANTS</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_GUILD_SERVANTS</MovieDefineTag>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_GUILD_TAILORS</Type>
 			<SpecialBuildingType>SPECIALBUILDING_GUILD</SpecialBuildingType>
@@ -3632,6 +3698,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_GUILD_TAILORS</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_GUILD_TAILOR</MovieDefineTag>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_GUILD_VICTUALLERS</Type>
 			<SpecialBuildingType>SPECIALBUILDING_GUILD</SpecialBuildingType>
@@ -3698,6 +3765,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_GUILD_VICTUALLERS</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_GUILD_VICTUALLERS</MovieDefineTag>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_HEAVY_WATER_PRODUCTION_PLANT</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
@@ -3758,6 +3826,7 @@
 			</Flavors>
 			<bNeverCapture>1</bNeverCapture>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_HEROIC_EPIC</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
@@ -3806,6 +3875,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_HEROIC_EPIC</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_HEROIC_EPIC</MovieDefineTag>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_GREAT_HOLMEGAARD_HUNT</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
@@ -3862,6 +3932,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_GREAT_HOLMEGAARD_HUNT</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_HHUNTINGBOW</MovieDefineTag>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_HIERACOSPHINX_BREEDER</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
@@ -3908,6 +3979,7 @@
 			<bNeverCapture>1</bNeverCapture>
 			<ArtDefineTag>ART_DEF_BUILDING_HIERACOSPHINX_BREEDER</ArtDefineTag>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_HOLOGRAPHIC_GAMING_LEAGUE</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
@@ -3944,6 +4016,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_HOLOGRAPHIC_GAMING_LEAGUE</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_HOLOGRAPHIC_GAMING_LEAGUE</MovieDefineTag>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_HOMELAND_SECURITY_AGENCY</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
@@ -4010,6 +4083,7 @@
 			<MovieDefineTag>ART_DEF_MOVIE_HOMELAND_SECURITY</MovieDefineTag>
 			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_CENTRAL_BREEDER_HORSE</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
@@ -4053,6 +4127,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_CENTRAL_BREEDER_HORSE</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_HORSE_NATIONAL</MovieDefineTag>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_HOUSE_OF_PARLIAMENT</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
@@ -4117,6 +4192,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_HOUSE_OF_PARLIAMENT</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_HOUSE_OF_PARLIMENT</MovieDefineTag>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_INTERNET_OF_THINGS</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
@@ -4159,6 +4235,7 @@
 			</PrereqInCityBuildings>
 			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_IRONWORKS</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
@@ -4233,6 +4310,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_IRONWORKS</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_IRON_WORKS</MovieDefineTag>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_JACKALOPE_BREEDER</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
@@ -4278,6 +4356,7 @@
 			<bNeverCapture>1</bNeverCapture>
 			<ArtDefineTag>ART_DEF_BUILDING_JACKALOPE_BREEDER</ArtDefineTag>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_KINGS_TOURNAMENT</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
@@ -4371,6 +4450,7 @@
 			</PrereqOrCivics>
 			<bRequiresActiveCivics>1</bRequiresActiveCivics>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_LABOR_UNION</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
@@ -4407,6 +4487,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_LABOR_UNION</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_LABOR_UNION</MovieDefineTag>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_CENTRAL_BREEDER_LLAMA</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
@@ -4449,6 +4530,7 @@
 			<bNeverCapture>1</bNeverCapture>
 			<ArtDefineTag>ART_DEF_BUILDING_CENTRAL_BREEDER_LLAMA</ArtDefineTag>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_LOG_ROLLER_SYSTEM</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
@@ -4514,6 +4596,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_LOG_ROLLER_SYSTEM</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_LOGROLLERS</MovieDefineTag>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_MANHATTAN_PROJECT</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
@@ -4569,6 +4652,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_MANHATTAN_PROJECT</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_MANHATTAN_PROJECT</MovieDefineTag>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_GRAVITY_TRAIN_NETWORK</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
@@ -4600,6 +4684,7 @@
 			</PrereqInCityBuildings>
 			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_NATIONAL_MEDICAL_DATABASE</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
@@ -4643,6 +4728,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_NATIONAL_MEDICAL_DATABASE</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_MEDICAL_DATABASE</MovieDefineTag>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_ADVANCED_METI</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
@@ -4695,6 +4781,7 @@
 				<BuildingType>BUILDING_ASTROBIOLOGY_LAB</BuildingType>
 			</PrereqInCityBuildings>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_MICROLITH_WORKSHOP</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
@@ -4739,6 +4826,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_MICROLITH_WEAPONS_FACTORY</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_MICROLITH_WEAPONS_FACTORY</MovieDefineTag>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_MIND_STORAGE</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
@@ -4782,6 +4870,7 @@
 			<MovieDefineTag>ART_DEF_MOVIE_MIND_STORAGE</MovieDefineTag>
 			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_MODERN_ART_THEATRE</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
@@ -4847,6 +4936,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_MODERN_ART_THEATRE</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_MODERN_ART_THEATRE</MovieDefineTag>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_LDS_MISSIONARY_TRAINING_CENTRE</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
@@ -4906,6 +4996,7 @@
 				</PropertySource>
 			</PropertyManipulators>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_MOVIE_STUDIO</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
@@ -4952,6 +5043,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_MOVIE_STUDIO</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_MOVIE_STUDIO</MovieDefineTag>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_NATIONAL_AEROSPACE_AGENCY</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
@@ -5018,6 +5110,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_NATIONAL_AEROSPACE_AGENCY</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_NASA</MovieDefineTag>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_NATIONAL_ACADEMIC_DATABASE</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
@@ -5050,6 +5143,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_NATIONAL_ACADEMIC_DATABASE</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_NATIONAL_ACADEMIC_DATABASE</MovieDefineTag>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_NATIONAL_AQUARIUM</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
@@ -5102,6 +5196,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_NATIONAL_AQUARIUM</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_NATIONAL_AQUA</MovieDefineTag>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_NATIONAL_CENSUS</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
@@ -5141,6 +5236,7 @@
 				<BuildingType>BUILDING_HYPERMARKET</BuildingType>
 			</PrereqOrBuildings>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_NATIONAL_EPIC</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
@@ -5198,6 +5294,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_NATIONAL_EPIC</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_NATIONAL_EPIC</MovieDefineTag>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_NATIONAL_FIRE_SERVICE</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
@@ -5246,6 +5343,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_NATIONAL_FIRE_SERVICE</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_NATIONAL_FIRE_SERVICE</MovieDefineTag>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_NATIONAL_LEGAL_DATABASE</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
@@ -5274,6 +5372,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_NATIONAL_LEGAL_DATABASE</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_NATIONAL_LEGAL_DATABASE</MovieDefineTag>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_NATIONAL_LIBRARY_SERVICE</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
@@ -5338,6 +5437,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_NATIONAL_LIBRARY_SERVICE</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_NATIONAL_LIBRARY_SERVICE</MovieDefineTag>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_NATIONAL_MINT</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
@@ -5448,6 +5548,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_NATIONAL_MINT</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_NATIONAL_MINT</MovieDefineTag>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_NATIONAL_PARK</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
@@ -5506,6 +5607,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_NATIONAL_PARK</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_NATIONAL_PARK</MovieDefineTag>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_NATIONAL_SCIENCE_FOUNDATION</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
@@ -5546,6 +5648,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_NATIONAL_SCIENCE_FOUNDATION</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_NATIONAL_SCIENCE_FOUNDATION</MovieDefineTag>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_NATIONAL_SMELTER_ALUMINUM</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
@@ -5601,6 +5704,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_NATIONAL_SMELTER_ALUMINUM</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_NATIONAL_SMELTER_ALUMINUM</MovieDefineTag>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_NATIONAL_SMELTER_COPPER</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
@@ -5653,6 +5757,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_NATIONAL_SMELTER_COPPER</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_NATIONAL_SMELTER_COPPER</MovieDefineTag>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_NATIONAL_SMELTER_GOLD</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
@@ -5707,6 +5812,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_NATIONAL_SMELTER_GOLD</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_NATIONAL_SMELTER_GOLD</MovieDefineTag>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_NATIONAL_SMELTER_IRON</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
@@ -5759,6 +5865,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_NATIONAL_SMELTER_IRON</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_NATIONAL_SMELTER_IRON</MovieDefineTag>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_NATIONAL_SMELTER_LEAD</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
@@ -5811,6 +5918,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_NATIONAL_SMELTER_LEAD</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_NATIONAL_SMELTER_LEAD</MovieDefineTag>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_NATIONAL_SMELTER_PLATINUM</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
@@ -5863,6 +5971,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_NATIONAL_SMELTER_PLATINUM</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_NATIONAL_SMELTER_PLATINUM</MovieDefineTag>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_NATIONAL_SMELTER_SILVER</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
@@ -5917,6 +6026,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_NATIONAL_SMELTER_SILVER</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_NATIONAL_SMELTER_SILVER</MovieDefineTag>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_NATIONAL_SMELTER_TIN</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
@@ -5969,6 +6079,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_NATIONAL_SMELTER_TIN</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_NATIONAL_SMELTER_TIN</MovieDefineTag>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_NATIONAL_SMELTER_TITANIUM</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
@@ -6021,6 +6132,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_NATIONAL_SMELTER_TITANIUM</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_NATIONAL_SMELTER_TITANIUM</MovieDefineTag>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_NATIONAL_SPORTS_LEAGUE</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
@@ -6071,6 +6183,7 @@
 			<MovieDefineTag>ART_DEF_MOVIE_NATIONAL_SPORTS_LEAGUE</MovieDefineTag>
 			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_NATIONAL_TV_STATION</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
@@ -6138,6 +6251,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_TVSTATION</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_TVSTATION</MovieDefineTag>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_NATIONAL_WEATHER_SERVICE</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
@@ -6201,6 +6315,7 @@
 			<MovieDefineTag>ART_DEF_MOVIE_NATIONAL_WEATHER_SERVICE</MovieDefineTag>
 			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_NATIONAL_ZOO</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
@@ -6253,6 +6368,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_NATIONAL_ZOO</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_NATIONAL_ZOO</MovieDefineTag>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_ADVANCED_NEUROIMPLANT_EXPORTER</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
@@ -6281,6 +6397,7 @@
 			</PrereqInCityBuildings>
 			<Bonus>BONUS_NEUROIMPLANTS</Bonus>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_NOBLEGARDEN</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
@@ -6342,6 +6459,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_NOBLEGARDEN</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_NOBLEGARDEN</MovieDefineTag>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_LIFE_NONPHOTOSYNTHETIC_PLANTS</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
@@ -6381,6 +6499,7 @@
 			</PrereqInCityBuildings>
 			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_ONLINE_UNIVERSITY</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
@@ -6471,13 +6590,6 @@
 					<iProductionModifier>25</iProductionModifier>
 				</UnitProductionModifier>
 			</UnitProductionModifiers>
-            <PropertyManipulators>
-                <PropertySource>
-                    <PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-                    <PropertyType>PROPERTY_EDUCATION</PropertyType>
-                    <iAmountPerTurn>1</iAmountPerTurn>
-                </PropertySource>
-            </PropertyManipulators>
 			<iOccupationTimeModifier>150</iOccupationTimeModifier>
 			<iNationalCaptureResistanceModifier>30</iNationalCaptureResistanceModifier>
 			<bNeverCapture>1</bNeverCapture>
@@ -6531,6 +6643,7 @@
 			<bNeverCapture>1</bNeverCapture>
 			<ArtDefineTag>ART_DEF_BUILDING_PEGASUS_BREEDER</ArtDefineTag>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_PHOENIX_BREEDER</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
@@ -6576,6 +6689,7 @@
 			<bNeverCapture>1</bNeverCapture>
 			<ArtDefineTag>ART_DEF_BUILDING_PHOENIX_BREEDER</ArtDefineTag>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_POLICE_ACADEMY</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
@@ -6656,6 +6770,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_POLICE_ACADEMY</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_POLICE_ACADEMY</MovieDefineTag>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_PROPAGANDA_NET</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
@@ -6716,6 +6831,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_PROPAGANDA</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_PROPAGANDA</MovieDefineTag>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_QILIN_BREEDER</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
@@ -6761,6 +6877,7 @@
 			<bNeverCapture>1</bNeverCapture>
 			<ArtDefineTag>ART_DEF_BUILDING_QILIN_BREEDER</ArtDefineTag>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_QUETZALCOATL_BREEDER</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
@@ -6806,6 +6923,7 @@
 			<bNeverCapture>1</bNeverCapture>
 			<ArtDefineTag>ART_DEF_BUILDING_QUETZALCOATL_BREEDER</ArtDefineTag>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_RADIO_TELESCOPE</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
@@ -6870,6 +6988,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_RADIOTELESCOPE</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_RADIOTELESCOPE</MovieDefineTag>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_NATIONAL_RAILROAD_MUSEUM</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
@@ -6936,6 +7055,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_NATIONAL_RAILROAD_MUSEUM</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_RAILROAD_MUSEUM</MovieDefineTag>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_RAINBOW_SERPENT_BREEDER</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
@@ -6981,6 +7101,7 @@
 			<bNeverCapture>1</bNeverCapture>
 			<ArtDefineTag>ART_DEF_BUILDING_RAINBOW_SERPENT_BREEDER</ArtDefineTag>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_RED_CROSS</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
@@ -7040,6 +7161,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_RED_CROSS</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_RED_CROSS</MovieDefineTag>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_RESEARCH_HOSPITAL</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
@@ -7097,6 +7219,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_RESEARCH_HOSPITAL</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_RESEARCH_HOSPITAL</MovieDefineTag>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_RESEARCH_INSTITUTE</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
@@ -7173,6 +7296,7 @@
 			<MovieDefineTag>ART_DEF_MOVIE_RUSSIAN_RESEARCH_INSTITUTE</MovieDefineTag>
 			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_SECRET_ARMY_BASE</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
@@ -7233,6 +7357,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_AREA51</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_SECRET_ARMY_BASE</MovieDefineTag>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_SEMANTIC_WEB</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
@@ -7272,6 +7397,7 @@
 			</PrereqInCityBuildings>
 			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_SOCIAL_CREDIT_SYSTEM</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
@@ -7303,6 +7429,7 @@
 			</PrereqInCityBuildings>
 			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_SPACE_LABORATORY</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
@@ -7363,6 +7490,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_SPACE_LABORATORY</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_SPACE_LABORATORY</MovieDefineTag>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_SPY_TRAINING_FACILITY</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
@@ -7420,6 +7548,7 @@
 			<bNeverCapture>1</bNeverCapture>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_STATUE_OF_CHAMPION</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
@@ -7489,6 +7618,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_KINGS_SAGA</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_KINGS_SAGA</MovieDefineTag>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_STRATEGIC_GRAIN_RESERVE</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
@@ -7555,6 +7685,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_STRATEGIC_GRAIN_RESERVE</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_STRATEGIC_GRAIN_RESERVE</MovieDefineTag>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_LIFE_STRUCTURAL_BACTERIA</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
@@ -7581,6 +7712,7 @@
 			</PrereqAmountBuildings>
 			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_SUPERCOLLIDER</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
@@ -7634,6 +7766,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_SUPERCOLLIDER</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_SUPERCOLLIDER</MovieDefineTag>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_SUPREME_COURT</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
@@ -7699,6 +7832,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_SUPREME_COURT</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_SUPREME_COURT</MovieDefineTag>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_TEMPLE_OF_ISIS</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
@@ -7773,6 +7907,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_EGYPTIAN_MYTH_ISIS</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_EGYPTIAN_MYTH_ISIS</MovieDefineTag>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_TEMPLE_OF_OSIRIS</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
@@ -7854,6 +7989,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_EGYPTIAN_MYTH_OSIRIS</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_EGYPTIAN_MYTH_OSIRIS</MovieDefineTag>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_TEMPLE_OF_SETH</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
@@ -7929,6 +8065,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_EGYPTIAN_MYTH_SET</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_EGYPTIAN_MYTH_SET</MovieDefineTag>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_TIME_ZONES</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
@@ -7978,6 +8115,7 @@
 			</PrereqOrBuildings>
 			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_ROYAL_TOMB</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
@@ -8080,6 +8218,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_ROYAL_TOMB</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_TOMB</MovieDefineTag>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_TOXIC_WASTE_DUMP</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
@@ -8129,6 +8268,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_TOXIC_WASTE_DUMP</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_TOXIC_WASTE_DUMP</MovieDefineTag>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_TRAVEL_AGENCY</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
@@ -8273,6 +8413,7 @@
 			<MovieDefineTag>ART_DEF_MOVIE_TRAVEL_AGENCY</MovieDefineTag>
 			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_TREASURY</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
@@ -8316,6 +8457,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_TREASURY</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_TREASURY</MovieDefineTag>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_TRIUMPH_COLUMN</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
@@ -8371,6 +8513,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_TRIUMPH_COLUMN</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_COLUMN</MovieDefineTag>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_UN_MISSION</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
@@ -8406,6 +8549,7 @@
 			<MovieDefineTag>ART_DEF_MOVIE_UN_MISSION</MovieDefineTag>
 			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_WORLD_BANK</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
@@ -8459,5 +8603,6 @@
 			<ArtDefineTag>ART_DEF_BUILDING_WORLD_BANK</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_WORLD_BANK</MovieDefineTag>
 		</BuildingInfo>
+
 	</BuildingInfos>
 </Civ4BuildingInfos>
