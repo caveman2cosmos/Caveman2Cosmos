@@ -2446,6 +2446,7 @@ public:
 
 	void changeExtraCaptureResistanceModifier(int iChange);
 	int captureResistanceTotal() const;
+	int surroundedCaptureModifier() const;
 
 	void changeExtraBreakdownChance(int iChange);
 	int breakdownChanceTotal() const;

@@ -27865,13 +27865,34 @@ bool CvUnitAI::AI_huntRange(int iRange, int iOddsThreshold, bool bStayInBorders,
 
 	foreach_(const CvPlot * plotX, plot()->rect(iRange, iRange))
 	{
+
+        if (AI_getUnitAIType() == UNITAI_HUNTER && getGroup()->getAutomateType() == AUTOMATE_HUNT)
+        {
+            bool hasAnimal = false;
+            foreach_(CvUnit * pUnit, plotX->units())
+            {
+                if (pUnit->isAnimal())
+                {
+                    hasAnimal = true;
+                    break;
+                }
+            }
+            if (!hasAnimal)
+                continue;
+        }
+
 		if (!atPlot(plotX)
-		&& (!bStayInBorders || plotX->getOwner() == getOwner())
-		&& (!plotX->isCity() || bCanCaptureCities)
-		&& AI_plotValid(plotX)
-		&& plotX->isVisibleEnemyUnit(this)
-		&& getGroup()->canEnterPlot(plotX, true)
-		&& generatePath(plotX, 0, true, nullptr, iRange))
+            && (!bStayInBorders || plotX->getOwner() == getOwner())
+            && (!plotX->isCity() || bCanCaptureCities)
+            && AI_plotValid(plotX)
+            && plotX->isVisibleEnemyUnit(this)
+            && getGroup()->canEnterPlot(plotX, true)
+            && generatePath(plotX, 0, true, nullptr, iRange)
+            && (getGroup()->getAutomateType() != AUTOMATE_HUNT
+                   || plotX->getOwner() == getOwner()
+                   || plotX->getOwner() == NO_PLAYER)
+            && (!isAnimal() || AI_getUnitAIType() == UNITAI_HUNTER)
+        )
 		{
 			const int attackOdds = getGroup()->AI_attackOdds(plotX, true);
 
@@ -29853,7 +29874,7 @@ bool CvUnitAI::AI_fulfillPropertyControlNeed()
 		if (score >= 1)
 		{		
 			FAssert(eProperty >= 0 && eProperty < GC.getNumPropertyInfos());
-			score = std::min(score,1000000); // limite arbitraire pour éviter overflow
+			score = std::min(score,1000000); // limite arbitraire pour ï¿½viter overflow
 			propertyScores.push_back(PropertyAmount(eProperty, score));
 			if (score > iBestPropertyScore)
 			{
