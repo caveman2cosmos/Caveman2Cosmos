@@ -484,11 +484,11 @@
 	</Define>
 	<Define>
 		<DefineName>HILLS_EXTRA_DEFENSE</DefineName>
-		<iDefineIntVal>25</iDefineIntVal>
+		<iDefineIntVal>15</iDefineIntVal>
 	</Define>
 	<Define>
 		<DefineName>RIVER_ATTACK_MODIFIER</DefineName>
-		<iDefineIntVal>-25</iDefineIntVal>
+		<iDefineIntVal>-50</iDefineIntVal>
 	</Define>
 	<Define>
 		<DefineName>AMPHIB_ATTACK_MODIFIER</DefineName>
