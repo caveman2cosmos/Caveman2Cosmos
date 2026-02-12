@@ -7504,7 +7504,6 @@
                     <Era>NONE</Era>
                 </TriggerText>
             </TriggerTexts>
-<!--            <EventArt>Art/Event_Images/HappyHuntingEvent.dds</EventArt>-->
             <iPercentGamesActive>100</iPercentGamesActive>
             <iWeight>20</iWeight>
             <iAngry>-1</iAngry>
@@ -7537,7 +7536,6 @@
                     <Era>NONE</Era>
                 </TriggerText>
             </TriggerTexts>
-<!--            <EventArt>Art/Event_Images/HappyHuntingEvent.dds</EventArt>-->
             <iPercentGamesActive>100</iPercentGamesActive>
             <iWeight>5</iWeight>
             <iAngry>-1</iAngry>
