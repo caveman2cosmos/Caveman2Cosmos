@@ -21,6 +21,39 @@ def init():
 	global giDomainLand
 	giDomainLand = GC.getInfoTypeForString('DOMAIN_LAND')
 
+def getSurroundBonus(defender):
+    """
+    Counts the number of surrounding enemy tiles and returns a bonus
+    (e.g., 10 per enemy tile).
+    """
+    # used for checking if its called
+    # CvUtil.sendMessage("getSurroundBonus called!", GAME.getActivePlayer(), 0, '', ColorTypes(7), 0, 0, True, True)
+    iSurroundCount = -1
+    pPlot = defender.plot()
+
+    for dx in [-1, 0, 1]:
+        for dy in [-1, 0, 1]:
+            if dx == 0 and dy == 0:
+                continue  # skip defender's own tile
+            x = pPlot.getX() + dx
+            y = pPlot.getY() + dy
+
+            if 0 <= x < GC.getMap().getGridWidth() and 0 <= y < GC.getMap().getGridHeight():
+                plotX = GC.getMap().plot(x, y)
+
+                for i in range(plotX.getNumUnits()):
+                    unitX = plotX.getUnit(i)
+                    # enemy check — is at war with defender
+                    if unitX.getTeam() != defender.getTeam() and GC.getTeam(unitX.getTeam()).isAtWar(defender.getTeam()):
+                        iSurroundCount += 1
+                        break  # only count one per tile
+
+    # used for debug checking if suround count works good
+    # CvUtil.sendMessage("Surround count: %d" % iSurroundCount, GAME.getActivePlayer(), 0, '', ColorTypes(7), 0, 0, True, True)
+    surroundBonus = iSurroundCount * 5
+    return surroundBonus
+
+
 def onCombatResult(argsList):
 	CyUnitW, CyUnitL = argsList
 
@@ -29,9 +62,11 @@ def onCombatResult(argsList):
 	if (CyUnitW.isMadeAttack() and not CyUnitL.isAnimal() and CyUnitL.getDomainType() == giDomainLand
 	and CyUnitW.getDomainType() == giDomainLand and CyUnitL.getCaptureUnitType() == -1
 	):
-		iCaptureProbability = CyUnitW.captureProbabilityTotal()
+		iCaptureProbability = CyUnitW.captureProbabilityTotal() + getSurroundBonus(CyUnitL)
 		iCaptureResistance = CyUnitL.captureResistanceTotal()
+
 		iChance = iCaptureProbability - iCaptureResistance
+
 		BugUtil.info("CaptureSlaves: Chance to capture a captive is %d (%d - %d)", iChance, iCaptureProbability, iCaptureResistance)
 
 		if iChance > GAME.getSorenRandNum(100, "Slave"):  # 0-99
