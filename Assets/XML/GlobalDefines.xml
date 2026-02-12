@@ -684,11 +684,11 @@
 	</Define>
 	<Define>
 		<DefineName>FORTIFY_MODIFIER_PER_TURN</DefineName>
-		<iDefineIntVal>5</iDefineIntVal>
+		<iDefineIntVal>2</iDefineIntVal>
 	</Define>
 	<Define>
 		<DefineName>MAX_FORTIFY_TURNS</DefineName>
-		<iDefineIntVal>5</iDefineIntVal>
+		<iDefineIntVal>15</iDefineIntVal>
 	</Define>
 	<Define>
 		<DefineName>WW_UNIT_KILLED_ATTACKING</DefineName>
