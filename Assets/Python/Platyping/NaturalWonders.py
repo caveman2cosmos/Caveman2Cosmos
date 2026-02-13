@@ -11,6 +11,7 @@ class NaturalWonders:
         self.lBigWonder = ["FEATURE_PLATY_GREAT_BARRIER"]	## List of Natural Wonders that occupy 2 Tiles
         self.lLatitude = [("FEATURE_PLATY_AURORA", 70, 90)]	## Min Latitude, Max Latitude
         self.discoveredWonders = {}
+        self.pendingCulture = []
 
     def placeNaturalWonders(self):
         MAP = GC.getMap()
@@ -84,6 +85,12 @@ class NaturalWonders:
 
 
     def checkReveal(self, pPlot, iTeam):
+        for iP, c in self.pendingCulture[:]:  # iterate a copy
+            player = GC.getPlayer(iP)
+            city = player.getCapitalCity()
+            if city:
+                city.changeCulture(iP, c, True)
+                self.pendingCulture.remove((iP, c))
 
         iFeature = pPlot.getFeatureType()
         if iFeature == -1: return
@@ -151,6 +158,8 @@ class NaturalWonders:
                 pCapital = CyPlayer.getCapitalCity()
                 if pCapital:
                     pCapital.changeCulture(iPlayerX, iCulture, True)
+                else:
+                    self.pendingCulture.append((iPlayerX, iCulture))
                 # Message about culture gain
                 if iPlayerX == iPlayerAct:
                     CvUtil.sendMessage(TRNSLTR.getText("TXT_KEY_FIRST_FOUND_WONDER",(iCulture,)), iPlayerX, 12, None, ColorTypes(44), bForce=False)

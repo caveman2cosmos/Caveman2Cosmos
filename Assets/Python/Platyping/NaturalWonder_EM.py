@@ -9,11 +9,12 @@
 from CvPythonExtensions import *
 import NaturalWonders
 
-def onPlotRevealed(argsList):
-	pPlot = argsList[0]
-	iTeam = argsList[1]
+g_NaturalWonders = NaturalWonders.NaturalWonders()
 
-	NaturalWonders.NaturalWonders().checkReveal(pPlot, iTeam)
+def onPlotRevealed(argsList):
+    pPlot = argsList[0]
+    iTeam = argsList[1]
+    g_NaturalWonders.checkReveal(pPlot, iTeam)
 
 '''
 def onCityBuilt(argsList):
