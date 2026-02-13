@@ -1778,6 +1778,42 @@ void CvUnit::NotifyEntity(MissionTypes eMission)
 }
 
 
+void CvUnit::doCityPassiveExperience()
+{
+    CvPlot* pPlot = plot();
+    if (pPlot == NULL)
+        return;
+
+    CvCity* pCity = pPlot->getPlotCity();
+    if (pCity == NULL)
+        return;
+
+    if (pCity->getOwner() != getOwner())
+        return;
+
+    for (int iPromotion = 0; iPromotion < GC.getNumPromotionInfos(); iPromotion++)
+    {
+        if (!isHasPromotion((PromotionTypes)iPromotion))
+            continue;
+
+        PromotionLineTypes eLine =
+            GC.getPromotionInfo((PromotionTypes)iPromotion).getPromotionLine();
+
+        if (eLine == GC.getInfoTypeForString("PROMOTIONLINE_BUILD_UP_TEACH"))
+        {
+            changeExperience100(5);
+            return;
+        }
+
+        if (eLine == GC.getInfoTypeForString("PROMOTIONLINE_BUILD_UP_DISEASE_CONTROL"))
+        {
+            changeExperience100(5);
+            return;
+        }
+    }
+}
+
+
 void CvUnit::doTurn()
 {
 	PROFILE("CvUnit::doTurn()");
@@ -1836,32 +1872,8 @@ void CvUnit::doTurn()
 		}
 	}
 
-	CvPlot* pPlot = plot();
-    CvCity* pCity = pPlot->getPlotCity();
-
-    if (pCity != NULL && pCity->getOwner() == getOwner())
-    {
-        // Unit is standing in a city owned by its player
-        for (int iPromotion = 0; iPromotion < GC.getNumPromotionInfos(); iPromotion++)
-        {
-            if (isHasPromotion((PromotionTypes)iPromotion))
-            {
-                PromotionLineTypes eLine = GC.getPromotionInfo((PromotionTypes)iPromotion).getPromotionLine();
-                if (eLine == GC.getInfoTypeForString("PROMOTIONLINE_BUILD_UP_TEACH"))
-                {
-                    // Give passive XP
-                    changeExperience100(5);
-                    break;
-                }
-                if (eLine == GC.getInfoTypeForString("PROMOTIONLINE_BUILD_UP_DISEASE_CONTROL"))
-                {
-                    // Give passive XP
-                    changeExperience100(5);
-                    break;
-                }
-            }
-        }
-    }
+    // function that calculates passive xp in cities for units that provide buildups
+	doCityPassiveExperience();
 
 	if (baseCombatStr() > 0)
 	{
