@@ -8173,11 +8173,11 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_FIRST_FOUND_WONDER</Tag>
-		<English>For your discovery you receive %d1 [ICON_GOLD]!</English>
-		<French>Vous recevez %d1 [ICON_GOLD] pour votre découverte!</French>
-		<German>Die Belohnung für die Entdeckung beträgt %d1 [ICON_GOLD]!</German>
-		<Italian>Per la nuova scoperta, ricevi una ricompensa di %d1 [ICON_GOLD]!</Italian> <!-- Message Log Screen -->
-		<Polish>Za to odkrycie otrzymujesz %d1 [ICON_GOLD]!</Polish>
+		<English>For your discovery you receive %d1 [ICON_CULTURE]!</English>
+		<French>Vous recevez %d1 [ICON_CULTURE] pour votre découverte!</French>
+		<German>Die Belohnung für die Entdeckung beträgt %d1 [ICON_CULTURE]!</German>
+		<Italian>Per la nuova scoperta, ricevi una ricompensa di %d1 [ICON_CULTURE]!</Italian> <!-- Message Log Screen -->
+		<Polish>Za to odkrycie otrzymujesz %d1 [ICON_CULTURE]!</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_FIRST_FRONT_SUPPORT</Tag>
