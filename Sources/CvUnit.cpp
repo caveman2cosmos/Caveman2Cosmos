@@ -1850,13 +1850,13 @@ void CvUnit::doTurn()
                 if (eLine == GC.getInfoTypeForString("PROMOTIONLINE_BUILD_UP_TEACH"))
                 {
                     // Give passive XP
-                    changeExperience100(10);
+                    changeExperience100(5);
                     break;
                 }
                 if (eLine == GC.getInfoTypeForString("PROMOTIONLINE_BUILD_UP_DISEASE_CONTROL"))
                 {
                     // Give passive XP
-                    changeExperience100(10);
+                    changeExperience100(5);
                     break;
                 }
             }
