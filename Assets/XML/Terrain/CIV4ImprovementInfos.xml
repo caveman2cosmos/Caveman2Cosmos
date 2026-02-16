@@ -10286,7 +10286,7 @@
 			</FeatureMakesValids>
 			<ImprovementPillage>IMPROVEMENT_FORTIFIED_CAVE</ImprovementPillage>
 			<ImprovementUpgrade>IMPROVEMENT_FORT</ImprovementUpgrade>
-			<iCulture>3</iCulture>
+			<iCulture>5</iCulture>
 			<iCultureRange>1</iCultureRange>
 			<iUniqueRange>0</iUniqueRange>
 			<bBombardable>1</bBombardable>
@@ -10314,10 +10314,11 @@
 					<bMakesValid>1</bMakesValid>
 				</FeatureMakesValid>
 			</FeatureMakesValids>
-			<iCulture>2</iCulture>
+			<iCulture>5</iCulture>
 			<ImprovementUpgrade>IMPROVEMENT_FORTIFIED_CAVE_WITH_CACHE</ImprovementUpgrade>
 			<iUniqueRange>0</iUniqueRange>
 			<bBombardable>1</bBombardable>
+            <iCultureRange>1</iCultureRange>
 			<bUpgradeRequiresFortify>1</bUpgradeRequiresFortify>
 			<bIsUniversalTradeBonusProvider>1</bIsUniversalTradeBonusProvider>
 			<!-- Trade provider technically necessary otherwise players would need to build palisades on caves tiles w/resources -->
