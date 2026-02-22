@@ -177,6 +177,196 @@
 			<iAIValue>1</iAIValue>
 		</EventInfo>
 
+        <EventInfo>
+            <Type>EVENT_PALISADE_1</Type>
+            <Description>TXT_KEY_EVENT_PALISADE_1</Description>
+            <bPickCity>1</bPickCity>
+            <iGold>-10</iGold>
+            <bGameSpeedScale>1</bGameSpeedScale>
+            <Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
+            <iAIValue>3</iAIValue>
+        </EventInfo>
+
+        <EventInfo>
+            <Type>EVENT_PALISADE_2</Type>
+            <Description>TXT_KEY_EVENT_PALISADE_2</Description>
+            <bPickCity>1</bPickCity>
+            <iGold>-3</iGold>
+            <bGameSpeedScale>1</bGameSpeedScale>
+            <AdditionalEvents>
+                <EventChance>
+                    <Event>EVENT_DESTROY_PALISADE</Event>
+                    <iEventChance>25</iEventChance>
+                </EventChance>
+            </AdditionalEvents>
+            <Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
+            <iAIValue>2</iAIValue>
+        </EventInfo>
+
+        <EventInfo>
+            <Type>EVENT_PALISADE_3</Type>
+            <Description>TXT_KEY_EVENT_PALISADE_3</Description>
+            <bPickCity>1</bPickCity>
+            <iGold>-10</iGold>
+            <bGameSpeedScale>1</bGameSpeedScale>
+            <AdditionalEvents>
+                <EventChance>
+                    <Event>EVENT_DESTROY_PALISADE</Event>
+                    <iEventChance>50</iEventChance>
+                </EventChance>
+            </AdditionalEvents>
+            <Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
+            <iAIValue>1</iAIValue>
+        </EventInfo>
+
+        <EventInfo>
+            <Type>EVENT_DESTROY_PALISADE</Type>
+            <bPickCity>1</bPickCity>
+            <Building>BUILDING_PALISADE</Building>
+            <iBuildingChange>-1</iBuildingChange>
+        </EventInfo>
+
+        <EventInfo>
+            <Type>EVENT_EARTH_WALL_1</Type>
+            <Description>TXT_KEY_EVENT_EARTH_WALL_1</Description>
+            <bPickCity>1</bPickCity>
+            <iGold>-20</iGold>
+            <bGameSpeedScale>1</bGameSpeedScale>
+            <Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
+            <iAIValue>3</iAIValue>
+        </EventInfo>
+
+        <EventInfo>
+            <Type>EVENT_EARTH_WALL_2</Type>
+            <Description>TXT_KEY_EVENT_EARTH_WALL_2</Description>
+            <bPickCity>1</bPickCity>
+            <iGold>-6</iGold>
+            <bGameSpeedScale>1</bGameSpeedScale>
+            <AdditionalEvents>
+                <EventChance>
+                    <Event>EVENT_DESTROY_EARTH_WALL</Event>
+                    <iEventChance>25</iEventChance>
+                </EventChance>
+            </AdditionalEvents>
+            <Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
+            <iAIValue>2</iAIValue>
+        </EventInfo>
+
+        <EventInfo>
+            <Type>EVENT_EARTH_WALL_3</Type>
+            <Description>TXT_KEY_EVENT_EARTH_WALL_3</Description>
+            <bPickCity>1</bPickCity>
+            <AdditionalEvents>
+                <EventChance>
+                    <Event>EVENT_DESTROY_EARTH_WALL</Event>
+                    <iEventChance>50</iEventChance>
+                </EventChance>
+            </AdditionalEvents>
+            <Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
+            <iAIValue>1</iAIValue>
+        </EventInfo>
+
+        <EventInfo>
+            <Type>EVENT_DESTROY_EARTH_WALL</Type>
+            <bPickCity>1</bPickCity>
+            <Building>BUILDING_EARTH_WALL</Building>
+            <iBuildingChange>-1</iBuildingChange>
+        </EventInfo>
+
+        <EventInfo>
+            <Type>EVENT_WALLS_1</Type>
+            <Description>TXT_KEY_EVENT_WALLS_1</Description>
+            <bPickCity>1</bPickCity>
+            <iGold>-40</iGold>
+            <bGameSpeedScale>1</bGameSpeedScale>
+            <Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
+            <iAIValue>3</iAIValue>
+        </EventInfo>
+
+        <EventInfo>
+            <Type>EVENT_WALLS_2</Type>
+            <Description>TXT_KEY_EVENT_WALLS_2</Description>
+            <bPickCity>1</bPickCity>
+            <iGold>-12</iGold>
+            <bGameSpeedScale>1</bGameSpeedScale>
+            <AdditionalEvents>
+                <EventChance>
+                    <Event>EVENT_DESTROY_WALLS</Event>
+                    <iEventChance>25</iEventChance>
+                </EventChance>
+            </AdditionalEvents>
+            <Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
+            <iAIValue>1</iAIValue>
+        </EventInfo>
+
+        <EventInfo>
+            <Type>EVENT_WALLS_3</Type>
+            <Description>TXT_KEY_EVENT_WALLS_3</Description>
+            <bPickCity>1</bPickCity>
+            <AdditionalEvents>
+                <EventChance>
+                    <Event>EVENT_DESTROY_WALLS</Event>
+                    <iEventChance>50</iEventChance>
+                </EventChance>
+            </AdditionalEvents>
+            <Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
+            <iAIValue>2</iAIValue>
+        </EventInfo>
+
+        <EventInfo>
+            <Type>EVENT_DESTROY_WALLS</Type>
+            <bPickCity>1</bPickCity>
+            <Building>BUILDING_WALLS</Building>
+            <iBuildingChange>-1</iBuildingChange>
+        </EventInfo>
+
+        <EventInfo>
+            <Type>EVENT_HIGH_WALLS_1</Type>
+            <Description>TXT_KEY_EVENT_HIGH_WALLS_1</Description>
+            <bPickCity>1</bPickCity>
+            <iGold>-80</iGold>
+            <bGameSpeedScale>1</bGameSpeedScale>
+            <Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
+            <iAIValue>3</iAIValue>
+        </EventInfo>
+
+        <EventInfo>
+            <Type>EVENT_HIGH_WALLS_2</Type>
+            <Description>TXT_KEY_EVENT_HIGH_WALLS_2</Description>
+            <bPickCity>1</bPickCity>
+            <iGold>-24</iGold>
+            <bGameSpeedScale>1</bGameSpeedScale>
+            <AdditionalEvents>
+                <EventChance>
+                    <Event>EVENT_DESTROY_HIGH_WALLS</Event>
+                    <iEventChance>25</iEventChance>
+                </EventChance>
+            </AdditionalEvents>
+            <Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
+            <iAIValue>2</iAIValue>
+        </EventInfo>
+
+        <EventInfo>
+            <Type>EVENT_HIGH_WALLS_3</Type>
+            <Description>TXT_KEY_EVENT_HIGH_WALLS_3</Description>
+            <bPickCity>1</bPickCity>
+            <AdditionalEvents>
+                <EventChance>
+                    <Event>EVENT_DESTROY_HIGH_WALLS</Event>
+                    <iEventChance>50</iEventChance>
+                </EventChance>
+            </AdditionalEvents>
+            <Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
+            <iAIValue>1</iAIValue>
+        </EventInfo>
+
+        <EventInfo>
+            <Type>EVENT_DESTROY_HIGH_WALLS</Type>
+            <bPickCity>1</bPickCity>
+            <Building>BUILDING_HIGH_WALLS</Building>
+            <iBuildingChange>-1</iBuildingChange>
+        </EventInfo>
+
 		<EventInfo>
 			<Type>EVENT_GREAT_STORY_1</Type>
 			<Description>TXT_KEY_EVENT_GREAT_STORY_1</Description>
@@ -597,6 +787,7 @@
             <Type>EVENT_FISH_FOUND_2</Type>
             <Description>TXT_KEY_EVENT_FISH_FOUND_2</Description>
             <bPickCity>1</bPickCity>
+            <PrereqTech>TECH_BARTER</PrereqTech>
             <iFood>20</iFood>
             <iGold>15</iGold>
             <Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
@@ -616,6 +807,7 @@
             <Type>EVENT_WHALE_FOUND_2</Type>
             <Description>TXT_KEY_EVENT_WHALE_FOUND_2</Description>
             <bPickCity>1</bPickCity>
+            <PrereqTech>TECH_BARTER</PrereqTech>
             <iFood>40</iFood>
             <iGold>40</iGold>
             <Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
@@ -2856,6 +3048,38 @@
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<iAIValue>1</iAIValue>
 		</EventInfo>
+
+        <EventInfo>
+            <Type>EVENT_STONE_TOOL_MAKER_1</Type>
+            <Description>TXT_KEY_EVENT_STONE_TOOL_MAKER_1</Description>
+            <bPickCity>1</bPickCity>
+            <iGold>-25</iGold>
+            <bGameSpeedScale>1</bGameSpeedScale>
+            <BuildingExtraYields>
+                <BuildingExtraYield>
+                    <Building>BUILDING_STONE_TOOL_MAKER</Building>
+                    <YieldType>YIELD_PRODUCTION</YieldType>
+                    <iExtraYield>2</iExtraYield>
+                </BuildingExtraYield>
+            </BuildingExtraYields>
+            <Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
+            <iAIValue>2</iAIValue>
+        </EventInfo>
+
+        <EventInfo>
+            <Type>EVENT_STONE_TOOL_MAKER_2</Type>
+            <Description>TXT_KEY_EVENT_STONE_TOOL_MAKER_2</Description>
+            <bPickCity>1</bPickCity>
+            <BuildingExtraYields>
+                <BuildingExtraYield>
+                    <Building>BUILDING_STONE_TOOL_MAKER</Building>
+                    <YieldType>YIELD_PRODUCTION</YieldType>
+                    <iExtraYield>1</iExtraYield>
+                </BuildingExtraYield>
+            </BuildingExtraYields>
+            <Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
+            <iAIValue>1</iAIValue>
+        </EventInfo>
 
 		<EventInfo>
 			<Type>EVENT_GOLD_RUSH_1</Type>
@@ -7455,6 +7679,7 @@
             <Description>TXT_KEY_EVENT_SMALL_EARTHQUAKE_1</Description>
             <bPickCity>1</bPickCity>
             <PythonCallback>doEarthquakeSmall</PythonCallback>
+            <PythonCanDo>canDoEarthquake</PythonCanDo>
             <Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
             <iAIValue>1</iAIValue>
         </EventInfo>
@@ -7464,6 +7689,7 @@
             <Description>TXT_KEY_EVENT_MEDIUM_EARTHQUAKE_1</Description>
             <bPickCity>1</bPickCity>
             <PythonCallback>doEarthquakeMedium</PythonCallback>
+            <PythonCanDo>canDoEarthquake</PythonCanDo>
             <Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
             <iAIValue>1</iAIValue>
         </EventInfo>
@@ -7473,6 +7699,7 @@
             <Description>TXT_KEY_EVENT_STRONG_EARTHQUAKE_1</Description>
             <bPickCity>1</bPickCity>
             <PythonCallback>doEarthquakeStrong</PythonCallback>
+            <PythonCanDo>canDoEarthquake</PythonCanDo>
             <Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
             <iAIValue>1</iAIValue>
         </EventInfo>
@@ -7482,6 +7709,7 @@
             <Description>TXT_KEY_EVENT_HUGE_EARTHQUAKE_1</Description>
             <bPickCity>1</bPickCity>
             <PythonCallback>doEarthquakeHuge</PythonCallback>
+            <PythonCanDo>canDoEarthquake</PythonCanDo>
             <Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
             <iAIValue>1</iAIValue>
         </EventInfo>
@@ -7491,6 +7719,7 @@
             <Description>TXT_KEY_EVENT_APOCALYPTIC_EARTHQUAKE_1</Description>
             <bPickCity>1</bPickCity>
             <PythonCallback>doEarthquakeApocalyptic</PythonCallback>
+            <PythonCanDo>canDoEarthquake</PythonCanDo>
             <Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
             <iAIValue>1</iAIValue>
         </EventInfo>
@@ -10660,6 +10889,15 @@
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<iAIValue>1</iAIValue>
 		</EventInfo>
+
+        <EventInfo>
+            <Type>EVENT_SCAVENGING</Type>
+            <Description>TXT_KEY_EVENT_SCAVENGING</Description>
+            <Tech>TECH_SCAVENGING</Tech>
+            <iTechPercent>70</iTechPercent>
+            <Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
+            <iAIValue>1</iAIValue>
+        </EventInfo>
 
 		<EventInfo>
 			<Type>EVENT_KNOWLEDGE_INHERITANCE_1</Type>

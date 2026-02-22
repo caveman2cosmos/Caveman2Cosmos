@@ -26,6 +26,32 @@
 		-->
 
         <EventTriggerInfo>
+            <Type>EVENTTRIGGER_SCAVENGING</Type>
+            <WorldNewsTexts>
+                <Text>TXT_KEY_EVENTTRIGGER_SCAVENGING</Text>
+            </WorldNewsTexts>
+            <TriggerTexts>
+                <TriggerText>
+                    <Text>TXT_KEY_EVENT_TRIGGER_SCAVENGING</Text>
+                    <Era>NONE</Era>
+                </TriggerText>
+            </TriggerTexts>
+            <iPercentGamesActive>100</iPercentGamesActive>
+            <iWeight>20</iWeight>
+            <bProbabilityUnitMultiply>1</bProbabilityUnitMultiply>
+            <UnitsRequired>
+                <UnitType>UNIT_WANDERER</UnitType>
+            </UnitsRequired>
+            <iNumUnits>1</iNumUnits>
+            <Events>
+                <Event>EVENT_SCAVENGING</Event>
+            </Events>
+            <ObsoleteTechs>
+                <ObsoleteTech>TECH_SCAVENGING</ObsoleteTech>
+            </ObsoleteTechs>
+        </EventTriggerInfo>
+
+        <EventTriggerInfo>
             <Type>EVENTTRIGGER_PRIME_STUD</Type>
             <TriggerTexts>
                 <TriggerText>
@@ -2485,6 +2511,36 @@
 		<!--
 		Events that happen only one time in the game
 		-->
+
+        <EventTriggerInfo>
+            <Type>EVENTTRIGGER_STONE_TOOL_MAKER</Type>
+            <WorldNewsTexts>
+                <Text>TXT_KEY_EVENTTRIGGER_STONE_TOOL_MAKER</Text>
+            </WorldNewsTexts>
+            <TriggerTexts>
+                <TriggerText>
+                    <Text>TXT_KEY_EVENT_TRIGGER_STONE_TOOL_MAKER_1</Text>
+                    <Era>NONE</Era>
+                </TriggerText>
+            </TriggerTexts>
+            <iPercentGamesActive>100</iPercentGamesActive>
+            <iWeight>10</iWeight>
+            <bProbabilityBuildingMultiply>1</bProbabilityBuildingMultiply>
+            <BuildingsRequired>
+                <Building>BUILDING_STONE_TOOL_MAKER</Building>
+            </BuildingsRequired>
+            <BonusesRequired>
+                <BonusType>BONUS_STONE</BonusType>
+            </BonusesRequired>
+            <iNumBuildings>1</iNumBuildings>
+            <bOwnPlot>1</bOwnPlot>
+            <Events>
+                <Event>EVENT_STONE_TOOL_MAKER_1</Event>
+                <Event>EVENT_STONE_TOOL_MAKER_2</Event>
+            </Events>
+            <bGlobal>1</bGlobal>
+            <bPickCity>1</bPickCity>
+        </EventTriggerInfo>
 
         <EventTriggerInfo>
             <Type>EVENTTRIGGER_ICE_SCULPTURE</Type>
@@ -7253,6 +7309,118 @@
 		<!--
         Recurring regular events
         -->
+
+        <EventTriggerInfo>
+            <Type>EVENTTRIGGER_PALISADE</Type>
+            <WorldNewsTexts>
+                <Text>TXT_KEY_EVENTTRIGGER_PALISADE</Text>
+            </WorldNewsTexts>
+            <TriggerTexts>
+                <TriggerText>
+                    <Text>TXT_KEY_EVENT_TRIGGER_PALISADE_1</Text>
+                    <Era>NONE</Era>
+                </TriggerText>
+            </TriggerTexts>
+            <iPercentGamesActive>100</iPercentGamesActive>
+            <iWeight>3</iWeight>
+            <bProbabilityBuildingMultiply>1</bProbabilityBuildingMultiply>
+            <BuildingsRequired>
+                <Building>BUILDING_PALISADE</Building>
+            </BuildingsRequired>
+            <iNumBuildings>1</iNumBuildings>
+            <iNumPlotsRequired>1</iNumPlotsRequired>
+            <bOwnPlot>1</bOwnPlot>
+            <Events>
+                <Event>EVENT_PALISADE_1</Event>
+                <Event>EVENT_PALISADE_2</Event>
+                <Event>EVENT_PALISADE_3</Event>
+            </Events>
+            <bRecurring>1</bRecurring>
+        </EventTriggerInfo>
+
+        <EventTriggerInfo>
+            <Type>EVENTTRIGGER_EARTH_WALL</Type>
+            <WorldNewsTexts>
+                <Text>TXT_KEY_EVENTTRIGGER_EARTH_WALL</Text>
+            </WorldNewsTexts>
+            <TriggerTexts>
+                <TriggerText>
+                    <Text>TXT_KEY_EVENT_TRIGGER_EARTH_WALL_1</Text>
+                    <Era>NONE</Era>
+                </TriggerText>
+            </TriggerTexts>
+            <iPercentGamesActive>100</iPercentGamesActive>
+            <iWeight>3</iWeight>
+            <bProbabilityBuildingMultiply>1</bProbabilityBuildingMultiply>
+            <BuildingsRequired>
+                <Building>BUILDING_EARTH_WALL</Building>
+            </BuildingsRequired>
+            <iNumBuildings>1</iNumBuildings>
+            <iNumPlotsRequired>1</iNumPlotsRequired>
+            <bOwnPlot>1</bOwnPlot>
+            <Events>
+                <Event>EVENT_EARTH_WALL_1</Event>
+                <Event>EVENT_EARTH_WALL_2</Event>
+                <Event>EVENT_EARTH_WALL_3</Event>
+            </Events>
+            <bRecurring>1</bRecurring>
+        </EventTriggerInfo>
+
+        <EventTriggerInfo>
+            <Type>EVENTTRIGGER_WALLS</Type>
+            <WorldNewsTexts>
+                <Text>TXT_KEY_EVENTTRIGGER_WALLS</Text>
+            </WorldNewsTexts>
+            <TriggerTexts>
+                <TriggerText>
+                    <Text>TXT_KEY_EVENT_TRIGGER_WALLS_1</Text>
+                    <Era>NONE</Era>
+                </TriggerText>
+            </TriggerTexts>
+            <iPercentGamesActive>100</iPercentGamesActive>
+            <iWeight>3</iWeight>
+            <bProbabilityBuildingMultiply>1</bProbabilityBuildingMultiply>
+            <BuildingsRequired>
+                <Building>BUILDING_WALLS</Building>
+            </BuildingsRequired>
+            <iNumBuildings>1</iNumBuildings>
+            <iNumPlotsRequired>1</iNumPlotsRequired>
+            <bOwnPlot>1</bOwnPlot>
+            <Events>
+                <Event>EVENT_WALLS_1</Event>
+                <Event>EVENT_WALLS_2</Event>
+                <Event>EVENT_WALLS_3</Event>
+            </Events>
+            <bRecurring>1</bRecurring>
+        </EventTriggerInfo>
+
+        <EventTriggerInfo>
+            <Type>EVENTTRIGGER_HIGH_WALLS</Type>
+            <WorldNewsTexts>
+                <Text>TXT_KEY_EVENTTRIGGER_HIGH_WALLS</Text>
+            </WorldNewsTexts>
+            <TriggerTexts>
+                <TriggerText>
+                    <Text>TXT_KEY_EVENT_TRIGGER_HIGH_WALLS_1</Text>
+                    <Era>NONE</Era>
+                </TriggerText>
+            </TriggerTexts>
+            <iPercentGamesActive>100</iPercentGamesActive>
+            <iWeight>3</iWeight>
+            <bProbabilityBuildingMultiply>1</bProbabilityBuildingMultiply>
+            <BuildingsRequired>
+                <Building>BUILDING_HIGH_WALLS</Building>
+            </BuildingsRequired>
+            <iNumBuildings>1</iNumBuildings>
+            <iNumPlotsRequired>1</iNumPlotsRequired>
+            <bOwnPlot>1</bOwnPlot>
+            <Events>
+                <Event>EVENT_HIGH_WALLS_1</Event>
+                <Event>EVENT_HIGH_WALLS_2</Event>
+                <Event>EVENT_HIGH_WALLS_3</Event>
+            </Events>
+            <bRecurring>1</bRecurring>
+        </EventTriggerInfo>
 
 		<EventTriggerInfo>
 			<Type>EVENTTRIGGER_FOREST_FIRE</Type>
@@ -13659,7 +13827,7 @@
         <EventTriggerInfo>
             <Type>EVENTTRIGGER_SMALL_EARTHQUAKE</Type>
             <WorldNewsTexts>
-                <Text>TXT_KEY_EVENTTRIGGER_EARTHQUAKE_2</Text>
+                <Text>TXT_KEY_EVENTTRIGGER_EARTHQUAKE_SMALL</Text>
             </WorldNewsTexts>
             <TriggerTexts>
                 <TriggerText>
@@ -13684,7 +13852,7 @@
         <EventTriggerInfo>
             <Type>EVENTTRIGGER_MEDIUM_EARTHQUAKE</Type>
             <WorldNewsTexts>
-                <Text>TXT_KEY_EVENTTRIGGER_EARTHQUAKE_2</Text>
+                <Text>TXT_KEY_EVENTTRIGGER_EARTHQUAKE_MEDIUM</Text>
             </WorldNewsTexts>
             <TriggerTexts>
                 <TriggerText>
@@ -13709,7 +13877,7 @@
         <EventTriggerInfo>
             <Type>EVENTTRIGGER_STRONG_EARTHQUAKE</Type>
             <WorldNewsTexts>
-                <Text>TXT_KEY_EVENTTRIGGER_EARTHQUAKE_2</Text>
+                <Text>TXT_KEY_EVENTTRIGGER_EARTHQUAKE_STRONG</Text>
             </WorldNewsTexts>
             <TriggerTexts>
                 <TriggerText>
@@ -13734,7 +13902,7 @@
         <EventTriggerInfo>
             <Type>EVENTTRIGGER_HUGE_EARTHQUAKE</Type>
             <WorldNewsTexts>
-                <Text>TXT_KEY_EVENTTRIGGER_EARTHQUAKE_2</Text>
+                <Text>TXT_KEY_EVENTTRIGGER_EARTHQUAKE_HUGE</Text>
             </WorldNewsTexts>
             <TriggerTexts>
                 <TriggerText>
@@ -13759,7 +13927,7 @@
         <EventTriggerInfo>
             <Type>EVENTTRIGGER_APOCALYPTIC_EARTHQUAKE</Type>
             <WorldNewsTexts>
-                <Text>TXT_KEY_EVENTTRIGGER_EARTHQUAKE_2</Text>
+                <Text>TXT_KEY_EVENTTRIGGER_EARTHQUAKE_APOCALYPTIC</Text>
             </WorldNewsTexts>
             <TriggerTexts>
                 <TriggerText>
@@ -14544,7 +14712,7 @@
 		</EventTriggerInfo>
 
 		<EventTriggerInfo>
-			<Type>EVENTTRIGGER_BEAVER_MIGRATION</Type>
+			<Type>EVENTTRIGGER_GUINEA_PIGS_MIGRATION</Type>
 			<WorldNewsTexts>
 				<Text>TXT_KEY_EVENTTRIGGER_GAME_MIGRATION</Text>
 			</WorldNewsTexts>
