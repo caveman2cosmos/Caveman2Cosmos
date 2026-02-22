@@ -588,19 +588,19 @@
 	</Define>
 	<Define>
 		<DefineName>BASE_FREE_UNITS_UPKEEP_CIVILIAN</DefineName>
-		<iDefineIntVal>28</iDefineIntVal>
+		<iDefineIntVal>0</iDefineIntVal>
 	</Define>
 	<Define>
 		<DefineName>BASE_FREE_UNITS_UPKEEP_MILITARY</DefineName>
-		<iDefineIntVal>16</iDefineIntVal>
+		<iDefineIntVal>0</iDefineIntVal>
 	</Define>
 	<Define>
 		<DefineName>BASE_FREE_UNITS_UPKEEP_CIVILIAN_PER_100_POP</DefineName>
-		<iDefineIntVal>-150</iDefineIntVal>
+		<iDefineIntVal>0</iDefineIntVal>
 	</Define>
 	<Define>
 		<DefineName>BASE_FREE_UNITS_UPKEEP_MILITARY_PER_100_POP</DefineName>
-		<iDefineIntVal>-50</iDefineIntVal>
+		<iDefineIntVal>0</iDefineIntVal>
 	</Define>
 	<Define>
 		<DefineName>INITIAL_FREE_OUTSIDE_UNITS</DefineName>
