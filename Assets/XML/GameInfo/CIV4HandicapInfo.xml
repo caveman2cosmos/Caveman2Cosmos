@@ -844,7 +844,7 @@
 					</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
-			<!-- These are game difficulty modifers, not player difficulty modifers and they all affect AI, not human players  -->
+			<!-- These are game difficulty modifiers, not player difficulty modifiers, and they all affect AI, not human players  -->
 			<iAnimalAttackProb>55</iAnimalAttackProb>
 			<iFreeWinsVsBarbs>5</iFreeWinsVsBarbs>
 			<iUnownedWaterTilesPerBarbarianUnit>135</iUnownedWaterTilesPerBarbarianUnit>
@@ -3390,43 +3390,6 @@
 			<iAIPerEraModifier>-5</iAIPerEraModifier>
 			<iAIAdvancedStartPercent>240</iAIAdvancedStartPercent>
 			<Goodies>
-				<!-- Weak Barbs -->
-				<GoodyType>GOODY_BARBARIANS_WEAK</GoodyType>
-				<GoodyType>GOODY_BARBARIANS_ANCIENT_WEAK</GoodyType>
-				<GoodyType>GOODY_BARBARIANS_CLASSICAL_WEAK</GoodyType>
-				<GoodyType>GOODY_BARBARIANS_MEDIEVAL_WEAK</GoodyType>
-				<GoodyType>GOODY_BARBARIANS_RENAISSANCE_WEAK</GoodyType>
-				<GoodyType>GOODY_BARBARIANS_INDUSTRIAL_WEAK</GoodyType>
-				<GoodyType>GOODY_BARBARIANS_MODERN_WEAK</GoodyType>
-				<GoodyType>GOODY_BARBARIANS_INFORMATION_WEAK</GoodyType>
-				<GoodyType>GOODY_BARBARIANS_NANOTECH_WEAK</GoodyType>
-				<GoodyType>GOODY_NAVAL_BARBARIANS_WEAK</GoodyType>
-				<GoodyType>GOODY_NAVAL_BARBARIANS_ANCIENT_WEAK</GoodyType>
-				<GoodyType>GOODY_NAVAL_BARBARIANS_CLASSICAL_WEAK</GoodyType>
-				<GoodyType>GOODY_NAVAL_BARBARIANS_MEDIEVAL_WEAK</GoodyType>
-				<GoodyType>GOODY_NAVAL_BARBARIANS_RENAISSANCE_WEAK</GoodyType>
-<!--				<GoodyType>GOODY_NAVAL_BARBARIANS_INDUSTRIAL_WEAK</GoodyType>-->
-<!--				<GoodyType>GOODY_NAVAL_BARBARIANS_MODERN_WEAK</GoodyType>-->
-<!--				<GoodyType>GOODY_NAVAL_BARBARIANS_NANOTECH_WEAK</GoodyType>-->
-<!--				<GoodyType>GOODY_NAVAL_BARBARIANS_INFORMATION_WEAK</GoodyType>-->
-				<GoodyType>GOODY_BARBARIANS_WEAK</GoodyType>
-				<GoodyType>GOODY_BARBARIANS_ANCIENT_WEAK</GoodyType>
-				<GoodyType>GOODY_BARBARIANS_CLASSICAL_WEAK</GoodyType>
-				<GoodyType>GOODY_BARBARIANS_MEDIEVAL_WEAK</GoodyType>
-				<GoodyType>GOODY_BARBARIANS_RENAISSANCE_WEAK</GoodyType>
-				<GoodyType>GOODY_BARBARIANS_INDUSTRIAL_WEAK</GoodyType>
-				<GoodyType>GOODY_BARBARIANS_MODERN_WEAK</GoodyType>
-				<GoodyType>GOODY_BARBARIANS_INFORMATION_WEAK</GoodyType>
-				<GoodyType>GOODY_BARBARIANS_NANOTECH_WEAK</GoodyType>
-				<GoodyType>GOODY_NAVAL_BARBARIANS_WEAK</GoodyType>
-				<GoodyType>GOODY_NAVAL_BARBARIANS_ANCIENT_WEAK</GoodyType>
-				<GoodyType>GOODY_NAVAL_BARBARIANS_CLASSICAL_WEAK</GoodyType>
-				<GoodyType>GOODY_NAVAL_BARBARIANS_MEDIEVAL_WEAK</GoodyType>
-				<GoodyType>GOODY_NAVAL_BARBARIANS_RENAISSANCE_WEAK</GoodyType>
-<!--				<GoodyType>GOODY_NAVAL_BARBARIANS_INDUSTRIAL_WEAK</GoodyType>-->
-<!--				<GoodyType>GOODY_NAVAL_BARBARIANS_MODERN_WEAK</GoodyType>-->
-<!--				<GoodyType>GOODY_NAVAL_BARBARIANS_NANOTECH_WEAK</GoodyType>-->
-<!--				<GoodyType>GOODY_NAVAL_BARBARIANS_INFORMATION_WEAK</GoodyType>-->
 				<!-- Criminals -->
 				<GoodyType>GOODY_CRIMINAL</GoodyType>
 				<GoodyType>GOODY_ANCIENT_CRIMINAL</GoodyType>
@@ -3571,8 +3534,6 @@
 				<GoodyType>GOODY_NAVAL_BARBARIANS_RENAISSANCE_VERY_STRONG</GoodyType>
 				<!-- Map -->
 				<GoodyType>GOODY_MAP</GoodyType>
-				<GoodyType>GOODY_MAP</GoodyType>
-				<GoodyType>GOODY_MAP</GoodyType>
 				<!-- Healing -->
 				<GoodyType>GOODY_HEALING</GoodyType>
 				<!-- Healer -->
@@ -3591,59 +3552,15 @@
 				<GoodyType>GOODY_HIGH_RENAISSANCE_EXPERIENCE</GoodyType>
 				<!-- Warrior -->
 				<GoodyType>GOODY_WARRIOR</GoodyType>
-				<GoodyType>GOODY_WARRIOR</GoodyType>
-				<GoodyType>GOODY_STONE_AXEMAN</GoodyType>
 				<GoodyType>GOODY_STONE_AXEMAN</GoodyType>
 				<GoodyType>GOODY_AXEMAN</GoodyType>
-				<GoodyType>GOODY_AXEMAN</GoodyType>
-				<GoodyType>GOODY_STONE_THROWER</GoodyType>
 				<GoodyType>GOODY_STONE_THROWER</GoodyType>
 				<GoodyType>GOODY_ARCHER</GoodyType>
-				<GoodyType>GOODY_ARCHER</GoodyType>
-				<GoodyType>GOODY_COMPOSITE_BOWMAN</GoodyType>
 				<GoodyType>GOODY_COMPOSITE_BOWMAN</GoodyType>
 				<GoodyType>GOODY_HORSEMAN</GoodyType>
-				<GoodyType>GOODY_HORSEMAN</GoodyType>
-				<GoodyType>GOODY_HORSEMAN_CLASSICAL</GoodyType>
 				<GoodyType>GOODY_HORSEMAN_CLASSICAL</GoodyType>
 				<!-- Low Gold -->
 				<GoodyType>GOODY_LOW_GOLD</GoodyType>
-				<GoodyType>GOODY_LOW_GOLD</GoodyType>
-				<GoodyType>GOODY_LOW_GOLD</GoodyType>
-				<GoodyType>GOODY_LOW_GOLD</GoodyType>
-				<GoodyType>GOODY_LOW_GOLD</GoodyType>
-				<GoodyType>GOODY_LOW_ANCIENT_GOLD</GoodyType>
-				<GoodyType>GOODY_LOW_ANCIENT_GOLD</GoodyType>
-				<GoodyType>GOODY_LOW_CLASSICAL_GOLD</GoodyType>
-				<GoodyType>GOODY_LOW_CLASSICAL_GOLD</GoodyType>
-				<GoodyType>GOODY_LOW_MEDIEVAL_GOLD</GoodyType>
-				<GoodyType>GOODY_LOW_MEDIEVAL_GOLD</GoodyType>
-				<GoodyType>GOODY_LOW_RENAISSANCE_GOLD</GoodyType>
-				<GoodyType>GOODY_LOW_RENAISSANCE_GOLD</GoodyType>
-				<GoodyType>GOODY_LOW_INDUSTRIAL_GOLD</GoodyType>
-				<GoodyType>GOODY_LOW_INDUSTRIAL_GOLD</GoodyType>
-				<GoodyType>GOODY_LOW_ATOMIC_GOLD</GoodyType>
-				<GoodyType>GOODY_LOW_ATOMIC_GOLD</GoodyType>
-				<GoodyType>GOODY_LOW_INFORMATION_GOLD</GoodyType>
-				<GoodyType>GOODY_LOW_INFORMATION_GOLD</GoodyType>
-				<GoodyType>GOODY_LOW_NANOTECH_GOLD</GoodyType>
-				<GoodyType>GOODY_LOW_NANOTECH_GOLD</GoodyType>
-				<GoodyType>GOODY_LOW_ANCIENT_GOLD</GoodyType>
-				<GoodyType>GOODY_LOW_ANCIENT_GOLD</GoodyType>
-				<GoodyType>GOODY_LOW_CLASSICAL_GOLD</GoodyType>
-				<GoodyType>GOODY_LOW_CLASSICAL_GOLD</GoodyType>
-				<GoodyType>GOODY_LOW_MEDIEVAL_GOLD</GoodyType>
-				<GoodyType>GOODY_LOW_MEDIEVAL_GOLD</GoodyType>
-				<GoodyType>GOODY_LOW_RENAISSANCE_GOLD</GoodyType>
-				<GoodyType>GOODY_LOW_RENAISSANCE_GOLD</GoodyType>
-				<GoodyType>GOODY_LOW_INDUSTRIAL_GOLD</GoodyType>
-				<GoodyType>GOODY_LOW_INDUSTRIAL_GOLD</GoodyType>
-				<GoodyType>GOODY_LOW_ATOMIC_GOLD</GoodyType>
-				<GoodyType>GOODY_LOW_ATOMIC_GOLD</GoodyType>
-				<GoodyType>GOODY_LOW_INFORMATION_GOLD</GoodyType>
-				<GoodyType>GOODY_LOW_INFORMATION_GOLD</GoodyType>
-				<GoodyType>GOODY_LOW_NANOTECH_GOLD</GoodyType>
-				<GoodyType>GOODY_LOW_NANOTECH_GOLD</GoodyType>
 				<GoodyType>GOODY_LOW_ANCIENT_GOLD</GoodyType>
 				<GoodyType>GOODY_LOW_CLASSICAL_GOLD</GoodyType>
 				<GoodyType>GOODY_LOW_MEDIEVAL_GOLD</GoodyType>
@@ -3654,13 +3571,7 @@
 				<GoodyType>GOODY_LOW_NANOTECH_GOLD</GoodyType>
 				<!-- Low Research -->
 				<GoodyType>GOODY_LOW_RESEARCH</GoodyType>
-				<GoodyType>GOODY_LOW_RESEARCH</GoodyType>
-				<GoodyType>GOODY_LOW_RESEARCH</GoodyType>
-				<GoodyType>GOODY_LOW_RESEARCH</GoodyType>
-				<GoodyType>GOODY_LOW_RESEARCH</GoodyType>
 				<GoodyType>GOODY_LOW_ANCIENT_RESEARCH</GoodyType>
-				<GoodyType>GOODY_LOW_ANCIENT_RESEARCH</GoodyType>
-				<GoodyType>GOODY_LOW_CLASSICAL_RESEARCH</GoodyType>
 				<GoodyType>GOODY_LOW_CLASSICAL_RESEARCH</GoodyType>
 			</Goodies>
 		</HandicapInfo>
