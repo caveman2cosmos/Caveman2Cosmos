@@ -624,7 +624,7 @@
 	</Define>
 	<Define>
 		<DefineName>GOLDEN_AGE_UNITS_MULTIPLIER</DefineName>
-		<iDefineIntVal>1</iDefineIntVal>
+		<iDefineIntVal>0</iDefineIntVal>
 	</Define>
 	<Define>
 		<DefineName>GOLDEN_AGE_LENGTH</DefineName>
@@ -921,7 +921,7 @@
 	</Define>
 	<Define>
 		<DefineName>MULTIPLAYER_WAR_WEARINESS_MODIFIER</DefineName>
-		<iDefineIntVal>0</iDefineIntVal>
+		<iDefineIntVal>1</iDefineIntVal>
 	</Define>
 	<Define>
 		<DefineName>PERCENT_ANGER_DIVISOR</DefineName>
