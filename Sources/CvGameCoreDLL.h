@@ -3,8 +3,8 @@
 #ifndef CvGameCoreDLL_h__
 #define CvGameCoreDLL_h__
 
-
-#define ENABLE_FOGWAR_DECAY
+// todo fix for hotseat
+//#define ENABLE_FOGWAR_DECAY
 //#define NO_CAN_MERGE_BONUS
 
 //
