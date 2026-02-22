@@ -23263,13 +23263,29 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_TRIBAL_GUARDIAN_PEDIA</Tag>
-		<English>The Tribal Guardian protects your capital against all intruders. It refuses to leave the palace of the ruler.</English>
+		<English>The Tribal Guardian protects your capital against all intruders. The ruler finest men.</English>
 		<French>Le Gardien Tribal protège votre capitale contre tous les intrus. Il refuse de quitter le palais du souverain.</French>
 		<German>In einer Umwelt voll wilder Raubtiere und feindlicher Horden konnten die frühen Menschen ihre Lager unmöglich ohne Bewachung zurücklassen. Wenn die Männer der Sippe zur Jagd aufbrachen, mussten einige als Wächter zurückbleiben, um Frauen, Kinder, Alte und Schwache, aber auch Nahrungsvorräte und Ressourcen vor Übergriffen (auch aus den eigenen Reihen) zu schützen.</German>
 		<Italian>Il guardiano tribale protegge la tua capitale dagli intrusi; si rifiuta di abbandonare il palazzo del capo.</Italian>
 		<Polish>Gwardia (w&#179;. guardia - stra&#191;) - pocz&#185;tkowo stra&#191; przyboczna monarchy lub wodza, p&#243;&#159;niej doborowe oddzia&#179;y liniowe. Stacjonowa&#179;y g&#179;&#243;wnie w stolicy pa&#241;stwa.</Polish>
 		<Russian>Ïëåìåííîé Ñòðàæ çàùèùàåò ñâîþ ñòîëèöó îò âñåõ çëîóìûøëåííèêîâ. Îí îòêàçûâàåòñÿ ïîêèäàòü äâîðåö ïðàâèòåëÿ.</Russian>
 		<Spanish>El Guardián tribal protege tu capital de los intrusos. Él rehúsa abandonar el palacio del líder.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_PALACE_GUARD</Tag>
+		<English>Palace Guard</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_PALACE_GUARD_PEDIA</Tag>
+		<English>The Palace guard protects your capital against all intruders. The ruler finest men.</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_KINGS_GUARD</Tag>
+		<English>Kings Guard</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_KINGS_GUARD_PEDIA</Tag>
+		<English>The Kings Guard protects your capital against all intruders. The ruler finest men.</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_TRIBE</Tag>

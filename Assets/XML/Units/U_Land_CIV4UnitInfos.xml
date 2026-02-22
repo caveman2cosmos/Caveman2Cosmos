@@ -26549,10 +26549,20 @@
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_TRIBAL_GUARDIAN</Type>
+            <iMaxPlayerInstances>1</iMaxPlayerInstances>
+            <bUnlimitedException>1</bUnlimitedException>
+            <Special>SPECIALUNIT_PEOPLE</Special>
 			<Description>TXT_KEY_UNIT_TRIBAL_GUARDIAN</Description>
 			<Civilopedia>TXT_KEY_UNIT_TRIBAL_GUARDIAN_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<Combat>UNITCOMBAT_LAW_ENFORCEMENT</Combat>
+            <PrereqTech>TECH_HARD_HAMMER_PERCUSSION</PrereqTech>
+            <UnitAIs>
+                <UnitAI>
+                    <UnitAIType>UNITAI_CITY_DEFENSE</UnitAIType>
+                    <bUnitAI>1</bUnitAI>
+                </UnitAI>
+            </UnitAIs>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MELEE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
@@ -26569,7 +26579,11 @@
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
 				<SubCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</SubCombatType>
 			</SubCombatTypes>
-			<Domain>DOMAIN_IMMOBILE</Domain>
+			<Domain>DOMAIN_LAND</Domain>
+            <ObsoleteTech>TECH_SEDENTARY_LIFESTYLE</ObsoleteTech>
+            <MapCategoryTypes>
+                <MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+            </MapCategoryTypes>
 			<DefaultUnitAI>UNITAI_PROPERTY_CONTROL</DefaultUnitAI>
 			<UnitAIs>
 				<UnitAI>
@@ -26582,11 +26596,11 @@
 			<bMilitarySupport>1</bMilitarySupport>
 			<bMilitaryProduction>1</bMilitaryProduction>
 			<UnitUpgrades>
-				<UnitType>UNIT_ENFORCERS</UnitType>
-				<UnitType>UNIT_NEANDERTHAL_TRIBAL_GUARDIAN</UnitType>
+				<UnitType>UNIT_PALACE_GUARDS</UnitType>
+                <UnitType>UNIT_NEANDERTHAL_TRIBAL_GUARDIAN</UnitType>
 			</UnitUpgrades>
-			<iCost>-1</iCost>
-			<iBaseUpkeep>1</iBaseUpkeep>
+			<iCost>60</iCost>
+			<iBaseUpkeep>3</iBaseUpkeep>
 			<iMoves>1</iMoves>
 			<iCombat>2</iCombat>
 			<iXPValueAttack>1</iXPValueAttack>
@@ -26594,6 +26608,9 @@
 			<iCityDefense>200</iCityDefense>
 			<iAsset>1</iAsset>
 			<iPower>3</iPower>
+            <PrereqAndBuildings>
+                <BuildingType>BUILDING_PALACE</BuildingType>
+            </PrereqAndBuildings>
 			<UnitMeshGroups>
 				<iGroupSize>3</iGroupSize>
 				<fMaxSpeed>1.75</fMaxSpeed>
@@ -26607,6 +26624,156 @@
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
 		</UnitInfo>
+        <UnitInfo>
+            <Type>UNIT_PALACE_GUARD</Type>
+            <iMaxPlayerInstances>1</iMaxPlayerInstances>
+            <bUnlimitedException>1</bUnlimitedException>
+            <Special>SPECIALUNIT_PEOPLE</Special>
+            <Description>TXT_KEY_UNIT_PALACE_GUARD</Description>
+            <Civilopedia>TXT_KEY_UNIT_PALACE_GUARD_PEDIA</Civilopedia>
+            <Advisor>ADVISOR_MILITARY</Advisor>
+            <Combat>UNITCOMBAT_LAW_ENFORCEMENT</Combat>
+            <PrereqTech>TECH_SEDENTARY_LIFESTYLE</PrereqTech>
+            <UnitAIs>
+                <UnitAI>
+                    <UnitAIType>UNITAI_CITY_DEFENSE</UnitAIType>
+                    <bUnitAI>1</bUnitAI>
+                </UnitAI>
+            </UnitAIs>
+            <SubCombatTypes>
+                <SubCombatType>UNITCOMBAT_MELEE</SubCombatType>
+                <SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
+                <SubCombatType>UNITCOMBAT_SPECIES_HUMAN</SubCombatType>
+                <SubCombatType>UNITCOMBAT_WEAPON_METHOD_HAND_TO_HAND_ONLY</SubCombatType>
+                <SubCombatType>UNITCOMBAT_WEAPON_STYLE_H2H_TWO_HANDED</SubCombatType>
+                <SubCombatType>UNITCOMBAT_WEAPON_STYLE_SIDEARM_PRIMARY_PLUS_SECONDARY</SubCombatType>
+                <SubCombatType>UNITCOMBAT_WEAPON_H2H_CLUB</SubCombatType>
+                <SubCombatType>UNITCOMBAT_WEAPON_SIDEARM_FIST</SubCombatType>
+                <SubCombatType>UNITCOMBAT_ARMOR_LIGHT</SubCombatType>
+                <SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
+                <SubCombatType>UNITCOMBAT_QUALITY_EXCEPTIONAL</SubCombatType>
+                <SubCombatType>UNITCOMBAT_GROUP_SQUAD</SubCombatType>
+                <SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
+                <SubCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</SubCombatType>
+            </SubCombatTypes>
+            <Domain>DOMAIN_LAND</Domain>
+            <UnitUpgrades>
+                <UnitType>UNIT_KINGS_GUARD</UnitType>
+            </UnitUpgrades>
+            <MapCategoryTypes>
+                <MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+            </MapCategoryTypes>
+            <DefaultUnitAI>UNITAI_PROPERTY_CONTROL</DefaultUnitAI>
+            <UnitAIs>
+                <UnitAI>
+                    <UnitAIType>UNITAI_PROPERTY_CONTROL</UnitAIType>
+                    <bUnitAI>1</bUnitAI>
+                </UnitAI>
+            </UnitAIs>
+            <bOnlyDefensive>1</bOnlyDefensive>
+            <bMilitaryHappiness>1</bMilitaryHappiness>
+            <bMilitarySupport>1</bMilitarySupport>
+            <bMilitaryProduction>1</bMilitaryProduction>
+            <iCost>120</iCost>
+            <iBaseUpkeep>4</iBaseUpkeep>
+            <iMoves>1</iMoves>
+            <iCombat>3</iCombat>
+            <iXPValueAttack>1</iXPValueAttack>
+            <iXPValueDefense>2</iXPValueDefense>
+            <iCityDefense>200</iCityDefense>
+            <iAsset>1</iAsset>
+            <iPower>3</iPower>
+            <PrereqAndBuildings>
+                <BuildingType>BUILDING_PALACE</BuildingType>
+            </PrereqAndBuildings>
+            <UnitMeshGroups>
+                <iGroupSize>3</iGroupSize>
+                <fMaxSpeed>1.75</fMaxSpeed>
+                <fPadTime>1</fPadTime>
+                <iMeleeWaveSize>3</iMeleeWaveSize>
+                <iRangedWaveSize>0</iRangedWaveSize>
+                <UnitMeshGroup>
+                    <iRequired>2</iRequired>
+                    <EarlyArtDefineTag>ART_DEF_UNIT_TRIBAL_GUARDIAN</EarlyArtDefineTag>
+                </UnitMeshGroup>
+            </UnitMeshGroups>
+            <FormationType>FORMATION_TYPE_DEFAULT</FormationType>
+        </UnitInfo>
+        <UnitInfo>
+            <Type>UNIT_KINGS_GUARD</Type>
+            <iMaxPlayerInstances>1</iMaxPlayerInstances>
+            <bUnlimitedException>1</bUnlimitedException>
+            <Special>SPECIALUNIT_PEOPLE</Special>
+            <Description>TXT_KEY_UNIT_KINGS_GUARD</Description>
+            <Civilopedia>TXT_KEY_UNIT_KINGS_GUARD_PEDIA</Civilopedia>
+            <Advisor>ADVISOR_MILITARY</Advisor>
+            <Combat>UNITCOMBAT_LAW_ENFORCEMENT</Combat>
+            <PrereqTech>TECH_CLASSICAL_LIFESTYLE</PrereqTech>
+            <UnitAIs>
+                <UnitAI>
+                    <UnitAIType>UNITAI_CITY_DEFENSE</UnitAIType>
+                    <bUnitAI>1</bUnitAI>
+                </UnitAI>
+            </UnitAIs>
+            <SubCombatTypes>
+                <SubCombatType>UNITCOMBAT_MELEE</SubCombatType>
+                <SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
+                <SubCombatType>UNITCOMBAT_SPECIES_HUMAN</SubCombatType>
+                <SubCombatType>UNITCOMBAT_WEAPON_METHOD_HAND_TO_HAND_ONLY</SubCombatType>
+                <SubCombatType>UNITCOMBAT_WEAPON_STYLE_H2H_TWO_HANDED</SubCombatType>
+                <SubCombatType>UNITCOMBAT_WEAPON_STYLE_SIDEARM_PRIMARY_PLUS_SECONDARY</SubCombatType>
+                <SubCombatType>UNITCOMBAT_WEAPON_H2H_CLUB</SubCombatType>
+                <SubCombatType>UNITCOMBAT_WEAPON_SIDEARM_FIST</SubCombatType>
+                <SubCombatType>UNITCOMBAT_ARMOR_LIGHT</SubCombatType>
+                <SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
+                <SubCombatType>UNITCOMBAT_QUALITY_EXCEPTIONAL</SubCombatType>
+                <SubCombatType>UNITCOMBAT_GROUP_SQUAD</SubCombatType>
+                <SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
+                <SubCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</SubCombatType>
+            </SubCombatTypes>
+            <Domain>DOMAIN_LAND</Domain>
+            <UnitUpgrades>
+                <UnitType>UNIT_EARLY_IMP_GUARD</UnitType>
+            </UnitUpgrades>
+            <MapCategoryTypes>
+                <MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+            </MapCategoryTypes>
+            <DefaultUnitAI>UNITAI_PROPERTY_CONTROL</DefaultUnitAI>
+            <UnitAIs>
+                <UnitAI>
+                    <UnitAIType>UNITAI_PROPERTY_CONTROL</UnitAIType>
+                    <bUnitAI>1</bUnitAI>
+                </UnitAI>
+            </UnitAIs>
+            <bOnlyDefensive>1</bOnlyDefensive>
+            <bMilitaryHappiness>1</bMilitaryHappiness>
+            <bMilitarySupport>1</bMilitarySupport>
+            <bMilitaryProduction>1</bMilitaryProduction>
+            <iCost>420</iCost>
+            <iBaseUpkeep>5</iBaseUpkeep>
+            <iMoves>1</iMoves>
+            <iCombat>4</iCombat>
+            <iXPValueAttack>1</iXPValueAttack>
+            <iXPValueDefense>2</iXPValueDefense>
+            <iCityDefense>200</iCityDefense>
+            <iAsset>1</iAsset>
+            <iPower>3</iPower>
+            <PrereqAndBuildings>
+                <BuildingType>BUILDING_PALACE</BuildingType>
+            </PrereqAndBuildings>
+            <UnitMeshGroups>
+                <iGroupSize>3</iGroupSize>
+                <fMaxSpeed>1.75</fMaxSpeed>
+                <fPadTime>1</fPadTime>
+                <iMeleeWaveSize>3</iMeleeWaveSize>
+                <iRangedWaveSize>0</iRangedWaveSize>
+                <UnitMeshGroup>
+                    <iRequired>2</iRequired>
+                    <EarlyArtDefineTag>ART_DEF_UNIT_ROME_PRAETORIAN</EarlyArtDefineTag>
+                </UnitMeshGroup>
+            </UnitMeshGroups>
+            <FormationType>FORMATION_TYPE_DEFAULT</FormationType>
+        </UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_WATCHER</Type>
 			<Special>SPECIALUNIT_PEOPLE</Special>
