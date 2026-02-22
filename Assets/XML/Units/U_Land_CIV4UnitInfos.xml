@@ -34715,8 +34715,6 @@
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
 				<SubCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_HEALS_PEOPLE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_HEALS_ANIMALS</SubCombatType>
-				<SubCombatType>UNITCOMBAT_HEALS_MECHANICAL</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
@@ -34736,16 +34734,6 @@
 				<HealUnitCombatType>
 					<UnitCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</UnitCombatType>
 					<iHeal>5</iHeal>
-					<iAdjacentHeal>0</iAdjacentHeal>
-				</HealUnitCombatType>
-				<HealUnitCombatType>
-					<UnitCombatType>UNITCOMBAT_HEALS_AS_ANIMALS</UnitCombatType>
-					<iHeal>3</iHeal>
-					<iAdjacentHeal>0</iAdjacentHeal>
-				</HealUnitCombatType>
-				<HealUnitCombatType>
-					<UnitCombatType>UNITCOMBAT_HEALS_AS_MECHANICAL</UnitCombatType>
-					<iHeal>2</iHeal>
 					<iAdjacentHeal>0</iAdjacentHeal>
 				</HealUnitCombatType>
 			</HealUnitCombatTypes>
@@ -38959,7 +38947,6 @@
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
 				<SubCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_HEALS_ANIMALS</SubCombatType>
-				<SubCombatType>UNITCOMBAT_HEALS_PEOPLE</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
@@ -38976,11 +38963,6 @@
 				<HealUnitCombatType>
 					<UnitCombatType>UNITCOMBAT_HEALS_AS_ANIMALS</UnitCombatType>
 					<iHeal>5</iHeal>
-					<iAdjacentHeal>0</iAdjacentHeal>
-				</HealUnitCombatType>
-				<HealUnitCombatType>
-					<UnitCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</UnitCombatType>
-					<iHeal>2</iHeal>
 					<iAdjacentHeal>0</iAdjacentHeal>
 				</HealUnitCombatType>
 			</HealUnitCombatTypes>
@@ -39165,7 +39147,6 @@
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
 				<SubCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_HEALS_ANIMALS</SubCombatType>
-				<SubCombatType>UNITCOMBAT_HEALS_PEOPLE</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
@@ -39182,11 +39163,6 @@
 				<HealUnitCombatType>
 					<UnitCombatType>UNITCOMBAT_HEALS_AS_ANIMALS</UnitCombatType>
 					<iHeal>9</iHeal>
-					<iAdjacentHeal>0</iAdjacentHeal>
-				</HealUnitCombatType>
-				<HealUnitCombatType>
-					<UnitCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</UnitCombatType>
-					<iHeal>4</iHeal>
 					<iAdjacentHeal>0</iAdjacentHeal>
 				</HealUnitCombatType>
 			</HealUnitCombatTypes>
@@ -39347,9 +39323,7 @@
 				<SubCombatType>UNITCOMBAT_GROUP_PARTY</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_LARGE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_HEALS_AS_ANIMALS</SubCombatType>
 				<SubCombatType>UNITCOMBAT_HEALS_ANIMALS</SubCombatType>
-				<SubCombatType>UNITCOMBAT_HEALS_PEOPLE</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
@@ -39367,11 +39341,6 @@
 					<UnitCombatType>UNITCOMBAT_HEALS_AS_ANIMALS</UnitCombatType>
 					<iHeal>13</iHeal>
 					<iAdjacentHeal>1</iAdjacentHeal>
-				</HealUnitCombatType>
-				<HealUnitCombatType>
-					<UnitCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</UnitCombatType>
-					<iHeal>6</iHeal>
-					<iAdjacentHeal>0</iAdjacentHeal>
 				</HealUnitCombatType>
 			</HealUnitCombatTypes>
 			<UnitUpgrades>
@@ -39544,9 +39513,7 @@
 				<SubCombatType>UNITCOMBAT_GROUP_PARTY</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_LARGE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_HEALS_AS_ANIMALS</SubCombatType>
 				<SubCombatType>UNITCOMBAT_HEALS_ANIMALS</SubCombatType>
-				<SubCombatType>UNITCOMBAT_HEALS_PEOPLE</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
@@ -39564,11 +39531,6 @@
 					<UnitCombatType>UNITCOMBAT_HEALS_AS_ANIMALS</UnitCombatType>
 					<iHeal>17</iHeal>
 					<iAdjacentHeal>3</iAdjacentHeal>
-				</HealUnitCombatType>
-				<HealUnitCombatType>
-					<UnitCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</UnitCombatType>
-					<iHeal>8</iHeal>
-					<iAdjacentHeal>0</iAdjacentHeal>
 				</HealUnitCombatType>
 			</HealUnitCombatTypes>
 			<UnitUpgrades>
@@ -41301,7 +41263,6 @@
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
 				<SubCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_HEALS_PEOPLE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_HEALS_ANIMALS</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
@@ -41345,11 +41306,6 @@
 				<HealUnitCombatType>
 					<UnitCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</UnitCombatType>
 					<iHeal>3</iHeal>
-					<iAdjacentHeal>0</iAdjacentHeal>
-				</HealUnitCombatType>
-				<HealUnitCombatType>
-					<UnitCombatType>UNITCOMBAT_HEALS_AS_ANIMALS</UnitCombatType>
-					<iHeal>1</iHeal>
 					<iAdjacentHeal>0</iAdjacentHeal>
 				</HealUnitCombatType>
 			</HealUnitCombatTypes>
@@ -41406,7 +41362,6 @@
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
 				<SubCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_HEALS_PEOPLE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_HEALS_ANIMALS</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
@@ -41456,11 +41411,6 @@
 				<HealUnitCombatType>
 					<UnitCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</UnitCombatType>
 					<iHeal>5</iHeal>
-					<iAdjacentHeal>0</iAdjacentHeal>
-				</HealUnitCombatType>
-				<HealUnitCombatType>
-					<UnitCombatType>UNITCOMBAT_HEALS_AS_ANIMALS</UnitCombatType>
-					<iHeal>3</iHeal>
 					<iAdjacentHeal>0</iAdjacentHeal>
 				</HealUnitCombatType>
 			</HealUnitCombatTypes>
@@ -41513,7 +41463,6 @@
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
 				<SubCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_HEALS_PEOPLE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_HEALS_ANIMALS</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
@@ -41563,11 +41512,6 @@
 				<HealUnitCombatType>
 					<UnitCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</UnitCombatType>
 					<iHeal>7</iHeal>
-					<iAdjacentHeal>0</iAdjacentHeal>
-				</HealUnitCombatType>
-				<HealUnitCombatType>
-					<UnitCombatType>UNITCOMBAT_HEALS_AS_ANIMALS</UnitCombatType>
-					<iHeal>4</iHeal>
 					<iAdjacentHeal>0</iAdjacentHeal>
 				</HealUnitCombatType>
 			</HealUnitCombatTypes>
@@ -41620,7 +41564,6 @@
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
 				<SubCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_HEALS_PEOPLE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_HEALS_ANIMALS</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
@@ -41668,11 +41611,6 @@
 				<HealUnitCombatType>
 					<UnitCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</UnitCombatType>
 					<iHeal>9</iHeal>
-					<iAdjacentHeal>0</iAdjacentHeal>
-				</HealUnitCombatType>
-				<HealUnitCombatType>
-					<UnitCombatType>UNITCOMBAT_HEALS_AS_ANIMALS</UnitCombatType>
-					<iHeal>6</iHeal>
 					<iAdjacentHeal>0</iAdjacentHeal>
 				</HealUnitCombatType>
 			</HealUnitCombatTypes>
@@ -41725,7 +41663,6 @@
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
 				<SubCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_HEALS_PEOPLE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_HEALS_ANIMALS</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
@@ -41772,11 +41709,6 @@
 					<UnitCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</UnitCombatType>
 					<iHeal>13</iHeal>
 					<iAdjacentHeal>1</iAdjacentHeal>
-				</HealUnitCombatType>
-				<HealUnitCombatType>
-					<UnitCombatType>UNITCOMBAT_HEALS_AS_ANIMALS</UnitCombatType>
-					<iHeal>9</iHeal>
-					<iAdjacentHeal>0</iAdjacentHeal>
 				</HealUnitCombatType>
 			</HealUnitCombatTypes>
 			<iAsset>6</iAsset>
@@ -41828,7 +41760,6 @@
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
 				<SubCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_HEALS_PEOPLE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_HEALS_ANIMALS</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
@@ -41874,11 +41805,6 @@
 					<UnitCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</UnitCombatType>
 					<iHeal>15</iHeal>
 					<iAdjacentHeal>2</iAdjacentHeal>
-				</HealUnitCombatType>
-				<HealUnitCombatType>
-					<UnitCombatType>UNITCOMBAT_HEALS_AS_ANIMALS</UnitCombatType>
-					<iHeal>11</iHeal>
-					<iAdjacentHeal>0</iAdjacentHeal>
 				</HealUnitCombatType>
 			</HealUnitCombatTypes>
 			<iAsset>7</iAsset>
@@ -41932,7 +41858,6 @@
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
 				<SubCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_HEALS_PEOPLE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_HEALS_ANIMALS</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
@@ -41978,11 +41903,6 @@
 					<UnitCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</UnitCombatType>
 					<iHeal>17</iHeal>
 					<iAdjacentHeal>3</iAdjacentHeal>
-				</HealUnitCombatType>
-				<HealUnitCombatType>
-					<UnitCombatType>UNITCOMBAT_HEALS_AS_ANIMALS</UnitCombatType>
-					<iHeal>13</iHeal>
-					<iAdjacentHeal>0</iAdjacentHeal>
 				</HealUnitCombatType>
 			</HealUnitCombatTypes>
 			<iAsset>8</iAsset>
@@ -42206,7 +42126,7 @@
 				<BuildingType>BUILDING_HEALTHCARE_MEGACOMPLEX</BuildingType>
 			</PrereqOrBuildings>
 			<UnitUpgrades>
-				<UnitType>UNIT_MEDEVAC_DROPSHIP</UnitType>
+				<UnitType>UNIT_EARLY_MEDIVAC</UnitType>
 			</UnitUpgrades>
 			<bOnlyDefensive>1</bOnlyDefensive>
 			<bNoCapture>1</bNoCapture>
@@ -42578,6 +42498,9 @@
 				<BuildingType>BUILDING_MEGATOWER_MEDICAL_LEVEL</BuildingType>
 				<BuildingType>BUILDING_HEALTHCARE_MEGACOMPLEX</BuildingType>
 			</PrereqOrBuildings>
+            <UnitUpgrades>
+                <UnitType>UNIT_MEDEVAC_DROPSHIP</UnitType>
+            </UnitUpgrades>
 			<bOnlyDefensive>1</bOnlyDefensive>
 			<bNoCapture>1</bNoCapture>
 			<bMilitaryProduction>1</bMilitaryProduction>
@@ -47886,8 +47809,6 @@
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
 				<SubCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_HEALS_PEOPLE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_HEALS_ANIMALS</SubCombatType>
-				<SubCombatType>UNITCOMBAT_HEALS_MECHANICAL</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
@@ -47921,16 +47842,6 @@
 				<HealUnitCombatType>
 					<UnitCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</UnitCombatType>
 					<iHeal>10</iHeal>
-					<iAdjacentHeal>0</iAdjacentHeal>
-				</HealUnitCombatType>
-				<HealUnitCombatType>
-					<UnitCombatType>UNITCOMBAT_HEALS_AS_ANIMALS</UnitCombatType>
-					<iHeal>6</iHeal>
-					<iAdjacentHeal>0</iAdjacentHeal>
-				</HealUnitCombatType>
-				<HealUnitCombatType>
-					<UnitCombatType>UNITCOMBAT_HEALS_AS_MECHANICAL</UnitCombatType>
-					<iHeal>4</iHeal>
 					<iAdjacentHeal>0</iAdjacentHeal>
 				</HealUnitCombatType>
 			</HealUnitCombatTypes>
