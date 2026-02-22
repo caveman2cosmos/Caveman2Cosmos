@@ -13,8 +13,8 @@ Good luck! -->
 			<Description>TXT_KEY_ERA_PREHISTORIC</Description>
 			<Strategy>TXT_KEY_ERA_PREHISTORIC_STRATEGY</Strategy>
 			<iAdvancedStartPoints>500</iAdvancedStartPoints>
-			<iStartingUnitMultiplier>1</iStartingUnitMultiplier>
-			<iStartingExploreUnits>1</iStartingExploreUnits>
+			<iStartingUnitMultiplier>0</iStartingUnitMultiplier>
+			<iStartingExploreUnits>0</iStartingExploreUnits>
 			<iStartingGold>10</iStartingGold>
 			<iGrowthPercent>150</iGrowthPercent>
 			<iTrainPercent>100</iTrainPercent>
