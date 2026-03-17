@@ -11141,6 +11141,7 @@
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<PromotionLine>PROMOTIONLINE_PARAMEDIC</PromotionLine>
 			<iLinePriority>1</iLinePriority>
+            <TechPrereq>TECH_BATTLEFIELD_MEDICINE</TechPrereq>
 			<iSameTileHealChange>2</iSameTileHealChange>
 			<Button>Art/Interface/Buttons/Promotions/paramedic1.dds</Button>
 			<iCaptureProbabilityModifierChange>5</iCaptureProbabilityModifierChange>
