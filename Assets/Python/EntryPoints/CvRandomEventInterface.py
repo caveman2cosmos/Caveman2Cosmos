@@ -5046,14 +5046,15 @@ def getHelpEarthquake1(argsList):
 	return TRNSLTR.getText("TXT_KEY_EVENT_EARTHQUAKE_1_HELP", ())
 
 def canApplyEarthquake1(argsList):
-	data = argsList[1]
+    data = argsList[1]
 
-	for iDX in xrange(-1, 2):
-		for iDY in xrange(-1, 2):
-			plotX = plotXY(data.iPlotX, data.iPlotY, iDX, iDY)
-			if plotX and plotX.getImprovementType() != -1:
-				return True
-	return False
+    for iDX in xrange(-1, 2):
+        for iDY in xrange(-1, 2):
+            plotX = plotXY(data.iPlotX, data.iPlotY, iDX, iDY)
+            if plotX and not plotX.isWater():
+                if plotX.getImprovementType() != -1:
+                    return True
+    return False
 
 def applyEarthquake1(argsList):
 	data = argsList[1]
