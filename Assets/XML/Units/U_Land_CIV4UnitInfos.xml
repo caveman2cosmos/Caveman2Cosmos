@@ -1205,12 +1205,12 @@
 			<iXPValueDefense>1</iXPValueDefense>
 			<iPursuit>20</iPursuit>
 			<iCityAttack>-75</iCityAttack>
-			<iAnimalCombat>120</iAnimalCombat>
+			<iAnimalCombat>100</iAnimalCombat>
 			<iEarlyWithdraw>40</iEarlyWithdraw>
 			<UnitCombatMods>
 				<UnitCombatMod>
 					<UnitCombatType>UNITCOMBAT_ANIMAL_COMBAT_FLEEING</UnitCombatType>
-					<iUnitCombatMod>150</iUnitCombatMod>
+					<iUnitCombatMod>100</iUnitCombatMod>
 				</UnitCombatMod>
 				<UnitCombatMod>
 					<UnitCombatType>UNITCOMBAT_ANIMAL_COMBAT_RAGING</UnitCombatType>
