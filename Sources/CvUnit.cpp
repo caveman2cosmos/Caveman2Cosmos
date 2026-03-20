@@ -7409,6 +7409,71 @@ int CvUnit::healRate(const CvPlot* pPlot, bool bHealCheck) const
 		return 0;
 	}
 
+    int iBattlefieldMedicine = GC.getInfoTypeForString("TECH_BATTLEFIELD_MEDICINE");
+
+    if (!GET_TEAM(getTeam()).isFriendlyTerritory(pPlot->getTeam()))
+    {
+        bool bCanHealOutside = false;
+
+        for (int iPromotion = 0; iPromotion < GC.getNumPromotionInfos(); iPromotion++)
+        {
+            if (!isHasPromotion((PromotionTypes)iPromotion))
+                continue;
+
+            PromotionLineTypes eLine =
+                GC.getPromotionInfo((PromotionTypes)iPromotion).getPromotionLine();
+
+            if (eLine == GC.getInfoTypeForString("PROMOTIONLINE_SELF_HEAL") ||
+                eLine == GC.getInfoTypeForString("PROMOTIONLINE_SELF_REPAIR"))
+            {
+                bCanHealOutside = true;
+                break;
+            }
+        }
+
+        if (!bCanHealOutside && !GET_TEAM(getTeam()).isHasTech((TechTypes)iBattlefieldMedicine))
+            {
+                // Check if a healer unit is present on same tile or adjacent
+                bool bHealerPresent = false;
+
+                foreach_(CvUnit* pLoopUnit, pPlot->units())
+                {
+                    if (pLoopUnit->getTeam() == getTeam() && pLoopUnit->hasHealSupportRemaining())
+                    {
+                        if (pLoopUnit->getSameTileHeal() > 0)
+                        {
+                            bHealerPresent = true;
+                            break;
+                        }
+                    }
+                }
+
+                if (!bHealerPresent)
+                {
+                    foreach_(const CvPlot* pLoopPlot, pPlot->adjacent() | filtered(CvPlot::fn::area() == pPlot->area()))
+                    {
+                        foreach_(CvUnit* pLoopUnit, pLoopPlot->units())
+                        {
+                            if (pLoopUnit->getTeam() == getTeam() && pLoopUnit->hasHealSupportRemaining())
+                            {
+                                if (pLoopUnit->getAdjacentTileHeal() > 0)
+                                {
+                                    bHealerPresent = true;
+                                    break;
+                                }
+                            }
+                        }
+                        if (bHealerPresent) break;
+                    }
+                }
+
+                if (!bHealerPresent)
+                {
+                    return 0;
+                }
+            }
+    }
+
 	//Find what will take the longest to heal and use that rate
 	if (m_pUnitInfo->getNumHealAsTypes() > 0)
 	{
@@ -7652,6 +7717,70 @@ int CvUnit::healTurns(const CvPlot* pPlot) const
 	{
 		return 0;
 	}
+
+	int iBattlefieldMedicine = GC.getInfoTypeForString("TECH_BATTLEFIELD_MEDICINE");
+    if (!GET_TEAM(getTeam()).isFriendlyTerritory(pPlot->getTeam()))
+    {
+        bool bCanHealOutside = false;
+
+        for (int iPromotion = 0; iPromotion < GC.getNumPromotionInfos(); iPromotion++)
+        {
+            if (!isHasPromotion((PromotionTypes)iPromotion))
+                continue;
+
+            PromotionLineTypes eLine =
+                GC.getPromotionInfo((PromotionTypes)iPromotion).getPromotionLine();
+
+            if (eLine == GC.getInfoTypeForString("PROMOTIONLINE_SELF_HEAL") ||
+                eLine == GC.getInfoTypeForString("PROMOTIONLINE_SELF_REPAIR"))
+            {
+                bCanHealOutside = true;
+                break;
+            }
+        }
+
+        if (!bCanHealOutside && !GET_TEAM(getTeam()).isHasTech((TechTypes)iBattlefieldMedicine))
+        {
+            bool bHealerPresent = false;
+
+            foreach_(CvUnit* pLoopUnit, pPlot->units())
+            {
+                if (pLoopUnit->getTeam() == getTeam() && pLoopUnit->hasHealSupportRemaining())
+                {
+                    if (pLoopUnit->getSameTileHeal() > 0)
+                    {
+                        bHealerPresent = true;
+                        break;
+                    }
+                }
+            }
+
+            if (!bHealerPresent)
+            {
+                foreach_(const CvPlot* pLoopPlot, pPlot->adjacent() | filtered(CvPlot::fn::area() == pPlot->area()))
+                {
+                    foreach_(CvUnit* pLoopUnit, pLoopPlot->units())
+                    {
+                        if (pLoopUnit->getTeam() == getTeam() && pLoopUnit->hasHealSupportRemaining())
+                        {
+                            if (pLoopUnit->getAdjacentTileHeal() > 0)
+                            {
+                                bHealerPresent = true;
+                                break;
+                            }
+                        }
+                    }
+                    if (bHealerPresent) break;
+                }
+            }
+
+            if (!bHealerPresent)
+            {
+                return 0;
+            }
+        }
+    }
+
 	const int iNumHealAs = m_pUnitInfo->getNumHealAsTypes();
 
 	//Find what will take the longest to heal and use that rate

@@ -31,6 +31,10 @@
 		<Polish>Zbuduj [LINK=IMPROVEMENT_ABATIS_THORN_HEDGE]Zasieki[\LINK]</Polish>
 		<Russian>Ñòðîèòü [LINK=IMPROVEMENT_ABATIS_THORN_HEDGE]Çàñåêó[\LINK] (Ñîáèðàòåëü)</Russian>
 	</TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_BUILD_GATHERING_CAMP_KILL</Tag>
+        <English>Build [LINK=IMPROVEMENT_GATHERING_CAMP]Gathering Camp[\LINK] (Consumed)</English>
+    </TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_AQUATIC_ANTI_AIR_DEFENSE</Tag>
 		<English>Build [LINK=IMPROVEMENT_AQUATIC_ANTI_AIR_DEFENSE]Aquatic Anti-Air Defense[\LINK]</English>
@@ -1280,6 +1284,26 @@
 		<Polish>Zbuduj [LINK=IMPROVEMENT_WOODEN_PALISADE]Drewnian&#185; Palisad&#234;[\LINK]</Polish>
 		<Russian>Ñòðîèòü [LINK=IMPROVEMENT_WOODEN_PALISADE]×àñòîêîë[\LINK] (Ñîáèðàòåëü)</Russian>
 	</TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_BUILD_RESOURCE_OUTPOST_KILL</Tag>
+        <English>Build [LINK=IMPROVEMENT_RESOURCE_OUTPOST]Resource Outpost[\LINK] (Consumed)</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_BUILD_RESOURCE_OUTPOST</Tag>
+        <English>Build [LINK=IMPROVEMENT_RESOURCE_OUTPOST]Resource Outpost[\LINK]</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_BUILD_RESOURCE_SETTLEMENT</Tag>
+        <English>Build [LINK=IMPROVEMENT_RESOURCE_SETTLEMENT]Resource Settlement[\LINK]</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_BUILD_RESOURCE_TOWN</Tag>
+        <English>Build [LINK=IMPROVEMENT_RESOURCE_TOWN]Resource Town[\LINK]</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_BUILD_RESOURCE_COMPLEX</Tag>
+        <English>Build [LINK=IMPROVEMENT_RESOURCE_COMPLEX]Resource Complex[\LINK]</English>
+    </TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_WOODEN_WATCHTOWER</Tag>
 		<English>Build [LINK=IMPROVEMENT_WOODEN_WATCHTOWER]Wooden Watchtower[\LINK]</English>

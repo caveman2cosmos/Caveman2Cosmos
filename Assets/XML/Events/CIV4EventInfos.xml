@@ -19,7 +19,7 @@
 			<WorldNewsTexts>
 				<Text>TXT_KEY_PRIME_STUD</Text>
 			</WorldNewsTexts>
-			<iGold>-50</iGold>
+			<iGold>-25</iGold>
 			<bGameSpeedScale>1</bGameSpeedScale>
 			<BuildingExtraYields>
 				<BuildingExtraYield>
@@ -80,7 +80,7 @@
 		<EventInfo>
 			<Type>EVENT_CHILD_LABOUR_INCIDENT_2</Type>
 			<Description>TXT_KEY_EVENT_CHILD_LABOUR_INCIDENT_2</Description>
-			<iGold>-50</iGold>
+			<iGold>-25</iGold>
 			<bGameSpeedScale>1</bGameSpeedScale>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<iAIValue>1</iAIValue>
@@ -89,7 +89,7 @@
 		<EventInfo>
 			<Type>EVENT_CHILD_LABOUR_INCIDENT_3</Type>
 			<Description>TXT_KEY_EVENT_CHILD_LABOUR_INCIDENT_3</Description>
-			<iGold>-20</iGold>
+			<iGold>-10</iGold>
 			<bGameSpeedScale>1</bGameSpeedScale>
 			<BuildingExtraYields>
 				<BuildingExtraYield>
@@ -119,7 +119,7 @@
 		<EventInfo>
 			<Type>EVENT_WAR_TAXES_2</Type>
 			<Description>TXT_KEY_EVENT_WAR_TAXES_2</Description>
-			<iGold>100</iGold>
+			<iGold>50</iGold>
 			<bGameSpeedScale>1</bGameSpeedScale>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<iAIValue>1</iAIValue>
@@ -141,7 +141,7 @@
 			<Type>EVENT_BONUS_TAX_PREHISTORIC</Type>
 			<Description>TXT_KEY_EVENT_BONUS_TAX_1</Description>
 			<bPickCity>1</bPickCity>
-			<iGold>40</iGold>
+			<iGold>20</iGold>
 			<bGameSpeedScale>1</bGameSpeedScale>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<iAIValue>1</iAIValue>
@@ -151,7 +151,7 @@
 			<Type>EVENT_BONUS_TAX_CLASSIC</Type>
 			<Description>TXT_KEY_EVENT_BONUS_TAX_1</Description>
 			<bPickCity>1</bPickCity>
-			<iGold>120</iGold>
+			<iGold>60</iGold>
 			<bGameSpeedScale>1</bGameSpeedScale>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<iAIValue>1</iAIValue>
@@ -161,7 +161,7 @@
 			<Type>EVENT_BONUS_TAX_MODERN</Type>
 			<Description>TXT_KEY_EVENT_BONUS_TAX_1</Description>
 			<bPickCity>1</bPickCity>
-			<iGold>300</iGold>
+			<iGold>320</iGold>
 			<bGameSpeedScale>1</bGameSpeedScale>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<iAIValue>1</iAIValue>
@@ -181,7 +181,7 @@
             <Type>EVENT_PALISADE_1</Type>
             <Description>TXT_KEY_EVENT_PALISADE_1</Description>
             <bPickCity>1</bPickCity>
-            <iGold>-10</iGold>
+            <iGold>-5</iGold>
             <bGameSpeedScale>1</bGameSpeedScale>
             <Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
             <iAIValue>3</iAIValue>
@@ -191,7 +191,7 @@
             <Type>EVENT_PALISADE_2</Type>
             <Description>TXT_KEY_EVENT_PALISADE_2</Description>
             <bPickCity>1</bPickCity>
-            <iGold>-3</iGold>
+            <iGold>-1</iGold>
             <bGameSpeedScale>1</bGameSpeedScale>
             <AdditionalEvents>
                 <EventChance>
@@ -207,7 +207,6 @@
             <Type>EVENT_PALISADE_3</Type>
             <Description>TXT_KEY_EVENT_PALISADE_3</Description>
             <bPickCity>1</bPickCity>
-            <iGold>-10</iGold>
             <bGameSpeedScale>1</bGameSpeedScale>
             <AdditionalEvents>
                 <EventChance>
@@ -230,7 +229,7 @@
             <Type>EVENT_EARTH_WALL_1</Type>
             <Description>TXT_KEY_EVENT_EARTH_WALL_1</Description>
             <bPickCity>1</bPickCity>
-            <iGold>-20</iGold>
+            <iGold>-10</iGold>
             <bGameSpeedScale>1</bGameSpeedScale>
             <Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
             <iAIValue>3</iAIValue>
@@ -240,7 +239,7 @@
             <Type>EVENT_EARTH_WALL_2</Type>
             <Description>TXT_KEY_EVENT_EARTH_WALL_2</Description>
             <bPickCity>1</bPickCity>
-            <iGold>-6</iGold>
+            <iGold>-2</iGold>
             <bGameSpeedScale>1</bGameSpeedScale>
             <AdditionalEvents>
                 <EventChance>
@@ -277,7 +276,7 @@
             <Type>EVENT_WALLS_1</Type>
             <Description>TXT_KEY_EVENT_WALLS_1</Description>
             <bPickCity>1</bPickCity>
-            <iGold>-40</iGold>
+            <iGold>-20</iGold>
             <bGameSpeedScale>1</bGameSpeedScale>
             <Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
             <iAIValue>3</iAIValue>
@@ -287,7 +286,7 @@
             <Type>EVENT_WALLS_2</Type>
             <Description>TXT_KEY_EVENT_WALLS_2</Description>
             <bPickCity>1</bPickCity>
-            <iGold>-12</iGold>
+            <iGold>-4</iGold>
             <bGameSpeedScale>1</bGameSpeedScale>
             <AdditionalEvents>
                 <EventChance>
@@ -324,7 +323,7 @@
             <Type>EVENT_HIGH_WALLS_1</Type>
             <Description>TXT_KEY_EVENT_HIGH_WALLS_1</Description>
             <bPickCity>1</bPickCity>
-            <iGold>-80</iGold>
+            <iGold>-40</iGold>
             <bGameSpeedScale>1</bGameSpeedScale>
             <Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
             <iAIValue>3</iAIValue>
@@ -334,7 +333,7 @@
             <Type>EVENT_HIGH_WALLS_2</Type>
             <Description>TXT_KEY_EVENT_HIGH_WALLS_2</Description>
             <bPickCity>1</bPickCity>
-            <iGold>-24</iGold>
+            <iGold>-8</iGold>
             <bGameSpeedScale>1</bGameSpeedScale>
             <AdditionalEvents>
                 <EventChance>
@@ -429,7 +428,7 @@
 		<EventInfo>
 			<Type>EVENT_POOR_HARVEST_2</Type>
 			<Description>TXT_KEY_EVENT_POOR_HARVEST_2</Description>
-			<iGold>-50</iGold>
+			<iGold>-25</iGold>
 			<bGameSpeedScale>1</bGameSpeedScale>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<iAIValue>1</iAIValue>
@@ -448,7 +447,7 @@
 		<EventInfo>
 			<Type>EVENT_GREAT_HARVEST_2</Type>
 			<Description>TXT_KEY_EVENT_GREAT_HARVEST_2</Description>
-			<iGold>50</iGold>
+			<iGold>25</iGold>
 			<bGameSpeedScale>1</bGameSpeedScale>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<iAIValue>1</iAIValue>
@@ -457,7 +456,7 @@
 		<EventInfo>
 			<Type>EVENT_FOREST_FIRE_1</Type>
 			<Description>TXT_KEY_EVENT_FOREST_FIRE_1</Description>
-			<iGold>-45</iGold>
+			<iGold>-15</iGold>
 			<bGameSpeedScale>1</bGameSpeedScale>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<iAIValue>2</iAIValue>
@@ -466,7 +465,7 @@
 		<EventInfo>
 			<Type>EVENT_FOREST_FIRE_2</Type>
 			<Description>TXT_KEY_EVENT_FOREST_FIRE_2</Description>
-			<iGold>-15</iGold>
+			<iGold>-5</iGold>
 			<bGameSpeedScale>1</bGameSpeedScale>
 			<FeatureType>FEATURE_FOREST</FeatureType>
 			<iFeatureChange>-1</iFeatureChange>
@@ -507,7 +506,7 @@
 		<EventInfo>
 			<Type>EVENT_FOREST_MASSIVE_WILDFIRE_1</Type>
 			<Description>TXT_KEY_EVENT_FOREST_MASSIVE_WILDFIRE_1</Description>
-			<iGold>-35</iGold>
+			<iGold>-15</iGold>
 			<bGameSpeedScale>1</bGameSpeedScale>
             <FeatureType>FEATURE_FOREST</FeatureType>
             <iFeatureChange>-1</iFeatureChange>
@@ -532,7 +531,7 @@
 		<EventInfo>
 			<Type>EVENT_FOREST_MASSIVE_WILDFIRE_2</Type>
 			<Description>TXT_KEY_EVENT_FOREST_MASSIVE_WILDFIRE_2</Description>
-			<iGold>-15</iGold>
+			<iGold>-5</iGold>
 			<bGameSpeedScale>1</bGameSpeedScale>
 			<FeatureType>FEATURE_FOREST</FeatureType>
 			<iFeatureChange>-1</iFeatureChange>
@@ -697,7 +696,7 @@
 					<iFlavor>1</iFlavor>
 				</TechFlavor>
 			</TechFlavors>
-			<iGold>-300</iGold>
+			<iGold>-150</iGold>
 			<bGameSpeedScale>1</bGameSpeedScale>
 			<iTechPercent>15</iTechPercent>
 			<iTechCostPercent>5</iTechCostPercent>
@@ -767,9 +766,10 @@
 			<Type>EVENT_HAPPY_HUNTING_2</Type>
 			<Description>TXT_KEY_EVENT_HAPPY_HUNTING_2</Description>
 			<bPickCity>1</bPickCity>
-			<iHappyTurns>1</iHappyTurns>
+			<iHappyTurns>2</iHappyTurns>
 			<iFood>100</iFood>
-			<iGold>-25</iGold>
+			<iGold>-5</iGold>
+            <bGameSpeedScale>1</bGameSpeedScale>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<iAIValue>1</iAIValue>
 		</EventInfo>
@@ -789,7 +789,8 @@
             <bPickCity>1</bPickCity>
             <PrereqTech>TECH_BARTER</PrereqTech>
             <iFood>20</iFood>
-            <iGold>15</iGold>
+            <iGold>5</iGold>
+            <bGameSpeedScale>1</bGameSpeedScale>
             <Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
             <iAIValue>1</iAIValue>
         </EventInfo>
@@ -809,7 +810,8 @@
             <bPickCity>1</bPickCity>
             <PrereqTech>TECH_BARTER</PrereqTech>
             <iFood>40</iFood>
-            <iGold>40</iGold>
+            <iGold>10</iGold>
+            <bGameSpeedScale>1</bGameSpeedScale>
             <Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
             <iAIValue>1</iAIValue>
         </EventInfo>
@@ -827,10 +829,11 @@
 		<EventInfo>
 			<Type>EVENT_MOTHER_LODE_GOLD_2</Type>
 			<Description>TXT_KEY_EVENT_MOTHER_LODE_2</Description>
-			<iGold>-200</iGold>
+			<iGold>-100</iGold>
+            <bGameSpeedScale>1</bGameSpeedScale>
 			<AdditionalEvents>
 				<EventChance>
-					<Event>EVENT_MOTHER_LODE_3</Event>
+					<Event>EVENT_MOTHER_LODE_GOLD_3</Event>
 					<iEventChance>50</iEventChance>
 				</EventChance>
 			</AdditionalEvents>
@@ -851,7 +854,8 @@
 		<EventInfo>
 			<Type>EVENT_MOTHER_LODE_SILVER_2</Type>
 			<Description>TXT_KEY_EVENT_MOTHER_LODE_2</Description>
-			<iGold>-200</iGold>
+			<iGold>-100</iGold>
+            <bGameSpeedScale>1</bGameSpeedScale>
 			<AdditionalEvents>
 				<EventChance>
 					<Event>EVENT_MOTHER_LODE_3</Event>
@@ -866,11 +870,21 @@
 			<Type>EVENT_MOTHER_LODE_3</Type>
 			<Description>TXT_KEY_EVENT_MOTHER_LODE</Description>
 			<iGold>800</iGold>
-			<iRandomGold>2500</iRandomGold>
+			<iRandomGold>2000</iRandomGold>
 			<bGameSpeedScale>1</bGameSpeedScale>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<iAIValue>1</iAIValue>
 		</EventInfo>
+
+        <EventInfo>
+            <Type>EVENT_MOTHER_LODE_GOLD_3</Type>
+            <Description>TXT_KEY_EVENT_MOTHER_LODE</Description>
+            <iGold>1200</iGold>
+            <iRandomGold>2500</iRandomGold>
+            <bGameSpeedScale>1</bGameSpeedScale>
+            <Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
+            <iAIValue>1</iAIValue>
+        </EventInfo>
 
 		<EventInfo>
 			<Type>EVENT_WASHED_OUT_1</Type>
@@ -883,7 +897,7 @@
 		<EventInfo>
 			<Type>EVENT_WASHED_OUT_2</Type>
 			<Description>TXT_KEY_EVENT_WASHED_OUT_2</Description>
-			<iGold>-20</iGold>
+			<iGold>-10</iGold>
 			<bGameSpeedScale>1</bGameSpeedScale>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<iAIValue>1</iAIValue>
@@ -892,7 +906,7 @@
 		<EventInfo>
 			<Type>EVENT_WASHED_OUT_3</Type>
 			<Description>TXT_KEY_EVENT_WASHED_OUT_2</Description>
-			<iGold>-40</iGold>
+			<iGold>-20</iGold>
 			<bGameSpeedScale>1</bGameSpeedScale>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<iAIValue>1</iAIValue>
@@ -901,7 +915,7 @@
 		<EventInfo>
 			<Type>EVENT_WASHED_OUT_4</Type>
 			<Description>TXT_KEY_EVENT_WASHED_OUT_2</Description>
-			<iGold>-50</iGold>
+			<iGold>-25</iGold>
 			<bGameSpeedScale>1</bGameSpeedScale>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<iAIValue>1</iAIValue>
@@ -910,7 +924,7 @@
 		<EventInfo>
 			<Type>EVENT_WASHED_OUT_5</Type>
 			<Description>TXT_KEY_EVENT_WASHED_OUT_2</Description>
-			<iGold>-60</iGold>
+			<iGold>-30</iGold>
 			<bGameSpeedScale>1</bGameSpeedScale>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<iAIValue>1</iAIValue>
@@ -919,7 +933,7 @@
 		<EventInfo>
 			<Type>EVENT_WASHED_OUT_6</Type>
 			<Description>TXT_KEY_EVENT_WASHED_OUT_2</Description>
-			<iGold>-70</iGold>
+			<iGold>-35</iGold>
 			<bGameSpeedScale>1</bGameSpeedScale>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<iAIValue>1</iAIValue>
@@ -928,7 +942,7 @@
 		<EventInfo>
 			<Type>EVENT_WASHED_OUT_7</Type>
 			<Description>TXT_KEY_EVENT_WASHED_OUT_2</Description>
-			<iGold>-80</iGold>
+			<iGold>-40</iGold>
 			<bGameSpeedScale>1</bGameSpeedScale>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<iAIValue>1</iAIValue>
@@ -937,7 +951,7 @@
 		<EventInfo>
 			<Type>EVENT_WASHED_OUT_8</Type>
 			<Description>TXT_KEY_EVENT_WASHED_OUT_2</Description>
-			<iGold>-90</iGold>
+			<iGold>-45</iGold>
 			<bGameSpeedScale>1</bGameSpeedScale>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<iAIValue>1</iAIValue>
@@ -962,7 +976,7 @@
 		<EventInfo>
 			<Type>EVENT_MAN_NAMED_JED_2</Type>
 			<Description>TXT_KEY_EVENT_MAN_NAMED_JED_2</Description>
-			<iGold>-20</iGold>
+			<iGold>-10</iGold>
 			<bGameSpeedScale>1</bGameSpeedScale>
 			<BonusRevealed>BONUS_OIL</BonusRevealed>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
@@ -981,7 +995,7 @@
 		<EventInfo>
 			<Type>EVENT_INSPIRED_MISSION_2</Type>
 			<Description>TXT_KEY_EVENT_INSPIRED_MISSION_2</Description>
-			<iGold>-150</iGold>
+			<iGold>-75</iGold>
 			<bGameSpeedScale>1</bGameSpeedScale>
 			<iConvertOwnCities>4</iConvertOwnCities>
 			<iConvertOtherCities>1</iConvertOtherCities>
@@ -993,7 +1007,7 @@
 		<EventInfo>
 			<Type>EVENT_INSPIRED_MISSION_3</Type>
 			<Description>TXT_KEY_EVENT_INSPIRED_MISSION_3</Description>
-			<iGold>-300</iGold>
+			<iGold>-150</iGold>
 			<bGameSpeedScale>1</bGameSpeedScale>
 			<iConvertOwnCities>4</iConvertOwnCities>
 			<iConvertOtherCities>4</iConvertOtherCities>
@@ -1016,7 +1030,7 @@
 			<Type>EVENT_CARELESS_APPRENTICE_1</Type>
 			<Description>TXT_KEY_EVENT_CARELESS_APPRENTICE_1</Description>
 			<bPickCity>1</bPickCity>
-			<iGold>-500</iGold>
+			<iGold>-250</iGold>
 			<bGameSpeedScale>1</bGameSpeedScale>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<iAIValue>1</iAIValue>
@@ -1026,7 +1040,7 @@
 			<Type>EVENT_CARELESS_APPRENTICE_2</Type>
 			<Description>TXT_KEY_EVENT_CARELESS_APPRENTICE_2</Description>
 			<bPickCity>1</bPickCity>
-			<iGold>-200</iGold>
+			<iGold>-100</iGold>
 			<bGameSpeedScale>1</bGameSpeedScale>
 			<Building>BUILDING_FORGE</Building>
 			<iBuildingChange>-1</iBuildingChange>
@@ -1077,7 +1091,8 @@
 			<OtherPlayerPopup>TXT_KEY_EVENT_FAMINE_OTHER_3</OtherPlayerPopup>
 			<bPickCity>1</bPickCity>
 			<bPickOtherPlayerCity>1</bPickOtherPlayerCity>
-			<iGold>-1000</iGold>
+			<iGold>-200</iGold>
+            <bGameSpeedScale>1</bGameSpeedScale>
 			<bGoldToPlayer>1</bGoldToPlayer>
 			<PrereqTech>TECH_THE_WHEEL</PrereqTech>
 			<iFoodPercent>-100</iFoodPercent>
@@ -1108,7 +1123,7 @@
 			<Type>EVENT_SLAVE_REVOLT_2</Type>
 			<Description>TXT_KEY_EVENT_SLAVE_REVOLT_2</Description>
 			<bPickCity>1</bPickCity>
-			<iGold>-500</iGold>
+			<iGold>-250</iGold>
 			<bGameSpeedScale>1</bGameSpeedScale>
 			<iRevoltTurns>1</iRevoltTurns>
 			<iPopulationChange>-1</iPopulationChange>
@@ -1244,7 +1259,7 @@
 			<Type>EVENT_FARM_BANDITS_1</Type>
 			<Description>TXT_KEY_EVENT_FARM_BANDITS_1</Description>
 			<bPickCity>1</bPickCity>
-			<iGold>-200</iGold>
+			<iGold>-100</iGold>
 			<bGameSpeedScale>1</bGameSpeedScale>
 			<ClearEvents>
 				<EventChance>
@@ -1340,7 +1355,7 @@
 			<Type>EVENT_HORTICULTURE_2</Type>
 			<Description>TXT_KEY_EVENT_HORTICULTURE_2</Description>
 			<bPickCity>1</bPickCity>
-			<iGold>-500</iGold>
+			<iGold>-250</iGold>
 			<bGameSpeedScale>1</bGameSpeedScale>
 			<PlotExtraYields>
 				<PlotExtraYield>
@@ -1440,7 +1455,7 @@
 		<EventInfo>
 			<Type>EVENT_PESTILENCE_2</Type>
 			<Description>TXT_KEY_EVENT_PESTILENCE_2</Description>
-			<iGold>-200</iGold>
+			<iGold>-100</iGold>
 			<bGameSpeedScale>1</bGameSpeedScale>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<iAIValue>1</iAIValue>
@@ -1467,7 +1482,7 @@
 			<Type>EVENT_FAUX_PAS_2</Type>
 			<Description>TXT_KEY_EVENT_FAUX_PAS_2</Description>
 			<OtherPlayerPopup>TXT_KEY_EVENT_FAUX_PAS_OTHER_2</OtherPlayerPopup>
-			<iGold>-300</iGold>
+			<iGold>-150</iGold>
 			<bGameSpeedScale>1</bGameSpeedScale>
 			<bGoldToPlayer>1</bGoldToPlayer>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
@@ -1477,7 +1492,7 @@
 		<EventInfo>
 			<Type>EVENT_JOYOUS_WEDDING_1</Type>
 			<Description>TXT_KEY_EVENT_JOYOUS_WEDDING_1</Description>
-			<iGold>-50</iGold>
+			<iGold>-25</iGold>
 			<bGameSpeedScale>1</bGameSpeedScale>
 			<bGoldToPlayer>1</bGoldToPlayer>
 			<OtherPlayerPopup>TXT_KEY_EVENT_JOYOUS_WEDDING_OTHER_1</OtherPlayerPopup>
@@ -1489,7 +1504,7 @@
 			<Type>EVENT_JOYOUS_WEDDING_2</Type>
 			<Description>TXT_KEY_EVENT_JOYOUS_WEDDING_2</Description>
 			<OtherPlayerPopup>TXT_KEY_EVENT_JOYOUS_WEDDING_OTHER_2</OtherPlayerPopup>
-			<iGold>-200</iGold>
+			<iGold>-100</iGold>
 			<bGameSpeedScale>1</bGameSpeedScale>
 			<bGoldToPlayer>1</bGoldToPlayer>
 			<iOurAttitudeModifier>1</iOurAttitudeModifier>
@@ -1502,7 +1517,7 @@
 			<Type>EVENT_JOYOUS_WEDDING_3</Type>
 			<Description>TXT_KEY_EVENT_JOYOUS_WEDDING_3</Description>
 			<OtherPlayerPopup>TXT_KEY_EVENT_JOYOUS_WEDDING_OTHER_3</OtherPlayerPopup>
-			<iGold>-600</iGold>
+			<iGold>-300</iGold>
 			<bGameSpeedScale>1</bGameSpeedScale>
 			<iOurAttitudeModifier>3</iOurAttitudeModifier>
 			<iAttitudeModifier>3</iAttitudeModifier>
@@ -1514,7 +1529,7 @@
 			<Type>EVENT_WEDDING_FEUD_1</Type>
 			<Description>TXT_KEY_EVENT_WEDDING_FEUD_1</Description>
 			<OtherPlayerPopup>TXT_KEY_EVENT_WEDDING_FEUD_OTHER_1</OtherPlayerPopup>
-			<iGold>-50</iGold>
+			<iGold>-25</iGold>
 			<bGameSpeedScale>1</bGameSpeedScale>
 			<bGoldToPlayer>1</bGoldToPlayer>
 			<iOurAttitudeModifier>-1</iOurAttitudeModifier>
@@ -1527,7 +1542,7 @@
 			<Type>EVENT_WEDDING_FEUD_2</Type>
 			<Description>TXT_KEY_EVENT_WEDDING_FEUD_2</Description>
 			<OtherPlayerPopup>TXT_KEY_EVENT_WEDDING_FEUD_OTHER_2</OtherPlayerPopup>
-			<iGold>-200</iGold>
+			<iGold>-100</iGold>
 			<bGameSpeedScale>1</bGameSpeedScale>
 			<bGoldToPlayer>1</bGoldToPlayer>
 			<iOurAttitudeModifier>-2</iOurAttitudeModifier>
@@ -1541,7 +1556,7 @@
 		<EventInfo>
 			<Type>EVENT_WEDDING_FEUD_3</Type>
 			<Description>TXT_KEY_EVENT_WEDDING_FEUD_3</Description>
-			<iGold>-600</iGold>
+			<iGold>-300</iGold>
 			<bGameSpeedScale>1</bGameSpeedScale>
 			<bGoldToPlayer>1</bGoldToPlayer>
 			<iOurAttitudeModifier>-3</iOurAttitudeModifier>
@@ -1565,7 +1580,7 @@
 		<EventInfo>
 			<Type>EVENT_LEFT_AT_ALTAR_2</Type>
 			<Description>TXT_KEY_EVENT_LEFT_AT_ALTAR_2</Description>
-			<iGold>-200</iGold>
+			<iGold>-100</iGold>
 			<bGameSpeedScale>1</bGameSpeedScale>
 			<bGoldToPlayer>1</bGoldToPlayer>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
@@ -1584,7 +1599,7 @@
 		<EventInfo>
 			<Type>EVENT_SPICY_2</Type>
 			<Description>TXT_KEY_EVENT_SPICY_2</Description>
-			<iGold>-100</iGold>
+			<iGold>-50</iGold>
 			<bGameSpeedScale>1</bGameSpeedScale>
 			<FeatureType>FEATURE_FOREST</FeatureType>
 			<iFeatureChange>-1</iFeatureChange>
@@ -1609,8 +1624,9 @@
 		<EventInfo>
 			<Type>EVENT_BABY_BOOM_2</Type>
 			<Description>TXT_KEY_EVENT_BABY_BOOM_2</Description>
-			<iGold>-1000</iGold>
-			<iFood>250</iFood>
+			<iGold>-250</iGold>
+            <bGameSpeedScale>1</bGameSpeedScale>
+			<iFood>350</iFood>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<iAIValue>2</iAIValue>
 		</EventInfo>
@@ -1629,7 +1645,7 @@
 			<Type>EVENT_BARDS_TALE_2</Type>
 			<Description>TXT_KEY_EVENT_BARDS_TALE_2</Description>
 			<bPickCity>1</bPickCity>
-			<iGold>-250</iGold>
+			<iGold>-125</iGold>
 			<bGameSpeedScale>1</bGameSpeedScale>
 			<iCulture>900</iCulture>
 			<Building>BUILDING_THEATRE</Building>
@@ -1666,7 +1682,7 @@
 			<Description>TXT_KEY_EVENT_LOOTERS_2</Description>
 			<OtherPlayerPopup>TXT_KEY_EVENT_LOOTERS_OTHER_2</OtherPlayerPopup>
 			<bPickOtherPlayerCity>1</bPickOtherPlayerCity>
-			<iGold>-100</iGold>
+			<iGold>-50</iGold>
 			<bGameSpeedScale>1</bGameSpeedScale>
 			<iMinPillage>2</iMinPillage>
 			<iMaxPillage>4</iMaxPillage>
@@ -1874,7 +1890,8 @@
 			<Type>EVENT_BROTHERS_IN_NEED_16</Type>
 			<Description>TXT_KEY_EVENT_BROTHERS_IN_NEED_16</Description>
 			<OtherPlayerPopup>TXT_KEY_EVENT_BROTHERS_IN_NEED_OTHER_16</OtherPlayerPopup>
-			<iGold>-2000</iGold>
+			<iGold>-500</iGold>
+            <bGameSpeedScale>1</bGameSpeedScale>
 			<bGoldToPlayer>1</bGoldToPlayer>
 			<iOurAttitudeModifier>3</iOurAttitudeModifier>
 			<iAttitudeModifier>3</iAttitudeModifier>
@@ -1985,7 +2002,7 @@
 		<EventInfo>
 			<Type>EVENT_BLIZZARD_3</Type>
 			<Description>TXT_KEY_EVENT_BLIZZARD_2</Description>
-			<iGold>-20</iGold>
+			<iGold>-10</iGold>
 			<bGameSpeedScale>1</bGameSpeedScale>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<iAIValue>2</iAIValue>
@@ -1994,7 +2011,7 @@
 		<EventInfo>
 			<Type>EVENT_BLIZZARD_4</Type>
 			<Description>TXT_KEY_EVENT_BLIZZARD_2</Description>
-			<iGold>-40</iGold>
+			<iGold>-20</iGold>
 			<bGameSpeedScale>1</bGameSpeedScale>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<iAIValue>2</iAIValue>
@@ -2003,7 +2020,7 @@
 		<EventInfo>
 			<Type>EVENT_BLIZZARD_5</Type>
 			<Description>TXT_KEY_EVENT_BLIZZARD_2</Description>
-			<iGold>-50</iGold>
+			<iGold>-25</iGold>
 			<bGameSpeedScale>1</bGameSpeedScale>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<iAIValue>2</iAIValue>
@@ -2012,7 +2029,7 @@
 		<EventInfo>
 			<Type>EVENT_BLIZZARD_6</Type>
 			<Description>TXT_KEY_EVENT_BLIZZARD_2</Description>
-			<iGold>-60</iGold>
+			<iGold>-30</iGold>
 			<bGameSpeedScale>1</bGameSpeedScale>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<iAIValue>2</iAIValue>
@@ -2021,7 +2038,7 @@
 		<EventInfo>
 			<Type>EVENT_BLIZZARD_7</Type>
 			<Description>TXT_KEY_EVENT_BLIZZARD_2</Description>
-			<iGold>-70</iGold>
+			<iGold>-35</iGold>
 			<bGameSpeedScale>1</bGameSpeedScale>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<iAIValue>2</iAIValue>
@@ -2030,7 +2047,7 @@
 		<EventInfo>
 			<Type>EVENT_BLIZZARD_8</Type>
 			<Description>TXT_KEY_EVENT_BLIZZARD_2</Description>
-			<iGold>-80</iGold>
+			<iGold>-40</iGold>
 			<bGameSpeedScale>1</bGameSpeedScale>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<iAIValue>2</iAIValue>
@@ -2039,7 +2056,7 @@
 		<EventInfo>
 			<Type>EVENT_BLIZZARD_9</Type>
 			<Description>TXT_KEY_EVENT_BLIZZARD_2</Description>
-			<iGold>-90</iGold>
+			<iGold>-45</iGold>
 			<bGameSpeedScale>1</bGameSpeedScale>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<iAIValue>2</iAIValue>
@@ -2048,7 +2065,7 @@
 		<EventInfo>
 			<Type>EVENT_BLIZZARD_10</Type>
 			<Description>TXT_KEY_EVENT_BLIZZARD_2</Description>
-			<iGold>-100</iGold>
+			<iGold>-50</iGold>
 			<bGameSpeedScale>1</bGameSpeedScale>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<iAIValue>2</iAIValue>
@@ -2057,7 +2074,7 @@
 		<EventInfo>
 			<Type>EVENT_BLIZZARD_11</Type>
 			<Description>TXT_KEY_EVENT_BLIZZARD_2</Description>
-			<iGold>-110</iGold>
+			<iGold>-55</iGold>
 			<bGameSpeedScale>1</bGameSpeedScale>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<iAIValue>2</iAIValue>
@@ -2066,7 +2083,7 @@
 		<EventInfo>
 			<Type>EVENT_BLIZZARD_12</Type>
 			<Description>TXT_KEY_EVENT_BLIZZARD_2</Description>
-			<iGold>-80</iGold>
+			<iGold>-40</iGold>
 			<bGameSpeedScale>1</bGameSpeedScale>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<iAIValue>2</iAIValue>
@@ -2076,7 +2093,7 @@
 			<Type>EVENT_DUSTBOWL_1</Type>
 			<Description>TXT_KEY_EVENT_DUSTBOWL_1</Description>
 			<bPickCity>1</bPickCity>
-			<iGold>-200</iGold>
+			<iGold>-100</iGold>
 			<bGameSpeedScale>1</bGameSpeedScale>
 			<iImprovementChange>-1</iImprovementChange>
 			<ClearEvents>
@@ -2171,7 +2188,7 @@
 		<EventInfo>
 			<Type>EVENT_PURE_COAL_2</Type>
 			<Description>TXT_KEY_EVENT_PURE_COAL_2</Description>
-			<iGold>-300</iGold>
+			<iGold>-150</iGold>
 			<bGameSpeedScale>1</bGameSpeedScale>
 			<PlotExtraYields>
 				<PlotExtraYield>
@@ -2229,7 +2246,7 @@
 		<EventInfo>
 			<Type>EVENT_PURE_CRUDE_2</Type>
 			<Description>TXT_KEY_EVENT_PURE_CRUDE_2</Description>
-			<iGold>-400</iGold>
+			<iGold>-200</iGold>
 			<bGameSpeedScale>1</bGameSpeedScale>
 			<PlotExtraYields>
 				<PlotExtraYield>
@@ -2302,7 +2319,7 @@
 			<Type>EVENT_ICE_SCULPTURE_2</Type>
 			<Description>TXT_KEY_EVENT_ICE_SCULPTURE_2</Description>
 			<bPickCity>1</bPickCity>
-			<iGold>-500</iGold>
+			<iGold>-250</iGold>
 			<bGameSpeedScale>1</bGameSpeedScale>
 			<FreeSpecialistCounts>
 				<FreeSpecialistCount>
@@ -2689,7 +2706,7 @@
 			<Type>EVENT_MINING_ACCIDENT_1</Type>
 			<Description>TXT_KEY_EVENT_MINING_ACCIDENT_1</Description>
 			<bPickCity>1</bPickCity>
-			<iGold>-300</iGold>
+			<iGold>-150</iGold>
 			<bGameSpeedScale>1</bGameSpeedScale>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<iAIValue>3</iAIValue>
@@ -2699,7 +2716,7 @@
 			<Type>EVENT_MINING_ACCIDENT_2</Type>
 			<Description>TXT_KEY_EVENT_MINING_ACCIDENT_2</Description>
 			<bPickCity>1</bPickCity>
-			<iGold>-150</iGold>
+			<iGold>-75</iGold>
 			<bGameSpeedScale>1</bGameSpeedScale>
 			<ImprovementType>IMPROVEMENT_MINE</ImprovementType>
 			<iImprovementChange>-1</iImprovementChange>
@@ -2722,7 +2739,7 @@
 			<Type>EVENT_SHAFT_MINING_ACCIDENT_1</Type>
 			<Description>TXT_KEY_EVENT_MINING_ACCIDENT_1</Description>
 			<bPickCity>1</bPickCity>
-			<iGold>-400</iGold>
+			<iGold>-200</iGold>
 			<bGameSpeedScale>1</bGameSpeedScale>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<iAIValue>3</iAIValue>
@@ -2732,7 +2749,7 @@
 			<Type>EVENT_SHAFT_MINING_ACCIDENT_2</Type>
 			<Description>TXT_KEY_EVENT_MINING_ACCIDENT_2</Description>
 			<bPickCity>1</bPickCity>
-			<iGold>-250</iGold>
+			<iGold>-125</iGold>
 			<bGameSpeedScale>1</bGameSpeedScale>
 			<ImprovementType>IMPROVEMENT_SHAFT_MINE</ImprovementType>
 			<iImprovementChange>-1</iImprovementChange>
@@ -2806,7 +2823,7 @@
 			<Type>EVENT_RUNNING_BULLS_2</Type>
 			<Description>TXT_KEY_EVENT_RUNNING_BULLS_2</Description>
 			<bPickCity>1</bPickCity>
-			<iGold>-350</iGold>
+			<iGold>-175</iGold>
 			<bGameSpeedScale>1</bGameSpeedScale>
 			<iCulture>2000</iCulture>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
@@ -2827,8 +2844,8 @@
 			<Type>EVENT_GREAT_DEPRESSION_2</Type>
 			<Description>TXT_KEY_EVENT_GREAT_DEPRESSION_2</Description>
 			<bPickCity>1</bPickCity>
-			<iGold>-5000</iGold>
-			<iRandomGold>-10000</iRandomGold>
+			<iGold>-2500</iGold>
+			<iRandomGold>-5000</iRandomGold>
 			<bGameSpeedScale>1</bGameSpeedScale>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<iAIValue>1</iAIValue>
@@ -2860,7 +2877,7 @@
 			<bPickCity>1</bPickCity>
 			<iTechCostPercent>20</iTechCostPercent>
 			<iTechMinTurnsLeft>5</iTechMinTurnsLeft>
-			<iGold>-1000</iGold>
+			<iGold>-500</iGold>
 			<bGameSpeedScale>1</bGameSpeedScale>
 			<BuildingExtraCommerces>
 				<BuildingExtraCommerce>
@@ -2941,7 +2958,7 @@
 		<EventInfo>
 			<Type>EVENT_MOTOR_OIL_1</Type>
 			<Description>TXT_KEY_EVENT_MOTOR_OIL_1</Description>
-			<iGold>5000</iGold>
+			<iGold>2500</iGold>
 			<bGameSpeedScale>1</bGameSpeedScale>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<iAIValue>1</iAIValue>
@@ -2950,7 +2967,7 @@
 		<EventInfo>
 			<Type>EVENT_MOTOR_OIL_2</Type>
 			<Description>TXT_KEY_EVENT_MOTOR_OIL_2</Description>
-			<iGold>-2000</iGold>
+			<iGold>-1000</iGold>
 			<bGameSpeedScale>1</bGameSpeedScale>
 			<iFreeUnitSupport>15</iFreeUnitSupport>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
@@ -2960,7 +2977,7 @@
 		<EventInfo>
 			<Type>EVENT_MOTOR_OIL_3</Type>
 			<Description>TXT_KEY_EVENT_MOTOR_OIL_3</Description>
-			<iGold>-5000</iGold>
+			<iGold>-2500</iGold>
 			<bGameSpeedScale>1</bGameSpeedScale>
 			<iFreeUnitSupport>30</iFreeUnitSupport>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
@@ -2978,8 +2995,8 @@
 		<EventInfo>
 			<Type>EVENT_FEDERAL_RESERVE_2</Type>
 			<Description>TXT_KEY_EVENT_FEDERAL_RESERVE_2</Description>
-			<iGold>-500</iGold>
-			<iRandomGold>-1500</iRandomGold>
+			<iGold>-250</iGold>
+			<iRandomGold>-750</iRandomGold>
 			<bGameSpeedScale>1</bGameSpeedScale>
 			<iInflationMod>-25</iInflationMod>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
@@ -3005,7 +3022,7 @@
 		<EventInfo>
 			<Type>EVENT_HINDENBERG_2</Type>
 			<Description>TXT_KEY_EVENT_HINDENBERG_2</Description>
-			<iGold>-450</iGold>
+			<iGold>-225</iGold>
 			<bGameSpeedScale>1</bGameSpeedScale>
 			<BuildingExtraHappies>
 				<BuildingExtraHappy>
@@ -3053,7 +3070,7 @@
             <Type>EVENT_STONE_TOOL_MAKER_1</Type>
             <Description>TXT_KEY_EVENT_STONE_TOOL_MAKER_1</Description>
             <bPickCity>1</bPickCity>
-            <iGold>-25</iGold>
+            <iGold>-10</iGold>
             <bGameSpeedScale>1</bGameSpeedScale>
             <BuildingExtraYields>
                 <BuildingExtraYield>
@@ -3094,7 +3111,7 @@
 			<Type>EVENT_GOLD_RUSH_2</Type>
 			<Description>TXT_KEY_EVENT_GOLD_RUSH_2</Description>
 			<bPickCity>1</bPickCity>
-			<iGold>-2000</iGold>
+			<iGold>-1000</iGold>
 			<bGameSpeedScale>1</bGameSpeedScale>
 			<iPopulationChange>3</iPopulationChange>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
@@ -3105,7 +3122,7 @@
 			<Type>EVENT_GOLD_RUSH_3</Type>
 			<Description>TXT_KEY_EVENT_GOLD_RUSH_3</Description>
 			<bPickCity>1</bPickCity>
-			<iGold>2000</iGold>
+			<iGold>1000</iGold>
 			<bGameSpeedScale>1</bGameSpeedScale>
 			<iPopulationChange>1</iPopulationChange>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
@@ -3116,9 +3133,9 @@
 			<Type>EVENT_INFLUENZA_1</Type>
 			<Description>TXT_KEY_EVENT_INFLUENZA_1</Description>
 			<bPickCity>1</bPickCity>
-			<iGold>-100</iGold>
-			<PrereqTech>TECH_BIOLOGY</PrereqTech>
-			<bGameSpeedScale>1</bGameSpeedScale>
+			<iGold>-50</iGold>
+            <bGameSpeedScale>1</bGameSpeedScale>
+            <PrereqTech>TECH_BIOLOGY</PrereqTech>
 			<iPopulationChange>-1</iPopulationChange>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<iAIValue>1</iAIValue>
@@ -3139,9 +3156,9 @@
             <Type>EVENT_INFLUENZA_3</Type>
             <Description>TXT_KEY_EVENT_INFLUENZA_1</Description>
             <bPickCity>1</bPickCity>
-            <iGold>-200</iGold>
-            <PrereqTech>TECH_BIOLOGY</PrereqTech>
+            <iGold>-100</iGold>
             <bGameSpeedScale>1</bGameSpeedScale>
+            <PrereqTech>TECH_BIOLOGY</PrereqTech>
             <iPopulationChange>-2</iPopulationChange>
             <Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
             <iAIValue>1</iAIValue>
@@ -3162,9 +3179,9 @@
             <Type>EVENT_INFLUENZA_5</Type>
             <Description>TXT_KEY_EVENT_INFLUENZA_1</Description>
             <bPickCity>1</bPickCity>
-            <iGold>-300</iGold>
-            <PrereqTech>TECH_BIOLOGY</PrereqTech>
+            <iGold>-150</iGold>
             <bGameSpeedScale>1</bGameSpeedScale>
+            <PrereqTech>TECH_BIOLOGY</PrereqTech>
             <iPopulationChange>-3</iPopulationChange>
             <Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
             <iAIValue>1</iAIValue>
@@ -3202,7 +3219,7 @@
 		<EventInfo>
 			<Type>EVENT_ANTELOPE_2</Type>
 			<Description>TXT_KEY_EVENT_ANTELOPE_2</Description>
-			<iGold>-100</iGold>
+			<iGold>-50</iGold>
 			<bGameSpeedScale>1</bGameSpeedScale>
 			<BonusType>BONUS_DEER</BonusType>
 			<iBonusChange>1</iBonusChange>
@@ -3296,7 +3313,7 @@
 		<EventInfo>
 			<Type>EVENT_GOLD_MINE_2</Type>
 			<Description>TXT_KEY_EVENT_GOLD_MINE_2</Description>
-			<iGold>-200</iGold>
+			<iGold>-100</iGold>
 			<bGameSpeedScale>1</bGameSpeedScale>
 			<ImprovementType>IMPROVEMENT_MINE</ImprovementType>
 			<iImprovementChange>1</iImprovementChange>
@@ -3327,7 +3344,7 @@
 		<EventInfo>
 			<Type>EVENT_URANIUM_2</Type>
 			<Description>TXT_KEY_EVENT_URANIUM_2</Description>
-			<iGold>-500</iGold>
+			<iGold>-250</iGold>
 			<bGameSpeedScale>1</bGameSpeedScale>
 			<ImprovementType>IMPROVEMENT_MINE</ImprovementType>
 			<iImprovementChange>1</iImprovementChange>
@@ -3493,7 +3510,7 @@
 		<EventInfo>
 			<Type>EVENT_HIYOSILVER_2</Type>
 			<Description>TXT_KEY_EVENT_HIYOSILVER_2</Description>
-			<iGold>-200</iGold>
+			<iGold>-100</iGold>
 			<bGameSpeedScale>1</bGameSpeedScale>
 			<ImprovementType>IMPROVEMENT_MINE</ImprovementType>
 			<iImprovementChange>1</iImprovementChange>
@@ -3515,7 +3532,7 @@
 		<EventInfo>
 			<Type>EVENT_WININGMONKS_2</Type>
 			<Description>TXT_KEY_EVENT_WININGMONKS_2</Description>
-			<iGold>-200</iGold>
+			<iGold>-100</iGold>
 			<bGameSpeedScale>1</bGameSpeedScale>
 			<iImprovementChange>1</iImprovementChange>
 			<BonusType>BONUS_GRAPES</BonusType>
@@ -3547,7 +3564,7 @@
 			<Description>TXT_KEY_EVENT_ANCIENTOLYMPICS_2</Description>
 			<QuestFailText>TXT_KEY_EVENT_FAIL_OLYMPICS</QuestFailText>
 			<bQuest>1</bQuest>
-			<iGold>-200</iGold>
+			<iGold>-100</iGold>
 			<bGameSpeedScale>1</bGameSpeedScale>
 			<PythonCallback>doAncientOlympics2</PythonCallback>
 			<PythonHelp>getHelpModernOlympics</PythonHelp>
@@ -3586,7 +3603,7 @@
 		<EventInfo>
 			<Type>EVENT_EARTHDAY_2</Type>
 			<Description>TXT_KEY_EVENT_EARTHDAY_2</Description>
-			<iGold>-6000</iGold>
+			<iGold>-3000</iGold>
 			<bGameSpeedScale>1</bGameSpeedScale>
 			<iHappy>1</iHappy>
 			<PythonCallback>applyEarthDay2</PythonCallback>
@@ -3779,7 +3796,7 @@
 			<Type>EVENT_CIGARETTE_SMOKER_1</Type>
 			<Description>TXT_KEY_EVENT_CIGARETTE_SMOKER_1</Description>
 			<bPickCity>1</bPickCity>
-			<iGold>-300</iGold>
+			<iGold>-150</iGold>
 			<bGameSpeedScale>1</bGameSpeedScale>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<iAIValue>1</iAIValue>
@@ -3789,7 +3806,7 @@
 			<Type>EVENT_CIGARETTE_SMOKER_2</Type>
 			<Description>TXT_KEY_EVENT_CIGARETTE_SMOKER_2</Description>
 			<bPickCity>1</bPickCity>
-			<iGold>-100</iGold>
+			<iGold>-50</iGold>
 			<bGameSpeedScale>1</bGameSpeedScale>
 			<Building>BUILDING_THEATRE</Building>
 			<iBuildingChange>-1</iBuildingChange>
@@ -3872,7 +3889,7 @@
 		<EventInfo>
 			<Type>EVENT_ANCIENT_TEXTS_2</Type>
 			<Description>TXT_KEY_EVENT_ANCIENT_TEXTS_2</Description>
-			<iGold>-2000</iGold>
+			<iGold>-1000</iGold>
 			<bGameSpeedScale>1</bGameSpeedScale>
 			<PythonCallback>doAncientTexts2</PythonCallback>
 			<PythonHelp>getHelpAncientTexts2</PythonHelp>
@@ -3912,7 +3929,7 @@
 			<WorldNewsTexts>
 				<Text>TXT_KEY_EVENT_NEWS_IMPACT_CRATER_2</Text>
 			</WorldNewsTexts>
-			<iGold>-5000</iGold>
+			<iGold>-2500</iGold>
 			<bGameSpeedScale>1</bGameSpeedScale>
 			<FeatureType>FEATURE_CRATER</FeatureType>
 			<iFeatureChange>1</iFeatureChange>
@@ -3978,8 +3995,8 @@
 		<EventInfo>
 			<Type>EVENT_HOLY_RITUAL_1</Type>
 			<Description>TXT_KEY_EVENT_HOLY_RITUAL_1</Description>
-			<iGold>200</iGold>
-			<iRandomGold>4000</iRandomGold>
+			<iGold>100</iGold>
+			<iRandomGold>2000</iRandomGold>
 			<bGameSpeedScale>1</bGameSpeedScale>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<iAIValue>1</iAIValue>
@@ -3988,8 +4005,8 @@
 		<EventInfo>
 			<Type>EVENT_SECURITY_TAX_1</Type>
 			<Description>TXT_KEY_EVENT_SECURITY_TAX_1</Description>
-			<iGold>500</iGold>
-			<iRandomGold>600</iRandomGold>
+			<iGold>250</iGold>
+			<iRandomGold>300</iRandomGold>
 			<bGameSpeedScale>1</bGameSpeedScale>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<iAIValue>1</iAIValue>
@@ -4012,8 +4029,8 @@
 		<EventInfo>
 			<Type>EVENT_FARM_PLOWS_1</Type>
 			<Description>TXT_KEY_EVENT_TRIGGER_FARM_PLOWS_1</Description>
-			<iGold>300</iGold>
-			<iRandomGold>300</iRandomGold>
+			<iGold>150</iGold>
+			<iRandomGold>150</iRandomGold>
 			<bGameSpeedScale>1</bGameSpeedScale>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<iAIValue>1</iAIValue>
@@ -4022,7 +4039,7 @@
 		<EventInfo>
 			<Type>EVENT_STAINED_GLASS_1</Type>
 			<Description>TXT_KEY_EVENT_TRIGGER_STAINED_GLASS_1</Description>
-			<iGold>-400</iGold>
+			<iGold>-200</iGold>
 			<bGameSpeedScale>1</bGameSpeedScale>
 			<BuildingExtraCommerces>
 				<BuildingExtraCommerce>
@@ -4093,8 +4110,8 @@
 		<EventInfo>
 			<Type>EVENT_MARBLE_STATUES_1</Type>
 			<Description>TXT_KEY_EVENT_TRIGGER_MARBLE_STATUES_1</Description>
-			<iGold>-500</iGold>
-			<iRandomGold>-2000</iRandomGold>
+			<iGold>-250</iGold>
+			<iRandomGold>-1000</iRandomGold>
 			<BuildingExtraCommerces>
 				<BuildingExtraCommerce>
 					<Building>BUILDING_SCULPTORS_WORKSHOP</Building>
@@ -4109,8 +4126,8 @@
 		<EventInfo>
 			<Type>EVENT_CRAB_CAKES_1</Type>
 			<Description>TXT_KEY_EVENT_CRAB_CAKES_1</Description>
-			<iGold>300</iGold>
-			<iRandomGold>4000</iRandomGold>
+			<iGold>150</iGold>
+			<iRandomGold>2000</iRandomGold>
 			<bGameSpeedScale>1</bGameSpeedScale>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<iAIValue>1</iAIValue>
@@ -4119,8 +4136,8 @@
 		<EventInfo>
 			<Type>EVENT_BOILERS_1</Type>
 			<Description>TXT_KEY_EVENT_TRIGGER_BOILERS_1</Description>
-			<iGold>900</iGold>
-			<iRandomGold>5000</iRandomGold>
+			<iGold>450</iGold>
+			<iRandomGold>2500</iRandomGold>
 			<bGameSpeedScale>1</bGameSpeedScale>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<iAIValue>1</iAIValue>
@@ -4129,8 +4146,8 @@
 		<EventInfo>
 			<Type>EVENT_PERSONAL_COMPUTERS_1</Type>
 			<Description>TXT_KEY_EVENT_TRIGGER_PERSONAL_COMPUTERS_1</Description>
-			<iGold>1000</iGold>
-			<iRandomGold>90000</iRandomGold>
+			<iGold>500</iGold>
+			<iRandomGold>45000</iRandomGold>
 			<bGameSpeedScale>1</bGameSpeedScale>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<iAIValue>1</iAIValue>
@@ -4139,8 +4156,8 @@
 		<EventInfo>
 			<Type>EVENT_FUEL_ADDITIVES_1</Type>
 			<Description>TXT_KEY_EVENT_FUEL_ADDITIVES_1</Description>
-			<iGold>1100</iGold>
-			<iRandomGold>7000</iRandomGold>
+			<iGold>550</iGold>
+			<iRandomGold>3500</iRandomGold>
 			<bGameSpeedScale>1</bGameSpeedScale>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<iAIValue>1</iAIValue>
@@ -4149,8 +4166,8 @@
 		<EventInfo>
 			<Type>EVENT_FUEL_ADDITIVES_2</Type>
 			<Description>TXT_KEY_EVENT_FUEL_ADDITIVES_2</Description>
-			<iGold>300</iGold>
-			<iRandomGold>2000</iRandomGold>
+			<iGold>150</iGold>
+			<iRandomGold>1000</iRandomGold>
 			<bGameSpeedScale>1</bGameSpeedScale>
 			<iHealth>1</iHealth>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
@@ -4160,8 +4177,8 @@
 		<EventInfo>
 			<Type>EVENT_HAMBURGER_JOINT_1</Type>
 			<Description>TXT_KEY_EVENT_HAMBURGER_JOINT_1</Description>
-			<iGold>2400</iGold>
-			<iRandomGold>9000</iRandomGold>
+			<iGold>1200</iGold>
+			<iRandomGold>4500</iRandomGold>
 			<bGameSpeedScale>1</bGameSpeedScale>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<iAIValue>1</iAIValue>
@@ -4170,8 +4187,8 @@
 		<EventInfo>
 			<Type>EVENT_HAMBURGER_JOINT_2</Type>
 			<Description>TXT_KEY_EVENT_HAMBURGER_JOINT_2</Description>
-			<iGold>3000</iGold>
-			<iRandomGold>25000</iRandomGold>
+			<iGold>1500</iGold>
+			<iRandomGold>12500</iRandomGold>
 			<bGameSpeedScale>1</bGameSpeedScale>
 			<iHealth>-1</iHealth>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
@@ -4182,8 +4199,8 @@
 			<Type>EVENT_TEA_1</Type>
 			<Description>TXT_KEY_EVENT_TEA_1</Description>
 			<OtherPlayerPopup>TXT_KEY_EVENT_TEA_OTHER_1</OtherPlayerPopup>
-			<iGold>500</iGold>
-			<iRandomGold>5000</iRandomGold>
+			<iGold>250</iGold>
+			<iRandomGold>2500</iRandomGold>
 			<bGameSpeedScale>1</bGameSpeedScale>
 			<iOurAttitudeModifier>1</iOurAttitudeModifier>
 			<iAttitudeModifier>1</iAttitudeModifier>
@@ -4194,8 +4211,8 @@
 		<EventInfo>
 			<Type>EVENT_FASHION_1</Type>
 			<Description>TXT_KEY_EVENT_TRIGGER_FASHION_1</Description>
-			<iGold>1800</iGold>
-			<iRandomGold>8000</iRandomGold>
+			<iGold>900</iGold>
+			<iRandomGold>4500</iRandomGold>
 			<bGameSpeedScale>1</bGameSpeedScale>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<iAIValue>1</iAIValue>
@@ -4204,8 +4221,8 @@
 		<EventInfo>
 			<Type>EVENT_THOROUGHBRED_1</Type>
 			<Description>TXT_KEY_EVENT_TRIGGER_THOROUGHBRED_1</Description>
-			<iGold>300</iGold>
-			<iRandomGold>4000</iRandomGold>
+			<iGold>150</iGold>
+			<iRandomGold>2000</iRandomGold>
 			<bGameSpeedScale>1</bGameSpeedScale>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<iAIValue>1</iAIValue>
@@ -4214,8 +4231,8 @@
 		<EventInfo>
 			<Type>EVENT_GIRLS_BEST_FRIEND_1</Type>
 			<Description>TXT_KEY_EVENT_TRIGGER_GIRLS_BEST_FRIEND_1</Description>
-			<iGold>1000</iGold>
-			<iRandomGold>6000</iRandomGold>
+			<iGold>500</iGold>
+			<iRandomGold>3000</iRandomGold>
 			<bGameSpeedScale>1</bGameSpeedScale>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<iAIValue>1</iAIValue>
@@ -4224,8 +4241,8 @@
 		<EventInfo>
 			<Type>EVENT_BANANA_SPLIT_1</Type>
 			<Description>TXT_KEY_EVENT_BANANA_SPLIT_1</Description>
-			<iGold>1500</iGold>
-			<iRandomGold>8000</iRandomGold>
+			<iGold>750</iGold>
+			<iRandomGold>4000</iRandomGold>
 			<bGameSpeedScale>1</bGameSpeedScale>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<iAIValue>1</iAIValue>
@@ -4752,7 +4769,7 @@
 			<Type>EVENT_MIRACLE_2</Type>
 			<Description>TXT_KEY_EVENT_MIRACLE_2</Description>
 			<bPickCity>1</bPickCity>
-			<iGold>-150</iGold>
+			<iGold>-75</iGold>
 			<bGameSpeedScale>1</bGameSpeedScale>
 			<iConvertOwnCities>3</iConvertOwnCities>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
@@ -4778,7 +4795,7 @@
 			<Type>EVENT_ESTEEMED_PLAYWRIGHT_2</Type>
 			<Description>TXT_KEY_EVENT_ESTEEMED_PLAYWRIGHT_2</Description>
 			<bPickCity>1</bPickCity>
-			<iGold>-300</iGold>
+			<iGold>-150</iGold>
 			<bGameSpeedScale>1</bGameSpeedScale>
 			<BuildingExtraCommerces>
 				<BuildingExtraCommerce>
@@ -4795,7 +4812,7 @@
 			<Type>EVENT_FAVORITE_SON_1</Type>
 			<Description>TXT_KEY_EVENT_FAVORITE_SON_1</Description>
 			<bPickCity>1</bPickCity>
-			<iGold>800</iGold>
+			<iGold>400</iGold>
 			<bGameSpeedScale>1</bGameSpeedScale>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<iAIValue>1</iAIValue>
@@ -4805,7 +4822,7 @@
 			<Type>EVENT_FAVORITE_SON_2</Type>
 			<Description>TXT_KEY_EVENT_FAVORITE_SON_2</Description>
 			<bPickCity>1</bPickCity>
-			<iGold>-500</iGold>
+			<iGold>-250</iGold>
 			<bGameSpeedScale>1</bGameSpeedScale>
 			<BuildingExtraCommerces>
 				<BuildingExtraCommerce>
@@ -4838,7 +4855,7 @@
 			<Type>EVENT_SECRET_KNOWLEDGE_2</Type>
 			<Description>TXT_KEY_EVENT_SECRET_KNOWLEDGE_2</Description>
 			<bPickCity>1</bPickCity>
-			<iGold>-300</iGold>
+			<iGold>-150</iGold>
 			<bGameSpeedScale>1</bGameSpeedScale>
 			<PythonCallback>applySecretKnowledge2</PythonCallback>
 			<PythonHelp>getHelpSecretKnowledge2</PythonHelp>
@@ -4850,7 +4867,7 @@
 			<Type>EVENT_HIGH_WARLORD_1</Type>
 			<Description>TXT_KEY_EVENT_HIGH_WARLORD_1</Description>
 			<bPickCity>1</bPickCity>
-			<iGold>1000</iGold>
+			<iGold>500</iGold>
 			<bGameSpeedScale>1</bGameSpeedScale>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<iAIValue>1</iAIValue>
@@ -4870,7 +4887,7 @@
 			<Type>EVENT_HIGH_WARLORD_3</Type>
 			<Description>TXT_KEY_EVENT_HIGH_WARLORD_3</Description>
 			<bPickCity>1</bPickCity>
-			<iGold>-1000</iGold>
+			<iGold>-500</iGold>
 			<bGameSpeedScale>1</bGameSpeedScale>
 			<FreeSpecialistCounts>
 				<FreeSpecialistCount>
@@ -4895,7 +4912,7 @@
 			<Type>EVENT_SPOILED_GRAIN_2</Type>
 			<Description>TXT_KEY_EVENT_SPOILED_GRAIN_2</Description>
 			<bPickCity>1</bPickCity>
-			<iGold>-80</iGold>
+			<iGold>-40</iGold>
 			<bGameSpeedScale>1</bGameSpeedScale>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<iAIValue>1</iAIValue>
@@ -4906,7 +4923,7 @@
 			<Description>TXT_KEY_EVENT_SPOILED_GRAIN_3</Description>
 			<bPickCity>1</bPickCity>
 			<iFoodPercent>-30</iFoodPercent>
-			<iGold>-30</iGold>
+			<iGold>-15</iGold>
 			<bGameSpeedScale>1</bGameSpeedScale>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<iAIValue>1</iAIValue>
@@ -4931,7 +4948,7 @@
 			<Type>EVENT_ANGEL_OF_MERCY_2</Type>
 			<Description>TXT_KEY_EVENT_ANGEL_OF_MERCY_2</Description>
 			<bPickCity>1</bPickCity>
-			<iGold>-200</iGold>
+			<iGold>-100</iGold>
 			<bGameSpeedScale>1</bGameSpeedScale>
 			<BuildingExtraHappies>
 				<BuildingExtraHappy>
@@ -4988,7 +5005,7 @@
 			<Type>EVENT_INDUSTRIAL_FIRE_2</Type>
 			<Description>TXT_KEY_EVENT_INDUSTRIAL_FIRE_2</Description>
 			<bPickCity>1</bPickCity>
-			<iGold>-1000</iGold>
+			<iGold>-500</iGold>
 			<bGameSpeedScale>1</bGameSpeedScale>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<iAIValue>1</iAIValue>
@@ -5023,7 +5040,7 @@
 			<Type>EVENT_EXPERIENCED_CAPTAIN_2</Type>
 			<Description>TXT_KEY_EVENT_EXPERIENCED_CAPTAIN_2</Description>
 			<bPickCity>1</bPickCity>
-			<iGold>-500</iGold>
+			<iGold>-250</iGold>
 			<bGameSpeedScale>1</bGameSpeedScale>
 			<Building>BUILDING_NAVAL_ACADEMY</Building>
 			<iBuildingChange>1</iBuildingChange>
@@ -5044,7 +5061,7 @@
 		<EventInfo>
 			<Type>EVENT_HERESY_2</Type>
 			<Description>TXT_KEY_EVENT_HERESY_2</Description>
-			<iGold>-400</iGold>
+			<iGold>-200</iGold>
 			<bGameSpeedScale>1</bGameSpeedScale>
 			<TechFlavors>
 				<TechFlavor>
@@ -5130,9 +5147,9 @@
 		<EventInfo>
 			<Type>EVENT_CRISIS_IN_THE_SENATE_2</Type>
 			<Description>TXT_KEY_EVENT_CRISIS_IN_THE_SENATE_2</Description>
-			<iGold>400</iGold>
+			<iGold>200</iGold>
 			<bGameSpeedScale>1</bGameSpeedScale>
-			<iRandomGold>6000</iRandomGold>
+			<iRandomGold>3000</iRandomGold>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<iAIValue>1</iAIValue>
 		</EventInfo>
@@ -5205,8 +5222,9 @@
 		<EventInfo>
 			<Type>EVENT_FRIENDLY_LOCALS_2</Type>
 			<Description>TXT_KEY_EVENT_FRIENDLY_LOCALS_2</Description>
-			<iGold>-50</iGold>
-			<iUnitExperience>3</iUnitExperience>
+			<iGold>-25</iGold>
+            <bGameSpeedScale>1</bGameSpeedScale>
+			<iUnitExperience>4</iUnitExperience>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<iAIValue>1</iAIValue>
 		</EventInfo>
@@ -5443,7 +5461,7 @@
 			<Type>EVENT_GUNS_BUTTER_DONE_2</Type>
 			<Description>TXT_KEY_EVENT_GUNS_BUTTER_DONE_2</Description>
 			<bGlobal>1</bGlobal>
-			<iGold>4000</iGold>
+			<iGold>2000</iGold>
 			<bGameSpeedScale>1</bGameSpeedScale>
 			<iHurryAnger>5</iHurryAnger>
 			<ClearEvents>
@@ -5718,8 +5736,8 @@
 		<EventInfo>
 			<Type>EVENT_CIV_GAME_3</Type>
 			<Description>TXT_KEY_EVENT_CIV_GAME_3</Description>
-			<iGold>3200</iGold>
-			<iRandomGold>8000</iRandomGold>
+			<iGold>1600</iGold>
+			<iRandomGold>4000</iRandomGold>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<iAIValue>1</iAIValue>
 		</EventInfo>
@@ -5737,7 +5755,7 @@
 			<Type>EVENT_IMMIGRANTS_2</Type>
 			<Description>TXT_KEY_EVENT_IMMIGRANTS_2</Description>
 			<bPickCity>1</bPickCity>
-			<iGold>-4000</iGold>
+			<iGold>-2000</iGold>
 			<bGameSpeedScale>1</bGameSpeedScale>
 			<iHappy>-3</iHappy>
 			<iPopulationChange>3</iPopulationChange>
@@ -5831,7 +5849,7 @@
 			<Type>EVENT_GREAT_BEAST_2</Type>
 			<Description>TXT_KEY_EVENT_GREAT_BEAST_2</Description>
 			<bPickCity>1</bPickCity>
-			<iGold>-150</iGold>
+			<iGold>-75</iGold>
 			<bGameSpeedScale>1</bGameSpeedScale>
 			<iPopulationChange>1</iPopulationChange>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
@@ -5874,7 +5892,7 @@
 			<Type>EVENT_CONTROVERSIAL_PHILOSOPHER_3</Type>
 			<Description>TXT_KEY_EVENT_CONTROVERSIAL_PHILOSOPHER_3</Description>
 			<bPickCity>1</bPickCity>
-			<iGold>-400</iGold>
+			<iGold>-200</iGold>
 			<bGameSpeedScale>1</bGameSpeedScale>
 			<Building>BUILDING_ACADEMY</Building>
 			<iBuildingChange>1</iBuildingChange>
@@ -5895,7 +5913,7 @@
 		<EventInfo>
 			<Type>EVENT_DEFECTING_AGENT_2</Type>
 			<Description>TXT_KEY_EVENT_DEFECTING_AGENT_2</Description>
-			<iGold>-500</iGold>
+			<iGold>-250</iGold>
 			<bGameSpeedScale>1</bGameSpeedScale>
 			<AdditionalEvents>
 				<EventChance>
@@ -5926,7 +5944,7 @@
 		<EventInfo>
 			<Type>EVENT_JAIL_2</Type>
 			<Description>TXT_KEY_EVENT_JAIL_2</Description>
-			<iGold>-1000</iGold>
+			<iGold>-500</iGold>
 			<bGameSpeedScale>1</bGameSpeedScale>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<iAIValue>1</iAIValue>
@@ -5946,7 +5964,7 @@
 		<EventInfo>
 			<Type>EVENT_SPY_DISCOVERED_2</Type>
 			<Description>TXT_KEY_EVENT_SPY_DISCOVERED_2</Description>
-			<iGold>-300</iGold>
+			<iGold>-150</iGold>
 			<iEspionagePoints>300</iEspionagePoints>
 			<bGameSpeedScale>1</bGameSpeedScale>
 			<FreeUnit>UNIT_GREAT_SPY</FreeUnit>
@@ -5990,7 +6008,7 @@
 		<EventInfo>
 			<Type>EVENT_NUCLEAR_PROTEST_3</Type>
 			<Description>TXT_KEY_EVENT_NUCLEAR_PROTEST_3</Description>
-			<iGold>-2000</iGold>
+			<iGold>-1000</iGold>
 			<bGameSpeedScale>1</bGameSpeedScale>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<iAIValue>2</iAIValue>
@@ -6046,7 +6064,7 @@
 			<Type>EVENT_BROKEN_DAM_2</Type>
 			<Description>TXT_KEY_EVENT_BROKEN_DAM_2</Description>
 			<bPickCity>1</bPickCity>
-			<iGold>-600</iGold>
+			<iGold>-300</iGold>
 			<bGameSpeedScale>1</bGameSpeedScale>
 			<iHurryAnger>3</iHurryAnger>
 			<iPopulationChange>-1</iPopulationChange>
@@ -6058,7 +6076,8 @@
 			<Type>EVENT_BROKEN_DAM_3</Type>
 			<Description>TXT_KEY_EVENT_BROKEN_DAM_3</Description>
 			<bPickCity>1</bPickCity>
-			<iRandomGold>-10000</iRandomGold>
+			<iRandomGold>-5000</iRandomGold>
+            <bGameSpeedScale>1</bGameSpeedScale>
 			<iPopulationChange>-1</iPopulationChange>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<iAIValue>1</iAIValue>
@@ -6078,7 +6097,7 @@
 			<Type>EVENT_RABBI_2</Type>
 			<Description>TXT_KEY_EVENT_RABBI_2</Description>
 			<bPickCity>1</bPickCity>
-			<iGold>-250</iGold>
+			<iGold>-125</iGold>
 			<bGameSpeedScale>1</bGameSpeedScale>
 			<FreeSpecialistCounts>
 				<FreeSpecialistCount>
@@ -6114,8 +6133,9 @@
 			<Type>EVENT_GOLDEN_BUDDHA_1</Type>
 			<Description>TXT_KEY_EVENT_GOLDEN_BUDDHA_1</Description>
 			<bPickCity>1</bPickCity>
-			<iGold>1800</iGold>
-			<iRandomGold>2000</iRandomGold>
+			<iGold>900</iGold>
+			<iRandomGold>1000</iRandomGold>
+            <bGameSpeedScale>1</bGameSpeedScale>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<iAIValue>1</iAIValue>
 		</EventInfo>
@@ -6138,7 +6158,7 @@
 		<EventInfo>
 			<Type>EVENT_GOLDEN_BUDDHA_3</Type>
 			<Description>TXT_KEY_EVENT_GOLDEN_BUDDHA_3</Description>
-			<iGold>-700</iGold>
+			<iGold>-350</iGold>
 			<bGameSpeedScale>1</bGameSpeedScale>
 			<iCulture>35000</iCulture>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
@@ -6164,7 +6184,7 @@
 			<Type>EVENT_PREACHING_RESEARCHER_2</Type>
 			<Description>TXT_KEY_EVENT_PREACHING_RESEARCHER_2</Description>
 			<bPickCity>1</bPickCity>
-			<iGold>-1200</iGold>
+			<iGold>-600</iGold>
 			<bGameSpeedScale>1</bGameSpeedScale>
 			<BuildingExtraCommerces>
 				<BuildingExtraCommerce>
@@ -6203,7 +6223,7 @@
 		<EventInfo>
 			<Type>EVENT_DISSIDENT_PRIEST_3</Type>
 			<Description>TXT_KEY_EVENT_DISSIDENT_PRIEST_3</Description>
-			<iGold>-1000</iGold>
+			<iGold>-500</iGold>
 			<bGameSpeedScale>1</bGameSpeedScale>
 			<BuildingExtraCommerces>
 				<BuildingExtraCommerce>
@@ -6412,7 +6432,7 @@
 			<Type>EVENT_IMPEACHMENT_2</Type>
 			<Description>TXT_KEY_EVENT_IMPEACHMENT_2</Description>
 			<bPickCity>1</bPickCity>
-			<iGold>-1000</iGold>
+			<iGold>-500</iGold>
 			<bGameSpeedScale>1</bGameSpeedScale>
 			<BuildingExtraYields>
 				<BuildingExtraYield>
@@ -6465,7 +6485,7 @@
 				<Text>TXT_KEY_EVENTWORLD_FUTBOL_WAR_2</Text>
 			</WorldNewsTexts>
 			<OtherPlayerPopup>TXT_KEY_EVENTOTHER_FUTBOL_WAR_2</OtherPlayerPopup>
-			<iGold>-1500</iGold>
+			<iGold>-750</iGold>
 			<bGameSpeedScale>1</bGameSpeedScale>
 			<bGoldToPlayer>1</bGoldToPlayer>
 			<iHurryAnger>1</iHurryAnger>
@@ -6478,7 +6498,8 @@
 		<EventInfo>
 			<Type>EVENT_FUTBOL_WAR_3</Type>
 			<Description>TXT_KEY_EVENT_FUTBOL_WAR_3</Description>
-			<iRandomGold>-10000</iRandomGold>
+			<iRandomGold>-5000</iRandomGold>
+            <bGameSpeedScale>1</bGameSpeedScale>
 			<WorldNewsTexts>
 				<Text>TXT_KEY_EVENTWORLD_FUTBOL_WAR_3</Text>
 			</WorldNewsTexts>
@@ -6495,7 +6516,7 @@
 			<WorldNewsTexts>
 				<Text>TXT_KEY_WORLD_NAPALM_1</Text>
 			</WorldNewsTexts>
-			<iGold>-10000</iGold>
+			<iGold>-5000</iGold>
 			<bGameSpeedScale>1</bGameSpeedScale>
 			<PromoteUnits>
 				<PromoteUnit>
@@ -6567,7 +6588,7 @@
 			<WorldNewsTexts>
 				<Text>TXT_KEY_EVENT_WORLD_BILLIONS_AND_BILLIONS_2</Text>
 			</WorldNewsTexts>
-			<iGold>-2000</iGold>
+			<iGold>-1000</iGold>
 			<bGameSpeedScale>1</bGameSpeedScale>
 			<Building>BUILDING_THEATRE</Building>
 			<BuildingExtraCommerces>
@@ -6632,7 +6653,7 @@
 			<WorldNewsTexts>
 				<Text>TXT_KEY_EVENT_WORLD_FREE_ENTERPRISE_1</Text>
 			</WorldNewsTexts>
-			<iGold>-5000</iGold>
+			<iGold>-2500</iGold>
 			<bGameSpeedScale>1</bGameSpeedScale>
 			<iSpaceProductionMod>5</iSpaceProductionMod>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
@@ -6656,7 +6677,8 @@
 			<WorldNewsTexts>
 				<Text>TXT_KEY_EVENT_WORLD_FIAT_MONEY_1</Text>
 			</WorldNewsTexts>
-			<iGold>12500</iGold>
+			<iGold>6250</iGold>
+            <bGameSpeedScale>1</bGameSpeedScale>
 			<iInflationMod>8</iInflationMod>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<iAIValue>1</iAIValue>
@@ -6691,7 +6713,7 @@
 			<WorldNewsTexts>
 				<Text>TXT_KEY_EVENT_WORLD_CROSSING_THE_RUBICON_2</Text>
 			</WorldNewsTexts>
-			<iGold>-1000</iGold>
+			<iGold>-500</iGold>
 			<bGameSpeedScale>1</bGameSpeedScale>
 			<PythonCallback>applyRubicon2</PythonCallback>
 			<PythonHelp>getHelpRubicon2</PythonHelp>
@@ -6732,7 +6754,7 @@
 			<WorldNewsTexts>
 				<Text>TXT_KEY_EVENT_WORLD_THE_GENERALS_PUTSCH_2</Text>
 			</WorldNewsTexts>
-			<iGold>-3000</iGold>
+			<iGold>-1500</iGold>
 			<bGameSpeedScale>1</bGameSpeedScale>
 			<FreeUnit>UNIT_INFANTRY</FreeUnit>
 			<iNumFreeUnits>3</iNumFreeUnits>
@@ -6804,7 +6826,7 @@
 				<Text>TXT_KEY_EVENT_WORLD_SYNTHETIC_FUELS_1</Text>
 			</WorldNewsTexts>
 			<bPickCity>1</bPickCity>
-			<iGold>-7000</iGold>
+			<iGold>-3500</iGold>
 			<bGameSpeedScale>1</bGameSpeedScale>
 			<AdditionalEvents>
 				<EventChance>
@@ -6822,7 +6844,7 @@
 			<WorldNewsTexts>
 				<Text>TXT_KEY_EVENT_WORLD_SYNTHETIC_FUELS_2</Text>
 			</WorldNewsTexts>
-			<iGold>-3000</iGold>
+			<iGold>-1500</iGold>
 			<bGameSpeedScale>1</bGameSpeedScale>
 			<AdditionalEvents>
 				<EventChance>
@@ -6932,7 +6954,8 @@
 			<WorldNewsTexts>
 				<Text>TXT_KEY_EVENT_WORLD_MORE_FIAT_MONEY_1</Text>
 			</WorldNewsTexts>
-			<iGold>20000</iGold>
+			<iGold>10000</iGold>
+            <bGameSpeedScale>1</bGameSpeedScale>
 			<iInflationMod>15</iInflationMod>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<iAIValue>1</iAIValue>
@@ -6975,7 +6998,8 @@
 				<Text>TXT_KEY_EVENT_WORLD_INDUSTRIAL_ACTION_2</Text>
 			</WorldNewsTexts>
 			<bPickCity>1</bPickCity>
-			<iGold>-7500</iGold>
+			<iGold>-3750</iGold>
+            <bGameSpeedScale>1</bGameSpeedScale>
 			<AdditionalEvents>
 				<EventChance>
 					<Event>EVENT_INDUSTRIAL_ACTION_5</Event>
@@ -7080,7 +7104,7 @@
 			<Type>EVENT_THE_BUCCANEERS_2</Type>
 			<Description>TXT_KEY_EVENT_THE_BUCCANEERS_2</Description>
 			<LocalInfoText>TXT_KEY_EVENT_LOCAL_THE_BUCCANEERS_2</LocalInfoText>
-			<iGold>-3000</iGold>
+			<iGold>-1500</iGold>
 			<bGameSpeedScale>1</bGameSpeedScale>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<iAIValue>1</iAIValue>
@@ -7098,7 +7122,7 @@
 		<EventInfo>
 			<Type>EVENT_BLACKBEARD_2</Type>
 			<Description>TXT_KEY_EVENT_BLACKBEARD_2</Description>
-			<iGold>-4000</iGold>
+			<iGold>-2000</iGold>
 			<bGameSpeedScale>1</bGameSpeedScale>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<iAIValue>1000</iAIValue>
@@ -7116,7 +7140,7 @@
 		<EventInfo>
 			<Type>EVENT_PIRATES_OF_THE_NEUTRAL_ZONES_2</Type>
 			<Description>TXT_KEY_EVENT_PIRATES_OF_THE_NEUTRAL_ZONES_2</Description>
-			<iGold>-7000</iGold>
+			<iGold>-3500</iGold>
 			<bGameSpeedScale>1</bGameSpeedScale>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<iAIValue>1</iAIValue>
@@ -7134,7 +7158,7 @@
 		<EventInfo>
 			<Type>EVENT_MALACCAN_PIRATES_2</Type>
 			<Description>TXT_KEY_EVENT_MALACCAN_PIRATES_2</Description>
-			<iGold>-6000</iGold>
+			<iGold>-3000</iGold>
 			<bGameSpeedScale>1</bGameSpeedScale>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<iAIValue>1</iAIValue>
@@ -7152,7 +7176,7 @@
 		<EventInfo>
 			<Type>EVENT_HENRY_MORGAN_2</Type>
 			<Description>TXT_KEY_EVENT_HENRY_MORGAN_2</Description>
-			<iGold>-5000</iGold>
+			<iGold>-2500</iGold>
 			<bGameSpeedScale>1</bGameSpeedScale>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<iAIValue>1</iAIValue>
@@ -7170,7 +7194,7 @@
 		<EventInfo>
 			<Type>EVENT_STEDE_BONNET_2</Type>
 			<Description>TXT_KEY_EVENT_STEDE_BONNET_2</Description>
-			<iGold>-5000</iGold>
+			<iGold>-2500</iGold>
 			<bGameSpeedScale>1</bGameSpeedScale>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<iAIValue>1</iAIValue>
@@ -7188,7 +7212,7 @@
 		<EventInfo>
 			<Type>EVENT_THE_CORSAIRS_2</Type>
 			<Description>TXT_KEY_EVENT_THE_CORSAIRS_2</Description>
-			<iGold>-4000</iGold>
+			<iGold>-2000</iGold>
 			<bGameSpeedScale>1</bGameSpeedScale>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<iAIValue>1</iAIValue>
@@ -7206,7 +7230,7 @@
 		<EventInfo>
 			<Type>EVENT_ILLYRIAN_PIRATES_2</Type>
 			<Description>TXT_KEY_EVENT_ILLYRIAN_PIRATES_2</Description>
-			<iGold>-3000</iGold>
+			<iGold>-1500</iGold>
 			<bGameSpeedScale>1</bGameSpeedScale>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<iAIValue>1</iAIValue>
@@ -7236,7 +7260,7 @@
 			<WorldNewsTexts>
 				<Text>TXT_KEY_EVENT_WORLD_V_GER_1</Text>
 			</WorldNewsTexts>
-			<iGold>-14000</iGold>
+			<iGold>-7000</iGold>
 			<bGameSpeedScale>1</bGameSpeedScale>
 			<iSpaceProductionMod>1</iSpaceProductionMod>
 			<BuildingExtraCommerces>
@@ -7256,7 +7280,7 @@
 			<WorldNewsTexts>
 				<Text>TXT_KEY_EVENT_WORLD_V_GER_2</Text>
 			</WorldNewsTexts>
-			<iGold>-8000</iGold>
+			<iGold>-4000</iGold>
 			<bGameSpeedScale>1</bGameSpeedScale>
 			<BuildingExtraCommerces>
 				<BuildingExtraCommerce>
@@ -7285,7 +7309,7 @@
 			<WorldNewsTexts>
 				<Text>TXT_KEY_EVENT_WORLD_V_GER_4</Text>
 			</WorldNewsTexts>
-			<iGold>4500</iGold>
+			<iGold>2250</iGold>
 			<bGameSpeedScale>1</bGameSpeedScale>
 			<iSpaceProductionMod>-4</iSpaceProductionMod>
 			<iHappy>10</iHappy>
@@ -7346,7 +7370,7 @@
 		<EventInfo>
 			<Type>EVENT_SANDSTORM_2</Type>
 			<Description>TXT_KEY_EVENT_SANDSTORM_2</Description>
-			<iGold>-20</iGold>
+			<iGold>-10</iGold>
 			<bGameSpeedScale>1</bGameSpeedScale>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<iAIValue>1</iAIValue>
@@ -7355,7 +7379,7 @@
 		<EventInfo>
 			<Type>EVENT_SANDSTORM_3</Type>
 			<Description>TXT_KEY_EVENT_SANDSTORM_2</Description>
-			<iGold>-40</iGold>
+			<iGold>-20</iGold>
 			<bGameSpeedScale>1</bGameSpeedScale>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<iAIValue>1</iAIValue>
@@ -7364,7 +7388,7 @@
 		<EventInfo>
 			<Type>EVENT_SANDSTORM_4</Type>
 			<Description>TXT_KEY_EVENT_SANDSTORM_2</Description>
-			<iGold>-50</iGold>
+			<iGold>-25</iGold>
 			<bGameSpeedScale>1</bGameSpeedScale>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<iAIValue>1</iAIValue>
@@ -7373,7 +7397,7 @@
 		<EventInfo>
 			<Type>EVENT_SANDSTORM_5</Type>
 			<Description>TXT_KEY_EVENT_SANDSTORM_2</Description>
-			<iGold>-60</iGold>
+			<iGold>-30</iGold>
 			<bGameSpeedScale>1</bGameSpeedScale>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<iAIValue>1</iAIValue>
@@ -7382,7 +7406,7 @@
 		<EventInfo>
 			<Type>EVENT_SANDSTORM_6</Type>
 			<Description>TXT_KEY_EVENT_SANDSTORM_2</Description>
-			<iGold>-70</iGold>
+			<iGold>-35</iGold>
 			<bGameSpeedScale>1</bGameSpeedScale>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<iAIValue>1</iAIValue>
@@ -7391,7 +7415,7 @@
 		<EventInfo>
 			<Type>EVENT_SANDSTORM_7</Type>
 			<Description>TXT_KEY_EVENT_SANDSTORM_2</Description>
-			<iGold>-80</iGold>
+			<iGold>-40</iGold>
 			<bGameSpeedScale>1</bGameSpeedScale>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<iAIValue>1</iAIValue>
@@ -7400,7 +7424,7 @@
 		<EventInfo>
 			<Type>EVENT_SANDSTORM_8</Type>
 			<Description>TXT_KEY_EVENT_SANDSTORM_2</Description>
-			<iGold>-90</iGold>
+			<iGold>-45</iGold>
 			<bGameSpeedScale>1</bGameSpeedScale>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<iAIValue>1</iAIValue>
@@ -7409,7 +7433,7 @@
 		<EventInfo>
 			<Type>EVENT_SANDSTORM_9</Type>
 			<Description>TXT_KEY_EVENT_SANDSTORM_2</Description>
-			<iGold>-100</iGold>
+			<iGold>-50</iGold>
 			<bGameSpeedScale>1</bGameSpeedScale>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<iAIValue>1</iAIValue>
@@ -7418,7 +7442,7 @@
 		<EventInfo>
 			<Type>EVENT_SANDSTORM_10</Type>
 			<Description>TXT_KEY_EVENT_SANDSTORM_2</Description>
-			<iGold>-110</iGold>
+			<iGold>-55</iGold>
 			<bGameSpeedScale>1</bGameSpeedScale>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<iAIValue>1</iAIValue>
@@ -7435,7 +7459,7 @@
 		<EventInfo>
 			<Type>EVENT_SANDSTORM_12</Type>
 			<Description>TXT_KEY_EVENT_SANDSTORM_2</Description>
-			<iGold>-80</iGold>
+			<iGold>-40</iGold>
 			<bGameSpeedScale>1</bGameSpeedScale>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<iAIValue>1</iAIValue>
@@ -7453,7 +7477,8 @@
 		<EventInfo>
 			<Type>EVENT_ARCHERY_FOUNDED_2</Type>
 			<Description>TXT_KEY_EVENT_ARCHERY_FOUNDED_2</Description>
-			<iGold>-2000</iGold>
+			<iGold>-1000</iGold>
+            <bGameSpeedScale>1</bGameSpeedScale>
 			<FreeUnit>UNIT_ARCHER</FreeUnit>
 			<iNumFreeUnits>5</iNumFreeUnits>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
@@ -7472,7 +7497,8 @@
 		<EventInfo>
 			<Type>EVENT_SAILING_FOUNDED_2</Type>
 			<Description>TXT_KEY_EVENT_SAILING_FOUNDED_2</Description>
-			<iGold>-3000</iGold>
+			<iGold>-1500</iGold>
+            <bGameSpeedScale>1</bGameSpeedScale>
 			<FreeUnit>UNIT_GALLEY</FreeUnit>
 			<iNumFreeUnits>5</iNumFreeUnits>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
@@ -7492,7 +7518,8 @@
 		<EventInfo>
 			<Type>EVENT_NATUROPATHY_FOUNDED_2</Type>
 			<Description>TXT_KEY_EVENT_NATUROPATHY_FOUNDED_2</Description>
-			<iRandomGold>3000</iRandomGold>
+			<iRandomGold>1500</iRandomGold>
+            <bGameSpeedScale>1</bGameSpeedScale>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<iAIValue>1</iAIValue>
 		</EventInfo>
@@ -7510,7 +7537,8 @@
 			<Type>EVENT_PAPYRUS_2</Type>
 			<Description>TXT_KEY_EVENT_PAPYRUS_2</Description>
 			<bPickCity>1</bPickCity>
-			<iGold>-1000</iGold>
+			<iGold>-500</iGold>
+            <bGameSpeedScale>1</bGameSpeedScale>
 			<iTechCostPercent>10</iTechCostPercent>
 			<BuildingExtraCommerces>
 				<BuildingExtraCommerce>
@@ -7535,8 +7563,9 @@
 		<EventInfo>
 			<Type>EVENT_TRADE_FOUNDED_2</Type>
 			<Description>TXT_KEY_EVENT_TRADE_FOUNDED_2</Description>
-			<iGold>-1000</iGold>
-			<iRandomGold>-1000</iRandomGold>
+			<iGold>-500</iGold>
+            <bGameSpeedScale>1</bGameSpeedScale>
+			<iRandomGold>-500</iRandomGold>
 			<FreeUnit>UNIT_TRADE_CARAVAN</FreeUnit>
 			<iNumFreeUnits>4</iNumFreeUnits>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
@@ -7546,7 +7575,7 @@
 		<EventInfo>
 			<Type>EVENT_CHARIOTRY_FOUNDED_1</Type>
 			<Description>TXT_KEY_EVENT_CHARIOTRY_FOUNDED_1</Description>
-			<iGold>-200</iGold>
+			<iGold>-100</iGold>
 			<bGameSpeedScale>1</bGameSpeedScale>
 			<FreeUnit>UNIT_CHARIOT</FreeUnit>
 			<iNumFreeUnits>4</iNumFreeUnits>
@@ -7558,7 +7587,7 @@
 			<Type>EVENT_CHARIOTRY_FOUNDED_2</Type>
 			<Description>TXT_KEY_EVENT_CHARIOTRY_FOUNDED_2</Description>
 			<bPickCity>1</bPickCity>
-			<iGold>-400</iGold>
+			<iGold>-200</iGold>
 			<bGameSpeedScale>1</bGameSpeedScale>
             <Building>BUILDING_STABLE</Building>
             <iBuildingChange>1</iBuildingChange>
@@ -7585,7 +7614,7 @@
 		<EventInfo>
 			<Type>EVENT_MERCENARIES_ANCIENT_2</Type>
 			<Description>TXT_KEY_EVENT_MERCENARIES_ANCIENT_2</Description>
-			<iGold>-100</iGold>
+			<iGold>-50</iGold>
 			<bGameSpeedScale>1</bGameSpeedScale>
 			<iHappyTurns>2</iHappyTurns>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
@@ -7595,7 +7624,7 @@
 		<EventInfo>
 			<Type>EVENT_MERCENARIES_ANCIENT_3</Type>
 			<Description>TXT_KEY_EVENT_MERCENARIES_ANCIENT_3</Description>
-			<iGold>-400</iGold>
+			<iGold>-200</iGold>
 			<bGameSpeedScale>1</bGameSpeedScale>
 			<FreeUnit>UNIT_ATLATL</FreeUnit>
 			<iNumFreeUnits>5</iNumFreeUnits>
@@ -7615,7 +7644,7 @@
 		<EventInfo>
 			<Type>EVENT_MERCENARIES_CLASSICAL_2</Type>
 			<Description>TXT_KEY_EVENT_MERCENARIES_CLASSICAL_2</Description>
-			<iGold>-200</iGold>
+			<iGold>-100</iGold>
 			<bGameSpeedScale>1</bGameSpeedScale>
 			<iHappyTurns>2</iHappyTurns>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
@@ -7625,7 +7654,7 @@
 		<EventInfo>
 			<Type>EVENT_MERCENARIES_CLASSICAL_3</Type>
 			<Description>TXT_KEY_EVENT_MERCENARIES_CLASSICAL_3</Description>
-			<iGold>-500</iGold>
+			<iGold>-250</iGold>
 			<bGameSpeedScale>1</bGameSpeedScale>
 			<FreeUnit>UNIT_AXEMAN</FreeUnit>
 			<iNumFreeUnits>5</iNumFreeUnits>
@@ -7645,7 +7674,7 @@
 		<EventInfo>
 			<Type>EVENT_MERCENARIES_MEDIEVAL_2</Type>
 			<Description>TXT_KEY_EVENT_MERCENARIES_MEDIEVAL_2</Description>
-			<iGold>-200</iGold>
+			<iGold>-100</iGold>
 			<bGameSpeedScale>1</bGameSpeedScale>
 			<iHappyTurns>2</iHappyTurns>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
@@ -7655,7 +7684,7 @@
 		<EventInfo>
 			<Type>EVENT_MERCENARIES_MEDIEVAL_3</Type>
 			<Description>TXT_KEY_EVENT_MERCENARIES_MEDIEVAL_3</Description>
-			<iGold>-500</iGold>
+			<iGold>-250</iGold>
 			<bGameSpeedScale>1</bGameSpeedScale>
 			<FreeUnit>UNIT_SWORDSMAN</FreeUnit>
 			<iNumFreeUnits>5</iNumFreeUnits>
@@ -7743,7 +7772,7 @@
 			<Type>EVENT_TANNERY_GLUE_2</Type>
 			<Description>TXT_KEY_EVENT_TANNERY_GLUE_2</Description>
 			<bPickCity>1</bPickCity>
-			<iGold>-250</iGold>
+			<iGold>-125</iGold>
 			<bGameSpeedScale>1</bGameSpeedScale>
             <BuildingExtraYields>
                 <BuildingExtraYield>
@@ -7852,7 +7881,7 @@
 		<EventInfo>
 			<Type>EVENT_ASSASSIN_DISCOVERED_2</Type>
 			<Description>TXT_KEY_EVENT_ASSASSIN_DISCOVERED_2</Description>
-			<iGold>-800</iGold>
+			<iGold>-400</iGold>
 			<bGameSpeedScale>1</bGameSpeedScale>
 			<iEspionagePoints>2500</iEspionagePoints>
 			<FreeUnit>UNIT_GREAT_SPY</FreeUnit>
@@ -7921,7 +7950,7 @@
 			<Type>EVENT_DRUIDS_3</Type>
 			<Description>TXT_KEY_EVENT_DRUIDS_3</Description>
 			<bPickCity>1</bPickCity>
-			<iGold>3000</iGold>
+			<iGold>1500</iGold>
 			<bGameSpeedScale>1</bGameSpeedScale>
 			<iOurAttitudeModifier>-4</iOurAttitudeModifier>
 			<iAttitudeModifier>-4</iAttitudeModifier>
@@ -7950,7 +7979,8 @@
 			<Type>EVENT_TREASURY_PLUNDERED_1</Type>
 			<Description>TXT_KEY_EVENT_TREASURY_PLUNDERED_1</Description>
 			<bPickCity>1</bPickCity>
-			<iGold>-1000</iGold>
+			<iGold>-500</iGold>
+            <bGameSpeedScale>1</bGameSpeedScale>
             <BuildingExtraYields>
                 <BuildingExtraYield>
                     <Building>BUILDING_TREASURY</Building>
@@ -7967,7 +7997,8 @@
 			<Type>EVENT_TREASURY_PLUNDERED_2</Type>
 			<Description>TXT_KEY_EVENT_TREASURY_PLUNDERED_2</Description>
 			<bPickCity>1</bPickCity>
-			<iGold>-1500</iGold>
+			<iGold>-750</iGold>
+            <bGameSpeedScale>1</bGameSpeedScale>
 			<iHappy>1</iHappy>
 			<iHappyTurns>5</iHappyTurns>
 			<FreeSpecialistCounts>
@@ -8014,7 +8045,8 @@
 			<Type>EVENT_BLACK_DEATH_1</Type>
 			<Description>TXT_KEY_EVENT_BLACK_DEATH_1</Description>
 			<bPickCity>1</bPickCity>
-			<iGold>-3000</iGold>
+			<iGold>-1500</iGold>
+            <bGameSpeedScale>1</bGameSpeedScale>
 			<iPopulationChange>-3</iPopulationChange>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<iAIValue>1</iAIValue>
@@ -8045,7 +8077,8 @@
 			<Type>EVENT_SMALLPOX_1</Type>
 			<Description>TXT_KEY_EVENT_SMALLPOX_1</Description>
 			<bPickCity>1</bPickCity>
-			<iGold>-1000</iGold>
+			<iGold>-500</iGold>
+            <bGameSpeedScale>1</bGameSpeedScale>
 			<iPopulationChange>-1</iPopulationChange>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<iAIValue>1</iAIValue>
@@ -8076,7 +8109,8 @@
 			<Type>EVENT_REFINERY_EXPLOSION_1</Type>
 			<Description>TXT_KEY_EVENT_REFINERY_EXPLOSION_1</Description>
 			<bPickCity>1</bPickCity>
-			<iGold>-5000</iGold>
+			<iGold>-2500</iGold>
+            <bGameSpeedScale>1</bGameSpeedScale>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<iAIValue>1</iAIValue>
 		</EventInfo>
@@ -8085,7 +8119,8 @@
 			<Type>EVENT_REFINERY_EXPLOSION_2</Type>
 			<Description>TXT_KEY_EVENT_REFINERY_EXPLOSION_2</Description>
 			<bPickCity>1</bPickCity>
-			<iGold>-2000</iGold>
+			<iGold>-1000</iGold>
+            <bGameSpeedScale>1</bGameSpeedScale>
 			<Building>BUILDING_OIL_REFINERY</Building>
 			<iBuildingChange>-1</iBuildingChange>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
@@ -8135,7 +8170,7 @@
 			<Type>EVENT_UFO_2</Type>
 			<Description>TXT_KEY_EVENT_UFO_2</Description>
 			<bPickCity>1</bPickCity>
-			<iGold>-1000</iGold>
+			<iGold>-500</iGold>
 			<bGameSpeedScale>1</bGameSpeedScale>
 			<BuildingExtraCommerces>
 				<BuildingExtraCommerce>
@@ -8157,7 +8192,7 @@
 			<Type>EVENT_UFO_3</Type>
 			<Description>TXT_KEY_EVENT_UFO_3</Description>
 			<bPickCity>1</bPickCity>
-			<iGold>-4000</iGold>
+			<iGold>-2000</iGold>
 			<bGameSpeedScale>1</bGameSpeedScale>
 			<BuildingExtraCommerces>
 				<BuildingExtraCommerce>
@@ -8194,7 +8229,7 @@
 			<Type>EVENT_SILVER_RAIN_2</Type>
 			<Description>TXT_KEY_EVENT_SILVER_RAIN_2</Description>
 			<bPickCity>1</bPickCity>
-			<iGold>-15000</iGold>
+			<iGold>-7500</iGold>
 			<bGameSpeedScale>1</bGameSpeedScale>
 			<PrereqTech>TECH_WEATHER_CONTROL</PrereqTech>
 			<FreeUnit>UNIT_NANITE_CLOUD</FreeUnit>
@@ -8206,7 +8241,7 @@
 		<EventInfo>
 			<Type>EVENT_SILVER_RAIN_3</Type>
 			<Description>TXT_KEY_EVENT_SILVER_RAIN_3</Description>
-			<iGold>-1000</iGold>
+			<iGold>-500</iGold>
 			<bGameSpeedScale>1</bGameSpeedScale>
 			<PythonCallback>applySilverRain3</PythonCallback>
 			<PythonHelp>getHelpSilverRain3</PythonHelp>
@@ -8248,10 +8283,10 @@
 		<EventInfo>
 			<Type>EVENT_FAMOUS_DOCTOR_3</Type>
 			<Description>TXT_KEY_EVENT_FAMOUS_DOCTOR_3</Description>
-			<iGold>300</iGold>
+			<iGold>150</iGold>
+            <bGameSpeedScale>1</bGameSpeedScale>
 			<bPickCity>1</bPickCity>
 			<iRevoltTurns>2</iRevoltTurns>
-			<bGameSpeedScale>1</bGameSpeedScale>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<iAIValue>1</iAIValue>
 		</EventInfo>
@@ -8282,8 +8317,9 @@
 		<EventInfo>
 			<Type>EVENT_RESORT_TOWN_1</Type>
 			<Description>TXT_KEY_EVENT_RESORT_TOWN_1</Description>
-			<iGold>3000</iGold>
-			<iRandomGold>15000</iRandomGold>
+			<iGold>1500</iGold>
+			<iRandomGold>7500</iRandomGold>
+            <bGameSpeedScale>1</bGameSpeedScale>
 			<PlotExtraYields>
 				<PlotExtraYield>
 					<YieldType>YIELD_COMMERCE</YieldType>
@@ -8334,8 +8370,9 @@
 		<EventInfo>
 			<Type>EVENT_LOCAL_MILLS_2</Type>
 			<Description>TXT_KEY_EVENT_LOCAL_MILLS_2</Description>
-			<iGold>-300</iGold>
-			<iRandomGold>-5000</iRandomGold>
+			<iGold>-150</iGold>
+			<iRandomGold>-2500</iRandomGold>
+            <bGameSpeedScale>1</bGameSpeedScale>
 			<PlotExtraYields>
 				<PlotExtraYield>
 					<YieldType>YIELD_PRODUCTION</YieldType>
@@ -8377,7 +8414,8 @@
 		<EventInfo>
 			<Type>EVENT_RECRUITMENT_DRIVE_2</Type>
 			<Description>TXT_KEY_EVENT_RECRUITMENT_DRIVE_2</Description>
-			<iGold>-1200</iGold>
+			<iGold>-600</iGold>
+            <bGameSpeedScale>1</bGameSpeedScale>
 			<FreeUnit>UNIT_MUSKETMAN</FreeUnit>
 			<iNumFreeUnits>3</iNumFreeUnits>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
@@ -8387,7 +8425,8 @@
 		<EventInfo>
 			<Type>EVENT_RECRUITMENT_DRIVE_3</Type>
 			<Description>TXT_KEY_EVENT_RECRUITMENT_DRIVE_3</Description>
-			<iGold>-3000</iGold>
+			<iGold>-1500</iGold>
+            <bGameSpeedScale>1</bGameSpeedScale>
 			<FreeUnit>UNIT_MUSKETMAN</FreeUnit>
 			<iNumFreeUnits>6</iNumFreeUnits>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
@@ -8397,20 +8436,21 @@
 		<EventInfo>
 			<Type>EVENT_RECRUITMENT_DRIVE_4</Type>
 			<Description>TXT_KEY_EVENT_RECRUITMENT_DRIVE_4</Description>
-			<iGold>-8000</iGold>
+			<iGold>-4000</iGold>
+            <bGameSpeedScale>1</bGameSpeedScale>
 			<FreeUnit>UNIT_MUSKETMAN</FreeUnit>
 			<iNumFreeUnits>12</iNumFreeUnits>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<iAIValue>1</iAIValue>
 		</EventInfo>
 
-
 		<EventInfo>
 			<Type>EVENT_EXPLOITED_PEASANTS_1</Type>
 			<Description>TXT_KEY_EVENT_EXPLOITED_PEASANTS_1</Description>
 			<bPickCity>1</bPickCity>
-			<iGold>1000</iGold>
-			<iRandomGold>1500</iRandomGold>
+			<iGold>500</iGold>
+			<iRandomGold>750</iRandomGold>
+            <bGameSpeedScale>1</bGameSpeedScale>
 			<iHurryAnger>8</iHurryAnger>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<iAIValue>1</iAIValue>
@@ -8420,8 +8460,9 @@
 			<Type>EVENT_EXPLOITED_PEASANTS_2</Type>
 			<Description>TXT_KEY_EVENT_EXPLOITED_PEASANTS_2</Description>
 			<bPickCity>1</bPickCity>
-			<iGold>-1000</iGold>
-			<iRandomGold>1500</iRandomGold>
+			<iGold>-250</iGold>
+			<iRandomGold>-750</iRandomGold>
+            <bGameSpeedScale>1</bGameSpeedScale>
 			<iHurryAnger>1</iHurryAnger>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<iAIValue>1</iAIValue>
@@ -8474,7 +8515,7 @@
 			<Type>EVENT_WAR_MEMORIAL_3</Type>
 			<Description>TXT_KEY_EVENT_WAR_MEMORIAL_3</Description>
 			<bPickCity>1</bPickCity>
-			<iGold>-800</iGold>
+			<iGold>-400</iGold>
 			<bGameSpeedScale>1</bGameSpeedScale>
 			<BuildingExtraCommerces>
 				<BuildingExtraCommerce>
@@ -8506,7 +8547,7 @@
 			<Type>EVENT_GREAT_MONUMENTS_2</Type>
 			<Description>TXT_KEY_EVENT_GREAT_MONUMENTS_2</Description>
 			<bPickCity>1</bPickCity>
-			<iGold>-3000</iGold>
+			<iGold>-1500</iGold>
 			<bGameSpeedScale>1</bGameSpeedScale>
             <BuildingExtraYields>
                 <BuildingExtraYield>
@@ -8523,7 +8564,7 @@
 			<Type>EVENT_GREAT_MONUMENTS_3</Type>
 			<Description>TXT_KEY_EVENT_GREAT_MONUMENTS_3</Description>
 			<bPickCity>1</bPickCity>
-			<iGold>-3000</iGold>
+			<iGold>-1500</iGold>
 			<bGameSpeedScale>1</bGameSpeedScale>
 			<BuildingExtraCommerces>
 				<BuildingExtraCommerce>
@@ -8558,7 +8599,8 @@
 			<Type>EVENT_HERETICAL_RESEARCH_3</Type>
 			<Description>TXT_KEY_EVENT_HERETICAL_RESEARCH_3</Description>
 			<iTechMinTurnsLeft>2</iTechMinTurnsLeft>
-			<iGold>-1000</iGold>
+			<iGold>-500</iGold>
+            <bGameSpeedScale>1</bGameSpeedScale>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<iAIValue>1</iAIValue>
 		</EventInfo>
@@ -8585,7 +8627,8 @@
 			<Type>EVENT_HERETICAL_RESEARCH2_3</Type>
 			<Description>TXT_KEY_EVENT_HERETICAL_RESEARCH2_3</Description>
 			<iTechMinTurnsLeft>2</iTechMinTurnsLeft>
-			<iGold>-1000</iGold>
+			<iGold>-500</iGold>
+            <bGameSpeedScale>1</bGameSpeedScale>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<iAIValue>1</iAIValue>
 		</EventInfo>
@@ -8635,7 +8678,8 @@
 		<EventInfo>
 			<Type>EVENT_TAX_COLLECTION_RECORDS_1</Type>
 			<Description>TXT_KEY_EVENT_TAX_COLLECTION_RECORDS_1</Description>
-			<iGold>-4000</iGold>
+			<iGold>-2000</iGold>
+            <bGameSpeedScale>1</bGameSpeedScale>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<iAIValue>1</iAIValue>
 		</EventInfo>
@@ -8643,7 +8687,8 @@
 		<EventInfo>
 			<Type>EVENT_TAX_COLLECTION_RECORDS_2</Type>
 			<Description>TXT_KEY_EVENT_TAX_COLLECTION_RECORDS_2</Description>
-			<iGold>2000</iGold>
+			<iGold>1000</iGold>
+            <bGameSpeedScale>1</bGameSpeedScale>
 			<iRevoltTurns>1</iRevoltTurns>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<iAIValue>1</iAIValue>
@@ -8676,7 +8721,7 @@
 		<EventInfo>
 			<Type>EVENT_EXPENSIVE_HABITS_1</Type>
 			<Description>TXT_KEY_EVENT_EXPENSIVE_HABITS_1</Description>
-			<iGold>-500</iGold>
+			<iGold>-250</iGold>
 			<bGameSpeedScale>1</bGameSpeedScale>
 			<BuildingExtraCommerces>
 				<BuildingExtraCommerce>
@@ -8692,7 +8737,7 @@
 		<EventInfo>
 			<Type>EVENT_EXPENSIVE_HABITS_2</Type>
 			<Description>TXT_KEY_EVENT_EXPENSIVE_HABITS_2</Description>
-			<iGold>-5000</iGold>
+			<iGold>-2500</iGold>
 			<bGameSpeedScale>1</bGameSpeedScale>
 			<BuildingExtraCommerces>
 				<BuildingExtraCommerce>
@@ -8722,7 +8767,7 @@
 		<EventInfo>
 			<Type>EVENT_ACADEMIC_FUNDING_2</Type>
 			<Description>TXT_KEY_EVENT_ACADEMIC_FUNDING_2</Description>
-			<iGold>-5000</iGold>
+			<iGold>-2500</iGold>
 			<bGameSpeedScale>1</bGameSpeedScale>
 			<bPickCity>1</bPickCity>
 			<FreeSpecialistCounts>
@@ -8759,7 +8804,8 @@
 		<EventInfo>
 			<Type>EVENT_MAJOR_IN_HUMANITIES_2</Type>
 			<Description>TXT_KEY_EVENT_MAJOR_IN_HUMANITIES_2</Description>
-			<iGold>-5000</iGold>
+			<iGold>-2500</iGold>
+            <bGameSpeedScale>1</bGameSpeedScale>
 			<bPickCity>1</bPickCity>
 			<BuildingExtraCommerces>
 				<BuildingExtraCommerce>
@@ -8790,8 +8836,9 @@
 		<EventInfo>
 			<Type>EVENT_SOCIAL_STAGNATION_2</Type>
 			<Description>TXT_KEY_EVENT_SOCIAL_STAGNATION_2</Description>
-			<iGold>-500</iGold>
-			<iRandomGold>-1000</iRandomGold>
+			<iGold>-250</iGold>
+			<iRandomGold>-500</iRandomGold>
+            <bGameSpeedScale>1</bGameSpeedScale>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<iAIValue>2</iAIValue>
 		</EventInfo>
@@ -8816,7 +8863,8 @@
 		<EventInfo>
 			<Type>EVENT_LARGE_RECESSION_2</Type>
 			<Description>TXT_KEY_EVENT_LARGE_RECESSION_2</Description>
-			<iGold>-25000</iGold>
+			<iGold>-12500</iGold>
+            <bGameSpeedScale>1</bGameSpeedScale>
 			<iInflationMod>1</iInflationMod>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<iAIValue>1</iAIValue>
@@ -8825,8 +8873,9 @@
 		<EventInfo>
 			<Type>EVENT_QUALITY_WOOL_1</Type>
 			<Description>TXT_KEY_EVENT_QUALITY_WOOL_1</Description>
-			<iGold>1000</iGold>
-			<iRandomGold>5000</iRandomGold>
+			<iGold>500</iGold>
+			<iRandomGold>2500</iRandomGold>
+            <bGameSpeedScale>1</bGameSpeedScale>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<iAIValue>1</iAIValue>
 		</EventInfo>
@@ -8865,7 +8914,8 @@
 		<EventInfo>
 			<Type>EVENT_FORT_IN_DISREPAIR_2</Type>
 			<Description>TXT_KEY_EVENT_FORT_IN_DISREPAIR_2</Description>
-			<iGold>-80</iGold>
+			<iGold>-40</iGold>
+            <bGameSpeedScale>1</bGameSpeedScale>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<iAIValue>1</iAIValue>
 		</EventInfo>
@@ -8901,7 +8951,7 @@
 			<WorldNewsTexts>
 				<Text>TXT_KEY_NEWS_EVENT_LABOR_UNIONS_1</Text>
 			</WorldNewsTexts>
-			<iGold>-1000</iGold>
+			<iGold>-500</iGold>
 			<bGameSpeedScale>1</bGameSpeedScale>
 			<BuildingExtraHealths>
 				<BuildingExtraHealth>
@@ -8960,8 +9010,8 @@
 		<EventInfo>
 			<Type>EVENT_NO_JUSTICE_2</Type>
 			<Description>TXT_KEY_EVENT_NO_JUSTICE_2</Description>
-			<iGold>-300</iGold>
-			<iRandomGold>-1000</iRandomGold>
+			<iGold>-150</iGold>
+			<iRandomGold>-500</iRandomGold>
 			<bGameSpeedScale>1</bGameSpeedScale>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<iAIValue>2</iAIValue>
@@ -8996,7 +9046,8 @@
 			<Type>EVENT_GOOD_HARBOR_2</Type>
 			<Description>TXT_KEY_EVENT_GOOD_HARBOR_2</Description>
 			<bPickCity>1</bPickCity>
-			<iGold>-5000</iGold>
+			<iGold>-2500</iGold>
+            <bGameSpeedScale>1</bGameSpeedScale>
             <BuildingExtraYields>
                 <BuildingExtraYield>
                     <Building>BUILDING_PORT</Building>
@@ -9036,7 +9087,7 @@
 		<EventInfo>
 			<Type>EVENT_LOOSE_MORALS_2</Type>
 			<Description>TXT_KEY_EVENT_LOOSE_MORALS_2</Description>
-			<iGold>-1000</iGold>
+			<iGold>-500</iGold>
 			<bGameSpeedScale>1</bGameSpeedScale>
 			<BuildingExtraCommerces>
 				<BuildingExtraCommerce>
@@ -9075,7 +9126,8 @@
 		<EventInfo>
 			<Type>EVENT_NOBLES_DEMAND_COMPENSATION_1</Type>
 			<Description>TXT_KEY_EVENT_NOBLES_DEMAND_COMPENSATION_1</Description>
-			<iRandomGold>5000</iRandomGold>
+			<iRandomGold>-2500</iRandomGold>
+            <bGameSpeedScale>1</bGameSpeedScale>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<iAIValue>2</iAIValue>
 		</EventInfo>
@@ -9100,7 +9152,8 @@
 		<EventInfo>
 			<Type>EVENT_FISHING_BOATS_SUNK_1</Type>
 			<Description>TXT_KEY_EVENT_FISHING_BOATS_SUNK_1</Description>
-			<iGold>-300</iGold>
+			<iGold>-150</iGold>
+            <bGameSpeedScale>1</bGameSpeedScale>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<iAIValue>2</iAIValue>
 		</EventInfo>
@@ -9131,7 +9184,7 @@
 		<EventInfo>
 			<Type>EVENT_BANANA_BLIGHT_2</Type>
 			<Description>TXT_KEY_EVENT_BANANA_BLIGHT_2</Description>
-			<iGold>-2000</iGold>
+			<iGold>-1000</iGold>
 			<bGameSpeedScale>1</bGameSpeedScale>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<iAIValue>2</iAIValue>
@@ -9316,7 +9369,7 @@
 		<EventInfo>
 			<Type>EVENT_OVERFISHING_2</Type>
 			<Description>TXT_KEY_EVENT_OVERFISHING_2</Description>
-			<iGold>-2000</iGold>
+			<iGold>-1000</iGold>
 			<bGameSpeedScale>1</bGameSpeedScale>
 			<iAIValue>2</iAIValue>
 		</EventInfo>
@@ -9324,8 +9377,8 @@
 		<EventInfo>
 			<Type>EVENT_SILKWORM_GOING_EXTINCT_1</Type>
 			<Description>TXT_KEY_EVENT_SILKWORM_GOING_EXTINCT_1</Description>
-			<iGold>-750</iGold>
-			<iRandomGold>1000</iRandomGold>
+			<iGold>-375</iGold>
+			<iRandomGold>-1000</iRandomGold>
 			<bGameSpeedScale>1</bGameSpeedScale>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<iAIValue>2</iAIValue>
@@ -9345,7 +9398,8 @@
 		<EventInfo>
 			<Type>EVENT_NAVAL_PROXIMITY_AAA_FUSES_1</Type>
 			<Description>TXT_KEY_EVENT_NAVAL_PROXIMITY_AAA_FUSES_1</Description>
-			<iGold>-9000</iGold>
+			<iGold>-4500</iGold>
+            <bGameSpeedScale>1</bGameSpeedScale>
 			<PromoteUnits>
 				<PromoteUnit>
 					<UnitType>UNIT_DESTROYER</UnitType>
@@ -9455,7 +9509,7 @@
 		<EventInfo>
 			<Type>EVENT_CORRUPT_SENATE_2</Type>
 			<Description>TXT_KEY_EVENT_CORRUPT_SENATE_2</Description>
-			<iGold>-500</iGold>
+			<iGold>-250</iGold>
 			<bGameSpeedScale>1</bGameSpeedScale>
 			<iHappyTurns>5</iHappyTurns>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
@@ -9620,8 +9674,8 @@
 		<EventInfo>
 			<Type>EVENT_NEW_WORLD_3</Type>
 			<Description>TXT_KEY_EVENT_NEW_WORLD_3</Description>
-			<iGold>-400</iGold>
-			<iRandomGold>-6000</iRandomGold>
+			<iGold>-200</iGold>
+			<iRandomGold>-3000</iRandomGold>
 			<bGameSpeedScale>1</bGameSpeedScale>
 			<PythonCallback>triggerNewWorldCities</PythonCallback>
 			<PythonCanDo>canTriggerNewWorldCities3</PythonCanDo>
@@ -9643,9 +9697,9 @@
 			<Type>EVENT_DOCK_WORKERS_STRIKE_2</Type>
 			<Description>TXT_KEY_EVENT_DOCK_WORKERS_STRIKE_2</Description>
 			<bPickCity>1</bPickCity>
-			<iGold>-100</iGold>
+			<iGold>-50</iGold>
 			<bGameSpeedScale>1</bGameSpeedScale>
-			<iRandomGold>-400</iRandomGold>
+			<iRandomGold>-200</iRandomGold>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<iAIValue>1</iAIValue>
 		</EventInfo>
@@ -9654,8 +9708,8 @@
 			<Type>EVENT_DOCK_WORKERS_STRIKE_3</Type>
 			<Description>TXT_KEY_EVENT_DOCK_WORKERS_STRIKE_3</Description>
 			<bPickCity>1</bPickCity>
-			<iGold>-1250</iGold>
-			<iRandomGold>-2000</iRandomGold>
+			<iGold>-625</iGold>
+			<iRandomGold>-1000</iRandomGold>
 			<bGameSpeedScale>1</bGameSpeedScale>
 			<BuildingExtraYields>
 				<BuildingExtraYield>
@@ -9722,7 +9776,7 @@
 			<Type>EVENT_MERCHANTFLEET1</Type>
 			<Description>TXT_KEY_EVENT_MERCHANTFLEET1</Description>
 			<bPickCity>1</bPickCity>
-			<iGold>-300</iGold>
+			<iGold>-150</iGold>
 			<bGameSpeedScale>1</bGameSpeedScale>
 			<FreeUnit>UNIT_MERCHANTFLEET</FreeUnit>
 			<iNumFreeUnits>3</iNumFreeUnits>
@@ -9767,7 +9821,7 @@
 		<EventInfo>
 			<Type>EVENT_FORTIFIED_CAVE_IN_DISREPAIR_2</Type>
 			<Description>TXT_KEY_EVENT_FORT_IN_DISREPAIR_2</Description>
-			<iGold>-15</iGold>
+			<iGold>-7</iGold>
 			<bGameSpeedScale>1</bGameSpeedScale>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<iAIValue>2</iAIValue>
@@ -9785,7 +9839,7 @@
 		<EventInfo>
 			<Type>EVENT_ABATIS_IN_DISREPAIR_2</Type>
 			<Description>TXT_KEY_EVENT_FORT_IN_DISREPAIR_2</Description>
-			<iGold>-5</iGold>
+			<iGold>-3</iGold>
 			<bGameSpeedScale>1</bGameSpeedScale>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<iAIValue>2</iAIValue>
@@ -9803,7 +9857,7 @@
 		<EventInfo>
 			<Type>EVENT_PALISADE_IN_DISREPAIR_2</Type>
 			<Description>TXT_KEY_EVENT_FORT_IN_DISREPAIR_2</Description>
-			<iGold>-25</iGold>
+			<iGold>-15</iGold>
 			<bGameSpeedScale>1</bGameSpeedScale>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<iAIValue>2</iAIValue>
@@ -9821,7 +9875,7 @@
 		<EventInfo>
 			<Type>EVENT_BUNKER_IN_DISREPAIR_2</Type>
 			<Description>TXT_KEY_EVENT_FORT_IN_DISREPAIR_2</Description>
-			<iGold>-100</iGold>
+			<iGold>-50</iGold>
 			<bGameSpeedScale>1</bGameSpeedScale>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<iAIValue>2</iAIValue>
@@ -9839,7 +9893,7 @@
 		<EventInfo>
 			<Type>EVENT_FUTURE_BUNKER_IN_DISREPAIR_2</Type>
 			<Description>TXT_KEY_EVENT_FORT_IN_DISREPAIR_2</Description>
-			<iGold>-500</iGold>
+			<iGold>-250</iGold>
 			<bGameSpeedScale>1</bGameSpeedScale>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<iAIValue>2</iAIValue>
@@ -9918,8 +9972,9 @@
 			<Type>EVENT_SNAKEOIL_1</Type>
 			<Description>TXT_KEY_EVENT_SNAKEOIL_1</Description>
 			<bPickCity>1</bPickCity>
-			<iGold>-50</iGold>
-			<iRandomGold>-50</iRandomGold>
+			<iGold>-25</iGold>
+			<iRandomGold>-25</iRandomGold>
+            <bGameSpeedScale>1</bGameSpeedScale>
 			<BuildingExtraHealths>
 				<BuildingExtraHealth>
 					<Building>BUILDING_DOCTORS_OFFICE</Building>
@@ -9955,8 +10010,9 @@
 		<EventInfo>
 			<Type>EVENT_SNAKEOIL_3</Type>
 			<Description>TXT_KEY_EVENT_SNAKEOIL_3</Description>
-			<iGold>-200</iGold>
-			<iRandomGold>-200</iRandomGold>
+			<iGold>-100</iGold>
+			<iRandomGold>-100</iRandomGold>
+            <bGameSpeedScale>1</bGameSpeedScale>
 			<PrereqTech>TECH_MEDICINE</PrereqTech>
 			<BuildingExtraHappies>
 				<BuildingExtraHappy>
@@ -9979,9 +10035,9 @@
 			<Type>EVENT_IDITAROD_2</Type>
 			<Description>TXT_KEY_EVENT_IDITAROD_2</Description>
 			<bPickCity>1</bPickCity>
-			<iGold>-500</iGold>
+			<iGold>-250</iGold>
 			<bGameSpeedScale>1</bGameSpeedScale>
-			<iRandomGold>-500</iRandomGold>
+			<iRandomGold>-250</iRandomGold>
 			<iCulture>500</iCulture>
 			<iHappyTurns>30</iHappyTurns>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
@@ -9992,8 +10048,8 @@
 			<Type>EVENT_IDITAROD_3</Type>
 			<Description>TXT_KEY_EVENT_IDITAROD_3</Description>
 			<bPickCity>1</bPickCity>
-			<iGold>-2000</iGold>
-			<iRandomGold>-2000</iRandomGold>
+			<iGold>-1000</iGold>
+			<iRandomGold>-1000</iRandomGold>
 			<iCulture>5000</iCulture>
 			<bGameSpeedScale>1</bGameSpeedScale>
 			<PrereqTech>TECH_MASS_MEDIA</PrereqTech>
@@ -10032,7 +10088,7 @@
 			<Type>EVENT_SHERIFF_2</Type>
 			<Description>TXT_KEY_EVENT_SHERIFF_2</Description>
 			<bPickCity>1</bPickCity>
-			<iGold>-500</iGold>
+			<iGold>-250</iGold>
 			<bGameSpeedScale>1</bGameSpeedScale>
 			<iHappyTurns>5</iHappyTurns>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
@@ -10043,8 +10099,8 @@
 			<Type>EVENT_SHERIFF_3</Type>
 			<Description>TXT_KEY_EVENT_SHERIFF_3</Description>
 			<bPickCity>1</bPickCity>
-			<iGold>-200</iGold>
-			<iRandomGold>-2000</iRandomGold>
+			<iGold>-100</iGold>
+			<iRandomGold>-1000</iRandomGold>
 			<bGameSpeedScale>1</bGameSpeedScale>
 			<iHappyTurns>30</iHappyTurns>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
@@ -10055,7 +10111,8 @@
 			<Type>EVENT_SHERIFF_4</Type>
 			<Description>TXT_KEY_EVENT_SHERIFF_4</Description>
 			<bPickCity>1</bPickCity>
-			<iGold>-600</iGold>
+			<iGold>-300</iGold>
+            <bGameSpeedScale>1</bGameSpeedScale>
 			<FreeUnit>UNIT_SHERIFF</FreeUnit>
 			<iNumFreeUnits>1</iNumFreeUnits>
 			<iHurryAnger>1</iHurryAnger>
@@ -10073,7 +10130,7 @@
 		<EventInfo>
 			<Type>EVENT_MUSICOFGODS_2</Type>
 			<Description>TXT_KEY_EVENT_MUSICOFGODS_2</Description>
-			<iGold>-5000</iGold>
+			<iGold>-2500</iGold>
 			<bGameSpeedScale>1</bGameSpeedScale>
 			<BuildingExtraCommerces>
 				<BuildingExtraCommerce>
@@ -10104,7 +10161,7 @@
 		<EventInfo>
 			<Type>EVENT_MUSICOFGODS_3</Type>
 			<Description>TXT_KEY_EVENT_MUSICOFGODS_3</Description>
-			<iGold>-5000</iGold>
+			<iGold>-2500</iGold>
 			<bGameSpeedScale>1</bGameSpeedScale>
 			<PrereqTech>TECH_SUPERCONDUCTORS</PrereqTech>
 			<BuildingExtraCommerces>
@@ -10231,7 +10288,8 @@
 			<Type>EVENT_CITYFIRE_2</Type>
 			<Description>TXT_KEY_EVENT_CITYFIRE_2</Description>
 			<bPickCity>1</bPickCity>
-			<iGold>-300</iGold>
+			<iGold>-150</iGold>
+            <bGameSpeedScale>1</bGameSpeedScale>
 			<PythonCallback>doMinorFire</PythonCallback>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<PythonHelp>getHelpMinorFire</PythonHelp>
@@ -10258,7 +10316,8 @@
 			<Type>EVENT_CITYFIRE_4</Type>
 			<Description>TXT_KEY_EVENT_CITYFIRE_4</Description>
 			<bPickCity>1</bPickCity>
-			<iGold>-1000</iGold>
+			<iGold>-500</iGold>
+            <bGameSpeedScale>1</bGameSpeedScale>
 			<PythonCallback>doMinorFire</PythonCallback>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<PythonHelp>getHelpMinorFire</PythonHelp>
@@ -10269,7 +10328,8 @@
 			<Type>EVENT_CITYFIRE_5</Type>
 			<Description>TXT_KEY_EVENT_CITYFIRE_5</Description>
 			<bPickCity>1</bPickCity>
-			<iGold>-250</iGold>
+			<iGold>-125</iGold>
+            <bGameSpeedScale>1</bGameSpeedScale>
 			<AdditionalEvents>
 				<EventChance>
 					<Event>EVENT_CITYFIRE_MINOR_1</Event>
@@ -10302,7 +10362,8 @@
 			<Type>EVENT_CITYFIRE_7</Type>
 			<Description>TXT_KEY_EVENT_CITYFIRE_7</Description>
 			<bPickCity>1</bPickCity>
-			<iGold>-2000</iGold>
+			<iGold>-1000</iGold>
+            <bGameSpeedScale>1</bGameSpeedScale>
 			<AdditionalEvents>
 				<EventChance>
 					<Event>EVENT_CITYFIRE_MINOR_1</Event>
@@ -10319,7 +10380,8 @@
 			<Type>EVENT_CITYFIRE_8</Type>
 			<Description>TXT_KEY_EVENT_CITYFIRE_8</Description>
 			<bPickCity>1</bPickCity>
-			<iGold>-600</iGold>
+			<iGold>-300</iGold>
+            <bGameSpeedScale>1</bGameSpeedScale>
 			<AdditionalEvents>
 				<EventChance>
 					<Event>EVENT_CITYFIRE_MAJOR_1</Event>
@@ -10352,7 +10414,8 @@
 			<Type>EVENT_CITYFIRE_10</Type>
 			<Description>TXT_KEY_EVENT_CITYFIRE_10</Description>
 			<bPickCity>1</bPickCity>
-			<iGold>-2500</iGold>
+			<iGold>-1250</iGold>
+            <bGameSpeedScale>1</bGameSpeedScale>
 			<AdditionalEvents>
 				<EventChance>
 					<Event>EVENT_CITYFIRE_MAJOR_1</Event>
@@ -10369,7 +10432,8 @@
 			<Type>EVENT_CITYFIRE_11</Type>
 			<Description>TXT_KEY_EVENT_CITYFIRE_11</Description>
 			<bPickCity>1</bPickCity>
-			<iGold>-800</iGold>
+			<iGold>-400</iGold>
+            <bGameSpeedScale>1</bGameSpeedScale>
 			<AdditionalEvents>
 				<EventChance>
 					<Event>EVENT_CITYFIRE_MAJOR_1</Event>
@@ -10440,7 +10504,7 @@
 		<EventInfo>
 			<Type>EVENT_GLOBALWARMING_2</Type>
 			<Description>TXT_KEY_EVENT_GLOBAL_WARMING_2</Description>
-			<iGold>-10000</iGold>
+			<iGold>-5000</iGold>
 			<bGameSpeedScale>1</bGameSpeedScale>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<iAIValue>2</iAIValue>
@@ -10457,7 +10521,8 @@
 		<EventInfo>
 			<Type>EVENT_PIRATE_INVASION_2</Type>
 			<Description>TXT_KEY_EVENT_PIRATE_INVASION_2</Description>
-			<iGold>500</iGold>
+			<iGold>250</iGold>
+            <bGameSpeedScale>1</bGameSpeedScale>
 			<iUnitImmobileTurns>3</iUnitImmobileTurns>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<iAIValue>2</iAIValue>
@@ -10466,7 +10531,8 @@
 		<EventInfo>
 			<Type>EVENT_PIRATE_INVASION_3</Type>
 			<Description>TXT_KEY_EVENT_PIRATE_INVASION_3</Description>
-			<iGold>-3500</iGold>
+			<iGold>-1750</iGold>
+            <bGameSpeedScale>1</bGameSpeedScale>
 			<FreeUnit>UNIT_PRIVATEER</FreeUnit>
 			<iNumFreeUnits>2</iNumFreeUnits>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
@@ -10486,7 +10552,7 @@
 			<Type>EVENT_PIRATE_MAP_2</Type>
 			<Description>TXT_KEY_EVENT_PIRATE_MAP_2</Description>
 			<bPickCity>1</bPickCity>
-			<iGold>-1000</iGold>
+			<iGold>-500</iGold>
 			<bGameSpeedScale>1</bGameSpeedScale>
 			<iHappyTurns>3</iHappyTurns>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
@@ -10497,8 +10563,8 @@
 			<Type>EVENT_PIRATE_MAP_3</Type>
 			<Description>TXT_KEY_EVENT_PIRATE_MAP_3</Description>
 			<bPickCity>1</bPickCity>
-			<iGold>-1500</iGold>
-			<iRandomGold>5000</iRandomGold>
+			<iGold>-750</iGold>
+			<iRandomGold>2500</iRandomGold>
 			<bGameSpeedScale>1</bGameSpeedScale>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<iAIValue>1</iAIValue>
@@ -10533,8 +10599,8 @@
 			<Type>EVENT_PIRATE_NAVY_3</Type>
 			<Description>TXT_KEY_EVENT_PIRATE_NAVY_3</Description>
 			<bPickCity>1</bPickCity>
-			<iGold>100</iGold>
-			<iRandomGold>4000</iRandomGold>
+			<iGold>50</iGold>
+			<iRandomGold>2000</iRandomGold>
 			<bGameSpeedScale>1</bGameSpeedScale>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<iAIValue>1</iAIValue>
@@ -10569,7 +10635,8 @@
 				</EventChance>
 			</AdditionalEvents>
 			<iPopulationChange>1</iPopulationChange>
-			<iGold>-80</iGold>
+            <iRevoltTurns>3</iRevoltTurns>
+			<iGold>-40</iGold>
 			<bGameSpeedScale>1</bGameSpeedScale>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 		</EventInfo>
@@ -10586,7 +10653,6 @@
 				<Text>TXT_KEY_EVENT_ADD_ONE_POPULATION2</Text>
 			</WorldNewsTexts>
 			<iHurryAnger>3</iHurryAnger>
-			<iRevoltTurns>3</iRevoltTurns>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 		</EventInfo>
 
@@ -10618,8 +10684,8 @@
 			<Type>EVENT_DINO_ATTACK_1</Type>
 			<Description>TXT_KEY_EVENT_DINO_ATTACK_1</Description>
 			<bPickCity>1</bPickCity>
-			<iGold>-600</iGold>
-			<iRandomGold>-3000</iRandomGold>
+			<iGold>-300</iGold>
+			<iRandomGold>-1500</iRandomGold>
 			<bGameSpeedScale>1</bGameSpeedScale>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<iAIValue>2</iAIValue>
@@ -10671,8 +10737,8 @@
 			<Description>TXT_KEY_EVENT_VEGAS_JACKPOT_1</Description>
 			<OtherPlayerPopup>TXT_KEY_EVENT_VEGAS_JACKPOT_OTHER_1</OtherPlayerPopup>
 			<bPickCity>1</bPickCity>
-			<iGold>800</iGold>
-			<iRandomGold>3000</iRandomGold>
+			<iGold>400</iGold>
+			<iRandomGold>1500</iRandomGold>
 			<bGameSpeedScale>1</bGameSpeedScale>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<iAIValue>2</iAIValue>
@@ -10693,8 +10759,8 @@
 			<Description>TXT_KEY_EVENT_BREAK_THE_BANK_1</Description>
 			<OtherPlayerPopup>TXT_KEY_EVENT_BREAK_THE_BANK_1</OtherPlayerPopup>
 			<bPickCity>1</bPickCity>
-			<iGold>600</iGold>
-			<iRandomGold>2000</iRandomGold>
+			<iGold>300</iGold>
+			<iRandomGold>1000</iRandomGold>
 			<bGameSpeedScale>1</bGameSpeedScale>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<iAIValue>2</iAIValue>
@@ -10714,8 +10780,8 @@
 			<Type>EVENT_MEGA_ATTACK_1</Type>
 			<Description>TXT_KEY_EVENT_MEGA_ATTACK_1</Description>
 			<bPickCity>1</bPickCity>
-			<iGold>-300</iGold>
-			<iRandomGold>-2000</iRandomGold>
+			<iGold>-150</iGold>
+			<iRandomGold>-1000</iRandomGold>
 			<bGameSpeedScale>1</bGameSpeedScale>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<iAIValue>2</iAIValue>
@@ -10865,7 +10931,7 @@
 		<EventInfo>
 			<Type>EVENT_CIVIL_WAR1</Type>
 			<Description>TXT_KEY_EVENT_CIVIL_WAR1</Description>
-			<iGold>-500</iGold>
+			<iGold>-250</iGold>
 			<bGameSpeedScale>1</bGameSpeedScale>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<iAIValue>2</iAIValue>
@@ -10942,7 +11008,7 @@
 		<EventInfo>
 			<Type>EVENT_PEAT_2</Type>
 			<Description>TXT_KEY_EVENT_PEAT_2</Description>
-			<iGold>-200</iGold>
+			<iGold>-100</iGold>
 			<bGameSpeedScale>1</bGameSpeedScale>
 			<PlotExtraYields>
 				<PlotExtraYield>
@@ -10958,7 +11024,7 @@
 		<EventInfo>
 			<Type>EVENT_PEAT_3</Type>
 			<Description>TXT_KEY_EVENT_PEAT_3</Description>
-			<iGold>-400</iGold>
+			<iGold>-200</iGold>
 			<bGameSpeedScale>1</bGameSpeedScale>
 			<PlotExtraYields>
 				<PlotExtraYield>
@@ -10982,7 +11048,7 @@
 			<Type>EVENT_SCHOLARS_2</Type>
 			<Description>TXT_KEY_EVENT_SCHOLARS_2</Description>
 			<bPickCity>1</bPickCity>
-			<iGold>-300</iGold>
+			<iGold>-150</iGold>
 			<bGameSpeedScale>1</bGameSpeedScale>
 			<BuildingExtraCommerces>
 				<BuildingExtraCommerce>
@@ -10999,7 +11065,7 @@
 			<Type>EVENT_SCHOLARS_3</Type>
 			<Description>TXT_KEY_EVENT_SCHOLARS_3</Description>
 			<bPickCity>1</bPickCity>
-			<iGold>-250</iGold>
+			<iGold>-125</iGold>
 			<bGameSpeedScale>1</bGameSpeedScale>
 			<PrereqTech>TECH_ALCHEMY</PrereqTech>
 			<Building>BUILDING_GUILD_APOTHECARIES</Building>
@@ -11011,7 +11077,7 @@
 		<EventInfo>
 			<Type>EVENT_SCHOLARS_4</Type>
 			<Description>TXT_KEY_EVENT_SCHOLARS_4</Description>
-			<iGold>1000</iGold>
+			<iGold>500</iGold>
 			<bGameSpeedScale>1</bGameSpeedScale>
 			<iHappy>-2</iHappy>
 			<iHappyTurns>-2</iHappyTurns>
@@ -11037,7 +11103,7 @@
 		<EventInfo>
 			<Type>EVENT_TUSK_2</Type>
 			<Description>TXT_KEY_EVENT_TUSK_2</Description>
-			<iGold>-300</iGold>
+			<iGold>-150</iGold>
 			<bGameSpeedScale>1</bGameSpeedScale>
 			<PlotExtraYields>
 				<PlotExtraYield>
@@ -11053,7 +11119,7 @@
 		<EventInfo>
 			<Type>EVENT_TUSK_3</Type>
 			<Description>TXT_KEY_EVENT_TUSK_3</Description>
-			<iGold>-600</iGold>
+			<iGold>-300</iGold>
 			<bGameSpeedScale>1</bGameSpeedScale>
 			<PlotExtraYields>
 				<PlotExtraYield>
