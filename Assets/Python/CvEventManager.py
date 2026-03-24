@@ -253,7 +253,8 @@ class CvEventManager:
 					"ISHTAR"				: GC.getInfoTypeForString('BUILDING_THE_ISHTAR_GATE'),
 					"GREAT_JAGUAR_TEMPLE"	: GC.getInfoTypeForString('BUILDING_TEMPLE_OF_AH_CACAO'),
 					"TOPKAPI_PALACE"		: GC.getInfoTypeForString("BUILDING_TOPKAPI_PALACE"),
-					"NEANDERTHAL_EMBASSY"	: GC.getInfoTypeForString("BUILDING_CULTURE_NEANDERTHAL")
+					"NEANDERTHAL_EMBASSY"	: GC.getInfoTypeForString("BUILDING_CULTURE_NEANDERTHAL"),
+					"REICHSTAG"				: GC.getInfoTypeForString("BUILDING_REICHSTAG")
 				}
 				self.mapUnitType = {
 					"MONK"		: GC.getInfoTypeForString("UNIT_MONK"),
@@ -317,7 +318,10 @@ class CvEventManager:
 					[GC.getInfoTypeForString('PROMOTION_CULTURE_SOUTH_AMERICAN'), GC.getInfoTypeForString('BUILDING_C_L_SOUTH_AMERICAN'), GC.getInfoTypeForString('BUILDING_C_N_SOUTH_AMERICAN')]
 				]
 				self.UNIT_BAND = GC.getInfoTypeForString("UNIT_BAND")
-
+				self.aHiPriListBase = ('PROMOTION_LIVE1', 'PROMOTION_LIVE2')
+				self.aHiPriListLandHunter = self.aHiPriListBase + ("PROMOTION_HUNTER1", "PROMOTION_HUNTER2", "PROMOTION_HUNTER3", "PROMOTION_HUNTER_GREAT")
+				self.aHiPriListSeaHunter = self.aHiPriListBase + ("PROMOTION_SEA_HUNTER1", "PROMOTION_SEA_HUNTER2", "PROMOTION_SEA_HUNTER3", "PROMOTION_SEA_HUNTER_GREAT")
+				self.aLoPriList = ('PROMOTION_SNEAK', 'PROMOTION_MARAUDER', 'PROMOTION_INDUSTRYESPIONAGE')
 				self.UNITCOMBAT_RECON		= GC.getInfoTypeForString("UNITCOMBAT_RECON")
 				self.UNITCOMBAT_HUNTER		= GC.getInfoTypeForString("UNITCOMBAT_HUNTER")
 				self.UNITCOMBAT_CIVILIAN	= GC.getInfoTypeForString("UNITCOMBAT_CIVILIAN")
@@ -759,6 +763,7 @@ class CvEventManager:
 							CyTeamX = GC.getTeam(iTeamX)
 							if CyTeamX.isAlive() and CyTeamX.isVassal(iTeam):
 								iDiv -= intSqrt(iDiv)
+								iDiv = max(1, iDiv)
 
 						CyPlayer.changeCombatExperience(GAME.getPlayerScore(iPlayer) / iDiv)
 				elif KEY == "TOPKAPI_PALACE":
@@ -771,33 +776,6 @@ class CvEventManager:
 							if iGold:
 								CyPlayerX.changeGold(iGold)
 							CyPlayerX.changeCombatExperience(1)
-
-		# Aging Animals
-		if not CyPlayer.isNPC() or CyPlayer.isHominid():
-			return
-		bMinor = not iGameTurn % (16 * self.iGameSpeedPercent / 100 + 1)
-		bMajor = not iGameTurn % (128 * self.iGameSpeedPercent / 100)
-
-		if bMinor or bMajor:
-			for CyUnit in CyPlayer.units():
-				if not CyUnit.isDead() and CyUnit.isAnimal():
-					if not GAME.getSorenRandNum(15 - bMajor*10, "Aging"): # 1 in 15/5
-						if not CyUnit.isHasPromotion(GC.getInfoTypeForString("PROMOTION_COMBAT1")):
-							CyUnit.setHasPromotion(GC.getInfoTypeForString("PROMOTION_COMBAT1"), True)
-						elif not CyUnit.isHasPromotion(GC.getInfoTypeForString("PROMOTION_COMBAT2")):
-							CyUnit.setHasPromotion(GC.getInfoTypeForString("PROMOTION_COMBAT2"), True)
-						elif not CyUnit.isHasPromotion(GC.getInfoTypeForString("PROMOTION_COMBAT3")):
-							CyUnit.setHasPromotion(GC.getInfoTypeForString("PROMOTION_COMBAT3"), True)
-						elif not CyUnit.isHasPromotion(GC.getInfoTypeForString("PROMOTION_COMBAT4")):
-							CyUnit.setHasPromotion(GC.getInfoTypeForString("PROMOTION_COMBAT4"), True)
-						elif not CyUnit.isHasPromotion(GC.getInfoTypeForString("PROMOTION_COMBAT5")):
-							CyUnit.setHasPromotion(GC.getInfoTypeForString("PROMOTION_COMBAT5"), True)
-						elif not CyUnit.isHasPromotion(GC.getInfoTypeForString("PROMOTION_COMBAT6")):
-							CyUnit.setHasPromotion(GC.getInfoTypeForString("PROMOTION_COMBAT6"), True)
-						elif bMajor:
-							CyUnit.setBaseCombatStr(CyUnit.baseCombatStr() + 1)
-						else:
-							CyUnit.setExperience(CyUnit.getExperience() + 3)
 
 
 	def onEndPlayerTurn(self, argsList):
@@ -909,7 +887,7 @@ class CvEventManager:
 			iUnit = CyUnitL.getUnitType()
 			iX = -1
 			if CyUnitL.getDomainType() == self.mapDomain['DOMAIN_SEA']:
-				for CyCity in CyPlayer.cities():
+				for CyCity in CyPlayerL.cities():
 					if CyCity.isCoastal(0):
 						iX = CyCity.getX()
 						iY = CyCity.getY()
@@ -1031,7 +1009,7 @@ class CvEventManager:
 					iTechW = CyPlayerW.getCurrentResearch()
 					iTechL = CyPlayerL.getCurrentResearch()
 
-					if CyTeamL.isHasTech(iTechW) or not CyTeamW.isHasTech(iTechL):
+					if not CyTeamL.isHasTech(iTechW) and not CyTeamW.isHasTech(iTechL):
 
 						iStolen = intSqrt(CyPlayerL.calculateBaseNetResearch() * 4) * iHandicapFactor / 1000
 						if iStolen:
@@ -1521,13 +1499,13 @@ class CvEventManager:
 						x = CyPlot.getX()
 						y = CyPlot.getY()
 						iEast = x + 1
-						if iEast > iGridX:
+						if iEast >= iGridX:
 							if bWrapX:
 								iEast = 0
 							else:
 								iEast = x
 						iNorth = y + 1
-						if iNorth > iGridY:
+						if iNorth >= iGridY:
 							if bWrapY:
 								iNorth = 0
 							else:
@@ -1535,16 +1513,15 @@ class CvEventManager:
 						iWest = x - 1
 						if iWest < 0:
 							if bWrapX:
-								iWest = iGridX
+								iWest = iGridX - 1
 							else:
 								iWest = 0
 						iSouth = y - 1
 						if iSouth < 0:
 							if bWrapY:
-								iSouth = iGridY
+								iSouth = iGridY - 1
 							else:
 								iSouth = 0
-							iSouth += iGridY
 						aCyPlotList = [
 							MAP.plot(x, iNorth),		MAP.plot(x, iSouth),
 							MAP.plot(iWest, y),			MAP.plot(iEast, y),
@@ -2007,7 +1984,14 @@ class CvEventManager:
 					if CyUnit.isHasPromotion(GC.getInfoTypeForString("PROMOTION_LEADER")) or CyUnit.getUnitType() == GC.getInfoTypeForString("UNIT_GREAT_GENERAL"):
 						if CyPlayerL is None:
 							CyPlayerL = GC.getPlayer(iPlayerL)
-						CyCity = CyPlayerL.getCity(aWonderTuple[3][i])
+						iCityID = aWonderTuple[3][i]
+						CyCity = None
+						for CyCityX in CyPlayerL.cities():
+							if CyCityX.getID() == iCityID:
+								CyCity = CyCityX
+								break
+						if CyCity is None:
+							continue
 						iX = CyCity.getX()
 						iY = CyCity.getY()
 						szName = CyUnit.getNameNoDesc()
@@ -2030,15 +2014,14 @@ class CvEventManager:
 
 		# AI promotion redirection
 		if not CyPlayer.isHuman():
-			aHiPriList = ('PROMOTION_LIVE1', 'PROMOTION_LIVE2')
 			iDomainType = CyUnit.getDomainType()
 			mapDomain = self.mapDomain
-			if iDomainType == mapDomain['DOMAIN_LAND']:
-				if CyUnit.isHasUnitCombat(self.UNITCOMBAT_HUNTER):
-					aHiPriList += ("PROMOTION_HUNTER1", "PROMOTION_HUNTER2", "PROMOTION_HUNTER3", "PROMOTION_HUNTER_GREAT")
-			elif iDomainType == mapDomain['DOMAIN_SEA']:
-				if CyUnit.isHasUnitCombat(self.UNITCOMBAT_RECON):
-					aHiPriList += ("PROMOTION_SEA_HUNTER1", "PROMOTION_SEA_HUNTER2", "PROMOTION_SEA_HUNTER3", "PROMOTION_SEA_HUNTER_GREAT")
+			if iDomainType == mapDomain['DOMAIN_LAND'] and CyUnit.isHasUnitCombat(self.UNITCOMBAT_HUNTER):
+				aHiPriList = self.aHiPriListLandHunter
+			elif iDomainType == mapDomain['DOMAIN_SEA'] and CyUnit.isHasUnitCombat(self.UNITCOMBAT_RECON):
+				aHiPriList = self.aHiPriListSeaHunter
+			else:
+				aHiPriList = self.aHiPriListBase
 			aList1 = []
 			aList2 = []
 			mapPromoType = self.mapPromoType
@@ -2050,7 +2033,7 @@ class CvEventManager:
 						aList1 = []
 						break
 					aList1.append((iPromo, 0))
-				elif KEY in ('PROMOTION_SNEAK', 'PROMOTION_MARAUDER', 'PROMOTION_INDUSTRYESPIONAGE'):
+				elif KEY in self.aLoPriList:
 					if iPromo == iPromotion:
 						aList2 = []
 						break
@@ -2149,7 +2132,7 @@ class CvEventManager:
 		if self.GO_START_AS_MINORS:
 			CyTeam = GC.getTeam(iTeam)
 			bhasTech = CyTeam.isHasTech(GC.getInfoTypeForString("TECH_CONDUCT"))
-			if CyTeam.isMinorCiv() and (CyTeam.isOpenBordersTrading() or bhasTech):				
+			if CyTeam.isMinorCiv() and (CyTeam.isOpenBordersTrading() or bhasTech):
 				CyTeam.setIsMinorCiv(False)
 				GC.getMap().verifyUnitValidPlot()
 				# Message
@@ -2487,6 +2470,8 @@ class CvEventManager:
 								iUnit = CyCity.getConscriptUnit()
 								if iUnit > -1:
 									for i in xrange(iNumUnits):
+										if not listPlots:
+											break
 										iPlot = GAME.getSorenRandNum(len(listPlots), "Partisan event placement")
 										CyPlayerHC.initUnit(iUnit, listPlots[iPlot].getX(), listPlots[iPlot].getY(), UnitAITypes.UNITAI_ATTACK, DirectionTypes.DIRECTION_SOUTH)
 
@@ -2530,8 +2515,6 @@ class CvEventManager:
 		mapBuildingType = self.mapBuildingType
 		if CyCity.hasBuilding(mapBuildingType["ARCOLOGY"]) or CyCity.hasBuilding(mapBuildingType["ARCOLOGY_SHIELDING"]) or CyCity.hasBuilding(mapBuildingType["ADVANCED_SHIELDING"]):
 			self.iArcologyCityID = iCityID
-		else:
-			self.iArcologyCityID = -1
 
 
 	# This is the last function a city object call before being deleted.
@@ -2671,10 +2654,15 @@ class CvEventManager:
 
 				elif KEY == "GREAT_ZIMBABWE":
 					if CyCity.isFoodProduction():
-						CyCity.changeFood(CyCity.getYieldRate(0) - CyCity.foodConsumption(False, 0))
-						if CyCity.getFood() >= CyCity.growthThreshold():
-							CyCity.changePopulation(1)
-							CyCity.setFood(CyCity.getFoodKept())
+						iFoodSurplus = CyCity.getYieldRate(0) - CyCity.foodConsumption(False, 0)
+						if iFoodSurplus > 0:  # only process if there is an actual surplus
+							iNewFood = CyCity.getFood() + iFoodSurplus
+							iGrowthThreshold = CyCity.growthThreshold()
+							if iNewFood >= iGrowthThreshold:
+								CyCity.changePopulation(1)
+								CyCity.setFood(CyCity.getFoodKept())
+							else:
+								CyCity.setFood(iNewFood)
 
 				elif KEY == "BIODOME":
 					if not self.aBiodomeList or GAME.getGameTurn() % (4*self.iGameSpeedPercent/100 + 1):
@@ -2684,7 +2672,6 @@ class CvEventManager:
 					iY = CyCity.getY()
 					iUnit = self.aBiodomeList[GAME.getSorenRandNum(len(self.aBiodomeList), "Which Animal")]
 					CyUnit = CyPlayer.initUnit(iUnit, iX, iY, UnitAITypes.NO_UNITAI, DirectionTypes.NO_DIRECTION)
-					CyCity.addProductionExperience(CyUnit, False)
 					if iPlayer == GAME.getActivePlayer():
 						CvUtil.sendMessage(TRNSLTR.getText("TXT_KEY_MSG_BIODOME",(CyUnit.getName(),)), iPlayer, 16, CyUnit.getButton(), ColorTypes(11), iX, iY, True, True)
 
@@ -2727,7 +2714,7 @@ class CvEventManager:
 		if bVassal:
 			for iPlayerX in xrange(self.MAX_PC_PLAYERS):
 				CyPlayerX = GC.getPlayer(iPlayerX)
-				if CyPlayerX.getTeam() == iMaster and CyPlayerX.hasBuilding(GC.getInfoTypeForString("BUILDING_REICHSTAG")):
+				if CyPlayerX.getTeam() == iMaster and CyPlayerX.hasBuilding(self.mapBuildingType["REICHSTAG"]):
 					CyPlayerX.changeGoldenAgeTurns(CyPlayerX.getGoldenAgeLength())
 
 
