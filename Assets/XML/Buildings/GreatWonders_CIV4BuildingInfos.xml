@@ -5505,6 +5505,7 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Description>TXT_KEY_BUILDING_CYRUS_CYLINDER</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CYRUS_CYLINDER_PEDIA</Civilopedia>
+            <Help>TXT_KEY_BUILDING_CYRUS_CYLINDER_HELP</Help>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_CYRUS_CYLINDER</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_CYRUS_CYLINDER</MovieDefineTag>
