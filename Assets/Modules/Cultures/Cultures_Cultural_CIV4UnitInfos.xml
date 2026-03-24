@@ -35022,6 +35022,7 @@
 			<bMilitaryProduction>1</bMilitaryProduction>
 			<bPillage>1</bPillage>
 			<bNoDefensiveBonus>1</bNoDefensiveBonus>
+            <iBombardRate>5</iBombardRate>
 			<UnitUpgrades>
 				<UnitType>UNIT_FLAMETHROWER</UnitType>
 			</UnitUpgrades>
