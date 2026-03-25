@@ -227,7 +227,7 @@ def updateAliveCivsOption():
 		CyPlayer = GC.getPlayer(iPlayer)
 		if CyPlayer.isHuman() and CyPlayer.isAlive():
 			descs.append(GC.getCivilizationInfo(CyPlayer.getCivilizationType()).getShortDescription())
-	sort(descs)
+	descs.sort()
 	aliveCivsOption.setValues(descs)
 
 def changedCurrentDifficulty(option, value):
