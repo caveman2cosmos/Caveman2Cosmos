@@ -98,8 +98,8 @@ credits = [
 			"The Doc - German (Game and Documentation)",
 			"Snofru1 - German Revolutions translations",
 			"Heini - German Revolutions translations",
-			"calvitix - French Translations C2C",
-			"Hale_9204 - Italian Translations C2C"
+			"calvitix - French Translations C2C and AI improvements",
+			"Hale_9204 - Italian Translations C2C",
 			"ramzay1945 - Russian info",
 			"-",
 			"MAP_SCRIPTS|Map Scripts",
