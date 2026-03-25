@@ -151,7 +151,7 @@ class ANDAutomationsTab(BugOptionsTab.BugOptionsTab):
 		self.addCheckbox(screen, col1, "AutomatedSettings__HideAutoUpgrade")
 		self.addIntDropdown(screen, col2, col2, "AutomatedSettings__MinimumUpgradeGold", True, "RIGHT")
 		self.addCheckbox(screen, col1, "AutomatedSettings__MostExpensive")
-		self.addCheckbox(screen, col2, "AutomatedSettings__MostExpierenced")
+		self.addCheckbox(screen, col2, "AutomatedSettings__MostExperienced")
 
 		screen.attachHSeparator(column, column + "SepInterface1")
 		left, right = self.addTwoColumnLayout(screen, column, "Options")
@@ -182,14 +182,13 @@ class ANDAutomationsTab(BugOptionsTab.BugOptionsTab):
 			# Strip the <link="IMPROVEMENT_FOOBAR"> and </link> pair from the description while retaining the bit between them
 			for iI in range(iNumBuilds):
 				szDescription = TextUtil.convertToAscii(GC.getBuildInfo(iI).getDescription())
-				szNewDescription = ""
 				iStartIndex = szDescription.rfind("<link")
 				iEndIndex = szDescription.rfind("'>") + 2
 				if iStartIndex > -1:
 					szNewDescription = szDescription[0:iStartIndex] + szDescription[iEndIndex:len(szDescription)]
 					iStartIndex2 = szNewDescription.rfind("</link>")
 
-					szNewDescription = szNewDescription[0:iStartIndex2] + szNewDescription[iStartIndex2+7:len(szDescription)]
+					szNewDescription = szNewDescription[0:iStartIndex2] + szNewDescription[iStartIndex2+7:]
 				else:
 					szNewDescription = szDescription
 				self.buildNames[iI] = szNewDescription
@@ -200,7 +199,7 @@ class ANDAutomationsTab(BugOptionsTab.BugOptionsTab):
 
 		TRNSLTR = CyTranslator()
 		iNumBuilds = GC.getNumBuildInfos()
-		if self.ANewDawnOpt.isShowCityAutomations():
+		if self.ANewDawnOpt and self.ANewDawnOpt.isShowCityAutomations():
 			n = -1
 			for cityX in player.cities():
 				if not bFirst:
