@@ -76,7 +76,7 @@ def onGreatPersonBorn(argsList):
 
 		iType = CyUnit.getUnitType()
 		Info = CyGlobalContext().getUnitInfo(iType)
-		sGreat = ""
+
 		for i in xrange(Info.getNumUnitNames()):
 			sName = Info.getUnitNames(i)
 			if CyTranslator().getText(sName, ()) == sUnitName:

@@ -363,8 +363,8 @@ def setXMLOptionsfromIniFile():
 
 def resetOptions():
 	import BugOptions
-	ANewDawnoptions = BugOptions.getOptions("RoMSettings").options
-	for i in range(len(ANewDawnoptions)):
-		ANewDawnoptions[i].resetValue()
+	ANewDawnOptions = BugOptions.getOptions("RoMSettings").options
+	for i in range(len(ANewDawnOptions)):
+		ANewDawnOptions[i].resetValue()
 	setXMLOptionsfromIniFile()
 	ANewDawnOpt.setRoMReset(False)

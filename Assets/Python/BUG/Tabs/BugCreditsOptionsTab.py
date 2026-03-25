@@ -31,6 +31,7 @@ credits = [
 			"DRJ - Ideas, Feedback",
 			"Anq - C++ Coding",
 			"Toffer90 - Designer, Python, PPIO Modmod",
+			"SimoCvijic0/Murdermesa - Maintainer, Expansion of Game Play and Balance",
 			"aztur - Ideas, Feedback",
 			"dsma_bell - German translator",
 			"Harrier123 - C2C GEM Map Team, Feedback",
@@ -151,8 +152,6 @@ class BugCreditsOptionsTab(BugOptionsTab.BugOptionsTab):
 					else:
 						label = "CreditsHeaderLabel%d" % labelNum
 						self.addLabel(screen, column, label, line)
-					#screen.setLayoutFlag(label, "LAYOUT_CENTER")
-					#screen.setLayoutFlag(label, "LAYOUT_SIZE_HPREFERREDEXPANDING")
 					labelNum += 1
 					screen.attachHSeparator(column, column + "Sep%d" % sepNum)
 					sepNum += 1
@@ -168,6 +167,5 @@ class BugCreditsOptionsTab(BugOptionsTab.BugOptionsTab):
 					rightText = line[pos+3:]
 					screen.attachLabel(left, leftLabel, leftText)
 					screen.setLayoutFlag(leftLabel, "LAYOUT_RIGHT")
-					#screen.setLayoutFlag(leftLabel, "LAYOUT_SIZE_HPREFERREDEXPANDING")
 					screen.attachLabel(right, rightLabel, rightText)
 					labelNum += 1
