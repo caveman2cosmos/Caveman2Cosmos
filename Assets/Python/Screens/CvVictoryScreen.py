@@ -659,7 +659,7 @@ class CvVictoryScreen:
 						szText = TRNSLTR.getText("TXT_KEY_VICTORY_SCREEN_NO_HOLY", ())
 						screen.setTableText(szTable, 1, iRow, ufont2 + szText, "", eWidGen, 1, 2, 1<<2)
 					if iBestReligion != -1:
-						szText = GC.getReligionInfo(iBestReligion).getDescription() + u": %d%%" % religionPercent
+						szText = GC.getReligionInfo(iBestReligion).getDescription() + u": %d%%" % bestReligionPercent
 						screen.setTableText(szTable, 2, iRow, ufont2 + szText, "", eWidGen, 1, 2, 1<<0)
 
 				if CvVictoryInfo.getTotalCultureRatio() > 0:
@@ -667,7 +667,7 @@ class CvVictoryScreen:
 					szText = TRNSLTR.getText("TXT_KEY_VICTORY_SCREEN_PERCENT_CULTURE", (int((100.0 * iBestCulture) / CvVictoryInfo.getTotalCultureRatio()),))
 					screen.setTableText(szTable, 0, iRow, ufont2 + szText, "", eWidGen, 1, 2, 1<<1)
 					screen.setTableText(szTable, 1, iRow, ufont2 + unicode(iOurCulture), "", eWidGen, 1, 2, 1<<2)
-					if iBestLandTeam != -1:
+					if iBestCultureTeam  != -1:
 						screen.setTableText(szTable, 2, iRow, ufont2 + GC.getTeam(iBestCultureTeam).getName() + ":", "", eWidGen, 1, 2, 1<<0)
 						screen.setTableText(szTable, 3, iRow, ufont2 + unicode(iBestCulture), "", eWidGen, 1, 2, 1<<0)
 
@@ -969,15 +969,16 @@ class CvVictoryScreen:
 		screen.appendListBoxStringNoUpdate(szOptionsTable, szTxt, eWidGen, 1, 2, 1<<2)
 
 		if GAME.isGameMultiPlayer():
+			szTxt = ""
 			for i in xrange(GC.getNumMPOptionInfos()):
 				if GAME.isMPOption(i):
-					szTxt = BULLET + ufont2 + GC.getMPOptionInfo(i).getDescription() + "\n"
+					szTxt += BULLET + ufont2 + GC.getMPOptionInfo(i).getDescription() + "\n"
 
 			if GAME.getMaxTurns() > 0:
 				szTxt += ufont1 + u"\t%s %d" % (TRNSLTR.getText("TXT_KEY_TURN_LIMIT_TAG", ()), GAME.getMaxTurns()) + "\n"
 
 			if GAME.getMaxCityElimination() > 0:
-				szTxt += ufont1 + u"\t%s %d" % (TRNSLTR.getText("TXT_KEY_CITY_ELIM_TAG", ()), GAME.getMaxCityElimination()) + "n"
+				szTxt += ufont1 + u"\t%s %d" % (TRNSLTR.getText("TXT_KEY_CITY_ELIM_TAG", ()), GAME.getMaxCityElimination()) + "\n"
 
 			screen.appendListBoxStringNoUpdate(szOptionsTable, szTxt, eWidGen, 1, 2, 1<<0)
 
@@ -1171,7 +1172,6 @@ class CvVictoryScreen:
 		for iTeamX in xrange(GC.getMAX_PC_TEAMS()):
 			CyTeamX = GC.getTeam(iTeamX)
 			if CyTeamX.isAlive() and GAME.isTeamVoteEligible(iTeamX, iVoteBody):
-				print "CvVictoryScreen: Team %i, %s <- vote eligible " %(iTeamX, CyTeamX.getName())
 				if iCandTeam1 == -1:
 					iCandTeam1 = iTeamX
 				else:
@@ -1589,8 +1589,6 @@ class CvVictoryScreen:
 		else:
 			return 2
 
-		return -1
-
 	def getPlayerOnTeam(self, iTeam):
 		for i in xrange(GC.getMAX_PC_PLAYERS()):
 			if iTeam == GC.getPlayer(i).getTeam():
@@ -1685,7 +1683,8 @@ class CvVictoryScreen:
 				self.iTab = 0
 				self.showVictoryConditionScreen(screen)
 		elif iCode == NotifyCode.NOTIFY_CLICKED:
-			if NAME == "VS_Tab":
+			if NAME.startswith("VS_Tab"):
+				ID = int(NAME[-1])
 				screen.hide("VS_Col_Tab" + str(self.iTab))
 				screen.show("VS_Tab" + str(self.iTab))
 				screen.hide("VS_Tab" + str(ID))
