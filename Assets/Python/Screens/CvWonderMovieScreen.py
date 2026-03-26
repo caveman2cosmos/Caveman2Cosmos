@@ -14,6 +14,7 @@ class CvWonderMovieScreen:
 			return
 
 		self.iMovieType = iMovieType
+		self.iInfoPanel = 0
 
 		# not all projects have movies
 		szMovieFile = None
@@ -38,9 +39,11 @@ class CvWonderMovieScreen:
 			CvInfo = GC.getFeatureInfo(iMovieItem)
 			if CvInfo:
 				sType = CvInfo.getType()
-				szArtDef = CyArtFileMgr().getMovieArtInfo("ART_DEF_MOVIE_" + sType[sType.find("_PLATY_")+7:])
-				if szArtDef:
-					szMovieFile = szArtDef.getPath()
+				iPlaty = sType.find("_PLATY_")
+				if iPlaty >= 0:
+					szArtDef = CyArtFileMgr().getMovieArtInfo("ART_DEF_MOVIE_" + sType[iPlaty+7:])
+					if szArtDef:
+						szMovieFile = szArtDef
 
 		if not szMovieFile:
 			return
