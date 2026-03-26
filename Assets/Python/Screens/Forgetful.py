@@ -83,6 +83,7 @@ class Forgetful:
 	def setDropDown(self):
 		szDropdownName = "ForgetfulType"
 		screen = CyGInterfaceScreen("ForgetfulScreen", self.screenId)
+		screen.deleteWidget(szDropdownName)  # safe to call even on the first run? If not, guard with a flag
 		screen.addDropDownBoxGFC(szDropdownName, 12, 12, 180, WidgetTypes.WIDGET_GENERAL, 1, 2, FontTypes.GAME_FONT)
 		for i in xrange(self.iTypes):
 			screen.addPullDownString(szDropdownName, self.lForgetful[i][0], i, i, i == self.iForgetfulType)
@@ -93,6 +94,7 @@ class Forgetful:
 		iWidth = self.xRes - 16
 		w0 = (iWidth - 64)/3
 		screen = CyGInterfaceScreen("ForgetfulScreen", self.screenId)
+		screen.deleteWidget(Table)
 		screen.addTableControlGFC(Table, 4, 8, 52, iWidth, self.yRes - 60, True, False, 24, 24, TableStyles.TABLE_STYLE_STANDARD)
 		screen.setTableColumnHeader(Table, 0, "ID", 64)
 		screen.setTableColumnHeader(Table, 1, "NAME", w0)
