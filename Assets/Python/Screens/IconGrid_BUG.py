@@ -171,7 +171,7 @@ class IconGrid_BUG:
 		self.yStart = iY
 
 
-	def getPrefferedWidth(self):
+	def getPreferedWidth(self):
 		self.calculateLayout()
 
 		prefferedWidth = self.scrollArrowSize + self.scrollSpace + self.minColSpace * (len(self.columns) - 1)
@@ -195,7 +195,7 @@ class IconGrid_BUG:
 
 
 
-	def getPrefferedHeight(self):
+	def getPreferedHeight(self):
 		self.calculateLayout()
 		initHeight = self.totalRowHeight * self.numRows + self.minRowSpace * (self.numRows - 1)
 
