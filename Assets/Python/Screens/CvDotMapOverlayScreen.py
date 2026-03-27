@@ -79,6 +79,8 @@ class CvDotMapOverlayScreen:
 		Updates the current plot and its x/y location.
 		"""
 		plot = CyInterface().getMouseOverPlot()
+		if plot is None or plot.isNone():
+			return
 		x = plot.getX()
 		y = plot.getY()
 		self.currentPoint = (x, y)
