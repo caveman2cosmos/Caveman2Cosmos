@@ -9,9 +9,10 @@ ArtFileMgr = CyArtFileMgr()
 localText = CyTranslator()
 
 class CvReplayScreen:
-	"Replay Screen for end of game"
+	"Replay Screen for the end of game"
 
 	def __init__(self, screenId):
+		self.yMessage = None
 		self.screenId = screenId
 		self.REPLAY_SCREEN_NAME = "ReplayScreen"
 		self.INTERFACE_ART_INFO = "TECH_BG"
@@ -140,8 +141,6 @@ class CvReplayScreen:
 		screen.setMinimapMode(MinimapModeTypes.MINIMAPMODE_REPLAY)
 
 		# add pane for text
-		#mainPanelName = self.getNextWidgetName()
-		#screen.addPanel(mainPanelName, "", "", True, True, self.X_TEXT, self.Y_TEXT, self.W_TEXT, self.H_TEXT, PanelStyles.PANEL_STYLE_IN)
 		self.szAreaId = self.getNextWidgetName()
 		screen.addListBoxGFC(self.szAreaId, "", self.X_TEXT, self.Y_TEXT, self.W_TEXT, self.H_TEXT, TableStyles.TABLE_STYLE_STANDARD)
 		screen.enableSelect(self.szAreaId, False)
@@ -188,26 +187,20 @@ class CvReplayScreen:
 			return
 
 
-		szTurnDate = CyGameTextMgr().getDateStr(self.iTurn, false, self.replayInfo.getCalendar(), self.replayInfo.getStartYear(), self.replayInfo.getGameSpeed())
+		szTurnDate = CyGameTextMgr().getDateStr(self.iTurn, False, self.replayInfo.getCalendar(), self.replayInfo.getStartYear(), self.replayInfo.getGameSpeed())
 		screen.deleteWidget(self.szHeader)
 		screen.setLabel(self.szHeader, "Background", u"<font=4b>" + szTurnDate + u"<font>", 1<<2, self.X_SCREEN, self.Y_TITLE, self.Z_CONTROLS, FontTypes.TITLE_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1 )
 
 		events = []
-		bFound = False
-		bDone = False
 		i = 0
-		while (i < self.replayInfo.getNumReplayMessages() and not bDone):
+		while (i < self.replayInfo.getNumReplayMessages()):
 			if 	(self.replayInfo.getReplayMessageTurn(i) <= iTurn and self.replayInfo.getReplayMessageTurn(i) > self.iLastTurnShown):
 				events.append(i)
-				bFound = True
-			else:
-				if (bFound):
-					bDone = True
 			i += 1
 
 		for iLoopEvent in events:
 
-			szEventDate = CyGameTextMgr().getDateStr(self.replayInfo.getReplayMessageTurn(iLoopEvent), false, self.replayInfo.getCalendar(), self.replayInfo.getStartYear(), self.replayInfo.getGameSpeed())
+			szEventDate = CyGameTextMgr().getDateStr(self.replayInfo.getReplayMessageTurn(iLoopEvent), False, self.replayInfo.getCalendar(), self.replayInfo.getStartYear(), self.replayInfo.getGameSpeed())
 
 			szText = self.replayInfo.getReplayMessageText(iLoopEvent)
 			iX = self.replayInfo.getReplayMessagePlotX(iLoopEvent)
@@ -223,6 +216,7 @@ class CvReplayScreen:
 				szText =  u"<font=2>" + szEventDate + u": " + szText + u"</font>"
 				szText =localText.changeTextColor(szText, eColor)
 				screen.prependListBoxString(self.szAreaId, szText, WidgetTypes.WIDGET_GENERAL, -1, -1, 1<<0 )
+				self.yMessage += 20
 
 			if (eMessageType == ReplayMessageTypes.REPLAY_MESSAGE_PLOT_OWNER_CHANGE):
 				iPlayer = self.replayInfo.getReplayMessagePlayer(iLoopEvent)
@@ -233,11 +227,11 @@ class CvReplayScreen:
 			else:
 				if (iX > -1 and iY > -1 and not bSilent):
 					screen.minimapFlashPlot(iX, iY, gc.getInfoTypeForString("COLOR_WHITE"), 10)
-		if (self.yMessage > self.H_TEXT):
+		if self.yMessage > self.H_TEXT:
 			screen.scrollableAreaScrollToBottom(self.szAreaId)
 
 		# Power Graph
-		iLoopTurn = self.iLastTurnShown
+		iLoopTurn = max(self.iLastTurnShown, self.replayInfo.getInitialTurn())
 		while (iLoopTurn <= self.iTurn):
 			iTotalScore = 0
 			for iLoopPlayer in range(self.replayInfo.getNumPlayers()):
@@ -260,7 +254,7 @@ class CvReplayScreen:
 	def deleteAllWidgets(self):
 		screen = self.getScreen()
 		i = self.nWidgetCount - 1
-		while (i >= 0):
+		while i >= 0:
 			self.nWidgetCount = i
 			screen.deleteWidget(self.getNextWidgetName())
 			i -= 1
@@ -279,7 +273,6 @@ class CvReplayScreen:
 		self.resetMinimapColor()
 		for iPlayer in range(self.replayInfo.getNumPlayers()):
 			screen.clearGraphData(self.szGraph, iPlayer)
-		self.initGraph()
 		screen.clearListBoxGFC(self.szAreaId)
 
 
