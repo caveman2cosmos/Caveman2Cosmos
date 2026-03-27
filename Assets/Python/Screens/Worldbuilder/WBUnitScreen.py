@@ -154,7 +154,6 @@ class WBUnitScreen:
 		self.aWidgetBucket.append("MissionInput")
 
 		self.listUnitAI = listUnitAI = []
-		lUnitAI = []
 		for i in xrange(UnitAITypes.NUM_UNITAI_TYPES):
 			sText = GC.getUnitAIInfo(i).getDescription()
 			sList = ""
@@ -332,7 +331,6 @@ class WBUnitScreen:
 			screen.show("MissionInput")
 			if self.currentPlot.isCity():
 				pCity = self.currentPlot.getPlotCity()
-				sText = u"%s: %d/%d%c" %(GC.getCultureLevelInfo(pCity.getCultureLevel()).getDescription(), pCity.getCulture(pCity.getOwner()), pCity.getCultureThreshold(), GC.getCommerceInfo(CommerceTypes.COMMERCE_CULTURE).getChar())
 				iRow = screen.appendTableRow("MissionInput")
 				sText = u"%c %s" %(GC.getCommerceInfo(CommerceTypes.COMMERCE_CULTURE).getChar(), GC.getCultureLevelInfo(pCity.getCultureLevel()).getDescription())
 				screen.setTableText("MissionInput", 0, iRow, "<font=3>" + sText, "", WidgetTypes.WIDGET_GENERAL, -1, -1, 1<<0)
@@ -466,7 +464,7 @@ class WBUnitScreen:
 				if not pPlayerX.isAlive():
 					sName = "*" + sName
 				if pPlayerX.isTurnActive():
-					sText = "[" + sText + "]"
+					sName = "[" + sName  + "]"
 				screen.addPullDownString("UnitOwner", sName, iPlayerX, iPlayerX, iPlayerX == self.currentUnit.getOwner())
 
 		iY += 30
@@ -752,7 +750,9 @@ class WBUnitScreen:
 			unitX.setMadeInterception(False)
 			self.changeDirection(DirectionTypes.DIRECTION_SOUTH, unitX)
 			unitX.setUnitAIType(Info.getDefaultUnitAIType())
-			unitX.changeCargoSpace(Info.getCargoSpace() - unitX.cargoSpace())
+			iCargoNeeded = Info.getCargoSpace() - unitX.cargoSpace()
+			if iCargoNeeded != 0:
+				unitX.changeCargoSpace(iCargoNeeded)
 			unitX.setScriptData("")
 			return 2
 		if iIndex == 2:
@@ -780,7 +780,6 @@ class WBUnitScreen:
 	def doMission(self):
 		sType = GC.getMissionInfo(iMissionType).getType()
 
-		iData1 = -1
 		iData2 = -1
 		if sType == "MISSION_MOVE_TO_UNIT": return 2
 		elif sType in self.lSelectableMissions:
@@ -791,18 +790,21 @@ class WBUnitScreen:
 			iData1 = self.iPlotX
 			iData2 = self.iPlotY
 		pTargetPlot = GC.getMap().plot(self.iPlotX, self.iPlotY)
-		self.currentUnit.getGroup().pushMission(MissionTypes(iMissionType), iData1, iData2, 0, False, True, MissionAITypes.NO_MISSIONAI, pTargetPlot, self.currentUnit)
-		self.interfaceScreen([self.currentUnit])
+		if pTargetPlot:
+			self.currentUnit.getGroup().pushMission(MissionTypes(iMissionType), iData1, iData2, 0, False, True, MissionAITypes.NO_MISSIONAI, pTargetPlot, self.currentUnit)
+			self.interfaceScreen([self.currentUnit])
+		else:
+			return 2
 
 	def changeDirection(self, iNewDirection, unitX):
 		if iNewDirection == -1: return
 		iOldDirection = unitX.getFacingDirection()
 		if iNewDirection == iOldDirection: return
 		if iOldDirection > iNewDirection:
-			for i in xrange(iOldDirection - iNewDirection):
+			for _ in xrange(iOldDirection - iNewDirection):
 				unitX.rotateFacingDirectionCounterClockwise()
 		else:
-			for i in xrange(iNewDirection - iOldDirection):
+			for _ in xrange(iNewDirection - iOldDirection):
 				unitX.rotateFacingDirectionClockwise()
 
 	def changeOwner(self, iPlayer):
@@ -856,7 +858,6 @@ class WBUnitScreen:
 		iData2	= inputClass.iData2
 		ID		= inputClass.iItemID
 		NAME	= inputClass.szFunctionName
-		szFlag	= HandleInputUtil.MOUSE_FLAGS.get(inputClass.uiFlags, "UNKNOWN")
 
 		if iCode == 6: # Character
 			if iData == 1:
@@ -867,15 +868,10 @@ class WBUnitScreen:
 			return 0
 
 		szSplit = NAME.split("|")
-		BASE = szSplit[0]
 		if szSplit[1:]:
 			TYPE = szSplit[1]
 		else:
 			TYPE = ""
-		if szSplit[2:]:
-			CASE = szSplit[2:]
-		else:
-			CASE = [""]
 
 		global iChange
 		global iChangeType
@@ -1011,7 +1007,6 @@ class WBUnitScreen:
 			elif NAME == "TargetPlot":
 				self.WB.iPlayerAddMode = "TargetPlot"
 				self.WB.TempInfo = [self.currentUnit.getOwner(), self.currentUnit.getID()]
-				#screen.hideScreen()
 
 			elif NAME == "ExitSubScreen":
 				self.exit(screen)
@@ -1092,9 +1087,8 @@ class WBUnitScreen:
 							if self.currentUnitX.getGroupID() != self.currentUnit.getGroupID(): continue
 						aList.append(self.currentUnitX)
 				iRefresh = 0
-				for self.currentUnitX in aList:
-					iRefresh = self.doAllCommands(self.currentUnitX, iIndex)
-				#screen.hideScreen()
+				for unitX in aList:
+					iRefresh = self.doAllCommands(unitX, iIndex)
 				if iRefresh == 1:
 					self.interfaceScreen([self.currentPlot.getUnit(0)])
 				elif iRefresh == 2:
@@ -1109,8 +1103,9 @@ class WBUnitScreen:
 
 
 	def handleCargoChange(self, screen, ID):
-		color = ""
 		unitX = GC.getPlayer(self.currentUnit.getOwner()).getUnit(ID)
+		if unitX is None:
+			return
 		if self.bCargo:
 			transport = unitX.getTransportUnit()
 
