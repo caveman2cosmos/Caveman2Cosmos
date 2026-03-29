@@ -168,6 +168,9 @@ class WBCorporationScreen:
 			elif inputClass.getData1() == 7872:
 				# iCiv = inputClass.getData2()
 				# 7872 passes iCiv not a player, no navigation possible from civ alone
+                # Temp patch to leave the button working for now(or forever)
+				iPlayerX = inputClass.getData2() / 10000
+				WBPlayerScreen.WBPlayerScreen(self.WB).interfaceScreen(iPlayerX)
 				pass
 
 		if inputClass.getFunctionName() == "CurrentPage":
