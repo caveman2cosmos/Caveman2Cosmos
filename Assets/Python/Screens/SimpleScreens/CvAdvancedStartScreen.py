@@ -308,7 +308,6 @@ class CvAdvancedStartScreen:
 			self.removeObject()
 
 	def leftMouseDown(self, argsList):
-		#bShift, bCtrl, bAlt = argsList
 		self.placeObject()
 
 	def rightMouseDown(self):

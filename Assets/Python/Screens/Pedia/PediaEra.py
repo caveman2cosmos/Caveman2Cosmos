@@ -40,7 +40,6 @@ class PediaEra:
 
 		X_COL_1 = self.X_COL_1
 		X_COL_2 = self.X_COL_2
-		W_COL_1 = self.W_COL_1
 		W_COL_2 = self.W_COL_2
 		Y_ROW_1 = self.Y_TOP_ROW
 		Y_ROW_2 = self.Y_BOT_ROW

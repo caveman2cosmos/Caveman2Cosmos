@@ -120,7 +120,7 @@ class PediaBuild:
 							index += 2
 						else:
 							index += 3
-						szStats += szEraMod[:index] + " " + TRNSLTR.getText("TXT_KEY_PEDIA_FROM_STARING_ERA", ())
+						szStats += szEraMod[:index] + " " + TRNSLTR.getText("TXT_KEY_PEDIA_FROM_STARTING_ERA", ())
 		if szStats:
 			screen.addMultilineText(aName(), uFont3b + szStats, self.X_MAIN_L + 4, self.Y_MAIN_L, W_STATS - 8, self.H_MAIN_L, iWidGen, 0, 0, 1<<0)
 		# Construct & Requires
