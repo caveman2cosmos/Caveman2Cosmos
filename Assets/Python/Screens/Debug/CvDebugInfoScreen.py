@@ -117,7 +117,7 @@ class CvDebugInfoScreen(CvGFCScreen.CvGFCScreen):
 				if x != y:
 
 					# if teams have met
-					if pTeamX.isHasMet(gc.getPlayer(y).getTeam()):
+					if pTeamX.isHasMet(y):
 
 						# if at peace
 						if not pTeamX.isAtWarWith(y):
@@ -175,7 +175,7 @@ class CvDebugInfoScreen(CvGFCScreen.CvGFCScreen):
 				if ( not x == y ):
 
 					# if teams have met
-					if pTeamX.isHasMet(y):
+					if pTeamX.isHasMet(gc.getPlayer(y).getTeam()):
 
 						iPlayerXAttitudeTowardPlayerY = pPlayerX.AI_getAttitude(y)
 

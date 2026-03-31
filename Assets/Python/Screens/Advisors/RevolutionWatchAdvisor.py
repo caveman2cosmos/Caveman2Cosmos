@@ -504,7 +504,7 @@ class RevolutionWatchAdvisor:
 		self.researchIcon = u"%c" %(gc.getCommerceInfo(CommerceTypes.COMMERCE_RESEARCH).getChar())
 		self.sickIcon = u"%c" % CyGame().getSymbolID(FontSymbols.UNHEALTHY_CHAR)
 		self.tradeIcon = u"%c" % CyGame().getSymbolID(FontSymbols.TRADE_CHAR)
-		self.unhappyicon = u"%c" % CyGame().getSymbolID(FontSymbols.UNHAPPY_CHAR)
+		self.unhappyIcon = u"%c" % CyGame().getSymbolID(FontSymbols.UNHAPPY_CHAR)
 
 		self.yieldIcons = {}
 		for eYieldType in range(YieldTypes.NUM_YIELD_TYPES):
@@ -710,7 +710,7 @@ class RevolutionWatchAdvisor:
 				1 : self.happyIcon, # Priest
 				2 : self.cultureIcon, # Artist
 				3 : self.researchIcon, # Scientist
-				4 : self.goldIcon, # Merchant
+				4 : self.goldIcon, # Merchanti8
 				5 : self.hammerIcon, # Engineer
 				6 : self.espionageIcon, # Engineer
 				}
@@ -965,6 +965,8 @@ class RevolutionWatchAdvisor:
 		screen = self.getScreen()
 		city = self.getCurrentCity()
 
+		screen.deleteWidget(self.BRIBE_PANEL)
+		screen.deleteWidget(self.LEGEND_PANEL)
 		screen.addPanel(self.BRIBE_PANEL, "", "", False, True, self.nBribePanelX, self.nBribePanelY, self.nBribePanelWidth, self.nBribePanelLength, PanelStyles.PANEL_STYLE_IN )
 		screen.setImageButton(self.REVOLUTION_LEGEND_ICON, self.revIcon, self.revIconX, self.revIconY, self.revIconSize, self.revIconSize, WidgetTypes.WIDGET_GENERAL, -1, -1 )
 		screen.setText (self.REVOLUTION_BRIBE_TEXT, "Background", localText.getText("TXT_ADVISOR_BRIBE",()), 1<<0, self.revBribeTextX, self.revBribeTextY, self.Z_TEXT, FontTypes.GAME_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1)
@@ -1194,7 +1196,7 @@ class RevolutionWatchAdvisor:
 		szReturn = u""
 
 		# Turns til Growth
- 		nFood = city.foodDifference (True)
+		nFood = city.foodDifference (True)
 
 		# If this is a food production (i.e., worker or settler)
 		if (self.isFoodProduction(city.getProductionName())):
@@ -1642,7 +1644,7 @@ class RevolutionWatchAdvisor:
 		aList = []
 		for i in range(gc.getMAX_PLAYERS()):
 			for cityX in gc.getPlayer(i).cities():
-				L.append(cityX.getPlotYield(arg))
+				aList.append(cityX.getPlotYield(arg))
 
 		y = city.getPlotYield(arg)
 		return len([i for i in aList if i > y]) + 1
@@ -1803,7 +1805,7 @@ class RevolutionWatchAdvisor:
 								if info.isPower():
 									value = 1 / float(info.getProductionCost())
 									if value > bestData:
-										bestOrder = bldg
+										bestOrder = i
 										bestData = value
 
 					elif type == "Nutty":
@@ -2009,6 +2011,7 @@ class RevolutionWatchAdvisor:
 		if self.customizing:
 
 			# Build the page definition table
+			screen.deleteWidget(self.CUSTOMIZE_PAGE)
 			screen.addTableControlGFC (self.CUSTOMIZE_PAGE, 4, self.nTableX, self.nTableY, self.nHalfTableWidth, self.nShortTableLength, True, False, 32, 32, TableStyles.TABLE_STYLE_STANDARD )
 			screen.enableSelect(self.CUSTOMIZE_PAGE, True)
 			screen.enableSort (self.CUSTOMIZE_PAGE)
@@ -2090,6 +2093,7 @@ class RevolutionWatchAdvisor:
 			and not self.PAGES[self.currentPageNum]["showRevolutionLegend"]
 			and not self.PAGES[self.currentPageNum]["showGPLegend"]
 			):
+				screen.deleteWidget(page)
 				screen.addTableControlGFC(page, len (dDict) + 1, self.nTableX, self.nTableY, self.nTableWidth, self.nTableLength, True, False, 24, 24, TableStyles.TABLE_STYLE_STANDARD)
 			else: screen.addTableControlGFC(page, len (dDict) + 1, self.nTableX, self.nTableY, self.nTableWidth, self.nShortTableLength, True, False, 24, 24, TableStyles.TABLE_STYLE_STANDARD)
 
@@ -2686,7 +2690,7 @@ class RevolutionWatchAdvisor:
 
 		self.currentPageNum = 0
 		self.loadPages()
-		self.switchPage(self.getPageID(self.PAGES[0]["name"]))
+		self.switchPage(self.PAGES[0]["name"])
 		self.drawScreen(self.currentPage)
 
 		return 1
