@@ -95,6 +95,8 @@ class ParallelMapsScreen:
 		# Set scrollable area for the map buttons
 		y = yTop - 4
 		w = xRes - 16
+		screen.deleteWidget("MA_CivSelBG")
+		screen.deleteWidget("MA_CivSelPnl")
 		screen.addPanel("MA_CivSelBG", "", "", False, True, 8, y, w, 88, ePnlBlue50)
 		ScPnl = "MA_CivSelPnl"
 		screen.addScrollPanel(ScPnl, "", 8, y, w, 64, ePnlBlue50)
@@ -137,24 +139,28 @@ class ParallelMapsScreen:
 			TYPE = szSplit[1]
 		else:
 			TYPE = ""
+		if szSplit[2:]:
+			OPT = int(szSplit[2])
+		else:
+			OPT = -1
 
 		# Remove potential Help Text
 		self.tooltip.reset(screen)
 
 		if iCode == NotifyCode.NOTIFY_CURSOR_MOVE_ON:
 			if BASE == "WID":
-				if TYPE == "MAP":
-					szTxt = GC.getMapInfo(ID).getDescription() + "\n" + GC.getMapInfo(ID).getHotKeyString()
+				if TYPE == "MAP" and OPT > -1:
+					szTxt = GC.getMapInfo(OPT).getDescription() + "\n" + GC.getMapInfo(OPT).getHotKeyString()
 					self.tooltip.handle(screen, szTxt)
 
 		if iCode == NotifyCode.NOTIFY_CLICKED:
 			if szFlag == "MOUSE_LBUTTONUP":
 				if BASE == "WID":
-					if TYPE == "MAP":
-						if ID != GAME.getCurrentMap():
+					if TYPE == "MAP" and OPT > -1:
+						if OPT != GAME.getCurrentMap():
 							screen.hide("WID|MAP|HiLi" + str(int(GAME.getCurrentMap())))
-							screen.show("WID|MAP|HiLi" + str(ID))
-							GC.switchMap(ID) 
+							screen.show("WID|MAP|HiLi" + str(OPT))
+							GC.switchMap(OPT)
 
 	def update(self, fDelta):
 		pass
@@ -164,5 +170,5 @@ class ParallelMapsScreen:
 		screen.hideScreen()
 
 	def onClose(self):
-		del self.xRes, self.yRes, self.tooltip, self.H_EDGE_PANEL
+		del self.xRes, self.yRes, self.tooltip, self.H_EDGE_PANEL, self.HILITE_SQUARE
 		CyMap().setViewportActionState(ViewportDeferredActionState.VIEWPORT_ACTION_STATE_AFTER_SWITCH)
