@@ -36,7 +36,7 @@ def TimeKeeper():
 
 		screen.setTableColumnHeader(TABLE, i + 1, CvInfo.getDescription(), (xRes - 120)/iNumColumns)
 
-	for i in xrange(5*iMaxIncrements + iEras + 3):
+	for _ in xrange(5 * iMaxIncrements + iEras + 3):
 		screen.appendTableRow(TABLE)
 
 	# Cache misc content
