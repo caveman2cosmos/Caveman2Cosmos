@@ -207,7 +207,7 @@ def onSetPlayerAlive(argsList):
 						if revCnt > 2: # Hardened, stubborn populace
 							iDividend -= 8
 
-						changeRevIdx = -revIdx * iDividend / 100
+						changeRevIdx = -revIdx * iDividend // 100
 						pCity.changeRevolutionIndex(changeRevIdx)
 						pCity.changeRevRequestAngerTimer(-pCity.getRevRequestAngerTimer())
 						pCity.setRevolutionIndex(min([pCity.getRevolutionIndex(), RevOpt.getAlwaysViolentThreshold()]))
@@ -231,7 +231,7 @@ def onSetPlayerAlive(argsList):
 						if revCnt > 2: # Hardened, stubborn populace
 							iDividend -= 5
 
-						changeRevIdx = -revIdx * iDividend / 100
+						changeRevIdx = -revIdx * iDividend // 100
 						pCity.changeRevolutionIndex(changeRevIdx)
 						pCity.changeRevRequestAngerTimer(-pCity.getRevRequestAngerTimer())
 						pCity.setRevolutionIndex(min([pCity.getRevolutionIndex(),RevOpt.getAlwaysViolentThreshold()]))
@@ -705,9 +705,9 @@ def onBuildingBuilt(argsList):
 			curRevIdx = cityX.getRevolutionIndex()
 			iRevIdxChange = -max([75, curRevIdx * 12/100])
 			cityX.changeRevolutionIndex(iRevIdxChange)
-			revIdxHist = RevData.getCityVal(pCity,'RevIdxHistory')
+			revIdxHist = RevData.getCityVal(cityX,'RevIdxHistory')
 			revIdxHist['Events'][0] += iRevIdxChange
-			RevData.updateCityVal(pCity, 'RevIdxHistory', revIdxHist)
+			RevData.updateCityVal(cityX, 'RevIdxHistory', revIdxHist)
 
 	elif buildingInfo.getMaxPlayerInstances() == 1 and buildingInfo.getPrereqReligion() < 0 and buildingInfo.getProductionCost() > 10:
 		if LOG_DEBUG:
@@ -719,9 +719,9 @@ def onBuildingBuilt(argsList):
 			curRevIdx = cityX.getRevolutionIndex()
 			iRevIdxChange = -max([50, curRevIdx * 7/100])
 			cityX.changeRevolutionIndex(iRevIdxChange)
-			revIdxHist = RevData.getCityVal(pCity,'RevIdxHistory')
+			revIdxHist = RevData.getCityVal(cityX,'RevIdxHistory')
 			revIdxHist['Events'][0] += iRevIdxChange
-			RevData.updateCityVal(pCity, 'RevIdxHistory', revIdxHist)
+			RevData.updateCityVal(cityX, 'RevIdxHistory', revIdxHist)
 
 
 ########################## Religious events ###############################
@@ -783,15 +783,19 @@ def removeFloatingRebellions():
 
 		bOnlySpy = True
 		spy = None
+		bHasFounder = False
 		unitX, i = playerX.firstUnit(False)
 		while unitX:
 			if unitX.isFound():
-				return
+				bHasFounder = True
+				break
 			if bOnlySpy:
 				if unitX.getUnitAIType() != UnitAITypes.UNITAI_SPY:
 					bOnlySpy = False
 				else: spy = unitX
 			unitX, i = playerX.nextUnit(i, False)
+		if bHasFounder:
+			continue
 
 		print "[REV] Player %d (%s) is a homeless rebel"%(iPlayerX, playerX.getCivilizationDescription(0))
 
@@ -867,7 +871,7 @@ def checkForAssimilation():
 					iCivType = CyPlayerX.getCivilizationType()
 					for CyCityML in CyPlayerML.cities():
 						if RevData.getCityVal(CyCityML, 'RevolutionCiv') == iCivType:
-							revTurn = RevData.getCityVal(pCity, 'RevolutionTurn')
+							revTurn = RevData.getCityVal(CyCityML, 'RevolutionTurn')
 							if revTurn != None and iTurn - revTurn < 25:
 								iOdds -= 2
 
@@ -1035,7 +1039,7 @@ def assimilateHandler(iPlayerID, netUserData, popupReturn):
 			print "[REV] Assimilation accepted!"
 		if netUserData[2]:
 			pMotherland = GC.getPlayer(RevData.revObjectGetVal(GC.getPlayer(netUserData[0]), 'MotherlandID' ))
-			pMotherland.AI_changeAttitudeExtra( etUserData[1], pMotherland.AI_getAttitudeExtra(netUserData[0]))
+			pMotherland.AI_changeAttitudeExtra( netUserData[1], pMotherland.AI_getAttitudeExtra(netUserData[0]))
 			if LOG_DEBUG:
 				print "[REV] Rebel motherland %s extra attidude to %s now %d"%(pMotherland.getCivilizationDescription(0), GC.getPlayer(netUserData[1]).getCivilizationDescription(0), pMotherland.AI_getAttitudeExtra(netUserData[0]))
 
