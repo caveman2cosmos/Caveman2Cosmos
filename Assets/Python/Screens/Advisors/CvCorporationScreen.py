@@ -153,37 +153,28 @@ class CvCorporationScreen:
 
 	# Draws the Corporation buttons and information
 	def drawCorporationInfo(self):
+		screen = self.getScreen()
 
+		screen.deleteWidget("CorporationsScreenArea")
 		for i in range(GC.getNumCorporationInfos()):
-			if (GC.getGame().canEverSpread(i)):
-				screen = self.getScreen()
+			screen.deleteWidget(self.getCorporationButtonName(i))
 
-				## johny smith
-				## This draws the panel
-				## Puts the panel in a loop
-				## Attachs the panel so it will scroll
-				xLoop = self.X_CORPORATION_START
-				for i in range(GC.getNumCorporationInfos()):
-					if (GC.getGame().canEverSpread(i)):
-						screen.attachPanelAt("CivicList", "CorporationsScreenArea", "", "", True, True, PanelStyles.PANEL_STYLE_MAIN, self.X_CORPORATION, self.Y_CORPORATION_AREA, self.X_CORPORATION_DIFF + ((i + 1) * self.DX_CORPORATION), self.H_CORPORATION_AREA, WidgetTypes.WIDGET_GENERAL, i, -1 )
-						xLoop += self.DX_CORPORATION
+		xLoop = self.X_CORPORATION_START
+		for i in range(GC.getNumCorporationInfos()):
+			if GC.getGame().canEverSpread(i):
+				screen.attachPanelAt("CivicList", "CorporationsScreenArea", "", "", True, True, PanelStyles.PANEL_STYLE_MAIN, self.X_CORPORATION, self.Y_CORPORATION_AREA, self.X_CORPORATION_DIFF + ((i + 1) * self.DX_CORPORATION), self.H_CORPORATION_AREA, WidgetTypes.WIDGET_GENERAL, i, -1)
+				xLoop += self.DX_CORPORATION
 
+		xLoop = self.X_CORPORATION_START
+		for i in range(GC.getNumCorporationInfos()):
+			if GC.getGame().canEverSpread(i):
+				screen.addCheckBoxGFCAt("CivicList", self.getCorporationButtonName(i), GC.getCorporationInfo(i).getButton(), ArtFileMgr.getInterfaceArtInfo("BUTTON_HILITE_SQUARE").getPath(), self.X_CORPORATION_AREA + xLoop - 25, self.Y_CORPORATION_AREA + 10, self.BUTTON_SIZE, self.BUTTON_SIZE, WidgetTypes.WIDGET_GENERAL, -1, -1, ButtonStyles.BUTTON_STYLE_LABEL, False)
+				screen.setActivation(self.getCorporationButtonName(i), ActivationTypes.ACTIVATE_NORMAL)
+				xLoop += self.DX_CORPORATION
 
-				## johny smith
-				## This draws the symbols
-				## Puts the symbols in a loop
-				## Attachs the symbols so they will scroll
-				xLoop = self.X_CORPORATION_START
-				for i in range(GC.getNumCorporationInfos()):
-					if (GC.getGame().canEverSpread(i)):
-						screen.addCheckBoxGFCAt("CivicList", self.getCorporationButtonName(i), GC.getCorporationInfo(i).getButton(), ArtFileMgr.getInterfaceArtInfo("BUTTON_HILITE_SQUARE").getPath(), self.X_CORPORATION_AREA + xLoop - 25, self.Y_CORPORATION_AREA + 10, self.BUTTON_SIZE, self.BUTTON_SIZE, WidgetTypes.WIDGET_GENERAL, -1, -1, ButtonStyles.BUTTON_STYLE_LABEL, False)
-						screen.setActivation( self.getCorporationButtonName(i), ActivationTypes.ACTIVATE_NORMAL )
-						xLoop += self.DX_CORPORATION
-
-
-			self.iCorporationSelected = -1
-			self.iCorporationExamined = self.iCorporationSelected
-			self.iCorporationOriginal = self.iCorporationSelected
+		self.iCorporationSelected = -1
+		self.iCorporationExamined = self.iCorporationSelected
+		self.iCorporationOriginal = self.iCorporationSelected
 
 
 	def drawHelpInfo(self):
@@ -280,12 +271,18 @@ class CvCorporationScreen:
 	# Draws the city list
 	def drawCityInfo(self, iCorporation):
 
-		if (not self.bScreenUp):
+		if not self.bScreenUp:
 			return
 
 		screen = self.getScreen()
 
-		if (iCorporation == GC.getNumCorporationInfos()):
+		screen.deleteWidget(self.AREA1_ID)
+		screen.deleteWidget(self.AREA2_ID)
+		screen.deleteWidget("Child" + self.AREA1_ID)
+		screen.deleteWidget("Child" + self.AREA2_ID)
+		screen.deleteWidget("CorporationScreenHeader")
+
+		if iCorporation == GC.getNumCorporationInfos():
 			iLinkCorporation = -1
 		else:
 			iLinkCorporation = iCorporation
@@ -294,19 +291,17 @@ class CvCorporationScreen:
 		screen.addPanel(self.AREA2_ID, "", "", True, True, self.X_CITY2_AREA, self.Y_CITY_AREA, self.W_CITY_AREA, self.H_CITY_AREA, PanelStyles.PANEL_STYLE_MAIN)
 
 		for i in range(GC.getNumCorporationInfos()):
-			if (self.iCorporationSelected == i):
+			if self.iCorporationSelected == i:
 				screen.setState(self.getCorporationButtonName(i), True)
 			else:
 				screen.setState(self.getCorporationButtonName(i), False)
 
-		# Loop through the cities
 		szLeftCities = ""
 		szRightCities = ""
 		for i, cityX in enumerate(GC.getPlayer(self.iActivePlayer).cities()):
 
 			bFirstColumn = (i % 2 == 0)
 
-			# Constructing the City name...
 			szCityName = ""
 			if cityX.isCapital():
 				szCityName += u"%c" % CyGame().getSymbolID(FontSymbols.STAR_CHAR)
@@ -321,7 +316,7 @@ class CvCorporationScreen:
 
 			szCityName += cityX.getName()[0:17] + "  "
 
-			if (iLinkCorporation == -1):
+			if iLinkCorporation == -1:
 				bFirst = True
 				for iI in lCorporations:
 					szTempBuffer = CyGameTextMgr().getCorporationHelpCity(iI, cityX, False, False)
