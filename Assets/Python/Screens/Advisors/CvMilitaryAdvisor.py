@@ -35,7 +35,7 @@ class CvMilitaryAdvisor:
 		self.tooltip = PythonToolTip.PythonToolTip()
 
 		self.iPlayer = iPlayer = GAME.getActivePlayer()
-		self.CyPlayer = CyPlayer = GC.getActivePlayer()
+		self.CyPlayer = GC.getActivePlayer()
 		self.iTeam = iTeam = GAME.getActiveTeam()
 		self.CyTeam = GC.getTeam(iTeam)
 
@@ -65,15 +65,14 @@ class CvMilitaryAdvisor:
 
 		if xRes > 1700:
 			self.iResID = 2
-			self.aFontList = aFontList = [uFontEdge, "<font=4b>", "<font=4>", "<font=3b>", "<font=3>", "<font=2b>", "<font=2>"]
+			self.aFontList = [uFontEdge, "<font=4b>", "<font=4>", "<font=3b>", "<font=3>", "<font=2b>", "<font=2>"]
 		elif xRes > 1400:
 			self.iResID = 1
-			self.aFontList = aFontList = [uFontEdge, "<font=3b>", "<font=3>", "<font=2b>", "<font=2>", "<font=1b>", "<font=1>"]
+			self.aFontList = [uFontEdge, "<font=3b>", "<font=3>", "<font=2b>", "<font=2>", "<font=1b>", "<font=1>"]
 		else:
 			self.iResID = 0
-			self.aFontList = aFontList = [uFontEdge, "<font=2b>", "<font=2>", "<font=1b>", "<font=1>", "<font=0b>", "<font=0>"]
+			self.aFontList = [uFontEdge, "<font=2b>", "<font=2>", "<font=1b>", "<font=1>", "<font=0b>", "<font=0>"]
 
-		Y_BOT_TEXT = yRes - H_EDGE_PANEL + 8
 
 		self.xMid = xRes / 2
 		self.yMid = yRes / 2
@@ -410,9 +409,6 @@ class CvMilitaryAdvisor:
 		iData	= inputClass.iData
 		ID		= inputClass.iItemID
 		NAME	= inputClass.szFunctionName
-		iBtn	= inputClass.iButtonType
-		iData1	= inputClass.iData1
-		iData2	= inputClass.iData2
 		szFlag	= HandleInputUtil.MOUSE_FLAGS.get(inputClass.uiFlags, "UNKNOWN")
 
 		szSplit = NAME.split("|")
@@ -421,10 +417,6 @@ class CvMilitaryAdvisor:
 			TYPE = szSplit[1]
 		else:
 			TYPE = ""
-		if szSplit[2:]:
-			CASE = szSplit[2:]
-		else:
-			CASE = [0]
 
 		# Remove potential Help Text
 		self.tooltip.reset(screen)
