@@ -293,7 +293,7 @@ class BarbarianCiv:
 				iBaseOffensiveUnits *= 4
 			elif bMajorCivUnits:
 				iBaseOffensiveUnits *= 2
-			else: iBaseOffensiveUnits /= 3
+			else: iBaseOffensiveUnits = max(1, iBaseOffensiveUnits / 3)
 		else:
 			if iSettler > -1:
 				CyPlayer.initUnit(iSettler, iX, iY, UnitAITypes.UNITAI_SETTLE, DirectionTypes.DIRECTION_SOUTH)
