@@ -178,19 +178,20 @@ class CvCivicsScreen:
 			else:
 				self.drawCivics0(screen)
 		else:
-			self.iTab = 0
-			self.drawContents(screen)
+			screen.hide("Civic_Tab1")
+			screen.show("Civic_Tab|Col1")
+			if self.iType:
+				self.drawCivics1(screen)
+			else:
+				self.drawCivics0(screen)
 
 	def drawCivics0(self, screen):
 		xRes = self.xRes
-		yRes = self.yRes
 		xMid = self.xMid
 		H_EDGE = self.H_EDGE
-		iPlayer = self.iPlayer
 		CyPlayer = self.CyPlayer
 		bDebug = self.bDebug
 		CANCEL = self.CANCEL
-		HILITE = self.HILITE
 
 		uFontEdge, uFont4b, uFont4, uFont3b, uFont3, uFont2b, uFont2 = self.aFontList
 
@@ -252,10 +253,7 @@ class CvCivicsScreen:
 
 	def drawCivics1(self, screen):
 		xRes = self.xRes
-		yRes = self.yRes
-		xMid = self.xMid
 		H_EDGE = self.H_EDGE
-		iPlayer = self.iPlayer
 		CyPlayer = self.CyPlayer
 		bDebug = self.bDebug
 		CANCEL = self.CANCEL
@@ -269,7 +267,6 @@ class CvCivicsScreen:
 		eWidGen = WidgetTypes.WIDGET_GENERAL
 		eFontGame = FontTypes.GAME_FONT
 		ePnlMain = PanelStyles.PANEL_STYLE_MAIN
-		ePnlOut = PanelStyles.PANEL_STYLE_OUT
 		iPanelBlue50 = PanelStyles.PANEL_STYLE_BLUE50
 
 		# Background
@@ -304,7 +301,7 @@ class CvCivicsScreen:
 				if bDebug or CyPlayer.canDoCivics(iCivicX):
 					BTN = civicX.getButton()
 				else: BTN = CANCEL
-				screen.addDDSGFCAt("", ScPnl, BTN, 8, y, iSize, iSize, eWidGen, 1, 1, False)
+				screen.addDDSGFCAt(self.getNextWidget(), ScPnl, BTN, 8, y, iSize, iSize, eWidGen, 1, 1, False)
 
 				if iCivicX == currentCivics[iCivicOption]:
 					szTxt = "<color=255,255,0>" + uFont3b
@@ -337,6 +334,7 @@ class CvCivicsScreen:
 				break
 
 		x, y, w, h = self.aCoordList
+		screen.deleteWidget("CivicText")
 		screen.addMultilineText("CivicText", szTxt, x, y, w, h, WidgetTypes.WIDGET_GENERAL, 1, 1, 1<<0)
 
 	def selectCivic(self, screen, iCivic):
@@ -384,6 +382,7 @@ class CvCivicsScreen:
 				font = self.aFontList[0]
 				iTurns = CyPlayer.getCivicAnarchyLength(self.currentCivics)
 				szTxt = TRNSLTR.getText("TXT_KEY_CIVICHELP_SCREEN_UPKEEP", (CyPlayer.getCivicUpkeep(True), ))
+				screen.deleteWidget("CivicsUpkeepText")
 				screen.setLabel("CivicsUpkeepText", "", font + szTxt, 1<<2, self.xMid, self.Y_STAT_BAR + 8, 0, FontTypes.TITLE_FONT, WidgetTypes.WIDGET_GENERAL, 1, 1)
 				szTxt = TRNSLTR.getText("TXT_KEY_ANARCHY_TURNS", (iTurns, ))
 				y = self.yRes - self.H_EDGE - 16
@@ -391,7 +390,7 @@ class CvCivicsScreen:
 				szTxt = GTM.setRevolutionHelp(self.iPlayer)
 				y = self.Y_MID_STAT_BAR
 				font = self.aFontList[2]
-
+			screen.deleteWidget("CivicsRevText")
 			screen.setLabel("CivicsRevText", "", font + szTxt, 1<<2, self.xMid, y, 0, FontTypes.TITLE_FONT, WidgetTypes.WIDGET_GENERAL, 1, 1)
 
 
@@ -422,14 +421,9 @@ class CvCivicsScreen:
 		if not screen.isActive():
 			return
 		HandleInputUtil.debugInput(inputClass)
-		bAlt, bCtrl, bShift = self.InputData.getModifierKeys()
 		iCode	= inputClass.eNotifyCode
-		iData	= inputClass.iData
 		ID		= inputClass.iItemID
 		NAME	= inputClass.szFunctionName
-		iBtn	= inputClass.iButtonType
-		iData1	= inputClass.iData1
-		iData2	= inputClass.iData2
 		szFlag	= HandleInputUtil.MOUSE_FLAGS.get(inputClass.uiFlags, "UNKNOWN")
 
 		szSplit = NAME.split("|")
@@ -472,11 +466,11 @@ class CvCivicsScreen:
 
 		elif iCode == NotifyCode.NOTIFY_CLICKED:
 
-			if BASE == "Civic_Tab":
-				if CASE[0] != "Col":
+			if NAME.startswith("Civic_Tab"):
+				if "|" not in NAME:
 					screen.hide("Civic_Tab|Col" + str(self.iTab))
 					screen.show("Civic_Tab" + str(self.iTab))
-					self.iTab = ID
+					self.iTab = int(NAME[-1])
 					self.drawContents(screen)
 
 			elif NAME == "CivicCancel":

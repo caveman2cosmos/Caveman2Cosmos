@@ -126,7 +126,7 @@ def getNumDefendersNearPlot( iPlotX, iPlotY, iPlayer, iRange = 2, bIncludePlot =
 	# bIncludePlot takes precedence over bIncludeCities
 	iNumUnits = 0
 
-	for [radius,pPlot] in plotGenerator(GC.getMap().plot(iPlotX,iPlotY), iRange):
+	for [_, pPlot] in plotGenerator(GC.getMap().plot(iPlotX, iPlotY), iRange):
 
 		if pPlot.getX() == iPlotX and pPlot.getY() == iPlotY:
 			if not bIncludePlot:
@@ -231,7 +231,8 @@ def moveEnemyUnits( iPlotX, iPlotY, iEnemyOfPlayer, iMoveToX, iMoveToY, iInjureM
 		for pUnit in unitList :
 			if( pUnit.canFight() ) :
 				iPreDamage = pUnit.getDamage()
-				iInjure = iPreDamage/3 + iInjureMax/2 + GAME.getSorenRandNum(iInjureMax/2,'Rev: Wound retreating units')
+				iRandRange = iInjureMax / 2
+				iInjure = iPreDamage/3 + iRandRange + (GAME.getSorenRandNum(iRandRange, 'Rev: Wound retreating units') if iRandRange > 0 else 0)
 				iInjure = min([iInjure,90])
 				iInjure = max([iInjure,iPreDamage])
 				pUnit.setDamage( iInjure, iEnemyOfPlayer )
@@ -260,7 +261,8 @@ def moveEnemyUnits2( iPlotX, iPlotY, iEnemyOfPlayer, iMoveToX, iMoveToY, iInjure
 		for pUnit in unitList :
 			if( pUnit.canFight() ) :
 				iPreDamage = pUnit.getDamage()
-				iInjure = iPreDamage/3 + iInjureMax/2 + GAME.getSorenRandNum(iInjureMax/2,'Rev: Wound retreating units')
+				iRandRange = iInjureMax / 2
+				iInjure = iPreDamage/3 + iRandRange + (GAME.getSorenRandNum(iRandRange, 'Rev: Wound retreating units') if iRandRange > 0 else 0)
 				iInjure = min([iInjure,90])
 				iInjure = max([iInjure,iPreDamage])
 				pUnit.setDamage( iInjure, iEnemyOfPlayer )
@@ -500,14 +502,15 @@ def giveTechs(toPlayer, fromPlayer):
 			knownTechs += (iTech,)
 			iCost = GC.getTechInfo(iTech).getResearchCost()
 			if iCost > iMinCostly:
-				iMin = iCost
 				for i in xrange(iNumCostly):
 					iTechX, iCostX = costlyTechs[i]
 					if iCostX == iMinCostly:
 						costlyTechs[i] = (iTech, iCost)
-					elif iCostX < iMin:
-						iMin = iCostX
-				iMinCostly = iMin
+						break
+				iMinCostly = costlyTechs[0][1]
+				for i in xrange(1, iNumCostly):
+					if costlyTechs[i][1] < iMinCostly:
+						iMinCostly = costlyTechs[i][1]
 
 	# Simplify costly tech list
 	bestTechs = ()
