@@ -231,8 +231,7 @@ def moveEnemyUnits( iPlotX, iPlotY, iEnemyOfPlayer, iMoveToX, iMoveToY, iInjureM
 		for pUnit in unitList :
 			if( pUnit.canFight() ) :
 				iPreDamage = pUnit.getDamage()
-				iRandRange = iInjureMax / 2
-				iInjure = iPreDamage/3 + iRandRange + (GAME.getSorenRandNum(iRandRange, 'Rev: Wound retreating units') if iRandRange > 0 else 0)
+				iInjure = iPreDamage/3 + iInjureMax/2 + GAME.getSorenRandNum(iInjureMax/2,'Rev: Wound retreating units')
 				iInjure = min([iInjure,90])
 				iInjure = max([iInjure,iPreDamage])
 				pUnit.setDamage( iInjure, iEnemyOfPlayer )
@@ -261,8 +260,7 @@ def moveEnemyUnits2( iPlotX, iPlotY, iEnemyOfPlayer, iMoveToX, iMoveToY, iInjure
 		for pUnit in unitList :
 			if( pUnit.canFight() ) :
 				iPreDamage = pUnit.getDamage()
-				iRandRange = iInjureMax / 2
-				iInjure = iPreDamage/3 + iRandRange + (GAME.getSorenRandNum(iRandRange, 'Rev: Wound retreating units') if iRandRange > 0 else 0)
+				iInjure = iPreDamage/3 + iInjureMax/2 + GAME.getSorenRandNum(iInjureMax/2,'Rev: Wound retreating units')
 				iInjure = min([iInjure,90])
 				iInjure = max([iInjure,iPreDamage])
 				pUnit.setDamage( iInjure, iEnemyOfPlayer )
