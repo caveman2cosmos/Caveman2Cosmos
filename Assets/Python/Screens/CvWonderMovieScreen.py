@@ -43,7 +43,7 @@ class CvWonderMovieScreen:
 				if iPlaty >= 0:
 					szArtDef = CyArtFileMgr().getMovieArtInfo("ART_DEF_MOVIE_" + sType[iPlaty+7:])
 					if szArtDef:
-						szMovieFile = szArtDef
+						szMovieFile = szArtDef.getPath()
 
 		if not szMovieFile:
 			return

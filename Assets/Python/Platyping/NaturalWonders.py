@@ -85,12 +85,15 @@ class NaturalWonders:
 
 
     def checkReveal(self, pPlot, iTeam):
-        for iP, c in self.pendingCulture[:]:  # iterate a copy
+        remaining = []
+        for iP, c in self.pendingCulture:
             player = GC.getPlayer(iP)
-            city = player.getCapitalCity()
-            if city:
-                city.changeCulture(iP, c, True)
-                self.pendingCulture.remove((iP, c))
+            pCapital = player.getCapitalCity()
+            if pCapital and not pCapital.isNone():
+                pCapital.changeCulture(iP, c, True)
+            else:
+                remaining.append((iP, c))
+        self.pendingCulture = remaining
 
         iFeature = pPlot.getFeatureType()
         if iFeature == -1: return
@@ -101,34 +104,39 @@ class NaturalWonders:
         GAME = GC.getGame()
         if GAME.GetWorldBuilderMode(): return
 
-        if (iFeature, iTeam) in self.discoveredWonders:
-            return
-
         FeatureInfo = GC.getFeatureInfo(iFeature)
         sType = FeatureInfo.getType()
         if sType.find("FEATURE_PLATY_") == -1: return
 
+        pWonderPlot = None
         if sType in self.lBigWonder:
-            bFound = False
             for x in xrange(pPlot.getX() - 1, pPlot.getX() + 2):
                 for y in xrange(pPlot.getY() - 1, pPlot.getY() + 2):
-                    pAdjacentPlot = CyMap().plot(x, y)
                     if x == pPlot.getX() and y == pPlot.getY(): continue
+                    pAdjacentPlot = GC.getMap().plot(x, y)
                     if pAdjacentPlot.getFeatureType() == iFeature:
-                        bFound = True
+                        pWonderPlot = pAdjacentPlot
                         break
-                if bFound: break
-            if pAdjacentPlot.isRevealed(iTeam, False): return
+                if pWonderPlot: break
+            if pWonderPlot is None: return
+            if pWonderPlot.isRevealed(iTeam, False): return
 
+        if (iFeature, iTeam) in self.discoveredWonders:
+            return
+
+        bFirst = True
         for iTeamX in xrange(GC.getMAX_PC_TEAMS()):
-            if pPlot.isRevealed(iTeamX, False) and iTeamX != iTeam:
+            if iTeamX == iTeam: continue
+            if pPlot.isRevealed(iTeamX, False):
                 bFirst = False
                 break
-            if sType in self.lBigWonder:
-                if pAdjacentPlot.isRevealed(iTeamX, False) and iTeamX != iTeam:
-                    bFirst = False
-                    break
-        else: bFirst = True
+            if pWonderPlot and pWonderPlot.isRevealed(iTeamX, False):
+                bFirst = False
+                break
+
+        self.discoveredWonders[(iFeature, iTeam)] = True
+
+        iCulture = self.iFirstCulture * GC.getGameSpeedInfo(GAME.getGameSpeedType()).getSpeedPercent() / 100
 
         import CvUtil
         TRNSLTR = CyTranslator()
@@ -140,9 +148,9 @@ class NaturalWonders:
             if iTeamX != iTeam:
                 if bFirst and iPlayerX == iPlayerAct:
                     if CyTeam.isHasMet(iTeamX):
-                        CvUtil.sendMessage(TRNSLTR.getText("TXT_KEY_MET_FIRST_WONDER",(GC.getTeam(iTeam).getName(), GC.getFeatureInfo(iFeature).getDescription())), iPlayerX, 12, bForce=False)
+                        CvUtil.sendMessage(TRNSLTR.getText("TXT_KEY_MET_FIRST_WONDER",(GC.getTeam(iTeam).getName(), FeatureInfo.getDescription())), iPlayerX, 12, bForce=False)
                     else:
-                        CvUtil.sendMessage(TRNSLTR.getText("TXT_KEY_NOT_MET_FIRST_WONDER",(GC.getFeatureInfo(iFeature).getDescription(),)), iPlayerX, 12, bForce=False)
+                        CvUtil.sendMessage(TRNSLTR.getText("TXT_KEY_NOT_MET_FIRST_WONDER",(FeatureInfo.getDescription(),)), iPlayerX, 12, bForce=False)
                 continue
             if iPlayerX == iPlayerAct:
                 popupInfo = CyPopupInfo()
@@ -153,15 +161,12 @@ class NaturalWonders:
                 popupInfo.addPopup(iPlayerX)
                 CvUtil.sendMessage(TRNSLTR.getText("TXT_KEY_WONDERDISCOVERED_YOU",(FeatureInfo.getDescription(),)), iPlayerX, 12, FeatureInfo.getButton(), ColorTypes(44), pPlot.getX(), pPlot.getY(), True, True, bForce=False)
             if bFirst:
-                iCulture = self.iFirstCulture * GC.getGameSpeedInfo(GAME.getGameSpeedType()).getSpeedPercent() / 100
-                CyPlayer = GC.getPlayer(iPlayerX)
-                pCapital = CyPlayer.getCapitalCity()
-                if pCapital:
+                pCapital = CyPlayerX.getCapitalCity()
+                if pCapital and not pCapital.isNone():
                     pCapital.changeCulture(iPlayerX, iCulture, True)
                 else:
                     self.pendingCulture.append((iPlayerX, iCulture))
-                # Message about culture gain
                 if iPlayerX == iPlayerAct:
                     CvUtil.sendMessage(TRNSLTR.getText("TXT_KEY_FIRST_FOUND_WONDER",(iCulture,)), iPlayerX, 12, None, ColorTypes(44), bForce=False)
-                    self.discoveredWonders[(iFeature, iTeam)] = True
+        self.discoveredWonders[(iFeature, iTeam)] = True
 
