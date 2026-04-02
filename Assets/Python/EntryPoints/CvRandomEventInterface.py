@@ -35,7 +35,7 @@ def recalculateModifiers():
 ######## BLESSED SEA ###########
 
 def getHelpBlessedSea1(argsList):
-	iOurMinLandmass = (3 * GC.getWorldInfo(CyMap().getWorldSize()).getDefaultPlayers()) / 2
+	iOurMinLandmass = (3 * GC.getWorldInfo(GC.getMap().getWorldSize()).getDefaultPlayers()) / 2
 	return TRNSLTR.getText("TXT_KEY_EVENT_BLESSED_SEA_HELP", (iOurMinLandmass, ))
 
 def canTriggerBlessedSea(argsList):
@@ -948,7 +948,7 @@ def canTriggerWhaleOfAThing(argsList):
 	#iWhale = GC.getInfoTypeForString("BONUS_WHALE")
 
 	iNumCoastalCities = player.countNumCoastalCities()
-	if 0.65 > ( iNumCoastalCities / player.getNumCities()):
+	if 65 * player.getNumCities() > 100 * iNumCoastalCities:
 		return False
 	return True
 
@@ -959,7 +959,7 @@ def canTriggerFoundPearls(argsList):
 	player = GC.getPlayer(data.ePlayer)
 
 	iNumCoastalCities = player.countNumCoastalCities()
-	if 0.35 > ( iNumCoastalCities / player.getNumCities()):
+	if 35 * player.getNumCities() > 100 * iNumCoastalCities:
 		return False
 	return True
 
@@ -971,7 +971,7 @@ def canTriggerFoundLobster(argsList):
 	player = GC.getPlayer(data.ePlayer)
 
 	iNumCoastalCities = player.countNumCoastalCities()
-	if 0.35 > ( iNumCoastalCities / player.getNumCities()):
+	if 35 * player.getNumCities() > 100 * iNumCoastalCities:
 		return False
 	return True
 
@@ -2506,6 +2506,7 @@ def getHelpGreedDone1(argsList):
 
 	iNumUnits = GC.getWorldInfo(GC.getMap().getWorldSize()).getDefaultPlayers()
 	iUnitType = getGreedUnit(CyPlayer, CyPlot)
+	szHelp = ""
 
 	if iUnitType != -1:
 		szHelp = TRNSLTR.getText("TXT_KEY_EVENT_GREED_DONE_HELP_1", (iNumUnits, GC.getUnitInfo(iUnitType).getTextKey()))
@@ -2975,6 +2976,8 @@ def canTriggerImmigrantCity(argsList):
 
   if (city.getCommerceRateTimes100(CommerceTypes.COMMERCE_CULTURE) < 5500):
     return False
+
+  return True
 
 ####### Controversial Philosopher ######
 
@@ -3646,7 +3649,7 @@ def canTriggerTheBuccaneers(argsList):
 
 
 def getHelpTheBuccaneers1(argsList):
-	return ("TXT_KEY_EVENT_THE_BUCCANEERS_HELP_1", ())
+	return TRNSLTR.getText("TXT_KEY_EVENT_THE_BUCCANEERS_HELP_1", ())
 
 
 def applyTheBuccaneers1(argsList):
@@ -3959,12 +3962,12 @@ def applyMalaccanPirates1(argsList):
   iNav1 = GC.getInfoTypeForString("PROMOTION_NAVIGATION1")
   iCbt4 = GC.getInfoTypeForString("PROMOTION_COMBAT4")
   iCoAs1 = GC.getInfoTypeForString("PROMOTION_COASTAL_ASSAULT1")
-  unit = i in xrange(iNumUnit1)
-  for i in xrange(iNumUnit1):
-    barbPlayer.initUnit(iUnitType1, plot.getX(), plot.getY(), UnitAITypes.UNITAI_PIRATE_SEA, DirectionTypes.DIRECTION_SOUTH)
+  spawnedUnits = []
+  for _ in xrange(iNumUnit1):
+      newUnit = barbPlayer.initUnit(iUnitType1, plot.getX(), plot.getY(), UnitAITypes.UNITAI_PIRATE_SEA, DirectionTypes.DIRECTION_SOUTH)
+      spawnedUnits.append(newUnit)
 
-  for loopUnit in barbPlayer.units():
-    if loopUnit.getUnitType() == iUnitType1:
+  for loopUnit in spawnedUnits:
       loopUnit.setHasPromotion(iNav1, True)
       loopUnit.setHasPromotion(iCbt4, True)
       loopUnit.setHasPromotion(iCoAs1, True)
@@ -4102,15 +4105,12 @@ def applyHenryMorgan1(argsList):
   barbPlayer = GC.getPlayer(GC.getBARBARIAN_PLAYER())
   iCbt4 = GC.getInfoTypeForString("PROMOTION_COMBAT4")
   for i in xrange(iNumUnit1):
-    barbPlayer.initUnit(iUnitType1, plot.getX(), plot.getY(), UnitAITypes.UNITAI_PIRATE_SEA, DirectionTypes.DIRECTION_SOUTH)
+      CyUnit = barbPlayer.initUnit(iUnitType1, plot.getX(), plot.getY(), UnitAITypes.UNITAI_PIRATE_SEA, DirectionTypes.DIRECTION_SOUTH)
+      CyUnit.setHasPromotion(iCbt4, True)
   for i in xrange(iNumUnit2):
-    barbPlayer.initUnit(iUnitType2, plot.getX(), plot.getY(), UnitAITypes.UNITAI_PIRATE_SEA, DirectionTypes.DIRECTION_SOUTH)
+      barbPlayer.initUnit(iUnitType2, plot.getX(), plot.getY(), UnitAITypes.UNITAI_PIRATE_SEA, DirectionTypes.DIRECTION_SOUTH)
   for i in xrange(iNumUnit3):
-    barbPlayer.initUnit(iUnitType3, plot.getX(), plot.getY(), UnitAITypes.UNITAI_PIRATE_SEA, DirectionTypes.DIRECTION_SOUTH)
-
-  for loopUnit in barbPlayer.units():
-    if loopUnit.getUnitType() == iUnitType1:
-      loopUnit.setHasPromotion(iCbt4, True)
+      barbPlayer.initUnit(iUnitType3, plot.getX(), plot.getY(), UnitAITypes.UNITAI_PIRATE_SEA, DirectionTypes.DIRECTION_SOUTH)
 
 ######## STEDE_BONNET ###########
 
@@ -4254,16 +4254,12 @@ def applyStedeBonnet1(argsList):
 
   barbPlayer = GC.getPlayer(GC.getBARBARIAN_PLAYER())
   for i in xrange(iNumUnit1):
-    barbPlayer.initUnit(iUnitType1, plot.getX(), plot.getY(), UnitAITypes.UNITAI_ATTACK_SEA, DirectionTypes.DIRECTION_SOUTH)
+      CyUnit = barbPlayer.initUnit(iUnitType1, plot.getX(), plot.getY(), UnitAITypes.UNITAI_ATTACK_SEA, DirectionTypes.DIRECTION_SOUTH)
+      CyUnit.setName("Barque")
   for i in xrange(iNumUnit2):
-    barbPlayer.initUnit(iUnitType2, plot.getX(), plot.getY(), UnitAITypes.UNITAI_PIRATE_SEA, DirectionTypes.DIRECTION_SOUTH)
-
-  for loopUnit in barbPlayer.units():
-    if loopUnit.getUnitType() == iUnitType1:
-      loopUnit.setName("Barque")
-    if loopUnit.getUnitType() == iUnitType2:
-      loopUnit.setName("Fast Galleon")
-      loopUnit.setHasPromotion(iNav1, True)
+      CyUnit = barbPlayer.initUnit(iUnitType2, plot.getX(), plot.getY(), UnitAITypes.UNITAI_PIRATE_SEA, DirectionTypes.DIRECTION_SOUTH)
+      CyUnit.setName("Fast Galleon")
+      CyUnit.setHasPromotion(iNav1, True)
 
 ######## THE_CORSAIRS ###########
 
@@ -4386,13 +4382,10 @@ def applyTheCorsairs1(argsList):
 
 
   barbPlayer = GC.getPlayer(GC.getBARBARIAN_PLAYER())
+  sUnitName = TRNSLTR.getText("TXT_KEY_EVENT_THE_CORSAIRS_UNIT_NAME", ())
   for i in xrange(iNumUnit1):
-    barbPlayer.initUnit(iUnitType1, plot.getX(), plot.getY(), UnitAITypes.UNITAI_ATTACK_SEA, DirectionTypes.DIRECTION_SOUTH)
-
-  for loopUnit in barbPlayer.units():
-    if loopUnit.getUnitType() == iUnitType1:
-      sUnitName = TRNSLTR.getText("TXT_KEY_EVENT_THE_CORSAIRS_UNIT_NAME", ())
-      loopUnit.setName(sUnitName)
+      CyUnit = barbPlayer.initUnit(iUnitType1, plot.getX(), plot.getY(), UnitAITypes.UNITAI_ATTACK_SEA, DirectionTypes.DIRECTION_SOUTH)
+      CyUnit.setName(sUnitName)
 
 
 ######## ILLYRIAN_PIRATES ###########
@@ -4531,13 +4524,10 @@ def applyIllyrianPirates1(argsList):
 
   iUnitType1 = GC.getInfoTypeForString("UNIT_WARGALLEY")
   barbPlayer = GC.getPlayer(GC.getBARBARIAN_PLAYER())
+  sUnitName = TRNSLTR.getText("TXT_KEY_EVENT_ILLYRIAN_PIRATES_UNIT_NAME", ())
   for i in xrange(iNumUnit1):
-    barbPlayer.initUnit(iUnitType1, plot.getX(), plot.getY(), UnitAITypes.UNITAI_PIRATE_SEA, DirectionTypes.DIRECTION_SOUTH)
-
-  for loopUnit in barbPlayer.units():
-    if loopUnit.getUnitType() == iUnitType1:
-      sUnitName = TRNSLTR.getText("TXT_KEY_EVENT_ILLYRIAN_PIRATES_UNIT_NAME", ())
-      loopUnit.setName(sUnitName)
+      CyUnit = barbPlayer.initUnit(iUnitType1, plot.getX(), plot.getY(), UnitAITypes.UNITAI_PIRATE_SEA, DirectionTypes.DIRECTION_SOUTH)
+      CyUnit.setName(sUnitName)
 
 
 ######## MAHDI_ARMY ###########
@@ -5149,7 +5139,7 @@ def _doEarthquakeCore(argsList, minDestroy, maxDestroy, popLossPercent):
     destroyCount += popBonus
 
     candidates = []
-    for i in range(GC.getNumBuildingInfos()):
+    for i in xrange(GC.getNumBuildingInfos()):
         if isLimitedWonder(i) or not CyCity.hasBuilding(i) or CyCity.isFreeBuilding(i):
             continue
         info = GC.getBuildingInfo(i)
@@ -5439,6 +5429,7 @@ def getHelpSilverRain3(argsList):
 
 def applySilverRain3(argsList):
 	data = argsList[1]
+	player = GC.getPlayer(data.ePlayer)
 
 	listPlots = []
 	MAP = GC.getMap()
@@ -6782,13 +6773,13 @@ def doGlobalWarming(argsList):
 		elif iTerrain == GC.getInfoTypeForString("TERRAIN_COAST_TROPICAL") and not plot.isLake():
 			if iIce < 100:
 				bCoastShift = True
-				iDX = plot.getX()
-				iDY = plot.getY()
+				iPlotX = plot.getX()
+				iPlotY = plot.getY()
 				for iDX in xrange(-1, 2):
 					for iDY in xrange(-1, 2):
 						if iDX == 0 and iDY == 0:
 							continue
-						plotX = MAP.plot(iDX, iDY)
+						plotX = MAP.plot(iPlotX + iDX, iPlotY + iDY)
 						if plotX and plotX.getPlotType() == PLOT_LAND:
 							if plotX.isCity():
 								bCoastShift = False
@@ -7045,6 +7036,7 @@ def doEventLawyer(argsList):
 
 	#Gets a list of all corporations in the city
 	#CyInterface().playGeneralSound("AS2D_BUILD_BANK")
+	iHC = 0
 	lCityCorporations = [ ]
 	for iCorpLoop in xrange(GC.getNumCorporationInfos( )):
 		if pCity.isHasCorporation( iCorpLoop):

@@ -1,6 +1,6 @@
 import _core
 import _misc
-
+# potential mark for deletion TODO: MurderMesa/Scvijc
 class InputData:
 	def __init__(self):
 		self.App = App = _core.App()
