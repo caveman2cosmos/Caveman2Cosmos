@@ -234,15 +234,19 @@ class CityDemolish:
 					# Building Prereq
 					for i in xrange(CvUnitInfo.getNumPrereqAndBuildings()):
 						if not CyCity.isActiveBuilding(CvUnitInfo.getPrereqAndBuilding(i)):
-							continue
+							bContinue = True
+							break
+					if bContinue: continue
 					# Bonus Prereq
 					iBonus = CvUnitInfo.getPrereqAndBonus()
 					if iBonus > -1 and not CyCity.getNumBonuses(iBonus):
 						continue
-					for iBonus in CvUnitInfo.getPrereqOrBonuses():
-						if not CyCity.getNumBonuses(iBonus):
-							bContinue = True
-							break
+					if CvUnitInfo.getPrereqOrBonuses():
+						bContinue = True
+						for iBonus in CvUnitInfo.getPrereqOrBonuses():
+							if CyCity.getNumBonuses(iBonus):
+								bContinue = False
+								break
 					if bContinue: continue
 					# Found Valid Settler
 					CyMessageControl().sendModNetMessage(906, iPlayer, iCity, iExp, iUnit)
