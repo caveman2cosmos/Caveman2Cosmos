@@ -85,10 +85,10 @@ GC = CyGlobalContext()
 UnitNamingOpt = BugCore.game.UnitNaming
 
 phonetic_array = ['Alpha', 'Bravo', 'Charlie', 'Delta', 'Echo', 'Foxtrot', 'Golf', 'Hotel', 'India', 'Juliet', 'Kilo', 'Lima', 'Mike',
-                  'November', 'Oscar', 'Papa', 'Quebec', 'Romeo', 'Sierra', 'Tango', 'Uniform', 'Victor', 'Whiskey', 'Xray', 'Yankee', 'Zulu']
+				  'November', 'Oscar', 'Papa', 'Quebec', 'Romeo', 'Sierra', 'Tango', 'Uniform', 'Victor', 'Whiskey', 'Xray', 'Yankee', 'Zulu']
 
 greek_array = ['Alpha', 'Beta', 'Gamma', 'Delta', 'Epsilon', 'Zeta', 'Eta', 'Theta', 'Iota', 'Kappa', 'Lambda', 'Mu', 'Nu', 'Xi',
-               'Omicron', 'Pi', 'Rho', 'Sigma', 'Tau', 'Upsilon', 'Phi', 'Chi', 'Psi', 'Omega']
+			   'Omicron', 'Pi', 'Rho', 'Sigma', 'Tau', 'Upsilon', 'Phi', 'Chi', 'Psi', 'Omega']
 
 ordinal_array = 'th st nd rd th th th th th th'.split()
 
@@ -186,12 +186,15 @@ class UnitReName(object):
 				ziTT1 = self.getTotal1(zsName)
 				ziTT2 = self.getTotal2(zsName)
 				counter = counters.getTable(zsSDKey)
+				counter["cnt"] = ziCnt
+				counter["tt1"] = ziTT1
+				counter["tt2"] = ziTT2
 			else:
 #				get the count values
 				counter = counters.getTable(zsSDKey)
-				ziCnt = counter["cnt"]
-				ziTT1 = counter["tt1"]
-				ziTT2 = counter["tt2"]
+				ziCnt = counter.get("cnt", 0)
+				ziTT1 = counter.get("tt1", self.getTotal1(zsName))
+				ziTT2 = counter.get("tt2", self.getTotal2(zsName))
 
 #			increment count, adjust totals if required
 			if bIncrementCounter:
