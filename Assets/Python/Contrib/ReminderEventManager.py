@@ -99,10 +99,10 @@ class ReminderEventManager:
 			if reminderText:
 				global g_turnReminderTexts
 				if g_turnReminderTexts:
-					idx = g_turnReminderTexts.rfind("\n") + 1
+					idx = g_turnReminderTexts.rfind("\n")
 					if idx == -1:
-						idx += 1
-					else: idx += 2
+						idx = 0
+					else: idx += 1
 					if CyInterface().determineWidth(g_turnReminderTexts[idx:] + reminderText) > SR.x - SR.x/7:
 						g_turnReminderTexts += "\n"
 					else: g_turnReminderTexts += "; "
@@ -142,10 +142,10 @@ class ReminderEventManager:
 					g_autolog.writeLog("Reminder: %s" % reminder.message)
 
 				if g_turnReminderTexts:
-					idx = g_turnReminderTexts.rfind("\n") + 1
+					idx = g_turnReminderTexts.rfind("\n")
 					if idx == -1:
-						idx += 1
-					else: idx += 2
+						idx = 0
+					else: idx += 1
 					if CyInterface().determineWidth(g_turnReminderTexts[idx:] + reminder.message) > SR.x - SR.x/7:
 						g_turnReminderTexts += "\n"
 					else: g_turnReminderTexts += "; "
@@ -290,7 +290,7 @@ class Reminders(object):
 			return queue
 
 	def size(self, playerID=None):
-		if playerID:
+		if playerID is not None:
 			queue = self.get(playerID)
 			if queue:
 				return queue.size()
@@ -312,4 +312,4 @@ class Reminders(object):
 	def pop(self, playerID):
 		queue = self.get(playerID)
 		if queue:
-			queue.pop()
+			return queue.pop()
