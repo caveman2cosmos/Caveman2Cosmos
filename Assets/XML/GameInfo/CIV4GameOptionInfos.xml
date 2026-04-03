@@ -169,7 +169,7 @@
 			<Description>TXT_KEY_GAMEOPTION_NO_FUTURE</Description>
 			<Help>TXT_KEY_GAMEOPTION_NO_FUTURE_HELP</Help>
 			<bDefault>0</bDefault>
-			<bVisible>0</bVisible>
+			<bVisible>1</bVisible>
 		</GameOptionInfo>
 		<GameOptionInfo>
 			<Type>GAMEOPTION_NO_NUKES</Type>
@@ -412,7 +412,7 @@
 			<Description>TXT_KEY_GAMEOPTION_MAP_NO_GOODY_HUTS</Description>
 			<Help>TXT_KEY_GAMEOPTION_MAP_NO_GOODY_HUTS_HELP</Help>
 			<bDefault>0</bDefault>
-			<bVisible>0</bVisible>
+			<bVisible>1</bVisible>
 		</GameOptionInfo>
 		<GameOptionInfo>
 			<Type>GAMEOPTION_MAP_MORE_RIVERS</Type>
