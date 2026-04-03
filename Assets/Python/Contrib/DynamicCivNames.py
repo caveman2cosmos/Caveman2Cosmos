@@ -49,7 +49,7 @@ def init():
 	#bTeamNaming = REV_OPTIONS.isTeamNaming()
 	#bLeaveHumanName = REV_OPTIONS.isLeaveHumanPlayerName()
 
-	if not GAME.isFinalInitialized or GAME.getGameTurn() == GAME.getStartTurn():
+	if not GAME.isFinalInitialized() or GAME.getGameTurn() == GAME.getStartTurn():
 		for i in xrange(GC.getMAX_PC_PLAYERS()):
 			onSetPlayerAlive([i, GC.getPlayer(i).isAlive()])
 
