@@ -124,8 +124,9 @@ class ReminderEventManager:
 			bLogging = g_autolog.isLogging() and ReminderOpt.isAutolog()
 			bShowMsg = ReminderOpt.isShowMessage()
 			bShowPop = ReminderOpt.isShowPopup()
+			iCount = 0
+			prompt = ""
 			if bShowPop:
-				iCount = 0
 				prompt = TRNSLTR.getText("TXT_KEY_REMIND_NEXT_TURN_PROMPT", ())
 
 			while not queue.isEmpty():
