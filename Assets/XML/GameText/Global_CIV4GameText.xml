@@ -30968,10 +30968,5 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Polish>Naci&#156;nij SHIFT aby zobaczy&#230; Klasy Bojowe</Polish>
 		<Russian>Нажмите SHIFT для просмотра атрибутов</Russian>
 	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_MOD_KILL_ANIMALS_DESC</Tag>
-		<English>All Green man's animals will be regenerated in a few turns</English>
-		<French>Tous les animaux de Dame Nature vont être régénérés dans quelques tours.</French>
-	</TEXT>	
 </Civ4GameText>
 
