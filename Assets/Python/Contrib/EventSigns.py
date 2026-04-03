@@ -290,7 +290,7 @@ class MapSigns:
 			return False
 		if ePlayer == -1:
 			if pPlot.isInViewport():
-				print "MapSigns.displaySign() landmark (%s) shown on plot %s" %(szCaption, ePlayer, str(thisKey))
+				print "MapSigns.displaySign() landmark (%s) shown for player %d on plot %s" %(szCaption, ePlayer, str(thisKey))
 				engine.addLandmark(pPlot.cloneToViewport(), szCaption.encode('latin_1'))
 		else:
 			pPlayer = GC.getPlayer(ePlayer)
@@ -424,7 +424,7 @@ class PlotSigns:
 
 	def setSign(self, ePlayer, szCaption):
 		""" Sets Caption for a given player on this plot. """
-		if ePlayer in ([-1] + range(GC.getMAX_PLAYERS())):
+		if ePlayer == -1 or 0 <= ePlayer < GC.getMAX_PLAYERS():
 			self.signDict[ePlayer] = szCaption
 		else:
 			BugUtil.warn("EventSigns PlotSigns.setSign() was passed an invalid Player ID %s at Plot (%d,%d)" % (str(ePlayer), self.iX, self.iY))
@@ -536,7 +536,7 @@ def applySaltpeter(argsList):
 		if not iCount:
 			break
 		iCount -= 1
-		plot[1].setExtraYield(YieldTypes.YIELD_COMMERCE, 1)
+		plot[1].setExtraYield(YieldTypes.YIELD_COMMERCE, 2)
 		szTxt = TRNSLTR.getText("TXT_KEY_EVENT_SALTPETER_DISCOVERED",())
 		CvUtil.sendMessage(szTxt, iPlayer, GC.getEVENT_MESSAGE_TIME(), "", -1, plot[1].getX(), plot[1].getY(), True, True, 0, "", False)
 		# Add landmark for other plots too.
