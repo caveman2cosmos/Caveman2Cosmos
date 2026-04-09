@@ -40,7 +40,7 @@
 ##     Returns a list of CyPlayers that can capitulate to <player>.
 ##
 ##
-##   tradeParters(playerOrID)
+##   tradePartners(playerOrID)
 ##     Iterates over all of <player>'s possible trade partners, yielding each CyPlayer in turn.
 ##
 ##   getTradePartnersByPlayer(playerOrID, testFunction, args...)
@@ -263,7 +263,7 @@ def canAcceptVassal(masterTeam, vassalTeam, bAtWar):
 	return masterTeam.isVassalStateTrading()
 
 
-def tradeParters(player):
+def tradePartners(player):
 	"""
 	Iterates over all of <player>'s possible trade partners, yielding each CyPlayer in turn.
 	"""
@@ -279,7 +279,7 @@ def getTradePartnersByPlayer(player, testFunction, *args):
 	<testFunction> is passed two CyPlayers plus <args> for each viable pairing and should return a boolean value.
 	"""
 	partners = []
-	for partner in tradeParters(player):
+	for partner in tradePartners(player):
 		if testFunction(player, partner, *args):
 			partners.append(partner)
 	return partners
@@ -293,7 +293,7 @@ def getTradePartnersByTeam(playerOrID, testFunction, *args):
 	player = getPlayer(playerOrID)
 	team = GC.getTeam(player.getTeam())
 	partners = []
-	for partner in tradeParters(player):
+	for partner in tradePartners(player):
 		if testFunction(team, GC.getTeam(partner.getTeam()), *args):
 			partners.append(partner)
 	return partners
