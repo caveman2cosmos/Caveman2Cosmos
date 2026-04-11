@@ -9227,6 +9227,21 @@
 		<Russian>Докажите, что вы превыше любого бога!</Russian>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_HANDICAP_AI_BOOSTED</Tag>
+		<English>Monarch but AI on Nightmare</English>
+		<French>Monarch but AI on Nightmare</French>
+		<Italian>Monarch but AI on Nightmare</Italian>
+		<Russian>Monarch but AI on Nightmare</Russian>
+
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HANDICAP_AI_BOOSTED_PLUS</Tag>
+		<English>This difficulty has monarch lvl player upkeep but deeper nightmare AI boosts</English>
+		<French>This difficulty has monarch lvl player upkeep but deeper nightmare AI boosts</French>
+		<Italian>This difficulty has monarch lvl player upkeep but deeper nightmare AI boosts</Italian>
+		<Russian>This difficulty has monarch lvl player upkeep but deeper nightmare AI boosts</Russian>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_HANDICAP_NIGHTMARE_PLUS</Tag>
 		<English>Deeper Nightmare</English>
 		<French>Cauchemar extrême</French>
