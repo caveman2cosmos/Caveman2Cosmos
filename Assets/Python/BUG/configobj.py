@@ -1523,8 +1523,8 @@ class ConfigObj(Section):
         dquot = '"%s"'
         noquot = "%s"
         wspace_plus = ' \r\t\n\v\t\'"'
-        tsquot = '"""%s"""'
-        tdquot = "'''%s'''"
+        tdquot = '"""%s"""'
+        tsquot = "'''%s'''"
         if not value:
             return '""'
         if (not self.list_values and '\n' not in value) or not (multiline and
