@@ -8313,7 +8313,7 @@ int CvPlayer::calculateResearchModifier(TechTypes eTech) const
 					}
 				}
 				//If iOurScore > iBestScore we are the best team in the game
-				if (iOurScore < iBestScore)
+				if (iOurScore > 0 && iOurScore < iBestScore)
 				{
 					float fRatio = iBestScore / ((float)iOurScore);
 					logging::logMsg("C2C.log", "Tech Welfare amount: %d, iOurScore: %d, iBestScore: %d, fRatio: %f, modified welfare amt: %d for civ: %S\n", iWelfareTechDiffusion, iOurScore, iBestScore, fRatio, ((int)(fRatio * iWelfareTechDiffusion)), getCivilizationDescription());
@@ -8324,6 +8324,10 @@ int CvPlayer::calculateResearchModifier(TechTypes eTech) const
 			}
 		}
 	}
+	// Cap: diffusion bonus in absolute research points can never exceed your own research output.
+	// iModifier is a percentage applied to your base research, so capping at 100 means
+	// max diffusion boost = your own research (you can't absorb more help than you can process yourself).
+	iModifier = std::min(iModifier, 100);
 	return iModifier;
 }
 
