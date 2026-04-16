@@ -71,6 +71,8 @@ class NaturalWonders:
                             if x == pPlot.getX() and y == pPlot.getY():
                                 continue
                             pAdjacentPlot = MAP.plot(x, y)
+                            if not pAdjacentPlot:
+                                continue
                             if pAdjacentPlot.canHaveFeature(iFeature):
                                 if pAdjacentPlot.getBonusType(-1) > -1:
                                     continue
@@ -114,6 +116,8 @@ class NaturalWonders:
                 for y in xrange(pPlot.getY() - 1, pPlot.getY() + 2):
                     if x == pPlot.getX() and y == pPlot.getY(): continue
                     pAdjacentPlot = GC.getMap().plot(x, y)
+                    if not pAdjacentPlot:
+                        continue
                     if pAdjacentPlot.getFeatureType() == iFeature:
                         pWonderPlot = pAdjacentPlot
                         break
@@ -168,5 +172,4 @@ class NaturalWonders:
                     self.pendingCulture.append((iPlayerX, iCulture))
                 if iPlayerX == iPlayerAct:
                     CvUtil.sendMessage(TRNSLTR.getText("TXT_KEY_FIRST_FOUND_WONDER",(iCulture,)), iPlayerX, 12, None, ColorTypes(44), bForce=False)
-        self.discoveredWonders[(iFeature, iTeam)] = True
 

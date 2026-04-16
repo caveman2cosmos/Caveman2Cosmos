@@ -135,7 +135,7 @@ class Mod(object):
 				if id.startswith("get") or id.startswith("is"):
 					return lambda *ignored: False
 				if id.startswith("set"):
-					return lambda *ignored: False
+					return lambda *ignored: None
 		raise AttributeError(id)
 
 
@@ -144,20 +144,20 @@ class Mod(object):
 		if getter:
 			if values is None:
 				def get(*args):
-					option = self._getOption(id % args)
+					option = self._options[id % args]
 					if option.isColor():
 						return option.getColor()
 					else:
 						return option.getValue()
 			else:
 				def get(*args):
-					option = self._getOption(id % args)
+					option = self._options[id % args]
 					return option.getValue() in values
 			setattr(self, getter, get)
 
 		if setter:
 			def set(value, *args):
-				option = self._getOption(id % args)
+				option = self._options[id % args]
 				option.setValue(value)
 			setattr(self, setter, set)
 

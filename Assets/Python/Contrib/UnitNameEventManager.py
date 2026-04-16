@@ -186,15 +186,12 @@ class UnitReName(object):
 				ziTT1 = self.getTotal1(zsName)
 				ziTT2 = self.getTotal2(zsName)
 				counter = counters.getTable(zsSDKey)
-				counter["cnt"] = ziCnt
-				counter["tt1"] = ziTT1
-				counter["tt2"] = ziTT2
 			else:
 #				get the count values
 				counter = counters.getTable(zsSDKey)
-				ziCnt = counter.get("cnt", 0)
-				ziTT1 = counter.get("tt1", self.getTotal1(zsName))
-				ziTT2 = counter.get("tt2", self.getTotal2(zsName))
+				ziCnt = counter["cnt"]
+				ziTT1 = counter["tt1"]
+				ziTT2 = counter["tt2"]
 
 #			increment count, adjust totals if required
 			if bIncrementCounter:
