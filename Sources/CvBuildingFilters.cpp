@@ -91,6 +91,69 @@ bool BuildingFilterIsCommerce::isFilteredBuilding(const CvPlayer *pPlayer, CvCit
 		|| buildingInfo.getGlobalCommerceModifier(m_eCommerce) > 0;
 }
 
+BuildingFilterIsYieldAndCommerce::BuildingFilterIsYieldAndCommerce(YieldTypes eYield, CommerceTypes eCommerce, bool bInvert)
+	: BuildingFilterBase(bInvert), m_eYield(eYield), m_eCommerce(eCommerce) {}
+
+bool BuildingFilterIsYieldAndCommerce::isFilteredBuilding(const CvPlayer *pPlayer, CvCity *pCity, BuildingTypes eBuilding) const
+{
+	// Check for yield (e.g., YIELD_COMMERCE)
+	bool bHasYield = false;
+	if (pCity)
+	{
+		bHasYield = pCity->getAdditionalYieldByBuilding(m_eYield, eBuilding, true) > 0;
+	}
+	else
+	{
+		const CvBuildingInfo& info = GC.getBuildingInfo(eBuilding);
+		foreach_(const PlotArray& pair, info.getPlotYieldChanges())
+		{
+			if (pair.second[m_eYield] > 0)
+			{
+				bHasYield = true;
+				break;
+			}
+		}
+		if (!bHasYield)
+		{
+			foreach_(const TerrainArray& pair, info.getTerrainYieldChanges())
+			{
+				if (pair.second[m_eYield] > 0)
+				{
+					bHasYield = true;
+					break;
+				}
+			}
+		}
+		if (!bHasYield)
+		{
+			bHasYield = info.getYieldChange(m_eYield) > 0
+				|| info.getYieldPerPopChange(m_eYield) > 0
+				|| info.getYieldModifier(m_eYield) > 0
+				|| info.getAreaYieldModifier(m_eYield) > 0
+				|| info.getGlobalYieldModifier(m_eYield) > 0
+				|| info.getGlobalSeaPlotYieldChange(m_eYield) > 0;
+		}
+	}
+
+	// Check for commerce type (e.g., COMMERCE_GOLD)
+	bool bHasCommerce = false;
+	if (pCity)
+	{
+		bHasCommerce = pCity->getAdditionalCommerceTimes100ByBuilding(m_eCommerce, eBuilding) > 0;
+	}
+	else
+	{
+		const CvBuildingInfo& buildingInfo = GC.getBuildingInfo(eBuilding);
+		bHasCommerce = buildingInfo.getCommerceChange(m_eCommerce) > 0
+			|| buildingInfo.getCommercePerPopChange(m_eCommerce) > 0
+			|| buildingInfo.getCommerceModifier(m_eCommerce) > 0
+			|| buildingInfo.getSpecialistExtraCommerce(m_eCommerce) > 0
+			|| buildingInfo.getGlobalCommerceModifier(m_eCommerce) > 0;
+	}
+
+	return bHasYield || bHasCommerce;
+}
+
 BuildingFilterIsYield::BuildingFilterIsYield(YieldTypes eYield, bool bInvert) : BuildingFilterBase(bInvert), m_eYield(eYield) {}
 
 bool BuildingFilterIsYield::isFilteredBuilding(const CvPlayer *pPlayer, CvCity *pCity, BuildingTypes eBuilding) const
@@ -309,7 +372,7 @@ void BuildingFilterList::init()
 	m_apBuildingFilters[BUILDING_FILTER_SHOW_FOOD] = new BuildingFilterIsYield(YIELD_FOOD);
 	m_apBuildingFilters[BUILDING_FILTER_SHOW_CULTURE] = new BuildingFilterIsCommerce(COMMERCE_CULTURE);
 	m_apBuildingFilters[BUILDING_FILTER_SHOW_ESPIONAGE] = new BuildingFilterIsCommerce(COMMERCE_ESPIONAGE);
-	m_apBuildingFilters[BUILDING_FILTER_SHOW_GOLD] = new BuildingFilterIsCommerce(COMMERCE_GOLD);
+	m_apBuildingFilters[BUILDING_FILTER_SHOW_GOLD] = new BuildingFilterIsYieldAndCommerce(YIELD_COMMERCE, COMMERCE_GOLD);
 	m_apBuildingFilters[BUILDING_FILTER_SHOW_PRODUCTION] = new BuildingFilterIsYield(YIELD_PRODUCTION);
 	m_apBuildingFilters[BUILDING_FILTER_SHOW_HAPPINESS] = new BuildingFilterIsHappiness();
 	m_apBuildingFilters[BUILDING_FILTER_SHOW_HEALTH] = new BuildingFilterIsHealth();

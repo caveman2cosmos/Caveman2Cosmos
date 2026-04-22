@@ -117,6 +117,17 @@ protected:
 	const YieldTypes m_eYield;
 };
 
+class BuildingFilterIsYieldAndCommerce : public BuildingFilterBase
+{
+public:
+	BuildingFilterIsYieldAndCommerce(YieldTypes eYield, CommerceTypes eCommerce, bool bInvert = false);
+	bool isFilteredBuilding(const CvPlayer *pPlayer, CvCity *pCity, BuildingTypes eBuilding) const;
+
+protected:
+	const YieldTypes m_eYield;
+	const CommerceTypes m_eCommerce;
+};
+
 class BuildingFilterIsHappiness : public BuildingFilterBase
 {
 public:
