@@ -555,8 +555,29 @@ class BarbarianCiv:
 					CyPlayer.initUnit(iUnit, CyPlotX.getX(), CyPlotX.getY(), UnitAITypes.NO_UNITAI, DirectionTypes.NO_DIRECTION)
 
 		# City Culture
+		# Transfer barbarian culture to the new player (becomes "accepted" culture)
 		CyCity.setCultureTimes100(iPlayer, CyCity.getCultureTimes100(iPlayerBarb), True)
 		CyCity.setCultureTimes100(iPlayerBarb, 0, False)
+
+		# Ensure the emergent civ gets its matching local culture building (C.L).
+		# onCityBuilt() normally handles this via settler promotions, but this code path
+		# converts an existing barbarian city and bypasses that event.
+		aCulturePairs = [
+			("BUILDING_C_N_AFRICAN", "BUILDING_C_L_AFRICAN"),
+			("BUILDING_C_N_ASIAN", "BUILDING_C_L_ASIAN"),
+			("BUILDING_C_N_EUROPEAN", "BUILDING_C_L_EUROPEAN"),
+			("BUILDING_C_N_MIDDLE_EASTERN", "BUILDING_C_L_MIDDLE_EASTERN"),
+			("BUILDING_C_N_NEANDERTHAL", "BUILDING_C_L_NEANDERTHAL"),
+			("BUILDING_C_N_NORTH_AMERICAN", "BUILDING_C_L_NORTH_AMERICAN"),
+			("BUILDING_C_N_OCEANIAN", "BUILDING_C_L_OCEANIAN"),
+			("BUILDING_C_N_SOUTH_AMERICAN", "BUILDING_C_L_SOUTH_AMERICAN")
+		]
+		for szNational, szLocal in aCulturePairs:
+			iNational = GC.getInfoTypeForString(szNational)
+			iLocal = GC.getInfoTypeForString(szLocal)
+			if iNational > -1 and iLocal > -1 and CyCity.hasBuilding(iNational) and not CyCity.hasBuilding(iLocal):
+				CyCity.changeHasBuilding(iLocal, True)
+				break
 
 		# Free city defenders
 		if iDefender > -1:
