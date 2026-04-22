@@ -35442,7 +35442,7 @@ void CvUnit::doMerge()
 		pkMergedUnit->setAutoPromoting(pUnit1->isAutoPromoting());
 		pkMergedUnit->testPromotionReady();
 		pkMergedUnit->setName(pUnit1->getNameNoDesc());
-		
+
 		pkMergedUnit->AI_setUnitAIType(pUnit1->AI_getUnitAIType());
 		if (pUnit2->AI_getUnitAIType() == pUnit3->AI_getUnitAIType() && pkMergedUnit->AI_getUnitAIType() != pUnit2->AI_getUnitAIType())
 		{
@@ -36841,7 +36841,7 @@ void CvUnit::setBuildUpType(PromotionLineTypes ePromotionLine, MissionTypes eSle
 						{
 								const CvWString strUnitAIType = GC.getUnitAIInfo(AI_getUnitAIType()).getType();
 								CvWString szDesc = GC.getPromotionInfo(ePromotion).getDescription();
-								//const CvWString strCriteria = criteria.GetDescription();								
+								//const CvWString strCriteria = criteria.GetDescription();
 								logAiEvaluations(4,"    %S find better Eval (%d > %d) to buildup %S with %S, unit AI %S", GET_PLAYER(getOwner()).getCivilizationDescription(0), iValue, iBestValue, getName(0).GetCString(), szDesc.GetCString(), strUnitAIType.GetCString());
 						}
 						iBestValue = iValue;
@@ -38277,6 +38277,36 @@ bool CvUnit::canAmbush(const CvPlot* pPlot, bool bAssassinate) const
 		return false;
 	}
 
+	// Inside a proper city, assassins cannot engage criminals — wanted or not.
+    // Non-wanted criminals are civilians and are protected.
+    // Wanted criminals must be handled by law enforcement (arrest), not assassination.
+    // Forts are excluded so assassins can still hunt criminals hiding in the wilderness.
+    if (bAssassinate && pPlot->isCity(true))
+    {
+    	bool bHasNonCriminalTarget = false;
+    	foreach_(const CvUnit* pLoopUnit, pPlot->units())
+    	{
+    		if (pLoopUnit->getTeam() == getTeam()) continue;
+    		if (pLoopUnit->isDead() || pLoopUnit->isInBattle()) continue;
+    		if (pLoopUnit->isInvisible(getTeam(), false)) continue;
+    		if (!pLoopUnit->isTargetOf(*this)) continue;
+    		if (!canAttack(*pLoopUnit)) continue;
+
+    		// Criminals in cities are off-limits to assassins regardless of wanted status
+    		if (pLoopUnit->isCriminal())
+    		{
+    			continue;
+    		}
+
+    		bHasNonCriminalTarget = true;
+    		break;
+    	}
+    	if (!bHasNonCriminalTarget)
+    	{
+    		return false;
+    	}
+    }
+
 	if (isBlitz() || !isMadeAttack())
 	{
 		const CvUnit* pDefender = pPlot->getBestDefender(NO_PLAYER, getOwner(), this, true, true, false, bAssassinate);
@@ -38350,7 +38380,19 @@ bool CvUnit::doAmbush(bool bAssassinate)
 				{
 					pDefender = pPlot->getBestDefender(NO_PLAYER, getOwner(), this, true, true, false, bAssassinate);
 				}
-				
+
+				// Safety net: if the picked defender is a criminal in a city, refuse the ambush.
+                // The canAmbush check above should already block this case, but guard here
+                // in case getBestDefender picks a criminal when mixed with other valid targets.
+                if (pDefender != NULL
+                &&  bAssassinate
+                &&  pPlot->isCity(true)
+                &&  pDefender->isCriminal())
+                {
+                	GET_PLAYER(getOwner()).setAmbushingUnit(FFreeList::INVALID_INDEX);
+                	return false;
+                }
+
 				if (pDefender != NULL)
 				{
 					attackSamePlotSpecifiedUnit(pDefender);
@@ -38376,6 +38418,15 @@ void CvUnit::enactAmbush(bool bAssassinate, CvUnit * pSelectedDefender)
 	{
 		pDefender = pSelectedDefender;
 	}
+
+	if (pDefender != NULL
+    &&  bAssassinate
+    &&  pPlot->isCity(true)
+    &&  pDefender->isCriminal())
+    {
+    	return;
+    }
+
 	if (pDefender != NULL)
 	{
 		attackSamePlotSpecifiedUnit(pDefender);
@@ -39356,6 +39407,7 @@ void CvUnit::doStarsign()
 		);
 	}
 }
+
 
 
 
