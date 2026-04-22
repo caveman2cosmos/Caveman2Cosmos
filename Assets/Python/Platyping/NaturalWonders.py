@@ -44,9 +44,9 @@ class NaturalWonders:
                             break
                         ## Big Wonders ##
                         if (not bAdjacentPlot and pAdjacentPlot.canHaveFeature(iFeature)
-                        and abs(pAdjacentPlot.getX() - pPlot.getX()) < 2
-                        and abs(pAdjacentPlot.getY() - pPlot.getY()) < 2
-                        and pAdjacentPlot.getBonusType(-1) == -1
+                                and abs(pAdjacentPlot.getX() - pPlot.getX()) < 2
+                                and abs(pAdjacentPlot.getY() - pPlot.getY()) < 2
+                                and pAdjacentPlot.getBonusType(-1) == -1
                         ): bAdjacentPlot = True
 
                     if bUnsuitable: break
@@ -87,9 +87,45 @@ class NaturalWonders:
 
 
     def checkReveal(self, pPlot, iTeam):
+        ## Defensive guards up front — any of these failing silently in the
+        ## old code caused "Error in plotRevealed event handler" spam. Better
+        ## to return early on bad input than explode inside the handler.
+        if pPlot is None:
+            return
+        try:
+            if pPlot.isNone():
+                return
+        except:
+            return
+
+        iFeature = pPlot.getFeatureType()
+        if iFeature == -1:
+            return
+
+        FeatureInfo = GC.getFeatureInfo(iFeature)
+        if FeatureInfo is None:
+            return
+        sType = FeatureInfo.getType()
+        if sType.find("FEATURE_PLATY_") == -1:
+            return
+
+        if iTeam < 0 or iTeam >= GC.getMAX_TEAMS():
+            return
+        CyTeam = GC.getTeam(iTeam)
+        if CyTeam is None or CyTeam.isNPC():
+            return
+
+        GAME = GC.getGame()
+        if GAME.GetWorldBuilderMode():
+            return
+
+        ## Flush any pending culture grants from wonders discovered before the
+        ## first city was founded. Only runs once capital exists.
         remaining = []
         for iP, c in self.pendingCulture:
             player = GC.getPlayer(iP)
+            if player is None:
+                continue
             pCapital = player.getCapitalCity()
             if pCapital and not pCapital.isNone():
                 pCapital.changeCulture(iP, c, True)
@@ -97,40 +133,32 @@ class NaturalWonders:
                 remaining.append((iP, c))
         self.pendingCulture = remaining
 
-        iFeature = pPlot.getFeatureType()
-        if iFeature == -1: return
-
-        CyTeam = GC.getTeam(iTeam)
-        if CyTeam.isNPC(): return
-
-        GAME = GC.getGame()
-        if GAME.GetWorldBuilderMode(): return
-
-        FeatureInfo = GC.getFeatureInfo(iFeature)
-        sType = FeatureInfo.getType()
-        if sType.find("FEATURE_PLATY_") == -1: return
-
         pWonderPlot = None
         if sType in self.lBigWonder:
             for x in xrange(pPlot.getX() - 1, pPlot.getX() + 2):
                 for y in xrange(pPlot.getY() - 1, pPlot.getY() + 2):
-                    if x == pPlot.getX() and y == pPlot.getY(): continue
+                    if x == pPlot.getX() and y == pPlot.getY():
+                        continue
                     pAdjacentPlot = GC.getMap().plot(x, y)
                     if not pAdjacentPlot:
                         continue
                     if pAdjacentPlot.getFeatureType() == iFeature:
                         pWonderPlot = pAdjacentPlot
                         break
-                if pWonderPlot: break
-            if pWonderPlot is None: return
-            if pWonderPlot.isRevealed(iTeam, False): return
+                if pWonderPlot:
+                    break
+            if pWonderPlot is None:
+                return
+            if pWonderPlot.isRevealed(iTeam, False):
+                return
 
         if (iFeature, iTeam) in self.discoveredWonders:
             return
 
         bFirst = True
         for iTeamX in xrange(GC.getMAX_PC_TEAMS()):
-            if iTeamX == iTeam: continue
+            if iTeamX == iTeam:
+                continue
             if pPlot.isRevealed(iTeamX, False):
                 bFirst = False
                 break
@@ -148,6 +176,8 @@ class NaturalWonders:
 
         for iPlayerX in xrange(GC.getMAX_PC_PLAYERS()):
             CyPlayerX = GC.getPlayer(iPlayerX)
+            if CyPlayerX is None:
+                continue
             iTeamX = CyPlayerX.getTeam()
             if iTeamX != iTeam:
                 if bFirst and iPlayerX == iPlayerAct:
@@ -172,4 +202,3 @@ class NaturalWonders:
                     self.pendingCulture.append((iPlayerX, iCulture))
                 if iPlayerX == iPlayerAct:
                     CvUtil.sendMessage(TRNSLTR.getText("TXT_KEY_FIRST_FOUND_WONDER",(iCulture,)), iPlayerX, 12, None, ColorTypes(44), bForce=False)
-

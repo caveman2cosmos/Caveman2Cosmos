@@ -14,17 +14,25 @@ g_NaturalWonders = NaturalWonders.NaturalWonders()
 def onPlotRevealed(argsList):
     pPlot = argsList[0]
     iTeam = argsList[1]
-    g_NaturalWonders.checkReveal(pPlot, iTeam)
+    ## Wrap in try/except so any bug inside checkReveal ends up in PythonErr.log
+    ## with a real traceback instead of the generic "Error in plotRevealed event
+    ## handler" message that tells us nothing. Also prevents error spam on-screen.
+    try:
+        g_NaturalWonders.checkReveal(pPlot, iTeam)
+    except Exception, e:
+        import traceback
+        print "NaturalWonders.checkReveal failed:", str(e)
+        traceback.print_exc()
 
 '''
 def onCityBuilt(argsList):
-	city = argsList[0]
+    city = argsList[0]
 
-	NaturalWonders.NaturalWonders().placeWonderBuilding(city)
+    NaturalWonders.NaturalWonders().placeWonderBuilding(city)
 
 def onCityRazed(argsList):
-	city, iPlayer = argsList
-	iOwner = city.findHighestCulture()
+    city, iPlayer = argsList
+    iOwner = city.findHighestCulture()
 
-	NaturalWonders.NaturalWonders().findNewCity(city)
+    NaturalWonders.NaturalWonders().findNewCity(city)
 '''
