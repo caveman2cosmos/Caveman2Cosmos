@@ -567,13 +567,13 @@ int CvCityAI::AI_specialistValue(SpecialistTypes eSpecialist, bool bAvoidGrowth,
 	short aiYields[NUM_YIELD_TYPES];
 	for (int iI = 0; iI < NUM_YIELD_TYPES; iI++)
 	{
-		aiYields[iI] = GET_PLAYER(getOwner()).specialistYield(eSpecialist, ((YieldTypes)iI));
+		aiYields[iI] = specialistYield(eSpecialist, ((YieldTypes)iI));
 	}
 
 	short int aiCommerceYields[NUM_COMMERCE_TYPES];
 	for (int iI = 0; iI < NUM_COMMERCE_TYPES; iI++)
 	{
-		aiCommerceYields[iI] = GET_PLAYER(getOwner()).specialistCommerce(eSpecialist, ((CommerceTypes)iI));
+		aiCommerceYields[iI] = specialistCommerce(eSpecialist, ((CommerceTypes)iI));
 	}
 
 	int iValue = AI_yieldValue(aiYields, aiCommerceYields, bAvoidGrowth, bRemove);
@@ -769,9 +769,6 @@ int CvCityAI::AI_specialistValue(SpecialistTypes eSpecialist, bool bAvoidGrowth,
 	int iInsidious = GC.getSpecialistInfo(eSpecialist).getInsidiousness();
 	iValue += iInvestigate + (iMultiplier * iInvestigate);
 	iValue -= (iInsidious + (iMultiplier * iInsidious));
-	//TB DEBUG test
-	//Lets see how city assignments go if we half this value - thinking that it may be comparing to the workable plots
-	iValue /= 2;
 
 	return AI_isEmphasizeSpecialist(eSpecialist) ? (iValue * 175) : (iValue * 100);
 }
