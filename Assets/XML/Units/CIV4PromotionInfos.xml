@@ -24059,7 +24059,6 @@
 			<iMovesChange>1</iMovesChange>
 			<iMoveDiscountChange>2</iMoveDiscountChange>
 			<iCombatPercent>-50</iCombatPercent>
-			<iSelfHealModifier>-20</iSelfHealModifier>
 			<NotOnGameOptions>
 				<GameOptionType>GAMEOPTION_COMBAT_HIDE_SEEK</GameOptionType>
 			</NotOnGameOptions>
@@ -24079,7 +24078,6 @@
 			<iMovesChange>1</iMovesChange>
 			<iMoveDiscountChange>2</iMoveDiscountChange>
 			<iCombatPercent>-50</iCombatPercent>
-			<iSelfHealModifier>-20</iSelfHealModifier>
 			<OnGameOptions>
 				<GameOptionType>GAMEOPTION_COMBAT_HIDE_SEEK</GameOptionType>
 			</OnGameOptions>
@@ -24102,7 +24100,6 @@
 			<iMovesChange>1</iMovesChange>
 			<iMoveDiscountChange>2</iMoveDiscountChange>
 			<iCombatPercent>-50</iCombatPercent>
-			<iSelfHealModifier>-20</iSelfHealModifier>
 			<PromotionLine>PROMOTIONLINE_ENHANCED_MARCH</PromotionLine>
 			<iLinePriority>3</iLinePriority>
 			<OnGameOptions>

@@ -1849,6 +1849,15 @@ void CvUnit::doTurn()
 		}
 	}
 
+
+	// Apply 10% damage per turn for forced march or quick march status
+    if (isHasPromotion((PromotionTypes)GC.getInfoTypeForString("PROMOTION_QUICK_MARCH_STATUS_HS_SM"))
+    	|| isHasPromotion((PromotionTypes)GC.getInfoTypeForString("PROMOTION_QUICK_MARCH_STATUS"))
+    	|| isHasPromotion((PromotionTypes)GC.getInfoTypeForString("PROMOTION_QUICK_MARCH_STATUS_HS")))
+    {
+    	changeDamagePercent(10, NO_PLAYER);
+    }
+
 	testPromotionReady();
 	if (isBlockading())
 	{
@@ -39347,5 +39356,6 @@ void CvUnit::doStarsign()
 		);
 	}
 }
+
 
 

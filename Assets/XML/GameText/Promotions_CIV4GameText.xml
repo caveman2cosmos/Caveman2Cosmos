@@ -12612,7 +12612,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_QUICK_MARCH_STATUS</Tag>
-		<English>Status (Quick March)</English>
+		<English>Status (Quick March) (Units take 10% damage per turn)</English>
 		<French>Statut (Marche éclair)</French>
 		<German>Eilmarsch</German>
 		<Russian>Ускоренный марш</Russian>
