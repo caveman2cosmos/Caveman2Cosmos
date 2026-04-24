@@ -378,6 +378,21 @@ def canTriggerBabyBoom(argsList):
 
   return False
 
+def doBabyBoom(argList):
+	iEvent = argList[0]
+	data = argList[1]
+	CyPlayer = GC.getPlayer(data.ePlayer)
+	iFood = GC.getEventInfo(iEvent).getFood()
+
+	if iFood <= 0:
+		return 1
+
+	for CyCity in CyPlayer.cities():
+		CyCity.changeFood(iFood)
+
+	return 1
+
+
 ######## BARD TALE ###########
 
 def applyBardTale3(argsList):
