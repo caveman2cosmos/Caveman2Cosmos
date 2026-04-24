@@ -88,6 +88,8 @@ private:
 		PROFILE_FUNC();
 
 		std::vector<UpgradePair> directUpgrades;
+		const UnitTypes eGreatGeneral = static_cast<UnitTypes>(GC.getInfoTypeForString("UNIT_GREAT_GENERAL"));
+		const UnitTypes eGreatAdmiral = static_cast<UnitTypes>(GC.getInfoTypeForString("UNIT_GREAT_ADMIRAL"));
 
 		// First populate the direct upgrades
 		for(int iUnit = 0; iUnit < GC.getNumUnitInfos(); iUnit++)
@@ -96,7 +98,15 @@ private:
 			const CvUnitInfo& unitInfo = GC.getUnitInfo(unitType);
 			for(int i = 0; i < unitInfo.getNumUnitUpgrades(); i++)
 			{
-				directUpgrades.push_back(UpgradePair(unitType, static_cast<UnitTypes>(unitInfo.getUnitUpgrade(i))));
+				const UnitTypes eUpgradeType = static_cast<UnitTypes>(unitInfo.getUnitUpgrade(i));
+				const bool bBlockedGeneralAdmiralSwap =
+					(unitType == eGreatGeneral && eUpgradeType == eGreatAdmiral)
+					|| (unitType == eGreatAdmiral && eUpgradeType == eGreatGeneral);
+
+				if (!bBlockedGeneralAdmiralSwap)
+				{
+					directUpgrades.push_back(UpgradePair(unitType, eUpgradeType));
+				}
 			}
 		}
 

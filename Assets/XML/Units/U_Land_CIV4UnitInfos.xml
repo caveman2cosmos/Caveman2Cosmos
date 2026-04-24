@@ -38489,10 +38489,6 @@
 					<UnitAIType>UNITAI_GREAT_ADMIRAL</UnitAIType>
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
-				<UnitAI>
-					<UnitAIType>UNITAI_GENERAL</UnitAIType>
-					<bUnitAI>1</bUnitAI>
-				</UnitAI>
 			</UnitAIs>
 			<GreatPeoples>
 				<GreatPeople>

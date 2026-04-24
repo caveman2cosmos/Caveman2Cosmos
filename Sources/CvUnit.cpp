@@ -12202,7 +12202,11 @@ UnitCombatTypes CvUnit::getUnitCombatType() const
 
 DomainTypes CvUnit::getDomainType() const
 {
-	return m_pUnitInfo->getDomainType();
+        if (isCommodore())
+        {
+                return DOMAIN_SEA;
+        }
+        return m_pUnitInfo->getDomainType();
 }
 
 
