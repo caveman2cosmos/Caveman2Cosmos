@@ -926,11 +926,11 @@
 				<Category>CATEGORY_SPECIALIST_GROUP_MEDICAL</Category>
 			</Categories>
 			<bSlave>1</bSlave>
-            <iYieldChanges>
-                <iYield>-1</iYield>
-                <iYield>0</iYield>
-                <iYield>-1</iYield>
-            </iYieldChanges>
+			<Yields>
+				<iYield>-1</iYield>
+				<iYield>0</iYield>
+				<iYield>-1</iYield>
+			</Yields>
 			<iHappinessPercent>-40</iHappinessPercent>
 			<Button>Art/Interface/MainScreen/CityScreen/slave_commerce.dds</Button>
 			<PropertyManipulators>
@@ -974,11 +974,11 @@
 				<Category>CATEGORY_SPECIALIST_GROUP_RESEARCH</Category>
 			</Categories>
 			<bSlave>1</bSlave>
-            <iYieldChanges>
-                <iYield>-1</iYield>
-                <iYield>0</iYield>
-                <iYield>-1</iYield>
-            </iYieldChanges>
+			<Yields>
+				<iYield>-1</iYield>
+				<iYield>0</iYield>
+				<iYield>-1</iYield>
+			</Yields>
 			<iHappinessPercent>-40</iHappinessPercent>
 			<iHealthPercent>200</iHealthPercent>
 			<Button>Art/Interface/MainScreen/CityScreen/slave_health.dds</Button>
@@ -1009,11 +1009,11 @@
 				<Category>CATEGORY_SPECIALIST_GROUP_CULTURAL</Category>
 			</Categories>
 			<bSlave>1</bSlave>
-            <iYieldChanges>
-                <iYield>-1</iYield>
-                <iYield>0</iYield>
-                <iYield>-1</iYield>
-            </iYieldChanges>
+			<Yields>
+				<iYield>-1</iYield>
+				<iYield>0</iYield>
+				<iYield>-1</iYield>
+			</Yields>
 			<Commerces>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -1050,11 +1050,11 @@
 				<Category>CATEGORY_SPECIALIST_GROUP_RESEARCH</Category>
 			</Categories>
 			<bSlave>1</bSlave>
-            <iYieldChanges>
-                <iYield>-1</iYield>
-                <iYield>0</iYield>
-                <iYield>-1</iYield>
-            </iYieldChanges>
+			<Yields>
+				<iYield>-1</iYield>
+				<iYield>0</iYield>
+				<iYield>-1</iYield>
+			</Yields>
 			<Commerces>
 				<iCommerce>0</iCommerce>
 				<iCommerce>8</iCommerce>
@@ -1098,15 +1098,10 @@
 				<Category>CATEGORY_SPECIALIST_GROUP_MILITARY</Category>
 			</Categories>
 			<bSlave>1</bSlave>
-            <iYieldChanges>
-                <iYield>-1</iYield>
-                <iYield>0</iYield>
-                <iYield>-1</iYield>
-            </iYieldChanges>
 			<Yields>
-				<iYield>0</iYield>
+				<iYield>-1</iYield>
 				<iYield>8</iYield>
-				<iYield>0</iYield>
+				<iYield>-1</iYield>
 			</Yields>
 			<iHappinessPercent>-40</iHappinessPercent>
 			<iHealthPercent>-40</iHealthPercent>
@@ -1138,11 +1133,11 @@
 				<Category>CATEGORY_SPECIALIST_GROUP_LEGAL</Category>
 			</Categories>
 			<bSlave>1</bSlave>
-            <iYieldChanges>
-                <iYield>-1</iYield>
-                <iYield>0</iYield>
-                <iYield>-1</iYield>
-            </iYieldChanges>
+			<Yields>
+				<iYield>-1</iYield>
+				<iYield>0</iYield>
+				<iYield>-1</iYield>
+			</Yields>
 			<iHappinessPercent>-40</iHappinessPercent>
 			<iHealthPercent>-40</iHealthPercent>
 			<Button>Art/Interface/MainScreen/CityScreen/slave_military.dds</Button>
