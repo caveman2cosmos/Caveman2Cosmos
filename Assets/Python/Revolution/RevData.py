@@ -116,9 +116,9 @@ def getCityVal(pCity, var):
 
 	val = revObjectGetVal(pCity, var)
 	if val is None and var not in RevDefs.cityData.keys():
-		initCity(pCity)
 		print "Error!  Var ", var, " is not a valid cityData variable"
 		assert(False)
+		return None
 
 	if var == 'RevIdxHistory':
 		if val == None:

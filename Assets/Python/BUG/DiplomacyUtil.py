@@ -214,7 +214,7 @@ def onDealRejected(argsList):
 	eTargetPlayer, eOfferPlayer, pTrade = argsList
 	to = GC.getPlayer(eTargetPlayer).getName()
 	of = GC.getPlayer(eOfferPlayer).getName()
-	print "DiplomacyUtil - %s accepts trade offered by %s: %r" %(to, of, pTrade)
+	print "DiplomacyUtil - %s rejects trade offered by %s: %r" %(to, of, pTrade)
 
 def onHelpDemanded(argsList):
 	eDemandPlayer, eTargetPlayer, pTrade = argsList

@@ -44,6 +44,7 @@
 			</FreeSpecialistCounts>
 			<MovieDefineTag>ART_DEF_MOVIE_10000_YEAR_CLOCK</MovieDefineTag>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_AACHEN_CATHEDRAL</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -95,6 +96,7 @@
 				</PropertySource>
 			</PropertyManipulators>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_ABU_SIMBEL</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -158,6 +160,7 @@
 				</PropertySource>
 			</PropertyManipulators>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_ADAM_SMITHS_TRADING_COMPANY</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -214,6 +217,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_ADAM_SMITHS_TRADING_COMPANY</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_ADAM_SMITH</MovieDefineTag>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_AEROPOLIS_2001</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -251,6 +255,7 @@
 				<BuildingType>BUILDING_MEGATOWER</BuildingType>
 			</PrereqInCityBuildings>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_AESOPS_FABLES</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -282,6 +287,7 @@
 			<iConquestProb>100</iConquestProb>
 			<iHurryCostModifier>100</iHurryCostModifier>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_AI_SINGLETON</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -318,6 +324,7 @@
 			<bRequiresActiveCivics>1</bRequiresActiveCivics>
 			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_AKSHARDHAM</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -404,6 +411,7 @@
 				</PropertySource>
 			</PropertyManipulators>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_ALAMO</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -448,6 +456,7 @@
 				</PropertySource>
 			</PropertyManipulators>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_ALAMUT</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -531,6 +540,7 @@
 				</PropertySource>
 			</PropertyManipulators>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_ALCATRAZ</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -592,6 +602,7 @@
 				</PropertySource>
 			</PropertyManipulators>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_ALHAMBRA</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -676,6 +687,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_ALHAMBRA</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_ALHAMBRA</MovieDefineTag>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_RELIC_ALHAMBRA</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -706,6 +718,7 @@
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<ArtDefineTag>ART_DEF_BUILDING_ALHAMBRA</ArtDefineTag>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_CURE_FOR_ALZHEIMERS</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -752,6 +765,7 @@
 			</PrereqOrBuildings>
 			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_AMNESTY_INTERNATIONAL</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -778,6 +792,7 @@
 			<iRevIdxLocal>1</iRevIdxLocal>
 			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_AMUNDSEN_SCOTT_SOUTH_POLE_STATION</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -825,6 +840,7 @@
 				</TechCommerceChange>
 			</TechCommerceChanges>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_ANGKOR_WAT</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -899,6 +915,7 @@
 				</PropertySource>
 			</PropertyManipulators>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_RELIC_ANGKOR_WAT</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -928,6 +945,7 @@
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<ArtDefineTag>ART_DEF_BUILDING_ANGKOR_WAT</ArtDefineTag>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_ANTIKYTHERA_MECHANISM</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -969,6 +987,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_ANTIKYTHERA_MECHANISM</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_ANTIKYTHERA_MECHANISM</MovieDefineTag>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_AON_CENTER</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -1028,6 +1047,7 @@
 			</PropertyManipulators>
 			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_APADANA_PALACE</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -1097,6 +1117,7 @@
 				</PropertySource>
 			</PropertyManipulators>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_APOSTOLIC_PALACE</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -1147,6 +1168,7 @@
 				</PropertySource>
 			</PropertyManipulators>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_VIA_APPIA</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -1193,6 +1215,7 @@
 			<iPrereqPopulation>3</iPrereqPopulation>
 			<Help>TXT_KEY_BUILDING_VIA_APPIA_HELP</Help>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_ARC_DE_TRIOMPHE</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -1252,6 +1275,7 @@
 				</PropertySource>
 			</PropertyManipulators>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_ARCHIMEDES_WORKSHOP</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -1315,6 +1339,7 @@
 			<bTeamShare>1</bTeamShare>
 			<bNukeImmune>1</bNukeImmune>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_ARCONIC_TOWER</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -1362,6 +1387,7 @@
 			</PrereqInCityBuildings>
 			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_ARCOSANTI</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -1415,6 +1441,7 @@
 				</PropertySource>
 			</PropertyManipulators>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_ARK_OF_THE_COVENANT</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -1470,6 +1497,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_ARK_OF_THE_COVENANT</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_ARK</MovieDefineTag>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_TEMPLE_OF_ARTEMIS</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -1533,6 +1561,7 @@
 				</PropertySource>
 			</PropertyManipulators>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_SUN_TZUS_ART_OF_WAR</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -1568,6 +1597,7 @@
 			<bTeamShare>1</bTeamShare>
 			<bNukeImmune>1</bNukeImmune>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_ARXIV</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -1602,6 +1632,7 @@
 			</PrereqInCityBuildings>
 			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_EKAL_MASHARTI</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -1646,6 +1677,7 @@
 				</Flavor>
 			</Flavors>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_ATLANTIS</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -1699,6 +1731,7 @@
 			</PropertyManipulators>
 			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_AZADI_TOWER</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -1781,6 +1814,7 @@
 				</PropertySource>
 			</PropertyManipulators>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_TLALOCS_ALTAR</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -1842,6 +1876,7 @@
 				</PropertySource>
 			</PropertyManipulators>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_BAIKONUR_COSMODROME</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -1884,6 +1919,7 @@
 				</PropertySource>
 			</PropertyManipulators>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_221B_BAKER_STREET</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -1950,6 +1986,7 @@
 				<BuildingType>BUILDING_SCOTLAND_YARD</BuildingType>
 			</PrereqOrBuildings>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_BANK_OF_CHINA_TOWER</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -2007,6 +2044,7 @@
 			</PropertyManipulators>
 			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_BAUHAUS_SCHOOL</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -2087,6 +2125,7 @@
 				</PropertySource>
 			</PropertyManipulators>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_BAYREUTH_FESTSPIELHAUS</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -2178,6 +2217,7 @@
 				</PropertySource>
 			</PropertyManipulators>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_GARDENS_BY_THE_BAY</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -2240,6 +2280,7 @@
 			</PropertyManipulators>
 			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_PALACE_OF_BEAULIEU</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -2310,6 +2351,7 @@
 				</PropertySource>
 			</PropertyManipulators>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_BEHISTUN_INSCRIPTION</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -2359,6 +2401,7 @@
 				</PropertySource>
 			</PropertyManipulators>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_BELL_LABS</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -2471,6 +2514,7 @@
 			</PrereqBonuses>
 			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_BELL_ROCK_LIGHTHOUSE</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -2523,6 +2567,7 @@
 			</PropertyManipulators>
 			<bWater>1</bWater>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_BERLIN_WALL</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -2582,6 +2627,7 @@
 				</PropertySource>
 			</PropertyManipulators>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_BIG_BEN</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -2646,6 +2692,7 @@
 				</PropertySource>
 			</PropertyManipulators>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_BIONIC_TOWER</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -2687,6 +2734,7 @@
 			</PrereqInCityBuildings>
 			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_BIZARRO_WORLD</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -2729,6 +2777,7 @@
 			</PrereqInCityBuildings>
 			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_BLARNEY_CASTLE</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -2796,6 +2845,7 @@
 				</PropertySource>
 			</PropertyManipulators>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_BLUE_MOSQUE</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -2872,6 +2922,7 @@
 				</PropertySource>
 			</PropertyManipulators>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_BIRDS_NEST_STADIUM</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -2931,6 +2982,7 @@
 				</PropertySource>
 			</PropertyManipulators>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_BOLSHOI</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -2992,6 +3044,7 @@
 				</PropertySource>
 			</PropertyManipulators>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_BONNEVILLE_SPEEDWAY</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -3054,6 +3107,7 @@
 				</PropertySource>
 			</PropertyManipulators>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_BOSTON_ARCOLOGY</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -3096,6 +3150,7 @@
 				<BuildingType>BUILDING_LAUNCH_ARCOLOGY</BuildingType>
 			</PrereqOrBuildings>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_BRANDENBURG_GATE</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -3162,6 +3217,7 @@
 				</PropertySource>
 			</PropertyManipulators>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_BRAZEN_BULL</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -3216,6 +3272,7 @@
 			<iAsset>4</iAsset>
 			<iPower>4</iPower>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_BREAKTHROUGH_STARSHOT</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -3254,6 +3311,7 @@
 				</FreeSpecialistCount>
 			</FreeSpecialistCounts>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_BROADWAY</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -3308,6 +3366,7 @@
 				</PropertySource>
 			</PropertyManipulators>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_BURJ_AL_ARAB</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -3390,6 +3449,7 @@
 			</PropertyManipulators>
 			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_BURJ_KHALIFA</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -3457,6 +3517,7 @@
 			</PropertyManipulators>
 			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_BURNING_MAN</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -3510,6 +3571,7 @@
 				</PropertySource>
 			</PropertyManipulators>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_CABARET_VOLTAIRE</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -3561,6 +3623,7 @@
 				</PropertySource>
 			</PropertyManipulators>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_CAHOKIA_MOUNDS</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -3643,6 +3706,7 @@
 				</PropertySource>
 			</PropertyManipulators>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_CANNES_FILM_FESTIVAL</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -3733,6 +3797,7 @@
 				<BuildingType>BUILDING_HOLLYWOOD</BuildingType>
 			</PrereqNotInCityBuildings>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_CAPITOL_RECORDS_TOWER</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -3787,6 +3852,7 @@
 			</PropertyManipulators>
 			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_CAPUCHIN_CRYPT</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -3842,6 +3908,7 @@
 				</PropertySource>
 			</PropertyManipulators>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_CARHENGE</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -3880,6 +3947,7 @@
 			<bTeamShare>1</bTeamShare>
 			<bNukeImmune>1</bNukeImmune>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_CATACOMBS_OF_KOM_EL_SHOQAFA</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -3932,6 +4000,7 @@
 				</PropertySource>
 			</PropertyManipulators>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_BEZEKLIK_CAVES</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -4009,6 +4078,7 @@
 				</PropertySource>
 			</PropertyManipulators>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_CIRCUS_CIRCUS_CASINO</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -4080,6 +4150,7 @@
 				</PropertySource>
 			</PropertyManipulators>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_CERN_ACCELERATOR</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -4132,6 +4203,7 @@
 				</PropertySource>
 			</PropertyManipulators>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_CHANGDEOKGUNG</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -4189,6 +4261,7 @@
 				</PropertySource>
 			</PropertyManipulators>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_CHEOMSEONGDAE</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -4261,6 +4334,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_CHEOMSEONGDAE</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_CHEOMSEONGDAE</MovieDefineTag>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_RELIC_CHEOMSEONGDAE</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -4295,6 +4369,7 @@
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<ArtDefineTag>ART_DEF_BUILDING_CHEOMSEONGDAE</ArtDefineTag>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_CHICHEN_ITZA</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -4360,6 +4435,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_CHICHEN_ITZA</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_CHICHEN_ITZA</MovieDefineTag>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_RELIC_CHICHEN_ITZA</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -4389,6 +4465,7 @@
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<ArtDefineTag>ART_DEF_BUILDING_CHICHEN_ITZA</ArtDefineTag>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_CHILEHAUS</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -4440,6 +4517,7 @@
 				</PropertySource>
 			</PropertyManipulators>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_CHUO_SHINKANSEN</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -4472,6 +4550,7 @@
 			</PrereqOrBuildings>
 			<iPrereqPopulation>20</iPrereqPopulation>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_CHURCH_TURING_THESIS</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -4509,6 +4588,7 @@
 				<BuildingType>BUILDING_MATHEMATICS_DEPARTMENT</BuildingType>
 			</PrereqInCityBuildings>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_CIRCUS_MAXIMUS</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -4593,6 +4673,7 @@
 				</PropertySource>
 			</PropertyManipulators>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_CLEOPATRAS_NEEDLE</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -4638,6 +4719,7 @@
 				</Flavor>
 			</Flavors>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_CN_TOWER</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -4702,6 +4784,7 @@
 			</PropertyManipulators>
 			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_COIT_TOWER</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -4807,6 +4890,7 @@
 				</PropertySource>
 			</PropertyManipulators>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_THE_COLOSSUS</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -4877,6 +4961,7 @@
 				</PropertySource>
 			</PropertyManipulators>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_CONFUCIAN_SCHOOL</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -4978,6 +5063,7 @@
 				</PropertySource>
 			</PropertyManipulators>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_CONGRESS_OF_VIENNA</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -5019,6 +5105,7 @@
 			</CommerceChangeDoubleTimes>
 			<iPrereqPopulation>7</iPrereqPopulation>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_COPERNICUS_OBSERVATORY</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -5096,6 +5183,7 @@
 				</PropertySource>
 			</PropertyManipulators>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_CORAL_CASTLE</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -5167,6 +5255,7 @@
 				</PropertySource>
 			</PropertyManipulators>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_CRISTO_REDENTOR</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -5213,6 +5302,7 @@
 				</PropertySource>
 			</PropertyManipulators>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_KINGS_CRUSADE</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -5282,6 +5372,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_KINGS_CRUSADE</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_CRUSADE</MovieDefineTag>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_CULTURE_CRYSTALPUNK</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -5314,6 +5405,7 @@
 				</ExtraFreeBonus>
 			</ExtraFreeBonuses>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_CRYSTAL_ISLAND</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -5353,6 +5445,7 @@
 			</PrereqInCityBuildings>
 			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_CRYSTAL_PALACE</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -5406,11 +5499,13 @@
 				</PropertySource>
 			</PropertyManipulators>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_CYRUS_CYLINDER</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Description>TXT_KEY_BUILDING_CYRUS_CYLINDER</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CYRUS_CYLINDER_PEDIA</Civilopedia>
+            <Help>TXT_KEY_BUILDING_CYRUS_CYLINDER_HELP</Help>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_CYRUS_CYLINDER</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_CYRUS_CYLINDER</MovieDefineTag>
@@ -5440,6 +5535,7 @@
 				</PropertySource>
 			</PropertyManipulators>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_TOMB_OF_CYRUS</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -5491,6 +5587,7 @@
 				</PropertySource>
 			</PropertyManipulators>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_DALI_THEATRE_AND_MUSEUM</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -5534,6 +5631,7 @@
 				</PropertySource>
 			</PropertyManipulators>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_DARCO</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -5566,6 +5664,7 @@
 			</PrereqInCityBuildings>
 			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_DARPA</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -5637,6 +5736,7 @@
 				<BuildingType>BUILDING_MILITARY_BASE</BuildingType>
 			</PrereqInCityBuildings>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_MISSION_TO_CHALLENGER_DEEP</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -5681,6 +5781,7 @@
 			<iFreeTechs>1</iFreeTechs>
 			<iHurryCostModifier>100</iHurryCostModifier>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_DELHI_MUMBAI_INDUSTRIAL_CORRIDOR</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -5717,6 +5818,7 @@
 			</PrereqInCityBuildings>
 			<iPrereqPopulation>20</iPrereqPopulation>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_GREAT_MOSQUE_OF_DESERT</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -5800,6 +5902,7 @@
 				</PropertySource>
 			</PropertyManipulators>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_DINOSAUR_PARK</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -5878,6 +5981,7 @@
 				</PropertySource>
 			</PropertyManipulators>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_DISNEYLAND</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -5935,6 +6039,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_DISNEYLAND</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_DISNEYLAND</MovieDefineTag>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_GREAT_MOSQUE_OF_DJENNE</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -6139,6 +6244,7 @@
 				</PropertySource>
 			</PropertyManipulators>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_INTERNATIONAL_DOG_SHOW</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -6197,6 +6303,7 @@
 				</PropertySource>
 			</PropertyManipulators>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_CULTURE_CETACEA_SAPIEN</Type>
 			<bNoLimit>1</bNoLimit>
@@ -6230,6 +6337,7 @@
 			<bNukeImmune>1</bNukeImmune>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_EL_DORADO</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -6304,6 +6412,7 @@
 				</Flavor>
 			</Flavors>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_DOSAN_SEOWON</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -6381,6 +6490,7 @@
 				</PropertySource>
 			</PropertyManipulators>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_DUBAI_CITY_TOWER</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -6422,6 +6532,7 @@
 			</PrereqInCityBuildings>
 			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_DUBAI_WORLD_CENTRAL</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -6460,6 +6571,7 @@
 			</FreeSpecialistCounts>
 			<iPrereqPopulation>20</iPrereqPopulation>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_MISSION_TO_EARTHS_CORE</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -6501,6 +6613,7 @@
 			<iFreeTechs>1</iFreeTechs>
 			<iHurryCostModifier>100</iHurryCostModifier>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_GRAND_EARTH_FESTIVAL</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -6742,6 +6855,7 @@
 				</PropertySource>
 			</PropertyManipulators>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_ECUMENOPOLIS_EARTH</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -6799,6 +6913,7 @@
 			</PrereqInCityBuildings>
 			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_EDINBURGH_CASTLE</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -6866,6 +6981,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_EDINBURGH_CASTLE</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_EDINBURGH</MovieDefineTag>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_RELIC_EDINBURGH_CASTLE</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -6898,6 +7014,7 @@
 			<fVisibilityPriority>100</fVisibilityPriority>
 			<ArtDefineTag>ART_DEF_BUILDING_EDINBURGH_CASTLE</ArtDefineTag>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_EDISONS_WORKSHOP</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -6963,6 +7080,7 @@
 				</PropertySource>
 			</PropertyManipulators>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_EIFFEL_TOWER</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -7032,6 +7150,7 @@
 				</PropertySource>
 			</PropertyManipulators>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_EINSTEINS_LABORATORY</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -7102,6 +7221,7 @@
 				</PropertySource>
 			</PropertyManipulators>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_EL_CAMINO_DE_SANTIAGO</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -7161,6 +7281,7 @@
 				</PropertySource>
 			</PropertyManipulators>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_ELLIS_ISLAND</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -7219,6 +7340,7 @@
 				</PropertySource>
 			</PropertyManipulators>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_EMPIRE_STATE_BUILDING</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -7267,6 +7389,7 @@
 			</PropertyManipulators>
 			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_EMU_EGG_CARVER</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -7322,6 +7445,7 @@
 			<iConquestProb>100</iConquestProb>
 			<iHurryCostModifier>100</iHurryCostModifier>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_ENCYCLOPEDIA_GALACTICA</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -7369,6 +7493,7 @@
 				</PropertySource>
 			</PropertyManipulators>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_THE_ERECHTHEUM</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -7465,6 +7590,7 @@
 				</PropertySource>
 			</PropertyManipulators>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_EL_ESCORIAL</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -7524,6 +7650,7 @@
 				</PropertySource>
 			</PropertyManipulators>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_ET_DISCOVERY</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -7587,6 +7714,7 @@
 				<BuildingType>BUILDING_POLLUTION_BLACKENED_SKIES</BuildingType>
 			</ReplacementBuildings>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_EUROPEAN_EXTREMELY_LARGE_TELESCOPE</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -7626,6 +7754,7 @@
 				<BuildingType>BUILDING_POLLUTION_BLACKENED_SKIES</BuildingType>
 			</ReplacementBuildings>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_EYE_IN_THE_SKY</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -7695,6 +7824,7 @@
 			</PrereqOrCivics>
 			<bRequiresActiveCivics>1</bRequiresActiveCivics>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_SIX_HARMONIES_PAGODA</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -7778,6 +7908,7 @@
 				</PropertySource>
 			</PropertyManipulators>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_FAMEN_TEMPLE</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -7828,6 +7959,7 @@
 				</PropertySource>
 			</PropertyManipulators>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_FERMATS_LAST_THEOREM</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -7862,6 +7994,7 @@
 				<BuildingType>BUILDING_MATHEMATICS_DEPARTMENT</BuildingType>
 			</PrereqInCityBuildings>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_PHIDIAS_STATUE_WORKSHOP</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -7958,6 +8091,7 @@
 				</PropertySource>
 			</PropertyManipulators>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_FIELD_OF_THE_CLOTH_OF_GOLD</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -8012,6 +8146,7 @@
 			</PrereqOrCivics>
 			<bRequiresActiveCivics>1</bRequiresActiveCivics>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_GRAND_FIRE_FESTIVAL</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -8245,6 +8380,7 @@
 				</PropertySource>
 			</PropertyManipulators>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_FLAVIAN_AMPHITHEATRE</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -8335,6 +8471,7 @@
 				</PropertySource>
 			</PropertyManipulators>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_FORT_KNOX</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -8398,6 +8535,7 @@
 				</PropertySource>
 			</PropertyManipulators>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_FOUR_COLOR_THEOREM</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -8435,6 +8573,7 @@
 				<BuildingType>BUILDING_MATHEMATICS_DEPARTMENT</BuildingType>
 			</PrereqInCityBuildings>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_FRAUNHOFER_SOCIETY</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -8511,6 +8650,7 @@
 				<BuildingType>BUILDING_LABORATORY</BuildingType>
 			</PrereqInCityBuildings>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_SALON</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -8570,6 +8710,7 @@
 			</Flavors>
 			<iConquestProb>100</iConquestProb>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_FREYA_SANCTUARY</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -8643,6 +8784,7 @@
 				</Flavor>
 			</Flavors>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_FRIEDLANDER_SKYSHADE</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -8675,6 +8817,7 @@
 			</Properties>
 			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_FUTURE_VENICE</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -8727,6 +8870,7 @@
 			</PropertyManipulators>
 			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_GATEWAY_ARCH</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -8780,6 +8924,7 @@
 				</PropertySource>
 			</PropertyManipulators>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_GATE_OF_THE_SUN</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -8835,6 +8980,7 @@
 				</PropertySource>
 			</PropertyManipulators>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_GENOMIC_ENCYCLOPEDIA</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -8927,6 +9073,7 @@
 			<iConquestProb>100</iConquestProb>
 			<iHurryCostModifier>100</iHurryCostModifier>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_GETTY_CENTER</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -8982,6 +9129,7 @@
 				</PropertySource>
 			</PropertyManipulators>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_GIVERNY</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -9054,6 +9202,7 @@
 				</PropertySource>
 			</PropertyManipulators>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_GLOBAL_STOCK_EXCHANGE</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -9089,6 +9238,7 @@
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_GLOBE_THEATRE</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -9168,6 +9318,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_GLOBE_THEATRE</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_GLOBE_THEATRE</MovieDefineTag>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_GOBEKLI_TEPE</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -9221,6 +9372,7 @@
 				</PropertySource>
 			</PropertyManipulators>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_GODELS_INCOMPLETENESS_THEOREMS</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -9254,6 +9406,7 @@
 				<BuildingType>BUILDING_MATHEMATICS_DEPARTMENT</BuildingType>
 			</PrereqInCityBuildings>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_GOLDEN_GATE_BRIDGE</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -9307,6 +9460,7 @@
 				</PropertySource>
 			</PropertyManipulators>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_GOLDEN_SPIKE</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -9391,6 +9545,7 @@
 				</PropertySource>
 			</PropertyManipulators>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_GRAUMANS_CHINESE_THEATRE</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -9449,6 +9604,7 @@
 				</PropertySource>
 			</PropertyManipulators>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_GREAT_BATH_OF_MOHENJO_DARO</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -9508,6 +9664,7 @@
 				</PropertySource>
 			</PropertyManipulators>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_THREE_GORGES_DAM</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -9556,6 +9713,7 @@
 			<bTeamShare>1</bTeamShare>
 			<bNukeImmune>1</bNukeImmune>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_GREAT_FIREWALL</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -9626,6 +9784,7 @@
 			</PropertyManipulators>
 			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_TEMPLE_OF_AH_CACAO</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -9683,6 +9842,7 @@
 				</PropertySource>
 			</PropertyManipulators>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_THE_GREAT_LIBRARY</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -9755,6 +9915,7 @@
 				</PropertySource>
 			</PropertyManipulators>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_THE_GREAT_LIGHTHOUSE</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -9825,6 +9986,7 @@
 				</PropertySource>
 			</PropertyManipulators>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_THE_GREAT_PYRAMID</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -9884,6 +10046,7 @@
 				</PropertySource>
 			</PropertyManipulators>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_PYRAMID_OF_THE_MOON</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -9968,6 +10131,7 @@
 				</PropertySource>
 			</PropertyManipulators>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_PYRAMID_OF_THE_SUN</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -10052,6 +10216,7 @@
 				</PropertySource>
 			</PropertyManipulators>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_THE_GREAT_SPHINX</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -10115,6 +10280,7 @@
 				</PropertySource>
 			</PropertyManipulators>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_GREAT_WALL_OF_CHINA</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -10183,6 +10349,7 @@
 				</PropertySource>
 			</PropertyManipulators>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_GREAT_ZIMBABWE</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -10242,6 +10409,7 @@
 				</PropertySource>
 			</PropertyManipulators>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_GREAT_GREEN_WALL</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -10295,6 +10463,7 @@
 				</PropertySource>
 			</PropertyManipulators>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_HADRIANS_WALL</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -10362,6 +10531,7 @@
 				</PropertySource>
 			</PropertyManipulators>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_HAGIA_SOPHIA</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -10420,6 +10590,7 @@
 				</PropertySource>
 			</PropertyManipulators>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_HAMMURABI_STELE_OF_LAWS</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -10485,6 +10656,7 @@
 				</PropertySource>
 			</PropertyManipulators>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_THE_HANGING_GARDENS</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -10551,6 +10723,7 @@
 				</PropertySource>
 			</PropertyManipulators>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_HARAPPAN_FAKE_GEMS</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -10621,6 +10794,7 @@
 			</Flavors>
 			<iConquestProb>100</iConquestProb>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_HEIMDALL_SANCTUARY</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -10689,6 +10863,7 @@
 				</Flavor>
 			</Flavors>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_HELLSMOUTH_SANCTUARY</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -10750,6 +10925,7 @@
 				</PrereqTerrain>
 			</PrereqOrTerrain>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_HELSINKI_CATHEDRAL</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -10805,6 +10981,7 @@
 				</PropertySource>
 			</PropertyManipulators>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_HERMITAGE</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -10854,6 +11031,7 @@
 				</PropertySource>
 			</PropertyManipulators>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_HIERAPOLIS_SAWMILL</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -10900,6 +11078,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_HIERAPOLIS_SAWMILL</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_HIERAPOLIS</MovieDefineTag>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_HILL_OF_TARA</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -10968,6 +11147,7 @@
 				</PropertySource>
 			</PropertyManipulators>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_HIMEJI_SAMURAI_CASTLE</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -11032,6 +11212,7 @@
 				</PropertySource>
 			</PropertyManipulators>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_THE_BRIHADEESWARAR_TEMPLE</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -11119,6 +11300,7 @@
 				</PropertySource>
 			</PropertyManipulators>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_HIPPOCRATIC_OATH</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -11188,6 +11370,7 @@
 				</PropertySource>
 			</PropertyManipulators>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_NATIONAL_NIGHT_OF_HOCKEY</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -11269,6 +11452,7 @@
 			</GlobalBuildingExtraCommerces>
 			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_HOLLYWOOD</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -11322,6 +11506,7 @@
 			<bTeamShare>1</bTeamShare>
 			<bNukeImmune>1</bNukeImmune>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_HOUSE_OF_WISDOM</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -11393,6 +11578,7 @@
 				</PropertySource>
 			</PropertyManipulators>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_HUDSON_YARDS</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -11430,6 +11616,7 @@
 			<iPrereqPopulation>20</iPrereqPopulation>
 			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_HUMAN_RIGHTS_DECLARATION</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -11478,6 +11665,7 @@
 			<bTeamShare>1</bTeamShare>
 			<bNukeImmune>1</bNukeImmune>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_HUMPHREY_METRODOME</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -11521,6 +11709,7 @@
 				</PropertySource>
 			</PropertyManipulators>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_HUNGER_GAMES</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -11550,6 +11739,7 @@
 			</PrereqInCityBuildings>
 			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_HYPERLOOP</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -11579,6 +11769,7 @@
 			</PrereqOrBuildings>
 			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_SNOWCASTLE_OF_KEMI</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -11639,6 +11830,7 @@
 				</PropertySource>
 			</PropertyManipulators>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_INDEPENDENCE_HALL</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -11685,6 +11877,7 @@
 				</PropertySource>
 			</PropertyManipulators>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_EAST_INDIA_COMPANY</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -11734,6 +11927,7 @@
 			<bTeamShare>1</bTeamShare>
 			<bNukeImmune>1</bNukeImmune>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_GLOBAL_RAIL_NETWORK</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -11784,6 +11978,7 @@
 				<BuildingType>BUILDING_GRAVITY_TRAIN</BuildingType>
 			</PrereqOrBuildings>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_INTERNET_ARCHIVE</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -11824,6 +12019,7 @@
 			</PropertyManipulators>
 			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_THE_ISHTAR_GATE</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -11917,6 +12113,7 @@
 				</PropertySource>
 			</PropertyManipulators>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_ITSUKUSHIMA_SHRINE</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -11970,6 +12167,7 @@
 				</Flavor>
 			</Flavors>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_JADE_DEATH_MASK_CARVER</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -12030,6 +12228,7 @@
 			<iConquestProb>100</iConquestProb>
 			<iHurryCostModifier>100</iHurryCostModifier>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_JEDDAH_TOWER</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -12072,6 +12271,7 @@
 			</PrereqInCityBuildings>
 			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_MASADA</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -12156,6 +12356,7 @@
 				</PropertySource>
 			</PropertyManipulators>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_J_S_BACHS_CATHEDRAL</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -12233,6 +12434,7 @@
 				</PropertySource>
 			</PropertyManipulators>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_KENTUCKY_DERBY</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -12314,6 +12516,7 @@
 				</PropertySource>
 			</PropertyManipulators>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_KERALA_SCHOOL_OF_MATHEMATICS</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -12368,6 +12571,7 @@
 				</PropertySource>
 			</PropertyManipulators>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_KHAZAR_ISLANDS</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -12419,6 +12623,7 @@
 			</FreeSpecialistCounts>
 			<iPrereqPopulation>13</iPrereqPopulation>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_BARAY</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -12479,6 +12684,7 @@
 				</PropertySource>
 			</PropertyManipulators>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_KINGDOM_CENTRE</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -12551,6 +12757,7 @@
 			</PropertyManipulators>
 			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_KING_ABDULLAH_ECONOMIC_CITY</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -12588,6 +12795,7 @@
 			</FreeSpecialistCounts>
 			<iPrereqPopulation>20</iPrereqPopulation>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_KOTOKU_IN</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -12658,6 +12866,7 @@
 				</PropertySource>
 			</PropertyManipulators>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_KRAK_DES_CHEVALIERS</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -12715,6 +12924,7 @@
 				</PropertySource>
 			</PropertyManipulators>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_THE_KREMLIN</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -12766,6 +12976,7 @@
 			<bTeamShare>1</bTeamShare>
 			<bNukeImmune>1</bNukeImmune>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_LABYRINTH_OF_KNOSSOS</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -12832,6 +13043,7 @@
 				</PropertySource>
 			</PropertyManipulators>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_LASCAUX_PAINTS</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -12901,6 +13113,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_LASCAUX_PAINTS</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_LASCAUX</MovieDefineTag>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_LAS_MEDULAS</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -12942,6 +13155,7 @@
 			<iPrereqPopulation>3</iPrereqPopulation>
 			<bFreshWater>1</bFreshWater>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_LAS_VEGAS_STRIP</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -13031,6 +13245,7 @@
 				</PropertySource>
 			</PropertyManipulators>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_LAXMINARAYAN_TEMPLE</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -13097,6 +13312,7 @@
 				</PropertySource>
 			</PropertyManipulators>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_LA_BREA_TAR_PITS</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -13189,6 +13405,7 @@
 				</PropertySource>
 			</PropertyManipulators>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_LEAN_LINEAR_CITY</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -13243,6 +13460,7 @@
 				</PropertySource>
 			</PropertyManipulators>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_LEONARDOS_WORKSHOP</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -13309,6 +13527,7 @@
 				</PropertySource>
 			</PropertyManipulators>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_LOKI_SANCTUARY</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -13375,6 +13594,7 @@
 				</Flavor>
 			</Flavors>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_LONDON_EYE</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -13438,6 +13658,7 @@
 				</PropertySource>
 			</PropertyManipulators>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_LOTUS_TEMPLE</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -13493,6 +13714,7 @@
 				</PropertySource>
 			</PropertyManipulators>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_LOUVRE_MUSEUM</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -13569,6 +13791,7 @@
 				</PropertySource>
 			</PropertyManipulators>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_LUXOR_CASINO</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -13640,6 +13863,7 @@
 				</PropertySource>
 			</PropertyManipulators>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_MACHU_PICCHU</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -13735,6 +13959,7 @@
 				</Flavor>
 			</Flavors>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_MADISON_AVENUE</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -13865,6 +14090,7 @@
 			</PropertyManipulators>
 			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_MAGELLANS_VOYAGE</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -13938,6 +14164,7 @@
 				</PropertySource>
 			</PropertyManipulators>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_MAGINOT_LINE</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -13966,6 +14193,7 @@
 			<Help>TXT_KEY_BUILDING_MAGINOT_LINE_HELP</Help>
 			<FreeAreaBuilding>BUILDING_BARRICADES</FreeAreaBuilding>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_MARCO_POLOS_EMBASSY</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -14029,6 +14257,7 @@
 				</PropertySource>
 			</PropertyManipulators>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_GRAND_MARINE_FESTIVAL</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -14278,6 +14507,7 @@
 				</PropertySource>
 			</PropertyManipulators>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_MASDAR_CITY</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -14321,6 +14551,7 @@
 				</PropertySource>
 			</PropertyManipulators>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_MATSUMOTO_CASTLE</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -14384,6 +14615,7 @@
 				</Flavor>
 			</Flavors>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_HAAMONGA_A_MAUI</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -14451,6 +14683,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_HAAMONGA_A_MAUI</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_MAUI</MovieDefineTag>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_MAUSOLEUM_OF_MAUSSOLLOS</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -14519,6 +14752,7 @@
 				</PropertySource>
 			</PropertyManipulators>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_MEENAKSHI_TEMPLE</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -14611,6 +14845,7 @@
 				</PropertySource>
 			</PropertyManipulators>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_MESA_VERDE</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -14682,6 +14917,7 @@
 				</PropertySource>
 			</PropertyManipulators>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_PYRAMID_OF_THE_MAGICIAN</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -14764,6 +15000,7 @@
 				</PropertySource>
 			</PropertyManipulators>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_METRIC_SYSTEM</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -14810,6 +15047,7 @@
 				</FreeSpecialistCount>
 			</FreeSpecialistCounts>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_HILBERTS_PROBLEMS</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -14843,6 +15081,7 @@
 				<BuildingType>BUILDING_MATHEMATICS_DEPARTMENT</BuildingType>
 			</PrereqInCityBuildings>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_MING_VASE_WORKSHOP</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -14917,6 +15156,7 @@
 			</Flavors>
 			<iConquestProb>100</iConquestProb>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_MOAI_STATUES</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -14978,6 +15218,7 @@
 				</PropertySource>
 			</PropertyManipulators>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_MONTE_CARLO</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -15058,6 +15299,7 @@
 				</PropertySource>
 			</PropertyManipulators>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_TIME_SHIP</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -15099,6 +15341,7 @@
 			</PrereqInCityBuildings>
 			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_MORSE_CODE</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -15139,6 +15382,7 @@
 				<BuildingType>BUILDING_TELEPHONE_NETWORK</BuildingType>
 			</PrereqOrBuildings>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_MT_RUSHMORE</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -15200,6 +15444,7 @@
 				</PropertySource>
 			</PropertyManipulators>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_MUIDERSLOT_CASTLE</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -15250,6 +15495,7 @@
 				</PropertySource>
 			</PropertyManipulators>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_MURANO_GLASSMAKERS</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -15318,6 +15564,7 @@
 			</Flavors>
 			<iConquestProb>100</iConquestProb>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_NANITE_DEFUSER</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -15369,6 +15616,7 @@
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_NARAS_GIANT_BUDDHA</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -15437,6 +15685,7 @@
 				</PropertySource>
 			</PropertyManipulators>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_NATIONAL_SHIELD</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -15473,6 +15722,7 @@
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_NAZCA_LINES</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -15546,6 +15796,7 @@
 				</PropertySource>
 			</PropertyManipulators>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_CULTURE_NEANDERTHAL</Type>
 			<bNoLimit>1</bNoLimit>
@@ -15667,6 +15918,7 @@
 			<bNukeImmune>1</bNukeImmune>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_THE_NECROMANTEION</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -15758,6 +16010,7 @@
 				</PropertySource>
 			</PropertyManipulators>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_NEOM</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -15801,6 +16054,7 @@
 			</PrereqOrBuildings>
 			<iPrereqPopulation>20</iPrereqPopulation>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_NEUSCHWANSTEIN</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -15884,6 +16138,7 @@
 				</PropertySource>
 			</PropertyManipulators>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_ISAAC_NEWTONS_COLLEGE</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -15954,6 +16209,7 @@
 				</PropertySource>
 			</PropertyManipulators>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_NIMRUD_PALACE</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -16039,6 +16295,7 @@
 				</PropertySource>
 			</PropertyManipulators>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_LIBRARY_OF_NINEVEH</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -16095,6 +16352,7 @@
 				</PropertySource>
 			</PropertyManipulators>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_NOK_SCULPTURE_WORKSHOP</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -16171,6 +16429,7 @@
 				</PropertySource>
 			</PropertyManipulators>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_NONSUCH_PALACE</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -16243,6 +16502,7 @@
 				</PropertySource>
 			</PropertyManipulators>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_NOTRE_DAME</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -16306,6 +16566,7 @@
 				</PropertySource>
 			</PropertyManipulators>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_NUDGING_SPACE_ARCOLOGY</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -16353,6 +16614,7 @@
 			</PrereqOrBuildings>
 			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_OCEAN_SPIRAL</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -16399,6 +16661,7 @@
 			</PrereqInCityBuildings>
 			<iPrereqPopulation>13</iPrereqPopulation>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_OLYMPIC_GAMES</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -16453,6 +16716,7 @@
 				</PropertySource>
 			</PropertyManipulators>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_BELT_AND_ROAD_INITIATIVE</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -16484,6 +16748,7 @@
 				<BuildingType>BUILDING_HYBRID_AIRSHIP_PORT</BuildingType>
 			</PrereqOrBuildings>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_THE_ORACLE</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -16547,6 +16812,7 @@
 				</PropertySource>
 			</PropertyManipulators>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_ORBITAL_RING</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -16597,6 +16863,7 @@
 			</PrereqInCityBuildings>
 			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_ORICHALCUM_FORGE</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -16646,6 +16913,7 @@
 			</ExtraFreeBonuses>
 			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_ORIENT_EXPRESS</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -16718,6 +16986,7 @@
 				</BuildingExtraCommerce>
 			</GlobalBuildingExtraCommerces>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_HAMMAM</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -16776,6 +17045,7 @@
 				</PropertySource>
 			</PropertyManipulators>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_PALACE_OF_THE_SOVIETS</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -16847,6 +17117,7 @@
 				</PropertySource>
 			</PropertyManipulators>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_PALEO_PARK</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -16914,6 +17185,7 @@
 			</PropertyManipulators>
 			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_PALM_ISLANDS</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -16963,6 +17235,7 @@
 				</FreeSpecialistCount>
 			</FreeSpecialistCounts>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_THE_PARTHENON</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -17050,6 +17323,7 @@
 				</PropertySource>
 			</PropertyManipulators>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_PEARL_HARBOR</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -17115,6 +17389,7 @@
 				</PropertySource>
 			</PropertyManipulators>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_PENICILLIN</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -17167,6 +17442,7 @@
 				</PropertySource>
 			</PropertyManipulators>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_THE_PENTAGON</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -17211,6 +17487,7 @@
 			<bTeamShare>1</bTeamShare>
 			<bNukeImmune>1</bNukeImmune>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_PERE_LACHAISE_CEMETERY</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -17259,6 +17536,7 @@
 				</PropertySource>
 			</PropertyManipulators>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_PERGAMON_ALTAR</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -17310,6 +17588,7 @@
 				</PropertySource>
 			</PropertyManipulators>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_PERIODIC_TABLE_OF_ELEMENTS</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -17354,6 +17633,7 @@
 				<BuildingType>BUILDING_CHEMICALS_DISTRICT</BuildingType>
 			</PrereqOrBuildings>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_PETRA</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -17436,6 +17716,7 @@
 				</PropertySource>
 			</PropertyManipulators>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_PIR_E_NARAKI</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -17489,6 +17770,7 @@
 				</PropertySource>
 			</PropertyManipulators>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_LEANING_TOWER_OF_PISA</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -17547,6 +17829,7 @@
 				</PropertySource>
 			</PropertyManipulators>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_PLATOS_ACADEMY</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -17613,6 +17896,7 @@
 				</PropertySource>
 			</PropertyManipulators>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_PLEISTOCENE_PARK</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -17675,6 +17959,7 @@
 				</PropertySource>
 			</PropertyManipulators>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_PLYMOUTH_ARCOLOGY</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -17718,6 +18003,7 @@
 				</PropertySource>
 			</PropertyManipulators>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_PONT_DU_GARD</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -17772,6 +18058,7 @@
 				</PropertySource>
 			</PropertyManipulators>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_PORCELAIN_TOWER</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -17842,6 +18129,7 @@
 				</PropertySource>
 			</PropertyManipulators>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_PORTLAND_BUILDING</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -17878,6 +18166,7 @@
 				</FreeSpecialistCount>
 			</FreeSpecialistCounts>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_FEITORIA</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -17944,6 +18233,7 @@
 				</PropertySource>
 			</PropertyManipulators>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_PALACE_OF_POTALA</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -18024,6 +18314,7 @@
 				</PropertySource>
 			</PropertyManipulators>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_PROETOMIC_ENCYCLOPEDIA</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -18090,6 +18381,7 @@
 			<iConquestProb>100</iConquestProb>
 			<iHurryCostModifier>100</iHurryCostModifier>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_TEMPLE_OF_PTAH</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -18163,6 +18455,7 @@
 				</PropertySource>
 			</PropertyManipulators>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_QUANZHEN_SCHOOL</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -18260,6 +18553,7 @@
 				</PropertySource>
 			</PropertyManipulators>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_RED_AND_BLACK_WARE_PAINTER</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -18324,6 +18618,7 @@
 			<iConquestProb>100</iConquestProb>
 			<iHurryCostModifier>100</iHurryCostModifier>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_REICHSTAG</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -18385,6 +18680,7 @@
 				</PropertySource>
 			</PropertyManipulators>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_RIVER_ROUGE_COMPLEX</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -18478,6 +18774,7 @@
 				<iYield>40</iYield>
 			</YieldModifiers>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_ROCK_N_ROLL</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -18532,6 +18829,7 @@
 			<bTeamShare>1</bTeamShare>
 			<bNukeImmune>1</bNukeImmune>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_ROSETTA_STONE</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -18600,6 +18898,7 @@
 				</PropertySource>
 			</PropertyManipulators>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_ROUTE_66</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -18634,6 +18933,7 @@
 			</MapCategoryTypes>
 			<Help>TXT_KEY_BUILDING_ROUTE_66_HELP</Help>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_RUDOLPHINE</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -18689,6 +18989,7 @@
 				</PropertySource>
 			</PropertyManipulators>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_UNIVERSITY_OF_SANKORE</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -18755,6 +19056,7 @@
 				</PropertySource>
 			</PropertyManipulators>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_PIAZZA_SAN_MARCO</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -18812,6 +19114,7 @@
 				</PropertySource>
 			</PropertyManipulators>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_SAINT_MARKS_BASILICA</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -18915,6 +19218,7 @@
 				</PropertySource>
 			</PropertyManipulators>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_SCAPA_FLOW</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -18981,6 +19285,7 @@
 				</PropertySource>
 			</PropertyManipulators>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_SCARBOROUGH_FAIR</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -19095,6 +19400,7 @@
 				</PropertySource>
 			</PropertyManipulators>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_SLOAN_DIGITAL_SKY_SURVEY</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -19133,6 +19439,7 @@
 				<BuildingType>BUILDING_POLLUTION_BLACKENED_SKIES</BuildingType>
 			</ReplacementBuildings>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_SEASIDE</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -19162,6 +19469,7 @@
 				<BuildingType>BUILDING_MIXED_USE_DEVELOPMENT</BuildingType>
 			</PrereqInCityBuildings>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_SERPENT_MOUND</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -19232,6 +19540,7 @@
 				</PropertySource>
 			</PropertyManipulators>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_SETI_PIR</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -19285,6 +19594,7 @@
 				</PropertySource>
 			</PropertyManipulators>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_SETI_PROGRAM</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -19355,6 +19665,7 @@
 			<bTeamShare>1</bTeamShare>
 			<bNukeImmune>1</bNukeImmune>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_SHAOLIN_TEMPLE</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -19413,6 +19724,7 @@
 				</PropertySource>
 			</PropertyManipulators>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_SHIMIZU_MEGA_CITY_PYRAMID</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -19453,6 +19765,7 @@
 				<BuildingType>BUILDING_LAUNCH_ARCOLOGY</BuildingType>
 			</PrereqOrBuildings>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_SHWEDAGON_PAYA</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -19516,6 +19829,7 @@
 				</PropertySource>
 			</PropertyManipulators>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_HO_TRAI_LIBRARY</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -19575,6 +19889,7 @@
 				</PropertySource>
 			</PropertyManipulators>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_SILICON_VALLEY</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -19621,6 +19936,7 @@
 			<bTeamShare>1</bTeamShare>
 			<bNukeImmune>1</bNukeImmune>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_SILK_ROAD</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -19713,6 +20029,7 @@
 				</PropertySource>
 			</PropertyManipulators>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_SINGAPORE_FLYER</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -19766,6 +20083,7 @@
 				</PropertySource>
 			</PropertyManipulators>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_SISTINE_CHAPEL</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -19832,6 +20150,7 @@
 				</PropertySource>
 			</PropertyManipulators>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_GRAND_SKY_FESTIVAL</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -20041,6 +20360,7 @@
 				</PropertySource>
 			</PropertyManipulators>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_SMITHSONIAN_INSTITUTION</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -20113,6 +20433,7 @@
 				</PropertySource>
 			</PropertyManipulators>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_SOLAR_UPDRAFT_TOWER</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -20158,6 +20479,7 @@
 			<bPower>1</bPower>
 			<iHurryCostModifier>100</iHurryCostModifier>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_SOLOMONS_TEMPLE</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -20240,6 +20562,7 @@
 				</PropertySource>
 			</PropertyManipulators>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_SONGDO_INTERNATIONAL_BUSINESS_DISTRICT</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -20273,6 +20596,7 @@
 			</FreeSpecialistCounts>
 			<iPrereqPopulation>20</iPrereqPopulation>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_CULTURE_SPACEPUNK</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -20305,6 +20629,7 @@
 				</ExtraFreeBonus>
 			</ExtraFreeBonuses>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_SPACE_ELEVATOR</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -20377,6 +20702,7 @@
 			<bTeamShare>1</bTeamShare>
 			<bNukeImmune>1</bNukeImmune>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_SPACE_NEEDLE</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -20437,6 +20763,7 @@
 				<BuildingType>BUILDING_MILITARY_INDUSTRIAL_COMPLEX</BuildingType>
 			</PrereqOrBuildings>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_SPIRAL_MINARET</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -20497,6 +20824,7 @@
 				</PropertySource>
 			</PropertyManipulators>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_SPECIES_RECOVERY_CENTER</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -20539,6 +20867,7 @@
 			<iConquestProb>100</iConquestProb>
 			<iHurryCostModifier>100</iHurryCostModifier>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_STANDARD_MODEL</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -20603,6 +20932,7 @@
 				<BuildingType>BUILDING_PHYSICS_LAB</BuildingType>
 			</PrereqInCityBuildings>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_STARFLEET_ACADEMY</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -20650,6 +20980,7 @@
 				<BuildingType>BUILDING_STARPORT</BuildingType>
 			</PrereqInCityBuildings>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_CULTURE_STARPUNK</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -20682,6 +21013,7 @@
 				</ExtraFreeBonus>
 			</ExtraFreeBonuses>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_STARTRAM</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -20708,6 +21040,7 @@
 			</PrereqInCityBuildings>
 			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_STATUE_OF_LIBERTY</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -20779,6 +21112,7 @@
 				</PropertySource>
 			</PropertyManipulators>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_STONEHENGE</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -20832,6 +21166,7 @@
 				</PropertySource>
 			</PropertyManipulators>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_FINE_STONEWARE_CARVERS</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -20883,6 +21218,7 @@
 			<iConquestProb>100</iConquestProb>
 			<iHurryCostModifier>100</iHurryCostModifier>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_STRATOSPHERE_CASINO</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -20953,6 +21289,7 @@
 				</PropertySource>
 			</PropertyManipulators>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_WOMENS_SUFFRAGE</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -20994,6 +21331,7 @@
 			<bTeamShare>1</bTeamShare>
 			<bNukeImmune>1</bNukeImmune>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_SULTAN_QABOOS_GRAND_MOSQUE</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -21070,6 +21408,7 @@
 				</PropertySource>
 			</PropertyManipulators>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_HAWAIIAN_SURFBOARD_CARVER</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -21115,6 +21454,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_HAWAIIAN_SURFBOARD_CARVER</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_SURFBOARD</MovieDefineTag>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_SU_SONGS_WORKSHOP</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -21175,6 +21515,7 @@
 				</PropertySource>
 			</PropertyManipulators>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_SVALBARD_GLOBAL_SEED_VAULT</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -21226,6 +21567,7 @@
 				</SpecialistYieldChange>
 			</SpecialistYieldChanges>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_SYDNEY_OPERA_HOUSE</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -21299,6 +21641,7 @@
 				</PropertySource>
 			</PropertyManipulators>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_TAIPEI_101</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -21350,6 +21693,7 @@
 			</PropertyManipulators>
 			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_TAJ_MAHAL</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -21402,6 +21746,7 @@
 				</PropertySource>
 			</PropertyManipulators>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_TALL_TOWER</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -21441,6 +21786,7 @@
 			</PrereqOrBuildings>
 			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_TEMPLE_OF_HEAVEN</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -21532,6 +21878,7 @@
 				</PropertySource>
 			</PropertyManipulators>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_TECHNOLOGICAL_CAPITAL</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -21587,6 +21934,7 @@
 				</PropertySource>
 			</PropertyManipulators>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_TERRACOTTA_ARMY</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -21644,6 +21992,7 @@
 				</PropertySource>
 			</PropertyManipulators>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_TERRA_SIGILLATA_WORKSHOP</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -21719,6 +22068,7 @@
 			</Flavors>
 			<iConquestProb>100</iConquestProb>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_THEATRE_OF_DIONYSUS</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -21791,6 +22141,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_THEATRE_OF_DIONYSUS</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_THEATRE_OF_DIONYSUS</MovieDefineTag>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_ALMAGEST</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -21833,6 +22184,7 @@
 				</PropertySource>
 			</PropertyManipulators>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_ATOMIUM</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -21891,6 +22243,7 @@
 				</PropertySource>
 			</PropertyManipulators>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_THE_MOTHERLAND_CALLS</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -21946,6 +22299,7 @@
 				</PropertySource>
 			</PropertyManipulators>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_THOR_SANCTUARY</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -22011,6 +22365,7 @@
 				</Flavor>
 			</Flavors>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_TOKYO_SKY_TREE</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -22062,6 +22417,7 @@
 			<iPrereqPopulation>13</iPrereqPopulation>
 			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_TOKYO_TOWER</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -22113,6 +22469,7 @@
 			<iPrereqPopulation>7</iPrereqPopulation>
 			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_TOPKAPI_PALACE</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -22164,6 +22521,7 @@
 				</PropertySource>
 			</PropertyManipulators>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_TEMPLE_OF_TOTH</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -22257,6 +22615,7 @@
 				</PropertySource>
 			</PropertyManipulators>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_TRANSAMERICA_TOWER</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -22318,6 +22677,7 @@
 			</PropertyManipulators>
 			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_TRANSATLANTIC_TUNNEL</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -22351,6 +22711,7 @@
 				<BuildingType>BUILDING_GRAVITY_TRAIN</BuildingType>
 			</PrereqOrBuildings>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_TROYES_TRADE_FAIR</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -22453,6 +22814,7 @@
 				</PropertySource>
 			</PropertyManipulators>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_WORLD_TOWER</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -22522,6 +22884,7 @@
 			</PropertyManipulators>
 			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_TSUKIJI_FISH_MARKET</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -22577,6 +22940,7 @@
 				</PropertySource>
 			</PropertyManipulators>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_TUMEN_AMUGULANG_PALACE</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -22635,6 +22999,7 @@
 				</PropertySource>
 			</PropertyManipulators>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_ULTIMA_TOWER</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -22675,6 +23040,7 @@
 				<BuildingType>BUILDING_LAUNCH_ARCOLOGY</BuildingType>
 			</PrereqOrBuildings>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_UNITED_NATIONS</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -22710,6 +23076,7 @@
 			<bNukeImmune>1</bNukeImmune>
 			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_HOLY_SEE_LIBRARY</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -22795,6 +23162,7 @@
 				</PropertySource>
 			</PropertyManipulators>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_VENETIAN_ARSENAL</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -22857,6 +23225,7 @@
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_VENUS_PROJECT</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -22890,6 +23259,7 @@
 			</PrereqAmountBuildings>
 			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
+
         <BuildingInfo>
             <Type>BUILDING_WEMBLEY_STADIUM</Type>
             <iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -22930,6 +23300,7 @@
                 </Flavor>
             </Flavors>
         </BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_VENUS_OF_WILLENDORF</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -22981,6 +23352,7 @@
 			<iHurryCostModifier>50</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_VERSAILLES</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -23047,6 +23419,7 @@
 				</PropertySource>
 			</PropertyManipulators>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_WALK_OF_FAME</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -23123,6 +23496,7 @@
 				</PropertySource>
 			</PropertyManipulators>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_WALL_STREET</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -23184,6 +23558,7 @@
 			<iConquestProb>100</iConquestProb>
 			<iHurryCostModifier>100</iHurryCostModifier>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_WANG_ZHENS_WORKSHOP</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -23248,6 +23623,7 @@
 				</PropertySource>
 			</PropertyManipulators>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_WARHOLS_FACTORY</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -23339,6 +23715,7 @@
 				</PropertySource>
 			</PropertyManipulators>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_WESTMINSTER_ABBEY</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -23393,6 +23770,7 @@
 				</PropertySource>
 			</PropertyManipulators>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_WIKIPEDIA</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -23437,6 +23815,7 @@
 			</PropertyManipulators>
 			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_WILLIS_TOWER</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -23495,6 +23874,7 @@
 			</PropertyManipulators>
 			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_WILLOW_RUN</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -23550,6 +23930,7 @@
 				<iYield>25</iYield>
 			</YieldModifiers>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_WOODSTOCK</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -23607,6 +23988,7 @@
 				</PropertySource>
 			</PropertyManipulators>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_WORLD_ELECTRIC_GRID</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -23642,6 +24024,7 @@
 				<BuildingType>BUILDING_SUPERCONDUCTING_GRID</BuildingType>
 			</PrereqOrBuildings>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_WORLD_NEWS_NETWORK</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -23705,6 +24088,7 @@
 				</PropertySource>
 			</PropertyManipulators>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_WORLD_TRADE_CENTER</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -23753,6 +24137,7 @@
 			<bTeamShare>1</bTeamShare>
 			<bNukeImmune>1</bNukeImmune>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_WUDANG_MOUNTAIN</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -23841,6 +24226,7 @@
 				</PropertySource>
 			</PropertyManipulators>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_WORLD_WIDE_FUND_FOR_NATURE</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -23913,6 +24299,7 @@
 			<iConquestProb>100</iConquestProb>
 			<iHurryCostModifier>100</iHurryCostModifier>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_X_SEED_4000</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -23952,6 +24339,7 @@
 				<BuildingType>BUILDING_LAUNCH_ARCOLOGY</BuildingType>
 			</PrereqOrBuildings>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_X_GAMES</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -24005,6 +24393,7 @@
 				</Flavor>
 			</Flavors>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_YASNAYA_POLYANA</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -24048,6 +24437,7 @@
 				</PropertySource>
 			</PropertyManipulators>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_ZHENG_HES_VOYAGE</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -24090,6 +24480,7 @@
 			<iConquestProb>100</iConquestProb>
 			<iHurryCostModifier>100</iHurryCostModifier>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_ZIZKOV_TELEVISION_TOWER</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -24133,6 +24524,7 @@
 				<iCommerce>10</iCommerce>
 			</GlobalCommerceModifiers>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_IKHANDA</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -24200,6 +24592,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_IKHANDA</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_ZULU_IKHANDA</MovieDefineTag>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_ZURICH_ORBITAL</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -24247,5 +24640,6 @@
 			<bOrbital>1</bOrbital>
 			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
+
 	</BuildingInfos>
 </Civ4BuildingInfos>

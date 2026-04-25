@@ -264,15 +264,15 @@ def handle24HourClockCheckboxInput(argsList):
 def handleAlarmOnCheckboxInput(argsList):
 	# Handles Alarm On/Off checkbox clicked input
 	hour = getOptionsScreen().getAlarmHour()
-	min = getOptionsScreen().getAlarmMin()
+	mins = getOptionsScreen().getAlarmMin()
 
-	if "" not in (hour, min) and (hour + min).isdigit():
+	if "" not in (hour, mins) and (hour + mins).isdigit():
 
 		hour = int(hour)
-		min = int(min)
+		mins = int(mins)
 
-		if hour > 0 or min > 0:
-			toggleAlarm(argsList[0], hour, min)
+		if hour > 0 or mins > 0:
+			toggleAlarm(argsList[0], hour, mins)
 	return 1
 
 def handleOtherReset(argsList):

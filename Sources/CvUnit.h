@@ -539,6 +539,7 @@ public:
 
 
 	void doTurn();
+	void doCityPassiveExperience();
 
 	void updateCombat(CvUnit* pSelectedDefender = NULL, bool bSamePlot = false, bool bStealth = false, bool bNoCache = false);
 	void updateAirCombat(bool bQuick = false);
@@ -2446,6 +2447,7 @@ public:
 
 	void changeExtraCaptureResistanceModifier(int iChange);
 	int captureResistanceTotal() const;
+	int surroundedCaptureModifier() const;
 
 	void changeExtraBreakdownChance(int iChange);
 	int breakdownChanceTotal() const;

@@ -2716,14 +2716,6 @@
 			<iHappiness>1</iHappiness>
 			<iMaxAnarchy>-1</iMaxAnarchy>
 			<iUpkeepModifier>15</iUpkeepModifier>
-			<FreePromotionUnitCombatTypes>
-				<FreePromotionUnitCombatType>
-					<PromotionType>PROMOTION_FIRST_AID_PEOPLE</PromotionType>
-					<UnitCombatTypes>
-						<UnitCombatType>UNITCOMBAT_RECON</UnitCombatType>
-					</UnitCombatTypes>
-				</FreePromotionUnitCombatType>
-			</FreePromotionUnitCombatTypes>
 			<BuildingProductionModifierTypes>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_GROVE</BuildingType>
@@ -6641,14 +6633,6 @@
 			</Flavors>
 			<iHealth>2</iHealth>
 			<iMaxAnarchy>-1</iMaxAnarchy>
-			<FreePromotionUnitCombatTypes>
-				<FreePromotionUnitCombatType>
-					<PromotionType>PROMOTION_FIRST_AID_PEOPLE</PromotionType>
-					<UnitCombatTypes>
-						<UnitCombatType>UNITCOMBAT_RECON</UnitCombatType>
-					</UnitCombatTypes>
-				</FreePromotionUnitCombatType>
-			</FreePromotionUnitCombatTypes>
 			<BuildingProductionModifierTypes>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_GROVE</BuildingType>

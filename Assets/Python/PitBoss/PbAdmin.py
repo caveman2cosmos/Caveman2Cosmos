@@ -16,7 +16,7 @@ PB = CyPitboss()
 gc = CyGlobalContext()
 localText = CyTranslator()
 msgBox = None
-
+# potential mark for deletion TODO: MurderMesa/Scvijc
 #
 # resource IDs
 #

@@ -227,7 +227,7 @@ def updateAliveCivsOption():
 		CyPlayer = GC.getPlayer(iPlayer)
 		if CyPlayer.isHuman() and CyPlayer.isAlive():
 			descs.append(GC.getCivilizationInfo(CyPlayer.getCivilizationType()).getShortDescription())
-	sort(descs)
+	descs.sort()
 	aliveCivsOption.setValues(descs)
 
 def changedCurrentDifficulty(option, value):
@@ -363,8 +363,8 @@ def setXMLOptionsfromIniFile():
 
 def resetOptions():
 	import BugOptions
-	ANewDawnoptions = BugOptions.getOptions("RoMSettings").options
-	for i in range(len(ANewDawnoptions)):
-		ANewDawnoptions[i].resetValue()
+	ANewDawnOptions = BugOptions.getOptions("RoMSettings").options
+	for i in range(len(ANewDawnOptions)):
+		ANewDawnOptions[i].resetValue()
 	setXMLOptionsfromIniFile()
 	ANewDawnOpt.setRoMReset(False)

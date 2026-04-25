@@ -878,7 +878,8 @@ class BaseListOption(BaseOption):
 				self.addGetter(name, index)
 		if setter:
 			# TODO: Change to addIndexSetter or pass in value instead of index
-			self.addSetter(name, index)
+			for name in setter.replace(",", " ").split():
+				self.addSetter(name, index)
 
 	def addGetter(self, name, index):
 		if self.getters is None:
@@ -1140,7 +1141,7 @@ class LinkedListOption(LinkedOption):
 
 	def __init__(self, mod, id, option):
 		"""Sets the important fields of the new LinkedListOption."""
-		super(LinkedOption, self).__init__(mod, id, option)
+		super(LinkedListOption, self).__init__(mod, id, option)
 
 	def getListType(self):
 		return self.option.getListType()
@@ -1158,7 +1159,7 @@ class LinkedListOption(LinkedOption):
 		return self.option.isColorList()
 
 	def getValues(self):
-		return self.option.getValue()
+		return self.option.getValues()
 
 	def setValues(self, values):
 		pass

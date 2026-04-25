@@ -761,7 +761,7 @@
 		<Polish>Podstawowe informacje</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUG_OPT_ACO__SHOWDEDENDERHEALTHBARS_HOVER</Tag>
+		<Tag>TXT_KEY_BUG_OPT_ACO__SHOWDEFENDERHEALTHBARS_HOVER</Tag>
 		<English>Select when to show the probability bars of each possible ending health for the defender.</English>
 		<French>Sélectionner dans quelle condition afficher les différentes barres de probabilité correpondantes à la santé du Défenseur à l'issue du Combat.</French>
 		<German>Bestimmt, wann die Wahrscheinlichkeitsbalken für die jeweils erwartete Gesundheit des Verteidigers nach dem Kampf angezeigt werden</German>
@@ -770,7 +770,7 @@
 		<Polish>Wybierz, kiedy maj&#185; by&#230; wy&#156;wietlane s&#179;upki prawdopodobie&#241;stwa ka&#191;dego mo&#191;liwego ko&#241;ca zdrowia obro&#241;cy.</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUG_OPT_ACO__SHOWDEDENDERHEALTHBARS_TEXT</Tag>
+		<Tag>TXT_KEY_BUG_OPT_ACO__SHOWDEFENDERHEALTHBARS_TEXT</Tag>
 		<English>Defender Health Bars</English>
 		<French>Barres de Santé du Défenseur</French>
 		<German>Gesundheitsbalken des Verteidigers</German>
@@ -2765,7 +2765,7 @@
 		<Polish>Najpierw najdro&#191;sza</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUG_OPT_AUTOMATEDSETTINGS__MOSTEXPIERENCED_HOVER</Tag>
+		<Tag>TXT_KEY_BUG_OPT_AUTOMATEDSETTINGS__MOSTEXPERIENCED_HOVER</Tag>
 		<English>The Most Experienced Units will be Upgraded First. If Most Expensive is enabled, it will take precedence.</English>
 		<French>Les Unités ayant la plus grande expérience sont prioritaires.</French>
 		<German>Die Einheiten mit der meisten Erfahrung werden als erstes modernisiert. Wenn auch die Option "Zuerst die teuersten" aktiviert wurde, so hat diese Priorität.</German>
@@ -2775,7 +2775,7 @@
 		<Polish>Najbardziej do&#156;wiadczone jednostki zostan&#185; zmodernizowane w pierwszej kolejno&#156;ci. Je&#156;li opcja Najpierw najdro&#191;sza jest w&#179;&#185;czona, b&#234;dzie ona mia&#179;a pierwsze&#241;stwo.</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUG_OPT_AUTOMATEDSETTINGS__MOSTEXPIERENCED_TEXT</Tag>
+		<Tag>TXT_KEY_BUG_OPT_AUTOMATEDSETTINGS__MOSTEXPERIENCED_TEXT</Tag>
 		<English>Most Experienced</English>
 		<French>D'abord les Expérimentés</French>
 		<German>Zuerst die erfahrensten</German>

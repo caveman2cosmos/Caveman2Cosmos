@@ -255,6 +255,10 @@
 		<Italian>I soldati %s1:3_civ_adjective si sono riuniti attorno ai loro eroi guerrieri.</Italian>
 		<Spanish>Los soldados %s1:3_civ_adjective han cerrado filas alrededor de sus héroes de la espada.</Spanish>
 	</TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENTTRIGGER_SCAVENGING</Tag>
+        <English>%s1_civ_adjective people have found a way to get more food from dead animals.</English>
+    </TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_AXE_HAFT_1</Tag>
 		<English>%s1_civ_adjective craftsmen have improved the design of their axe manufacturing. These are the finest axes in the world.</English>
@@ -848,6 +852,26 @@
 		<Russian>Очень сильное землетрясение разрушило город %s2_city в державе %s1_civ_adjective.</Russian>
 		<Spanish>Un fortísimo terremoto ha sacudido la ciudad %s1:2_civ_adjective de %s2_city.</Spanish>
 	</TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENTTRIGGER_EARTHQUAKE_SMALL</Tag>
+        <English>A small earthquake has shaken the %s1_civ_adjective city of %s2_city.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENTTRIGGER_EARTHQUAKE_MEDIUM</Tag>
+        <English>A medium earthquake has shaken the %s1_civ_adjective city of %s2_city.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENTTRIGGER_EARTHQUAKE_STRONG</Tag>
+        <English>A strong earthquake has shaken the %s1_civ_adjective city of %s2_city.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENTTRIGGER_EARTHQUAKE_HUGE</Tag>
+        <English>A huge earthquake has shaken the %s1_civ_adjective city of %s2_city.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENTTRIGGER_EARTHQUAKE_APOCALYPTIC</Tag>
+        <English>A apocalyptic earthquake has shaken the %s1_civ_adjective city of %s2_city.</English>
+    </TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_ELECTRIC_COMPANY</Tag>
 		<English>Motivated by freedom and quality of life in the %s1_civ_adjective Empire, the power company workers restore electricity outages rapidly, making the citizens there even happier.</English>
@@ -1310,6 +1334,22 @@
         <Tag>TXT_KEY_EVENTTRIGGER_COMMUNITY_BOND</Tag>
         <English>A %s1_civ_adjective community discussion in the city of %s2_city has brought their people closer.</English>
 		<French>Une discussion communautaire %s1:2_civ_adjective dans la ville de %s2_city a rapproché son peuple.</French>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENTTRIGGER_PALISADE</Tag>
+        <English>A %s1_civ_adjective palisade in the city of %s2_city is not in the best condition.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENTTRIGGER_EARTH_WALL</Tag>
+        <English>A %s1_civ_adjective earth wall in the city of %s2_city is not in the best condition.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENTTRIGGER_WALLS</Tag>
+        <English>A %s1_civ_adjective walls in the city of %s2_city is not in the best condition.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENTTRIGGER_HIGH_WALLS</Tag>
+        <English>A %s1_civ_adjective high walls in the city of %s2_city is not in the best condition.</English>
     </TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_HARBORMASTER_DONE</Tag>
@@ -2806,6 +2846,10 @@
 		<Italian>La metropoli %s1_civ_adjective di %s2_city ha costruito un capolavoro per il trasporto di massa: una rete ferroviaria sotterranea. L'hanno chiamata "Metropolitana".</Italian>
 		<Spanish>La metrópolis %s1:2_civ_adjective de %s2_city ha construido una maravilla de los transportes públicos: una red subterránea de ferrocarriles. La han llamado "metropolitano" o "metro".</Spanish>
 	</TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENTTRIGGER_STONE_TOOL_MAKER</Tag>
+        <English>The %s1_civ_adjective stone tool maker in the %s2_city has been rumored to be the best in the world.</English>
+    </TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_SUMMER_OF_LOVE</Tag>
 		<English>The Summer of Love has begun in the city of %s2 as the Woodstock Music Festival is held there.</English>
@@ -5267,6 +5311,10 @@
 		<Polish>Interesuj&#185;ce. Przeka&#191;cie wiedz&#234; reszcie plemienia.</Polish>
 		<Spanish>Interesante. Compartamos estos conocimientos con el resto de la tribu.</Spanish>
 	</TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_SCAVENGING</Tag>
+        <English>Interesting. Let's see what we can do with this knowledge.</English>
+    </TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_COOKING_TRIGGER</Tag>
 		<English>One of our tribe members has accidentally found a way to get more digestible food by putting it over fire for a short period of time.</English>
@@ -8578,6 +8626,54 @@
 		<French>Nous ne faisons qu'un peuple.</French>
     </TEXT>
     <TEXT>
+        <Tag>TXT_KEY_EVENT_PALISADE_1</Tag>
+        <English>Repair the palisade we need it.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_PALISADE_2</Tag>
+        <English>Only do the most critical of repairs we can't afford more.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_PALISADE_3</Tag>
+        <English>We can't afford repairs.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_EARTH_WALL_1</Tag>
+        <English>Repair the earth wall we need it.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_EARTH_WALL_2</Tag>
+        <English>Only do the most critical of repairs we can't afford more.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_EARTH_WALL_3</Tag>
+        <English>We can't afford repairs.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_WALLS_1</Tag>
+        <English>Repair the walls we need it.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_WALLS_2</Tag>
+        <English>Only do the most critical of repairs we can't afford more.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_WALLS_3</Tag>
+        <English>We can't afford repairs.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_HIGH_WALLS_1</Tag>
+        <English>Repair the high walls we need it.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_HIGH_WALLS_2</Tag>
+        <English>Only do the most critical of repairs we can't afford more.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_HIGH_WALLS_3</Tag>
+        <English>We can't afford repairs.</English>
+    </TEXT>
+    <TEXT>
         <Tag>TXT_KEY_EVENT_GREAT_STORY_1</Tag>
         <English>This story was truly amazing.</English>
 		<French>Cette histoire était vraiment incroyable.</French>
@@ -11070,6 +11166,14 @@
 		<Italian>Un modello da seguire per il mondo intero! Bel lavoro.</Italian>
 		<Spanish>¡Es un ejemplo a seguir para todo el mundo! Buen trabajo.</Spanish>
 	</TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_STONE_TOOL_MAKER_1</Tag>
+        <English>Give him whatever he needs to keep making the best tools.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_STONE_TOOL_MAKER_2</Tag>
+        <English>Great news. Our people are the best.</English>
+    </TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_SUMMER_OF_LOVE</Tag>
 		<English>The Age of Aquarius has begun with the Summer of Love! Artists, students, and radicals of all kinds are turning on, tuning in, and dropping out.</English>
@@ -11879,6 +11983,10 @@
 		<Italian>I soldati della vittoriosa unità %s3_unit si sono riuniti attorno ai loro eroi combattenti! La loro forza e la loro determinazione si sono rinsaldate! La loro efficacia è aumentata!</Italian>
 		<Spanish>Los soldados de [NUM3:nuestro:nuestra:nuestros:nuestras] %s3_unit han cerrado filas alrededor de sus héroes de guerra. ¡Su fuerza y su resolución son ahora más inquebrantables y su habilidad ha aumentado!</Spanish>
 	</TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_TRIGGER_SCAVENGING</Tag>
+        <English>Our wanderers have discovered that we can gather animal remains for food and other uses.</English>
+    </TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_TRIGGER_AXE_HAFT_1</Tag>
 		<English>Our craftsmen have devised a technique for improving the balance of our axes.</English>
@@ -12917,6 +13025,22 @@
         <Tag>TXT_KEY_EVENT_TRIGGER_COMMUNITY_BOND_1</Tag>
         <English>Our people sat around a small fire trying to warm up from the cold in %s2_city. Seeing everyone together and exchanging stories made the people feel more united.</English>
 		<French>Notre peuple s'est réuni autour d'un petit feu pour se réchauffer du froid à %s2_city. Voir tout le monde ensemble et échanger des histoires a renforcé le sentiment d'unité.</French>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_TRIGGER_PALISADE_1</Tag>
+        <English>We noticed the city palisade is not in best shape and is in need of some reparis.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_TRIGGER_EARTH_WALL_1</Tag>
+        <English>We noticed the city earth wall is not in best shape and is in need of some reparis.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_TRIGGER_WALLS_1</Tag>
+        <English>We noticed the city walls is not in best shape and is in need of some reparis.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_TRIGGER_HIGH_WALLS_1</Tag>
+        <English>We noticed the city high walls is not in best shape and is in need of some reparis.</English>
     </TEXT>
     <TEXT>
         <Tag>TXT_KEY_EVENT_TRIGGER_COMMUNITY_BOND_2</Tag>
@@ -14387,6 +14511,10 @@
 		<Italian>La gloriosa città di %s2_city ha aggiunto al proprio sistema di trasporti pubblici una rete ferroviaria sotterranea, aumentando di molto il traffico commerciale.</Italian>
 		<Spanish>La gloriosa ciudad de %s2_city ha añadido una red de ferrocarriles subterráneos a sus transportes públicos, lo que ha impulsado mucho el tráfico comercial.</Spanish>
 	</TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_TRIGGER_STONE_TOOL_MAKER_1</Tag>
+        <English>The stone tool maker in %s2_city has become a master of his craft. We have the best stone tools in the world.</English>
+    </TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_TRIGGER_SUPER_VIRUS</Tag>
 		<English>Dire News! Years of super-stringent health standards at our hospitals and clinics has led to the creation of a super-virus in %s2_city!!! What is the best course of action?</English>

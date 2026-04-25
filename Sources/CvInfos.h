@@ -6503,7 +6503,7 @@ public:
 	int getEventChancePerTurn() const;
 	int getSoundtrackSpace() const;
 	int getNumSoundtracks() const;
-	int getBeelineStingsTechCostModifier() const;
+	int getCuttingEdgeCutsTechCostModifier() const;
 	int getInitialCityMaintenancePercent() const;
 
 	const char* getAudioUnitVictoryScript() const;
@@ -6546,7 +6546,7 @@ protected:
 	int m_iEventChancePerTurn;
 	int m_iSoundtrackSpace;
 	int m_iNumSoundtracks;
-	int m_iBeelineStingsTechCostModifier;
+	int m_iCuttingEdgeCutsTechCostModifier;
 	int m_iInitialCityMaintenancePercent;
 
 	CvString m_szAudioUnitVictoryScript;

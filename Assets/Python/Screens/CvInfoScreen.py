@@ -78,7 +78,7 @@ class CvInfoScreen:
 		# uFontEdge, uFont4b, uFont4, uFont3b, uFont3, uFont2b, uFont2, uFont1b, uFont1 = self.aFontList
 		uFont2b = aFontList[5]
 
-		self.H_PAGE = H_PAGE = yRes - 36 - H_BOT_PANEL + 8
+		self.H_PAGE = yRes - 36 - H_BOT_PANEL + 8
 		self.Y_BOT_TEXT = Y_BOT_TEXT = yRes - H_BOT_PANEL + 8
 
 		# Initialize text
@@ -131,7 +131,6 @@ class CvInfoScreen:
 
 		# determine the big graph text spacing
 		self.X_GRAPH_TEXT = []
-		dX = (xRes - 16) / self.iNumGraphs
 		x = xRes - 16
 		for i in xrange(self.iNumGraphs):
 			self.X_GRAPH_TEXT.append(x)
@@ -492,7 +491,7 @@ class CvInfoScreen:
 
 			if self.iGraphEnd:
 				lastTurn = self.iGraphEnd
-			else: lastTurn = thisTurn - 1 # all civs haven't neccessarily got a score for the current turn
+			else: lastTurn = thisTurn - 1 # all civs haven't necessarily got a score for the current turn
 
 			# Draw x-labels
 			screen.setLabel(self.getNextWidgetName(), "", self.getDate(firstTurn), 1<<0, xGraph + 14, self.Y_BOT_TEXT - 30, 0, eFont, eWidGen, 1, 2)
@@ -614,7 +613,6 @@ class CvInfoScreen:
 				textColorR = playerX.getPlayerTextColorR()
 				textColorG = playerX.getPlayerTextColorG()
 				textColorB = playerX.getPlayerTextColorB()
-				textColorA = playerX.getPlayerTextColorA()
 
 			txt = "<color=%d,%d,%d>%s</color>" %(textColorR, textColorG, textColorB, name)
 
@@ -898,7 +896,7 @@ class CvInfoScreen:
 					iMedianPop = iPop / 2
 				# City Value, could expand this one...
 				iTotalCityValue = (
-					6 * iPop + cityX.getCulture(i) / 10
+					6 * iPop + cityX.getCulture(i) / 30
 					+ 2 * cityX.getYieldRate(YieldTypes.YIELD_FOOD)
 					+ 3 * cityX.getYieldRate(YieldTypes.YIELD_PRODUCTION)
 					+ 3 * cityX.getYieldRate(YieldTypes.YIELD_COMMERCE)
@@ -1007,7 +1005,6 @@ class CvInfoScreen:
 
 
 		xDD = 540
-		wDD = 420
 
 		screen.addPanel(self.getNextWidgetName(), "", "", True, True, 520, 70, 460, 620, PanelStyles.PANEL_STYLE_MAIN)
 
@@ -1095,7 +1092,7 @@ class CvInfoScreen:
 								if iTeamX == self.iTeam or self.team.isHasMet(iTeamX):
 									aaWondersBuilt.append([cityX.getBuildingOriginalTime(iBuildingLoop),iBuildingLoop,True, playerX.getCivilizationShortDescription(0), cityX, iPlayerX])
 								else:
-									aaWondersBuilt.append([cityX.getBuildingOriginalTime(iBuildingLoop),iBuildingLoop,False,TRNSLTR.getText("TXT_KEY_UNKNOWN", ()), cityX, 18])
+									aaWondersBuilt.append([cityX.getBuildingOriginalTime(iBuildingLoop),iBuildingLoop,False,TRNSLTR.getText("TXT_KEY_UNKNOWN", ()), cityX, -1])
 								iNumWonders += 1
 
 						# National/Team Wonder Mode
@@ -1149,7 +1146,7 @@ class CvInfoScreen:
 							if (iTeamLoop == self.iTeam or self.team.isHasMet(iTeamLoop)):
 								aaWondersBuilt.append([-9999,iProjectLoop,True,GC.getPlayer(iPlayerLoop).getCivilizationShortDescription(0),None, iPlayerLoop])
 							else:
-								aaWondersBuilt.append([-9999,iProjectLoop,False,TRNSLTR.getText("TXT_KEY_UNKNOWN", ()),None, 9999])
+								aaWondersBuilt.append([-9999,iProjectLoop,False,TRNSLTR.getText("TXT_KEY_UNKNOWN", ()),None, -1])
 							iNumWonders += 1
 
 		# Sort wonders in order of date built
@@ -1179,11 +1176,12 @@ class CvInfoScreen:
 			iPlayer = aaWondersBeingBuilt[i][3]
 
 			color = -1
-			ePlayerColor = GC.getPlayer(iPlayer).getPlayerColor()
-			if ePlayerColor != -1:
-				playerColor = GC.getPlayerColorInfo(ePlayerColor)
-				if playerColor:
-					color = playerColor.getColorTypePrimary()
+			if iPlayer >= 0:
+				ePlayerColor = GC.getPlayer(iPlayer).getPlayerColor()
+				if ePlayerColor != -1:
+					playerColor = GC.getPlayerColorInfo(ePlayerColor)
+					if playerColor:
+						color = playerColor.getColorTypePrimary()
 
 			if self.szWonderDisplayMode == "Projects":
 				pWonderInfo = GC.getProjectInfo(iWonderType)
@@ -1223,11 +1221,12 @@ class CvInfoScreen:
 			iPlayer = aaWondersBuilt[i][5]
 
 			color = -1
-			ePlayerColor = GC.getPlayer(iPlayer).getPlayerColor()
-			if ePlayerColor != -1:
-				playerColor = GC.getPlayerColorInfo(ePlayerColor)
-				if playerColor:
-					color = playerColor.getColorTypePrimary()
+			if iPlayer >= 0:
+				ePlayerColor = GC.getPlayer(iPlayer).getPlayerColor()
+				if ePlayerColor != -1:
+					playerColor = GC.getPlayerColorInfo(ePlayerColor)
+					if playerColor:
+						color = playerColor.getColorTypePrimary()
 
 			if self.szWonderDisplayMode == "Projects":
 				pWonderInfo = GC.getProjectInfo(iWonderType)
@@ -1322,7 +1321,7 @@ class CvInfoScreen:
 			aiBuildingsBuilt.append(CyStatistics().getPlayerNumBuildingsBuilt(self.iPlayer, iBuildingLoop))
 
 		aiUnitsCurrent = []
-		for iUnitLoop in xrange(iNumUnits):
+		for _ in xrange(iNumUnits):
 			aiUnitsCurrent.append(0)
 
 		player = GC.getPlayer(self.iPlayer)
@@ -1331,7 +1330,7 @@ class CvInfoScreen:
 			aiUnitsCurrent[iType] += 1
 
 		aiImprovementsCurrent = []
-		for iImprovementLoop in xrange(iNumImprovements):
+		for _ in xrange(iNumImprovements):
 			aiImprovementsCurrent.append(0)
 
 		for plot in CyMap().plots():
@@ -1362,9 +1361,8 @@ class CvInfoScreen:
 		screen.setTableColumnHeader(szTopChart, 1, "", 76)
 
 		# Add Rows
-		for i in xrange(3):
+		for i in xrange(4):
 			screen.appendTableRow(szTopChart)
-		iNumRows = screen.getTableNumRows(szTopChart)
 
 		# Graph itself
 		screen.setTableText(szTopChart, 0, 0, self.TEXT_TIME_PLAYED, "", eWidGen, 1, 2, 1<<0)
@@ -1421,20 +1419,17 @@ class CvInfoScreen:
 
 
 		# Add Rows
-		for i in xrange(iNumUnits):
+		for _ in xrange(iNumUnits):
 			screen.appendTableRow(szUnitsTable)
-		iNumUnitRows = screen.getTableNumRows(szUnitsTable)
 
-		for i in xrange(iNumBuildings):
+		for _ in xrange(iNumBuildings):
 			screen.appendTableRow(szBuildingsTable)
-		iNumBuildingRows = screen.getTableNumRows(szBuildingsTable)
 
 
 		if self.bShowImprovement:
 			for i in xrange(iNumImprovements):
 				if aiImprovementsCurrent[i] > 0:
 					screen.appendTableRow(szImprovementsTable)
-			iNumImprovementRows = screen.getTableNumRows(szImprovementsTable)
 
 		# Add Units to table
 		for i in xrange(iNumUnits):
@@ -1548,7 +1543,7 @@ class CvInfoScreen:
 					self.drawGraphs()
 
 				elif szWidgetName == self.szGraphSmoothingDropdownWidget:
-					self.iGraph_Smoothing = iSelected
+					self.iGraph_Smoothing = iSelected * 2
 					self.drawGraphs()
 
 

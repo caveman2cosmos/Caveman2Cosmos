@@ -24,7 +24,7 @@ class PediaFeature:
 				break
 			iSize -= 4
 
-		self.X_COL_1 = X_COL_1 = parent.X_PEDIA_PAGE
+		self.X_COL_1 = parent.X_PEDIA_PAGE
 
 		self.S_ICON = H_TOP_ROW - 10
 
@@ -116,6 +116,7 @@ class PediaFeature:
 				szTemp = szTemp[:-1]
 			szTxt += " (%s%% with a route)" % szTemp
 
+		iTemp1 = 0
 		iTemp = CvTheFeature.getDisappearanceProbability()
 		if iTemp > 0:
 			if iTemp1:

@@ -94,13 +94,13 @@ class CvForeignAdvisor:
 
 		if xRes > 1700:
 			self.iResID = 2
-			self.aFontList = aFontList = [uFontEdge, "<font=4b>", "<font=4>", "<font=3b>", "<font=3>", "<font=2b>", "<font=2>"]
+			self.aFontList = [uFontEdge, "<font=4b>", "<font=4>", "<font=3b>", "<font=3>", "<font=2b>", "<font=2>"]
 		elif xRes > 1400:
 			self.iResID = 1
-			self.aFontList = aFontList = [uFontEdge, "<font=3b>", "<font=3>", "<font=2b>", "<font=2>", "<font=1b>", "<font=1>"]
+			self.aFontList = [uFontEdge, "<font=3b>", "<font=3>", "<font=2b>", "<font=2>", "<font=1b>", "<font=1>"]
 		else:
 			self.iResID = 0
-			self.aFontList = aFontList = [uFontEdge, "<font=2b>", "<font=2>", "<font=1b>", "<font=1>", "<font=0b>", "<font=0>"]
+			self.aFontList = [uFontEdge, "<font=2b>", "<font=2>", "<font=1b>", "<font=1>", "<font=0b>", "<font=0>"]
 
 		Y_BOT_TEXT = yRes - H_EDGE_PANEL + 8
 
@@ -344,7 +344,6 @@ class CvForeignAdvisor:
 		else:
 			# attitudes shown are towards active leader
 			iLeaderBase = iPlayer
-			CyPlayerBase = CyPlayer
 			iTeamBase = iTeam
 			CyTeamBase = CyTeam
 
@@ -367,7 +366,6 @@ class CvForeignAdvisor:
 				screen.setLabel(self.getNextWidget(), "", uFont3 + CyPlayer.getName(), 1<<2, fX0, fY + iSize + 4, 0, eFontGame, eWidGen, 1, 1)
 				if not selectedLeaders: continue
 				fY0 = yMid
-				CyPlayerX = CyPlayer
 				iTeamX = iTeam
 				CyTeamX = CyTeam
 			else:
@@ -533,7 +531,6 @@ class CvForeignAdvisor:
 		screen.addScrollPanel(ScPnl, "", -6, H_EDGE - 8, xRes + 8, h, ePnlHelpHUD)
 		screen.setStyle(ScPnl, "ScrollPanel_Alt_Style")
 		# loop through all deals and map the number of deals other players have with the active player.
-		aList = []
 		aMap = {}
 		for i in self.hasMet:
 			print GTM.getActiveDealsString(i, iPlayer)
@@ -590,9 +587,7 @@ class CvForeignAdvisor:
 
 		eFontGame = FontTypes.GAME_FONT
 		eWidGen			= WidgetTypes.WIDGET_GENERAL
-		eWidJuToBonus	= WidgetTypes.WIDGET_PEDIA_JUMP_TO_BONUS
 
-		ePnlHelpHUD	= PanelStyles.PANEL_STYLE_HUD_HELP
 		ePnlBlue50	= PanelStyles.PANEL_STYLE_BLUE50
 		ePnlSTD		= PanelStyles.PANEL_STYLE_STANDARD
 		ePnlEmpty	= PanelStyles.PANEL_STYLE_EMPTY
@@ -765,7 +760,6 @@ class CvForeignAdvisor:
 								iGold -= TradeData2.iData
 							else:
 								iGold += TradeData2.iData
-							iGold -= TradeData2.iData
 						elif TradeData2.ItemType == eTradeBonus:
 							if iPlayerA == iPlayerX:
 								aList3.append([TradeData2.iData, CyDeal])
@@ -1065,7 +1059,6 @@ class CvForeignAdvisor:
 		eFontGame = FontTypes.GAME_FONT
 		eWidGen			= WidgetTypes.WIDGET_GENERAL
 
-		ePnlHelpHUD	= PanelStyles.PANEL_STYLE_HUD_HELP
 		ePnlBlue50	= PanelStyles.PANEL_STYLE_BLUE50
 		ePnlSTD		= PanelStyles.PANEL_STYLE_STANDARD
 		ePnlEmpty	= PanelStyles.PANEL_STYLE_EMPTY
@@ -1256,12 +1249,10 @@ class CvForeignAdvisor:
 		HandleInputUtil.debugInput(inputClass)
 		bAlt, bCtrl, bShift = self.InputData.getModifierKeys()
 		iCode	= inputClass.eNotifyCode
-		iData	= inputClass.iData
 		ID		= inputClass.iItemID
 		NAME	= inputClass.szFunctionName
 		iBtn	= inputClass.iButtonType
 		iData1	= inputClass.iData1
-		iData2	= inputClass.iData2
 		szFlag	= HandleInputUtil.MOUSE_FLAGS.get(inputClass.uiFlags, "UNKNOWN")
 
 		szSplit = NAME.split("|")

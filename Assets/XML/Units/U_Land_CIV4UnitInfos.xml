@@ -91,220 +91,6 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-            <BonusProductionModifiers>
-                <BonusProductionModifier>
-                    <BonusType>BONUS_WHALE</BonusType>
-                    <iProductonModifier>1</iProductonModifier>
-                </BonusProductionModifier>
-                <BonusProductionModifier>
-                    <BonusType>BONUS_SHRIMP</BonusType>
-                    <iProductonModifier>1</iProductonModifier>
-                </BonusProductionModifier>
-                <BonusProductionModifier>
-                    <BonusType>BONUS_MUREX</BonusType>
-                    <iProductonModifier>1</iProductonModifier>
-                </BonusProductionModifier>
-                <BonusProductionModifier>
-                    <BonusType>BONUS_LOBSTER</BonusType>
-                    <iProductonModifier>1</iProductonModifier>
-                </BonusProductionModifier>
-                <BonusProductionModifier>
-                    <BonusType>BONUS_FISH</BonusType>
-                    <iProductonModifier>1</iProductonModifier>
-                </BonusProductionModifier>
-                <BonusProductionModifier>
-                    <BonusType>BONUS_CRAB</BonusType>
-                    <iProductonModifier>1</iProductonModifier>
-                </BonusProductionModifier>
-                <BonusProductionModifier>
-                    <BonusType>BONUS_CLAM</BonusType>
-                    <iProductonModifier>1</iProductonModifier>
-                </BonusProductionModifier>
-                <BonusProductionModifier>
-                    <BonusType>BONUS_WALRUS</BonusType>
-                    <iProductonModifier>1</iProductonModifier>
-                </BonusProductionModifier>
-                <BonusProductionModifier>
-                    <BonusType>BONUS_SEA_LION_AND_SEAL</BonusType>
-                    <iProductonModifier>1</iProductonModifier>
-                </BonusProductionModifier>
-                <BonusProductionModifier>
-                    <BonusType>BONUS_RABBIT</BonusType>
-                    <iProductonModifier>1</iProductonModifier>
-                </BonusProductionModifier>
-                <BonusProductionModifier>
-                    <BonusType>BONUS_POULTRY</BonusType>
-                    <iProductonModifier>1</iProductonModifier>
-                </BonusProductionModifier>
-                <BonusProductionModifier>
-                    <BonusType>BONUS_MUSHROOMS</BonusType>
-                    <iProductonModifier>1</iProductonModifier>
-                </BonusProductionModifier>
-                <BonusProductionModifier>
-                    <BonusType>BONUS_GRAPES</BonusType>
-                    <iProductonModifier>1</iProductonModifier>
-                </BonusProductionModifier>
-                <BonusProductionModifier>
-                    <BonusType>BONUS_VANILLA</BonusType>
-                    <iProductonModifier>1</iProductonModifier>
-                </BonusProductionModifier>
-                <BonusProductionModifier>
-                    <BonusType>BONUS_PRICKLY_PEAR</BonusType>
-                    <iProductonModifier>1</iProductonModifier>
-                </BonusProductionModifier>
-                <BonusProductionModifier>
-                    <BonusType>BONUS_PEYOTE</BonusType>
-                    <iProductonModifier>1</iProductonModifier>
-                </BonusProductionModifier>
-                <BonusProductionModifier>
-                    <BonusType>BONUS_KAVA</BonusType>
-                    <iProductonModifier>1</iProductonModifier>
-                </BonusProductionModifier>
-                <BonusProductionModifier>
-                    <BonusType>BONUS_COCOA</BonusType>
-                    <iProductonModifier>1</iProductonModifier>
-                </BonusProductionModifier>
-                <BonusProductionModifier>
-                    <BonusType>BONUS_OLIVES</BonusType>
-                    <iProductonModifier>1</iProductonModifier>
-                </BonusProductionModifier>
-                <BonusProductionModifier>
-                    <BonusType>BONUS_POMEGRANATE</BonusType>
-                    <iProductonModifier>1</iProductonModifier>
-                </BonusProductionModifier>
-                <BonusProductionModifier>
-                    <BonusType>BONUS_PISTACHIO</BonusType>
-                    <iProductonModifier>1</iProductonModifier>
-                </BonusProductionModifier>
-                <BonusProductionModifier>
-                    <BonusType>BONUS_PAPAYA</BonusType>
-                    <iProductonModifier>1</iProductonModifier>
-                </BonusProductionModifier>
-                <BonusProductionModifier>
-                    <BonusType>BONUS_MANGO</BonusType>
-                    <iProductonModifier>1</iProductonModifier>
-                </BonusProductionModifier>
-                <BonusProductionModifier>
-                    <BonusType>BONUS_LEMONS</BonusType>
-                    <iProductonModifier>1</iProductonModifier>
-                </BonusProductionModifier>
-                <BonusProductionModifier>
-                    <BonusType>BONUS_GUAVAS</BonusType>
-                    <iProductonModifier>1</iProductonModifier>
-                </BonusProductionModifier>
-                <BonusProductionModifier>
-                    <BonusType>BONUS_FIG</BonusType>
-                    <iProductonModifier>1</iProductonModifier>
-                </BonusProductionModifier>
-                <BonusProductionModifier>
-                    <BonusType>BONUS_DATES</BonusType>
-                    <iProductonModifier>1</iProductonModifier>
-                </BonusProductionModifier>
-                <BonusProductionModifier>
-                    <BonusType>BONUS_COCONUT</BonusType>
-                    <iProductonModifier>1</iProductonModifier>
-                </BonusProductionModifier>
-                <BonusProductionModifier>
-                    <BonusType>BONUS_BANANA</BonusType>
-                    <iProductonModifier>1</iProductonModifier>
-                </BonusProductionModifier>
-                <BonusProductionModifier>
-                    <BonusType>BONUS_APPLE</BonusType>
-                    <iProductonModifier>1</iProductonModifier>
-                </BonusProductionModifier>
-                <BonusProductionModifier>
-                    <BonusType>BONUS_ALMONDS</BonusType>
-                    <iProductonModifier>1</iProductonModifier>
-                </BonusProductionModifier>
-                <BonusProductionModifier>
-                    <BonusType>BONUS_WHEAT</BonusType>
-                    <iProductonModifier>1</iProductonModifier>
-                </BonusProductionModifier>
-                <BonusProductionModifier>
-                    <BonusType>BONUS_SQUASH</BonusType>
-                    <iProductonModifier>1</iProductonModifier>
-                </BonusProductionModifier>
-                <BonusProductionModifier>
-                    <BonusType>BONUS_RICE</BonusType>
-                    <iProductonModifier>1</iProductonModifier>
-                </BonusProductionModifier>
-                <BonusProductionModifier>
-                    <BonusType>BONUS_PUMPKIN</BonusType>
-                    <iProductonModifier>1</iProductonModifier>
-                </BonusProductionModifier>
-                <BonusProductionModifier>
-                    <BonusType>BONUS_POTATOES</BonusType>
-                    <iProductonModifier>1</iProductonModifier>
-                </BonusProductionModifier>
-                <BonusProductionModifier>
-                    <BonusType>BONUS_MELONS</BonusType>
-                    <iProductonModifier>1</iProductonModifier>
-                </BonusProductionModifier>
-                <BonusProductionModifier>
-                    <BonusType>BONUS_CORN</BonusType>
-                    <iProductonModifier>1</iProductonModifier>
-                </BonusProductionModifier>
-                <BonusProductionModifier>
-                    <BonusType>BONUS_BARLEY</BonusType>
-                    <iProductonModifier>1</iProductonModifier>
-                </BonusProductionModifier>
-                <BonusProductionModifier>
-                    <BonusType>BONUS_BISON</BonusType>
-                    <iProductonModifier>1</iProductonModifier>
-                </BonusProductionModifier>
-                <BonusProductionModifier>
-                    <BonusType>BONUS_DEER</BonusType>
-                    <iProductonModifier>1</iProductonModifier>
-                </BonusProductionModifier>
-                <BonusProductionModifier>
-                    <BonusType>BONUS_GUINEA_PIGS</BonusType>
-                    <iProductonModifier>1</iProductonModifier>
-                </BonusProductionModifier>
-                <BonusProductionModifier>
-                    <BonusType>BONUS_KANGAROO</BonusType>
-                    <iProductonModifier>1</iProductonModifier>
-                </BonusProductionModifier>
-                <BonusProductionModifier>
-                    <BonusType>BONUS_MAMMOTH</BonusType>
-                    <iProductonModifier>1</iProductonModifier>
-                </BonusProductionModifier>
-                <BonusProductionModifier>
-                    <BonusType>BONUS_RABBIT</BonusType>
-                    <iProductonModifier>1</iProductonModifier>
-                </BonusProductionModifier>
-                <BonusProductionModifier>
-                    <BonusType>BONUS_BEAVERS</BonusType>
-                    <iProductonModifier>1</iProductonModifier>
-                </BonusProductionModifier>
-                <BonusProductionModifier>
-                    <BonusType>BONUS_PIG</BonusType>
-                    <iProductonModifier>1</iProductonModifier>
-                </BonusProductionModifier>
-                <BonusProductionModifier>
-                    <BonusType>BONUS_SHEEP</BonusType>
-                    <iProductonModifier>1</iProductonModifier>
-                </BonusProductionModifier>
-                <BonusProductionModifier>
-                    <BonusType>BONUS_COW</BonusType>
-                    <iProductonModifier>1</iProductonModifier>
-                </BonusProductionModifier>
-                <BonusProductionModifier>
-                    <BonusType>BONUS_HORSE</BonusType>
-                    <iProductonModifier>2</iProductonModifier>
-                </BonusProductionModifier>
-                <BonusProductionModifier>
-                    <BonusType>BONUS_DONKEY</BonusType>
-                    <iProductonModifier>2</iProductonModifier>
-                </BonusProductionModifier>
-                <BonusProductionModifier>
-                    <BonusType>BONUS_LLAMA</BonusType>
-                    <iProductonModifier>2</iProductonModifier>
-                </BonusProductionModifier>
-                <BonusProductionModifier>
-                    <BonusType>BONUS_CAMEL</BonusType>
-                    <iProductonModifier>2</iProductonModifier>
-                </BonusProductionModifier>
-            </BonusProductionModifiers>
 			<DefaultUnitAI>UNITAI_SETTLE</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_TRIBE</Description>
 			<Civilopedia>TXT_KEY_UNIT_TRIBE_PEDIA</Civilopedia>
@@ -372,220 +158,6 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-            <BonusProductionModifiers>
-                <BonusProductionModifier>
-                    <BonusType>BONUS_WHALE</BonusType>
-                    <iProductonModifier>1</iProductonModifier>
-                </BonusProductionModifier>
-                <BonusProductionModifier>
-                    <BonusType>BONUS_SHRIMP</BonusType>
-                    <iProductonModifier>1</iProductonModifier>
-                </BonusProductionModifier>
-                <BonusProductionModifier>
-                    <BonusType>BONUS_MUREX</BonusType>
-                    <iProductonModifier>1</iProductonModifier>
-                </BonusProductionModifier>
-                <BonusProductionModifier>
-                    <BonusType>BONUS_LOBSTER</BonusType>
-                    <iProductonModifier>1</iProductonModifier>
-                </BonusProductionModifier>
-                <BonusProductionModifier>
-                    <BonusType>BONUS_FISH</BonusType>
-                    <iProductonModifier>1</iProductonModifier>
-                </BonusProductionModifier>
-                <BonusProductionModifier>
-                    <BonusType>BONUS_CRAB</BonusType>
-                    <iProductonModifier>1</iProductonModifier>
-                </BonusProductionModifier>
-                <BonusProductionModifier>
-                    <BonusType>BONUS_CLAM</BonusType>
-                    <iProductonModifier>1</iProductonModifier>
-                </BonusProductionModifier>
-                <BonusProductionModifier>
-                    <BonusType>BONUS_WALRUS</BonusType>
-                    <iProductonModifier>1</iProductonModifier>
-                </BonusProductionModifier>
-                <BonusProductionModifier>
-                    <BonusType>BONUS_SEA_LION_AND_SEAL</BonusType>
-                    <iProductonModifier>1</iProductonModifier>
-                </BonusProductionModifier>
-                <BonusProductionModifier>
-                    <BonusType>BONUS_RABBIT</BonusType>
-                    <iProductonModifier>1</iProductonModifier>
-                </BonusProductionModifier>
-                <BonusProductionModifier>
-                    <BonusType>BONUS_POULTRY</BonusType>
-                    <iProductonModifier>1</iProductonModifier>
-                </BonusProductionModifier>
-                <BonusProductionModifier>
-                    <BonusType>BONUS_MUSHROOMS</BonusType>
-                    <iProductonModifier>1</iProductonModifier>
-                </BonusProductionModifier>
-                <BonusProductionModifier>
-                    <BonusType>BONUS_GRAPES</BonusType>
-                    <iProductonModifier>1</iProductonModifier>
-                </BonusProductionModifier>
-                <BonusProductionModifier>
-                    <BonusType>BONUS_VANILLA</BonusType>
-                    <iProductonModifier>1</iProductonModifier>
-                </BonusProductionModifier>
-                <BonusProductionModifier>
-                    <BonusType>BONUS_PRICKLY_PEAR</BonusType>
-                    <iProductonModifier>1</iProductonModifier>
-                </BonusProductionModifier>
-                <BonusProductionModifier>
-                    <BonusType>BONUS_PEYOTE</BonusType>
-                    <iProductonModifier>1</iProductonModifier>
-                </BonusProductionModifier>
-                <BonusProductionModifier>
-                    <BonusType>BONUS_KAVA</BonusType>
-                    <iProductonModifier>1</iProductonModifier>
-                </BonusProductionModifier>
-                <BonusProductionModifier>
-                    <BonusType>BONUS_COCOA</BonusType>
-                    <iProductonModifier>1</iProductonModifier>
-                </BonusProductionModifier>
-                <BonusProductionModifier>
-                    <BonusType>BONUS_OLIVES</BonusType>
-                    <iProductonModifier>1</iProductonModifier>
-                </BonusProductionModifier>
-                <BonusProductionModifier>
-                    <BonusType>BONUS_POMEGRANATE</BonusType>
-                    <iProductonModifier>1</iProductonModifier>
-                </BonusProductionModifier>
-                <BonusProductionModifier>
-                    <BonusType>BONUS_PISTACHIO</BonusType>
-                    <iProductonModifier>1</iProductonModifier>
-                </BonusProductionModifier>
-                <BonusProductionModifier>
-                    <BonusType>BONUS_PAPAYA</BonusType>
-                    <iProductonModifier>1</iProductonModifier>
-                </BonusProductionModifier>
-                <BonusProductionModifier>
-                    <BonusType>BONUS_MANGO</BonusType>
-                    <iProductonModifier>1</iProductonModifier>
-                </BonusProductionModifier>
-                <BonusProductionModifier>
-                    <BonusType>BONUS_LEMONS</BonusType>
-                    <iProductonModifier>1</iProductonModifier>
-                </BonusProductionModifier>
-                <BonusProductionModifier>
-                    <BonusType>BONUS_GUAVAS</BonusType>
-                    <iProductonModifier>1</iProductonModifier>
-                </BonusProductionModifier>
-                <BonusProductionModifier>
-                    <BonusType>BONUS_FIG</BonusType>
-                    <iProductonModifier>1</iProductonModifier>
-                </BonusProductionModifier>
-                <BonusProductionModifier>
-                    <BonusType>BONUS_DATES</BonusType>
-                    <iProductonModifier>1</iProductonModifier>
-                </BonusProductionModifier>
-                <BonusProductionModifier>
-                    <BonusType>BONUS_COCONUT</BonusType>
-                    <iProductonModifier>1</iProductonModifier>
-                </BonusProductionModifier>
-                <BonusProductionModifier>
-                    <BonusType>BONUS_BANANA</BonusType>
-                    <iProductonModifier>1</iProductonModifier>
-                </BonusProductionModifier>
-                <BonusProductionModifier>
-                    <BonusType>BONUS_APPLE</BonusType>
-                    <iProductonModifier>1</iProductonModifier>
-                </BonusProductionModifier>
-                <BonusProductionModifier>
-                    <BonusType>BONUS_ALMONDS</BonusType>
-                    <iProductonModifier>1</iProductonModifier>
-                </BonusProductionModifier>
-                <BonusProductionModifier>
-                    <BonusType>BONUS_WHEAT</BonusType>
-                    <iProductonModifier>1</iProductonModifier>
-                </BonusProductionModifier>
-                <BonusProductionModifier>
-                    <BonusType>BONUS_SQUASH</BonusType>
-                    <iProductonModifier>1</iProductonModifier>
-                </BonusProductionModifier>
-                <BonusProductionModifier>
-                    <BonusType>BONUS_RICE</BonusType>
-                    <iProductonModifier>1</iProductonModifier>
-                </BonusProductionModifier>
-                <BonusProductionModifier>
-                    <BonusType>BONUS_PUMPKIN</BonusType>
-                    <iProductonModifier>1</iProductonModifier>
-                </BonusProductionModifier>
-                <BonusProductionModifier>
-                    <BonusType>BONUS_POTATOES</BonusType>
-                    <iProductonModifier>1</iProductonModifier>
-                </BonusProductionModifier>
-                <BonusProductionModifier>
-                    <BonusType>BONUS_MELONS</BonusType>
-                    <iProductonModifier>1</iProductonModifier>
-                </BonusProductionModifier>
-                <BonusProductionModifier>
-                    <BonusType>BONUS_CORN</BonusType>
-                    <iProductonModifier>1</iProductonModifier>
-                </BonusProductionModifier>
-                <BonusProductionModifier>
-                    <BonusType>BONUS_BARLEY</BonusType>
-                    <iProductonModifier>1</iProductonModifier>
-                </BonusProductionModifier>
-                <BonusProductionModifier>
-                    <BonusType>BONUS_BISON</BonusType>
-                    <iProductonModifier>1</iProductonModifier>
-                </BonusProductionModifier>
-                <BonusProductionModifier>
-                    <BonusType>BONUS_DEER</BonusType>
-                    <iProductonModifier>1</iProductonModifier>
-                </BonusProductionModifier>
-                <BonusProductionModifier>
-                    <BonusType>BONUS_GUINEA_PIGS</BonusType>
-                    <iProductonModifier>1</iProductonModifier>
-                </BonusProductionModifier>
-                <BonusProductionModifier>
-                    <BonusType>BONUS_KANGAROO</BonusType>
-                    <iProductonModifier>1</iProductonModifier>
-                </BonusProductionModifier>
-                <BonusProductionModifier>
-                    <BonusType>BONUS_MAMMOTH</BonusType>
-                    <iProductonModifier>1</iProductonModifier>
-                </BonusProductionModifier>
-                <BonusProductionModifier>
-                    <BonusType>BONUS_RABBIT</BonusType>
-                    <iProductonModifier>1</iProductonModifier>
-                </BonusProductionModifier>
-                <BonusProductionModifier>
-                    <BonusType>BONUS_BEAVERS</BonusType>
-                    <iProductonModifier>1</iProductonModifier>
-                </BonusProductionModifier>
-                <BonusProductionModifier>
-                    <BonusType>BONUS_PIG</BonusType>
-                    <iProductonModifier>1</iProductonModifier>
-                </BonusProductionModifier>
-                <BonusProductionModifier>
-                    <BonusType>BONUS_SHEEP</BonusType>
-                    <iProductonModifier>1</iProductonModifier>
-                </BonusProductionModifier>
-                <BonusProductionModifier>
-                    <BonusType>BONUS_COW</BonusType>
-                    <iProductonModifier>1</iProductonModifier>
-                </BonusProductionModifier>
-                <BonusProductionModifier>
-                    <BonusType>BONUS_HORSE</BonusType>
-                    <iProductonModifier>2</iProductonModifier>
-                </BonusProductionModifier>
-                <BonusProductionModifier>
-                    <BonusType>BONUS_DONKEY</BonusType>
-                    <iProductonModifier>2</iProductonModifier>
-                </BonusProductionModifier>
-                <BonusProductionModifier>
-                    <BonusType>BONUS_LLAMA</BonusType>
-                    <iProductonModifier>2</iProductonModifier>
-                </BonusProductionModifier>
-                <BonusProductionModifier>
-                    <BonusType>BONUS_CAMEL</BonusType>
-                    <iProductonModifier>2</iProductonModifier>
-                </BonusProductionModifier>
-            </BonusProductionModifiers>
             <DefaultUnitAI>UNITAI_SETTLE</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_SETTLER</Description>
 			<Civilopedia>TXT_KEY_UNIT_SETTLER_PEDIA</Civilopedia>
@@ -940,7 +512,7 @@
 				</UnitMeshGroup>
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
-			<ObsoleteTech>TECH_PERSISTENCE_HUNTING</ObsoleteTech>
+			<ObsoleteTech>TECH_TRAILS</ObsoleteTech>
 			<SupersedingUnits>
 				<UnitType>UNIT_NEANDERTHAL_WANDERER</UnitType>
 			</SupersedingUnits>
@@ -1633,12 +1205,12 @@
 			<iXPValueDefense>1</iXPValueDefense>
 			<iPursuit>20</iPursuit>
 			<iCityAttack>-75</iCityAttack>
-			<iAnimalCombat>120</iAnimalCombat>
+			<iAnimalCombat>100</iAnimalCombat>
 			<iEarlyWithdraw>40</iEarlyWithdraw>
 			<UnitCombatMods>
 				<UnitCombatMod>
 					<UnitCombatType>UNITCOMBAT_ANIMAL_COMBAT_FLEEING</UnitCombatType>
-					<iUnitCombatMod>150</iUnitCombatMod>
+					<iUnitCombatMod>100</iUnitCombatMod>
 				</UnitCombatMod>
 				<UnitCombatMod>
 					<UnitCombatType>UNITCOMBAT_ANIMAL_COMBAT_RAGING</UnitCombatType>
@@ -26977,10 +26549,20 @@
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_TRIBAL_GUARDIAN</Type>
+            <iMaxPlayerInstances>1</iMaxPlayerInstances>
+            <bUnlimitedException>1</bUnlimitedException>
+            <Special>SPECIALUNIT_PEOPLE</Special>
 			<Description>TXT_KEY_UNIT_TRIBAL_GUARDIAN</Description>
 			<Civilopedia>TXT_KEY_UNIT_TRIBAL_GUARDIAN_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<Combat>UNITCOMBAT_LAW_ENFORCEMENT</Combat>
+            <PrereqTech>TECH_HARD_HAMMER_PERCUSSION</PrereqTech>
+            <UnitAIs>
+                <UnitAI>
+                    <UnitAIType>UNITAI_CITY_DEFENSE</UnitAIType>
+                    <bUnitAI>1</bUnitAI>
+                </UnitAI>
+            </UnitAIs>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MELEE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
@@ -26997,7 +26579,11 @@
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
 				<SubCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</SubCombatType>
 			</SubCombatTypes>
-			<Domain>DOMAIN_IMMOBILE</Domain>
+			<Domain>DOMAIN_LAND</Domain>
+            <ObsoleteTech>TECH_SEDENTARY_LIFESTYLE</ObsoleteTech>
+            <MapCategoryTypes>
+                <MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+            </MapCategoryTypes>
 			<DefaultUnitAI>UNITAI_PROPERTY_CONTROL</DefaultUnitAI>
 			<UnitAIs>
 				<UnitAI>
@@ -27010,11 +26596,11 @@
 			<bMilitarySupport>1</bMilitarySupport>
 			<bMilitaryProduction>1</bMilitaryProduction>
 			<UnitUpgrades>
-				<UnitType>UNIT_ENFORCERS</UnitType>
-				<UnitType>UNIT_NEANDERTHAL_TRIBAL_GUARDIAN</UnitType>
+				<UnitType>UNIT_PALACE_GUARDS</UnitType>
+                <UnitType>UNIT_NEANDERTHAL_TRIBAL_GUARDIAN</UnitType>
 			</UnitUpgrades>
-			<iCost>-1</iCost>
-			<iBaseUpkeep>1</iBaseUpkeep>
+			<iCost>60</iCost>
+			<iBaseUpkeep>3</iBaseUpkeep>
 			<iMoves>1</iMoves>
 			<iCombat>2</iCombat>
 			<iXPValueAttack>1</iXPValueAttack>
@@ -27022,6 +26608,9 @@
 			<iCityDefense>200</iCityDefense>
 			<iAsset>1</iAsset>
 			<iPower>3</iPower>
+            <PrereqAndBuildings>
+                <BuildingType>BUILDING_PALACE</BuildingType>
+            </PrereqAndBuildings>
 			<UnitMeshGroups>
 				<iGroupSize>3</iGroupSize>
 				<fMaxSpeed>1.75</fMaxSpeed>
@@ -27035,6 +26624,156 @@
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
 		</UnitInfo>
+        <UnitInfo>
+            <Type>UNIT_PALACE_GUARD</Type>
+            <iMaxPlayerInstances>1</iMaxPlayerInstances>
+            <bUnlimitedException>1</bUnlimitedException>
+            <Special>SPECIALUNIT_PEOPLE</Special>
+            <Description>TXT_KEY_UNIT_PALACE_GUARD</Description>
+            <Civilopedia>TXT_KEY_UNIT_PALACE_GUARD_PEDIA</Civilopedia>
+            <Advisor>ADVISOR_MILITARY</Advisor>
+            <Combat>UNITCOMBAT_LAW_ENFORCEMENT</Combat>
+            <PrereqTech>TECH_SEDENTARY_LIFESTYLE</PrereqTech>
+            <UnitAIs>
+                <UnitAI>
+                    <UnitAIType>UNITAI_CITY_DEFENSE</UnitAIType>
+                    <bUnitAI>1</bUnitAI>
+                </UnitAI>
+            </UnitAIs>
+            <SubCombatTypes>
+                <SubCombatType>UNITCOMBAT_MELEE</SubCombatType>
+                <SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
+                <SubCombatType>UNITCOMBAT_SPECIES_HUMAN</SubCombatType>
+                <SubCombatType>UNITCOMBAT_WEAPON_METHOD_HAND_TO_HAND_ONLY</SubCombatType>
+                <SubCombatType>UNITCOMBAT_WEAPON_STYLE_H2H_TWO_HANDED</SubCombatType>
+                <SubCombatType>UNITCOMBAT_WEAPON_STYLE_SIDEARM_PRIMARY_PLUS_SECONDARY</SubCombatType>
+                <SubCombatType>UNITCOMBAT_WEAPON_H2H_CLUB</SubCombatType>
+                <SubCombatType>UNITCOMBAT_WEAPON_SIDEARM_FIST</SubCombatType>
+                <SubCombatType>UNITCOMBAT_ARMOR_LIGHT</SubCombatType>
+                <SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
+                <SubCombatType>UNITCOMBAT_QUALITY_EXCEPTIONAL</SubCombatType>
+                <SubCombatType>UNITCOMBAT_GROUP_SQUAD</SubCombatType>
+                <SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
+                <SubCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</SubCombatType>
+            </SubCombatTypes>
+            <Domain>DOMAIN_LAND</Domain>
+            <UnitUpgrades>
+                <UnitType>UNIT_KINGS_GUARD</UnitType>
+            </UnitUpgrades>
+            <MapCategoryTypes>
+                <MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+            </MapCategoryTypes>
+            <DefaultUnitAI>UNITAI_PROPERTY_CONTROL</DefaultUnitAI>
+            <UnitAIs>
+                <UnitAI>
+                    <UnitAIType>UNITAI_PROPERTY_CONTROL</UnitAIType>
+                    <bUnitAI>1</bUnitAI>
+                </UnitAI>
+            </UnitAIs>
+            <bOnlyDefensive>1</bOnlyDefensive>
+            <bMilitaryHappiness>1</bMilitaryHappiness>
+            <bMilitarySupport>1</bMilitarySupport>
+            <bMilitaryProduction>1</bMilitaryProduction>
+            <iCost>120</iCost>
+            <iBaseUpkeep>4</iBaseUpkeep>
+            <iMoves>1</iMoves>
+            <iCombat>3</iCombat>
+            <iXPValueAttack>1</iXPValueAttack>
+            <iXPValueDefense>2</iXPValueDefense>
+            <iCityDefense>200</iCityDefense>
+            <iAsset>1</iAsset>
+            <iPower>3</iPower>
+            <PrereqAndBuildings>
+                <BuildingType>BUILDING_PALACE</BuildingType>
+            </PrereqAndBuildings>
+            <UnitMeshGroups>
+                <iGroupSize>3</iGroupSize>
+                <fMaxSpeed>1.75</fMaxSpeed>
+                <fPadTime>1</fPadTime>
+                <iMeleeWaveSize>3</iMeleeWaveSize>
+                <iRangedWaveSize>0</iRangedWaveSize>
+                <UnitMeshGroup>
+                    <iRequired>2</iRequired>
+                    <EarlyArtDefineTag>ART_DEF_UNIT_TRIBAL_GUARDIAN</EarlyArtDefineTag>
+                </UnitMeshGroup>
+            </UnitMeshGroups>
+            <FormationType>FORMATION_TYPE_DEFAULT</FormationType>
+        </UnitInfo>
+        <UnitInfo>
+            <Type>UNIT_KINGS_GUARD</Type>
+            <iMaxPlayerInstances>1</iMaxPlayerInstances>
+            <bUnlimitedException>1</bUnlimitedException>
+            <Special>SPECIALUNIT_PEOPLE</Special>
+            <Description>TXT_KEY_UNIT_KINGS_GUARD</Description>
+            <Civilopedia>TXT_KEY_UNIT_KINGS_GUARD_PEDIA</Civilopedia>
+            <Advisor>ADVISOR_MILITARY</Advisor>
+            <Combat>UNITCOMBAT_LAW_ENFORCEMENT</Combat>
+            <PrereqTech>TECH_CLASSICAL_LIFESTYLE</PrereqTech>
+            <UnitAIs>
+                <UnitAI>
+                    <UnitAIType>UNITAI_CITY_DEFENSE</UnitAIType>
+                    <bUnitAI>1</bUnitAI>
+                </UnitAI>
+            </UnitAIs>
+            <SubCombatTypes>
+                <SubCombatType>UNITCOMBAT_MELEE</SubCombatType>
+                <SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
+                <SubCombatType>UNITCOMBAT_SPECIES_HUMAN</SubCombatType>
+                <SubCombatType>UNITCOMBAT_WEAPON_METHOD_HAND_TO_HAND_ONLY</SubCombatType>
+                <SubCombatType>UNITCOMBAT_WEAPON_STYLE_H2H_TWO_HANDED</SubCombatType>
+                <SubCombatType>UNITCOMBAT_WEAPON_STYLE_SIDEARM_PRIMARY_PLUS_SECONDARY</SubCombatType>
+                <SubCombatType>UNITCOMBAT_WEAPON_H2H_CLUB</SubCombatType>
+                <SubCombatType>UNITCOMBAT_WEAPON_SIDEARM_FIST</SubCombatType>
+                <SubCombatType>UNITCOMBAT_ARMOR_LIGHT</SubCombatType>
+                <SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
+                <SubCombatType>UNITCOMBAT_QUALITY_EXCEPTIONAL</SubCombatType>
+                <SubCombatType>UNITCOMBAT_GROUP_SQUAD</SubCombatType>
+                <SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
+                <SubCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</SubCombatType>
+            </SubCombatTypes>
+            <Domain>DOMAIN_LAND</Domain>
+            <UnitUpgrades>
+                <UnitType>UNIT_EARLY_IMP_GUARD</UnitType>
+            </UnitUpgrades>
+            <MapCategoryTypes>
+                <MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+            </MapCategoryTypes>
+            <DefaultUnitAI>UNITAI_PROPERTY_CONTROL</DefaultUnitAI>
+            <UnitAIs>
+                <UnitAI>
+                    <UnitAIType>UNITAI_PROPERTY_CONTROL</UnitAIType>
+                    <bUnitAI>1</bUnitAI>
+                </UnitAI>
+            </UnitAIs>
+            <bOnlyDefensive>1</bOnlyDefensive>
+            <bMilitaryHappiness>1</bMilitaryHappiness>
+            <bMilitarySupport>1</bMilitarySupport>
+            <bMilitaryProduction>1</bMilitaryProduction>
+            <iCost>420</iCost>
+            <iBaseUpkeep>5</iBaseUpkeep>
+            <iMoves>1</iMoves>
+            <iCombat>4</iCombat>
+            <iXPValueAttack>1</iXPValueAttack>
+            <iXPValueDefense>2</iXPValueDefense>
+            <iCityDefense>200</iCityDefense>
+            <iAsset>1</iAsset>
+            <iPower>3</iPower>
+            <PrereqAndBuildings>
+                <BuildingType>BUILDING_PALACE</BuildingType>
+            </PrereqAndBuildings>
+            <UnitMeshGroups>
+                <iGroupSize>3</iGroupSize>
+                <fMaxSpeed>1.75</fMaxSpeed>
+                <fPadTime>1</fPadTime>
+                <iMeleeWaveSize>3</iMeleeWaveSize>
+                <iRangedWaveSize>0</iRangedWaveSize>
+                <UnitMeshGroup>
+                    <iRequired>2</iRequired>
+                    <EarlyArtDefineTag>ART_DEF_UNIT_ROME_PRAETORIAN</EarlyArtDefineTag>
+                </UnitMeshGroup>
+            </UnitMeshGroups>
+            <FormationType>FORMATION_TYPE_DEFAULT</FormationType>
+        </UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_WATCHER</Type>
 			<Special>SPECIALUNIT_PEOPLE</Special>
@@ -34976,8 +34715,6 @@
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
 				<SubCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_HEALS_PEOPLE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_HEALS_ANIMALS</SubCombatType>
-				<SubCombatType>UNITCOMBAT_HEALS_MECHANICAL</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
@@ -34997,16 +34734,6 @@
 				<HealUnitCombatType>
 					<UnitCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</UnitCombatType>
 					<iHeal>5</iHeal>
-					<iAdjacentHeal>0</iAdjacentHeal>
-				</HealUnitCombatType>
-				<HealUnitCombatType>
-					<UnitCombatType>UNITCOMBAT_HEALS_AS_ANIMALS</UnitCombatType>
-					<iHeal>3</iHeal>
-					<iAdjacentHeal>0</iAdjacentHeal>
-				</HealUnitCombatType>
-				<HealUnitCombatType>
-					<UnitCombatType>UNITCOMBAT_HEALS_AS_MECHANICAL</UnitCombatType>
-					<iHeal>2</iHeal>
 					<iAdjacentHeal>0</iAdjacentHeal>
 				</HealUnitCombatType>
 			</HealUnitCombatTypes>
@@ -38599,7 +38326,7 @@
 				</Flavor>
 			</Flavors>
 			<iCost>-1</iCost>
-			<iBaseUpkeep>1</iBaseUpkeep>
+			<iBaseUpkeep>5</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iAsset>25</iAsset>
 			<UnitMeshGroups>
@@ -38762,10 +38489,6 @@
 					<UnitAIType>UNITAI_GREAT_ADMIRAL</UnitAIType>
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
-				<UnitAI>
-					<UnitAIType>UNITAI_GENERAL</UnitAIType>
-					<bUnitAI>1</bUnitAI>
-				</UnitAI>
 			</UnitAIs>
 			<GreatPeoples>
 				<GreatPeople>
@@ -38795,7 +38518,7 @@
 				</Flavor>
 			</Flavors>
 			<iCost>-1</iCost>
-			<iBaseUpkeep>1</iBaseUpkeep>
+			<iBaseUpkeep>5</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iAsset>25</iAsset>
 			<iPower>75</iPower>
@@ -39220,7 +38943,6 @@
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
 				<SubCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_HEALS_ANIMALS</SubCombatType>
-				<SubCombatType>UNITCOMBAT_HEALS_PEOPLE</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
@@ -39237,11 +38959,6 @@
 				<HealUnitCombatType>
 					<UnitCombatType>UNITCOMBAT_HEALS_AS_ANIMALS</UnitCombatType>
 					<iHeal>5</iHeal>
-					<iAdjacentHeal>0</iAdjacentHeal>
-				</HealUnitCombatType>
-				<HealUnitCombatType>
-					<UnitCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</UnitCombatType>
-					<iHeal>2</iHeal>
 					<iAdjacentHeal>0</iAdjacentHeal>
 				</HealUnitCombatType>
 			</HealUnitCombatTypes>
@@ -39426,7 +39143,6 @@
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
 				<SubCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_HEALS_ANIMALS</SubCombatType>
-				<SubCombatType>UNITCOMBAT_HEALS_PEOPLE</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
@@ -39443,11 +39159,6 @@
 				<HealUnitCombatType>
 					<UnitCombatType>UNITCOMBAT_HEALS_AS_ANIMALS</UnitCombatType>
 					<iHeal>9</iHeal>
-					<iAdjacentHeal>0</iAdjacentHeal>
-				</HealUnitCombatType>
-				<HealUnitCombatType>
-					<UnitCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</UnitCombatType>
-					<iHeal>4</iHeal>
 					<iAdjacentHeal>0</iAdjacentHeal>
 				</HealUnitCombatType>
 			</HealUnitCombatTypes>
@@ -39608,9 +39319,7 @@
 				<SubCombatType>UNITCOMBAT_GROUP_PARTY</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_LARGE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_HEALS_AS_ANIMALS</SubCombatType>
 				<SubCombatType>UNITCOMBAT_HEALS_ANIMALS</SubCombatType>
-				<SubCombatType>UNITCOMBAT_HEALS_PEOPLE</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
@@ -39628,11 +39337,6 @@
 					<UnitCombatType>UNITCOMBAT_HEALS_AS_ANIMALS</UnitCombatType>
 					<iHeal>13</iHeal>
 					<iAdjacentHeal>1</iAdjacentHeal>
-				</HealUnitCombatType>
-				<HealUnitCombatType>
-					<UnitCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</UnitCombatType>
-					<iHeal>6</iHeal>
-					<iAdjacentHeal>0</iAdjacentHeal>
 				</HealUnitCombatType>
 			</HealUnitCombatTypes>
 			<UnitUpgrades>
@@ -39805,9 +39509,7 @@
 				<SubCombatType>UNITCOMBAT_GROUP_PARTY</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_LARGE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_HEALS_AS_ANIMALS</SubCombatType>
 				<SubCombatType>UNITCOMBAT_HEALS_ANIMALS</SubCombatType>
-				<SubCombatType>UNITCOMBAT_HEALS_PEOPLE</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
@@ -39825,11 +39527,6 @@
 					<UnitCombatType>UNITCOMBAT_HEALS_AS_ANIMALS</UnitCombatType>
 					<iHeal>17</iHeal>
 					<iAdjacentHeal>3</iAdjacentHeal>
-				</HealUnitCombatType>
-				<HealUnitCombatType>
-					<UnitCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</UnitCombatType>
-					<iHeal>8</iHeal>
-					<iAdjacentHeal>0</iAdjacentHeal>
 				</HealUnitCombatType>
 			</HealUnitCombatTypes>
 			<UnitUpgrades>
@@ -41562,7 +41259,6 @@
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
 				<SubCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_HEALS_PEOPLE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_HEALS_ANIMALS</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
@@ -41606,11 +41302,6 @@
 				<HealUnitCombatType>
 					<UnitCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</UnitCombatType>
 					<iHeal>3</iHeal>
-					<iAdjacentHeal>0</iAdjacentHeal>
-				</HealUnitCombatType>
-				<HealUnitCombatType>
-					<UnitCombatType>UNITCOMBAT_HEALS_AS_ANIMALS</UnitCombatType>
-					<iHeal>1</iHeal>
 					<iAdjacentHeal>0</iAdjacentHeal>
 				</HealUnitCombatType>
 			</HealUnitCombatTypes>
@@ -41667,7 +41358,6 @@
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
 				<SubCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_HEALS_PEOPLE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_HEALS_ANIMALS</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
@@ -41717,11 +41407,6 @@
 				<HealUnitCombatType>
 					<UnitCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</UnitCombatType>
 					<iHeal>5</iHeal>
-					<iAdjacentHeal>0</iAdjacentHeal>
-				</HealUnitCombatType>
-				<HealUnitCombatType>
-					<UnitCombatType>UNITCOMBAT_HEALS_AS_ANIMALS</UnitCombatType>
-					<iHeal>3</iHeal>
 					<iAdjacentHeal>0</iAdjacentHeal>
 				</HealUnitCombatType>
 			</HealUnitCombatTypes>
@@ -41774,7 +41459,6 @@
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
 				<SubCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_HEALS_PEOPLE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_HEALS_ANIMALS</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
@@ -41824,11 +41508,6 @@
 				<HealUnitCombatType>
 					<UnitCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</UnitCombatType>
 					<iHeal>7</iHeal>
-					<iAdjacentHeal>0</iAdjacentHeal>
-				</HealUnitCombatType>
-				<HealUnitCombatType>
-					<UnitCombatType>UNITCOMBAT_HEALS_AS_ANIMALS</UnitCombatType>
-					<iHeal>4</iHeal>
 					<iAdjacentHeal>0</iAdjacentHeal>
 				</HealUnitCombatType>
 			</HealUnitCombatTypes>
@@ -41881,7 +41560,6 @@
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
 				<SubCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_HEALS_PEOPLE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_HEALS_ANIMALS</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
@@ -41929,11 +41607,6 @@
 				<HealUnitCombatType>
 					<UnitCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</UnitCombatType>
 					<iHeal>9</iHeal>
-					<iAdjacentHeal>0</iAdjacentHeal>
-				</HealUnitCombatType>
-				<HealUnitCombatType>
-					<UnitCombatType>UNITCOMBAT_HEALS_AS_ANIMALS</UnitCombatType>
-					<iHeal>6</iHeal>
 					<iAdjacentHeal>0</iAdjacentHeal>
 				</HealUnitCombatType>
 			</HealUnitCombatTypes>
@@ -41986,7 +41659,6 @@
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
 				<SubCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_HEALS_PEOPLE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_HEALS_ANIMALS</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
@@ -42033,11 +41705,6 @@
 					<UnitCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</UnitCombatType>
 					<iHeal>13</iHeal>
 					<iAdjacentHeal>1</iAdjacentHeal>
-				</HealUnitCombatType>
-				<HealUnitCombatType>
-					<UnitCombatType>UNITCOMBAT_HEALS_AS_ANIMALS</UnitCombatType>
-					<iHeal>9</iHeal>
-					<iAdjacentHeal>0</iAdjacentHeal>
 				</HealUnitCombatType>
 			</HealUnitCombatTypes>
 			<iAsset>6</iAsset>
@@ -42089,7 +41756,6 @@
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
 				<SubCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_HEALS_PEOPLE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_HEALS_ANIMALS</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
@@ -42135,11 +41801,6 @@
 					<UnitCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</UnitCombatType>
 					<iHeal>15</iHeal>
 					<iAdjacentHeal>2</iAdjacentHeal>
-				</HealUnitCombatType>
-				<HealUnitCombatType>
-					<UnitCombatType>UNITCOMBAT_HEALS_AS_ANIMALS</UnitCombatType>
-					<iHeal>11</iHeal>
-					<iAdjacentHeal>0</iAdjacentHeal>
 				</HealUnitCombatType>
 			</HealUnitCombatTypes>
 			<iAsset>7</iAsset>
@@ -42193,7 +41854,6 @@
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
 				<SubCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_HEALS_PEOPLE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_HEALS_ANIMALS</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
@@ -42239,11 +41899,6 @@
 					<UnitCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</UnitCombatType>
 					<iHeal>17</iHeal>
 					<iAdjacentHeal>3</iAdjacentHeal>
-				</HealUnitCombatType>
-				<HealUnitCombatType>
-					<UnitCombatType>UNITCOMBAT_HEALS_AS_ANIMALS</UnitCombatType>
-					<iHeal>13</iHeal>
-					<iAdjacentHeal>0</iAdjacentHeal>
 				</HealUnitCombatType>
 			</HealUnitCombatTypes>
 			<iAsset>8</iAsset>
@@ -42467,7 +42122,7 @@
 				<BuildingType>BUILDING_HEALTHCARE_MEGACOMPLEX</BuildingType>
 			</PrereqOrBuildings>
 			<UnitUpgrades>
-				<UnitType>UNIT_MEDEVAC_DROPSHIP</UnitType>
+				<UnitType>UNIT_EARLY_MEDIVAC</UnitType>
 			</UnitUpgrades>
 			<bOnlyDefensive>1</bOnlyDefensive>
 			<bNoCapture>1</bNoCapture>
@@ -42839,6 +42494,9 @@
 				<BuildingType>BUILDING_MEGATOWER_MEDICAL_LEVEL</BuildingType>
 				<BuildingType>BUILDING_HEALTHCARE_MEGACOMPLEX</BuildingType>
 			</PrereqOrBuildings>
+            <UnitUpgrades>
+                <UnitType>UNIT_MEDEVAC_DROPSHIP</UnitType>
+            </UnitUpgrades>
 			<bOnlyDefensive>1</bOnlyDefensive>
 			<bNoCapture>1</bNoCapture>
 			<bMilitaryProduction>1</bMilitaryProduction>
@@ -48147,8 +47805,6 @@
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
 				<SubCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_HEALS_PEOPLE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_HEALS_ANIMALS</SubCombatType>
-				<SubCombatType>UNITCOMBAT_HEALS_MECHANICAL</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
@@ -48182,16 +47838,6 @@
 				<HealUnitCombatType>
 					<UnitCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</UnitCombatType>
 					<iHeal>10</iHeal>
-					<iAdjacentHeal>0</iAdjacentHeal>
-				</HealUnitCombatType>
-				<HealUnitCombatType>
-					<UnitCombatType>UNITCOMBAT_HEALS_AS_ANIMALS</UnitCombatType>
-					<iHeal>6</iHeal>
-					<iAdjacentHeal>0</iAdjacentHeal>
-				</HealUnitCombatType>
-				<HealUnitCombatType>
-					<UnitCombatType>UNITCOMBAT_HEALS_AS_MECHANICAL</UnitCombatType>
-					<iHeal>4</iHeal>
 					<iAdjacentHeal>0</iAdjacentHeal>
 				</HealUnitCombatType>
 			</HealUnitCombatTypes>

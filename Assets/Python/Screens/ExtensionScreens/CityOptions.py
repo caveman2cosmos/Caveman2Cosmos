@@ -6,9 +6,9 @@ from CvPythonExtensions import *
 class CityOptions:
 	def __init__(self, screen, mainInterface):
 		import ScreenResolution as SR
-		self.xRes = xRes = SR.x
-		self.yRes = yRes = SR.y
-		self.aFontList = aFontList = SR.aFontList
+		self.xRes = SR.x
+		self.yRes = SR.y
+		self.aFontList = SR.aFontList
 
 		self.TRNSLTR = CyTranslator()
 		afm = CyArtFileMgr()
@@ -26,7 +26,6 @@ class CityOptions:
 		eWidGen = WidgetTypes.WIDGET_GENERAL
 		eFontGame = FontTypes.GAME_FONT
 		ePnlMain = PanelStyles.PANEL_STYLE_MAIN
-		eBtnLabel = ButtonStyles.BUTTON_STYLE_LABEL
 		eBtnStd = ButtonStyles.BUTTON_STYLE_STANDARD
 		dx = 128 + xRes / 4
 		dy = yRes / 2
@@ -47,7 +46,7 @@ class CityOptions:
 		screen.addScrollPanel(scrlPnl, "", x0, y0 + ySpace, dx, dy - 3*ySpace, ePnlMain)
 		screen.setStyle(scrlPnl, "ScrollPanel_Alt_Style")
 		y = 0
-		screen.setTextAt("CO_IconSize0", scrlPnl, aFontList[4] + TRNSLTR.getText("TXT_OPTION_CITY_ICON_SIZE", (mainInterface.CityOpt.getBuildIconSize(),)), 1<<0, 0, y, 0, eFontGame, eWidGen, 1, 1)
+		screen.setTextAt("CO_IconSize", scrlPnl, aFontList[4] + TRNSLTR.getText("TXT_OPTION_CITY_ICON_SIZE", (mainInterface.CityOpt.getBuildIconSize(),)), 1<<0, 0, y, 0, eFontGame, eWidGen, 1, 1)
 
 		y += ySpace
 		self.yHideUnconstructableBuildings = y

@@ -59,6 +59,29 @@ static bool plotOpaqueInfoMatches(int iOpaqueInfo, int activityId, int iValue)
 	}
 }
 
+static bool shouldAvoidLowOddsRiverAttack(const CvUnitAI& kAttacker, const CvPlot* pTargetPlot, int iAttackOdds)
+{
+	if (pTargetPlot == NULL || iAttackOdds >= 10)
+	{
+		return false;
+	}
+	if (kAttacker.getDomainType() != DOMAIN_LAND || kAttacker.isRiver())
+	{
+		return false;
+	}
+	const CvPlot* pFromPlot = kAttacker.plot();
+	if (pFromPlot == NULL || pFromPlot == pTargetPlot)
+	{
+		return false;
+	}
+	if (stepDistance(pFromPlot->getX(), pFromPlot->getY(), pTargetPlot->getX(), pTargetPlot->getY()) != 1)
+	{
+		return false;
+	}
+	const DirectionTypes eDirection = directionXY(pFromPlot, pTargetPlot);
+	return eDirection != NO_DIRECTION && pFromPlot->isRiverCrossing(eDirection);
+}
+
 void CvUnitAI::AI_clearCaches()
 {
 	m_cachedPlayer = NO_PLAYER;
@@ -18259,6 +18282,11 @@ bool CvUnitAI::AI_cityAttack(int iRange, int iOddsThreshold, bool bFollow)
 			{
 				const int iValue = getGroup()->AI_attackOdds(plotX, true);
 
+				if (shouldAvoidLowOddsRiverAttack(*this, plotX, iValue))
+				{
+					continue;
+				}
+
 				if (iValue >= AI_finalOddsThreshold(plotX, iOddsThreshold) && iValue > iBestValue)
 				{
 					const CvPlot* endTurnPlot = getPathEndTurnPlot();
@@ -18377,6 +18405,12 @@ bool CvUnitAI::AI_anyAttack(int iRange, int iOddsThreshold, int iMinStack, bool 
 		{
 			iValue += getGroup()->AI_attackOdds(plotX, true, false, &bWinLikely, iOddsThreshold);
 			iAdjustedOddsThreshold = AI_finalOddsThreshold(plotX, iOddsThreshold);
+
+			if (shouldAvoidLowOddsRiverAttack(*this, plotX, iValue))
+			{
+				continue;
+			}
+
 			if (bWinLikely && plotX->isCity(false))
 			{
 				iValue += iOddsThreshold;
@@ -26033,6 +26067,15 @@ bool CvUnitAI::AI_stackAttackCity(int iRange, int iPowerThreshold, bool bFollow)
 				)
 			)
 		{
+			if (bFollow)
+			{
+				const int iAttackOdds = getGroup()->AI_attackOdds(pLoopPlot, true);
+				if (shouldAvoidLowOddsRiverAttack(*this, pLoopPlot, iAttackOdds))
+				{
+					continue;
+				}
+			}
+
 			const int iValue = getGroup()->AI_compareStacks(pLoopPlot, StackCompare::CheckCanAttack | StackCompare::CheckCanMove | StackCompare::PotentialEnemy);
 
 			if (iValue >= iPowerThreshold
@@ -27865,13 +27908,34 @@ bool CvUnitAI::AI_huntRange(int iRange, int iOddsThreshold, bool bStayInBorders,
 
 	foreach_(const CvPlot * plotX, plot()->rect(iRange, iRange))
 	{
+
+        if (AI_getUnitAIType() == UNITAI_HUNTER && getGroup()->getAutomateType() == AUTOMATE_HUNT)
+        {
+            bool hasAnimal = false;
+            foreach_(CvUnit * pUnit, plotX->units())
+            {
+                if (pUnit->isAnimal())
+                {
+                    hasAnimal = true;
+                    break;
+                }
+            }
+            if (!hasAnimal)
+                continue;
+        }
+
 		if (!atPlot(plotX)
-		&& (!bStayInBorders || plotX->getOwner() == getOwner())
-		&& (!plotX->isCity() || bCanCaptureCities)
-		&& AI_plotValid(plotX)
-		&& plotX->isVisibleEnemyUnit(this)
-		&& getGroup()->canEnterPlot(plotX, true)
-		&& generatePath(plotX, 0, true, nullptr, iRange))
+            && (!bStayInBorders || plotX->getOwner() == getOwner())
+            && (!plotX->isCity() || bCanCaptureCities)
+            && AI_plotValid(plotX)
+            && plotX->isVisibleEnemyUnit(this)
+            && getGroup()->canEnterPlot(plotX, true)
+            && generatePath(plotX, 0, true, nullptr, iRange)
+            && (getGroup()->getAutomateType() != AUTOMATE_HUNT
+                   || plotX->getOwner() == getOwner()
+                   || plotX->getOwner() == NO_PLAYER)
+            && (!isAnimal() || AI_getUnitAIType() == UNITAI_HUNTER)
+        )
 		{
 			const int attackOdds = getGroup()->AI_attackOdds(plotX, true);
 
@@ -29853,7 +29917,7 @@ bool CvUnitAI::AI_fulfillPropertyControlNeed()
 		if (score >= 1)
 		{		
 			FAssert(eProperty >= 0 && eProperty < GC.getNumPropertyInfos());
-			score = std::min(score,1000000); // limite arbitraire pour éviter overflow
+			score = std::min(score,1000000); // limite arbitraire pour ï¿½viter overflow
 			propertyScores.push_back(PropertyAmount(eProperty, score));
 			if (score > iBestPropertyScore)
 			{

@@ -19,9 +19,6 @@ FONT_COLOR_MAP = {
 	CIV_IS_QUEUED: "<color=255,255,255,255>",
 	CIV_IS_RESEARCHING: "<color=255,255,255,255>",
 	CIV_IS_TARGET: "<color=255,255,255,255>",
-	# CIV_IS_QUEUED: "<color=255,255,10,255>",
-	# CIV_IS_RESEARCHING: "<color=0,255,10,255>",
-	# CIV_IS_TARGET: "<color=255,176,10,255>",
 }
 ICON = "ICON"
 TECH_CHOICE = "WID|TECH|CHOICE"
@@ -40,7 +37,7 @@ SCREEN_PANEL_BOTTOM_BAR_H = 80
 # Left/right border for the slider
 SLIDER_BORDER = 50
 # How many techs to page in per update tick, more is faster but more introduces more stutter
-# Could use a timer instead of a fixed count to allocate time slice for paging for more consistent behaviour
+# Could use a timer instead of a fixed count to allocate time slice for paging for more consistent behavior
 TECH_PAGING_RATE = 4
 # Gap between techs
 CELL_GAP = CELL_BORDER_W * 2 + 32
@@ -106,7 +103,7 @@ class CvTechChooser:
 		self.CyTeam = GC.getTeam(self.CyPlayer.getTeam())
 		self.iCurrentEra = self.CyPlayer.getCurrentEra()
 		self.currentTechState = [self.getTechState(iTech) for iTech in xrange(self.iNumTechs)]
-
+		self.eFontTitle = FontTypes.TITLE_FONT
 		self.tooltip = pyTT.PythonToolTip()
 
 		self.iUnitTT = None
@@ -173,14 +170,9 @@ class CvTechChooser:
 			screen.setStyle(fgName, self.getForegroundStyleForEra(i))
 			screen.setHitTest(fgName, HitTestTypes.HITTEST_NOHIT)
 
-			# Label for eras, but it looks crap in tiny fonts, need a massive font
-			# screen.setLabelAt("ERA_LABEL_" + str(i), backDropPanelName, "<font=4b>" + eraInfo.getDescription(), 1 << 0, 30, 30, 0, FontTypes.TITLE_FONT, WidgetTypes.WIDGET_GENERAL, 1, 2)
-			# screen.setHitTest("ERA_LABEL_" + str(i), HitTestTypes.HITTEST_NOHIT)
-
 			lastPosX = posX
 
 		# A panel to put the horizontal slider in so we can position it correctly
-		#screen.addPanel(BOTTOM_BAR_SLIDER_PANEL_ID, "", "", False, False, SLIDER_BORDER, self.yRes - SCREEN_PANEL_BOTTOM_BAR_H - 12, self.xRes, SCREEN_PANEL_BOTTOM_BAR_H, PanelStyles.PANEL_STYLE_EMPTY)
 		minimapWidth = self.xRes - SLIDER_BORDER * 2
 		fullWidth = self.maxX - self.minX
 		self.minimapLensWidth = self.xRes * minimapWidth / fullWidth + MINIMAP_LENS_BORDER_H * 2
@@ -350,19 +342,12 @@ class CvTechChooser:
 				screen.setStyle(techMinimapCellId, "Panel_TechMinimapCell_Style")
 				screen.setHitTest(techMinimapCellId, HitTestTypes.HITTEST_NOHIT)
 
-				#self.cellPos[iTech] = (iX, iY)
-				# self.updates.append((iX, iTech))
 			else:
 				if not self.cellDetails[iTech]:
 					self.cellDetails[iTech] = True
 
-					iEra = CvTechInfo.getEra()
-					bY = iY
-					bH = self.hCell + CELL_BORDER_H * 2
-
 					# Tech cell
 					screen.setImageButtonAt(techCellId, SCREEN_PANEL, "", iX, iY, self.wCell + CELL_BORDER_W * 2, self.hCell + CELL_BORDER_H * 2, eWidGen, 1, 2)
-					# screen.setHitTest(techCellId, HitTestTypes.HITTEST_CHILDREN)
 					screen.addDDSGFCAt(ICON + iTechStr, techCellId, CvTechInfo.getButton(), 3 + CELL_BORDER_W, 5 + CELL_BORDER_H, self.sIcon0, self.sIcon0, eWidGen, 1, 2, False)
 					screen.setHitTest(ICON + iTechStr, HitTestTypes.HITTEST_NOHIT)
 					screen.moveToFront(techCellId)
@@ -640,10 +625,6 @@ class CvTechChooser:
 		iTechStr = str(iTech)
 
 		# # Minimap cell color
-		# techMinimapCellId = TECH_CHOICE + "MM" + "|" + iTechStr
-		# minimapCellColor = self.getTechColorForState(techState)
-		# screen.setPanelColor(techMinimapCellId, minimapCellColor[0], minimapCellColor[1], minimapCellColor[2])
-
 		techState = self.currentTechState[iTech]
 
 		CvTechInfo = GC.getTechInfo(iTech)
@@ -692,11 +673,11 @@ class CvTechChooser:
 			iCost = self.CyPlayer.getAdvancedStartTechCost(iTech, True)
 			if iCost > 0:
 				iPoints = self.CyPlayer.getAdvancedStartPoints()
-				screen.setLabel("ASPointsLabel", "", "<font=4>" + TRNSLTR.getText("TXT_KEY_WB_AS_SELECTED_TECH_COST", (iCost, iPoints)), 1<<0, 180, 4, 0, eFontTitle, WidgetTypes.WIDGET_GENERAL, 1, 2)
+				screen.setLabel("ASPointsLabel", "", "<font=4>" + TRNSLTR.getText("TXT_KEY_WB_AS_SELECTED_TECH_COST", (iCost, iPoints)), 1<<0, 180, 4, 0, self.eFontTitle, WidgetTypes.WIDGET_GENERAL, 1, 2)
 				if iPoints >= iCost:
 					screen.show("AddTechButton")
 			szTxt = "<font=4b>" + GC.getTechInfo(iTech).getDescription() + " (" + str(iCost) + unichr(8500) + ')'
-			screen.setLabel("SelectedTechLabel", "", szTxt, 1<<0, self.xRes/2, 4, 0, eFontTitle, WidgetTypes.WIDGET_GENERAL, 1, 2)
+			screen.setLabel("SelectedTechLabel", "", szTxt, 1<<0, self.xRes/2, 4, 0, self.eFontTitle, WidgetTypes.WIDGET_GENERAL, 1, 2)
 			screen.hide("TC_Header")
 		else:
 			screen.hide("SelectedTechLabel")
@@ -923,23 +904,12 @@ class CvTechChooser:
 		elif mousePos.y > self.yRes - SCREEN_PANEL_BOTTOM_BAR_H and Win32.isLMB():
 			self.scrolling = True
 
-		# if self.changed:
-		# 	self.changed = sorted(self.changed, key=lambda el: abs(el[0] - self.scrollOffs - self.xRes / 2))
-		# 	remaining_updates = self.changed[:TECH_PAGING_RATE]
-		# 	self.changed = self.changed[TECH_PAGING_RATE:]
-		# 	self.updateTechStates((f[1] for f in remaining_updates))
 		if self.updates:
 			# Sort them by distance to the current scroll offset so we can make sure to update what the player is looking at first
 			self.updates = sorted(self.updates, key=lambda el: abs(el[0] - self.scrollOffs - self.xRes / 2))
 
 			remaining_updates = self.updates[:TECH_PAGING_RATE]
 
-			# remaining_updates = []
-			# for el in self.updates:
-			# 	dist = abs(el[0] - self.scrollOffs - self.xRes / 2)
-			# 	if len(remaining_updates) > TECH_PAGING_RATE and dist > self.xRes:
-			# 		break
-			# 	remaining_updates.append(el)
 			self.updates = self.updates[len(remaining_updates):]
 			self.refresh((f[1] for f in remaining_updates), True)
 
@@ -958,7 +928,6 @@ class CvTechChooser:
 		bAlt, bCtrl, bShift = self.InputData.getModifierKeys()
 		iCode	= inputClass.eNotifyCode
 		iData	= inputClass.iData
-		iData2	= inputClass.iData2
 		ID		= inputClass.iItemID
 		NAME	= inputClass.szFunctionName
 		szFlag	= HandleInputUtil.MOUSE_FLAGS.get(inputClass.uiFlags, "UNKNOWN")
@@ -1080,7 +1049,11 @@ class CvTechChooser:
 			del (
 				self.screenId, self.InputData, self.iUnitTT, self.bUnitTT, self.xRes, self.yRes,
 				self.aFontList, self.wCell, self.hCell, self.sIcon0, self.sIcon1, self.iSelectedTech,
-				self.iPlayer, self.CyPlayer, self.CyTeam, self.iCurrentResearch, self.currentTechState, self.iCurrentEra, self.updates
+				self.iPlayer, self.CyPlayer, self.CyTeam, self.iCurrentResearch, self.currentTechState,
+				self.iCurrentEra, self.updates, self.eFontTitle, self.tooltip, self.cellDetails,
+				self.scrolling, self.xCellDist, self.minimapScaleX, self.minimapLensWidth,
+				self.backdropPanelPos, self.minEraXPos, self.firstEraTech, self.minX, self.maxX,
+				self.delayedScroll, self.mwlHandle
 			)
 		print "CvTechChooser.onClose - DONE"
 
@@ -1139,9 +1112,7 @@ class CvTechChooser:
 			fgOffs = offs - int(FOREGROUND_PARA_AMOUNT * 2 * eraFrac)
 
 			# Debug text
-			# screen.setText("FRRAC", "", str((self.scrollOffs, eraStart, eraEnd, eraWidth, eraOffs, eraFrac, offs, bgOffs, fgOffs)), 0, 70, 5, 0, FontTypes.TITLE_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1)
 			screen.moveItem(bgName, bgOffs, 0, 0)
-			bgPanelHgt = self.yRes - SCREEN_PANEL_BOTTOM_BAR_H - SCREEN_PANEL_TOP_BAR_H
 			screen.moveItem(fgName, fgOffs, 0, 0)
 
 	def scrollToTech(self, idx):

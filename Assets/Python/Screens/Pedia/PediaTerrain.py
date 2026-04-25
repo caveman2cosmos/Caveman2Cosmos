@@ -24,7 +24,7 @@ class Page:
 				break
 			iSize -= 4
 
-		self.X_COL_1 = X_COL_1 = parent.X_PEDIA_PAGE
+		self.X_COL_1 = parent.X_PEDIA_PAGE
 
 		self.S_ICON = H_TOP_ROW - 10
 
@@ -98,7 +98,7 @@ class Page:
 				szTxt += " %d%s " %(iYield, unichr(8483 + k))
 
 		if szTxt:
-			szTxt = szfont3b + temp + szTxt + "\n"
+			szTxt = temp + szTxt + "\n"
 
 		szTxt += szfont3 + CyGameTextMgr().getTerrainHelp(iTheTerrain, True)
 		screen.addPanel(aName(), "", "", True, False, X_COL_1, Y_ROW_2, W_PEDIA_PAGE, H_ROW_2, ePnlBlue50)

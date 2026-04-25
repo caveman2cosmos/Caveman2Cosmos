@@ -103,6 +103,7 @@
 				</PropertySource>
 			</PropertyManipulators>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_FOLKLORE_E_STONE_FROM_THE_SKY</Type>
 			<SpecialBuildingType>SPECIALBUILDING_FOLKLORE_EXPLORATION</SpecialBuildingType>
@@ -204,6 +205,7 @@
 				</PropertySource>
 			</PropertyManipulators>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_FOLKLORE_E_FIRE</Type>
 			<SpecialBuildingType>SPECIALBUILDING_FOLKLORE_EXPLORATION</SpecialBuildingType>
@@ -303,6 +305,7 @@
 				</PropertySource>
 			</PropertyManipulators>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_FOLKLORE_E_METAL</Type>
 			<SpecialBuildingType>SPECIALBUILDING_FOLKLORE_EXPLORATION</SpecialBuildingType>
@@ -405,6 +408,7 @@
 				</PropertySource>
 			</PropertyManipulators>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_FOLKLORE_E_OASIS</Type>
 			<SpecialBuildingType>SPECIALBUILDING_FOLKLORE_EXPLORATION</SpecialBuildingType>
@@ -506,6 +510,7 @@
 				</PropertySource>
 			</PropertyManipulators>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_FOLKLORE_E_LANDFORM</Type>
 			<SpecialBuildingType>SPECIALBUILDING_FOLKLORE_EXPLORATION</SpecialBuildingType>
@@ -607,6 +612,7 @@
 				</PropertySource>
 			</PropertyManipulators>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_FOLKLORE_E_REEF</Type>
 			<SpecialBuildingType>SPECIALBUILDING_FOLKLORE_EXPLORATION</SpecialBuildingType>
@@ -708,6 +714,7 @@
 				</PropertySource>
 			</PropertyManipulators>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_FOLKLORE_E_STONE</Type>
 			<SpecialBuildingType>SPECIALBUILDING_FOLKLORE_EXPLORATION</SpecialBuildingType>
@@ -800,6 +807,7 @@
 				</PropertySource>
 			</PropertyManipulators>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_FOLKLORE_E_VOLCANO</Type>
 			<SpecialBuildingType>SPECIALBUILDING_FOLKLORE_EXPLORATION</SpecialBuildingType>
@@ -901,6 +909,7 @@
 				</PropertySource>
 			</PropertyManipulators>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_FOLKLORE_E_DRAGON</Type>
 			<SpecialBuildingType>SPECIALBUILDING_FOLKLORE_EXPLORATION</SpecialBuildingType>
@@ -995,6 +1004,7 @@
 				</PropertySource>
 			</PropertyManipulators>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_FOLKLORE_E_EARTH</Type>
 			<SpecialBuildingType>SPECIALBUILDING_FOLKLORE_EXPLORATION</SpecialBuildingType>
@@ -1094,6 +1104,7 @@
 				</PropertySource>
 			</PropertyManipulators>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_FOLKLORE_E_MERMAID</Type>
 			<SpecialBuildingType>SPECIALBUILDING_FOLKLORE_EXPLORATION</SpecialBuildingType>
@@ -1187,6 +1198,7 @@
 				</PropertySource>
 			</PropertyManipulators>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_FOLKLORE_E_PHOENIX</Type>
 			<SpecialBuildingType>SPECIALBUILDING_FOLKLORE_EXPLORATION</SpecialBuildingType>
@@ -1281,6 +1293,7 @@
 				</PropertySource>
 			</PropertyManipulators>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_FOLKLORE_E_SEA</Type>
 			<SpecialBuildingType>SPECIALBUILDING_FOLKLORE_EXPLORATION</SpecialBuildingType>
@@ -1380,6 +1393,7 @@
 				</PropertySource>
 			</PropertyManipulators>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_FOLKLORE_E_SKY</Type>
 			<SpecialBuildingType>SPECIALBUILDING_FOLKLORE_EXPLORATION</SpecialBuildingType>
@@ -1472,6 +1486,7 @@
 				</PropertySource>
 			</PropertyManipulators>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_FOLKLORE_T_ANTELOPE</Type>
 			<SpecialBuildingType>SPECIALBUILDING_FOLKLORE_TAXONOMY</SpecialBuildingType>
@@ -1573,6 +1588,7 @@
 				</PropertySource>
 			</PropertyManipulators>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_FOLKLORE_NINE_BANDED_ARMADILLO</Type>
 			<MapCategoryTypes>
@@ -1635,6 +1651,7 @@
 				</TechCommerceChange>
 			</TechCommerceChanges>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_FOLKLORE_MOON_BEAR</Type>
 			<MapCategoryTypes>
@@ -1697,6 +1714,7 @@
 				</TechCommerceChange>
 			</TechCommerceChanges>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_FOLKLORE_AUROCHS</Type>
 			<MapCategoryTypes>
@@ -1759,6 +1777,7 @@
 				</TechCommerceChange>
 			</TechCommerceChanges>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_FOLKLORE_BARBARY_MACAQUE</Type>
 			<MapCategoryTypes>
@@ -1821,6 +1840,7 @@
 				</TechCommerceChange>
 			</TechCommerceChanges>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_FOLKLORE_T_BEAR</Type>
 			<SpecialBuildingType>SPECIALBUILDING_FOLKLORE_TAXONOMY</SpecialBuildingType>
@@ -1925,6 +1945,7 @@
 				</PropertySource>
 			</PropertyManipulators>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_FOLKLORE_BELUGA</Type>
 			<MapCategoryTypes>
@@ -1989,6 +2010,7 @@
 				</TechCommerceChange>
 			</TechCommerceChanges>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_FOLKLORE_T_BIRDS</Type>
 			<SpecialBuildingType>SPECIALBUILDING_FOLKLORE_TAXONOMY</SpecialBuildingType>
@@ -2116,6 +2138,7 @@
 				</PropertySource>
 			</PropertyManipulators>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_FOLKLORE_BISON</Type>
 			<MapCategoryTypes>
@@ -2178,6 +2201,7 @@
 				</TechCommerceChange>
 			</TechCommerceChanges>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_FOLKLORE_BLACK_BEAR</Type>
 			<MapCategoryTypes>
@@ -2240,6 +2264,7 @@
 				</TechCommerceChange>
 			</TechCommerceChanges>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_FOLKLORE_BLACK_RHINOCEROS</Type>
 			<MapCategoryTypes>
@@ -2302,6 +2327,7 @@
 				</TechCommerceChange>
 			</TechCommerceChanges>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_FOLKLORE_BONGO</Type>
 			<MapCategoryTypes>
@@ -2364,6 +2390,7 @@
 				</TechCommerceChange>
 			</TechCommerceChanges>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_FOLKLORE_BLUE_FOOTED_BOOBY</Type>
 			<MapCategoryTypes>
@@ -2426,6 +2453,7 @@
 				</TechCommerceChange>
 			</TechCommerceChanges>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_FOLKLORE_BROWN_BEAR</Type>
 			<MapCategoryTypes>
@@ -2488,6 +2516,7 @@
 				</TechCommerceChange>
 			</TechCommerceChanges>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_FOLKLORE_CAPE_BUFFALO</Type>
 			<MapCategoryTypes>
@@ -2550,6 +2579,7 @@
 				</TechCommerceChange>
 			</TechCommerceChanges>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_FOLKLORE_T_BULL</Type>
 			<SpecialBuildingType>SPECIALBUILDING_FOLKLORE_TAXONOMY</SpecialBuildingType>
@@ -2649,6 +2679,7 @@
 				</PropertySource>
 			</PropertyManipulators>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_FOLKLORE_CAMEL</Type>
 			<Description>TXT_KEY_BUILDING_FOLKLORE_CAMEL</Description>
@@ -2711,6 +2742,7 @@
 				</TechCommerceChange>
 			</TechCommerceChanges>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_FOLKLORE_CAPUCHIN_MONKEY</Type>
 			<MapCategoryTypes>
@@ -2773,6 +2805,7 @@
 				</TechCommerceChange>
 			</TechCommerceChanges>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_FOLKLORE_CARIBOU</Type>
 			<MapCategoryTypes>
@@ -2835,6 +2868,7 @@
 				</TechCommerceChange>
 			</TechCommerceChanges>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_FOLKLORE_CASSOWARY</Type>
 			<MapCategoryTypes>
@@ -2897,6 +2931,7 @@
 				</TechCommerceChange>
 			</TechCommerceChanges>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_FOLKLORE_CAVE_BEAR</Type>
 			<MapCategoryTypes>
@@ -2959,6 +2994,7 @@
 				</TechCommerceChange>
 			</TechCommerceChanges>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_FOLKLORE_CHIMPANZEE</Type>
 			<MapCategoryTypes>
@@ -3021,6 +3057,7 @@
 				</TechCommerceChange>
 			</TechCommerceChanges>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_FOLKLORE_COD</Type>
 			<MapCategoryTypes>
@@ -3083,6 +3120,7 @@
 				</TechCommerceChange>
 			</TechCommerceChanges>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_FOLKLORE_CRAB</Type>
 			<MapCategoryTypes>
@@ -3145,6 +3183,7 @@
 				</TechCommerceChange>
 			</TechCommerceChanges>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_FOLKLORE_CROW</Type>
 			<MapCategoryTypes>
@@ -3207,6 +3246,7 @@
 				</TechCommerceChange>
 			</TechCommerceChanges>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_FOLKLORE_DEER</Type>
 			<Description>TXT_KEY_BUILDING_FOLKLORE_DEER</Description>
@@ -3269,6 +3309,7 @@
 				</TechCommerceChange>
 			</TechCommerceChanges>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_FOLKLORE_DOLPHIN</Type>
 			<MapCategoryTypes>
@@ -3331,6 +3372,7 @@
 				</TechCommerceChange>
 			</TechCommerceChanges>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_FOLKLORE_DONKEY</Type>
 			<Description>TXT_KEY_BUILDING_FOLKLORE_DONKEY</Description>
@@ -3393,6 +3435,7 @@
 				</TechCommerceChange>
 			</TechCommerceChanges>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_FOLKLORE_DUCK</Type>
 			<MapCategoryTypes>
@@ -3455,6 +3498,7 @@
 				</TechCommerceChange>
 			</TechCommerceChanges>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_FOLKLORE_DUGONG</Type>
 			<MapCategoryTypes>
@@ -3517,6 +3561,7 @@
 				</TechCommerceChange>
 			</TechCommerceChanges>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_FOLKLORE_EAGLE</Type>
 			<MapCategoryTypes>
@@ -3579,6 +3624,7 @@
 				</TechCommerceChange>
 			</TechCommerceChanges>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_FOLKLORE_BALD_EAGLE</Type>
 			<MapCategoryTypes>
@@ -3641,6 +3687,7 @@
 				</TechCommerceChange>
 			</TechCommerceChanges>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_FOLKLORE_GIANT_RHINOCEROS</Type>
 			<MapCategoryTypes>
@@ -3703,6 +3750,7 @@
 				</TechCommerceChange>
 			</TechCommerceChanges>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_FOLKLORE_EMU</Type>
 			<MapCategoryTypes>
@@ -3765,6 +3813,7 @@
 				</TechCommerceChange>
 			</TechCommerceChanges>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_FOLKLORE_T_FISH</Type>
 			<SpecialBuildingType>SPECIALBUILDING_FOLKLORE_TAXONOMY</SpecialBuildingType>
@@ -3877,6 +3926,7 @@
 				</PropertySource>
 			</PropertyManipulators>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_FOLKLORE_FLAMINGO</Type>
 			<MapCategoryTypes>
@@ -3939,6 +3989,7 @@
 				</TechCommerceChange>
 			</TechCommerceChanges>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_FOLKLORE_T_FLIGHTLESS_BIRDS</Type>
 			<SpecialBuildingType>SPECIALBUILDING_FOLKLORE_TAXONOMY</SpecialBuildingType>
@@ -4039,6 +4090,7 @@
 				</PropertySource>
 			</PropertyManipulators>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_FOLKLORE_THOMSONS_GAZELLE</Type>
 			<MapCategoryTypes>
@@ -4101,6 +4153,7 @@
 				</TechCommerceChange>
 			</TechCommerceChanges>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_FOLKLORE_GELADA_MONKEY</Type>
 			<MapCategoryTypes>
@@ -4163,6 +4216,7 @@
 				</TechCommerceChange>
 			</TechCommerceChanges>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_FOLKLORE_GEMSBOK</Type>
 			<MapCategoryTypes>
@@ -4225,6 +4279,7 @@
 				</TechCommerceChange>
 			</TechCommerceChanges>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_FOLKLORE_GERENUK</Type>
 			<MapCategoryTypes>
@@ -4287,6 +4342,7 @@
 				</TechCommerceChange>
 			</TechCommerceChanges>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_FOLKLORE_GIRAFFE</Type>
 			<MapCategoryTypes>
@@ -4349,6 +4405,7 @@
 				</TechCommerceChange>
 			</TechCommerceChanges>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_FOLKLORE_GLYPTODON</Type>
 			<MapCategoryTypes>
@@ -4411,6 +4468,7 @@
 				</TechCommerceChange>
 			</TechCommerceChanges>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_FOLKLORE_MOUFLON</Type>
 			<Description>TXT_KEY_BUILDING_FOLKLORE_MOUFLON</Description>
@@ -4473,6 +4531,7 @@
 				</TechCommerceChange>
 			</TechCommerceChanges>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_FOLKLORE_GORILLA</Type>
 			<MapCategoryTypes>
@@ -4535,6 +4594,7 @@
 				</TechCommerceChange>
 			</TechCommerceChanges>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_FOLKLORE_GREAT_WHITE_SHARK</Type>
 			<MapCategoryTypes>
@@ -4597,6 +4657,7 @@
 				</TechCommerceChange>
 			</TechCommerceChanges>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_FOLKLORE_GRIZZLY</Type>
 			<MapCategoryTypes>
@@ -4659,6 +4720,7 @@
 				</TechCommerceChange>
 			</TechCommerceChanges>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_FOLKLORE_SEAGULL</Type>
 			<MapCategoryTypes>
@@ -4721,6 +4783,7 @@
 				</TechCommerceChange>
 			</TechCommerceChanges>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_FOLKLORE_HAASTS_EAGLE</Type>
 			<MapCategoryTypes>
@@ -4783,6 +4846,7 @@
 				</TechCommerceChange>
 			</TechCommerceChanges>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_FOLKLORE_HAMMERHEAD_SHARK</Type>
 			<MapCategoryTypes>
@@ -4845,6 +4909,7 @@
 				</TechCommerceChange>
 			</TechCommerceChanges>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_FOLKLORE_HARPY_EAGLE</Type>
 			<MapCategoryTypes>
@@ -4907,6 +4972,7 @@
 				</TechCommerceChange>
 			</TechCommerceChanges>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_FOLKLORE_HAWK</Type>
 			<MapCategoryTypes>
@@ -4969,6 +5035,7 @@
 				</TechCommerceChange>
 			</TechCommerceChanges>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_FOLKLORE_HUMPBACK_WHALE</Type>
 			<MapCategoryTypes>
@@ -5032,6 +5099,7 @@
 			</TechCommerceChanges>
 			<Button>Art/Interface/Buttons/Units/Hyena.dds</Button>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_FOLKLORE_WALIA_IBEX</Type>
 			<MapCategoryTypes>
@@ -5094,6 +5162,7 @@
 				</TechCommerceChange>
 			</TechCommerceChanges>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_FOLKLORE_IMPALA</Type>
 			<MapCategoryTypes>
@@ -5156,6 +5225,7 @@
 				</TechCommerceChange>
 			</TechCommerceChanges>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_FOLKLORE_INDIAN_RHINOCEROS</Type>
 			<MapCategoryTypes>
@@ -5218,6 +5288,7 @@
 				</TechCommerceChange>
 			</TechCommerceChanges>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_FOLKLORE_JAVA_RHINOCEROS</Type>
 			<MapCategoryTypes>
@@ -5280,6 +5351,7 @@
 				</TechCommerceChange>
 			</TechCommerceChanges>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_FOLKLORE_KOOKABURRA</Type>
 			<MapCategoryTypes>
@@ -5342,6 +5414,7 @@
 				</TechCommerceChange>
 			</TechCommerceChanges>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_FOLKLORE_GIANT_SQUID</Type>
 			<MapCategoryTypes>
@@ -5404,6 +5477,7 @@
 				</TechCommerceChange>
 			</TechCommerceChanges>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_FOLKLORE_RING_TAILED_LEMUR</Type>
 			<MapCategoryTypes>
@@ -5466,6 +5540,7 @@
 				</TechCommerceChange>
 			</TechCommerceChanges>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_FOLKLORE_T_LEVIATHAN</Type>
 			<SpecialBuildingType>SPECIALBUILDING_FOLKLORE_TAXONOMY</SpecialBuildingType>
@@ -5568,6 +5643,7 @@
 				</PropertySource>
 			</PropertyManipulators>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_FOLKLORE_GUANACO</Type>
 			<MapCategoryTypes>
@@ -5630,6 +5706,7 @@
 				</TechCommerceChange>
 			</TechCommerceChanges>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_FOLKLORE_T_TALES_OF_FISH</Type>
 			<SpecialBuildingType>SPECIALBUILDING_FOLKLORE_TAXONOMY</SpecialBuildingType>
@@ -5748,6 +5825,7 @@
 				</PropertySource>
 			</PropertyManipulators>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_FOLKLORE_LOON</Type>
 			<MapCategoryTypes>
@@ -5810,6 +5888,7 @@
 				</TechCommerceChange>
 			</TechCommerceChanges>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_FOLKLORE_MACKEREL</Type>
 			<MapCategoryTypes>
@@ -5872,6 +5951,7 @@
 				</TechCommerceChange>
 			</TechCommerceChanges>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_FOLKLORE_MANDRILL</Type>
 			<MapCategoryTypes>
@@ -5934,6 +6014,7 @@
 				</TechCommerceChange>
 			</TechCommerceChanges>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_FOLKLORE_MARLIN</Type>
 			<MapCategoryTypes>
@@ -5996,6 +6077,7 @@
 				</TechCommerceChange>
 			</TechCommerceChanges>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_FOLKLORE_MINKIE_WHALE</Type>
 			<MapCategoryTypes>
@@ -6058,6 +6140,7 @@
 				</TechCommerceChange>
 			</TechCommerceChanges>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_FOLKLORE_MOA</Type>
 			<MapCategoryTypes>
@@ -6120,6 +6203,7 @@
 				</TechCommerceChange>
 			</TechCommerceChanges>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_FOLKLORE_MOOSE</Type>
 			<MapCategoryTypes>
@@ -6182,6 +6266,7 @@
 				</TechCommerceChange>
 			</TechCommerceChanges>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_FOLKLORE_MUSKOX</Type>
 			<MapCategoryTypes>
@@ -6244,6 +6329,7 @@
 				</TechCommerceChange>
 			</TechCommerceChanges>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_FOLKLORE_NARWHAL</Type>
 			<MapCategoryTypes>
@@ -6306,6 +6392,7 @@
 				</TechCommerceChange>
 			</TechCommerceChanges>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_FOLKLORE_T_NEW_WORLD_MONKEYS</Type>
 			<SpecialBuildingType>SPECIALBUILDING_FOLKLORE_TAXONOMY</SpecialBuildingType>
@@ -6401,6 +6488,7 @@
 				</PropertySource>
 			</PropertyManipulators>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_FOLKLORE_OKAPI</Type>
 			<MapCategoryTypes>
@@ -6463,6 +6551,7 @@
 				</TechCommerceChange>
 			</TechCommerceChanges>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_FOLKLORE_T_OLD_MAN_OF_THE_FOREST</Type>
 			<SpecialBuildingType>SPECIALBUILDING_FOLKLORE_TAXONOMY</SpecialBuildingType>
@@ -6565,6 +6654,7 @@
 				</PropertySource>
 			</PropertyManipulators>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_FOLKLORE_T_OLD_WORLD_MONKEYS</Type>
 			<SpecialBuildingType>SPECIALBUILDING_FOLKLORE_TAXONOMY</SpecialBuildingType>
@@ -6662,6 +6752,7 @@
 				</PropertySource>
 			</PropertyManipulators>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_FOLKLORE_ORANGUTAN</Type>
 			<MapCategoryTypes>
@@ -6724,6 +6815,7 @@
 				</TechCommerceChange>
 			</TechCommerceChanges>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_FOLKLORE_ORCA</Type>
 			<MapCategoryTypes>
@@ -6786,6 +6878,7 @@
 				</TechCommerceChange>
 			</TechCommerceChanges>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_FOLKLORE_OSTRICH</Type>
 			<MapCategoryTypes>
@@ -6848,6 +6941,7 @@
 				</TechCommerceChange>
 			</TechCommerceChanges>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_FOLKLORE_OXPECKER</Type>
 			<MapCategoryTypes>
@@ -6910,6 +7004,7 @@
 				</TechCommerceChange>
 			</TechCommerceChanges>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_FOLKLORE_PALEOLITHIC_BIRDS</Type>
 			<Description>TXT_KEY_BUILDING_FOLKLORE_PALEOLITHIC_BIRDS</Description>
@@ -6972,6 +7067,7 @@
 				</TechCommerceChange>
 			</TechCommerceChanges>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_FOLKLORE_PALEOLITHIC_CAT</Type>
 			<Description>TXT_KEY_BUILDING_FOLKLORE_PALEOLITHIC_CAT</Description>
@@ -7034,6 +7130,7 @@
 				</TechCommerceChange>
 			</TechCommerceChanges>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_FOLKLORE_GROUND_SLOTH</Type>
 			<MapCategoryTypes>
@@ -7096,6 +7193,7 @@
 				</TechCommerceChange>
 			</TechCommerceChanges>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_FOLKLORE_GIANT_PANDA</Type>
 			<MapCategoryTypes>
@@ -7158,6 +7256,7 @@
 				</TechCommerceChange>
 			</TechCommerceChanges>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_FOLKLORE_PARROT</Type>
 			<MapCategoryTypes>
@@ -7220,6 +7319,7 @@
 				</TechCommerceChange>
 			</TechCommerceChanges>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_FOLKLORE_PEACOCK</Type>
 			<MapCategoryTypes>
@@ -7282,6 +7382,7 @@
 				</TechCommerceChange>
 			</TechCommerceChanges>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_FOLKLORE_PHEASANT</Type>
 			<MapCategoryTypes>
@@ -7344,6 +7445,7 @@
 				</TechCommerceChange>
 			</TechCommerceChanges>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_FOLKLORE_PIGEON</Type>
 			<MapCategoryTypes>
@@ -7406,6 +7508,7 @@
 				</TechCommerceChange>
 			</TechCommerceChanges>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_FOLKLORE_POLAR_BEAR</Type>
 			<MapCategoryTypes>
@@ -7468,6 +7571,7 @@
 				</TechCommerceChange>
 			</TechCommerceChanges>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_FOLKLORE_T_RAPTORS</Type>
 			<SpecialBuildingType>SPECIALBUILDING_FOLKLORE_TAXONOMY</SpecialBuildingType>
@@ -7569,6 +7673,7 @@
 				</PropertySource>
 			</PropertyManipulators>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_FOLKLORE_RAVEN</Type>
 			<MapCategoryTypes>
@@ -7631,6 +7736,7 @@
 				</TechCommerceChange>
 			</TechCommerceChanges>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_FOLKLORE_T_RAY</Type>
 			<SpecialBuildingType>SPECIALBUILDING_FOLKLORE_TAXONOMY</SpecialBuildingType>
@@ -7727,6 +7833,7 @@
 				</PropertySource>
 			</PropertyManipulators>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_FOLKLORE_EAGLE_RAY</Type>
 			<MapCategoryTypes>
@@ -7789,6 +7896,7 @@
 				</TechCommerceChange>
 			</TechCommerceChanges>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_FOLKLORE_MANTA_RAY</Type>
 			<MapCategoryTypes>
@@ -7851,6 +7959,7 @@
 				</TechCommerceChange>
 			</TechCommerceChanges>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_FOLKLORE_RAZORBILL</Type>
 			<MapCategoryTypes>
@@ -7913,6 +8022,7 @@
 				</TechCommerceChange>
 			</TechCommerceChanges>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_FOLKLORE_REEF_SHARK</Type>
 			<MapCategoryTypes>
@@ -7975,6 +8085,7 @@
 				</TechCommerceChange>
 			</TechCommerceChanges>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_FOLKLORE_RHEA</Type>
 			<MapCategoryTypes>
@@ -8037,6 +8148,7 @@
 				</TechCommerceChange>
 			</TechCommerceChanges>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_FOLKLORE_T_RHINOCEROSES</Type>
 			<SpecialBuildingType>SPECIALBUILDING_FOLKLORE_TAXONOMY</SpecialBuildingType>
@@ -8136,6 +8248,7 @@
 				</PropertySource>
 			</PropertyManipulators>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_FOLKLORE_SABRETOOTH</Type>
 			<MapCategoryTypes>
@@ -8198,6 +8311,7 @@
 				</TechCommerceChange>
 			</TechCommerceChanges>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_FOLKLORE_SAIGA_ANTELOPE</Type>
 			<MapCategoryTypes>
@@ -8260,6 +8374,7 @@
 				</TechCommerceChange>
 			</TechCommerceChanges>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_FOLKLORE_STELLERS_SEA_EAGLE</Type>
 			<MapCategoryTypes>
@@ -8322,6 +8437,7 @@
 				</TechCommerceChange>
 			</TechCommerceChanges>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_FOLKLORE_SEA_LION</Type>
 			<MapCategoryTypes>
@@ -8384,6 +8500,7 @@
 				</TechCommerceChange>
 			</TechCommerceChanges>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_FOLKLORE_T_SEA_BIRDS</Type>
 			<SpecialBuildingType>SPECIALBUILDING_FOLKLORE_TAXONOMY</SpecialBuildingType>
@@ -8482,6 +8599,7 @@
 				</PropertySource>
 			</PropertyManipulators>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_FOLKLORE_SECRETARY_BIRD</Type>
 			<MapCategoryTypes>
@@ -8544,6 +8662,7 @@
 				</TechCommerceChange>
 			</TechCommerceChanges>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_FOLKLORE_T_SHARKS</Type>
 			<SpecialBuildingType>SPECIALBUILDING_FOLKLORE_TAXONOMY</SpecialBuildingType>
@@ -8644,6 +8763,7 @@
 				</PropertySource>
 			</PropertyManipulators>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_FOLKLORE_SLOTH_BEAR</Type>
 			<MapCategoryTypes>
@@ -8706,6 +8826,7 @@
 				</TechCommerceChange>
 			</TechCommerceChanges>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_FOLKLORE_SPECTACLED_BEAR</Type>
 			<MapCategoryTypes>
@@ -8768,6 +8889,7 @@
 				</TechCommerceChange>
 			</TechCommerceChanges>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_FOLKLORE_SUN_BEAR</Type>
 			<MapCategoryTypes>
@@ -8830,6 +8952,7 @@
 				</TechCommerceChange>
 			</TechCommerceChanges>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_FOLKLORE_ARCTIC_TERN</Type>
 			<MapCategoryTypes>
@@ -8892,6 +9015,7 @@
 				</TechCommerceChange>
 			</TechCommerceChanges>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_FOLKLORE_TOUCAN</Type>
 			<MapCategoryTypes>
@@ -8954,6 +9078,7 @@
 				</TechCommerceChange>
 			</TechCommerceChanges>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_FOLKLORE_THREE_TOED_SLOTH</Type>
 			<MapCategoryTypes>
@@ -9016,6 +9141,7 @@
 				</TechCommerceChange>
 			</TechCommerceChanges>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_FOLKLORE_TUNA</Type>
 			<MapCategoryTypes>
@@ -9078,6 +9204,7 @@
 				</TechCommerceChange>
 			</TechCommerceChanges>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_FOLKLORE_WILD_TURKEY</Type>
 			<MapCategoryTypes>
@@ -9140,6 +9267,7 @@
 				</TechCommerceChange>
 			</TechCommerceChanges>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_FOLKLORE_VULTURE</Type>
 			<MapCategoryTypes>
@@ -9202,6 +9330,7 @@
 				</TechCommerceChange>
 			</TechCommerceChanges>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_FOLKLORE_WALRUS</Type>
 			<Description>TXT_KEY_BUILDING_FOLKLORE_WALRUS</Description>
@@ -9264,6 +9393,7 @@
 				</TechCommerceChange>
 			</TechCommerceChanges>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_FOLKLORE_WHALE_SHARK</Type>
 			<MapCategoryTypes>
@@ -9326,6 +9456,7 @@
 				</TechCommerceChange>
 			</TechCommerceChanges>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_FOLKLORE_WHITE_RHINOCEROS</Type>
 			<MapCategoryTypes>
@@ -9388,6 +9519,7 @@
 				</TechCommerceChange>
 			</TechCommerceChanges>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_FOLKLORE_WILDEBEEST</Type>
 			<MapCategoryTypes>
@@ -9450,6 +9582,7 @@
 				</TechCommerceChange>
 			</TechCommerceChanges>
 		</BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_FOLKLORE_ZEBRA</Type>
 			<MapCategoryTypes>

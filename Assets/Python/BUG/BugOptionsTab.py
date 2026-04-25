@@ -336,9 +336,9 @@ class BugOptionsTab:
 			return checkControl, dropControl
 
 		if checkOption is None:
-			self.addMissingOption(screen, checkPanel, checkOption)
+			self.addMissingOption(screen, checkPanel, checkName)
 		if dropOption is None:
-			self.addMissingOption(screen, dropPanel, dropOption)
+			self.addMissingOption(screen, dropPanel, dropName)
 
 
 	def addCheckboxTextDropdown(self, screen, checkPanel, dropPanel, checkName, dropName, layout="left", spacer=False):
@@ -351,9 +351,9 @@ class BugOptionsTab:
 			return checkControl, dropControl
 
 		if checkOption is None:
-			self.addMissingOption(screen, checkPanel, checkOption)
+			self.addMissingOption(screen, checkPanel, checkName)
 		if dropOption is None:
-			self.addMissingOption(screen, dropPanel, dropOption)
+			self.addMissingOption(screen, dropPanel, dropName)
 
 
 	def addCheckboxIntDropdown(self, screen, checkPanel, dropPanel, checkName, dropName, layout="right", spacer=False):
@@ -366,9 +366,9 @@ class BugOptionsTab:
 			return checkControl, dropControl
 
 		if checkOption is None:
-			self.addMissingOption(screen, checkPanel, checkOption)
+			self.addMissingOption(screen, checkPanel, checkName)
 		if dropOption is None:
-			self.addMissingOption(screen, dropPanel, dropOption)
+			self.addMissingOption(screen, dropPanel, dropName)
 
 
 	def addCheckboxFloatDropdown(self, screen, checkPanel, dropPanel, checkName, dropName, layout="right", spacer=False):
@@ -381,9 +381,9 @@ class BugOptionsTab:
 			return checkControl, dropControl
 
 		if checkOption is None:
-			self.addMissingOption(screen, checkPanel, checkOption)
+			self.addMissingOption(screen, checkPanel, checkName)
 		if dropOption is None:
-			self.addMissingOption(screen, dropPanel, dropOption)
+			self.addMissingOption(screen, dropPanel, dropName)
 
 
 	def addSlider(self, screen, labelPanel, controlPanel, name, spacer=False, vertical=False, expanding=True, fill=None, min=0, max=100):
@@ -425,4 +425,10 @@ class BugOptionsTab:
 
 
 	def addMissingOption(self, screen, panel, name):
+		if panel is None:
+			return
+		if name is None:
+			name = "UnknownOption"
+		else:
+			name = str(name)
 		screen.attachLabel(panel, name + "Missing", "Missing: " + name)

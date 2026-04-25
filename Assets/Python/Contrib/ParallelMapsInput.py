@@ -19,7 +19,7 @@ def handleInput(argsList):
 			and i != GAME.getCurrentMap() \
 			and (bDebug or GC.getMapByIndex(i).plotsInitialized()):
 				if not GC.getMapByIndex(i).plotsInitialized():
-					CyInterface().addImmediateMessage("Initialized Map %d: %s" %(i, mapInfo.getDescription()), "")
+					CyInterface().addImmediateMessage("Uninitialized Map %d: %s" %(i, mapInfo.getDescription()), "")
 				else:
 					CyInterface().addImmediateMessage("Map %d: %s" %(i, mapInfo.getDescription()), "")
 				GC.switchMap(i)

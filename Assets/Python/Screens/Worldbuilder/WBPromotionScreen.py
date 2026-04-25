@@ -91,7 +91,6 @@ class WBPromotionScreen:
 		self.sortPromotions()
 
 	def sortUnits(self):
-		screen = CyGInterfaceScreen( "WBPromotionScreen", CvScreenEnums.WB_PROMOTION)
 		global lUnits
 		lUnits = []
 		for iPlayerX in xrange(GC.getMAX_PLAYERS()):
@@ -149,14 +148,13 @@ class WBPromotionScreen:
 					sColor = CyTranslator().getText("[COLOR_POSITIVE_TEXT]", ())
 				elif pUnitX.getGroupID() == pUnit.getGroupID():
 					sColor = CyTranslator().getText("[COLOR_YELLOW]", ())
-			screen.setTableText("WBCurrentUnit", 2, iRow, "<font=3>" + sColor + sText + "</font></color>", pUnitX.getButton(), WidgetTypes.WIDGET_PYTHON, 8300 + i[0], i[1], 1<<0)
+			screen.setTableText("WBCurrentUnit", 2, iRow, "<font=3>" + sColor + sText + "</color></font>", pUnitX.getButton(), WidgetTypes.WIDGET_PYTHON, 8300 + i[0], i[1], 1<<0)
 			iLeader = pPlayerX.getLeaderType()
 			iCiv = pUnitX.getCivilizationType()
 			screen.setTableText("WBCurrentUnit", 0, iRow, "", GC.getCivilizationInfo(iCiv).getButton(), WidgetTypes.WIDGET_PYTHON, 7872, iCiv, 1<<0 )
 			screen.setTableText("WBCurrentUnit", 1, iRow, "", GC.getLeaderHeadInfo(iLeader).getButton(), WidgetTypes.WIDGET_PYTHON, 7876, iLeader, 1<<0 )
 
 	def sortPromotions(self):
-		screen = CyGInterfaceScreen( "WBPromotionScreen", CvScreenEnums.WB_PROMOTION)
 		global lList
 		lList = []
 		for i in xrange(GC.getNumPromotionInfos()):
@@ -178,7 +176,7 @@ class WBPromotionScreen:
 			screen.setTableColumnHeader("WBPromotion", i, "", iWidth/nColumns)
 
 		nRows = (len(lList) + nColumns - 1) / nColumns
-		for i in xrange(nRows):
+		for _ in xrange(nRows):
 			screen.appendTableRow("WBPromotion")
 
 		for iCount in xrange(len(lList)):
@@ -189,7 +187,7 @@ class WBPromotionScreen:
 			sColor = CyTranslator().getText("[COLOR_WARNING_TEXT]", ())
 			if pUnit.isHasPromotion(item[1]):
 				sColor = CyTranslator().getText("[COLOR_POSITIVE_TEXT]", ())
-			screen.setTableText("WBPromotion", iColumn, iRow, "<font=3>" + sColor + item[0] + "</font></color>", ItemInfo.getButton(), WidgetTypes.WIDGET_PYTHON, 7873, item[1], 1<<0 )
+			screen.setTableText("WBPromotion", iColumn, iRow, "<font=3>" + sColor + item[0] + "</color></font>", ItemInfo.getButton(), WidgetTypes.WIDGET_PYTHON, 7873, item[1], 1<<0 )
 
 	def handleInput (self, inputClass):
 		screen = CyGInterfaceScreen( "WBPromotionScreen", CvScreenEnums.WB_PROMOTION)

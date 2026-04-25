@@ -12622,8 +12622,8 @@
 			<iWorkerSpeedModifier>0</iWorkerSpeedModifier>
 			<iImprovementUpgradeRateModifier>0</iImprovementUpgradeRateModifier>
 			<iMilitaryProductionModifier>10</iMilitaryProductionModifier>
-			<iFreeUnitUpkeepMilitary>3</iFreeUnitUpkeepMilitary>
-            <iFreeUnitUpkeepCivilian>1</iFreeUnitUpkeepCivilian>
+			<iFreeUnitUpkeepMilitary>10</iFreeUnitUpkeepMilitary>
+            <iFreeUnitUpkeepCivilian>5</iFreeUnitUpkeepCivilian>
 			<iHappyPerMilitaryUnit>1</iHappyPerMilitaryUnit>
 			<bMilitaryFoodProduction>0</bMilitaryFoodProduction>
 			<iMaxConscript>0</iMaxConscript>

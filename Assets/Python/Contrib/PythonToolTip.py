@@ -192,7 +192,7 @@ def makeTooltip(screen, xPos, yPos, szTxt, uFont, listBox):
 	else: # Bottom half of the screen.
 		if yPos + dy + 24 < yRes - 4:
 			yOffset = 24
-		elif yPos - yRes - yPos -dy - 4 > 4:
+		elif yPos - yRes -dy - 4 > 4:
 			yOffset = yRes - yPos -dy - 4
 		else:
 			yOffset = 4 - yPos

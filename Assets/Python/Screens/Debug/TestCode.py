@@ -534,7 +534,6 @@ class TestCode:
 			aImmediateReplacementList = []
 			for i in xrange(len(aBuildingReplacementList)):
 				if aBuildingReplacementList[i] not in aBuildingReplacement2List:
-					CvBuildingReplacementInfo = GC.getBuildingInfo(aBuildingReplacementList[i])
 					aImmediateReplacementList.append(aBuildingReplacementList[i])
 
 			#There may be several immediate replacements
@@ -542,9 +541,7 @@ class TestCode:
 				for i in xrange(len(aImmediateReplacementList)):
 					CvBuildingImmediateReplacementInfo = GC.getBuildingInfo(aImmediateReplacementList[i])
 					iImmediateReplacementTechLoc = self.HF.checkBuildingTechRequirements(CvBuildingImmediateReplacementInfo)[0]
-					iImmediateReplacementTechLocID = max(self.HF.checkBuildingTechRequirements(CvBuildingImmediateReplacementInfo)[2])
 					iImmediateReplacementTechObs = self.HF.checkBuildingTechObsoletionLocation(CvBuildingImmediateReplacementInfo)[0]
-					iImmediateReplacementTechObsID = self.HF.checkBuildingTechObsoletionLocation(CvBuildingImmediateReplacementInfo)[1]
 					if iBuilding != GC.getInfoTypeForString("BUILDING_HOUSING_HOMELESS"):
 						if iTechLoc >= iImmediateReplacementTechLoc:
 							self.log(CvBuildingInfo.getType()+" unlocks after or concurrently with unlock of "+CvBuildingImmediateReplacementInfo.getType()+" Base unlock/Replacement unlock "+str(iTechLoc)+"/"+str(iImmediateReplacementTechLoc))
@@ -554,7 +551,6 @@ class TestCode:
 			#Get replacements of replacements
 			for i in xrange(len(aImmediateReplacementList)):
 				Cv2BuildingInfo = GC.getBuildingInfo(aImmediateReplacementList[i])
-				iReplacementTechLoc = self.HF.checkBuildingTechRequirements(Cv2BuildingInfo)[0]
 
 				#All replacements of replacements
 				a2BuildingReplacementList = []
@@ -576,7 +572,6 @@ class TestCode:
 				aImmediateReplacement2List = []
 				for i in xrange(len(a2BuildingReplacementList)):
 					if a2BuildingReplacementList[i] not in a2BuildingReplacement2List:
-						Cv2BuildingReplacementInfo = GC.getBuildingInfo(a2BuildingReplacementList[i])
 						aImmediateReplacement2List.append(a2BuildingReplacementList[i])
 
 				if len(aImmediateReplacement2List) > 0:
@@ -644,7 +639,6 @@ class TestCode:
 
 			#Replacements
 			aReplacementBuildingList = []
-			aReplacementBuildingTechLocList = []
 			for i in xrange(CvBuildingInfo.getNumReplacementBuilding()):
 				iReplacementBuilding = CvBuildingInfo.getReplacementBuilding(i)
 				CvBuildingReplacementInfo = GC.getBuildingInfo(iReplacementBuilding)
@@ -1481,7 +1475,7 @@ class TestCode:
 				if CvBuildingInfo.isAnyTechSpecialistChanges():
 					for iTech in xrange(GC.getNumTechInfos()):
 						for iSpecialist in xrange(GC.getNumSpecialistInfos()):
-							if CvReplacedBuildingInfo.getTechSpecialistChange(iTech, iSpecialist) != 0:
+							if CvBuildingInfo.getTechSpecialistChange(iTech, iSpecialist) != 0:
 								aTechSpecialistChanges[BASE][iTech][iSpecialist] += CvBuildingInfo.getTechSpecialistChange(iTech, iSpecialist)
 
 				#Analyze replacements by tag
@@ -3457,7 +3451,6 @@ class TestCode:
 		for iImprovement in xrange(GC.getNumImprovementInfos()):
 			CvImprovementInfo = GC.getImprovementInfo(iImprovement)
 			if CvImprovementInfo.getImprovementUpgrade() != -1 or CvImprovementInfo.getNumAlternativeImprovementUpgradeTypes() > 0 or CvImprovementInfo.getImprovementPillage() != -1: #Only those, that can upgrade, or are top of upgrade chain
-				iTechLoc = self.HF.checkImprovementTechRequirementLocation(CvImprovementInfo)[0]
 				#Improvement yield with all techs
 				aBaseImprovementYield = [0]*YieldTypes.NUM_YIELD_TYPES
 				aBaseUpgradeImprovementYield = [0]*YieldTypes.NUM_YIELD_TYPES
@@ -3561,8 +3554,6 @@ class TestCode:
 				aTechXY.append(100*iTechMainLoc+iTechMainRow)
 
 			#Tech Type requirement
-			aTechTypeLocList = []
-			aTechTypeRowList = []
 			for iTechType in CvBuildingInfo.getPrereqAndTechs():
 				aTechList.append(GC.getTechInfo(iTechType).getType())
 				aTechXY.append(100*GC.getTechInfo(iTechType).getGridX()+GC.getTechInfo(iTechType).getGridY())
@@ -3584,8 +3575,6 @@ class TestCode:
 				aTechXY.append(100*iTechMainLoc+iTechMainRow)
 
 			#Tech Type requirement
-			aTechTypeLocList = []
-			aTechTypeRowList = []
 			for iTechType in CvUnitInfo.getPrereqAndTechs():
 				aTechList.append(GC.getTechInfo(iTechType).getType())
 				aTechXY.append(100*GC.getTechInfo(iTechType).getGridX()+GC.getTechInfo(iTechType).getGridY())
