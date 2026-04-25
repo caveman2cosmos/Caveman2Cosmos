@@ -9,7 +9,7 @@
 import BugOptionsTab
 
 class BugAlertsOptionsTab(BugOptionsTab.BugOptionsTab):
-	"BUG NJAGC Options Screen Tab"
+	"BUG Alerts Options Screen Tab"
 
 	def __init__(self, screen):
 		BugOptionsTab.BugOptionsTab.__init__(self, "Alerts", "Alerts")

@@ -132,7 +132,7 @@ class MoreCiv4lertsEvent(AbstractMoreCiv4lertsEvent):
 					if cityX.getFoodTurnsLeft() == 1 and not cityX.isFoodProduction() and not cityX.AI_isEmphasize(5):
 						iGrowthCount += 1
 					if bCheck2 and cityX.getCultureThreshold() > 0:
-						if cityX.getCulture(iPlayerX) + cityX.getCommerceRate(CommerceTypes.COMMERCE_CULTURE) >= cityX.getCultureThreshold():
+						if cityX.getCulture(cityX.getOwner()) + cityX.getCommerceRate(CommerceTypes.COMMERCE_CULTURE) >= cityX.getCultureThreshold():
 							if GAME.isOption(GameOptionTypes.GAMEOPTION_CULTURE_REALISTIC_SPREAD):
 								msg = TRNSLTR.getText("TXT_KEY_MORECIV4LERTS_CITY_TO_EXPAND_RCS",(cityX.getName(),))
 							else:
@@ -328,6 +328,9 @@ class MoreCiv4lertsEvent(AbstractMoreCiv4lertsEvent):
 		newSet = aSet.difference(oldSet)
 		if newSet:
 			self._addMessageNoIcon(iPlayer, TRNSLTR.getText(TXT_KEY, (self.buildPlayerString(newSet),)))
+		removedSet = oldSet.difference(aSet)
+		if removedSet:
+			self._addMessageNoIcon(iPlayer, TRNSLTR.getText(TXT_KEY + "_LOST", (self.buildPlayerString(removedSet),)))
 		return aSet
 
 	def buildTechString(self, techs):

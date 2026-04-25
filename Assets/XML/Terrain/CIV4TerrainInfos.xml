@@ -584,7 +584,7 @@
 			<bFound>1</bFound>
 			<iBuildModifier>50</iBuildModifier>
 			<iCultureDistance>1</iCultureDistance>
-			<iDefense>20</iDefense>
+			<iDefense>5</iDefense>
 			<iMovement>2</iMovement>
 			<Yields>
 				<iYield>0</iYield>
@@ -730,7 +730,7 @@
 			<bFound>1</bFound>
 			<iBuildModifier>75</iBuildModifier>
 			<iCultureDistance>1</iCultureDistance>
-			<iDefense>20</iDefense>
+			<iDefense>0</iDefense>
 			<iHealthPercent>-15</iHealthPercent>
 			<iMovement>2</iMovement>
 			<Yields>
@@ -877,7 +877,7 @@
 			<bFound>1</bFound>
 			<iBuildModifier>75</iBuildModifier>
 			<iCultureDistance>2</iCultureDistance>
-			<iDefense>20</iDefense>
+			<iDefense>0</iDefense>
 			<iHealthPercent>-15</iHealthPercent>
 			<iMovement>2</iMovement>
 			<Yields>
@@ -1167,7 +1167,7 @@
 			<bFound>1</bFound>
 			<iBuildModifier>20</iBuildModifier>
 			<iCultureDistance>1</iCultureDistance>
-			<iDefense>10</iDefense>
+			<iDefense>0</iDefense>
 			<iMovement>1</iMovement>
 			<Yields>
 				<iYield>1</iYield>
@@ -1313,7 +1313,7 @@
 			<bFoundFreshWater>1</bFoundFreshWater>
 			<iBuildModifier>125</iBuildModifier>
 			<iCultureDistance>3</iCultureDistance>
-			<iDefense>15</iDefense>
+			<iDefense>5</iDefense>
 			<iHealthPercent>-20</iHealthPercent>
 			<iMovement>4</iMovement>
 			<Button>Art/Interface\Buttons\WorldBuilder\Terrain_Desert.dds</Button>
@@ -2177,7 +2177,7 @@
 			<bFoundFreshWater>1</bFoundFreshWater>
 			<iBuildModifier>50</iBuildModifier>
 			<iCultureDistance>2</iCultureDistance>
-			<iDefense>20</iDefense>
+			<iDefense>10</iDefense>
 			<iMovement>3</iMovement>
 			<Yields>
 				<iYield>1</iYield>

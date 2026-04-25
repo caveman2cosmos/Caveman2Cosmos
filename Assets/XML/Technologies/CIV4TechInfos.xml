@@ -3445,7 +3445,6 @@
 			<iAIWeight>100</iAIWeight>
 			<iCost>74</iCost>
 			<Era>C2C_ERA_ANCIENT</Era>
-			<iFirstFreeTechs>1</iFirstFreeTechs>
 			<iAsset>12</iAsset>
 			<bTrade>1</bTrade>
 			<iGridX>19</iGridX>
@@ -6152,6 +6151,7 @@
 			<Era>C2C_ERA_ANCIENT</Era>
 			<iAsset>8</iAsset>
 			<bEmbassyTrading>1</bEmbassyTrading>
+            <iFirstFreeTechs>1</iFirstFreeTechs>
 			<bTrade>1</bTrade>
 			<bGoodyTech>1</bGoodyTech>
 			<bTechTrading>1</bTechTrading>
@@ -7235,7 +7235,6 @@
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<iCost>401</iCost>
 			<Era>C2C_ERA_CLASSICAL</Era>
-			<iFirstFreeTechs>1</iFirstFreeTechs>
 			<iAsset>16</iAsset>
 			<iPower>4</iPower>
 			<bTrade>1</bTrade>
@@ -7550,6 +7549,7 @@
 			<bTrade>1</bTrade>
 			<iGridX>33</iGridX>
 			<iGridY>15</iGridY>
+            <iFirstFreeTechs>1</iFirstFreeTechs>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_RELIGION</FlavorType>
@@ -9585,7 +9585,6 @@
 			<Advisor>ADVISOR_GROWTH</Advisor>
 			<iCost>1040</iCost>
 			<Era>C2C_ERA_MEDIEVAL</Era>
-			<iFirstFreeTechs>1</iFirstFreeTechs>
 			<iAsset>24</iAsset>
 			<bTrade>1</bTrade>
 			<iGridX>41</iGridX>
@@ -10902,6 +10901,7 @@
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<iCost>1563</iCost>
 			<Era>C2C_ERA_MEDIEVAL</Era>
+            <iFirstFreeTechs>1</iFirstFreeTechs>
 			<iAsset>24</iAsset>
 			<bTrade>1</bTrade>
 			<iGridX>46</iGridX>
@@ -11842,7 +11842,6 @@
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<iCost>2208</iCost>
 			<Era>C2C_ERA_RENAISSANCE</Era>
-			<iFirstFreeTechs>1</iFirstFreeTechs>
 			<iAsset>32</iAsset>
 			<bTrade>1</bTrade>
 			<iGridX>50</iGridX>
@@ -11889,6 +11888,7 @@
 			<bTrade>1</bTrade>
 			<iGridX>51</iGridX>
 			<iGridY>5</iGridY>
+            <iFirstFreeTechs>1</iFirstFreeTechs>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_RELIGION</FlavorType>
@@ -13151,6 +13151,7 @@
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<iCost>3074</iCost>
 			<Era>C2C_ERA_RENAISSANCE</Era>
+            <iFirstFreeTechs>1</iFirstFreeTechs>
 			<iAsset>20</iAsset>
 			<bTrade>1</bTrade>
 			<iGridX>55</iGridX>
@@ -13525,7 +13526,6 @@
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<iCost>3484</iCost>
 			<Era>C2C_ERA_RENAISSANCE</Era>
-			<iFirstFreeTechs>1</iFirstFreeTechs>
 			<iAsset>32</iAsset>
 			<bTrade>1</bTrade>
 			<iGridX>57</iGridX>
@@ -14247,7 +14247,6 @@
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<iCost>4925</iCost>
 			<Era>C2C_ERA_INDUSTRIAL</Era>
-			<iFirstFreeTechs>1</iFirstFreeTechs>
 			<iAsset>40</iAsset>
 			<bTrade>1</bTrade>
 			<iGridX>61</iGridX>
@@ -16891,7 +16890,6 @@
 			<iAITradeModifier>10</iAITradeModifier>
 			<iCost>9094</iCost>
 			<Era>C2C_ERA_ATOMIC</Era>
-			<iFirstFreeTechs>1</iFirstFreeTechs>
 			<iAsset>40</iAsset>
 			<iPower>10</iPower>
 			<bTrade>1</bTrade>
@@ -20242,6 +20240,7 @@
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<iCost>14287</iCost>
 			<Era>C2C_ERA_ATOMIC</Era>
+            <iFirstFreeTechs>1</iFirstFreeTechs>
 			<iAsset>48</iAsset>
 			<bTrade>1</bTrade>
 			<iGridX>82</iGridX>
@@ -20941,7 +20940,6 @@
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<iCost>19246</iCost>
 			<Era>C2C_ERA_INFORMATION</Era>
-			<iFirstFreeTechs>1</iFirstFreeTechs>
 			<iAsset>48</iAsset>
 			<iPower>4</iPower>
 			<bTrade>1</bTrade>
@@ -24087,7 +24085,6 @@
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<iCost>35299</iCost>
 			<Era>C2C_ERA_NANOTECH</Era>
-			<iFirstFreeTechs>1</iFirstFreeTechs>
 			<iAsset>50</iAsset>
 			<iPower>5</iPower>
 			<bTrade>1</bTrade>
@@ -27583,7 +27580,6 @@
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<iCost>61449</iCost>
 			<Era>C2C_ERA_TRANSHUMAN</Era>
-			<iFirstFreeTechs>1</iFirstFreeTechs>
 			<iAsset>50</iAsset>
 			<iPower>5</iPower>
 			<bTrade>1</bTrade>
@@ -30868,7 +30864,6 @@
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<iCost>122420</iCost>
 			<Era>C2C_ERA_GALACTIC</Era>
-			<iFirstFreeTechs>1</iFirstFreeTechs>
 			<iAsset>50</iAsset>
 			<iPower>5</iPower>
 			<bTrade>1</bTrade>
@@ -33267,7 +33262,6 @@
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<iCost>253187</iCost>
 			<Era>C2C_ERA_COSMIC</Era>
-			<iFirstFreeTechs>1</iFirstFreeTechs>
 			<iAsset>50</iAsset>
 			<iPower>5</iPower>
 			<bTrade>1</bTrade>
@@ -34991,7 +34985,6 @@
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<iCost>480519</iCost>
 			<Era>C2C_ERA_TRANSCENDENT</Era>
-			<iFirstFreeTechs>1</iFirstFreeTechs>
 			<iAsset>50</iAsset>
 			<iPower>5</iPower>
 			<bTrade>1</bTrade>

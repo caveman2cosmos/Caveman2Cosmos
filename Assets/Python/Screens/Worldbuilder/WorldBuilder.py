@@ -217,6 +217,7 @@ class WorldBuilder:
 					plot = MAP.plot(x, y)
 					if not plot: continue
 					CyEngine().fillAreaBorderPlotAlt(plot.getX(), plot.getY(), AreaBorderLayers.AREA_BORDER_LAYER_WORLD_BUILDER, "COLOR_GREEN", 1)
+		return None
 
 	# Will update the screen (every 250 MS)
 	def updateScreen(self):
@@ -554,7 +555,7 @@ class WorldBuilder:
 						else:
 							self.m_pCurrentPlot.setFeatureType(iOldFeature, iOldVariety)
 					elif self.iPlayerAddMode == "Routes":
-						if not self.m_pCurrentPlot.isImpassable() or self.m_pCurrentPlot.isWater():
+						if not self.m_pCurrentPlot.isImpassable() and not self.m_pCurrentPlot.isWater():
 							self.placeObject()
 					elif self.iPlayerAddMode == "Terrain":
 						if self.m_pCurrentPlot.isWater() == GC.getTerrainInfo(self.iSelection).isWaterTerrain():
@@ -903,7 +904,6 @@ class WorldBuilder:
 
 		elif self.iPlayerAddMode == "Buildings":
 			iY = 25
-			sWonder = CyTranslator().getText("TXT_KEY_CONCEPT_WONDERS", ())
 			screen.addDropDownBoxGFC("WBSelectClass", 0, iY, iWidth, WidgetTypes.WIDGET_GENERAL, -1, -1, FontTypes.GAME_FONT)
 			screen.addPullDownString("WBSelectClass", CyTranslator().getText("TXT_KEY_WB_CITY_ALL",()), 0, 0, 0 == self.iSelectClass)
 			screen.addPullDownString("WBSelectClass", CyTranslator().getText("TXT_KEY_WB_BUILDINGS",()), 1, 1, 1 == self.iSelectClass)
@@ -988,7 +988,7 @@ class WorldBuilder:
 			iY = 25
 			lItems = []
 			for i in xrange(GC.getNumMapBonuses()):
-				lItems.append([GC.getBonusInfo(GC.getMapBonus(i)).getDescription(), i])
+				lItems.append([GC.getBonusInfo(GC.getMapBonus(i)).getDescription(), GC.getMapBonus(i)])
 			lItems.sort()
 
 			iHeight = min(len(lItems) * 24 + 2, self.yRes - iY)
@@ -1042,13 +1042,12 @@ class WorldBuilder:
 				screen.setTableText("WBSelectItem", 0, iRow, "<font=3>" + item[0] + "</font>", GC.getTerrainInfo(item[1]).getButton(), WidgetTypes.WIDGET_PYTHON, 7875, item[1], 1<<0)
 
 		elif self.iPlayerAddMode == "PlotType":
-			iY = 25
 			iHeight = 4 * 24 + 2
 			screen.addTableControlGFC("WBSelectItem", 1, 0, 25, iWidth, iHeight, False, False, 24, 24, TableStyles.TABLE_STYLE_STANDARD)
 			screen.setStyle("WBSelectItem", "Table_StandardCiv_Style")
 			screen.enableSelect("WBSelectItem", True)
 			screen.setTableColumnHeader("WBSelectItem", 0, "", iWidth)
-			for i in xrange(PlotTypes.NUM_PLOT_TYPES):
+			for _ in xrange(PlotTypes.NUM_PLOT_TYPES):
 				screen.appendTableRow("WBSelectItem")
 			item = GC.getInfoTypeForString("TERRAIN_PEAK")
 			if self.iSelection == -1:
@@ -1119,11 +1118,12 @@ class WorldBuilder:
 		if iType == -1:
 			if bReveal or (not pPlot.isVisible(self.m_iCurrentTeam, False)):
 				pPlot.setRevealed(self.m_iCurrentTeam, bReveal, False, -1)
-		elif bReveal:
-			if pPlot.isSpotterInSight(self.m_iCurrentTeam, iType): return
-			pPlot.changeInvisibleVisibilityCount(self.m_iCurrentTeam, iType, 1)
-		else:
-			pPlot.changeInvisibleVisibilityCount(self.m_iCurrentTeam, iType, -pPlot.getInvisibleVisibilityCount(self.m_iCurrentTeam, iType))
+		elif iType >= 0:
+			if bReveal:
+				if pPlot.isSpotterInSight(self.m_iCurrentTeam, iType): return
+				pPlot.changeInvisibleVisibilityCount(self.m_iCurrentTeam, iType, 1)
+			else:
+				pPlot.changeInvisibleVisibilityCount(self.m_iCurrentTeam, iType, -pPlot.getInvisibleVisibilityCount(self.m_iCurrentTeam, iType))
 
 	def showRevealed(self, pPlot):
 		if self.iPlayerAddMode == "RevealPlot":
@@ -1244,6 +1244,9 @@ class WorldBuilder:
 						pNewUnit.changeCargoSpace(loopUnit.cargoSpace() - pNewUnit.cargoSpace())
 						pNewUnit.setImmobileTimer(loopUnit.getImmobileTimer())
 						pNewUnit.setScriptData(loopUnit.getScriptData())
+					self.lMoveUnit = []
+			self.iPlayerAddMode = "CityDataI"
+			self.iMoveCity = -1
 		elif self.useLargeBrush():
 			self.placeMultipleObjects()
 		else:
@@ -1385,15 +1388,7 @@ class WorldBuilder:
 		if self.inSubScreen:
 			return self.inSubScreen.handleInput(inputClass, screen)
 
-		bAlt, bCtrl, bShift = self.InputData.getModifierKeys()
-		iCode	= inputClass.eNotifyCode
-		iData	= inputClass.iData
-		ID		= inputClass.iItemID
-		NAME	= inputClass.szFunctionName
-		iBtn	= inputClass.iButtonType
-		iData1	= inputClass.iData1
-		#iData2	= inputClass.iData2
-		szFlag	= HandleInputUtil.MOUSE_FLAGS.get(inputClass.uiFlags, "UNKNOWN")
+		NAME = inputClass.szFunctionName
 
 		if NAME == "WorldBuilderEraseAll":
 			for plot in MAP.plots():

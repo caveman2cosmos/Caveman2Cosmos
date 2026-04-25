@@ -484,11 +484,11 @@
 	</Define>
 	<Define>
 		<DefineName>HILLS_EXTRA_DEFENSE</DefineName>
-		<iDefineIntVal>25</iDefineIntVal>
+		<iDefineIntVal>15</iDefineIntVal>
 	</Define>
 	<Define>
 		<DefineName>RIVER_ATTACK_MODIFIER</DefineName>
-		<iDefineIntVal>-25</iDefineIntVal>
+		<iDefineIntVal>-50</iDefineIntVal>
 	</Define>
 	<Define>
 		<DefineName>AMPHIB_ATTACK_MODIFIER</DefineName>
@@ -588,23 +588,23 @@
 	</Define>
 	<Define>
 		<DefineName>BASE_FREE_UNITS_UPKEEP_CIVILIAN</DefineName>
-		<iDefineIntVal>28</iDefineIntVal>
+		<iDefineIntVal>0</iDefineIntVal>
 	</Define>
 	<Define>
 		<DefineName>BASE_FREE_UNITS_UPKEEP_MILITARY</DefineName>
-		<iDefineIntVal>16</iDefineIntVal>
+		<iDefineIntVal>0</iDefineIntVal>
 	</Define>
 	<Define>
 		<DefineName>BASE_FREE_UNITS_UPKEEP_CIVILIAN_PER_100_POP</DefineName>
-		<iDefineIntVal>-150</iDefineIntVal>
+		<iDefineIntVal>0</iDefineIntVal>
 	</Define>
 	<Define>
 		<DefineName>BASE_FREE_UNITS_UPKEEP_MILITARY_PER_100_POP</DefineName>
-		<iDefineIntVal>-50</iDefineIntVal>
+		<iDefineIntVal>0</iDefineIntVal>
 	</Define>
 	<Define>
 		<DefineName>INITIAL_FREE_OUTSIDE_UNITS</DefineName>
-		<iDefineIntVal>5</iDefineIntVal>
+		<iDefineIntVal>0</iDefineIntVal>
 	</Define>
 	<Define>
 		<DefineName>INITIAL_OUTSIDE_UNIT_GOLD_PERCENT</DefineName>
@@ -624,7 +624,7 @@
 	</Define>
 	<Define>
 		<DefineName>GOLDEN_AGE_UNITS_MULTIPLIER</DefineName>
-		<iDefineIntVal>1</iDefineIntVal>
+		<iDefineIntVal>0</iDefineIntVal>
 	</Define>
 	<Define>
 		<DefineName>GOLDEN_AGE_LENGTH</DefineName>
@@ -684,11 +684,11 @@
 	</Define>
 	<Define>
 		<DefineName>FORTIFY_MODIFIER_PER_TURN</DefineName>
-		<iDefineIntVal>5</iDefineIntVal>
+		<iDefineIntVal>2</iDefineIntVal>
 	</Define>
 	<Define>
 		<DefineName>MAX_FORTIFY_TURNS</DefineName>
-		<iDefineIntVal>5</iDefineIntVal>
+		<iDefineIntVal>15</iDefineIntVal>
 	</Define>
 	<Define>
 		<DefineName>WW_UNIT_KILLED_ATTACKING</DefineName>
@@ -921,7 +921,7 @@
 	</Define>
 	<Define>
 		<DefineName>MULTIPLAYER_WAR_WEARINESS_MODIFIER</DefineName>
-		<iDefineIntVal>0</iDefineIntVal>
+		<iDefineIntVal>1</iDefineIntVal>
 	</Define>
 	<Define>
 		<DefineName>PERCENT_ANGER_DIVISOR</DefineName>
@@ -957,7 +957,7 @@
 	</Define>
 	<Define>
 		<DefineName>TECH_COST_MODIFIER</DefineName>
-		<iDefineIntVal>500</iDefineIntVal>
+		<iDefineIntVal>550</iDefineIntVal>
 	</Define>
 	<Define>
 		<DefineName>MAXED_UNIT_GOLD_PERCENT</DefineName>
@@ -1006,11 +1006,11 @@
 	</Define>
 	<Define>
 		<DefineName>BASE_CAPTURE_GOLD</DefineName>
-		<iDefineIntVal>20</iDefineIntVal>
+		<iDefineIntVal>50</iDefineIntVal>
 	</Define>
 	<Define>
 		<DefineName>CAPTURE_GOLD_PER_POPULATION</DefineName>
-		<iDefineIntVal>10</iDefineIntVal>
+		<iDefineIntVal>20</iDefineIntVal>
 	</Define>
 	<Define>
 		<DefineName>CAPTURE_GOLD_RAND1</DefineName>

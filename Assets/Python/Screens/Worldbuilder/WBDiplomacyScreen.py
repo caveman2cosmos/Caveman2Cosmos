@@ -145,10 +145,10 @@ class WBDiplomacyScreen:
 		screen.appendTableRow("DiplomacyAll")
 		for i in xrange(4):
 			screen.setTableColumnHeader("DiplomacyAll", i, "", 24)
-		screen.setTableText("DiplomacyAll", 0, 0, "<font=4>" + CyTranslator().getText("[ICON_ANGRYPOP]", ()) + "<\font>", "", WidgetTypes.WIDGET_PYTHON, 1030, 0, 1<<2)
-		screen.setTableText("DiplomacyAll", 1, 0, "<font=4>" + CyTranslator().getText("[ICON_OPENBORDERS]", ()) + "<\font>", "", WidgetTypes.WIDGET_PYTHON, 1030, 1, 1<<2)
-		screen.setTableText("DiplomacyAll", 2, 0, "<font=4>" + CyTranslator().getText("[ICON_DEFENSIVEPACT]", ()) + "<\font>", "", WidgetTypes.WIDGET_PYTHON, 1030, 2, 1<<2)
-		screen.setTableText("DiplomacyAll", 3, 0, "<font=4>" + CyTranslator().getText("[ICON_OCCUPATION]", ()) + "<\font>", "", WidgetTypes.WIDGET_PYTHON, 1030, 3, 1<<2)
+		screen.setTableText("DiplomacyAll", 0, 0, "<font=4>" + CyTranslator().getText("[ICON_ANGRYPOP]", ()) + "</font>", "", WidgetTypes.WIDGET_PYTHON, 1030, 0, 1<<2)
+		screen.setTableText("DiplomacyAll", 1, 0, "<font=4>" + CyTranslator().getText("[ICON_OPENBORDERS]", ()) + "</font>", "", WidgetTypes.WIDGET_PYTHON, 1030, 1, 1<<2)
+		screen.setTableText("DiplomacyAll", 2, 0, "<font=4>" + CyTranslator().getText("[ICON_DEFENSIVEPACT]", ()) + "</font>", "", WidgetTypes.WIDGET_PYTHON, 1030, 2, 1<<2)
+		screen.setTableText("DiplomacyAll", 3, 0, "<font=4>" + CyTranslator().getText("[ICON_OCCUPATION]", ()) + "</font>", "", WidgetTypes.WIDGET_PYTHON, 1030, 3, 1<<2)
 		screen.setLabel("DiplomacyAllText", "Background", "<font=4b>" + CyTranslator().getText("TXT_KEY_WB_CITY_ALL", ()) + "</font>", 1<<1, iX, self.iTable_Y - 30, -0.1, FontTypes.TITLE_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1)
 
 		screen.setText("WearinessAll", "Background",  sText, 1<<1, screen.getXResolution() - 20, self.iTable_Y - 30, -0.1, FontTypes.TITLE_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1)
@@ -372,7 +372,7 @@ class WBDiplomacyScreen:
 					if inputClass.getData2() == 2:
 						self.editDefensivePact(iTeamX, bRemove)
 					if inputClass.getData2() == 3:
-						self.editWarStatus(iTeamX, bRemove)
+						self.editWarStatus(iTeamX, pSelectedTeam.isAtWarWith(iTeamX))
 			elif inputClass.getFunctionName() == "WearinessAll":
 				for iPlayerX in lPlayers:
 					pPlayerX = GC.getPlayer(iPlayerX)
@@ -430,7 +430,10 @@ class WBDiplomacyScreen:
 
 	def editContact(self, iTeam):
 		if not bRemove:
-			pSelectedTeam.meet(iTeam, False)
+			if bTowardsPlayer:
+				GC.getTeam(iTeam).meet(iSelectedTeam, False)
+			else:
+				pSelectedTeam.meet(iTeam, False)
 
 	def editWarStatus(self, iTeam, bCancel):
 		if not pSelectedTeam.isHasMet(iTeam): return
@@ -574,7 +577,7 @@ class WBDiplomacyScreen:
 
 	def RelationshipStatus(self, iTeam1, iTeam2):
 		if GC.getTeam(iTeam1).isVassal(iTeam2):
-			for i in range(CyGame().getIndexAfterLastDeal()):
+			for i in xrange(CyGame().getIndexAfterLastDeal()):
 				pDeal = CyGame().getDeal(i)
 				iPlayer1 = pDeal.getFirstPlayer()
 				iPlayer2 = pDeal.getSecondPlayer()

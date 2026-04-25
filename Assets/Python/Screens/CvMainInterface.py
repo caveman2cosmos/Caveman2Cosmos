@@ -204,7 +204,6 @@ class CvMainInterface:
 				# Map Religions to corresponding techs
 				aMap[CvReligionInfo.getTechPrereq()] = CvReligionInfo
 			self.aRel2TechMap = aMap.copy()
-			aMap = {}
 			self.iconHolyCityList = list(aList1)
 			self.iconReligionList = list(aList2)
 			# Cache file paths.
@@ -419,7 +418,6 @@ class CvMainInterface:
 			xPopProgBar = self.xPopProgBar
 			iPopProgBarHeight = self.iPopProgBarHeight
 			iPopProgBarWidth = self.iPopProgBarWidth
-			bResChange = False
 		# Fetch GUI enumerators
 		eFontSmall	= FontTypes.SMALL_FONT
 		eFontGame	= FontTypes.GAME_FONT
@@ -427,7 +425,6 @@ class CvMainInterface:
 		iWidAction	= WidgetTypes.WIDGET_ACTION
 		ePanelSTD	= PanelStyles.PANEL_STYLE_STANDARD
 		iPanelEmpty	= PanelStyles.PANEL_STYLE_EMPTY
-		iTableSTD	= TableStyles.TABLE_STYLE_STANDARD
 		eBtnLabel = ButtonStyles.BUTTON_STYLE_LABEL
 		iButtonStd	 = ButtonStyles.BUTTON_STYLE_STANDARD
 		self.shownResearchSelection = []
@@ -742,7 +739,6 @@ class CvMainInterface:
 		screen.setText(ID, "", szPre + "Cultures.dds>", 1<<0, x+1, y+1, 0, eFontSmall, eWidGen, 0, 0)
 
 		# Status bars
-		x = 8
 		if not iResID:
 			h = 22
 		elif iResID == 1:
@@ -1067,7 +1063,6 @@ class CvMainInterface:
 		n = 0
 		for i in xrange(iNumSpecialistInfos):
 			szInc = str(i)
-			image = '<img=%s size=%d></img>' %(aSpecialistIconList[i], iSize)
 			# Dynamic Citizens
 			if GC.getSpecialistInfo(i).isVisible():
 				if not n % iCol:
@@ -1092,12 +1087,10 @@ class CvMainInterface:
 
 				x -= iSize + 2
 				ID = "CitizenDisabledButton" + szInc
-				#screen.setText(ID, "", image, 1<<0, x, y, 0, eFontGame, iWidDisabledCitizen, i, 0)
 				screen.addCheckBoxGFC(ID, aSpecialistIconList[i], self.artPathHilite, x, y, iSize, iSize, iWidDisabledCitizen, i, 0, ButtonStyles.BUTTON_STYLE_IMAGE)
 				screen.enable(ID, False)
 				screen.hide(ID)
 				ID = "CitizenButton" + szInc
-				#screen.setText(ID, "", image, 1<<0, x, y, 0, eFontGame, iWidCitizen, i, 0)
 				screen.addCheckBoxGFC(ID, aSpecialistIconList[i], self.artPathHilite, x, y, iSize, iSize, iWidCitizen, i, 0, ButtonStyles.BUTTON_STYLE_IMAGE)
 				screen.enable(ID, True)
 				screen.hide(ID)
@@ -2605,10 +2598,8 @@ class CvMainInterface:
 			eFontSmall	= FontTypes.SMALL_FONT
 
 			xMidL = self.xMidL
-			xMidR = self.xMidR
 			uFont4b, uFont4, uFont3b, uFont3, uFont2b, uFont2, uFont1b, uFont1 = self.aFontList
 			xPopProgBar = self.xPopProgBar
-			iPopProgBarWidth = self.iPopProgBarWidth
 			iconYieldList = self.iconYieldList
 			iconCommerceList = self.iconCommerceList
 			halfX = xRes / 2
@@ -2653,7 +2644,6 @@ class CvMainInterface:
 					szTxt = TRNSLTR.getText("INTERFACE_CITY_HEALTH_GOOD_NO_BAD", (iHealthGood, ))
 				screen.setLabel("HealthText", "", uFont2 + szTxt, 1<<0, xRes - xPopProgBar + 6, 70, 0, eFontGame, WidgetTypes.WIDGET_HELP_HEALTH, -1, -1)
 
-			szTxt = ""
 			iAngryPop = CyCity.angryPopulation(0)
 			iUnhappyLevel = CyCity.unhappyLevel(0)
 			if CyCity.isDisorder():

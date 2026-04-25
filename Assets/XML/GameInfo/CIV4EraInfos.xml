@@ -13,15 +13,14 @@ Good luck! -->
 			<Description>TXT_KEY_ERA_PREHISTORIC</Description>
 			<Strategy>TXT_KEY_ERA_PREHISTORIC_STRATEGY</Strategy>
 			<iAdvancedStartPoints>500</iAdvancedStartPoints>
-			<iStartingUnitMultiplier>1</iStartingUnitMultiplier>
-			<iStartingExploreUnits>1</iStartingExploreUnits>
+			<iStartingUnitMultiplier>0</iStartingUnitMultiplier>
+			<iStartingExploreUnits>0</iStartingExploreUnits>
 			<iStartingGold>10</iStartingGold>
 			<iGrowthPercent>150</iGrowthPercent>
 			<iTrainPercent>100</iTrainPercent>
 			<iConstructPercent>100</iConstructPercent>
 			<iCreatePercent>100</iCreatePercent>
 			<iResearchPercent>100</iResearchPercent>
-			<iBeelineStingsTechCostModifier>100</iBeelineStingsTechCostModifier>
 			<iBuildPercent>140</iBuildPercent>
 			<iImprovementPercent>100</iImprovementPercent>
 			<iGreatPeoplePercent>230</iGreatPeoplePercent>
@@ -73,7 +72,7 @@ Good luck! -->
 			<iConstructPercent>100</iConstructPercent>
 			<iCreatePercent>100</iCreatePercent>
 			<iResearchPercent>150</iResearchPercent>
-			<iBeelineStingsTechCostModifier>90</iBeelineStingsTechCostModifier>
+			<iCuttingEdgeCutsTechCostModifier>10</iCuttingEdgeCutsTechCostModifier>
 			<iBuildPercent>130</iBuildPercent>
 			<iImprovementPercent>100</iImprovementPercent>
 			<iGreatPeoplePercent>220</iGreatPeoplePercent>
@@ -142,7 +141,7 @@ Good luck! -->
 			<iConstructPercent>100</iConstructPercent>
 			<iCreatePercent>100</iCreatePercent>
 			<iResearchPercent>200</iResearchPercent>
-			<iBeelineStingsTechCostModifier>80</iBeelineStingsTechCostModifier>
+			<iCuttingEdgeCutsTechCostModifier>20</iCuttingEdgeCutsTechCostModifier>
 			<iBuildPercent>120</iBuildPercent>
 			<iImprovementPercent>100</iImprovementPercent>
 			<iGreatPeoplePercent>210</iGreatPeoplePercent>
@@ -201,7 +200,7 @@ Good luck! -->
 			<iConstructPercent>100</iConstructPercent>
 			<iCreatePercent>100</iCreatePercent>
 			<iResearchPercent>250</iResearchPercent>
-			<iBeelineStingsTechCostModifier>70</iBeelineStingsTechCostModifier>
+			<iCuttingEdgeCutsTechCostModifier>30</iCuttingEdgeCutsTechCostModifier>
 			<iBuildPercent>110</iBuildPercent>
 			<iImprovementPercent>100</iImprovementPercent>
 			<iGreatPeoplePercent>200</iGreatPeoplePercent>
@@ -278,7 +277,7 @@ Good luck! -->
 			<iConstructPercent>100</iConstructPercent>
 			<iCreatePercent>100</iCreatePercent>
 			<iResearchPercent>300</iResearchPercent>
-			<iBeelineStingsTechCostModifier>60</iBeelineStingsTechCostModifier>
+			<iCuttingEdgeCutsTechCostModifier>40</iCuttingEdgeCutsTechCostModifier>
 			<iBuildPercent>100</iBuildPercent>
 			<iImprovementPercent>100</iImprovementPercent>
 			<iGreatPeoplePercent>190</iGreatPeoplePercent>
@@ -341,7 +340,7 @@ Good luck! -->
 			<iConstructPercent>100</iConstructPercent>
 			<iCreatePercent>100</iCreatePercent>
 			<iResearchPercent>350</iResearchPercent>
-			<iBeelineStingsTechCostModifier>50</iBeelineStingsTechCostModifier>
+			<iCuttingEdgeCutsTechCostModifier>50</iCuttingEdgeCutsTechCostModifier>
 			<iBuildPercent>100</iBuildPercent>
 			<iImprovementPercent>100</iImprovementPercent>
 			<iGreatPeoplePercent>180</iGreatPeoplePercent>
@@ -402,7 +401,7 @@ Good luck! -->
 			<iConstructPercent>100</iConstructPercent>
 			<iCreatePercent>100</iCreatePercent>
 			<iResearchPercent>400</iResearchPercent>
-			<iBeelineStingsTechCostModifier>40</iBeelineStingsTechCostModifier>
+			<iCuttingEdgeCutsTechCostModifier>60</iCuttingEdgeCutsTechCostModifier>
 			<iBuildPercent>100</iBuildPercent>
 			<iImprovementPercent>100</iImprovementPercent>
 			<iGreatPeoplePercent>170</iGreatPeoplePercent>
@@ -461,7 +460,7 @@ Good luck! -->
 			<iConstructPercent>100</iConstructPercent>
 			<iCreatePercent>100</iCreatePercent>
 			<iResearchPercent>450</iResearchPercent>
-			<iBeelineStingsTechCostModifier>30</iBeelineStingsTechCostModifier>
+			<iCuttingEdgeCutsTechCostModifier>70</iCuttingEdgeCutsTechCostModifier>
 			<iBuildPercent>100</iBuildPercent>
 			<iImprovementPercent>100</iImprovementPercent>
 			<iGreatPeoplePercent>160</iGreatPeoplePercent>
@@ -520,7 +519,7 @@ Good luck! -->
 			<iConstructPercent>100</iConstructPercent>
 			<iCreatePercent>100</iCreatePercent>
 			<iResearchPercent>500</iResearchPercent>
-			<iBeelineStingsTechCostModifier>25</iBeelineStingsTechCostModifier>
+			<iCuttingEdgeCutsTechCostModifier>80</iCuttingEdgeCutsTechCostModifier>
 			<iBuildPercent>100</iBuildPercent>
 			<iImprovementPercent>100</iImprovementPercent>
 			<iGreatPeoplePercent>150</iGreatPeoplePercent>
@@ -572,7 +571,7 @@ Good luck! -->
 			<iConstructPercent>100</iConstructPercent>
 			<iCreatePercent>100</iCreatePercent>
 			<iResearchPercent>550</iResearchPercent>
-			<iBeelineStingsTechCostModifier>20</iBeelineStingsTechCostModifier>
+			<iCuttingEdgeCutsTechCostModifier>90</iCuttingEdgeCutsTechCostModifier>
 			<iBuildPercent>100</iBuildPercent>
 			<iImprovementPercent>100</iImprovementPercent>
 			<iGreatPeoplePercent>140</iGreatPeoplePercent>
@@ -624,7 +623,7 @@ Good luck! -->
 			<iConstructPercent>100</iConstructPercent>
 			<iCreatePercent>100</iCreatePercent>
 			<iResearchPercent>600</iResearchPercent>
-			<iBeelineStingsTechCostModifier>15</iBeelineStingsTechCostModifier>
+			<iCuttingEdgeCutsTechCostModifier>100</iCuttingEdgeCutsTechCostModifier>
 			<iBuildPercent>100</iBuildPercent>
 			<iImprovementPercent>100</iImprovementPercent>
 			<iGreatPeoplePercent>130</iGreatPeoplePercent>
@@ -672,7 +671,7 @@ Good luck! -->
 			<iConstructPercent>100</iConstructPercent>
 			<iCreatePercent>100</iCreatePercent>
 			<iResearchPercent>650</iResearchPercent>
-			<iBeelineStingsTechCostModifier>10</iBeelineStingsTechCostModifier>
+			<iCuttingEdgeCutsTechCostModifier>100</iCuttingEdgeCutsTechCostModifier>
 			<iBuildPercent>100</iBuildPercent>
 			<iImprovementPercent>100</iImprovementPercent>
 			<iGreatPeoplePercent>120</iGreatPeoplePercent>
@@ -721,7 +720,7 @@ Good luck! -->
 			<iConstructPercent>100</iConstructPercent>
 			<iCreatePercent>100</iCreatePercent>
 			<iResearchPercent>700</iResearchPercent>
-			<iBeelineStingsTechCostModifier>5</iBeelineStingsTechCostModifier>
+			<iCuttingEdgeCutsTechCostModifier>100</iCuttingEdgeCutsTechCostModifier>
 			<iBuildPercent>100</iBuildPercent>
 			<iImprovementPercent>100</iImprovementPercent>
 			<iGreatPeoplePercent>110</iGreatPeoplePercent>

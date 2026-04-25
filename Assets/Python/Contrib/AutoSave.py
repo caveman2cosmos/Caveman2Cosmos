@@ -2,7 +2,6 @@
 #from CvPythonExtensions import CyGlobalContext
 #from CvPythonExtensions import CyInterface
 from CvPythonExtensions import *
-import TextUtil
 
 GC = CyGlobalContext()
 CyIF = CyInterface()
@@ -42,50 +41,8 @@ def remove_diacritics(in_text):
     text = text.replace('Ÿ', 'Y')
     text = text.replace('Ñ', 'N')
 
-    #print "%s" % text
-    return text
-        
-def cleanNpc():
-	iTurn = GAME.getGameTurn()
-	modturn = iTurn % 30
-	print "ModTurn for cleaning : %d" % modturn
-	if npcclean and modturn == 0:
-		print "Cleaning NPC - for player 40,41 and 42..."
-
-		iPlayer = 40
-		pPlayer = GC.getPlayer(iPlayer)
-		pUnit, loop = pPlayer.firstUnit(False)
-		while pUnit:
-			pUnit
-			print "Player %d, Unit ID: %d, %s\n" % (iPlayer, pUnit.getID(), TextUtil.convertToStr(pUnit.getName()))
-			pUnit.kill(False, -1)
-			pUnit, loop = pPlayer.nextUnit(loop, False)
-		print "Unités du joueur 40 supprimées."
-
-		iPlayer = 41
-		pPlayer = GC.getPlayer(iPlayer)
-		pUnit, loop = pPlayer.firstUnit(False)
-		while pUnit:
-			pUnit
-			print "Player %d, Unit ID: %d, %s\n" % (iPlayer, pUnit.getID(), TextUtil.convertToStr(pUnit.getName()))
-			pUnit.kill(False, -1)
-			pUnit, loop = pPlayer.nextUnit(loop, False)
-		print "Unités du joueur 41 supprimées."
-		
-		iPlayer = 42
-		pPlayer = GC.getPlayer(iPlayer)
-		pUnit, loop = pPlayer.firstUnit(False)
-		while pUnit:
-			pUnit
-			print "Player %d, Unit ID: %d, %s\n" % (iPlayer, pUnit.getID(), TextUtil.convertToStr(pUnit.getName()))
-			pUnit.kill(False, -1)
-			pUnit, loop = pPlayer.nextUnit(loop, False)
-		print "Unités du joueur 42 supprimées."
-		szMessage = TRNSLTR.getText("TXT_KEY_MOD_KILL_ANIMALS_DESC", ())
-		for iPlayer in range(GC.getMAX_PLAYERS()):
-			if GC.getPlayer(iPlayer).isHuman():
-				CyIF.addMessage(iPlayer, False, GC.getEVENT_MESSAGE_TIME(), szMessage, None, InterfaceMessageTypes.MESSAGE_TYPE_INFO, None, GC.getInfoTypeForString("COLOR_HIGHLIGHT_TEXT"), -1, -1, False, False)
-
+	#print "%s" % text
+	return text
 
 def init():
 	import SystemPaths as SP
@@ -138,12 +95,7 @@ def save(type, prefix, iTurn):
 	dir = remove_diacritics(dir)
 
 	print "after AutoSave.savename : %s" % dir
-	
 
-	
-	npcclean = False
-	if npcclean:
-		cleanNpc()
 	
 	GAME.saveGame(str(dir))
 	print "AutoSave.save\n\t%s" % dir

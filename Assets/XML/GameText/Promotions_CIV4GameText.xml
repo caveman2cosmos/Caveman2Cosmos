@@ -2022,6 +2022,10 @@
 		<Russian>Каждый раунд, потраченный на фокус к погоне, улучшает способность отряда к [COLOR_HIGHLIGHT_TEXT]преследованию[COLOR_REVERT] до ограничения в 5 раундов для получения максимального бонуса, при условии, что каждый уровень квалификации соответствует требованиям отряда.</Russian>
 		<Italian>[NEWLINE][ICON_BULLET]Migliora l'abilità [COLOR_HIGHLIGHT_TEXT]inseguimento[COLOR_REVERT][NEWLINE][ICON_BULLET]Max 5 turni (necessita delle rispettive promozioni)</Italian>
 	</TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_PROMOTIONLINE_BUILD_UP_EXERCISE_COMBAT_HELP</Tag>
+        <English>Each turn spent building up gives 0.1xp for the unit if in city and increases the unit base upkeep cost by 50%.</English>
+    </TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_BUILD_UP_CHECKPOINTS</Tag>
 		<English>Build Up (Checkpoints) Promotion Line</English>
@@ -2525,6 +2529,10 @@
 		<Polish>Linia Promocji: Walka</Polish>
 		<Russian>Áîåâîé îïûò</Russian>
 	</TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_PROMOTIONLINE_EXERCISE_COMBAT</Tag>
+        <English>Exercise Combat Promotion Line</English>
+    </TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_COMBAT_AI</Tag>
 		<English>Combat AI Promotion Line</English>
@@ -12604,7 +12612,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_QUICK_MARCH_STATUS</Tag>
-		<English>Status (Quick March)</English>
+		<English>Status (Quick March) (Units take 10% damage per turn)</English>
 		<French>Statut (Marche éclair)</French>
 		<German>Eilmarsch</German>
 		<Russian>Ускоренный марш</Russian>

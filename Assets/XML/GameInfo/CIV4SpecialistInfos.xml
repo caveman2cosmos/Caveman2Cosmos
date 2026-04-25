@@ -34,19 +34,13 @@
 				<Category>CATEGORY_ASSIGNABLE_SPECIALISTS</Category>
 				<Category>CATEGORY_SPECIALIST_GROUP_CAPTIVE</Category>
 			</Categories>
-			<iGreatPeopleRateChange>-1</iGreatPeopleRateChange>
 			<Yields>
 				<iYield>1</iYield>
 				<iYield>3</iYield>
-				<iYield>3</iYield>
+				<iYield>2</iYield>
 			</Yields>
-			<Commerces>
-				<iCommerce>0</iCommerce>
-				<iCommerce>-1</iCommerce>
-				<iCommerce>-1</iCommerce>
-			</Commerces>
-			<iHappinessPercent>-100</iHappinessPercent>
-			<iHealthPercent>-100</iHealthPercent>
+			<iHappinessPercent>-150</iHappinessPercent>
+			<iHealthPercent>-150</iHealthPercent>
 			<TechHappinessTypes>
 				<TechHappinessType>
 					<TechType>TECH_HUMANISM</TechType>
@@ -690,20 +684,13 @@
 				<Category>CATEGORY_SPECIALIST_GROUP_CAPTIVE</Category>
 			</Categories>
 			<bSlave>1</bSlave>
-			<iGreatPeopleRateChange>-1</iGreatPeopleRateChange>
 			<Yields>
 				<iYield>1</iYield>
 				<iYield>1</iYield>
 				<iYield>1</iYield>
 			</Yields>
-			<Commerces>
-				<iCommerce>0</iCommerce>
-				<iCommerce>-1</iCommerce>
-				<iCommerce>-1</iCommerce>
-				<iCommerce>0</iCommerce>
-			</Commerces>
-			<iHappinessPercent>-30</iHappinessPercent>
-			<iHealthPercent>-30</iHealthPercent>
+			<iHappinessPercent>-40</iHappinessPercent>
+			<iHealthPercent>-40</iHealthPercent>
 			<Button>Art/Interface/MainScreen/CityScreen/slave.dds</Button>
 			<PropertyManipulators>
 				<PropertySource>
@@ -834,20 +821,13 @@
 				<Category>CATEGORY_SPECIALIST_GROUP_CAPTIVE</Category>
 			</Categories>
 			<bSlave>1</bSlave>
-			<iGreatPeopleRateChange>-1</iGreatPeopleRateChange>
 			<Yields>
-				<iYield>8</iYield>
-				<iYield>-2</iYield>
-				<iYield>-2</iYield>
+				<iYield>6</iYield>
+				<iYield>0</iYield>
+				<iYield>-1</iYield>
 			</Yields>
-			<Commerces>
-				<iCommerce>0</iCommerce>
-				<iCommerce>-1</iCommerce>
-				<iCommerce>-1</iCommerce>
-				<iCommerce>0</iCommerce>
-			</Commerces>
-			<iHappinessPercent>-30</iHappinessPercent>
-			<iHealthPercent>-30</iHealthPercent>
+			<iHappinessPercent>-40</iHappinessPercent>
+			<iHealthPercent>-40</iHealthPercent>
 			<Button>Art/Interface/MainScreen/CityScreen/slave_food.dds</Button>
 			<PropertyManipulators>
 				<PropertySource>
@@ -876,20 +856,13 @@
 				<Category>CATEGORY_SPECIALIST_GROUP_ARCHITECTURAL</Category>
 			</Categories>
 			<bSlave>1</bSlave>
-			<iGreatPeopleRateChange>-1</iGreatPeopleRateChange>
 			<Yields>
-				<iYield>-2</iYield>
-				<iYield>8</iYield>
-				<iYield>-2</iYield>
+				<iYield>-1</iYield>
+				<iYield>6</iYield>
+                <iYield>-1</iYield>
 			</Yields>
-			<Commerces>
-				<iCommerce>0</iCommerce>
-				<iCommerce>-1</iCommerce>
-				<iCommerce>-1</iCommerce>
-				<iCommerce>0</iCommerce>
-			</Commerces>
-			<iHappinessPercent>-30</iHappinessPercent>
-			<iHealthPercent>-30</iHealthPercent>
+			<iHappinessPercent>-40</iHappinessPercent>
+			<iHealthPercent>-40</iHealthPercent>
 			<Button>Art/Interface/MainScreen/CityScreen/slave_production.dds</Button>
 			<PropertyManipulators>
 				<PropertySource>
@@ -918,20 +891,13 @@
 				<Category>CATEGORY_SPECIALIST_GROUP_ECONOMIC</Category>
 			</Categories>
 			<bSlave>1</bSlave>
-			<iGreatPeopleRateChange>-1</iGreatPeopleRateChange>
 			<Yields>
-				<iYield>-2</iYield>
-				<iYield>-2</iYield>
-				<iYield>8</iYield>
+				<iYield>-1</iYield>
+				<iYield>0</iYield>
+				<iYield>6</iYield>
 			</Yields>
-			<Commerces>
-				<iCommerce>0</iCommerce>
-				<iCommerce>-1</iCommerce>
-				<iCommerce>-1</iCommerce>
-				<iCommerce>0</iCommerce>
-			</Commerces>
-			<iHappinessPercent>-30</iHappinessPercent>
-			<iHealthPercent>-30</iHealthPercent>
+			<iHappinessPercent>-40</iHappinessPercent>
+			<iHealthPercent>-40</iHealthPercent>
 			<Button>Art/Interface/MainScreen/CityScreen/slave_commerce.dds</Button>
 			<PropertyManipulators>
 				<PropertySource>
@@ -960,19 +926,12 @@
 				<Category>CATEGORY_SPECIALIST_GROUP_MEDICAL</Category>
 			</Categories>
 			<bSlave>1</bSlave>
-			<iGreatPeopleRateChange>-1</iGreatPeopleRateChange>
 			<Yields>
-				<iYield>-2</iYield>
-				<iYield>-2</iYield>
-				<iYield>-2</iYield>
+				<iYield>-1</iYield>
+				<iYield>0</iYield>
+				<iYield>-1</iYield>
 			</Yields>
-			<Commerces>
-				<iCommerce>0</iCommerce>
-				<iCommerce>-1</iCommerce>
-				<iCommerce>-1</iCommerce>
-				<iCommerce>0</iCommerce>
-			</Commerces>
-			<iHappinessPercent>-30</iHappinessPercent>
+			<iHappinessPercent>-40</iHappinessPercent>
 			<Button>Art/Interface/MainScreen/CityScreen/slave_commerce.dds</Button>
 			<PropertyManipulators>
 				<PropertySource>
@@ -1015,19 +974,12 @@
 				<Category>CATEGORY_SPECIALIST_GROUP_RESEARCH</Category>
 			</Categories>
 			<bSlave>1</bSlave>
-			<iGreatPeopleRateChange>-1</iGreatPeopleRateChange>
 			<Yields>
-				<iYield>-2</iYield>
-				<iYield>-2</iYield>
-				<iYield>-2</iYield>
+				<iYield>-1</iYield>
+				<iYield>0</iYield>
+				<iYield>-1</iYield>
 			</Yields>
-			<Commerces>
-				<iCommerce>0</iCommerce>
-				<iCommerce>-1</iCommerce>
-				<iCommerce>-1</iCommerce>
-				<iCommerce>0</iCommerce>
-			</Commerces>
-			<iHappinessPercent>-30</iHappinessPercent>
+			<iHappinessPercent>-40</iHappinessPercent>
 			<iHealthPercent>200</iHealthPercent>
 			<Button>Art/Interface/MainScreen/CityScreen/slave_health.dds</Button>
 			<PropertyManipulators>
@@ -1057,20 +1009,19 @@
 				<Category>CATEGORY_SPECIALIST_GROUP_CULTURAL</Category>
 			</Categories>
 			<bSlave>1</bSlave>
-			<iGreatPeopleRateChange>-1</iGreatPeopleRateChange>
 			<Yields>
-				<iYield>-2</iYield>
-				<iYield>-2</iYield>
-				<iYield>-2</iYield>
+				<iYield>-1</iYield>
+				<iYield>0</iYield>
+				<iYield>-1</iYield>
 			</Yields>
 			<Commerces>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
-				<iCommerce>10</iCommerce>
+				<iCommerce>8</iCommerce>
 				<iCommerce>0</iCommerce>
 			</Commerces>
-			<iHappinessPercent>100</iHappinessPercent>
-			<iHealthPercent>-30</iHealthPercent>
+			<iHappinessPercent>150</iHappinessPercent>
+			<iHealthPercent>-40</iHealthPercent>
 			<Button>Art/Interface/MainScreen/CityScreen/slave_entertainment.dds</Button>
 			<PropertyManipulators>
 				<PropertySource>
@@ -1099,20 +1050,19 @@
 				<Category>CATEGORY_SPECIALIST_GROUP_RESEARCH</Category>
 			</Categories>
 			<bSlave>1</bSlave>
-			<iGreatPeopleRateChange>-1</iGreatPeopleRateChange>
 			<Yields>
-				<iYield>-2</iYield>
-				<iYield>-2</iYield>
-				<iYield>-2</iYield>
+				<iYield>-1</iYield>
+				<iYield>0</iYield>
+				<iYield>-1</iYield>
 			</Yields>
 			<Commerces>
 				<iCommerce>0</iCommerce>
-				<iCommerce>10</iCommerce>
+				<iCommerce>8</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
 			</Commerces>
-			<iHappinessPercent>-30</iHappinessPercent>
-			<iHealthPercent>-30</iHealthPercent>
+			<iHappinessPercent>-40</iHappinessPercent>
+			<iHealthPercent>-40</iHealthPercent>
 			<Button>Art/Interface/MainScreen/CityScreen/slave_tutor.dds</Button>
 			<PropertyManipulators>
 				<PropertySource>
@@ -1148,20 +1098,13 @@
 				<Category>CATEGORY_SPECIALIST_GROUP_MILITARY</Category>
 			</Categories>
 			<bSlave>1</bSlave>
-			<iGreatPeopleRateChange>-1</iGreatPeopleRateChange>
 			<Yields>
-				<iYield>-2</iYield>
-				<iYield>10</iYield>
-				<iYield>-2</iYield>
+				<iYield>-1</iYield>
+				<iYield>8</iYield>
+				<iYield>-1</iYield>
 			</Yields>
-			<Commerces>
-				<iCommerce>0</iCommerce>
-				<iCommerce>-1</iCommerce>
-				<iCommerce>-1</iCommerce>
-				<iCommerce>0</iCommerce>
-			</Commerces>
-			<iHappinessPercent>-30</iHappinessPercent>
-			<iHealthPercent>-30</iHealthPercent>
+			<iHappinessPercent>-40</iHappinessPercent>
+			<iHealthPercent>-40</iHealthPercent>
 			<Button>Art/Interface/MainScreen/CityScreen/slave_military.dds</Button>
 			<PropertyManipulators>
 				<PropertySource>
@@ -1190,20 +1133,13 @@
 				<Category>CATEGORY_SPECIALIST_GROUP_LEGAL</Category>
 			</Categories>
 			<bSlave>1</bSlave>
-			<iGreatPeopleRateChange>-1</iGreatPeopleRateChange>
 			<Yields>
-				<iYield>-2</iYield>
-				<iYield>-2</iYield>
-				<iYield>-2</iYield>
+				<iYield>-1</iYield>
+				<iYield>0</iYield>
+				<iYield>-1</iYield>
 			</Yields>
-			<Commerces>
-				<iCommerce>0</iCommerce>
-				<iCommerce>-1</iCommerce>
-				<iCommerce>-1</iCommerce>
-				<iCommerce>0</iCommerce>
-			</Commerces>
-			<iHappinessPercent>-30</iHappinessPercent>
-			<iHealthPercent>-30</iHealthPercent>
+			<iHappinessPercent>-40</iHappinessPercent>
+			<iHealthPercent>-40</iHealthPercent>
 			<Button>Art/Interface/MainScreen/CityScreen/slave_military.dds</Button>
 			<PropertyManipulators>
 				<PropertySource>

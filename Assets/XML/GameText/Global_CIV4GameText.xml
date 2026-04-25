@@ -8173,11 +8173,11 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_FIRST_FOUND_WONDER</Tag>
-		<English>For your discovery you receive %d1 [ICON_GOLD]!</English>
-		<French>Vous recevez %d1 [ICON_GOLD] pour votre découverte!</French>
-		<German>Die Belohnung für die Entdeckung beträgt %d1 [ICON_GOLD]!</German>
-		<Italian>Per la nuova scoperta, ricevi una ricompensa di %d1 [ICON_GOLD]!</Italian> <!-- Message Log Screen -->
-		<Polish>Za to odkrycie otrzymujesz %d1 [ICON_GOLD]!</Polish>
+		<English>For your discovery you receive %d1 [ICON_CULTURE]!</English>
+		<French>Vous recevez %d1 [ICON_CULTURE] pour votre découverte!</French>
+		<German>Die Belohnung für die Entdeckung beträgt %d1 [ICON_CULTURE]!</German>
+		<Italian>Per la nuova scoperta, ricevi una ricompensa di %d1 [ICON_CULTURE]!</Italian> <!-- Message Log Screen -->
+		<Polish>Za to odkrycie otrzymujesz %d1 [ICON_CULTURE]!</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_FIRST_FRONT_SUPPORT</Tag>
@@ -18974,6 +18974,10 @@
 		<Polish>[COLOR_TECH_TEXT]Chce podpisa&#230; pakt obronny: %s1[COLOR_REVERT]</Polish>
 		<Russian>[COLOR_TECH_TEXT]Ïîäïèøåò îáîðîíèòåëüíûé ïàêò: %s1[COLOR_REVERT]</Russian>
 	</TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_MORECIV4LERTS_DEFENSIVE_PACT_LOST</Tag>
+        <English>[COLOR_WARNING_TEXT]Will Not Sign a Defensive Pact: %s1[COLOR_REVERT]</English>
+    </TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MORECIV4LERTS_LAND_CLOSE_TO_LIMIT</Tag>
 		<English>[COLOR_WARNING_TEXT]Your land area: %d1 (%s2) is close to the Domination Limit: %d3 (%s4)[COLOR_REVERT]</English>
@@ -19004,6 +19008,10 @@
 		<Polish>[COLOR_TECH_TEXT]Chce handlowa&#230; mapami: %s1[COLOR_REVERT]</Polish>
 		<Russian>[COLOR_TECH_TEXT]Ìîæåò òîðãîâàòü êàðòîé: %s1[COLOR_REVERT]</Russian>
 	</TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_MORECIV4LERTS_MAP_LOST</Tag>
+        <English>[COLOR_TECH_TEXT]Will not Trade Map: %s1[COLOR_REVERT]</English>
+    </TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MORECIV4LERTS_NEW_BONUS_AVAIL</Tag>
 		<English>[COLOR_HIGHLIGHT_TEXT]%s1 will trade %s2[COLOR_REVERT]</English>
@@ -19034,6 +19042,10 @@
 		<Polish>[COLOR_TECH_TEXT]Chce podpisa&#230; traktat o otwarciu granic: %s1[COLOR_REVERT]</Polish>
 		<Russian>[COLOR_TECH_TEXT]Ïîäïèøåò îòêðûòûå ãðàíèöû: %s1[COLOR_REVERT]</Russian>
 	</TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_MORECIV4LERTS_OPEN_BORDERS_LOST</Tag>
+        <English>[COLOR_WARNING_TEXT]Will Not Sign Open Borders: %s1[COLOR_REVERT]</English>
+    </TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MORECIV4LERTS_PEACE_TREATY</Tag>
 		<English>[COLOR_TECH_TEXT]Will Sign Peace Treaty: %s1[COLOR_REVERT]</English>
@@ -19044,6 +19056,10 @@
 		<Polish>[COLOR_TECH_TEXT]Chce podpisa&#230; traktat pokojowy: %s1[COLOR_REVERT]</Polish>
 		<Russian>[COLOR_TECH_TEXT]Ïîäïèøåò ìèðíûé äîãîâîð: %s1[COLOR_REVERT]</Russian>
 	</TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_MORECIV4LERTS_PEACE_TREATY_LOST</Tag>
+        <English>[COLOR_WARNING_TEXT]Will Not Sign Peace Treaty: %s1[COLOR_REVERT]</English>
+    </TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MORECIV4LERTS_PERMANENT_ALLIANCE</Tag>
 		<English>[COLOR_TECH_TEXT]Will Sign a Permanent Alliance: %s1[COLOR_REVERT]</English>
@@ -19054,6 +19070,10 @@
 		<Polish>[COLOR_TECH_TEXT]Chce podpisa&#230; sojusz: %s1[COLOR_REVERT]</Polish>
 		<Russian>[COLOR_TECH_TEXT]Ïîäïèøåò ïîñòîÿííûé ñîþç: %s1[COLOR_REVERT]</Russian>
 	</TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_MORECIV4LERTS_PERMANENT_ALLIANCE_LOST</Tag>
+        <English>[COLOR_WARNING_TEXT]Will Not Sign a Permanent Alliance: %s1[COLOR_REVERT]</English>
+    </TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MORECIV4LERTS_POP_CLOSE_TO_LIMIT</Tag>
 		<English>[COLOR_WARNING_TEXT]Your population: %d1 (%s2) is close to the Domination Limit: %d3 (%s4)[COLOR_REVERT]</English>
@@ -19104,6 +19124,10 @@
 		<Polish>[COLOR_TECH_TEXT]Chce skapitulowa&#230;: %s1[COLOR_REVERT]</Polish>
 		<Russian>[COLOR_TECH_TEXT]Êàïèòóëèðóåò: %s1[COLOR_REVERT]</Russian>
 	</TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_MORECIV4LERTS_SURRENDER_LOST</Tag>
+        <English>[COLOR_WARNING_TEXT]Will Not Capitulate: %s1[COLOR_REVERT]</English>
+    </TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MORECIV4LERTS_TECH_NOT_AVAIL</Tag>
 		<English>[COLOR_TECH_TEXT]%s1 won't trade %s2[COLOR_REVERT]</English>
@@ -19124,6 +19148,10 @@
 		<Polish>[COLOR_TECH_TEXT]Chce zosta&#230; wasalem: %s1[COLOR_REVERT]</Polish>
 		<Russian>[COLOR_TECH_TEXT]Ñòàíåò âàññàëîì: %s1[COLOR_REVERT]</Russian>
 	</TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_MORECIV4LERTS_VASSAL_NOT_LOST</Tag>
+        <English>[COLOR_WARNINGTEXT]Will Not Become a Vassal: %s1[COLOR_REVERT]</English>
+    </TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MOVEMENT_ROUTE_WITH_TECH</Tag>
 		<English>[ICON_BULLET]%s1_Change if the %s2_Tech Tech is known.</English>
@@ -30955,10 +30983,5 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Polish>Naci&#156;nij SHIFT aby zobaczy&#230; Klasy Bojowe</Polish>
 		<Russian>Нажмите SHIFT для просмотра атрибутов</Russian>
 	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_MOD_KILL_ANIMALS_DESC</Tag>
-		<English>All Green man's animals will be regenerated in a few turns</English>
-		<French>Tous les animaux de Dame Nature vont être régénérés dans quelques tours.</French>
-	</TEXT>	
 </Civ4GameText>
 

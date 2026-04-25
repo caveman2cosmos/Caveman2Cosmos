@@ -44,11 +44,11 @@
 					</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
-			<!-- AI behaviour towards the player with this difficulty -->
+			<!-- AI behavior towards the player with this difficulty -->
 			<iAttitudeChange>2</iAttitudeChange>
 			<iNoTechTradeModifier>150</iNoTechTradeModifier>
 			<iTechTradeKnownModifier>-99</iTechTradeKnownModifier>
-			<!-- These are game difficulty modifers, not player difficulty modifers and they all affect AI, not human players  -->
+			<!-- These are game difficulty modifiers, not player difficulty modifiers, and they all affect AI, not human players  -->
 			<iAnimalAttackProb>40</iAnimalAttackProb>
 			<iFreeWinsVsBarbs>8</iFreeWinsVsBarbs>
 			<iUnownedWaterTilesPerBarbarianUnit>180</iUnownedWaterTilesPerBarbarianUnit>
@@ -292,11 +292,11 @@
 					</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
-			<!-- AI behaviour towards the player with this difficulty -->
+			<!-- AI behavior towards the player with this difficulty -->
 			<iAttitudeChange>1</iAttitudeChange>
 			<iNoTechTradeModifier>100</iNoTechTradeModifier>
 			<iTechTradeKnownModifier>-66</iTechTradeKnownModifier>
-			<!-- These are game difficulty modifers, not player difficulty modifers and they all affect AI, not human players  -->
+			<!-- These are game difficulty modifiers, not player difficulty modifiers, and they all affect AI, not human players  -->
 			<iAnimalAttackProb>45</iAnimalAttackProb>
 			<iFreeWinsVsBarbs>7</iFreeWinsVsBarbs>
 			<iUnownedWaterTilesPerBarbarianUnit>165</iUnownedWaterTilesPerBarbarianUnit>
@@ -342,10 +342,6 @@
 				<GoodyType>GOODY_NAVAL_BARBARIANS_CLASSICAL_WEAK</GoodyType>
 				<GoodyType>GOODY_NAVAL_BARBARIANS_MEDIEVAL_WEAK</GoodyType>
 				<GoodyType>GOODY_NAVAL_BARBARIANS_RENAISSANCE_WEAK</GoodyType>
-<!--				<GoodyType>GOODY_NAVAL_BARBARIANS_INDUSTRIAL_WEAK</GoodyType>-->
-<!--				<GoodyType>GOODY_NAVAL_BARBARIANS_MODERN_WEAK</GoodyType>-->
-<!--				<GoodyType>GOODY_NAVAL_BARBARIANS_NANOTECH_WEAK</GoodyType>-->
-<!--				<GoodyType>GOODY_NAVAL_BARBARIANS_INFORMATION_WEAK</GoodyType>-->
 				<!-- Criminals -->
 				<GoodyType>GOODY_CRIMINAL</GoodyType>
 				<GoodyType>GOODY_ANCIENT_CRIMINAL</GoodyType>
@@ -562,11 +558,11 @@
 					</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
-			<!-- AI behaviour towards the player with this difficulty -->
+			<!-- AI behavior towards the player with this difficulty -->
 			<iAttitudeChange>1</iAttitudeChange>
 			<iNoTechTradeModifier>50</iNoTechTradeModifier>
 			<iTechTradeKnownModifier>-33</iTechTradeKnownModifier>
-			<!-- These are game difficulty modifers, not player difficulty modifers and they all affect AI, not human players  -->
+			<!-- These are game difficulty modifiers, not player difficulty modifiers, and they all affect AI, not human players  -->
 			<iAnimalAttackProb>50</iAnimalAttackProb>
 			<iFreeWinsVsBarbs>6</iFreeWinsVsBarbs>
 			<iUnownedWaterTilesPerBarbarianUnit>150</iUnownedWaterTilesPerBarbarianUnit>
@@ -611,10 +607,6 @@
 				<GoodyType>GOODY_NAVAL_BARBARIANS_CLASSICAL_WEAK</GoodyType>
 				<GoodyType>GOODY_NAVAL_BARBARIANS_MEDIEVAL_WEAK</GoodyType>
 				<GoodyType>GOODY_NAVAL_BARBARIANS_RENAISSANCE_WEAK</GoodyType>
-<!--				<GoodyType>GOODY_NAVAL_BARBARIANS_INDUSTRIAL_WEAK</GoodyType>-->
-<!--				<GoodyType>GOODY_NAVAL_BARBARIANS_MODERN_WEAK</GoodyType>-->
-<!--				<GoodyType>GOODY_NAVAL_BARBARIANS_NANOTECH_WEAK</GoodyType>-->
-<!--				<GoodyType>GOODY_NAVAL_BARBARIANS_INFORMATION_WEAK</GoodyType>-->
 				<!-- Criminals -->
 				<GoodyType>GOODY_CRIMINAL</GoodyType>
 				<GoodyType>GOODY_ANCIENT_CRIMINAL</GoodyType>
@@ -638,10 +630,6 @@
 				<GoodyType>GOODY_NAVAL_BARBARIANS_CLASSICAL_STRONG</GoodyType>
 				<GoodyType>GOODY_NAVAL_BARBARIANS_MEDIEVAL_STRONG</GoodyType>
 				<GoodyType>GOODY_NAVAL_BARBARIANS_RENAISSANCE_STRONG</GoodyType>
-<!--				<GoodyType>GOODY_NAVAL_BARBARIANS_INDUSTRIAL_STRONG</GoodyType>-->
-<!--				<GoodyType>GOODY_NAVAL_BARBARIANS_MODERN_STRONG</GoodyType>-->
-<!--				<GoodyType>GOODY_NAVAL_BARBARIANS_INFORMATION_STRONG</GoodyType>-->
-<!--				<GoodyType>GOODY_NAVAL_BARBARIANS_NANOTECH_STRONG</GoodyType>-->
 				<!-- Map -->
 				<GoodyType>GOODY_MAP</GoodyType>
 				<GoodyType>GOODY_MAP</GoodyType>
@@ -856,7 +844,7 @@
 					</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
-			<!-- These are game difficulty modifers, not player difficulty modifers and they all affect AI, not human players  -->
+			<!-- These are game difficulty modifiers, not player difficulty modifiers, and they all affect AI, not human players  -->
 			<iAnimalAttackProb>55</iAnimalAttackProb>
 			<iFreeWinsVsBarbs>5</iFreeWinsVsBarbs>
 			<iUnownedWaterTilesPerBarbarianUnit>135</iUnownedWaterTilesPerBarbarianUnit>
@@ -896,10 +884,6 @@
 				<GoodyType>GOODY_NAVAL_BARBARIANS_CLASSICAL_WEAK</GoodyType>
 				<GoodyType>GOODY_NAVAL_BARBARIANS_MEDIEVAL_WEAK</GoodyType>
 				<GoodyType>GOODY_NAVAL_BARBARIANS_RENAISSANCE_WEAK</GoodyType>
-<!--				<GoodyType>GOODY_NAVAL_BARBARIANS_INDUSTRIAL_WEAK</GoodyType>-->
-<!--				<GoodyType>GOODY_NAVAL_BARBARIANS_MODERN_WEAK</GoodyType>-->
-<!--				<GoodyType>GOODY_NAVAL_BARBARIANS_NANOTECH_WEAK</GoodyType>-->
-<!--				<GoodyType>GOODY_NAVAL_BARBARIANS_INFORMATION_WEAK</GoodyType>-->
 				<GoodyType>GOODY_BARBARIANS_WEAK</GoodyType>
 				<GoodyType>GOODY_BARBARIANS_ANCIENT_WEAK</GoodyType>
 				<GoodyType>GOODY_BARBARIANS_CLASSICAL_WEAK</GoodyType>
@@ -914,10 +898,6 @@
 				<GoodyType>GOODY_NAVAL_BARBARIANS_CLASSICAL_WEAK</GoodyType>
 				<GoodyType>GOODY_NAVAL_BARBARIANS_MEDIEVAL_WEAK</GoodyType>
 				<GoodyType>GOODY_NAVAL_BARBARIANS_RENAISSANCE_WEAK</GoodyType>
-<!--				<GoodyType>GOODY_NAVAL_BARBARIANS_INDUSTRIAL_WEAK</GoodyType>-->
-<!--				<GoodyType>GOODY_NAVAL_BARBARIANS_MODERN_WEAK</GoodyType>-->
-<!--				<GoodyType>GOODY_NAVAL_BARBARIANS_NANOTECH_WEAK</GoodyType>-->
-<!--				<GoodyType>GOODY_NAVAL_BARBARIANS_INFORMATION_WEAK</GoodyType>-->
 				<!-- Criminals -->
 				<GoodyType>GOODY_CRIMINAL</GoodyType>
 				<GoodyType>GOODY_ANCIENT_CRIMINAL</GoodyType>
@@ -941,10 +921,6 @@
 				<GoodyType>GOODY_NAVAL_BARBARIANS_CLASSICAL_STRONG</GoodyType>
 				<GoodyType>GOODY_NAVAL_BARBARIANS_MEDIEVAL_STRONG</GoodyType>
 				<GoodyType>GOODY_NAVAL_BARBARIANS_RENAISSANCE_STRONG</GoodyType>
-<!--				<GoodyType>GOODY_NAVAL_BARBARIANS_INDUSTRIAL_STRONG</GoodyType>-->
-<!--				<GoodyType>GOODY_NAVAL_BARBARIANS_MODERN_STRONG</GoodyType>-->
-<!--				<GoodyType>GOODY_NAVAL_BARBARIANS_INFORMATION_STRONG</GoodyType>-->
-<!--				<GoodyType>GOODY_NAVAL_BARBARIANS_NANOTECH_STRONG</GoodyType>-->
 				<!-- Very Strong Barbs -->
 				<GoodyType>GOODY_NAVAL_BARBARIANS_VERY_STRONG</GoodyType>
 				<GoodyType>GOODY_NAVAL_BARBARIANS_ANCIENT_VERY_STRONG</GoodyType>
@@ -1185,11 +1161,11 @@
 					</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
-			<!-- AI behaviour towards the player with this difficulty -->
+			<!-- AI behavior towards the player with this difficulty -->
 			<iAttitudeChange>-1</iAttitudeChange>
 			<iNoTechTradeModifier>-10</iNoTechTradeModifier>
 			<iTechTradeKnownModifier>10</iTechTradeKnownModifier>
-			<!-- These are game difficulty modifers, not player difficulty modifers and they all affect AI, not human players  -->
+			<!-- These are game difficulty modifiers, not player difficulty modifiers, and they all affect AI, not human players  -->
 			<iAnimalAttackProb>60</iAnimalAttackProb>
 			<iFreeWinsVsBarbs>4</iFreeWinsVsBarbs>
 			<iUnownedWaterTilesPerBarbarianUnit>120</iUnownedWaterTilesPerBarbarianUnit>
@@ -1235,10 +1211,6 @@
 				<GoodyType>GOODY_NAVAL_BARBARIANS_CLASSICAL_WEAK</GoodyType>
 				<GoodyType>GOODY_NAVAL_BARBARIANS_MEDIEVAL_WEAK</GoodyType>
 				<GoodyType>GOODY_NAVAL_BARBARIANS_RENAISSANCE_WEAK</GoodyType>
-<!--				<GoodyType>GOODY_NAVAL_BARBARIANS_INDUSTRIAL_WEAK</GoodyType>-->
-<!--				<GoodyType>GOODY_NAVAL_BARBARIANS_MODERN_WEAK</GoodyType>-->
-<!--				<GoodyType>GOODY_NAVAL_BARBARIANS_NANOTECH_WEAK</GoodyType>-->
-<!--				<GoodyType>GOODY_NAVAL_BARBARIANS_INFORMATION_WEAK</GoodyType>-->
 				<GoodyType>GOODY_BARBARIANS_WEAK</GoodyType>
 				<GoodyType>GOODY_BARBARIANS_ANCIENT_WEAK</GoodyType>
 				<GoodyType>GOODY_BARBARIANS_CLASSICAL_WEAK</GoodyType>
@@ -1253,10 +1225,6 @@
 				<GoodyType>GOODY_NAVAL_BARBARIANS_CLASSICAL_WEAK</GoodyType>
 				<GoodyType>GOODY_NAVAL_BARBARIANS_MEDIEVAL_WEAK</GoodyType>
 				<GoodyType>GOODY_NAVAL_BARBARIANS_RENAISSANCE_WEAK</GoodyType>
-<!--				<GoodyType>GOODY_NAVAL_BARBARIANS_INDUSTRIAL_WEAK</GoodyType>-->
-<!--				<GoodyType>GOODY_NAVAL_BARBARIANS_MODERN_WEAK</GoodyType>-->
-<!--				<GoodyType>GOODY_NAVAL_BARBARIANS_NANOTECH_WEAK</GoodyType>-->
-<!--				<GoodyType>GOODY_NAVAL_BARBARIANS_INFORMATION_WEAK</GoodyType>-->
 				<GoodyType>GOODY_BARBARIANS_WEAK</GoodyType>
 				<GoodyType>GOODY_BARBARIANS_ANCIENT_WEAK</GoodyType>
 				<GoodyType>GOODY_BARBARIANS_CLASSICAL_WEAK</GoodyType>
@@ -1271,10 +1239,6 @@
 				<GoodyType>GOODY_NAVAL_BARBARIANS_CLASSICAL_WEAK</GoodyType>
 				<GoodyType>GOODY_NAVAL_BARBARIANS_MEDIEVAL_WEAK</GoodyType>
 				<GoodyType>GOODY_NAVAL_BARBARIANS_RENAISSANCE_WEAK</GoodyType>
-<!--				<GoodyType>GOODY_NAVAL_BARBARIANS_INDUSTRIAL_WEAK</GoodyType>-->
-<!--				<GoodyType>GOODY_NAVAL_BARBARIANS_MODERN_WEAK</GoodyType>-->
-<!--				<GoodyType>GOODY_NAVAL_BARBARIANS_NANOTECH_WEAK</GoodyType>-->
-<!--				<GoodyType>GOODY_NAVAL_BARBARIANS_INFORMATION_WEAK</GoodyType>-->
 				<!-- Criminals -->
 				<GoodyType>GOODY_CRIMINAL</GoodyType>
 				<GoodyType>GOODY_ANCIENT_CRIMINAL</GoodyType>
@@ -1305,10 +1269,6 @@
 				<GoodyType>GOODY_NAVAL_BARBARIANS_CLASSICAL_STRONG</GoodyType>
 				<GoodyType>GOODY_NAVAL_BARBARIANS_MEDIEVAL_STRONG</GoodyType>
 				<GoodyType>GOODY_NAVAL_BARBARIANS_RENAISSANCE_STRONG</GoodyType>
-<!--				<GoodyType>GOODY_NAVAL_BARBARIANS_INDUSTRIAL_STRONG</GoodyType>-->
-<!--				<GoodyType>GOODY_NAVAL_BARBARIANS_MODERN_STRONG</GoodyType>-->
-<!--				<GoodyType>GOODY_NAVAL_BARBARIANS_INFORMATION_STRONG</GoodyType>-->
-<!--				<GoodyType>GOODY_NAVAL_BARBARIANS_NANOTECH_STRONG</GoodyType>-->
 				<!-- Very Strong Barbs -->
 				<GoodyType>GOODY_NAVAL_BARBARIANS_VERY_STRONG</GoodyType>
 				<GoodyType>GOODY_NAVAL_BARBARIANS_ANCIENT_VERY_STRONG</GoodyType>
@@ -1530,11 +1490,11 @@
 					</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
-			<!-- AI behaviour towards the player with this difficulty -->
+			<!-- AI behavior towards the player with this difficulty -->
 			<iAttitudeChange>-1</iAttitudeChange>
 			<iNoTechTradeModifier>-20</iNoTechTradeModifier>
 			<iTechTradeKnownModifier>20</iTechTradeKnownModifier>
-			<!-- These are game difficulty modifers, not player difficulty modifers and they all affect AI, not human players  -->
+			<!-- These are game difficulty modifiers, not player difficulty modifiers, and they all affect AI, not human players  -->
 			<iAnimalAttackProb>65</iAnimalAttackProb>
 			<iFreeWinsVsBarbs>3</iFreeWinsVsBarbs>
 			<iUnownedWaterTilesPerBarbarianUnit>105</iUnownedWaterTilesPerBarbarianUnit>
@@ -1581,10 +1541,6 @@
 				<GoodyType>GOODY_NAVAL_BARBARIANS_CLASSICAL_WEAK</GoodyType>
 				<GoodyType>GOODY_NAVAL_BARBARIANS_MEDIEVAL_WEAK</GoodyType>
 				<GoodyType>GOODY_NAVAL_BARBARIANS_RENAISSANCE_WEAK</GoodyType>
-<!--				<GoodyType>GOODY_NAVAL_BARBARIANS_INDUSTRIAL_WEAK</GoodyType>-->
-<!--				<GoodyType>GOODY_NAVAL_BARBARIANS_MODERN_WEAK</GoodyType>-->
-<!--				<GoodyType>GOODY_NAVAL_BARBARIANS_NANOTECH_WEAK</GoodyType>-->
-<!--				<GoodyType>GOODY_NAVAL_BARBARIANS_INFORMATION_WEAK</GoodyType>-->
 				<GoodyType>GOODY_BARBARIANS_WEAK</GoodyType>
 				<GoodyType>GOODY_BARBARIANS_ANCIENT_WEAK</GoodyType>
 				<GoodyType>GOODY_BARBARIANS_CLASSICAL_WEAK</GoodyType>
@@ -1599,10 +1555,6 @@
 				<GoodyType>GOODY_NAVAL_BARBARIANS_CLASSICAL_WEAK</GoodyType>
 				<GoodyType>GOODY_NAVAL_BARBARIANS_MEDIEVAL_WEAK</GoodyType>
 				<GoodyType>GOODY_NAVAL_BARBARIANS_RENAISSANCE_WEAK</GoodyType>
-<!--				<GoodyType>GOODY_NAVAL_BARBARIANS_INDUSTRIAL_WEAK</GoodyType>-->
-<!--				<GoodyType>GOODY_NAVAL_BARBARIANS_MODERN_WEAK</GoodyType>-->
-<!--				<GoodyType>GOODY_NAVAL_BARBARIANS_NANOTECH_WEAK</GoodyType>-->
-<!--				<GoodyType>GOODY_NAVAL_BARBARIANS_INFORMATION_WEAK</GoodyType>-->
 				<GoodyType>GOODY_BARBARIANS_WEAK</GoodyType>
 				<GoodyType>GOODY_BARBARIANS_ANCIENT_WEAK</GoodyType>
 				<GoodyType>GOODY_BARBARIANS_CLASSICAL_WEAK</GoodyType>
@@ -1617,10 +1569,6 @@
 				<GoodyType>GOODY_NAVAL_BARBARIANS_CLASSICAL_WEAK</GoodyType>
 				<GoodyType>GOODY_NAVAL_BARBARIANS_MEDIEVAL_WEAK</GoodyType>
 				<GoodyType>GOODY_NAVAL_BARBARIANS_RENAISSANCE_WEAK</GoodyType>
-<!--				<GoodyType>GOODY_NAVAL_BARBARIANS_INDUSTRIAL_WEAK</GoodyType>-->
-<!--				<GoodyType>GOODY_NAVAL_BARBARIANS_MODERN_WEAK</GoodyType>-->
-<!--				<GoodyType>GOODY_NAVAL_BARBARIANS_NANOTECH_WEAK</GoodyType>-->
-<!--				<GoodyType>GOODY_NAVAL_BARBARIANS_INFORMATION_WEAK</GoodyType>-->
 				<!-- Criminals -->
 				<GoodyType>GOODY_CRIMINAL</GoodyType>
 				<GoodyType>GOODY_ANCIENT_CRIMINAL</GoodyType>
@@ -1658,10 +1606,6 @@
 				<GoodyType>GOODY_NAVAL_BARBARIANS_CLASSICAL_STRONG</GoodyType>
 				<GoodyType>GOODY_NAVAL_BARBARIANS_MEDIEVAL_STRONG</GoodyType>
 				<GoodyType>GOODY_NAVAL_BARBARIANS_RENAISSANCE_STRONG</GoodyType>
-<!--				<GoodyType>GOODY_NAVAL_BARBARIANS_INDUSTRIAL_STRONG</GoodyType>-->
-<!--				<GoodyType>GOODY_NAVAL_BARBARIANS_MODERN_STRONG</GoodyType>-->
-<!--				<GoodyType>GOODY_NAVAL_BARBARIANS_INFORMATION_STRONG</GoodyType>-->
-<!--				<GoodyType>GOODY_NAVAL_BARBARIANS_NANOTECH_STRONG</GoodyType>-->
 				<GoodyType>GOODY_BARBARIANS_STRONG</GoodyType>
 				<GoodyType>GOODY_BARBARIANS_ANCIENT_STRONG</GoodyType>
 				<GoodyType>GOODY_BARBARIANS_CLASSICAL_STRONG</GoodyType>
@@ -1676,10 +1620,6 @@
 				<GoodyType>GOODY_NAVAL_BARBARIANS_CLASSICAL_STRONG</GoodyType>
 				<GoodyType>GOODY_NAVAL_BARBARIANS_MEDIEVAL_STRONG</GoodyType>
 				<GoodyType>GOODY_NAVAL_BARBARIANS_RENAISSANCE_STRONG</GoodyType>
-<!--				<GoodyType>GOODY_NAVAL_BARBARIANS_INDUSTRIAL_STRONG</GoodyType>-->
-<!--				<GoodyType>GOODY_NAVAL_BARBARIANS_MODERN_STRONG</GoodyType>-->
-<!--				<GoodyType>GOODY_NAVAL_BARBARIANS_INFORMATION_STRONG</GoodyType>-->
-<!--				<GoodyType>GOODY_NAVAL_BARBARIANS_NANOTECH_STRONG</GoodyType>-->
 				<!-- Very Strong Barbs -->
 				<GoodyType>GOODY_NAVAL_BARBARIANS_VERY_STRONG</GoodyType>
 				<GoodyType>GOODY_NAVAL_BARBARIANS_ANCIENT_VERY_STRONG</GoodyType>
@@ -1877,11 +1817,11 @@
 					</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
-			<!-- AI behaviour towards the player with this difficulty -->
+			<!-- AI behavior towards the player with this difficulty -->
 			<iAttitudeChange>-2</iAttitudeChange>
 			<iNoTechTradeModifier>-30</iNoTechTradeModifier>
 			<iTechTradeKnownModifier>30</iTechTradeKnownModifier>
-			<!-- These are game difficulty modifers, not player difficulty modifers and they all affect AI, not human players  -->
+			<!-- These are game difficulty modifiers, not player difficulty modifiers, and they all affect AI, not human players  -->
 			<iAnimalAttackProb>70</iAnimalAttackProb>
 			<iFreeWinsVsBarbs>2</iFreeWinsVsBarbs>
 			<iUnownedWaterTilesPerBarbarianUnit>90</iUnownedWaterTilesPerBarbarianUnit>
@@ -1985,10 +1925,6 @@
 				<GoodyType>GOODY_NAVAL_BARBARIANS_CLASSICAL_WEAK</GoodyType>
 				<GoodyType>GOODY_NAVAL_BARBARIANS_MEDIEVAL_WEAK</GoodyType>
 				<GoodyType>GOODY_NAVAL_BARBARIANS_RENAISSANCE_WEAK</GoodyType>
-<!--				<GoodyType>GOODY_NAVAL_BARBARIANS_INDUSTRIAL_WEAK</GoodyType>-->
-<!--				<GoodyType>GOODY_NAVAL_BARBARIANS_MODERN_WEAK</GoodyType>-->
-<!--				<GoodyType>GOODY_NAVAL_BARBARIANS_NANOTECH_WEAK</GoodyType>-->
-<!--				<GoodyType>GOODY_NAVAL_BARBARIANS_INFORMATION_WEAK</GoodyType>-->
 				<GoodyType>GOODY_BARBARIANS_WEAK</GoodyType>
 				<GoodyType>GOODY_BARBARIANS_ANCIENT_WEAK</GoodyType>
 				<GoodyType>GOODY_BARBARIANS_CLASSICAL_WEAK</GoodyType>
@@ -2003,10 +1939,6 @@
 				<GoodyType>GOODY_NAVAL_BARBARIANS_CLASSICAL_WEAK</GoodyType>
 				<GoodyType>GOODY_NAVAL_BARBARIANS_MEDIEVAL_WEAK</GoodyType>
 				<GoodyType>GOODY_NAVAL_BARBARIANS_RENAISSANCE_WEAK</GoodyType>
-<!--				<GoodyType>GOODY_NAVAL_BARBARIANS_INDUSTRIAL_WEAK</GoodyType>-->
-<!--				<GoodyType>GOODY_NAVAL_BARBARIANS_MODERN_WEAK</GoodyType>-->
-<!--				<GoodyType>GOODY_NAVAL_BARBARIANS_NANOTECH_WEAK</GoodyType>-->
-<!--				<GoodyType>GOODY_NAVAL_BARBARIANS_INFORMATION_WEAK</GoodyType>-->
 				<GoodyType>GOODY_BARBARIANS_WEAK</GoodyType>
 				<GoodyType>GOODY_BARBARIANS_ANCIENT_WEAK</GoodyType>
 				<GoodyType>GOODY_BARBARIANS_CLASSICAL_WEAK</GoodyType>
@@ -2021,10 +1953,6 @@
 				<GoodyType>GOODY_NAVAL_BARBARIANS_CLASSICAL_WEAK</GoodyType>
 				<GoodyType>GOODY_NAVAL_BARBARIANS_MEDIEVAL_WEAK</GoodyType>
 				<GoodyType>GOODY_NAVAL_BARBARIANS_RENAISSANCE_WEAK</GoodyType>
-<!--				<GoodyType>GOODY_NAVAL_BARBARIANS_INDUSTRIAL_WEAK</GoodyType>-->
-<!--				<GoodyType>GOODY_NAVAL_BARBARIANS_MODERN_WEAK</GoodyType>-->
-<!--				<GoodyType>GOODY_NAVAL_BARBARIANS_NANOTECH_WEAK</GoodyType>-->
-<!--				<GoodyType>GOODY_NAVAL_BARBARIANS_INFORMATION_WEAK</GoodyType>-->
 				<!-- Criminals -->
 				<GoodyType>GOODY_CRIMINAL</GoodyType>
 				<GoodyType>GOODY_ANCIENT_CRIMINAL</GoodyType>
@@ -2062,10 +1990,6 @@
 				<GoodyType>GOODY_NAVAL_BARBARIANS_CLASSICAL_STRONG</GoodyType>
 				<GoodyType>GOODY_NAVAL_BARBARIANS_MEDIEVAL_STRONG</GoodyType>
 				<GoodyType>GOODY_NAVAL_BARBARIANS_RENAISSANCE_STRONG</GoodyType>
-<!--				<GoodyType>GOODY_NAVAL_BARBARIANS_INDUSTRIAL_STRONG</GoodyType>-->
-<!--				<GoodyType>GOODY_NAVAL_BARBARIANS_MODERN_STRONG</GoodyType>-->
-<!--				<GoodyType>GOODY_NAVAL_BARBARIANS_INFORMATION_STRONG</GoodyType>-->
-<!--				<GoodyType>GOODY_NAVAL_BARBARIANS_NANOTECH_STRONG</GoodyType>-->
 				<GoodyType>GOODY_BARBARIANS_STRONG</GoodyType>
 				<GoodyType>GOODY_BARBARIANS_ANCIENT_STRONG</GoodyType>
 				<GoodyType>GOODY_BARBARIANS_CLASSICAL_STRONG</GoodyType>
@@ -2080,10 +2004,6 @@
 				<GoodyType>GOODY_NAVAL_BARBARIANS_CLASSICAL_STRONG</GoodyType>
 				<GoodyType>GOODY_NAVAL_BARBARIANS_MEDIEVAL_STRONG</GoodyType>
 				<GoodyType>GOODY_NAVAL_BARBARIANS_RENAISSANCE_STRONG</GoodyType>
-<!--				<GoodyType>GOODY_NAVAL_BARBARIANS_INDUSTRIAL_STRONG</GoodyType>-->
-<!--				<GoodyType>GOODY_NAVAL_BARBARIANS_MODERN_STRONG</GoodyType>-->
-<!--				<GoodyType>GOODY_NAVAL_BARBARIANS_INFORMATION_STRONG</GoodyType>-->
-<!--				<GoodyType>GOODY_NAVAL_BARBARIANS_NANOTECH_STRONG</GoodyType>-->
 				<GoodyType>GOODY_BARBARIANS_STRONG</GoodyType>
 				<GoodyType>GOODY_BARBARIANS_ANCIENT_STRONG</GoodyType>
 				<GoodyType>GOODY_BARBARIANS_CLASSICAL_STRONG</GoodyType>
@@ -2098,11 +2018,9 @@
 				<GoodyType>GOODY_NAVAL_BARBARIANS_CLASSICAL_STRONG</GoodyType>
 				<GoodyType>GOODY_NAVAL_BARBARIANS_MEDIEVAL_STRONG</GoodyType>
 				<GoodyType>GOODY_NAVAL_BARBARIANS_RENAISSANCE_STRONG</GoodyType>
-<!--				<GoodyType>GOODY_NAVAL_BARBARIANS_INDUSTRIAL_STRONG</GoodyType>-->
-<!--				<GoodyType>GOODY_NAVAL_BARBARIANS_MODERN_STRONG</GoodyType>-->
-<!--				<GoodyType>GOODY_NAVAL_BARBARIANS_INFORMATION_STRONG</GoodyType>-->
-<!--				<GoodyType>GOODY_NAVAL_BARBARIANS_NANOTECH_STRONG</GoodyType>-->
 				<!-- Map -->
+                <GoodyType>GOODY_MAP</GoodyType>
+                <GoodyType>GOODY_MAP</GoodyType>
 				<!-- Very Strong Barbs -->
 				<GoodyType>GOODY_NAVAL_BARBARIANS_VERY_STRONG</GoodyType>
 				<GoodyType>GOODY_NAVAL_BARBARIANS_ANCIENT_VERY_STRONG</GoodyType>
@@ -2114,8 +2032,6 @@
 				<GoodyType>GOODY_NAVAL_BARBARIANS_CLASSICAL_VERY_STRONG</GoodyType>
 				<GoodyType>GOODY_NAVAL_BARBARIANS_MEDIEVAL_VERY_STRONG</GoodyType>
 				<GoodyType>GOODY_NAVAL_BARBARIANS_RENAISSANCE_VERY_STRONG</GoodyType>
-				<GoodyType>GOODY_MAP</GoodyType>
-				<GoodyType>GOODY_MAP</GoodyType>
 				<!-- Healing -->
 				<GoodyType>GOODY_HEALING</GoodyType>
 				<!-- Healer -->
@@ -2317,11 +2233,11 @@
 					</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
-			<!-- AI behaviour towards the player with this difficulty -->
+			<!-- AI behavior towards the player with this difficulty -->
 			<iAttitudeChange>-2</iAttitudeChange>
 			<iNoTechTradeModifier>-40</iNoTechTradeModifier>
 			<iTechTradeKnownModifier>40</iTechTradeKnownModifier>
-			<!-- These are game difficulty modifers, not player difficulty modifers and they all affect AI, not human players  -->
+			<!-- These are game difficulty modifiers, not player difficulty modifiers, and they all affect AI, not human players  -->
 			<iAnimalAttackProb>75</iAnimalAttackProb>
 			<iFreeWinsVsBarbs>1</iFreeWinsVsBarbs>
 			<iUnownedWaterTilesPerBarbarianUnit>75</iUnownedWaterTilesPerBarbarianUnit>
@@ -2369,10 +2285,6 @@
 				<GoodyType>GOODY_NAVAL_BARBARIANS_CLASSICAL_WEAK</GoodyType>
 				<GoodyType>GOODY_NAVAL_BARBARIANS_MEDIEVAL_WEAK</GoodyType>
 				<GoodyType>GOODY_NAVAL_BARBARIANS_RENAISSANCE_WEAK</GoodyType>
-<!--				<GoodyType>GOODY_NAVAL_BARBARIANS_INDUSTRIAL_WEAK</GoodyType>-->
-<!--				<GoodyType>GOODY_NAVAL_BARBARIANS_MODERN_WEAK</GoodyType>-->
-<!--				<GoodyType>GOODY_NAVAL_BARBARIANS_NANOTECH_WEAK</GoodyType>-->
-<!--				<GoodyType>GOODY_NAVAL_BARBARIANS_INFORMATION_WEAK</GoodyType>-->
 				<GoodyType>GOODY_BARBARIANS_WEAK</GoodyType>
 				<GoodyType>GOODY_BARBARIANS_ANCIENT_WEAK</GoodyType>
 				<GoodyType>GOODY_BARBARIANS_CLASSICAL_WEAK</GoodyType>
@@ -2387,10 +2299,6 @@
 				<GoodyType>GOODY_NAVAL_BARBARIANS_CLASSICAL_WEAK</GoodyType>
 				<GoodyType>GOODY_NAVAL_BARBARIANS_MEDIEVAL_WEAK</GoodyType>
 				<GoodyType>GOODY_NAVAL_BARBARIANS_RENAISSANCE_WEAK</GoodyType>
-<!--				<GoodyType>GOODY_NAVAL_BARBARIANS_INDUSTRIAL_WEAK</GoodyType>-->
-<!--				<GoodyType>GOODY_NAVAL_BARBARIANS_MODERN_WEAK</GoodyType>-->
-<!--				<GoodyType>GOODY_NAVAL_BARBARIANS_NANOTECH_WEAK</GoodyType>-->
-<!--				<GoodyType>GOODY_NAVAL_BARBARIANS_INFORMATION_WEAK</GoodyType>-->
 				<GoodyType>GOODY_BARBARIANS_WEAK</GoodyType>
 				<GoodyType>GOODY_BARBARIANS_ANCIENT_WEAK</GoodyType>
 				<GoodyType>GOODY_BARBARIANS_CLASSICAL_WEAK</GoodyType>
@@ -2405,10 +2313,6 @@
 				<GoodyType>GOODY_NAVAL_BARBARIANS_CLASSICAL_WEAK</GoodyType>
 				<GoodyType>GOODY_NAVAL_BARBARIANS_MEDIEVAL_WEAK</GoodyType>
 				<GoodyType>GOODY_NAVAL_BARBARIANS_RENAISSANCE_WEAK</GoodyType>
-<!--				<GoodyType>GOODY_NAVAL_BARBARIANS_INDUSTRIAL_WEAK</GoodyType>-->
-<!--				<GoodyType>GOODY_NAVAL_BARBARIANS_MODERN_WEAK</GoodyType>-->
-<!--				<GoodyType>GOODY_NAVAL_BARBARIANS_NANOTECH_WEAK</GoodyType>-->
-<!--				<GoodyType>GOODY_NAVAL_BARBARIANS_INFORMATION_WEAK</GoodyType>-->
 				<!-- Criminals -->
 				<GoodyType>GOODY_CRIMINAL</GoodyType>
 				<GoodyType>GOODY_ANCIENT_CRIMINAL</GoodyType>
@@ -2446,10 +2350,6 @@
 				<GoodyType>GOODY_NAVAL_BARBARIANS_CLASSICAL_STRONG</GoodyType>
 				<GoodyType>GOODY_NAVAL_BARBARIANS_MEDIEVAL_STRONG</GoodyType>
 				<GoodyType>GOODY_NAVAL_BARBARIANS_RENAISSANCE_STRONG</GoodyType>
-<!--				<GoodyType>GOODY_NAVAL_BARBARIANS_INDUSTRIAL_STRONG</GoodyType>-->
-<!--				<GoodyType>GOODY_NAVAL_BARBARIANS_MODERN_STRONG</GoodyType>-->
-<!--				<GoodyType>GOODY_NAVAL_BARBARIANS_INFORMATION_STRONG</GoodyType>-->
-<!--				<GoodyType>GOODY_NAVAL_BARBARIANS_NANOTECH_STRONG</GoodyType>-->
 				<GoodyType>GOODY_BARBARIANS_STRONG</GoodyType>
 				<GoodyType>GOODY_BARBARIANS_ANCIENT_STRONG</GoodyType>
 				<GoodyType>GOODY_BARBARIANS_CLASSICAL_STRONG</GoodyType>
@@ -2464,10 +2364,6 @@
 				<GoodyType>GOODY_NAVAL_BARBARIANS_CLASSICAL_STRONG</GoodyType>
 				<GoodyType>GOODY_NAVAL_BARBARIANS_MEDIEVAL_STRONG</GoodyType>
 				<GoodyType>GOODY_NAVAL_BARBARIANS_RENAISSANCE_STRONG</GoodyType>
-<!--				<GoodyType>GOODY_NAVAL_BARBARIANS_INDUSTRIAL_STRONG</GoodyType>-->
-<!--				<GoodyType>GOODY_NAVAL_BARBARIANS_MODERN_STRONG</GoodyType>-->
-<!--				<GoodyType>GOODY_NAVAL_BARBARIANS_INFORMATION_STRONG</GoodyType>-->
-<!--				<GoodyType>GOODY_NAVAL_BARBARIANS_NANOTECH_STRONG</GoodyType>-->
 				<GoodyType>GOODY_BARBARIANS_STRONG</GoodyType>
 				<GoodyType>GOODY_BARBARIANS_ANCIENT_STRONG</GoodyType>
 				<GoodyType>GOODY_BARBARIANS_CLASSICAL_STRONG</GoodyType>
@@ -2482,10 +2378,6 @@
 				<GoodyType>GOODY_NAVAL_BARBARIANS_CLASSICAL_STRONG</GoodyType>
 				<GoodyType>GOODY_NAVAL_BARBARIANS_MEDIEVAL_STRONG</GoodyType>
 				<GoodyType>GOODY_NAVAL_BARBARIANS_RENAISSANCE_STRONG</GoodyType>
-<!--				<GoodyType>GOODY_NAVAL_BARBARIANS_INDUSTRIAL_STRONG</GoodyType>-->
-<!--				<GoodyType>GOODY_NAVAL_BARBARIANS_MODERN_STRONG</GoodyType>-->
-<!--				<GoodyType>GOODY_NAVAL_BARBARIANS_INFORMATION_STRONG</GoodyType>-->
-<!--				<GoodyType>GOODY_NAVAL_BARBARIANS_NANOTECH_STRONG</GoodyType>-->
 				<GoodyType>GOODY_BARBARIANS_STRONG</GoodyType>
 				<GoodyType>GOODY_BARBARIANS_ANCIENT_STRONG</GoodyType>
 				<GoodyType>GOODY_BARBARIANS_CLASSICAL_STRONG</GoodyType>
@@ -2500,10 +2392,6 @@
 				<GoodyType>GOODY_NAVAL_BARBARIANS_CLASSICAL_STRONG</GoodyType>
 				<GoodyType>GOODY_NAVAL_BARBARIANS_MEDIEVAL_STRONG</GoodyType>
 				<GoodyType>GOODY_NAVAL_BARBARIANS_RENAISSANCE_STRONG</GoodyType>
-<!--				<GoodyType>GOODY_NAVAL_BARBARIANS_INDUSTRIAL_STRONG</GoodyType>-->
-<!--				<GoodyType>GOODY_NAVAL_BARBARIANS_MODERN_STRONG</GoodyType>-->
-<!--				<GoodyType>GOODY_NAVAL_BARBARIANS_INFORMATION_STRONG</GoodyType>-->
-<!--				<GoodyType>GOODY_NAVAL_BARBARIANS_NANOTECH_STRONG</GoodyType>-->
 				<!-- Very Strong Barbs -->
 				<GoodyType>GOODY_NAVAL_BARBARIANS_VERY_STRONG</GoodyType>
 				<GoodyType>GOODY_NAVAL_BARBARIANS_ANCIENT_VERY_STRONG</GoodyType>
@@ -2707,11 +2595,11 @@
 					</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
-			<!-- AI behaviour towards the player with this difficulty -->
+			<!-- AI behavior towards the player with this difficulty -->
 			<iAttitudeChange>-3</iAttitudeChange>
 			<iNoTechTradeModifier>-50</iNoTechTradeModifier>
 			<iTechTradeKnownModifier>50</iTechTradeKnownModifier>
-			<!-- These are game difficulty modifers, not player difficulty modifers and they all affect AI, not human players  -->
+			<!-- These are game difficulty modifiers, not player difficulty modifiers, and they all affect AI, not human players  -->
 			<iAnimalAttackProb>80</iAnimalAttackProb>
 			<iUnownedWaterTilesPerBarbarianUnit>60</iUnownedWaterTilesPerBarbarianUnit>
 			<iUnownedTilesPerBarbarianCity>20</iUnownedTilesPerBarbarianCity>
@@ -2758,10 +2646,6 @@
 				<GoodyType>GOODY_NAVAL_BARBARIANS_CLASSICAL_WEAK</GoodyType>
 				<GoodyType>GOODY_NAVAL_BARBARIANS_MEDIEVAL_WEAK</GoodyType>
 				<GoodyType>GOODY_NAVAL_BARBARIANS_RENAISSANCE_WEAK</GoodyType>
-<!--				<GoodyType>GOODY_NAVAL_BARBARIANS_INDUSTRIAL_WEAK</GoodyType>-->
-<!--				<GoodyType>GOODY_NAVAL_BARBARIANS_MODERN_WEAK</GoodyType>-->
-<!--				<GoodyType>GOODY_NAVAL_BARBARIANS_NANOTECH_WEAK</GoodyType>-->
-<!--				<GoodyType>GOODY_NAVAL_BARBARIANS_INFORMATION_WEAK</GoodyType>-->
 				<GoodyType>GOODY_BARBARIANS_WEAK</GoodyType>
 				<GoodyType>GOODY_BARBARIANS_ANCIENT_WEAK</GoodyType>
 				<GoodyType>GOODY_BARBARIANS_CLASSICAL_WEAK</GoodyType>
@@ -2776,10 +2660,6 @@
 				<GoodyType>GOODY_NAVAL_BARBARIANS_CLASSICAL_WEAK</GoodyType>
 				<GoodyType>GOODY_NAVAL_BARBARIANS_MEDIEVAL_WEAK</GoodyType>
 				<GoodyType>GOODY_NAVAL_BARBARIANS_RENAISSANCE_WEAK</GoodyType>
-<!--				<GoodyType>GOODY_NAVAL_BARBARIANS_INDUSTRIAL_WEAK</GoodyType>-->
-<!--				<GoodyType>GOODY_NAVAL_BARBARIANS_MODERN_WEAK</GoodyType>-->
-<!--				<GoodyType>GOODY_NAVAL_BARBARIANS_NANOTECH_WEAK</GoodyType>-->
-<!--				<GoodyType>GOODY_NAVAL_BARBARIANS_INFORMATION_WEAK</GoodyType>-->
 				<!-- Criminals -->
 				<GoodyType>GOODY_CRIMINAL</GoodyType>
 				<GoodyType>GOODY_ANCIENT_CRIMINAL</GoodyType>
@@ -2824,10 +2704,6 @@
 				<GoodyType>GOODY_NAVAL_BARBARIANS_CLASSICAL_STRONG</GoodyType>
 				<GoodyType>GOODY_NAVAL_BARBARIANS_MEDIEVAL_STRONG</GoodyType>
 				<GoodyType>GOODY_NAVAL_BARBARIANS_RENAISSANCE_STRONG</GoodyType>
-<!--				<GoodyType>GOODY_NAVAL_BARBARIANS_INDUSTRIAL_STRONG</GoodyType>-->
-<!--				<GoodyType>GOODY_NAVAL_BARBARIANS_MODERN_STRONG</GoodyType>-->
-<!--				<GoodyType>GOODY_NAVAL_BARBARIANS_INFORMATION_STRONG</GoodyType>-->
-<!--				<GoodyType>GOODY_NAVAL_BARBARIANS_NANOTECH_STRONG</GoodyType>-->
 				<GoodyType>GOODY_BARBARIANS_STRONG</GoodyType>
 				<GoodyType>GOODY_BARBARIANS_ANCIENT_STRONG</GoodyType>
 				<GoodyType>GOODY_BARBARIANS_CLASSICAL_STRONG</GoodyType>
@@ -2842,10 +2718,6 @@
 				<GoodyType>GOODY_NAVAL_BARBARIANS_CLASSICAL_STRONG</GoodyType>
 				<GoodyType>GOODY_NAVAL_BARBARIANS_MEDIEVAL_STRONG</GoodyType>
 				<GoodyType>GOODY_NAVAL_BARBARIANS_RENAISSANCE_STRONG</GoodyType>
-<!--				<GoodyType>GOODY_NAVAL_BARBARIANS_INDUSTRIAL_STRONG</GoodyType>-->
-<!--				<GoodyType>GOODY_NAVAL_BARBARIANS_MODERN_STRONG</GoodyType>-->
-<!--				<GoodyType>GOODY_NAVAL_BARBARIANS_INFORMATION_STRONG</GoodyType>-->
-<!--				<GoodyType>GOODY_NAVAL_BARBARIANS_NANOTECH_STRONG</GoodyType>-->
 				<GoodyType>GOODY_BARBARIANS_STRONG</GoodyType>
 				<GoodyType>GOODY_BARBARIANS_ANCIENT_STRONG</GoodyType>
 				<GoodyType>GOODY_BARBARIANS_CLASSICAL_STRONG</GoodyType>
@@ -2860,10 +2732,6 @@
 				<GoodyType>GOODY_NAVAL_BARBARIANS_CLASSICAL_STRONG</GoodyType>
 				<GoodyType>GOODY_NAVAL_BARBARIANS_MEDIEVAL_STRONG</GoodyType>
 				<GoodyType>GOODY_NAVAL_BARBARIANS_RENAISSANCE_STRONG</GoodyType>
-<!--				<GoodyType>GOODY_NAVAL_BARBARIANS_INDUSTRIAL_STRONG</GoodyType>-->
-<!--				<GoodyType>GOODY_NAVAL_BARBARIANS_MODERN_STRONG</GoodyType>-->
-<!--				<GoodyType>GOODY_NAVAL_BARBARIANS_INFORMATION_STRONG</GoodyType>-->
-<!--				<GoodyType>GOODY_NAVAL_BARBARIANS_NANOTECH_STRONG</GoodyType>-->
 				<GoodyType>GOODY_BARBARIANS_STRONG</GoodyType>
 				<GoodyType>GOODY_BARBARIANS_ANCIENT_STRONG</GoodyType>
 				<GoodyType>GOODY_BARBARIANS_CLASSICAL_STRONG</GoodyType>
@@ -2878,10 +2746,6 @@
 				<GoodyType>GOODY_NAVAL_BARBARIANS_CLASSICAL_STRONG</GoodyType>
 				<GoodyType>GOODY_NAVAL_BARBARIANS_MEDIEVAL_STRONG</GoodyType>
 				<GoodyType>GOODY_NAVAL_BARBARIANS_RENAISSANCE_STRONG</GoodyType>
-<!--				<GoodyType>GOODY_NAVAL_BARBARIANS_INDUSTRIAL_STRONG</GoodyType>-->
-<!--				<GoodyType>GOODY_NAVAL_BARBARIANS_MODERN_STRONG</GoodyType>-->
-<!--				<GoodyType>GOODY_NAVAL_BARBARIANS_INFORMATION_STRONG</GoodyType>-->
-<!--				<GoodyType>GOODY_NAVAL_BARBARIANS_NANOTECH_STRONG</GoodyType>-->
 				<GoodyType>GOODY_BARBARIANS_STRONG</GoodyType>
 				<GoodyType>GOODY_BARBARIANS_ANCIENT_STRONG</GoodyType>
 				<GoodyType>GOODY_BARBARIANS_CLASSICAL_STRONG</GoodyType>
@@ -2896,10 +2760,6 @@
 				<GoodyType>GOODY_NAVAL_BARBARIANS_CLASSICAL_STRONG</GoodyType>
 				<GoodyType>GOODY_NAVAL_BARBARIANS_MEDIEVAL_STRONG</GoodyType>
 				<GoodyType>GOODY_NAVAL_BARBARIANS_RENAISSANCE_STRONG</GoodyType>
-<!--				<GoodyType>GOODY_NAVAL_BARBARIANS_INDUSTRIAL_STRONG</GoodyType>-->
-<!--				<GoodyType>GOODY_NAVAL_BARBARIANS_MODERN_STRONG</GoodyType>-->
-<!--				<GoodyType>GOODY_NAVAL_BARBARIANS_INFORMATION_STRONG</GoodyType>-->
-<!--				<GoodyType>GOODY_NAVAL_BARBARIANS_NANOTECH_STRONG</GoodyType>-->
 				<GoodyType>GOODY_BARBARIANS_STRONG</GoodyType>
 				<GoodyType>GOODY_BARBARIANS_ANCIENT_STRONG</GoodyType>
 				<GoodyType>GOODY_BARBARIANS_CLASSICAL_STRONG</GoodyType>
@@ -2914,10 +2774,6 @@
 				<GoodyType>GOODY_NAVAL_BARBARIANS_CLASSICAL_STRONG</GoodyType>
 				<GoodyType>GOODY_NAVAL_BARBARIANS_MEDIEVAL_STRONG</GoodyType>
 				<GoodyType>GOODY_NAVAL_BARBARIANS_RENAISSANCE_STRONG</GoodyType>
-<!--				<GoodyType>GOODY_NAVAL_BARBARIANS_INDUSTRIAL_STRONG</GoodyType>-->
-<!--				<GoodyType>GOODY_NAVAL_BARBARIANS_MODERN_STRONG</GoodyType>-->
-<!--				<GoodyType>GOODY_NAVAL_BARBARIANS_INFORMATION_STRONG</GoodyType>-->
-<!--				<GoodyType>GOODY_NAVAL_BARBARIANS_NANOTECH_STRONG</GoodyType>-->
 				<!-- Very Strong Barbs -->
 				<GoodyType>GOODY_NAVAL_BARBARIANS_VERY_STRONG</GoodyType>
 				<GoodyType>GOODY_NAVAL_BARBARIANS_ANCIENT_VERY_STRONG</GoodyType>
@@ -3119,11 +2975,11 @@
 					</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
-			<!-- AI behaviour towards the player with this difficulty -->
+			<!-- AI behavior towards the player with this difficulty -->
 			<iAttitudeChange>-4</iAttitudeChange>
 			<iNoTechTradeModifier>-70</iNoTechTradeModifier>
 			<iTechTradeKnownModifier>70</iTechTradeKnownModifier>
-			<!-- These are game difficulty modifers, not player difficulty modifers and they all affect AI, not human players  -->
+			<!-- These are game difficulty modifiers, not player difficulty modifiers, and they all affect AI, not human players  -->
 			<iAnimalAttackProb>90</iAnimalAttackProb>
 			<iUnownedWaterTilesPerBarbarianUnit>30</iUnownedWaterTilesPerBarbarianUnit>
 			<iUnownedTilesPerBarbarianCity>10</iUnownedTilesPerBarbarianCity>
@@ -3170,10 +3026,6 @@
 				<GoodyType>GOODY_NAVAL_BARBARIANS_CLASSICAL_WEAK</GoodyType>
 				<GoodyType>GOODY_NAVAL_BARBARIANS_MEDIEVAL_WEAK</GoodyType>
 				<GoodyType>GOODY_NAVAL_BARBARIANS_RENAISSANCE_WEAK</GoodyType>
-<!--				<GoodyType>GOODY_NAVAL_BARBARIANS_INDUSTRIAL_WEAK</GoodyType>-->
-<!--				<GoodyType>GOODY_NAVAL_BARBARIANS_MODERN_WEAK</GoodyType>-->
-<!--				<GoodyType>GOODY_NAVAL_BARBARIANS_NANOTECH_WEAK</GoodyType>-->
-<!--				<GoodyType>GOODY_NAVAL_BARBARIANS_INFORMATION_WEAK</GoodyType>-->
 				<GoodyType>GOODY_BARBARIANS_WEAK</GoodyType>
 				<GoodyType>GOODY_BARBARIANS_ANCIENT_WEAK</GoodyType>
 				<GoodyType>GOODY_BARBARIANS_CLASSICAL_WEAK</GoodyType>
@@ -3188,10 +3040,6 @@
 				<GoodyType>GOODY_NAVAL_BARBARIANS_CLASSICAL_WEAK</GoodyType>
 				<GoodyType>GOODY_NAVAL_BARBARIANS_MEDIEVAL_WEAK</GoodyType>
 				<GoodyType>GOODY_NAVAL_BARBARIANS_RENAISSANCE_WEAK</GoodyType>
-<!--				<GoodyType>GOODY_NAVAL_BARBARIANS_INDUSTRIAL_WEAK</GoodyType>-->
-<!--				<GoodyType>GOODY_NAVAL_BARBARIANS_MODERN_WEAK</GoodyType>-->
-<!--				<GoodyType>GOODY_NAVAL_BARBARIANS_NANOTECH_WEAK</GoodyType>-->
-<!--				<GoodyType>GOODY_NAVAL_BARBARIANS_INFORMATION_WEAK</GoodyType>-->
 				<!-- Criminals -->
 				<GoodyType>GOODY_CRIMINAL</GoodyType>
 				<GoodyType>GOODY_ANCIENT_CRIMINAL</GoodyType>
@@ -3243,10 +3091,6 @@
 				<GoodyType>GOODY_NAVAL_BARBARIANS_CLASSICAL_STRONG</GoodyType>
 				<GoodyType>GOODY_NAVAL_BARBARIANS_MEDIEVAL_STRONG</GoodyType>
 				<GoodyType>GOODY_NAVAL_BARBARIANS_RENAISSANCE_STRONG</GoodyType>
-<!--				<GoodyType>GOODY_NAVAL_BARBARIANS_INDUSTRIAL_STRONG</GoodyType>-->
-<!--				<GoodyType>GOODY_NAVAL_BARBARIANS_MODERN_STRONG</GoodyType>-->
-<!--				<GoodyType>GOODY_NAVAL_BARBARIANS_INFORMATION_STRONG</GoodyType>-->
-<!--				<GoodyType>GOODY_NAVAL_BARBARIANS_NANOTECH_STRONG</GoodyType>-->
 				<GoodyType>GOODY_BARBARIANS_STRONG</GoodyType>
 				<GoodyType>GOODY_BARBARIANS_ANCIENT_STRONG</GoodyType>
 				<GoodyType>GOODY_BARBARIANS_CLASSICAL_STRONG</GoodyType>
@@ -3261,10 +3105,6 @@
 				<GoodyType>GOODY_NAVAL_BARBARIANS_CLASSICAL_STRONG</GoodyType>
 				<GoodyType>GOODY_NAVAL_BARBARIANS_MEDIEVAL_STRONG</GoodyType>
 				<GoodyType>GOODY_NAVAL_BARBARIANS_RENAISSANCE_STRONG</GoodyType>
-<!--				<GoodyType>GOODY_NAVAL_BARBARIANS_INDUSTRIAL_STRONG</GoodyType>-->
-<!--				<GoodyType>GOODY_NAVAL_BARBARIANS_MODERN_STRONG</GoodyType>-->
-<!--				<GoodyType>GOODY_NAVAL_BARBARIANS_INFORMATION_STRONG</GoodyType>-->
-<!--				<GoodyType>GOODY_NAVAL_BARBARIANS_NANOTECH_STRONG</GoodyType>-->
 				<GoodyType>GOODY_BARBARIANS_STRONG</GoodyType>
 				<GoodyType>GOODY_BARBARIANS_ANCIENT_STRONG</GoodyType>
 				<GoodyType>GOODY_BARBARIANS_CLASSICAL_STRONG</GoodyType>
@@ -3279,10 +3119,6 @@
 				<GoodyType>GOODY_NAVAL_BARBARIANS_CLASSICAL_STRONG</GoodyType>
 				<GoodyType>GOODY_NAVAL_BARBARIANS_MEDIEVAL_STRONG</GoodyType>
 				<GoodyType>GOODY_NAVAL_BARBARIANS_RENAISSANCE_STRONG</GoodyType>
-<!--				<GoodyType>GOODY_NAVAL_BARBARIANS_INDUSTRIAL_STRONG</GoodyType>-->
-<!--				<GoodyType>GOODY_NAVAL_BARBARIANS_MODERN_STRONG</GoodyType>-->
-<!--				<GoodyType>GOODY_NAVAL_BARBARIANS_INFORMATION_STRONG</GoodyType>-->
-<!--				<GoodyType>GOODY_NAVAL_BARBARIANS_NANOTECH_STRONG</GoodyType>-->
 				<GoodyType>GOODY_BARBARIANS_STRONG</GoodyType>
 				<GoodyType>GOODY_BARBARIANS_ANCIENT_STRONG</GoodyType>
 				<GoodyType>GOODY_BARBARIANS_CLASSICAL_STRONG</GoodyType>
@@ -3297,10 +3133,6 @@
 				<GoodyType>GOODY_NAVAL_BARBARIANS_CLASSICAL_STRONG</GoodyType>
 				<GoodyType>GOODY_NAVAL_BARBARIANS_MEDIEVAL_STRONG</GoodyType>
 				<GoodyType>GOODY_NAVAL_BARBARIANS_RENAISSANCE_STRONG</GoodyType>
-<!--				<GoodyType>GOODY_NAVAL_BARBARIANS_INDUSTRIAL_STRONG</GoodyType>-->
-<!--				<GoodyType>GOODY_NAVAL_BARBARIANS_MODERN_STRONG</GoodyType>-->
-<!--				<GoodyType>GOODY_NAVAL_BARBARIANS_INFORMATION_STRONG</GoodyType>-->
-<!--				<GoodyType>GOODY_NAVAL_BARBARIANS_NANOTECH_STRONG</GoodyType>-->
 				<GoodyType>GOODY_BARBARIANS_STRONG</GoodyType>
 				<GoodyType>GOODY_BARBARIANS_ANCIENT_STRONG</GoodyType>
 				<GoodyType>GOODY_BARBARIANS_CLASSICAL_STRONG</GoodyType>
@@ -3315,10 +3147,6 @@
 				<GoodyType>GOODY_NAVAL_BARBARIANS_CLASSICAL_STRONG</GoodyType>
 				<GoodyType>GOODY_NAVAL_BARBARIANS_MEDIEVAL_STRONG</GoodyType>
 				<GoodyType>GOODY_NAVAL_BARBARIANS_RENAISSANCE_STRONG</GoodyType>
-<!--				<GoodyType>GOODY_NAVAL_BARBARIANS_INDUSTRIAL_STRONG</GoodyType>-->
-<!--				<GoodyType>GOODY_NAVAL_BARBARIANS_MODERN_STRONG</GoodyType>-->
-<!--				<GoodyType>GOODY_NAVAL_BARBARIANS_INFORMATION_STRONG</GoodyType>-->
-<!--				<GoodyType>GOODY_NAVAL_BARBARIANS_NANOTECH_STRONG</GoodyType>-->
 				<GoodyType>GOODY_BARBARIANS_STRONG</GoodyType>
 				<GoodyType>GOODY_BARBARIANS_ANCIENT_STRONG</GoodyType>
 				<GoodyType>GOODY_BARBARIANS_CLASSICAL_STRONG</GoodyType>
@@ -3333,10 +3161,6 @@
 				<GoodyType>GOODY_NAVAL_BARBARIANS_CLASSICAL_STRONG</GoodyType>
 				<GoodyType>GOODY_NAVAL_BARBARIANS_MEDIEVAL_STRONG</GoodyType>
 				<GoodyType>GOODY_NAVAL_BARBARIANS_RENAISSANCE_STRONG</GoodyType>
-<!--				<GoodyType>GOODY_NAVAL_BARBARIANS_INDUSTRIAL_STRONG</GoodyType>-->
-<!--				<GoodyType>GOODY_NAVAL_BARBARIANS_MODERN_STRONG</GoodyType>-->
-<!--				<GoodyType>GOODY_NAVAL_BARBARIANS_INFORMATION_STRONG</GoodyType>-->
-<!--				<GoodyType>GOODY_NAVAL_BARBARIANS_NANOTECH_STRONG</GoodyType>-->
 				<!-- Very Strong Barbs -->
 				<GoodyType>GOODY_NAVAL_BARBARIANS_VERY_STRONG</GoodyType>
 				<GoodyType>GOODY_NAVAL_BARBARIANS_ANCIENT_VERY_STRONG</GoodyType>
@@ -3530,11 +3354,11 @@
 					</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
-			<!-- AI behaviour towards the player with this difficulty -->
+			<!-- AI behavior towards the player with this difficulty -->
 			<iAttitudeChange>-4</iAttitudeChange>
 			<iNoTechTradeModifier>-95</iNoTechTradeModifier>
 			<iTechTradeKnownModifier>90</iTechTradeKnownModifier>
-			<!-- These are game difficulty modifers, not player difficulty modifers and they all affect AI, not human players  -->
+			<!-- These are game difficulty modifiers, not player difficulty modifiers, and they all affect AI, not human players  -->
 			<iAnimalAttackProb>90</iAnimalAttackProb>
 			<iUnownedWaterTilesPerBarbarianUnit>30</iUnownedWaterTilesPerBarbarianUnit>
 			<iUnownedTilesPerBarbarianCity>10</iUnownedTilesPerBarbarianCity>
@@ -3566,43 +3390,6 @@
 			<iAIPerEraModifier>-5</iAIPerEraModifier>
 			<iAIAdvancedStartPercent>240</iAIAdvancedStartPercent>
 			<Goodies>
-				<!-- Weak Barbs -->
-				<GoodyType>GOODY_BARBARIANS_WEAK</GoodyType>
-				<GoodyType>GOODY_BARBARIANS_ANCIENT_WEAK</GoodyType>
-				<GoodyType>GOODY_BARBARIANS_CLASSICAL_WEAK</GoodyType>
-				<GoodyType>GOODY_BARBARIANS_MEDIEVAL_WEAK</GoodyType>
-				<GoodyType>GOODY_BARBARIANS_RENAISSANCE_WEAK</GoodyType>
-				<GoodyType>GOODY_BARBARIANS_INDUSTRIAL_WEAK</GoodyType>
-				<GoodyType>GOODY_BARBARIANS_MODERN_WEAK</GoodyType>
-				<GoodyType>GOODY_BARBARIANS_INFORMATION_WEAK</GoodyType>
-				<GoodyType>GOODY_BARBARIANS_NANOTECH_WEAK</GoodyType>
-				<GoodyType>GOODY_NAVAL_BARBARIANS_WEAK</GoodyType>
-				<GoodyType>GOODY_NAVAL_BARBARIANS_ANCIENT_WEAK</GoodyType>
-				<GoodyType>GOODY_NAVAL_BARBARIANS_CLASSICAL_WEAK</GoodyType>
-				<GoodyType>GOODY_NAVAL_BARBARIANS_MEDIEVAL_WEAK</GoodyType>
-				<GoodyType>GOODY_NAVAL_BARBARIANS_RENAISSANCE_WEAK</GoodyType>
-<!--				<GoodyType>GOODY_NAVAL_BARBARIANS_INDUSTRIAL_WEAK</GoodyType>-->
-<!--				<GoodyType>GOODY_NAVAL_BARBARIANS_MODERN_WEAK</GoodyType>-->
-<!--				<GoodyType>GOODY_NAVAL_BARBARIANS_NANOTECH_WEAK</GoodyType>-->
-<!--				<GoodyType>GOODY_NAVAL_BARBARIANS_INFORMATION_WEAK</GoodyType>-->
-				<GoodyType>GOODY_BARBARIANS_WEAK</GoodyType>
-				<GoodyType>GOODY_BARBARIANS_ANCIENT_WEAK</GoodyType>
-				<GoodyType>GOODY_BARBARIANS_CLASSICAL_WEAK</GoodyType>
-				<GoodyType>GOODY_BARBARIANS_MEDIEVAL_WEAK</GoodyType>
-				<GoodyType>GOODY_BARBARIANS_RENAISSANCE_WEAK</GoodyType>
-				<GoodyType>GOODY_BARBARIANS_INDUSTRIAL_WEAK</GoodyType>
-				<GoodyType>GOODY_BARBARIANS_MODERN_WEAK</GoodyType>
-				<GoodyType>GOODY_BARBARIANS_INFORMATION_WEAK</GoodyType>
-				<GoodyType>GOODY_BARBARIANS_NANOTECH_WEAK</GoodyType>
-				<GoodyType>GOODY_NAVAL_BARBARIANS_WEAK</GoodyType>
-				<GoodyType>GOODY_NAVAL_BARBARIANS_ANCIENT_WEAK</GoodyType>
-				<GoodyType>GOODY_NAVAL_BARBARIANS_CLASSICAL_WEAK</GoodyType>
-				<GoodyType>GOODY_NAVAL_BARBARIANS_MEDIEVAL_WEAK</GoodyType>
-				<GoodyType>GOODY_NAVAL_BARBARIANS_RENAISSANCE_WEAK</GoodyType>
-<!--				<GoodyType>GOODY_NAVAL_BARBARIANS_INDUSTRIAL_WEAK</GoodyType>-->
-<!--				<GoodyType>GOODY_NAVAL_BARBARIANS_MODERN_WEAK</GoodyType>-->
-<!--				<GoodyType>GOODY_NAVAL_BARBARIANS_NANOTECH_WEAK</GoodyType>-->
-<!--				<GoodyType>GOODY_NAVAL_BARBARIANS_INFORMATION_WEAK</GoodyType>-->
 				<!-- Criminals -->
 				<GoodyType>GOODY_CRIMINAL</GoodyType>
 				<GoodyType>GOODY_ANCIENT_CRIMINAL</GoodyType>
@@ -3654,10 +3441,6 @@
 				<GoodyType>GOODY_NAVAL_BARBARIANS_CLASSICAL_STRONG</GoodyType>
 				<GoodyType>GOODY_NAVAL_BARBARIANS_MEDIEVAL_STRONG</GoodyType>
 				<GoodyType>GOODY_NAVAL_BARBARIANS_RENAISSANCE_STRONG</GoodyType>
-<!--				<GoodyType>GOODY_NAVAL_BARBARIANS_INDUSTRIAL_STRONG</GoodyType>-->
-<!--				<GoodyType>GOODY_NAVAL_BARBARIANS_MODERN_STRONG</GoodyType>-->
-<!--				<GoodyType>GOODY_NAVAL_BARBARIANS_INFORMATION_STRONG</GoodyType>-->
-<!--				<GoodyType>GOODY_NAVAL_BARBARIANS_NANOTECH_STRONG</GoodyType>-->
 				<GoodyType>GOODY_BARBARIANS_STRONG</GoodyType>
 				<GoodyType>GOODY_BARBARIANS_ANCIENT_STRONG</GoodyType>
 				<GoodyType>GOODY_BARBARIANS_CLASSICAL_STRONG</GoodyType>
@@ -3672,10 +3455,6 @@
 				<GoodyType>GOODY_NAVAL_BARBARIANS_CLASSICAL_STRONG</GoodyType>
 				<GoodyType>GOODY_NAVAL_BARBARIANS_MEDIEVAL_STRONG</GoodyType>
 				<GoodyType>GOODY_NAVAL_BARBARIANS_RENAISSANCE_STRONG</GoodyType>
-<!--				<GoodyType>GOODY_NAVAL_BARBARIANS_INDUSTRIAL_STRONG</GoodyType>-->
-<!--				<GoodyType>GOODY_NAVAL_BARBARIANS_MODERN_STRONG</GoodyType>-->
-<!--				<GoodyType>GOODY_NAVAL_BARBARIANS_INFORMATION_STRONG</GoodyType>-->
-<!--				<GoodyType>GOODY_NAVAL_BARBARIANS_NANOTECH_STRONG</GoodyType>-->
 				<GoodyType>GOODY_BARBARIANS_STRONG</GoodyType>
 				<GoodyType>GOODY_BARBARIANS_ANCIENT_STRONG</GoodyType>
 				<GoodyType>GOODY_BARBARIANS_CLASSICAL_STRONG</GoodyType>
@@ -3690,10 +3469,6 @@
 				<GoodyType>GOODY_NAVAL_BARBARIANS_CLASSICAL_STRONG</GoodyType>
 				<GoodyType>GOODY_NAVAL_BARBARIANS_MEDIEVAL_STRONG</GoodyType>
 				<GoodyType>GOODY_NAVAL_BARBARIANS_RENAISSANCE_STRONG</GoodyType>
-<!--				<GoodyType>GOODY_NAVAL_BARBARIANS_INDUSTRIAL_STRONG</GoodyType>-->
-<!--				<GoodyType>GOODY_NAVAL_BARBARIANS_MODERN_STRONG</GoodyType>-->
-<!--				<GoodyType>GOODY_NAVAL_BARBARIANS_INFORMATION_STRONG</GoodyType>-->
-<!--				<GoodyType>GOODY_NAVAL_BARBARIANS_NANOTECH_STRONG</GoodyType>-->
 				<GoodyType>GOODY_BARBARIANS_STRONG</GoodyType>
 				<GoodyType>GOODY_BARBARIANS_ANCIENT_STRONG</GoodyType>
 				<GoodyType>GOODY_BARBARIANS_CLASSICAL_STRONG</GoodyType>
@@ -3708,10 +3483,6 @@
 				<GoodyType>GOODY_NAVAL_BARBARIANS_CLASSICAL_STRONG</GoodyType>
 				<GoodyType>GOODY_NAVAL_BARBARIANS_MEDIEVAL_STRONG</GoodyType>
 				<GoodyType>GOODY_NAVAL_BARBARIANS_RENAISSANCE_STRONG</GoodyType>
-<!--				<GoodyType>GOODY_NAVAL_BARBARIANS_INDUSTRIAL_STRONG</GoodyType>-->
-<!--				<GoodyType>GOODY_NAVAL_BARBARIANS_MODERN_STRONG</GoodyType>-->
-<!--				<GoodyType>GOODY_NAVAL_BARBARIANS_INFORMATION_STRONG</GoodyType>-->
-<!--				<GoodyType>GOODY_NAVAL_BARBARIANS_NANOTECH_STRONG</GoodyType>-->
 				<GoodyType>GOODY_BARBARIANS_STRONG</GoodyType>
 				<GoodyType>GOODY_BARBARIANS_ANCIENT_STRONG</GoodyType>
 				<GoodyType>GOODY_BARBARIANS_CLASSICAL_STRONG</GoodyType>
@@ -3726,10 +3497,6 @@
 				<GoodyType>GOODY_NAVAL_BARBARIANS_CLASSICAL_STRONG</GoodyType>
 				<GoodyType>GOODY_NAVAL_BARBARIANS_MEDIEVAL_STRONG</GoodyType>
 				<GoodyType>GOODY_NAVAL_BARBARIANS_RENAISSANCE_STRONG</GoodyType>
-<!--				<GoodyType>GOODY_NAVAL_BARBARIANS_INDUSTRIAL_STRONG</GoodyType>-->
-<!--				<GoodyType>GOODY_NAVAL_BARBARIANS_MODERN_STRONG</GoodyType>-->
-<!--				<GoodyType>GOODY_NAVAL_BARBARIANS_INFORMATION_STRONG</GoodyType>-->
-<!--				<GoodyType>GOODY_NAVAL_BARBARIANS_NANOTECH_STRONG</GoodyType>-->
 				<GoodyType>GOODY_BARBARIANS_STRONG</GoodyType>
 				<GoodyType>GOODY_BARBARIANS_ANCIENT_STRONG</GoodyType>
 				<GoodyType>GOODY_BARBARIANS_CLASSICAL_STRONG</GoodyType>
@@ -3744,10 +3511,6 @@
 				<GoodyType>GOODY_NAVAL_BARBARIANS_CLASSICAL_STRONG</GoodyType>
 				<GoodyType>GOODY_NAVAL_BARBARIANS_MEDIEVAL_STRONG</GoodyType>
 				<GoodyType>GOODY_NAVAL_BARBARIANS_RENAISSANCE_STRONG</GoodyType>
-<!--				<GoodyType>GOODY_NAVAL_BARBARIANS_INDUSTRIAL_STRONG</GoodyType>-->
-<!--				<GoodyType>GOODY_NAVAL_BARBARIANS_MODERN_STRONG</GoodyType>-->
-<!--				<GoodyType>GOODY_NAVAL_BARBARIANS_INFORMATION_STRONG</GoodyType>-->
-<!--				<GoodyType>GOODY_NAVAL_BARBARIANS_NANOTECH_STRONG</GoodyType>-->
 				<!-- Very Strong Barbs -->
 				<GoodyType>GOODY_NAVAL_BARBARIANS_VERY_STRONG</GoodyType>
 				<GoodyType>GOODY_NAVAL_BARBARIANS_ANCIENT_VERY_STRONG</GoodyType>
@@ -3771,8 +3534,6 @@
 				<GoodyType>GOODY_NAVAL_BARBARIANS_RENAISSANCE_VERY_STRONG</GoodyType>
 				<!-- Map -->
 				<GoodyType>GOODY_MAP</GoodyType>
-				<GoodyType>GOODY_MAP</GoodyType>
-				<GoodyType>GOODY_MAP</GoodyType>
 				<!-- Healing -->
 				<GoodyType>GOODY_HEALING</GoodyType>
 				<!-- Healer -->
@@ -3791,59 +3552,15 @@
 				<GoodyType>GOODY_HIGH_RENAISSANCE_EXPERIENCE</GoodyType>
 				<!-- Warrior -->
 				<GoodyType>GOODY_WARRIOR</GoodyType>
-				<GoodyType>GOODY_WARRIOR</GoodyType>
-				<GoodyType>GOODY_STONE_AXEMAN</GoodyType>
 				<GoodyType>GOODY_STONE_AXEMAN</GoodyType>
 				<GoodyType>GOODY_AXEMAN</GoodyType>
-				<GoodyType>GOODY_AXEMAN</GoodyType>
-				<GoodyType>GOODY_STONE_THROWER</GoodyType>
 				<GoodyType>GOODY_STONE_THROWER</GoodyType>
 				<GoodyType>GOODY_ARCHER</GoodyType>
-				<GoodyType>GOODY_ARCHER</GoodyType>
-				<GoodyType>GOODY_COMPOSITE_BOWMAN</GoodyType>
 				<GoodyType>GOODY_COMPOSITE_BOWMAN</GoodyType>
 				<GoodyType>GOODY_HORSEMAN</GoodyType>
-				<GoodyType>GOODY_HORSEMAN</GoodyType>
-				<GoodyType>GOODY_HORSEMAN_CLASSICAL</GoodyType>
 				<GoodyType>GOODY_HORSEMAN_CLASSICAL</GoodyType>
 				<!-- Low Gold -->
 				<GoodyType>GOODY_LOW_GOLD</GoodyType>
-				<GoodyType>GOODY_LOW_GOLD</GoodyType>
-				<GoodyType>GOODY_LOW_GOLD</GoodyType>
-				<GoodyType>GOODY_LOW_GOLD</GoodyType>
-				<GoodyType>GOODY_LOW_GOLD</GoodyType>
-				<GoodyType>GOODY_LOW_ANCIENT_GOLD</GoodyType>
-				<GoodyType>GOODY_LOW_ANCIENT_GOLD</GoodyType>
-				<GoodyType>GOODY_LOW_CLASSICAL_GOLD</GoodyType>
-				<GoodyType>GOODY_LOW_CLASSICAL_GOLD</GoodyType>
-				<GoodyType>GOODY_LOW_MEDIEVAL_GOLD</GoodyType>
-				<GoodyType>GOODY_LOW_MEDIEVAL_GOLD</GoodyType>
-				<GoodyType>GOODY_LOW_RENAISSANCE_GOLD</GoodyType>
-				<GoodyType>GOODY_LOW_RENAISSANCE_GOLD</GoodyType>
-				<GoodyType>GOODY_LOW_INDUSTRIAL_GOLD</GoodyType>
-				<GoodyType>GOODY_LOW_INDUSTRIAL_GOLD</GoodyType>
-				<GoodyType>GOODY_LOW_ATOMIC_GOLD</GoodyType>
-				<GoodyType>GOODY_LOW_ATOMIC_GOLD</GoodyType>
-				<GoodyType>GOODY_LOW_INFORMATION_GOLD</GoodyType>
-				<GoodyType>GOODY_LOW_INFORMATION_GOLD</GoodyType>
-				<GoodyType>GOODY_LOW_NANOTECH_GOLD</GoodyType>
-				<GoodyType>GOODY_LOW_NANOTECH_GOLD</GoodyType>
-				<GoodyType>GOODY_LOW_ANCIENT_GOLD</GoodyType>
-				<GoodyType>GOODY_LOW_ANCIENT_GOLD</GoodyType>
-				<GoodyType>GOODY_LOW_CLASSICAL_GOLD</GoodyType>
-				<GoodyType>GOODY_LOW_CLASSICAL_GOLD</GoodyType>
-				<GoodyType>GOODY_LOW_MEDIEVAL_GOLD</GoodyType>
-				<GoodyType>GOODY_LOW_MEDIEVAL_GOLD</GoodyType>
-				<GoodyType>GOODY_LOW_RENAISSANCE_GOLD</GoodyType>
-				<GoodyType>GOODY_LOW_RENAISSANCE_GOLD</GoodyType>
-				<GoodyType>GOODY_LOW_INDUSTRIAL_GOLD</GoodyType>
-				<GoodyType>GOODY_LOW_INDUSTRIAL_GOLD</GoodyType>
-				<GoodyType>GOODY_LOW_ATOMIC_GOLD</GoodyType>
-				<GoodyType>GOODY_LOW_ATOMIC_GOLD</GoodyType>
-				<GoodyType>GOODY_LOW_INFORMATION_GOLD</GoodyType>
-				<GoodyType>GOODY_LOW_INFORMATION_GOLD</GoodyType>
-				<GoodyType>GOODY_LOW_NANOTECH_GOLD</GoodyType>
-				<GoodyType>GOODY_LOW_NANOTECH_GOLD</GoodyType>
 				<GoodyType>GOODY_LOW_ANCIENT_GOLD</GoodyType>
 				<GoodyType>GOODY_LOW_CLASSICAL_GOLD</GoodyType>
 				<GoodyType>GOODY_LOW_MEDIEVAL_GOLD</GoodyType>
@@ -3854,13 +3571,7 @@
 				<GoodyType>GOODY_LOW_NANOTECH_GOLD</GoodyType>
 				<!-- Low Research -->
 				<GoodyType>GOODY_LOW_RESEARCH</GoodyType>
-				<GoodyType>GOODY_LOW_RESEARCH</GoodyType>
-				<GoodyType>GOODY_LOW_RESEARCH</GoodyType>
-				<GoodyType>GOODY_LOW_RESEARCH</GoodyType>
-				<GoodyType>GOODY_LOW_RESEARCH</GoodyType>
 				<GoodyType>GOODY_LOW_ANCIENT_RESEARCH</GoodyType>
-				<GoodyType>GOODY_LOW_ANCIENT_RESEARCH</GoodyType>
-				<GoodyType>GOODY_LOW_CLASSICAL_RESEARCH</GoodyType>
 				<GoodyType>GOODY_LOW_CLASSICAL_RESEARCH</GoodyType>
 			</Goodies>
 		</HandicapInfo>

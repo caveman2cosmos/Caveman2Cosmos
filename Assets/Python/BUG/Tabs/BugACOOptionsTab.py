@@ -21,7 +21,6 @@ class BugACOOptionsTab(BugOptionsTab.BugOptionsTab):
 
 		left, right = self.addTwoColumnLayout(screen, column, "Page", True)
 
-		#self.addLabel(screen, left, "ACO", "Advanced Combat Odds:")
 		self.addCheckbox(screen, left, "ACO__Enabled")
 		self.addSpacer(screen, left, "ACO_Tab0")
 
@@ -51,7 +50,7 @@ class BugACOOptionsTab(BugOptionsTab.BugOptionsTab):
 		self.addSpacer(screen, rightR, "ACO_Tab2.2")
 		self.addTextDropdown(screen, rightL, rightR, "ACO__ShowAverageHealth")
 		self.addTextDropdown(screen, rightL, rightR, "ACO__ShowAttackerHealthBars")
-		self.addTextDropdown(screen, rightL, rightR, "ACO__ShowDedenderHealthBars")
+		self.addTextDropdown(screen, rightL, rightR, "ACO__ShowDefenderHealthBars")
 
 		self.addSpacer(screen, rightL, "ACO_Tab3.1")
 		self.addSpacer(screen, rightR, "ACO_Tab3.2")

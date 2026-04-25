@@ -51,6 +51,7 @@
 				<!-- BUILDS REQUIRING: C2C_ERA_PREHISTORIC -->
 				<!-- Obsolete in: C2C_ERA_PREHISTORIC -->
 				<BuildType>BUILD_ABATIS_THORN_HEDGE_KILL</BuildType>
+				<BuildType>BUILD_GATHERING_CAMP_KILL</BuildType>
 				<!-- Obsolete in: C2C_ERA_CLASSICAL -->
 				<BuildType>BUILD_TRAIL</BuildType>
 				<!-- Obsolete in: C2C_ERA_INFORMATION -->
@@ -72,6 +73,7 @@
 				<BuildType>BUILD_TAR_GATHERER_KILL</BuildType>
 				<BuildType>BUILD_WETLANDS_CAMP_KILL</BuildType>
 				<BuildType>BUILD_WOODEN_PALISADE_KILL</BuildType>
+				<BuildType>BUILD_RESOURCE_OUTPOST_KILL</BuildType>
 				<BuildType>BUILD_WOODEN_WATCHTOWER_KILL</BuildType>
 				<BuildType>BUILD_WOOD_GATHERER_KILL</BuildType>
 			</Builds>
@@ -140,6 +142,7 @@
 				<!-- Obsolete in: C2C_ERA_CLASSICAL -->
 				<BuildType>BUILD_TRAIL</BuildType>
 				<BuildType>BUILD_WOODEN_PALISADE</BuildType>
+				<BuildType>BUILD_RESOURCE_OUTPOST</BuildType>
 				<!-- Obsolete in: C2C_ERA_INFORMATION -->
 				<BuildType>BUILD_BURN_VEGETATION</BuildType>
 				<!-- BUILDS REQUIRING: C2C_ERA_ANCIENT -->
@@ -268,6 +271,7 @@
 				<!-- Obsolete in: C2C_ERA_CLASSICAL -->
 				<BuildType>BUILD_TRAIL</BuildType>
 				<BuildType>BUILD_WOODEN_PALISADE</BuildType>
+				<BuildType>BUILD_RESOURCE_OUTPOST</BuildType>
 				<!-- Obsolete in: C2C_ERA_INFORMATION -->
 				<BuildType>BUILD_BURN_VEGETATION</BuildType>
 				<!-- BUILDS REQUIRING: C2C_ERA_ANCIENT -->
@@ -316,6 +320,7 @@
 				<BuildType>BUILD_HAMLET</BuildType>
 				<!-- Obsolete in: C2C_ERA_INDUSTRIAL -->
 				<BuildType>BUILD_FORT</BuildType>
+				<BuildType>BUILD_RESOURCE_SETTLEMENT</BuildType>
 				<!-- Obsolete in: C2C_ERA_ATOMIC -->
 				<BuildType>BUILD_PAVED_ROAD</BuildType>
 				<BuildType>BUILD_WATERMILL</BuildType>
@@ -350,6 +355,7 @@
 				<BuildType>BUILD_STEEL_WATCHTOWER</BuildType>
 				<!-- Obsolete in: C2C_ERA_INFORMATION -->
 				<BuildType>BUILD_COMMAND_BUNKER</BuildType>
+				<BuildType>BUILD_RESOURCE_TOWN</BuildType>
 				<BuildType>BUILD_FACTORY</BuildType>
 				<BuildType>BUILD_RAILROAD</BuildType>
 				<!-- Obsolete in: C2C_ERA_FUTURE -->
@@ -429,6 +435,7 @@
 				<!-- Obsolete in: C2C_ERA_CLASSICAL -->
 				<BuildType>BUILD_TRAIL</BuildType>
 				<BuildType>BUILD_WOODEN_PALISADE</BuildType>
+				<BuildType>BUILD_RESOURCE_OUTPOST</BuildType>
 				<!-- Obsolete in: C2C_ERA_INFORMATION -->
 				<BuildType>BUILD_BURN_VEGETATION</BuildType>
 				<!-- BUILDS REQUIRING: C2C_ERA_ANCIENT -->
@@ -477,6 +484,7 @@
 				<BuildType>BUILD_HAMLET</BuildType>
 				<!-- Obsolete in: C2C_ERA_INDUSTRIAL -->
 				<BuildType>BUILD_FORT</BuildType>
+				<BuildType>BUILD_RESOURCE_SETTLEMENT</BuildType>
 				<!-- Obsolete in: C2C_ERA_ATOMIC -->
 				<BuildType>BUILD_PAVED_ROAD</BuildType>
 				<BuildType>BUILD_WATERMILL</BuildType>
@@ -511,6 +519,7 @@
 				<BuildType>BUILD_STEEL_WATCHTOWER</BuildType>
 				<!-- Obsolete in: C2C_ERA_INFORMATION -->
 				<BuildType>BUILD_COMMAND_BUNKER</BuildType>
+				<BuildType>BUILD_RESOURCE_TOWN</BuildType>
 				<BuildType>BUILD_FACTORY</BuildType>
 				<BuildType>BUILD_RAILROAD</BuildType>
 				<!-- Obsolete in: C2C_ERA_FUTURE -->
@@ -598,6 +607,7 @@
 				<!-- Obsolete in: C2C_ERA_CLASSICAL -->
 				<BuildType>BUILD_TRAIL</BuildType>
 				<BuildType>BUILD_WOODEN_PALISADE</BuildType>
+				<BuildType>BUILD_RESOURCE_OUTPOST</BuildType>
 				<!-- Obsolete in: C2C_ERA_INFORMATION -->
 				<BuildType>BUILD_BURN_VEGETATION</BuildType>
 				<!-- BUILDS REQUIRING: C2C_ERA_ANCIENT -->
@@ -646,6 +656,7 @@
 				<BuildType>BUILD_HAMLET</BuildType>
 				<!-- Obsolete in: C2C_ERA_INDUSTRIAL -->
 				<BuildType>BUILD_FORT</BuildType>
+				<BuildType>BUILD_RESOURCE_SETTLEMENT</BuildType>
 				<!-- Obsolete in: C2C_ERA_ATOMIC -->
 				<BuildType>BUILD_PAVED_ROAD</BuildType>
 				<BuildType>BUILD_WATERMILL</BuildType>
@@ -680,6 +691,7 @@
 				<BuildType>BUILD_STEEL_WATCHTOWER</BuildType>
 				<!-- Obsolete in: C2C_ERA_INFORMATION -->
 				<BuildType>BUILD_COMMAND_BUNKER</BuildType>
+				<BuildType>BUILD_RESOURCE_TOWN</BuildType>
 				<BuildType>BUILD_FACTORY</BuildType>
 				<BuildType>BUILD_RAILROAD</BuildType>
 				<!-- Obsolete in: C2C_ERA_FUTURE -->
@@ -776,6 +788,7 @@
 				<!-- Obsolete in: C2C_ERA_CLASSICAL -->
 				<BuildType>BUILD_TRAIL</BuildType>
 				<BuildType>BUILD_WOODEN_PALISADE</BuildType>
+				<BuildType>BUILD_RESOURCE_OUTPOST</BuildType>
 				<!-- Obsolete in: C2C_ERA_INFORMATION -->
 				<BuildType>BUILD_BURN_VEGETATION</BuildType>
 				<!-- BUILDS REQUIRING: C2C_ERA_ANCIENT -->
@@ -824,6 +837,7 @@
 				<BuildType>BUILD_HAMLET</BuildType>
 				<!-- Obsolete in: C2C_ERA_INDUSTRIAL -->
 				<BuildType>BUILD_FORT</BuildType>
+				<BuildType>BUILD_RESOURCE_SETTLEMENT</BuildType>
 				<!-- Obsolete in: C2C_ERA_ATOMIC -->
 				<BuildType>BUILD_PAVED_ROAD</BuildType>
 				<BuildType>BUILD_WATERMILL</BuildType>
@@ -858,6 +872,7 @@
 				<BuildType>BUILD_STEEL_WATCHTOWER</BuildType>
 				<!-- Obsolete in: C2C_ERA_INFORMATION -->
 				<BuildType>BUILD_COMMAND_BUNKER</BuildType>
+				<BuildType>BUILD_RESOURCE_TOWN</BuildType>
 				<BuildType>BUILD_FACTORY</BuildType>
 				<BuildType>BUILD_RAILROAD</BuildType>
 				<!-- Obsolete in: C2C_ERA_FUTURE -->
@@ -949,6 +964,7 @@
 				<!-- Obsolete in: C2C_ERA_CLASSICAL -->
 				<BuildType>BUILD_TRAIL</BuildType>
 				<BuildType>BUILD_WOODEN_PALISADE</BuildType>
+				<BuildType>BUILD_RESOURCE_OUTPOST</BuildType>
 				<!-- Obsolete in: C2C_ERA_INFORMATION -->
 				<BuildType>BUILD_BURN_VEGETATION</BuildType>
 				<!-- BUILDS REQUIRING: C2C_ERA_ANCIENT -->
@@ -997,6 +1013,7 @@
 				<BuildType>BUILD_HAMLET</BuildType>
 				<!-- Obsolete in: C2C_ERA_INDUSTRIAL -->
 				<BuildType>BUILD_FORT</BuildType>
+				<BuildType>BUILD_RESOURCE_SETTLEMENT</BuildType>
 				<!-- Obsolete in: C2C_ERA_ATOMIC -->
 				<BuildType>BUILD_PAVED_ROAD</BuildType>
 				<BuildType>BUILD_WATERMILL</BuildType>
@@ -1031,6 +1048,7 @@
 				<BuildType>BUILD_STEEL_WATCHTOWER</BuildType>
 				<!-- Obsolete in: C2C_ERA_INFORMATION -->
 				<BuildType>BUILD_COMMAND_BUNKER</BuildType>
+				<BuildType>BUILD_RESOURCE_TOWN</BuildType>
 				<BuildType>BUILD_FACTORY</BuildType>
 				<BuildType>BUILD_RAILROAD</BuildType>
 				<!-- Obsolete in: C2C_ERA_FUTURE -->
@@ -1122,6 +1140,7 @@
 				<!-- Obsolete in: C2C_ERA_CLASSICAL -->
 				<BuildType>BUILD_TRAIL</BuildType>
 				<BuildType>BUILD_WOODEN_PALISADE</BuildType>
+				<BuildType>BUILD_RESOURCE_OUTPOST</BuildType>
 				<!-- Obsolete in: C2C_ERA_INFORMATION -->
 				<BuildType>BUILD_BURN_VEGETATION</BuildType>
 				<!-- BUILDS REQUIRING: C2C_ERA_ANCIENT -->
@@ -1170,6 +1189,7 @@
 				<BuildType>BUILD_HAMLET</BuildType>
 				<!-- Obsolete in: C2C_ERA_INDUSTRIAL -->
 				<BuildType>BUILD_FORT</BuildType>
+				<BuildType>BUILD_RESOURCE_SETTLEMENT</BuildType>
 				<!-- Obsolete in: C2C_ERA_ATOMIC -->
 				<BuildType>BUILD_PAVED_ROAD</BuildType>
 				<BuildType>BUILD_WATERMILL</BuildType>
@@ -1204,6 +1224,7 @@
 				<BuildType>BUILD_STEEL_WATCHTOWER</BuildType>
 				<!-- Obsolete in: C2C_ERA_INFORMATION -->
 				<BuildType>BUILD_COMMAND_BUNKER</BuildType>
+				<BuildType>BUILD_RESOURCE_TOWN</BuildType>
 				<BuildType>BUILD_FACTORY</BuildType>
 				<BuildType>BUILD_RAILROAD</BuildType>
 				<!-- Obsolete in: C2C_ERA_FUTURE -->
@@ -1322,6 +1343,7 @@
 				<!-- BUILDS REQUIRING: C2C_ERA_CLASSICAL -->
 				<!-- Obsolete in: C2C_ERA_INDUSTRIAL -->
 				<BuildType>BUILD_FORT</BuildType>
+				<BuildType>BUILD_RESOURCE_SETTLEMENT</BuildType>
 				<!-- Obsolete in: C2C_ERA_ATOMIC -->
 				<BuildType>BUILD_PAVED_ROAD</BuildType>
 				<BuildType>BUILD_WATERMILL</BuildType>
@@ -1356,6 +1378,7 @@
 				<BuildType>BUILD_STEEL_WATCHTOWER</BuildType>
 				<!-- Obsolete in: C2C_ERA_INFORMATION -->
 				<BuildType>BUILD_COMMAND_BUNKER</BuildType>
+				<BuildType>BUILD_RESOURCE_TOWN</BuildType>
 				<BuildType>BUILD_FACTORY</BuildType>
 				<BuildType>BUILD_RAILROAD</BuildType>
 				<!-- Obsolete in: C2C_ERA_FUTURE -->
@@ -1601,6 +1624,7 @@
 				<BuildType>BUILD_STEEL_WATCHTOWER</BuildType>
 				<!-- Obsolete in: C2C_ERA_INFORMATION -->
 				<BuildType>BUILD_COMMAND_BUNKER</BuildType>
+				<BuildType>BUILD_RESOURCE_TOWN</BuildType>
 				<BuildType>BUILD_FACTORY</BuildType>
 				<BuildType>BUILD_RAILROAD</BuildType>
 				<!-- Obsolete in: C2C_ERA_FUTURE -->
@@ -1638,6 +1662,7 @@
 				<!-- Obsolete in: C2C_ERA_FUTURE -->
 				<BuildType>BUILD_CLEAR_FALLOUT_FAST</BuildType>
 				<BuildType>BUILD_COMMAND_CENTER</BuildType>
+				<BuildType>BUILD_RESOURCE_COMPLEX</BuildType>
 				<BuildType>BUILD_RECLAIM_LAND</BuildType>
 				<BuildType>BUILD_SANITIZE</BuildType>
 				<!-- BUILDS REQUIRING: C2C_ERA_NANOTECH -->
@@ -1766,6 +1791,7 @@
 				<!-- Obsolete in: C2C_ERA_FUTURE -->
 				<BuildType>BUILD_CLEAR_FALLOUT_FAST</BuildType>
 				<BuildType>BUILD_COMMAND_CENTER</BuildType>
+				<BuildType>BUILD_RESOURCE_COMPLEX</BuildType>
 				<BuildType>BUILD_RECLAIM_LAND</BuildType>
 				<BuildType>BUILD_SANITIZE</BuildType>
 				<!-- BUILDS REQUIRING: C2C_ERA_NANOTECH -->
@@ -1888,6 +1914,7 @@
 				<!-- Obsolete in: C2C_ERA_FUTURE -->
 				<BuildType>BUILD_CLEAR_FALLOUT_FAST</BuildType>
 				<BuildType>BUILD_COMMAND_CENTER</BuildType>
+				<BuildType>BUILD_RESOURCE_COMPLEX</BuildType>
 				<BuildType>BUILD_RECLAIM_LAND</BuildType>
 				<BuildType>BUILD_SANITIZE</BuildType>
 				<!-- BUILDS REQUIRING: C2C_ERA_NANOTECH -->
@@ -2761,6 +2788,7 @@
 				<!-- Obsolete in: C2C_ERA_CLASSICAL -->
 				<BuildType>BUILD_TRAIL</BuildType>
 				<BuildType>BUILD_WOODEN_PALISADE</BuildType>
+				<BuildType>BUILD_RESOURCE_OUTPOST</BuildType>
 				<!-- Obsolete in: C2C_ERA_INFORMATION -->
 				<BuildType>BUILD_BURN_VEGETATION</BuildType>
 				<!-- BUILDS REQUIRING: C2C_ERA_ANCIENT -->
@@ -2808,6 +2836,7 @@
 				<BuildType>BUILD_HAMLET</BuildType>
 				<!-- Obsolete in: C2C_ERA_INDUSTRIAL -->
 				<BuildType>BUILD_FORT</BuildType>
+				<BuildType>BUILD_RESOURCE_SETTLEMENT</BuildType>
 				<!-- Obsolete in: C2C_ERA_ATOMIC -->
 				<BuildType>BUILD_PAVED_ROAD</BuildType>
 				<BuildType>BUILD_WATERMILL</BuildType>

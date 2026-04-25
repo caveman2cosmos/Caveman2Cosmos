@@ -88,6 +88,8 @@ private:
 		PROFILE_FUNC();
 
 		std::vector<UpgradePair> directUpgrades;
+		const UnitTypes eGreatGeneral = static_cast<UnitTypes>(GC.getInfoTypeForString("UNIT_GREAT_GENERAL"));
+		const UnitTypes eGreatAdmiral = static_cast<UnitTypes>(GC.getInfoTypeForString("UNIT_GREAT_ADMIRAL"));
 
 		// First populate the direct upgrades
 		for(int iUnit = 0; iUnit < GC.getNumUnitInfos(); iUnit++)
@@ -96,7 +98,15 @@ private:
 			const CvUnitInfo& unitInfo = GC.getUnitInfo(unitType);
 			for(int i = 0; i < unitInfo.getNumUnitUpgrades(); i++)
 			{
-				directUpgrades.push_back(UpgradePair(unitType, static_cast<UnitTypes>(unitInfo.getUnitUpgrade(i))));
+				const UnitTypes eUpgradeType = static_cast<UnitTypes>(unitInfo.getUnitUpgrade(i));
+				const bool bBlockedGeneralAdmiralSwap =
+					(unitType == eGreatGeneral && eUpgradeType == eGreatAdmiral)
+					|| (unitType == eGreatAdmiral && eUpgradeType == eGreatGeneral);
+
+				if (!bBlockedGeneralAdmiralSwap)
+				{
+					directUpgrades.push_back(UpgradePair(unitType, eUpgradeType));
+				}
 			}
 		}
 
@@ -7115,16 +7125,13 @@ int64_t CvPlayer::getBaseUnitCost100(const UnitTypes eUnit) const
 		iBaseCost *= GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getHammerCostPercent();
 
 		int iMod = 100;
-		if (!GC.getGame().isOption(GAMEOPTION_TECH_BEELINE_STINGS))
-		{
-			EraTypes eEra = (EraTypes)GC.getGame().getStartEra();
-			if (GC.getUnitInfo(eUnit).getEraInfo() != NO_ERA)
-			{
-				eEra = (EraTypes)GC.getUnitInfo(eUnit).getEraInfo();
-			}
-			iMod = GC.getEraInfo(eEra).getTrainPercent();
-		}
-		else iMod = GC.getEraInfo((EraTypes)getCurrentEra()).getTrainPercent();
+
+        EraTypes eEra = (EraTypes)GC.getGame().getStartEra();
+        if (GC.getUnitInfo(eUnit).getEraInfo() != NO_ERA)
+        {
+            eEra = (EraTypes)GC.getUnitInfo(eUnit).getEraInfo();
+        }
+        iMod = GC.getEraInfo(eEra).getTrainPercent();
 
 		iBaseCost *= iMod;
 		iBaseCost /= 100;
@@ -7297,12 +7304,10 @@ int CvPlayer::getProductionNeeded(ProjectTypes eProject) const
 
 	const EraTypes eEra = getCurrentEra();
 	int iModifier = 0;
-	if (!GC.getGame().isOption(GAMEOPTION_TECH_BEELINE_STINGS) && GC.getProjectInfo(eProject).getTechPrereq() != NO_TECH)
-	{
-		iModifier = GC.getEraInfo((EraTypes)GC.getTechInfo(GC.getProjectInfo(eProject).getTechPrereq()).getEra()).getCreatePercent();
-	}
-	else iModifier = GC.getEraInfo(eEra).getCreatePercent();
-
+	if (GC.getProjectInfo(eProject).getTechPrereq() != NO_TECH)
+    {
+        iModifier = GC.getEraInfo((EraTypes)GC.getTechInfo(GC.getProjectInfo(eProject).getTechPrereq()).getEra()).getCreatePercent();
+    }
 	iProductionNeeded *= iModifier;
 	iProductionNeeded /= 100;
 
@@ -8318,7 +8323,7 @@ int CvPlayer::calculateResearchModifier(TechTypes eTech) const
 					}
 				}
 				//If iOurScore > iBestScore we are the best team in the game
-				if (iOurScore < iBestScore)
+				if (iOurScore > 0 && iOurScore < iBestScore)
 				{
 					float fRatio = iBestScore / ((float)iOurScore);
 					logging::logMsg("C2C.log", "Tech Welfare amount: %d, iOurScore: %d, iBestScore: %d, fRatio: %f, modified welfare amt: %d for civ: %S\n", iWelfareTechDiffusion, iOurScore, iBestScore, fRatio, ((int)(fRatio * iWelfareTechDiffusion)), getCivilizationDescription());
@@ -8329,6 +8334,10 @@ int CvPlayer::calculateResearchModifier(TechTypes eTech) const
 			}
 		}
 	}
+	// Cap: diffusion bonus in absolute research points can never exceed your own research output.
+	// iModifier is a percentage applied to your base research, so capping at 100 means
+	// max diffusion boost = your own research (you can't absorb more help than you can process yourself).
+	iModifier = std::min(iModifier, 100);
 	return iModifier;
 }
 
@@ -8343,13 +8352,9 @@ int CvPlayer::calculateBaseNetResearch(TechTypes eTech) const
 			return GC.getDefineINT("BASE_RESEARCH_RATE") + getCommerceRate(COMMERCE_RESEARCH);
 		}
 	}
-	int iCalcResearch =  (
-		GC.getDefineINT("BASE_RESEARCH_RATE")
-		+
-		getModifiedIntValue(
-			getCommerceRate(COMMERCE_RESEARCH),
-			getNationalTechResearchModifier(eTech) + calculateResearchModifier(eTech)
-		)
+	int iCalcResearch = getModifiedIntValue(
+		GC.getDefineINT("BASE_RESEARCH_RATE") + getCommerceRate(COMMERCE_RESEARCH),
+		getNationalTechResearchModifier(eTech) + calculateResearchModifier(eTech)
 	);
 	if (iCalcResearch < MIN_TOL_FALSE_RESEARCH)
 		return MAX_RESEARCH_RATE_VALUE;

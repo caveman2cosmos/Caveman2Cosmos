@@ -1654,6 +1654,7 @@
 				<UnitCombatPrereqType>UNITCOMBAT_FELINE</UnitCombatPrereqType>
 				<UnitCombatPrereqType>UNITCOMBAT_CRIMINAL</UnitCombatPrereqType>
 				<UnitCombatPrereqType>UNITCOMBAT_RECON</UnitCombatPrereqType>
+				<UnitCombatPrereqType>UNITCOMBAT_HUNTER</UnitCombatPrereqType>
 				<UnitCombatPrereqType>UNITCOMBAT_SUBMARINE</UnitCombatPrereqType>
 				<UnitCombatPrereqType>UNITCOMBAT_STRIKE_TEAM</UnitCombatPrereqType>
 				<UnitCombatPrereqType>UNITCOMBAT_ROCKET_LAUNCHER</UnitCombatPrereqType>

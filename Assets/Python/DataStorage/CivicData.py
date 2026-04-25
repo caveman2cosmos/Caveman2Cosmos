@@ -7,7 +7,7 @@ def initCivicData():
 
 	global civicLists
 	civicLists = []
-	for iCat in xrange(GC.getNumCivicOptionInfos()):
+	for _ in xrange(GC.getNumCivicOptionInfos()):
 		civicLists.append([])
 
 	for iCivic in xrange(GC.getNumCivicInfos()):

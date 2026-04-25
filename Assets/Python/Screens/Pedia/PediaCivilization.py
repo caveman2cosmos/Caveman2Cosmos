@@ -35,7 +35,6 @@ class PediaCivilization:
 	def interfaceScreen(self, iCivilization):
 		GC = CyGlobalContext()
 		TRNSLTR = CyTranslator()
-		#ArtFileMgr = CyArtFileMgr()
 		screen = self.main.screen()
 		aName = self.main.getNextWidgetName
 

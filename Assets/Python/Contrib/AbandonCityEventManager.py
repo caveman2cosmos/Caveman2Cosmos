@@ -139,10 +139,9 @@ class CityDemolish:
 			szAbandon = uFont + TRNSLTR.getText("TXT_KEY_ABANDON_CITY", ())
 			if iGold:
 				if iGold < 0:
-					szClr = "<color=197,0,0>"
-				elif iGold > 0:
-					szClr = ""
-				szAbandon += " (" + szClr + str(iGold) + "</color> " + iconGold + ")"
+					szAbandon += " (<color=197,0,0>" + str(iGold) + "</color> " + iconGold + ")"
+				else:
+					szAbandon += " (" + str(iGold) + " " + iconGold + ")"
 			self.szAbandon = szAbandon
 			screen.setTextAt(name + "Top1", name, szAbandon, 1<<0, x, y, 0, iFontGame, iWidGen, 0, 0)
 		# Populate list box with valid buildings
@@ -156,10 +155,9 @@ class CityDemolish:
 				# Build up text to display in the list box
 				if iGold:
 					if iGold < 0:
-						szClr = "<color=197,0,0>"
-					elif iGold > 0:
-						szClr = ""
-					szText += " (" + szClr + str(iGold) + "</color> " + iconGold
+						szText += " (<color=197,0,0>" + str(iGold) + "</color> " + iconGold
+					else:
+						szText += " (" + str(iGold) + " " + iconGold
 				if GC.getBuildingInfo(iType).getReligionType() >= 0:
 					if iGold:
 						szText += ","
@@ -234,15 +232,19 @@ class CityDemolish:
 					# Building Prereq
 					for i in xrange(CvUnitInfo.getNumPrereqAndBuildings()):
 						if not CyCity.isActiveBuilding(CvUnitInfo.getPrereqAndBuilding(i)):
-							continue
+							bContinue = True
+							break
+					if bContinue: continue
 					# Bonus Prereq
 					iBonus = CvUnitInfo.getPrereqAndBonus()
 					if iBonus > -1 and not CyCity.getNumBonuses(iBonus):
 						continue
-					for iBonus in CvUnitInfo.getPrereqOrBonuses():
-						if not CyCity.getNumBonuses(iBonus):
-							bContinue = True
-							break
+					if CvUnitInfo.getPrereqOrBonuses():
+						bContinue = True
+						for iBonus in CvUnitInfo.getPrereqOrBonuses():
+							if CyCity.getNumBonuses(iBonus):
+								bContinue = False
+								break
 					if bContinue: continue
 					# Found Valid Settler
 					CyMessageControl().sendModNetMessage(906, iPlayer, iCity, iExp, iUnit)

@@ -88,7 +88,7 @@ class Pedia:
 		self.X_PEDIA_PAGE = W_CATEGORIES + self.W_ITEMS + 8
 		self.Y_PEDIA_PAGE = Y_PEDIA_PAGE = H_EDGE_PANEL - 6
 		self.H_MID_SECTION = yRes - H_EDGE_PANEL * 2 + 14
-		H_CATEGORIES = H_CATEGORIES = self.H_MID_SECTION / 2
+		H_CATEGORIES = self.H_MID_SECTION / 2
 		Y_SUBCATEGORIES = Y_PEDIA_PAGE + H_CATEGORIES
 		self.Y_BOT_TEXT = Y_BOT_TEXT = yRes - H_EDGE_PANEL + 8
 		self.R_PEDIA_PAGE = xRes - 8
@@ -101,50 +101,38 @@ class Pedia:
 
 		# Initialize category classes
 		G = GC.getGame()
-#		FOOD 		= u'%c' %GC.getYieldInfo(YieldTypes.YIELD_FOOD).getChar()
 		PRODUCTION	= u'%c' %GC.getYieldInfo(YieldTypes.YIELD_PRODUCTION).getChar()
 		COMMERCE	= u'%c' %GC.getYieldInfo(YieldTypes.YIELD_COMMERCE).getChar()
 		GOLD		= u'%c' %GC.getCommerceInfo(CommerceTypes.COMMERCE_GOLD).getChar()
 		BEAKER		= u'%c' %GC.getCommerceInfo(CommerceTypes.COMMERCE_RESEARCH).getChar()
-#		CULTURE		= u'%c' %GC.getCommerceInfo(CommerceTypes.COMMERCE_CULTURE).getChar()
-#		ESPIONAGE	= u'%c' %GC.getCommerceInfo(CommerceTypes.COMMERCE_ESPIONAGE).getChar()
 		STRENGHT	= u'%c' %G.getSymbolID(FontSymbols.STRENGTH_CHAR)
 		MOVES		= u'%c' %G.getSymbolID(FontSymbols.MOVES_CHAR)
-#		STAR		= u'%c' %G.getSymbolID(FontSymbols.STAR_CHAR)
 		SILVERSTAR	= u'%c' %G.getSymbolID(FontSymbols.SILVER_STAR_CHAR)
 		GREATPEOPLE	= u'%c' %G.getSymbolID(FontSymbols.GREAT_PEOPLE_CHAR)
 		MAP			= u'%c' %G.getSymbolID(FontSymbols.MAP_CHAR)
 		DEF_PACT	= u'%c' %G.getSymbolID(FontSymbols.DEFENSIVE_PACT_CHAR)
-#		RELIGION	= u'%c' %G.getSymbolID(FontSymbols.RELIGION_CHAR)
 		TRADE		= u'%c' %G.getSymbolID(FontSymbols.TRADE_CHAR)
 		GOLDENAGE	= u'%c' %G.getSymbolID(FontSymbols.GOLDEN_AGE_CHAR)
 		OCCUPATION	= u'%c' %G.getSymbolID(FontSymbols.OCCUPATION_CHAR)
 		POWER		= u'%c' %G.getSymbolID(FontSymbols.POWER_CHAR)
 		BULLET		= u'%c' %G.getSymbolID(FontSymbols.BULLET_CHAR)
-#		RANDOM		= u'%c' %G.getSymbolID(FontSymbols.RANDOM_CHAR)
 		# Map symbols.
 		self.categoryGraphics = categoryGraphics = {
-#			"FOOD"			: FOOD,
 			"PRODUCTION"	: PRODUCTION,
 			"COMMERCE"		: COMMERCE,
 			"GOLD"			: GOLD,
 			"BEAKER"		: BEAKER,
-#			"CULTURE"		: CULTURE,
-#			"ESPIONAGE"		: ESPIONAGE,
 			"STRENGHT"		: STRENGHT,
 			"MOVES"			: MOVES,
-#			"STAR"			: STAR,
 			"SILVERSTAR"	: SILVERSTAR,
 			"GREATPEOPLE"	: GREATPEOPLE,
 			"MAP"			: MAP,
 			"DEF_PACT"		: DEF_PACT,
-#			"RELIGION"		: RELIGION,
 			"TRADE"			: TRADE,
 			"GOLDENAGE"		: GOLDENAGE,
 			"OCCUPATION"	: OCCUPATION,
 			"POWER"			: POWER,
 			"BULLET"		: BULLET,
-#			"RANDOM"		: RANDOM
 		}
 		szCatTechs				= TRNSLTR.getText("TXT_KEY_PEDIA_CATEGORY_TECH", ())
 		szCatUnits				= TRNSLTR.getText("TXT_KEY_PEDIA_CATEGORY_UNIT", ())
@@ -430,7 +418,6 @@ class Pedia:
 		if bRemoveFwdList:
 			self.pediaFuture = []
 		# Evaluate Category.
-		iNumEras = self.iNumEras
 		screen = self.screen()
 		if iCategory == self.PEDIA_MAIN:
 			self.inPage = (iCategory, szSubCat, iObjectType)
@@ -816,7 +803,7 @@ class Pedia:
 					bValid = True
 				else:
 					continue
-			elif CvUnitInfo.getMaxGlobalInstances() != -1:
+			elif CvUnitInfo.getMaxGlobalInstances() == 1:
 				if bWorld:
 					bValid = True
 				else:
@@ -1199,6 +1186,8 @@ class Pedia:
 		return info
 
 	def placeHints(self):
+		self.aList = []
+		self.iListIndex = -1
 		print "Category: Hints"
 		screen = self.screen()
 		screen.deleteWidget("PediaMainItemList")
@@ -1216,6 +1205,7 @@ class Pedia:
 
 	def placeEras(self):
 		screen = self.screen()
+		self.iListIndex = -1
 		szItemList = "PediaMainItemList"
 		screen.clearListBoxGFC(szItemList)
 		screen.addListBoxGFC(szItemList, "", self.W_CATEGORIES, self.Y_PEDIA_PAGE, self.W_ITEMS, self.H_MID_SECTION, TableStyles.TABLE_STYLE_STANDARD)
@@ -1518,10 +1508,10 @@ class Pedia:
 					return self.pediaJump(self.PEDIA_SPECIAL, "Build", iType)
 				elif szPrefix == "CONCEPT":
 					CvInfoBase = GC.getConceptInfo(iType)
-					if CvInfoBase > -1 and CvInfoBase.getType() == szLink:
+					if CvInfoBase is not None and CvInfoBase.getType() == szLink:
 						return self.pediaJump(self.PEDIA_CONCEPTS, "", iType)
 					CvInfoBase = GC.getNewConceptInfo(iType)
-					if CvInfoBase > -1 and CvInfoBase.getType() == szLink:
+					if CvInfoBase is not None and CvInfoBase.getType() == szLink:
 						return self.pediaJump(self.PEDIA_CONCEPTS, "NEW", iType)
 				elif aSplit[1] == "ERA":
 					return self.pediaJump(self.PEDIA_CONCEPTS, "Eras", iType)

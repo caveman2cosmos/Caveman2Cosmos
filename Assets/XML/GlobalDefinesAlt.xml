@@ -392,7 +392,7 @@
 	</Define>
 	<Define>
 		<DefineName>ACO_SHOW_MODIFIER_LABELS</DefineName>
-		<iDefineIntVal>0</iDefineIntVal>
+		<iDefineIntVal>1</iDefineIntVal>
 	</Define>
 	<!-- The following use 0 for hidden, 1 for view A, 2 for view B, and 3 for both views -->
 	<Define>

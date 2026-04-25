@@ -201,15 +201,15 @@ class HelperFunctions:
 		#Tech requirement derived from location of religion in tech tree
 		if CvBuildingInfo.getPrereqReligion() != -1:
 			iTech = GC.getReligionInfo(CvBuildingInfo.getPrereqReligion()).getTechPrereq()
-			if GC.getTechInfo(iTech).getEra() > iEra:
+			if iTech != -1 and GC.getTechInfo(iTech).getEra() > iEra:
 				iEra = GC.getTechInfo(iTech).getEra()
 		if CvBuildingInfo.getReligionType() != -1:
 			iTech = GC.getReligionInfo(CvBuildingInfo.getReligionType()).getTechPrereq()
-			if GC.getTechInfo(iTech).getEra() > iEra:
+			if iTech != -1 and GC.getTechInfo(iTech).getEra() > iEra:
 				iEra = GC.getTechInfo(iTech).getEra()
 		if CvBuildingInfo.getPrereqStateReligion() != -1:
 			iTech = GC.getReligionInfo(CvBuildingInfo.getPrereqStateReligion()).getTechPrereq()
-			if GC.getTechInfo(iTech).getEra() > iEra:
+			if iTech != -1 and GC.getTechInfo(iTech).getEra() > iEra:
 				iEra = GC.getTechInfo(iTech).getEra()
 
 		#Folklore handling - X Require tech requirement is treated as one of tech requirements of building, assuming X Require is main building requirement.

@@ -1169,7 +1169,10 @@ bool CvSelectionGroup::canStartMission(int iMission, int iData1, int iData2, CvP
 			}
 			case MISSION_GREAT_COMMANDER:
 			{
-				if (GC.getGame().isOption(GAMEOPTION_UNIT_GREAT_COMMANDERS) && unitX->getUnitInfo().isGreatGeneral() && !unitX->isCommander() && !unitX->isCommodore())
+				if (GC.getGame().isOption(GAMEOPTION_UNIT_GREAT_COMMANDERS)
+				&& unitX->getUnitType() == static_cast<UnitTypes>(GC.getInfoTypeForString("UNIT_GREAT_GENERAL"))
+				&& !unitX->isCommander()
+				&& !unitX->isCommodore())
 				{
 					return true;
 				}
@@ -1177,12 +1180,20 @@ bool CvSelectionGroup::canStartMission(int iMission, int iData1, int iData2, CvP
 			}
 			case MISSION_GREAT_COMMODORE:
 			{
-            	if (GC.getGame().isOption(GAMEOPTION_UNIT_GREAT_COMMODORES) && unitX->getUnitInfo().isGreatGeneral() && !unitX->isCommodore() && !unitX->isCommander())
-            	{
-            		return true;
-            	}
-            	break;
-            }
+				if (GC.getGame().isOption(GAMEOPTION_UNIT_GREAT_COMMODORES)
+				&& unitX->getUnitType() == static_cast<UnitTypes>(GC.getInfoTypeForString("UNIT_GREAT_ADMIRAL"))
+				&& !unitX->isCommodore()
+				&& !unitX->isCommander()
+				&& unitX->getTransportUnit() == NULL
+				&& (unitX->canMoveAllTerrain()
+					|| pPlot->isWater()
+					|| pPlot->isCanMoveSeaUnits()
+					|| (pPlot->isFriendlyCity(*unitX, true) && pPlot->isCoastalLand())))
+				{
+					return true;
+				}
+				break;
+			}
 			case MISSION_ASSASSINATE:
 			{
 				if (unitX->canAmbush(pPlot, true))
@@ -1836,7 +1847,9 @@ bool CvSelectionGroup::startMission()
 						}
 						case MISSION_GREAT_COMMANDER:
 						{
-							if (pLoopUnit->getUnitInfo().isGreatGeneral() && !pLoopUnit->isCommander())
+							if (pLoopUnit->getUnitType() == static_cast<UnitTypes>(GC.getInfoTypeForString("UNIT_GREAT_GENERAL"))
+							&& !pLoopUnit->isCommander()
+							&& !pLoopUnit->isCommodore())
 							{
 								pLoopUnit->setCommander(true);
 								bAction = true;
@@ -1844,14 +1857,21 @@ bool CvSelectionGroup::startMission()
 							break;
 						}
 						case MISSION_GREAT_COMMODORE:
-                        {
-                        	if (pLoopUnit->getUnitInfo().isGreatGeneral() && !pLoopUnit->isCommodore())
-                        	{
-                        		pLoopUnit->setCommodore(true);
-                        		bAction = true;
-                        	}
-                        	break;
-                        }
+						{
+							if (pLoopUnit->getUnitType() == static_cast<UnitTypes>(GC.getInfoTypeForString("UNIT_GREAT_ADMIRAL"))
+							&& !pLoopUnit->isCommodore()
+							&& !pLoopUnit->isCommander()
+							&& pLoopUnit->getTransportUnit() == NULL
+							&& (plot()->isWater()
+								|| plot()->isCanMoveSeaUnits()
+								|| pLoopUnit->canMoveAllTerrain()
+								|| (plot()->isFriendlyCity(*pLoopUnit, true) && plot()->isCoastalLand())))
+							{
+								pLoopUnit->setCommodore(true);
+								bAction = true;
+							}
+							break;
+						}
 						case MISSION_SHADOW:
 						{
 							CvPlot* pShadowPlot = GC.getMap().plot(headMissionQueueNode()->m_data.iData1, headMissionQueueNode()->m_data.iData2);

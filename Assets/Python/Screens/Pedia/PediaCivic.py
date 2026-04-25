@@ -45,7 +45,6 @@ class Page:
 		X_COL_2 = self.X_COL_2
 		H_BOT_ROW = self.H_BOT_ROW
 		H_TOP_ROW = self.H_TOP_ROW
-		Y_BOT_ROW = self.Y_BOT_ROW
 		Y_TOP_ROW = self.Y_TOP_ROW
 		Y_MID_ROW = Y_TOP_ROW + H_TOP_ROW
 		Y_STATS = self.Y_STATS

@@ -351,11 +351,11 @@ class CvDomesticAdvisor:
 			szfontEdge = "<font=2b>"
 
 		if xRes > 1700:
-			self.aFontList = aFontList = [szfontEdge, "<font=4b>", "<font=4>", "<font=3b>", "<font=3>", "<font=2b>", "<font=2>"]
+			self.aFontList = [szfontEdge, "<font=4b>", "<font=4>", "<font=3b>", "<font=3>", "<font=2b>", "<font=2>"]
 		elif xRes > 1400:
-			self.aFontList = aFontList = [szfontEdge, "<font=3b>", "<font=3>", "<font=2b>", "<font=2>", "<font=1b>", "<font=1>"]
+			self.aFontList = [szfontEdge, "<font=3b>", "<font=3>", "<font=2b>", "<font=2>", "<font=1b>", "<font=1>"]
 		else:
-			self.aFontList = aFontList = [szfontEdge, "<font=2b>", "<font=2>", "<font=1b>", "<font=1>", "<font=0b>", "<font=0>"]
+			self.aFontList = [szfontEdge, "<font=2b>", "<font=2>", "<font=1b>", "<font=1>", "<font=0b>", "<font=0>"]
 
 		xMid = xRes / 2
 		# Dimension of the table
@@ -575,7 +575,7 @@ class CvDomesticAdvisor:
 
 		nTotalTradeProfit //= 100
 		if nTotalTradeProfit < 0:
-			return "-%d" % nTotalTradeProfit
+			return "%d" % nTotalTradeProfit
 
 		return "%d" % nTotalTradeProfit
 
@@ -1577,8 +1577,6 @@ class CvDomesticAdvisor:
 		iData	= inputClass.iData
 		ID		= inputClass.iItemID
 		NAME	= inputClass.szFunctionName
-		iData1	= inputClass.iData1
-		iData2	= inputClass.iData2
 		iCol	= inputClass.getMouseX()
 		iRow	= inputClass.getMouseY()
 		szFlag	= HandleInputUtil.MOUSE_FLAGS.get(inputClass.uiFlags, "UNKNOWN")

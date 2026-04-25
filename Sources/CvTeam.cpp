@@ -2604,8 +2604,18 @@ int CvTeam::getResearchCost(TechTypes eTech) const
 	}
 	uint64_t iCost = 100 * iInitialCost;
 
-	int iBeelineStingsTechCostModifier = 0;
-	if (GC.getGame().isOption(GAMEOPTION_TECH_BEELINE_STINGS))
+	int iPlayersInEra = 0;
+    for (int iI = 0; iI < MAX_PLAYERS; iI++)
+    {
+        if (!GET_PLAYER((PlayerTypes)iI).isAlive())
+            continue;
+
+        if (GET_PLAYER((PlayerTypes)iI).getCurrentEra() == GET_PLAYER(getLeaderID()).getCurrentEra())
+            iPlayersInEra++;
+    }
+
+	int iCuttingEdgeCutsTechCostModifier = 0;
+	if (GC.getGame().isOption(GAMEOPTION_TECH_CUTTING_EDGE_CUTS) && iPlayersInEra < 3)
 	{
 		const int iTechEra = GC.getTechInfo(eTech).getEra();
 		int iPlayerEra = MAX_INT;
@@ -2625,8 +2635,7 @@ int CvTeam::getResearchCost(TechTypes eTech) const
 			{
 				if (iI >= iTechEra && iI < iPlayerEra)
 				{
-					iBeelineStingsTechCostModifier += GC.getEraInfo((EraTypes)iI).getBeelineStingsTechCostModifier();
-					//just need to add the tag iBeelineStingsModifier to Era Infos.
+					iCuttingEdgeCutsTechCostModifier += GC.getEraInfo((EraTypes)iI).getCuttingEdgeCutsTechCostModifier();
 				}
 				else if (iI >= iPlayerEra)
 				{
@@ -2647,7 +2656,7 @@ int CvTeam::getResearchCost(TechTypes eTech) const
 	iCost *= std::max(0, GC.getTECH_COST_EXTRA_TEAM_MEMBER_MODIFIER() * getNumMembers());
 	iCost /= 100;
 
-	int iMod = iBeelineStingsTechCostModifier;
+	int iMod = iCuttingEdgeCutsTechCostModifier;
 
 	if (!isNPC() && !isHuman(true))
 	{

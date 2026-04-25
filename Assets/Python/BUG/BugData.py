@@ -193,9 +193,11 @@ class Table(object):
 			else:
 				return table.delTable(*keys[1:])
 	def _delTable(self, key):
+		existed = self._hasTable(key)
 		self._closeTable(key)
-		if self._hasTable(key):
+		if existed:
 			del self[key]
+		return existed
 
 	def _isOpen(self, key):
 		return key in self.children

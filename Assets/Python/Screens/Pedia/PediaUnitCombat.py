@@ -43,7 +43,6 @@ class PediaUnitCombat:
 		screen = self.main.screen()
 		CvTheUnitCombatInfo = GC.getUnitCombatInfo(iTheUnitCombat)
 
-		CyPlayer = self.main.CyPlayer
 		aName = self.main.getNextWidgetName
 
 		eWidGen		= WidgetTypes.WIDGET_GENERAL

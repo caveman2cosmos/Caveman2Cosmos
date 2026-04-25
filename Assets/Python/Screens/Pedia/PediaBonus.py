@@ -75,14 +75,12 @@ class PediaBonus:
 
 		bMapBonus = CvTheBonusInfo.isMapBonus()
 		if bMapBonus:
-			bCultureBonus = False
 			# Graphic
 			screen.addBonusGraphicGFC("Preview|Min", iTheBonus, self.X_GRAPHIC, Y_TOP_ROW_1 + 8, H_TOP_ROW, H_TOP_ROW, eWidGen, iTheBonus, 0, -20, 30, 0.6, True)
 			self.main.aWidgetBucket.append("Preview|Min")
 			W_COL_1 = self.W_COL_1
 		else:
 			W_COL_1 = W_PEDIA_PAGE
-			bCultureBonus = self.main.SECTION[1] == TRNSLTR.getText("TXT_KEY_PEDIA_CATEGORY_BONUS_CULTURE", ())
 		# Loop through all buildings and find those connected to the bonus.
 		aVicinityBuildings = []
 		aNeededByBuildings = []
@@ -91,7 +89,7 @@ class PediaBonus:
 		for iBuilding in xrange(GC.getNumBuildingInfos()):
 			CvBuildingInfo = GC.getBuildingInfo(iBuilding)
 			aGOMBonusReqList = []
-			for i in range(2):
+			for _ in range(2):
 				aGOMBonusReqList.append([])
 			self.HF.getGOMReqs(CvBuildingInfo.getConstructCondition(), GOMTypes.GOM_BONUS, aGOMBonusReqList)
 			bValid = True
@@ -127,11 +125,12 @@ class PediaBonus:
 		# Loop through all units and find those connected to the bonus.
 		aNeededByUnits = []
 		aAffectedUnits = []
-		bValid = True
+
 		for iUnit in xrange(GC.getNumUnitInfos()):
+			bValid = True
 			CvUnitInfo = GC.getUnitInfo(iUnit)
 			aGOMBonusReqList = []
-			for i in range(2):
+			for _ in range(2):
 				aGOMBonusReqList.append([])
 			self.HF.getGOMReqs(CvUnitInfo.getTrainCondition(), GOMTypes.GOM_BONUS, aGOMBonusReqList)
 			if CvUnitInfo.getPrereqAndBonus() == iTheBonus:

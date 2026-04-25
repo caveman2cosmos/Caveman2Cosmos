@@ -100,7 +100,7 @@ class AIAutoPlay :
 				GAME.setAIAutoPlay(i, 1)
 
 	def onVictory(self, argsList):
-		self.checkPlayer()
+		self.checkPlayer(GAME.getActivePlayer())
 		for i in range(GC.getMAX_PC_PLAYERS()):
 			if GC.getPlayer(i).isHumanDisabled():
 				GAME.setForcedAIAutoPlay(i, 0, False)
@@ -113,10 +113,12 @@ class AIAutoPlay :
 
 		if GAME.getAIAutoPlay(iPlayer) == 1 and CyPlayerAct and iPlayer > iPlayerAct and CyPlayerAct.isAlive():
 			# Forces isHuman checks to come through positive for everything after human players turn
-			self.checkPlayer()
+			if iPlayer == iPlayerAct + 1:
+				self.checkPlayer(iPlayerAct)
 
 		elif self.bSaveAllDeaths and GAME.getAIAutoPlay(iPlayerAct) == 0 and CyPlayerAct and not CyPlayerAct.isAlive() and iPlayer > iPlayerAct:
-			self.checkPlayer()
+			if iPlayer == iPlayerAct + 1:
+				self.checkPlayer(iPlayerAct)
 
 
 	def onEndPlayerTurn(self, argsList):
@@ -126,10 +128,11 @@ class AIAutoPlay :
 			RevUtils.doRefortify(iPlayer)
 
 
-	def checkPlayer(self):
-		CyPlayer = GC.getActivePlayer()
+	def checkPlayer(self, iPlayer):
+		CyPlayer = GC.getPlayer(iPlayer)
 		for i in range(GC.getMAX_PC_TEAMS()):
-			CyPlayer.setEspionageSpendingWeightAgainstTeam(i, CyPlayer.getEspionageSpendingWeightAgainstTeam(i)/10)
+			current = CyPlayer.getEspionageSpendingWeightAgainstTeam(i)
+			CyPlayer.setEspionageSpendingWeightAgainstTeam(i, max(0, current * 9 // 10))
 
 
 	# keypress handler
@@ -148,7 +151,7 @@ class AIAutoPlay :
 						if bCanCancelAuto is None:
 							bCanCancelAuto = True
 							SdToolKit.sdObjectSetVal("AIAutoPlay", GAME, "bCanCancelAuto", True)
-					except:
+					except (KeyError, TypeError):
 						print "Error! AIAutoPlay: Can't find bCanCancelAuto, assuming it would be True"
 						bCanCancelAuto = True
 
@@ -156,7 +159,7 @@ class AIAutoPlay :
 						if self.refortify:
 							RevUtils.doRefortify(iPlayer)
 							self.disableMultiCheck(iPlayer)
-						self.checkPlayer()
+						self.checkPlayer(iPlayer)
 				else:
 					self.toAIChooser()
 
@@ -234,7 +237,10 @@ class AIAutoPlay :
 
 		numTurns = 0
 		if popupReturn.getEditBoxString(0) != '':
-			numTurns = int(popupReturn.getEditBoxString(0))
+			try:
+				numTurns = int(popupReturn.getEditBoxString(0))
+			except ValueError:
+				numTurns = 0
 
 		autoIdx = popupReturn.getSelectedPullDownValue(2)
 
@@ -246,13 +252,6 @@ class AIAutoPlay :
 				if self.LOG_DEBUG: CyInterface().addImmediateMessage(TRNSLTR.getText("TXT_KEY_AIAUTOPLAY_FULLY_AUTO", ()) %numTurns, "")
 
 				self.abdicateMultiCheck(iPlayer, numTurns = numTurns)
-
-		elif autoIdx == 2 and numTurns > 0:
-			if self.LOG_DEBUG: CyInterface().addImmediateMessage("Auto Move","")
-			self.setAutoMoves(numTurns)
-		elif autoIdx == 3 and numTurns > 0:
-			if self.LOG_DEBUG: CyInterface().addImmediateMessage("Debug Mode","")
-			self.setDebugMode( numTurns )
 
 
 	# Determines whether to show popup to active player

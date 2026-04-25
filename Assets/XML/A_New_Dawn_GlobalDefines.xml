@@ -111,7 +111,7 @@
 	</Define>
 	<Define>
 		<DefineName>PEAK_EXTRA_DEFENSE</DefineName>
-		<iDefineIntVal>75</iDefineIntVal>
+		<iDefineIntVal>30</iDefineIntVal>
 	</Define>
 	<Define>
 		<DefineName>PEAK_EXTRA_MOVEMENT</DefineName>

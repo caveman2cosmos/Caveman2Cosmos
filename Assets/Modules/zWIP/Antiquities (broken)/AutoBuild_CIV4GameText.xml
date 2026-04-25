@@ -21,16 +21,16 @@
 		<English>Game auto builds used to identify when a bonus or resource is somewhere in the nation but not in the vicinity of this city.</English>
 	</TEXT>
     <TEXT>
-        <Tag>TXT_KEY_BUILDING_ECONOMY_HELP</Tag>
-        <English>Storage Spreader Basis for advanced economy.</English>
+        <Tag>TXT_KEY_BUILDING_ECONOMY_PEDIA</Tag>
+        <English>Storage Spreader Basis for advanced economy, this building is auto built at the start of the game and represents the empire storing and sharing the resources it has all across the vast network of its cities. This simulates that by giving bonuses per resource owned to all cities. So for 1 resource per 5 cities you get 100%, until 10 you get 50% and above you get 0. Each copy increases this by 5. Base yield per resource is 2.</English>
     </TEXT>
     <TEXT>
-        <Tag>TXT_KEY_BUILDING_ECONOMY_PEDIA</Tag>
-        <English>The basis upon what we spread storages across our empire</English>
+        <Tag>TXT_KEY_BUILDING_ECONOMY_HELP</Tag>
+        <English>The basis upon what we spread storages across our empire, as this building presents the idea that empires stored and used resources, not just locally but wherever their influence reached.</English>
     </TEXT>
     <TEXT>
         <Tag>TXT_KEY_BUILDING_ECONOMY_BASE</Tag>
-        <English>Economy Option Base</English>
+        <English>Economy Base of the empire.</English>
     </TEXT>
     <TEXT>
         <Tag>TXT_KEY_BUILDING_ECONOMY_STORAGE_BASE</Tag>

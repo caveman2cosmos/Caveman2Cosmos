@@ -3144,19 +3144,19 @@ def addFeatures():
 					randomTerrain = probabilityArray()
 					randomTerrain[2] = terrainDesert
 					randomTerrain[1] = terrainSaltFlats
-					randomTerrain[2] = terrainDunes
-					randomTerrain[2] = terrainScrub
+					randomTerrain[4] = terrainDunes
+					randomTerrain[3] = terrainScrub
 					plot.setTerrainType(randomTerrain.randomItem(dice),False,False)
 				elif terr == terrainPlains:
 					randomTerrain = probabilityArray()
-					randomTerrain[2] = terrainPlains
+					randomTerrain[3] = terrainPlains
 					randomTerrain[1] = terrainBarren
-					randomTerrain[1] = terrainRocky
+					randomTerrain[2] = terrainRocky
 					plot.setTerrainType(randomTerrain.randomItem(dice),False,False)
 				elif terr == terrainGrass:
 					randomTerrain = probabilityArray()
 					randomTerrain[2] = terrainGrass
-					randomTerrain[1] = terrainLush
+					randomTerrain[3] = terrainLush
 					randomTerrain[1] = terrainMuddy
 					plot.setTerrainType(randomTerrain.randomItem(dice),False,False)
 
@@ -3701,7 +3701,7 @@ def normalizeAddExtras():
 					plot.setBonusType(bonusTypes._data[index+5][0])
 
 def cmpByPlacementOrder(x, y):
-	return x[1].getPlacementOrder() - y[0].getPlacementOrder()
+	return x[1].getPlacementOrder() - y[1].getPlacementOrder()
 
 def enumeratePlaceableBonusTypes():
 	cgc = CyGlobalContext()

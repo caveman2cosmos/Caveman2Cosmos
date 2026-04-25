@@ -127,10 +127,10 @@ class PediaPromotion:
 			if aList1:
 				for i in xrange(iListLength1):
 					BTN, szChild, szLogic = aList1[i]
-					if i != 0:
+					if i != 0 or szLogic:
 						screen.attachLabel(RequirePanel, "", szLogic)
 					screen.attachImageButton(RequirePanel, PF + szChild, BTN, enumGBS, iWidGen, 1, 1, False)
-				if szLogic == szOr:
+				if iOr1 > -1 and iOr2 > -1:
 					screen.attachLabel(RequirePanel, "", szBracketR)
 				aList1 = []
 			if aList2:

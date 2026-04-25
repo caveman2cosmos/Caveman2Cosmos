@@ -139,12 +139,12 @@ class PediaCorporation:
 					if aListLength1 > 4:
 						W_UNIT = W_3RD_PP
 						W_BUIL = W_PEDIA_PAGE - W_3RD_PP - 4
-						X_UNIT = X_COL_1 + W_BUIL + 8
+						X_UNIT = X_COL_1 + W_BUIL + 4
 				elif aListLength1 < 4:
 					if aListLength2 > 4:
 						W_UNIT = W_PEDIA_PAGE - W_3RD_PP - 4
 						W_BUIL = W_3RD_PP
-						X_UNIT = X_COL_1 + W_BUIL + 8
+						X_UNIT = X_COL_1 + W_BUIL + 4
 				buildingPanel = self.main.getNextWidgetName()
 				unitPanel = self.main.getNextWidgetName()
 				screen.addPanel(buildingPanel, TRNSLTR.getText("TXT_KEY_UNIQUE_BUILDINGS", ()), "", False, True, X_COL_1, Y_BOT_ROW_1, W_BUIL, H_BOT_ROW, iPanelBlue50)

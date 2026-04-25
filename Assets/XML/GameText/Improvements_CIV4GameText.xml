@@ -262,6 +262,26 @@
 		<Polish>Zasieki (Kolczasty &#191;ywop&#179;ot)</Polish>
 		<Russian>Êîëþ÷àÿ èçãîðîäü</Russian>
 	</TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_IMPROVEMENT_GATHERING_CAMP</Tag>
+        <English>Gathering camp</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_IMPROVEMENT_RESOURCE_OUTPOST</Tag>
+        <English>Resource outpost</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_IMPROVEMENT_RESOURCE_SETTLEMENT</Tag>
+        <English>Resource settlement</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_IMPROVEMENT_RESOURCE_TOWN</Tag>
+        <English>Resource town</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_IMPROVEMENT_RESOURCE_COMPLEX</Tag>
+        <English>Resource complex</English>
+    </TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_AQUATIC_ANTI_AIR_DEFENSE</Tag>
 		<English>Aquatic Anti-Air Defense</English>
@@ -844,6 +864,10 @@
 		<French>Les fortifications sont des constructions militaires conçues pour la défense en guerre et bases militaires. Les humains construisent des ouvrages défensifs depuis des milliers d'années avec des designs toujours plus complexes. Le terme vient du latin fortis (fort) et facere (faire).</French>
 		<Russian>Ôîðòû - âîåííûå ñîîðóæåíèÿ è çäàíèÿ, ïðåäíàçíà÷åííûå äëÿ çàùèòû íà âîéíå è âîåííûõ áàç. - Wikipedia</Russian>
 	</TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_IMPROVEMENT_RESOURCE_OUTPOSTS_PEDIA</Tag>
+        <English>Outposts are minor settlments based around a specific resource extraction or harvest. That leaves them vulnerable to attack and raids so they need to be protected.</English>
+    </TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_FOSSIL_DIG_SITE</Tag>
 		<English>Fossil Dig Site</English>

@@ -6444,6 +6444,101 @@
 			<iHotKeyPriority>0</iHotKeyPriority>
 			<Button>Art/Structures/Improvements/Abatis/abatis.dds</Button>
 		</BuildInfo>
+        <!-- Resource Camp (Kill) -> Resource Outpost -->
+        <BuildInfo>
+            <Type>BUILD_GATHERING_CAMP_KILL</Type>
+            <Description>TXT_KEY_BUILD_GATHERING_CAMP_KILL</Description>
+            <PrereqTech>TECH_SHELTER_BUILDING</PrereqTech>
+            <ObsoleteTech>TECH_CARPENTRY</ObsoleteTech>
+            <iTime>200</iTime>
+            <iCost>10</iCost>
+            <bKill>1</bKill>
+            <ImprovementType>IMPROVEMENT_GATHERING_CAMP</ImprovementType>
+            <EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
+            <HotKey>KB_F</HotKey>
+            <bCtrlDown>1</bCtrlDown>
+            <iHotKeyPriority>0</iHotKeyPriority>
+            <Button>Art/Interface/Buttons/Builds/Button_GrainGather.dds</Button>
+        </BuildInfo>
+        <!-- Resource Outpost (Kill) -> Resource Settlement -->
+        <BuildInfo>
+            <Type>BUILD_RESOURCE_OUTPOST_KILL</Type>
+            <Description>TXT_KEY_BUILD_RESOURCE_OUTPOST_KILL</Description>
+            <PrereqTech>TECH_CARPENTRY</PrereqTech>
+            <ObsoleteTech>TECH_SEDENTARY_LIFESTYLE</ObsoleteTech>
+            <iTime>400</iTime>
+            <iCost>20</iCost>
+            <bKill>1</bKill>
+            <ImprovementType>IMPROVEMENT_RESOURCE_OUTPOST</ImprovementType>
+            <EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
+            <HotKey>KB_F</HotKey>
+            <bCtrlDown>1</bCtrlDown>
+            <iHotKeyPriority>0</iHotKeyPriority>
+            <Button>,Art/Interface/Buttons/Builds/BuildCottage.dds,Art/Interface/Buttons/Actions_Builds_LeaderHeads_Specialists_Atlas.dds,2,7</Button>
+        </BuildInfo>
+        <!-- Resource Outpost (No Kill) -> Resource Settlement -->
+        <BuildInfo>
+            <Type>BUILD_RESOURCE_OUTPOST</Type>
+            <Description>TXT_KEY_BUILD_RESOURCE_OUTPOST</Description>
+            <PrereqTech>TECH_SEDENTARY_LIFESTYLE</PrereqTech>
+            <ObsoleteTech>TECH_CITY_PLANNING</ObsoleteTech>
+            <iTime>400</iTime>
+            <iCost>20</iCost>
+            <bKill>0</bKill>
+            <ImprovementType>IMPROVEMENT_RESOURCE_OUTPOST</ImprovementType>
+            <EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
+            <HotKey>KB_F</HotKey>
+            <bCtrlDown>1</bCtrlDown>
+            <iHotKeyPriority>0</iHotKeyPriority>
+            <Button>,Art/Interface/Buttons/Builds/BuildCottage.dds,Art/Interface/Buttons/Actions_Builds_LeaderHeads_Specialists_Atlas.dds,2,7</Button>
+        </BuildInfo>
+        <!-- Resource Settlement -> Resource Town -->
+        <BuildInfo>
+            <Type>BUILD_RESOURCE_SETTLEMENT</Type>
+            <Description>TXT_KEY_BUILD_RESOURCE_SETTLEMENT</Description>
+            <PrereqTech>TECH_CITY_PLANNING</PrereqTech>
+            <ObsoleteTech>TECH_ELECTRICITY</ObsoleteTech>
+            <iTime>1000</iTime>
+            <iCost>50</iCost>
+            <bKill>0</bKill>
+            <ImprovementType>IMPROVEMENT_RESOURCE_SETTLEMENT</ImprovementType>
+            <EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
+            <HotKey>KB_F</HotKey>
+            <bCtrlDown>1</bCtrlDown>
+            <iHotKeyPriority>0</iHotKeyPriority>
+            <Button>,Art/Interface/Buttons/Builds/BuildHamlet.dds,Art/Interface/Buttons/Actions_Builds_LeaderHeads_Specialists_Atlas.dds,2,10</Button>
+        </BuildInfo>
+        <!-- Resource Town -> Resource Complex -->
+        <BuildInfo>
+            <Type>BUILD_RESOURCE_TOWN</Type>
+            <Description>TXT_KEY_BUILD_RESOURCE_TOWN</Description>
+            <PrereqTech>TECH_ELECTRICITY</PrereqTech>
+            <ObsoleteTech>TECH_METAMATERIALS</ObsoleteTech>
+            <iTime>1200</iTime>
+            <iCost>600</iCost>
+            <bKill>0</bKill>
+            <ImprovementType>IMPROVEMENT_RESOURCE_TOWN</ImprovementType>
+            <EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
+            <HotKey>KB_F</HotKey>
+            <bCtrlDown>1</bCtrlDown>
+            <iHotKeyPriority>0</iHotKeyPriority>
+            <Button>,Art/Interface/Buttons/Builds/BuildVillage.dds,Art/Interface/Buttons/Actions_Builds_LeaderHeads_Specialists_Atlas.dds,5,9</Button>
+        </BuildInfo>
+        <!-- Resource Complex -->
+        <BuildInfo>
+            <Type>BUILD_RESOURCE_COMPLEX</Type>
+            <Description>TXT_KEY_BUILD_WOODEN_PALISADE</Description>
+            <PrereqTech>TECH_METAMATERIALS</PrereqTech>
+            <iTime>2000</iTime>
+            <iCost>1400</iCost>
+            <bKill>0</bKill>
+            <ImprovementType>IMPROVEMENT_RESOURCE_COMPLEX</ImprovementType>
+            <EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
+            <HotKey>KB_F</HotKey>
+            <bCtrlDown>1</bCtrlDown>
+            <iHotKeyPriority>0</iHotKeyPriority>
+            <Button>,Art/Interface/Buttons/Builds/BuildTown.dds,Art/Interface/Buttons/Actions_Builds_LeaderHeads_Specialists_Atlas.dds,3,10</Button>
+        </BuildInfo>
 		<!-- FEATUREFORMING / TERRAFORMING -->
 		<!-- Plant Forest -->
 		<BuildInfo>
