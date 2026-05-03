@@ -79,10 +79,12 @@ class CvDotMapOverlayScreen:
 		Updates the current plot and its x/y location.
 		"""
 		plot = CyInterface().getMouseOverPlot()
-		if plot is None or plot.isNone():
+		if plot is None:
 			return
 		x = plot.getX()
 		y = plot.getY()
+		if x < 0 or y < 0:
+			return
 		self.currentPoint = (x, y)
 		g_DotMap.highlightCity(self.currentPoint, self.currentColor)
 		self.resetInterfaceMode()
