@@ -38293,11 +38293,9 @@ bool CvUnit::canAmbush(const CvPlot* pPlot, bool bAssassinate) const
     		if (pLoopUnit->getTeam() == getTeam()) continue;
     		if (pLoopUnit->isDead() || pLoopUnit->isInBattle()) continue;
     		if (pLoopUnit->isInvisible(getTeam(), false)) continue;
-    		if (!pLoopUnit->isTargetOf(*this)) continue;
-    		if (!canAttack(*pLoopUnit)) continue;
 
     		// Criminals in cities are off-limits to assassins regardless of wanted status
-    		if (pLoopUnit->isCriminal())
+    		if (pLoopUnit->isCriminal() && !pLoopUnit->isAnimal())
     		{
     			continue;
     		}
@@ -38385,17 +38383,17 @@ bool CvUnit::doAmbush(bool bAssassinate)
 					pDefender = pPlot->getBestDefender(NO_PLAYER, getOwner(), this, true, true, false, bAssassinate);
 				}
 
-				// Safety net: if the picked defender is a criminal in a city, refuse the ambush.
-                // The canAmbush check above should already block this case, but guard here
-                // in case getBestDefender picks a criminal when mixed with other valid targets.
-                if (pDefender != NULL
-                &&  bAssassinate
-                &&  pPlot->isCity(true)
-                &&  pDefender->isCriminal())
-                {
-                	GET_PLAYER(getOwner()).setAmbushingUnit(FFreeList::INVALID_INDEX);
-                	return false;
-                }
+// 				// Safety net: if the picked defender is a criminal in a city, refuse the ambush.
+//                 // The canAmbush check above should already block this case, but guard here
+//                 // in case getBestDefender picks a criminal when mixed with other valid targets.
+//                 if (pDefender != NULL
+//                 &&  bAssassinate
+//                 &&  pPlot->isCity(true)
+//                 &&  pDefender->isCriminal())
+//                 {
+//                 	GET_PLAYER(getOwner()).setAmbushingUnit(FFreeList::INVALID_INDEX);
+//                 	return false;
+//                 }
 
 				if (pDefender != NULL)
 				{
@@ -38423,13 +38421,13 @@ void CvUnit::enactAmbush(bool bAssassinate, CvUnit * pSelectedDefender)
 		pDefender = pSelectedDefender;
 	}
 
-	if (pDefender != NULL
-    &&  bAssassinate
-    &&  pPlot->isCity(true)
-    &&  pDefender->isCriminal())
-    {
-    	return;
-    }
+// 	if (pDefender != NULL
+//     &&  bAssassinate
+//     &&  pPlot->isCity(true)
+//     &&  pDefender->isCriminal())
+//     {
+//     	return;
+//     }
 
 	if (pDefender != NULL)
 	{
