@@ -155,11 +155,11 @@
 			</Categories>
 			<GreatPeopleUnitType>UNIT_MERCHANT</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>3</iGreatPeopleRateChange>
-            <YieldChanges>
+            <Yields>
                 <iYield>0</iYield>
                 <iYield>0</iYield>
                 <iYield>3</iYield>
-            </YieldChanges>
+            </Yields>
 			<UnitCombatExperienceTypes>
 				<UnitCombatExperienceType>
 					<UnitCombatType>UNITCOMBAT_TRADE</UnitCombatType>
