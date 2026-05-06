@@ -379,7 +379,7 @@ class CvEventManager:
 				# onTechAcquired
 				self.TECH_GATHERING = GC.getInfoTypeForString("TECH_GATHERING")
 				# Subdued/Tamed animal graphical attachment
-				self.UNIT_STORY_TELLER			= GC.getInfoTypeForString("UNIT_STORY_TELLER")
+				self.UNIT_STORY_TELLER = GC.getInfoTypeForString("UNIT_STORY_TELLER")
 				# Biodome
 				self.aBiodomeList = aList = []
 				for iUnit in xrange(GC.getNumUnitInfos()):
