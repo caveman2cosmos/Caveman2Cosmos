@@ -7420,7 +7420,7 @@ int CvUnit::healRate(const CvPlot* pPlot, bool bHealCheck) const
 
     int iBattlefieldMedicine = GC.getInfoTypeForString("TECH_BATTLEFIELD_MEDICINE");
 
-    if (!GET_TEAM(getTeam()).isFriendlyTerritory(pPlot->getTeam()))
+    if (!GET_TEAM(getTeam()).isFriendlyTerritory(pPlot->getTeam()) && !isAnimal() && !isNPC())
     {
         bool bCanHealOutside = false;
 
@@ -7728,7 +7728,7 @@ int CvUnit::healTurns(const CvPlot* pPlot) const
 	}
 
 	int iBattlefieldMedicine = GC.getInfoTypeForString("TECH_BATTLEFIELD_MEDICINE");
-    if (!GET_TEAM(getTeam()).isFriendlyTerritory(pPlot->getTeam()))
+    if (!GET_TEAM(getTeam()).isFriendlyTerritory(pPlot->getTeam()) && !isAnimal() && !isNPC())
     {
         bool bCanHealOutside = false;
 
