@@ -32,6 +32,54 @@ class CvEventManager:
 		self.bAlt = False
 		self.bAllowCheats = False
 		self.aWonderTuple = [[],[],[],[],[]]
+		# These caches are normally filled during late init in onWindowActivation().
+		# Keep safe defaults so early events cannot throw AttributeError.
+		self.MAX_PLAYERS = GC.getMAX_PLAYERS()
+		self.MAX_PC_PLAYERS = GC.getMAX_PC_PLAYERS()
+		self.mapBuildingType = {
+			"ZIZKOV": -1,
+			"HELSINKI": -1,
+			"TAIPEI_101": -1,
+			"LOTUS_TEMPLE": -1,
+			"NANITE_DEFUSER": -1,
+			"MARCO_POLO": -1,
+			"APPIAN_WAY": -1,
+			"GOLDEN_SPIKE": -1,
+			"FIELD_GOLD": -1,
+			"MACHU_PICCHU": -1,
+			"MAGINOTLINE": -1,
+			"ROUTE_66": -1,
+			"SILK_ROAD": -1,
+			"CLEOPATRA_NEEDLE": -1,
+			"FA_MEN_SI": -1,
+			"LASCAUX": -1,
+			"ARCOLOGY": -1,
+			"ARCOLOGY_SHIELDING": -1,
+			"ADVANCED_SHIELDING": -1,
+			"GREAT_ZIMBABWE": -1,
+			"CRUSADE": -1,
+			"ALAMO": -1,
+			"WORLD_BANK": -1,
+			"CYRUS_CYLINDER": -1,
+			"CYRUS_TOMB": -1,
+			"WEMBLEY": -1,
+			"PERGAMON": -1,
+			"TSUKIJI": -1,
+			"BIODOME": -1,
+			"NAZCA_LINES": -1,
+			"THE_MOTHERLAND_CALLS": -1,
+			"ISHTAR": -1,
+			"GREAT_JAGUAR_TEMPLE": -1,
+			"TOPKAPI_PALACE": -1,
+			"NEANDERTHAL_EMBASSY": -1,
+			"REICHSTAG": -1
+		}
+		self.mapImpType = {}
+		self.CIVIC_CONSCRIPTION = -1
+		self.mapMilitiaByEra = {}
+		self.UNIT_STORY_TELLER = -1
+		self.aBiodomeList = []
+		self.aCultureList = []
 
 		# OnEvent Enums
 		# EventLButtonDown = 1
@@ -331,7 +379,7 @@ class CvEventManager:
 				# onTechAcquired
 				self.TECH_GATHERING = GC.getInfoTypeForString("TECH_GATHERING")
 				# Subdued/Tamed animal graphical attachment
-				self.UNIT_STORY_TELLER			= GC.getInfoTypeForString("UNIT_STORY_TELLER")
+				self.UNIT_STORY_TELLER = GC.getInfoTypeForString("UNIT_STORY_TELLER")
 				# Biodome
 				self.aBiodomeList = aList = []
 				for iUnit in xrange(GC.getNumUnitInfos()):
@@ -572,7 +620,7 @@ class CvEventManager:
 		self.iTrainPrcntGS = CvGameSpeedInfo.getHammerCostPercent()
 		self.iGameSpeedPercent = CvGameSpeedInfo.getSpeedPercent()
 		# Find special buildings built where by whom.
-		mapBuildingType = self.mapBuildingType
+		mapBuildingType = getattr(self, "mapBuildingType", {})
 		aList0 = [ # Only meant for world wonders
 			"CRUSADE",				"GREAT_ZIMBABWE",	"HELSINKI",		"ALAMO",
 			"LASCAUX",				"WORLD_BANK",		"TAIPEI_101",	"CYRUS_CYLINDER",
@@ -585,7 +633,7 @@ class CvEventManager:
 		i = 0
 		while aList0[i:]:
 			KEY = aList0[i]
-			iBuilding = mapBuildingType[KEY]
+			iBuilding = mapBuildingType.get(KEY, -1)
 			if iBuilding > -1:
 				aList1.append(iBuilding)
 				aList2.append(GC.getBuildingInfo(iBuilding).getObsoleteTech())
@@ -1153,9 +1201,14 @@ class CvEventManager:
 				CyPlot.setBonusType(iBonus)
 			return
 		# Worker placed feature
-		mapImpType = self.mapImpType
+		mapImpType = getattr(self, "mapImpType", None)
+		if not mapImpType:
+			return
 
-		if iImprovement == mapImpType['IMPROVEMENT_GROW_FOREST']:
+		iGrowForest = mapImpType.get('IMPROVEMENT_GROW_FOREST', -1)
+		iFarm = mapImpType.get('IMPROVEMENT_FARM', -1)
+
+		if iImprovement == iGrowForest:
 			CyPlot = GC.getMap().plot(iX, iY)
 			CyPlot.setImprovementType(-1)
 
@@ -1185,11 +1238,11 @@ class CvEventManager:
 						else:
 							CyPlot.setFeatureType(GC.getInfoTypeForString('FEATURE_BAMBOO'), 0)
 
-		elif iImprovement == mapImpType['IMPROVEMENT_FARM']:
+		elif iImprovement == iFarm:
 			iPlayer = GC.getMap().plot(iX, iY).getOwner()
 			if iPlayer != -1:
 				CyPlayer = GC.getPlayer(iPlayer)
-				if CyPlayer.isCivic(self.CIVIC_CONSCRIPTION):
+				if self.CIVIC_CONSCRIPTION != -1 and CyPlayer.isCivic(self.CIVIC_CONSCRIPTION):
 					iEra = CyPlayer.getCurrentEra()
 					if iEra != -1 and iEra in self.mapMilitiaByEra and self.mapMilitiaByEra[iEra] != -1:
 						CyPlayer.initUnit(self.mapMilitiaByEra[iEra], iX, iY, UnitAITypes.UNITAI_RESERVE, DirectionTypes.NO_DIRECTION)
@@ -1912,10 +1965,11 @@ class CvEventManager:
 		CyUnit, = argsList
 
 		# Subdued/Tamed animal graphical attachment
-		if self.UNIT_STORY_TELLER != -1:
+		iStoryTeller = getattr(self, "UNIT_STORY_TELLER", -1)
+		if iStoryTeller != -1:
 			KEY = GC.getUnitInfo(CyUnit.getUnitType()).getType()
 			if KEY[:13] == 'UNIT_SUBDUED_' or KEY[:11] == 'UNIT_TAMED_':
-				CyUnit.setLeaderUnitType(self.UNIT_STORY_TELLER)
+				CyUnit.setLeaderUnitType(iStoryTeller)
 
 		# Inspired Missionary
 		aWonderTuple = self.aWonderTuple
