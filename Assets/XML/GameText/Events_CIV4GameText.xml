@@ -5955,6 +5955,10 @@
 		<Russian>[ICON_BULLET]Каждый город с населением выше %d1 теряет %d2 жителей</Russian>
 		<Spanish>[ICON_BULLET]Todas las ciudades con una población por encima de %d1 perderá %d2 ciudadan[NUM1:o:os]</Spanish>
 	</TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_BUILDINGHELP_REQUIRES_STRING</Tag>
+        <English>This option requires </English>
+    </TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_ESPIONAGE_COST</Tag>
 		<English>[ICON_BULLET]Cost: %d1[ICON_ESPIONAGE]</English>
