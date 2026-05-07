@@ -7157,6 +7157,14 @@ int64_t CvPlayer::getBaseUnitCost100(const UnitTypes eUnit) const
 			iMod += GC.getHandicapInfo(GC.getGame().getHandicapType()).getAIPerEraModifier() * getCurrentEra();
 
 			iBaseCost = getModifiedIntValue64(iBaseCost, iMod);
+
+			if(GC.getGame().isOption(GAMEOPTION_BUILDING_COST_AI_25)){
+				iBaseCost = iBaseCost / 4 * 3;
+			}
+
+			if(GC.getGame().isOption(GAMEOPTION_BUILDING_COST_AI_50)){
+				iBaseCost = iBaseCost / 2;
+			}
 		}
 	}
 	// The getUnitExtraCost() is where we get the cost for a settler unit (that's ALL this does).
@@ -7283,6 +7291,16 @@ int CvPlayer::getProductionNeeded(BuildingTypes eBuilding) const
 		}
 	}
 	iProductionNeeded /= 100;
+	if (isNormalAI())
+	{
+		if(GC.getGame().isOption(GAMEOPTION_BUILDING_COST_AI_25)){
+			iProductionNeeded = iProductionNeeded / 4 * 3;
+		}
+
+		if(GC.getGame().isOption(GAMEOPTION_BUILDING_COST_AI_50)){
+			iProductionNeeded = iProductionNeeded / 2;
+		}
+	}
 
 	if (iProductionNeeded >= MAX_INT) return MAX_INT;
 

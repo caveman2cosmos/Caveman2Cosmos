@@ -672,6 +672,34 @@
 			<bDefault>0</bDefault>
 			<bVisible>1</bVisible>
 		</GameOptionInfo>
+		<GameOptionInfo>
+			<Type>GAMEOPTION_BUILDING_COST_AI_25</Type>
+			<Description>TXT_KEY_GAMEOPTION_BUILDING_COST_AI_25</Description>
+			<Help>TXT_KEY_GAMEOPTION_BUILDING_COST_AI_25_HELP</Help>
+			<bDefault>0</bDefault>
+			<bVisible>1</bVisible>
+		</GameOptionInfo>
+		<GameOptionInfo>
+			<Type>GAMEOPTION_BUILDING_COST_AI_50</Type>
+			<Description>TXT_KEY_GAMEOPTION_BUILDING_COST_AI_50</Description>
+			<Help>TXT_KEY_GAMEOPTION_BUILDING_COST_AI_50_HELP</Help>
+			<bDefault>0</bDefault>
+			<bVisible>1</bVisible>
+		</GameOptionInfo>
+		<GameOptionInfo>
+			<Type>GAMEOPTION_UNIT_COST_AI_25</Type>
+			<Description>TXT_KEY_GAMEOPTION_UNIT_COST_AI_25</Description>
+			<Help>TXT_KEY_GAMEOPTION_UNIT_COST_AI_25_HELP</Help>
+			<bDefault>0</bDefault>
+			<bVisible>1</bVisible>
+		</GameOptionInfo>
+		<GameOptionInfo>
+			<Type>GAMEOPTION_UNIT_COST_AI_50</Type>
+			<Description>TXT_KEY_GAMEOPTION_UNIT_COST_AI_50</Description>
+			<Help>TXT_KEY_GAMEOPTION_UNIT_COST_AI_50_HELP</Help>
+			<bDefault>0</bDefault>
+			<bVisible>1</bVisible>
+		</GameOptionInfo>
 		<!-- Challenge -->
 		<GameOptionInfo>
 			<Type>GAMEOPTION_CHALLENGE_CUT_LOSERS</Type>
