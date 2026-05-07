@@ -490,7 +490,6 @@
 			<SoundMP>AS2D_TECH_WEAVING</SoundMP>
 			<Button>Art/Interface/Buttons/TechTree/Button_Weaving.dds</Button>
 		</TechInfo>
-        <!--        balance tech -2-->
         <TechInfo>
             <Type>TECH_COUNTING</Type>
             <Description>TXT_KEY_TECH_COUNTING</Description>
@@ -658,7 +657,6 @@
 			<SoundMP>AS2D_TECH_HARD_HAMMER_PERCUSSION</SoundMP>
 			<Button>Art/Interface/Buttons/TechTree/Button_StoneTools.dds</Button>
 		</TechInfo>
-        <!--        balance -1 tech-->
         <TechInfo>
             <Type>TECH_COOKING</Type>
             <Description>TXT_KEY_TECH_COOKING</Description>
@@ -2617,7 +2615,7 @@
 			</OrPreReqs>
 			<AndPreReqs>
 				<PrereqTech>TECH_PORTABLE_SHELTERS</PrereqTech>
-				<PrereqTech>TECH_BARTER</PrereqTech>
+				<PrereqTech>TECH_CONDUCT</PrereqTech>
 			</AndPreReqs>
 			<Quote>TXT_KEY_TECH_TRIBALISM_QUOTE</Quote>
 			<Sound>AS2D_TECH_TRIBALISM</Sound>
@@ -4233,9 +4231,6 @@
             <OrPreReqs>
                 <PrereqTech>TECH_CONSCIOUSNESS</PrereqTech>
             </OrPreReqs>
-            <AndPreReqs>
-                <PrereqTech>TECH_EQUINE_DOMESTICATION</PrereqTech>
-            </AndPreReqs>
             <Quote>TXT_KEY_TECH_TENGRIISM_QUOTE</Quote>
             <Sound>AS2D_TECH_TENGRIISM2</Sound>
             <SoundMP>AS2D_TECH_GENERIC</SoundMP>
@@ -4887,9 +4882,6 @@
             <OrPreReqs>
                 <PrereqTech>TECH_CHARIOTRY</PrereqTech>
             </OrPreReqs>
-            <AndPreReqs>
-                <PrereqTech>TECH_EQUINE_DOMESTICATION</PrereqTech>
-            </AndPreReqs>
             <Quote>TXT_KEY_TECH_ANIMAL_RIDING_QUOTE</Quote>
             <Sound>AS2D_TECH_ANIMAL_RIDING</Sound>
             <SoundMP>AS2D_TECH_GENERIC</SoundMP>
@@ -9662,6 +9654,7 @@
 			</OrPreReqs>
 			<AndPreReqs>
 				<PrereqTech>TECH_MEDITATION</PrereqTech>
+				<PrereqTech>TECH_REINCARNATION</PrereqTech>
 			</AndPreReqs>
 			<Quote>TXT_KEY_TECH_THEOLOGY_QUOTE</Quote>
 			<Sound>AS2D_TECH_THEOLOGY</Sound>

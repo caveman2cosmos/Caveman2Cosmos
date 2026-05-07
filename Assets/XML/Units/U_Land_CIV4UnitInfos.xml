@@ -35,10 +35,10 @@
 					<PromotionType>PROMOTION_SENTRY</PromotionType>
 					<bFreePromotion>1</bFreePromotion>
 				</FreePromotion>
-				<FreePromotion>
-					<PromotionType>PROMOTION_GUARDIAN_TRIBAL</PromotionType>
-					<bFreePromotion>1</bFreePromotion>
-				</FreePromotion>
+<!--				<FreePromotion>-->
+<!--					<PromotionType>PROMOTION_GUARDIAN_TRIBAL</PromotionType>-->
+<!--					<bFreePromotion>1</bFreePromotion>-->
+<!--				</FreePromotion>-->
 			</FreePromotions>
 			<UnitUpgrades>
 				<UnitType>UNIT_TRIBE</UnitType>
@@ -26584,19 +26584,12 @@
             <MapCategoryTypes>
                 <MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
             </MapCategoryTypes>
-			<DefaultUnitAI>UNITAI_PROPERTY_CONTROL</DefaultUnitAI>
-			<UnitAIs>
-				<UnitAI>
-					<UnitAIType>UNITAI_PROPERTY_CONTROL</UnitAIType>
-					<bUnitAI>1</bUnitAI>
-				</UnitAI>
-			</UnitAIs>
 			<bOnlyDefensive>1</bOnlyDefensive>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>
 			<bMilitaryProduction>1</bMilitaryProduction>
 			<UnitUpgrades>
-				<UnitType>UNIT_PALACE_GUARDS</UnitType>
+				<UnitType>UNIT_PALACE_GUARD</UnitType>
                 <UnitType>UNIT_NEANDERTHAL_TRIBAL_GUARDIAN</UnitType>
 			</UnitUpgrades>
 			<iCost>60</iCost>
