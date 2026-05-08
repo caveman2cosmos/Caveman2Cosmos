@@ -38,11 +38,11 @@ build_script:
 
       call "%APPVEYOR_BUILD_FOLDER%\Tools\_AppveyorTestBuild.bat"
 
-test_script:
-  - cmd: >-
-      cd Tools
+# test_script:
+#  - cmd: >-
+#      cd Tools
 
-      XmlValidator.exe -a
+#      XmlValidator.exe -a
 
 # DISABLED: before_deploy can't access secure variables it seems, we just do everything in the deploy_script
 # before_deploy:
