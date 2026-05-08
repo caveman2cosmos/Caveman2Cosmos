@@ -20,6 +20,7 @@ class WBCorporationScreen:
 	def interfaceScreen(self, iPlayerX):
 		screen = CyGInterfaceScreen("WBCorporationScreen", CvScreenEnums.WB_CORPORATION)
 		global iSelectedPlayer
+		global bHeadquarter
 
 		iSelectedPlayer = iPlayerX
 
