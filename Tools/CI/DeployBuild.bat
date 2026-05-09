@@ -42,7 +42,7 @@ powershell -ExecutionPolicy Bypass -File "%root_dir%\Tools\CI\InitGit.ps1"
 
 :: COMPILE -----------------------------------------------------
 echo Building FinalRelease DLL...
-call "%root_dir%\Tools\_MakeDLL.bat" FinalRelease build deploy
+call "%root_dir%\Tools\_MakeDLL.bat" Release build deploy
 if not errorlevel 0 (
     echo Building FinalRelease DLL failed, aborting deployment!
     exit /B 2
@@ -55,7 +55,7 @@ call "%root_dir%\Tools\CI\DoSourceIndexing.bat"
 
 :: CHECK OUT SVN -----------------------------------------------
 echo Checking out SVN working copy for deployment...
-call %SVN% --quiet checkout %svn_url% "%build_dir%"
+call %SVN% checkout %svn_url% "%build_dir%"
 if %ERRORLEVEL% neq 0 goto checkoutLoopSetup
 goto OK
 
