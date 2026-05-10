@@ -2171,7 +2171,7 @@ class Revolution:
 					+ '\n\n' + TRNSLTR.getText("TXT_KEY_REV_WARN_CIV_WIDE",()) + '\n'
 					+ self.updateCivStability(GAME.getGameTurn(), pPlayer.getID(), bIsRevWatch = True) + '\n\n'
 				)
-				if any(pTeam.isAtWar(i) for i in xrange(GC.getMAX_TEAMS()) if i != pPlayer.getTeam()):
+				if pTeam.isAtWar(False):
 					bodStr += TRNSLTR.getText("TXT_KEY_REV_WARN_WARS",())
 				else:
 					bodStr += TRNSLTR.getText("TXT_KEY_REV_WARN_GLORY",()) + '  '
