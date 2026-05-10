@@ -3575,5 +3575,128 @@
 				<GoodyType>GOODY_LOW_CLASSICAL_RESEARCH</GoodyType>
 			</Goodies>
 		</HandicapInfo>
+		<HandicapInfo>
+			<Type>HANDICAP_AI_BOOSTED</Type>
+			<Description>TXT_KEY_HANDICAP_AI_BOOSTED</Description>
+			<Help>TXT_KEY_HANDICAP_AI_BOOSTED_HELP</Help>
+			<iAdvancedStartPointsMod>100</iAdvancedStartPointsMod>
+			<iGold>8</iGold>
+			<iUnitUpkeepPercent>140</iUnitUpkeepPercent>
+			<iMaxColonyMaintenance>300</iMaxColonyMaintenance>
+			<iDistanceMaintenancePercent>160</iDistanceMaintenancePercent>
+			<iNumCitiesMaintenancePercent>140</iNumCitiesMaintenancePercent>
+			<iColonyMaintenancePercent>140</iColonyMaintenancePercent>
+			<iCorporationMaintenancePercent>140</iCorporationMaintenancePercent>
+			<iCivicUpkeepPercent>140</iCivicUpkeepPercent>
+			<iInflationPercent>110</iInflationPercent>
+			<iHealthBonus>-2</iHealthBonus>
+			<PropertyManipulators>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_CRIME</PropertyType>
+					<GameObjectType>GAMEOBJECT_CITY</GameObjectType>
+					<RelationType>RELATION_ASSOCIATED</RelationType>
+					<iAmountPerTurn>
+						<Mult>
+							<AttributeType>ATTRIBUTE_POPULATION</AttributeType>
+							<Constant>6</Constant>
+						</Mult>
+					</iAmountPerTurn>
+				</PropertySource>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_EDUCATION</PropertyType>
+					<GameObjectType>GAMEOBJECT_CITY</GameObjectType>
+					<RelationType>RELATION_ASSOCIATED</RelationType>
+					<iAmountPerTurn>
+						<Mult>
+							<AttributeType>ATTRIBUTE_POPULATION</AttributeType>
+							<Constant>-5</Constant>
+						</Mult>
+					</iAmountPerTurn>
+				</PropertySource>
+			</PropertyManipulators>
+			<!-- AI behaviour towards the player with this difficulty -->
+			<iAttitudeChange>0</iAttitudeChange>
+			<iNoTechTradeModifier>-95</iNoTechTradeModifier>
+			<iTechTradeKnownModifier>90</iTechTradeKnownModifier>
+			<!-- These are game difficulty modifers, not player difficulty modifers and they all affect AI, not human players  -->
+			<iAnimalAttackProb>90</iAnimalAttackProb>
+			<iUnownedWaterTilesPerBarbarianUnit>30</iUnownedWaterTilesPerBarbarianUnit>
+			<iUnownedTilesPerBarbarianCity>10</iUnownedTilesPerBarbarianCity>
+			<iBarbarianCityCreationTurnsElapsed>30</iBarbarianCityCreationTurnsElapsed>
+			<iBarbarianCityCreationProb>24</iBarbarianCityCreationProb>
+			<iBarbarianDefenders>10</iBarbarianDefenders>
+			<iAIAnimalBonus>-70</iAIAnimalBonus>
+			<iSubdueAnimalBonusAI>210</iSubdueAnimalBonusAI>
+			<iAIBarbarianBonus>-70</iAIBarbarianBonus>
+			<iAIStartingDefenseUnits>7</iAIStartingDefenseUnits>
+			<iAIStartingExploreUnits>6</iAIStartingExploreUnits>
+			<iAIStartingWorkerUnits>4</iAIStartingWorkerUnits>
+			<iAIDeclareWarProb>100</iAIDeclareWarProb>
+			<iAIWorkRateModifier>70</iAIWorkRateModifier>
+			<iAIGrowthPercent>50</iAIGrowthPercent>
+			<iAITrainPercent>44</iAITrainPercent>
+			<iAIWorldTrainPercent>65</iAIWorldTrainPercent>
+			<iAIConstructPercent>30</iAIConstructPercent>
+			<iAIWorldConstructPercent>65</iAIWorldConstructPercent>
+			<iAICreatePercent>65</iAICreatePercent>
+			<iAIWorldCreatePercent>65</iAIWorldCreatePercent>
+			<iAIResearchPercent>79</iAIResearchPercent>
+			<iAICivicUpkeepPercent>25</iAICivicUpkeepPercent>
+			<iAIUnitUpkeepPercent>5</iAIUnitUpkeepPercent>
+			<iAIUnitSupplyPercent>5</iAIUnitSupplyPercent>
+			<iAIUnitUpgradePercent>5</iAIUnitUpgradePercent>
+			<iAIInflationPercent>30</iAIInflationPercent>
+			<iAIWarWearinessPercent>30</iAIWarWearinessPercent>
+			<iAIPerEraModifier>-5</iAIPerEraModifier>
+			<iAIAdvancedStartPercent>240</iAIAdvancedStartPercent>
+			<Goodies>
+				<!-- Map -->
+				<GoodyType>GOODY_MAP</GoodyType>
+				<GoodyType>GOODY_MAP</GoodyType>
+				<GoodyType>GOODY_MAP</GoodyType>
+				<GoodyType>GOODY_MAP</GoodyType>
+				<GoodyType>GOODY_MAP</GoodyType>
+				<GoodyType>GOODY_MAP</GoodyType>
+				<!-- Healer -->
+				<GoodyType>GOODY_WISE_WOMAN</GoodyType>
+				<GoodyType>GOODY_MEDICINE_MAN</GoodyType>
+				<!-- Experience -->
+				<GoodyType>GOODY_EXPERIENCE</GoodyType>
+				<GoodyType>GOODY_LOW_ANCIENT_EXPERIENCE</GoodyType>
+				<GoodyType>GOODY_LOW_CLASSICAL_EXPERIENCE</GoodyType>
+				<GoodyType>GOODY_LOW_MEDIEVAL_EXPERIENCE</GoodyType>
+				<GoodyType>GOODY_LOW_RENAISSANCE_EXPERIENCE</GoodyType>
+				<GoodyType>GOODY_HIGH_PREHISTORIC_EXPERIENCE</GoodyType>
+				<GoodyType>GOODY_HIGH_ANCIENT_EXPERIENCE</GoodyType>
+				<GoodyType>GOODY_HIGH_CLASSICAL_EXPERIENCE</GoodyType>
+				<GoodyType>GOODY_HIGH_MEDIEVAL_EXPERIENCE</GoodyType>
+				<GoodyType>GOODY_HIGH_RENAISSANCE_EXPERIENCE</GoodyType>
+				<!-- Warrior -->
+				<GoodyType>GOODY_WARRIOR</GoodyType>
+				<!-- Low Gold -->
+				<GoodyType>GOODY_LOW_GOLD</GoodyType>
+				<GoodyType>GOODY_LOW_GOLD</GoodyType>
+				<GoodyType>GOODY_LOW_GOLD</GoodyType>
+				<GoodyType>GOODY_LOW_GOLD</GoodyType>
+				<GoodyType>GOODY_LOW_GOLD</GoodyType>
+				<GoodyType>GOODY_LOW_GOLD</GoodyType>
+				<GoodyType>GOODY_LOW_GOLD</GoodyType>
+				<GoodyType>GOODY_LOW_GOLD</GoodyType>
+				<GoodyType>GOODY_LOW_GOLD</GoodyType>
+				<GoodyType>GOODY_LOW_GOLD</GoodyType>
+				<GoodyType>GOODY_LOW_GOLD</GoodyType>
+				<GoodyType>GOODY_LOW_GOLD</GoodyType>
+				<GoodyType>GOODY_LOW_GOLD</GoodyType>
+				<GoodyType>GOODY_LOW_GOLD</GoodyType>
+				<GoodyType>GOODY_LOW_GOLD</GoodyType>
+				<GoodyType>GOODY_LOW_GOLD</GoodyType>
+				<GoodyType>GOODY_LOW_GOLD</GoodyType>
+				<GoodyType>GOODY_LOW_GOLD</GoodyType>
+				<GoodyType>GOODY_LOW_GOLD</GoodyType>
+				<GoodyType>GOODY_LOW_GOLD</GoodyType>
+			</Goodies>
+		</HandicapInfo>
 	</HandicapInfos>
 </Civ4HandicapInfo>
