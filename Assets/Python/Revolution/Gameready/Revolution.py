@@ -163,6 +163,7 @@ class Revolution:
 		customEM.addEventHandler("kbdEvent", self.onKbdEvent)
 		self.customEM.setPopupHandler(RevDefs.revolutionPopup, ["revolutionPopup",self.revolutionPopupHandler,self.blankHandler])
 		self.customEM.setPopupHandler(RevDefs.joinHumanPopup, ["joinHumanPopup",self.joinHumanHandler,self.blankHandler])
+		self.customEM.setPopupHandler(RevDefs.controlLostPopup, ["controlLostPopup",self.blankHandler,self.blankHandler])
 		self.customEM.setPopupHandler(RevDefs.revWatchPopup, ["revWatchPopup", self.revWatchHandler, self.blankHandler])
 		self.customEM.setPopupHandler(RevDefs.pickCityPopup, ["pickCityPopup", self.pickCityHandler, self.blankHandler])
 		self.customEM.setPopupHandler(RevDefs.bribeCityPopup, ["bribeCityPopup", self.bribeCityHandler, self.blankHandler])
