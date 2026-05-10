@@ -1715,4 +1715,52 @@
 		<French>Modifie les coûts des bâtiments pour mieux refléter leur taille, complexité et coût en matériaux.</French>
 		<Russian>Изменить расходы на постройку зданий, чтобы более точно отразить комплексность их конструкции и стоимость материалов.</Russian>
 	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_GAMEOPTION_BUILDING_COST_AI_25</Tag>
+		<English>Decreases AI building cost by 25%</English>
+		<French>Avancé - Coût réaliste des bâtiments</French>
+		<Russian>Правдоподобные затраты на строительство</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_GAMEOPTION_BUILDING_COST_AI_25_HELP</Tag>
+		<English>Decreases AI building cost by 25% stacks with the 50% option</English>
+		<French>Modifie les coûts des bâtiments pour mieux refléter leur taille, complexité et coût en matériaux.</French>
+		<Russian>Изменить расходы на постройку зданий, чтобы более точно отразить комплексность их конструкции и стоимость материалов.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_GAMEOPTION_BUILDING_COST_AI_50</Tag>
+		<English>Decreases AI building cost by 50%</English>
+		<French>Avancé - Coût réaliste des bâtiments</French>
+		<Russian>Правдоподобные затраты на строительство</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_GAMEOPTION_BUILDING_COST_AI_50_HELP</Tag>
+		<English>Decreases AI building cost by 25% stacks with the 50% option</English>
+		<French>Modifie les coûts des bâtiments pour mieux refléter leur taille, complexité et coût en matériaux.</French>
+		<Russian>Изменить расходы на постройку зданий, чтобы более точно отразить комплексность их конструкции и стоимость материалов.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_GAMEOPTION_UNIT_COST_AI_25</Tag>
+		<English>Decreases AI unit cost by 25%</English>
+		<French>Avancé - Coût réaliste des bâtiments</French>
+		<Russian>Правдоподобные затраты на строительство</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_GAMEOPTION_UNIT_COST_AI_25_HELP</Tag>
+		<English>Decreases AI unit cost by 25% stacks with the 50% option</English>
+		<French>Modifie les coûts des bâtiments pour mieux refléter leur taille, complexité et coût en matériaux.</French>
+		<Russian>Изменить расходы на постройку зданий, чтобы более точно отразить комплексность их конструкции и стоимость материалов.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_GAMEOPTION_UNIT_COST_AI_50</Tag>
+		<English>Decreases AI unit cost by 50%</English>
+		<French>Avancé - Coût réaliste des bâtiments</French>
+		<Russian>Правдоподобные затраты на строительство</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_GAMEOPTION_UNIT_COST_AI_50_HELP</Tag>
+		<English>Decreases AI unit cost by 25% stacks with the 50% option</English>
+		<French>Modifie les coûts des bâtiments pour mieux refléter leur taille, complexité et coût en matériaux.</French>
+		<Russian>Изменить расходы на постройку зданий, чтобы более точно отразить комплексность их конструкции и стоимость материалов.</Russian>
+	</TEXT>
 </Civ4GameText>
