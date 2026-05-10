@@ -153,7 +153,6 @@ class WBCorporationScreen:
 	def handleInput(self, inputClass):
 		screen = CyGInterfaceScreen("WBCorporationScreen", CvScreenEnums.WB_CORPORATION)
 		global iSelectedPlayer
-		global bHeadquarter
 		global iOwnerType
 
 		if inputClass.getButtonType() == WidgetTypes.WIDGET_PYTHON:
@@ -188,7 +187,6 @@ class WBCorporationScreen:
 				WBInfoScreen.WBInfoScreen(self.WB).interfaceScreen(iSelectedPlayer)
 
 		elif inputClass.getFunctionName() == "OwnerType":
-			global iOwnerType
 			iOwnerType = screen.getPullDownData("OwnerType", screen.getSelectedPullDownID("OwnerType"))
 			self.sortCities()
 
@@ -215,7 +213,6 @@ class WBCorporationScreen:
 				self.placeCityTable()
 
 		elif inputClass.getFunctionName() == "SetHeadquarter":
-			global bHeadquarter
 			bHeadquarter = not bHeadquarter
 			sText = "<font=3b>" + CyTranslator().getText("TXT_KEY_CORPORATION_HEADQUARTERS", ()) + "</font>"
 			sColor = CyTranslator().getText("[COLOR_WARNING_TEXT]", ())
