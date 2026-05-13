@@ -553,7 +553,7 @@
 				<BuildingType>BUILDING_INDUSTRIAL_FARMS</BuildingType>
 				<BuildingType>BUILDING_MEAT_INDUSTRY_CONGLOMERATE</BuildingType>
 			</PrereqOrBuildings>
-			<iCost>134</iCost>
+			<iCost>125</iCost>
 			<iCostSizeModifier>1</iCostSizeModifier>
 			<iCostCountModifier>1</iCostCountModifier>
 			<iCostMaterialsModifier>1</iCostMaterialsModifier>
@@ -2276,7 +2276,7 @@
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_ANIMAL_TRAINER_DONKEY</ArtDefineTag>
 			<PrereqTech>TECH_EQUINE_DOMESTICATION</PrereqTech>
-			<iCost>134</iCost>
+			<iCost>125</iCost>
 			<iCostSizeModifier>1</iCostSizeModifier>
 			<iCostCountModifier>1</iCostCountModifier>
 			<iCostMaterialsModifier>1</iCostMaterialsModifier>

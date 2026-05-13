@@ -1777,7 +1777,7 @@
 				<Bonus>BONUS_DONKEY</Bonus>
 			</PrereqBonuses>
 			<ObsoleteTech>TECH_VERTICAL_FLIGHT</ObsoleteTech>
-			<iCost>264</iCost>
+			<iCost>244</iCost>
 			<iCostSizeModifier>1</iCostSizeModifier>
 			<iCostCountModifier>0</iCostCountModifier>
 			<iCostMaterialsModifier>0</iCostMaterialsModifier>
@@ -4097,7 +4097,7 @@
 				<Bonus>BONUS_HORSE</Bonus>
 			</PrereqBonuses>
 			<ObsoleteTech>TECH_VERTICAL_FLIGHT</ObsoleteTech>
-			<iCost>264</iCost>
+			<iCost>244</iCost>
 			<iCostSizeModifier>1</iCostSizeModifier>
 			<iCostCountModifier>0</iCostCountModifier>
 			<iCostMaterialsModifier>0</iCostMaterialsModifier>

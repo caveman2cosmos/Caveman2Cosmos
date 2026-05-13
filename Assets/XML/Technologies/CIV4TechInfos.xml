@@ -2755,6 +2755,9 @@
                     <iFlavor>4</iFlavor>
                 </Flavor>
             </Flavors>
+            <AndPreReqs>
+                <PrereqTech>TECH_BARTER</PrereqTech>
+            </AndPreReqs>
             <OrPreReqs>
                 <PrereqTech>TECH_TRIBALISM</PrereqTech>
             </OrPreReqs>
@@ -3656,6 +3659,52 @@
 			<Button>Art/Interface/Buttons/TechTree/taxonomy.dds</Button>
 		</TechInfo>
         <TechInfo>
+            <Type>TECH_EQUINE_DOMESTICATION</Type>
+            <Description>TXT_KEY_TECH_EQUINE_DOMESTICATION</Description>
+            <Civilopedia>TXT_KEY_TECH_EQUINE_DOMESTICATION_PEDIA</Civilopedia>
+            <Advisor>ADVISOR_MILITARY</Advisor>
+            <iCost>96</iCost>
+            <Era>C2C_ERA_ANCIENT</Era>
+            <iAsset>8</iAsset>
+            <iPower>2</iPower>
+            <bTrade>1</bTrade>
+            <iGridX>21</iGridX>
+            <iGridY>5</iGridY>
+            <Flavors>
+                <Flavor>
+                    <FlavorType>FLAVOR_MILITARY</FlavorType>
+                    <iFlavor>3</iFlavor>
+                </Flavor>
+                <Flavor>
+                    <FlavorType>FLAVOR_RELIGION</FlavorType>
+                    <iFlavor>1</iFlavor>
+                </Flavor>
+                <Flavor>
+                    <FlavorType>FLAVOR_PRODUCTION</FlavorType>
+                    <iFlavor>4</iFlavor>
+                </Flavor>
+                <Flavor>
+                    <FlavorType>FLAVOR_SCIENCE</FlavorType>
+                    <iFlavor>2</iFlavor>
+                </Flavor>
+                <Flavor>
+                    <FlavorType>FLAVOR_CULTURE</FlavorType>
+                    <iFlavor>1</iFlavor>
+                </Flavor>
+                <Flavor>
+                    <FlavorType>FLAVOR_GROWTH</FlavorType>
+                    <iFlavor>9</iFlavor>
+                </Flavor>
+            </Flavors>
+            <OrPreReqs>
+                <PrereqTech>TECH_AGRICULTURE</PrereqTech>
+            </OrPreReqs>
+            <Quote>TXT_KEY_TECH_EQUINE_DOMESTICATION_QUOTE</Quote>
+            <Sound>AS2D_TECH_EQUINE_DOMESTICATION</Sound>
+            <SoundMP>AS2D_TECH_EQUINE_DOMESTICATION</SoundMP>
+            <Button>Art/Interface/Buttons/TechTree/equinedomestication.dds</Button>
+        </TechInfo>
+        <TechInfo>
             <Type>TECH_POULTRY_DOMESTICATION</Type>
             <Description>TXT_KEY_TECH_POULTRY_DOMESTICATION</Description>
             <Civilopedia>TXT_KEY_TECH_POULTRY_DOMESTICATION_PEDIA</Civilopedia>
@@ -4004,50 +4053,41 @@
             <Button>Art/Interface/Buttons/TechTree/fungiculture.dds</Button>
         </TechInfo>
         <TechInfo>
-            <Type>TECH_EQUINE_DOMESTICATION</Type>
-            <Description>TXT_KEY_TECH_EQUINE_DOMESTICATION</Description>
-            <Civilopedia>TXT_KEY_TECH_EQUINE_DOMESTICATION_PEDIA</Civilopedia>
-            <Advisor>ADVISOR_MILITARY</Advisor>
+            <Type>TECH_TENGRIISM</Type>
+            <Description>TXT_KEY_TECH_TENGRIISM</Description>
+            <Civilopedia>TXT_KEY_TECH_TENGRIISM_PEDIA</Civilopedia>
+            <Advisor>ADVISOR_RELIGION</Advisor>
+            <bGlobal>1</bGlobal>
             <iCost>110</iCost>
             <Era>C2C_ERA_ANCIENT</Era>
+            <FirstFreeProphet>UNIT_PROPHET</FirstFreeProphet>
             <iAsset>8</iAsset>
-            <iPower>2</iPower>
-            <bTrade>1</bTrade>
             <iGridX>22</iGridX>
             <iGridY>5</iGridY>
             <Flavors>
                 <Flavor>
-                    <FlavorType>FLAVOR_MILITARY</FlavorType>
-                    <iFlavor>3</iFlavor>
-                </Flavor>
-                <Flavor>
                     <FlavorType>FLAVOR_RELIGION</FlavorType>
-                    <iFlavor>1</iFlavor>
+                    <iFlavor>10</iFlavor>
                 </Flavor>
                 <Flavor>
-                    <FlavorType>FLAVOR_PRODUCTION</FlavorType>
-                    <iFlavor>4</iFlavor>
-                </Flavor>
-                <Flavor>
-                    <FlavorType>FLAVOR_SCIENCE</FlavorType>
-                    <iFlavor>2</iFlavor>
-                </Flavor>
-                <Flavor>
-                    <FlavorType>FLAVOR_CULTURE</FlavorType>
-                    <iFlavor>1</iFlavor>
+                    <FlavorType>FLAVOR_MILITARY</FlavorType>
+                    <iFlavor>8</iFlavor>
                 </Flavor>
                 <Flavor>
                     <FlavorType>FLAVOR_GROWTH</FlavorType>
-                    <iFlavor>9</iFlavor>
+                    <iFlavor>5</iFlavor>
                 </Flavor>
             </Flavors>
+            <AndPreReqs>
+                <PrereqTech>TECH_CONSCIOUSNESS</PrereqTech>
+            </AndPreReqs>
             <OrPreReqs>
-                <PrereqTech>TECH_POTTERY</PrereqTech>
+                <PrereqTech>TECH_EQUINE_DOMESTICATION</PrereqTech>
             </OrPreReqs>
-            <Quote>TXT_KEY_TECH_EQUINE_DOMESTICATION_QUOTE</Quote>
-            <Sound>AS2D_TECH_EQUINE_DOMESTICATION</Sound>
-            <SoundMP>AS2D_TECH_EQUINE_DOMESTICATION</SoundMP>
-            <Button>Art/Interface/Buttons/TechTree/equinedomestication.dds</Button>
+            <Quote>TXT_KEY_TECH_TENGRIISM_QUOTE</Quote>
+            <Sound>AS2D_TECH_TENGRIISM2</Sound>
+            <SoundMP>AS2D_TECH_GENERIC</SoundMP>
+            <Button>Art/Interface/Buttons/TechTree/tengriism.dds</Button>
         </TechInfo>
 		<TechInfo>
 			<Type>TECH_SAILING</Type>
@@ -4202,40 +4242,6 @@
 			<SoundMP>AS2D_TECH_MP_THE_WHEEL</SoundMP>
 			<Button>Art/Interface/Buttons/TechTree/thewheel2.dds</Button>
 		</TechInfo>
-        <TechInfo>
-            <Type>TECH_TENGRIISM</Type>
-            <Description>TXT_KEY_TECH_TENGRIISM</Description>
-            <Civilopedia>TXT_KEY_TECH_TENGRIISM_PEDIA</Civilopedia>
-            <Advisor>ADVISOR_RELIGION</Advisor>
-            <bGlobal>1</bGlobal>
-            <iCost>110</iCost>
-            <Era>C2C_ERA_ANCIENT</Era>
-            <FirstFreeProphet>UNIT_PROPHET</FirstFreeProphet>
-            <iAsset>8</iAsset>
-            <iGridX>22</iGridX>
-            <iGridY>13</iGridY>
-            <Flavors>
-                <Flavor>
-                    <FlavorType>FLAVOR_RELIGION</FlavorType>
-                    <iFlavor>10</iFlavor>
-                </Flavor>
-                <Flavor>
-                    <FlavorType>FLAVOR_MILITARY</FlavorType>
-                    <iFlavor>8</iFlavor>
-                </Flavor>
-                <Flavor>
-                    <FlavorType>FLAVOR_GROWTH</FlavorType>
-                    <iFlavor>5</iFlavor>
-                </Flavor>
-            </Flavors>
-            <OrPreReqs>
-                <PrereqTech>TECH_CONSCIOUSNESS</PrereqTech>
-            </OrPreReqs>
-            <Quote>TXT_KEY_TECH_TENGRIISM_QUOTE</Quote>
-            <Sound>AS2D_TECH_TENGRIISM2</Sound>
-            <SoundMP>AS2D_TECH_GENERIC</SoundMP>
-            <Button>Art/Interface/Buttons/TechTree/tengriism.dds</Button>
-        </TechInfo>
 		<TechInfo>
 			<Type>TECH_POLYTHEISM</Type>
 			<Description>TXT_KEY_TECH_POLYTHEISM</Description>

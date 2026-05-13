@@ -98,22 +98,22 @@
 				<GoodyType>GOODY_HIGH_MEDIEVAL_EXPERIENCE</GoodyType>
 				<GoodyType>GOODY_HIGH_RENAISSANCE_EXPERIENCE</GoodyType>
 				<!-- Warrior -->
-				<GoodyType>GOODY_WARRIOR</GoodyType>
-				<GoodyType>GOODY_WARRIOR</GoodyType>
-				<GoodyType>GOODY_STONE_AXEMAN</GoodyType>
-				<GoodyType>GOODY_STONE_AXEMAN</GoodyType>
-				<GoodyType>GOODY_AXEMAN</GoodyType>
-				<GoodyType>GOODY_AXEMAN</GoodyType>
-				<GoodyType>GOODY_STONE_THROWER</GoodyType>
-				<GoodyType>GOODY_STONE_THROWER</GoodyType>
-				<GoodyType>GOODY_ARCHER</GoodyType>
-				<GoodyType>GOODY_ARCHER</GoodyType>
-				<GoodyType>GOODY_COMPOSITE_BOWMAN</GoodyType>
-				<GoodyType>GOODY_COMPOSITE_BOWMAN</GoodyType>
-				<GoodyType>GOODY_HORSEMAN</GoodyType>
-				<GoodyType>GOODY_HORSEMAN</GoodyType>
-				<GoodyType>GOODY_HORSEMAN_CLASSICAL</GoodyType>
-				<GoodyType>GOODY_HORSEMAN_CLASSICAL</GoodyType>
+<!--				<GoodyType>GOODY_WARRIOR</GoodyType>-->
+<!--				<GoodyType>GOODY_WARRIOR</GoodyType>-->
+<!--				<GoodyType>GOODY_STONE_AXEMAN</GoodyType>-->
+<!--				<GoodyType>GOODY_STONE_AXEMAN</GoodyType>-->
+<!--				<GoodyType>GOODY_AXEMAN</GoodyType>-->
+<!--				<GoodyType>GOODY_AXEMAN</GoodyType>-->
+<!--				<GoodyType>GOODY_STONE_THROWER</GoodyType>-->
+<!--				<GoodyType>GOODY_STONE_THROWER</GoodyType>-->
+<!--				<GoodyType>GOODY_ARCHER</GoodyType>-->
+<!--				<GoodyType>GOODY_ARCHER</GoodyType>-->
+<!--				<GoodyType>GOODY_COMPOSITE_BOWMAN</GoodyType>-->
+<!--				<GoodyType>GOODY_COMPOSITE_BOWMAN</GoodyType>-->
+<!--				<GoodyType>GOODY_HORSEMAN</GoodyType>-->
+<!--				<GoodyType>GOODY_HORSEMAN</GoodyType>-->
+<!--				<GoodyType>GOODY_HORSEMAN_CLASSICAL</GoodyType>-->
+<!--				<GoodyType>GOODY_HORSEMAN_CLASSICAL</GoodyType>-->
 				<!-- Low Gold -->
 				<GoodyType>GOODY_LOW_GOLD</GoodyType>
 				<GoodyType>GOODY_LOW_GOLD</GoodyType>
@@ -369,22 +369,22 @@
 				<GoodyType>GOODY_HIGH_MEDIEVAL_EXPERIENCE</GoodyType>
 				<GoodyType>GOODY_HIGH_RENAISSANCE_EXPERIENCE</GoodyType>
 				<!-- Warrior -->
-				<GoodyType>GOODY_WARRIOR</GoodyType>
-				<GoodyType>GOODY_WARRIOR</GoodyType>
-				<GoodyType>GOODY_STONE_AXEMAN</GoodyType>
-				<GoodyType>GOODY_STONE_AXEMAN</GoodyType>
-				<GoodyType>GOODY_AXEMAN</GoodyType>
-				<GoodyType>GOODY_AXEMAN</GoodyType>
-				<GoodyType>GOODY_STONE_THROWER</GoodyType>
-				<GoodyType>GOODY_STONE_THROWER</GoodyType>
-				<GoodyType>GOODY_ARCHER</GoodyType>
-				<GoodyType>GOODY_ARCHER</GoodyType>
-				<GoodyType>GOODY_COMPOSITE_BOWMAN</GoodyType>
-				<GoodyType>GOODY_COMPOSITE_BOWMAN</GoodyType>
-				<GoodyType>GOODY_HORSEMAN</GoodyType>
-				<GoodyType>GOODY_HORSEMAN</GoodyType>
-				<GoodyType>GOODY_HORSEMAN_CLASSICAL</GoodyType>
-				<GoodyType>GOODY_HORSEMAN_CLASSICAL</GoodyType>
+<!--				<GoodyType>GOODY_WARRIOR</GoodyType>-->
+<!--				<GoodyType>GOODY_WARRIOR</GoodyType>-->
+<!--				<GoodyType>GOODY_STONE_AXEMAN</GoodyType>-->
+<!--				<GoodyType>GOODY_STONE_AXEMAN</GoodyType>-->
+<!--				<GoodyType>GOODY_AXEMAN</GoodyType>-->
+<!--				<GoodyType>GOODY_AXEMAN</GoodyType>-->
+<!--				<GoodyType>GOODY_STONE_THROWER</GoodyType>-->
+<!--				<GoodyType>GOODY_STONE_THROWER</GoodyType>-->
+<!--				<GoodyType>GOODY_ARCHER</GoodyType>-->
+<!--				<GoodyType>GOODY_ARCHER</GoodyType>-->
+<!--				<GoodyType>GOODY_COMPOSITE_BOWMAN</GoodyType>-->
+<!--				<GoodyType>GOODY_COMPOSITE_BOWMAN</GoodyType>-->
+<!--				<GoodyType>GOODY_HORSEMAN</GoodyType>-->
+<!--				<GoodyType>GOODY_HORSEMAN</GoodyType>-->
+<!--				<GoodyType>GOODY_HORSEMAN_CLASSICAL</GoodyType>-->
+<!--				<GoodyType>GOODY_HORSEMAN_CLASSICAL</GoodyType>-->
 				<!-- Low Gold -->
 				<GoodyType>GOODY_LOW_GOLD</GoodyType>
 				<GoodyType>GOODY_LOW_GOLD</GoodyType>
@@ -650,22 +650,22 @@
 				<GoodyType>GOODY_HIGH_MEDIEVAL_EXPERIENCE</GoodyType>
 				<GoodyType>GOODY_HIGH_RENAISSANCE_EXPERIENCE</GoodyType>
 				<!-- Warrior -->
-				<GoodyType>GOODY_WARRIOR</GoodyType>
-				<GoodyType>GOODY_WARRIOR</GoodyType>
-				<GoodyType>GOODY_STONE_AXEMAN</GoodyType>
-				<GoodyType>GOODY_STONE_AXEMAN</GoodyType>
-				<GoodyType>GOODY_AXEMAN</GoodyType>
-				<GoodyType>GOODY_AXEMAN</GoodyType>
-				<GoodyType>GOODY_STONE_THROWER</GoodyType>
-				<GoodyType>GOODY_STONE_THROWER</GoodyType>
-				<GoodyType>GOODY_ARCHER</GoodyType>
-				<GoodyType>GOODY_ARCHER</GoodyType>
-				<GoodyType>GOODY_COMPOSITE_BOWMAN</GoodyType>
-				<GoodyType>GOODY_COMPOSITE_BOWMAN</GoodyType>
-				<GoodyType>GOODY_HORSEMAN</GoodyType>
-				<GoodyType>GOODY_HORSEMAN</GoodyType>
-				<GoodyType>GOODY_HORSEMAN_CLASSICAL</GoodyType>
-				<GoodyType>GOODY_HORSEMAN_CLASSICAL</GoodyType>
+<!--				<GoodyType>GOODY_WARRIOR</GoodyType>-->
+<!--				<GoodyType>GOODY_WARRIOR</GoodyType>-->
+<!--				<GoodyType>GOODY_STONE_AXEMAN</GoodyType>-->
+<!--				<GoodyType>GOODY_STONE_AXEMAN</GoodyType>-->
+<!--				<GoodyType>GOODY_AXEMAN</GoodyType>-->
+<!--				<GoodyType>GOODY_AXEMAN</GoodyType>-->
+<!--				<GoodyType>GOODY_STONE_THROWER</GoodyType>-->
+<!--				<GoodyType>GOODY_STONE_THROWER</GoodyType>-->
+<!--				<GoodyType>GOODY_ARCHER</GoodyType>-->
+<!--				<GoodyType>GOODY_ARCHER</GoodyType>-->
+<!--				<GoodyType>GOODY_COMPOSITE_BOWMAN</GoodyType>-->
+<!--				<GoodyType>GOODY_COMPOSITE_BOWMAN</GoodyType>-->
+<!--				<GoodyType>GOODY_HORSEMAN</GoodyType>-->
+<!--				<GoodyType>GOODY_HORSEMAN</GoodyType>-->
+<!--				<GoodyType>GOODY_HORSEMAN_CLASSICAL</GoodyType>-->
+<!--				<GoodyType>GOODY_HORSEMAN_CLASSICAL</GoodyType>-->
 				<!-- Low Gold -->
 				<GoodyType>GOODY_LOW_GOLD</GoodyType>
 				<GoodyType>GOODY_LOW_GOLD</GoodyType>
@@ -957,22 +957,22 @@
 				<GoodyType>GOODY_HIGH_MEDIEVAL_EXPERIENCE</GoodyType>
 				<GoodyType>GOODY_HIGH_RENAISSANCE_EXPERIENCE</GoodyType>
 				<!-- Warrior -->
-				<GoodyType>GOODY_WARRIOR</GoodyType>
-				<GoodyType>GOODY_WARRIOR</GoodyType>
-				<GoodyType>GOODY_STONE_AXEMAN</GoodyType>
-				<GoodyType>GOODY_STONE_AXEMAN</GoodyType>
-				<GoodyType>GOODY_AXEMAN</GoodyType>
-				<GoodyType>GOODY_AXEMAN</GoodyType>
-				<GoodyType>GOODY_STONE_THROWER</GoodyType>
-				<GoodyType>GOODY_STONE_THROWER</GoodyType>
-				<GoodyType>GOODY_ARCHER</GoodyType>
-				<GoodyType>GOODY_ARCHER</GoodyType>
-				<GoodyType>GOODY_COMPOSITE_BOWMAN</GoodyType>
-				<GoodyType>GOODY_COMPOSITE_BOWMAN</GoodyType>
-				<GoodyType>GOODY_HORSEMAN</GoodyType>
-				<GoodyType>GOODY_HORSEMAN</GoodyType>
-				<GoodyType>GOODY_HORSEMAN_CLASSICAL</GoodyType>
-				<GoodyType>GOODY_HORSEMAN_CLASSICAL</GoodyType>
+<!--				<GoodyType>GOODY_WARRIOR</GoodyType>-->
+<!--				<GoodyType>GOODY_WARRIOR</GoodyType>-->
+<!--				<GoodyType>GOODY_STONE_AXEMAN</GoodyType>-->
+<!--				<GoodyType>GOODY_STONE_AXEMAN</GoodyType>-->
+<!--				<GoodyType>GOODY_AXEMAN</GoodyType>-->
+<!--				<GoodyType>GOODY_AXEMAN</GoodyType>-->
+<!--				<GoodyType>GOODY_STONE_THROWER</GoodyType>-->
+<!--				<GoodyType>GOODY_STONE_THROWER</GoodyType>-->
+<!--				<GoodyType>GOODY_ARCHER</GoodyType>-->
+<!--				<GoodyType>GOODY_ARCHER</GoodyType>-->
+<!--				<GoodyType>GOODY_COMPOSITE_BOWMAN</GoodyType>-->
+<!--				<GoodyType>GOODY_COMPOSITE_BOWMAN</GoodyType>-->
+<!--				<GoodyType>GOODY_HORSEMAN</GoodyType>-->
+<!--				<GoodyType>GOODY_HORSEMAN</GoodyType>-->
+<!--				<GoodyType>GOODY_HORSEMAN_CLASSICAL</GoodyType>-->
+<!--				<GoodyType>GOODY_HORSEMAN_CLASSICAL</GoodyType>-->
 				<!-- Low Gold -->
 				<GoodyType>GOODY_LOW_GOLD</GoodyType>
 				<GoodyType>GOODY_LOW_GOLD</GoodyType>
@@ -1305,22 +1305,22 @@
 				<GoodyType>GOODY_HIGH_MEDIEVAL_EXPERIENCE</GoodyType>
 				<GoodyType>GOODY_HIGH_RENAISSANCE_EXPERIENCE</GoodyType>
 				<!-- Warrior -->
-				<GoodyType>GOODY_WARRIOR</GoodyType>
-				<GoodyType>GOODY_WARRIOR</GoodyType>
-				<GoodyType>GOODY_STONE_AXEMAN</GoodyType>
-				<GoodyType>GOODY_STONE_AXEMAN</GoodyType>
-				<GoodyType>GOODY_AXEMAN</GoodyType>
-				<GoodyType>GOODY_AXEMAN</GoodyType>
-				<GoodyType>GOODY_STONE_THROWER</GoodyType>
-				<GoodyType>GOODY_STONE_THROWER</GoodyType>
-				<GoodyType>GOODY_ARCHER</GoodyType>
-				<GoodyType>GOODY_ARCHER</GoodyType>
-				<GoodyType>GOODY_COMPOSITE_BOWMAN</GoodyType>
-				<GoodyType>GOODY_COMPOSITE_BOWMAN</GoodyType>
-				<GoodyType>GOODY_HORSEMAN</GoodyType>
-				<GoodyType>GOODY_HORSEMAN</GoodyType>
-				<GoodyType>GOODY_HORSEMAN_CLASSICAL</GoodyType>
-				<GoodyType>GOODY_HORSEMAN_CLASSICAL</GoodyType>
+<!--				<GoodyType>GOODY_WARRIOR</GoodyType>-->
+<!--				<GoodyType>GOODY_WARRIOR</GoodyType>-->
+<!--				<GoodyType>GOODY_STONE_AXEMAN</GoodyType>-->
+<!--				<GoodyType>GOODY_STONE_AXEMAN</GoodyType>-->
+<!--				<GoodyType>GOODY_AXEMAN</GoodyType>-->
+<!--				<GoodyType>GOODY_AXEMAN</GoodyType>-->
+<!--				<GoodyType>GOODY_STONE_THROWER</GoodyType>-->
+<!--				<GoodyType>GOODY_STONE_THROWER</GoodyType>-->
+<!--				<GoodyType>GOODY_ARCHER</GoodyType>-->
+<!--				<GoodyType>GOODY_ARCHER</GoodyType>-->
+<!--				<GoodyType>GOODY_COMPOSITE_BOWMAN</GoodyType>-->
+<!--				<GoodyType>GOODY_COMPOSITE_BOWMAN</GoodyType>-->
+<!--				<GoodyType>GOODY_HORSEMAN</GoodyType>-->
+<!--				<GoodyType>GOODY_HORSEMAN</GoodyType>-->
+<!--				<GoodyType>GOODY_HORSEMAN_CLASSICAL</GoodyType>-->
+<!--				<GoodyType>GOODY_HORSEMAN_CLASSICAL</GoodyType>-->
 				<!-- Low Gold -->
 				<GoodyType>GOODY_LOW_GOLD</GoodyType>
 				<GoodyType>GOODY_LOW_GOLD</GoodyType>
@@ -1656,22 +1656,22 @@
 				<GoodyType>GOODY_HIGH_MEDIEVAL_EXPERIENCE</GoodyType>
 				<GoodyType>GOODY_HIGH_RENAISSANCE_EXPERIENCE</GoodyType>
 				<!-- Warrior -->
-				<GoodyType>GOODY_WARRIOR</GoodyType>
-				<GoodyType>GOODY_WARRIOR</GoodyType>
-				<GoodyType>GOODY_STONE_AXEMAN</GoodyType>
-				<GoodyType>GOODY_STONE_AXEMAN</GoodyType>
-				<GoodyType>GOODY_AXEMAN</GoodyType>
-				<GoodyType>GOODY_AXEMAN</GoodyType>
-				<GoodyType>GOODY_STONE_THROWER</GoodyType>
-				<GoodyType>GOODY_STONE_THROWER</GoodyType>
-				<GoodyType>GOODY_ARCHER</GoodyType>
-				<GoodyType>GOODY_ARCHER</GoodyType>
-				<GoodyType>GOODY_COMPOSITE_BOWMAN</GoodyType>
-				<GoodyType>GOODY_COMPOSITE_BOWMAN</GoodyType>
-				<GoodyType>GOODY_HORSEMAN</GoodyType>
-				<GoodyType>GOODY_HORSEMAN</GoodyType>
-				<GoodyType>GOODY_HORSEMAN_CLASSICAL</GoodyType>
-				<GoodyType>GOODY_HORSEMAN_CLASSICAL</GoodyType>
+<!--				<GoodyType>GOODY_WARRIOR</GoodyType>-->
+<!--				<GoodyType>GOODY_WARRIOR</GoodyType>-->
+<!--				<GoodyType>GOODY_STONE_AXEMAN</GoodyType>-->
+<!--				<GoodyType>GOODY_STONE_AXEMAN</GoodyType>-->
+<!--				<GoodyType>GOODY_AXEMAN</GoodyType>-->
+<!--				<GoodyType>GOODY_AXEMAN</GoodyType>-->
+<!--				<GoodyType>GOODY_STONE_THROWER</GoodyType>-->
+<!--				<GoodyType>GOODY_STONE_THROWER</GoodyType>-->
+<!--				<GoodyType>GOODY_ARCHER</GoodyType>-->
+<!--				<GoodyType>GOODY_ARCHER</GoodyType>-->
+<!--				<GoodyType>GOODY_COMPOSITE_BOWMAN</GoodyType>-->
+<!--				<GoodyType>GOODY_COMPOSITE_BOWMAN</GoodyType>-->
+<!--				<GoodyType>GOODY_HORSEMAN</GoodyType>-->
+<!--				<GoodyType>GOODY_HORSEMAN</GoodyType>-->
+<!--				<GoodyType>GOODY_HORSEMAN_CLASSICAL</GoodyType>-->
+<!--				<GoodyType>GOODY_HORSEMAN_CLASSICAL</GoodyType>-->
 				<!-- Low Gold -->
 				<GoodyType>GOODY_LOW_GOLD</GoodyType>
 				<GoodyType>GOODY_LOW_GOLD</GoodyType>
@@ -2049,22 +2049,22 @@
 				<GoodyType>GOODY_HIGH_MEDIEVAL_EXPERIENCE</GoodyType>
 				<GoodyType>GOODY_HIGH_RENAISSANCE_EXPERIENCE</GoodyType>
 				<!-- Warrior -->
-				<GoodyType>GOODY_WARRIOR</GoodyType>
-				<GoodyType>GOODY_WARRIOR</GoodyType>
-				<GoodyType>GOODY_STONE_AXEMAN</GoodyType>
-				<GoodyType>GOODY_STONE_AXEMAN</GoodyType>
-				<GoodyType>GOODY_AXEMAN</GoodyType>
-				<GoodyType>GOODY_AXEMAN</GoodyType>
-				<GoodyType>GOODY_STONE_THROWER</GoodyType>
-				<GoodyType>GOODY_STONE_THROWER</GoodyType>
-				<GoodyType>GOODY_ARCHER</GoodyType>
-				<GoodyType>GOODY_ARCHER</GoodyType>
-				<GoodyType>GOODY_COMPOSITE_BOWMAN</GoodyType>
-				<GoodyType>GOODY_COMPOSITE_BOWMAN</GoodyType>
-				<GoodyType>GOODY_HORSEMAN</GoodyType>
-				<GoodyType>GOODY_HORSEMAN</GoodyType>
-				<GoodyType>GOODY_HORSEMAN_CLASSICAL</GoodyType>
-				<GoodyType>GOODY_HORSEMAN_CLASSICAL</GoodyType>
+<!--				<GoodyType>GOODY_WARRIOR</GoodyType>-->
+<!--				<GoodyType>GOODY_WARRIOR</GoodyType>-->
+<!--				<GoodyType>GOODY_STONE_AXEMAN</GoodyType>-->
+<!--				<GoodyType>GOODY_STONE_AXEMAN</GoodyType>-->
+<!--				<GoodyType>GOODY_AXEMAN</GoodyType>-->
+<!--				<GoodyType>GOODY_AXEMAN</GoodyType>-->
+<!--				<GoodyType>GOODY_STONE_THROWER</GoodyType>-->
+<!--				<GoodyType>GOODY_STONE_THROWER</GoodyType>-->
+<!--				<GoodyType>GOODY_ARCHER</GoodyType>-->
+<!--				<GoodyType>GOODY_ARCHER</GoodyType>-->
+<!--				<GoodyType>GOODY_COMPOSITE_BOWMAN</GoodyType>-->
+<!--				<GoodyType>GOODY_COMPOSITE_BOWMAN</GoodyType>-->
+<!--				<GoodyType>GOODY_HORSEMAN</GoodyType>-->
+<!--				<GoodyType>GOODY_HORSEMAN</GoodyType>-->
+<!--				<GoodyType>GOODY_HORSEMAN_CLASSICAL</GoodyType>-->
+<!--				<GoodyType>GOODY_HORSEMAN_CLASSICAL</GoodyType>-->
 				<!-- Low Gold -->
 				<GoodyType>GOODY_LOW_GOLD</GoodyType>
 				<GoodyType>GOODY_LOW_GOLD</GoodyType>
@@ -2423,22 +2423,22 @@
 				<GoodyType>GOODY_HIGH_MEDIEVAL_EXPERIENCE</GoodyType>
 				<GoodyType>GOODY_HIGH_RENAISSANCE_EXPERIENCE</GoodyType>
 				<!-- Warrior -->
-				<GoodyType>GOODY_WARRIOR</GoodyType>
-				<GoodyType>GOODY_WARRIOR</GoodyType>
-				<GoodyType>GOODY_STONE_AXEMAN</GoodyType>
-				<GoodyType>GOODY_STONE_AXEMAN</GoodyType>
-				<GoodyType>GOODY_AXEMAN</GoodyType>
-				<GoodyType>GOODY_AXEMAN</GoodyType>
-				<GoodyType>GOODY_STONE_THROWER</GoodyType>
-				<GoodyType>GOODY_STONE_THROWER</GoodyType>
-				<GoodyType>GOODY_ARCHER</GoodyType>
-				<GoodyType>GOODY_ARCHER</GoodyType>
-				<GoodyType>GOODY_COMPOSITE_BOWMAN</GoodyType>
-				<GoodyType>GOODY_COMPOSITE_BOWMAN</GoodyType>
-				<GoodyType>GOODY_HORSEMAN</GoodyType>
-				<GoodyType>GOODY_HORSEMAN</GoodyType>
-				<GoodyType>GOODY_HORSEMAN_CLASSICAL</GoodyType>
-				<GoodyType>GOODY_HORSEMAN_CLASSICAL</GoodyType>
+<!--				<GoodyType>GOODY_WARRIOR</GoodyType>-->
+<!--				<GoodyType>GOODY_WARRIOR</GoodyType>-->
+<!--				<GoodyType>GOODY_STONE_AXEMAN</GoodyType>-->
+<!--				<GoodyType>GOODY_STONE_AXEMAN</GoodyType>-->
+<!--				<GoodyType>GOODY_AXEMAN</GoodyType>-->
+<!--				<GoodyType>GOODY_AXEMAN</GoodyType>-->
+<!--				<GoodyType>GOODY_STONE_THROWER</GoodyType>-->
+<!--				<GoodyType>GOODY_STONE_THROWER</GoodyType>-->
+<!--				<GoodyType>GOODY_ARCHER</GoodyType>-->
+<!--				<GoodyType>GOODY_ARCHER</GoodyType>-->
+<!--				<GoodyType>GOODY_COMPOSITE_BOWMAN</GoodyType>-->
+<!--				<GoodyType>GOODY_COMPOSITE_BOWMAN</GoodyType>-->
+<!--				<GoodyType>GOODY_HORSEMAN</GoodyType>-->
+<!--				<GoodyType>GOODY_HORSEMAN</GoodyType>-->
+<!--				<GoodyType>GOODY_HORSEMAN_CLASSICAL</GoodyType>-->
+<!--				<GoodyType>GOODY_HORSEMAN_CLASSICAL</GoodyType>-->
 				<!-- Low Gold -->
 				<GoodyType>GOODY_LOW_GOLD</GoodyType>
 				<GoodyType>GOODY_LOW_GOLD</GoodyType>
@@ -2809,22 +2809,22 @@
 				<GoodyType>GOODY_HIGH_MEDIEVAL_EXPERIENCE</GoodyType>
 				<GoodyType>GOODY_HIGH_RENAISSANCE_EXPERIENCE</GoodyType>
 				<!-- Warrior -->
-				<GoodyType>GOODY_WARRIOR</GoodyType>
-				<GoodyType>GOODY_WARRIOR</GoodyType>
-				<GoodyType>GOODY_STONE_AXEMAN</GoodyType>
-				<GoodyType>GOODY_STONE_AXEMAN</GoodyType>
-				<GoodyType>GOODY_AXEMAN</GoodyType>
-				<GoodyType>GOODY_AXEMAN</GoodyType>
-				<GoodyType>GOODY_STONE_THROWER</GoodyType>
-				<GoodyType>GOODY_STONE_THROWER</GoodyType>
-				<GoodyType>GOODY_ARCHER</GoodyType>
-				<GoodyType>GOODY_ARCHER</GoodyType>
-				<GoodyType>GOODY_COMPOSITE_BOWMAN</GoodyType>
-				<GoodyType>GOODY_COMPOSITE_BOWMAN</GoodyType>
-				<GoodyType>GOODY_HORSEMAN</GoodyType>
-				<GoodyType>GOODY_HORSEMAN</GoodyType>
-				<GoodyType>GOODY_HORSEMAN_CLASSICAL</GoodyType>
-				<GoodyType>GOODY_HORSEMAN_CLASSICAL</GoodyType>
+<!--				<GoodyType>GOODY_WARRIOR</GoodyType>-->
+<!--				<GoodyType>GOODY_WARRIOR</GoodyType>-->
+<!--				<GoodyType>GOODY_STONE_AXEMAN</GoodyType>-->
+<!--				<GoodyType>GOODY_STONE_AXEMAN</GoodyType>-->
+<!--				<GoodyType>GOODY_AXEMAN</GoodyType>-->
+<!--				<GoodyType>GOODY_AXEMAN</GoodyType>-->
+<!--				<GoodyType>GOODY_STONE_THROWER</GoodyType>-->
+<!--				<GoodyType>GOODY_STONE_THROWER</GoodyType>-->
+<!--				<GoodyType>GOODY_ARCHER</GoodyType>-->
+<!--				<GoodyType>GOODY_ARCHER</GoodyType>-->
+<!--				<GoodyType>GOODY_COMPOSITE_BOWMAN</GoodyType>-->
+<!--				<GoodyType>GOODY_COMPOSITE_BOWMAN</GoodyType>-->
+<!--				<GoodyType>GOODY_HORSEMAN</GoodyType>-->
+<!--				<GoodyType>GOODY_HORSEMAN</GoodyType>-->
+<!--				<GoodyType>GOODY_HORSEMAN_CLASSICAL</GoodyType>-->
+<!--				<GoodyType>GOODY_HORSEMAN_CLASSICAL</GoodyType>-->
 				<!-- Low Gold -->
 				<GoodyType>GOODY_LOW_GOLD</GoodyType>
 				<GoodyType>GOODY_LOW_GOLD</GoodyType>
@@ -3203,22 +3203,22 @@
 				<GoodyType>GOODY_HIGH_MEDIEVAL_EXPERIENCE</GoodyType>
 				<GoodyType>GOODY_HIGH_RENAISSANCE_EXPERIENCE</GoodyType>
 				<!-- Warrior -->
-				<GoodyType>GOODY_WARRIOR</GoodyType>
-				<GoodyType>GOODY_WARRIOR</GoodyType>
-				<GoodyType>GOODY_STONE_AXEMAN</GoodyType>
-				<GoodyType>GOODY_STONE_AXEMAN</GoodyType>
-				<GoodyType>GOODY_AXEMAN</GoodyType>
-				<GoodyType>GOODY_AXEMAN</GoodyType>
-				<GoodyType>GOODY_STONE_THROWER</GoodyType>
-				<GoodyType>GOODY_STONE_THROWER</GoodyType>
-				<GoodyType>GOODY_ARCHER</GoodyType>
-				<GoodyType>GOODY_ARCHER</GoodyType>
-				<GoodyType>GOODY_COMPOSITE_BOWMAN</GoodyType>
-				<GoodyType>GOODY_COMPOSITE_BOWMAN</GoodyType>
-				<GoodyType>GOODY_HORSEMAN</GoodyType>
-				<GoodyType>GOODY_HORSEMAN</GoodyType>
-				<GoodyType>GOODY_HORSEMAN_CLASSICAL</GoodyType>
-				<GoodyType>GOODY_HORSEMAN_CLASSICAL</GoodyType>
+<!--				<GoodyType>GOODY_WARRIOR</GoodyType>-->
+<!--				<GoodyType>GOODY_WARRIOR</GoodyType>-->
+<!--				<GoodyType>GOODY_STONE_AXEMAN</GoodyType>-->
+<!--				<GoodyType>GOODY_STONE_AXEMAN</GoodyType>-->
+<!--				<GoodyType>GOODY_AXEMAN</GoodyType>-->
+<!--				<GoodyType>GOODY_AXEMAN</GoodyType>-->
+<!--				<GoodyType>GOODY_STONE_THROWER</GoodyType>-->
+<!--				<GoodyType>GOODY_STONE_THROWER</GoodyType>-->
+<!--				<GoodyType>GOODY_ARCHER</GoodyType>-->
+<!--				<GoodyType>GOODY_ARCHER</GoodyType>-->
+<!--				<GoodyType>GOODY_COMPOSITE_BOWMAN</GoodyType>-->
+<!--				<GoodyType>GOODY_COMPOSITE_BOWMAN</GoodyType>-->
+<!--				<GoodyType>GOODY_HORSEMAN</GoodyType>-->
+<!--				<GoodyType>GOODY_HORSEMAN</GoodyType>-->
+<!--				<GoodyType>GOODY_HORSEMAN_CLASSICAL</GoodyType>-->
+<!--				<GoodyType>GOODY_HORSEMAN_CLASSICAL</GoodyType>-->
 				<!-- Low Gold -->
 				<GoodyType>GOODY_LOW_GOLD</GoodyType>
 				<GoodyType>GOODY_LOW_GOLD</GoodyType>
@@ -3551,14 +3551,14 @@
 				<GoodyType>GOODY_HIGH_MEDIEVAL_EXPERIENCE</GoodyType>
 				<GoodyType>GOODY_HIGH_RENAISSANCE_EXPERIENCE</GoodyType>
 				<!-- Warrior -->
-				<GoodyType>GOODY_WARRIOR</GoodyType>
-				<GoodyType>GOODY_STONE_AXEMAN</GoodyType>
-				<GoodyType>GOODY_AXEMAN</GoodyType>
-				<GoodyType>GOODY_STONE_THROWER</GoodyType>
-				<GoodyType>GOODY_ARCHER</GoodyType>
-				<GoodyType>GOODY_COMPOSITE_BOWMAN</GoodyType>
-				<GoodyType>GOODY_HORSEMAN</GoodyType>
-				<GoodyType>GOODY_HORSEMAN_CLASSICAL</GoodyType>
+<!--				<GoodyType>GOODY_WARRIOR</GoodyType>-->
+<!--				<GoodyType>GOODY_STONE_AXEMAN</GoodyType>-->
+<!--				<GoodyType>GOODY_AXEMAN</GoodyType>-->
+<!--				<GoodyType>GOODY_STONE_THROWER</GoodyType>-->
+<!--				<GoodyType>GOODY_ARCHER</GoodyType>-->
+<!--				<GoodyType>GOODY_COMPOSITE_BOWMAN</GoodyType>-->
+<!--				<GoodyType>GOODY_HORSEMAN</GoodyType>-->
+<!--				<GoodyType>GOODY_HORSEMAN_CLASSICAL</GoodyType>-->
 				<!-- Low Gold -->
 				<GoodyType>GOODY_LOW_GOLD</GoodyType>
 				<GoodyType>GOODY_LOW_ANCIENT_GOLD</GoodyType>
@@ -3674,7 +3674,7 @@
 				<GoodyType>GOODY_HIGH_MEDIEVAL_EXPERIENCE</GoodyType>
 				<GoodyType>GOODY_HIGH_RENAISSANCE_EXPERIENCE</GoodyType>
 				<!-- Warrior -->
-				<GoodyType>GOODY_WARRIOR</GoodyType>
+<!--				<GoodyType>GOODY_WARRIOR</GoodyType>-->
 				<!-- Low Gold -->
 				<GoodyType>GOODY_LOW_GOLD</GoodyType>
 				<GoodyType>GOODY_LOW_GOLD</GoodyType>

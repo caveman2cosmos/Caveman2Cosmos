@@ -195,54 +195,54 @@
 			<Type>GOODY_LOW_MEDIEVAl_RESEARCH</Type>
 			<Description>TXT_KEY_GOODY_RESEARCH</Description>
 			<Sound>AS2D_GOODY_GOLD</Sound>
-			<iResearch>80</iResearch>
-			<iGoldRand1>80</iGoldRand1>
-			<iGoldRand2>80</iGoldRand2>
+			<iResearch>70</iResearch>
+			<iGoldRand1>70</iGoldRand1>
+			<iGoldRand2>70</iGoldRand2>
 			<EraType>C2C_ERA_MEDIEVAL</EraType>
 		</GoodyInfo>
 		<GoodyInfo>
 			<Type>GOODY_LOW_RENAISSANCE_RESEARCH</Type>
 			<Description>TXT_KEY_GOODY_RESEARCH</Description>
 			<Sound>AS2D_GOODY_GOLD</Sound>
-			<iResearch>160</iResearch>
-			<iGoldRand1>160</iGoldRand1>
-			<iGoldRand2>160</iGoldRand2>
+			<iResearch>110</iResearch>
+			<iGoldRand1>110</iGoldRand1>
+			<iGoldRand2>110</iGoldRand2>
 			<EraType>C2C_ERA_RENAISSANCE</EraType>
 		</GoodyInfo>
 		<GoodyInfo>
 			<Type>GOODY_LOW_INDUSTRIAL_RESEARCH</Type>
 			<Description>TXT_KEY_GOODY_RESEARCH</Description>
 			<Sound>AS2D_GOODY_GOLD</Sound>
-			<iResearch>320</iResearch>
-			<iGoldRand1>320</iGoldRand1>
-			<iGoldRand2>320</iGoldRand2>
+			<iResearch>160</iResearch>
+			<iGoldRand1>160</iGoldRand1>
+			<iGoldRand2>160</iGoldRand2>
 			<EraType>C2C_ERA_INDUSTRIAL</EraType>
 		</GoodyInfo>
 		<GoodyInfo>
 			<Type>GOODY_LOW_ATOMIC_RESEARCH</Type>
 			<Description>TXT_KEY_GOODY_RESEARCH</Description>
 			<Sound>AS2D_GOODY_GOLD</Sound>
-			<iResearch>640</iResearch>
-			<iGoldRand1>640</iGoldRand1>
-			<iGoldRand2>640</iGoldRand2>
+			<iResearch>220</iResearch>
+			<iGoldRand1>220</iGoldRand1>
+			<iGoldRand2>220</iGoldRand2>
 			<EraType>C2C_ERA_ATOMIC</EraType>
 		</GoodyInfo>
 		<GoodyInfo>
 			<Type>GOODY_LOW_INFORMATION_RESEARCH</Type>
 			<Description>TXT_KEY_GOODY_RESEARCH</Description>
 			<Sound>AS2D_GOODY_GOLD</Sound>
-			<iResearch>1280</iResearch>
-			<iGoldRand1>1280</iGoldRand1>
-			<iGoldRand2>1280</iGoldRand2>
+			<iResearch>290</iResearch>
+			<iGoldRand1>290</iGoldRand1>
+			<iGoldRand2>290</iGoldRand2>
 			<EraType>C2C_ERA_INFORMATION</EraType>
 		</GoodyInfo>
 		<GoodyInfo>
 			<Type>GOODY_LOW_NANOTECH_RESEARCH</Type>
 			<Description>TXT_KEY_GOODY_RESEARCH</Description>
 			<Sound>AS2D_GOODY_GOLD</Sound>
-			<iResearch>2560</iResearch>
-			<iGoldRand1>2560</iGoldRand1>
-			<iGoldRand2>2560</iGoldRand2>
+			<iResearch>370</iResearch>
+			<iGoldRand1>370</iGoldRand1>
+			<iGoldRand2>370</iGoldRand2>
 			<EraType>C2C_ERA_NANOTECH</EraType>
 		</GoodyInfo>
 		<GoodyInfo>
@@ -276,54 +276,54 @@
 			<Type>GOODY_HIGH_MEDIEVAl_RESEARCH</Type>
 			<Description>TXT_KEY_GOODY_RESEARCH</Description>
 			<Sound>AS2D_GOODY_GOLD</Sound>
-			<iResearch>160</iResearch>
-			<iGoldRand1>160</iGoldRand1>
-			<iGoldRand2>160</iGoldRand2>
+			<iResearch>140</iResearch>
+			<iGoldRand1>140</iGoldRand1>
+			<iGoldRand2>140</iGoldRand2>
 			<EraType>C2C_ERA_MEDIEVAL</EraType>
 		</GoodyInfo>
 		<GoodyInfo>
 			<Type>GOODY_HIGH_RENAISSANCE_RESEARCH</Type>
 			<Description>TXT_KEY_GOODY_RESEARCH</Description>
 			<Sound>AS2D_GOODY_GOLD</Sound>
-			<iResearch>320</iResearch>
-			<iGoldRand1>320</iGoldRand1>
-			<iGoldRand2>320</iGoldRand2>
+			<iResearch>220</iResearch>
+			<iGoldRand1>220</iGoldRand1>
+			<iGoldRand2>220</iGoldRand2>
 			<EraType>C2C_ERA_RENAISSANCE</EraType>
 		</GoodyInfo>
 		<GoodyInfo>
 			<Type>GOODY_HIGH_INDUSTRIAL_RESEARCH</Type>
 			<Description>TXT_KEY_GOODY_RESEARCH</Description>
 			<Sound>AS2D_GOODY_GOLD</Sound>
-			<iResearch>640</iResearch>
-			<iGoldRand1>640</iGoldRand1>
-			<iGoldRand2>640</iGoldRand2>
+			<iResearch>320</iResearch>
+			<iGoldRand1>320</iGoldRand1>
+			<iGoldRand2>320</iGoldRand2>
 			<EraType>C2C_ERA_INDUSTRIAL</EraType>
 		</GoodyInfo>
 		<GoodyInfo>
 			<Type>GOODY_HIGH_ATOMIC_RESEARCH</Type>
 			<Description>TXT_KEY_GOODY_RESEARCH</Description>
 			<Sound>AS2D_GOODY_GOLD</Sound>
-			<iResearch>1280</iResearch>
-			<iGoldRand1>1280</iGoldRand1>
-			<iGoldRand2>1280</iGoldRand2>
+			<iResearch>440</iResearch>
+			<iGoldRand1>440</iGoldRand1>
+			<iGoldRand2>440</iGoldRand2>
 			<EraType>C2C_ERA_ATOMIC</EraType>
 		</GoodyInfo>
 		<GoodyInfo>
 			<Type>GOODY_HIGH_INFORMATION_RESEARCH</Type>
 			<Description>TXT_KEY_GOODY_RESEARCH</Description>
 			<Sound>AS2D_GOODY_GOLD</Sound>
-			<iResearch>2560</iResearch>
-			<iGoldRand1>2560</iGoldRand1>
-			<iGoldRand2>2560</iGoldRand2>
+			<iResearch>580</iResearch>
+			<iGoldRand1>580</iGoldRand1>
+			<iGoldRand2>580</iGoldRand2>
 			<EraType>C2C_ERA_INFORMATION</EraType>
 		</GoodyInfo>
 		<GoodyInfo>
 			<Type>GOODY_HIGH_NANOTECH_RESEARCH</Type>
 			<Description>TXT_KEY_GOODY_RESEARCH</Description>
 			<Sound>AS2D_GOODY_GOLD</Sound>
-			<iResearch>5120</iResearch>
-			<iGoldRand1>5120</iGoldRand1>
-			<iGoldRand2>5120</iGoldRand2>
+			<iResearch>740</iResearch>
+			<iGoldRand1>740</iGoldRand1>
+			<iGoldRand2>740</iGoldRand2>
 			<EraType>C2C_ERA_NANOTECH</EraType>
 		</GoodyInfo>
 		<GoodyInfo>

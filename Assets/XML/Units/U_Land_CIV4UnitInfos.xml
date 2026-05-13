@@ -14356,44 +14356,30 @@
 					<iFeatureAttack>-25</iFeatureAttack>
 				</FeatureAttack>
 			</FeatureAttacks>
+            <UnitCombatMods>
+                <UnitCombatMod>
+                    <UnitCombatType>UNIT_SPEARMAN</UnitCombatType>
+                    <iUnitCombatMod>50</iUnitCombatMod>
+                </UnitCombatMod>
+                <UnitCombatMod>
+                    <UnitCombatType>UNITCOMBAT_ANIMAL</UnitCombatType>
+                    <iUnitCombatMod>50</iUnitCombatMod>
+                </UnitCombatMod>
+                <UnitCombatMod>
+                    <UnitCombatType>UNIT_HEAVY_PIKEMAN</UnitCombatType>
+                    <iUnitCombatMod>50</iUnitCombatMod>
+                </UnitCombatMod>
+                <UnitCombatMod>
+                    <UnitCombatType>UNITCOMBAT_ANIMAL</UnitCombatType>
+                    <iUnitCombatMod>50</iUnitCombatMod>
+                </UnitCombatMod>
+            </UnitCombatMods>
 			<UnitAttackMods>
 				<UnitAttackMod>
 					<UnitType>UNIT_CANNON</UnitType>
 					<iModifier>50</iModifier>
 				</UnitAttackMod>
-				<UnitAttackMod>
-					<UnitType>UNIT_SPEARMAN</UnitType>
-					<iModifier>50</iModifier>
-				</UnitAttackMod>
-				<UnitAttackMod>
-					<UnitType>UNIT_PIKEMAN</UnitType>
-					<iModifier>50</iModifier>
-				</UnitAttackMod>
-				<UnitAttackMod>
-					<UnitType>UNIT_HEAVY_PIKEMAN</UnitType>
-					<iModifier>50</iModifier>
-				</UnitAttackMod>
 			</UnitAttackMods>
-			<UnitDefenseMods>
-				<UnitDefenseMod>
-					<UnitType>UNIT_SPEARMAN</UnitType>
-					<iModifier>50</iModifier>
-				</UnitDefenseMod>
-				<UnitDefenseMod>
-					<UnitType>UNIT_PIKEMAN</UnitType>
-					<iModifier>50</iModifier>
-				</UnitDefenseMod>
-				<UnitDefenseMod>
-					<UnitType>UNIT_HEAVY_PIKEMAN</UnitType>
-					<iModifier>50</iModifier>
-				</UnitDefenseMod>
-			</UnitDefenseMods>
-			<UnitCombatMods>
-				<UnitCombatMod>
-					<UnitCombatType>UNITCOMBAT_ANIMAL</UnitCombatType>
-					<iUnitCombatMod>50</iUnitCombatMod>
-				</UnitCombatMod>
-			</UnitCombatMods>
 			<iAsset>4</iAsset>
 			<iPower>27</iPower>
 			<UnitMeshGroups>
