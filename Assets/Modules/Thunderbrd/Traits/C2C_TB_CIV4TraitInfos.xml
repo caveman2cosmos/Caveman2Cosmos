@@ -37210,7 +37210,7 @@
 			</Flavors>
 			<iHealth>-2</iHealth>
 			<iHappiness>1</iHappiness>
-			<iGreatPeopleRateModifier>-10</iGreatPeopleRateModifier>
+			<iGreatPeopleRateModifier>10</iGreatPeopleRateModifier>
 			<ExtraYieldThresholds>
 				<iExtraYieldThreshold>6</iExtraYieldThreshold>
 				<iExtraYieldThreshold>0</iExtraYieldThreshold>
