@@ -7824,13 +7824,13 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_ROMSETTINGS__FLEXIBLEDIFFICULTYMAXIMUMDIFF_LIST</Tag>
-		<English>No Maximum|Settler|Chieftain|Warlord|Noble|Prince|Monarch|Emperor|Immortal|Deity|Nightmare</English>
-		<French>Pas de Maximum|Colon|Chef|Seigneur|Régent|Prince|Monarque|Empereur|Immortel|Divinité|Cauchemar</French>
-		<German>Kein Maximum|Siedler|Häuptling|Kriegsherr|Adliger|Prinz|König|Kaiser|Unsterblicher|Gottheit|Nightmare</German>
-		<Italian>Nessun massimo|Colono|Capitano|Guerriero|Nobile|Principe|Monarca|Imperatore|Immortale|Divinità|Incubo</Italian>
-		<Spanish>Sin mínimo|Colono|Jefe|Caudillo|Noble|Príncipe|Monarca|Emperador|Immortal|Deidad|Nightmare</Spanish>
-		<Russian>Íåò Ìàêñèìóìà|Ïîñåëåíåö|Âîæäü|Ïîëêîâîäåö|Àðèñòîêðàò|Ïðèíö|Ìîíàðõ|Èìïåðàòîð|Áåññìåðòíûé|Áîæåñòâî</Russian>
-		<Polish>Brak maksimum|Osadnik|W&#243;dz|Wata&#191;ka|Szlachcic|Ksi&#185;&#191;&#234;|Monarcha|Cesarz|Nie&#156;miertelny|B&#243;stwo|Koszmar</Polish>
+		<English>No Maximum|Settler|Chieftain|Warlord|Noble|Prince|Monarch|Emperor|Immortal|Deity|Nightmare|Deeper Nightmare|Monarch but AI on Nightmare</English>
+		<French>Pas de Maximum|Colon|Chef|Seigneur|Régent|Prince|Monarque|Empereur|Immortel|Divinité|Cauchemar|Deeper Nightmare|Monarch but AI on Nightmare</French>
+		<German>Kein Maximum|Siedler|Häuptling|Kriegsherr|Adliger|Prinz|König|Kaiser|Unsterblicher|Gottheit|Nightmare|Deeper Nightmare|Monarch but AI on Nightmare</German>
+		<Italian>Nessun massimo|Colono|Capitano|Guerriero|Nobile|Principe|Monarca|Imperatore|Immortale|Divinità|Incubo|Deeper Nightmare|Monarch but AI on Nightmare</Italian>
+		<Spanish>Sin mínimo|Colono|Jefe|Caudillo|Noble|Príncipe|Monarca|Emperador|Immortal|Deidad|Nightmare|Deeper Nightmare|Monarch but AI on Nightmare</Spanish>
+		<Russian>Íåò Ìàêñèìóìà|Ïîñåëåíåö|Âîæäü|Ïîëêîâîäåö|Àðèñòîêðàò|Ïðèíö|Ìîíàðõ|Èìïåðàòîð|Áåññìåðòíûé|Áîæåñòâî|Deeper Nightmare|Monarch but AI on Nightmare</Russian>
+		<Polish>Brak maksimum|Osadnik|W&#243;dz|Wata&#191;ka|Szlachcic|Ksi&#185;&#191;&#234;|Monarcha|Cesarz|Nie&#156;miertelny|B&#243;stwo|Koszmar|Deeper Nightmare|Monarch but AI on Nightmare</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_ROMSETTINGS__FLEXIBLEDIFFICULTYMAXIMUMDIFF_TEXT</Tag>
@@ -7854,12 +7854,12 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_ROMSETTINGS__FLEXIBLEDIFFICULTYMINIMUMDIFF_LIST</Tag>
-		<English>No Minimum|Settler|Chieftain|Warlord|Noble|Prince|Monarch|Emperor|Immortal|Deity|Nightmare</English>
-		<French>Pas de Minimum|Colon|Chef|Seigneur|Régent|Prince|Monarque|Empereur|Immortel|Divinité|Cauchemar</French>
-		<German>Kein Minimum|Siedler|Häuptling|Kriegsherr|Adliger|Prinz|König|Kaiser|Unsterblicher|Gottheit|Nightmare</German>
-		<Italian>Nessun minimo|Colono|Capitano|Guerriero|Nobile|Principe|Monarca|Imperatore|Immortale|Divinità|Incubo</Italian>
-		<Spanish>Sin mínimo|Colono|Jefe|Caudillo|Noble|Príncipe|Monarca|Emperador|Immortal|Deidad|Nightmare</Spanish>
-		<Russian>Íåò Ìèíèìóìà|Ïîñåëåíåö|Âîæäü|Ïîëêîâîäåö|Àðèñòîêðàò|Ïðèíö|Ìîíàðõ|Èìïåðàòîð|Áåññìåðòíûé|Áîæåñòâî</Russian>
+		<English>No Minimum|Settler|Chieftain|Warlord|Noble|Prince|Monarch|Emperor|Immortal|Deity|Nightmare|Deeper Nightmare|Monarch but AI on Nightmare</English>
+		<French>Pas de Minimum|Colon|Chef|Seigneur|Régent|Prince|Monarque|Empereur|Immortel|Divinité|Cauchemar|Deeper Nightmare|Monarch but AI on Nightmare</French>
+		<German>Kein Minimum|Siedler|Häuptling|Kriegsherr|Adliger|Prinz|König|Kaiser|Unsterblicher|Gottheit|Nightmare|Deeper Nightmare|Monarch but AI on Nightmare</German>
+		<Italian>Nessun minimo|Colono|Capitano|Guerriero|Nobile|Principe|Monarca|Imperatore|Immortale|Divinità|Incubo|Deeper Nightmare|Monarch but AI on Nightmare</Italian>
+		<Spanish>Sin mínimo|Colono|Jefe|Caudillo|Noble|Príncipe|Monarca|Emperador|Immortal|Deidad|Nightmare|Deeper Nightmare|Monarch but AI on Nightmare</Spanish>
+		<Russian>Íåò Ìèíèìóìà|Ïîñåëåíåö|Âîæäü|Ïîëêîâîäåö|Àðèñòîêðàò|Ïðèíö|Ìîíàðõ|Èìïåðàòîð|Áåññìåðòíûé|Áîæåñòâî|Deeper Nightmare|Monarch but AI on Nightmare</Russian>
 		<Polish>Brak minimum|Osadnik|W&#243;dz|Wata&#191;ka|Szlachcic|Ksi&#185;&#191;&#234;|Monarcha|Cesarz|Nie&#156;miertelny|B&#243;stwo|Koszmar</Polish>
 	</TEXT>
 	<TEXT>
@@ -7881,13 +7881,13 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_ROMSETTINGS__FLEXIBLEDIFFICULTYAIMAXIMUMDIFF_LIST</Tag>
-		<English>No Maximum|Settler|Chieftain|Warlord|Noble|Prince|Monarch|Emperor|Immortal|Deity|Nightmare</English>
-		<French>Pas de Maximum|Colon|Chef|Seigneur|Régent|Prince|Monarque|Empereur|Immortel|Divinité|Cauchemar</French>
-		<German>Kein Maximum|Siedler|Häuptling|Kriegsherr|Adliger|Prinz|König|Kaiser|Unsterblicher|Gottheit|Nightmare</German>
-		<Italian>Nessun massimo|Colono|Capitano|Guerriero|Nobile|Principe|Monarca|Imperatore|Immortale|Divinità|Incubo</Italian>
-		<Spanish>Sin mínimo|Colono|Jefe|Caudillo|Noble|Príncipe|Monarca|Emperador|Immortal|Deidad|Nightmare</Spanish>
-		<Russian>Íåò Ìàêñèìóìà|Ïîñåëåíåö|Âîæäü|Ïîëêîâîäåö|Àðèñòîêðàò|Ïðèíö|Ìîíàðõ|Èìïåðàòîð|Áåññìåðòíûé|Áîæåñòâî</Russian>
-		<Polish>Brak maksimum|Osadnik|W&#243;dz|Wata&#191;ka|Szlachcic|Ksi&#185;&#191;&#234;|Monarcha|Cesarz|Nie&#156;miertelny|B&#243;stwo|Koszmar</Polish>
+		<English>No Maximum|Settler|Chieftain|Warlord|Noble|Prince|Monarch|Emperor|Immortal|Deity|Nightmare|Deeper Nightmare|Monarch but AI on Nightmare</English>
+		<French>Pas de Maximum|Colon|Chef|Seigneur|Régent|Prince|Monarque|Empereur|Immortel|Divinité|Cauchemar|Deeper Nightmare|Monarch but AI on Nightmare</French>
+		<German>Kein Maximum|Siedler|Häuptling|Kriegsherr|Adliger|Prinz|König|Kaiser|Unsterblicher|Gottheit|Nightmare|Deeper Nightmare|Monarch but AI on Nightmare</German>
+		<Italian>Nessun massimo|Colono|Capitano|Guerriero|Nobile|Principe|Monarca|Imperatore|Immortale|Divinità|Incubo|Deeper Nightmare|Monarch but AI on Nightmare</Italian>
+		<Spanish>Sin mínimo|Colono|Jefe|Caudillo|Noble|Príncipe|Monarca|Emperador|Immortal|Deidad|Nightmare|Deeper Nightmare|Monarch but AI on Nightmare</Spanish>
+		<Russian>Íåò Ìàêñèìóìà|Ïîñåëåíåö|Âîæäü|Ïîëêîâîäåö|Àðèñòîêðàò|Ïðèíö|Ìîíàðõ|Èìïåðàòîð|Áåññìåðòíûé|Áîæåñòâî|Deeper Nightmare|Monarch but AI on Nightmare</Russian>
+		<Polish>Brak maksimum|Osadnik|W&#243;dz|Wata&#191;ka|Szlachcic|Ksi&#185;&#191;&#234;|Monarcha|Cesarz|Nie&#156;miertelny|B&#243;stwo|Koszmar|Deeper Nightmare|Monarch but AI on Nightmare</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_ROMSETTINGS__FLEXIBLEDIFFICULTYAIMAXIMUMDIFF_TEXT</Tag>
@@ -7908,13 +7908,13 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_ROMSETTINGS__FLEXIBLEDIFFICULTYAIMINIMUMDIFF_LIST</Tag>
-		<English>No Minimum|Settler|Chieftain|Warlord|Noble|Prince|Monarch|Emperor|Immortal|Deity|Nightmare</English>
-		<French>Pas de Minimum|Colon|Chef|Seigneur|Régent|Prince|Monarque|Empereur|Immortel|Divinité|Cauchemar</French>
-		<German>Kein Minimum|Siedler|Häuptling|Kriegsherr|Adliger|Prinz|König|Kaiser|Unsterblicher|Gottheit|Nightmare</German>
-		<Italian>Nessun minimo|Colono|Capitano|Guerriero|Nobile|Principe|Monarca|Imperatore|Immortale|Divinità|Incubo</Italian>
-		<Spanish>Sin mínimo|Colono|Jefe|Caudillo|Noble|Príncipe|Monarca|Emperador|Immortal|Deidad|Nightmare</Spanish>
-		<Russian>Íåò Ìèíèìóìà|Ïîñåëåíåö|Âîæäü|Ïîëêîâîäåö|Àðèñòîêðàò|Ïðèíö|Ìîíàðõ|Èìïåðàòîð|Áåññìåðòíûé|Áîæåñòâî</Russian>
-		<Polish>Brak minimum|Osadnik|W&#243;dz|Wata&#191;ka|Szlachcic|Ksi&#185;&#191;&#234;|Monarcha|Cesarz|Nie&#156;miertelny|B&#243;stwo|Koszmar</Polish>
+		<English>No Minimum|Settler|Chieftain|Warlord|Noble|Prince|Monarch|Emperor|Immortal|Deity|Nightmare|Deeper Nightmare|Monarch but AI on Nightmare</English>
+		<French>Pas de Minimum|Colon|Chef|Seigneur|Régent|Prince|Monarque|Empereur|Immortel|Divinité|Cauchemar|Deeper Nightmare|Monarch but AI on Nightmare</French>
+		<German>Kein Minimum|Siedler|Häuptling|Kriegsherr|Adliger|Prinz|König|Kaiser|Unsterblicher|Gottheit|Nightmare|Deeper Nightmare|Monarch but AI on Nightmare</German>
+		<Italian>Nessun minimo|Colono|Capitano|Guerriero|Nobile|Principe|Monarca|Imperatore|Immortale|Divinità|Incubo|Deeper Nightmare|Monarch but AI on Nightmare</Italian>
+		<Spanish>Sin mínimo|Colono|Jefe|Caudillo|Noble|Príncipe|Monarca|Emperador|Immortal|Deidad|Nightmare|Deeper Nightmare|Monarch but AI on Nightmare</Spanish>
+		<Russian>Íåò Ìèíèìóìà|Ïîñåëåíåö|Âîæäü|Ïîëêîâîäåö|Àðèñòîêðàò|Ïðèíö|Ìîíàðõ|Èìïåðàòîð|Áåññìåðòíûé|Áîæåñòâî|Deeper Nightmare|Monarch but AI on Nightmare</Russian>
+		<Polish>Brak minimum|Osadnik|W&#243;dz|Wata&#191;ka|Szlachcic|Ksi&#185;&#191;&#234;|Monarcha|Cesarz|Nie&#156;miertelny|B&#243;stwo|Koszmar|Deeper Nightmare|Monarch but AI on Nightmare</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_ROMSETTINGS__FLEXIBLEDIFFICULTYAIMINIMUMDIFF_TEXT</Tag>

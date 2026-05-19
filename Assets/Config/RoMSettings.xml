@@ -91,26 +91,26 @@
 				<change module="ANewDawnSettings" function="changedMinCityDistance"/>
 			</list>
 			<list id="FlexibleDifficultyMinimumDiff" key="FlexibleDifficultyMinimumDiff" type="int" default="0" listType="string"
-				values="No Minimum|Settler|Chieftan|Warlord|Noble|Prince|Monarch|Emperor|Immortal|Deity|Nightmare"
+				values="No Minimum|Settler|Chieftan|Warlord|Noble|Prince|Monarch|Emperor|Immortal|Deity|Nightmare|Deeper Nightmare|Monarch but AI on Nightmare"
 				get="getFlexibleDifficultyMinimumDiff" set="setFlexibleDifficultyMinimumDiff">
 
 				<change module="ANewDawnSettings" function="changedFlexibleDifficultyMinimumDiff"/>
 			</list>
 			<list id="FlexibleDifficultyMaximumDiff" key="FlexibleDifficultyMaximumDiff" type="int" default="0" listType="string"
-				values="No Maximum|Settler|Chieftan|Warlord|Noble|Prince|Monarch|Emperor|Immortal|Deity|Nightmare"
+				values="No Maximum|Settler|Chieftan|Warlord|Noble|Prince|Monarch|Emperor|Immortal|Deity|Nightmare|Deeper Nightmare|Monarch but AI on Nightmare"
 				get="getFlexibleDifficultyMaximumDiff" set="setFlexibleDifficultyMaximumDiff">
 
 				<change module="ANewDawnSettings" function="changedFlexibleDifficultyMaximumDiff"/>
 			</list>
 
 			<list id="FlexibleDifficultyAIMinimumDiff" key="FlexibleDifficultyAIMinimumDiff" type="int" default="0" listType="string"
-				values="No Minimum|Settler|Chieftan|Warlord|Noble|Prince|Monarch|Emperor|Immortal|Deity|Nightmare"
+				values="No Minimum|Settler|Chieftan|Warlord|Noble|Prince|Monarch|Emperor|Immortal|Deity|Nightmare|Deeper Nightmare|Monarch but AI on Nightmare"
 				get="getFlexibleDifficultyAIMinimumDiff" set="setFlexibleDifficultyAIMinimumDiff">
 
 				<change module="ANewDawnSettings" function="changedFlexibleDifficultyAIMinimumDiff"/>
 			</list>
 			<list id="FlexibleDifficultyAIMaximumDiff" key="FlexibleDifficultyAIMaximumDiff" type="int" default="0" listType="string"
-				values="No Maximum|Settler|Chieftan|Warlord|Noble|Prince|Monarch|Emperor|Immortal|Deity|Nightmare"
+				values="No Maximum|Settler|Chieftan|Warlord|Noble|Prince|Monarch|Emperor|Immortal|Deity|Nightmare|Deeper Nightmare|Monarch but AI on Nightmare"
 				get="getFlexibleDifficultyAIMaximumDiff" set="setFlexibleDifficultyAIMaximumDiff">
 
 				<change module="ANewDawnSettings" function="changedFlexibleDifficultyAIMaximumDiff"/>
@@ -147,7 +147,7 @@ values="Current Color|Black|Blue|Brown|Cyan|Dark Blue|Dark Cyan|Dark Green|Dark 
 				<change module="ANewDawnSettings" function="changedPlayerColor"/>
 			</list>
 			<list id="CurrentDifficulty" key="CurrentDifficulty" type="int" default="0" listType="string"
-				values="No Maximum|Settler|Chieftan|Warlord|Noble|Prince|Monarch|Emperor|Immortal|Deity|Nightmare" get="getCurrentDifficulty" set="setCurrentDifficulty">
+				values="No Maximum|Settler|Chieftan|Warlord|Noble|Prince|Monarch|Emperor|Immortal|Deity|Nightmare|Deeper Nightmare|Monarch but AI on Nightmare" get="getCurrentDifficulty" set="setCurrentDifficulty">
 
 				<change module="ANewDawnSettings" function="changedCurrentDifficulty"/>
 			</list>

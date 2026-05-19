@@ -11064,7 +11064,7 @@ int CvCity::getAdditionalExtraYieldByBuilding(YieldTypes eIndex, BuildingTypes e
 
 	for (int iI = 0; iI < GC.getNumBonusInfos(); ++iI)
     {
-       if (eBuilding == (BuildingTypes)GC.getInfoTypeForString("BUILDING_STORAGE"))
+       if (eBuilding == (BuildingTypes)GC.getInfoTypeForString("BUILDING_STORAGE_EMPIRE"))
        {
            int iBonusCount = GET_PLAYER(getOwner()).getNumAvailableBonuses((BonusTypes)iI);
            int iCityCount = GET_PLAYER(getOwner()).getNumCities();
