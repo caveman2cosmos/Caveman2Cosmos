@@ -4685,6 +4685,50 @@
 			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 
+        <BuildingInfo>
+            <Type>BUILDING_GOLD_VAULT</Type>
+            <iMaxPlayerInstances>1</iMaxPlayerInstances>
+            <Description>TXT_KEY_BUILDING_GOLD_VAULT</Description>
+            <Civilopedia>TXT_KEY_BUILDING_GOLD_VAULT_PEDIA</Civilopedia>
+            <Advisor>ADVISOR_ECONOMY</Advisor>
+            <ArtDefineTag>ART_DEF_BUILDING_GOLD_VAULT</ArtDefineTag>
+            <ConstructSound>AS2D_BUILD_MUSEUM</ConstructSound>
+            <fVisibilityPriority>1</fVisibilityPriority>
+            <MapCategoryTypes>
+                <MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+            </MapCategoryTypes>
+            <PrereqBonuses>
+                <Bonus>BONUS_GOLD_ORE</Bonus>
+            </PrereqBonuses>
+            <PrereqInCityBuildings>
+                <BuildingType>BUILDING_PALACE</BuildingType>
+            </PrereqInCityBuildings>
+            <PrereqTech>TECH_NATIONALISM</PrereqTech>
+            <PrereqAndCivics>
+                <PrereqCivic>
+                    <CivicOption>CIVIC_GOLD_STANDARD</CivicOption>
+                    <bPrereqCivic>1</bPrereqCivic>
+                </PrereqCivic>
+            </PrereqAndCivics>
+            <bRequiresActiveCivics>1</bRequiresActiveCivics>
+            <iCost>999</iCost>
+            <iCostSizeModifier>2</iCostSizeModifier>
+            <iCostCountModifier>0</iCostCountModifier>
+            <iCostMaterialsModifier>1</iCostMaterialsModifier>
+            <iCostComplexityModifier>2</iCostComplexityModifier>
+            <GlobalCommerceModifiers>
+                <iCommerce>7</iCommerce>
+            </GlobalCommerceModifiers>
+            <iAsset>4</iAsset>
+            <Flavors>
+                <Flavor>
+                    <FlavorType>FLAVOR_GOLD</FlavorType>
+                    <iFlavor>5</iFlavor>
+                </Flavor>
+            </Flavors>
+            <iHurryCostModifier>100</iHurryCostModifier>
+        </BuildingInfo>
+
 		<BuildingInfo>
 			<Type>BUILDING_NATIONAL_MEDICAL_DATABASE</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>

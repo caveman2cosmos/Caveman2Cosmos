@@ -2618,7 +2618,7 @@
 				</UnitCombatTarget>
 			</UnitCombatTargets>
 			<iCost>132</iCost>
-			<iBaseUpkeep>2</iBaseUpkeep>
+			<iBaseUpkeep>3</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iCombat>5</iCombat>
 			<FlankingStrikesbyUnitCombat>
@@ -2756,7 +2756,7 @@
 					<iProductonModifier>15</iProductonModifier>
 				</BonusProductionModifier>
 			</BonusProductionModifiers>
-			<iBaseUpkeep>3</iBaseUpkeep>
+			<iBaseUpkeep>4</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iCombat>10</iCombat>
 			<iCollateralDamageLimit>100</iCollateralDamageLimit>
@@ -2913,7 +2913,7 @@
 				</UnitCombatTarget>
 			</UnitCombatTargets>
 			<iCost>425</iCost>
-			<iBaseUpkeep>4</iBaseUpkeep>
+			<iBaseUpkeep>5</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iCombat>20</iCombat>
 			<FlankingStrikesbyUnitCombat>
@@ -3068,7 +3068,7 @@
 				</UnitCombatTarget>
 			</UnitCombatTargets>
 			<iCost>800</iCost>
-			<iBaseUpkeep>5</iBaseUpkeep>
+			<iBaseUpkeep>6</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iCombat>36</iCombat>
 			<FlankingStrikesbyUnitCombat>
@@ -3250,7 +3250,7 @@
 				</UnitCombatTarget>
 			</UnitCombatTargets>
 			<iCost>5300</iCost>
-			<iBaseUpkeep>7</iBaseUpkeep>
+			<iBaseUpkeep>8</iBaseUpkeep>
 			<iMoves>3</iMoves>
 			<iCombat>160</iCombat>
 			<FlankingStrikesbyUnitCombat>

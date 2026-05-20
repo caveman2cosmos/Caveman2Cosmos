@@ -42494,7 +42494,7 @@
 			<iCost>140</iCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>
-			<iWorkRate>240</iWorkRate>
+			<iWorkRate>160</iWorkRate>
 			<iAsset>1</iAsset>
 			<UnitMeshGroups>
 				<iGroupSize>2</iGroupSize>
