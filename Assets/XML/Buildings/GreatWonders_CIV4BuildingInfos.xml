@@ -14358,62 +14358,62 @@
 				<iCommerce>4</iCommerce>
 			</CommerceChanges>
 			<VicinityBonusYieldChanges>
-				<BonusYieldChanges>
+				<BonusYieldChange>
 					<BonusType>BONUS_PEARLS</BonusType>
 					<YieldChanges>
 						<iYield>0</iYield>
 						<iYield>0</iYield>
 						<iYield>1</iYield>
 					</YieldChanges>
-				</BonusYieldChanges>
-				<BonusYieldChanges>
+				</BonusYieldChange>
+				<BonusYieldChange>
 					<BonusType>BONUS_FISH</BonusType>
 					<YieldChanges>
 						<iYield>0</iYield>
 						<iYield>0</iYield>
 						<iYield>1</iYield>
 					</YieldChanges>
-				</BonusYieldChanges>
-				<BonusYieldChanges>
+				</BonusYieldChange>
+				<BonusYieldChange>
 					<BonusType>BONUS_SHRIMP</BonusType>
 					<YieldChanges>
 						<iYield>0</iYield>
 						<iYield>0</iYield>
 						<iYield>1</iYield>
 					</YieldChanges>
-				</BonusYieldChanges>
-				<BonusYieldChanges>
+				</BonusYieldChange>
+				<BonusYieldChange>
 					<BonusType>BONUS_LOBSTER</BonusType>
 					<YieldChanges>
 						<iYield>0</iYield>
 						<iYield>0</iYield>
 						<iYield>1</iYield>
 					</YieldChanges>
-				</BonusYieldChanges>
-				<BonusYieldChanges>
+				</BonusYieldChange>
+				<BonusYieldChange>
 					<BonusType>BONUS_WHALE</BonusType>
 					<YieldChanges>
 						<iYield>0</iYield>
 						<iYield>0</iYield>
 						<iYield>1</iYield>
 					</YieldChanges>
-				</BonusYieldChanges>
-				<BonusYieldChanges>
+				</BonusYieldChange>
+				<BonusYieldChange>
 					<BonusType>BONUS_CLAM</BonusType>
 					<YieldChanges>
 						<iYield>0</iYield>
 						<iYield>0</iYield>
 						<iYield>1</iYield>
 					</YieldChanges>
-				</BonusYieldChanges>
-				<BonusYieldChanges>
+				</BonusYieldChange>
+				<BonusYieldChange>
 					<BonusType>BONUS_CRAB</BonusType>
 					<YieldChanges>
 						<iYield>0</iYield>
 						<iYield>0</iYield>
 						<iYield>1</iYield>
 					</YieldChanges>
-				</BonusYieldChanges>
+				</BonusYieldChange>
 			</VicinityBonusYieldChanges>
 			<TechCommerceChanges>
 				<TechCommerceChange>
