@@ -201,7 +201,7 @@
 			</SpecialistYieldChanges>
 			<GreatPeopleUnitType>UNIT_MERCHANT</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
-			<iTradeRouteModifier>50</iTradeRouteModifier>
+			<iTradeRouteModifier>25</iTradeRouteModifier>
 			<bForceAllTradeRoutes>1</bForceAllTradeRoutes>
 			<iAsset>8</iAsset>
 			<Flavors>

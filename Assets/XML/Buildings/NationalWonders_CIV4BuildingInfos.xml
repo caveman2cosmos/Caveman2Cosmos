@@ -6604,6 +6604,7 @@
 			<Description>TXT_KEY_BUILDING_PALACE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_PALACE_PEDIA</Civilopedia>
 			<iCost>200</iCost>
+            <iRevIdxLocal>-10</iRevIdxLocal>
 			<iCostSizeModifier>3</iCostSizeModifier>
 			<iCostCountModifier>0</iCostCountModifier>
 			<iCostMaterialsModifier>2</iCostMaterialsModifier>
