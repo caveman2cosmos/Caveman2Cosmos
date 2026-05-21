@@ -26584,7 +26584,7 @@
 			<iCombat>2</iCombat>
 			<iXPValueAttack>1</iXPValueAttack>
 			<iXPValueDefense>2</iXPValueDefense>
-			<iCityDefense>200</iCityDefense>
+			<iCityDefense>250</iCityDefense>
 			<iAsset>1</iAsset>
 			<iPower>3</iPower>
             <PrereqAndBuildings>
@@ -26659,7 +26659,7 @@
             <iCombat>3</iCombat>
             <iXPValueAttack>1</iXPValueAttack>
             <iXPValueDefense>2</iXPValueDefense>
-            <iCityDefense>200</iCityDefense>
+            <iCityDefense>250</iCityDefense>
             <iAsset>1</iAsset>
             <iPower>3</iPower>
             <PrereqAndBuildings>
@@ -26734,7 +26734,7 @@
             <iCombat>4</iCombat>
             <iXPValueAttack>1</iXPValueAttack>
             <iXPValueDefense>2</iXPValueDefense>
-            <iCityDefense>200</iCityDefense>
+            <iCityDefense>250</iCityDefense>
             <iAsset>1</iAsset>
             <iPower>3</iPower>
             <PrereqAndBuildings>

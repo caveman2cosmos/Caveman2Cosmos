@@ -635,8 +635,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_AGGRESSIVE0</Tag>
-		<English>Aggressive 0</English>
-		<French>Agressif 0</French>
+		<English>Aggressive I</English>
+		<French>Agressif I</French>
 		<Italian>Aggressivo I</Italian>
 		<Russian>Милитаризм I</Russian>
 	</TEXT>
@@ -672,8 +672,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_AGRICULTURAL0</Tag>
-		<English>Agricultural 0</English>
-		<French>Agricole 0</French>
+		<English>Agricultural I</English>
+		<French>Agricole I</French>
 		<Italian>Agricolo I</Italian>
 		<Russian>Сельское хозяйство I</Russian>
 	</TEXT>
@@ -905,8 +905,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_ANTI_CLERICAL0</Tag>
-		<English>Anti Clerical 0</English>
-		<French>Anticlérical 0</French>
+		<English>Anti Clerical I</English>
+		<French>Anticlérical I</French>
 		<Italian>Anticlericale I</Italian>
 		<Russian>Антиклерикализм I</Russian>
 	</TEXT>
@@ -1219,8 +1219,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_BARBARIC0</Tag>
-		<English>Barbaric 0</English>
-		<French>Barbare 0</French>
+		<English>Barbaric I</English>
+		<French>Barbare I</French>
 		<Italian>Barbaro I</Italian>
 		<Russian>Неотесанность I</Russian>
 	</TEXT>
@@ -1275,8 +1275,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_CHARISMATIC0</Tag>
-		<English>Charismatic 0</English>
-		<French>Charismatique 0</French>
+		<English>Charismatic I</English>
+		<French>Charismatique I</French>
 		<Italian>Carismatico I</Italian>
 		<Russian>Харизма I</Russian>
 	</TEXT>
@@ -1306,8 +1306,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_CREATIVE0</Tag>
-		<English>Creative 0</English>
-		<French>Créatif 0</French>
+		<English>Creative I</English>
+		<French>Créatif I</French>
 		<Italian>Creativo I</Italian>
 		<Russian>Меценатство I</Russian>
 	</TEXT>
@@ -1350,7 +1350,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_CRUEL0</Tag>
-		<English>Cruel 0</English>
+		<English>Cruel I</English>
 		<Italian>Crudele I</Italian>
 		<Russian>Жестокость I</Russian>
 	</TEXT>
@@ -1399,8 +1399,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_DECEIVER0</Tag>
-		<English>Deceiver 0</English>
-		<French>Trompeur 0</French>
+		<English>Deceiver I</English>
+		<French>Trompeur I</French>
 		<Italian>Imbroglione I</Italian>
 		<Russian>Интриганство I</Russian>
 	</TEXT>
@@ -1444,8 +1444,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_EXCESSIVE0</Tag>
-		<English>Excessive 0</English>
-		<French>Excessif 0</French>
+		<English>Excessive I</English>
+		<French>Excessif I</French>
 		<Italian>Eccessivo I</Italian>
 		<Russian>Расточительность I</Russian>
 	</TEXT>
@@ -1501,8 +1501,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_EXPANSIVE0</Tag>
-		<English>Expansive 0</English>
-		<French>Expansif 0</French>
+		<English>Expansive I</English>
+		<French>Expansif I</French>
 		<Italian>Espansionista I</Italian>
 		<Russian>Экспансионизм I</Russian>
 	</TEXT>
@@ -1545,8 +1545,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_FANATICAL0</Tag>
-		<English>Fanatical 0</English>
-		<French>Fanatique 0</French>
+		<English>Fanatical I</English>
+		<French>Fanatique I</French>
 		<Italian>Fanatico I</Italian>
 		<Russian>Фанатизм I</Russian>
 	</TEXT>
@@ -1597,8 +1597,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_FINANCIAL0</Tag>
-		<English>Financial 0</English>
-		<French>Financier 0</French>
+		<English>Financial I</English>
+		<French>Financier I</French>
 		<Italian>Economista I</Italian>
 		<Russian>Коммерция I</Russian>
 	</TEXT>
@@ -1640,8 +1640,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_FOREIGN0</Tag>
-		<English>Foreign 0</English>
-		<French>Étranger 0</French>
+		<English>Foreign I</English>
+		<French>Étranger I</French>
 		<Italian>Straniero I</Italian>
 		<Russian>Ксенофилия I</Russian>
 	</TEXT>
@@ -1688,8 +1688,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_HUMANITARIAN0</Tag>
-		<English>Humanitarian 0</English>
-		<French>Humanitaire 0</French>
+		<English>Humanitarian I</English>
+		<French>Humanitaire I</French>
 		<Italian>Filantropo I</Italian>
 		<Russian>Гуманизм I</Russian>
 	</TEXT>
@@ -1730,8 +1730,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_HUNTER_GATHERER0</Tag>
-		<English>Hunter-Gatherer 0</English>
-		<French>Chasseur-Cueilleur 0</French>
+		<English>Hunter-Gatherer I</English>
+		<French>Chasseur-Cueilleur I</French>
 		<Italian>Cacciatore-raccoglitore I</Italian>
 		<Russian>Охота и собирательство I</Russian>
 	</TEXT>
@@ -1787,8 +1787,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_IDEALISTIC0</Tag>
-		<English>Idealistic 0</English>
-		<French>Idéaliste 0</French>
+		<English>Idealistic I</English>
+		<French>Idéaliste I</French>
 		<Italian>Idealista I</Italian>
 		<Russian>Идеализм I</Russian>
 	</TEXT>
@@ -1836,8 +1836,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_IMPERIALIST0</Tag>
-		<English>Imperialistic 0</English>
-		<French>Impérialiste 0</French>
+		<English>Imperialistic I</English>
+		<French>Impérialiste I</French>
 		<Italian>Imperialista I</Italian>
 		<Russian>Империализм I</Russian>
 	</TEXT>
@@ -1866,8 +1866,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_INDUSTRIOUS0</Tag>
-		<English>Industrious 0</English>
-		<French>Industrieux 0</French>
+		<English>Industrious I</English>
+		<French>Industrieux I</French>
 		<Italian>Industrioso I</Italian>
 		<Russian>Строительство I</Russian>
 	</TEXT>
@@ -1909,8 +1909,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_ISOLATIONIST0</Tag>
-		<English>Isolationist 0</English>
-		<French>Isolationniste 0</French>
+		<English>Isolationist I</English>
+		<French>Isolationniste I</French>
 		<Italian>Isolazionista I</Italian>
 		<Russian>Изоляционизм I</Russian>
 	</TEXT>
@@ -1966,8 +1966,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_MEGALOMANIAC0</Tag>
-		<English>Megalomaniac 0</English>
-		<French>Mégalomane 0</French>
+		<English>Megalomaniac I</English>
+		<French>Mégalomane I</French>
 		<Italian>Megalomane I</Italian>
 		<Russian>Мегаломания I</Russian>
 	</TEXT>
@@ -2014,8 +2014,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_NOMAD0</Tag>
-		<English>Nomad 0</English>
-		<French>Nomade 0</French>
+		<English>Nomad I</English>
+		<French>Nomade I</French>
 		<Italian>Nomade I</Italian>
 		<Russian>Кочевничество I</Russian>
 	</TEXT>
@@ -2054,8 +2054,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_ORGANIZED0</Tag>
-		<English>Organized 0</English>
-		<French>Organisé 0</French>
+		<English>Organized I</English>
+		<French>Organisé I</French>
 		<Italian>Organizzato I</Italian>
 		<Russian>Организованность I</Russian>
 	</TEXT>
@@ -2093,8 +2093,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_PHILOSOPHICAL0</Tag>
-		<English>Philosophical 0</English>
-		<French>Philosophe 0</French>
+		<English>Philosophical I</English>
+		<French>Philosophe I</French>
 		<Italian>Filosofo I</Italian>
 		<Russian>Философия I</Russian>
 	</TEXT>
@@ -2136,8 +2136,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_POLITICIAN0</Tag>
-		<English>Politician 0</English>
-		<French>Politicien 0</French>
+		<English>Politician I</English>
+		<French>Politicien I</French>
 		<Italian>Politico I</Italian>
 		<Russian>Политика I</Russian>
 	</TEXT>
@@ -2192,8 +2192,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_POPULIST0</Tag>
-		<English>Populist 0</English>
-		<French>Populiste 0</French>
+		<English>Populist I</English>
+		<French>Populiste I</French>
 		<Italian>Populista I</Italian>
 		<Russian>Популизм I</Russian>
 	</TEXT>
@@ -2248,8 +2248,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_PROGRESSIST0</Tag>
-		<English>Progressist 0</English>
-		<French>Progressiste 0</French>
+		<English>Progressist I</English>
+		<French>Progressiste I</French>
 		<Italian>Progressista I</Italian>
 		<Russian>Прогрессивизм I</Russian>
 	</TEXT>
@@ -2305,8 +2305,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_PROTECTIVE0</Tag>
-		<English>Protective 0</English>
-		<French>Protecteur 0</French>
+		<English>Protective I</English>
+		<French>Protecteur I</French>
 		<Italian>Protettivo I</Italian>
 		<Russian>Защита I</Russian>
 	</TEXT>
@@ -2339,8 +2339,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_REVOLUTIONARY0</Tag>
-		<English>Revolutionary 0</English>
-		<French>Révolutionnaire 0</French>
+		<English>Revolutionary I</English>
+		<French>Révolutionnaire I</French>
 		<Italian>Rivoluzionario I</Italian>
 		<Russian>Революционность I</Russian>
 	</TEXT>
@@ -2387,8 +2387,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_SCIENTIFIC0</Tag>
-		<English>Scientific 0</English>
-		<French>Scientifique 0</French>
+		<English>Scientific I</English>
+		<French>Scientifique I</French>
 		<Italian>Scientifico I</Italian>
 		<Russian>Наука I</Russian>
 	</TEXT>
@@ -2424,8 +2424,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_SEAFARING0</Tag>
-		<English>Seafaring 0</English>
-		<French>Maritime 0</French>
+		<English>Seafaring I</English>
+		<French>Maritime I</French>
 		<Italian>Marinaio I</Italian>
 		<Russian>Мореплавание I</Russian>
 	</TEXT>
@@ -2465,8 +2465,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_SPIRITUAL0</Tag>
-		<English>Spiritual 0</English>
-		<French>Spirituel 0</French>
+		<English>Spiritual I</English>
+		<French>Spirituel I</French>
 		<Italian>Spirituale I</Italian>
 		<Russian>Мистицизм I</Russian>
 	</TEXT>
@@ -2508,8 +2508,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_TEMPERAMENTAL0</Tag>
-		<English>Temperamental 0</English>
-		<French>Capricieux 0</French>
+		<English>Temperamental I</English>
+		<French>Capricieux I</French>
 		<Italian>Volubile I</Italian>
 		<Russian>Непостоянство I</Russian>
 	</TEXT>

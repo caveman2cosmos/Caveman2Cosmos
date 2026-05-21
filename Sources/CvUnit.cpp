@@ -12204,7 +12204,7 @@ DomainTypes CvUnit::getDomainType() const
 {
         if (isCommodore())
         {
-                return DOMAIN_SEA;
+                return DOMAIN_LAND;
         }
         return m_pUnitInfo->getDomainType();
 }
