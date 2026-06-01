@@ -1375,7 +1375,7 @@
 			<Description>TXT_KEY_UNIT_NEANDERTHAL_TRIBAL_GUARDIAN</Description>
 			<Civilopedia>TXT_KEY_UNIT_TRIBAL_GUARDIAN_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_MILITARY</Advisor>
-			<Domain>DOMAIN_IMMOBILE</Domain>
+			<Domain>DOMAIN_LAND</Domain>
 			<Combat>UNITCOMBAT_LAW_ENFORCEMENT</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MELEE</SubCombatType>
@@ -1410,7 +1410,7 @@
 			</PrereqAndBuildings>
 			<ObsoleteTech>TECH_SEDENTARY_LIFESTYLE</ObsoleteTech>
 			<UnitUpgrades>
-				<UnitType>UNIT_ENFORCERS</UnitType>
+				<UnitType>UNIT_PALACE_GUARD</UnitType>
 			</UnitUpgrades>
 			<iCost>-1</iCost>
 			<iBaseUpkeep>1</iBaseUpkeep>

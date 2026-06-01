@@ -190,6 +190,7 @@ class NaturalWonders:
                 popupInfo = CyPopupInfo()
                 popupInfo.setButtonPopupType(ButtonPopupTypes.BUTTONPOPUP_PYTHON_SCREEN)
                 popupInfo.setData1(iFeature)
+                popupInfo.setData2(-1)
                 popupInfo.setData3(3)
                 popupInfo.setText("showWonderMovie")
                 popupInfo.addPopup(iPlayerX)

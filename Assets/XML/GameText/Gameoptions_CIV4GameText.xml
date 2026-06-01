@@ -312,7 +312,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_CHALLENGE_INCREASING_DIFFICULTY_HELP</Tag>
-		<English>Every 100 turns (on Normal Speed) the games difficulty is increased by 1 until it reaches Nightmare.</English>
+		<English>Every 100 turns (on Normal Speed) the games difficulty is increased by 1 until it reaches nightmare plus.</English>
 		<French>Chaque 100 tours (vitesse normale) la difficulté du jeu est augmentées d'un niveau jusqu'à atteindre le niveau 'Cauchemar'.</French>
 		<German>Alle 100 Runden (bei normaler Spielgeschwindigkeit) wird der Schwierigkeitsgrad um eine Stufe erhöht, bis "Gottheit" erreicht ist. Es gibt eine BUG-Option, die hierfür eine feinere Einstellung ermöglicht Nightmare.</German>
 		<Italian>Ogni 100 turni (a velocità normale) la difficoltà del gioco aumenta di 1 livello finché non raggiunge il livello incubo</Italian>
