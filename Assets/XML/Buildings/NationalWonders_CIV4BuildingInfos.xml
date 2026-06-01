@@ -6625,6 +6625,9 @@
 				<iCommerce>5</iCommerce>
 				<iCommerce>5</iCommerce>
 			</CommerceModifiers>
+            <CommerceChanges>
+                <iCommerce>5</iCommerce>
+            </CommerceChanges>
 			<UnitProductionModifiers>
 				<UnitProductionModifier>
 					<UnitType>UNIT_TRIBE</UnitType>

@@ -299,6 +299,7 @@
             <bGoodyTech>1</bGoodyTech>
             <iGridX>3</iGridX>
             <iGridY>5</iGridY>
+            <FirstFreeUnit>UNIT_CHASER</FirstFreeUnit>
             <Flavors>
                 <Flavor>
                     <FlavorType>FLAVOR_MILITARY</FlavorType>

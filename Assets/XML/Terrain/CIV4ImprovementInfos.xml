@@ -4085,7 +4085,7 @@
 			</YieldChanges>
 			<iAdvancedStartCost>5</iAdvancedStartCost>
 			<PrereqTech>TECH_GATHERING</PrereqTech>
-			<bFreshWaterMakesValid>1</bFreshWaterMakesValid>
+<!--			<bFreshWaterMakesValid>1</bFreshWaterMakesValid>-->
 			<bRequiresFlatlands>1</bRequiresFlatlands>
 			<iUpgradeTime>5</iUpgradeTime>
 			<iPillageGold>5</iPillageGold>

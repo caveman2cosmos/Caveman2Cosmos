@@ -7298,7 +7298,7 @@
 					<iFlavor>2</iFlavor>
 				</Flavor>
 			</Flavors>
-			<iHappiness>-1</iHappiness>
+			<iHappiness>-2</iHappiness>
 			<iDomesticGreatGeneralRateModifier>-30</iDomesticGreatGeneralRateModifier>
 			<FreePromotionUnitCombatTypes>
 				<FreePromotionUnitCombatType>
@@ -7705,8 +7705,8 @@
 			</GoldenAgeCommerceChanges>
 			<iWarWearinessAccumulationModifier>-10</iWarWearinessAccumulationModifier>
 			<iMaxConscript>-3</iMaxConscript>
-			<iDistanceMaintenanceModifier>-40</iDistanceMaintenanceModifier>
-			<iNumCitiesMaintenanceModifier>-50</iNumCitiesMaintenanceModifier>
+			<iDistanceMaintenanceModifier>-30</iDistanceMaintenanceModifier>
+			<iNumCitiesMaintenanceModifier>-40</iNumCitiesMaintenanceModifier>
 			<iFreeUnitUpkeepCivilianPopPercent>-15</iFreeUnitUpkeepCivilianPopPercent>
 			<iExpInBorderModifier>-30</iExpInBorderModifier>
 			<iCityDefenseBonus>-25</iCityDefenseBonus>
@@ -7769,7 +7769,7 @@
 					<iFlavor>1</iFlavor>
 				</Flavor>
 			</Flavors>
-			<iHappiness>-1</iHappiness>
+			<iHappiness>-2</iHappiness>
 			<iDomesticGreatGeneralRateModifier>-20</iDomesticGreatGeneralRateModifier>
 			<FreePromotionUnitCombatTypes>
 				<FreePromotionUnitCombatType>
@@ -8012,8 +8012,8 @@
 			</GoldenAgeCommerceChanges>
 			<iWarWearinessAccumulationModifier>-5</iWarWearinessAccumulationModifier>
 			<iMaxConscript>-2</iMaxConscript>
-			<iDistanceMaintenanceModifier>-20</iDistanceMaintenanceModifier>
-			<iNumCitiesMaintenanceModifier>-25</iNumCitiesMaintenanceModifier>
+			<iDistanceMaintenanceModifier>-10</iDistanceMaintenanceModifier>
+			<iNumCitiesMaintenanceModifier>-15</iNumCitiesMaintenanceModifier>
 			<iFreeUnitUpkeepCivilianPopPercent>-15</iFreeUnitUpkeepCivilianPopPercent>
 			<iExpInBorderModifier>-20</iExpInBorderModifier>
 			<iCityDefenseBonus>-15</iCityDefenseBonus>
@@ -8076,7 +8076,7 @@
 					<iFlavor>2</iFlavor>
 				</Flavor>
 			</Flavors>
-			<iHappiness>-1</iHappiness>
+			<iHappiness>-2</iHappiness>
 			<iDomesticGreatGeneralRateModifier>-20</iDomesticGreatGeneralRateModifier>
 			<FreePromotionUnitCombatTypes>
 				<FreePromotionUnitCombatType>
@@ -8243,8 +8243,8 @@
 			</GoldenAgeCommerceChanges>
 			<iWarWearinessAccumulationModifier>-15</iWarWearinessAccumulationModifier>
 			<iMaxConscript>-4</iMaxConscript>
-			<iDistanceMaintenanceModifier>-30</iDistanceMaintenanceModifier>
-			<iNumCitiesMaintenanceModifier>-35</iNumCitiesMaintenanceModifier>
+			<iDistanceMaintenanceModifier>-20</iDistanceMaintenanceModifier>
+			<iNumCitiesMaintenanceModifier>-25</iNumCitiesMaintenanceModifier>
 			<iFreeUnitUpkeepCivilianPopPercent>-15</iFreeUnitUpkeepCivilianPopPercent>
 			<iExpInBorderModifier>-20</iExpInBorderModifier>
 			<iCityDefenseBonus>-20</iCityDefenseBonus>
@@ -8307,7 +8307,7 @@
 					<iFlavor>2</iFlavor>
 				</Flavor>
 			</Flavors>
-			<iHappiness>-1</iHappiness>
+			<iHappiness>-2</iHappiness>
 			<iDomesticGreatGeneralRateModifier>-30</iDomesticGreatGeneralRateModifier>
 			<FreePromotionUnitCombatTypes>
 				<FreePromotionUnitCombatType>
@@ -8466,8 +8466,8 @@
 			</GoldenAgeCommerceChanges>
 			<iWarWearinessAccumulationModifier>-15</iWarWearinessAccumulationModifier>
 			<iMaxConscript>-6</iMaxConscript>
-			<iDistanceMaintenanceModifier>-40</iDistanceMaintenanceModifier>
-			<iNumCitiesMaintenanceModifier>-45</iNumCitiesMaintenanceModifier>
+			<iDistanceMaintenanceModifier>-30</iDistanceMaintenanceModifier>
+			<iNumCitiesMaintenanceModifier>-35</iNumCitiesMaintenanceModifier>
 			<iFreeUnitUpkeepCivilianPopPercent>-15</iFreeUnitUpkeepCivilianPopPercent>
 			<iExpInBorderModifier>-25</iExpInBorderModifier>
 			<iCityDefenseBonus>-25</iCityDefenseBonus>
