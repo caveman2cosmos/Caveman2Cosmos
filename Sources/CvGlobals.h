@@ -383,6 +383,7 @@ public:
 	int getNumBonusInfos() const;
 	const std::vector<CvBonusInfo*>& getBonusInfos() const;
 	CvBonusInfo& getBonusInfo(BonusTypes eBonusNum) const;
+	const std::vector<BuildingTypes>& getBonusAssociatedBuildings(BonusTypes eBonus) const;
 
 	int getNumMapBonuses() const;
 	BonusTypes getMapBonus(const int i) const;
@@ -852,6 +853,8 @@ protected:
 	DirectionTypes m_aaeXYDirection[DIRECTION_DIAMETER][DIRECTION_DIAMETER];
 
 	std::vector<CvInterfaceModeInfo*> m_paInterfaceModeInfo;
+
+	std::vector<BuildingTypes>* m_ppbBonusAssociatedBuildings;
 
 	/***********************************************************************************************************************
 	Globals loaded from XML

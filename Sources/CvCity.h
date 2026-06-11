@@ -1303,6 +1303,7 @@ public:
 	void clearVicinityBonusCache(BonusTypes eBonus);
 	bool hasVicinityBonus(BonusTypes eBonus) const;
 	void clearRawVicinityBonusCache(BonusTypes eBonus);
+	void invalidateVicinityCache();
 	bool hasRawVicinityBonus(BonusTypes eBonus) const;
 	void checkBuildings(bool bAlertOwner = true);
 	void doVicinityBonus();

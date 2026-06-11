@@ -136,6 +136,7 @@ cvInternalGlobals::cvInternalGlobals()
 	, m_Profiler(NULL)
 	, m_VarSystem(NULL)
 	, m_fPLOT_SIZE(0)
+	, m_ppbBonusAssociatedBuildings(NULL)
 	, m_iViewportCenterOnSelectionCenterBorder(5)
 	, m_szAlternateProfilSampleName("")
 	// BBAI Options
@@ -472,6 +473,7 @@ void cvInternalGlobals::uninit()
 	SAFE_DELETE_ARRAY(m_aiCityPlotPriority);
 	SAFE_DELETE_ARRAY(m_aeTurnLeftDirection);
 	SAFE_DELETE_ARRAY(m_aeTurnRightDirection);
+	SAFE_DELETE_ARRAY(m_ppbBonusAssociatedBuildings);
 
 	SAFE_DELETE(m_game);
 
@@ -2619,7 +2621,11 @@ void cvInternalGlobals::enableDLLProfiler(bool bEnable)
 
 bool cvInternalGlobals::isDLLProfilerEnabled() const
 {
+#ifdef USE_INTERNAL_PROFILER
+	return true;
+#else
 	return m_bDLLProfiler;
+#endif
 }
 
 const char* cvInternalGlobals::alternateProfileSampleName() const
@@ -3145,6 +3151,80 @@ void cvInternalGlobals::doPostLoadCaching()
 	}
 
 	CityOutputHistory::setCityOutputHistorySize((uint16_t)GC.getCITY_OUTPUT_HISTORY_SIZE());
+
+	{
+		// C2C Optimization: Precompute the mapping of BonusTypes to all BuildingTypes that interact with or require that bonus.
+		// This replaces expensive loops over all building infos (thousands of items) with a fast cached vector lookup in AI evaluation.
+		SAFE_DELETE_ARRAY(m_ppbBonusAssociatedBuildings);
+		const int iNumBonusInfos = getNumBonusInfos();
+		m_ppbBonusAssociatedBuildings = new std::vector<BuildingTypes>[iNumBonusInfos];
+		for (int iI = 0; iI < getNumBuildingInfos(); iI++)
+		{
+			const BuildingTypes eBuilding = static_cast<BuildingTypes>(iI);
+			const CvBuildingInfo& kBuilding = getBuildingInfo(eBuilding);
+			for (int iB = 0; iB < iNumBonusInfos; iB++)
+			{
+				const BonusTypes eBonus = static_cast<BonusTypes>(iB);
+				bool bRelated = false;
+				if (kBuilding.getPrereqAndBonus() == eBonus)
+				{
+					bRelated = true;
+				}
+				else if (algo::any_of_equal(kBuilding.getPrereqOrBonuses(), eBonus))
+				{
+					bRelated = true;
+				}
+				else if (kBuilding.getBonusProductionModifier(eBonus) != 0)
+				{
+					bRelated = true;
+				}
+				else if (kBuilding.getPowerBonus() == eBonus)
+				{
+					bRelated = true;
+				}
+				else if (kBuilding.getBonusDefenseChanges(eBonus) != 0)
+				{
+					bRelated = true;
+				}
+				else
+				{
+					for (int iY = 0; iY < NUM_YIELD_TYPES; iY++)
+					{
+						if (kBuilding.getBonusYieldModifier(eBonus, iY) != 0 ||
+							kBuilding.getBonusYieldChanges(eBonus, iY) != 0)
+						{
+							bRelated = true;
+							break;
+						}
+					}
+					if (!bRelated)
+					{
+						for (int iC = 0; iC < NUM_COMMERCE_TYPES; iC++)
+						{
+							if (kBuilding.getBonusCommercePercentChanges(eBonus, iC) != 0 ||
+								kBuilding.getBonusCommerceModifier(eBonus, iC) != 0)
+							{
+								bRelated = true;
+								break;
+							}
+						}
+					}
+					if (!bRelated)
+					{
+						if (kBuilding.getBonusHappinessChanges().getValue(eBonus) != 0 ||
+							kBuilding.getBonusHealthChanges().getValue(eBonus) != 0)
+						{
+							bRelated = true;
+						}
+					}
+				}
+				if (bRelated)
+				{
+					m_ppbBonusAssociatedBuildings[eBonus].push_back(eBuilding);
+				}
+			}
+		}
+	}
 }
 
 void cvInternalGlobals::checkInitialCivics()
@@ -3195,4 +3275,14 @@ void cvInternalGlobals::cacheGameSpecificValues()
 		}
 		else info->setLevel(-1);
 	}
+}
+
+const std::vector<BuildingTypes>& cvInternalGlobals::getBonusAssociatedBuildings(BonusTypes eBonus) const
+{
+	if (eBonus < 0 || eBonus >= getNumBonusInfos() || m_ppbBonusAssociatedBuildings == NULL)
+	{
+		static const std::vector<BuildingTypes> empty;
+		return empty;
+	}
+	return m_ppbBonusAssociatedBuildings[eBonus];
 }

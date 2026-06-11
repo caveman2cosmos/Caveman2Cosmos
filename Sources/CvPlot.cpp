@@ -35,6 +35,9 @@
 #include "CvDLLUtilityIFaceBase.h"
 #include "FAStarNode.h"
 
+extern int s_iCommanderEpoch;
+extern int s_iCommodoreEpoch;
+
 #define STANDARD_MINIMAP_ALPHA		(0.6f)
 
 //	Pseudo-value to indicate uninitialised in found values
@@ -6372,6 +6375,7 @@ void CvPlot::setOwner(PlayerTypes eNewValue, bool bCheckUnits, bool bUpdatePlotG
 
 	if (getOwner() != eNewValue)
 	{
+		const PlayerTypes eOldOwner = getOwner();
 		PROFILE("CvPlot::setOwner.changed");
 
 		GC.getGame().addReplayMessage(REPLAY_MESSAGE_PLOT_OWNER_CHANGE, eNewValue, (char*)NULL, getX(), getY());
@@ -6593,6 +6597,35 @@ void CvPlot::setOwner(PlayerTypes eNewValue, bool bCheckUnits, bool bUpdatePlotG
 		algo::for_each(rect(2, 2), bind(&CvPlot::invalidateBorderDangerCache, _1));
 
 		updateSymbols();
+
+		// C2C Optimization: If a plot with a resource changes owner, clear the vicinity cache for old and new players' cities.
+		if (getBonusType() != NO_BONUS)
+		{
+			if (eOldOwner != NO_PLAYER)
+			{
+				for (CvPlayer::city_iterator cityIt = GET_PLAYER(eOldOwner).beginCities(); cityIt != GET_PLAYER(eOldOwner).endCities(); ++cityIt)
+				{
+					CvCity* pLoopCity = *cityIt;
+					if (pLoopCity != NULL)
+					{
+						pLoopCity->clearVicinityBonusCache(getBonusType());
+						pLoopCity->clearRawVicinityBonusCache(getBonusType());
+					}
+				}
+			}
+			if (eNewValue != NO_PLAYER)
+			{
+				for (CvPlayer::city_iterator cityIt = GET_PLAYER(eNewValue).beginCities(); cityIt != GET_PLAYER(eNewValue).endCities(); ++cityIt)
+				{
+					CvCity* pLoopCity = *cityIt;
+					if (pLoopCity != NULL)
+					{
+						pLoopCity->clearVicinityBonusCache(getBonusType());
+						pLoopCity->clearRawVicinityBonusCache(getBonusType());
+					}
+				}
+			}
+		}
 	}
 }
 
@@ -7255,6 +7288,7 @@ void CvPlot::setBonusType(BonusTypes eNewValue)
 {
 	if (getBonusType() != eNewValue)
 	{
+		const BonusTypes eOldBonus = getBonusType();
 		setImprovementUpgradeCache(-1);
 
 		if (getBonusType() != NO_BONUS)
@@ -7313,6 +7347,32 @@ void CvPlot::setBonusType(BonusTypes eNewValue)
 		setLayoutDirty(true);
 
 		gDLL->getInterfaceIFace()->setDirty(GlobeLayer_DIRTY_BIT, true);
+
+		// C2C Optimization: Clear specific vicinity cache entries across all cities when a resource on a plot is changed/removed
+		for (int iPlayer = 0; iPlayer < MAX_PLAYERS; iPlayer++)
+		{
+			CvPlayer& kLoopPlayer = GET_PLAYER((PlayerTypes)iPlayer);
+			if (kLoopPlayer.isAlive())
+			{
+				for (CvPlayer::city_iterator cityIt = kLoopPlayer.beginCities(); cityIt != kLoopPlayer.endCities(); ++cityIt)
+				{
+					CvCity* pLoopCity = *cityIt;
+					if (pLoopCity != NULL)
+					{
+						if (eOldBonus != NO_BONUS)
+						{
+							pLoopCity->clearVicinityBonusCache(eOldBonus);
+							pLoopCity->clearRawVicinityBonusCache(eOldBonus);
+						}
+						if (eNewValue != NO_BONUS)
+						{
+							pLoopCity->clearVicinityBonusCache(eNewValue);
+							pLoopCity->clearRawVicinityBonusCache(eNewValue);
+						}
+					}
+				}
+			}
+		}
 	}
 }
 
@@ -13775,6 +13835,8 @@ void CvPlot::changeCommanderCount(const PlayerTypes ePlayer, const bool bAdd)
 	{
 		m_commanderCount[itr->first] += bAdd ? 1 : -1;
 	}
+	// C2C Optimization: Increment the epoch to invalidate cached Great Commander targets on units
+	s_iCommanderEpoch++;
 	//itr = m_commanderCount.find(static_cast<uint8_t>(ePlayer));
 	//OutputDebugString(CvString::format("changeCommanderCount plot at (%d, %d): newCount=%d\n", getX(), getY(), (itr == m_commanderCount.end()) ? 0 : itr->second).c_str());
 }
@@ -13828,6 +13890,8 @@ void CvPlot::changeCommodoreCount(const PlayerTypes ePlayer, const bool bAdd)
 	{
 		m_commodoreCount[itr->first] += bAdd ? 1 : -1;
 	}
+	// C2C Optimization: Increment the epoch to invalidate cached Great Commodore targets on units
+	s_iCommodoreEpoch++;
 }
 
 bool CvPlot::inCommandCommodoreField(const PlayerTypes ePlayer) const

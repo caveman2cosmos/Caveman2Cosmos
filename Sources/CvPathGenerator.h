@@ -219,6 +219,63 @@ typedef struct
 class CvPathPlotInfoStore;
 class CvPathGeneratorPlotInfo;
 
+class CvPathNode
+{
+public:
+	CvPathNode()
+		: m_iPathTurns(0)
+		, m_iMovementRemaining(0)
+		, m_parent(NULL)
+		, m_firstChild(NULL)
+		, m_prevSibling(NULL)
+		, m_nextSibling(NULL)
+		, m_plot(NULL)
+		, m_iBestToEdgeCost(0)
+		, m_iCostTo(0)
+		, m_iCostFrom(0)
+		, m_iLowestPossibleCostFrom(0)
+		, m_iPathSeq(0)
+		, m_iEdgesIncluded(0)
+		, m_bProcessedAsTerminus(false)
+		, m_iModificationSeq(0)
+		, m_iLowestDequeueCost(0)
+		, m_iRecalcThreshold(0)
+		, m_bIsKnownRoute(false)
+#ifdef DYNAMIC_PATH_STRUCTURE_VALIDATION
+		, m_iValidationSeq(0)
+		, m_bIsQueued(false)
+#endif
+	{
+	}
+
+	~CvPathNode()
+	{
+	}
+
+	int			m_iPathTurns;
+	int			m_iMovementRemaining;
+	CvPathNode*	m_parent;
+	CvPathNode*	m_firstChild;
+	CvPathNode*	m_prevSibling;
+	CvPathNode*	m_nextSibling;
+	CvPlot*		m_plot;
+	int			m_iBestToEdgeCost;
+	int			m_iCostTo;
+	int			m_iCostFrom;
+	int			m_iLowestPossibleCostFrom;
+	int			m_iPathSeq;
+	int			m_iEdgesIncluded;
+	bool		m_bProcessedAsTerminus;
+	int			m_iModificationSeq;
+	int			m_iLowestDequeueCost;
+	int			m_iRecalcThreshold;
+	bool		m_bIsKnownRoute;
+#ifdef DYNAMIC_PATH_STRUCTURE_VALIDATION
+	int			m_iValidationSeq;
+	bool		m_bIsQueued;
+#endif
+};
+
 class CvPathGenerator : public CvPathGeneratorBase
 {
 public:
@@ -239,13 +296,19 @@ public:
 	void SelfTest();
 
 private:
+	// Optimized: Inlined the priority queue comparer inside the header to allow complete
+	// compiler inlining. This avoids millions of function call pointer dereference penalties
+	// during A* pathfinding node sorting.
 	class CvPathNodeComparer
 	{
 	public:
 		CvPathNodeComparer()
 		{
 		}
-		bool operator() (const priorityQueueEntry& lhs, const priorityQueueEntry& rhs) const;
+		inline bool operator() (const priorityQueueEntry& lhs, const priorityQueueEntry& rhs) const
+		{
+			return lhs.node->m_iCostFrom + lhs.iQueuedCost > rhs.node->m_iCostFrom + rhs.iQueuedCost;
+		}
 	};
 
 	CvPathNode*	allocatePathNode();

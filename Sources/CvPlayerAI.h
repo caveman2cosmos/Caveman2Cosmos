@@ -32,11 +32,9 @@ struct MissionTargetInfo
 
 //	Koshling - add caching to plot danger calculations
 #define PLOT_DANGER_CACHING
-#ifdef PLOT_DANGER_CACHING
-/**
- * Caches plot danger calculations for performance.
- * - Stores coordinates, range, move test flag, result, and last use count.
- */
+// C2C Optimization: Player-aware plot danger caching. Adding ePlayer allows the cache
+// to be safely shared or queried contextually, and increasing cache size to 128
+// matches C2C's scale (larger maps, more players, and heavier pathing queries).
 struct plotDangerCacheEntry
 {
 	plotDangerCacheEntry()
@@ -44,6 +42,7 @@ struct plotDangerCacheEntry
 		, plotY(-1)
 		, iRange(-1)
 		, bTestMoves(false)
+		, ePlayer(NO_PLAYER)
 		, iResult(-1)
 		, iLastUseCount(0)
 	{}
@@ -52,11 +51,12 @@ struct plotDangerCacheEntry
 	int plotY;
 	int iRange;
 	bool bTestMoves;
+	PlayerTypes ePlayer;
 	int iResult;
 	int iLastUseCount;
 };
 
-#define PLOT_DANGER_CACHE_SIZE 24
+#define PLOT_DANGER_CACHE_SIZE 128
 
 /**
  * Manages a fixed-size cache of plot danger entries.
@@ -77,6 +77,7 @@ public:
 			foreach_(plotDangerCacheEntry& entry, entries)
 			{
 				entry.iLastUseCount = 0;
+				entry.ePlayer = NO_PLAYER;
 			}
 		}
 	}
@@ -492,7 +493,7 @@ public:
 	int AI_getUnitCombatWeight(UnitCombatTypes eUnitCombat) const;
 
 #ifdef CVARMY_BREAKSAVE
-	void AI_formArmies();   // Nouvelle fonction de création des armées
+	void AI_formArmies();   // Nouvelle fonction de crï¿½ation des armï¿½es
 #endif
 
 	/**
@@ -664,6 +665,12 @@ protected:
 	bool m_bHasInquisitionTarget;
 
 	mutable TechTypes m_eBestResearchTarget; // Koshling - retain beeline target to minmimize need for recalculation
+
+	// C2C Optimization: Cached values to speed up AI_isFinancialTrouble check
+	mutable bool m_bFinancialTroubleCache;
+	mutable int m_iFinancialTroubleCacheTurn;
+	mutable int64_t m_iFinancialTroubleCacheGold;
+	mutable int m_iFinancialTroubleCacheNumCities;
 
 	mutable volatile int m_iAveragesCacheTurn;
 

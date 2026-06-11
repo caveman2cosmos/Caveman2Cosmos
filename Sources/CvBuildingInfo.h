@@ -69,6 +69,8 @@ public:
 	bool getNotShowInCity() const;
 	bool EnablesOtherBuildings() const;
 	bool EnablesUnits() const						{ return m_bEnablesUnits; }
+	// Cache of buildings that are unlocked/enabled by this building, to optimize CalculateAllBuildingValues in AI city building value scans.
+	const std::vector<BuildingTypes>& getEnabledBuildingsList() const { return m_aEnabledBuildingsList; }
 
 	int getMaxGlobalInstances() const				{ return m_iMaxGlobalInstances; }
 	int getMaxTeamInstances() const					{ return m_iMaxTeamInstances; }
@@ -819,6 +821,7 @@ private:
 
 	const BoolExpr* m_pExprNewCityFree;
 	const BoolExpr* m_pExprConstructCondition;
+	std::vector<BuildingTypes> m_aEnabledBuildingsList; // Precalculated list of buildings enabled by this building
 };
 
 #endif

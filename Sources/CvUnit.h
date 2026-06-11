@@ -610,6 +610,7 @@ public:
 	int interceptionChance(const CvPlot* pPlot) const;
 
 	CvUnit* getCommander() const;
+	CvUnit* getCommanderSlow() const;
 	void tryUseCommander();
 	bool isCommander() const;
 	bool isCommanderReady() const;
@@ -621,6 +622,7 @@ public:
 	CvUnit* getLastCommander() const;
 
 	CvUnit* getCommodore() const;
+	CvUnit* getCommodoreSlow() const;
     void tryUseCommodore();
     bool isCommodore() const;
     bool isCommodoreReady() const;
@@ -1744,7 +1746,19 @@ protected:
 	mutable int m_iCommanderCacheTurn;
 	mutable int m_iCommodoreID; //id of commodore. used for game save/load
     int m_iUsedCommodoreID;
-    mutable int m_iCommodoreCacheTurn;
+	mutable int m_iCommodoreCacheTurn;
+
+	// Runtime caching to optimize profiling bottlenecks in getCommander/getCommodore lookups.
+	// Invalidated when the unit moves (X, Y change), the turn changes, or the global commander/commodore epoch increments.
+	mutable CvUnit* m_pCommanderCache;
+	mutable int m_iCommanderCacheX;
+	mutable int m_iCommanderCacheY;
+	mutable int m_iCommanderCacheEpoch;
+
+	mutable CvUnit* m_pCommodoreCache;
+	mutable int m_iCommodoreCacheX;
+	mutable int m_iCommodoreCacheY;
+	mutable int m_iCommodoreCacheEpoch;
 #define	NO_COMMANDER_ID	-2	//	Pseudo-id used to signify an assertion that the unit has no commander
 	int m_iPreCombatDamage;
 

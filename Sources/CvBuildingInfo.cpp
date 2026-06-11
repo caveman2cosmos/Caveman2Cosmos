@@ -14,6 +14,7 @@
 #include "CvGameCoreDLL.h"
 #include "CvArtFileMgr.h"
 #include "CvBuildingInfo.h"
+#include "CvBonusInfo.h"
 #include "CvGameAI.h"
 #include "CvGlobals.h"
 #include "CvInfoUtil.h"
@@ -1569,7 +1570,59 @@ void CvBuildingInfo::doPostLoadCaching(uint32_t iThis)
 			GC.getBuildingInfo((BuildingTypes)getReplacementBuilding(i)).setReplacedBuilding(iId);
 		}
 	}
-	m_bEnablesOtherBuildings = CvBuildingInternal::calculateEnablesOtherBuildings(*this, (BuildingTypes)iThis);
+	// C2C Optimization: Pre-calculate which buildings are enabled by this building and map bonus-providing relationships.
+	// This dramatically reduces CPU cycles spent in loop scans (e.g., in CvCityAI::CalculateAllBuildingValues).
+	m_aEnabledBuildingsList.clear();
+	std::vector<GOMQuery> queries;
+	GOMQuery query;
+	query.GOM = GOM_BUILDING;
+	query.id = iThis;
+	queries.push_back(query);
+	query.GOM = GOM_BONUS;
+	foreach_(const BonusModifier& kFreeBonus, getFreeBonuses())
+	{
+		query.id = kFreeBonus.first;
+		queries.push_back(query);
+		GC.getBonusInfo(kFreeBonus.first).addBuildingProvidingBonus((BuildingTypes)iThis);
+	}
+
+	for (int iJ = 0; iJ < GC.getNumBuildingInfos(); iJ++)
+	{
+		const BuildingTypes eType = static_cast<BuildingTypes>(iJ);
+		const CvBuildingInfo& loopBuilding = GC.getBuildingInfo(eType);
+
+		bool bEnables = false;
+		if (loopBuilding.isPrereqInCityBuilding(iThis) || loopBuilding.isPrereqOrBuilding(iThis))
+		{
+			bEnables = true;
+		}
+		else
+		{
+			foreach_(const BonusTypes eFreeBonus, getFreeBonuses() | map_keys)
+			{
+				if (loopBuilding.getPrereqAndBonus() == eFreeBonus || algo::any_of_equal(loopBuilding.getPrereqOrBonuses(), eFreeBonus))
+				{
+					bEnables = true;
+					break;
+				}
+			}
+		}
+
+		if (!bEnables)
+		{
+			const BoolExpr* condition = loopBuilding.getConstructCondition();
+			if (condition != NULL && condition->getInvolvesGOM(queries))
+			{
+				bEnables = true;
+			}
+		}
+
+		if (bEnables)
+		{
+			m_aEnabledBuildingsList.push_back(eType);
+		}
+	}
+	m_bEnablesOtherBuildings = !m_aEnabledBuildingsList.empty();
 	m_bEnablesUnits = CvBuildingInternal::calculateEnablesUnits(*this, (BuildingTypes)iThis);
 
 	if (getHolyCity() != NO_RELIGION)

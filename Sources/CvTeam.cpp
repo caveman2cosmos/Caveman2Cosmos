@@ -5632,6 +5632,23 @@ void CvTeam::setHasTech(TechTypes eTech, bool bNewValue, PlayerTypes ePlayer, bo
 			gDLL->getInterfaceIFace()->setDirty(ResearchButtons_DIRTY_BIT, true);
 			gDLL->getInterfaceIFace()->setDirty(GlobeLayer_DIRTY_BIT, true);
 		}
+
+		// C2C Optimization: Invalidate vicinity bonus caches for all cities of team players when a new tech is researched
+		for (int iPlayer = 0; iPlayer < MAX_PLAYERS; iPlayer++)
+		{
+			CvPlayer& kLoopPlayer = GET_PLAYER((PlayerTypes)iPlayer);
+			if (kLoopPlayer.isAlive() && kLoopPlayer.getTeam() == getID())
+			{
+				for (CvPlayer::city_iterator cityIt = kLoopPlayer.beginCities(); cityIt != kLoopPlayer.endCities(); ++cityIt)
+				{
+					CvCity* pLoopCity = *cityIt;
+					if (pLoopCity != NULL)
+					{
+						pLoopCity->invalidateVicinityCache();
+					}
+				}
+			}
+		}
 	}
 	else
 	{
