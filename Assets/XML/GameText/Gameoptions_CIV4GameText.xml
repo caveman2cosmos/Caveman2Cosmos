@@ -1763,4 +1763,17 @@
 		<French>Modifie les coûts des bâtiments pour mieux refléter leur taille, complexité et coût en matériaux.</French>
 		<Russian>Изменить расходы на постройку зданий, чтобы более точно отразить комплексность их конструкции и стоимость материалов.</Russian>
 	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_GAMEOPTION_REALTIME_EVENT_LOGGING</Tag>
+		<English>Logging - Real-time Event Log</English>
+		<French>Logging - Journal d'événements en temps réel</French>
+		<Russian>Логирование - Журнал событий реального времени</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_GAMEOPTION_REALTIME_EVENT_LOGGING_HELP</Tag>
+		<English>Generates a real-time event log file (realtimeevents.log) in the mod directory. This can be viewed live in an external web browser using the RealtimeEventsViewer.html page.</English>
+		<French>Génère un fichier de journal d'événements en temps réel (realtimeevents.log). Il peut être visualisé en direct via la page RealtimeEventsViewer.html.</French>
+		<Russian>Создает файл журнала событий в реальном времени (realtimeevents.log). Его можно просматривать в браузере с помощью страницы RealtimeEventsViewer.html.</Russian>
+	</TEXT>
 </Civ4GameText>
+

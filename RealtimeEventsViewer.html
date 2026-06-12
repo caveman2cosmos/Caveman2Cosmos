@@ -1,0 +1,1655 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C2C Real-time Event Viewer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-base: #0f111a;
+            --bg-surface: rgba(22, 25, 41, 0.75);
+            --bg-surface-hover: rgba(30, 34, 56, 0.9);
+            --border-color: rgba(255, 255, 255, 0.08);
+            --border-hover: rgba(255, 255, 255, 0.15);
+            --text-primary: #f1f3f9;
+            --text-secondary: #a0aec0;
+            --accent-primary: #6366f1;
+            --accent-primary-hover: #4f46e5;
+            --accent-success: #10b981;
+            --accent-warning: #f59e0b;
+            --accent-danger: #ef4444;
+            --accent-info: #06b6d4;
+            --accent-purple: #a855f7;
+            --shadow-glow: 0 8px 32px 0 rgba(0, 0, 0, 0.45);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            scrollbar-width: thin;
+            scrollbar-color: rgba(255, 255, 255, 0.2) transparent;
+        }
+
+        body {
+            font-family: 'Outfit', sans-serif;
+            background-color: var(--bg-base);
+            background-image: radial-gradient(circle at 50% 0%, rgba(99, 102, 241, 0.18), transparent 50%),
+                              radial-gradient(circle at 0% 100%, rgba(6, 182, 212, 0.1), transparent 40%);
+            color: var(--text-primary);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            overflow-x: hidden;
+        }
+
+        header {
+            padding: 1.25rem 2rem;
+            border-bottom: 1px solid var(--border-color);
+            background: rgba(15, 17, 26, 0.85);
+            backdrop-filter: blur(16px);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .header-logo {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .header-logo svg {
+            color: var(--accent-primary);
+            filter: drop-shadow(0 0 8px rgba(99, 102, 241, 0.6));
+        }
+
+        .header-logo h1 {
+            font-size: 1.35rem;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+            background: linear-gradient(135deg, #fff 40%, var(--text-secondary) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .header-controls {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .btn {
+            font-family: inherit;
+            font-size: 0.85rem;
+            font-weight: 600;
+            padding: 0.55rem 1.15rem;
+            border-radius: 8px;
+            border: 1px solid var(--border-color);
+            cursor: pointer;
+            transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            user-select: none;
+        }
+
+        .btn-primary {
+            background-color: var(--accent-primary);
+            color: white;
+            border-color: transparent;
+            box-shadow: 0 4px 12px rgba(99, 102, 241, 0.3);
+        }
+
+        .btn-primary:hover {
+            background-color: var(--accent-primary-hover);
+            transform: translateY(-1px);
+            box-shadow: 0 6px 16px rgba(99, 102, 241, 0.4);
+        }
+
+        .btn-secondary {
+            background-color: rgba(255, 255, 255, 0.04);
+            color: var(--text-primary);
+        }
+
+        .btn-secondary:hover {
+            background-color: rgba(255, 255, 255, 0.09);
+            border-color: var(--border-hover);
+        }
+
+        .btn-success {
+            background-color: rgba(16, 185, 129, 0.15);
+            color: #34d399;
+            border-color: rgba(16, 185, 129, 0.3);
+        }
+
+        .btn-success:hover {
+            background-color: rgba(16, 185, 129, 0.25);
+            border-color: rgba(16, 185, 129, 0.5);
+        }
+
+        .btn:active {
+            transform: translateY(1px);
+        }
+
+        .main-container {
+            flex: 1;
+            padding: 2rem;
+            display: grid;
+            grid-template-columns: 300px 1fr;
+            gap: 2rem;
+            max-width: 1650px;
+            margin: 0 auto;
+            width: 100%;
+        }
+
+        @media (max-width: 1024px) {
+            .main-container {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Sidebar Styling */
+        .sidebar {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .panel {
+            background: var(--bg-surface);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 1.25rem;
+            backdrop-filter: blur(20px);
+            box-shadow: var(--shadow-glow);
+            transition: border-color 0.3s;
+        }
+
+        .panel:hover {
+            border-color: var(--border-hover);
+        }
+
+        .panel-title {
+            font-size: 0.8rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1.2px;
+            color: var(--text-secondary);
+            margin-bottom: 1rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            padding-bottom: 0.5rem;
+        }
+
+        /* Meta details list */
+        .meta-list {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+        }
+
+        .meta-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 0.9rem;
+        }
+
+        .meta-label {
+            color: var(--text-secondary);
+        }
+
+        .meta-value {
+            font-weight: 600;
+            color: var(--text-primary);
+            text-align: right;
+        }
+
+        .badge {
+            font-size: 0.7rem;
+            font-weight: 700;
+            padding: 0.25rem 0.5rem;
+            border-radius: 6px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.25rem;
+        }
+
+        .badge-purple {
+            background: rgba(168, 85, 247, 0.12);
+            color: #d8b4fe;
+            border: 1px solid rgba(168, 85, 247, 0.25);
+        }
+
+        .badge-success {
+            background: rgba(16, 185, 129, 0.12);
+            color: #a7f3d0;
+            border: 1px solid rgba(16, 185, 129, 0.25);
+        }
+
+        .badge-warning {
+            background: rgba(245, 158, 11, 0.12);
+            color: #fde68a;
+            border: 1px solid rgba(245, 158, 11, 0.25);
+        }
+
+        /* Player List styling */
+        .players-list {
+            display: flex;
+            flex-direction: column;
+            gap: 0.625rem;
+            max-height: 350px;
+            overflow-y: auto;
+            padding-right: 4px;
+        }
+
+        .player-row {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            padding: 0.5rem 0.75rem;
+            border-radius: 8px;
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid rgba(255, 255, 255, 0.03);
+            transition: all 0.2s;
+            cursor: pointer;
+            user-select: none;
+        }
+
+        .player-row:hover:not(.disabled) {
+            background: rgba(255, 255, 255, 0.05);
+            border-color: rgba(255, 255, 255, 0.08);
+        }
+
+        .player-row.selected {
+            background: rgba(99, 102, 241, 0.15) !important;
+            border-color: rgba(99, 102, 241, 0.5) !important;
+            box-shadow: 0 0 8px rgba(99, 102, 241, 0.15);
+        }
+
+        .player-row.selected .player-avatar {
+            box-shadow: 0 0 6px var(--accent-primary);
+        }
+
+        .player-row.disabled {
+            cursor: not-allowed;
+            opacity: 0.4;
+        }
+
+        .player-avatar {
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            background: var(--accent-primary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 0.8rem;
+            color: white;
+            flex-shrink: 0;
+        }
+
+        .player-avatar.human {
+            background: linear-gradient(135deg, var(--accent-primary), var(--accent-info));
+            box-shadow: 0 0 8px rgba(99, 102, 241, 0.4);
+        }
+
+        .player-avatar.ai {
+            background: linear-gradient(135deg, #4b5563, #6b7280);
+        }
+
+        .player-avatar.unmet {
+            background: #2d3748;
+            color: #718096;
+            border: 1px dashed rgba(255, 255, 255, 0.1);
+        }
+
+        .player-info {
+            display: flex;
+            flex-direction: column;
+            min-width: 0;
+            flex: 1;
+        }
+
+        .player-name {
+            font-weight: 600;
+            font-size: 0.85rem;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .player-civ {
+            font-size: 0.75rem;
+            color: var(--text-secondary);
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .player-name.unmet {
+            color: var(--text-secondary);
+            font-style: italic;
+        }
+
+        /* Stats Panel */
+        .stats-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0.75rem;
+        }
+
+        .stat-box {
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid rgba(255, 255, 255, 0.03);
+            border-radius: 10px;
+            padding: 0.75rem;
+            text-align: center;
+        }
+
+        .stat-value {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: var(--text-primary);
+        }
+
+        .stat-label {
+            font-size: 0.75rem;
+            color: var(--text-secondary);
+            margin-top: 0.25rem;
+        }
+
+        /* Content Area (Filters + Log List) */
+        .content-area {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+            min-width: 0;
+        }
+
+        /* Log Load Area */
+        .load-area {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 4rem 2rem;
+            border: 2px dashed rgba(255, 255, 255, 0.15);
+            border-radius: 16px;
+            background: rgba(22, 25, 41, 0.4);
+            cursor: pointer;
+            transition: all 0.3s;
+            text-align: center;
+            gap: 1.25rem;
+        }
+
+        .load-area:hover, .load-area.dragover {
+            border-color: var(--accent-primary);
+            background: rgba(99, 102, 241, 0.05);
+            box-shadow: 0 0 20px rgba(99, 102, 241, 0.1);
+        }
+
+        .load-area svg {
+            color: var(--text-secondary);
+            transition: color 0.3s, transform 0.3s;
+        }
+
+        .load-area:hover svg {
+            color: var(--accent-primary);
+            transform: translateY(-4px);
+        }
+
+        .load-area p {
+            font-size: 1.05rem;
+            color: var(--text-secondary);
+        }
+
+        .load-area p span {
+            color: var(--accent-primary);
+            font-weight: 600;
+        }
+
+        .file-input {
+            display: none;
+        }
+
+        /* Filter Panel & Row */
+        .filter-panel {
+            display: flex;
+            flex-direction: column;
+            gap: 1.25rem;
+        }
+
+        .filter-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            align-items: flex-end;
+        }
+
+        .filter-group {
+            display: flex;
+            flex-direction: column;
+            gap: 0.375rem;
+            flex: 1;
+            min-width: 150px;
+        }
+
+        .filter-label {
+            font-size: 0.7rem;
+            font-weight: 600;
+            color: var(--text-secondary);
+            text-transform: uppercase;
+            letter-spacing: 0.8px;
+        }
+
+        .input-text, .select-input {
+            width: 100%;
+            background: rgba(15, 17, 26, 0.6);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 0.55rem 0.8rem;
+            color: var(--text-primary);
+            font-family: inherit;
+            font-size: 0.85rem;
+            outline: none;
+            transition: all 0.2s;
+        }
+
+        .input-text:focus, .select-input:focus {
+            border-color: var(--accent-primary);
+            box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.2);
+        }
+
+        /* Toggles layout */
+        .toggle-group {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+            margin-top: 0.25rem;
+            padding-top: 0.75rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .toggle-label {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            cursor: pointer;
+            user-select: none;
+        }
+
+        .toggle-label:hover {
+            color: var(--text-primary);
+        }
+
+        .toggle-label input[type="checkbox"] {
+            accent-color: var(--accent-primary);
+            width: 16px;
+            height: 16px;
+            cursor: pointer;
+        }
+
+        /* Quick message category filters */
+        .type-filters {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-top: 0.25rem;
+        }
+
+        .filter-chip {
+            font-size: 0.72rem;
+            font-weight: 600;
+            padding: 0.35rem 0.75rem;
+            border-radius: 20px;
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid var(--border-color);
+            cursor: pointer;
+            transition: all 0.2s;
+            color: var(--text-secondary);
+            user-select: none;
+        }
+
+        .filter-chip:hover {
+            color: var(--text-primary);
+            border-color: var(--border-hover);
+        }
+
+        .filter-chip.active {
+            background-color: var(--accent-primary);
+            border-color: transparent;
+            color: white;
+            box-shadow: 0 2px 8px rgba(99, 102, 241, 0.35);
+        }
+
+        /* Log events container */
+        .log-container {
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+            flex: 1;
+            min-height: 400px;
+        }
+
+        .log-row {
+            display: flex;
+            gap: 1rem;
+            padding: 0.85rem 1.15rem;
+            border-radius: 12px;
+            background: var(--bg-surface);
+            border: 1px solid var(--border-color);
+            transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+            animation: slideIn 0.25s ease-out;
+            align-items: flex-start;
+        }
+
+        .log-row:hover {
+            border-color: var(--border-hover);
+            transform: translateY(-1px);
+            background: var(--bg-surface-hover);
+            box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+        }
+
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .log-time-badge {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 0.45rem 0.65rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-width: 80px;
+            flex-shrink: 0;
+            text-align: center;
+        }
+
+        .log-turn {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: var(--text-primary);
+        }
+
+        .log-date {
+            font-size: 0.7rem;
+            color: var(--text-secondary);
+            margin-top: 0.125rem;
+            white-space: nowrap;
+        }
+
+        .log-content {
+            flex: 1;
+            min-width: 0;
+            display: flex;
+            flex-direction: column;
+            gap: 0.25rem;
+        }
+
+        .log-header {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+        }
+
+        .log-civ-name {
+            font-weight: 600;
+            font-size: 0.78rem;
+            color: var(--text-secondary);
+            background: rgba(255, 255, 255, 0.04);
+            padding: 0.1rem 0.45rem;
+            border-radius: 4px;
+        }
+
+        .log-msg-type {
+            font-size: 0.72rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .log-desc {
+            font-size: 0.92rem;
+            line-height: 1.45;
+            color: var(--text-primary);
+            word-wrap: break-word;
+            overflow-wrap: break-word;
+        }
+
+        /* Color classes from Civ4 Tags */
+        .color-enabled .color-positive {
+            color: #4eff4e;
+            text-shadow: 0 0 10px rgba(78, 255, 78, 0.15);
+        }
+
+        .color-enabled .color-negative {
+            color: #ff5f5f;
+            text-shadow: 0 0 10px rgba(255, 95, 95, 0.15);
+        }
+
+        .color-enabled .color-highlight {
+            color: #6fdcff;
+            text-shadow: 0 0 10px rgba(111, 220, 255, 0.15);
+        }
+
+        .log-empty {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            color: var(--text-secondary);
+            gap: 1rem;
+            border: 1px dashed var(--border-color);
+            border-radius: 12px;
+            padding: 4rem 2rem;
+            text-align: center;
+        }
+
+        .log-empty svg {
+            color: rgba(255, 255, 255, 0.06);
+        }
+
+        /* Scrollbar customizing */
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: transparent;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: rgba(255, 255, 255, 0.12);
+            border-radius: 4px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: rgba(255, 255, 255, 0.25);
+        }
+
+        /* Yield Icons */
+        .yield-icon {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.9em;
+            margin: 0 2px;
+            vertical-align: middle;
+            font-style: normal;
+        }
+        .yield-prod {
+            color: #f59e0b; /* Amber */
+            filter: drop-shadow(0 0 3px rgba(245, 158, 11, 0.45));
+        }
+        .yield-gold {
+            color: #fbbf24; /* Gold */
+            filter: drop-shadow(0 0 3px rgba(251, 191, 36, 0.5));
+        }
+        .yield-food {
+            color: #10b981; /* Emerald */
+            filter: drop-shadow(0 0 3px rgba(16, 185, 129, 0.5));
+        }
+        .yield-science {
+            color: #06b6d4; /* Science/Beaker Cyan */
+            filter: drop-shadow(0 0 3px rgba(6, 182, 212, 0.5));
+        }
+        .yield-culture {
+            color: #a855f7; /* Culture Purple */
+            filter: drop-shadow(0 0 3px rgba(168, 85, 247, 0.5));
+        }
+        .yield-espionage {
+            color: #64748b; /* Espionage Slate */
+            filter: drop-shadow(0 0 3px rgba(100, 116, 139, 0.5));
+        }
+        .yield-commerce {
+            color: #34d399; /* Mint */
+            filter: drop-shadow(0 0 3px rgba(52, 211, 153, 0.5));
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-logo">
+            <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline><line x1="12" y1="22.08" x2="12" y2="12"></line></svg>
+            <h1>Caveman2Cosmos Realtime Log Viewer</h1>
+        </div>
+        <div class="header-controls">
+            <div id="polling-container" style="display: none; align-items: center; gap: 0.5rem;">
+                <span class="badge" id="polling-status">-</span>
+                <button id="pause-refresh-btn" class="btn btn-success" style="padding: 0.35rem 0.75rem; font-size: 0.8rem;">
+                    Pause Auto-Refresh
+                </button>
+                <select id="poll-interval" class="select-input" style="padding: 0.35rem 0.75rem; width: auto; font-size: 0.8rem;">
+                    <option value="1000">1s Refresh</option>
+                    <option value="2000" selected>2s Refresh</option>
+                    <option value="5000">5s Refresh</option>
+                    <option value="10000">10s Refresh</option>
+                </select>
+            </div>
+            <button id="reset-view-btn" class="btn btn-secondary">Clear View</button>
+            <button id="file-select-btn" class="btn btn-primary">
+                <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="17 8 12 3 7 8"></polyline><line x1="12" y1="3" x2="12" y2="15"></line></svg>
+                Load Log File
+            </button>
+        </div>
+    </header>
+
+    <div class="main-container">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <!-- Game Settings Panel -->
+            <div class="panel">
+                <div class="panel-title">Game Settings</div>
+                <ul class="meta-list">
+                    <li class="meta-item">
+                        <span class="meta-label">Game Speed</span>
+                        <span class="meta-value" id="meta-speed">-</span>
+                    </li>
+                    <li class="meta-item">
+                        <span class="meta-label">Difficulty</span>
+                        <span class="meta-value" id="meta-diff">-</span>
+                    </li>
+                    <li class="meta-item">
+                        <span class="meta-label">Calendar</span>
+                        <span class="meta-value" id="meta-calendar">-</span>
+                    </li>
+                    <li class="meta-item">
+                        <span class="meta-label">Start Year</span>
+                        <span class="meta-value" id="meta-start-year">-</span>
+                    </li>
+                    <li class="meta-item">
+                        <span class="meta-label">Current Turn</span>
+                        <span class="meta-value" id="meta-current-turn">-</span>
+                    </li>
+                    <li class="meta-item">
+                        <span class="meta-label">Current Date</span>
+                        <span class="meta-value" id="meta-current-date">-</span>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Stats Panel -->
+            <div class="panel">
+                <div class="panel-title">Statistics</div>
+                <div class="stats-grid">
+                    <div class="stat-box">
+                        <div class="stat-value" id="stat-total-events">0</div>
+                        <div class="stat-label">Total Events</div>
+                    </div>
+                    <div class="stat-box">
+                        <div class="stat-value" id="stat-combat-events">0</div>
+                        <div class="stat-label">Combat Log</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Active Players Panel -->
+            <div class="panel" style="flex: 1; display: flex; flex-direction: column; min-height: 250px;">
+                <div class="panel-title">Active Players</div>
+                <div class="players-list" id="players-container">
+                    <div style="color: var(--text-secondary); font-size: 0.85rem; text-align: center; padding: 2rem 0;">No active game data loaded.</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Content Area -->
+        <div class="content-area">
+            <!-- Log Drop Zone (visible when empty) -->
+            <div id="drop-zone" class="load-area">
+                <svg xmlns="http://www.w3.org/2000/svg" width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="17 8 12 3 7 8"></polyline><line x1="12" y1="3" x2="12" y2="15"></line></svg>
+                <div>
+                    <p>Drag and drop <span>realtimeevents.log</span> here</p>
+                    <p style="font-size: 0.8rem; margin-top: 0.5rem; color: var(--text-secondary);">Or click "Load Log File" at the top.</p>
+                    <p style="font-size: 0.78rem; margin-top: 0.25rem; color: var(--accent-info); font-weight: 500;">Tip: Use Chrome or Edge to enable automatic real-time file updates!</p>
+                </div>
+                <input type="file" id="log-file-input" class="file-input" accept=".log">
+            </div>
+
+            <!-- Filters -->
+            <div class="panel filter-panel" id="filters-panel" style="display: none;">
+                <div class="filter-row">
+                    <div class="filter-group" style="flex: 3;">
+                        <span class="filter-label">Search Description</span>
+                        <input type="text" id="filter-search" class="input-text" placeholder="Type keywords...">
+                    </div>
+                    <div class="filter-group" style="max-width: 120px; min-width: 90px;">
+                        <span class="filter-label">Turn Range</span>
+                        <input type="number" id="filter-turn-min" class="input-text" placeholder="Min">
+                    </div>
+                    <div class="filter-group" style="max-width: 120px; min-width: 90px;">
+                        <span class="filter-label">&nbsp;</span>
+                        <input type="number" id="filter-turn-max" class="input-text" placeholder="Max">
+                    </div>
+                </div>
+
+                <div>
+                    <span class="filter-label">Event Type Filters</span>
+                    <div class="type-filters">
+                        <button class="filter-chip active" data-type="all">All Events</button>
+                        <button class="filter-chip" data-type="major">Major Events</button>
+                        <button class="filter-chip" data-type="combat">Combat</button>
+                        <button class="filter-chip" data-type="science">Science & Tech</button>
+                        <button class="filter-chip" data-type="wonders">Wonders & Cities</button>
+                        <button class="filter-chip" data-type="diplomacy">Diplomacy & Trade</button>
+                        <button class="filter-chip" data-type="quest">Quests</button>
+                        <button class="filter-chip" data-type="chat">Chat / Info</button>
+                    </div>
+                </div>
+
+                <div class="toggle-group">
+                    <label class="toggle-label">
+                        <input type="checkbox" id="toggle-colors" checked>
+                        Use game event colors
+                    </label>
+                    <label class="toggle-label">
+                        <input type="checkbox" id="toggle-unmet" checked>
+                        Hide unmet civilization events (Anti-Cheat)
+                    </label>
+                    <label class="toggle-label">
+                        <input type="checkbox" id="toggle-npc" checked>
+                        Hide Barbarian / Animal / NPC events
+                    </label>
+                </div>
+            </div>
+
+            <!-- Events List -->
+            <div class="log-container" id="events-container" style="display: none;">
+                <!-- Filled dynamically by JavaScript -->
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // State management
+        let allLogs = [];
+        let metadata = null;
+        let selectedFile = null;
+        let fileHandle = null; // File System Access API handle
+        let pollTimer = null;
+        let isHttpMode = false;
+        let isPaused = false;
+        let lastParsedText = ""; // Cache of the last parsed log content to prevent repainting blink
+        let selectedPlayerIds = [];
+
+        // Elements
+        const dropZone = document.getElementById('drop-zone');
+        const logFileInput = document.getElementById('log-file-input');
+        const fileSelectBtn = document.getElementById('file-select-btn');
+        const resetViewBtn = document.getElementById('reset-view-btn');
+        const eventsContainer = document.getElementById('events-container');
+        const filtersPanel = document.getElementById('filters-panel');
+        const playersContainer = document.getElementById('players-container');
+        const pollingContainer = document.getElementById('polling-container');
+        const pollIntervalSelect = document.getElementById('poll-interval');
+        const pauseRefreshBtn = document.getElementById('pause-refresh-btn');
+
+        // Filters & Toggles
+        const filterSearch = document.getElementById('filter-search');
+        const filterTurnMin = document.getElementById('filter-turn-min');
+        const filterTurnMax = document.getElementById('filter-turn-max');
+        const filterChips = document.querySelectorAll('.filter-chip');
+        const toggleColors = document.getElementById('toggle-colors');
+        const toggleUnmet = document.getElementById('toggle-unmet');
+        const toggleNpc = document.getElementById('toggle-npc');
+        let activeTypeFilters = ['all'];
+
+        // Stats & Meta elements
+        const metaSpeed = document.getElementById('meta-speed');
+        const metaDiff = document.getElementById('meta-diff');
+        const metaCalendar = document.getElementById('meta-calendar');
+        const metaStartYear = document.getElementById('meta-start-year');
+        const metaCurrentTurn = document.getElementById('meta-current-turn');
+        const metaCurrentDate = document.getElementById('meta-current-date');
+        const statTotalEvents = document.getElementById('stat-total-events');
+        const statCombatEvents = document.getElementById('stat-combat-events');
+
+        // Initial setup
+        setupEventListeners();
+        checkHttpMode();
+
+        function setupEventListeners() {
+            // Drag and drop listeners
+            dropZone.addEventListener('dragover', (e) => {
+                e.preventDefault();
+                dropZone.classList.add('dragover');
+            });
+
+            dropZone.addEventListener('dragleave', () => {
+                dropZone.classList.remove('dragover');
+            });
+
+            dropZone.addEventListener('drop', (e) => {
+                e.preventDefault();
+                dropZone.classList.remove('dragover');
+                const file = e.dataTransfer.files[0];
+                if (file) handleSelectedFile(file);
+            });
+
+            // Button trigger file selector / File System Access API
+            fileSelectBtn.addEventListener('click', triggerFileSelect);
+            
+            logFileInput.addEventListener('change', (e) => {
+                const file = e.target.files[0];
+                if (file) handleSelectedFile(file);
+            });
+
+            // Clear button
+            resetViewBtn.addEventListener('click', clearLogData);
+
+            // Filter event listeners
+            filterSearch.addEventListener('input', applyFilters);
+            filterTurnMin.addEventListener('input', applyFilters);
+            filterTurnMax.addEventListener('input', applyFilters);
+            toggleColors.addEventListener('change', applyFilters);
+            toggleUnmet.addEventListener('change', () => {
+                if (metadata && metadata.players) {
+                    if (toggleUnmet.checked) {
+                        // Select only the human player
+                        const human = metadata.players.find(p => p.isHuman);
+                        if (human) {
+                            selectedPlayerIds = [human.id];
+                        } else {
+                            selectedPlayerIds = [];
+                        }
+                    } else {
+                        // Select all players
+                        selectedPlayerIds = metadata.players.map(p => p.id);
+                    }
+                }
+                updateMetadataUI(); // Refresh player list masking
+                applyFilters();
+            });
+            toggleNpc.addEventListener('change', () => {
+                updateMetadataUI(); // Hide/show NPC players in sidebar list
+                applyFilters();
+            });
+
+            filterChips.forEach(chip => {
+                chip.addEventListener('click', () => {
+                    const type = chip.dataset.type;
+                    if (type === 'all') {
+                        activeTypeFilters = ['all'];
+                        filterChips.forEach(c => c.classList.remove('active'));
+                        chip.classList.add('active');
+                    } else {
+                        // Toggle this specific type
+                        if (activeTypeFilters.includes('all')) {
+                            // Deactivate "all"
+                            activeTypeFilters = [];
+                            document.querySelector('.filter-chip[data-type="all"]').classList.remove('active');
+                        }
+                        
+                        const index = activeTypeFilters.indexOf(type);
+                        if (index > -1) {
+                            // Deactivate this filter
+                            activeTypeFilters.splice(index, 1);
+                            chip.classList.remove('active');
+                        } else {
+                            // Activate this filter
+                            activeTypeFilters.push(type);
+                            chip.classList.add('active');
+                        }
+                        
+                        // If no filters left, default back to 'all'
+                        if (activeTypeFilters.length === 0) {
+                            activeTypeFilters = ['all'];
+                            document.querySelector('.filter-chip[data-type="all"]').classList.add('active');
+                        }
+                    }
+                    applyFilters();
+                });
+            });
+
+            // Polling interval change
+            pollIntervalSelect.addEventListener('change', startPollingLoop);
+
+            // Pause/Resume button
+            pauseRefreshBtn.addEventListener('click', togglePauseRefresh);
+        }
+
+        // Check if hosted via local HTTP server to query the file directly
+        async function checkHttpMode() {
+            if (window.location.protocol === 'file:') return; // Prevent CORS console errors when running locally
+            try {
+                const response = await fetch('./realtimeevents.log', { method: 'HEAD' });
+                if (response.ok) {
+                    isHttpMode = true;
+                    pollingContainer.style.display = 'flex';
+                    updateStatusBadge('HTTP connected', 'badge-success');
+                    startPollingLoop();
+                }
+            } catch (e) {
+                // Ignore, using File Selector mode
+            }
+        }
+
+        // Trigger file selection with showOpenFilePicker if supported (allows auto-updating local file in Chrome/Edge)
+        async function triggerFileSelect() {
+            if (window.showOpenFilePicker) {
+                try {
+                    const [handle] = await window.showOpenFilePicker({
+                        types: [{
+                            description: 'Civ4 Event Log (realtimeevents.log)',
+                            accept: {
+                                'text/plain': ['.log']
+                            }
+                        }],
+                        excludeAcceptAllOption: true,
+                        multiple: false
+                    });
+                    
+                    fileHandle = handle;
+                    selectedFile = null;
+                    isHttpMode = false;
+                    
+                    // Read file initially
+                    const file = await fileHandle.getFile();
+                    const text = await file.text();
+                    parseLogText(text);
+
+                    // Show polling header
+                    pollingContainer.style.display = 'flex';
+                    updateStatusBadge('Live Updates Active', 'badge-success');
+                    startPollingLoop();
+                } catch (e) {
+                    console.log('File picker cancelled or failed, falling back to standard input', e);
+                    logFileInput.click();
+                }
+            } else {
+                logFileInput.click();
+            }
+        }
+
+        // Handle raw local file selected via standard input / drop
+        function handleSelectedFile(file) {
+            fileHandle = null;
+            selectedFile = file;
+            isHttpMode = false;
+
+            // Read file initially
+            const reader = new FileReader();
+            reader.onload = function(e) {
+                parseLogText(e.target.result);
+            };
+            reader.readAsText(file);
+
+            // Standard HTML5 File API doesn't support reading changes to the file pointer on disk natively in Chrome/Edge
+            pollingContainer.style.display = 'flex';
+            updateStatusBadge('Static View', 'badge-warning');
+            
+            // Standard input won't poll since it's sandboxed, but we'll show the badge to remind the user to re-click "Load Log File"
+            if (pollTimer) {
+                clearInterval(pollTimer);
+                pollTimer = null;
+            }
+        }
+
+        // Polling loop
+        function startPollingLoop() {
+            if (pollTimer) clearInterval(pollTimer);
+            
+            const interval = parseInt(pollIntervalSelect.value);
+            
+            pollTimer = setInterval(async () => {
+                if (isPaused) return;
+
+                if (isHttpMode) {
+                    try {
+                        const response = await fetch('./realtimeevents.log');
+                        if (response.ok) {
+                            const text = await response.text();
+                            parseLogText(text);
+                        }
+                    } catch (e) {
+                        console.error('Error fetching HTTP log', e);
+                    }
+                } else if (fileHandle) {
+                    try {
+                        const file = await fileHandle.getFile();
+                        const text = await file.text();
+                        parseLogText(text);
+                    } catch (e) {
+                        console.error('Error auto-updating local file handle', e);
+                    }
+                }
+            }, interval);
+        }
+
+        function togglePauseRefresh() {
+            isPaused = !isPaused;
+            if (isPaused) {
+                pauseRefreshBtn.textContent = 'Resume Auto-Refresh';
+                pauseRefreshBtn.classList.remove('btn-success');
+                pauseRefreshBtn.classList.add('btn-secondary');
+                updateStatusBadge('Updates Paused', 'badge-purple');
+            } else {
+                pauseRefreshBtn.textContent = 'Pause Auto-Refresh';
+                pauseRefreshBtn.classList.remove('btn-secondary');
+                pauseRefreshBtn.classList.add('btn-success');
+                updateStatusBadge(isHttpMode ? 'HTTP connected' : 'Live Updates Active', 'badge-success');
+                // Force an immediate refresh
+                if (isHttpMode || fileHandle) {
+                    if (isHttpMode) {
+                        fetch('./realtimeevents.log').then(r => r.text()).then(parseLogText);
+                    } else {
+                        fileHandle.getFile().then(f => f.text()).then(parseLogText);
+                    }
+                }
+            }
+        }
+
+        function updateStatusBadge(text, className) {
+            const badge = document.getElementById('polling-status');
+            badge.className = 'badge ' + className;
+            badge.textContent = text;
+        }
+
+        // Parse log string (JSON Lines)
+        function parseLogText(text) {
+            if (text === lastParsedText) return;
+            lastParsedText = text;
+
+            const lines = text.split('\n');
+            const newLogs = [];
+            let latestMetadata = null;
+
+            for (let i = 0; i < lines.length; i++) {
+                const line = lines[i].trim();
+                if (!line) continue;
+
+                try {
+                    const data = JSON.parse(line);
+                    if (data.type === 'metadata') {
+                        latestMetadata = data; // Keep tracking the latest metadata entry
+                    } else if (data.type === 'event') {
+                        newLogs.push(data);
+                    }
+                } catch (e) {
+                    // Ignore malformed lines (e.g. half-written lines)
+                }
+            }
+
+            if (latestMetadata) {
+                const isFirstTime = !metadata;
+                metadata = latestMetadata;
+                if (isFirstTime && metadata.players) {
+                    if (toggleUnmet.checked) {
+                        const human = metadata.players.find(p => p.isHuman);
+                        if (human) {
+                            selectedPlayerIds = [human.id];
+                        }
+                    } else {
+                        selectedPlayerIds = metadata.players.map(p => p.id);
+                    }
+                }
+                updateMetadataUI();
+            }
+
+            allLogs = newLogs;
+
+            // Dynamically update Sidebar current turn & current date based on the latest parsed events!
+            if (allLogs.length > 0) {
+                let maxTurn = metadata ? metadata.currentTurn : 0;
+                let latestDate = metadata ? formatYear(metadata.startYear) : '-';
+                
+                allLogs.forEach(log => {
+                    if (log.turn > maxTurn) maxTurn = log.turn;
+                });
+                
+                const latestLog = allLogs[allLogs.length - 1];
+                if (latestLog && latestLog.date) {
+                    latestDate = latestLog.date;
+                }
+
+                metaCurrentTurn.textContent = maxTurn;
+                metaCurrentDate.textContent = latestDate;
+            } else if (metadata) {
+                metaCurrentTurn.textContent = metadata.currentTurn;
+                metaCurrentDate.textContent = formatYear(metadata.startYear);
+            }
+
+            updateStats();
+            applyFilters();
+
+            // Reveal UI panels
+            if (allLogs.length > 0 || metadata) {
+                dropZone.style.display = 'none';
+                filtersPanel.style.display = 'flex';
+                eventsContainer.style.display = 'flex';
+            }
+        }
+
+        function clearLogData() {
+            allLogs = [];
+            metadata = null;
+            selectedFile = null;
+            fileHandle = null;
+            lastParsedText = ""; // Reset the cache
+            selectedPlayerIds = [];
+            if (pollTimer) {
+                clearInterval(pollTimer);
+                pollTimer = null;
+            }
+            if (!isHttpMode) {
+                pollingContainer.style.display = 'none';
+            }
+
+            // Reset UI
+            metaSpeed.textContent = '-';
+            metaDiff.textContent = '-';
+            metaCalendar.textContent = '-';
+            metaStartYear.textContent = '-';
+            metaCurrentTurn.textContent = '-';
+            metaCurrentDate.textContent = '-';
+            statTotalEvents.textContent = '0';
+            statCombatEvents.textContent = '0';
+            playersContainer.innerHTML = '<div style="color: var(--text-secondary); font-size: 0.85rem; text-align: center; padding: 2rem 0;">No active game data loaded.</div>';
+            eventsContainer.innerHTML = '';
+            
+            // Show drop zone
+            dropZone.style.display = 'flex';
+            filtersPanel.style.display = 'none';
+            eventsContainer.style.display = 'none';
+
+            // Reset inputs
+            logFileInput.value = '';
+            isPaused = false;
+            pauseRefreshBtn.textContent = 'Pause Auto-Refresh';
+            pauseRefreshBtn.classList.remove('btn-secondary');
+            pauseRefreshBtn.classList.add('btn-success');
+        }
+
+        // Metadata list UI
+        function updateMetadataUI() {
+            if (!metadata) return;
+
+            metaSpeed.textContent = metadata.gameSpeedName || metadata.gameSpeed;
+            metaDiff.textContent = (metadata.difficulty || 'Noble').replace('HANDICAP_', '');
+            metaCalendar.textContent = (metadata.calendar || 'Default').replace('CALENDAR_', '');
+            metaStartYear.textContent = formatYear(metadata.startYear);
+
+            // Render active players list
+            if (metadata.players && metadata.players.length > 0) {
+                playersContainer.innerHTML = '';
+                const hideUnmet = toggleUnmet.checked;
+                const hideNpc = toggleNpc.checked;
+
+                if (hideUnmet) {
+                    // Remove any selected player IDs that are now masked
+                    selectedPlayerIds = selectedPlayerIds.filter(id => {
+                        const p = metadata.players.find(pl => pl.id == id);
+                        return !p || p.isHuman || p.metByHuman !== false;
+                    });
+                }
+
+                metadata.players.forEach(p => {
+                    if (hideNpc && isNpcPlayer(p)) return;
+
+                    const row = document.createElement('div');
+                    const isMasked = hideUnmet && !p.isHuman && p.metByHuman === false;
+                    
+                    row.className = 'player-row';
+                    if (isMasked) {
+                        row.classList.add('disabled');
+                    } else if (selectedPlayerIds.includes(p.id)) {
+                        row.classList.add('selected');
+                    }
+                    
+                    let dispName = isMasked ? '??? (Unmet)' : p.name;
+                    let dispCiv = isMasked ? '???' : p.civ;
+                    let avatarInitials = isMasked ? '?' : (p.name ? p.name.substring(0, 2).toUpperCase() : '?');
+                    let avatarClass = isMasked ? 'unmet' : (p.isHuman ? 'human' : 'ai');
+                    
+                    row.innerHTML = `
+                        <div class="player-avatar ${avatarClass}">${avatarInitials}</div>
+                        <div class="player-info">
+                            <div class="player-name ${isMasked ? 'unmet' : ''}">${escapeHtml(dispName)} ${p.isHuman ? '(You)' : ''}</div>
+                            <div class="player-civ">${escapeHtml(dispCiv)}</div>
+                        </div>
+                    `;
+
+                    row.addEventListener('click', () => {
+                        if (isMasked) {
+                            showToast("Please disable 'Hide unmet civilization events' to filter by this player.");
+                            return;
+                        }
+                        const pId = p.id;
+                        const index = selectedPlayerIds.indexOf(pId);
+                        if (index > -1) {
+                            selectedPlayerIds.splice(index, 1);
+                            row.classList.remove('selected');
+                        } else {
+                            selectedPlayerIds.push(pId);
+                            row.classList.add('selected');
+                        }
+                        applyFilters();
+                    });
+
+                    playersContainer.appendChild(row);
+                });
+            }
+        }
+
+        function updateStats() {
+            statTotalEvents.textContent = allLogs.length;
+            const combatCount = allLogs.filter(log => log.messageType === 6).length;
+            statCombatEvents.textContent = combatCount;
+        }
+
+        // Apply filters (including unmet anti-cheat masking and categories)
+        function applyFilters() {
+            const query = filterSearch.value.toLowerCase();
+            const turnMin = parseInt(filterTurnMin.value) || 0;
+            const turnMax = parseInt(filterTurnMax.value) || Infinity;
+            const hideUnmet = toggleUnmet.checked;
+
+            const filtered = allLogs.filter(log => {
+                // Turn filter
+                if (log.turn < turnMin || log.turn > turnMax) return false;
+
+                // Anti-Cheat Met status filter
+                let playerInfo = metadata && metadata.players ? metadata.players.find(p => p.id == log.playerId) : null;
+                if (hideUnmet && playerInfo && !playerInfo.isHuman && playerInfo.metByHuman === false) {
+                    return false;
+                }
+
+                // Barbarian/NPC/Animal filter
+                const hideNpc = toggleNpc.checked;
+                if (hideNpc && isNpcPlayer(playerInfo)) {
+                    return false;
+                }
+
+                // Player filter
+                if (selectedPlayerIds.length > 0) {
+                    if (!selectedPlayerIds.includes(log.playerId)) {
+                        return false;
+                    }
+                }
+
+                // Text search
+                if (query && !log.description.toLowerCase().includes(query)) return false;
+
+                // Event type filters
+                if (!activeTypeFilters.includes('all')) {
+                    const desc = log.description.toLowerCase();
+                    const hasMatch = activeTypeFilters.some(filterType => matchEventType(log, desc, filterType));
+                    if (!hasMatch) return false;
+                }
+
+                return true;
+            });
+
+            renderEvents(filtered);
+        }
+
+        // Render logs stream
+        function renderEvents(events) {
+            eventsContainer.innerHTML = '';
+            
+            // Set body classes for options (like color toggling)
+            if (toggleColors.checked) {
+                document.body.classList.add('color-enabled');
+            } else {
+                document.body.classList.remove('color-enabled');
+            }
+
+            if (events.length === 0) {
+                eventsContainer.innerHTML = `
+                    <div class="log-empty">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg>
+                        <div>No events match the active filters.</div>
+                    </div>
+                `;
+                return;
+            }
+
+            // Render from newest to oldest (limit to latest 300 logs for high-speed responsiveness)
+            const renderLimit = 300;
+            const displayEvents = events.slice(-renderLimit).reverse();
+
+            displayEvents.forEach(event => {
+                const row = document.createElement('div');
+                row.className = 'log-row';
+
+                // Format message type styling
+                let typeText = 'INFO';
+                let typeColor = 'var(--text-secondary)';
+                switch (event.messageType) {
+                    case 3: 
+                    case 4:
+                        typeText = 'MAJOR';
+                        typeColor = 'var(--accent-purple)';
+                        break;
+                    case 5: 
+                        typeText = 'CHAT';
+                        typeColor = 'var(--accent-info)';
+                        break;
+                    case 6: 
+                        typeText = 'COMBAT';
+                        typeColor = 'var(--accent-danger)';
+                        break;
+                    case 7: 
+                        typeText = 'QUEST';
+                        typeColor = 'var(--accent-warning)';
+                        break;
+                }
+
+                const parsedDesc = parseCiv4Tags(event.description);
+                const playerCiv = event.playerCiv && event.playerCiv !== 'Unknown' ? event.playerCiv : null;
+
+                let textStyle = '';
+                if (toggleColors.checked && event.color) {
+                    const hex = getCiv4ColorHex(event.color);
+                    if (hex) {
+                        textStyle = `style="color: ${hex}"`;
+                    }
+                }
+
+                row.innerHTML = `
+                    <div class="log-time-badge">
+                        <div class="log-turn">T. ${event.turn}</div>
+                        <div class="log-date">${escapeHtml(event.date)}</div>
+                    </div>
+                    <div class="log-content">
+                        <div class="log-header">
+                            <span class="log-msg-type" style="color: ${typeColor}">${typeText}</span>
+                            ${playerCiv ? `<span class="log-civ-name">${escapeHtml(playerCiv)}</span>` : ''}
+                        </div>
+                        <div class="log-desc" ${textStyle}>${parsedDesc}</div>
+                    </div>
+                `;
+                eventsContainer.appendChild(row);
+            });
+
+            if (events.length > renderLimit) {
+                const limitNote = document.createElement('div');
+                limitNote.style.textAlign = 'center';
+                limitNote.style.color = 'var(--text-secondary)';
+                limitNote.style.fontSize = '0.8rem';
+                limitNote.style.padding = '1rem';
+                limitNote.textContent = `Showing latest ${renderLimit} of ${events.length} events. Use search and range filters to view more.`;
+                eventsContainer.appendChild(limitNote);
+            }
+        }
+
+        // Parse Civ4 color markup tags, clean up layout tags (like <font=3>, </font>)
+        function parseCiv4Tags(desc) {
+            if (!desc) return '';
+            let html = escapeHtml(desc);
+
+            // Strip out <font=X> and </font> formatting tags
+            html = html.replace(/&lt;font=[0-9]+&gt;/gi, '');
+            html = html.replace(/&lt;\/font&gt;/gi, '');
+            html = html.replace(/<font=[0-9]+>/gi, '');
+            html = html.replace(/<\/font>/gi, '');
+
+            // Convert &lt;color=R,G,B,A&gt;...&lt;/color&gt; to styled spans or strip them based on toggleColors
+            html = html.replace(/&lt;color=(\d+),(\d+),(\d+),(\d+)&gt;([\s\S]*?)&lt;\/color&gt;/gi, (match, r, g, b, a, text) => {
+                if (toggleColors.checked) {
+                    return `<span style="color: rgba(${r}, ${g}, ${b}, ${a / 255})">${text}</span>`;
+                } else {
+                    return `<span>${text}</span>`;
+                }
+            });
+
+            // Convert [COLOR_POSITIVE_TEXT], [COLOR_GREEN], etc. to span classes
+            html = html.replace(/\[COLOR_(?:POSITIVE_TEXT|GREEN|FONT_GREEN|TECH_TEXT)\]/g, '<span class="color-positive">');
+            html = html.replace(/\[COLOR_(?:WARNING_TEXT|RED|NEGATIVE_TEXT|SELECTED_TEXT)\]/g, '<span class="color-negative">');
+            html = html.replace(/\[COLOR_HIGHLIGHT_TEXT\]/g, '<span class="color-highlight">');
+            html = html.replace(/\[COLOR_[A-Z0-9_]+\]/g, '<span>');
+            html = html.replace(/\[COLOR_REVERT\]|\[\/COLOR\]/g, '</span>');
+
+            // Format line breaks
+            html = html.replace(/\[NEWLINE\]|\r?\n/g, '<br>');
+
+            // Convert yield symbols to beautiful icons
+            html = html.replace(/ℤ/g, '<span class="yield-icon yield-prod" title="Production">🔨</span>');
+            html = html.replace(/ℴ/g, '<span class="yield-icon yield-gold" title="Gold/Commerce">💰</span>');
+            html = html.replace(/℣/g, '<span class="yield-icon yield-food" title="Food">🍞</span>');
+            html = html.replace(/ℵ/g, '<span class="yield-icon yield-science" title="Science">🧪</span>');
+            html = html.replace(/ℶ/g, '<span class="yield-icon yield-culture" title="Culture">🎵</span>');
+            html = html.replace(/ℷ/g, '<span class="yield-icon yield-espionage" title="Espionage">🕵️</span>');
+            html = html.replace(/℥/g, '<span class="yield-icon yield-commerce" title="Commerce">🪙</span>');
+
+            return html;
+        }
+
+        // Helpers
+        function escapeHtml(text) {
+            if (!text) return '';
+            const map = {
+                '&': '&amp;',
+                '<': '&lt;',
+                '>': '&gt;',
+                '"': '&quot;',
+                "'": '&#039;'
+            };
+            return text.replace(/[&<>"']/g, function(m) { return map[m]; });
+        }
+
+        function formatYear(year) {
+            if (year < 0) {
+                return Math.abs(year) + " BC";
+            }
+            return year + " AD";
+        }
+
+        function isNpcPlayer(player) {
+            if (!player) return false;
+            const civ = (player.civ || '').toLowerCase();
+            const name = (player.name || '').toLowerCase();
+            return civ.includes('npc') || civ.includes('barbarian') || civ.includes('neanderthal') ||
+                   name.includes('barbarian') || name.includes('neanderthal') || name.includes('green man');
+        }
+
+        function getCiv4ColorHex(colorName) {
+            if (!colorName || colorName === 'NO_COLOR') return null;
+            const CIV4_COLORS = {
+                'COLOR_POSITIVE_TEXT': '#4eff4e',
+                'COLOR_GREEN': '#4eff4e',
+                'COLOR_FONT_GREEN': '#4eff4e',
+                'COLOR_TECH_TEXT': '#4eff4e',
+                'COLOR_WARNING_TEXT': '#ffbf00',
+                'COLOR_YELLOW': '#ffbf00',
+                'COLOR_HIGHLIGHT_TEXT': '#6fdcff',
+                'COLOR_RED': '#ff5f5f',
+                'COLOR_NEGATIVE_TEXT': '#ff5f5f',
+                'COLOR_SELECTED_TEXT': '#ff5f5f',
+                'COLOR_CYAN': '#00ffff',
+                'COLOR_WHITE': '#f1f3f9',
+                'COLOR_BLUE': '#6fdcff',
+                'COLOR_RESEARCH_TEXT': '#6fdcff'
+            };
+            return CIV4_COLORS[colorName] || null;
+        }
+
+        function matchEventType(log, desc, type) {
+            if (type === 'all') return true;
+            if (type === 'combat') {
+                return log.messageType === 6 || desc.includes('defeated') || desc.includes('destroy') || desc.includes('killed');
+            }
+            if (type === 'quest') {
+                return log.messageType === 7 || desc.includes('quest');
+            }
+            if (type === 'science') {
+                return desc.includes('discovered') || desc.includes('researched');
+            }
+            if (type === 'wonders') {
+                return desc.includes('has built') || desc.includes('has finished') || desc.includes('has completed') || desc.includes('founded a new city') || desc.includes('captures');
+            }
+            if (type === 'diplomacy') {
+                return desc.includes('declared war') || desc.includes('peace treaty') || desc.includes('made peace') || desc.includes('vassal');
+            }
+            if (type === 'major') {
+                return log.messageType === 3 || log.messageType === 4;
+            }
+            if (type === 'chat') {
+                return log.messageType === 5 || log.messageType === 1 || log.messageType === 2;
+            }
+            return false;
+        }
+
+        function showToast(message) {
+            let toast = document.getElementById('custom-toast');
+            if (!toast) {
+                toast = document.createElement('div');
+                toast.id = 'custom-toast';
+                toast.style.position = 'fixed';
+                toast.style.bottom = '20px';
+                toast.style.left = '50%';
+                toast.style.transform = 'translateX(-50%)';
+                toast.style.background = 'rgba(239, 68, 68, 0.95)';
+                toast.style.color = '#fff';
+                toast.style.padding = '0.75rem 1.5rem';
+                toast.style.borderRadius = '8px';
+                toast.style.zIndex = '1000';
+                toast.style.fontSize = '0.9rem';
+                toast.style.fontWeight = '600';
+                toast.style.boxShadow = '0 10px 25px -5px rgba(0, 0, 0, 0.5)';
+                toast.style.transition = 'opacity 0.3s, transform 0.3s';
+                toast.style.pointerEvents = 'none';
+                document.body.appendChild(toast);
+            }
+            toast.textContent = message;
+            toast.style.opacity = '1';
+            toast.style.transform = 'translateX(-50%) translateY(0)';
+            
+            clearTimeout(toast.timeoutId);
+            toast.timeoutId = setTimeout(() => {
+                toast.style.opacity = '0';
+                toast.style.transform = 'translateX(-50%) translateY(10px)';
+            }, 3000);
+        }
+    </script>
+</body>
+</html>

@@ -15680,6 +15680,10 @@ static bool isMajorEventMessage(const CvTalkingHeadMessage& message)
 
 void CvPlayer::addMessage(const CvTalkingHeadMessage& message)
 {
+	if (GC.getGamePointer() != NULL && GC.getGame().isOption(GAMEOPTION_REALTIME_EVENT_LOGGING))
+	{
+		GC.getGame().addRealtimeLogEvent(getID(), message);
+	}
 
 	m_listGameMessages.push_back(message);
 
