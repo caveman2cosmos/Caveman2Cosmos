@@ -183,6 +183,7 @@ public:
 	int getTurnYear(int iGameTurn);
 	int getGameTurnYear();
 	CvDate getCurrentDate();
+	int getTurnHACValue(int iTurn) const;
 
 	// A unique ID for this game that is persistent across sessions
 	const CvString getGameId() const { return m_gameId; }

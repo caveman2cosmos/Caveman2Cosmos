@@ -32,6 +32,7 @@ struct MissionTargetInfo
 
 //	Koshling - add caching to plot danger calculations
 #define PLOT_DANGER_CACHING
+#ifdef PLOT_DANGER_CACHING
 // C2C Optimization: Player-aware plot danger caching. Adding ePlayer allows the cache
 // to be safely shared or queried contextually, and increasing cache size to 128
 // matches C2C's scale (larger maps, more players, and heavier pathing queries).

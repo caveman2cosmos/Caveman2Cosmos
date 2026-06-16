@@ -15458,10 +15458,249 @@ void CvPlayer::deleteEventTriggered(int iID)
 }
 
 
+static bool isQuestMessage(const CvTalkingHeadMessage& message)
+{
+	if (message.getMessageType() == MESSAGE_TYPE_QUEST)
+	{
+		return true;
+	}
+	const wchar_t* desc = message.getDescription();
+	if (desc != NULL)
+	{
+		if (wcsstr(desc, L"Quest") != NULL || wcsstr(desc, L"quest") != NULL ||
+			wcsstr(desc, L"Qu\u00EAte") != NULL || wcsstr(desc, L"qu\u00EAte") != NULL ||
+			wcsstr(desc, L"\u041A\u0432\u0435\u0441\u0442") != NULL || wcsstr(desc, L"\u043A\u0432\u0435\u0441\u0442") != NULL)
+		{
+			return true;
+		}
+	}
+	return false;
+}
+
+static bool mentionsHeroOrGeneral(const wchar_t* szText)
+{
+	if (szText == NULL)
+	{
+		return false;
+	}
+
+	// English
+	if (wcsstr(szText, L"Hero") != NULL || wcsstr(szText, L"hero") != NULL ||
+		wcsstr(szText, L"General") != NULL || wcsstr(szText, L"general") != NULL ||
+		wcsstr(szText, L"Warlord") != NULL || wcsstr(szText, L"warlord") != NULL ||
+		wcsstr(szText, L"Leader") != NULL || wcsstr(szText, L"leader") != NULL ||
+		wcsstr(szText, L"Commander") != NULL || wcsstr(szText, L"commander") != NULL)
+	{
+		return true;
+	}
+
+	// French
+	if (wcsstr(szText, L"H\u00E9ros") != NULL || wcsstr(szText, L"h\u00E9ros") != NULL ||
+		wcsstr(szText, L"G\u00E9n\u00E9ral") != NULL || wcsstr(szText, L"g\u00E9n\u00E9ral") != NULL ||
+		wcsstr(szText, L"Chef") != NULL || wcsstr(szText, L"chef") != NULL ||
+		wcsstr(szText, L"Commandant") != NULL || wcsstr(szText, L"commandant") != NULL)
+	{
+		return true;
+	}
+
+	// German
+	if (wcsstr(szText, L"Held") != NULL || wcsstr(szText, L"held") != NULL ||
+		wcsstr(szText, L"Feldherr") != NULL || wcsstr(szText, L"feldherr") != NULL ||
+		wcsstr(szText, L"Anf\u00FChrer") != NULL || wcsstr(szText, L"anf\u00FChrer") != NULL)
+	{
+		return true;
+	}
+
+	// Italian
+	if (wcsstr(szText, L"Eroe") != NULL || wcsstr(szText, L"eroe") != NULL ||
+		wcsstr(szText, L"Generale") != NULL || wcsstr(szText, L"generale") != NULL ||
+		wcsstr(szText, L"Condottiero") != NULL || wcsstr(szText, L"condottiero") != NULL ||
+		wcsstr(szText, L"Comandante") != NULL || wcsstr(szText, L"comandante") != NULL)
+	{
+		return true;
+	}
+
+	// Spanish
+	if (wcsstr(szText, L"H\u00E9roe") != NULL || wcsstr(szText, L"h\u00E9roe") != NULL ||
+		wcsstr(szText, L"Caudillo") != NULL || wcsstr(szText, L"caudillo") != NULL ||
+		wcsstr(szText, L"L\u00EDder") != NULL || wcsstr(szText, L"l\u00EDder") != NULL)
+	{
+		return true;
+	}
+
+	// Polish
+	if (wcsstr(szText, L"Bohater") != NULL || wcsstr(szText, L"bohater") != NULL ||
+		wcsstr(szText, L"Genera\u0142") != NULL || wcsstr(szText, L"genera\u0142") != NULL ||
+		wcsstr(szText, L"Dow\u00F3dca") != NULL || wcsstr(szText, L"dow\u00F3dca") != NULL ||
+		wcsstr(szText, L"W\u00F3dz") != NULL || wcsstr(szText, L"w\u00F3dz") != NULL)
+	{
+		return true;
+	}
+
+	// Russian
+	if (wcsstr(szText, L"\u0413\u0435\u0440\u043E\u0439") != NULL || wcsstr(szText, L"\u0433\u0435\u0440\u043E\u0439") != NULL ||
+		wcsstr(szText, L"\u0413\u0435\u043D\u0435\u0440\u0430\u043B") != NULL || wcsstr(szText, L"\u0433\u0435\u043D\u0435\u0440\u0430\u043B") != NULL ||
+		wcsstr(szText, L"\u041F\u043E\u043B\u043A\u043E\u0432\u043E\u0434\u0435\u0446") != NULL || wcsstr(szText, L"\u043F\u043E\u043B\u043A\u043E\u0432\u043E\u0434\u0435\u0446") != NULL ||
+		wcsstr(szText, L"\u041B\u0438\u0434\u0435\u0440") != NULL || wcsstr(szText, L"\u043B\u0438\u0434\u0435\u0440") != NULL ||
+		wcsstr(szText, L"\u0412\u043E\u0436\u0434\u044C") != NULL || wcsstr(szText, L"\u0432\u043E\u0436\u0434\u044C") != NULL ||
+		wcsstr(szText, L"\u041A\u043E\u043C\u0430\u043D\u0434\u0438\u0440") != NULL || wcsstr(szText, L"\u043A\u043E\u043C\u0430\u043D\u0434\u0438\u0440") != NULL)
+	{
+		return true;
+	}
+
+	return false;
+}
+
+static bool hasMajorColorTag(const wchar_t* szText)
+{
+	if (szText == NULL)
+	{
+		return false;
+	}
+
+	// Pale Blue
+	if (wcsstr(szText, L"[COLOR_HIGHLIGHT_TEXT]") != NULL)
+	{
+		return true;
+	}
+
+	// Orange/Red
+	if (wcsstr(szText, L"[COLOR_SELECTED_TEXT]") != NULL ||
+		wcsstr(szText, L"[COLOR_WARNING_TEXT]") != NULL ||
+		wcsstr(szText, L"[COLOR_RED]") != NULL ||
+		wcsstr(szText, L"[COLOR_NEGATIVE_TEXT]") != NULL)
+	{
+		return true;
+	}
+
+	// Bright Green
+	if (wcsstr(szText, L"[COLOR_POSITIVE_TEXT]") != NULL ||
+		wcsstr(szText, L"[COLOR_GREEN]") != NULL ||
+		wcsstr(szText, L"[COLOR_TECH_TEXT]") != NULL ||
+		wcsstr(szText, L"[COLOR_FONT_GREEN]") != NULL)
+	{
+		return true;
+	}
+
+	// Check for HTML-style <color=R,G,B,A> tags
+	const wchar_t* pColor = wcsstr(szText, L"<color=");
+	while (pColor != NULL)
+	{
+		int r = 0, g = 0, b = 0;
+		if (swscanf(pColor, L"<color=%d,%d,%d", &r, &g, &b) == 3)
+		{
+			// Check if R, G, B matches major colors:
+			// 1. Pale Blue / Highlight: e.g. R=102, G=229, B=255
+			if (r >= 80 && r <= 120 && g >= 200 && g <= 255 && b >= 240 && b <= 255)
+			{
+				return true;
+			}
+			// 2. Orange / Red / Warning / Negative: R is high, G is relatively low, B is low
+			//    e.g. 255,0,0 or 255,239,20 or 255,102,102
+			if (r >= 200 && g <= 245 && b <= 150)
+			{
+				return true;
+			}
+			// 3. Bright Green / Positive / Tech: G is high, R is low or medium, B is low or medium
+			//    e.g. 127,255,0 or 0,255,0 or 102,255,102
+			if (g >= 200 && r <= 180 && b <= 180)
+			{
+				return true;
+			}
+		}
+		pColor = wcsstr(pColor + 7, L"<color=");
+	}
+
+	return false;
+}
+
+static bool isTradeOrHurryAlert(const wchar_t* szText)
+{
+	if (szText == NULL)
+	{
+		return false;
+	}
+
+	if (wcsstr(szText, L"trade") != NULL || wcsstr(szText, L"Trade") != NULL ||
+		wcsstr(szText, L"hurry") != NULL || wcsstr(szText, L"Hurry") != NULL ||
+		wcsstr(szText, L"Open Borders") != NULL || wcsstr(szText, L"open borders") != NULL ||
+		wcsstr(szText, L"Defensive Pact") != NULL || wcsstr(szText, L"defensive pact") != NULL ||
+		wcsstr(szText, L"Permanent Alliance") != NULL || wcsstr(szText, L"permanent alliance") != NULL ||
+		wcsstr(szText, L"Peace Treaty") != NULL || wcsstr(szText, L"peace treaty") != NULL ||
+		wcsstr(szText, L"Capitulate") != NULL || wcsstr(szText, L"capitulate") != NULL ||
+		wcsstr(szText, L"Vassal") != NULL || wcsstr(szText, L"vassal") != NULL)
+	{
+		return true;
+	}
+
+	return false;
+}
+
+static bool isMajorEventMessage(const CvTalkingHeadMessage& message)
+{
+	if (isQuestMessage(message))
+	{
+		return true;
+	}
+
+	if (message.getMessageType() == MESSAGE_TYPE_CHAT)
+	{
+		return true;
+	}
+
+	if (message.getMessageType() == MESSAGE_TYPE_MAJOR_EVENT)
+	{
+		return true;
+	}
+
+	if (message.getMessageType() == MESSAGE_TYPE_COMBAT_MESSAGE)
+	{
+		return mentionsHeroOrGeneral(message.getDescription());
+	}
+
+	if (message.getMessageType() == MESSAGE_TYPE_INFO || message.getMessageType() == MESSAGE_TYPE_MINOR_EVENT)
+	{
+		if (isTradeOrHurryAlert(message.getDescription()))
+		{
+			return false;
+		}
+	}
+
+	const wchar_t* desc = message.getDescription();
+	if (desc != NULL)
+	{
+		if (hasMajorColorTag(desc))
+		{
+			return true;
+		}
+	}
+
+	return false;
+}
+
 void CvPlayer::addMessage(const CvTalkingHeadMessage& message)
 {
 
 	m_listGameMessages.push_back(message);
+
+	// C2C Optimization: Limit message queue size to prevent memory bloat and savegame bloat in extremely long sessions
+	if (m_listGameMessages.size() > 10000)
+	{
+		int iNumToPrune = m_listGameMessages.size() - 10000;
+		CvMessageQueue::iterator it = m_listGameMessages.begin();
+		while (it != m_listGameMessages.end() && iNumToPrune > 0)
+		{
+			if (!isQuestMessage(*it))
+			{
+				it = m_listGameMessages.erase(it);
+				iNumToPrune--;
+			}
+			else
+			{
+				++it;
+			}
+		}
+	}
 	
 	if (gPlayerLogLevel >= 1)
 	{
@@ -19087,15 +19326,37 @@ void CvPlayer::read(FDataStreamBase* pStream)
 			}
 		}
 #endif
-
 		{
 			CvMessageQueue::_Alloc::size_type iSize;
 			WRAPPER_READ_DECORATED(wrapper, "CvPlayer", &iSize, "numListGameMessages");
+			m_listGameMessages.clear();
 			for (CvMessageQueue::_Alloc::size_type i = 0; i < iSize; i++)
 			{
 				CvTalkingHeadMessage message;
 				message.read(*pStream);
-				m_listGameMessages.push_back(message);
+				if (isMajorEventMessage(message))
+				{
+					m_listGameMessages.push_back(message);
+				}
+			}
+
+			// C2C Optimization: Limit message queue size to prevent massive Event Log lags
+			if (m_listGameMessages.size() > 1000)
+			{
+				int iNumToPrune = m_listGameMessages.size() - 1000;
+				CvMessageQueue::iterator it = m_listGameMessages.begin();
+				while (it != m_listGameMessages.end() && iNumToPrune > 0)
+				{
+					if (!isQuestMessage(*it))
+					{
+						it = m_listGameMessages.erase(it);
+						iNumToPrune--;
+					}
+					else
+					{
+						++it;
+					}
+				}
 			}
 		}
 
