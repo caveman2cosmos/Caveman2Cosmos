@@ -365,7 +365,16 @@ void CvPlot::setRequireGraphicsVisible(ECvPlotGraphics::type graphics, bool visi
 
 bool CvPlot::isGraphicsVisible(ECvPlotGraphics::type graphics) const
 {
-	return (m_visibleGraphics & graphics) != 0 && isInViewport();
+	// IsGraphicsInitialized() guards against creating plot graphics before the engine
+	// landscape exists (e.g. during new-game map generation). With graphics paging on
+	// this was hidden because m_visibleGraphics stays empty during generation; with
+	// paging off the gate reduced to isInViewport() and the river/feature symbol
+	// updaters would call into non-existent engine plots and crash. See setPlotType's
+	// equivalent guard. Graphics are (re)built post-generation via setupGraphical /
+	// the paging-disable pass, so nothing is lost by deferring here.
+	return GC.IsGraphicsInitialized()
+		&& (!GC.isGraphicalPaging() || (m_visibleGraphics & graphics) != 0)
+		&& isInViewport();
 }
 
 bool CvPlot::isGraphicPagingEnabled() const
@@ -1280,7 +1289,6 @@ short CvPlot::getVisibilityDecayBonus(const bool pSeaPlot)
 	{
 		const CvFeatureInfo& kFeatureInfo = GC.getFeatureInfo(eFeature);
 		const CvString featureString = kFeatureInfo.getType();
-		const CvBonusInfo& kBonusInfo = GC.getBonusInfo(eBonusType);
 		if (featureString == "FEATURE_OASIS" || featureString == "FEATURE_CAVES" || featureString == "FEATURE_CITY_RUINS")
 		{
 			iVisibilityDecay += 3;
@@ -4767,7 +4775,7 @@ int CvPlot::calculatePathDistanceToPlot( TeamTypes eTeam, CvPlot* pTargetPlot ) 
 	gDLL->getFAStarIFace()->SetData(pTeamStepFinder, &teamVec);
 	gDLL->getFAStarIFace()->GeneratePath(pTeamStepFinder, getX(), getY(), pTargetPlot->getX(), pTargetPlot->getY(), false, 0, true);
 
-	const FAStarNode* pNode = gDLL->getFAStarIFace()->GetLastNode(&GC.getStepFinder());
+	const FAStarNode* pNode = gDLL->getFAStarIFace()->GetLastNode(pTeamStepFinder);
 
 	const int iPathDistance = pNode ? pNode->m_iData1 : -1;
 
@@ -11113,7 +11121,7 @@ void CvPlot::read(FDataStreamBase* pStream)
 	SAFE_DELETE_ARRAY(m_aiFoundValue);
 	char cFoundValuesPresent;
 	WRAPPER_READ(wrapper, "CvPlot", &cFoundValuesPresent);
-	unsigned int* m_aiFoundValue = new unsigned int[cFoundValuesPresent];
+	m_aiFoundValue = new unsigned int[cFoundValuesPresent];
 	WRAPPER_READ_ARRAY(wrapper, "CvPlot", cFoundValuesPresent, m_aiFoundValue);
 
 	SAFE_DELETE_ARRAY(m_aiPlayerCityRadiusCount);

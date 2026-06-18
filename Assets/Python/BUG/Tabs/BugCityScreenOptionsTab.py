@@ -27,6 +27,8 @@ class BugCityScreenOptionsTab(BugOptionsTab.BugOptionsTab):
 		self.addTextEdit(screen, aLeft, aRight, "CityScreen__BaseWeightHammer")
 		self.addTextEdit(screen, aLeft, aRight, "CityScreen__BaseWeightCommerce")
 		self.addSpacer(screen, LEFT, "CityScreen0")
+		self.addTextEdit(screen, LEFT, LEFT, "CityScreen__ProductionOverflowLimit")
+		self.addSpacer(screen, LEFT, "CityScreen0b")
 		# Raw Yields
 		self.addCheckbox(screen, LEFT, "CityScreen__RawYields")
 		self.addTextDropdown(screen, LEFT, LEFT, "CityScreen__RawYieldsView", True)

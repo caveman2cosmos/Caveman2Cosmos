@@ -4940,7 +4940,7 @@ int CvPlayerAI::AI_techValue(TechTypes eTech, int iPathLength, bool bIgnoreCost,
 
 							if (bAdvancedStart && getCurrentEra() < 2)
 							{
-								iValue *= (iL == YIELD_FOOD) ? 3 : 2;
+								iTempValue *= (iL == YIELD_FOOD) ? 3 : 2;
 							}
 
 							iTempValue *= AI_yieldWeight((YieldTypes)iL);
@@ -8163,7 +8163,7 @@ bool CvPlayerAI::AI_considerOffer(PlayerTypes ePlayer, const CLinkList<TradeData
 			//only accept 1 time lump sums, continuing gold per turn or resource per turn could be backstabbed
 			for (CLLNode<TradeData>* pTheirNode = pTheirList->head(); pTheirNode; pTheirNode = pTheirList->next(pTheirNode))
 			{
-				if (pNode->m_data.m_eItemType == TRADE_GOLD_PER_TURN || pNode->m_data.m_eItemType == TRADE_DEFENSIVE_PACT || pNode->m_data.m_eItemType == TRADE_RESOURCES)
+				if (pTheirNode->m_data.m_eItemType == TRADE_GOLD_PER_TURN || pTheirNode->m_data.m_eItemType == TRADE_DEFENSIVE_PACT || pTheirNode->m_data.m_eItemType == TRADE_RESOURCES)
 				{
 					return false;
 				}
@@ -9625,6 +9625,10 @@ DenialTypes CvPlayerAI::AI_bonusTrade(BonusTypes eBonus, PlayerTypes ePlayer) co
 
 	// Disregard obsolete units
 	const CvCity* pCapitalCity = getCapitalCity();
+	if (pCapitalCity == NULL)
+    	{
+    		return NO_DENIAL;
+    	}
 	for (int iI = 0; iI < GC.getNumUnitInfos(); iI++)
 	{
 		if (!GC.getGame().canEverTrain((UnitTypes)iI)
@@ -13408,7 +13412,7 @@ int CvPlayerAI::AI_civicValue(CivicTypes eCivic, bool bCivicOptionVacuum, CivicT
 		LOG_BBAI_PLAYER(2, ("Civic %S 'free military unit upkeep per pop' value: %d", kCivic.getDescription(), iTempValue));
 	}
 	iValue += iTempValue;
-	iTempValue = -(kCivic.getCivilianUnitUpkeepMod() * getNumUnits() - getNumMilitaryUnits());
+	iTempValue = -(kCivic.getCivilianUnitUpkeepMod() * (getNumUnits() - getNumMilitaryUnits()));
 	if (gPlayerLogLevel > 2 && iTempValue != 0)
 	{
 		LOG_BBAI_PLAYER(2, ("Civic %S civilian unit upkeep modifier %d%%",
@@ -23170,7 +23174,7 @@ int CvPlayerAI::AI_getStrategyHash() const
 		}
 		else
 		{
-			if (iLastStrategyHash &= AI_STRATEGY_DAGGER)
+			if (iLastStrategyHash & AI_STRATEGY_DAGGER)
 			{
 				if (iDagger >= (9 * AI_DAGGER_THRESHOLD) / 10)
 				{

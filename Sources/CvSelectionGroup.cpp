@@ -1696,7 +1696,8 @@ bool CvSelectionGroup::startMission()
 						}
 						case MISSION_DISCOVER:
 						{
-							if (GET_PLAYER(pLoopUnit->getOwner()).getUnit(headMissionQueueNode()->m_data.iData1)->discover((TechTypes)headMissionQueueNode()->m_data.iData2))
+						    CvUnit* pDiscoverUnit = GET_PLAYER(pLoopUnit->getOwner()).getUnit(headMissionQueueNode()->m_data.iData1);
+							if (pDiscoverUnit && pDiscoverUnit->discover((TechTypes)headMissionQueueNode()->m_data.iData2))
 							{
 								bAction = true;
 							}

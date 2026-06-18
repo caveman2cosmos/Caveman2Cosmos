@@ -609,8 +609,11 @@ void CvGame::doPreTurn0()
 		gDLL->getEngineIFace()->AutoSave(true);
 	}
 	// Toffer - Move camera after autosave as the latter interrupts the former from completing succsessfully.
-	GC.getCurrentViewport()->bringIntoView(GET_PLAYER(getActivePlayer()).getStartingPlot()->getX(), GET_PLAYER(getActivePlayer()).getStartingPlot()->getY());
-
+    const CvPlot* pStartPlot = GET_PLAYER(getActivePlayer()).getStartingPlot();
+    if (pStartPlot != NULL)
+    {
+        GC.getCurrentViewport()->bringIntoView(pStartPlot->getX(), pStartPlot->getY());
+    }
 	OutputDebugString("doPreTurn0: End\n");
 }
 

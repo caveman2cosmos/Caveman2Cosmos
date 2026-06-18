@@ -1208,6 +1208,13 @@ void CvGame::selectionListGameNetMessageInternal(int eMessage, int iData2, int i
 					}
 				}
 			}
+			// Size Matters: merging a multi-unit selection group bulk-merges every eligible
+            // same-type/size triple in the group, so fire a single group message rather than
+            // a per-unit merge command (which would otherwise queue one popup per unit).
+            else if (iData2 == COMMAND_MERGE && pHeadSelectedUnit->getGroup()->getNumUnits() > 1)
+            {
+                CvMessageControl::getInstance().sendMergeAll(pHeadSelectedUnit->getID());
+            }
 			else
 			{
 				foreach_(const CvUnit* pSelectedUnit, gDLL->getInterfaceIFace()->getSelectionList()->units())

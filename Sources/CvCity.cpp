@@ -9910,7 +9910,10 @@ void CvCity::changeFoodKeptPercent(int iChange)
 
 int CvCity::getMaxProductionOverflow() const
 {
-	return getYieldRate(YIELD_PRODUCTION) * 2;
+	// The multiplier (turns of base production that may be banked as overflow before
+	// the excess is converted to gold) is a player-configurable BUG option; default 2
+	// reproduces the historical hard-coded behaviour.
+	return getYieldRate(YIELD_PRODUCTION) * getBugOptionINT("CityScreen__ProductionOverflowLimit", 2);
 }
 
 
@@ -21868,7 +21871,7 @@ void CvCity::calculateExtraTradeRouteProfit(int iExtra, int*& aiTradeYields) con
 		}
 	}
 
-	for (int iI = 0; iI < getTradeRoutes() + iExtra; iI++)
+	for (int iI = 0; iI < std::min(getTradeRoutes() + iExtra, iMaxTradeRoutes); iI++)
 	{
 		CvCity* pLoopCity = getCity(paTradeCities[iI]);
 
