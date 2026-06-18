@@ -473,6 +473,14 @@ void CvGameTextMgr::setUnitHelp(CvWStringBuffer &szString, const CvUnit* pUnit, 
 
 	szString.append(L", ");
 
+	// Debug aid: unit id and plot coords, shown inline whenever debug mode is on
+    // (no modifier key needed) so units can be pinned down quickly when reading logs.
+    if (bDebugMode)
+    {
+        szTempBuffer.Format(L"#%d (%d,%d), ", pUnit->getID(), pUnit->getX(), pUnit->getY());
+        szString.append(szTempBuffer);
+    }
+
 	if (pUnit->getDomainType() == DOMAIN_AIR)
 	{
 		if (pUnit->airBaseCombatStr() > 0)
@@ -8348,10 +8356,16 @@ void CvGameTextMgr::setPlotHelp(CvWStringBuffer& szString, CvPlot* pPlot)
 	const CvTeamAI* plotTeam = ePlotTeam > -1 ? &GET_TEAM(ePlotTeam) : NULL;
 	const PlayerTypes ePlotOwner = pPlot->getOwner();
 
+    // Debug aid: plot coords on every tooltip while debug mode is on (no modifier
+    // needed). The modifier-gated block below adds the deeper AI diagnostics.
+    if (bDebug)
+    {
+        szString.append(CvWString::format(L"(%d, %d)", pPlot->getX(), pPlot->getY()));
+        szString.append(NEWLINE);
+    }
+
 	if (bDebug && (bCtrl || bShift || bAlt))
 	{
-		szString.append(CvWString::format(L"X %d, Y %d", pPlot->getX(), pPlot->getY()));
-		szString.append(NEWLINE);
 		if (bCtrl)
 		{
 			if (ePlotOwner != NO_PLAYER)

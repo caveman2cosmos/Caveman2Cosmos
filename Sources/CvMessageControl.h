@@ -54,6 +54,7 @@ public:
 	void sendChooseBuildUp(PromotionLineTypes ePromotionLine, int iID);
 	void sendChooseTrait(TraitTypes eTrait, bool bNewValue);
 	void sendMergeUnit(int iUnitID);
+	void sendMergeAll(int iHeadUnitID);
 	void sendSplitUnit(bool bConfirm);
 	void sendImprovementUpgrade(ImprovementTypes eImprovement, int iX, int iY, bool bConfirm);
 	void sendArrestUnit(int iCopID, PlayerTypes eCopPlayer, int iVictimID, PlayerTypes eVictimPlayer);

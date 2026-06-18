@@ -88,6 +88,8 @@ class ANewDawnSettings:
 				ANewDawnOpt.setFlexibleDifficultyAI(data3)
 			elif data2 == int(ModderGameOptionTypes.MODDERGAMEOPTION_USE_HISTORICAL_ACCURATE_CALENDAR):
 				ANewDawnOpt.setHistoricalAccurateCalendar(data3)
+			elif data2 == int(ModderGameOptionTypes.MODDERGAMEOPTION_NEXT_TRAIT_CULTURE_REQ_PERCENT):
+				ANewDawnOpt.setNextTraitCultureReqPercent(data3)
 		#Change Difficulty
 		elif protocol == DIFFICULTY_EVENT_ID:
 			pPlayer = GC.getPlayer(data1)
@@ -278,6 +280,10 @@ def changedNoAutoCorporationFounding(option, value):
 def changedWarPrizes(option, value):
 	GC.setDefineINT("WAR_PRIZES", int(value))
 
+def changedNextTraitCultureReqPercent(option, value):
+	GC.getGame().setModderGameOption(ModderGameOptionTypes.MODDERGAMEOPTION_NEXT_TRAIT_CULTURE_REQ_PERCENT, value)
+	CyMessageControl().sendModNetMessage(MODDERGAMEOPTION_EVENT_ID, GC.getGame().getActivePlayer(), int(ModderGameOptionTypes.MODDERGAMEOPTION_NEXT_TRAIT_CULTURE_REQ_PERCENT), int(value), 0)
+
 def changedFlexibleDifficultyAI(option, value):
 	GC.getGame().setModderGameOption(ModderGameOptionTypes.MODDERGAMEOPTION_AI_USE_FLEXIBLE_DIFFICULTY, value)
 	CyMessageControl().sendModNetMessage(MODDERGAMEOPTION_EVENT_ID, GC.getGame().getActivePlayer(), int(ModderGameOptionTypes.MODDERGAMEOPTION_AI_USE_FLEXIBLE_DIFFICULTY), int(value), 0)
@@ -349,6 +355,7 @@ def setXMLOptionsfromIniFile():
 	changedReforestation(ANewDawnOpt, ANewDawnOpt.isReforestation())
 	changedSeaTunnels(ANewDawnOpt, ANewDawnOpt.isSeaTunnels())
 	changedWarPrizes(ANewDawnOpt, ANewDawnOpt.isWarPrizes())
+	changedNextTraitCultureReqPercent(ANewDawnOpt, ANewDawnOpt.getNextTraitCultureReqPercent())
 	changedFlexibleDifficultyAI(ANewDawnOpt, ANewDawnOpt.isFlexibleDifficultyAI())
 	changedHistoricalAccurateCalendar(ANewDawnOpt, ANewDawnOpt.isHistoricalAccurateCalendar())
 	changedInfrastructureIgnoresImprovements(ANewDawnOpt, ANewDawnOpt.isInfrastructureIgnoresImprovements())

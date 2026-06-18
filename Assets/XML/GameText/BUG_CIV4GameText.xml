@@ -3565,6 +3565,14 @@
 		<Italian>Commercio</Italian>
 		<Polish>Bogactwo</Polish>
 	</TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_BUG_OPT_CITYSCREEN__PRODUCTIONOVERFLOWLIMIT_TEXT</Tag>
+        <English>Production Overflow Limit</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_BUG_OPT_CITYSCREEN__PRODUCTIONOVERFLOWLIMIT_HOVER</Tag>
+        <English>When a city finishes what it is building, leftover production is banked as overflow for the next item. This sets the cap on banked overflow, measured in turns of the city's base production; anything above the cap is converted to gold instead. Higher values waste fewer hammers. Default is 2.</English>
+    </TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_CITYSCREEN__GREATPERSONINFO_HOVER</Tag>
 		<English>When checked, displays the percentage chance and type of each possible [ICON_GREATPEOPLE] on the bar. The number shown is controlled by the General setting.</English>
@@ -8098,6 +8106,14 @@
 		<French>Distance de ville Minimum</French>
 		<Polish>Minimalna odleg&#179;o&#156;&#230; mi&#234;dzy miastami</Polish>
 	</TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_BUG_OPT_ROMSETTINGS__NEXTTRAITCULTUREREQPERCENT_HOVER</Tag>
+        <English>Scales the national culture a leader needs to reach the next trait level. Higher values require more culture, so traits are gained more slowly; lower values make trait levels come faster.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_BUG_OPT_ROMSETTINGS__NEXTTRAITCULTUREREQPERCENT_TEXT</Tag>
+        <English>Next trait culture requirement (%)</English>
+    </TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_ROMSETTINGS__MAXREBASERANGE_HOVER</Tag>
 		<English>The maximum range aircraft can be rebased in one turn. After supersonic flight, aircraft get unlimited rebase range. 0 indicates unlimited range.</English>

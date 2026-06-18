@@ -737,7 +737,7 @@ class CvEventManager:
 			if GAME.isPbem():
 				popup = CyPopupInfo()
 				popup.setButtonPopupType(ButtonPopupTypes.BUTTONPOPUP_DETAILS)
-				popup.setOption1(true)
+				popup.setOption1(True)
 				popup.addPopup(iPlayer)
 		else:
 			iPlayer = GAME.getActivePlayer()
@@ -1288,9 +1288,9 @@ class CvEventManager:
 			if CyPlot.isCity():
 				GC.getPlayer(CyUnit.getOwner()).acquireCity(CyPlot.getPlotCity(), False, False)
 			for pNukedPlot in CyPlot.rect(1, 1):
-				numUnits = CyPlot.getNumUnits()
-				for e in xrange(numUnits,0,-1):
-					pUnit = CyPlot.getUnit(e)
+				numUnits = pNukedPlot.getNumUnits()
+				for e in xrange(numUnits - 1, -1, -1):
+					pUnit = pNukedPlot.getUnit(e)
 					pUnit.kill(False, -1)
 				if pNukedPlot.getFeatureType() == GC.getInfoTypeForString('FEATURE_FALLOUT'):
 					pNukedPlot.setFeatureType(-1, -1)

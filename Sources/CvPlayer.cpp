@@ -6328,6 +6328,7 @@ void CvPlayer::doGoody(CvPlot* pPlot, CvUnit* pUnit)
 			}
 		}
 	}
+	if (!aGoodies.empty())
 	{
 		const GoodyTypes eGoody = aGoodies[GC.getGame().getSorenRandNum(aGoodies.size(), "Select Goody Type")];
 
@@ -6339,7 +6340,7 @@ void CvPlayer::doGoody(CvPlot* pPlot, CvUnit* pUnit)
 		CvEventReporter::getInstance().goodyReceived(getID(), pPlot, pUnit, eGoody);
 	}
 
-	if (hasExtraGoody())
+	if (hasExtraGoody() && !aGoodies.empty())
 	{
 		const GoodyTypes eGoody = aGoodies[GC.getGame().getSorenRandNum(aGoodies.size(), "Select Goody Type 2")];
 		receiveGoody(pPlot, eGoody, pUnit);
@@ -16830,7 +16831,7 @@ bool CvPlayer::doEspionageMission(EspionageMissionTypes eMission, PlayerTypes eT
 		if (NO_PLAYER != eTargetPlayer && pSpyUnit
 		&& kMission.getBuyUnitCostFactor() > 0 && pSpyUnit->canBribe(pPlot, false))
 		{
-			CvUnit* pTargetUnit;
+			CvUnit* pTargetUnit = NULL;
 			if (pPlot->plotCheck(PUF_isOtherTeam, getID(), -1, NULL, NO_PLAYER, NO_TEAM, PUF_isVisible, getID()))
 			{
 				for (int i = 0; i < pPlot->getNumUnits(); i++)
@@ -16854,8 +16855,9 @@ bool CvPlayer::doEspionageMission(EspionageMissionTypes eMission, PlayerTypes eT
 
 				int iX = pTargetUnit->getX();
 				int iY = pTargetUnit->getY();
+				const UnitTypes eBribedType = pTargetUnit->getUnitType();
 				pTargetUnit->kill(false, getID());
-				CvUnit* acquiredWorker = initUnit(pTargetUnit->getUnitType(), iX, iY, UNITAI_WORKER, NO_DIRECTION, GC.getGame().getSorenRandNum(10000, "AI Unit Birthmark"));
+				CvUnit* acquiredWorker = initUnit(eBribedType, iX, iY, UNITAI_WORKER, NO_DIRECTION, GC.getGame().getSorenRandNum(10000, "AI Unit Birthmark"));
 				CvCity* pCapital = this->getCapitalCity();
 				if (pCapital && acquiredWorker)
 				{
@@ -17558,9 +17560,9 @@ int CvPlayer::getAdvancedStartUnitCost(UnitTypes eUnit, bool bAdd, const CvPlot*
 		{
 			return -1;
 		}
-		iCost = getModifiedIntValue(iCost, pCity->getProductionModifier(eUnit));
+		iCost = getModifiedIntValue(iCost, getProductionModifier(eUnit));
 	}
-	else iCost = getModifiedIntValue(iCost, getProductionModifier(eUnit));
+	else iCost = getModifiedIntValue(iCost, pCity->getProductionModifier(eUnit));
 
 
 	if (bAdd)
@@ -20775,7 +20777,7 @@ void CvPlayer::createGreatPeople(UnitTypes eGreatPersonUnit, bool bIncrementThre
 		if (GET_PLAYER((PlayerTypes)iI).isAlive())
 		{
 
-			if (pPlot->isRevealed(GET_PLAYER((PlayerTypes)iI).getTeam(), false))
+			if (pPlot != NULL && pPlot->isRevealed(GET_PLAYER((PlayerTypes)iI).getTeam(), false))
 			{
 				AddDLLMessage(((PlayerTypes)iI), false, GC.getEVENT_MESSAGE_TIME(), szReplayMessage, "AS2D_UNIT_GREATPEOPLE", MESSAGE_TYPE_MAJOR_EVENT, pGreatPeopleUnit->getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_UNIT_TEXT"), iX, iY, true, true);
 			}
@@ -29718,12 +29720,16 @@ uint64_t CvPlayer::getLeaderLevelupNextCultureTotal() const
 	PROFILE_EXTRA_FUNC();
 	uint64_t iPromoThreshold = 1000;
 	uint64_t iX = 1000;
-	int iY = 10 * GC.getNEXT_TRAIT_CULTURE_REQ_PERCENT() / 100;
+	// Set from the BUG menu (Stones2Stars tab) via MODDERGAMEOPTION_NEXT_TRAIT_CULTURE_REQ_PERCENT.
+    // Falls back to 25 (the former GlobalDefines default) before the BUG value has been pushed in.
+    int iReqPercent = GC.getGame().getModderGameOption(MODDERGAMEOPTION_NEXT_TRAIT_CULTURE_REQ_PERCENT);
+    if (iReqPercent == 0) iReqPercent = 25;
+    int iY = 10 * iReqPercent / 100;
 
 	if (GC.getGame().isOption(GAMEOPTION_LEADER_START_NO_POSITIVE_TRAITS))
 	{
 		iX = 10;
-		iY = 8 * GC.getNEXT_TRAIT_CULTURE_REQ_PERCENT() / 100;
+		iY = 8 * iReqPercent / 100;
 	}
 	const int iIteratorA = getLeaderHeadLevel() + 1;
 	for (int x = 0; x < iIteratorA; x++)

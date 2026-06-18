@@ -1097,6 +1097,10 @@ bool CvDeal::startTrade(TradeData trade, PlayerTypes eFromPlayer, PlayerTypes eT
 					{
 						pNewHQCity->changeHasBuilding((BuildingTypes)i, true);
 						pOldHeadquarters->changeHasBuilding((BuildingTypes)i, false);
+						if (pOldHeadquarters != NULL)
+                        {
+                            pOldHeadquarters->changeHasBuilding((BuildingTypes)i, false);
+                        }
 						break;
 					}
 				}
