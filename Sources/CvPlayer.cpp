@@ -2674,7 +2674,7 @@ void CvPlayer::acquireCity(CvCity* pOldCity, bool bConquest, bool bTrade, bool b
 
 				for (int iJ = 0; iJ < MAX_PC_PLAYERS; iJ++)
 				{
-					if (GET_PLAYER((PlayerTypes)iJ).isAlive() && GET_PLAYER((PlayerTypes)iI).getStateReligion() == (ReligionTypes)iI)
+					if (GET_PLAYER((PlayerTypes)iJ).isAlive() && GET_PLAYER((PlayerTypes)iJ).getStateReligion() == (ReligionTypes)iI)
 					{
 						AI_invalidateAttitudeCache((PlayerTypes)iJ);
 						GET_PLAYER((PlayerTypes)iJ).AI_invalidateAttitudeCache(eNewOwner);
@@ -2720,8 +2720,10 @@ void CvPlayer::acquireCity(CvCity* pOldCity, bool bConquest, bool bTrade, bool b
 
 				iOccupationTime *= GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getSpeedPercent(); // Extra 100x
 
-				// Normalize: Full timer at 0 culture, no timer when culture == occupation threshold.
-				iOccupationTime *= 1000 - 1000 * iTeamCulturePercent / GC.getDefineINT("OCCUPATION_CULTURE_PERCENT_THRESHOLD"); // Extra 1000x
+				// Normalize: timer at 0 culture, no timer when culture == occupation threshold.
+                // Culture factor scale cut from 1000 to 200 so conquest occupation is ~1/5 as long (#153).
+                // Interim calibration; the conquest-anarchy mechanic may be reworked later.
+                iOccupationTime *= 200 - 200 * iTeamCulturePercent / GC.getDefineINT("OCCUPATION_CULTURE_PERCENT_THRESHOLD"); // Extra 200x (was 1000x)
 
 				iOccupationTime = getModifiedIntValue(iOccupationTime, iOccupationTimeModifier);
 
@@ -7322,7 +7324,9 @@ int CvPlayer::getProductionNeeded(ProjectTypes eProject) const
 	iProductionNeeded *= GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getHammerCostPercent();
 
 	const EraTypes eEra = getCurrentEra();
-	int iModifier = 0;
+	// Fall back to the current era's create percent when the project has no tech prereq;
+    // otherwise iModifier stayed 0 and zeroed the whole cost (project became ~free).
+    int iModifier = GC.getEraInfo(eEra).getCreatePercent();
 	if (GC.getProjectInfo(eProject).getTechPrereq() != NO_TECH)
     {
         iModifier = GC.getEraInfo((EraTypes)GC.getTechInfo(GC.getProjectInfo(eProject).getTechPrereq()).getEra()).getCreatePercent();
@@ -7571,7 +7575,7 @@ void CvPlayer::processBuilding(BuildingTypes eBuilding, int iChange, CvArea* pAr
 		{
 			for (int iI = 0; iI < MAX_PC_PLAYERS; iI++)
 			{
-				changeTradeRoutes(iWorldTradeRoute);
+				GET_PLAYER((PlayerTypes)iI).changeTradeRoutes(iWorldTradeRoute);
 			}
 		}
 	}
@@ -8620,11 +8624,18 @@ bool CvPlayer::canDoCivics(CivicTypes eCivic) const
 	}
 
 	if (!isNPC()
-	&& GC.getCivicInfo(eCivic).getCityLimit(getID()) > 0
-	&& GC.getCivicInfo(eCivic).getCityOverLimitUnhappy() == 0
-	&& GC.getCivicInfo(eCivic).getCityLimit(getID()) < getNumCities()
-	|| !isHasCivicOption((CivicOptionTypes)GC.getCivicInfo(eCivic).getCivicOptionType())
-	&& !GET_TEAM(getTeam()).isHasTech(GC.getCivicInfo(eCivic).getTechPrereq()))
+    && (
+        (
+            GC.getCivicInfo(eCivic).getCityLimit(getID()) > 0
+            && GC.getCivicInfo(eCivic).getCityOverLimitUnhappy() == 0
+            && GC.getCivicInfo(eCivic).getCityLimit(getID()) < getNumCities()
+        )
+        ||
+        (
+            !isHasCivicOption((CivicOptionTypes)GC.getCivicInfo(eCivic).getCivicOptionType())
+            && !GET_TEAM(getTeam()).isHasTech(GC.getCivicInfo(eCivic).getTechPrereq())
+        )
+    ))
 	{
 		return false;
 	}
@@ -13830,12 +13841,10 @@ bool CvPlayer::isUnitMaxedOut(const UnitTypes eIndex, const int iExtra) const
 	{
 		return false;
 	}
-	/* Toffer: FAssertMsg(GC.getUnitInfo(eIndex).getMaxPlayerInstances() == 0 ...
-	Special assert exception rule for the initial settler unit that is never trainable.
-	Settler units are trainable even when their hammer cost is set to -1 due to their unique hammer cost calculation. */
-	FAssertMsg(GC.getUnitInfo(eIndex).getMaxPlayerInstances() == 0 || getUnitCount(eIndex) <= GC.getUnitInfo(eIndex).getMaxPlayerInstances(),
-		CvString::format("getUnitCount=%d is expected not to be greater than MaxPlayerInstances=%d for %s",
-		getUnitCount(eIndex), GC.getUnitInfo(eIndex).getMaxPlayerInstances(), GC.getUnitInfo(eIndex).getType()).c_str());
+	// NB: the national-unit cap is ERA-SCALED below (iMaxUnits), so a stale assert against the
+    // raw getMaxPlayerInstances() base wrongly fired thousands of times per turn (e.g. 7 assassins
+    // vs base 5 in a later era where the real cap is >=15). The meaningful check is against the
+    // scaled cap and lives just before the return.
 
 
 //    this scale will be used for national units only... the idea is to start them 5 at prehistoric and scale by 5 per age...
@@ -23894,9 +23903,9 @@ bool CvPlayer::isValidTriggerCorporation(const CvEventTriggerInfo& kTrigger, con
 	}
 	else
 	{
-		if (getHasCorporationCount(eCorporation) > 0)
+		if (getHasCorporationCount(eCorporation) == 0)
 		{
-			return true;
+			return false;
 		}
 
 		if (kTrigger.isHeadquarters())
@@ -23909,7 +23918,7 @@ bool CvPlayer::isValidTriggerCorporation(const CvEventTriggerInfo& kTrigger, con
 		}
 	}
 
-	return false;
+	return true;
 }
 
 void CvPlayer::launch(VictoryTypes eVictory)
@@ -24260,7 +24269,7 @@ bool CvPlayer::canDoResolution(VoteSourceTypes eVoteSource, const VoteSelectionS
 				TeamTypes eMaster = getTeam();
 				for (int iMaster = 0; iMaster < MAX_PC_TEAMS; ++iMaster)
 				{
-					if (iMaster != getID() && kOurTeam.isVassal((TeamTypes)iMaster))
+					if (iMaster != (int)getTeam() && kOurTeam.isVassal((TeamTypes)iMaster))
 					{
 						if (GET_TEAM((TeamTypes)iMaster).isVotingMember(eVoteSource))
 						{
@@ -28000,7 +28009,7 @@ void CvPlayer::changeSpecialistYieldPercentChanges(SpecialistTypes eIndex1, Yiel
 
 		foreach_(CvCity* pLoopCity, cities())
 		{
-			const int iExistingValue = (pLoopCity->getSpecialistCount(eIndex1) * getSpecialistYieldPercentChanges(eIndex1, eIndex2) - iOldValue) / 100;
+			const int iExistingValue = pLoopCity->getSpecialistCount(eIndex1) * (getSpecialistYieldPercentChanges(eIndex1, eIndex2) - iOldValue) / 100;
 			// set the new
 			pLoopCity->changeExtraYield(eIndex2, iExistingValue);
 		}
@@ -28489,6 +28498,7 @@ void CvPlayer::clearModifierTotals()
 
 	// Similarly assets for pop, land, and units
 	m_iAssets = 10 * (getTotalPopulation() + getTotalLandScored());
+	m_iUnitPower = 0;
 
 	foreach_(const CvUnit* pLoopUnit, units())
 	{
@@ -28711,17 +28721,17 @@ void CvPlayer::processTrait(TraitTypes eTrait, int iChange)
 
 	foreach_(const DomainModifier2& pair, GC.getTraitInfo(eTrait).getDomainFreeExperience())
 	{
-		changeNationalDomainFreeExperience(pair.first, pair.second);
+		changeNationalDomainFreeExperience(pair.first, pair.second * iChange);
 	}
 
 	foreach_(const DomainModifier2& pair, GC.getTraitInfo(eTrait).getDomainProductionModifiers())
 	{
-		changeNationalDomainProductionModifier(pair.first, pair.second);
+		changeNationalDomainProductionModifier(pair.first, pair.second * iChange);
 	}
 
 	foreach_(const TechModifier& pair, GC.getTraitInfo(eTrait).getTechResearchModifiers())
 	{
-		changeNationalTechResearchModifier(pair.first, pair.second);
+		changeNationalTechResearchModifier(pair.first, pair.second * iChange);
 	}
 
 	for (int iI = 0; iI < GC.getTraitInfo(eTrait).getNumUnitCombatFreeExperiences(); iI++)
@@ -29377,7 +29387,7 @@ void CvPlayer::updateExtraSpecialistCommerce()
 
 int CvPlayer::getSpecialistExtraYield(YieldTypes eIndex) const
 {
-	FASSERT_BOUNDS(0, NUM_COMMERCE_TYPES, eIndex);
+	FASSERT_BOUNDS(0, NUM_YIELD_TYPES, eIndex);
 	return m_aiSpecialistExtraYield[eIndex];
 }
 
@@ -29721,9 +29731,14 @@ uint64_t CvPlayer::getLeaderLevelupNextCultureTotal() const
 	uint64_t iPromoThreshold = 1000;
 	uint64_t iX = 1000;
 	// Set from the BUG menu (Stones2Stars tab) via MODDERGAMEOPTION_NEXT_TRAIT_CULTURE_REQ_PERCENT.
-    // Falls back to 25 (the former GlobalDefines default) before the BUG value has been pushed in.
+    // Falls back to 200 (the maximum dropdown value, i.e. the slowest / highest requirement) when the
+    // option has not been pushed in yet - old saves loaded with this DLL, and the first promotion
+    // checks at game start before ANewDawnSettings.setXMLOptionsfromIniFile() runs. Using the maximum
+    // guarantees an unset option can never spuriously cross the trait threshold; the real value takes
+    // over and the threshold recalculates as soon as the save load / BUG push provides it. The previous
+    // fallback of 25 made the requirement ~7x too cheap, so leaders gained traits far too fast (#156).
     int iReqPercent = GC.getGame().getModderGameOption(MODDERGAMEOPTION_NEXT_TRAIT_CULTURE_REQ_PERCENT);
-    if (iReqPercent == 0) iReqPercent = 25;
+    if (iReqPercent == 0) iReqPercent = 200;
     int iY = 10 * iReqPercent / 100;
 
 	if (GC.getGame().isOption(GAMEOPTION_LEADER_START_NO_POSITIVE_TRAITS))

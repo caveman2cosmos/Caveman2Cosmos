@@ -3235,7 +3235,7 @@ void CvUnitAI::AI_attackCityMove()
 
 	bool bHuntBarbs = false;
 
-	if (!isNPC() && area()->getCitiesPerPlayer(BARBARIAN_PLAYER) > 0 || area()->getCitiesPerPlayer(NEANDERTHAL_PLAYER) > 0)
+	if (!isNPC() && (area()->getCitiesPerPlayer(BARBARIAN_PLAYER) > 0 || area()->getCitiesPerPlayer(NEANDERTHAL_PLAYER) > 0))
 	{
 		if ((eAreaAIType != AREAAI_OFFENSIVE) && (eAreaAIType != AREAAI_DEFENSIVE) && !bAlert1 && !bTurtle)
 		{
@@ -3473,7 +3473,6 @@ void CvUnitAI::AI_attackCityMove()
 						{
 							iNeedSupportCount++;
 						}
-						iNeedSupportCount /= 4;
 						if (pLoopUnit->isHealsUnitCombat(eHealType))
 						{
 							iNeedSupportCount -= pLoopUnit->getNumHealSupportTotal();
@@ -3483,6 +3482,7 @@ void CvUnitAI::AI_attackCityMove()
 							}
 						}
 					}
+					iNeedSupportCount /= 4;
 					if (iNeedSupportCount > 0 && iNeedSupportCount > iMostNeededSupportCount)
 					{
 						iMostNeededSupportCount = iNeedSupportCount;
@@ -4674,41 +4674,11 @@ void CvUnitAI::AI_reserveMove()
 		return;
 	}
 
-	//Check for Properties :
-	int iMaxPropertyUnitsPercent = 20;
-	const PlayerTypes eOwner = getOwner();
-	CvPlayerAI& player = GET_PLAYER(eOwner);
-	const CvArea* pArea = area();
-	int iPropControlInArea = player.AI_totalAreaUnitAIs(pArea, UNITAI_PROPERTY_CONTROL);
-	int iUnitsInArea = player.getNumUnits();
-	if ((iPropControlInArea * 100 / (iUnitsInArea + 1)) < iMaxPropertyUnitsPercent)
-	{
-		for (int iI = 0; iI < GC.getNumPropertyInfos(); iI++)
-		{
-			const PropertyTypes pProperty = (PropertyTypes)iI;
-			if (GC.getPropertyInfo(pProperty).getAIWeight() != 0)
-			{
-				int iCurrentValue = getPropertiesConst()->getValueByProperty(pProperty);
-				if (iCurrentValue > 0)
-				{   //it has properties control 
-					AI_setUnitAIType(UNITAI_PROPERTY_CONTROL);
-					getGroup()->pushMission(MISSION_SKIP, -1, -1, 0, false, false, NO_MISSIONAI);
-					CvWString StrunitAIType;
-					CvWString StrUnitName;
-					if (gUnitLogLevel > 2)
-					{
-						StrunitAIType = GC.getUnitAIInfo(AI_getUnitAIType()).getType();
-						StrUnitName = m_szName;
-						if (StrUnitName.length() == 0)
-						{
-							StrUnitName = getName(0).GetCString();
-						}
-						logAiEvaluations(3, "	Player %S Unit %S of type %S - Set form Reserve to property Contr., it has prop. found", GET_PLAYER(getOwner()).getCivilizationDescription(0), StrUnitName.GetCString(), StrunitAIType.GetCString());
-					}
-				}
-			}
-		}
-	}
+	// NB: a RESERVE unit is no longer flipped to UNITAI_PROPERTY_CONTROL here. Property-control
+    // units are produced as that role from creation by the need-based path in
+    // CvCityAI::AI_chooseProduction (and the capability-checked AI_guardCity ejection); poaching
+    // general reserve units caused a RESERVE<->PROPERTY_CONTROL oscillation (the handler bounced
+    // non-capable / not-currently-needed units straight back). See AI_fulfillPropertyControlNeed.
 
 	if (!plot()->isOwned())
 	{
@@ -12385,59 +12355,15 @@ bool CvUnitAI::AI_guardCity(bool bLeave, bool bSearch, int iMaxPath)
 
 			if (pCity != NULL && plotSet.find(pPlot) != plotSet.end())
 			{
-				//	Check property control attributes first - they may cause us to defend in the city
-				//	regardless of other conditions
-				#define MAX_PROPCONTROL_PERCENT_TO_JOIN 20 //Calvitix Add a limit to the Join to PropControl Team (when already too much units)
-				const PlayerTypes eOwner = getOwner();
-				CvPlayerAI& player = GET_PLAYER(eOwner);
-				const CvArea* pArea = area();
-				int iPropControlInArea = player.AI_totalAreaUnitAIs(pArea, UNITAI_PROPERTY_CONTROL);
-				int iUnitsInArea = player.getNumUnits();
-				if ((iPropControlInArea * 100 / iUnitsInArea) < MAX_PROPCONTROL_PERCENT_TO_JOIN)
-				{
-
-					if (getGroup()->AI_hasBeneficialPropertyEffectForCity(pCity, NO_PROPERTY))
-					{
-						//	We have at least one unit that can help the ciy's property control (aka crime usually)
-						//	Split ou he best such unit and have it defend in the city
-						CvSelectionGroup* pOldGroup = getGroup();
-						CvUnit* pEjectedUnit = getGroup()->AI_ejectBestPropertyManipulator(pCity);
-
-						FAssert(pEjectedUnit != NULL);
-						pEjectedUnit->AI_setUnitAIType(UNITAI_PROPERTY_CONTROL);
-
-						if (gUnitLogLevel > 2)
-						{
-							const CvWString StrunitAIType = GC.getUnitAIInfo(AI_getUnitAIType()).getType();
-							CvWString StrUnitName = m_szName;
-							if (StrUnitName.length() == 0)
-							{
-								StrUnitName = getName(0).GetCString();
-							}
-							logAiEvaluations(3, "	Player %S Unit %S of type %S - is ejected from group To Maintain Prop Control in %S", GET_PLAYER(getOwner()).getCivilizationDescription(0), StrUnitName.GetCString(), StrunitAIType.GetCString(), pCity->getName().GetCString());
-						}
-
-						if (atPlot(pCity->plot()))
-						{
-							//	Mark the ejected unit as part of the city garrison
-							pEjectedUnit->getGroup()->AI_setAsGarrison(pCity);
-							pEjectedUnit->getGroup()->pushMission(MISSION_SKIP, -1, -1, 0, false, false, MISSIONAI_GUARD_CITY, NULL);
-							return (pEjectedUnit->getGroup() == pOldGroup || pEjectedUnit == this);
-						}
-						else if (pEjectedUnit->generatePath(pCity->plot(), 0, true))
-						{
-							//	Mark the ejected unit as part of the city garrison
-							pEjectedUnit->getGroup()->AI_setAsGarrison(pCity);
-							pEjectedUnit->getGroup()->pushMission(MISSION_MOVE_TO, pCity->getX(), pCity->getY(), 0, false, false, MISSIONAI_GUARD_CITY, NULL);
-							return (pEjectedUnit->getGroup() == pOldGroup || pEjectedUnit == this);
-						}
-						else
-						{
-							//	If we can't move after all regroup and continue regular defensive processing
-							pEjectedUnit->joinGroup(pOldGroup);
-						}
-					}
-				}
+				// NB: removed the property-control ejection/flip that used to re-type a garrisoned
+                // unit to UNITAI_PROPERTY_CONTROL here. It used a broad capability test
+                // (AI_hasBeneficialPropertyEffectForCity) that disagreed with the handler's narrow
+                // one (getPropertyManipulators), so non-base-manipulator units got flipped and then
+                // bounced straight back -> RESERVE<->PROPERTY_CONTROL oscillation. It also masked
+                // the real need: flipped units made the property "getting better" and filled the 20%
+                // quota, which blocked the need-based production path (CvCityAI::AI_chooseProduction
+                // ~14458). Property-control units now come ONLY from that production path, assigned
+                // the role at creation and never flipped.
 
 				const int iPlotDanger2 = GET_PLAYER(getOwner()).AI_getPlotDanger(pPlot, 2);
 
@@ -12679,7 +12605,7 @@ bool CvUnitAI::AI_guardCity(bool bLeave, bool bSearch, int iMaxPath)
 				{
 					continue;
 				}
-				if (!(pLoopCity->AI_isDefended((!AI_isCityAIType()) ? pLoopCity->plot()->plotStrength(UNITVALUE_FLAGS_DEFENSIVE, PUF_canDefendGroupHead, -1, -1, getOwner(), NO_TEAM, PUF_isNotCityAIType) : 0), 2) ||
+				if (!(pLoopCity->AI_isDefended((!AI_isCityAIType()) ? pLoopCity->plot()->plotStrength(UNITVALUE_FLAGS_DEFENSIVE, PUF_canDefendGroupHead, -1, -1, getOwner(), NO_TEAM, PUF_isNotCityAIType) : 0, 2)) ||
 					(isMilitaryHappiness() && !(pLoopCity->AI_isAdequateHappinessMilitary())))
 				{
 					if (!pLoopCity->plot()->isVisibleEnemyUnit(this))
@@ -16162,7 +16088,11 @@ bool CvUnitAI::AI_seaAreaAttack()
 	for (CvReachablePlotSet::const_iterator itr = plotSet.begin(); itr != plotSet.end(); ++itr)
 	{
 		CvPlot* pLoopPlot = itr.plot();
-		if (pLoopPlot->area() == area() && pLoopPlot->isVisible(getTeam(), false) && pLoopPlot->getOwner() == getOwner())
+		// Relaxed (#sea-ai): pursue visible enemy ships anywhere in the sea area, not only within
+        // plots we own. The generatePath() below still blocks entering territory we'd have to declare
+        // war on, so this stays peace-safe while letting attack-sea units (incl. human-automated) leave
+        // friendly waters to engage. Was: ... && pLoopPlot->getOwner() == getOwner().
+		if (pLoopPlot->area() == area() && pLoopPlot->isVisible(getTeam(), false))
 		{
 			int iCount = pLoopPlot->plotCount(PUF_isEnemy, getOwner(), 0, NULL, NO_PLAYER, NO_TEAM, PUF_isVisible, getOwner());
 
@@ -16280,7 +16210,7 @@ bool CvUnitAI::AI_patrol(bool bIgnoreDanger)
 				}
 			}
 
-			if (iValue > iBestValue && !bIgnoreDanger && exposedToDanger(pAdjacentPlot, 60))
+			if (iValue > iBestValue && (bIgnoreDanger || !exposedToDanger(pAdjacentPlot, 60)))
 			{
 				iBestValue = iValue;
 				pBestPlot = pAdjacentPlot;
@@ -17880,7 +17810,7 @@ bool CvUnitAI::AI_goToTargetCity(int iFlags, int iMaxPathTurns, const CvCity* pT
 
 					if (pPathPlot->isVisibleEnemyUnit(getOwner()))
 					{
-						bool bWin;
+						bool bWin = false;
 						int iExpectedGainOdds = getGroup()->AI_attackOdds(pPathPlot, true, false, &bWin);
 
 						if (iExpectedGainOdds < 50)
@@ -21784,7 +21714,7 @@ bool CvUnitAI::AI_irrigateTerritory()
 				if ((eImprovement == NO_IMPROVEMENT || eNonObsoleteBonus == NO_BONUS || !GC.getImprovementInfo(eImprovement).isImprovementBonusTrade(eNonObsoleteBonus))
 				&& pLoopPlot->isIrrigationAvailable(true))
 				{
-					int iBestTempBuildValue = MAX_INT;
+					int iBestTempBuildValue = 0;
 					BuildTypes eBestTempBuild = NO_BUILD;
 
 					for (int iJ = 0; iJ < GC.getNumBuildInfos(); iJ++)
@@ -21797,7 +21727,7 @@ bool CvUnitAI::AI_irrigateTerritory()
 						{
 							const int iValue = 10000 / (GC.getBuildInfo(eBuild).getTime() + 1);
 
-							if (iValue < iBestTempBuildValue)
+							if (iValue > iBestTempBuildValue)
 							{
 								iBestTempBuildValue = iValue;
 								eBestTempBuild = eBuild;
@@ -30055,20 +29985,13 @@ bool CvUnitAI::AI_fulfillPropertyControlNeed()
 
 			if (iNbControlForces > MAX_TARGET_CONTROL_MAINTAIN)
 			{
-				AI_setUnitAIType(UNITAI_RESERVE);
-				getGroup()->pushMission(MISSION_SKIP, -1, -1, 0, false, false, NO_MISSIONAI);
-				if (gUnitLogLevel > 2)
-				{
-					const CvWString StrunitAIType = GC.getUnitAIInfo(AI_getUnitAIType()).getType();
-					CvWString StrUnitName = m_szName;
-					if (StrUnitName.length() == 0)
-					{
-						StrUnitName = getName(0).GetCString();
-					}
-					logAiEvaluations(3, "	Player %S Unit %S of type %S - City that need the most Prop Control Help : %S has a low Value and already > 10 PropControl Units- Set to UNITAI_RESERVE   (Value %d)", GET_PLAYER(getOwner()).getCivilizationDescription(0), StrUnitName.GetCString(), StrunitAIType.GetCString(), bestCity->getName().GetCString(), bestCityScore.result.score);
-				}
-				return false;
-			}
+                // Not needed right now: hold in place AS a property-control unit (the dedicated
+                // pool waits in-role) instead of flipping to RESERVE. That flip, paired with the
+                // (now removed) reserve-side conversion, caused the RESERVE<->PROPERTY_CONTROL
+                // oscillation. Property units keep their role from creation and are never flipped.
+                getGroup()->pushMission(MISSION_SKIP, -1, -1, 0, false, false, MISSIONAI_PROPERTY_CONTROL_MAINTAIN, plot());
+                return true;
+            }
 
 
 		}
@@ -30128,21 +30051,11 @@ bool CvUnitAI::AI_fulfillPropertyControlNeed()
 		}
 	}
 	else
-	{   //No city found
-		AI_setUnitAIType(UNITAI_RESERVE);
-		getGroup()->pushMission(MISSION_SKIP, -1, -1, 0, false, false, NO_MISSIONAI);
-		if (gUnitLogLevel > 2)
-		{
-			const CvWString StrunitAIType = GC.getUnitAIInfo(AI_getUnitAIType()).getType();
-			CvWString StrUnitName = m_szName;
-			if (StrUnitName.length() == 0)
-			{
-				StrUnitName = getName(0).GetCString();
-			}
-			logBBAI("	Player %S Unit %S of type %S - No city found to assign - Set to UNITAI_RESERVE", GET_PLAYER(getOwner()).getCivilizationDescription(0), StrUnitName.GetCString(), StrunitAIType.GetCString());
-		}
-
-	}
+	{   //No city needs control right now: hold in place as a property-control unit (the dedicated
+        //pool waits in-role); do NOT flip to RESERVE (that caused the oscillation).
+        getGroup()->pushMission(MISSION_SKIP, -1, -1, 0, false, false, MISSIONAI_PROPERTY_CONTROL_MAINTAIN, plot());
+        return true;
+    }
 	return false;
 }
 

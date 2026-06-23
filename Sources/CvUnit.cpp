@@ -6706,6 +6706,7 @@ bool CvUnit::canAutomate(AutomateTypes eAutomate) const
 		{
 			return false;
 		}
+		break;
 	case AUTOMATE_AIR_RECON:
 		if (!canRecon())
 		{
@@ -20468,22 +20469,15 @@ bool CvUnit::isPromotionValid(PromotionTypes ePromotion, bool bFree, bool bKeepC
 			}
 		}
 		if (promo.getPromotionLine() != NO_PROMOTIONLINE)
-		{
-			for (int iI = 0; iI < GC.getPromotionLineInfo(promo.getPromotionLine()).getNumNotOnGameOptions(); iI++)
-			{
-				if (GC.getGame().isOption((GameOptionTypes)GC.getPromotionLineInfo(promo.getPromotionLine()).getNotOnGameOption(iI)))
-				{
-					return false;
-				}
-			}
-			for (int iI = 0; iI < GC.getPromotionLineInfo(promo.getPromotionLine()).getNumNotOnGameOptions(); iI++)
-			{
-				if (!GC.getGame().isOption((GameOptionTypes)GC.getPromotionLineInfo(promo.getPromotionLine()).getNotOnGameOption(iI)))
-				{
-					return false;
-				}
-			}
-		}
+        {
+            for (int iI = 0; iI < GC.getPromotionLineInfo(promo.getPromotionLine()).getNumNotOnGameOptions(); iI++)
+            {
+                if (GC.getGame().isOption((GameOptionTypes)GC.getPromotionLineInfo(promo.getPromotionLine()).getNotOnGameOption(iI)))
+                {
+                    return false;
+                }
+            }
+        }
 	}
 	// Very few reasons to deny a unit promotions that are specifically set to be a free for it.
 	if (m_pUnitInfo->getFreePromotions(ePromotion) || GET_PLAYER(getOwner()).isFreePromotion(getUnitType(), ePromotion))
@@ -32990,7 +32984,7 @@ int CvUnit::flankingStrengthbyUnitCombatTotal(UnitCombatTypes eCombatType) const
 		std::max(
 			0,
 			m_pUnitInfo->getFlankingStrengthbyUnitCombatType(eCombatType)
-			+ getExtraFlankingStrengthbyUnitCombatType(eCombatType, isCommander(), isCommodore)
+			+ getExtraFlankingStrengthbyUnitCombatType(eCombatType, isCommander(), isCommodore())
 		)
 	);
 }
@@ -35928,7 +35922,7 @@ int CvUnit::getPowerValueTotal() const
 void CvUnit::setSMPowerValue(bool bForLoad)
 {
 	const int oldSMPowerValue = m_iSMPowerValue;
-	const int m_iSMPowerValue = applySMRank(m_pUnitInfo->getPowerValue(), getSizeMattersOffsetValue(), GC.getSIZE_MATTERS_MOST_MULTIPLIER());
+	m_iSMPowerValue = applySMRank(m_pUnitInfo->getPowerValue(), getSizeMattersOffsetValue(), GC.getSIZE_MATTERS_MOST_MULTIPLIER());
 	FASSERT_NOT_NEGATIVE(m_iSMPowerValue);
 	if (!bForLoad)
 	{

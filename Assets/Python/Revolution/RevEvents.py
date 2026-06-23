@@ -1043,12 +1043,14 @@ def assimilateHandler(iPlayerID, netUserData, popupReturn):
 			if LOG_DEBUG:
 				print "[REV] Rebel motherland %s extra attidude to %s now %d"%(pMotherland.getCivilizationDescription(0), GC.getPlayer(netUserData[1]).getCivilizationDescription(0), pMotherland.AI_getAttitudeExtra(netUserData[0]))
 
-			[iOdds, attackerTeam, victimTeam] = RevUtils.computeWarOdds(pMotherland, GC.getPlayer(netUserData[1]), GC.getPlayer(netUserData[0]).getCapitalCity().area(), False, True, True)
+			pRebelCapital = GC.getPlayer(netUserData[0]).getCapitalCity()
+			if not pRebelCapital.isNone():
+				[iOdds, attackerTeam, victimTeam] = RevUtils.computeWarOdds(pMotherland, GC.getPlayer(netUserData[1]), pRebelCapital.area(), False, True, True)
 
-			if attackerTeam.canDeclareWar(victimTeam.getID()) and iOdds > GAME.getSorenRandNum(100, 'Revolution: War'):
-				if LOG_DEBUG:
-					print "[REV] Rebel motherland takes exception, team %d declare war on team %d"%(attackerTeam.getID(), victimTeam.getID())
-				attackerTeam.declareWar( victimTeam.getID(), True, WarPlanTypes.NO_WARPLAN )
+				if attackerTeam.canDeclareWar(victimTeam.getID()) and iOdds > GAME.getSorenRandNum(100, 'Revolution: War'):
+					if LOG_DEBUG:
+						print "[REV] Rebel motherland takes exception, team %d declare war on team %d"%(attackerTeam.getID(), victimTeam.getID())
+					attackerTeam.declareWar( victimTeam.getID(), True, WarPlanTypes.NO_WARPLAN )
 
 		GC.getPlayer(netUserData[1]).assimilatePlayer(netUserData[0])
 	elif popupReturn.getButtonClicked() == 1:

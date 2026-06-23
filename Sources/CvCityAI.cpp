@@ -1400,7 +1400,7 @@ void CvCityAI::AI_chooseProduction()
 						//int iBestAirValue = player.AI_bestCityUnitAIValue(UNITAI_ATTACK_AIR, this, &eBestAttackAircraft);
 
 						int iAircraftHave = player.AI_getNumAIUnits(UNITAI_ATTACK_AIR) + player.AI_getNumAIUnits(UNITAI_DEFENSE_AIR) + player.AI_getNumAIUnits(UNITAI_MISSILE_AIR);
-						int iAircraftNeed = (2 + player.getNumCities() * (3 * GC.getUnitInfo(eBestAttackAircraft).getAirCombat())) / (2 * std::max(1, GC.getGame().getBestLandUnitCombat()));
+						int iAircraftNeed = (2 + player.getNumCities() * (3 * (eBestAttackAircraft != NO_UNIT ? GC.getUnitInfo(eBestAttackAircraft).getAirCombat() : 0))) / (2 * std::max(1, GC.getGame().getBestLandUnitCombat()));
 
 						UnitTypeWeightArray airUnitTypes;
 						airUnitTypes.push_back(std::make_pair(UNITAI_ATTACK_AIR, 60));
@@ -2169,9 +2169,19 @@ void CvCityAI::AI_chooseProduction()
 	//#23 Minimal attack force because of Danger, both land and sea
 	if (bDanger && !bInhibitUnits)
 	{
-		const int iAttackNeeded = iNbMinimalAttackers + std::max(0, AI_neededDefenders() - (iPlotCityDefenderCount + iPlotOtherCityAICount)) + intSqrt(player.getNumCities()); //Try to add some attack units at minimum
-		const int iOwnedAttackers = player.AI_totalAreaUnitAIs(pArea, UNITAI_ATTACK);
-		LOG_BBAI_CITY(2, ("#23 City %S, Will Start to build mini Attack forces, due to Danger. For the moment : Owned : %d, Needed : %d", getName().GetCString(), iOwnedAttackers, iAttackNeeded));
+		const int iDefShortfall = std::max(0, AI_neededDefenders() - (iPlotCityDefenderCount + iPlotOtherCityAICount));
+        const int iSqrtCities = intSqrt(player.getNumCities());
+        const int iAttackNeeded = iNbMinimalAttackers + iDefShortfall + iSqrtCities; //Try to add some attack units at minimum
+        const int iOwnedAttackers = player.AI_totalAreaUnitAIs(pArea, UNITAI_ATTACK);
+
+        // [CIT/danger] -- inputs to the dominant "minimal attack (danger)" production driver.
+        // fire=1 means this city trains a UNITAI_ATTACK unit this pass. The gate compares an
+        // AREA-wide UNITAI_ATTACK count (ownedAtk) against a PER-CITY need; if ownedAtk stays
+        // stuck below need while many cities keep firing, the trained units are being reassigned
+        // out of UNITAI_ATTACK (the role count never catches up) -> perpetual cheap-military spam.
+//         logCityAI(2, "[CIT/danger] city=%S owner=%d minAtk=%d defShortfall=%d sqrtCities=%d need=%d ownedAtk=%d fire=%d",
+//             getName().GetCString(), (int)eOwner, iNbMinimalAttackers, iDefShortfall, iSqrtCities,
+//             iAttackNeeded, iOwnedAttackers, (iOwnedAttackers < iAttackNeeded) ? 1 : 0); UNCOM
 		
 		if (iOwnedAttackers < iAttackNeeded
 		&& AI_chooseUnitImmediate("minimal attack (danger)", UNITAI_ATTACK))
@@ -4510,7 +4520,7 @@ bool CvCityAI::AI_scoreBuildingsFromListThreshold(std::vector<ScoredBuilding>& s
 				{
 					// Add value of the free building taking into account our focus, and scale it by the number of cities that don't
 					// yet have the building.
-					iValue += (AI_buildingValue(eFreeBuilding, iFocusFlags) * (player.getNumCities() - player.getBuildingCountPlusMaking(eBuilding)));
+					iValue += (AI_buildingValue(eFreeBuilding, iFocusFlags) * (player.getNumCities() - player.getBuildingCountPlusMaking(eFreeBuilding)));
 				}
 
 				LOG_CITY_BLOCK(3, {
@@ -9123,9 +9133,9 @@ bool CvCityAI::AI_chooseBuilding(int iFocusFlags, int iMaxTurns, int iMinThresho
 		CvPlayer& player = GET_PLAYER(getOwner());
 		if (nbBuildings > (NB_MAX_BUILDINGS + player.getCurrentEra() / 2))
 		{
-			LOG_BBAI_CITY(3, ("Player %d, city: %S, too many building already ordered (nb buildings = %d, nb desired turns = %d, Std = %d)", getOwner(), getName().GetCString(), nbBuildings, desiredQueueTurns, stdDesiredQueueTurns));
+			break;
 		}
-		break;
+
 
 	}
 #ifdef USE_UNIT_TENDERING
@@ -10791,7 +10801,7 @@ int CvCityAI::AI_calculateCulturePressure(bool bGreatWork) const
 					iTempValue *= 2;
 					if (bGreatWork && GET_PLAYER(getOwner()).AI_getAttitude(pLoopPlot->getOwner()) == ATTITUDE_FRIENDLY)
 					{
-						iValue /= 10;
+						iTempValue /= 10;
 					}
 				}
 				else if (bGreatWork)
@@ -14740,15 +14750,8 @@ bool CvCityAI::AI_choosePropertyControlBuildingAndUnit(int iTriggerPercentOfProp
 				iEval /= iCheck;
 				iCheck *= iTrainReluctance;
 				//TBNote: May still need to take a count of units ordered... there's only so many units the AI should be willing to train at once for some tasks.  I'm thinking of polution control here.
-				//	Don't bother trying to build units for hopelessly out-of-control properties
-				//	or else we'll spam units endlessly in cases we cannot really control
-				int iLimit = 250 * ((1 + (int)player.getCurrentEra())/5);
 				int iAcceptanceLimit = 100 * ((1 + (int)player.getCurrentEra())/2); //Acceptable Value 
 				int iAcceptanceRate = iCurrentValue/100 * 5; //Accept a 5% rate increase
-				if (iTrainReluctance > 0)
-				{
-					iLimit /= iTrainReluctance;
-				}
 
 				//Calvitix : Evaluate the future evolution of the property, with actuel change, and estimate the number of turn to achieve goal 
 				#define MIN_PROPERTY_TOTAL_TO_DEAL_WITH  -1000
@@ -14791,7 +14794,7 @@ bool CvCityAI::AI_choosePropertyControlBuildingAndUnit(int iTriggerPercentOfProp
 					logAiEvaluations(3, "City %S, step %d %%, worried about property %S. But Maximal Prop Control reached :  value(%d) / total units (%d)", getName().GetCString(), iTriggerPercentOfPropertyOpRange, szProperty.GetCString(), iPropControlInArea, iUnitsInArea);
 				}
 
-				if (iEval > iCheck && iCurrentPercent < iLimit && !isGettingBetter && !isGoodEnough && !ismaxPropUnitsReached)
+				if (iEval > iCheck && !isGettingBetter && !isGoodEnough && !ismaxPropUnitsReached)
 				{
 					//	Order a suitable unit if possible
 					CvUnitSelectionCriteria criteria;

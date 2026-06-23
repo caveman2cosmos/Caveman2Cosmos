@@ -4644,7 +4644,16 @@ void CvGame::setHandicapType(HandicapTypes eHandicap)
 				{
 					for (int j = 0; j < MAX_PLAYERS; j++)
 					{
-						GET_PLAYER((PlayerTypes)j).setUnitExtraCost((UnitTypes)i, GET_PLAYER((PlayerTypes)j).getNewCityProductionValue());
+						// Skip empty/leaderless player slots: getNewCityProductionValue() ->
+                        // getProductionModifier() -> hasTrait() asserts (getLeaderType() >= 0) for
+                        // unused slots, and dead/never-used players have no city production to cost.
+                        // On a mature-game load (averageHandicaps -> setHandicapType) the unguarded
+                        // loop fired this assert hundreds of times, bloating Asserts.log to ~hundreds
+                        // of MB and stalling the load on Assert builds.
+                        if (GET_PLAYER((PlayerTypes)j).isAlive())
+                        {
+                            GET_PLAYER((PlayerTypes)j).setUnitExtraCost((UnitTypes)i, GET_PLAYER((PlayerTypes)j).getNewCityProductionValue());
+                        }
 					}
 				}
 			}
@@ -4897,7 +4906,7 @@ TeamTypes CvGame::getRankTeam(int iRank) const
 
 void CvGame::setRankTeam(int iRank, TeamTypes eTeam)
 {
-	FASSERT_BOUNDS(0, MAX_TEAMS, eTeam);
+	FASSERT_BOUNDS(0, MAX_TEAMS, iRank);
 
 	if (getRankTeam(iRank) != eTeam)
 	{
@@ -6666,7 +6675,7 @@ void CvGame::doHeadquarters()
 
 							for (int iK = 0; iK < GC.getNumCorporationInfos(); iK++)
 							{
-								iValue += GET_PLAYER((PlayerTypes)iJ).getHasCorporationCount((CorporationTypes)iK) * 20;
+								iValue += GET_PLAYER(kLoopTeam.getLeaderID()).getHasCorporationCount((CorporationTypes)iK) * 20;
 							}
 
 							if (iValue < iBestValue)
@@ -8303,6 +8312,13 @@ void CvGame::read(FDataStreamBase* pStream)
 	WRAPPER_READ(wrapper,"CvGame",&m_bDiploVictoryEnabled);
 	WRAPPER_READ_ARRAY(wrapper,"CvGame",MAX_PLAYERS, m_aiFlexibleDifficultyTimer);
 
+	// Modder game options (BUG menu / ModderGameOptionTypes). These were previously not saved and
+    // relied on Python re-pushing them from the BUG ini on load; that left them at 0 for any consumer
+    // that runs during load/first-turn (e.g. the leader trait-promotion threshold), which read the
+    // 0 fallback instead of the player's chosen value (#156). Tag-based wrapper: absent in old saves,
+    // in which case the array keeps its reset default of 0 and the Python push still fills it.
+    WRAPPER_READ_ARRAY(wrapper,"CvGame",NUM_MODDERGAMEOPTION_TYPES, m_aiModderGameOption);
+
 	// Super forts adaptation to C2C - has this game state had its choke points calculated?
 	WRAPPER_READ(wrapper,"CvGame", &m_iChokePointCalculationVersion);
 
@@ -8601,6 +8617,10 @@ void CvGame::write(FDataStreamBase* pStream)
 	WRAPPER_WRITE(wrapper, "CvGame", m_iMercyRuleCounter);
 	WRAPPER_WRITE(wrapper, "CvGame", m_bDiploVictoryEnabled);
 	WRAPPER_WRITE_ARRAY(wrapper, "CvGame", MAX_PLAYERS, m_aiFlexibleDifficultyTimer);
+
+	// Modder game options (BUG menu / ModderGameOptionTypes) - persist so the value is authoritative
+    // on load instead of relying on a Python re-push that may land after first-turn consumers. See read().
+    WRAPPER_WRITE_ARRAY(wrapper, "CvGame", NUM_MODDERGAMEOPTION_TYPES, m_aiModderGameOption);
 
 	// Super forts adaptation to C2C - has this game state had its choke points calculated?
 	WRAPPER_WRITE(wrapper,"CvGame", m_iChokePointCalculationVersion);
@@ -9360,7 +9380,7 @@ void CvGame::doVoteResults()
 					szBuffer += NEWLINE + gDLL->getText("TXT_KEY_POPUP_DIPLOMATIC_VOTING_VICTORY", GET_TEAM(eTeam).getName().GetCString(), countVote(*pVoteTriggered, (PlayerVoteTypes)eTeam), getVoteRequired(eVote, eVoteSource), countPossibleVote(eVote, eVoteSource));
 				}
 
-				for (int iI = MAX_PC_TEAMS; iI >= 0; --iI)
+				for (int iI = MAX_PC_TEAMS -1; iI >= 0; --iI)
 				{
 					for (int iJ = 0; iJ < MAX_PC_PLAYERS; iJ++)
 					{
@@ -10060,7 +10080,11 @@ void CvGame::doFlexibleDifficulty()
 			int stddevHandi = static_cast<int>((stddev * (basicMaxCap/diff*100))/100);
 			int handicapBias = static_cast<int>(stddevHandi*((multiplier*playerX.getHandicapType())-(multiplier*default_difficult)));
 
-			double normalized = 1.80*((double)(iCurrentScore-iLowestScore)/(double)(iBestScore-iLowestScore))-0.90;
+			const double scoreRange = (double)(iBestScore - iLowestScore);
+            double normalized = (scoreRange != 0.0) ? 1.80*((double)(iCurrentScore-iLowestScore)/scoreRange)-0.90 : 0.0;
+            // Keep normalized strictly inside (-1, 1) so the atanh logs stay finite (avoid log(0) at the extremes).
+            if (normalized > 0.999) { normalized = 0.999; }
+            else if (normalized < -0.999) { normalized = -0.999; }
 			double atanh2 = 2.0 * (std::log(1.0+normalized) - std::log(1.0-normalized))/2.0;
 
 			int increase1 = 100*(iCurrentScore+((int)((double)iCurrentScore*atanh2)))-handicapBias;
@@ -11640,7 +11664,7 @@ int CvGame::getTopPopCount() const
 
 int CvGame::getWinForLosingResearchModifier(const int iCities, const int iPop) const
 {
-	return 100 - (100 * iCities / getTopCityCount() + 100 * iPop / getTopPopCount()) / 2;
+	return 100 - (100 * iCities / std::max(1, getTopCityCount()) + 100 * iPop / std::max(1, getTopPopCount())) / 2;
 }
 
 

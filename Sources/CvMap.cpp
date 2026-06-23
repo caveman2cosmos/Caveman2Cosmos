@@ -250,11 +250,15 @@ void CvMap::reset(CvMapInitData* pInitInfo)
 			m_iGridWidth = GC.getMapInfo(getType()).getGridWidth();
 			m_iGridHeight = GC.getMapInfo(getType()).getGridHeight();
 		}
-		if (GC.getMapInfo(getType()).getWrapX() > 0 && GC.getMapInfo(getType()).getWrapY() > 0)
-		{
-			m_bWrapX = GC.getMapInfo(getType()).getWrapX();
-			m_bWrapY = GC.getMapInfo(getType()).getWrapY();
-		}
+		// X-wrap and Y-wrap are independent (e.g. a cylinder is wrapX=1, wrapY=0), so set each on its own.
+        if (GC.getMapInfo(getType()).getWrapX() > 0)
+        {
+            m_bWrapX = true;
+        }
+        if (GC.getMapInfo(getType()).getWrapY() > 0)
+        {
+            m_bWrapY = true;
+        }
 	}
 /*******************************/
 /***** Parallel Maps - End *****/
