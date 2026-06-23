@@ -74,3 +74,6 @@ DevExtras/.vs/
 DevExtras/__pycache__/
 DevExtras/PyScripts/Profiling/Backup/
 DevExtras/PyScripts/Profiling/__pycache__/
+
+# Real-time event logging log file
+realtimeevents.log

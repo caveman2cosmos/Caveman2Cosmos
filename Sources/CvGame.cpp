@@ -21,6 +21,7 @@
 #include "CvMessageControl.h"
 #include "CvPathGenerator.h"
 #include "CvPlayerAI.h"
+#include "CvGameTextMgr.h"
 #include "CvPlot.h"
 #include "CvPopupInfo.h"
 #include "CvPython.h"
@@ -579,12 +580,11 @@ void CvGame::onFinalInitialized(const bool bNewGame)
 	UnitFilterList::setFilterActiveAll(UNIT_FILTER_HIDE_UNBUILDABLE, getBugOptionBOOL("CityScreen__HideUntrainableUnits", true));
 	BuildingFilterList::setFilterActiveAll(BUILDING_FILTER_HIDE_UNBUILDABLE, getBugOptionBOOL("CityScreen__HideUnconstructableBuildings", false));
 
-	// Toffer - We have some issues with signs disappearing,
-	//	not sure if these are really needed, commented out as a test.
-	//gDLL->getEngineIFace()->clearSigns();
 	gDLL->getEngineIFace()->setResourceLayer(GC.getResourceLayer());
 	//gDLL->getInterfaceIFace()->setEndTurnCounter(2 * getBugOptionINT("MainInterface__AutoEndTurnDelay", 2));
 	OutputDebugString("onFinalInitialized: End\n");
+
+	writeRealtimeLogMetadata(true);
 }
 
 // Toffer - This is only called when starting new games, or after regenerating map, right before turn 0 starts.
@@ -5743,6 +5743,8 @@ void CvGame::addGreatPersonBornName(const CvWString& szName)
 void CvGame::doTurn()
 {
 	PROFILE_BEGIN("CvGame::doTurn()",DOTURN1);
+
+	writeRealtimeLogMetadata(false);
 
 	// END OF TURN
 	CvEventReporter::getInstance().beginGameTurn( getGameTurn() );
@@ -11807,3 +11809,216 @@ void CvGame::setWorldBuilder(const bool bNewValue)
 		gDLL->getInterfaceIFace()->setWorldBuilder(bNewValue);
 	}
 }
+
+namespace {
+	std::string utf8_encode(const wchar_t* wstr)
+	{
+		if (!wstr || wstr[0] == L'\0') return std::string();
+		int size_needed = WideCharToMultiByte(CP_UTF8, 0, wstr, -1, NULL, 0, NULL, NULL);
+		std::string strTo(size_needed, 0);
+		WideCharToMultiByte(CP_UTF8, 0, wstr, -1, &strTo[0], size_needed, NULL, NULL);
+		if (!strTo.empty() && strTo[strTo.size() - 1] == '\0')
+		{
+			strTo.resize(strTo.size() - 1);
+		}
+		return strTo;
+	}
+
+	std::string json_escape(const std::string &str)
+	{
+		std::string escaped;
+		escaped.reserve(str.size());
+		for (size_t i = 0; i < str.size(); ++i)
+		{
+			char c = str[i];
+			switch (c)
+			{
+				case '"':  escaped += "\\\""; break;
+				case '\\': escaped += "\\\\"; break;
+				case '\b': escaped += "\\b";  break;
+				case '\f': escaped += "\\f";  break;
+				case '\n': escaped += "\\n";  break;
+				case '\r': escaped += "\\r";  break;
+				case '\t': escaped += "\\t";  break;
+				default:
+					if (c >= 0 && c < 32)
+					{
+						char buf[8];
+						sprintf(buf, "\\u%04x", c);
+						escaped += buf;
+					}
+					else
+					{
+						escaped += c;
+					}
+					break;
+			}
+		}
+		return escaped;
+	}
+
+	std::string json_escape_w(const wchar_t* wstr)
+	{
+		return json_escape(utf8_encode(wstr));
+	}
+}
+
+void CvGame::writeRealtimeLogMetadata(bool bTruncate)
+{
+	if (!isOption(GAMEOPTION_REALTIME_EVENT_LOGGING))
+	{
+		return;
+	}
+
+	const CvString szFile = GC.getInitCore().getDLLPath() + "\\..\\realtimeevents.log";
+	std::ofstream stream;
+	stream.open(szFile.c_str(), bTruncate ? std::ios::trunc : std::ios::app);
+	if (!stream.is_open())
+	{
+		return;
+	}
+
+	std::string gameSpeed = "NO_GAMESPEED";
+	std::string gameSpeedName = "Unknown";
+	if (getGameSpeedType() != NO_GAMESPEED)
+	{
+		gameSpeed = GC.getGameSpeedInfo(getGameSpeedType()).getType();
+		gameSpeedName = json_escape_w(GC.getGameSpeedInfo(getGameSpeedType()).getDescription());
+	}
+
+	std::string calendar = "CALENDAR_DEFAULT";
+	switch (getCalendar())
+	{
+		case CALENDAR_BI_YEARLY: calendar = "CALENDAR_BI_YEARLY"; break;
+		case CALENDAR_YEARS: calendar = "CALENDAR_YEARS"; break;
+		case CALENDAR_TURNS: calendar = "CALENDAR_TURNS"; break;
+		case CALENDAR_SEASONS: calendar = "CALENDAR_SEASONS"; break;
+		case CALENDAR_MONTHS: calendar = "CALENDAR_MONTHS"; break;
+		case CALENDAR_WEEKS: calendar = "CALENDAR_WEEKS"; break;
+		case CALENDAR_NO_SEASONS: calendar = "CALENDAR_NO_SEASONS"; break;
+		default: calendar = "CALENDAR_DEFAULT"; break;
+	}
+
+	std::string difficulty = "NO_HANDICAP";
+	if (getHandicapType() != NO_HANDICAP)
+	{
+		difficulty = GC.getHandicapInfo(getHandicapType()).getType();
+	}
+
+	PlayerTypes eActivePlayer = getActivePlayer();
+	CvPlayer* pActivePlayer = (eActivePlayer != NO_PLAYER) ? &GET_PLAYER(eActivePlayer) : NULL;
+
+	std::ostringstream playersJson;
+	playersJson << "[";
+	bool bFirstPlayer = true;
+	for (int i = 0; i < MAX_PLAYERS; ++i)
+	{
+		CvPlayer& player = GET_PLAYER((PlayerTypes)i);
+		if (player.isAlive())
+		{
+			if (!bFirstPlayer)
+			{
+				playersJson << ",";
+			}
+			bFirstPlayer = false;
+
+			std::string leaderName = "Unknown";
+			if (player.getLeaderType() != NO_LEADER)
+			{
+				leaderName = GC.getLeaderHeadInfo(player.getLeaderType()).getType();
+			}
+
+			bool bMetByHuman = false;
+			if (pActivePlayer != NULL)
+			{
+				if (eActivePlayer == (PlayerTypes)i)
+				{
+					bMetByHuman = true;
+				}
+				else
+				{
+					TeamTypes eActiveTeam = pActivePlayer->getTeam();
+					TeamTypes ePlayerTeam = player.getTeam();
+					if (eActiveTeam != NO_TEAM && ePlayerTeam != NO_TEAM)
+					{
+						bMetByHuman = (eActiveTeam == ePlayerTeam) || GET_TEAM(eActiveTeam).isHasMet(ePlayerTeam);
+					}
+				}
+			}
+			else
+			{
+				bMetByHuman = true;
+			}
+
+			playersJson << "{"
+				<< "\"id\":" << i << ","
+				<< "\"name\":\"" << json_escape_w(player.getName()) << "\","
+				<< "\"civ\":\"" << json_escape_w(player.getCivilizationDescription(0)) << "\","
+				<< "\"leader\":\"" << leaderName << "\","
+				<< "\"isHuman\":" << (player.isHuman() ? "true" : "false") << ","
+				<< "\"metByHuman\":" << (bMetByHuman ? "true" : "false")
+				<< "}";
+		}
+	}
+	playersJson << "]";
+
+	stream << "{"
+		<< "\"type\":\"metadata\","
+		<< "\"gameSpeed\":\"" << gameSpeed << "\","
+		<< "\"gameSpeedName\":\"" << gameSpeedName << "\","
+		<< "\"calendar\":\"" << calendar << "\","
+		<< "\"difficulty\":\"" << difficulty << "\","
+		<< "\"startTurn\":" << getStartTurn() << ","
+		<< "\"startYear\":" << getStartYear() << ","
+		<< "\"currentTurn\":" << getGameTurn() << ","
+		<< "\"players\":" << playersJson.str()
+		<< "}" << std::endl;
+
+	stream.close();
+}
+
+void CvGame::addRealtimeLogEvent(PlayerTypes ePlayer, const CvTalkingHeadMessage& message)
+{
+	if (!isOption(GAMEOPTION_REALTIME_EVENT_LOGGING))
+	{
+		return;
+	}
+
+	const CvString szFile = GC.getInitCore().getDLLPath() + "\\..\\realtimeevents.log";
+	std::ofstream stream;
+	stream.open(szFile.c_str(), std::ios::app);
+	if (!stream.is_open())
+	{
+		return;
+	}
+
+	CvWString szDate;
+	GAMETEXT.setTimeStr(szDate, message.getTurn(), true);
+
+	std::string playerCiv = "Unknown";
+	if (ePlayer != NO_PLAYER)
+	{
+		playerCiv = json_escape_w(GET_PLAYER(ePlayer).getCivilizationDescription(0));
+	}
+
+	ColorTypes eColor = message.getFlashColor();
+	std::string colorName = "NO_COLOR";
+	if (eColor != NO_COLOR && eColor >= 0 && eColor < GC.getNumColorInfos())
+	{
+		colorName = GC.getColorInfo(eColor).getType();
+	}
+
+	stream << "{"
+		<< "\"type\":\"event\","
+		<< "\"turn\":" << message.getTurn() << ","
+		<< "\"date\":\"" << json_escape_w(szDate.GetCString()) << "\","
+		<< "\"playerId\":" << (int)ePlayer << ","
+		<< "\"playerCiv\":\"" << playerCiv << "\","
+		<< "\"messageType\":" << (int)message.getMessageType() << ","
+		<< "\"color\":\"" << colorName << "\","
+		<< "\"description\":\"" << json_escape_w(message.getDescription()) << "\""
+		<< "}" << std::endl;
+
+	stream.close();
+}
+
