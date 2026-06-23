@@ -39,7 +39,7 @@ class RoMOptionsTab(BugOptionsTab.BugOptionsTab):
 		screen.setEnabled(self.addTextDropdown(screen, left, left, "RoMSettings__FlexibleDifficultyAIMinimumDiff", False, "LAYOUT_LEFT"), bCanAdjustSettings)
 		screen.setEnabled(self.addTextDropdown(screen, left, left, "RoMSettings__FlexibleDifficultyAIMaximumDiff", False, "LAYOUT_LEFT"), bCanAdjustSettings)
 		screen.setEnabled(self.addIntDropdown(screen, left, left, "RoMSettings__FlexibleDifficultyAITurnIncrements", False, "LAYOUT_LEFT"), bCanAdjustSettings)
-        
+
 
 		#City Management
 		self.addLabel(screen, center, "RoMSettings__CityManagement")
@@ -48,6 +48,7 @@ class RoMOptionsTab(BugOptionsTab.BugOptionsTab):
 
 		screen.setEnabled(self.addIntDropdown(screen, center, center, "RoMSettings__MaxBombardDefense", False, "LAYOUT_LEFT"), bCanAdjustSettings)
 		screen.setEnabled(self.addIntDropdown(screen, center, center, "RoMSettings__MinCityDistance", False, "LAYOUT_LEFT"), bCanAdjustSettings)
+		screen.setEnabled(self.addIntDropdown(screen, center, center, "RoMSettings__NextTraitCultureReqPercent", False, "LAYOUT_LEFT"), bCanAdjustSettings)
 
 		screen.setEnabled(self.addCheckbox(screen, center, "RoMSettings__ReligionDecay"), bCanAdjustSettings)
 		screen.setEnabled(self.addCheckbox(screen, center, "RoMSettings__MultipleReligionSpread"), bCanAdjustSettings)

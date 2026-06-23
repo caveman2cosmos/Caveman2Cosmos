@@ -129,7 +129,7 @@ bool CvSelectionGroupAI::AI_update()
 				StrUnitName = this->getHeadUnit()->getName(0).GetCString();
 			}
 
-			logBBAI("Player %d Group ID %d, mené par %d %S of Type %S, at (%d, %d), Mission %S [stack size %d], Was fortified/BuildUp, Force to Awake...", getOwner(), m_iID, this->getHeadUnit()->getID(), StrUnitName.GetCString(), StrunitAIType.GetCString(), getX(), getY(), MissionInfos.GetCString(), getNumUnits());
+			logBBAI("Player %d Group ID %d, menï¿½ par %d %S of Type %S, at (%d, %d), Mission %S [stack size %d], Was fortified/BuildUp, Force to Awake...", getOwner(), m_iID, this->getHeadUnit()->getID(), StrUnitName.GetCString(), StrunitAIType.GetCString(), getX(), getY(), MissionInfos.GetCString(), getNumUnits());
 		});
 		clearMissionQueue(); // XXX ???
 		setActivityType(ACTIVITY_AWAKE);
@@ -267,7 +267,15 @@ bool CvSelectionGroupAI::AI_update()
 		}
 	}
 
-	if (!bDead && !isHuman() && !AI_isAwaitingContract())
+	// Human AUTOMATED groups are AI-controlled too (they pass the AI_isControlled() gate at
+    // the top of this function), so they need the same end-of-update termination safety as AI
+    // groups -- in particular the MISSION_SKIP fallback below. Without it, an automated unit
+    // that stays readyToMove() after the update loop (e.g. an automated hunter that heals
+    // without consuming its move and is then re-awakened by CvUnitAI::AI_update) is re-offered
+    // every outer AI_unitUpdate pass: it re-runs its whole cascade each pass (observed ~196x/
+    // turn via [UNT/act] heal-spam) and, in rare states, the turn never terminates. The
+    // original !isHuman() guard wrongly excluded automated human groups from this safety.
+    if (!bDead && (!isHuman() || isAutomated()) && !AI_isAwaitingContract())
 	{
 		bool bFollow = false;
 
@@ -458,6 +466,10 @@ int CvSelectionGroupAI::AI_attackOdds(const CvPlot* pPlot, bool bPotentialEnemy,
 		{
 			//	There was no attacker in the first place!
 			iResult = 0;
+			if ( bWin != NULL )
+            {
+                *bWin = false;
+            }
 		}
 		else
 		{

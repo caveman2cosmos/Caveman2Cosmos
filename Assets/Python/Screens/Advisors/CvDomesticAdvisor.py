@@ -736,8 +736,10 @@ class CvDomesticAdvisor:
 		return self.objectNotPossible
 
 	def calculatePotentialConscriptUnit(self, city, szKey, arg):
-		szReturn = unicode(GC.getUnitInfo(city.getConscriptUnit()).getDescription() )
-		return szReturn
+		iUnit = city.getConscriptUnit()
+		if iUnit == -1:
+			return u""
+		return unicode(GC.getUnitInfo(iUnit).getDescription())
 
 	def calculateConscriptUnit(self, city, szKey, arg):
 		if city.canConscript():

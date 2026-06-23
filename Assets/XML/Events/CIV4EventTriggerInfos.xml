@@ -95,7 +95,6 @@
                 <Building>BUILDING_ELDER_COUNCIL</Building>
             </BuildingsRequired>
             <iNumBuildings>1</iNumBuildings>
-            <iNumPlotsRequired>1</iNumPlotsRequired>
             <bOwnPlot>1</bOwnPlot>
             <Events>
                 <Event>EVENT_WIZE_COUNCIL_1</Event>
@@ -125,7 +124,6 @@
                 <Building>BUILDING_CHILD_LABOR_CREW</Building>
             </BuildingsRequired>
             <iNumBuildings>1</iNumBuildings>
-            <iNumPlotsRequired>1</iNumPlotsRequired>
             <bOwnPlot>1</bOwnPlot>
             <bPickCity>1</bPickCity>
             <Events>
@@ -13839,7 +13837,6 @@
             <iPercentGamesActive>100</iPercentGamesActive>
             <iWeight>5</iWeight>
             <bPickCity>1</bPickCity>
-            <iNumPlotsRequired>1</iNumPlotsRequired>
             <AndPreReqs>
                 <PrereqTech>TECH_SHELTER_BUILDING</PrereqTech>
             </AndPreReqs>
@@ -13864,7 +13861,6 @@
             <iPercentGamesActive>100</iPercentGamesActive>
             <iWeight>4</iWeight>
             <bPickCity>1</bPickCity>
-            <iNumPlotsRequired>1</iNumPlotsRequired>
             <AndPreReqs>
                 <PrereqTech>TECH_SHELTER_BUILDING</PrereqTech>
             </AndPreReqs>
@@ -13889,7 +13885,6 @@
             <iPercentGamesActive>100</iPercentGamesActive>
             <iWeight>3</iWeight>
             <bPickCity>1</bPickCity>
-            <iNumPlotsRequired>1</iNumPlotsRequired>
             <AndPreReqs>
                 <PrereqTech>TECH_SHELTER_BUILDING</PrereqTech>
             </AndPreReqs>
@@ -13914,7 +13909,6 @@
             <iPercentGamesActive>100</iPercentGamesActive>
             <iWeight>2</iWeight>
             <bPickCity>1</bPickCity>
-            <iNumPlotsRequired>1</iNumPlotsRequired>
             <AndPreReqs>
                 <PrereqTech>TECH_SHELTER_BUILDING</PrereqTech>
             </AndPreReqs>
@@ -13939,7 +13933,6 @@
             <iPercentGamesActive>100</iPercentGamesActive>
             <iWeight>1</iWeight>
             <bPickCity>1</bPickCity>
-            <iNumPlotsRequired>1</iNumPlotsRequired>
             <AndPreReqs>
                 <PrereqTech>TECH_SHELTER_BUILDING</PrereqTech>
             </AndPreReqs>
@@ -15945,7 +15938,6 @@
 			<EventArt>Art/Event_Images/cityfire1.dds</EventArt>
 			<iPercentGamesActive>100</iPercentGamesActive>
 			<iWeight>100</iWeight>
-			<iNumPlotsRequired>1</iNumPlotsRequired>
 			<Events>
 				<Event>EVENT_CITYFIRE_1</Event>
 			</Events>
@@ -15973,7 +15965,6 @@
 			<EventArt>Art/Event_Images/cityfire2.dds</EventArt>
 			<iPercentGamesActive>100</iPercentGamesActive>
 			<iWeight>80</iWeight>
-			<iNumPlotsRequired>1</iNumPlotsRequired>
 			<Events>
 				<Event>EVENT_CITYFIRE_2</Event>
 				<Event>EVENT_CITYFIRE_3</Event>
@@ -16002,7 +15993,6 @@
 			<EventArt>Art/Event_Images/cityfire3.dds</EventArt>
 			<iPercentGamesActive>100</iPercentGamesActive>
 			<iWeight>40</iWeight>
-			<iNumPlotsRequired>1</iNumPlotsRequired>
 			<Events>
 				<Event>EVENT_CITYFIRE_4</Event>
 				<Event>EVENT_CITYFIRE_5</Event>
@@ -16032,7 +16022,6 @@
 			<EventArt>Art/Event_Images/cityfire4.dds</EventArt>
 			<iPercentGamesActive>100</iPercentGamesActive>
 			<iWeight>10</iWeight>
-			<iNumPlotsRequired>1</iNumPlotsRequired>
 			<Events>
 				<Event>EVENT_CITYFIRE_7</Event>
 				<Event>EVENT_CITYFIRE_8</Event>
@@ -16062,7 +16051,6 @@
 			<EventArt>Art/Event_Images/cityfire5.dds</EventArt>
 			<iPercentGamesActive>100</iPercentGamesActive>
 			<iWeight>1</iWeight>
-			<iNumPlotsRequired>1</iNumPlotsRequired>
 			<Events>
 				<Event>EVENT_CITYFIRE_10</Event>
 				<Event>EVENT_CITYFIRE_11</Event>

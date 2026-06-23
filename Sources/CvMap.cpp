@@ -250,11 +250,15 @@ void CvMap::reset(CvMapInitData* pInitInfo)
 			m_iGridWidth = GC.getMapInfo(getType()).getGridWidth();
 			m_iGridHeight = GC.getMapInfo(getType()).getGridHeight();
 		}
-		if (GC.getMapInfo(getType()).getWrapX() > 0 && GC.getMapInfo(getType()).getWrapY() > 0)
-		{
-			m_bWrapX = GC.getMapInfo(getType()).getWrapX();
-			m_bWrapY = GC.getMapInfo(getType()).getWrapY();
-		}
+		// X-wrap and Y-wrap are independent (e.g. a cylinder is wrapX=1, wrapY=0), so set each on its own.
+        if (GC.getMapInfo(getType()).getWrapX() > 0)
+        {
+            m_bWrapX = true;
+        }
+        if (GC.getMapInfo(getType()).getWrapY() > 0)
+        {
+            m_bWrapY = true;
+        }
 	}
 /*******************************/
 /***** Parallel Maps - End *****/
@@ -434,9 +438,12 @@ void CvMap::updateIncomingUnits()
 			if (m_eType == MAP_EARTH)
 			{
 				// Units arriving on Earth always arrive at the owner's capital
-				const CvPlot* plot = owner.getCapitalCity()->plot();
-				iDestX = plot->getX();
-				iDestY = plot->getY();
+				const CvCity* pCapital = owner.getCapitalCity();
+				if (pCapital != NULL)
+                {
+                    iDestX = pCapital->getX();
+                    iDestY = pCapital->getY();
+                }
 			}
 			else if (m_eType == MAP_CISLUNAR)
 			{
@@ -449,7 +456,7 @@ void CvMap::updateIncomingUnits()
 				else
 				{
 					// Arriving from outside Earth, so units spawn on the opposite side of Orbit instead
-					iDestY = m_iGridHeight - GC.getGame().getSorenRandNum(3, "Multimap arriving unit non-Earth to Cislunar y coordinate");
+					iDestY = m_iGridHeight - 1 - GC.getGame().getSorenRandNum(3, "Multimap arriving unit non-Earth to Cislunar y coordinate");
 				}
 			}
 

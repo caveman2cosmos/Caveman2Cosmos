@@ -90,6 +90,8 @@ CvMessageData* CvMessageData::createMessage(GameMessageTypes eType)
 		return new CvNetChooseTrait();
 	case GAMEMESSAGE_CHOOSE_MERGE_UNIT:
 		return new CvNetChooseMergeUnit();
+	case GAMEMESSAGE_MERGE_ALL:
+    	return new CvNetMergeAll();
 	case GAMEMESSAGE_CONFIRM_SPLIT_UNIT:
 		return new CvNetConfirmSplitUnit();
 	case GAMEMESSAGE_IMPROVEMENT_UPGRADE:
@@ -1639,6 +1641,43 @@ void CvNetChooseTrait::SetFromBuffer(FDataStreamBase* pStream)
 	pStream->Read((int*)&m_ePlayer);
 	pStream->Read((int*)&m_eTrait);
 	pStream->Read(&m_bNewValue);
+}
+
+CvNetMergeAll::CvNetMergeAll() : CvMessageData(GAMEMESSAGE_MERGE_ALL), m_ePlayer(NO_PLAYER), m_iUnitID(NO_UNIT)
+{
+}
+
+CvNetMergeAll::CvNetMergeAll(PlayerTypes ePlayer, int iUnitID) : CvMessageData(GAMEMESSAGE_MERGE_ALL), m_ePlayer(ePlayer), m_iUnitID(iUnitID)
+{
+}
+
+void CvNetMergeAll::Debug(char* szAddendum)
+{
+	sprintf(szAddendum, "Merge All In Group, head unit: %d", m_iUnitID);
+}
+
+void CvNetMergeAll::Execute()
+{
+	if (m_ePlayer != NO_PLAYER)
+	{
+		CvUnit* pHeadUnit = GET_PLAYER(m_ePlayer).getUnit(m_iUnitID);
+		if (pHeadUnit != NULL)
+		{
+			pHeadUnit->doMergeAllInGroup();
+		}
+	}
+}
+
+void CvNetMergeAll::PutInBuffer(FDataStreamBase* pStream)
+{
+	pStream->Write(m_ePlayer);
+	pStream->Write(m_iUnitID);
+}
+
+void CvNetMergeAll::SetFromBuffer(FDataStreamBase* pStream)
+{
+	pStream->Read((int*)&m_ePlayer);
+	pStream->Read((int*)&m_iUnitID);
 }
 
 CvNetChooseMergeUnit::CvNetChooseMergeUnit() : CvMessageData(GAMEMESSAGE_CHOOSE_MERGE_UNIT), m_ePlayer(NO_PLAYER), m_iUnitID(NO_UNIT)

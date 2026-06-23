@@ -2177,8 +2177,21 @@ void CvUnitAI::AI_workerMove()
 				return;
 			}
 			OutputDebugString(CvString::format("%S (%d) AI_reachHome 2 false (%d,%d)...\n", getDescription().c_str(), m_iID, m_iX, m_iY).c_str());
-			// Look for a local group we can join to be safe!
-			// We do want to take control (otherwise other unit decides where this worker goes, and can go further away)
+
+			// Prefer heading home over loitering for an escort. An undefended worker
+            // is "abroad" the moment it strays onto another player's tile (IsAbroad ==
+            // plot owner != us), e.g. when its path to an own city/bonus cut through a
+            // neighbour's borders. Make for one of our own cities first; parking next
+            // to the foreign city to wait for a passing military unit to adopt it is
+            // what left AI workers stuck in other players' cities.
+            if (AI_retreatToCity())
+            {
+                return;
+            }
+
+            // Only if we cannot path home at all do we fall back to grabbing a local
+            // escort. Take control (LEADER_PRIORITY_MAX) so the escort comes to us
+            // rather than dragging the worker even further from home.
 			AI_setLeaderPriority(LEADER_PRIORITY_MAX);
 
 			if (AI_group(GroupingParams().withUnitAI(UNITAI_ATTACK).ignoreFaster().ignoreOwnUnitType().maxPathTurns(1)))
@@ -2199,11 +2212,6 @@ void CvUnitAI::AI_workerMove()
 			}
 			AI_setLeaderPriority(-1); // We didn't get to group so back to normal
 
-			// Nobody can join us and we cannot join anyone else - leg it!
-			if (AI_retreatToCity())
-			{
-				return;
-			}
 		}
 		// Toffer - After reaching this point the worker will always start making route from here to friendly territory... May be better things to do elsewhere.
 		//	Should check if improving this neutal plot is worthwhile and if not just start going to a more worthwhile plot/job.
@@ -3227,7 +3235,7 @@ void CvUnitAI::AI_attackCityMove()
 
 	bool bHuntBarbs = false;
 
-	if (!isNPC() && area()->getCitiesPerPlayer(BARBARIAN_PLAYER) > 0 || area()->getCitiesPerPlayer(NEANDERTHAL_PLAYER) > 0)
+	if (!isNPC() && (area()->getCitiesPerPlayer(BARBARIAN_PLAYER) > 0 || area()->getCitiesPerPlayer(NEANDERTHAL_PLAYER) > 0))
 	{
 		if ((eAreaAIType != AREAAI_OFFENSIVE) && (eAreaAIType != AREAAI_DEFENSIVE) && !bAlert1 && !bTurtle)
 		{
@@ -3465,7 +3473,6 @@ void CvUnitAI::AI_attackCityMove()
 						{
 							iNeedSupportCount++;
 						}
-						iNeedSupportCount /= 4;
 						if (pLoopUnit->isHealsUnitCombat(eHealType))
 						{
 							iNeedSupportCount -= pLoopUnit->getNumHealSupportTotal();
@@ -3475,6 +3482,7 @@ void CvUnitAI::AI_attackCityMove()
 							}
 						}
 					}
+					iNeedSupportCount /= 4;
 					if (iNeedSupportCount > 0 && iNeedSupportCount > iMostNeededSupportCount)
 					{
 						iMostNeededSupportCount = iNeedSupportCount;
@@ -4666,41 +4674,11 @@ void CvUnitAI::AI_reserveMove()
 		return;
 	}
 
-	//Check for Properties :
-	int iMaxPropertyUnitsPercent = 20;
-	const PlayerTypes eOwner = getOwner();
-	CvPlayerAI& player = GET_PLAYER(eOwner);
-	const CvArea* pArea = area();
-	int iPropControlInArea = player.AI_totalAreaUnitAIs(pArea, UNITAI_PROPERTY_CONTROL);
-	int iUnitsInArea = player.getNumUnits();
-	if ((iPropControlInArea * 100 / (iUnitsInArea + 1)) < iMaxPropertyUnitsPercent)
-	{
-		for (int iI = 0; iI < GC.getNumPropertyInfos(); iI++)
-		{
-			const PropertyTypes pProperty = (PropertyTypes)iI;
-			if (GC.getPropertyInfo(pProperty).getAIWeight() != 0)
-			{
-				int iCurrentValue = getPropertiesConst()->getValueByProperty(pProperty);
-				if (iCurrentValue > 0)
-				{   //it has properties control 
-					AI_setUnitAIType(UNITAI_PROPERTY_CONTROL);
-					getGroup()->pushMission(MISSION_SKIP, -1, -1, 0, false, false, NO_MISSIONAI);
-					CvWString StrunitAIType;
-					CvWString StrUnitName;
-					if (gUnitLogLevel > 2)
-					{
-						StrunitAIType = GC.getUnitAIInfo(AI_getUnitAIType()).getType();
-						StrUnitName = m_szName;
-						if (StrUnitName.length() == 0)
-						{
-							StrUnitName = getName(0).GetCString();
-						}
-						logAiEvaluations(3, "	Player %S Unit %S of type %S - Set form Reserve to property Contr., it has prop. found", GET_PLAYER(getOwner()).getCivilizationDescription(0), StrUnitName.GetCString(), StrunitAIType.GetCString());
-					}
-				}
-			}
-		}
-	}
+	// NB: a RESERVE unit is no longer flipped to UNITAI_PROPERTY_CONTROL here. Property-control
+    // units are produced as that role from creation by the need-based path in
+    // CvCityAI::AI_chooseProduction (and the capability-checked AI_guardCity ejection); poaching
+    // general reserve units caused a RESERVE<->PROPERTY_CONTROL oscillation (the handler bounced
+    // non-capable / not-currently-needed units straight back). See AI_fulfillPropertyControlNeed.
 
 	if (!plot()->isOwned())
 	{
@@ -11589,22 +11567,45 @@ void CvUnitAI::AI_networkAutomated()
 	{
 		return;
 	}
-
-	if (AI_connectBonus() || AI_connectCity())
+    // 1. Hook already-improved resources and cities into the trade network first --
+    //    these give immediate trade value (AI_connectBonus defaults bTestTrade=true,
+    //    i.e. only resources that already carry a trade improvement).
+	if (AI_connectBonus(true) || AI_connectCity())
 	{
 		return;
 	}
 
+    // 2. Improve nearby resources so they become connectable. Without this an
+    //    unimproved resource is invisible to AI_connectBonus and never gets hooked up.
 	if (!GET_PLAYER(getOwner()).isModderOption(MODDEROPTION_INFRASTRUCTURE_IGNORES_IMPROVEMENTS)
 	&& CvWorkerService::ImproveBonus(this, 2))
 	{
 		return;
 	}
 
+	// 3. Connect resources that aren't improved yet (bTestTrade=false drops the
+    //    "already improved" requirement): road the tile now so it joins the network
+    //    the moment it gets an improvement, instead of waiting a full improve+connect
+    //    cycle. This is what makes "connect all your bonuses" actually reach the
+    //    not-yet-developed ones.
+    if (AI_connectBonus(false))
+    {
+        return;
+    }
+
+    // 4. Flesh out connective road: first plots whose improvement gains a route yield,
+    //    then city-to-city links, then any remaining upgradeable territory. The final
+    //    general AI_routeTerritory() pass is what lays/upgrades connective road across
+    //    plain terrain rather than only on already-improved tiles.
 	if (AI_routeTerritory(true) || AI_routeCity())
 	{
 		return;
 	}
+
+	if (AI_routeTerritory())
+    {
+    	return;
+    }
 
 	if (AI_retreatToCity() || AI_safety())
 	{
@@ -12354,59 +12355,15 @@ bool CvUnitAI::AI_guardCity(bool bLeave, bool bSearch, int iMaxPath)
 
 			if (pCity != NULL && plotSet.find(pPlot) != plotSet.end())
 			{
-				//	Check property control attributes first - they may cause us to defend in the city
-				//	regardless of other conditions
-				#define MAX_PROPCONTROL_PERCENT_TO_JOIN 20 //Calvitix Add a limit to the Join to PropControl Team (when already too much units)
-				const PlayerTypes eOwner = getOwner();
-				CvPlayerAI& player = GET_PLAYER(eOwner);
-				const CvArea* pArea = area();
-				int iPropControlInArea = player.AI_totalAreaUnitAIs(pArea, UNITAI_PROPERTY_CONTROL);
-				int iUnitsInArea = player.getNumUnits();
-				if ((iPropControlInArea * 100 / iUnitsInArea) < MAX_PROPCONTROL_PERCENT_TO_JOIN)
-				{
-
-					if (getGroup()->AI_hasBeneficialPropertyEffectForCity(pCity, NO_PROPERTY))
-					{
-						//	We have at least one unit that can help the ciy's property control (aka crime usually)
-						//	Split ou he best such unit and have it defend in the city
-						CvSelectionGroup* pOldGroup = getGroup();
-						CvUnit* pEjectedUnit = getGroup()->AI_ejectBestPropertyManipulator(pCity);
-
-						FAssert(pEjectedUnit != NULL);
-						pEjectedUnit->AI_setUnitAIType(UNITAI_PROPERTY_CONTROL);
-
-						if (gUnitLogLevel > 2)
-						{
-							const CvWString StrunitAIType = GC.getUnitAIInfo(AI_getUnitAIType()).getType();
-							CvWString StrUnitName = m_szName;
-							if (StrUnitName.length() == 0)
-							{
-								StrUnitName = getName(0).GetCString();
-							}
-							logAiEvaluations(3, "	Player %S Unit %S of type %S - is ejected from group To Maintain Prop Control in %S", GET_PLAYER(getOwner()).getCivilizationDescription(0), StrUnitName.GetCString(), StrunitAIType.GetCString(), pCity->getName().GetCString());
-						}
-
-						if (atPlot(pCity->plot()))
-						{
-							//	Mark the ejected unit as part of the city garrison
-							pEjectedUnit->getGroup()->AI_setAsGarrison(pCity);
-							pEjectedUnit->getGroup()->pushMission(MISSION_SKIP, -1, -1, 0, false, false, MISSIONAI_GUARD_CITY, NULL);
-							return (pEjectedUnit->getGroup() == pOldGroup || pEjectedUnit == this);
-						}
-						else if (pEjectedUnit->generatePath(pCity->plot(), 0, true))
-						{
-							//	Mark the ejected unit as part of the city garrison
-							pEjectedUnit->getGroup()->AI_setAsGarrison(pCity);
-							pEjectedUnit->getGroup()->pushMission(MISSION_MOVE_TO, pCity->getX(), pCity->getY(), 0, false, false, MISSIONAI_GUARD_CITY, NULL);
-							return (pEjectedUnit->getGroup() == pOldGroup || pEjectedUnit == this);
-						}
-						else
-						{
-							//	If we can't move after all regroup and continue regular defensive processing
-							pEjectedUnit->joinGroup(pOldGroup);
-						}
-					}
-				}
+				// NB: removed the property-control ejection/flip that used to re-type a garrisoned
+                // unit to UNITAI_PROPERTY_CONTROL here. It used a broad capability test
+                // (AI_hasBeneficialPropertyEffectForCity) that disagreed with the handler's narrow
+                // one (getPropertyManipulators), so non-base-manipulator units got flipped and then
+                // bounced straight back -> RESERVE<->PROPERTY_CONTROL oscillation. It also masked
+                // the real need: flipped units made the property "getting better" and filled the 20%
+                // quota, which blocked the need-based production path (CvCityAI::AI_chooseProduction
+                // ~14458). Property-control units now come ONLY from that production path, assigned
+                // the role at creation and never flipped.
 
 				const int iPlotDanger2 = GET_PLAYER(getOwner()).AI_getPlotDanger(pPlot, 2);
 
@@ -12648,7 +12605,7 @@ bool CvUnitAI::AI_guardCity(bool bLeave, bool bSearch, int iMaxPath)
 				{
 					continue;
 				}
-				if (!(pLoopCity->AI_isDefended((!AI_isCityAIType()) ? pLoopCity->plot()->plotStrength(UNITVALUE_FLAGS_DEFENSIVE, PUF_canDefendGroupHead, -1, -1, getOwner(), NO_TEAM, PUF_isNotCityAIType) : 0), 2) ||
+				if (!(pLoopCity->AI_isDefended((!AI_isCityAIType()) ? pLoopCity->plot()->plotStrength(UNITVALUE_FLAGS_DEFENSIVE, PUF_canDefendGroupHead, -1, -1, getOwner(), NO_TEAM, PUF_isNotCityAIType) : 0, 2)) ||
 					(isMilitaryHappiness() && !(pLoopCity->AI_isAdequateHappinessMilitary())))
 				{
 					if (!pLoopCity->plot()->isVisibleEnemyUnit(this))
@@ -13342,9 +13299,17 @@ bool CvUnitAI::AI_heal(int iDamagePercent, int iMaxPath)
 			return false;
 		}
 		OutputDebugString("AI_heal: one unit stack\n");
-		if ((plot()->isCity() || healTurns(plot()) == 1) && !isAlwaysHeal())
+		// canHeal() guard: MISSION_HEAL is a no-op when the engine can't actually start a
+        // heal here (canStartMission(MISSION_HEAL) -> canHeal() is false, e.g. healTurns==0
+        // or the unit isWaiting). Without this guard AI_heal still returned true, so the
+        // move cascade thought the unit's turn was spent while it stayed readyToMove() --
+        // the unit then re-decided "heal" every pass, spinning to the iTempHack=50 safety
+        // each turn (and risking the rare never-ending turn). Only claim the heal when it
+        // will actually take; otherwise fall through so the unit does something real / SKIPs.
+		if ((plot()->isCity() || healTurns(plot()) == 1) && !isAlwaysHeal() && canHeal(plot()))
 		{
 			OutputDebugString("AI_heal: city or 1 turn heal\n");
+// 			AI_logAct("heal", "healInCity", plot());
 			pGroup->pushMission(MISSION_HEAL);
 			return true;
 		}
@@ -13354,11 +13319,16 @@ bool CvUnitAI::AI_heal(int iDamagePercent, int iMaxPath)
 			if (!plot()->isCity() && AI_moveIntoCity(1))
 			{
 				OutputDebugString("AI_heal: one turn city move\n");
+// 				AI_logAct("heal", "moveToCityToHeal", plot());
 				return true;
 			}
-			OutputDebugString("AI_heal: healing\n");
-			pGroup->pushMission(MISSION_HEAL);
-			return true;
+			if (canHeal(plot()))
+            {
+                OutputDebugString("AI_heal: healing\n");
+//                 AI_logAct("heal", "healInField", plot());
+                pGroup->pushMission(MISSION_HEAL);
+                return true;
+            }
 		}
 		OutputDebugString("AI_heal: denying heal\n");
 	}
@@ -13412,6 +13382,7 @@ bool CvUnitAI::AI_heal(int iDamagePercent, int iMaxPath)
 				{
 					pGroup = getGroup();
 					bPushedMission = true;
+// 					AI_logAct("heal", bCanClaimTerritory ? "claimAndHeal" : "healSplit", plot());
 
 					if (bCanClaimTerritory)
 					{
@@ -16117,7 +16088,11 @@ bool CvUnitAI::AI_seaAreaAttack()
 	for (CvReachablePlotSet::const_iterator itr = plotSet.begin(); itr != plotSet.end(); ++itr)
 	{
 		CvPlot* pLoopPlot = itr.plot();
-		if (pLoopPlot->area() == area() && pLoopPlot->isVisible(getTeam(), false) && pLoopPlot->getOwner() == getOwner())
+		// Relaxed (#sea-ai): pursue visible enemy ships anywhere in the sea area, not only within
+        // plots we own. The generatePath() below still blocks entering territory we'd have to declare
+        // war on, so this stays peace-safe while letting attack-sea units (incl. human-automated) leave
+        // friendly waters to engage. Was: ... && pLoopPlot->getOwner() == getOwner().
+		if (pLoopPlot->area() == area() && pLoopPlot->isVisible(getTeam(), false))
 		{
 			int iCount = pLoopPlot->plotCount(PUF_isEnemy, getOwner(), 0, NULL, NO_PLAYER, NO_TEAM, PUF_isVisible, getOwner());
 
@@ -16235,7 +16210,7 @@ bool CvUnitAI::AI_patrol(bool bIgnoreDanger)
 				}
 			}
 
-			if (iValue > iBestValue && !bIgnoreDanger && exposedToDanger(pAdjacentPlot, 60))
+			if (iValue > iBestValue && (bIgnoreDanger || !exposedToDanger(pAdjacentPlot, 60)))
 			{
 				iBestValue = iValue;
 				pBestPlot = pAdjacentPlot;
@@ -17835,7 +17810,7 @@ bool CvUnitAI::AI_goToTargetCity(int iFlags, int iMaxPathTurns, const CvCity* pT
 
 					if (pPathPlot->isVisibleEnemyUnit(getOwner()))
 					{
-						bool bWin;
+						bool bWin = false;
 						int iExpectedGainOdds = getGroup()->AI_attackOdds(pPathPlot, true, false, &bWin);
 
 						if (iExpectedGainOdds < 50)
@@ -21199,6 +21174,27 @@ bool CvUnitAI::AI_connectPlot(CvPlot* pPlot, int iRange)
 		{
 			return getGroup()->pushMissionInternal(MISSION_ROUTE_TO, pPlot->getX(), pPlot->getY(), MOVE_WITH_CAUTION, false, false, MISSIONAI_BUILD, pPlot);
 		}
+
+		// We have an ignore-danger path (the gate above proved it) but no danger-free
+        // one. Parking on WAIT_FOR_ESCORT only makes sense if an escort can actually
+        // arrive. Two cases where it never will, so the worker would stall forever:
+        //   - a human's automated worker (the player's military isn't auto-dispatched
+        //     to babysit it) -- the "Automate Network does nothing" bug; and
+        //   - any worker stranded ABROAD (on another player's soil): our military won't
+        //     path into foreign territory to reach it, which is exactly how Portuguese
+        //     workers ended up sitting in England's borders for many turns.
+        // In both cases, commit to the work via the ignore-danger path instead (which
+        // for an abroad worker also walks it back off the foreign tile toward an own
+        // target); if we're already on the plot with no reachable city, return false so
+        // the caller falls through to its next option (improve/route/retreat/safety).
+        if (isHuman() || IsAbroad())
+        {
+            if (!atPlot(pPlot))
+            {
+                return getGroup()->pushMissionInternal(MISSION_ROUTE_TO, pPlot->getX(), pPlot->getY(), MOVE_IGNORE_DANGER, false, false, MISSIONAI_BUILD, pPlot);
+            }
+            return false;
+        }
 		getGroup()->pushMission(MISSION_SKIP, -1, -1, 0, false, false, MISSIONAI_WAIT_FOR_ESCORT);
 		return true;
 	}
@@ -21718,7 +21714,7 @@ bool CvUnitAI::AI_irrigateTerritory()
 				if ((eImprovement == NO_IMPROVEMENT || eNonObsoleteBonus == NO_BONUS || !GC.getImprovementInfo(eImprovement).isImprovementBonusTrade(eNonObsoleteBonus))
 				&& pLoopPlot->isIrrigationAvailable(true))
 				{
-					int iBestTempBuildValue = MAX_INT;
+					int iBestTempBuildValue = 0;
 					BuildTypes eBestTempBuild = NO_BUILD;
 
 					for (int iJ = 0; iJ < GC.getNumBuildInfos(); iJ++)
@@ -21731,7 +21727,7 @@ bool CvUnitAI::AI_irrigateTerritory()
 						{
 							const int iValue = 10000 / (GC.getBuildInfo(eBuild).getTime() + 1);
 
-							if (iValue < iBestTempBuildValue)
+							if (iValue > iBestTempBuildValue)
 							{
 								iBestTempBuildValue = iValue;
 								eBestTempBuild = eBuild;
@@ -22966,6 +22962,16 @@ bool CvUnitAI::AI_routeTerritory(bool bImprovementOnly)
 		{
 			return getGroup()->pushMissionInternal(MISSION_ROUTE_TO, pBestPlot->getX(), pBestPlot->getY(), MOVE_WITH_CAUTION, false, false, MISSIONAI_BUILD, pBestPlot);
 		}
+		// No danger-free path to the route plot. Don't stall on WAIT_FOR_ESCORT when no
+        // escort can come: a human's automated worker is never assigned one, and a
+        // worker stranded ABROAD won't be reached by our military across foreign soil.
+        // Commit via the ignore-danger path (proved to exist above) -- for an abroad
+        // worker this routes it back toward our own territory. A non-abroad AI worker
+        // keeps the old wait, since its military can still escort it at home.
+        if (isHuman() || IsAbroad())
+        {
+            return getGroup()->pushMissionInternal(MISSION_ROUTE_TO, pBestPlot->getX(), pBestPlot->getY(), MOVE_IGNORE_DANGER, false, false, MISSIONAI_BUILD, pBestPlot);
+        }
 		getGroup()->pushMission(MISSION_SKIP, -1, -1, 0, false, false, MISSIONAI_WAIT_FOR_ESCORT);
 		return true;
 	}
@@ -29979,20 +29985,13 @@ bool CvUnitAI::AI_fulfillPropertyControlNeed()
 
 			if (iNbControlForces > MAX_TARGET_CONTROL_MAINTAIN)
 			{
-				AI_setUnitAIType(UNITAI_RESERVE);
-				getGroup()->pushMission(MISSION_SKIP, -1, -1, 0, false, false, NO_MISSIONAI);
-				if (gUnitLogLevel > 2)
-				{
-					const CvWString StrunitAIType = GC.getUnitAIInfo(AI_getUnitAIType()).getType();
-					CvWString StrUnitName = m_szName;
-					if (StrUnitName.length() == 0)
-					{
-						StrUnitName = getName(0).GetCString();
-					}
-					logAiEvaluations(3, "	Player %S Unit %S of type %S - City that need the most Prop Control Help : %S has a low Value and already > 10 PropControl Units- Set to UNITAI_RESERVE   (Value %d)", GET_PLAYER(getOwner()).getCivilizationDescription(0), StrUnitName.GetCString(), StrunitAIType.GetCString(), bestCity->getName().GetCString(), bestCityScore.result.score);
-				}
-				return false;
-			}
+                // Not needed right now: hold in place AS a property-control unit (the dedicated
+                // pool waits in-role) instead of flipping to RESERVE. That flip, paired with the
+                // (now removed) reserve-side conversion, caused the RESERVE<->PROPERTY_CONTROL
+                // oscillation. Property units keep their role from creation and are never flipped.
+                getGroup()->pushMission(MISSION_SKIP, -1, -1, 0, false, false, MISSIONAI_PROPERTY_CONTROL_MAINTAIN, plot());
+                return true;
+            }
 
 
 		}
@@ -30052,21 +30051,11 @@ bool CvUnitAI::AI_fulfillPropertyControlNeed()
 		}
 	}
 	else
-	{   //No city found
-		AI_setUnitAIType(UNITAI_RESERVE);
-		getGroup()->pushMission(MISSION_SKIP, -1, -1, 0, false, false, NO_MISSIONAI);
-		if (gUnitLogLevel > 2)
-		{
-			const CvWString StrunitAIType = GC.getUnitAIInfo(AI_getUnitAIType()).getType();
-			CvWString StrUnitName = m_szName;
-			if (StrUnitName.length() == 0)
-			{
-				StrUnitName = getName(0).GetCString();
-			}
-			logBBAI("	Player %S Unit %S of type %S - No city found to assign - Set to UNITAI_RESERVE", GET_PLAYER(getOwner()).getCivilizationDescription(0), StrUnitName.GetCString(), StrunitAIType.GetCString());
-		}
-
-	}
+	{   //No city needs control right now: hold in place as a property-control unit (the dedicated
+        //pool waits in-role); do NOT flip to RESERVE (that caused the oscillation).
+        getGroup()->pushMission(MISSION_SKIP, -1, -1, 0, false, false, MISSIONAI_PROPERTY_CONTROL_MAINTAIN, plot());
+        return true;
+    }
 	return false;
 }
 

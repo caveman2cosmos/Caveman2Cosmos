@@ -6677,8 +6677,8 @@
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<iHappiness>4</iHappiness>
 			<CommerceChanges>
-				<iCommerce>0</iCommerce>
-				<iCommerce>0</iCommerce>
+				<iCommerce>10</iCommerce>
+				<iCommerce>10</iCommerce>
 				<iCommerce>10</iCommerce>
 			</CommerceChanges>
 			<ExtraFreeBonuses>

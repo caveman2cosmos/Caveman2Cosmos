@@ -7055,7 +7055,7 @@ def doEventLawyer(argsList):
 	lCityCorporations = [ ]
 	for iCorpLoop in xrange(GC.getNumCorporationInfos( )):
 		if pCity.isHasCorporation( iCorpLoop):
-			iHC = 0
+			lCityCorporations.append(iCorpLoop)
 		if pCity.isHeadquartersByType(iCorpLoop):
 			iHC = -75
 
