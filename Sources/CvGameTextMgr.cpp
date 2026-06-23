@@ -197,6 +197,8 @@ void CvGameTextMgr::setDateStr(CvWString& szString, int iGameTurn, bool bSave, C
 	CvDate date;
 	CvDateIncrement inc;
 
+	bool bHistoricalCalendar = (GC.getGamePointer() != NULL) && GC.getGame().isModderGameOption(MODDERGAMEOPTION_USE_HISTORICAL_ACCURATE_CALENDAR);
+
 	setYearStr(szYearBuffer, iGameTurn, bSave, eCalendar, iStartYear, eSpeed);
 	const int iyear = date.getDate(iGameTurn, eSpeed).getYear();;
 
@@ -221,7 +223,12 @@ void CvGameTextMgr::setDateStr(CvWString& szString, int iGameTurn, bool bSave, C
 			date = CvDate::getDate(iGameTurn, eSpeed);
 		}
 		inc = date.getIncrement(eSpeed);
-		if (((0 == inc.m_iIncrementMonth % numMonths) && (inc.m_iIncrementMonth > 0)) || inc.m_iIncrementMonth >= 2 * numMonths)
+		if (bHistoricalCalendar && iyear >= 0)
+		{
+			// Force exact date (month/day/year) under Historical Calendar in AD era
+			szString = gDLL->getText("TXT_KEY_TIME_DATE", szYearBuffer.GetCString(), GC.getMonthInfo((MonthTypes)date.getMonth()).getDescription(), date.getDay());
+		}
+		else if (((0 == inc.m_iIncrementMonth % numMonths) && (inc.m_iIncrementMonth > 0)) || inc.m_iIncrementMonth >= 2 * numMonths)
 		{
 			// Years
 			szString = szYearBuffer;
@@ -266,7 +273,12 @@ void CvGameTextMgr::setDateStr(CvWString& szString, int iGameTurn, bool bSave, C
 			date = CvDate::getDate(iGameTurn, eSpeed);
 		}
 		inc = date.getIncrement(eSpeed);
-		if (((0 == inc.m_iIncrementMonth % numMonths) && (inc.m_iIncrementMonth > 0)) || inc.m_iIncrementMonth >= 2 * numMonths)
+		if (bHistoricalCalendar && iyear >= 0)
+		{
+			// Force exact date (month/day/year) under Historical Calendar in AD era
+			szString = gDLL->getText("TXT_KEY_TIME_DATE", szYearBuffer.GetCString(), GC.getMonthInfo((MonthTypes)date.getMonth()).getDescription(), date.getDay());
+		}
+		else if (((0 == inc.m_iIncrementMonth % numMonths) && (inc.m_iIncrementMonth > 0)) || inc.m_iIncrementMonth >= 2 * numMonths)
 		{
 			// Years
 			szString = szYearBuffer;
@@ -343,6 +355,12 @@ void CvGameTextMgr::setDateStr(CvWString& szString, int iGameTurn, bool bSave, C
 		CvString szTemp = "";
 		szTemp.Format("%d - ", iGameTurn);
 		szString = szTemp + szString;
+	}
+	else
+	{
+		CvWString szTemp;
+		szTemp.Format(L" (#%d)", iGameTurn);
+		szString += szTemp;
 	}
 
 }

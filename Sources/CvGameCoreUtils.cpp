@@ -1,4 +1,4 @@
-﻿#include "CvGameCoreDLL.h"
+#include "CvGameCoreDLL.h"
 #include "CvBuildingInfo.h"
 #include "CvCity.h"
 #include "CvGameAI.h"
@@ -3821,7 +3821,6 @@ void calculateTotalInfluence(double totalInfluences[NUM_ERAS], double weight[NUM
     for (int iPlayer = 0; iPlayer < MAX_PLAYERS; ++iPlayer)
     {
         CvPlayer& player = GET_PLAYER((PlayerTypes)iPlayer);
-		CvTeam& teammm = GET_TEAM(player.getTeam());
 
         if (player.isAlive() && (player.isHuman() || player.isNormalAI()))
         {

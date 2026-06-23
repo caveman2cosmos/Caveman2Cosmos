@@ -3394,6 +3394,16 @@ CvDate CvGame::getCurrentDate()
 	return m_currentDate;
 }
 
+int CvGame::getTurnHACValue(int iTurn) const
+{
+	std::map<int, int>::const_iterator it = turnHACValues.find(iTurn);
+	if (it != turnHACValues.end())
+	{
+		return it->second;
+	}
+	return -1;
+}
+
 
 int CvGame::getElapsedGameTurns() const
 {
@@ -8560,6 +8570,24 @@ void CvGame::read(FDataStreamBase* pStream)
 	//WRAPPER_SKIP_ELEMENT(wrapper,"CvGame",m_bCircumnavigated, SAVE_VALUE_ANY);
 	WRAPPER_READ_CLASS_ARRAY(wrapper,"CvGame", REMAPPED_CLASS_TYPE_IMPROVEMENTS, GC.getNumImprovementInfos(), m_paiImprovementCount);
 	WRAPPER_READ_CLASS_ARRAY(wrapper,"CvGame", REMAPPED_CLASS_TYPE_TECHS, GC.getNumTechInfos(), m_paiTechGameTurnDiscovered);
+
+	{
+		int iSize = 0;
+		WRAPPER_READ_DECORATED(wrapper, "CvGame", &iSize, "turnHACValuesSize");
+		turnHACValues.clear();
+		if (iSize > 0)
+		{
+			std::vector<int> keys(iSize);
+			std::vector<int> values(iSize);
+			WRAPPER_READ_ARRAY_DECORATED(wrapper, "CvGame", iSize, &keys[0], "turnHACKeys");
+			WRAPPER_READ_ARRAY_DECORATED(wrapper, "CvGame", iSize, &values[0], "turnHACValues");
+			for (int i = 0; i < iSize; i++)
+			{
+				turnHACValues[keys[i]] = values[i];
+			}
+		}
+	}
+
 	WRAPPER_READ_OBJECT_END(wrapper);
 
 	//establish improvement costs
@@ -8747,6 +8775,23 @@ void CvGame::write(FDataStreamBase* pStream)
 
 	WRAPPER_WRITE_CLASS_ARRAY(wrapper, "CvGame", REMAPPED_CLASS_TYPE_IMPROVEMENTS, GC.getNumImprovementInfos(), m_paiImprovementCount);
 	WRAPPER_WRITE_CLASS_ARRAY(wrapper, "CvGame", REMAPPED_CLASS_TYPE_TECHS, GC.getNumTechInfos(), m_paiTechGameTurnDiscovered);
+
+	{
+		std::vector<int> keys;
+		std::vector<int> values;
+		for (std::map<int, int>::const_iterator it = turnHACValues.begin(); it != turnHACValues.end(); ++it)
+		{
+			keys.push_back(it->first);
+			values.push_back(it->second);
+		}
+		int iSize = keys.size();
+		WRAPPER_WRITE_DECORATED(wrapper, "CvGame", iSize, "turnHACValuesSize");
+		if (iSize > 0)
+		{
+			WRAPPER_WRITE_ARRAY_DECORATED(wrapper, "CvGame", iSize, &keys[0], "turnHACKeys");
+			WRAPPER_WRITE_ARRAY_DECORATED(wrapper, "CvGame", iSize, &values[0], "turnHACValues");
+		}
+	}
 
 	WRAPPER_WRITE_OBJECT_END(wrapper);
 }
@@ -9902,15 +9947,6 @@ void CvGame::doCalculateCurrentTick()
 	{
 		if (turnHACValues.find(m_iDateTurn) == turnHACValues.end()) 
 		{
-			bool isDiff = true;
-			if (getGameTurn() > 0) {
-				int delted = CvDate::getDate(getGameTurn()).GetTick() - CvDate::getDate(getGameTurn()-1).GetTick();
-				bool isDiff = (m_currentDate.GetTick() - CvDate::getDate(getGameTurn()-1).GetTick()) != delted;
-			}
-			else
-			{
-				bool isDiff = true;
-			}
 			uint32_t currentTick = calculateCurrentTick();
 
 			uint32_t endTechTick = GC.getDefineINT("HISTORICAL_ACCURATE_ERA_RANGE_FUTURE_START");
@@ -10026,7 +10062,10 @@ void CvGame::doFlexibleDifficulty()
 					}
 				}
 			}
-			FAssertMsg(iAliveCount > 0, "iAliveCount can not be <= 0");
+			if (iAliveCount <= 0)
+			{
+				continue;
+			}
 			const int iMeanScore = iTotalScore / iAliveCount;
 			int iVariance = 0;
 			for (int iJ = 0; iJ < MAX_PC_PLAYERS; iJ++)

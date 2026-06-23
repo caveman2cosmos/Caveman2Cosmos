@@ -676,19 +676,22 @@ class GoldTrade(AbstractStatefulAlert):
 		if (not Civ4lertsOpt.isShowGoldTradeAlert()):
 			return
 		playerID = GAME.getActivePlayer()
+		bFirstCheck = getattr(self, "bFirstCheck", True)
 		for rival in TradeUtil.getGoldTradePartners(playerID):
 			rivalID = rival.getID()
 			oldMaxGoldTrade = self._getMaxGoldTrade(playerID, rivalID)
 			newMaxGoldTrade = rival.AI_maxGoldTrade(playerID)
 			deltaMaxGoldTrade = newMaxGoldTrade - oldMaxGoldTrade
-			if deltaMaxGoldTrade >= Civ4lertsOpt.getGoldTradeThreshold():
+			if not bFirstCheck and deltaMaxGoldTrade >= Civ4lertsOpt.getGoldTradeThreshold():
 				message = TRNSLTR.getText("TXT_KEY_CIV4LERTS_ON_GOLD_TRADE", (rival.getName(), newMaxGoldTrade))
 				addMessage(playerID, message)
 				self._setMaxGoldTrade(playerID, rivalID, newMaxGoldTrade)
-			elif newMaxGoldTrade < oldMaxGoldTrade:
+			elif bFirstCheck or newMaxGoldTrade < oldMaxGoldTrade:
 				self._setMaxGoldTrade(playerID, rivalID, newMaxGoldTrade)
+		self.bFirstCheck = False
 
 	def _reset(self):
+		self.bFirstCheck = True
 		self.maxGoldTrade = {}
 		for player in range(GC.getMAX_PLAYERS()):
 			self.maxGoldTrade[player] = {}
@@ -714,20 +717,25 @@ class GoldPerTurnTrade(AbstractStatefulAlert):
 		if (not Civ4lertsOpt.isShowGoldPerTurnTradeAlert()):
 			return
 		playerID = GAME.getActivePlayer()
+		bFirstCheck = getattr(self, "bFirstCheck", True)
 		for rival in TradeUtil.getGoldTradePartners(playerID):
 			rivalID = rival.getID()
 			oldMaxGoldPerTurnTrade = self._getMaxGoldPerTurnTrade(playerID, rivalID)
 			newMaxGoldPerTurnTrade = rival.AI_maxGoldPerTurnTrade(playerID)
 			deltaMaxGoldPerTurnTrade = newMaxGoldPerTurnTrade - oldMaxGoldPerTurnTrade
-			if (deltaMaxGoldPerTurnTrade >= Civ4lertsOpt.getGoldPerTurnTradeThreshold()):
+			if not bFirstCheck and (deltaMaxGoldPerTurnTrade >= Civ4lertsOpt.getGoldPerTurnTradeThreshold()):
 				message = TRNSLTR.getText("TXT_KEY_CIV4LERTS_ON_GOLD_PER_TURN_TRADE", (rival.getName(), newMaxGoldPerTurnTrade))
 				addMessage(playerID, message)
 				self._setMaxGoldPerTurnTrade(playerID, rivalID, newMaxGoldPerTurnTrade)
 			else:
 				maxGoldPerTurnTrade = min(oldMaxGoldPerTurnTrade, newMaxGoldPerTurnTrade)
+				if bFirstCheck:
+					maxGoldPerTurnTrade = newMaxGoldPerTurnTrade
 				self._setMaxGoldPerTurnTrade(playerID, rivalID, maxGoldPerTurnTrade)
+		self.bFirstCheck = False
 
 	def _reset(self):
+		self.bFirstCheck = True
 		self.maxGoldPerTurnTrade = {}
 		for player in range(GC.getMAX_PC_PLAYERS()):
 			self.maxGoldPerTurnTrade[player] = {}
@@ -797,6 +805,7 @@ class RefusesToTalk(AbstractStatefulAlert):
 		iTeam = CyPlayer.getTeam()
 		CyTeam = GC.getTeam(iTeam)
 		refusals = self.refusals[iPlayer]
+		bFirstCheck = getattr(self, "bFirstCheck", True)
 		aSet = set()
 		for iPlayerX in range(GC.getMAX_PC_PLAYERS()):
 			if iPlayerX == iPlayer: continue
@@ -809,9 +818,11 @@ class RefusesToTalk(AbstractStatefulAlert):
 			if not CyPlayerX.AI_isWillingToTalk(iPlayer):
 				aSet.add(CyPlayerX.getID())
 
-		self.display(iPlayer, "TXT_KEY_CIV4LERTS_ON_WILLING_TO_TALK", refusals.difference(aSet))
-		self.display(iPlayer, "TXT_KEY_CIV4LERTS_ON_REFUSES_TO_TALK", aSet.difference(refusals))
+		if not bFirstCheck:
+			self.display(iPlayer, "TXT_KEY_CIV4LERTS_ON_WILLING_TO_TALK", refusals.difference(aSet))
+			self.display(iPlayer, "TXT_KEY_CIV4LERTS_ON_REFUSES_TO_TALK", aSet.difference(refusals))
 		self.refusals[iPlayer] = aSet
+		self.bFirstCheck = False
 
 	def display(self, eActivePlayer, key, players):
 		if GAME.getElapsedGameTurns() > 0:
@@ -822,6 +833,7 @@ class RefusesToTalk(AbstractStatefulAlert):
 					addMessage(eActivePlayer, message)
 
 	def _reset(self):
+		self.bFirstCheck = True
 		self.refusals = {}
 		for i in range(0,GC.getMAX_PC_PLAYERS()):
 			self.refusals[i] = set()
@@ -876,6 +888,7 @@ class WorstEnemy(AbstractStatefulAlert):
 		activeTeam = GC.getTeam(iActiveTeam)
 		enemies = self.enemies[eActivePlayer]
 		newEnemies = AttitudeUtil.getWorstEnemyTeams()
+		bFirstCheck = getattr(self, "bFirstCheck", True)
 		delayedMessages = {}
 		for eTeam, eNewEnemy in newEnemies.iteritems():
 			#RevolutionDCM fix
@@ -889,42 +902,46 @@ class WorstEnemy(AbstractStatefulAlert):
 					eNewEnemy = -1
 				if eOldEnemy != eNewEnemy:
 					enemies[eTeam] = eNewEnemy
-					if eNewEnemy == -1:
-						if eOldEnemy == iActiveTeam:
-							message = BugUtil.getText("TXT_KEY_CIV4LERTS_ON_YOU_NO_WORST_ENEMY", GC.getTeam(eTeam).getName())
+					if not bFirstCheck:
+						if eNewEnemy == -1:
+							if eOldEnemy == iActiveTeam:
+								message = BugUtil.getText("TXT_KEY_CIV4LERTS_ON_YOU_NO_WORST_ENEMY", GC.getTeam(eTeam).getName())
+							else:
+								message = BugUtil.getText("TXT_KEY_CIV4LERTS_ON_NO_WORST_ENEMY",
+										(GC.getTeam(eTeam).getName(), GC.getTeam(eOldEnemy).getName()))
+						elif eOldEnemy == -1:
+							message = None # handled below
+							if eNewEnemy not in delayedMessages:
+								delayedMessages[eNewEnemy] = GC.getTeam(eTeam).getName()
+							else:
+								delayedMessages[eNewEnemy] += u", " + GC.getTeam(eTeam).getName()
 						else:
-							message = BugUtil.getText("TXT_KEY_CIV4LERTS_ON_NO_WORST_ENEMY",
-									(GC.getTeam(eTeam).getName(), GC.getTeam(eOldEnemy).getName()))
-					elif eOldEnemy == -1:
-						message = None # handled below
-						if eNewEnemy not in delayedMessages:
-							delayedMessages[eNewEnemy] = GC.getTeam(eTeam).getName()
-						else:
-							delayedMessages[eNewEnemy] += u", " + GC.getTeam(eTeam).getName()
-					else:
-						if eOldEnemy == iActiveTeam:
-							message = BugUtil.getText("TXT_KEY_CIV4LERTS_ON_SWITCH_WORST_ENEMY_FROM_YOU",
-									(GC.getTeam(eTeam).getName(), GC.getTeam(eNewEnemy).getName()))
-						elif eNewEnemy == iActiveTeam:
-							message = BugUtil.getText("TXT_KEY_CIV4LERTS_ON_SWITCH_WORST_ENEMY_TO_YOU",
-									(GC.getTeam(eTeam).getName(), GC.getTeam(eOldEnemy).getName()))
-						else:
-							message = BugUtil.getText("TXT_KEY_CIV4LERTS_ON_SWITCH_WORST_ENEMY",
-									(GC.getTeam(eTeam).getName(), GC.getTeam(eNewEnemy).getName(), GC.getTeam(eOldEnemy).getName()))
-					if message:
-						addMessage(eActivePlayer, message)
-		for eEnemy, haters in delayedMessages.iteritems():
-			if iActiveTeam == eEnemy:
-				message = BugUtil.getText("TXT_KEY_CIV4LERTS_ON_YOU_WORST_ENEMY", haters)
-			else:
-				message = BugUtil.getText("TXT_KEY_CIV4LERTS_ON_WORST_ENEMY", (haters, GC.getTeam(eEnemy).getName()))
-			addMessage(eActivePlayer, message)
+							if eOldEnemy == iActiveTeam:
+								message = BugUtil.getText("TXT_KEY_CIV4LERTS_ON_SWITCH_WORST_ENEMY_FROM_YOU",
+										(GC.getTeam(eTeam).getName(), GC.getTeam(eNewEnemy).getName()))
+							elif eNewEnemy == iActiveTeam:
+								message = BugUtil.getText("TXT_KEY_CIV4LERTS_ON_SWITCH_WORST_ENEMY_TO_YOU",
+										(GC.getTeam(eTeam).getName(), GC.getTeam(eOldEnemy).getName()))
+							else:
+								message = BugUtil.getText("TXT_KEY_CIV4LERTS_ON_SWITCH_WORST_ENEMY",
+										(GC.getTeam(eTeam).getName(), GC.getTeam(eNewEnemy).getName(), GC.getTeam(eOldEnemy).getName()))
+						if message:
+							addMessage(eActivePlayer, message)
+		if not bFirstCheck:
+			for eEnemy, haters in delayedMessages.iteritems():
+				if iActiveTeam == eEnemy:
+					message = BugUtil.getText("TXT_KEY_CIV4LERTS_ON_YOU_WORST_ENEMY", haters)
+				else:
+					message = BugUtil.getText("TXT_KEY_CIV4LERTS_ON_WORST_ENEMY", (haters, GC.getTeam(eEnemy).getName()))
+				addMessage(eActivePlayer, message)
+		self.bFirstCheck = False
 
 	def _reset(self):
 		"""
 		The enemies dictionary maps all teams to their worst enemy.
 		It will hold -1 for any team or enemy the active team hasn't met.
 		"""
+		self.bFirstCheck = True
 		self.enemies = {}
 		for i in range(0,GC.getMAX_PC_PLAYERS()):
 			self.enemies[i] = [-1] * GC.getMAX_TEAMS()

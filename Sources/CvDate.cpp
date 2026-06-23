@@ -168,6 +168,57 @@ CvDate CvDate::getStartingDate()
 	return CvDate();
 }
 
+static CvDate getStandardDate(int iTurn, GameSpeedTypes eGameSpeed)
+{
+	CvDate date;
+	int iRemainingTurns = 0;
+
+	GameSpeedTypes eActualGameSpeed = eGameSpeed;
+	if (eGameSpeed == NO_GAMESPEED)
+	{
+		if (GC.getGamePointer() != NULL)
+		{
+			eActualGameSpeed = GC.getGame().getGameSpeedType();
+		}
+		else
+		{
+			return date;
+		}
+	}
+	CvGameSpeedInfo& kInfo = GC.getGameSpeedInfo(eActualGameSpeed);
+	const std::vector<CvDateIncrement>& aIncrements = kInfo.getIncrements();
+	if (!kInfo.getEndDatesCalculated())
+	{
+		CvDate::calculateEndDates(eActualGameSpeed);
+	}
+
+	for (int i=0; i<(int)aIncrements.size(); i++)
+	{
+		if (iTurn <= aIncrements[i].m_iendTurn)
+		{
+			if (i==0)
+			{
+				iRemainingTurns = iTurn;
+				date = CvDate::getStartingDate();
+			}
+			else
+			{
+				iRemainingTurns = iTurn - aIncrements[i-1].m_iendTurn;
+				date = aIncrements[i-1].m_endDate;
+			}
+			break;
+		}
+		else
+		{
+			iRemainingTurns = iTurn - aIncrements[i].m_iendTurn;
+			date = aIncrements[i].m_endDate;
+		}
+	}
+
+	date.increment(iRemainingTurns, eGameSpeed);
+	return date;
+}
+
 CvDate CvDate::getDate(int iTurn, GameSpeedTypes eGameSpeed)
 {
 	PROFILE_EXTRA_FUNC();
@@ -210,15 +261,39 @@ CvDate CvDate::getDate(int iTurn, GameSpeedTypes eGameSpeed)
 		}
 	}
 
-	//date.increment(iRemainingTurns, eGameSpeed);
+	CvDate standardDate = date;
+	standardDate.increment(iRemainingTurns, eGameSpeed);
+
 	bool bHistoricalCalendar = GC.getGame().isModderGameOption(MODDERGAMEOPTION_USE_HISTORICAL_ACCURATE_CALENDAR);
 	if (bHistoricalCalendar) 
 	{
-		uint32_t currentTick = calculateCurrentTick();
-
-		if (currentTick > date.GetTick())
+		int iHACTick = GC.getGame().getTurnHACValue(iTurn);
+		if (iHACTick != -1)
 		{
-			date.setTick(currentTick);
+			date.setTick(iHACTick);
+		}
+		else
+		{
+			int iCurrentTurn = 0;
+			int iCurrentHACTick = 0;
+			int iCurrentStandardTick = 0;
+
+			if (GC.getGamePointer() != NULL)
+			{
+				iCurrentTurn = GC.getGame().getGameTurn();
+				int iHACVal = GC.getGame().getTurnHACValue(iCurrentTurn);
+				if (iHACVal != -1)
+				{
+					iCurrentHACTick = iHACVal;
+				}
+				else
+				{
+					iCurrentHACTick = calculateCurrentTick();
+				}
+				iCurrentStandardTick = getStandardDate(iCurrentTurn, eGameSpeed).GetTick();
+			}
+			int iShift = iCurrentHACTick - iCurrentStandardTick;
+			date.setTick(standardDate.GetTick() + iShift);
 		}
 	}
 	else
