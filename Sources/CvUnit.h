@@ -2539,8 +2539,11 @@ public:
 
 	bool canMerge(bool bAutocheck = false) const;
 	bool canSplit() const;
+	bool isMergeEligible() const;
 
 	void doMerge();
+	void doMergeAllInGroup();
+    static CvUnit* mergeUnits(CvUnit* pUnit1, CvUnit* pUnit2, CvUnit* pUnit3, CvSelectionGroup* pJoinGroup);
 	void doSplit();
 
 	void setGGExperienceEarnedTowardsType();

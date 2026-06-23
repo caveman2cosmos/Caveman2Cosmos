@@ -520,7 +520,7 @@ bool CvDeal::isUncancelableVassalDeal(PlayerTypes eByPlayer, CvWString* pszReaso
 				if (pszReason)
 				{
 					CvWStringBuffer szBuffer;
-					GAMETEXT.setVassalRevoltHelp(szBuffer, eMaster, GET_PLAYER(getFirstPlayer()).getTeam());
+					GAMETEXT.setVassalRevoltHelp(szBuffer, eMaster, GET_PLAYER(getSecondPlayer()).getTeam());
 					*pszReason = szBuffer.getCString();
 				}
 				return true;
@@ -1097,6 +1097,10 @@ bool CvDeal::startTrade(TradeData trade, PlayerTypes eFromPlayer, PlayerTypes eT
 					{
 						pNewHQCity->changeHasBuilding((BuildingTypes)i, true);
 						pOldHeadquarters->changeHasBuilding((BuildingTypes)i, false);
+						if (pOldHeadquarters != NULL)
+                        {
+                            pOldHeadquarters->changeHasBuilding((BuildingTypes)i, false);
+                        }
 						break;
 					}
 				}

@@ -4350,7 +4350,7 @@ void CvCity::conscript(bool bOnCapture)
 	{
 		return;
 	}
-	const int iNumConscripts = -getConscriptPopulation();
+	const int iNumConscripts = getConscriptPopulation();
 	const int iAngerLength = flatConscriptAngerLength();
 	changePopulation(-1);
 	changeConscriptAngerTimer(iAngerLength);
@@ -5247,8 +5247,6 @@ void CvCity::processSpecialist(SpecialistTypes eSpecialist, int iChange)
 		changeExtraYield((YieldTypes)iI, (GC.getSpecialistInfo(eSpecialist).getYieldChange(iI) + GET_PLAYER(getOwner()).getSpecialistYieldPercentChanges(eSpecialist, (YieldTypes)iI) / 100) * iChange);
 	}
 
-	int iCommerceChangeTotal = 0;
-	int iCommerceChangeModifierTotal = 0;
 	for (int iI = 0; iI < NUM_COMMERCE_TYPES; iI++)
 	{
 		//changeSpecialistCommerce(((CommerceTypes)iI), (GC.getSpecialistInfo(eSpecialist).getCommerceChange(iI) * iChange));
@@ -5260,8 +5258,8 @@ void CvCity::processSpecialist(SpecialistTypes eSpecialist, int iChange)
 		//every time an adjustment to SpecialistCommercePercentChanges takes place.  That would be the patient and correct way to address this.
 		if (GC.getSpecialistInfo(eSpecialist).getCommerceChange(iI) != 0)
 		{
-			iCommerceChangeTotal += (100 * GC.getSpecialistInfo(eSpecialist).getCommerceChange(iI));
-			iCommerceChangeModifierTotal += (iCommerceChangeTotal * GET_PLAYER(getOwner()).getSpecialistCommercePercentChanges(eSpecialist, (CommerceTypes)iI)) / 100;
+			int iCommerceChangeTotal = (100 * GC.getSpecialistInfo(eSpecialist).getCommerceChange(iI));
+            int iCommerceChangeModifierTotal = (iCommerceChangeTotal * GET_PLAYER(getOwner()).getSpecialistCommercePercentChanges(eSpecialist, (CommerceTypes)iI)) / 100;
 			iCommerceChangeTotal += iCommerceChangeModifierTotal;
 			changeSpecialistCommerceTimes100(((CommerceTypes)iI), iCommerceChangeTotal * iChange);
 		}
@@ -8840,8 +8838,8 @@ int CvCity::getAdditionalHealthByCivic(CivicTypes eCivic, int& iGood, int& iBad,
 
 		int iTempGood = 0; int iTempBad = 0; int iTempBadBuilding = 0;
 		int iHealthOld = getAdditionalHealthByCivic(GET_PLAYER(getOwner()).getCivics((CivicOptionTypes)(GC.getCivicInfo(eCivic).getCivicOptionType())), iTempGood, iTempBad, iTempBadBuilding, false, iExtraPop, bCivicOptionVacuum, iIgnoreNoUnhealthyPopulationCount, iIgnoreBuildingOnlyHealthyCount);
-		iGood += iTempBad;
-		iBad += iTempGood;
+		iGood -= iTempGood;
+		iBad -= iTempBad;
 		iBadBuilding -= iTempBadBuilding; //can become negative
 
 		return iHealthNew - iHealthOld;
@@ -9910,7 +9908,10 @@ void CvCity::changeFoodKeptPercent(int iChange)
 
 int CvCity::getMaxProductionOverflow() const
 {
-	return getYieldRate(YIELD_PRODUCTION) * 2;
+	// The multiplier (turns of base production that may be banked as overflow before
+	// the excess is converted to gold) is a player-configurable BUG option; default 2
+	// reproduces the historical hard-coded behaviour.
+	return getYieldRate(YIELD_PRODUCTION) * getBugOptionINT("CityScreen__ProductionOverflowLimit", 2);
 }
 
 
@@ -10362,7 +10363,7 @@ int CvCity::getCultureUpdateTimer() const
 void CvCity::setCultureUpdateTimer(int iNewValue)
 {
 	m_iCultureUpdateTimer = iNewValue;
-	FASSERT_NOT_NEGATIVE(getOccupationTimer());
+	FASSERT_NOT_NEGATIVE(getCultureUpdateTimer());
 }
 
 
@@ -10998,6 +10999,8 @@ int CvCity::getAdditionalExtraYieldByBuilding(YieldTypes eIndex, BuildingTypes e
 {
 	PROFILE_EXTRA_FUNC();
 	const CvBuildingInfo& building = GC.getBuildingInfo(eBuilding);
+	const int iMaxTradeRoutes = getMaxTradeRoutes();
+	const int extra = building.getGlobalTradeRoutes() + building.getCoastalTradeRoutes() + building.getTradeRoutes();
 
 	int iExtraYield = getBaseYieldRateFromBuilding100(eIndex, eBuilding) / 100;
 
@@ -11015,7 +11018,7 @@ int CvCity::getAdditionalExtraYieldByBuilding(YieldTypes eIndex, BuildingTypes e
 #endif
 		// BUG - Fractional Trade Routes - end
 
-		for (int iI = 0; iI < getTradeRoutes(); ++iI)
+		for (int iI = 0; iI < std::min(getTradeRoutes() + extra, iMaxTradeRoutes); iI++)
 		{
 			const CvCity* pCity = getTradeCity(iI);
 			if (pCity)
@@ -21705,9 +21708,11 @@ int64_t CvCity::calcCorporateMaintenance() const
 		{
 			const CorporationTypes eCorporation = (CorporationTypes)iI;
 
+			int64_t iCorpTaxes = 0;
+
 			for (int iCommerce = 0; iCommerce < NUM_COMMERCE_TYPES; ++iCommerce)
 			{
-				iTaxes += 100 * GC.getCorporationInfo(eCorporation).getHeadquarterCommerce(iCommerce);
+				iCorpTaxes += 100 * GC.getCorporationInfo(eCorporation).getHeadquarterCommerce(iCommerce);
 			}
 
 			int iNumBonuses = 0;
@@ -21716,7 +21721,7 @@ int64_t CvCity::calcCorporateMaintenance() const
 				iNumBonuses += getNumBonuses(eBonus);
 			}
 
-			iTaxes +=
+			iCorpTaxes +=
 			(
 				GC.getCorporationInfo(eCorporation).getMaintenance() * iNumBonuses *
 				GC.getWorldInfo(GC.getMap().getWorldSize()).getCorporationMaintenancePercent()
@@ -21726,13 +21731,14 @@ int64_t CvCity::calcCorporateMaintenance() const
 
 			if (iAveragePopulation > 0)
 			{
-				iTaxes *= getPopulation();
-				iTaxes /= iAveragePopulation;
+				iCorpTaxes *= getPopulation();
+				iCorpTaxes /= iAveragePopulation;
 			}
-			iTaxes = getModifiedIntValue64(iTaxes, GET_PLAYER(getOwner()).getCorporationMaintenanceModifier() + GET_TEAM(getTeam()).getCorporationMaintenanceModifier());
+			iCorpTaxes = getModifiedIntValue64(iCorpTaxes, GET_PLAYER(getOwner()).getCorporationMaintenanceModifier() + GET_TEAM(getTeam()).getCorporationMaintenanceModifier());
 
-			iTaxes *= GC.getHandicapInfo(getHandicapType()).getCorporationMaintenancePercent();
-			iTaxes /= 100;
+			iCorpTaxes *= GC.getHandicapInfo(getHandicapType()).getCorporationMaintenancePercent();
+			iCorpTaxes /= 100;
+			iTaxes += iCorpTaxes;
 		}
 	}
 	FASSERT_NOT_NEGATIVE(iTaxes);
@@ -21887,7 +21893,7 @@ void CvCity::calculateExtraTradeRouteProfit(int iExtra, int*& aiTradeYields) con
 		}
 	}
 
-	for (int iI = 0; iI < getTradeRoutes() + iExtra; iI++)
+	for (int iI = 0; iI < std::min(getTradeRoutes() + iExtra, iMaxTradeRoutes); iI++)
 	{
 		CvCity* pLoopCity = getCity(paTradeCities[iI]);
 
@@ -21966,19 +21972,13 @@ void CvCity::removeWorstCitizenActualEffects(int iNumCitizens, int& iGreatPeople
 	int iNumRemoved = 0;
 	int iNumSpecialistsRemoved = 0;
 
-	// if we are using more specialists than the free ones we get
-	while (getAssignedSpecialistCount() < iNumRemoved && iNumRemoved < iNumCitizens)
-	{
-		// Does generic 'citizen' specialist exist?
-		if (iGenericSpecialist != NO_SPECIALIST
-		// Do we have at least one more generic citizen than we are forcing?
-		&& getSpecialistCount((SpecialistTypes)iGenericSpecialist) > getForceSpecialistCount((SpecialistTypes)iGenericSpecialist))
-		{
-			paeRemovedSpecailists[iNumRemoved] = (SpecialistTypes)(iGenericSpecialist);
-			iNumRemoved++;
-			iNumSpecialistsRemoved++;
-		}
-	}
+	// A generic-citizen fast-removal loop used to live here; its guard
+    // (getAssignedSpecialistCount() < iNumRemoved, with iNumRemoved starting at 0)
+    // was always false, so it never executed. Removed as dead code (#64) - the
+    // valuation loop below already performs all removals. Reviving the optimisation
+    // would need the available generic-citizen count to decrement per iteration,
+    // otherwise the corrected condition loops forever.
+
 	bool bAvoidGrowth = false;
 	bool bIgnoreGrowth = false;
 
@@ -22773,7 +22773,7 @@ void unitHasSources(const CvPropertyManipulators* pMani, bool* bHasSources)
 static bool unitHasCityOrPlotPropertySources(const CvUnit* pUnit)
 {
 	PROFILE_EXTRA_FUNC();
-	bool bHasSources;
+	bool bHasSources = false;
 
 	pUnit->getGameObject()->foreachManipulator(bind(unitHasSources, _1, &bHasSources));
 

@@ -6744,6 +6744,7 @@ bool CvUnit::canAutomate(AutomateTypes eAutomate) const
 		{
 			return false;
 		}
+		break;
 	case AUTOMATE_AIR_RECON:
 		if (!canRecon())
 		{
@@ -20506,22 +20507,15 @@ bool CvUnit::isPromotionValid(PromotionTypes ePromotion, bool bFree, bool bKeepC
 			}
 		}
 		if (promo.getPromotionLine() != NO_PROMOTIONLINE)
-		{
-			for (int iI = 0; iI < GC.getPromotionLineInfo(promo.getPromotionLine()).getNumNotOnGameOptions(); iI++)
-			{
-				if (GC.getGame().isOption((GameOptionTypes)GC.getPromotionLineInfo(promo.getPromotionLine()).getNotOnGameOption(iI)))
-				{
-					return false;
-				}
-			}
-			for (int iI = 0; iI < GC.getPromotionLineInfo(promo.getPromotionLine()).getNumNotOnGameOptions(); iI++)
-			{
-				if (!GC.getGame().isOption((GameOptionTypes)GC.getPromotionLineInfo(promo.getPromotionLine()).getNotOnGameOption(iI)))
-				{
-					return false;
-				}
-			}
-		}
+        {
+            for (int iI = 0; iI < GC.getPromotionLineInfo(promo.getPromotionLine()).getNumNotOnGameOptions(); iI++)
+            {
+                if (GC.getGame().isOption((GameOptionTypes)GC.getPromotionLineInfo(promo.getPromotionLine()).getNotOnGameOption(iI)))
+                {
+                    return false;
+                }
+            }
+        }
 	}
 	// Very few reasons to deny a unit promotions that are specifically set to be a free for it.
 	if (m_pUnitInfo->getFreePromotions(ePromotion) || GET_PLAYER(getOwner()).isFreePromotion(getUnitType(), ePromotion))
@@ -33107,7 +33101,7 @@ int CvUnit::flankingStrengthbyUnitCombatTotal(UnitCombatTypes eCombatType) const
 		std::max(
 			0,
 			m_pUnitInfo->getFlankingStrengthbyUnitCombatType(eCombatType)
-			+ getExtraFlankingStrengthbyUnitCombatType(eCombatType, isCommander(), isCommodore)
+			+ getExtraFlankingStrengthbyUnitCombatType(eCombatType, isCommander(), isCommodore())
 		)
 	);
 }
@@ -35287,8 +35281,37 @@ bool CvUnit::canMerge(bool bAutocheck) const
 		return false;
 	}
 
+    // Size Matters: a human selection group can bulk-merge its own units that share the
+    // same unit type and size (group rank and quality rank), in triples, via one click on
+    // the Merge command. This mirrors how Split already operates on a whole group.
 	if (isHuman() && getGroup()->getNumUnits() > 1)
 	{
+	    // Enable the Merge command if the group holds at least one complete triple of
+        // eligible units sharing the same unit type and size (group rank and quality rank).
+        // The actual bulk merge (doMergeAllInGroup) scans the whole group, so this does not
+        // depend on the head unit itself being eligible.
+        foreach_(const CvUnit* pBase, getGroup()->units())
+        {
+            if (!pBase->isMergeEligible())
+            {
+                continue;
+            }
+            int iValidUnitCount = 1; // includes pBase
+            foreach_(const CvUnit* pLoopUnit, getGroup()->units())
+            {
+                if (pLoopUnit->getID() != pBase->getID()
+                    && pLoopUnit->getUnitType() == pBase->getUnitType()
+                    && pLoopUnit->groupRank() == pBase->groupRank()
+                    && pLoopUnit->qualityRank() == pBase->qualityRank()
+                    && pLoopUnit->isMergeEligible())
+                {
+                    if (++iValidUnitCount >= 3)
+                    {
+                        return true;
+                    }
+                }
+            }
+        }
 		return false;
 	}
 
@@ -35469,136 +35492,245 @@ void CvUnit::doMerge()
 
 		CvUnit* pUnit2 = GET_PLAYER(getOwner()).getUnit(GET_PLAYER(getOwner()).getFirstMergeSelectionUnit());
 		CvUnit* pUnit3 = GET_PLAYER(getOwner()).getUnit(GET_PLAYER(getOwner()).getSecondMergeSelectionUnit());
-		UnitTypes eUnitType = pUnit1->getUnitType();
 
-		CvUnit* pkMergedUnit = GET_PLAYER(getOwner()).initUnit(eUnitType, pPlot->getX(), pPlot->getY(), NO_UNITAI, NO_DIRECTION, GC.getGame().getSorenRandNum(10000, "AI Unit Birthmark"));
-		/*PROFILE_FUNC();*/
-		pUnit1->setFortifyTurns(0);
-		pUnit2->setFortifyTurns(0);
-		pUnit3->setFortifyTurns(0);
+		CvUnit::mergeUnits(pUnit1, pUnit2, pUnit3, pMergingGroup);
 
-		int iTotalGroupOffset = 1;
-		int iTotalQualityOffset = 0;
-		for (int iI = 0; iI < GC.getNumPromotionInfos(); iI++)
-		{
-			PromotionTypes ePromotion = ((PromotionTypes)iI);
-			if (GC.getPromotionInfo(ePromotion).getGroupChange() == 0 && GC.getPromotionInfo(ePromotion).getQualityChange() == 0)
-			{
-				if (pUnit1->isHasPromotion(ePromotion) || pUnit2->isHasPromotion(ePromotion) || pUnit3->isHasPromotion(ePromotion))
-				{
-					if (GC.getPromotionInfo(ePromotion).isLeader())
-					{
-						pkMergedUnit->setHasPromotion(ePromotion, true, true);
-					}
+        GET_PLAYER(getOwner()).setBaseMergeSelectionUnit(FFreeList::INVALID_INDEX);
+        GET_PLAYER(getOwner()).setFirstMergeSelectionUnit(FFreeList::INVALID_INDEX);
+        GET_PLAYER(getOwner()).setSecondMergeSelectionUnit(FFreeList::INVALID_INDEX);
+    }
+}
+
+// Size Matters: per-unit eligibility for a merge (independent of any partner). The unit
+// type and size (group rank and quality rank) of candidate partners are compared at the
+// call site; this only gates a single unit's own state.
+bool CvUnit::isMergeEligible() const
+{
+	return !isHurt()
+		&& !isDead()
+		&& !isInBattle()
+		&& !isCargo()
+		&& !hasCargo()
+		&& !isSpy()
+		&& !hasMoved()
+		&& !isInhibitMerge()
+		&& !hasCannotMergeSplit()
+		&& baseWorkRate() < 1
+		&& groupRank() < eraGroupMergeLimit();
+}
+
+// Size Matters: combine three same-type/size units into a single unit one size larger,
+// merging their promotions, experience, leader status and AI type. The merged unit is
+// placed on pUnit1's plot and, if pJoinGroup is non-NULL, added to that selection group.
+// The three source units are killed. Returns the merged unit.
+CvUnit* CvUnit::mergeUnits(CvUnit* pUnit1, CvUnit* pUnit2, CvUnit* pUnit3, CvSelectionGroup* pJoinGroup)
+{
+
+    PROFILE_EXTRA_FUNC();
+    FAssertMsg(pUnit1 != NULL && pUnit2 != NULL && pUnit3 != NULL, "mergeUnits requires three valid units");
+
+    const PlayerTypes eOwner = pUnit1->getOwner();
+    CvPlot* pPlot = pUnit1->plot();
+    const UnitTypes eUnitType = pUnit1->getUnitType();
+
+    CvUnit* pkMergedUnit = GET_PLAYER(eOwner).initUnit(eUnitType, pPlot->getX(), pPlot->getY(), NO_UNITAI, NO_DIRECTION, GC.getGame().getSorenRandNum(10000, "AI Unit Birthmark"));
+    /*PROFILE_FUNC();*/
+
+    pkMergedUnit->setInhibitSplit(true);
+
+    pUnit1->setFortifyTurns(0);
+    pUnit2->setFortifyTurns(0);
+    pUnit3->setFortifyTurns(0);
+
+    int iTotalGroupOffset = 1;
+    int iTotalQualityOffset = 0;
+    for (int iI = 0; iI < GC.getNumPromotionInfos(); iI++)
+    {
+        PromotionTypes ePromotion = ((PromotionTypes)iI);
+        if (GC.getPromotionInfo(ePromotion).getGroupChange() == 0 && GC.getPromotionInfo(ePromotion).getQualityChange() == 0)
+        {
+            if (pUnit1->isHasPromotion(ePromotion) || pUnit2->isHasPromotion(ePromotion) || pUnit3->isHasPromotion(ePromotion))
+            {
+                if (GC.getPromotionInfo(ePromotion).isLeader())
+                {
+                    pkMergedUnit->setHasPromotion(ePromotion, true, true);
+                }
 #ifdef OUTBREAKS_AND_AFFLICTIONS
-					else if (GC.getPromotionInfo(ePromotion).getPromotionLine() != NO_PROMOTIONLINE && GC.getPromotionLineInfo(GC.getPromotionInfo(ePromotion).getPromotionLine()).isAffliction())
-					{
-						if (GC.getGame().isOption(GAMEOPTION_COMBAT_OUTBREAKS_AND_AFFLICTIONS))
-						{
-							pkMergedUnit->afflict(GC.getPromotionInfo(ePromotion).getPromotionLine());
-						}
-					}
+                else if (GC.getPromotionInfo(ePromotion).getPromotionLine() != NO_PROMOTIONLINE && GC.getPromotionLineInfo(GC.getPromotionInfo(ePromotion).getPromotionLine()).isAffliction())
+                {
+                    if (GC.getGame().isOption(GAMEOPTION_COMBAT_OUTBREAKS_AND_AFFLICTIONS))
+                    {
+                        pkMergedUnit->afflict(GC.getPromotionInfo(ePromotion).getPromotionLine());
+                    }
+                }
 #endif
-					else if (pUnit1->isPromotionFree(ePromotion) || pUnit2->isPromotionFree((PromotionTypes)iI) || pUnit3->isPromotionFree((PromotionTypes)iI))
-					{
-						pkMergedUnit->setHasPromotion(ePromotion, true, true);
-					}
-					else if (pUnit1->isHasPromotion(ePromotion) && pUnit2->isHasPromotion(ePromotion) && pUnit3->isHasPromotion(ePromotion))
-					{
-						pkMergedUnit->setHasPromotion(ePromotion, true, false);
-						pkMergedUnit->changeLevel(1);
-					}
-				}
-				if (pUnit1->isHasPromotion(ePromotion))
-				{
-					if (GC.getPromotionInfo(ePromotion).isEquipment())
-					{
-						pkMergedUnit->setHasPromotion(ePromotion, true, true);
-					}
-				}
-				// Must include an adjustment here when equipments are able to be inventoried - Shouldn't just lose the 2nd and 3rd unit's equipment.
-			}
-			else if (GC.getPromotionInfo(ePromotion).getQualityChange() != 0)
+                else if (pUnit1->isPromotionFree(ePromotion) || pUnit2->isPromotionFree((PromotionTypes)iI) || pUnit3->isPromotionFree((PromotionTypes)iI))
+                {
+                    pkMergedUnit->setHasPromotion(ePromotion, true, true);
+                }
+                else if (pUnit1->isHasPromotion(ePromotion) && pUnit2->isHasPromotion(ePromotion) && pUnit3->isHasPromotion(ePromotion))
+                {
+                    pkMergedUnit->setHasPromotion(ePromotion, true, false);
+                    pkMergedUnit->changeLevel(1);
+                }
+            }
+            if (pUnit1->isHasPromotion(ePromotion))
+            {
+                if (GC.getPromotionInfo(ePromotion).isEquipment())
+                {
+                    pkMergedUnit->setHasPromotion(ePromotion, true, true);
+                }
+            }
+            // Must include an adjustment here when equipments are able to be inventoried - Shouldn't just lose the 2nd and 3rd unit's equipment.
+        }
+        else if (GC.getPromotionInfo(ePromotion).getQualityChange() != 0)
+        {
+            if (pUnit1->isHasPromotion(ePromotion) || pUnit2->isHasPromotion(ePromotion) || pUnit3->isHasPromotion(ePromotion))
+            {
+                iTotalQualityOffset += GC.getPromotionInfo((PromotionTypes)iI).getQualityChange();
+            }
+        }
+        else if (GC.getPromotionInfo(ePromotion).getGroupChange() != 0)
+        {
+            if (pUnit1->isHasPromotion(ePromotion) || pUnit2->isHasPromotion(ePromotion) || pUnit3->isHasPromotion(ePromotion))
+            {
+                iTotalGroupOffset += GC.getPromotionInfo((PromotionTypes)iI).getGroupChange();
+            }
+        }
+    }
+
+    bool bNormalizedGroup = CvUnit::normalizeUnitPromotions(pkMergedUnit, iTotalGroupOffset,
+        bind(&CvUnit::isGroupUpgradePromotion, pkMergedUnit, _2),
+        bind(&CvUnit::isGroupDowngradePromotion, pkMergedUnit, _2)
+    );
+    FAssertMsg(bNormalizedGroup, "Could not apply required number of group promotions on merged units");
+
+    bool bNormalizedQuality = CvUnit::normalizeUnitPromotions(pkMergedUnit, iTotalQualityOffset,
+        bind(&CvUnit::isQualityUpgradePromotion, pkMergedUnit, _2),
+        bind(&CvUnit::isQualityDowngradePromotion, pkMergedUnit, _2)
+    );
+    FAssertMsg(bNormalizedQuality, "Could not apply required number of quality promotions on merged units");
+
+    //Set New Experience
+    int iXP1 = pUnit1->getExperience100();
+    int iXP2 = pUnit2->getExperience100();
+    int iXP3 = pUnit3->getExperience100();
+    int iXP = iXP1 + iXP2 + iXP3;
+    if (iXP != 0)
+    {
+        iXP /= 3;
+    }
+    pkMergedUnit->setExperience100(iXP);
+
+    pkMergedUnit->checkFreetoCombatClass();
+    pkMergedUnit->setGameTurnCreated(pUnit1->getGameTurnCreated());
+    pkMergedUnit->m_eOriginalOwner = pUnit1->getOriginalOwner();
+    pkMergedUnit->setAutoPromoting(pUnit1->isAutoPromoting());
+    pkMergedUnit->testPromotionReady();
+    pkMergedUnit->setName(pUnit1->getNameNoDesc());
+
+    pkMergedUnit->AI_setUnitAIType(pUnit1->AI_getUnitAIType());
+    if (pUnit2->AI_getUnitAIType() == pUnit3->AI_getUnitAIType() && pkMergedUnit->AI_getUnitAIType() != pUnit2->AI_getUnitAIType())
+    {
+        pkMergedUnit->AI_setUnitAIType(pUnit2->AI_getUnitAIType());
+    }
+
+    if (pUnit1->getLeaderUnitType() != NO_UNIT)
+    {
+        pkMergedUnit->setLeaderUnitType(pUnit1->getLeaderUnitType());
+    }
+    if (pUnit2->getLeaderUnitType() != NO_UNIT && pkMergedUnit->getLeaderUnitType() == NO_UNIT)
+    {
+        pkMergedUnit->setLeaderUnitType(pUnit2->getLeaderUnitType());
+    }
+    if (pUnit3->getLeaderUnitType() != NO_UNIT && pkMergedUnit->getLeaderUnitType() == NO_UNIT)
+    {
+        pkMergedUnit->setLeaderUnitType(pUnit3->getLeaderUnitType());
+    }
+    if (pJoinGroup != NULL)
+    {
+        pkMergedUnit->joinGroup(pJoinGroup);
+    }
+
+    pUnit1->joinGroup(NULL);
+    pUnit2->joinGroup(NULL);
+    pUnit3->joinGroup(NULL);
+
+    pUnit1->getGroup()->AI_setMissionAI(MISSIONAI_DELIBERATE_KILL, NULL, NULL);
+    pUnit1->kill(true, NO_PLAYER, true);
+    pUnit2->getGroup()->AI_setMissionAI(MISSIONAI_DELIBERATE_KILL, NULL, NULL);
+    pUnit2->kill(true, NO_PLAYER, true);
+    pUnit3->getGroup()->AI_setMissionAI(MISSIONAI_DELIBERATE_KILL, NULL, NULL);
+    pUnit3->kill(true, NO_PLAYER, true);
+
+    pkMergedUnit->setInhibitSplit(false);
+
+	return pkMergedUnit;
+
+}
+
+// Size Matters: bulk-merge every eligible unit in this unit's selection group that shares
+// the same unit type and size (group rank and quality rank), in triples, keeping the
+// resulting units in the group. Leftover units that cannot form a complete triple of a
+// given type/size are left untouched. Runs deterministically on all clients (driven by the
+// GAMEMESSAGE_MERGE_ALL network message), so no popup is used.
+void CvUnit::doMergeAllInGroup()
+{
+	PROFILE_EXTRA_FUNC();
+
+	CvSelectionGroup* pGroup = getGroup();
+	if (pGroup == NULL)
+	{
+		return;
+	}
+	const PlayerTypes eOwner = getOwner();
+
+	// Snapshot the eligible units up front (by ID); merging mutates the group, and the
+	// merged units that join the group are one size larger so they never re-bucket here.
+	std::vector<int> aiEligible;
+	foreach_(const CvUnit* pLoopUnit, pGroup->units())
+	{
+		if (pLoopUnit->isMergeEligible())
+		{
+			aiEligible.push_back(pLoopUnit->getID());
+		}
+	}
+
+	// Bucket the snapshot by (unit type, group rank, quality rank) and merge each bucket in
+	// triples. Units are re-fetched and re-validated by ID since earlier merges kill units.
+	for (size_t i = 0; i < aiEligible.size(); i++)
+	{
+		const CvUnit* pBase = GET_PLAYER(eOwner).getUnit(aiEligible[i]);
+		if (pBase == NULL || !pBase->isMergeEligible())
+		{
+			continue;
+		}
+		const UnitTypes eUnitType = pBase->getUnitType();
+		const int iGroupRank = pBase->groupRank();
+		const int iQualityRank = pBase->qualityRank();
+
+		std::vector<CvUnit*> apTriple;
+		apTriple.push_back(GET_PLAYER(eOwner).getUnit(aiEligible[i]));
+
+		for (size_t j = i + 1; j < aiEligible.size() && apTriple.size() < 3; j++)
+		{
+			CvUnit* pPartner = GET_PLAYER(eOwner).getUnit(aiEligible[j]);
+			if (pPartner != NULL
+				&& pPartner->isMergeEligible()
+				&& pPartner->getUnitType() == eUnitType
+				&& pPartner->groupRank() == iGroupRank
+				&& pPartner->qualityRank() == iQualityRank)
 			{
-				if (pUnit1->isHasPromotion(ePromotion) || pUnit2->isHasPromotion(ePromotion) || pUnit3->isHasPromotion(ePromotion))
-				{
-					iTotalQualityOffset += GC.getPromotionInfo((PromotionTypes)iI).getQualityChange();
-				}
-			}
-			else if (GC.getPromotionInfo(ePromotion).getGroupChange() != 0)
-			{
-				if (pUnit1->isHasPromotion(ePromotion) || pUnit2->isHasPromotion(ePromotion) || pUnit3->isHasPromotion(ePromotion))
-				{
-					iTotalGroupOffset += GC.getPromotionInfo((PromotionTypes)iI).getGroupChange();
-				}
+				apTriple.push_back(pPartner);
+				aiEligible[j] = FFreeList::INVALID_INDEX; // claim this partner
 			}
 		}
 
-		bool bNormalizedGroup = CvUnit::normalizeUnitPromotions(pkMergedUnit, iTotalGroupOffset,
-			bind(&CvUnit::isGroupUpgradePromotion, pkMergedUnit, _2),
-			bind(&CvUnit::isGroupDowngradePromotion, pkMergedUnit, _2)
-		);
-		FAssertMsg(bNormalizedGroup, "Could not apply required number of group promotions on merged units");
-
-		bool bNormalizedQuality = CvUnit::normalizeUnitPromotions(pkMergedUnit, iTotalQualityOffset,
-			bind(&CvUnit::isQualityUpgradePromotion, pkMergedUnit, _2),
-			bind(&CvUnit::isQualityDowngradePromotion, pkMergedUnit, _2)
-		);
-		FAssertMsg(bNormalizedQuality, "Could not apply required number of quality promotions on merged units");
-
-		//Set New Experience
-		int iXP1 = pUnit1->getExperience100();
-		int iXP2 = pUnit2->getExperience100();
-		int iXP3 = pUnit3->getExperience100();
-		int iXP = iXP1 + iXP2 + iXP3;
-		if (iXP != 0)
+		if (apTriple.size() == 3)
 		{
-			iXP /= 3;
+			aiEligible[i] = FFreeList::INVALID_INDEX; // claim the base
+			CvUnit::mergeUnits(apTriple[0], apTriple[1], apTriple[2], pGroup);
 		}
-		pkMergedUnit->setExperience100(iXP);
-
-		pkMergedUnit->checkFreetoCombatClass();
-		pkMergedUnit->setGameTurnCreated(pUnit1->getGameTurnCreated());
-		pkMergedUnit->m_eOriginalOwner = pUnit1->getOriginalOwner();
-		pkMergedUnit->setAutoPromoting(pUnit1->isAutoPromoting());
-		pkMergedUnit->testPromotionReady();
-		pkMergedUnit->setName(pUnit1->getNameNoDesc());
-
-		pkMergedUnit->AI_setUnitAIType(pUnit1->AI_getUnitAIType());
-		if (pUnit2->AI_getUnitAIType() == pUnit3->AI_getUnitAIType() && pkMergedUnit->AI_getUnitAIType() != pUnit2->AI_getUnitAIType())
-		{
-			pkMergedUnit->AI_setUnitAIType(pUnit2->AI_getUnitAIType());
-		}
-
-		if (pUnit1->getLeaderUnitType() != NO_UNIT)
-		{
-			pkMergedUnit->setLeaderUnitType(pUnit1->getLeaderUnitType());
-		}
-		if (pUnit2->getLeaderUnitType() != NO_UNIT && pkMergedUnit->getLeaderUnitType() == NO_UNIT)
-		{
-			pkMergedUnit->setLeaderUnitType(pUnit2->getLeaderUnitType());
-		}
-		if (pUnit3->getLeaderUnitType() != NO_UNIT && pkMergedUnit->getLeaderUnitType() == NO_UNIT)
-		{
-			pkMergedUnit->setLeaderUnitType(pUnit3->getLeaderUnitType());
-		}
-		pkMergedUnit->setInhibitSplit(true);
-		pkMergedUnit->joinGroup(pMergingGroup);
-
-		GET_PLAYER(getOwner()).setBaseMergeSelectionUnit(FFreeList::INVALID_INDEX);
-		GET_PLAYER(getOwner()).setFirstMergeSelectionUnit(FFreeList::INVALID_INDEX);
-		GET_PLAYER(getOwner()).setSecondMergeSelectionUnit(FFreeList::INVALID_INDEX);
-
-		pUnit1->joinGroup(NULL);
-		pUnit2->joinGroup(NULL);
-		pUnit3->joinGroup(NULL);
-
-		pUnit1->getGroup()->AI_setMissionAI(MISSIONAI_DELIBERATE_KILL, NULL, NULL);
-		pUnit1->kill(true, NO_PLAYER, true);
-		pUnit2->getGroup()->AI_setMissionAI(MISSIONAI_DELIBERATE_KILL, NULL, NULL);
-		pUnit2->kill(true, NO_PLAYER, true);
-		pUnit3->getGroup()->AI_setMissionAI(MISSIONAI_DELIBERATE_KILL, NULL, NULL);
-		pUnit3->kill(true, NO_PLAYER, true);
 	}
 }
 
@@ -35907,7 +36039,7 @@ int CvUnit::getPowerValueTotal() const
 void CvUnit::setSMPowerValue(bool bForLoad)
 {
 	const int oldSMPowerValue = m_iSMPowerValue;
-	const int m_iSMPowerValue = applySMRank(m_pUnitInfo->getPowerValue(), getSizeMattersOffsetValue(), GC.getSIZE_MATTERS_MOST_MULTIPLIER());
+	m_iSMPowerValue = applySMRank(m_pUnitInfo->getPowerValue(), getSizeMattersOffsetValue(), GC.getSIZE_MATTERS_MOST_MULTIPLIER());
 	FASSERT_NOT_NEGATIVE(m_iSMPowerValue);
 	if (!bForLoad)
 	{
