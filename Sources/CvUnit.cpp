@@ -37,6 +37,8 @@
 #ifdef USE_OLD_PATH_GENERATOR
 #include "FAStarNode.h"
 #endif
+int s_iCommanderEpoch = 0;
+int s_iCommodoreEpoch = 0;
 
 static CvEntity* g_dummyEntity = NULL;
 static CvUnit*	 g_dummyUnit = NULL;
@@ -106,6 +108,18 @@ bool CvUnit::isRealEntity(const CvEntity* entity)
 CvUnit::CvUnit(bool bIsDummy) : m_GameObject(this),
 m_Properties(this)
 {
+	m_pCommanderCache = NULL;
+	m_iCommanderCacheX = INVALID_PLOT_COORD;
+	m_iCommanderCacheY = INVALID_PLOT_COORD;
+	m_iCommanderCacheEpoch = -1;
+	m_iCommanderCacheTurn = -1;
+
+	m_pCommodoreCache = NULL;
+	m_iCommodoreCacheX = INVALID_PLOT_COORD;
+	m_iCommodoreCacheY = INVALID_PLOT_COORD;
+	m_iCommodoreCacheEpoch = -1;
+	m_iCommodoreCacheTurn = -1;
+
 	m_aiExtraDomainModifier = new int[NUM_DOMAIN_TYPES];
 	m_aiExtraVisibilityIntensity = new int[GC.getNumInvisibleInfos()];
 	m_aiExtraInvisibilityIntensity = new int[GC.getNumInvisibleInfos()];
@@ -528,6 +542,18 @@ void CvUnit::reset(int iID, UnitTypes eUnit, PlayerTypes eOwner, bool bConstruct
 		m_iGroupID = FFreeList::INVALID_INDEX;
 	}
 	m_iHotKeyNumber = -1;
+	m_pCommanderCache = NULL;
+	m_iCommanderCacheX = INVALID_PLOT_COORD;
+	m_iCommanderCacheY = INVALID_PLOT_COORD;
+	m_iCommanderCacheEpoch = -1;
+	m_iCommanderCacheTurn = -1;
+
+	m_pCommodoreCache = NULL;
+	m_iCommodoreCacheX = INVALID_PLOT_COORD;
+	m_iCommodoreCacheY = INVALID_PLOT_COORD;
+	m_iCommodoreCacheEpoch = -1;
+	m_iCommodoreCacheTurn = -1;
+
 	m_iX = INVALID_PLOT_COORD;
 	m_iY = INVALID_PLOT_COORD;
 	m_iLastMoveTurn = 0;
@@ -898,6 +924,18 @@ void CvUnit::reset(int iID, UnitTypes eUnit, PlayerTypes eOwner, bool bConstruct
 
 CvUnit& CvUnit::operator=(const CvUnit& other)
 {
+	m_pCommanderCache = NULL;
+	m_iCommanderCacheX = INVALID_PLOT_COORD;
+	m_iCommanderCacheY = INVALID_PLOT_COORD;
+	m_iCommanderCacheEpoch = -1;
+	m_iCommanderCacheTurn = -1;
+
+	m_pCommodoreCache = NULL;
+	m_iCommodoreCacheX = INVALID_PLOT_COORD;
+	m_iCommodoreCacheY = INVALID_PLOT_COORD;
+	m_iCommodoreCacheEpoch = -1;
+	m_iCommodoreCacheTurn = -1;
+
 	m_iHealUnitCombatCount = other.m_iHealUnitCombatCount;
 	m_iDCMBombRange = other.m_iDCMBombRange;
 	m_iDCMBombAccuracy = other.m_iDCMBombAccuracy;
@@ -28732,11 +28770,39 @@ void CvUnit::setCommander(bool bNewVal)
 
 CvUnit* CvUnit::getCommander() const
 {
+	if (!GC.getGame().isOption(GAMEOPTION_UNIT_GREAT_COMMANDERS))
+	{
+		return NULL;
+	}
+
+	// C2C Optimization: Check the commander cache first.
+	// If the unit has not moved, the turn has not changed, and the plot's commander epoch has not changed,
+	// we can bypass the expensive O(C) search loop through all active commanders.
+	const int iTurn = GC.getGame().getGameTurn();
+	if (m_iCommanderCacheX == getX()
+		&& m_iCommanderCacheY == getY()
+		&& m_iCommanderCacheEpoch == s_iCommanderEpoch
+		&& m_iCommanderCacheTurn == iTurn)
+	{
+		return m_pCommanderCache;
+	}
+
+	return getCommanderSlow();
+}
+
+CvUnit* CvUnit::getCommanderSlow() const
+{
 	PROFILE_FUNC();
 
+	const int iTurn = GC.getGame().getGameTurn();
 	const CvPlot* pPlot = plot();
 	if (pPlot == NULL || !pPlot->inCommandField(getOwner()) || getDomainType() == DOMAIN_SEA)
 	{
+		m_pCommanderCache = NULL;
+		m_iCommanderCacheX = getX();
+		m_iCommanderCacheY = getY();
+		m_iCommanderCacheEpoch = s_iCommanderEpoch;
+		m_iCommanderCacheTurn = iTurn;
 		return NULL;
 	}
 
@@ -28746,6 +28812,11 @@ CvUnit* CvUnit::getCommander() const
 		const int cachedDistance = plotDistance(pBestCommander->getX(), pBestCommander->getY(), getX(), getY());
 		if (cachedDistance <= pBestCommander->getCommanderComp()->getCommandRange())
 		{
+			m_pCommanderCache = pBestCommander;
+			m_iCommanderCacheX = getX();
+			m_iCommanderCacheY = getY();
+			m_iCommanderCacheEpoch = s_iCommanderEpoch;
+			m_iCommanderCacheTurn = iTurn;
 			return pBestCommander;
 		}
 		pBestCommander = NULL;
@@ -28762,7 +28833,7 @@ CvUnit* CvUnit::getCommander() const
 		CvUnit* com = *it;
 		UnitCompCommander* comComp = com->getCommanderComp();
 		if (comComp == NULL)
-			continue;  // s�curit� si jamais �a renvoie NULL
+			continue;  // securite si jamais ca renvoie NULL
 		if (comComp->getControlPointsLeft() <= 0)
 			continue;
 
@@ -28787,6 +28858,13 @@ CvUnit* CvUnit::getCommander() const
 		}
 	}
 	m_iCommanderID = pBestCommander ? pBestCommander->getID() : -1;
+
+	m_pCommanderCache = pBestCommander;
+	m_iCommanderCacheX = getX();
+	m_iCommanderCacheY = getY();
+	m_iCommanderCacheEpoch = s_iCommanderEpoch;
+	m_iCommanderCacheTurn = iTurn;
+
 	return pBestCommander;
 }
 
@@ -28874,11 +28952,39 @@ void CvUnit::setCommodore(bool bNewVal)
 
 CvUnit* CvUnit::getCommodore() const
 {
+	if (!GC.getGame().isOption(GAMEOPTION_UNIT_GREAT_COMMODORES))
+	{
+		return NULL;
+	}
+
+	// C2C Optimization: Check the commodore cache first.
+	// If the unit has not moved, the turn has not changed, and the plot's commodore epoch has not changed,
+	// we can bypass the expensive O(C) search loop through all active commodores.
+	const int iTurn = GC.getGame().getGameTurn();
+	if (m_iCommodoreCacheX == getX()
+		&& m_iCommodoreCacheY == getY()
+		&& m_iCommodoreCacheEpoch == s_iCommodoreEpoch
+		&& m_iCommodoreCacheTurn == iTurn)
+	{
+		return m_pCommodoreCache;
+	}
+
+	return getCommodoreSlow();
+}
+
+CvUnit* CvUnit::getCommodoreSlow() const
+{
 	PROFILE_FUNC();
 
+	const int iTurn = GC.getGame().getGameTurn();
 	const CvPlot* pPlot = plot();
 	if (pPlot == NULL || !pPlot->inCommandCommodoreField(getOwner()) || getDomainType() == DOMAIN_LAND)
 	{
+		m_pCommodoreCache = NULL;
+		m_iCommodoreCacheX = getX();
+		m_iCommodoreCacheY = getY();
+		m_iCommodoreCacheEpoch = s_iCommodoreEpoch;
+		m_iCommodoreCacheTurn = iTurn;
 		return NULL;
 	}
 
@@ -28888,6 +28994,11 @@ CvUnit* CvUnit::getCommodore() const
 		const int cachedDistance = plotDistance(pBestCommodore->getX(), pBestCommodore->getY(), getX(), getY());
 		if (cachedDistance <= pBestCommodore->getCommodoreComp()->getCommandRange())
 		{
+			m_pCommodoreCache = pBestCommodore;
+			m_iCommodoreCacheX = getX();
+			m_iCommodoreCacheY = getY();
+			m_iCommodoreCacheEpoch = s_iCommodoreEpoch;
+			m_iCommodoreCacheTurn = iTurn;
 			return pBestCommodore;
 		}
 		// The one we used would have been the cached one so will have to search again
@@ -28905,7 +29016,7 @@ CvUnit* CvUnit::getCommodore() const
 		CvUnit* com = *it;
 		UnitCompCommodore* comComp = com->getCommodoreComp();
 		if (comComp == NULL)
-			continue;  // s�curit� si jamais �a renvoie NULL
+			continue;  // securite si jamais ca renvoie NULL
 		if (comComp->getControlPointsLeft() <= 0)
 			continue;
 
@@ -28930,8 +29041,14 @@ CvUnit* CvUnit::getCommodore() const
 		}
 	}
 	m_iCommodoreID = pBestCommodore ? pBestCommodore->getID() : -1;
-	return pBestCommodore;
 
+	m_pCommodoreCache = pBestCommodore;
+	m_iCommodoreCacheX = getX();
+	m_iCommodoreCacheY = getY();
+	m_iCommodoreCacheEpoch = s_iCommodoreEpoch;
+	m_iCommodoreCacheTurn = iTurn;
+
+	return pBestCommodore;
 }
 
 void CvUnit::tryUseCommodore()

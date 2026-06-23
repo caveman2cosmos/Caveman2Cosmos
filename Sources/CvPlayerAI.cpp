@@ -1,4 +1,4 @@
-﻿// playerAI.cpp
+// playerAI.cpp
 
 #include "CvGameCoreDLL.h"
 #include "CvArea.h"
@@ -376,6 +376,11 @@ void CvPlayerAI::AI_reset(bool bConstructor)
 		m_bonusClassHave = new int[GC.getNumBonusClassInfos()];
 	}
 	m_iBonusClassTallyCachedTurn = -1;
+
+	m_bFinancialTroubleCache = false;
+	m_iFinancialTroubleCacheTurn = -1;
+	m_iFinancialTroubleCacheGold = -1;
+	m_iFinancialTroubleCacheNumCities = -1;
 }
 
 
@@ -3684,7 +3689,8 @@ int CvPlayerAI::AI_getPlotDanger(const CvPlot* pPlot, int iRange, bool bTestMove
 		if (pPlot->getX() == entry->plotX &&
 			 pPlot->getY() == entry->plotY &&
 			 iRange == entry->iRange &&
-			 bTestMoves == entry->bTestMoves)
+			 bTestMoves == entry->bTestMoves &&
+			 getID() == entry->ePlayer)
 		{
 			entry->iLastUseCount = ++plotDangerCache.currentUseCounter;
 			plotDangerCacheHits++;
@@ -3709,6 +3715,7 @@ int CvPlayerAI::AI_getPlotDanger(const CvPlot* pPlot, int iRange, bool bTestMove
 	worstLRUEntry->plotY = pPlot->getY();
 	worstLRUEntry->iRange = iRange;
 	worstLRUEntry->bTestMoves = bTestMoves;
+	worstLRUEntry->ePlayer = getID();
 	worstLRUEntry->iLastUseCount = ++plotDangerCache.currentUseCounter;
 	worstLRUEntry->iResult = AI_getPlotDangerInternal(pPlot, iRange, bTestMoves);
 
@@ -3963,15 +3970,35 @@ bool CvPlayerAI::AI_isFinancialTrouble() const
 {
 	PROFILE_FUNC();
 	if (isNPC()) return false;
+
+	// C2C Optimization: Cache the result of financial trouble calculation. This method is called extremely
+	// frequently across various AI valuation routines. The cache invalidates if the turn, gold, or city count changes.
+	const int iTurn = GC.getGame().getGameTurn();
+	const int64_t iGold = getGold();
+	const int iNumCities = getNumCities();
+
+	if (iTurn == m_iFinancialTroubleCacheTurn
+		&& iGold == m_iFinancialTroubleCacheGold
+		&& iNumCities == m_iFinancialTroubleCacheNumCities)
 	{
-		const bool isftrouble = AI_fundingHealth() < AI_safeFunding();
-		const bool isGoldcritical = AI_hasCriticalGold();
-		if (isftrouble)
-		{
-			LOG_BBAI_PLAYER(3, ("Financial Troubles  : AI_fundingHealth() < AI_safeFunding()"));
-		}
-		return isftrouble || isGoldcritical;
+		return m_bFinancialTroubleCache;
 	}
+
+	const bool isftrouble = AI_fundingHealth() < AI_safeFunding();
+	const bool isGoldcritical = AI_hasCriticalGold();
+	const bool bResult = isftrouble || isGoldcritical;
+
+	if (isftrouble)
+	{
+		LOG_BBAI_PLAYER(3, ("Financial Troubles  : AI_fundingHealth() < AI_safeFunding()"));
+	}
+
+	m_bFinancialTroubleCache = bResult;
+	m_iFinancialTroubleCacheTurn = iTurn;
+	m_iFinancialTroubleCacheGold = iGold;
+	m_iFinancialTroubleCacheNumCities = iNumCities;
+
+	return bResult;
 }
 
 int64_t CvPlayerAI::AI_goldTarget() const
@@ -9155,9 +9182,12 @@ int CvPlayerAI::AI_baseBonusVal(BonusTypes eBonus, bool bForTrade) const
 
 			{
 				PROFILE("CvPlayerAI::AI_baseBonusVal::recalculate Building Value");
-				for (int iI = 0; iI < GC.getNumBuildingInfos(); iI++)
+				// C2C Optimization: Instead of looping over all building infos (thousands),
+				// iterate only through the precalculated list of buildings associated with/requiring this bonus.
+				const std::vector<BuildingTypes>& associatedBuildings = GC.getBonusAssociatedBuildings(eBonus);
+				for (size_t iIdx = 0; iIdx < associatedBuildings.size(); iIdx++)
 				{
-					const BuildingTypes eBuildingX = static_cast<BuildingTypes>(iI);
+					const BuildingTypes eBuildingX = associatedBuildings[iIdx];
 
 					if (!GET_TEAM(getTeam()).isObsoleteBuilding(eBuildingX))
 					{

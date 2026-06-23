@@ -88,6 +88,11 @@ public:
 	int getNumProvidedByImprovementTypes() const;
 	bool isProvidedByImprovementType(const ImprovementTypes i) const;
 	void setProvidedByImprovementTypes(const ImprovementTypes eType);
+
+	// Cache of buildings that provide this bonus (calculated post-load) to avoid iterating all buildings in hasVicinityBonus check
+	const std::vector<BuildingTypes>& getBuildingsProvidingBonus() const { return m_aBuildingsProvidingBonus; }
+	void addBuildingProvidingBonus(BuildingTypes eBuilding) { m_aBuildingsProvidingBonus.push_back(eBuilding); }
+
 	int m_iConstAppearance;
 	int m_iRandAppearance1;
 	int m_iRandAppearance2;
@@ -146,6 +151,7 @@ private:
 	volatile std::vector<std::pair<ImprovementTypes, BuildTypes> >* m_tradeProvidingImprovements;
 
 	std::vector<ImprovementTypes> m_providedByImprovementTypes;
+	std::vector<BuildingTypes> m_aBuildingsProvidingBonus;
 };
 
 

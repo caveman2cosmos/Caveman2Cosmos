@@ -30,63 +30,7 @@ static bool g_tracePathing = false;
 #endif
 //#define	DETAILED_TRACE
 
-//	Helper class representing a path tree node
-class CvPathNode
-{
-public:
-	CvPathNode()
-		: m_iPathTurns(0)
-		, m_iMovementRemaining(0)
-		, m_parent(NULL)
-		, m_firstChild(NULL)
-		, m_prevSibling(NULL)
-		, m_nextSibling(NULL)
-		, m_plot(NULL)
-		, m_iBestToEdgeCost(0)
-		, m_iCostTo(0)
-		, m_iCostFrom(0)
-		, m_iLowestPossibleCostFrom(0)
-		, m_iPathSeq(0)	//	Data updated for path generation that matches this seq
-		, m_iEdgesIncluded(0)	//	Bitmap by direction out
-		, m_bProcessedAsTerminus(false)
-		, m_iModificationSeq(0)	//	Incremented each time this node's info is modified
-		, m_iLowestDequeueCost(0)
-		, m_iRecalcThreshold(0)
-		, m_bIsKnownRoute(false)
-#ifdef DYNAMIC_PATH_STRUCTURE_VALIDATION
-		, m_iValidationSeq(0)
-		, m_bIsQueued(false)
-#endif
-	{
-	}
 
-	~CvPathNode()
-	{
-	}
-
-	int			m_iPathTurns;
-	int			m_iMovementRemaining;
-	CvPathNode*	m_parent;
-	CvPathNode*	m_firstChild;
-	CvPathNode*	m_prevSibling;
-	CvPathNode*	m_nextSibling;
-	CvPlot*		m_plot;
-	int			m_iBestToEdgeCost;
-	int			m_iCostTo;
-	int			m_iCostFrom;
-	int			m_iLowestPossibleCostFrom;
-	int			m_iPathSeq;	//	Data updated for path generation that matches this seq
-	int			m_iEdgesIncluded;	//	Bitmap by direction out
-	bool		m_bProcessedAsTerminus;
-	int			m_iModificationSeq;	//	Incremented each time this node's info is modified
-	int			m_iLowestDequeueCost;
-	int			m_iRecalcThreshold;
-	bool		m_bIsKnownRoute;
-#ifdef DYNAMIC_PATH_STRUCTURE_VALIDATION
-	int			m_iValidationSeq;
-	bool		m_bIsQueued;
-#endif
-};
 
 CvPath::const_iterator::const_iterator(CvPathNode* cursorNode)
 {
@@ -2100,10 +2044,6 @@ bool CvPathGenerator::newgeneratePath(const CvPlot* pFrom, const CvPlot* pTo, Cv
 	return false;
 }
 
-bool CvPathGenerator::CvPathNodeComparer::operator() (const priorityQueueEntry& lhs, const priorityQueueEntry& rhs) const
-{
-	return lhs.node->m_iCostFrom + lhs.iQueuedCost > rhs.node->m_iCostFrom + rhs.iQueuedCost;
-}
 
 const CvPath& CvPathGenerator::getLastPath() const
 {

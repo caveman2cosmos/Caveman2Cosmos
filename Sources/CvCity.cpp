@@ -21092,9 +21092,11 @@ bool CvCity::hasVicinityBonus(BonusTypes eBonus) const
 
 		if (!bResult && bonusAvailableFromBuildings(eBonus))
 		{
-			for (int iI = 0; iI < GC.getNumBuildingInfos(); iI++)
+			// C2C Optimization: Scan only the precalculated providers of eBonus rather than all building types (thousands of checks)
+			const std::vector<BuildingTypes>& aProviders = GC.getBonusInfo(eBonus).getBuildingsProvidingBonus();
+			for (size_t i = 0; i < aProviders.size(); ++i)
 			{
-				if (GC.getBuildingInfo((BuildingTypes)iI).getFreeBonuses().hasValue(eBonus) && isActiveBuilding((BuildingTypes)iI))
+				if (isActiveBuilding(aProviders[i]))
 				{
 					bResult = true;
 					break;
@@ -21119,6 +21121,26 @@ void CvCity::clearRawVicinityBonusCache(BonusTypes eBonus)
 		m_pabHasRawVicinityBonusCached[eBonus] = false;
 	}
 }
+
+// C2C Optimization: Bulk invalidate vicinity and raw vicinity bonus caches at once when ownership/plot resource/tech changes
+void CvCity::invalidateVicinityCache()
+{
+	if (m_pabHasRawVicinityBonusCached != NULL)
+	{
+		for (int iI = 0; iI < GC.getNumBonusInfos(); iI++)
+		{
+			m_pabHasRawVicinityBonusCached[iI] = false;
+		}
+	}
+	if (m_pabHasVicinityBonusCached != NULL)
+	{
+		for (int iI = 0; iI < GC.getNumBonusInfos(); iI++)
+		{
+			m_pabHasVicinityBonusCached[iI] = false;
+		}
+	}
+}
+
 
 bool CvCity::hasRawVicinityBonus(BonusTypes eBonus) const
 {
@@ -21174,10 +21196,11 @@ bool CvCity::hasRawVicinityBonus(BonusTypes eBonus) const
 	// --- Building-provided bonus check ---
 	if (bonusAvailableFromBuildings(eBonus))
 	{
-		for (int iI = 0; iI < numBuildingInfos; ++iI)
+		// C2C Optimization: Scan only the precalculated providers of eBonus rather than all building types (thousands of checks)
+		const std::vector<BuildingTypes>& aProviders = GC.getBonusInfo(eBonus).getBuildingsProvidingBonus();
+		for (size_t i = 0; i < aProviders.size(); ++i)
 		{
-			const CvBuildingInfo& kBuilding = GC.getBuildingInfo((BuildingTypes)iI);
-			if (kBuilding.getFreeBonuses().hasValue(eBonus) && isActiveBuilding((BuildingTypes)iI))
+			if (isActiveBuilding(aProviders[i]))
 			{
 				if (!GC.getGame().isMPOption(MPOPTION_SIMULTANEOUS_TURNS))
 				{
@@ -21215,10 +21238,6 @@ void CvCity::doVicinityBonus()
 
 	for (int iI = 0; iI < GC.getNumBonusInfos(); iI++)
 	{
-		//	Clear the cache each turn before performing this calculation
-		clearVicinityBonusCache((BonusTypes)iI);
-		clearRawVicinityBonusCache((BonusTypes)iI);
-
 		int iChange = 0;
 		const bool bHadVicinityBonus = hadVicinityBonus((BonusTypes)iI);
 		const bool bHasVicinityBonus = hasVicinityBonus((BonusTypes)iI);

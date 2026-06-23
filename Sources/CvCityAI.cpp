@@ -12779,9 +12779,10 @@ void CvCityAI::CalculateAllBuildingValues(int iFocusFlags)
 					queries.push_back(query);
 				}
 
-				for (int iJ = 0; iJ < iNumBuildings; iJ++)
+				// C2C Optimization: Instead of looping over all building infos (thousands),
+				// iterate only through the list of buildings precalculated to be enabled/unlocked by this building.
+				foreach_(const BuildingTypes eType, building.getEnabledBuildingsList())
 				{
-					const BuildingTypes eType = static_cast<BuildingTypes>(iJ);
 					if (algo::none_of_equal(buildingsToCalculate, eType) && !hasBuilding(eType))
 					{
 						// check if this building enables the construct condition of another building
