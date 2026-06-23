@@ -1430,19 +1430,22 @@ bool CvSelectionGroup::startMission()
 						}
 						iMovesLeft /= 100;
 
-						iMovesLeft = std::max(iMaxMovesLeft, iMovesLeft);
-
-						if (iMovesLeft >= iMaxMovesLeft && pLoopUnit->pillage())
-						{
-							bAction = true;
-							if( isHuman() || canAllMove() )
-							{
-								bDidPillage = true;
-								iMovesLeft -= 1;
-								break;
-							}
-						}
-						iNextMaxMovesLeft = std::min( iNextMaxMovesLeft, iMovesLeft );
+						if (iMovesLeft >= iMaxMovesLeft)
+                        {
+                            if (pLoopUnit->pillage())
+                            {
+                                bAction = true;
+                                if( isHuman() || canAllMove() )
+                                {
+                                    bDidPillage = true;
+                                    break;
+                                }
+                            }
+                        }
+                        else
+                        {
+                            iNextMaxMovesLeft = std::max( iNextMaxMovesLeft, iMovesLeft );
+                        }
 					}
 				}
 
@@ -2342,6 +2345,7 @@ bool CvSelectionGroup::continueMission(int iSteps)
 				if (!isHuman() || missionNode->m_data.eMissionType != MISSION_MOVE_TO)
 				{
 					deleteMissionQueueNode(missionNode);
+					missionNode = NULL;
 
 					// We executed this one ok but if we have no moves left don't leave
 					//	it with ACTIVITY_AWAKE as its state as that'll just cause the AI to spin wheels.
@@ -2744,9 +2748,9 @@ bool CvSelectionGroup::canDoInterfaceModeAt(InterfaceModeTypes eInterfaceMode, C
 			}
 			case INTERFACEMODE_SHADOW_UNIT:
 			{
-				foreach_(CvUnit* pLoopUnit, pPlot->units())
+				foreach_(CvUnit* pPlotUnit, pPlot->units())
 				{
-					if (pLoopUnit->canShadowAt(pPlot, pLoopUnit))
+					if (pLoopUnit->canShadowAt(pPlot, pPlotUnit))
 					{
 						return true;
 					}
@@ -3102,10 +3106,13 @@ int CvSelectionGroup::getMinimumRBombardRange() const
 	int iLowest = MAX_INT;
 	foreach_(const CvUnit* pLoopUnit, units())
 	{
-		const int iTemp = pLoopUnit->rBombardDamageLimit();
-		if (iTemp > 0 && iTemp < iLowest)
+		if (pLoopUnit->rBombardDamageLimit() > 0)
 		{
-			iLowest = pLoopUnit->getDCMBombRange();
+			const int iRange = pLoopUnit->getDCMBombRange();
+			if (iRange < iLowest)
+			{
+				iLowest = iRange;
+			}
 		}
 	}
 
@@ -4996,7 +5003,7 @@ int	CvSelectionGroup::getWorstDamagePercent(UnitCombatTypes eIgnoreUnitCombat) c
 	{
 		if (eIgnoreUnitCombat == NO_UNITCOMBAT || !pLoopUnit->isHasUnitCombat(eIgnoreUnitCombat))
 		{
-			if (pLoopUnit->getDamage() > iWorstDamage)
+			if (pLoopUnit->getDamagePercent() > iWorstDamage)
 			{
 				iWorstDamage = pLoopUnit->getDamagePercent();
 			}

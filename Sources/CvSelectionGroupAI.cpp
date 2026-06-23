@@ -466,6 +466,10 @@ int CvSelectionGroupAI::AI_attackOdds(const CvPlot* pPlot, bool bPotentialEnemy,
 		{
 			//	There was no attacker in the first place!
 			iResult = 0;
+			if ( bWin != NULL )
+            {
+                *bWin = false;
+            }
 		}
 		else
 		{

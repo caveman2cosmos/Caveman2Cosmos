@@ -2798,7 +2798,7 @@ bool CvPlot::canSeeDisplacementPlot(TeamTypes eTeam, int dx, int dy, int dx0, in
 				return false;
 			}
 		}
-		else if (seePlot->getElevationLevel() < iTopElevation && 2*iTopElevationDistance >= std::max(dx0, dy0))
+		else if (seePlot->getElevationLevel() < iTopElevation && 2*iTopElevationDistance >= std::max(abs(dx0), abs(dy0)))
 		{
 			return false;
 		}
@@ -4994,7 +4994,7 @@ int CvPlot::plotCount(ConstPlotUnitFunc funcA, int iData1A, int iData2A, const C
 
 int CvPlot::plotStrength(UnitValueFlags eFlags, ConstPlotUnitFunc funcA, int iData1A, int iData2A, PlayerTypes eOwner, TeamTypes eTeam, ConstPlotUnitFunc funcB, int iData1B, int iData2B, int iRange) const
 {
-	return plotStrengthTimes100(eFlags, funcA, iData1A, iData1B, eOwner, eTeam, funcB, iData1B, iData2B, iRange) / 100;
+	return plotStrengthTimes100(eFlags, funcA, iData1A, iData2A, eOwner, eTeam, funcB, iData1B, iData2B, iRange) / 100;
 }
 
 int CvPlot::plotStrengthTimes100(UnitValueFlags eFlags, ConstPlotUnitFunc funcA, int iData1A, int iData2A, PlayerTypes eOwner, TeamTypes eTeam, ConstPlotUnitFunc funcB, int iData1B, int iData2B, int iRange) const
@@ -9920,7 +9920,7 @@ bool CvPlot::changeBuildProgress(BuildTypes eBuild, int iChange, TeamTypes eTeam
 					const int iPossible = std::max((int)m_aBonusResult.size(), 100);
 					const uint32_t iResult = GC.getGame().getSorenRandNum(iPossible, "Select Bonus Placement Type");
 
-					if (iResult > m_aBonusResult.size())
+					if (iResult >= m_aBonusResult.size())
 					{
 						eBonusPlaced = NO_BONUS;
 					}
@@ -12106,14 +12106,11 @@ int CvPlot::getYieldWithBuild(BuildTypes eBuild, YieldTypes eYield, bool bWithUp
 		eImprovement = getImprovementType();
 		if (eImprovement != NO_IMPROVEMENT)
 		{
-			for (int iI = 0; iI < NUM_YIELD_TYPES; iI++)
-			{
-				iYield += GC.getImprovementInfo(eImprovement).getRouteYieldChanges(eRoute, iI);
-				if (getRouteType() != NO_ROUTE)
-				{
-					iYield -= GC.getImprovementInfo(eImprovement).getRouteYieldChanges(getRouteType(), iI);
-				}
-			}
+            iYield += GC.getImprovementInfo(eImprovement).getRouteYieldChanges(eRoute, eYield);
+            if (getRouteType() != NO_ROUTE)
+            {
+                iYield -= GC.getImprovementInfo(eImprovement).getRouteYieldChanges(getRouteType(), eYield);
+            }
 		}
 	}
 
@@ -13230,7 +13227,10 @@ bool CvPlot::isInUnitZoneOfControl(PlayerTypes ePlayer) const
 		foreach_(const CvUnit* pLoopUnit, pAdjacentPlot->units()
 		| filtered(bind(CvUnit::isZoneOfControl, _1)))
 		{
-			return GET_TEAM(pLoopUnit->getTeam()).isAtWar(GET_PLAYER(ePlayer).getTeam());
+			if (GET_TEAM(pLoopUnit->getTeam()).isAtWar(GET_PLAYER(ePlayer).getTeam()))
+            {
+                return true;
+            }
 		}
 	}
 	return false;
@@ -13568,10 +13568,16 @@ void CvPlot::unitGameStateCorrections()
 		{
 			if (!pLoopUnit->atPlot(this))
 			{
-				removeUnit(pLoopUnit);
-				bUpdate = true;
+				// removeUnit() deletes this unit's node from m_units, so capture the next node first.
+                CLLNode<IDInfo>* pNextNode = nextUnitNode(pUnitNode);
+                removeUnit(pLoopUnit);
+                bUpdate = true;
+                pUnitNode = pNextNode;
 			}
-			pUnitNode = nextUnitNode(pUnitNode);
+			else
+            {
+                pUnitNode = nextUnitNode(pUnitNode);
+            }
 		}
 	}
 

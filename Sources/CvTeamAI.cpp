@@ -937,9 +937,9 @@ int CvTeamAI::AI_chooseElection(const VoteSelectionData& kVoteSelectionData) con
 			{
 				if (GET_PLAYER((PlayerTypes)iJ).isAliveAndTeam(getID()))
 				{
-					const PlayerVoteTypes eVote = GET_PLAYER((PlayerTypes)iJ).AI_diploVote(kVoteSelectionData.aVoteOptions[iI], eVoteSource, true);
+					const PlayerVoteTypes ePlayerVote = GET_PLAYER((PlayerTypes)iJ).AI_diploVote(kVoteSelectionData.aVoteOptions[iI], eVoteSource, true);
 
-					if (eVote != PLAYER_VOTE_YES || eVote == GC.getGame().getVoteOutcome((VoteTypes)iI))
+					if (ePlayerVote != PLAYER_VOTE_YES || ePlayerVote == GC.getGame().getVoteOutcome(eVote))
 					{
 						bValid = false;
 						break;
@@ -2586,7 +2586,7 @@ DenialTypes CvTeamAI::AI_makePeaceTrade(TeamTypes ePeaceTeam, TeamTypes eTeam) c
 		return DENIAL_CONTACT_THEM;
 	}
 
-	int iLandRatio = ((getTotalLand(true) * 100) / std::max(20, GET_TEAM(eTeam).getTotalLand(true)));
+	int iLandRatio = ((getTotalLand(true) * 100) / std::max(20, GET_TEAM(ePeaceTeam).getTotalLand(true)));
 	if (iLandRatio > 250)
 	{
 		return DENIAL_VICTORY;

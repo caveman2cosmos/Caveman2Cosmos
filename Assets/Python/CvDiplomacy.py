@@ -442,7 +442,7 @@ class CvDiplomacy:
 				elif bUsSuperior and not diploInfo.getDiplomacyPowerTypes(i, DiplomacyPowerTypes.DIPLOMACYPOWER_WEAKER):
 					continue
 
-				elif diploInfo.getDiplomacyPowerTypes(i, DiplomacyPowerTypes.DIPLOMACYPOWER_EQUAL):
+				elif not diploInfo.getDiplomacyPowerTypes(i, DiplomacyPowerTypes.DIPLOMACYPOWER_EQUAL):
 					continue
 
 			# passed all tests, so add to response list

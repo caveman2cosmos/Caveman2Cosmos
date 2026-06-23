@@ -520,7 +520,7 @@ bool CvDeal::isUncancelableVassalDeal(PlayerTypes eByPlayer, CvWString* pszReaso
 				if (pszReason)
 				{
 					CvWStringBuffer szBuffer;
-					GAMETEXT.setVassalRevoltHelp(szBuffer, eMaster, GET_PLAYER(getFirstPlayer()).getTeam());
+					GAMETEXT.setVassalRevoltHelp(szBuffer, eMaster, GET_PLAYER(getSecondPlayer()).getTeam());
 					*pszReason = szBuffer.getCString();
 				}
 				return true;

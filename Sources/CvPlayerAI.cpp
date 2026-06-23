@@ -4377,7 +4377,7 @@ int CvPlayerAI::techPathValuePerUnitCost(techPath* path, TechTypes eTech, bool b
 	}
 	foreach_(const TechTypes & loopTech, *path)
 	{
-		int iTempCost = std::max(1, GET_TEAM(getTeam()).getResearchCost(eTech) - GET_TEAM(getTeam()).getResearchProgress(eTech));
+		int iTempCost = std::max(1, GET_TEAM(getTeam()).getResearchCost(loopTech) - GET_TEAM(getTeam()).getResearchProgress(loopTech));
 		int iTempValue = AI_TechValueCached(loopTech, bAsync);
 
 		if (gPlayerLogLevel > 2)
@@ -11313,11 +11313,12 @@ int CvPlayerAI::AI_unitValue(UnitTypes eUnit, UnitAITypes eUnitAI, const CvArea*
 				}
 #endif // BATTLEWORN
 				//TB Combat Mods End
-				break;
+
 
 				if (kUnitInfo.canMergeSplit() && GC.getGame().isOption(GAMEOPTION_COMBAT_SIZE_MATTERS)){
 					iValue = int(iValue * EVAL_MERGE_FACTOR);
 				}
+				break;
 
 			}
 			case UNITAI_CITY_COUNTER:
@@ -11769,11 +11770,12 @@ int CvPlayerAI::AI_unitValue(UnitTypes eUnit, UnitAITypes eUnitAI, const CvArea*
 					iValue /= 2;
 					//better because it enables the unit to move through opponent territory with a RoP
 				}
-				break;
+
 
 			if (kUnitInfo.canMergeSplit() && GC.getGame().isOption(GAMEOPTION_COMBAT_SIZE_MATTERS)){
 				iValue = int(iValue * EVAL_MERGE_FACTOR);
 			}
+                break;
 
 			}
 			default: FErrorMsg("error");
@@ -13032,7 +13034,6 @@ int CvPlayerAI::AI_unitTargetMissionAIs(const CvUnit* pUnit, MissionAITypes* aeM
 			{
 				iPathTurns++;
 			}
-			iCount = iPathTurns;
 		}
 
 		// If the mission parameters state any amount of movement is ok or the amount of movement allowed is valid
@@ -20339,7 +20340,7 @@ void CvPlayerAI::AI_doDiplo()
 															*
 															GET_TEAM(GET_PLAYER((PlayerTypes)iI).getTeam()).getResearchLeft((TechTypes)iJ)
 														);
-													if (iValue > iBestValue)
+													if (iValue > iBestValue2)
 													{
 														iBestValue2 = iValue;
 														eBestGiveTech2 = (TechTypes)iJ;
@@ -21256,6 +21257,7 @@ int CvPlayerAI::AI_eventValue(EventTypes eEvent, const EventTriggeredData& kTrig
 		{
 			int iWarValue = (GET_TEAM(getTeam()).getDefensivePower() - GET_TEAM(GET_PLAYER(kTriggeredData.m_eOtherPlayer).getTeam()).getPower(true));// / std::max(1, GET_TEAM(getTeam()).getDefensivePower());
 			iWarValue -= 30 * AI_getAttitudeVal(kTriggeredData.m_eOtherPlayer);
+			iValue += iWarValue;
 		}
 
 		if (kEvent.getMaxPillage() > 0)
@@ -21265,6 +21267,7 @@ int CvPlayerAI::AI_eventValue(EventTypes eEvent, const EventTriggeredData& kTrig
 			iPillageValue *= 25 - iOtherPlayerAttitudeWeight;
 			iPillageValue *= iGameSpeedPercent;
 			iPillageValue /= 12500;
+			iValue += iPillageValue;
 		}
 
 		iValue += (iDiploValue * iGameSpeedPercent) / 100;
@@ -21544,7 +21547,7 @@ bool CvPlayerAI::AI_disbandUnit(int iExpThreshold)
 				//	For now make them less valuable the more you have (strictly this should depend
 				//	on what you need in terms of their buildable buildings, but start with an
 				//	approximation that is better than nothing
-				iValue *= std::min(0, getNumCities() * 2 - AI_getNumAIUnits(UNITAI_SUBDUED_ANIMAL)) / std::min(1, getNumCities());
+				iValue *= std::max(0, getNumCities() * 2 - AI_getNumAIUnits(UNITAI_SUBDUED_ANIMAL)) / std::max(1, getNumCities());
 				break;
 
 			case UNITAI_HUNTER:
@@ -23763,8 +23766,8 @@ void CvPlayerAI::AI_calculateAverages() const
 		}
 		m_iAverageGreatPeopleMultiplier = 0;
 
-		int64_t sumBaseCommerce[NUM_COMMERCE_TYPES];
-		int64_t sumFinalCommerce[NUM_COMMERCE_TYPES];
+		int64_t sumBaseCommerce[NUM_COMMERCE_TYPES] = {};
+        int64_t sumFinalCommerce[NUM_COMMERCE_TYPES] = {};
 		{
 			int iTotalPopulation = 0;
 
@@ -26313,7 +26316,7 @@ CvCity* CvPlayerAI::getReligiousVictoryTarget(const CvUnit* pUnit, const bool bN
 		const CvTeam& kLoopTeam = GET_TEAM(kLoopPlayer.getTeam());
 
 		if (kLoopPlayer.isAlive()
-			&& (TeamTypes(kLoopPlayer.getTeam()) == getTeam() || kLoopTeam.isVassal((TeamTypes)kLoopPlayer.getTeam()))
+			&& (TeamTypes(kLoopPlayer.getTeam()) == getTeam() || kLoopTeam.isVassal(getTeam()))
 			&& pUnitPlot->isHasPathToPlayerCity(getTeam(), PlayerTypes(iI))
 			)
 		{
@@ -26330,7 +26333,7 @@ CvCity* CvPlayerAI::getReligiousVictoryTarget(const CvUnit* pUnit, const bool bN
 					{
 						tempCityValue *= 2;
 					}
-					if (kLoopTeam.isVassal((TeamTypes)kLoopPlayer.getTeam()))
+					if (kLoopTeam.isVassal(getTeam()))
 					{
 						tempCityValue -= 12;
 					}
@@ -26949,11 +26952,21 @@ int CvPlayerAI::AI_militaryUnitTradeVal(const CvUnit* pUnit) const
 		}
 		else
 		{
-			const int iBestUnitAIValue = AI_unitValue(eBestUnit, GC.getUnitInfo(eUnit).getDefaultUnitAIType(), getCapitalCity()->area());
-			const int iThisUnitAIValue = AI_unitValue(eUnit, GC.getUnitInfo(eUnit).getDefaultUnitAIType(), getCapitalCity()->area());
+			CvCity* pCapital = getCapitalCity();
+            if (pCapital == NULL)
+            {
+                // Capital-less civ (bestBuildableUnitForAIType can still succeed via firstCity);
+                // no area to scale against, so fall back to the unit's production cost.
+                iValue = GC.getUnitInfo(eUnit).getProductionCost();
+            }
+            else
+            {
+                const int iBestUnitAIValue = AI_unitValue(eBestUnit, GC.getUnitInfo(eUnit).getDefaultUnitAIType(), pCapital->area());
+                const int iThisUnitAIValue = AI_unitValue(eUnit, GC.getUnitInfo(eUnit).getDefaultUnitAIType(), pCapital->area());
 
-			//	Value as cost of production of the unit we can build scaled by their relative AI value
-			iValue = (iThisUnitAIValue * GC.getUnitInfo(eBestUnit).getProductionCost()) / std::max(1, iBestUnitAIValue);
+                //	Value as cost of production of the unit we can build scaled by their relative AI value
+                iValue = (iThisUnitAIValue * GC.getUnitInfo(eBestUnit).getProductionCost()) / std::max(1, iBestUnitAIValue);
+            }
 		}
 
 		//	Normalise for game speed, and double as approximate hammer->gold conversion
@@ -27318,7 +27331,7 @@ int CvPlayerAI::AI_militaryBonusVal(BonusTypes eBonus)
 			if (bFound)
 			{
 				iValue += 300;
-				iValue /= iHasOrBonusCount;
+				iValue /= std::max(1, iHasOrBonusCount);
 			}
 		}
 	}
@@ -27724,7 +27737,7 @@ int CvPlayerAI::AI_promotionValue(PromotionTypes ePromotion, UnitTypes eUnit, co
 			else iTemp += 2;
 		}
 		iValue += iTemp;
-
+		iTemp = 0;
 		if (kPromotion.isPillageMarauder())
 		{
 			if (pUnit)
@@ -27763,7 +27776,7 @@ int CvPlayerAI::AI_promotionValue(PromotionTypes ePromotion, UnitTypes eUnit, co
 			else iTemp += 2;
 		}
 		iValue += iTemp;
-
+		iTemp = 0;
 		if (kPromotion.isPillageOnMove())
 		{
 			if (pUnit)
@@ -27786,7 +27799,7 @@ int CvPlayerAI::AI_promotionValue(PromotionTypes ePromotion, UnitTypes eUnit, co
 			else iTemp++;
 		}
 		iValue += iTemp;
-
+		iTemp = 0;
 		if (kPromotion.isPillageOnVictory())
 		{
 			if (pUnit)
@@ -27809,7 +27822,7 @@ int CvPlayerAI::AI_promotionValue(PromotionTypes ePromotion, UnitTypes eUnit, co
 			else iTemp += 4;
 		}
 		iValue += iTemp;
-
+		iTemp = 0;
 		if (kPromotion.isPillageResearch())
 		{
 			if (pUnit)
@@ -31783,7 +31796,7 @@ int CvPlayerAI::AI_promotionValue(PromotionTypes ePromotion, UnitTypes eUnit, co
 		}
 		for (int iI = 0; iI < kPromotion.getNumVisibleImprovementRangeChanges(); iI++)
 		{
-			iTemp = kPromotion.getVisibleImprovementChange(iI).iIntensity;
+			iTemp = kPromotion.getVisibleImprovementRangeChange(iI).iIntensity;
 
 			if (iTemp != 0)
 			{
@@ -31936,7 +31949,7 @@ int CvPlayerAI::AI_promotionValue(PromotionTypes ePromotion, UnitTypes eUnit, co
 		}
 		else
 		{
-			if (!pUnit->isHasUnitCombat((UnitCombatTypes)kPromotion.getRemovesUnitCombatType(iI)))
+			if (pUnit->isHasUnitCombat((UnitCombatTypes)kPromotion.getRemovesUnitCombatType(iI)))
 			{
 				iValue -= AI_unitCombatValue((UnitCombatTypes)kPromotion.getRemovesUnitCombatType(iI), eUnit, pUnit, eUnitAI);
 			}

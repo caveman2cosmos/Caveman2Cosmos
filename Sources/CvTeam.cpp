@@ -1374,7 +1374,7 @@ void CvTeam::declareWar(TeamTypes eTeam, bool bNewDiplo, WarPlanTypes eWarPlan)
 						for (int iJ = 0; iJ < MAX_PC_PLAYERS; iJ++)
 						{
 							// Player is not on our team nor on the team we declared war on.
-							if (GET_PLAYER((PlayerTypes)iI).isAliveAndTeam(getID(), false) && GET_PLAYER((PlayerTypes)iJ).getTeam() != eTeam
+							if (GET_PLAYER((PlayerTypes)iJ).isAliveAndTeam(getID(), false) && GET_PLAYER((PlayerTypes)iJ).getTeam() != eTeam
 							// Friends with the leader of the team we declared war on
 							&& GET_PLAYER((PlayerTypes)iJ).AI_getAttitude(teamFoe.getLeaderID()) >= ATTITUDE_PLEASED)
 							{
@@ -2660,7 +2660,7 @@ int CvTeam::getResearchCost(TechTypes eTech) const
 
 	if (!isNPC() && !isHuman(true))
 	{
-		iMod =
+		iMod +=
 			(
 				GC.getHandicapInfo(GC.getGame().getHandicapType()).getAIResearchPercent() - 100
 				+
