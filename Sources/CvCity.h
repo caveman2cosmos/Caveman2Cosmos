@@ -389,49 +389,6 @@ public:
 	int getReligionCount() const;
 	int getCorporationCount() const;
 
-#ifdef OUTBREAKS_AND_AFFLICTIONS
-	//TB Combat Mods (Buildings) begin
-	int getUnitAidPresent(PropertyTypes eProperty) const;
-	int getCityAidTotal(PromotionLineTypes ePromotionLineType) const;
-	int getAidRate(PropertyTypes ePropertyType) const;
-	void changeAidRate(PropertyTypes ePropertyType, int iChange);
-	void setAidRate(PropertyTypes ePropertyType, int iChange);
-
-	bool hasAfflictionType(PromotionLineTypes ePromotionLineType) const;
-	void changeAfflictionTypeCount(PromotionLineTypes ePromotionLineType, int iChange);
-	void setAfflictionTypeCount(PromotionLineTypes ePromotionLineType, int iChange);
-
-	int getExtraBonusAidModifier(BonusTypes eBonusType, PropertyTypes ePropertyType) const;
-	void changeExtraBonusAidModifier(BonusTypes eBonusType, PropertyTypes ePropertyType, int iChange);
-
-	int getExtraAfflictionOutbreakLevelChange(PromotionLineTypes ePromotionLine) const;
-	void changeExtraAfflictionOutbreakLevelChange(PromotionLineTypes ePromotionLine, int iChange);
-	void setExtraAfflictionOutbreakLevelChange(PromotionLineTypes ePromotionLine, int iChange);
-
-	int getAfflictionToleranceChange(PromotionLineTypes ePromotionLine) const;
-	void changeAfflictionToleranceChange(PromotionLineTypes ePromotionLine, int iChange);
-	void setAfflictionToleranceChange(PromotionLineTypes ePromotionLine, int iChange);
-
-	int getCurrentOvercomeChange(PromotionLineTypes ePromotionLine) const;
-	void changeCurrentOvercomeChange(PromotionLineTypes ePromotionLine, int iChange);
-	void setCurrentOvercomeChange(PromotionLineTypes ePromotionLine, int iChange);
-
-	int getTotalTechOutbreakLevelChange(BuildingTypes eType) const;
-	int getOutbreakChangesTotal(BuildingTypes eAfflictionBuilding, PromotionLineTypes eAfflictionLine) const;
-	int getOvercomeChangesTotal(BuildingTypes eAfflictionBuilding, PromotionLineTypes eAfflictionLine) const;
-	int getUnitCommunicability(PromotionLineTypes eAfflictionLine) const;
-	int getTradeCommunicabilityTotal(BuildingTypes eAfflictionBuilding, PromotionLineTypes eAfflictionLine) const;
-	bool canAcquireAffliction(BuildingTypes eDisease, PromotionLineTypes eAfflictionLine) const;
-	int getTotalCommunicableExposure(PromotionLineTypes eAfflictionLine) const;
-	void doOutbreakCheck(PromotionLineTypes eAfflictionLine);
-	void doOvercomeCheck(PromotionLineTypes eAfflictionLine);
-	int getPromotionLineAfflictionAttackCommunicability(PromotionLineTypes eAffliction) const;
-	void changePromotionLineAfflictionAttackCommunicability(PromotionLineTypes eAffliction, int iChange);
-	void setPromotionLineAfflictionAttackCommunicability(PromotionLineTypes eAffliction, int iValue);
-
-	int getPropertyValue(PropertyTypes eProperty) const;
-#endif // OUTBREAKS_AND_AFFLICTIONS
-
 	int getUnitCombatProductionModifier(UnitCombatTypes eIndex) const;
 	void changeUnitCombatProductionModifier(UnitCombatTypes eIndex, int iChange);
 	int getUnitCombatRepelModifierTotal(UnitCombatTypes eIndex) const;

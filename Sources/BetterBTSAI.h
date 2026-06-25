@@ -56,7 +56,6 @@
 #define LOG_EVALAI_TEAM(level, msg)   do {} while(0)
 #define LOG_EVALAI_PLAYER(level, msg)   do {} while(0)
 
-
 #define LOG_PLAYER_BLOCK(level, CODE) do {} while(0)
 #define LOG_UNIT_BLOCK(level, CODE) do {} while(0)
 #define LOG_TEAM_BLOCK(level, CODE) do {} while(0)
@@ -77,4 +76,6 @@ void logCB(CvString message);
 void logToFile(CvString message, const char* filename);
 void logContractBroker(int level, const char* format, ...);
 void logAiEvaluations(int level, const char* format, ...);
+void logBuildEvaluation(int level, const char* format, ...);
+void logHunterAI(int level, const char* format, ...);
 #endif

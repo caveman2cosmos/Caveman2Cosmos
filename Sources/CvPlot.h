@@ -1160,11 +1160,6 @@ public:
 
 	int countSeeInvisibleActive(PlayerTypes ePlayer, InvisibleTypes eVisible) const;
 
-#ifdef OUTBREAKS_AND_AFFLICTIONS
-	int getNumAfflictedUnits(PlayerTypes eOwner, PromotionLineTypes eAfflictionLine) const;
-	int getCommunicability(PromotionLineTypes ePromotionLine, bool bWorkedTile, bool bVicinity, bool bAccessVolume) const;
-#endif // OUTBREAKS_AND_AFFLICTIONS
-
 protected:
 	// AIAndy: Properties
 	CvProperties m_Properties;

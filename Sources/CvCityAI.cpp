@@ -32,6 +32,7 @@
 #include "PlotInfo.h"
 #include "CvValueService.h"
 #include "CvWorkerService.h"
+#include "Repos/UnitsRepo.h"
 
 
 //	KOSHLING MOD - calculate all possible building focuses at once
@@ -6342,41 +6343,38 @@ int CvCityAI::AI_buildingValueThresholdOriginalUncached(BuildingTypes eBuilding,
 				}
 
 				int religiousBuildingValue = 0;
-				for (int iI = 0; iI < GC.getNumUnitInfos(); iI++)
-				{
-					PROFILE("CvCityAI::AI_buildingValueThresholdOriginal.Units");
+				foreach_(const UnitTypes eRequiringUnit, UnitsRepo::get().unitsRequiringBuilding(eBuilding))
+                {
+                    PROFILE("CvCityAI::AI_buildingValueThresholdOriginal.Units");
 
-					if (GC.getUnitInfo((UnitTypes)iI).isPrereqAndBuilding((int)eBuilding))
-					{
-						// BBAI TODO: Smarter monastary construction, better support for mods
+                    // BBAI TODO: Smarter monastary construction, better support for mods
 
-						if (kOwner.AI_totalAreaUnitAIs(pArea, GC.getUnitInfo((UnitTypes)iI).getDefaultUnitAIType()) == 0)
-						{
-							religiousBuildingValue += iNumCitiesInArea;
-						}
+                    if (kOwner.AI_totalAreaUnitAIs(pArea, GC.getUnitInfo(eRequiringUnit).getDefaultUnitAIType()) == 0)
+                    {
+                        religiousBuildingValue += iNumCitiesInArea;
+                    }
 
-						religiousBuildingValue++;
+                    religiousBuildingValue++;
 
-						ReligionTypes eReligion = (ReligionTypes)(GC.getUnitInfo((UnitTypes)iI).getPrereqReligion());
-						if (eReligion != NO_RELIGION)
-						{
-							//encouragement to get some minimal ability to train special units
-							if (bCulturalVictory1 || isHolyCity(eReligion) || isCapital())
-							{
-								religiousBuildingValue += (2 + iNumCitiesInArea);
-							}
+                    ReligionTypes eReligion = (ReligionTypes)(GC.getUnitInfo(eRequiringUnit).getPrereqReligion());
+                    if (eReligion != NO_RELIGION)
+                    {
+                        //encouragement to get some minimal ability to train special units
+                        if (bCulturalVictory1 || isHolyCity(eReligion) || isCapital())
+                        {
+                            religiousBuildingValue += (2 + iNumCitiesInArea);
+                        }
 
-							if (bCulturalVictory2 && GC.getUnitInfo((UnitTypes)iI).getReligionSpreads(eReligion))
-							{
-								//this gives a very large extra value if the religion is (nearly) unique
-								//to no extra value for a fully spread religion.
-								//I'm torn between huge boost and enough to bias towards the best monastery type.
-								int iReligionCount = kOwner.getHasReligionCount(eReligion);
-								religiousBuildingValue += (100 * (iNumCities - iReligionCount)) / (iNumCities * (iReligionCount + 1));
-							}
-						}
-					}
-				}
+                        if (bCulturalVictory2 && GC.getUnitInfo(eRequiringUnit).getReligionSpreads(eReligion))
+                        {
+                            //this gives a very large extra value if the religion is (nearly) unique
+                            //to no extra value for a fully spread religion.
+                            //I'm torn between huge boost and enough to bias towards the best monastery type.
+                            int iReligionCount = kOwner.getHasReligionCount(eReligion);
+                            religiousBuildingValue += (100 * (iNumCities - iReligionCount)) / (iNumCities * (iReligionCount + 1));
+                        }
+                    }
+                }
 
 				if (religiousBuildingValue > 0)
 				{
@@ -10600,6 +10598,12 @@ void CvCityAI::AI_findBestImprovementForPlot(const CvPlot* pPlot, plotInfo* plot
 	//AI_clearfeaturevalue needs to be rewritten to work with new priorities
 	// int iClearFeatureValue = currentFeature ? AI_clearFeatureValue(getCityPlotIndex(pPlot)) : 0;
 
+    // Scoring follows the same shape as CvWorkerAI::improveBonus: yield-primary
+    // (CalculateCityPlotValue delta over current), tiebreaker on build time
+    // (faster wins). The legacy comparator used >= which made later-iterated
+    // (= lower-indexed) improvements silently win ties; combined with a 0-value
+    // first iteration that would overwrite the initial NO_BUILD slot.
+    int bestTimeScore = 0;
 	for (int iI = GC.getNumImprovementInfos() - 1; iI > -1; iI--)
 	{
 		const ImprovementTypes ePotentialImprovement = static_cast<ImprovementTypes>(iI);
@@ -10650,15 +10654,22 @@ void CvCityAI::AI_findBestImprovementForPlot(const CvPlot* pPlot, plotInfo* plot
 		}
 
 		// subtract existing plot value
-		int plotValue = std::max(0, CvValueService::CalculateCityPlotValue(ratios, plotInfo->newYields, plotHasBonus, plotHasBonus && potentialImprovementInfo.isImprovementBonusTrade(eNonObsoleteBonus)) - currentPlotValue);
+        const int plotValue = std::max(0, CvValueService::CalculateCityPlotValue(ratios, plotInfo->newYields, plotHasBonus, plotHasBonus && potentialImprovementInfo.isImprovementBonusTrade(eNonObsoleteBonus)) - currentPlotValue);
 
-		if (plotValue >= plotInfo->newValue)
-		{
-			plotInfo->newValue = plotValue;
-			plotInfo->newBuild = eBestBuild;
-			plotInfo->newImprovement = ePotentialImprovement;
-		}
+        // Skip zero-value candidates; they cannot improve the plot.
+        if (plotValue <= 0) continue;
 
+        const int timeScore = 10000 / (GC.getBuildInfo(eBestBuild).getTime() + 1);
+
+        // Primary: plotValue strict greater; tiebreaker: faster build (higher timeScore).
+        if (plotValue > plotInfo->newValue
+        || (plotValue == plotInfo->newValue && timeScore > bestTimeScore))
+        {
+            plotInfo->newValue = plotValue;
+            plotInfo->newBuild = eBestBuild;
+            plotInfo->newImprovement = ePotentialImprovement;
+            bestTimeScore = timeScore;
+        }
 	}
 	if (plotInfo->newImprovement == plotInfo->currentImprovement) {
 		plotInfo->newValue = 0;
@@ -13957,39 +13968,36 @@ void CvCityAI::CalculateAllBuildingValues(int iFocusFlags)
 				}
 
 				int religiousBuildingValue = 0;
-				for (int iI = 0; iI < GC.getNumUnitInfos(); iI++)
-				{
-					if (GC.getUnitInfo((UnitTypes)iI).isPrereqAndBuilding((int)eBuilding))
-					{
-						// BBAI TODO: Smarter monastary construction, better support for mods
+				foreach_(const UnitTypes eRequiringUnit, UnitsRepo::get().unitsRequiringBuilding(eBuilding))
+                {
+                    // BBAI TODO: Smarter monastary construction, better support for mods
 
-						if (kOwner.AI_totalAreaUnitAIs(pArea, GC.getUnitInfo((UnitTypes)iI).getDefaultUnitAIType()) == 0)
-						{
-							religiousBuildingValue += iNumCitiesInArea;
-						}
+                    if (kOwner.AI_totalAreaUnitAIs(pArea, GC.getUnitInfo(eRequiringUnit).getDefaultUnitAIType()) == 0)
+                    {
+                        religiousBuildingValue += iNumCitiesInArea;
+                    }
 
-						religiousBuildingValue++;
+                    religiousBuildingValue++;
 
-						const ReligionTypes eReligion = (ReligionTypes)(GC.getUnitInfo((UnitTypes)iI).getPrereqReligion());
-						if (eReligion != NO_RELIGION)
-						{
-							//encouragement to get some minimal ability to train special units
-							if (bCulturalVictory1 || bCapital || isHolyCity(eReligion))
-							{
-								religiousBuildingValue += (2 + iNumCitiesInArea);
-							}
+                    const ReligionTypes eReligion = (ReligionTypes)(GC.getUnitInfo(eRequiringUnit).getPrereqReligion());
+                    if (eReligion != NO_RELIGION)
+                    {
+                        //encouragement to get some minimal ability to train special units
+                        if (bCulturalVictory1 || bCapital || isHolyCity(eReligion))
+                        {
+                            religiousBuildingValue += (2 + iNumCitiesInArea);
+                        }
 
-							if (bCulturalVictory2 && GC.getUnitInfo((UnitTypes)iI).getReligionSpreads(eReligion))
-							{
-								//this gives a very large extra value if the religion is (nearly) unique
-								//to no extra value for a fully spread religion.
-								//I'm torn between huge boost and enough to bias towards the best monastery type.
-								int iReligionCount = kOwner.getHasReligionCount(eReligion);
-								religiousBuildingValue += (100 * (iNumCities - iReligionCount)) / (iNumCities * (iReligionCount + 1));
-							}
-						}
-					}
-				}
+                        if (bCulturalVictory2 && GC.getUnitInfo(eRequiringUnit).getReligionSpreads(eReligion))
+                        {
+                            //this gives a very large extra value if the religion is (nearly) unique
+                            //to no extra value for a fully spread religion.
+                            //I'm torn between huge boost and enough to bias towards the best monastery type.
+                            int iReligionCount = kOwner.getHasReligionCount(eReligion);
+                            religiousBuildingValue += (100 * (iNumCities - iReligionCount)) / (iNumCities * (iReligionCount + 1));
+                        }
+                    }
+                }
 
 				if (religiousBuildingValue > 0)
 				{

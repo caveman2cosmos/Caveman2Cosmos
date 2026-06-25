@@ -284,7 +284,6 @@ m_ppaiBonusYieldModifier(NULL)
 ,m_iInvestigation(0)
 ,m_iPopulationChange(0)
 // booleans
-,m_bDamageToAttackerIgnoresArmor(false)
 ,m_bDamageAllAttackers(false)
 ,m_bDamageAttackerCapable(false)
 ,m_bQuarantine(false)
@@ -1202,10 +1201,6 @@ int CvBuildingInfo::getPopulationChange() const
 }
 
 //Booleans
-bool CvBuildingInfo::isDamageToAttackerIgnoresArmor() const
-{
-	return m_bDamageToAttackerIgnoresArmor;
-}
 
 bool CvBuildingInfo::isDamageAllAttackers() const
 {
@@ -1953,7 +1948,6 @@ void CvBuildingInfo::getCheckSum(uint32_t& iSum) const
 	CheckSum(iSum, m_iInsidiousness);
 	CheckSum(iSum, m_iInvestigation);
 	CheckSum(iSum, m_iPopulationChange);
-	CheckSum(iSum, m_bDamageToAttackerIgnoresArmor);
 	CheckSum(iSum, m_bDamageAllAttackers);
 	CheckSum(iSum, m_bDamageAttackerCapable);
 	CheckSum(iSum, m_bQuarantine);
@@ -3085,7 +3079,6 @@ bool CvBuildingInfo::read(CvXMLLoadUtility* pXML)
 	pXML->GetOptionalChildXmlValByName(&m_iInsidiousness, L"iInsidiousness");
 	pXML->GetOptionalChildXmlValByName(&m_iInvestigation, L"iInvestigation");
 	pXML->GetOptionalChildXmlValByName(&m_iPopulationChange, L"iPopulationChange");
-	pXML->GetOptionalChildXmlValByName(&m_bDamageToAttackerIgnoresArmor, L"bDamageToAttackerIgnoresArmor");
 	pXML->GetOptionalChildXmlValByName(&m_bDamageAllAttackers, L"bDamageAllAttackers");
 	if (m_bDamageAllAttackers)
 	{
@@ -4152,7 +4145,6 @@ void CvBuildingInfo::copyNonDefaults(CvBuildingInfo* pClassInfo)
 	if (getInvestigation() == iDefault) m_iInvestigation = pClassInfo->getInvestigation();
 	if (getPopulationChange() == iDefault) m_iPopulationChange = pClassInfo->getPopulationChange();
 	//Booleans
-	if (isDamageToAttackerIgnoresArmor() == bDefault) m_bDamageToAttackerIgnoresArmor = pClassInfo->isDamageToAttackerIgnoresArmor();
 	if (isDamageAllAttackers() == bDefault) m_bDamageAllAttackers = pClassInfo->isDamageAllAttackers();
 	if (isQuarantine() == bDefault) m_bQuarantine = pClassInfo->isQuarantine();
 	if (isDamageAllAttackers() || pClassInfo->isDamageAllAttackers())

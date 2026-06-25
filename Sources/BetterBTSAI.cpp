@@ -52,6 +52,34 @@ void logAiEvaluations(int level, const char* format, ...)
 	}
 }
 
+void logBuildEvaluation(int level, const char* format, ...)
+{
+	if (level <= gPlayerLogLevel)
+	{
+		static char buf[2048];
+		_vsnprintf(buf, 2048 - 4, format, (char*)(&format + 1));
+		gDLL->logMsg("BuildEvaluation.log", buf);
+
+		// Echo to debugger
+		strcat(buf, "\n");
+		OutputDebugString(buf);
+	}
+}
+
+void logHunterAI(int level, const char* format, ...)
+{
+	if (level <= gUnitLogLevel)
+	{
+		static char buf[2048];
+		_vsnprintf(buf, 2048 - 4, format, (char*)(&format + 1));
+		gDLL->logMsg("HunterAI.log", buf);
+
+		// Echo to debugger
+		strcat(buf, "\n");
+		OutputDebugString(buf);
+	}
+}
+
 void logAIJson(CvWString type, CvWString identifier, CvWString squirrel, CvWString message)
 {
 	const std::wstring data = "{ type: \"" + type + "\" name: \"" + identifier + "\" function: \" " + squirrel + "\" message: \"" + message + "\" }";

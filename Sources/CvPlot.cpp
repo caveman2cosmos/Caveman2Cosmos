@@ -33,6 +33,7 @@
 #include "CvDLLSymbolIFaceBase.h"
 #include "CvDLLPlotBuilderIFaceBase.h"
 #include "CvDLLUtilityIFaceBase.h"
+#include "Repos/BuildsRepo.h"
 #include "FAStarNode.h"
 
 extern int s_iCommanderEpoch;
@@ -3591,11 +3592,11 @@ int CvPlot::getBuildTime(BuildTypes eBuild) const
 		const RouteTypes eCurrentRoute = getRouteType();
 		if (eCurrentRoute != NO_ROUTE && GC.getDefineINT("ROUTES_UPGRADE") > 0)
 		{
-			for (int iI = 0; iI < GC.getNumBuildInfos(); iI++)
+			foreach_(const BuildTypes eBuild, BuildsRepo::get().routeBuilds())
 			{
-				if (GC.getBuildInfo((BuildTypes)iI).getRoute() == eCurrentRoute)
+				if (GC.getBuildInfo(eBuild).getRoute() == eCurrentRoute)
 				{
-					iTime = std::max(1, iTime - GC.getBuildInfo((BuildTypes)iI).getTime());
+					iTime = std::max(1, iTime - GC.getBuildInfo(eBuild).getTime());
 					break;
 				}
 			}
@@ -13701,35 +13702,6 @@ int CvPlot::countSeeInvisibleActive(PlayerTypes ePlayer, InvisibleTypes eVisible
 
 	return iCount;
 }
-
-#ifdef OUTBREAKS_AND_AFFLICTIONS
-int CvPlot::getNumAfflictedUnits(PlayerTypes eOwner, PromotionLineTypes eAfflictionLine) const
-{
-	return plotCount(PUF_isAfflicted, eAfflictionLine, -1, NULL, eOwner);
-}
-
-int CvPlot::getCommunicability(PromotionLineTypes ePromotionLine, bool bWorkedTile, bool bVicinity, bool bAccessVolume) const
-{
-	int iCommunicability = 0;
-	TerrainTypes eTerrain = getTerrainType();
-	if (eTerrain != NO_TERRAIN)
-	{
-		iCommunicability += GC.getTerrainInfo(eTerrain).getAfflictionCommunicabilityType(ePromotionLine, bWorkedTile, bVicinity, false).iModifier;
-	}
-	FeatureTypes eFeature = getFeatureType();
-	if (eFeature != NO_FEATURE)
-	{
-		iCommunicability += GC.getFeatureInfo(eFeature).getAfflictionCommunicabilityType(ePromotionLine, bWorkedTile, bVicinity, false).iModifier;
-	}
-	BonusTypes eBonus = getBonusType();
-	if (eBonus != NO_BONUS)
-	{
-		iCommunicability += GC.getBonusInfo(eBonus).getAfflictionCommunicabilityType(ePromotionLine, bWorkedTile, bVicinity, bAccessVolume).iModifier;
-	}
-
-	return iCommunicability;
-}
-#endif // OUTBREAKS_AND_AFFLICTIONS
 
 CvUnit* CvPlot::unit_iterator::resolve(const IDInfo& info) const
 {

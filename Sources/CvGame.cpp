@@ -24,6 +24,7 @@
 #include "CvGameTextMgr.h"
 #include "CvPlot.h"
 #include "CvPopupInfo.h"
+#include "Utils/PlotSnapshot.h"
 #include "CvPython.h"
 #include "CvReplayInfo.h"
 #include "CvReplayMessage.h"
@@ -36,6 +37,7 @@
 #include "CvDLLUtilityIFaceBase.h"
 #include "CvBuildingFilters.h"
 #include "CvUnitFilters.h"
+#include "Repos/UnitsRepo.h"
 
 #ifdef NO_RANDOM
 	int iNumAlea;
@@ -494,7 +496,10 @@ void CvGame::onFinalInitialized(const bool bNewGame)
 	FAssert(!m_bFinalInitialized);
 	OutputDebugString("onFinalInitialized: Start\n");
 
-	// Game has been initialized fully when reaching this point.
+	// Some in-session load paths reach us with the flag still true from the
+    // previous game (reset() isn't reliably called between loads). The function
+    // is idempotent w.r.t. this flag, so just (re)assert the true state rather
+    // than relying on an external precondition.
 	m_bFinalInitialized = true;
 	// First code flow opportunity after fully loading a save is here
 	if (!bNewGame)
@@ -582,6 +587,13 @@ void CvGame::onFinalInitialized(const bool bNewGame)
 
 	gDLL->getEngineIFace()->setResourceLayer(GC.getResourceLayer());
 	//gDLL->getInterfaceIFace()->setEndTurnCounter(2 * getBugOptionINT("MainInterface__AutoEndTurnDelay", 2));
+
+	// Capture a CSV reference of every plot's state for cross-referencing with
+    // BuildEvaluation.log. Tag "start" for new games, "load" for save-loads.
+    // regenerateMap fires its own writePlotSnapshot("regen") because that path
+    // doesn't route through onFinalInitialized.
+    writePlotSnapshot(bNewGame ? "start" : "load");
+
 	OutputDebugString("onFinalInitialized: End\n");
 
 	writeRealtimeLogMetadata(true);
@@ -758,6 +770,10 @@ void CvGame::regenerateMap()
 	CvEventReporter::getInstance().mapRegen();
 
 	doPreTurn0();
+
+	// Fresh plot snapshot for the regenerated map. Distinguished from the
+    // "start" snapshot (which runs from onFinalInitialized) by tag.
+    writePlotSnapshot("regen");
 }
 
 void CvGame::uninit()
@@ -4648,24 +4664,21 @@ void CvGame::setHandicapType(HandicapTypes eHandicap)
 
 		if (eHandicap != NO_HANDICAP)
 		{
-			for (int i = 0; i < GC.getNumUnitInfos(); i++)
+			foreach_(const UnitTypes eFounder, UnitsRepo::get().founderUnits())
 			{
-				if (GC.getUnitInfo((UnitTypes)i).isFound())
-				{
-					for (int j = 0; j < MAX_PLAYERS; j++)
-					{
-						// Skip empty/leaderless player slots: getNewCityProductionValue() ->
-                        // getProductionModifier() -> hasTrait() asserts (getLeaderType() >= 0) for
-                        // unused slots, and dead/never-used players have no city production to cost.
-                        // On a mature-game load (averageHandicaps -> setHandicapType) the unguarded
-                        // loop fired this assert hundreds of times, bloating Asserts.log to ~hundreds
-                        // of MB and stalling the load on Assert builds.
-                        if (GET_PLAYER((PlayerTypes)j).isAlive())
-                        {
-                            GET_PLAYER((PlayerTypes)j).setUnitExtraCost((UnitTypes)i, GET_PLAYER((PlayerTypes)j).getNewCityProductionValue());
-                        }
-					}
-				}
+                for (int j = 0; j < MAX_PLAYERS; j++)
+                {
+                    // Skip empty/leaderless player slots: getNewCityProductionValue() ->
+                    // getProductionModifier() -> hasTrait() asserts (getLeaderType() >= 0) for
+                    // unused slots, and dead/never-used players have no city production to cost.
+                    // On a mature-game load (averageHandicaps -> setHandicapType) the unguarded
+                    // loop fired this assert hundreds of times, bloating Asserts.log to ~hundreds
+                    // of MB and stalling the load on Assert builds.
+                    if (GET_PLAYER((PlayerTypes)j).isAlive())
+                    {
+                        GET_PLAYER((PlayerTypes)j).setUnitExtraCost(eFounder, GET_PLAYER((PlayerTypes)j).getNewCityProductionValue());
+                    }
+                }
 			}
 			for (int j = 0; j < MAX_PLAYERS; j++)
 			{
@@ -5743,6 +5756,13 @@ void CvGame::addGreatPersonBornName(const CvWString& szName)
 void CvGame::doTurn()
 {
 	PROFILE_BEGIN("CvGame::doTurn()",DOTURN1);
+
+	// Capture a snapshot of every plot's state at the start of the turn so the
+    // BuildEvaluation.log entries that follow can be cross-referenced against
+    // a frozen view of the world the AI saw when it made each decision. One
+    // file per turn (PlotSnapshot_turn_t<N>.csv) -- complements the one-off
+    // "start" / "load" / "regen" snapshots from onFinalInitialized.
+    writePlotSnapshot("turn");
 
 	writeRealtimeLogMetadata(false);
 

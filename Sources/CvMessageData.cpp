@@ -1768,15 +1768,6 @@ void CvNetChooseMergeUnit::Execute()
 						{
 							pkMergedUnit->setHasPromotion(ePromotion, true, true);
 						}
-#ifdef OUTBREAKS_AND_AFFLICTIONS
-						else if (GC.getPromotionInfo(ePromotion).getPromotionLine() != NO_PROMOTIONLINE && GC.getPromotionLineInfo(GC.getPromotionInfo(ePromotion).getPromotionLine()).isAffliction())
-						{
-							if (GC.getGame().isOption(GAMEOPTION_COMBAT_OUTBREAKS_AND_AFFLICTIONS))
-							{
-								pkMergedUnit->afflict(GC.getPromotionInfo(ePromotion).getPromotionLine());
-							}
-						}
-#endif // OUTBREAKS_AND_AFFLICTIONS
 						else if (pUnit1->isPromotionFree(ePromotion) || pUnit2->isPromotionFree(ePromotion) || pUnit3->isPromotionFree(ePromotion))
 						{
 							pkMergedUnit->setHasPromotion(ePromotion, true, true);
@@ -1922,17 +1913,6 @@ void CvNetConfirmSplitUnit::Execute()
 						{
 							pUnit1->setHasPromotion(ePromotion, true, true);
 						}
-#ifdef OUTBREAKS_AND_AFFLICTIONS
-						else if (GC.getPromotionInfo(ePromotion).getPromotionLine() != NO_PROMOTIONLINE && GC.getPromotionLineInfo(GC.getPromotionInfo(ePromotion).getPromotionLine()).isAffliction())
-						{
-							if (GC.getGame().isOption(GAMEOPTION_COMBAT_OUTBREAKS_AND_AFFLICTIONS))
-							{
-								pUnit1->afflict(GC.getPromotionInfo(ePromotion).getPromotionLine());
-								pUnit2->afflict(GC.getPromotionInfo(ePromotion).getPromotionLine());
-								pUnit3->afflict(GC.getPromotionInfo(ePromotion).getPromotionLine());
-							}
-						}
-#endif // OUTBREAKS_AND_AFFLICTIONS
 						else if (pUnit0->isPromotionFree(ePromotion) || GC.getPromotionInfo(ePromotion).isEquipment())
 						{
 							pUnit1->setHasPromotion(ePromotion, true, true);
