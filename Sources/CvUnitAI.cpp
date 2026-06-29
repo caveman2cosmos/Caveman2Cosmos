@@ -33,7 +33,7 @@
 #ifdef USE_OLD_PATH_GENERATOR
 #include "FAStarNode.h"
 #endif
-#include <CvWorkerService.h>
+#include "CvWorkerAI.h"
 
 PlayerTypes	CvUnitAI::m_cachedPlayer = NO_PLAYER;
 CvReachablePlotSet* CvUnitAI::m_cachedMissionaryPlotset = NULL;
@@ -137,6 +137,7 @@ CvUnitAI& CvUnitAI::operator=(const CvUnitAI& other)
 	m_bHasAttacked = other.m_bHasAttacked;
 	m_bWaitingOnUnitAIAny = other.m_bWaitingOnUnitAIAny;
 	m_iGarrisonCity = other.m_iGarrisonCity;
+	m_iTargetImproveCity = other.m_iTargetImproveCity;
 	m_iGenericValue = other.m_iGenericValue;
 	m_aiWaitingOnUnitAITypes = other.m_aiWaitingOnUnitAITypes;
 
@@ -189,6 +190,7 @@ void CvUnitAI::AI_reset(UnitAITypes eUnitAI, bool bConstructorCall)
 	m_bWaitingOnUnitAIAny = false;
 
 	m_iGarrisonCity = -1;
+	m_iTargetImproveCity = -1;
 	m_iGenericValue = -1;
 
 	m_aiWaitingOnUnitAITypes.clear();
@@ -1187,7 +1189,7 @@ int CvUnitAI::AI_attackOddsAtPlotInternal(const CvPlot* pPlot, CvUnit* pDefender
 
 	//int iTheirFirepower;
 //#if 0
-//	iTheirStrength = pDefender->currCombatStr(pPlot, this);
+//	iTheirStrength = pDefender->currCombatStr(pPlot,#include <CvWorkerService.h> this);
 //	iTheirFirepower = pDefender->currFirepower(pPlot, this);
 //
 //
@@ -2303,6 +2305,19 @@ void CvUnitAI::AI_workerMove()
 
 	if (!bAbroad)
 	{
+	    // Finish the city we already committed to first. Without this, a worker
+        // that strays into another city's working radius mid-job (overlapping
+        // radii, or just passing between cities) would re-pick that city from
+        // the tile under its feet and abandon its assignment. AI_improveCity
+        // re-commits on success; if the target has no work left for us it
+        // returns false and we drop the commitment and re-pick below.
+        CvCity* pTargetCity = AI_getTargetImproveCity();
+        if (pTargetCity != NULL && AI_improveCity(pTargetCity))
+        {
+            return;
+        }
+        AI_setTargetImproveCity(NULL);
+
 		pCity = plot()->getPlotCity(); //get city on plot
 
 		if (!pCity) //if city is not on same plot
@@ -2312,7 +2327,7 @@ void CvUnitAI::AI_workerMove()
 
 		if (pCity)
 		{
-			if (CvWorkerService::ShouldImproveCity(pCity) && AI_improveCity(pCity))
+			if (CvWorkerAI::shouldImproveCity(pCity) && AI_improveCity(pCity))
 			{
 				return;
 			}
@@ -21185,7 +21200,16 @@ bool CvUnitAI::AI_improveCity(CvCity* pCity)
 	// Delegates to CvWorkerAI::improveCity, which mirrors improveBonus's
     // single-pass scoring + caching pattern. AI_bestCityBuild is retained for
     // any external callers but no longer used by the AI path.
-    return GET_PLAYER(getOwner()).getWorkerAI().improveCity(this, pCity);
+    const bool bResult = GET_PLAYER(getOwner()).getWorkerAI().improveCity(this, pCity);
+
+    	// On success this worker is now committed to pCity: subsequent turns will
+    	// prefer finishing pCity over whatever city's radius the worker happens to
+    	// wander into mid-job (see AI_workerMove / AI_getTargetImproveCity).
+    	if (bResult)
+    	{
+    		AI_setTargetImproveCity(pCity);
+    	}
+    	return bResult;
 }
 
 bool CvUnitAI::AI_improveLocalPlot(int iRange, const CvCity* pIgnoreCity)
@@ -21420,6 +21444,10 @@ bool CvUnitAI::AI_nextCityToImprove(CvCity* pCity)
 	{
 		FASSERT_BOUNDS(0, GC.getNumBuildInfos(), eBestBuild);
 
+		// Commit to this city so we keep heading for it next turn even if the
+        // path crosses another city's working radius (see AI_workerMove).
+        AI_setTargetImproveCity(pBestCity);
+
 		eBestBuild = AI_betterPlotBuild(pBestPlot, eBestBuild);
 
 		if (getGroup()->pushMissionInternal(MISSION_ROUTE_TO, pBestPlot->getX(), pBestPlot->getY(), ((isHuman() ? 0 : MOVE_WITH_CAUTION) | MOVE_SAFE_TERRITORY), false, false, MISSIONAI_BUILD, pBestPlot))
@@ -21456,14 +21484,14 @@ bool CvUnitAI::AI_nextCityToImprove(CvCity* pCity)
 				}
 				logAiEvaluations(3, "	Player %S Unit %S of type %S - Want to Move to Plot near %S to perform Build there %S, but Pathing error", GET_PLAYER(getOwner()).getCivilizationDescription(0), StrUnitName.GetCString(), StrunitAIType.GetCString(), pBestCity->getName().GetCString(), StrBuildAIType.GetCString());
 			}
-
-
-
 		}
 	}
 
 	if (pBestCity != NULL) //Calvitix no Plot found, but as Workers are needed for the City, move to it
 	{
+	    // Commit so we keep returning to this city next turn (see AI_workerMove).
+        AI_setTargetImproveCity(pBestCity);
+
 		if (atPlot(pBestCity->plot())) //already in the city that need workers
 		{
 
@@ -26241,6 +26269,7 @@ void CvUnitAI::read(FDataStreamBase* pStream)
 
 	wrapper.AttachToStream(pStream);
 	WRAPPER_READ(wrapper, "CvUnitAI", &m_iGarrisonCity);	// which city does this unit belong to the garrison of (if any)
+	WRAPPER_READ(wrapper, "CvUnitAI", &m_iTargetImproveCity);	// which city this worker is committed to improving (if any)
 	WRAPPER_READ(wrapper, "CvUnitAI", &m_iGroupLeadOverride);
 	WRAPPER_READ(wrapper, "CvUnitAI", &m_bWaitingOnUnitAIAny);
 
@@ -26272,6 +26301,7 @@ void CvUnitAI::write(FDataStreamBase* pStream)
 
 	wrapper.AttachToStream(pStream);
 	WRAPPER_WRITE(wrapper, "CvUnitAI", m_iGarrisonCity);	// which city does this unit belong to the garrison of (if any)
+	WRAPPER_WRITE(wrapper, "CvUnitAI", m_iTargetImproveCity);	// which city this worker is committed to improving (if any)
 	WRAPPER_WRITE(wrapper, "CvUnitAI", m_iGroupLeadOverride);
 	WRAPPER_WRITE(wrapper, "CvUnitAI", m_bWaitingOnUnitAIAny);
 
@@ -28819,6 +28849,29 @@ void CvUnitAI::AI_setAsGarrison(const CvCity* pCity)
 			}
 		}
 	}
+}
+
+
+CvCity* CvUnitAI::AI_getTargetImproveCity() const
+{
+	if (m_iTargetImproveCity == -1)
+	{
+		return NULL;
+	}
+	CvCity* pCity = GET_PLAYER(getOwner()).getCity(m_iTargetImproveCity);
+
+	// Drop the commitment if the city is gone (razed/captured) or on another
+	// landmass the worker cannot path to -- the caller treats NULL as "re-pick".
+	if (pCity == NULL || pCity->area() != area())
+	{
+		return NULL;
+	}
+	return pCity;
+}
+
+void CvUnitAI::AI_setTargetImproveCity(const CvCity* pCity)
+{
+	m_iTargetImproveCity = (pCity == NULL ? -1 : pCity->getID());
 }
 
 

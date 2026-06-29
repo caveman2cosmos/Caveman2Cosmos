@@ -8,6 +8,8 @@
 
 class CvCity;
 class CvPlot;
+class CvPlayer;
+class CvUnit;
 class CvUnitAI;
 class FDataStreamBase;
 
@@ -119,6 +121,24 @@ public:
     // push the mission. Replaces the legacy CvUnitAI::AI_bestCityBuild 2-pass.
     // Logged under [WAI/city/*]; see taxonomy below.
     bool improveCity(CvUnitAI* unit, CvCity* pCity);
+
+    // ---- stateless worker helpers ----
+    // Consolidated from the former CvWorkerService experiment. Static because
+    // they carry no per-player state; they live here so all worker-planning
+    // logic sits in one module.
+
+    // True if pCity has at least one of its own working plots that is currently
+    // unimproved and has a positive best-build that lays an improvement. Used by
+    // AI_workerMove to decide whether the city under the worker's feet is worth
+    // improving.
+    static bool shouldImproveCity(CvCity* pCity);
+
+    // Among the builds that produce eImprovement on pPlot, returns the one with
+    // the shortest build time that the player (and optionally the unit) can build.
+    // NO_BUILD if none qualify.
+    static BuildTypes getFastestBuildForImprovementType(
+        const CvPlayer& player, ImprovementTypes eImprovement, const CvPlot* pPlot,
+        const CvUnitAI* unit = NULL, bool includeCurrentImprovement = true);
 
 	// ---- scoring weights ----
 	const WorkerScoringWeights& weights() const { return m_weights; }

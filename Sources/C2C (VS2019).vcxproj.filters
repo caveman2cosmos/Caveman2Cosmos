@@ -1014,9 +1014,6 @@
     <ClCompile Include="SCvInternalGlobals.cpp">
       <Filter>Source\Globals</Filter>
     </ClCompile>
-    <ClCompile Include="CvWorkerService.cpp">
-      <Filter>Source\Base\Unit\Services</Filter>
-    </ClCompile>
     <ClCompile Include="CvValueService.cpp">
       <Filter>Source\Base\Player\Services</Filter>
     </ClCompile>
@@ -1855,9 +1852,6 @@
     </ClInclude>
     <ClInclude Include="resource.h">
       <Filter>Source\Base\GameCore</Filter>
-    </ClInclude>
-    <ClInclude Include="CvWorkerService.h">
-      <Filter>Source\Base\Unit\Services</Filter>
     </ClInclude>
     <ClInclude Include="CvValueService.h">
       <Filter>Source\Base\Player\Services</Filter>

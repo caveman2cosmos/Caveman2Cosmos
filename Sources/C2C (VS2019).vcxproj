@@ -244,7 +244,6 @@
     <ClCompile Include="CvCombatModel.cpp" />
     <ClCompile Include="CvHunterAI.cpp" />
     <ClCompile Include="CvWorkerAI.cpp" />
-    <ClCompile Include="CvWorkerService.cpp" />
     <ClCompile Include="CyCityOutputHistoryInterface.cpp" />
     <ClCompile Include="CvImprovementInfo.cpp" />
     <ClCompile Include="CvHeritageInfo.cpp" />
@@ -514,7 +513,6 @@
     <ClInclude Include="CvCombatModel.h" />
     <ClInclude Include="CvHunterAI.h" />
     <ClInclude Include="CvWorkerAI.h" />
-    <ClInclude Include="CvWorkerService.h" />
     <ClInclude Include="EnumFlags.h" />
     <ClInclude Include="enum_iterator.h" />
     <ClInclude Include="flatten_range.h" />
