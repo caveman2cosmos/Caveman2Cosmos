@@ -518,6 +518,7 @@ void CvPlayer::init(PlayerTypes eID)
 	m_contractBroker.init(eID);
 	m_workerAI.setOwner(eID);
 	m_hunterAI.setOwner(eID);
+	m_decisionAI.setOwner(eID);
 	AI_init();
 }
 
@@ -614,6 +615,7 @@ void CvPlayer::initInGame(PlayerTypes eID, bool bSetAlive)
 	m_contractBroker.init(eID);
 	m_workerAI.setOwner(eID);
 	m_hunterAI.setOwner(eID);
+	m_decisionAI.setOwner(eID);
 	AI_init();
 }
 
@@ -2754,10 +2756,6 @@ void CvPlayer::acquireCity(CvCity* pOldCity, bool bConquest, bool bTrade, bool b
 				}
 			}
 		}
-		if (gPlayerLogLevel >= 1)
-		{
-			logBBAI("  Player %d (%S) acquires city %S bConq %d bTrade %d", eNewOwner, getCivilizationDescription(0), pNewCity->getName(0).GetCString(), bConquest, bTrade );
-		}
 
 		if (!bHuman)
 		{
@@ -3152,12 +3150,6 @@ void CvPlayer::disbandUnit()
 		AddDLLMessage(getID(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_UNITDISBANDED", MESSAGE_TYPE_MINOR_EVENT, pBestUnit->getButton(), GC.getCOLOR_RED(), pBestUnit->getX(), pBestUnit->getY(), true, true);
 
 		FAssert(!(pBestUnit->isGoldenAge()));
-
-		if( gPlayerLogLevel >= 2 )
-		{
-			const CvWString szStringUnitAi = GC.getUnitAIInfo(pBestUnit->AI_getUnitAIType()).getType();
-			logBBAI("	Player %d (%S) disbanding %S with UNITAI %S (forced)", getID(), getCivilizationDescription(0), pBestUnit->getName().GetCString(), szStringUnitAi.GetCString());
-		}
 
 		pBestUnit->kill(false);
 	}
@@ -3702,6 +3694,7 @@ void CvPlayer::doTurn()
 
 	m_workerAI.onTurnBegin(GC.getGame().getGameTurn());
 	m_hunterAI.onTurnBegin(GC.getGame().getGameTurn());
+	m_decisionAI.onTurnBegin(GC.getGame().getGameTurn());
 
 #ifdef CAN_TRAIN_CACHING
 	//	Clear training caches at the start of each turn
@@ -3891,10 +3884,6 @@ void CvPlayer::doTurn()
 	{
 		GC.getGame().updateColoredPlots();
 	}
-	if (gPlayerLogLevel >= 1)
-	{
-		dumpStats();
-	}
 	CvEventReporter::getInstance().endPlayerTurn( GC.getGame().getGameTurn(),  getID());
 }
 
@@ -3915,6 +3904,7 @@ void CvPlayer::doMultiMapTurn()
 
 	m_workerAI.onTurnBegin(GC.getGame().getGameTurn());
 	m_hunterAI.onTurnBegin(GC.getGame().getGameTurn());
+	m_decisionAI.onTurnBegin(GC.getGame().getGameTurn());
 
 #ifdef CAN_TRAIN_CACHING
 	//	Clear training caches at the start of each turn
@@ -3962,173 +3952,6 @@ void CvPlayer::recordHistory()
 	m_mapCultureHistory[GC.getGame().getGameTurn()] = getCulture();
 	m_mapEspionageHistory[GC.getGame().getGameTurn()] = GET_TEAM(getTeam()).getEspionagePointsEver();
 	m_mapRevolutionStabilityHistory[GC.getGame().getGameTurn()] = getStabilityIndexAverage();
-}
-
-// Dump stats to BBAI log
-void CvPlayer::dumpStats() const
-{
-	PROFILE_EXTRA_FUNC();
-
-	logBBAI("%S stats for turn %d:", getCivilizationDescription(0), GC.getGame().getGameTurn());
-
-	logBBAI("	Gold rate: %d", getCommercePercent(COMMERCE_GOLD));
-	logBBAI("	Science rate: %d", getCommercePercent(COMMERCE_RESEARCH));
-	logBBAI("	Culture rate: %d", getCommercePercent(COMMERCE_CULTURE));
-	logBBAI("	Espionage rate: %d", getCommercePercent(COMMERCE_ESPIONAGE));
-	logBBAI("	Treasury: %d", getGold());
-	logBBAI("	Total gold income from self: %d", getCommerceRate(COMMERCE_GOLD));
-	logBBAI("	Total gold income from trade agreements: %d", getGoldPerTurn());
-	logBBAI("	Num units: %d", getNumUnits());
-	logBBAI("	Num selection groups: %d", getNumSelectionGroups());
-
-	// Economy stats
-	{
-		const int64_t iUnitUpkeep = getFinalUnitUpkeep();
-		const int iUnitSupplyCosts = calculateUnitSupply();
-		const int iMaintenanceCosts = getTotalMaintenance();
-		const int iCivicUpkeepCosts = getCivicUpkeep();
-		const int64_t iCorporateMaintenance = getCorporateMaintenance();
-		const int64_t iTotalPreInflatedCosts = iUnitUpkeep + iUnitSupplyCosts + iMaintenanceCosts + iCivicUpkeepCosts + iCorporateMaintenance;
-		const int64_t iTotalCosts = iTotalPreInflatedCosts * std::max(0, (getInflationMod10000() / 100 - 100) + 100) / 100;
-		logBBAI("	Unit Upkeep (pre inflation): %I64u", iUnitUpkeep);
-		logBBAI("	Unit supply cost (pre inflation): %d", iUnitSupplyCosts);
-		logBBAI("	Maintenance cost (pre inflation): %d", iMaintenanceCosts);
-		logBBAI("	Civic upkeep cost (pre inflation): %d", iCivicUpkeepCosts);
-		logBBAI("	Corporate maintenance (pre inflation): %I64d", iCorporateMaintenance);
-		logBBAI("	Inflation effect: %I64d", iTotalCosts - iTotalPreInflatedCosts);
-	}
-	logBBAI("	Is in financial difficulties: %s", AI_isFinancialTrouble() ? "yes" : "no");
-	logBBAI("	Total science output: %d", calculateResearchRate());
-	logBBAI("	Total espionage output: %d", getCommerceRate(COMMERCE_ESPIONAGE));
-	logBBAI("	Total cultural output: %d", getCommerceRate(COMMERCE_CULTURE));
-
-	// Accrue some stats off cities
-	{
-		int iTotalFood = 0;
-		int iTotalProduction = 0;
-		int	iTotalPopulation = 0;
-		int	iCityCount = 0;
-		foreach_(const CvCity* cityX, cities())
-		{
-			iTotalFood			+= cityX->getYieldRate(YIELD_FOOD);
-			iTotalProduction	+= cityX->getYieldRate(YIELD_PRODUCTION);
-			iTotalPopulation	+= cityX->getPopulation();
-			iCityCount++;
-		}
-		logBBAI("	Total population: %d", iTotalPopulation);
-		logBBAI("	Total food output: %d", iTotalFood);
-		logBBAI("	Total production output: %d", iTotalProduction);
-		logBBAI("	Num cities: %d", iCityCount);
-	}
-	logBBAI("	National rev index: %d", getRevIdxNational());
-	logBBAI("	Number of barbarian units killed: %d", getWinsVsBarbs());
-	logBBAI("	Number of animals subdued: %d", m_iNumAnimalsSubdued);
-	logBBAI("	Civic switches: %d", m_iNumCivicSwitches);
-	logBBAI("	Total num civics switched: %d", m_iNumCivicsSwitched);
-	logBBAI("	Total turns in anarchy: %d (%d%%%%)", m_iNumAnarchyTurns, (100*m_iNumAnarchyTurns)/(std::max(1,GC.getGame().getGameTurn())));
-	logBBAI("	Current civics:");
-
-	for (int iI = 0; iI < GC.getNumCivicOptionInfos(); iI++)
-	{
-		const CivicTypes eCivic = getCivics((CivicOptionTypes)iI);
-
-		if (eCivic == NO_CIVIC)
-		{
-			logBBAI("		%S: NONE", GC.getCivicOptionInfo((CivicOptionTypes)iI).getDescription());
-		}
-		else logBBAI("		%S: %S", GC.getCivicOptionInfo((CivicOptionTypes)iI).getDescription(), GC.getCivicInfo(eCivic).getDescription());
-	}
-
-	//logBBAI("	Civic switch history:");
-	//{
-	//	int iTurn = -1;
-	//	for (int iI = 0; iI < (int)m_civicSwitchHistory.size(); iI++)
-	//	{
-	//		if (m_civicSwitchHistory[iI].iTurn != iTurn)
-	//		{
-	//			iTurn = m_civicSwitchHistory[iI].iTurn;
-	//			logBBAI("		Turn %d:", iTurn);
-	//		}
-	//		logBBAI("			%S -> %S%s",
-	//				m_civicSwitchHistory[iI].eFromCivic == NO_CIVIC ? L"Unknown" : GC.getCivicInfo((CivicTypes)m_civicSwitchHistory[iI].eFromCivic).getDescription(),
-	//				m_civicSwitchHistory[iI].eToCivic == NO_CIVIC ? L"Unknown" : GC.getCivicInfo((CivicTypes)m_civicSwitchHistory[iI].eToCivic).getDescription(),
-	//				m_civicSwitchHistory[iI].bNoAnarchy ? " (no anarchy switch)" : "");
-	//	}
-	//	if (iTurn == -1)
-	//	{
-	//		logBBAI("		No switches made");
-	//	}
-	//}
-
-	//	City stats
-	foreach_(const CvCity* pLoopCity, cities())
-	{
-		logBBAI("		City %S:", pLoopCity->getName().c_str());
-		logBBAI("			Population: %d", pLoopCity->getPopulation());
-		logBBAI("			Production: %d", pLoopCity->getYieldRate(YIELD_PRODUCTION));
-		logBBAI("			Food surplus: %d", pLoopCity->foodDifference());
-		logBBAI("			Local rev index: %d", pLoopCity->getLocalRevIndex());
-		logBBAI("			Maintenance: %d", pLoopCity->getMaintenance());
-		logBBAI("			Income: %d", pLoopCity->getCommerceRate(COMMERCE_GOLD));
-		logBBAI("			Science: %d", pLoopCity->getCommerceRate(COMMERCE_RESEARCH));
-		logBBAI("			Espionage: %d", pLoopCity->getCommerceRate(COMMERCE_ESPIONAGE));
-		logBBAI("			Culture: %d", pLoopCity->getCommerceRate(COMMERCE_CULTURE));
-		logBBAI("			Net happyness: %d", pLoopCity->happyLevel() - pLoopCity->unhappyLevel());
-		logBBAI("			Net health: %d", pLoopCity->goodHealth() - pLoopCity->badHealth());
-		logBBAI("			Food trade yield: %d", pLoopCity->getTradeYield(YIELD_FOOD));
-		logBBAI("			Production trade yield: %d", pLoopCity->getTradeYield(YIELD_PRODUCTION));
-		logBBAI("			Commerce trade yield: %d", pLoopCity->getTradeYield(YIELD_COMMERCE));
-		logBBAI("			Properties:");
-
-		const CvProperties* pProperties = pLoopCity->getGameObject()->getProperties();
-
-		for(int iJ = 0; iJ < pProperties->getNumProperties(); iJ++)
-		{
-			const PropertyTypes eProperty = (PropertyTypes)pProperties->getProperty(iJ);
-
-			logBBAI("				%S: value(%d) change(%d)", GC.getPropertyInfo(eProperty).getDescription(), pProperties->getValue(iJ), pProperties->getChangeByProperty(eProperty));
-
-		}
-
-		logBBAI("			PropertyBuildings:");
-
-		//for (int iJ = 0; iJ < pProperties->getNumProperties(); iJ++)
-		//{
-		//	const CvPropertyInfo& kInfo = GC.getPropertyInfo((PropertyTypes)pProperties->getProperty(iJ));
-
-		//	for (int i = kInfo.getNumPropertyBuildings() - 1; i > -1; i--)
-		//	{
-		//		const PropertyBuilding& kBuilding = kInfo.getPropertyBuilding(i);
-		//		if (pLoopCity->hasBuilding(kBuilding.eBuilding))
-		//		{
-		//			logBBAI("				%S: %S", kInfo.getDescription(), GC.getBuildingInfo(kBuilding.eBuilding).getDescription());
-		//		}
-		//	}
-		//}
-	}
-
-	//	Unit stats
-	std::map<int, int> unitCounts;
-
-	logBBAI("	Units:");
-	foreach_(const CvUnit* pLoopUnit, units())
-	{
-		int iMapKey = pLoopUnit->AI_getUnitAIType() + (pLoopUnit->getUnitType() << 16);
-
-		std::map<int,int>::iterator itr = unitCounts.find(iMapKey);
-
-		if (itr == unitCounts.end())
-		{
-			unitCounts.insert(std::make_pair(iMapKey, 1));
-		}
-		else (itr->second)++;
-	}
-	for (std::map<int,int>::const_iterator itr = unitCounts.begin(); itr != unitCounts.end(); ++itr)
-	{
-		logBBAI("		%S (%s): %d", GC.getUnitInfo((UnitTypes)(itr->first >> 16)).getDescription(), GC.getUnitAIInfo((UnitAITypes)(itr->first & 0xFFFF)).getType(), itr->second);
-	}
-	logBBAI("	EndUnits");
-
 }
 
 
@@ -5055,10 +4878,6 @@ void CvPlayer::handleDiploEvent(DiploEventTypes eDiploEvent, PlayerTypes ePlayer
 		{
 			FAssertMsg(GET_PLAYER(ePlayer).getTeam() != getTeam(), "shouldn't call this function on our own team");
 
-			if (gTeamLogLevel >= 2)
-			{
-				logBBAI("	Team %d (%S) declares war on team %d due to DIPLOEVENT", getTeam(), getCivilizationDescription(0), ePlayer );
-			}
 			GET_TEAM(getTeam()).declareWar(GET_PLAYER(ePlayer).getTeam(), false, WARPLAN_LIMITED);
 			break;
 		}
@@ -5102,10 +4921,6 @@ void CvPlayer::handleDiploEvent(DiploEventTypes eDiploEvent, PlayerTypes ePlayer
 		{
 			AI_changeMemoryCount(ePlayer, MEMORY_ACCEPTED_JOIN_WAR, 1);
 
-			if (gTeamLogLevel >= 2)
-			{
-				logBBAI("	Team %d (%S) declares war on team %d due to DIPLOEVENT", getTeam(), getCivilizationDescription(0), ePlayer );
-			}
 			GET_TEAM(GET_PLAYER(ePlayer).getTeam()).declareWar((TeamTypes)iData1, false, WARPLAN_DOGPILE);
 
 			for (int iI = 0; iI < MAX_PC_PLAYERS; iI++)
@@ -6470,10 +6285,6 @@ void CvPlayer::found(int iX, int iY, CvUnit *pUnit)
 			for (int iI = 0; iI < GC.getHandicapInfo(GC.getGame().getHandicapType()).getBarbarianInitialDefenders(); iI++)
 			{
 				initUnit(eDefenderUnit, iX, iY, UNITAI_CITY_DEFENSE, NO_DIRECTION, GC.getGame().getSorenRandNum(10000, "AI Unit Birthmark"));
-				if (gPlayerLogLevel >= 1)
-				{
-					logBBAI("	 Player %d (%S) initial defender (%S) initiated for city %S at %d, %d", getID(), getCivilizationDescription(0), GC.getUnitInfo(eDefenderUnit).getDescription(), pCity->getName(0).GetCString(), iX, iY);
-				}
 			}
 		}
 		else FErrorMsg(CvString::format("Player %d (%S) no initial defender availible for city %S at %d, %d", getID(), getCivilizationDescription(0), pCity->getName(0).GetCString(), iX, iY).c_str());
@@ -6527,11 +6338,6 @@ void CvPlayer::found(int iX, int iY, CvUnit *pUnit)
 	}
 
 	CvEventReporter::getInstance().cityBuilt(pCity, pUnit);
-
-	if (gPlayerLogLevel >= 1)
-	{
-		logBBAI("  Player %d (%S) founds new city %S at %d, %d", getID(), getCivilizationDescription(0), pCity->getName(0).GetCString(), iX, iY );
-	}
 }
 
 
@@ -8710,16 +8516,6 @@ void CvPlayer::revolution(CivicTypes* paeNewCivics, bool bForce)
 		if (paeOldCivics[iI] != paeNewCivics[iI])
 		{
 			iCivicChanges++;
-			if (gPlayerLogLevel > 0)
-			{
-				logBBAI
-				(
-					"Player %S switches from %S to %S",
-					getCivilizationDescription(0),
-					GC.getCivicInfo(paeOldCivics[iI]).getDescription(),
-					GC.getCivicInfo(paeNewCivics[iI]).getDescription()
-				);
-			}
 
 			setCivics(((CivicOptionTypes)iI), paeNewCivics[iI]);
 
@@ -12150,115 +11946,6 @@ void CvPlayer::setTurnActive(bool bNewValue, bool bDoTurn)
 			if (GC.getGame().getGameTurn() > 10)
 			{  // Calvitix, problem on Scenario creation
 				bFinancialTrouble = AI_isFinancialTrouble();
-			}
-			if (gPlayerLogLevel > 0)
-			{
-				PROFILE("CvPlayer::setTurnActive.SetActive.Log0");
-
-				logBBAI("Player %d (%S) setTurnActive for turn %d", getID(), getCivilizationDescription(0), GC.getGame().getGameTurn() );
-
-				if (GC.getGame().getGameTurn() > 0 && (GC.getGame().getGameTurn() % 25) == 0 && !isNPC())
-				{
-					CvWStringBuffer szBuffer;
-					GAMETEXT.setScoreHelp(szBuffer, getID());
-					logBBAI("%S", szBuffer.getCString());
-
-					const int iGameTurn = GC.getGame().getGameTurn();
-					logBBAI("  Total Score: %d, Population Score: %d (%d total pop), Land Score: %d, Tech Score: %d, Wonder Score: %d", calculateScore(), getPopScore(false), getTotalPopulation(), getLandScore(false), getTechScore(), getWondersScore());
-
-					int64_t iEconomy = 0;
-					int64_t iProduction = 0;
-					int64_t iAgri = 0;
-					int iCount = 0;
-					for (int iI = 1; iI <= 5; iI++)
-					{
-						if (iGameTurn - iI >= 0)
-						{
-							iEconomy += getEconomyHistory(iGameTurn - iI);
-							iProduction += getIndustryHistory(iGameTurn - iI);
-							iAgri += getAgricultureHistory(iGameTurn - iI);
-							iCount++;
-						}
-					}
-					iEconomy /= std::max(1, iCount);
-					iProduction /= std::max(1, iCount);
-					iAgri /= std::max(1, iCount);
-
-					logBBAI("  Economy avg: %d,  Industry avg: %d,  Agriculture avg: %d", iEconomy, iProduction, iAgri);
-				}
-
-				if (gPlayerLogLevel >= 2)
-				{
-					PROFILE("CvPlayer::setTurnActive.SetActive.Log2");
-
-					CvWStringBuffer szBuffer;
-
-					logBBAI("	Player %d (%S) has %d cities, %d pop, %d power, %d tech percent", getID(), getCivilizationDescription(0), getNumCities(), getTotalPopulation(), getPower(), GET_TEAM(getTeam()).getBestKnownTechScorePercent());
-
-					if(bFinancialTrouble)
-					{
-						logBBAI("	Financial trouble!");
-					}
-					szBuffer.append(CvWString::format(L"	Team %d has met: ", getTeam()));
-
-					for (int iI = 0; iI < MAX_PC_TEAMS; iI++)
-					{
-						if (iI != getTeam() && GET_TEAM(getTeam()).isHasMet((TeamTypes)iI) && GET_TEAM((TeamTypes)iI).isAlive())
-						{
-							szBuffer.append(CvWString::format(L"%d,", iI));
-						}
-					}
-
-					if (GET_TEAM(getTeam()).getVassalCount() > 0)
-					{
-						szBuffer.append(CvWString::format(L";  vassals: "));
-
-						for (int iI = 0; iI < MAX_PC_TEAMS; iI++)
-						{
-							if (iI != getTeam() && GET_TEAM((TeamTypes)iI).isVassal(getTeam()) && GET_TEAM((TeamTypes)iI).isAlive())
-							{
-								szBuffer.append(CvWString::format(L"%d,", iI));
-							}
-						}
-					}
-
-					if (GET_TEAM(getTeam()).isAtWar(true))
-					{
-						szBuffer.append(CvWString::format(L";  at war with: "));
-
-						for (int iI = 0; iI < MAX_PC_TEAMS; iI++)
-						{
-							if (iI != getTeam() && GET_TEAM(getTeam()).isAtWar((TeamTypes)iI) && GET_TEAM((TeamTypes)iI).isAlive())
-							{
-								szBuffer.append(CvWString::format(L"%d,", iI));
-							}
-						}
-					}
-					const bool bWarPlan = GET_TEAM(getTeam()).hasWarPlan(true);
-
-					if (bWarPlan)
-					{
-						szBuffer.append(CvWString::format(L";  planning war with: "));
-
-						for (int iI = 0; iI < MAX_PC_TEAMS; iI++)
-						{
-							if (iI != getTeam() && GET_TEAM((TeamTypes)iI).isAlive()
-							&& !GET_TEAM(getTeam()).isAtWar((TeamTypes)iI) && GET_TEAM(getTeam()).AI_getWarPlan((TeamTypes)iI) != NO_WARPLAN)
-							{
-								szBuffer.append(CvWString::format(L"%d,", iI));
-							}
-						}
-						if (gPlayerLogLevel > 1)
-						{
-							logBBAI("%S\n\tEnemy power perc: %d (%d with others reduction)", szBuffer.getCString(), GET_TEAM(getTeam()).AI_getEnemyPowerPercent(), GET_TEAM(getTeam()).AI_getEnemyPowerPercent(true));
-						}
-					}
-					else if (gPlayerLogLevel > 1)
-					{
-						logBBAI("%S", szBuffer.getCString());
-					}
-					szBuffer.clear();
-				}
 			}
 			FAssertMsg(isAlive(), "isAlive is expected to be true");
 
@@ -15711,11 +15398,6 @@ void CvPlayer::addMessage(const CvTalkingHeadMessage& message)
 		}
 	}
 	
-	if (gPlayerLogLevel >= 1)
-	{
-		logBBAI("  Player %d (%S) get message : %S", getID(), getCivilizationDescription(0), message.getDescription());
-	}
-	
 }
 
 
@@ -16950,10 +16632,6 @@ bool CvPlayer::doEspionageMission(EspionageMissionTypes eMission, PlayerTypes eT
 				strcpy(szSound, "AS2D_REVOLTSTART");
 				szBuffer = gDLL->getText("TXT_KEY_ESPIONAGE_TARGET_CITY_REVOLT", pCity->getNameKey()).GetCString();
 
-				if (gUnitLogLevel >= 2)
-				{
-					logBBAI("	  Spy for player %d (%S) causes revolt in %S, owned by %S (%d)", getID(), getCivilizationDescription(0), pCity->getName().GetCString(), GET_PLAYER(pCity->getOwner()).getCivilizationDescription(0), pCity->getOwner() );
-				}
 			}
 			// Incite City Revolution
 			if (kMission.isRevolt())
@@ -22238,10 +21916,6 @@ void CvPlayer::applyEvent(EventTypes eEvent, int iEventTriggeredId, bool bUpdate
 
 		if (kEvent.isDeclareWar() && NO_PLAYER != pTriggeredData->m_eOtherPlayer)
 		{
-			if (gTeamLogLevel >= 2)
-			{
-				logBBAI("	Team %d (%S) declares war on team %d due to event", GET_PLAYER(pTriggeredData->m_eOtherPlayer).getTeam(), GET_PLAYER(pTriggeredData->m_eOtherPlayer).getCivilizationDescription(0), getTeam() );
-			}
 			GET_TEAM(GET_PLAYER(pTriggeredData->m_eOtherPlayer).getTeam()).declareWar(getTeam(), false, WARPLAN_LIMITED);
 		}
 
@@ -28073,8 +27747,6 @@ int CvPlayer::getCorporationInfluence(CorporationTypes eIndex) const
 	}
 	iInfluence = getModifiedIntValue(iInfluence, (-5) * getEnvironmentalProtection() - 2 * getLaborFreedom());
 
-	logBBAI("  Player %d (%S) Has a Corporation Influence of %d for Corporation %s", getID(), getCivilizationDescription(0), iInfluence, GC.getCorporationInfo(eIndex).getDescription());
-
 	return iInfluence;
 }
 
@@ -31307,8 +30979,10 @@ void CvPlayer::processHeritage(const HeritageTypes eType, const int iChange)
 	const CvHeritageInfo& heritage = GC.getHeritageInfo(eType);
 	const EraTypes eEra = getCurrentEra();
 
-	foreach_(const EraCommerceArray& pair, heritage.getEraCommerceChanges100())
-	{
+	const IDValueMap<EraTypes, CommerceArray>& kEraChanges = heritage.getEraCommerceChanges100();
+    for (IDValueMap<EraTypes, CommerceArray>::const_iterator itEra = kEraChanges.begin(), itEraEnd = kEraChanges.end(); itEra != itEraEnd; ++itEra)
+    {
+        const EraCommerceArray& pair = *itEra;
 		if (eEra >= pair.first)
 		{
 			for (int iI = 0; iI < NUM_COMMERCE_TYPES; iI++)
@@ -31325,8 +30999,10 @@ int CvPlayer::getHeritageCommerceEraChange(const CommerceTypes eType, const EraT
 	int iCommerce100 = 0;
 	foreach_(const HeritageTypes eTypeX, getHeritage())
 	{
-		foreach_(const EraCommerceArray& pair, GC.getHeritageInfo(eTypeX).getEraCommerceChanges100())
-		{
+		const IDValueMap<EraTypes, CommerceArray>& kEraChanges = GC.getHeritageInfo(eTypeX).getEraCommerceChanges100();
+        for (IDValueMap<EraTypes, CommerceArray>::const_iterator itEra = kEraChanges.begin(), itEraEnd = kEraChanges.end(); itEra != itEraEnd; ++itEra)
+        {
+            const EraCommerceArray& pair = *itEra;
 			if (eEra == pair.first)
 			{
 				iCommerce100 += pair.second[eType];

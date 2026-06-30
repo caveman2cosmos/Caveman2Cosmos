@@ -7806,11 +7806,6 @@ void CvGame::processVote(const VoteTriggeredData& kData, int iChange)
 		CvPlayer& kPlayer = GET_PLAYER(kData.kVoteOption.ePlayer);
 		const TeamTypes eTeam = kPlayer.getTeam();
 
-		if (gTeamLogLevel >= 1)
-		{
-			logBBAI("  Vote for forcing peace against team %d (%S) passes", eTeam, kPlayer.getCivilizationDescription(0) );
-		}
-
 		for (int iI = 0; iI < MAX_PC_PLAYERS; ++iI)
 		{
 			if (GET_PLAYER((PlayerTypes)iI).isAliveAndTeam(eTeam)
@@ -7844,11 +7839,6 @@ void CvGame::processVote(const VoteTriggeredData& kData, int iChange)
 		FAssert(NO_PLAYER != kData.kVoteOption.ePlayer);
 		CvPlayer& kPlayer = GET_PLAYER(kData.kVoteOption.ePlayer);
 
-		if (gTeamLogLevel >= 1)
-		{
-			logBBAI("  Vote for war against team %d (%S) passes", kPlayer.getTeam(), kPlayer.getCivilizationDescription(0) );
-		}
-
 		for (int iPlayer = 0; iPlayer < MAX_PC_PLAYERS; ++iPlayer)
 		{
 			CvPlayer& playerX = GET_PLAYER((PlayerTypes)iPlayer);
@@ -7869,15 +7859,6 @@ void CvGame::processVote(const VoteTriggeredData& kData, int iChange)
 
 		if (NULL != pCity && NO_PLAYER != kData.kVoteOption.eOtherPlayer && kData.kVoteOption.eOtherPlayer != pCity->getOwner())
 		{
-			if (gTeamLogLevel >= 1)
-			{
-				logBBAI(
-					"  Vote for assigning %S to %d (%S) passes",
-					pCity->getName().GetCString(),
-					GET_PLAYER(kData.kVoteOption.eOtherPlayer).getTeam(),
-					GET_PLAYER(kData.kVoteOption.eOtherPlayer).getCivilizationDescription(0)
-				);
-			}
 			GET_PLAYER(kData.kVoteOption.eOtherPlayer).acquireCity(pCity, false, true, true);
 		}
 		setVoteOutcome(kData, NO_PLAYER_VOTE);

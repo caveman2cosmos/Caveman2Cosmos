@@ -751,6 +751,7 @@ protected:
 	void AI_invalidateCloseBordersAttitudeCache();
 
 	friend class CvGameTextMgr;
+	friend class CvDecisionAI;
 
 #ifdef PLOT_DANGER_CACHING
 public:
