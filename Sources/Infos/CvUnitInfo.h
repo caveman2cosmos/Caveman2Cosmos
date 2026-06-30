@@ -197,32 +197,10 @@ public:
 	int getPursuit() const;
 	int getEarlyWithdraw() const;
 	int getVSBarbs() const;
-	int getOverrun() const;
-	int getRepel() const;
-	int getFortRepel() const;
-	int getRepelRetries() const;
-	int getUnyielding() const;
-	int getKnockback() const;
-	int getKnockbackRetries() const;
-#ifdef BATTLEWORN
-	int getStrAdjperRnd() const;
-	int getStrAdjperAtt() const;
-	int getStrAdjperDef() const;
-	int getWithdrawAdjperAtt() const;
-#endif // BATTLEWORN
 	int getUnnerve() const;
 	int getEnclose() const;
 	int getLunge() const;
 	int getDynamicDefense() const;
-	int getFortitude() const;
-#ifdef STRENGTH_IN_NUMBERS
-	int getFrontSupportPercent() const;
-	int getShortRangeSupportPercent() const;
-	int getMediumRangeSupportPercent() const;
-	int getLongRangeSupportPercent() const;
-	int getFlankSupportPercent() const;
-#endif // STRENGTH_IN_NUMBERS
-	int getCriticalModifier() const;
 	int getEndurance() const;
 	int getPoisonProbabilityModifier() const;
 	int getCaptureProbabilityModifier() const;
@@ -287,10 +265,6 @@ public:
 	bool isSubCombatType(UnitCombatTypes e) const;
 	const std::vector<UnitCombatTypes>& getSubCombatTypes() const;
 
-	int getCureAfflictionType(int i) const;
-	int getNumCureAfflictionTypes() const;
-	bool isCureAfflictionType(int i) const;
-
 	int getHealAsType(int i) const;
 	int getNumHealAsTypes() const;
 	bool isHealAsType(int i) const;
@@ -345,11 +319,9 @@ public:
 	int getNumVisibleFeatureRangeChanges() const;
 	const InvisibleFeatureChanges& getVisibleFeatureRangeChange(int iIndex) const;
 
-	int getNumDistanceAttackCommunicabilityTypeChanges() const;
 	const InvisibleImprovementChanges& getVisibleImprovementRangeChange(int iIndex) const;
 
 	int getNumVisibleImprovementRangeChanges() const;
-	const AfflictionLineChanges& getDistanceAttackCommunicabilityTypeChange(int iIndex) const;
 
 	int getNumEnabledCivilizationTypes() const;
 	const EnabledCivilizations& getEnabledCivilizationType(int iIndex) const;
@@ -373,21 +345,6 @@ public:
 	int getPursuitVSUnitCombatType(int iUnitCombat, bool bForLoad = false) const;
 	bool isPursuitVSUnitCombatType(int iUnitCombat, bool bForLoad = false) const;
 	const UnitCombatModifierArray& getPursuitVSUnitCombatTypes() const;
-
-	int getNumRepelVSUnitCombatTypes() const;
-	int getRepelVSUnitCombatType(int iUnitCombat, bool bForLoad = false) const;
-	bool isRepelVSUnitCombatType(int iUnitCombat, bool bForLoad = false) const;
-	const UnitCombatModifierArray& getRepelVSUnitCombatTypes() const;
-
-	int getNumKnockbackVSUnitCombatTypes() const;
-	int getKnockbackVSUnitCombatType(int iUnitCombat, bool bForLoad = false) const;
-	bool isKnockbackVSUnitCombatType(int iUnitCombat, bool bForLoad = false) const;
-	const UnitCombatModifierArray& getKnockbackVSUnitCombatTypes() const;
-
-	int getNumCriticalVSUnitCombatTypes() const;
-	int getCriticalVSUnitCombatType(int iUnitCombat) const;
-	bool isCriticalVSUnitCombatType(int iUnitCombat) const;
-	const UnitCombatModifierArray& getCriticalVSUnitCombatTypes() const;
 
 	int getNumTrapDisableUnitCombatTypes() const;
 	int getTrapDisableUnitCombatType(int iUnitCombat) const;
@@ -803,32 +760,10 @@ private:
 	int m_iPursuit;
 	int m_iEarlyWithdraw;
 	int m_iVSBarbs;
-	int m_iOverrun;
-	int m_iRepel;
-	int m_iFortRepel;
-	int m_iRepelRetries;
-	int m_iUnyielding;
-	int m_iKnockback;
-	int m_iKnockbackRetries;
-#ifdef BATTLEWORN
-	int m_iStrAdjperRnd;
-	int m_iStrAdjperAtt;
-	int m_iStrAdjperDef;
-	int m_iWithdrawAdjperAtt;
-#endif // BATTLEWORN
 	int m_iUnnerve;
 	int m_iEnclose;
 	int m_iLunge;
 	int m_iDynamicDefense;
-	int m_iFortitude;
-#ifdef STRENGTH_IN_NUMBERS
-	int m_iFrontSupportPercent;
-	int m_iShortRangeSupportPercent;
-	int m_iMediumRangeSupportPercent;
-	int m_iLongRangeSupportPercent;
-	int m_iFlankSupportPercent;
-#endif
-	int m_iCriticalModifier;
 	int m_iEndurance;
 	int m_iPoisonProbabilityModifier;
 	int m_iCaptureProbabilityModifier;
@@ -894,7 +829,6 @@ private:
 	bool m_bCanMergeSplit;
 
 	std::vector<UnitCombatTypes> m_aiSubCombatTypes;
-	std::vector<int> m_aiCureAfflictionTypes;
 	std::vector<int> m_aiHealAsTypes;
 	std::vector<TerrainTypes> m_vTerrainImpassableTypes;
 	std::vector<FeatureTypes> m_vFeatureImpassableTypes;
@@ -920,9 +854,6 @@ private:
 	FeatureModifierArray m_aWithdrawOnFeatureTypes;
 	UnitCombatModifierArray m_aWithdrawVSUnitCombatTypes;
 	UnitCombatModifierArray m_aPursuitVSUnitCombatTypes;
-	UnitCombatModifierArray m_aRepelVSUnitCombatTypes;
-	UnitCombatModifierArray m_aKnockbackVSUnitCombatTypes;
-	UnitCombatModifierArray m_aCriticalVSUnitCombatTypes;
 	UnitCombatModifierArray m_aTrapDisableUnitCombatTypes;
 	UnitCombatModifierArray m_aTrapAvoidanceUnitCombatTypes;
 	UnitCombatModifierArray m_aTrapTriggerUnitCombatTypes;

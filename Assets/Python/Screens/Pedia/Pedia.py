@@ -147,8 +147,6 @@ class Pedia:
 		szCatPromotions			= TRNSLTR.getText("TXT_KEY_PEDIA_CATEGORY_PROMOTION", ())
 		szCatBuildUp			= TRNSLTR.getText("TXT_KEY_MISSION_BUILDUP", ())
 		szCatStatus				= TRNSLTR.getText("TXT_KEY_VICTORY_SCREEN_PERCENTAGE", ())
-		szCatEquipment			= TRNSLTR.getText("TXT_KEY_PEDIA_CATEGORY_EQUIPMENT_PROMOTION", ())
-		szCatAffliction			= TRNSLTR.getText("TXT_KEY_PEDIA_CATEGORY_AFFLICTION_PROMOTION", ())
 		szCatPromotionTree		= TRNSLTR.getText("TXT_KEY_PEDIA_CATEGORY_PROMOTION_TREE", ())
 		szCatBuildings			= TRNSLTR.getText("TXT_KEY_WB_BUILDINGS", ())
 		szCatNationalWonders	= TRNSLTR.getText("TXT_KEY_PEDIA_CATEGORY_NATIONAL_WONDERS", ())
@@ -230,7 +228,7 @@ class Pedia:
 		szTechSubCatList.append(szChronology)
 		PEDIA_SUB_CONCEPTS 		= [szCatConcepts, szCatConceptsNew, szCatStrategy, szCatShortcuts, szCatHints, szCatEras]
 		PEDIA_SUB_UNITS_2		= [szCatWorldUnits, szCatCulturalUnits, szCatAnimals, szCatSpreadUnits, szCatMiscUnits]
-		PEDIA_SUB_PROMOTIONS	= [szCatPromotions, szCatBuildUp, szCatStatus, szCatEquipment, szCatAffliction]
+		PEDIA_SUB_PROMOTIONS	= [szCatPromotions, szCatBuildUp, szCatStatus]
 		PEDIA_SUB_BUILDINGS_2	= [szCatNationalWonders, szCatGreatWonders, szCatGroupWonders, szCatSpecialBuildings, szCatC2CCutures, szCatRelBuildings, szCatAniBuildings, szCatSpaceBuildings]
 		PEDIA_SUB_BONUSES		= [szCatBonusesMap, szCatBonusesMan, szCatBonusesCult, szCatBonusesTech, szCatBonusesWonder]
 		PEDIA_SUB_LANDSCAPE		= [szCatTerrains, szCatFeatures, szCatNaturalWonders, szCatImprovements, szCatRoutes]
@@ -314,8 +312,6 @@ class Pedia:
 			szCatPromotions			: self.placePromotions,
 			szCatBuildUp			: self.placeBuildUp,
 			szCatStatus				: self.placeStatus,
-			szCatEquipment			: self.placeEquipmentPromotions,
-			szCatAffliction			: self.placeAfflictionPromotions,
 			PEDIA_BUILDINGS_1		: self.placeBuildings,
 			szCatNationalWonders	: self.placeNationalWonders,
 			szCatGreatWonders		: self.placeGreatWonders,
@@ -843,16 +839,6 @@ class Pedia:
 		self.aList = self.getPromotionList(2)
 		self.placeItems(WidgetTypes.WIDGET_PEDIA_JUMP_TO_PROMOTION, GC.getPromotionInfo)
 
-	def placeEquipmentPromotions(self):
-		print "Creating item list for category: Equipments"
-		self.aList = self.getPromotionList(3)
-		self.placeItems(WidgetTypes.WIDGET_PEDIA_JUMP_TO_PROMOTION, GC.getPromotionInfo)
-
-	def placeAfflictionPromotions(self):
-		print "Creating item list for category: Afflictions"
-		self.aList = self.getPromotionList(4)
-		self.placeItems(WidgetTypes.WIDGET_PEDIA_JUMP_TO_PROMOTION, GC.getPromotionInfo)
-
 	def getPromotionList(self, iType):
 		aList = []
 		for iPromotion in xrange(GC.getNumPromotionInfos()):
@@ -870,14 +856,7 @@ class Pedia:
 		if CvPromotionLineInfo != None:
 			if CvPromotionLineInfo.isBuildUp():
 				bBuildUp = True
-		'''
-		if CvPromotionInfo.isAffliction():
-			return 4
-		elif CvPromotionInfo.isEquipment():
-		'''
-		if CvPromotionInfo.isEquipment():
-			return 3
-		elif CvPromotionInfo.isStatus():
+		if CvPromotionInfo.isStatus():
 			return 2
 		elif bBuildUp:
 			return 1

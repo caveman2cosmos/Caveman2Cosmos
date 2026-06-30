@@ -12,12 +12,6 @@
 	<!--Integers -->
 	<ElementType name="iLinePriority" content="textOnly" dt:type="int"/>
 	<ElementType name="iAidRate" content="textOnly" dt:type="int"/>
-	<ElementType name="iTradeCommunicability" content="textOnly" dt:type="int"/>
-	<ElementType name="iFrontSupportPercentModifier" content="textOnly" dt:type="int"/>
-	<ElementType name="iShortRangeSupportPercentModifier" content="textOnly" dt:type="int"/>
-	<ElementType name="iMediumRangeSupportPercentModifier" content="textOnly" dt:type="int"/>
-	<ElementType name="iLongRangeSupportPercentModifier" content="textOnly" dt:type="int"/>
-	<ElementType name="iFlankSupportPercentModifier" content="textOnly" dt:type="int"/>
 	<ElementType name="iNationalCaptureProbabilityModifier" content="textOnly" dt:type="int"/>
 	<ElementType name="iNationalCaptureResistanceModifier" content="textOnly" dt:type="int"/>
 	<ElementType name="iLocalCaptureProbabilityModifier" content="textOnly" dt:type="int"/>
@@ -34,8 +28,6 @@
 	<ElementType name="iMaxPopulationChange" content="textOnly" dt:type="int"/>
 	<ElementType name="iInsidiousness" content="textOnly" dt:type="int"/>
 	<ElementType name="iInvestigation" content="textOnly" dt:type="int"/>
-	<ElementType name="iOutbreakBase" content="textOnly" dt:type="int"/>
-	<ElementType name="iOvercomeBase" content="textOnly" dt:type="int"/>
 	<ElementType name="iPopulationChange" content="textOnly" dt:type="int"/>
 	<!-- Booleans -->
 	<ElementType name="bDamageToAttackerIgnoresArmor" content="textOnly" dt:type="boolean"/>
@@ -125,23 +117,6 @@
 	</ElementType>
 	<ElementType name="AidRateChanges" content="eltOnly">
 		<element type="AidRateChange" minOccurs="0" maxOccurs="*"/>
-	</ElementType>
-	<ElementType name="AfflictionOutbreakLevel" content="textOnly"/>
-	<ElementType name="iAfflictionOutbreakLevelChange" content="textOnly" dt:type="int"/>
-	<ElementType name="AfflictionOutbreakLevelChange" content="eltOnly">
-		<element type="AfflictionOutbreakLevel" minOccurs="0" maxOccurs="*"/>
-		<element type="iAfflictionOutbreakLevelChange" minOccurs="0"/>
-	</ElementType>
-	<ElementType name="AfflictionOutbreakLevelChanges" content="eltOnly">
-		<element type="AfflictionOutbreakLevelChange" minOccurs="0" maxOccurs="*"/>
-	</ElementType>
-	<ElementType name="iTechOutbreakLevelChange" content="textOnly" dt:type="int"/>
-	<ElementType name="TechOutbreakLevelChange" content="eltOnly">
-		<element type="TechType" minOccurs="0" maxOccurs="*"/>
-		<element type="iTechOutbreakLevelChange" minOccurs="0"/>
-	</ElementType>
-	<ElementType name="TechOutbreakLevelChanges" content="eltOnly">
-		<element type="TechOutbreakLevelChange" minOccurs="0" maxOccurs="*"/>
 	</ElementType>
 	<ElementType name="TechType" content="textOnly"/>
 	<ElementType name="iModifier" content="textOnly" dt:type="int"/>
@@ -997,15 +972,7 @@
 		<element type="GlobalBuildingExtraCommerces" minOccurs="0"/>
 		<!-- TB Combat Mods begin -->
 		<element type="AidRateChanges" minOccurs="0"/>
-		<element type="iOutbreakBase" minOccurs="0"/>
-		<element type="iOvercomeBase" minOccurs="0"/>
-		<element type="iTradeCommunicability" minOccurs="0"/>
 		<element type="iPopulationChange" minOccurs="0"/>
-		<element type="iFrontSupportPercentModifier" minOccurs="0"/>
-		<element type="iShortRangeSupportPercentModifier" minOccurs="0"/>
-		<element type="iMediumRangeSupportPercentModifier" minOccurs="0"/>
-		<element type="iLongRangeSupportPercentModifier" minOccurs="0"/>
-		<element type="iFlankSupportPercentModifier" minOccurs="0"/>
 		<element type="iNationalCaptureProbabilityModifier" minOccurs="0"/>
 		<element type="iNationalCaptureResistanceModifier" minOccurs="0"/>
 		<element type="iLocalCaptureProbabilityModifier" minOccurs="0"/>
@@ -1029,8 +996,6 @@
 		<element type="UnitCombatDefenseAgainstModifiers" minOccurs="0"/>
 		<element type="UnitCombatProdModifiers" minOccurs="0"/>
 		<element type="BonusAidModifiers" minOccurs="0"/>
-		<element type="AfflictionOutbreakLevelChanges" minOccurs="0"/>
-		<element type="TechOutbreakLevelChanges" minOccurs="0"/>
 		<element type="LocalSpecialistYieldChanges" minOccurs="0"/>
 		<element type="LocalSpecialistCommerceChanges" minOccurs="0"/>
 		<element type="Hurrys" minOccurs="0"/>

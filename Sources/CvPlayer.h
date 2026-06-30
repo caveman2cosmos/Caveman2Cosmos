@@ -302,7 +302,7 @@ public:
 	void found(int iX, int iY, CvUnit* pUnit = NULL);
 
 	bool canTrain(UnitTypes eUnit, bool bContinue = false, bool bTestVisible = false, bool bIgnoreCost = false, bool bPropertySpawn = false) const;
-	bool canConstruct(BuildingTypes eBuilding, bool bContinue = false, bool bTestVisible = false, bool bIgnoreCost = false, TechTypes eIgnoreTechReq = NO_TECH, int* probabilityEverConstructable = NULL, bool bAffliction = false, bool bExposed = false) const;
+	bool canConstruct(BuildingTypes eBuilding, bool bContinue = false, bool bTestVisible = false, bool bIgnoreCost = false, TechTypes eIgnoreTechReq = NO_TECH, int* probabilityEverConstructable = NULL, bool bExposed = false) const;
 	bool canConstructInternal(BuildingTypes eBuilding, bool bContinue = false, bool bTestVisible = false, bool bIgnoreCost = false, TechTypes eIgnoreTechReq = NO_TECH, int* probabilityEverConstructable = NULL, bool bExposed = false) const;
 	bool canCreate(ProjectTypes eProject, bool bContinue = false, bool bTestVisible = false) const;
 	bool canMaintain(ProcessTypes eProcess) const;
@@ -1566,7 +1566,6 @@ protected:
 	int** m_ppiBuildingCommerceModifier;
 	int** m_ppiBuildingCommerceChange;
 	int** m_ppiBonusCommerceModifier;
-	int* m_paiPlayerWideAfflictionCount;
 	bool* m_pabAutomatedCanBuild;
 	int* m_paiResourceConsumption;
 	int* m_paiFreeSpecialistCount;

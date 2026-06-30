@@ -72,7 +72,6 @@ Base XP gained when defending
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_HUMAN</SubCombatType>
 				<SubCombatType>UNITCOMBAT_WEAPON_METHOD_DISTANCE_ONLY</SubCombatType>
-				<SubCombatType>UNITCOMBAT_WEAPON_STYLE_DIST_VEHICULAR</SubCombatType>
 				<SubCombatType>UNITCOMBAT_WEAPON_A2G_RADIOACTIVE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_WEAPON_DIST_FULLY_AUTOMATIC</SubCombatType>
 				<SubCombatType>UNITCOMBAT_ARMOR_AIRCRAFT</SubCombatType>

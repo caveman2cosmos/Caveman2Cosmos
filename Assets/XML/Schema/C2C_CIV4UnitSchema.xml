@@ -205,34 +205,6 @@
 	<ElementType name="iPursuitChange" content="textOnly" dt:type="int"/>
 	<ElementType name="iEarlyWithdraw" content="textOnly" dt:type="int"/>
 	<ElementType name="iEarlyWithdrawChange" content="textOnly" dt:type="int"/>
-	<ElementType name="iVSBarbs" content="textOnly" dt:type="int"/>
-	<ElementType name="iVSBarbsChange" content="textOnly" dt:type="int"/>
-	<ElementType name="iArmor" content="textOnly" dt:type="int"/>
-	<ElementType name="iArmorChange" content="textOnly" dt:type="int"/>
-	<ElementType name="iPuncture" content="textOnly" dt:type="int"/>
-	<ElementType name="iPunctureChange" content="textOnly" dt:type="int"/>
-	<ElementType name="iOverrun" content="textOnly" dt:type="int"/>
-	<ElementType name="iOverrunChange" content="textOnly" dt:type="int"/>
-	<ElementType name="iRepel" content="textOnly" dt:type="int"/>
-	<ElementType name="iRepelChange" content="textOnly" dt:type="int"/>
-	<ElementType name="iFortRepel" content="textOnly" dt:type="int"/>
-	<ElementType name="iFortRepelChange" content="textOnly" dt:type="int"/>
-	<ElementType name="iRepelRetries" content="textOnly" dt:type="int"/>
-	<ElementType name="iRepelRetriesChange" content="textOnly" dt:type="int"/>
-	<ElementType name="iUnyielding" content="textOnly" dt:type="int"/>
-	<ElementType name="iUnyieldingChange" content="textOnly" dt:type="int"/>
-	<ElementType name="iKnockback" content="textOnly" dt:type="int"/>
-	<ElementType name="iKnockbackChange" content="textOnly" dt:type="int"/>
-	<ElementType name="iKnockbackRetries" content="textOnly" dt:type="int"/>
-	<ElementType name="iKnockbackRetriesChange" content="textOnly" dt:type="int"/>
-	<ElementType name="iStrAdjperRnd" content="textOnly" dt:type="int"/>
-	<ElementType name="iStrAdjperRndChange" content="textOnly" dt:type="int"/>
-	<ElementType name="iStrAdjperAtt" content="textOnly" dt:type="int"/>
-	<ElementType name="iStrAdjperAttChange" content="textOnly" dt:type="int"/>
-	<ElementType name="iStrAdjperDef" content="textOnly" dt:type="int"/>
-	<ElementType name="iStrAdjperDefChange" content="textOnly" dt:type="int"/>
-	<ElementType name="iWithdrawAdjperAtt" content="textOnly" dt:type="int"/>
-	<ElementType name="iWithdrawAdjperAttChange" content="textOnly" dt:type="int"/>
 	<ElementType name="iUnnerve" content="textOnly" dt:type="int"/>
 	<ElementType name="iUnnerveChange" content="textOnly" dt:type="int"/>
 	<ElementType name="iEnclose" content="textOnly" dt:type="int"/>
@@ -243,42 +215,7 @@
 	<ElementType name="iDynamicDefenseChange" content="textOnly" dt:type="int"/>
 	<ElementType name="iStrengthChange" content="textOnly" dt:type="int"/>
 	<ElementType name="iLinePriority" content="textOnly" dt:type="int"/>
-	<ElementType name="iOvercomeProbability" content="textOnly" dt:type="int"/>
-	<ElementType name="iFortitude" content="textOnly" dt:type="int"/>
-	<ElementType name="iFortitudeChange" content="textOnly" dt:type="int"/>
 	<ElementType name="iDamageperTurn" content="textOnly" dt:type="int"/>
-	<ElementType name="iOvercomeAdjperTurn" content="textOnly" dt:type="int"/>
-	<ElementType name="iStrAdjperTurn" content="textOnly" dt:type="int"/>
-	<ElementType name="iWeakenperTurn" content="textOnly" dt:type="int"/>
-	<ElementType name="iCommunicability" content="textOnly" dt:type="int"/>
-	<ElementType name="iAidChange" content="textOnly" dt:type="int"/>
-	<ElementType name="iToleranceBuildup" content="textOnly" dt:type="int"/>
-	<ElementType name="iToleranceDecay" content="textOnly" dt:type="int"/>
-	<ElementType name="iFrontSupportPercent" content="textOnly" dt:type="int"/>
-	<ElementType name="iFrontSupportPercentChange" content="textOnly" dt:type="int"/>
-	<ElementType name="iShortRangeSupportPercent" content="textOnly" dt:type="int"/>
-	<ElementType name="iShortRangeSupportPercentChange" content="textOnly" dt:type="int"/>
-	<ElementType name="iMediumRangeSupportPercent" content="textOnly" dt:type="int"/>
-	<ElementType name="iMediumRangeSupportPercentChange" content="textOnly" dt:type="int"/>
-	<ElementType name="iLongRangeSupportPercent" content="textOnly" dt:type="int"/>
-	<ElementType name="iLongRangeSupportPercentChange" content="textOnly" dt:type="int"/>
-	<ElementType name="iFlankSupportPercent" content="textOnly" dt:type="int"/>
-	<ElementType name="iFlankSupportPercentChange" content="textOnly" dt:type="int"/>
-	<ElementType name="iDodgeModifier" content="textOnly" dt:type="int"/>
-	<ElementType name="iDodgeModifierChange" content="textOnly" dt:type="int"/>
-	<ElementType name="iPrecisionModifier" content="textOnly" dt:type="int"/>
-	<ElementType name="iPrecisionModifierChange" content="textOnly" dt:type="int"/>
-	<ElementType name="iDamageModifier" content="textOnly" dt:type="int"/>
-	<ElementType name="iDamageModifierChange" content="textOnly" dt:type="int"/>
-	<ElementType name="iCriticalModifier" content="textOnly" dt:type="int"/>
-	<ElementType name="iCriticalModifierChange" content="textOnly" dt:type="int"/>
-	<ElementType name="iEndurance" content="textOnly" dt:type="int"/>
-	<ElementType name="iEnduranceChange" content="textOnly" dt:type="int"/>
-	<ElementType name="iWorseningProbabilityIncrementModifier" content="textOnly" dt:type="int"/>
-	<ElementType name="iWorsenedCommunicabilityIncrementModifier" content="textOnly" dt:type="int"/>
-	<ElementType name="iWorsenedOvercomeIncrementModifier" content="textOnly" dt:type="int"/>
-	<ElementType name="iPoisonProbabilityModifier" content="textOnly" dt:type="int"/>
-	<ElementType name="iPoisonProbabilityModifierChange" content="textOnly" dt:type="int"/>
 	<ElementType name="iAttackCombatModifier" content="textOnly" dt:type="int"/>
 	<ElementType name="iDefenseCombatModifier" content="textOnly" dt:type="int"/>
 	<ElementType name="iAttackCombatModifierChange" content="textOnly" dt:type="int"/>
@@ -349,9 +286,6 @@
 	<ElementType name="iNoInvisibilityChange" content="textOnly" dt:type="int"/>
 	<ElementType name="FontButtonIndex" content="textOnly" dt:type="int"/>
 	<ElementType name="bIntrinsic" content="textOnly" dt:type="boolean"/>
-	<ElementType name="iTrapDamageMax" content="textOnly" dt:type="int"/>
-	<ElementType name="iTrapDamageMin" content="textOnly" dt:type="int"/>
-	<ElementType name="iTrapComplexity" content="textOnly" dt:type="int"/>
 	<ElementType name="iNumTriggers" content="textOnly" dt:type="int"/>
 	<ElementType name="iTriggerBeforeAttackChange" content="textOnly" dt:type="int"/>
 	<ElementType name="iHiddenNationalityChange" content="textOnly" dt:type="int"/>
@@ -359,8 +293,6 @@
 	<ElementType name="iNoCaptureChange" content="textOnly" dt:type="int"/>
 	<ElementType name="iAnimalIgnoresBorders" content="textOnly" dt:type="int"/>
 	<ElementType name="iAnimalIgnoresBordersChange" content="textOnly" dt:type="int"/>
-	<ElementType name="iOutbreakModifier" content="textOnly" dt:type="int"/>
-	<ElementType name="iOvercomeModifier" content="textOnly" dt:type="int"/>
 	<ElementType name="iChange" content="textOnly" dt:type="int"/>
 	<ElementType name="iBaseFoodChange" content="textOnly" dt:type="int"/>
 	<ElementType name="iNoDefensiveBonusChange" content="textOnly" dt:type="int"/>
@@ -368,20 +300,13 @@
 	<ElementType name="iReligiousCombatModifier" content="textOnly" dt:type="int"/>
 	<ElementType name="iReligiousCombatModifierChange" content="textOnly" dt:type="int"/>
 	<!--Booleans-->
-	<ElementType name="bParalyze" content="textOnly" dt:type="boolean"/>
-	<ElementType name="bUnlimitedException" content="textOnly" dt:type="boolean"/>
 	<ElementType name="bStampede" content="textOnly" dt:type="boolean"/>
 	<ElementType name="bStampedeChange" content="textOnly" dt:type="boolean"/>
 	<ElementType name="bRemoveStampede" content="textOnly" dt:type="boolean"/>
 	<ElementType name="bOnslaught" content="textOnly" dt:type="boolean"/><!--Note: was incomplete in the Commanders mod - making some changes here-->
 	<ElementType name="bOnslaughtChange" content="textOnly" dt:type="boolean"/><!--THIS is for promotions, the above is now for units-->
-	<ElementType name="bEquipment" content="textOnly" dt:type="boolean"/>
-	<ElementType name="bAffliction" content="textOnly" dt:type="boolean"/>
-	<ElementType name="bNoSpreadonBattle" content="textOnly" dt:type="boolean"/>
-	<ElementType name="bNoSpreadUnitProximity" content="textOnly" dt:type="boolean"/>
 	<ElementType name="bNoSpreadUnittoCity" content="textOnly" dt:type="boolean"/>
 	<ElementType name="bNoSpreadCitytoUnit" content="textOnly" dt:type="boolean"/>
-	<ElementType name="bCritical" content="textOnly" dt:type="boolean"/>
 	<ElementType name="bAttackOnlyCities" content="textOnly" dt:type="boolean"/>
 	<ElementType name="bAttackOnlyCitiesAdd" content="textOnly" dt:type="boolean"/>
 	<ElementType name="bAttackOnlyCitiesSubtract" content="textOnly" dt:type="boolean"/>
@@ -419,7 +344,6 @@
 	<ElementType name="bNoNonTypeProdMods" content="textOnly" dt:type="boolean"/>
 	<ElementType name="bGatherHerd" content="textOnly" dt:type="boolean"/>
 	<!--Declarations-->
-	<ElementType name="AfflictionType" content="textOnly"/>
 	<ElementType name="GameOptionType" content="textOnly"/>
 	<ElementType name="CultureType" content="textOnly"/>
 	<ElementType name="EraType" content="textOnly"/>
@@ -427,7 +351,6 @@
 	<ElementType name="RenamesUnitTo" content="textOnly"/>
 	<ElementType name="Title" content="textOnly"/>
 	<ElementType name="PlayerType" content="textOnly"/>
-	<ElementType name="PromotionLineType" content="textOnly"/>
 	<ElementType name="MinEraType" content="textOnly"/>
 	<ElementType name="MaxEraType" content="textOnly"/>
 	<!--Boolean Vectors-->
@@ -442,12 +365,6 @@
 	<ElementType name="RemovesUnitCombatType" content="textOnly"/>
 	<ElementType name="RemovesUnitCombatTypes" content="eltOnly">
 		<element type="RemovesUnitCombatType" minOccurs="0" maxOccurs="*"/>
-	</ElementType>
-	<ElementType name="CureAfflictionTypes" content="eltOnly">
-		<element type="AfflictionType" minOccurs="0" maxOccurs="*"/>
-	</ElementType>
-	<ElementType name="CureAfflictionChangeTypes" content="eltOnly">
-		<element type="AfflictionType" minOccurs="0" maxOccurs="*"/>
 	</ElementType>
 	<ElementType name="TerrainIgnoreDamageChangeTypes" content="eltOnly">
 		<element type="TerrainType" minOccurs="0" maxOccurs="*"/>
@@ -486,14 +403,6 @@
 	<ElementType name="NotOnDomainTypes" content="eltOnly">
 		<element type="DomainType" minOccurs="0" maxOccurs="*"/>
 	</ElementType>
-	<ElementType name="NoAutoEquiptoCombatClassType" content="textOnly"/>
-	<ElementType name="NoAutoEquiptoCombatClassTypes" content="eltOnly">
-		<element type="NoAutoEquiptoCombatClassType" minOccurs="0" maxOccurs="*"/>
-	</ElementType>
-	<ElementType name="CriticalOriginCombatClassType" content="textOnly"/>
-	<ElementType name="CriticalOriginCombatClassTypes" content="eltOnly">
-		<element type="CriticalOriginCombatClassType" minOccurs="0" maxOccurs="*"/>
-	</ElementType>
 	<ElementType name="TerrainImpassableTypes" content="eltOnly">
 		<element type="TerrainType" minOccurs="0" maxOccurs="*"/>
 	</ElementType>
@@ -524,20 +433,6 @@
 	<ElementType name="AidChanges" content="eltOnly">
 		<element type="AidChange" minOccurs="0" maxOccurs="*"/>
 	</ElementType>
-	<ElementType name="DistanceAttackCommunicabilityTypeChange" content="eltOnly">
-		<element type="PromotionLineType"/>
-		<element type="iChange"/>
-	</ElementType>
-	<ElementType name="DistanceAttackCommunicabilityTypeChanges" content="eltOnly">
-		<element type="DistanceAttackCommunicabilityTypeChange" minOccurs="0" maxOccurs="*"/>
-	</ElementType>
-	<ElementType name="UnitCombatOvercomeChange" content="eltOnly">
-		<element type="UnitCombatType"/>
-		<element type="iChange"/>
-	</ElementType>
-	<ElementType name="UnitCombatOvercomeChanges" content="eltOnly">
-		<element type="UnitCombatOvercomeChange" minOccurs="0" maxOccurs="*"/>
-	</ElementType>
 	<ElementType name="iTechContractChanceChange" content="textOnly" dt:type="int"/>
 	<ElementType name="TechContractChanceChange" content="eltOnly">
 		<element type="TechType"/>
@@ -545,13 +440,6 @@
 	</ElementType>
 	<ElementType name="TechContractChanceChanges" content="eltOnly">
 		<element type="TechContractChanceChange" minOccurs="0" maxOccurs="*"/>
-	</ElementType>
-	<ElementType name="TechOvercomeChange" content="eltOnly">
-		<element type="TechType"/>
-		<element type="iChange"/>
-	</ElementType>
-	<ElementType name="TechOvercomeChanges" content="eltOnly">
-		<element type="TechOvercomeChange" minOccurs="0" maxOccurs="*"/>
 	</ElementType>
 	<ElementType name="FlankingStrikeUnitCombat" content="textOnly"/>
 	<ElementType name="iFlankingStrengthbyUnitCombat" content="textOnly" dt:type="int"/>
@@ -636,132 +524,6 @@
 	</ElementType>
 	<ElementType name="PursuitVSUnitCombatChangeTypes" content="eltOnly">
 		<element type="PursuitVSUnitCombatChangeType" minOccurs="0" maxOccurs="*"/>
-	</ElementType>
-	<ElementType name="RepelVSUnitCombat" content="textOnly"/>
-	<ElementType name="iRepelVSUnitCombat" content="textOnly" dt:type="int"/>
-	<ElementType name="RepelVSUnitCombatType" content="eltOnly">
-		<element type="RepelVSUnitCombat"/>
-		<element type="iRepelVSUnitCombat"/>
-	</ElementType>
-	<ElementType name="RepelVSUnitCombatTypes" content="eltOnly">
-		<element type="RepelVSUnitCombatType" minOccurs="0" maxOccurs="*"/>
-	</ElementType>
-	<ElementType name="RepelVSUnitCombatChange" content="textOnly"/>
-	<ElementType name="iRepelVSUnitCombatChange" content="textOnly" dt:type="int"/>
-	<ElementType name="RepelVSUnitCombatChangeType" content="eltOnly">
-		<element type="RepelVSUnitCombatChange"/>
-		<element type="iRepelVSUnitCombatChange"/>
-	</ElementType>
-	<ElementType name="RepelVSUnitCombatChangeTypes" content="eltOnly">
-		<element type="RepelVSUnitCombatChangeType" minOccurs="0" maxOccurs="*"/>
-	</ElementType>
-	<ElementType name="KnockbackVSUnitCombat" content="textOnly"/>
-	<ElementType name="iKnockbackVSUnitCombat" content="textOnly" dt:type="int"/>
-	<ElementType name="KnockbackVSUnitCombatType" content="eltOnly">
-		<element type="KnockbackVSUnitCombat"/>
-		<element type="iKnockbackVSUnitCombat"/>
-	</ElementType>
-	<ElementType name="KnockbackVSUnitCombatTypes" content="eltOnly">
-		<element type="KnockbackVSUnitCombatType" minOccurs="0" maxOccurs="*"/>
-	</ElementType>
-	<ElementType name="KnockbackVSUnitCombatChange" content="textOnly"/>
-	<ElementType name="iKnockbackVSUnitCombatChange" content="textOnly" dt:type="int"/>
-	<ElementType name="KnockbackVSUnitCombatChangeType" content="eltOnly">
-		<element type="KnockbackVSUnitCombatChange"/>
-		<element type="iKnockbackVSUnitCombatChange"/>
-	</ElementType>
-	<ElementType name="KnockbackVSUnitCombatChangeTypes" content="eltOnly">
-		<element type="KnockbackVSUnitCombatChangeType" minOccurs="0" maxOccurs="*"/>
-	</ElementType>
-	<ElementType name="PunctureVSUnitCombat" content="textOnly"/>
-	<ElementType name="iPunctureVSUnitCombat" content="textOnly" dt:type="int"/>
-	<ElementType name="PunctureVSUnitCombatType" content="eltOnly">
-		<element type="PunctureVSUnitCombat"/>
-		<element type="iPunctureVSUnitCombat"/>
-	</ElementType>
-	<ElementType name="PunctureVSUnitCombatTypes" content="eltOnly">
-		<element type="PunctureVSUnitCombatType" minOccurs="0" maxOccurs="*"/>
-	</ElementType>
-	<ElementType name="PunctureVSUnitCombatChange" content="textOnly"/>
-	<ElementType name="iPunctureVSUnitCombatChange" content="textOnly" dt:type="int"/>
-	<ElementType name="PunctureVSUnitCombatChangeType" content="eltOnly">
-		<element type="PunctureVSUnitCombatChange"/>
-		<element type="iPunctureVSUnitCombatChange"/>
-	</ElementType>
-	<ElementType name="PunctureVSUnitCombatChangeTypes" content="eltOnly">
-		<element type="PunctureVSUnitCombatChangeType" minOccurs="0" maxOccurs="*"/>
-	</ElementType>
-	<ElementType name="ArmorVSUnitCombat" content="textOnly"/>
-	<ElementType name="iArmorVSUnitCombat" content="textOnly" dt:type="int"/>
-	<ElementType name="ArmorVSUnitCombatType" content="eltOnly">
-		<element type="ArmorVSUnitCombat"/>
-		<element type="iArmorVSUnitCombat"/>
-	</ElementType>
-	<ElementType name="ArmorVSUnitCombatTypes" content="eltOnly">
-		<element type="ArmorVSUnitCombatType" minOccurs="0" maxOccurs="*"/>
-	</ElementType>
-	<ElementType name="ArmorVSUnitCombatChange" content="textOnly"/>
-	<ElementType name="iArmorVSUnitCombatChange" content="textOnly" dt:type="int"/>
-	<ElementType name="ArmorVSUnitCombatChangeType" content="eltOnly">
-		<element type="ArmorVSUnitCombatChange"/>
-		<element type="iArmorVSUnitCombatChange"/>
-	</ElementType>
-	<ElementType name="ArmorVSUnitCombatChangeTypes" content="eltOnly">
-		<element type="ArmorVSUnitCombatChangeType" minOccurs="0" maxOccurs="*"/>
-	</ElementType>
-	<ElementType name="DodgeVSUnitCombat" content="textOnly"/>
-	<ElementType name="iDodgeVSUnitCombat" content="textOnly" dt:type="int"/>
-	<ElementType name="DodgeVSUnitCombatType" content="eltOnly">
-		<element type="DodgeVSUnitCombat"/>
-		<element type="iDodgeVSUnitCombat"/>
-	</ElementType>
-	<ElementType name="DodgeVSUnitCombatTypes" content="eltOnly">
-		<element type="DodgeVSUnitCombatType" minOccurs="0" maxOccurs="*"/>
-	</ElementType>
-	<ElementType name="DodgeVSUnitCombatChange" content="textOnly"/>
-	<ElementType name="iDodgeVSUnitCombatChange" content="textOnly" dt:type="int"/>
-	<ElementType name="DodgeVSUnitCombatChangeType" content="eltOnly">
-		<element type="DodgeVSUnitCombatChange"/>
-		<element type="iDodgeVSUnitCombatChange"/>
-	</ElementType>
-	<ElementType name="DodgeVSUnitCombatChangeTypes" content="eltOnly">
-		<element type="DodgeVSUnitCombatChangeType" minOccurs="0" maxOccurs="*"/>
-	</ElementType>
-	<ElementType name="PrecisionVSUnitCombat" content="textOnly"/>
-	<ElementType name="iPrecisionVSUnitCombat" content="textOnly" dt:type="int"/>
-	<ElementType name="PrecisionVSUnitCombatType" content="eltOnly">
-		<element type="PrecisionVSUnitCombat"/>
-		<element type="iPrecisionVSUnitCombat"/>
-	</ElementType>
-	<ElementType name="PrecisionVSUnitCombatTypes" content="eltOnly">
-		<element type="PrecisionVSUnitCombatType" minOccurs="0" maxOccurs="*"/>
-	</ElementType>
-	<ElementType name="PrecisionVSUnitCombatChange" content="textOnly"/>
-	<ElementType name="iPrecisionVSUnitCombatChange" content="textOnly" dt:type="int"/>
-	<ElementType name="PrecisionVSUnitCombatChangeType" content="eltOnly">
-		<element type="PrecisionVSUnitCombatChange"/>
-		<element type="iPrecisionVSUnitCombatChange"/>
-	</ElementType>
-	<ElementType name="PrecisionVSUnitCombatChangeTypes" content="eltOnly">
-		<element type="PrecisionVSUnitCombatChangeType" minOccurs="0" maxOccurs="*"/>
-	</ElementType>
-	<ElementType name="CriticalVSUnitCombat" content="textOnly"/>
-	<ElementType name="iCriticalVSUnitCombat" content="textOnly" dt:type="int"/>
-	<ElementType name="CriticalVSUnitCombatType" content="eltOnly">
-		<element type="CriticalVSUnitCombat"/>
-		<element type="iCriticalVSUnitCombat"/>
-	</ElementType>
-	<ElementType name="CriticalVSUnitCombatTypes" content="eltOnly">
-		<element type="CriticalVSUnitCombatType" minOccurs="0" maxOccurs="*"/>
-	</ElementType>
-	<ElementType name="CriticalVSUnitCombatChange" content="textOnly"/>
-	<ElementType name="iCriticalVSUnitCombatChange" content="textOnly" dt:type="int"/>
-	<ElementType name="CriticalVSUnitCombatChangeType" content="eltOnly">
-		<element type="CriticalVSUnitCombatChange"/>
-		<element type="iCriticalVSUnitCombatChange"/>
-	</ElementType>
-	<ElementType name="CriticalVSUnitCombatChangeTypes" content="eltOnly">
-		<element type="CriticalVSUnitCombatChangeType" minOccurs="0" maxOccurs="*"/>
 	</ElementType>
 	<ElementType name="AIWeightbyUnitCombatType" content="eltOnly">
 		<element type="UnitCombatType"/>
@@ -901,20 +663,6 @@
 		<element type="UnitCombatType"/>
 	</ElementType>
 	<!--Struct Vectors-->
-	<ElementType name="AfflictionFortitudeModifier" content="eltOnly">
-		<element type="PromotionLineType"/>
-		<element type="iModifier"/>
-	</ElementType>
-	<ElementType name="AfflictionFortitudeModifiers" content="eltOnly">
-		<element type="AfflictionFortitudeModifier" minOccurs="0" maxOccurs="*"/>
-	</ElementType>
-	<ElementType name="AfflictionFortitudeChangeModifier" content="eltOnly">
-		<element type="PromotionLineType"/>
-		<element type="iModifier"/>
-	</ElementType>
-	<ElementType name="AfflictionFortitudeChangeModifiers" content="eltOnly">
-		<element type="AfflictionFortitudeChangeModifier" minOccurs="0" maxOccurs="*"/>
-	</ElementType>
 	<ElementType name="TerrainAttackChangeModifiers" content="eltOnly">
 		<element type="TerrainAttackChangeModifier" minOccurs="0" maxOccurs="*"/>
 	</ElementType>
@@ -992,68 +740,9 @@
 		<element type="UnitCombatType"/>
 		<element type="iModifier"/>
 	</ElementType>
-	<ElementType name="RepelVSUnitCombatTypesChanges" content="eltOnly">
-		<element type="RepelVSUnitCombatTypesChange" minOccurs="0" maxOccurs="*"/>
-	</ElementType>
-	<ElementType name="RepelVSUnitCombatTypesChange" content="eltOnly">
-		<element type="UnitCombatType"/>
-		<element type="iModifier"/>
-	</ElementType>
-	<ElementType name="KnockbackVSUnitCombatTypesChanges" content="eltOnly">
-		<element type="KnockbackVSUnitCombatTypesChange" minOccurs="0" maxOccurs="*"/>
-	</ElementType>
-	<ElementType name="KnockbackVSUnitCombatTypesChange" content="eltOnly">
-		<element type="UnitCombatType"/>
-		<element type="iModifier"/>
-	</ElementType>
-	<ElementType name="PunctureVSUnitCombatTypesChanges" content="eltOnly">
-		<element type="PunctureVSUnitCombatTypesChange" minOccurs="0" maxOccurs="*"/>
-	</ElementType>
-	<ElementType name="PunctureVSUnitCombatTypesChange" content="eltOnly">
-		<element type="UnitCombatType"/>
-		<element type="iModifier"/>
-	</ElementType>
-	<ElementType name="ArmorVSUnitCombatTypesChanges" content="eltOnly">
-		<element type="ArmorVSUnitCombatTypesChange" minOccurs="0" maxOccurs="*"/>
-	</ElementType>
-	<ElementType name="ArmorVSUnitCombatTypesChange" content="eltOnly">
-		<element type="UnitCombatType"/>
-		<element type="iModifier"/>
-	</ElementType>
-	<ElementType name="DodgeVSUnitCombatTypesChanges" content="eltOnly">
-		<element type="DodgeVSUnitCombatTypesChange" minOccurs="0" maxOccurs="*"/>
-	</ElementType>
-	<ElementType name="DodgeVSUnitCombatTypesChange" content="eltOnly">
-		<element type="UnitCombatType"/>
-		<element type="iModifier"/>
-	</ElementType>
-	<ElementType name="PrecisionVSUnitCombatTypesChanges" content="eltOnly">
-		<element type="PrecisionVSUnitCombatTypesChange" minOccurs="0" maxOccurs="*"/>
-	</ElementType>
-	<ElementType name="PrecisionVSUnitCombatTypesChange" content="eltOnly">
-		<element type="UnitCombatType"/>
-		<element type="iModifier"/>
-	</ElementType>
-	<ElementType name="CriticalVSUnitCombatTypesChanges" content="eltOnly">
-		<element type="CriticalVSUnitCombatTypesChange" minOccurs="0" maxOccurs="*"/>
-	</ElementType>
-	<ElementType name="CriticalVSUnitCombatTypesChange" content="eltOnly">
-		<element type="UnitCombatType"/>
-		<element type="iModifier"/>
-	</ElementType>
 	<ElementType name="iImmediate" content="textOnly" dt:type="int"/>
 	<ElementType name="iMelee" content="textOnly" dt:type="int"/>
 	<ElementType name="iProbability" content="textOnly" dt:type="int"/>
-	<ElementType name="AfflictOnAttackType" content="eltOnly">
-		<element type="PromotionLineType" minOccurs="0" maxOccurs="*"/>
-		<element type="iProbability" minOccurs="0" maxOccurs="*"/>
-		<element type="iMelee" minOccurs="0" maxOccurs="*"/>
-		<element type="iDistance" minOccurs="0" maxOccurs="*"/>
-		<element type="iImmediate" minOccurs="0" maxOccurs="*"/>
-	</ElementType>
-	<ElementType name="AfflictOnAttackTypes" content="eltOnly">
-		<element type="AfflictOnAttackType" minOccurs="0" maxOccurs="*"/>
-	</ElementType>
 	<ElementType name="bRequiresAccess" content="textOnly" dt:type="boolean"/>
 	<ElementType name="PlaceBonusType" content="eltOnly">
 		<element type="BonusType" minOccurs="0" maxOccurs="*"/>
@@ -1084,16 +773,6 @@
 	</ElementType>
 	<ElementType name="HealUnitCombatChangeTypes" content="eltOnly">
 		<element type="HealUnitCombatChangeType" minOccurs="0" maxOccurs="*"/>
-	</ElementType>
-	<ElementType name="AfflictOnAttackChangeType" content="eltOnly">
-		<element type="PromotionLineType" minOccurs="0" maxOccurs="*"/>
-		<element type="iProbability" minOccurs="0" maxOccurs="*"/>
-		<element type="iMelee" minOccurs="0" maxOccurs="*"/>
-		<element type="iDistance" minOccurs="0" maxOccurs="*"/>
-		<element type="iImmediate" minOccurs="0" maxOccurs="*"/>
-	</ElementType>
-	<ElementType name="AfflictOnAttackChangeTypes" content="eltOnly">
-		<element type="AfflictOnAttackChangeType" minOccurs="0" maxOccurs="*"/>
 	</ElementType>
 	<ElementType name="InvisibleTerrainChange" content="eltOnly">
 		<element type="InvisibleType"/>
@@ -1783,7 +1462,6 @@
 		<element type="VisibleFeatureRangeChanges" minOccurs="0"/>
 		<element type="VisibleImprovementRangeChanges" minOccurs="0"/>
 		<element type="EnabledCivilizationTypes" minOccurs="0"/>
-		<element type="DistanceAttackCommunicabilityTypeChanges" minOccurs="0"/>
 		<element type="bNoNonTypeProdMods" minOccurs="0"/>
 		<element type="bFood" minOccurs="0"/>
 		<element type="bNoBadGoodies" minOccurs="0"/>
@@ -1927,52 +1605,20 @@
 		<element type="WithdrawModifierOnFeatureTypes" minOccurs="0"/>
 		<element type="bFliesToMove" minOccurs="0"/>
 		<element type="iVSBarbs" minOccurs="0"/>
-		<element type="iArmor" minOccurs="0"/>
-		<element type="iPuncture" minOccurs="0"/>
-		<element type="iDodgeModifier" minOccurs="0"/>
-		<element type="iPrecisionModifier" minOccurs="0"/>
 		<element type="iDamageModifier" minOccurs="0"/>
-		<element type="iOverrun" minOccurs="0"/>
-		<element type="iRepel" minOccurs="0"/>
-		<element type="iFortRepel" minOccurs="0"/>
-		<element type="iRepelRetries" minOccurs="0"/>
-		<element type="iUnyielding" minOccurs="0"/>
-		<element type="iKnockback" minOccurs="0"/>
-		<element type="iKnockbackRetries" minOccurs="0"/>
-		<element type="iStrAdjperRnd" minOccurs="0"/>
-		<element type="iStrAdjperAtt" minOccurs="0"/>
-		<element type="iStrAdjperDef" minOccurs="0"/>
-		<element type="iWithdrawAdjperAtt" minOccurs="0"/>
 		<element type="iUnnerve" minOccurs="0"/>
 		<element type="iEnclose" minOccurs="0"/>
 		<element type="iLunge" minOccurs="0"/>
 		<element type="iDynamicDefense" minOccurs="0"/>
 		<element type="iPoisonProbabilityModifier" minOccurs="0"/>
-		<element type="iFortitude" minOccurs="0"/>
 		<element type="AidChanges" minOccurs="0"/>
-		<element type="iFrontSupportPercent" minOccurs="0"/>
-		<element type="iShortRangeSupportPercent" minOccurs="0"/>
-		<element type="iMediumRangeSupportPercent" minOccurs="0"/>
-		<element type="iLongRangeSupportPercent" minOccurs="0"/>
-		<element type="iFlankSupportPercent" minOccurs="0"/>
 		<element type="bStampede" minOccurs="0"/>
 		<element type="iAnimalIgnoresBorders" minOccurs="0"/>
 		<element type="bOnslaught" minOccurs="0"/>
-		<element type="AfflictOnAttackTypes" minOccurs="0"/>
-		<element type="CureAfflictionTypes" minOccurs="0"/>
-		<element type="AfflictionFortitudeModifiers" minOccurs="0"/>
-		<element type="iCriticalModifier" minOccurs="0"/>
 		<element type="iEndurance" minOccurs="0"/>
 		<element type="FlankingStrikesbyUnitCombat" minOccurs="0"/>
 		<element type="WithdrawVSUnitCombatTypes" minOccurs="0"/>
 		<element type="PursuitVSUnitCombatTypes" minOccurs="0"/>
-		<element type="RepelVSUnitCombatTypes" minOccurs="0"/>
-		<element type="KnockbackVSUnitCombatTypes" minOccurs="0"/>
-		<element type="PunctureVSUnitCombatTypes" minOccurs="0"/>
-		<element type="ArmorVSUnitCombatTypes" minOccurs="0"/>
-		<element type="DodgeVSUnitCombatTypes" minOccurs="0"/>
-		<element type="PrecisionVSUnitCombatTypes" minOccurs="0"/>
-		<element type="CriticalVSUnitCombatTypes" minOccurs="0"/>
 		<element type="TerrainWorkRateModifierTypes" minOccurs="0"/>
 		<element type="FeatureWorkRateModifierTypes" minOccurs="0"/>
 		<element type="BuildWorkRateModifierTypes" minOccurs="0"/>
@@ -2201,9 +1847,6 @@
 	<ElementType name="Promotion" content="textOnly"/>
 	<ElementType name="ObsoleteTech" content="textOnly"/>
 	<ElementType name="IgnoreTerrainDamage" content="textOnly"/>
-	<ElementType name="PromotionOverwrites" content="eltOnly">
-		<element type="Promotion" minOccurs="0"/>
-	</ElementType>
 	<ElementType name="bImmuneToFirstStrikes" content="textOnly" dt:type="boolean"/>
 	<ElementType name="iVisibilityChange" content="textOnly" dt:type="int"/>
 	<ElementType name="iMovesChange" content="textOnly" dt:type="int"/>
@@ -2280,7 +1923,6 @@
 		<element type="PrereqBonusTypes" minOccurs="0"/>
 		<element type="NotOnUnitCombatTypes" minOccurs="0"/>
 		<element type="NotOnDomainTypes" minOccurs="0"/>
-		<element type="NoAutoEquiptoCombatClassTypes" minOccurs="0"/>
 		<element type="OnGameOptions" minOccurs="0"/>
 		<element type="NotOnGameOptions" minOccurs="0"/>
 		<element type="FreetoUnitCombats" minOccurs="0"/>
@@ -2302,7 +1944,6 @@
 		<element type="PrereqImprovementTypes" minOccurs="0"/>
 		<element type="PrereqPlotBonusTypes" minOccurs="0"/>
 		<element type="PrereqLocalBuildingTypes" minOccurs="0"/>
-		<element type="DistanceAttackCommunicabilityTypeChanges" minOccurs="0"/>
 		<element type="iLevelPrereq" minOccurs="0"/>
 		<element type="ReplacesUnitCombat" minOccurs="0"/>
 		<element type="bZeroesXP" minOccurs="0"/>
@@ -2349,38 +1990,17 @@
 		<element type="bFliesToMoveAdd" minOccurs="0"/>
 		<element type="bFliesToMoveSubtract" minOccurs="0"/>
 		<element type="iVSBarbsChange" minOccurs="0"/>
-		<element type="iArmorChange" minOccurs="0"/>
-		<element type="iPunctureChange" minOccurs="0"/>
-		<element type="iDodgeModifierChange" minOccurs="0"/>
-		<element type="iPrecisionModifierChange" minOccurs="0"/>
 		<element type="iDamageModifierChange" minOccurs="0"/>
-		<element type="iOverrunChange" minOccurs="0"/>
-		<element type="iRepelChange" minOccurs="0"/>
-		<element type="iFortRepelChange" minOccurs="0"/>
-		<element type="iRepelRetriesChange" minOccurs="0"/>
-		<element type="iUnyieldingChange" minOccurs="0"/>
-		<element type="iKnockbackChange" minOccurs="0"/>
-		<element type="iKnockbackRetriesChange" minOccurs="0"/>
-		<element type="iStrAdjperRndChange" minOccurs="0"/>
-		<element type="iStrAdjperAttChange" minOccurs="0"/>
-		<element type="iStrAdjperDefChange" minOccurs="0"/>
-		<element type="iWithdrawAdjperAttChange" minOccurs="0"/>
 		<element type="iUnnerveChange" minOccurs="0"/>
 		<element type="iEncloseChange" minOccurs="0"/>
 		<element type="iLungeChange" minOccurs="0"/>
 		<element type="iDynamicDefenseChange" minOccurs="0"/>
 		<element type="iPoisonProbabilityModifierChange" minOccurs="0"/>
 		<element type="iStrengthChange" minOccurs="0"/>
-		<element type="iFortitudeChange" minOccurs="0"/>
 		<element type="iDamageperTurn" minOccurs="0"/>
 		<element type="iStrAdjperTurn" minOccurs="0"/>
 		<element type="iWeakenperTurn" minOccurs="0"/>
 		<element type="AidChanges" minOccurs="0"/>
-		<element type="iFrontSupportPercentChange" minOccurs="0"/>
-		<element type="iShortRangeSupportPercentChange" minOccurs="0"/>
-		<element type="iMediumRangeSupportPercentChange" minOccurs="0"/>
-		<element type="iLongRangeSupportPercentChange" minOccurs="0"/>
-		<element type="iFlankSupportPercentChange" minOccurs="0"/>
 		<element type="iUpkeepModifier" minOccurs="0"/>
 		<element type="iExtraUpkeep100" minOccurs="0"/>
 		<element type="bStampedeChange" minOccurs="0"/>
@@ -2390,22 +2010,11 @@
 		<element type="bOnslaughtChange" minOccurs="0"/>
 		<element type="bParalyze" minOccurs="0"/>
 		<element type="HealUnitCombatChangeTypes" minOccurs="0"/>
-		<element type="AfflictOnAttackChangeTypes" minOccurs="0"/>
-		<element type="CureAfflictionChangeTypes" minOccurs="0"/>
-		<element type="AfflictionFortitudeChangeModifiers" minOccurs="0"/>
-		<element type="iCriticalModifierChange" minOccurs="0"/>
 		<element type="iEnduranceChange" minOccurs="0"/>
 		<element type="iGatherHerdChange" minOccurs="0"/>
 		<element type="FlankingStrikesbyUnitCombatChange" minOccurs="0"/>
 		<element type="WithdrawVSUnitCombatChangeTypes" minOccurs="0"/>
 		<element type="PursuitVSUnitCombatChangeTypes" minOccurs="0"/>
-		<element type="RepelVSUnitCombatChangeTypes" minOccurs="0"/>
-		<element type="KnockbackVSUnitCombatChangeTypes" minOccurs="0"/>
-		<element type="PunctureVSUnitCombatChangeTypes" minOccurs="0"/>
-		<element type="ArmorVSUnitCombatChangeTypes" minOccurs="0"/>
-		<element type="DodgeVSUnitCombatChangeTypes" minOccurs="0"/>
-		<element type="PrecisionVSUnitCombatChangeTypes" minOccurs="0"/>
-		<element type="CriticalVSUnitCombatChangeTypes" minOccurs="0"/>
 		<element type="BuildWorkRateModifierChangeTypes" minOccurs="0"/>
 		<element type="AddsBuildTypes" minOccurs="0"/>
 		<element type="iCaptureProbabilityModifierChange" minOccurs="0"/>
@@ -2778,30 +2387,10 @@
 		<element type="PrereqTech" minOccurs="0"/>
 		<element type="ObsoleteTech" minOccurs="0"/>
 		<element type="Categories" minOccurs="0"/>
-		<element type="iCommunicability" minOccurs="0"/>
-		<element type="iOutbreakModifier" minOccurs="0"/>
-		<element type="iOvercomeModifier" minOccurs="0"/>
-		<element type="iOvercomeProbability" minOccurs="0"/>
-		<element type="iOvercomeAdjperTurn" minOccurs="0"/>
-		<element type="iToleranceBuildup" minOccurs="0"/>
-		<element type="iToleranceDecay" minOccurs="0"/>
-		<element type="iWorseningProbabilityIncrementModifier" minOccurs="0"/>
-		<element type="iWorsenedCommunicabilityIncrementModifier" minOccurs="0"/>
-		<element type="iWorsenedOvercomeIncrementModifier" minOccurs="0"/>
 		<element type="UnitCombatContractChanceChanges" minOccurs="0"/>
-		<element type="UnitCombatOvercomeChanges" minOccurs="0"/>
 		<element type="TechContractChanceChanges" minOccurs="0"/>
-		<element type="TechOvercomeChanges" minOccurs="0"/>
-		<element type="bNoSpreadonBattle" minOccurs="0"/>
-		<element type="bNoSpreadUnitProximity" minOccurs="0"/>
-		<element type="bNoSpreadUnittoCity" minOccurs="0"/>
-		<element type="bNoSpreadCitytoUnit" minOccurs="0"/>
-		<element type="bAffliction" minOccurs="0"/>
-		<element type="bEquipment" minOccurs="0"/>
-		<element type="bCritical" minOccurs="0"/>
 		<element type="bBuildUp" minOccurs="0"/>
 		<element type="bPoison" minOccurs="0"/>
-		<element type="CriticalOriginCombatClassTypes" minOccurs="0"/>
 	</ElementType>
 	<ElementType name="PromotionLineInfos" content="eltOnly">
 		<element type="PromotionLineInfo" maxOccurs="*"/>
@@ -2843,7 +2432,6 @@
 		<element type="VisibleTerrainRangeChanges" minOccurs="0"/>
 		<element type="VisibleFeatureRangeChanges" minOccurs="0"/>
 		<element type="VisibleImprovementRangeChanges" minOccurs="0"/>
-		<element type="DistanceAttackCommunicabilityTypeChanges" minOccurs="0"/>
 		<element type="iVisibilityChange" minOccurs="0"/>
 		<element type="iMovesChange" minOccurs="0"/>
 		<element type="iMoveDiscountChange" minOccurs="0"/>
@@ -2897,34 +2485,13 @@
 		<element type="bFliesToMoveAdd" minOccurs="0"/>
 		<element type="bFliesToMoveSubtract" minOccurs="0"/>
 		<element type="iVSBarbsChange" minOccurs="0"/>
-		<element type="iArmorChange" minOccurs="0"/>
-		<element type="iPunctureChange" minOccurs="0"/>
-		<element type="iOverrunChange" minOccurs="0"/>
-		<element type="iRepelChange" minOccurs="0"/>
-		<element type="iFortRepelChange" minOccurs="0"/>
-		<element type="iRepelRetriesChange" minOccurs="0"/>
-		<element type="iUnyieldingChange" minOccurs="0"/>
-		<element type="iKnockbackChange" minOccurs="0"/>
-		<element type="iKnockbackRetriesChange" minOccurs="0"/>
-		<element type="iStrAdjperAttChange" minOccurs="0"/>
-		<element type="iStrAdjperDefChange" minOccurs="0"/>
-		<element type="iWithdrawAdjperAttChange" minOccurs="0"/>
 		<element type="iUnnerveChange" minOccurs="0"/>
 		<element type="iEncloseChange" minOccurs="0"/>
 		<element type="iLungeChange" minOccurs="0"/>
 		<element type="iDynamicDefenseChange" minOccurs="0"/>
 		<element type="iStrengthChange" minOccurs="0"/>
-		<element type="iFortitudeChange" minOccurs="0"/>
 		<element type="AidChanges" minOccurs="0"/>
-		<element type="iFrontSupportPercentChange" minOccurs="0"/>
-		<element type="iShortRangeSupportPercentChange" minOccurs="0"/>
-		<element type="iMediumRangeSupportPercentChange" minOccurs="0"/>
-		<element type="iLongRangeSupportPercentChange" minOccurs="0"/>
-		<element type="iFlankSupportPercentChange" minOccurs="0"/>
-		<element type="iDodgeModifierChange" minOccurs="0"/>
-		<element type="iPrecisionModifierChange" minOccurs="0"/>
 		<element type="iDamageModifierChange" minOccurs="0"/>
-		<element type="iCriticalModifierChange" minOccurs="0"/>
 		<element type="iEnduranceChange" minOccurs="0"/>
 		<element type="iPoisonProbabilityModifierChange" minOccurs="0"/>
 		<element type="iCaptureProbabilityModifierChange" minOccurs="0"/>
@@ -2998,13 +2565,11 @@
 		<element type="bForNavalMilitary" minOccurs="0"/>
 		<element type="bHealsAs" minOccurs="0"/>
 		<element type="DomainMods" minOccurs="0"/>
-		<element type="CureAfflictionChangeTypes" minOccurs="0"/>
 		<element type="TerrainIgnoreDamageChangeTypes" minOccurs="0"/>
 		<element type="TerrainDoubleMoveChangeTypes" minOccurs="0"/>
 		<element type="FeatureDoubleMoveChangeTypes" minOccurs="0"/>
 		<element type="OnGameOptions" minOccurs="0"/>
 		<element type="NotOnGameOptions" minOccurs="0"/>
-		<element type="AfflictionFortitudeChangeModifiers" minOccurs="0"/>
 		<element type="TerrainAttackChangeModifiers" minOccurs="0"/>
 		<element type="TerrainDefenseChangeModifiers" minOccurs="0"/>
 		<element type="TerrainWorkChangeModifiers" minOccurs="0"/>
@@ -3016,14 +2581,6 @@
 		<element type="FlankingStrengthbyUnitCombatTypesChanges" minOccurs="0"/>
 		<element type="WithdrawVSUnitCombatTypesChanges" minOccurs="0"/>
 		<element type="PursuitVSUnitCombatTypesChanges" minOccurs="0"/>
-		<element type="RepelVSUnitCombatTypesChanges" minOccurs="0"/>
-		<element type="KnockbackVSUnitCombatTypesChanges" minOccurs="0"/>
-		<element type="PunctureVSUnitCombatTypesChanges" minOccurs="0"/>
-		<element type="ArmorVSUnitCombatTypesChanges" minOccurs="0"/>
-		<element type="DodgeVSUnitCombatTypesChanges" minOccurs="0"/>
-		<element type="PrecisionVSUnitCombatTypesChanges" minOccurs="0"/>
-		<element type="CriticalVSUnitCombatTypesChanges" minOccurs="0"/>
-		<element type="AfflictOnAttackChangeTypes" minOccurs="0"/>
 		<element type="TrapAvoidanceUnitCombatTypes" minOccurs="0"/>
 		<element type="TrapImmunityUnitCombatTypes" minOccurs="0"/>
 		<element type="iDCMBombRangeBase" minOccurs="0"/>
@@ -3055,4 +2612,24 @@
 		<element type="Category" maxOccurs="*"/>
 	</ElementType>
 	<ElementType name="Category" content="textOnly"/>
+    <!-- Restored: element definitions accidentally removed during the combat-stat/affliction/equipment XML cleanup (these are live, still referenced and read by the DLL). -->
+    <ElementType name="PromotionOverwrites" content="eltOnly">
+        <element type="Promotion" minOccurs="0"/>
+    </ElementType>
+    <ElementType name="bParalyze" content="textOnly" dt:type="boolean"/>
+    <ElementType name="bUnlimitedException" content="textOnly" dt:type="boolean"/>
+    <ElementType name="iAidChange" content="textOnly" dt:type="int"/>
+    <ElementType name="iDamageModifier" content="textOnly" dt:type="int"/>
+    <ElementType name="iDamageModifierChange" content="textOnly" dt:type="int"/>
+    <ElementType name="iEndurance" content="textOnly" dt:type="int"/>
+    <ElementType name="iEnduranceChange" content="textOnly" dt:type="int"/>
+    <ElementType name="iPoisonProbabilityModifier" content="textOnly" dt:type="int"/>
+    <ElementType name="iPoisonProbabilityModifierChange" content="textOnly" dt:type="int"/>
+    <ElementType name="iStrAdjperTurn" content="textOnly" dt:type="int"/>
+    <ElementType name="iTrapComplexity" content="textOnly" dt:type="int"/>
+    <ElementType name="iTrapDamageMax" content="textOnly" dt:type="int"/>
+    <ElementType name="iTrapDamageMin" content="textOnly" dt:type="int"/>
+    <ElementType name="iVSBarbs" content="textOnly" dt:type="int"/>
+    <ElementType name="iVSBarbsChange" content="textOnly" dt:type="int"/>
+    <ElementType name="iWeakenperTurn" content="textOnly" dt:type="int"/>
 </Schema>

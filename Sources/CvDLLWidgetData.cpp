@@ -3349,10 +3349,6 @@ void CvDLLWidgetData::parseActionHelp(CvWidgetDataStruct &widgetDataStruct, CvWS
 			{
 				GAMETEXT.parsePromotionHelpInternal(szBuffer, ((PromotionTypes)(GC.getActionInfo(widgetDataStruct.m_iData1).getCommandData())), NEWLINE, false);
 			}
-			else if (GC.getActionInfo(widgetDataStruct.m_iData1).getCommandType() == COMMAND_REEQUIP)
-			{
-				GAMETEXT.parsePromotionHelpInternal(szBuffer, ((PromotionTypes)(GC.getActionInfo(widgetDataStruct.m_iData1).getCommandData())), NEWLINE, false);
-			}
 			else if (GC.getActionInfo(widgetDataStruct.m_iData1).getCommandType() == COMMAND_STATUS)
 			{
 				GAMETEXT.parsePromotionHelpInternal(szBuffer, ((PromotionTypes)(GC.getActionInfo(widgetDataStruct.m_iData1).getCommandData())), NEWLINE, false);

@@ -13,9 +13,7 @@
 			</Categories>
 			<iEarlyWithdrawChange>25</iEarlyWithdrawChange>
 			<iTauntChange>50</iTauntChange>
-			<iDodgeModifierChange>20</iDodgeModifierChange>
 			<iDamageModifierChange>-20</iDamageModifierChange>
-			<iPrecisionModifierChange>10</iPrecisionModifierChange>
 			<iCaptureResistanceModifierChange>-20</iCaptureResistanceModifierChange>
 			<FeatureDoubleMoveChangeTypes>
 				<FeatureType>FEATURE_REEF</FeatureType>
@@ -847,22 +845,6 @@
 				<DefaultStatusType>PROMOTION_STANDOUT_STATUS_HS_SM</DefaultStatusType>
 			</DefaultStatusTypes>
 			<iCaptureResistanceModifierChange>10</iCaptureResistanceModifierChange>
-			<KnockbackVSUnitCombatTypesChanges>
-				<KnockbackVSUnitCombatTypesChange>
-					<UnitCombatType>UNITCOMBAT_WILD</UnitCombatType>
-					<iModifier>50</iModifier>
-				</KnockbackVSUnitCombatTypesChange>
-				<KnockbackVSUnitCombatTypesChange>
-					<UnitCombatType>UNITCOMBAT_CIVILIAN</UnitCombatType>
-					<iModifier>25</iModifier>
-				</KnockbackVSUnitCombatTypesChange>
-			</KnockbackVSUnitCombatTypesChanges>
-			<RepelVSUnitCombatTypesChanges>
-				<RepelVSUnitCombatTypesChange>
-					<UnitCombatType>UNITCOMBAT_WILD</UnitCombatType>
-					<iModifier>50</iModifier>
-				</RepelVSUnitCombatTypesChange>
-			</RepelVSUnitCombatTypesChanges>
 			<VisibilityIntensityChangeTypes>
 				<VisibilityIntensityChangeType>
 					<InvisibleType>INVISIBLE_CAMOUFLAGE</InvisibleType>
@@ -1056,8 +1038,6 @@
 			<iDynamicDefenseChange>5</iDynamicDefenseChange>
 			<iCombatModifierPerSizeMoreChange>-5</iCombatModifierPerSizeMoreChange>
 			<iCombatModifierPerSizeLessChange>5</iCombatModifierPerSizeLessChange>
-			<iDodgeModifierChange>5</iDodgeModifierChange>
-			<iPrecisionModifierChange>5</iPrecisionModifierChange>
 			<iWithdrawalChange>10</iWithdrawalChange>
 			<UnitCombatChangeModifiers>
 				<UnitCombatChangeModifier>
@@ -1101,7 +1081,6 @@
 				<Category>CATEGORY_UNITCOMBAT_GROUP_PRIMARY_ROLE</Category>
 			</Categories>
 			<iEarlyWithdrawChange>25</iEarlyWithdrawChange>
-			<iDodgeModifierChange>15</iDodgeModifierChange>
 			<iDamageModifierChange>-15</iDamageModifierChange>
 			<iCombatModifierPerVolumeMoreChange>-5</iCombatModifierPerVolumeMoreChange>
 			<GGptsforUnitTypes>
@@ -1184,8 +1163,6 @@
 			<Categories>
 				<Category>CATEGORY_UNITCOMBAT_GROUP_SIZE</Category>
 			</Categories>
-			<iDodgeModifierChange>40</iDodgeModifierChange>
-			<iPrecisionModifierChange>40</iPrecisionModifierChange>
 			<iDamageModifierChange>-40</iDamageModifierChange>
 			<OnGameOptions>
 				<GameOptionType>GAMEOPTION_COMBAT_SIZE_MATTERS</GameOptionType>
@@ -1223,8 +1200,6 @@
 			<Categories>
 				<Category>CATEGORY_UNITCOMBAT_GROUP_SIZE</Category>
 			</Categories>
-			<iDodgeModifierChange>30</iDodgeModifierChange>
-			<iPrecisionModifierChange>30</iPrecisionModifierChange>
 			<iDamageModifierChange>-30</iDamageModifierChange>
 			<OnGameOptions>
 				<GameOptionType>GAMEOPTION_COMBAT_SIZE_MATTERS</GameOptionType>
@@ -1262,8 +1237,6 @@
 			<Categories>
 				<Category>CATEGORY_UNITCOMBAT_GROUP_SIZE</Category>
 			</Categories>
-			<iDodgeModifierChange>20</iDodgeModifierChange>
-			<iPrecisionModifierChange>20</iPrecisionModifierChange>
 			<iDamageModifierChange>-20</iDamageModifierChange>
 			<OnGameOptions>
 				<GameOptionType>GAMEOPTION_COMBAT_SIZE_MATTERS</GameOptionType>
@@ -1301,8 +1274,6 @@
 			<Categories>
 				<Category>CATEGORY_UNITCOMBAT_GROUP_SIZE</Category>
 			</Categories>
-			<iDodgeModifierChange>10</iDodgeModifierChange>
-			<iPrecisionModifierChange>10</iPrecisionModifierChange>
 			<iDamageModifierChange>-10</iDamageModifierChange>
 			<OnGameOptions>
 				<GameOptionType>GAMEOPTION_COMBAT_SIZE_MATTERS</GameOptionType>
@@ -1352,8 +1323,6 @@
 			<Categories>
 				<Category>CATEGORY_UNITCOMBAT_GROUP_SIZE</Category>
 			</Categories>
-			<iDodgeModifierChange>-10</iDodgeModifierChange>
-			<iPrecisionModifierChange>-10</iPrecisionModifierChange>
 			<iDamageModifierChange>10</iDamageModifierChange>
 			<OnGameOptions>
 				<GameOptionType>GAMEOPTION_COMBAT_SIZE_MATTERS</GameOptionType>
@@ -1389,8 +1358,6 @@
 			<Categories>
 				<Category>CATEGORY_UNITCOMBAT_GROUP_SIZE</Category>
 			</Categories>
-			<iDodgeModifierChange>-20</iDodgeModifierChange>
-			<iPrecisionModifierChange>-20</iPrecisionModifierChange>
 			<iDamageModifierChange>20</iDamageModifierChange>
 			<OnGameOptions>
 				<GameOptionType>GAMEOPTION_COMBAT_SIZE_MATTERS</GameOptionType>
@@ -1426,8 +1393,6 @@
 			<Categories>
 				<Category>CATEGORY_UNITCOMBAT_GROUP_SIZE</Category>
 			</Categories>
-			<iDodgeModifierChange>-30</iDodgeModifierChange>
-			<iPrecisionModifierChange>-30</iPrecisionModifierChange>
 			<iDamageModifierChange>30</iDamageModifierChange>
 			<OnGameOptions>
 				<GameOptionType>GAMEOPTION_COMBAT_SIZE_MATTERS</GameOptionType>
@@ -1463,8 +1428,6 @@
 			<Categories>
 				<Category>CATEGORY_UNITCOMBAT_GROUP_SIZE</Category>
 			</Categories>
-			<iDodgeModifierChange>-40</iDodgeModifierChange>
-			<iPrecisionModifierChange>-40</iPrecisionModifierChange>
 			<iDamageModifierChange>40</iDamageModifierChange>
 			<OnGameOptions>
 				<GameOptionType>GAMEOPTION_COMBAT_SIZE_MATTERS</GameOptionType>
@@ -1502,8 +1465,6 @@
 			</Categories>
 			<iWithdrawalChange>-5</iWithdrawalChange>
 			<iPursuitChange>-5</iPursuitChange>
-			<iDodgeModifierChange>-5</iDodgeModifierChange>
-			<iPrecisionModifierChange>-5</iPrecisionModifierChange>
 			<iCaptureProbabilityModifierChange>-10</iCaptureProbabilityModifierChange>
 			<iCaptureResistanceModifierChange>-10</iCaptureResistanceModifierChange>
 			<Button>Art/Interface/Buttons/units/sparth/categories/speed_slow.dds</Button>
@@ -1516,8 +1477,6 @@
 			</Categories>
 			<iWithdrawalChange>5</iWithdrawalChange>
 			<iPursuitChange>5</iPursuitChange>
-			<iDodgeModifierChange>5</iDodgeModifierChange>
-			<iPrecisionModifierChange>5</iPrecisionModifierChange>
 			<iCaptureProbabilityModifierChange>10</iCaptureProbabilityModifierChange>
 			<iCaptureResistanceModifierChange>10</iCaptureResistanceModifierChange>
 			<Button>Art/Interface/Buttons/units/sparth/categories/speed_fast.dds</Button>
@@ -2275,248 +2234,6 @@
 			<Button>Art/Interface/Buttons/units/sparth/categories/wields_a2g.dds</Button>
 		</UnitCombatInfo>
 		<UnitCombatInfo>
-			<Type>UNITCOMBAT_WEAPON_STYLE_H2H_SINGLE_HAND_ONLY</Type>
-			<Description>TXT_KEY_UNITCOMBAT_WEAPON_STYLE_H2H_SINGLE_HAND_ONLY</Description>
-			<Categories>
-				<Category>CATEGORY_UNITCOMBAT_GROUP_WEAPON_STYLE</Category>
-			</Categories>
-			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_COMBAT_UPRANGE</GameOptionType>
-			</OnGameOptions>
-			<Button>Art/Interface/Buttons/units/sparth/categories/style_h2h.dds</Button>
-		</UnitCombatInfo>
-		<UnitCombatInfo>
-			<Type>UNITCOMBAT_WEAPON_STYLE_H2H_PRIMARY_PLUS_SECONDARY</Type>
-			<Description>TXT_KEY_UNITCOMBAT_WEAPON_STYLE_H2H_PRIMARY_PLUS_SECONDARY</Description>
-			<Categories>
-				<Category>CATEGORY_UNITCOMBAT_GROUP_WEAPON_STYLE</Category>
-			</Categories>
-			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_COMBAT_EQUIPMENT</GameOptionType>
-			</OnGameOptions>
-			<Button>Art/Interface/Buttons/units/sparth/categories/style_h2h.dds</Button>
-		</UnitCombatInfo>
-		<UnitCombatInfo>
-			<Type>UNITCOMBAT_WEAPON_STYLE_H2H_SINGLE_PLUS_SHIELD</Type>
-			<Description>TXT_KEY_UNITCOMBAT_WEAPON_STYLE_H2H_SINGLE_PLUS_SHIELD</Description>
-			<Categories>
-				<Category>CATEGORY_UNITCOMBAT_GROUP_WEAPON_STYLE</Category>
-			</Categories>
-			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_COMBAT_EQUIPMENT</GameOptionType>
-			</OnGameOptions>
-			<Button>Art/Interface/Buttons/units/sparth/categories/style_h2h.dds</Button>
-		</UnitCombatInfo>
-		<UnitCombatInfo>
-			<Type>UNITCOMBAT_WEAPON_STYLE_H2H_TWO_HANDED</Type>
-			<Description>TXT_KEY_UNITCOMBAT_WEAPON_STYLE_H2H_TWO_HANDED</Description>
-			<Categories>
-				<Category>CATEGORY_UNITCOMBAT_GROUP_WEAPON_STYLE</Category>
-			</Categories>
-			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_COMBAT_EQUIPMENT</GameOptionType>
-			</OnGameOptions>
-			<Button>Art/Interface/Buttons/units/sparth/categories/style_h2h.dds</Button>
-		</UnitCombatInfo>
-		<UnitCombatInfo>
-			<Type>UNITCOMBAT_WEAPON_STYLE_H2H_TWO_HANDED_PLUS_SHIELD</Type>
-			<Description>TXT_KEY_UNITCOMBAT_WEAPON_STYLE_H2H_TWO_HANDED_PLUS_SHIELD</Description>
-			<Categories>
-				<Category>CATEGORY_UNITCOMBAT_GROUP_WEAPON_STYLE</Category>
-			</Categories>
-			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_COMBAT_EQUIPMENT</GameOptionType>
-			</OnGameOptions>
-			<Button>Art/Interface/Buttons/units/sparth/categories/style_h2h.dds</Button>
-		</UnitCombatInfo>
-		<UnitCombatInfo>
-			<Type>UNITCOMBAT_WEAPON_STYLE_H2H_VEHICULAR</Type>
-			<Description>TXT_KEY_UNITCOMBAT_WEAPON_STYLE_H2H_VEHICULAR</Description>
-			<Categories>
-				<Category>CATEGORY_UNITCOMBAT_GROUP_WEAPON_STYLE</Category>
-			</Categories>
-			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_COMBAT_EQUIPMENT</GameOptionType>
-			</OnGameOptions>
-			<Button>Art/Interface/Buttons/units/sparth/categories/style_h2h.dds</Button>
-		</UnitCombatInfo>
-		<UnitCombatInfo>
-			<Type>UNITCOMBAT_WEAPON_STYLE_SIDEARM_SINGLE_HAND_ONLY</Type>
-			<Description>TXT_KEY_UNITCOMBAT_WEAPON_STYLE_SIDEARM_SINGLE_HAND_ONLY</Description>
-			<Categories>
-				<Category>CATEGORY_UNITCOMBAT_GROUP_WEAPON_STYLE</Category>
-			</Categories>
-			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_COMBAT_EQUIPMENT</GameOptionType>
-			</OnGameOptions>
-			<Button>Art/Interface/Buttons/units/sparth/categories/style_sidearm.dds</Button>
-		</UnitCombatInfo>
-		<UnitCombatInfo>
-			<Type>UNITCOMBAT_WEAPON_STYLE_SIDEARM_PRIMARY_PLUS_SECONDARY</Type>
-			<Description>TXT_KEY_UNITCOMBAT_WEAPON_STYLE_SIDEARM_PRIMARY_PLUS_SECONDARY</Description>
-			<Categories>
-				<Category>CATEGORY_UNITCOMBAT_GROUP_WEAPON_STYLE</Category>
-			</Categories>
-			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_COMBAT_EQUIPMENT</GameOptionType>
-			</OnGameOptions>
-			<Button>Art/Interface/Buttons/units/sparth/categories/style_sidearm.dds</Button>
-		</UnitCombatInfo>
-		<UnitCombatInfo>
-			<Type>UNITCOMBAT_WEAPON_STYLE_SIDEARM_SINGLE_PLUS_SHIELD</Type>
-			<Description>TXT_KEY_UNITCOMBAT_WEAPON_STYLE_SIDEARM_SINGLE_PLUS_SHIELD</Description>
-			<Categories>
-				<Category>CATEGORY_UNITCOMBAT_GROUP_WEAPON_STYLE</Category>
-			</Categories>
-			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_COMBAT_EQUIPMENT</GameOptionType>
-			</OnGameOptions>
-			<Button>Art/Interface/Buttons/units/sparth/categories/style_sidearm.dds</Button>
-		</UnitCombatInfo>
-		<UnitCombatInfo>
-			<Type>UNITCOMBAT_WEAPON_STYLE_SIDEARM_TWO_HANDED</Type>
-			<Description>TXT_KEY_UNITCOMBAT_WEAPON_STYLE_SIDEARM_TWO_HANDED</Description>
-			<Categories>
-				<Category>CATEGORY_UNITCOMBAT_GROUP_WEAPON_STYLE</Category>
-			</Categories>
-			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_COMBAT_EQUIPMENT</GameOptionType>
-			</OnGameOptions>
-			<Button>Art/Interface/Buttons/units/sparth/categories/style_sidearm.dds</Button>
-		</UnitCombatInfo>
-		<UnitCombatInfo>
-			<Type>UNITCOMBAT_WEAPON_STYLE_SIDEARM_TWO_HANDED_PLUS_SHIELD</Type>
-			<Description>TXT_KEY_UNITCOMBAT_WEAPON_STYLE_SIDEARM_TWO_HANDED_PLUS_SHIELD</Description>
-			<Categories>
-				<Category>CATEGORY_UNITCOMBAT_GROUP_WEAPON_STYLE</Category>
-			</Categories>
-			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_COMBAT_EQUIPMENT</GameOptionType>
-			</OnGameOptions>
-			<Button>Art/Interface/Buttons/units/sparth/categories/style_sidearm.dds</Button>
-		</UnitCombatInfo>
-		<UnitCombatInfo>
-			<Type>UNITCOMBAT_WEAPON_STYLE_DIST_SINGLE_HAND_ONLY</Type>
-			<Description>TXT_KEY_UNITCOMBAT_WEAPON_STYLE_DIST_SINGLE_HAND_ONLY</Description>
-			<Categories>
-				<Category>CATEGORY_UNITCOMBAT_GROUP_WEAPON_STYLE</Category>
-			</Categories>
-			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_COMBAT_EQUIPMENT</GameOptionType>
-			</OnGameOptions>
-			<Button>Art/Interface/Buttons/units/sparth/categories/wields_distance.dds</Button>
-		</UnitCombatInfo>
-		<UnitCombatInfo>
-			<Type>UNITCOMBAT_WEAPON_STYLE_DIST_PRIMARY_PLUS_SECONDARY</Type>
-			<Description>TXT_KEY_UNITCOMBAT_WEAPON_STYLE_DIST_PRIMARY_PLUS_SECONDARY</Description>
-			<Categories>
-				<Category>CATEGORY_UNITCOMBAT_GROUP_WEAPON_STYLE</Category>
-			</Categories>
-			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_COMBAT_EQUIPMENT</GameOptionType>
-			</OnGameOptions>
-			<Button>Art/Interface/Buttons/units/sparth/categories/wields_distance.dds</Button>
-		</UnitCombatInfo>
-		<UnitCombatInfo>
-			<Type>UNITCOMBAT_WEAPON_STYLE_DIST_SINGLE_PLUS_SHIELD</Type>
-			<Description>TXT_KEY_UNITCOMBAT_WEAPON_STYLE_DIST_SINGLE_PLUS_SHIELD</Description>
-			<Categories>
-				<Category>CATEGORY_UNITCOMBAT_GROUP_WEAPON_STYLE</Category>
-			</Categories>
-			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_COMBAT_EQUIPMENT</GameOptionType>
-			</OnGameOptions>
-			<Button>Art/Interface/Buttons/units/sparth/categories/wields_distance.dds</Button>
-		</UnitCombatInfo>
-		<UnitCombatInfo>
-			<Type>UNITCOMBAT_WEAPON_STYLE_DIST_TWO_HANDED</Type>
-			<Description>TXT_KEY_UNITCOMBAT_WEAPON_STYLE_DIST_TWO_HANDED</Description>
-			<Categories>
-				<Category>CATEGORY_UNITCOMBAT_GROUP_WEAPON_STYLE</Category>
-			</Categories>
-			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_COMBAT_EQUIPMENT</GameOptionType>
-			</OnGameOptions>
-			<Button>Art/Interface/Buttons/units/sparth/categories/wields_distance.dds</Button>
-		</UnitCombatInfo>
-		<UnitCombatInfo>
-			<Type>UNITCOMBAT_WEAPON_STYLE_DIST_TWO_HANDED_PLUS_SHIELD</Type>
-			<Description>TXT_KEY_UNITCOMBAT_WEAPON_STYLE_DIST_TWO_HANDED_PLUS_SHIELD</Description>
-			<Categories>
-				<Category>CATEGORY_UNITCOMBAT_GROUP_WEAPON_STYLE</Category>
-			</Categories>
-			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_COMBAT_EQUIPMENT</GameOptionType>
-			</OnGameOptions>
-			<Button>Art/Interface/Buttons/units/sparth/categories/wields_distance.dds</Button>
-		</UnitCombatInfo>
-		<UnitCombatInfo>
-			<Type>UNITCOMBAT_WEAPON_STYLE_DIST_VEHICULAR</Type>
-			<Description>TXT_KEY_UNITCOMBAT_WEAPON_STYLE_DIST_VEHICULAR</Description>
-			<Categories>
-				<Category>CATEGORY_UNITCOMBAT_GROUP_WEAPON_STYLE</Category>
-			</Categories>
-			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_COMBAT_EQUIPMENT</GameOptionType>
-			</OnGameOptions>
-			<Button>Art/Interface/Buttons/units/sparth/categories/wields_distance.dds</Button>
-		</UnitCombatInfo>
-		<UnitCombatInfo>
-			<Type>UNITCOMBAT_WEAPON_STYLE_BACKUP_SINGLE_HAND_ONLY</Type>
-			<Description>TXT_KEY_UNITCOMBAT_WEAPON_STYLE_BACKUP_SINGLE_HAND_ONLY</Description>
-			<Categories>
-				<Category>CATEGORY_UNITCOMBAT_GROUP_WEAPON_STYLE</Category>
-			</Categories>
-			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_COMBAT_EQUIPMENT</GameOptionType>
-			</OnGameOptions>
-			<Button>Art/Interface/Buttons/units/sparth/categories/wields_backup.dds</Button>
-		</UnitCombatInfo>
-		<UnitCombatInfo>
-			<Type>UNITCOMBAT_WEAPON_STYLE_BACKUP_PRIMARY_PLUS_SECONDARY</Type>
-			<Description>TXT_KEY_UNITCOMBAT_WEAPON_STYLE_BACKUP_PRIMARY_PLUS_SECONDARY</Description>
-			<Categories>
-				<Category>CATEGORY_UNITCOMBAT_GROUP_WEAPON_STYLE</Category>
-			</Categories>
-			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_COMBAT_EQUIPMENT</GameOptionType>
-			</OnGameOptions>
-			<Button>Art/Interface/Buttons/units/sparth/categories/wields_backup.dds</Button>
-		</UnitCombatInfo>
-		<UnitCombatInfo>
-			<Type>UNITCOMBAT_WEAPON_STYLE_BACKUP_SINGLE_PLUS_SHIELD</Type>
-			<Description>TXT_KEY_UNITCOMBAT_WEAPON_STYLE_BACKUP_SINGLE_PLUS_SHIELD</Description>
-			<Categories>
-				<Category>CATEGORY_UNITCOMBAT_GROUP_WEAPON_STYLE</Category>
-			</Categories>
-			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_COMBAT_EQUIPMENT</GameOptionType>
-			</OnGameOptions>
-			<Button>Art/Interface/Buttons/units/sparth/categories/wields_backup.dds</Button>
-		</UnitCombatInfo>
-		<UnitCombatInfo>
-			<Type>UNITCOMBAT_WEAPON_STYLE_BACKUP_TWO_HANDED</Type>
-			<Description>TXT_KEY_UNITCOMBAT_WEAPON_STYLE_BACKUP_TWO_HANDED</Description>
-			<Categories>
-				<Category>CATEGORY_UNITCOMBAT_GROUP_WEAPON_STYLE</Category>
-			</Categories>
-			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_COMBAT_EQUIPMENT</GameOptionType>
-			</OnGameOptions>
-			<Button>Art/Interface/Buttons/units/sparth/categories/wields_backup.dds</Button>
-		</UnitCombatInfo>
-		<UnitCombatInfo>
-			<Type>UNITCOMBAT_WEAPON_STYLE_BACKUP_TWO_HANDED_PLUS_SHIELD</Type>
-			<Description>TXT_KEY_UNITCOMBAT_WEAPON_STYLE_BACKUP_TWO_HANDED_PLUS_SHIELD</Description>
-			<Categories>
-				<Category>CATEGORY_UNITCOMBAT_GROUP_WEAPON_STYLE</Category>
-			</Categories>
-			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_COMBAT_EQUIPMENT</GameOptionType>
-			</OnGameOptions>
-			<Button>Art/Interface/Buttons/units/sparth/categories/wields_backup.dds</Button>
-		</UnitCombatInfo>
-		<UnitCombatInfo>
 			<Type>UNITCOMBAT_WEAPON_H2H_FIST</Type>
 			<Description>TXT_KEY_UNITCOMBAT_WEAPON_H2H_FIST</Description>
 			<Categories>
@@ -2747,292 +2464,6 @@
 				<Category>CATEGORY_UNITCOMBAT_GROUP_WEAPONS_H2H</Category>
 			</Categories>
 			<Button>Art/Interface/Buttons/units/sparth/categories/wields_h2h.dds</Button>
-		</UnitCombatInfo>
-		<UnitCombatInfo>
-			<Type>UNITCOMBAT_WEAPON_SIDEARM_FIST</Type>
-			<Description>TXT_KEY_UNITCOMBAT_WEAPON_SIDEARM_FIST</Description>
-			<Categories>
-				<Category>CATEGORY_UNITCOMBAT_GROUP_WEAPONS_SIDEARMS</Category>
-			</Categories>
-			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_COMBAT_EQUIPMENT</GameOptionType>
-			</OnGameOptions>
-			<Button>Art/Interface/Buttons/units/sparth/categories/wields_sidearm.dds</Button>
-		</UnitCombatInfo>
-		<UnitCombatInfo>
-			<Type>UNITCOMBAT_WEAPON_SIDEARM_ROCK</Type>
-			<Description>TXT_KEY_UNITCOMBAT_WEAPON_SIDEARM_ROCK</Description>
-			<Categories>
-				<Category>CATEGORY_UNITCOMBAT_GROUP_WEAPONS_SIDEARMS</Category>
-			</Categories>
-			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_COMBAT_EQUIPMENT</GameOptionType>
-			</OnGameOptions>
-			<Button>Art/Interface/Buttons/units/sparth/categories/wields_sidearm.dds</Button>
-		</UnitCombatInfo>
-		<UnitCombatInfo>
-			<Type>UNITCOMBAT_WEAPON_SIDEARM_CLUB</Type>
-			<Description>TXT_KEY_UNITCOMBAT_WEAPON_SIDEARM_CLUB</Description>
-			<Categories>
-				<Category>CATEGORY_UNITCOMBAT_GROUP_WEAPONS_SIDEARMS</Category>
-			</Categories>
-			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_COMBAT_EQUIPMENT</GameOptionType>
-			</OnGameOptions>
-			<Button>Art/Interface/Buttons/units/sparth/categories/wields_sidearm.dds</Button>
-		</UnitCombatInfo>
-		<UnitCombatInfo>
-			<Type>UNITCOMBAT_WEAPON_SIDEARM_OAR</Type>
-			<Description>TXT_KEY_UNITCOMBAT_WEAPON_SIDEARM_OAR</Description>
-			<Categories>
-				<Category>CATEGORY_UNITCOMBAT_GROUP_WEAPONS_SIDEARMS</Category>
-			</Categories>
-			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_COMBAT_EQUIPMENT</GameOptionType>
-			</OnGameOptions>
-			<Button>Art/Interface/Buttons/units/sparth/categories/wields_sidearm.dds</Button>
-		</UnitCombatInfo>
-		<UnitCombatInfo>
-			<Type>UNITCOMBAT_WEAPON_SIDEARM_FLAIL</Type>
-			<Description>TXT_KEY_UNITCOMBAT_WEAPON_SIDEARM_FLAIL</Description>
-			<Categories>
-				<Category>CATEGORY_UNITCOMBAT_GROUP_WEAPONS_SIDEARMS</Category>
-			</Categories>
-			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_COMBAT_EQUIPMENT</GameOptionType>
-			</OnGameOptions>
-			<Button>Art/Interface/Buttons/units/sparth/categories/wields_sidearm.dds</Button>
-		</UnitCombatInfo>
-		<UnitCombatInfo>
-			<Type>UNITCOMBAT_WEAPON_SIDEARM_MACE</Type>
-			<Description>TXT_KEY_UNITCOMBAT_WEAPON_SIDEARM_MACE</Description>
-			<Categories>
-				<Category>CATEGORY_UNITCOMBAT_GROUP_WEAPONS_SIDEARMS</Category>
-			</Categories>
-			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_COMBAT_EQUIPMENT</GameOptionType>
-			</OnGameOptions>
-			<Button>Art/Interface/Buttons/units/sparth/categories/wields_sidearm.dds</Button>
-		</UnitCombatInfo>
-		<UnitCombatInfo>
-			<Type>UNITCOMBAT_WEAPON_SIDEARM_AXE</Type>
-			<Description>TXT_KEY_UNITCOMBAT_WEAPON_SIDEARM_AXE</Description>
-			<Categories>
-				<Category>CATEGORY_UNITCOMBAT_GROUP_WEAPONS_SIDEARMS</Category>
-			</Categories>
-			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_COMBAT_EQUIPMENT</GameOptionType>
-			</OnGameOptions>
-			<Button>Art/Interface/Buttons/units/sparth/categories/wields_sidearm.dds</Button>
-		</UnitCombatInfo>
-		<UnitCombatInfo>
-			<Type>UNITCOMBAT_WEAPON_SIDEARM_HAMMER</Type>
-			<Description>TXT_KEY_UNITCOMBAT_WEAPON_SIDEARM_HAMMER</Description>
-			<Categories>
-				<Category>CATEGORY_UNITCOMBAT_GROUP_WEAPONS_SIDEARMS</Category>
-			</Categories>
-			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_COMBAT_EQUIPMENT</GameOptionType>
-			</OnGameOptions>
-			<Button>Art/Interface/Buttons/units/sparth/categories/wields_sidearm.dds</Button>
-		</UnitCombatInfo>
-		<UnitCombatInfo>
-			<Type>UNITCOMBAT_WEAPON_SIDEARM_KNIFE</Type>
-			<Description>TXT_KEY_UNITCOMBAT_WEAPON_SIDEARM_KNIFE</Description>
-			<Categories>
-				<Category>CATEGORY_UNITCOMBAT_GROUP_WEAPONS_SIDEARMS</Category>
-			</Categories>
-			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_COMBAT_EQUIPMENT</GameOptionType>
-			</OnGameOptions>
-			<Button>Art/Interface/Buttons/units/sparth/categories/wields_sidearm.dds</Button>
-		</UnitCombatInfo>
-		<UnitCombatInfo>
-			<Type>UNITCOMBAT_WEAPON_SIDEARM_BAYONETTE</Type>
-			<Description>TXT_KEY_UNITCOMBAT_WEAPON_SIDEARM_BAYONETTE</Description>
-			<Categories>
-				<Category>CATEGORY_UNITCOMBAT_GROUP_WEAPONS_SIDEARMS</Category>
-			</Categories>
-			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_COMBAT_EQUIPMENT</GameOptionType>
-			</OnGameOptions>
-			<Button>Art/Interface/Buttons/units/sparth/categories/wields_sidearm.dds</Button>
-		</UnitCombatInfo>
-		<UnitCombatInfo>
-			<Type>UNITCOMBAT_WEAPON_SIDEARM_SHORT_BLADE</Type>
-			<Description>TXT_KEY_UNITCOMBAT_WEAPON_SIDEARM_SHORT_BLADE</Description>
-			<Categories>
-				<Category>CATEGORY_UNITCOMBAT_GROUP_WEAPONS_SIDEARMS</Category>
-			</Categories>
-			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_COMBAT_EQUIPMENT</GameOptionType>
-			</OnGameOptions>
-			<Button>Art/Interface/Buttons/units/sparth/categories/wields_sidearm.dds</Button>
-		</UnitCombatInfo>
-		<UnitCombatInfo>
-			<Type>UNITCOMBAT_WEAPON_SIDEARM_LONG_BLADE</Type>
-			<Description>TXT_KEY_UNITCOMBAT_WEAPON_SIDEARM_LONG_BLADE</Description>
-			<Categories>
-				<Category>CATEGORY_UNITCOMBAT_GROUP_WEAPONS_SIDEARMS</Category>
-			</Categories>
-			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_COMBAT_EQUIPMENT</GameOptionType>
-			</OnGameOptions>
-			<Button>Art/Interface/Buttons/units/sparth/categories/wields_sidearm.dds</Button>
-		</UnitCombatInfo>
-		<UnitCombatInfo>
-			<Type>UNITCOMBAT_WEAPON_SIDEARM_SHORT_POLEARM</Type>
-			<Description>TXT_KEY_UNITCOMBAT_WEAPON_SIDEARM_SHORT_POLEARM</Description>
-			<Categories>
-				<Category>CATEGORY_UNITCOMBAT_GROUP_WEAPONS_SIDEARMS</Category>
-			</Categories>
-			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_COMBAT_EQUIPMENT</GameOptionType>
-			</OnGameOptions>
-			<Button>Art/Interface/Buttons/units/sparth/categories/wields_sidearm.dds</Button>
-		</UnitCombatInfo>
-		<UnitCombatInfo>
-			<Type>UNITCOMBAT_WEAPON_SIDEARM_LONG_POLEARM</Type>
-			<Description>TXT_KEY_UNITCOMBAT_WEAPON_SIDEARM_LONG_POLEARM</Description>
-			<Categories>
-				<Category>CATEGORY_UNITCOMBAT_GROUP_WEAPONS_SIDEARMS</Category>
-			</Categories>
-			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_COMBAT_EQUIPMENT</GameOptionType>
-			</OnGameOptions>
-			<Button>Art/Interface/Buttons/units/sparth/categories/wields_sidearm.dds</Button>
-		</UnitCombatInfo>
-		<UnitCombatInfo>
-			<Type>UNITCOMBAT_WEAPON_SIDEARM_STAFF</Type>
-			<Description>TXT_KEY_UNITCOMBAT_WEAPON_SIDEARM_STAFF</Description>
-			<Categories>
-				<Category>CATEGORY_UNITCOMBAT_GROUP_WEAPONS_SIDEARMS</Category>
-			</Categories>
-			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_COMBAT_EQUIPMENT</GameOptionType>
-			</OnGameOptions>
-			<Button>Art/Interface/Buttons/units/sparth/categories/wields_sidearm.dds</Button>
-		</UnitCombatInfo>
-		<UnitCombatInfo>
-			<Type>UNITCOMBAT_WEAPON_SIDEARM_MARTIAL_ART</Type>
-			<Description>TXT_KEY_UNITCOMBAT_WEAPON_SIDEARM_MARTIAL_ART</Description>
-			<Categories>
-				<Category>CATEGORY_UNITCOMBAT_GROUP_WEAPONS_SIDEARMS</Category>
-			</Categories>
-			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_COMBAT_EQUIPMENT</GameOptionType>
-			</OnGameOptions>
-			<Button>Art/Interface/Buttons/units/sparth/categories/wields_sidearm.dds</Button>
-		</UnitCombatInfo>
-		<UnitCombatInfo>
-			<Type>UNITCOMBAT_WEAPON_SIDEARM_HANDGUN</Type>
-			<Description>TXT_KEY_UNITCOMBAT_WEAPON_SIDEARM_HANDGUN</Description>
-			<Categories>
-				<Category>CATEGORY_UNITCOMBAT_GROUP_WEAPONS_SIDEARMS</Category>
-			</Categories>
-			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_COMBAT_EQUIPMENT</GameOptionType>
-			</OnGameOptions>
-			<Button>Art/Interface/Buttons/units/sparth/categories/wields_sidearm.dds</Button>
-		</UnitCombatInfo>
-		<UnitCombatInfo>
-			<Type>UNITCOMBAT_WEAPON_SIDEARM_RIFLE_BUTT</Type>
-			<Description>TXT_KEY_UNITCOMBAT_WEAPON_SIDEARM_RIFLE_BUTT</Description>
-			<Categories>
-				<Category>CATEGORY_UNITCOMBAT_GROUP_WEAPONS_SIDEARMS</Category>
-			</Categories>
-			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_COMBAT_EQUIPMENT</GameOptionType>
-			</OnGameOptions>
-			<Button>Art/Interface/Buttons/units/sparth/categories/wields_sidearm.dds</Button>
-		</UnitCombatInfo>
-		<UnitCombatInfo>
-			<Type>UNITCOMBAT_WEAPON_SIDEARM_HYDRAULIC_APPENDAGE</Type>
-			<Description>TXT_KEY_UNITCOMBAT_WEAPON_SIDEARM_HYDRAULIC_APPENDAGE</Description>
-			<Categories>
-				<Category>CATEGORY_UNITCOMBAT_GROUP_WEAPONS_SIDEARMS</Category>
-			</Categories>
-			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_COMBAT_EQUIPMENT</GameOptionType>
-			</OnGameOptions>
-			<Button>Art/Interface/Buttons/units/sparth/categories/wields_sidearm.dds</Button>
-		</UnitCombatInfo>
-		<UnitCombatInfo>
-			<Type>UNITCOMBAT_WEAPON_SIDEARM_CROWBAR</Type>
-			<Description>TXT_KEY_UNITCOMBAT_WEAPON_SIDEARM_CROWBAR</Description>
-			<Categories>
-				<Category>CATEGORY_UNITCOMBAT_GROUP_WEAPONS_SIDEARMS</Category>
-			</Categories>
-			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_COMBAT_EQUIPMENT</GameOptionType>
-			</OnGameOptions>
-			<Button>Art/Interface/Buttons/units/sparth/categories/wields_sidearm.dds</Button>
-		</UnitCombatInfo>
-		<UnitCombatInfo>
-			<Type>UNITCOMBAT_WEAPON_SIDEARM_FLAMETHROWER</Type>
-			<Description>TXT_KEY_UNITCOMBAT_WEAPON_SIDEARM_FLAMETHROWER</Description>
-			<Categories>
-				<Category>CATEGORY_UNITCOMBAT_GROUP_WEAPONS_SIDEARMS</Category>
-			</Categories>
-			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_COMBAT_EQUIPMENT</GameOptionType>
-			</OnGameOptions>
-			<Button>Art/Interface/Buttons/units/sparth/categories/wields_sidearm.dds</Button>
-		</UnitCombatInfo>
-		<UnitCombatInfo>
-			<Type>UNITCOMBAT_WEAPON_SIDEARM_LASER</Type>
-			<Description>TXT_KEY_UNITCOMBAT_WEAPON_SIDEARM_LASER</Description>
-			<Categories>
-				<Category>CATEGORY_UNITCOMBAT_GROUP_WEAPONS_SIDEARMS</Category>
-			</Categories>
-			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_COMBAT_EQUIPMENT</GameOptionType>
-			</OnGameOptions>
-			<Button>Art/Interface/Buttons/units/sparth/categories/wields_sidearm.dds</Button>
-		</UnitCombatInfo>
-		<UnitCombatInfo>
-			<Type>UNITCOMBAT_WEAPON_SIDEARM_TASER</Type>
-			<Description>TXT_KEY_UNITCOMBAT_WEAPON_SIDEARM_TASER</Description>
-			<Categories>
-				<Category>CATEGORY_UNITCOMBAT_GROUP_WEAPONS_SIDEARMS</Category>
-			</Categories>
-			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_COMBAT_EQUIPMENT</GameOptionType>
-			</OnGameOptions>
-			<Button>Art/Interface/Buttons/units/sparth/categories/wields_sidearm.dds</Button>
-		</UnitCombatInfo>
-		<UnitCombatInfo>
-			<Type>UNITCOMBAT_WEAPON_SIDEARM_SPRAY</Type>
-			<Description>TXT_KEY_UNITCOMBAT_WEAPON_SIDEARM_SPRAY</Description>
-			<Categories>
-				<Category>CATEGORY_UNITCOMBAT_GROUP_WEAPONS_SIDEARMS</Category>
-			</Categories>
-			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_COMBAT_EQUIPMENT</GameOptionType>
-			</OnGameOptions>
-			<Button>Art/Interface/Buttons/units/sparth/categories/wields_sidearm.dds</Button>
-		</UnitCombatInfo>
-		<UnitCombatInfo>
-			<Type>UNITCOMBAT_WEAPON_SIDEARM_ENERGY_GLOVES</Type>
-			<Description>TXT_KEY_UNITCOMBAT_WEAPON_SIDEARM_ENERGY_GLOVES</Description>
-			<Categories>
-				<Category>CATEGORY_UNITCOMBAT_GROUP_WEAPONS_SIDEARMS</Category>
-			</Categories>
-			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_COMBAT_EQUIPMENT</GameOptionType>
-			</OnGameOptions>
-			<Button>Art/Interface/Buttons/units/sparth/categories/wields_sidearm.dds</Button>
-		</UnitCombatInfo>
-		<UnitCombatInfo>
-			<Type>UNITCOMBAT_WEAPON_SIDEARM_EMP</Type>
-			<Description>TXT_KEY_UNITCOMBAT_WEAPON_SIDEARM_EMP</Description>
-			<Categories>
-				<Category>CATEGORY_UNITCOMBAT_GROUP_WEAPONS_SIDEARMS</Category>
-			</Categories>
-			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_COMBAT_EQUIPMENT</GameOptionType>
-			</OnGameOptions>
-			<Button>Art/Interface/Buttons/units/sparth/categories/wields_sidearm.dds</Button>
 		</UnitCombatInfo>
 		<UnitCombatInfo>
 			<Type>UNITCOMBAT_WEAPON_DIST_ROCK</Type>
@@ -3465,446 +2896,6 @@
 			<Button>Art/Interface/Buttons/units/sparth/categories/wields_backup.dds</Button>
 		</UnitCombatInfo>
 		<UnitCombatInfo>
-			<Type>UNITCOMBAT_WEAPON_BACKUP_ROCK</Type>
-			<Description>TXT_KEY_UNITCOMBAT_WEAPON_BACKUP_ROCK</Description>
-			<Categories>
-				<Category>CATEGORY_UNITCOMBAT_GROUP_WEAPONS_BACKUP</Category>
-			</Categories>
-			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_COMBAT_EQUIPMENT</GameOptionType>
-			</OnGameOptions>
-			<Button>Art/Interface/Buttons/units/sparth/categories/wields_backup.dds</Button>
-		</UnitCombatInfo>
-		<UnitCombatInfo>
-			<Type>UNITCOMBAT_WEAPON_BACKUP_CLUB</Type>
-			<Description>TXT_KEY_UNITCOMBAT_WEAPON_BACKUP_CLUB</Description>
-			<Categories>
-				<Category>CATEGORY_UNITCOMBAT_GROUP_WEAPONS_BACKUP</Category>
-			</Categories>
-			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_COMBAT_EQUIPMENT</GameOptionType>
-			</OnGameOptions>
-			<Button>Art/Interface/Buttons/units/sparth/categories/wields_backup.dds</Button>
-		</UnitCombatInfo>
-		<UnitCombatInfo>
-			<Type>UNITCOMBAT_WEAPON_BACKUP_AXE</Type>
-			<Description>TXT_KEY_UNITCOMBAT_WEAPON_BACKUP_AXE</Description>
-			<Categories>
-				<Category>CATEGORY_UNITCOMBAT_GROUP_WEAPONS_BACKUP</Category>
-			</Categories>
-			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_COMBAT_EQUIPMENT</GameOptionType>
-			</OnGameOptions>
-			<Button>Art/Interface/Buttons/units/sparth/categories/wields_backup.dds</Button>
-		</UnitCombatInfo>
-		<UnitCombatInfo>
-			<Type>UNITCOMBAT_WEAPON_BACKUP_HAMMER</Type>
-			<Description>TXT_KEY_UNITCOMBAT_WEAPON_BACKUP_HAMMER</Description>
-			<Categories>
-				<Category>CATEGORY_UNITCOMBAT_GROUP_WEAPONS_BACKUP</Category>
-			</Categories>
-			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_COMBAT_EQUIPMENT</GameOptionType>
-			</OnGameOptions>
-			<Button>Art/Interface/Buttons/units/sparth/categories/wields_backup.dds</Button>
-		</UnitCombatInfo>
-		<UnitCombatInfo>
-			<Type>UNITCOMBAT_WEAPON_BACKUP_KNIFE</Type>
-			<Description>TXT_KEY_UNITCOMBAT_WEAPON_BACKUP_KNIFE</Description>
-			<Categories>
-				<Category>CATEGORY_UNITCOMBAT_GROUP_WEAPONS_BACKUP</Category>
-			</Categories>
-			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_COMBAT_EQUIPMENT</GameOptionType>
-			</OnGameOptions>
-			<Button>Art/Interface/Buttons/units/sparth/categories/wields_backup.dds</Button>
-		</UnitCombatInfo>
-		<UnitCombatInfo>
-			<Type>UNITCOMBAT_WEAPON_BACKUP_BLOWGUN</Type>
-			<Description>TXT_KEY_UNITCOMBAT_WEAPON_BACKUP_BLOWGUN</Description>
-			<Categories>
-				<Category>CATEGORY_UNITCOMBAT_GROUP_WEAPONS_BACKUP</Category>
-			</Categories>
-			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_COMBAT_EQUIPMENT</GameOptionType>
-			</OnGameOptions>
-			<Button>Art/Interface/Buttons/units/sparth/categories/wields_backup.dds</Button>
-		</UnitCombatInfo>
-		<UnitCombatInfo>
-			<Type>UNITCOMBAT_WEAPON_BACKUP_SLING</Type>
-			<Description>TXT_KEY_UNITCOMBAT_WEAPON_BACKUP_SLING</Description>
-			<Categories>
-				<Category>CATEGORY_UNITCOMBAT_GROUP_WEAPONS_BACKUP</Category>
-			</Categories>
-			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_COMBAT_EQUIPMENT</GameOptionType>
-			</OnGameOptions>
-			<Button>Art/Interface/Buttons/units/sparth/categories/wields_backup.dds</Button>
-		</UnitCombatInfo>
-		<UnitCombatInfo>
-			<Type>UNITCOMBAT_WEAPON_BACKUP_JAVELIN</Type>
-			<Description>TXT_KEY_UNITCOMBAT_WEAPON_BACKUP_JAVELIN</Description>
-			<Categories>
-				<Category>CATEGORY_UNITCOMBAT_GROUP_WEAPONS_BACKUP</Category>
-			</Categories>
-			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_COMBAT_EQUIPMENT</GameOptionType>
-			</OnGameOptions>
-			<Button>Art/Interface/Buttons/units/sparth/categories/wields_backup.dds</Button>
-		</UnitCombatInfo>
-		<UnitCombatInfo>
-			<Type>UNITCOMBAT_WEAPON_BACKUP_BOOMERANG</Type>
-			<Description>TXT_KEY_UNITCOMBAT_WEAPON_BACKUP_BOOMERANG</Description>
-			<Categories>
-				<Category>CATEGORY_UNITCOMBAT_GROUP_WEAPONS_BACKUP</Category>
-			</Categories>
-			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_COMBAT_EQUIPMENT</GameOptionType>
-			</OnGameOptions>
-			<Button>Art/Interface/Buttons/units/sparth/categories/wields_backup.dds</Button>
-		</UnitCombatInfo>
-		<UnitCombatInfo>
-			<Type>UNITCOMBAT_WEAPON_BACKUP_BOLA</Type>
-			<Description>TXT_KEY_UNITCOMBAT_WEAPON_BACKUP_BOLA</Description>
-			<Categories>
-				<Category>CATEGORY_UNITCOMBAT_GROUP_WEAPONS_BACKUP</Category>
-			</Categories>
-			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_COMBAT_EQUIPMENT</GameOptionType>
-			</OnGameOptions>
-			<Button>Art/Interface/Buttons/units/sparth/categories/wields_backup.dds</Button>
-		</UnitCombatInfo>
-		<UnitCombatInfo>
-			<Type>UNITCOMBAT_WEAPON_BACKUP_MARTIAL_ART</Type>
-			<Description>TXT_KEY_UNITCOMBAT_WEAPON_BACKUP_MARTIAL_ART</Description>
-			<Categories>
-				<Category>CATEGORY_UNITCOMBAT_GROUP_WEAPONS_BACKUP</Category>
-			</Categories>
-			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_COMBAT_EQUIPMENT</GameOptionType>
-			</OnGameOptions>
-			<Button>Art/Interface/Buttons/units/sparth/categories/wields_backup.dds</Button>
-		</UnitCombatInfo>
-		<UnitCombatInfo>
-			<Type>UNITCOMBAT_WEAPON_BACKUP_DYNAMITE</Type>
-			<Description>TXT_KEY_UNITCOMBAT_WEAPON_BACKUP_DYNAMITE</Description>
-			<Categories>
-				<Category>CATEGORY_UNITCOMBAT_GROUP_WEAPONS_BACKUP</Category>
-			</Categories>
-			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_COMBAT_EQUIPMENT</GameOptionType>
-			</OnGameOptions>
-			<Button>Art/Interface/Buttons/units/sparth/categories/wields_backup.dds</Button>
-		</UnitCombatInfo>
-		<UnitCombatInfo>
-			<Type>UNITCOMBAT_WEAPON_BACKUP_EXPLOSIVE_FLASK</Type>
-			<Description>TXT_KEY_UNITCOMBAT_WEAPON_BACKUP_EXPLOSIVE_FLASK</Description>
-			<Categories>
-				<Category>CATEGORY_UNITCOMBAT_GROUP_WEAPONS_BACKUP</Category>
-			</Categories>
-			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_COMBAT_EQUIPMENT</GameOptionType>
-			</OnGameOptions>
-			<Button>Art/Interface/Buttons/units/sparth/categories/wields_backup.dds</Button>
-		</UnitCombatInfo>
-		<UnitCombatInfo>
-			<Type>UNITCOMBAT_WEAPON_BACKUP_GRENADE</Type>
-			<Description>TXT_KEY_UNITCOMBAT_WEAPON_BACKUP_GRENADE</Description>
-			<Categories>
-				<Category>CATEGORY_UNITCOMBAT_GROUP_WEAPONS_BACKUP</Category>
-			</Categories>
-			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_COMBAT_EQUIPMENT</GameOptionType>
-			</OnGameOptions>
-			<Button>Art/Interface/Buttons/units/sparth/categories/wields_backup.dds</Button>
-		</UnitCombatInfo>
-		<UnitCombatInfo>
-			<Type>UNITCOMBAT_WEAPON_BACKUP_LIGHT_CROSSBOW</Type>
-			<Description>TXT_KEY_UNITCOMBAT_WEAPON_BACKUP_LIGHT_CROSSBOW</Description>
-			<Categories>
-				<Category>CATEGORY_UNITCOMBAT_GROUP_WEAPONS_BACKUP</Category>
-			</Categories>
-			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_COMBAT_EQUIPMENT</GameOptionType>
-			</OnGameOptions>
-			<Button>Art/Interface/Buttons/units/sparth/categories/wields_backup.dds</Button>
-		</UnitCombatInfo>
-		<UnitCombatInfo>
-			<Type>UNITCOMBAT_WEAPON_BACKUP_HEAVY_CROSSBOW</Type>
-			<Description>TXT_KEY_UNITCOMBAT_WEAPON_BACKUP_HEAVY_CROSSBOW</Description>
-			<Categories>
-				<Category>CATEGORY_UNITCOMBAT_GROUP_WEAPONS_BACKUP</Category>
-			</Categories>
-			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_COMBAT_EQUIPMENT</GameOptionType>
-			</OnGameOptions>
-			<Button>Art/Interface/Buttons/units/sparth/categories/wields_backup.dds</Button>
-		</UnitCombatInfo>
-		<UnitCombatInfo>
-			<Type>UNITCOMBAT_WEAPON_BACKUP_REPEATING_CROSSBOW</Type>
-			<Description>TXT_KEY_UNITCOMBAT_WEAPON_BACKUP_REPEATING_CROSSBOW</Description>
-			<Categories>
-				<Category>CATEGORY_UNITCOMBAT_GROUP_WEAPONS_BACKUP</Category>
-			</Categories>
-			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_COMBAT_EQUIPMENT</GameOptionType>
-			</OnGameOptions>
-			<Button>Art/Interface/Buttons/units/sparth/categories/wields_backup.dds</Button>
-		</UnitCombatInfo>
-		<UnitCombatInfo>
-			<Type>UNITCOMBAT_WEAPON_BACKUP_SHORTBOW</Type>
-			<Description>TXT_KEY_UNITCOMBAT_WEAPON_BACKUP_SHORTBOW</Description>
-			<Categories>
-				<Category>CATEGORY_UNITCOMBAT_GROUP_WEAPONS_BACKUP</Category>
-			</Categories>
-			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_COMBAT_EQUIPMENT</GameOptionType>
-			</OnGameOptions>
-			<Button>Art/Interface/Buttons/units/sparth/categories/wields_backup.dds</Button>
-		</UnitCombatInfo>
-		<UnitCombatInfo>
-			<Type>UNITCOMBAT_WEAPON_BACKUP_LONGBOW</Type>
-			<Description>TXT_KEY_UNITCOMBAT_WEAPON_BACKUP_LONGBOW</Description>
-			<Categories>
-				<Category>CATEGORY_UNITCOMBAT_GROUP_WEAPONS_BACKUP</Category>
-			</Categories>
-			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_COMBAT_EQUIPMENT</GameOptionType>
-			</OnGameOptions>
-			<Button>Art/Interface/Buttons/units/sparth/categories/wields_backup.dds</Button>
-		</UnitCombatInfo>
-		<UnitCombatInfo>
-			<Type>UNITCOMBAT_WEAPON_BACKUP_HANDGUN</Type>
-			<Description>TXT_KEY_UNITCOMBAT_WEAPON_BACKUP_HANDGUN</Description>
-			<Categories>
-				<Category>CATEGORY_UNITCOMBAT_GROUP_WEAPONS_BACKUP</Category>
-			</Categories>
-			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_COMBAT_EQUIPMENT</GameOptionType>
-			</OnGameOptions>
-			<Button>Art/Interface/Buttons/units/sparth/categories/wields_backup.dds</Button>
-		</UnitCombatInfo>
-		<UnitCombatInfo>
-			<Type>UNITCOMBAT_WEAPON_BACKUP_RIFLE</Type>
-			<Description>TXT_KEY_UNITCOMBAT_WEAPON_BACKUP_RIFLE</Description>
-			<Categories>
-				<Category>CATEGORY_UNITCOMBAT_GROUP_WEAPONS_BACKUP</Category>
-			</Categories>
-			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_COMBAT_EQUIPMENT</GameOptionType>
-			</OnGameOptions>
-			<Button>Art/Interface/Buttons/units/sparth/categories/wields_backup.dds</Button>
-		</UnitCombatInfo>
-		<UnitCombatInfo>
-			<Type>UNITCOMBAT_WEAPON_BACKUP_SEMI_AUTOMATIC</Type>
-			<Description>TXT_KEY_UNITCOMBAT_WEAPON_BACKUP_SEMI_AUTOMATIC</Description>
-			<Categories>
-				<Category>CATEGORY_UNITCOMBAT_GROUP_WEAPONS_BACKUP</Category>
-			</Categories>
-			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_COMBAT_EQUIPMENT</GameOptionType>
-			</OnGameOptions>
-			<Button>Art/Interface/Buttons/units/sparth/categories/wields_backup.dds</Button>
-		</UnitCombatInfo>
-		<UnitCombatInfo>
-			<Type>UNITCOMBAT_WEAPON_BACKUP_FULLY_AUTOMATIC</Type>
-			<Description>TXT_KEY_UNITCOMBAT_WEAPON_BACKUP_FULLY_AUTOMATIC</Description>
-			<Categories>
-				<Category>CATEGORY_UNITCOMBAT_GROUP_WEAPONS_BACKUP</Category>
-			</Categories>
-			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_COMBAT_EQUIPMENT</GameOptionType>
-			</OnGameOptions>
-			<Button>Art/Interface/Buttons/units/sparth/categories/wields_backup.dds</Button>
-		</UnitCombatInfo>
-		<UnitCombatInfo>
-			<Type>UNITCOMBAT_WEAPON_BACKUP_LASER</Type>
-			<Description>TXT_KEY_UNITCOMBAT_WEAPON_BACKUP_LASER</Description>
-			<Categories>
-				<Category>CATEGORY_UNITCOMBAT_GROUP_WEAPONS_BACKUP</Category>
-			</Categories>
-			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_COMBAT_EQUIPMENT</GameOptionType>
-			</OnGameOptions>
-			<Button>Art/Interface/Buttons/units/sparth/categories/wields_backup.dds</Button>
-		</UnitCombatInfo>
-		<UnitCombatInfo>
-			<Type>UNITCOMBAT_WEAPON_BACKUP_ION</Type>
-			<Description>TXT_KEY_UNITCOMBAT_WEAPON_BACKUP_ION</Description>
-			<Categories>
-				<Category>CATEGORY_UNITCOMBAT_GROUP_WEAPONS_BACKUP</Category>
-			</Categories>
-			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_COMBAT_EQUIPMENT</GameOptionType>
-			</OnGameOptions>
-			<Button>Art/Interface/Buttons/units/sparth/categories/wields_backup.dds</Button>
-		</UnitCombatInfo>
-		<UnitCombatInfo>
-			<Type>UNITCOMBAT_WEAPON_BACKUP_FROST</Type>
-			<Description>TXT_KEY_UNITCOMBAT_WEAPON_BACKUP_FROST</Description>
-			<Categories>
-				<Category>CATEGORY_UNITCOMBAT_GROUP_WEAPONS_BACKUP</Category>
-			</Categories>
-			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_COMBAT_EQUIPMENT</GameOptionType>
-			</OnGameOptions>
-			<Button>Art/Interface/Buttons/units/sparth/categories/wields_backup.dds</Button>
-		</UnitCombatInfo>
-		<UnitCombatInfo>
-			<Type>UNITCOMBAT_WEAPON_BACKUP_ELECTRICAL</Type>
-			<Description>TXT_KEY_UNITCOMBAT_WEAPON_BACKUP_ELECTRICAL</Description>
-			<Categories>
-				<Category>CATEGORY_UNITCOMBAT_GROUP_WEAPONS_BACKUP</Category>
-			</Categories>
-			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_COMBAT_EQUIPMENT</GameOptionType>
-			</OnGameOptions>
-			<Button>Art/Interface/Buttons/units/sparth/categories/wields_backup.dds</Button>
-		</UnitCombatInfo>
-		<UnitCombatInfo>
-			<Type>UNITCOMBAT_WEAPON_BACKUP_FLAME</Type>
-			<Description>TXT_KEY_UNITCOMBAT_WEAPON_BACKUP_FLAME</Description>
-			<Categories>
-				<Category>CATEGORY_UNITCOMBAT_GROUP_WEAPONS_BACKUP</Category>
-			</Categories>
-			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_COMBAT_EQUIPMENT</GameOptionType>
-			</OnGameOptions>
-			<Button>Art/Interface/Buttons/units/sparth/categories/wields_backup.dds</Button>
-		</UnitCombatInfo>
-		<UnitCombatInfo>
-			<Type>UNITCOMBAT_WEAPON_BACKUP_HEAT</Type>
-			<Description>TXT_KEY_UNITCOMBAT_WEAPON_BACKUP_HEAT</Description>
-			<Categories>
-				<Category>CATEGORY_UNITCOMBAT_GROUP_WEAPONS_BACKUP</Category>
-			</Categories>
-			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_COMBAT_EQUIPMENT</GameOptionType>
-			</OnGameOptions>
-			<Button>Art/Interface/Buttons/units/sparth/categories/wields_backup.dds</Button>
-		</UnitCombatInfo>
-		<UnitCombatInfo>
-			<Type>UNITCOMBAT_WEAPON_BACKUP_SONIC</Type>
-			<Description>TXT_KEY_UNITCOMBAT_WEAPON_BACKUP_SONIC</Description>
-			<Categories>
-				<Category>CATEGORY_UNITCOMBAT_GROUP_WEAPONS_BACKUP</Category>
-			</Categories>
-			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_COMBAT_EQUIPMENT</GameOptionType>
-			</OnGameOptions>
-			<Button>Art/Interface/Buttons/units/sparth/categories/wields_backup.dds</Button>
-		</UnitCombatInfo>
-		<UnitCombatInfo>
-			<Type>UNITCOMBAT_WEAPON_BACKUP_EMP</Type>
-			<Description>TXT_KEY_UNITCOMBAT_WEAPON_BACKUP_EMP</Description>
-			<Categories>
-				<Category>CATEGORY_UNITCOMBAT_GROUP_WEAPONS_BACKUP</Category>
-			</Categories>
-			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_COMBAT_EQUIPMENT</GameOptionType>
-			</OnGameOptions>
-			<Button>Art/Interface/Buttons/units/sparth/categories/wields_backup.dds</Button>
-		</UnitCombatInfo>
-		<UnitCombatInfo>
-			<Type>UNITCOMBAT_WEAPON_BACKUP_BALLISTA</Type>
-			<Description>TXT_KEY_UNITCOMBAT_WEAPON_BACKUP_BALLISTA</Description>
-			<Categories>
-				<Category>CATEGORY_UNITCOMBAT_GROUP_WEAPONS_BACKUP</Category>
-			</Categories>
-			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_COMBAT_EQUIPMENT</GameOptionType>
-			</OnGameOptions>
-			<Button>Art/Interface/Buttons/units/sparth/categories/wields_distance_backup.dds</Button>
-		</UnitCombatInfo>
-		<UnitCombatInfo>
-			<Type>UNITCOMBAT_WEAPON_BACKUP_LAUNCHED_STONE</Type>
-			<Description>TXT_KEY_UNITCOMBAT_WEAPON_BACKUP_LAUNCHED_STONE</Description>
-			<Categories>
-				<Category>CATEGORY_UNITCOMBAT_GROUP_WEAPONS_BACKUP</Category>
-			</Categories>
-			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_COMBAT_EQUIPMENT</GameOptionType>
-			</OnGameOptions>
-			<Button>Art/Interface/Buttons/units/sparth/categories/wields_distance_backup.dds</Button>
-		</UnitCombatInfo>
-		<UnitCombatInfo>
-			<Type>UNITCOMBAT_WEAPON_BACKUP_FIREWORKS</Type>
-			<Description>TXT_KEY_UNITCOMBAT_WEAPON_BACKUP_FIREWORKS</Description>
-			<Categories>
-				<Category>CATEGORY_UNITCOMBAT_GROUP_WEAPONS_BACKUP</Category>
-			</Categories>
-			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_COMBAT_EQUIPMENT</GameOptionType>
-			</OnGameOptions>
-			<Button>Art/Interface/Buttons/units/sparth/categories/wields_distance_backup.dds</Button>
-		</UnitCombatInfo>
-		<UnitCombatInfo>
-			<Type>UNITCOMBAT_WEAPON_BACKUP_CANNONBALL</Type>
-			<Description>TXT_KEY_UNITCOMBAT_WEAPON_BACKUP_CANNONBALL</Description>
-			<Categories>
-				<Category>CATEGORY_UNITCOMBAT_GROUP_WEAPONS_BACKUP</Category>
-			</Categories>
-			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_COMBAT_EQUIPMENT</GameOptionType>
-			</OnGameOptions>
-			<Button>Art/Interface/Buttons/units/sparth/categories/wields_distance_backup.dds</Button>
-		</UnitCombatInfo>
-		<UnitCombatInfo>
-			<Type>UNITCOMBAT_WEAPON_BACKUP_SHELLFIRE</Type>
-			<Description>TXT_KEY_UNITCOMBAT_WEAPON_BACKUP_SHELLFIRE</Description>
-			<Categories>
-				<Category>CATEGORY_UNITCOMBAT_GROUP_WEAPONS_BACKUP</Category>
-			</Categories>
-			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_COMBAT_EQUIPMENT</GameOptionType>
-			</OnGameOptions>
-			<Button>Art/Interface/Buttons/units/sparth/categories/wields_distance_backup.dds</Button>
-		</UnitCombatInfo>
-		<UnitCombatInfo>
-			<Type>UNITCOMBAT_WEAPON_BACKUP_SHORT_RANGE_MISSILE</Type>
-			<Description>TXT_KEY_UNITCOMBAT_WEAPON_BACKUP_SHORT_RANGE_MISSILE</Description>
-			<Categories>
-				<Category>CATEGORY_UNITCOMBAT_GROUP_WEAPONS_BACKUP</Category>
-			</Categories>
-			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_COMBAT_EQUIPMENT</GameOptionType>
-			</OnGameOptions>
-			<Button>Art/Interface/Buttons/units/sparth/categories/wields_distance_backup.dds</Button>
-		</UnitCombatInfo>
-		<UnitCombatInfo>
-			<Type>UNITCOMBAT_WEAPON_BACKUP_MEDIUM_RANGE_MISSILE</Type>
-			<Description>TXT_KEY_UNITCOMBAT_WEAPON_BACKUP_MEDIUM_RANGE_MISSILE</Description>
-			<Categories>
-				<Category>CATEGORY_UNITCOMBAT_GROUP_WEAPONS_BACKUP</Category>
-			</Categories>
-			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_COMBAT_EQUIPMENT</GameOptionType>
-			</OnGameOptions>
-			<Button>Art/Interface/Buttons/units/sparth/categories/wields_distance_backup.dds</Button>
-		</UnitCombatInfo>
-		<UnitCombatInfo>
-			<Type>UNITCOMBAT_WEAPON_BACKUP_LONG_RANGE_MISSILE</Type>
-			<Description>TXT_KEY_UNITCOMBAT_WEAPON_BACKUP_LONG_RANGE_MISSILE</Description>
-			<Categories>
-				<Category>CATEGORY_UNITCOMBAT_GROUP_WEAPONS_BACKUP</Category>
-			</Categories>
-			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_COMBAT_EQUIPMENT</GameOptionType>
-			</OnGameOptions>
-			<Button>Art/Interface/Buttons/units/sparth/categories/wields_distance_backup.dds</Button>
-		</UnitCombatInfo>
-		<UnitCombatInfo>
-			<Type>UNITCOMBAT_WEAPON_BACKUP_TORPEDO</Type>
-			<Description>TXT_KEY_UNITCOMBAT_WEAPON_BACKUP_TORPEDO</Description>
-			<Categories>
-				<Category>CATEGORY_UNITCOMBAT_GROUP_WEAPONS_BACKUP</Category>
-			</Categories>
-			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_COMBAT_EQUIPMENT</GameOptionType>
-			</OnGameOptions>
-			<Button>Art/Interface/Buttons/units/sparth/categories/wields_distance_backup.dds</Button>
-		</UnitCombatInfo>
-		<UnitCombatInfo>
 			<Type>UNITCOMBAT_WEAPON_DETONATE_DYNAMITE</Type>
 			<Description>TXT_KEY_UNITCOMBAT_WEAPON_DETONATE_DYNAMITE</Description>
 			<Categories>
@@ -4038,9 +3029,6 @@
 			<Categories>
 				<Category>CATEGORY_UNITCOMBAT_GROUP_ARMORS</Category>
 			</Categories>
-			<iArmorChange>10</iArmorChange>
-			<iDodgeModifierChange>-5</iDodgeModifierChange>
-			<iPrecisionModifierChange>-5</iPrecisionModifierChange>
 			<iWithdrawalChange>-5</iWithdrawalChange>
 			<iPursuitChange>-5</iPursuitChange>
 			<Button>Art/Interface/Buttons/units/sparth/categories/armor_type.dds</Button>
@@ -4051,9 +3039,6 @@
 			<Categories>
 				<Category>CATEGORY_UNITCOMBAT_GROUP_ARMORS</Category>
 			</Categories>
-			<iArmorChange>20</iArmorChange>
-			<iDodgeModifierChange>-10</iDodgeModifierChange>
-			<iPrecisionModifierChange>-10</iPrecisionModifierChange>
 			<iWithdrawalChange>-10</iWithdrawalChange>
 			<iPursuitChange>-10</iPursuitChange>
 			<Button>Art/Interface/Buttons/units/sparth/categories/armor_type.dds</Button>
@@ -4064,7 +3049,6 @@
 			<Categories>
 				<Category>CATEGORY_UNITCOMBAT_GROUP_ARMORS</Category>
 			</Categories>
-			<iArmorChange>10</iArmorChange>
 			<Button>Art/Interface/Buttons/units/sparth/categories/armor_type.dds</Button>
 		</UnitCombatInfo>
 		<UnitCombatInfo>
@@ -4073,7 +3057,6 @@
 			<Categories>
 				<Category>CATEGORY_UNITCOMBAT_GROUP_ARMORS</Category>
 			</Categories>
-			<iArmorChange>15</iArmorChange>
 			<Button>Art/Interface/Buttons/units/sparth/categories/armor_type.dds</Button>
 		</UnitCombatInfo>
 		<UnitCombatInfo>
@@ -4082,7 +3065,6 @@
 			<Categories>
 				<Category>CATEGORY_UNITCOMBAT_GROUP_ARMORS</Category>
 			</Categories>
-			<iArmorChange>10</iArmorChange>
 			<Button>Art/Interface/Buttons/units/sparth/categories/armor_type.dds</Button>
 		</UnitCombatInfo>
 		<UnitCombatInfo>
@@ -4091,7 +3073,6 @@
 			<Categories>
 				<Category>CATEGORY_UNITCOMBAT_GROUP_ARMORS</Category>
 			</Categories>
-			<iArmorChange>10</iArmorChange>
 			<Button>Art/Interface/Buttons/units/sparth/categories/armor_type.dds</Button>
 		</UnitCombatInfo>
 		<UnitCombatInfo>
@@ -4100,7 +3081,6 @@
 			<Categories>
 				<Category>CATEGORY_UNITCOMBAT_GROUP_ARMORS</Category>
 			</Categories>
-			<iArmorChange>10</iArmorChange>
 			<Button>Art/Interface/Buttons/units/sparth/categories/armor_type.dds</Button>
 		</UnitCombatInfo>
 		<UnitCombatInfo>
@@ -4109,16 +3089,6 @@
 			<Categories>
 				<Category>CATEGORY_UNITCOMBAT_GROUP_SHIELDS</Category>
 			</Categories>
-			<ArmorVSUnitCombatTypesChanges>
-				<ArmorVSUnitCombatTypesChange>
-					<UnitCombatType>UNITCOMBAT_ARCHER</UnitCombatType>
-					<iModifier>5</iModifier>
-				</ArmorVSUnitCombatTypesChange>
-				<ArmorVSUnitCombatTypesChange>
-					<UnitCombatType>UNITCOMBAT_THROWING</UnitCombatType>
-					<iModifier>5</iModifier>
-				</ArmorVSUnitCombatTypesChange>
-			</ArmorVSUnitCombatTypesChanges>
 			<Button>Art/Interface/Buttons/units/sparth/categories/shield_buckler.dds</Button>
 		</UnitCombatInfo>
 		<UnitCombatInfo>
@@ -4133,28 +3103,6 @@
 					<iModifier>5</iModifier>
 				</UnitCombatChangeModifier>
 			</UnitCombatChangeModifiers>
-			<ArmorVSUnitCombatTypesChanges>
-				<ArmorVSUnitCombatTypesChange>
-					<UnitCombatType>UNITCOMBAT_ARCHER</UnitCombatType>
-					<iModifier>10</iModifier>
-				</ArmorVSUnitCombatTypesChange>
-				<ArmorVSUnitCombatTypesChange>
-					<UnitCombatType>UNITCOMBAT_THROWING</UnitCombatType>
-					<iModifier>10</iModifier>
-				</ArmorVSUnitCombatTypesChange>
-			</ArmorVSUnitCombatTypesChanges>
-			<DodgeVSUnitCombatTypesChanges>
-				<DodgeVSUnitCombatTypesChange>
-					<UnitCombatType>UNITCOMBAT_MELEE</UnitCombatType>
-					<iModifier>-5</iModifier>
-				</DodgeVSUnitCombatTypesChange>
-			</DodgeVSUnitCombatTypesChanges>
-			<PrecisionVSUnitCombatTypesChanges>
-				<PrecisionVSUnitCombatTypesChanges>
-					<UnitCombatType>UNITCOMBAT_MELEE</UnitCombatType>
-					<iModifier>-5</iModifier>
-				</PrecisionVSUnitCombatTypesChanges>
-			</PrecisionVSUnitCombatTypesChanges>
 			<Button>Art/Interface/Buttons/units/sparth/categories/shield_small.dds</Button>
 		</UnitCombatInfo>
 		<UnitCombatInfo>
@@ -4169,28 +3117,6 @@
 					<iModifier>10</iModifier>
 				</UnitCombatChangeModifier>
 			</UnitCombatChangeModifiers>
-			<ArmorVSUnitCombatTypesChanges>
-				<ArmorVSUnitCombatTypesChange>
-					<UnitCombatType>UNITCOMBAT_ARCHER</UnitCombatType>
-					<iModifier>15</iModifier>
-				</ArmorVSUnitCombatTypesChange>
-				<ArmorVSUnitCombatTypesChange>
-					<UnitCombatType>UNITCOMBAT_THROWING</UnitCombatType>
-					<iModifier>15</iModifier>
-				</ArmorVSUnitCombatTypesChange>
-			</ArmorVSUnitCombatTypesChanges>
-			<DodgeVSUnitCombatTypesChanges>
-				<DodgeVSUnitCombatTypesChange>
-					<UnitCombatType>UNITCOMBAT_MELEE</UnitCombatType>
-					<iModifier>-10</iModifier>
-				</DodgeVSUnitCombatTypesChange>
-			</DodgeVSUnitCombatTypesChanges>
-			<PrecisionVSUnitCombatTypesChanges>
-				<PrecisionVSUnitCombatTypesChange>
-					<UnitCombatType>UNITCOMBAT_MELEE</UnitCombatType>
-					<iModifier>-10</iModifier>
-				</PrecisionVSUnitCombatTypesChange>
-			</PrecisionVSUnitCombatTypesChanges>
 			<Button>Art/Interface/Buttons/units/sparth/categories/shield_large.dds</Button>
 		</UnitCombatInfo>
 		<UnitCombatInfo>
@@ -4205,28 +3131,6 @@
 					<iModifier>15</iModifier>
 				</UnitCombatChangeModifier>
 			</UnitCombatChangeModifiers>
-			<ArmorVSUnitCombatTypesChanges>
-				<ArmorVSUnitCombatTypesChange>
-					<UnitCombatType>UNITCOMBAT_ARCHER</UnitCombatType>
-					<iModifier>20</iModifier>
-				</ArmorVSUnitCombatTypesChange>
-				<ArmorVSUnitCombatTypesChange>
-					<UnitCombatType>UNITCOMBAT_THROWING</UnitCombatType>
-					<iModifier>20</iModifier>
-				</ArmorVSUnitCombatTypesChange>
-			</ArmorVSUnitCombatTypesChanges>
-			<DodgeVSUnitCombatTypesChanges>
-				<DodgeVSUnitCombatTypesChange>
-					<UnitCombatType>UNITCOMBAT_MELEE</UnitCombatType>
-					<iModifier>-15</iModifier>
-				</DodgeVSUnitCombatTypesChange>
-			</DodgeVSUnitCombatTypesChanges>
-			<PrecisionVSUnitCombatTypesChanges>
-				<PrecisionVSUnitCombatTypesChange>
-					<UnitCombatType>UNITCOMBAT_MELEE</UnitCombatType>
-					<iModifier>-15</iModifier>
-				</PrecisionVSUnitCombatTypesChange>
-			</PrecisionVSUnitCombatTypesChanges>
 			<Button>Art/Interface/Buttons/units/sparth/categories/shield_tower.dds</Button>
 		</UnitCombatInfo>
 		<UnitCombatInfo>
@@ -4546,8 +3450,6 @@
 			<Categories>
 				<Category>CATEGORY_UNITCOMBAT_GROUP_BIRD</Category>
 			</Categories>
-			<iDodgeModifierChange>15</iDodgeModifierChange>
-			<iPrecisionModifierChange>15</iPrecisionModifierChange>
 			<iDamageModifierChange>-95</iDamageModifierChange>
 			<iWithdrawalChange>60</iWithdrawalChange>
 			<Button>Art/Interface/Buttons/units/sparth/categories/birds.dds</Button>
@@ -4558,8 +3460,6 @@
 			<Categories>
 				<Category>CATEGORY_UNITCOMBAT_GROUP_BIRD</Category>
 			</Categories>
-			<iDodgeModifierChange>15</iDodgeModifierChange>
-			<iPrecisionModifierChange>15</iPrecisionModifierChange>
 			<iDamageModifierChange>-95</iDamageModifierChange>
 			<iWithdrawalChange>60</iWithdrawalChange>
 			<Button>Art/Interface/Buttons/units/sparth/categories/birds.dds</Button>
@@ -4570,8 +3470,6 @@
 			<Categories>
 				<Category>CATEGORY_UNITCOMBAT_GROUP_BIRD</Category>
 			</Categories>
-			<iDodgeModifierChange>5</iDodgeModifierChange>
-			<iPrecisionModifierChange>5</iPrecisionModifierChange>
 			<iDamageModifierChange>-95</iDamageModifierChange>
 			<iWithdrawalChange>20</iWithdrawalChange>
 			<Button>Art/Interface/Buttons/units/sparth/categories/birds.dds</Button>
@@ -4582,8 +3480,6 @@
 			<Categories>
 				<Category>CATEGORY_UNITCOMBAT_GROUP_BIRD</Category>
 			</Categories>
-			<iDodgeModifierChange>20</iDodgeModifierChange>
-			<iPrecisionModifierChange>20</iPrecisionModifierChange>
 			<iDamageModifierChange>-20</iDamageModifierChange>
 			<iWithdrawalChange>55</iWithdrawalChange>
 			<iPursuitChange>10</iPursuitChange>
@@ -4595,7 +3491,6 @@
 			<Categories>
 				<Category>CATEGORY_UNITCOMBAT_GROUP_BIRD</Category>
 			</Categories>
-			<iDodgeModifierChange>20</iDodgeModifierChange>
 			<iDamageModifierChange>-95</iDamageModifierChange>
 			<iWithdrawalChange>50</iWithdrawalChange>
 			<Button>Art/Interface/Buttons/units/sparth/categories/birds.dds</Button>
@@ -4606,8 +3501,6 @@
 			<Categories>
 				<Category>CATEGORY_UNITCOMBAT_GROUP_BIRD</Category>
 			</Categories>
-			<iDodgeModifierChange>15</iDodgeModifierChange>
-			<iPrecisionModifierChange>15</iPrecisionModifierChange>
 			<iDamageModifierChange>-95</iDamageModifierChange>
 			<iWithdrawalChange>60</iWithdrawalChange>
 			<Button>Art/Interface/Buttons/units/sparth/categories/birds.dds</Button>
@@ -4618,8 +3511,6 @@
 			<Categories>
 				<Category>CATEGORY_UNITCOMBAT_GROUP_BIRD</Category>
 			</Categories>
-			<iDodgeModifierChange>15</iDodgeModifierChange>
-			<iPrecisionModifierChange>15</iPrecisionModifierChange>
 			<iDamageModifierChange>-95</iDamageModifierChange>
 			<iWithdrawalChange>65</iWithdrawalChange>
 			<Button>Art/Interface/Buttons/units/sparth/categories/birds.dds</Button>
@@ -4630,8 +3521,6 @@
 			<Categories>
 				<Category>CATEGORY_UNITCOMBAT_GROUP_BIRD</Category>
 			</Categories>
-			<iDodgeModifierChange>25</iDodgeModifierChange>
-			<iPrecisionModifierChange>25</iPrecisionModifierChange>
 			<iDamageModifierChange>-95</iDamageModifierChange>
 			<iWithdrawalChange>70</iWithdrawalChange>
 			<Button>Art/Interface/Buttons/units/sparth/categories/birds.dds</Button>
@@ -4644,8 +3533,6 @@
 			</Categories>
 			<iWithdrawalChange>50</iWithdrawalChange>
 			<iEarlyWithdrawChange>-30</iEarlyWithdrawChange>
-			<iDodgeModifierChange>20</iDodgeModifierChange>
-			<iPrecisionModifierChange>20</iPrecisionModifierChange>
 			<iDamageModifierChange>-20</iDamageModifierChange>
 			<iPursuitChange>20</iPursuitChange>
 			<Button>Art/Interface/Buttons/units/sparth/categories/birds.dds</Button>
@@ -5044,7 +3931,6 @@
 			<Categories>
 				<Category>CATEGORY_UNITCOMBAT_GROUP_NATURAL</Category>
 			</Categories>
-			<iArmorChange>20</iArmorChange>
 			<Button>Art/Interface/Buttons/units/sparth/categories/nature_shelled.dds</Button>
 		</UnitCombatInfo>
 		<UnitCombatInfo>
@@ -5053,7 +3939,6 @@
 			<Categories>
 				<Category>CATEGORY_UNITCOMBAT_GROUP_NATURAL</Category>
 			</Categories>
-			<iArmorChange>15</iArmorChange>
 			<Button>Art/Interface/Buttons/units/sparth/categories/nature_thick_skinned.dds</Button>
 		</UnitCombatInfo>
 		<UnitCombatInfo>
@@ -5062,7 +3947,6 @@
 			<Categories>
 				<Category>CATEGORY_UNITCOMBAT_GROUP_NATURAL</Category>
 			</Categories>
-			<iArmorChange>40</iArmorChange>
 			<Button>Art/Interface/Buttons/units/sparth/categories/nature_hard_platted.dds</Button>
 		</UnitCombatInfo>
 		<UnitCombatInfo>
@@ -5115,7 +3999,6 @@
 			</Categories>
 			<iStealthDefenseChange>1</iStealthDefenseChange>
 			<iStealthCombatModifierChange>10</iStealthCombatModifierChange>
-			<iOverrunChange>20</iOverrunChange>
 			<Button>Art/Interface/Buttons/units/sparth/categories/nature_charging.dds</Button>
 		</UnitCombatInfo>
 		<UnitCombatInfo>
@@ -5124,8 +4007,6 @@
 			<Categories>
 				<Category>CATEGORY_UNITCOMBAT_GROUP_NATURAL</Category>
 			</Categories>
-			<iDodgeModifierChange>10</iDodgeModifierChange>
-			<iPrecisionModifierChange>10</iPrecisionModifierChange>
 			<Button>Art/Interface/Buttons/units/sparth/categories/nature_fast_reflex.dds</Button>
 		</UnitCombatInfo>
 		<UnitCombatInfo>
@@ -5267,7 +4148,6 @@
 				<Category>CATEGORY_UNITCOMBAT_GROUP_NATURAL</Category>
 			</Categories>
 			<iTauntChange>30</iTauntChange>
-			<iRepelChange>5</iRepelChange>
 			<Button>Art/Interface/Buttons/units/sparth/categories/nature_roaring.dds</Button>
 		</UnitCombatInfo>
 		<UnitCombatInfo>
@@ -5277,7 +4157,6 @@
 				<Category>CATEGORY_UNITCOMBAT_GROUP_NATURAL</Category>
 			</Categories>
 			<iTauntChange>-10</iTauntChange>
-			<iRepelChange>5</iRepelChange>
 			<Button>Art/Interface/Buttons/units/sparth/categories/nature_warning.dds</Button>
 		</UnitCombatInfo>
 		<UnitCombatInfo>
@@ -5286,8 +4165,6 @@
 			<Categories>
 				<Category>CATEGORY_UNITCOMBAT_GROUP_NATURAL</Category>
 			</Categories>
-			<iRepelChange>10</iRepelChange>
-			<iRepelRetriesChange>2</iRepelRetriesChange>
 			<Button>Art/Interface/Buttons/units/sparth/categories/nature_repellent.dds</Button>
 		</UnitCombatInfo>
 		<UnitCombatInfo>
@@ -5592,9 +4469,6 @@
 			</Categories>
 			<iEarlyWithdrawChange>-25</iEarlyWithdrawChange>
 			<iPursuitChange>5</iPursuitChange>
-			<iUnyieldingChange>50</iUnyieldingChange>
-			<iRepelChange>10</iRepelChange>
-			<!-- Need to add the tag to UnitCombatInfos <iStrAdjperRndChange>3</iStrAdjperRndChange> -->
 			<Button>Art/Interface/Buttons/units/sparth/categories/nature_raging.dds</Button>
 		</UnitCombatInfo>
 		<UnitCombatInfo>
@@ -5603,7 +4477,6 @@
 			<Categories>
 				<Category>CATEGORY_UNITCOMBAT_GROUP_NATURAL</Category>
 			</Categories>
-			<iArmorChange>10</iArmorChange>
 			<Button>Art/Interface/Buttons/units/sparth/categories/nature_tough_hide.dds</Button>
 		</UnitCombatInfo>
 		<UnitCombatInfo>
@@ -5612,7 +4485,6 @@
 			<Categories>
 				<Category>CATEGORY_UNITCOMBAT_GROUP_NATURAL</Category>
 			</Categories>
-			<iUnyieldingChange>25</iUnyieldingChange>
 			<iPursuitChange>10</iPursuitChange>
 			<iCombatModifierPerSizeMoreChange>10</iCombatModifierPerSizeMoreChange>
 			<iCombatModifierPerVolumeLessChange>10</iCombatModifierPerVolumeLessChange>
@@ -5679,8 +4551,6 @@
 			</Categories>
 			<iCombatModifierPerVolumeMoreChange>-15</iCombatModifierPerVolumeMoreChange>
 			<iCombatModifierPerVolumeLessChange>15</iCombatModifierPerVolumeLessChange>
-			<iRepelChange>10</iRepelChange>
-			<iOverrunChange>10</iOverrunChange>
 			<iGatherHerdChange>1</iGatherHerdChange>
 			<Button>Art/Interface/Buttons/units/sparth/categories/nature_herding.dds</Button>
 		</UnitCombatInfo>
@@ -5708,7 +4578,6 @@
 			<Categories>
 				<Category>CATEGORY_UNITCOMBAT_GROUP_NATURAL</Category>
 			</Categories>
-			<iRepelChange>5</iRepelChange>
 			<Button>Art/Interface/Buttons/units/sparth/categories/nature_fecal_flinging.dds</Button>
 		</UnitCombatInfo>
 		<UnitCombatInfo>
@@ -5717,8 +4586,6 @@
 			<Categories>
 				<Category>CATEGORY_UNITCOMBAT_GROUP_NATURAL</Category>
 			</Categories>
-			<iRepelChange>40</iRepelChange>
-			<iKnockbackChange>40</iKnockbackChange>
 			<Button>Art/Interface/Buttons/units/sparth/categories/nature_devour.dds</Button>
 		</UnitCombatInfo>
 		<UnitCombatInfo>
@@ -8186,16 +7053,6 @@
 			<Categories>
 				<Category>CATEGORY_UNITCOMBAT_GROUP_ARMOR_TYPES</Category>
 			</Categories>
-			<ArmorVSUnitCombatTypesChanges>
-				<ArmorVSUnitCombatTypesChange>
-					<UnitCombatType>UNITCOMBAT_ARCHER</UnitCombatType>
-					<iModifier>50</iModifier>
-				</ArmorVSUnitCombatTypesChange>
-				<ArmorVSUnitCombatTypesChange>
-					<UnitCombatType>UNITCOMBAT_THROWING</UnitCombatType>
-					<iModifier>25</iModifier>
-				</ArmorVSUnitCombatTypesChange>
-			</ArmorVSUnitCombatTypesChanges>
 			<Button>Art/Interface/Buttons/units/sparth/categories/armor_type.dds</Button>
 		</UnitCombatInfo>
 		<UnitCombatInfo>
@@ -9803,8 +8660,6 @@
 			<Categories>
 				<Category>CATEGORY_UNITCOMBAT_GROUP_SIZE</Category>
 			</Categories>
-			<iDodgeModifierChange>60</iDodgeModifierChange>
-			<iPrecisionModifierChange>60</iPrecisionModifierChange>
 			<iDamageModifierChange>-60</iDamageModifierChange>
 			<OnGameOptions>
 				<GameOptionType>GAMEOPTION_COMBAT_SIZE_MATTERS</GameOptionType>

@@ -93,32 +93,11 @@ public:
 	int getPursuitChange() const;
 	int getEarlyWithdrawChange() const;
 	int getVSBarbsChange() const;
-	int getOverrunChange() const;
-	int getRepelChange() const;
-	int getFortRepelChange() const;
-	int getRepelRetriesChange() const;
-	int getUnyieldingChange() const;
-	int getKnockbackChange() const;
-	int getKnockbackRetriesChange() const;
-#ifdef BATTLEWORN
-	int getStrAdjperAttChange() const;
-	int getStrAdjperDefChange() const;
-	int getWithdrawAdjperAttChange() const;
-#endif // BATTLEWORN
 	int getUnnerveChange() const;
 	int getEncloseChange() const;
 	int getLungeChange() const;
 	int getDynamicDefenseChange() const;
 	int getStrengthChange() const;
-	int getFortitudeChange() const;
-#ifdef STRENGTH_IN_NUMBERS
-	int getFrontSupportPercentChange() const;
-	int getShortRangeSupportPercentChange() const;
-	int getMediumRangeSupportPercentChange() const;
-	int getLongRangeSupportPercentChange() const;
-	int getFlankSupportPercentChange() const;
-#endif // STRENGTH_IN_NUMBERS
-	int getCriticalModifierChange() const;
 	int getEnduranceChange() const;
 	int getPoisonProbabilityModifierChange() const;
 	int getCaptureProbabilityModifierChange() const;
@@ -305,17 +284,6 @@ public:
 	int getNumPursuitVSUnitCombatTypesChange() const;
 	const UnitCombatModifier& getPursuitVSUnitCombatTypeChange(int iUnitCombat) const;
 
-	//Heart of War only
-	int getNumRepelVSUnitCombatTypesChange() const;
-	const UnitCombatModifier& getRepelVSUnitCombatTypeChange(int iUnitCombat) const;
-
-	//Heart of War only
-	int getNumKnockbackVSUnitCombatTypesChange() const;
-	const UnitCombatModifier& getKnockbackVSUnitCombatTypeChange(int iUnitCombat) const;
-
-	int getNumCriticalVSUnitCombatTypesChange() const;
-	const UnitCombatModifier& getCriticalVSUnitCombatTypeChange(int iUnitCombat) const;
-
 	int getNumTrapAvoidanceUnitCombatTypes() const;
 	const UnitCombatModifier& getTrapAvoidanceUnitCombatType(int iIndex) const;
 
@@ -345,9 +313,6 @@ public:
 
 	int getNumVisibleImprovementRangeChanges() const;
 	const InvisibleImprovementChanges& getVisibleImprovementRangeChange(int iIndex) const;
-
-	int getNumDistanceAttackCommunicabilityTypeChanges() const;
-	const AfflictionLineChanges& getDistanceAttackCommunicabilityTypeChange(int iIndex) const;
 
 	const CvPropertyManipulators* getPropertyManipulators() const { return &m_PropertyManipulators; }
 
@@ -410,32 +375,11 @@ protected:
 	int m_iPursuitChange;
 	int m_iEarlyWithdrawChange;
 	int m_iVSBarbsChange;
-	int m_iOverrunChange;
-	int m_iRepelChange;
-	int m_iFortRepelChange;
-	int m_iRepelRetriesChange;
-	int m_iUnyieldingChange;
-	int m_iKnockbackChange;
-	int m_iKnockbackRetriesChange;
-#ifdef BATTLEWORN
-	int m_iStrAdjperAttChange;
-	int m_iStrAdjperDefChange;
-	int m_iWithdrawAdjperAttChange;
-#endif // BATTLEWORN
 	int m_iUnnerveChange;
 	int m_iEncloseChange;
 	int m_iLungeChange;
 	int m_iDynamicDefenseChange;
 	int m_iStrengthChange;
-	int m_iFortitudeChange;
-#ifdef STRENGTH_IN_NUMBERS
-	int m_iFrontSupportPercentChange;
-	int m_iShortRangeSupportPercentChange;
-	int m_iMediumRangeSupportPercentChange;
-	int m_iLongRangeSupportPercentChange;
-	int m_iFlankSupportPercentChange;
-#endif // STRENGTH_IN_NUMBERS
-	int m_iCriticalModifierChange;
 	int m_iEnduranceChange;
 	int m_iPoisonProbabilityModifierChange;
 	int m_iCaptureProbabilityModifierChange;
@@ -557,9 +501,6 @@ protected:
 	std::vector<UnitCombatModifier> m_aFlankingStrengthbyUnitCombatTypeChange;
 	std::vector<UnitCombatModifier> m_aWithdrawVSUnitCombatTypeChange;
 	std::vector<UnitCombatModifier> m_aPursuitVSUnitCombatTypeChange;
-	std::vector<UnitCombatModifier> m_aRepelVSUnitCombatTypeChange;
-	std::vector<UnitCombatModifier> m_aKnockbackVSUnitCombatTypeChange;
-	std::vector<UnitCombatModifier> m_aCriticalVSUnitCombatTypeChange;
 	std::vector<UnitCombatModifier> m_aTrapAvoidanceUnitCombatTypes;
 	std::vector<InvisibleTerrainChanges> m_aInvisibleTerrainChanges;
 	std::vector<InvisibleFeatureChanges> m_aInvisibleFeatureChanges;
