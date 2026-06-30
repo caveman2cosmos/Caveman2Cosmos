@@ -147,12 +147,13 @@ Settings
     .ConfigName     = 'Release'
 ]
 
-.ConfigAssert = 
+.ConfigAssert =
 [
     Using(.ConfigNonDebugCommon)
     .ConfigName     = 'Assert'
 
     .CLOptions      + ' /DFASSERT_ENABLE'
+                    + ' /DFASSERT_LOGGING'
 ]
 
 .ConfigProfile = 
