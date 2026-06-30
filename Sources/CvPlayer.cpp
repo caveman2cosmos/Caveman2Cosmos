@@ -18604,6 +18604,13 @@ void CvPlayer::read(FDataStreamBase* pStream)
 		m_contractBroker.init(m_eID);
 		m_contractBroker.cleanup();
 
+		// Loaded games never run init()/initInGame(), so set the per-player AI
+        // helper owners here too -- otherwise their m_owner stays NO_PLAYER and
+        // e.g. CvDecisionAI::onTurnBegin skips its per-turn flavour baseline.
+        m_workerAI.setOwner(m_eID);
+        m_hunterAI.setOwner(m_eID);
+        m_decisionAI.setOwner(m_eID);
+
 		// @SAVEBREAK EVALUATE
 		WRAPPER_READ(wrapper, "CvPlayer", (int*)&m_ePersonalityType);
 		//	The above should be a class enum but to avoid screwing up existing saves doing a manual translation

@@ -4,6 +4,7 @@
 #include "FProfiler.h"
 
 #include "CvGameCoreDLL.h"
+#include "BetterBTSAI.h"
 #include "CvArea.h"
 #include "CvBuildingInfo.h"
 #include "CvBonusInfo.h"
@@ -232,9 +233,17 @@ void CvTeamAI::AI_updateAreaStragies(const bool bTargets)
 	}
 
 	foreach_(CvArea* pLoopArea, GC.getMap().areas())
-	{
-		pLoopArea->setAreaAIType(getID(), AI_calculateAreaAIType(pLoopArea));
-	}
+    {
+        const AreaAITypes eOldAreaAI = pLoopArea->getAreaAIType(getID());
+        const AreaAITypes eNewAreaAI = AI_calculateAreaAIType(pLoopArea);
+        pLoopArea->setAreaAIType(getID(), eNewAreaAI);
+        // [WAR/area] -- per-area military posture decision; log only on change.
+        if (eNewAreaAI != eOldAreaAI)
+        {
+            logWarAI(1, "[WAR/area] team=%d area=%d posture %d -> %d",
+                (int)getID(), pLoopArea->getID(), (int)eOldAreaAI, (int)eNewAreaAI);
+        }
+    }
 
 	if (bTargets)
 	{
@@ -3288,6 +3297,11 @@ void CvTeamAI::AI_setWarPlan(TeamTypes eIndex, WarPlanTypes eNewValue, bool bWar
 
 	if (AI_getWarPlan(eIndex) != eNewValue && (bWar || !isAtWar(eIndex)))
 	{
+	    // [WAR/warplan] -- the consolidated war decision: every warplan transition
+        // (declare / prepare / escalate / abandon) funnels through here.
+        logWarAI(1, "[WAR/warplan] team=%d vs team=%d plan %d -> %d (atWar=%d)",
+            (int)getID(), (int)eIndex, (int)AI_getWarPlan(eIndex), (int)eNewValue, isAtWar(eIndex) ? 1 : 0);
+
 		m_aeWarPlan[eIndex] = eNewValue;
 
 		if (bInFull)

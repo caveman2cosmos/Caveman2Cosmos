@@ -1,6 +1,7 @@
 // cityAI.cpp
 
 #include "CvGameCoreDLL.h"
+#include "BetterBTSAI.h"
 
 #include "FProfiler.h"
 #include "CvArea.h"
@@ -782,6 +783,12 @@ void CvCityAI::AI_chooseProduction()
 	const bool bFinancialTrouble = player.AI_isFinancialTrouble();
 	const bool bCriticalGold = player.AI_hasCriticalGold();
 	const int iHammerCostPercent = GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getHammerCostPercent();
+
+    // [CIT/begin] -- decision context for this city's production choice.
+    logCityAI(1, "[CIT/begin] city=%S owner=%d pop=%d danger=%d dangerVal=%d finTrouble=%d critGold=%d foodProd=%d",
+        getName().GetCString(), (int)eOwner, getPopulation(), bDanger ? 1 : 0, iDangerValue,
+        bFinancialTrouble ? 1 : 0, bCriticalGold ? 1 : 0, bWasFoodProduction ? 1 : 0);
+
 
 	//# 0 : If their is a alredy a production in City, Conditions to keep them (
 	// 1. nearly done buildings
@@ -8546,6 +8553,9 @@ bool CvCityAI::AI_chooseUnitImmediate(const char* reason, UnitAITypes eUnitAI, c
 
 	if (eBestUnit != NO_UNIT)
 	{
+	    // [CIT/order] -- city commits to training a unit (with the triggering reason).
+        logCityAI(1, "[CIT/order] city=%S TRAIN %S unitAI=%d reason=%s",
+            getName().GetCString(), GC.getUnitInfo(eBestUnit).getDescription(), (int)eUnitAI, reason ? reason : "");
 		pushOrder(ORDER_TRAIN, eBestUnit, eUnitAI, false, false, false);
 		return true;
 	}
@@ -8808,6 +8818,11 @@ bool CvCityAI::AI_chooseBuilding(int iFocusFlags, int iMaxTurns, int iMinThresho
 		|| getProgressOnBuilding(eBestBuilding) > 0
 		|| GC.getGame().getSorenRandNum(100, "City AI choose building") < iOdds)
 		{
+		    // [CIT/order] -- city commits to a building; score is its AI value, with
+            // the candidate count and focus flags that drove the pick.
+            logCityAI(1, "[CIT/order] city=%S CONSTRUCT %S score=%I64d rank=%d/%d focus=0x%x",
+                getName().GetCString(), GC.getBuildingInfo(eBestBuilding).getDescription(),
+                bestBuildings[i].score, (int)i, (int)bestBuildings.size(), iFocusFlags);
 			pushOrder(ORDER_CONSTRUCT, eBestBuilding, -1, false, false, true); //not insert, append to queue
 			nbBuildings += 1;
 			enqueuedBuilding = true;
@@ -8852,6 +8867,9 @@ bool CvCityAI::AI_chooseProject()
 
 	if (eBestProject != NO_PROJECT)
 	{
+	    // [CIT/order] -- city commits to a project (e.g. wonder/spaceship part).
+        logCityAI(1, "[CIT/order] city=%S CREATE_PROJECT %S",
+            getName().GetCString(), GC.getProjectInfo(eBestProject).getDescription());
 		pushOrder(ORDER_CREATE, eBestProject, -1, false, false, true);
 		
 		return true;
@@ -8875,6 +8893,9 @@ bool CvCityAI::AI_chooseProcess(CommerceTypes eCommerceType, int64_t* commerceWe
 
 	if (eBestProcess != NO_PROCESS)
 	{
+	    // [CIT/order] -- city falls back to running a process (gold/research/culture/...).
+        logCityAI(1, "[CIT/order] city=%S MAINTAIN_PROCESS %S commerce=%d",
+            getName().GetCString(), GC.getProcessInfo(eBestProcess).getDescription(), (int)eCommerceType);
 		pushOrder(ORDER_MAINTAIN, eBestProcess, -1, false, false, !bforce);
 
 		return true;

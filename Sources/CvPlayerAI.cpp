@@ -15426,6 +15426,11 @@ EspionageMissionTypes CvPlayerAI::AI_bestPlotEspionage(CvPlot* pSpyPlot, PlayerT
 		}
 	}
 
+    // [ESP/best] -- the espionage mission a spy commits to this evaluation (or none).
+    logEspionageAI(1, "[ESP/best] player=%d spyAt=(%d,%d) mission=%d target=%d value=%d",
+        getID(), pSpyPlot ? pSpyPlot->getX() : -1, pSpyPlot ? pSpyPlot->getY() : -1,
+        (int)eBestMission, (eBestMission != NO_ESPIONAGEMISSION ? (int)eTargetPlayer : -1), iBestValue);
+
 	return eBestMission;
 }
 

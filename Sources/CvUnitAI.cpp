@@ -482,6 +482,11 @@ void CvUnitAI::doUnitAIMove()
 		return;
 	}
 
+    // [UNT/move] -- per-unit AI routine dispatch: which UNITAI behaviour the unit
+    // runs this turn (the contract/merge early-outs above are handled separately).
+    logUnitAI(2, "[UNT/move] owner=%d unit=%d type=%d at=(%d,%d) stack=%d",
+        (int)getOwner(), getID(), (int)AI_getUnitAIType(), getX(), getY(), getGroup()->getNumUnits());
+
 	switch (AI_getUnitAIType())
 	{
 	case UNITAI_UNKNOWN:
@@ -1474,6 +1479,10 @@ void CvUnitAI::AI_setUnitAIType(UnitAITypes eNewValue)
 
 	if (AI_getUnitAIType() != eNewValue)
 	{
+	    // [UNT/role] -- unit changes its AI role (a deliberate reassignment decision).
+        logUnitAI(1, "[UNT/role] owner=%d unit=%d UNITAI %d -> %d",
+            (int)getOwner(), getID(), (int)AI_getUnitAIType(), (int)eNewValue);
+
 		area()->changeNumAIUnits(getOwner(), AI_getUnitAIType(), -1);
 		GET_PLAYER(getOwner()).AI_changeNumAIUnits(AI_getUnitAIType(), -1);
 
@@ -18864,6 +18873,12 @@ bool CvUnitAI::AI_found()
 
 	if (pBestPlot)
 	{
+	    // [FND/site] -- settler commits to a city site (best found-value / path among
+        // the player's candidate city sites); founds now if on it, else heads there.
+        logFoundAI(1, "[FND/site] owner=%d unit=%d site=(%d,%d) value=%d candidateSites=%d action=%s",
+            (int)getOwner(), getID(), pBestPlot->getX(), pBestPlot->getY(), iBestFoundValue,
+            GET_PLAYER(getOwner()).AI_getNumCitySites(), atPlot(pBestPlot) ? "FOUND" : "moveto");
+
 		if (atPlot(pBestPlot))
 		{
 			getGroup()->pushMission(MISSION_FOUND, -1, -1, 0, false, false, MISSIONAI_FOUND, pBestPlot);
@@ -24800,6 +24815,11 @@ int CvUnitAI::AI_finalOddsThreshold(const CvPlot* pPlot, int iOddsThreshold) con
 		iDivisor += ((AI_getUnitAIType() == UNITAI_ATTACK_CITY || AI_getUnitAIType() == UNITAI_ATTACK) ? 2 : 0);
 		iFinalOddsThreshold /= iDivisor;
 	}
+	// [COM/threshold] -- the go/no-go odds bar the AI requires to attack this plot.
+    logCombatAI(3, "[COM/threshold] owner=%d unit=%d target=(%d,%d) base=%d final=%d",
+        (int)getOwner(), getID(), pPlot ? pPlot->getX() : -1, pPlot ? pPlot->getY() : -1,
+        iOddsThreshold, range(iFinalOddsThreshold, 0, 100));
+
 	return range(iFinalOddsThreshold, 0, 100);
 }
 
