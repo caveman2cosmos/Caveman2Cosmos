@@ -27,6 +27,33 @@ void CvHunterAI::onTurnBegin(int gameTurn)
 {
 	m_lastTurn = gameTurn;
 	m_claims.clear();
+	m_decisionPlot.clear();
+}
+
+// Turn-hang safety. A hunter/explore routine that pushes a mission which never advances the
+// unit leaves it readyToMove, so the AI loop re-invokes it at the same plot until the engine's
+// iTempHack>50 backstop fires -- ~50 expensive re-decides per stuck unit, per turn. Count
+// consecutive same-plot re-decides; once a unit moves, the count resets. After the cap, end its
+// turn so the spin can't waste the rest of the slice.
+bool CvHunterAI::detectSpin(CvUnitAI* unit)
+{
+	const int iPlotIdx = GC.getMap().plotNum(unit->getX(), unit->getY());
+	std::pair<int, int>& rec = m_decisionPlot[unit->getID()]; // value-inits to (0,0) on first sight
+
+	if (rec.second == 0 || rec.first != iPlotIdx)
+	{
+		rec.first = iPlotIdx;
+		rec.second = 1;
+		return false;
+	}
+	if (++rec.second <= 8)
+	{
+		return false;
+	}
+	logHunterAI(1, "[HAI/spin] unit=%d stuck at (%d,%d) -> end turn", unit->getID(), unit->getX(), unit->getY());
+	unit->finishMoves();
+	unit->getGroup()->pushMission(MISSION_SKIP);
+	return true;
 }
 
 bool CvHunterAI::tryClaim(int plotIdx, int unitId)
@@ -74,6 +101,11 @@ bool CvHunterAI::hunterMove(CvUnitAI* unit, bool bWithCommander)
 
 	logHunterAI(1, "[HAI/begin] hunterMove owner=%d unit=%d aitype=%d automate=%d withCmd=%d at=(%d,%d) stack=%d",
 		unit->getOwner(), unit->getID(), unit->AI_getUnitAIType(), unit->getGroup()->getAutomateType(), (int)bWithCommander, unit->getX(), unit->getY(), unit->getGroup()->getNumUnits());
+
+	if (detectSpin(unit))
+	{
+		return true;
+	}
 
 	if (unit->AI_groupSelectStatus())
 	{
@@ -394,6 +426,11 @@ bool CvHunterAI::autoHuntMove(CvUnitAI* unit)
 	logHunterAI(1, "[HAI/begin] autoHuntMove owner=%d unit=%d aitype=%d automate=%d at=(%d,%d) stack=%d",
 		unit->getOwner(), unit->getID(), unit->AI_getUnitAIType(), unit->getGroup()->getAutomateType(), unit->getX(), unit->getY(), unit->getGroup()->getNumUnits());
 
+	if (detectSpin(unit))
+	{
+		return true;
+	}
+
 	if (unit->AI_groupSelectStatus())
 	{
 		return false;
@@ -444,6 +481,38 @@ bool CvHunterAI::autoHuntMove(CvUnitAI* unit)
 		return true;
 	}
 
+	// Naval auto-hunt: before falling back to home waters, take the fight to the enemy at
+	// sea -- chase visible enemy ships across the area (AI_seaAreaAttack, not confined to our
+	// own waters), or sail to blockade an enemy coast (AI_blockade). This is what lets an
+	// automated attack ship actually leave its own borders instead of dropping to
+	// AI_moveToBorders below (which only ever moves within our own territory).
+	if (unit->getDomainType() == DOMAIN_SEA)
+	{
+		if (unit->AI_seaAreaAttack())
+		{
+			logHunterAI(1, "[HAI/engage] unit=%d action=seaAreaAttack", unit->getID());
+			return true;
+		}
+		if (unit->AI_blockade())
+		{
+			logHunterAI(1, "[HAI/engage] unit=%d action=blockade", unit->getID());
+			return true;
+		}
+		// Nothing in reach to engage. Ships have the movement to go looking, so explore for new
+		// targets -- seaExplore prefers OPEN dark ocean and spreads the fleet out (unlike the
+		// coast-hugging AI_explore), then fall back to the generic explorer if it finds nothing,
+		// rather than dropping back to our own borders below.
+		if (seaExplore(unit))
+		{
+			return true; // seaExplore logs its own [HAI/explore] line
+		}
+		if (unit->AI_explore())
+		{
+			logHunterAI(2, "[HAI/explore] unit=%d action=exploreGeneric", unit->getID());
+			return true;
+		}
+	}
+
 	// Spread out instead of trailing one another.
 	if (unit->AI_moveToBorders())
 	{
@@ -469,5 +538,128 @@ bool CvHunterAI::autoHuntMove(CvUnitAI* unit)
 
 	unit->getGroup()->pushMission(MISSION_SKIP);
 	logHunterAI(1, "[HAI/end] autoHuntMove unit=%d result=skip", unit->getID());
+	return true;
+}
+
+// ---------------------------------------------------------------------------
+// seaExplore -- naval exploration for auto-hunt ships. CvUnitAI::AI_explore adds a
+// large +adjacentToLand / +owned bias, so it hugs the coast and home waters; a hunting
+// fleet wants the opposite -- strike into the open dark ocean. This scores frontier
+// water plots (those adjacent to unrevealed map), prefers ones NOT adjacent to land
+// (open sea), and spreads the fleet out via the per-player claim ledger so ships don't
+// all funnel down the same coastline. Returns false (caller falls back) if nothing in
+// range is still a frontier.
+// ---------------------------------------------------------------------------
+bool CvHunterAI::seaExplore(CvUnitAI* unit)
+{
+	PROFILE_FUNC();
+
+	const TeamTypes eTeam = unit->getTeam();
+	const int iMoves = std::max(1, unit->baseMoves()); // tiles/turn (NOT maxMoves(), which is move-points)
+	const int iRange = iMoves; // scan as far as the ship can move in a turn -- derived from movement, not arbitrary
+
+	// Hysteresis -- i.e. stick with the heading we already chose instead of flip-flopping every
+	// step (like a thermostat that waits for a margin before switching, rather than cycling on
+	// every tiny wobble). If we already committed to an explore target that is still worth
+	// reaching, keep heading there instead of re-rolling a fresh target every step. Without this
+	// the random jitter below makes ships dither around the same few plots (one ship logged 5382
+	// invocations across only 63 plots) instead of driving into the dark; committing also skips
+	// the scan.
+	if (unit->getGroup()->AI_getMissionAIType() == MISSIONAI_EXPLORE)
+	{
+		CvPlot* pPrev = unit->getGroup()->AI_getMissionAIPlot();
+		if (pPrev != NULL
+		&& !unit->atPlot(pPrev)
+		&& pPrev->area() == unit->area()
+		&& pPrev->isRevealed(eTeam, false)
+		&& !pPrev->isVisibleEnemyDefender(unit)
+		&& !isClaimedByOther(GC.getMap().plotNum(pPrev->getX(), pPrev->getY()), unit->getID()))
+		{
+			int iStillUnrevealed = 0;
+			foreach_(const CvPlot* pAdj, pPrev->adjacent())
+			{
+				if (!pAdj->isRevealed(eTeam, false))
+				{
+					iStillUnrevealed++;
+				}
+			}
+			if (iStillUnrevealed > 0) // target is still a frontier -> stay the course
+			{
+				tryClaim(GC.getMap().plotNum(pPrev->getX(), pPrev->getY()), unit->getID());
+				logHunterAI(2, "[HAI/explore] unit=%d action=seaExploreKeep to=(%d,%d)", unit->getID(), pPrev->getX(), pPrev->getY());
+				unit->getGroup()->pushMission(MISSION_MOVE_TO, pPrev->getX(), pPrev->getY(),
+					MOVE_NO_ENEMY_TERRITORY | MOVE_AVOID_ENEMY_UNITS, false, false, MISSIONAI_EXPLORE, pPrev);
+				return true;
+			}
+		}
+	}
+
+	int iBestValue = 0;
+	int iBestPlotIdx = -1; // store the index, not the pointer -- keeps the choice deterministic (no OOS)
+
+	// A plot in the same contiguous water area is reachable by sea, so a plain rect scan is enough
+	// here -- crucially WITHOUT building a CvReachablePlotSet (a movement flood-fill), which made
+	// turn times explode when every auto-hunt ship re-ran this on every move step.
+	foreach_(const CvPlot* plotX, unit->plot()->rect(iRange, iRange))
+	{
+		if (plotX->area() != unit->area()
+		|| !plotX->isRevealed(eTeam, false)
+		|| plotX->isVisibleEnemyDefender(unit)
+		|| unit->atPlot(plotX))
+		{
+			continue;
+		}
+
+		int iUnrevealedAdjacent = 0;
+		bool bAdjacentToLand = false;
+		foreach_(const CvPlot* plotY, plotX->adjacent())
+		{
+			if (!plotY->isRevealed(eTeam, false))
+			{
+				iUnrevealedAdjacent++;
+			}
+			if (!plotY->isWater())
+			{
+				bAdjacentToLand = true;
+			}
+		}
+		if (iUnrevealedAdjacent == 0)
+		{
+			continue; // not a frontier plot
+		}
+
+		const int iPlotIdx = GC.getMap().plotNum(plotX->getX(), plotX->getY());
+		if (isClaimedByOther(iPlotIdx, unit->getID()))
+		{
+			continue; // another hunter is already heading here this turn
+		}
+
+		int iValue = 1000 * iUnrevealedAdjacent;
+		if (!bAdjacentToLand)
+		{
+			iValue += 4000; // push into open dark ocean rather than hugging the coast
+		}
+		iValue += GC.getGame().getMapRandNum(1500, "sea explore spread"); // diverge fleet headings
+		const int iDist = stepDistance(unit->getX(), unit->getY(), plotX->getX(), plotX->getY());
+		iValue /= (2 + iDist / iMoves);
+
+		// Deterministic tie-break by plot index (never compare pointers -> OOS-safe).
+		if (iValue > iBestValue || (iValue == iBestValue && iPlotIdx > iBestPlotIdx))
+		{
+			iBestValue = iValue;
+			iBestPlotIdx = iPlotIdx;
+		}
+	}
+
+	if (iBestPlotIdx < 0)
+	{
+		return false;
+	}
+
+	CvPlot* pBestPlot = GC.getMap().plotByIndex(iBestPlotIdx);
+	tryClaim(iBestPlotIdx, unit->getID());
+	logHunterAI(1, "[HAI/explore] unit=%d action=seaExplore to=(%d,%d)", unit->getID(), pBestPlot->getX(), pBestPlot->getY());
+	unit->getGroup()->pushMission(MISSION_MOVE_TO, pBestPlot->getX(), pBestPlot->getY(),
+		MOVE_NO_ENEMY_TERRITORY | MOVE_AVOID_ENEMY_UNITS, false, false, MISSIONAI_EXPLORE, pBestPlot);
 	return true;
 }

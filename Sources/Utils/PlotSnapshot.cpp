@@ -1,4 +1,4 @@
-// PlotSnapshot.cpp -- see Sources/docs/PlotSnapshot.md for schema and conventions.
+// PlotSnapshot.cpp -- see Sources/docs/reference/PlotSnapshot.md for schema and conventions.
 //
 // Emits one CSV file per call:
 //   PlotSnapshot_<tag>_t<turn>.csv
@@ -261,10 +261,10 @@ void writePlotSnapshot(const char* tag)
 		tag, iTurn, iGridW, iGridH, iNumPlots);
 
 	std::fprintf(fp,
-    		"plotIdx,x,y,terrain,feature,improvement,route,bonus,"
-    		"isWater,isHills,isPeak,isCity,isCityRadius,owner,"
-    		"workingCityId,workingCityName,area,improvementCurrentValue,"
-    		"numUnits,animals\n");
+		"plotIdx,x,y,terrain,feature,improvement,route,bonus,"
+		"isWater,isHills,isPeak,isCity,isCityRadius,owner,"
+		"workingCityId,workingCityName,area,improvementCurrentValue,"
+		"numUnits,animals\n");
 
 	// One row per plot. plotIdx is the loop counter; it matches the iI used
 	// as the key in CvWorkerAI's bonus-evaluation cache and the position
@@ -289,7 +289,7 @@ void writePlotSnapshot(const char* tag)
 		const int iCurrentValue = pPlot->getImprovementCurrentValue();
 
 		char animals[256];
-        appendAnimalsField(pPlot, animals, sizeof(animals));
+		appendAnimalsField(pPlot, animals, sizeof(animals));
 
 		std::fprintf(fp,
 			"%d,%d,%d,%s,%s,%s,%s,%s,%d,%d,%d,%d,%d,%d,%d,%s,%d,%d,%d,%s\n",
@@ -310,8 +310,8 @@ void writePlotSnapshot(const char* tag)
 			cityName,
 			iAreaId,
 			iCurrentValue,
-            pPlot->getNumUnits(),
-            animals);
+			pPlot->getNumUnits(),
+			animals);
 	}
 
 	std::fclose(fp);

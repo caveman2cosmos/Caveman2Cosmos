@@ -11093,6 +11093,7 @@ int CvPlayerAI::AI_unitValue(UnitTypes eUnit, UnitAITypes eUnitAI, const CvArea*
 				if (kUnitInfo.canMergeSplit() && GC.getGame().isOption(GAMEOPTION_COMBAT_SIZE_MATTERS)){
 					iValue = int(iValue * EVAL_MERGE_FACTOR);
 				}
+
 				break;
 
 			}

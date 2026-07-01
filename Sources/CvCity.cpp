@@ -2,6 +2,7 @@
 #include "FProfiler.h"
 
 #include "CvGameCoreDLL.h"
+#include "BetterBTSAI.h" // logCityAI ([CIT/produced] / [CIT/waste] production-pipeline logging)
 #include "CvArea.h"
 #include "CvArtFileMgr.h"
 #include "CvBuildingInfo.h"
@@ -1221,6 +1222,22 @@ void CvCity::killTestCheap()
 void CvCity::doTurn()
 {
 	PROFILE("CvCity::doTurn()");
+
+	// [CIT/proplevel] -- per-city property snapshot at the start of each turn (crime/disease/
+    // education/...), so property TRENDS are trackable from the log over turns -- hard to eyeball
+    // in-game. One line per active property: val = current level, change = per-turn drift.
+    if (gCityLogLevel >= 1)
+    {
+        const CvProperties* pProps = getPropertiesConst();
+        const int iTurn = GC.getGame().getGameTurn();
+        for (int iI = 0; iI < pProps->getNumProperties(); iI++)
+        {
+            const PropertyTypes eProp = pProps->getProperty(iI);
+            logCityAI(1, "[CIT/proplevel] turn=%d city=%S owner=%d prop=%s val=%d change=%d",
+                iTurn, getName().GetCString(), (int)getOwner(), GC.getPropertyInfo(eProp).getType(),
+                pProps->getValueByProperty(eProp), pProps->getChangeByProperty(eProp));
+        }
+    }
 
 	FAssert(m_deferringBonusProcessingCount == 0);
 
@@ -15401,6 +15418,11 @@ void CvCity::pushOrder(OrderTypes eOrder, int iData1, int iData2, bool bSave, bo
 
 				//don't add the same unit if already 2 of them (if prod take more than 2 turns), and the first item in queue is not already finished, and the cost of the order is more than 3 turns
 				if (!bIsHuman && (bAppend && !bForce) && ((alreadyQueued > 1 && getProductionTurnsLeft(unitType, 2) > 2) || alreadyQueued > 4)) {
+					// [CIT/push/reject] -- the queue-level anti-spam guard blocked another copy of
+                    // this unit. A city that repeatedly trips this is the AI trying to spam-queue the
+                    // same dog/guard/healer; alreadyQueued shows how deep the pile already is.
+                    logCityAI(2, "[CIT/push/reject] city=%S owner=%d UNIT %S alreadyQueued=%d reason=spamGuard",
+                        getName().GetCString(), (int)getOwner(), GC.getUnitInfo(unitType).getDescription(), alreadyQueued);
 					return;
 				}
 
@@ -15431,6 +15453,9 @@ void CvCity::pushOrder(OrderTypes eOrder, int iData1, int iData2, bool bSave, bo
 
 				//don't add the same building after
 				if (!bIsHuman && (bAppend && !bForce) && alreadyQueued > 0) {
+                    // [CIT/push/reject] -- duplicate-building guard blocked re-queuing this building.
+                    logCityAI(2, "[CIT/push/reject] city=%S owner=%d BUILDING %S alreadyQueued=%d reason=dupGuard",
+                        getName().GetCString(), (int)getOwner(), GC.getBuildingInfo(buildingType).getDescription(), alreadyQueued);
 					return;
 				}
 
@@ -15488,7 +15513,25 @@ void CvCity::pushOrder(OrderTypes eOrder, int iData1, int iData2, bool bSave, bo
 		return;
 	}
 
-
+    // [CIT/push] -- an order enters the city queue (intake stream). Catches contract-driven
+    // units that bypass the AI_chooseProduction [CIT/order] path, so dog/guard/healer spam
+    // pushed by the ContractBroker is visible here too. append=0 means it replaced the head.
+    if (gCityLogLevel >= 2)
+    {
+        const char* szKind = "OTHER";
+        const wchar_t* szName = L"-";
+        switch (eOrder)
+        {
+        case ORDER_TRAIN:     szKind = "UNIT";     szName = GC.getUnitInfo(order.getUnitType()).getDescription(); break;
+        case ORDER_CONSTRUCT: szKind = "BUILDING"; szName = GC.getBuildingInfo(order.getBuildingType()).getDescription(); break;
+        case ORDER_CREATE:    szKind = "PROJECT";  szName = GC.getProjectInfo(order.getProjectType()).getDescription(); break;
+        case ORDER_MAINTAIN:  szKind = "PROCESS";  break;
+        case ORDER_LIST:      szKind = "LIST";     break;
+        default: break;
+        }
+        logCityAI(2, "[CIT/push] city=%S owner=%d %s %S append=%d force=%d",
+            getName().GetCString(), (int)getOwner(), szKind, szName, bAppend ? 1 : 0, bForce ? 1 : 0);
+    }
 
 	if (m_orderQueue.empty() && bIsHuman)
 	{
@@ -15577,6 +15620,27 @@ void CvCity::popOrder(int orderIndex, bool bFinish, bool bChoose, bool bResolveL
 
 	const bool bWasFoodProduction = isFoodProduction();
 
+	// [CIT/cancel] -- an order is popped WITHOUT finishing: the city switched/abandoned a
+    // build, or doCheckProduction dropped it as obsolete/maxed (both route through here with
+    // bFinish=false). progressLost = hammers forfeited. Repeated cancels on the same city =
+    // production thrashing (a spam-adjacent outlier: the AI churns the queue instead of
+    // committing). Guarded so we don't pay the lookups when city logging is off.
+    if (!bFinish && gCityLogLevel >= 1)
+    {
+        const char* szKind = "OTHER";
+        const wchar_t* szName = L"-";
+        int iProgressLost = 0;
+        switch (order.eOrderType)
+        {
+        case ORDER_TRAIN:     szKind = "UNIT";     szName = GC.getUnitInfo(order.getUnitType()).getDescription();         iProgressLost = getProgressOnUnit(order.getUnitType()); break;
+        case ORDER_CONSTRUCT: szKind = "BUILDING"; szName = GC.getBuildingInfo(order.getBuildingType()).getDescription();  iProgressLost = getProgressOnBuilding(order.getBuildingType()); break;
+        case ORDER_CREATE:    szKind = "PROJECT";  szName = GC.getProjectInfo(order.getProjectType()).getDescription(); break;
+        default: break;
+        }
+        logCityAI(1, "[CIT/cancel] city=%S owner=%d %s %S progressLost=%d willChoose=%d",
+            getName().GetCString(), (int)getOwner(), szKind, szName, iProgressLost, bChoose ? 1 : 0);
+    }
+
 	if (bFinish && order.bSave)
 	{
 		pushOrder(externalOrder.eOrderType, externalOrder.iData1, externalOrder.iData2, true, false, true);
@@ -15634,6 +15698,17 @@ void CvCity::popOrder(int orderIndex, bool bFinish, bool bChoose, bool bResolveL
 					pUnit->jumpToNearestValidPlot(false);
 				}
 				pUnit->finishMoves();
+
+
+				// [CIT/produced] -- a unit actually rolls off the line (completion ground truth,
+                // distinct from the AI_chooseProduction [CIT/order] decision). ownerHas (this exact
+                // unit type) and aiRoleHas (this UNITAI role) expose unit-spam outliers: a city that
+                // keeps completing the same dog/guard/healer drives these counts up turn over turn.
+                // overflow/lost = hammers spilled past the cap (lost converted to gold downstream).
+                logCityAI(1, "[CIT/produced] city=%S owner=%d UNIT %S unitAI=%d ownerHas=%d aiRoleHas=%d overflow=%d lost=%d",
+                    getName().GetCString(), (int)getOwner(), GC.getUnitInfo(eTrainUnit).getDescription(),
+                    (int)eTrainAIUnit, owner.getUnitCount(eTrainUnit), owner.AI_getNumAIUnits(eTrainAIUnit),
+                    iOverflow, m_iLostProductionModified);
 
 				addProductionExperience(pUnit);
 
@@ -15774,6 +15849,11 @@ void CvCity::popOrder(int orderIndex, bool bFinish, bool bChoose, bool bResolveL
 				m_iLostProductionModified = std::max(0, iRawOverflow - iMaxOverflow);
 				m_iGoldFromLostProduction = m_iLostProductionModified * GC.getMAXED_BUILDING_GOLD_PERCENT() / 100;
 
+                // [CIT/produced] -- building completion (the other half of the output stream).
+                logCityAI(1, "[CIT/produced] city=%S owner=%d BUILDING %S overflow=%d lost=%d",
+                    getName().GetCString(), (int)getOwner(), GC.getBuildingInfo(eConstructBuilding).getDescription(),
+                    iOverflow, m_iLostProductionModified);
+
 				CvEventReporter::getInstance().buildingBuilt(this, eConstructBuilding);
 			}
 			else if (!canConstruct(eConstructBuilding))
@@ -15810,6 +15890,10 @@ void CvCity::popOrder(int orderIndex, bool bFinish, bool bChoose, bool bResolveL
 			if (bFinish)
 			{
 				OutputDebugString(CvString::format("Project %d (%S) built\n", eCreateProject, GC.getProjectInfo(eCreateProject).getDescription()).c_str());
+
+                // [CIT/produced] -- project completion (wonder/spaceship part/etc.).
+                logCityAI(1, "[CIT/produced] city=%S owner=%d PROJECT %S",
+                    getName().GetCString(), (int)getOwner(), GC.getProjectInfo(eCreateProject).getDescription());
 
 				// Event reported to Python before the project is built, so that we can show the movie before awarding free techs, for example
 				CvEventReporter::getInstance().projectBuilt(this, eCreateProject);
@@ -16382,6 +16466,11 @@ void CvCity::doProduction(bool bAllowNoProduction)
 
 		if (m_iGoldFromLostProduction > 0)
 		{
+		    // [CIT/waste] -- production overflowed past the cap and was burned to gold instead of
+            // hammers: a wasted-production outlier (e.g. a city finishing a cheap unit with a huge
+            // overflow, or mis-sequenced builds). Pairs with [CIT/produced] lost=.
+            logCityAI(1, "[CIT/waste] city=%S owner=%d lostProd=%d -> gold=%d",
+                getName().GetCString(), (int)getOwner(), m_iLostProductionModified, m_iGoldFromLostProduction);
 			CvWString szBuffer = gDLL->getText("TXT_KEY_MISC_LOST_PROD_CONVERTED", getNameKey(), m_iLostProductionModified, m_iGoldFromLostProduction);
 			AddDLLMessage(getOwner(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_WONDERGOLD", MESSAGE_TYPE_MINOR_EVENT, GC.getCommerceInfo(COMMERCE_GOLD).getButton(), GC.getCOLOR_RED(), getX(), getY(), true, true);
 

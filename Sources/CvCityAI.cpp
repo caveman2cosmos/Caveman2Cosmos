@@ -2093,9 +2093,9 @@ void CvCityAI::AI_chooseProduction()
         // AREA-wide UNITAI_ATTACK count (ownedAtk) against a PER-CITY need; if ownedAtk stays
         // stuck below need while many cities keep firing, the trained units are being reassigned
         // out of UNITAI_ATTACK (the role count never catches up) -> perpetual cheap-military spam.
-//         logCityAI(2, "[CIT/danger] city=%S owner=%d minAtk=%d defShortfall=%d sqrtCities=%d need=%d ownedAtk=%d fire=%d",
-//             getName().GetCString(), (int)eOwner, iNbMinimalAttackers, iDefShortfall, iSqrtCities,
-//             iAttackNeeded, iOwnedAttackers, (iOwnedAttackers < iAttackNeeded) ? 1 : 0); UNCOM
+        logCityAI(2, "[CIT/danger] city=%S owner=%d minAtk=%d defShortfall=%d sqrtCities=%d need=%d ownedAtk=%d fire=%d",
+            getName().GetCString(), (int)eOwner, iNbMinimalAttackers, iDefShortfall, iSqrtCities,
+            iAttackNeeded, iOwnedAttackers, (iOwnedAttackers < iAttackNeeded) ? 1 : 0);
 		
 		if (iOwnedAttackers < iAttackNeeded
 		&& AI_chooseUnitImmediate("minimal attack (danger)", UNITAI_ATTACK))
@@ -14456,6 +14456,19 @@ bool CvCityAI::AI_choosePropertyControlBuildingAndUnit(int iTriggerPercentOfProp
 				{
 					ismaxPropUnitsReached = true;
 				}
+
+                // [CIT/prop] -- inputs to the property-control production gate (the only source of
+                // UNITAI_PROPERTY_CONTROL units now that runtime flipping is removed). fire=1 means
+                // this city will order a property building/unit this pass. A fire=0 with a real need
+                // (val/pct high) tells us which condition vetoed it: getting=better already improving,
+                // good=isGoodEnough, maxed=prop-control units already >20% (propPct), or eval<=check
+                // (need below the train-reluctance threshold). Mirrors [CIT/danger] for the attack gate.
+                logCityAI(2, "[CIT/prop] city=%S owner=%d prop=%s val=%d change=%d pct=%d eval=%d check=%d proj=%d getting=%d good=%d maxed=%d propPct=%d fire=%d",
+                    getName().GetCString(), (int)eOwner, GC.getPropertyInfo(eProperty).getType(),
+                    iCurrentValue, iCurrentChange, iCurrentPercent, iEval, iCheck, iCurrentValue + iCurrentChange * 10,
+                    isGettingBetter ? 1 : 0, isGoodEnough ? 1 : 0, ismaxPropUnitsReached ? 1 : 0,
+                    (iPropControlInArea * 100 / (iUnitsInArea + 1)),
+                    (iEval > iCheck && !isGettingBetter && !isGoodEnough && !ismaxPropUnitsReached) ? 1 : 0);
 
 				if (iEval > iCheck && !isGettingBetter && !isGoodEnough && !ismaxPropUnitsReached)
 				{

@@ -10,7 +10,7 @@
 // reference plots by (x,y) and plotIdx; this file lets an analyst join those
 // log lines against the full plot state at that point in the game.
 //
-// Schema and call-site conventions are documented in Sources/docs/PlotSnapshot.md.
+// Schema and call-site conventions are documented in Sources/docs/reference/PlotSnapshot.md.
 //
 // Called from CvGame at:
 //   - onFinalInitialized(bNewGame=true)  tag="start"

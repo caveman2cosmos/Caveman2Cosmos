@@ -65,7 +65,7 @@ RoundModel buildRoundModel(const CvUnit* pAttacker, int iAttackerStrength, int i
 // Subsequent phases fold the AI per-unit odds (CvUnitAI::AI_attackOddsAtPlot*)
 // and the per-round resolution model (CvUnit::getDefenderCombatValues /
 // resolveCombat) onto this same engine so prediction and resolution can never
-// diverge again. See Sources/docs/combat-odds-baseline.md for the regression
+// diverge again. See Sources/docs/plans/combat-odds-baseline.md for the regression
 // reference.
 // ---------------------------------------------------------------------------
 

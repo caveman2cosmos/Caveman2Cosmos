@@ -5,6 +5,7 @@
 
 #include "CvEnums.h"
 #include <map>
+#include <utility>
 
 class CvPlot;
 class CvUnitAI;
@@ -46,13 +47,16 @@ class CvUnitAI;
 //   [HAI/escort]       escort merge / hunter-escort contract advertise
 //   [HAI/target/skip]  candidate rejected + reason (claimed/filter/nopath/odds)
 //   [HAI/target/best]  new best target during the AI_huntRange sweep
-//   [HAI/engage]       favorable adjacent kill taken
-//   [HAI/spread]       border / patrol fallback chosen (with per-unit bias)
+//   [HAI/engage]       attack committed: adjacent kill, or auto-hunt sea seaAreaAttack/blockade
+//   [HAI/explore]      auto-hunt sea exploration: seaExplore (new heading) / seaExploreKeep
+//                      (committed heading -- hysteresis) / exploreGeneric (AI_explore fallback)
+//   [HAI/spread]       border / patrol / refreshExplore fallback chosen (with per-unit bias)
+//   [HAI/spin]         turn-hang safety: unit re-decided 8x at the same plot -> end its turn
 //   [HAI/scrap]        phase-out / scrap decision
 //   [HAI/mission]      final mission push (emitted by AI_huntRange)
 //   [HAI/end]          routine exit with success/failure
 //
-//   Levels: 1 -> begin/end/best/mission/engage; 2 -> heal/escort/spread/scrap;
+//   Levels: 1 -> begin/end/best/mission/engage/spin; 2 -> heal/escort/spread/scrap/explore;
 //           3 -> target/skip (per-candidate detail).
 // ----------------------------------------------------------------------------
 class CvHunterAI
@@ -76,9 +80,18 @@ public:
 	void releaseAllClaimsBy(int unitId);
 
 private:
+	// Naval exploration for auto-hunt ships: open-ocean frontier + claim-based fleet spread.
+	bool seaExplore(CvUnitAI* unit);
+
+	// Turn-hang safety: ends a unit's turn (returns true) if it re-decides at the same plot
+	// too many times without moving -- a hunter/explore routine pushing a mission that never
+	// advances the unit would otherwise spin ~50x/turn (capped only by the engine backstop).
+	bool detectSpin(CvUnitAI* unit);
+
 	PlayerTypes m_owner;
 	int         m_lastTurn;
 	std::map<int, int> m_claims; // plotIdx -> unitId
+	std::map<int, std::pair<int, int> > m_decisionPlot; // unitId -> (plotIdx, same-plot re-decide count this turn)
 };
 
 #endif // CV_HUNTER_AI
