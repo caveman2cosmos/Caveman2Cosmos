@@ -3955,7 +3955,6 @@
 			<Categories>
 				<Category>CATEGORY_UNITCOMBAT_GROUP_NATURAL</Category>
 			</Categories>
-			<iPunctureChange>5</iPunctureChange>
 			<Button>Art/Interface/Buttons/units/sparth/categories/nature_sharp_clawed.dds</Button>
 		</UnitCombatInfo>
 		<UnitCombatInfo>
@@ -3964,7 +3963,6 @@
 			<Categories>
 				<Category>CATEGORY_UNITCOMBAT_GROUP_NATURAL</Category>
 			</Categories>
-			<iPunctureChange>10</iPunctureChange>
 			<Button>Art/Interface/Buttons/units/sparth/categories/nature_sharp_toothed.dds</Button>
 		</UnitCombatInfo>
 		<UnitCombatInfo>
@@ -3973,7 +3971,6 @@
 			<Categories>
 				<Category>CATEGORY_UNITCOMBAT_GROUP_NATURAL</Category>
 			</Categories>
-			<iPunctureChange>15</iPunctureChange>
 			<Button>Art/Interface/Buttons/units/sparth/categories/nature_sharp_horned.dds</Button>
 		</UnitCombatInfo>
 		<UnitCombatInfo>
@@ -4450,7 +4447,6 @@
 			<Categories>
 				<Category>CATEGORY_UNITCOMBAT_GROUP_NATURAL</Category>
 			</Categories>
-			<iPunctureChange>2</iPunctureChange>
 			<Button>Art/Interface/Buttons/units/sparth/categories/nature_peck.dds</Button>
 		</UnitCombatInfo>
 		<UnitCombatInfo>
